@@ -31,7 +31,6 @@
 		>
 			<button class="start-button">Начать</button>
 		</div>
-
 		<Transition name="bounce">
 			<Cards v-if="!start" />
 		</Transition>

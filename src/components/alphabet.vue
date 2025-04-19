@@ -23,7 +23,6 @@
 
 <script setup>
 	import { ref, onMounted } from 'vue'
-
 	const alphabet = ref(null)
 	const germanVoice = ref(null)
 	const activeLetter = ref(null)
