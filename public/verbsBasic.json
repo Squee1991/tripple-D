@@ -1,0 +1,57 @@
+[
+	{
+		"infinitive": "machen",
+		"preterite": "machte",
+		"perfect": "hat gemacht",
+		"translation": "делать",
+		"explanation": "Правильный глагол, используется с haben.",
+		"examples": [
+			"Ich mache jeden Tag meine Hausaufgaben.",
+			"Was hast du gestern gemacht?"
+		]
+	},
+	{
+		"infinitive": "kommen",
+		"preterite": "kam",
+		"perfect": "ist gekommen",
+		"translation": "приходить",
+		"explanation": "Неправильный глагол, используется с sein.",
+		"examples": [
+			"Meine Freunde kommen heute zu Besuch.",
+			"Er ist gestern spät gekommen."
+		]
+	},
+	{
+		"infinitive": "gehen",
+		"preterite": "ging",
+		"perfect": "ist gegangen",
+		"translation": "идти",
+		"explanation": "Неправильный глагол, используется с sein.",
+		"examples": [
+			"Wir gehen in den Park.",
+			"Sie ist ins Kino gegangen."
+		]
+	},
+	{
+		"infinitive": "wohnen",
+		"preterite": "wohnte",
+		"perfect": "hat gewohnt",
+		"translation": "жить (проживать)",
+		"explanation": "Правильный глагол, используется с haben.",
+		"examples": [
+			"Ich wohne in Berlin.",
+			"Wir haben früher in Hamburg gewohnt."
+		]
+	},
+	{
+		"infinitive": "sehen",
+		"preterite": "sah",
+		"perfect": "hat gesehen",
+		"translation": "видеть",
+		"explanation": "Неправильный глагол, используется с haben.",
+		"examples": [
+			"Ich sehe einen Vogel.",
+			"Er hat einen Film gesehen."
+		]
+	}
+]

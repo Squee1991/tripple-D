@@ -1,0 +1,32 @@
+{
+	"personal": [
+		{ "person": "1 л. ед. ч.", "de": "ich", "ru": "я" },
+		{ "person": "2 л. ед. ч.", "de": "du", "ru": "ты" },
+		{ "person": "3 л. ед. ч. (м)", "de": "er", "ru": "он" },
+		{ "person": "3 л. ед. ч. (ж)", "de": "sie", "ru": "она" },
+		{ "person": "3 л. ед. ч. (ср)", "de": "es", "ru": "оно" },
+		{ "person": "1 л. мн. ч.", "de": "wir", "ru": "мы" },
+		{ "person": "2 л. мн. ч.", "de": "ihr", "ru": "вы" },
+		{ "person": "3 л. мн. ч.", "de": "sie", "ru": "они" },
+		{ "person": "Вежливая форма", "de": "Sie", "ru": "Вы" }
+	],
+	"possessive": [
+		{ "person": "1 л. ед. ч.", "de": "mein", "ru": "мой" },
+		{ "person": "2 л. ед. ч.", "de": "dein", "ru": "твой" },
+		{ "person": "3 л. ед. ч. (м)", "de": "sein", "ru": "его" },
+		{ "person": "3 л. ед. ч. (ж)", "de": "ihr", "ru": "её" },
+		{ "person": "3 л. ед. ч. (ср)", "de": "sein", "ru": "его" },
+		{ "person": "1 л. мн. ч.", "de": "unser", "ru": "наш" },
+		{ "person": "2 л. мн. ч.", "de": "euer", "ru": "ваш" },
+		{ "person": "3 л. мн. ч.", "de": "ihr", "ru": "их" },
+		{ "person": "Вежливая форма", "de": "Ihr", "ru": "Ваш" }
+	],
+	"demonstrative": [
+		{ "de": "dieser", "ru": "этот" },
+		{ "de": "diese", "ru": "эта" },
+		{ "de": "dieses", "ru": "это (ср. род)" },
+		{ "de": "jene", "ru": "та/те" },
+		{ "de": "derjenige", "ru": "тот самый" },
+		{ "de": "derselbe", "ru": "тот же самый" }
+	]
+}
