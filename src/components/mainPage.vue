@@ -2,19 +2,19 @@
 	<div class="background">
 		<div class="overlay" :class="{ show: !isHide }" @click="closeLogin"></div>
 		<div class="signin-wrapper" :class="{ show: !isHide }">
-			<SingIn />
+			<SingIn/>
 		</div>
 		<div class="profile-page">
 			<div class="top-bar">
 				<div class="top-left">
 					<div class="app-title">
-						<img class="app-title-icon" src="../../assets/images/logo.png" alt="" />
+						<img class="app-title-icon" src="../../assets/images/logo.png" alt=""/>
 					</div>
 				</div>
 				<div class="top-right">
 					<div class="user-info">
 						<NuxtLink class="user-avatar" to="/cabinet">
-							<img class="user-avatar-icon" src="" alt="" />
+							<img class="user-avatar-icon" src="" alt=""/>
 						</NuxtLink>
 						<div @click="logIn" class="logout-button">Войти</div>
 					</div>
@@ -22,7 +22,7 @@
 			</div>
 		</div>
 		<div class="img__background">
-			<img class="img-bg" src="../../assets/images/bg.png" alt="" />
+			<img class="img-bg" src="../../assets/images/bg.png" alt=""/>
 		</div>
 		<div
 			@click="startlearning"
@@ -31,16 +31,19 @@
 		>
 			<button class="start-button">Начать</button>
 		</div>
-		<Transition name="bounce">
-			<Cards v-if="!start" />
-		</Transition>
+		<Heroes v-if="!start"/>
+
+		<!--		<Transition name="bounce">-->
+		<!--			<Cards v-if="!start" />-->
+		<!--		</Transition>-->
 	</div>
 </template>
 
 <script setup>
-	import { ref } from 'vue'
+	import {ref} from 'vue'
 	import SingIn from '../components/logIn.vue'
 	import Cards from '../components/cards.vue'
+	import Heroes from '../components/heroes.vue'
 
 	const isHide = ref(true)
 	const start = ref(true)
@@ -63,6 +66,7 @@
 	html, body {
 		overflow-x: hidden;
 	}
+
 	a {
 		text-decoration: none;
 	}
@@ -84,6 +88,7 @@
 		transition: transform 0.5s ease;
 		z-index: 1000;
 	}
+
 	.signin-wrapper.show {
 		transform: translateX(0%);
 	}
@@ -106,7 +111,7 @@
 		font-family: 'Segoe UI', sans-serif;
 	}
 
-	.user-avatar-icon{
+	.user-avatar-icon {
 		width: 100%;
 	}
 
@@ -250,8 +255,6 @@
 		opacity: 1;
 		pointer-events: auto;
 	}
-
-
 
 
 </style>
