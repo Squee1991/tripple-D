@@ -87,6 +87,7 @@
 	import {useRoute} from 'vue-router'
 	import {userlangStore} from '../store/learningStore.js'
 
+
 	const store = userlangStore()
 	const route = useRoute()
 
@@ -214,6 +215,9 @@
 
 	onMounted(()=> {
 		store.loadFromLocal()
+	})
+	definePageMeta({
+		middleware: ['auth'],
 	})
 </script>
 

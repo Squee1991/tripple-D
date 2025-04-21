@@ -35,6 +35,7 @@
 	import { useRouter, useRoute } from 'vue-router'
 	import { userlangStore } from '../store/learningStore.js'
 
+
 	const route = useRoute()
 	const router = useRouter()
 	const store = userlangStore()
@@ -67,6 +68,9 @@
 				? route.query.mode
 				: [route.query.mode]
 		}
+	})
+	definePageMeta({
+		middleware: ['auth'],
 	})
 </script>
 

@@ -13,10 +13,15 @@
 				</div>
 				<div class="top-right">
 					<div class="user-info">
-						<NuxtLink class="user-avatar" to="/cabinet">
-							<img class="user-avatar-icon" src="" alt="" />
-						</NuxtLink>
-						<div @click="logIn" class="logout-button">Войти</div>
+						<template v-if="user">
+							<NuxtLink class="user-avatar" to="/cabinet">
+								<img class="user-avatar-icon" :src="user.photoURL || ''" alt="" />
+							</NuxtLink>
+							<div @click="handleLogout" class="logout-button">Выйти</div>
+						</template>
+						<template v-else>
+							<NuxtLink to="/login" class="logout-button">Войти</NuxtLink>
+						</template>
 					</div>
 				</div>
 			</div>
@@ -25,6 +30,7 @@
 			<img class="img-bg" src="../../assets/images/bg.png" alt="" />
 		</div>
 		<div
+			v-if="user"
 			@click="startlearning"
 			class="start-button-wrapper"
 			:class="{ 'is-started': !start }"
@@ -40,13 +46,23 @@
 
 <script setup>
 	import { ref } from 'vue'
+	import { useCurrentUser, useFirebaseAuth } from 'vuefire'
+	import { signOut } from 'firebase/auth'
 	import SingIn from '../components/logIn.vue'
 	import Cards from '../components/cards.vue'
+	import { useRouter } from 'vue-router'
 
+	const router = useRouter()
+	const auth = useFirebaseAuth()
+	const user = useCurrentUser()
 	const isHide = ref(true)
 	const start = ref(true)
 
 	const startlearning = () => {
+		if (!user.value) {
+			isHide.value = false
+			return
+		}
 		start.value = false
 	}
 
@@ -56,6 +72,15 @@
 
 	const closeLogin = () => {
 		isHide.value = true
+	}
+
+	const handleLogout = async () => {
+		try {
+			await signOut(auth)
+			router.push('/login')
+		} catch (error) {
+			console.error('Ошибка при выходе:', error)
+		}
 	}
 </script>
 

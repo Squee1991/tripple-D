@@ -38,6 +38,8 @@
 	import {ref, onMounted, computed} from 'vue'
 	import {userlangStore} from '../store/learningStore.js'
 
+
+
 	const props = defineProps({
 		selectedTopics: {
 			type: Array,
@@ -141,6 +143,9 @@
 	}, { immediate: true })
 	watch(words, () => {
 		currentPage.value = 1
+	})
+	definePageMeta({
+		middleware: ['auth'],
 	})
 
 </script>

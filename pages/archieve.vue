@@ -50,6 +50,8 @@
 	import { computed, onMounted , ref } from 'vue'
 	import { userlangStore } from '../store/learningStore.js'
 
+
+
 	const store = userlangStore()
 
 	const currentPage = ref(1)
@@ -81,6 +83,9 @@
 	function isWrong(word) {
 		return store.wrongAnswers.some(w => w.de === word.de)
 	}
+	definePageMeta({
+		middleware: ['auth'],
+	})
 </script>
 
 
