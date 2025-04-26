@@ -8,9 +8,9 @@ export default defineNuxtConfig({
     ],
     vuefire: {
         config: {
-            apiKey: "AIzaSyClEXgfnzOXXECQTtNaZ9dl2HKDQjObAAc",
+            apiKey: "AIzaSyBqSfFpbvGNFi2IHF9ppCdTDhRKfwTtAkI",
             authDomain: "tripple-d.firebaseapp.com",
-            projectId: "tripple-d-457316",
+            projectId: "tripple-d-ade28",
             storageBucket: "tripple-d.appspot.com",
             messagingSenderId: "232501751388",
             appId: "1:232501751388:web:abcdef123456"

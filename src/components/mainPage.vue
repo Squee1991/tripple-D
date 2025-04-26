@@ -1,283 +1,290 @@
 <template>
-	<div class="background">
-		<div class="overlay" :class="{ show: !isHide }" @click="closeLogin"></div>
-		<div class="signin-wrapper" :class="{ show: !isHide }">
-			<SingIn />
-		</div>
-		<div class="profile-page">
-			<div class="top-bar">
-				<div class="top-left">
-					<div class="app-title">
-						<img class="app-title-icon" src="../../assets/images/logo.png" alt="" />
-					</div>
-				</div>
-				<div class="top-right">
-					<div class="user-info">
-						<template v-if="user">
-							<NuxtLink class="user-avatar" to="/cabinet">
-								<img class="user-avatar-icon" :src="user.photoURL || ''" alt="" />
-							</NuxtLink>
-							<div @click="handleLogout" class="logout-button">Выйти</div>
-						</template>
-						<template v-else>
-							<NuxtLink to="/login" class="logout-button">Войти</NuxtLink>
-						</template>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="img__background">
-			<img class="img-bg" src="../../assets/images/bg.png" alt="" />
-		</div>
-		<div
-			v-if="user"
-			@click="startlearning"
-			class="start-button-wrapper"
-			:class="{ 'is-started': !start }"
-		>
-			<button class="start-button">Начать</button>
-		</div>
+    <div class="background">
+        <div class="overlay" :class="{ show: !isHide }" @click="closeLogin"></div>
+        <div class="signin-wrapper" :class="{ show: !isHide }">
+            <SingIn/>
+        </div>
+        <div class="profile-page">
+            <div class="top-bar">
+                <div class="top-left">
+                    <div class="app-title">
+                        <img class="app-title-icon" src="../../assets/images/logo.png" alt=""/>
+                    </div>
+                </div>
+                <div class="top-right">
+                    <div class="user-info">
+                        <div  v-if="user">
+                            <NuxtLink class="user-avatar" to="/cabinet">
+                                <img class="user-avatar-icon" src="" alt=""/>
+                            </NuxtLink>
+                            <div @click="handleLogout" class="logout-button">Выйти</div>
+                        </div>
+                        <div v-else>
+                            <button @click="logIn" class="logout-button">Войти</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="img__background">
+            <img class="img-bg" src="../../assets/images/bg.png" alt=""/>
+        </div>
+        <div
+                v-if="user"
+                @click="startlearning"
+                class="start-button-wrapper"
+                :class="{ 'is-started': !start }"
+        >
+            <button class="start-button">Начать</button>
+        </div>
 
-		<Transition name="bounce">
-			<Cards v-if="!start" />
-		</Transition>
-	</div>
+        <Transition name="bounce">
+            <Cards v-if="!start"/>
+        </Transition>
+    </div>
 </template>
 
 <script setup>
-	import { ref } from 'vue'
-	import { useCurrentUser, useFirebaseAuth } from 'vuefire'
-	import { signOut } from 'firebase/auth'
-	import SingIn from '../components/logIn.vue'
-	import Cards from '../components/cards.vue'
-	import { useRouter } from 'vue-router'
+import {ref} from 'vue'
+import {useCurrentUser, useFirebaseAuth} from 'vuefire'
+import {signOut} from 'firebase/auth'
+import SingIn from '../components/logIn.vue'
+import Cards from '../components/cards.vue'
+import {useRouter} from 'vue-router'
 
-	const router = useRouter()
-	const auth = useFirebaseAuth()
-	const user = useCurrentUser()
-	const isHide = ref(true)
-	const start = ref(true)
 
-	const startlearning = () => {
-		if (!user.value) {
-			isHide.value = false
-			return
-		}
-		start.value = false
-	}
+const router = useRouter()
+const auth = useFirebaseAuth()
+const user = useCurrentUser()
+const isHide = ref(true)
+const start = ref(true)
 
-	const logIn = () => {
-		isHide.value = false
-	}
+const startlearning = () => {
+    if (!user.value) {
+        isHide.value = false
+        return
+    }
+    start.value = false
+}
 
-	const closeLogin = () => {
-		isHide.value = true
-	}
+const logIn = () => {
+    isHide.value = false
+}
 
-	const handleLogout = async () => {
-		try {
-			await signOut(auth)
-			router.push('/login')
-		} catch (error) {
-			console.error('Ошибка при выходе:', error)
-		}
-	}
+const closeLogin = () => {
+    isHide.value = true
+}
+
+const handleLogout = async () => {
+    try {
+        await signOut(auth)
+
+    } catch (error) {
+        console.error('Ошибка при выходе:', error)
+    }
+    finally {
+      await  router.push("/")
+    }
+
+}
 </script>
 
 <style scoped>
 
-	html, body {
-		overflow-x: hidden;
-	}
-	a {
-		text-decoration: none;
-	}
+html, body {
+    overflow-x: hidden;
+}
 
-	* {
-		padding: 0;
-		margin: 0;
-		box-sizing: border-box;
-	}
+a {
+    text-decoration: none;
+}
 
-	.signin-wrapper {
-		width: 360px;
-		position: absolute;
-		top: 0;
-		right: 0;
-		height: 100vh;
-		background: #11182c;
-		transform: translateX(100%);
-		transition: transform 0.5s ease;
-		z-index: 1000;
-	}
-	.signin-wrapper.show {
-		transform: translateX(0%);
-	}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
-	.app-title {
+.signin-wrapper {
+    width: 360px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background: #11182c;
+    transform: translateX(100%);
+    transition: transform 0.5s ease;
+    z-index: 1000;
+}
 
-		border-radius: 50%;
-	}
+.signin-wrapper.show {
+    transform: translateX(0%);
+}
 
-	.app-title-icon {
-		width: 80px;
-		height: 60px;
-	}
+.app-title {
 
-	.profile-page {
-		width: 100%;
-		background: linear-gradient(135deg, #0b0f1e, #1b1e38);
-		color: white;
-		position: relative;
-		font-family: 'Segoe UI', sans-serif;
-	}
+    border-radius: 50%;
+}
 
-	.user-avatar-icon{
-		width: 100%;
-	}
+.app-title-icon {
+    width: 80px;
+    height: 60px;
+}
 
-	.top-bar {
-		width: 100%;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 15px 30px;
-		background: rgba(0, 0, 0, 0.6);
-		box-shadow: 0 2px 10px #00000066;
-	}
+.profile-page {
+    width: 100%;
+    background: linear-gradient(135deg, #0b0f1e, #1b1e38);
+    color: white;
+    position: relative;
+    font-family: 'Segoe UI', sans-serif;
+}
 
-	.app-title {
-		font-size: 20px;
-		font-weight: bold;
-		color: #00ffff;
-	}
+.user-avatar-icon {
+    width: 40px;
+    height: 40px;
+    background: #2e7d32;
+}
 
-	.user-info {
-		display: flex;
-		align-items: center;
-		gap: 16px;
-	}
+.top-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 2px 10px #00000066;
+}
 
-	.user-avatar {
-		cursor: pointer;
-		width: 40px;
-		height: 40px;
-		border-radius: 50%;
-		object-fit: cover;
-		box-shadow: 0 0 6px rgba(0, 255, 255, 0.67);
-	}
+.app-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #00ffff;
+}
 
-	.logout-button {
-		display: flex;
-		justify-content: center;
-		font-size: 18px;
-		min-width: 120px;
-		padding: 8px 16px;
-		border: 1px solid #00ffffaa;
-		border-radius: 8px;
-		cursor: pointer;
-		background: transparent;
-		color: #00ffff;
-		transition: background 0.3s;
-	}
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
 
-	.logout-button:hover {
-		background: #00ffff33;
-	}
+.user-avatar {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 6px rgba(0, 255, 255, 0.67);
+}
 
-	.img-bg {
-		width: 100%;
-	}
+.logout-button {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    min-width: 120px;
+    padding: 8px 16px;
+    border: 1px solid #00ffffaa;
+    border-radius: 8px;
+    cursor: pointer;
+    background: transparent;
+    color: #00ffff;
+    transition: background 0.3s;
+}
 
-	.background {
-		background-color: black;
-		width: 100%;
-		height: 100vh;
-		overflow: hidden;
-		position: relative;
-	}
+.logout-button:hover {
+    background: #00ffff33;
+}
 
-	.img__background {
-		max-width: 1020px;
-		margin: 0 auto;
-	}
+.img-bg {
+    width: 100%;
+}
 
-	.start-button-wrapper {
-		position: absolute;
-		bottom: 20%;
-		left: 50%;
-		opacity: 1;
-		transform: translateX(-50%);
-		z-index: 10;
-	}
+.background {
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
 
-	.is-started {
-		opacity: 0;
-	}
+.img__background {
+    max-width: 1020px;
+    margin: 0 auto;
+}
 
-	.start-button {
-		background: rgba(255, 255, 255, 0.1);
-		border: none;
-		color: #fff;
-		font-size: 24px;
-		padding: 16px 40px;
-		border-radius: 12px;
-		letter-spacing: 2px;
-		cursor: pointer;
-		text-transform: uppercase;
-		transition: all 0.3s ease;
-		box-shadow: 0 0 12px #00ffff44;
-		animation: pulseGlow 2s infinite ease-in-out;
-	}
+.start-button-wrapper {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    opacity: 1;
+    transform: translateX(-50%);
+    z-index: 10;
+}
 
-	.start-button:hover {
-		background: rgba(0, 0, 0, 0.6);
-		box-shadow: 0 0 20px #00ffffcc;
-	}
+.is-started {
+    opacity: 0;
+}
 
-	@keyframes pulseGlow {
-		25% {
-			box-shadow: 0 0 20px #00ffffaa;
-			transition: 1s;
-		}
+.start-button {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    padding: 16px 40px;
+    border-radius: 12px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 12px #00ffff44;
+    animation: pulseGlow 2s infinite ease-in-out;
+}
 
-		50% {
-			box-shadow: 0 0 20px #00ffffaa;
-			transition: 1s;
-		}
-		100% {
-			box-shadow: 0 0 12px #00ffff44;
-			transition: 1s;
-		}
-		50% {
-			box-shadow: 0 0 20px #00ffffaa;
-			transition: 1s;
-		}
-		25% {
-			box-shadow: 0 0 20px #00ffffaa;
-			transition: 1s;
-		}
-	}
+.start-button:hover {
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 20px #00ffffcc;
+}
 
-	.overlay {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: rgba(0, 0, 0, 0.5);
-		opacity: 0;
-		pointer-events: none;
-		transition: opacity 0.3s ease;
-		z-index: 999;
-	}
+@keyframes pulseGlow {
+    25% {
+        box-shadow: 0 0 20px #00ffffaa;
+        transition: 1s;
+    }
 
-	.overlay.show {
-		opacity: 1;
-		pointer-events: auto;
-	}
+    50% {
+        box-shadow: 0 0 20px #00ffffaa;
+        transition: 1s;
+    }
+    100% {
+        box-shadow: 0 0 12px #00ffff44;
+        transition: 1s;
+    }
+    50% {
+        box-shadow: 0 0 20px #00ffffaa;
+        transition: 1s;
+    }
+    25% {
+        box-shadow: 0 0 20px #00ffffaa;
+        transition: 1s;
+    }
+}
 
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+}
 
+.overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+}
 
 
 </style>

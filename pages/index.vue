@@ -16,7 +16,7 @@ const router = useRouter()
 onMounted(() => {
     // Проверяем статус аутентификации
     if (!user.value) {
-        router.push('/login')
+        router.push('/')
     }
 })
 </script>
