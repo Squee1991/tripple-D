@@ -40,24 +40,48 @@
 </template>
 
 <script setup>
-	import {ref} from 'vue'
-	import SingIn from '../components/logIn.vue'
-	import Cards from '../components/cards.vue'
-	import Heroes from '../components/heroes.vue'
-	import { useRouter} from 'vue-router'
+import {ref} from 'vue'
+import {useCurrentUser, useFirebaseAuth} from 'vuefire'
+import {signOut} from 'firebase/auth'
+import SingIn from '../components/logIn.vue'
+import Cards from '../components/cards.vue'
+import {useRouter} from 'vue-router'
 
-    const router = useRouter()
-	const isHide = ref(true)
-	const start = ref(true)
 
-	const startlearning = () => {
-		start.value = false
-	}
+const router = useRouter()
+const auth = useFirebaseAuth()
+const user = useCurrentUser()
+const isHide = ref(true)
+const start = ref(true)
 
-	const logIn = () => {
-		isHide.value = false
-	}
+const startlearning = () => {
+    if (!user.value) {
+        isHide.value = false
+        return
+    }
+    start.value = false
+}
 
+const logIn = () => {
+    isHide.value = false
+}
+
+const closeLogin = () => {
+    isHide.value = true
+}
+
+const handleLogout = async () => {
+    try {
+        await signOut(auth)
+
+    } catch (error) {
+        console.error('Ошибка при выходе:', error)
+    }
+    finally {
+      await  router.push("/")
+    }
+
+}
 	const routerPath =  () => {
 		router.push('/MapView')
 	}
@@ -99,23 +123,23 @@
 		transform: translateX(0%);
 	}
 
-	.app-title {
+.app-title {
 
-		border-radius: 50%;
-	}
+    border-radius: 50%;
+}
 
-	.app-title-icon {
-		width: 80px;
-		height: 60px;
-	}
+.app-title-icon {
+    width: 80px;
+    height: 60px;
+}
 
-	.profile-page {
-		width: 100%;
-		background: linear-gradient(135deg, #0b0f1e, #1b1e38);
-		color: white;
-		position: relative;
-		font-family: 'Segoe UI', sans-serif;
-	}
+.profile-page {
+    width: 100%;
+    background: linear-gradient(135deg, #0b0f1e, #1b1e38);
+    color: white;
+    position: relative;
+    font-family: 'Segoe UI', sans-serif;
+}
 
 	.user-avatar-icon {
 		width: 100%;
@@ -170,35 +194,35 @@
 		background: #00ffff33;
 	}
 
-	.img-bg {
-		width: 100%;
-	}
+.img-bg {
+    width: 100%;
+}
 
-	.background {
-		background-color: black;
-		width: 100%;
-		height: 100vh;
-		overflow: hidden;
-		position: relative;
-	}
+.background {
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
 
-	.img__background {
-		max-width: 1020px;
-		margin: 0 auto;
-	}
+.img__background {
+    max-width: 1020px;
+    margin: 0 auto;
+}
 
-	.start-button-wrapper {
-		position: absolute;
-		bottom: 20%;
-		left: 50%;
-		opacity: 1;
-		transform: translateX(-50%);
-		z-index: 10;
-	}
+.start-button-wrapper {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    opacity: 1;
+    transform: translateX(-50%);
+    z-index: 10;
+}
 
-	.is-started {
-		opacity: 0;
-	}
+.is-started {
+    opacity: 0;
+}
 
 	.start-button {
 		background: rgba(255, 255, 255, 0.1);
@@ -261,6 +285,8 @@
 		opacity: 1;
 		pointer-events: auto;
 	}
+
+
 
 
 </style>
