@@ -44,7 +44,9 @@
 	import SingIn from '../components/logIn.vue'
 	import Cards from '../components/cards.vue'
 	import Heroes from '../components/heroes.vue'
+	import { useRouter} from 'vue-router'
 
+    const router = useRouter()
 	const isHide = ref(true)
 	const start = ref(true)
 
@@ -54,6 +56,10 @@
 
 	const logIn = () => {
 		isHide.value = false
+	}
+
+	const routerPath =  () => {
+		router.push('/MapView')
 	}
 
 	const closeLogin = () => {

@@ -21,7 +21,7 @@
 			<div class="selected-hero" @click="deselectHero">
 				<img :src="selectedHero.src" alt="Selected" class="selected-hero__img"/>
 			</div>
-			<div class="btn-glow-wrapper">
+			<div @click="routerPath" class="btn-glow-wrapper">
 				<img class="btn__image" src="../../assets/images/btn2.png" alt="">
 			</div>
 		</div>
@@ -31,15 +31,20 @@
 
 <script setup>
 	import {ref, computed} from 'vue'
+	import { useRouter} from 'vue-router'
+	const router = useRouter()
 
 	const selectedHero = ref(null)
 
 	const allHeroes = [
-		{src: '/images/h1.png', id: 1},
-		{src: '/images/h3.png', id: 2},
-		{src: '/images/h4.png', id: 3},
-		{src: '/images/h5.png', id: 4},
+		{src: '/images/h3.png', id: 1},
+		{src: '/images/h4.png', id: 2},
+		{src: '/images/h5.png', id: 3},
 	]
+
+	const routerPath = () => {
+		router.push('/MapView')
+	}
 
 
 	const visibleHeroes = computed(() => {
@@ -211,5 +216,4 @@
 			transform: translate(-50%, -50%) scale(1);
 		}
 	}
-
 </style>
