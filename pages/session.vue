@@ -120,9 +120,16 @@
 	}
 
 	function addLetter(letter, index) {
-		if (usedIndices.value.includes(index)) return
-		userInput.value += letter
-		usedIndices.value.push(index)
+		const position = usedIndices.value.indexOf(index)
+
+		if (position !== -1) {
+			usedIndices.value.splice(position, 1)
+			userInput.value =
+				userInput.value.slice(0, position) + userInput.value.slice(position + 1)
+		} else {
+			userInput.value += letter
+			usedIndices.value.push(index)
+		}
 	}
 
 	function checkAnswer() {
@@ -146,14 +153,19 @@
 
 		result.value = input === correct ? 'correct' : 'wrong'
 
-		if (result.value === 'correct') {
-			store.markAsLearned(currentWord.value)
-		} else {
-			store.addWrongAnswers(currentWord.value)
-		}
+		let isCorrect = input === correct
+		result.value = isCorrect ? 'correct' : 'wrong'
 
-		setTimeout(nextExercise, 1500)
+		setTimeout(() => {
+			if (isCorrect) {
+				store.markAsLearned(currentWord.value)
+			} else {
+				store.addWrongAnswers(currentWord.value)
+			}
+			nextExercise()
+		}, 800)
 	}
+
 
 	function nextExercise() {
 		result.value = ''
@@ -196,25 +208,17 @@
 		}
 	})
 
-	watch(userInput, (newVal) => {
+	watch(userInput, (newVal, oldVal) => {
 		if (currentMode.value !== 'letters') return
-		usedIndices.value = []
-		const inputLetters = newVal.split('')
-		const availableIndices = shuffledLetters.value.map((_, i) => i)
-		for (const letter of inputLetters) {
-			const index = availableIndices.find(i =>
-				shuffledLetters.value[i]?.toLowerCase() === letter.toLowerCase() &&
-				!usedIndices.value.includes(i)
-			)
-			if (index !== undefined && index !== -1) {
-				usedIndices.value.push(index)
-				availableIndices.splice(availableIndices.indexOf(index), 1)
-			}
+		const diff = oldVal.length - newVal.length
+		if (diff > 0) {
+			usedIndices.value.splice(newVal.length, diff)
 		}
 	})
 
-	onMounted(()=> {
-		store.loadFromLocal()
+
+	onMounted(async () => {
+		await store.loadFromFirebase()
 	})
 	definePageMeta({
 		middleware: ['auth'],

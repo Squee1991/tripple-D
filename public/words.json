@@ -11,7 +11,10 @@
 		{ "ru": "Ковёр", "de": "Teppich", "article": "der", "plural": "Teppiche" },
 		{ "ru": "Окно", "de": "Fenster", "article": "das", "plural": "Fenster" },
 		{ "ru": "Тумбочка", "de": "Nachttisch", "article": "der", "plural": "Nachttische" },
-		{ "ru": "Кресло", "de": "Sessel", "article": "der", "plural": "Sessel" }
+		{ "ru": "Кресло", "de": "Sessel", "article": "der", "plural": "Sessel" },
+		{ "ru": "Письменный стол", "de": "Schreibtisch", "article": "der", "plural": "Schreibtische" },
+		{ "ru": "Коврик", "de": "Matte", "article": "die", "plural": "Matten" },
+		{ "ru": "Штора", "de": "Vorhang", "article": "der", "plural": "Vorhänge" }
 	],
 	"Animals": [
 		{ "ru": "Кошка", "de": "Katze", "article": "die", "plural": "Katzen" },
@@ -53,7 +56,11 @@
 		{ "ru": "Кофта", "de": "Pullover", "article": "der", "plural": "Pullover" },
 		{ "ru": "Пояс", "de": "Gürtel", "article": "der", "plural": "Gürtel" },
 		{ "ru": "Костюм", "de": "Anzug", "article": "der", "plural": "Anzüge" },
-		{ "ru": "Очки", "de": "Brille", "article": "die", "plural": "Brillen" }
+		{ "ru": "Очки", "de": "Brille", "article": "die", "plural": "Brillen" },
+		{ "ru": "Купальник", "de": "Badeanzug", "article": "der", "plural": "Badeanzüge" },
+		{ "ru": "Шарф", "de": "Schal", "article": "der", "plural": "Schals" },
+		{ "ru": "Колготки", "de": "Strumpfhose", "article": "die", "plural": "Strumpfhosen" },
+		{ "ru": "Кепка", "de": "Kappe", "article": "die", "plural": "Kappen" }
 	],
 	"Food": [
 		{ "ru": "Яблоко", "de": "Apfel", "article": "der", "plural": "Äpfel" },
@@ -74,7 +81,17 @@
 		{ "ru": "Рыба", "de": "Fisch", "article": "der", "plural": "Fische" },
 		{ "ru": "Сахар", "de": "Zucker", "article": "der", "plural": "Zuckersorten" },
 		{ "ru": "Соль", "de": "Salz", "article": "das", "plural": "Salze" },
-		{ "ru": "Шоколад", "de": "Schokolade", "article": "die", "plural": "Schokoladen" }
+		{ "ru": "Шоколад", "de": "Schokolade", "article": "die", "plural": "Schokoladen" },
+		{ "ru": "Помидор", "de": "Tomate", "article": "die", "plural": "Tomaten" },
+		{ "ru": "Огурец", "de": "Gurke", "article": "die", "plural": "Gurken" },
+		{ "ru": "Лук", "de": "Zwiebel", "article": "die", "plural": "Zwiebeln" },
+		{ "ru": "Булочка", "de": "Brötchen", "article": "das", "plural": "Brötchen" },
+		{ "ru": "Торт", "de": "Torte", "article": "die", "plural": "Torten" },
+		{ "ru": "Пирог", "de": "Kuchen", "article": "der", "plural": "Kuchen" },
+		{ "ru": "Йогурт", "de": "Joghurt", "article": "der", "plural": "Joghurts" },
+		{ "ru": "Суп", "de": "Suppe", "article": "die", "plural": "Suppen" },
+		{ "ru": "Сок", "de": "Saft", "article": "der", "plural": "Säfte" },
+		{ "ru": "Мёд", "de": "Honig", "article": "der", "plural": "Honigsorten" }
 	],
 	"Body": [
 		{ "ru": "Голова", "de": "Kopf", "article": "der", "plural": "Köpfe" },
@@ -94,7 +111,12 @@
 		{ "ru": "Лоб", "de": "Stirn", "article": "die", "plural": "Stirnen" },
 		{ "ru": "Бровь", "de": "Augenbraue", "article": "die", "plural": "Augenbrauen" },
 		{ "ru": "Язык", "de": "Zunge", "article": "die", "plural": "Zungen" },
-		{ "ru": "Шея", "de": "Hals", "article": "der", "plural": "Hälse" }
+		{ "ru": "Шея", "de": "Hals", "article": "der", "plural": "Hälse" },
+		{ "ru": "Зуб", "de": "Zahn", "article": "der", "plural": "Zähne" },
+		{ "ru": "Локоть", "de": "Ellbogen", "article": "der", "plural": "Ellbogen" },
+		{ "ru": "Запястье", "de": "Handgelenk", "article": "das", "plural": "Handgelenke" },
+		{ "ru": "Ноготь", "de": "Nagel", "article": "der", "plural": "Nägel" },
+		{ "ru": "Кость", "de": "Knochen", "article": "der", "plural": "Knochen" }
 	],
 	"Professions": [
 		{ "ru": "Врач", "de": "Arzt", "article": "der", "plural": "Ärzte", "pluralArticle": "die" },
@@ -109,7 +131,12 @@
 		{ "ru": "Актёр", "de": "Schauspieler", "article": "der", "plural": "Schauspieler", "pluralArticle": "die" },
 		{ "ru": "Полицейский", "de": "Polizist", "article": "der", "plural": "Polizisten", "pluralArticle": "die" },
 		{ "ru": "Строитель", "de": "Bauarbeiter", "article": "der", "plural": "Bauarbeiter", "pluralArticle": "die" },
-		{ "ru": "Программист", "de": "Programmierer", "article": "der", "plural": "Programmierer", "pluralArticle": "die" }
+		{ "ru": "Программист", "de": "Programmierer", "article": "der", "plural": "Programmierer", "pluralArticle": "die" },
+		{ "ru": "Официант", "de": "Kellner", "article": "der", "plural": "Kellner", "pluralArticle": "die" },
+		{ "ru": "Водитель", "de": "Fahrer", "article": "der", "plural": "Fahrer", "pluralArticle": "die" },
+		{ "ru": "Фермер", "de": "Bauer", "article": "der", "plural": "Bauern", "pluralArticle": "die" },
+		{ "ru": "Механик", "de": "Mechaniker", "article": "der", "plural": "Mechaniker", "pluralArticle": "die" },
+		{ "ru": "Бухгалтер", "de": "Buchhalter", "article": "der", "plural": "Buchhalter", "pluralArticle": "die" }
 	],
 	"Transport": [
 		{ "ru": "Машина", "de": "Auto", "article": "das", "plural": "Autos", "pluralArticle": "die" },
@@ -138,7 +165,10 @@
 		{ "ru": "Серый", "de": "Grau", "article": "das", "plural": "Grautöne", "pluralArticle": "die" },
 		{ "ru": "Коричневый", "de": "Braun", "article": "das", "plural": "Brauntöne", "pluralArticle": "die" },
 		{ "ru": "Бордовый", "de": "Bordeaux", "article": "das", "plural": "Bordeauxtöne", "pluralArticle": "die" },
-		{ "ru": "Бежевый", "de": "Beige", "article": "das", "plural": "Beigetöne", "pluralArticle": "die" }
+		{ "ru": "Бежевый", "de": "Beige", "article": "das", "plural": "Beigetöne", "pluralArticle": "die" },
+		{ "ru": "Золотой", "de": "Gold", "article": "das", "plural": "Goldtöne", "pluralArticle": "die" },
+		{ "ru": "Серебряный", "de": "Silber", "article": "das", "plural": "Silbertöne", "pluralArticle": "die" },
+		{ "ru": "Бирюзовый", "de": "Türkis", "article": "das", "plural": "Türkistöne", "pluralArticle": "die" }
 	],
 	"Nature": [
 		{ "ru": "Дерево", "de": "Baum", "article": "der", "plural": "Bäume", "pluralArticle": "die" },
@@ -155,7 +185,13 @@
 		{ "ru": "Ветер", "de": "Wind", "article": "der", "plural": "Winde", "pluralArticle": "die" },
 		{ "ru": "Облако", "de": "Wolke", "article": "die", "plural": "Wolken", "pluralArticle": "die" },
 		{ "ru": "Дождь", "de": "Regen", "article": "der", "plural": "Regen", "pluralArticle": "die" },
-		{ "ru": "Снег", "de": "Schnee", "article": "der", "plural": "Schneefälle", "pluralArticle": "die" }
+		{ "ru": "Снег", "de": "Schnee", "article": "der", "plural": "Schneefälle", "pluralArticle": "die" },
+		{ "ru": "Лист", "de": "Blatt", "article": "das", "plural": "Blätter", "pluralArticle": "die" },
+		{ "ru": "Молния", "de": "Blitz", "article": "der", "plural": "Blitze", "pluralArticle": "die" },
+		{ "ru": "Лёд", "de": "Eis", "article": "das", "plural": "Eis", "pluralArticle": "die" },
+		{ "ru": "Гроза", "de": "Gewitter", "article": "das", "plural": "Gewitter", "pluralArticle": "die" },
+		{ "ru": "Ветер", "de": "Wind", "article": "der", "plural": "Winde", "pluralArticle": "die" },
+		{ "ru": "Мороз", "de": "Frost", "article": "der", "plural": "Fröste", "pluralArticle": "die" }
 	],
 	"Home": [
 		{ "ru": "Дверь", "de": "Tür", "article": "die", "plural": "Türen", "pluralArticle": "die" },
@@ -173,7 +209,9 @@
 		{ "ru": "Коридор", "de": "Korridor", "article": "der", "plural": "Korridore", "pluralArticle": "die" },
 		{ "ru": "Лестница", "de": "Treppe", "article": "die", "plural": "Treppen", "pluralArticle": "die" },
 		{ "ru": "Окно", "de": "Fenster", "article": "das", "plural": "Fenster", "pluralArticle": "die" },
-		{ "ru": "Чердак", "de": "Dachboden", "article": "der", "plural": "Dachböden", "pluralArticle": "die" }
+		{ "ru": "Чердак", "de": "Dachboden", "article": "der", "plural": "Dachböden", "pluralArticle": "die" },
+		{ "ru": "Кран", "de": "Wasserhahn", "article": "der", "plural": "Wasserhähne", "pluralArticle": "die" },
+		{ "ru": "Душ", "de": "Dusche", "article": "die", "plural": "Duschen", "pluralArticle": "die" }
 	],
 	"Zeit": [
 		{ "ru": "День", "de": "Tag", "article": "der", "plural": "Tage" },
@@ -215,7 +253,13 @@
 		{ "ru": "Ручка", "de": "Kuli", "article": "der", "plural": "Kulis" },
 		{ "ru": "Карандаш", "de": "Bleistift", "article": "der", "plural": "Bleistifte" },
 		{ "ru": "Парта", "de": "Schulbank", "article": "die", "plural": "Schulbänke" },
-		{ "ru": "Рюкзак", "de": "Rucksack", "article": "der", "plural": "Rucksäcke" }
+		{ "ru": "Рюкзак", "de": "Rucksack", "article": "der", "plural": "Rucksäcke" },
+		{ "ru": "Экзамен", "de": "Prüfung", "article": "die", "plural": "Prüfungen" },
+		{ "ru": "Дневник", "de": "Hausaufgabenheft", "article": "das", "plural": "Hausaufgabenhefte" },
+		{ "ru": "Мел", "de": "Kreide", "article": "die", "plural": "Kreiden" },
+		{ "ru": "Доска", "de": "Tafel", "article": "die", "plural": "Tafeln" },
+		{ "ru": "Линейка", "de": "Lineal", "article": "das", "plural": "Lineale" },
+		{ "ru": "Ластик", "de": "Radiergummi", "article": "der", "plural": "Radiergummis" }
 	],
 	"DaysAndMonths": [
 		{ "ru": "Понедельник", "de": "Montag", "article": "der", "plural": "Montage" },

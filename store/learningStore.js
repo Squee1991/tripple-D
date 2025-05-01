@@ -1,62 +1,78 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
+import { doc, setDoc, getDoc, getFirestore } from 'firebase/firestore';
+import { userAuthStore } from './authStore'
 
 export const userlangStore = defineStore('learning', () => {
 	const words = ref([])
+	const db = getFirestore()
 	const learnedWords = ref([])
 	const wrongAnswers = ref([])
 	const selectedTopics = ref([])
 
-	const loadFromLocal = () => {
-		if (process.client) {
-			const savedWords = localStorage.getItem('words')
-			const savedLearned = localStorage.getItem('learnedWords')
-			const savedWrong = localStorage.getItem('wrongAnswers')
-			const savedTopics = localStorage.getItem('selectedTopics')
+	const getUserDocRef = () => {
+		const authStore = userAuthStore()
+		const uid = authStore.user?.uid
+		if (!uid) return null
+		return doc(db, 'users', uid)
+	}
 
-			if (savedWords) words.value = JSON.parse(savedWords)
-			if (savedLearned) learnedWords.value = JSON.parse(savedLearned)
-			if (savedWrong) wrongAnswers.value = JSON.parse(savedWrong)
-			if (savedTopics) selectedTopics.value = JSON.parse(savedTopics)
+	const loadFromFirebase = async () => {
+		const userDoc = getUserDocRef()
+		if (!userDoc) return
+
+		const docSnap = await getDoc(userDoc)
+		if (docSnap.exists()) {
+			const data = docSnap.data()
+			words.value = data.words || []
+			learnedWords.value = data.learnedWords || []
+			wrongAnswers.value = data.wrongAnswers || []
+			selectedTopics.value = data.selectedTopics || []
 		}
 	}
 
-	const saveAll = () => {
-		if (process.client) {
-			localStorage.setItem('words', JSON.stringify(words.value))
-			localStorage.setItem('learnedWords', JSON.stringify(learnedWords.value))
-			localStorage.setItem('wrongAnswers', JSON.stringify(wrongAnswers.value))
-		}
+	const saveToFirebase = async () => {
+		const userDoc = getUserDocRef()
+		if (!userDoc) return
+		await setDoc(userDoc, {
+			words: words.value,
+			learnedWords: learnedWords.value,
+			wrongAnswers: wrongAnswers.value,
+			selectedTopics: selectedTopics.value
+		}, { merge: true })
 	}
 
-	const setSelectedTopics = (topics) => {
+	const setWords = async (newWords) => {
+		words.value = newWords
+		await saveToFirebase()
+	}
+
+	const setSelectedTopics = async (topics) => {
 		selectedTopics.value = topics
-		if (process.client) {
-			localStorage.setItem('selectedTopics', JSON.stringify(topics))
-		}
+		await saveToFirebase()
 	}
 
-	const addWord = (word) => {
+	const addWord = async (word) => {
 		if (!words.value.find(w => w.de === word.de)) {
 			words.value.push(word)
-			saveAll()
+			await saveToFirebase()
 		}
 	}
 
-	const removeWord = (word) => {
+	const removeWord = async (word) => {
 		words.value = words.value.filter(w => w.de !== word.de)
-		saveAll()
+		await saveToFirebase()
 	}
 
-	const clearWords = () => {
+	const clearWords = async () => {
 		words.value = []
-		saveAll()
+		await saveToFirebase()
 	}
 
-	const markAsLearned = (word) => {
+	const markAsLearned = async (word) => {
 		if (!learnedWords.value.find(w => w.de === word.de)) {
 			learnedWords.value.push(word)
-			saveAll()
+			await saveToFirebase()
 		}
 	}
 
@@ -64,25 +80,24 @@ export const userlangStore = defineStore('learning', () => {
 		return learnedWords.value.some(w => w.de === word.de)
 	}
 
-	const addWrongAnswers = (word) => {
+	const addWrongAnswers = async (word) => {
 		if (!wrongAnswers.value.find(w => w.de === word.de)) {
 			wrongAnswers.value.push(word)
-			saveAll()
+			await saveToFirebase()
 		}
 	}
 
-	const cleanWrongAnswers = () => {
+	const cleanWrongAnswers = async () => {
 		wrongAnswers.value = []
-		saveAll()
+		await saveToFirebase()
 	}
 
-	const clearAll = () => {
+	const clearAll = async () => {
 		words.value = []
 		learnedWords.value = []
 		wrongAnswers.value = []
-		localStorage.removeItem('words')
-		localStorage.removeItem('learnedWords')
-		localStorage.removeItem('wrongAnswers')
+		selectedTopics.value = []
+		await saveToFirebase()
 	}
 
 	return {
@@ -97,9 +112,10 @@ export const userlangStore = defineStore('learning', () => {
 		isLearned,
 		addWrongAnswers,
 		cleanWrongAnswers,
-		loadFromLocal,
+		loadFromFirebase,
 		clearAll,
-		saveAll,
-		setSelectedTopics
+		saveToFirebase,
+		setSelectedTopics,
+		setWords
 	}
 })

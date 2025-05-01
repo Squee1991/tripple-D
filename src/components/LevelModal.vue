@@ -2,7 +2,6 @@
 	<div v-if="visible" class="modal-overlay">
 		<div class="modal-content">
 			<h2 class="modal-title">Уровень {{ levelNumber }}: Пещера Знаний</h2>
-
 			<div class="modal-body">
 				<div class="modal-text">
 					<p>📜 <strong>Условие:</strong><br>Ответить правильно минимум на <span class="highlight">{{ requiredCorrect }}</span> из <span class="highlight">{{ totalQuestions }}</span> слов</p>
@@ -13,7 +12,6 @@
 					<img src="../../assets/images/bossApp.png" alt="Враг" />
 				</div>
 			</div>
-
 			<div class="modal-actions">
 				<button class="start-button" @click="$emit('start')">🔮 Начать Битву</button>
 				<button class="back-button" @click="$emit('close')">↩️ Назад</button>

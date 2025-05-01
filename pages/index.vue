@@ -1,11 +1,17 @@
 <template>
     <div class="container">
         <Mainpage/>
+        <Description/>
+        <FeedBack/>
+        <Footer/>
     </div>
 </template>
 
 <script setup>
 import Mainpage from '../src/components/mainPage.vue'
+import Description from '../src/components/DescriptionBlock.vue'
+import FeedBack from '../src/components/feedBack.vue'
+import Footer from '../src/components/footer.vue'
 import { useCurrentUser } from 'vuefire'
 import { onMounted } from 'vue'
 import { useRouter } from 'vue-router'
@@ -14,7 +20,6 @@ const user = useCurrentUser()
 const router = useRouter()
 
 onMounted(() => {
-    // Проверяем статус аутентификации
     if (!user.value) {
         router.push('/')
     }

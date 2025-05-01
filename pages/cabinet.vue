@@ -6,32 +6,33 @@
 			<div class="menu-icon">🔔</div>
 		</div>
 		<div class="main-content">
+			<button @click="pathBack" class="button__back">Назад</button>
 			<div class="header">
 				<div class="user-block">
 					<div class="avatar__wrapper">
 						<img class="avatar" src="../assets/images/Avatars.png" alt=""/>
 					</div>
 					<div class="user-info">
-						<h2 class="nickname">Squee1991</h2>
+						<h2 class="nickname">{{ authStore.name }}</h2>
 						<p class="status">🔥 Platinum</p>
 					</div>
 				</div>
 				<div class="balance-block">
 					<p class="sub">Общий баланс</p>
-					<p class="balance">99 очков</p>
+					<p class="balance">0 очков</p>
 				</div>
 				<div class="meta-block">
 					<p class="meta">Дата регистрации</p>
-					<p class="date">01.01.2024</p>
+					<p class="date">{{ authStore.registeredAt || '—' }}</p>
 				</div>
 			</div>
 			<div class="tabs">
 				<div class="tab active">
-					<img  class="tab__icon" src="../assets/images/witch-hat.svg" alt="">
+					<img class="tab__icon" src="../assets/images/witch-hat.svg" alt="">
 					<span class="tab__text">Личные данные</span>
 				</div>
 				<div class="tab">
-					<img  class="tab__icon" src="../assets/images/progress.svg" alt="">
+					<img class="tab__icon" src="../assets/images/progress.svg" alt="">
 					<span class="tab__text">Прогресс</span>
 				</div>
 				<div class="tab">
@@ -40,14 +41,22 @@
 				</div>
 			</div>
 			<div class="tab-content">
-				<div class="row"><span>Имя:</span><span>Игорь</span></div>
-				<div class="row"><span>Email:</span><span>igor.chudesny1991@gmail.com</span></div>
-				<div class="row"><span>Пароль:</span><span>*******</span></div>
+				<div class="row"><span>Имя:</span><span> {{ authStore.name }}</span></div>
+				<div class="row"><span>Email:</span><span>{{ authStore.email }}</span></div>
+				<div class="row"><span>Пароль:</span><span>{{ authStore.password }}</span></div>
 			</div>
 		</div>
 	</div>
 </template>
 <script setup>
+	import {userAuthStore} from '../store/authStore.js'
+    import { useRouter} from 'vue-router'
+	const authStore = userAuthStore()
+	const router = useRouter()
+
+	const pathBack = () => {
+		router.push('/')
+	}
 
 </script>
 
@@ -57,6 +66,19 @@
 		padding: 0;
 		margin: 0;
 		box-sizing: border-box;
+	}
+
+	.button__back {
+		padding: 10px 30px;
+		border: 2px solid #00c2ff;
+		width: 130px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: white;
+		background: none;
+		border-radius: 15px;
+		cursor: pointer;
 	}
 
 	.cabinet-wrapper {

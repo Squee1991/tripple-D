@@ -25,6 +25,7 @@
     "vuefire": "^3.2.1"
   },
   "devDependencies": {
+    "@nuxtjs/google-fonts": "^3.2.0",
     "pinia": "^3.0.1"
   }
 }

@@ -33,7 +33,6 @@
 	import {ref, computed} from 'vue'
 	import { useRouter} from 'vue-router'
 	const router = useRouter()
-
 	const selectedHero = ref(null)
 
 	const allHeroes = [
@@ -45,7 +44,6 @@
 	const routerPath = () => {
 		router.push('/MapView')
 	}
-
 
 	const visibleHeroes = computed(() => {
 		if (!selectedHero.value) return allHeroes
@@ -60,9 +58,6 @@
 		selectedHero.value = null
 	}
 
-	function continueWithHero() {
-		console.log('Продолжить с героем:', selectedHero.value)
-	}
 </script>
 
 
