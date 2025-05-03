@@ -33,6 +33,8 @@
 <script setup>
 	import {ref , computed} from 'vue'
 	import {userAuthStore} from '../../store/authStore.js'
+	import { useRouter} from 'vue-router'
+	const router = useRouter()
 	const authStore = userAuthStore()
 	const mode = ref('login')
 	const error = ref('')
@@ -105,41 +107,23 @@
 					email: values.email,
 					password: values.password
 				})
+				router.push('/learnmode')
 			} else {
 				await authStore.loginUser({
 					email: values.email,
 					password: values.password
 				})
+				router.push('/learnmode')
 			}
 			fields.value.forEach(field => field.value = '')
 		} catch (e) {
-			switch (e.code) {
-				case 'auth/email-already-in-use':
-					error.value = 'Этот email уже используется'
-					break
-				case 'auth/invalid-email':
-					error.value = 'Некорректный email'
-					break
-				case 'auth/operation-not-allowed':
-					error.value = 'Операция не разрешена'
-					break
-				case 'auth/weak-password':
-					error.value = 'Слишком слабый пароль'
-					break
-				case 'auth/user-not-found':
-					error.value = 'Пользователь не найден'
-					break
-				case 'auth/wrong-password':
-					error.value = 'Неверный пароль'
-					break
-				case 'auth/invalid-credential':
-					error.value = 'Неверный email или пароль'
-					break
-				default:
-					error.value = `Ошибка: ${e.message}`
+			if (e.code === 'auth/email-not-verified') {
+				error.value = 'Подтвердите ваш email перед входом. Письмо уже отправлено.'
+				return
 			}
 		}
 	}
+
 
 </script>
 

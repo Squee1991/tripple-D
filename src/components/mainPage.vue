@@ -4,7 +4,7 @@
 			<div class="overlay" :class="{ show: showAuth }" @click="closeLogin"></div>
 			<Transition name="slide-auth">
 				<div v-if="showAuth" class="signin-wrapper">
-					<SingIn @success="closeLogin" />
+					<SingIn @success="closeLogin"/>
 				</div>
 			</Transition>
 			<div class="profile-page">
@@ -15,12 +15,11 @@
 					<div class="top-right">
 						<div class="user-info">
 							<div v-if="userAuth.name" class="auth__inner">
-								<img class="user-avatar-icon" src="" alt="" />
+								<img class="user-avatar-icon" src="" alt=""/>
 								<div @click="userToggleFoo" class="userAuth__wrapper" :class="{ isToggle: menuToggle }">
-									<span  class="menu-item">{{ userAuth.email }}</span>
+									<span class="menu-item">{{ userAuth.email }}</span>
 									<div class="menu-dropdown">
-										<span class="menu-item">Кабинет</span>
-										<span class="menu-item">Настройки</span>
+										<span class="menu-item" @click.stop="routerPath('cabinet')">Кабинет</span>
 										<span class="menu-item" @click.stop="userAuth.logOut">Выход</span>
 									</div>
 								</div>
@@ -37,27 +36,22 @@
 				</div>
 				<div class="banner__sub">
 					<div class="banner__title">
-						<span class="bold_1">Der</span> <span class="bold_2">Die</span> <span class="bold_3">Das</span> - сайт для изучения артиклей существительных в немецком языке
+						<span class="bold_1">Der</span> <span class="bold_2">Die</span> <span class="bold_3">Das</span>
+						- сайт для изучения артиклей существительных в немецком языке
 					</div>
 					<div class="banner__btn">
-						<button v-if="start" @click="handleStart" class="start-button">Начать</button>
+						<button
+							v-if="start"
+							@click="handleStart"
+							class="start-button"
+						>
+							{{ userAuth.name ? 'Начать обучение' : 'Начать' }}
+						</button>
 					</div>
 				</div>
 			</div>
-			<div class="start-button-wrapper" :class="{ 'is-started': isStarted }">
-				<div v-if="!start" class="mode-select">
-					<button class="start-button" @click="selectMode('cards')">Учить слова</button>
-					<button class="start-button" @click="selectMode('heroes')">Пройти игру</button>
-				</div>
-			</div>
-			<Transition name="bounce">
-				<Cards v-if="selectedMode === 'cards'" />
-			</Transition>
-			<Transition name="fade">
-				<Heroes v-if="selectedMode === 'heroes'" />
-			</Transition>
 		</div>
-		</div>
+	</div>
 
 </template>
 
@@ -65,9 +59,8 @@
 	import {ref} from 'vue'
 	import {userAuthStore} from '../../store/authStore.js'
 	import SingIn from '../components/logIn.vue'
-	import Heroes from '../components/heroes.vue'
-	import Cards from '../components/cards.vue'
 	import {useRouter} from 'vue-router'
+
 	const menuToggle = ref(false)
 	const userAuth = userAuthStore()
 	const router = useRouter()
@@ -75,11 +68,6 @@
 	const isStarted = ref(false)
 	const selectedMode = ref(null)
 	const showAuth = ref(false)
-
-	const selectMode = (mode) => {
-		selectedMode.value = mode
-		isStarted.value = true
-	}
 
 	const userToggleFoo = () => {
 		menuToggle.value = !menuToggle.value
@@ -90,6 +78,7 @@
 	}
 
 	const routerPath = (item) => {
+		menuToggle.value = false
 		if (item === 'cabinet') {
 			router.push('/cabinet')
 		} else if (item === 'map') {
@@ -101,8 +90,7 @@
 		if (!userAuth.name) {
 			showAuth.value = true
 		} else {
-			start.value = false
-			isStarted.value = true
+			router.push('/learnmode')
 		}
 	}
 
@@ -118,12 +106,12 @@
 
 <style scoped>
 
-	.banner__sub{
+	.banner__sub {
 		display: flex;
 		flex-direction: column;
 	}
 
-	.sub__title{
+	.sub__title {
 		margin: 0 auto;
 		width: 400px;
 		font-size: 20px;
@@ -172,7 +160,7 @@
 		margin-top: 50px;
 	}
 
-	.sub__text{
+	.sub__text {
 		display: flex;
 		flex-direction: column;
 	}
@@ -217,7 +205,7 @@
 	}
 
 	.userAuth__wrapper.isToggle .menu-dropdown {
-		height: 95px;
+		height: 63px;
 	}
 
 	.menu-item {
@@ -359,7 +347,7 @@
 		transition: all 0.3s ease;
 		box-shadow: 0 0 12px #00ffff44;
 		animation: pulseGlow 2s infinite ease-in-out;
-		width: 270px;
+		width: 300px;
 		font-family: "Kurale", serif;
 		font-weight: 600;
 	}
@@ -414,16 +402,20 @@
 	.slide-auth-enter-from {
 		transform: translateX(100%);
 	}
+
 	.slide-auth-enter-active,
 	.slide-auth-leave-active {
 		transition: transform 0.5s ease;
 	}
+
 	.slide-auth-enter-to {
 		transform: translateX(0%);
 	}
+
 	.slide-auth-leave-to {
 		transform: translateX(100%);
 	}
+
 	.signin-wrapper.show {
 		transform: translateX(0%);
 	}

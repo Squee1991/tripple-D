@@ -8,7 +8,8 @@ import {
 	signOut,
 	deleteUser,
 	onAuthStateChanged,
-	sendPasswordResetEmail
+	sendPasswordResetEmail,
+	sendEmailVerification
 } from 'firebase/auth';
 import {doc, setDoc, getDoc, getFirestore} from 'firebase/firestore';
 
@@ -37,6 +38,8 @@ export const userAuthStore = defineStore('auth', () => {
 			displayName: userData.name
 		})
 
+		await sendEmailVerification(userCredential.user)
+
 		const now = new Date().toLocaleDateString()
 
 		setUserData({
@@ -48,9 +51,13 @@ export const userAuthStore = defineStore('auth', () => {
 	}
 
 
-	const loginUser = async ({email, password}) => {
+	const loginUser = async ({ email, password }) => {
 		const auth = getAuth()
 		const userCredential = await signInWithEmailAndPassword(auth, email, password)
+		if (!userCredential.user.emailVerified) {
+			throw { code: 'auth/email-not-verified' }
+		}
+
 		setUserData({
 			name: userCredential.user.displayName,
 			email: userCredential.user.email,

@@ -5,7 +5,7 @@
 			<div v-if="currentWord">
 				<h2 class="word-counter">Слово {{ currentIndex + 1 }} из {{ total }}</h2>
 				<p><strong>слово:</strong> {{ currentWord.ru }}</p>
-				<div v-if="currentMode === 'article+word'" class="exercise">
+				<div v-if="currentMode === 'wordArticle'" class="exercise">
 					<p>Впишите артикль и слово на немецком:</p>
 					<input v-model="userInput" class="input-field"/>
 					<button @click="checkAnswer" class="check-button">Проверить</button>
@@ -96,7 +96,9 @@
 		selectedModes.value = [selectedModes.value]
 	}
 
-	const filteredWords = computed(() => store.words.filter(word => !store.isLearned(word)))
+	const filteredWords = computed(() =>
+		store.words.filter(word => !isWordLearned(word))
+	)
 	const total = computed(() => filteredWords.value.length)
 	const currentIndex = ref(0)
 	const currentModeIndex = ref(0)
@@ -132,10 +134,14 @@
 		}
 	}
 
+	function isWordLearned(word) {
+		return selectedModes.value.every(mode => word.progress?.[mode])
+	}
+
 	function checkAnswer() {
 		let correct = ''
 		switch (currentMode.value) {
-			case 'article+word':
+			case 'wordArticle':
 				correct = `${currentWord.value.article} ${currentWord.value.de}`
 				break
 			case 'article':
@@ -148,23 +154,28 @@
 				correct = currentWord.value.de
 		}
 
-		const input = userInput.value.trim().toLowerCase()
-		correct = correct.trim().toLowerCase()
+		const normalize = (text) => text.trim().toLowerCase().replace(/\s+/g, ' ')
+		const input = normalize(userInput.value)
+		const correctAnswer = normalize(correct)
 
-		result.value = input === correct ? 'correct' : 'wrong'
-
-		let isCorrect = input === correct
+		const isCorrect = input === correctAnswer
 		result.value = isCorrect ? 'correct' : 'wrong'
 
-		setTimeout(() => {
+		setTimeout(async () => {
+			await store.markProgress(currentWord.value, currentMode.value, isCorrect)
+
 			if (isCorrect) {
-				store.markAsLearned(currentWord.value)
+				if (isWordLearned(currentWord.value)) {
+					await store.markAsLearned(currentWord.value)
+				}
 			} else {
-				store.addWrongAnswers(currentWord.value)
+				await store.addWrongAnswers(currentWord.value)
 			}
+
 			nextExercise()
 		}, 800)
 	}
+
 
 
 	function nextExercise() {
@@ -188,7 +199,9 @@
 		result.value = ''
 		userInput.value = ''
 		usedIndices.value = []
-		store.words = [...store.wrongAnswers]
+		store.words = store.wrongAnswers.filter(w =>
+			selectedModes.value.some(mode => !w.progress?.[mode])
+		)
 		store.cleanWrongAnswers()
 		finished.value = false
 	}
@@ -200,6 +213,10 @@
 		usedIndices.value = []
 		result.value = ''
 		finished.value = false
+
+		store.words = store.words.filter(w =>
+			selectedModes.value.some(mode => !w.progress?.[mode])
+		)
 	}
 
 	watch(currentMode, (newMode) => {
@@ -216,9 +233,12 @@
 		}
 	})
 
-
 	onMounted(async () => {
 		await store.loadFromFirebase()
+		if (route.query.mode) {
+			const mode = route.query.mode
+			selectedModes.value = Array.isArray(mode) ? mode : [mode]
+		}
 	})
 	definePageMeta({
 		middleware: ['auth'],
@@ -226,122 +246,130 @@
 </script>
 
 <style scoped>
-	.wrapper {
-		max-width: 1200px;
-		margin: auto;
-		padding: 30px 20px;
-		font-family: 'Segoe UI', sans-serif;
-	}
+	@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
 
-	.current__word {
-		font-size: 22px;
-		color: #6262e7;
-		font-weight: 600;
+	.wrapper {
+		max-width: 1000px;
+		margin: auto;
+		padding: 40px 20px;
+		font-family: 'Uncial Antiqua', cursive;
+		color: #f2ecff;
+		background: #120026;
+		border-radius: 20px;
+		box-shadow: 0 0 20px #39076e55;
 	}
 
 	.exercise-wrapper {
-		max-width: 800px;
-		margin: auto;
-		padding: 10px;
-		background-color: #f9f9f9;
+		background: #1b0033;
 		border-radius: 16px;
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+		padding: 30px;
+		box-shadow: 0 0 20px #6a1b9a55;
 	}
 
 	.back-link {
+		color: #cfaaff;
+		font-size: 16px;
+		padding: 10px 16px;
+		background: none;
+		border: 1px solid #7c4dff;
+		border-radius: 8px;
+		text-decoration: none;
+		transition: 0.3s;
 		display: inline-block;
 		margin-bottom: 20px;
-		text-decoration: none;
-		font-size: 18px;
-		color: #4caf50;
-		border: 2px solid #4caf50;
-		border-radius: 8px;
-		padding: 10px 16px;
-		font-weight: 600;
-		transition: 0.3s;
 	}
 
 	.back-link:hover {
-		background-color: #4caf50;
+		background: #7c4dff;
 		color: white;
 	}
 
 	.word-counter {
-		font-size: 26px;
-		margin-bottom: 20px;
+		font-size: 24px;
+		color: #ffe082;
 		text-align: center;
-		color: #333;
+		margin-bottom: 20px;
+	}
+
+	.current__word {
+		color: #ffd700;
+		font-size: 20px;
 		font-weight: bold;
 	}
 
 	.exercise {
 		text-align: center;
+		margin-top: 20px;
 	}
 
 	.input-field {
 		width: 100%;
 		padding: 12px;
 		font-size: 18px;
+		border: 1px solid #7c4dff;
 		border-radius: 10px;
-		border: 1px solid #ccc;
+		background: #25003d;
+		color: white;
 		margin: 15px 0;
-		box-sizing: border-box;
+	}
+
+	.input-field:focus {
+		outline: none;
+		box-shadow: 0 0 10px #9575cd;
 	}
 
 	.check-button {
-		background-color: #4caf50;
+		background-color: #7c4dff;
 		color: white;
 		font-size: 16px;
-		padding: 10px 22px;
+		padding: 10px 24px;
 		border: none;
-		border-radius: 8px;
+		border-radius: 10px;
 		cursor: pointer;
-		font-weight: 600;
-		transition: background-color 0.3s;
+		font-weight: bold;
+		margin-top: 10px;
 	}
 
 	.check-button:hover {
-		background-color: #388e3c;
+		background-color: #9b5de5;
 	}
 
 	.letters {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		gap: 8px;
-		margin-bottom: 15px;
+		gap: 10px;
+		margin-bottom: 20px;
 	}
 
 	.make__word {
-		width: 40px;
-		height: 60px;
+		width: 44px;
+		height: 56px;
 		font-size: 20px;
-		font-weight: bold;
-		background-color: #4caf50;
+		background: #311b92;
 		color: white;
-		border: none;
 		border-radius: 6px;
+		border: none;
 		cursor: pointer;
-		transition: background-color 0.2s ease;
 	}
 
 	.make__word:disabled {
-		background-color: #9ccc65;
-		cursor: default;
+		background: #5e35b1;
+		color: #ccc;
 	}
 
 	.result {
 		font-size: 18px;
+		margin-top: 12px;
 		font-weight: bold;
-		margin-top: 10px;
 	}
 
 	.correct {
-		color: green;
+		color: #00e676;
 	}
 
 	.wrong {
-		color: red;
+		color: #ff5252;
 	}
 
 	.completion-wrapper {
@@ -352,59 +380,58 @@
 	}
 
 	.completion-message {
-		background-color: #ffffff;
-		border-radius: 16px;
-		padding: 40px 30px;
+		background: #1e0030;
+		border-radius: 18px;
+		padding: 40px;
 		text-align: center;
-		box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-		max-width: 500px;
-		width: 100%;
+		box-shadow: 0 0 20px #4a148c77;
+	}
+
+	.congrats-title {
+		font-size: 30px;
+		color: #ffd54f;
+	}
+
+	.congrats-subtitle {
+		font-size: 18px;
+		color: #d1c4e9;
 	}
 
 	.completion-buttons {
 		display: flex;
 		flex-direction: column;
-		gap: 15px;
-		margin-top: 20px;
-		align-items: center;
+		gap: 16px;
+		margin-top: 24px;
 	}
 
 	.completion-btn {
-		padding: 12px 0;
 		font-size: 16px;
-		font-weight: 600;
+		padding: 12px 0;
 		border-radius: 10px;
-		cursor: pointer;
-		text-align: center;
-		text-decoration: none;
-		transition: 0.3s ease;
-		color: white;
+		font-weight: bold;
 		border: none;
-		min-width: 258px;
+		color: white;
+		cursor: pointer;
+		min-width: 240px;
 	}
 
 	.completion-btn.home {
-		background-color: #2196f3;
-	}
-
-	.completion-btn.home:hover {
-		background-color: #1976d2;
+		background: #1976d2;
 	}
 
 	.completion-btn.retry {
-		background-color: #ff9800;
-	}
-
-	.completion-btn.retry:hover {
-		background-color: #f57c00;
+		background: #f57c00;
 	}
 
 	.completion-btn.restart {
-		background-color: #4caf50;
+		background: #43a047;
 	}
 
-	.completion-btn.restart:hover {
-		background-color: #388e3c;
+	.completion-btn:hover {
+		opacity: 0.9;
 	}
 </style>
+
+
+
 

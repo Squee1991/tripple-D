@@ -33,9 +33,9 @@
 	const modes = [
 		{ key: 'article', label: 'Вписать артикль' },
 		{ key: 'letters', label: 'Собрать слово по буквам' },
-		{ key: 'word', label: 'Вписать слово' },
 		{ key: 'wordArticle', label: 'Вписать слово и артикль' },
-		{ key: 'plural', label: 'Форма множественного числа' }
+		{ key: 'plural', label: 'Форма множественного числа' },
+		{ key: 'audio', label: 'Аудирование' }
 	]
 
 	const startLearning = () => {
