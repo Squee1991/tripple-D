@@ -1,53 +1,82 @@
 <template>
 	<div class="cabinet-wrapper">
 		<div class="sidebar">
+			<button @click="pathBack" class="button__back"><</button>
 			<div class="menu-icon active">🏠</div>
 			<div class="menu-icon">⚙</div>
 			<div class="menu-icon">🔔</div>
 		</div>
 		<div class="main-content">
+
 			<div class="header">
 				<div class="user-block">
 					<div class="avatar__wrapper">
-						<img class="avatar" src="../assets/images/Avatars.png" alt=""/>
+						<img class="avatar" src="../assets/images/wizard3.svg" alt=""/>
 					</div>
 					<div class="user-info">
-						<h2 class="nickname">Squee1991</h2>
-						<p class="status">🔥 Platinum</p>
+						<div>Уровень: 1</div>
+
 					</div>
 				</div>
 				<div class="balance-block">
 					<p class="sub">Общий баланс</p>
-					<p class="balance">99 очков</p>
+					<p class="balance">{{ learningStore.points }}  очков</p>
 				</div>
 				<div class="meta-block">
 					<p class="meta">Дата регистрации</p>
-					<p class="date">01.01.2024</p>
+					<p class="date">{{ authStore.registeredAt || '—' }}</p>
 				</div>
 			</div>
 			<div class="tabs">
-				<div class="tab active">
-					<img  class="tab__icon" src="../assets/images/witch-hat.svg" alt="">
+				<div class="tab" :class="{ active: activeTab === 'info' }" @click="setTab('info')">
+					<img class="tab__icon" src="../assets/images/witch-hat.svg" alt="">
 					<span class="tab__text">Личные данные</span>
 				</div>
-				<div class="tab">
-					<img  class="tab__icon" src="../assets/images/progress.svg" alt="">
+				<div class="tab" :class="{ active: activeTab === 'progress' }" @click="setTab('progress')">
+					<img class="tab__icon" src="../assets/images/progress.svg" alt="">
 					<span class="tab__text">Прогресс</span>
 				</div>
-				<div class="tab">
+				<div class="tab" :class="{ active: activeTab === 'skills' }" @click="setTab('skills')">
 					<img class="tab__icon" src="../assets/images/magic-book.svg" alt="">
 					<span class="tab__text">Способности</span>
 				</div>
 			</div>
-			<div class="tab-content">
-				<div class="row"><span>Имя:</span><span>Игорь</span></div>
-				<div class="row"><span>Email:</span><span>igor.chudesny1991@gmail.com</span></div>
-				<div class="row"><span>Пароль:</span><span>*******</span></div>
+			<div v-if="activeTab === 'info'" class="tab-content">
+				<div class="row"><span>Имя:</span><span>{{ authStore.name }}</span></div>
+				<div class="row"><span>Email:</span><span>{{ authStore.email }}</span></div>
+			</div>
+			<div v-if="activeTab === 'progress'">
+				<Progress />
+			</div>
+			<div v-if="activeTab === 'skills'" class="tab-content">
+				<div class="row"><span>Навык 1:</span><span>Скоро...</span></div>
+				<div class="row"><span>Навык 2:</span><span>Скоро...</span></div>
 			</div>
 		</div>
 	</div>
 </template>
 <script setup>
+	import {userAuthStore} from '../store/authStore.js'
+	import {userlangStore } from '../store/learningStore.js'
+	import { ref } from 'vue'
+	import Progress from '../src/components/progress.vue'
+    import { onMounted } from 'vue'
+    import { useRouter} from 'vue-router'
+	const authStore = userAuthStore()
+	const learningStore = userlangStore()
+	const router = useRouter()
+	const activeTab = ref('info')
+	const pathBack = () => {
+		router.push('/')
+	}
+
+	const setTab = (tab) => {
+		activeTab.value = tab
+	}
+
+	onMounted(async () => {
+		await learningStore.loadFromFirebase()
+	})
 
 </script>
 
@@ -59,9 +88,22 @@
 		box-sizing: border-box;
 	}
 
+	.button__back {
+		border: none;
+		font-size: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: white;
+		background: none;
+		border-radius: 15px;
+		cursor: pointer;
+	}
+
 	.cabinet-wrapper {
 		display: flex;
-		height: 100vh;
+		height: 100%;
+		min-height: 100vh;
 		background: radial-gradient(circle at center, #0e0e0e 0%, #000 100%);
 		color: #fff;
 		font-family: 'Segoe UI', sans-serif;
@@ -180,7 +222,7 @@
 	}
 
 	.tab__icon {
-		width: 50px;
+		width: 40px;
 		margin-right: 10px;
 	}
 
