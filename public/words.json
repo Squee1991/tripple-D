@@ -19,6 +19,7 @@
 		{ "ru": "Настольная лампа", "de": "Tischlampe", "article": "die", "plural": "Tischlampen", "pluralArticle": "die" }
 	],
 	"Animals": [
+		{ "ru": "Животное", "de": "Tier", "article": "das", "plural": "Tiere", "pluralArticle": "die" },
 		{ "ru": "Кошка", "de": "Katze", "article": "die", "plural": "Katzen" },
 		{ "ru": "Собака", "de": "Hund", "article": "der", "plural": "Hunde" },
 		{ "ru": "Птица", "de": "Vogel", "article": "der", "plural": "Vögel" },
@@ -44,6 +45,7 @@
 		{ "ru": "Змея", "de": "Schlange", "article": "die", "plural": "Schlangen" }
 	],
 	"Clothes": [
+		{ "ru": "Одежда", "de": "Kleidung", "article": "die", "plural": "Kleidungen" },
 		{ "ru": "Рубашка", "de": "Hemd", "article": "das", "plural": "Hemden", "pluralArticle": "die" },
 		{ "ru": "Куртка", "de": "Jacke", "article": "die", "plural": "Jacken", "pluralArticle": "die" },
 		{ "ru": "Пальто", "de": "Mantel", "article": "der", "plural": "Mäntel", "pluralArticle": "die" },
@@ -77,6 +79,7 @@
 		{ "ru": "Овощи", "de": "Gemüse", "article": "das", "plural": "Gemüse", "pluralArticle": "die" },
 		{ "ru": "Фрукты", "de": "Obst", "article": "das", "plural": "Obstarten", "pluralArticle": "die" },
 		{ "ru": "Яйцо", "de": "Ei", "article": "das", "plural": "Eier", "pluralArticle": "die" },
+		{ "ru": "Еда", "de": "Essen", "article": "das", "plural": "Essen", "pluralArticle": "die" },
 		{ "ru": "Картофель", "de": "Kartoffel", "article": "die", "plural": "Kartoffeln", "pluralArticle": "die" },
 		{ "ru": "Морковь", "de": "Karotte", "article": "die", "plural": "Karotten", "pluralArticle": "die" },
 		{ "ru": "Курица", "de": "Hähnchen", "article": "das", "plural": "Hähnchen", "pluralArticle": "die" },
@@ -117,12 +120,14 @@
 		{ "ru": "Язык", "de": "Zunge", "article": "die", "plural": "Zungen", "pluralArticle": "die" },
 		{ "ru": "Шея", "de": "Hals", "article": "der", "plural": "Hälse", "pluralArticle": "die" },
 		{ "ru": "Зуб", "de": "Zahn", "article": "der", "plural": "Zähne", "pluralArticle": "die" },
+		{ "ru": "Тело", "de": "Körper", "article": "der", "plural": "Körper", "pluralArticle": "die" },
 		{ "ru": "Локоть", "de": "Ellbogen", "article": "der", "plural": "Ellbogen", "pluralArticle": "die" },
 		{ "ru": "Запястье", "de": "Handgelenk", "article": "das", "plural": "Handgelenke", "pluralArticle": "die" },
 		{ "ru": "Ноготь", "de": "Nagel", "article": "der", "plural": "Nägel", "pluralArticle": "die" },
 		{ "ru": "Кость", "de": "Knochen", "article": "der", "plural": "Knochen", "pluralArticle": "die" }
 	],
 	"Professions": [
+		{ "ru": "Профессия", "de": "Beruf", "article": "der", "plural": "Berufe", "pluralArticle": "die" },
 		{ "ru": "Врач", "de": "Arzt", "article": "der", "plural": "Ärzte", "pluralArticle": "die" },
 		{ "ru": "Учитель", "de": "Lehrer", "article": "der", "plural": "Lehrer", "pluralArticle": "die" },
 		{ "ru": "Учительница", "de": "Lehrerin", "article": "die", "plural": "Lehrerinnen", "pluralArticle": "die" },
@@ -175,6 +180,7 @@
 		{ "ru": "Бирюзовый", "de": "Türkis", "article": "das", "plural": "Türkistöne", "pluralArticle": "die" }
 	],
 	"Nature": [
+		{ "ru": "Природа", "de": "Natur", "article": "die", "plural": "Naturen"},
 		{ "ru": "Дерево", "de": "Baum", "article": "der", "plural": "Bäume", "pluralArticle": "die" },
 		{ "ru": "Цветок", "de": "Blume", "article": "die", "plural": "Blumen", "pluralArticle": "die" },
 		{ "ru": "Трава", "de": "Gras", "article": "das", "plural": "Gräser", "pluralArticle": "die" },
@@ -198,8 +204,14 @@
 		{ "ru": "Мороз", "de": "Frost", "article": "der", "plural": "Fröste", "pluralArticle": "die" }
 	],
 	"Home": [
+		{ "ru": "Дом", "de": "Haus", "article": "das", "plural": "Häuser", "pluralArticle": "die" },
+		{ "ru": "Квартира", "de": "Wohnung", "article": "die", "plural": "Wohnungen", "pluralArticle": "die" },
+		{ "ru": "Дача", "de": "Datscha", "article": "die", "plural": "Datschen", "pluralArticle": "die" },
 		{ "ru": "Дверь", "de": "Tür", "article": "die", "plural": "Türen", "pluralArticle": "die" },
+		{ "ru": "Особняк", "de": "Villa", "article": "die", "plural": "Villen", "pluralArticle": "die" },
 		{ "ru": "Стена", "de": "Wand", "article": "die", "plural": "Wände", "pluralArticle": "die" },
+		{ "ru": "Хижина", "de": "Hütte", "article": "die", "plural": "Hütten", "pluralArticle": "die" },
+		{ "ru": "Общежитие", "de": "Wohnheim", "article": "das", "plural": "Wohnheime", "pluralArticle": "die" },
 		{ "ru": "Потолок", "de": "Decke", "article": "die", "plural": "Decken", "pluralArticle": "die" },
 		{ "ru": "Пол", "de": "Boden", "article": "der", "plural": "Böden", "pluralArticle": "die" },
 		{ "ru": "Комната", "de": "Zimmer", "article": "das", "plural": "Zimmer", "pluralArticle": "die" },
@@ -322,7 +334,6 @@
 		{ "ru": "Зеркало", "de": "Spiegel", "article": "der", "plural": "Spiegel", "pluralArticle": "die" },
 		{ "ru": "Линейка", "de": "Lineal", "article": "das", "plural": "Lineale", "pluralArticle": "die" },
 		{ "ru": "Салфетка", "de": "Serviette", "article": "die", "plural": "Servietten", "pluralArticle": "die" },
-		{ "ru": "Кружка", "de": "Tasse", "article": "die", "plural": "Tassen", "pluralArticle": "die" },
 		{ "ru": "Бутылка", "de": "Flasche", "article": "die", "plural": "Flaschen", "pluralArticle": "die" },
 		{ "ru": "Калькулятор", "de": "Taschenrechner", "article": "der", "plural": "Taschenrechner", "pluralArticle": "die" },
 		{ "ru": "Резинка", "de": "Radiergummi", "article": "der", "plural": "Radiergummis", "pluralArticle": "die" },
@@ -356,6 +367,7 @@
 		{ "ru": "Зеркальце", "de": "Taschenspiegel", "article": "der", "plural": "Taschenspiegel", "pluralArticle": "die" }
 	],
 	"Familie": [
+		{ "ru": "Семья", "de": "Familie", "article": "die", "plural": "Familien", "pluralArticle": "die" },
 		{ "ru": "Мама", "de": "Mutter", "article": "die", "plural": "Mütter", "pluralArticle": "die" },
 		{ "ru": "Папа", "de": "Vater", "article": "der", "plural": "Väter", "pluralArticle": "die" },
 		{ "ru": "Брат", "de": "Bruder", "article": "der", "plural": "Brüder", "pluralArticle": "die" },
@@ -381,6 +393,7 @@
 		{ "ru": "Отчим", "de": "Stiefvater", "article": "der", "plural": "Stiefväter", "pluralArticle": "die" }
 	],
 	"Emotions": [
+		{ "ru": "Эмоция", "de": "Emotion", "article": "die", "plural": "Emotionen", "pluralArticle": "die" },
 		{ "ru": "Радость", "de": "Freude", "article": "die", "plural": "Freuden", "pluralArticle": "die" },
 		{ "ru": "Грусть", "de": "Traurigkeit", "article": "die", "plural": "Traurigkeiten", "pluralArticle": "die" },
 		{ "ru": "Злость", "de": "Wut", "article": "die", "plural": "Wutanfälle", "pluralArticle": "die" },
@@ -409,6 +422,7 @@
 		{ "ru": "Отчаяние", "de": "Verzweiflung", "article": "die", "plural": "Verzweiflungen", "pluralArticle": "die" }
 	],
 	"Werkzeuge": [
+		{ "ru": "Инструмент", "de": "Werkzeug", "article": "das", "plural": "Werkzeuge", "pluralArticle": "die" },
 		{ "ru": "Молоток", "de": "Hammer", "article": "der", "plural": "Hämmer", "pluralArticle": "die" },
 		{ "ru": "Отвёртка", "de": "Schraubenzieher", "article": "der", "plural": "Schraubenzieher", "pluralArticle": "die" },
 		{ "ru": "Гаечный ключ", "de": "Schraubenschlüssel", "article": "der", "plural": "Schraubenschlüssel", "pluralArticle": "die" },
@@ -429,5 +443,88 @@
 		{ "ru": "Ножовка", "de": "Handsäge", "article": "die", "plural": "Handsägen", "pluralArticle": "die" },
 		{ "ru": "Шестигранник", "de": "Inbusschlüssel", "article": "der", "plural": "Inbusschlüssel", "pluralArticle": "die" },
 		{ "ru": "Фонарик", "de": "Taschenlampe", "article": "die", "plural": "Taschenlampen", "pluralArticle": "die" }
+	],
+	"Kitchen": [
+		{ "ru": "Кухня", "de": "Küche", "article": "die", "plural": "Küchen", "pluralArticle": "die" },
+		{ "ru": "Плита", "de": "Herd", "article": "der", "plural": "Herde", "pluralArticle": "die" },
+		{ "ru": "Холодильник", "de": "Kühlschrank", "article": "der", "plural": "Kühlschränke", "pluralArticle": "die" },
+		{ "ru": "Микроволновка", "de": "Mikrowelle", "article": "die", "plural": "Mikrowellen", "pluralArticle": "die" },
+		{ "ru": "Чайник", "de": "Wasserkocher", "article": "der", "plural": "Wasserkocher", "pluralArticle": "die" },
+		{ "ru": "Сковорода", "de": "Pfanne", "article": "die", "plural": "Pfannen", "pluralArticle": "die" },
+		{ "ru": "Кастрюля", "de": "Topf", "article": "der", "plural": "Töpfe", "pluralArticle": "die" },
+		{ "ru": "Ложка", "de": "Löffel", "article": "der", "plural": "Löffel", "pluralArticle": "die" },
+		{ "ru": "Вилка", "de": "Gabel", "article": "die", "plural": "Gabeln", "pluralArticle": "die" },
+		{ "ru": "Нож", "de": "Messer", "article": "das", "plural": "Messer", "pluralArticle": "die" },
+		{ "ru": "Тарелка", "de": "Teller", "article": "der", "plural": "Teller", "pluralArticle": "die" },
+		{ "ru": "Чашка", "de": "Tasse", "article": "die", "plural": "Tassen", "pluralArticle": "die" },
+		{ "ru": "Кружка", "de": "Becher", "article": "der", "plural": "Becher", "pluralArticle": "die" },
+		{ "ru": "Стакан", "de": "Glas", "article": "das", "plural": "Gläser", "pluralArticle": "die" },
+		{ "ru": "Раковина", "de": "Spüle", "article": "die", "plural": "Spülen", "pluralArticle": "die" },
+		{ "ru": "Шкаф", "de": "Schrank", "article": "der", "plural": "Schränke", "pluralArticle": "die" },
+		{ "ru": "Полка", "de": "Regal", "article": "das", "plural": "Regale", "pluralArticle": "die" }
+	],
+	"Health": [
+		{ "ru": "Здоровье", "de": "Gesundheit", "article": "die", "plural": "Gesundheiten", "pluralArticle": "die" },
+		{ "ru": "Боль", "de": "Schmerz", "article": "der", "plural": "Schmerzen", "pluralArticle": "die" },
+		{ "ru": "Температура", "de": "Fieber", "article": "das", "plural": "Fieber", "pluralArticle": "die" },
+		{ "ru": "Кашель", "de": "Husten", "article": "der", "plural": "Husten", "pluralArticle": "die" },
+		{ "ru": "Насморк", "de": "Schnupfen", "article": "der", "plural": "Schnupfen", "pluralArticle": "die" },
+		{ "ru": "Лекарство", "de": "Medikament", "article": "das", "plural": "Medikamente", "pluralArticle": "die" },
+		{ "ru": "Таблетка", "de": "Tablette", "article": "die", "plural": "Tabletten", "pluralArticle": "die" },
+		{ "ru": "Врач", "de": "Arzt", "article": "der", "plural": "Ärzte", "pluralArticle": "die" },
+		{ "ru": "Поликлиника", "de": "Klinik", "article": "die", "plural": "Kliniken", "pluralArticle": "die" },
+		{ "ru": "Аптека", "de": "Apotheke", "article": "die", "plural": "Apotheken", "pluralArticle": "die" },
+		{ "ru": "Больница", "de": "Krankenhaus", "article": "das", "plural": "Krankenhäuser", "pluralArticle": "die" },
+		{ "ru": "Пациент", "de": "Patient", "article": "der", "plural": "Patienten", "pluralArticle": "die" },
+		{ "ru": "Прививка", "de": "Impfung", "article": "die", "plural": "Impfungen", "pluralArticle": "die" },
+		{ "ru": "Градусник", "de": "Thermometer", "article": "das", "plural": "Thermometer", "pluralArticle": "die" },
+		{ "ru": "Жар", "de": "Hitze", "article": "die", "plural": "Hitzen", "pluralArticle": "die" }
+	],
+	"Sport": [
+		{ "ru": "Спорт", "de": "Sport", "article": "der", "plural": "Sportarten", "pluralArticle": "die" },
+		{ "ru": "Футбол", "de": "Fußball", "article": "der", "plural": "Fußbälle", "pluralArticle": "die" },
+		{ "ru": "Баскетбол", "de": "Basketball", "article": "der", "plural": "Basketbälle", "pluralArticle": "die" },
+		{ "ru": "Волейбол", "de": "Volleyball", "article": "der", "plural": "Volleybälle", "pluralArticle": "die" },
+		{ "ru": "Теннис", "de": "Tennis", "article": "das", "plural": "Tennisarten", "pluralArticle": "die" },
+		{ "ru": "Бег", "de": "Laufen", "article": "das", "plural": "Läufe", "pluralArticle": "die" },
+		{ "ru": "Плавание", "de": "Schwimmen", "article": "das", "plural": "Schwimmen", "pluralArticle": "die" },
+		{ "ru": "Йога", "de": "Yoga", "article": "das", "plural": "Yogas", "pluralArticle": "die" },
+		{ "ru": "Гимнастика", "de": "Gymnastik", "article": "die", "plural": "Gymnastiken", "pluralArticle": "die" },
+		{ "ru": "Тренировка", "de": "Training", "article": "das", "plural": "Trainings", "pluralArticle": "die" },
+		{ "ru": "Спортзал", "de": "Fitnessstudio", "article": "das", "plural": "Fitnessstudios", "pluralArticle": "die" },
+		{ "ru": "Команда", "de": "Mannschaft", "article": "die", "plural": "Mannschaften", "pluralArticle": "die" },
+		{ "ru": "Матч", "de": "Spiel", "article": "das", "plural": "Spiele", "pluralArticle": "die" },
+		{ "ru": "Соревнование", "de": "Wettbewerb", "article": "der", "plural": "Wettbewerbe", "pluralArticle": "die" },
+		{ "ru": "Лёгкая атлетика", "de": "Leichtathletik", "article": "die", "plural": "Leichtathletiken", "pluralArticle": "die" },
+		{ "ru": "Бокс", "de": "Boxen", "article": "das", "plural": "Boxkämpfe", "pluralArticle": "die" },
+		{ "ru": "Велоспорт", "de": "Radsport", "article": "der", "plural": "Radsportarten", "pluralArticle": "die" },
+		{ "ru": "Лыжи", "de": "Skifahren", "article": "das", "plural": "Skifahrten", "pluralArticle": "die" },
+		{ "ru": "Сноуборд", "de": "Snowboarden", "article": "das", "plural": "Snowboards", "pluralArticle": "die" },
+		{ "ru": "Карате", "de": "Karate", "article": "das", "plural": "Karates", "pluralArticle": "die" },
+		{ "ru": "Дзюдо", "de": "Judo", "article": "das", "plural": "Judos", "pluralArticle": "die" },
+		{ "ru": "Борьба", "de": "Ringen", "article": "das", "plural": "Ringkämpfe", "pluralArticle": "die" },
+		{ "ru": "Скейтбординг", "de": "Skateboarden", "article": "das", "plural": "Skateboards", "pluralArticle": "die" },
+		{ "ru": "Хоккей", "de": "Eishockey", "article": "das", "plural": "Eishockeyspiele", "pluralArticle": "die" },
+		{ "ru": "Бейсбол", "de": "Baseball", "article": "der", "plural": "Baseballspiele", "pluralArticle": "die" },
+		{ "ru": "Альпинизм", "de": "Klettern", "article": "das", "plural": "Kletterarten", "pluralArticle": "die" },
+		{ "ru": "Танцы", "de": "Tanzen", "article": "das", "plural": "Tänze", "pluralArticle": "die" },
+		{ "ru": "Конный спорт", "de": "Reitsport", "article": "der", "plural": "Reitsportarten", "pluralArticle": "die" },
+		{ "ru": "Стрельба", "de": "Schießen", "article": "das", "plural": "Schießarten", "pluralArticle": "die" }
+	],
+	"SportEquipment": [
+		{ "ru": "Гантеля", "de": "Hantel", "article": "die", "plural": "Hanteln", "pluralArticle": "die" },
+		{ "ru": "Штанга", "de": "Langhantel", "article": "die", "plural": "Langhanteln", "pluralArticle": "die" },
+		{ "ru": "Гиря", "de": "Kettlebell", "article": "die", "plural": "Kettlebells", "pluralArticle": "die" },
+		{ "ru": "Скакалка", "de": "Springseil", "article": "das", "plural": "Springseile", "pluralArticle": "die" },
+		{ "ru": "Коврик", "de": "Fitnessmatte", "article": "die", "plural": "Fitnessmatten", "pluralArticle": "die" },
+		{ "ru": "Тренажёр", "de": "Fitnessgerät", "article": "das", "plural": "Fitnessgeräte", "pluralArticle": "die" },
+		{ "ru": "Беговая дорожка", "de": "Laufband", "article": "das", "plural": "Laufbänder", "pluralArticle": "die" },
+		{ "ru": "Велотренажёр", "de": "Heimtrainer", "article": "der", "plural": "Heimtrainer", "pluralArticle": "die" },
+		{ "ru": "Турник", "de": "Klimmzugstange", "article": "die", "plural": "Klimmzugstangen", "pluralArticle": "die" },
+		{ "ru": "Скамья", "de": "Hantelbank", "article": "die", "plural": "Hantelbänke", "pluralArticle": "die" },
+		{ "ru": "Фитбол", "de": "Gymnastikball", "article": "der", "plural": "Gymnastikbälle", "pluralArticle": "die" },
+		{ "ru": "Бутылка для воды", "de": "Wasserflasche", "article": "die", "plural": "Wasserflaschen", "pluralArticle": "die" },
+		{ "ru": "Полотенце", "de": "Handtuch", "article": "das", "plural": "Handtücher", "pluralArticle": "die" },
+		{ "ru": "Перчатки", "de": "Trainingshandschuhe", "article": "die", "plural": "Trainingshandschuhe", "pluralArticle": "die" }
 	]
 }

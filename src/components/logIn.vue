@@ -34,6 +34,7 @@
 	import {ref , computed} from 'vue'
 	import {userAuthStore} from '../../store/authStore.js'
 	import { useRouter} from 'vue-router'
+	import {watch} from "../../.nuxt/imports";
 	const router = useRouter()
 	const authStore = userAuthStore()
 	const mode = ref('login')
@@ -124,43 +125,70 @@
 		}
 	}
 
-
+	watch(mode , () => {
+		fields.value.forEach(field => {
+			field.value = ''
+		})
+		error.value = ''
+	} )
 </script>
 
 <style>
-
-	.fields__group{
-		width: 100%;
+	.register-panel {
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 380px;
+		height: 100vh;
+		background: linear-gradient(135deg, #fefaf3, #ece3d9);
+		box-shadow: -10px 0 40px #00000033;
+		padding: 40px 30px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		border-left: 3px solid #87ceebaa;
+		font-family: 'Kurale', serif;
+		z-index: 1000;
 	}
 
-	.register__inner {
-		padding-top: 100px;
+	.form-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		color: #2b2b2b;
+	}
+
+	.form-title {
+		font-size: 26px;
+		font-weight: bold;
+		margin-bottom: 20px;
+		color: #3b2e1f;
+		text-align: center;
 	}
 
 	.form__swiper {
 		width: 100%;
-		background: #1e263c;
 		display: flex;
+		background: #ede7dc;
+		border-radius: 10px;
 		position: relative;
-		margin-bottom: 15px;
-		border-radius: 15px;
-		overflow: hidden;
+		margin-bottom: 20px;
+		box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 	}
 
 	.form__swiper-word {
-		font-size: 18px;
-		font-weight: 600;
-		padding: 10px;
-		width: 50%;
+		flex: 1;
 		text-align: center;
-		color: #ccc;
+		padding: 12px;
 		cursor: pointer;
+		color: #7a6f60;
+		font-weight: bold;
 		z-index: 1;
-		transition: color 0.3s;
+		transition: color 0.3s ease;
 	}
 
 	.form__swiper-word.active {
-		color: white;
+		color: #000;
 	}
 
 	.form__swiper-toggle {
@@ -169,114 +197,84 @@
 		left: 0;
 		width: 50%;
 		height: 100%;
-		background: #00ffff22;
-		border-radius: 15px;
-		transition: transform 0.3s ease;
+		background: #add8e6aa;
+		border-radius: 10px;
+		transition: transform 0.4s ease;
 		z-index: 0;
 	}
 
 	.form__swiper-toggle.register {
 		transform: translateX(100%);
-		transition: .5s;
 	}
 
 	.form__swiper-toggle.login {
 		transform: translateX(0%);
-		transition: .5s;
 	}
 
-	.register-panel {
-		position: fixed;
-		top: 0;
-		right: 0;
-		width: 360px;
-		height: 100vh;
-		background: linear-gradient(145deg, #f5f0e6, #e8e1d1);
-
-		box-shadow: -10px 0 40px #00000022;
-		color: #333;
-		padding: 40px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		transition: transform 0.4s ease;
-		z-index: 1000;
-	}
-
-	.form-wrapper {
-		align-items: center;
-		display: flex;
-		flex-direction: column;
-		padding: 30px;
-		color: white;
-		height: 100vh;
-	}
-
-	.form-title {
-		font-size: 24px;
-		font-weight: bold;
-		text-align: start;
+	.form-field {
 		width: 100%;
-		color: black;
-		margin-bottom: 10px;
+		margin-bottom: 16px;
 	}
 
 	.form-label {
 		font-size: 14px;
-		color: #cccccc;
+		margin-bottom: 6px;
+		color: #5a5247;
+	}
+
+	.fields__group {
+		width: 100%;
 	}
 
 	.form-input {
-		padding: 10px;
-		border: 1px solid #2c3e50;
-		border-radius: 6px;
-		background: #1e263c;
-		color: white;
-		font-size: 14px;
-		margin-top: 5px;
+		width: 100%;
+		padding: 12px;
+		border: 1px solid #ccc;
+		border-radius: 8px;
+		background: #fffdf9;
+		font-size: 15px;
+		color: #333;
+		box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+		transition: border 0.3s ease;
 	}
 
 	.form-input:focus {
-		border-color: #00ffff;
+		border-color: #00bfff;
 		outline: none;
-	}
-
-	.form-actions {
-		display: flex;
-		justify-content: center;
-		margin-top: 20px;
-	}
-
-	.form-field {
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-		margin-bottom: 10px;
+		box-shadow: 0 0 6px #00bfff66;
 	}
 
 	.submit-button {
-		background: #00ffff44;
-		padding: 12px 24px;
-		border-radius: 8px;
-		color: white;
-		font-weight: bold;
-		cursor: pointer;
-		border: 1px solid black;
-		transition: background 0.3s;
 		width: 100%;
-		text-align: center;
+		background: linear-gradient(to right, #b3ecff, #87cefa);
+		border: 2px solid #00bfff88;
+		color: #2b2b2b;
+		font-weight: bold;
+		font-size: 16px;
+		padding: 12px;
+		border-radius: 12px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		box-shadow: 0 0 12px #00ffff22;
 	}
 
 	.submit-button:hover {
-		background: #00ffff88;
+		background: linear-gradient(to right, #87cefa, #00bfff);
+		color: white;
+		box-shadow: 0 0 16px #00bfffaa;
 	}
 
 	.error-message {
-		color: #ff5252;
-		margin-top: 15px;
-		text-align: center;
-		font-size: 12px;
+		color: #c62828;
+		background: #ffebee;
+		border-radius: 6px;
 		padding: 10px;
+		text-align: center;
+		font-size: 13px;
+		margin-top: 15px;
 	}
 
+    .register__inner{
+	    height: 100%;
+    }
 </style>

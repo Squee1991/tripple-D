@@ -3,7 +3,8 @@
 		<button class="nav-button left" @click="prevPage" :disabled="currentPage === 0">←</button>
 
 		<div class="card-container">
-			<div v-for="(key, index) in visibleKeys" :key="index" class="card" :class="{ selected: selectedTopic === key }" @click="selectCard(key)">
+			<div v-for="(key, index) in visibleKeys" :key="index" class="card"
+			     :class="{ selected: selectedTopic === key }" @click="selectCard(key)">
 				<p class="card-title">{{ nameMap[key] }}</p>
 				<div class="card-icon"></div>
 			</div>
@@ -17,11 +18,10 @@
 </template>
 
 
-
 <script setup>
-	import { ref, computed } from 'vue'
-	import { useRouter } from 'vue-router'
-	import { userlangStore } from '/store/learningStore.js'
+	import {ref, computed} from 'vue'
+	import {useRouter} from 'vue-router'
+	import {userlangStore} from '/store/learningStore.js'
 
 	const selectedTopic = ref(null)
 	const topicWords = ref([])
@@ -50,6 +50,10 @@
 		Familie: 'Семья',
 		Emotions: 'Эмоции',
 		Werkzeuge: 'Инструменты',
+		Kitchen: 'Кухня',
+		Health: 'Здоровье',
+		Sport: 'Спорт',
+		SportEquipment: 'Фитнес-инвентарь'
 	}
 
 	const topics = Object.keys(nameMap)
@@ -103,8 +107,6 @@
 			console.error('Ошибка загрузки слов:', e)
 		}
 	}
-
-
 
 
 </script>
@@ -237,6 +239,7 @@
 	.fade-leave-active {
 		transition: opacity 0.4s ease;
 	}
+
 	.fade-enter-from,
 	.fade-leave-to {
 		opacity: 0;

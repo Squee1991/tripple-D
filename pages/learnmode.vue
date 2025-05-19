@@ -88,7 +88,7 @@
 		border: 2px dashed #a246e4;
 		padding: 2rem;
 		border-radius: 1.5rem;
-		width: 250px;
+		width: 350px;
 		cursor: pointer;
 		transition: all 0.3s ease;
 		transform: scale(1);

@@ -35,5 +35,6 @@ onMounted(() => {
 .container {
     max-width: 100%;
     margin: 0 auto;
+    overflow-x: hidden;
 }
 </style>

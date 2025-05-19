@@ -83,7 +83,10 @@
 		Zeit: 'Время',
 		City: 'Город',
 		School: 'Школа',
-		DaysAndMonths: 'Дни и месяцы'
+		DaysAndMonths: 'Дни и месяцы',
+		Kitchen: 'Кухня',
+		Health: 'Здоровье'
+
 	}
 
 	onMounted(async () => {

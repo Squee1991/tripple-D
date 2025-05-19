@@ -60,6 +60,7 @@
 	import {userAuthStore} from '../../store/authStore.js'
 	import SingIn from '../components/logIn.vue'
 	import {useRouter} from 'vue-router'
+	import {watch} from "../../.nuxt/imports";
 
 	const menuToggle = ref(false)
 	const userAuth = userAuthStore()
@@ -102,9 +103,19 @@
 		}
 	}
 
+	watch(showAuth, (val) => {
+		if (val) {
+			document.documentElement.style.overflow = 'hidden'
+			document.body.style.overflow = 'hidden'
+		} else {
+			document.documentElement.style.overflow = ''
+			document.body.style.overflow = ''
+		}
+	})
+
 </script>
 
-<style scoped>
+<style>
 
 	.banner__sub {
 		display: flex;
@@ -158,18 +169,6 @@
 		display: flex;
 		justify-content: center;
 		margin-top: 50px;
-	}
-
-	.sub__text {
-		display: flex;
-		flex-direction: column;
-	}
-
-	.mode-select {
-		display: flex;
-		gap: 20px;
-		justify-content: center;
-		margin-top: 20px;
 	}
 
 	.auth__inner {
@@ -238,7 +237,7 @@
 	}
 
 	.signin-wrapper {
-		width: 360px;
+		width: 380px    ;
 		position: absolute;
 		top: 0;
 		right: 0;
