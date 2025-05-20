@@ -31,10 +31,9 @@
 	</div>
 </template>
 <script setup>
-	import {ref , computed} from 'vue'
+	import {ref , computed , watch} from 'vue'
 	import {userAuthStore} from '../../store/authStore.js'
 	import { useRouter} from 'vue-router'
-	import {watch} from "../../.nuxt/imports";
 	const router = useRouter()
 	const authStore = userAuthStore()
 	const mode = ref('login')

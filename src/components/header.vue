@@ -1,382 +1,429 @@
 <template>
-	<div>
-		<header class="header">
-			<div class="header__title">
-				<div class="cabinet">
-					<NuxtLink class="cabinet__value" to="/archieve"> Кабинет</NuxtLink>
+	<div class="background">
+		<div class="main__wrapper">
+			<div class="overlay" :class="{ show: showAuth }" @click="closeLogin"></div>
+			<Transition name="slide-auth">
+				<div v-if="showAuth" class="signin-wrapper">
+					<SingIn @success="closeLogin"/>
 				</div>
-				<div class="log__ing-btns">
-					<button class="log__in">Log in</button>
-					<button class="log__in">Sing out</button>
-				</div>
-			</div>
-			<div class="wrapper__header">
-				<div class="header__themen toggler">
-					<div class="option" :class="{ selected: selectedCategory === 'nouns' }"
-					     @click.stop="selectCategory('nouns')">Существительные
-					</div>
-					<div class="option" :class="{ selected: selectedCategory === 'verbs' }"
-					     @click.stop="selectCategory('verbs')">Глаголы
-					</div>
-					<div class="option" :class="{ selected: selectedCategory === 'pronouns' }"
-					     @click.stop="selectCategory('pronouns')">Местоимения
-					</div>
-					<div class="option" :class="{ selected: selectedCategory === 'alphabet' }"
-					     @click.stop="selectCategory('alphabet')">Алфавит
-					</div>
-				</div>
-				<div :class="['nav', { open: selectedCategory === 'nouns' }]">
-					<div class="pagination" v-if="totalPages > 1">
-						<button class="page-btn prew" @click="prevPage" :disabled="currentPage === 1">
-							<img class="img-btn-prew" src="../../assets/images/arrow-prev-small.svg" alt="">
-						</button>
-						<button class="page-btn next" @click="nextPage" :disabled="currentPage === totalPages">
-							<img class="img-btn-prew" src="../../assets/images/arrow-next.svg" alt="">
-						</button>
-					</div>
-					<div class="list">
-						<span
-							v-for="(ruTitle, key) in paginatedTitles"
-							:key="key"
-							class="list__item"
-							:class="{ active: isSelected(key) }"
-							@click="toggleTopic(key)">
-							<span class="label">{{ ruTitle }}</span>
-						</span>
-					</div>
-				</div>
-				<div class="words__right">
-					<div v-if="selectedCategory === 'verbs'" class="go-btn-wrapper">
-						<img src="../../assets/images/developer.svg" alt="">
-						<div class="verbs__error">Раздел "Глаголы" в разработке.</div>
-					</div>
-					<div class="words__choiced" v-if="topicsLoaded">
-						<div v-if="selectedCategory === 'alphabet'">
-							<Alphabet />
-						</div>
-						<div v-else-if="selectedCategory === 'pronouns'">
-							<Pronouns />
-						</div>
-						<Topic v-if="selectedTopics.length" :key="selectedTopics.join('-')" :selected-topics="selectedTopics" />
-					</div>
+			</Transition>
+			<div class="profile-page">
+				<div class="top-bar">
+					<div class="top-right">
+						<div class="user-info">
+							<div v-if="userAuth.name" class="auth__inner">
+								<img class="user-avatar-icon" src="" alt=""/>
+								<div @click="userToggleFoo" class="userAuth__wrapper" :class="{ isToggle: menuToggle }">
+									<span class="menu-item">{{ userAuth.email }}</span>
+									<div class="menu-dropdown">
+										<span class="menu-item" @click.stop="routerPath('cabinet')">Кабинет</span>
+										<span class="menu-item" @click.stop="userAuth.logOut">Выход</span>
+									</div>
+								</div>
 
+							</div>
+							<div v-else class="logout-button" @click="logIn">Войти</div>
+						</div>
+					</div>
 				</div>
 			</div>
-		</header>
+			<div class="baner">
+				<div class="sub__title">
+					<img src="../../assets/images/wizard.svg" alt="">
+				</div>
+				<div class="banner__sub">
+					<div class="banner__title">
+						<span class="bold_1">Der</span> <span class="bold_2">Die</span> <span class="bold_3">Das</span>
+						- сайт для изучения артиклей существительных в немецком языке
+					</div>
+					<div class="banner__btn">
+						<button
+							v-if="start"
+							@click="handleStart"
+							class="start-button"
+						>
+							{{ userAuth.name ? 'Начать обучение' : 'Начать' }}
+						</button>
+						<button @click="goToSelectedTopics">
+							Продолжить обучение
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
+
 </template>
 
 <script setup>
-	import {ref, onMounted, computed} from 'vue'
-	import Topic from '../../pages/topic.vue'
-	import Alphabet from './alphabet.vue'
-	import Pronouns from "./pronouns";
-	const currentPage = ref(1)
-	const pageSize = 10
-	const topicsLoaded = ref(false)
-	const words = ref([])
-	const topicTitles = ref({})
-	const selectedTopics = ref([])
-	const fullData = ref({})
-	const isOpen = ref(false)
-	const selectedCategory = ref('nouns')
+	import {ref , watch} from 'vue'
+	import {userAuthStore} from '../../store/authStore.js'
+	import SingIn from '../components/logIn.vue'
+	import Header from '../components/header.vue'
+	import {useRouter} from 'vue-router'
+	const menuToggle = ref(false)
+	const userAuth = userAuthStore()
+	const router = useRouter()
+	let start = ref(true)
+	const isStarted = ref(false)
+	const selectedMode = ref(null)
+	const showAuth = ref(false)
 
-	const currentTopicName = computed(() => {
-		if (selectedCategory.value === 'pronouns') {
-			return 'pronouns'
-		}
-		if (selectedCategory.value === 'alphabet') {
-			return 'alphabet'
-		}
-		if (selectedCategory.value === 'verbs') {
-			return 'verbs'
-		}
-		if (selectedCategory.value === 'rules') {
-			return 'rules'
-		}
-		if (selectedCategory.value === 'nouns') {
-			if (selectedTopics.value.length) {
-				return selectedTopics.value[selectedTopics.value.length - 1]
-			}
-			return 'nouns'
-		}
-		return 'unknown'
-	})
-	const totalPages = computed(() =>
-		Math.ceil(Object.keys(topicTitles.value).length / pageSize)
-	)
-
-	const paginatedTitles = computed(() => {
-		const keys = Object.keys(topicTitles.value)
-		const start = (currentPage.value - 1) * pageSize
-		const end = start + pageSize
-		return keys.slice(start, end).reduce((acc, key) => {
-			acc[key] = topicTitles.value[key]
-			return acc
-		}, {})
-	})
-
-	function nextPage() {
-		if (currentPage.value < totalPages.value) currentPage.value++
+	const userToggleFoo = () => {
+		menuToggle.value = !menuToggle.value
 	}
 
-	function prevPage() {
-		if (currentPage.value > 1) currentPage.value--
-	}
-
-	async function loadTopics() {
-		const res = await fetch('/words.json')
-		const data = await res.json()
-
-
-		topicTitles.value = Object.keys(data).reduce((acc, key) => {
-			acc[key] = nameMap[key] || key
-			return acc
-		}, {})
-
-		fullData.value = data
-	}
-
-	function selectCategory(category) {
-		selectedCategory.value = category
-		localStorage.setItem('selectedCategory', category)
-	}
-
-	function isSelected(key) {
-		return selectedTopics.value.includes(key)
-	}
-
-	function toggleTopic(key) {
-		if (isSelected(key)) {
-			selectedTopics.value = selectedTopics.value.filter(k => k !== key)
+	const goToSelectedTopics = () => {
+		if (userAuth.name) {
+			router.push('/selectedTopics')
 		} else {
-			selectedTopics.value.push(key)
+			showAuth.value = true
 		}
-		localStorage.setItem('selectedTopics', JSON.stringify(selectedTopics.value))
-		topicsLoaded.value = true
 	}
 
-	onMounted(async () => {
-		await loadTopics()
-		const saved = localStorage.getItem('selectedTopics')
-		if (saved) {
-			try {
-				selectedTopics.value = JSON.parse(saved)
-			} catch (e) {
-				console.error('Ошибка при чтении selectedTopics из localStorage', e)
-			}
+	const logIn = () => {
+		showAuth.value = true
+	}
+
+	const routerPath = (item) => {
+		menuToggle.value = false
+		if (item === 'cabinet') {
+			router.push('/cabinet')
+		} else if (item === 'map') {
+			router.push('/MapView')
 		}
-		const savedCategory = localStorage.getItem('selectedCategory')
-		if (savedCategory) {
-			selectedCategory.value = savedCategory
+	}
+
+	const handleStart = () => {
+		if (!userAuth.name) {
+			showAuth.value = true
+		} else {
+			router.push('/learnmode')
 		}
-		topicsLoaded.value = true
+	}
+
+	const closeLogin = () => {
+		showAuth.value = false
+		if (userAuth.name) {
+			start.value = false
+			isStarted.value = true
+		}
+	}
+
+	watch(showAuth, (val) => {
+		if (val) {
+			document.documentElement.style.overflow = 'hidden'
+			document.body.style.overflow = 'hidden'
+		} else {
+			document.documentElement.style.overflow = ''
+			document.body.style.overflow = ''
+		}
 	})
+
 </script>
 
+<style>
 
-<style scoped>
-
-	* {
-		box-sizing: border-box;
-		margin: 0;
-		padding: 0;
+	.banner__sub {
+		display: flex;
+		flex-direction: column;
 	}
 
-	.log__in {
-		color: white;
-		background: none;
-		margin-right: 10px;
-		border: 1px solid green;
-		padding: 10px 20px;
-		border-radius: 5px;
-		transition: .4s;
-		min-width: 100px;
-	}
-
-	.verbs__error {
-		color: white;
-	}
-
-	.log__in:hover {
-		background: green;
-		transition: .4s;
-	}
-
-	.log__ing-btns {
-		padding: 10px;
-	}
-
-	.no__themen {
-		color: white;
-		font-size: 20px;
-	}
-
-	.header {
-		text-align: center;
-		max-width: 100%;
+	.sub__title {
 		margin: 0 auto;
-		padding: 20px;
-		background-color: #f0f4f7;
-		border-bottom: 2px solid #cce0d0;
-	}
-
-	.no__themen-wrapper {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
-
-	.wrapper__header {
+		width: 400px;
+		font-size: 20px;
 		display: flex;
-		gap: 10px;
-		flex-wrap: wrap;
+		justify-content: center;
+		align-items: start;
 	}
 
-	.header__title {
-		background: #1b1b1b;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		margin-bottom: 10px;
-	}
-
-	.cabinet {
-		background: #2e7d32;
-		color: white;
-		padding: 10px 20px;
-		border-radius: 10px;
-		font-weight: bold;
-		transition: background 0.3s ease;
-	}
-
-	.cabinet:hover {
-		background: #1b5e20;
-	}
-
-	.cabinet__value {
-		color: white;
-		text-decoration: none;
-	}
-
-	.header__themen {
-		display: flex;
-		flex-direction: column;
-		background-color: #263238;
-		padding: 10px;
-		border-radius: 12px;
-		min-width: 170px;
-	}
-
-	.option {
-		padding: 10px 15px;
+	.bold_1 {
+		color: black;
 		font-weight: 600;
-		border-radius: 8px;
-		margin-bottom: 8px;
-		cursor: pointer;
-		background: white;
-		transition: background 0.2s ease, color 0.2s ease;
+		font-size: 47px;
 	}
 
-	.option:hover {
-		background: #aed581;
+	.bold_2 {
+		color: red;
+		font-weight: 600;
+		font-size: 47px;
 	}
 
-	.option.selected {
-		background: #81c784;
-		color: white;
+	.bold_3 {
+		color: #fcd000;
+		font-weight: 600;
+		font-size: 47px;
 	}
 
-	.nav {
-		background-color: #263238;
-		border-radius: 12px;
-		padding: 10px;
-		color: white;
-		width: 180px;
+	.banner__title {
+		max-width: 600px;
+		margin: 0 auto;
+		font-family: "Kurale", serif;
 	}
 
-	.list {
-		display: flex;
-		flex-direction: column;
-		gap: 8px;
-	}
-
-	.list__item {
-		background: white;
-		color: #1b1b1b;
-		border-radius: 10px;
-		padding: 8px 12px;
-		font-weight: 500;
-		cursor: pointer;
-		transition: background 0.2s ease;
-	}
-
-	.list__item:hover {
-		background: #f1f8e9;
-	}
-
-	.list__item.active {
-		background: #a5d6a7;
-		color: #1b5e20;
-	}
-
-	.label {
-		font-size: 16px;
-	}
-
-	.words__right {
-		position: relative;
-		flex: 1;
-		background-color: #263238;
-		border-radius: 15px;
-		padding: 0 10px;
-		min-height: 666px;
-	}
-
-	.pagination {
+	.baner {
+		max-width: 1100px;
+		margin: 0 auto;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin-bottom: 5px;
+		text-align: center;
+		font-size: 40px;
+	}
+
+	.banner__btn {
+		display: flex;
+		justify-content: center;
+		margin-top: 50px;
+	}
+
+	.auth__inner {
+		display: flex;
+		align-items: center;
+		position: relative;
 		gap: 10px;
 	}
 
-	.page-btn {
-		background: transparent;
-		border: none;
+	.userAuth__wrapper {
+		position: relative;
+		background: #2e2e3e;
+		color: white;
 		cursor: pointer;
+		font-size: 14px;
+		display: flex;
+		flex-direction: column;
+		width: 170px;
 	}
 
-	.page-btn:disabled {
-		opacity: 0.3;
-		cursor: not-allowed;
+	.menu-dropdown {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		background: #2e2e3e;
+		overflow: hidden;
+		height: 0;
+		transition: height 0.3s ease;
+		display: flex;
+		flex-direction: column;
+		z-index: 10;
 	}
 
-	.img-btn-prew {
-		width: 24px;
-		height: 24px;
+	.userAuth__wrapper.isToggle .menu-dropdown {
+		height: 63px;
 	}
 
-	.go-btn-wrapper {
-		text-align: center;
+	.menu-item {
+		font-size: 18px;
+		padding: 4px 10px;
+		background: #2e2e3e;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		width: 100%;
+		display: block;
+	}
+
+	.menu-item:hover {
+		background: #00ffff33;
+	}
+
+	html, body {
+		overflow-x: hidden;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	* {
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+
+	.signin-wrapper {
+		width: 380px    ;
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100vh;
+		background: #11182c;
+		z-index: 1000;
+	}
+
+	.app-title {
+		border-radius: 50%;
+	}
+
+	.app-title-icon {
+		width: 80px;
+		height: 60px;
+	}
+
+	.profile-page {
+		width: 100%;
+		color: white;
+		position: relative;
+		font-family: 'Segoe UI', sans-serif;
+	}
+
+	.top-bar {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 15px 30px;
+		margin-bottom: 50px;
+		background: #f5efef;
+	}
+
+	.app-title {
+		font-size: 20px;
+		font-weight: bold;
+		color: #00ffff;
+	}
+
+	.user-info {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+	}
+
+	.user-avatar {
+		cursor: pointer;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		object-fit: cover;
+		box-shadow: 0 0 6px rgba(0, 255, 255, 0.67);
+	}
+
+	.logout-button {
+		display: flex;
+		justify-content: center;
+		font-size: 18px;
+		min-width: 120px;
+		padding: 8px 16px;
+		border: 1px solid grey;
+		border-radius: 8px;
+		cursor: pointer;
+		background: transparent;
+		color: black;
+		transition: background 0.3s;
+	}
+
+	.logout-button:hover {
+		background: black;
+		color: white;
+	}
+
+	.img-bg {
+		width: 100%;
+	}
+
+	.background {
+		width: 100%;
+		position: relative;
+	}
+
+	.start-button-wrapper {
 		position: absolute;
 		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
-		font-size: 18px;
-		color: #444;
+		opacity: 1;
+		transform: translateX(-50%);
+		z-index: 10;
 	}
 
-	@media (max-width: 768px) {
-		.wrapper__header {
-			flex-direction: column;
+	.is-started {
+		opacity: 1;
+	}
+
+	.start-button {
+		background: rgba(255, 255, 255, 0.1);
+		border: 3px solid #55a1bf;
+		font-size: 20px;
+		padding: 12px 40px;
+		border-radius: 20px;
+		letter-spacing: 2px;
+		cursor: pointer;
+		color: black;
+		text-transform: uppercase;
+		transition: all 0.3s ease;
+		box-shadow: 0 0 12px #00ffff44;
+		animation: pulseGlow 2s infinite ease-in-out;
+		width: 300px;
+		font-family: "Kurale", serif;
+		font-weight: 600;
+	}
+
+	.start-button:hover {
+		background: #55a1bf;
+		box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+	}
+
+	@keyframes pulseGlow {
+		25% {
+			box-shadow: 0 0 20px #00ffffaa;
+			transition: 1s;
 		}
 
-		.header__themen,
-		.nav {
-			width: 100%;
+		50% {
+			box-shadow: 0 0 20px #00ffffaa;
+			transition: 1s;
 		}
+		100% {
+			box-shadow: 0 0 12px #00ffff44;
+			transition: 1s;
+		}
+		50% {
+			box-shadow: 0 0 20px #00ffffaa;
+			transition: 1s;
+		}
+		25% {
+			box-shadow: 0 0 20px #00ffffaa;
+			transition: 1s;
+		}
+	}
+
+	.overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		background: rgba(0, 0, 0, 0.5);
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.3s ease;
+		z-index: 999;
+	}
+
+	.overlay.show {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	.slide-auth-enter-from {
+		transform: translateX(100%);
+	}
+
+	.slide-auth-enter-active,
+	.slide-auth-leave-active {
+		transition: transform 0.5s ease;
+	}
+
+	.slide-auth-enter-to {
+		transform: translateX(0%);
+	}
+
+	.slide-auth-leave-to {
+		transform: translateX(100%);
+	}
+
+	.signin-wrapper.show {
+		transform: translateX(0%);
 	}
 
 

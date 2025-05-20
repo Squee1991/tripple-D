@@ -15,7 +15,6 @@ export const userlangStore = defineStore('learning', () => {
 	const topicStats = computed(() => {
 		const stats = {}
 		const topics = [...new Set(words.value.map(w => w.topic).filter(Boolean))]
-
 		for (const topic of topics) {
 			const total = words.value.filter(w => w.topic === topic).length
 			const learned = learnedWords.value.filter(w => w.topic === topic).length

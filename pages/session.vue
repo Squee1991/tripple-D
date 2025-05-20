@@ -86,18 +86,16 @@
 	import {ref, computed, watch, onMounted} from 'vue'
 	import {useRoute} from 'vue-router'
 	import {userlangStore} from '../store/learningStore.js'
-
-
 	const store = userlangStore()
 	const route = useRoute()
-
 	const selectedModes = ref(route.query.mode || [])
 	if (typeof selectedModes.value === 'string') {
 		selectedModes.value = [selectedModes.value]
 	}
-
 	const filteredWords = computed(() =>
-		store.words.filter(word => !isWordLearned(word))
+		store.words.filter(word =>
+			word.topic === store.currentTopic && !isWordLearned(word)
+		)
 	)
 	const total = computed(() => filteredWords.value.length)
 	const currentIndex = ref(0)
@@ -109,7 +107,6 @@
 
 	const currentWord = computed(() => filteredWords.value[currentIndex.value] || null)
 	const currentMode = computed(() => selectedModes.value[currentModeIndex.value])
-
 	const shuffledLetters = computed(() => {
 		if (!currentWord.value) return []
 		return currentWord.value.de.split('').sort(() => Math.random() - 0.5)
@@ -135,7 +132,7 @@
 	}
 
 	function isWordLearned(word) {
-		return selectedModes.value.every(mode => word.progress?.[mode])
+		return selectedModes.value.every(mode => word.progress?.[mode] === true)
 	}
 
 	function checkAnswer() {
@@ -235,6 +232,11 @@
 
 	onMounted(async () => {
 		await store.loadFromFirebase()
+
+		if (route.query.topic) {
+			store.currentTopic = route.query.topic
+		}
+
 		if (route.query.mode) {
 			const mode = route.query.mode
 			selectedModes.value = Array.isArray(mode) ? mode : [mode]

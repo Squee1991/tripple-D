@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <Mainpage/>
+        <Header/>
         <Description/>
         <FeedBack/>
         <Footer/>
@@ -8,10 +8,11 @@
 </template>
 
 <script setup>
-import Mainpage from '../src/components/mainPage.vue'
+
 import Description from '../src/components/DescriptionBlock.vue'
 import FeedBack from '../src/components/feedBack.vue'
 import Footer from '../src/components/footer.vue'
+import Header from '../src/components/header.vue'
 import { useCurrentUser } from 'vuefire'
 import { onMounted } from 'vue'
 import { useRouter } from 'vue-router'
