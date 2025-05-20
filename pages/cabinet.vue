@@ -104,7 +104,7 @@
 		display: flex;
 		height: 100%;
 		min-height: 100vh;
-		background: radial-gradient(circle at center, #0e0e0e 0%, #000 100%);
+		background: radial-gradient(circle at center, #423f3f 0%, #544e4e 100%);
 		color: #fff;
 		font-family: 'Segoe UI', sans-serif;
 	}

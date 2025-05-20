@@ -1,7 +1,6 @@
 <template>
 	<div class="howtolearn-wrapper">
 		<h1 class="page-title">Выберите режимы обучения</h1>
-
 		<div class="checkbox-group">
 			<label v-for="mode in modes" :key="mode.key" class="checkbox-wrapper">
 				<input
@@ -25,9 +24,9 @@
 
 <script setup>
 	import { ref } from 'vue'
-	import { useRouter } from 'vue-router'
-
+	import { useRouter, useRoute } from 'vue-router'
 	const router = useRouter()
+	const route = useRoute()
 	const selectedModes = ref([])
 
 	const modes = [
@@ -39,10 +38,15 @@
 	]
 
 	const startLearning = () => {
+		const currentTopic = route.query.topic
+		console.log('🔥 Выбранная тема:', currentTopic)
+		console.log('📦 Выбранные режимы:', selectedModes.value)
+
 		router.push({
 			path: '/session',
 			query: {
-				mode: selectedModes.value
+				mode: selectedModes.value,
+				topic: currentTopic
 			}
 		})
 	}

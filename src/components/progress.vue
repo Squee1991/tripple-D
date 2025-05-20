@@ -77,9 +77,7 @@
 			: store.selectedTopics
 	})
 
-	watch(
-		() => store.selectedTopics,
-		(topics) => {
+	watch(() => store.selectedTopics, (topics) => {
 			if (!selectedTopic.value && topics.length > 0) {
 				selectedTopic.value = topics[0]
 			}
