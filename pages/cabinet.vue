@@ -15,12 +15,11 @@
 					</div>
 					<div class="user-info">
 						<div>Уровень: 1</div>
-
 					</div>
 				</div>
 				<div class="balance-block">
-					<p class="sub">Общий баланс</p>
-					<p class="balance">{{ learningStore.points }}  очков</p>
+					<p class="sub">Артиклюсы</p>
+					<p class="balance">{{ learningStore.points }}</p>
 				</div>
 				<div class="meta-block">
 					<p class="meta">Дата регистрации</p>
@@ -49,8 +48,7 @@
 				<Progress />
 			</div>
 			<div v-if="activeTab === 'skills'" class="tab-content">
-				<div class="row"><span>Навык 1:</span><span>Скоро...</span></div>
-				<div class="row"><span>Навык 2:</span><span>Скоро...</span></div>
+				<Skills/>
 			</div>
 		</div>
 	</div>
@@ -60,6 +58,7 @@
 	import {userlangStore } from '../store/learningStore.js'
 	import { ref } from 'vue'
 	import Progress from '../src/components/progress.vue'
+	import Skills from '../src/components/skillz.vue'
     import { onMounted } from 'vue'
     import { useRouter} from 'vue-router'
 	const authStore = userAuthStore()
@@ -182,6 +181,7 @@
 	.balance {
 		font-size: 1.8rem;
 		font-weight: bold;
+		text-align: center;
 	}
 
 	.sub,
@@ -199,8 +199,7 @@
 	.tabs {
 		display: flex;
 		gap: 2rem;
-		margin-bottom: 1.5rem;
-		border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+		margin: 2rem 0 1rem;
 	}
 
 	.tab {
@@ -212,13 +211,14 @@
 		position: relative;
 	}
 
+
 	.tab__text {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		font-size: 22px;
 		font-weight: 600;
-		color: white;
+		color: #fff4b8;
 	}
 
 	.tab__icon {
@@ -234,26 +234,28 @@
 	.tab.active:after {
 		content: '';
 		position: absolute;
-		bottom: -1px;
+		bottom: -6px;
 		left: 0;
-		height: 2px;
+		height: 4px;
 		width: 100%;
-		background: #00c2ff;
+		background: #ffd700;
+		border-radius: 2px;
 	}
 
 	.tab-content {
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
-		padding-left: 1rem;
+		background: rgba(36, 26, 14, 0.7);
+		padding: 1rem 1.5rem;
+		border-radius: 12px;
+		box-shadow: 0 0 15px #000;
+		border: 2px solid #c29f52;
 	}
 
 	.row {
 		display: flex;
 		justify-content: space-between;
-		border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-		padding-bottom: 0.5rem;
-		font-size: 1rem;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		padding: 0.5rem 0;
+		font-size: 1.1rem;
 	}
 
 </style>

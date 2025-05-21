@@ -37,9 +37,9 @@
 				</div>
 			</div>
 			<div class="pagination" v-if="store.words.length > wordsPerPage">
-				<button @click="currentPage--" :disabled="currentPage === 1">←</button>
+				<button @click="currentPage--" :disabled="currentPage === 1">назад</button>
 				<span> {{ currentPage }} из {{ totalPages }}</span>
-				<button @click="currentPage++" :disabled="currentPage === totalPages">→</button>
+				<button @click="currentPage++" :disabled="currentPage === totalPages">вперед</button>
 			</div>
 		</div>
 	</div>
@@ -82,24 +82,71 @@
 				selectedTopic.value = topics[0]
 			}
 		},
-		{ immediate: true }
+		{immediate: true}
 	)
+
+	watch(selectedTopic, () => {
+		currentPage.value = 1
+	})
 
 </script>
 
 <style scoped>
 
+	.pagination {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 1.5rem;
+		margin-top: 2rem;
+		font-family: 'Cinzel', serif;
+	}
+
+	.pagination button {
+		background: linear-gradient(to bottom, #f0d88e, #b88c3c);
+		color: #3a2c0d;
+		border: 2px solid #7a5c20;
+		border-radius: 12px;
+		padding: 8px 20px;
+		font-size: 16px;
+		cursor: pointer;
+		box-shadow: 0 0 8px #000;
+		transition: all 0.2s ease;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	.pagination button:hover:not(:disabled) {
+		box-shadow: 0 0 2px #ffd700;
+	}
+
+	.pagination button:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
+
+	.pagination span {
+		color: #f8e4b2;
+		font-size: 16px;
+		font-weight: bold;
+		text-shadow: 0 0 4px #000;
+	}
+
+
 	.word-table {
 		display: flex;
 		flex-direction: column;
-		border: 1px solid #00c2ff33;
-		border-radius: 10px;
+		border: 2px solid #c29f52;
+		border-radius: 12px;
 		overflow: hidden;
+		background: #1e1a14;
+		box-shadow: 0 0 12px #000 inset;
 	}
 
 	.word-row {
 		display: flex;
-		border-bottom: 1px solid #00c2ff22;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+		background: linear-gradient(to right, #2a251d, #1c1a17);
 	}
 
 	.word-row:last-child {
@@ -121,9 +168,11 @@
 	}
 
 	.word-row.header {
-		background: #002233;
-		color: #00c2ff;
+		background: linear-gradient(to right, #3b2c19, #5b442d);
+		color: #f8d369;
 		font-weight: bold;
+		font-size: 15px;
+		border-bottom: 2px solid #d1a54d;
 	}
 
 	.topic-select {
@@ -133,20 +182,26 @@
 	}
 
 	.topic-select select {
-		padding: 8px 16px;
-		border-radius: 10px;
-		border: 1px solid #00c2ff;
-		background: #1a1a1a;
-		color: #00c2ff;
-		font-size: 14px;
+		padding: 10px 20px;
+		border-radius: 12px;
+		border: 2px solid #d1a54d;
+		background: #2f261c;
+		color: #f8e4b2;
+		font-size: 15px;
+		box-shadow: 0 0 6px #000 inset;
 		cursor: pointer;
+		transition: 0.2s ease;
 	}
 
 	.selected-words {
 		color: #fff;
+		padding: 2rem;
+		background: linear-gradient(135deg, #151210, #2c2b26);
+		border-radius: 12px;
+		box-shadow: inset 0 0 20px #000;
 	}
 
 	.topic-block {
-		margin-bottom: 20px;
+		margin-bottom: 30px;
 	}
 </style>

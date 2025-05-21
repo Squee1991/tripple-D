@@ -23,7 +23,6 @@ export const userlangStore = defineStore('learning', () => {
 				learnedWords: learned
 			}
 		}
-
 		return stats
 	})
 
@@ -49,7 +48,13 @@ export const userlangStore = defineStore('learning', () => {
 		if (!found.progress) {
 			found.progress = {}
 		}
+
+		const wasCorrect = found.progress[modeKey] === true
 		found.progress[modeKey] = value
+
+		if (!wasCorrect && value === true) {
+			points.value++
+		}
 
 		await saveToFirebase()
 	}
@@ -135,13 +140,13 @@ export const userlangStore = defineStore('learning', () => {
 	}
 
 	const markAsLearned = async (word) => {
+		console.log('marked as learned:', word.de)
 		if (!learnedWords.value.find(w => w.de === word.de)) {
 			learnedWords.value.push(word)
 			points.value++
 			if (word.topic && selectedTopics.value[word.topic]) {
 				selectedTopics.value[word.topic].learnedWords++
 			}
-
 			await saveToFirebase()
 		}
 	}
