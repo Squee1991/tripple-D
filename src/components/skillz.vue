@@ -8,7 +8,7 @@
 							Вы уверены, что хотите купить
 						</div>
 						<div>{{ selectedSpell?.name }} за</div>
-						<div>{{ selectedSpell?.price }}  Артиклюсов?</div>
+						<div>{{ selectedSpell?.price }} Артиклюсов?</div>
 					</div>
 					<div class="modal-buttons">
 						<button @click="confirmBuy">Да</button>
@@ -20,7 +20,7 @@
 		<div class="title__wrapper">
 			<div class="spell__title">Доска спелов</div>
 			<transition name="fade">
-				<p v-if="errorMessage" class="error-message">{{ errorMessage }}</p>
+				<span v-if="errorMessage" class="error-message">{{ errorMessage }}</span>
 			</transition>
 		</div>
 		<div class="spell-list">
@@ -33,7 +33,7 @@
 					<p class="spell-desc">{{ spell.description }}</p>
 					<button class="spell__card--btn"
 					        :class="{ 'btn-disabled': store.points < spell.price && !isOwned(spell.key) }"
-						    @click="confirmPurchase(spell)"
+					        @click="confirmPurchase(spell)"
 					>
 						{{ isOwned(spell.key) ? 'Куплено' : 'Купить' }}
 					</button>
@@ -44,8 +44,9 @@
 </template>
 
 <script setup>
-	import { userlangStore } from '../../store/learningStore.js'
-	import { ref } from 'vue'
+	import {userlangStore} from '../../store/learningStore.js'
+	import {ref} from 'vue'
+
 	const store = userlangStore()
 	const ownedSpells = ref([])
 	const errorMessage = ref('')
@@ -53,15 +54,16 @@
 	const selectedSpell = ref(null)
 	const isOwned = (key) => ownedSpells.value.includes(key)
 	const spells = [
-		{ key: 'retry', name: 'Вторая попытка', description: 'Позволяет попробовать ещё раз', price: 1},
-		{ key: 'hideWrong', name: 'Блок неверных', description: 'Скрывает один неверный вариант', price: 20 },
-		{ key: 'hint', name: 'Подсказка', description: 'Показывает правильный артикль', price: 30 },
-		{ key: 'autoComplete', name: 'Ещё одна попытка', description: 'Считает слово выученным', price: 50 },
-		{ key: 'freezeTimer', name: 'Увеличить время', description: 'Увеличивает таймер на 5 сек', price: 25 },
-		{ key: 'shieldError', name: 'Щит ошибки', description: 'Игнорирует одну ошибку', price: 40 },
-		{ key: 'cleanseWrong', name: 'Стереть ошибки', description: 'Удаляет 1 неправильный ответ из истории', price: 25 },
+		{ key: 'retry', name: 'Anima Reverso', description: 'Даёт вторую попытку', price: 15 },
+		{ key: 'hideWrong', name: 'Umbra Selecta', description: 'Скрывает один неверный ответ', price: 20 },
+		{ key: 'hint', name: 'Clavis Veritatis', description: 'Открывает правильный артикль', price: 30 },
+		{ key: 'autoComplete', name: 'Memoria Implanta', description: 'Моментально изучает слово', price: 50 },
+		{ key: 'freezeTimer', name: 'Tempus Glacies', description: 'Останавливает время на 5 секунд', price: 25 },
+		{ key: 'shieldError', name: 'Aegis Mentis', description: 'Щит от одной ошибки', price: 40 },
+		{ key: 'cleanseWrong', name: 'Purga Mens', description: 'Очищает 1 неправильный ответ', price: 25 },
+		{ key: 'health', name: 'Vitae Fluens', description: 'Восстанавливает 1 здоровье', price: 25 },
+		{ key: 'skip', name: 'Ordo Postremus', description: 'Отправляет слово в конец очереди', price: 25 }
 	]
-
 	const confirmPurchase = (spell) => {
 		if (isOwned(spell.key)) return
 		if (store.points < spell.price) {
@@ -107,6 +109,10 @@
 		height: 100px;
 	}
 
+	.spell-img {
+		width: 100px;
+	}
+
 	.error-message {
 		color: #ff6666;
 		font-weight: bold;
@@ -117,21 +123,22 @@
 		border-radius: 10px;
 	}
 
-	.spell-name{
+	.spell-name {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
 
-	.spell__title{
+	.spell__title {
 		font-size: 30px;
 		font-family: "Kurale", serif;
+		margin-bottom: 10px;
 	}
 
 	.spell-card-row {
 		padding: 20px;
 		height: 200px;
-		background: rgba(0,0,0,0.6);
+		background: rgba(0, 0, 0, 0.6);
 		border: 2px solid #c29f52;
 		box-shadow: 0 0 10px #000;
 		border-radius: 12px;
@@ -159,13 +166,12 @@
 	}
 
 	.spell-card {
-		width:33%;
+		width: 33%;
 		padding: 10px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		flex-wrap: wrap;
-
 	}
 
 	.spell-header {
@@ -182,11 +188,12 @@
 		margin-bottom: 10px;
 	}
 
-
-
 	.modal-overlay {
 		position: fixed;
-		top: 0; left: 0; right: 0; bottom: 0;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
 		background: rgba(0, 0, 0, 0.7);
 		display: flex;
 		align-items: center;
@@ -224,6 +231,7 @@
 	.zoom-enter-active {
 		animation: zoomIn 0.3s ease;
 	}
+
 	.zoom-leave-active {
 		animation: zoomOut 0.25s ease forwards;
 	}
@@ -249,6 +257,4 @@
 			opacity: 0;
 		}
 	}
-
-
 </style>
