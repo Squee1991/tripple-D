@@ -54,7 +54,7 @@
 	const selectedSpell = ref(null)
 	const isOwned = (key) => ownedSpells.value.includes(key)
 	const spells = [
-		{ key: 'retry', name: 'Anima Reverso', description: 'Даёт вторую попытку', price: 15 },
+		{ key: 'retry', name: 'Anima Reverso', description: 'Даёт вторую попытку', price: 1 },
 		{ key: 'hideWrong', name: 'Umbra Selecta', description: 'Скрывает один неверный ответ', price: 20 },
 		{ key: 'hint', name: 'Clavis Veritatis', description: 'Открывает правильный артикль', price: 30 },
 		{ key: 'autoComplete', name: 'Memoria Implanta', description: 'Моментально изучает слово', price: 50 },
@@ -73,6 +73,34 @@
 		}
 		selectedSpell.value = spell
 		showModal.value = true
+	}
+
+	const nameMap = {
+		Furniture: 'Мебель',
+		Animals: 'Животные',
+		Clothes: 'Одежда',
+		Food: 'Еда',
+		Body: 'Части тела',
+		Professions: 'Профессии',
+		Transport: 'Транспорт',
+		Colors: 'Цвета',
+		Nature: 'Природа',
+		Home: 'Дом',
+		Zeit: 'Время',
+		City: 'Город',
+		School: 'Школа',
+		DaysAndMonths: 'Дни и месяцы',
+		Toys: 'Игрушки',
+		CommonItems: 'Общие',
+		BathroomItems: 'Вещи для ванной',
+		Kosmetik: 'Косметика',
+		Familie: 'Семья',
+		Emotions: 'Эмоции',
+		Werkzeuge: 'Инструменты',
+		Kitchen: 'Кухня',
+		Health: 'Здоровье',
+		Sport: 'Спорт',
+		SportEquipment: 'Фитнес-инвентарь'
 	}
 
 	const confirmBuy = () => {

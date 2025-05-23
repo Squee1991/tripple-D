@@ -1,33 +1,76 @@
 <template>
-	<div class="howtolearn-wrapper">
+	<div class="howtolearn-wrapper" v-if="isLoaded">
 		<h1 class="page-title">Выберите режимы обучения</h1>
+
+		<div class="selected-words-box" v-if="selectedWords && selectedWords.length">
+			<p>Вы выбрали {{ selectedWords.length }} слов:</p>
+			<ul class="selected-words-list">
+				<li v-for="word in selectedWords" :key="word.de">
+					<b>{{ word.de }}</b> — {{ word.ru }} <br />
+					<small style="color: #00ffff">Тема: {{ nameMap[word.topic] || word.topic }}</small>
+				</li>
+			</ul>
+		</div>
+
 		<div class="checkbox-group">
 			<label v-for="mode in modes" :key="mode.key" class="checkbox-wrapper">
-				<input
-					type="checkbox"
-					v-model="selectedModes"
-					:value="mode.key"
-				/>
+				<input type="checkbox" v-model="selectedModes" :value="mode.key" />
 				<span class="checkbox-label">{{ mode.label }}</span>
 			</label>
 		</div>
 
-		<button
-			class="next-button"
-			:disabled="!selectedModes.length"
-			@click="startLearning"
-		>
+		<button class="next-button" :disabled="!selectedModes.length" @click="startLearning">
 			Начать
 		</button>
 	</div>
 </template>
 
+
 <script setup>
-	import { ref } from 'vue'
+	import { computed, ref, onMounted } from 'vue'
 	import { useRouter, useRoute } from 'vue-router'
+	import { userlangStore } from '../store/learningStore.js'
+
 	const router = useRouter()
 	const route = useRoute()
+	const langStore = userlangStore()
+
+	const selectedWords = computed(() => langStore.selectedWords)
 	const selectedModes = ref([])
+	const isLoaded = ref(false)
+
+	onMounted(async () => {
+		await langStore.loadFromFirebase()
+		console.log('🧠 selectedWords после загрузки:', langStore.selectedWords)
+		isLoaded.value = true
+	})
+	const nameMap = {
+		Furniture: 'Мебель',
+		Animals: 'Животные',
+		Clothes: 'Одежда',
+		Food: 'Еда',
+		Body: 'Части тела',
+		Professions: 'Профессии',
+		Transport: 'Транспорт',
+		Colors: 'Цвета',
+		Nature: 'Природа',
+		Home: 'Дом',
+		Zeit: 'Время',
+		City: 'Город',
+		School: 'Школа',
+		DaysAndMonths: 'Дни и месяцы',
+		Toys: 'Игрушки',
+		CommonItems: 'Общие',
+		BathroomItems: 'Вещи для ванной',
+		Kosmetik: 'Косметика',
+		Familie: 'Семья',
+		Emotions: 'Эмоции',
+		Werkzeuge: 'Инструменты',
+		Kitchen: 'Кухня',
+		Health: 'Здоровье',
+		Sport: 'Спорт',
+		SportEquipment: 'Фитнес-инвентарь'
+	}
 
 	const modes = [
 		{ key: 'article', label: 'Вписать артикль' },
@@ -38,21 +81,23 @@
 	]
 
 	const startLearning = () => {
-		const currentTopic = route.query.topic
-		console.log('🔥 Выбранная тема:', currentTopic)
-		console.log('📦 Выбранные режимы:', selectedModes.value)
-
 		router.push({
 			path: '/session',
 			query: {
 				mode: selectedModes.value,
-				topic: currentTopic
+				topic: route.query.topic
 			}
 		})
 	}
 </script>
 
+
 <style scoped>
+
+	.selected {
+		color: white;
+	}
+
 	.howtolearn-wrapper {
 		display: flex;
 		flex-direction: column;

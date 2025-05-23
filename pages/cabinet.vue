@@ -10,16 +10,17 @@
 
 			<div class="header">
 				<div class="user-block">
-					<div class="avatar__wrapper">
-						<img class="avatar" src="../assets/images/wizard3.svg" alt=""/>
-					</div>
 					<div class="user-info">
-						<div>Уровень: 1</div>
+						<div class="exp-bar">
+							<div class="exp-fill" :style="{ width: `${(learningStore.exp / 100) * 100}%` }"></div>
+						</div>
+						<span>{{ learningStore.exp }} XP</span>
+						<div>Уровень: {{ learningStore.isLeveling }}</div>
 					</div>
 				</div>
 				<div class="balance-block">
 					<p class="sub">Артиклюсы</p>
-					<p class="balance">{{ learningStore.points }}</p>
+						<p class="balance">{{ learningStore.points }}</p>
 				</div>
 				<div class="meta-block">
 					<p class="meta">Дата регистрации</p>
@@ -80,6 +81,23 @@
 </script>
 
 <style scoped>
+
+	.exp-bar {
+		height: 14px;
+		width: 100%;
+		background: #352c1f;
+		border: 1px solid #ffd369;
+		border-radius: 8px;
+		margin-top: 6px;
+		overflow: hidden;
+	}
+	.exp-fill {
+		height: 100%;
+		background: linear-gradient(to right, #ffc107, #ff9800);
+		transition: width 0.3s ease;
+	}
+
+
 
 	* {
 		padding: 0;
@@ -257,5 +275,40 @@
 		padding: 0.5rem 0;
 		font-size: 1.1rem;
 	}
+
+	.exp-bar {
+		height: 22px;
+		width: 220px;
+		background: linear-gradient(90deg, #2e1e40 60%, #462f5e 120%);
+		border: 3px solid #ffd700;
+		border-radius: 13px;
+		margin-top: 7px;
+		margin-bottom: 6px;
+		overflow: hidden;
+		box-shadow:
+			0 0 16px #ffd70088,
+			0 0 30px #ffe99e33 inset,
+			0 2px 14px #1b093766;
+		position: relative;
+	}
+
+	.exp-fill {
+		height: 100%;
+		background: linear-gradient(90deg, #ffeeba 0%, #ffe170 46%, #c59cff 100%);
+		box-shadow: 0 0 17px #ffe17088, 0 0 44px #bfa5e6cc;
+		transition: width 0.5s cubic-bezier(.35,2,.6,1);
+		position: relative;
+		border-radius: 13px;
+	}
+	.exp-bar::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		border-radius: 13px;
+		box-shadow: 0 0 30px #ffe8b366, 0 0 80px #ffeaaa22 inset;
+		opacity: .33;
+		pointer-events: none;
+	}
+
 
 </style>
