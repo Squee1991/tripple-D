@@ -42,10 +42,10 @@
 							@click="handleStart"
 							class="start-button"
 						>
-							{{ userAuth.name ? 'Начать обучение' : 'Начать' }}
+							{{ userAuth.name ? 'Начать' : 'Начать' }}
 						</button>
-						<button @click="goToSelectedTopics">
-							Продолжить обучение
+						<button class="start-button" @click="goToSelectedTopics">
+							Начать обучение
 						</button>
 					</div>
 				</div>

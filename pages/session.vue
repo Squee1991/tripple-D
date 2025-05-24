@@ -7,7 +7,7 @@
 			</div>
 			<div class="word-block">
 				<div class="word-question">
-					<span>RU:{{ currentWord?.ru }}</span>
+					<span>слово: {{ currentWord?.ru }}</span>
 				</div>
 				<div class="mode-exercise">
 					<div v-if="currentMode === 'article'">
@@ -194,162 +194,183 @@
 
 <style scoped>
 	.session-wrapper {
-		max-width: 700px;
-		margin: 48px auto;
-		background: linear-gradient(130deg, #18031f 80%, #332053 150%);
-		border-radius: 26px;
-		box-shadow: 0 4px 18px #380852a8;
-		padding: 38px 20px 48px 20px;
-		min-height: 390px;
-		color: #f7e6cf;
+		max-width: 1000px;
+		margin: 60px auto;
+		/*background: linear-gradient(145deg, #4a2e12, #2d1a0c);*/
+		border-radius: 18px;
+		/*box-shadow: inset 0 0 0 2px #c5a36a, 0 4px 12px #00000066;*/
+		padding: 40px 28px;
+		min-height: 420px;
+		color: #f4e6cf;
 		font-family: 'Uncial Antiqua', cursive;
+		/*border: 3px solid #c8a257;*/
+		/*background-image: repeating-linear-gradient(*/
+		/*	135deg,*/
+		/*	#3a220f,*/
+		/*	#3a220f 8px,*/
+		/*	#402612 8px,*/
+		/*	#402612 16px*/
+		/*);*/
 	}
 
 	.progress-line {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		margin-bottom: 12px;
-		font-size: 19px;
-		color: #ffe082;
+		margin-bottom: 18px;
+		font-size: 25px;
+		color: #f5d276;
+		text-shadow: 1px 1px 0 #2e1b05;
+		padding: 20px;
+		font-weight: 600;
+
 	}
 
 	.word-block {
-		margin-top: 15px;
-		background: #260d31b8;
-		border-radius: 16px;
-		box-shadow: 0 0 12px #36074738;
-		padding: 23px 19px 30px 19px;
+		margin-top: 20px;
+		/*background: #5b3717ee;*/
+		border-radius: 14px;
+		/*box-shadow: inset 0 0 4px #d9b169, 0 0 12px #0000003d;*/
+		padding: 28px;
 	}
 
 	.word-question {
-		font-size: 20px;
-		color: #ffd16e;
-		margin-bottom: 9px;
+		font-size: 22px;
+		color: #ffdf94;
+		margin-bottom: 14px;
+		text-shadow: 1px 1px 0 #40260d;
 	}
 
 	.mode-exercise p {
-		margin-bottom: 8px;
+		margin-bottom: 10px;
+		font-size: 18px;
+		color: #42371c;
 	}
 
 	.input {
 		font-size: 20px;
-		padding: 7px 14px;
-		margin: 10px 0 0 0;
-		border: 2px solid #a176f6;
-		background: #21174a;
-		color: #fff6df;
-		border-radius: 7px;
-		width: 90%;
+		padding: 8px 14px;
+		border: 2px solid #cba35b;
+        font-family: "Kurale", serif;
+		font-weight: 600;
+		color: #3b3a37;
+		border-radius: 6px;
+		width: 100%;
 		outline: none;
+		box-shadow: inset 0 0 6px #0000004d;
 		transition: border 0.2s;
 	}
 
 	.input:focus {
-		border: 2px solid #ffe082;
+		border-color: #ffe08a;
 	}
 
 	.letters {
-		margin: 10px 0 12px 0;
+		margin: 12px 0 14px 0;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 6px;
 	}
 
 	.letters button {
-		margin: 2px 3px;
 		font-size: 19px;
-		width: 39px;
-		height: 42px;
-		background: #38205d;
-		color: #ffe5ab;
-		border-radius: 7px;
-		border: none;
+		width: 42px;
+		height: 45px;
+		background: #6a4c2c;
+		color: #ffe3a6;
+		border-radius: 6px;
+		border: 2px solid #d3aa5e;
 		cursor: pointer;
+		box-shadow: inset 0 0 4px #2e1b05;
 		transition: background 0.2s;
 	}
 
 	.letters button:disabled {
-		background: #594088;
-		color: #cbbfa2;
-		opacity: 0.7;
+		background: #46301d;
+		color: #c7b99e;
 		cursor: default;
+		opacity: 0.7;
 	}
 
 	.audio-btn {
-		background: #31177c;
-		color: #ffe082;
-		border: none;
+		background: #80541c;
+		color: #fbe6b2;
+		border: 2px solid #d4a249;
 		border-radius: 8px;
-		padding: 6px 16px;
-		margin: 7px 0 10px 0;
-		font-size: 19px;
+		padding: 7px 18px;
+		font-size: 18px;
 		cursor: pointer;
+		box-shadow: 0 2px 5px #00000033;
 		transition: background 0.2s;
+		margin-bottom: 15px;
 	}
 
 	.audio-btn:hover {
-		background: #5c2fe3;
+		background: #a1672f;
 	}
 
 	.answer-result {
 		font-size: 21px;
 		font-weight: bold;
-		margin: 13px 0 0 0;
+		margin: 14px 0 0 0;
 		min-height: 32px;
-		transition: color 0.2s;
+		text-shadow: 1px 1px 0 #000;
 	}
 
 	.answer-result.correct {
-		color: #35ea7b;
+		color: #61ea89;
 	}
 
 	.answer-result.wrong {
-		color: #fd5c5c;
+		color: #ff5c5c;
 	}
 
 	.next-btn {
-		margin-top: 20px;
-		background: linear-gradient(90deg, #f7d96e, #a176f6 160%);
-		color: #3b1c07;
+		margin-top: 22px;
+		background: linear-gradient(90deg, #f9e79d, #c19c4c);
+		color: #3a220f;
 		font-size: 19px;
 		font-family: inherit;
-		padding: 11px 23px;
+		padding: 12px 24px;
 		border: none;
-		border-radius: 12px;
+		border-radius: 10px;
 		font-weight: bold;
-		box-shadow: 0 2px 8px #59339944;
+		box-shadow: 0 2px 6px #00000055;
 		cursor: pointer;
-		transition: background 0.2s, color 0.2s;
+		transition: background 0.2s;
 	}
 
 	.next-btn:disabled {
-		background: #6c4e2e50;
-		color: #998d6b;
-		opacity: 0.7;
+		background: #8d734750;
+		color: #ccc09e;
 		cursor: not-allowed;
 	}
 
 	.finish-block {
 		text-align: center;
-		margin-top: 38px;
+		margin-top: 48px;
 	}
 
 	.again-btn, .home-btn {
 		display: inline-block;
-		margin: 16px 14px 0 14px;
-		padding: 13px 22px;
-		background: #ffefbe;
-		color: #1d0736;
-		border: none;
-		border-radius: 9px;
-		font-size: 19px;
+		margin: 16px 10px 0;
+		padding: 13px 24px;
+		background: #ffe4a2;
+		color: #3a240c;
+		border: 2px solid #cda052;
+		border-radius: 10px;
+		font-size: 18px;
 		font-family: inherit;
 		font-weight: bold;
 		cursor: pointer;
-		transition: background 0.18s, color 0.2s;
+		transition: background 0.2s, color 0.2s;
 		text-decoration: none;
+		box-shadow: 0 2px 6px #00000044;
 	}
 
 	.again-btn:hover, .home-btn:hover {
-		background: #bca03f;
+		background: #c9a552;
 		color: #fff;
 	}
 </style>
+
