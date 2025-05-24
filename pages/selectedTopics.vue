@@ -34,24 +34,31 @@
 							<Transition name="bounce" f>
 								<div  v-if="selectedTopic"  class="learning-modes-block">
 									<div  class="learning__modes-wrapper">
-										<h3 class="modes-title">Способы обучения
-
-											<span class="topic-hint">Тема: {{ nameMap[selectedTopic] }}</span>
-										</h3>
+										<div>
+											<div class="modes-title">Способы обучения
+											</div>
+											<div class="topic-hint">Тема: {{ nameMap[selectedTopic] }}</div>
+										</div>
 										<div class="modes-list">
 											<label
 												v-for="mode in modes"
 												:key="mode.key"
-												class="mode-checkbox"
+												class="checkbox-container"
 											>
 												<input
 													type="checkbox"
 													v-model="selectedModes"
 													:value="mode.key"
 												/>
-												<span>{{ mode.label }}</span>
+												<span class="checkmark">
+			<svg viewBox="0 0 24 24">
+				<polyline points="3 12 10 20 21 4" />
+			</svg>
+		</span>
+												<span class="label-text">{{ mode.label }}</span>
 											</label>
 										</div>
+
 										<button
 											class="start-btn"
 											:disabled="!selectedModes.length"
@@ -170,9 +177,15 @@
 
 	const startLearning = async () => {
 		await store.setSelectedTopics([selectedTopic.value])
-		const topicWords = (themeList.value[selectedTopic.value] || []).map(w => ({...w, topic: selectedTopic.value}))
+		const topicWords = (themeList.value[selectedTopic.value] || []).map(w => ({
+			...w,
+			topic: selectedTopic.value
+		}))
+
+		await store.addWordsToGlobal(topicWords)
 		await store.setSelectedWords(topicWords)
 		await store.saveToFirebase()
+
 		router.push({
 			name: 'session',
 			query: {
@@ -197,8 +210,6 @@
 		margin-top: 16px;
 	}
 
-
-
 	.theme-pagination button {
 		background: linear-gradient(90deg, #ffe08a, #ad9747);
 		color: #502b00;
@@ -219,7 +230,6 @@
 		cursor: not-allowed;
 	}
 
-
 	.theme-board-container {
 		width: 100%;
 		padding: 10px;
@@ -228,8 +238,6 @@
 		background-repeat: no-repeat;
 		background: url("../assets/images/bg3.png") no-repeat center 0px fixed;
 		background-size: cover;
-
-
 	}
 
 	.theme-board-wrapper {
@@ -243,7 +251,6 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		min-width: 450px;
 	}
 
 	.theme-title {
@@ -258,8 +265,8 @@
 
 	.theme-content {
 		display: flex;
-		padding: 50px;
 		justify-content: space-around;
+		padding: 40px;
 	}
 
 	.theme-grid {
@@ -297,7 +304,6 @@
 		box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4),
 		inset 0 2px 6px rgba(255, 255, 255, 0.1);
 		transition: transform 0.4s, box-shadow 0.4s;
-
 	}
 
 	.theme-card::before {
@@ -354,9 +360,8 @@
 	}
 
 	.learning-modes-block {
+		margin-left: 20px;
 		position: relative;
-		max-width: 400px;
-		min-width: 280px;
 		width: 100%;
 		padding: 21px 25px;
 		background: linear-gradient(145deg, #fdf3dc 0%, #f0e1b8 100%);
@@ -397,28 +402,31 @@
 		}
 	}
 
-	.animation {
-		width: 300px;
-		display: flex;
-		justify-content: center;
-	}
-
 	.modes-title {
 		font-family: 'Uncial Antiqua', cursive;
-		font-size: 22px;
+		font-size: 26px;
 		text-align: center;
+		font-weight: bold;
 		color: #444040;
 		letter-spacing: 0.04em;
 		text-shadow: 0 1px 8px #a3771e80;
-		margin-bottom: 20px;
+		margin-bottom: 10px;
 	}
 
+	.modes-title:after {
+		content: '';
+		display: block;
+	}
+
+
+
 	.topic-hint {
+		font-weight: 400;
 		font-size: 15px;
 		color: #78756f;
-		font-family: 'Georgia', serif;
-		display: block;
-		margin-top: 10px;
+		font-family: 'Uncial Antiqua', cursive;
+		text-align: center;
+		margin-bottom: 10px;
 		font-style: italic;
 	}
 
@@ -426,7 +434,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 14px;
-		margin-bottom: 10px;
+		margin-bottom: 25px;
 	}
 
 	.mode-checkbox {
@@ -560,11 +568,74 @@
 			transform: scale(0);
 		}
 		50% {
-			transform: scale(1.25);
+			transform: scale(1.06);
 		}
 		100% {
 			transform: scale(1);
 		}
+	}
+
+	.checkbox-container {
+		display: flex;
+		align-items: center;
+		gap: 14px;
+		cursor: pointer;
+		user-select: none;
+		position: relative;
+		padding-left: 2px;
+		font-family: 'Uncial Antiqua', cursive;
+		color: #3a270c;
+		font-size: 18px;
+	}
+
+	.checkbox-container input {
+		display: none;
+	}
+
+	.checkmark {
+		width: 33px;
+		height: 33px;
+		border-radius: 50%;
+		border: 3px solid #d9b56b;
+		background: #b69c81;
+		box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4), 0 0 8px #a77b3a88;
+		position: relative;
+		overflow: visible;
+	}
+
+	.checkmark svg {
+		position: absolute;
+		top: -11px;
+		left: -1px;
+		width: 38px;
+		height: 38px;
+		pointer-events: none;
+		opacity: 0;
+		transition: opacity 0.2s ease;
+	}
+
+	.checkmark polyline {
+		stroke: #5e3f39;
+		stroke-width: 4;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		fill: none;
+		stroke-dasharray: 28;
+		stroke-dashoffset: 28;
+		transition: stroke-dashoffset 0.4s ease;
+	}
+
+	.checkbox-container input:checked + .checkmark polyline {
+		stroke-dashoffset: 0;
+	}
+
+	.checkbox-container input:checked + .checkmark svg {
+		opacity: 1;
+	}
+
+	.label-text {
+		font-size: 18px;
+		text-shadow: 0 1px 3px #00000055;
 	}
 
 </style>

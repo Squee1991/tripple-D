@@ -43,6 +43,26 @@ export const userlangStore = defineStore('learning', () => {
 		await saveToFirebase()
 	}
 
+	const addWordsToGlobal = async (wordsList) => {
+		let added = false
+		wordsList.forEach(newWord => {
+			if (!words.value.find(w => w.de === newWord.de)) {
+				words.value.push({
+					...newWord,
+					progress: {
+						article: null,
+						letters: null,
+						wordArticle: null,
+						audio: null,
+						plural: null
+					}
+				})
+				added = true
+			}
+		})
+		if (added) await saveToFirebase()
+	}
+
 	const setSelectedWords = async (wordsList) => {
 		selectedWords.value = wordsList.map(word => ({
 			...word,
@@ -68,7 +88,8 @@ export const userlangStore = defineStore('learning', () => {
 	}
 
 	const setSelectedTopics = async (topics) => {
-		selectedTopics.value = [...topics]
+		const uniqueTopics = Array.from(new Set([...selectedTopics.value, ...topics]))
+		selectedTopics.value = uniqueTopics
 		currentIndex.value = 0
 		currentModeIndex.value = 0
 		await saveToFirebase()
@@ -215,5 +236,6 @@ export const userlangStore = defineStore('learning', () => {
 		loadFromFirebase,
 		saveToFirebase,
 		clearAll,
+		addWordsToGlobal
 	}
 })

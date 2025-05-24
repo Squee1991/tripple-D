@@ -106,8 +106,7 @@
 			: allTopics.value
 	})
 
-	const filteredWords = (topic) =>
-		store.selectedWords.filter(w => w.topic === topic)
+	const filteredWords = (topic) => store.words.filter(w => w.topic === topic)
 
 	const paginatedWords = (topic) => {
 		const list = filteredWords(topic)
@@ -132,7 +131,6 @@
 		{ key: 'audio', label: 'Аудирование' },
 		{ key: 'plural', label: 'Мн. число' }
 	]
-
 
 	watch(selectedTopic, () => {
 		currentPage.value = 1

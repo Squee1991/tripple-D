@@ -29,12 +29,15 @@
 						<input v-model="userInput" class="input"/>
 					</div>
 					<div v-if="currentMode === 'plural'">
-						<p>Впиши форму множественного числа для <b>{{ currentWord.de }}</b>:</p>
+						<p>Впиши форму множественного числа для:  <b>{{ currentWord.de }}</b>:</p>
 						<input v-model="userInput" class="input"/>
 					</div>
 					<div v-if="currentMode === 'audio'">
 						<p>Прослушай и впиши слово:</p>
-						<button @click="speak(currentWord.de)" class="audio-btn">🔊 Прослушать</button>
+						<button @click="speak(currentWord.de)" class="audio-btn">
+							<img class="megaphones__icon" src="../assets/images/megaphone.svg" alt="">
+							<span>Прослушать</span>
+						</button>
 						<input v-model="userInput" class="input"/>
 					</div>
 				</div>
@@ -62,7 +65,7 @@
 <script setup>
 	import {ref, computed, onMounted} from 'vue'
 	import {useRoute} from 'vue-router'
-	import {userlangStore} from '@/store/learningStore'
+	import {userlangStore} from '../store/learningStore.js'
 
 	const store = userlangStore()
 	const route = useRoute()
@@ -223,7 +226,11 @@
 		text-shadow: 1px 1px 0 #2e1b05;
 		padding: 20px;
 		font-weight: 600;
+	}
 
+	.megaphones__icon {
+		width: 25px;
+		margin-right: 10px;
 	}
 
 	.word-block {
@@ -245,13 +252,13 @@
 		margin-bottom: 10px;
 		font-size: 18px;
 		color: #42371c;
+
 	}
 
 	.input {
 		font-size: 20px;
 		padding: 8px 14px;
 		border: 2px solid #cba35b;
-        font-family: "Kurale", serif;
 		font-weight: 600;
 		color: #3b3a37;
 		border-radius: 6px;
@@ -293,6 +300,9 @@
 	}
 
 	.audio-btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		background: #80541c;
 		color: #fbe6b2;
 		border: 2px solid #d4a249;
@@ -323,6 +333,7 @@
 
 	.answer-result.wrong {
 		color: #ff5c5c;
+		font-family: "Kurale", serif;
 	}
 
 	.next-btn {
