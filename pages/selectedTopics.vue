@@ -5,48 +5,63 @@
 				<h2 class="theme-title">Выберите тему для изучения</h2>
 				<div class="theme-content">
 
-					<div class="theme-grid">
-						<div
-							v-for="(label, key) in nameMap"
-							:key="key"
-							class="theme-card"
-							:class="{ active: selectedTopic === key }"
-							@click="selectTopic(key)"
-						>
-							<div class="card-counter">
-								<!--						{{ themeProgress[key]?.learned || 0 }}/-->
-								{{ themeProgress[key]?.total || 0 }}
+					<div class="theme__grid-container">
+						<div class="theme-grid">
+							<div
+								v-for="key in paginatedTopics"
+								:key="key"
+								class="theme-card"
+								:class="{ active: selectedTopic === key }"
+								@click="selectTopic(key)"
+							>
+								<div class="card-counter">
+									{{ themeProgress[key]?.total || 0 }}
+								</div>
+								<div class="theme-card-title">{{ nameMap[key] }}</div>
 							</div>
-							<div class="theme-card-title">{{ label }}</div>
+						</div>
+						<div class="theme-pagination">
+							<button @click="prevPage" :disabled="page === 0">←</button>
+							<button @click="nextPage" :disabled="page === maxPage">→</button>
 						</div>
 					</div>
 					<div class="learning-modes">
 						<div class="learning-modes">
-							<div class="no_learning-modes" v-if="!selectedTopic">Нет выбранных тем</div>
-							<div class="learning-modes-block" v-if="selectedTopic">
-								<h3 class="modes-title">Способы обучения<br><span class="topic-hint">Тема: {{ nameMap[selectedTopic] }}</span></h3>
-								<div class="modes-list">
-									<label
-										v-for="mode in modes"
-										:key="mode.key"
-										class="mode-checkbox"
-									>
-										<input
-											type="checkbox"
-											v-model="selectedModes"
-											:value="mode.key"
-										/>
-										<span>{{ mode.label }}</span>
-									</label>
-								</div>
-								<button
-									class="start-btn"
-									:disabled="!selectedModes.length"
-									@click="startLearning"
-								>
-									Начать обучение
-								</button>
+							<div class="not__learning" v-if="!selectedTopic">
+
+								<div class="no_learning-modes">Нет выбранных тем</div>
 							</div>
+							<Transition name="bounce" f>
+								<div  v-if="selectedTopic"  class="learning-modes-block">
+									<div  class="learning__modes-wrapper">
+										<h3 class="modes-title">Способы обучения
+
+											<span class="topic-hint">Тема: {{ nameMap[selectedTopic] }}</span>
+										</h3>
+										<div class="modes-list">
+											<label
+												v-for="mode in modes"
+												:key="mode.key"
+												class="mode-checkbox"
+											>
+												<input
+													type="checkbox"
+													v-model="selectedModes"
+													:value="mode.key"
+												/>
+												<span>{{ mode.label }}</span>
+											</label>
+										</div>
+										<button
+											class="start-btn"
+											:disabled="!selectedModes.length"
+											@click="startLearning"
+										>
+											Начать обучение
+										</button>
+									</div>
+								</div>
+							</Transition>
 						</div>
 					</div>
 				</div>
@@ -56,14 +71,49 @@
 </template>
 
 <script setup>
-	import { ref, computed, onMounted } from 'vue'
-	import { useRouter } from 'vue-router'
-	import { userlangStore } from '../store/learningStore.js'
+	import {ref, computed, onMounted} from 'vue'
+	import {useRouter} from 'vue-router'
+	import {userlangStore} from '../store/learningStore.js'
+	import Lottie from 'lottie-web'
+	import NotFound from '../assets/animation/notFound.json'
+
 	const router = useRouter()
 	const store = userlangStore()
 	const themeList = ref({})
 	const selectedTopic = ref(null)
 	const selectedModes = ref([])
+	const animationContainer = ref(null)
+
+	onMounted(() => {
+		if (animationContainer.value) {
+			Lottie.loadAnimation({
+				container: animationContainer.value,
+				loop: false,
+				animationData: NotFound
+			})
+		}
+	})
+
+	const page = ref(0)
+	const itemsPerPage = 9
+
+	const topicKeys = computed(() => Object.keys(nameMap))
+
+	const maxPage = computed(() =>
+		Math.ceil(topicKeys.value.length / itemsPerPage) - 1
+	)
+
+	const paginatedTopics = computed(() => {
+		const start = page.value * itemsPerPage
+		return topicKeys.value.slice(start, start + itemsPerPage)
+	})
+
+	const nextPage = () => {
+		if (page.value < maxPage.value) page.value++
+	}
+	const prevPage = () => {
+		if (page.value > 0) page.value--
+	}
 
 	const nameMap = {
 		Furniture: 'Мебель',
@@ -94,11 +144,11 @@
 	}
 
 	const modes = [
-		{ key: 'article', label: 'Вписать артикль' },
-		{ key: 'letters', label: 'Собрать слово по буквам' },
-		{ key: 'wordArticle', label: 'Вписать слово и артикль' },
-		{ key: 'plural', label: 'Форма множественного числа' },
-		{ key: 'audio', label: 'Аудирование' }
+		{key: 'article', label: 'Вписать артикль'},
+		{key: 'letters', label: 'Собрать слово по буквам'},
+		{key: 'wordArticle', label: 'Вписать слово и артикль'},
+		{key: 'plural', label: 'Форма множественного числа'},
+		{key: 'audio', label: 'Аудирование'}
 	]
 
 	const themeProgress = computed(() => {
@@ -108,7 +158,7 @@
 				const learned = words.filter(word =>
 					store.learnedWords.some(lw => lw.de === word.de && lw.topic === key)
 				).length
-				return [key, { learned, total }]
+				return [key, {learned, total}]
 			})
 		)
 	})
@@ -120,7 +170,7 @@
 
 	const startLearning = async () => {
 		await store.setSelectedTopics([selectedTopic.value])
-		const topicWords = (themeList.value[selectedTopic.value] || []).map(w => ({ ...w, topic: selectedTopic.value }))
+		const topicWords = (themeList.value[selectedTopic.value] || []).map(w => ({...w, topic: selectedTopic.value}))
 		await store.setSelectedWords(topicWords)
 		await store.saveToFirebase()
 		router.push({
@@ -139,30 +189,68 @@
 </script>
 
 <style scoped>
+
+	.theme-pagination {
+		display: flex;
+		justify-content: center;
+		gap: 18px;
+		margin-top: 16px;
+	}
+
+
+
+	.theme-pagination button {
+		background: linear-gradient(90deg, #ffe08a, #ad9747);
+		color: #502b00;
+		border: 2px solid #f8e1b7;
+		border-radius: 14px;
+		padding: 10px 20px;
+		font-size: 18px;
+		font-weight: bold;
+		cursor: pointer;
+		box-shadow: 0 2px 8px #a3781e29;
+		transition: 0.3s;
+	}
+
+	.theme-pagination button:disabled {
+		background: #fff8e147;
+		color: #b3a270;
+		opacity: 0.6;
+		cursor: not-allowed;
+	}
+
+
 	.theme-board-container {
-		max-width: 1240px;
+		width: 100%;
 		padding: 10px;
+		margin: 0 auto;
+		height: 100vh;
+		background-repeat: no-repeat;
+		background: url("../assets/images/bg3.png") no-repeat center 0px fixed;
+		background-size: cover;
+
 
 	}
 
 	.theme-board-wrapper {
-		background: linear-gradient(135deg, #23043a 0%, #6c4326 100%);
 		box-shadow: 0 8px 32px 0 #30054a33, 0 1.5px 8px #1d042933;
 		height: 100%;
+		position: relative;
+		overflow: hidden;
 	}
 
 	.learning-modes {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		height: 100%;
+		min-width: 450px;
 	}
 
 	.theme-title {
 		font-size: 38px;
 		font-family: 'Uncial Antiqua', cursive;
 		text-align: center;
-		margin-bottom: 32px;
+		margin-bottom: 5px;
 		color: #ffd48a;
 		letter-spacing: 0.07em;
 		text-shadow: 0 2px 14px #21092680, 0 0 2px #e3a41f90;
@@ -170,49 +258,67 @@
 
 	.theme-content {
 		display: flex;
-		gap: 42px;
-		align-items: flex-start;
-		flex-wrap: wrap;
+		padding: 50px;
+		justify-content: space-around;
 	}
 
 	.theme-grid {
-		height: 80vh;
-		overflow-y: auto;
-		flex: 1 1 60%;
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
-		gap: 28px;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(2, 1fr);
 		justify-items: center;
-		padding: 20px;
+		align-items: center;
+		flex-wrap: wrap;
+		margin: 0 auto;
+		perspective: 420px;
 	}
 
 	.theme-card {
+		margin: 16px;
+		width: 240px;
 		background: linear-gradient(120deg, #512f0a 55%, #ad8e51 130%);
+		opacity: 80%;
 		border: 4px solid #ffebc2;
-		box-shadow: 0 0 20px #2b100b55, 0 2px 10px #d6b15f44 inset;
 		border-radius: 18px;
 		padding: 24px 12px 28px 12px;
 		min-height: 110px;
-		width: 100%;
-		max-width: 230px;
+		max-width: 220px;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: center;
 		position: relative;
 		cursor: pointer;
-		transition: transform 0.17s, box-shadow 0.17s, border 0.15s;
 		outline: none;
 		user-select: none;
+		transform-style: preserve-3d;
+		backface-visibility: hidden;
+		transform: rotateX(10deg) rotateY(1deg);
+		box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4),
+		inset 0 2px 6px rgba(255, 255, 255, 0.1);
+		transition: transform 0.4s, box-shadow 0.4s;
+
+	}
+
+	.theme-card::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: inherit;
+		filter: brightness(0.9);
+		transform: translateZ(-1px);
+		z-index: -1;
 	}
 
 	.theme-card.active,
 	.theme-card:active,
 	.theme-card:hover {
-		transform: scale(1.045) rotate(-1deg);
-		border-color: #ffe079;
-		box-shadow: 0 0 32px #e1ae36bb, 0 2px 16px #d8c89944 inset;
-		background: linear-gradient(110deg, #6d471b 65%, #ffe08a 160%);
+		transform: rotateX(0deg) rotateZ(0deg) translateY(-8px) scale(1.05);
+		box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5),
+		inset 0 4px 8px rgba(255, 255, 255, 0.15);
 	}
 
 	.theme-card-title {
@@ -227,13 +333,14 @@
 
 	.card-counter {
 		position: absolute;
-		top: -15px;
+		top: -10px;
 		right: -15px;
 		background: linear-gradient(90deg, #ffe099 40%, #a87709 90%);
 		color: #4d2901;
 		font-weight: bold;
-		font-size: 15px;
-		padding: 12px 16px;
+		font-family: "Kurale", serif;
+		font-size: 19px;
+		padding: 3px 15px;
 		border-radius: 50%;
 		border: 2.5px solid #fff0c7;
 		box-shadow: 0 0 6px #e3af2585, 0 2px 6px #57350744;
@@ -247,40 +354,71 @@
 	}
 
 	.learning-modes-block {
-		flex: 1 1 340px;
-		max-width: 370px;
-		background: linear-gradient(135deg, #2a1843 80%, #b09262 180%);
-		border: 4px solid #e9d28c;
-		border-radius: 16px;
-		box-shadow: 0 2px 14px #42260c33;
-		padding: 15px 15px 15px 15px;
-		color: #ffe8b8;
+		position: relative;
+		max-width: 400px;
+		min-width: 280px;
+		width: 100%;
+		padding: 21px 25px;
+		background: linear-gradient(145deg, #fdf3dc 0%, #f0e1b8 100%);
+		border: 3px solid #c9a96b;
+		border-radius: 12px;
+		box-shadow: 0 16px 30px rgba(0, 0, 0, 0.4),
+		inset 0 2px 6px rgba(255, 255, 255, 0.3);
+		color: #3e2b0d;
+		font-family: 'Georgia', serif;
+		font-size: 17px;
+		transform-style: preserve-3d;
+		backface-visibility: hidden;
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
-		min-width: 280px;
-		animation: fadeIn 0.7s;
+	}
+
+	.modes-list {
+		font-family: "Kurale", serif;
+		font-weight: 600;
+		font-size: 18px;
+	}
+
+	.learning__modes-wrapper {
+		border: 4px solid #e9d28c;
+		padding: 25px 15px;
+		border-radius: 16px;
 	}
 
 	@keyframes fadeIn {
-		from { opacity: 0; transform: translateX(30px);}
-		to { opacity: 1; transform: none;}
+		from {
+			opacity: 0;
+			transform: translateX(30px);
+		}
+		to {
+			opacity: 1;
+			transform: none;
+		}
+	}
+
+	.animation {
+		width: 300px;
+		display: flex;
+		justify-content: center;
 	}
 
 	.modes-title {
 		font-family: 'Uncial Antiqua', cursive;
 		font-size: 22px;
 		text-align: center;
-		color: #ffe8b8;
+		color: #444040;
 		letter-spacing: 0.04em;
 		text-shadow: 0 1px 8px #a3771e80;
+		margin-bottom: 20px;
 	}
+
 	.topic-hint {
 		font-size: 15px;
-		color: #ffd775;
+		color: #78756f;
 		font-family: 'Georgia', serif;
 		display: block;
-		margin-top: 5px;
+		margin-top: 10px;
 		font-style: italic;
 	}
 
@@ -296,16 +434,17 @@
 		display: flex;
 		align-items: center;
 		gap: 11px;
-		background: #35205788;
 		border-radius: 8px;
-		padding: 11px 13px;
+		padding: 6px 13px;
 		transition: background 0.2s;
 		cursor: pointer;
 		user-select: none;
 	}
+
 	.mode-checkbox:hover {
 		background: #5c421577;
 	}
+
 	input[type="checkbox"] {
 		width: 19px;
 		height: 19px;
@@ -313,60 +452,119 @@
 	}
 
 	.start-btn {
+		width: 100%;
 		padding: 14px 22px;
 		font-size: 19px;
-		background: linear-gradient(90deg,#ffe08a,#ad9747);
+		background: linear-gradient(90deg, #ffe08a, #ad9747);
 		color: #502b00;
 		border: 2px solid #f8e1b7;
-		border-radius: 10px;
+		border-radius: 30px;
 		font-family: inherit;
 		cursor: pointer;
 		font-weight: bold;
-		transition: background 0.2s, color 0.2s, box-shadow 0.17s;
 		box-shadow: 0 2px 8px #a3781e29;
+		margin-top: 10px;
+		transition: .5s;
 	}
+
 	.start-btn:disabled {
 		background: #fff8e147;
 		color: #b3a270;
 		opacity: 0.67;
 		cursor: not-allowed;
 	}
+
 	.start-btn:hover:enabled {
 		background: linear-gradient(100deg, #ffefae, #f5c752 140%);
-		color: #9b6509;
+		color: #5f4117;
 	}
 
 	@media (max-width: 900px) {
-		.theme-content { flex-direction: column; gap: 18px; }
-		.learning-modes-block { margin-top: 18px; }
-		.theme-board-container { padding: 16px 2px 16px 2px;}
+		.theme-content {
+			flex-direction: column;
+			gap: 18px;
+		}
+
+		.learning-modes-block {
+			margin-top: 18px;
+		}
+
+		.theme-board-container {
+			padding: 16px 2px 16px 2px;
+		}
 	}
+
 	@media (max-width: 700px) {
-		.theme-title { font-size: 21px; }
-		.learning-modes-block { padding: 14px 8px 20px 8px; }
+		.theme-title {
+			font-size: 21px;
+		}
+
+		.learning-modes-block {
+			padding: 14px 8px 20px 8px;
+		}
 	}
 
 	.no_learning-modes {
-		background: linear-gradient(105deg, #2a1843 80%, #68400e 140%);
-		border: 3px solid #ffe8b8cc;
-		border-radius: 14px;
-		box-shadow: 0 0 18px #e1ae3680, 0 2px 16px #6743122c inset;
-		padding: 36px 18px 36px 18px;
-		color: #ffe8b8;
-		text-align: center;
-		font-size: 20px;
+		color: #eaddc0;
+		font-size: 30px;
+		font-weight: 600;
 		font-family: 'Uncial Antiqua', cursive;
 		letter-spacing: 0.04em;
 		text-shadow: 0 1.5px 12px #a3771e80, 0 0 2px #fff0dc;
 		opacity: 0.93;
 		transition: box-shadow 0.19s, border 0.15s, background 0.18s;
 		animation: fadeInNoTopic 0.5s;
-		margin-top: 36px;
 	}
 
 	@keyframes fadeInNoTopic {
-		from { opacity: 0; transform: scale(0.98) translateY(14px);}
-		to { opacity: 0.93; transform: scale(1) translateY(0);}
+		from {
+			opacity: 0;
+			transform: scale(0.98) translateY(14px);
+		}
+		to {
+			opacity: 0.93;
+			transform: scale(1) translateY(0);
+		}
+	}
+
+	.theme-content::-webkit-scrollbar {
+		width: 13px;
+		background: #2a1843;
+		border-radius: 8px;
+	}
+
+	.theme-content::-webkit-scrollbar-thumb {
+		background: linear-gradient(135deg, #ad8e51 0%, #ffe08a 100%);
+		border-radius: 8px;
+		border: 3px solid #2a1843;
+		box-shadow: 0 0 7px #ffd48a80;
+	}
+
+	.theme-content::-webkit-scrollbar-thumb:hover {
+		background: linear-gradient(135deg, #ffe08a 0%, #ad8e51 100%);
+	}
+
+	.theme-content {
+		scrollbar-width: auto;
+		scrollbar-color: #ad8e51 #2a1843;
+	}
+
+	.bounce-enter-active {
+		animation: bounce-in 0.5s;
+	}
+	.bounce-leave-active {
+		animation: bounce-in 0.5s reverse;
+	}
+	@keyframes bounce-in {
+		0% {
+			transform: scale(0);
+		}
+		50% {
+			transform: scale(1.25);
+		}
+		100% {
+			transform: scale(1);
+		}
 	}
 
 </style>
