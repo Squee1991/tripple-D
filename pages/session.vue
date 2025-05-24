@@ -1,439 +1,355 @@
 <template>
-	<div class="wrapper">
-		<div v-if="!finished && filteredWords.length" class="exercise-wrapper">
-			<NuxtLink to="/" class="back-link">← Назад</NuxtLink>
-			<div v-if="currentWord">
-				<h2 class="word-counter">Слово {{ currentIndex + 1 }} из {{ total }}</h2>
-				<p><strong>слово:</strong> {{ currentWord.ru }}</p>
-				<div v-if="currentMode === 'wordArticle'" class="exercise">
-					<p>Впишите артикль и слово на немецком:</p>
-					<input v-model="userInput" class="input-field"/>
-					<button @click="checkAnswer" class="check-button">Проверить</button>
-					<p v-if="result === 'correct'" class="result correct">✅ Верно!</p>
-					<p v-else-if="result === 'wrong'" class="result wrong">
-						❌ Правильно: {{ currentWord.article }} {{ currentWord.de }}
-					</p>
+	<div class="session-wrapper" v-if="isReady">
+		<div v-if="!finished && currentWord && currentMode">
+			<div class="progress-line">
+				<span>Слово {{ store.currentIndex + 1 }} / {{ totalWords }}</span>
+				<span>Способ: <b>{{ modeLabel(currentMode) }}</b> ({{ currentModeIndex + 1 }}/{{ selectedModes.length }})</span>
+			</div>
+			<div class="word-block">
+				<div class="word-question">
+					<span>RU:{{ currentWord?.ru }}</span>
 				</div>
-				<div v-if="currentMode === 'article'" class="exercise">
-					<p>Впишите артикль слова : <span class="current__word"> {{currentWord.de}}</span></p>
-					<input v-model="userInput" class="input-field"/>
-					<button @click="checkAnswer" class="check-button">Проверить</button>
-					<p v-if="result === 'correct'" class="result correct">✅ Верно!</p>
-					<p v-else-if="result === 'wrong'" class="result wrong">
-						❌ Правильно: {{ currentWord.article }}
-					</p>
-				</div>
-				<div v-if="currentMode === 'plural'" class="exercise">
-					<p>Впишите форму множественного числа: {{ currentWord.de }}</p>
-					<input v-model="userInput" class="input-field"/>
-					<button @click="checkAnswer" class="check-button">Проверить</button>
-					<p v-if="result === 'correct'" class="result correct">✅ Верно!</p>
-					<p v-else-if="result === 'wrong'" class="result wrong">
-						❌ Правильно: {{ currentWord.plural }}
-					</p>
-				</div>
-				<div v-if="currentMode === 'audio'" class="exercise">
-					<p>Слушайте слово и напишите его:</p>
-					<button @click="speakWord(currentWord.de)" class="check-button">Прослушать</button>
-					<input v-model="userInput" class="input-field"/>
-					<button @click="checkAnswer" class="check-button">Проверить</button>
-					<p v-if="result === 'correct'" class="result correct">✅ Верно!</p>
-					<p v-else-if="result === 'wrong'" class="result wrong">
-						❌ Правильно: {{ currentWord.de }}
-					</p>
-				</div>
-				<div v-if="currentMode === 'letters'" class="exercise">
-					<p>Соберите слово из букв: <span class="current__word">{{ currentWord.article }}</span></p>
-
-					<div class="letters">
-						<button
-							v-for="(letter, index) in shuffledLetters"
-							:key="index"
-							@click="addLetter(letter, index)"
-							:disabled="usedIndices.includes(index)"
-							class="make__word"
-						>
-							{{ letter === ' ' ? '␣' : letter }}
-						</button>
+				<div class="mode-exercise">
+					<div v-if="currentMode === 'article'">
+						<p>Впиши артикль для <b>{{ currentWord.de }}</b>:</p>
+						<input v-model="userInput" class="input"/>
 					</div>
-					<input v-model="userInput" class="input-field"/>
-					<button @click="checkAnswer" class="check-button">Проверить</button>
-					<p v-if="result === 'correct'" class="result correct">✅ Верно!</p>
-					<p v-else-if="result === 'wrong'" class="result wrong">
-						❌ Правильно: {{ currentWord.de }}
-					</p>
+					<div v-if="currentMode === 'letters'">
+						<p>Собери слово из букв: <b>{{ currentWord.article }}</b></p>
+						<div class="letters">
+							<button v-for="(letter, i) in shuffledLetters" :key="i" :disabled="usedLetters[i]"
+							        @click="addLetter(letter, i)">
+								{{ letter === ' ' ? '␣' : letter }}
+							</button>
+						</div>
+						<input v-model="userInput" class="input"/>
+					</div>
+					<div v-if="currentMode === 'wordArticle'">
+						<p>Впиши артикль и слово (например: <b>die Lampe</b>):</p>
+						<input v-model="userInput" class="input"/>
+					</div>
+					<div v-if="currentMode === 'plural'">
+						<p>Впиши форму множественного числа для <b>{{ currentWord.de }}</b>:</p>
+						<input v-model="userInput" class="input"/>
+					</div>
+					<div v-if="currentMode === 'audio'">
+						<p>Прослушай и впиши слово:</p>
+						<button @click="speak(currentWord.de)" class="audio-btn">🔊 Прослушать</button>
+						<input v-model="userInput" class="input"/>
+					</div>
 				</div>
+				<div v-if="result" class="answer-result" :class="result">
+					<span v-if="result === 'correct'">✅ Верно!</span>
+					<span v-if="result === 'wrong'">❌ Неверно. <span v-if="currentMode === 'article'">
+						Правильный ответ: {{ currentWord.article }}
+					</span>
+            <span v-if="currentMode === 'letters' || currentMode === 'audio'">Правильный ответ: {{ currentWord.de }}</span>
+            <span v-if="currentMode === 'wordArticle'">Правильно: {{ currentWord.article }} {{ currentWord.de }}</span>
+            <span v-if="currentMode === 'plural'">Правильно: {{ currentWord.plural }}</span>
+          </span>
+				</div>
+				<button class="next-btn" @click="checkAnswer" :disabled="isChecking || !userInput">Проверить</button>
 			</div>
 		</div>
-
-		<div v-else class="completion-wrapper">
-			<div class="completion-message">
-				<h2 class="congrats-title">Молодец!</h2>
-				<p class="congrats-subtitle">Вы завершили все упражнения 👏</p>
-				<div class="completion-buttons">
-					<NuxtLink to="/" class="completion-btn home">🏠 Вернуться к темам</NuxtLink>
-					<button v-if="store.wrongAnswers.length" @click="repeatWrongAnswers" class="completion-btn retry">🔁
-						Повторить ошибки
-					</button>
-					<button @click="restart" class="completion-btn restart">🔄 Пройти снова</button>
-				</div>
-			</div>
+		<div v-else class="finish-block">
+			<h2>🎉 Обучение завершено!</h2>
+			<button class="again-btn" @click="restart">Пройти снова</button>
+			<router-link class="home-btn" to="/">Назад к темам</router-link>
 		</div>
 	</div>
 </template>
 
 <script setup>
-	import {ref, computed, watch, onMounted} from 'vue'
+	import {ref, computed, onMounted} from 'vue'
 	import {useRoute} from 'vue-router'
-	import {userlangStore} from '../store/learningStore.js'
+	import {userlangStore} from '@/store/learningStore'
+
 	const store = userlangStore()
 	const route = useRoute()
-	const selectedModes = ref(route.query.mode || [])
-	if (typeof selectedModes.value === 'string') {
-		selectedModes.value = [selectedModes.value]
-	}
-	const filteredWords = computed(() =>
-		store.words.filter(word =>
-			word.topic === store.currentTopic && !isWordLearned(word)
-		)
-	)
-	const total = computed(() => filteredWords.value.length)
-	const currentIndex = ref(0)
-	const currentModeIndex = ref(0)
+	const isReady = ref(false)
+	const selectedModes = ref([])
+	const sessionWords = ref([])
+	const finished = ref(false)
 	const userInput = ref('')
 	const result = ref('')
-	const usedIndices = ref([])
-	const finished = ref(false)
+	const usedLetters = ref([])
+	const isChecking = ref(false)
 
-	const currentWord = computed(() => filteredWords.value[currentIndex.value] || null)
+	const currentModeIndex = computed(() => store.currentModeIndex)
 	const currentMode = computed(() => selectedModes.value[currentModeIndex.value])
+	const currentWord = computed(() => store.selectedWords[store.currentIndex])
+	const totalWords = computed(() => store.selectedWords.length)
+
+	function modeLabel(mode) {
+		const m = {
+			article: 'Вписать артикль',
+			letters: 'Собрать слово',
+			wordArticle: 'Артикль + слово',
+			plural: 'Множественное число',
+			audio: 'Аудирование'
+		}
+		return m[mode] || mode
+	}
+
 	const shuffledLetters = computed(() => {
 		if (!currentWord.value) return []
 		return currentWord.value.de.split('').sort(() => Math.random() - 0.5)
 	})
 
-	function speakWord(text) {
-		const utterance = new SpeechSynthesisUtterance(text)
-		utterance.lang = 'de-DE'
-		speechSynthesis.speak(utterance)
+	function addLetter(letter, idx) {
+		if (usedLetters.value[idx]) return
+		userInput.value += letter
+		usedLetters.value[idx] = true
 	}
 
-	function addLetter(letter, index) {
-		const position = usedIndices.value.indexOf(index)
-
-		if (position !== -1) {
-			usedIndices.value.splice(position, 1)
-			userInput.value =
-				userInput.value.slice(0, position) + userInput.value.slice(position + 1)
-		} else {
-			userInput.value += letter
-			usedIndices.value.push(index)
-		}
+	function speak(text) {
+		const u = new window.SpeechSynthesisUtterance(text)
+		u.lang = 'de-DE'
+		window.speechSynthesis.speak(u)
 	}
 
-	function isWordLearned(word) {
-		return selectedModes.value.every(mode => word.progress?.[mode] === true)
+	function normalize(text) {
+		return (text || '').trim().toLowerCase().replace(/\s+/g, ' ')
 	}
 
-	function checkAnswer() {
+	async function checkAnswer() {
+		if (!currentWord.value || isChecking.value) return
+		isChecking.value = true
 		let correct = ''
 		switch (currentMode.value) {
-			case 'wordArticle':
-				correct = `${currentWord.value.article} ${currentWord.value.de}`
-				break
 			case 'article':
-				correct = currentWord.value.article
+				correct = currentWord.value.article;
+				break
+			case 'letters':
+				correct = currentWord.value.de;
+				break
+			case 'wordArticle':
+				correct = `${currentWord.value.article} ${currentWord.value.de}`;
 				break
 			case 'plural':
-				correct = currentWord.value.plural
+				correct = currentWord.value.plural;
 				break
-			default:
-				correct = currentWord.value.de
+			case 'audio':
+				correct = currentWord.value.de;
+				break
 		}
-
-		const normalize = (text) => text.trim().toLowerCase().replace(/\s+/g, ' ')
-		const input = normalize(userInput.value)
-		const correctAnswer = normalize(correct)
-
-		const isCorrect = input === correctAnswer
-		result.value = isCorrect ? 'correct' : 'wrong'
-
+		const ok = normalize(userInput.value) === normalize(correct)
+		result.value = ok ? 'correct' : 'wrong'
 		setTimeout(async () => {
-			await store.markProgress(currentWord.value, currentMode.value, isCorrect)
-
-			if (isCorrect) {
-				if (isWordLearned(currentWord.value)) {
-					await store.markAsLearned(currentWord.value)
-				}
+			await store.markProgress(currentWord.value, currentMode.value, ok)
+			if (currentModeIndex.value < selectedModes.value.length - 1) {
+				store.currentModeIndex++
 			} else {
-				await store.addWrongAnswers(currentWord.value)
+				store.currentModeIndex = 0
+				store.currentIndex++
 			}
+			await store.saveToFirebase()
+			userInput.value = ''
+			usedLetters.value = []
+			if (store.currentIndex >= store.selectedWords.length) {
+				finished.value = true
+			}
+			isChecking.value = false
+			result.value = ''
+		}, 700)
 
-			nextExercise()
-		}, 800)
-	}
-
-
-
-	function nextExercise() {
-		result.value = ''
-		userInput.value = ''
-		usedIndices.value = []
-		if (currentModeIndex.value < selectedModes.value.length - 1) {
-			currentModeIndex.value++
-		} else {
-			currentModeIndex.value = 0
-			currentIndex.value++
-		}
-		if (currentIndex.value >= filteredWords.value.length) {
-			finished.value = true
-		}
-	}
-
-	function repeatWrongAnswers() {
-		currentIndex.value = 0
-		currentModeIndex.value = 0
-		result.value = ''
-		userInput.value = ''
-		usedIndices.value = []
-		store.words = store.wrongAnswers.filter(w =>
-			selectedModes.value.some(mode => !w.progress?.[mode])
-		)
-		store.cleanWrongAnswers()
-		finished.value = false
 	}
 
 	function restart() {
-		currentIndex.value = 0
-		currentModeIndex.value = 0
-		userInput.value = ''
-		usedIndices.value = []
-		result.value = ''
+		store.currentIndex = 0
+		store.currentModeIndex = 0
 		finished.value = false
-
-		store.words = store.words.filter(w =>
-			selectedModes.value.some(mode => !w.progress?.[mode])
-		)
+		userInput.value = ''
+		usedLetters.value = []
+		result.value = ''
 	}
 
-	watch(currentMode, (newMode) => {
-		if (newMode === 'audio' && currentWord.value?.de) {
-			speakWord(currentWord.value.de)
-		}
+	onMounted(async () => {
+		await store.loadFromFirebase()
+		store.syncSelectedWordsProgress()
+		let mode = route.query.mode
+		selectedModes.value = Array.isArray(mode) ? mode : [mode]
+		sessionWords.value = store.selectedWords.filter(w => {
+			const isLearned = selectedModes.value.every(m => w.progress?.[m] === true)
+			return !isLearned
+		})
+
+		if (store.currentIndex >= sessionWords.value.length) store.currentIndex = 0
+		if (store.currentModeIndex >= selectedModes.value.length) store.currentModeIndex = 0
+		isReady.value = true
 	})
 
 	watch(userInput, (newVal, oldVal) => {
 		if (currentMode.value !== 'letters') return
-		const diff = oldVal.length - newVal.length
-		if (diff > 0) {
-			usedIndices.value.splice(newVal.length, diff)
+		const removed = oldVal.length - newVal.length
+		if (removed > 0) {
+			for (let i = 0; i < removed; i++) {
+				const idx = newVal.length + i
+				usedLetters.value[idx] = false
+			}
 		}
 	})
 
-	onMounted(async () => {
-		await store.loadFromFirebase()
-
-		if (route.query.topic) {
-			store.currentTopic = route.query.topic
-		}
-
-		if (route.query.mode) {
-			const mode = route.query.mode
-			selectedModes.value = Array.isArray(mode) ? mode : [mode]
-		}
-	})
-	definePageMeta({
-		middleware: ['auth'],
-	})
 </script>
 
 <style scoped>
-	@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
-
-	.wrapper {
-		max-width: 1000px;
-		margin: auto;
-		padding: 40px 20px;
+	.session-wrapper {
+		max-width: 700px;
+		margin: 48px auto;
+		background: linear-gradient(130deg, #18031f 80%, #332053 150%);
+		border-radius: 26px;
+		box-shadow: 0 4px 18px #380852a8;
+		padding: 38px 20px 48px 20px;
+		min-height: 390px;
+		color: #f7e6cf;
 		font-family: 'Uncial Antiqua', cursive;
-		color: #f2ecff;
-		background: #120026;
-		border-radius: 20px;
-		box-shadow: 0 0 20px #39076e55;
 	}
 
-	.exercise-wrapper {
-		background: #1b0033;
-		border-radius: 16px;
-		padding: 30px;
-		box-shadow: 0 0 20px #6a1b9a55;
-	}
-
-	.back-link {
-		color: #cfaaff;
-		font-size: 16px;
-		padding: 10px 16px;
-		background: none;
-		border: 1px solid #7c4dff;
-		border-radius: 8px;
-		text-decoration: none;
-		transition: 0.3s;
-		display: inline-block;
-		margin-bottom: 20px;
-	}
-
-	.back-link:hover {
-		background: #7c4dff;
-		color: white;
-	}
-
-	.word-counter {
-		font-size: 24px;
+	.progress-line {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 12px;
+		font-size: 19px;
 		color: #ffe082;
-		text-align: center;
-		margin-bottom: 20px;
 	}
 
-	.current__word {
-		color: #ffd700;
+	.word-block {
+		margin-top: 15px;
+		background: #260d31b8;
+		border-radius: 16px;
+		box-shadow: 0 0 12px #36074738;
+		padding: 23px 19px 30px 19px;
+	}
+
+	.word-question {
 		font-size: 20px;
-		font-weight: bold;
+		color: #ffd16e;
+		margin-bottom: 9px;
 	}
 
-	.exercise {
-		text-align: center;
-		margin-top: 20px;
+	.mode-exercise p {
+		margin-bottom: 8px;
 	}
 
-	.input-field {
-		width: 100%;
-		padding: 12px;
-		font-size: 18px;
-		border: 1px solid #7c4dff;
-		border-radius: 10px;
-		background: #25003d;
-		color: white;
-		margin: 15px 0;
-	}
-
-	.input-field:focus {
+	.input {
+		font-size: 20px;
+		padding: 7px 14px;
+		margin: 10px 0 0 0;
+		border: 2px solid #a176f6;
+		background: #21174a;
+		color: #fff6df;
+		border-radius: 7px;
+		width: 90%;
 		outline: none;
-		box-shadow: 0 0 10px #9575cd;
+		transition: border 0.2s;
 	}
 
-	.check-button {
-		background-color: #7c4dff;
-		color: white;
-		font-size: 16px;
-		padding: 10px 24px;
-		border: none;
-		border-radius: 10px;
-		cursor: pointer;
-		font-weight: bold;
-		margin-top: 10px;
-	}
-
-	.check-button:hover {
-		background-color: #9b5de5;
+	.input:focus {
+		border: 2px solid #ffe082;
 	}
 
 	.letters {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		gap: 10px;
-		margin-bottom: 20px;
+		margin: 10px 0 12px 0;
 	}
 
-	.make__word {
-		width: 44px;
-		height: 56px;
-		font-size: 20px;
-		background: #311b92;
-		color: white;
-		border-radius: 6px;
+	.letters button {
+		margin: 2px 3px;
+		font-size: 19px;
+		width: 39px;
+		height: 42px;
+		background: #38205d;
+		color: #ffe5ab;
+		border-radius: 7px;
 		border: none;
 		cursor: pointer;
+		transition: background 0.2s;
 	}
 
-	.make__word:disabled {
-		background: #5e35b1;
-		color: #ccc;
+	.letters button:disabled {
+		background: #594088;
+		color: #cbbfa2;
+		opacity: 0.7;
+		cursor: default;
 	}
 
-	.result {
-		font-size: 18px;
-		margin-top: 12px;
+	.audio-btn {
+		background: #31177c;
+		color: #ffe082;
+		border: none;
+		border-radius: 8px;
+		padding: 6px 16px;
+		margin: 7px 0 10px 0;
+		font-size: 19px;
+		cursor: pointer;
+		transition: background 0.2s;
+	}
+
+	.audio-btn:hover {
+		background: #5c2fe3;
+	}
+
+	.answer-result {
+		font-size: 21px;
 		font-weight: bold;
+		margin: 13px 0 0 0;
+		min-height: 32px;
+		transition: color 0.2s;
 	}
 
-	.correct {
-		color: #00e676;
+	.answer-result.correct {
+		color: #35ea7b;
 	}
 
-	.wrong {
-		color: #ff5252;
+	.answer-result.wrong {
+		color: #fd5c5c;
 	}
 
-	.completion-wrapper {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: 40px 20px;
+	.next-btn {
+		margin-top: 20px;
+		background: linear-gradient(90deg, #f7d96e, #a176f6 160%);
+		color: #3b1c07;
+		font-size: 19px;
+		font-family: inherit;
+		padding: 11px 23px;
+		border: none;
+		border-radius: 12px;
+		font-weight: bold;
+		box-shadow: 0 2px 8px #59339944;
+		cursor: pointer;
+		transition: background 0.2s, color 0.2s;
 	}
 
-	.completion-message {
-		background: #1e0030;
-		border-radius: 18px;
-		padding: 40px;
+	.next-btn:disabled {
+		background: #6c4e2e50;
+		color: #998d6b;
+		opacity: 0.7;
+		cursor: not-allowed;
+	}
+
+	.finish-block {
 		text-align: center;
-		box-shadow: 0 0 20px #4a148c77;
+		margin-top: 38px;
 	}
 
-	.congrats-title {
-		font-size: 30px;
-		color: #ffd54f;
-	}
-
-	.congrats-subtitle {
-		font-size: 18px;
-		color: #d1c4e9;
-	}
-
-	.completion-buttons {
-		display: flex;
-		flex-direction: column;
-		gap: 16px;
-		margin-top: 24px;
-	}
-
-	.completion-btn {
-		font-size: 16px;
-		padding: 12px 0;
-		border-radius: 10px;
-		font-weight: bold;
+	.again-btn, .home-btn {
+		display: inline-block;
+		margin: 16px 14px 0 14px;
+		padding: 13px 22px;
+		background: #ffefbe;
+		color: #1d0736;
 		border: none;
-		color: white;
+		border-radius: 9px;
+		font-size: 19px;
+		font-family: inherit;
+		font-weight: bold;
 		cursor: pointer;
-		min-width: 240px;
+		transition: background 0.18s, color 0.2s;
+		text-decoration: none;
 	}
 
-	.completion-btn.home {
-		background: #1976d2;
-	}
-
-	.completion-btn.retry {
-		background: #f57c00;
-	}
-
-	.completion-btn.restart {
-		background: #43a047;
-	}
-
-	.completion-btn:hover {
-		opacity: 0.9;
+	.again-btn:hover, .home-btn:hover {
+		background: #bca03f;
+		color: #fff;
 	}
 </style>
-
-
-
-

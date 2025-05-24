@@ -10,17 +10,17 @@
 
 			<div class="header">
 				<div class="user-block">
-					<div class="avatar__wrapper">
-						<img class="avatar" src="../assets/images/wizard3.svg" alt=""/>
-					</div>
 					<div class="user-info">
-						<div>Уровень: 1</div>
-
+						<div class="exp-bar">
+							<div class="exp-fill" :style="{ width: `${(learningStore.exp / 100) * 100}%` }"></div>
+						</div>
+						<span>{{ learningStore.exp }} XP</span>
+						<div>Уровень: {{ learningStore.isLeveling }}</div>
 					</div>
 				</div>
 				<div class="balance-block">
-					<p class="sub">Общий баланс</p>
-					<p class="balance">{{ learningStore.points }}  очков</p>
+					<p class="sub">Артиклюсы</p>
+						<p class="balance">{{ learningStore.points }}</p>
 				</div>
 				<div class="meta-block">
 					<p class="meta">Дата регистрации</p>
@@ -49,8 +49,7 @@
 				<Progress />
 			</div>
 			<div v-if="activeTab === 'skills'" class="tab-content">
-				<div class="row"><span>Навык 1:</span><span>Скоро...</span></div>
-				<div class="row"><span>Навык 2:</span><span>Скоро...</span></div>
+				<Skills/>
 			</div>
 		</div>
 	</div>
@@ -60,6 +59,7 @@
 	import {userlangStore } from '../store/learningStore.js'
 	import { ref } from 'vue'
 	import Progress from '../src/components/progress.vue'
+	import Skills from '../src/components/skillz.vue'
     import { onMounted } from 'vue'
     import { useRouter} from 'vue-router'
 	const authStore = userAuthStore()
@@ -81,6 +81,23 @@
 </script>
 
 <style scoped>
+
+	.exp-bar {
+		height: 14px;
+		width: 100%;
+		background: #352c1f;
+		border: 1px solid #ffd369;
+		border-radius: 8px;
+		margin-top: 6px;
+		overflow: hidden;
+	}
+	.exp-fill {
+		height: 100%;
+		background: linear-gradient(to right, #ffc107, #ff9800);
+		transition: width 0.3s ease;
+	}
+
+
 
 	* {
 		padding: 0;
@@ -182,6 +199,7 @@
 	.balance {
 		font-size: 1.8rem;
 		font-weight: bold;
+		text-align: center;
 	}
 
 	.sub,
@@ -199,8 +217,7 @@
 	.tabs {
 		display: flex;
 		gap: 2rem;
-		margin-bottom: 1.5rem;
-		border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+		margin: 2rem 0 1rem;
 	}
 
 	.tab {
@@ -212,13 +229,14 @@
 		position: relative;
 	}
 
+
 	.tab__text {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		font-size: 22px;
 		font-weight: 600;
-		color: white;
+		color: #fff4b8;
 	}
 
 	.tab__icon {
@@ -234,26 +252,63 @@
 	.tab.active:after {
 		content: '';
 		position: absolute;
-		bottom: -1px;
+		bottom: -6px;
 		left: 0;
-		height: 2px;
+		height: 4px;
 		width: 100%;
-		background: #00c2ff;
+		background: #ffd700;
+		border-radius: 2px;
 	}
 
 	.tab-content {
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
-		padding-left: 1rem;
+		background: rgba(36, 26, 14, 0.7);
+		padding: 1rem 1.5rem;
+		border-radius: 12px;
+		box-shadow: 0 0 15px #000;
+		border: 2px solid #c29f52;
 	}
 
 	.row {
 		display: flex;
 		justify-content: space-between;
-		border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-		padding-bottom: 0.5rem;
-		font-size: 1rem;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		padding: 0.5rem 0;
+		font-size: 1.1rem;
 	}
+
+	.exp-bar {
+		height: 22px;
+		width: 220px;
+		background: linear-gradient(90deg, #2e1e40 60%, #462f5e 120%);
+		border: 3px solid #ffd700;
+		border-radius: 13px;
+		margin-top: 7px;
+		margin-bottom: 6px;
+		overflow: hidden;
+		box-shadow:
+			0 0 16px #ffd70088,
+			0 0 30px #ffe99e33 inset,
+			0 2px 14px #1b093766;
+		position: relative;
+	}
+
+	.exp-fill {
+		height: 100%;
+		background: linear-gradient(90deg, #ffeeba 0%, #ffe170 46%, #c59cff 100%);
+		box-shadow: 0 0 17px #ffe17088, 0 0 44px #bfa5e6cc;
+		transition: width 0.5s cubic-bezier(.35,2,.6,1);
+		position: relative;
+		border-radius: 13px;
+	}
+	.exp-bar::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		border-radius: 13px;
+		box-shadow: 0 0 30px #ffe8b366, 0 0 80px #ffeaaa22 inset;
+		opacity: .33;
+		pointer-events: none;
+	}
+
 
 </style>
