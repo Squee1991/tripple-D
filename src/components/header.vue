@@ -1,430 +1,357 @@
 <template>
-	<div class="background">
-		<div class="main__wrapper">
-			<div class="overlay" :class="{ show: showAuth }" @click="closeLogin"></div>
-			<Transition name="slide-auth">
-				<div v-if="showAuth" class="signin-wrapper">
-					<SingIn @success="closeLogin"/>
-				</div>
-			</Transition>
-			<div class="profile-page">
-				<div class="top-bar">
-					<div class="top-right">
-						<div class="user-info">
-							<div v-if="userAuth.name" class="auth__inner">
-								<img class="user-avatar-icon" src="" alt=""/>
-								<div @click="userToggleFoo" class="userAuth__wrapper" :class="{ isToggle: menuToggle }">
-									<span class="menu-item">{{ userAuth.email }}</span>
-									<div class="menu-dropdown">
-										<span class="menu-item" @click.stop="routerPath('cabinet')">Кабинет</span>
-										<span class="menu-item" @click.stop="userAuth.logOut">Выход</span>
-									</div>
-								</div>
+    <div class="background">
+        <div class="main__wrapper">
+            <div class="overlay" :class="{ show: showAuth }" @click="closeLogin"></div>
+            <Transition name="slide-auth">
+                <div v-if="showAuth" class="signin-wrapper">
+                    <SingIn @success="closeLogin"/>
+                </div>
+            </Transition>
+            <div class="profile-page">
+                <div class="top-bar">
+                    <div class="app-title">Der Die Das</div>
+                    <div v-if="userAuth.name" class="user-dropdown" @click="userToggleFoo">
+                        <div class="user-info">
+                            <img class="user-avatar" :src="avatar" alt="User avatar"/>
+                            <span class="user-email">{{ userAuth.email }}</span>
+                            <svg class="dropdown-icon" viewBox="0 0 20 20">
+                                <path fill="currentColor" d="M5 7l5 5 5-5z"/>
+                            </svg>
+                        </div>
+                        <transition name="fade-slide">
+                            <div v-if="menuToggle" class="dropdown-menu" @click.stop>
+                                <span class="menu-item" @click.stop="routerPath('cabinet')">🧙 Кабинет</span>
+                                <span class="menu-item" @click.stop="userAuth.logOut">🚪 Выход</span>
+                            </div>
+                        </transition>
+                    </div>
+                    <div v-else class="logout-button" @click="logIn">Войти</div>
+                </div>
+            </div>
 
-							</div>
-							<div v-else class="logout-button" @click="logIn">Войти</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="baner">
-				<div class="sub__title">
-					<img src="../../assets/images/wizard.svg" alt="">
-				</div>
-				<div class="banner__sub">
-					<div class="banner__title">
-						<span class="bold_1">Der</span> <span class="bold_2">Die</span> <span class="bold_3">Das</span>
-						- сайт для изучения артиклей существительных в немецком языке
-					</div>
-					<div class="banner__btn">
-						<button
-							v-if="start"
-							@click="handleStart"
-							class="start-button"
-						>
-							{{ userAuth.name ? 'Начать' : 'Начать' }}
-						</button>
-						<button class="start-button" @click="goToSelectedTopics">
-							Начать обучение
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
+            <div class="banner-scroll">
+                <div class="scroll-frame">
+                    <div class="sub__title">
+                        <img src="../../assets/images/ddd.png" alt="Логотип"/>
+                    </div>
+                    <div class="banner__sub">
+                        <div class="banner__title">
+                            <span class="bold_1">Der</span> <span class="bold_2">Die</span> <span
+                                class="bold_3">Das</span>
+                            - сайт для изучения артиклей существительных в немецком языке
+                        </div>
+                        <div class="banner__btn">
+                            <button v-if="start" @click="handleStart" class="start-button">
+                                {{ userAuth.name ? 'Начать' : 'Начать' }}
+                            </button>
+                            <button class="start-button" @click="goToSelectedTopics">Начать обучение</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script setup>
-	import {ref , watch} from 'vue'
-	import {userAuthStore} from '../../store/authStore.js'
-	import SingIn from '../components/logIn.vue'
-	import Header from '../components/header.vue'
-	import {useRouter} from 'vue-router'
-	const menuToggle = ref(false)
-	const userAuth = userAuthStore()
-	const router = useRouter()
-	let start = ref(true)
-	const isStarted = ref(false)
-	const selectedMode = ref(null)
-	const showAuth = ref(false)
+import {ref, watch} from 'vue'
+import {userAuthStore} from '../../store/authStore.js'
+import SingIn from '../components/logIn.vue'
+import {useRouter} from 'vue-router'
+import avatar from '../../assets/images/avatar.svg'
 
-	const userToggleFoo = () => {
-		menuToggle.value = !menuToggle.value
-	}
+const menuToggle = ref(false)
+const userAuth = userAuthStore()
+const router = useRouter()
+let start = ref(true)
+const isStarted = ref(false)
+const showAuth = ref(false)
 
-	const goToSelectedTopics = () => {
-		if (userAuth.name) {
-			router.push('/selectedTopics')
-		} else {
-			showAuth.value = true
-		}
-	}
+const userToggleFoo = () => {
+    menuToggle.value = !menuToggle.value
+}
 
-	const logIn = () => {
-		showAuth.value = true
-	}
+const goToSelectedTopics = () => {
+    if (userAuth.name) {
+        router.push('/selectedTopics')
+    } else {
+        showAuth.value = true
+    }
+}
 
-	const routerPath = (item) => {
-		menuToggle.value = false
-		if (item === 'cabinet') {
-			router.push('/cabinet')
-		} else if (item === 'map') {
-			router.push('/MapView')
-		}
-	}
+const logIn = () => {
+    showAuth.value = true
+}
 
-	const handleStart = () => {
-		if (!userAuth.name) {
-			showAuth.value = true
-		} else {
-			router.push('/learnmode')
-		}
-	}
+const routerPath = (item) => {
+    menuToggle.value = false
+    if (item === 'cabinet') {
+        router.push('/cabinet')
+    } else if (item === 'map') {
+        router.push('/MapView')
+    }
+}
 
-	const closeLogin = () => {
-		showAuth.value = false
-		if (userAuth.name) {
-			start.value = false
-			isStarted.value = true
-		}
-	}
+const handleStart = () => {
+    if (!userAuth.name) {
+        showAuth.value = true
+    } else {
+        router.push('/learnmode')
+    }
+}
 
-	watch(showAuth, (val) => {
-		if (val) {
-			document.documentElement.style.overflow = 'hidden'
-			document.body.style.overflow = 'hidden'
-		} else {
-			document.documentElement.style.overflow = ''
-			document.body.style.overflow = ''
-		}
-	})
+const closeLogin = () => {
+    showAuth.value = false
+    if (userAuth.name) {
+        start.value = false
+        isStarted.value = true
+    }
+}
 
+watch(showAuth, (val) => {
+    if (val) {
+        document.documentElement.style.overflow = 'hidden'
+        document.body.style.overflow = 'hidden'
+    } else {
+        document.documentElement.style.overflow = ''
+        document.body.style.overflow = ''
+    }
+})
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Kurale&family=Uncial+Antiqua&display=swap');
 
-	.banner__sub {
-		display: flex;
-		flex-direction: column;
-	}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-	.sub__title {
-		margin: 0 auto;
-		width: 400px;
-		font-size: 20px;
-		display: flex;
-		justify-content: center;
-		align-items: start;
-	}
+body, html {
+    overflow-x: hidden;
+    font-family: 'Kurale', serif;
+}
 
-	.bold_1 {
-		color: black;
-		font-weight: 600;
-		font-size: 47px;
-	}
+/*.background {*/
+/*    width: 100%;*/
+/*    background: url('@/assets/images/magic_background.jpg') center/cover no-repeat;*/
+/*    padding: 20px;*/
+/*    color: white;*/
+/*}*/
 
-	.bold_2 {
-		color: red;
-		font-weight: 600;
-		font-size: 47px;
-	}
+.app-title {
+    font-family: 'Uncial Antiqua', serif;
+    font-size: 36px;
+    color: gold;
+    text-shadow: 0 0 12px #fcd000, 0 0 20px #fcd000aa;
+}
 
-	.bold_3 {
-		color: #fcd000;
-		font-weight: 600;
-		font-size: 47px;
-	}
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 30px;
+    background: transparent;
+    position: relative;
+    z-index: 10;
+}
 
-	.banner__title {
-		max-width: 600px;
-		margin: 0 auto;
-		font-family: "Kurale", serif;
-	}
+.user-dropdown {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
 
-	.baner {
-		max-width: 1100px;
-		margin: 0 auto;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		font-size: 40px;
-	}
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: #2e2e3e;
+    border-radius: 12px;
+    box-shadow: 0 0 12px #fcd00066;
+}
 
-	.banner__btn {
-		display: flex;
-		justify-content: center;
-		margin-top: 50px;
-	}
+.user-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fcd000;
+    background: #fff;
+}
 
-	.auth__inner {
-		display: flex;
-		align-items: center;
-		position: relative;
-		gap: 10px;
-	}
+.user-email {
+    font-size: 14px;
+    color: #fff8d2;
+}
 
-	.userAuth__wrapper {
-		position: relative;
-		background: #2e2e3e;
-		color: white;
-		cursor: pointer;
-		font-size: 14px;
-		display: flex;
-		flex-direction: column;
-		width: 170px;
-	}
+.dropdown-icon {
+    width: 16px;
+    height: 16px;
+    fill: #fcd000;
+    transition: transform 0.3s ease;
+}
 
-	.menu-dropdown {
-		position: absolute;
-		top: 100%;
-		left: 0;
-		width: 100%;
-		background: #2e2e3e;
-		overflow: hidden;
-		height: 0;
-		transition: height 0.3s ease;
-		display: flex;
-		flex-direction: column;
-		z-index: 10;
-	}
+.user-dropdown:hover .dropdown-icon {
+    transform: rotate(180deg);
+}
 
-	.userAuth__wrapper.isToggle .menu-dropdown {
-		height: 63px;
-	}
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #1a1a2e;
+    border: 2px solid #fcd00055;
+    border-radius: 10px;
+    margin-top: 4px;
+    box-shadow: 0 0 20px #fcd00044;
+    min-width: 160px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 20;
+    width: 100%;
+}
 
-	.menu-item {
-		font-size: 18px;
-		padding: 4px 10px;
-		background: #2e2e3e;
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		width: 100%;
-		display: block;
-	}
+.menu-item {
+    padding: 10px 20px;
+    color: #fff8d2;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
 
-	.menu-item:hover {
-		background: #00ffff33;
-	}
+.menu-item:hover {
+    background: #fcd00033;
+}
 
-	html, body {
-		overflow-x: hidden;
-	}
+.logout-button {
+    font-size: 16px;
+    padding: 8px 16px;
+    background: #2e2e3e;
+    color: white;
+    border: 1px solid #fcd00066;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
 
-	a {
-		text-decoration: none;
-	}
+.logout-button:hover {
+    background: #444;
+}
 
-	* {
-		padding: 0;
-		margin: 0;
-		box-sizing: border-box;
-	}
+.banner-scroll {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
 
-	.signin-wrapper {
-		width: 380px    ;
-		position: absolute;
-		top: 0;
-		right: 0;
-		height: 100vh;
-		background: #11182c;
-		z-index: 1000;
-	}
+.scroll-frame {
+    background: #f5deb380;
+    border: 8px solid #d2b48c;
+    border-radius: 24px;
+    box-shadow: 0 0 20px #e6cfa1aa;
+    padding: 40px;
+    max-width: 1100px;
+    width: 100%;
+    font-family: 'Cinzel Decorative', serif;
+    color: black;
+}
 
-	.app-title {
-		border-radius: 50%;
-	}
+.sub__title img {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 300px;
+    box-shadow: 0 0 20px #fcd00055;
+    border-radius: 12px;
+}
 
-	.app-title-icon {
-		width: 80px;
-		height: 60px;
-	}
+.banner__title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px #00000077;
+}
 
-	.profile-page {
-		width: 100%;
-		color: white;
-		position: relative;
-		font-family: 'Segoe UI', sans-serif;
-	}
+.bold_1 {
+    color: black;
+    font-weight: 600;
+    font-size: 40px;
+}
 
-	.top-bar {
-		width: 100%;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 15px 30px;
-		margin-bottom: 50px;
-		background: #f5efef;
-	}
+.bold_2 {
+    color: red;
+    font-weight: 600;
+    font-size: 40px;
+}
 
-	.app-title {
-		font-size: 20px;
-		font-weight: bold;
-		color: #00ffff;
-	}
+.bold_3 {
+    color: #fcd000;
+    font-weight: 600;
+    font-size: 40px;
+}
 
-	.user-info {
-		display: flex;
-		align-items: center;
-		gap: 16px;
-	}
+.banner__btn {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
 
-	.user-avatar {
-		cursor: pointer;
-		width: 40px;
-		height: 40px;
-		border-radius: 50%;
-		object-fit: cover;
-		box-shadow: 0 0 6px rgba(0, 255, 255, 0.67);
-	}
+.start-button {
+    background: rgba(255, 255, 255, 0.1);
+    border: 3px solid #55a1bf;
+    font-size: 20px;
+    padding: 12px 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: black;
+    text-transform: uppercase;
+    font-family: 'Kurale', serif;
+    font-weight: 600;
+    box-shadow: 0 0 12px #00ffff44;
+    animation: float 3s ease-in-out infinite, pulseGlow 2s infinite ease-in-out;
+    position: relative;
+    width: 300px;
+}
 
-	.logout-button {
-		display: flex;
-		justify-content: center;
-		font-size: 18px;
-		min-width: 120px;
-		padding: 8px 16px;
-		border: 1px solid grey;
-		border-radius: 8px;
-		cursor: pointer;
-		background: transparent;
-		color: black;
-		transition: background 0.3s;
-	}
+.start-button:hover {
+    background: radial-gradient(circle, #55a1bf, #004466);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+}
 
-	.logout-button:hover {
-		background: black;
-		color: white;
-	}
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
 
-	.img-bg {
-		width: 100%;
-	}
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 0 12px #00ffff44;
+    }
+    50% {
+        box-shadow: 0 0 20px #00ffffaa;
+    }
+}
 
-	.background {
-		width: 100%;
-		position: relative;
-	}
+.fade-slide-enter-active,
+.fade-slide-leave-active {
+    transition: all 0.3s ease;
+}
 
-	.start-button-wrapper {
-		position: absolute;
-		left: 50%;
-		opacity: 1;
-		transform: translateX(-50%);
-		z-index: 10;
-	}
-
-	.is-started {
-		opacity: 1;
-	}
-
-	.start-button {
-		background: rgba(255, 255, 255, 0.1);
-		border: 3px solid #55a1bf;
-		font-size: 20px;
-		padding: 12px 40px;
-		border-radius: 20px;
-		letter-spacing: 2px;
-		cursor: pointer;
-		color: black;
-		text-transform: uppercase;
-		transition: all 0.3s ease;
-		box-shadow: 0 0 12px #00ffff44;
-		animation: pulseGlow 2s infinite ease-in-out;
-		width: 300px;
-		font-family: "Kurale", serif;
-		font-weight: 600;
-	}
-
-	.start-button:hover {
-		background: #55a1bf;
-		box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
-	}
-
-	@keyframes pulseGlow {
-		25% {
-			box-shadow: 0 0 20px #00ffffaa;
-			transition: 1s;
-		}
-
-		50% {
-			box-shadow: 0 0 20px #00ffffaa;
-			transition: 1s;
-		}
-		100% {
-			box-shadow: 0 0 12px #00ffff44;
-			transition: 1s;
-		}
-		50% {
-			box-shadow: 0 0 20px #00ffffaa;
-			transition: 1s;
-		}
-		25% {
-			box-shadow: 0 0 20px #00ffffaa;
-			transition: 1s;
-		}
-	}
-
-	.overlay {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100vh;
-		background: rgba(0, 0, 0, 0.5);
-		opacity: 0;
-		pointer-events: none;
-		transition: opacity 0.3s ease;
-		z-index: 999;
-	}
-
-	.overlay.show {
-		opacity: 1;
-		pointer-events: auto;
-	}
-
-	.slide-auth-enter-from {
-		transform: translateX(100%);
-	}
-
-	.slide-auth-enter-active,
-	.slide-auth-leave-active {
-		transition: transform 0.5s ease;
-	}
-
-	.slide-auth-enter-to {
-		transform: translateX(0%);
-	}
-
-	.slide-auth-leave-to {
-		transform: translateX(100%);
-	}
-
-	.signin-wrapper.show {
-		transform: translateX(0%);
-	}
-
-
+.fade-slide-enter-from,
+.fade-slide-leave-to {
+    opacity: 0;
+    transform: translateY(-5px);
+}
 </style>
