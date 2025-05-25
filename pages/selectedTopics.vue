@@ -176,14 +176,22 @@
 	}
 
 	const startLearning = async () => {
-		await store.setSelectedTopics([selectedTopic.value])
-		const topicWords = (themeList.value[selectedTopic.value] || []).map(w => ({
-			...w,
-			topic: selectedTopic.value
-		}))
+		// Только слова, которые не выучены по выбранным способам
+		const topicWords = (themeList.value[selectedTopic.value] || [])
+		.filter(word => {
+			const globalWord = store.words.find(
+				w => w.de === word.de && w.topic === selectedTopic.value
+			)
+			// Оставляем только если есть хоть один невыученный режим
+			return selectedModes.value.some(
+				mode => !(globalWord?.progress?.[mode] === true)
+			)
+		})
+		.map(w => ({ ...w, topic: selectedTopic.value }))
 
 		await store.addWordsToGlobal(topicWords)
 		await store.setSelectedWords(topicWords)
+		await store.setSelectedTopics([selectedTopic.value])
 		await store.saveToFirebase()
 
 		router.push({
@@ -194,6 +202,7 @@
 			}
 		})
 	}
+
 
 	onMounted(async () => {
 		const res = await fetch('/words.json')
@@ -257,16 +266,9 @@
 		font-size: 38px;
 		font-family: 'Uncial Antiqua', cursive;
 		text-align: center;
-		margin-bottom: 5px;
 		color: #ffd48a;
 		letter-spacing: 0.07em;
 		text-shadow: 0 2px 14px #21092680, 0 0 2px #e3a41f90;
-	}
-
-	.theme-content {
-		display: flex;
-		justify-content: space-around;
-		padding: 40px;
 	}
 
 	.theme-grid {
@@ -278,6 +280,10 @@
 		flex-wrap: wrap;
 		margin: 0 auto;
 		perspective: 420px;
+	}
+
+	.not__learning {
+		min-width: 402px;
 	}
 
 	.theme-card {
@@ -360,7 +366,6 @@
 	}
 
 	.learning-modes-block {
-		margin-left: 20px;
 		position: relative;
 		width: 100%;
 		padding: 21px 25px;
@@ -555,6 +560,10 @@
 	.theme-content {
 		scrollbar-width: auto;
 		scrollbar-color: #ad8e51 #2a1843;
+		display: flex;
+		align-items: center;
+		height: 100%;
+		justify-content: space-around;
 	}
 
 	.bounce-enter-active {
