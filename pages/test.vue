@@ -1,85 +1,87 @@
 <template>
-	<div ref="container" class="viewer"></div>
+	<div class="page-wrapper">
+		<label class="checkbox-container">
+			<input type="checkbox" v-model="checked" />
+			<span class="checkmark">
+        <svg viewBox="0 0 24 24">
+          <polyline points="3 12 10 20 21 4" />
+        </svg>
+      </span>
+			<span class="label-text">Выбрать заклинание</span>
+		</label>
+	</div>
 </template>
 
 <script setup>
-	import { onMounted, ref } from 'vue'
-	import * as THREE from 'three'
-	import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
-	import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
-
-	const container = ref(null)
-
-	onMounted(() => {
-		const scene = new THREE.Scene()
-		scene.background = new THREE.Color(0x1e1e1e)
-
-		const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 100)
-		camera.position.set(0, 1.5, 4)
-
-		const renderer = new THREE.WebGLRenderer({ antialias: true })
-		renderer.setSize(window.innerWidth, window.innerHeight)
-		container.value.appendChild(renderer.domElement)
-
-		// Свет
-		const light = new THREE.HemisphereLight(0xffffff, 0x444444, 1.5)
-		scene.add(light)
-
-		const directionalLight = new THREE.DirectionalLight(0xffffff, 1)
-		directionalLight.position.set(5, 10, 7)
-		scene.add(directionalLight)
-
-		// Управление мышью
-		const controls = new OrbitControls(camera, renderer.domElement)
-		controls.enableDamping = true
-
-		// Часы и миксер для анимации
-		const clock = new THREE.Clock()
-		let mixer = null
-
-		// Загрузка модели
-		const loader = new GLTFLoader()
-		loader.load('/models/book.glb', (gltf) => {
-			const model = gltf.scene
-			model.scale.set(0.3, 0.3, 0.3)
-			scene.add(model)
-
-			// Подключение анимаций
-			if (gltf.animations && gltf.animations.length > 0) {
-				mixer = new THREE.AnimationMixer(model)
-				gltf.animations.forEach((clip) => {
-					mixer.clipAction(clip).play()
-				})
-			}
-		})
-
-		// Цикл анимации
-		function animate() {
-			requestAnimationFrame(animate)
-
-			const delta = clock.getDelta()
-			if (mixer) mixer.update(delta)
-
-			controls.update()
-			renderer.render(scene, camera)
-		}
-
-		animate()
-
-		// Обработка ресайза окна
-		window.addEventListener('resize', () => {
-			camera.aspect = window.innerWidth / window.innerHeight
-			camera.updateProjectionMatrix()
-			renderer.setSize(window.innerWidth, window.innerHeight)
-		})
-	})
+	import { ref } from 'vue'
+	const checked = ref(false)
 </script>
 
 <style scoped>
-	.viewer {
-		width: 100vw;
+	.page-wrapper {
 		height: 100vh;
-		overflow: hidden;
-		background: #000;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: #2d1b0f;
+		font-family: 'Uncial Antiqua', cursive;
+		color: #ffe8b0;
+	}
+
+	.checkbox-container {
+		display: flex;
+		align-items: center;
+		gap: 14px;
+		cursor: pointer;
+		user-select: none;
+	}
+
+	.checkbox-container input {
+		display: none;
+	}
+
+	.checkmark {
+		width: 32px;
+		height: 32px;
+		border: 3px solid #d9b56b;
+		border-radius: 8px;
+		background: #4b2f14;
+		box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4), 0 0 8px #a77b3a88;
+		position: relative;
+		overflow: visible; /* ✨ важно */
+	}
+
+	.checkmark svg {
+		position: absolute;
+		top: -14px;
+		left: -4px;
+		width: 40px;
+		height: 40px;
+		pointer-events: none;
+		opacity: 0;
+		transition: opacity 0.2s ease;
+	}
+
+	.checkmark polyline {
+		stroke: #ffe08a;
+		stroke-width: 4;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		fill: none;
+		stroke-dasharray: 28;
+		stroke-dashoffset: 28;
+		transition: stroke-dashoffset 0.4s ease;
+	}
+
+	input:checked + .checkmark polyline {
+		stroke-dashoffset: 0;
+	}
+	input:checked + .checkmark svg {
+		opacity: 1;
+	}
+
+	.label-text {
+		font-size: 18px;
+		text-shadow: 0 1px 3px #00000055;
 	}
 </style>
