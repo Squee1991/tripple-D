@@ -40,6 +40,12 @@ export const userAuthStore = defineStore('auth', () => {
 
 		await sendEmailVerification(userCredential.user)
 
+		await setDoc(doc(db, 'users', userCredential.user.uid), {
+			nickname: userData.name,
+			email: userData.email,
+			createdAt: new Date()
+		})
+
 		const now = new Date().toLocaleDateString()
 
 		setUserData({
