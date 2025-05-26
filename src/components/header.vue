@@ -9,7 +9,9 @@
             </Transition>
             <div class="profile-page">
                 <div class="top-bar">
-                    <div class="app-title">Der Die Das</div>
+                    <div class="app-title">
+                        <img class="logoD" :src="logoD" alt="logo"/>
+                    </div>
                     <div v-if="userAuth.name" class="user-dropdown" @click="userToggleFoo">
                         <div class="user-info">
                             <img class="user-avatar" :src="avatar" alt="User avatar"/>
@@ -31,22 +33,26 @@
 
             <div class="banner-scroll">
                 <div class="scroll-frame">
-                    <div class="sub__title">
-                        <img src="../../assets/images/ddd.png" alt="Логотип"/>
-                    </div>
-                    <div class="banner__sub">
-                        <div class="banner__title">
-                            <span class="bold_1">Der</span> <span class="bold_2">Die</span> <span
-                                class="bold_3">Das</span>
-                            - сайт для изучения артиклей существительных в немецком языке
+                    <div class="banner-decor-top"></div>
+                    <div class="banner-content">
+                        <div class="sub__title">
+                            <img src="../../assets/images/ddd.png" alt="Логотип"/>
                         </div>
-                        <div class="banner__btn">
-                            <button v-if="start" @click="handleStart" class="start-button">
-                                {{ userAuth.name ? 'Начать' : 'Начать' }}
-                            </button>
-                            <button class="start-button" @click="goToSelectedTopics">Начать обучение</button>
+                        <div class="banner__sub">
+                            <div class="banner__title">
+                                <span class="bold_1">Der</span> <span class="bold_2">Die</span> <span
+                                    class="bold_3">Das</span>
+                                - сайт для изучения артиклей существительных в немецком языке
+                            </div>
+                            <div class="banner__btn">
+                                <button v-if="start" @click="handleStart" class="start-button">
+                                    {{ userAuth.name ? 'Начать' : 'Начать' }}
+                                </button>
+                                <button class="start-button" @click="goToSelectedTopics">Начать обучение</button>
+                            </div>
                         </div>
                     </div>
+                    <div class="banner-decor-bottom"></div>
                 </div>
             </div>
         </div>
@@ -59,6 +65,7 @@ import {userAuthStore} from '../../store/authStore.js'
 import SingIn from '../components/logIn.vue'
 import {useRouter} from 'vue-router'
 import avatar from '../../assets/images/avatar.svg'
+import logoD from '../../assets/images/logo DDD.png'
 
 const menuToggle = ref(false)
 const userAuth = userAuthStore()
@@ -133,18 +140,60 @@ body, html {
     font-family: 'Kurale', serif;
 }
 
-/*.background {*/
-/*    width: 100%;*/
-/*    background: url('@/assets/images/magic_background.jpg') center/cover no-repeat;*/
-/*    padding: 20px;*/
-/*    color: white;*/
-/*}*/
+.background {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url('../../assets/images/parchment_texture.png') center/cover no-repeat;
+    overflow: hidden;
+}
+
+.background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../../assets/images/custle.png') bottom center/cover no-repeat;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.main__wrapper {
+    position: relative;
+    z-index: 1;
+}
 
 .app-title {
+    position: relative;
     font-family: 'Uncial Antiqua', serif;
     font-size: 36px;
     color: gold;
     text-shadow: 0 0 12px #fcd000, 0 0 20px #fcd000aa;
+}
+
+.app-title::before,
+.app-title::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 6px;
+    background: linear-gradient(90deg, #f8d67e, #b08d57);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.app-title::before {
+    left: -60px;
+}
+
+.app-title::after {
+    right: -60px;
+}
+
+.logoD {
+    max-width: 100px;
 }
 
 .top-bar {
@@ -152,9 +201,12 @@ body, html {
     justify-content: space-between;
     align-items: center;
     padding: 16px 30px;
-    background: transparent;
     position: relative;
     z-index: 10;
+    background: rgba(30, 18, 5, 0.75);
+    border-bottom: 2px solid #b08d57;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+
 }
 
 .user-dropdown {
@@ -246,28 +298,26 @@ body, html {
 }
 
 .banner-scroll {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
+    width: 100%;
 }
 
 .scroll-frame {
-    background: #f5deb380;
-    border: 8px solid #d2b48c;
-    border-radius: 24px;
-    box-shadow: 0 0 20px #e6cfa1aa;
-    padding: 40px;
-    max-width: 1100px;
     width: 100%;
+    box-shadow: 0 0 20px #e6cfa1aa;
+    min-height: 100vh;
     font-family: 'Cinzel Decorative', serif;
+    position: relative;
     color: black;
+    background: rgba(255, 250, 240, 0.85);
+    border: 4px solid #b08d57;
+    border-radius: 16px;
+
 }
 
 .sub__title img {
     display: block;
     margin: 0 auto 20px;
     max-width: 300px;
-    box-shadow: 0 0 20px #fcd00055;
     border-radius: 12px;
 }
 
