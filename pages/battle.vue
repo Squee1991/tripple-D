@@ -1,13 +1,15 @@
 <template>
 	<div class="battle">
-		<h1>⚔️ Бой начался!</h1>
+		<button class="leave-button" @click="leaveSession">Покинуть бой</button>
+		<div v-if="opponentLeft" class="opponent-left">
+			⚠️ Противник покинул сессию. Вы будете возвращены в лобби...
+		</div>
+		<h1>⚔️Бой начался!</h1>
 		<p>🆔 Сессия: <strong>{{ sessionId }}</strong></p>
 		<p>👤 Вы: <strong>{{ currentUserId ? getName(currentUserId.value) : '...' }}</strong></p>
 		<p>🕹️ Противник: <strong>{{ opponentId ? getName(opponentId) : 'Ожидание...' }}</strong></p>
-
 		<div class="chat">
 			<h2>💬 Чат</h2>
-
 			<div class="messages" ref="messagesBox">
 				<div
 					v-for="msg in messages"
@@ -22,7 +24,6 @@
 					<div class="text">{{ msg.text }}</div>
 				</div>
 			</div>
-
 			<input
 				v-model="newMessage"
 				placeholder="Написать сообщение..."
@@ -30,54 +31,68 @@
 			/>
 			<button @click="sendMessage">Отправить</button>
 		</div>
+		<div class="text_under"> Компонент в стадии разработки</div>
 	</div>
 </template>
 
 <script setup>
-	import { useRoute } from 'vue-router'
+	import { useRoute, useRouter } from 'vue-router'
 	import { getAuth } from 'firebase/auth'
 	import {
 		getFirestore,
 		doc,
+		deleteDoc,
 		onSnapshot,
 		updateDoc,
 		arrayUnion,
 		Timestamp,
 		getDoc
 	} from 'firebase/firestore'
-	import { ref, onMounted, nextTick } from 'vue'
-
+	import { ref, onMounted, onUnmounted, nextTick } from 'vue'
+	const iAmLeaving = ref(false)
 	const route = useRoute()
 	const auth = getAuth()
 	const db = getFirestore()
-
+	const router = useRouter()
 	const sessionId = route.query.id
 	const session = ref(null)
 	const currentUserId = ref(null)
 	const opponentId = ref(null)
-
 	const newMessage = ref('')
 	const messages = ref([])
 	const messagesBox = ref(null)
 	const userNicknames = ref({})
+	const opponentLeft = ref(false)
+	const unsubscribeSession = ref(null)
 
+	// Покинуть бой (удаляем сессию)
+	const leaveSession = async () => {
+		iAmLeaving.value = true         // ← ДОБАВЬ эту строку!
+		if (!sessionId) return
+		try {
+			await deleteDoc(doc(db, 'sessions', sessionId))
+			router.push('/duel')
+		} catch (e) {
+			console.error('Ошибка при выходе из боя:', e)
+		}
+	}
+
+	// Отправить сообщение в чат
 	const sendMessage = async () => {
 		if (!newMessage.value.trim() || !currentUserId.value) return
-
 		const msg = {
 			uid: currentUserId.value,
 			text: newMessage.value.trim(),
 			createdAt: Timestamp.now()
 		}
-
 		const sessionRef = doc(db, 'sessions', sessionId)
 		await updateDoc(sessionRef, {
 			messages: arrayUnion(msg)
 		})
-
 		newMessage.value = ''
 	}
 
+	// Автопрокрутка чата
 	const scrollToBottom = async () => {
 		await nextTick()
 		if (messagesBox.value) {
@@ -106,31 +121,49 @@
 	}
 
 	onMounted(() => {
-		const unsub = auth.onAuthStateChanged((user) => {
-			currentUserId.value = user?.uid || null
-		})
-
-		onUnmounted(() => unsub())
-	})
-
-	onMounted(() => {
 		if (!sessionId) return
 
 		const sessionRef = doc(db, 'sessions', sessionId)
-
-		onSnapshot(sessionRef, async (docSnap) => {
-			const data = docSnap.data()
-			if (!data) return
-
-			session.value = data
-
-			if (data.hostId === currentUserId.value) {
-				opponentId.value = data.guestId
-			} else {
-				opponentId.value = data.hostId
+		unsubscribeSession.value = onSnapshot(sessionRef, async (docSnap) => {
+			if (!docSnap.exists()) {
+				if (!iAmLeaving.value) { // ← Показывать только если ты не сам уходишь!
+					opponentLeft.value = true
+					session.value = null
+					setTimeout(() => {
+						router.push('/duel')
+					}, 2200)
+				} else {
+					// Ты сам ушёл — просто переход на /duel
+					router.push('/duel')
+				}
+				return
 			}
+			const data = docSnap.data()
+			session.value = data
+			// Определяем currentUser/opponentId
+			if (currentUserId.value === data.hostId) {
+				opponentId.value = data.guestId
+			} else if (currentUserId.value === data.guestId) {
+				opponentId.value = data.hostId
+			} else if (data.hostId && !data.guestId) {
+				// Случай, когда ты хост, а соперника нет
+				opponentId.value = null
+			}
+			// Проверяем если противник вышел (uid исчез)
+			if ((currentUserId.value === data.hostId && !data.guestId)
+				|| (currentUserId.value === data.guestId && !data.hostId)) {
+				opponentLeft.value = true
+				setTimeout(() => {
+					router.push('/duel')
+				}, 2200)
+				return
+			}
+
+			// Никнеймы
 			if (data.hostId) await loadUserNickname(data.hostId)
 			if (data.guestId) await loadUserNickname(data.guestId)
+
+			// Чат
 			if (data.messages) {
 				messages.value = data.messages.sort(
 					(a, b) => (a.createdAt?.seconds || 0) - (b.createdAt?.seconds || 0)
@@ -139,14 +172,51 @@
 			}
 		})
 	})
+
+	onMounted(() => {
+		const unsub = auth.onAuthStateChanged((user) => {
+			currentUserId.value = user?.uid || null
+		})
+		onUnmounted(() => unsub())
+	})
+
+	onUnmounted(() => {
+		if (unsubscribeSession.value) unsubscribeSession.value()
+	})
 </script>
 
+
 <style scoped>
+
+	.leave-button {
+		margin-top: 20px;
+		background: #aa3a3a;
+		color: #fff;
+		padding: 10px 20px;
+		border-radius: 8px;
+		border: none;
+		font-weight: bold;
+		cursor: pointer;
+		transition: 0.2s;
+	}
+	.leave-button:hover {
+		background: #cc2c2c;
+	}
+
 	.battle {
 		max-width: 700px;
 		margin: 0 auto;
 		padding: 40px;
 		text-align: center;
+	}
+
+	.text {
+		width: 40px;
+		font-weight: bold;
+	}
+
+	.text_under{
+		font-size: 35px;
 	}
 
 	.chat {
@@ -200,5 +270,16 @@
 		color: white;
 		border-radius: 8px;
 		cursor: pointer;
+	}
+
+	.opponent-left {
+		margin: 20px auto 0 auto;
+		padding: 16px 32px;
+		background: #ffebe8;
+		color: #a11919;
+		font-weight: bold;
+		border-radius: 10px;
+		font-size: 18px;
+		max-width: 350px;
 	}
 </style>

@@ -37,15 +37,18 @@
 						- сайт для изучения артиклей существительных в немецком языке
 					</div>
 					<div class="banner__btn">
-						<button
-							v-if="start"
-							@click="handleStart"
-							class="start-button"
-						>
-							{{ userAuth.name ? 'Начать' : 'Начать' }}
-						</button>
+												<button
+													v-if="start"
+													@click="handleStart"
+													class="start-button"
+												>
+													{{ userAuth.name ? 'Начать' : 'Начать' }}
+												</button>
 						<button class="start-button" @click="goToSelectedTopics">
 							Начать обучение
+						</button>
+						<button class="start-button" @click="goToDuel">
+							Дуэль артиклей
 						</button>
 					</div>
 				</div>
@@ -56,11 +59,12 @@
 </template>
 
 <script setup>
-	import {ref , watch} from 'vue'
+	import {ref, watch} from 'vue'
 	import {userAuthStore} from '../../store/authStore.js'
 	import SingIn from '../components/logIn.vue'
 	import Header from '../components/header.vue'
 	import {useRouter} from 'vue-router'
+
 	const menuToggle = ref(false)
 	const userAuth = userAuthStore()
 	const router = useRouter()
@@ -71,6 +75,11 @@
 
 	const userToggleFoo = () => {
 		menuToggle.value = !menuToggle.value
+	}
+
+	const goToDuel = () => {
+		router.push('/duel')
+
 	}
 
 	const goToSelectedTopics = () => {
@@ -98,7 +107,7 @@
 		if (!userAuth.name) {
 			showAuth.value = true
 		} else {
-			router.push('/learnmode')
+			router.push('/selectedTopics')
 		}
 	}
 
@@ -244,7 +253,7 @@
 	}
 
 	.signin-wrapper {
-		width: 380px    ;
+		width: 380px;
 		position: absolute;
 		top: 0;
 		right: 0;

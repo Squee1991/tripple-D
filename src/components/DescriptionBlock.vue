@@ -3,7 +3,7 @@
 		<div class="description__wrapper">
 			<div class="description-block__text">
 				<p class="description-block__line">
-					🧙‍♂ -<span class="description-block__highlight"> 500 + слов</span> с артиклями
+					🧙‍♂ -<span class="description-block__highlight"> 800 + слов</span> с артиклями
 				</p>
 				<p class="description-block__line">
 					🎓 -  <span class="description-block__highlight">5 способов обучения</span> для разных стилей
@@ -13,6 +13,12 @@
 				</p>
 				<p class="description-block__line">
 					🏆 - <span class="description-block__highlight">Прохождение уровней</span> и достижений
+				</p>
+				<p class="description-block__line">
+					🏆 - <span class="description-block__highlight">Дуэли с другими участниками</span>
+				</p>
+				<p class="description-block__line">
+					🏆 - <span class="description-block__highlight">Прохождение уровней </span>
 				</p>
 			</div>
 			<img class="description-block__image" src="../../assets/images/wizard2.svg" alt="Волшебник" />

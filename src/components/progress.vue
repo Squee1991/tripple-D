@@ -13,54 +13,57 @@
 			</select>
 		</div>
 
-		<div
-			v-for="topic in filteredTopics"
-			:key="topic"
-			class="topic-block"
-		>
-			<h2 class="topic-title">{{ nameMap[topic] || topic }}</h2>
-			<div class="word-table">
-				<div class="word-row header">
-					<div class="word-cell word-ru">Слово</div>
+		<div v-if="selectedTopic">
+			<div
+				v-for="topic in filteredTopics"
+				:key="topic"
+				class="topic-block"
+			>
+				<h2 class="topic-title">{{ nameMap[topic] || topic }}</h2>
+				<div class="word-table">
+					<div class="word-row header">
+						<div class="word-cell word-ru">Слово</div>
+						<div
+							v-for="mode in learningModes"
+							:key="mode.key"
+							class="word-cell"
+						>
+							{{ mode.label }}
+						</div>
+					</div>
+
 					<div
-						v-for="mode in learningModes"
-						:key="mode.key"
-						class="word-cell"
+						v-for="word in paginatedWords(topic)"
+						:key="word.de"
+						class="word-row"
 					>
-						{{ mode.label }}
+						<div class="word-cell word-ru">{{ word.ru }}</div>
+
+						<div
+							v-for="mode in learningModes"
+							:key="mode.key"
+							class="word-cell status-cell"
+						>
+							{{ word.progress?.[mode.key] === true
+							? '✅'
+							: word.progress?.[mode.key] === false
+							? '❌'
+							: '⏳'
+							}}
+						</div>
 					</div>
 				</div>
 
-				<div
-					v-for="word in paginatedWords(topic)"
-					:key="word.de"
-					class="word-row"
-				>
-					<div class="word-cell word-ru">{{ word.ru }}</div>
-
-					<div
-						v-for="mode in learningModes"
-						:key="mode.key"
-						class="word-cell status-cell"
-					>
-						{{ word.progress?.[mode.key] === true
-						? '✅'
-						: word.progress?.[mode.key] === false
-						? '❌'
-						: '⏳'
-						}}
-					</div>
+				<div class="pagination" v-if="filteredWords(topic).length > wordsPerPage">
+					<button @click="prevPage" :disabled="currentPage === 1">Назад</button>
+					<span>{{ currentPage }} / {{ totalPages(topic) }}</span>
+					<button @click="nextPage(topic)" :disabled="currentPage >= totalPages(topic)">Вперед</button>
 				</div>
-			</div>
-
-			<div class="pagination" v-if="filteredWords(topic).length > wordsPerPage">
-				<button @click="prevPage" :disabled="currentPage === 1">Назад</button>
-				<span>{{ currentPage }} / {{ totalPages(topic) }}</span>
-				<button @click="nextPage(topic)" :disabled="currentPage >= totalPages(topic)">Вперед</button>
 			</div>
 		</div>
 	</div>
 </template>
+
 
 <script setup>
 	import { ref, computed, onMounted, watch } from 'vue'

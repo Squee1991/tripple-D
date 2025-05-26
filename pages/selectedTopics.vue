@@ -2,7 +2,11 @@
 	<div class="theme-board-block">
 		<div class="theme-board-wrapper">
 			<div class="theme-board-container">
-				<h2 class="theme-title">Выберите тему для изучения</h2>
+				<div class="theme__title-wrapper">
+					<button class="back-btn" @click="goBack">← Назад</button>
+					<h2 class="theme-title">Выберите тему для изучения</h2>
+					<div class="theme__item"></div>
+				</div>
 				<div class="theme-content">
 
 					<div class="theme__grid-container">
@@ -25,65 +29,65 @@
 							<button @click="nextPage" :disabled="page === maxPage">→</button>
 						</div>
 					</div>
-					<div class="learning-modes">
-						<div class="learning-modes">
-							<div class="not__learning" v-if="!selectedTopic">
-
-								<div class="no_learning-modes">Нет выбранных тем</div>
+				</div>
+				<div class="learning-modes">
+<!--					<div class="not__learning" v-if="!selectedTopic">-->
+<!--						<div class="no_learning-modes">Нет выбранных тем</div>-->
+<!--					</div>-->
+					<Transition name="slide-right" appear>
+						<div v-if="showModesBlock" class="learning-modes-block">
+							<div @click="clearSelectedTopic" class="learning-modes-block-icon-wrapper">
+								<img class="learning-modes-block-icon" src="../assets/images/delete.svg" alt="">
 							</div>
-							<Transition name="bounce" f>
-								<div  v-if="selectedTopic"  class="learning-modes-block">
-									<div  class="learning__modes-wrapper">
-										<div>
-											<div class="modes-title">Способы обучения
-											</div>
-											<div class="topic-hint">Тема: {{ nameMap[selectedTopic] }}</div>
-										</div>
-										<div class="modes-list">
-											<label
-												v-for="mode in modes"
-												:key="mode.key"
-												class="checkbox-container"
-											>
-												<input
-													type="checkbox"
-													v-model="selectedModes"
-													:value="mode.key"
-												/>
-												<span class="checkmark">
-			<svg viewBox="0 0 24 24">
-				<polyline points="3 12 10 20 21 4" />
-			</svg>
-		</span>
-												<span class="label-text">{{ mode.label }}</span>
-											</label>
-										</div>
-
-										<button
-											class="start-btn"
-											:disabled="!selectedModes.length"
-											@click="startLearning"
-										>
-											Начать обучение
-										</button>
+							<div class="learning__modes-wrapper">
+								<div>
+									<div class="modes-title">Способы обучения
 									</div>
+									<div class="topic-hint">Тема: {{ nameMap[selectedTopic] }}</div>
 								</div>
-							</Transition>
+								<div class="modes-list">
+									<label
+										v-for="mode in modes"
+										:key="mode.key"
+										class="checkbox-container"
+									>
+										<input
+											type="checkbox"
+											v-model="selectedModes"
+											:value="mode.key"
+										/>
+										<span class="checkmark">
+													<svg viewBox="0 0 24 24">
+														<polyline points="3 12 10 20 21 4"/>
+													</svg>
+												</span>
+										<span class="label-text">{{ mode.label }}</span>
+									</label>
+								</div>
+
+								<button
+									class="start-btn"
+									:disabled="!selectedModes.length"
+									@click="startLearning"
+								>
+									Начать обучение
+								</button>
+							</div>
 						</div>
-					</div>
+					</Transition>
 				</div>
 			</div>
 		</div>
 	</div>
 </template>
-
 <script setup>
 	import {ref, computed, onMounted} from 'vue'
 	import {useRouter} from 'vue-router'
 	import {userlangStore} from '../store/learningStore.js'
 	import Lottie from 'lottie-web'
 	import NotFound from '../assets/animation/notFound.json'
-
+	const showModesBlock = ref(false)
+	const showNoTopicMessage = ref(true)
 	const router = useRouter()
 	const store = userlangStore()
 	const themeList = ref({})
@@ -100,6 +104,21 @@
 			})
 		}
 	})
+
+
+	const clearSelectedTopic = () => {
+		showModesBlock.value = false
+		setTimeout(() => {
+			selectedTopic.value = null
+			selectedModes.value = []
+			showNoTopicMessage.value = false
+		}, 600)
+
+	}
+
+	const goBack = () => {
+		router.push('/')
+	}
 
 	const page = ref(0)
 	const itemsPerPage = 9
@@ -147,7 +166,11 @@
 		Kitchen: 'Кухня',
 		Health: 'Здоровье',
 		Sport: 'Спорт',
-		SportEquipment: 'Фитнес-инвентарь'
+		SportEquipment: 'Фитнес-инвентарь',
+		Travel: 'Путешествия',
+		Musik: 'Музыка',
+		Amount: 'Колличество',
+		Informatik: 'Информатика'
 	}
 
 	const modes = [
@@ -173,6 +196,7 @@
 	const selectTopic = (key) => {
 		selectedTopic.value = key
 		selectedModes.value = []
+		showModesBlock.value = true
 	}
 
 	const startLearning = async () => {
@@ -187,7 +211,7 @@
 				mode => !(globalWord?.progress?.[mode] === true)
 			)
 		})
-		.map(w => ({ ...w, topic: selectedTopic.value }))
+		.map(w => ({...w, topic: selectedTopic.value}))
 
 		await store.addWordsToGlobal(topicWords)
 		await store.setSelectedWords(topicWords)
@@ -211,6 +235,62 @@
 </script>
 
 <style scoped>
+
+	.learning-modes-block-icon-wrapper {
+		position: absolute;
+		background: #f0e1b8;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 40px;
+		height: 40px;
+		right: 10px;
+		top: 10px;
+		border: 3px solid #c09c5d;
+		cursor: pointer;
+
+	}
+
+	.learning-modes-block-icon {
+		width: 100%;
+		padding: 8px;
+	}
+
+	.back-btn {
+		padding: 10px 22px;
+		font-size: 18px;
+		font-weight: bold;
+		color: #4b2a00;
+		background: linear-gradient(90deg, #ffe08a, #c09c5d);
+		border: 2px solid #f8e1b7;
+		border-radius: 12px;
+		cursor: pointer;
+		box-shadow: 0 4px 10px #00000030;
+		transition: background 0.3s ease, transform 0.2s ease;
+		text-shadow: 0 1px 2px #fff2c1;
+		font-family: 'Uncial Antiqua', cursive;
+	}
+
+	.theme__title-wrapper {
+		display: grid;
+		grid-template-columns: 1fr auto 1fr;
+		align-items: center;
+		padding: 30px;
+	}
+
+	.back-btn {
+		justify-self: start;
+	}
+
+	.theme-title {
+		grid-column: 2;
+		justify-self: center;
+	}
+
+	.back-btn:hover {
+		background: linear-gradient(90deg, #fff0ba, #e0b86c);
+	}
 
 	.theme-pagination {
 		display: flex;
@@ -244,9 +324,10 @@
 		padding: 10px;
 		margin: 0 auto;
 		height: 100vh;
-		background-repeat: no-repeat;
-		background: url("../assets/images/bg3.png") no-repeat center 0px fixed;
-		background-size: cover;
+		/*background-repeat: no-repeat;*/
+		/*background: url("../assets/images/bg3.png") no-repeat center 0px fixed;*/
+		/*background-size: cover;*/
+		background: #af9570;
 	}
 
 	.theme-board-wrapper {
@@ -257,9 +338,11 @@
 	}
 
 	.learning-modes {
+		width: 405px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		margin: 0 30px;
 	}
 
 	.theme-title {
@@ -323,6 +406,7 @@
 		filter: brightness(0.9);
 		transform: translateZ(-1px);
 		z-index: -1;
+		transition: .5s;
 	}
 
 	.theme-card.active,
@@ -331,6 +415,8 @@
 		transform: rotateX(0deg) rotateZ(0deg) translateY(-8px) scale(1.05);
 		box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5),
 		inset 0 4px 8px rgba(255, 255, 255, 0.15);
+		border: 4px solid #d9ac50;
+		transition: .5s;
 	}
 
 	.theme-card-title {
@@ -352,26 +438,29 @@
 		font-weight: bold;
 		font-family: "Kurale", serif;
 		font-size: 19px;
-		padding: 3px 15px;
 		border-radius: 50%;
 		border: 2.5px solid #fff0c7;
 		box-shadow: 0 0 6px #e3af2585, 0 2px 6px #57350744;
 		text-shadow: 1px 1px 0 #fffbe8;
 		z-index: 2;
-		min-width: 40px;
-		min-height: 40px;
+		width: 52px;
+		height: 38px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 	}
 
 	.learning-modes-block {
-		position: relative;
-		width: 100%;
-		padding: 21px 25px;
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 100%;
+		padding: 21px 5px;
 		background: linear-gradient(145deg, #fdf3dc 0%, #f0e1b8 100%);
-		border: 3px solid #c9a96b;
-		border-radius: 12px;
+		border-left: 5px solid #c9a96b;
+		border-right: none;
+		border-top-left-radius: 16px;
+		border-bottom-left-radius: 16px;
 		box-shadow: 0 16px 30px rgba(0, 0, 0, 0.4),
 		inset 0 2px 6px rgba(255, 255, 255, 0.3);
 		color: #3e2b0d;
@@ -381,7 +470,6 @@
 		backface-visibility: hidden;
 		display: flex;
 		flex-direction: column;
-		gap: 20px;
 	}
 
 	.modes-list {
@@ -391,8 +479,8 @@
 	}
 
 	.learning__modes-wrapper {
-		border: 4px solid #e9d28c;
-		padding: 25px 15px;
+		/*border: 4px solid #e9d28c;*/
+		padding: 45px 15px 0 15px;
 		border-radius: 16px;
 	}
 
@@ -422,8 +510,6 @@
 		content: '';
 		display: block;
 	}
-
-
 
 	.topic-hint {
 		font-weight: 400;
@@ -558,30 +644,34 @@
 	}
 
 	.theme-content {
+		padding: 30px 0;
 		scrollbar-width: auto;
 		scrollbar-color: #ad8e51 #2a1843;
 		display: flex;
-		align-items: center;
-		height: 100%;
-		justify-content: space-around;
+		justify-content: center;
 	}
 
-	.bounce-enter-active {
-		animation: bounce-in 0.5s;
+	.slide-right-enter-active,
+	.slide-right-leave-active {
+		transition: transform 0.45s ease, opacity 0.4s ease;
 	}
-	.bounce-leave-active {
-		animation: bounce-in 0.5s reverse;
+
+	.slide-right-enter-from {
+		transform: translateX(100%);
+		opacity: 0;
 	}
-	@keyframes bounce-in {
-		0% {
-			transform: scale(0);
-		}
-		50% {
-			transform: scale(1.06);
-		}
-		100% {
-			transform: scale(1);
-		}
+	.slide-right-enter-to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+
+	.slide-right-leave-from {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	.slide-right-leave-to {
+		transform: translateX(100%);
+		opacity: 0;
 	}
 
 	.checkbox-container {
@@ -643,7 +733,7 @@
 	}
 
 	.label-text {
-		font-size: 18px;
+		font-size: 16px;
 		text-shadow: 0 1px 3px #00000055;
 	}
 
