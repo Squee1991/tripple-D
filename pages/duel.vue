@@ -1,6 +1,5 @@
 <template>
 	<div class="duel-page">
-		<h1>⚔️ Поединок артиклей</h1>
 		<FindOpponent />
 	</div>
 </template>
@@ -11,9 +10,9 @@
 
 <style scoped>
 	.duel-page {
-		max-width: 600px;
-		margin: 0 auto;
-		padding: 40px;
-		text-align: center;
+		/*max-width: 600px;*/
+		/*margin: 0 auto;*/
+		/*padding: 40px;*/
+		/*text-align: center;*/
 	}
 </style>

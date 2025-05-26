@@ -19,7 +19,6 @@
 		padding: 2rem 1rem;
 		background: linear-gradient(to right, #f3e5ff, #e3d6fc);
 		text-align: center;
-		/*border-top: 2px dashed #a246e4;*/
 		font-family: 'Uncial Antiqua', cursive;
 		color: #4a256d;
 	}

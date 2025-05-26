@@ -18,7 +18,7 @@ export const userAuthStore = defineStore('auth', () => {
 	const email = ref(null)
 	const password = ref(null)
 	const registeredAt = ref(null)
-
+	const db = getFirestore();
 	const setUserData = (data) => {
 		name.value = data.name || null
 		email.value = data.email || null

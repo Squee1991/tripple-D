@@ -4,7 +4,7 @@
 			<button @click="pathBack" class="button__back"><</button>
 			<div class="menu-icon active">🏠</div>
 			<div class="menu-icon">⚙</div>
-			<div class="menu-icon">🔔</div>
+<!--			<div class="menu-icon">🔔 </div>-->
 		</div>
 		<div class="main-content">
 
@@ -130,8 +130,8 @@
 		width: 70px;
 		background: rgba(255, 255, 255, 0.03);
 		display: flex;
-		flex-direction: column;
 		align-items: center;
+		flex-direction: column;
 		padding-top: 2rem;
 		gap: 1.5rem;
 		backdrop-filter: blur(6px);

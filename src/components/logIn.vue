@@ -4,8 +4,11 @@
 			<div class="form-wrapper">
 				<div class="form-title">{{ mode === 'login' ? 'Авторизация' : 'Регистрация' }}</div>
 				<div class="form__swiper">
-					<div class="form__swiper-word" :class="{ active: mode === 'login' }" @click="mode = 'login'">Войти</div>
-					<div class="form__swiper-word" :class="{ active: mode === 'register' }" @click="mode = 'register'">Регистрация</div>
+					<div class="form__swiper-word" :class="{ active: mode === 'login' }" @click="mode = 'login'">Войти
+					</div>
+					<div class="form__swiper-word" :class="{ active: mode === 'register' }" @click="mode = 'register'">
+						Регистрация
+					</div>
 					<div class="form__swiper-toggle" :class="mode"></div>
 				</div>
 				<div class="fields__group">
@@ -25,15 +28,17 @@
 							{{ mode === 'login' ? 'Войти' : 'Зарегистрироваться' }}
 						</button>
 					</div>
+					<div v-if="error" class="error-message">{{ error }}</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </template>
 <script setup>
-	import {ref , computed , watch} from 'vue'
+	import {ref, computed, watch} from 'vue'
 	import {userAuthStore} from '../../store/authStore.js'
-	import { useRouter} from 'vue-router'
+	import {useRouter} from 'vue-router'
+
 	const router = useRouter()
 	const authStore = userAuthStore()
 	const mode = ref('login')
@@ -107,13 +112,13 @@
 					email: values.email,
 					password: values.password
 				})
-				router.push('/learnmode')
+				router.push('/authUser')
 			} else {
 				await authStore.loginUser({
 					email: values.email,
 					password: values.password
 				})
-				router.push('/learnmode')
+				router.push('/selectedTopics')
 			}
 			fields.value.forEach(field => field.value = '')
 		} catch (e) {
@@ -124,12 +129,12 @@
 		}
 	}
 
-	watch(mode , () => {
+	watch(mode, () => {
 		fields.value.forEach(field => {
 			field.value = ''
 		})
 		error.value = ''
-	} )
+	})
 </script>
 
 <style>
@@ -172,7 +177,7 @@
 		border-radius: 10px;
 		position: relative;
 		margin-bottom: 20px;
-		box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 	}
 
 	.form__swiper-word {
@@ -233,7 +238,7 @@
 		background: #fffdf9;
 		font-size: 15px;
 		color: #333;
-		box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+		box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
 		transition: border 0.3s ease;
 	}
 
@@ -273,7 +278,7 @@
 		margin-top: 15px;
 	}
 
-    .register__inner{
-	    height: 100%;
-    }
+	.register__inner {
+		height: 100%;
+	}
 </style>
