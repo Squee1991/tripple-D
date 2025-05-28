@@ -17,11 +17,11 @@
 						</div>
 						<div class="card__stats">
 							<div class="card__attack-icon">
-								<img class="card__attack-bg" src="../assets/images/swords.svg" alt="">
+								<img class="card__attack-bg" src="../../assets/images/swords.svg" alt="">
 								<span class="card__attack-value">{{ card.attack }}</span>
 							</div>
 							<div class="card__health-icon">
-								<img class="card__health-bg" src="../assets/images/shield.svg" alt="">
+								<img class="card__health-bg" src="../../assets/images/shield.svg" alt="">
 								<span class="card__health-value">{{ card.health }}</span>
 							</div>
 						</div>
@@ -41,7 +41,7 @@
 
 	function getSpellIcon(id) {
 		try {
-			return new URL(`../assets/images/spellIcons/${id}.svg`, import.meta.url).href
+			return new URL(`../../assets/images/spellIcons/${id}.svg`, import.meta.url).href
 		} catch {
 			return '' || id
 		}
