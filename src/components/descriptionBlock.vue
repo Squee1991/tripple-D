@@ -16,35 +16,46 @@
 
 <style scoped>
 .features-section {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(6px);
-    background-blend-mode: overlay;
-    border-radius: 20px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
-    padding: 40px 60px;
-    margin: 60px 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 40px;
-    color: #000;
-}
-
-.feature-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    font-size: 20px;
+    padding: 40px 60px;
+    background: rgba(30, 24, 17, 0.7);
+    backdrop-filter: blur(8px);
+    border: 2px solid #b08d57;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    color: #f3e2b2;
     font-family: 'Kurale', serif;
-    flex: 1;
-    min-width: 280px;
 }
 
+.feature-line .icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    fill: #fcd000;
+}
+.feature-line .highlight {
+    color: #bf80ff;  /* лиловый */
+    font-weight: 600;
+}
+.feature-line span:not(.highlight) {
+    color: inherit;
+}
 .feature-line {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    font-size: 22px;
+    color: #f3e2b2;
+    position: relative;
+}
+.feature-line::before {
+    content: '';
+    display: inline-block;
+    width: 24px; height: 24px;
+    background-size: contain;
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
 .feature-line strong {
@@ -54,13 +65,14 @@
 
 .wizard-img {
     max-width: 320px;
-    border-radius: 20px;
+    border-radius: 16px;
     box-shadow: 0 0 24px rgba(0, 255, 255, 0.3);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .wizard-img:hover {
     transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.6);
 }
 
 @media (max-width: 768px) {
@@ -75,5 +87,8 @@
         margin-top: 20px;
     }
 }
-
+.feature-line:nth-child(1)::before { background-image: url('../../assets/images/magic_book.svg'); }
+.feature-line:nth-child(2)::before { background-image: url('../../assets/images/learning.svg'); }
 </style>
+
+

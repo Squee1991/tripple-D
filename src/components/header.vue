@@ -1,12 +1,15 @@
 <template>
     <div class="background">
         <div class="main__wrapper">
+            <!-- Overlay для модалки авторизации -->
             <div class="overlay" :class="{ show: showAuth }" @click="closeLogin"></div>
             <Transition name="slide-auth">
                 <div v-if="showAuth" class="signin-wrapper">
                     <SingIn @success="closeLogin"/>
                 </div>
             </Transition>
+
+            <!-- Шапка приложения -->
             <div class="profile-page">
                 <div class="top-bar">
                     <div class="app-title">
@@ -31,23 +34,36 @@
                 </div>
             </div>
 
-            <div class="banner-scroll">
+            <div class="banner-scroll magic-quests">
                 <div class="scroll-frame">
                     <div class="banner-decor-top"></div>
                     <div class="banner-content">
                         <div class="sub__title">
-                            <img src="../../assets/images/ddd.png" alt="Логотип"/>
+
                         </div>
                         <div class="banner__sub">
-                            <div class="banner__title">
-                                <span class="bold_1">Der</span> <span class="bold_2">Die</span> <span
-                                    class="bold_3">Das</span>
-                                - сайт для изучения артиклей существительных в немецком языке
+
+                            <h2 class="magic-quests__title">🗺 Путешествие по волшебным королевствам</h2>
+                            <div class="magic-quests__grid">
+                                <a class="quest-card" @click="goToSelectedTopics">
+                                    <svg class="icon" viewBox="0 0 64 64"><!-- свиток --></svg>
+                                    <h3>Выучить новые слова</h3>
+                                </a>
+                                <a class="quest-card" @click="routerPath('battle')">
+                                    <svg class="icon" viewBox="0 0 64 64"><!-- меч --></svg>
+                                    <h3>Сразиться с другом</h3>
+                                </a>
+                                <a class="quest-card" @click="routerPath('shop')">
+                                    <svg class="icon" viewBox="0 0 64 64"><!-- мешок монет --></svg>
+                                    <h3>Посетить магазин</h3>
+                                </a>
+                                <a class="quest-card" @click="routerPath('spells')">
+                                    <svg class="icon" viewBox="0 0 64 64"><!-- книга заклинаний --></svg>
+                                    <h3>Изучить заклинания</h3>
+                                </a>
                             </div>
                             <div class="banner__btn">
-                                <button v-if="start" @click="handleStart" class="start-button">
-                                    {{ userAuth.name ? 'Начать' : 'Начать' }}
-                                </button>
+                                <button v-if="start" @click="handleStart" class="start-button">Начать</button>
                                 <button class="start-button" @click="goToSelectedTopics">Начать обучение</button>
                             </div>
                         </div>
@@ -55,6 +71,9 @@
                     <div class="banner-decor-bottom"></div>
                 </div>
             </div>
+            <section class="magic-quests">
+
+            </section>
         </div>
     </div>
 </template>
@@ -70,8 +89,7 @@ import logoD from '../../assets/images/logo DDD.png'
 const menuToggle = ref(false)
 const userAuth = userAuthStore()
 const router = useRouter()
-let start = ref(true)
-const isStarted = ref(false)
+const start = ref(true)
 const showAuth = ref(false)
 
 const userToggleFoo = () => {
@@ -79,11 +97,8 @@ const userToggleFoo = () => {
 }
 
 const goToSelectedTopics = () => {
-    if (userAuth.name) {
-        router.push('/selectedTopics')
-    } else {
-        showAuth.value = true
-    }
+    if (userAuth.name) router.push('/selectedTopics')
+    else showAuth.value = true
 }
 
 const logIn = () => {
@@ -92,41 +107,27 @@ const logIn = () => {
 
 const routerPath = (item) => {
     menuToggle.value = false
-    if (item === 'cabinet') {
-        router.push('/cabinet')
-    } else if (item === 'map') {
-        router.push('/MapView')
-    }
+    if (item === 'cabinet') router.push('/cabinet')
+    else if (item === 'map') router.push('/MapView')
 }
 
 const handleStart = () => {
-    if (!userAuth.name) {
-        showAuth.value = true
-    } else {
-        router.push('/learnmode')
-    }
+    if (!userAuth.name) showAuth.value = true
+    else router.push('/learnmode')
 }
 
 const closeLogin = () => {
     showAuth.value = false
-    if (userAuth.name) {
-        start.value = false
-        isStarted.value = true
-    }
+    if (userAuth.name) start.value = false
 }
 
 watch(showAuth, (val) => {
-    if (val) {
-        document.documentElement.style.overflow = 'hidden'
-        document.body.style.overflow = 'hidden'
-    } else {
-        document.documentElement.style.overflow = ''
-        document.body.style.overflow = ''
-    }
+    document.documentElement.style.overflow = val ? 'hidden' : ''
+    document.body.style.overflow = val ? 'hidden' : ''
 })
 </script>
 
-<style>
+<style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Kurale&family=Uncial+Antiqua&display=swap');
 
 * {
@@ -135,11 +136,13 @@ watch(showAuth, (val) => {
     box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
     overflow-x: hidden;
     font-family: 'Kurale', serif;
 }
 
+/* Фон и силует замка */
 .background {
     position: relative;
     width: 100%;
@@ -155,16 +158,18 @@ body, html {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('../../assets/images/custle.png') bottom center/cover no-repeat;
+    background: url('../../assets/images/castle_silhouette.png') bottom center/cover no-repeat;
     opacity: 0.3;
     pointer-events: none;
 }
 
+/* Обёртка для всего контента */
 .main__wrapper {
     position: relative;
     z-index: 1;
 }
 
+/* Заголовок приложения */
 .app-title {
     position: relative;
     font-family: 'Uncial Antiqua', serif;
@@ -185,37 +190,34 @@ body, html {
 }
 
 .app-title::before {
-    left: -60px;
+    left: -25px;
 }
 
 .app-title::after {
-    right: -60px;
+    right: -25px;
 }
 
+/* Логотип */
 .logoD {
     max-width: 100px;
 }
 
+/* Топ-бар */
 .top-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 16px 30px;
-    position: relative;
-    z-index: 10;
     background: rgba(30, 18, 5, 0.75);
     border-bottom: 2px solid #b08d57;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-
+    z-index: 10;
 }
 
+/* Дропдаун пользователя */
 .user-dropdown {
     position: relative;
     cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 4px;
 }
 
 .user-info {
@@ -263,11 +265,9 @@ body, html {
     margin-top: 4px;
     box-shadow: 0 0 20px #fcd00044;
     min-width: 160px;
-    padding: 0;
     display: flex;
     flex-direction: column;
     z-index: 20;
-    width: 100%;
 }
 
 .menu-item {
@@ -282,6 +282,7 @@ body, html {
     background: #fcd00033;
 }
 
+/* Кнопка Войти */
 .logout-button {
     font-size: 16px;
     padding: 8px 16px;
@@ -297,76 +298,65 @@ body, html {
     background: #444;
 }
 
+/* Баннер */
 .banner-scroll {
     width: 100%;
 }
 
 .scroll-frame {
     width: 100%;
+    padding: 40px;
+    background: rgba(255, 250, 240, 0.85);
+    border: 4px solid #b08d57;
+    border-radius: 16px;
     box-shadow: 0 0 20px #e6cfa1aa;
     min-height: 100vh;
     font-family: 'Cinzel Decorative', serif;
     position: relative;
     color: black;
-    background: rgba(255, 250, 240, 0.85);
-    border: 4px solid #b08d57;
-    border-radius: 16px;
-
 }
 
-.sub__title img {
-    display: block;
-    margin: 0 auto 20px;
-    max-width: 300px;
-    border-radius: 12px;
+/* Декоративные орнаменты баннера */
+.banner-decor-top,
+.banner-decor-bottom {
+    position: absolute;
+    left: 50%;
+    width: 120px;
+    height: 40px;
+    background: url('../../assets/images/ornament.svg') center/contain no-repeat;
+    transform: translateX(-50%);
 }
 
-.banner__title {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 2px #00000077;
+.banner-decor-top {
+    top: -30px;
 }
 
-.bold_1 {
-    color: black;
-    font-weight: 600;
-    font-size: 40px;
-}
-
-.bold_2 {
-    color: red;
-    font-weight: 600;
-    font-size: 40px;
-}
-
-.bold_3 {
-    color: #fcd000;
-    font-weight: 600;
-    font-size: 40px;
+.banner-decor-bottom {
+    bottom: -30px;
+    transform: translateX(-50%) rotate(180deg);
 }
 
 .banner__btn {
+    padding-top: 50px;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
+    justify-content: center;
 }
 
+/* Кнопки на баннере */
 .start-button {
-    background: rgba(255, 255, 255, 0.1);
-    border: 3px solid #55a1bf;
+    background: url('../../assets/images/parchment_button.png') center/cover;
+    border: none;
+    color: #3e2723;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 12px rgba(255, 235, 59, 0.5);
     font-size: 20px;
     padding: 12px 40px;
     border-radius: 20px;
     cursor: pointer;
-    color: black;
     text-transform: uppercase;
     font-family: 'Kurale', serif;
     font-weight: 600;
-    box-shadow: 0 0 12px #00ffff44;
     animation: float 3s ease-in-out infinite, pulseGlow 2s infinite ease-in-out;
-    position: relative;
     width: 300px;
 }
 
@@ -376,6 +366,7 @@ body, html {
     box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
 }
 
+/* Анимации для кнопки */
 @keyframes float {
     0%, 100% {
         transform: translateY(0);
@@ -394,6 +385,55 @@ body, html {
     }
 }
 
+.magic-quests {
+    padding: 60px 20px;
+    background: rgba(255, 250, 240, 0.85);
+}
+
+.magic-quests__title {
+    font-family: 'Cinzel Decorative', serif;
+    text-align: center;
+    font-size: 2rem;
+    color: #3e2723;
+    margin-bottom: 40px;
+}
+
+.magic-quests__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 24px;
+}
+
+.quest-card {
+    background: url('../../assets/images/parchment_texture.png') center/cover no-repeat;
+    padding: 24px 16px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.3);
+    text-align: center;
+    color: #3e2723;
+    text-decoration: none;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.quest-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.quest-card .icon {
+    width: 32px;
+    height: 32px;
+    fill: #fcd000;
+    margin-bottom: 12px;
+}
+
+.quest-card h3 {
+    font-family: 'Kurale', serif;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* Плавные переходы дропдауна */
 .fade-slide-enter-active,
 .fade-slide-leave-active {
     transition: all 0.3s ease;
