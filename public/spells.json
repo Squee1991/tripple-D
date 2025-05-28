@@ -1,0 +1,198 @@
+{
+	"der": [
+		{
+			"id": "berserk",
+			"name": "Берсерк",
+			"description": "После каждой атаки эта карта получает +1 к атаке.",
+			"defaultAttack": 2,
+			"defaultHealth": 2
+		},
+		{
+			"id": "pierce",
+			"name": "Пробой",
+			"description": "Атаки этой карты игнорируют щиты и защиту.",
+			"defaultAttack": 2,
+			"defaultHealth": 2
+		},
+		{
+			"id": "fury_strike",
+			"name": "Второе дахание",
+			"description": "При атаке 20% шанс на ещё один удар",
+			"defaultAttack": 2,
+			"defaultHealth": 2
+		},
+		{
+			"id": "double_strike",
+			"name": "Двойной удар",
+			"description": "Атакует дважды за ход.",
+			"defaultAttack": 2,
+			"defaultHealth": 2
+		},
+		{
+			"id": "first_strike",
+			"name": "Первая атака",
+			"description": "Наносит урон до ответа противника.",
+			"defaultAttack": 2,
+			"defaultHealth": 2
+		},
+		{
+			"id": "fury_aura",
+			"name": "Аура ярости",
+			"description": "Союзные `der`-карты получают +1 к атаке.",
+			"defaultAttack": 2,
+			"defaultHealth": 2
+		},
+		{
+			"id": "rage",
+			"name": "Ярость",
+			"description": "Увеличивает атаку на 1 каждый раз при получении урона.",
+			"defaultAttack": 2,
+			"defaultHealth": 2
+		},
+		{
+			"id": "overrun",
+			"name": "Прорыв",
+			"description": "Если убивает карту — наносит оставшийся урон игроку.",
+			"defaultAttack": 2,
+			"defaultHealth": 2
+		},
+		{
+			"id": "drunkard",
+			"name": "Пьяный викинг",
+			"description": "Может увернуться от атаки",
+			"defaultAttack": 2,
+			"defaultHealth": 2
+		}
+	],
+	"die": [
+		{
+			"id": "stun",
+			"name": "Звуковая волна",
+			"description": "Громкий звук лишает противника хода.",
+			"defaultAttack": 0,
+			"defaultHealth": 3
+		},
+		{
+			"id": "mirror",
+			"name": "Зеркало",
+			"description": "Отражает первый эффект, направленный на эту карту.",
+			"defaultAttack": 0,
+			"defaultHealth": 3
+		},
+		{
+			"id": "ignite",
+			"name": "Поджог",
+			"description": "Наносит 1 урон от огня в течение 2 ходов.",
+			"defaultAttack": 0,
+			"defaultHealth": 3
+		},
+		{
+			"id": "freeze",
+			"name": "Заморозка",
+			"description": "Цель не может атаковать 1 ход.",
+			"defaultAttack": 0,
+			"defaultHealth": 3
+		},
+		{
+			"id": "weaken",
+			"name": "Ослабление",
+			"description": "Уменьшает атаку врага на 1 на 2 хода.",
+			"defaultAttack": 0,
+			"defaultHealth": 3
+		},
+		{
+			"id": "explosion",
+			"name": "Магический взрыв",
+			"description": "Наносит 1 урон всем врагам и уничтожается",
+			"defaultAttack": 0,
+			"defaultHealth": 3
+		},
+		{
+			"id": "poisoning",
+			"name": "Отравление",
+			"description": "Отнимает 1 единицу здоровья 2 хода",
+			"defaultAttack": 0,
+			"defaultHealth": 3
+		},
+		{
+			"id": "weakDefence",
+			"name": "Ослабление",
+			"description": "Снижает защиту до 0",
+			"defaultAttack": 0,
+			"defaultHealth": 3
+		},
+		{
+			"id": "chain_lightning",
+			"name": "Цепная молния",
+			"description": "Наносит 1 урон до 3 случайным врагам.",
+			"defaultAttack": 0,
+			"defaultHealth": 3
+		}
+	],
+	"das": [
+		{
+			"id": "shield",
+			"name": "Щит света",
+			"description": "Накладывает щит, блокирующий 2 урона.",
+			"defaultAttack": 1,
+			"defaultHealth": 4
+		},
+		{
+			"id": "absorb",
+			"name": "Абсорбция",
+			"description": "Следующая атака лечит игрока вместо урона.",
+			"defaultAttack": 1,
+			"defaultHealth": 4
+		},
+		{
+			"id": "regen",
+			"name": "Регенерация",
+			"description": "Восстанавливает по 1 HP в течение 3 ходов.",
+			"defaultAttack": 1,
+			"defaultHealth": 4
+		},
+		{
+			"id": "thorns",
+			"name": "Шипы",
+			"description": "Наносит 1 урон атакующему, когда получает удар.",
+			"defaultAttack": 1,
+			"defaultHealth": 4
+		},
+		{
+			"id": "armor_up",
+			"name": "Укрепление",
+			"description": "Повышает здоровье союзной карты на 2.",
+			"defaultAttack": 1,
+			"defaultHealth": 4
+		},
+		{
+			"id": "divine_shield",
+			"name": "Шит",
+			"description": "Блокирует весь урон от одной атаки.",
+			"defaultAttack": 1,
+			"defaultHealth": 4
+		},
+		{
+			"id": "shield_reflect",
+			"name": "Отражающий щит",
+			"description": "Отражает первый урон обратно атакующему.",
+			"defaultAttack": 1,
+			"defaultHealth": 4
+		},
+		{
+			"id": "blessing",
+			"name": "Благословение",
+			"description": "Увеличивает атаку и здоровье ближайшей союзной карты на 1.",
+			"defaultAttack": 1,
+			"defaultHealth": 4
+		},
+		{
+			"id": "guardian",
+			"name": "Страж",
+			"description": "Притягивает первую атаку на себя.",
+			"defaultAttack": 1,
+			"defaultHealth": 4
+		}
+
+	]
+}

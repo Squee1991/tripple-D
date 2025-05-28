@@ -38,14 +38,14 @@
 <script setup>
 	import { useRoute, useRouter } from 'vue-router'
 	import { getAuth } from 'firebase/auth'
+	import { io } from 'socket.io-client'
+	import  useSocket  from '../composables/useSocket.js'
+	const socket = useSocket()
 	import {
 		getFirestore,
 		doc,
 		deleteDoc,
 		onSnapshot,
-		updateDoc,
-		arrayUnion,
-		Timestamp,
 		getDoc
 	} from 'firebase/firestore'
 	import { ref, onMounted, onUnmounted, nextTick } from 'vue'
@@ -65,9 +65,8 @@
 	const opponentLeft = ref(false)
 	const unsubscribeSession = ref(null)
 
-	// Покинуть бой (удаляем сессию)
 	const leaveSession = async () => {
-		iAmLeaving.value = true         // ← ДОБАВЬ эту строку!
+		iAmLeaving.value = true
 		if (!sessionId) return
 		try {
 			await deleteDoc(doc(db, 'sessions', sessionId))
@@ -76,21 +75,24 @@
 			console.error('Ошибка при выходе из боя:', e)
 		}
 	}
-
 	// Отправить сообщение в чат
-	const sendMessage = async () => {
+	const sendMessage = () => {
 		if (!newMessage.value.trim() || !currentUserId.value) return
 		const msg = {
+			sessionId,
 			uid: currentUserId.value,
 			text: newMessage.value.trim(),
-			createdAt: Timestamp.now()
+			createdAt: new Date().toISOString()
 		}
-		const sessionRef = doc(db, 'sessions', sessionId)
-		await updateDoc(sessionRef, {
-			messages: arrayUnion(msg)
-		})
+		socket.emit("chatMessage", msg)
 		newMessage.value = ''
 	}
+
+	socket.on("chatMessage", (msg) => {
+		if (msg.sessionId !== sessionId) return
+		messages.value.push(msg)
+		scrollToBottom()
+	})
 
 	// Автопрокрутка чата
 	const scrollToBottom = async () => {
@@ -155,7 +157,7 @@
 				opponentLeft.value = true
 				setTimeout(() => {
 					router.push('/duel')
-				}, 2200)
+				}, 4200)
 				return
 			}
 
@@ -174,15 +176,35 @@
 	})
 
 	onMounted(() => {
-		const unsub = auth.onAuthStateChanged((user) => {
-			currentUserId.value = user?.uid || null
+		console.log("🔌 socket подключен?", socket.connected)
+		const unsub = auth.onAuthStateChanged(async (user) => {
+			if (user?.uid) {
+				currentUserId.value = user.uid
+				await loadUserNickname(user.uid) // ← загружаем ник для самого себя
+			} else {
+				currentUserId.value = null
+			}
 		})
 		onUnmounted(() => unsub())
+	})
+
+	socket.on("connect", () => {
+		console.log("✅ Socket подключён, ID:", socket.id)
 	})
 
 	onUnmounted(() => {
 		if (unsubscribeSession.value) unsubscribeSession.value()
 	})
+
+	watch(currentUserId, (val) => {
+		if (val && sessionId) {
+			socket.emit("join", {
+				sessionId,
+				uid: val
+			});
+		}
+	});
+
 </script>
 
 

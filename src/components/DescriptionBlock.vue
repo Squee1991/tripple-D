@@ -27,7 +27,7 @@
 </template>
 
 <script setup>
-	// пусто
+
 </script>
 
 <style scoped>

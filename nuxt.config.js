@@ -3,6 +3,12 @@ export default defineNuxtConfig({
 	compatibilityDate: '2024-11-01',
 	devtools: {enabled: true},
 	modules: ['@pinia/nuxt', 'nuxt-vuefire', '@nuxtjs/google-fonts'],
+	css: [
+		'simplebar/dist/simplebar.min.css',
+		'~/assets/styles/simplebar.css',
+		'~/assets/styles/reset.css',
+	],
+	plugins: ['~/plugins/simplebar.client.js'],
 	googleFonts: {
 		families: {
 			'Uncial Antiqua': true,
