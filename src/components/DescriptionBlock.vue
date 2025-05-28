@@ -18,7 +18,7 @@
 					🏆 - <span class="description-block__highlight">Дуэли с другими участниками</span>
 				</p>
 				<p class="description-block__line">
-					🏆 - <span class="description-block__highlight">Прохождение уровней </span>
+					🏆 - <span class="description-block__highlight">Прохождение уровней 12121</span>
 				</p>
 			</div>
 			<img class="description-block__image" src="../../assets/images/wizard2.svg" alt="Волшебник" />
