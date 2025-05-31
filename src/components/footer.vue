@@ -18,7 +18,6 @@
 .magic-footer {
     padding: 2.5rem 1rem;
     background: rgba(255, 250, 240, 0.85);
-    border-top: 4px solid #b08d57;
     box-shadow: 0 -2px 10px #e6cfa1a0;
     text-align: center;
     font-family: 'Kurale', serif;
