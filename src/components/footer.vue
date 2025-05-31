@@ -1,49 +1,46 @@
 <template>
-    <footer class="magic-footer">
-        <div class="magic-footer__content">
-            <p class="magic-footer__text">
-                ✨ Сделано с магией<br>
-                📚 Более 500 слов для твоего волшебного пути<br>
-                🔮 Сайт для изучения артиклей в немецком языке
-            </p>
-            <p class="magic-footer__small">© {{ new Date().getFullYear() }} DerDieDas.com</p>
-        </div>
-    </footer>
+	<footer class="magic-footer">
+		<div class="magic-footer__content">
+			<img @click="buyKoffe" class="coffe" src="../../assets/images/heart.svg" alt="">
+			<p class="magic-footer__text">
+				✨ Сделано с магией<br>
+				📚 Более 500 слов для твоего волшебного пути<br>
+				🔮 Сайт для изучения артиклей в немецком языке
+			</p>
+			<p class="magic-footer__small">© {{ new Date().getFullYear() }} DerDieDas.com</p>
+		</div>
+	</footer>
 </template>
 
 <script setup>
+
+	const buyKoffe = ()=> {
+		window.open("https://www.buymeacoffee.com/diederdas", "_blank");
+	}
+
 </script>
 
 <style scoped>
-.magic-footer {
-    padding: 2.5rem 1rem;
-    background: rgba(255, 250, 240, 0.85);
-    box-shadow: 0 -2px 10px #e6cfa1a0;
-    text-align: center;
-    font-family: 'Kurale', serif;
-    color: #3e2723;
-}
+	.magic-footer {
+		padding: 2rem 1rem;
+		background: linear-gradient(to right, #f3e5ff, #e3d6fc);
+		text-align: center;
+		font-family: 'Uncial Antiqua', cursive;
+		color: #4a256d;
+	}
 
-/* Основной текст */
-.magic-footer__text {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    margin-bottom: 1.2rem;
-    color: #4a2c6f;
-}
+	.magic-footer__text {
+		font-size: 1.2rem;
+		line-height: 2;
+		margin-bottom: 1rem;
+	}
 
-/* Мелкий текст */
-.magic-footer__small {
-    font-size: 0.85rem;
-    color: #7a5e99;
-}
+	.magic-footer__small {
+		font-size: 0.9rem;
+		color: #8052aa;
+	}
 
-/* Ссылки (если понадобятся) */
-.magic-footer a {
-    color: #55a1bf;
-}
-
-.magic-footer a:hover {
-    text-decoration: underline;
-}
+	.coffe {
+		cursor: pointer;
+	}
 </style>

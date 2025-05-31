@@ -1,6 +1,6 @@
 <template>
 	<div class="deck">
-		<h1 class="deck__title">Ваша колода</h1>
+		<h1 class="deck__title">{{ deckTitle }}</h1>
 		<div class="deck__content">
 			<div class="deck__list">
 				<div v-for="card in userDeck" :key="card.id" class="deck__card card">
@@ -37,8 +37,11 @@
 <script setup>
 	import { onMounted} from 'vue'
 	import { userBattleStore } from '../../store/BattleStore.js'
+	import { useThemeCardStore } from '../../store/themeStore.js'
 	const { userDeck } = userBattleStore()
-
+	const useTheme = useThemeCardStore()
+	const userBattle = userBattleStore()
+	const selectedTheme = computed(() => userBattle.selectedTheme)
 	function getSpellIcon(id) {
 		try {
 			return new URL(`../../assets/images/spellIcons/${id}.svg`, import.meta.url).href
@@ -47,6 +50,12 @@
 		}
 	}
 
+	const deckTitle = computed(() => {
+		const key = userBattle.selectedTheme
+		if (!key) return 'Ваша колода'
+		return useTheme.themes[key]?.name || key
+	})
+
 </script>
 
 <style scoped>
@@ -54,6 +63,7 @@
 	.deck__list {
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: center;
 	}
 
 	.deck__content {
@@ -62,9 +72,9 @@
 
 	.deck__title {
 		width: 100%;
-		padding: 30px;
-		background: #cba36a;
-		margin-bottom: 20px;
+		display: flex;justify-content: center;
+		margin-bottom: 30px;
+		padding: 0 10px 10px 10px;
 	}
 
 	.card__edit {
@@ -80,11 +90,14 @@
 		border-bottom-left-radius: 27px;
 		border-bottom-right-radius: 27px;
 		box-shadow: 0 4px 18px #a5875c99, 0 1px 3px #fff5c9 inset;
-		border: 4px solid #b9985b;
+		border-bottom: 4px solid #b9985b;
+		border-left: 4px solid #b9985b;
+		border-right: 4px solid #b9985b;
 		display: flex;
 		flex-direction: column;
 		padding: 5px 10px 0 10px;
 		margin: 25px;
+		cursor: pointer;
 	}
 
 	.card__frame:before {
@@ -97,7 +110,9 @@
 		width: 100%;
 		height: 35px;
 		background: #7d7d6a;
-		border: 4px solid #b9985b;
+		border-top: 4px solid #b9985b;
+		border-left: 4px solid #b9985b;
+		border-right: 4px solid #b9985b;
 		border-top-left-radius: 25px;
 		border-top-right-radius: 25px;
 	}
@@ -115,7 +130,7 @@
 	.card__name {
 		left: 50%;
 		transform: translateX(-50%);
-		top:-35px;
+		top:-31px;
 		position: absolute;
 		width: 155px;
 		text-align: center;
