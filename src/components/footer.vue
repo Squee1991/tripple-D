@@ -1,6 +1,7 @@
 <template>
 	<footer class="magic-footer">
 		<div class="magic-footer__content">
+			<img @click="buyKoffe" class="coffe" src="../../assets/images/heart.svg" alt="">
 			<p class="magic-footer__text">
 				✨ Сделано с магией<br>
 				📚 Более 500 слов для твоего волшебного пути<br>
@@ -12,6 +13,11 @@
 </template>
 
 <script setup>
+
+	const buyKoffe = ()=> {
+		window.open("https://www.buymeacoffee.com/diederdas", "_blank");
+	}
+
 </script>
 
 <style scoped>
@@ -32,5 +38,9 @@
 	.magic-footer__small {
 		font-size: 0.9rem;
 		color: #8052aa;
+	}
+
+	.coffe {
+		cursor: pointer;
 	}
 </style>

@@ -66,9 +66,6 @@
 						<div v-if="message" class="status-message">{{ message }}</div>
 					</div>
 				</div>
-				<div  class="status-message">
-					<button class="find-button" @click="goToDeck">Моя колода</button>
-				</div>
 				<button v-if="sessionId" @click="leaveSession" class="leave-button">Покинуть</button>
 			</div>
 		</div>
