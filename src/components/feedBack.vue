@@ -1,127 +1,328 @@
-<template>
-    <section class="feedback-section">
-        <img class="spellbook-img" src="../../assets/images/spelbook.svg" alt="Книга волшебства"/>
+<script setup>
+import MessageAnimation from '../../assets/animation/message.json'
+// import {useScrollObserver} from "../utils/useScrollObserver";
+import {ref, onMounted} from 'vue';
+import Lottie from 'lottie-web';
+// import emailjs from 'emailjs-com';
 
-        <form class="spellbook-form" @submit.prevent="onSubmit">
-            <h2>📜 Оставь след в книге волшебства</h2>
-            <input v-model="name" type="text" class="form-control" placeholder="Твоё имя или никнейм"/>
-            <textarea v-model="text" class="form-control" placeholder="Напиши, что думаешь или что хочешь улучшить..."
-                      rows="5"></textarea>
-            <button type="submit" class="spell-btn">✨ Отправить заклинание</button>
-        </form>
+const contactSection = ref(null);
+const msgAnimationWrapper = ref(null);
+const isVisible = ref(false);
+
+const data = ref({
+    label: 'Have a question ?',
+    title: 'Would you like to get to know me better? Use this form, and I will definitely get back to you.',
+    btn: {
+        text: 'send a message',
+    }
+});
+
+const errors = ref({
+    email: '',
+    message: ''
+})
+const userEmail = ref('');
+const userMessage = ref('');
+
+onMounted(() => {
+
+    isVisible.value = true;
+    if (msgAnimationWrapper.value) {
+        Lottie.loadAnimation({
+            container: msgAnimationWrapper.value,
+            autoplay: true,
+            loop: true,
+            animationData: MessageAnimation,
+        });
+    }
+
+});
+
+const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    return re.test(email);
+};
+
+const sendMessage = async () => {
+    errors.value = {email: '', message: ''};
+    if (!userEmail.value.trim()) {
+        errors.value.email = "Email is required";
+    }
+    if (!validateEmail(userEmail.value)) {
+        errors.value.email = "Please enter a valid email";
+    }
+    if (!userMessage.value.trim()) {
+        errors.value.message = "Please enter a message";
+    }
+    if (errors.value.email || errors.value.message) {
+        return;
+    }
+
+    try {
+        await emailjs.send(
+            "service_9zsuox2",
+            "template_s9p24lo",
+            {
+                from_name: userEmail.value,
+                message: userMessage.value,
+            },
+            "2v5vLDUsbkXWrluyJ"
+        );
+        resetFields();
+    } catch (error) {
+        console.error(error);
+    }
+};
+
+const resetFields = () => {
+    userEmail.value = '';
+    userMessage.value = '';
+    errors.value = {
+        email: '',
+        message: ''
+    };
+};
+</script>
+
+<template>
+    <section id="contact" ref="contactSection" class="contact">
+        <div class="contact__wrapper">
+            <div class="form">
+                <div class="form__wrapper">
+                    <div class="form__animation-wrapper">
+                        <div ref="msgAnimationWrapper" class="form__animation" :class="{ 'visible': isVisible }"></div>
+                    </div>
+                    <div class="form__wrapper-inner" :class="{ 'visible': isVisible }">
+                        <div class="contact__label label">{{ data.label }}</div>
+                        <div class="contact__title">{{ data.title }}</div>
+                        <div class="form__field__inner">
+                            <label class="label">
+                                <input class="input" v-model="userEmail" type="email" name="user_email"
+                                       placeholder="Email"/>
+                            </label>
+                            <span class="error__message" v-if="errors.email"> {{ errors.email }}</span>
+                        </div>
+                        <div class="form__message__inner">
+                            <label class="label__area">
+							<textarea v-model="userMessage" class="area" cols="30" rows="10" name="message"
+                        placeholder="Message"></textarea>
+                            </label>
+                            <span class="error__message" v-if="errors.message"> {{ errors.message }}</span>
+                        </div>
+                        <div @click="sendMessage" class="form__btn">
+                            <button type="submit" class="contact__btn btn">{{ data.btn.text }}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 </template>
 
-<script setup>
-import {ref} from 'vue'
-
-const name = ref('')
-const text = ref('')
-
-const onSubmit = () => {
-    console.log('Заклинание оставил:', name.value, text.value)
-    name.value = ''
-    text.value = ''
-}
-</script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Kurale&family=Cinzel+Decorative&display=swap');
 
-.feedback-section {
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+
+.contact {
+    overflow-x: hidden;
+    background: linear-gradient(135deg, #f5f7ff, #eef1ff);
+    padding: 60px 0;
+}
+
+.contact__wrapper {
+    padding: 50px 20px;
+    border-radius: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 15px 50px rgba(92, 58, 255, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.form__wrapper {
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: center;
     gap: 40px;
-    padding: 60px 20px;
-    background: url('../../assets/images/spellbook-bg.png') center/cover no-repeat;
-    border-radius: 16px;
+    padding: 0 40px;
+    border-radius: 20px;
     flex-wrap: wrap;
 }
 
-.spellbook-img {
-    max-width: 360px;
-    border-radius: 16px;
-    transition: transform 0.3s ease;
-    box-shadow: 0 0 36px rgba(252, 208, 0, 0.6);
-}
-
-.spellbook-img:hover {
-    transform: scale(1.02);
-}
-
-.spellbook-form {
-    background: #fdf3e7;
-    border: 2px dashed #a246e4;
-    border-radius: 16px;
-    box-shadow: 0 0 30px rgba(125, 85, 255, 0.25);
-    padding: 30px;
-    max-width: 500px;
-    width: 100%;
+.form__animation-wrapper {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    width: 45%;
+    min-width: 300px;
+    align-items: center;
+    justify-content: center;
+}
+
+.form__animation {
+    width: 100%;
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.form__animation.visible {
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+.form__wrapper-inner {
+    width: 50%;
+    min-width: 320px;
+    padding: 30px;
+    opacity: 0;
+    animation: slideInRight 1s ease-out forwards;
+}
+
+.form__wrapper-inner.visible {
+    opacity: 1;
+}
+
+.contact__label {
+    font-size: 34px;
+    color: #5c3aff;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+}
+
+.contact__label:after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background: #5c3aff;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(92, 58, 255, 0.5);
+}
+
+.contact__title {
+    font-size: 18px;
+    color: #3a3a3a;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 25px;
+    font-family: 'Cinzel', serif;
+    font-weight: 400;
+}
+
+.form__field__inner,
+.form__message__inner {
+    margin-bottom: 20px;
     position: relative;
 }
 
-.spellbook-form h2 {
-    font-family: 'Cinzel Decorative', serif;
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #3e2723;
-    margin-bottom: 10px;
-    line-height: 1.4;
-    text-align: left;
-    padding-left: 8px;
-}
-
-.form-control {
-    border: 2px solid #a246e4;
-    border-radius: 12px;
-    padding: 14px 18px;
+.input,
+.area {
+    width: 100%;
+    padding: 15px;
     font-size: 16px;
-    font-family: 'Kurale', serif;
-    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background: #f9faff;
+    box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.05);
     color: #333;
+    transition: all 0.3s ease;
+    font-family: system-ui, sans-serif;
+}
+
+.input:focus,
+.area:focus {
+    border-color: #5c3aff;
+    box-shadow: 0 0 0 4px rgba(92, 58, 255, 0.1);
     outline: none;
-    transition: 0.2s ease;
+    background: #fff;
 }
 
-.form-control:focus {
-    border-color: #5e1d9c;
+.area {
+    resize: none;
+    height: 160px;
 }
 
-.form-control::placeholder {
-    color: #a246e4aa;
+.error__message {
+    color: #e25454;
+    font-size: 14px;
+    margin-top: 5px;
+    font-family: system-ui, sans-serif;
 }
 
-.spell-btn {
-    background: linear-gradient(90deg, #2b668d, #042c47);
-    color: #fff;
+.contact__btn {
+    margin-top: 10px;
+    display: inline-block;
+    width: 100%;
+    padding: 18px;
     font-size: 18px;
-    font-family: 'Kurale', serif;
-    font-weight: bold;
-    padding: 14px;
+    color: white;
+    background: linear-gradient(135deg, #3c65ff, #5c3aff);
     border: none;
     border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(92, 58, 255, 0.5);
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
+    font-family: system-ui, sans-serif;
 }
 
-.spell-btn:hover {
-    box-shadow: 0 0 12px rgba(0, 255, 255, 0.3);
+.contact__btn:hover {
+    background: linear-gradient(135deg, #5c3aff, #3c65ff);
+    box-shadow: 0 10px 25px rgba(92, 58, 255, 0.7);
     transform: translateY(-2px);
 }
 
-@media (max-width: 768px) {
-    .feedback-section {
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Mobile and tablet responsive */
+@media (max-width: 1024px) {
+    .form__wrapper {
         flex-direction: column;
-        text-align: center;
+        align-items: center;
     }
 
-    .spellbook-img {
-        max-width: 280px;
+    .form__animation-wrapper {
+        display: none;
+    }
+
+    .form__wrapper-inner {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    .contact__label {
+        font-size: 26px;
+    }
+
+    .contact__title {
+        font-size: 16px;
+    }
+
+    .contact__btn {
+        font-size: 16px;
+        padding: 14px;
     }
 }
 </style>
