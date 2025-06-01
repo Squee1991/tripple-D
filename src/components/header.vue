@@ -1,442 +1,216 @@
 <template>
-	<div class="background">
-		<div class="main__wrapper">
-			<div class="overlay" :class="{ show: showAuth }" @click="closeLogin"></div>
-			<Transition name="slide-auth">
-				<div v-if="showAuth" class="signin-wrapper">
-					<SingIn @success="closeLogin"/>
-				</div>
-			</Transition>
-			<div class="profile-page">
-				<div class="top-bar">
-					<div class="top-right">
-						<div class="user-info">
-							<div v-if="userAuth.name" class="auth__inner">
-								<img class="user-avatar-icon" src="" alt=""/>
-								<div @click="userToggleFoo" class="userAuth__wrapper" :class="{ isToggle: menuToggle }">
-									<span class="menu-item">{{ userAuth.email }}</span>
-									<div class="menu-dropdown">
-										<span class="menu-item" @click.stop="routerPath('cabinet')">Кабинет</span>
-										<span class="menu-item" @click.stop="userAuth.logOut">Выход</span>
-									</div>
-								</div>
+    <header class="magic-header">
+        <div class="header-bar">
+            <img class="logo" :src="logoD" alt="Logo"/>
+            <div v-if="userAuth.name" class="user-info" @click="toggleMenu">
+                <img class="avatar" :src="avatar" alt="User avatar"/>
+                <span class="user-email">{{ userAuth.email }}</span>
+                <svg class="icon" viewBox="0 0 20 20">
+                    <path fill="currentColor" d="M5 7l5 5 5-5z"/>
+                </svg>
+                <transition name="fade">
+                    <div v-if="menuOpen" class="dropdown">
+                        <span @click.stop="goTo('cabinet')">🧙 Кабинет</span>
+                        <span @click.stop="userAuth.logOut">🚪 Выход</span>
+                    </div>
+                </transition>
+            </div>
+            <button v-else class="login-btn" @click="openAuth">Войти</button>
+        </div>
 
-							</div>
-							<div v-else class="logout-button" @click="logIn">Войти</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="baner">
-				<div class="sub__title">
-					<img src="../../assets/images/wizard.svg" alt="">
-				</div>
-				<div class="banner__sub">
-					<div class="banner__title">
-						<span class="bold_1">Der</span> <span class="bold_2">Die</span> <span class="bold_3">Das</span>
-						- сайт для изучения артиклей существительных в немецком языке
-					</div>
-					<div class="banner__btn">
-												<button
-													v-if="start"
-													@click="handleStart"
-													class="start-button"
-												>
-													{{ userAuth.name ? 'Начать' : 'Начать' }}
-												</button>
-						<button class="start-button" @click="goToSelectedTopics">
-							Начать обучение
-						</button>
-						<button class="start-button" @click="goToDuel">
-							Дуэль артиклей
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+        <div class="hero">
+            <h1 class="hero-title">Путешествие по миру артиклей Der Die Das</h1>
+            <button class="start-btn" @click="startLearning">Начать обучение</button>
+        </div>
 
+        <Transition name="slide">
+            <div v-if="showAuth" class="auth-overlay" @click.self="closeAuth">
+                <SingIn @success="closeAuth"/>
+            </div>
+        </Transition>
+    </header>
 </template>
 
 <script setup>
-	import {ref, watch} from 'vue'
-	import {userAuthStore} from '../../store/authStore.js'
-	import SingIn from '../components/logIn.vue'
-	import Header from '../components/header.vue'
-	import {useRouter} from 'vue-router'
+import {ref, watch} from 'vue'
+import {useRouter} from 'vue-router'
+import {userAuthStore} from '../../store/authStore'
+import SingIn from '../components/logIn.vue'
+import logoD from '../../assets/images/logo DDD.png'
+import avatar from '../../assets/images/avatar.svg'
 
-	const menuToggle = ref(false)
-	const userAuth = userAuthStore()
-	const router = useRouter()
-	let start = ref(true)
-	const isStarted = ref(false)
-	const selectedMode = ref(null)
-	const showAuth = ref(false)
+const router = useRouter()
+const userAuth = userAuthStore()
+const showAuth = ref(false)
+const menuOpen = ref(false)
 
-	const userToggleFoo = () => {
-		menuToggle.value = !menuToggle.value
-	}
+const toggleMenu = () => menuOpen.value = !menuOpen.value
+const goTo = (page) => {
+    menuOpen.value = false
+    router.push(`/${page}`)
+}
+const openAuth = () => showAuth.value = true
+const closeAuth = () => showAuth.value = false
+const startLearning = () => {
+    userAuth.name ? router.push('/selectedTopics') : openAuth()
+}
 
-	const goToDuel = () => {
-		router.push('/duel')
-
-	}
-
-	const goToSelectedTopics = () => {
-		if (userAuth.name) {
-			router.push('/selectedTopics')
-		} else {
-			showAuth.value = true
-		}
-	}
-
-	const logIn = () => {
-		showAuth.value = true
-	}
-
-	const routerPath = (item) => {
-		menuToggle.value = false
-		if (item === 'cabinet') {
-			router.push('/cabinet')
-		} else if (item === 'map') {
-			router.push('/MapView')
-		}
-	}
-
-	const handleStart = () => {
-		if (!userAuth.name) {
-			showAuth.value = true
-		} else {
-			router.push('/selectedTopics')
-		}
-	}
-
-	const closeLogin = () => {
-		showAuth.value = false
-		if (userAuth.name) {
-			start.value = false
-			isStarted.value = true
-		}
-	}
-
-	watch(showAuth, (val) => {
-		if (val) {
-			document.documentElement.style.overflow = 'hidden'
-			document.body.style.overflow = 'hidden'
-		} else {
-			document.documentElement.style.overflow = ''
-			document.body.style.overflow = ''
-		}
-	})
-
+watch(showAuth, (val) => {
+    document.body.style.overflow = val ? 'hidden' : ''
+})
 </script>
 
-<style>
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Kurale&family=Cinzel+Decorative&family=Uncial+Antiqua&display=swap');
 
-	.banner__sub {
-		display: flex;
-		flex-direction: column;
-	}
+.magic-header {
+    background: url('../../assets/images/header-bg.png') center/cover no-repeat;
+    padding-bottom: 60px;
+}
 
-	.sub__title {
-		margin: 0 auto;
-		width: 400px;
-		font-size: 20px;
-		display: flex;
-		justify-content: center;
-		align-items: start;
-	}
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(30, 18, 5, 0.8);
+    border-bottom: 2px solid #b08d57;
+    box-shadow: 0 4px 10px #0006;
+}
 
-	.bold_1 {
-		color: black;
-		font-weight: 600;
-		font-size: 47px;
-	}
+.logo {
+    max-height: 60px;
+    filter: drop-shadow(0 0 6px #fcd000aa);
+}
 
-	.bold_2 {
-		color: red;
-		font-weight: 600;
-		font-size: 47px;
-	}
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #2e2e3e;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 0 12px #fcd00066;
+}
 
-	.bold_3 {
-		color: #fcd000;
-		font-weight: 600;
-		font-size: 47px;
-	}
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid #fcd000;
+    background: #fff;
+}
 
-	.banner__title {
-		max-width: 600px;
-		margin: 0 auto;
-		font-family: "Kurale", serif;
-	}
+.user-email {
+    color: #fff8d2;
+    font-size: 14px;
+}
 
-	.baner {
-		max-width: 1100px;
-		margin: 0 auto;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		font-size: 40px;
-	}
+.icon {
+    width: 16px;
+    height: 16px;
+    fill: #fcd000;
+    transition: transform 0.3s;
+}
 
-	.banner__btn {
-		display: flex;
-		justify-content: center;
-		margin-top: 50px;
-	}
+.user-info:hover .icon {
+    transform: rotate(180deg);
+}
 
-	.auth__inner {
-		display: flex;
-		align-items: center;
-		position: relative;
-		gap: 10px;
-	}
+.dropdown {
+    position: absolute;
+    top: 100%;
+    right: 2rem;
+    background: #1a1a2e;
+    border: 2px solid #fcd00055;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+    box-shadow: 0 0 20px #fcd00044;
+    display: flex;
+    flex-direction: column;
+    min-width: 160px;
+    z-index: 10;
+}
 
-	.userAuth__wrapper {
-		position: relative;
-		background: #2e2e3e;
-		color: white;
-		cursor: pointer;
-		font-size: 14px;
-		display: flex;
-		flex-direction: column;
-		width: 170px;
-	}
+.dropdown span {
+    padding: 0.75rem 1rem;
+    color: #fff8d2;
+    cursor: pointer;
+}
 
-	.menu-dropdown {
-		position: absolute;
-		top: 100%;
-		left: 0;
-		width: 100%;
-		background: #2e2e3e;
-		overflow: hidden;
-		height: 0;
-		transition: height 0.3s ease;
-		display: flex;
-		flex-direction: column;
-		z-index: 10;
-	}
+.dropdown span:hover {
+    background: #fcd00033;
+}
 
-	.userAuth__wrapper.isToggle .menu-dropdown {
-		height: 63px;
-	}
+.login-btn {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background: #2e2e3e;
+    border: 1px solid #fcd00066;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
 
-	.menu-item {
-		font-size: 18px;
-		padding: 4px 10px;
-		background: #2e2e3e;
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		width: 100%;
-		display: block;
-	}
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+}
 
-	.menu-item:hover {
-		background: #00ffff33;
-	}
+.hero-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #3e2723;
+}
 
-	html, body {
-		overflow-x: hidden;
-	}
+.start-btn {
+    background: linear-gradient(90deg, #55a1bf, #004466);
+    padding: 1rem 2.5rem;
+    color: wheat;
+    border-radius: 20px;
+    font-family: 'Kurale', serif;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
 
-	a {
-		text-decoration: none;
-	}
+.start-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+}
 
-	* {
-		padding: 0;
-		margin: 0;
-		box-sizing: border-box;
-	}
+.auth-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
 
-	.signin-wrapper {
-		width: 380px;
-		position: absolute;
-		top: 0;
-		right: 0;
-		height: 100vh;
-		background: #11182c;
-		z-index: 1000;
-	}
+/* Анимации */
+.fade-enter-active, .fade-leave-active {
+    transition: all 0.3s ease;
+}
 
-	.app-title {
-		border-radius: 50%;
-	}
+.fade-enter-from, .fade-leave-to {
+    opacity: 0;
+    transform: translateY(-5px);
+}
 
-	.app-title-icon {
-		width: 80px;
-		height: 60px;
-	}
+.slide-enter-active, .slide-leave-active {
+    transition: all 0.3s ease;
+}
 
-	.profile-page {
-		width: 100%;
-		color: white;
-		position: relative;
-		font-family: 'Segoe UI', sans-serif;
-	}
-
-	.top-bar {
-		width: 100%;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 15px 30px;
-		margin-bottom: 50px;
-		background: #f5efef;
-		position: sticky;
-		top: 0;
-		z-index: 100;
-	}
-
-	.app-title {
-		font-size: 20px;
-		font-weight: bold;
-		color: #00ffff;
-	}
-
-	.user-info {
-		display: flex;
-		align-items: center;
-		gap: 16px;
-	}
-
-	.user-avatar {
-		cursor: pointer;
-		width: 40px;
-		height: 40px;
-		border-radius: 50%;
-		object-fit: cover;
-		box-shadow: 0 0 6px rgba(0, 255, 255, 0.67);
-	}
-
-	.logout-button {
-		display: flex;
-		justify-content: center;
-		font-size: 18px;
-		min-width: 120px;
-		padding: 8px 16px;
-		border: 1px solid grey;
-		border-radius: 8px;
-		cursor: pointer;
-		background: transparent;
-		color: black;
-		transition: background 0.3s;
-	}
-
-	.logout-button:hover {
-		background: black;
-		color: white;
-	}
-
-	.img-bg {
-		width: 100%;
-	}
-
-	.background {
-		width: 100%;
-		position: relative;
-	}
-
-	.start-button-wrapper {
-		position: absolute;
-		left: 50%;
-		opacity: 1;
-		transform: translateX(-50%);
-		z-index: 10;
-	}
-
-	.is-started {
-		opacity: 1;
-	}
-
-	.start-button {
-		background: rgba(255, 255, 255, 0.1);
-		border: 3px solid #55a1bf;
-		font-size: 20px;
-		padding: 12px 40px;
-		border-radius: 20px;
-		letter-spacing: 2px;
-		cursor: pointer;
-		color: black;
-		text-transform: uppercase;
-		transition: all 0.3s ease;
-		box-shadow: 0 0 12px #00ffff44;
-		animation: pulseGlow 2s infinite ease-in-out;
-		width: 300px;
-		font-family: "Kurale", serif;
-		font-weight: 600;
-	}
-
-	.start-button:hover {
-		background: #55a1bf;
-		box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
-	}
-
-	@keyframes pulseGlow {
-		25% {
-			box-shadow: 0 0 20px #00ffffaa;
-			transition: 1s;
-		}
-
-		50% {
-			box-shadow: 0 0 20px #00ffffaa;
-			transition: 1s;
-		}
-		100% {
-			box-shadow: 0 0 12px #00ffff44;
-			transition: 1s;
-		}
-		50% {
-			box-shadow: 0 0 20px #00ffffaa;
-			transition: 1s;
-		}
-		25% {
-			box-shadow: 0 0 20px #00ffffaa;
-			transition: 1s;
-		}
-	}
-
-	.overlay {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100vh;
-		background: rgba(0, 0, 0, 0.5);
-		opacity: 0;
-		pointer-events: none;
-		transition: opacity 0.3s ease;
-		z-index: 999;
-	}
-
-	.overlay.show {
-		opacity: 1;
-		pointer-events: auto;
-	}
-
-	.slide-auth-enter-from {
-		transform: translateX(100%);
-	}
-
-	.slide-auth-enter-active,
-	.slide-auth-leave-active {
-		transition: transform 0.5s ease;
-	}
-
-	.slide-auth-enter-to {
-		transform: translateX(0%);
-	}
-
-	.slide-auth-leave-to {
-		transform: translateX(100%);
-	}
-
-	.signin-wrapper.show {
-		transform: translateX(0%);
-	}
-
-
+.slide-enter-from, .slide-leave-to {
+    opacity: 0;
+    transform: translateY(-20px);
+}
 </style>

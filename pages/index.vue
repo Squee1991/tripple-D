@@ -13,9 +13,9 @@ import Description from '../src/components/DescriptionBlock.vue'
 import FeedBack from '../src/components/feedBack.vue'
 import Footer from '../src/components/footer.vue'
 import Header from '../src/components/header.vue'
-import { useCurrentUser } from 'vuefire'
-import { onMounted } from 'vue'
-import { useRouter } from 'vue-router'
+import {useCurrentUser} from 'vuefire'
+import {onMounted} from 'vue'
+import {useRouter} from 'vue-router'
 
 const user = useCurrentUser()
 const router = useRouter()

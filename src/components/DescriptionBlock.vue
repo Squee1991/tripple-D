@@ -1,63 +1,108 @@
 <template>
-	<section class="description-block">
-		<div class="description__wrapper">
-			<div class="description-block__text">
-				<p class="description-block__line">
-					🧙‍♂ -<span class="description-block__highlight"> 800 + слов</span> с артиклями
-				</p>
-				<p class="description-block__line">
-					🎓 -  <span class="description-block__highlight">5 способов обучения</span> для разных стилей
-				</p>
-				<p class="description-block__line">
-					🕹 - <span class="description-block__highlight">Элементы игры</span> и прокачка
-				</p>
-				<p class="description-block__line">
-					🏆 - <span class="description-block__highlight">Прохождение уровней</span> и достижений
-				</p>
-				<p class="description-block__line">
-					🏆 - <span class="description-block__highlight">Дуэли с другими участниками</span>
-				</p>
-				<p class="description-block__line">
-					🏆 - <span class="description-block__highlight">Прохождение уровней 12121</span>
-				</p>
-			</div>
-			<img class="description-block__image" src="../../assets/images/wizard2.svg" alt="Волшебник" />
-		</div>
-	</section>
+    <section class="description-cards">
+        <div class="cards-row">
+            <div class="card" v-for="(item, index) in items" :key="index">
+                <span class="emoji">{{ item.emoji }}</span>
+                <p class="card-text">
+                    <span class="highlight">{{ item.title }}</span>
+                    {{ item.rest }}
+                </p>
+            </div>
+        </div>
+    </section>
 </template>
 
 <script setup>
-
+const items = [
+    { emoji: '🧙‍♂️', title: '800+ слов', rest: ' с артиклями' },
+    { emoji: '🎓', title: '5 способов обучения', rest: ' для разных стилей' },
+    { emoji: '🕹', title: 'Элементы игры', rest: ' и прокачка' },
+    { emoji: '🏆', title: 'Прохождение уровней', rest: ' и достижений' },
+    { emoji: '⚔', title: 'Дуэли с другими участниками', rest: '' }
+]
 </script>
 
 <style scoped>
-	.description-block {
-		text-align: center;
-		font-family: 'Uncial Antiqua', cursive;
-		margin-top: 3rem;
-		padding: 0 1rem;
-		color: #222;
-		background: #f5f0f0;
-	}
+@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
 
-	.description__wrapper {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: 50px 20px;
-	}
+.description-cards {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+    background: linear-gradient(to bottom, #fdfcf7, #fbf5e9);
+    overflow-x: auto;
+}
 
-	.description-block__text {
-		display: flex;
-		flex-direction: column;
-		gap: 0.7rem;
-		font-size: 1.3rem;
-		line-height: 1.8;
-		align-items: start;
-	}
+.cards-row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    max-width: 1600px;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
 
-	.description-block__highlight {
-		color: #a246e4;
-		font-weight: bold;
-	}
+.card {
+    flex: 1 1 0;
+    min-width: 260px;
+    max-width: 300px;
+    height: 180px;
+    background: #fffdf4;
+    border-radius: 16px;
+    padding: 20px;
+    font-family: 'Uncial Antiqua', cursive;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #3e2723;
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 16px rgba(162, 70, 228, 0.1);
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('../../assets/images/magic-frame.png') center/cover no-repeat;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.card > * {
+    position: relative;
+    z-index: 1;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(162, 70, 228, 0.2);
+}
+
+.emoji {
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.highlight {
+    color: #a246e4;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .cards-row {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 100%;
+    }
+}
 </style>
