@@ -4,6 +4,7 @@
         <Description/>
         <FeedBack/>
         <Footer/>
+        <VScroll/>
     </div>
 </template>
 
@@ -16,6 +17,9 @@ import Header from '../src/components/header.vue'
 import {useCurrentUser} from 'vuefire'
 import {onMounted} from 'vue'
 import {useRouter} from 'vue-router'
+import VScroll from "../src/components/v-scroll.vue";
+
+
 
 const user = useCurrentUser()
 const router = useRouter()
