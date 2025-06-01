@@ -19,6 +19,7 @@ export const userAuthStore = defineStore('auth', () => {
 	const password = ref(null)
 	const registeredAt = ref(null)
 	const db = getFirestore();
+
 	const setUserData = (data) => {
 		name.value = data.name || null
 		email.value = data.email || null
@@ -43,16 +44,14 @@ export const userAuthStore = defineStore('auth', () => {
 		await setDoc(doc(db, 'users', userCredential.user.uid), {
 			nickname: userData.name,
 			email: userData.email,
-			createdAt: new Date()
+			registeredAt: userCredential.user.metadata.creationTime
 		})
-
-		const now = new Date().toLocaleDateString()
 
 		setUserData({
 			name: userData.name,
 			email: userData.email,
 			password: userData.password,
-			registeredAt: now
+			registeredAt: userCredential.user.metadata.creationTime
 		})
 	}
 
@@ -101,6 +100,8 @@ export const userAuthStore = defineStore('auth', () => {
 				setUserData({
 					name: user.displayName,
 					email: user.email,
+					password: null,
+					registeredAt: user.metadata.creationTime
 				})
 			} else {
 				name.value = null

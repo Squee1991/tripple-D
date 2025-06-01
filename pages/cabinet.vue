@@ -4,7 +4,7 @@
 			<button @click="pathBack" class="button__back"><</button>
 			<div class="menu-icon active">🏠</div>
 			<div class="menu-icon">⚙</div>
-<!--			<div class="menu-icon">🔔 </div>-->
+			<!--			<div class="menu-icon">🔔 </div>-->
 		</div>
 		<div class="main-content">
 
@@ -20,11 +20,11 @@
 				</div>
 				<div class="balance-block">
 					<p class="sub">Артиклюсы</p>
-						<p class="balance">{{ learningStore.points }}</p>
+					<p class="balance">{{ learningStore.points }}</p>
 				</div>
 				<div class="meta-block">
 					<p class="meta">Дата регистрации</p>
-					<p class="date">{{ authStore.registeredAt || '—' }}</p>
+					<p class="date">{{ regDate || '—' }}</p>
 				</div>
 			</div>
 			<div class="tabs">
@@ -46,7 +46,7 @@
 				<div class="row"><span>Email:</span><span>{{ authStore.email }}</span></div>
 			</div>
 			<div v-if="activeTab === 'progress'">
-				<Progress />
+				<Progress/>
 			</div>
 			<div v-if="activeTab === 'skills'" class="tab-content">
 				<Skills/>
@@ -56,12 +56,13 @@
 </template>
 <script setup>
 	import {userAuthStore} from '../store/authStore.js'
-	import {userlangStore } from '../store/learningStore.js'
-	import { ref } from 'vue'
+	import {userlangStore} from '../store/learningStore.js'
+	import {ref, computed} from 'vue'
 	import Progress from '../src/components/progress.vue'
 	import Skills from '../src/components/skillz.vue'
-    import { onMounted } from 'vue'
-    import { useRouter} from 'vue-router'
+	import {onMounted} from 'vue'
+	import {useRouter} from 'vue-router'
+
 	const authStore = userAuthStore()
 	const learningStore = userlangStore()
 	const router = useRouter()
@@ -73,6 +74,15 @@
 	const setTab = (tab) => {
 		activeTab.value = tab
 	}
+
+	const regDate = computed(() => {
+		if (!authStore.registeredAt) return '-'
+		return new Date(authStore.registeredAt).toLocaleDateString('ru-Ru',  {
+			day: '2-digit',
+			month: '2-digit',
+			year: 'numeric'
+		})
+	})
 
 	onMounted(async () => {
 		await learningStore.loadFromFirebase()
@@ -91,12 +101,12 @@
 		margin-top: 6px;
 		overflow: hidden;
 	}
+
 	.exp-fill {
 		height: 100%;
 		background: linear-gradient(to right, #ffc107, #ff9800);
 		transition: width 0.3s ease;
 	}
-
 
 
 	* {
@@ -285,10 +295,9 @@
 		margin-top: 7px;
 		margin-bottom: 6px;
 		overflow: hidden;
-		box-shadow:
-			0 0 16px #ffd70088,
-			0 0 30px #ffe99e33 inset,
-			0 2px 14px #1b093766;
+		box-shadow: 0 0 16px #ffd70088,
+		0 0 30px #ffe99e33 inset,
+		0 2px 14px #1b093766;
 		position: relative;
 	}
 
@@ -296,10 +305,11 @@
 		height: 100%;
 		background: linear-gradient(90deg, #ffeeba 0%, #ffe170 46%, #c59cff 100%);
 		box-shadow: 0 0 17px #ffe17088, 0 0 44px #bfa5e6cc;
-		transition: width 0.5s cubic-bezier(.35,2,.6,1);
+		transition: width 0.5s cubic-bezier(.35, 2, .6, 1);
 		position: relative;
 		border-radius: 13px;
 	}
+
 	.exp-bar::after {
 		content: '';
 		position: absolute;

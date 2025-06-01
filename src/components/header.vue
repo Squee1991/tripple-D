@@ -286,6 +286,9 @@
 		padding: 15px 30px;
 		margin-bottom: 50px;
 		background: #f5efef;
+		position: sticky;
+		top: 0;
+		z-index: 100;
 	}
 
 	.app-title {
