@@ -1,6 +1,7 @@
 <template>
     <div class="container">
         <Header/>
+        <Baner/>
         <Description/>
         <FeedBack/>
         <Footer/>
@@ -11,6 +12,7 @@
 <script setup>
 
 import Description from '../src/components/DescriptionBlock.vue'
+import Baner from '../src/components/baner.vue'
 import FeedBack from '../src/components/feedBack.vue'
 import Footer from '../src/components/footer.vue'
 import Header from '../src/components/header.vue'
@@ -40,6 +42,5 @@ onMounted(() => {
 .container {
     max-width: 100%;
     margin: 0 auto;
-    overflow-x: hidden;
 }
 </style>

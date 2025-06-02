@@ -296,25 +296,23 @@
 		display: flex;
 		justify-content: center;
 		gap: 18px;
-		margin-top: 16px;
+		margin-top: 10px;
 	}
-
 	.theme-pagination button {
-		background: linear-gradient(90deg, #ffe08a, #ad9747);
-		color: #502b00;
-		border: 2px solid #f8e1b7;
-		border-radius: 14px;
-		padding: 10px 20px;
+		background: linear-gradient(90deg, #8eaaff 60%, #6a6eea 100%);
+		color: #fff;
+		border: none;
+		border-radius: 16px;
+		padding: 10px 22px;
 		font-size: 18px;
 		font-weight: bold;
 		cursor: pointer;
-		box-shadow: 0 2px 8px #a3781e29;
-		transition: 0.3s;
+		box-shadow: 0 2px 12px #7f8cec55;
+		transition: background 0.13s, color 0.11s, transform 0.13s;
 	}
-
 	.theme-pagination button:disabled {
-		background: #fff8e147;
-		color: #b3a270;
+		background: #e7eafc;
+		color: #b3b3db;
 		opacity: 0.6;
 		cursor: not-allowed;
 	}
@@ -371,12 +369,15 @@
 
 	.theme-card {
 		margin: 16px;
-		width: 240px;
-		background: linear-gradient(120deg, #512f0a 55%, #ad8e51 130%);
-		opacity: 80%;
-		border: 4px solid #ffebc2;
-		border-radius: 18px;
-		padding: 24px 12px 28px 12px;
+		width: 225px;
+		background: linear-gradient(120deg, #ebe9fe 65%, #a3a8f6 130%);
+		border: none;
+		border-radius: 22px;
+		box-shadow:
+			0 8px 28px 0 #8d8ee088,
+			0 3px 0 #fff8 inset,
+			0 0px 1.5px #7f56d988;
+		padding: 22px 10px 26px 10px;
 		min-height: 110px;
 		max-width: 220px;
 		display: flex;
@@ -389,10 +390,7 @@
 		user-select: none;
 		transform-style: preserve-3d;
 		backface-visibility: hidden;
-		transform: rotateX(10deg) rotateY(1deg);
-		box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4),
-		inset 0 2px 6px rgba(255, 255, 255, 0.1);
-		transition: transform 0.4s, box-shadow 0.4s;
+		transition: transform 0.28s, box-shadow 0.28s;
 	}
 
 	.theme-card::before {
@@ -412,21 +410,19 @@
 	.theme-card.active,
 	.theme-card:active,
 	.theme-card:hover {
-		transform: rotateX(0deg) rotateZ(0deg) translateY(-8px) scale(1.05);
-		box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5),
-		inset 0 4px 8px rgba(255, 255, 255, 0.15);
-		border: 4px solid #d9ac50;
-		transition: .5s;
+		transform: translateY(-7px) scale(1.045);
+		box-shadow: 0 16px 40px #afacfa77, 0 8px 30px #5f57bd33, 0 3px 0 #fff8 inset;
 	}
 
 	.theme-card-title {
-		font-family: 'Uncial Antiqua', cursive;
-		font-size: 20px;
-		color: #ffefc2;
-		text-shadow: 0 1.5px 6px #42260c99;
+		font-family: 'Montserrat', Arial, sans-serif;
+		font-size: 21px;
+		color: #44318d;
+		text-shadow: 0 2px 12px #f3edff90, 0 0 4px #4837ae70;
 		text-align: center;
 		margin-top: 18px;
-		font-weight: 600;
+		font-weight: 800;
+		letter-spacing: 0.04em;
 	}
 
 	.card-counter {

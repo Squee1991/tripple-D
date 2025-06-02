@@ -10,10 +10,10 @@ const msgAnimationWrapper = ref(null);
 const isVisible = ref(false);
 
 const data = ref({
-    label: 'Have a question ?',
-    title: 'Would you like to get to know me better? Use this form, and I will definitely get back to you.',
+    label: 'Обратная связь',
+    title: 'Имеются пожелания? Заполните эту форму, и мы обязательно ответим вам.',
     btn: {
-        text: 'send a message',
+        text: 'отправить сообщение',
     }
 });
 
@@ -133,10 +133,10 @@ const resetFields = () => {
 .contact__wrapper {
     padding: 50px 20px;
     border-radius: 20px;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    background: white;
-    box-shadow: 0 15px 50px rgba(92, 58, 255, 0.08);
+    /*background: white;*/
+    /*box-shadow: 0 15px 50px rgba(92, 58, 255, 0.08);*/
     position: relative;
     overflow: hidden;
 }
@@ -181,12 +181,16 @@ const resetFields = () => {
 }
 
 .contact__label {
-    font-size: 34px;
-    color: #5c3aff;
+    font-size: 32px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #fff;
     text-align: center;
-    margin-bottom: 30px;
-    font-family: 'Cinzel', serif;
-    font-weight: 600;
+    letter-spacing: 1px;
+    text-shadow: 0 3px 12px #0a195088, 0 2px 2px #fff7, 0 0 2px #ced2ff;
+    filter: drop-shadow(0 1px 0 #7c89e7);
 }
 
 .contact__label:after {
@@ -201,13 +205,16 @@ const resetFields = () => {
 }
 
 .contact__title {
-    font-size: 18px;
-    color: #3a3a3a;
-    line-height: 1.6;
+    font-size: 17px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #ffffff;
     text-align: center;
-    margin-bottom: 25px;
-    font-family: 'Cinzel', serif;
-    font-weight: 400;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 2px #0a195088, 0 2px 2px #fff7, 0 0 2px #ced2ff;
+    filter: drop-shadow(0 1px 0 #7c89e7);
 }
 
 .form__field__inner,
@@ -219,28 +226,41 @@ const resetFields = () => {
 .input,
 .area {
     width: 100%;
-    padding: 15px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    background: #f9faff;
-    box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.05);
-    color: #333;
-    transition: all 0.3s ease;
-    font-family: system-ui, sans-serif;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 600;
+    color: #1a236e;
+    border: none;
+    outline: none;
+    background: linear-gradient(135deg, #f8faff 60%, #e0eaff 100%);
+    box-shadow:
+        0 2px 10px #1a237e12,
+        0 2px 4px 0 #fff6 inset,
+        0 0.5px 0 #5c3aff50 inset;
+    border-radius: 14px 30px 14px 30px / 10px 1px 10px 4px;
+    font-size: 18px;
+    letter-spacing: 0.01em;
+    padding: 15px 18px;
+    transition: background 0.18s, box-shadow 0.16s, color 0.14s;
+    text-shadow: 0 1px 4px #fff6, 0 0px 1px #7f56d988;
 }
 
 .input:focus,
 .area:focus {
-    border-color: #5c3aff;
-    box-shadow: 0 0 0 4px rgba(92, 58, 255, 0.1);
+    background: linear-gradient(135deg, #fff 70%, #f0f7ff 100%);
+    box-shadow:
+        0 4px 18px #3a56e124,
+        0 2px 12px #a193e81a,
+        0 1px 8px #fff8 inset,
+        0 0.5px 0 #5c3aff90 inset;
+    color: #22005e;
     outline: none;
-    background: #fff;
 }
 
 .area {
-    resize: none;
-    height: 160px;
+    min-height: 140px;
+    max-height: 220px;
+    resize: vertical;
+    font-size: 18px;
 }
 
 .error__message {
@@ -250,26 +270,34 @@ const resetFields = () => {
     font-family: system-ui, sans-serif;
 }
 
-.contact__btn {
-    margin-top: 10px;
-    display: inline-block;
+.contact__btn.btn {
     width: 100%;
-    padding: 18px;
-    font-size: 18px;
-    color: white;
-    background: linear-gradient(135deg, #3c65ff, #5c3aff);
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    color: #fff;
+    background: linear-gradient(180deg, #8fa5fd 0%, #547fff 80%);
+    border-radius: 20px;
     border: none;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(92, 58, 255, 0.5);
+    box-shadow:
+        0 6px 24px #849bff44,
+        0 2px 12px #fff7 inset;
+    letter-spacing: 0.04em;
+    text-shadow: 0 3px 12px #5572cbaa, 0 1px 0 #fff9, 0 0px 1px #fff8;
+    transition: background 0.18s, box-shadow 0.13s, transform 0.12s;
+    margin-top: 16px;
+    padding: 18px 0;
     cursor: pointer;
-    transition: all 0.4s ease;
-    font-family: system-ui, sans-serif;
+    transform: none;
 }
 
-.contact__btn:hover {
-    background: linear-gradient(135deg, #5c3aff, #3c65ff);
-    box-shadow: 0 10px 25px rgba(92, 58, 255, 0.7);
-    transform: translateY(-2px);
+.contact__btn.btn:hover {
+    background: linear-gradient(180deg, #adc6ff 10%, #3154cf 100%);
+    box-shadow:
+        0 12px 36px #7a99ff69,
+        0 5px 18px #fff7 inset;
+    color: #f7f7ff;
+    transform: scale(1.035);
 }
 
 @keyframes slideInLeft {
