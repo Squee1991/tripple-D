@@ -1,0 +1,7 @@
+.simplebar-scrollbar:before {
+	background: #c6701d;
+	border-radius: 8px;
+	transition: 2s;
+
+}
+

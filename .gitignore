@@ -13,14 +13,12 @@ node_modules
 logs
 *.log
 
-# Misc
-.DS_Store
-.fleet
-.idea
-
 # Local env files
 .env
 .env.*
 !.env.example
-
+echo service-account.json
+key: process.env.FIREBASE_RECAPTCHA_KEY || ''
+service-account.json
 .vercel
+

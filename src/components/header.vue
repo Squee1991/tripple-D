@@ -1,382 +1,423 @@
 <template>
-	<div>
-		<header class="header">
-			<div class="header__title">
-				<div class="cabinet">
-					<NuxtLink class="cabinet__value" to="/archieve"> Кабинет</NuxtLink>
-				</div>
-				<div class="log__ing-btns">
-					<button class="log__in">Log in</button>
-					<button class="log__in">Sing out</button>
+	<header class="header">
+		<Uioverlay :visible="showAuth" @close="closeAuth"/>
+		<transition name="slide">
+			<SignIn v-if="showAuth"/>
+		</transition>
+		<div class="header-nav__bar">
+			<h1 class="header-nav__logo">DerDieDas</h1>
+			<nav ref="dropdownRefNav" class="header-nav__nav">
+				<ul class="header-nav__list">
+					<li
+						v-for="item in data"
+						:key="item.id"
+						class="header-nav__item"
+						@click="toggleSubmenu(item.id)"
+					>
+						<a :href="item.url || '#'" class="header-nav__link">{{ item.value }}</a>
+						<img
+							v-if="item.icon"
+							:class="['header-nav__arrow', { 'header-nav__arrow--active': clickedMenu === item.id }]"
+							:src="item.icon"
+							alt=""
+						>
+						<ul v-if="item.children && clickedMenu === item.id" class="header-nav__submenu">
+							<li v-for="child in item.children" :key="child.id" class="header-nav__submenu-item">
+								<NuxtLink :to="`${child.url}`" class="header-nav__submenu-link">{{ child.value }}
+								</NuxtLink>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<div class="header-nav__tea">
+				<ForTea/>
+			</div>
+			<div class="header-nav__lang">
+				<LanguageSelector/>
+			</div>
+			<div
+				ref="dropdownRef"
+				v-if="userAuth.name"
+				class="header-nav__user"
+				@click="toggleMenu"
+			>
+				<img class="header-nav__avatar" :src="avatar" alt="User avatar"/>
+				<span class="header-nav__email">{{ userAuth.email }}</span>
+				<img
+					:class="['header-nav__arrow', { 'header-nav__arrow--active': menuOpen }]"
+					:src="Arrow"
+					alt=""
+				>
+				<div v-if="menuOpen" class="header-nav__dropdown">
+					<button
+						v-for="item in menuActions"
+						:key="item.id"
+						class="header-nav__dropdown-btn"
+						@click.stop="item.action"
+					>
+						<img class="header-nav__dropdown-icon" :src="item.icon" alt="">
+						<span>{{ item.label }}</span>
+					</button>
 				</div>
 			</div>
-			<div class="wrapper__header">
-				<div class="header__themen toggler">
-					<div class="option" :class="{ selected: selectedCategory === 'nouns' }"
-					     @click.stop="selectCategory('nouns')">Существительные
-					</div>
-					<div class="option" :class="{ selected: selectedCategory === 'verbs' }"
-					     @click.stop="selectCategory('verbs')">Глаголы
-					</div>
-					<div class="option" :class="{ selected: selectedCategory === 'pronouns' }"
-					     @click.stop="selectCategory('pronouns')">Местоимения
-					</div>
-					<div class="option" :class="{ selected: selectedCategory === 'alphabet' }"
-					     @click.stop="selectCategory('alphabet')">Алфавит
-					</div>
-				</div>
-				<div :class="['nav', { open: selectedCategory === 'nouns' }]">
-					<div class="pagination" v-if="totalPages > 1">
-						<button class="page-btn prew" @click="prevPage" :disabled="currentPage === 1">
-							<img class="img-btn-prew" src="../../assets/images/arrow-prev-small.svg" alt="">
-						</button>
-						<button class="page-btn next" @click="nextPage" :disabled="currentPage === totalPages">
-							<img class="img-btn-prew" src="../../assets/images/arrow-next.svg" alt="">
-						</button>
-					</div>
-					<div class="list">
-						<span
-							v-for="(ruTitle, key) in paginatedTitles"
-							:key="key"
-							class="list__item"
-							:class="{ active: isSelected(key) }"
-							@click="toggleTopic(key)">
-							<span class="label">{{ ruTitle }}</span>
-						</span>
-					</div>
-				</div>
-				<div class="words__right">
-					<div v-if="selectedCategory === 'verbs'" class="go-btn-wrapper">
-						<img src="../../assets/images/developer.svg" alt="">
-						<div class="verbs__error">Раздел "Глаголы" в разработке.</div>
-					</div>
-					<div class="words__choiced" v-if="topicsLoaded">
-						<div v-if="selectedCategory === 'alphabet'">
-							<Alphabet />
-						</div>
-						<div v-else-if="selectedCategory === 'pronouns'">
-							<Pronouns />
-						</div>
-						<Topic v-if="selectedTopics.length" :key="selectedTopics.join('-')" :selected-topics="selectedTopics" />
-					</div>
-
-				</div>
-			</div>
-		</header>
-	</div>
+			<button
+				v-else
+				class="header-nav__login"
+				@click="openAuth"
+			>Войти
+			</button>
+		</div>
+	</header>
 </template>
 
+
 <script setup>
-	import {ref, onMounted, computed} from 'vue'
-	import Topic from '../../pages/topic.vue'
-	import Alphabet from './alphabet.vue'
-	import Pronouns from "./pronouns";
-	const currentPage = ref(1)
-	const pageSize = 10
-	const topicsLoaded = ref(false)
-	const words = ref([])
-	const topicTitles = ref({})
-	const selectedTopics = ref([])
-	const fullData = ref({})
-	const isOpen = ref(false)
-	const selectedCategory = ref('nouns')
+	import {ref, watch, onMounted, onBeforeUnmount} from 'vue'
+	import {useRouter} from 'vue-router'
+	import {userAuthStore} from '../../store/authStore'
+	import SignIn from '../components/logIn.vue'
+	import LanguageSelector from '../components/langSwitcher.vue'
+	import Uioverlay from '../components/Uioverlay.vue'
+	import Arrow from '../../assets/images/arrowNav.svg'
+	import ForTea from '../components/forTea'
+	import avatar from '../../assets/images/avatar.svg'
+	import Logout from '../../assets/images/logout.svg'
+	import User from '../../assets/images/user.svg'
 
-	const currentTopicName = computed(() => {
-		if (selectedCategory.value === 'pronouns') {
-			return 'pronouns'
+	const clickedMenu = ref(null)
+	const showAuth = ref(false)
+	const router = useRouter()
+	const userAuth = userAuthStore()
+	const menuOpen = ref(false)
+	const dropdownRef = ref(null)
+	const dropdownRefNav = ref(null)
+	const data = ref([
+		{
+			id: 'learn',
+			url: '',
+			value: 'Обучение',
+			icon: Arrow,
+			children: [
+				{
+					id: 'tips',
+					url: 'examples',
+					value: 'Введение'
+				},
+				{
+					id: 'examples',
+					url: 'examples',
+					value: 'Правила'
+				},
+				{
+					id: 'selectedTopics',
+					url: 'selectedTopics',
+					value: 'Практика артиклей'
+				}
+			]
+		},
+		{
+			id: 'duel',
+			url: 'duel',
+			value: 'Игровой режим'
+		},
+	])
+
+	const menuActions = ref([
+		{
+			id: 'cabinet',
+			label: 'Кабинет',
+			icon: User,
+			action: () => goTo('cabinet')
+		},
+		{
+			id: 'logout',
+			label: 'Выход',
+			icon: Logout,
+			action: () => userAuth.logOut()
 		}
-		if (selectedCategory.value === 'alphabet') {
-			return 'alphabet'
+	])
+
+	const toggleMenu = () => {
+		menuOpen.value = !menuOpen.value
+	}
+
+	const toggleSubmenu = (id) => {
+		clickedMenu.value = clickedMenu.value === id ? null : id
+	}
+
+	const goTo = (page) => {
+		menuOpen.value = false
+		router.push(`/${page}`)
+	}
+
+	const openAuth = () => showAuth.value = true
+	const closeAuth = () => showAuth.value = false
+
+	const startLearning = () => {
+		userAuth.name ? router.push('/selectedTopics') : openAuth()
+	}
+
+	const handleClickOutside = (event) => {
+		if (menuOpen.value && dropdownRef.value && !dropdownRef.value.contains(event.target)) {
+			menuOpen.value = false
 		}
-		if (selectedCategory.value === 'verbs') {
-			return 'verbs'
+	}
+
+	const handleClickOutsideNav = (event) => {
+		if (clickedMenu.value && dropdownRefNav.value && !dropdownRefNav.value.contains(event.target)) {
+			clickedMenu.value = null
 		}
-		if (selectedCategory.value === 'rules') {
-			return 'rules'
-		}
-		if (selectedCategory.value === 'nouns') {
-			if (selectedTopics.value.length) {
-				return selectedTopics.value[selectedTopics.value.length - 1]
-			}
-			return 'nouns'
-		}
-		return 'unknown'
+	}
+
+	onMounted(() => {
+		document.addEventListener('mousedown', handleClickOutside)
+		document.addEventListener('mousedown', handleClickOutsideNav)
 	})
-	const totalPages = computed(() =>
-		Math.ceil(Object.keys(topicTitles.value).length / pageSize)
-	)
-
-	const paginatedTitles = computed(() => {
-		const keys = Object.keys(topicTitles.value)
-		const start = (currentPage.value - 1) * pageSize
-		const end = start + pageSize
-		return keys.slice(start, end).reduce((acc, key) => {
-			acc[key] = topicTitles.value[key]
-			return acc
-		}, {})
+	onBeforeUnmount(() => {
+		document.removeEventListener('mousedown', handleClickOutside)
+		document.removeEventListener('mousedown', handleClickOutsideNav)
 	})
 
-	function nextPage() {
-		if (currentPage.value < totalPages.value) currentPage.value++
-	}
-
-	function prevPage() {
-		if (currentPage.value > 1) currentPage.value--
-	}
-
-	async function loadTopics() {
-		const res = await fetch('/words.json')
-		const data = await res.json()
-
-
-		topicTitles.value = Object.keys(data).reduce((acc, key) => {
-			acc[key] = nameMap[key] || key
-			return acc
-		}, {})
-
-		fullData.value = data
-	}
-
-	function selectCategory(category) {
-		selectedCategory.value = category
-		localStorage.setItem('selectedCategory', category)
-	}
-
-	function isSelected(key) {
-		return selectedTopics.value.includes(key)
-	}
-
-	function toggleTopic(key) {
-		if (isSelected(key)) {
-			selectedTopics.value = selectedTopics.value.filter(k => k !== key)
-		} else {
-			selectedTopics.value.push(key)
-		}
-		localStorage.setItem('selectedTopics', JSON.stringify(selectedTopics.value))
-		topicsLoaded.value = true
-	}
-
-	onMounted(async () => {
-		await loadTopics()
-		const saved = localStorage.getItem('selectedTopics')
-		if (saved) {
-			try {
-				selectedTopics.value = JSON.parse(saved)
-			} catch (e) {
-				console.error('Ошибка при чтении selectedTopics из localStorage', e)
-			}
-		}
-		const savedCategory = localStorage.getItem('selectedCategory')
-		if (savedCategory) {
-			selectedCategory.value = savedCategory
-		}
-		topicsLoaded.value = true
+	watch(showAuth, (val) => {
+		document.body.style.overflow = val ? 'hidden' : ''
 	})
+
 </script>
 
-
 <style scoped>
-
-	* {
-		box-sizing: border-box;
-		margin: 0;
-		padding: 0;
-	}
-
-	.log__in {
-		color: white;
-		background: none;
-		margin-right: 10px;
-		border: 1px solid green;
-		padding: 10px 20px;
-		border-radius: 5px;
-		transition: .4s;
-		min-width: 100px;
-	}
-
-	.verbs__error {
-		color: white;
-	}
-
-	.log__in:hover {
-		background: green;
-		transition: .4s;
-	}
-
-	.log__ing-btns {
-		padding: 10px;
-	}
-
-	.no__themen {
-		color: white;
-		font-size: 20px;
-	}
+	/*@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');*/
 
 	.header {
-		text-align: center;
-		max-width: 100%;
-		margin: 0 auto;
-		padding: 20px;
-		background-color: #f0f4f7;
-		border-bottom: 2px solid #cce0d0;
+		font-family: 'Inter', sans-serif;
+		position: sticky;
+		top: 0;
+		z-index: 10;
 	}
 
-	.no__themen-wrapper {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
-
-	.wrapper__header {
+	.header-nav__bar {
 		display: flex;
-		gap: 10px;
-		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		padding: 15px 30px;
+		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+		background-color: #3629af;
+		position: relative;
+		z-index: 10;
 	}
 
-	.header__title {
-		background: #1b1b1b;
+	.header-nav__logo {
+		padding: 10px;
+		margin-right: 40px;
+	}
+
+	.header-nav__nav {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
-		margin-bottom: 10px;
 	}
 
-	.cabinet {
-		background: #2e7d32;
-		color: white;
-		padding: 10px 20px;
-		border-radius: 10px;
-		font-weight: bold;
-		transition: background 0.3s ease;
-	}
-
-	.cabinet:hover {
-		background: #1b5e20;
-	}
-
-	.cabinet__value {
-		color: white;
-		text-decoration: none;
-	}
-
-	.header__themen {
+	.header-nav__list {
 		display: flex;
-		flex-direction: column;
-		background-color: #263238;
-		padding: 10px;
-		border-radius: 12px;
-		min-width: 170px;
-	}
-
-	.option {
-		padding: 10px 15px;
-		font-weight: 600;
-		border-radius: 8px;
-		margin-bottom: 8px;
-		cursor: pointer;
-		background: white;
-		transition: background 0.2s ease, color 0.2s ease;
-	}
-
-	.option:hover {
-		background: #aed581;
-	}
-
-	.option.selected {
-		background: #81c784;
-		color: white;
-	}
-
-	.nav {
-		background-color: #263238;
-		border-radius: 12px;
-		padding: 10px;
-		color: white;
-		width: 180px;
-	}
-
-	.list {
-		display: flex;
-		flex-direction: column;
-		gap: 8px;
-	}
-
-	.list__item {
-		background: white;
-		color: #1b1b1b;
-		border-radius: 10px;
-		padding: 8px 12px;
-		font-weight: 500;
-		cursor: pointer;
-		transition: background 0.2s ease;
-	}
-
-	.list__item:hover {
-		background: #f1f8e9;
-	}
-
-	.list__item.active {
-		background: #a5d6a7;
-		color: #1b5e20;
-	}
-
-	.label {
-		font-size: 16px;
-	}
-
-	.words__right {
+		align-items: center;
 		position: relative;
-		flex: 1;
-		background-color: #263238;
-		border-radius: 15px;
-		padding: 0 10px;
-		min-height: 666px;
 	}
 
-	.pagination {
+	.header-nav__item {
+		display: flex;
+		align-items: center;
+		background: linear-gradient(90deg, #366cff 60%, #4c88ff 100%);
+		color: #fff;
+		border-radius: 14px 30px 14px 30px / 30px 14px 30px 14px;
+		box-shadow: 0 2px 8px 0 #15235e44;
+		cursor: pointer;
+		font-weight: 700;
+		font-size: 17px;
+		letter-spacing: 0.06em;
+		text-shadow: 0 1px 2px #26358580;
+		transition: transform 0.12s, box-shadow 0.12s, background 0.12s;
+		margin-bottom: 0;
+		margin-right: 15px;
+	}
+
+	.header-nav__item:hover {
+		background: linear-gradient(90deg, #4c88ff 60%, #366cff 100%);
+		box-shadow: 0 4px 16px 0 #15235e77;
+	}
+
+	.header-nav__link {
+		color: #fff;
+		padding: 12px 20px;
+		text-decoration: none;
+		font-style: italic;
+	}
+
+	.header-nav__arrow {
+		width: 30px;
+		transition: .4s;
+		padding: 5px;
+		transform: scale(1);
+	}
+
+	.header-nav__arrow--active {
+		transform: scale(-1);
+	}
+
+	.header-nav__submenu {
+		overflow: hidden;
+		margin-top: 10px;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		background: linear-gradient(90deg, #366cff 60%, #4c88ff 100%);
+		border-radius: 14px 30px 14px 30px / 30px 14px 30px 14px;
+		min-width: 160px;
+		z-index: 50;
+	}
+
+	.header-nav__submenu-item {
+		padding: 8px 16px;
+		color: white;
+	}
+
+	.header-nav__submenu-link {
+		display: block;
+		padding: 8px 0;
+		color: #fff;
+		font-weight: 700;
+		text-decoration: none;
+		letter-spacing: 0.06em;
+		text-shadow: 0 1px 2px #26358580;
+		transition: background 0.15s, color 0.15s;
+	}
+
+	.header-nav__submenu-item:hover {
+		background: rgba(255,255,255,0.15);
+		color: #fff3ec;
+	}
+
+	.header-nav__tea {
+		margin-left: auto;
+	}
+
+	.header-nav__lang {
+		margin-left: auto;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin-bottom: 5px;
-		gap: 10px;
-	}
-
-	.page-btn {
-		background: transparent;
-		border: none;
 		cursor: pointer;
 	}
 
-	.page-btn:disabled {
-		opacity: 0.3;
-		cursor: not-allowed;
+	.header-nav__user {
+		display: flex;
+		align-items: center;
+		gap: 0.8rem;
+		cursor: pointer;
+		position: relative;
+		max-width: 250px;
+		width: 250px;
+		padding: 8px 20px 8px 12px;
+		border-radius: 22px 30px 18px 30px / 30px 18px 30px 18px;
+		background: linear-gradient(90deg, #a1d2ff 0%, #bda6ff 100%);
+		box-shadow: 0 2px 18px #7e60dd24, 0 1px 6px #fff8 inset;
+		border: 2px solid #a48ae7;
+		margin-left: 22px;
+		user-select: none;
 	}
 
-	.img-btn-prew {
-		width: 24px;
-		height: 24px;
+	.header-nav__avatar {
+		width: 36px;
+		height: 36px;
+		border-radius: 50%;
+		border: 2px solid #c7bfff;
+		background: #f4f8ff;
+		box-shadow: 0 2px 12px #c2bcff55;
 	}
 
-	.go-btn-wrapper {
-		text-align: center;
+	.header-nav__email {
+		color: #472b81;
+		font-size: 15px;
+		font-weight: 600;
+		text-shadow: 0 1px 4px #fff8, 0 0px 1px #6337c288;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		font-family: 'Montserrat', Arial, sans-serif;
+		letter-spacing: 0.01em;
+	}
+
+	.header-nav__dropdown {
+		width: 100%;
 		position: absolute;
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
-		font-size: 18px;
-		color: #444;
+		top: 100%;
+		right: 0;
+		background: linear-gradient(120deg, #fafaff 60%, #e4e2ff 100%);
+		border: 2px solid #a48ae7;
+		border-radius: 18px 26px 22px 28px / 30px 18px 30px 18px;
+		margin-top: 0.5rem;
+		box-shadow: 0 6px 32px #a193e833, 0 1px 8px #fff8 inset;
+		display: flex;
+		flex-direction: column;
+		min-width: 160px;
+		overflow: hidden;
+		animation: menu-pop 0.32s cubic-bezier(.5, 1.8, .5, 1) both;
+		z-index: 100;
 	}
 
-	@media (max-width: 768px) {
-		.wrapper__header {
-			flex-direction: column;
-		}
+	.header-nav__dropdown-btn {
+		display: flex;
+		align-items: center;
+		padding: 12px;
+		text-align: left;
+		background: none;
+		border: none;
+		cursor: pointer;
+		font-size: 16px;
+		color: #6847c4;
+		font-family: 'Montserrat', Arial, sans-serif;
+		font-weight: 700;
+		letter-spacing: 0.01em;
+		border-bottom: 1px solid #ede6ff88;
+		text-shadow: 0 1px 2px #fff6, 0 1px 1px #cabdff44;
+		transition: background 0.15s, color 0.14s, transform 0.09s;
+	}
 
-		.header__themen,
-		.nav {
-			width: 100%;
-		}
+	.header-nav__dropdown-btn:last-child {
+		border-bottom: none;
+	}
+
+	.header-nav__dropdown-btn:hover {
+		background: linear-gradient(90deg, #ecebff 60%, #d2d8fa 100%);
+		color: #c14bff;
+		text-shadow: 0 1px 8px #dfcaff80, 0 1px 2px #fff8;
+	}
+
+	.header-nav__dropdown-icon {
+		width: 30px;
+		margin-right: 15px;
+	}
+
+	.header-nav__login {
+		background: linear-gradient(90deg, #366cff 60%, #4c88ff 100%);
+		color: #fff;
+		font-weight: 800;
+		font-size: 18px;
+		padding: 11px 34px;
+		border-radius: 14px 30px 14px 30px / 30px 14px 30px 14px;
+		box-shadow: 0 4px 18px #15235e35, 0 1px 4px #fff8 inset;
+		cursor: pointer;
+		letter-spacing: 0.06em;
+		text-shadow: 0 1px 4px #26358588, 0 0px 1px #fff8;
+		border: 2px solid #6c76ff;
+		transition: background 0.15s, color 0.15s, box-shadow 0.18s, transform 0.1s;
+		transform: skew(-8deg);
+		margin-left: 20px;
+	}
+
+	.header-nav__login:hover {
+		background: linear-gradient(90deg, #6cbcff 60%, #2462ff 100%);
+		color: #fff3ec;
+		box-shadow: 0 8px 24px #2737b1aa, 0 2px 6px #fff8 inset;
+		transform: skew(-8deg) scale(1.04);
 	}
 
 

@@ -1,180 +1,342 @@
 <template>
-	<div class="register-panel">
-		<div class="register__inner">
-			<div class="form-wrapper">
-				<div class="form-title">{{ mode === 'login' ? 'Авторизация' : 'Регистрация' }}</div>
-
-				<div class="form__swiper">
-					<div class="form__swiper-word" :class="{ active: mode === 'login' }" @click="mode = 'login'">Войти</div>
-					<div class="form__swiper-word" :class="{ active: mode === 'register' }" @click="mode = 'register'">Регистрация</div>
-					<div class="form__swiper-toggle" :class="mode"></div>
+	<div class="auth">
+		<div class="auth__inner">
+			<div class="auth__form">
+				<div class="auth__title">{{ mode === 'login' ? 'Авторизация' : 'Регистрация' }}</div>
+				<div class="auth__tabs">
+					<div
+						class="auth__tab"
+						:class="{ 'auth__tab--active': mode === 'login' }"
+						@click="mode = 'login'"
+					>Войти</div>
+					<div
+						class="auth__tab"
+						:class="{ 'auth__tab--active': mode === 'register' }"
+						@click="mode = 'register'"
+					>Регистрация</div>
+					<div class="auth__toggle" :class="`auth__toggle--${mode}`"></div>
 				</div>
-				<div v-if="mode === 'register'" class="form-field">
-					<label class="form-label">Имя</label>
-					<input class="form-input" type="text" v-model="nameValue"/>
-				</div>
-				<div class="form-field">
-					<label class="form-label">Email</label>
-					<input class="form-input" type="email" v-model="email"/>
-				</div>
-				<div class="form-field">
-					<label class="form-label">Пароль</label>
-					<input class="form-input" type="password" v-model="password"/>
-				</div>
-				<div v-if="mode === 'register'" class="form-field">
-					<label class="form-label">Подтверждение пароля</label>
-					<input class="form-input" type="password" v-model="confirmPassword"/>
-				</div>
-				<div class="form-actions">
-					<div class="submit-button">
-						{{ mode === 'login' ? 'Войти' : 'Зарегистрироваться' }}
+				<div class="auth__fields">
+					<div v-for="field in visibleFields" :key="field.id" class="auth__field">
+						<label class="auth__label">{{ field.label }}</label>
+						<input
+							class="auth__input"
+							:type="field.type"
+							:placeholder="field.placeholder"
+							v-model="field.value"
+							:required="field.required"
+							:maxlength="field.maxlength || null"
+						/>
 					</div>
+					<div class="auth__actions">
+						<button @click="handleSubmit" class="auth__submit">
+							{{ mode === 'login' ? 'Войти' : 'Зарегистрироваться' }}
+						</button>
+					</div>
+					<div v-if="error" class="auth__error">{{ error }}</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </template>
 
-
 <script setup>
-	import { ref } from 'vue'
-	const mode = ref('register')
-	const email = ref('')
-	const password = ref('')
-	const confirmPassword = ref('')
-	const nameValue = ref('')
-</script>
+	import {ref, computed, watch} from 'vue'
+	import {userAuthStore} from '../../store/authStore.js'
+	import {useRouter} from 'vue-router'
 
+	const router = useRouter()
+	const authStore = userAuthStore()
+	const mode = ref('login')
+	const error = ref('')
+	const fields = ref([
+		{
+			id: 1,
+			name: "name",
+			type: "text",
+			placeholder: "введите имя или никнейм",
+			value: "",
+			error: false,
+			required: true,
+			maxlength: 15,
+		},
+		{
+			id: 2,
+			name: "email",
+			type: "email",
+			placeholder: "введите ваш Email",
+			value: "",
+			error: false,
+			required: true
+		},
+		{
+			id: 3,
+			name: "password",
+			type: "password",
+			placeholder: "введите ваш пароль",
+			value: "",
+			error: false,
+			required: true
+		},
+		{
+			id: 4,
+			name: "confirm",
+			type: "password",
+			placeholder: "повторите ваш пароль",
+			value: "",
+			error: false,
+			required: true
+		},
+	]);
 
-<style>
+	const visibleFields = computed(() => {
+		return mode.value === 'login' ? fields.value.filter(field => field.name === 'email' || field.name === 'password') : fields.value
+	})
 
-	.register__inner{
-		padding-top: 100px;
+	const handleSubmit = async () => {
+		try {
+			const values = Object.fromEntries(fields.value.map(field => [field.name, field.value]))
+			if (!values.email || !values.password) {
+				error.value = 'Заполните все поля'
+				return
+			}
+			if (values.password.length < 6) {
+				error.value = 'Пароль должен быть не менее 6 символов'
+				return
+			}
+			if (mode.value === 'register') {
+				if (!values.name) {
+					error.value = 'Введите имя'
+					return
+				}
+				if (values.password !== values.confirm) {
+					error.value = 'Пароли не совпадают'
+					return
+				}
+				await authStore.registerUser({
+					name: values.name,
+					email: values.email,
+					password: values.password
+				})
+				router.push('/authUser')
+			} else {
+				await authStore.loginUser({
+					email: values.email,
+					password: values.password
+				})
+				router.push('/selectedTopics')
+			}
+			fields.value.forEach(field => field.value = '')
+		} catch (e) {
+			if (e.code === 'auth/email-not-verified') {
+				error.value = 'Подтвердите ваш email перед входом. Письмо уже отправлено.'
+				return
+			}
+		}
 	}
 
-	.form__swiper {
-		width: 100%;
-		background: #1e263c;
+	watch(mode, () => {
+		fields.value.forEach(field => {
+			field.value = ''
+		})
+		error.value = ''
+	})
+</script>
+
+<style>
+	.auth {
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 440px;
+		max-width: 100vw;
+		height: 100vh;
+		background: linear-gradient(135deg, #4957c6 0%, #7c89e7 100%);
+		box-shadow: -12px 0 44px #323fa733;
 		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		z-index: 1000;
+	}
+
+	.auth__inner {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.auth__form {
+		width: 98%;
+		margin: 30px auto 0 auto;
+		border-radius: 32px;
+		padding: 38px 34px 30px 34px;
 		position: relative;
-		margin-bottom: 15px;
-		border-radius: 15px;
+		overflow: visible;
+		background: transparent;
+	}
+
+	.auth__title {
+		font-size: 32px;
+		font-family: 'Montserrat', Arial, sans-serif;
+		font-weight: 900;
+		font-style: italic;
+		margin-bottom: 20px;
+		color: #fff;
+		text-align: center;
+		letter-spacing: 1px;
+		text-shadow: 0 3px 12px #0a195088, 0 2px 2px #fff7, 0 0 2px #ced2ff;
+		filter: drop-shadow(0 1px 0 #7c89e7);
+	}
+
+	.auth__tabs {
+		width: 100%;
+		display: flex;
+		background: #eaf0ff;
+		border-radius: 16px;
+		position: relative;
+		margin-bottom: 22px;
+		box-shadow: 0 2px 12px #4e6be655 inset, 0 1px 0 #fff7;
 		overflow: hidden;
 	}
 
-	.form__swiper-word {
-		font-size: 18px;
-		font-weight: 600;
-		padding: 10px;
-		width: 50%;
+	.auth__tab {
+		flex: 1;
 		text-align: center;
-		color: #ccc;
+		padding: 18px 5px 16px 5px;
 		cursor: pointer;
+		color: #586cba;
+		font-family: 'Montserrat', Arial, sans-serif;
+		font-weight: 700;
+		font-style: italic;
+		font-size: 21px;
+		letter-spacing: 1px;
+		position: relative;
+		transition: color 0.23s;
+		user-select: none;
 		z-index: 1;
-		transition: color 0.3s;
 	}
 
-	.form__swiper-word.active {
-		color: #00ffff;
+	.auth__tab--active {
+		color: #fff;
+		text-shadow: 0 2px 12px #4957c6cc, 0 1px 2px #fff, 0 1px 0 #fff6;
 	}
 
-	.form__swiper-toggle {
+	.auth__toggle {
 		position: absolute;
 		top: 0;
 		left: 0;
 		width: 50%;
 		height: 100%;
-		background: #00ffff22;
-		border-radius: 15px;
-		transition: transform 0.3s ease;
+		background: linear-gradient(90deg, #7da0ff 70%, #859bff 100%);
+		border-radius: 16px;
+		transition: transform 0.4s cubic-bezier(.38,1.32,.39,1);
 		z-index: 0;
-	}
-
-	.form__swiper-toggle.register {
-		transform: translateX(100%);
-		transition: .5s;
-	}
-
-	.form__swiper-toggle.login {
-		transform: translateX(0%);
-		transition: .5s;
-	}
-
-	.register-panel {
-		position: fixed;
-		top: 0;
-		right: 0;
-		width: 360px;
-		height: 100vh;
-		background: #11182c;
-		box-shadow: -5px 0 20px #00ffff44;
-		padding: 40px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		transition: transform 0.4s ease;
-		z-index: 1000;
-	}
-
-	.form-wrapper {
-		align-items: center;
-		display: flex;
-		flex-direction: column;
-		padding: 30px;
-		color: white;
-		height: 100vh;
-	}
-
-	.form-title {
-		font-size: 24px;
-		font-weight: bold;
-		text-align: start;
-		width: 100%;
-		color: #00ffff;
-		margin-bottom: 10px;
-	}
-
-	.form-field {
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-		margin-bottom: 10px;
-	}
-
-	.form-label {
-		font-size: 14px;
-		color: #cccccc;
-	}
-
-	.form-input {
-		padding: 10px;
+		box-shadow: 0 0 22px #7fa7ff4d;
 		border: none;
-		border-radius: 6px;
-		background: #1e263c;
-		color: white;
-		font-size: 14px;
 	}
 
-	.form-actions {
-		display: flex;
-		justify-content: center;
-		margin-top: 20px;
+	.auth__toggle--register {
+		transform: translateX(100%);
 	}
 
-	.submit-button {
-		background: #00ffff44;
-		padding: 12px 24px;
-		border-radius: 8px;
-		color: white;
-		font-weight: bold;
-		cursor: pointer;
-		border: 1px solid #00ffffaa;
-		transition: background 0.3s;
+	.auth__toggle--login {
+		transform: translateX(0%);
+	}
+
+	.auth__fields {
 		width: 100%;
 	}
 
-	.submit-button:hover {
-		background: #00ffff88;
+	.auth__field {
+		width: 100%;
+		margin-bottom: 19px;
 	}
+
+	.auth__label {
+		font-size: 15px;
+		margin-bottom: 6px;
+		color: #eaf0ff;
+		text-shadow: 0 2px 4px #35357022, 0 0 2px #fff8;
+		font-family: 'Montserrat', Arial, sans-serif;
+		font-weight: bold;
+		letter-spacing: 1px;
+	}
+
+	.auth__input {
+		width: 100%;
+		padding: 18px 20px;
+		border: none;
+		border-radius: 12px;
+		background: #fff;
+		font-size: 14px;
+		color: #323d4b;
+		font-family: 'Montserrat', Arial, sans-serif;
+		font-weight: 500;
+		box-shadow: 0 2px 12px #6f7eea22 inset;
+		transition: box-shadow 0.2s;
+		outline: none;
+	}
+
+	.auth__input:focus {
+		box-shadow: 0 0 18px #c9deff77, 0 2px 6px #eaf0ffcc inset;
+	}
+
+	.auth__actions {
+		width: 100%;
+		margin-top: 8px;
+	}
+
+	.auth__submit {
+		width: 100%;
+		background: linear-gradient(90deg, #417fff 0%, #6fa4ff 100%);
+		border: none;
+		color: #fff;
+		font-weight: 900;
+		font-size: 24px;
+		padding: 17px 0;
+		border-radius: 18px;
+		cursor: pointer;
+		box-shadow: 0 4px 18px #3ab0ff55, 0 1px 4px #fff8 inset;
+		text-shadow: 0 2px 8px #0b1956aa, 0 1px 0 #fff6;
+		letter-spacing: 1px;
+		font-family: 'Montserrat', Arial, sans-serif;
+		font-style: italic;
+		transition: background 0.22s, box-shadow 0.22s, color 0.13s, transform 0.13s;
+	}
+
+	.auth__submit:hover {
+		background: linear-gradient(90deg, #77b9ff 20%, #417fff 100%);
+		color: #fff;
+		transform: scale(1.03);
+		box-shadow: 0 6px 26px #417fff88, 0 2px 10px #c9deff55 inset;
+	}
+
+	.auth__error {
+		color: #fff;
+		background: linear-gradient(90deg, #e35454 60%, #f76f6f 100%);
+		border-radius: 9px;
+		padding: 12px;
+		text-align: center;
+		font-size: 16px;
+		margin-top: 18px;
+		font-family: 'Montserrat', Arial, sans-serif;
+		font-weight: bold;
+		letter-spacing: 1px;
+		text-shadow: 0 1px 6px #0a195088, 0 0px 2px #fff7;
+		box-shadow: 0 0 10px #e3545444;
+	}
+
+	@media (max-width: 600px) {
+		.auth {
+			width: 100vw;
+			padding: 0;
+		}
+		.auth__form {
+			padding: 16vw 2vw 8vw 2vw;
+			max-width: 100vw;
+		}
+	}
+
 
 </style>

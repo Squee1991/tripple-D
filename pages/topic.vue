@@ -38,6 +38,8 @@
 	import {ref, onMounted, computed} from 'vue'
 	import {userlangStore} from '../store/learningStore.js'
 
+
+
 	const props = defineProps({
 		selectedTopics: {
 			type: Array,
@@ -81,7 +83,10 @@
 		Zeit: 'Время',
 		City: 'Город',
 		School: 'Школа',
-		DaysAndMonths: 'Дни и месяцы'
+		DaysAndMonths: 'Дни и месяцы',
+		Kitchen: 'Кухня',
+		Health: 'Здоровье'
+
 	}
 
 	onMounted(async () => {
@@ -111,10 +116,19 @@
 		return selectedWords.value.some(w => w.de === word.de)
 	}
 
-	function addAllWords() {
-		const newWords = words.value.filter(word => !isSelected(word))
-		newWords.forEach(word => store.addWord(word))
+	async function addAllWords() {
+		const topicKey = topics.value[0]
+
+		const wordsToAdd = words.value.map(word => ({
+			...word,
+			topic: topicKey
+		}))
+
+		await store.setWords(wordsToAdd)
+
+		store.updateSelectedTopic(topicKey, wordsToAdd.length)
 	}
+
 
 	function removeAllWords() {
 		store.words = store.words.filter(w => !words.value.some(word => word.de === w.de))
@@ -125,10 +139,15 @@
 
 	watch(() => props.selectedTopics, async (newTopics) => {
 		if (newTopics.length) {
-			topics.value = newTopics // 💥 ОБЯЗАТЕЛЬНО
+			topics.value = newTopics
 			const res = await fetch('/words.json')
 			const data = await res.json()
-			const allWords = newTopics.flatMap(key => data[key] || [])
+			const allWords = newTopics.flatMap(key => {
+				return (data[key] || []).map(word => ({
+					...word,
+					topic: key
+				}))
+			})
 			words.value = allWords
 			currentTitle.value = newTopics.map(k => nameMap[k] || k).join(', ')
 			currentPage.value = 1
@@ -141,6 +160,10 @@
 	}, { immediate: true })
 	watch(words, () => {
 		currentPage.value = 1
+	})
+
+	definePageMeta({
+		middleware: ['auth'],
 	})
 
 </script>
