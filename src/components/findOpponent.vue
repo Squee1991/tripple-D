@@ -3,7 +3,6 @@
 		<ThemeExplain v-if="showInfo" @close="showInfo = false"/>
 		<div class="match-header">ПОЕДИНОК АРТИКЛЕЙ</div>
 		<div class="match-layout">
-			<!-- Левая колонка: игроки -->
 			<div class="panel left-panel">
 				<div class="panel-title">Данные игрока</div>
 				<div class="player-slot">Кол-во побед</div>
@@ -12,7 +11,6 @@
 				<div class="player-slot">Кол-во очков</div>
 				<div class="chat-info">Добро пожаловать в артикль-чат!</div>
 			</div>
-			<!-- Центр: поиск / ожидание -->
 			<div class="panel center-panel">
 				<div class="center-panel-header">
 					<div class="panel-title">Темы</div>
@@ -139,14 +137,6 @@
 		await userBattle.generateuserDeck()
 		showDeck.value = true
 	}
-	const goToDeck = async () => {
-		if (!userBattle.selectedTheme) {
-			message.value = 'Сначала выбери тему!'
-			return
-		}
-		await userBattle.generateuserDeck()
-		router.push('/deck')
-	}
 
 	const findOpponent = async () => {
 		loading.value = true
@@ -156,7 +146,7 @@
 			loading.value = false
 			return
 		}
-		// 1. Пытаемся присоединиться к чужой сессии
+		// Тут мы присоединяемя к чужой сессии
 		const q = query(
 			collection(db, 'sessions'),
 			where('guestId', '==', null),
@@ -192,7 +182,7 @@
 			}
 			loading.value = false
 		} else {
-			// 2. Создаём свою сессию — и запускаем таймер перепоиска
+			//Ниже создается сессия (своя) и таймер по поиску если нажали например одновременно
 			const newSessionRef = await addDoc(collection(db, 'sessions'), {
 				hostId: uid.value,
 				guestId: null,
@@ -209,9 +199,9 @@
 			message.value = ''
 			loading.value = false
 
-			// Через 10 секунд попробуем найти чужую сессию, если не подключился никто
+			// Через 10 секунд попробуем найти чужую сессию, если не подключился никто или нажали одновременно
 			mySessionTimeout.value = setTimeout(async () => {
-				// если никто не подключился — повторно ищем чужие сессии, кроме своей
+				// если никто не подключился — повторно ищем чужие сессии, кроме своей (чтобы не подключиться к своей
 				if (sessionData.value && !sessionData.value.guestId) {
 					const q2 = query(
 						collection(db, 'sessions'),
@@ -221,7 +211,7 @@
 						limit(1)
 					)
 					const snapshot2 = await getDocs(q2)
-					// нашли чужую сессию, отличную от своей
+					// тут мы нашли чужую сессию
 					if (!snapshot2.empty && snapshot2.docs[0].id !== mySessionId.value) {
 						const foreignSession = snapshot2.docs[0]
 						const foreignSessionRef = doc(db, 'sessions', foreignSession.id)
@@ -240,11 +230,10 @@
 							sessionId.value = foreignSession.id
 							listenToSession(foreignSession.id)
 							message.value = ''
-							// Удаляем свою висячую сессию
+							// Удаляется своя сессия если присоединились к чужой
 							await deleteDoc(doc(db, 'sessions', mySessionId.value))
 							mySessionId.value = null
 						} catch (error) {
-							// ничего, просто остаёмся хостом, ждём гостя дальше
 						}
 					}
 				}
@@ -252,7 +241,7 @@
 		}
 	}
 
-	// 2. Покинуть сессию
+	// Тут мы покидаем сессию
 	const leaveSession = async () => {
 		if (mySessionTimeout.value) clearTimeout(mySessionTimeout.value)
 		if (sessionId.value) {
@@ -265,7 +254,7 @@
 			}, 1500)
 		}
 	}
-	// 3. Готовность к бою
+	// 3. Тут мы жмем что принимаем сессию и готовы к бою
 	const markReady = async () => {
 		if (!uid.value || !sessionId.value || !sessionData.value) return
 		const sessionRef = doc(db, 'sessions', sessionId.value)
@@ -282,7 +271,7 @@
 		unsubscribe.value = onSnapshot(sessionRef, (docSnap) => {
 			const data = docSnap.data()
 			sessionData.value = data
-			// Переход в бой если оба готовы
+			// Тут происходит Переход в бой если оба готовы и пуш на страницу боя
 			if (data && data.status === 'active') {
 				router.push(`/battle?id=${id}`)
 			}
@@ -294,11 +283,12 @@
 			}
 		})
 	}
-	// 5. Автоматический старт боя если оба готовы
+	// Автоматический старт боя если оба готовы
 	onUnmounted(() => {
 		if (mySessionTimeout.value) clearTimeout(mySessionTimeout.value)
 		if (unsubscribe.value) unsubscribe.value()
 	})
+
 	// Оба игрока подключены (оба нажали "Найти противника")
 	const bothPlayersConnected = computed(() =>
 		sessionData.value && sessionData.value.status === 'pending' && sessionData.value.hostId && sessionData.value.guestId

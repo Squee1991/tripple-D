@@ -17,14 +17,13 @@
 	</transition>
 </template>
 
-
 <script setup>
 	import {ref, computed} from 'vue'
 	import {useRouter} from 'vue-router'
 	import {userlangStore} from '/store/learningStore.js'
 
 	const selectedTopic = ref(null)
-	const topicWords = ref([])
+
 	const router = useRouter()
 	const store = userlangStore()
 
@@ -104,7 +103,7 @@
 				}
 			})
 		} catch (e) {
-			console.error('Ошибка загрузки слов:', e)
+
 		}
 	}
 

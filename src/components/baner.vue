@@ -1,20 +1,26 @@
 <template>
-	<div  v-if="showAuth"  class="auth-overlay" @click.self="closeAuth"></div>
+	<Overlay :visible="showAuth" @close="closeAuth" />
+	<transition name="banner__slide">
+		<SignIn v-if="showAuth" @success="closeAuth" />
+	</transition>
 	<div class="banner">
-		<div class="banner__wrapper">
-			<div class="banner__content-left">
-				<div class="articles-orbit">
-					<span class="orbit-word der" @click="triggerGlow('der')">Der</span>
-					<span class="orbit-word die" @click="triggerGlow('die')">Die</span>
-					<span class="orbit-word das" @click="triggerGlow('das')">Das</span>
+		<section class="banner__section">
+			<div class="banner__wrapper">
+				<div class="banner__content">
+					<div class="banner__orbit">
+						<span class="banner__orbit-word banner__orbit-word--der" @click="triggerGlow('der')">Der</span>
+						<span class="banner__orbit-word banner__orbit-word--die" @click="triggerGlow('die')">Die</span>
+						<span class="banner__orbit-word banner__orbit-word--das" @click="triggerGlow('das')">Das</span>
+					</div>
+					<p class="banner__subtitle">
+						Изучи немецкие артикли, прокачай магические навыки и побеждай соперников в карточных битвах!
+					</p>
+					<button class="banner__button" @click="startLearning">Начать путь</button>
 				</div>
-				<p class="hero-subtitle">Изучи немецкие артикли, прокачай магические навыки и побеждай соперников в
-					карточных битвах!</p>
-				<button class="start-btn" @click="startLearning">Начать путь</button>
-			</div>
-			<div class="mage">
-				<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 470 512"
-				     style="enable-background:new 0 0 512 512;" xml:space="preserve" width="412" height="412">
+				<div class="banner__mage">
+					<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="Capa_1" x="0px" y="0px"
+					     viewBox="0 0 470 512"
+					     style="enable-background:new 0 0 512 512;" xml:space="preserve" width="412" height="412">
 <g>
 	<g>
 		<g>
@@ -166,16 +172,15 @@
 	</g>
 </g>
 </svg>
+				</div>
 			</div>
-		</div>
+		</section>
 	</div>
-	<transition name="slide" >
-		<SignIn v-if="showAuth" @success="closeAuth"/>
-	</transition>
 </template>
 
 <script setup>
 	import SignIn from '../components/logIn.vue'
+	import Overlay from '../components/Uioverlay.vue'
 	import {useRouter} from 'vue-router'
 	import {userAuthStore} from '../../store/authStore'
 	import {ref, watch} from "vue";
@@ -198,11 +203,13 @@
 			glowType.value = null
 			setTimeout(() => {
 				fadingGlow.value = null
-			}, 4110)
+			}, 3333)
 		}, 1111)
 	}
 
-	const closeAuth = () => showAuth.value = false
+	const closeAuth = () => {
+		showAuth.value = false
+	}
 
 	const startLearning = () => {
 		userAuth.name ? router.push('/selectedTopics') : openAuth()
@@ -216,10 +223,6 @@
 
 
 <style>
-	.banner {
-		padding: 30px 70px;
-		background: linear-gradient(135deg, #1d3168, #e0e7ff);
-	}
 
 	.banner__wrapper {
 		display: flex;
@@ -228,14 +231,19 @@
 		padding: 40px 0;
 	}
 
-	.mage {
+	.banner__section {
+		background: linear-gradient(135deg, #294cad, #3c57b4);
+		padding: 30px 70px;
+	}
+
+	.banner__mage {
 		width: 412px;
 		height: 416px;
 		padding: 10px;
 		overflow: visible;
 	}
 
-	.hero-subtitle {
+	.banner__subtitle {
 		max-width: 900px;
 		font-size: 24px;
 		font-family: 'Kurale', serif;
@@ -257,7 +265,7 @@
 		padding: 40px;
 	}
 
-	.start-btn {
+	.banner__button {
 		width: 50%;
 		padding: 14px 40px;
 		background: linear-gradient(180deg, #366cff 60%, #4c88ff 100%);
@@ -276,23 +284,10 @@
 		transition: background 0.15s, transform 0.1s;
 	}
 
-	.start-btn:hover {
+	.banner__button:hover {
 		background: linear-gradient(180deg, #82ff7a 10%, #27e500 100%);
 		transform: skew(-8deg) scale(1.03);
 		box-shadow: 0 8px 24px #136b21ee, 0 2px 6px #fff8 inset;
-	}
-
-	.auth-overlay {
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background: rgba(0, 0, 0, 0.5);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		z-index: 50;
 	}
 
 	.fade-enter-active, .fade-leave-active,
@@ -306,13 +301,13 @@
 		transform: translateX(+100%);
 	}
 
-	.articles-orbit {
+	.banner__orbit {
 		display: flex;
 		gap: 15px;
 		margin-bottom: 30px;
 	}
 
-	.orbit-word {
+	.banner__orbit-word {
 		display: inline-block;
 		padding: 10px 36px;
 		font-size: 44px;
@@ -330,43 +325,30 @@
 		user-select: none;
 	}
 
-	.orbit-word:active {
+	.banner__orbit-word:active {
 		transform: skew(-8deg) scale(0.97);
 	}
 
-	.orbit-word.der {
+	.banner__orbit-word--der {
 		background: linear-gradient(180deg, #000000 0%, #031126 100%);
 		color: #fff;
 		box-shadow: 0 4px 0 black, 0 8px 30px #23489966, 0 1px 4px #fff8 inset;
 		text-shadow: 0 2px 10px #a8d8ffcc, 0 1px 2px #16305a80;
 	}
 
-	.orbit-word.die {
+	.banner__orbit-word--die {
 		background: linear-gradient(180deg, #ff6161 0%, #d00000 100%);
 		color: #fff;
 		box-shadow: 0 5px 0 #830101, 0 8px 30px #9d313155, 0 1px 4px #fff8 inset;
 		text-shadow: 0 2px 10px #ffc7c7cc, 0 1px 2px #80000090;
 	}
 
-	.orbit-word.das {
+	.banner__orbit-word--das {
 		background: linear-gradient(180deg, gold 0%, gold 100%);
 		color: #fff9dc;
 		box-shadow: 0 5px 0 #c6a502, 0 8px 30px #e6cb5185, 0 1px 4px #fff8 inset;
 		text-shadow: 0 2px 10px #fffbe2cc, 0 1px 2px #a0851099;
 	}
-
-	/*.orbit-word::before {*/
-	/*	content: '';*/
-	/*	position: absolute;*/
-	/*	left: 10%;*/
-	/*	top: 8%;*/
-	/*	width: 80%;*/
-	/*	height: 38%;*/
-	/*	border-radius: 16px 16px 40px 40px/20px 20px 50px 50px;*/
-	/*	background: linear-gradient(180deg, #fff9 80%, #fff0 100%);*/
-	/*	opacity: 0.55;*/
-	/*	pointer-events: none;*/
-	/*}*/
 
 
 	.fade-glow.glow-red {

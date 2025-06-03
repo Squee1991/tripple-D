@@ -11,14 +11,10 @@
 		});
 	};
 
-
 	const handleScroll = () => {
-		if (window.scrollY > 1000) {
-			showScrollButton.value = true;
-		} else {
-			showScrollButton.value = false;
-		}
+		window.scrollY > 700 ? showScrollButton.value = true : showScrollButton.value = false;
 	};
+
 	onMounted(() => {
 		window.addEventListener('scroll', handleScroll);
 	});
@@ -26,6 +22,7 @@
 	onUnmounted(() => {
 		window.removeEventListener('scroll', handleScroll);
 	});
+
 </script>
 
 <template>

@@ -1,13 +1,15 @@
 <template>
 	<div>
-
+		<NuxtLink to="/">На главную</NuxtLink>
 	</div>
 </template>
 
-<script>
-	export default {
+<script setup>
 
-	}
+	definePageMeta({
+		layout: 'footerlayout'
+	})
+
 </script>
 
 <style scoped>

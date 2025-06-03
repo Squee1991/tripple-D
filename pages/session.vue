@@ -1,63 +1,64 @@
 <template>
-	<div class="session-wrapper" v-if="isReady">
-		<div v-if="!finished && currentWord && currentMode">
-			<div class="progress-line">
-				<span>Слово {{ store.currentIndex + 1 }} / {{ totalWords }}</span>
-				<span>Способ: <b>{{ modeLabel(currentMode) }}</b> ({{ currentModeIndex + 1 }}/{{ selectedModes.length }})</span>
-			</div>
-			<div class="word-block">
-				<div class="word-question">
-					<span>слово: {{ currentWord?.ru }}</span>
+	<div class="session">
+		<div class="session__wrapper" v-if="isReady">
+			<div v-if="!finished && currentWord && currentMode">
+				<div class="progress-line">
+					<span>Слово {{ store.currentIndex + 1 }} / {{ totalWords }}</span>
+					<span>Способ: <b>{{ modeLabel(currentMode) }}</b> ({{ currentModeIndex + 1 }}/{{ selectedModes.length }})</span>
 				</div>
-				<div class="mode-exercise">
-					<div v-if="currentMode === 'article'">
-						<p>Впиши артикль для <b>{{ currentWord.de }}</b>:</p>
-						<input v-model="userInput" class="input"/>
+				<div class="word-block">
+					<div class="word-question">
+						<span>слово: {{ currentWord?.ru }}</span>
 					</div>
-					<div v-if="currentMode === 'letters'">
-						<p>Собери слово из букв: <b>{{ currentWord.article }}</b></p>
-						<div class="letters">
-							<button v-for="(letter, i) in shuffledLetters" :key="i" :disabled="usedLetters[i]"
-							        @click="addLetter(letter, i)">
-								{{ letter === ' ' ? '␣' : letter }}
-							</button>
+					<div class="mode-exercise">
+						<div v-if="currentMode === 'article'">
+							<p>Впиши артикль для <b>{{ currentWord.de }}</b>:</p>
+							<input v-model="userInput" class="input"/>
 						</div>
-						<input v-model="userInput" class="input"/>
+						<div v-if="currentMode === 'letters'">
+							<p>Собери слово из букв: <b>{{ currentWord.article }}</b></p>
+							<div class="letters">
+								<button v-for="(letter, i) in shuffledLetters" :key="i" :disabled="usedLetters[i]"
+								        @click="addLetter(letter, i)">
+									{{ letter === ' ' ? '␣' : letter }}
+								</button>
+							</div>
+							<input v-model="userInput" class="input"/>
+						</div>
+						<div v-if="currentMode === 'wordArticle'">
+							<p>Впиши артикль и слово (например: <b>die Lampe</b>):</p>
+							<input v-model="userInput" class="input"/>
+						</div>
+						<div v-if="currentMode === 'plural'">
+							<p>Впиши форму множественного числа для: <b>{{ currentWord.de }}</b>:</p>
+							<input v-model="userInput" class="input"/>
+						</div>
+						<div v-if="currentMode === 'audio'">
+							<p>Прослушай и впиши слово:</p>
+							<button @click="speak(currentWord.de)" class="audio-btn">
+								<img class="megaphones__icon" src="../assets/images/megaphone.svg" alt="">
+								<span>Прослушать</span>
+							</button>
+							<input v-model="userInput" class="input"/>
+						</div>
 					</div>
-					<div v-if="currentMode === 'wordArticle'">
-						<p>Впиши артикль и слово (например: <b>die Lampe</b>):</p>
-						<input v-model="userInput" class="input"/>
+					<div v-if="result" class="answer-result" :class="result">
+						<span v-if="result === 'correct'">✅ Верно!</span>
+						<span v-if="result === 'wrong'">❌ Неверно.</span>
+						<span v-if="currentMode === 'article'">Правильный ответ: {{ currentWord.article }}</span>
+						<span v-if="currentMode === 'letters' || currentMode === 'audio'">Правильный ответ: {{ currentWord.de }}</span>
+						<span v-if="currentMode === 'wordArticle'">Правильно: {{ currentWord.article }} {{ currentWord.de }}</span>
+						<span v-if="currentMode === 'plural'">Правильно: {{ currentWord.plural }}</span>
 					</div>
-					<div v-if="currentMode === 'plural'">
-						<p>Впиши форму множественного числа для:  <b>{{ currentWord.de }}</b>:</p>
-						<input v-model="userInput" class="input"/>
-					</div>
-					<div v-if="currentMode === 'audio'">
-						<p>Прослушай и впиши слово:</p>
-						<button @click="speak(currentWord.de)" class="audio-btn">
-							<img class="megaphones__icon" src="../assets/images/megaphone.svg" alt="">
-							<span>Прослушать</span>
-						</button>
-						<input v-model="userInput" class="input"/>
-					</div>
+					<button class="next-btn" @click="checkAnswer" :disabled="isChecking || !userInput">Проверить
+					</button>
 				</div>
-				<div v-if="result" class="answer-result" :class="result">
-					<span v-if="result === 'correct'">✅ Верно!</span>
-					<span v-if="result === 'wrong'">❌ Неверно. <span v-if="currentMode === 'article'">
-						Правильный ответ: {{ currentWord.article }}
-					</span>
-            <span v-if="currentMode === 'letters' || currentMode === 'audio'">Правильный ответ: {{ currentWord.de }}</span>
-            <span v-if="currentMode === 'wordArticle'">Правильно: {{ currentWord.article }} {{ currentWord.de }}</span>
-            <span v-if="currentMode === 'plural'">Правильно: {{ currentWord.plural }}</span>
-          </span>
-				</div>
-				<button class="next-btn" @click="checkAnswer" :disabled="isChecking || !userInput">Проверить</button>
 			</div>
-		</div>
-		<div v-else class="finish-block">
-			<h2>🎉 Обучение завершено!</h2>
-			<button class="again-btn" @click="restart">Пройти снова</button>
-			<router-link class="home-btn" to="/">Назад к темам</router-link>
+			<div v-else class="finish-block">
+				<h2>Обучение завершено!</h2>
+				<button class="again-btn" @click="restart">Пройти снова</button>
+				<router-link class="home-btn" to="/">Назад к темам</router-link>
+			</div>
 		</div>
 	</div>
 </template>
@@ -196,7 +197,8 @@
 </script>
 
 <style scoped>
-	.session-wrapper {
+
+	.session__wrapper {
 		max-width: 1000px;
 		margin: 60px auto;
 		/*background: linear-gradient(145deg, #4a2e12, #2d1a0c);*/

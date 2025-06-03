@@ -38,7 +38,6 @@
 						class="word-row"
 					>
 						<div class="word-cell word-ru">{{ word.ru }}</div>
-
 						<div
 							v-for="mode in learningModes"
 							:key="mode.key"
@@ -53,7 +52,6 @@
 						</div>
 					</div>
 				</div>
-
 				<div class="pagination" v-if="filteredWords(topic).length > wordsPerPage">
 					<button @click="prevPage" :disabled="currentPage === 1">Назад</button>
 					<span>{{ currentPage }} / {{ totalPages(topic) }}</span>

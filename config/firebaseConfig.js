@@ -4,5 +4,5 @@ export const firebaseConfig = {
     projectId: 'tripple-d',
     storageBucket: 'tripple-d.appspot.com',
     messagingSenderId: '232501751388',
-    appId: '1:232501751388:web:abcdef123456'  // скопируйте полный appId из консоли
+    appId: '1:232501751388:web:abcdef123456'
 }

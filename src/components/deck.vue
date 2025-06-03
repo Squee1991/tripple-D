@@ -35,13 +35,15 @@
 </template>
 
 <script setup>
-	import { onMounted} from 'vue'
-	import { userBattleStore } from '../../store/BattleStore.js'
-	import { useThemeCardStore } from '../../store/themeStore.js'
-	const { userDeck } = userBattleStore()
+	import {computed, onMounted} from 'vue'
+	import {userBattleStore} from '../../store/BattleStore.js'
+	import {useThemeCardStore} from '../../store/themeStore.js'
+
+	const {userDeck} = userBattleStore()
 	const useTheme = useThemeCardStore()
 	const userBattle = userBattleStore()
-	const selectedTheme = computed(() => userBattle.selectedTheme)
+
+	// const selectedTheme = computed(() => userBattle.selectedTheme)
 	function getSpellIcon(id) {
 		try {
 			return new URL(`../../assets/images/spellIcons/${id}.svg`, import.meta.url).href
@@ -72,7 +74,8 @@
 
 	.deck__title {
 		width: 100%;
-		display: flex;justify-content: center;
+		display: flex;
+		justify-content: center;
 		margin-bottom: 30px;
 		padding: 0 10px 10px 10px;
 	}
@@ -130,7 +133,7 @@
 	.card__name {
 		left: 50%;
 		transform: translateX(-50%);
-		top:-31px;
+		top: -31px;
 		position: absolute;
 		width: 155px;
 		text-align: center;
@@ -153,6 +156,7 @@
 		align-items: center;
 		border: 4px solid #8d7c7c;
 	}
+
 	.card__image--item {
 		width: 100%;
 		height: 100%;

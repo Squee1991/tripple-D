@@ -9,12 +9,11 @@ const io = new Server(3001, {
 console.log("Socket на порту 3001")
 
 io.on("connection", (socket) => {
-	console.log("🔌 Новый игрок подключен")
+	console.log("Новый игрок")
 	socket.on("join", ({ sessionId, uid }) => {
 		socket.join(sessionId)
 		socket.sessionId = sessionId
 		socket.uid = uid
-
 		io.to(sessionId).emit("playerJoined", { uid })
 	})
 

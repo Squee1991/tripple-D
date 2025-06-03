@@ -47,9 +47,7 @@
 		font-family: 'Montserrat', 'Inter', sans-serif;
 		opacity: 0;
 		transform: translateY(20px);
-
 	}
-
 
 	.footer.visible {
 		opacity: 1;

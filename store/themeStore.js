@@ -37,7 +37,7 @@ export const useThemeCardStore = defineStore('theme', () => {
 		Amount: 'Колличество',
 		Informatik: 'Информатика'
 	}
-
+   // Загружаем темы
 	const loadthemes = async () => {
 		const response = await fetch('/words.json')
 		const raw = await response.json()

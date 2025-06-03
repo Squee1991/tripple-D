@@ -1,21 +1,26 @@
 <template>
-	<div class="register-panel">
-		<div class="register__inner">
-			<div class="form-wrapper">
-				<div class="form-title">{{ mode === 'login' ? 'Авторизация' : 'Регистрация' }}</div>
-				<div class="form__swiper">
-					<div class="form__swiper-word" :class="{ active: mode === 'login' }" @click="mode = 'login'">Войти
-					</div>
-					<div class="form__swiper-word" :class="{ active: mode === 'register' }" @click="mode = 'register'">
-						Регистрация
-					</div>
-					<div class="form__swiper-toggle" :class="mode"></div>
+	<div class="auth">
+		<div class="auth__inner">
+			<div class="auth__form">
+				<div class="auth__title">{{ mode === 'login' ? 'Авторизация' : 'Регистрация' }}</div>
+				<div class="auth__tabs">
+					<div
+						class="auth__tab"
+						:class="{ 'auth__tab--active': mode === 'login' }"
+						@click="mode = 'login'"
+					>Войти</div>
+					<div
+						class="auth__tab"
+						:class="{ 'auth__tab--active': mode === 'register' }"
+						@click="mode = 'register'"
+					>Регистрация</div>
+					<div class="auth__toggle" :class="`auth__toggle--${mode}`"></div>
 				</div>
-				<div class="fields__group">
-					<div v-for="field in visibleFields" :key="field.id" class="form-field">
-						<label class="form-label">{{ field.label }}</label>
+				<div class="auth__fields">
+					<div v-for="field in visibleFields" :key="field.id" class="auth__field">
+						<label class="auth__label">{{ field.label }}</label>
 						<input
-							class="form-input"
+							class="auth__input"
 							:type="field.type"
 							:placeholder="field.placeholder"
 							v-model="field.value"
@@ -23,17 +28,18 @@
 							:maxlength="field.maxlength || null"
 						/>
 					</div>
-					<div class="form-actions">
-						<button @click="handleSubmit" class="submit-button">
+					<div class="auth__actions">
+						<button @click="handleSubmit" class="auth__submit">
 							{{ mode === 'login' ? 'Войти' : 'Зарегистрироваться' }}
 						</button>
 					</div>
-					<div v-if="error" class="error-message">{{ error }}</div>
+					<div v-if="error" class="auth__error">{{ error }}</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </template>
+
 <script setup>
 	import {ref, computed, watch} from 'vue'
 	import {userAuthStore} from '../../store/authStore.js'
@@ -138,7 +144,7 @@
 </script>
 
 <style>
-	.register-panel {
+	.auth {
 		position: fixed;
 		top: 0;
 		right: 0;
@@ -146,34 +152,31 @@
 		max-width: 100vw;
 		height: 100vh;
 		background: linear-gradient(135deg, #4957c6 0%, #7c89e7 100%);
-		box-shadow: -12px 0 44px #323fa733, 0 0px 0 #000;
-		padding: 0;
+		box-shadow: -12px 0 44px #323fa733;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		z-index: 1000;
 	}
 
-	.register__inner {
+	.auth__inner {
 		height: 100%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 	}
 
-	.form-wrapper {
+	.auth__form {
 		width: 98%;
 		margin: 30px auto 0 auto;
-		/*background: linear-gradient(120deg, #5e6bdf 70%, #6f7eea 100%);*/
 		border-radius: 32px;
 		padding: 38px 34px 30px 34px;
-		/*box-shadow: 0 6px 36px #25306d48, 0 0px 0 #e7eafc00;*/
-		border: none;
 		position: relative;
 		overflow: visible;
+		background: transparent;
 	}
 
-	.form-title {
+	.auth__title {
 		font-size: 32px;
 		font-family: 'Montserrat', Arial, sans-serif;
 		font-weight: 900;
@@ -186,7 +189,7 @@
 		filter: drop-shadow(0 1px 0 #7c89e7);
 	}
 
-	.form__swiper {
+	.auth__tabs {
 		width: 100%;
 		display: flex;
 		background: #eaf0ff;
@@ -194,11 +197,10 @@
 		position: relative;
 		margin-bottom: 22px;
 		box-shadow: 0 2px 12px #4e6be655 inset, 0 1px 0 #fff7;
-		border: none;
 		overflow: hidden;
 	}
 
-	.form__swiper-word {
+	.auth__tab {
 		flex: 1;
 		text-align: center;
 		padding: 18px 5px 16px 5px;
@@ -215,12 +217,12 @@
 		z-index: 1;
 	}
 
-	.form__swiper-word.active {
+	.auth__tab--active {
 		color: #fff;
 		text-shadow: 0 2px 12px #4957c6cc, 0 1px 2px #fff, 0 1px 0 #fff6;
 	}
 
-	.form__swiper-toggle {
+	.auth__toggle {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -234,24 +236,24 @@
 		border: none;
 	}
 
-	.form__swiper-toggle.register {
+	.auth__toggle--register {
 		transform: translateX(100%);
 	}
 
-	.form__swiper-toggle.login {
+	.auth__toggle--login {
 		transform: translateX(0%);
 	}
 
-	.fields__group {
+	.auth__fields {
 		width: 100%;
 	}
 
-	.form-field {
+	.auth__field {
 		width: 100%;
 		margin-bottom: 19px;
 	}
 
-	.form-label {
+	.auth__label {
 		font-size: 15px;
 		margin-bottom: 6px;
 		color: #eaf0ff;
@@ -261,7 +263,7 @@
 		letter-spacing: 1px;
 	}
 
-	.form-input {
+	.auth__input {
 		width: 100%;
 		padding: 18px 20px;
 		border: none;
@@ -271,21 +273,21 @@
 		color: #323d4b;
 		font-family: 'Montserrat', Arial, sans-serif;
 		font-weight: 500;
-		box-shadow: 0 2px 12px #6f7eea22 inset, 0 0px 0 #7fa7ff00;
+		box-shadow: 0 2px 12px #6f7eea22 inset;
 		transition: box-shadow 0.2s;
 		outline: none;
 	}
 
-	.form-input:focus {
+	.auth__input:focus {
 		box-shadow: 0 0 18px #c9deff77, 0 2px 6px #eaf0ffcc inset;
 	}
 
-	.form-actions {
+	.auth__actions {
 		width: 100%;
 		margin-top: 8px;
 	}
 
-	.submit-button {
+	.auth__submit {
 		width: 100%;
 		background: linear-gradient(90deg, #417fff 0%, #6fa4ff 100%);
 		border: none;
@@ -303,14 +305,14 @@
 		transition: background 0.22s, box-shadow 0.22s, color 0.13s, transform 0.13s;
 	}
 
-	.submit-button:hover {
+	.auth__submit:hover {
 		background: linear-gradient(90deg, #77b9ff 20%, #417fff 100%);
 		color: #fff;
 		transform: scale(1.03);
 		box-shadow: 0 6px 26px #417fff88, 0 2px 10px #c9deff55 inset;
 	}
 
-	.error-message {
+	.auth__error {
 		color: #fff;
 		background: linear-gradient(90deg, #e35454 60%, #f76f6f 100%);
 		border-radius: 9px;
@@ -323,18 +325,18 @@
 		letter-spacing: 1px;
 		text-shadow: 0 1px 6px #0a195088, 0 0px 2px #fff7;
 		box-shadow: 0 0 10px #e3545444;
-		border: none;
 	}
 
 	@media (max-width: 600px) {
-		.register-panel {
+		.auth {
 			width: 100vw;
 			padding: 0;
 		}
-		.form-wrapper {
+		.auth__form {
 			padding: 16vw 2vw 8vw 2vw;
 			max-width: 100vw;
 		}
 	}
+
 
 </style>

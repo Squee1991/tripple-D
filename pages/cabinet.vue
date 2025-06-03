@@ -7,7 +7,6 @@
 			<!--			<div class="menu-icon">🔔 </div>-->
 		</div>
 		<div class="main-content">
-
 			<div class="header">
 				<div class="user-block">
 					<div class="user-info">

@@ -26,7 +26,7 @@
     <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="28">
+          <list size="31">
             <item index="0" class="java.lang.String" itemvalue="nobr" />
             <item index="1" class="java.lang.String" itemvalue="noembed" />
             <item index="2" class="java.lang.String" itemvalue="comment" />
@@ -55,6 +55,9 @@
             <item index="25" class="java.lang.String" itemvalue="fortea" />
             <item index="26" class="java.lang.String" itemvalue="languageselector" />
             <item index="27" class="java.lang.String" itemvalue="padejitable" />
+            <item index="28" class="java.lang.String" itemvalue="overlay" />
+            <item index="29" class="java.lang.String" itemvalue="baner" />
+            <item index="30" class="java.lang.String" itemvalue="uioverlay" />
           </list>
         </value>
       </option>
