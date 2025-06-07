@@ -5,7 +5,11 @@
 			<SignIn v-if="showAuth"/>
 		</transition>
 		<div class="header-nav__bar">
-			<h1 class="header-nav__logo">DerDieDas</h1>
+			<div class="header-nav__logo">
+				<NuxtLink to="/">
+					<img class="logo" src="../../assets/images/3dLogo.png" alt="">
+				</NuxtLink>
+			</div>
 			<nav ref="dropdownRefNav" class="header-nav__nav">
 				<ul class="header-nav__list">
 					<li
@@ -71,7 +75,6 @@
 	</header>
 </template>
 
-
 <script setup>
 	import {ref, watch, onMounted, onBeforeUnmount} from 'vue'
 	import {useRouter} from 'vue-router'
@@ -105,8 +108,8 @@
 					value: 'Введение'
 				},
 				{
-					id: 'examples',
-					url: 'examples',
+					id: 'rules',
+					url: 'rules',
 					value: 'Правила'
 				},
 				{
@@ -195,11 +198,16 @@
 		z-index: 10;
 	}
 
+	.logo {
+		width: 80px;
+		cursor: pointer;
+	}
+
 	.header-nav__bar {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 15px 30px;
+		padding: 0px 30px;
 		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
 		background-color: #3629af;
 		position: relative;
