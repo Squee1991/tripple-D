@@ -13,12 +13,12 @@
 			<nav ref="dropdownRefNav" class="header-nav__nav">
 				<ul class="header-nav__list">
 					<li
-						v-for="item in data"
+						v-for="item in menuItems"
 						:key="item.id"
 						class="header-nav__item"
 						@click="toggleSubmenu(item.id)"
 					>
-						<a :href="item.url || '#'" class="header-nav__link">{{ item.value }}</a>
+						<NuxtLink :to="item.url"  class="header-nav__link">{{ t(item.valueKey) }}</NuxtLink>
 						<img
 							v-if="item.icon"
 							:class="['header-nav__arrow', { 'header-nav__arrow--active': clickedMenu === item.id }]"
@@ -27,8 +27,10 @@
 						>
 						<ul v-if="item.children && clickedMenu === item.id" class="header-nav__submenu">
 							<li v-for="child in item.children" :key="child.id" class="header-nav__submenu-item">
-								<NuxtLink :to="`${child.url}`" class="header-nav__submenu-link">{{ child.value }}
+								<NuxtLink :to="child.url" class="header-nav__submenu-link">
+									{{ t(child.valueKey) }}
 								</NuxtLink>
+
 							</li>
 						</ul>
 					</li>
@@ -69,25 +71,27 @@
 				v-else
 				class="header-nav__login"
 				@click="openAuth"
-			>Войти
+			> {{ t('auth.logIn')}}
 			</button>
 		</div>
 	</header>
 </template>
 
 <script setup>
-	import {ref, watch, onMounted, onBeforeUnmount} from 'vue'
+	import {ref, watch, onMounted, onBeforeUnmount } from 'vue'
 	import {useRouter} from 'vue-router'
+	import { useI18n } from 'vue-i18n'
+	const { t , locale , locales , messages} = useI18n()
 	import {userAuthStore} from '../../store/authStore'
 	import SignIn from '../components/logIn.vue'
 	import LanguageSelector from '../components/langSwitcher.vue'
 	import Uioverlay from '../components/Uioverlay.vue'
 	import Arrow from '../../assets/images/arrowNav.svg'
-	import ForTea from '../components/forTea'
+	import ForTea from '../components/forTea.vue'
 	import avatar from '../../assets/images/avatar.svg'
 	import Logout from '../../assets/images/logout.svg'
 	import User from '../../assets/images/user.svg'
-
+	console.log(locale.value)
 	const clickedMenu = ref(null)
 	const showAuth = ref(false)
 	const router = useRouter()
@@ -95,36 +99,25 @@
 	const menuOpen = ref(false)
 	const dropdownRef = ref(null)
 	const dropdownRefNav = ref(null)
-	const data = ref([
+
+	const menuItems = [
 		{
 			id: 'learn',
 			url: '',
-			value: 'Обучение',
+			valueKey: 'nav.training',
 			icon: Arrow,
 			children: [
-				{
-					id: 'tips',
-					url: 'examples',
-					value: 'Введение'
-				},
-				{
-					id: 'rules',
-					url: 'rules',
-					value: 'Правила'
-				},
-				{
-					id: 'selectedTopics',
-					url: 'selectedTopics',
-					value: 'Практика артиклей'
-				}
+				{ id: 'tips', url: 'examples', valueKey: 'sub.prev' },
+				{ id: 'rules', url: 'rules', valueKey: 'sub.rules' },
+				{ id: 'selectedTopics', url: 'selectedTopics', valueKey: 'sub.artRules' }
 			]
 		},
 		{
 			id: 'duel',
 			url: 'duel',
-			value: 'Игровой режим'
+			valueKey: 'nav.gameMode'
 		},
-	])
+	]
 
 	const menuActions = ref([
 		{
@@ -151,7 +144,7 @@
 
 	const goTo = (page) => {
 		menuOpen.value = false
-		router.push(`/${page}`)
+		router.push({ path: `/${page}` })
 	}
 
 	const openAuth = () => showAuth.value = true

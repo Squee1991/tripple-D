@@ -1,0 +1,27 @@
+{
+	"nav": {
+		"training": "Nauka",
+		"gameMode": "Tryb gry"
+	},
+	"sub": {
+		"prev": "Wprowadzenie",
+		"rules": "Zasady",
+		"artRules": "Zasady rodzajników"
+	},
+	"auth": {
+		"logIn": "Zaloguj się",
+		"regs": "Rejestracja",
+		"auths": "Autoryzacja",
+		"btn": "Zarejestruj się"
+	},
+	"placeholder": {
+		"name": "Wpisz imię lub nick",
+		"email": "Wpisz adres e-mail",
+		"password": "Wpisz hasło",
+		"confirm": "Potwierdź hasło"
+	},
+	"banner": {
+		"title": "Poznaj niemieckie rodzajniki, rozwijaj magiczne umiejętności i pokonuj przeciwników w bitwach na karty!",
+		"btn": "Rozpocznij przygodę"
+	}
+}

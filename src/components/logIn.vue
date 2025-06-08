@@ -2,18 +2,17 @@
 	<div class="auth">
 		<div class="auth__inner">
 			<div class="auth__form">
-				<div class="auth__title">{{ mode === 'login' ? 'Авторизация' : 'Регистрация' }}</div>
+				<div class="auth__title">{{ mode === 'login' ? t('auth.auths') : t('auth.regs') }}</div>
 				<div class="auth__tabs">
 					<div
+						v-for="tab in tabs"
+						:key="tab.value"
 						class="auth__tab"
-						:class="{ 'auth__tab--active': mode === 'login' }"
-						@click="mode = 'login'"
-					>Войти</div>
-					<div
-						class="auth__tab"
-						:class="{ 'auth__tab--active': mode === 'register' }"
-						@click="mode = 'register'"
-					>Регистрация</div>
+						:class="{ 'auth__tab--active': mode === tab.value }"
+						@click="mode = tab.value"
+					>
+						{{ t(tab.label) }}
+					</div>
 					<div class="auth__toggle" :class="`auth__toggle--${mode}`"></div>
 				</div>
 				<div class="auth__fields">
@@ -22,7 +21,7 @@
 						<input
 							class="auth__input"
 							:type="field.type"
-							:placeholder="field.placeholder"
+							:placeholder="t(`placeholder.${field.name}`)"
 							v-model="field.value"
 							:required="field.required"
 							:maxlength="field.maxlength || null"
@@ -30,7 +29,7 @@
 					</div>
 					<div class="auth__actions">
 						<button @click="handleSubmit" class="auth__submit">
-							{{ mode === 'login' ? 'Войти' : 'Зарегистрироваться' }}
+							{{ mode === 'login' ? t('auth.logIn') : t('auth.regs') }}
 						</button>
 					</div>
 					<div v-if="error" class="auth__error">{{ error }}</div>
@@ -44,7 +43,8 @@
 	import {ref, computed, watch} from 'vue'
 	import {userAuthStore} from '../../store/authStore.js'
 	import {useRouter} from 'vue-router'
-
+	import { useI18n } from 'vue-i18n'
+	const { t } = useI18n()
 	const router = useRouter()
 	const authStore = userAuthStore()
 	const mode = ref('login')
@@ -88,6 +88,10 @@
 			required: true
 		},
 	]);
+	const tabs = [
+		{ value: 'login', label: 'auth.logIn' },
+		{ value: 'register', label: 'auth.regs' }
+	]
 
 	const visibleFields = computed(() => {
 		return mode.value === 'login' ? fields.value.filter(field => field.name === 'email' || field.name === 'password') : fields.value

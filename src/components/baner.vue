@@ -13,9 +13,9 @@
 						<span class="banner__orbit-word banner__orbit-word--das" @click="triggerGlow('das')">Das</span>
 					</div>
 					<p class="banner__subtitle">
-						Изучи немецкие артикли, прокачай магические навыки и побеждай соперников в карточных битвах!
+						{{ t('banner.title')}}
 					</p>
-					<button class="banner__button" @click="startLearning">Начать путь</button>
+					<button class="banner__button" @click="startLearning">{{ t('banner.btn')}}</button>
 				</div>
 				<div class="banner__mage">
 					<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="Capa_1" x="0px" y="0px"
@@ -184,7 +184,8 @@
 	import {useRouter} from 'vue-router'
 	import {userAuthStore} from '../../store/authStore'
 	import {ref, watch} from "vue";
-
+	import { useI18n } from 'vue-i18n'
+	const { t , locale , locales , messages} = useI18n()
 	const showAuth = ref(false)
 	const userAuth = userAuthStore()
 	const router = useRouter()

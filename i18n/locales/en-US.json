@@ -1,0 +1,27 @@
+{
+	"nav": {
+		"training": "Training",
+		"gameMode": "Game Mode"
+	},
+	"sub": {
+		"prev": "Introduction",
+		"rules": "Rules",
+		"artRules": "Article Rules"
+	},
+	"auth": {
+		"logIn": "Log In",
+		"regs": "Sign Up",
+		"auths": "Authorization",
+		"btn": "Register"
+	},
+	"placeholder": {
+		"name": "Enter your name or nickname",
+		"email": "Enter your email",
+		"pasrowrd": "Enter your password",
+		"confirm": "Confirm your password"
+	},
+	"banner": {
+		"title": "Learn German articles, develop magical skills, and defeat opponents in card battles!",
+		"btn": "Start your journey"
+	}
+}
