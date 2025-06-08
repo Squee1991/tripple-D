@@ -191,6 +191,7 @@
 	const router = useRouter()
 	const glowType = ref(null)
 	const fadingGlow = ref(null)
+	const test = 0
 
 	const openAuth = () => {
 		showAuth.value = true
