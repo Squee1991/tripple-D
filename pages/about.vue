@@ -17,7 +17,9 @@
 				>
 					<div class="why__item__title">
 						<div class="why__item-text">{{ t(item.valueKey) }}</div>
-						<img @click="accrdion(item.id)" class="why__icon-arrow" :src="Arrow" alt="" />
+						<img
+							:class="{ 'why__icon-arrow--open': isViseble.includes(item.id) }"
+							@click="accrdion(item.id)" class="why__icon-arrow" :src="Arrow" alt="" />
 					</div>
 					<div>
 						<div class="why__explanin"> {{ t(item.explainkey) }}</div>
@@ -113,6 +115,12 @@
 	.why__icon-arrow {
 		width: 30px;
 		cursor: pointer;
+		transition: .5s;
+	}
+
+	.why__icon-arrow--open {
+		transform: scale(-1);
+		transition: .5s;
 	}
 
 	.why__footer-text {
