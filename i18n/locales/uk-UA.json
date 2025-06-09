@@ -5,9 +5,9 @@
 		"about": "Про проєкт"
 	},
 	"sub": {
-		"prev": "Вступ",
-		"rules": "Правила",
-		"artRules": "Правила артиклів"
+		"prev": "Introduction",
+		"rules": "Rules",
+		"artRules": "Article Practice"
 	},
 	"auth": {
 		"logIn": "Увійти",

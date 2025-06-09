@@ -2,7 +2,7 @@
 	<footer class="footer">
 		<div class="footer-container">
 			<div class="footer-brand">
-				<img src="../../assets/images/logoDDD.png" alt="Der Die Das" class="footer-logo"/>
+				<img src="../../assets/images/3dLogo.png" alt="Der Die Das" class="footer-logo"/>
 			</div>
 			<nav class="footer-links">
 				<li v-for="item in data.items" :key="item.id">
@@ -61,7 +61,6 @@
 		width: 86px;
 		height: 86px;
 		border-radius: 18px;
-
 	}
 
 	.footer-links {

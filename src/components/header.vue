@@ -30,7 +30,6 @@
 								<NuxtLink :to="child.url" class="header-nav__submenu-link">
 									{{ t(child.valueKey) }}
 								</NuxtLink>
-
 							</li>
 						</ul>
 					</li>
@@ -91,7 +90,6 @@
 	import avatar from '../../assets/images/avatar.svg'
 	import Logout from '../../assets/images/logout.svg'
 	import User from '../../assets/images/user.svg'
-	console.log(locale.value)
 	const clickedMenu = ref(null)
 	const showAuth = ref(false)
 	const router = useRouter()

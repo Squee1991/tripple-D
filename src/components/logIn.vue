@@ -88,6 +88,8 @@
 			required: true
 		},
 	]);
+
+
 	const tabs = [
 		{ value: 'login', label: 'auth.logIn' },
 		{ value: 'register', label: 'auth.regs' }

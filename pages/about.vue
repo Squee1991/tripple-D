@@ -212,7 +212,7 @@
 	}
 
 	.open {
-		height: 150px;
+		height: 160px;
 		transition: .4s;
 	}
 
