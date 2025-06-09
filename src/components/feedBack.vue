@@ -4,16 +4,24 @@ import MessageAnimation from '../../assets/animation/message.json'
 import {ref, onMounted} from 'vue';
 import Lottie from 'lottie-web';
 // import emailjs from 'emailjs-com';
-
 const contactSection = ref(null);
 const msgAnimationWrapper = ref(null);
 const isVisible = ref(false);
+const { t } = useI18n()
 
 const data = ref({
-    label: 'Обратная связь',
-    title: 'Имеются пожелания? Заполните эту форму, и мы обязательно ответим вам.',
+    label: 'feedBack.label',
+    title: 'feedBack.title',
     btn: {
-        text: 'отправить сообщение',
+        text: 'feedBack.btn',
+    },
+    errors: {
+      notValidEmail: "",
+      enterMessage: "",
+    },
+    placeholder: {
+        email: 'feedBack.emailPlaceholder',
+        message: 'feedBack.messagePlaceholder'
     }
 });
 
@@ -23,7 +31,6 @@ const errors = ref({
 })
 const userEmail = ref('');
 const userMessage = ref('');
-
 onMounted(() => {
 
     isVisible.value = true;
@@ -37,22 +44,20 @@ onMounted(() => {
     }
 
 });
-
 const validateEmail = (email) => {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     return re.test(email);
 };
-
 const sendMessage = async () => {
     errors.value = {email: '', message: ''};
     if (!userEmail.value.trim()) {
         errors.value.email = "Email is required";
     }
     if (!validateEmail(userEmail.value)) {
-        errors.value.email = "Please enter a valid email";
+        errors.value.email = t('errros.notValidEmail');
     }
     if (!userMessage.value.trim()) {
-        errors.value.message = "Please enter a message";
+        errors.value.message = t('errros.enterMsg');
     }
     if (errors.value.email || errors.value.message) {
         return;
@@ -73,7 +78,6 @@ const sendMessage = async () => {
         console.error(error);
     }
 };
-
 const resetFields = () => {
     userEmail.value = '';
     userMessage.value = '';
@@ -82,6 +86,7 @@ const resetFields = () => {
         message: ''
     };
 };
+
 </script>
 
 <template>
@@ -93,24 +98,24 @@ const resetFields = () => {
                         <div ref="msgAnimationWrapper" class="form__animation" :class="{ 'visible': isVisible }"></div>
                     </div>
                     <div class="form__wrapper-inner" :class="{ 'visible': isVisible }">
-                        <div class="contact__label label">{{ data.label }}</div>
-                        <div class="contact__title">{{ data.title }}</div>
+                        <div class="contact__label label">{{ t(data.label) }}</div>
+                        <div class="contact__title">{{ t(data.title) }}</div>
                         <div class="form__field__inner">
                             <label class="label">
                                 <input class="input" v-model="userEmail" type="email" name="user_email"
-                                       placeholder="Email"/>
+                                       :placeholder="t(data.placeholder.email)"/>
                             </label>
                             <span class="error__message" v-if="errors.email"> {{ errors.email }}</span>
                         </div>
                         <div class="form__message__inner">
                             <label class="label__area">
 							<textarea v-model="userMessage" class="area" cols="30" rows="10" name="message"
-                        placeholder="Message"></textarea>
+                                      :placeholder="t(data.placeholder.message)"></textarea>
                             </label>
                             <span class="error__message" v-if="errors.message"> {{ errors.message }}</span>
                         </div>
                         <div @click="sendMessage" class="form__btn">
-                            <button type="submit" class="contact__btn btn">{{ data.btn.text }}</button>
+                            <button type="submit" class="contact__btn btn">{{ t(data.btn.text) }}</button>
                         </div>
                     </div>
                 </div>
@@ -293,11 +298,10 @@ const resetFields = () => {
 
 .contact__btn.btn:hover {
     background: linear-gradient(180deg, #adc6ff 10%, #3154cf 100%);
-    box-shadow:
-        0 12px 36px #7a99ff69,
-        0 5px 18px #fff7 inset;
-    color: #f7f7ff;
-    transform: scale(1.035);
+    /*box-shadow:*/
+    /*    0 12px 16px #7a99ff69,*/
+    /*    0 5px 18px #fff7 inset;*/
+    /*color: #f7f7ff;*/
 }
 
 @keyframes slideInLeft {

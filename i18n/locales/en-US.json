@@ -1,7 +1,8 @@
 {
 	"nav": {
 		"training": "Training",
-		"gameMode": "Game Mode"
+		"gameMode": "Game Mode",
+		"about": "About the Project"
 	},
 	"sub": {
 		"prev": "Introduction",
@@ -17,11 +18,69 @@
 	"placeholder": {
 		"name": "Enter your name or nickname",
 		"email": "Enter your email",
-		"pasrowrd": "Enter your password",
+		"password": "Enter your password",
 		"confirm": "Confirm your password"
 	},
 	"banner": {
 		"title": "Learn German articles, develop magical skills, and defeat opponents in card battles!",
 		"btn": "Start your journey"
+	},
+	"features": {
+		"title": "What’s inside?"
+	},
+	"cardWords": {
+		"title": "800+ words",
+		"sub": "Learn over 800 words and articles in a convenient system."
+	},
+	"cardMethod": {
+		"title": "5 learning methods",
+		"sub": "Choose your style: visual, auditory, kinesthetic — or combine them."
+	},
+	"gameCard": {
+		"title": "Game elements",
+		"sub": "Earn points, level up, and use gamification to boost your progress."
+	},
+	"achievCard": {
+		"title": "Achievement system",
+		"sub": "Advance, earn rewards, and unlock new features as you learn."
+	},
+	"feedBack": {
+		"label": "Feedback",
+		"title": "Have any suggestions? Fill out this form and we will get back to you.",
+		"btn": "Send Message",
+		"emailPlaceholder": "Enter your email",
+		"messagePlaceholder": "Enter your message"
+	},
+	"errros": {
+		"notValidEmail": "Please enter a valid email address.",
+		"enterMsg": "Please enter your message."
+	},
+	"about": {
+		"title": "Is learning German and noun articles boring?",
+		"lead": "Tired of memorizing flashcards, rewriting word lists, and still forgetting the articles?",
+		"whyfirst": "Level up your skills like in an RPG",
+		"whySecond": "Earn achievements and rewards",
+		"whyThird": "Play card battles against others",
+		"whyfourth": "Learn words in different modes",
+		"whyfifth": "Study the language in a fun, game-like way!",
+		"whySixth": "Build a word using the alphabet!",
+		"whySeventh": "Vocabulary combo-wombo!",
+		"whyEight": "Spaced repetition with micro-tests",
+		"whyfooter": "Try these methods — and you will definitely look at learning in a new way!"
+
+	},
+	"aboutList": {
+		"one": "Every new word isn’t just a tick mark, it’s a step to leveling up your character! Gain experience, unlock new levels, upgrade skills, and track your progress in real RPG style.",
+		"two": "Achievements and rewards make learning exciting: complete challenges, unlock secret achievements, earn trophies, and collect rare rewards for your progress in German.",
+		"three": "Challenge other players in card battles: who will guess articles faster and more accurately, assemble words, or fill the game board? Show your knowledge and become a champion!",
+		"four": "Don’t stick to boring repetition: train your memory in different modes — look at pictures, listen to audio, build words from letters, break words into syllables, and master the language from all sides.",
+		"five": "Turn on game mode: build a word using the alphabet like magic runes! It’s not just fun, but also great for improving attention and visual memory.",
+		"six": "In this mode, two people set a word. The participant guesses the word letter by letter, choosing from the alphabet! You can say the word in advance (the number of attempts is limited so you can’t just try every letter).",
+		"seven": "Challenge yourself with a real vocabulary combo! Find synonyms, antonyms, matching words, and boost your associative thinking to remember words for a long time.",
+		"eight": "Spaced repetition helps reinforce knowledge: the system will remind you of the right words and give mini-tests so you always stay on top of your German."
+	},
+	"footer": {
+		"copy": "Der Die Das. All rights reserved."
 	}
+
 }

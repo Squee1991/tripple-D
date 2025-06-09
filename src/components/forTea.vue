@@ -13,11 +13,14 @@
 <style scoped>
 
 	.coffe {
-		width: 70px;
+		width: 65px;
 		cursor: pointer;
 	}
 
 	.coffe-container {
+		bottom: 67px;
+		right: 10px;
+		position: fixed;
 		display: flex;
 		justify-content: center;
 		align-items: center;

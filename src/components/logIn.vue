@@ -312,7 +312,6 @@
 	.auth__submit:hover {
 		background: linear-gradient(90deg, #77b9ff 20%, #417fff 100%);
 		color: #fff;
-		transform: scale(1.03);
 		box-shadow: 0 6px 26px #417fff88, 0 2px 10px #c9deff55 inset;
 	}
 

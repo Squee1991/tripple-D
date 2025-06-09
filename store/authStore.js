@@ -75,15 +75,19 @@ export const userAuthStore = defineStore('auth', () => {
 		await sendPasswordResetEmail(auth, email)
 	}
 
-	const deleteAccount = async () => {
-		const auth = getAuth()
-		const user = auth.currentUser
-		if (!user) return
-		await deleteUser(user)
-		name.value = null;
-		email.value = null;
-		password.value = null;
-	}
+	const deleteAccount = async (currentPassword) => {
+		const auth = getAuth();
+		const user = auth.currentUser;
+		if (!user) return;
+		const credential = EmailAuthProvider.credential(
+			user.email,
+			currentPassword
+		);
+		await reauthenticateWithCredential(user, credential);
+		await deleteDoc(doc(db, 'users', user.uid));
+		await deleteUser(user);
+		setUserData({});
+	};
 
 	const logOut = async () => {
 		const auth = getAuth()

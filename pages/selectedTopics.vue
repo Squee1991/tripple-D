@@ -94,7 +94,7 @@
 	const selectedTopic = ref(null)
 	const selectedModes = ref([])
 	const animationContainer = ref(null)
-
+	const localePath = useLocalePath()
 	onMounted(() => {
 		if (animationContainer.value) {
 			Lottie.loadAnimation({
@@ -218,13 +218,15 @@
 		await store.setSelectedTopics([selectedTopic.value])
 		await store.saveToFirebase()
 
-		router.push({
+		const path = localePath({
 			name: 'session',
 			query: {
 				topic: selectedTopic.value,
 				mode: selectedModes.value
 			}
 		})
+		router.push(path)
+
 	}
 
 

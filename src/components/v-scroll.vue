@@ -33,10 +33,10 @@
 
 <style scoped>
 	.scroll-to-top {
-		width: 55px;
-		height: 55px;
+		width: 50px;
+		height: 50px;
 		position: fixed;
-		bottom: 20px;
+		bottom: 13px;
 		right: 20px;
 		background: #3e65fa;
 		color: white;

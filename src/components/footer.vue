@@ -1,41 +1,31 @@
 <template>
-	<footer class="footer" ref="footerRef" :class="{ visible: isVisible }">
+	<footer class="footer">
 		<div class="footer-container">
 			<div class="footer-brand">
 				<img src="../../assets/images/logoDDD.png" alt="Der Die Das" class="footer-logo"/>
 			</div>
 			<nav class="footer-links">
-				<a href="" class="footer-link">О проекте</a>
-				<a href="" class="footer-link">Отзывы</a>
-				<a href="mailto:support@derdiedas.app" class="footer-link">Контакты</a>
+				<li v-for="item in data.items" :key="item.id">
+					<NuxtLink class="footer-link" :to="item.url"> {{ t(item.value)}}</NuxtLink>
+				</li>
 			</nav>
-			<div class="footer-meta">
-				<select class="lang-select">
-					<option>Русский</option>
-					<option>English</option>
-					<option>Fr</option>
-				</select>
-			</div>
+			<LangSwitcher/>
 		</div>
-		<p class="footer-copy">© {{ new Date().getFullYear() }} Der Die Das. Все права защищены.</p>
+		<p class="footer-copy">© {{ new Date().getFullYear() }} {{ t(data.footer)}} </p>
 	</footer>
 </template>
 
 <script setup>
-	import {ref, onMounted} from 'vue'
+	import LangSwitcher from './langSwitcher.vue'
+    const { t} = useI18n()
 
-	const footerRef = ref(null)
-	const isVisible = ref(false)
+	const data = {
+		footer: "footer.copy",
+		items: [
+			{id: 1 , url: "about" , value: "nav.about"},
+		]
+	}
 
-	onMounted(() => {
-		const observer = new IntersectionObserver(
-			([entry]) => {
-				if (entry.isIntersecting) isVisible.value = true
-			},
-			{threshold: 0.1}
-		)
-		if (footerRef.value) observer.observe(footerRef.value)
-	})
 </script>
 
 <style scoped>
@@ -45,13 +35,6 @@
 		padding: 44px 20px 20px;
 		box-shadow: 0 12px 60px #786ed628 inset, 0 3px 18px #f5eeff9c inset;
 		font-family: 'Montserrat', 'Inter', sans-serif;
-		opacity: 0;
-		transform: translateY(20px);
-	}
-
-	.footer.visible {
-		opacity: 1;
-		transform: translateY(0);
 	}
 
 	.footer-container {

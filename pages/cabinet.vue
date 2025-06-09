@@ -4,7 +4,6 @@
 			<button @click="pathBack" class="button__back"><</button>
 			<div class="menu-icon active">🏠</div>
 			<div class="menu-icon">⚙</div>
-			<!--			<div class="menu-icon">🔔 </div>-->
 		</div>
 		<div class="main-content">
 			<div class="header">
@@ -12,9 +11,9 @@
 					<div class="user-info">
 						<div class="exp-bar">
 							<div class="exp-fill" :style="{ width: `${(learningStore.exp / 100) * 100}%` }"></div>
+							<span class="exp-bar-exp">{{ learningStore.exp }} XP</span>
 						</div>
-						<span>{{ learningStore.exp }} XP</span>
-						<div>Уровень: {{ learningStore.isLeveling }}</div>
+						<div class="expol__lvl-value">Уровень: {{ learningStore.isLeveling }}</div>
 					</div>
 				</div>
 				<div class="balance-block">
@@ -92,6 +91,7 @@
 <style scoped>
 
 	.exp-bar {
+		display: flex;
 		height: 14px;
 		width: 100%;
 		background: #352c1f;
@@ -103,7 +103,7 @@
 
 	.exp-fill {
 		height: 100%;
-		background: linear-gradient(to right, #ffc107, #ff9800);
+		background: blue;
 		transition: width 0.3s ease;
 	}
 
@@ -175,6 +175,11 @@
 	}
 
 	.user-block {
+		display: flex;
+		align-items: center;
+	}
+
+	.user-info {
 		display: flex;
 		align-items: center;
 	}
@@ -270,11 +275,7 @@
 	}
 
 	.tab-content {
-		background: rgba(36, 26, 14, 0.7);
-		padding: 1rem 1.5rem;
-		border-radius: 12px;
-		box-shadow: 0 0 15px #000;
-		border: 2px solid #c29f52;
+
 	}
 
 	.row {
@@ -286,12 +287,11 @@
 	}
 
 	.exp-bar {
-		height: 22px;
+		height: 30px;
 		width: 220px;
 		background: linear-gradient(90deg, #2e1e40 60%, #462f5e 120%);
-		border: 3px solid #ffd700;
+		border: 3px solid #e3e1d3;
 		border-radius: 13px;
-		margin-top: 7px;
 		margin-bottom: 6px;
 		overflow: hidden;
 		box-shadow: 0 0 16px #ffd70088,
@@ -302,7 +302,7 @@
 
 	.exp-fill {
 		height: 100%;
-		background: linear-gradient(90deg, #ffeeba 0%, #ffe170 46%, #c59cff 100%);
+		background: #ff6f00;
 		box-shadow: 0 0 17px #ffe17088, 0 0 44px #bfa5e6cc;
 		transition: width 0.5s cubic-bezier(.35, 2, .6, 1);
 		position: relative;
@@ -319,5 +319,16 @@
 		pointer-events: none;
 	}
 
+	.exp-bar-exp {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50% , -50%);
+	}
+
+	.expol__lvl-value{
+		font-size: 24px;
+		margin-left: 10px;
+	}
 
 </style>

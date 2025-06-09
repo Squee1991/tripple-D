@@ -1,7 +1,8 @@
 {
 	"nav": {
 		"training": "Nauka",
-		"gameMode": "Tryb gry"
+		"gameMode": "Tryb gry",
+		"about": "O projekcie"
 	},
 	"sub": {
 		"prev": "Wprowadzenie",
@@ -23,5 +24,61 @@
 	"banner": {
 		"title": "Poznaj niemieckie rodzajniki, rozwijaj magiczne umiejętności i pokonuj przeciwników w bitwach na karty!",
 		"btn": "Rozpocznij przygodę"
+	},
+	"features": {
+		"title": "Co znajdziesz w środku?"
+	},
+	"cardWords": {
+		"title": "800+ słów",
+		"sub": "Naucz się ponad 800 słów i rodzajników w wygodnym systemie."
+	},
+	"cardMethod": {
+		"title": "5 metod nauki",
+		"sub": "Wybierz swój styl: wizualny, słuchowy, kinestetyczny — lub je łącz."
+	},
+	"gameCard": {
+		"title": "Elementy grywalizacji",
+		"sub": "Zdobywaj punkty, awansuj na wyższe poziomy i wykorzystuj grywalizację, aby przyspieszyć postępy."
+	},
+	"achievCard": {
+		"title": "System osiągnięć",
+		"sub": "Rozwijaj się, zdobywaj nagrody i odblokowuj nowe możliwości podczas nauki."
+	},
+	"feedBack": {
+		"label": "Opinie",
+		"title": "Masz jakieś uwagi? Wypełnij ten formularz, a my na pewno Ci odpowiemy.",
+		"btn": "Wyślij wiadomość",
+		"emailPlaceholder": "Wprowadź swój adres e-mail",
+		"messagePlaceholder": "Wprowadź swoją wiadomość"
+	},
+	"errros": {
+		"notValidEmail": "Proszę podać prawidłowy adres e-mail.",
+		"enterMsg": "Proszę wpisać wiadomość."
+	},
+	"about": {
+		"title": "Nauka niemieckiego i rodzajników jest nudna?",
+		"lead": "Masz dość wkuwania fiszek, przepisywania list słówek i ciągłego zapominania rodzajników?",
+		"whyfirst": "Rozwijaj umiejętności jak w RPG",
+		"whySecond": "Zdobywaj osiągnięcia i nagrody",
+		"whyThird": "Graj w karciane pojedynki z innymi",
+		"whyfourth": "Ucz się słów w różnych trybach",
+		"whyfifth": "Poznawaj język w formie zabawy, a nie nudy!",
+		"whySixth": "Ułóż słowo, korzystając z alfabetu!",
+		"whySeventh": "Słownikowe combo-wombo!",
+		"whyEight": "Powtórki interwałowe z mikrotestami",
+		"whyfooter": "Wypróbuj te sposoby — a na pewno spojrzysz na naukę w zupełnie nowy sposób!"
+	},
+	"aboutList": {
+		"one": "Każde nowe słowo to nie tylko zaliczony punkt, ale krok do rozwoju twojej postaci! Zdobywaj doświadczenie, odblokowuj nowe poziomy, ulepszaj umiejętności i śledź swój postęp w stylu prawdziwej gry RPG.",
+		"two": "System osiągnięć i nagród sprawia, że nauka staje się ekscytująca: wykonuj zadania, odkrywaj sekrety, zdobywaj trofea i kolekcjonuj rzadkie nagrody za sukcesy w niemieckim.",
+		"three": "Rzuć wyzwanie innym graczom w karcianych pojedynkach: kto szybciej i dokładniej odgadnie rodzajniki, ułoży słowa albo wypełni planszę? Pokaż swoją wiedzę i zostań mistrzem!",
+		"four": "Nie ograniczaj się do nudnego powtarzania: trenuj pamięć w różnych trybach — oglądaj obrazki, słuchaj nagrań, układaj słowa z liter, rozbijaj słowa na sylaby i poznawaj język z każdej strony.",
+		"five": "Włącz tryb gry: układaj słowa używając alfabetu jak magicznych run! To nie tylko zabawa, ale też świetny trening spostrzegawczości i pamięci wzrokowej.",
+		"six": "W tym trybie dwie osoby wybierają słowo. Uczestnik odgaduje słowo po literach, wybierając z alfabetu! Możesz podać słowo z góry (liczba prób jest ograniczona, aby nie zgadywać całego alfabetu).",
+		"seven": "Sprawdź się w prawdziwej słownej kombo-zabawie! Szukaj synonimów, antonimów, słów powiązanych i rozwijaj myślenie asocjacyjne, aby zapamiętywać słowa na długo.",
+		"eight": "Powtórki interwałowe pomagają utrwalić wiedzę: system sam przypomni ci ważne słowa i przeprowadzi mini-testy, żebyś zawsze był na topie z niemieckim."
+	},
+	"footer": {
+		"copy": "Der Die Das. Wszelkie prawa zastrzeżone."
 	}
 }

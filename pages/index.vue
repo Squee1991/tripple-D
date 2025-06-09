@@ -6,12 +6,14 @@
         <FeedBack/>
         <Footer/>
         <VScroll/>
+        <Coffe/>
     </div>
 
 </template>
 
 <script setup>
 import Description from '../src/components/DescriptionBlock.vue'
+import Coffe from '../src/components/forTea.vue'
 import Baner from '../src/components/baner.vue'
 import FeedBack from '../src/components/feedBack.vue'
 import Footer from '../src/components/footer.vue'

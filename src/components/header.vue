@@ -117,6 +117,11 @@
 			url: 'duel',
 			valueKey: 'nav.gameMode'
 		},
+		{
+			id: 'about',
+			url: 'about',
+			valueKey: 'nav.about'
+		},
 	]
 
 	const menuActions = ref([
@@ -202,7 +207,8 @@
 		align-items: center;
 		padding: 0px 30px;
 		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
-		background-color: #3629af;
+		background-color: #efeff3;
+		/*background: #402404b;*/
 		position: relative;
 		z-index: 10;
 	}
@@ -224,9 +230,13 @@
 	}
 
 	.header-nav__item {
+		justify-content: center;
 		display: flex;
+		min-width: 186px;
 		align-items: center;
-		background: linear-gradient(90deg, #366cff 60%, #4c88ff 100%);
+		/*background: linear-gradient(90deg, #366cff 60%, #4c88ff 100%);*/
+		background: #fbd912;
+		/*background: linear-gradient(90deg, #36b9ff 60%, #67c7d8 100%);*/
 		color: #fff;
 		border-radius: 14px 30px 14px 30px / 30px 14px 30px 14px;
 		box-shadow: 0 2px 8px 0 #15235e44;
@@ -241,7 +251,8 @@
 	}
 
 	.header-nav__item:hover {
-		background: linear-gradient(90deg, #4c88ff 60%, #366cff 100%);
+		/*background: linear-gradient(90deg, #4c88ff 60%, #366cff 100%);*/
+		background: #e8bd0e;
 		box-shadow: 0 4px 16px 0 #15235e77;
 	}
 
@@ -270,6 +281,7 @@
 		top: 100%;
 		left: 0;
 		background: linear-gradient(90deg, #366cff 60%, #4c88ff 100%);
+		background: #fbd912;
 		border-radius: 14px 30px 14px 30px / 30px 14px 30px 14px;
 		min-width: 160px;
 		z-index: 50;
@@ -292,13 +304,11 @@
 	}
 
 	.header-nav__submenu-item:hover {
-		background: rgba(255,255,255,0.15);
+		background: rgba(160, 48, 48, 0.15);
 		color: #fff3ec;
 	}
 
-	.header-nav__tea {
-		margin-left: auto;
-	}
+
 
 	.header-nav__lang {
 		margin-left: auto;
@@ -318,9 +328,7 @@
 		width: 250px;
 		padding: 8px 20px 8px 12px;
 		border-radius: 22px 30px 18px 30px / 30px 18px 30px 18px;
-		background: linear-gradient(90deg, #a1d2ff 0%, #bda6ff 100%);
 		box-shadow: 0 2px 18px #7e60dd24, 0 1px 6px #fff8 inset;
-		border: 2px solid #a48ae7;
 		margin-left: 22px;
 		user-select: none;
 	}
@@ -352,7 +360,6 @@
 		top: 100%;
 		right: 0;
 		background: linear-gradient(120deg, #fafaff 60%, #e4e2ff 100%);
-		border: 2px solid #a48ae7;
 		border-radius: 18px 26px 22px 28px / 30px 18px 30px 18px;
 		margin-top: 0.5rem;
 		box-shadow: 0 6px 32px #a193e833, 0 1px 8px #fff8 inset;
@@ -398,28 +405,29 @@
 	}
 
 	.header-nav__login {
-		background: linear-gradient(90deg, #366cff 60%, #4c88ff 100%);
-		color: #fff;
+		min-width: 160px;
+		/*background: linear-gradient(90deg, #366cff 60%, #4c88ff 100%);*/
+		background: #c25f5f;
+		color: white;
 		font-weight: 800;
-		font-size: 18px;
-		padding: 11px 34px;
+		font-size: 17px;
+		padding: 12px 20px;
 		border-radius: 14px 30px 14px 30px / 30px 14px 30px 14px;
 		box-shadow: 0 4px 18px #15235e35, 0 1px 4px #fff8 inset;
 		cursor: pointer;
 		letter-spacing: 0.06em;
 		text-shadow: 0 1px 4px #26358588, 0 0px 1px #fff8;
-		border: 2px solid #6c76ff;
+		/*border: 2px solid #6c76ff;*/
+		border: 3px solid #c64f4f;
 		transition: background 0.15s, color 0.15s, box-shadow 0.18s, transform 0.1s;
 		transform: skew(-8deg);
 		margin-left: 20px;
 	}
 
 	.header-nav__login:hover {
-		background: linear-gradient(90deg, #6cbcff 60%, #2462ff 100%);
+		/*background: linear-gradient(90deg, #6cbcff 60%, #2462ff 100%);*/
+		background: #933838;
 		color: #fff3ec;
-		box-shadow: 0 8px 24px #2737b1aa, 0 2px 6px #fff8 inset;
-		transform: skew(-8deg) scale(1.04);
+		/*box-shadow: 0 8px 24px rgba(83, 28, 82, 0.67), 0 2px 6px #fff8 inset;*/
 	}
-
-
 </style>

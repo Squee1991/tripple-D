@@ -68,7 +68,7 @@
 	.language__button {
 		display: flex;
 		align-items: center;
-		background: #7f75d1;
+		/*background: #b2b2b2;*/
 		border: none;
 		border-radius: 8px;
 		color: #fff;
@@ -123,10 +123,11 @@
 	.language__button {
 		display: flex;
 		align-items: center;
-		background: #7f75d1;
+		/*background: #b2b2b2;*/
 		border: none;
+		min-width: 140px;
 		border-radius: 8px;
-		color: #fff;
+		color: black;
 		font-weight: bold;
 		font-size: 16px;
 		padding: 8px 16px;
@@ -153,7 +154,7 @@
 		position: absolute;
 		top: 110%;
 		left: 0;
-		background: #7f75d1;
+		background: #b2b2b2;
 		border-radius: 8px;
 		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 		z-index: 10;
@@ -172,6 +173,7 @@
 	}
 
 	.dropdown__item:hover {
-		background: #a9b9e8;
+		background: #edeef1;
+		color: black;
 	}
 </style>
