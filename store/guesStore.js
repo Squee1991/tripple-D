@@ -27,7 +27,7 @@ export const useGuessWordStore = defineStore('guessWord', () => {
 	async function startGame() {
 		await loadWords()
 		const wordObj = loadedWords.value[Math.floor(Math.random() * loadedWords.value.length)]
-		currentWordObj.value = wordObj // Сохраняем весь объект слова
+		currentWordObj.value = wordObj
 		answer.value = wordObj.de.toUpperCase()
 		masked.value = Array(answer.value.length).fill('')
 		usedLetters.value = []

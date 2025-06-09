@@ -19,7 +19,6 @@ export const useBreakPointsStore = defineStore('breakpoints', () => {
 		current: 'xs'
 	})
 
-	// Генерируем computed для каждого ключа брейкпоинтов
 	const breakpointFlags = {}
 	Object.keys(values).forEach(key => {
 		breakpointFlags[key] = computed(() => breakPoints.value[key])
