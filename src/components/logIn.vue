@@ -2,8 +2,17 @@
 	<div class="auth">
 		<div class="auth__inner">
 			<div class="auth__form">
-				<div class="auth__title">{{ mode === 'login' ? t('auth.auths') : t('auth.regs') }}</div>
-				<div class="auth__tabs">
+				<div class="auth__title">
+					<img
+						@click="mode = 'login'"
+						v-if="mode === 'reset'" class="auth__arrow" src="../../assets/images/arrowNav.svg" alt="">
+					<div class="login__title">
+						{{ mode === 'login' ? t('auth.auths') : mode === 'register' ? t('auth.regs') :
+						t('auth.resetTitle') }}
+					</div>
+				</div>
+
+				<div v-if="mode === 'login' || mode === 'register'" class="auth__tabs">
 					<div
 						v-for="tab in tabs"
 						:key="tab.value"
@@ -15,24 +24,38 @@
 					</div>
 					<div class="auth__toggle" :class="`auth__toggle--${mode}`"></div>
 				</div>
-				<div class="auth__fields">
-					<div v-for="field in visibleFields" :key="field.id" class="auth__field">
-						<label class="auth__label">{{ field.label }}</label>
-						<input
-							class="auth__input"
-							:type="field.type"
-							:placeholder="t(`placeholder.${field.name}`)"
-							v-model="field.value"
-							:required="field.required"
-							:maxlength="field.maxlength || null"
-						/>
+				<form class="auth-form">
+					<div class="auth__fields">
+						<div v-for="field in visibleFields" :key="field.id" class="auth__field">
+							<label class="auth__label">
+								<div class="auth__label-text">{{t(field.label)}}</div>
+								<input
+									class="auth__input"
+									:type="field.type"
+									:placeholder="t(field.placeholder)"
+									v-model="field.value"
+									:required="field.required"
+									:autocomplete="field.autocomplete"
+									:maxlength="field.maxlength || null"
+								/>
+							</label>
+							<div v-if="field.error" class="auth__error">{{t(field.error) }}</div>
+							<div v-if="resetSent" class="auth__success">{{ t('errors.resetSent') }}</div>
+						</div>
+						<div class="auth__actions">
+							<button @click.prevent="handleSubmit" class="auth__submit">
+								{{ mode === 'login' ? t('auth.logIn') : mode === 'register' ? t('auth.regs') :
+								t('auth.resetBtn') }}
+							</button>
+						</div>
+						<div v-if="mode === 'login'" class="auth__forgot" @click="mode = 'reset'">{{ t('auth.forgot')
+							}}
+						</div>
 					</div>
-					<div class="auth__actions">
-						<button @click="handleSubmit" class="auth__submit">
-							{{ mode === 'login' ? t('auth.logIn') : t('auth.regs') }}
-						</button>
-					</div>
-					<div v-if="error" class="auth__error">{{ error }}</div>
+				</form>
+				<div v-if="mode === 'login'" class="google__auth-wrapper" @click="handleGoogleLogin">
+					<div class="google__auth">{{t('auth.google')}}</div>
+					<img class="google__icon" src="../../assets/images/search.svg" alt="">
 				</div>
 			</div>
 		</div>
@@ -43,82 +66,125 @@
 	import {ref, computed, watch} from 'vue'
 	import {userAuthStore} from '../../store/authStore.js'
 	import {useRouter} from 'vue-router'
-	import { useI18n } from 'vue-i18n'
-	const { t } = useI18n()
+	import {useI18n} from 'vue-i18n'
+	import {mapErrors} from '../../utils/errorsHandler.js'
+
+	const {t} = useI18n()
 	const router = useRouter()
+	const emits = defineEmits(['close-auth-form'])
 	const authStore = userAuthStore()
 	const mode = ref('login')
+	const resetSent = ref(false)
 	const error = ref('')
 	const fields = ref([
 		{
 			id: 1,
 			name: "name",
 			type: "text",
-			placeholder: "введите имя или никнейм",
-			value: "",
+			placeholder: "placeholder.name",
+			label: "formLabel.name",
 			error: false,
+			value: '',
 			required: true,
-			maxlength: 15,
+			maxlength: 18,
+			autocomplete: "username",
 		},
 		{
 			id: 2,
 			name: "email",
 			type: "email",
-			placeholder: "введите ваш Email",
-			value: "",
+			placeholder: "placeholder.email",
+			label: "formLabel.email",
 			error: false,
-			required: true
+			value: '',
+			required: true,
+			autocomplete: "email",
 		},
 		{
 			id: 3,
 			name: "password",
 			type: "password",
-			placeholder: "введите ваш пароль",
-			value: "",
+			placeholder: "placeholder.password",
+			label: "formLabel.password",
 			error: false,
-			required: true
+			value: '',
+			required: true,
+			autocomplete: "current-password",
 		},
 		{
 			id: 4,
 			name: "confirm",
 			type: "password",
-			placeholder: "повторите ваш пароль",
-			value: "",
+			placeholder: "placeholder.confirm",
+			label: "formLabel.confirm",
 			error: false,
-			required: true
+			value: '',
+			required: true,
+			autocomplete: "new-password",
 		},
-	]);
-
-
+	])
 	const tabs = [
-		{ value: 'login', label: 'auth.logIn' },
-		{ value: 'register', label: 'auth.regs' }
+		{value: 'login', label: 'auth.logIn'},
+		{value: 'register', label: 'auth.regs'}
 	]
-
 	const visibleFields = computed(() => {
-		return mode.value === 'login' ? fields.value.filter(field => field.name === 'email' || field.name === 'password') : fields.value
+		if (mode.value === 'login') {
+			return fields.value.filter(f => f.name === 'email' || f.name === 'password')
+		}
+		if (mode.value === 'register') {
+			return fields.value
+		}
+		if (mode.value === 'reset') {
+			return fields.value.filter(f => f.name === 'email')
+		}
 	})
 
-	const handleSubmit = async () => {
+	const handleGoogleLogin = async () => {
 		try {
-			const values = Object.fromEntries(fields.value.map(field => [field.name, field.value]))
-			if (!values.email || !values.password) {
-				error.value = 'Заполните все поля'
-				return
+			await authStore.loginWithGoogle()
+			emits('close-auth-form')
+			router.push('/')
+		} catch (e) {
+		}
+	}
+
+
+	function validateFields(values) {
+		fields.value.forEach(field => field.error = '')
+
+		if (mode.value === 'login' || mode.value === 'register') {
+			if (!values.email) fields.value.find(f => f.name === 'email').error = 'errors.errorEmail'
+			if (!values.password) fields.value.find(f => f.name === 'password').error = 'errors.errorPassword'
+			if (mode.value === 'register') {
+				if (!values.name) fields.value.find(f => f.name === 'name').error = 'errors.errorName'
+				if (values.password !== values.confirm) {
+					fields.value.find(f => f.name === 'confirm').error = 'errors.errorConfirm'
+				}
 			}
-			if (values.password.length < 6) {
-				error.value = 'Пароль должен быть не менее 6 символов'
+		}
+
+		if (mode.value === 'reset') {
+			if (!values.email) fields.value.find(f => f.name === 'email').error = 'errors.errorEmail'
+		}
+
+		return fields.value.every(f => !f.error)
+	}
+
+
+	const handleSubmit = async () => {
+		const values = Object.fromEntries(fields.value.map(field => [field.name, field.value]))
+		if (!validateFields(values)) return
+		try {
+			if (mode.value === 'reset') {
+				await authStore.resetPassword(values.email)
+				resetSent.value = true
+				setTimeout(() => {
+					mode.value = 'login'
+					resetSent.value = false
+				}, 2500)
 				return
 			}
 			if (mode.value === 'register') {
-				if (!values.name) {
-					error.value = 'Введите имя'
-					return
-				}
-				if (values.password !== values.confirm) {
-					error.value = 'Пароли не совпадают'
-					return
-				}
 				await authStore.registerUser({
 					name: values.name,
 					email: values.email,
@@ -132,24 +198,59 @@
 				})
 				router.push('/selectedTopics')
 			}
-			fields.value.forEach(field => field.value = '')
+
+			fields.value.forEach(f => f.value = '')
 		} catch (e) {
-			if (e.code === 'auth/email-not-verified') {
-				error.value = 'Подтвердите ваш email перед входом. Письмо уже отправлено.'
-				return
-			}
+			console.log(e)
+			fields.value.forEach(f => f.error = '')
+			mapErrors(fields.value, e.code)
 		}
 	}
 
 	watch(mode, () => {
 		fields.value.forEach(field => {
 			field.value = ''
+			field.error = '';
 		})
-		error.value = ''
+	})
+
+	onUnmounted(() => {
+		document.body.style.overflow = ''
 	})
 </script>
 
 <style>
+
+	.login__title {
+		text-align: start;
+		font-size: 23px;
+	}
+
+	.google__auth-wrapper {
+		margin-top: 30px;
+		background: linear-gradient(90deg, #417fff 0%, #6fa4ff 100%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 20px;
+		cursor: pointer;
+		padding: 9px;
+	}
+
+	.google__icon {
+		width: 37px;
+		padding: 6px;
+		background: white;
+		border-radius: 50%;
+	}
+
+	.google__auth {
+		font-weight: 600;
+		font-size: 17px;
+		margin-right: 5px;
+		color: white;
+	}
+
 	.auth {
 		position: fixed;
 		top: 0;
@@ -165,6 +266,27 @@
 		z-index: 1000;
 	}
 
+	.auth__label-text {
+		padding: 5px 0;
+		font-size: 13px;
+	}
+
+	.auth__arrow {
+		transform: rotate(90deg);
+		width: 40px;
+		cursor: pointer;
+	}
+
+	.auth__forgot {
+		text-align: center;
+		cursor: pointer;
+		padding-top: 20px;
+		color: white;
+		font-family: 'Montserrat', Arial, sans-serif;
+		font-weight: 600;
+		font-style: italic;
+	}
+
 	.auth__inner {
 		height: 100%;
 		display: flex;
@@ -173,16 +295,17 @@
 	}
 
 	.auth__form {
-		width: 98%;
-		margin: 30px auto 0 auto;
+		width: 100%;
 		border-radius: 32px;
-		padding: 38px 34px 30px 34px;
+		padding: 15px 34px 30px 34px;
 		position: relative;
 		overflow: visible;
 		background: transparent;
 	}
 
 	.auth__title {
+		display: flex;
+		align-items: center;
 		font-size: 32px;
 		font-family: 'Montserrat', Arial, sans-serif;
 		font-weight: 900;
@@ -201,7 +324,7 @@
 		background: #eaf0ff;
 		border-radius: 16px;
 		position: relative;
-		margin-bottom: 22px;
+		margin-bottom: 10px;
 		box-shadow: 0 2px 12px #4e6be655 inset, 0 1px 0 #fff7;
 		overflow: hidden;
 	}
@@ -236,7 +359,7 @@
 		height: 100%;
 		background: linear-gradient(90deg, #7da0ff 70%, #859bff 100%);
 		border-radius: 16px;
-		transition: transform 0.4s cubic-bezier(.38,1.32,.39,1);
+		transition: transform 0.4s cubic-bezier(.38, 1.32, .39, 1);
 		z-index: 0;
 		box-shadow: 0 0 22px #7fa7ff4d;
 		border: none;
@@ -256,7 +379,7 @@
 
 	.auth__field {
 		width: 100%;
-		margin-bottom: 19px;
+		height: 92px;
 	}
 
 	.auth__label {
@@ -290,7 +413,7 @@
 
 	.auth__actions {
 		width: 100%;
-		margin-top: 8px;
+		margin-top: 15px;
 	}
 
 	.auth__submit {
@@ -317,19 +440,15 @@
 		box-shadow: 0 6px 26px #417fff88, 0 2px 10px #c9deff55 inset;
 	}
 
-	.auth__error {
-		color: #fff;
-		background: linear-gradient(90deg, #e35454 60%, #f76f6f 100%);
+	.auth__error,
+	.auth__success {
+		color: #ee0505;
+		text-align: start;
 		border-radius: 9px;
-		padding: 12px;
-		text-align: center;
-		font-size: 16px;
-		margin-top: 18px;
-		font-family: 'Montserrat', Arial, sans-serif;
-		font-weight: bold;
+		font-size: 13px;
 		letter-spacing: 1px;
-		text-shadow: 0 1px 6px #0a195088, 0 0px 2px #fff7;
-		box-shadow: 0 0 10px #e3545444;
+		/*text-shadow: 0 1px 6px #0a195088, 0 0px 2px #fff7;*/
+		/*box-shadow: 0 0 10px #e3545444;*/
 	}
 
 	@media (max-width: 600px) {
@@ -337,9 +456,40 @@
 			width: 100vw;
 			padding: 0;
 		}
+
 		.auth__form {
-			padding: 16vw 2vw 8vw 2vw;
+			padding: 20px;
 			max-width: 100vw;
+		}
+
+		.auth__title {
+			font-size: 29px;
+		}
+
+		.auth__submit {
+			font-size: 19px;
+			padding: 15px;
+		}
+
+		.auth__forgot {
+			font-size: 14px;
+		}
+
+		.auth__tab {
+			font-size: 19px;
+			padding: 10px 4px 10px 5px;
+		}
+
+		.auth__label-text {
+			font-size: 11px;
+		}
+
+		.auth__input {
+			padding: 16px;
+		}
+
+		.auth__field {
+			height: 81px;
 		}
 	}
 

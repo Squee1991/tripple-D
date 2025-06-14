@@ -39,8 +39,8 @@
 
 <script setup>
 	import FeedBack from '../src/components/feedBack.vue'
-	import Arrow from '../assets/images/arrowNav.svg'
-    const { t} = useI18n()
+	import Arrow from '../assets/images/arrowDown.svg'
+	const { t} = useI18n()
 	const isViseble = ref([])
 
 	const accrdion = (id) => {
@@ -113,14 +113,15 @@
 	}
 
 	.why__icon-arrow {
-		width: 30px;
+		width: 15px;
 		cursor: pointer;
-		transition: .5s;
+		transition: .4s;
+		transform: rotate(-90deg);
 	}
 
 	.why__icon-arrow--open {
-		transform: scale(-1);
-		transition: .5s;
+		transform: rotate(0deg);
+		transition: .4s;
 	}
 
 	.why__footer-text {
@@ -176,7 +177,6 @@
 		font-size: 32px;
 		margin-bottom: 18px;
 		color: #7c3aed;
-
 		text-align: center;
 		font-weight: 700;
 	}
@@ -223,6 +223,12 @@
 		margin-bottom: 18px;
 		text-align: center;
 		font-weight: bold;
+	}
+
+	@media (max-width: 768px ) {
+		.why__item-text {
+			font-size: 15px;
+		}
 	}
 
 </style>

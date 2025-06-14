@@ -496,23 +496,168 @@
 		{ "ru": "Фен", "de": "Fön", "article": "der", "plural": "Föne", "pluralArticle": "die" }
 	],
 	"Kosmetik": [
-		{ "ru": "Косметика", "de": "Kosmetik", "article": "die", "plural": "Kosmetika", "pluralArticle": "die" },
-		{ "ru": "Помада", "de": "Lippenstift", "article": "der", "plural": "Lippenstifte", "pluralArticle": "die" },
-		{ "ru": "Тушь для ресниц", "de": "Wimperntusche", "article": "die", "plural": "Wimperntuschen", "pluralArticle": "die" },
-		{ "ru": "Пудра", "de": "Puder", "article": "der", "plural": "Puder", "pluralArticle": "die" },
-		{ "ru": "Румяна", "de": "Rouge", "article": "das", "plural": "Rouges", "pluralArticle": "die" },
-		{ "ru": "Тональный крем", "de": "Foundation", "article": "die", "plural": "Foundations", "pluralArticle": "die" },
-		{ "ru": "Карандаш для глаз", "de": "Augenstift", "article": "der", "plural": "Augenstifte", "pluralArticle": "die" },
-		{ "ru": "Тени для век", "de": "Lidschatten", "article": "der", "plural": "Lidschatten", "pluralArticle": "die" },
-		{ "ru": "Косметичка", "de": "Kosmetiktasche", "article": "die", "plural": "Kosmetiktaschen", "pluralArticle": "die" },
-		{ "ru": "Крем для лица", "de": "Gesichtscreme", "article": "die", "plural": "Gesichtscremes", "pluralArticle": "die" },
-		{ "ru": "Зеркальце", "de": "Taschenspiegel", "article": "der", "plural": "Taschenspiegel", "pluralArticle": "die" },
-		{ "ru": "Крем для рук", "de": "Handcreme", "article": "die", "plural": "Handcremes", "pluralArticle": "die" },
-		{ "ru": "Крем для тела", "de": "Bodylotion", "article": "die", "plural": "Bodylotions", "pluralArticle": "die" },
-		{ "ru": "Блеск для губ", "de": "Lippenbalsam", "article": "der", "plural": "Lippenbalsame", "pluralArticle": "die" },
-		{ "ru": "Карандаш для бровей", "de": "Augenbrauenstift", "article": "der", "plural": "Augenbrauenstifte", "pluralArticle": "die" },
-		{ "ru": "Резинка для волос", "de": "Haargummi", "article": "der", "plural": "Haargummis", "pluralArticle": "die" },
-		{ "ru": "Щётка для макияжа", "de": "Make-up-Pinsel", "article": "der", "plural": "Make-up-Pinsel", "pluralArticle": "die" }
+		{"ru": "Косметика", "de": "Kosmetik", "en": "Cosmetics", "pl": "Kosmetyki", "uk": "Косметика", "article": "die", "plural": "Kosmetika", "pluralArticle": "die"
+		},
+		{
+			"ru": "Помада",
+			"de": "Lippenstift",
+			"en": "Lipstick",
+			"pl": "Szminka",
+			"uk": "Помада",
+			"article": "der",
+			"plural": "Lippenstifte",
+			"pluralArticle": "die"
+		},
+		{
+			"ru": "Тушь для ресниц",
+			"de": "Wimperntusche",
+			"en": "Mascara",
+			"pl": "Tusz do rzęs",
+			"uk": "Туш для вій",
+			"article": "die",
+			"plural": "Wimperntuschen",
+			"pluralArticle": "die"
+		},
+		{
+			"ru": "Пудра",
+			"de": "Puder",
+			"en": "Powder",
+			"pl": "Puder",
+			"uk": "Пудра",
+			"article": "der",
+			"plural": "Puder",
+			"pluralArticle": "die"
+		},
+		{
+			"ru": "Румяна",
+			"de": "Rouge",
+			"en": "Blush",
+			"pl": "Róż",
+			"uk": "Рум'яна",
+			"article": "das",
+			"plural": "Rouges",
+			"pluralArticle": "die"
+		},
+		{
+			"ru": "Тональный крем",
+			"de": "Foundation",
+			"en": "Foundation",
+			"pl": "Podkład",
+			"uk": "Тональний крем",
+			"article": "die",
+			"plural": "Foundations",
+			"pluralArticle": "die"
+		},
+		{
+			"ru": "Карандаш для глаз",
+			"de": "Augenstift",
+			"en": "Eye pencil",
+			"pl": "Kredka do oczu",
+			"uk": "Олівець для очей",
+			"article": "der",
+			"plural": "Augenstifte",
+			"pluralArticle": "die"
+		},
+		{
+			"ru": "Тени для век",
+			"de": "Lidschatten",
+			"en": "Eyeshadow",
+			"pl": "Cień do powiek",
+			"uk": "Тіні для повік",
+			"article": "der",
+			"plural": "Lidschatten",
+			"pluralArticle": "die"
+		},
+		{
+			"ru": "Косметичка",
+			"de": "Kosmetiktasche",
+			"en": "Cosmetic bag",
+			"pl": "Kosmetyczka",
+			"uk": "Косметичка",
+			"article": "die",
+			"plural": "Kosmetiktaschen",
+			"pluralArticle": "die"
+		},
+		{
+			"ru": "Крем для лица",
+			"de": "Gesichtscreme",
+			"en": "Face cream",
+			"pl": "Krem do twarzy",
+			"uk": "Крем для обличчя",
+			"article": "die",
+			"plural": "Gesichtscremes",
+			"pluralArticle": "die"
+		},
+		{
+			"ru": "Зеркальце",
+			"de": "Taschenspiegel",
+			"en": "Compact mirror",
+			"pl": "Lusterko",
+			"uk": "Дзеркальце",
+			"article": "der",
+			"plural": "Taschenspiegel",
+			"pluralArticle": "die"
+		},
+		{
+			"ru": "Крем для рук",
+			"de": "Handcreme",
+			"en": "Hand cream",
+			"pl": "Krem do rąk",
+			"uk": "Крем для рук",
+			"article": "die",
+			"plural": "Handcremes",
+			"pluralArticle": "die"
+		},
+		{
+			"ru": "Крем для тела",
+			"de": "Bodylotion",
+			"en": "Body lotion",
+			"pl": "Balsam do ciała",
+			"uk": "Крем для тіла",
+			"article": "die",
+			"plural": "Bodylotions",
+			"pluralArticle": "die"
+		},
+		{
+			"ru": "Блеск для губ",
+			"de": "Lippenbalsam",
+			"en": "Lip gloss",
+			"pl": "Błyszczyk do ust",
+			"uk": "Блиск для губ",
+			"article": "der",
+			"plural": "Lippenbalsame",
+			"pluralArticle": "die"
+		},
+		{
+			"ru": "Карандаш для бровей",
+			"de": "Augenbrauenstift",
+			"en": "Eyebrow pencil",
+			"pl": "Kredka do brwi",
+			"uk": "Олівець для брів",
+			"article": "der",
+			"plural": "Augenbrauenstifte",
+			"pluralArticle": "die"
+		},
+		{
+			"ru": "Резинка для волос",
+			"de": "Haargummi",
+			"en": "Hair tie",
+			"pl": "Gumka do włosów",
+			"uk": "Гумка для волосся",
+			"article": "der",
+			"plural": "Haargummis",
+			"pluralArticle": "die"
+		},
+		{
+			"ru": "Щётка для макияжа",
+			"de": "Make-up-Pinsel",
+			"en": "Makeup brush",
+			"pl": "Pędzel do makijażu",
+			"uk": "Пензлик для макіяжу",
+			"article": "der",
+			"plural": "Make-up-Pinsel",
+			"pluralArticle": "die"
+		}
 	],
 	"Familie": [
 		{ "ru": "Семья", "de": "Familie", "article": "die", "plural": "Familien", "pluralArticle": "die" },
@@ -922,5 +1067,4 @@
 		{ "ru": "Электронная почта", "de": "E-Mail", "article": "die", "plural": "E-Mails", "pluralArticle": "die" },
 		{ "ru": "Кнопка", "de": "Taste", "article": "die", "plural": "Tasten", "pluralArticle": "die" }
 	]
-
 }

@@ -1,11 +1,14 @@
 <template>
 	<div class="layout">
-      <slot></slot>
+		<slot></slot>
+		<vScroll/>
 	</div>
 </template>
 
-<script>
+<script setup>
 
+	import vScroll from '../src/components/v-scroll.vue'
+	import Coffe from '../src/components/forTea.vue'
 </script>
 
 <style scoped>

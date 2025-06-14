@@ -1,13 +1,28 @@
 <template>
 	<div class="guess">
+
 		<div class="guess__inner">
-			<div class="guess__attempts">
-				<div class="guess__attempts-text">
-					Попыток осталось:
-				</div>
-				<div class="guess__attempts-value">{{ store.attempts }}</div>
+			<div v-if="!isStarted" class="guess__start-screen">
+				<button class="guess__submit" @click="startGame">Начать игру</button>
 			</div>
-			<div class="guess__word">
+			<div class="guess__inner-session" v-else>
+				<div class="guess__top-content">
+					<div class="guess__back">
+						<NuxtLink to="/">Назад</NuxtLink>
+					</div>
+					<div class="guess__attempts">
+						<div class="guess__attempts-text">
+							Попыток осталось:
+						</div>
+						<div class="guess__attempts-value">{{ store.attempts }}</div>
+					</div>
+					<div class="guess__actions">
+						<button class="guess__restart" @click="startGame">
+							<img src="../assets/images/undo.svg" alt="">
+						</button>
+					</div>
+				</div>
+				<div class="guess__word">
 			<span
 				v-for="(char, i) in store.masked"
 				:key="i"
@@ -16,61 +31,59 @@
 			>
 				{{ char || '_' }}
 			</span>
-			</div>
-			<div class="guess__alphabet">
-				<button
-					v-for="letter in store.alphabet"
-					:key="letter"
-					class="guess__btn"
-					:disabled="store.usedLetters.includes(letter) || store.win || store.lose"
-					@click="store.pickLetter(letter)"
-				>
-					{{ letter }}
-				</button>
-			</div>
-			<div class="guess__input-area">
-				<div class="gues__input-items">
+				</div>
+				<div class="guess__alphabet">
+					<button
+						v-for="letter in store.alphabet"
+						:key="letter"
+						class="guess__btn"
+						:disabled="store.usedLetters.includes(letter) || store.win || store.lose"
+						@click="store.pickLetter(letter)"
+					>
+						{{ letter }}
+					</button>
+				</div>
+				<div class="guess__input-area">
+					<div class="gues__input-items">
+						<input
+							v-model="guessInput"
+							class="guess__input"
+							:disabled="store.win || store.lose"
+							@keyup.enter="guessWord"
+							placeholder="Введи слово целиком"
+						/>
+						<button class="guess__submit" @click="guessWord" :disabled="store.win || store.lose">Проверить
+							слово
+						</button>
+					</div>
+				</div>
+				<div v-if="store.win" class="guess__result guess__result--win">Победа!</div>
+				<div class="guess__article" v-if="store.win && store.currentWordObj">
+					<p class="gues__article--title">А теперь угадай артикль этого слова:</p>
 					<input
-						v-model="guessInput"
+						v-model="articleGuess"
 						class="guess__input"
-						:disabled="store.win || store.lose"
-						@keyup.enter="guessWord"
-						placeholder="Введи слово целиком"
+						:placeholder="'Введите der/die/das'"
+						:disabled="articleResult"
+						@keyup.enter="checkArticle"
+						maxlength="4"
 					/>
-					<button class="guess__submit" @click="guessWord" :disabled="store.win || store.lose">Проверить слово</button>
+					<button
+						class="guess__submit"
+						@click="checkArticle"
+						:disabled="articleResult"
+					>
+						Проверить артикль
+					</button>
+					<div v-if="articleResult" class="guess__result"
+					     :class="{'guess__result--win': articleResult==='Верно!','guess__result--lose': articleResult!=='Верно!'}"
+					     style="margin-top: 8px;">
+						{{ articleResult }}
+					</div>
 				</div>
-			</div>
-			<div v-if="store.win" class="guess__result guess__result--win">Победа!</div>
-			<div class="guess__article" v-if="!store.win && store.currentWordObj">
-				<p class="gues__article--title">А теперь угадай артикль этого слова:</p>
-				<input
-					v-model="articleGuess"
-					class="guess__input"
-					:placeholder="'Введите der/die/das'"
-					:disabled="articleResult"
-					@keyup.enter="checkArticle"
-					maxlength="4"
-				/>
-				<button
-					class="guess__submit"
-					@click="checkArticle"
-					:disabled="articleResult"
-				>
-					Проверить артикль
-				</button>
-				<div v-if="articleResult" class="guess__result"
-				     :class="{'guess__result--win': articleResult==='Верно!','guess__result--lose': articleResult!=='Верно!'}"
-				     style="margin-top: 8px;">
-					{{ articleResult }}
+				<div v-if="store.lose" class="guess__result guess__result--lose">
+					Проигрыш! Было слово: <span class="guess__answer">{{ store.answer }}</span>
 				</div>
-			</div>
-			<div v-if="!store.lose" class="guess__result guess__result--lose">
-				Проигрыш! Было слово: <span class="guess__answer">{{ store.answer }}</span>
-			</div>
-			<div class="guess__actions">
-				<button class="guess__restart" @click="store.startGame()">
-					<img  src="../assets/images/undo.svg" alt="">
-				</button>
 			</div>
 		</div>
 	</div>
@@ -79,10 +92,12 @@
 <script setup>
 	import {ref} from 'vue'
 	import {useGuessWordStore} from '../store/guesStore.js'
+
 	const store = useGuessWordStore()
 	const guessInput = ref('')
 	const articleGuess = ref('')
 	const articleResult = ref(null)
+	const isStarted = ref(false)
 
 	function checkArticle() {
 		if (!store.currentWordObj) return
@@ -90,9 +105,13 @@
 		articleResult.value = correct ? 'Верно!' : `Неверно. Это было: ${store.currentWordObj.article}`
 	}
 
-	onMounted(() => {
+	function startGame() {
 		store.startGame()
-	})
+		isStarted.value = true
+		guessInput.value = ''
+		articleGuess.value = ''
+		articleResult.value = null
+	}
 
 	function guessWord() {
 		store.tryGuessWord(guessInput.value)
@@ -101,55 +120,86 @@
 </script>
 
 <style scoped>
-	.guess {
-		width: 100%;
+
+	.guess__top-content {
 		display: flex;
-		justify-content: center;
-		align-content: center;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 30px;
 	}
 
-	.guess__inner{
-		position: relative;
-		max-width: 100%;
-		border-radius: 24px;
-		padding: 38px 24px 28px 24px;
+	.guess__back {
+		display: flex;
+		justify-content: flex-start;
+	}
+
+	.guess__back a, .guess__back .nuxt-link-active {
+		display: inline-block;
+		padding: 13px 32px;
+		background: #232323;
+		color: #fffbe2;
+		border-radius: 13px;
+		font-size: 1.19rem;
+		font-family: 'Montserrat', Arial, sans-serif;
+		font-weight: 700;
+		letter-spacing: 0.03em;
+		text-decoration: none;
+		box-shadow: 0 4px 18px #b7a75a44, 0 2px 8px #fff6bb44;
+		border: 2.5px solid #ffe68a;
+		transition: background 0.13s, color 0.13s, box-shadow 0.14s, border 0.14s;
+		cursor: pointer;
+	}
+
+	.guess__back a:hover, .guess__back .nuxt-link-active:hover {
+		background: #ffe68a;
+		color: #232323;
+		border-color: #fdd76c;
+		box-shadow: 0 4px 28px #ffe68a77;
+	}
+
+
+	.guess__inner {
+		background: #fff;
+		box-shadow: 0 8px 40px #d7d0c785, 0 1.5px 10px #e7d8c725;
+		border-radius: 28px;
+		padding: 42px 36px 36px 36px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		max-width: 1300px;
+		margin: 30px auto;
+		transition: box-shadow 0.18s;
 	}
 
 	.guess__word {
 		display: flex;
-		gap: 14px;
+		gap: 10px;
 		justify-content: center;
-		margin-bottom: 34px;
-	}
-
-	.gues__input-items {
-		display: flex;
-		flex-direction: column;
+		margin-bottom: 32px;
 	}
 
 	.guess__letter {
-		font-size: 2.3rem;
-		width: 38px;
-		height: 52px;
-		background: #f7edcf;
-		color: #b5a27b;
-		font-family: 'Cinzel', serif;
-		border-radius: 12px;
-		box-shadow: 0 2px 10px #cab1692a;
+		font-size: 2.2rem;
+		width: 54px;
+		height: 64px;
+		background: #f5f2e9;
+		color: #4d5345;
+		font-family: 'Montserrat', Arial, sans-serif;
+		border-radius: 17px;
+		box-shadow: 0 2px 8px #e4e0cc44;
+		border: 2.5px solid #ece6cf;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		transition: background 0.15s, color 0.18s;
+		transition: background 0.14s, color 0.16s, border 0.13s;
 		user-select: none;
 	}
 
 	.guess__letter--filled {
-		background: #7c3aed;
-		color: #fffbe2;
-		box-shadow: 0 2px 12px #9b73ff44;
+		background: #ffea8a;
+		color: #232323;
+		border-color: #fdd76c;
+		box-shadow: 0 2px 14px #ffe68a77;
 	}
 
 	.guess__alphabet {
@@ -157,175 +207,231 @@
 		flex-wrap: wrap;
 		gap: 8px;
 		justify-content: center;
-		margin-bottom: 24px;
-		max-width: 500px;
+		margin: 25px auto;
+		max-width: 670px;
+	}
+
+
+	.gues__input-items {
+		display: flex;
+		flex-direction: column;
+		width: 50%;
+		margin: 0 auto;
 	}
 
 	.guess__btn {
-		font-size: 1.1rem;
-		width: 40px;
-		height: 44px;
+		font-size: 1.15rem;
+		width: 46px;
+		height: 54px;
 		border: none;
-		border-radius: 10px;
-		background: #ece7f9;
-		color: #5531b5;
+		border-radius: 14px;
+		background: #edeae1;
+		color: #4d5345;
 		font-family: 'Montserrat', Arial, sans-serif;
-		font-weight: bold;
+		font-weight: 800;
 		cursor: pointer;
-		box-shadow: 0 1px 6px #dad1fa25;
-		transition: background 0.14s, color 0.13s, transform 0.1s;
+		box-shadow: 0 2px 8px #c8beb033;
+		transition: background 0.13s, color 0.13s, box-shadow 0.11s;
 	}
 
 	.guess__btn:disabled {
-		background: #e7dff9;
-		color: #b1a5e2;
-		cursor: default;
-		transform: scale(0.96);
+		background: #f8f5ee;
+		color: #b3b1a1;
+		cursor: not-allowed;
 	}
 
 	.guess__btn:not(:disabled):hover {
-		background: #c5b1fd;
-		color: #fff;
-		transform: scale(1.09);
+		background: #ffea8a;
+		color: #232323;
+		box-shadow: 0 3px 14px #ffe68a55;
 	}
 
 	.guess__input-area {
 		display: flex;
-
 		flex-direction: column;
-		margin-bottom: 18px;
+		margin-bottom: 20px;
 		justify-content: center;
-		max-width: 600px;
-		gap: 20px;
+		gap: 17px;
 	}
 
 	.guess__input {
-		margin-bottom: 10px;
-		font-size: 1.07rem;
-		padding: 10px 14px;
-		border-radius: 10px;
-		border: 1.5px solid #d4c1ee;
+		margin-bottom: 8px;
+		font-size: 1.19rem;
+		padding: 13px 19px;
+		border-radius: 13px;
+		border: 2.5px solid #ece6cf;
 		outline: none;
-		background: #f8f4fd;
-		color: #5633a4;
-		transition: border 0.16s, background 0.13s;
+		background: #f7f5ef;
+		color: #434c3c;
+		transition: border 0.13s, background 0.13s;
 		font-family: inherit;
+		font-weight: 500;
 	}
 
 	.guess__input:focus {
-		border: 1.5px solid #b6a2e0;
-		background: #fff;
+		border: 2.5px solid #ffea8a;
+		background: #fff9db;
 	}
 
 	.guess__submit {
-		background: #7c3aed;
-		color: #fffbe2;
+		background: #3a4b3a;
+		color: #fff;
 		border: none;
-		border-radius: 10px;
-		padding: 10px 18px;
-		font-size: 1.07rem;
+		border-radius: 14px;
+		padding: 12px 30px;
+		font-size: 1.19rem;
 		font-family: 'Montserrat', Arial, sans-serif;
-		font-weight: 700;
+		font-weight: 900;
 		cursor: pointer;
-		box-shadow: 0 2px 8px #c0b2f740;
-		transition: background 0.17s;
+		box-shadow: 0 3px 18px #d6e6cc18;
+		transition: background 0.14s, color 0.13s, box-shadow 0.14s;
 	}
 
 	.guess__submit:disabled {
-		background: #cec6e9;
-		color: #a299ba;
+		background: #f8f5ee;
+		color: #b3b1a1;
 		cursor: not-allowed;
 	}
 
-	.guess__info {
-		position: absolute;
-		font-size: 1.1rem;
-		color: #896d2e;
-		margin-bottom: 12px;
-		text-align: center;
+	.guess__submit:not(:disabled):hover {
+		background: #1a2c18;
+		color: #ffea8a;
+		box-shadow: 0 2px 16px #cbe67d33;
+	}
+
+	.guess__inner-session {
+		width: 100%;
 	}
 
 	.guess__attempts {
-		color: #7c3aed;
-		font-weight: bold;
+		color: #2b3a26;
+		font-weight: 700;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		margin-bottom: 20px;
+		gap: 10px;
+	}
+
+	.guess__attempts-value {
+		width: 52px;
+		height: 52px;
+		border-radius: 50%;
+		border: 3.5px solid #d6e67d;
+		background: #fffae1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #d6ae24;
+		font-size: 2.1rem;
+		font-weight: bold;
+		box-shadow: 0 2px 10px #ffe68a35;
+	}
+
+	.guess__attempts-text {
+		font-size: 24px;
+		margin-right: 7px;
+		font-weight: 600;
 	}
 
 	.guess__result {
-		font-size: 1.25rem;
-		margin: 10px 0 22px 0;
+		font-size: 1.32rem;
+		margin: 13px 0 25px 0;
 		font-weight: bold;
 		text-align: center;
 		border-radius: 12px;
-		padding: 9px 20px;
-		box-shadow: 0 1px 8px #e5d4a880;
+		padding: 13px 22px;
+		box-shadow: 0 2px 12px #ffd36c3a;
+		letter-spacing: 0.02em;
 	}
 
 	.guess__result--win {
 		color: #fff;
-		background: linear-gradient(92deg, #64d370 40%, #38b29d 100%);
+		background: linear-gradient(96deg, #ffc745 30%, #77d97d 100%);
+		border: 2.5px solid #c6be86;
 	}
 
 	.guess__result--lose {
 		color: #fff;
-		background: linear-gradient(92deg, #f15b4e 40%, #b21d38 100%);
+		background: linear-gradient(95deg, #fa6262 24%, #8185be 100%);
+		border: 2.5px solid #ffdddd;
 	}
 
 	.guess__answer {
 		font-family: monospace;
-		font-size: 1.09em;
-		letter-spacing: 0.06em;
-		color: #fffbe2;
-		padding: 2px 8px;
+		font-size: 1.12em;
+		letter-spacing: 0.09em;
+		color: #fff;
+		padding: 4px 13px;
 		border-radius: 7px;
-		background: #7c3aed;
-		margin-left: 8px;
+		background: #d6ae24;
+		margin-left: 10px;
 	}
 
 	.guess__restart {
-		width: 30px;
-		background: none;
-		color: #7c3aed;
-		border: none;
+		width: 38px;
+		height: 38px;
+		background: #f7f5ee;
+		color: #d6ae24;
+		border: 2.5px solid #ece6cf;
 		border-radius: 10px;
-		font-size: 1.07rem;
+		font-size: 1.12rem;
 		cursor: pointer;
 		font-weight: bold;
-		transition: background 0.13s, color 0.13s;
+		transition: background 0.13s, color 0.13s, border 0.13s;
+		margin-top: 13px;
 	}
 
-	.guess__attempts-value {
-		width: 46px;
-		height: 46px;
-		border-radius: 50%;
-		border: 3px solid black;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		color: black;
-		font-size: 25px;
-		font-weight: bold;
-	}
-
-
-	.guess__attempts-text {
-	  font-size: 24px;
-		margin-right: 15px;
-		font-weight: 600;
-
+	.guess__restart:hover {
+		background: #ffe68a;
+		color: #232323;
+		border-color: #d6e67d;
 	}
 
 	.guess__article {
-		gap: 15px;
+		gap: 13px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		width: 100%;
+		background: rgba(255, 240, 200, 0.11);
+		padding: 14px 0 0 0;
+		border-radius: 12px;
 	}
 
+	.gues__article--title {
+		font-size: 1.13rem;
+		color: #2b3a26;
+		font-family: 'Montserrat', Arial, sans-serif;
+		font-weight: bold;
+		letter-spacing: 0.01em;
+		margin-bottom: 3px;
+		text-shadow: 0 1px 6px #e3e3cb22;
+	}
+
+	@media (hover: none) and (pointer: coarse) {
+		.guess__btn:not(:disabled):hover,
+		.guess__letter:hover {
+			background: inherit !important;
+			color: inherit !important;
+			transform: none !important;
+			filter: none !important;
+		}
+	}
+
+	@media (max-width: 700px) {
+		.guess__inner {
+			padding: 8vw 2vw 9vw 2vw;
+			max-width: 98vw;
+		}
+
+		.guess__word {
+			gap: 3vw;
+		}
+
+		.guess__alphabet {
+			gap: 2vw;
+		}
+	}
 
 </style>

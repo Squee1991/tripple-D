@@ -2,7 +2,7 @@
 	<header class="header">
 		<Uioverlay :visible="showAuth" @close="closeAuth"/>
 		<transition name="slide">
-			<SignIn v-if="showAuth"/>
+			<SignIn v-if="showAuth" @close-auth-form="closeAuth"/>
 		</transition>
 		<div class="header-nav__bar">
 			<div class="header-nav__logo">
@@ -10,7 +10,17 @@
 					<img class="logo" src="../../assets/images/3dLogo.png" alt="">
 				</NuxtLink>
 			</div>
-			<nav ref="dropdownRefNav" class="header-nav__nav">
+			<button class="burger-button">
+				<BurgerMenu :modelValue="isMobileMenuOpen" @update:modelValue="toggleMobileMenu"/>
+			</button>
+			<nav
+				ref="dropdownRefNav"
+				class="header-nav__nav"
+				:class="{
+          'header-nav__nav--open': isMobileMenuOpen,
+          'header-nav__nav--animating': animatingMenu
+        }"
+			>
 				<ul class="header-nav__list">
 					<li
 						v-for="item in menuItems"
@@ -18,7 +28,12 @@
 						class="header-nav__item"
 						@click="toggleSubmenu(item.id)"
 					>
-						<NuxtLink :to="item.url"  class="header-nav__link">{{ t(item.valueKey) }}</NuxtLink>
+						<template v-if="item.children">
+							<span class="header-nav__link">{{ t(item.valueKey) }}</span>
+						</template>
+						<template v-else>
+							<NuxtLink :to="item.url" class="header-nav__link">{{ t(item.valueKey) }}</NuxtLink>
+						</template>
 						<img
 							v-if="item.icon"
 							:class="['header-nav__arrow', { 'header-nav__arrow--active': clickedMenu === item.id }]"
@@ -62,7 +77,7 @@
 						@click.stop="item.action"
 					>
 						<img class="header-nav__dropdown-icon" :src="item.icon" alt="">
-						<span>{{ item.label }}</span>
+						<span class="header__drop-text">{{ item.label }}</span>
 					</button>
 				</div>
 			</div>
@@ -70,26 +85,34 @@
 				v-else
 				class="header-nav__login"
 				@click="openAuth"
-			> {{ t('auth.logIn')}}
+			>
+				{{ t('auth.logIn') }}
 			</button>
 		</div>
 	</header>
 </template>
 
 <script setup>
-	import {ref, watch, onMounted, onBeforeUnmount } from 'vue'
+	import LogIn from '../../assets/images/log-in.svg'
+	import {ref, watch, onMounted, onBeforeUnmount} from 'vue'
 	import {useRouter} from 'vue-router'
-	import { useI18n } from 'vue-i18n'
-	const { t , locale , locales , messages} = useI18n()
+	import {useI18n} from 'vue-i18n'
+
+	const {t} = useI18n()
 	import {userAuthStore} from '../../store/authStore'
+	import {useBreakPointsStore} from '../../store/breakPointsStore.js'
+
+	const bp = useBreakPointsStore()
 	import SignIn from '../components/logIn.vue'
 	import LanguageSelector from '../components/langSwitcher.vue'
+	import ForTea from '../components/forTea.vue'
+	import BurgerMenu from '../components/burgerMenu.vue'
 	import Uioverlay from '../components/Uioverlay.vue'
 	import Arrow from '../../assets/images/arrowNav.svg'
-	import ForTea from '../components/forTea.vue'
 	import avatar from '../../assets/images/avatar.svg'
 	import Logout from '../../assets/images/logout.svg'
 	import User from '../../assets/images/user.svg'
+
 	const clickedMenu = ref(null)
 	const showAuth = ref(false)
 	const router = useRouter()
@@ -98,28 +121,66 @@
 	const dropdownRef = ref(null)
 	const dropdownRefNav = ref(null)
 
+	const isMobileMenuOpen = ref(false)
+	const animatingMenu = ref(false)
+	let openTimeout = null
+	let closeTimeout = null
+
+	const openMobileMenu = () => {
+		animatingMenu.value = true
+		clearTimeout(openTimeout)
+		openTimeout = setTimeout(() => {
+			isMobileMenuOpen.value = true
+		}, 120)
+	}
+
+	const closeAuth = () => {
+		showAuth.value = false
+	}
+
+	const closeMobileMenu = () => {
+		isMobileMenuOpen.value = false
+		clearTimeout(closeTimeout)
+		closeTimeout = setTimeout(() => {
+			animatingMenu.value = false
+		}, 400)
+	}
+	const toggleMobileMenu = () => {
+		if (!isMobileMenuOpen.value && !animatingMenu.value) openMobileMenu()
+		else if (isMobileMenuOpen.value) closeMobileMenu()
+	}
+
 	const menuItems = [
 		{
 			id: 'learn',
-			url: '',
 			valueKey: 'nav.training',
 			icon: Arrow,
 			children: [
-				{ id: 'tips', url: 'examples', valueKey: 'sub.prev' },
-				{ id: 'rules', url: 'rules', valueKey: 'sub.rules' },
-				{ id: 'selectedTopics', url: 'selectedTopics', valueKey: 'sub.artRules' }
+				{id: 'learn-tips', url: 'examples', valueKey: 'sub.prev'},
+				{id: 'learn-rules', url: 'rules', valueKey: 'sub.rules'},
+				{id: 'learn-selectedTopics', url: 'selectedTopics', valueKey: 'sub.artRules'}
 			]
 		},
 		{
 			id: 'duel',
-			url: 'duel',
-			valueKey: 'nav.gameMode'
+			valueKey: 'nav.gameMode',
+			icon: Arrow,
+			children: [
+				{id: 'duel-pvp', url: 'duel', valueKey: 'nav.pvp'},
+				{id: 'duel-guess', url: 'guess', valueKey: 'nav.guess'},
+				{id: 'vocabulary', url: 'vocabulary', valueKey: 'nav.sinonim'}
+			]
+		},
+		{
+			id: 'quests',
+			url: 'quests',
+			valueKey: 'nav.achieve'
 		},
 		{
 			id: 'about',
 			url: 'about',
 			valueKey: 'nav.about'
-		},
+		}
 	]
 
 	const menuActions = ref([
@@ -140,35 +201,27 @@
 	const toggleMenu = () => {
 		menuOpen.value = !menuOpen.value
 	}
-
 	const toggleSubmenu = (id) => {
 		clickedMenu.value = clickedMenu.value === id ? null : id
 	}
-
 	const goTo = (page) => {
 		menuOpen.value = false
-		router.push({ path: `/${page}` })
+		router.push({path: `/${page}`})
 	}
-
 	const openAuth = () => showAuth.value = true
-	const closeAuth = () => showAuth.value = false
-
 	const startLearning = () => {
 		userAuth.name ? router.push('/selectedTopics') : openAuth()
 	}
-
 	const handleClickOutside = (event) => {
 		if (menuOpen.value && dropdownRef.value && !dropdownRef.value.contains(event.target)) {
 			menuOpen.value = false
 		}
 	}
-
 	const handleClickOutsideNav = (event) => {
 		if (clickedMenu.value && dropdownRefNav.value && !dropdownRefNav.value.contains(event.target)) {
 			clickedMenu.value = null
 		}
 	}
-
 	onMounted(() => {
 		document.addEventListener('mousedown', handleClickOutside)
 		document.addEventListener('mousedown', handleClickOutsideNav)
@@ -176,17 +229,15 @@
 	onBeforeUnmount(() => {
 		document.removeEventListener('mousedown', handleClickOutside)
 		document.removeEventListener('mousedown', handleClickOutsideNav)
+		clearTimeout(openTimeout)
+		clearTimeout(closeTimeout)
 	})
-
 	watch(showAuth, (val) => {
 		document.body.style.overflow = val ? 'hidden' : ''
 	})
-
 </script>
 
 <style scoped>
-	/*@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');*/
-
 	.header {
 		font-family: 'Inter', sans-serif;
 		position: sticky;
@@ -199,11 +250,15 @@
 		cursor: pointer;
 	}
 
+	.login-icon {
+		width: 30px;
+	}
+
 	.header-nav__bar {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 0px 30px;
+		padding: 10px 20px;
 		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
 		background-color: #efeff3;
 		/*background: #402404b;*/
@@ -228,12 +283,13 @@
 	}
 
 	.header-nav__item {
-		justify-content: center;
+		position: relative;
+		justify-content: space-between;
 		display: flex;
-		min-width: 186px;
+		min-width: 146px;
 		align-items: center;
 		/*background: linear-gradient(90deg, #366cff 60%, #4c88ff 100%);*/
-		background: #fbd912;
+		background: #bd7609;
 		/*background: linear-gradient(90deg, #36b9ff 60%, #67c7d8 100%);*/
 		color: #fff;
 		border-radius: 14px 30px 14px 30px / 30px 14px 30px 14px;
@@ -250,13 +306,13 @@
 
 	.header-nav__item:hover {
 		/*background: linear-gradient(90deg, #4c88ff 60%, #366cff 100%);*/
-		background: #e8bd0e;
+		background: #9b5f03;
 		box-shadow: 0 4px 16px 0 #15235e77;
 	}
 
 	.header-nav__link {
 		color: #fff;
-		padding: 12px 20px;
+		padding: 12px;
 		text-decoration: none;
 		font-style: italic;
 	}
@@ -273,15 +329,17 @@
 	}
 
 	.header-nav__submenu {
+		width: 100%;
 		overflow: hidden;
 		margin-top: 10px;
 		position: absolute;
 		top: 100%;
 		left: 0;
+		font-size: 15px;
 		background: linear-gradient(90deg, #366cff 60%, #4c88ff 100%);
-		background: #fbd912;
+		background: #bd7609;
 		border-radius: 14px 30px 14px 30px / 30px 14px 30px 14px;
-		min-width: 160px;
+		min-width: 190px;
 		z-index: 50;
 	}
 
@@ -302,10 +360,9 @@
 	}
 
 	.header-nav__submenu-item:hover {
-		background: rgba(160, 48, 48, 0.15);
+		background: rgba(48, 67, 160, 0.15);
 		color: #fff3ec;
 	}
-
 
 
 	.header-nav__lang {
@@ -403,7 +460,7 @@
 	}
 
 	.header-nav__login {
-		min-width: 160px;
+		/*min-width: 160px;*/
 		/*background: linear-gradient(90deg, #366cff 60%, #4c88ff 100%);*/
 		background: #c25f5f;
 		color: white;
@@ -428,4 +485,121 @@
 		color: #fff3ec;
 		/*box-shadow: 0 8px 24px rgba(83, 28, 82, 0.67), 0 2px 6px #fff8 inset;*/
 	}
+
+	.burger-button {
+		display: none;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 30px;
+		height: 22px;
+		background: transparent;
+		border: none;
+		cursor: pointer;
+		padding: 0;
+		margin-left: 15px;
+	}
+
+	.burger-line {
+		height: 4px;
+		background-color: #472b81;
+		border-radius: 2px;
+	}
+
+	@media (max-width: 768px) {
+		.burger-button {
+			display: flex;
+		}
+
+		.header-nav__email,
+		.header__drop-text {
+			display: none;
+		}
+
+		.header-nav__user {
+			width: 120px;
+		}
+
+		.header-nav__dropdown {
+			min-width: 100%;
+			width: 100%;
+		}
+
+		.header-nav__nav {
+			display: flex;
+			flex-direction: column;
+			position: fixed;
+			top: 0px;
+			left: 0;
+			width: 100vw;
+			padding: 24px 0 0 0;
+			background: #efeff3;
+			z-index: -1;
+			pointer-events: none;
+			opacity: 0;
+			transform: translateY(-100%);
+			transition: transform 0.4s cubic-bezier(.77, 0, .18, 1), opacity 0.3s;
+		}
+
+		.header-nav__nav--animating {
+			pointer-events: auto;
+		}
+
+		.header-nav__nav--open {
+			opacity: 1;
+			transform: translateY(0);
+			pointer-events: auto;
+			border-bottom-right-radius: 30px;
+			border-bottom-left-radius: 30px;
+			border-bottom: 2px solid #acacea;
+		}
+
+		.header-nav__list {
+			flex-direction: column;
+			width: 100%;
+			align-items: start;
+			margin-top: 45px;
+			justify-content: start;
+			padding: 10px 10px 30px 10px;
+		}
+
+		.header-nav__item {
+			margin-right: 0;
+			margin-bottom: 10px;
+		}
+
+		.header-nav__submenu-item {
+			text-align: center;
+			padding: 5px 0;
+		}
+
+		.header-nav__submenu {
+			top: 0;
+			left: 100%;
+			margin: 0;
+			min-width: 140px;
+		}
+
+		.header-nav__arrow {
+			transform: rotate(-90deg);
+		}
+
+		.header-nav__arrow--active {
+			transform: rotate(0deg);
+		}
+	}
+
+	@media (max-width: 1280px) {
+		.header-nav__logo {
+			display: none;
+		}
+
+		.header-nav__login {
+			background: none;
+			border: none;
+			box-shadow: none;
+			margin: 0;
+			padding: 5px;
+		}
+	}
+
 </style>

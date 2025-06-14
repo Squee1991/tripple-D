@@ -1,157 +1,158 @@
 <template>
 	<main class="rules">
-		<header class="rules__hero">
-			<h1 class="rules__title">
-				Основные правила использования артиклей в немецком языке
-			</h1>
-			<p class="rules__subtitle">
-				Краткая и понятная шпаргалка для всех, кто хочет научиться правильно ставить der, die, das!
-			</p>
-		</header>
+		<div class="rules__wrapper">
+			<header class="rules__hero">
+				<h1 class="rules__title">
+					Основные правила использования артиклей в немецком языке
+				</h1>
+				<p class="rules__subtitle">
+					Краткая и понятная шпаргалка для всех, кто хочет научиться правильно ставить der, die, das!
+				</p>
+			</header>
+			<section class="rules__list" aria-label="Список правил использования артиклей">
+				<article class="rules__card" id="gender">
+					<h2 class="rules__card-title">1. Артикль зависит от рода существительного</h2>
+					<ul class="rules__list-ul">
+						<li class="rules__list-item">
+							<strong>der</strong> — мужской род <span class="rules__tip">(der Tisch — стол)</span>
+						</li>
+						<li class="rules__list-item">
+							<strong>die</strong> — женский род <span class="rules__tip">(die Lampe — лампа)</span>
+						</li>
+						<li class="rules__list-item">
+							<strong>das</strong> — средний род <span class="rules__tip">(das Buch — книга)</span>
+						</li>
+					</ul>
+					<p class="rules__desc">
+						Род существительного почти всегда нужно запоминать вместе со словом!
+					</p>
+				</article>
 
-		<section class="rules__list" aria-label="Список правил использования артиклей">
-			<article class="rules__card" id="gender">
-				<h2 class="rules__card-title">1. Артикль зависит от рода существительного</h2>
-				<ul class="rules__list-ul">
-					<li class="rules__list-item">
-						<strong>der</strong> — мужской род <span class="rules__tip">(der Tisch — стол)</span>
-					</li>
-					<li class="rules__list-item">
-						<strong>die</strong> — женский род <span class="rules__tip">(die Lampe — лампа)</span>
-					</li>
-					<li class="rules__list-item">
-						<strong>das</strong> — средний род <span class="rules__tip">(das Buch — книга)</span>
-					</li>
-				</ul>
-				<p class="rules__desc">
-					Род существительного почти всегда нужно запоминать вместе со словом!
-				</p>
-			</article>
+				<article class="rules__card" id="plural">
+					<h2 class="rules__card-title">2. Во множественном числе всегда <strong>die</strong></h2>
+					<p class="rules__desc">
+						Независимо от рода в единственном числе, во множественном всегда используется <strong>die</strong>.
+					</p>
+					<p class="rules__example">
+						der Hund <strong>→ die Hunde</strong><br>
+						das Kind <strong>→ die Kinder</strong>
+					</p>
+				</article>
 
-			<article class="rules__card" id="plural">
-				<h2 class="rules__card-title">2. Во множественном числе всегда <strong>die</strong></h2>
-				<p class="rules__desc">
-					Независимо от рода в единственном числе, во множественном всегда используется <strong>die</strong>.
-				</p>
-				<p class="rules__example">
-					der Hund <strong>→ die Hunde</strong><br>
-					das Kind <strong>→ die Kinder</strong>
-				</p>
-			</article>
+				<article class="rules__card" id="cases">
+					<h2 class="rules__card-title">3. Артикли меняются по падежам</h2>
+					<p class="rules__desc">
+						В немецком языке 4 падежа, и для каждого рода формы артикля будут разные. Вот таблица для
+						определённых артиклей:
+					</p>
+					<table class="rules__table">
+						<thead>
+						<tr>
+							<th scope="col">Падеж</th>
+							<th scope="col">Мужской</th>
+							<th scope="col">Женский</th>
+							<th scope="col">Средний</th>
+							<th scope="col">Множественное</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<th scope="row">Именительный (кто? что?)</th>
+							<td>der</td>
+							<td>die</td>
+							<td>das</td>
+							<td>die</td>
+						</tr>
+						<tr>
+							<th scope="row">Родительный (кого? чего?)</th>
+							<td>des</td>
+							<td>der</td>
+							<td>des</td>
+							<td>der</td>
+						</tr>
+						<tr>
+							<th scope="row">Дательный (кому? чему?)</th>
+							<td>dem</td>
+							<td>der</td>
+							<td>dem</td>
+							<td>den</td>
+						</tr>
+						<tr>
+							<th scope="row">Винительный (кого? что?)</th>
+							<td>den</td>
+							<td>die</td>
+							<td>das</td>
+							<td>die</td>
+						</tr>
+						</tbody>
+					</table>
+				</article>
 
-			<article class="rules__card" id="cases">
-				<h2 class="rules__card-title">3. Артикли меняются по падежам</h2>
-				<p class="rules__desc">
-					В немецком языке 4 падежа, и для каждого рода формы артикля будут разные. Вот таблица для
-					определённых артиклей:
-				</p>
-				<table class="rules__table">
-					<thead>
-					<tr>
-						<th scope="col">Падеж</th>
-						<th scope="col">Мужской</th>
-						<th scope="col">Женский</th>
-						<th scope="col">Средний</th>
-						<th scope="col">Множественное</th>
-					</tr>
-					</thead>
-					<tbody>
-					<tr>
-						<th scope="row">Именительный (кто? что?)</th>
-						<td>der</td>
-						<td>die</td>
-						<td>das</td>
-						<td>die</td>
-					</tr>
-					<tr>
-						<th scope="row">Родительный (кого? чего?)</th>
-						<td>des</td>
-						<td>der</td>
-						<td>des</td>
-						<td>der</td>
-					</tr>
-					<tr>
-						<th scope="row">Дательный (кому? чему?)</th>
-						<td>dem</td>
-						<td>der</td>
-						<td>dem</td>
-						<td>den</td>
-					</tr>
-					<tr>
-						<th scope="row">Винительный (кого? что?)</th>
-						<td>den</td>
-						<td>die</td>
-						<td>das</td>
-						<td>die</td>
-					</tr>
-					</tbody>
-				</table>
-			</article>
-
-			<article class="rules__card" id="exceptions">
-				<h2 class="rules__card-title">4. Исключения и особенности</h2>
-				<ul class="rules__list-ul">
-					<li class="rules__list-item">
-						Существительные на <strong>-chen</strong> и <strong>-lein</strong> — всегда средний род (<i>das
-						Mädchen</i> — девочка).
-					</li>
-					<li class="rules__list-item">
-						Дни недели, месяцы, времена года — всегда мужской род (<i>der Montag, der Januar</i>).
-					</li>
-					<li class="rules__list-item">
-						Большинство деревьев и цветов — женский род (<i>die Rose, die Eiche</i>).
-					</li>
-					<li class="rules__list-item">
-						Существительные, начинающиеся с Ge- и оканчивающиеся на -e, часто среднего рода (<i>das
-						Gebäude</i> — здание).
-					</li>
-				</ul>
-			</article>
-			<article class="rules__card" id="tips">
-				<h2 class="rules__card-title">5. Лайфхаки для запоминания</h2>
-				<ul class="rules__list-ul">
-					<li class="rules__list-item">
-						Всегда учи существительные с артиклем: <strong>der Tisch</strong>, <strong>die Lampe</strong>,
-						<strong>das Buch</strong>.
-					</li>
-					<li class="rules__list-item">
-						Веди личный словарь с цветовым кодом (например: синий — der, красный — die, жёлтый — das).
-					</li>
-					<li class="rules__list-item">
-						Запоминай окончания, характерные для рода (например, слова на -ung, -heit, -keit — почти всегда
-						женский род).
-					</li>
-				</ul>
-			</article>
-			<article class="rules__card" id="quiz">
-				<h2 class="rules__card-title">6. Проверь себя!</h2>
-				<p class="rules__desc">
-					Впиши правильный артикль (der, die или das), основываясь на лайфхаках выше, и нажми «Проверить».
-				</p>
-				<div class="quiz-form">
-					<div class="quiz-item" v-for="(word, index) in quizWords" :key="index">
-						<label :for="'word-' + index">{{ word.word }} <span class="rules__tip">({{ word.hint }})</span></label>
-						<div class="quiz__content__inner">
-							<input
-								:id="'word-' + index"
-								v-model="userAnswers[index]"
-								type="text"
-								placeholder="der / die / das"
-								class="quiz-input"
-							/>
-							<span v-if="showResults"
-							      :class="{'correct': isCorrect(index), 'incorrect': !isCorrect(index)}">
+				<article class="rules__card" id="exceptions">
+					<h2 class="rules__card-title">4. Исключения и особенности</h2>
+					<ul class="rules__list-ul">
+						<li class="rules__list-item">
+							Существительные на <strong>-chen</strong> и <strong>-lein</strong> — всегда средний род (<i>das
+							Mädchen</i> — девочка).
+						</li>
+						<li class="rules__list-item">
+							Дни недели, месяцы, времена года — всегда мужской род (<i>der Montag, der Januar</i>).
+						</li>
+						<li class="rules__list-item">
+							Большинство деревьев и цветов — женский род (<i>die Rose, die Eiche</i>).
+						</li>
+						<li class="rules__list-item">
+							Существительные, начинающиеся с Ge- и оканчивающиеся на -e, часто среднего рода (<i>das
+							Gebäude</i> — здание).
+						</li>
+					</ul>
+				</article>
+				<article class="rules__card" id="tips">
+					<h2 class="rules__card-title">5. Лайфхаки для запоминания</h2>
+					<ul class="rules__list-ul">
+						<li class="rules__list-item">
+							Всегда учи существительные с артиклем: <strong>der Tisch</strong>, <strong>die Lampe</strong>,
+							<strong>das Buch</strong>.
+						</li>
+						<li class="rules__list-item">
+							Веди личный словарь с цветовым кодом (например: синий — der, красный — die, жёлтый — das).
+						</li>
+						<li class="rules__list-item">
+							Запоминай окончания, характерные для рода (например, слова на -ung, -heit, -keit — почти всегда
+							женский род).
+						</li>
+					</ul>
+				</article>
+				<article class="rules__card" id="quiz">
+					<h2 class="rules__card-title">6. Проверь себя!</h2>
+					<p class="rules__desc">
+						Впиши правильный артикль (der, die или das), основываясь на лайфхаках выше, и нажми «Проверить».
+					</p>
+					<div class="quiz-form">
+						<div class="quiz-item" v-for="(word, index) in quizWords" :key="index">
+							<label :for="'word-' + index">{{ word.word }} <span class="rules__tip">({{ word.hint }})</span></label>
+							<div class="quiz__content__inner">
+								<input
+									:id="'word-' + index"
+									v-model="userAnswers[index]"
+									type="text"
+									placeholder="der / die / das"
+									class="quiz-input"
+								/>
+								<span v-if="showResults"
+								      :class="{'correct': isCorrect(index), 'incorrect': !isCorrect(index)}">
 								{{ isCorrect(index) ? '✔️' : '❌ (правильно: ' + word.article + ')' }}
 							</span>
+							</div>
+						</div>
+						<div class="quiz__button-el">
+							<button @click="checkAnswers" class="quiz-button">Проверить</button>
+							<img @click="resetResult" class="queiz__undo-icon" src="../assets/images/undo.svg" alt="">
 						</div>
 					</div>
-					<div class="quiz__button-el">
-						<button @click="checkAnswers" class="quiz-button">Проверить</button>
-						<img @click="resetResult" class="queiz__undo-icon" src="../assets/images/undo.svg" alt="">
-					</div>
-				</div>
-			</article>
-		</section>
+				</article>
+			</section>
+		</div>
 	</main>
 </template>
 
@@ -242,7 +243,6 @@
 		background-color: #4044b2;
 		color: white;
 		font-style: italic;
-
 		border: none;
 		border-radius: 8px;
 		font-size: 1rem;
@@ -293,12 +293,16 @@
 	}
 
 	.rules__title {
-		font-size: 2.4rem;
+		font-size: 2.1rem;
 		font-weight: 900;
 		margin-bottom: 12px;
 		letter-spacing: 1px;
 		color: #4044b2;
 		text-shadow: 0 0 6px rgba(100, 120, 255, 0.5), 0 2px 4px rgba(0, 0, 0, 0.2);
+	}
+
+	.rules__wrapper {
+		padding: 15px;
 	}
 
 	.rules__subtitle {
@@ -374,6 +378,7 @@
 	}
 
 	.rules__table {
+		position: relative;
 		width: 100%;
 		border-collapse: collapse;
 		margin-top: 12px;
@@ -400,26 +405,18 @@
 	}
 
 	@media (max-width: 700px) {
-		.rules__title {
-			font-size: 1.6rem;
+		.rules__table {
+			font-size: 0.83rem;
 		}
-
-		.rules__hero {
-			padding: 30px 0 20px 0;
-		}
-
-		.rules__card {
-			padding: 18px 12px;
-		}
-
-		.rules__card-title {
-			font-size: 1.3rem;
-		}
-
 		.rules__table th,
 		.rules__table td {
-			font-size: 0.9rem;
-			padding: 6px 5px;
+			word-break: break-word;
+		}
+		.rules__table-wrapper {
+			margin-left: -10px;
+			margin-right: -10px;
+			padding-left: 2px;
+			padding-right: 2px;
 		}
 	}
 </style>

@@ -1,8 +1,19 @@
 {
+	"preloader": {
+		"value": "You will be redirected to the main page..."
+	},
 	"nav": {
 		"training": "Training",
 		"gameMode": "Game Mode",
-		"about": "About the Project"
+		"about": "About project",
+		"pvp": "Card Battle",
+		"guess": "Guess the Word"
+	},
+	"formLabel": {
+		"name": "Name",
+		"email": "Email",
+		"password": "Password",
+		"confirm": "Confirm"
 	},
 	"sub": {
 		"prev": "Introduction",
@@ -10,10 +21,14 @@
 		"artRules": "Article Practice"
 	},
 	"auth": {
-		"logIn": "Log In",
-		"regs": "Sign Up",
+		"logIn": "Log in",
+		"regs": "Sign up",
 		"auths": "Authorization",
-		"btn": "Register"
+		"resetTitle": "Password recovery",
+		"resetBtn": "Send",
+		"btn": "Sign Up",
+		"forgot": "Forgot your password?",
+		"google": "Log in with Google"
 	},
 	"placeholder": {
 		"name": "Enter your name or nickname",
@@ -48,12 +63,22 @@
 		"label": "Feedback",
 		"title": "Have any suggestions? Fill out this form and we will get back to you.",
 		"btn": "Send Message",
-		"emailPlaceholder": "Enter your email",
+		"namePlaceholder": "Enter your name",
 		"messagePlaceholder": "Enter your message"
 	},
-	"errros": {
-		"notValidEmail": "Please enter a valid email address.",
-		"enterMsg": "Please enter your message."
+	"errors": {
+		"errorEmail": "Enter email",
+		"errorPassword": "Enter password",
+		"errorName": "Enter name",
+		"errorConfirm": "Passwords do not match",
+		"resetSent": "Email has been sent",
+		"emailNotVerified": "Please verify your email before logging in.",
+		"userNotFound": "User not found.",
+		"wrongPassword": "Incorrect password.",
+		"generalError": "An error occurred. Please try again.",
+		"userExists": "A user with this email already exists",
+		"invalidEmail": "Invalid email format",
+		"invalidCredential": "Invalid or expired login credentials"
 	},
 	"about": {
 		"title": "Is learning German and noun articles boring?",
@@ -81,6 +106,107 @@
 	},
 	"footer": {
 		"copy": "Der Die Das. All rights reserved."
+	},
+	"examples": {
+		"label": "Articles in German:",
+		"title": "Learn German articles easily and forever! Step-by-step theory with examples, rules, lifehacks, and instant practice."
+	},
+	"examplesFirstBlock": {
+		"title": "What are articles?",
+		"subtext": "Articles are accompanying words (der, die, das) that indicate gender, number, and case. In German, choosing the right article is critical for understanding and correct speech."
+	},
+	"examplesSecondBlock": {
+		"title": "Types of articles",
+		"first": "Definite article:",
+		"exampleTitle": "Used when talking about something specific or already known.",
+		"example": "Example:",
+		"exampleSecondhalf": " — That (specific) cat is sleeping.",
+		"second": "Indefinite article:",
+		"exampleSecondTitle": "Used when mentioning something for the first time or something non-specific.",
+		"exampleNotDefinite": "Example: eine Katze schläft. — A (some) cat is sleeping."
+	},
+	"exampleThirdBlock": {
+		"label": "How to use the indefinite article",
+		"subtext": "The indefinite article (ein / eine / ein) agrees with the noun's gender:",
+		"man": "Masculine:",
+		"mExample": " — (a, some) dog",
+		"woman": "Feminine:",
+		"wExample": " — (a, some) lamp",
+		"is": "Neuter:",
+		"isExample": " — (a, some) book",
+		"important": "Note: In the plural, the indefinite article is not used!",
+		"importantExample": " — I see books."
+	},
+	"exampleTabele": {
+		"label": "Article table by gender",
+		"family": "Gender",
+		"definite": "Definite",
+		"NotDefinite": "Indefinite",
+		"m": "Masculine",
+		"w": "Feminine",
+		"is": "Neuter"
+	},
+	"selectedpage": {
+		"title": "Select a Topic to Study",
+		"backBtn": "Back",
+		"startBtn": "Start Learning",
+		"choiceTitle": "Learning Modes",
+		"topic": "Topic"
+	},
+	"nameMap": {
+		"Furniture": "Furniture",
+		"Animals": "Animals",
+		"Clothes": "Clothes",
+		"Food": "Food",
+		"Body": "Body Parts",
+		"Professions": "Professions",
+		"Transport": "Transport",
+		"Colors": "Colors",
+		"Nature": "Nature",
+		"Home": "Home",
+		"Zeit": "Time",
+		"City": "City",
+		"School": "School",
+		"DaysAndMonths": "Days and Months",
+		"Toys": "Toys",
+		"CommonItems": "Common Items",
+		"BathroomItems": "Bathroom Items",
+		"Kosmetik": "Cosmetics",
+		"Familie": "Family",
+		"Emotions": "Emotions",
+		"Werkzeuge": "Tools",
+		"Kitchen": "Kitchen",
+		"Health": "Health",
+		"Sport": "Sport",
+		"SportEquipment": "Fitness Equipment",
+		"Travel": "Travel",
+		"Musik": "Music",
+		"Amount": "Amount",
+		"Informatik": "Computer Science"
+	},
+	"modes": {
+		"article": "Insert the Article",
+		"letters": "Spell the Word",
+		"articleWord": "Insert the Word and Article",
+		"plural": "Plural Form",
+		"audio": "Listening Comprehension"
+	},
+	"sessionPage": {
+		"choice": "Method",
+		"btnCheck": "Check",
+		"continue": "Next",
+		"theme": "theme"
+	},
+	"sessionLabels": {
+		"word": "word",
+		"articleFor": "Enter the article for",
+		"lettersFor": "Assemble the word from letters",
+		"articleWordFor": "Enter the article and word",
+		"pluralFor": "Enter the plural form for",
+		"audioFor": "Listen and enter the word"
+	},
+	"result": {
+		"correctAnswer": "Correct answer",
+		"correct": "Correct"
 	}
-
 }

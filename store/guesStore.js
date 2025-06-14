@@ -36,6 +36,16 @@ export const useGuessWordStore = defineStore('guessWord', () => {
 		lose.value = false
 	}
 
+	function setWord(wordObj) {
+		currentWordObj.value = wordObj
+		answer.value = wordObj.de.toUpperCase()
+		masked.value = Array(answer.value.length).fill('')
+		usedLetters.value = []
+		attempts.value = 15
+		win.value = false
+		lose.value = false
+	}
+
 	function pickLetter(letter) {
 		if (win.value || lose.value || usedLetters.value.includes(letter)) return
 		usedLetters.value.push(letter)
@@ -74,6 +84,6 @@ export const useGuessWordStore = defineStore('guessWord', () => {
 		answer, masked, attempts, usedLetters, win, lose,
 		alphabet, displayMasked,
 		currentWordObj,
-		startGame, pickLetter, tryGuessWord,
+		startGame, pickLetter, tryGuessWord, setWord
 	}
 })

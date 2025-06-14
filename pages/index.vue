@@ -5,8 +5,6 @@
         <Description/>
         <FeedBack/>
         <Footer/>
-        <VScroll/>
-        <Coffe/>
     </div>
 
 </template>

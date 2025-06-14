@@ -5,12 +5,22 @@
 	const dropdownOpen = ref(false)
 	const dropDownRef = ref(null)
 	const localeValue = computed(() => locale.value)
-
+	const dropdownDirection = ref('down')
 	const currentLang = computed(() => {
 		return (locales.value || []).find(l => l.code === locale.value)
 	})
 
+	const updateDropdownDirection = () => {
+		if (!dropDownRef.value) return
+		const rect = dropDownRef.value.getBoundingClientRect()
+		const spaceBelow = window.innerHeight - rect.bottom
+		dropdownDirection.value = spaceBelow < 200 ? 'up' : 'down'
+	}
+
 	const toggleDropdown = () => {
+		if (!dropdownOpen.value) {
+			updateDropdownDirection()
+		}
 		dropdownOpen.value = !dropdownOpen.value
 	}
 
@@ -32,11 +42,12 @@
 	onMounted(() => {
 		document.addEventListener('mousedown', clickOutside)
 	})
+
 	onBeforeUnmount(() => {
 		document.removeEventListener('mousedown', clickOutside)
 	})
-</script>
 
+</script>
 
 <template>
 	<div ref="dropDownRef" class="language-selector">
@@ -44,9 +55,9 @@
       <span class="language__name">
         {{ currentLang?.name || currentLang?.code || '' }}
       </span>
-			<img src="../../assets/images/arrowNav.svg" alt="" class="arrow" :class="{ open: dropdownOpen }"/>
+			<img src="../../assets/images/arrowDown.svg" alt="" class="arrow" :class="{ open: dropdownOpen }"/>
 		</button>
-		<div v-if="dropdownOpen" class="dropdown">
+		<div v-if="dropdownOpen" class="dropdown" :class="dropdownDirection">
 			<div
 				v-for="loc in locales"
 				:key="loc.code"
@@ -60,7 +71,6 @@
 </template>
 
 <style scoped>
-
 	.language-selector {
 		position: relative;
 	}
@@ -69,6 +79,7 @@
 		display: flex;
 		align-items: center;
 		/*background: #b2b2b2;*/
+		background: none;
 		border: none;
 		border-radius: 8px;
 		color: #fff;
@@ -78,18 +89,13 @@
 		cursor: pointer;
 	}
 
+	.dropdown.up {
+		top: auto;
+		bottom: 100%;
+	}
+
 	.language__name {
 		margin-right: 8px;
-	}
-
-	.arrow {
-		width: 25px;
-		font-size: 16px;
-		transition: transform .5s;
-	}
-
-	.arrow.open {
-		transform: scale(-1);
 	}
 
 	.dropdown {
@@ -125,7 +131,7 @@
 		align-items: center;
 		/*background: #b2b2b2;*/
 		border: none;
-		min-width: 140px;
+		/*min-width: 140px;*/
 		border-radius: 8px;
 		color: black;
 		font-weight: bold;
@@ -139,7 +145,7 @@
 	}
 
 	.arrow {
-		width: 25px;
+		width: 12px;
 		font-size: 16px;
 		transition: transform .5s;
 	}

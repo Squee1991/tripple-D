@@ -1,7 +1,7 @@
 <template>
 	<section class="features">
 		<div class="features__inner">
-			<h2 :class="{'s-title': bp.lg}" class="features__title">Что вас ждёт внутри</h2>
+			<h2 :class="{'s-title': bp.lg}" class="features__title">{{t('features.title')}}</h2>
 			<div class="features__grid">
 				<div class="features__card" v-for="(item, index) in items" :key="index">
 					<div class="features__card-bg"></div>
@@ -15,7 +15,6 @@
 		</div>
 	</section>
 </template>
-
 
 <script setup>
 	import MagikBook from '../../assets/images/magicBook.svg'
@@ -213,9 +212,14 @@
 		.features__card {
 			width: 100%;
 			min-width: 0;
-			height: 210px;
 			margin: 0 auto;
 		}
+
+		.features__title {
+			font-size: 22px;
+			margin-bottom: 20px;
+		}
+
 	}
 
 </style>

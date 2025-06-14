@@ -12,7 +12,7 @@
 			strategy: 'prefix',
 			lazy: true,
 			langDir: 'locales',
-			defaultLocale: 'ru',
+			defaultLocale: 'en',
 			locales: [
 				{ code: 'ru', iso: 'ru-RU', name: 'Русский',   file: 'ru-RU.json' },
 				{ code: 'en', iso: 'en-US', name: 'English',   file: 'en-US.json' },
@@ -24,7 +24,7 @@
 				useCookie: true,
 				cookieKey: 'i18n_redirected',
 				alwaysRedirect: false,
-				fallbackLocale: 'ru'
+				fallbackLocale: 'en'
 			}
 		},
 

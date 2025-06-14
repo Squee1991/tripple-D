@@ -61,7 +61,7 @@
 	}
 
 	const startLearning = () => {
-		userAuth.name ? router.push('/selectedTopics') : openAuth()
+		userAuth.name ? router.push('/examples') : openAuth()
 	}
 
 	watch(showAuth, (val) => {
@@ -97,7 +97,6 @@
 		max-width: 800px;
 		font-size: 24px;
 		/*font-family: 'Kurale', serif;*/
-		font-family: ;
 		font-weight: 600;
 		color: #322f2f;
 		/*text-shadow: 0 2px 8px #4b2e09a1, 0 1px 0 #fff8, 0 0px 2px #e6d9aa, 1px 2px 0 #a6752b99;*/
@@ -250,6 +249,28 @@
 
 	to {
 		filter: drop-shadow(0 0 0px gold) drop-shadow(0 0 0px gold);
+	}
+
+
+	@media (max-width: 768px) {
+		.banner__orbit,
+		.banner__mage{
+			display: none;
+		}
+		.banner__button {
+			font-size: 16px;
+			padding: 10px;
+			width: 100%;
+		}
+
+		.banner__subtitle {
+			text-align: center;
+			font-size: 17px;
+		}
+
+		.banner__wrapper {
+			padding: 10px;
+		}
 	}
 
 </style>

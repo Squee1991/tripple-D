@@ -10,6 +10,10 @@ export const useBreakPointsStore = defineStore('breakpoints', () => {
 		xl: 1920
 	}
 
+	const isMobile = computed(() => breakPoints.value.xs || breakPoints.value.sm)
+	const isTablet = computed(() => breakPoints.value.md)
+	const isDesktop = computed(() => breakPoints.value.lg || breakPoints.value.xl)
+
 	const breakPoints = ref({
 		xs: false,
 		sm: false,
@@ -28,7 +32,7 @@ export const useBreakPointsStore = defineStore('breakpoints', () => {
 		breakPoints.value.xs = width < values.sm
 		breakPoints.value.sm = width >= values.sm && width < values.md
 		breakPoints.value.md = width >= values.md && width < values.lg
-		breakPoints.value.lg = width >= values.lg && width < values.xl
+		breakPoints.value.lg = width >= values.lg && width > values.xl
 		breakPoints.value.xl = width >= values.xl
 
 		if (width < values.sm) {
@@ -59,6 +63,9 @@ export const useBreakPointsStore = defineStore('breakpoints', () => {
 		breakPoints,
 		...breakpointFlags, // тут все xs, sm, md, lg, xl
 		resize,
-		calcBreakPoints
+		calcBreakPoints,
+		isMobile,
+		isTablet,
+		isDesktop
 	}
 })

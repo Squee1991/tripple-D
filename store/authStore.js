@@ -4,12 +4,15 @@ import {
 	getAuth,
 	createUserWithEmailAndPassword,
 	signInWithEmailAndPassword,
+	EmailAuthProvider, reauthenticateWithCredential,
 	updateProfile,
 	signOut,
 	deleteUser,
 	onAuthStateChanged,
 	sendPasswordResetEmail,
-	sendEmailVerification
+	sendEmailVerification,
+	signInWithPopup,
+	GoogleAuthProvider
 } from 'firebase/auth';
 import {doc, setDoc, getDoc, getFirestore} from 'firebase/firestore';
 
@@ -26,6 +29,30 @@ export const userAuthStore = defineStore('auth', () => {
 		password.value = data.password || null
 		registeredAt.value = data.registeredAt || null
 	}
+
+	const loginWithGoogle = async () => {
+		try {
+			const auth = getAuth();
+			const provider = new GoogleAuthProvider();
+			const result = await signInWithPopup(auth, provider);
+			if (result.user.metadata.creationTime === result.user.metadata.lastSignInTime) {
+				await setDoc(doc(db, 'users', result.user.uid), {
+					nickname: result.user.displayName,
+					email: result.user.email,
+					registeredAt: result.user.metadata.creationTime
+				}, { merge: true });
+			}
+
+			setUserData({
+				name: result.user.displayName,
+				email: result.user.email,
+				registeredAt: result.user.metadata.creationTime
+			});
+		} catch (error) {
+			console.error("Google login error:", error);
+			throw error;
+		}
+	};
 
 	const registerUser = async (userData) => {
 		const auth = getAuth()
@@ -127,6 +154,7 @@ export const userAuthStore = defineStore('auth', () => {
 		logOut,
 		loginUser,
 		resetPassword,
-		deleteAccount
+		deleteAccount,
+		loginWithGoogle
 	}
 })

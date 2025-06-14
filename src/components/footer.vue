@@ -1,15 +1,16 @@
 <template>
 	<footer class="footer">
-		<div class="footer-container">
+		<div class="footer__container">
 			<div class="footer-brand">
 				<img src="../../assets/images/3dLogo.png" alt="Der Die Das" class="footer-logo"/>
 			</div>
+			<LangSwitcher/>
 			<nav class="footer-links">
 				<li v-for="item in data.items" :key="item.id">
 					<NuxtLink class="footer-link" :to="item.url"> {{ t(item.value)}}</NuxtLink>
 				</li>
 			</nav>
-			<LangSwitcher/>
+
 		</div>
 		<p class="footer-copy">© {{ new Date().getFullYear() }} {{ t(data.footer)}} </p>
 	</footer>
@@ -18,7 +19,6 @@
 <script setup>
 	import LangSwitcher from './langSwitcher.vue'
     const { t} = useI18n()
-
 	const data = {
 		footer: "footer.copy",
 		items: [
@@ -37,7 +37,7 @@
 		font-family: 'Montserrat', 'Inter', sans-serif;
 	}
 
-	.footer-container {
+	.footer__container {
 		max-width: 1200px;
 		margin: 0 auto;
 		display: flex;
@@ -151,6 +151,20 @@
 		text-shadow: 0 2px 9px #f3eaffc0, 0 0px 1px #fff6;
 		letter-spacing: 0.01em;
 		font-weight: 600;
+	}
+	
+	@media (max-width: 768px) {
+		.footer__container {
+			flex-direction: column;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 5px;
+		}
+
+		.footer-link {
+			font-size: 16px;
+		}
 	}
 
 </style>
