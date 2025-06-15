@@ -35,7 +35,6 @@
 		weather: Weather,
 		buy: Purchase,
 		family: Family,
-
 	}
 
 	const get = async () => {

@@ -1,0 +1,171 @@
+{
+	"id": "house",
+	"title": "Haus",
+	"levels": [
+		{
+			"level": 1,
+			"modules": [
+				{
+					"id": 1,
+					"tasks": [
+						{ "question": "___ Tisch ist groß.", "word": "Tisch", "answer": "der" },
+						{ "question": "___ Lampe ist neu.", "word": "Lampe", "answer": "die" },
+						{ "question": "___ Sofa ist bequem.", "word": "Sofa", "answer": "das" },
+						{ "question": "___ Fenster ist offen.", "word": "Fenster", "answer": "das" },
+						{ "question": "___ Stuhl ist braun.", "word": "Stuhl", "answer": "der" }
+					]
+				},
+				{
+					"id": 2,
+					"tasks": [
+						{ "question": "___ Tür ist offen.", "word": "Tür", "answer": "die" },
+						{ "question": "___ Boden ist sauber.", "word": "Boden", "answer": "der" },
+						{ "question": "___ Decke ist weiß.", "word": "Decke", "answer": "die" },
+						{ "question": "___ Teppich ist alt.", "word": "Teppich", "answer": "der" },
+						{ "question": "___ Regal ist leer.", "word": "Regal", "answer": "das" }
+					]
+				},
+				{
+					"id": 3,
+					"tasks": [
+						{ "question": "___ Küche ist klein.", "word": "Küche", "answer": "die" },
+						{ "question": "___ Herd ist heiß.", "word": "Herd", "answer": "der" },
+						{ "question": "___ Schublade ist offen.", "word": "Schublade", "answer": "die" },
+						{ "question": "___ Kühlschrank ist voll.", "word": "Kühlschrank", "answer": "der" },
+						{ "question": "___ Schrank ist alt.", "word": "Schrank", "answer": "der" }
+					]
+				},
+				{
+					"id": 4,
+					"tasks": [
+						{ "question": "___ Bett ist neu.", "word": "Bett", "answer": "das" },
+						{ "question": "___ Decke ist warm.", "word": "Decke", "answer": "die" },
+						{ "question": "___ Kissen ist weich.", "word": "Kissen", "answer": "das" },
+						{ "question": "___ Nachttisch ist klein.", "word": "Nachttisch", "answer": "der" },
+						{ "question": "___ Gardine ist blau.", "word": "Gardine", "answer": "die" }
+					]
+				},
+				{
+					"id": 5,
+					"tasks": [
+						{ "question": "___ Spiegel ist rund.", "word": "Spiegel", "answer": "der" },
+						{ "question": "___ Bild ist schön.", "word": "Bild", "answer": "das" },
+						{ "question": "___ Uhr ist laut.", "word": "Uhr", "answer": "die" },
+						{ "question": "___ Schreibtisch ist groß.", "word": "Schreibtisch", "answer": "der" },
+						{ "question": "___ Vase ist leer.", "word": "Vase", "answer": "die" }
+					]
+				}
+			]
+		},
+		{
+			"level": 2,
+			"modules": [
+				{
+					"id": 1,
+					"tasks": [
+						{ "question": "Ich stelle die Bücher auf ___ Tisch im Wohnzimmer.", "word": "Tisch", "answer": "der" },
+						{ "question": "Abends mache ich ___ Lampe neben dem Sofa an.", "word": "Lampe", "answer": "die" },
+						{ "question": "Wir sitzen auf ___ Sofa und sehen fern.", "word": "Sofa", "answer": "das" },
+						{ "question": "Durch ___ Fenster sieht man den Garten.", "word": "Fenster", "answer": "das" },
+						{ "question": "Er rückt ___ Stuhl näher an den Tisch.", "word": "Stuhl", "answer": "der" }
+					]
+				},
+				{
+					"id": 2,
+					"tasks": [
+						{ "question": "Ich mache ___ Tür zu.", "word": "Tür", "answer": "die" },
+						{ "question": "Wir putzen ___ Boden.", "word": "Boden", "answer": "der" },
+						{ "question": "Er sieht ___ Decke an.", "word": "Decke", "answer": "die" },
+						{ "question": "Ein Kind liegt auf ___ Teppich.", "word": "Teppich", "answer": "der" },
+						{ "question": "Sie stellt ein Buch in ___ Regal.", "word": "Regal", "answer": "das" }
+					]
+				},
+				{
+					"id": 3,
+					"tasks": [
+						{ "question": "Ich gehe in ___ Küche und koche.", "word": "Küche", "answer": "die" },
+						{ "question": "Mama stellt einen Topf auf ___ Herd.", "word": "Herd", "answer": "der" },
+						{ "question": "Ich lege das Messer in ___ Schublade.", "word": "Schublade", "answer": "die" },
+						{ "question": "Wir holen Milch aus ___ Kühlschrank.", "word": "Kühlschrank", "answer": "der" },
+						{ "question": "Er öffnet ___ Schrank im Flur.", "word": "Schrank", "answer": "der" }
+					]
+				},
+				{
+					"id": 4,
+					"tasks": [
+						{ "question": "Ich liege in ___ Bett und lese.", "word": "Bett", "answer": "das" },
+						{ "question": "Sie deckt sich mit ___ Decke zu.", "word": "Decke", "answer": "die" },
+						{ "question": "Er schläft auf ___ Kissen.", "word": "Kissen", "answer": "das" },
+						{ "question": "Ein Buch liegt auf ___ Nachttisch.", "word": "Nachttisch", "answer": "der" },
+						{ "question": "Wir machen ___ Gardine zu.", "word": "Gardine", "answer": "die" }
+					]
+				},
+				{
+					"id": 5,
+					"tasks": [
+						{ "question": "Ich hänge ___ Spiegel ins Badezimmer.", "word": "Spiegel", "answer": "den" },
+						{ "question": "Sie schaut auf ___ Bild an der Wand.", "word": "Bild", "answer": "das" },
+						{ "question": "Er hört ___ Uhr im Wohnzimmer ticken.", "word": "Uhr", "answer": "die" },
+						{ "question": "Ein Laptop liegt auf ___ Schreibtisch.", "word": "Schreibtisch", "answer": "dem" },
+						{ "question": "Frische Blumen stehen in ___ Vase.", "word": "Vase", "answer": "der" }
+					]
+				}
+			]
+		},
+		{
+			"level": 3,
+			"modules": [
+				{
+					"id": 1,
+					"tasks": [
+						{ "question": "Ich stelle einen Teller auf ___ Tisch im Esszimmer.", "word": "Tisch", "answer": "den" },
+						{ "question": "Sie schaltet ___ Lampe am Abend ein.", "word": "Lampe", "answer": "die" },
+						{ "question": "Wir setzen uns gern auf ___ Sofa nach der Arbeit.", "word": "Sofa", "answer": "das" },
+						{ "question": "Frische Luft kommt durch ___ Fenster ins Zimmer.", "word": "Fenster", "answer": "das" },
+						{ "question": "Die Beine ___ Stuhls sind aus Holz.", "word": "Stuhl", "answer": "des" }
+					]
+				},
+				{
+					"id": 2,
+					"tasks": [
+						{ "question": "Nach dem Lüften schließt er langsam ___ Tür zur Terrasse.", "word": "Tür", "answer": "die" },
+						{ "question": "Staub liegt auf ___ Boden unter dem Sofa.", "word": "Boden", "answer": "dem" },
+						{ "question": "Die Risse in ___ Decke müssen repariert werden.", "word": "Decke", "answer": "der" },
+						{ "question": "Das Haustier schläft jeden Abend auf ___ Teppich im Flur.", "word": "Teppich", "answer": "dem" },
+						{ "question": "Sie stellt neue Bücher ordentlich in ___ Regal im Arbeitszimmer.", "word": "Regal", "answer": "das" }
+					]
+				},
+				{
+					"id": 3,
+					"tasks": [
+						{ "question": "Nach dem Einkaufen geht sie direkt in ___ Küche, um zu kochen.", "word": "Küche", "answer": "die" },
+						{ "question": "Ein Topf steht schon auf ___ Herd und wird warm.", "word": "Herd", "answer": "dem" },
+						{ "question": "Das Besteck liegt ordentlich in ___ Schublade.", "word": "Schublade", "answer": "der" },
+						{ "question": "Die Tür ___ Kühlschranks ist offen geblieben.", "word": "Kühlschrank", "answer": "des" },
+						{ "question": "Er hat einen alten Mantel in ___ Schrank gehängt.", "word": "Schrank", "answer": "den" }
+					]
+				},
+				{
+					"id": 4,
+					"tasks": [
+						{ "question": "Nach einem langen Tag legt er sich in ___ Bett und entspannt.", "word": "Bett", "answer": "das" },
+						{ "question": "Sie schläft immer unter ___ Decke mit Blumenmuster.", "word": "Decke", "answer": "der" },
+						{ "question": "Die Farbe ___ Kissens passt zur Decke.", "word": "Kissen", "answer": "des" },
+						{ "question": "Ein Glas Wasser steht auf ___ Nachttisch neben dem Bett.", "word": "Nachttisch", "answer": "dem" },
+						{ "question": "Er zieht morgens zuerst ___ Gardine auf.", "word": "Gardine", "answer": "die" }
+					]
+				},
+				{
+					"id": 5,
+					"tasks": [
+						{ "question": "Die Oberfläche ___ Spiegels ist sauber und glänzend.", "word": "Spiegel", "answer": "des" },
+						{ "question": "Wir bewundern ___ Bild, das du gemalt hast.", "word": "Bild", "answer": "das" },
+						{ "question": "Der Klang von ___ Uhr ist angenehm leise.", "word": "Uhr", "answer": "der" },
+						{ "question": "Auf ___ Schreibtisch stehen viele Bücher und ein Laptop.", "word": "Schreibtisch", "answer": "dem" },
+						{ "question": "___ Vase mit Blumen steht auf dem Esstisch.", "word": "Vase", "answer": "die" }
+					]
+				}
+			]
+		}
+	]
+}
