@@ -8,8 +8,10 @@
 	import {useCurrentUser} from "vuefire";
 	import { userlangStore } from './store/learningStore.js'
 	import { userAuthStore } from './store/authStore.js'
+	import { useTrainerStore } from './store/themenProgressStore.js'
 	import {onMounted} from "vue";
     const  learningStore = userlangStore()
+    const  trainerStore = userlangStore()
 	const authStore = userAuthStore()
 	const router = useRouter()
 	const route = useRoute()

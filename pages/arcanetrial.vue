@@ -96,7 +96,7 @@
 
 	function submitCorrection() {
 		const correct = selectedTheme.value.trials[current.value].correct.trim()
-		const cleaned = userCorrection.value.trim()
+
 		if (cleaned === correct) {
 			score.value++
 			feedback.value = '✨ Верно! Магия восстановлена.'

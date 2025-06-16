@@ -1,0 +1,171 @@
+{
+	"id": "shopping",
+	"title": "Einkaufen",
+	"levels": [
+		{
+			"level": 1,
+			"modules": [
+				{
+					"id": 1,
+					"tasks": [
+						{ "question": "___ Supermarkt ist groß.", "word": "Supermarkt", "answer": "der" },
+						{ "question": "___ Kasse ist offen.", "word": "Kasse", "answer": "die" },
+						{ "question": "___ Regal ist voll.", "word": "Regal", "answer": "das" },
+						{ "question": "___ Verkäufer ist freundlich.", "word": "Verkäufer", "answer": "der" },
+						{ "question": "___ Einkaufstasche ist neu.", "word": "Einkaufstasche", "answer": "die" }
+					]
+				},
+				{
+					"id": 2,
+					"tasks": [
+						{ "question": "___ Markt ist bunt.", "word": "Markt", "answer": "der" },
+						{ "question": "___ Kundin ist geduldig.", "word": "Kundin", "answer": "die" },
+						{ "question": "___ Produkt ist billig.", "word": "Produkt", "answer": "das" },
+						{ "question": "___ Preisschild ist deutlich.", "word": "Preisschild", "answer": "das" },
+						{ "question": "___ Angebot ist gut.", "word": "Angebot", "answer": "das" }
+					]
+				},
+				{
+					"id": 3,
+					"tasks": [
+						{ "question": "___ Geldbeutel ist leer.", "word": "Geldbeutel", "answer": "der" },
+						{ "question": "___ Quittung ist wichtig.", "word": "Quittung", "answer": "die" },
+						{ "question": "___ Einkaufswagen ist voll.", "word": "Einkaufswagen", "answer": "der" },
+						{ "question": "___ Bon ist lang.", "word": "Bon", "answer": "der" },
+						{ "question": "___ Münze ist klein.", "word": "Münze", "answer": "die" }
+					]
+				},
+				{
+					"id": 4,
+					"tasks": [
+						{ "question": "___ Abteilung ist geschlossen.", "word": "Abteilung", "answer": "die" },
+						{ "question": "___ Kunde ist freundlich.", "word": "Kunde", "answer": "der" },
+						{ "question": "___ Packung ist geöffnet.", "word": "Packung", "answer": "die" },
+						{ "question": "___ Preis ist hoch.", "word": "Preis", "answer": "der" },
+						{ "question": "___ Rabatt ist groß.", "word": "Rabatt", "answer": "der" }
+					]
+				},
+				{
+					"id": 5,
+					"tasks": [
+						{ "question": "___ Laden ist alt.", "word": "Laden", "answer": "der" },
+						{ "question": "___ Rechnung ist da.", "word": "Rechnung", "answer": "die" },
+						{ "question": "___ Produkt ist beliebt.", "word": "Produkt", "answer": "das" },
+						{ "question": "___ Einkauf ist beendet.", "word": "Einkauf", "answer": "der" },
+						{ "question": "___ Wechselgeld ist korrekt.", "word": "Wechselgeld", "answer": "das" }
+					]
+				}
+			]
+		},
+		{
+			"level": 2,
+			"modules": [
+				{
+					"id": 1,
+					"tasks": [
+						{ "question": "Ich gehe in ___ Supermarkt.", "word": "Supermarkt", "answer": "den" },
+						{ "question": "Sie bezahlt an ___ Kasse.", "word": "Kasse", "answer": "der" },
+						{ "question": "Er nimmt Brot aus ___ Regal.", "word": "Regal", "answer": "dem" },
+						{ "question": "Wir fragen ___ Verkäufer.", "word": "Verkäufer", "answer": "den" },
+						{ "question": "Sie trägt ___ Einkaufstasche.", "word": "Einkaufstasche", "answer": "die" }
+					]
+				},
+				{
+					"id": 2,
+					"tasks": [
+						{ "question": "Er kauft Gemüse auf ___ Markt.", "word": "Markt", "answer": "dem" },
+						{ "question": "Ich sehe ___ Kundin.", "word": "Kundin", "answer": "die" },
+						{ "question": "Sie nimmt ___ Produkt.", "word": "Produkt", "answer": "das" },
+						{ "question": "Wir lesen ___ Preisschild.", "word": "Preisschild", "answer": "das" },
+						{ "question": "Er sucht ___ Angebot.", "word": "Angebot", "answer": "das" }
+					]
+				},
+				{
+					"id": 3,
+					"tasks": [
+						{ "question": "Ich finde ___ Geldbeutel nicht.", "word": "Geldbeutel", "answer": "den" },
+						{ "question": "Er verlangt ___ Quittung.", "word": "Quittung", "answer": "die" },
+						{ "question": "Sie schiebt ___ Einkaufswagen.", "word": "Einkaufswagen", "answer": "den" },
+						{ "question": "Wir werfen ___ Bon weg.", "word": "Bon", "answer": "den" },
+						{ "question": "Er hebt ___ Münze auf.", "word": "Münze", "answer": "die" }
+					]
+				},
+				{
+					"id": 4,
+					"tasks": [
+						{ "question": "Sie geht in ___ Abteilung.", "word": "Abteilung", "answer": "die" },
+						{ "question": "Ich spreche mit ___ Kunde.", "word": "Kunde", "answer": "dem" },
+						{ "question": "Er öffnet ___ Packung.", "word": "Packung", "answer": "die" },
+						{ "question": "Wir vergleichen ___ Preis.", "word": "Preis", "answer": "den" },
+						{ "question": "Sie bekommt ___ Rabatt.", "word": "Rabatt", "answer": "den" }
+					]
+				},
+				{
+					"id": 5,
+					"tasks": [
+						{ "question": "Wir kaufen in ___ Laden.", "word": "Laden", "answer": "dem" },
+						{ "question": "Sie bezahlt ___ Rechnung.", "word": "Rechnung", "answer": "die" },
+						{ "question": "Ich nehme ___ Produkt.", "word": "Produkt", "answer": "das" },
+						{ "question": "Er beendet ___ Einkauf.", "word": "Einkauf", "answer": "den" },
+						{ "question": "Sie gibt ___ Wechselgeld zurück.", "word": "Wechselgeld", "answer": "das" }
+					]
+				}
+			]
+		},
+		{
+			"level": 3,
+			"modules": [
+				{
+					"id": 1,
+					"tasks": [
+						{ "question": "Die Tür ___ Supermarkts ist geöffnet.", "word": "Supermarkt", "answer": "des" },
+						{ "question": "Die Farbe ___ Kasse ist rot.", "word": "Kasse", "answer": "der" },
+						{ "question": "Der Inhalt ___ Regals ist vielfältig.", "word": "Regal", "answer": "des" },
+						{ "question": "Das Lächeln ___ Verkäufers ist ehrlich.", "word": "Verkäufer", "answer": "des" },
+						{ "question": "Die Größe ___ Einkaufstasche ist praktisch.", "word": "Einkaufstasche", "answer": "der" }
+					]
+				},
+				{
+					"id": 2,
+					"tasks": [
+						{ "question": "Das Angebot ___ Marktes ist groß.", "word": "Markt", "answer": "des" },
+						{ "question": "Die Geduld ___ Kundin ist bekannt.", "word": "Kundin", "answer": "der" },
+						{ "question": "Die Verpackung ___ Produkts ist modern.", "word": "Produkt", "answer": "des" },
+						{ "question": "Der Preis ___ Preisschildes ist niedrig.", "word": "Preisschild", "answer": "des" },
+						{ "question": "Der Wert ___ Angebots ist hoch.", "word": "Angebot", "answer": "des" }
+					]
+				},
+				{
+					"id": 3,
+					"tasks": [
+						{ "question": "Die Suche nach ___ Geldbeutel war lang.", "word": "Geldbeutel", "answer": "dem" },
+						{ "question": "Der Wert ___ Quittung ist wichtig.", "word": "Quittung", "answer": "der" },
+						{ "question": "Die Größe ___ Einkaufswagens ist optimal.", "word": "Einkaufswagen", "answer": "des" },
+						{ "question": "Das Datum ___ Bons ist aktuell.", "word": "Bon", "answer": "des" },
+						{ "question": "Die Form ___ Münze ist rund.", "word": "Münze", "answer": "der" }
+					]
+				},
+				{
+					"id": 4,
+					"tasks": [
+						{ "question": "Die Größe ___ Abteilung ist beeindruckend.", "word": "Abteilung", "answer": "der" },
+						{ "question": "Die Freundlichkeit ___ Kunden ist angenehm.", "word": "Kunde", "answer": "des" },
+						{ "question": "Die Verpackung ___ Packung ist neu.", "word": "Packung", "answer": "der" },
+						{ "question": "Die Höhe ___ Preises ist akzeptabel.", "word": "Preis", "answer": "des" },
+						{ "question": "Die Größe ___ Rabatts ist erstaunlich.", "word": "Rabatt", "answer": "des" }
+					]
+				},
+				{
+					"id": 5,
+					"tasks": [
+						{ "question": "Die Geschichte ___ Ladens ist alt.", "word": "Laden", "answer": "des" },
+						{ "question": "Das Datum ___ Rechnung ist gestern.", "word": "Rechnung", "answer": "der" },
+						{ "question": "Die Qualität ___ Produkts ist hoch.", "word": "Produkt", "answer": "des" },
+						{ "question": "Der Abschluss ___ Einkaufs war schnell.", "word": "Einkauf", "answer": "des" },
+						{ "question": "Der Betrag ___ Wechselgelds stimmt.", "word": "Wechselgeld", "answer": "des" }
+					]
+				}
+			]
+		}
+	]
+}

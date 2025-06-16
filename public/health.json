@@ -1,0 +1,172 @@
+{
+	"id": "health",
+	"title": "health",
+	"levels": [
+		{
+			"level": 1,
+			"modules": [
+				{
+					"id": 1,
+					"tasks": [
+						{"question": "___ Arzt ist freundlich.", "word": "Arzt", "answer": "der"},
+						{"question": "___ Patient ist nervös.", "word": "Patient", "answer": "der"},
+						{"question": "___ Tablette ist weiß.", "word": "Tablette", "answer": "die"},
+						{"question": "___ Fieber ist hoch.", "word": "Fieber", "answer": "das"},
+						{"question": "___ Spritze ist neu.", "word": "Spritze", "answer": "die"}
+					]
+				},
+				{
+					"id": 2,
+					"tasks": [
+						{"question": "___ Krankenschwester ist nett.", "word": "Krankenschwester", "answer": "die"},
+						{"question": "___ Salbe ist kühlend.", "word": "Salbe", "answer": "die"},
+						{"question": "___ Schmerz ist stark.", "word": "Schmerz", "answer": "der"},
+						{"question": "___ Verband ist sauber.", "word": "Verband", "answer": "der"},
+						{"question": "___ Pflaster ist klein.", "word": "Pflaster", "answer": "das"}
+					]
+				},
+				{
+					"id": 3,
+					"tasks": [
+						{"question": "___ Apotheke ist geöffnet.", "word": "Apotheke", "answer": "die"},
+						{"question": "___ Rezept ist gültig.", "word": "Rezept", "answer": "das"},
+						{"question": "___ Arzttermin ist wichtig.", "word": "Arzttermin", "answer": "der"},
+						{"question": "___ Wartezimmer ist leer.", "word": "Wartezimmer", "answer": "das"},
+						{"question": "___ Notarzt ist bereit.", "word": "Notarzt", "answer": "der"}
+					]
+				},
+				{
+					"id": 4,
+					"tasks": [
+						{"question": "___ Bauch tut weh.", "word": "Bauch", "answer": "der"},
+						{"question": "___ Kopf ist schwer.", "word": "Kopf", "answer": "der"},
+						{"question": "___ Hals ist rot.", "word": "Hals", "answer": "der"},
+						{"question": "___ Auge ist geschwollen.", "word": "Auge", "answer": "das"},
+						{"question": "___ Bein ist verletzt.", "word": "Bein", "answer": "das"}
+					]
+				},
+				{
+					"id": 5,
+					"tasks": [
+						{"question": "___ Krankenhaus ist modern.", "word": "Krankenhaus", "answer": "das"},
+						{"question": "___ Operation ist geplant.", "word": "Operation", "answer": "die"},
+						{"question": "___ Diagnose ist klar.", "word": "Diagnose", "answer": "die"},
+						{"question": "___ Untersuchung ist schnell.", "word": "Untersuchung", "answer": "die"},
+						{"question": "___ Blutdruck ist normal.", "word": "Blutdruck", "answer": "der"}
+					]
+				}
+			]
+		},
+		{
+			"level": 2,
+			"modules": [
+				{
+					"id": 1,
+					"tasks": [
+						{"question": "Ich besuche ___ Arzt.", "word": "Arzt", "answer": "den"},
+						{"question": "Er ruft ___ Patient auf.", "word": "Patient", "answer": "den"},
+						{"question": "Sie nimmt ___ Tablette.", "word": "Tablette", "answer": "die"},
+						{"question": "Wir senken ___ Fieber.", "word": "Fieber", "answer": "das"},
+						{"question": "Die Ärztin gibt ihm ___ Spritze.", "word": "Spritze", "answer": "die"}
+					]
+				},
+				{
+					"id": 2,
+					"tasks": [
+						{"question": "Ich spreche mit ___ Krankenschwester.", "word": "Krankenschwester", "answer": "der"},
+						{"question": "Sie trägt ___ Verband.", "word": "Verband", "answer": "den"},
+						{"question": "Er braucht ___ Pflaster für die Wunde.", "word": "Pflaster", "answer": "das"},
+						{"question": "Wir kaufen ___ Salbe in der Apotheke.", "word": "Salbe", "answer": "die"},
+						{"question": "Du hast ___ Schmerz beschrieben.", "word": "Schmerz", "answer": "den"}
+					]
+				},
+				{
+					"id": 3,
+					"tasks": [
+						{"question": "Sie geht in ___ Apotheke.", "word": "Apotheke", "answer": "die"},
+						{"question": "Der Arzt schreibt ___ Rezept.", "word": "Rezept", "answer": "das"},
+						{"question": "Ich habe heute ___ Termin.", "word": "Termin", "answer": "den"},
+						{"question": "Sie wartet im ___ Wartezimmer.", "word": "Wartezimmer", "answer": "dem"},
+						{"question": "Der Notarzt untersucht ___ Mann.", "word": "Mann", "answer": "den"}
+					]
+				},
+				{
+					"id": 4,
+					"tasks": [
+						{"question": "Er hält ___ Bauch.", "word": "Bauch", "answer": "den"},
+						{"question": "Ich zeige dem Arzt ___ Hals.", "word": "Hals", "answer": "den"},
+						{"question": "Sie reibt ___ Salbe auf das Bein.", "word": "Salbe", "answer": "die"},
+						{"question": "Wir untersuchen ___ Auge.", "word": "Auge", "answer": "das"},
+						{"question": "Er fühlt ___ Puls.", "word": "Puls", "answer": "den"}
+					]
+				},
+				{
+					"id": 5,
+					"tasks": [
+						{"question": "Ich komme aus ___ Krankenhaus.", "word": "Krankenhaus", "answer": "dem"},
+						{"question": "Die Operation dauert ___ Stunde.", "word": "Stunde", "answer": "eine"},
+						{"question": "Wir besprechen ___ Diagnose.", "word": "Diagnose", "answer": "die"},
+						{"question": "Er bekommt ___ Untersuchung.", "word": "Untersuchung", "answer": "die"},
+						{"question": "Die Ärztin misst ___ Blutdruck.", "word": "Blutdruck", "answer": "den"}
+					]
+				}
+			]
+		},
+		{
+			"level": 3,
+			"modules": [
+				{
+					"id": 1,
+					"tasks": [
+						{"question": "Die Sprechstunde ___ Arztes beginnt um acht Uhr.", "word": "Arzt", "answer": "des"},
+						{"question": "Der Blutdruck ___ Patienten war erhöht.", "word": "Patient", "answer": "des"},
+						{"question": "Die Wirkung ___ Medikaments setzt schnell ein.", "word": "Medikament", "answer": "des"
+						},
+						{"question": "Die Tochter hilft ___ Vater nach der Operation.", "word": "Vater", "answer": "dem"},
+						{"question": "Die Ärztin spricht mit ___ Mann über die Therapie.", "word": "Mann", "answer": "dem"}
+					]
+				},
+				{
+					"id": 2,
+					"tasks": [
+						{"question": "Nach ___ Untersuchung fühlte sie sich besser.", "word": "Untersuchung", "answer": "der"},
+						{"question": "Trotz ___ Diagnose blieb der Patient optimistisch.", "word": "Diagnose", "answer": "der"},
+						{"question": "Während ___ Behandlung darf man nicht essen.", "word": "Behandlung", "answer": "der"},
+						{"question": "Aufgrund ___ Fiebers musste er zu Hause bleiben.", "word": "Fieber", "answer": "des"},
+						{"question": "Wegen ___ Schmerzen nahm sie Tabletten.", "word": "Schmerzen", "answer": "der"}
+					]
+				},
+				{
+					"id": 3,
+					"tasks": [
+						{"question": "Das ist das Rezept, das ich in ___ Apotheke eingelöst habe.", "word": "Apotheke", "answer": "der"},
+						{"question": "Der Arzt, der ___ Medikament verschrieben hat, ist sehr erfahren.", "word": "Medikament", "answer": "das"},
+						{"question": "Die Frau, die im ___ Wartezimmer sitzt, hustet stark.", "word": "Wartezimmer", "answer": "dem"},
+						{"question": "Der Junge, der ___ Bein verletzt hat, kommt gleich dran.", "word": "Bein", "answer": "sein"},
+						{"question": "Das Krankenhaus, in dem er behandelt wurde, ist modern.", "word": "Krankenhaus", "answer": "dem"}
+					]
+				},
+				{
+					"id": 4,
+					"tasks": [
+						{"question": "Der Verband wurde von ___ Krankenschwester gewechselt.", "word": "Krankenschwester", "answer": "der"},
+						{"question": "Die Patientin wurde in ___ Klinik gebracht.", "word": "Klinik", "answer": "die"},
+						{"question": "Er bekam Hilfe von ___ Physiotherapeuten.", "word": "Physiotherapeut", "answer": "dem"},
+						{"question": "Die Operation wurde von ___ Chefarzt durchgeführt.", "word": "Chefarzt", "answer": "dem"},
+						{"question": "Die Medikamente wurden ihm nach ___ Essen gegeben.", "word": "Essen", "answer": "dem"}
+					]
+				},
+				{
+					"id": 5,
+					"tasks": [
+						{"question": "Er sollte das Medikament nehmen, bevor ___ Symptome schlimmer werden.", "word": "Symptome", "answer": "die"},
+						{"question": "Nachdem ___ Arzt gegangen war, kam die Schwester.", "word": "Arzt", "answer": "der"},
+						{"question": "Obwohl ___ Schmerzen stark waren, blieb sie ruhig.", "word": "Schmerzen", "answer": "die"},
+						{"question": "Falls ___ Fieber steigt, rufen Sie bitte an.", "word": "Fieber", "answer": "das"},
+						{"question": "Sobald ___ Termin bestätigt ist, melden wir uns.", "word": "Termin", "answer": "der"}
+					]
+				}
+			]
+		}
+	]
+}

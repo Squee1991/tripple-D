@@ -1,0 +1,171 @@
+{
+	"id": "time",
+	"title": "Zeit",
+	"levels": [
+		{
+			"level": 1,
+			"modules": [
+				{
+					"id": 1,
+					"tasks": [
+						{ "question": "___ Uhr zeigt zehn Uhr.", "word": "Uhr", "answer": "die" },
+						{ "question": "___ Minute vergeht schnell.", "word": "Minute", "answer": "die" },
+						{ "question": "___ Sekunde ist sehr kurz.", "word": "Sekunde", "answer": "die" },
+						{ "question": "___ Tag beginnt früh.", "word": "Tag", "answer": "der" },
+						{ "question": "___ Woche hat sieben Tage.", "word": "Woche", "answer": "die" }
+					]
+				},
+				{
+					"id": 2,
+					"tasks": [
+						{ "question": "___ Monat Mai ist warm.", "word": "Monat", "answer": "der" },
+						{ "question": "___ Jahr hat zwölf Monate.", "word": "Jahr", "answer": "das" },
+						{ "question": "___ Stunde dauert sechzig Minuten.", "word": "Stunde", "answer": "die" },
+						{ "question": "___ Abend ist ruhig.", "word": "Abend", "answer": "der" },
+						{ "question": "___ Morgen beginnt früh.", "word": "Morgen", "answer": "der" }
+					]
+				},
+				{
+					"id": 3,
+					"tasks": [
+						{ "question": "___ Mittag ist um zwölf Uhr.", "word": "Mittag", "answer": "der" },
+						{ "question": "___ Nachmittag ist sonnig.", "word": "Nachmittag", "answer": "der" },
+						{ "question": "___ Kalender liegt auf dem Tisch.", "word": "Kalender", "answer": "der" },
+						{ "question": "___ Termin ist wichtig.", "word": "Termin", "answer": "der" },
+						{ "question": "___ Datum ist der 15. März.", "word": "Datum", "answer": "das" }
+					]
+				},
+				{
+					"id": 4,
+					"tasks": [
+						{ "question": "___ Viertelstunde ist fünfzehn Minuten.", "word": "Viertelstunde", "answer": "die" },
+						{ "question": "___ Sekunde vergeht schnell.", "word": "Sekunde", "answer": "die" },
+						{ "question": "___ Wochenende ist frei.", "word": "Wochenende", "answer": "das" },
+						{ "question": "___ Zeit vergeht schnell.", "word": "Zeit", "answer": "die" },
+						{ "question": "___ Stunde beginnt jetzt.", "word": "Stunde", "answer": "die" }
+					]
+				},
+				{
+					"id": 5,
+					"tasks": [
+						{ "question": "___ Feiertag ist im Mai.", "word": "Feiertag", "answer": "der" },
+						{ "question": "___ Zeitplan ist voll.", "word": "Zeitplan", "answer": "der" },
+						{ "question": "___ Uhrzeit ist unbekannt.", "word": "Uhrzeit", "answer": "die" },
+						{ "question": "___ Mittagspause ist um eins.", "word": "Mittagspause", "answer": "die" },
+						{ "question": "___ Zeitdruck ist groß.", "word": "Zeitdruck", "answer": "der" }
+					]
+				}
+			]
+		},
+		{
+			"level": 2,
+			"modules": [
+				{
+					"id": 1,
+					"tasks": [
+						{ "question": "Ich stelle ___ Uhr auf den Tisch.", "word": "Uhr", "answer": "die" },
+						{ "question": "In einer ___ Minute kann viel passieren.", "word": "Minute", "answer": "die" },
+						{ "question": "Er braucht nur eine ___ Sekunde.", "word": "Sekunde", "answer": "die" },
+						{ "question": "___ Tag vergeht schnell.", "word": "Der", "answer": "der" },
+						{ "question": "Am Ende der ___ Woche ist Wochenende.", "word": "Woche", "answer": "die" }
+					]
+				},
+				{
+					"id": 2,
+					"tasks": [
+						{ "question": "Wir planen den ___ Monat.", "word": "Monat", "answer": "den" },
+						{ "question": "___ Jahr ist fast vorbei.", "word": "Das", "answer": "das" },
+						{ "question": "Sie wartet eine ___ Stunde.", "word": "Stunde", "answer": "die" },
+						{ "question": "___ Abend verbringen wir zusammen.", "word": "Den", "answer": "der" },
+						{ "question": "Er kommt am ___ Morgen.", "word": "Morgen", "answer": "der" }
+					]
+				},
+				{
+					"id": 3,
+					"tasks": [
+						{ "question": "Zum ___ Mittag gibt es Suppe.", "word": "Mittag", "answer": "dem" },
+						{ "question": "Am ___ Nachmittag geht er spazieren.", "word": "Nachmittag", "answer": "dem" },
+						{ "question": "Im ___ Kalender steht der Termin.", "word": "Kalender", "answer": "dem" },
+						{ "question": "Sie hat ___ Termin am Dienstag.", "word": "einen", "answer": "der" },
+						{ "question": "Das ___ Datum ist falsch.", "word": "das", "answer": "das" }
+					]
+				},
+				{
+					"id": 4,
+					"tasks": [
+						{ "question": "Wir treffen uns in einer ___ Viertelstunde.", "word": "Viertelstunde", "answer": "die" },
+						{ "question": "___ Wochenende ist immer zu kurz.", "word": "Das", "answer": "das" },
+						{ "question": "Sie nutzt ___ Zeit gut.", "word": "die", "answer": "die" },
+						{ "question": "___ Stunde vergeht langsam.", "word": "Die", "answer": "die" },
+						{ "question": "Der Film dauert zwei ___ Stunden.", "word": "Stunden", "answer": "die" }
+					]
+				},
+				{
+					"id": 5,
+					"tasks": [
+						{ "question": "Wir feiern ___ Feiertag gemeinsam.", "word": "den", "answer": "der" },
+						{ "question": "Der ___ Zeitplan ist streng.", "word": "der", "answer": "der" },
+						{ "question": "Die ___ Uhrzeit steht im Plan.", "word": "die", "answer": "die" },
+						{ "question": "Er macht ___ Mittagspause.", "word": "die", "answer": "die" },
+						{ "question": "Sie arbeitet unter ___ Zeitdruck.", "word": "dem", "answer": "der" }
+					]
+				}
+			]
+		},
+		{
+			"level": 3,
+			"modules": [
+				{
+					"id": 1,
+					"tasks": [
+						{ "question": "Die Anzeige ___ Uhr ist defekt.", "word": "der", "answer": "der" },
+						{ "question": "Nach einer langen ___ Minute kommt die Antwort.", "word": "Minute", "answer": "die" },
+						{ "question": "Der Beginn ___ Sekunde ist wichtig.", "word": "der", "answer": "die" },
+						{ "question": "Er vergisst nie den ersten ___ Tag.", "word": "den", "answer": "der" },
+						{ "question": "Der letzte Tag der ___ Woche ist Sonntag.", "word": "die", "answer": "die" }
+					]
+				},
+				{
+					"id": 2,
+					"tasks": [
+						{ "question": "Der Name des ___ Monats ist März.", "word": "Monats", "answer": "der" },
+						{ "question": "Das Ende ___ Jahres feiern wir.", "word": "des", "answer": "das" },
+						{ "question": "Zu Beginn jeder ___ Stunde läutet die Glocke.", "word": "Stunde", "answer": "die" },
+						{ "question": "Am Ende des ___ Abends gehen wir nach Hause.", "word": "Abends", "answer": "der" },
+						{ "question": "Der Anfang des ___ Morgens ist kühl.", "word": "Morgens", "answer": "der" }
+					]
+				},
+				{
+					"id": 3,
+					"tasks": [
+						{ "question": "Das Essen am ___ Mittag ist lecker.", "word": "Mittag", "answer": "dem" },
+						{ "question": "Während des ___ Nachmittags lese ich ein Buch.", "word": "Nachmittags", "answer": "der" },
+						{ "question": "Das Blatt des ___ Kalenders ist voll.", "word": "Kalenders", "answer": "der" },
+						{ "question": "Die Planung des ___ Termins ist abgeschlossen.", "word": "Termins", "answer": "der" },
+						{ "question": "Die Farbe des ___ Datums ist rot.", "word": "Datums", "answer": "das" }
+					]
+				},
+				{
+					"id": 4,
+					"tasks": [
+						{ "question": "Die Dauer einer ___ Viertelstunde ist klar.", "word": "Viertelstunde", "answer": "die" },
+						{ "question": "Die Freude am ___ Wochenende ist groß.", "word": "Wochenende", "answer": "das" },
+						{ "question": "Die Länge der ___ Zeit ist relativ.", "word": "Zeit", "answer": "die" },
+						{ "question": "Die Prüfung dauert zwei ___ Stunden.", "word": "Stunden", "answer": "die" },
+						{ "question": "Die Planung des ___ Zeitplans ist kompliziert.", "word": "Zeitplans", "answer": "der" }
+					]
+				},
+				{
+					"id": 5,
+					"tasks": [
+						{ "question": "Die Vorfreude auf den nächsten ___ Feiertag ist groß.", "word": "Feiertag", "answer": "der" },
+						{ "question": "Das Problem des ___ Zeitdrucks kennt jeder.", "word": "Zeitdrucks", "answer": "der" },
+						{ "question": "Die Anzeige der ___ Uhrzeit ist falsch.", "word": "Uhrzeit", "answer": "die" },
+						{ "question": "Nach der ___ Mittagspause arbeiten wir weiter.", "word": "Mittagspause", "answer": "die" },
+						{ "question": "Das Notieren des ___ Datums ist wichtig.", "word": "Datums", "answer": "das" }
+					]
+				}
+			]
+		}
+	]
+}
