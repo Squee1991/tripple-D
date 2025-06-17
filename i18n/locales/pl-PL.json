@@ -18,7 +18,8 @@
 	"sub": {
 		"prev": "Wprowadzenie",
 		"rules": "Zasady",
-		"artRules": "Ćwiczenie rodzajników"
+		"artRules": "Ćwiczenie rodzajników",
+		"card": "Utwórz karty"
 	},
 	"auth": {
 		"logIn": "Zaloguj się",
@@ -44,7 +45,7 @@
 		"title": "Co znajdziesz w środku?"
 	},
 	"cardWords": {
-		"title": "800+ słów",
+		"title": "900+ słów",
 		"sub": "Naucz się ponad 800 słów i rodzajników w wygodnym systemie."
 	},
 	"cardMethod": {
@@ -207,5 +208,31 @@
 	"result": {
 		"correctAnswer": "Poprawna odpowiedź",
 		"correct": "Poprawnie"
+	},
+	"cardThemen": {
+		"Home": "Dom i gospodarstwo",
+		"Animals": "Zwierzęta",
+		"Clothes": "Ubrania",
+		"Food": "Jedzenie",
+		"Body": "Człowiek i ciało",
+		"Professions": "Zawody",
+		"Transport": "Transport",
+		"Colors": "Kolory",
+		"Nature": "Natura",
+		"City": "Miasto i szkoła",
+		"Time": "Czas",
+		"Tools": "Narzędzia",
+		"Sport": "Sport i fitness"
+	},
+	"choiceTheme": {
+		"theme": "Temat",
+		"create": "Utwórz kartę",
+		"available": "Dostępne karty",
+		"choice": "Wybierz temat",
+		"difficult": "Poziom trudności",
+		"search": "Szukaj według tematu",
+		"placeholder": "Wpisz niemieckie zdanie lub słowo z rodzajnikami",
+		"translate": "Tłumaczenie (opcjonalnie)",
+		"btn": "Utwórz"
 	}
 }

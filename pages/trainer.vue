@@ -51,7 +51,6 @@
 		}
 	}
 
-
 	const exit = () => {
 		router.push('/choiceTheme')
 	}
@@ -214,4 +213,6 @@
 		font-size: 18px;
 		text-align: center;
 	}
+
+
 </style>

@@ -18,7 +18,6 @@
 					<button class="banner__button" @click="startLearning">{{ t('banner.btn')}}</button>
 				</div>
 				<div class="banner__mage">
-					<img :src="Student" alt="">
 				</div>
 			</div>
 		</section>

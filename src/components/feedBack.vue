@@ -1,5 +1,5 @@
 <script setup>
-	import MessageAnimation from '../../assets/animation/message.json'
+	import MessageAnimation from '../../assets/animation/sendMessage.json'
 	// import {useScrollObserver} from "../utils/useScrollObserver";
 	import {ref, onMounted} from 'vue';
 	import Lottie from 'lottie-web';
@@ -34,17 +34,16 @@
 	const userName = ref('');
 	const userMessage = ref('');
 	onMounted(() => {
-
 		isVisible.value = true;
 		if (msgAnimationWrapper.value) {
 			Lottie.loadAnimation({
 				container: msgAnimationWrapper.value,
-				autoplay: true,
-				loop: true,
+				autoplay: false, // Важно!
+				loop: false,
 				animationData: MessageAnimation,
+				name: 'feedbackAnimation'
 			});
 		}
-
 	});
 
 	const sendMessage = async () => {
@@ -67,21 +66,22 @@
 				"service_9zsuox2",
 				"template_s9p24lo",
 				{
-					from_name: userName.value, // Отправляем имя
+					from_name: userName.value,
 					message: userMessage.value,
 				},
 				"2v5vLDUsbkXWrluyJ"
 			);
+			Lottie.play('feedbackAnimation');
 			resetFields();
 		} catch (error) {
 			console.error(error);
 		}
 	};
 	const resetFields = () => {
-		userName.value = ''; // Сброс имени
+		userName.value = '';
 		userMessage.value = '';
 		errors.value = {
-			name: '', // Сброс ошибок имени
+			name: '',
 			message: ''
 		};
 	};

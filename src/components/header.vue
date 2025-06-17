@@ -53,6 +53,10 @@
 			<div class="header-nav__tea">
 				<ForTea/>
 			</div>
+			<div class="articlus__wrapper">
+				<img class="articlus" src="../../assets/images/articlus.png" alt="">
+				<div class="articlus__counter">7</div>
+			</div>
 			<div class="header-nav__lang">
 				<LanguageSelector/>
 			</div>
@@ -158,7 +162,9 @@
 			children: [
 				{id: 'learn-tips', url: 'examples', valueKey: 'sub.prev'},
 				{id: 'learn-rules', url: 'rules', valueKey: 'sub.rules'},
-				{id: 'learn-selectedTopics', url: 'selectedTopics', valueKey: 'sub.artRules'}
+				{id: 'learn-selectedTopics', url: 'selectedTopics', valueKey: 'sub.artRules'},
+				{id: 'cards', url: 'createCards', valueKey: 'sub.card'},
+				{id: 'themen', url: 'choiceTheme', valueKey: 'sub.themen'}
 			]
 		},
 		{
@@ -243,6 +249,19 @@
 		position: sticky;
 		top: 0;
 		z-index: 10;
+	}
+
+	.articlus {
+		width: 50px;
+		height: 42px;
+	}
+
+	.articlus__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: end;
+		margin-left: auto;
+		padding: 20px;
 	}
 
 	.logo {
@@ -343,6 +362,13 @@
 		z-index: 50;
 	}
 
+	.articlus__counter {
+		color: black;
+		font-size: 26px;
+		font-family: "Montserrat", Arial, Helvetica, sans-serif;
+		font-weight: 600;
+	}
+
 	.header-nav__submenu-item {
 		padding: 8px 16px;
 		color: white;
@@ -366,7 +392,6 @@
 
 
 	.header-nav__lang {
-		margin-left: auto;
 		display: flex;
 		justify-content: center;
 		align-items: center;

@@ -18,7 +18,8 @@
 	"sub": {
 		"prev": "Introduction",
 		"rules": "Rules",
-		"artRules": "Article Practice"
+		"artRules": "Article Practice",
+		"card": "Create cards"
 	},
 	"auth": {
 		"logIn": "Log in",
@@ -44,7 +45,7 @@
 		"title": "What’s inside?"
 	},
 	"cardWords": {
-		"title": "800+ words",
+		"title": "900+ words",
 		"sub": "Learn over 800 words and articles in a convenient system."
 	},
 	"cardMethod": {
@@ -92,7 +93,6 @@
 		"whySeventh": "Vocabulary combo-wombo!",
 		"whyEight": "Spaced repetition with micro-tests",
 		"whyfooter": "Try these methods — and you will definitely look at learning in a new way!"
-
 	},
 	"aboutList": {
 		"one": "Every new word isn’t just a tick mark, it’s a step to leveling up your character! Gain experience, unlock new levels, upgrade skills, and track your progress in real RPG style.",
@@ -208,5 +208,31 @@
 	"result": {
 		"correctAnswer": "Correct answer",
 		"correct": "Correct"
+	},
+	"cardThemen": {
+		"Home": "Home and Household",
+		"Animals": "Animals",
+		"Clothes": "Clothing",
+		"Food": "Food",
+		"Body": "Human and Body",
+		"Professions": "Professions",
+		"Transport": "Transport",
+		"Colors": "Colors",
+		"Nature": "Nature",
+		"City": "City and School",
+		"Time": "Time",
+		"Tools": "Tools",
+		"Sport": "Sports and Fitness"
+	},
+	"choiceTheme": {
+		"theme": "Theme",
+		"create": "Create a card",
+		"available": "Available cards",
+		"choice": "choose a theme",
+		"difficult": "difficulty",
+		"search": "Search by topic",
+		"placeholder": "Enter a German sentence or word with articles",
+		"translate": "translation(optional)",
+		"btn": "Create"
 	}
 }
