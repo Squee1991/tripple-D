@@ -48,9 +48,16 @@ export const useTrainerStore = defineStore('trainer', () => {
 						resolve(usr)
 					}
 				})
+				setTimeout(() => {
+					unsub()
+					resolve(null)
+				}, 1300)
 			})
 		}
-		if (!user) return
+		if (!user) {
+			completedModules.value = []
+			return
+		}
 		const docRef = doc(db, 'progress', user.uid)
 		const docSnap = await getDoc(docRef)
 		if (docSnap.exists()) {
@@ -68,6 +75,8 @@ export const useTrainerStore = defineStore('trainer', () => {
 			completedModules.value = []
 		}
 	}
+
+
 
 	return {
 		topic, jsonData, selectedLevel, selectedModule, completedModules,

@@ -18,8 +18,9 @@
 	"sub": {
 		"prev": "Introduction",
 		"rules": "Rules",
-		"artRules": "Article Practice",
-		"card": "Create cards"
+		"artRules": "Practice",
+		"card": "Create cards",
+		"themen": "Thematic levels"
 	},
 	"auth": {
 		"logIn": "Log in",

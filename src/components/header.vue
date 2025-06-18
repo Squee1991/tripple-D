@@ -308,7 +308,7 @@
 		min-width: 146px;
 		align-items: center;
 		/*background: linear-gradient(90deg, #366cff 60%, #4c88ff 100%);*/
-		background: #bd7609;
+		background: #a2a6bf;
 		/*background: linear-gradient(90deg, #36b9ff 60%, #67c7d8 100%);*/
 		color: #fff;
 		border-radius: 14px 30px 14px 30px / 30px 14px 30px 14px;
@@ -325,7 +325,7 @@
 
 	.header-nav__item:hover {
 		/*background: linear-gradient(90deg, #4c88ff 60%, #366cff 100%);*/
-		background: #9b5f03;
+		background: #7d85b8;
 		box-shadow: 0 4px 16px 0 #15235e77;
 	}
 
@@ -356,7 +356,7 @@
 		left: 0;
 		font-size: 15px;
 		background: linear-gradient(90deg, #366cff 60%, #4c88ff 100%);
-		background: #bd7609;
+		background: #a2a6bf;
 		border-radius: 14px 30px 14px 30px / 30px 14px 30px 14px;
 		min-width: 190px;
 		z-index: 50;

@@ -18,8 +18,9 @@
 	"sub": {
 		"prev": "Wprowadzenie",
 		"rules": "Zasady",
-		"artRules": "Ćwiczenie rodzajników",
-		"card": "Utwórz karty"
+		"artRules": "Praktyka",
+		"card": "Utwórz fiszki",
+		"themen": "Poziomy tematyczne"
 	},
 	"auth": {
 		"logIn": "Zaloguj się",
