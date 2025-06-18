@@ -6,6 +6,12 @@
 				<button class="guess__submit" @click="startGame">Начать игру</button>
 			</div>
 			<div class="guess__inner-session" v-else>
+				<div v-if="isStarted && !store.win && !store.lose" class="guess__timer">
+					Время: {{ Math.floor((now - store.timeStarted) / 1000) }} сек.
+				</div>
+				<div v-if="isStarted && (store.win || store.lose)" class="guess__timer">
+					Время: {{ store.timeSpent }} сек.
+				</div>
 				<div class="guess__top-content">
 					<div class="guess__back">
 						<NuxtLink to="/">Назад</NuxtLink>
@@ -99,24 +105,54 @@
 	const articleResult = ref(null)
 	const isStarted = ref(false)
 
+
+	const now = ref(Date.now())
+	let intervalId = null
+
+	function startTimer() {
+		if (intervalId) clearInterval(intervalId)
+		intervalId = setInterval(() => {
+			now.value = Date.now()
+		}, 0    )
+	}
+
 	function checkArticle() {
 		if (!store.currentWordObj) return
 		const correct = articleGuess.value.trim().toLowerCase() === store.currentWordObj.article.toLowerCase()
 		articleResult.value = correct ? 'Верно!' : `Неверно. Это было: ${store.currentWordObj.article}`
 	}
 
-	function startGame() {
-		store.startGame()
+	function stopTimer() {
+		if (intervalId) clearInterval(intervalId)
+	}
+
+	async function startGame() {
+		await store.loadGuessProgress()
+		await store.startGame()
 		isStarted.value = true
 		guessInput.value = ''
 		articleGuess.value = ''
 		articleResult.value = null
+		startTimer()
 	}
 
 	function guessWord() {
 		store.tryGuessWord(guessInput.value)
 		guessInput.value = ''
 	}
+
+	onUnmounted(() => stopTimer())
+
+	watch(() => store.win, async (val) => {
+		if (val && store.currentWordObj) {
+			// Сохраняем слово в прогресс (но только если ещё не было)
+			if (!store.guessedWords.includes(store.answer)) {
+				store.guessedWords.push(store.answer)
+				await store.saveGuessProgress()
+			}
+		}
+	})
+
 </script>
 
 <style scoped>
@@ -132,6 +168,14 @@
 		display: flex;
 		justify-content: flex-start;
 	}
+
+	.guess__timer {
+		font-size: 1.15rem;
+		margin-bottom: 12px;
+		color: #88771a;
+		font-weight: 600;
+	}
+
 
 	.guess__back a, .guess__back .nuxt-link-active {
 		display: inline-block;

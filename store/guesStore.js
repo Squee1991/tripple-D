@@ -1,17 +1,97 @@
-// store/guessStore.js
-import {defineStore} from 'pinia'
-import {ref, computed} from 'vue'
+// store/guesStore.js
+import { defineStore } from 'pinia'
+import { ref, computed, watch } from 'vue'
+import { getAuth, onAuthStateChanged } from 'firebase/auth'
+import { getFirestore, doc, setDoc, getDoc , getDocs, collection } from 'firebase/firestore'
+
+async function getUser() {
+	const auth = getAuth()
+	if (auth.currentUser) return auth.currentUser
+	return new Promise(resolve => {
+		const unsub = onAuthStateChanged(auth, u => {
+			unsub()
+			resolve(u)
+		})
+	})
+}
 
 export const useGuessWordStore = defineStore('guessWord', () => {
+	const db = getFirestore()
 	const answer = ref('')
 	const masked = ref([])
 	const attempts = ref(15)
 	const usedLetters = ref([])
+	const guessedWords = ref([])
 	const win = ref(false)
 	const lose = ref(false)
 	const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ'.split('')
 	const loadedWords = ref([])
 	const currentWordObj = ref(null)
+
+	const timeStarted = ref(null)
+	const timeFinished = ref(null)
+	const timeSpent = computed(() =>
+		timeStarted.value && timeFinished.value
+			? Math.floor((timeFinished.value - timeStarted.value) / 1000)
+			: null
+	)
+
+	async function saveToLeaderboard(name, count) {
+		const user = await getUser()
+		if (!user) return
+		if (count === 0) return
+		await setDoc(
+			doc(db, 'leaderboard', user.uid),
+			{ name, guessed: count, updatedAt: Date.now() },
+			{ merge: true }
+		)
+	}
+
+	async function hasInLeaderboard() {
+		const user = await getUser()
+		if (!user) return false
+		const snap = await getDoc(doc(db, 'leaderboard', user.uid))
+		return snap.exists()
+	}
+
+	async function loadLeaderboard() {
+		const snap = await getDocs(collection(db, 'leaderboard'))
+		const arr = []
+		snap.forEach(d => arr.push(d.data()))
+		arr.sort((a, b) => b.guessed - a.guessed)
+		return arr
+	}
+
+	async function loadGuessProgress() {
+		const user = await getUser()
+		if (!user) return
+		const snap = await getDoc(doc(db, 'guessProgress', user.uid))
+		if (snap.exists()) {
+			const data = snap.data()
+			if (Array.isArray(data.guessedWords)) {
+				guessedWords.value = data.guessedWords
+			}
+		}
+	}
+
+	async function saveGuessProgress() {
+		const user = await getUser()
+		console.log('[guessStore] saveGuessProgress called, user =', user)
+		console.log('[guessStore] guessedWords =', guessedWords.value)
+		if (!user) {
+			return
+		}
+		try {
+			await setDoc(
+				doc(db, 'guessProgress', user.uid),
+				{ guessedWords: guessedWords.value },
+				{ merge: true }
+			)
+
+		} catch (e) {
+
+		}
+	}
 
 	async function loadWords() {
 		if (loadedWords.value.length) return
@@ -26,7 +106,15 @@ export const useGuessWordStore = defineStore('guessWord', () => {
 
 	async function startGame() {
 		await loadWords()
-		const wordObj = loadedWords.value[Math.floor(Math.random() * loadedWords.value.length)]
+		await loadGuessProgress()
+		const pool = loadedWords.value.filter(
+			w => !guessedWords.value.includes(w.de.toUpperCase())
+		)
+		if (!pool.length) {
+			console.log('[guessStore] all words guessed!')
+			return
+		}
+		const wordObj = pool[Math.floor(Math.random() * pool.length)]
 		currentWordObj.value = wordObj
 		answer.value = wordObj.de.toUpperCase()
 		masked.value = Array(answer.value.length).fill('')
@@ -34,16 +122,8 @@ export const useGuessWordStore = defineStore('guessWord', () => {
 		attempts.value = 15
 		win.value = false
 		lose.value = false
-	}
-
-	function setWord(wordObj) {
-		currentWordObj.value = wordObj
-		answer.value = wordObj.de.toUpperCase()
-		masked.value = Array(answer.value.length).fill('')
-		usedLetters.value = []
-		attempts.value = 15
-		win.value = false
-		lose.value = false
+		timeStarted.value = Date.now()
+		timeFinished.value = null
 	}
 
 	function pickLetter(letter) {
@@ -65,6 +145,7 @@ export const useGuessWordStore = defineStore('guessWord', () => {
 		if (word.toUpperCase() === answer.value) {
 			masked.value = answer.value.split('')
 			win.value = true
+			timeFinished.value = Date.now()
 		} else {
 			attempts.value--
 			checkGameStatus()
@@ -72,18 +153,37 @@ export const useGuessWordStore = defineStore('guessWord', () => {
 	}
 
 	function checkGameStatus() {
-		if (masked.value.join('') === answer.value) win.value = true
-		if (attempts.value <= 0 && !win.value) lose.value = true
+		if (masked.value.join('') === answer.value) {
+			win.value = true
+			timeFinished.value = Date.now()
+		}
+		if (attempts.value <= 0 && !win.value) {
+			lose.value = true
+			timeFinished.value = Date.now()
+		}
 	}
 
 	const displayMasked = computed(() =>
 		masked.value.map(l => (l ? l : '_')).join(' ')
 	)
 
+	watch(win, async w => {
+		if (w && answer.value) {
+			const word = answer.value
+			if (!guessedWords.value.includes(word)) {
+				guessedWords.value.push(word)
+				await saveGuessProgress()
+			}
+		}
+	})
+
 	return {
 		answer, masked, attempts, usedLetters, win, lose,
-		alphabet, displayMasked,
+		alphabet, displayMasked, guessedWords,
 		currentWordObj,
-		startGame, pickLetter, tryGuessWord, setWord
+		startGame, pickLetter, tryGuessWord,
+		loadGuessProgress, saveGuessProgress,
+		timeStarted, timeFinished, timeSpent,  saveToLeaderboard,
+		loadLeaderboard, hasInLeaderboard
 	}
 })

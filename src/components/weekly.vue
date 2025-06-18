@@ -67,7 +67,6 @@
 		const task = weeklyTasks.value.find(t => t.id === id)
 		if (task && task.completed && !task.rewarded) {
 			task.rewarded = true
-			// Тут твоя логика, анимация, награда и т.д.
 			alert('Награда за задание недели получена!')
 		}
 	}

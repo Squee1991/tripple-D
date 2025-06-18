@@ -42,14 +42,14 @@ export const useTrainerStore = defineStore('trainer', () => {
 		let user = auth.currentUser
 		if (!user) {
 			user = await new Promise(resolve => {
-				const unsub = onAuthStateChanged(auth, usr => {
+				const unsubscribe = onAuthStateChanged(auth, usr => {
 					if (usr) {
-						unsub()
+						unsubscribe()
 						resolve(usr)
 					}
 				})
 				setTimeout(() => {
-					unsub()
+					unsubscribe()
 					resolve(null)
 				}, 1300)
 			})

@@ -177,15 +177,20 @@
 				{id: 'vocabulary', url: 'vocabulary', valueKey: 'nav.sinonim'}
 			]
 		},
-		{
-			id: 'quests',
-			url: 'quests',
-			valueKey: 'nav.achieve'
-		},
+		// {
+		// 	id: 'quests',
+		// 	url: 'quests',
+		// 	valueKey: 'nav.achieve'
+		// },
 		{
 			id: 'about',
 			url: 'about',
 			valueKey: 'nav.about'
+		},
+		{
+			id: 'stats',
+			url: 'stats',
+			valueKey: 'nav.stats'
 		}
 	]
 
