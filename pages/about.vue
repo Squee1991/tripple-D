@@ -2,34 +2,44 @@
 	<section class="why">
 		<div class="why__container">
 			<div class="why__title-inner">
-				<h1 class="why__title">{{ t(data.title)}}</h1>
+				<h1 class="why__title">{{ t(data.title) }}</h1>
 				<img class="why__lazy-img" src="../assets/images/lazyLearn.svg" alt="">
 			</div>
 			<p class="why__lead">
-				{{ t(data.lead)}}
+				{{ t(data.lead) }}
 			</p>
-			<ul class="why__list" aria-label="Преимущества платформы">
-				<li
-					:class="{open: isViseble.includes(item.id)}"
-					v-for="item in data.items"
+			<div class="accordion-wrapper">
+				<div
+					v-for="(item, index) in data.items"
 					:key="item.id"
-					class="why__item"
+					:class="{ box: isOpen.includes(index) }"
+					class="accordion-box"
 				>
-					<div class="why__item__title">
-						<div class="why__item-text">{{ t(item.valueKey) }}</div>
-						<img
-							:class="{ 'why__icon-arrow--open': isViseble.includes(item.id) }"
-							@click="accrdion(item.id)" class="why__icon-arrow" :src="Arrow" alt="" />
+					<div :class="{ toggle: isOpen.includes(index) }" class="icon-wrapper">
+						<div class="background"></div>
+						<img :class="{ filter: isOpen.includes(index) }" src="../assets/images/Limon.svg" class="icon" />
 					</div>
-					<div>
-						<div class="why__explanin"> {{ t(item.explainkey) }}</div>
+					<div class="text-content">
+						<div :class="{ hidetitle: isOpen.includes(index) }" class="accordion-title">{{ t(item.valueKey) }}</div>
+						<div class="accordion-text">{{ t(item.explainkey) }}</div>
 					</div>
-				</li>
-			</ul>
+					<div class="arrow" @click="toggle(index)">
+            <span>
+              <img
+	              class="arrow-item"
+	              :class="{ rotated: isOpen.includes(index) }"
+	              src="../assets/images/arrowNav.svg"
+	              alt=""
+              />
+            </span>
+					</div>
+				</div>
+			</div>
+
 			<div class="why__footer-text">
 				<img class="why__happy-img" src="../assets/images/happystudent.svg" alt="">
 				<p class="why__footer">
-					{{ t(data.subtext)}}
+					{{ t(data.subtext) }}
 				</p>
 			</div>
 		</div>
@@ -37,17 +47,17 @@
 	<FeedBack/>
 </template>
 
+
 <script setup>
 	import FeedBack from '../src/components/feedBack.vue'
-	import Arrow from '../assets/images/arrowDown.svg'
-	const { t} = useI18n()
-	const isViseble = ref([])
+	const { t } = useI18n()
+	const isOpen = ref([])
 
-	const accrdion = (id) => {
-		if (isViseble.value.includes(id)) {
-			isViseble.value = isViseble.value.filter(openId => openId !== id)
+	function toggle(index) {
+		if (isOpen.value.includes(index)) {
+			isOpen.value = isOpen.value.filter(i => i !== index)
 		} else {
-			isViseble.value.push(id)
+			isOpen.value.push(index)
 		}
 	}
 
@@ -55,56 +65,23 @@
 		title: "about.title",
 		lead: "about.lead",
 		items: [
-			{
-				valueKey: "about.whyfirst",
-				explainkey: "aboutList.one",
-				id: 1
-			},
-			{
-				valueKey: "about.whySecond",
-				explainkey: "aboutList.two",
-				id: 2
-			},
-			{
-				valueKey: "about.whyThird",
-				explainkey: "aboutList.three",
-				id: 3
-			},
-			{
-				valueKey: "about.whyfourth",
-				explainkey: "aboutList.four",
-				id: 4
-			},
-			{
-				valueKey: "about.whyfifth",
-				explainkey: "aboutList.five",
-				id: 5
-			},
-			{
-				valueKey: "about.whySixth",
-				explainkey: "aboutList.six",
-				id: 6
-			},
-			{
-				valueKey: "about.whySeventh",
-				explainkey: "aboutList.seven",
-				id: 7
-			},
-			{
-				valueKey: "about.whyEight",
-				explainkey: "aboutList.eight",
-				id: 8
-			},
+			{ valueKey: "about.whyfirst", explainkey: "aboutList.one", id: 1 },
+			{ valueKey: "about.whySecond", explainkey: "aboutList.two", id: 2 },
+			{ valueKey: "about.whyThird", explainkey: "aboutList.three", id: 3 },
+			{ valueKey: "about.whyfourth", explainkey: "aboutList.four", id: 4 },
+			{ valueKey: "about.whyfifth", explainkey: "aboutList.five", id: 5 },
+			{ valueKey: "about.whySixth", explainkey: "aboutList.six", id: 6 },
+			{ valueKey: "about.whySeventh", explainkey: "aboutList.seven", id: 7 },
+			{ valueKey: "about.whyEight", explainkey: "aboutList.eight", id: 8 },
 		],
 		subtext: "about.whyfooter",
 	}
 
-
 	definePageMeta({
 		layout: 'footerlayout'
 	})
-
 </script>
+
 
 <style scoped>
 	.why {
@@ -229,6 +206,122 @@
 		.why__item-text {
 			font-size: 15px;
 		}
+	}
+
+	.accordion-wrapper {
+		padding: 40px;
+
+	}
+
+	.icon-wrapper {
+		position: absolute;
+		top: -16px;
+		left: -13px;
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		background: #f8f4ff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 2;
+		transition: .3s;
+	}
+
+
+
+	.icon {
+		width: 35px;
+		height: 35px;
+		filter: grayscale(100%);
+		z-index: 2;
+
+	}
+
+	.filter {
+		filter: grayscale(0%);
+		transition: .3s;
+	}
+
+	.toggle {
+		top: -17px;
+		left: 50%;
+		transform: translateX(-50%);
+		transition: .3s;
+		filter: grayscale(40%);
+	}
+
+	.accordion-box {
+		position: relative;
+		background: #f8f4ff;;
+		border-radius: 22px;
+		padding: 10px 16px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		height: 45px;
+		color: #333;
+		transition: 0.3s;
+		text-align: center;
+		margin-bottom: 25px;
+	}
+
+	.box {
+		height: 130px;
+		transition: 0.3s;
+	}
+
+	.accordion-title {
+		font-family: 'Montserrat', Arial, sans-serif;
+		font-weight: 600;
+		font-size: 17px;
+		font-style: italic;
+		margin-bottom: 8px;
+		transition: 0.2s;
+		opacity: 1;
+	}
+
+	.hidetitle {
+		opacity: 0;
+	}
+
+	.accordion-text {
+		padding: 10px;
+		font-size: 14px;
+		color: #555;
+		opacity: 0;
+		max-height: 0;
+		overflow: hidden;
+		transition: opacity 0.3s, max-height 0.3s;
+	}
+
+	.box .accordion-text {
+		opacity: 1;
+		max-height: 200px;
+	}
+
+
+	.arrow {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		background: #d9cde8;
+		width: 22px;
+		height: 22px;
+		padding: 5px;
+		border-radius: 50%;
+
+	}
+
+	.arrow-item {
+		transform: scale(1);
+		transition: .5s;
+	}
+
+	.rotated {
+		transition: .5s;
+		transform: scale(-1);
 	}
 
 </style>

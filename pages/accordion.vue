@@ -33,29 +33,7 @@
 <script setup="">
 import {ref} from "vue";
 
-const items = ref([
-	{
-		open: false,
-		title: 'Учи в игровом режиме',
-		text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. consectetur adipisicing elit consectetur adipisicing elit consectetur adipisicing elit consectetur adipisicing elit consectetur adipisicing elit'
-	},
-	{
-		open: false,
-		title: 'Зарабатывай артиклюсы',
-		text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. consectetur adipisicing elit consectetur adipisicing elit consectetur adipisicing elit consectetur adipisicing elit consectetur adipisicing elit '
-	},
-	{
-		open: false,
-		title: 'Угадывай слова',
-		text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. consectetur adipisicing elit consectetur adipisicing elit consectetur adipisicing elit consectetur adipisicing elit consectetur adipisicing elit'
-	}
-])
 
-const isOpen = ref(false)
-
-const toggle = (index) => {
-	items.value[index].open = !items.value[index].open
-}
 </script>
 
 <style scoped>

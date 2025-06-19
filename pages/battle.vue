@@ -94,7 +94,6 @@
 		scrollToBottom()
 	})
 
-	// Автопрокрутка чата
 	const scrollToBottom = async () => {
 		await nextTick()
 		if (messagesBox.value) {
@@ -180,7 +179,7 @@
 		const unsub = auth.onAuthStateChanged(async (user) => {
 			if (user?.uid) {
 				currentUserId.value = user.uid
-				await loadUserNickname(user.uid) // ← загружаем ник для самого себя
+				await loadUserNickname(user.uid)
 			} else {
 				currentUserId.value = null
 			}

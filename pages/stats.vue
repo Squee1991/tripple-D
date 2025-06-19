@@ -7,19 +7,20 @@
 	const guessStore = useGuessWordStore()
 	const rating = ref([])
 	const isLoading = ref(true)
+
 	const isInLeaderboard = computed(() =>
 		rating.value.some(r => r.name === authStore.name)
 	)
 
 	async function loadAndSyncStatistics() {
 		isLoading.value = true
+
 		await guessStore.loadGuessProgress()
 		rating.value = await guessStore.loadLeaderboard()
 		isLoading.value = false
 	}
 
 	async function addToLeaderboard() {
-		console.log('Перед добавлением:', guessStore.guessedWords)
 		if (!Array.isArray(guessStore.guessedWords) || guessStore.guessedWords.length === 0) {
 			alert('Чтобы попасть в таблицу рейтинга, надо отгадать хотя бы 1 слово!')
 			return
@@ -34,10 +35,20 @@
 		}
 	}, { immediate: true })
 
+
+	watch(() => guessStore.guessedWords.length,
+		async (newLen, oldLen) => {
+			if (newLen !== oldLen) {
+				rating.value = await guessStore.loadLeaderboard()
+			}
+		}
+	)
+
 </script>
 
+
 <template>
-	<div> Тут будет таблица лидеров по угадываю слов это будет имя можно ещё аватар и ещё можно что то ещё добавить как то организовать пока нет идей </div>
+	<div> Тут будет таблица лидеров по угадываю слов это будет имя можно ещё аватар и ещё можно  что то ещё</div>
 	<div>
 		<button v-if="!isInLeaderboard" @click="addToLeaderboard">
 			Попасть в таблицу рейтинга

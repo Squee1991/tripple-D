@@ -3,7 +3,7 @@ import { defineStore } from 'pinia'
 import { ref, computed, watch } from 'vue'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 import { getFirestore, doc, setDoc, getDoc , getDocs, collection } from 'firebase/firestore'
-
+import { userAuthStore } from './authStore.js'
 async function getUser() {
 	const auth = getAuth()
 	if (auth.currentUser) return auth.currentUser
@@ -16,6 +16,7 @@ async function getUser() {
 }
 
 export const useGuessWordStore = defineStore('guessWord', () => {
+	const authStore = userAuthStore()
 	const db = getFirestore()
 	const answer = ref('')
 	const masked = ref([])
@@ -28,6 +29,7 @@ export const useGuessWordStore = defineStore('guessWord', () => {
 	const loadedWords = ref([])
 	const currentWordObj = ref(null)
 
+
 	const timeStarted = ref(null)
 	const timeFinished = ref(null)
 	const timeSpent = computed(() =>
@@ -38,13 +40,18 @@ export const useGuessWordStore = defineStore('guessWord', () => {
 
 	async function saveToLeaderboard(name, count) {
 		const user = await getUser()
-		if (!user) return
-		if (count === 0) return
-		await setDoc(
-			doc(db, 'leaderboard', user.uid),
-			{ name, guessed: count, updatedAt: Date.now() },
-			{ merge: true }
-		)
+		if (!user || count === 0) return
+		console.log('[saveToLeaderboard] Попытка сохранить: имя=', name, 'количество=', count, 'UID=', user.uid);
+		try {
+			await setDoc(
+				doc(db, 'leaderboard', user.uid),
+				{ name, guessed: count, updatedAt: Date.now() },
+				{ merge: true }
+			)
+			console.log('Успешно ');
+		} catch (error) {
+			console.error('ОШИБКА', error);
+		}
 	}
 
 	async function hasInLeaderboard() {
@@ -73,6 +80,7 @@ export const useGuessWordStore = defineStore('guessWord', () => {
 			}
 		}
 	}
+
 
 	async function saveGuessProgress() {
 		const user = await getUser()
@@ -168,11 +176,20 @@ export const useGuessWordStore = defineStore('guessWord', () => {
 	)
 
 	watch(win, async w => {
+		console.log('[watch win] win changed →', w)
 		if (w && answer.value) {
 			const word = answer.value
 			if (!guessedWords.value.includes(word)) {
+				console.log('[watch win] pushing word →', word)
 				guessedWords.value.push(word)
 				await saveGuessProgress()
+				// ВАЖНО: сразу после прогресса пишем в лидерборд
+				console.log('[watch win] about to call saveToLeaderboard, authStore.name=', authStore.name)
+				if (authStore.name) {
+					await saveToLeaderboard(authStore.name, guessedWords.value.length)
+				} else {
+					console.warn('[watch win] authStore.name пустой!')
+				}
 			}
 		}
 	})
