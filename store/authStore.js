@@ -1,5 +1,5 @@
 import {defineStore} from "pinia";
-import {ref} from 'vue'
+import {ref, computed} from 'vue' // <-- Импортируем computed
 import {
 	getAuth,
 	createUserWithEmailAndPassword,
@@ -14,86 +14,121 @@ import {
 	signInWithPopup,
 	GoogleAuthProvider
 } from 'firebase/auth';
-import {doc, setDoc, getDoc, getFirestore} from 'firebase/firestore';
+import {doc, setDoc, getDoc, getFirestore, updateDoc, deleteDoc} from 'firebase/firestore';
 
+let authStateUnsubscribe = null;
 export const userAuthStore = defineStore('auth', () => {
 	const name = ref(null)
 	const email = ref(null)
-	const password = ref(null)
 	const registeredAt = ref(null)
 	const db = getFirestore();
+	const avatar = ref(null)
+	const uid = ref(null)
+	const availableAvatars = ref(['1.png', '2.png', '3.png', '4.png', '5.png',]);
+
+	const getAvatarUrl = (fileName) => {
+		if (!fileName) return '';
+		try {
+			return new URL(`../assets/images/avatars/${fileName}`, import.meta.url).href;
+		} catch (e) {
+			return '';
+		}
+	};
+
+	const avatarUrl = computed(() => getAvatarUrl(avatar.value));
 
 	const setUserData = (data) => {
 		name.value = data.name || null
 		email.value = data.email || null
-		password.value = data.password || null
 		registeredAt.value = data.registeredAt || null
+		uid.value = data.uid || null
+		avatar.value = data.avatar || null
 	}
+
+	const updateUserAvatar = async (newAvatarFilename) => {
+		const user = getAuth().currentUser;
+		if (!user) return;
+		const userDocRef = doc(db, 'users', user.uid);
+		try {
+			await updateDoc(userDocRef, {
+				avatar: newAvatarFilename
+			});
+			avatar.value = newAvatarFilename;
+		} catch (error) {
+			throw error;
+		}
+	};
 
 	const loginWithGoogle = async () => {
 		try {
 			const auth = getAuth();
 			const provider = new GoogleAuthProvider();
 			const result = await signInWithPopup(auth, provider);
+			const userDocRef = doc(db, 'users', result.user.uid);
+			const userDoc = await getDoc(userDocRef);
+			const userDataFromDb = userDoc.exists() ? userDoc.data() : {};
 			if (result.user.metadata.creationTime === result.user.metadata.lastSignInTime) {
-				await setDoc(doc(db, 'users', result.user.uid), {
+				await setDoc(userDocRef, {
 					nickname: result.user.displayName,
 					email: result.user.email,
-					registeredAt: result.user.metadata.creationTime
-				}, { merge: true });
+					registeredAt: result.user.metadata.creationTime,
+					avatar: '1.png'
+				}, {merge: true});
 			}
 
 			setUserData({
 				name: result.user.displayName,
 				email: result.user.email,
-				registeredAt: result.user.metadata.creationTime
+				registeredAt: result.user.metadata.creationTime,
+				uid: result.user.uid,
+				avatar: userDataFromDb.avatar || '1.png'
 			});
 		} catch (error) {
-			console.error("Google login error:", error);
 			throw error;
 		}
 	};
 
 	const registerUser = async (userData) => {
 		const auth = getAuth()
-		const userCredential = await createUserWithEmailAndPassword(
-			auth,
-			userData.email,
-			userData.password
-		)
-
-		await updateProfile(userCredential.user, {
-			displayName: userData.name
-		})
-
+		const userCredential = await createUserWithEmailAndPassword(auth, userData.email, userData.password)
+		await updateProfile(userCredential.user, {displayName: userData.name})
 		await sendEmailVerification(userCredential.user)
+
+		const defaultAvatar = '1.png';
 
 		await setDoc(doc(db, 'users', userCredential.user.uid), {
 			nickname: userData.name,
 			email: userData.email,
-			registeredAt: userCredential.user.metadata.creationTime
+			registeredAt: userCredential.user.metadata.creationTime,
+			avatar: defaultAvatar
 		})
 
 		setUserData({
 			name: userData.name,
 			email: userData.email,
-			password: userData.password,
-			registeredAt: userCredential.user.metadata.creationTime
+			registeredAt: userCredential.user.metadata.creationTime,
+			uid: userCredential.user.uid,
+			avatar: defaultAvatar
 		})
 	}
 
 
-	const loginUser = async ({ email, password }) => {
+	const loginUser = async ({email, password}) => {
 		const auth = getAuth()
 		const userCredential = await signInWithEmailAndPassword(auth, email, password)
 		if (!userCredential.user.emailVerified) {
-			throw { code: 'auth/email-not-verified' }
+			throw {code: 'auth/email-not-verified'}
 		}
+		const userDocRef = doc(db, 'users', userCredential.user.uid);
+		const userDoc = await getDoc(userDocRef);
+		const userDataFromDb = userDoc.exists() ? userDoc.data() : {};
 
 		setUserData({
 			name: userCredential.user.displayName,
 			email: userCredential.user.email,
-			password
+			registeredAt: userCredential.user.metadata.creationTime,
+			uid: userCredential.user.uid,
+			avatar: userDataFromDb.avatar || null
 		})
 	}
 
@@ -119,42 +154,60 @@ export const userAuthStore = defineStore('auth', () => {
 	const logOut = async () => {
 		const auth = getAuth()
 		await signOut(auth)
-		name.value = null;
-		email.value = null;
-		password.value = null;
+		setUserData({});
+
+
+		if (authStateUnsubscribe) {
+			console.log('Отписка от слушателя AuthState');
+			authStateUnsubscribe();
+			authStateUnsubscribe = null;
+		}
 	}
 
 	const fetchuser = () => {
 		const auth = getAuth()
-		onAuthStateChanged(auth, (user) => {
+		if (authStateUnsubscribe) {
+			authStateUnsubscribe();
+		}
+
+		console.log('Подписка на слушателя AuthState');
+		authStateUnsubscribe = onAuthStateChanged(auth, async (user) => {
 			if (user) {
+				console.log('Пользователь обнаружен:', user.uid);
+				const userDocRef = doc(db, 'users', user.uid);
+				const userDoc = await getDoc(userDocRef);
+				const userDataFromDb = userDoc.exists() ? userDoc.data() : {};
 				setUserData({
 					name: user.displayName,
 					email: user.email,
-					password: null,
-					registeredAt: user.metadata.creationTime
+					registeredAt: user.metadata.creationTime,
+					uid: user.uid,
+					avatar: userDataFromDb.avatar || null
 				})
 			} else {
-				name.value = null
-				email.value = null
-				password.value = null
-				registeredAt.value = null
+				setUserData({});
 			}
 		})
 	}
 
-	fetchuser()
-
+	// fetchuser()
 	return {
 		name,
 		email,
-		password,
 		registeredAt,
+		uid,
+		avatar,
+		avatarUrl,
+		availableAvatars,
+
 		registerUser,
 		logOut,
 		loginUser,
 		resetPassword,
 		deleteAccount,
-		loginWithGoogle
+		loginWithGoogle,
+		updateUserAvatar,
+		getAvatarUrl,
+		fetchuser
 	}
 })

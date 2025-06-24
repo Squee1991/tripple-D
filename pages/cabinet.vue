@@ -1,13 +1,20 @@
 <template>
 	<div class="cabinet-wrapper">
 		<div class="sidebar">
-			<button @click="pathBack" class="button__back"><</button>
+			<button @click="pathBack" class="button__back">&lt;</button>
 			<div class="menu-icon active">🏠</div>
 			<div class="menu-icon">⚙</div>
 		</div>
 		<div class="main-content">
 			<div class="header">
 				<div class="user-block">
+					<div class="avatar-container">
+						<img v-if="authStore.avatarUrl" :src="authStore.avatarUrl" alt="Аватар" class="avatar-current">
+						<div v-else class="avatar-placeholder"></div>
+						<button @click="isAvatarModalOpen = true" class="change-avatar-btn" title="Сменить аватар">
+							<img src="../assets/images/add.svg" alt="Сменить">
+						</button>
+					</div>
 					<div class="user-info">
 						<div class="exp-bar">
 							<div class="exp-fill" :style="{ width: `${(learningStore.exp / 100) * 100}%` }"></div>
@@ -50,21 +57,63 @@
 				<Skills/>
 			</div>
 		</div>
+
+		<div v-if="isAvatarModalOpen" class="avatar-modal-overlay" @click.self="isAvatarModalOpen = false">
+			<div class="avatar-modal-content">
+				<h3>Выберите аватар</h3>
+				<div class="avatar-grid">
+					<div v-for="avatarName in authStore.availableAvatars"
+					     :key="avatarName"
+					     class="avatar-option"
+					     :class="{ 'selected': selectedAvatar === avatarName }"
+					     @click="selectAvatar(avatarName)">
+						<img :src="authStore.getAvatarUrl(avatarName)" :alt="avatarName">
+					</div>
+				</div>
+				<div class="modal-actions">
+					<button @click="isAvatarModalOpen = false" class="btn-cancel">Отмена</button>
+					<button @click="confirmAvatarChange" :disabled="!selectedAvatar" class="btn-confirm">Сохранить</button>
+				</div>
+			</div>
+		</div>
 	</div>
 </template>
+
 <script setup>
-	import {userAuthStore} from '../store/authStore.js'
-	import {userlangStore} from '../store/learningStore.js'
-	import {ref, computed} from 'vue'
+	import { userAuthStore } from '../store/authStore.js'
+	import { userlangStore } from '../store/learningStore.js'
+	import { ref, computed, onMounted, watch } from 'vue'
 	import Progress from '../src/components/progress.vue'
 	import Skills from '../src/components/skillz.vue'
-	import {onMounted} from 'vue'
-	import {useRouter} from 'vue-router'
+	import { useRouter } from 'vue-router'
 
 	const authStore = userAuthStore()
 	const learningStore = userlangStore()
 	const router = useRouter()
 	const activeTab = ref('info')
+	const isAvatarModalOpen = ref(false);
+	const selectedAvatar = ref(null);
+
+	watch(isAvatarModalOpen, (newValue) => {
+		if (newValue) {
+			selectedAvatar.value = authStore.avatar;
+		}
+	});
+
+	const selectAvatar = (avatarName) => {
+		selectedAvatar.value = avatarName;
+	};
+
+	const confirmAvatarChange = async () => {
+		if (!selectedAvatar.value) return;
+		try {
+			await authStore.updateUserAvatar(selectedAvatar.value);
+			isAvatarModalOpen.value = false;
+		} catch (error) {
+			console.error("Не удалось обновить аватар:", error);
+		}
+	};
+
 	const pathBack = () => {
 		router.push('/')
 	}
@@ -75,7 +124,7 @@
 
 	const regDate = computed(() => {
 		if (!authStore.registeredAt) return '-'
-		return new Date(authStore.registeredAt).toLocaleDateString('ru-Ru',  {
+		return new Date(authStore.registeredAt).toLocaleDateString('ru-Ru', {
 			day: '2-digit',
 			month: '2-digit',
 			year: 'numeric'
@@ -85,29 +134,12 @@
 	onMounted(async () => {
 		await learningStore.loadFromFirebase()
 	})
-
 </script>
 
+
+
 <style scoped>
-
-	.exp-bar {
-		display: flex;
-		height: 14px;
-		width: 100%;
-		background: #352c1f;
-		border: 1px solid #ffd369;
-		border-radius: 8px;
-		margin-top: 6px;
-		overflow: hidden;
-	}
-
-	.exp-fill {
-		height: 100%;
-		background: blue;
-		transition: width 0.3s ease;
-	}
-
-
+	/* Стили не меняются, они корректны */
 	* {
 		padding: 0;
 		margin: 0;
@@ -171,39 +203,20 @@
 	.header {
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+		align-items: flex-start; /* Изменено для лучшего выравнивания с аватаром */
 	}
 
 	.user-block {
 		display: flex;
-		align-items: center;
+		align-items: flex-start; /* Изменено */
 	}
 
 	.user-info {
 		display: flex;
-		align-items: center;
+		flex-direction: column;
+		align-items: flex-start;
 	}
 
-	.avatar__wrapper {
-		width: 160px;
-		display: flex;
-	}
-
-	.avatar {
-		width: 100%;
-
-	}
-
-	.nickname {
-		font-size: 1.5rem;
-		margin: 0;
-	}
-
-	.status {
-		font-size: 0.9rem;
-		color: #00c2ff;
-		margin-top: 4px;
-	}
 
 	.balance-block,
 	.meta-block {
@@ -331,4 +344,165 @@
 		margin-left: 10px;
 	}
 
+	/* ================================= */
+	/* НОВЫЕ СТИЛИ ДЛЯ АВАТАРА         */
+	/* ================================= */
+	.avatar-container {
+		position: relative;
+		margin-right: 20px;
+		flex-shrink: 0; /* Предотвращает сжатие аватара */
+	}
+
+	.avatar-current, .avatar-placeholder {
+		width: 80px;
+		height: 80px;
+		border-radius: 50%;
+		border: 3px solid #ffd369;
+		object-fit: cover;
+		background-color: #2c2828;
+	}
+
+	.avatar-placeholder {
+		border-color: #666;
+		background-color: #333;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 2rem;
+		color: #666;
+	}
+
+	.change-avatar-btn {
+		position: absolute;
+		bottom: -4px;
+		right: -4px;
+		width: 32px;
+		height: 32px;
+		background: #fff;
+		border: 2px solid #ffd369;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		transition: transform 0.2s ease;
+		padding: 0;
+	}
+
+	.change-avatar-btn:hover {
+		transform: scale(1.15);
+	}
+
+	.change-avatar-btn img {
+		width: 16px;
+		height: 16px;
+	}
+
+	/* Стили для модального окна */
+	.avatar-modal-overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.75);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 1000;
+		backdrop-filter: blur(5px);
+	}
+
+	.avatar-modal-content {
+		background: #3a3636;
+		padding: 2rem;
+		border-radius: 15px;
+		border: 2px solid #ffd369;
+		box-shadow: 0 0 40px rgba(255, 211, 105, 0.5);
+		width: 90%;
+		max-width: 600px;
+		color: #fff;
+		text-align: center;
+	}
+
+	.avatar-modal-content h3 {
+		font-size: 1.5rem;
+		color: #ffd369;
+	}
+
+	.avatar-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+		gap: 1.5rem;
+		margin: 2rem 0;
+		max-height: 50vh;
+		padding-right: 10px;
+	}
+
+	.avatar-option {
+		cursor: pointer;
+		border: 3px solid transparent;
+		border-radius: 15px;
+		transition: all 0.2s ease;
+		padding: 5px;
+		background: rgba(255,255,255,0.05);
+	}
+
+	.avatar-option:hover {
+		border-color: #00c2ff;
+		transform: translateY(-5px);
+	}
+
+	.avatar-option.selected {
+		border-color: #ffd369;
+		transform: scale(1.05);
+		box-shadow: 0 0 15px #ffd369;
+	}
+
+	.avatar-option img {
+		width: 100%;
+		border-radius: 10px;
+		display: block;
+	}
+
+	.modal-actions {
+		display: flex;
+		justify-content: center;
+		gap: 1rem;
+		margin-top: 1rem;
+	}
+
+	.modal-actions button {
+		padding: 12px 30px;
+		border-radius: 8px;
+		border: none;
+		cursor: pointer;
+		font-size: 1rem;
+		font-weight: bold;
+		transition: all 0.2s;
+	}
+
+	.btn-cancel {
+		background-color: #555;
+		color: #fff;
+		border: 1px solid #777;
+	}
+	.btn-cancel:hover {
+		background-color: #666;
+	}
+
+	.btn-confirm {
+		background-color: #ffd369;
+		color: #1a1a1a;
+	}
+	.btn-confirm:hover {
+		background-color: #ffc73d;
+		box-shadow: 0 0 10px #ffd369;
+	}
+	.btn-confirm:disabled {
+		background-color: #444;
+		color: #888;
+		cursor: not-allowed;
+		box-shadow: none;
+	}
 </style>

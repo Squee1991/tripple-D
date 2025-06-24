@@ -2,12 +2,35 @@
 	"preloader": {
 		"value": "You will be redirected to the main page..."
 	},
+	"ranked": {
+		"label": "Leaderboard",
+		"guessTab": "Guess the word",
+		"marathonTab": "Article Marathon",
+		"guesTabelelable": "Word Guessing Leaderboard",
+		"guesMarathonlable": "Marathon Leaderboard",
+		"easy": "Easy",
+		"normal": "Normal",
+		"hard": "Hard",
+		"loading": "Loading leaderboard...",
+		"notData": "No data for this category yet. Be the first!",
+		"notAuth": "Log in to set your record and publish it.",
+		"emptydifficult": "There's no one on the leaderboard at this difficulty level yet. Be the first!",
+		"toRanked": "Get on the leaderboard"
+	},
+	"modal": {
+		"textRanked": "To get on the leaderboard, you need to guess at least one word",
+		"textBtn": "Guess the word"
+	},
 	"nav": {
 		"training": "Training",
-		"gameMode": "Game Mode",
-		"about": "About project",
+		"gameMode": "Games",
+		"sinonim": "Vocabulary",
+		"about": "About",
 		"pvp": "Card Battle",
-		"guess": "Guess the Word"
+		"guess": "Guess the word",
+		"achieve": "Achievements",
+		"stats": "Rating",
+		"marathon": "Article Marathon"
 	},
 	"formLabel": {
 		"name": "Name",

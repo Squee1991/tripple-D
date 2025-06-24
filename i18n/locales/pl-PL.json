@@ -2,12 +2,35 @@
 	"preloader": {
 		"value": "Zostaniesz przekierowany na stronę główną..."
 	},
+	"ranked": {
+		"label": "Tabela liderów",
+		"guessTab": "Zgadnij słowo",
+		"marathonTab": "Maraton rodzajników",
+		"guesTabelelable": "Tabela rankingowa zgadywania słów",
+		"guesMarathonlable": "Tabela rankingowa maratonu",
+		"easy": "Łatwy",
+		"normal": "Normalny",
+		"hard": "Trudny",
+		"loading": "Ładowanie rankingu...",
+		"notData": "Brak danych dla tej kategorii. Bądź pierwszy!",
+		"notAuth": "Zaloguj się, aby ustanowić i opublikować swój rekord.",
+		"emptydifficult": "Na tym poziomie trudności nie ma jeszcze nikogo w rankingu. Bądź pierwszy!",
+		"toRanked": "Wejdź do tabeli liderów"
+	},
+	"modal": {
+		"textRanked": "Aby dostać się do rankingu, musisz odgadnąć co najmniej 1 słowo",
+		"textBtn": "Zgadnij słowo"
+	},
 	"nav": {
-		"training": "Nauka",
-		"gameMode": "Tryb gry",
+		"training": "Szkolenie",
+		"gameMode": "Gry",
+		"sinonim": "Słownictwo",
 		"about": "O projekcie",
-		"pvp": "Pojedynek kart",
-		"guess": "Zgadnij słowo"
+		"pvp": "Bitwa karciana",
+		"guess": "Zgadnij słowo",
+		"achieve": "Osiągnięcia",
+		"stats": "Ranking",
+		"marathon": "Maraton rodzajników"
 	},
 	"formLabel": {
 		"name": "Imię",

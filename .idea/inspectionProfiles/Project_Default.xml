@@ -25,7 +25,7 @@
     <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="39">
+          <list size="41">
             <item index="0" class="java.lang.String" itemvalue="nobr" />
             <item index="1" class="java.lang.String" itemvalue="noembed" />
             <item index="2" class="java.lang.String" itemvalue="comment" />
@@ -65,6 +65,8 @@
             <item index="36" class="java.lang.String" itemvalue="weekly" />
             <item index="37" class="java.lang.String" itemvalue="special" />
             <item index="38" class="java.lang.String" itemvalue="themetrainer" />
+            <item index="39" class="java.lang.String" itemvalue="leaderboarditem" />
+            <item index="40" class="java.lang.String" itemvalue="modaloverlay" />
           </list>
         </value>
       </option>

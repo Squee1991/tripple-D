@@ -66,7 +66,7 @@
 				class="header-nav__user"
 				@click="toggleMenu"
 			>
-				<img class="header-nav__avatar" :src="avatar" alt="User avatar"/>
+				<img class="header-nav__avatar" :src="userAuth.avatarUrl" alt="User avatar"/>
 				<span class="header-nav__email">{{ userAuth.email }}</span>
 				<img
 					:class="['header-nav__arrow', { 'header-nav__arrow--active': menuOpen }]"
@@ -174,6 +174,7 @@
 			children: [
 				{id: 'duel-pvp', url: 'duel', valueKey: 'nav.pvp'},
 				{id: 'duel-guess', url: 'guess', valueKey: 'nav.guess'},
+				{id: 'prepare', url: 'prepare', valueKey: 'nav.marathon'},
 				{id: 'vocabulary', url: 'vocabulary', valueKey: 'nav.sinonim'}
 			]
 		},

@@ -2,6 +2,10 @@
 	background: #c6701d;
 	border-radius: 8px;
 	transition: 2s;
+	margin-left: 0px;
+}
 
+.simplebar-content-wrapper {
+	padding: 0 20px;
 }
 

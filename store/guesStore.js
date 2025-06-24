@@ -1,9 +1,10 @@
-// store/guesStore.js
 import { defineStore } from 'pinia'
 import { ref, computed, watch } from 'vue'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
-import { getFirestore, doc, setDoc, getDoc , getDocs, collection } from 'firebase/firestore'
+// ПРАВИЛЬНО
+import { getFirestore, doc, setDoc, getDoc, getDocs, collection, query, orderBy } from 'firebase/firestore'
 import { userAuthStore } from './authStore.js'
+
 async function getUser() {
 	const auth = getAuth()
 	if (auth.currentUser) return auth.currentUser
@@ -28,76 +29,92 @@ export const useGuessWordStore = defineStore('guessWord', () => {
 	const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ'.split('')
 	const loadedWords = ref([])
 	const currentWordObj = ref(null)
-
-
 	const timeStarted = ref(null)
 	const timeFinished = ref(null)
-	const timeSpent = computed(() =>
-		timeStarted.value && timeFinished.value
-			? Math.floor((timeFinished.value - timeStarted.value) / 1000)
-			: null
-	)
+	const timeSpent = computed(() => timeStarted.value && timeFinished.value ? Math.floor((timeFinished.value - timeStarted.value) / 1000) : null)
+
+	function resetState() {
+		answer.value = '';
+		masked.value = [];
+		attempts.value = 15;
+		usedLetters.value = [];
+		guessedWords.value = [];
+		win.value = false;
+		lose.value = false;
+		currentWordObj.value = null;
+		timeStarted.value = null;
+		timeFinished.value = null;
+	}
 
 	async function saveToLeaderboard(name, count) {
 		const user = await getUser()
 		if (!user || count === 0) return
-		console.log('[saveToLeaderboard] Попытка сохранить: имя=', name, 'количество=', count, 'UID=', user.uid);
 		try {
 			await setDoc(
-				doc(db, 'leaderboard', user.uid),
-				{ name, guessed: count, updatedAt: Date.now() },
+				doc(db, 'leaderboard_guess', user.uid),
+				{
+					name,
+					guessed: count,
+					updatedAt: Date.now(),
+					avatar: authStore.avatar || '1.png'
+				},
 				{ merge: true }
 			)
-			console.log('Успешно ');
 		} catch (error) {
-			console.error('ОШИБКА', error);
+			console.error("Ошибка сохранения в таблицу лидеров:", error);
 		}
 	}
 
 	async function hasInLeaderboard() {
 		const user = await getUser()
 		if (!user) return false
-		const snap = await getDoc(doc(db, 'leaderboard', user.uid))
+		const snap = await getDoc(doc(db, 'leaderboard_guess', user.uid))
 		return snap.exists()
 	}
 
 	async function loadLeaderboard() {
-		const snap = await getDocs(collection(db, 'leaderboard'))
+		const leaderboardCol = collection(db, 'leaderboard_guess');
+		const q = query(leaderboardCol, orderBy('guessed', 'desc'));
+		const snap = await getDocs(q);
 		const arr = []
-		snap.forEach(d => arr.push(d.data()))
-		arr.sort((a, b) => b.guessed - a.guessed)
+		snap.forEach(d => {
+			const data = d.data();
+			arr.push({
+				id: d.id,
+				name: data.name,
+				guessed: data.guessed,
+				avatar: data.avatar || '1.png'
+			})
+		})
+
 		return arr
 	}
 
 	async function loadGuessProgress() {
-		const user = await getUser()
-		if (!user) return
-		const snap = await getDoc(doc(db, 'guessProgress', user.uid))
+		const user = await getUser();
+		resetState();
+		if (!user) return;
+
+		const snap = await getDoc(doc(db, 'guessProgress', user.uid));
 		if (snap.exists()) {
-			const data = snap.data()
+			const data = snap.data();
 			if (Array.isArray(data.guessedWords)) {
-				guessedWords.value = data.guessedWords
+				guessedWords.value = data.guessedWords;
 			}
 		}
 	}
 
-
 	async function saveGuessProgress() {
 		const user = await getUser()
-		console.log('[guessStore] saveGuessProgress called, user =', user)
-		console.log('[guessStore] guessedWords =', guessedWords.value)
-		if (!user) {
-			return
-		}
+		if (!user) return
 		try {
 			await setDoc(
 				doc(db, 'guessProgress', user.uid),
 				{ guessedWords: guessedWords.value },
 				{ merge: true }
 			)
-
 		} catch (e) {
-
+			console.error("Failed to save guess progress:", e);
 		}
 	}
 
@@ -119,7 +136,7 @@ export const useGuessWordStore = defineStore('guessWord', () => {
 			w => !guessedWords.value.includes(w.de.toUpperCase())
 		)
 		if (!pool.length) {
-			console.log('[guessStore] all words guessed!')
+			alert("Поздравляем! Вы отгадали все слова!");
 			return
 		}
 		const wordObj = pool[Math.floor(Math.random() * pool.length)]
@@ -176,23 +193,28 @@ export const useGuessWordStore = defineStore('guessWord', () => {
 	)
 
 	watch(win, async w => {
-		console.log('[watch win] win changed →', w)
 		if (w && answer.value) {
 			const word = answer.value
 			if (!guessedWords.value.includes(word)) {
-				console.log('[watch win] pushing word →', word)
 				guessedWords.value.push(word)
 				await saveGuessProgress()
-				// ВАЖНО: сразу после прогресса пишем в лидерборд
-				console.log('[watch win] about to call saveToLeaderboard, authStore.name=', authStore.name)
 				if (authStore.name) {
 					await saveToLeaderboard(authStore.name, guessedWords.value.length)
-				} else {
-					console.warn('[watch win] authStore.name пустой!')
 				}
 			}
 		}
 	})
+
+
+	watch(() => authStore.uid, (newUid, oldUid) => {
+		if (newUid !== oldUid) {
+			if (newUid) {
+				loadGuessProgress();
+			} else {
+				resetState();
+			}
+		}
+	}, { immediate: true });
 
 	return {
 		answer, masked, attempts, usedLetters, win, lose,
