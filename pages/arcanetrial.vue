@@ -8,7 +8,6 @@
 				</li>
 			</ul>
 		</div>
-
 		<div v-else-if="current < selectedTheme.trials.length" class="trial-block">
 			<h2 class="title">🧙 Испытание {{ current + 1 }}: {{ selectedTheme.trials[current].name }}</h2>
 			<p class="description">{{ selectedTheme.trials[current].description }}</p>
@@ -18,7 +17,6 @@
 				<br />
 				<span class="original">{{ selectedTheme.trials[current].question }}</span>
 			</div>
-
 			<div class="input-block">
 				<input v-model="userCorrection" class="correction-input" />
 				<button @click="submitCorrection">Применить</button>
@@ -26,7 +24,6 @@
 
 			<div v-if="feedback" class="feedback">{{ feedback }}</div>
 		</div>
-
 		<div v-else class="result-block">
 			<h2 class="final-title">✨ Тема завершена!</h2>
 			<p class="final-score">Ты набрал {{ score }} из {{ selectedTheme.trials.length }} очков.</p>
@@ -40,7 +37,6 @@
 
 <script setup>
 	import { ref } from 'vue'
-
 	const current = ref(0)
 	const score = ref(0)
 	const feedback = ref('')
@@ -99,9 +95,9 @@
 
 		if (cleaned === correct) {
 			score.value++
-			feedback.value = '✨ Верно! Магия восстановлена.'
+			feedback.value = '✨ Верно!'
 		} else {
-			feedback.value = '❌ Неверно. Искажение сохраняется.'
+			feedback.value = '❌ Неверно!'
 		}
 		setTimeout(() => {
 			feedback.value = ''

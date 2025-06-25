@@ -1,9 +1,10 @@
 import { defineStore } from 'pinia'
 import { ref, computed, watch } from 'vue'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
-// ПРАВИЛЬНО
 import { getFirestore, doc, setDoc, getDoc, getDocs, collection, query, orderBy } from 'firebase/firestore'
 import { userAuthStore } from './authStore.js'
+import { guessAchievment } from '../src/achieveGroup/guessAchievments.js';
+import { useAchievementProgress } from '../src/composables/guestAchievmentProgress.js'
 
 async function getUser() {
 	const auth = getAuth()
@@ -33,12 +34,19 @@ export const useGuessWordStore = defineStore('guessWord', () => {
 	const timeFinished = ref(null)
 	const timeSpent = computed(() => timeStarted.value && timeFinished.value ? Math.floor((timeFinished.value - timeStarted.value) / 1000) : null)
 
+	const {
+		currentAchievement,
+		achievementProgressPercentage,
+		currentLevelNumber,
+		totalProgressLevels,
+		currentProgressText
+	} = useAchievementProgress(computed(() => guessedWords.value.length), guessAchievment);
+
 	function resetState() {
 		answer.value = '';
 		masked.value = [];
 		attempts.value = 15;
 		usedLetters.value = [];
-		guessedWords.value = [];
 		win.value = false;
 		lose.value = false;
 		currentWordObj.value = null;
@@ -61,7 +69,7 @@ export const useGuessWordStore = defineStore('guessWord', () => {
 				{ merge: true }
 			)
 		} catch (error) {
-			console.error("Ошибка сохранения в таблицу лидеров:", error);
+			console.error("Ошибка сохранения в таблицу", error);
 		}
 	}
 
@@ -205,7 +213,6 @@ export const useGuessWordStore = defineStore('guessWord', () => {
 		}
 	})
 
-
 	watch(() => authStore.uid, (newUid, oldUid) => {
 		if (newUid !== oldUid) {
 			if (newUid) {
@@ -217,12 +224,20 @@ export const useGuessWordStore = defineStore('guessWord', () => {
 	}, { immediate: true });
 
 	return {
+
 		answer, masked, attempts, usedLetters, win, lose,
 		alphabet, displayMasked, guessedWords,
 		currentWordObj,
 		startGame, pickLetter, tryGuessWord,
 		loadGuessProgress, saveGuessProgress,
-		timeStarted, timeFinished, timeSpent,  saveToLeaderboard,
-		loadLeaderboard, hasInLeaderboard
+		timeStarted, timeFinished, timeSpent, saveToLeaderboard,
+		loadLeaderboard, hasInLeaderboard,
+
+		achievements: guessAchievment,
+		currentAchievement,
+		achievementProgressPercentage,
+		currentLevelNumber,
+		totalProgressLevels,
+		currentProgressText
 	}
 })

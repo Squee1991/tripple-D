@@ -154,7 +154,6 @@
 							{{ t(label) }}
 						</button>
 					</div>
-
 					<div v-if="!authStore.uid" class="leaderboard__message">
 						{{ t('ranked.notAuth')}}
 					</div>
@@ -202,7 +201,7 @@
 	}
 
 	.leader__icon-item {
-		width: 220px;
+		width: 200px;
 		padding: 20px;
 	}
 

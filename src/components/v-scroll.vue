@@ -1,5 +1,3 @@
-
-
 <script setup>
 	import Arrow from '../../assets/images/arrowNav.svg'
 	import { ref, onMounted, onUnmounted } from 'vue';

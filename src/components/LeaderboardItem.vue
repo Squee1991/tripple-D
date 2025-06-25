@@ -37,7 +37,7 @@
 			<span class="leaderboard-player-rank">#{{ rank }}</span>
 			<img
 				class="leaderboard-player-avatar"
-				:src="authStore.getAvatarUrl(player.avatar)"
+				:src="isCurrentUser ? authStore.avatarUrl : authStore.getAvatarUrl(player.avatar)"
 				alt="avatar"
 			/>
 			<span class="leaderboard-player-name">{{ player.name }}</span>

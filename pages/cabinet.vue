@@ -136,15 +136,7 @@
 	})
 </script>
 
-
-
 <style scoped>
-	/* Стили не меняются, они корректны */
-	* {
-		padding: 0;
-		margin: 0;
-		box-sizing: border-box;
-	}
 
 	.button__back {
 		border: none;
@@ -203,12 +195,12 @@
 	.header {
 		display: flex;
 		justify-content: space-between;
-		align-items: flex-start; /* Изменено для лучшего выравнивания с аватаром */
+		align-items: flex-start;
 	}
 
 	.user-block {
 		display: flex;
-		align-items: flex-start; /* Изменено */
+		align-items: flex-start;
 	}
 
 	.user-info {
@@ -256,7 +248,6 @@
 		position: relative;
 	}
 
-
 	.tab__text {
 		display: flex;
 		justify-content: center;
@@ -285,10 +276,6 @@
 		width: 100%;
 		background: #ffd700;
 		border-radius: 2px;
-	}
-
-	.tab-content {
-
 	}
 
 	.row {
@@ -344,13 +331,10 @@
 		margin-left: 10px;
 	}
 
-	/* ================================= */
-	/* НОВЫЕ СТИЛИ ДЛЯ АВАТАРА         */
-	/* ================================= */
 	.avatar-container {
 		position: relative;
 		margin-right: 20px;
-		flex-shrink: 0; /* Предотвращает сжатие аватара */
+		flex-shrink: 0;
 	}
 
 	.avatar-current, .avatar-placeholder {
@@ -389,16 +373,13 @@
 		padding: 0;
 	}
 
-	.change-avatar-btn:hover {
-		transform: scale(1.15);
-	}
+
 
 	.change-avatar-btn img {
 		width: 16px;
 		height: 16px;
 	}
 
-	/* Стили для модального окна */
 	.avatar-modal-overlay {
 		position: fixed;
 		top: 0;
@@ -420,7 +401,7 @@
 		border: 2px solid #ffd369;
 		box-shadow: 0 0 40px rgba(255, 211, 105, 0.5);
 		width: 90%;
-		max-width: 600px;
+		max-width: 1000px;
 		color: #fff;
 		text-align: center;
 	}
@@ -433,7 +414,7 @@
 	.avatar-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-		gap: 1.5rem;
+		gap: 8px;
 		margin: 2rem 0;
 		max-height: 50vh;
 		padding-right: 10px;
@@ -442,7 +423,7 @@
 	.avatar-option {
 		cursor: pointer;
 		border: 3px solid transparent;
-		border-radius: 15px;
+		border-radius: 30px;
 		transition: all 0.2s ease;
 		padding: 5px;
 		background: rgba(255,255,255,0.05);
@@ -461,7 +442,7 @@
 
 	.avatar-option img {
 		width: 100%;
-		border-radius: 10px;
+		border-radius: 30px;
 		display: block;
 	}
 

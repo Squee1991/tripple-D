@@ -29,6 +29,7 @@ export const useGameStore = defineStore('game', () => {
 	const timer = ref(0);
 	const timerId = ref(null);
 	const personalBests = ref({ 1: 0, 2: 0, 3: 0 });
+	const totalCorrectAnswers = ref({ 1: 0, 2: 0, 3: 0 });
 	const userId = computed(() => authStore.uid);
 
 	const levelSettings = computed(() => {
@@ -61,20 +62,32 @@ export const useGameStore = defineStore('game', () => {
 	async function fetchRecord() {
 		if (!userId.value) {
 			personalBests.value = { 1: 0, 2: 0, 3: 0 };
+			totalCorrectAnswers.value = { 1: 0, 2: 0, 3: 0 };
 			return;
 		}
 		const userLeaderboardDocRef = doc(db, LEADERBOARD_COLLECTION, userId.value);
 		const docSnap = await getDoc(userLeaderboardDocRef);
 
-		if (docSnap.exists() && docSnap.data().streaks) {
-			const savedStreaks = docSnap.data().streaks;
-			personalBests.value = {
-				1: savedStreaks['1'] || 0,
-				2: savedStreaks['2'] || 0,
-				3: savedStreaks['3'] || 0,
-			};
+		if (docSnap.exists()) {
+			const data = docSnap.data();
+			if (data.streaks) {
+				personalBests.value = {
+					1: data.streaks['1'] || 0,
+					2: data.streaks['2'] || 0,
+					3: data.streaks['3'] || 0,
+				};
+			}
+			if (data.totalCorrect) {
+				totalCorrectAnswers.value = {
+					1: data.totalCorrect['1'] || 0,
+					2: data.totalCorrect['2'] || 0,
+					3: data.totalCorrect['3'] || 0,
+				};
+			}
+
 		} else {
 			personalBests.value = { 1: 0, 2: 0, 3: 0 };
+			totalCorrectAnswers.value = { 1: 0, 2: 0, 3: 0 };
 		}
 	}
 
@@ -88,6 +101,7 @@ export const useGameStore = defineStore('game', () => {
 				name: authStore.name,
 				avatar: authStore.avatar || '1.png',
 				streaks: personalBests.value,
+				totalCorrect: totalCorrectAnswers.value
 			},
 			{ merge: true },
 		);
@@ -159,11 +173,12 @@ export const useGameStore = defineStore('game', () => {
 		stopTimer();
 		if (isCorrect) {
 			sessionStreak.value++;
+			totalCorrectAnswers.value[difficulty.value]++;
 			const currentBest = personalBests.value[difficulty.value] || 0;
 			if (sessionStreak.value > currentBest) {
 				personalBests.value[difficulty.value] = sessionStreak.value;
-				saveRecord();
 			}
+			saveRecord();
 			startNewRound();
 		} else {
 			lives.value--;
@@ -209,6 +224,7 @@ export const useGameStore = defineStore('game', () => {
 		timer,
 		levelSettings,
 		userId,
+		totalCorrectAnswers,
 		loadWords,
 		fetchRecord,
 		selectGameSettings,

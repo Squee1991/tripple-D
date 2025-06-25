@@ -178,11 +178,11 @@
 				{id: 'vocabulary', url: 'vocabulary', valueKey: 'nav.sinonim'}
 			]
 		},
-		// {
-		// 	id: 'quests',
-		// 	url: 'quests',
-		// 	valueKey: 'nav.achieve'
-		// },
+		{
+			id: 'achieve',
+			url: 'achievmentsPage',
+			valueKey: 'nav.achieve'
+		},
 		{
 			id: 'about',
 			url: 'about',

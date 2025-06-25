@@ -25,9 +25,9 @@
 
 <script setup>
 	import {ref, computed} from 'vue'
-	import Daily from '../src/components/daily.vue'
-	import Weekly from '../src/components/weekly.vue'
-	import Special from '../src/components/special.vue'
+	import Daily from './daily.vue'
+	import Weekly from './weekly.vue'
+	import Special from './special.vue'
 
 	const activeTab = ref('daily')
 	const tabs = [

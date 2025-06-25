@@ -1,5 +1,5 @@
 import {defineStore} from "pinia";
-import {ref, computed} from 'vue' // <-- Импортируем computed
+import {ref, computed} from 'vue'
 import {
 	getAuth,
 	createUserWithEmailAndPassword,
@@ -15,7 +15,6 @@ import {
 	GoogleAuthProvider
 } from 'firebase/auth';
 import {doc, setDoc, getDoc, getFirestore, updateDoc, deleteDoc} from 'firebase/firestore';
-
 let authStateUnsubscribe = null;
 export const userAuthStore = defineStore('auth', () => {
 	const name = ref(null)
@@ -24,14 +23,14 @@ export const userAuthStore = defineStore('auth', () => {
 	const db = getFirestore();
 	const avatar = ref(null)
 	const uid = ref(null)
-	const availableAvatars = ref(['1.png', '2.png', '3.png', '4.png', '5.png',]);
+	const availableAvatars = ref([ '1.png', '2.png', '3.png', '4.png', '5.png', '6.png',  '12.png', '7.png', '8.png' , '9.png' , '10.png' , '11.png' , '13.png', '14.png']);
 
 	const getAvatarUrl = (fileName) => {
 		if (!fileName) return '';
 		try {
 			return new URL(`../assets/images/avatars/${fileName}`, import.meta.url).href;
 		} catch (e) {
-			return '';
+			console.error(`Ошибка URL для аватара: ${fileName}`, e); return '';
 		}
 	};
 
@@ -73,7 +72,7 @@ export const userAuthStore = defineStore('auth', () => {
 					email: result.user.email,
 					registeredAt: result.user.metadata.creationTime,
 					avatar: '1.png'
-				}, {merge: true});
+				}, { merge: true });
 			}
 
 			setUserData({
@@ -91,7 +90,7 @@ export const userAuthStore = defineStore('auth', () => {
 	const registerUser = async (userData) => {
 		const auth = getAuth()
 		const userCredential = await createUserWithEmailAndPassword(auth, userData.email, userData.password)
-		await updateProfile(userCredential.user, {displayName: userData.name})
+		await updateProfile(userCredential.user, { displayName: userData.name })
 		await sendEmailVerification(userCredential.user)
 
 		const defaultAvatar = '1.png';
@@ -113,11 +112,11 @@ export const userAuthStore = defineStore('auth', () => {
 	}
 
 
-	const loginUser = async ({email, password}) => {
+	const loginUser = async ({ email, password }) => {
 		const auth = getAuth()
 		const userCredential = await signInWithEmailAndPassword(auth, email, password)
 		if (!userCredential.user.emailVerified) {
-			throw {code: 'auth/email-not-verified'}
+			throw { code: 'auth/email-not-verified' }
 		}
 		const userDocRef = doc(db, 'users', userCredential.user.uid);
 		const userDoc = await getDoc(userDocRef);
@@ -190,7 +189,7 @@ export const userAuthStore = defineStore('auth', () => {
 		})
 	}
 
-	// fetchuser()
+	fetchuser()
 	return {
 		name,
 		email,
