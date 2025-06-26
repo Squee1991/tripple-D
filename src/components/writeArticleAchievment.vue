@@ -1,8 +1,8 @@
 <template>
-	<div v-for="group in achievementGroups" :key="group.title" class="achievement-group">
+	<div v-for="group in achievementGroup" :key="group.title" class="achievement-group">
 		<h2 class="group-title">{{ t(group.title) }}</h2>
 		<div class="achievements-list">
-			<div v-for="achievement in group.achievements" :key="achievement.id" class="achievement-card">
+			<div v-for="achievement in group.acvhievments" :key="achievement.id" class="achievement-card">
 				<div class="achievement-icon-wrapper">
 					<div class="achievement-icon">
 						<span class="icon-emoji">{{ achievement.icon }}</span>
@@ -16,8 +16,8 @@
 							:style="{ width: (achievement.currentProgress / achievement.targetProgress * 100) + '%' }"
 						></div>
 						<span class="progress-text-overlay">
-                             {{ achievement.currentProgress }} /{{ achievement.targetProgress }}
-						</span>
+                     {{ achievement.currentProgress }} / {{ achievement.targetProgress }}
+                  </span>
 					</div>
 					<p class="achievement-description">{{ t(achievement.description) }}</p>
 				</div>
@@ -27,31 +27,37 @@
 </template>
 
 <script setup>
-	import {ref, watch} from 'vue';
-	import {groupedEasyModeAchievements} from '../achieveGroup/marathon/easyModeAchievment.js';
-	import {useGameStore} from '../../store/marafonStore.js';
+	import {ref, watch, computed} from 'vue';
+	import {writeArticleGroupAchievment} from '../achieveGroup/article/writeArticle.js';
+	import {userlangStore} from "../../store/learningStore";
+	const { t } = useI18n()
+	const langStore = userlangStore();
+	const achievementGroup = ref(JSON.parse(JSON.stringify(writeArticleGroupAchievment)));
 
-	const {t} = useI18n()
-	const gameStore = useGameStore();
-	const achievementGroups = ref(groupedEasyModeAchievements);
-	const allAchievements = ref(achievementGroups.value.flatMap(g => g.achievements));
+	const derSuccessCount = computed(() => langStore.words.filter(word => word.article === 'der' && word.progress?.article === true).length);
+	const dieSuccessCount = computed(() => langStore.words.filter(word => word.article === 'die' && word.progress?.article === true).length);
+	const dasSuccessCount = computed(() => langStore.words.filter(word => word.article === 'das' && word.progress?.article === true).length);
 
-	watch(() => gameStore.totalCorrectAnswers ? gameStore.totalCorrectAnswers[1] : 0, (newTotal) => {
-		allAchievements.value.forEach(ach => {
-			if (ach.type === 'total') {
-				ach.currentProgress = Math.min(newTotal || 0, ach.targetProgress);
-			}
-		});
-	}, {immediate: true});
+	watch([derSuccessCount, dieSuccessCount, dasSuccessCount],
+		([newDerCount, newDieCount, newDasCount]) => {
+			achievementGroup.value.forEach(group => {
+				if (group.title.includes('der')) {
+					group.acvhievments.forEach(achievement => {
+						achievement.currentProgress = Math.min(newDerCount, achievement.targetProgress);
+					});
+				} else if (group.title.includes('die')) {
 
-	watch(() => gameStore.personalBests[1], (newBestStreak) => {
-		allAchievements.value.forEach(ach => {
-			if (ach.type === 'streak') {
-				ach.currentProgress = Math.min(newBestStreak || 0, ach.targetProgress);
-			}
-		});
-	}, {immediate: true});
+					group.acvhievments.forEach(achievement => {
+						achievement.currentProgress = Math.min(newDieCount, achievement.targetProgress);
+					});
+				} else if (group.title.includes('das')) {
+					group.acvhievments.forEach(achievement => {
+						achievement.currentProgress = Math.min(newDasCount, achievement.targetProgress);
+					});
+				}
+			});
 
+		}, {immediate: true});
 </script>
 
 <style scoped>
@@ -62,17 +68,17 @@
 
 	.group-title {
 		font-size: 1.5em;
-		color: #444;
+		color: #333;
 		margin-bottom: 15px;
 		padding-bottom: 5px;
 		border-bottom: 2px solid #eee;
+		font-weight: 600;
 	}
 
 	.achievements-list {
 		display: flex;
 		flex-direction: column;
 		gap: 15px;
-		font-family: Arial, sans-serif;
 	}
 
 	.achievement-card {
@@ -93,22 +99,27 @@
 		position: relative;
 		width: 80px;
 		height: 80px;
-		background: linear-gradient(135deg, #5EEB5B, #2E8B57);
+		background: linear-gradient(135deg, #6c757d, #343a40);
 		border-radius: 10px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		overflow: hidden;
 	}
 
 	.achievement-icon {
+		position: relative;
+		width: 100%;
+		height: 100%;
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 	}
 
 	.icon-emoji {
 		font-size: 45px;
-		filter: brightness(1.1);
+		filter: brightness(1.2);
 	}
 
 	.achievement-details {
@@ -116,16 +127,17 @@
 	}
 
 	.achievement-title {
-		font-size: 1.1em;
+		font-size: 20px;
 		color: #333;
+		margin: 0;
 		font-weight: 600;
-		margin-bottom: 8px;
 	}
 
 	.progress-bar-container {
 		width: 100%;
 		background-color: #e0e0e0;
 		border-radius: 10px;
+		overflow: hidden;
 		height: 25px;
 		margin-bottom: 10px;
 		position: relative;
@@ -133,7 +145,7 @@
 
 	.progress-bar {
 		height: 100%;
-		background: linear-gradient(90deg, #FDB813, #FFA500);
+		background: linear-gradient(90deg, #FFD700, #FFA500);
 		border-radius: 10px;
 		transition: width 0.5s ease-in-out;
 	}
@@ -144,8 +156,9 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 		color: #333;
-		font-size: 0.8em;
+		font-size: 14px;
 		font-weight: bold;
+		text-shadow: 0 0 2px rgba(255, 255, 255, 0.7);
 		white-space: nowrap;
 	}
 

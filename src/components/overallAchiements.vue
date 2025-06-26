@@ -27,7 +27,7 @@
 
 <script setup>
 	import { ref, watch } from 'vue'
-	import { overAchievment } from '../achieveGroup/overallAchievements.js'
+	import { overAchievment } from '../achieveGroup/overAllAchieve/overallAchievements.js'
 	import { userlangStore } from '../../store/learningStore.js'
 	const langStore = userlangStore()
 	const { t} = useI18n()
@@ -46,6 +46,8 @@
 			achievement.currentProgress = Math.min(newExp, achievement.targetProgress);
 		}
 	}, { immediate: true });
+
+
 
 	watch(() => langStore.learnedWords.length, (newLength) => {
 		const ach10 = achievements.value.find(a => a.id === 'learned10Words');
@@ -163,7 +165,7 @@
 	}
 
 	.achievement-description-overall {
-		font-size: 16px;
+		font-size: 15px;
 		color: #555;
 	}
 </style>

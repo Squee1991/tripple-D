@@ -1,6 +1,6 @@
 <template>
 	<div v-for="group in achievementGroups" :key="group.title" class="achievement-group">
-		<h2 class="group-title">{{ group.title }}</h2>
+		<h2 class="group-title">{{ t(group.title) }}</h2>
 		<div class="achievements-list">
 			<div v-for="achievement in group.achievements" :key="achievement.id" class="achievement-card">
 				<div class="achievement-icon-wrapper medium-mode">
@@ -9,7 +9,7 @@
 					</div>
 				</div>
 				<div class="achievement-details">
-					<h3 class="achievement-title">{{ achievement.name }}</h3>
+					<h3 class="achievement-title">{{ t(achievement.name) }}</h3>
 					<div class="progress-bar-container">
 						<div
 							class="progress-bar medium-progress"
@@ -19,7 +19,7 @@
                      {{ achievement.currentProgress }} / {{ achievement.targetProgress }}
                   </span>
 					</div>
-					<p class="achievement-description">{{ achievement.description }}</p>
+					<p class="achievement-description">{{ t(achievement.description) }}</p>
 				</div>
 			</div>
 		</div>
@@ -28,9 +28,9 @@
 
 <script setup>
 	import {ref, watch} from 'vue';
-	import {groupedNormalModeAchievements} from '../achieveGroup/normalModeAchievement.js';
+	import {groupedNormalModeAchievements} from '../achieveGroup/marathon/normalModeAchievement.js';
 	import {useGameStore} from '../../store/marafonStore.js';
-
+    const { t} = useI18n()
 	const gameStore = useGameStore();
 	const achievementGroups = ref(groupedNormalModeAchievements);
 	const allAchievements = ref(achievementGroups.value.flatMap(g => g.achievements));
@@ -42,7 +42,6 @@
 			}
 		});
 	}, {immediate: true});
-
 
 	watch(() => gameStore.personalBests[2], (newBestStreak) => {
 		allAchievements.value.forEach(ach => {
@@ -94,6 +93,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		background: linear-gradient(135deg, #e2dd11, #91bb1f);
 	}
 
 	.icon-emoji {
@@ -124,6 +124,7 @@
 		height: 100%;
 		border-radius: 10px;
 		transition: width 0.5s ease-in-out;
+		background: linear-gradient(135deg, #3C8CE7, #00EAFF);
 	}
 
 	.progress-text-overlay {
@@ -138,17 +139,9 @@
 	}
 
 	.achievement-description {
-		font-size: 0.9em;
+		font-size: 15px;
 		color: #555;
 		margin: 0;
 	}
 
-
-	.achievement-icon-wrapper.medium-mode {
-		background: linear-gradient(135deg, #3C8CE7, #00EAFF);
-	}
-
-	.progress-bar.medium-progress {
-		background: linear-gradient(90deg, #87CEEB, #00BFFF);
-	}
 </style>

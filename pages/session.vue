@@ -134,36 +134,39 @@
 	}
 
 	async function checkAnswer() {
-		if (!currentWord.value || isChecking.value) return
-		isChecking.value = true
-		let correct = ''
+		if (!currentWord.value || isChecking.value) return;
+		isChecking.value = true;
+		let correct = '';
 		switch (currentMode.value) {
 			case 'article':
 				correct = currentWord.value.article;
-				break
+				break;
 			case 'letters':
 				correct = currentWord.value.de;
-				break
+				break;
 			case 'wordArticle':
 				correct = `${currentWord.value.article} ${currentWord.value.de}`;
-				break
+				break;
 			case 'plural':
 				correct = currentWord.value.plural;
-				break
+				break;
 			case 'audio':
 				correct = currentWord.value.de;
-				break
+				break;
 		}
-		const ok = normalize(userInput.value) === normalize(correct)
-		result.value = ok ? 'correct' : 'wrong'
-
-		if (!ok && !wrongWords.value.includes(currentWord.value)) {
-			wrongWords.value.push(currentWord.value)
+		const ok = normalize(userInput.value) === normalize(correct);
+		result.value = ok ? 'correct' : 'wrong';
+		await store.markProgress(currentWord.value, currentMode.value, ok);
+		if (ok) {
+			await store.markAsLearned(currentWord.value, selectedModes.value);
+		} else {
+			if (!wrongWords.value.find(w => w.de === currentWord.value.de)) {
+				wrongWords.value.push(currentWord.value);
+			}
+			await store.addWrongAnswers(currentWord.value);
 		}
-		await store.markProgress(currentWord.value, currentMode.value, ok)
-		await store.saveToFirebase()
 
-		isChecking.value = false
+		isChecking.value = false;
 	}
 
 	function nextStep() {
@@ -173,7 +176,6 @@
 			store.currentModeIndex = 0
 			store.currentIndex++
 		}
-
 		userInput.value = ''
 		usedLetters.value = []
 		result.value = ''

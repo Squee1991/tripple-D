@@ -1,6 +1,6 @@
 <template>
 	<div class="achievements-list">
-		<div v-for="achievement in achievements" :key="achievement.threshold" class="achievement-card">
+		<div v-for="achievement in achievements" :key="achievement.id" class="achievement-card">
 			<div class="achievement-icon-wrapper">
 				<div class="achievement-icon">
 					<span class="icon-emoji">{{ achievement.icon }}</span>
@@ -8,40 +8,44 @@
 			</div>
 			<div class="achievement-details">
 				<div class="achievement-header">
-					<h3 class="achievement-title">{{ t(achievement.title) }}</h3>
+					<h3 class="achievement-title">{{ t(achievement.name) }}</h3>
 					<span class="achievement-progress-text">
-                  {{ guessWordStore.guessedWords.length >= achievement.threshold ? '1/1' : '0/1' }}
+                  {{ achievement.currentProgress >= achievement.targetProgress ? '1/1' : '0/1' }}
                </span>
 				</div>
 				<div class="progress-bar-container">
 					<div
 						class="progress-bar"
-						:style="{ width: calculateProgressPercentage(guessWordStore.guessedWords.length, achievement.threshold) + '%' }"
+						:style="{ width: (achievement.currentProgress / achievement.targetProgress * 100) + '%' }"
 					></div>
 					<span class="progress-text-overlay">
-                  {{ Math.min(guessWordStore.guessedWords.length, achievement.threshold) }} / {{ achievement.threshold }}
+                  {{ achievement.currentProgress }} / {{ achievement.targetProgress }}
                </span>
 				</div>
-				<p class="achievement-description">
-					{{ t(achievement.description) }}
-				</p>
+				<p class="achievement-description">{{ t(achievement.description) }}</p>
 			</div>
 		</div>
 	</div>
 </template>
 
 <script setup>
-	import {useGuessWordStore} from '../../store/guesStore.js';
-	import {guessAchievment} from '../achieveGroup/guessAchieve/guessAchievments.js';
+	import {ref, computed, watch} from 'vue';
+	import {listenAchieveGroup} from '../achieveGroup/listen/listen.js';
+	import {userlangStore} from '../../store/learningStore.js'
+	const langStore = userlangStore()
+	const achievements = ref(listenAchieveGroup);
+    const { t } = useI18n()
+	const audioWordComputed = computed(() => {
+		return langStore.words.filter(word => word.progress?.audio === true).length
+	})
 
-    const { t} = useI18n()
-	const guessWordStore = useGuessWordStore();
-	const achievements = guessAchievment;
-	const calculateProgressPercentage = (current, target) => {
-		if (target === 0) return 0;
-		const progress = (current / target) * 100;
-		return Math.min(progress, 100);
-	};
+	watch(audioWordComputed, (newCount) => {
+		achievements.value.forEach(achievement => {
+			achievement.currentProgress = Math.min(newCount, achievement.targetProgress)
+		})
+
+	}, {immediate: true})
+
 </script>
 
 <style scoped>
@@ -148,6 +152,6 @@
 	.achievement-description {
 		font-size: 15px;
 		color: #555;
-		margin: 0;
+
 	}
 </style>

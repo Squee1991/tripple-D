@@ -25,7 +25,7 @@
     <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="50">
+          <list size="55">
             <item index="0" class="java.lang.String" itemvalue="nobr" />
             <item index="1" class="java.lang.String" itemvalue="noembed" />
             <item index="2" class="java.lang.String" itemvalue="comment" />
@@ -76,6 +76,11 @@
             <item index="47" class="java.lang.String" itemvalue="hardmodeachieve" />
             <item index="48" class="java.lang.String" itemvalue="specialachievments" />
             <item index="49" class="java.lang.String" itemvalue="clientonly" />
+            <item index="50" class="java.lang.String" itemvalue="writearticle" />
+            <item index="51" class="java.lang.String" itemvalue="wordsfromletters" />
+            <item index="52" class="java.lang.String" itemvalue="wordsplusarticle" />
+            <item index="53" class="java.lang.String" itemvalue="plural" />
+            <item index="54" class="java.lang.String" itemvalue="listen" />
           </list>
         </value>
       </option>

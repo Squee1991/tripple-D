@@ -3,7 +3,7 @@ import { ref, computed, watch } from 'vue'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 import { getFirestore, doc, setDoc, getDoc, getDocs, collection, query, orderBy } from 'firebase/firestore'
 import { userAuthStore } from './authStore.js'
-import { guessAchievment } from '../src/achieveGroup/guessAchievments.js';
+import { guessAchievment } from '../src/achieveGroup/guessAchieve/guessAchievments.js';
 import { useAchievementProgress } from '../src/composables/guestAchievmentProgress.js'
 
 async function getUser() {

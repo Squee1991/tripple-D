@@ -1,6 +1,6 @@
 <template>
 	<div v-for="group in achievementGroups" :key="group.title" class="achievement-group">
-		<h2 class="group-title">{{ group.title }}</h2>
+		<h2 class="group-title">{{ t(group.title) }}</h2>
 		<div class="achievements-list">
 			<div v-for="achievement in group.achievements" :key="achievement.id" class="achievement-card">
 				<div class="achievement-icon-wrapper special-mode">
@@ -9,7 +9,7 @@
 					</div>
 				</div>
 				<div class="achievement-details">
-					<h3 class="achievement-title">{{ achievement.name }}</h3>
+					<h3 class="achievement-title">{{ t(achievement.name) }}</h3>
 					<div class="progress-bar-container">
 						<div
 							class="progress-bar special-progress"
@@ -19,7 +19,7 @@
                      {{ achievement.currentProgress }} / {{ achievement.targetProgress }}
                   </span>
 					</div>
-					<p class="achievement-description">{{ achievement.description }}</p>
+					<p class="achievement-description">{{ t(achievement.description) }}</p>
 				</div>
 			</div>
 		</div>
@@ -28,15 +28,14 @@
 
 <script setup>
 	import {ref, watch, computed, onMounted} from 'vue';
-	import {cpecialGroupAchievment} from '../achieveGroup/specialAchievment.js';
+	import {cpecialGroupAchievment} from '../achieveGroup/specialAchieve/specialAchievment.js';
 	import {useGameStore} from '../../store/marafonStore.js';
 	import {userlangStore} from '../../store/learningStore.js';
 	import {userAuthStore} from '../../store/authStore.js';
-
+    const { t} = useI18n()
 	const gameStore = useGameStore();
 	const learningStore = userlangStore();
 	const authStore = userAuthStore();
-
 	const achievementGroups = ref(cpecialGroupAchievment);
 	const allAchievements = ref(achievementGroups.value.flatMap(g => g.achievements));
 
@@ -45,7 +44,6 @@
 		if (!totals) return 0;
 		return (totals[1] || 0) + (totals[2] || 0) + (totals[3] || 0);
 	});
-
 
 	watch(grandTotalCorrect, (newGrandTotal) => {
 		const ach = allAchievements.value.find(a => a.id === 'totalArticles1000');

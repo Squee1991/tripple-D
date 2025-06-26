@@ -13,7 +13,7 @@ export const userlangStore = defineStore('learning', () => {
 	const currentIndex = ref(0)          // тут индекс текущего слова в сессии
 	const currentModeIndex = ref(0)      // тут индекс текущего способа обучения
 	const exp = ref(0)                   // тут опыт
-	const isLeveling = ref(1)            // тут уровень
+	const isLeveling = ref(0)            // тут уровень
 
 	const topicStats = computed(() => {
 		const stats = {}
@@ -115,13 +115,14 @@ export const userlangStore = defineStore('learning', () => {
 		}
 	}
 
-
 	const addWrongAnswers = async (word) => {
-		if (!wrongAnswers.value.find(w => w.de === word.de)) {
-			wrongAnswers.value.push({ ...word })
-			await saveToFirebase()
+		if (!word || !word.de) return;
+		const isAlreadyInWrong = wrongAnswers.value.find(w => w.de === word.de);
+		if (!isAlreadyInWrong) {
+			wrongAnswers.value.push({ ...word });
+			await saveToFirebase();
 		}
-	}
+	};
 
 	const clearProgress = async () => {
 		words.value.forEach(word => {
@@ -158,7 +159,7 @@ export const userlangStore = defineStore('learning', () => {
 					selectedWords.value = data.selectedWords || []
 					points.value = data.points || 0
 					exp.value = data.exp || 0
-					isLeveling.value = data.isLeveling || 1
+					isLeveling.value = data.isLeveling || 0
 					currentIndex.value = data.currentIndex || 0
 					currentModeIndex.value = data.currentModeIndex || 0
 				}
