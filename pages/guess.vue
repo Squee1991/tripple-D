@@ -1,6 +1,5 @@
 <template>
 	<div class="guess">
-
 		<div class="guess__inner">
 			<div v-if="!isStarted" class="guess__start-screen">
 				<button class="guess__submit" @click="startGame">Начать игру</button>

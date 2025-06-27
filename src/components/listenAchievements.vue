@@ -1,28 +1,31 @@
 <template>
-	<div class="achievements-list">
-		<div v-for="achievement in achievements" :key="achievement.id" class="achievement-card">
-			<div class="achievement-icon-wrapper">
-				<div class="achievement-icon">
-					<span class="icon-emoji">{{ achievement.icon }}</span>
+	<div v-if="achievements" v-for="group in achievements" :key="group.title" class="achievement-group">
+		<div class="group-header">
+			<h2 class="group-title">{{ t(group.title) }}</h2>
+			<span :class="['group-stats', { 'all-completed': getCompletedCount(group) === group.achievements.length }]">
+					{{ getCompletedCount(group) }} / {{ group.achievements.length }}
+				</span>
+		</div>
+		<div class="achievements-list">
+			<div v-for="achievement in group.achievements" :key="achievement.id" class="achievement-card">
+				<div class="achievement-icon-wrapper">
+					<div class="achievement-icon">
+						<span class="icon-emoji">{{ achievement.icon }}</span>
+					</div>
 				</div>
-			</div>
-			<div class="achievement-details">
-				<div class="achievement-header">
+				<div class="achievement-details">
 					<h3 class="achievement-title">{{ t(achievement.name) }}</h3>
-					<span class="achievement-progress-text">
-                  {{ achievement.currentProgress >= achievement.targetProgress ? '1/1' : '0/1' }}
-               </span>
+					<div class="progress-bar-container">
+						<div
+							class="progress-bar"
+							:style="{ width: (achievement.currentProgress / achievement.targetProgress * 100) + '%' }"
+						></div>
+						<span class="progress-text-overlay">
+                     {{ achievement.currentProgress }} / {{ achievement.targetProgress }}
+                  </span>
+					</div>
+					<p class="achievement-description">{{ t(achievement.description) }}</p>
 				</div>
-				<div class="progress-bar-container">
-					<div
-						class="progress-bar"
-						:style="{ width: (achievement.currentProgress / achievement.targetProgress * 100) + '%' }"
-					></div>
-					<span class="progress-text-overlay">
-                  {{ achievement.currentProgress }} / {{ achievement.targetProgress }}
-               </span>
-				</div>
-				<p class="achievement-description">{{ t(achievement.description) }}</p>
 			</div>
 		</div>
 	</div>
@@ -30,18 +33,26 @@
 
 <script setup>
 	import {ref, computed, watch} from 'vue';
-	import {listenAchieveGroup} from '../achieveGroup/listen/listen.js';
+	import {listenAchieveGroup} from '../achieveGroup/article/listen.js';
 	import {userlangStore} from '../../store/learningStore.js'
+
 	const langStore = userlangStore()
 	const achievements = ref(listenAchieveGroup);
-    const { t } = useI18n()
+	const {t} = useI18n()
 	const audioWordComputed = computed(() => {
 		return langStore.words.filter(word => word.progress?.audio === true).length
 	})
 
+	const getCompletedCount = (group) => {
+		if (!group || !group.achievements) return
+		return group.achievements.filter(ach => ach.currentProgress >= ach.targetProgress).length
+	}
+
 	watch(audioWordComputed, (newCount) => {
-		achievements.value.forEach(achievement => {
-			achievement.currentProgress = Math.min(newCount, achievement.targetProgress)
+		achievements.value.forEach(group => {
+			group.achievements.forEach(ach => {
+				ach.currentProgress = Math.min(newCount, ach.targetProgress)
+			})
 		})
 
 	}, {immediate: true})
@@ -79,6 +90,38 @@
 		justify-content: center;
 		align-items: center;
 		overflow: hidden;
+	}
+
+	.group-header {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+		padding-bottom: 10px;
+		margin-bottom: 20px;
+	}
+
+	.group-stats {
+		display: inline-block;
+		padding: 6px 14px;
+		font-size: 0.9em;
+		font-weight: bold;
+		color: #fff;
+		background: linear-gradient(135deg, #007bff, #0056b3);
+		border-radius: 20px;
+		box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+		transition: all 0.3s ease;
+		white-space: nowrap;
+	}
+
+	.group-stats.all-completed {
+		background: linear-gradient(135deg, #28a745, #218838);
+		box-shadow: 0 2px 6px rgba(40, 167, 69, 0.4);
+	}
+
+	.group-title {
+		font-size: 1.5em;
+		color: #444;
+		margin: 0;
 	}
 
 	.achievement-icon {

@@ -1,7 +1,7 @@
 export const writeArticleGroupAchievment = [
 	{
 		title: "articleCategory.daslabel",
-		acvhievments: [
+		achievements: [
 			{
 				id: "dasTarget10",
 				name: "articleCategory.dasFirstlabel",
@@ -38,7 +38,7 @@ export const writeArticleGroupAchievment = [
 	},
 	{
 		title: "articleCategory.derLabel",
-		acvhievments: [
+		achievements: [
 			{
 				id: "derTarget10",
 				name: "articleCategory.derFirstLabel",
@@ -75,7 +75,7 @@ export const writeArticleGroupAchievment = [
 	},
 	{
 		title: "articleCategory.dieLabel",
-		acvhievments: [
+		achievements: [
 			{
 				id: "dieTarget10",
 				name: "articleCategory.dieFirstLabel",

@@ -108,6 +108,7 @@
 		const spell = selectedSpell.value
 		if (store.points >= spell.price && !isOwned(spell.key)) {
 			store.points -= spell.price
+			store.articlesSpentForAchievement += spell.price
 			ownedSpells.value.push(spell.key)
 			store.saveToFirebase()
 		}

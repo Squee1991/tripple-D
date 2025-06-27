@@ -45,6 +45,7 @@
 		"FifthPluralText": "Правильно образовано 250 форм множественного числа."
 	},
 	"listenCategory": {
+		"listenLabel": "Аудирование",
 		"FirstListenLabel": "Начинающий слушатель",
 		"FirstListenText": "Правильно расслышано и записано 10 слов.",
 		"SecondListenLabel": "Чуткое Ухо",
@@ -109,7 +110,7 @@
 		"audio": "Аудирование",
 		"special": "Особые достижения"
 	},
-	"cpecialCategory": {
+	"specialCategory": {
 		"specialLabel": "Лидерство в рейтинге",
 		"specialFirstLabel": "Легкий чемпион",
 		"specialFirstText": "Займите первое место в рейтинге в легком режиме.",
@@ -120,22 +121,40 @@
 		"generalLabel": "Общие достижения",
 		"generalFirstLabel": "Тысяча артиклей",
 		"generalFirstText": "Соберите 1000 правильно угаданных артиклей во всех режимах.",
-		"generalSecondLabel": "Двадцатый уровень",
-		"generalSecondText": "Достигните 20 уровня."
+		"generalSecondLabel": "Выше неба",
+		"generalSecondText": "достигните 20 уровня.",
+		"generalThirdLabel": "Имей сто артиклюсов... и друзей тоже",
+		"generalThirdText": "Получите 100 артиклюсов.",
+		"generalFouthLabel": "Ветеран",
+		"generalFouthText": "Целый год на сайте! Вы — настоящая легенда нашего сообщества.",
+		"generalFivethLabel": "Не прерывный поток",
+		"generalFivethText": "Достигни стрика 150 в сложном режиме, не давая таймеру упасть ниже 2 секунд.",
+		"generalSexthLabel": "Исчерпать запасы",
+		"generalSexthText": "Потратьте 500 артиклюсов."
 	},
 	"generalCategory": {
+		"generaLabel": "Общие достижения",
+		"lastBreahtlabel": "На последнем дыхании",
+		"lastBreathText": "Идея 1 жизнь в Марафоне отгадать 20 артиклей подряд ( легкий режим )",
+		"monthLabel": "Постоялец",
+		"moonthText": "Вы с нами уже целый месяц!",
+		"marginLabel": "Без права на ошибку",
+		"marginText": "Сделай стрик в легком режиме из 10 слов имея 5 жизней",
+		"edgeLabel": "На грани",
+		"edgeText": "Сделать стрик 50 слов в сложном режиме. Таймер не должен опускаться ниже 2 сек.",
 		"firstArtiklusLabel": "Первая валюта",
 		"firstArtiklusText": "получите первый Артиклюс!",
 		"horizontLabel": "Новый Горизонт",
 		"horizontText": "Накопите опыт для достижения 2-го уровня.",
 		"polyglotLabel": "Полиглот-Начинающий",
-		"polyglotText": "Изучите полностью 10 новых слов.",
+		"polyglotText": "Изучите полностью 50 новых слов.",
 		"magisterLabel": "Магистр Слов",
 		"magisterText": "Достигните мастерства, изучив 100 слов.",
 		"mistakesLabel": "Ошибки мне не помеха!",
 		"mistakesText": "Каждая из них — это шаг к знанию!"
 	},
 	"guessCategory": {
+		"guessLabel": "Отгадать слово",
 		"guessFirstLabel": "Подмастерье Слов",
 		"guessFirstText": "Отгадайте 20 слов.",
 		"guessSecondLabel": "Лексический Разведчик",
@@ -226,7 +245,11 @@
 		"notData": "Пока нет данных для этой дисциплины. Будьте первым!",
 		"notAuth": "Войдите в аккаунт, чтобы установить свой рекорд и опубликовать его.",
 		"emptydifficult": "В рейтинге на этом уровне сложности пока никого нет. Будь первым!",
-		"toRanked": "Попасть в таблицу рейтинга"
+		"toRanked": "Попасть в таблицу рейтинга",
+		"difficulty": "Сложность марафона",
+		"myStats": "Мой стрик",
+		"maxStreak": "Максимальный стрик",
+		"wordsGuessed": "Слов угадано"
 	},
 	"modal": {
 		"textRanked": "Чтобы попасть в рейтинг нужно отгадать хотя бы 1 слово",

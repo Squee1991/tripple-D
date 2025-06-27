@@ -1,7 +1,7 @@
 export const assembleWordGroupAchievement = [
 	{
 		title: "wordLettersCategory.wordLettersLabel",
-		acvhievments: [
+		achievements: [
 			{
 				id: "assemble5Words",
 				name: "wordLettersCategory.firstLabel",

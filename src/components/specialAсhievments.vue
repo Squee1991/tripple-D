@@ -1,6 +1,11 @@
 <template>
 	<div v-for="group in achievementGroups" :key="group.title" class="achievement-group">
-		<h2 class="group-title">{{ t(group.title) }}</h2>
+		<div class="group-header">
+			<h2 class="group-title">{{ t(group.title) }}</h2>
+			<span :class="['group-stats', { 'all-completed': getCompletedCount(group) === group.achievements.length }]">
+					{{ getCompletedCount(group) }} / {{ group.achievements.length }}
+				</span>
+		</div>
 		<div class="achievements-list">
 			<div v-for="achievement in group.achievements" :key="achievement.id" class="achievement-card">
 				<div class="achievement-icon-wrapper special-mode">
@@ -32,7 +37,7 @@
 	import {useGameStore} from '../../store/marafonStore.js';
 	import {userlangStore} from '../../store/learningStore.js';
 	import {userAuthStore} from '../../store/authStore.js';
-    const { t} = useI18n()
+	const {t} = useI18n()
 	const gameStore = useGameStore();
 	const learningStore = userlangStore();
 	const authStore = userAuthStore();
@@ -44,6 +49,11 @@
 		if (!totals) return 0;
 		return (totals[1] || 0) + (totals[2] || 0) + (totals[3] || 0);
 	});
+
+	const getCompletedCount = (group) => {
+		if (!group || !group.achievements) return
+		return group.achievements.filter(ach => ach.currentProgress >= ach.targetProgress).length
+	}
 
 	watch(grandTotalCorrect, (newGrandTotal) => {
 		const ach = allAchievements.value.find(a => a.id === 'totalArticles1000');
@@ -59,16 +69,29 @@
 		}
 	}, {immediate: true});
 
+
+	watch(() => learningStore.totalEarnedPoints, (newPoints) => {
+		const ach = allAchievements.value.find(a => a.id === 'Hunderd');
+		if (ach) {
+			ach.currentProgress = Math.min(newPoints, ach.targetProgress);
+		}
+	}, {immediate: true});
+
+	watch(() => learningStore.articlesSpentForAchievement, (newSpentArticles) => {
+		const achievement = allAchievements.value.find(a => a.id === 'Articlus');
+		if (achievement) {
+			achievement.currentProgress = Math.min(newSpentArticles, achievement.targetProgress);
+		}
+	}, { immediate: true });
+
+
 	async function checkLeaderboardAchievements() {
 		if (!authStore.uid) return;
-
 		const levels = [1, 2, 3];
 		const ids = ['leaderboardEasy', 'leaderboardNormal', 'leaderboardHard'];
-
 		for (let i = 0; i < levels.length; i++) {
 			const level = levels[i];
 			const achId = ids[i];
-
 			const leaderboard = await gameStore.loadMarathonLeaderboard(level);
 			const ach = allAchievements.value.find(a => a.id === achId);
 
@@ -79,6 +102,26 @@
 			}
 		}
 	}
+
+	watch(() => gameStore.onTheEdgeProgress, (newProgress) => {
+		const ach = allAchievements.value.find(a => a.id === 'Impuls');
+		if (ach) {
+			ach.currentProgress = newProgress;
+		}
+	}, { immediate: true });
+
+	watch(() => authStore.registeredAt, (registrationDate) => {
+		if (registrationDate) {
+			const ach = allAchievements.value.find(a => a.id === "OneYearVeteran")
+			if (ach) {
+				const registeredDate = new Date(registrationDate)
+				const currentDate = new Date()
+				const diffTime = Math.abs(currentDate - registeredDate)
+				const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24))
+				ach.currentProgress = Math.min(diffDays , ach.targetProgress)
+			}
+		}
+	}, { immediate: true})
 
 	onMounted(() => {
 		checkLeaderboardAchievements();
@@ -91,12 +134,36 @@
 		margin-bottom: 30px;
 	}
 
+	.group-header {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+		padding-bottom: 10px;
+		margin-bottom: 20px;
+	}
+
+	.group-stats {
+		display: inline-block;
+		padding: 6px 14px;
+		font-size: 0.9em;
+		font-weight: bold;
+		color: #fff;
+		background: linear-gradient(135deg, #007bff, #0056b3);
+		border-radius: 20px;
+		box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+		transition: all 0.3s ease;
+		white-space: nowrap;
+	}
+
+	.group-stats.all-completed {
+		background: linear-gradient(135deg, #28a745, #218838);
+		box-shadow: 0 2px 6px rgba(40, 167, 69, 0.4);
+	}
+
 	.group-title {
 		font-size: 1.5em;
 		color: #444;
-		margin-bottom: 15px;
-		padding-bottom: 5px;
-		border-bottom: 2px solid #eee;
+		margin: 0;
 	}
 
 	.achievements-list {
@@ -150,6 +217,7 @@
 		height: 25px;
 		margin-bottom: 10px;
 		position: relative;
+		overflow: hidden;
 	}
 
 	.progress-bar {

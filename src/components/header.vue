@@ -55,7 +55,7 @@
 			</div>
 			<div class="articlus__wrapper">
 				<img class="articlus" src="../../assets/images/articlus.png" alt="">
-				<div class="articlus__counter">7</div>
+				<div class="articlus__counter">{{ learningStore.points }}</div>
 			</div>
 			<div class="header-nav__lang">
 				<LanguageSelector/>
@@ -103,9 +103,10 @@
 	import {useI18n} from 'vue-i18n'
 
 	const {t} = useI18n()
-	import {userAuthStore} from '../../store/authStore'
+	import {userAuthStore} from '../../store/authStore.js'
+	import {userlangStore} from '../../store/learningStore.js'
 	import {useBreakPointsStore} from '../../store/breakPointsStore.js'
-
+    const learningStore = userlangStore()
 	const bp = useBreakPointsStore()
 	import SignIn from '../components/logIn.vue'
 	import LanguageSelector from '../components/langSwitcher.vue'
@@ -316,14 +317,14 @@
 		/*background: linear-gradient(90deg, #366cff 60%, #4c88ff 100%);*/
 		background: #a2a6bf;
 		/*background: linear-gradient(90deg, #36b9ff 60%, #67c7d8 100%);*/
-		color: #fff;
+		color: black;
 		border-radius: 14px 30px 14px 30px / 30px 14px 30px 14px;
 		box-shadow: 0 2px 8px 0 #15235e44;
 		cursor: pointer;
 		font-weight: 700;
 		font-size: 17px;
 		letter-spacing: 0.06em;
-		text-shadow: 0 1px 2px #26358580;
+		/*text-shadow: 0 1px 2px #26358580;*/
 		transition: transform 0.12s, box-shadow 0.12s, background 0.12s;
 		margin-bottom: 0;
 		margin-right: 15px;

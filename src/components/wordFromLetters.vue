@@ -1,8 +1,13 @@
 <template>
 	<div v-for="group in achievementsData" :key="group.title" class="achievement-group">
-		<h2 class="group-title">{{ t(group.title) }}</h2>
+		<div class="group-header">
+			<h2 class="group-title">{{ t(group.title) }}</h2>
+			<span :class="['group-stats', { 'all-completed': getCompletedCount(group) === group.achievements.length }]">
+					{{ getCompletedCount(group) }} / {{ group.achievements.length }}
+				</span>
+		</div>
 		<div class="achievements-list">
-			<div v-for="achievement in group.acvhievments" :key="achievement.id" class="achievement-card">
+			<div v-for="achievement in group.achievements" :key="achievement.id" class="achievement-card">
 				<div class="achievement-icon-wrapper">
 					<div class="achievement-icon">
 						<span class="icon-emoji">{{ achievement.icon }}</span>
@@ -28,7 +33,7 @@
 
 <script setup>
 	import { ref, watch , computed } from 'vue';
-	import { assembleWordGroupAchievement } from '../achieveGroup/wordsFromLetters/wordsFromLetters.js';
+	import { assembleWordGroupAchievement } from '../achieveGroup/article/wordsFromLetters.js';
 	import {userlangStore} from "../../store/learningStore";
 	const achievementsData = ref(assembleWordGroupAchievement);
 	const langStore = userlangStore()
@@ -37,9 +42,14 @@
 		return langStore.words.filter(word => word.progress?.letters === true).length
 	})
 
+	const getCompletedCount = (group) => {
+		if (!group || !group.achievements) return;
+		return group.achievements.filter(ach => ach.currentProgress >= ach.targetProgress).length
+	}
+
 	watch(wordLetterComputed, (newCount) => {
 		achievementsData.value.forEach(achievement => {
-			achievement.acvhievments.forEach(count => {
+			achievement.achievements.forEach(count => {
 				count.currentProgress = Math.min(newCount , count.targetProgress )
 			})
 		})
@@ -53,12 +63,36 @@
 		margin-bottom: 30px;
 	}
 
+	.group-header {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+		padding-bottom: 10px;
+		margin-bottom: 20px;
+	}
+
+	.group-stats {
+		display: inline-block;
+		padding: 6px 14px;
+		font-size: 0.9em;
+		font-weight: bold;
+		color: #fff;
+		background: linear-gradient(135deg, #007bff, #0056b3);
+		border-radius: 20px;
+		box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+		transition: all 0.3s ease;
+		white-space: nowrap;
+	}
+
+	.group-stats.all-completed {
+		background: linear-gradient(135deg, #28a745, #218838);
+		box-shadow: 0 2px 6px rgba(40, 167, 69, 0.4);
+	}
+
 	.group-title {
 		font-size: 1.5em;
 		color: #444;
-		margin-bottom: 15px;
-		padding-bottom: 5px;
-		border-bottom: 2px solid #eee;
+		margin: 0;
 	}
 
 	.achievements-list {

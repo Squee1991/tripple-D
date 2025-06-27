@@ -28,10 +28,13 @@ export const useGameStore = defineStore('game', () => {
 	const sessionStreak = ref(0);
 	const timer = ref(0);
 	const timerId = ref(null);
+	const lastChanceProgress = ref(0);
+	const marginForErrorProgress = ref(0);
+	const onTheEdgeProgress = ref(0);
+	const fastAnswerStreak = ref(0);
 	const personalBests = ref({ 1: 0, 2: 0, 3: 0 });
 	const totalCorrectAnswers = ref({ 1: 0, 2: 0, 3: 0 });
 	const userId = computed(() => authStore.uid);
-
 	const levelSettings = computed(() => {
 		const settings = {
 			1: { lives: 5, timer: null },
@@ -63,11 +66,14 @@ export const useGameStore = defineStore('game', () => {
 		if (!userId.value) {
 			personalBests.value = { 1: 0, 2: 0, 3: 0 };
 			totalCorrectAnswers.value = { 1: 0, 2: 0, 3: 0 };
+			lastChanceProgress.value = 0;
+			marginForErrorProgress.value = 0;
+			onTheEdgeProgress.value = 0;
 			return;
 		}
+
 		const userLeaderboardDocRef = doc(db, LEADERBOARD_COLLECTION, userId.value);
 		const docSnap = await getDoc(userLeaderboardDocRef);
-
 		if (docSnap.exists()) {
 			const data = docSnap.data();
 			if (data.streaks) {
@@ -84,16 +90,20 @@ export const useGameStore = defineStore('game', () => {
 					3: data.totalCorrect['3'] || 0,
 				};
 			}
-
+			lastChanceProgress.value = data.lastChanceProgress || 0;
+			marginForErrorProgress.value = data.marginForErrorProgress || 0;
+			onTheEdgeProgress.value = data.onTheEdgeProgress || 0;
 		} else {
 			personalBests.value = { 1: 0, 2: 0, 3: 0 };
 			totalCorrectAnswers.value = { 1: 0, 2: 0, 3: 0 };
+			lastChanceProgress.value = 0;
+			marginForErrorProgress.value = 0;
+			onTheEdgeProgress.value = 0;
 		}
 	}
 
 	async function saveRecord() {
 		if (!userId.value || !authStore.name) return;
-
 		const userLeaderboardDocRef = doc(db, LEADERBOARD_COLLECTION, userId.value);
 		await setDoc(
 			userLeaderboardDocRef,
@@ -101,7 +111,10 @@ export const useGameStore = defineStore('game', () => {
 				name: authStore.name,
 				avatar: authStore.avatar || '1.png',
 				streaks: personalBests.value,
-				totalCorrect: totalCorrectAnswers.value
+				totalCorrect: totalCorrectAnswers.value,
+				lastChanceProgress: lastChanceProgress.value,
+				marginForErrorProgress: marginForErrorProgress.value,
+				onTheEdgeProgress: onTheEdgeProgress.value
 			},
 			{ merge: true },
 		);
@@ -115,9 +128,7 @@ export const useGameStore = defineStore('game', () => {
 			where(`streaks.${level}`, '>', 0),
 			orderBy(`streaks.${level}`, 'desc')
 		);
-
 		const querySnapshot = await getDocs(q);
-
 		const leaderboard = [];
 		querySnapshot.forEach(doc => {
 			const data = doc.data();
@@ -136,11 +147,7 @@ export const useGameStore = defineStore('game', () => {
 			fetchRecord();
 		} else {
 			resetGameState();
-			personalBests.value = {
-				1: 0,
-				2: 0,
-				3: 0
-			};
+			personalBests.value = { 1: 0, 2: 0, 3: 0 };
 		}
 	}, { immediate: true });
 
@@ -148,6 +155,7 @@ export const useGameStore = defineStore('game', () => {
 		difficulty.value = level;
 		lives.value = levelSettings.value.lives;
 		sessionStreak.value = 0;
+		fastAnswerStreak.value = 0;
 		gameReady.value = true;
 	}
 
@@ -170,19 +178,44 @@ export const useGameStore = defineStore('game', () => {
 	}
 
 	function submitAnswer(isCorrect) {
+		const timeLeft = timer.value;
 		stopTimer();
+
 		if (isCorrect) {
 			sessionStreak.value++;
 			totalCorrectAnswers.value[difficulty.value]++;
-			const currentBest = personalBests.value[difficulty.value] || 0;
-			if (sessionStreak.value > currentBest) {
+			if (sessionStreak.value > (personalBests.value[difficulty.value] || 0)) {
 				personalBests.value[difficulty.value] = sessionStreak.value;
 			}
-			saveRecord();
-			startNewRound();
 		} else {
 			lives.value--;
 			sessionStreak.value = 0;
+		}
+
+		if (difficulty.value === 1 && lives.value === 1) {
+			if (sessionStreak.value > lastChanceProgress.value) {
+				lastChanceProgress.value = Math.min(sessionStreak.value, 10);
+			}
+		}
+		if (difficulty.value === 1 && lives.value === 5) {
+			if (sessionStreak.value > marginForErrorProgress.value) {
+				marginForErrorProgress.value = Math.min(sessionStreak.value, 10);
+			}
+		}
+		if (isCorrect && difficulty.value === 3 && timeLeft >= 2) {
+			fastAnswerStreak.value++;
+		} else {
+			fastAnswerStreak.value = 0;
+		}
+		if (fastAnswerStreak.value > onTheEdgeProgress.value) {
+			onTheEdgeProgress.value = Math.min(fastAnswerStreak.value, 10);
+		}
+
+		if (isCorrect) {
+			saveRecord();
+			startNewRound();
+		} else {
+			saveRecord();
 			if (lives.value <= 0) {
 				endGame();
 			} else {
@@ -225,6 +258,9 @@ export const useGameStore = defineStore('game', () => {
 		levelSettings,
 		userId,
 		totalCorrectAnswers,
+		lastChanceProgress,
+		marginForErrorProgress,
+		onTheEdgeProgress,
 		loadWords,
 		fetchRecord,
 		selectGameSettings,

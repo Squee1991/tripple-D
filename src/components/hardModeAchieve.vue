@@ -1,6 +1,11 @@
 <template>
 	<div v-for="group in achievementGroups" :key="group.title" class="achievement-group">
-		<h2 class="group-title">{{ t(group.title) }}</h2>
+		<div class="group-header">
+			<h2 class="group-title">{{ t(group.title) }}</h2>
+			<span :class="['group-stats', { 'all-completed': getCompletedCount(group) === group.achievements.length }]">
+					{{ getCompletedCount(group) }} / {{ group.achievements.length }}
+				</span>
+		</div>
 		<div class="achievements-list">
 			<div v-for="achievement in group.achievements" :key="achievement.id" class="achievement-card">
 				<div class="achievement-icon-wrapper hard-mode">
@@ -34,6 +39,12 @@
 	const achievementGroups = ref(groupedHardModeAchievements);
 	const allAchievements = ref(achievementGroups.value.flatMap(g => g.achievements));
 
+
+	const getCompletedCount = (group) => {
+		if (!group || !group.achievements) return
+		return group.achievements.filter(ach => ach.currentProgress >= ach.targetProgress).length
+	}
+
 	watch(() => gameStore.totalCorrectAnswers ? gameStore.totalCorrectAnswers[3] : 0, (newTotal) => {
 		allAchievements.value.forEach(ach => {
 			if (ach.type === 'total') {
@@ -56,13 +67,38 @@
 	.achievement-group {
 		margin-bottom: 30px;
 	}
+	.group-header {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+		padding-bottom: 10px;
+		margin-bottom: 20px;
+	}
+
+	.group-stats {
+		display: inline-block;
+		padding: 6px 14px;
+		font-size: 0.9em;
+		font-weight: bold;
+		color: #fff;
+		background: linear-gradient(135deg, #007bff, #0056b3);
+		border-radius: 20px;
+		box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+		transition: all 0.3s ease;
+		white-space: nowrap;
+	}
+
+	.group-stats.all-completed {
+		background: linear-gradient(135deg, #28a745, #218838);
+		box-shadow: 0 2px 6px rgba(40, 167, 69, 0.4);
+	}
+
 	.group-title {
 		font-size: 1.5em;
 		color: #444;
-		margin-bottom: 15px;
-		padding-bottom: 5px;
-		border-bottom: 2px solid #eee;
+		margin: 0;
 	}
+
 	.achievements-list {
 		display: flex;
 		flex-direction: column;
@@ -109,6 +145,7 @@
 		height: 25px;
 		margin-bottom: 10px;
 		position: relative;
+		overflow: hidden;
 	}
 	.progress-bar {
 		height: 100%;

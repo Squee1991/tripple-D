@@ -1,42 +1,56 @@
 <template>
-	<div class="achievements-list">
-		<div v-for="achievement in achievements" :key="achievement.threshold" class="achievement-card">
-			<div class="achievement-icon-wrapper">
-				<div class="achievement-icon">
-					<span class="icon-emoji">{{ achievement.icon }}</span>
+	<div v-for="group in achievementGroups" :key="group.title" class="achievement-group">
+		<div class="group-header">
+			<h2 class="group-title">{{ t(group.title) }}</h2>
+			<span :class="['group-stats', { 'all-completed': getCompletedCount(group) === group.achievements.length }]">
+					{{ getCompletedCount(group) }} / {{ group.achievements.length }}
+				</span>
+		</div>
+		<div class="achievements-list">
+			<div v-for="achievement in group.achievements" :key="achievement.threshold" class="achievement-card">
+				<div class="achievement-icon-wrapper">
+					<div class="achievement-icon">
+						<span class="icon-emoji">{{ achievement.icon }}</span>
+					</div>
 				</div>
-			</div>
-			<div class="achievement-details">
-				<div class="achievement-header">
-					<h3 class="achievement-title">{{ t(achievement.title) }}</h3>
-					<span class="achievement-progress-text">
-                  {{ guessWordStore.guessedWords.length >= achievement.threshold ? '1/1' : '0/1' }}
-               </span>
+				<div class="achievement-details">
+					<div class="achievement-header">
+						<h3 class="achievement-title">{{ t(achievement.title) }}</h3>
+						<span class="achievement-progress-text">
+                     {{ guessWordStore.guessedWords.length >= achievement.threshold ? '1/1' : '0/1' }}
+                  </span>
+					</div>
+					<div class="progress-bar-container">
+						<div
+							class="progress-bar"
+							:style="{ width: calculateProgressPercentage(guessWordStore.guessedWords.length, achievement.threshold) + '%' }"
+						></div>
+						<span class="progress-text-overlay">
+                     {{ Math.min(guessWordStore.guessedWords.length, achievement.threshold) }} / {{ achievement.threshold }}
+                  </span>
+					</div>
+					<p class="achievement-description">
+						{{ t(achievement.description) }}
+					</p>
 				</div>
-				<div class="progress-bar-container">
-					<div
-						class="progress-bar"
-						:style="{ width: calculateProgressPercentage(guessWordStore.guessedWords.length, achievement.threshold) + '%' }"
-					></div>
-					<span class="progress-text-overlay">
-                  {{ Math.min(guessWordStore.guessedWords.length, achievement.threshold) }} / {{ achievement.threshold }}
-               </span>
-				</div>
-				<p class="achievement-description">
-					{{ t(achievement.description) }}
-				</p>
 			</div>
 		</div>
 	</div>
 </template>
 
 <script setup>
-	import {useGuessWordStore} from '../../store/guesStore.js';
-	import {guessAchievment} from '../achieveGroup/guessAchieve/guessAchievments.js';
-
-    const { t} = useI18n()
+	import { ref } from 'vue';
+	import { useGuessWordStore } from '../../store/guesStore.js';
+	import { guessAchievment } from '../achieveGroup/guessAchieve/guessAchievments.js';
+	import { useI18n } from 'vue-i18n';
+	const { t } = useI18n();
 	const guessWordStore = useGuessWordStore();
-	const achievements = guessAchievment;
+	const achievementGroups = ref(guessAchievment);
+
+	const getCompletedCount = (group) => {
+		return group.achievements.filter(ach => ach.currentProgress >= ach.targetProgress).length;
+	};
+
 	const calculateProgressPercentage = (current, target) => {
 		if (target === 0) return 0;
 		const progress = (current / target) * 100;
@@ -45,6 +59,43 @@
 </script>
 
 <style scoped>
+
+	.achievement-group {
+		margin-bottom: 30px;
+	}
+
+	.group-header {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+		padding-bottom: 10px;
+		margin-bottom: 20px;
+	}
+
+	.group-stats {
+		display: inline-block;
+		padding: 6px 14px;
+		font-size: 0.9em;
+		font-weight: bold;
+		color: #fff;
+		background: linear-gradient(135deg, #007bff, #0056b3);
+		border-radius: 20px;
+		box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+		transition: all 0.3s ease;
+		white-space: nowrap;
+	}
+
+	.group-stats.all-completed {
+		background: linear-gradient(135deg, #28a745, #218838);
+		box-shadow: 0 2px 6px rgba(40, 167, 69, 0.4);
+	}
+
+	.group-title {
+		font-size: 1.5em;
+		color: #444;
+		margin: 0;
+	}
+
 	.achievements-list {
 		display: flex;
 		flex-direction: column;

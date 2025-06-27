@@ -1,24 +1,32 @@
 <template>
-	<div class="achievments">
-		<div class="achievments-card-container">
-			<div v-for="item in achievements" :key="item.id" class="achievement-card-overall">
-				<div class="achievement-icon-wrapper-overall">
-					<div class="achievement-icon-overall">
-						<span class="icon-img-overall">{{ item.icon }}</span>
+	<div class="achievements">
+		<div v-for="group in achievementGroups" :key="group.title" class="achievement-group-container">
+			<div class="group-header">
+				<h2 class="group-title">{{ t(group.title) }}</h2>
+				<span :class="['group-stats', { 'all-completed': getCompletedCount(group) === group.achievements.length }]">
+					{{ getCompletedCount(group) }} / {{ group.achievements.length }}
+				</span>
+			</div>
+			<div class="achievements-card-container">
+				<div v-for="item in group.achievements" :key="item.id" class="achievement-card-overall">
+					<div class="achievement-icon-wrapper-overall">
+						<div class="achievement-icon-overall">
+							<span class="icon-img-overall">{{ item.icon }}</span>
+						</div>
 					</div>
-				</div>
-				<div class="achievement-details-overall">
-					<h3 class="achievement-title-overall">{{ t(item.name) }}</h3>
-					<div class="progress-bar-overall-container">
-						<div
-							class="progress-bar-overall"
-							:style="{ width: (item.currentProgress / item.targetProgress * 100) + '%' }"
-						></div>
-						<span class="progress-text-overall">
-                     {{ item.currentProgress }}/{{ item.targetProgress }}
-                  </span>
+					<div class="achievement-details-overall">
+						<h3 class="achievement-title-overall">{{ t(item.name) }}</h3>
+						<div class="progress-bar-overall-container">
+							<div
+								class="progress-bar-overall"
+								:style="{ width: (item.currentProgress / item.targetProgress * 100) + '%' }"
+							></div>
+							<span class="progress-text-overall">
+                        {{ item.currentProgress }}/{{ item.targetProgress }}
+                     </span>
+						</div>
+						<p class="achievement-description-overall">{{ t(item.description) }}</p>
 					</div>
-					<p class="achievement-description-overall">{{ t(item.description) }}</p>
 				</div>
 			</div>
 		</div>
@@ -26,59 +34,141 @@
 </template>
 
 <script setup>
-	import { ref, watch } from 'vue'
-	import { overAchievment } from '../achieveGroup/overAllAchieve/overallAchievements.js'
-	import { userlangStore } from '../../store/learningStore.js'
+	import {ref, watch , computed} from 'vue'
+	import {overAchievment} from '../achieveGroup/overAllAchieve/overallAchievements.js'
+	import {userlangStore} from '../../store/learningStore.js'
+	import {userAuthStore} from '../../store/authStore.js'
+	import {useGameStore} from '../../store/marafonStore.js'
+	const gameStore = useGameStore()
 	const langStore = userlangStore()
-	const { t} = useI18n()
-	const achievements = ref(overAchievment.map(a => ({ ...a })))
+	const authStore = userAuthStore()
+	const {t} = useI18n()
 
-	watch(() => langStore.points, (newPoints) => {
-		const achievement = achievements.value.find(a => a.id === 'firstArticleAward');
+	const getCompletedCount = (group) => {
+		if (!group || !group.achievements) return 0;
+		return group.achievements.filter(ach => ach.currentProgress >= ach.targetProgress).length;
+	};
+
+	const achievementGroups = ref(overAchievment.map(group => ({
+		...group,
+		achievements: group.achievements.map(a => ({ ...a }))
+	})));
+
+	const findAchievementById = (id) => {
+		for (const group of achievementGroups.value) {
+			const achievement = group.achievements.find(a => a.id === id);
+			if (achievement) {
+				return achievement;
+			}
+		}
+		return null;
+	};
+
+	watch(() => langStore.totalEarnedPoints, (newPoints) => {
+		const achievement = findAchievementById('firstArticleAward');
 		if (achievement) {
 			achievement.currentProgress = Math.min(newPoints, achievement.targetProgress);
 		}
-	}, { immediate: true });
-
+	}, {immediate: true});
 	watch(() => langStore.exp, (newExp) => {
-		const achievement = achievements.value.find(a => a.id === 'levelUpExp');
+		const achievement = findAchievementById('levelUpExp');
 		if (achievement) {
 			achievement.currentProgress = Math.min(newExp, achievement.targetProgress);
 		}
-	}, { immediate: true });
-
-
-
+	}, {immediate: true});
 	watch(() => langStore.learnedWords.length, (newLength) => {
-		const ach10 = achievements.value.find(a => a.id === 'learned10Words');
+		const ach10 = findAchievementById('learned10Words');
 		if (ach10) {
 			ach10.currentProgress = Math.min(newLength, ach10.targetProgress);
 		}
-		const ach100 = achievements.value.find(a => a.id === 'learned100Words');
+		const ach100 = findAchievementById('learned100Words');
 		if (ach100) {
 			ach100.currentProgress = Math.min(newLength, ach100.targetProgress);
 		}
-	}, { immediate: true });
-
+	}, {immediate: true});
 	watch(() => langStore.wrongAnswers.length, (newLength) => {
-		const achievement = achievements.value.find(a => a.id === 'wrong100Answers');
+		const achievement = findAchievementById('wrong100Answers');
 		if (achievement) {
 			achievement.currentProgress = Math.min(newLength, achievement.targetProgress);
+		}
+	}, {immediate: true});
+	watch(() => authStore.registeredAt, (registrationDate) => {
+		if (registrationDate) {
+			const achievement = findAchievementById('SiteRegular');
+			if (achievement) {
+				const registeredDate = new Date(registrationDate);
+				const currentDate = new Date();
+				const diffTime = Math.abs(currentDate - registeredDate);
+				const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+				achievement.currentProgress = Math.min(diffDays, achievement.targetProgress);
+			}
+		}
+	}, {immediate: true});
+	watch(() => gameStore.lastChanceProgress, (newProgress) => {
+		const ach = findAchievementById('LastChance');
+		if (ach) {
+			ach.currentProgress = newProgress;
+		}
+	}, { immediate: true });
+	watch(() => gameStore.marginForErrorProgress, (newProgress) => {
+		const ach = findAchievementById('MarginForError');
+		if (ach) {
+			ach.currentProgress = newProgress;
+		}
+	}, { immediate: true });
+	watch(() => gameStore.onTheEdgeProgress, (newProgress) => {
+		const ach = findAchievementById('OnTheEdge');
+		if (ach) {
+			ach.currentProgress = newProgress;
 		}
 	}, { immediate: true });
 
 </script>
 
 <style scoped>
-	.achievments {
-		text-align: center;
+	.achievements {
 		font-family: Arial, sans-serif;
 	}
 
-	.achievments-card-container {
+	.achievement-group-container {
+		margin-bottom: 30px;
+	}
+
+	.group-header {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+		padding-bottom: 10px;
+		margin-bottom: 20px;
+	}
+
+	.group-stats {
+		display: inline-block;
+		padding: 6px 14px;
+		font-size: 0.9em;
+		font-weight: bold;
+		color: #fff;
+		background: linear-gradient(135deg, #007bff, #0056b3);
+		border-radius: 20px;
+		box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+		transition: all 0.3s ease;
+		white-space: nowrap;
+	}
+
+	.group-stats.all-completed {
+		background: linear-gradient(135deg, #28a745, #218838);
+		box-shadow: 0 2px 6px rgba(40, 167, 69, 0.4);
+	}
+
+	.group-title {
+		font-size: 1.5em;
+		color: #444;
+		margin: 0;
+	}
+
+	.achievements-card-container {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
 	}
 
 	.achievement-card-overall {

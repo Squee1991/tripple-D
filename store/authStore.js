@@ -92,9 +92,7 @@ export const userAuthStore = defineStore('auth', () => {
 		const userCredential = await createUserWithEmailAndPassword(auth, userData.email, userData.password)
 		await updateProfile(userCredential.user, { displayName: userData.name })
 		await sendEmailVerification(userCredential.user)
-
 		const defaultAvatar = '1.png';
-
 		await setDoc(doc(db, 'users', userCredential.user.uid), {
 			nickname: userData.name,
 			email: userData.email,
@@ -154,10 +152,7 @@ export const userAuthStore = defineStore('auth', () => {
 		const auth = getAuth()
 		await signOut(auth)
 		setUserData({});
-
-
 		if (authStateUnsubscribe) {
-			console.log('Отписка от слушателя AuthState');
 			authStateUnsubscribe();
 			authStateUnsubscribe = null;
 		}
@@ -168,11 +163,8 @@ export const userAuthStore = defineStore('auth', () => {
 		if (authStateUnsubscribe) {
 			authStateUnsubscribe();
 		}
-
-		console.log('Подписка на слушателя AuthState');
 		authStateUnsubscribe = onAuthStateChanged(auth, async (user) => {
 			if (user) {
-				console.log('Пользователь обнаружен:', user.uid);
 				const userDocRef = doc(db, 'users', user.uid);
 				const userDoc = await getDoc(userDocRef);
 				const userDataFromDb = userDoc.exists() ? userDoc.data() : {};

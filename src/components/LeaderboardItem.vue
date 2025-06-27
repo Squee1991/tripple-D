@@ -52,8 +52,7 @@
 
 <style scoped>
 	.leaderboard-item {
-		background-color: #2a2d3b;
-		border: 1px solid #3a3f5e;
+		border-bottom: 1px solid #3a3f5e;
 		border-radius: 8px;
 		padding: 10px 20px;
 		transition: all 0.2s ease-in-out;
@@ -61,12 +60,12 @@
 		justify-content: space-between;
 		align-items: center;
 		margin-bottom: 10px;
+
 	}
 
 	.leaderboard-item--current {
-		border: 2px solid #a484ff;
+		border: 1px solid #a484ff;
 		box-shadow: 0 0 10px rgba(164, 132, 255, 0.3);
-		background-color: #3a3f5e;
 	}
 
 	.leaderboard-player-info {
