@@ -12,7 +12,6 @@
         </value>
       </option>
     </inspection_tool>
-    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
@@ -26,7 +25,7 @@
     <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="31">
+          <list size="56">
             <item index="0" class="java.lang.String" itemvalue="nobr" />
             <item index="1" class="java.lang.String" itemvalue="noembed" />
             <item index="2" class="java.lang.String" itemvalue="comment" />
@@ -58,6 +57,31 @@
             <item index="28" class="java.lang.String" itemvalue="overlay" />
             <item index="29" class="java.lang.String" itemvalue="baner" />
             <item index="30" class="java.lang.String" itemvalue="uioverlay" />
+            <item index="31" class="java.lang.String" itemvalue="langswitcher" />
+            <item index="32" class="java.lang.String" itemvalue="coffe" />
+            <item index="33" class="java.lang.String" itemvalue="about" />
+            <item index="34" class="java.lang.String" itemvalue="burgermenu" />
+            <item index="35" class="java.lang.String" itemvalue="daily" />
+            <item index="36" class="java.lang.String" itemvalue="weekly" />
+            <item index="37" class="java.lang.String" itemvalue="special" />
+            <item index="38" class="java.lang.String" itemvalue="themetrainer" />
+            <item index="39" class="java.lang.String" itemvalue="leaderboarditem" />
+            <item index="40" class="java.lang.String" itemvalue="modaloverlay" />
+            <item index="41" class="java.lang.String" itemvalue="ul" />
+            <item index="42" class="java.lang.String" itemvalue="guessachievementdisplay" />
+            <item index="43" class="java.lang.String" itemvalue="overallachievments" />
+            <item index="44" class="java.lang.String" itemvalue="li" />
+            <item index="45" class="java.lang.String" itemvalue="easymodeachieve" />
+            <item index="46" class="java.lang.String" itemvalue="normalmodeachieve" />
+            <item index="47" class="java.lang.String" itemvalue="hardmodeachieve" />
+            <item index="48" class="java.lang.String" itemvalue="specialachievments" />
+            <item index="49" class="java.lang.String" itemvalue="clientonly" />
+            <item index="50" class="java.lang.String" itemvalue="writearticle" />
+            <item index="51" class="java.lang.String" itemvalue="wordsfromletters" />
+            <item index="52" class="java.lang.String" itemvalue="wordsplusarticle" />
+            <item index="53" class="java.lang.String" itemvalue="plural" />
+            <item index="54" class="java.lang.String" itemvalue="listen" />
+            <item index="55" class="java.lang.String" itemvalue="deck" />
           </list>
         </value>
       </option>

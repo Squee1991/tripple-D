@@ -1,0 +1,171 @@
+{
+	"id": "transport",
+	"title": "transport",
+	"levels": [
+		{
+			"level": 1,
+			"modules": [
+				{
+					"id": 1,
+					"tasks": [
+						{ "question": "___ Auto ist schnell.", "word": "Auto", "answer": "das" },
+						{ "question": "___ Bus ist groß.", "word": "Bus", "answer": "der" },
+						{ "question": "___ Fahrrad ist neu.", "word": "Fahrrad", "answer": "das" },
+						{ "question": "___ Zug ist pünktlich.", "word": "Zug", "answer": "der" },
+						{ "question": "___ Straßenbahn ist lang.", "word": "Straßenbahn", "answer": "die" }
+					]
+				},
+				{
+					"id": 2,
+					"tasks": [
+						{ "question": "___ Flugzeug ist hoch.", "word": "Flugzeug", "answer": "das" },
+						{ "question": "___ Schiff ist groß.", "word": "Schiff", "answer": "das" },
+						{ "question": "___ Motorrad ist laut.", "word": "Motorrad", "answer": "das" },
+						{ "question": "___ U-Bahn ist schnell.", "word": "U-Bahn", "answer": "die" },
+						{ "question": "___ Taxi ist gelb.", "word": "Taxi", "answer": "das" }
+					]
+				},
+				{
+					"id": 3,
+					"tasks": [
+						{ "question": "___ Bahnhof ist belebt.", "word": "Bahnhof", "answer": "der" },
+						{ "question": "___ Haltestelle ist nah.", "word": "Haltestelle", "answer": "die" },
+						{ "question": "___ Flughafen ist modern.", "word": "Flughafen", "answer": "der" },
+						{ "question": "___ Hafen ist tief.", "word": "Hafen", "answer": "der" },
+						{ "question": "___ Garage ist voll.", "word": "Garage", "answer": "die" }
+					]
+				},
+				{
+					"id": 4,
+					"tasks": [
+						{ "question": "___ Fahrkarte ist gültig.", "word": "Fahrkarte", "answer": "die" },
+						{ "question": "___ Sitz ist bequem.", "word": "Sitz", "answer": "der" },
+						{ "question": "___ Motor ist stark.", "word": "Motor", "answer": "der" },
+						{ "question": "___ Rad ist rund.", "word": "Rad", "answer": "das" },
+						{ "question": "___ Ampel ist rot.", "word": "Ampel", "answer": "die" }
+					]
+				},
+				{
+					"id": 5,
+					"tasks": [
+						{ "question": "___ Lenkrad ist rund.", "word": "Lenkrad", "answer": "das" },
+						{ "question": "___ Tür ist offen.", "word": "Tür", "answer": "die" },
+						{ "question": "___ Scheinwerfer ist hell.", "word": "Scheinwerfer", "answer": "der" },
+						{ "question": "___ Bremse ist wichtig.", "word": "Bremse", "answer": "die" },
+						{ "question": "___ Reifen ist neu.", "word": "Reifen", "answer": "der" }
+					]
+				}
+			]
+		},
+		{
+			"level": 2,
+			"modules": [
+				{
+					"id": 1,
+					"tasks": [
+						{ "question": "Ich fahre mit ___ Auto.", "word": "Auto", "answer": "dem" },
+						{ "question": "Sie steigt in ___ Bus ein.", "word": "Bus", "answer": "den" },
+						{ "question": "Er fährt mit ___ Fahrrad zur Arbeit.", "word": "Fahrrad", "answer": "dem" },
+						{ "question": "Wir nehmen ___ Zug nach Berlin.", "word": "Zug", "answer": "den" },
+						{ "question": "Sie fährt mit ___ Straßenbahn.", "word": "Straßenbahn", "answer": "der" }
+					]
+				},
+				{
+					"id": 2,
+					"tasks": [
+						{ "question": "Er fliegt mit ___ Flugzeug.", "word": "Flugzeug", "answer": "dem" },
+						{ "question": "Ich reise mit ___ Schiff.", "word": "Schiff", "answer": "dem" },
+						{ "question": "Sie fährt ___ Motorrad.", "word": "Motorrad", "answer": "das" },
+						{ "question": "Wir fahren mit ___ U-Bahn.", "word": "U-Bahn", "answer": "der" },
+						{ "question": "Er ruft ___ Taxi.", "word": "Taxi", "answer": "ein" }
+					]
+				},
+				{
+					"id": 3,
+					"tasks": [
+						{ "question": "Ich warte am ___ Bahnhof.", "word": "Bahnhof", "answer": "dem" },
+						{ "question": "Sie steigt an ___ Haltestelle aus.", "word": "Haltestelle", "answer": "der" },
+						{ "question": "Er landet auf ___ Flughafen.", "word": "Flughafen", "answer": "dem" },
+						{ "question": "Wir gehen zum ___ Hafen.", "word": "Hafen", "answer": "dem" },
+						{ "question": "Sie parkt in ___ Garage.", "word": "Garage", "answer": "der" }
+					]
+				},
+				{
+					"id": 4,
+					"tasks": [
+						{ "question": "Ich kaufe ___ Fahrkarte.", "word": "Fahrkarte", "answer": "eine" },
+						{ "question": "Sie nimmt auf ___ Sitz Platz.", "word": "Sitz", "answer": "dem" },
+						{ "question": "Er repariert ___ Motor.", "word": "Motor", "answer": "den" },
+						{ "question": "Wir wechseln ___ Rad.", "word": "Rad", "answer": "das" },
+						{ "question": "Sie hält an ___ Ampel.", "word": "Ampel", "answer": "der" }
+					]
+				},
+				{
+					"id": 5,
+					"tasks": [
+						{ "question": "Er hält ___ Lenkrad fest.", "word": "Lenkrad", "answer": "das" },
+						{ "question": "Ich öffne ___ Tür.", "word": "Tür", "answer": "die" },
+						{ "question": "Sie schaltet ___ Scheinwerfer ein.", "word": "Scheinwerfer", "answer": "den" },
+						{ "question": "Wir treten auf ___ Bremse.", "word": "Bremse", "answer": "die" },
+						{ "question": "Er wechselt ___ Reifen.", "word": "Reifen", "answer": "den" }
+					]
+				}
+			]
+		},
+		{
+			"level": 3,
+			"modules": [
+				{
+					"id": 1,
+					"tasks": [
+						{ "question": "Die Geschwindigkeit ___ Autos ist hoch.", "word": "Auto", "answer": "des" },
+						{ "question": "Der Motor ___ Busses ist laut.", "word": "Bus", "answer": "des" },
+						{ "question": "Die Farbe ___ Fahrrads ist grün.", "word": "Fahrrad", "answer": "des" },
+						{ "question": "Die Ankunft ___ Zuges ist bald.", "word": "Zug", "answer": "des" },
+						{ "question": "Die Route ___ Straßenbahn ist lang.", "word": "Straßenbahn", "answer": "der" }
+					]
+				},
+				{
+					"id": 2,
+					"tasks": [
+						{ "question": "Der Start ___ Flugzeugs ist um 10 Uhr.", "word": "Flugzeug", "answer": "des" },
+						{ "question": "Die Größe ___ Schiffes ist beeindruckend.", "word": "Schiff", "answer": "des" },
+						{ "question": "Der Klang ___ Motorrads ist einzigartig.", "word": "Motorrad", "answer": "des" },
+						{ "question": "Die Geschwindigkeit ___ U-Bahn ist bekannt.", "word": "U-Bahn", "answer": "der" },
+						{ "question": "Die Farbe ___ Taxis ist auffällig.", "word": "Taxi", "answer": "des" }
+					]
+				},
+				{
+					"id": 3,
+					"tasks": [
+						{ "question": "Das Dach ___ Bahnhofs ist neu.", "word": "Bahnhof", "answer": "des" },
+						{ "question": "Der Name ___ Haltestelle ist neu.", "word": "Haltestelle", "answer": "der" },
+						{ "question": "Die Terminals ___ Flughafens sind groß.", "word": "Flughafen", "answer": "des" },
+						{ "question": "Die Boote ___ Hafens sind zahlreich.", "word": "Hafen", "answer": "des" },
+						{ "question": "Die Größe ___ Garage ist ausreichend.", "word": "Garage", "answer": "der" }
+					]
+				},
+				{
+					"id": 4,
+					"tasks": [
+						{ "question": "Die Gültigkeit ___ Fahrkarte ist einen Tag.", "word": "Fahrkarte", "answer": "der" },
+						{ "question": "Die Polsterung ___ Sitzes ist weich.", "word": "Sitz", "answer": "des" },
+						{ "question": "Die Leistung ___ Motors ist hoch.", "word": "Motor", "answer": "des" },
+						{ "question": "Die Drehung ___ Rades ist schnell.", "word": "Rad", "answer": "des" },
+						{ "question": "Die Bedeutung ___ Ampel ist klar.", "word": "Ampel", "answer": "der" }
+					]
+				},
+				{
+					"id": 5,
+					"tasks": [
+						{ "question": "Die Steuerung ___ Lenkrads ist präzise.", "word": "Lenkrad", "answer": "des" },
+						{ "question": "Die Funktion ___ Tür ist einfach.", "word": "Tür", "answer": "der" },
+						{ "question": "Die Helligkeit ___ Scheinwerfers ist stark.", "word": "Scheinwerfer", "answer": "des" },
+						{ "question": "Die Wirkung ___ Bremse ist sofort.", "word": "Bremse", "answer": "der" },
+						{ "question": "Die Luft in ___ Reifen ist ausreichend.", "word": "Reifen", "answer": "dem" }
+					]
+				}
+			]
+		}
+	]
+}

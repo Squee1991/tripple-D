@@ -1,41 +1,31 @@
 <template>
-	<footer class="footer" ref="footerRef" :class="{ visible: isVisible }">
-		<div class="footer-container">
+	<footer class="footer">
+		<div class="footer__container">
 			<div class="footer-brand">
-				<img src="../../assets/images/logoDDD.png" alt="Der Die Das" class="footer-logo"/>
+				<img src="../../assets/images/3dLogo.png" alt="Der Die Das" class="footer-logo"/>
 			</div>
+			<LangSwitcher/>
 			<nav class="footer-links">
-				<a href="" class="footer-link">О проекте</a>
-				<a href="" class="footer-link">Отзывы</a>
-				<a href="mailto:support@derdiedas.app" class="footer-link">Контакты</a>
+				<li v-for="item in data.items" :key="item.id">
+					<NuxtLink class="footer-link" :to="item.url"> {{ t(item.value)}}</NuxtLink>
+				</li>
 			</nav>
-			<div class="footer-meta">
-				<select class="lang-select">
-					<option>Русский</option>
-					<option>English</option>
-					<option>Fr</option>
-				</select>
-			</div>
+
 		</div>
-		<p class="footer-copy">© {{ new Date().getFullYear() }} Der Die Das. Все права защищены.</p>
+		<p class="footer-copy">© {{ new Date().getFullYear() }} {{ t(data.footer)}} </p>
 	</footer>
 </template>
 
 <script setup>
-	import {ref, onMounted} from 'vue'
+	import LangSwitcher from './langSwitcher.vue'
+    const { t} = useI18n()
+	const data = {
+		footer: "footer.copy",
+		items: [
+			{id: 1 , url: "about" , value: "nav.about"},
+		]
+	}
 
-	const footerRef = ref(null)
-	const isVisible = ref(false)
-
-	onMounted(() => {
-		const observer = new IntersectionObserver(
-			([entry]) => {
-				if (entry.isIntersecting) isVisible.value = true
-			},
-			{threshold: 0.1}
-		)
-		if (footerRef.value) observer.observe(footerRef.value)
-	})
 </script>
 
 <style scoped>
@@ -45,16 +35,9 @@
 		padding: 44px 20px 20px;
 		box-shadow: 0 12px 60px #786ed628 inset, 0 3px 18px #f5eeff9c inset;
 		font-family: 'Montserrat', 'Inter', sans-serif;
-		opacity: 0;
-		transform: translateY(20px);
 	}
 
-	.footer.visible {
-		opacity: 1;
-		transform: translateY(0);
-	}
-
-	.footer-container {
+	.footer__container {
 		max-width: 1200px;
 		margin: 0 auto;
 		display: flex;
@@ -78,7 +61,6 @@
 		width: 86px;
 		height: 86px;
 		border-radius: 18px;
-
 	}
 
 	.footer-links {
@@ -169,6 +151,20 @@
 		text-shadow: 0 2px 9px #f3eaffc0, 0 0px 1px #fff6;
 		letter-spacing: 0.01em;
 		font-weight: 600;
+	}
+	
+	@media (max-width: 768px) {
+		.footer__container {
+			flex-direction: column;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 5px;
+		}
+
+		.footer-link {
+			font-size: 16px;
+		}
 	}
 
 </style>

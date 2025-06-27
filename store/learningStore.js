@@ -10,10 +10,12 @@ export const userlangStore = defineStore('learning', () => {
 	const selectedTopics = ref([])       // тут выбранные темы (ключи)
 	const selectedWords = ref([])        // тут слова, выбранные для сессии(текущая тема)
 	const points = ref(0)                // тут очки/баллы
+	const totalEarnedPoints = ref(0)
+	const articlesSpentForAchievement = ref(0)
 	const currentIndex = ref(0)          // тут индекс текущего слова в сессии
 	const currentModeIndex = ref(0)      // тут индекс текущего способа обучения
 	const exp = ref(0)                   // тут опыт
-	const isLeveling = ref(1)            // тут уровень
+	const isLeveling = ref(0)            // тут уровень
 
 	const topicStats = computed(() => {
 		const stats = {}
@@ -32,6 +34,7 @@ export const userlangStore = defineStore('learning', () => {
 		selected.progress[modeKey] = value
 		if (value === true && !wasAlreadyTrue) {
 			points.value++
+			totalEarnedPoints.value++
 			exp.value++
 			handleLeveling()
 		}
@@ -108,6 +111,7 @@ export const userlangStore = defineStore('learning', () => {
 			learnedWords.value.push({ ...word })
 
 			points.value++
+			totalEarnedPoints.value++
 			exp.value++
 			handleLeveling()
 
@@ -115,13 +119,14 @@ export const userlangStore = defineStore('learning', () => {
 		}
 	}
 
-
 	const addWrongAnswers = async (word) => {
-		if (!wrongAnswers.value.find(w => w.de === word.de)) {
-			wrongAnswers.value.push({ ...word })
-			await saveToFirebase()
+		if (!word || !word.de) return;
+		const isAlreadyInWrong = wrongAnswers.value.find(w => w.de === word.de);
+		if (!isAlreadyInWrong) {
+			wrongAnswers.value.push({ ...word });
+			await saveToFirebase();
 		}
-	}
+	};
 
 	const clearProgress = async () => {
 		words.value.forEach(word => {
@@ -156,9 +161,11 @@ export const userlangStore = defineStore('learning', () => {
 					wrongAnswers.value = data.wrongAnswers || []
 					selectedTopics.value = data.selectedTopics || []
 					selectedWords.value = data.selectedWords || []
+					totalEarnedPoints.value = data.totalEarnedPoints || 0
+					articlesSpentForAchievement.value = data.articlesSpentForAchievement || 0
 					points.value = data.points || 0
 					exp.value = data.exp || 0
-					isLeveling.value = data.isLeveling || 1
+					isLeveling.value = data.isLeveling || 0
 					currentIndex.value = data.currentIndex || 0
 					currentModeIndex.value = data.currentModeIndex || 0
 				}
@@ -183,6 +190,8 @@ export const userlangStore = defineStore('learning', () => {
 			selectedTopics: selectedTopics.value,
 			selectedWords: selectedWords.value,
 			points: points.value,
+			totalEarnedPoints: totalEarnedPoints.value,
+			articlesSpentForAchievement: articlesSpentForAchievement.value,
 			exp: exp.value,
 			isLeveling: isLeveling.value,
 			currentIndex: currentIndex.value,
@@ -207,6 +216,8 @@ export const userlangStore = defineStore('learning', () => {
 		selectedWords.value = []
 		points.value = 0
 		exp.value = 0
+		totalEarnedPoints.value = 0
+		articlesSpentForAchievement.value = 0
 		isLeveling.value = 1
 		currentIndex.value = 0
 		currentModeIndex.value = 0
@@ -221,10 +232,12 @@ export const userlangStore = defineStore('learning', () => {
 		selectedWords,
 		points,
 		exp,
+		totalEarnedPoints,
 		isLeveling,
 		currentIndex,
 		currentModeIndex,
 		topicStats,
+		articlesSpentForAchievement,
 		handleLeveling,
 		markProgress,
 		markAsLearned,

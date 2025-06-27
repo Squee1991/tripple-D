@@ -2,21 +2,25 @@
 	<div class="session">
 		<div class="session__wrapper" v-if="isReady">
 			<div v-if="!finished && currentWord && currentMode">
+				<div class="session__theme">
+					<div class="session__theme-t">{{ t('sessionPage.theme')}}:</div>
+					<h1 class="session__topic">{{ topicTitle }}</h1>
+				</div>
 				<div class="progress-line">
-					<span>Слово {{ store.currentIndex + 1 }} / {{ totalWords }}</span>
-					<span>Способ: <b>{{ modeLabel(currentMode) }}</b> ({{ currentModeIndex + 1 }}/{{ selectedModes.length }})</span>
+					<span>{{ store.currentIndex + 1 }} / {{ totalWords }}</span>
+					<span>{{t('sessionPage.choice')}}: <b>{{ t(modeLabel(currentMode)) }}</b> ({{ currentModeIndex + 1 }}/{{ selectedModes.length }})</span>
 				</div>
 				<div class="word-block">
 					<div class="word-question">
-						<span>слово: {{ currentWord?.ru }}</span>
+						<span>{{t('sessionLabels.word')}}: {{ currentWord?.[currentLang] }}</span>
 					</div>
 					<div class="mode-exercise">
 						<div v-if="currentMode === 'article'">
-							<p>Впиши артикль для <b>{{ currentWord.de }}</b>:</p>
+							<p>{{t('sessionLabels.articleFor')}} <b>{{ currentWord.de }}</b>:</p>
 							<input v-model="userInput" class="input"/>
 						</div>
 						<div v-if="currentMode === 'letters'">
-							<p>Собери слово из букв: <b>{{ currentWord.article }}</b></p>
+							<p>{{t('sessionLabels.lettersFor')}} <b>{{ currentWord.article }}</b></p>
 							<div class="letters">
 								<button v-for="(letter, i) in shuffledLetters" :key="i" :disabled="usedLetters[i]"
 								        @click="addLetter(letter, i)">
@@ -26,15 +30,15 @@
 							<input v-model="userInput" class="input"/>
 						</div>
 						<div v-if="currentMode === 'wordArticle'">
-							<p>Впиши артикль и слово (например: <b>die Lampe</b>):</p>
+							<p>{{t('sessionLabels.articleWordFor')}}</p>
 							<input v-model="userInput" class="input"/>
 						</div>
 						<div v-if="currentMode === 'plural'">
-							<p>Впиши форму множественного числа для: <b>{{ currentWord.de }}</b>:</p>
+							<p>{{t('sessionLabels.pluralFor')}}><b>{{ currentWord.de }}</b>:</p>
 							<input v-model="userInput" class="input"/>
 						</div>
 						<div v-if="currentMode === 'audio'">
-							<p>Прослушай и впиши слово:</p>
+							<p>{{t('sessionLabels.audioFor')}}:</p>
 							<button @click="speak(currentWord.de)" class="audio-btn">
 								<img class="megaphones__icon" src="../assets/images/megaphone.svg" alt="">
 								<span>Прослушать</span>
@@ -43,54 +47,67 @@
 						</div>
 					</div>
 					<div v-if="result" class="answer-result" :class="result">
-						<span v-if="result === 'correct'">✅ Верно!</span>
-						<span v-if="result === 'wrong'">❌ Неверно.</span>
-						<span v-if="currentMode === 'article'">Правильный ответ: {{ currentWord.article }}</span>
-						<span v-if="currentMode === 'letters' || currentMode === 'audio'">Правильный ответ: {{ currentWord.de }}</span>
-						<span v-if="currentMode === 'wordArticle'">Правильно: {{ currentWord.article }} {{ currentWord.de }}</span>
-						<span v-if="currentMode === 'plural'">Правильно: {{ currentWord.plural }}</span>
+						<span v-if="result === 'correct'">✅</span>
+						<span v-if="result === 'wrong'">❌</span>
+						<span
+							v-if="currentMode === 'article'">{{t('result.correctAnswer')}}: {{ currentWord.article }}</span>
+						<span v-if="currentMode === 'letters' || currentMode === 'audio'">{{t('result.correctAnswer')}}: {{ currentWord.de }}</span>
+						<span v-if="currentMode === 'wordArticle'">{{t('result.correct')}}: {{ currentWord.article }} {{ currentWord.de }}</span>
+						<span v-if="currentMode === 'plural'">{{t('result.correct')}}: {{ currentWord.plural }}</span>
 					</div>
-					<button class="next-btn" @click="checkAnswer" :disabled="isChecking || !userInput">Проверить
-					</button>
 				</div>
+				<button
+					class="next-btn"
+					@click="!result ? checkAnswer() : nextStep()"
+					:disabled="!result && (isChecking || !userInput)"
+				>
+					{{ !result ? t('sessionPage.btnCheck') : t('sessionPage.continue') }}
+				</button>
 			</div>
 			<div v-else class="finish-block">
 				<h2>Обучение завершено!</h2>
-				<button class="again-btn" @click="restart">Пройти снова</button>
+				<button class="again-btn" @click="restartAll">Повторить тему</button>
+				<button v-if="wrongWords.length" class="again-btn" :disabled="wrongWords.length === 0"
+				        @click="repeatMistakes">
+					Повторить ошибки ({{ wrongWords.length }})
+				</button>
 				<router-link class="home-btn" to="/">Назад к темам</router-link>
 			</div>
 		</div>
 	</div>
 </template>
-
 <script setup>
 	import {ref, computed, onMounted} from 'vue'
 	import {useRoute} from 'vue-router'
 	import {userlangStore} from '../store/learningStore.js'
 
+	const {t, locale} = useI18n()
+	const wrongWords = ref([])
+	const allWords = ref([])
 	const store = userlangStore()
 	const route = useRoute()
 	const isReady = ref(false)
 	const selectedModes = ref([])
 	const sessionWords = ref([])
 	const finished = ref(false)
+	const topicTitle = ref('');
 	const userInput = ref('')
 	const result = ref('')
 	const usedLetters = ref([])
 	const isChecking = ref(false)
-
 	const currentModeIndex = computed(() => store.currentModeIndex)
 	const currentMode = computed(() => selectedModes.value[currentModeIndex.value])
 	const currentWord = computed(() => store.selectedWords[store.currentIndex])
 	const totalWords = computed(() => store.selectedWords.length)
+	const currentLang = computed(() => locale.value);
 
 	function modeLabel(mode) {
 		const m = {
-			article: 'Вписать артикль',
-			letters: 'Собрать слово',
-			wordArticle: 'Артикль + слово',
-			plural: 'Множественное число',
-			audio: 'Аудирование'
+			article: 'modes.article',
+			letters: 'modes.letters',
+			wordArticle: 'modes.articleWord',
+			plural: 'modes.plural',
+			audio: 'modes.audio'
 		}
 		return m[mode] || mode
 	}
@@ -117,49 +134,64 @@
 	}
 
 	async function checkAnswer() {
-		if (!currentWord.value || isChecking.value) return
-		isChecking.value = true
-		let correct = ''
+		if (!currentWord.value || isChecking.value) return;
+		isChecking.value = true;
+		let correct = '';
 		switch (currentMode.value) {
 			case 'article':
 				correct = currentWord.value.article;
-				break
+				break;
 			case 'letters':
 				correct = currentWord.value.de;
-				break
+				break;
 			case 'wordArticle':
 				correct = `${currentWord.value.article} ${currentWord.value.de}`;
-				break
+				break;
 			case 'plural':
 				correct = currentWord.value.plural;
-				break
+				break;
 			case 'audio':
 				correct = currentWord.value.de;
-				break
+				break;
 		}
-		const ok = normalize(userInput.value) === normalize(correct)
-		result.value = ok ? 'correct' : 'wrong'
-		setTimeout(async () => {
-			await store.markProgress(currentWord.value, currentMode.value, ok)
-			if (currentModeIndex.value < selectedModes.value.length - 1) {
-				store.currentModeIndex++
-			} else {
-				store.currentModeIndex = 0
-				store.currentIndex++
+		const ok = normalize(userInput.value) === normalize(correct);
+		result.value = ok ? 'correct' : 'wrong';
+		await store.markProgress(currentWord.value, currentMode.value, ok);
+		if (ok) {
+			await store.markAsLearned(currentWord.value, selectedModes.value);
+		} else {
+			if (!wrongWords.value.find(w => w.de === currentWord.value.de)) {
+				wrongWords.value.push(currentWord.value);
 			}
-			await store.saveToFirebase()
-			userInput.value = ''
-			usedLetters.value = []
-			if (store.currentIndex >= store.selectedWords.length) {
-				finished.value = true
-			}
-			isChecking.value = false
-			result.value = ''
-		}, 700)
+			await store.addWrongAnswers(currentWord.value);
+		}
 
+		isChecking.value = false;
+	}
+
+	function nextStep() {
+		if (currentModeIndex.value < selectedModes.value.length - 1) {
+			store.currentModeIndex++
+		} else {
+			store.currentModeIndex = 0
+			store.currentIndex++
+		}
+		userInput.value = ''
+		usedLetters.value = []
+		result.value = ''
+
+		if (store.currentIndex >= store.selectedWords.length) {
+			finished.value = true
+		}
 	}
 
 	function restart() {
+		if (wrongWords.value.length > 0) {
+			store.selectedWords = [...wrongWords.value]
+			wrongWords.value = []
+		} else {
+			store.selectedWords = [...sessionWords.value]
+		}
 		store.currentIndex = 0
 		store.currentModeIndex = 0
 		finished.value = false
@@ -168,18 +200,48 @@
 		result.value = ''
 	}
 
+	function restartAll() {
+		store.selectedWords = [...allWords.value]
+		store.currentIndex = 0
+		store.currentModeIndex = 0
+		finished.value = false
+		userInput.value = ''
+		usedLetters.value = []
+		result.value = ''
+		wrongWords.value = []
+	}
+
+	function repeatMistakes() {
+		if (wrongWords.value.length === 0) return
+		store.selectedWords = [...wrongWords.value]
+		store.currentIndex = 0
+		store.currentModeIndex = 0
+		finished.value = false
+		userInput.value = ''
+		usedLetters.value = []
+		result.value = ''
+		wrongWords.value = []
+	}
+
 	onMounted(async () => {
 		await store.loadFromFirebase()
 		store.syncSelectedWordsProgress()
+
 		let mode = route.query.mode
 		selectedModes.value = Array.isArray(mode) ? mode : [mode]
+		allWords.value = [...store.selectedWords]
 		sessionWords.value = store.selectedWords.filter(w => {
 			const isLearned = selectedModes.value.every(m => w.progress?.[m] === true)
 			return !isLearned
 		})
-
-		if (store.currentIndex >= sessionWords.value.length) store.currentIndex = 0
+		store.selectedWords = sessionWords.value.length > 0
+			? [...sessionWords.value]
+			: [...allWords.value]
+		if (store.currentIndex >= store.selectedWords.length) store.currentIndex = 0
 		if (store.currentModeIndex >= selectedModes.value.length) store.currentModeIndex = 0
+		if (route.query.topic) {
+			topicTitle.value = route.query.topic;
+		}
 		isReady.value = true
 	})
 
@@ -201,21 +263,30 @@
 	.session__wrapper {
 		max-width: 1000px;
 		margin: 60px auto;
-		/*background: linear-gradient(145deg, #4a2e12, #2d1a0c);*/
 		border-radius: 18px;
-		/*box-shadow: inset 0 0 0 2px #c5a36a, 0 4px 12px #00000066;*/
 		padding: 40px 28px;
 		min-height: 420px;
 		color: #f4e6cf;
-		font-family: 'Uncial Antiqua', cursive;
-		/*border: 3px solid #c8a257;*/
-		/*background-image: repeating-linear-gradient(*/
-		/*	135deg,*/
-		/*	#3a220f,*/
-		/*	#3a220f 8px,*/
-		/*	#402612 8px,*/
-		/*	#402612 16px*/
-		/*);*/
+		font-family: 'Montserrat', Arial, sans-serif
+	}
+
+	.session__theme {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 25px;
+	}
+	.session__theme-t {
+		color: black;
+		font-size: 24px;
+	}
+
+	.session__topic {
+		color: black;
+		text-align: center;
+		margin-left: 3px;
+		font-weight: bold;
+		font-size: 26px;
 	}
 
 	.progress-line {
@@ -226,7 +297,6 @@
 		font-size: 25px;
 		color: #f5d276;
 		text-shadow: 1px 1px 0 #2e1b05;
-		padding: 20px;
 		font-weight: 600;
 	}
 
@@ -236,11 +306,9 @@
 	}
 
 	.word-block {
+		min-height: 160px;
 		margin-top: 20px;
-		/*background: #5b3717ee;*/
 		border-radius: 14px;
-		/*box-shadow: inset 0 0 4px #d9b169, 0 0 12px #0000003d;*/
-		padding: 28px;
 	}
 
 	.word-question {
@@ -254,7 +322,6 @@
 		margin-bottom: 10px;
 		font-size: 18px;
 		color: #42371c;
-
 	}
 
 	.input {
@@ -324,7 +391,7 @@
 	.answer-result {
 		font-size: 21px;
 		font-weight: bold;
-		margin: 14px 0 0 0;
+		margin: 3px 0 0 0;
 		min-height: 32px;
 		text-shadow: 1px 1px 0 #000;
 	}
@@ -339,7 +406,7 @@
 	}
 
 	.next-btn {
-		margin-top: 22px;
+		margin-top: 1px;
 		background: linear-gradient(90deg, #f9e79d, #c19c4c);
 		color: #3a220f;
 		font-size: 19px;
@@ -385,5 +452,105 @@
 		background: #c9a552;
 		color: #fff;
 	}
+	@media (max-width: 900px) {
+		.session__wrapper {
+			max-width: 97vw;
+			margin: 30px auto;
+			padding: 26px 7vw;
+			min-height: 340px;
+		}
+		.progress-line {
+			font-size: 18px;
+		}
+		.word-question {
+			font-size: 16px;
+		}
+		.input {
+			font-size: 17px;
+			padding: 7px 9px;
+		}
+		.letters button {
+			font-size: 16px;
+			width: 36px;
+			height: 38px;
+		}
+		.audio-btn {
+			font-size: 15px;
+			padding: 7px 12px;
+		}
+		.next-btn, .again-btn, .home-btn {
+			font-size: 16px;
+			padding: 10px 16px;
+			border-radius: 8px;
+		}
+	}
+
+	@media (max-width: 700px) {
+		.session__wrapper {
+			max-width: 100vw;
+			margin: 0;
+			padding: 16px 2vw;
+			min-height: 240px;
+			border-radius: 0;
+		}
+		.session__theme-t {
+			font-size: 17px;
+		}
+		.session__topic {
+			font-size: 19px;
+		}
+		.progress-line {
+			font-size: 15px;
+			flex-direction: column;
+			gap: 4px;
+		}
+		.word-block {
+			min-height: 90px;
+			margin-top: 12px;
+			border-radius: 8px;
+		}
+		.word-question {
+			font-size: 13px;
+			margin-bottom: 9px;
+		}
+		.mode-exercise p {
+			font-size: 13px;
+			margin-bottom: 7px;
+		}
+		.input {
+			font-size: 15px;
+			padding: 6px 6px;
+			border-radius: 4px;
+		}
+		.letters {
+			gap: 4px;
+		}
+		.letters button {
+			font-size: 13px;
+			width: 27px;
+			height: 29px;
+			border-radius: 4px;
+			padding: 0;
+		}
+		.audio-btn {
+			font-size: 13px;
+			padding: 5px 8px;
+			border-radius: 6px;
+		}
+		.answer-result {
+			font-size: 15px;
+			min-height: 22px;
+		}
+		.next-btn, .again-btn, .home-btn {
+			font-size: 14px;
+			padding: 8px 10px;
+			border-radius: 7px;
+			margin: 10px 4px 0 0;
+		}
+		.finish-block {
+			margin-top: 30px;
+		}
+	}
+
 </style>
 

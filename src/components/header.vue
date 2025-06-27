@@ -2,19 +2,38 @@
 	<header class="header">
 		<Uioverlay :visible="showAuth" @close="closeAuth"/>
 		<transition name="slide">
-			<SignIn v-if="showAuth"/>
+			<SignIn v-if="showAuth" @close-auth-form="closeAuth"/>
 		</transition>
 		<div class="header-nav__bar">
-			<h1 class="header-nav__logo">DerDieDas</h1>
-			<nav ref="dropdownRefNav" class="header-nav__nav">
+			<div class="header-nav__logo">
+				<NuxtLink to="/">
+					<img class="logo" src="../../assets/images/3dLogo.png" alt="">
+				</NuxtLink>
+			</div>
+			<button class="burger-button">
+				<BurgerMenu :modelValue="isMobileMenuOpen" @update:modelValue="toggleMobileMenu"/>
+			</button>
+			<nav
+				ref="dropdownRefNav"
+				class="header-nav__nav"
+				:class="{
+          'header-nav__nav--open': isMobileMenuOpen,
+          'header-nav__nav--animating': animatingMenu
+        }"
+			>
 				<ul class="header-nav__list">
 					<li
-						v-for="item in data"
+						v-for="item in menuItems"
 						:key="item.id"
 						class="header-nav__item"
 						@click="toggleSubmenu(item.id)"
 					>
-						<a :href="item.url || '#'" class="header-nav__link">{{ item.value }}</a>
+						<template v-if="item.children">
+							<span class="header-nav__link">{{ t(item.valueKey) }}</span>
+						</template>
+						<template v-else>
+							<NuxtLink :to="item.url" class="header-nav__link">{{ t(item.valueKey) }}</NuxtLink>
+						</template>
 						<img
 							v-if="item.icon"
 							:class="['header-nav__arrow', { 'header-nav__arrow--active': clickedMenu === item.id }]"
@@ -23,7 +42,8 @@
 						>
 						<ul v-if="item.children && clickedMenu === item.id" class="header-nav__submenu">
 							<li v-for="child in item.children" :key="child.id" class="header-nav__submenu-item">
-								<NuxtLink :to="`${child.url}`" class="header-nav__submenu-link">{{ child.value }}
+								<NuxtLink :to="child.url" class="header-nav__submenu-link">
+									{{ t(child.valueKey) }}
 								</NuxtLink>
 							</li>
 						</ul>
@@ -32,6 +52,10 @@
 			</nav>
 			<div class="header-nav__tea">
 				<ForTea/>
+			</div>
+			<div class="articlus__wrapper">
+				<img class="articlus" src="../../assets/images/articlus.png" alt="">
+				<div class="articlus__counter">{{ learningStore.points }}</div>
 			</div>
 			<div class="header-nav__lang">
 				<LanguageSelector/>
@@ -42,7 +66,7 @@
 				class="header-nav__user"
 				@click="toggleMenu"
 			>
-				<img class="header-nav__avatar" :src="avatar" alt="User avatar"/>
+				<img class="header-nav__avatar" :src="userAuth.avatarUrl" alt="User avatar"/>
 				<span class="header-nav__email">{{ userAuth.email }}</span>
 				<img
 					:class="['header-nav__arrow', { 'header-nav__arrow--active': menuOpen }]"
@@ -57,7 +81,7 @@
 						@click.stop="item.action"
 					>
 						<img class="header-nav__dropdown-icon" :src="item.icon" alt="">
-						<span>{{ item.label }}</span>
+						<span class="header__drop-text">{{ item.label }}</span>
 					</button>
 				</div>
 			</div>
@@ -65,22 +89,31 @@
 				v-else
 				class="header-nav__login"
 				@click="openAuth"
-			>Войти
+			>
+				{{ t('auth.logIn') }}
 			</button>
 		</div>
 	</header>
 </template>
 
-
 <script setup>
+	import LogIn from '../../assets/images/log-in.svg'
 	import {ref, watch, onMounted, onBeforeUnmount} from 'vue'
 	import {useRouter} from 'vue-router'
-	import {userAuthStore} from '../../store/authStore'
+	import {useI18n} from 'vue-i18n'
+
+	const {t} = useI18n()
+	import {userAuthStore} from '../../store/authStore.js'
+	import {userlangStore} from '../../store/learningStore.js'
+	import {useBreakPointsStore} from '../../store/breakPointsStore.js'
+    const learningStore = userlangStore()
+	const bp = useBreakPointsStore()
 	import SignIn from '../components/logIn.vue'
 	import LanguageSelector from '../components/langSwitcher.vue'
+	import ForTea from '../components/forTea.vue'
+	import BurgerMenu from '../components/burgerMenu.vue'
 	import Uioverlay from '../components/Uioverlay.vue'
 	import Arrow from '../../assets/images/arrowNav.svg'
-	import ForTea from '../components/forTea'
 	import avatar from '../../assets/images/avatar.svg'
 	import Logout from '../../assets/images/logout.svg'
 	import User from '../../assets/images/user.svg'
@@ -92,36 +125,76 @@
 	const menuOpen = ref(false)
 	const dropdownRef = ref(null)
 	const dropdownRefNav = ref(null)
-	const data = ref([
+
+	const isMobileMenuOpen = ref(false)
+	const animatingMenu = ref(false)
+	let openTimeout = null
+	let closeTimeout = null
+
+	const openMobileMenu = () => {
+		animatingMenu.value = true
+		clearTimeout(openTimeout)
+		openTimeout = setTimeout(() => {
+			isMobileMenuOpen.value = true
+		}, 120)
+	}
+
+	const closeAuth = () => {
+		showAuth.value = false
+	}
+
+	const closeMobileMenu = () => {
+		isMobileMenuOpen.value = false
+		clearTimeout(closeTimeout)
+		closeTimeout = setTimeout(() => {
+			animatingMenu.value = false
+		}, 400)
+	}
+	const toggleMobileMenu = () => {
+		if (!isMobileMenuOpen.value && !animatingMenu.value) openMobileMenu()
+		else if (isMobileMenuOpen.value) closeMobileMenu()
+	}
+
+	const menuItems = [
 		{
 			id: 'learn',
-			url: '',
-			value: 'Обучение',
+			valueKey: 'nav.training',
 			icon: Arrow,
 			children: [
-				{
-					id: 'tips',
-					url: 'examples',
-					value: 'Введение'
-				},
-				{
-					id: 'examples',
-					url: 'examples',
-					value: 'Правила'
-				},
-				{
-					id: 'selectedTopics',
-					url: 'selectedTopics',
-					value: 'Практика артиклей'
-				}
+				{id: 'learn-tips', url: 'examples', valueKey: 'sub.prev'},
+				{id: 'learn-rules', url: 'rules', valueKey: 'sub.rules'},
+				{id: 'learn-selectedTopics', url: 'selectedTopics', valueKey: 'sub.artRules'},
+				{id: 'cards', url: 'createCards', valueKey: 'sub.card'},
+				{id: 'themen', url: 'choiceTheme', valueKey: 'sub.themen'}
 			]
 		},
 		{
 			id: 'duel',
-			url: 'duel',
-			value: 'Игровой режим'
+			valueKey: 'nav.gameMode',
+			icon: Arrow,
+			children: [
+				{id: 'duel-pvp', url: 'duel', valueKey: 'nav.pvp'},
+				{id: 'duel-guess', url: 'guess', valueKey: 'nav.guess'},
+				{id: 'prepare', url: 'prepare', valueKey: 'nav.marathon'},
+				{id: 'vocabulary', url: 'vocabulary', valueKey: 'nav.sinonim'}
+			]
 		},
-	])
+		{
+			id: 'achieve',
+			url: 'achievmentsPage',
+			valueKey: 'nav.achieve'
+		},
+		{
+			id: 'about',
+			url: 'about',
+			valueKey: 'nav.about'
+		},
+		{
+			id: 'stats',
+			url: 'stats',
+			valueKey: 'nav.stats'
+		}
+	]
 
 	const menuActions = ref([
 		{
@@ -141,35 +214,27 @@
 	const toggleMenu = () => {
 		menuOpen.value = !menuOpen.value
 	}
-
 	const toggleSubmenu = (id) => {
 		clickedMenu.value = clickedMenu.value === id ? null : id
 	}
-
 	const goTo = (page) => {
 		menuOpen.value = false
-		router.push(`/${page}`)
+		router.push({path: `/${page}`})
 	}
-
 	const openAuth = () => showAuth.value = true
-	const closeAuth = () => showAuth.value = false
-
 	const startLearning = () => {
 		userAuth.name ? router.push('/selectedTopics') : openAuth()
 	}
-
 	const handleClickOutside = (event) => {
 		if (menuOpen.value && dropdownRef.value && !dropdownRef.value.contains(event.target)) {
 			menuOpen.value = false
 		}
 	}
-
 	const handleClickOutsideNav = (event) => {
 		if (clickedMenu.value && dropdownRefNav.value && !dropdownRefNav.value.contains(event.target)) {
 			clickedMenu.value = null
 		}
 	}
-
 	onMounted(() => {
 		document.addEventListener('mousedown', handleClickOutside)
 		document.addEventListener('mousedown', handleClickOutsideNav)
@@ -177,17 +242,15 @@
 	onBeforeUnmount(() => {
 		document.removeEventListener('mousedown', handleClickOutside)
 		document.removeEventListener('mousedown', handleClickOutsideNav)
+		clearTimeout(openTimeout)
+		clearTimeout(closeTimeout)
 	})
-
 	watch(showAuth, (val) => {
 		document.body.style.overflow = val ? 'hidden' : ''
 	})
-
 </script>
 
 <style scoped>
-	/*@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');*/
-
 	.header {
 		font-family: 'Inter', sans-serif;
 		position: sticky;
@@ -195,13 +258,36 @@
 		z-index: 10;
 	}
 
+	.articlus {
+		width: 50px;
+		height: 42px;
+	}
+
+	.articlus__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: end;
+		margin-left: auto;
+		padding: 20px;
+	}
+
+	.logo {
+		width: 80px;
+		cursor: pointer;
+	}
+
+	.login-icon {
+		width: 30px;
+	}
+
 	.header-nav__bar {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 15px 30px;
+		padding: 10px 20px;
 		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
-		background-color: #3629af;
+		background-color: #efeff3;
+		/*background: #402404b;*/
 		position: relative;
 		z-index: 10;
 	}
@@ -223,30 +309,36 @@
 	}
 
 	.header-nav__item {
+		position: relative;
+		justify-content: space-between;
 		display: flex;
+		min-width: 146px;
 		align-items: center;
-		background: linear-gradient(90deg, #366cff 60%, #4c88ff 100%);
-		color: #fff;
+		/*background: linear-gradient(90deg, #366cff 60%, #4c88ff 100%);*/
+		background: #a2a6bf;
+		/*background: linear-gradient(90deg, #36b9ff 60%, #67c7d8 100%);*/
+		color: black;
 		border-radius: 14px 30px 14px 30px / 30px 14px 30px 14px;
 		box-shadow: 0 2px 8px 0 #15235e44;
 		cursor: pointer;
 		font-weight: 700;
 		font-size: 17px;
 		letter-spacing: 0.06em;
-		text-shadow: 0 1px 2px #26358580;
+		/*text-shadow: 0 1px 2px #26358580;*/
 		transition: transform 0.12s, box-shadow 0.12s, background 0.12s;
 		margin-bottom: 0;
 		margin-right: 15px;
 	}
 
 	.header-nav__item:hover {
-		background: linear-gradient(90deg, #4c88ff 60%, #366cff 100%);
+		/*background: linear-gradient(90deg, #4c88ff 60%, #366cff 100%);*/
+		background: #7d85b8;
 		box-shadow: 0 4px 16px 0 #15235e77;
 	}
 
 	.header-nav__link {
 		color: #fff;
-		padding: 12px 20px;
+		padding: 12px;
 		text-decoration: none;
 		font-style: italic;
 	}
@@ -263,15 +355,25 @@
 	}
 
 	.header-nav__submenu {
+		width: 100%;
 		overflow: hidden;
 		margin-top: 10px;
 		position: absolute;
 		top: 100%;
 		left: 0;
+		font-size: 15px;
 		background: linear-gradient(90deg, #366cff 60%, #4c88ff 100%);
+		background: #a2a6bf;
 		border-radius: 14px 30px 14px 30px / 30px 14px 30px 14px;
-		min-width: 160px;
+		min-width: 190px;
 		z-index: 50;
+	}
+
+	.articlus__counter {
+		color: black;
+		font-size: 26px;
+		font-family: "Montserrat", Arial, Helvetica, sans-serif;
+		font-weight: 600;
 	}
 
 	.header-nav__submenu-item {
@@ -291,16 +393,12 @@
 	}
 
 	.header-nav__submenu-item:hover {
-		background: rgba(255,255,255,0.15);
+		background: rgba(48, 67, 160, 0.15);
 		color: #fff3ec;
 	}
 
-	.header-nav__tea {
-		margin-left: auto;
-	}
 
 	.header-nav__lang {
-		margin-left: auto;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -317,9 +415,7 @@
 		width: 250px;
 		padding: 8px 20px 8px 12px;
 		border-radius: 22px 30px 18px 30px / 30px 18px 30px 18px;
-		background: linear-gradient(90deg, #a1d2ff 0%, #bda6ff 100%);
 		box-shadow: 0 2px 18px #7e60dd24, 0 1px 6px #fff8 inset;
-		border: 2px solid #a48ae7;
 		margin-left: 22px;
 		user-select: none;
 	}
@@ -351,7 +447,6 @@
 		top: 100%;
 		right: 0;
 		background: linear-gradient(120deg, #fafaff 60%, #e4e2ff 100%);
-		border: 2px solid #a48ae7;
 		border-radius: 18px 26px 22px 28px / 30px 18px 30px 18px;
 		margin-top: 0.5rem;
 		box-shadow: 0 6px 32px #a193e833, 0 1px 8px #fff8 inset;
@@ -397,28 +492,146 @@
 	}
 
 	.header-nav__login {
-		background: linear-gradient(90deg, #366cff 60%, #4c88ff 100%);
-		color: #fff;
+		/*min-width: 160px;*/
+		/*background: linear-gradient(90deg, #366cff 60%, #4c88ff 100%);*/
+		background: #c25f5f;
+		color: white;
 		font-weight: 800;
-		font-size: 18px;
-		padding: 11px 34px;
+		font-size: 17px;
+		padding: 12px 20px;
 		border-radius: 14px 30px 14px 30px / 30px 14px 30px 14px;
 		box-shadow: 0 4px 18px #15235e35, 0 1px 4px #fff8 inset;
 		cursor: pointer;
 		letter-spacing: 0.06em;
 		text-shadow: 0 1px 4px #26358588, 0 0px 1px #fff8;
-		border: 2px solid #6c76ff;
+		/*border: 2px solid #6c76ff;*/
+		border: 3px solid #c64f4f;
 		transition: background 0.15s, color 0.15s, box-shadow 0.18s, transform 0.1s;
 		transform: skew(-8deg);
 		margin-left: 20px;
 	}
 
 	.header-nav__login:hover {
-		background: linear-gradient(90deg, #6cbcff 60%, #2462ff 100%);
+		/*background: linear-gradient(90deg, #6cbcff 60%, #2462ff 100%);*/
+		background: #933838;
 		color: #fff3ec;
-		box-shadow: 0 8px 24px #2737b1aa, 0 2px 6px #fff8 inset;
-		transform: skew(-8deg) scale(1.04);
+		/*box-shadow: 0 8px 24px rgba(83, 28, 82, 0.67), 0 2px 6px #fff8 inset;*/
 	}
 
+	.burger-button {
+		display: none;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 30px;
+		height: 22px;
+		background: transparent;
+		border: none;
+		cursor: pointer;
+		padding: 0;
+		margin-left: 15px;
+	}
+
+	.burger-line {
+		height: 4px;
+		background-color: #472b81;
+		border-radius: 2px;
+	}
+
+	@media (max-width: 768px) {
+		.burger-button {
+			display: flex;
+		}
+
+		.header-nav__email,
+		.header__drop-text {
+			display: none;
+		}
+
+		.header-nav__user {
+			width: 120px;
+		}
+
+		.header-nav__dropdown {
+			min-width: 100%;
+			width: 100%;
+		}
+
+		.header-nav__nav {
+			display: flex;
+			flex-direction: column;
+			position: fixed;
+			top: 0px;
+			left: 0;
+			width: 100vw;
+			padding: 24px 0 0 0;
+			background: #efeff3;
+			z-index: -1;
+			pointer-events: none;
+			opacity: 0;
+			transform: translateY(-100%);
+			transition: transform 0.4s cubic-bezier(.77, 0, .18, 1), opacity 0.3s;
+		}
+
+		.header-nav__nav--animating {
+			pointer-events: auto;
+		}
+
+		.header-nav__nav--open {
+			opacity: 1;
+			transform: translateY(0);
+			pointer-events: auto;
+			border-bottom-right-radius: 30px;
+			border-bottom-left-radius: 30px;
+			border-bottom: 2px solid #acacea;
+		}
+
+		.header-nav__list {
+			flex-direction: column;
+			width: 100%;
+			align-items: start;
+			margin-top: 45px;
+			justify-content: start;
+			padding: 10px 10px 30px 10px;
+		}
+
+		.header-nav__item {
+			margin-right: 0;
+			margin-bottom: 10px;
+		}
+
+		.header-nav__submenu-item {
+			text-align: center;
+			padding: 5px 0;
+		}
+
+		.header-nav__submenu {
+			top: 0;
+			left: 100%;
+			margin: 0;
+			min-width: 140px;
+		}
+
+		.header-nav__arrow {
+			transform: rotate(-90deg);
+		}
+
+		.header-nav__arrow--active {
+			transform: rotate(0deg);
+		}
+	}
+
+	@media (max-width: 1280px) {
+		.header-nav__logo {
+			display: none;
+		}
+
+		.header-nav__login {
+			background: none;
+			border: none;
+			box-shadow: none;
+			margin: 0;
+			padding: 5px;
+		}
+	}
 
 </style>

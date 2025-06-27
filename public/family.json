@@ -1,0 +1,171 @@
+{
+	"id": "family",
+	"title": "Family",
+	"levels": [
+		{
+			"level": 1,
+			"modules": [
+				{
+					"id": 1,
+					"tasks": [
+						{ "question": "___ Vater ist nett.", "word": "Vater", "answer": "der" },
+						{ "question": "___ Mutter ist freundlich.", "word": "Mutter", "answer": "die" },
+						{ "question": "___ Kind spielt.", "word": "Kind", "answer": "das" },
+						{ "question": "___ Bruder ist jung.", "word": "Bruder", "answer": "der" },
+						{ "question": "___ Schwester ist klug.", "word": "Schwester", "answer": "die" }
+					]
+				},
+				{
+					"id": 2,
+					"tasks": [
+						{ "question": "___ Großvater liest.", "word": "Großvater", "answer": "der" },
+						{ "question": "___ Großmutter kocht.", "word": "Großmutter", "answer": "die" },
+						{ "question": "___ Onkel kommt zu Besuch.", "word": "Onkel", "answer": "der" },
+						{ "question": "___ Tante singt.", "word": "Tante", "answer": "die" },
+						{ "question": "___ Cousin spielt Fußball.", "word": "Cousin", "answer": "der" }
+					]
+				},
+				{
+					"id": 3,
+					"tasks": [
+						{ "question": "___ Cousine tanzt gern.", "word": "Cousine", "answer": "die" },
+						{ "question": "___ Sohn lernt.", "word": "Sohn", "answer": "der" },
+						{ "question": "___ Tochter malt.", "word": "Tochter", "answer": "die" },
+						{ "question": "___ Eltern arbeiten.", "word": "Eltern", "answer": "die" },
+						{ "question": "___ Geschwister streiten.", "word": "Geschwister", "answer": "die" }
+					]
+				},
+				{
+					"id": 4,
+					"tasks": [
+						{ "question": "___ Ehemann liest Zeitung.", "word": "Ehemann", "answer": "der" },
+						{ "question": "___ Ehefrau kocht Kaffee.", "word": "Ehefrau", "answer": "die" },
+						{ "question": "___ Neffe spielt im Garten.", "word": "Neffe", "answer": "der" },
+						{ "question": "___ Nichte liest ein Buch.", "word": "Nichte", "answer": "die" },
+						{ "question": "___ Familie ist groß.", "word": "Familie", "answer": "die" }
+					]
+				},
+				{
+					"id": 5,
+					"tasks": [
+						{ "question": "___ Schwiegervater schläft.", "word": "Schwiegervater", "answer": "der" },
+						{ "question": "___ Schwiegermutter lacht.", "word": "Schwiegermutter", "answer": "die" },
+						{ "question": "___ Schwiegersohn hilft.", "word": "Schwiegersohn", "answer": "der" },
+						{ "question": "___ Schwiegertochter lernt Deutsch.", "word": "Schwiegertochter", "answer": "die" },
+						{ "question": "___ Partner arbeitet.", "word": "Partner", "answer": "der" }
+					]
+				}
+			]
+		},
+		{
+			"level": 2,
+			"modules": [
+				{
+					"id": 1,
+					"tasks": [
+						{ "question": "Ich besuche ___ Vater jeden Sonntag.", "word": "Vater", "answer": "den" },
+						{ "question": "Sie ruft ___ Mutter an.", "word": "Mutter", "answer": "die" },
+						{ "question": "Wir holen ___ Kind vom Kindergarten ab.", "word": "Kind", "answer": "das" },
+						{ "question": "Er sieht ___ Bruder im Park.", "word": "Bruder", "answer": "den" },
+						{ "question": "Ich helfe ___ Schwester bei den Hausaufgaben.", "word": "Schwester", "answer": "der" }
+					]
+				},
+				{
+					"id": 2,
+					"tasks": [
+						{ "question": "Wir besuchen ___ Großvater im Krankenhaus.", "word": "Großvater", "answer": "den" },
+						{ "question": "Sie gibt ___ Großmutter Blumen.", "word": "Großmutter", "answer": "der" },
+						{ "question": "Ich schenke ___ Onkel ein Buch.", "word": "Onkel", "answer": "dem" },
+						{ "question": "Sie sieht ___ Tante oft.", "word": "Tante", "answer": "die" },
+						{ "question": "Er trifft ___ Cousin am Bahnhof.", "word": "Cousin", "answer": "den" }
+					]
+				},
+				{
+					"id": 3,
+					"tasks": [
+						{ "question": "Ich telefoniere mit ___ Cousine.", "word": "Cousine", "answer": "der" },
+						{ "question": "Wir loben ___ Sohn für seine Noten.", "word": "Sohn", "answer": "den" },
+						{ "question": "Sie sieht ___ Tochter in der Schule.", "word": "Tochter", "answer": "die" },
+						{ "question": "Ich besuche ___ Eltern oft.", "word": "Eltern", "answer": "die" },
+						{ "question": "Sie versteht ___ Geschwister gut.", "word": "Geschwister", "answer": "die" }
+					]
+				},
+				{
+					"id": 4,
+					"tasks": [
+						{ "question": "Er ruft ___ Ehemann an.", "word": "Ehemann", "answer": "den" },
+						{ "question": "Sie umarmt ___ Ehefrau.", "word": "Ehefrau", "answer": "die" },
+						{ "question": "Wir holen ___ Neffe vom Zug ab.", "word": "Neffe", "answer": "den" },
+						{ "question": "Sie trifft ___ Nichte nach der Schule.", "word": "Nichte", "answer": "die" },
+						{ "question": "Er besucht ___ Familie in Berlin.", "word": "Familie", "answer": "die" }
+					]
+				},
+				{
+					"id": 5,
+					"tasks": [
+						{ "question": "Sie schenkt ___ Schwiegervater einen Schal.", "word": "Schwiegervater", "answer": "dem" },
+						{ "question": "Er hilft ___ Schwiegermutter im Garten.", "word": "Schwiegermutter", "answer": "der" },
+						{ "question": "Wir loben ___ Schwiegersohn für seine Arbeit.", "word": "Schwiegersohn", "answer": "den" },
+						{ "question": "Sie sieht ___ Schwiegertochter im Büro.", "word": "Schwiegertochter", "answer": "die" },
+						{ "question": "Ich spreche mit ___ Partner über das Problem.", "word": "Partner", "answer": "dem" }
+					]
+				}
+			]
+		},
+		{
+			"level": 3,
+			"modules": [
+				{
+					"id": 1,
+					"tasks": [
+						{ "question": "Die Tasche ___ Vaters ist blau.", "word": "Vater", "answer": "des" },
+						{ "question": "Das Auto ___ Mutter ist rot.", "word": "Mutter", "answer": "der" },
+						{ "question": "Das Zimmer ___ Kindes ist groß.", "word": "Kind", "answer": "des" },
+						{ "question": "Das Hobby ___ Bruders ist Musik.", "word": "Bruder", "answer": "des" },
+						{ "question": "Das Buch ___ Schwester ist spannend.", "word": "Schwester", "answer": "der" }
+					]
+				},
+				{
+					"id": 2,
+					"tasks": [
+						{ "question": "Das Haus ___ Großvaters ist alt.", "word": "Großvater", "answer": "des" },
+						{ "question": "Die Brille ___ Großmutter ist neu.", "word": "Großmutter", "answer": "der" },
+						{ "question": "Das Geschenk ___ Onkels ist schön.", "word": "Onkel", "answer": "des" },
+						{ "question": "Die Stimme ___ Tante ist laut.", "word": "Tante", "answer": "der" },
+						{ "question": "Der Ball ___ Cousins ist grün.", "word": "Cousin", "answer": "des" }
+					]
+				},
+				{
+					"id": 3,
+					"tasks": [
+						{ "question": "Der Hund ___ Cousine ist klein.", "word": "Cousine", "answer": "der" },
+						{ "question": "Der Freund ___ Sohnes ist lustig.", "word": "Sohn", "answer": "des" },
+						{ "question": "Die Lehrerin ___ Tochter ist nett.", "word": "Tochter", "answer": "der" },
+						{ "question": "Die Wohnung ___ Eltern ist groß.", "word": "Eltern", "answer": "der" },
+						{ "question": "Das Spielzeug ___ Geschwister ist kaputt.", "word": "Geschwister", "answer": "der" }
+					]
+				},
+				{
+					"id": 4,
+					"tasks": [
+						{ "question": "Das Fahrrad ___ Ehemanns ist alt.", "word": "Ehemann", "answer": "des" },
+						{ "question": "Die Tasche ___ Ehefrau ist teuer.", "word": "Ehefrau", "answer": "der" },
+						{ "question": "Das Geschenk ___ Neffen ist groß.", "word": "Neffe", "answer": "des" },
+						{ "question": "Die Freundin ___ Nichte ist nett.", "word": "Nichte", "answer": "der" },
+						{ "question": "Die Geschichte ___ Familie ist interessant.", "word": "Familie", "answer": "der" }
+					]
+				},
+				{
+					"id": 5,
+					"tasks": [
+						{ "question": "Das Buch ___ Schwiegervaters ist dick.", "word": "Schwiegervater", "answer": "des" },
+						{ "question": "Die Jacke ___ Schwiegermutter ist blau.", "word": "Schwiegermutter", "answer": "der" },
+						{ "question": "Die Arbeit ___ Schwiegersohns ist schwer.", "word": "Schwiegersohn", "answer": "des" },
+						{ "question": "Die Tasche ___ Schwiegertochter ist rot.", "word": "Schwiegertochter", "answer": "der" },
+						{ "question": "Die Hilfe ___ Partners ist wichtig.", "word": "Partner", "answer": "des" }
+					]
+				}
+			]
+		}
+	]
+}

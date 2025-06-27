@@ -1,51 +1,42 @@
-<template>
-	<div ref="dropDownRef" class="language-selector">
-		<button class="language__button" @click="toggleDropdown">
-			<span class="language__name">{{ languages[selectedLanguage].label }}</span>
-			<img class="arrow__lang"
-			     :class="{'scale': dropdownOpen }"
-			     src="../../assets/images/arrowNav.svg" alt="">
-		</button>
-		<div v-if="dropdownOpen" class="dropdown">
-			<div
-				v-for="(lang, code) in languages"
-				:key="code"
-				class="dropdown__item"
-				:class="{ active: selectedLanguage === code }"
-				@click="selectLanguage(code)">
-				<span>{{ lang.label }}</span>
-			</div>
-		</div>
-	</div>
-</template>
-
 <script setup>
-	import {ref, onMounted, onBeforeUnmount} from 'vue'
+	import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
+	const { t, locales, locale, setLocale } = useI18n()
+
+	const dropdownOpen = ref(false)
 	const dropDownRef = ref(null)
-	const languages = {
-		ru: {label: 'Русский'},
-		en: {label: 'English'},
-		uk: {label: 'Українська'}
+	const localeValue = computed(() => locale.value)
+	const dropdownDirection = ref('down')
+	const currentLang = computed(() => {
+		return (locales.value || []).find(l => l.code === locale.value)
+	})
+
+	const updateDropdownDirection = () => {
+		if (!dropDownRef.value) return
+		const rect = dropDownRef.value.getBoundingClientRect()
+		const spaceBelow = window.innerHeight - rect.bottom
+		dropdownDirection.value = spaceBelow < 200 ? 'up' : 'down'
 	}
 
-	const selectedLanguage = ref('ru')
-	const dropdownOpen = ref(false)
-
 	const toggleDropdown = () => {
+		if (!dropdownOpen.value) {
+			updateDropdownDirection()
+		}
 		dropdownOpen.value = !dropdownOpen.value
 	}
 
-
-	const clickOutside = (event) => {
-		if (dropdownOpen.value && dropDownRef.value && !dropDownRef.value.contains(event.target)) {
-			dropdownOpen.value = false
-		}
+	const selectLanguage = async (code) => {
+		await setLocale(code)
+		dropdownOpen.value = false
 	}
 
-	const selectLanguage = (code) => {
-		selectedLanguage.value = code
-		localStorage.setItem('language', code)
-		dropdownOpen.value = false
+	const clickOutside = (event) => {
+		if (
+			dropdownOpen.value &&
+			dropDownRef.value &&
+			!dropDownRef.value.contains(event.target)
+		) {
+			dropdownOpen.value = false
+		}
 	}
 
 	onMounted(() => {
@@ -56,80 +47,139 @@
 		document.removeEventListener('mousedown', clickOutside)
 	})
 
-	onMounted(() => {
-		const savedLanguage = localStorage.getItem('language')
-		if (savedLanguage && languages[savedLanguage]) {
-			selectedLanguage.value = savedLanguage
-		} else {
-			selectedLanguage.value = 'ru'
-			localStorage.setItem('language', 'ru')
-		}
-	})
 </script>
 
+<template>
+	<div ref="dropDownRef" class="language-selector">
+		<button class="language__button" @click="toggleDropdown">
+      <span class="language__name">
+        {{ currentLang?.name || currentLang?.code || '' }}
+      </span>
+			<img src="../../assets/images/arrowDown.svg" alt="" class="arrow" :class="{ open: dropdownOpen }"/>
+		</button>
+		<div v-if="dropdownOpen" class="dropdown" :class="dropdownDirection">
+			<div
+				v-for="loc in locales"
+				:key="loc.code"
+				class="dropdown__item"
+				:class="{ active: loc.code === localeValue }"
+				@click="selectLanguage(loc.code)">
+				{{ loc.name }}
+			</div>
+		</div>
+	</div>
+</template>
 
 <style scoped>
 	.language-selector {
 		position: relative;
 	}
 
+	.language__button {
+		display: flex;
+		align-items: center;
+		/*background: #b2b2b2;*/
+		background: none;
+		border: none;
+		border-radius: 8px;
+		color: #fff;
+		font-weight: bold;
+		font-size: 16px;
+		padding: 8px 16px;
+		cursor: pointer;
+	}
+
+	.dropdown.up {
+		top: auto;
+		bottom: 100%;
+	}
+
 	.language__name {
-		padding: 6px 12px;
+		margin-right: 8px;
 	}
 
-	.arrow__lang {
-		width: 23px;
-		transition: .5s;
+	.dropdown {
+		width: 100%;
+		overflow: hidden;
+		position: absolute;
+		top: 110%;
+		left: 0;
+		background: #7f75d1;
+		border-radius: 8px;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+		z-index: 10;
+		min-width: 140px;
 	}
 
-	.scale {
-		transform: scale(-1);
-		transition: .5s;
+	.dropdown__item {
+		padding: 8px 16px;
+		cursor: pointer;
+		color: #fff;
+		transition: background 0.2s;
+	}
+
+	.dropdown__item.active {
+		background: #5f82f5;
+	}
+
+	.language-selector {
+		position: relative;
 	}
 
 	.language__button {
 		display: flex;
 		align-items: center;
-		background: none;
+		/*background: #b2b2b2;*/
 		border: none;
-		cursor: pointer;
+		/*min-width: 140px;*/
+		border-radius: 8px;
+		color: black;
 		font-weight: bold;
 		font-size: 16px;
-		color: #fbe7c6;
-		text-shadow: 1px 1px 2px #000;
+		padding: 8px 16px;
+		cursor: pointer;
+	}
+
+	.language__name {
+		margin-right: 8px;
+	}
+
+	.arrow {
+		width: 12px;
+		font-size: 16px;
+		transition: transform .5s;
+	}
+
+	.arrow.open {
+		transform: scale(-1);
 	}
 
 	.dropdown {
-		position: absolute;
-		top: 100%;
-		left: 0;
-		background-color: #7f75d1;
-		border-radius: 8px;
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-		margin-top: 6px;
-		z-index: 1000;
+		width: 100%;
 		overflow: hidden;
+		position: absolute;
+		top: 110%;
+		left: 0;
+		background: #b2b2b2;
+		border-radius: 8px;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+		z-index: 10;
+		min-width: 140px;
 	}
 
 	.dropdown__item {
-		display: flex;
-		align-items: center;
-		width: 100%;
-		padding: 8px 12px;
-		background: linear-gradient(to right, #5f82f5, #3b5cd1);
-		border: none;
+		padding: 8px 16px;
 		cursor: pointer;
-		font-weight: bold;
-		color: white;
-		text-shadow: 1px 1px 2px black;
+		color: #fff;
 		transition: background 0.2s;
 	}
 
-	.dropdown__item:hover {
-		background: linear-gradient(to right, #6f92ff, #4b6cff);
+	.dropdown__item.active {
+		background: #5f82f5;
 	}
 
-	.dropdown__item.active {
-		background: linear-gradient(180deg, #82ff7a 10%, #27e500 100%);
+	.dropdown__item:hover {
+		background: #edeef1;
+		color: black;
 	}
 </style>

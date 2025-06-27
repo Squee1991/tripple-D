@@ -150,6 +150,8 @@
 		border-radius: 12px;
 		box-shadow: inset 0 0 20px #000;
 		color: #eee;
+		font-family: 'Inter', sans-serif;
+		font-style: italic;
 	}
 	.topic-select {
 		margin-bottom: 1.5rem;
@@ -188,22 +190,26 @@
 		background: linear-gradient(to right, #3b2c19, #5b442d);
 		color: #f8d369;
 		font-weight: bold;
+
 	}
 	.word-cell {
 		flex: 1;
 		padding: 0.75rem 1rem;
 		text-align: center;
-		font-size: 0.9rem;
+		font-size: 14px;
 	}
 	.word-cell.word-ru {
-		flex: 2;
+		/*flex: 2;*/
 		text-align: left;
 		color: #fff;
+		font-size: 18px;
+		font-style: italic;
 	}
 	.status-cell {
 		font-size: 1.2rem;
 	}
 	.pagination {
+		margin-top: 10px;
 		display: flex;
 		justify-content: center;
 		align-items: center;

@@ -1,14 +1,14 @@
 <template>
 	<section class="features">
 		<div class="features__inner">
-			<h2 class="features__title">Что вас ждёт внутри</h2>
+			<h2 :class="{'s-title': bp.lg}" class="features__title">{{t('features.title')}}</h2>
 			<div class="features__grid">
 				<div class="features__card" v-for="(item, index) in items" :key="index">
 					<div class="features__card-bg"></div>
 					<div class="features__card-content">
 						<img :src="item.src" :alt="item.alt" class="features__icon"/>
-						<h3 class="features__card-title">{{ item.title }}</h3>
-						<p class="features__card-desc">{{ item.description }}</p>
+						<h3 class="features__card-title">{{ t(item.title) }}</h3>
+						<p class="features__card-desc">{{ t(item.description) }}</p>
 					</div>
 				</div>
 			</div>
@@ -16,58 +16,48 @@
 	</section>
 </template>
 
-
 <script setup>
 	import MagikBook from '../../assets/images/magicBook.svg'
 	import Brain from '../../assets/images/brain.svg'
 	import Controller from '../../assets/images/controller.svg'
 	import Cup from '../../assets/images/cubok.svg'
+	import {useBreakPointsStore} from '../../store/breakPointsStore.js'
+	const { t } = useI18n()
+	const bp = useBreakPointsStore()
 	const items = [
 		{
 			src: MagikBook,
 			alt: 'Book',
-			title: '800+ слов',
-			description: 'Выучите более 800 слов и артиклей в удобной системе.',
+			title: 'cardWords.title',
+			description: 'cardWords.sub',
 		},
 		{
 			src: Brain,
 			alt: 'Brain',
-			title: '5 методов обучения',
-			description: 'Подберите подходящий стиль: визуальный, аудиальный, кинестетический — или комбинируйте их.',
+			title: 'cardMethod.title',
+			description: 'cardMethod.sub',
 		},
 		{
 			src: Controller,
 			alt: 'Controller',
-			title: 'Игровые элементы',
-			description: 'Зарабатывайте очки, проходите уровни, применяйте геймификацию для ускоренного прогресса.',
+			title: 'gameCard.title',
+			description: 'gameCard.sub',
 		},
 		{
 			src: Cup,
 			alt: 'Cup',
-			title: 'Система достижений',
-			description: 'Прокачивайтесь, получайте награды и открывайте новые возможности по мере обучения.',
+			title: 'achievCard.title',
+			description: 'achievCard.sub',
 		},
-		{
-			src: Cup,
-			alt: 'Cup',
-			title: 'Правила',
-			description: 'Учите быстре ознакомивший с простыми правилами изучения.',
-		},
-		{
-			src: Cup,
-			alt: 'Cup',
-			title: 'Упражнения',
-			description: 'Закрепи полученные знания на практике. Выполняй упражнения',
-		},
+
 	]
 </script>
 
 
 <style scoped>
-	@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
 
 	.features {
-		background: linear-gradient(135deg, #fcf6e6 0%, #edeaff 100%);
+		background: #fdfaf3;
 		padding: 80px 20px;
 		display: flex;
 		justify-content: center;
@@ -85,13 +75,13 @@
 		font-size: 42px;
 		font-family: 'Montserrat', Arial, sans-serif;
 		font-weight: bold;
-		color: #fcdf8a;
+		color: #5a5340;
 		letter-spacing: 0.03em;
-		text-shadow: 0 2px 18px #87601585,
-		0 1px 0 #fff,
-		0 0px 2px #fff3,
-		1px 2px 0 #a6752baa;
-		filter: drop-shadow(0 2px 10px #7c4c09cc);
+
+	}
+
+	.s-title {
+		font-size: 20px;
 	}
 
 	.features__grid {
@@ -118,23 +108,16 @@
 		position: absolute;
 		width: 100%;
 		height: 100%;
-		background: linear-gradient(120deg, #fff9e6 20%, #ede7fe 80%);
-		border-radius: 122px 32px 252px 32px / 34px 24px 34px 50px;
-		border: 3.5px solid #dec2ff88;
-		box-shadow: 0 10px 40px 0 #dfd1ff80,
-		0 2px 12px 0 #b58bff24,
-		0 0 0 4px #fff3 inset;
+		background: #fffef9; /* простой светлый фон карточки */
+		border-radius: 16px; /* можно 16-20-24px, как хочешь */ /* светлая рамка, в твоём стиле */
+		box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* простая тень */
 		z-index: 0;
-		transition: transform 0.55s cubic-bezier(.35, 1.7, .44, .96),
-		box-shadow 0.55s cubic-bezier(.35, 1.7, .44, .96);
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
 	}
 
 	.features__card:hover .features__card-bg {
 		transform: perspective(900px) translateY(-6%) rotateX(19deg) scale(1.04);
-		box-shadow: 0 28px 64px -6px #9677ef44,
-		0 8px 32px #fff3,
-		0 0 0 7px #f4e6ffa1 inset;
-		border-color: #a685f1;
+		box-shadow: 0 8px 18px rgba(0,0,0,0.15);
 	}
 
 	.features__card-content {
@@ -172,6 +155,7 @@
 		font-family: "Cinzel", serif;
 		font-size: 21px;
 		font-weight: 700;
+		height: 57px;
 		color: #7c3aed;
 		margin-bottom: 8px;
 		text-shadow: 0 2px 8px #dfcaff40,
@@ -185,7 +169,7 @@
 		font-size: 16px;
 		color: #715921;
 		border-radius: 12px;
-		box-shadow: 0 2px 18px #fff5 inset;
+		/*box-shadow: 0 2px 18px #fff5 inset;*/
 		line-height: 1.6;
 		min-height: 150px;
 		padding: 14px 10px 8px 10px;
@@ -219,9 +203,6 @@
 	}
 
 	@media (max-width: 700px) {
-		.features__title {
-			font-size: 26px;
-		}
 
 		.features__grid {
 			flex-direction: column;
@@ -231,9 +212,14 @@
 		.features__card {
 			width: 100%;
 			min-width: 0;
-			height: 210px;
 			margin: 0 auto;
 		}
+
+		.features__title {
+			font-size: 22px;
+			margin-bottom: 20px;
+		}
+
 	}
 
 </style>

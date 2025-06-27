@@ -647,13 +647,12 @@
 
 	@media (max-width: 900px) {
 		.match-layout {
-			flex-direction: column;
+			flex-direction: column-reverse;
 			gap: 10px;
 			padding: 4px;
 		}
 
 		.left-panel, .right-panel {
-			flex: 0 0 80px;
 			min-width: 0;
 			max-width: none;
 			height: auto;
@@ -664,6 +663,12 @@
 			min-width: 0;
 			height: 240px;
 			flex: 1 1 0%;
+		}
+
+		.left-panel {
+			display: none;
+			position: relative;
+			z-index: 10000;
 		}
 	}
 

@@ -1,0 +1,171 @@
+{
+	"id": "food",
+	"title": "Essen",
+	"levels": [
+		{
+			"level": 1,
+			"modules": [
+				{
+					"id": 1,
+					"tasks": [
+						{ "question": "___ Apfel ist rot.", "word": "Apfel", "answer": "der" },
+						{ "question": "___ Banane ist gelb.", "word": "Banane", "answer": "die" },
+						{ "question": "___ Brot ist frisch.", "word": "Brot", "answer": "das" },
+						{ "question": "___ Käse ist lecker.", "word": "Käse", "answer": "der" },
+						{ "question": "___ Milch ist kalt.", "word": "Milch", "answer": "die" }
+					]
+				},
+				{
+					"id": 2,
+					"tasks": [
+						{ "question": "___ Suppe ist warm.", "word": "Suppe", "answer": "die" },
+						{ "question": "___ Ei ist gekocht.", "word": "Ei", "answer": "das" },
+						{ "question": "___ Fisch ist frisch.", "word": "Fisch", "answer": "der" },
+						{ "question": "___ Wurst ist scharf.", "word": "Wurst", "answer": "die" },
+						{ "question": "___ Wasser ist klar.", "word": "Wasser", "answer": "das" }
+					]
+				},
+				{
+					"id": 3,
+					"tasks": [
+						{ "question": "___ Tomate ist reif.", "word": "Tomate", "answer": "die" },
+						{ "question": "___ Reis ist weiß.", "word": "Reis", "answer": "der" },
+						{ "question": "___ Butter ist weich.", "word": "Butter", "answer": "die" },
+						{ "question": "___ Saft ist süß.", "word": "Saft", "answer": "der" },
+						{ "question": "___ Salz ist fein.", "word": "Salz", "answer": "das" }
+					]
+				},
+				{
+					"id": 4,
+					"tasks": [
+						{ "question": "___ Joghurt ist gesund.", "word": "Joghurt", "answer": "der" },
+						{ "question": "___ Schokolade ist dunkel.", "word": "Schokolade", "answer": "die" },
+						{ "question": "___ Gemüse ist frisch.", "word": "Gemüse", "answer": "das" },
+						{ "question": "___ Kuchen ist süß.", "word": "Kuchen", "answer": "der" },
+						{ "question": "___ Marmelade ist rot.", "word": "Marmelade", "answer": "die" }
+					]
+				},
+				{
+					"id": 5,
+					"tasks": [
+						{ "question": "___ Obst ist gesund.", "word": "Obst", "answer": "das" },
+						{ "question": "___ Kaffee ist heiß.", "word": "Kaffee", "answer": "der" },
+						{ "question": "___ Pizza ist rund.", "word": "Pizza", "answer": "die" },
+						{ "question": "___ Steak ist saftig.", "word": "Steak", "answer": "das" },
+						{ "question": "___ Tee ist grün.", "word": "Tee", "answer": "der" }
+					]
+				}
+			]
+		},
+		{
+			"level": 2,
+			"modules": [
+				{
+					"id": 1,
+					"tasks": [
+						{ "question": "Ich esse ___ Apfel.", "word": "Apfel", "answer": "den" },
+						{ "question": "Sie schält ___ Banane.", "word": "Banane", "answer": "die" },
+						{ "question": "Er schneidet ___ Brot.", "word": "Brot", "answer": "das" },
+						{ "question": "Wir kaufen ___ Käse.", "word": "Käse", "answer": "den" },
+						{ "question": "Sie trinkt ___ Milch.", "word": "Milch", "answer": "die" }
+					]
+				},
+				{
+					"id": 2,
+					"tasks": [
+						{ "question": "Wir löffeln ___ Suppe.", "word": "Suppe", "answer": "die" },
+						{ "question": "Ich koche ___ Ei.", "word": "Ei", "answer": "das" },
+						{ "question": "Er grillt ___ Fisch.", "word": "Fisch", "answer": "den" },
+						{ "question": "Sie kauft ___ Wurst.", "word": "Wurst", "answer": "die" },
+						{ "question": "Er trinkt ___ Wasser.", "word": "Wasser", "answer": "das" }
+					]
+				},
+				{
+					"id": 3,
+					"tasks": [
+						{ "question": "Wir schneiden ___ Tomate.", "word": "Tomate", "answer": "die" },
+						{ "question": "Ich koche ___ Reis.", "word": "Reis", "answer": "den" },
+						{ "question": "Sie streicht ___ Butter.", "word": "Butter", "answer": "die" },
+						{ "question": "Er trinkt ___ Saft.", "word": "Saft", "answer": "den" },
+						{ "question": "Sie gibt ___ Salz ins Essen.", "word": "Salz", "answer": "das" }
+					]
+				},
+				{
+					"id": 4,
+					"tasks": [
+						{ "question": "Ich esse ___ Joghurt.", "word": "Joghurt", "answer": "den" },
+						{ "question": "Sie kauft ___ Schokolade.", "word": "Schokolade", "answer": "die" },
+						{ "question": "Wir mögen ___ Gemüse.", "word": "Gemüse", "answer": "das" },
+						{ "question": "Er backt ___ Kuchen.", "word": "Kuchen", "answer": "den" },
+						{ "question": "Sie isst ___ Marmelade.", "word": "Marmelade", "answer": "die" }
+					]
+				},
+				{
+					"id": 5,
+					"tasks": [
+						{ "question": "Wir essen ___ Obst.", "word": "Obst", "answer": "das" },
+						{ "question": "Ich mache ___ Kaffee.", "word": "Kaffee", "answer": "den" },
+						{ "question": "Sie bestellt ___ Pizza.", "word": "Pizza", "answer": "die" },
+						{ "question": "Er brät ___ Steak.", "word": "Steak", "answer": "das" },
+						{ "question": "Sie gießt ___ Tee.", "word": "Tee", "answer": "den" }
+					]
+				}
+			]
+		},
+		{
+			"level": 3,
+			"modules": [
+				{
+					"id": 1,
+					"tasks": [
+						{ "question": "Der Geschmack ___ Apfels ist süß.", "word": "Apfel", "answer": "des" },
+						{ "question": "Die Farbe ___ Banane ist gelb.", "word": "Banane", "answer": "der" },
+						{ "question": "Die Kruste ___ Brotes ist knusprig.", "word": "Brot", "answer": "des" },
+						{ "question": "Der Geruch ___ Käses ist stark.", "word": "Käse", "answer": "des" },
+						{ "question": "Die Frische ___ Milch ist wichtig.", "word": "Milch", "answer": "der" }
+					]
+				},
+				{
+					"id": 2,
+					"tasks": [
+						{ "question": "Die Temperatur ___ Suppe ist hoch.", "word": "Suppe", "answer": "der" },
+						{ "question": "Die Schale ___ Eis ist bunt.", "word": "Ei", "answer": "des" },
+						{ "question": "Die Qualität ___ Fisches ist gut.", "word": "Fisch", "answer": "des" },
+						{ "question": "Der Geschmack ___ Wurst ist scharf.", "word": "Wurst", "answer": "der" },
+						{ "question": "Die Klarheit ___ Wassers ist wichtig.", "word": "Wasser", "answer": "des" }
+					]
+				},
+				{
+					"id": 3,
+					"tasks": [
+						{ "question": "Die Farbe ___ Tomate ist rot.", "word": "Tomate", "answer": "der" },
+						{ "question": "Der Preis ___ Reises ist gestiegen.", "word": "Reis", "answer": "des" },
+						{ "question": "Der Geschmack ___ Butter ist mild.", "word": "Butter", "answer": "der" },
+						{ "question": "Die Süße ___ Saftes ist natürlich.", "word": "Saft", "answer": "des" },
+						{ "question": "Die Körnigkeit ___ Salzes ist fein.", "word": "Salz", "answer": "des" }
+					]
+				},
+				{
+					"id": 4,
+					"tasks": [
+						{ "question": "Der Geschmack ___ Joghurts ist cremig.", "word": "Joghurt", "answer": "des" },
+						{ "question": "Die Süße ___ Schokolade ist hoch.", "word": "Schokolade", "answer": "der" },
+						{ "question": "Die Frische ___ Gemüses ist wichtig.", "word": "Gemüse", "answer": "des" },
+						{ "question": "Der Rand ___ Kuchens ist knusprig.", "word": "Kuchen", "answer": "des" },
+						{ "question": "Die Farbe ___ Marmelade ist rot.", "word": "Marmelade", "answer": "der" }
+					]
+				},
+				{
+					"id": 5,
+					"tasks": [
+						{ "question": "Die Vielfalt ___ Obstes ist groß.", "word": "Obst", "answer": "des" },
+						{ "question": "Das Aroma ___ Kaffees ist stark.", "word": "Kaffee", "answer": "des" },
+						{ "question": "Der Rand ___ Pizza ist knusprig.", "word": "Pizza", "answer": "der" },
+						{ "question": "Die Zartheit ___ Steaks ist berühmt.", "word": "Steak", "answer": "des" },
+						{ "question": "Der Duft ___ Tees ist frisch.", "word": "Tee", "answer": "des" }
+					]
+				}
+			]
+		}
+	]
+}
