@@ -46,7 +46,7 @@
         showChalkMessage.value = true
         messageTimeout = setTimeout(() => {
             showChalkMessage.value = false
-        }, 3000)
+        }, 1113000)
     }
 
     const selectedLevelObj = computed(() => {
@@ -220,7 +220,7 @@
         border: 1px solid #ccc;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
         cursor: pointer;
-        padding: 10px 20px;
+        padding: 15px 25px;
         transform: rotate(-4deg);
         transition: transform 0.2s ease-in-out;
     }
@@ -243,9 +243,10 @@
     }
 
     .back-card-button span {
-        font-size: 1.1rem;
+        font-size: 25px;
         color: #333;
         font-weight: 600;
+        font-family: 'Caveat', cursive;
     }
 
     .classroom-layout {

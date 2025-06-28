@@ -234,17 +234,17 @@
 		"streakFifthText": "Achieve a streak of 200 correct answers in a row."
 	},
 	"chooseThemeList": {
-		"home": "Дом",
-		"time": "Время",
-		"family": "Семья",
-		"food": "Еда",
-		"purchases": "Покупки",
-		"health": "Здоровье",
-		"weather": "Погода",
-		"clothes": "Одежда",
-		"transport": "Транспорт",
-		"school": "Школа",
-		"travel": "Путешествия"
+		"home": "Home",
+		"time": "Time",
+		"family": "Family",
+		"food": "Food",
+		"purchases": "Shopping",
+		"health": "Health",
+		"weather": "Weather",
+		"clothes": "Clothes",
+		"transport": "Transport",
+		"school": "School",
+		"travel": "Travel"
 	},
 	"chooseTheme": {
 		"choose": "Choose a theme",
