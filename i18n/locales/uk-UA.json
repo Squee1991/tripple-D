@@ -235,6 +235,28 @@
 		"streakFifthLabel": "Міфічна серія.",
 		"streakFifthText": "Досягніть серії з 200 правильних відповідей поспіль."
 	},
+	"chooseThemeList": {
+		"home": "Дім",
+		"time": "Час",
+		"family": "Сім'я",
+		"food": "Їжа",
+		"purchases": "Покупки",
+		"health": "Здоров'я",
+		"weather": "Погода",
+		"clothes": "Одяг",
+		"transport": "Транспорт",
+		"school": "Школа",
+		"travel": "Подорожі"
+	},
+	"chooseTheme": {
+		"choose": "Оберіть тему",
+		"btnBack": "На головну",
+		"btnStart": "Почати",
+		"level": "Рівень",
+		"module": "Модуль",
+		"notAllowedLevel": "Спочатку пройдіть Рівень",
+		"notAllowedModule": "Спочатку пройдіть попередній модуль!"
+	},
 	"ranked": {
 		"label": "Таблиця лідерів",
 		"guessTab": "Вгадай слово",

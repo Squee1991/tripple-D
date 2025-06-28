@@ -233,6 +233,28 @@
 		"streakFifthLabel": "Mythical Streak.",
 		"streakFifthText": "Achieve a streak of 200 correct answers in a row."
 	},
+	"chooseThemeList": {
+		"home": "Дом",
+		"time": "Время",
+		"family": "Семья",
+		"food": "Еда",
+		"purchases": "Покупки",
+		"health": "Здоровье",
+		"weather": "Погода",
+		"clothes": "Одежда",
+		"transport": "Транспорт",
+		"school": "Школа",
+		"travel": "Путешествия"
+	},
+	"chooseTheme": {
+		"choose": "Choose a theme",
+		"btnBack": "Back to home",
+		"btnStart": "Start",
+		"level": "Level",
+		"module": "Module",
+		"notAllowedLevel": "First, complete Level",
+		"notAllowedModule": "First, complete the previous module!"
+	},
 	"ranked": {
 		"label": "Leaderboard",
 		"guessTab": "Guess the word",

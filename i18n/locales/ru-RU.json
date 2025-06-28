@@ -232,6 +232,28 @@
 		"streakFifthLabel": "Мифический стрик.",
 		"streakFifthText": "Достигните стрик-серии в 200 правильных ответов подряд."
 	},
+	"chooseThemeList": {
+		"home": "Дом",
+		"time": "Время",
+		"family": "Семья",
+		"food": "Еда",
+		"purchases": "Покупки",
+		"health": "Здоровье",
+		"weather": "Погода",
+		"clothes": "Одежда",
+		"transport": "Транспорт",
+		"school": "Школа",
+		"travel": "Путешествия"
+	},
+	"chooseTheme": {
+		"choose": "Выберите тему",
+		"btnBack": "На главную",
+		"btnStart": "Начать",
+		"level": "Уровень",
+		"module": "Модуль",
+		"notAllowedLevel": "Сначала пройдите Уровень",
+		"notAllowedModule": "Сначала пройдите предыдущий модуль!"
+	},
 	"ranked": {
 		"label": "Таблица лидеров",
 		"guessTab": "Отгадай слово",

@@ -134,7 +134,6 @@
 	},
 	"generalCategory": {
 		"generaLabel": "Ogólne osiągnięcia",
-
 		"lastBreahtlabel": "Na Ostatnim Oddechu",
 		"lastBreathText": "Odgadnij 20 artykułów z rzędu z 1 życiem w Maratonie (tryb łatwy).",
 		"monthLabel": "Stałokient",
@@ -233,6 +232,28 @@
 		"streakThirdText": "Osiągnij passę 100 poprawnych odpowiedzi z rzędu.",
 		"streakFifthLabel": "Mityczna passa.",
 		"streakFifthText": "Osiągnij passę 200 poprawnych odpowiedzi z rzędu."
+	},
+	"chooseThemeList": {
+		"home": "Dom",
+		"time": "Czas",
+		"family": "Rodzina",
+		"food": "Jedzenie",
+		"purchases": "Zakupy",
+		"health": "Zdrowie",
+		"weather": "Pogoda",
+		"clothes": "Ubrania",
+		"transport": "Transport",
+		"school": "Szkoła",
+		"travel": "Podróże"
+	},
+	"chooseTheme": {
+		"choose": "Wybierz temat",
+		"btnBack": "Do strony głównej",
+		"btnStart": "Start",
+		"level": "Poziom",
+		"module": "Moduł",
+		"notAllowedLevel": "Najpierw ukończ Poziom",
+		"notAllowedModule": "Najpierw ukończ poprzedni moduł!"
 	},
 	"ranked": {
 		"label": "Tabela liderów",
