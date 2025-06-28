@@ -46,8 +46,6 @@
 	</section>
 	<FeedBack/>
 </template>
-
-
 <script setup>
 	import FeedBack from '../src/components/feedBack.vue'
 	const { t } = useI18n()
