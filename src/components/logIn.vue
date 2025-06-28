@@ -11,7 +11,6 @@
 						t('auth.resetTitle') }}
 					</div>
 				</div>
-
 				<div v-if="mode === 'login' || mode === 'register'" class="auth__tabs">
 					<div
 						v-for="tab in tabs"
@@ -68,7 +67,6 @@
 	import {useRouter} from 'vue-router'
 	import {useI18n} from 'vue-i18n'
 	import {mapErrors} from '../../utils/errorsHandler.js'
-
 	const {t} = useI18n()
 	const router = useRouter()
 	const emits = defineEmits(['close-auth-form'])
@@ -492,6 +490,4 @@
 			height: 81px;
 		}
 	}
-
-
 </style>

@@ -1,5 +1,4 @@
 <script setup>
-	// --- ВАШ СКРИПТ ОСТАЕТСЯ БЕЗ ИЗМЕНЕНИЙ ---
 	import { useTrainerStore } from '../store/themenProgressStore.js'
 	import { useRouter } from 'vue-router'
 	import { ref, onMounted, computed, watch } from 'vue'
@@ -114,7 +113,6 @@
 	watch(topic, loadThemeData)
 
 </script>
-
 <template>
 	<div class="classroom-layout">
 		<div class="blackboard-wrapper">

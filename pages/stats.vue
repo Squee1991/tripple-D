@@ -3,11 +3,12 @@
 	import {userAuthStore} from '../store/authStore.js'
 	import {useGuessWordStore} from '../store/guesStore.js'
 	import {useGameStore} from '../store/marafonStore.js'
-	import {useI18n} from 'vue-i18n'
+	import { useRouter} from 'vue-router'
 	import LeaderboardItem from '../src/components/LeaderboardItem.vue'
 	import ModalOverlay from '../src/components/modalOverlay.vue'
 	import CloseIcon from '../assets/images/close.svg'
 	const {t} = useI18n()
+	const router = useRouter()
 	const authStore = userAuthStore()
 	const guessStore = useGuessWordStore()
 	const gameStore = useGameStore()
@@ -33,6 +34,10 @@
 		1: 'ranked.easy',
 		2: 'ranked.normal',
 		3: 'ranked.hard'
+	}
+
+	const backToMainPage = () => {
+		router.push('/')
 	}
 
 	const isInGuessLeaderboard = computed(() =>
@@ -113,6 +118,9 @@
 			/>
 		</div>
 		<div class="ranked-sidebar-corkboard">
+			<div class="ranked__side-btnBack-wrapper">
+				<button @click="backToMainPage" class="ranked__side-btnBack">На главную</button>
+			</div>
 			<h1 class="corkboard-title">{{ t('ranked.label')}}</h1>
 			<div class="control-card">
 				<div class="pin"></div>
@@ -201,22 +209,31 @@
 </template>
 
 <style scoped>
-	:root {
-		--classroom-bg: #f0ebe5;
-		--blackboard-bg: #2c3e50;
-		--corkboard-bg: #d2b48c;
-		--chalk-color: #ecf0f1;
-		--chalk-yellow: #f1c40f;
-		--card-bg: #fff8e1;
-		--user-card-bg: #e8f5e9;
-		--user-card-border: #a5d6a7;
+
+	.ranked__side-btnBack {
+		width: 100%;
+		border: 3px solid #5D4037;
+		padding: 15px;
+		background: #5D4037;
+		border-radius: 10px;
+		cursor: pointer ;
+		color: white;
+		font-size: 20px;
+		font-weight: 600;
+		font-family: 'Neucha', cursive;
 	}
+
+	.ranked__side-btnBack:hover {
+  		background: #705149;
+		color: white;
+	}
+
 	.ranked-layout {
 		display: flex;
 		gap: 2rem;
 		padding: 2rem;
 		min-height: 100vh;
-		background-color: var(--classroom-bg);
+		background-color: #f0ebe5;
 		font-family: 'Neucha', cursive;
 	}
 	.ranked-sidebar-corkboard {
@@ -225,28 +242,28 @@
 		display: flex;
 		flex-direction: column;
 		gap: 1.5rem;
-		background: var(--corkboard-bg) url('https://www.transparenttextures.com/patterns/cork-wallet.png');
+		background: #d2b48c;
 		border-radius: 15px;
 		box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 		padding: 1.5rem;
 	}
 	.corkboard-title {
 		font-family: 'Caveat', cursive;
-		font-size: 2.5rem;
+		font-size: 28px;
 		text-align: center;
 		color: #4a3c2a;
 		margin: 0 0 1rem 0;
 	}
 	.control-card {
-		background: var(--card-bg);
+		background: #fff8e1;
 		box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
 		padding: 13px;
 		position: relative;
 		border-radius: 5px;
 	}
 	.user-stats-card {
-		background: var(--user-card-bg);
-		border-color: var(--user-card-border);
+		background: #e8f5e9;
+		border-color: #a5d6a7;
 	}
 	.control-card .pin {
 		position: absolute;
@@ -276,7 +293,7 @@
 		font-family: 'Neucha', cursive;
 	}
 	.discipline-selector__button.active {
-		background: var(--chalk-yellow);
+		background: #f1c40f;
 		font-weight: 600;
 	}
 	.control-card__title {
@@ -300,7 +317,7 @@
 		font-family: 'Neucha', cursive;
 	}
 	.difficulty-selector__button.active {
-		background: var(--chalk-yellow);
+		background: #f1c40f;
 		font-weight: 600;
 	}
 	.user-stats__item {
@@ -335,7 +352,7 @@
 	}
 	.blackboard {
 		height: 100%;
-		background: var(--blackboard-bg);
+		background: #2c3e50;
 		border: 10px solid #34495e;
 		border-radius: 5px;
 		padding: 2rem;
@@ -346,11 +363,11 @@
 	.blackboard__title {
 		color: var(--chalk-yellow);
 		font-family: 'Caveat', cursive;
-		font-size: 2rem;
+		font-size: 30px;
 		text-align: center;
-		margin: 0 0 1rem 0;
-		padding-bottom: 0.5rem;
-		border-bottom: 1px solid #4a657c;
+		padding: 15px;
+		margin-bottom: 20px;
+
 	}
 	.blackboard__message {
 		display: flex;
