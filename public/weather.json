@@ -8,151 +8,76 @@
 				{
 					"id": 1,
 					"tasks": [
-						{
-							"question": "___ Regen ist stark.",
-							"word": "Regen",
-							"answer": "der"
-						},
-						{
-							"question": "___ Sonne scheint.",
-							"word": "Sonne",
-							"answer": "die"
-						},
-						{
-							"question": "___ Schnee fällt leise.",
-							"word": "Schnee",
-							"answer": "der"
-						},
-						{
-							"question": "___ Wind ist kalt.",
-							"word": "Wind",
-							"answer": "der"
-						},
-						{
-							"question": "___ Himmel ist blau.",
-							"word": "Himmel",
-							"answer": "der"
-						}
+						{ "question": "___ Regen ist stark.", "word": "Regen", "answer": "der" },
+						{ "question": "___ Sonne scheint.", "word": "Sonne", "answer": "die" },
+						{ "question": "___ Schnee fällt leise.", "word": "Schnee", "answer": "der" },
+						{ "question": "___ Wind ist kalt.", "word": "Wind", "answer": "der" },
+						{ "question": "___ Himmel ist blau.", "word": "Himmel", "answer": "der" },
+						{ "question": "___ Gewitter ist laut.", "word": "Gewitter", "answer": "das" },
+						{ "question": "___ Regenbogen ist bunt.", "word": "Regenbogen", "answer": "der" },
+						{ "question": "___ Frost ist stark.", "word": "Frost", "answer": "der" },
+						{ "question": "___ Schauer ist kurz.", "word": "Schauer", "answer": "der" },
+						{ "question": "___ Brise ist angenehm.", "word": "Brise", "answer": "die" }
 					]
 				},
 				{
 					"id": 2,
 					"tasks": [
-						{
-							"question": "___ Temperatur ist hoch.",
-							"word": "Temperatur",
-							"answer": "die"
-						},
-						{
-							"question": "___ Nebel ist dicht.",
-							"word": "Nebel",
-							"answer": "der"
-						},
-						{
-							"question": "___ Wetter ist schön.",
-							"word": "Wetter",
-							"answer": "das"
-						},
-						{
-							"question": "___ Wolke ist grau.",
-							"word": "Wolke",
-							"answer": "die"
-						},
-						{
-							"question": "___ Sturm kommt.",
-							"word": "Sturm",
-							"answer": "der"
-						}
+						{ "question": "___ Temperatur ist hoch.", "word": "Temperatur", "answer": "die" },
+						{ "question": "___ Nebel ist dicht.", "word": "Nebel", "answer": "der" },
+						{ "question": "___ Wetter ist schön.", "word": "Wetter", "answer": "das" },
+						{ "question": "___ Wolke ist grau.", "word": "Wolke", "answer": "die" },
+						{ "question": "___ Sturm kommt.", "word": "Sturm", "answer": "der" },
+						{ "question": "___ Gradzahl ist niedrig.", "word": "Gradzahl", "answer": "die" },
+						{ "question": "___ Unwetter ist gefährlich.", "word": "Unwetter", "answer": "das" },
+						{ "question": "___ Eiszapfen ist lang.", "word": "Eiszapfen", "answer": "der" },
+						{ "question": "___ Sonnenstrahl ist warm.", "word": "Sonnenstrahl", "answer": "der" },
+						{ "question": "___ Schneeflocke ist einzigartig.", "word": "Schneeflocke", "answer": "die" }
 					]
 				},
 				{
 					"id": 3,
 					"tasks": [
-						{
-							"question": "___ Hagel fällt schnell.",
-							"word": "Hagel",
-							"answer": "der"
-						},
-						{
-							"question": "___ Blitz ist hell.",
-							"word": "Blitz",
-							"answer": "der"
-						},
-						{
-							"question": "___ Donner ist laut.",
-							"word": "Donner",
-							"answer": "der"
-						},
-						{
-							"question": "___ Wetterbericht ist aktuell.",
-							"word": "Wetterbericht",
-							"answer": "der"
-						},
-						{
-							"question": "___ Luft ist frisch.",
-							"word": "Luft",
-							"answer": "die"
-						}
+						{ "question": "___ Hagel fällt schnell.", "word": "Hagel", "answer": "der" },
+						{ "question": "___ Blitz ist hell.", "word": "Blitz", "answer": "der" },
+						{ "question": "___ Donner ist laut.", "word": "Donner", "answer": "der" },
+						{ "question": "___ Wetterbericht ist aktuell.", "word": "Wetterbericht", "answer": "der" },
+						{ "question": "___ Luft ist frisch.", "word": "Luft", "answer": "die" },
+						{ "question": "___ Vorhersage ist korrekt.", "word": "Vorhersage", "answer": "die" },
+						{ "question": "___ Niederschlag ist gering.", "word": "Niederschlag", "answer": "der" },
+						{ "question": "___ Tau ist am Morgen da.", "word": "Tau", "answer": "der" },
+						{ "question": "___ Glatteis ist rutschig.", "word": "Glatteis", "answer": "das" },
+						{ "question": "___ Orkan ist stark.", "word": "Orkan", "answer": "der" }
 					]
 				},
 				{
 					"id": 4,
 					"tasks": [
-						{
-							"question": "___ Frühling beginnt.",
-							"word": "Frühling",
-							"answer": "der"
-						},
-						{
-							"question": "___ Sommer ist warm.",
-							"word": "Sommer",
-							"answer": "der"
-						},
-						{
-							"question": "___ Herbst ist bunt.",
-							"word": "Herbst",
-							"answer": "der"
-						},
-						{
-							"question": "___ Winter ist kalt.",
-							"word": "Winter",
-							"answer": "der"
-						},
-						{
-							"question": "___ Jahreszeit ist schön.",
-							"word": "Jahreszeit",
-							"answer": "die"
-						}
+						{ "question": "___ Frühling beginnt.", "word": "Frühling", "answer": "der" },
+						{ "question": "___ Sommer ist warm.", "word": "Sommer", "answer": "der" },
+						{ "question": "___ Herbst ist bunt.", "word": "Herbst", "answer": "der" },
+						{ "question": "___ Winter ist kalt.", "word": "Winter", "answer": "der" },
+						{ "question": "___ Jahreszeit ist schön.", "word": "Jahreszeit", "answer": "die" },
+						{ "question": "___ April macht was er will.", "word": "April", "answer": "der" },
+						{ "question": "___ August ist heiß.", "word": "August", "answer": "der" },
+						{ "question": "___ Oktober ist golden.", "word": "Oktober", "answer": "der" },
+						{ "question": "___ Januar ist der kälteste Monat.", "word": "Januar", "answer": "der" },
+						{ "question": "___ Jahreswechsel ist im Winter.", "word": "Jahreswechsel", "answer": "der" }
 					]
 				},
 				{
 					"id": 5,
 					"tasks": [
-						{
-							"question": "___ Klima ist trocken.",
-							"word": "Klima",
-							"answer": "das"
-						},
-						{
-							"question": "___ Wetterlage ist stabil.",
-							"word": "Wetterlage",
-							"answer": "die"
-						},
-						{
-							"question": "___ Hitze ist unangenehm.",
-							"word": "Hitze",
-							"answer": "die"
-						},
-						{
-							"question": "___ Kälte ist extrem.",
-							"word": "Kälte",
-							"answer": "die"
-						},
-						{
-							"question": "___ Feuchtigkeit ist hoch.",
-							"word": "Feuchtigkeit",
-							"answer": "die"
-						}
+						{ "question": "___ Klima ist trocken.", "word": "Klima", "answer": "das" },
+						{ "question": "___ Wetterlage ist stabil.", "word": "Wetterlage", "answer": "die" },
+						{ "question": "___ Hitze ist unangenehm.", "word": "Hitze", "answer": "die" },
+						{ "question": "___ Kälte ist extrem.", "word": "Kälte", "answer": "die" },
+						{ "question": "___ Feuchtigkeit ist hoch.", "word": "Feuchtigkeit", "answer": "die" },
+						{ "question": "___ Luftdruck ist niedrig.", "word": "Luftdruck", "answer": "der" },
+						{ "question": "___ Hochdruckgebiet bringt Sonne.", "word": "Hochdruckgebiet", "answer": "das" },
+						{ "question": "___ Tiefdruckgebiet bringt Regen.", "word": "Tiefdruckgebiet", "answer": "das" },
+						{ "question": "___ Dürre ist ein Problem.", "word": "Dürre", "answer": "die" },
+						{ "question": "___ Monsun ist eine Regenzeit.", "word": "Monsun", "answer": "der" }
 					]
 				}
 			]
@@ -163,151 +88,76 @@
 				{
 					"id": 1,
 					"tasks": [
-						{
-							"question": "Ich sehe ___ Regen durch das Fenster.",
-							"word": "Regen",
-							"answer": "den"
-						},
-						{
-							"question": "Sie genießt ___ Sonne im Garten.",
-							"word": "Sonne",
-							"answer": "die"
-						},
-						{
-							"question": "Wir beobachten ___ Schnee im Winter.",
-							"word": "Schnee",
-							"answer": "den"
-						},
-						{
-							"question": "Der Junge hört ___ Wind in den Bäumen.",
-							"word": "Wind",
-							"answer": "den"
-						},
-						{
-							"question": "Ich betrachte ___ Himmel am Morgen.",
-							"word": "Himmel",
-							"answer": "den"
-						}
+						{ "question": "Ich sehe ___ Regen durch das Fenster.", "word": "Regen", "answer": "den" },
+						{ "question": "Sie genießt ___ Sonne im Garten.", "word": "Sonne", "answer": "die" },
+						{ "question": "Wir beobachten ___ Schnee im Winter.", "word": "Schnee", "answer": "den" },
+						{ "question": "Man hört ___ Wind in den Bäumen.", "word": "Wind", "answer": "den" },
+						{ "question": "Ich betrachte ___ Himmel am Morgen.", "word": "Himmel", "answer": "den" },
+						{ "question": "Wir erwarten ___ Gewitter.", "word": "Gewitter", "answer": "ein" },
+						{ "question": "Sie fotografiert ___ Regenbogen.", "word": "Regenbogen", "answer": "den" },
+						{ "question": "Ich spüre ___ Frost auf der Haut.", "word": "Frost", "answer": "den" },
+						{ "question": "Wir warten ___ Schauer ab.", "word": "Schauer", "answer": "den" },
+						{ "question": "Er genießt ___ frische Brise.", "word": "Brise", "answer": "die" }
 					]
 				},
 				{
 					"id": 2,
 					"tasks": [
-						{
-							"question": "Sie misst ___ Temperatur mit einem Thermometer.",
-							"word": "Temperatur",
-							"answer": "die"
-						},
-						{
-							"question": "Ich fahre vorsichtig durch ___ Nebel.",
-							"word": "Nebel",
-							"answer": "den"
-						},
-						{
-							"question": "Wir genießen ___ Wetter am Wochenende.",
-							"word": "Wetter",
-							"answer": "das"
-						},
-						{
-							"question": "Er zeigt auf ___ Wolke am Himmel.",
-							"word": "Wolke",
-							"answer": "die"
-						},
-						{
-							"question": "Sie warnt vor ___ Sturm.",
-							"word": "Sturm",
-							"answer": "dem"
-						}
+						{ "question": "Sie misst ___ Temperatur mit einem Thermometer.", "word": "Temperatur", "answer": "die" },
+						{ "question": "Ich fahre vorsichtig durch ___ Nebel.", "word": "Nebel", "answer": "den" },
+						{ "question": "Wir genießen ___ gute Wetter.", "word": "Wetter", "answer": "das" },
+						{ "question": "Er zeigt auf ___ große Wolke am Himmel.", "word": "Wolke", "answer": "eine" },
+						{ "question": "Sie warnt vor ___ starken Sturm.", "word": "Sturm", "answer": "dem" },
+						{ "question": "Ich lese ___ Gradzahl ab.", "word": "Gradzahl", "answer": "die" },
+						{ "question": "Der Wetterdienst warnt vor ___ Unwetter.", "word": "Unwetter", "answer": "dem" },
+						{ "question": "Sie sieht ___ langen Eiszapfen am Dach.", "word": "Eiszapfen", "answer": "den" },
+						{ "question": "Wir spüren ___ ersten Sonnenstrahl.", "word": "Sonnenstrahl", "answer": "den" },
+						{ "question": "Er fängt ___ Schneeflocke mit der Zunge.", "word": "Schneeflocke", "answer": "eine" }
 					]
 				},
 				{
 					"id": 3,
 					"tasks": [
-						{
-							"question": "Wir hören ___ Donner in der Nacht.",
-							"word": "Donner",
-							"answer": "den"
-						},
-						{
-							"question": "Er sieht ___ Blitz am Horizont.",
-							"word": "Blitz",
-							"answer": "den"
-						},
-						{
-							"question": "Sie liest ___ Wetterbericht online.",
-							"word": "Wetterbericht",
-							"answer": "den"
-						},
-						{
-							"question": "Ich spüre ___ Luft auf der Haut.",
-							"word": "Luft",
-							"answer": "die"
-						},
-						{
-							"question": "Die Kinder sammeln ___ Hagel vom Boden.",
-							"word": "Hagel",
-							"answer": "den"
-						}
+						{ "question": "Wir hören ___ Donner in der Nacht.", "word": "Donner", "answer": "den" },
+						{ "question": "Er sieht ___ hellen Blitz am Horizont.", "word": "Blitz", "answer": "einen" },
+						{ "question": "Sie liest ___ Wetterbericht online.", "word": "Wetterbericht", "answer": "den" },
+						{ "question": "Ich atme ___ frische Luft ein.", "word": "Luft", "answer": "die" },
+						{ "question": "Die Kinder sammeln ___ Hagel vom Boden.", "word": "Hagel", "answer": "den" },
+						{ "question": "Ich glaube ___ Vorhersage nicht.", "word": "Vorhersage", "answer": "der" },
+						{ "question": "Wir messen ___ Niederschlag.", "word": "Niederschlag", "answer": "den" },
+						{ "question": "Er sieht ___ Tau auf dem Gras.", "word": "Tau", "answer": "den" },
+						{ "question": "Man muss bei ___ Glatteis aufpassen.", "word": "Glatteis", "answer": "dem" },
+						{ "question": "Die Menschen fürchten ___ Orkan.", "word": "Orkan", "answer": "den" }
 					]
 				},
 				{
 					"id": 4,
 					"tasks": [
-						{
-							"question": "Wir genießen ___ Frühling im Park.",
-							"word": "Frühling",
-							"answer": "den"
-						},
-						{
-							"question": "Sie liebt ___ Sommer an der See.",
-							"word": "Sommer",
-							"answer": "den"
-						},
-						{
-							"question": "Er fotografiert ___ Herbstblätter.",
-							"word": "Herbst",
-							"answer": "die"
-						},
-						{
-							"question": "Ich friere im ___ Winter.",
-							"word": "Winter",
-							"answer": "dem"
-						},
-						{
-							"question": "Wir reisen in ___ Jahreszeit viel.",
-							"word": "Jahreszeit",
-							"answer": "der"
-						}
+						{ "question": "Wir genießen ___ Frühling im Park.", "word": "Frühling", "answer": "den" },
+						{ "question": "Sie liebt ___ Sommer am Meer.", "word": "Sommer", "answer": "den" },
+						{ "question": "Er fotografiert ___ bunten Herbst.", "word": "Herbst", "answer": "den" },
+						{ "question": "Ich friere in ___ kalten Winter.", "word": "Winter", "answer": "dem" },
+						{ "question": "Wir reisen in ___ jeder Jahreszeit viel.", "word": "Jahreszeit", "answer": "der" },
+						{ "question": "Ich mag ___ unbeständigen April.", "word": "April", "answer": "den" },
+						{ "question": "Wir verbringen ___ August am Strand.", "word": "August", "answer": "den" },
+						{ "question": "Ich wandere oft in ___ goldenen Oktober.", "word": "Oktober", "answer": "dem" },
+						{ "question": "Sie mag ___ kalten Januar nicht.", "word": "Januar", "answer": "den" },
+						{ "question": "Wir feiern ___ Jahreswechsel mit Freunden.", "word": "Jahreswechsel", "answer": "den" }
 					]
 				},
 				{
 					"id": 5,
 					"tasks": [
-						{
-							"question": "Ich beschreibe ___ Klima der Region.",
-							"word": "Klima",
-							"answer": "das"
-						},
-						{
-							"question": "Sie erklärt ___ Wetterlage im Radio.",
-							"word": "Wetterlage",
-							"answer": "die"
-						},
-						{
-							"question": "Wir meiden ___ Hitze am Nachmittag.",
-							"word": "Hitze",
-							"answer": "die"
-						},
-						{
-							"question": "Sie schützt sich vor ___ Kälte.",
-							"word": "Kälte",
-							"answer": "der"
-						},
-						{
-							"question": "Er misst ___ Feuchtigkeit in der Luft.",
-							"word": "Feuchtigkeit",
-							"answer": "die"
-						}
+						{ "question": "Ich beschreibe ___ Klima der Region.", "word": "Klima", "answer": "das" },
+						{ "question": "Sie erklärt ___ Wetterlage im Radio.", "word": "Wetterlage", "answer": "die" },
+						{ "question": "Wir meiden ___ große Hitze am Nachmittag.", "word": "Hitze", "answer": "die" },
+						{ "question": "Sie schützt sich vor ___ Kälte.", "word": "Kälte", "answer": "der" },
+						{ "question": "Er misst ___ Feuchtigkeit in der Luft.", "word": "Feuchtigkeit", "answer": "die" },
+						{ "question": "Das Barometer misst ___ Luftdruck.", "word": "Luftdruck", "answer": "den" },
+						{ "question": "Wir befinden uns in ___ Hochdruckgebiet.", "word": "Hochdruckgebiet", "answer": "einem" },
+						{ "question": "Ich sehe ___ Tiefdruckgebiet auf der Karte.", "word": "Tiefdruckgebiet", "answer": "das" },
+						{ "question": "Die Pflanzen leiden unter ___ Dürre.", "word": "Dürre", "answer": "der" },
+						{ "question": "Er erlebt ___ Monsun in Asien.", "word": "Monsun", "answer": "den" }
 					]
 				}
 			]
@@ -318,151 +168,76 @@
 				{
 					"id": 1,
 					"tasks": [
-						{
-							"question": "Die Intensität ___ Regens war beeindruckend.",
-							"word": "Regen",
-							"answer": "des"
-						},
-						{
-							"question": "Die Kraft ___ Windes hat Bäume umgeworfen.",
-							"word": "Wind",
-							"answer": "des"
-						},
-						{
-							"question": "Die Farbe ___ Himmels war abends orange.",
-							"word": "Himmel",
-							"answer": "des"
-						},
-						{
-							"question": "Die Wärme ___ Sonne ist angenehm.",
-							"word": "Sonne",
-							"answer": "der"
-						},
-						{
-							"question": "Die Kälte ___ Winters war extrem.",
-							"word": "Winter",
-							"answer": "des"
-						}
+						{ "question": "Die Intensität ___ Regens war beeindruckend.", "word": "Regen", "answer": "des" },
+						{ "question": "Die Kraft ___ Windes hat Bäume umgeworfen.", "word": "Wind", "answer": "des" },
+						{ "question": "Die Farbe ___ Himmels war abends orange.", "word": "Himmel", "answer": "des" },
+						{ "question": "Die Wärme ___ Sonne ist angenehm.", "word": "Sonne", "answer": "der" },
+						{ "question": "Die Schönheit ___ Schnees ist vergänglich.", "word": "Schnee", "answer": "des" },
+						{ "question": "Die Gefahr ___ Gewitters sollte man nicht unterschätzen.", "word": "Gewitter", "answer": "des" },
+						{ "question": "Das Ende ___ Regenbogens ist nicht zu finden.", "word": "Regenbogen", "answer": "des" },
+						{ "question": "Die Stärke ___ Frostes hat die Rohre platzen lassen.", "word": "Frost", "answer": "des" },
+						{ "question": "Die Kürze ___ Schauers war überraschend.", "word": "Schauer", "answer": "des" },
+						{ "question": "Die Leichtigkeit ___ Brise ist erfrischend.", "word": "Brise", "answer": "der" }
 					]
 				},
 				{
 					"id": 2,
 					"tasks": [
-						{
-							"question": "Die Kinder spielen draußen, obwohl ___ Sturm naht.",
-							"word": "Sturm",
-							"answer": "der"
-						},
-						{
-							"question": "Er blieb ruhig, obwohl ___ Donner laut war.",
-							"word": "Donner",
-							"answer": "der"
-						},
-						{
-							"question": "Wir gehen raus, sobald ___ Regen aufhört.",
-							"word": "Regen",
-							"answer": "der"
-						},
-						{
-							"question": "Die Fahrt wurde verschoben, weil ___ Wetter schlecht war.",
-							"word": "Wetter",
-							"answer": "das"
-						},
-						{
-							"question": "Sie bleiben drinnen, wenn ___ Nebel zu dicht ist.",
-							"word": "Nebel",
-							"answer": "der"
-						}
+						{ "question": "Die Kinder spielen draußen, obwohl ___ Sturm naht.", "word": "Sturm", "answer": "der" },
+						{ "question": "Er blieb ruhig, obwohl ___ Donner laut war.", "word": "Donner", "answer": "der" },
+						{ "question": "Wir gehen raus, sobald ___ Regen aufhört.", "word": "Regen", "answer": "der" },
+						{ "question": "Die Fahrt wurde verschoben, weil ___ Wetter schlecht war.", "word": "Wetter", "answer": "das" },
+						{ "question": "Sie bleiben drinnen, wenn ___ Nebel zu dicht ist.", "word": "Nebel", "answer": "der" },
+						{ "question": "Die Blätter fallen, weil ___ Herbst da ist.", "word": "Herbst", "answer": "der" },
+						{ "question": "Ich gehe schwimmen, wenn ___ Sonne scheint.", "word": "Sonne", "answer": "die" },
+						{ "question": "Er zieht eine Jacke an, da ___ Wind weht.", "word": "Wind", "answer": "der" },
+						{ "question": "Die Straßen sind weiß, nachdem ___ Schnee gefallen ist.", "word": "Schnee", "answer": "der" },
+						{ "question": "Es wird dunkel, sobald ___ Wolken aufziehen.", "word": "Wolken", "answer": "die" }
 					]
 				},
 				{
 					"id": 3,
 					"tasks": [
-						{
-							"question": "Der Mann, der im ___ Regen läuft, hat keinen Schirm.",
-							"word": "Regen",
-							"answer": "dem"
-						},
-						{
-							"question": "Das Kind, das ___ Schnee liebt, ist fröhlich.",
-							"word": "Schnee",
-							"answer": "den"
-						},
-						{
-							"question": "Die Frau, die ___ Wetterbericht liest, plant den Tag.",
-							"word": "Wetterbericht",
-							"answer": "den"
-						},
-						{
-							"question": "Das Mädchen, das auf ___ Blitz zeigt, ist erstaunt.",
-							"word": "Blitz",
-							"answer": "den"
-						},
-						{
-							"question": "Der Junge, der unter ___ Wolke steht, wird nass.",
-							"word": "Wolke",
-							"answer": "der"
-						}
+						{ "question": "Der Mann, der im ___ Regen läuft, hat keinen Schirm.", "word": "Regen", "answer": "dem" },
+						{ "question": "Das Kind, das ___ Schnee liebt, ist fröhlich.", "word": "Schnee", "answer": "den" },
+						{ "question": "Die Frau, die ___ Wetterbericht liest, plant den Tag.", "word": "Wetterbericht", "answer": "den" },
+						{ "question": "Das Mädchen, das auf ___ Blitz zeigt, ist erstaunt.", "word": "Blitz", "answer": "den" },
+						{ "question": "Der Junge, der unter ___ Wolke steht, wird nass.", "word": "Wolke", "answer": "der" },
+						{ "question": "Der Wind, ___ Stärke zunimmt, wird gefährlich.", "word": "Wind", "answer": "dessen" },
+						{ "question": "Die Sonne, auf ___ alle gewartet haben, ist endlich da.", "word": "Sonne", "answer": "die" },
+						{ "question": "Der Nebel, durch ___ man nichts sehen kann, ist dicht.", "word": "Nebel", "answer": "den" },
+						{ "question": "Der Sturm, vor ___ gewarnt wurde, ist da.", "word": "Sturm", "answer": "dem" },
+						{ "question": "Die Temperatur, ___ Höhe gemessen wird, steigt an.", "word": "Temperatur", "answer": "deren" }
 					]
 				},
 				{
 					"id": 4,
 					"tasks": [
-						{
-							"question": "Die Prognose wurde von ___ Meteorologen erstellt.",
-							"word": "Meteorologe",
-							"answer": "dem"
-						},
-						{
-							"question": "Die Temperatur wurde durch ___ Sensor gemessen.",
-							"word": "Sensor",
-							"answer": "den"
-						},
-						{
-							"question": "Die Wetterlage wurde in ___ Bericht erwähnt.",
-							"word": "Bericht",
-							"answer": "dem"
-						},
-						{
-							"question": "Der Himmel wurde von ___ Sonne erhellt.",
-							"word": "Sonne",
-							"answer": "der"
-						},
-						{
-							"question": "Der Schaden wurde durch ___ Sturm verursacht.",
-							"word": "Sturm",
-							"answer": "den"
-						}
+						{ "question": "Die Prognose wurde von ___ Meteorologen erstellt.", "word": "Meteorologe", "answer": "dem" },
+						{ "question": "Die Temperatur wurde durch ___ Sensor gemessen.", "word": "Sensor", "answer": "den" },
+						{ "question": "Die Wetterlage wurde in ___ Bericht erwähnt.", "word": "Bericht", "answer": "dem" },
+						{ "question": "Der Himmel wurde von ___ Sonne erhellt.", "word": "Sonne", "answer": "der" },
+						{ "question": "Der Schaden wurde durch ___ Sturm verursacht.", "word": "Sturm", "answer": "den" },
+						{ "question": "Der Garten wurde mit ___ Regenwasser gegossen.", "word": "Regenwasser", "answer": "dem" },
+						{ "question": "Die Energie wird aus ___ Wind gewonnen.", "word": "Wind", "answer": "dem" },
+						{ "question": "Die Landschaft ist von ___ Schnee bedeckt.", "word": "Schnee", "answer": "dem" },
+						{ "question": "Die Sicht wird durch ___ Nebel behindert.", "word": "Nebel", "answer": "den" },
+						{ "question": "Die Nacht wurde von ___ Blitz erhellt.", "word": "Blitz", "answer": "einem" }
 					]
 				},
 				{
 					"id": 5,
 					"tasks": [
-						{
-							"question": "Wegen ___ starken Windes wurde das Fenster geschlossen.",
-							"word": "Wind",
-							"answer": "des"
-						},
-						{
-							"question": "Trotz ___ schönen Wetters blieben sie drinnen.",
-							"word": "Wetter",
-							"answer": "des"
-						},
-						{
-							"question": "Während ___ Unwetters kam es zu Stromausfällen.",
-							"word": "Unwetter",
-							"answer": "des"
-						},
-						{
-							"question": "Aufgrund ___ hohen Temperaturen wurde gewarnt.",
-							"word": "Temperaturen",
-							"answer": "der"
-						},
-						{
-							"question": "Seit ___ Morgen hat es nicht mehr geregnet.",
-							"word": "Morgen",
-							"answer": "dem"
-						}
+						{ "question": "Wegen ___ starken Windes wurde der Flug gestrichen.", "word": "Wind", "answer": "des" },
+						{ "question": "Trotz ___ schönen Wetters blieben sie drinnen.", "word": "Wetter", "answer": "des" },
+						{ "question": "Während ___ Unwetters kam es zu Stromausfällen.", "word": "Unwetter", "answer": "des" },
+						{ "question": "Aufgrund ___ hohen Temperaturen wurde eine Warnung ausgegeben.", "word": "Temperaturen", "answer": "der" },
+						{ "question": "Innerhalb ___ Frühlings erwacht die Natur.", "word": "Frühling", "answer": "des" },
+						{ "question": "Trotz ___ Kälte ging er spazieren.", "word": "Kälte", "answer": "der" },
+						{ "question": "Während ___ Sommers sind die Tage lang.", "word": "Sommer", "answer": "des" },
+						{ "question": "Wegen ___ Hagels wurde die Ernte zerstört.", "word": "Hagel", "answer": "des" },
+						{ "question": "Aufgrund ___ Dürre gibt es Wasserknappheit.", "word": "Dürre", "answer": "der" },
+						{ "question": "Trotz ___ dichten Nebels fuhr er weiter.", "word": "Nebel", "answer": "des" }
 					]
 				}
 			]

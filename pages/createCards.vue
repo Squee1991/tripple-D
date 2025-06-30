@@ -1,140 +1,146 @@
 <template>
 	<div class="cards-layout">
-		<div>
+		<div class="header-bar">
 			<NuxtLink to="/" class="back-btn">
-				{{ t('selectedpage.backBtn') }}
+				← {{ t('selectedpage.backBtn') }}
 			</NuxtLink>
 		</div>
 		<div class="cards__wrapper">
 			<div class="form-block">
-				<h2 class="title">{{ t('choiceTheme.create')}}</h2>
-				<form @submit.prevent="createCard" class="form">
+				<h2 class="title">{{ editingCardId ? 'Редактирование' : t('choiceTheme.create') }}</h2>
+				<form @submit.prevent="saveCard" class="form">
 					<div class="custom-topic-list">
 						<div class="custom-topic-label">{{ t('choiceTheme.theme')}}</div>
 						<div class="custom-select" tabindex="0" @blur="open = false">
 							<div class="custom-select__trigger" @click="toggle" :class="{ open }">
-								{{ form.topic ? t(themenMap[form.topic]) : t('choiceTheme.choice') }}
-								<img :class="{ open }" class="arrow" src="../assets/images/arrowNav.svg" alt="">
+								<span>{{ form.topic ? t(themenMap[form.topic]) : t('choiceTheme.choice') }}</span>
+								<img :class="{ open }" class="arrow" src="../assets/images/arrowNav.svg" alt="arrow">
 							</div>
 							<div v-if="open" class="custom-select__dropdown">
 								<div
-									v-for="(name, key) in themenMap"
-									:key="key"
-									class="custom-select__option"
-									:class="{ selected: form.topic === key }"
-									@click="select(key)"
+										v-for="(name, key) in themenMap"
+										:key="key"
+										class="custom-select__option"
+										:class="{ selected: form.topic === key }"
+										@click="select(key)"
 								>
 									{{ t(name) }}
 								</div>
 							</div>
 						</div>
-						<!--					<div v-if="!form.topic" class="custom-topic-placeholder">Выберите тему</div>-->
 					</div>
 					<template v-for="field in inputFields" :key="field.key">
 						<template v-if="field.type === 'textarea'">
-								<textarea
-									v-model="form[field.key]"
-									:placeholder="t(field.placeholder)"
-									:required="field.required"
-									:rows="field.rows || 2"
-									class="input input__area"
-								/>
+                        <textarea
+								v-model="form[field.key]"
+								:placeholder="t(field.placeholder)"
+								:required="field.required"
+								:rows="field.rows || 3"
+								class="input input__area"
+						/>
 						</template>
 						<template v-else>
 							<input
-								v-model="form[field.key]"
-								:type="field.type"
-								:placeholder="t(field.placeholder)"
-								:required="field.required"
-								:min="field.min"
-								:max="field.max"
-								class="input"
+									v-model="form[field.key]"
+									:type="field.type"
+									:placeholder="t(field.placeholder)"
+									:required="field.required"
+									:min="field.min"
+									:max="field.max"
+									class="input"
 							/>
 						</template>
 					</template>
-					<button type="submit" class="btn">{{ t('choiceTheme.btn')}}</button>
+					<div class="form-actions">
+						<button type="submit" class="btn">{{ editingCardId ? 'Сохранить изменения' : t('choiceTheme.btn')}}</button>
+						<button v-if="editingCardId" type="button" @click="resetForm" class="btn btn-secondary">Отмена</button>
+					</div>
 				</form>
 			</div>
 			<div class="cards-block">
 				<h2 class="title cards-title">{{ t('choiceTheme.available')}}</h2>
 				<div class="search-bar">
 					<input
-						v-model="searchQuery"
-						class="input search-input"
-						type="text"
-						:placeholder="t('choiceTheme.search')"
+							v-model="searchQuery"
+							class="input search-input"
+							type="text"
+							:placeholder="t('choiceTheme.search')"
 					/>
 					<input
-						v-model="levelFilter"
-						class="input search-level"
-						type="number"
-						min="1"
-						max="10"
-						:placeholder="t('choiceTheme.difficult')"
+							v-model="levelFilter"
+							class="input search-level"
+							type="number"
+							min="1"
+							max="10"
+							:placeholder="t('choiceTheme.difficult')"
 					/>
 				</div>
 				<div class="cards-grid">
 					<div
-						v-for="(card, i) in filteredCards"
-						:key="card.id || i"
-						class="card magic-card"
+							v-for="card in filteredCards"
+							:key="card.id"
+							class="card-scene"
 					>
-						<div @click="openGuess(card)" class="card-card-btn">
-							<!--						<div class="card-art-title">{{ card.title || `Карточка ${i + 1}` }}</div>-->
-							<div v-if="card.topic" class="card-art-topic">{{ t(themenMap[card.topic]) }}</div>
-							<div v-if="card.level" class="card-art-level">{{ t('choiceTheme.difficult')}} {{ card.level
-								}}
+						<div
+								class="magic-card"
+								:class="{'is-flipped': flippedCardId === card.id}"
+								@click="!isCardFlipped(card.id) && flipCard(card)"
+						>
+							<div class="card-face card-front">
+								<div class="card-actions">
+									<button @click.stop="initiateEdit(card)" class="action-btn edit-btn" title="Редактировать">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+									</button>
+									<button @click.stop="initiateDelete(card)" class="action-btn delete-btn" title="Удалить">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+									</button>
+								</div>
+								<div class="card-content">
+									<div v-if="card.topic" class="card-topic">{{ t(themenMap[card.topic]) }}</div>
+								</div>
+								<div class="card-footer">
+									<div v-if="card.level" class="card-level">
+										<span class="level-icon">⚡️</span> {{ t('choiceTheme.difficult')}} {{ card.level }}
+									</div>
+								</div>
+							</div>
+							<div class="card-face card-back">
+								<button @click.stop="unflipCard()" class="card-close-btn">×</button>
+								<div class="card-back-content">
+									<div class="modal-sentence">
+										{{ card.hiddenSentence }}
+									</div>
+									<form v-if="!guessResult" @submit.prevent="makeGuess" class="guess-form">
+										<div v-for="(pos, idx) in card.articles" :key="idx" class="guess-field">
+											<input
+													v-model="userAnswers[idx]"
+													class="input guess-input"
+													required
+													autocomplete="off"
+													@click.stop
+											/>
+										</div>
+										<button type="submit" class="btn guess-btn" @click.stop>Проверить</button>
+									</form>
+									<div v-else class="guess-result">
+										<div
+												v-for="(art, idx) in card.articles"
+												:key="'result' + idx"
+												class="guess-answer"
+												:class="{
+                                    correct: guessResult[idx] && guessResult[idx].correct,
+                                    wrong: guessResult[idx] && !guessResult[idx].correct,
+                                 }"
+										>
+											<b>Пропуск {{ idx + 1 }}:</b>
+											<span v-if="guessResult[idx]?.correct"> Верно!</span>
+											<span v-else> Ошибка! (Правильно: {{ card.articles[idx] }})</span>
+										</div>
+										<button @click.stop="unflipCard(true)" class="btn close-btn">Дальше</button>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>
-				</div>
-			</div>
-			<div v-if="currentGuess" class="modal-overlay" @click.self="closeGuess">
-				<div class="modal">
-					<h3 class="modal-title">{{ currentGuess.title }}</h3>
-					<div v-if="currentGuess.topic || currentGuess.level" class="modal-subinfo">
-						<span v-if="currentGuess.topic" class="modal-topic">Тема: {{ currentGuess.topic }}</span>
-						<span v-if="currentGuess.level" class="modal-level">{{t('choiceTheme.difficult')}}: {{ currentGuess.level }}</span>
-					</div>
-					<div class="modal-sentence">
-						{{ currentGuess.hiddenSentence }}
-					</div>
-					<div v-if="currentGuess.translation" class="modal-translation">
-						перевод: {{ currentGuess.translation }}
-					</div>
-					<form v-if="!guessResult" @submit.prevent="makeGuess" class="guess-form">
-						<div v-for="(pos, idx) in currentGuess.articles" :key="idx" class="guess-field">
-							<input
-								v-model="userAnswers[idx]"
-								class="input guess-input"
-								:placeholder="'Артикль' + (idx + 1)"
-								required
-								autocomplete="off"
-								@keyup.enter.prevent="makeGuess"
-							/>
-						</div>
-						<button type="submit" class="btn guess-btn">Проверить</button>
-					</form>
-					<div v-else class="guess-result">
-						<div
-							v-for="(art, idx) in currentGuess.articles"
-							:key="'result' + idx"
-							class="guess-answer"
-							:class="{
-							correct: guessResult[idx] && guessResult[idx].correct,
-							wrong: guessResult[idx] && !guessResult[idx].correct,}">
-						<span>
-							<b>Пропуск {{ idx + 1 }}:</b>
-							<span v-if="guessResult[idx] && guessResult[idx].correct">Верно!</span>
-							<span v-else>Ошибка!</span>
-						</span>
-						</div>
-						<div class="modal-original">
-							<b>Оригинальное предложение:</b>
-							<br/>
-							{{ currentGuess.sentence }}
-						</div>
-						<button @click="closeGuess" class="btn guess-btn close-btn">Закрыть</button>
 					</div>
 				</div>
 			</div>
@@ -145,119 +151,58 @@
 <script setup>
 	import {ref, watch, computed, onMounted} from 'vue';
 	import {useCardsStore} from '../store/cardsStore.js';
-
+	const editingCardId = ref(null);
+	const defaultFormState = { title: '', topic: '', level: '', sentence: '', translation: '' };
+	const form = ref({...defaultFormState});
 	const searchQuery = ref('');
 	const levelFilter = ref('');
-	const showModal = ref(false);
-	const {t} = useI18n()
+	const {t} = useI18n();
 	const cardsStore = useCardsStore();
-	const ARTICLE_LIST = [
-		'der', 'die', 'das', 'dem', 'den', 'des',
-		'einem', 'einen', 'eines', 'einer', 'einem',
-		'mein', 'dein', 'sein', 'ihr', 'unser', 'euer', 'ihr', 'Ihr',
-		'meinem', 'meinen', 'meiner', 'meines',
-		'deinem', 'deinen', 'deiner', 'deines',
-		'seinem', 'seinen', 'seiner', 'seines',
-		'ihrem', 'ihren', 'ihres',
-		'unserem', 'unseren', 'unserer', 'unseres',
-		'eurem', 'euren', 'eurer', 'eures'
-	];
-	const themenMap = {
-		Home: "cardThemen.Home",
-		Animals: "cardThemen.Animals",
-		Clothes: "cardThemen.Clothes",
-		Food: "cardThemen.Food",
-		Body: "cardThemen.Body",
-		Professions: "cardThemen.Professions",
-		Transport: "cardThemen.Transport",
-		Colors: "cardThemen.Colors",
-		Nature: "cardThemen.Nature",
-		City: "cardThemen.City",
-		Time: "cardThemen.Time",
-		Tools: "cardThemen.Tools",
-		Sport: "cardThemen.Sport"
-	};
-	const form = ref({
-		title: '',
-		topic: '',
-		level: '',
-		sentence: '',
-		translation: '',
-	})
-	const inputFields = [
-		{
-			key: 'level',
-			type: 'number',
-			placeholder: 'choiceTheme.difficult',
-			required: false,
-			min: 1,
-			max: 10,
-		},
-		{
-			key: 'sentence',
-			type: 'textarea',
-			placeholder: "choiceTheme.placeholder",
-			required: true,
-			rows: 2,
-		},
-		{
-			key: 'translation',
-			type: 'text',
-			placeholder: 'choiceTheme.translate',
-			required: false,
-		},
-	];
-
-	const filteredCards = computed(() => {
-		let list = cards.value;
-
-		if (searchQuery.value && String(searchQuery.value).trim()) {
-			list = list.filter(card => {
-				const translatedTopic = card.topic ? t(themenMap[card.topic]) : '';
-				return translatedTopic.toLowerCase().includes(searchQuery.value.toLowerCase());
-			});
-		}
-		if (levelFilter.value) {
-			const filterNum = Number(levelFilter.value);
-			list = list.filter(card => Number(card.level) === filterNum);
-		}
-		return list;
-	});
-
+	const ARTICLE_LIST = [ 'der', 'die', 'das', 'dem', 'den', 'des', 'einem', 'einen', 'eines', 'einer', 'mein', 'dein', 'sein', 'ihr', 'unser', 'euer', 'Ihr', 'meinem', 'meinen', 'meiner', 'meines', 'deinem', 'deinen', 'deiner', 'deines', 'seinem', 'seinen', 'seiner', 'seines', 'ihrem', 'ihren', 'ihres', 'unserem', 'unseren', 'unserer', 'unseres', 'eurem', 'euren', 'eurer', 'eures' ];
+	const themenMap = { Home: "cardThemen.Home", Animals: "cardThemen.Animals", Clothes: "cardThemen.Clothes", Food: "cardThemen.Food", Body: "cardThemen.Body", Professions: "cardThemen.Professions", Transport: "cardThemen.Transport", Colors: "cardThemen.Colors", Nature: "cardThemen.Nature", City: "cardThemen.City", Time: "cardThemen.Time", Tools: "cardThemen.Tools", Sport: "cardThemen.Sport" };
+	const inputFields = [ { key: 'level', type: 'number', placeholder: 'choiceTheme.difficult', required: false, min: 1, max: 10, }, { key: 'sentence', type: 'textarea', placeholder: "choiceTheme.placeholder", required: true, rows: 2, }, { key: 'translation', type: 'text', placeholder: 'choiceTheme.translate', required: false, }, ];
 	const open = ref(false);
 	const foundArticles = ref([]);
 	const hiddenSentence = ref('');
-	const cards = computed(() => cardsStore.cards)
-	const currentGuess = ref(null);
+	const toggle = () => { open.value = !open.value; };
+	const select = (key) => { form.value.topic = key; open.value = false; };
+	function hideAllArticles(sentence) { if (!sentence) return {articles: [], newSentence: sentence}; const regex = new RegExp(`\\b(${ARTICLE_LIST.join('|')})\\b`, 'gi'); let articles = []; let newSentence = sentence.replace(regex, (match) => { articles.push(match); return '___'; }); return {articles, newSentence}; }
+	watch(() => form.value.sentence, (sentence) => { const {articles, newSentence} = hideAllArticles(sentence); foundArticles.value = articles; hiddenSentence.value = newSentence; });
+
+	const cards = computed(() => cardsStore.cards);
+	const filteredCards = computed(() => {
+		let list = cards.value;
+		if (searchQuery.value && String(searchQuery.value).trim()) { list = list.filter(card => { const translatedTopic = card.topic ? t(themenMap[card.topic]) : ''; return translatedTopic.toLowerCase().includes(searchQuery.value.toLowerCase()); }); }
+		if (levelFilter.value) { const filterNum = Number(levelFilter.value); list = list.filter(card => Number(card.level) === filterNum); }
+		return list;
+	});
+
+	const flippedCardId = ref(null);
 	const userAnswers = ref([]);
 	const guessResult = ref(null);
+	const isCardFlipped = (cardId) => { return flippedCardId.value === cardId; }
+	const flipCard = (card) => { if (flippedCardId.value && flippedCardId.value !== card.id) { unflipCard(); } flippedCardId.value = card.id; userAnswers.value = Array(card.articles.length).fill(''); guessResult.value = null; };
+	const unflipCard = (force = false) => { if (force || !guessResult.value) { flippedCardId.value = null; guessResult.value = null; userAnswers.value = []; } else { flippedCardId.value = null; } };
+	const makeGuess = () => { const currentCard = cards.value.find(c => c.id === flippedCardId.value); if (!currentCard) return; const results = currentCard.articles.map((art, idx) => { const user = (userAnswers.value[idx] || '').trim().toLowerCase(); return { correct: user === art.toLowerCase(), answer: user }; }); guessResult.value = results; };
 
-	const toggle = () => {
-		open.value = !open.value;
-	}
+	onMounted(() => { cardsStore.subscribePublicCards() })
 
-	const select = (key) => {
-		form.value.topic = key;
-		open.value = false;
-	}
+	// --- ЛОГИКА ДЛЯ ФОРМЫ И УПРАВЛЕНИЯ ---
 
-	function hideAllArticles(sentence) {
-		if (!sentence) return {articles: [], newSentence: sentence};
-		const regex = new RegExp(`\\b(${ARTICLE_LIST.join('|')})\\b`, 'gi');
-		let articles = [];
-		let newSentence = sentence.replace(regex, (match) => {
-			articles.push(match);
-			return '___';
-		});
-		return {articles, newSentence};
-	}
+	const resetForm = () => {
+		form.value = {...defaultFormState};
+		editingCardId.value = null;
+		foundArticles.value = [];
+		hiddenSentence.value = '';
+	};
 
-	const createCard = async () => {
+	const saveCard = async () => {
 		if (!foundArticles.value.length) {
-			showModal.value = true
+			alert("В предложении нет артиклей для изучения!");
 			return;
 		}
-		await cardsStore.addCard({
+
+		const cardData = {
 			title: form.value.title,
 			topic: form.value.topic,
 			level: form.value.level ? Number(form.value.level) : null,
@@ -265,464 +210,137 @@
 			translation: form.value.translation,
 			articles: [...foundArticles.value],
 			hiddenSentence: hiddenSentence.value
-		});
-		form.value = {
-			title: '',
-			topic: '',
-			level: '',
-			sentence: '',
-			translation: ''
 		};
-		foundArticles.value = [];
-		hiddenSentence.value = '';
+
+		if (editingCardId.value) {
+			await cardsStore.updateCard({ ...cardData, id: editingCardId.value });
+		} else {
+			await cardsStore.addCard(cardData);
+		}
+
+		resetForm();
 	};
 
-	function openGuess(card) {
-		currentGuess.value = card;
-		userAnswers.value = Array(card.articles.length).fill('');
-		guessResult.value = null;
-	}
+	const initiateEdit = (card) => {
+		editingCardId.value = card.id;
+		form.value.title = card.title;
+		form.value.topic = card.topic;
+		form.value.level = card.level;
+		form.value.sentence = card.sentence;
+		form.value.translation = card.translation;
+		document.querySelector('.form-block').scrollIntoView({ behavior: 'smooth' });
+	};
 
-	function makeGuess() {
-		if (!currentGuess.value) return;
-		const results = currentGuess.value.articles.map((art, idx) => {
-			const user = (userAnswers.value[idx] || '').trim().toLowerCase();
-			return {
-				correct: user === art.toLowerCase(),
-				answer: user
-			};
-		});
-		guessResult.value = results;
-	}
-
-	function closeGuess() {
-		currentGuess.value = null;
-		userAnswers.value = [];
-		guessResult.value = null;
-	}
-
-	watch(() => form.value.sentence, (sentence) => {
-		const {articles, newSentence} = hideAllArticles(sentence);
-		foundArticles.value = articles;
-		hiddenSentence.value = newSentence;
-	});
-
-	onMounted(() => {
-		cardsStore.subscribePublicCards()
-	})
+	const initiateDelete = async (card) => {
+		if (confirm(`Вы уверены, что хотите удалить карточку по теме "${t(themenMap[card.topic])}"?`)) {
+			await cardsStore.removeCard(card.id);
+		}
+	};
 </script>
 
 <style scoped>
+	/* Общие стили */
+	.cards-layout { background-color: #F6F7FB; min-height: 100vh; padding: 1.5rem; }
+	.title { font-size: 1.75rem; font-weight: 700; color: #303545; margin-bottom: 1.5rem; }
+	.input { background-color: #FFFFFF; border: 1px solid #EAEBEE; border-radius: 8px; padding: 12px 16px; font-size: 1rem; color: #303545; width: 100%; box-sizing: border-box; transition: border-color 0.2s, box-shadow 0.2s; }
+	.input:focus { outline: none; border-color: #4255FF; box-shadow: 0 0 0 3px rgba(66, 85, 255, 0.2); }
+	.btn { background-color: #4255FF; color: #FFFFFF; border: none; border-radius: 8px; padding: 12px 24px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: background-color 0.2s, transform 0.1s; }
+	.btn:hover { background-color: #3546e0; }
+	.btn:active { transform: translateY(1px); }
+	.btn-secondary { background-color: #6A758B; }
+	.btn-secondary:hover { background-color: #5a6268; }
 
-	.cards__wrapper {
-		display: flex;
-		gap: 20px;
-		align-items: flex-start;
-		padding: 30px;
-	}
+	.back-btn { display: inline-block; color: #6A758B; font-weight: 600; text-decoration: none; padding: 8px 16px; border-radius: 8px; transition: background-color 0.2s, color 0.2s; margin-bottom: 1rem; }
+	.back-btn:hover { background-color: #EAEBEE; color: #303545; }
 
-	.form-block {
-		flex: 1 1 320px;
-		min-width: 320px;
-		max-width: 420px;
-	}
+	/* Разметка */
+	.cards__wrapper { display: flex; gap: 2.5rem; align-items: flex-start; max-width: 1400px; margin: 0 auto; }
+	.form-block { flex: 1 1 350px; max-width: 400px; position: sticky; top: 1.5rem; }
+	.cards-block { flex: 2 1 600px; }
 
-	.cards-block {
-		flex: 1.4 1 420px;
-		max-width: 740px;
-		background: none;
-		border: none;
-		box-shadow: none;
-		margin-top: 0.2em;
-	}
-
-	.cards-title {
-		font-size: 1.27em;
-		font-weight: 700;
-		color: #282828;
-		letter-spacing: 0.01em;
-	}
-
-	.cards-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-		gap: 1.6em;
-		margin-top: 0.5em;
-	}
-
-	.magic-card {
-		border-radius: 18px;
-		background: #fff;
-		border: 1.5px solid #e4e4e4;
-		box-shadow: 0 2px 12px 0 rgba(44, 57, 91, 0.10);
-		transition: box-shadow 0.19s, border-color 0.15s, transform 0.17s;
-		display: flex;
-		align-items: stretch;
-		min-height: 130px;
-		padding: 0;
-		margin: 0;
-		overflow: hidden;
-	}
-
-	.magic-card:hover,
-	.magic-card:focus-within {
-		box-shadow: 0 8px 28px 0 rgba(54, 67, 91, 0.13);
-		border-color: #c2b688;
-		transform: translateY(-2px) scale(1.025);
-		background: #f8f7f3;
-	}
-
-	.card-card-btn {
-		border: none;
-		background: transparent;
-		width: 100%;
-		height: 100%;
-		min-height: 130px;
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
-		align-items: center;
-		padding: 1.5em 1.2em 1.1em 1.2em;
-		text-align: left;
-		cursor: pointer;
-		outline: none;
-		gap: 0.52em;
-		transition: background 0.14s;
-	}
-
+	/* Форма */
+	.form { background-color: #FFFFFF; padding: 1.5rem; border-radius: 12px; border: 1px solid #EAEBEE; display: flex; flex-direction: column; gap: 1rem; }
 	.input__area {
-		resize: none;
-		height: 140px;
+		resize: vertical; /* ИЗМЕНЕНИЕ 3: Разрешаем тянуть по вертикали */
+		min-height: 100px; /* Немного увеличим базовую высоту */
+		font-family: inherit;
 	}
+	.form-actions { display: flex; gap: 1rem; }
 
-	.card-art-icon {
-		font-size: 1.35em;
-		margin-bottom: 0.5em;
-		color: #edc16a;
-		filter: drop-shadow(0 0 4px #f7e3b9);
+	/* Select */
+	.custom-topic-label { font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem; color: #303545; }
+	.custom-select { position: relative; user-select: none; }
+	.custom-select__trigger { background: #FFFFFF; border: 1px solid #EAEBEE; border-radius: 8px; padding: 12px 16px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; transition: border-color 0.2s; }
+	.custom-select__trigger:hover, .custom-select__trigger.open { border-color: #4255FF; }
+	.arrow { width: 16px; transition: transform 0.3s; }
+	.arrow.open { transform: rotate(180deg); }
+	.custom-select__dropdown { position: absolute; top: calc(100% + 4px); left: 0; width: 100%; background: #FFFFFF; border: 1px solid #EAEBEE; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); z-index: 10; max-height: 200px; overflow-y: auto; }
+	.custom-select__option { padding: 12px 16px; cursor: pointer; }
+	.custom-select__option:hover { background-color: #F6F7FB; }
+	.custom-select__option.selected { background-color: #4255FF; color: #FFFFFF; font-weight: 600; }
+
+	/* Блок с карточками */
+	.search-bar { display: flex; gap: 1rem; margin-bottom: 1.5rem; }
+	.search-level { max-width: 150px; }
+	.cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+
+	/* Стили для переворота */
+	.card-scene {
+		perspective: 1000px;
+		min-height: 220px; /* ИЗМЕНЕНИЕ 1: Увеличили минимальную высоту карточек */
 	}
+	.magic-card { width: 100%; height: 100%; position: relative; transition: transform 0.6s; transform-style: preserve-3d; cursor: pointer; border-radius: 12px; }
+	.magic-card.is-flipped { transform: rotateY(180deg); cursor: default; }
+	.card-face { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; display: flex; flex-direction: column; background: #FFFFFF; border-radius: 12px; border: 1px solid #EAEBEE; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+	.card-scene:hover .magic-card:not(.is-flipped) .card-face { border-color: #4255FF; box-shadow: 0 8px 16px rgba(0,0,0,0.08); }
+	.card-back { transform: rotateY(180deg); justify-content: center; }
 
-	.card-art-title {
-		font-weight: 700;
-		font-size: 1.17em;
-		color: #333;
-		margin-bottom: 0.32em;
-		text-align: left;
-	}
+	/* Управление на карточке */
+	.card-actions { position: absolute; top: 0.75rem; right: 0.75rem; display: flex; gap: 0.5rem; opacity: 0; transition: opacity 0.2s ease-in-out; z-index: 2; }
+	.card-scene:hover .card-actions { opacity: 1; }
+	.action-btn { background-color: rgba(255, 255, 255, 0.7); border: 1px solid #EAEBEE; border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: #6A758B; backdrop-filter: blur(2px); }
+	.action-btn:hover { background-color: #FFFFFF; border-color: #4255FF; color: #4255FF; }
+	.action-btn.delete-btn:hover { border-color: #DC3545; color: #DC3545; }
 
-	.card-art-topic {
-		text-align: center;
-		font-size: 25px;
-		font-family: "Montserrat", Arial, Helvetica, sans-serif;
-		font-weight: 600;
-		font-style: italic;
-		color: #657c8a;
-		opacity: 0.96;
-		margin-bottom: 0.28em;
-	}
+	/* Контент карточки */
+	.card-content { padding: 1.5rem; flex-grow: 1; display: flex; align-items: center; justify-content: center; }
+	.card-topic { font-size: 1.5rem; font-weight: 600; color: #303545; text-align: center; }
+	.card-footer { padding: 0.75rem 1.5rem; border-top: 1px solid #EAEBEE; background-color: #F6F7FB; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; }
+	.card-level { font-size: 0.9rem; color: #6A758B; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; }
+	.level-icon { font-size: 1.1rem; }
 
-	.card-art-level {
-		font-size: 0.92em;
-		color: #b59f69;
-		opacity: 0.93;
-	}
-
-	@media (max-width: 900px) {
-		.cards-grid {
-			grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-			gap: 1.2em;
-		}
-
-		.magic-card {
-			min-height: 90px;
-		}
-	}
-
-	.modal-overlay {
-		position: fixed;
-		left: 0;
-		top: 0;
-		width: 100vw;
-		height: 100vh;
-		background: rgba(60, 41, 10, 0.18);
+	/* Обратная сторона карточки */
+	.card-close-btn { position: absolute; top: 0.5rem; right: 0.75rem; background: none; border: none; font-size: 1.75rem; color: #6A758B; cursor: pointer; line-height: 1; z-index: 2; }
+	.card-back-content {
+		width: 100%;
 		display: flex;
+		flex-direction: column;
 		align-items: center;
-		justify-content: center;
-		z-index: 50;
+		padding: 1.5rem;
+		overflow-y: auto; /* ИЗМЕНЕНИЕ 2: Добавляем скролл, если контент не влезает */
+		max-height: 100%;
 	}
-
-	.modal {
-		background: #fffbe5;
-		border-radius: 15px;
-		padding: 2.2em 2.6em 2em 2.6em;
-		box-shadow: 0 3px 26px #8c640a1f;
-		min-width: 300px;
-		max-width: 98vw;
-		border: 2.3px solid #e2c98d;
-		position: relative;
-	}
-
-	.modal-title {
-		font-size: 1.25em;
-		color: #5c451a;
-		margin-bottom: 0.9em;
-		font-weight: 700;
-		text-align: center;
-		letter-spacing: 0.02em;
-	}
-
-	.modal-subinfo {
-		display: flex;
-		gap: 2em;
-		justify-content: center;
-		margin-bottom: 0.7em;
-	}
-
-	.modal-topic,
-	.modal-level {
-		font-size: 1em;
-		color: #ad9437;
-		opacity: 0.95;
-	}
-
 	.modal-sentence {
-		font-size: 1.08em;
-		margin-bottom: 0.9em;
-		color: #413312;
-		text-align: center;
+		font-size: 1.25rem;
+		font-family: "Georgia", serif;
+		color: #303545;
+		margin-bottom: 1rem;
+		word-break: break-word; /* ИЗМЕНЕНИЕ 2: Заставляем текст переноситься */
+		overflow-wrap: break-word; /* ИЗМЕНЕНИЕ 2: И его более современный аналог */
 	}
+	.guess-form { width: 100%; display: flex; flex-direction: column; gap: 0.75rem; align-items: center;}
+	.guess-input { font-size: 1rem; max-width: 200px; text-align: center;}
+	.guess-btn { margin-top: 0.5rem; }
+	.guess-result { width: 100%; text-align: left; margin-top: 1rem; }
+	.guess-answer { padding: 0.5rem; border-radius: 6px; margin-bottom: 0.5rem; font-size: 0.9rem;}
+	.guess-answer.correct { color: #28a745; background-color: rgba(40, 167, 69, 0.1); }
+	.guess-answer.wrong { color: #dc3545; background-color: rgba(220, 53, 69, 0.1); }
+	.close-btn { width: 100%; margin-top: 1rem; background-color: #6A758B; }
+	.close-btn:hover { background-color: #5a6268; }
 
-	.modal-translation {
-		color: #a48b32;
-		margin-bottom: 1.1em;
-		text-align: center;
+	/* Адаптивность */
+	@media (max-width: 900px) {
+		.cards__wrapper { flex-direction: column; align-items: stretch; gap: 2rem; }
+		.form-block { position: static; max-width: none; }
 	}
-
-	.guess-form {
-		display: flex;
-		flex-direction: column;
-		gap: 0.75em;
-	}
-
-	.guess-field {
-		margin-bottom: 0.23em;
-	}
-
-	.guess-input {
-		width: 190px;
-		font-size: 1.08em;
-		margin-right: 0.6em;
-		border-radius: 7px;
-	}
-
-	.guess-btn {
-		margin-top: 0.8em;
-		font-size: 1em;
-		background: linear-gradient(97deg, #f1d37a 50%, #edd284 100%);
-	}
-
-	.close-btn {
-		margin-top: 1.1em;
-	}
-
-	.guess-result {
-		margin: 1em 0 0.8em 0;
-	}
-
-	.guess-answer {
-		margin-bottom: 0.5em;
-		font-size: 1em;
-		text-align: left;
-	}
-
-	.guess-answer.correct {
-		color: #31932b;
-		font-weight: 700;
-	}
-
-	.guess-answer.wrong {
-		color: #be2821;
-		font-weight: 700;
-	}
-
-	.modal-original {
-		margin-top: 1.2em;
-		font-size: 0.98em;
-		color: #88774c;
-		text-align: left;
-	}
-
-	.form {
-		display: flex;
-		flex-direction: column;
-		gap: 0.7em;
-		background: #fdf7ea;
-		padding: 1.2em 1.5em 1.5em 1.5em;
-		border-radius: 16px;
-		box-shadow: 0 1px 12px #ebdec8a8;
-		border: 2px solid #e3c992;
-	}
-
-	.input {
-		border: 1.5px solid #b8a173;
-		border-radius: 7px;
-		padding: 10px 18px;
-		font-size: 1.08em;
-		margin-bottom: 0.35em;
-		background: #fffdf9;
-		outline: none;
-		transition: border-color 0.2s;
-	}
-
-	.input:focus {
-		border-color: #916e29;
-	}
-
-	.btn {
-		background: linear-gradient(96deg, #e6cc80 55%, #fae29d 100%);
-		color: #413312;
-		border: none;
-		border-radius: 8px;
-		padding: 0.7em 1.5em;
-		font-size: 1.08em;
-		font-weight: 600;
-		cursor: pointer;
-		margin-top: 0.5em;
-		transition: background 0.18s;
-		box-shadow: 0 2px 6px #e2c98d39;
-	}
-
-	.btn:hover {
-		background: linear-gradient(95deg, #f8e6a2 0%, #f6d97b 100%);
-	}
-
-	.no-cards {
-		color: #a89c7c;
-		padding: 1.5em 0 0.6em 0;
-		font-size: 1.1em;
-		text-align: center;
-	}
-
-	.custom-select {
-		position: relative;
-		width: 100%;
-		margin-bottom: 0.7em;
-		user-select: none;
-	}
-
-	.custom-select__trigger {
-		background: #fcf6df;
-		border: 2px solid #e2c98d;
-		border-radius: 8px;
-		padding: 0.55em 1.3em;
-		font-size: 1em;
-		color: #8e7a36;
-		cursor: pointer;
-		position: relative;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		transition: background 0.16s, color 0.14s, border-color 0.15s;
-	}
-
-	.custom-select__trigger.open,
-	.custom-select__trigger:hover {
-		background: linear-gradient(96deg, #e6cc80 55%, #fae29d 100%);
-		color: #564312;
-		border-color: #d6b865;
-		font-weight: 700;
-	}
-
-	.arrow {
-		transform: scale(1);
-		width: 30px;
-		transition: .5s;
-	}
-
-	.arrow.open {
-		transform: scale(-1);
-		transition: .5s;
-	}
-
-	.custom-select__dropdown {
-		position: absolute;
-		top: calc(100% + 2px);
-		left: 0;
-		width: 100%;
-		background: #fffbe5;
-		border: 2px solid #e2c98d;
-		border-radius: 8px;
-		box-shadow: 0 4px 12px #e2c98d34;
-		z-index: 10;
-		padding: 0.25em 0;
-	}
-
-	.custom-select__option {
-		padding: 0.55em 1.3em;
-		font-size: 1em;
-		color: #8e7a36;
-		cursor: pointer;
-		transition: background 0.13s, color 0.11s;
-	}
-
-	.custom-select__option.selected,
-	.custom-select__option:hover {
-		background: linear-gradient(96deg, #e6cc80 55%, #fae29d 100%);
-		color: #564312;
-		font-weight: 700;
-	}
-
-	/* --------------- */
-	.custom-topic-list {
-		margin-bottom: 1.1em;
-	}
-
-	.custom-topic-label {
-		font-weight: 600;
-		margin-bottom: 0.55em;
-		font-size: 1.02em;
-		color: #7e6519;
-	}
-
-	.custom-topic-placeholder {
-		margin-top: 0.6em;
-		color: #b3a46a;
-		font-size: 0.96em;
-	}
-
-	.search-bar {
-		display: flex;
-		gap: 0.7em;
-		align-items: center;
-		margin-bottom: 1.3em;
-	}
-
-	.search-level {
-		width: 200px;
-	}
-
-	.back-btn {
-		display: inline-block;
-		background: linear-gradient(96deg, #f7e1a7 55%, #e6cc80 100%);
-		color: #70521a;
-		font-weight: 700;
-		padding: 0.7em 2em;
-		border-radius: 13px;
-		font-size: 1.11em;
-		letter-spacing: 0.03em;
-		text-decoration: none;
-		box-shadow: 0 3px 15px #e6cc8030;
-		border: 2px solid #e2c98d;
-		transition: background 0.18s, color 0.18s, box-shadow 0.18s;
-		margin-bottom: 1.4em;
-		margin-top: 0.2em;
-	}
-
-	.back-btn:hover, .back-btn:focus {
-		background: linear-gradient(95deg, #fae29d 60%, #e6cc80 100%);
-		color: #44310f;
-		box-shadow: 0 8px 22px #e2c98d55;
-		border-color: #c2b688;
-	}
-
 </style>

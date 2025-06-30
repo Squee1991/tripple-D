@@ -381,9 +381,6 @@
 		font-weight: bold;
 	}
 
-	.category-icon, .submenu-icon {
-		font-size: 1.2em;
-	}
 
 	.submenu-arrow {
 		transition: .2s;

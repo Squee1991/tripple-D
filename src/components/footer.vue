@@ -2,15 +2,25 @@
 	<footer class="footer">
 		<div class="footer__container">
 			<div class="footer-brand">
-				<img src="../../assets/images/3dLogo.png" alt="Der Die Das" class="footer-logo"/>
+				<NuxtLink to="/">
+					<img src="../../assets/images/3dLogo.png" alt="Der Die Das" class="footer-logo"/>
+				</NuxtLink>
 			</div>
-			<LangSwitcher/>
 			<nav class="footer-links">
 				<li v-for="item in data.items" :key="item.id">
 					<NuxtLink class="footer-link" :to="item.url"> {{ t(item.value)}}</NuxtLink>
 				</li>
+				<div @click="toDiscord" class="discord__img">
+					<svg enable-background="new 0 0 24 24" height="30" viewBox="0 0 24 24" width="30" xmlns="http://www.w3.org/2000/svg">
+						<g fill="currentColor">
+							<path d="m3.58 21.196h14.259l-.681-2.205c.101.088 5.842 5.009 5.842 5.009v-21.525c-.068-1.338-1.22-2.475-2.648-2.475l-16.767.003c-1.427 0-2.585 1.139-2.585 2.477v16.24c0 1.411 1.156 2.476 2.58 2.476zm10.548-15.513-.033.012.012-.012zm-7.631 1.269c1.833-1.334 3.532-1.27 3.532-1.27l.137.135c-2.243.535-3.26 1.537-3.26 1.537.104-.022 4.633-2.635 10.121.066 0 0-1.019-.937-3.124-1.537l.186-.183c.291.001 1.831.055 3.479 1.26 0 0 1.844 3.15 1.844 7.02-.061-.074-1.144 1.666-3.931 1.726 0 0-.472-.534-.808-1 1.63-.468 2.24-1.404 2.24-1.404-3.173 1.998-5.954 1.686-9.281.336-.031 0-.045-.014-.061-.03v-.006c-.016-.015-.03-.03-.061-.03h-.06c-.204-.134-.34-.2-.34-.2s.609.936 2.174 1.404c-.411.469-.818 1.002-.818 1.002-2.786-.066-3.802-1.806-3.802-1.806 0-3.876 1.833-7.02 1.833-7.02z"/>
+							<path d="m14.308 12.771c.711 0 1.29-.6 1.29-1.34 0-.735-.576-1.335-1.29-1.335v.003c-.708 0-1.288.598-1.29 1.338 0 .734.579 1.334 1.29 1.334z"/>
+							<path d="m9.69 12.771c.711 0 1.29-.6 1.29-1.34 0-.735-.575-1.335-1.286-1.335l-.004.003c-.711 0-1.29.598-1.29 1.338 0 .734.579 1.334 1.29 1.334z"/>
+						</g>
+					</svg>
+				</div>
 			</nav>
-
+			<LangSwitcher/>
 		</div>
 		<p class="footer-copy">© {{ new Date().getFullYear() }} {{ t(data.footer)}} </p>
 	</footer>
@@ -18,7 +28,7 @@
 
 <script setup>
 	import LangSwitcher from './langSwitcher.vue'
-    const { t} = useI18n()
+	const { t} = useI18n()
 	const data = {
 		footer: "footer.copy",
 		items: [
@@ -26,145 +36,86 @@
 		]
 	}
 
+	const toDiscord = () => {
+		window.open('https://discord.gg/a5bkqpeP')
+	}
+
 </script>
 
 <style scoped>
-
 	.footer {
-		background: linear-gradient(135deg, #a9b8f9 0%, #ede6ff 100%);
-		padding: 44px 20px 20px;
-		box-shadow: 0 12px 60px #786ed628 inset, 0 3px 18px #f5eeff9c inset;
-		font-family: 'Montserrat', 'Inter', sans-serif;
+		background-color: #F7FAFC;
+		border-top: 2px solid #bdc8d6;
+		padding: 3rem 1.5rem 2rem;
+		font-family: 'Nunito', sans-serif;
 	}
 
 	.footer__container {
-		max-width: 1200px;
+		max-width: 1280px;
 		margin: 0 auto;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
-		gap: 26px;
-		border-radius: 20px;
-		padding: 22px 38px;
+		gap: 2rem;
 	}
 
 	.footer-brand {
-		background: none;
 		display: flex;
 		align-items: center;
-		gap: 16px;
-		padding: 10px 24px;
 	}
 
 	.footer-logo {
-		width: 86px;
-		height: 86px;
-		border-radius: 18px;
+		width: 60px;
+		height: auto;
 	}
 
 	.footer-links {
 		display: flex;
-		gap: 26px;
-		flex-wrap: wrap;
-		justify-content: center;
-		border-radius: 14px;
-		padding: 10px 26px;
+		flex-direction: column;
+		gap: 2rem;
+		list-style: none;
+		padding: 0;
+		margin: 0;
 	}
 
 	.footer-link {
-		background: linear-gradient(90deg, #366cff 60%, #4c88ff 100%);
-		color: #fff;
-		border: none;
-		font-weight: 700;
-		font-size: 20px;
-		padding: 14px 36px;
-		border-radius: 14px 30px 14px 30px / 30px 14px 30px 14px;
-		box-shadow: 0 2px 8px 0 #15235e44;
-		cursor: pointer;
-		letter-spacing: 0.06em;
-		text-shadow: 0 1px 2px #26358580;
-		transition: transform 0.12s, box-shadow 0.12s, background 0.12s;
-		margin-bottom: 0;
+		font-size: 1rem;
+		font-weight: 600;
+		color: #718096;
+		text-decoration: none;
+		transition: color 0.2s ease-in-out;
 	}
 
 	.footer-link:hover {
-		color: #1f1478;
-		background: linear-gradient(90deg, #f3ebff 30%, #e0dbfa 100%);
-		text-shadow: 0 6px 18px #b7aaff90, 0 1px 2px #fff8;
-	}
-
-	.footer-meta {
-		display: flex;
-		gap: 20px;
-		flex-wrap: wrap;
-		padding: 10px 22px;
-	}
-
-	.social-icons {
-		display: flex;
-		gap: 18px;
-	}
-
-	.social-icon {
-		color: #887de7;
-		font-size: 23px;
-		border-radius: 50%;
-		background: linear-gradient(120deg, #f6f1ff 30%, #e0e9ff 100%);
-		padding: 7px;
-		box-shadow: 0 2px 6px #c6bfff30, 0 1px 3px #fff7 inset;
-		transition: color 0.19s, box-shadow 0.19s, transform 0.13s;
-	}
-
-	.social-icon:hover {
-		color: #4f39b9;
-		background: linear-gradient(120deg, #f3ebff 40%, #ede6ff 100%);
-		box-shadow: 0 7px 18px #b7aaff88, 0 1px 2px #fff8 inset;
-		transform: scale(1.13);
-	}
-
-	.lang-select {
-		border: none;
-		border-radius: 10px;
-		padding: 7px 18px;
-		font-size: 15px;
-		font-family: 'Montserrat', 'Inter', sans-serif;
-		color: #61589d;
-		font-weight: 700;
-		outline: none;
-		transition: box-shadow 0.15s, background 0.14s, color 0.14s;
-		margin-left: 8px;
-	}
-
-	.lang-select:focus {
-		background: linear-gradient(120deg, #ede6ff 40%, #d7d0fa 100%);
-		box-shadow: 0 4px 13px #d8cfff66, 0 2px 8px #fff9 inset;
-		color: #442c8c;
+		color: #5A67D8;
+		text-decoration: underline;
 	}
 
 	.footer-copy {
 		text-align: center;
-		margin-top: 32px;
-		font-size: 14.5px;
-		font-family: 'Montserrat', 'Inter', sans-serif;
-		color: #8f8cb9;
-		text-shadow: 0 2px 9px #f3eaffc0, 0 0px 1px #fff6;
-		letter-spacing: 0.01em;
-		font-weight: 600;
+		margin-top: 3rem;
+		font-size: 0.875rem;
+		color: #A0AEC0;
 	}
-	
+
+	.discord__img {
+		color: blue;
+		cursor: pointer;
+	}
+
+	.discord__img:hover {
+		color: #d9bcbc;
+	}
+
+	svg {
+		color: currentColor;
+	}
+
 	@media (max-width: 768px) {
 		.footer__container {
 			flex-direction: column;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			padding: 5px;
-		}
-
-		.footer-link {
-			font-size: 16px;
+			gap: 1.5rem;
 		}
 	}
-
 </style>

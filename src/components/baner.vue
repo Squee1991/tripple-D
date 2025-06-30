@@ -8,16 +8,29 @@
 			<div class="banner__wrapper">
 				<div class="banner__content">
 					<div class="banner__orbit">
-						<span class="banner__orbit-word banner__orbit-word--der" @click="triggerGlow('der')">Der</span>
-						<span class="banner__orbit-word banner__orbit-word--die" @click="triggerGlow('die')">Die</span>
-						<span class="banner__orbit-word banner__orbit-word--das" @click="triggerGlow('das')">Das</span>
+                  <span
+						  class="banner__orbit-word banner__orbit-word--der"
+						  :class="{ 'glow-black': glowType === 'der', 'fade-glow': fadingGlow === 'der' }"
+						  @click="triggerGlow('der')"
+				  >Der</span>
+						<span
+								class="banner__orbit-word banner__orbit-word--die"
+								:class="{ 'glow-red': glowType === 'die', 'fade-glow': fadingGlow === 'die' }"
+								@click="triggerGlow('die')"
+						>Die</span>
+						<span
+								class="banner__orbit-word banner__orbit-word--das"
+								:class="{ 'glow-gold': glowType === 'das', 'fade-glow': fadingGlow === 'das' }"
+								@click="triggerGlow('das')"
+						>Das</span>
 					</div>
-					<p class="banner__subtitle">
+					<h1 class="banner__title">
 						{{ t('banner.title')}}
-					</p>
+					</h1>
 					<button class="banner__button" @click="startLearning">{{ t('banner.btn')}}</button>
 				</div>
-				<div class="banner__mage">
+				<div class="banner__mage-container">
+					<div class="banner__mage"></div>
 				</div>
 			</div>
 		</section>
@@ -27,249 +40,217 @@
 <script setup>
 	import SignIn from '../components/logIn.vue'
 	import Overlay from '../components/Uioverlay.vue'
-	import Student from '../../assets/images/student.svg'
 	import {useRouter} from 'vue-router'
 	import {userAuthStore} from '../../store/authStore'
 	import {ref, watch} from "vue";
 	import { useI18n } from 'vue-i18n'
-	const { t , locale , locales , messages} = useI18n()
+	const { t } = useI18n()
 	const showAuth = ref(false)
 	const userAuth = userAuthStore()
 	const router = useRouter()
 	const glowType = ref(null)
 	const fadingGlow = ref(null)
 
-	const openAuth = () => {
-		showAuth.value = true
-	}
+	const openAuth = () => { showAuth.value = true }
 
 	const triggerGlow = (type) => {
-		glowType.value = type
-		fadingGlow.value = null
+		if (glowType.value || fadingGlow.value) return;
+		glowType.value = type;
 		setTimeout(() => {
-			fadingGlow.value = type
-			glowType.value = null
+			fadingGlow.value = type;
+			glowType.value = null;
 			setTimeout(() => {
-				fadingGlow.value = null
-			}, 3333)
-		}, 1111)
+				fadingGlow.value = null;
+			}, 1000);
+		}, 500);
 	}
 
-	const closeAuth = () => {
-		showAuth.value = false
-	}
+	const closeAuth = () => { showAuth.value = false }
 
 	const startLearning = () => {
-		userAuth.name ? router.push('/examples') : openAuth()
+		userAuth.name ? router.push('/choiceTheme') : openAuth()
 	}
 
 	watch(showAuth, (val) => {
 		document.body.style.overflow = val ? 'hidden' : ''
 	})
-
 </script>
 
+<style scoped>
 
-<style>
-
-	.banner__wrapper {
-		display: flex;
-		justify-content: center;
-		width: 100%;
-		padding: 40px 0;
+	.banner {
+		font-family: 'Nunito', sans-serif;
 	}
 
 	.banner__section {
-		/*background: linear-gradient(135deg, #294cad, #3c57b4);*/
-		/*background: #1e1e1e;*/
-		padding: 30px 70px;
+		background-color: #F7FAFC;
+		padding: 4rem 2rem;
 	}
 
-	.banner__mage {
-		width: 412px;
-		height: 416px;
-		padding: 10px;
-		overflow: visible;
-	}
-
-	.banner__subtitle {
-		max-width: 800px;
-		font-size: 24px;
-		/*font-family: 'Kurale', serif;*/
-		font-weight: 600;
-		color: #322f2f;
-		/*text-shadow: 0 2px 8px #4b2e09a1, 0 1px 0 #fff8, 0 0px 2px #e6d9aa, 1px 2px 0 #a6752b99;*/
-		letter-spacing: 0.04em;
-		margin-bottom: 44px;
-		padding: 0;
-		font-style: italic;
-		background: none;
-		line-height: 1.35;
-		/*filter: drop-shadow(0 2px 1px #473c0099);*/
-	}
-
-	.banner__content-left {
+	.banner__wrapper {
 		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		padding: 40px;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 1280px;
+		margin: 0 auto;
+		gap: 2rem;
 	}
 
-	.banner__button {
-		width: 60%;
-		padding: 14px 40px;
-		/*background: linear-gradient(180deg, #366cff 60%, #4c88ff 100%);*/
-		background: rgba(41, 52, 48, 0.95);
-		border-radius: 16px;
-		box-shadow: 0 4px 18px #0a4c12bb, 0 1px 4px #fff8 inset;
-		color: #fff;
-		font-weight: 900;
-		font-size: 28px;
-		font-style: italic;
-		font-family: 'Montserrat', Arial, sans-serif;
-		text-shadow: 0 2px 8px #034107aa, 0 1px 0 #fff6;
-		letter-spacing: 1px;
-		border: none;
-		cursor: pointer;
-		transform: skew(-8deg);
-		transition: background 0.15s, transform 0.1s;
-	}
-
-	.banner__button:hover {
-		background: linear-gradient(180deg, #82ff7a 10%, #27e500 100%);
-		transform: skew(-8deg) scale(1.03);
-		box-shadow: 0 8px 24px #136b21ee, 0 2px 6px #fff8 inset;
-	}
-
-	.fade-enter-active, .fade-leave-active,
-	.slide-enter-active, .slide-leave-active {
-		transition: all 0.3s ease;
-	}
-
-	.fade-enter-from, .fade-leave-to,
-	.slide-enter-from, .slide-leave-to {
-		opacity: 0;
-		transform: translateX(+100%);
+	.banner__content {
+		flex: 1;
+		max-width: 650px;
 	}
 
 	.banner__orbit {
 		display: flex;
-		gap: 15px;
-		margin-bottom: 30px;
+		gap: 1rem;
+		margin-bottom: 2rem;
 	}
 
 	.banner__orbit-word {
-		display: inline-block;
-		padding: 10px 36px;
-		font-size: 44px;
-		font-family: 'Montserrat', Arial, sans-serif;
-		font-weight: 900;
-		font-style: italic;
-		letter-spacing: 1px;
-		border-radius: 20px;
-		box-shadow: 0 8px 30px 0 #1a237e33, 0 2px 10px 0 #fff9 inset;
-		text-shadow: 0 2px 18px #fff8, 0 1px 2px #0005;
-		transform: skew(-8deg);
-		position: relative;
-		transition: transform 0.12s, box-shadow 0.14s;
+		padding: 0.5rem 1.5rem;
+		font-size: 1.5rem;
+		font-weight: 700;
+		border-radius: 999px;
+		color: #FFFFFF;
 		cursor: pointer;
 		user-select: none;
+		transition: all 0.2s ease-in-out;
+	}
+	.banner__orbit-word:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 	}
 
-	.banner__orbit-word:active {
-		transform: skew(-8deg) scale(0.97);
+	.banner__orbit-word--der { background-color: #2D3748; }
+	.banner__orbit-word--die { background-color: #E53E3E; }
+	.banner__orbit-word--das { background-color: #D69E2E; }
+
+	.banner__title {
+		font-size: 3rem; /* Вернул более крупный размер для заголовка */
+		font-weight: 800;
+		color: #2D3748;
+		line-height: 1.2;
+		margin-bottom: 2.5rem; /* Увеличил отступ */
 	}
 
-	.banner__orbit-word--der {
-		background: linear-gradient(180deg, #000000 0%, #031126 100%);
-		color: #fff;
-		box-shadow: 0 4px 0 black, 0 8px 30px #23489966, 0 1px 4px #fff8 inset;
-		text-shadow: 0 2px 10px #a8d8ffcc, 0 1px 2px #16305a80;
+	.banner__button {
+		font-family: 'Nunito', sans-serif;
+		padding: 0.8rem 2rem;
+		font-size: 1.1rem;
+		font-weight: 700;
+		border-radius: 8px;
+		cursor: pointer;
+		border: none;
+		transition: all 0.2s;
+		background-color: #5A67D8;
+		color: #FFFFFF;
+	}
+	.banner__button:hover {
+		background-color: #4C51BF;
+		transform: translateY(-2px);
+		box-shadow: 0 7px 14px rgb(0 0 0 / 0.1), 0 3px 6px rgb(0 0 0 / 0.08);
 	}
 
-	.banner__orbit-word--die {
-		background: linear-gradient(180deg, #ff6161 0%, #d00000 100%);
-		color: #fff;
-		box-shadow: 0 5px 0 #830101, 0 8px 30px #9d313155, 0 1px 4px #fff8 inset;
-		text-shadow: 0 2px 10px #ffc7c7cc, 0 1px 2px #80000090;
+	.banner__mage-container {
+		flex: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		max-width: 500px;
+	}
+	.banner__mage {
+		width: 100%;
+		aspect-ratio: 1 / 1;
+		position: relative;
+		background: radial-gradient(circle, #E2E8F0 50%, transparent 70%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.banner__mage::before, .banner__mage::after {
+		content: '';
+		position: absolute;
+		border-radius: 50%;
+	}
+	.banner__mage::before {
+		width: 70%;
+		height: 70%;
+		background: radial-gradient(circle, #CBD5E0, #E2E8F0);
+		z-index: 1;
+	}
+	.banner__mage::after {
+		width: 40%;
+		height: 40%;
+		background: #5A67D8;
+		z-index: 2;
+		box-shadow: 0 0 50px 20px #5a67d880;
 	}
 
-	.banner__orbit-word--das {
-		background: linear-gradient(180deg, gold 0%, gold 100%);
-		color: #fff9dc;
-		box-shadow: 0 5px 0 #c6a502, 0 8px 30px #e6cb5185, 0 1px 4px #fff8 inset;
-		text-shadow: 0 2px 10px #fffbe2cc, 0 1px 2px #a0851099;
+	/* ===== ВАША ОРИГИНАЛЬНАЯ АНИМАЦИЯ ВЫЕЗДА МЕНЮ ВОССТАНОВЛЕНА ===== */
+	.slide-enter-active, .slide-leave-active {
+		transition: all 0.3s ease;
+	}
+	.slide-enter-from, .slide-leave-to {
+		opacity: 0;
+		transform: translateX(100%);
+	}
+	/* =============================================================== */
+
+	/* Анимация свечения */
+	.glow-black { animation: glow-black-anim 0.5s ease-out; }
+	.glow-red { animation: glow-red-anim 0.5s ease-out; }
+	.glow-gold { animation: glow-gold-anim 0.5s ease-out; }
+
+	.fade-glow { transition: filter 1s ease-in-out; }
+	.fade-glow.glow-black { filter: drop-shadow(0 0 15px #2D3748); }
+	.fade-glow.glow-red { filter: drop-shadow(0 0 15px #E53E3E); }
+	.fade-glow.glow-gold { filter: drop-shadow(0 0 15px #D69E2E); }
+
+
+	@keyframes glow-black-anim {
+		50% { box-shadow: 0 0 30px 5px #2D3748; }
+	}
+	@keyframes glow-red-anim {
+		50% { box-shadow: 0 0 30px 5px #E53E3E; }
+	}
+	@keyframes glow-gold-anim {
+		50% { box-shadow: 0 0 30px 5px #D69E2E; }
 	}
 
-
-	.fade-glow.glow-red {
-		filter: drop-shadow(0 0 10px #ff1a1a) drop-shadow(0 0 0px #ff6666);
-		transition: filter 1s;
-	}
-
-	.fade-glow.glow-black {
-		filter: drop-shadow(0 0 10px #111) drop-shadow(0 0 0px);
-		transition: filter 1s;
-	}
-
-	.fade-glow.glow-gold {
-		filter: drop-shadow(0 0 10px gold) drop-shadow(0 0 0px gold);
-		transition: filter 1s;
-	}
-
-	/* Анимации те же */
-	@keyframes glow-red {
-		from {
-			filter: drop-shadow(0 0 10px #ff1a1a) drop-shadow(0 0 0px #ff6666);
+	@media (max-width: 900px) {
+		.banner__wrapper {
+			flex-direction: column;
+			text-align: center;
 		}
-		to {
-			filter: drop-shadow(0 0 0px #ff0000) drop-shadow(0 0 0px #fff);
-			transition: filter 1s;
+		.banner__orbit {
+			justify-content: center;
 		}
-	}
-
-	@keyframes glow-black {
-		from {
-			filter: drop-shadow(0 0 10px #111) drop-shadow(0 0 00px);
+		.banner__content {
+			max-width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 		}
-		to {
-			filter: drop-shadow(0 0 0px #000) drop-shadow(0 0 0px);
-		}
-	}
-
-	@keyframes glow-gold {
-		from {
-			filter: drop-shadow(0 0 10px gold) drop-shadow(0 0 0px gold);
-		}
-		to {
-			filter: drop-shadow(0 0 0px gold) drop-shadow(0 0 0px gold);
-		}
-	}
-
-	to {
-		filter: drop-shadow(0 0 0px gold) drop-shadow(0 0 0px gold);
-	}
-
-
-	@media (max-width: 768px) {
-		.banner__orbit,
-		.banner__mage{
+		.banner__mage-container {
 			display: none;
 		}
-		.banner__button {
-			font-size: 16px;
-			padding: 10px;
-			width: 100%;
-		}
-
-		.banner__subtitle {
-			text-align: center;
-			font-size: 17px;
-		}
-
-		.banner__wrapper {
-			padding: 10px;
-		}
 	}
 
+	@media (max-width: 768px) {
+		.banner__section {
+			padding: 3rem 1.5rem;
+		}
+		.banner__title {
+			font-size: 2.25rem;
+		}
+		.banner__orbit-word {
+			font-size: 1.2rem;
+			padding: 0.4rem 1.2rem;
+		}
+		.banner__button {
+			width: 100%;
+			max-width: 300px;
+		}
+	}
 </style>

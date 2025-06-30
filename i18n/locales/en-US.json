@@ -233,6 +233,26 @@
 		"streakFifthLabel": "Mythical Streak.",
 		"streakFifthText": "Achieve a streak of 200 correct answers in a row."
 	},
+	"trainerPage": {
+		"exit": "Exit",
+		"loading": "Loading module...",
+		"sure": "Are you sure?",
+		"warning": "If you exit now, your progress will not be saved!",
+		"quest": "Task",
+		"continue": "Continue",
+		"check": "Check",
+		"further": "Next",
+		"right": "Correct!",
+		"false": "Incorrect. Correct answer: ",
+		"end": "Module completed!",
+		"save": "Great! Your progress has been saved.",
+		"backToTheme": "Back to themes",
+		"morePractice": "More practice needed",
+		"result": "Your result:",
+		"repeat": "Repeat",
+		"toMain": "To main page",
+		"notFound": "Error. Module not found."
+	},
 	"chooseThemeList": {
 		"home": "Home",
 		"time": "Time",

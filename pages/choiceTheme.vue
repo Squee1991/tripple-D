@@ -46,7 +46,7 @@
         showChalkMessage.value = true
         messageTimeout = setTimeout(() => {
             showChalkMessage.value = false
-        }, 1113000)
+        }, 2000)
     }
 
     const selectedLevelObj = computed(() => {
@@ -84,7 +84,7 @@
     }
 
     const goBack = () => {
-        router.back()
+        router.push('/')
     }
 
     const goToExercise = async (level, module) => {
@@ -149,25 +149,24 @@
                      }"
                                 @click="handleModuleClick(mod)"
                         >
-							{{ t('chooseTheme.module')}} {{ mod.id }}
+                            {{ t('chooseTheme.module')}} {{ mod.id }}
                         </button>
                     </div>
                     <div class="start-button-container" v-if="moduleToStart">
                         <button class="start-button" @click="startSelectedModule">
-							{{ t('chooseTheme.btnStart')}}
+                            {{ t('chooseTheme.btnStart')}}
                         </button>
                     </div>
                 </div>
             </div>
         </div>
-
         <div class="corkboard">
             <h2 class="corkboard-title">{{ t('chooseTheme.choose')}}</h2>
             <div class="corkboard-themes">
                 <button
                         v-for="theme in themes"
                         :key="theme.key"
-                        class="theme-card"
+                        class="theme__card-choice"
                         :class="{ active: theme.key === selectedTopic }"
                         :style="{ top: theme.position.top, left: theme.position.left, transform: `rotate(${theme.position.rotate})` }"
                         @click="selectedTopic = theme.key"
@@ -182,7 +181,7 @@
 
 </template>
 
-<style>
+<style setup>
     :root {
         --classroom-bg: #f0ebe5;
         --blackboard-bg: #2c3e50;
@@ -360,7 +359,7 @@
         height: calc(100% - 60px);
     }
 
-    .theme-card {
+    .theme__card-choice {
         position: absolute;
         width: 120px;
         height: 120px;
@@ -377,18 +376,18 @@
         transition: all 0.2s ease-in-out;
     }
 
-    .theme-card:hover {
+    .theme__card-choice:hover {
         transform: scale(1.1) !important;
         z-index: 10;
     }
 
-    .theme-card.active {
+    .theme__card-choice.active {
         box-shadow: 0 0 15px 5px #fdd835;
         border: 2px solid #fdd835;
         z-index: 5;
     }
 
-    .theme-card .pin {
+    .theme__card-choice .pin {
         position: absolute;
         top: -8px;
         left: 50%;
@@ -401,12 +400,12 @@
         border: 2px solid #fff;
     }
 
-    .theme-card img {
+    .theme__card-choice img {
         width: 50px;
         height: 50px;
     }
 
-    .theme-card span {
+    .theme__card-choice span {
         font-size: 1rem;
         color: #333;
         font-weight: 600;

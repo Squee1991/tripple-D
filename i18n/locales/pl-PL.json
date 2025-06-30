@@ -232,6 +232,26 @@
 		"streakFifthLabel": "Mityczna passa.",
 		"streakFifthText": "Osiągnij passę 200 poprawnych odpowiedzi z rzędu."
 	},
+	"trainerPage": {
+		"exit": "Wyjście",
+		"loading": "Ładowanie modułu...",
+		"sure": "Czy jesteś pewien?",
+		"warning": "Jeśli teraz wyjdziesz, postęp nie zostanie zapisany!",
+		"quest": "Zadanie",
+		"continue": "Kontynuuj",
+		"check": "Sprawdź",
+		"further": "Dalej",
+		"right": "Poprawnie!",
+		"false": "Niepoprawnie. Prawidłowa odpowiedź: ",
+		"end": "Moduł ukończony!",
+		"save": "Świetnie! Twój postęp został zapisany.",
+		"backToTheme": "Powrót do tematów",
+		"morePractice": "Potrzebna dodatkowa praktyka",
+		"result": "Twój wynik:",
+		"repeat": "Powtórz",
+		"toMain": "Do strony głównej",
+		"notFound": "Błąd. Nie znaleziono modułu."
+	},
 	"chooseThemeList": {
 		"home": "Dom",
 		"time": "Czas",

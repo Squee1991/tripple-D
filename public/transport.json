@@ -12,7 +12,12 @@
 						{ "question": "___ Bus ist groß.", "word": "Bus", "answer": "der" },
 						{ "question": "___ Fahrrad ist neu.", "word": "Fahrrad", "answer": "das" },
 						{ "question": "___ Zug ist pünktlich.", "word": "Zug", "answer": "der" },
-						{ "question": "___ Straßenbahn ist lang.", "word": "Straßenbahn", "answer": "die" }
+						{ "question": "___ Straßenbahn ist lang.", "word": "Straßenbahn", "answer": "die" },
+						{ "question": "___ LKW ist beladen.", "word": "LKW", "answer": "der" },
+						{ "question": "___ Roller ist wendig.", "word": "Roller", "answer": "der" },
+						{ "question": "___ Boot ist klein.", "word": "Boot", "answer": "das" },
+						{ "question": "___ Hubschrauber ist laut.", "word": "Hubschrauber", "answer": "der" },
+						{ "question": "___ Fähre ist angekommen.", "word": "Fähre", "answer": "die" }
 					]
 				},
 				{
@@ -22,7 +27,12 @@
 						{ "question": "___ Schiff ist groß.", "word": "Schiff", "answer": "das" },
 						{ "question": "___ Motorrad ist laut.", "word": "Motorrad", "answer": "das" },
 						{ "question": "___ U-Bahn ist schnell.", "word": "U-Bahn", "answer": "die" },
-						{ "question": "___ Taxi ist gelb.", "word": "Taxi", "answer": "das" }
+						{ "question": "___ Taxi ist gelb.", "word": "Taxi", "answer": "das" },
+						{ "question": "___ S-Bahn ist voll.", "word": "S-Bahn", "answer": "die" },
+						{ "question": "___ Flug ist gebucht.", "word": "Flug", "answer": "der" },
+						{ "question": "___ Fahrt dauert lange.", "word": "Fahrt", "answer": "die" },
+						{ "question": "___ Reisebus ist bequem.", "word": "Reisebus", "answer": "der" },
+						{ "question": "___ Güterzug ist lang.", "word": "Güterzug", "answer": "der" }
 					]
 				},
 				{
@@ -32,7 +42,12 @@
 						{ "question": "___ Haltestelle ist nah.", "word": "Haltestelle", "answer": "die" },
 						{ "question": "___ Flughafen ist modern.", "word": "Flughafen", "answer": "der" },
 						{ "question": "___ Hafen ist tief.", "word": "Hafen", "answer": "der" },
-						{ "question": "___ Garage ist voll.", "word": "Garage", "answer": "die" }
+						{ "question": "___ Garage ist voll.", "word": "Garage", "answer": "die" },
+						{ "question": "___ Gleis ist frei.", "word": "Gleis", "answer": "das" },
+						{ "question": "___ Bushaltestelle ist überdacht.", "word": "Bushaltestelle", "answer": "die" },
+						{ "question": "___ Parkplatz ist besetzt.", "word": "Parkplatz", "answer": "der" },
+						{ "question": "___ Landebahn ist lang.", "word": "Landebahn", "answer": "die" },
+						{ "question": "___ Anlegestelle ist aus Holz.", "word": "Anlegestelle", "answer": "die" }
 					]
 				},
 				{
@@ -42,7 +57,12 @@
 						{ "question": "___ Sitz ist bequem.", "word": "Sitz", "answer": "der" },
 						{ "question": "___ Motor ist stark.", "word": "Motor", "answer": "der" },
 						{ "question": "___ Rad ist rund.", "word": "Rad", "answer": "das" },
-						{ "question": "___ Ampel ist rot.", "word": "Ampel", "answer": "die" }
+						{ "question": "___ Ampel ist rot.", "word": "Ampel", "answer": "die" },
+						{ "question": "___ Fahrplan ist aktuell.", "word": "Fahrplan", "answer": "der" },
+						{ "question": "___ Ticket ist teuer.", "word": "Ticket", "answer": "das" },
+						{ "question": "___ Gepäck ist schwer.", "word": "Gepäck", "answer": "das" },
+						{ "question": "___ Verkehr ist dicht.", "word": "Verkehr", "answer": "der" },
+						{ "question": "___ Stau ist ärgerlich.", "word": "Stau", "answer": "der" }
 					]
 				},
 				{
@@ -52,7 +72,12 @@
 						{ "question": "___ Tür ist offen.", "word": "Tür", "answer": "die" },
 						{ "question": "___ Scheinwerfer ist hell.", "word": "Scheinwerfer", "answer": "der" },
 						{ "question": "___ Bremse ist wichtig.", "word": "Bremse", "answer": "die" },
-						{ "question": "___ Reifen ist neu.", "word": "Reifen", "answer": "der" }
+						{ "question": "___ Reifen ist neu.", "word": "Reifen", "answer": "der" },
+						{ "question": "___ Fenster ist sauber.", "word": "Fenster", "answer": "das" },
+						{ "question": "___ Sitzgurt ist angelegt.", "word": "Sitzgurt", "answer": "der" },
+						{ "question": "___ Kofferraum ist leer.", "word": "Kofferraum", "answer": "der" },
+						{ "question": "___ Spiegel ist richtig eingestellt.", "word": "Spiegel", "answer": "der" },
+						{ "question": "___ Hupe ist laut.", "word": "Hupe", "answer": "die" }
 					]
 				}
 			]
@@ -67,7 +92,12 @@
 						{ "question": "Sie steigt in ___ Bus ein.", "word": "Bus", "answer": "den" },
 						{ "question": "Er fährt mit ___ Fahrrad zur Arbeit.", "word": "Fahrrad", "answer": "dem" },
 						{ "question": "Wir nehmen ___ Zug nach Berlin.", "word": "Zug", "answer": "den" },
-						{ "question": "Sie fährt mit ___ Straßenbahn.", "word": "Straßenbahn", "answer": "der" }
+						{ "question": "Sie fährt mit ___ Straßenbahn.", "word": "Straßenbahn", "answer": "der" },
+						{ "question": "Ich sehe ___ LKW auf der Autobahn.", "word": "LKW", "answer": "den" },
+						{ "question": "Er mietet ___ Roller.", "word": "Roller", "answer": "einen" },
+						{ "question": "Wir überqueren den See mit ___ Boot.", "word": "Boot", "answer": "einem" },
+						{ "question": "Sie hört ___ Hubschrauber.", "word": "Hubschrauber", "answer": "den" },
+						{ "question": "Wir warten auf ___ Fähre.", "word": "Fähre", "answer": "die" }
 					]
 				},
 				{
@@ -75,9 +105,14 @@
 					"tasks": [
 						{ "question": "Er fliegt mit ___ Flugzeug.", "word": "Flugzeug", "answer": "dem" },
 						{ "question": "Ich reise mit ___ Schiff.", "word": "Schiff", "answer": "dem" },
-						{ "question": "Sie fährt ___ Motorrad.", "word": "Motorrad", "answer": "das" },
+						{ "question": "Sie fährt ___ Motorrad.", "word": "Motorrad", "answer": "ein" },
 						{ "question": "Wir fahren mit ___ U-Bahn.", "word": "U-Bahn", "answer": "der" },
-						{ "question": "Er ruft ___ Taxi.", "word": "Taxi", "answer": "ein" }
+						{ "question": "Er ruft ___ Taxi.", "word": "Taxi", "answer": "ein" },
+						{ "question": "Ich nehme ___ S-Bahn.", "word": "S-Bahn", "answer": "die" },
+						{ "question": "Sie bucht ___ Flug online.", "word": "Flug", "answer": "den" },
+						{ "question": "Wir genießen ___ Fahrt.", "word": "Fahrt", "answer": "die" },
+						{ "question": "Ich steige in ___ Reisebus.", "word": "Reisebus", "answer": "den" },
+						{ "question": "Man sieht ___ Güterzug auf den Gleisen.", "word": "Güterzug", "answer": "einen" }
 					]
 				},
 				{
@@ -87,7 +122,12 @@
 						{ "question": "Sie steigt an ___ Haltestelle aus.", "word": "Haltestelle", "answer": "der" },
 						{ "question": "Er landet auf ___ Flughafen.", "word": "Flughafen", "answer": "dem" },
 						{ "question": "Wir gehen zum ___ Hafen.", "word": "Hafen", "answer": "dem" },
-						{ "question": "Sie parkt in ___ Garage.", "word": "Garage", "answer": "der" }
+						{ "question": "Sie parkt in ___ Garage.", "word": "Garage", "answer": "der" },
+						{ "question": "Der Zug fährt von ___ Gleis 3 ab.", "word": "Gleis", "answer": "dem" },
+						{ "question": "Er wartet an ___ Bushaltestelle.", "word": "Bushaltestelle", "answer": "der" },
+						{ "question": "Ich suche ___ Parkplatz.", "word": "Parkplatz", "answer": "einen" },
+						{ "question": "Das Flugzeug rollt auf ___ Landebahn.", "word": "Landebahn", "answer": "die" },
+						{ "question": "Das Schiff legt an ___ Anlegestelle an.", "word": "Anlegestelle", "answer": "der" }
 					]
 				},
 				{
@@ -97,7 +137,12 @@
 						{ "question": "Sie nimmt auf ___ Sitz Platz.", "word": "Sitz", "answer": "dem" },
 						{ "question": "Er repariert ___ Motor.", "word": "Motor", "answer": "den" },
 						{ "question": "Wir wechseln ___ Rad.", "word": "Rad", "answer": "das" },
-						{ "question": "Sie hält an ___ Ampel.", "word": "Ampel", "answer": "der" }
+						{ "question": "Sie hält an ___ Ampel.", "word": "Ampel", "answer": "der" },
+						{ "question": "Ich lese ___ Fahrplan.", "word": "Fahrplan", "answer": "den" },
+						{ "question": "Er zeigt ___ Ticket vor.", "word": "Ticket", "answer": "das" },
+						{ "question": "Wir geben ___ Gepäck auf.", "word": "Gepäck", "answer": "das" },
+						{ "question": "Man muss ___ dichten Verkehr beachten.", "word": "Verkehr", "answer": "den" },
+						{ "question": "Wir stehen im ___ Stau.", "word": "Stau", "answer": "dem" }
 					]
 				},
 				{
@@ -107,7 +152,12 @@
 						{ "question": "Ich öffne ___ Tür.", "word": "Tür", "answer": "die" },
 						{ "question": "Sie schaltet ___ Scheinwerfer ein.", "word": "Scheinwerfer", "answer": "den" },
 						{ "question": "Wir treten auf ___ Bremse.", "word": "Bremse", "answer": "die" },
-						{ "question": "Er wechselt ___ Reifen.", "word": "Reifen", "answer": "den" }
+						{ "question": "Er wechselt ___ Reifen.", "word": "Reifen", "answer": "den" },
+						{ "question": "Ich putze ___ Fenster.", "word": "Fenster", "answer": "das" },
+						{ "question": "Er legt ___ Sitzgurt an.", "word": "Sitzgurt", "answer": "den" },
+						{ "question": "Sie öffnet ___ Kofferraum.", "word": "Kofferraum", "answer": "den" },
+						{ "question": "Ich schaue in ___ Spiegel.", "word": "Spiegel", "answer": "den" },
+						{ "question": "Er betätigt ___ Hupe.", "word": "Hupe", "answer": "die" }
 					]
 				}
 			]
@@ -122,7 +172,12 @@
 						{ "question": "Der Motor ___ Busses ist laut.", "word": "Bus", "answer": "des" },
 						{ "question": "Die Farbe ___ Fahrrads ist grün.", "word": "Fahrrad", "answer": "des" },
 						{ "question": "Die Ankunft ___ Zuges ist bald.", "word": "Zug", "answer": "des" },
-						{ "question": "Die Route ___ Straßenbahn ist lang.", "word": "Straßenbahn", "answer": "der" }
+						{ "question": "Die Route ___ Straßenbahn ist lang.", "word": "Straßenbahn", "answer": "der" },
+						{ "question": "Die Ladung ___ LKWs ist schwer.", "word": "LKW", "answer": "des" },
+						{ "question": "Die Wendigkeit ___ Rollers ist praktisch.", "word": "Roller", "answer": "des" },
+						{ "question": "Der Besitzer ___ Bootes ist nicht da.", "word": "Boot", "answer": "des" },
+						{ "question": "Der Lärm ___ Hubschraubers ist ohrenbetäubend.", "word": "Hubschrauber", "answer": "des" },
+						{ "question": "Die Abfahrt ___ Fähre verzögert sich.", "word": "Fähre", "answer": "der" }
 					]
 				},
 				{
@@ -131,8 +186,13 @@
 						{ "question": "Der Start ___ Flugzeugs ist um 10 Uhr.", "word": "Flugzeug", "answer": "des" },
 						{ "question": "Die Größe ___ Schiffes ist beeindruckend.", "word": "Schiff", "answer": "des" },
 						{ "question": "Der Klang ___ Motorrads ist einzigartig.", "word": "Motorrad", "answer": "des" },
-						{ "question": "Die Geschwindigkeit ___ U-Bahn ist bekannt.", "word": "U-Bahn", "answer": "der" },
-						{ "question": "Die Farbe ___ Taxis ist auffällig.", "word": "Taxi", "answer": "des" }
+						{ "question": "Das Netz ___ U-Bahn ist gut ausgebaut.", "word": "U-Bahn", "answer": "der" },
+						{ "question": "Die Verfügbarkeit ___ Taxis ist gut.", "word": "Taxi", "answer": "eines" },
+						{ "question": "Die Pünktlichkeit ___ S-Bahn ist schlecht.", "word": "S-Bahn", "answer": "der" },
+						{ "question": "Die Dauer ___ Fluges beträgt zwei Stunden.", "word": "Flug", "answer": "des" },
+						{ "question": "Das Ziel ___ Fahrt ist unbekannt.", "word": "Fahrt", "answer": "der" },
+						{ "question": "Der Komfort ___ Reisebusses ist hoch.", "word": "Reisebus", "answer": "des" },
+						{ "question": "Die Länge ___ Güterzuges ist enorm.", "word": "Güterzug", "answer": "des" }
 					]
 				},
 				{
@@ -140,29 +200,44 @@
 					"tasks": [
 						{ "question": "Das Dach ___ Bahnhofs ist neu.", "word": "Bahnhof", "answer": "des" },
 						{ "question": "Der Name ___ Haltestelle ist neu.", "word": "Haltestelle", "answer": "der" },
-						{ "question": "Die Terminals ___ Flughafens sind groß.", "word": "Flughafen", "answer": "des" },
-						{ "question": "Die Boote ___ Hafens sind zahlreich.", "word": "Hafen", "answer": "des" },
-						{ "question": "Die Größe ___ Garage ist ausreichend.", "word": "Garage", "answer": "der" }
+						{ "question": "Das Terminal ___ Flughafens ist überfüllt.", "word": "Flughafen", "answer": "des" },
+						{ "question": "Die Tiefe ___ Hafens ist ausreichend.", "word": "Hafen", "answer": "des" },
+						{ "question": "Das Tor ___ Garage ist offen.", "word": "Garage", "answer": "der" },
+						{ "question": "Die Nummer ___ Gleises ist sieben.", "word": "Gleis", "answer": "des" },
+						{ "question": "Die Position ___ Bushaltestelle ist ideal.", "word": "Bushaltestelle", "answer": "der" },
+						{ "question": "Die Gebühr ___ Parkplatzes ist hoch.", "word": "Parkplatz", "answer": "des" },
+						{ "question": "Die Beleuchtung ___ Landebahn ist an.", "word": "Landebahn", "answer": "der" },
+						{ "question": "Das Material ___ Anlegestelle ist stabil.", "word": "Anlegestelle", "answer": "der" }
 					]
 				},
 				{
 					"id": 4,
 					"tasks": [
-						{ "question": "Die Gültigkeit ___ Fahrkarte ist einen Tag.", "word": "Fahrkarte", "answer": "der" },
+						{ "question": "Die Gültigkeit ___ Fahrkarte ist abgelaufen.", "word": "Fahrkarte", "answer": "der" },
 						{ "question": "Die Polsterung ___ Sitzes ist weich.", "word": "Sitz", "answer": "des" },
 						{ "question": "Die Leistung ___ Motors ist hoch.", "word": "Motor", "answer": "des" },
 						{ "question": "Die Drehung ___ Rades ist schnell.", "word": "Rad", "answer": "des" },
-						{ "question": "Die Bedeutung ___ Ampel ist klar.", "word": "Ampel", "answer": "der" }
+						{ "question": "Die Farbe ___ Ampel ist grün.", "word": "Ampel", "answer": "der" },
+						{ "question": "Die Informationen ___ Fahrplans sind veraltet.", "word": "Fahrplan", "answer": "des" },
+						{ "question": "Der Preis ___ Tickets ist fair.", "word": "Ticket", "answer": "des" },
+						{ "question": "Das Gewicht ___ Gepäcks ist zu hoch.", "word": "Gepäck", "answer": "des" },
+						{ "question": "Die Dichte ___ Verkehrs nimmt zu.", "word": "Verkehr", "answer": "des" },
+						{ "question": "Die Länge ___ Staus ist unbekannt.", "word": "Stau", "answer": "des" }
 					]
 				},
 				{
 					"id": 5,
 					"tasks": [
-						{ "question": "Die Steuerung ___ Lenkrads ist präzise.", "word": "Lenkrad", "answer": "des" },
-						{ "question": "Die Funktion ___ Tür ist einfach.", "word": "Tür", "answer": "der" },
+						{ "question": "Die Position ___ Lenkrads ist verstellbar.", "word": "Lenkrad", "answer": "des" },
+						{ "question": "Das Schloss ___ Tür ist kaputt.", "word": "Tür", "answer": "der" },
 						{ "question": "Die Helligkeit ___ Scheinwerfers ist stark.", "word": "Scheinwerfer", "answer": "des" },
-						{ "question": "Die Wirkung ___ Bremse ist sofort.", "word": "Bremse", "answer": "der" },
-						{ "question": "Die Luft in ___ Reifen ist ausreichend.", "word": "Reifen", "answer": "dem" }
+						{ "question": "Die Funktion ___ Bremse ist lebenswichtig.", "word": "Bremse", "answer": "der" },
+						{ "question": "Der Druck ___ Reifens ist zu niedrig.", "word": "Reifen", "answer": "des" },
+						{ "question": "Die Tönung ___ Fensters ist dunkel.", "word": "Fenster", "answer": "des" },
+						{ "question": "Die Sicherheit ___ Sitzgurtes ist geprüft.", "word": "Sitzgurt", "answer": "des" },
+						{ "question": "Das Volumen ___ Kofferraums ist groß.", "word": "Kofferraum", "answer": "des" },
+						{ "question": "Die Einstellung ___ Spiegels ist falsch.", "word": "Spiegel", "answer": "des" },
+						{ "question": "Der Ton ___ Hupe ist laut.", "word": "Hupe", "answer": "der" }
 					]
 				}
 			]

@@ -2,7 +2,9 @@
     import {useTrainerStore} from '../store/themenProgressStore.js'
     import {useRouter} from 'vue-router'
     import {ref, onMounted, onUnmounted, computed} from 'vue'
+
     const router = useRouter()
+    const {t} = useI18n()
     const trainer = useTrainerStore()
     const correctAnswers = ref(0)
     const loading = ref(true)
@@ -11,6 +13,12 @@
     const feedback = ref(null)
     const finished = ref(false)
     const isChecked = ref(false)
+    const showExitModal = ref(false)
+    const hourRotation = ref(0);
+    const minuteRotation = ref(0);
+    const secondRotation = ref(0);
+    let clockInterval = null;
+
     const tasks = computed(() => trainer.selectedModule?.tasks || [])
     const progressPercent = computed(() => ((current.value + (finished.value ? 1 : 0)) / tasks.value.length) * 100)
     const visibleSentence = computed(() => {
@@ -45,9 +53,25 @@
             }
         }
     }
+
     const exit = () => {
+        const hasStarted = current.value > 0 || isChecked.value === true
+        if (hasStarted && finished.value === false) {
+            showExitModal.value = true
+        } else {
+            router.push('choiceTheme')
+        }
+    }
+
+    const confirmExit = () => {
+        showExitModal.value = false
         router.push('/choiceTheme')
     }
+
+    const cancelExit = () => {
+        showExitModal.value = false
+    }
+
     const restartModule = () => {
         correctAnswers.value = 0
         current.value = 0
@@ -56,11 +80,6 @@
         isChecked.value = false
         finished.value = false
     }
-
-    const hourRotation = ref(0);
-    const minuteRotation = ref(0);
-    const secondRotation = ref(0);
-    let clockInterval = null;
 
     const updateClock = () => {
         const now = new Date();
@@ -71,7 +90,9 @@
         minuteRotation.value = minutes * 6 + seconds * 0.1;
         hourRotation.value = (hours % 12) * 30 + minutes * 0.5;
     };
-
+    const handleBeforeUnload = (event) => {
+        event.preventDefault();
+    };
 
     onMounted(async () => {
         if (!trainer.selectedModule) {
@@ -80,18 +101,32 @@
         loading.value = false
         updateClock();
         clockInterval = setInterval(updateClock, 1000);
+        window.addEventListener('beforeunload', handleBeforeUnload);
     })
 
     onUnmounted(() => {
         clearInterval(clockInterval);
+        window.removeEventListener('beforeunload', handleBeforeUnload);
     })
 </script>
 <template>
     <main class="trainer-page">
         <div class="trainer-page__content">
+            <div v-if="showExitModal" class="modal-overlay">
+                <div class="modal-content">
+                    <h3 class="modal-title">{{ t('trainerPage.sure')}}</h3>
+                    <p class="modal-text">{{ t('trainerPage.warning')}}</p>
+                    <div class="modal-actions">
+                        <button class="btn" @click="cancelExit">{{ t('trainerPage.continue')}}</button>
+                        <button class="btn btn--danger" @click="confirmExit">{{ t('trainerPage.exit')}}</button>
+                    </div>
+                </div>
+            </div>
             <div class="trainer-page__decorations">
-                <button class="exit-sign" @click="exit">Выход</button>
-
+                <button class="exit-sign" @click="exit">
+                    <img class="exit-sign-icon" src="../assets/images/exit.svg" alt="">
+                    <span class="exit-sign-text">{{ t('trainerPage.exit')}}</span>
+                </button>
                 <div class="scene-decoration scene-decoration--pencils">
                     <div class="pencil pencil--1"></div>
                     <div class="pencil pencil--2"></div>
@@ -104,9 +139,16 @@
                     <div class="book book--yellow book--tilted"></div>
                 </div>
                 <div class="scene-decoration scene-decoration--picture">
+                    <div class="picture-art-sun"></div>
                     <div class="picture-art"></div>
                 </div>
                 <div class="scene-decoration scene-decoration--clock">
+                    <div class="clock-hand--numbers">
+                        <div class="clock-hand--number-12">12</div>
+                        <div class="clock-hand--number-3">3</div>
+                        <div class="clock-hand--number-6">6</div>
+                        <div class="clock-hand--number-9">9</div>
+                    </div>
                     <div class="clock-hand clock-hand--hour" :style="{ transform: `rotate(${hourRotation}deg)` }"></div>
                     <div class="clock-hand clock-hand--minute"
                          :style="{ transform: `rotate(${minuteRotation}deg)` }"></div>
@@ -114,17 +156,16 @@
                          :style="{ transform: `rotate(${secondRotation}deg)` }"></div>
                 </div>
             </div>
-
             <div class="trainer-app">
                 <div class="trainer-app__board">
                     <section v-if="loading" class="trainer-app__view trainer-app__view--loading">
-                        <p>Загрузка тренажера...</p>
+                        <p>{{ t('trainerPage.loading')}}</p>
                     </section>
-
                     <section v-else-if="trainer.selectedModule" class="trainer-app__view trainer-app__view--content">
                         <header v-if="!finished" class="trainer-app__header">
                             <h1 class="trainer-app__title">{{ trainer.selectedModule.title }}</h1>
-                            <h2 class="trainer-app__subtitle">Задание {{ current + 1 }} из {{ tasks.length }}</h2>
+                            <h2 class="trainer-app__subtitle">{{ t('trainerPage.quest')}} {{ current + 1 }} / {{
+                                tasks.length }}</h2>
                         </header>
                         <div v-if="!finished" class="progress-bar">
                             <div class="progress-bar__fill" :style="{ width: progressPercent + '%' }"></div>
@@ -141,39 +182,45 @@
                                         :disabled="isChecked"
                                         placeholder="..."
                                 />
-                                <button v-if="!isChecked" class="btn" @click="check">Проверить</button>
-                                <button v-else class="btn btn--next" @click="next">Далее</button>
+                                <button v-if="!isChecked" class="btn" @click="check">{{ t('trainerPage.check')}}
+                                </button>
+                                <button v-else class="btn btn--next" @click="next">{{ t('trainerPage.further')}}
+                                </button>
                             </div>
                             <div v-if="feedback !== null" class="feedback">
                                 <p v-if="feedback === true" class="feedback__text feedback__text--success">
-                                    ✔ Верно!
+                                    ✔ {{ t('trainerPage.right')}}
                                 </p>
                                 <p v-if="feedback === false" class="feedback__text feedback__text--error">
-                                    ✖ Неверно. Правильный ответ: {{ tasks[current].answer }}
+                                    ✖ {{ t('trainerPage.false')}} {{ tasks[current].answer }}
                                 </p>
                             </div>
                         </div>
                         <div v-else class="trainer-app__view trainer-app__view--complete">
                             <div v-if="correctAnswers === tasks.length">
                                 <div class="result-icon">🏆</div>
-                                <h3 class="result-title">Модуль пройден!</h3>
-                                <p class="result-subtitle">Отлично! Ваш прогресс сохранен.</p>
-                                <button class="btn" @click="exit">К выбору тем</button>
+                                <h3 class="result-title">{{ t('trainerPage.end')}}</h3>
+                                <p class="result-subtitle">{{ t('trainerPage.save')}}</p>
+                                <button class="btn" @click="exit">{{ t('trainerPage.backToTheme')}}</button>
                             </div>
                             <div v-else>
                                 <div class="result-icon">🤔</div>
-                                <h3 class="result-title">Нужно еще потренироваться</h3>
-                                <p class="result-subtitle">Ваш результат: {{ correctAnswers }} из {{ tasks.length }}</p>
+                                <h3 class="result-title">{{ t('trainerPage.morePractice')}}</h3>
+                                <p class="result-subtitle">{{ t('trainerPage.result')}} {{ correctAnswers }} / {{
+                                    tasks.length }}</p>
                                 <div class="result-actions">
-                                    <button class="btn btn--restart" @click="restartModule">Повторить</button>
-                                    <button class="btn btn--secondary" @click="exit">К выбору тем</button>
+                                    <button class="btn btn--restart" @click="restartModule">{{
+                                        t('trainerPage.repeat')}}
+                                    </button>
+                                    <button class="btn btn--secondary" @click="exit">{{ t('trainerPage.toMain')}}
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </section>
                     <section v-else class="trainer-app__view trainer-app__view--error">
-                        <p>Ошибка. Модуль не найден.</p>
-                        <button class="btn" @click="exit">На главную</button>
+                        <p class="error__text">{{ t('trainerPage.notFound')}}</p>
+                        <button class="btn" @click="exit">{{ t('trainerPage.toMain')}}</button>
                     </section>
                 </div>
                 <div class="trainer-app__ledge">
@@ -182,12 +229,114 @@
                 </div>
             </div>
         </div>
-
         <div class="trainer-page__floor"></div>
     </main>
 </template>
 
 <style scoped>
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes scaleIn {
+        from {
+            transform: scale(0.9);
+            opacity: 0;
+        }
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    .exit-sign-icon {
+        width: 10px;
+    }
+
+    .exit-sign-text{
+        padding-left: 10px;
+    }
+
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(44, 62, 80, 0.85);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        animation: fadeIn 0.3s ease;
+    }
+
+    .modal-content {
+        background: #f0ebe5;
+        padding: 2rem 2.5rem;
+        border-radius: 12px;
+        border: 4px solid #d3c2b2;
+        color: #333;
+        width: 90%;
+        max-width: 480px;
+        text-align: center;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        animation: scaleIn 0.3s ease-out;
+    }
+
+    .modal-title {
+        font-family: 'Caveat', cursive;
+        font-size: 3rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        color: #5D4037;
+    }
+
+    .modal-text {
+        font-family: 'Nunito', sans-serif;
+        font-size: 1.2rem;
+        margin-bottom: 2.5rem;
+        line-height: 1.6;
+        color: #34495e;
+    }
+
+    .modal-actions {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .modal-content .btn {
+        border-color: #95a5a6;
+        color: #95a5a6;
+    }
+
+    .modal-content .btn:hover:not(:disabled) {
+        background-color: #95a5a6;
+        color: white;
+    }
+
+    .modal-content .btn--danger {
+        border-color: #e74c3c;
+        color: #e74c3c;
+    }
+
+    .modal-content .btn--danger:hover:not(:disabled) {
+        background-color: #e74c3c;
+        color: white;
+    }
+
+    @media (max-width: 768px) {
+        .modal-actions {
+            flex-direction: column;
+            width: 100%;
+        }
+    }
 
     @keyframes fadeInScene {
         from {
@@ -196,6 +345,21 @@
         to {
             opacity: 1;
         }
+    }
+
+    .picture-art-sun {
+        width: 25px;
+        height: 25px;
+        background: gold;
+        border-radius: 50%;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        opacity: 50%;
+    }
+
+    .error__text {
+        margin-bottom: 15px;
     }
 
     .trainer-page {
@@ -229,7 +393,6 @@
     }
 
     /* --- Декорации --- */
-
     .trainer-page__decorations {
         position: absolute;
         top: 0;
@@ -240,6 +403,9 @@
     }
 
     .exit-sign {
+        display: flex;
+        align-content: center;
+        justify-content: center;
         pointer-events: all;
         position: absolute;
         top: 3vh;
@@ -389,6 +555,44 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .clock-hand--numbers {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .clock-hand--number-12 {
+        position: absolute;
+        left: 50%;
+        top: 2px;
+        font-size: 10px;
+        transform: translateX(-50%);
+    }
+
+    .clock-hand--number-3 {
+        position: absolute;
+        right: 2px;
+        top: 50%;
+        font-size: 10px;
+        transform: translateY(-50%);
+    }
+
+    .clock-hand--number-6 {
+        position: absolute;
+        left: 50%;
+        bottom: 2px;
+        font-size: 10px;
+        transform: translateX(-50%);
+    }
+
+    .clock-hand--number-9 {
+        position: absolute;
+        left: 2px;
+        top: 50%;
+        font-size: 10px;
+        transform: translateY(-50%);
     }
 
     .clock-hand {
@@ -664,7 +868,6 @@
     }
 
     /* --- Адаптивность --- */
-
     @media (max-width: 768px) {
         .trainer-page__content {
             align-items: flex-start;

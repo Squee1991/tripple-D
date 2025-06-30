@@ -12,7 +12,12 @@
 						{ "question": "___ Koffer ist groß.", "word": "Koffer", "answer": "der" },
 						{ "question": "___ Flugzeug ist schnell.", "word": "Flugzeug", "answer": "das" },
 						{ "question": "___ Hotel ist bequem.", "word": "Hotel", "answer": "das" },
-						{ "question": "___ Stadt ist schön.", "word": "Stadt", "answer": "die" }
+						{ "question": "___ Stadt ist schön.", "word": "Stadt", "answer": "die" },
+						{ "question": "___ Flug ist pünktlich.", "word": "Flug", "answer": "der" },
+						{ "question": "___ Reise ist lang.", "word": "Reise", "answer": "die" },
+						{ "question": "___ Visum ist gültig.", "word": "Visum", "answer": "das" },
+						{ "question": "___ Buchung ist bestätigt.", "word": "Buchung", "answer": "die" },
+						{ "question": "___ Gepäck ist schwer.", "word": "Gepäck", "answer": "das" }
 					]
 				},
 				{
@@ -22,7 +27,12 @@
 						{ "question": "___ Berg ist hoch.", "word": "Berg", "answer": "der" },
 						{ "question": "___ Meer ist blau.", "word": "Meer", "answer": "das" },
 						{ "question": "___ Land ist fremd.", "word": "Land", "answer": "das" },
-						{ "question": "___ Insel ist klein.", "word": "Insel", "answer": "die" }
+						{ "question": "___ Insel ist klein.", "word": "Insel", "answer": "die" },
+						{ "question": "___ Wald ist dicht.", "word": "Wald", "answer": "der" },
+						{ "question": "___ Fluss ist breit.", "word": "Fluss", "answer": "der" },
+						{ "question": "___ See ist tief.", "word": "See", "answer": "der" },
+						{ "question": "___ Wüste ist heiß.", "word": "Wüste", "answer": "die" },
+						{ "question": "___ Küste ist felsig.", "word": "Küste", "answer": "die" }
 					]
 				},
 				{
@@ -32,7 +42,12 @@
 						{ "question": "___ Bahnhof ist groß.", "word": "Bahnhof", "answer": "der" },
 						{ "question": "___ Flughafen ist modern.", "word": "Flughafen", "answer": "der" },
 						{ "question": "___ Bus ist voll.", "word": "Bus", "answer": "der" },
-						{ "question": "___ Taxi ist gelb.", "word": "Taxi", "answer": "das" }
+						{ "question": "___ Taxi ist gelb.", "word": "Taxi", "answer": "das" },
+						{ "question": "___ Zug ist schnell.", "word": "Zug", "answer": "der" },
+						{ "question": "___ Schiff ist weiß.", "word": "Schiff", "answer": "das" },
+						{ "question": "___ Auto ist gemietet.", "word": "Auto", "answer": "das" },
+						{ "question": "___ Bahnsteig ist lang.", "word": "Bahnsteig", "answer": "der" },
+						{ "question": "___ Haltestelle ist nah.", "word": "Haltestelle", "answer": "die" }
 					]
 				},
 				{
@@ -42,7 +57,12 @@
 						{ "question": "___ Sehenswürdigkeit ist bekannt.", "word": "Sehenswürdigkeit", "answer": "die" },
 						{ "question": "___ Karte ist nützlich.", "word": "Karte", "answer": "die" },
 						{ "question": "___ Reiseführer ist informativ.", "word": "Reiseführer", "answer": "der" },
-						{ "question": "___ Souvenir ist klein.", "word": "Souvenir", "answer": "das" }
+						{ "question": "___ Souvenir ist klein.", "word": "Souvenir", "answer": "das" },
+						{ "question": "___ Rucksack ist praktisch.", "word": "Rucksack", "answer": "der" },
+						{ "question": "___ Kamera ist neu.", "word": "Kamera", "answer": "die" },
+						{ "question": "___ Geld ist sicher.", "word": "Geld", "answer": "das" },
+						{ "question": "___ Restaurant ist gut.", "word": "Restaurant", "answer": "das" },
+						{ "question": "___ Museum ist interessant.", "word": "Museum", "answer": "das" }
 					]
 				},
 				{
@@ -52,7 +72,12 @@
 						{ "question": "___ Abenteuer ist aufregend.", "word": "Abenteuer", "answer": "das" },
 						{ "question": "___ Entdeckung ist neu.", "word": "Entdeckung", "answer": "die" },
 						{ "question": "___ Erfahrung ist wertvoll.", "word": "Erfahrung", "answer": "die" },
-						{ "question": "___ Erinnerung ist schön.", "word": "Erinnerung", "answer": "die" }
+						{ "question": "___ Erinnerung ist schön.", "word": "Erinnerung", "answer": "die" },
+						{ "question": "___ Ausflug ist kurz.", "word": "Ausflug", "answer": "der" },
+						{ "question": "___ Eindruck ist positiv.", "word": "Eindruck", "answer": "der" },
+						{ "question": "___ Gastfreundschaft ist großartig.", "word": "Gastfreundschaft", "answer": "die" },
+						{ "question": "___ Kultur ist anders.", "word": "Kultur", "answer": "die" },
+						{ "question": "___ Abfahrt ist morgen.", "word": "Abfahrt", "answer": "die" }
 					]
 				}
 			]
@@ -67,7 +92,12 @@
 						{ "question": "Sie braucht ___ Pass.", "word": "Pass", "answer": "einen" },
 						{ "question": "Wir fliegen mit ___ Flugzeug.", "word": "Flugzeug", "answer": "dem" },
 						{ "question": "Er bucht ___ Hotelzimmer.", "word": "Hotelzimmer", "answer": "ein" },
-						{ "question": "Sie besucht ___ Stadt.", "word": "Stadt", "answer": "die" }
+						{ "question": "Sie besucht ___ Stadt.", "word": "Stadt", "answer": "die" },
+						{ "question": "Er beantragt ___ Visum für die Reise.", "word": "Visum", "answer": "ein" },
+						{ "question": "Ich gebe ___ Gepäck am Schalter ab.", "word": "Gepäck", "answer": "das" },
+						{ "question": "Wir wollen ___ Flug nicht verpassen.", "word": "Flug", "answer": "den" },
+						{ "question": "Sie bestätigt ___ Buchung per E-Mail.", "word": "Buchung", "answer": "die" },
+						{ "question": "Ich beginne ___ Reise.", "word": "Reise", "answer": "eine" }
 					]
 				},
 				{
@@ -77,7 +107,12 @@
 						{ "question": "Er wandert auf ___ Berg.", "word": "Berg", "answer": "dem" },
 						{ "question": "Sie schwimmt im ___ Meer.", "word": "Meer", "answer": "dem" },
 						{ "question": "Ich reise in ___ Land.", "word": "Land", "answer": "ein fremdes" },
-						{ "question": "Wir besuchen ___ Insel.", "word": "Insel", "answer": "eine" }
+						{ "question": "Wir besuchen ___ Insel.", "word": "Insel", "answer": "eine" },
+						{ "question": "Wir spazieren an ___ See entlang.", "word": "See", "answer": "dem" },
+						{ "question": "Das Boot fährt auf ___ Fluss.", "word": "Fluss", "answer": "dem" },
+						{ "question": "Sie wandern durch ___ Wald.", "word": "Wald", "answer": "den" },
+						{ "question": "Er überquert ___ Wüste.", "word": "Wüste", "answer": "die" },
+						{ "question": "Wir fahren ___ Küste entlang.", "word": "Küste", "answer": "die" }
 					]
 				},
 				{
@@ -87,7 +122,12 @@
 						{ "question": "Sie geht zum ___ Bahnhof.", "word": "Bahnhof", "answer": "dem" },
 						{ "question": "Er fährt zum ___ Flughafen.", "word": "Flughafen", "answer": "dem" },
 						{ "question": "Wir nehmen ___ Bus.", "word": "Bus", "answer": "den" },
-						{ "question": "Sie ruft ___ Taxi.", "word": "Taxi", "answer": "ein" }
+						{ "question": "Sie ruft ___ Taxi.", "word": "Taxi", "answer": "ein" },
+						{ "question": "Wir warten auf ___ Zug nach Berlin.", "word": "Zug", "answer": "den" },
+						{ "question": "Die Familie reist mit ___ Schiff.", "word": "Schiff", "answer": "einem" },
+						{ "question": "Ich miete ___ Auto für eine Woche.", "word": "Auto", "answer": "ein" },
+						{ "question": "Der Zug fährt von ___ Bahnsteig ab.", "word": "Bahnsteig", "answer": "dem" },
+						{ "question": "Er wartet an ___ Haltestelle.", "word": "Haltestelle", "answer": "der" }
 					]
 				},
 				{
@@ -97,7 +137,12 @@
 						{ "question": "Sie besichtigt ___ Sehenswürdigkeit.", "word": "Sehenswürdigkeit", "answer": "die" },
 						{ "question": "Ich benutze ___ Karte.", "word": "Karte", "answer": "eine" },
 						{ "question": "Er liest ___ Reiseführer.", "word": "Reiseführer", "answer": "den" },
-						{ "question": "Sie kauft ___ Souvenir.", "word": "Souvenir", "answer": "ein" }
+						{ "question": "Sie kauft ___ Souvenir.", "word": "Souvenir", "answer": "ein" },
+						{ "question": "Ich trage ___ Rucksack auf dem Rücken.", "word": "Rucksack", "answer": "den" },
+						{ "question": "Sie hat ___ Kamera dabei.", "word": "Kamera", "answer": "eine" },
+						{ "question": "Er wechselt ___ Geld in die lokale Währung.", "word": "Geld", "answer": "das" },
+						{ "question": "Wir essen in ___ Restaurant.", "word": "Restaurant", "answer": "einem" },
+						{ "question": "Morgen besuchen wir ___ Museum.", "word": "Museum", "answer": "ein" }
 					]
 				},
 				{
@@ -105,9 +150,14 @@
 					"tasks": [
 						{ "question": "Ich mache ___ Urlaub.", "word": "Urlaub", "answer": "einen" },
 						{ "question": "Wir suchen ___ Abenteuer.", "word": "Abenteuer", "answer": "das" },
-						{ "question": "Sie macht ___ Entdeckung.", "word": "Entdeckung", "answer": "eine" },
-						{ "question": "Er sammelt ___ Erfahrungen.", "word": "Erfahrungen", "answer": "neue" },
-						{ "question": "Wir schaffen ___ Erinnerungen.", "word": "Erinnerungen", "answer": "schöne" }
+						{ "question": "Sie macht ___ Entdeckung auf ihrer Reise.", "word": "Entdeckung", "answer": "eine" },
+						{ "question": "Das Foto weckt ___ Erinnerungen.", "word": "Erinnerungen", "answer": "die" },
+						{ "question": "Er sammelt ___ Erfahrungen im Ausland.", "word": "Erfahrungen", "answer": "die" },
+						{ "question": "Wir machen ___ Ausflug in die Berge.", "word": "Ausflug", "answer": "einen" },
+						{ "question": "Er gewinnt ___ Eindruck von der Stadt.", "word": "Eindruck", "answer": "einen" },
+						{ "question": "Sie genießen ___ Gastfreundschaft der Leute.", "word": "Gastfreundschaft", "answer": "die" },
+						{ "question": "Ich lerne ___ Kultur kennen.", "word": "Kultur", "answer": "eine" },
+						{ "question": "Wir warten auf ___ Abfahrt des Zuges.", "word": "Abfahrt", "answer": "die" }
 					]
 				}
 			]

@@ -12,7 +12,12 @@
 						{ "question": "___ Mutter ist freundlich.", "word": "Mutter", "answer": "die" },
 						{ "question": "___ Kind spielt.", "word": "Kind", "answer": "das" },
 						{ "question": "___ Bruder ist jung.", "word": "Bruder", "answer": "der" },
-						{ "question": "___ Schwester ist klug.", "word": "Schwester", "answer": "die" }
+						{ "question": "___ Schwester ist klug.", "word": "Schwester", "answer": "die" },
+						{ "question": "___ Opa erzählt eine Geschichte.", "word": "Opa", "answer": "der" },
+						{ "question": "___ Oma backt einen Kuchen.", "word": "Oma", "answer": "die" },
+						{ "question": "___ Baby schläft.", "word": "Baby", "answer": "das" },
+						{ "question": "___ Zwillinge spielen zusammen.", "word": "Zwillinge", "answer": "die" },
+						{ "question": "___ Enkelkind lacht.", "word": "Enkelkind", "answer": "das" }
 					]
 				},
 				{
@@ -22,7 +27,12 @@
 						{ "question": "___ Großmutter kocht.", "word": "Großmutter", "answer": "die" },
 						{ "question": "___ Onkel kommt zu Besuch.", "word": "Onkel", "answer": "der" },
 						{ "question": "___ Tante singt.", "word": "Tante", "answer": "die" },
-						{ "question": "___ Cousin spielt Fußball.", "word": "Cousin", "answer": "der" }
+						{ "question": "___ Cousin spielt Fußball.", "word": "Cousin", "answer": "der" },
+						{ "question": "___ Urgroßvater ist sehr alt.", "word": "Urgroßvater", "answer": "der" },
+						{ "question": "___ Urgroßmutter ist weise.", "word": "Urgroßmutter", "answer": "die" },
+						{ "question": "___ Patenonkel bringt ein Geschenk.", "word": "Patenonkel", "answer": "der" },
+						{ "question": "___ Patentante ist lieb.", "word": "Patentante", "answer": "die" },
+						{ "question": "___ Verwandte kommt heute.", "word": "Verwandte", "answer": "der" }
 					]
 				},
 				{
@@ -32,7 +42,12 @@
 						{ "question": "___ Sohn lernt.", "word": "Sohn", "answer": "der" },
 						{ "question": "___ Tochter malt.", "word": "Tochter", "answer": "die" },
 						{ "question": "___ Eltern arbeiten.", "word": "Eltern", "answer": "die" },
-						{ "question": "___ Geschwister streiten.", "word": "Geschwister", "answer": "die" }
+						{ "question": "___ Geschwister streiten.", "word": "Geschwister", "answer": "die" },
+						{ "question": "___ Enkel besucht uns.", "word": "Enkel", "answer": "der" },
+						{ "question": "___ Enkelin ruft an.", "word": "Enkelin", "answer": "die" },
+						{ "question": "___ Enkelkinder sind laut.", "word": "Enkelkinder", "answer": "die" },
+						{ "question": "___ Stiefvater ist streng.", "word": "Stiefvater", "answer": "der" },
+						{ "question": "___ Stiefmutter ist nett.", "word": "Stiefmutter", "answer": "die" }
 					]
 				},
 				{
@@ -42,7 +57,12 @@
 						{ "question": "___ Ehefrau kocht Kaffee.", "word": "Ehefrau", "answer": "die" },
 						{ "question": "___ Neffe spielt im Garten.", "word": "Neffe", "answer": "der" },
 						{ "question": "___ Nichte liest ein Buch.", "word": "Nichte", "answer": "die" },
-						{ "question": "___ Familie ist groß.", "word": "Familie", "answer": "die" }
+						{ "question": "___ Familie ist groß.", "word": "Familie", "answer": "die" },
+						{ "question": "___ Ehepaar feiert Hochzeitstag.", "word": "Ehepaar", "answer": "das" },
+						{ "question": "___ Paar geht spazieren.", "word": "Paar", "answer": "das" },
+						{ "question": "___ Haushalt ist groß.", "word": "Haushalt", "answer": "der" },
+						{ "question": "___ Vorfahren sind wichtig.", "word": "Vorfahren", "answer": "die" },
+						{ "question": "___ Nachkommen sind unsere Zukunft.", "word": "Nachkommen", "answer": "die" }
 					]
 				},
 				{
@@ -52,7 +72,12 @@
 						{ "question": "___ Schwiegermutter lacht.", "word": "Schwiegermutter", "answer": "die" },
 						{ "question": "___ Schwiegersohn hilft.", "word": "Schwiegersohn", "answer": "der" },
 						{ "question": "___ Schwiegertochter lernt Deutsch.", "word": "Schwiegertochter", "answer": "die" },
-						{ "question": "___ Partner arbeitet.", "word": "Partner", "answer": "der" }
+						{ "question": "___ Partner arbeitet.", "word": "Partner", "answer": "der" },
+						{ "question": "___ Schwager ist lustig.", "word": "Schwager", "answer": "der" },
+						{ "question": "___ Schwägerin hilft im Haus.", "word": "Schwägerin", "answer": "die" },
+						{ "question": "___ Bräutigam ist nervös.", "word": "Bräutigam", "answer": "der" },
+						{ "question": "___ Braut ist wunderschön.", "word": "Braut", "answer": "die" },
+						{ "question": "___ Witwe lebt allein.", "word": "Witwe", "answer": "die" }
 					]
 				}
 			]
@@ -67,7 +92,12 @@
 						{ "question": "Sie ruft ___ Mutter an.", "word": "Mutter", "answer": "die" },
 						{ "question": "Wir holen ___ Kind vom Kindergarten ab.", "word": "Kind", "answer": "das" },
 						{ "question": "Er sieht ___ Bruder im Park.", "word": "Bruder", "answer": "den" },
-						{ "question": "Ich helfe ___ Schwester bei den Hausaufgaben.", "word": "Schwester", "answer": "der" }
+						{ "question": "Ich helfe ___ Schwester bei den Hausaufgaben.", "word": "Schwester", "answer": "der" },
+						{ "question": "Wir helfen ___ Opa im Garten.", "word": "Opa", "answer": "dem" },
+						{ "question": "Ich gebe ___ Oma einen Kuss.", "word": "Oma", "answer": "der" },
+						{ "question": "Ich sehe ___ Baby im Kinderwagen.", "word": "Baby", "answer": "das" },
+						{ "question": "Sie zieht ___ Zwillinge an.", "word": "Zwillinge", "answer": "die" },
+						{ "question": "Er liebt ___ Enkelkind sehr.", "word": "Enkelkind", "answer": "das" }
 					]
 				},
 				{
@@ -77,7 +107,12 @@
 						{ "question": "Sie gibt ___ Großmutter Blumen.", "word": "Großmutter", "answer": "der" },
 						{ "question": "Ich schenke ___ Onkel ein Buch.", "word": "Onkel", "answer": "dem" },
 						{ "question": "Sie sieht ___ Tante oft.", "word": "Tante", "answer": "die" },
-						{ "question": "Er trifft ___ Cousin am Bahnhof.", "word": "Cousin", "answer": "den" }
+						{ "question": "Er trifft ___ Cousin am Bahnhof.", "word": "Cousin", "answer": "den" },
+						{ "question": "Ich schreibe ___ Urgroßvater einen Brief.", "word": "Urgroßvater", "answer": "dem" },
+						{ "question": "Sie dankt ___ Urgroßmutter für das Geschenk.", "word": "Urgroßmutter", "answer": "der" },
+						{ "question": "Er fragt ___ Patenonkel um Rat.", "word": "Patenonkel", "answer": "den" },
+						{ "question": "Ich vertraue ___ Patentante.", "word": "Patentante", "answer": "der" },
+						{ "question": "Wir besuchen ___ Verwandte in einer anderen Stadt.", "word": "Verwandte", "answer": "die" }
 					]
 				},
 				{
@@ -87,7 +122,12 @@
 						{ "question": "Wir loben ___ Sohn für seine Noten.", "word": "Sohn", "answer": "den" },
 						{ "question": "Sie sieht ___ Tochter in der Schule.", "word": "Tochter", "answer": "die" },
 						{ "question": "Ich besuche ___ Eltern oft.", "word": "Eltern", "answer": "die" },
-						{ "question": "Sie versteht ___ Geschwister gut.", "word": "Geschwister", "answer": "die" }
+						{ "question": "Sie versteht ___ Geschwister gut.", "word": "Geschwister", "answer": "die" },
+						{ "question": "Die Oma hütet ___ Enkel.", "word": "Enkel", "answer": "den" },
+						{ "question": "Der Opa liest ___ Enkelin vor.", "word": "Enkelin", "answer": "der" },
+						{ "question": "Die Eltern lieben ___ Enkelkinder.", "word": "Enkelkinder", "answer": "die" },
+						{ "question": "Das Kind gehorcht ___ Stiefvater.", "word": "Stiefvater", "answer": "dem" },
+						{ "question": "Sie spricht mit ___ Stiefmutter.", "word": "Stiefmutter", "answer": "der" }
 					]
 				},
 				{
@@ -97,7 +137,12 @@
 						{ "question": "Sie umarmt ___ Ehefrau.", "word": "Ehefrau", "answer": "die" },
 						{ "question": "Wir holen ___ Neffe vom Zug ab.", "word": "Neffe", "answer": "den" },
 						{ "question": "Sie trifft ___ Nichte nach der Schule.", "word": "Nichte", "answer": "die" },
-						{ "question": "Er besucht ___ Familie in Berlin.", "word": "Familie", "answer": "die" }
+						{ "question": "Er besucht ___ Familie in Berlin.", "word": "Familie", "answer": "die" },
+						{ "question": "Wir gratulieren ___ Ehepaar zum Jubiläum.", "word": "Ehepaar", "answer": "dem" },
+						{ "question": "Ich sehe ___ Paar im Park.", "word": "Paar", "answer": "das" },
+						{ "question": "Sie führt ___ großen Haushalt.", "word": "Haushalt", "answer": "den" },
+						{ "question": "Wir ehren ___ Vorfahren.", "word": "Vorfahren", "answer": "die" },
+						{ "question": "Er sorgt für ___ Nachkommen.", "word": "Nachkommen", "answer": "die" }
 					]
 				},
 				{
@@ -107,7 +152,12 @@
 						{ "question": "Er hilft ___ Schwiegermutter im Garten.", "word": "Schwiegermutter", "answer": "der" },
 						{ "question": "Wir loben ___ Schwiegersohn für seine Arbeit.", "word": "Schwiegersohn", "answer": "den" },
 						{ "question": "Sie sieht ___ Schwiegertochter im Büro.", "word": "Schwiegertochter", "answer": "die" },
-						{ "question": "Ich spreche mit ___ Partner über das Problem.", "word": "Partner", "answer": "dem" }
+						{ "question": "Ich spreche mit ___ Partner über das Problem.", "word": "Partner", "answer": "dem" },
+						{ "question": "Ich rufe ___ Schwager an.", "word": "Schwager", "answer": "den" },
+						{ "question": "Er hilft ___ Schwägerin beim Umzug.", "word": "Schwägerin", "answer": "der" },
+						{ "question": "Alle schauen ___ Bräutigam an.", "word": "Bräutigam", "answer": "den" },
+						{ "question": "Der Vater führt ___ Braut zum Altar.", "word": "Braut", "answer": "die" },
+						{ "question": "Wir trösten ___ Witwe.", "word": "Witwe", "answer": "die" }
 					]
 				}
 			]
@@ -122,7 +172,12 @@
 						{ "question": "Das Auto ___ Mutter ist rot.", "word": "Mutter", "answer": "der" },
 						{ "question": "Das Zimmer ___ Kindes ist groß.", "word": "Kind", "answer": "des" },
 						{ "question": "Das Hobby ___ Bruders ist Musik.", "word": "Bruder", "answer": "des" },
-						{ "question": "Das Buch ___ Schwester ist spannend.", "word": "Schwester", "answer": "der" }
+						{ "question": "Das Buch ___ Schwester ist spannend.", "word": "Schwester", "answer": "der" },
+						{ "question": "Der Stock ___ Opas steht in der Ecke.", "word": "Opa", "answer": "des" },
+						{ "question": "Das Rezept ___ Oma ist geheim.", "word": "Oma", "answer": "der" },
+						{ "question": "Der Schnuller ___ Babys ist weg.", "word": "Baby", "answer": "des" },
+						{ "question": "Das Spielzeug ___ Zwillinge ist neu.", "word": "Zwillinge", "answer": "der" },
+						{ "question": "Die Zukunft ___ Enkelkindes ist wichtig.", "word": "Enkelkind", "answer": "des" }
 					]
 				},
 				{
@@ -132,7 +187,12 @@
 						{ "question": "Die Brille ___ Großmutter ist neu.", "word": "Großmutter", "answer": "der" },
 						{ "question": "Das Geschenk ___ Onkels ist schön.", "word": "Onkel", "answer": "des" },
 						{ "question": "Die Stimme ___ Tante ist laut.", "word": "Tante", "answer": "der" },
-						{ "question": "Der Ball ___ Cousins ist grün.", "word": "Cousin", "answer": "des" }
+						{ "question": "Der Ball ___ Cousins ist grün.", "word": "Cousin", "answer": "des" },
+						{ "question": "Das Alter ___ Urgroßvaters ist beeindruckend.", "word": "Urgroßvater", "answer": "des" },
+						{ "question": "Die Geschichten ___ Urgroßmutter sind spannend.", "word": "Urgroßmutter", "answer": "der" },
+						{ "question": "Das Auto ___ Patenonkels ist schnell.", "word": "Patenonkel", "answer": "des" },
+						{ "question": "Der Garten ___ Patentante ist bunt.", "word": "Patentante", "answer": "der" },
+						{ "question": "Der Name ___ Verwandten ist mir entfallen.", "word": "Verwandte", "answer": "des" }
 					]
 				},
 				{
@@ -142,7 +202,12 @@
 						{ "question": "Der Freund ___ Sohnes ist lustig.", "word": "Sohn", "answer": "des" },
 						{ "question": "Die Lehrerin ___ Tochter ist nett.", "word": "Tochter", "answer": "der" },
 						{ "question": "Die Wohnung ___ Eltern ist groß.", "word": "Eltern", "answer": "der" },
-						{ "question": "Das Spielzeug ___ Geschwister ist kaputt.", "word": "Geschwister", "answer": "der" }
+						{ "question": "Das Spielzeug ___ Geschwister ist kaputt.", "word": "Geschwister", "answer": "der" },
+						{ "question": "Die Schultasche ___ Enkels ist schwer.", "word": "Enkel", "answer": "des" },
+						{ "question": "Das Lächeln ___ Enkelin ist süß.", "word": "Enkelin", "answer": "der" },
+						{ "question": "Das Lachen ___ Enkelkinder erfüllt das Haus.", "word": "Enkelkinder", "answer": "der" },
+						{ "question": "Die Entscheidung ___ Stiefvaters ist endgültig.", "word": "Stiefvater", "answer": "des" },
+						{ "question": "Der Rat ___ Stiefmutter war gut.", "word": "Stiefmutter", "answer": "der" }
 					]
 				},
 				{
@@ -152,7 +217,12 @@
 						{ "question": "Die Tasche ___ Ehefrau ist teuer.", "word": "Ehefrau", "answer": "der" },
 						{ "question": "Das Geschenk ___ Neffen ist groß.", "word": "Neffe", "answer": "des" },
 						{ "question": "Die Freundin ___ Nichte ist nett.", "word": "Nichte", "answer": "der" },
-						{ "question": "Die Geschichte ___ Familie ist interessant.", "word": "Familie", "answer": "der" }
+						{ "question": "Die Geschichte ___ Familie ist interessant.", "word": "Familie", "answer": "der" },
+						{ "question": "Der Hochzeitstag ___ Ehepaares ist heute.", "word": "Ehepaar", "answer": "des" },
+						{ "question": "Die Liebe ___ Paares ist stark.", "word": "Paar", "answer": "des" },
+						{ "question": "Die Organisation ___ Haushalts ist kompliziert.", "word": "Haushalt", "answer": "des" },
+						{ "question": "Die Geschichte ___ Vorfahren ist lang.", "word": "Vorfahren", "answer": "der" },
+						{ "question": "Die Erziehung ___ Nachkommen ist wichtig.", "word": "Nachkommen", "answer": "der" }
 					]
 				},
 				{
@@ -162,7 +232,12 @@
 						{ "question": "Die Jacke ___ Schwiegermutter ist blau.", "word": "Schwiegermutter", "answer": "der" },
 						{ "question": "Die Arbeit ___ Schwiegersohns ist schwer.", "word": "Schwiegersohn", "answer": "des" },
 						{ "question": "Die Tasche ___ Schwiegertochter ist rot.", "word": "Schwiegertochter", "answer": "der" },
-						{ "question": "Die Hilfe ___ Partners ist wichtig.", "word": "Partner", "answer": "des" }
+						{ "question": "Die Hilfe ___ Partners ist wichtig.", "word": "Partner", "answer": "des" },
+						{ "question": "Das Haus ___ Schwagers ist modern.", "word": "Schwager", "answer": "des" },
+						{ "question": "Das Kleid ___ Schwägerin ist elegant.", "word": "Schwägerin", "answer": "der" },
+						{ "question": "Der Anzug ___ Bräutigams ist schwarz.", "word": "Bräutigam", "answer": "des" },
+						{ "question": "Der Schleier ___ Braut ist lang.", "word": "Braut", "answer": "der" },
+						{ "question": "Das Leben ___ Witwe ist nicht einfach.", "word": "Witwe", "answer": "der" }
 					]
 				}
 			]

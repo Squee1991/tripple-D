@@ -110,7 +110,7 @@
 			{
 				id: 1,
 				value: "exampleThirdBlock.man",
-				example: "exampleThirdBlock.example",
+				example: "exampleThirdBlock.mExample",
 				sexExample: "exampleThirdBlock.mExample",
 				article: "ein"
 			},

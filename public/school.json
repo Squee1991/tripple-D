@@ -12,7 +12,12 @@
 						{ "question": "___ Lehrer ist nett.", "word": "Lehrer", "answer": "der" },
 						{ "question": "___ Buch ist dick.", "word": "Buch", "answer": "das" },
 						{ "question": "___ Klasse ist groß.", "word": "Klasse", "answer": "die" },
-						{ "question": "___ Stift ist neu.", "word": "Stift", "answer": "der" }
+						{ "question": "___ Stift ist neu.", "word": "Stift", "answer": "der" },
+						{ "question": "___ Hausaufgabe ist schwer.", "word": "Hausaufgabe", "answer": "die" },
+						{ "question": "___ Unterricht ist interessant.", "word": "Unterricht", "answer": "der" },
+						{ "question": "___ Zeugnis ist gut.", "word": "Zeugnis", "answer": "das" },
+						{ "question": "___ Klassenzimmer ist hell.", "word": "Klassenzimmer", "answer": "das" },
+						{ "question": "___ Freund ist lustig.", "word": "Freund", "answer": "der" }
 					]
 				},
 				{
@@ -22,7 +27,12 @@
 						{ "question": "___ Tafel ist schwarz.", "word": "Tafel", "answer": "die" },
 						{ "question": "___ Heft ist leer.", "word": "Heft", "answer": "das" },
 						{ "question": "___ Rucksack ist schwer.", "word": "Rucksack", "answer": "der" },
-						{ "question": "___ Stunde ist lang.", "word": "Stunde", "answer": "die" }
+						{ "question": "___ Stunde ist lang.", "word": "Stunde", "answer": "die" },
+						{ "question": "___ Lehrerin ist streng.", "word": "Lehrerin", "answer": "die" },
+						{ "question": "___ Tisch ist aus Holz.", "word": "Tisch", "answer": "der" },
+						{ "question": "___ Stuhl ist bequem.", "word": "Stuhl", "answer": "der" },
+						{ "question": "___ Pause ist kurz.", "word": "Pause", "answer": "die" },
+						{ "question": "___ Test ist einfach.", "word": "Test", "answer": "der" }
 					]
 				},
 				{
@@ -32,7 +42,12 @@
 						{ "question": "___ Aufgabe ist einfach.", "word": "Aufgabe", "answer": "die" },
 						{ "question": "___ Bleistift ist spitz.", "word": "Bleistift", "answer": "der" },
 						{ "question": "___ Radiergummi ist weich.", "word": "Radiergummi", "answer": "der" },
-						{ "question": "___ Kreide ist weiß.", "word": "Kreide", "answer": "die" }
+						{ "question": "___ Kreide ist weiß.", "word": "Kreide", "answer": "die" },
+						{ "question": "___ Lineal ist lang.", "word": "Lineal", "answer": "das" },
+						{ "question": "___ Spitzer ist klein.", "word": "Spitzer", "answer": "der" },
+						{ "question": "___ Zirkel ist aus Metall.", "word": "Zirkel", "answer": "der" },
+						{ "question": "___ Note ist sehr gut.", "word": "Note", "answer": "die" },
+						{ "question": "___ Fehler ist markiert.", "word": "Fehler", "answer": "der" }
 					]
 				},
 				{
@@ -42,7 +57,12 @@
 						{ "question": "___ Pausenhof ist groß.", "word": "Pausenhof", "answer": "der" },
 						{ "question": "___ Bibliothekarin ist hilfsbereit.", "word": "Bibliothekarin", "answer": "die" },
 						{ "question": "___ Direktor ist streng.", "word": "Direktor", "answer": "der" },
-						{ "question": "___ Schultasche ist leicht.", "word": "Schultasche", "answer": "die" }
+						{ "question": "___ Schultasche ist leicht.", "word": "Schultasche", "answer": "die" },
+						{ "question": "___ Turnhalle ist besetzt.", "word": "Turnhalle", "answer": "die" },
+						{ "question": "___ Sekretariat ist im Erdgeschoss.", "word": "Sekretariat", "answer": "das" },
+						{ "question": "___ Hausmeister ist freundlich.", "word": "Hausmeister", "answer": "der" },
+						{ "question": "___ Schulhof ist sauber.", "word": "Schulhof", "answer": "der" },
+						{ "question": "___ Bibliothek ist leise.", "word": "Bibliothek", "answer": "die" }
 					]
 				},
 				{
@@ -52,7 +72,12 @@
 						{ "question": "___ Landkarte ist alt.", "word": "Landkarte", "answer": "die" },
 						{ "question": "___ Globus ist rund.", "word": "Globus", "answer": "der" },
 						{ "question": "___ Labor ist neu.", "word": "Labor", "answer": "das" },
-						{ "question": "___ Experiment ist interessant.", "word": "Experiment", "answer": "das" }
+						{ "question": "___ Experiment ist interessant.", "word": "Experiment", "answer": "das" },
+						{ "question": "___ Projektor ist an.", "word": "Projektor", "answer": "der" },
+						{ "question": "___ Leinwand ist weiß.", "word": "Leinwand", "answer": "die" },
+						{ "question": "___ Mikroskop ist stark.", "word": "Mikroskop", "answer": "das" },
+						{ "question": "___ Fach ist mein Lieblingsfach.", "word": "Fach", "answer": "das" },
+						{ "question": "___ Wissen ist Macht.", "word": "Wissen", "answer": "das" }
 					]
 				}
 			]
@@ -65,29 +90,44 @@
 					"tasks": [
 						{ "question": "Ich gehe in ___ Schule.", "word": "Schule", "answer": "die" },
 						{ "question": "Sie fragt ___ Lehrer.", "word": "Lehrer", "answer": "den" },
-						{ "question": "Er liest ___ Buch.", "word": "Buch", "answer": "das" },
-						{ "question": "Wir sind in ___ Klasse.", "word": "Klasse", "answer": "der" },
-						{ "question": "Sie schreibt mit ___ Stift.", "word": "Stift", "answer": "dem" }
+						{ "question": "Er liest ___ Buch.", "word": "Buch", "answer": "ein" },
+						{ "question": "Wir sind in ___ Klasse 5a.", "word": "Klasse", "answer": "der" },
+						{ "question": "Sie schreibt mit ___ Stift.", "word": "Stift", "answer": "dem" },
+						{ "question": "Ich mache ___ Hausaufgabe.", "word": "Hausaufgabe", "answer": "die" },
+						{ "question": "Wir haben jetzt ___ Deutsch-Unterricht.", "word": "Unterricht", "answer": "den" },
+						{ "question": "Er bekommt ___ gutes Zeugnis.", "word": "Zeugnis", "answer": "ein" },
+						{ "question": "Sie betritt ___ Klassenzimmer.", "word": "Klassenzimmer", "answer": "das" },
+						{ "question": "Ich helfe ___ Freund.", "word": "Freund", "answer": "dem" }
 					]
 				},
 				{
 					"id": 2,
 					"tasks": [
-						{ "question": "Er sieht ___ Schüler.", "word": "Schüler", "answer": "den" },
+						{ "question": "Er sieht ___ Schüler auf dem Flur.", "word": "Schüler", "answer": "den" },
 						{ "question": "Ich schreibe an ___ Tafel.", "word": "Tafel", "answer": "die" },
 						{ "question": "Sie öffnet ___ Heft.", "word": "Heft", "answer": "das" },
-						{ "question": "Wir tragen ___ Rucksack.", "word": "Rucksack", "answer": "den" },
-						{ "question": "Er wartet auf ___ Stunde.", "word": "Stunde", "answer": "die" }
+						{ "question": "Wir tragen ___ schweren Rucksack.", "word": "Rucksack", "answer": "den" },
+						{ "question": "Er wartet auf ___ nächste Stunde.", "word": "Stunde", "answer": "die" },
+						{ "question": "Wir hören ___ Lehrerin zu.", "word": "Lehrerin", "answer": "der" },
+						{ "question": "Sie sitzt an ___ Tisch.", "word": "Tisch", "answer": "dem" },
+						{ "question": "Er rückt ___ Stuhl nach vorne.", "word": "Stuhl", "answer": "den" },
+						{ "question": "Ich freue mich auf ___ Pause.", "word": "Pause", "answer": "die" },
+						{ "question": "Sie besteht ___ Test.", "word": "Test", "answer": "den" }
 					]
 				},
 				{
 					"id": 3,
 					"tasks": [
-						{ "question": "Ich mache ___ Prüfung.", "word": "Prüfung", "answer": "die" },
-						{ "question": "Sie löst ___ Aufgabe.", "word": "Aufgabe", "answer": "die" },
+						{ "question": "Ich bereite mich auf ___ Prüfung vor.", "word": "Prüfung", "answer": "die" },
+						{ "question": "Sie löst ___ schwierige Aufgabe.", "word": "Aufgabe", "answer": "die" },
 						{ "question": "Er malt mit ___ Bleistift.", "word": "Bleistift", "answer": "dem" },
 						{ "question": "Wir benutzen ___ Radiergummi.", "word": "Radiergummi", "answer": "den" },
-						{ "question": "Sie schreibt mit ___ Kreide.", "word": "Kreide", "answer": "der" }
+						{ "question": "Sie schreibt mit ___ Kreide an die Tafel.", "word": "Kreide", "answer": "der" },
+						{ "question": "Ich ziehe mit ___ Lineal eine Linie.", "word": "Lineal", "answer": "dem" },
+						{ "question": "Er braucht ___ Spitzer.", "word": "Spitzer", "answer": "einen" },
+						{ "question": "Sie zeichnet mit ___ Zirkel einen Kreis.", "word": "Zirkel", "answer": "dem" },
+						{ "question": "Ich gebe ihm ___ gute Note.", "word": "Note", "answer": "eine" },
+						{ "question": "Er korrigiert ___ Fehler.", "word": "Fehler", "answer": "den" }
 					]
 				},
 				{
@@ -96,8 +136,13 @@
 						{ "question": "Sie isst in ___ Kantine.", "word": "Kantine", "answer": "der" },
 						{ "question": "Ich spiele auf ___ Pausenhof.", "word": "Pausenhof", "answer": "dem" },
 						{ "question": "Er spricht mit ___ Bibliothekarin.", "word": "Bibliothekarin", "answer": "der" },
-						{ "question": "Wir hören auf ___ Direktor.", "word": "Direktor", "answer": "den" },
-						{ "question": "Sie packt ___ Schultasche.", "word": "Schultasche", "answer": "die" }
+						{ "question": "Wir hören ___ Direktor zu.", "word": "Direktor", "answer": "dem" },
+						{ "question": "Sie packt ___ Schultasche.", "word": "Schultasche", "answer": "die" },
+						{ "question": "Wir gehen in ___ Turnhalle.", "word": "Turnhalle", "answer": "die" },
+						{ "question": "Ich gehe zu ___ Sekretariat.", "word": "Sekretariat", "answer": "dem" },
+						{ "question": "Sie hilft ___ Hausmeister.", "word": "Hausmeister", "answer": "dem" },
+						{ "question": "Wir treffen uns auf ___ Schulhof.", "word": "Schulhof", "answer": "dem" },
+						{ "question": "Ich leihe ein Buch in ___ Bibliothek aus.", "word": "Bibliothek", "answer": "der" }
 					]
 				},
 				{
@@ -107,7 +152,12 @@
 						{ "question": "Ich zeige auf ___ Landkarte.", "word": "Landkarte", "answer": "die" },
 						{ "question": "Sie dreht ___ Globus.", "word": "Globus", "answer": "den" },
 						{ "question": "Wir sind in ___ Labor.", "word": "Labor", "answer": "dem" },
-						{ "question": "Er führt ___ Experiment durch.", "word": "Experiment", "answer": "das" }
+						{ "question": "Er führt ___ Experiment durch.", "word": "Experiment", "answer": "ein" },
+						{ "question": "Der Lehrer schaltet ___ Projektor ein.", "word": "Projektor", "answer": "den" },
+						{ "question": "Das Bild erscheint auf ___ Leinwand.", "word": "Leinwand", "answer": "der" },
+						{ "question": "Ich schaue durch ___ Mikroskop.", "word": "Mikroskop", "answer": "das" },
+						{ "question": "Ich habe ___ Lieblingsfach.", "word": "Fach", "answer": "ein" },
+						{ "question": "Er teilt sein ___ Wissen mit uns.", "word": "Wissen", "answer": "" }
 					]
 				}
 			]
@@ -118,51 +168,76 @@
 				{
 					"id": 1,
 					"tasks": [
-						{ "question": "Das Alter ___ Schule ist hoch.", "word": "Schule", "answer": "der" },
+						{ "question": "Der Name ___ Schule ist lang.", "word": "Schule", "answer": "der" },
 						{ "question": "Die Stimme ___ Lehrers ist klar.", "word": "Lehrer", "answer": "des" },
 						{ "question": "Der Titel ___ Buches ist interessant.", "word": "Buch", "answer": "des" },
 						{ "question": "Die Größe ___ Klasse ist gut.", "word": "Klasse", "answer": "der" },
-						{ "question": "Die Farbe ___ Stiftes ist blau.", "word": "Stift", "answer": "des" }
+						{ "question": "Die Farbe ___ Stiftes ist blau.", "word": "Stift", "answer": "des" },
+						{ "question": "Die Lösung ___ Hausaufgabe ist falsch.", "word": "Hausaufgabe", "answer": "der" },
+						{ "question": "Das Thema ___ Unterrichts ist spannend.", "word": "Unterricht", "answer": "des" },
+						{ "question": "Die Noten ___ Zeugnisses sind gut.", "word": "Zeugnis", "answer": "des" },
+						{ "question": "Die Fenster ___ Klassenzimmers sind groß.", "word": "Klassenzimmer", "answer": "des" },
+						{ "question": "Der Rucksack ___ Freundes ist neu.", "word": "Freund", "answer": "des" }
 					]
 				},
 				{
 					"id": 2,
 					"tasks": [
-						{ "question": "Der Fortschritt ___ Schülers ist bemerkenswert.", "word": "Schüler", "answer": "des" },
+						{ "question": "Die Noten ___ Schülers sind besser geworden.", "word": "Schüler", "answer": "des" },
 						{ "question": "Die Oberfläche ___ Tafel ist glatt.", "word": "Tafel", "answer": "der" },
-						{ "question": "Der Inhalt ___ Hefts ist wichtig.", "word": "Heft", "answer": "des" },
+						{ "question": "Die Seiten ___ Hefts sind liniert.", "word": "Heft", "answer": "des" },
 						{ "question": "Das Gewicht ___ Rucksacks ist schwer.", "word": "Rucksack", "answer": "des" },
-						{ "question": "Die Dauer ___ Stunde ist 45 Minuten.", "word": "Stunde", "answer": "der" }
+						{ "question": "Die Dauer ___ Stunde ist 45 Minuten.", "word": "Stunde", "answer": "der" },
+						{ "question": "Die Geduld ___ Lehrerin ist bewundernswert.", "word": "Lehrerin", "answer": "der" },
+						{ "question": "Die Oberfläche ___ Tisches ist zerkratzt.", "word": "Tisch", "answer": "des" },
+						{ "question": "Die Lehne ___ Stuhls ist kaputt.", "word": "Stuhl", "answer": "des" },
+						{ "question": "Das Ende ___ Pause kommt zu schnell.", "word": "Pause", "answer": "der" },
+						{ "question": "Die Schwierigkeit ___ Tests war hoch.", "word": "Test", "answer": "des" }
 					]
 				},
 				{
 					"id": 3,
 					"tasks": [
-						{ "question": "Die Ergebnisse ___ Prüfung sind wichtig.", "word": "Prüfung", "answer": "der" },
+						{ "question": "Das Ergebnis ___ Prüfung ist da.", "word": "Prüfung", "answer": "der" },
 						{ "question": "Die Lösung ___ Aufgabe ist korrekt.", "word": "Aufgabe", "answer": "der" },
-						{ "question": "Die Mine ___ Bleistifts ist weich.", "word": "Bleistift", "answer": "des" },
-						{ "question": "Die Qualität ___ Radiergummis ist gut.", "word": "Radiergummi", "answer": "des" },
-						{ "question": "Die Farbe ___ Kreide ist weiß.", "word": "Kreide", "answer": "der" }
+						{ "question": "Die Mine ___ Bleistifts ist abgebrochen.", "word": "Bleistift", "answer": "des" },
+						{ "question": "Die Form ___ Radiergummis ist rechteckig.", "word": "Radiergummi", "answer": "des" },
+						{ "question": "Die Farbe ___ Kreide ist weiß.", "word": "Kreide", "answer": "der" },
+						{ "question": "Die Länge ___ Lineals beträgt 30 cm.", "word": "Lineal", "answer": "des" },
+						{ "question": "Das Gehäuse ___ Spitzers ist aus Plastik.", "word": "Spitzer", "answer": "des" },
+						{ "question": "Die Spitze ___ Zirkels ist scharf.", "word": "Zirkel", "answer": "des" },
+						{ "question": "Die Bedeutung ___ Note ist für ihn groß.", "word": "Note", "answer": "der" },
+						{ "question": "Die Korrektur ___ Fehlers ist rot markiert.", "word": "Fehler", "answer": "des" }
 					]
 				},
 				{
 					"id": 4,
 					"tasks": [
-						{ "question": "Die Auswahl ___ Kantine ist groß.", "word": "Kantine", "answer": "der" },
-						{ "question": "Die Spiele auf ___ Pausenhof sind lustig.", "word": "Pausenhof", "answer": "dem" },
-						{ "question": "Die Empfehlung ___ Bibliothekarin ist nützlich.", "word": "Bibliothekarin", "answer": "der" },
+						{ "question": "Die Qualität des Essens in ___ Kantine ist gut.", "word": "Kantine", "answer": "der" },
+						{ "question": "Die Größe ___ Pausenhofs ist beeindruckend.", "word": "Pausenhof", "answer": "des" },
+						{ "question": "Die Hilfe ___ Bibliothekarin war wertvoll.", "word": "Bibliothekarin", "answer": "der" },
 						{ "question": "Die Rede ___ Direktors ist lang.", "word": "Direktor", "answer": "des" },
-						{ "question": "Der Inhalt ___ Schultasche ist ordentlich.", "word": "Schultasche", "answer": "der" }
+						{ "question": "Der Inhalt ___ Schultasche ist ordentlich.", "word": "Schultasche", "answer": "der" },
+						{ "question": "Der Boden ___ Turnhalle ist rutschig.", "word": "Turnhalle", "answer": "der" },
+						{ "question": "Die Öffnungszeiten ___ Sekretariats sind kurz.", "word": "Sekretariat", "answer": "des" },
+						{ "question": "Die Werkstatt ___ Hausmeisters ist im Keller.", "word": "Hausmeister", "answer": "des" },
+						{ "question": "Die Bänke ___ Schulhofs sind nass.", "word": "Schulhof", "answer": "des" },
+						{ "question": "Die Stille ___ Bibliothek ist angenehm.", "word": "Bibliothek", "answer": "der" }
 					]
 				},
 				{
 					"id": 5,
 					"tasks": [
 						{ "question": "Die Leistung ___ Computers ist hoch.", "word": "Computer", "answer": "des" },
-						{ "question": "Die Details auf ___ Landkarte sind genau.", "word": "Landkarte", "answer": "der" },
-						{ "question": "Die Größe ___ Globus ist beeindruckend.", "word": "Globus", "answer": "des" },
+						{ "question": "Die Farben auf ___ Landkarte sind verblasst.", "word": "Landkarte", "answer": "der" },
+						{ "question": "Die Achse ___ Globus ist geneigt.", "word": "Globus", "answer": "des" },
 						{ "question": "Die Ausrüstung ___ Labors ist modern.", "word": "Labor", "answer": "des" },
-						{ "question": "Das Ergebnis ___ Experiments ist überraschend.", "word": "Experiment", "answer": "des" }
+						{ "question": "Das Ergebnis ___ Experiments ist überraschend.", "word": "Experiment", "answer": "des" },
+						{ "question": "Das Licht ___ Projektors ist sehr hell.", "word": "Projektor", "answer": "des" },
+						{ "question": "Die Größe ___ Leinwand ist beeindruckend.", "word": "Leinwand", "answer": "der" },
+						{ "question": "Die Vergrößerung ___ Mikroskops ist stark.", "word": "Mikroskop", "answer": "des" },
+						{ "question": "Die Wahl ___ richtigen Faches ist wichtig.", "word": "Fach", "answer": "des" },
+						{ "question": "Die Vermittlung ___ Wissens ist die Aufgabe der Schule.", "word": "Wissen", "answer": "des" }
 					]
 				}
 			]

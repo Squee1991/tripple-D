@@ -119,7 +119,7 @@
 		</div>
 		<div class="ranked-sidebar-corkboard">
 			<div class="ranked__side-btnBack-wrapper">
-				<button @click="backToMainPage" class="ranked__side-btnBack">На главную</button>
+				<button @click="backToMainPage" class="ranked__side-btnBack">{{ t('chooseTheme.btnBack')}}</button>
 			</div>
 			<h1 class="corkboard-title">{{ t('ranked.label')}}</h1>
 			<div class="control-card">
@@ -361,7 +361,7 @@
 		flex-direction: column;
 	}
 	.blackboard__title {
-		color: var(--chalk-yellow);
+		color: whitesmoke;
 		font-family: 'Caveat', cursive;
 		font-size: 30px;
 		text-align: center;
