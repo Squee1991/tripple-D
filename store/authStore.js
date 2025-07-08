@@ -63,23 +63,24 @@ export const userAuthStore = defineStore('auth', () => {
 			const auth = getAuth();
 			const provider = new GoogleAuthProvider();
 			const result = await signInWithPopup(auth, provider);
-			const userDocRef = doc(db, 'users', result.user.uid);
+			const user = result.user;
+			const userDocRef = doc(db, 'users', user.uid);
 			const userDoc = await getDoc(userDocRef);
-			const userDataFromDb = userDoc.exists() ? userDoc.data() : {};
-			if (result.user.metadata.creationTime === result.user.metadata.lastSignInTime) {
+			if (!userDoc.exists()) {
 				await setDoc(userDocRef, {
-					nickname: result.user.displayName,
-					email: result.user.email,
-					registeredAt: result.user.metadata.creationTime,
+					nickname: user.displayName,
+					email: user.email,
+					registeredAt: user.metadata.creationTime,
 					avatar: '1.png'
-				}, { merge: true });
+				});
 			}
-
+			const finalDoc = await getDoc(userDocRef);
+			const userDataFromDb = finalDoc.data() || {};
 			setUserData({
-				name: result.user.displayName,
-				email: result.user.email,
-				registeredAt: result.user.metadata.creationTime,
-				uid: result.user.uid,
+				name: user.displayName,
+				email: user.email,
+				registeredAt: user.metadata.creationTime,
+				uid: user.uid,
 				avatar: userDataFromDb.avatar || '1.png'
 			});
 		} catch (error) {

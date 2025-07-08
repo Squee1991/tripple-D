@@ -35,25 +35,28 @@
 </template>
 
 <script setup>
-	import {computed, onMounted} from 'vue'
-	import {userBattleStore} from '../../store/BattleStore.js'
-	import {useThemeCardStore} from '../../store/themeStore.js'
-
-	const {userDeck} = userBattleStore()
+	// Файл: Deck.vue
+	// ЗАМЕНИТЕ ВАШ <script setup> НА ЭТОТ
+	import { computed } from 'vue'
+	import { storeToRefs } from 'pinia' // 1. Импортируйте storeToRefs
+	import { userBattleStore } from '../../store/BattleStore.js'
+	import { useThemeCardStore } from '../../store/themeStore.js'
+	const battleStore = userBattleStore() // 2. Сначала получите сам store
 	const useTheme = useThemeCardStore()
-	const userBattle = userBattleStore()
+	// 3. Теперь сделайте userDeck реактивным с помощью storeToRefs
+	const { userDeck } = storeToRefs(battleStore)
 
-	// const selectedTheme = computed(() => userBattle.selectedTheme)
+	// Эта часть кода у вас уже правильная
 	function getSpellIcon(id) {
 		try {
 			return new URL(`../../assets/images/spellIcons/${id}.svg`, import.meta.url).href
 		} catch {
-			return '' || id
+			return ''
 		}
 	}
 
 	const deckTitle = computed(() => {
-		const key = userBattle.selectedTheme
+		const key = battleStore.selectedTheme
 		if (!key) return 'Ваша колода'
 		return useTheme.themes[key]?.name || key
 	})

@@ -7,9 +7,9 @@
 				</NuxtLink>
 			</div>
 			<nav class="footer-links">
-				<li v-for="item in data.items" :key="item.id">
-					<NuxtLink class="footer-link" :to="item.url"> {{ t(item.value)}}</NuxtLink>
-				</li>
+<!--				<li v-for="item in data.items" :key="item.id">-->
+<!--					<NuxtLink class="footer-link" :to="item.url"> {{ t(item.value)}}</NuxtLink>-->
+<!--				</li>-->
 				<div @click="toDiscord" class="discord__img">
 					<svg enable-background="new 0 0 24 24" height="30" viewBox="0 0 24 24" width="30" xmlns="http://www.w3.org/2000/svg">
 						<g fill="currentColor">
@@ -43,11 +43,13 @@
 </script>
 
 <style scoped>
+
+
 	.footer {
-		background-color: #F7FAFC;
-		border-top: 2px solid #bdc8d6;
+		background-color: #fef8e4;
+		border-top: 4px solid #1e1e1e;
 		padding: 3rem 1.5rem 2rem;
-		font-family: 'Nunito', sans-serif;
+		font-family: 'Fredoka One', cursive;
 	}
 
 	.footer__container {
@@ -68,54 +70,64 @@
 	.footer-logo {
 		width: 60px;
 		height: auto;
+		transition: transform 0.2s ease;
+	}
+	.footer-logo:hover {
+		transform: rotate(-8deg);
 	}
 
 	.footer-links {
 		display: flex;
-		flex-direction: column;
-		gap: 2rem;
-		list-style: none;
-		padding: 0;
-		margin: 0;
+		align-items: center;
+		gap: 1rem;
+
 	}
 
-	.footer-link {
-		font-size: 1rem;
-		font-weight: 600;
-		color: #718096;
+	.footer-link, .discord__img {
+		font-size: 1.1rem;
+		font-weight: 400;
+		color: #1e1e1e;
 		text-decoration: none;
-		transition: color 0.2s ease-in-out;
+		transition: all 0.1s ease-in-out;
+		background: #fff;
+		border: 3px solid #1e1e1e;
+		border-radius: 12px;
+		box-shadow: 4px 4px 0px #1e1e1e;
+		padding: 0.6rem 1.2rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.footer-link:hover, .discord__img:hover {
+		transform: translate(2px, 2px);
+		box-shadow: 2px 2px 0px #1e1e1e;
+		background-color: #f1c40f;
 	}
 
-	.footer-link:hover {
-		color: #5A67D8;
-		text-decoration: underline;
+	.discord__img {
+		padding: 0.6rem;
+	}
+
+	.discord__img svg {
+		fill: #1e1e1e;
 	}
 
 	.footer-copy {
 		text-align: center;
 		margin-top: 3rem;
-		font-size: 0.875rem;
-		color: #A0AEC0;
-	}
-
-	.discord__img {
-		color: blue;
-		cursor: pointer;
-	}
-
-	.discord__img:hover {
-		color: #d9bcbc;
-	}
-
-	svg {
-		color: currentColor;
+		font-size: 1rem;
+		font-family: 'Inter', sans-serif;
+		font-weight: 500;
+		color: #888;
 	}
 
 	@media (max-width: 768px) {
 		.footer__container {
 			flex-direction: column;
-			gap: 1.5rem;
+			gap: 2rem;
+		}
+		.footer-links {
+			flex-direction: column;
 		}
 	}
 </style>

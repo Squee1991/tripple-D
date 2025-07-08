@@ -242,12 +242,10 @@
 </script>
 
 <style scoped>
-    @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Nunito:wght@400;700&display=swap');
 
     .theme-page {
-        font-family: 'Nunito', sans-serif;
-        background-color: #f0ebe5;
-        background-image: repeating-linear-gradient(90deg, #e9e2db, #e9e2db 20px, #f0ebe5 20px, #f0ebe5 40px);
+        font-family: 'Fredoka One', cursive;
+        background-color: #fef8e4;
         min-height: 100vh;
         padding: 2rem;
         box-sizing: border-box;
@@ -269,7 +267,7 @@
         justify-content: space-between;
         align-items: center;
         padding: 0 1rem 1rem 1rem;
-        border-bottom: 3px dashed #d3c2b2;
+        border-bottom: 4px solid #1e1e1e;
         flex-shrink: 0;
     }
 
@@ -278,9 +276,9 @@
     }
 
     .theme-title {
-        font-family: 'Caveat', cursive;
-        font-size: 3rem;
-        color: #5D4037;
+        font-family: 'Fredoka One', cursive;
+        font-size: 2.5rem;
+        color: #1e1e1e;
         text-align: center;
     }
 
@@ -288,23 +286,27 @@
         display: flex;
         align-items: center;
         gap: 0.5rem;
-        font-family: 'Nunito', sans-serif;
-        font-weight: 700;
-        font-size: 1rem;
-        background: transparent;
-        border: 3px solid #d3c2b2;
-        color: #6d4c41;
-        padding: 0.5rem 1rem;
+        font-family: 'Fredoka One', cursive;
+        font-weight: 400;
+        font-size: 1.1rem;
+        background: #fff;
+        border: 3px solid #1e1e1e;
+        color: #1e1e1e;
+        padding: 0.6rem 1rem;
         border-radius: 12px;
         cursor: pointer;
-        transition: all 0.2s;
-        width: 120px;
+        transition: all 0.1s ease-in-out;
+        box-shadow: 4px 4px 0px #1e1e1e;
+        width: 150px;
     }
 
     .back-btn:hover {
-        background: #6d4c41;
-        color: #f0ebe5;
-        border-color: #6d4c41;
+        transform: translate(2px, 2px);
+        box-shadow: 2px 2px 0px #1e1e1e;
+    }
+
+    .back-btn svg {
+        font-size: 1.5em;
     }
 
     .theme-content-area {
@@ -318,10 +320,10 @@
 
     .grid-area-wrapper {
         flex-grow: 1;
-        background: #faf8f2;
-        border: 15px solid #6d4c41;
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), inset 0 0 15px rgba(0, 0, 0, 0.2);
+        background: #60a5fa;
+        border: 3px solid #1e1e1e;
+        border-radius: 24px;
+        box-shadow: 8px 8px 0px #1e1e1e;
         padding: 1rem;
         display: flex;
         overflow: hidden;
@@ -332,8 +334,7 @@
         padding: 20px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-
+        justify-content: space-between;
         overflow-y: auto;
     }
 
@@ -342,77 +343,70 @@
     }
 
     .theme__grid-container::-webkit-scrollbar-track {
-        background: #e9e2db;
-        border-radius: 10px;
+        background: transparent;
     }
 
     .theme__grid-container::-webkit-scrollbar-thumb {
-        background-color: #d3c2b2;
-        border-radius: 10px;
-        border: 3px solid #e9e2db;
-    }
-
-    .theme__grid-container::-webkit-scrollbar-thumb:hover {
-        background-color: #bca991;
+        background: #1e1e1e;
+        border-radius: 6px;
+        border: 3px solid #60a5fa;
     }
 
     .theme-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
         gap: 1.5rem;
-        flex-grow: 1;
-        /* ===== НАЧАЛО ИЗМЕНЕНИЙ: Исправление растягивания ===== */
         justify-content: start;
         align-content: start;
-        /* ===== КОНЕЦ ИЗМЕНЕНИЙ ===== */
     }
 
     .theme-card {
         background: #fff;
-        border-radius: 12px;
-        border: 1px solid #e9e2db;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-        padding: 1.5rem 1rem;
+        border-radius: 16px;
+        border: 3px solid #1e1e1e;
+        box-shadow: 4px 4px 0px #1e1e1e;
+        padding: 25px 10px;
         text-align: center;
         cursor: pointer;
         transition: all 0.2s ease-in-out;
         position: relative;
     }
 
-    .theme-card:hover, .theme-card.active {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        border-color: #f1c40f;
+    .theme-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 6px 6px 0px #1e1e1e;
     }
 
     .theme-card.active {
-        border-width: 3px;
+        background-color: #f1c40f;
+        transform: translate(2px, 2px);
+        box-shadow: 2px 2px 0px #1e1e1e;
     }
 
     .card-counter {
         position: absolute;
-        top: -10px;
-        right: -10px;
-        width: 40px;
-        height: 40px;
+        top: -12px;
+        right: -12px;
+        width: 32px;
+        height: 32px;
         background-color: #e74c3c;
         color: white;
         border-radius: 50%;
-        border: 3px solid #faf8f2;
+        border: 3px solid #1e1e1e;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1rem;
-        font-weight: 700;
+        font-size: 0.9rem;
+        font-weight: 400;
     }
 
     .theme-card-title {
-        font-family: 'Caveat', cursive;
-        font-size: 1.8rem;
-        color: #5D4037;
-        margin-top: 0.5rem;
+        font-family: 'Fredoka One', cursive;
+        font-size: 1.5rem;
+        color: #1e1e1e;
     }
 
+    /* Пагинация */
     .theme-pagination {
         display: flex;
         justify-content: center;
@@ -423,31 +417,32 @@
     }
 
     .theme-pagination button {
-        font-family: 'Nunito', sans-serif;
-        font-weight: 700;
-        background: #d3c2b2;
-        color: #6d4c41;
-        border: none;
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        font-size: 1.2rem;
+        font-family: 'Fredoka One', cursive;
+        background: #fff;
+        color: #1e1e1e;
+        border: 3px solid #1e1e1e;
+        border-radius: 12px;
+        width: 45px;
+        height: 45px;
+        font-size: 1.5rem;
         cursor: pointer;
         transition: all 0.2s;
+        box-shadow: 4px 4px 0px #1e1e1e;
     }
 
     .theme-pagination button:hover:not(:disabled) {
         background: #f1c40f;
-        color: #5D4037;
+        transform: translate(2px, 2px);
+        box-shadow: 2px 2px 0px #1e1e1e;
     }
 
     .theme-pagination button:disabled {
-        background: #e9e2db;
-        color: #d3c2b2;
+        background: #d1d1d1;
+        color: #888;
+        box-shadow: 2px 2px 0px #888;
         cursor: not-allowed;
     }
 
-    /* Правая панель */
     .learning-modes-container {
         position: relative;
         width: 350px;
@@ -460,29 +455,31 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: #e9e2db;
-        border-radius: 12px;
-        border: 3px dashed #d3c2b2;
-        padding: 1.5rem;
+        background: #fff;
+        border: 3px solid #1e1e1e;
+        border-radius: 24px;
+        box-shadow: 8px 8px 0px #1e1e1e;
+        padding: 20px;
         display: flex;
         flex-direction: column;
     }
 
     .close-modes-btn {
         position: absolute;
-        top: 10px;
-        right: 10px;
-        background: #d3c2b2;
-        border: none;
+        top: 15px;
+        right: 15px;
+        background: #e0e0e0;
+        border: 3px solid #1e1e1e;
         border-radius: 50%;
-        width: 30px;
-        height: 30px;
+        width: 36px;
+        height: 36px;
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        color: #6d4c41;
+        color: #1e1e1e;
         font-size: 1.5rem;
+        transition: all 0.2s ease;
     }
 
     .close-modes-btn:hover {
@@ -490,25 +487,20 @@
         color: white;
     }
 
-    .learning__modes-wrapper {
-        padding-top: 2rem;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-    }
-
     .modes-title {
-        font-family: 'Caveat', cursive;
-        font-size: 2.2rem;
+        font-size: 2rem;
         text-align: center;
-        color: #5D4037;
+        color: #1e1e1e;
+        margin-top: 25px;
     }
 
     .topic-hint {
         text-align: center;
-        color: #6d4c41;
+        color: #555;
         margin-bottom: 1.5rem;
+        font-family: 'Inter', sans-serif;
         font-style: italic;
+        font-weight: 500;
     }
 
     .modes-list {
@@ -516,8 +508,6 @@
         flex-direction: column;
         gap: 1rem;
         flex-grow: 1;
-        overflow-y: auto;
-        padding-right: 0.5rem;
     }
 
     .checkbox-container {
@@ -527,6 +517,13 @@
         cursor: pointer;
         user-select: none;
         position: relative;
+        padding: 10px;
+        border-radius: 12px;
+        transition: background-color 0.2s;
+    }
+
+    .checkbox-container:hover {
+        background-color: #fef8e4;
     }
 
     .checkbox-container input {
@@ -536,28 +533,26 @@
     .checkmark {
         width: 28px;
         height: 28px;
-        border-radius: 50%;
-        border: 3px solid #bca991;
-        background: #faf8f2;
-        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        border: 3px solid #1e1e1e;
+        background: #fff;
         position: relative;
-        overflow: visible;
         flex-shrink: 0;
+        transition: all 0.2s;
     }
 
     .checkmark svg {
         position: absolute;
-        top: -6px;
-        left: -3px;
-        width: 34px;
-        height: 34px;
-        pointer-events: none;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         opacity: 0;
         transition: opacity 0.2s ease;
     }
 
     .checkmark polyline {
-        stroke: #6d4c41;
+        stroke: #1e1e1e;
         stroke-width: 4;
         stroke-linecap: round;
         stroke-linejoin: round;
@@ -568,7 +563,7 @@
     }
 
     .checkbox-container input:checked + .checkmark {
-        border-color: #f1c40f;
+        background-color: #f1c40f;
     }
 
     .checkbox-container input:checked + .checkmark polyline {
@@ -580,106 +575,45 @@
     }
 
     .label-text {
-        color: #5D4037;
-        font-weight: 700;
+        color: #1e1e1e;
+        font-weight: 400;
+        font-size: 1.2rem;
     }
 
     .start-btn {
         width: 100%;
         padding: 1rem;
-        font-family: 'Caveat', cursive;
-        font-size: 1.8rem;
-        background-color: transparent;
-        border: 3px solid #f1c40f;
-        color: #f1c40f;
-        border-radius: 12px;
+        font-family: 'Fredoka One', cursive;
+        font-size: 1.5rem;
+        background-color: #4ade80;
+        border: 3px solid #1e1e1e;
+        color: #1e1e1e;
+        border-radius: 16px;
         cursor: pointer;
-        transition: all 0.2s;
+        transition: all 0.1s ease-in-out;
+        box-shadow: 4px 4px 0px #1e1e1e;
+        margin-top: 1rem;
     }
 
     .start-btn:hover:not(:disabled) {
-        background: #f1c40f;
-        color: #5D4037;
+        transform: translate(2px, 2px);
+        box-shadow: 2px 2px 0px #1e1e1e;
     }
 
     .start-btn:disabled {
-        border-color: #d3c2b2;
-        color: #d3c2b2;
+        background: #e0e0e0;
+        color: #a1a1a1;
+        box-shadow: 2px 2px 0px #a1a1a1;
         cursor: not-allowed;
     }
 
-    .slide-right-enter-active,
-    .slide-right-leave-active {
+    .slide-right-enter-active, .slide-right-leave-active {
         transition: transform 0.45s ease;
     }
 
-    .slide-right-enter-from,
-    .slide-right-leave-to {
+    .slide-right-enter-from, .slide-right-leave-to {
         transform: translateX(110%);
     }
 
-    @media (max-width: 900px) {
-        .theme-page {
-            padding: 1rem;
-        }
 
-        .theme-page-container {
-            height: calc(100vh - 2rem);
-        }
-
-        .theme-content-area {
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .learning-modes-container {
-            width: 100%;
-            height: auto;
-            flex-shrink: 1;
-        }
-
-        .learning-modes-block {
-            position: relative;
-            border-left: none;
-            border-top: 5px solid #d3c2b2;
-            padding: 1rem;
-        }
-
-        .slide-right-enter-from,
-        .slide-right-leave-to {
-            transform: translateY(100%);
-        }
-    }
-
-    @media (max-width: 768px) {
-        .theme-title {
-            font-size: 2rem;
-        }
-
-        .back-btn {
-            font-size: 0.9rem;
-            padding: 0.4rem 0.8rem;
-            width: auto;
-        }
-
-        .title-spacer {
-            display: none;
-        }
-
-        .theme__title-wrapper {
-            justify-content: space-between;
-            padding: 0 0.5rem 1rem 0.5rem;
-        }
-
-        .theme-grid {
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .theme-grid {
-            grid-template-columns: 1fr;
-        }
-    }
 </style>

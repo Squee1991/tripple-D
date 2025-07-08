@@ -3,6 +3,7 @@
         <Header/>
         <Baner/>
         <Description/>
+        <About/>
         <FeedBack/>
         <Footer/>
     </div>
@@ -16,6 +17,7 @@ import Baner from '../src/components/baner.vue'
 import FeedBack from '../src/components/feedBack.vue'
 import Footer from '../src/components/footer.vue'
 import Header from '../src/components/header.vue'
+import About from '../src/components/about'
 import {useCurrentUser} from 'vuefire'
 import {onMounted} from 'vue'
 import {useRouter} from 'vue-router'

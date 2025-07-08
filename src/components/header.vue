@@ -1,9 +1,16 @@
 <template>
-    <header class="header">
+    <header class="header" :class="{isShow : hideHeader}">
         <Uioverlay :visible="showAuth" @close="closeAuth"/>
         <transition name="slide">
             <SignIn v-if="showAuth" @close-auth-form="closeAuth"/>
         </transition>
+        <ModalDev
+                :visible="showDevModal"
+                @close="closeDevModal"
+                :title="t('inDevelopment.title')"
+                :img="Dev"
+                :text="t('inDevelopment.sub')"
+        />
         <div class="header-container">
             <div class="header-left">
                 <NuxtLink to="/" class="header-logo">
@@ -21,32 +28,36 @@
                                 class="header-nav__item"
                                 @mouseover="isDesktop ? openSubmenu(item.id) : null"
                                 @mouseleave="isDesktop ? closeSubmenu() : null"
-                                @click="isMobile ? toggleSubmenu(item.id) : null"
+
                         >
-                            <NuxtLink v-if="!item.children" :to="item.url" class="header-nav__link"
-                                      @click="closeMobileMenu">{{ t(item.valueKey) }}
+                            <NuxtLink v-if="item.url" :to="item.url" class="header-nav__link" @click="closeMobileMenu">
+                                {{ t(item.valueKey) }}
                             </NuxtLink>
-                            <span v-else class="header-nav__link">
-                        {{ t(item.valueKey) }}
-                        <img
-                                :class="['header-nav__arrow', { 'header-nav__arrow--active': clickedMenu === item.id }]"
-                                :src="Arrow"
-                                alt=">"
-                        >
-                     </span>
+                            <span @click="handleMenuItemClick(item)" v-else class="header-nav__link">
+                                {{ t(item.valueKey) }}
+                                <img v-if="item.children"
+                                     :class="['header-nav__arrow', { 'header-nav__arrow--active': clickedMenu === item.id }]"
+                                     :src="Arrow"
+                                     alt=">"
+                                >
+                            </span>
                             <ul v-if="item.children && (hoveredMenu === item.id || clickedMenu === item.id)"
                                 class="header-nav__submenu">
                                 <li v-for="child in item.children" :key="child.id" class="header-nav__submenu-item">
-                                    <NuxtLink :to="child.url" class="header-nav__submenu-link" @click="closeMobileMenu">
+                                    <NuxtLink v-if="child.url" :to="child.url" class="header-nav__submenu-link"
+                                              @click="closeMobileMenu">
                                         {{ t(child.valueKey) }}
                                     </NuxtLink>
+                                    <span v-else class="header-nav__submenu-link"
+                                          @click.stop="handleSubmenuItemClick(child)">
+                                        {{ t(child.valueKey) }}
+                                    </span>
                                 </li>
                             </ul>
                         </li>
                     </ul>
                 </nav>
             </div>
-
             <div class="header-right">
                 <div class="header-nav__tea">
                     <ForTea/>
@@ -59,7 +70,6 @@
                     <LanguageSelector/>
                 </div>
                 <div
-                        ref="dropdownRef"
                         v-if="userAuth.name"
                         class="header-user"
                         @click="toggleMenu"
@@ -90,9 +100,10 @@
                 >
                     {{ t('auth.logIn') }}
                 </button>
-                <button class="burger-button" @click="toggleMobileMenu">
-                    <BurgerMenu :modelValue="isMobileMenuOpen"/>
-                </button>
+                <BurgerMenu
+                        class="burger-button"
+                        v-model="isMobileMenuOpen"
+                />
             </div>
         </div>
     </header>
@@ -110,8 +121,10 @@
     import ForTea from '../components/forTea.vue'
     import BurgerMenu from '../components/burgerMenu.vue'
     import Uioverlay from '../components/Uioverlay.vue'
+    import ModalDev from '../components/modal.vue'
     import Arrow from '../../assets/images/arrowNav.svg'
-    import User from '../../assets/images/user.svg'
+    import Dev from '../../assets/images/dev.svg'
+    import User from '../../assets/images/account.svg'
     import Logout from '../../assets/images/logout.svg'
 
     const {t} = useI18n()
@@ -120,17 +133,51 @@
     const router = useRouter()
     const userAuth = userAuthStore()
 
+    const hideHeader = ref(false)
     const showAuth = ref(false)
     const menuOpen = ref(false)
     const isMobileMenuOpen = ref(false)
     const hoveredMenu = ref(null)
     const clickedMenu = ref(null)
+    const showDevModal = ref(false)
 
     const dropdownRef = ref(null)
     const dropdownRefNav = ref(null)
 
     const isDesktop = computed(() => !bp.isMobile);
     const isMobile = computed(() => bp.isMobile);
+
+    const openDevModal = () => showDevModal.value = true
+    const closeDevModal = () => showDevModal.value = false
+
+    const handleMenuItemClick = (item) => {
+        if (isMobile.value) {
+            if (item.children) {
+                toggleSubmenu(item.id);
+            }
+            else if (item.action) {
+                item.action();
+                closeMobileMenu();
+            }
+
+            else if (item.url) {
+                closeMobileMenu();
+            }
+        }
+        else {
+            if (item.action) {
+                item.action();
+            }
+        }
+    }
+
+    const handleSubmenuItemClick = (childItem) => {
+        if (childItem.action) {
+            childItem.action();
+            closeMobileMenu();
+            closeSubmenu();
+        }
+    }
 
     const toggleMobileMenu = () => {
         isMobileMenuOpen.value = !isMobileMenuOpen.value;
@@ -168,7 +215,7 @@
 
     const menuItems = [
         {
-            id: 'learn', valueKey: 'nav.training', icon: Arrow, children: [
+            id: 'learn', valueKey: 'nav.training', children: [
                 {id: 'learn-tips', url: 'examples', valueKey: 'sub.prev'},
                 {id: 'learn-rules', url: 'rules', valueKey: 'sub.rules'},
                 {id: 'learn-selectedTopics', url: 'selectedTopics', valueKey: 'sub.artRules'},
@@ -177,17 +224,17 @@
             ]
         },
         {
-            id: 'duel', valueKey: 'nav.gameMode', icon: Arrow, children: [
-                {id: 'duel-pvp', url: 'duel', valueKey: 'nav.pvp'},
+            id: 'duel', valueKey: 'nav.gameMode', children: [
+                {id: 'duel-pvp', valueKey: 'nav.pvp', action: openDevModal},
                 {id: 'duel-guess', url: 'guess', valueKey: 'nav.guess'},
                 {id: 'prepare', url: 'prepare', valueKey: 'nav.marathon'},
-                {id: 'vocabulary', url: 'vocabulary', valueKey: 'nav.sinonim'}
+                // {id: 'vocabulary', url: 'vocabulary', valueKey: 'nav.sinonim', action: openDevModal}
             ]
         },
         {id: 'achieve', url: 'achievmentsPage', valueKey: 'nav.achieve'},
-        {id: 'about', url: 'about', valueKey: 'nav.about'},
         {id: 'stats', url: 'stats', valueKey: 'nav.stats'}
     ]
+
     const menuActions = ref([
         {id: 'cabinet', label: 'Кабинет', icon: User, action: () => goTo('cabinet')},
         {id: 'logout', label: 'Выход', icon: Logout, action: () => userAuth.logOut()}
@@ -217,17 +264,21 @@
     watch(showAuth, (val) => {
         document.body.style.overflow = val ? 'hidden' : ''
     })
+    watch(showDevModal, (val) => {
+        document.body.style.overflow = val ? 'hidden' : ''
+    })
 </script>
 
 <style scoped>
+
     .header {
-        font-family: 'Nunito', sans-serif;
+        font-family: "Nunito", sans-serif;
         position: sticky;
         top: 0;
         z-index: 100;
-        background-color: #FFFFFF;
-        border-bottom: 1px solid #E2E8F0;
-        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+        background-color: #fef8e4;
+        border-bottom: 4px solid #1e1e1e;
+
     }
 
     .header-container {
@@ -236,57 +287,60 @@
         align-items: center;
         max-width: 1280px;
         margin: 0 auto;
-        padding: 0.75rem 1.5rem;
+        padding: 13px;
     }
 
     .header-left, .header-right {
         display: flex;
         align-items: center;
-        gap: 1.5rem;
+        gap: 1rem;
     }
 
-    .header-logo {
-        flex-shrink: 0;
-    }
     .logo-img {
-        width: 60px;
+        width: 55px;
         height: auto;
         display: block;
+        transition: transform 0.2s ease;
+    }
+
+    .logo-img:hover {
+        transform: rotate(-8deg);
     }
 
     .header-nav__list {
         display: flex;
-        gap: 1.5rem;
+        gap: 1rem;
     }
 
     .header-nav__item {
         position: relative;
-        padding-bottom: 0.75rem;
-        margin-bottom: -0.75rem;
     }
 
     .header-nav__link {
         display: flex;
         align-items: center;
         gap: 0.4rem;
-        color: #4A5568;
-        font-weight: 600;
-        padding: 0.5rem 0.25rem;
+        color: #1e1e1e;
+        font-weight: 400;
+        padding: 0.5rem 0.75rem;
         text-decoration: none;
-        border-bottom: 2px solid transparent;
-        transition: color 0.2s, border-color 0.2s;
+        border-radius: 12px;
+        border-bottom: none;
+        transition: all 0.2s;
         cursor: pointer;
     }
+
     .header-nav__link:hover {
-        color: #2D3748;
-        border-bottom-color: #5A67D8;
+        background-color: #f1c40f;
+        color: #1e1e1e;
+        border-bottom-color: transparent;
     }
 
     .header-nav__arrow {
         width: 1rem;
         transition: transform 0.2s ease;
-        opacity: 0.6;
     }
+
     .header-nav__arrow--active {
         transform: rotate(180deg);
     }
@@ -294,16 +348,14 @@
     .header-nav__submenu {
         position: absolute;
         top: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        margin-top: 0;
-        background: #FFFFFF;
-        border: 1px solid #E2E8F0;
-        border-radius: 12px;
-        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.07), 0 4px 6px -4px rgb(0 0 0 / 0.07);
-        padding: 0.5rem;
-        min-width: 220px;
+        left: 100%;
         z-index: 110;
+        background: #FFFFFF;
+        border: 3px solid #1e1e1e;
+        border-radius: 16px;
+        box-shadow: 4px 4px 0px #1e1e1e;
+        padding: 0.5rem;
+        min-width: 240px;
         opacity: 0;
         pointer-events: none;
         animation: menu-pop 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
@@ -316,49 +368,70 @@
     }
 
     @keyframes menu-pop {
-        from { opacity: 0; transform: translateX(-50%) translateY(-10px); }
-        to { opacity: 1; transform: translateX(-50%) translateY(0); }
+        from {
+            opacity: 0;
+            transform: translateX(-50%) translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
     }
 
     .header-nav__submenu-link {
         display: block;
-        padding: 0.6rem 1rem;
-        color: #4A5568;
-        font-weight: 600;
+        padding: 0.8rem 1rem;
+        color: #1e1e1e;
+        font-weight: 400;
         text-decoration: none;
-        border-radius: 8px;
+        border-radius: 12px;
         transition: all 0.2s;
     }
+
     .header-nav__submenu-link:hover {
-        background-color: #F7FAFC;
-        color: #5A67D8;
+        background-color: #fef8e4;
     }
 
-    .articlus__wrapper {
+    .articlus__wrapper, .header-user {
+        height: 53px;
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        background: #fff;
+        padding: 0.5rem 1rem;
+        border-radius: 12px;
+        border: 3px solid #1e1e1e;
+        box-shadow: 4px 4px 0px #1e1e1e;
     }
-    .articlus { width: 32px; }
-    .articlus__counter { color: #5A67D8; font-size: 1.1rem; font-weight: 700; }
+
+    .articlus {
+        width: 28px;
+
+    }
+
+    .articlus__counter {
+        color: #1e1e1e;
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
 
     .header-user {
-        display: flex;
-        align-items: center;
         gap: 0.75rem;
         cursor: pointer;
         position: relative;
         user-select: none;
+        height: 53px;
     }
+
     .header-user__avatar {
-        width: 40px;
-        height: 40px;
+        width: 36px;
+        height: 36px;
         border-radius: 50%;
-        border: 2px solid #E2E8F0;
+        border: 3px solid #1e1e1e;
     }
+
     .header-user__name {
-        color: #2D3748;
-        font-weight: 600;
+        color: #1e1e1e;
+        font-weight: 400;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -367,17 +440,18 @@
 
     .header-user__dropdown {
         position: absolute;
-		width: 100%;
-        top: calc(100% + 0.75rem);
+        top: calc(100% + 10px);
         right: 0;
-        background: #FFFFFF;
-        border: 1px solid #E2E8F0;
-        border-radius: 12px;
-        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.07), 0 4px 6px -4px rgb(0 0 0 / 0.07);
-        min-width: 200px;
         z-index: 110;
+        min-width: 100%;
+        background: #FFFFFF;
+        border: 3px solid #1e1e1e;
+        border-radius: 16px;
+        box-shadow: 4px 4px 0px #1e1e1e;
+        /*padding: 0.5rem;*/
         overflow: hidden;
     }
+
     .header-user__dropdown-btn {
         display: flex;
         align-items: center;
@@ -385,33 +459,41 @@
         padding: 0.8rem 1rem;
         background: none;
         border: none;
-        border-bottom: 1px solid #F7FAFC;
         width: 100%;
         text-align: left;
         cursor: pointer;
         font-size: 1rem;
-        color: #4A5568;
-        font-weight: 600;
+        color: #1e1e1e;
+        font-weight: 400;
+        font-family: 'Fredoka One', cursive;
         transition: all 0.2s;
+        border-radius: 12px;
     }
-    .header-user__dropdown-btn:last-child { border-bottom: none; }
-    .header-user__dropdown-btn:hover { background-color: #F7FAFC; color: #5A67D8; }
-    .header-user__dropdown-icon { width: 20px; }
 
-    .btn-login { /* Переименовал для ясности */
-        font-family: 'Nunito', sans-serif;
-        padding: 0.6rem 1.25rem;
-        font-size: 1rem;
-        font-weight: 700;
-        border-radius: 8px;
-        cursor: pointer;
-        border: none;
-        transition: all 0.2s;
-        background-color: #5A67D8;
-        color: #FFFFFF;
+    .header-user__dropdown-btn:hover {
+        background-color: #fef8e4;
     }
+
+    .header-user__dropdown-icon {
+        width: 38px;
+    }
+
+    .btn-login {
+        font-family: 'Fredoka One', cursive;
+        padding: 0.8rem 1.5rem;
+        font-size: 1.1rem;
+        border-radius: 16px;
+        cursor: pointer;
+        transition: all 0.1s ease-in-out;
+        background-color: #f1c40f;
+        color: #1e1e1e;
+        border: 3px solid #1e1e1e;
+        box-shadow: 4px 4px 0px #1e1e1e;
+    }
+
     .btn-login:hover {
-        background-color: #4C51BF;
+        transform: translate(2px, 2px);
+        box-shadow: 2px 2px 0px #1e1e1e;
     }
 
     .burger-button {
@@ -419,41 +501,50 @@
         background: transparent;
         border: none;
         cursor: pointer;
-        padding: 0.5rem;
-        z-index: 101;
     }
 
+
     @media (max-width: 1024px) {
-        .header-container { gap: 1rem; }
         .header-nav {
-            display: none;
+            display: flex;
             position: fixed;
-            top: 0;
+            top: 84px;
             left: 0;
             width: 100%;
             height: 100%;
-            padding-top: 6rem;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(5px);
+            padding-top: 1rem;
+            background: #fef8e4;
             flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            z-index: 100;
-            overflow-y: auto;
+            z-index: 1;
+            transform: translateX(-100%);
+            transition: transform 0.2s ease;
         }
-        .header-nav--open { display: flex; }
-        .header-nav__list { flex-direction: column; width: 100%; padding: 2rem; gap: 0.5rem; }
-        .header-nav__item { width: 100%; border-bottom: 1px solid #E2E8F0; padding-bottom: 0; margin-bottom: 0; }
-        .header-nav__link { width: 100%; justify-content: space-between; padding: 1rem; font-size: 1.2rem; }
-        .header-nav__link:hover { background-color: #F7FAFC; border-bottom-color: transparent; }
-        .header-nav__arrow { transform: rotate(-90deg); }
-        .header-nav__arrow--active { transform: rotate(0deg); }
+
+        .header-nav--open {
+            transform: translateX(0);
+        }
+
+        .header-nav__list {
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem;
+        }
+
+        .header-nav__item {
+            border-bottom: 3px solid #1e1e1e;
+        }
+
+        .header-nav__link {
+            font-size: 1.5rem;
+            padding: 1rem;
+            justify-content: space-between;
+        }
+
         .header-nav__submenu {
             position: static;
             box-shadow: none;
             border: none;
             padding-left: 1.5rem;
-            margin-top: 0;
             transform: none;
             animation: none;
             background: none;
@@ -461,15 +552,28 @@
             pointer-events: auto;
             display: block !important;
         }
-        .header-nav__submenu-link { padding: 0.75rem 1rem; color: #718096; }
 
-        .header-nav__lang, .header-user__name { display: none; }
-        .burger-button { display: block; }
-        .header-right { gap: 1rem; }
-    }
-    @media (max-width: 768px) {
-        .header-nav__tea, .articlus__wrapper {
+        .header-nav__submenu-link {
+            padding: 0.8rem 1rem;
+            color: #555;
+            font-size: 1.2rem;
+        }
+
+        .header-nav__arrow {
+            transform: rotate(-90deg);
+        }
+
+        .header-nav__arrow--active {
+            transform: rotate(0deg);
+        }
+
+        .articlus__wrapper, .logo-img, .header-user__name, .header__drop-text {
             display: none;
+        }
+
+        .burger-button {
+            display: block;
+            z-index: 102;
         }
     }
 </style>

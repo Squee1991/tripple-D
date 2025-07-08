@@ -1,7 +1,7 @@
 <template>
 	<section id="contact" ref="contactSection" class="contact">
 		<div class="contact__wrapper">
-			<div class="contact-form">
+			<div class="contact-form" ref="contactFormRef">
 				<div class="form__animation-wrapper">
 					<div ref="msgAnimationWrapper" class="form__animation"></div>
 				</div>
@@ -34,9 +34,15 @@
 	import {ref, onMounted} from 'vue';
 	import Lottie from 'lottie-web';
 	import emailjs from 'emailjs-com';
+	import {gsap} from "gsap";
+	import {ScrollTrigger} from "gsap/ScrollTrigger";
+
+	gsap.registerPlugin(ScrollTrigger);
+
 	const contactSection = ref(null);
 	const msgAnimationWrapper = ref(null);
 	const {t} = useI18n()
+	const contactFormRef = ref(null);
 
 	const data = ref({
 		label: 'feedBack.label',
@@ -62,6 +68,21 @@
 				loop: false,
 				animationData: MessageAnimation,
 				name: 'feedbackAnimation'
+			});
+		}
+
+		// --- ИЗМЕНЕНИЕ: Упрощенная анимация для всего блока формы ---
+		if (contactFormRef.value) {
+			gsap.from(contactFormRef.value, {
+				scrollTrigger: {
+					trigger: contactFormRef.value,
+					start: "top 80%",
+					toggleActions: "play none none none",
+				},
+				y: 100,
+				opacity: 0,
+				duration: 0.8,
+				ease: "power3.out",
 			});
 		}
 	});
@@ -90,43 +111,47 @@
 
 <style scoped>
 	.contact {
-		background-color: #F7FAFC; /* Светлый фон */
+		background-color: #fef8e4;
 		padding: 6rem 1.5rem;
-		font-family: 'Nunito', sans-serif;
+		font-family: "Nunito", sans-serif;
+		overflow-x: hidden;
 	}
 
 	.contact__wrapper {
 		max-width: 1100px;
 		margin: 0 auto;
-		border-radius: 16px;
-		overflow: hidden;
 	}
 
 	.contact-form {
 		display: flex;
-		align-items: center;
-		gap: 2rem;
+		gap: 2.5rem;
 	}
 
 	.form__animation-wrapper {
-		flex-basis: 45%;
+		flex: 1;
 		min-width: 300px;
 		align-self: stretch;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		background: #60a5fa;
+		border-radius: 24px;
+		border: 3px solid #1e1e1e;
+		box-shadow: 8px 8px 0px #1e1e1e;
 	}
 
 	.form__animation {
-		width: 90%;
+		width: 100%;
 		max-width: 400px;
-		animation: slideInLeft 0.8s ease-out;
 	}
 
 	.form__content {
-		flex-basis: 55%;
-		padding: 3rem;
-		animation: slideInRight 0.8s ease-out;
+		flex: 1;
+		padding: 2.5rem;
+		background: #ffffff;
+		border-radius: 24px;
+		border: 3px solid #1e1e1e;
+		box-shadow: 8px 8px 0px #1e1e1e;
 	}
 
 	.form__header {
@@ -136,16 +161,16 @@
 
 	.form__label {
 		font-size: 1rem;
-		font-weight: 700;
-		color: #5A67D8; /* Акцентный синий */
+		font-weight: 400;
+		color: #e53935;
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
 	}
 
 	.form__title {
-		font-size: 22px;
-		font-weight: 800;
-		color: #2D3748;
+		font-size: 2.2rem;
+		font-weight: 400;
+		color: #1e1e1e;
 		margin-top: 0.5rem;
 	}
 
@@ -153,7 +178,6 @@
 		margin-bottom: 1.5rem;
 	}
 
-	/* Скрываем стандартный label, используя его в placeholder */
 	.form__field-label {
 		display: none;
 	}
@@ -161,79 +185,82 @@
 	.input,
 	.area {
 		width: 100%;
-		font-family: 'Nunito', sans-serif;
-		font-weight: 600;
-		color: #2D3748;
-		border: 1px solid #E2E8F0;
-		outline: none;
-		background: #F7FAFC;
-		border-radius: 8px;
+		box-sizing: border-box;
+		font-family: 'Inter', sans-serif;
+		font-weight: 700;
+		color: #1e1e1e;
+		background: #fef8e4;
+		border: 3px solid #1e1e1e;
+		border-radius: 16px;
 		font-size: 1rem;
-		padding: 0.8rem 1rem;
+		padding: 1rem;
 		transition: all 0.2s ease-in-out;
+		box-shadow: 4px 4px 0px #1e1e1e;
 	}
 
 	.input::placeholder,
 	.area::placeholder {
-		color: #A0AEC0;
+		color: #a1a1a1;
+		font-family: 'Inter', sans-serif;
+		font-weight: 500;
 	}
 
 	.input:focus,
 	.area:focus {
-		background: #FFFFFF;
-		border-color: #5A67D8;
-		box-shadow: 0 0 0 3px rgba(90, 103, 216, 0.2);
+		outline: none;
+		background: #ffffff;
+		border-color: #fca13a;
 	}
 
 	.area {
-		min-height: 120px;
+		min-height: 140px;
 		resize: vertical;
 	}
 
 	.error__message {
-		color: #E53E3E;
-		font-size: 0.875rem;
+		color: #e53935;
+		font-size: 0.9rem;
+		font-family: 'Inter', sans-serif;
+		font-weight: 700;
 		display: block;
 		margin-top: 0.5rem;
+		text-align: right;
 	}
 
 	.btn--submit {
 		width: 100%;
-		font-family: 'Nunito', sans-serif;
-		padding: 0.8rem 1.5rem;
-		font-size: 1.1rem;
-		font-weight: 700;
-		border-radius: 8px;
+		font-family: "Nunito", sans-serif;
+		font-weight: bold;
+		padding: 1rem 1.5rem;
+		font-size: 1.3rem;
+		border-radius: 16px;
 		cursor: pointer;
-		border: none;
-		transition: all 0.2s;
-		background-color: #5A67D8;
-		color: #FFFFFF;
+		border: 3px solid #1e1e1e;
+		transition: all 0.1s ease-in-out;
+		background-color: #4ade80;
+		color: #1e1e1e;
+		box-shadow: 4px 4px 0px #1e1e1e;
 	}
+
 	.btn--submit:hover {
-		background-color: #4C51BF;
-		transform: translateY(-2px);
-		box-shadow: 0 7px 14px rgb(0 0 0 / 0.1), 0 3px 6px rgb(0 0 0 / 0.08);
+		transform: translate(2px, 2px);
+		box-shadow: 2px 2px 0px #1e1e1e;
 	}
 
-	/* Анимации появления */
-	@keyframes slideInLeft {
-		from { transform: translateX(-50px); opacity: 0; }
-		to { transform: translateX(0); opacity: 1; }
-	}
-	@keyframes slideInRight {
-		from { transform: translateX(50px); opacity: 0; }
-		to { transform: translateX(0); opacity: 1; }
+	.btn--submit:active {
+		transform: translate(4px, 4px);
+		box-shadow: 0px 0px 0px #1e1e1e;
 	}
 
-	/* Адаптивность */
 	@media (max-width: 900px) {
 		.contact-form {
 			flex-direction: column;
 		}
+
 		.form__animation-wrapper {
-			display: none; /* Скрываем анимацию на небольших экранах для экономии места */
+			display: none;
 		}
+
 		.form__content {
 			width: 100%;
 			flex-basis: auto;

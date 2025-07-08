@@ -32,7 +32,9 @@
 		googleFonts: {
 			families: {
 				'Uncial Antiqua': true,
-				Kurale: true
+				Kurale: true,
+				Fredoka: true,
+				Nunito: true
 			},
 		},
 		vuefire: {

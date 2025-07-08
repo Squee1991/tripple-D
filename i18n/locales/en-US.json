@@ -2,6 +2,19 @@
 	"preloader": {
 		"value": "You will be redirected to the main page..."
 	},
+	"error": {
+		"title": "Case No. 404: The Page Has Vanished!",
+		"subTitle": "Detective, we need your help. The page disappeared, leaving behind only a few strange clues. Study them and help us find the way back.",
+		"label": "Clues at the crime scene:",
+		"cardOne": "Note with scribbles",
+		"cardTwo": "Strange accent",
+		"cardThree": "Broken compass",
+		"paperOne": "A scrap of paper reads: \"I went where verbs are always regular.\" Seems like a dead end.",
+		"paperTwo": "A witness heard the page speaking with a creepy accent, mixing up 'der' and 'die'. Very suspicious.",
+		"paperThree": "The compass doesn’t point north but to the nearest library. Maybe the page just wanted to read?",
+		"footerText": "Hmm, this case is tricky... Should we drop it and return to HQ?",
+		"btn": "Return to main page"
+	},
 	"articleCategory": {
 		"daslabel": "The Art of Das",
 		"dasFirstlabel": "Das Slayer",
@@ -140,7 +153,7 @@
 		"monthLabel": "Regular Customer",
 		"moonthText": "You've been with us for a whole month!",
 		"marginLabel": "No Room for Error",
-		"marginText": "Achieve a streak of 10 words in easy mode with 5 lives.",
+		"marginText": "Achieve a streak of 20 words in easy mode with 5 lives.",
 		"edgeLabel": "On the Edge",
 		"edgeText": "Achieve a streak of 50 words in hard mode. The timer must not drop below 2 seconds.",
 		"firstArtiklusLabel": "First Currency",
@@ -268,12 +281,97 @@
 	},
 	"chooseTheme": {
 		"choose": "Choose a theme",
-		"btnBack": "Back to home",
+		"btnBack": "Back to main",
 		"btnStart": "Start",
 		"level": "Level",
 		"module": "Module",
 		"notAllowedLevel": "First, complete Level",
 		"notAllowedModule": "First, complete the previous module!"
+	},
+	"marathonPrepare": {
+		"title": "Marathon through all words",
+		"subtitle": "Test how well you know words and articles",
+		"greetings": "Hello",
+		"streak": "Your best streak on this difficulty level:",
+		"notAuth": "Log in to save your progress and compete.",
+		"chooseDifficulty": "Choose difficulty",
+		"difficultEasy": "Easy",
+		"difficultDescriptionEasy": "5 lives, no timer",
+		"difficultNormal": "Normal",
+		"difficultDescriptionNormal": "5 lives, 10 sec/word",
+		"difficultHard": "Hard",
+		"difficultDescriptionHard": "1 life, 5 sec/word",
+		"loading": "Loading words...",
+		"start": "Start!",
+		"login": "Log in to start"
+	},
+	"marathonGame": {
+		"notReadyTitle": "Please wait",
+		"reboot": "Redirecting you to the preparation page...",
+		"streak": "Streak:",
+		"record": "Record:",
+		"health": "Lives:",
+		"timer": "Timer:",
+		"quest": "What is the article of this word?",
+		"end": "Game over!",
+		"urStreak": "Your final streak:",
+		"newRecord": "New record!",
+		"bestResult": "Your best result:",
+		"tryAgain": "Try again",
+		"back": "Back to difficulty selection",
+		"main": "Go to main page"
+	},
+	"rulesFirstBlock": {
+		"title": "Basic rules of German articles",
+		"subTitle": "A short and clear cheat sheet for everyone who wants to use der, die, das correctly!",
+		"firstCardTitle": "The article depends on the gender",
+		"exampleSexM": " — masculine gender",
+		"exampleAnswerM": "(der Tisch — table)",
+		"exampleSexW": " — feminine gender",
+		"exampleAnswerW": "(die Lampe — lamp)",
+		"exampleSexIt": " — neuter gender",
+		"exampleAnswerIt": "(das Buch — book)",
+		"remember": "You almost always need to memorize the noun's gender along with the word!"
+	},
+	"rulesSecondBlock": {
+		"firstCardTitle": "Always in plural",
+		"firstCardSub": "Regardless of the gender in singular, the plural always uses"
+	},
+	"rulesThirdBlock": {
+		"firstCardTitle": "Articles change with cases",
+		"firstCardSubTitle": "German has 4 cases, and each gender has different article forms for each case."
+	},
+	"rulesFourthBlock": {
+		"firstCardTitle": "Exceptions and special cases",
+		"firstCardSubTitle": "German has 4 cases, and each gender has different article forms for each case.",
+		"exampleFemale": "Nouns ending in",
+		"exampleAnswer": "— are always neuter gender",
+		"exampleTime": "Days of the week, months, seasons — always masculine gender",
+		"exampleFlowers": "Most trees and flowers — feminine gender"
+	},
+	"rulesFifthBlock": {
+		"firstCardTitle": "Memory hacks",
+		"exampleFirst": "Always learn nouns with their article:",
+		"exampleSecond": "Remember endings that indicate gender — words ending in",
+		"exampleSecondAnswer": " — are almost always feminine"
+	},
+	"rulesSixthBlock": {
+		"firstTitle": "Check yourself!",
+		"firstExercises": "Insert the correct article",
+		"firstAnswer": "based on the tips above and click “Check”",
+		"checkBtn": "Check"
+	},
+	"rulesTablet": {
+		"case": "Case",
+		"male": "Masculine",
+		"female": "Feminine",
+		"medium": "Neuter",
+		"plural": "Plural"
+	},
+
+	"inDevelopment": {
+		"title": "Section in development",
+		"sub": "Very soon you’ll be able to compete in article duels!"
 	},
 	"ranked": {
 		"label": "Leaderboard",
@@ -347,7 +445,7 @@
 	},
 	"cardWords": {
 		"title": "900+ words",
-		"sub": "Learn over 800 words and articles in a convenient system."
+		"sub": "Learn over 900 words and articles in a convenient system."
 	},
 	"cardMethod": {
 		"title": "5 learning methods",
@@ -383,27 +481,31 @@
 		"invalidCredential": "Invalid or expired login credentials"
 	},
 	"about": {
-		"title": "Is learning German and noun articles boring?",
-		"lead": "Tired of memorizing flashcards, rewriting word lists, and still forgetting the articles?",
-		"whyfirst": "Level up your skills like in an RPG",
-		"whySecond": "Earn achievements and rewards",
-		"whyThird": "Play card battles against others",
-		"whyfourth": "Learn words in different modes",
-		"whyfifth": "Study the language in a fun, game-like way!",
-		"whySixth": "Build a word using the alphabet!",
-		"whySeventh": "Vocabulary combo-wombo!",
-		"whyEight": "Spaced repetition with micro-tests",
-		"whyfooter": "Try these methods — and you will definitely look at learning in a new way!"
+		"title": "Bored of learning German and noun articles?",
+		"lead": "Tired of memorizing flashcards, rewriting word lists and still forgetting articles?",
+		"whyFirst": "Earn achievements and rewards",
+		"whySecond": "Battle with cards against other players",
+		"whyThird": "Learn words in various game modes",
+		"whyFourth": "Study the language in a fun, game-like way!",
+		"whyFifth": "Build the word using the alphabet!",
+		"whySixth": "Spaced repetition with mini-tests",
+		"whyFooter": "Try these methods and you’ll see learning differently!"
 	},
 	"aboutList": {
-		"one": "Every new word isn’t just a tick mark, it’s a step to leveling up your character! Gain experience, unlock new levels, upgrade skills, and track your progress in real RPG style.",
-		"two": "Achievements and rewards make learning exciting: complete challenges, unlock secret achievements, earn trophies, and collect rare rewards for your progress in German.",
-		"three": "Challenge other players in card battles: who will guess articles faster and more accurately, assemble words, or fill the game board? Show your knowledge and become a champion!",
-		"four": "Don’t stick to boring repetition: train your memory in different modes — look at pictures, listen to audio, build words from letters, break words into syllables, and master the language from all sides.",
-		"five": "Turn on game mode: build a word using the alphabet like magic runes! It’s not just fun, but also great for improving attention and visual memory.",
-		"six": "In this mode, two people set a word. The participant guesses the word letter by letter, choosing from the alphabet! You can say the word in advance (the number of attempts is limited so you can’t just try every letter).",
-		"seven": "Challenge yourself with a real vocabulary combo! Find synonyms, antonyms, matching words, and boost your associative thinking to remember words for a long time.",
-		"eight": "Spaced repetition helps reinforce knowledge: the system will remind you of the right words and give mini-tests so you always stay on top of your German."
+		"one": "Every new word isn’t just a checkmark — it’s a step forward! Gain experience, unlock new levels, track your progress, and earn achievements.",
+		"two": "The achievement and reward system makes learning exciting: complete quests, discover secret badges, earn trophies, and collect rare rewards for your success in German.",
+		"three": "Don’t limit yourself to boring repetition: train your memory in different modes — listen to audio, build words letter by letter, choose one method or try them all, and explore the language from multiple angles.",
+		"four": "Turn on game mode: build a word using the alphabet like magical runes! It’s not only fun but also improves attention and visual memory.",
+		"five": "In this mode, a random word is selected. The player guesses the word by choosing letters from the alphabet! You can try to guess early (number of attempts is limited to prevent brute-force). At the end, you must write the article of the guessed word.",
+		"six": "Spaced repetition helps reinforce knowledge: the system will remind you of the right words and run mini-tests, so you stay on top of your German game."
+	},
+	"aboutAnimText": {
+		"first": "Think there's no other way?",
+		"second": "What if there is?",
+		"third": "Do you want to change that?",
+		"fourth": "Learn a language with pleasure?",
+		"fifth": "It's easier than you think",
+		"sixth": "Shall we begin? ;-)"
 	},
 	"footer": {
 		"copy": "Der Die Das. All rights reserved."

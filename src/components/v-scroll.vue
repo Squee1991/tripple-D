@@ -43,6 +43,7 @@
 		padding: 10px;
 		cursor: pointer;
 		transition: .4s ease-in-out;
+		z-index: 99999;
 	}
 
 	.scroll-to-top:hover {

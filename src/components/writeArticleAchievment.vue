@@ -3,8 +3,8 @@
 		<div class="group-header">
 			<h2 class="group-title">{{ t(group.title) }}</h2>
 			<span :class="['group-stats', { 'all-completed': getCompletedCount(group) === group.achievements.length }]">
-					{{ getCompletedCount(group) }} / {{ group.achievements.length }}
-				</span>
+            {{ getCompletedCount(group) }} / {{ group.achievements.length }}
+         </span>
 		</div>
 		<div class="achievements-list">
 			<div v-for="achievement in group.achievements" :key="achievement.id" class="achievement-card">
@@ -17,8 +17,8 @@
 					<h3 class="achievement-title">{{ t(achievement.name) }}</h3>
 					<div class="progress-bar-container">
 						<div
-							class="progress-bar"
-							:style="{ width: (achievement.currentProgress / achievement.targetProgress * 100) + '%' }"
+								class="progress-bar"
+								:style="{ width: (achievement.currentProgress / achievement.targetProgress * 100) + '%' }"
 						></div>
 						<span class="progress-text-overlay">
                      {{ achievement.currentProgress }} / {{ achievement.targetProgress }}
@@ -35,151 +35,149 @@
 	import {ref, watch, computed} from 'vue';
 	import {writeArticleGroupAchievment} from '../achieveGroup/article/writeArticle.js';
 	import {userlangStore} from "../../store/learningStore";
-	const { t } = useI18n()
+	import { useI18n } from 'vue-i18n';
+
+	const { t } = useI18n();
 	const langStore = userlangStore();
 	const achievementGroup = ref(JSON.parse(JSON.stringify(writeArticleGroupAchievment)));
 
 	const getCompletedCount = (group) => {
-		if (!group || !group.achievements) return
-		return group.achievements.filter(ach => ach.currentProgress >= ach.targetProgress).length
-	}
+		if (!group || !group.achievements) return 0;
+		return group.achievements.filter(ach => ach.currentProgress >= ach.targetProgress).length;
+	};
 
 	const derSuccessCount = computed(() => langStore.words.filter(word => word.article === 'der' && word.progress?.article === true).length);
 	const dieSuccessCount = computed(() => langStore.words.filter(word => word.article === 'die' && word.progress?.article === true).length);
 	const dasSuccessCount = computed(() => langStore.words.filter(word => word.article === 'das' && word.progress?.article === true).length);
 
 	watch([derSuccessCount, dieSuccessCount, dasSuccessCount],
-		([newDerCount, newDieCount, newDasCount]) => {
-			achievementGroup.value.forEach(group => {
-				if (group.title.includes('der')) {
-					group.achievements.forEach(achievement => {
-						achievement.currentProgress = Math.min(newDerCount, achievement.targetProgress);
-					});
-				} else if (group.title.includes('die')) {
-
-					group.achievements.forEach(achievement => {
-						achievement.currentProgress = Math.min(newDieCount, achievement.targetProgress);
-					});
-				} else if (group.title.includes('das')) {
-					group.achievements.forEach(achievement => {
-						achievement.currentProgress = Math.min(newDasCount, achievement.targetProgress);
-					});
-				}
-			});
-
-		}, {immediate: true});
+			([newDerCount, newDieCount, newDasCount]) => {
+				achievementGroup.value.forEach(group => {
+					// Используем includes для более гибкого поиска по названию группы
+					if (group.title.toLowerCase().includes('der')) {
+						group.achievements.forEach(achievement => {
+							achievement.currentProgress = Math.min(newDerCount, achievement.targetProgress);
+						});
+					} else if (group.title.toLowerCase().includes('die')) {
+						group.achievements.forEach(achievement => {
+							achievement.currentProgress = Math.min(newDieCount, achievement.targetProgress);
+						});
+					} else if (group.title.toLowerCase().includes('das')) {
+						group.achievements.forEach(achievement => {
+							achievement.currentProgress = Math.min(newDasCount, achievement.targetProgress);
+						});
+					}
+				});
+			}, {immediate: true, deep: true});
 </script>
 
 <style scoped>
+	/* Подключение шрифтов можно вынести в глобальные стили, если они используются во всем проекте */
+	@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Inter:wght@400;500&display=swap');
 
 	.achievement-group {
-		margin-bottom: 30px;
+		margin-bottom: 3rem;
+		font-family: 'Fredoka One', cursive; /* Основной шрифт для заголовков */
 	}
 
 	.group-header {
 		display: flex;
 		align-items: center;
-		gap: 15px;
-		padding-bottom: 10px;
-		margin-bottom: 20px;
+		gap: 1rem;
+		padding-bottom: 1rem;
+		margin-bottom: 1.5rem;
+		border-bottom: 3px dashed rgba(27, 27, 27, 0.5);
+	}
+
+	.group-title {
+		font-size: 2rem;
+		color: #1e1e1e;
+		margin: 0;
 	}
 
 	.group-stats {
 		display: inline-block;
-		padding: 6px 14px;
-		font-size: 0.9em;
-		font-weight: bold;
-		color: #fff;
-		background: linear-gradient(135deg, #007bff, #0056b3);
-		border-radius: 20px;
-		box-shadow: 0 2px 4px rgba(0,0,0,0.15);
-		transition: all 0.3s ease;
+		padding: 8px 16px;
+		font-size: 1rem;
+		font-weight: 400;
+		color: #1e1e1e;
+		background: #ffffff;
+		border-radius: 100px;
+		border: 3px solid #1e1e1e;
+		box-shadow: 2px 2px 0px #1e1e1e;
 		white-space: nowrap;
+		transition: all 0.2s ease;
 	}
 
 	.group-stats.all-completed {
-		background: linear-gradient(135deg, #28a745, #218838);
-		box-shadow: 0 2px 6px rgba(40, 167, 69, 0.4);
-	}
-
-	.group-title {
-		font-size: 1.5em;
-		color: #444;
-		margin: 0;
+		background: #f1c40f; /* Золотой цвет для завершенных групп */
 	}
 
 	.achievements-list {
 		display: flex;
 		flex-direction: column;
-		gap: 15px;
+		gap: 20px; /* Добавлен отступ между карточками */
 	}
 
 	.achievement-card {
 		display: flex;
-		align-items: center;
-		gap: 15px;
-		border: 1px solid #e0e0e0;
-		padding: 15px;
-		border-radius: 12px;
+		align-items: flex-start;
+		gap: 1rem;
+		border: 3px solid #1e1e1e;
+		padding: 1rem;
+		border-radius: 20px;
 		background-color: #fff;
-		max-width: 500px;
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+		box-shadow: 6px 6px 0px #1e1e1e;
 		text-align: left;
+		transition: all 0.2s ease;
+		max-width: 650px; /* Увеличена ширина для соответствия */
+		margin-bottom: 0; /* Убрано из карточки, так как теперь есть gap в .achievements-list */
 	}
 
 	.achievement-icon-wrapper {
 		flex-shrink: 0;
-		position: relative;
-		width: 80px;
-		height: 80px;
-		background: linear-gradient(135deg, #6c757d, #343a40);
-		border-radius: 10px;
+		width: 70px;
+		height: 70px;
+		background: #a855f7; /* Фиолетовый цвет иконки, как в примере */
+		border-radius: 16px;
+		border: 3px solid #1e1e1e;
 		display: flex;
-		justify-content: center;
-		align-items: center;
-		overflow: hidden;
-	}
-
-	.achievement-icon {
-		position: relative;
-		width: 100%;
-		height: 100%;
-		display: flex;
-		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 	}
 
 	.icon-emoji {
-		font-size: 45px;
-		filter: brightness(1.2);
+		font-size: 40px;
 	}
 
 	.achievement-details {
 		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
 	}
 
 	.achievement-title {
-		font-size: 20px;
-		color: #333;
-		margin: 0;
-		font-weight: 600;
+		font-size: 1.3rem;
+		color: #1e1e1e;
+		font-weight: 400;
+		margin: 0 0 10px 0;
 	}
 
 	.progress-bar-container {
 		width: 100%;
 		background-color: #e0e0e0;
-		border-radius: 10px;
-		overflow: hidden;
-		height: 25px;
+		border-radius: 100px;
+		height: 28px;
 		margin-bottom: 10px;
 		position: relative;
+		border: 3px solid #1e1e1e;
+		overflow: hidden;
 	}
 
 	.progress-bar {
 		height: 100%;
-		background: linear-gradient(90deg, #FFD700, #FFA500);
-		border-radius: 10px;
+		background: #a855f7; /* Фиолетовый цвет прогресс-бара */
+		border-radius: 0;
 		transition: width 0.5s ease-in-out;
 	}
 
@@ -188,16 +186,19 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		color: #333;
-		font-size: 14px;
-		font-weight: bold;
-		text-shadow: 0 0 2px rgba(255, 255, 255, 0.7);
+		color: #1e1e1e;
+		font-size: 0.9rem;
+		font-weight: 400;
+		text-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
 		white-space: nowrap;
 	}
 
 	.achievement-description {
-		font-size: 15px;
+		font-size: 0.95rem;
 		color: #555;
+		font-family: 'Inter', sans-serif; /* Отдельный шрифт для описания */
+		font-weight: 500;
 		margin: 0;
+		line-height: 1.4;
 	}
 </style>

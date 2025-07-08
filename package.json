@@ -23,6 +23,7 @@
     "lottie-web": "^5.13.0",
     "nuxt": "^3.15.0",
     "nuxt-vuefire": "^1.0.5",
+    "phaser": "^3.90.0",
     "simplebar": "^6.3.1",
     "socket.io": "^4.8.1",
     "socket.io-client": "^4.8.1",

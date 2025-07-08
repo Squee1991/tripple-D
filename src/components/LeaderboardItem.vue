@@ -51,6 +51,9 @@
 </template>
 
 <style scoped>
+	* {
+		font-family: 'Fredoka One', cursive;
+	}
 	.leaderboard-item {
 		border-bottom: 1px solid #3a3f5e;
 		border-radius: 8px;
@@ -75,8 +78,8 @@
 	}
 
 	.leaderboard-player-avatar {
-		width: 45px;
-		height: 45px;
+		width: 65px;
+		height: 65px;
 		border-radius: 50%;
 		border: 2px solid #4a4e8f;
 		object-fit: cover;
@@ -88,20 +91,21 @@
 
 	.leaderboard-player-rank {
 		font-weight: 700;
-		color: #8b8bad;
+		color: black;
 		font-size: 1.1em;
 		min-width: 30px;
 		text-align: center;
 	}
 
 	.leaderboard-player-name {
-		color: #e0e0e0;
-		font-size: 1.1em;
-		font-weight: 500;
+		color: black;
+		font-size: 20px;
+		font-weight: 600;
+		font-family: 'Fredoka One', cursive;;
 	}
 
 	.leaderboard-score-wrapper {
-		background: #8792e0;
+		background: #fde68a;;
 		padding: 5px 12px;
 		display: flex;
 		justify-content: center;
@@ -112,7 +116,7 @@
 	}
 
 	.leaderboard-player-score {
-		color: white;
+		color: black;
 		font-weight: 700;
 		font-size: 1.2em;
 	}

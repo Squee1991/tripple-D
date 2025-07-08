@@ -25,7 +25,7 @@
 						<div class="mode-exercise">
 							<div v-if="currentMode === 'article'">
 								<p>{{t('sessionLabels.articleFor')}} <b>{{ currentWord.de }}</b>:</p>
-								<input v-model="userInput" class="trainer-app__input"/>
+								<input v-model="userInput" maxlength="3" class="trainer-app__input"/>
 							</div>
 							<div v-if="currentMode === 'letters'">
 								<p>{{t('sessionLabels.lettersFor')}} <b>{{ currentWord.article }}</b></p>

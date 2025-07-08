@@ -130,127 +130,132 @@
 </script>
 
 <style scoped>
+
 	.achievement-group {
-		margin-bottom: 30px;
+		margin-bottom: 3rem;
+		font-family: 'Fredoka One', cursive;
 	}
 
 	.group-header {
 		display: flex;
 		align-items: center;
-		gap: 15px;
-		padding-bottom: 10px;
-		margin-bottom: 20px;
+		gap: 1rem;
+		padding-bottom: 1rem;
+		margin-bottom: 1.5rem;
+		border-bottom: 3px dashed rgba(27, 27, 27, 0.5);
+	}
+
+	.group-title {
+		font-size: 2rem;
+		color: #1e1e1e;
+		margin: 0;
 	}
 
 	.group-stats {
 		display: inline-block;
-		padding: 6px 14px;
-		font-size: 0.9em;
-		font-weight: bold;
-		color: #fff;
-		background: linear-gradient(135deg, #007bff, #0056b3);
-		border-radius: 20px;
-		box-shadow: 0 2px 4px rgba(0,0,0,0.15);
-		transition: all 0.3s ease;
+		padding: 8px 16px;
+		font-size: 1rem;
+		font-weight: 400;
+		color: #1e1e1e;
+		background: #ffffff;
+		border-radius: 100px;
+		border: 3px solid #1e1e1e;
+		box-shadow: 2px 2px 0px #1e1e1e;
 		white-space: nowrap;
+		transition: all 0.2s ease;
 	}
-
 	.group-stats.all-completed {
-		background: linear-gradient(135deg, #28a745, #218838);
-		box-shadow: 0 2px 6px rgba(40, 167, 69, 0.4);
-	}
-
-	.group-title {
-		font-size: 1.5em;
-		color: #444;
-		margin: 0;
+		background: #f1c40f;
 	}
 
 	.achievements-list {
 		display: flex;
 		flex-direction: column;
-		gap: 15px;
-		font-family: Arial, sans-serif;
 	}
 
 	.achievement-card {
 		display: flex;
-		align-items: center;
-		gap: 15px;
-		border: 1px solid #e0e0e0;
-		padding: 15px;
-		border-radius: 12px;
+		align-items: flex-start;
+		gap: 1rem;
+		border: 3px solid #1e1e1e;
+		padding: 1rem;
+		border-radius: 20px;
 		background-color: #fff;
-		max-width: 500px;
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+		box-shadow: 6px 6px 0px #1e1e1e;
+		text-align: left;
+		transition: all 0.2s ease;
+		width: 650px;
+		margin-bottom: 20px;
 	}
 
 	.achievement-icon-wrapper {
 		flex-shrink: 0;
-		width: 80px;
-		height: 80px;
-		border-radius: 10px;
+		width: 70px;
+		height: 70px;
+		border-radius: 16px;
+		border: 3px solid #1e1e1e;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
 
+	.achievement-icon-wrapper.special-mode {
+		background: #a855f7;
+	}
 	.icon-emoji {
-		font-size: 45px;
-		filter: brightness(1.1);
+		font-size: 40px;
 	}
 
 	.achievement-details {
 		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
 	}
-
 	.achievement-title {
-		font-size: 1.1em;
-		font-weight: 600;
-		margin-bottom: 8px;
+		font-size: 1.3rem;
+		color: #1e1e1e;
+		font-weight: 400;
+		margin: 0 0 10px 0;
 	}
 
 	.progress-bar-container {
 		width: 100%;
 		background-color: #e0e0e0;
-		border-radius: 10px;
-		height: 25px;
+		border-radius: 100px;
+		height: 28px;
 		margin-bottom: 10px;
 		position: relative;
+		border: 3px solid #1e1e1e;
 		overflow: hidden;
 	}
-
 	.progress-bar {
 		height: 100%;
-		border-radius: 10px;
+		border-radius: 0;
 		transition: width 0.5s ease-in-out;
 	}
 
+	.progress-bar.special-progress {
+		background: #a855f7;
+	}
 	.progress-text-overlay {
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		color: #333;
-		font-size: 0.8em;
-		font-weight: bold;
+		color: #1e1e1e;
+		font-size: 0.9rem;
+		font-weight: 400;
+		text-shadow: none;
 		white-space: nowrap;
 	}
 
 	.achievement-description {
-		font-size: 0.9em;
+		font-size: 0.95rem;
 		color: #555;
+		font-family: 'Inter', sans-serif;
+		font-weight: 500;
 		margin: 0;
+		line-height: 1.4;
 	}
 
-	/* 4. НОВЫЕ СТИЛИ ДЛЯ ОСОБЫХ ДОСТИЖЕНИЙ */
-	.achievement-icon-wrapper.special-mode {
-		/* Фиолетово-синий градиент */
-		background: linear-gradient(135deg, #6a11cb, #2575fc);
-	}
-
-	.progress-bar.special-progress {
-		/* Розово-фиолетовый градиент для прогресс-бара */
-		background: linear-gradient(90deg, #c471ed, #f64f59);
-	}
 </style>
