@@ -55,5 +55,7 @@
 </template>
 
 <style scoped>
+   body {
 
+   }
 </style>
