@@ -1,5 +1,4 @@
 <script setup>
-    // --- ИЗМЕНЕНИЕ 2: Импорты не изменились, но router нам нужен для новой функции ---
     import {ref, onMounted, computed} from 'vue';
     import {useRouter} from 'vue-router';
     import {useGameStore} from '../store/marafonStore.js';

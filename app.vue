@@ -31,7 +31,6 @@
 
     onMounted(async () => {
         await learningStore.loadFromFirebase()
-        sentencesStore.loadSentences();
     })
 
     // onMounted(() => {
