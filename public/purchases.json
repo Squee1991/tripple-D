@@ -12,7 +12,12 @@
 						{ "question": "___ Kasse ist offen.", "word": "Kasse", "answer": "die" },
 						{ "question": "___ Regal ist voll.", "word": "Regal", "answer": "das" },
 						{ "question": "___ Verkäufer ist freundlich.", "word": "Verkäufer", "answer": "der" },
-						{ "question": "___ Einkaufstasche ist neu.", "word": "Einkaufstasche", "answer": "die" }
+						{ "question": "___ Einkaufstasche ist neu.", "word": "Einkaufstasche", "answer": "die" },
+						{ "question": "___ Einkaufszettel ist lang.", "word": "Einkaufszettel", "answer": "der" },
+						{ "question": "___ Bäckerei riecht gut.", "word": "Bäckerei", "answer": "die" },
+						{ "question": "___ Gemüse ist frisch.", "word": "Gemüse", "answer": "das" },
+						{ "question": "___ Metzger ist hilfsbereit.", "word": "Metzger", "answer": "der" },
+						{ "question": "___ Flasche ist leer.", "word": "Flasche", "answer": "die" }
 					]
 				},
 				{
@@ -22,7 +27,12 @@
 						{ "question": "___ Kundin ist geduldig.", "word": "Kundin", "answer": "die" },
 						{ "question": "___ Produkt ist billig.", "word": "Produkt", "answer": "das" },
 						{ "question": "___ Preisschild ist deutlich.", "word": "Preisschild", "answer": "das" },
-						{ "question": "___ Angebot ist gut.", "word": "Angebot", "answer": "das" }
+						{ "question": "___ Angebot ist gut.", "word": "Angebot", "answer": "das" },
+						{ "question": "___ Stand ist klein.", "word": "Stand", "answer": "der" },
+						{ "question": "___ Ware ist von guter Qualität.", "word": "Ware", "answer": "die" },
+						{ "question": "___ Sonderangebot ist gültig.", "word": "Sonderangebot", "answer": "das" },
+						{ "question": "___ Prospekt ist informativ.", "word": "Prospekt", "answer": "der" },
+						{ "question": "___ Auswahl ist riesig.", "word": "Auswahl", "answer": "die" }
 					]
 				},
 				{
@@ -32,7 +42,12 @@
 						{ "question": "___ Quittung ist wichtig.", "word": "Quittung", "answer": "die" },
 						{ "question": "___ Einkaufswagen ist voll.", "word": "Einkaufswagen", "answer": "der" },
 						{ "question": "___ Bon ist lang.", "word": "Bon", "answer": "der" },
-						{ "question": "___ Münze ist klein.", "word": "Münze", "answer": "die" }
+						{ "question": "___ Münze ist klein.", "word": "Münze", "answer": "die" },
+						{ "question": "___ Schein ist neu.", "word": "Schein", "answer": "der" },
+						{ "question": "___ Kreditkarte ist praktisch.", "word": "Kreditkarte", "answer": "die" },
+						{ "question": "___ Portemonnaie ist aus Leder.", "word": "Portemonnaie", "answer": "das" },
+						{ "question": "___ Einkaufskorb ist leicht.", "word": "Einkaufskorb", "answer": "der" },
+						{ "question": "___ Summe ist hoch.", "word": "Summe", "answer": "die" }
 					]
 				},
 				{
@@ -42,7 +57,12 @@
 						{ "question": "___ Kunde ist freundlich.", "word": "Kunde", "answer": "der" },
 						{ "question": "___ Packung ist geöffnet.", "word": "Packung", "answer": "die" },
 						{ "question": "___ Preis ist hoch.", "word": "Preis", "answer": "der" },
-						{ "question": "___ Rabatt ist groß.", "word": "Rabatt", "answer": "der" }
+						{ "question": "___ Rabatt ist groß.", "word": "Rabatt", "answer": "der" },
+						{ "question": "___ Ausgang ist dort.", "word": "Ausgang", "answer": "der" },
+						{ "question": "___ Werbung ist laut.", "word": "Werbung", "answer": "die" },
+						{ "question": "___ Geschäft ist neu.", "word": "Geschäft", "answer": "das" },
+						{ "question": "___ Gutschein ist einlösbar.", "word": "Gutschein", "answer": "der" },
+						{ "question": "___ Umkleidekabine ist frei.", "word": "Umkleidekabine", "answer": "die" }
 					]
 				},
 				{
@@ -52,7 +72,12 @@
 						{ "question": "___ Rechnung ist da.", "word": "Rechnung", "answer": "die" },
 						{ "question": "___ Produkt ist beliebt.", "word": "Produkt", "answer": "das" },
 						{ "question": "___ Einkauf ist beendet.", "word": "Einkauf", "answer": "der" },
-						{ "question": "___ Wechselgeld ist korrekt.", "word": "Wechselgeld", "answer": "das" }
+						{ "question": "___ Wechselgeld ist korrekt.", "word": "Wechselgeld", "answer": "das" },
+						{ "question": "___ Online-Shop ist immer offen.", "word": "Online-Shop", "answer": "der" },
+						{ "question": "___ Lieferung ist schnell.", "word": "Lieferung", "answer": "die" },
+						{ "question": "___ Paket ist angekommen.", "word": "Paket", "answer": "das" },
+						{ "question": "___ Kunde ist König.", "word": "Kunde", "answer": "der" },
+						{ "question": "___ Barzahlung ist möglich.", "word": "Barzahlung", "answer": "die" }
 					]
 				}
 			]
@@ -67,17 +92,27 @@
 						{ "question": "Sie bezahlt an ___ Kasse.", "word": "Kasse", "answer": "der" },
 						{ "question": "Er nimmt Brot aus ___ Regal.", "word": "Regal", "answer": "dem" },
 						{ "question": "Wir fragen ___ Verkäufer.", "word": "Verkäufer", "answer": "den" },
-						{ "question": "Sie trägt ___ Einkaufstasche.", "word": "Einkaufstasche", "answer": "die" }
+						{ "question": "Sie trägt ___ Einkaufstasche.", "word": "Einkaufstasche", "answer": "eine" },
+						{ "question": "Ich schreibe ___ Einkaufszettel.", "word": "Einkaufszettel", "answer": "den" },
+						{ "question": "Wir gehen in ___ Bäckerei.", "word": "Bäckerei", "answer": "die" },
+						{ "question": "Er kauft ___ frisches Gemüse.", "word": "Gemüse", "answer": "das" },
+						{ "question": "Ich danke ___ Metzger.", "word": "Metzger", "answer": "dem" },
+						{ "question": "Sie stellt ___ Flasche in den Korb.", "word": "Flasche", "answer": "die" }
 					]
 				},
 				{
 					"id": 2,
 					"tasks": [
 						{ "question": "Er kauft Gemüse auf ___ Markt.", "word": "Markt", "answer": "dem" },
-						{ "question": "Ich sehe ___ Kundin.", "word": "Kundin", "answer": "die" },
-						{ "question": "Sie nimmt ___ Produkt.", "word": "Produkt", "answer": "das" },
-						{ "question": "Wir lesen ___ Preisschild.", "word": "Preisschild", "answer": "das" },
-						{ "question": "Er sucht ___ Angebot.", "word": "Angebot", "answer": "das" }
+						{ "question": "Ich sehe ___ Kundin an der Kasse.", "word": "Kundin", "answer": "die" },
+						{ "question": "Sie nimmt ___ teure Produkt.", "word": "Produkt", "answer": "das" },
+						{ "question": "Wir lesen ___ Preisschild genau.", "word": "Preisschild", "answer": "das" },
+						{ "question": "Er sucht ___ beste Angebot.", "word": "Angebot", "answer": "das" },
+						{ "question": "Ich gehe zu ___ Stand mit den Äpfeln.", "word": "Stand", "answer": "dem" },
+						{ "question": "Er prüft ___ Ware.", "word": "Ware", "answer": "die" },
+						{ "question": "Wir nutzen ___ Sonderangebot.", "word": "Sonderangebot", "answer": "das" },
+						{ "question": "Sie liest ___ Prospekt.", "word": "Prospekt", "answer": "den" },
+						{ "question": "Ich mag ___ große Auswahl.", "word": "Auswahl", "answer": "die" }
 					]
 				},
 				{
@@ -87,27 +122,42 @@
 						{ "question": "Er verlangt ___ Quittung.", "word": "Quittung", "answer": "die" },
 						{ "question": "Sie schiebt ___ Einkaufswagen.", "word": "Einkaufswagen", "answer": "den" },
 						{ "question": "Wir werfen ___ Bon weg.", "word": "Bon", "answer": "den" },
-						{ "question": "Er hebt ___ Münze auf.", "word": "Münze", "answer": "die" }
+						{ "question": "Er hebt ___ Münze auf.", "word": "Münze", "answer": "eine" },
+						{ "question": "Ich gebe ihm ___ Schein.", "word": "Schein", "answer": "den" },
+						{ "question": "Sie bezahlt mit ___ Kreditkarte.", "word": "Kreditkarte", "answer": "der" },
+						{ "question": "Er sucht in ___ Portemonnaie.", "word": "Portemonnaie", "answer": "dem" },
+						{ "question": "Ich nehme ___ Einkaufskorb.", "word": "Einkaufskorb", "answer": "einen" },
+						{ "question": "Der Kassierer nennt ___ Summe.", "word": "Summe", "answer": "die" }
 					]
 				},
 				{
 					"id": 4,
 					"tasks": [
-						{ "question": "Sie geht in ___ Abteilung.", "word": "Abteilung", "answer": "die" },
+						{ "question": "Sie geht in ___ richtige Abteilung.", "word": "Abteilung", "answer": "die" },
 						{ "question": "Ich spreche mit ___ Kunde.", "word": "Kunde", "answer": "dem" },
-						{ "question": "Er öffnet ___ Packung.", "word": "Packung", "answer": "die" },
+						{ "question": "Er öffnet ___ Packung Chips.", "word": "Packung", "answer": "die" },
 						{ "question": "Wir vergleichen ___ Preis.", "word": "Preis", "answer": "den" },
-						{ "question": "Sie bekommt ___ Rabatt.", "word": "Rabatt", "answer": "den" }
+						{ "question": "Sie bekommt ___ Rabatt.", "word": "Rabatt", "answer": "einen" },
+						{ "question": "Wir suchen ___ Ausgang.", "word": "Ausgang", "answer": "den" },
+						{ "question": "Er ärgert sich über ___ Werbung.", "word": "Werbung", "answer": "die" },
+						{ "question": "Ich gehe in ___ neues Geschäft.", "word": "Geschäft", "answer": "ein" },
+						{ "question": "Sie löst ___ Gutschein ein.", "word": "Gutschein", "answer": "den" },
+						{ "question": "Er wartet vor ___ Umkleidekabine.", "word": "Umkleidekabine", "answer": "der" }
 					]
 				},
 				{
 					"id": 5,
 					"tasks": [
-						{ "question": "Wir kaufen in ___ Laden.", "word": "Laden", "answer": "dem" },
-						{ "question": "Sie bezahlt ___ Rechnung.", "word": "Rechnung", "answer": "die" },
-						{ "question": "Ich nehme ___ Produkt.", "word": "Produkt", "answer": "das" },
+						{ "question": "Wir kaufen in ___ Laden ein.", "word": "Laden", "answer": "dem" },
+						{ "question": "Sie bezahlt ___ Rechnung online.", "word": "Rechnung", "answer": "die" },
+						{ "question": "Ich nehme ___ letzte Produkt.", "word": "Produkt", "answer": "das" },
 						{ "question": "Er beendet ___ Einkauf.", "word": "Einkauf", "answer": "den" },
-						{ "question": "Sie gibt ___ Wechselgeld zurück.", "word": "Wechselgeld", "answer": "das" }
+						{ "question": "Sie gibt ___ Wechselgeld zurück.", "word": "Wechselgeld", "answer": "das" },
+						{ "question": "Wir bestellen in ___ Online-Shop.", "word": "Online-Shop", "answer": "dem" },
+						{ "question": "Ich warte auf ___ Lieferung.", "word": "Lieferung", "answer": "die" },
+						{ "question": "Er öffnet ___ Paket.", "word": "Paket", "answer": "das" },
+						{ "question": "Der Verkäufer bedient ___ Kunde.", "word": "Kunde", "answer": "den" },
+						{ "question": "Ich danke für ___ Barzahlung.", "word": "Barzahlung", "answer": "die" }
 					]
 				}
 			]
@@ -119,40 +169,60 @@
 					"id": 1,
 					"tasks": [
 						{ "question": "Die Tür ___ Supermarkts ist geöffnet.", "word": "Supermarkt", "answer": "des" },
-						{ "question": "Die Farbe ___ Kasse ist rot.", "word": "Kasse", "answer": "der" },
+						{ "question": "Die Schlange an ___ Kasse ist lang.", "word": "Kasse", "answer": "der" },
 						{ "question": "Der Inhalt ___ Regals ist vielfältig.", "word": "Regal", "answer": "des" },
 						{ "question": "Das Lächeln ___ Verkäufers ist ehrlich.", "word": "Verkäufer", "answer": "des" },
-						{ "question": "Die Größe ___ Einkaufstasche ist praktisch.", "word": "Einkaufstasche", "answer": "der" }
+						{ "question": "Die Größe ___ Einkaufstasche ist praktisch.", "word": "Einkaufstasche", "answer": "der" },
+						{ "question": "Trotz ___ langen Einkaufszettels habe ich etwas vergessen.", "word": "Einkaufszettel", "answer": "des" },
+						{ "question": "Der Duft ___ Bäckerei ist wunderbar.", "word": "Bäckerei", "answer": "der" },
+						{ "question": "Der Preis ___ Gemüses ist gestiegen.", "word": "Gemüse", "answer": "des" },
+						{ "question": "Die Empfehlung ___ Metzgers war gut.", "word": "Metzger", "answer": "des" },
+						{ "question": "Der Pfand ___ Flasche ist 25 Cent.", "word": "Flasche", "answer": "der" }
 					]
 				},
 				{
 					"id": 2,
 					"tasks": [
 						{ "question": "Das Angebot ___ Marktes ist groß.", "word": "Markt", "answer": "des" },
-						{ "question": "Die Geduld ___ Kundin ist bekannt.", "word": "Kundin", "answer": "der" },
+						{ "question": "Die Frage ___ Kundin war berechtigt.", "word": "Kundin", "answer": "der" },
 						{ "question": "Die Verpackung ___ Produkts ist modern.", "word": "Produkt", "answer": "des" },
-						{ "question": "Der Preis ___ Preisschildes ist niedrig.", "word": "Preisschild", "answer": "des" },
-						{ "question": "Der Wert ___ Angebots ist hoch.", "word": "Angebot", "answer": "des" }
+						{ "question": "Die Schrift ___ Preisschildes ist zu klein.", "word": "Preisschild", "answer": "des" },
+						{ "question": "Die Gültigkeit ___ Angebots ist begrenzt.", "word": "Angebot", "answer": "des" },
+						{ "question": "Der Besitzer ___ Standes ist sehr nett.", "word": "Stand", "answer": "des" },
+						{ "question": "Die Qualität ___ Ware ist ausgezeichnet.", "word": "Ware", "answer": "der" },
+						{ "question": "Die Bedingungen ___ Sonderangebots sind kompliziert.", "word": "Sonderangebot", "answer": "des" },
+						{ "question": "Das Design ___ Prospekts ist ansprechend.", "word": "Prospekt", "answer": "des" },
+						{ "question": "Wegen ___ großen Auswahl kann ich mich nicht entscheiden.", "word": "Auswahl", "answer": "der" }
 					]
 				},
 				{
 					"id": 3,
 					"tasks": [
-						{ "question": "Die Suche nach ___ Geldbeutel war lang.", "word": "Geldbeutel", "answer": "dem" },
-						{ "question": "Der Wert ___ Quittung ist wichtig.", "word": "Quittung", "answer": "der" },
-						{ "question": "Die Größe ___ Einkaufswagens ist optimal.", "word": "Einkaufswagen", "answer": "des" },
-						{ "question": "Das Datum ___ Bons ist aktuell.", "word": "Bon", "answer": "des" },
-						{ "question": "Die Form ___ Münze ist rund.", "word": "Münze", "answer": "der" }
+						{ "question": "Der Inhalt ___ Geldbeutels ist gering.", "word": "Geldbeutel", "answer": "des" },
+						{ "question": "Die Aufbewahrung ___ Quittung ist wichtig für die Garantie.", "word": "Quittung", "answer": "der" },
+						{ "question": "Die Räder ___ Einkaufswagens sind kaputt.", "word": "Einkaufswagen", "answer": "des" },
+						{ "question": "Das Datum ___ Bons ist von gestern.", "word": "Bon", "answer": "des" },
+						{ "question": "Der Wert ___ Münze ist gering.", "word": "Münze", "answer": "der" },
+						{ "question": "Die Farbe ___ Scheins ist blau.", "word": "Schein", "answer": "des" },
+						{ "question": "Die Nummer ___ Kreditkarte ist geheim.", "word": "Kreditkarte", "answer": "der" },
+						{ "question": "Der Verlust ___ Portemonnaies ist ärgerlich.", "word": "Portemonnaie", "answer": "des" },
+						{ "question": "Das Material ___ Einkaufskorbes ist Plastik.", "word": "Einkaufskorb", "answer": "des" },
+						{ "question": "Die Höhe ___ Summe hat mich überrascht.", "word": "Summe", "answer": "der" }
 					]
 				},
 				{
 					"id": 4,
 					"tasks": [
-						{ "question": "Die Größe ___ Abteilung ist beeindruckend.", "word": "Abteilung", "answer": "der" },
-						{ "question": "Die Freundlichkeit ___ Kunden ist angenehm.", "word": "Kunde", "answer": "des" },
-						{ "question": "Die Verpackung ___ Packung ist neu.", "word": "Packung", "answer": "der" },
-						{ "question": "Die Höhe ___ Preises ist akzeptabel.", "word": "Preis", "answer": "des" },
-						{ "question": "Die Größe ___ Rabatts ist erstaunlich.", "word": "Rabatt", "answer": "des" }
+						{ "question": "Die Leiterin ___ Abteilung ist nicht da.", "word": "Abteilung", "answer": "der" },
+						{ "question": "Die Meinung ___ Kunden ist uns wichtig.", "word": "Kunde", "answer": "des" },
+						{ "question": "Der Inhalt ___ Packung ist beschädigt.", "word": "Packung", "answer": "der" },
+						{ "question": "Die Änderung ___ Preises ist nicht vermerkt.", "word": "Preis", "answer": "des" },
+						{ "question": "Die Höhe ___ Rabatts ist erstaunlich.", "word": "Rabatt", "answer": "des" },
+						{ "question": "Das Schild über ___ Ausgang ist beleuchtet.", "word": "Ausgang", "answer": "dem" },
+						{ "question": "Trotz ___ Werbung kaufe ich das nicht.", "word": "Werbung", "answer": "der" },
+						{ "question": "Der Name ___ Geschäfts ist unbekannt.", "word": "Geschäft", "answer": "des" },
+						{ "question": "Die Einlösung ___ Gutscheins ist einfach.", "word": "Gutschein", "answer": "des" },
+						{ "question": "Der Vorhang ___ Umkleidekabine ist zu.", "word": "Umkleidekabine", "answer": "der" }
 					]
 				},
 				{
@@ -161,8 +231,13 @@
 						{ "question": "Die Geschichte ___ Ladens ist alt.", "word": "Laden", "answer": "des" },
 						{ "question": "Das Datum ___ Rechnung ist gestern.", "word": "Rechnung", "answer": "der" },
 						{ "question": "Die Qualität ___ Produkts ist hoch.", "word": "Produkt", "answer": "des" },
-						{ "question": "Der Abschluss ___ Einkaufs war schnell.", "word": "Einkauf", "answer": "des" },
-						{ "question": "Der Betrag ___ Wechselgelds stimmt.", "word": "Wechselgeld", "answer": "des" }
+						{ "question": "Das Ende ___ Einkaufs naht.", "word": "Einkauf", "answer": "des" },
+						{ "question": "Die Höhe ___ Wechselgelds stimmt nicht.", "word": "Wechselgeld", "answer": "des" },
+						{ "question": "Die Webseite ___ Online-Shops ist übersichtlich.", "word": "Online-Shop", "answer": "des" },
+						{ "question": "Das Datum ___ Lieferung wurde verschoben.", "word": "Lieferung", "answer": "der" },
+						{ "question": "Der Inhalt ___ Pakets ist vollständig.", "word": "Paket", "answer": "des" },
+						{ "question": "Die Zufriedenheit ___ Kunden hat Priorität.", "word": "Kunde", "answer": "des" },
+						{ "question": "Die Möglichkeit ___ Barzahlung besteht immer.", "word": "Barzahlung", "answer": "der" }
 					]
 				}
 			]

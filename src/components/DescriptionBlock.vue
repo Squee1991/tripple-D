@@ -1,225 +1,187 @@
 <template>
-	<section class="features">
-		<div class="features__inner">
-			<h2 :class="{'s-title': bp.lg}" class="features__title">{{t('features.title')}}</h2>
-			<div class="features__grid">
-				<div class="features__card" v-for="(item, index) in items" :key="index">
-					<div class="features__card-bg"></div>
-					<div class="features__card-content">
-						<img :src="item.src" :alt="item.alt" class="features__icon"/>
-						<h3 class="features__card-title">{{ t(item.title) }}</h3>
-						<p class="features__card-desc">{{ t(item.description) }}</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+    <section class="features">
+        <div class="features__inner">
+            <div ref="titleRef" class="f__title">
+                <h2 class="features__title">{{t('features.title')}}</h2>
+            </div>
+            <div class="features__grid">
+                <div class="features__card" v-for="(item, index) in items" :key="index" :ref="el => { if (el) cardsRef[index] = el }">
+                    <div class="features__icon-wrapper">
+                        <img :src="item.src" :alt="item.alt" class="features__icon"/>
+                    </div>
+                    <h3 class="features__card-title">{{ t(item.title) }}</h3>
+                    <p class="features__card-desc">{{ t(item.description) }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
 </template>
 
 <script setup>
-	import MagikBook from '../../assets/images/magicBook.svg'
-	import Brain from '../../assets/images/brain.svg'
-	import Controller from '../../assets/images/controller.svg'
-	import Cup from '../../assets/images/cubok.svg'
-	import {useBreakPointsStore} from '../../store/breakPointsStore.js'
-	const { t } = useI18n()
-	const bp = useBreakPointsStore()
-	const items = [
-		{
-			src: MagikBook,
-			alt: 'Book',
-			title: 'cardWords.title',
-			description: 'cardWords.sub',
-		},
-		{
-			src: Brain,
-			alt: 'Brain',
-			title: 'cardMethod.title',
-			description: 'cardMethod.sub',
-		},
-		{
-			src: Controller,
-			alt: 'Controller',
-			title: 'gameCard.title',
-			description: 'gameCard.sub',
-		},
-		{
-			src: Cup,
-			alt: 'Cup',
-			title: 'achievCard.title',
-			description: 'achievCard.sub',
-		},
+    import { ref, onMounted } from 'vue'
+    import { useI18n } from 'vue-i18n'
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-	]
+    import MagikBook from '../../assets/images/magicBook.svg'
+    import Brain from '../../assets/images/brain.svg'
+    import Controller from '../../assets/images/controller.svg'
+    import Cup from '../../assets/images/cubok.svg'
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const { t } = useI18n()
+    const titleRef = ref(null);
+    const cardsRef = ref([]);
+    const cards = cardsRef.value;
+    const items = [
+        { src: MagikBook, alt: 'Book', title: 'cardWords.title', description: 'cardWords.sub' },
+        { src: Brain, alt: 'Brain', title: 'cardMethod.title', description: 'cardMethod.sub' },
+        { src: Controller, alt: 'Controller', title: 'gameCard.title', description: 'gameCard.sub' },
+        { src: Cup, alt: 'Cup', title: 'achievCard.title', description: 'achievCard.sub' },
+    ]
+
+    onMounted(() => {
+
+        gsap.from(titleRef.value, {
+            scrollTrigger: { trigger: titleRef.value, start: "top 90%" },
+            y: 50,
+            opacity: 0,
+            duration: 0.3,
+            ease: "power3.out",
+        });
+
+        const cards = cardsRef.value;
+
+        gsap.set(cards, { opacity: 0, y: 50 });
+        gsap.to(cards, {
+            scrollTrigger: {
+                trigger: ".features__grid",
+                start: "top 85%",
+                toggleActions: "play none none none",
+            },
+            opacity: 1,
+            y: 0,
+            duration: 0.3,
+            stagger: 0.2,
+            ease: "power3.out",
+        });
+    });
+
+
 </script>
 
-
 <style scoped>
+    .features {
+        background: #fef8e4;
+        padding: 6rem 1.5rem;
+        font-family: 'Fredoka One', cursive;
+        overflow-x: hidden;
+    }
 
-	.features {
-		background: #fdfaf3;
-		padding: 80px 20px;
-		display: flex;
-		justify-content: center;
-	}
+    .features__inner {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+    }
 
-	.features__inner {
-		width: 100%;
-		max-width: 1320px;
-		margin: 0 auto;
-	}
+    .features__title {
+        text-align: center;
+        margin-bottom: 4rem;
+        font-size: 3rem;
+        font-family: 'Fredoka One', cursive;
+        font-weight: 400;
+        color: white;
+        letter-spacing: -0.02em;
+        background: #f97028;
+        padding: 10px 20px ;
+        transform: rotate(3deg);
+        border: 2px solid black;
+        border-radius: 10px;
+    }
 
-	.features__title {
-		text-align: center;
-		margin-bottom: 55px;
-		font-size: 42px;
-		font-family: 'Montserrat', Arial, sans-serif;
-		font-weight: bold;
-		color: #5a5340;
-		letter-spacing: 0.03em;
+    .f__title {
+        display: flex;
+        justify-content: center;
+    }
 
-	}
+    .features__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        justify-content: center;
+        gap: 2.5rem;
+        padding: 10px;
+    }
 
-	.s-title {
-		font-size: 20px;
-	}
+    .features__card {
+        border-radius: 24px;
+        border: 3px solid #1e1e1e;
+        box-shadow: 8px 8px 0px #1e1e1e;
+        padding: 2rem 1.5rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+    }
 
-	.features__grid {
-		padding: 40px 10px;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		gap: 45px;
-	}
+    .features__card:hover {
+        transform: translate(4px, 4px);
+        box-shadow: 4px 4px 0px #1e1e1e;
+    }
 
-	.features__card {
-		width: 260px;
-		height: 380px;
-		perspective: 1400px;
-		position: relative;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		cursor: pointer;
-		transition: filter 0.18s;
-	}
+    .features__card:nth-child(1) { background-color: #60a5fa; }
+    .features__card:nth-child(2) { background-color: #fca13a; }
+    .features__card:nth-child(3) { background-color: #4ade80; }
+    .features__card:nth-child(4) { background-color: #a855f7; }
 
-	.features__card-bg {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		background: #fffef9; /* простой светлый фон карточки */
-		border-radius: 16px; /* можно 16-20-24px, как хочешь */ /* светлая рамка, в твоём стиле */
-		box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* простая тень */
-		z-index: 0;
-		transition: transform 0.3s ease, box-shadow 0.3s ease;
-	}
+    .features__icon-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90px;
+        height: 90px;
+        border-radius: 20px;
+        margin-bottom: 2rem;
+        border: 3px solid #1e1e1e;
+        background-color: #ffffff;
+    }
 
-	.features__card:hover .features__card-bg {
-		transform: perspective(900px) translateY(-6%) rotateX(19deg) scale(1.04);
-		box-shadow: 0 8px 18px rgba(0,0,0,0.15);
-	}
+    .features__icon {
+        width: 50px;
+        height: 50px;
+    }
 
-	.features__card-content {
-		position: relative;
-		z-index: 1;
-		text-align: center;
-		padding: 28px 16px 20px 16px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 10px;
-		transition: transform 0.55s cubic-bezier(.35, 1.7, .44, .96),
-		filter 0.4s cubic-bezier(.44, 1.7, .44, .96);
-	}
+    .features__card-title {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.3rem;
+        font-weight: 400;
+        margin-bottom: 0.75rem;
+        color: #ffffff;
+    }
 
-	.features__card:hover .features__card-content {
-		transform: translate3d(0, -44px, 110px) scale(1.08);
-		filter: brightness(1.1) drop-shadow(0 6px 22px #c0a5ff60);
-	}
+    .features__card-desc {
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.6;
+        color: #ffffff;
+        opacity: 0.9;
+    }
 
-	.features__icon {
-		width: 86px;
-		height: 86px;
-		margin-bottom: 14px;
-		filter: drop-shadow(0 0 10px #deceffad) drop-shadow(0 0 22px #fffde6bb);
-		transition: transform 0.5s, filter 0.5s;
-	}
+    @media (max-width: 768px) {
+        .features {
+            padding: 4rem 1rem;
+        }
 
-	.features__card:hover .features__icon {
-		transform: scale(1.09) rotate(-6deg);
-		filter: drop-shadow(0 0 18px #d6b7ffbb) drop-shadow(0 0 40px #fff9c766);
-	}
+        .features__title {
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+        }
 
-	.features__card-title {
-		font-family: "Cinzel", serif;
-		font-size: 21px;
-		font-weight: 700;
-		height: 57px;
-		color: #7c3aed;
-		margin-bottom: 8px;
-		text-shadow: 0 2px 8px #dfcaff40,
-		0 1px 0 #fff8;
-		min-height: 24px;
-		letter-spacing: 0.02em;
-	}
-
-	.features__card-desc {
-		font-family: 'Kurale', serif;
-		font-size: 16px;
-		color: #715921;
-		border-radius: 12px;
-		/*box-shadow: 0 2px 18px #fff5 inset;*/
-		line-height: 1.6;
-		min-height: 150px;
-		padding: 14px 10px 8px 10px;
-		text-shadow: 0 1px 0 #fff9;
-		margin-bottom: 0;
-	}
-
-	@media (max-width: 1050px) {
-		.features__grid {
-			gap: 28px;
-		}
-
-		.features__card {
-			width: 210px;
-			height: 320px;
-		}
-
-		.features__card-title {
-			font-size: 17px;
-		}
-
-		.features__card-desc {
-			font-size: 13px;
-			min-height: 68px;
-		}
-
-		.features__icon {
-			width: 62px;
-			height: 62px;
-		}
-	}
-
-	@media (max-width: 700px) {
-
-		.features__grid {
-			flex-direction: column;
-			gap: 18px;
-		}
-
-		.features__card {
-			width: 100%;
-			min-width: 0;
-			margin: 0 auto;
-		}
-
-		.features__title {
-			font-size: 22px;
-			margin-bottom: 20px;
-		}
-
-	}
-
+        .features__grid {
+            gap: 2rem;
+        }
+    }
 </style>

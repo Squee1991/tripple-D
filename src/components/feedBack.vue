@@ -1,14 +1,48 @@
+<template>
+	<section id="contact" ref="contactSection" class="contact">
+		<div class="contact__wrapper">
+			<div class="contact-form" ref="contactFormRef">
+				<div class="form__animation-wrapper">
+					<div ref="msgAnimationWrapper" class="form__animation"></div>
+				</div>
+				<div class="form__content">
+					<div class="form__header">
+						<p class="form__label">{{ t(data.label) }}</p>
+						<h2 class="form__title">{{ t(data.title) }}</h2>
+					</div>
+					<div class="form__field">
+						<label class="form__field-label" for="user_name">{{ t(data.placeholder.name) }}</label>
+						<input id="user_name" class="input" v-model="userName" type="text" name="user_name"
+							   :placeholder="t(data.placeholder.name)"/>
+						<span class="error__message" v-if="errors.name">{{ errors.name }}</span>
+					</div>
+					<div class="form__field">
+						<label class="form__field-label" for="user_message">{{ t(data.placeholder.message) }}</label>
+						<textarea id="user_message" v-model="userMessage" class="area" cols="30" rows="5" name="message"
+								  :placeholder="t(data.placeholder.message)"></textarea>
+						<span class="error__message" v-if="errors.message">{{ errors.message }}</span>
+					</div>
+					<button type="submit" class="btn--submit" @click="sendMessage">{{ t(data.btn.text) }}</button>
+				</div>
+			</div>
+		</div>
+	</section>
+</template>
+
 <script setup>
 	import MessageAnimation from '../../assets/animation/sendMessage.json'
-	// import {useScrollObserver} from "../utils/useScrollObserver";
 	import {ref, onMounted} from 'vue';
 	import Lottie from 'lottie-web';
 	import emailjs from 'emailjs-com';
+	import {gsap} from "gsap";
+	import {ScrollTrigger} from "gsap/ScrollTrigger";
+
+	gsap.registerPlugin(ScrollTrigger);
 
 	const contactSection = ref(null);
 	const msgAnimationWrapper = ref(null);
-	const isVisible = ref(false);
 	const {t} = useI18n()
+	const contactFormRef = ref(null);
 
 	const data = ref({
 		label: 'feedBack.label',
@@ -16,61 +50,51 @@
 		btn: {
 			text: 'feedBack.btn',
 		},
-		errors: {
-			notValidEmail: "",
-			enterMessage: "",
-			enterName: "",
-		},
 		placeholder: {
 			name: 'feedBack.namePlaceholder',
 			message: 'feedBack.messagePlaceholder'
 		}
 	});
 
-	const errors = ref({
-		name: '',
-		message: ''
-	})
+	const errors = ref({ name: '', message: '' })
 	const userName = ref('');
 	const userMessage = ref('');
+
 	onMounted(() => {
-		isVisible.value = true;
 		if (msgAnimationWrapper.value) {
 			Lottie.loadAnimation({
 				container: msgAnimationWrapper.value,
-				autoplay: false, // Важно!
+				autoplay: false,
 				loop: false,
 				animationData: MessageAnimation,
 				name: 'feedbackAnimation'
 			});
 		}
+
+		// --- ИЗМЕНЕНИЕ: Упрощенная анимация для всего блока формы ---
+		if (contactFormRef.value) {
+			gsap.from(contactFormRef.value, {
+				scrollTrigger: {
+					trigger: contactFormRef.value,
+					start: "top 80%",
+					toggleActions: "play none none none",
+				},
+				y: 100,
+				opacity: 0,
+				duration: 0.8,
+				ease: "power3.out",
+			});
+		}
 	});
 
 	const sendMessage = async () => {
-		errors.value = {
-			name: '',
-			message: ''
-		};
-		if (!userName.value.trim()) {
-			errors.value.name = t('errors.enterName');
-		}
-		if (!userMessage.value.trim()) {
-			errors.value.message = t('errors.enterMsg');
-		}
-		if (errors.value.name || errors.value.message) {
-			return;
-		}
+		errors.value = { name: '', message: '' };
+		if (!userName.value.trim()) { errors.value.name = t('errors.enterName'); }
+		if (!userMessage.value.trim()) { errors.value.message = t('errors.enterMsg'); }
+		if (errors.value.name || errors.value.message) { return; }
 
 		try {
-			await emailjs.send(
-				"service_9zsuox2",
-				"template_s9p24lo",
-				{
-					from_name: userName.value,
-					message: userMessage.value,
-				},
-				"2v5vLDUsbkXWrluyJ"
-			);
+			await emailjs.send( "service_9zsuox2", "template_s9p24lo", { from_name: userName.value, message: userMessage.value }, "2v5vLDUsbkXWrluyJ" );
 			Lottie.play('feedbackAnimation');
 			resetFields();
 		} catch (error) {
@@ -80,292 +104,179 @@
 	const resetFields = () => {
 		userName.value = '';
 		userMessage.value = '';
-		errors.value = {
-			name: '',
-			message: ''
-		};
+		errors.value = { name: '', message: '' };
 	};
 
 </script>
 
-<template>
-	<section id="contact" ref="contactSection" class="contact">
-		<div class="contact__wrapper">
-			<div class="form">
-				<div class="form__wrapper">
-					<div class="form__animation-wrapper">
-						<div ref="msgAnimationWrapper" class="form__animation" :class="{ 'visible': isVisible }"></div>
-					</div>
-					<div class="form__wrapper-inner" :class="{ 'visible': isVisible }">
-						<div class="contact__label label">{{ t(data.label) }}</div>
-						<div class="contact__title">{{ t(data.title) }}</div>
-						<div class="form__field__inner">
-							<label class="label">
-								<input class="input" v-model="userName" type="text" name="user_name"
-								       :placeholder="t(data.placeholder.name)"/> </label>
-							<span class="error__message" v-if="errors.name"> {{ errors.name }}</span></div>
-						<div class="form__message__inner">
-							<label class="label__area">
-                     <textarea v-model="userMessage" class="area" cols="30" rows="10" name="message"
-                               :placeholder="t(data.placeholder.message)"></textarea>
-							</label>
-							<span class="error__message" v-if="errors.message"> {{ errors.message }}</span>
-						</div>
-						<div @click="sendMessage" class="form__btn">
-							<button type="submit" class="contact__btn btn">{{ t(data.btn.text) }}</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-</template>
-
-
 <style scoped>
-
-	@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
-
 	.contact {
+		background-color: #fef8e4;
+		padding: 6rem 1.5rem;
+		font-family: "Nunito", sans-serif;
 		overflow-x: hidden;
-		background: linear-gradient(135deg, #f5f7ff, #eef1ff);
-		padding: 60px 0;
 	}
 
 	.contact__wrapper {
-		padding: 50px 20px;
-		border-radius: 20px;
-		max-width: 1400px;
+		max-width: 1100px;
 		margin: 0 auto;
-		/*background: white;*/
-		/*box-shadow: 0 15px 50px rgba(92, 58, 255, 0.08);*/
-		position: relative;
-		overflow: hidden;
 	}
 
-	.form__wrapper {
+	.contact-form {
 		display: flex;
-		justify-content: center;
-		gap: 40px;
-		padding: 0 40px;
-		border-radius: 20px;
-		flex-wrap: wrap;
+		gap: 2.5rem;
 	}
 
 	.form__animation-wrapper {
-		display: flex;
-		width: 45%;
+		flex: 1;
 		min-width: 300px;
+		align-self: stretch;
+		display: flex;
 		align-items: center;
 		justify-content: center;
+		background: #60a5fa;
+		border-radius: 24px;
+		border: 3px solid #1e1e1e;
+		box-shadow: 8px 8px 0px #1e1e1e;
 	}
 
 	.form__animation {
 		width: 100%;
-		opacity: 0;
-		transform: translateX(-100%);
+		max-width: 400px;
 	}
 
-	.form__animation.visible {
-		animation: slideInLeft 1s ease-out forwards;
+	.form__content {
+		flex: 1;
+		padding: 2.5rem;
+		background: #ffffff;
+		border-radius: 24px;
+		border: 3px solid #1e1e1e;
+		box-shadow: 8px 8px 0px #1e1e1e;
 	}
 
-	.form__wrapper-inner {
-		width: 50%;
-		min-width: 320px;
-		padding: 30px;
-		opacity: 0;
-		animation: slideInRight 1s ease-out forwards;
-	}
-
-	.form__wrapper-inner.visible {
-		opacity: 1;
-	}
-
-	.contact__label {
-		font-size: 32px;
-		font-family: 'Montserrat', Arial, sans-serif;
-		font-weight: 900;
-		font-style: italic;
-		margin-bottom: 20px;
-		color: #fff;
+	.form__header {
 		text-align: center;
-		letter-spacing: 1px;
-		text-shadow: 0 3px 12px #0a195088, 0 2px 2px #fff7, 0 0 2px #ced2ff;
-		filter: drop-shadow(0 1px 0 #7c89e7);
+		margin-bottom: 2rem;
 	}
 
-	.contact__label:after {
-		content: '';
-		width: 60px;
-		height: 4px;
-		background: #5c3aff;
-		display: block;
-		margin: 10px auto 0;
-		border-radius: 2px;
-		box-shadow: 0 2px 8px rgba(92, 58, 255, 0.5);
+	.form__label {
+		font-size: 1rem;
+		font-weight: 400;
+		color: #e53935;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
 	}
 
-	.contact__title {
-		font-size: 17px;
-		font-family: 'Montserrat', Arial, sans-serif;
-		font-weight: 900;
-		font-style: italic;
-		margin-bottom: 20px;
-		/*color: #ffffff;*/
-		text-align: center;
-		letter-spacing: 1px;
-		/*text-shadow: 0 2px 2px #0a195088, 0 2px 2px #fff7, 0 0 2px #ced2ff;*/
-		filter: drop-shadow(0 1px 0 #7c89e7);
+	.form__title {
+		font-size: 2.2rem;
+		font-weight: 400;
+		color: #1e1e1e;
+		margin-top: 0.5rem;
 	}
 
-	.form__field__inner,
-	.form__message__inner {
-		margin-bottom: 20px;
-		position: relative;
+	.form__field {
+		margin-bottom: 1.5rem;
+	}
+
+	.form__field-label {
+		display: none;
 	}
 
 	.input,
 	.area {
 		width: 100%;
-		font-family: 'Montserrat', Arial, sans-serif;
-		font-weight: 600;
-		color: #1a236e;
-		border: none;
-		outline: none;
-		background: linear-gradient(135deg, #f8faff 60%, #e0eaff 100%);
-		box-shadow: 0 2px 10px #1a237e12,
-		0 2px 4px 0 #fff6 inset,
-		0 0.5px 0 #5c3aff50 inset;
-		border-radius: 14px 30px 14px 30px / 10px 1px 10px 4px;
-		font-size: 18px;
-		letter-spacing: 0.01em;
-		padding: 15px 18px;
-		transition: background 0.18s, box-shadow 0.16s, color 0.14s;
-		text-shadow: 0 1px 4px #fff6, 0 0px 1px #7f56d988;
+		box-sizing: border-box;
+		font-family: 'Inter', sans-serif;
+		font-weight: 700;
+		color: #1e1e1e;
+		background: #fef8e4;
+		border: 3px solid #1e1e1e;
+		border-radius: 16px;
+		font-size: 1rem;
+		padding: 1rem;
+		transition: all 0.2s ease-in-out;
+		box-shadow: 4px 4px 0px #1e1e1e;
+	}
+
+	.input::placeholder,
+	.area::placeholder {
+		color: #a1a1a1;
+		font-family: 'Inter', sans-serif;
+		font-weight: 500;
 	}
 
 	.input:focus,
 	.area:focus {
-		background: linear-gradient(135deg, #fff 70%, #f0f7ff 100%);
-		box-shadow: 0 4px 18px #3a56e124,
-		0 2px 12px #a193e81a,
-		0 1px 8px #fff8 inset,
-		0 0.5px 0 #5c3aff90 inset;
-		color: #22005e;
 		outline: none;
+		background: #ffffff;
+		border-color: #fca13a;
 	}
 
 	.area {
 		min-height: 140px;
-		max-height: 220px;
 		resize: vertical;
-		font-size: 18px;
 	}
 
 	.error__message {
-		color: #e25454;
-		font-size: 14px;
-		margin-top: 5px;
-		font-family: system-ui, sans-serif;
+		color: #e53935;
+		font-size: 0.9rem;
+		font-family: 'Inter', sans-serif;
+		font-weight: 700;
+		display: block;
+		margin-top: 0.5rem;
+		text-align: right;
 	}
 
-	.contact__btn.btn {
+	.btn--submit {
 		width: 100%;
-		font-family: 'Montserrat', Arial, sans-serif;
-		font-weight: 800;
-		font-size: 22px;
-		color: #fff;
-		background: linear-gradient(180deg, #8fa5fd 0%, #547fff 80%);
-		border-radius: 20px;
-		border: none;
-		box-shadow: 0 6px 24px #849bff44,
-		0 2px 12px #fff7 inset;
-		letter-spacing: 0.04em;
-		text-shadow: 0 3px 12px #5572cbaa, 0 1px 0 #fff9, 0 0px 1px #fff8;
-		transition: background 0.18s, box-shadow 0.13s, transform 0.12s;
-		margin-top: 16px;
-		padding: 18px 0;
+		font-family: "Nunito", sans-serif;
+		font-weight: bold;
+		padding: 1rem 1.5rem;
+		font-size: 1.3rem;
+		border-radius: 16px;
 		cursor: pointer;
-		transform: none;
+		border: 3px solid #1e1e1e;
+		transition: all 0.1s ease-in-out;
+		background-color: #4ade80;
+		color: #1e1e1e;
+		box-shadow: 4px 4px 0px #1e1e1e;
 	}
 
-	.contact__btn.btn:hover {
-		background: linear-gradient(180deg, #adc6ff 10%, #3154cf 100%);
-		/*box-shadow:*/
-		/* 0 12px 16px #7a99ff69,*/
-		/* 0 5px 18px #fff7 inset;*/
-		/*color: #f7f7ff;*/
+	.btn--submit:hover {
+		transform: translate(2px, 2px);
+		box-shadow: 2px 2px 0px #1e1e1e;
 	}
 
-	@keyframes slideInLeft {
-		from {
-			transform: translateX(-100%);
-			opacity: 0;
-		}
-		to {
-			transform: translateX(0);
-			opacity: 1;
-		}
+	.btn--submit:active {
+		transform: translate(4px, 4px);
+		box-shadow: 0px 0px 0px #1e1e1e;
 	}
 
-	@keyframes slideInRight {
-		from {
-			transform: translateX(100%);
-			opacity: 0;
-		}
-		to {
-			transform: translateX(0);
-			opacity: 1;
-		}
-	}
-
-	/* Mobile and tablet responsive */
-	@media (max-width: 1024px) {
-		.form__wrapper {
-			padding: 10px;
+	@media (max-width: 900px) {
+		.contact-form {
+			flex-direction: column;
 		}
 
 		.form__animation-wrapper {
 			display: none;
 		}
 
-		.form__wrapper-inner {
+		.form__content {
 			width: 100%;
-			padding: 20px;
+			flex-basis: auto;
+			padding: 2.5rem;
 		}
 	}
 
 	@media (max-width: 640px) {
-		.contact__label {
-			font-size: 26px;
-		}
-
-		.contact__title {
-			font-size: 13px;
-			font-weight: 500;
-		}
-
-	}
-
-	@media (max-width: 768px) {
-		.contact__btn.btn {
-			font-size: 16px;
-			padding: 14px;
-			margin: 0;
-		}
-
-		.contact__wrapper {
-			padding: 10px;
-		}
-
 		.contact {
-			padding: 0;
+			padding: 4rem 1rem;
 		}
-
-		.input,
-		.area{
-			font-size: 13px;
+		.form__content {
+			padding: 2rem 1.5rem;
+		}
+		.form__title {
+			font-size: 1.8rem;
 		}
 	}
 </style>

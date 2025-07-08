@@ -12,7 +12,12 @@
 						{ "question": "___ Minute vergeht schnell.", "word": "Minute", "answer": "die" },
 						{ "question": "___ Sekunde ist sehr kurz.", "word": "Sekunde", "answer": "die" },
 						{ "question": "___ Tag beginnt früh.", "word": "Tag", "answer": "der" },
-						{ "question": "___ Woche hat sieben Tage.", "word": "Woche", "answer": "die" }
+						{ "question": "___ Woche hat sieben Tage.", "word": "Woche", "answer": "die" },
+						{ "question": "___ Augenblick war magisch.", "word": "Augenblick", "answer": "der" },
+						{ "question": "___ Jahrzehnt ist eine lange Zeit.", "word": "Jahrzehnt", "answer": "das" },
+						{ "question": "___ Jahrhundert brachte viele Veränderungen.", "word": "Jahrhundert", "answer": "das" },
+						{ "question": "___ Epoche ist vorbei.", "word": "Epoche", "answer": "die" },
+						{ "question": "___ Moment ist wichtig.", "word": "Moment", "answer": "der" }
 					]
 				},
 				{
@@ -22,7 +27,12 @@
 						{ "question": "___ Jahr hat zwölf Monate.", "word": "Jahr", "answer": "das" },
 						{ "question": "___ Stunde dauert sechzig Minuten.", "word": "Stunde", "answer": "die" },
 						{ "question": "___ Abend ist ruhig.", "word": "Abend", "answer": "der" },
-						{ "question": "___ Morgen beginnt früh.", "word": "Morgen", "answer": "der" }
+						{ "question": "___ Morgen beginnt früh.", "word": "Morgen", "answer": "der" },
+						{ "question": "___ Nacht ist dunkel.", "word": "Nacht", "answer": "die" },
+						{ "question": "___ Mitternacht ist es still.", "word": "Mitternacht", "answer": "die" },
+						{ "question": "___ Vormittag ist produktiv.", "word": "Vormittag", "answer": "der" },
+						{ "question": "___ Sonnenaufgang ist schön.", "word": "Sonnenaufgang", "answer": "der" },
+						{ "question": "___ Sonnenuntergang ist romantisch.", "word": "Sonnenuntergang", "answer": "der" }
 					]
 				},
 				{
@@ -32,17 +42,27 @@
 						{ "question": "___ Nachmittag ist sonnig.", "word": "Nachmittag", "answer": "der" },
 						{ "question": "___ Kalender liegt auf dem Tisch.", "word": "Kalender", "answer": "der" },
 						{ "question": "___ Termin ist wichtig.", "word": "Termin", "answer": "der" },
-						{ "question": "___ Datum ist der 15. März.", "word": "Datum", "answer": "das" }
+						{ "question": "___ Datum ist der 15. März.", "word": "Datum", "answer": "das" },
+						{ "question": "___ Wecker klingelt laut.", "word": "Wecker", "answer": "der" },
+						{ "question": "___ Wochentag ist heute?", "word": "Wochentag", "answer": "der" },
+						{ "question": "___ Jahreszeit ist jetzt?", "word": "Jahreszeit", "answer": "die" },
+						{ "question": "___ Stichtag ist morgen.", "word": "Stichtag", "answer": "der" },
+						{ "question": "___ Zeitraum ist kurz.", "word": "Zeitraum", "answer": "der" }
 					]
 				},
 				{
 					"id": 4,
 					"tasks": [
 						{ "question": "___ Viertelstunde ist fünfzehn Minuten.", "word": "Viertelstunde", "answer": "die" },
-						{ "question": "___ Sekunde vergeht schnell.", "word": "Sekunde", "answer": "die" },
+						{ "question": "___ halbe Stunde ist vorbei.", "word": "Stunde", "answer": "die" },
 						{ "question": "___ Wochenende ist frei.", "word": "Wochenende", "answer": "das" },
 						{ "question": "___ Zeit vergeht schnell.", "word": "Zeit", "answer": "die" },
-						{ "question": "___ Stunde beginnt jetzt.", "word": "Stunde", "answer": "die" }
+						{ "question": "___ Zeitpunkt ist perfekt.", "word": "Zeitpunkt", "answer": "der" },
+						{ "question": "___ Frist ist bald abgelaufen.", "word": "Frist", "answer": "die" },
+						{ "question": "___ Anfang ist gemacht.", "word": "Anfang", "answer": "der" },
+						{ "question": "___ Ende naht.", "word": "Ende", "answer": "das" },
+						{ "question": "___ Ewigkeit dauert lang.", "word": "Ewigkeit", "answer": "die" },
+						{ "question": "___ Augenblick zählt.", "word": "Augenblick", "answer": "der" }
 					]
 				},
 				{
@@ -52,7 +72,12 @@
 						{ "question": "___ Zeitplan ist voll.", "word": "Zeitplan", "answer": "der" },
 						{ "question": "___ Uhrzeit ist unbekannt.", "word": "Uhrzeit", "answer": "die" },
 						{ "question": "___ Mittagspause ist um eins.", "word": "Mittagspause", "answer": "die" },
-						{ "question": "___ Zeitdruck ist groß.", "word": "Zeitdruck", "answer": "der" }
+						{ "question": "___ Zeitdruck ist groß.", "word": "Zeitdruck", "answer": "der" },
+						{ "question": "___ Werktag ist anstrengend.", "word": "Werktag", "answer": "der" },
+						{ "question": "___ Feierabend ist verdient.", "word": "Feierabend", "answer": "der" },
+						{ "question": "___ Countdown läuft.", "word": "Countdown", "answer": "der" },
+						{ "question": "___ Verspätung ist ärgerlich.", "word": "Verspätung", "answer": "die" },
+						{ "question": "___ pünktliche Beginn ist wichtig.", "word": "Beginn", "answer": "der" }
 					]
 				}
 			]
@@ -64,20 +89,30 @@
 					"id": 1,
 					"tasks": [
 						{ "question": "Ich stelle ___ Uhr auf den Tisch.", "word": "Uhr", "answer": "die" },
-						{ "question": "In einer ___ Minute kann viel passieren.", "word": "Minute", "answer": "die" },
-						{ "question": "Er braucht nur eine ___ Sekunde.", "word": "Sekunde", "answer": "die" },
-						{ "question": "___ Tag vergeht schnell.", "word": "Der", "answer": "der" },
-						{ "question": "Am Ende der ___ Woche ist Wochenende.", "word": "Woche", "answer": "die" }
+						{ "question": "Warte nur ___ Minute.", "word": "Minute", "answer": "eine" },
+						{ "question": "Er braucht nur ___ Sekunde.", "word": "Sekunde", "answer": "eine" },
+						{ "question": "Ich genieße ___ sonnigen Tag.", "word": "Tag", "answer": "den" },
+						{ "question": "Wir planen ___ ganze Woche.", "word": "Woche", "answer": "die" },
+						{ "question": "Verpasse nicht ___ richtigen Moment.", "word": "Moment", "answer": "den" },
+						{ "question": "Ich erlebte ___ kurzen Augenblick des Glücks.", "word": "Augenblick", "answer": "einen" },
+						{ "question": "Wir blicken auf ___ erfolgreiches Jahrzehnt zurück.", "word": "Jahrzehnt", "answer": "ein" },
+						{ "question": "Das Museum zeigt Kunst aus ___ letzten Jahrhundert.", "word": "Jahrhundert", "answer": "dem" },
+						{ "question": "Wir beenden ___ alte Epoche.", "word": "Epoche", "answer": "die" }
 					]
 				},
 				{
 					"id": 2,
 					"tasks": [
-						{ "question": "Wir planen den ___ Monat.", "word": "Monat", "answer": "den" },
-						{ "question": "___ Jahr ist fast vorbei.", "word": "Das", "answer": "das" },
-						{ "question": "Sie wartet eine ___ Stunde.", "word": "Stunde", "answer": "die" },
-						{ "question": "___ Abend verbringen wir zusammen.", "word": "Den", "answer": "der" },
-						{ "question": "Er kommt am ___ Morgen.", "word": "Morgen", "answer": "der" }
+						{ "question": "Wir planen ___ nächsten Monat.", "word": "Monat", "answer": "den" },
+						{ "question": "Er erinnert sich an ___ letztes Jahr.", "word": "Jahr", "answer": "das" },
+						{ "question": "Sie wartet ___ ganze Stunde.", "word": "Stunde", "answer": "eine" },
+						{ "question": "Ich wünsche dir ___ schönen Abend.", "word": "Abend", "answer": "einen" },
+						{ "question": "Er kommt am ___ nächsten Morgen.", "word": "Morgen", "answer": "dem" },
+						{ "question": "Ich arbeite oft in ___ Nacht.", "word": "Nacht", "answer": "der" },
+						{ "question": "Um ___ Mitternacht schlafen alle.", "word": "Mitternacht", "answer": "die" },
+						{ "question": "Ich nutze ___ Vormittag zum Lernen.", "word": "Vormittag", "answer": "den" },
+						{ "question": "Wir beobachten ___ Sonnenaufgang.", "word": "Sonnenaufgang", "answer": "den" },
+						{ "question": "Sie genießt ___ romantischen Sonnenuntergang.", "word": "Sonnenuntergang", "answer": "den" }
 					]
 				},
 				{
@@ -85,29 +120,44 @@
 					"tasks": [
 						{ "question": "Zum ___ Mittag gibt es Suppe.", "word": "Mittag", "answer": "dem" },
 						{ "question": "Am ___ Nachmittag geht er spazieren.", "word": "Nachmittag", "answer": "dem" },
-						{ "question": "Im ___ Kalender steht der Termin.", "word": "Kalender", "answer": "dem" },
-						{ "question": "Sie hat ___ Termin am Dienstag.", "word": "einen", "answer": "der" },
-						{ "question": "Das ___ Datum ist falsch.", "word": "das", "answer": "das" }
+						{ "question": "Ich schaue in ___ Kalender.", "word": "Kalender", "answer": "den" },
+						{ "question": "Sie hat ___ wichtigen Termin.", "word": "Termin", "answer": "einen" },
+						{ "question": "Er schreibt ___ Datum auf.", "word": "Datum", "answer": "das" },
+						{ "question": "Ich stelle ___ Wecker auf 7 Uhr.", "word": "Wecker", "answer": "den" },
+						{ "question": "An ___ nächsten Wochentag sehen wir uns.", "word": "Wochentag", "answer": "dem" },
+						{ "question": "In ___ nächsten Jahreszeit wird es kälter.", "word": "Jahreszeit", "answer": "der" },
+						{ "question": "Wir müssen ___ Stichtag einhalten.", "word": "Stichtag", "answer": "den" },
+						{ "question": "Für ___ kurzen Zeitraum ist das in Ordnung.", "word": "Zeitraum", "answer": "einen" }
 					]
 				},
 				{
 					"id": 4,
 					"tasks": [
-						{ "question": "Wir treffen uns in einer ___ Viertelstunde.", "word": "Viertelstunde", "answer": "die" },
-						{ "question": "___ Wochenende ist immer zu kurz.", "word": "Das", "answer": "das" },
-						{ "question": "Sie nutzt ___ Zeit gut.", "word": "die", "answer": "die" },
-						{ "question": "___ Stunde vergeht langsam.", "word": "Die", "answer": "die" },
-						{ "question": "Der Film dauert zwei ___ Stunden.", "word": "Stunden", "answer": "die" }
+						{ "question": "Wir treffen uns in ___ Viertelstunde.", "word": "Viertelstunde", "answer": "einer" },
+						{ "question": "Ich warte schon ___ halbe Stunde.", "word": "Stunde", "answer": "eine" },
+						{ "question": "Ich freue mich auf ___ Wochenende.", "word": "Wochenende", "answer": "das" },
+						{ "question": "Sie nutzt ___ freie Zeit gut.", "word": "Zeit", "answer": "die" },
+						{ "question": "Wir wählen ___ richtigen Zeitpunkt.", "word": "Zeitpunkt", "answer": "den" },
+						{ "question": "Sie muss ___ Frist einhalten.", "word": "Frist", "answer": "die" },
+						{ "question": "Nach ___ schweren Anfang wurde es leichter.", "word": "Anfang", "answer": "dem" },
+						{ "question": "Wir fürchten ___ Ende des Urlaubs.", "word": "Ende", "answer": "das" },
+						{ "question": "Das Warten fühlt sich wie ___ Ewigkeit an.", "word": "Ewigkeit", "answer": "eine" },
+						{ "question": "Genieße ___ Augenblick.", "word": "Augenblick", "answer": "den" }
 					]
 				},
 				{
 					"id": 5,
 					"tasks": [
-						{ "question": "Wir feiern ___ Feiertag gemeinsam.", "word": "den", "answer": "der" },
-						{ "question": "Der ___ Zeitplan ist streng.", "word": "der", "answer": "der" },
-						{ "question": "Die ___ Uhrzeit steht im Plan.", "word": "die", "answer": "die" },
-						{ "question": "Er macht ___ Mittagspause.", "word": "die", "answer": "die" },
-						{ "question": "Sie arbeitet unter ___ Zeitdruck.", "word": "dem", "answer": "der" }
+						{ "question": "Wir feiern ___ Feiertag gemeinsam.", "word": "Feiertag", "answer": "den" },
+						{ "question": "Er folgt ___ strengen Zeitplan.", "word": "Zeitplan", "answer": "dem" },
+						{ "question": "Kannst du mir ___ genaue Uhrzeit sagen?", "word": "Uhrzeit", "answer": "die" },
+						{ "question": "Er macht ___ kurze Mittagspause.", "word": "Mittagspause", "answer": "eine" },
+						{ "question": "Sie arbeitet unter ___ großen Zeitdruck.", "word": "Zeitdruck", "answer": "dem" },
+						{ "question": "Ich arbeite an ___ normalen Werktag.", "word": "Werktag", "answer": "einem" },
+						{ "question": "Er freut sich auf ___ Feierabend.", "word": "Feierabend", "answer": "den" },
+						{ "question": "Wir starten ___ Countdown.", "word": "Countdown", "answer": "den" },
+						{ "question": "Ich entschuldige mich für ___ Verspätung.", "word": "Verspätung", "answer": "die" },
+						{ "question": "Wir warten auf ___ pünktlichen Beginn.", "word": "Beginn", "answer": "den" }
 					]
 				}
 			]
@@ -118,51 +168,76 @@
 				{
 					"id": 1,
 					"tasks": [
-						{ "question": "Die Anzeige ___ Uhr ist defekt.", "word": "der", "answer": "der" },
-						{ "question": "Nach einer langen ___ Minute kommt die Antwort.", "word": "Minute", "answer": "die" },
-						{ "question": "Der Beginn ___ Sekunde ist wichtig.", "word": "der", "answer": "die" },
-						{ "question": "Er vergisst nie den ersten ___ Tag.", "word": "den", "answer": "der" },
-						{ "question": "Der letzte Tag der ___ Woche ist Sonntag.", "word": "die", "answer": "die" }
+						{ "question": "Die Anzeige ___ Uhr ist defekt.", "word": "Uhr", "answer": "der" },
+						{ "question": "Das Vergehen ___ Minute ist unaufhaltsam.", "word": "Minute", "answer": "der" },
+						{ "question": "Der Bruchteil ___ Sekunde kann entscheiden.", "word": "Sekunde", "answer": "einer" },
+						{ "question": "Das Licht ___ Tages ist hell.", "word": "Tag", "answer": "des" },
+						{ "question": "Das Ende ___ Woche naht.", "word": "Woche", "answer": "der" },
+						{ "question": "Die Magie ___ Augenblicks ist unvergesslich.", "word": "Augenblick", "answer": "des" },
+						{ "question": "Die Entwicklung ___ Jahrzehnts war rasant.", "word": "Jahrzehnt", "answer": "des" },
+						{ "question": "Die Kunst ___ zwanzigsten Jahrhunderts ist vielfältig.", "word": "Jahrhundert", "answer": "des" },
+						{ "question": "Der Beginn ___ neuen Epoche ist ungewiss.", "word": "Epoche", "answer": "einer" },
+						{ "question": "Die Bedeutung ___ Moments war ihm klar.", "word": "Moment", "answer": "des" }
 					]
 				},
 				{
 					"id": 2,
 					"tasks": [
-						{ "question": "Der Name des ___ Monats ist März.", "word": "Monats", "answer": "der" },
-						{ "question": "Das Ende ___ Jahres feiern wir.", "word": "des", "answer": "das" },
-						{ "question": "Zu Beginn jeder ___ Stunde läutet die Glocke.", "word": "Stunde", "answer": "die" },
-						{ "question": "Am Ende des ___ Abends gehen wir nach Hause.", "word": "Abends", "answer": "der" },
-						{ "question": "Der Anfang des ___ Morgens ist kühl.", "word": "Morgens", "answer": "der" }
+						{ "question": "Der erste Tag ___ Monats ist ein Montag.", "word": "Monat", "answer": "des" },
+						{ "question": "Das Ende ___ Jahres feiern wir.", "word": "Jahr", "answer": "des" },
+						{ "question": "Die Länge ___ Stunde ist immer gleich.", "word": "Stunde", "answer": "einer" },
+						{ "question": "Die Ruhe ___ Abends ist angenehm.", "word": "Abend", "answer": "des" },
+						{ "question": "Die Frische ___ Morgens ist belebend.", "word": "Morgen", "answer": "des" },
+						{ "question": "In der Stille ___ Nacht kann man gut denken.", "word": "Nacht", "answer": "der" },
+						{ "question": "Der Zeitpunkt ___ Mitternacht ist exakt 0 Uhr.", "word": "Mitternacht", "answer": "der" },
+						{ "question": "Während ___ Vormittags arbeite ich konzentriert.", "word": "Vormittag", "answer": "des" },
+						{ "question": "Die Farben ___ Sonnenaufgangs sind atemberaubend.", "word": "Sonnenaufgang", "answer": "des" },
+						{ "question": "Die Wärme ___ Sonnenuntergangs ist wohltuend.", "word": "Sonnenuntergang", "answer": "des" }
 					]
 				},
 				{
 					"id": 3,
 					"tasks": [
-						{ "question": "Das Essen am ___ Mittag ist lecker.", "word": "Mittag", "answer": "dem" },
-						{ "question": "Während des ___ Nachmittags lese ich ein Buch.", "word": "Nachmittags", "answer": "der" },
-						{ "question": "Das Blatt des ___ Kalenders ist voll.", "word": "Kalenders", "answer": "der" },
-						{ "question": "Die Planung des ___ Termins ist abgeschlossen.", "word": "Termins", "answer": "der" },
-						{ "question": "Die Farbe des ___ Datums ist rot.", "word": "Datums", "answer": "das" }
+						{ "question": "Die Zeit ___ Mittags ist für das Essen reserviert.", "word": "Mittag", "answer": "des" },
+						{ "question": "Während ___ Nachmittags lese ich ein Buch.", "word": "Nachmittag", "answer": "des" },
+						{ "question": "Das Blatt ___ Kalenders ist voll.", "word": "Kalender", "answer": "des" },
+						{ "question": "Die Planung ___ Termins ist abgeschlossen.", "word": "Termin", "answer": "des" },
+						{ "question": "Die Korrektheit ___ Datums ist wichtig.", "word": "Datum", "answer": "des" },
+						{ "question": "Das Klingeln ___ Weckers reißt mich aus dem Schlaf.", "word": "Wecker", "answer": "des" },
+						{ "question": "Der Name ___ Wochentags ist mir entfallen.", "word": "Wochentag", "answer": "des" },
+						{ "question": "Der Wechsel ___ Jahreszeit steht bevor.", "word": "Jahreszeit", "answer": "der" },
+						{ "question": "Die Einhaltung ___ Stichtags ist zwingend.", "word": "Stichtag", "answer": "des" },
+						{ "question": "Die Festlegung ___ Zeitraums muss erfolgen.", "word": "Zeitraum", "answer": "eines" }
 					]
 				},
 				{
 					"id": 4,
 					"tasks": [
-						{ "question": "Die Dauer einer ___ Viertelstunde ist klar.", "word": "Viertelstunde", "answer": "die" },
-						{ "question": "Die Freude am ___ Wochenende ist groß.", "word": "Wochenende", "answer": "das" },
-						{ "question": "Die Länge der ___ Zeit ist relativ.", "word": "Zeit", "answer": "die" },
-						{ "question": "Die Prüfung dauert zwei ___ Stunden.", "word": "Stunden", "answer": "die" },
-						{ "question": "Die Planung des ___ Zeitplans ist kompliziert.", "word": "Zeitplans", "answer": "der" }
+						{ "question": "Die Dauer ___ Viertelstunde ist kurz.", "word": "Viertelstunde", "answer": "einer" },
+						{ "question": "Innerhalb ___ halben Stunde bin ich da.", "word": "Stunde", "answer": "einer" },
+						{ "question": "Die Planung ___ Wochenendes beginnt am Freitag.", "word": "Wochenende", "answer": "des" },
+						{ "question": "Die Relativität ___ Zeit ist ein bekanntes Konzept.", "word": "Zeit", "answer": "der" },
+						{ "question": "Die Wahl ___ richtigen Zeitpunkts ist entscheidend.", "word": "Zeitpunkt", "answer": "des" },
+						{ "question": "Das Verstreichen ___ Frist hat Konsequenzen.", "word": "Frist", "answer": "der" },
+						{ "question": "Die Schwierigkeit ___ Anfangs ist bekannt.", "word": "Anfang", "answer": "des" },
+						{ "question": "Das Nahen ___ Endes war spürbar.", "word": "Ende", "answer": "des" },
+						{ "question": "Der Gedanke an ___ Ewigkeit ist unvorstellbar.", "word": "Ewigkeit", "answer": "die" },
+						{ "question": "Trotz ___ kurzen Augenblicks war es intensiv.", "word": "Augenblick", "answer": "des" }
 					]
 				},
 				{
 					"id": 5,
 					"tasks": [
-						{ "question": "Die Vorfreude auf den nächsten ___ Feiertag ist groß.", "word": "Feiertag", "answer": "der" },
-						{ "question": "Das Problem des ___ Zeitdrucks kennt jeder.", "word": "Zeitdrucks", "answer": "der" },
-						{ "question": "Die Anzeige der ___ Uhrzeit ist falsch.", "word": "Uhrzeit", "answer": "die" },
-						{ "question": "Nach der ___ Mittagspause arbeiten wir weiter.", "word": "Mittagspause", "answer": "die" },
-						{ "question": "Das Notieren des ___ Datums ist wichtig.", "word": "Datums", "answer": "das" }
+						{ "question": "Das Datum ___ nächsten Feiertags weiß ich nicht.", "word": "Feiertag", "answer": "des" },
+						{ "question": "Das Problem ___ Zeitdrucks kennt jeder.", "word": "Zeitdruck", "answer": "des" },
+						{ "question": "Die Anzeige ___ Uhrzeit ist falsch.", "word": "Uhrzeit", "answer": "der" },
+						{ "question": "Die Länge ___ Mittagspause ist gesetzlich geregelt.", "word": "Mittagspause", "answer": "der" },
+						{ "question": "Das Notieren ___ Datums ist wichtig.", "word": "Datum", "answer": "des" },
+						{ "question": "Die Arbeit eines ___ Werktags ist oft anstrengend.", "word": "Werktag", "answer": "jedes" },
+						{ "question": "Das Gefühl ___ Feierabends ist unbezahlbar.", "word": "Feierabend", "answer": "des" },
+						{ "question": "Der Start ___ Countdowns beginnt jetzt.", "word": "Countdown", "answer": "des" },
+						{ "question": "Der Grund ___ Verspätung war ein Stau.", "word": "Verspätung", "answer": "der" },
+						{ "question": "Die Sicherstellung ___ pünktlichen Beginns ist unsere Aufgabe.", "word": "Beginn", "answer": "eines" }
 					]
 				}
 			]

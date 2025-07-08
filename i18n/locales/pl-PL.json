@@ -2,6 +2,19 @@
 	"preloader": {
 		"value": "Zostaniesz przekierowany na stronę główną..."
 	},
+	"error": {
+		"title": "Sprawa nr 404: Strona zniknęła!",
+		"subTitle": "Detektywie, potrzebujemy twojej pomocy. Strona zniknęła, zostawiając tylko kilka dziwnych tropów. Przeanalizuj je i pomóż nam wrócić do domu.",
+		"label": "Ślady na miejscu zdarzenia:",
+		"cardOne": "Kartka z bazgrołami",
+		"cardTwo": "Dziwny akcent",
+		"cardThree": "Zepsuty kompas",
+		"paperOne": "Na kartce napisano: „Poszłam tam, gdzie czasowniki są zawsze regularne”. To chyba ślepy zaułek.",
+		"paperTwo": "Świadek słyszał, jak strona mówiła z dziwnym akcentem, myląc „der” i „die”. Bardzo podejrzane.",
+		"paperThree": "Kompas nie wskazuje północy, lecz najbliższą bibliotekę. Może strona po prostu chciała poczytać?",
+		"footerText": "Hmm, zagmatwana sprawa... Może wróćmy do bazy?",
+		"btn": "Wróć na stronę główną"
+	},
 	"articleCategory": {
 		"daslabel": "Sztuka Das",
 		"dasFirstlabel": "Pogromca Das",
@@ -134,13 +147,12 @@
 	},
 	"generalCategory": {
 		"generaLabel": "Ogólne osiągnięcia",
-
 		"lastBreahtlabel": "Na Ostatnim Oddechu",
 		"lastBreathText": "Odgadnij 20 artykułów z rzędu z 1 życiem w Maratonie (tryb łatwy).",
 		"monthLabel": "Stałokient",
 		"moonthText": "Jesteś z nami już cały miesiąc!",
 		"marginLabel": "Bez Prawa do Błędu",
-		"marginText": "Zrób serię 10 słów w trybie łatwym, mając 5 żyć.",
+		"marginText": "Zrób serię 20 słów w trybie łatwym, mając 5 żyć.",
 		"edgeLabel": "Na Krawędzi",
 		"edgeText": "Zrób serię 50 słów w trybie trudnym. Zegar nie może spaść poniżej 2 sekund.",
 		"firstArtiklusLabel": "Pierwsza Waluta",
@@ -189,7 +201,6 @@
 		"streakFourthLabel": "Na Granicy Możliwości",
 		"streakFourthText": "Osiągnij serię 200 poprawnych odpowiedzi z rzędu."
 	},
-
 	"marathonNormalMode": {
 		"correctLabel": "Zgadnięte słowa (Tryb normalny)",
 		"correctFirstLabel": "Adept rodzajników",
@@ -233,6 +244,132 @@
 		"streakThirdText": "Osiągnij passę 100 poprawnych odpowiedzi z rzędu.",
 		"streakFifthLabel": "Mityczna passa.",
 		"streakFifthText": "Osiągnij passę 200 poprawnych odpowiedzi z rzędu."
+	},
+	"trainerPage": {
+		"exit": "Wyjście",
+		"loading": "Ładowanie modułu...",
+		"sure": "Czy jesteś pewien?",
+		"warning": "Jeśli teraz wyjdziesz, postęp nie zostanie zapisany!",
+		"quest": "Zadanie",
+		"continue": "Kontynuuj",
+		"check": "Sprawdź",
+		"further": "Dalej",
+		"right": "Poprawnie!",
+		"false": "Niepoprawnie. Prawidłowa odpowiedź: ",
+		"end": "Moduł ukończony!",
+		"save": "Świetnie! Twój postęp został zapisany.",
+		"backToTheme": "Powrót do tematów",
+		"morePractice": "Potrzebna dodatkowa praktyka",
+		"result": "Twój wynik:",
+		"repeat": "Powtórz",
+		"toMain": "Do strony głównej",
+		"notFound": "Błąd. Nie znaleziono modułu."
+	},
+	"chooseThemeList": {
+		"home": "Dom",
+		"time": "Czas",
+		"family": "Rodzina",
+		"food": "Jedzenie",
+		"purchases": "Zakupy",
+		"health": "Zdrowie",
+		"weather": "Pogoda",
+		"clothes": "Ubrania",
+		"transport": "Transport",
+		"school": "Szkoła",
+		"travel": "Podróże"
+	},
+	"chooseTheme": {
+		"choose": "Wybierz temat",
+		"btnBack": "Do strony głównej",
+		"btnStart": "Start",
+		"level": "Poziom",
+		"module": "Moduł",
+		"notAllowedLevel": "Najpierw ukończ Poziom",
+		"notAllowedModule": "Najpierw ukończ poprzedni moduł!"
+	},
+	"marathonPrepare": {
+		"title": "Maraton przez wszystkie słowa",
+		"subtitle": "Sprawdź, jak dobrze znasz słowa i rodzajniki",
+		"greetings": "Cześć",
+		"streak": "Twój najlepszy wynik na tym poziomie trudności:",
+		"notAuth": "Zaloguj się, aby zapisać postępy i rywalizować.",
+		"chooseDifficulty": "Wybierz poziom trudności",
+		"difficultEasy": "Łatwy",
+		"difficultDescriptionEasy": "5 żyć, bez limitu czasu",
+		"difficultNormal": "Średni",
+		"difficultDescriptionNormal": "5 żyć, 10 sek/słowo",
+		"difficultHard": "Trudny",
+		"difficultDescriptionHard": "1 życie, 5 sek/słowo",
+		"loading": "Ładowanie słów...",
+		"start": "Start!",
+		"login": "Zaloguj się, aby rozpocząć"
+	},
+	"marathonGame": {
+		"notReadyTitle": "Proszę czekać",
+		"reboot": "Przekierowujemy cię na stronę przygotowania...",
+		"streak": "Seria:",
+		"record": "Rekord:",
+		"health": "Życia:",
+		"timer": "Zegar:",
+		"quest": "Jaki jest rodzajnik tego słowa?",
+		"end": "Koniec gry!",
+		"urStreak": "Twoja końcowa seria:",
+		"newRecord": "Nowy rekord!",
+		"bestResult": "Twój najlepszy wynik:",
+		"tryAgain": "Spróbuj ponownie",
+		"back": "Wróć do wyboru poziomu trudności",
+		"main": "Strona główna"
+	},
+	"rulesFirstBlock": {
+		"title": "Podstawowe zasady rodzajników w języku niemieckim",
+		"subTitle": "Krótkie i zrozumiałe podsumowanie dla każdego, kto chce poprawnie używać der, die, das!",
+		"firstCardTitle": "Rodzajnik zależy od rodzaju gramatycznego",
+		"exampleSexM": " — rodzaj męski",
+		"exampleAnswerM": "(der Tisch — stół)",
+		"exampleSexW": " — rodzaj żeński",
+		"exampleAnswerW": "(die Lampe — lampa)",
+		"exampleSexIt": " — rodzaj nijaki",
+		"exampleAnswerIt": "(das Buch — książka)",
+		"remember": "Rodzaj rzeczownika prawie zawsze należy zapamiętać razem ze słowem!"
+	},
+	"rulesSecondBlock": {
+		"firstCardTitle": "W liczbie mnogiej zawsze",
+		"firstCardSub": "Niezależnie od rodzaju w liczbie pojedynczej, w liczbie mnogiej zawsze używamy"
+	},
+	"rulesThirdBlock": {
+		"firstCardTitle": "Rodzajniki zmieniają się w zależności od przypadku",
+		"firstCardSubTitle": "W języku niemieckim są 4 przypadki, a dla każdego rodzaju formy rodzajnika będą inne."
+	},
+	"rulesFourthBlock": {
+		"firstCardTitle": "Wyjątki i szczególności",
+		"firstCardSubTitle": "W języku niemieckim są 4 przypadki, a dla każdego rodzaju formy rodzajnika będą inne.",
+		"exampleFemale": "Rzeczowniki kończące się na",
+		"exampleAnswer": "— zawsze rodzaj nijaki",
+		"exampleTime": "Dni tygodnia, miesiące, pory roku — zawsze rodzaj męski",
+		"exampleFlowers": "Większość drzew i kwiatów — rodzaj żeński"
+	},
+	"rulesFifthBlock": {
+		"firstCardTitle": "Triki na zapamiętanie",
+		"exampleFirst": "Ucz się rzeczowników zawsze z rodzajnikiem:",
+		"exampleSecond": "Zapamiętaj końcówki charakterystyczne dla rodzaju, słowa na",
+		"exampleSecondAnswer": " — prawie zawsze rodzaj żeński"
+	},
+	"rulesSixthBlock": {
+		"firstTitle": "Sprawdź się!",
+		"firstExercises": "Wpisz poprawny rodzajnik",
+		"firstAnswer": "na podstawie wskazówek powyżej i kliknij „Sprawdź”",
+		"checkBtn": "Sprawdź"
+	},
+	"rulesTablet": {
+		"case": "Przypadek",
+		"male": "R. męski",
+		"female": "R. żeński",
+		"medium": "R. nijaki",
+		"plural": "L. mnoga"
+	},
+	"inDevelopment": {
+		"title": "Sekcja w przygotowaniu",
+		"sub": "Już wkrótce będziecie mogli rywalizować w pojedynkach na rodzajniki!"
 	},
 	"ranked": {
 		"label": "Tabela liderów",
@@ -306,7 +443,7 @@
 	},
 	"cardWords": {
 		"title": "900+ słów",
-		"sub": "Naucz się ponad 800 słów i rodzajników w wygodnym systemie."
+		"sub": "Naucz się ponad 900 słów i rodzajników w wygodnym systemie."
 	},
 	"cardMethod": {
 		"title": "5 metod nauki",
@@ -342,27 +479,31 @@
 		"invalidCredential": "Nieprawidłowe lub przestarzałe dane logowania"
 	},
 	"about": {
-		"title": "Nauka niemieckiego i rodzajników jest nudna?",
-		"lead": "Masz dość wkuwania fiszek, przepisywania list słówek i ciągłego zapominania rodzajników?",
-		"whyfirst": "Rozwijaj umiejętności jak w RPG",
-		"whySecond": "Zdobywaj osiągnięcia i nagrody",
-		"whyThird": "Graj w karciane pojedynki z innymi",
-		"whyfourth": "Ucz się słów w różnych trybach",
-		"whyfifth": "Poznawaj język w formie zabawy, a nie nudy!",
-		"whySixth": "Ułóż słowo, korzystając z alfabetu!",
-		"whySeventh": "Słownikowe combo-wombo!",
-		"whyEight": "Powtórki interwałowe z mikrotestami",
-		"whyfooter": "Wypróbuj te sposoby — a na pewno spojrzysz na naukę w zupełnie nowy sposób!"
+		"title": "Nudzi Cię nauka niemieckiego i rodzajników rzeczowników?",
+		"lead": "Masz dość zakuwania fiszek, przepisywania list słówek i ciągłego zapominania rodzajników?",
+		"whyFirst": "Zdobywaj osiągnięcia i nagrody",
+		"whySecond": "Graj w bitwy karciane z innymi",
+		"whyThird": "Ucz się słówek w różnych trybach",
+		"whyFourth": "Ucz się języka w formie zabawy!",
+		"whyFifth": "Ułóż słowo z liter alfabetu!",
+		"whySixth": "Powtórki interwałowe z minitestami",
+		"whyFooter": "Wypróbuj te sposoby i zobaczysz naukę w nowym świetle!"
 	},
 	"aboutList": {
-		"one": "Każde nowe słowo to nie tylko zaliczony punkt, ale krok do rozwoju twojej postaci! Zdobywaj doświadczenie, odblokowuj nowe poziomy, ulepszaj umiejętności i śledź swój postęp w stylu prawdziwej gry RPG.",
-		"two": "System osiągnięć i nagród sprawia, że nauka staje się ekscytująca: wykonuj zadania, odkrywaj sekrety, zdobywaj trofea i kolekcjonuj rzadkie nagrody za sukcesy w niemieckim.",
-		"three": "Rzuć wyzwanie innym graczom w karcianych pojedynkach: kto szybciej i dokładniej odgadnie rodzajniki, ułoży słowa albo wypełni planszę? Pokaż swoją wiedzę i zostań mistrzem!",
-		"four": "Nie ograniczaj się do nudnego powtarzania: trenuj pamięć w różnych trybach — oglądaj obrazki, słuchaj nagrań, układaj słowa z liter, rozbijaj słowa na sylaby i poznawaj język z każdej strony.",
-		"five": "Włącz tryb gry: układaj słowa używając alfabetu jak magicznych run! To nie tylko zabawa, ale też świetny trening spostrzegawczości i pamięci wzrokowej.",
-		"six": "W tym trybie dwie osoby wybierają słowo. Uczestnik odgaduje słowo po literach, wybierając z alfabetu! Możesz podać słowo z góry (liczba prób jest ograniczona, aby nie zgadywać całego alfabetu).",
-		"seven": "Sprawdź się w prawdziwej słownej kombo-zabawie! Szukaj synonimów, antonimów, słów powiązanych i rozwijaj myślenie asocjacyjne, aby zapamiętywać słowa na długo.",
-		"eight": "Powtórki interwałowe pomagają utrwalić wiedzę: system sam przypomni ci ważne słowa i przeprowadzi mini-testy, żebyś zawsze był na topie z niemieckim."
+		"one": "Każde nowe słowo to nie tylko ptaszek na liście — to krok naprzód! Zdobywaj doświadczenie, odblokowuj kolejne poziomy, śledź postępy i zdobywaj osiągnięcia.",
+		"two": "System osiągnięć i nagród sprawia, że nauka staje się ekscytująca: wykonuj zadania, odkrywaj sekrety, zdobywaj trofea i kolekcjonuj rzadkie nagrody za swoje postępy w niemieckim.",
+		"three": "Nie ograniczaj się do nudnych powtórek: ćwicz pamięć w różnych trybach — słuchaj audio, układaj słowa z liter, wybierz jedną metodę albo wszystkie naraz i ucz się języka z różnych stron.",
+		"four": "Włącz tryb gry: układaj słowa z alfabetu jak z magicznych run! To nie tylko zabawa, ale też doskonały trening uwagi i pamięci wzrokowej.",
+		"five": "W tym trybie losowane jest przypadkowe słowo. Gracz odgaduje je, wybierając litery z alfabetu! Można próbować zgadnąć wcześniej (liczba prób jest ograniczona, żeby uniknąć zgadywania wszystkiego). Na końcu trzeba wpisać rodzajnik zgadywanego słowa.",
+		"six": "Powtórki interwałowe pomagają utrwalić wiedzę: system sam przypomni odpowiednie słowa i przeprowadzi mini-testy, abyś był zawsze w formie z niemieckiego."
+	},
+	"aboutAnimText": {
+		"first": "Myślisz, że inaczej się nie da?",
+		"second": "A co jeśli można inaczej?",
+		"third": "Chcesz to zmienić?",
+		"fourth": "Uczyć się języka z przyjemnością?",
+		"fifth": "To łatwiejsze niż myślisz",
+		"sixth": "To co, zaczynamy? ;-)"
 	},
 	"footer": {
 		"copy": "Der Die Das. Wszelkie prawa zastrzeżone."

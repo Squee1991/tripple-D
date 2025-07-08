@@ -12,7 +12,12 @@
 						{ "question": "___ Banane ist gelb.", "word": "Banane", "answer": "die" },
 						{ "question": "___ Brot ist frisch.", "word": "Brot", "answer": "das" },
 						{ "question": "___ Käse ist lecker.", "word": "Käse", "answer": "der" },
-						{ "question": "___ Milch ist kalt.", "word": "Milch", "answer": "die" }
+						{ "question": "___ Milch ist kalt.", "word": "Milch", "answer": "die" },
+						{ "question": "___ Salat ist gesund.", "word": "Salat", "answer": "der" },
+						{ "question": "___ Orange ist saftig.", "word": "Orange", "answer": "die" },
+						{ "question": "___ Mehl ist weiß.", "word": "Mehl", "answer": "das" },
+						{ "question": "___ Zucker ist süß.", "word": "Zucker", "answer": "der" },
+						{ "question": "___ Zitrone ist sauer.", "word": "Zitrone", "answer": "die" }
 					]
 				},
 				{
@@ -22,7 +27,12 @@
 						{ "question": "___ Ei ist gekocht.", "word": "Ei", "answer": "das" },
 						{ "question": "___ Fisch ist frisch.", "word": "Fisch", "answer": "der" },
 						{ "question": "___ Wurst ist scharf.", "word": "Wurst", "answer": "die" },
-						{ "question": "___ Wasser ist klar.", "word": "Wasser", "answer": "das" }
+						{ "question": "___ Wasser ist klar.", "word": "Wasser", "answer": "das" },
+						{ "question": "___ Hähnchen ist im Ofen.", "word": "Hähnchen", "answer": "das" },
+						{ "question": "___ Kartoffel ist heiß.", "word": "Kartoffel", "answer": "die" },
+						{ "question": "___ Zwiebel ist klein.", "word": "Zwiebel", "answer": "die" },
+						{ "question": "___ Knoblauch ist intensiv.", "word": "Knoblauch", "answer": "der" },
+						{ "question": "___ Fleisch ist zart.", "word": "Fleisch", "answer": "das" }
 					]
 				},
 				{
@@ -32,7 +42,12 @@
 						{ "question": "___ Reis ist weiß.", "word": "Reis", "answer": "der" },
 						{ "question": "___ Butter ist weich.", "word": "Butter", "answer": "die" },
 						{ "question": "___ Saft ist süß.", "word": "Saft", "answer": "der" },
-						{ "question": "___ Salz ist fein.", "word": "Salz", "answer": "das" }
+						{ "question": "___ Salz ist fein.", "word": "Salz", "answer": "das" },
+						{ "question": "___ Pfeffer ist schwarz.", "word": "Pfeffer", "answer": "der" },
+						{ "question": "___ Gurke ist grün.", "word": "Gurke", "answer": "die" },
+						{ "question": "___ Paprika ist rot.", "word": "Paprika", "answer": "die" },
+						{ "question": "___ Öl ist golden.", "word": "Öl", "answer": "das" },
+						{ "question": "___ Essig ist sauer.", "word": "Essig", "answer": "der" }
 					]
 				},
 				{
@@ -42,7 +57,12 @@
 						{ "question": "___ Schokolade ist dunkel.", "word": "Schokolade", "answer": "die" },
 						{ "question": "___ Gemüse ist frisch.", "word": "Gemüse", "answer": "das" },
 						{ "question": "___ Kuchen ist süß.", "word": "Kuchen", "answer": "der" },
-						{ "question": "___ Marmelade ist rot.", "word": "Marmelade", "answer": "die" }
+						{ "question": "___ Marmelade ist rot.", "word": "Marmelade", "answer": "die" },
+						{ "question": "___ Honig ist klebrig.", "word": "Honig", "answer": "der" },
+						{ "question": "___ Keks ist knusprig.", "word": "Keks", "answer": "der" },
+						{ "question": "___ Eis ist kalt.", "word": "Eis", "answer": "das" },
+						{ "question": "___ Brötchen ist warm.", "word": "Brötchen", "answer": "das" },
+						{ "question": "___ Sahne ist geschlagen.", "word": "Sahne", "answer": "die" }
 					]
 				},
 				{
@@ -52,7 +72,12 @@
 						{ "question": "___ Kaffee ist heiß.", "word": "Kaffee", "answer": "der" },
 						{ "question": "___ Pizza ist rund.", "word": "Pizza", "answer": "die" },
 						{ "question": "___ Steak ist saftig.", "word": "Steak", "answer": "das" },
-						{ "question": "___ Tee ist grün.", "word": "Tee", "answer": "der" }
+						{ "question": "___ Tee ist grün.", "word": "Tee", "answer": "der" },
+						{ "question": "___ Wein ist rot.", "word": "Wein", "answer": "der" },
+						{ "question": "___ Bier ist kalt.", "word": "Bier", "answer": "das" },
+						{ "question": "___ Nudel ist lang.", "word": "Nudel", "answer": "die" },
+						{ "question": "___ Soße ist cremig.", "word": "Soße", "answer": "die" },
+						{ "question": "___ Gericht ist fertig.", "word": "Gericht", "answer": "das" }
 					]
 				}
 			]
@@ -67,17 +92,27 @@
 						{ "question": "Sie schält ___ Banane.", "word": "Banane", "answer": "die" },
 						{ "question": "Er schneidet ___ Brot.", "word": "Brot", "answer": "das" },
 						{ "question": "Wir kaufen ___ Käse.", "word": "Käse", "answer": "den" },
-						{ "question": "Sie trinkt ___ Milch.", "word": "Milch", "answer": "die" }
+						{ "question": "Sie trinkt ___ Milch.", "word": "Milch", "answer": "die" },
+						{ "question": "Ich mache ___ Salat.", "word": "Salat", "answer": "den" },
+						{ "question": "Er isst ___ Orange.", "word": "Orange", "answer": "eine" },
+						{ "question": "Sie braucht ___ Mehl zum Backen.", "word": "Mehl", "answer": "das" },
+						{ "question": "Ich gebe ___ Zucker in den Tee.", "word": "Zucker", "answer": "den" },
+						{ "question": "Wir pressen ___ Zitrone aus.", "word": "Zitrone", "answer": "die" }
 					]
 				},
 				{
 					"id": 2,
 					"tasks": [
 						{ "question": "Wir löffeln ___ Suppe.", "word": "Suppe", "answer": "die" },
-						{ "question": "Ich koche ___ Ei.", "word": "Ei", "answer": "das" },
+						{ "question": "Ich koche ___ Ei.", "word": "Ei", "answer": "ein" },
 						{ "question": "Er grillt ___ Fisch.", "word": "Fisch", "answer": "den" },
 						{ "question": "Sie kauft ___ Wurst.", "word": "Wurst", "answer": "die" },
-						{ "question": "Er trinkt ___ Wasser.", "word": "Wasser", "answer": "das" }
+						{ "question": "Er trinkt ___ Wasser.", "word": "Wasser", "answer": "das" },
+						{ "question": "Ich bestelle ___ Hähnchen.", "word": "Hähnchen", "answer": "das" },
+						{ "question": "Sie schält ___ Kartoffel.", "word": "Kartoffel", "answer": "die" },
+						{ "question": "Er schneidet ___ Zwiebel.", "word": "Zwiebel", "answer": "die" },
+						{ "question": "Ich presse ___ Knoblauch.", "word": "Knoblauch", "answer": "den" },
+						{ "question": "Wir essen ___ Fleisch nicht gern.", "word": "Fleisch", "answer": "das" }
 					]
 				},
 				{
@@ -85,29 +120,44 @@
 					"tasks": [
 						{ "question": "Wir schneiden ___ Tomate.", "word": "Tomate", "answer": "die" },
 						{ "question": "Ich koche ___ Reis.", "word": "Reis", "answer": "den" },
-						{ "question": "Sie streicht ___ Butter.", "word": "Butter", "answer": "die" },
+						{ "question": "Sie streicht ___ Butter aufs Brot.", "word": "Butter", "answer": "die" },
 						{ "question": "Er trinkt ___ Saft.", "word": "Saft", "answer": "den" },
-						{ "question": "Sie gibt ___ Salz ins Essen.", "word": "Salz", "answer": "das" }
+						{ "question": "Sie gibt ___ Salz ins Essen.", "word": "Salz", "answer": "das" },
+						{ "question": "Ich mahle ___ Pfeffer.", "word": "Pfeffer", "answer": "den" },
+						{ "question": "Er schneidet ___ Gurke in Scheiben.", "word": "Gurke", "answer": "die" },
+						{ "question": "Sie isst ___ rote Paprika.", "word": "Paprika", "answer": "die" },
+						{ "question": "Ich gebe ___ Öl in die Pfanne.", "word": "Öl", "answer": "das" },
+						{ "question": "Wir brauchen ___ Essig für den Salat.", "word": "Essig", "answer": "den" }
 					]
 				},
 				{
 					"id": 4,
 					"tasks": [
-						{ "question": "Ich esse ___ Joghurt.", "word": "Joghurt", "answer": "den" },
+						{ "question": "Ich esse ___ Joghurt zum Frühstück.", "word": "Joghurt", "answer": "den" },
 						{ "question": "Sie kauft ___ Schokolade.", "word": "Schokolade", "answer": "die" },
 						{ "question": "Wir mögen ___ Gemüse.", "word": "Gemüse", "answer": "das" },
-						{ "question": "Er backt ___ Kuchen.", "word": "Kuchen", "answer": "den" },
-						{ "question": "Sie isst ___ Marmelade.", "word": "Marmelade", "answer": "die" }
+						{ "question": "Er backt ___ Kuchen.", "word": "Kuchen", "answer": "einen" },
+						{ "question": "Sie isst ___ Marmelade.", "word": "Marmelade", "answer": "die" },
+						{ "question": "Ich nehme ___ Honig für den Tee.", "word": "Honig", "answer": "den" },
+						{ "question": "Er isst ___ Keks.", "word": "Keks", "answer": "einen" },
+						{ "question": "Wir bestellen ___ Eis zum Nachtisch.", "word": "Eis", "answer": "ein" },
+						{ "question": "Ich kaufe ___ Brötchen beim Bäcker.", "word": "Brötchen", "answer": "ein" },
+						{ "question": "Sie schlägt ___ Sahne steif.", "word": "Sahne", "answer": "die" }
 					]
 				},
 				{
 					"id": 5,
 					"tasks": [
-						{ "question": "Wir essen ___ Obst.", "word": "Obst", "answer": "das" },
+						{ "question": "Wir essen ___ Obst als Nachtisch.", "word": "Obst", "answer": "das" },
 						{ "question": "Ich mache ___ Kaffee.", "word": "Kaffee", "answer": "den" },
-						{ "question": "Sie bestellt ___ Pizza.", "word": "Pizza", "answer": "die" },
+						{ "question": "Sie bestellt ___ Pizza.", "word": "Pizza", "answer": "eine" },
 						{ "question": "Er brät ___ Steak.", "word": "Steak", "answer": "das" },
-						{ "question": "Sie gießt ___ Tee.", "word": "Tee", "answer": "den" }
+						{ "question": "Sie gießt ___ Tee auf.", "word": "Tee", "answer": "den" },
+						{ "question": "Ich trinke ___ Glas Wein.", "word": "Wein", "answer": "ein" },
+						{ "question": "Er bestellt ___ Bier.", "word": "Bier", "answer": "ein" },
+						{ "question": "Sie kocht ___ Nudel.", "word": "Nudel", "answer": "die" },
+						{ "question": "Ich probiere ___ Soße.", "word": "Soße", "answer": "die" },
+						{ "question": "Wir kochen ___ leckeres Gericht.", "word": "Gericht", "answer": "ein" }
 					]
 				}
 			]
@@ -122,7 +172,12 @@
 						{ "question": "Die Farbe ___ Banane ist gelb.", "word": "Banane", "answer": "der" },
 						{ "question": "Die Kruste ___ Brotes ist knusprig.", "word": "Brot", "answer": "des" },
 						{ "question": "Der Geruch ___ Käses ist stark.", "word": "Käse", "answer": "des" },
-						{ "question": "Die Frische ___ Milch ist wichtig.", "word": "Milch", "answer": "der" }
+						{ "question": "Die Frische ___ Milch ist wichtig.", "word": "Milch", "answer": "der" },
+						{ "question": "Die Blätter ___ Salates sind grün.", "word": "Salat", "answer": "des" },
+						{ "question": "Die Schale ___ Orange ist bitter.", "word": "Orange", "answer": "der" },
+						{ "question": "Die Feinheit ___ Mehls ist entscheidend.", "word": "Mehl", "answer": "des" },
+						{ "question": "Der Löffel ___ Zuckers ist voll.", "word": "Zucker", "answer": "des" },
+						{ "question": "Der Saft ___ Zitrone ist sauer.", "word": "Zitrone", "answer": "der" }
 					]
 				},
 				{
@@ -132,7 +187,12 @@
 						{ "question": "Die Schale ___ Eis ist bunt.", "word": "Ei", "answer": "des" },
 						{ "question": "Die Qualität ___ Fisches ist gut.", "word": "Fisch", "answer": "des" },
 						{ "question": "Der Geschmack ___ Wurst ist scharf.", "word": "Wurst", "answer": "der" },
-						{ "question": "Die Klarheit ___ Wassers ist wichtig.", "word": "Wasser", "answer": "des" }
+						{ "question": "Die Klarheit ___ Wassers ist wichtig.", "word": "Wasser", "answer": "des" },
+						{ "question": "Die Zubereitung ___ Hähnchens dauert lange.", "word": "Hähnchen", "answer": "des" },
+						{ "question": "Der Geschmack ___ Kartoffel ist mehlig.", "word": "Kartoffel", "answer": "der" },
+						{ "question": "Die Schärfe ___ Zwiebel bringt mich zum Weinen.", "word": "Zwiebel", "answer": "der" },
+						{ "question": "Der Geruch ___ Knoblauchs ist stark.", "word": "Knoblauch", "answer": "des" },
+						{ "question": "Die Zartheit ___ Fleisches ist unglaublich.", "word": "Fleisch", "answer": "des" }
 					]
 				},
 				{
@@ -142,7 +202,12 @@
 						{ "question": "Der Preis ___ Reises ist gestiegen.", "word": "Reis", "answer": "des" },
 						{ "question": "Der Geschmack ___ Butter ist mild.", "word": "Butter", "answer": "der" },
 						{ "question": "Die Süße ___ Saftes ist natürlich.", "word": "Saft", "answer": "des" },
-						{ "question": "Die Körnigkeit ___ Salzes ist fein.", "word": "Salz", "answer": "des" }
+						{ "question": "Die Körnigkeit ___ Salzes ist fein.", "word": "Salz", "answer": "des" },
+						{ "question": "Die Schärfe ___ Pfeffers ist angenehm.", "word": "Pfeffer", "answer": "des" },
+						{ "question": "Die Frische ___ Gurke ist spürbar.", "word": "Gurke", "answer": "der" },
+						{ "question": "Die Farbe ___ Paprika ist leuchtend.", "word": "Paprika", "answer": "der" },
+						{ "question": "Die Qualität ___ Öls ist entscheidend.", "word": "Öl", "answer": "des" },
+						{ "question": "Die Säure ___ Essigs ist mild.", "word": "Essig", "answer": "des" }
 					]
 				},
 				{
@@ -151,8 +216,13 @@
 						{ "question": "Der Geschmack ___ Joghurts ist cremig.", "word": "Joghurt", "answer": "des" },
 						{ "question": "Die Süße ___ Schokolade ist hoch.", "word": "Schokolade", "answer": "der" },
 						{ "question": "Die Frische ___ Gemüses ist wichtig.", "word": "Gemüse", "answer": "des" },
-						{ "question": "Der Rand ___ Kuchens ist knusprig.", "word": "Kuchen", "answer": "des" },
-						{ "question": "Die Farbe ___ Marmelade ist rot.", "word": "Marmelade", "answer": "der" }
+						{ "question": "Der Duft ___ Kuchens erfüllt den Raum.", "word": "Kuchen", "answer": "des" },
+						{ "question": "Die Farbe ___ Marmelade ist rot.", "word": "Marmelade", "answer": "der" },
+						{ "question": "Die Klebrigkeit ___ Honigs ist typisch.", "word": "Honig", "answer": "des" },
+						{ "question": "Die Form ___ Kekses ist rund.", "word": "Keks", "answer": "des" },
+						{ "question": "Die Kälte ___ Eises ist erfrischend.", "word": "Eis", "answer": "des" },
+						{ "question": "Die Kruste ___ Brötchens ist goldbraun.", "word": "Brötchen", "answer": "des" },
+						{ "question": "Die Konsistenz ___ Sahne ist perfekt.", "word": "Sahne", "answer": "der" }
 					]
 				},
 				{
@@ -162,7 +232,12 @@
 						{ "question": "Das Aroma ___ Kaffees ist stark.", "word": "Kaffee", "answer": "des" },
 						{ "question": "Der Rand ___ Pizza ist knusprig.", "word": "Pizza", "answer": "der" },
 						{ "question": "Die Zartheit ___ Steaks ist berühmt.", "word": "Steak", "answer": "des" },
-						{ "question": "Der Duft ___ Tees ist frisch.", "word": "Tee", "answer": "des" }
+						{ "question": "Der Duft ___ Tees ist frisch.", "word": "Tee", "answer": "des" },
+						{ "question": "Die Herkunft ___ Weines ist Frankreich.", "word": "Wein", "answer": "des" },
+						{ "question": "Der Schaum ___ Bieres ist cremig.", "word": "Bier", "answer": "des" },
+						{ "question": "Die Kochzeit ___ Nudel ist kurz.", "word": "Nudel", "answer": "der" },
+						{ "question": "Die Farbe ___ Soße ist dunkel.", "word": "Soße", "answer": "der" },
+						{ "question": "Der Name ___ Gerichts ist kompliziert.", "word": "Gericht", "answer": "des" }
 					]
 				}
 			]

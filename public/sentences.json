@@ -1,0 +1,42 @@
+{
+  "levels": {
+    "A1": {
+      "sentences": [
+        { "id": "A1_001", "original": "ich bin ein mann" },
+        { "id": "A1_002", "original": "du bist eine frau" },
+        { "id": "A1_003", "original": "er ist ein junge" },
+        { "id": "A1_004", "original": "sie ist ein mädchen" },
+        { "id": "A1_005", "original": "das auto ist rot" },
+        { "id": "A1_006", "original": "das ist mein vater" },
+        { "id": "A1_007", "original": "meine mutter ist ärztin" },
+        { "id": "A1_008", "original": "ich habe einen bruder" },
+        { "id": "A1_009", "original": "hast du eine schwester?" },
+        { "id": "A1_010", "original": "wir sind eine große familie" },
+        { "id": "A1_011", "original": "ich trinke gerne kaffee" },
+        { "id": "A1_012", "original": "der apfel ist lecker" },
+        { "id": "A1_013", "original": "er isst brot mit käse" },
+        { "id": "A1_014", "original": "ich möchte ein glas wasser" },
+        { "id": "A1_015", "original": "wir kochen heute suppe" },
+        { "id": "A1_016", "original": "ich gehe zur schule" },
+        { "id": "A1_017", "original": "er arbeitet im büro" },
+        { "id": "A1_018", "original": "wann fährt der nächste zug nach berlin" },
+        { "id": "A1_019", "original": "sie liest ein interessantes buch" },
+        { "id": "A1_020", "original": "wir wohnen in einer kleinen wohnung" }
+      ]
+    },
+    "A2": {
+      "sentences": [
+        { "id": "A2_001", "original": "ich habe gestern meine freunde getroffen" },
+        { "id": "A2_002", "original": "wenn das wetter gut ist gehen wir spazieren" },
+        { "id": "A2_003", "original": "er hat mir ein schönes geschenk gemacht" },
+        { "id": "A2_004", "original": "könnten sie mir bitte den weg zum bahnhof zeigen" },
+        { "id": "A2_005", "original": "dieser film hat mir sehr gut gefallen" },
+        { "id": "A2_006", "original": "ich muss meinen pass verlängern lassen" },
+        { "id": "A2_007", "original": "sie würde gerne eine reise nach italien machen" },
+        { "id": "A2_008", "original": "obwohl es regnete sind wir nach draußen gegangen" },
+        { "id": "A2_009", "original": "er interessiert sich für geschichte und politik" },
+        { "id": "A2_010", "original": "wir haben uns auf der party gut unterhalten" }
+      ]
+    }
+  }
+}

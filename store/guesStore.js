@@ -27,7 +27,7 @@ export const useGuessWordStore = defineStore('guessWord', () => {
 	const guessedWords = ref([])
 	const win = ref(false)
 	const lose = ref(false)
-	const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ'.split('')
+	const alphabet = 'QWERTZUIOPÜASDFGHJKLÖÄYXCVBNM'.split('')
 	const loadedWords = ref([])
 	const currentWordObj = ref(null)
 	const timeStarted = ref(null)

@@ -104,9 +104,7 @@ export const userlangStore = defineStore('learning', () => {
 			: ['article', 'letters', 'wordArticle', 'audio', 'plural']
 
 		const isFullyLearned = requiredModes.every(mode => word.progress?.[mode] === true)
-
 		if (!isFullyLearned) return
-
 		if (!learnedWords.value.find(w => w.de === word.de)) {
 			learnedWords.value.push({ ...word })
 

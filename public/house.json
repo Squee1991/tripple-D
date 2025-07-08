@@ -12,7 +12,12 @@
 						{ "question": "___ Lampe ist neu.", "word": "Lampe", "answer": "die" },
 						{ "question": "___ Sofa ist bequem.", "word": "Sofa", "answer": "das" },
 						{ "question": "___ Fenster ist offen.", "word": "Fenster", "answer": "das" },
-						{ "question": "___ Stuhl ist braun.", "word": "Stuhl", "answer": "der" }
+						{ "question": "___ Stuhl ist braun.", "word": "Stuhl", "answer": "der" },
+						{ "question": "___ Sessel ist gemütlich.", "word": "Sessel", "answer": "der" },
+						{ "question": "___ Fernseher ist modern.", "word": "Fernseher", "answer": "der" },
+						{ "question": "___ Bücherregal ist voll.", "word": "Bücherregal", "answer": "das" },
+						{ "question": "___ Couchtisch ist aus Glas.", "word": "Couchtisch", "answer": "der" },
+						{ "question": "___ Pflanze ist grün.", "word": "Pflanze", "answer": "die" }
 					]
 				},
 				{
@@ -22,7 +27,12 @@
 						{ "question": "___ Boden ist sauber.", "word": "Boden", "answer": "der" },
 						{ "question": "___ Decke ist weiß.", "word": "Decke", "answer": "die" },
 						{ "question": "___ Teppich ist alt.", "word": "Teppich", "answer": "der" },
-						{ "question": "___ Regal ist leer.", "word": "Regal", "answer": "das" }
+						{ "question": "___ Regal ist leer.", "word": "Regal", "answer": "das" },
+						{ "question": "___ Wand ist gelb.", "word": "Wand", "answer": "die" },
+						{ "question": "___ Heizung ist warm.", "word": "Heizung", "answer": "die" },
+						{ "question": "___ Steckdose ist in der Wand.", "word": "Steckdose", "answer": "die" },
+						{ "question": "___ Lichtschalter ist an der Tür.", "word": "Lichtschalter", "answer": "der" },
+						{ "question": "___ Vorhang ist zu.", "word": "Vorhang", "answer": "der" }
 					]
 				},
 				{
@@ -32,7 +42,12 @@
 						{ "question": "___ Herd ist heiß.", "word": "Herd", "answer": "der" },
 						{ "question": "___ Schublade ist offen.", "word": "Schublade", "answer": "die" },
 						{ "question": "___ Kühlschrank ist voll.", "word": "Kühlschrank", "answer": "der" },
-						{ "question": "___ Schrank ist alt.", "word": "Schrank", "answer": "der" }
+						{ "question": "___ Schrank ist alt.", "word": "Schrank", "answer": "der" },
+						{ "question": "___ Spüle ist nass.", "word": "Spüle", "answer": "die" },
+						{ "question": "___ Geschirrspüler ist an.", "word": "Geschirrspüler", "answer": "der" },
+						{ "question": "___ Mikrowelle ist praktisch.", "word": "Mikrowelle", "answer": "die" },
+						{ "question": "___ Toaster ist neu.", "word": "Toaster", "answer": "der" },
+						{ "question": "___ Mülleimer ist voll.", "word": "Mülleimer", "answer": "der" }
 					]
 				},
 				{
@@ -42,7 +57,12 @@
 						{ "question": "___ Decke ist warm.", "word": "Decke", "answer": "die" },
 						{ "question": "___ Kissen ist weich.", "word": "Kissen", "answer": "das" },
 						{ "question": "___ Nachttisch ist klein.", "word": "Nachttisch", "answer": "der" },
-						{ "question": "___ Gardine ist blau.", "word": "Gardine", "answer": "die" }
+						{ "question": "___ Gardine ist blau.", "word": "Gardine", "answer": "die" },
+						{ "question": "___ Kleiderschrank ist groß.", "word": "Kleiderschrank", "answer": "der" },
+						{ "question": "___ Kommode ist aus Holz.", "word": "Kommode", "answer": "die" },
+						{ "question": "___ Wecker klingelt.", "word": "Wecker", "answer": "der" },
+						{ "question": "___ Matratze ist bequem.", "word": "Matratze", "answer": "die" },
+						{ "question": "___ Lampe spendet Licht.", "word": "Lampe", "answer": "die" }
 					]
 				},
 				{
@@ -52,7 +72,12 @@
 						{ "question": "___ Bild ist schön.", "word": "Bild", "answer": "das" },
 						{ "question": "___ Uhr ist laut.", "word": "Uhr", "answer": "die" },
 						{ "question": "___ Schreibtisch ist groß.", "word": "Schreibtisch", "answer": "der" },
-						{ "question": "___ Vase ist leer.", "word": "Vase", "answer": "die" }
+						{ "question": "___ Vase ist leer.", "word": "Vase", "answer": "die" },
+						{ "question": "___ Pflanze braucht Wasser.", "word": "Pflanze", "answer": "die" },
+						{ "question": "___ Kerze brennt.", "word": "Kerze", "answer": "die" },
+						{ "question": "___ Buch ist interessant.", "word": "Buch", "answer": "das" },
+						{ "question": "___ Fotoalbum ist alt.", "word": "Fotoalbum", "answer": "das" },
+						{ "question": "___ Globus zeigt die Welt.", "word": "Globus", "answer": "der" }
 					]
 				}
 			]
@@ -67,7 +92,12 @@
 						{ "question": "Abends mache ich ___ Lampe neben dem Sofa an.", "word": "Lampe", "answer": "die" },
 						{ "question": "Wir sitzen auf ___ Sofa und sehen fern.", "word": "Sofa", "answer": "das" },
 						{ "question": "Durch ___ Fenster sieht man den Garten.", "word": "Fenster", "answer": "das" },
-						{ "question": "Er rückt ___ Stuhl näher an den Tisch.", "word": "Stuhl", "answer": "der" }
+						{ "question": "Er rückt ___ Stuhl näher an den Tisch.", "word": "Stuhl", "answer": "der" },
+						{ "question": "Stell den Tisch bitte neben ___ Sessel.", "word": "Sessel", "answer": "den" },
+						{ "question": "Er schaltet ___ Fernseher ein.", "word": "Fernseher", "answer": "den" },
+						{ "question": "Ich stelle die Vase auf ___ Bücherregal.", "word": "Bücherregal", "answer": "das" },
+						{ "question": "Die Katze schläft unter ___ Couchtisch.", "word": "Couchtisch", "answer": "dem" },
+						{ "question": "Das Wasser ist für ___ Pflanze.", "word": "Pflanze", "answer": "die" }
 					]
 				},
 				{
@@ -77,7 +107,12 @@
 						{ "question": "Wir putzen ___ Boden.", "word": "Boden", "answer": "der" },
 						{ "question": "Er sieht ___ Decke an.", "word": "Decke", "answer": "die" },
 						{ "question": "Ein Kind liegt auf ___ Teppich.", "word": "Teppich", "answer": "der" },
-						{ "question": "Sie stellt ein Buch in ___ Regal.", "word": "Regal", "answer": "das" }
+						{ "question": "Sie stellt ein Buch in ___ Regal.", "word": "Regal", "answer": "das" },
+						{ "question": "Ich hänge das neue Bild an ___ Wand.", "word": "Wand", "answer": "die" },
+						{ "question": "Stell dich nicht so nah an ___ Heizung.", "word": "Heizung", "answer": "die" },
+						{ "question": "Der Stecker passt nicht in ___ Steckdose.", "word": "Steckdose", "answer": "die" },
+						{ "question": "Er drückt auf ___ Lichtschalter.", "word": "Lichtschalter", "answer": "den" },
+						{ "question": "Die Katze versteckt sich hinter ___ Vorhang.", "word": "Vorhang", "answer": "dem" }
 					]
 				},
 				{
@@ -87,7 +122,12 @@
 						{ "question": "Mama stellt einen Topf auf ___ Herd.", "word": "Herd", "answer": "der" },
 						{ "question": "Ich lege das Messer in ___ Schublade.", "word": "Schublade", "answer": "die" },
 						{ "question": "Wir holen Milch aus ___ Kühlschrank.", "word": "Kühlschrank", "answer": "der" },
-						{ "question": "Er öffnet ___ Schrank im Flur.", "word": "Schrank", "answer": "der" }
+						{ "question": "Er öffnet ___ Schrank im Flur.", "word": "Schrank", "answer": "der" },
+						{ "question": "Das schmutzige Geschirr kommt in ___ Spüle.", "word": "Spüle", "answer": "die" },
+						{ "question": "Ich räume den Teller in ___ Geschirrspüler.", "word": "Geschirrspüler", "answer": "den" },
+						{ "question": "Stell die Suppe bitte in ___ Mikrowelle.", "word": "Mikrowelle", "answer": "die" },
+						{ "question": "Er legt eine Scheibe Brot in ___ Toaster.", "word": "Toaster", "answer": "den" },
+						{ "question": "Wirf den Abfall bitte in ___ Mülleimer.", "word": "Mülleimer", "answer": "den" }
 					]
 				},
 				{
@@ -97,7 +137,12 @@
 						{ "question": "Sie deckt sich mit ___ Decke zu.", "word": "Decke", "answer": "die" },
 						{ "question": "Er schläft auf ___ Kissen.", "word": "Kissen", "answer": "das" },
 						{ "question": "Ein Buch liegt auf ___ Nachttisch.", "word": "Nachttisch", "answer": "der" },
-						{ "question": "Wir machen ___ Gardine zu.", "word": "Gardine", "answer": "die" }
+						{ "question": "Wir machen ___ Gardine zu.", "word": "Gardine", "answer": "die" },
+						{ "question": "Sie hängt ihr Kleid in ___ Kleiderschrank.", "word": "Kleiderschrank", "answer": "den" },
+						{ "question": "Er legt seine Socken auf ___ Kommode.", "word": "Kommode", "answer": "die" },
+						{ "question": "Ich stelle ___ Wecker auf 6 Uhr.", "word": "Wecker", "answer": "den" },
+						{ "question": "Ein frisches Laken liegt auf ___ Matratze.", "word": "Matratze", "answer": "der" },
+						{ "question": "Ich schalte ___ Lampe neben dem Bett aus.", "word": "Lampe", "answer": "die" }
 					]
 				},
 				{
@@ -107,7 +152,12 @@
 						{ "question": "Sie schaut auf ___ Bild an der Wand.", "word": "Bild", "answer": "das" },
 						{ "question": "Er hört ___ Uhr im Wohnzimmer ticken.", "word": "Uhr", "answer": "die" },
 						{ "question": "Ein Laptop liegt auf ___ Schreibtisch.", "word": "Schreibtisch", "answer": "dem" },
-						{ "question": "Frische Blumen stehen in ___ Vase.", "word": "Vase", "answer": "der" }
+						{ "question": "Frische Blumen stehen in ___ Vase.", "word": "Vase", "answer": "der" },
+						{ "question": "Er gießt ___ Pflanze auf der Fensterbank.", "word": "Pflanze", "answer": "die" },
+						{ "question": "Ich zünde ___ Kerze auf dem Tisch an.", "word": "Kerze", "answer": "die" },
+						{ "question": "Er legt ___ Buch zurück ins Regal.", "word": "Buch", "answer": "das" },
+						{ "question": "Wir schauen uns ___ Fotoalbum von früher an.", "word": "Fotoalbum", "answer": "das" },
+						{ "question": "Das Kind dreht an ___ Globus.", "word": "Globus", "answer": "dem" }
 					]
 				}
 			]
@@ -122,7 +172,12 @@
 						{ "question": "Sie schaltet ___ Lampe am Abend ein.", "word": "Lampe", "answer": "die" },
 						{ "question": "Wir setzen uns gern auf ___ Sofa nach der Arbeit.", "word": "Sofa", "answer": "das" },
 						{ "question": "Frische Luft kommt durch ___ Fenster ins Zimmer.", "word": "Fenster", "answer": "das" },
-						{ "question": "Die Beine ___ Stuhls sind aus Holz.", "word": "Stuhl", "answer": "des" }
+						{ "question": "Die Beine ___ Stuhls sind aus Holz.", "word": "Stuhl", "answer": "des" },
+						{ "question": "Er stellt seine Tasche neben ___ Stuhl ab.", "word": "Stuhl", "answer": "den" },
+						{ "question": "Auf ___ Fensterbrett liegt eine Katze.", "word": "Fensterbrett", "answer": "dem" },
+						{ "question": "Der Klang ___ Glases war deutlich zu hören.", "word": "Glas", "answer": "des" },
+						{ "question": "Ich habe das Buch auf ___ Tisch gefunden.", "word": "Tisch", "answer": "dem" },
+						{ "question": "Wir hängen die Lampe über ___ Esstisch.", "word": "Esstisch", "answer": "den" }
 					]
 				},
 				{
@@ -132,7 +187,12 @@
 						{ "question": "Staub liegt auf ___ Boden unter dem Sofa.", "word": "Boden", "answer": "dem" },
 						{ "question": "Die Risse in ___ Decke müssen repariert werden.", "word": "Decke", "answer": "der" },
 						{ "question": "Das Haustier schläft jeden Abend auf ___ Teppich im Flur.", "word": "Teppich", "answer": "dem" },
-						{ "question": "Sie stellt neue Bücher ordentlich in ___ Regal im Arbeitszimmer.", "word": "Regal", "answer": "das" }
+						{ "question": "Sie stellt neue Bücher ordentlich in ___ Regal im Arbeitszimmer.", "word": "Regal", "answer": "das" },
+						{ "question": "Er lehnt sich gegen ___ Wand.", "word": "Wand", "answer": "die" },
+						{ "question": "Die Farbe ___ Teppichs passt nicht zum Sofa.", "word": "Teppich", "answer": "des" },
+						{ "question": "Auf ___ Regal liegen ein paar Ordner.", "word": "Regal", "answer": "dem" },
+						{ "question": "Sie öffnet vorsichtig ___ Fenster.", "word": "Fenster", "answer": "das" },
+						{ "question": "Er hängt das Bild an ___ Wand im Wohnzimmer.", "word": "Wand", "answer": "die" }
 					]
 				},
 				{
@@ -142,7 +202,12 @@
 						{ "question": "Ein Topf steht schon auf ___ Herd und wird warm.", "word": "Herd", "answer": "dem" },
 						{ "question": "Das Besteck liegt ordentlich in ___ Schublade.", "word": "Schublade", "answer": "der" },
 						{ "question": "Die Tür ___ Kühlschranks ist offen geblieben.", "word": "Kühlschrank", "answer": "des" },
-						{ "question": "Er hat einen alten Mantel in ___ Schrank gehängt.", "word": "Schrank", "answer": "den" }
+						{ "question": "Er hat einen alten Mantel in ___ Schrank gehängt.", "word": "Schrank", "answer": "den" },
+						{ "question": "Sie stellt die Tasse auf ___ Herdplatte.", "word": "Herdplatte", "answer": "die" },
+						{ "question": "Die Griffe ___ Schranks sind locker.", "word": "Schrank", "answer": "des" },
+						{ "question": "Wir legen das Messer neben ___ Gabel.", "word": "Gabel", "answer": "die" },
+						{ "question": "Die Butter steht in ___ Kühlschrank.", "word": "Kühlschrank", "answer": "dem" },
+						{ "question": "Er öffnet ___ Schublade mit dem Besteck.", "word": "Schublade", "answer": "die" }
 					]
 				},
 				{
@@ -152,7 +217,12 @@
 						{ "question": "Sie schläft immer unter ___ Decke mit Blumenmuster.", "word": "Decke", "answer": "der" },
 						{ "question": "Die Farbe ___ Kissens passt zur Decke.", "word": "Kissen", "answer": "des" },
 						{ "question": "Ein Glas Wasser steht auf ___ Nachttisch neben dem Bett.", "word": "Nachttisch", "answer": "dem" },
-						{ "question": "Er zieht morgens zuerst ___ Gardine auf.", "word": "Gardine", "answer": "die" }
+						{ "question": "Er zieht morgens zuerst ___ Gardine auf.", "word": "Gardine", "answer": "die" },
+						{ "question": "Die Beine ___ Bettes sind stabil.", "word": "Bett", "answer": "des" },
+						{ "question": "Sie legt das Handy auf ___ Nachttisch.", "word": "Nachttisch", "answer": "den" },
+						{ "question": "Ich setze mich vorsichtig auf ___ Bettkante.", "word": "Bettkante", "answer": "die" },
+						{ "question": "Das Muster ___ Decke ist neu.", "word": "Decke", "answer": "der" },
+						{ "question": "Er schläft gern mit ___ Kissen aus Federn.", "word": "Kissen", "answer": "dem" }
 					]
 				},
 				{
@@ -162,7 +232,12 @@
 						{ "question": "Wir bewundern ___ Bild, das du gemalt hast.", "word": "Bild", "answer": "das" },
 						{ "question": "Der Klang von ___ Uhr ist angenehm leise.", "word": "Uhr", "answer": "der" },
 						{ "question": "Auf ___ Schreibtisch stehen viele Bücher und ein Laptop.", "word": "Schreibtisch", "answer": "dem" },
-						{ "question": "___ Vase mit Blumen steht auf dem Esstisch.", "word": "Vase", "answer": "die" }
+						{ "question": "___ Vase mit Blumen steht auf dem Esstisch.", "word": "Vase", "answer": "die" },
+						{ "question": "Die Rückseite ___ Bildes ist beschädigt.", "word": "Bild", "answer": "des" },
+						{ "question": "Sie hängt die Uhr über ___ Sofa.", "word": "Sofa", "answer": "das" },
+						{ "question": "Er legt die Stifte ordentlich auf ___ Schreibtisch.", "word": "Schreibtisch", "answer": "den" },
+						{ "question": "Der Rahmen ___ Spiegels ist aus Holz.", "word": "Spiegel", "answer": "des" },
+						{ "question": "Die Farbe ___ Vitrine passt zur Wandfarbe.", "word": "Vitrine", "answer": "der" }
 					]
 				}
 			]

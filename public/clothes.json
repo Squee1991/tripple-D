@@ -12,7 +12,12 @@
 						{ "question": "___ Hose ist lang.", "word": "Hose", "answer": "die" },
 						{ "question": "___ T-Shirt ist bequem.", "word": "T-Shirt", "answer": "das" },
 						{ "question": "___ Jacke ist warm.", "word": "Jacke", "answer": "die" },
-						{ "question": "___ Mantel ist elegant.", "word": "Mantel", "answer": "der" }
+						{ "question": "___ Mantel ist elegant.", "word": "Mantel", "answer": "der" },
+						{ "question": "___ Pullover ist weich.", "word": "Pullover", "answer": "der" },
+						{ "question": "___ Jeans ist blau.", "word": "Jeans", "answer": "die" },
+						{ "question": "___ Weste ist modisch.", "word": "Weste", "answer": "die" },
+						{ "question": "___ Leggings sind eng.", "word": "Leggings", "answer": "die" },
+						{ "question": "___ Shorts sind kurz.", "word": "Shorts", "answer": "die" }
 					]
 				},
 				{
@@ -22,7 +27,12 @@
 						{ "question": "___ Rock ist kurz.", "word": "Rock", "answer": "der" },
 						{ "question": "___ Bluse ist schön.", "word": "Bluse", "answer": "die" },
 						{ "question": "___ Anzug ist teuer.", "word": "Anzug", "answer": "der" },
-						{ "question": "___ Kleid ist festlich.", "word": "Kleid", "answer": "das" }
+						{ "question": "___ Kleid ist festlich.", "word": "Kleid", "answer": "das" },
+						{ "question": "___ Stiefel sind hoch.", "word": "Stiefel", "answer": "die" },
+						{ "question": "___ Sandalen sind offen.", "word": "Sandalen", "answer": "die" },
+						{ "question": "___ Turnschuhe sind sportlich.", "word": "Turnschuhe", "answer": "die" },
+						{ "question": "___ Kostüm ist schick.", "word": "Kostüm", "answer": "das" },
+						{ "question": "___ Pyjama ist gemütlich.", "word": "Pyjama", "answer": "der" }
 					]
 				},
 				{
@@ -32,7 +42,12 @@
 						{ "question": "___ Mütze ist gestrickt.", "word": "Mütze", "answer": "die" },
 						{ "question": "___ Handschuhe sind warm.", "word": "Handschuhe", "answer": "die" },
 						{ "question": "___ Schal ist weich.", "word": "Schal", "answer": "der" },
-						{ "question": "___ Gürtel ist Leder.", "word": "Gürtel", "answer": "der" }
+						{ "question": "___ Gürtel ist aus Leder.", "word": "Gürtel", "answer": "der" },
+						{ "question": "___ Hut ist elegant.", "word": "Hut", "answer": "der" },
+						{ "question": "___ Brille ist neu.", "word": "Brille", "answer": "die" },
+						{ "question": "___ Krawatte ist gestreift.", "word": "Krawatte", "answer": "die" },
+						{ "question": "___ Strumpfhose ist dünn.", "word": "Strumpfhose", "answer": "die" },
+						{ "question": "___ Regenschirm ist nass.", "word": "Regenschirm", "answer": "der" }
 					]
 				},
 				{
@@ -42,17 +57,27 @@
 						{ "question": "___ Tasche ist klein.", "word": "Tasche", "answer": "die" },
 						{ "question": "___ Knopf ist locker.", "word": "Knopf", "answer": "der" },
 						{ "question": "___ Reißverschluss ist kaputt.", "word": "Reißverschluss", "answer": "der" },
-						{ "question": "___ Ärmel ist lang.", "word": "Ärmel", "answer": "der" }
+						{ "question": "___ Ärmel ist lang.", "word": "Ärmel", "answer": "der" },
+						{ "question": "___ Futter ist warm.", "word": "Futter", "answer": "das" },
+						{ "question": "___ Etikett ist kratzig.", "word": "Etikett", "answer": "das" },
+						{ "question": "___ Schnürsenkel ist offen.", "word": "Schnürsenkel", "answer": "der" },
+						{ "question": "___ Saum ist gerade.", "word": "Saum", "answer": "der" },
+						{ "question": "___ Kragen ist schmutzig.", "word": "Kragen", "answer": "der" }
 					]
 				},
 				{
 					"id": 5,
 					"tasks": [
-						{ "question": "___ Kragen ist hoch.", "word": "Kragen", "answer": "der" },
+						{ "question": "___ Outfit ist komplett.", "word": "Outfit", "answer": "das" },
 						{ "question": "___ Naht ist fest.", "word": "Naht", "answer": "die" },
 						{ "question": "___ Muster ist gestreift.", "word": "Muster", "answer": "das" },
 						{ "question": "___ Stoff ist weich.", "word": "Stoff", "answer": "der" },
-						{ "question": "___ Größe ist passend.", "word": "Größe", "answer": "die" }
+						{ "question": "___ Größe ist passend.", "word": "Größe", "answer": "die" },
+						{ "question": "___ Wolle ist warm.", "word": "Wolle", "answer": "die" },
+						{ "question": "___ Baumwolle ist atmungsaktiv.", "word": "Baumwolle", "answer": "die" },
+						{ "question": "___ Seide ist glatt.", "word": "Seide", "answer": "die" },
+						{ "question": "___ Leder ist robust.", "word": "Leder", "answer": "das" },
+						{ "question": "___ Schnitt ist modern.", "word": "Schnitt", "answer": "der" }
 					]
 				}
 			]
@@ -67,7 +92,12 @@
 						{ "question": "Sie kauft ___ Hose.", "word": "Hose", "answer": "die" },
 						{ "question": "Er zieht ___ T-Shirt an.", "word": "T-Shirt", "answer": "das" },
 						{ "question": "Wir suchen ___ Jacke.", "word": "Jacke", "answer": "die" },
-						{ "question": "Sie nimmt ___ Mantel.", "word": "Mantel", "answer": "den" }
+						{ "question": "Sie nimmt ___ Mantel.", "word": "Mantel", "answer": "den" },
+						{ "question": "Он надевает ___ Pullover.", "word": "Pullover", "answer": "den" },
+						{ "question": "Она примеряет ___ Jeans.", "word": "Jeans", "answer": "die" },
+						{ "question": "Я ношу ___ Weste gern.", "word": "Weste", "answer": "die" },
+						{ "question": "Ты покупаешь ___ Leggings?", "word": "Leggings", "answer": "die" },
+						{ "question": "Он ищет ___ Shorts.", "word": "Shorts", "answer": "die" }
 					]
 				},
 				{
@@ -77,7 +107,12 @@
 						{ "question": "Ich ziehe ___ Rock an.", "word": "Rock", "answer": "den" },
 						{ "question": "Sie wäscht ___ Bluse.", "word": "Bluse", "answer": "die" },
 						{ "question": "Wir kaufen ___ Anzug.", "word": "Anzug", "answer": "den" },
-						{ "question": "Er trägt ___ Kleid.", "word": "Kleid", "answer": "das" }
+						{ "question": "Sie trägt ___ Kleid.", "word": "Kleid", "answer": "ein" },
+						{ "question": "Она надевает ___ Stiefel.", "word": "Stiefel", "answer": "die" },
+						{ "question": "Я ношу ___ Sandalen im Sommer.", "word": "Sandalen", "answer": "die" },
+						{ "question": "Он покупает ___ Turnschuhe.", "word": "Turnschuhe", "answer": "die" },
+						{ "question": "Она выбирает ___ Kostüm.", "word": "Kostüm", "answer": "das" },
+						{ "question": "Я надеваю ___ Pyjama.", "word": "Pyjama", "answer": "den" }
 					]
 				},
 				{
@@ -87,7 +122,12 @@
 						{ "question": "Sie setzt ___ Mütze auf.", "word": "Mütze", "answer": "die" },
 						{ "question": "Er zieht ___ Handschuhe an.", "word": "Handschuhe", "answer": "die" },
 						{ "question": "Wir wickeln ___ Schal um.", "word": "Schal", "answer": "den" },
-						{ "question": "Sie legt ___ Gürtel an.", "word": "Gürtel", "answer": "den" }
+						{ "question": "Sie legt ___ Gürtel an.", "word": "Gürtel", "answer": "den" },
+						{ "question": "Он носит ___ Hut.", "word": "Hut", "answer": "einen" },
+						{ "question": "Я ищу ___ Brille.", "word": "Brille", "answer": "die" },
+						{ "question": "Она завязывает ___ Krawatte.", "word": "Krawatte", "answer": "die" },
+						{ "question": "Он покупает ___ Strumpfhose.", "word": "Strumpfhose", "answer": "eine" },
+						{ "question": "Я беру ___ Regenschirm mit.", "word": "Regenschirm", "answer": "den" }
 					]
 				},
 				{
@@ -97,7 +137,12 @@
 						{ "question": "Я беру ___ Tasche.", "word": "Tasche", "answer": "die" },
 						{ "question": "Он пришивает ___ Knopf an.", "word": "Knopf", "answer": "den" },
 						{ "question": "Мы чиним ___ Reißverschluss.", "word": "Reißverschluss", "answer": "den" },
-						{ "question": "Она закатывает ___ Ärmel.", "word": "Ärmel", "answer": "den" }
+						{ "question": "Она закатывает ___ Ärmel.", "word": "Ärmel", "answer": "den" },
+						{ "question": "Я чувствую ___ warme Futter.", "word": "Futter", "answer": "das" },
+						{ "question": "Она отрезает ___ Etikett.", "word": "Etikett", "answer": "das" },
+						{ "question": "Он завязывает ___ Schnürsenkel.", "word": "Schnürsenkel", "answer": "den" },
+						{ "question": "Я подшиваю ___ Saum.", "word": "Saum", "answer": "den" },
+						{ "question": "Она чистит ___ Kragen.", "word": "Kragen", "answer": "den" }
 					]
 				},
 				{
@@ -107,7 +152,12 @@
 						{ "question": "Я проверяю ___ Naht.", "word": "Naht", "answer": "die" },
 						{ "question": "Она выбирает ___ Muster.", "word": "Muster", "answer": "das" },
 						{ "question": "Мы трогаем ___ Stoff.", "word": "Stoff", "answer": "den" },
-						{ "question": "Она проверяет ___ Größe.", "word": "Größe", "answer": "die" }
+						{ "question": "Она проверяет ___ Größe.", "word": "Größe", "answer": "die" },
+						{ "question": "Он носит ___ komplettes Outfit.", "word": "Outfit", "answer": "ein" },
+						{ "question": "Мне нравится ___ Wolle.", "word": "Wolle", "answer": "die" },
+						{ "question": "Она предпочитает ___ Baumwolle.", "word": "Baumwolle", "answer": "die" },
+						{ "question": "Я покупаю ___ Kleid aus Seide.", "word": "Seide", "answer": "der" },
+						{ "question": "Он выбирает ___ neuen Schnitt.", "word": "Schnitt", "answer": "einen" }
 					]
 				}
 			]
@@ -122,7 +172,12 @@
 						{ "question": "Die Länge ___ Hose ist perfekt.", "word": "Hose", "answer": "der" },
 						{ "question": "Der Stoff ___ T-Shirts ist weich.", "word": "T-Shirt", "answer": "des" },
 						{ "question": "Das Futter ___ Jacke ist warm.", "word": "Jacke", "answer": "der" },
-						{ "question": "Der Stil ___ Mantels ist klassisch.", "word": "Mantel", "answer": "des" }
+						{ "question": "Der Stil ___ Mantels ist klassisch.", "word": "Mantel", "answer": "des" },
+						{ "question": "Die Wolle ___ Pullovers ist weich.", "word": "Pullover", "answer": "des" },
+						{ "question": "Der Schnitt ___ Jeans ist modern.", "word": "Jeans", "answer": "der" },
+						{ "question": "Die Farbe ___ Weste ist dunkel.", "word": "Weste", "answer": "der" },
+						{ "question": "Das Material ___ Leggings ist elastisch.", "word": "Leggings", "answer": "der" },
+						{ "question": "Die Länge ___ Shorts ist ideal für den Sommer.", "word": "Shorts", "answer": "der" }
 					]
 				},
 				{
@@ -132,7 +187,12 @@
 						{ "question": "Das Muster ___ Rocks ist modern.", "word": "Rock", "answer": "des" },
 						{ "question": "Die Qualität ___ Bluse ist hoch.", "word": "Bluse", "answer": "der" },
 						{ "question": "Der Schnitt ___ Anzugs ist elegant.", "word": "Anzug", "answer": "des" },
-						{ "question": "Der Preis ___ Kleides ist angemessen.", "word": "Kleid", "answer": "des" }
+						{ "question": "Der Preis ___ Kleides ist angemessen.", "word": "Kleid", "answer": "des" },
+						{ "question": "Die Höhe ___ Stiefel ist beeindruckend.", "word": "Stiefel", "answer": "der" },
+						{ "question": "Die Bequemlichkeit ___ Sandalen ist wichtig.", "word": "Sandalen", "answer": "der" },
+						{ "question": "Das Design ___ Turnschuhe ist sportlich.", "word": "Turnschuhe", "answer": "der" },
+						{ "question": "Der Stoff ___ Kostüms ist hochwertig.", "word": "Kostüm", "answer": "des" },
+						{ "question": "Das Muster ___ Pyjamas ist kariert.", "word": "Pyjama", "answer": "des" }
 					]
 				},
 				{
@@ -142,7 +202,12 @@
 						{ "question": "Die Form ___ Mütze ist rund.", "word": "Mütze", "answer": "der" },
 						{ "question": "Das Paar ___ Handschuhe ist neu.", "word": "Handschuhe", "answer": "der" },
 						{ "question": "Die Wärme ___ Schals ist angenehm.", "word": "Schal", "answer": "des" },
-						{ "question": "Die Schnalle ___ Gürtels ist stabil.", "word": "Gürtel", "answer": "des" }
+						{ "question": "Die Schnalle ___ Gürtels ist aus Metall.", "word": "Gürtel", "answer": "des" },
+						{ "question": "Die Krempe ___ Hutes ist breit.", "word": "Hut", "answer": "des" },
+						{ "question": "Das Gestell ___ Brille ist leicht.", "word": "Brille", "answer": "der" },
+						{ "question": "Die Breite ___ Krawatte ist Geschmackssache.", "word": "Krawatte", "answer": "der" },
+						{ "question": "Die Dichte ___ Strumpfhose wird in DEN angegeben.", "word": "Strumpfhose", "answer": "der" },
+						{ "question": "Der Griff ___ Regenschirms ist ergonomisch.", "word": "Regenschirm", "answer": "des" }
 					]
 				},
 				{
@@ -152,17 +217,27 @@
 						{ "question": "Der Inhalt ___ Tasche ist geheim.", "word": "Tasche", "answer": "der" },
 						{ "question": "Die Befestigung ___ Knopfs ist sicher.", "word": "Knopf", "answer": "des" },
 						{ "question": "Die Funktion ___ Reißverschlusses ist wichtig.", "word": "Reißverschluss", "answer": "des" },
-						{ "question": "Die Länge ___ Ärmels ist ideal.", "word": "Ärmel", "answer": "des" }
+						{ "question": "Die Länge ___ Ärmels ist ideal.", "word": "Ärmel", "answer": "des" },
+						{ "question": "Das Material ___ Futters ist Seide.", "word": "Futter", "answer": "des" },
+						{ "question": "Die Information auf ___ Etikett ist nützlich.", "word": "Etikett", "answer": "dem" },
+						{ "question": "Die Länge ___ Schnürsenkels ist zu kurz.", "word": "Schnürsenkel", "answer": "des" },
+						{ "question": "Die Kante ___ Saums ist sauber genäht.", "word": "Saum", "answer": "des" },
+						{ "question": "Die Weite ___ Kragens ist verstellbar.", "word": "Kragen", "answer": "des" }
 					]
 				},
 				{
 					"id": 5,
 					"tasks": [
-						{ "question": "Die Form ___ Kragens ist modern.", "word": "Kragen", "answer": "des" },
+						{ "question": "Die Zusammenstellung ___ Outfits ist gelungen.", "word": "Outfit", "answer": "des" },
 						{ "question": "Die Stärke ___ Naht ist gut.", "word": "Naht", "answer": "der" },
 						{ "question": "Die Farbe ___ Musters ist lebendig.", "word": "Muster", "answer": "des" },
 						{ "question": "Die Textur ___ Stoffs ist angenehm.", "word": "Stoff", "answer": "des" },
-						{ "question": "Die Bedeutung ___ Größe ist klar.", "word": "Größe", "answer": "der" }
+						{ "question": "Die Auswahl ___ richtigen Größe ist wichtig.", "word": "Größe", "answer": "der" },
+						{ "question": "Die Weichheit ___ Wolle ist unvergleichlich.", "word": "Wolle", "answer": "der" },
+						{ "question": "Der Anbau ___ Baumwolle verbraucht viel Wasser.", "word": "Baumwolle", "answer": "der" },
+						{ "question": "Der Glanz ___ Seide ist edel.", "word": "Seide", "answer": "der" },
+						{ "question": "Die Pflege ___ Leders ist aufwendig.", "word": "Leder", "answer": "des" },
+						{ "question": "Die Eleganz ___ Schnittes ist zeitlos.", "word": "Schnitt", "answer": "des" }
 					]
 				}
 			]

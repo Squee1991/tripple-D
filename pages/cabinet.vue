@@ -1,10 +1,10 @@
 <template>
 	<div class="cabinet-wrapper">
 		<div class="sidebar">
-			<button @click="pathBack" class="button__back">&lt;</button>
-			<div class="menu-icon active">🏠</div>
-			<div class="menu-icon">⚙</div>
+			<button @click="pathBack" class="sidebar-btn back-btn" title="На главную">←</button>
+			<button class="sidebar-btn" title="Настройки">⚙️</button>
 		</div>
+
 		<div class="main-content">
 			<div class="header">
 				<div class="user-block">
@@ -16,57 +16,64 @@
 						</button>
 					</div>
 					<div class="user-info">
+						<div class="user-name">{{ authStore.name }}</div>
 						<div class="exp-bar">
 							<div class="exp-fill" :style="{ width: `${(learningStore.exp / 100) * 100}%` }"></div>
-							<span class="exp-bar-exp">{{ learningStore.exp }} XP</span>
+							<span class="exp-text">{{ learningStore.exp }} / 100 XP</span>
 						</div>
-						<div class="expol__lvl-value">Уровень: {{ learningStore.isLeveling }}</div>
+						<div class="level-info">Уровень: {{ learningStore.isLeveling }}</div>
 					</div>
 				</div>
-				<div class="balance-block">
-					<p class="sub">Артиклюсы</p>
-					<p class="balance">{{ learningStore.points }}</p>
-				</div>
-				<div class="meta-block">
-					<p class="meta">Дата регистрации</p>
-					<p class="date">{{ regDate || '—' }}</p>
+				<div class="stats-blocks">
+					<div class="balance-block">
+						<p class="sub">Артиклюсы</p>
+						<p class="balance">{{ learningStore.points }}</p>
+					</div>
+					<div class="meta-block">
+						<p class="sub">Дата регистрации</p>
+						<p class="date">{{ regDate || '—' }}</p>
+					</div>
 				</div>
 			</div>
+
 			<div class="tabs">
-				<div class="tab" :class="{ active: activeTab === 'info' }" @click="setTab('info')">
-					<img class="tab__icon" src="../assets/images/witch-hat.svg" alt="">
-					<span class="tab__text">Личные данные</span>
-				</div>
-				<div class="tab" :class="{ active: activeTab === 'progress' }" @click="setTab('progress')">
-					<img class="tab__icon" src="../assets/images/progress.svg" alt="">
-					<span class="tab__text">Прогресс</span>
-				</div>
-				<div class="tab" :class="{ active: activeTab === 'skills' }" @click="setTab('skills')">
-					<img class="tab__icon" src="../assets/images/magic-book.svg" alt="">
-					<span class="tab__text">Способности</span>
-				</div>
+				<button class="tab" :class="{ active: activeTab === 'info' }" @click="setTab('info')">
+					<img class="tab-icon" src="../assets/images/user.svg" alt="">
+					<span>Личные данные</span>
+				</button>
+				<button class="tab" :class="{ active: activeTab === 'progress' }" @click="setTab('progress')">
+					<img class="tab-icon" src="../assets/images/progress.svg" alt="">
+					<span>Прогресс</span>
+				</button>
+				<button class="tab" :class="{ active: activeTab === 'skills' }" @click="setTab('skills')">
+					<img class="tab-icon" src="../assets/images/magic-book.svg" alt="">
+					<span>Способности</span>
+				</button>
 			</div>
-			<div v-if="activeTab === 'info'" class="tab-content">
-				<div class="row"><span>Имя:</span><span>{{ authStore.name }}</span></div>
-				<div class="row"><span>Email:</span><span>{{ authStore.email }}</span></div>
-			</div>
-			<div v-if="activeTab === 'progress'">
-				<Progress/>
-			</div>
-			<div v-if="activeTab === 'skills'" class="tab-content">
-				<Skills/>
+
+			<div class="tab-content-wrapper">
+				<div v-if="activeTab === 'info'" class="tab-content">
+					<div class="row"><span>Имя:</span><span>{{ authStore.name }}</span></div>
+					<div class="row"><span>Email:</span><span>{{ authStore.email }}</span></div>
+				</div>
+				<div v-if="activeTab === 'progress'">
+					<Progress/>
+				</div>
+				<div v-if="activeTab === 'skills'" class="tab-content">
+					<Skills/>
+				</div>
 			</div>
 		</div>
 
 		<div v-if="isAvatarModalOpen" class="avatar-modal-overlay" @click.self="isAvatarModalOpen = false">
 			<div class="avatar-modal-content">
-				<h3>Выберите аватар</h3>
+				<h3>Выберите новый аватар</h3>
 				<div class="avatar-grid">
 					<div v-for="avatarName in authStore.availableAvatars"
-					     :key="avatarName"
-					     class="avatar-option"
-					     :class="{ 'selected': selectedAvatar === avatarName }"
-					     @click="selectAvatar(avatarName)">
+						 :key="avatarName"
+						 class="avatar-option"
+						 :class="{ 'selected': selectedAvatar === avatarName }"
+						 @click="selectAvatar(avatarName)">
 						<img :src="authStore.getAvatarUrl(avatarName)" :alt="avatarName">
 					</div>
 				</div>
@@ -80,6 +87,7 @@
 </template>
 
 <script setup>
+	// Скрипт без изменений
 	import { userAuthStore } from '../store/authStore.js'
 	import { userlangStore } from '../store/learningStore.js'
 	import { ref, computed, onMounted, watch } from 'vue'
@@ -124,7 +132,7 @@
 
 	const regDate = computed(() => {
 		if (!authStore.registeredAt) return '-'
-		return new Date(authStore.registeredAt).toLocaleDateString('ru-Ru', {
+		return new Date(authStore.registeredAt).toLocaleDateString('ru-RU', {
 			day: '2-digit',
 			month: '2-digit',
 			year: 'numeric'
@@ -137,353 +145,195 @@
 </script>
 
 <style scoped>
-
-	.button__back {
-		border: none;
-		font-size: 20px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		color: white;
-		background: none;
-		border-radius: 15px;
-		cursor: pointer;
-	}
-
+	/* --- НАЧАЛО: НОВЫЕ СТИЛИ С СОХРАНЕНИЕМ МАКЕТА --- */
 	.cabinet-wrapper {
 		display: flex;
-		height: 100%;
 		min-height: 100vh;
-		background: radial-gradient(circle at center, #423f3f 0%, #544e4e 100%);
-		color: #fff;
-		font-family: 'Segoe UI', sans-serif;
+		background: #fef8e4; /* Фирменный фон */
+		font-family: 'Inter', sans-serif;
+		color: #1e1e1e;
 	}
 
+	/* --- Боковая панель --- */
 	.sidebar {
-		width: 70px;
-		background: rgba(255, 255, 255, 0.03);
+		width: 90px;
+		background: #ffffff;
+		border-right: 3px solid #1e1e1e;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 1.5rem 0;
+		gap: 1.5rem;
+		flex-shrink: 0;
+	}
+
+	.sidebar-btn {
+		width: 60px;
+		height: 60px;
+		border-radius: 16px;
+		border: 3px solid #1e1e1e;
+		background-color: #f3f4f6;
+		box-shadow: 4px 4px 0 #1e1e1e;
+		font-size: 2rem;
+		cursor: pointer;
+		transition: all 0.2s ease;
 		display: flex;
 		align-items: center;
-		flex-direction: column;
-		padding-top: 2rem;
-		gap: 1.5rem;
-		backdrop-filter: blur(6px);
-		border-right: 1px solid rgba(255, 255, 255, 0.05);
+		justify-content: center;
 	}
 
-	.menu-icon {
-		font-size: 1.4rem;
-		cursor: pointer;
-		opacity: 0.6;
-		transition: 0.3s;
+	.sidebar-btn.back-btn {
+		font-size: 2.5rem;
+		font-weight: bold;
 	}
 
-	.menu-icon:hover,
-	.menu-icon.active {
-		opacity: 1;
-		color: #00c2ff;
+	.sidebar-btn:hover {
+		transform: translate(2px, 2px);
+		box-shadow: 2px 2px 0 #1e1e1e;
 	}
 
+	.sidebar-btn.active {
+		background-color: #fca13a;
+		color: white;
+		transform: translate(4px, 4px);
+		box-shadow: 0 0 0 #1e1e1e;
+	}
+
+	/* --- Основной контент --- */
 	.main-content {
 		flex: 1;
 		padding: 2rem 3rem;
 		display: flex;
 		flex-direction: column;
-		justify-content: start;
 	}
 
+	/* --- Хедер в основном контенте --- */
 	.header {
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-start;
+		gap: 1.5rem;
+		padding-bottom: 2rem;
+		border-bottom: 3px solid #f3f4f6;
 	}
 
 	.user-block {
 		display: flex;
-		align-items: flex-start;
-	}
-
-	.user-info {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-	}
-
-
-	.balance-block,
-	.meta-block {
-		text-align: right;
-	}
-
-	.balance {
-		font-size: 1.8rem;
-		font-weight: bold;
-		text-align: center;
-	}
-
-	.sub,
-	.meta {
-		font-size: 0.9rem;
-		opacity: 0.6;
-		text-align: center;
-	}
-
-	.date {
-		font-size: 1rem;
-		color: #ccc;
-	}
-
-	.tabs {
-		display: flex;
-		gap: 2rem;
-		margin: 2rem 0 1rem;
-	}
-
-	.tab {
-		display: flex;
-		justify-content: center;
-		padding-bottom: 0.5rem;
-		cursor: pointer;
-		opacity: 0.7;
-		position: relative;
-	}
-
-	.tab__text {
-		display: flex;
-		justify-content: center;
 		align-items: center;
-		font-size: 22px;
-		font-weight: 600;
-		color: #fff4b8;
+		gap: 1.5rem;
 	}
 
-	.tab__icon {
-		width: 40px;
-		margin-right: 10px;
-	}
-
-	.tab.active {
-		opacity: 1;
-		font-weight: bold;
-	}
-
-	.tab.active:after {
-		content: '';
-		position: absolute;
-		bottom: -6px;
-		left: 0;
-		height: 4px;
-		width: 100%;
-		background: #ffd700;
-		border-radius: 2px;
-	}
-
-	.row {
-		display: flex;
-		justify-content: space-between;
-		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-		padding: 0.5rem 0;
-		font-size: 1.1rem;
-	}
-
-	.exp-bar {
-		height: 30px;
-		width: 220px;
-		background: linear-gradient(90deg, #2e1e40 60%, #462f5e 120%);
-		border: 3px solid #e3e1d3;
-		border-radius: 13px;
-		margin-bottom: 6px;
-		overflow: hidden;
-		box-shadow: 0 0 16px #ffd70088,
-		0 0 30px #ffe99e33 inset,
-		0 2px 14px #1b093766;
-		position: relative;
-	}
-
-	.exp-fill {
-		height: 100%;
-		background: #ff6f00;
-		box-shadow: 0 0 17px #ffe17088, 0 0 44px #bfa5e6cc;
-		transition: width 0.5s cubic-bezier(.35, 2, .6, 1);
-		position: relative;
-		border-radius: 13px;
-	}
-
-	.exp-bar::after {
-		content: '';
-		position: absolute;
-		inset: 0;
-		border-radius: 13px;
-		box-shadow: 0 0 30px #ffe8b366, 0 0 80px #ffeaaa22 inset;
-		opacity: .33;
-		pointer-events: none;
-	}
-
-	.exp-bar-exp {
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		transform: translate(-50% , -50%);
-	}
-
-	.expol__lvl-value{
-		font-size: 24px;
-		margin-left: 10px;
-	}
-
-	.avatar-container {
-		position: relative;
-		margin-right: 20px;
-		flex-shrink: 0;
-	}
-
+	.avatar-container { position: relative; }
 	.avatar-current, .avatar-placeholder {
-		width: 80px;
-		height: 80px;
-		border-radius: 50%;
-		border: 3px solid #ffd369;
-		object-fit: cover;
-		background-color: #2c2828;
+		width: 100px; height: 100px; border-radius: 50%;
+		border: 4px solid #1e1e1e; object-fit: cover;
 	}
-
-	.avatar-placeholder {
-		border-color: #666;
-		background-color: #333;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-size: 2rem;
-		color: #666;
-	}
+	.avatar-placeholder { background-color: #f3f4f6; }
 
 	.change-avatar-btn {
-		position: absolute;
-		bottom: -4px;
-		right: -4px;
-		width: 32px;
-		height: 32px;
-		background: #fff;
-		border: 2px solid #ffd369;
-		border-radius: 50%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		cursor: pointer;
-		transition: transform 0.2s ease;
-		padding: 0;
+		position: absolute; bottom: 0; right: 0;
+		width: 36px; height: 36px; background: #fca13a;
+		border: 3px solid #1e1e1e; border-radius: 50%;
+		display: flex; align-items: center; justify-content: center;
+		cursor: pointer; transition: all 0.2s ease;
+	}
+	.change-avatar-btn:hover { transform: scale(1.1); }
+	.change-avatar-btn img { width: 16px; height: 16px; }
+
+	.user-info { display: flex; flex-direction: column; gap: 0.5rem; }
+	.user-name { font-family: 'Fredoka One', cursive; font-size: 1.8rem; }
+
+	.exp-bar {
+		width: 250px; height: 28px; background-color: #e5e7eb;
+		border-radius: 14px; border: 3px solid #1e1e1e;
+		overflow: hidden; position: relative;
+	}
+	.exp-fill {
+		height: 100%; background: #4ade80; border-radius: 8px;
+		transition: width 0.5s ease;
+	}
+	.exp-text {
+		position: absolute; top: 50%; left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 0.9rem; font-weight: bold; color: #1e1e1e;
 	}
 
+	.level-info { font-family: 'Fredoka One', cursive; font-size: 1.2rem; color: #555; }
 
-
-	.change-avatar-btn img {
-		width: 16px;
-		height: 16px;
+	.stats-blocks { display: flex; gap: 1rem; }
+	.balance-block, .meta-block {
+		background-color: #fff; border: 3px solid #1e1e1e;
+		box-shadow: 4px 4px 0 #1e1e1e;
+		border-radius: 16px; padding: 0.5rem 1rem; text-align: center;
 	}
+	.sub { font-size: 0.9rem; font-weight: 500; color: #555; }
+	.balance, .date {
+		font-family: 'Fredoka One', cursive; font-size: 1.5rem; margin-top: 0.25rem;
+	}
+	.balance { color: #f97028; }
 
+	/* --- Вкладки (табы) --- */
+	.tabs { display: flex; gap: 1rem; margin: 2rem 0; }
+	.tab {
+		font-family: 'Fredoka One', cursive; display: flex; align-items: center; gap: 0.5rem;
+		padding: 0.75rem 1.5rem; border: 3px solid #1e1e1e; border-radius: 16px;
+		box-shadow: 4px 4px 0 #1e1e1e; cursor: pointer; transition: all 0.2s ease;
+		background-color: #fff; font-size: 1.1rem;
+	}
+	.tab:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 #1e1e1e; }
+	.tab.active {
+		background-color: #fca13a; color: white;
+		transform: translate(4px, 4px); box-shadow: 0 0 0 #1e1e1e;
+	}
+	.tab.active .tab-icon { filter: brightness(0) invert(1); }
+	.tab-icon { width: 24px; }
+
+	/* --- Контент вкладок --- */
+	.tab-content-wrapper {
+		background-color: #fff; border: 3px solid #1e1e1e;
+		box-shadow: 8px 8px 0 #e5e7eb;
+		padding: 1.5rem; border-radius: 16px;
+	}
+	.row {
+		display: flex; justify-content: space-between; padding: 0.75rem 0;
+		border-bottom: 2px solid #f3f4f6; font-size: 1.1rem;
+	}
+	.row:last-child { border-bottom: none; }
+	.row span:first-child { font-weight: bold; }
+
+	/* --- Модальное окно --- */
 	.avatar-modal-overlay {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: rgba(0, 0, 0, 0.75);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		z-index: 1000;
-		backdrop-filter: blur(5px);
+		position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+		background-color: rgba(0, 0, 0, 0.6);
+		display: flex; align-items: center; justify-content: center; z-index: 1000;
 	}
-
 	.avatar-modal-content {
-		background: #3a3636;
-		padding: 2rem;
-		border-radius: 15px;
-		border: 2px solid #ffd369;
-		box-shadow: 0 0 40px rgba(255, 211, 105, 0.5);
-		width: 90%;
-		max-width: 1000px;
-		color: #fff;
-		text-align: center;
+		background: #fff; padding: 2rem; border-radius: 24px;
+		border: 4px solid #1e1e1e; box-shadow: 8px 8px 0 #1e1e1e;
+		width: 90%; max-width: 600px; text-align: center;
 	}
-
-	.avatar-modal-content h3 {
-		font-size: 1.5rem;
-		color: #ffd369;
-	}
-
+	.avatar-modal-content h3 { font-family: 'Fredoka One', cursive; font-size: 1.8rem; margin-bottom: 2rem; }
 	.avatar-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-		gap: 8px;
-		margin: 2rem 0;
-		max-height: 50vh;
-		padding-right: 10px;
+		display: grid; grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+		gap: 1rem; max-height: 50vh; overflow-y: auto; padding: 0.5rem;
 	}
-
 	.avatar-option {
-		cursor: pointer;
-		border: 3px solid transparent;
-		border-radius: 30px;
+		cursor: pointer; border: 4px solid transparent; border-radius: 16px;
 		transition: all 0.2s ease;
-		padding: 5px;
-		background: rgba(255,255,255,0.05);
 	}
-
-	.avatar-option:hover {
-		border-color: #00c2ff;
-		transform: translateY(-5px);
-	}
-
-	.avatar-option.selected {
-		border-color: #ffd369;
-		transform: scale(1.05);
-		box-shadow: 0 0 15px #ffd369;
-	}
-
-	.avatar-option img {
-		width: 100%;
-		border-radius: 30px;
-		display: block;
-	}
-
-	.modal-actions {
-		display: flex;
-		justify-content: center;
-		gap: 1rem;
-		margin-top: 1rem;
-	}
-
+	.avatar-option:hover { border-color: #60a5fa; }
+	.avatar-option.selected { border-color: #fca13a; transform: scale(1.05); }
+	.avatar-option img { width: 100%; border-radius: 12px; display: block; }
+	.modal-actions { display: flex; justify-content: center; gap: 1rem; margin-top: 2rem; }
 	.modal-actions button {
-		padding: 12px 30px;
-		border-radius: 8px;
-		border: none;
-		cursor: pointer;
-		font-size: 1rem;
-		font-weight: bold;
-		transition: all 0.2s;
+		font-family: 'Fredoka One', cursive; font-size: 1.1rem; padding: 0.75rem 2rem;
+		border-radius: 16px; border: 3px solid #1e1e1e;
+		box-shadow: 4px 4px 0 #1e1e1e; cursor: pointer; transition: all 0.2s ease;
 	}
-
-	.btn-cancel {
-		background-color: #555;
-		color: #fff;
-		border: 1px solid #777;
-	}
-	.btn-cancel:hover {
-		background-color: #666;
-	}
-
-	.btn-confirm {
-		background-color: #ffd369;
-		color: #1a1a1a;
-	}
-	.btn-confirm:hover {
-		background-color: #ffc73d;
-		box-shadow: 0 0 10px #ffd369;
-	}
+	.btn-cancel { background-color: #f3f4f6; color: #1e1e1e; }
+	.btn-confirm { background-color: #4ade80; color: #1e1e1e; }
 	.btn-confirm:disabled {
-		background-color: #444;
-		color: #888;
-		cursor: not-allowed;
-		box-shadow: none;
+		background: #d1d5db; color: #9ca3af;
+		box-shadow: 4px 4px 0 #9ca3af; cursor: not-allowed;
 	}
 </style>

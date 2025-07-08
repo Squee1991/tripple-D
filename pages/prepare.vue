@@ -1,249 +1,343 @@
 <script setup>
-	import { ref, onMounted, computed } from 'vue';
-	import { useRouter } from 'vue-router';
-	import { useGameStore } from '../store/marafonStore.js';
-	import { userAuthStore } from '../store/authStore.js';
+    // --- ИЗМЕНЕНИЕ 2: Импорты не изменились, но router нам нужен для новой функции ---
+    import {ref, onMounted, computed} from 'vue';
+    import {useRouter} from 'vue-router';
+    import {useGameStore} from '../store/marafonStore.js';
+    import {userAuthStore} from '../store/authStore.js';
 
-	const gameStore = useGameStore();
-	const authStore = userAuthStore();
-	const router = useRouter();
-	const selectedDifficulty = ref(1);
-	const currentRecord = computed(() => {
-		if (gameStore.personalBests) {
-			return gameStore.personalBests[selectedDifficulty.value] || 0;
-		}
-		return 0;
-	});
+    const {t} = useI18n()
+    const gameStore = useGameStore();
+    const authStore = userAuthStore();
+    const router = useRouter();
+    const selectedDifficulty = ref(1);
+    const currentRecord = computed(() => {
+        if (gameStore.personalBests) {
+            return gameStore.personalBests[selectedDifficulty.value] || 0;
+        }
+        return 0;
+    });
 
-	onMounted(async () => {
-		await gameStore.loadWords();
-		await gameStore.fetchRecord();
-	});
+    onMounted(async () => {
+        await gameStore.loadWords();
+        await gameStore.fetchRecord();
+    });
 
-	function startGame() {
-		if (!authStore.uid) return;
-		gameStore.selectGameSettings(selectedDifficulty.value);
-		router.push('/MarathonGame');
-	}
+    function startGame() {
+        if (!authStore.uid) return;
+        gameStore.selectGameSettings(selectedDifficulty.value);
+        router.push('/MarathonGame');
+    }
+
+    function goBack() {
+        router.push('/');
+    }
+
 </script>
 
 <template>
-	<div class="page-wrapper">
-		<div class="deco-shape shape-1"></div>
-		<div class="deco-shape shape-2"></div>
-		<div class="deco-shape shape-3"></div>
+    <div class="page-wrapper">
+        <button class="back-button" @click="goBack" aria-label="Назад">
+            ←
+        </button>
 
-		<div class="prepare-container">
-			<div class="header">
-				<h1>Марафон по всем словам</h1>
-				<p class="subtitle">Проверьте, насколько хорошо вы знаете слова и артикли</p>
-			</div>
-			<div v-if="authStore.uid" class="user-greeting">
-				<p>Привет, <strong>{{ authStore.name }}</strong>!</p>
-				<p class="record">Твой лучший стрик на этом уровне сложности: <span>{{ currentRecord }}</span></p>
-			</div>
-			<div v-else class="guest-greeting">
-				<p>Войдите в аккаунт, чтобы сохранять свой прогресс и соревноваться.</p>
-			</div>
+        <div class="prepare-container">
+            <div class="header">
+                <h1>{{t('marathonPrepare.title')}}</h1>
+                <p class="subtitle">{{t('marathonPrepare.subtitle')}}</p>
+            </div>
 
-			<div v-if="gameStore.isLoaded" class="settings-block">
-				<h2>Выберите сложность</h2>
-				<div class="difficulty-options">
-					<button @click="selectedDifficulty = 1" :class="{ active: selectedDifficulty === 1 }">
-						<div class="button-content">
-							<span>Легко</span>
-							<small>5 жизней, без таймера</small>
-						</div>
-						<span class="icon">🕊️</span>
-					</button>
-					<button @click="selectedDifficulty = 2" :class="{ active: selectedDifficulty === 2 }">
-						<div class="button-content">
-							<span>Средне</span>
-							<small>5 жизней, 10 сек/слово</small>
-						</div>
-						<span class="icon">⏱️</span>
-					</button>
-					<button @click="selectedDifficulty = 3" :class="{ active: selectedDifficulty === 3 }">
-						<div class="button-content">
-							<span>Сложно</span>
-							<small>1 жизнь, 5 сек/слово</small>
-						</div>
-						<span class="icon">🔥</span>
-					</button>
-				</div>
-			</div>
-			<div v-else class="loading">
-				<p>Загрузка слов...</p>
-			</div>
+            <div v-if="authStore.uid" class="user-greeting">
+                <p>{{t('marathonPrepare.greetings')}}, <strong>{{ authStore.name }}</strong>!</p>
+                <p class="record">{{t('marathonPrepare.streak')}} <span>{{ currentRecord }}</span></p>
+            </div>
+            <div v-else class="guest-greeting">
+                <p>{{t('marathonPrepare.notAuth')}}</p>
+            </div>
 
-			<button
-				class="start-button"
-				@click="startGame"
-				:disabled="!authStore.uid || !gameStore.isLoaded"
-			>
-				{{ authStore.uid ? 'Начать!' : 'Войдите, чтобы играть' }}
-			</button>
+            <div v-if="gameStore.isLoaded" class="settings-block">
+                <h2>{{t('marathonPrepare.chooseDifficulty')}}</h2>
+                <div class="difficulty-options">
+                    <button @click="selectedDifficulty = 1" :class="['difficulty-btn easy', { active: selectedDifficulty === 1 }]">
+                        <div class="button-content">
+                            <span>{{t('marathonPrepare.difficultEasy')}}</span>
+                            <span>{{t('marathonPrepare.difficultDescriptionEasy')}}</span>
+                        </div>
+                        <span class="icon">🕊️</span>
+                    </button>
+                    <button @click="selectedDifficulty = 2" :class="['difficulty-btn normal', { active: selectedDifficulty === 2 }]">
+                        <div class="button-content">
+                            <span>{{t('marathonPrepare.difficultNormal')}}</span>
+                            <span>{{t('marathonPrepare.difficultDescriptionNormal')}}</span>
+                        </div>
+                        <span class="icon">⏱️</span>
+                    </button>
+                    <button @click="selectedDifficulty = 3" :class="['difficulty-btn hard', { active: selectedDifficulty === 3 }]">
+                        <div class="button-content">
+                            <span>{{t('marathonPrepare.difficultHard')}}</span>
+                            <span>{{t('marathonPrepare.difficultDescriptionHard')}}</span>
+                        </div>
+                        <span class="icon">🔥</span>
+                    </button>
+                </div>
+            </div>
+            <div v-else class="loading">
+                <p>{{t('marathonPrepare.loading')}}</p>
+            </div>
 
-		</div>
-	</div>
+            <button
+                    class="start-button"
+                    @click="startGame"
+                    :disabled="!authStore.uid || !gameStore.isLoaded"
+            >
+                {{ authStore.uid ? t('marathonPrepare.start') : t('marathonPrepare.login') }}
+            </button>
+        </div>
+    </div>
 </template>
 
 <style scoped>
-	/* Ваши стили остаются без изменений */
-	@keyframes fadeIn {
-		from { opacity: 0; transform: translateY(20px); }
-		to { opacity: 1; transform: translateY(0); }
-	}
-	@keyframes float {
-		0% { transform: translateY(0px); }
-		50% { transform: translateY(-15px); }
-		100% { transform: translateY(0px); }
-	}
-	.page-wrapper {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		min-height: 100vh;
-		padding: 20px;
-		position: relative;
-		overflow: hidden;
-		background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
-	}
-	.deco-shape {
-		position: absolute;
-		border-radius: 50%;
-		animation: float 6s ease-in-out infinite;
-		z-index: 0;
-	}
-	.shape-1 {
-		width: 200px;
-		height: 200px;
-		background: rgba(255, 255, 255, 0.15);
-		top: -50px;
-		left: -50px;
-	}
-	.shape-2 {
-		width: 150px;
-		height: 150px;
-		background: rgba(255, 255, 255, 0.1);
-		bottom: 10%;
-		right: 15%;
-		animation-delay: 2s;
-	}
-	.shape-3 {
-		width: 50px;
-		height: 50px;
-		background: rgba(255, 255, 255, 0.2);
-		bottom: 20%;
-		left: 10%;
-		animation-delay: 4s;
-	}
-	.prepare-container {
-		width: 100%;
-		max-width: 500px;
-		padding: 30px 40px;
-		text-align: center;
-		z-index: 1;
-		background: rgba(255, 255, 255, 0.35);
-		backdrop-filter: blur(15px);
-		-webkit-backdrop-filter: blur(15px);
-		border-radius: 20px;
-		border: 1px solid rgba(255, 255, 255, 0.18);
-		box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
-		animation: fadeIn 0.6s ease-out forwards;
-	}
-	.header h1 {
-		font-size: 2.5em;
-		font-weight: 700;
-		color: #2c3e50;
-		margin-bottom: 5px;
-	}
-	.header .subtitle {
-		font-size: 1.1em;
-		color: #34495e;
-		margin-bottom: 30px;
-	}
-	.user-greeting, .guest-greeting {
-		margin-bottom: 30px;
-		font-size: 1.1em;
-		color: #2c3e50;
-	}
-	.user-greeting .record {
-		margin-top: 10px; /* Добавил отступ */
-		font-size: 1.2em;
-		color: #27ae60;
-	}
-	.user-greeting .record span {
-		font-weight: bold;
-	}
-	.settings-block h2 {
-		font-size: 1.5em;
-		color: #34495e;
-		margin-bottom: 20px;
-	}
-	.difficulty-options {
-		display: flex;
-		flex-direction: column;
-		gap: 15px;
-	}
-	.difficulty-options button {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 15px 20px;
-		border: 2px solid rgba(255, 255, 255, 0.5);
-		border-radius: 12px;
-		background: rgba(255, 255, 255, 0.2);
-		cursor: pointer;
-		transition: all 0.2s ease-in-out;
-		text-align: left;
-	}
-	.difficulty-options button:hover {
-		border-color: #ffffff;
-		transform: translateY(-2px);
-		background: rgba(255, 255, 255, 0.4);
-	}
-	.difficulty-options button.active {
-		border-color: #ffffff;
-		background-color: rgba(255, 255, 255, 0.6);
-		box-shadow: 0 0 15px rgba(255,255,255,0.5);
-	}
-	.button-content {
-		display: flex;
-		flex-direction: column;
-	}
-	.button-content span {
-		font-size: 1.2em;
-		font-weight: 600;
-		color: #2c3e50;
-	}
-	.button-content small {
-		font-size: 0.9em;
-		color: #34495e;
-	}
-	.icon {
-		font-size: 1.8em;
-	}
-	.start-button {
-		margin-top: 20px;
-		width: 100%;
-		padding: 18px;
-		font-size: 1.4em;
-		font-weight: bold;
-		cursor: pointer;
-		background: linear-gradient(45deg, #27ae60, #2ecc71);
-		color: white;
-		border: none;
-		border-radius: 12px;
-		transition: all 0.3s ease;
-		box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-	}
-	.start-button:hover:not(:disabled) {
-		transform: translateY(-3px);
-		box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-	}
-	.start-button:disabled {
-		background: #bdc3c7;
-		cursor: not-allowed;
-	}
+    .page-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 2rem;
+        background-color: #fef8e4;
+        font-family: 'Inter', sans-serif;
+        position: relative; /* Необходимо для позиционирования кнопки "назад" */
+    }
+
+    /* --- Стили для новой кнопки "Назад" --- */
+    .back-button {
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        z-index: 10;
+        width: 60px;
+        height: 60px;
+        background-color: #fff;
+        border: 3px solid #1e1e1e;
+        border-radius: 50%;
+        box-shadow: 4px 4px 0 #1e1e1e;
+        font-family: 'Fredoka One', cursive;
+        font-size: 2.5rem;
+        color: #1e1e1e;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.1s ease-in-out;
+    }
+
+    .back-button:hover {
+        transform: translate(2px, 2px);
+        box-shadow: 2px 2px 0 #1e1e1e;
+    }
+
+    .back-button:active {
+        transform: translate(4px, 4px);
+        box-shadow: 0 0 0 #1e1e1e;
+    }
+    /* --- Конец стилей для кнопки "Назад" --- */
+
+    .prepare-container {
+        width: 100%;
+        max-width: 600px;
+        background: #ffffff;
+        border: 3px solid #1e1e1e;
+        box-shadow: 8px 8px 0 #1e1e1e;
+        border-radius: 24px;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        animation: fadeIn 0.5s ease-out;
+    }
+
+    .header {
+        text-align: center;
+    }
+
+    .header h1 {
+        font-family: 'Fredoka One', cursive;
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: #1e1e1e;
+        margin: 0 0 0.5rem 0;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+        color: #555;
+        margin: 0;
+    }
+
+    .user-greeting, .guest-greeting {
+        font-size: 1.2rem;
+        font-weight: 500;
+        background-color: #f3f4f6;
+        padding: 1rem;
+        border-radius: 16px;
+        border: 2px solid #e5e7eb;
+        text-align: center;
+    }
+
+    .user-greeting p, .guest-greeting p {
+        margin: 0;
+    }
+
+    .guest-greeting p {
+        color: #555;
+    }
+
+    .user-greeting strong {
+        color: #f97028; /* Оранжевый акцент */
+    }
+
+    .user-greeting .record {
+        margin-top: 0.75rem;
+        font-weight: 700;
+        color: #1e1e1e;
+    }
+
+    .user-greeting .record span {
+        display: inline-block;
+        background: #fca13a; /* Желтый фон */
+        color: #1e1e1e;
+        padding: 0.25rem 0.75rem;
+        border-radius: 8px;
+        margin-left: 0.5rem;
+        border: 2px solid #1e1e1e;
+    }
+
+    .settings-block h2 {
+        font-family: 'Fredoka One', cursive;
+        font-size: 1.8rem;
+        text-align: center;
+        margin-bottom: 1rem;
+        color: #1e1e1e;
+    }
+
+    .difficulty-options {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .difficulty-btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        border-radius: 16px;
+        border: 3px solid #1e1e1e;
+        box-shadow: 4px 4px 0 #1e1e1e;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        text-align: left;
+        color: #ffffff;
+    }
+
+    .difficulty-btn:hover {
+        transform: translate(2px, 2px);
+        box-shadow: 2px 2px 0 #1e1e1e;
+    }
+
+    .difficulty-btn.active {
+        transform: translate(4px, 4px);
+        box-shadow: 0 0 0 #1e1e1e;
+        filter: brightness(1.1);
+    }
+
+    .difficulty-btn.easy { background-color: #60a5fa; }
+    .difficulty-btn.normal { background-color: #fca13a; }
+    .difficulty-btn.hard { background-color: #f87171; }
+
+    .button-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .button-content span:first-child {
+        font-family: 'Fredoka One', cursive;
+        font-size: 1.3rem;
+        font-weight: 400;
+    }
+
+    .button-content span:last-child {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.9rem;
+        font-weight: 500;
+        opacity: 0.9;
+        margin-top: 0.25rem;
+    }
+
+    .icon {
+        font-size: 2rem;
+    }
+
+    .start-button {
+        font-family: 'Fredoka One', cursive;
+        padding: 1rem 2.5rem;
+        font-size: 1.5rem;
+        font-weight: 400;
+        border-radius: 16px;
+        cursor: pointer;
+        border: 3px solid #1e1e1e;
+        transition: all 0.1s ease-in-out;
+        background-color: #4ade80;
+        color: #1e1e1e;
+        box-shadow: 4px 4px 0px #1e1e1e;
+        margin-top: 1rem;
+    }
+
+    .start-button:hover:not(:disabled) {
+        transform: translate(2px, 2px);
+        box-shadow: 2px 2px 0px #1e1e1e;
+    }
+
+    .start-button:active:not(:disabled) {
+        transform: translate(4px, 4px);
+        box-shadow: 0 0 0 #1e1e1e;
+    }
+
+    .start-button:disabled {
+        background: #d1d5db;
+        color: #9ca3af;
+        cursor: not-allowed;
+        box-shadow: 4px 4px 0 #9ca3af;
+    }
+
+    .loading p {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #555;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @media (max-width: 640px) {
+        .back-button {
+            top: 1rem;
+            left: 1rem;
+            width: 50px;
+            height: 50px;
+            font-size: 2rem;
+        }
+        .prepare-container {
+            padding: 1.5rem;
+        }
+        .header h1 {
+            font-size: 2rem;
+        }
+    }
 </style>

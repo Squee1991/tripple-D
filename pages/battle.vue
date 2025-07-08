@@ -1,306 +1,116 @@
 <template>
-	<div class="battle">
-		<button class="leave-button" @click="leaveSession">Покинуть бой</button>
-		<div v-if="opponentLeft" class="opponent-left">
-			⚠️ Противник покинул сессию. Вы будете возвращены в лобби...
+	<div class="battle-container">
+		<div v-if="!session" class="loading-screen">
+			<div class="search-spinner"></div>
+			<p>Загрузка данных боя...</p>
 		</div>
-		<h1>⚔️Бой начался!</h1>
-		<p>🆔 Сессия: <strong>{{ sessionId }}</strong></p>
-		<p>👤 Вы: <strong>{{ currentUserId ? getName(currentUserId.value) : '...' }}</strong></p>
-		<p>🕹️ Противник: <strong>{{ opponentId ? getName(opponentId) : 'Ожидание...' }}</strong></p>
-		<div class="chat">
-			<h2>💬 Чат</h2>
-			<div class="messages" ref="messagesBox">
-				<div
-					v-for="msg in messages"
-					:key="msg.createdAt?.seconds + msg.text"
-					class="message"
-					:class="{ self: msg.uid === currentUserId }"
-				>
-					<div class="meta">
-						<span class="name">{{ getName(msg.uid) }}</span>
-						<span class="time">{{ formatTime(msg.createdAt?.seconds) }}</span>
+		<div v-else class="battle-layout">
+			<div class="player-zone opponent-zone">
+				<div class="player-info">
+					<span class="nickname">{{ opponentNickname }}</span>
+					<span class="theme-display">Тема: {{ opponentThemeName }}</span>
+				</div>
+				<div class="deck-area">
+					<div v-for="card in opponentDeck" :key="card.id" class="card-back-wrapper">
+						<Card :cardInfo="card" :is-opponent-card="true" />
 					</div>
-					<div class="text">{{ msg.text }}</div>
 				</div>
 			</div>
-			<input
-				v-model="newMessage"
-				placeholder="Написать сообщение..."
-				@keyup.enter="sendMessage"
-			/>
-			<button @click="sendMessage">Отправить</button>
+			<div class="center-zone">
+				<h1 class="battle-title">⚔️ ПОЕДИНОК ⚔️</h1>
+				<p v-if="opponentLeft" class="status-message opponent-left">
+					Противник покинул сессию...
+				</p>
+			</div>
+			<div class="player-zone my-zone">
+				<div class="player-info">
+					<span class="nickname">Вы ({{ myNickname }})</span>
+					<span class="theme-display">Тема: {{ myThemeName }}</span>
+				</div>
+				<div class="deck-area">
+					<Card
+							v-for="card in myDeck"
+							:key="card.id"
+							:cardInfo="card"
+					/>
+				</div>
+			</div>
 		</div>
-		<div class="text_under"> Компонент в стадии разработки</div>
 	</div>
 </template>
 
 <script setup>
+	import { ref, onMounted, onUnmounted, computed } from 'vue'
 	import { useRoute, useRouter } from 'vue-router'
 	import { getAuth } from 'firebase/auth'
-	import { io } from 'socket.io-client'
-	import  useSocket  from '../composables/useSocket.js'
-	const socket = useSocket()
-	import {
-		getFirestore,
-		doc,
-		deleteDoc,
-		onSnapshot,
-		getDoc
-	} from 'firebase/firestore'
-	import { ref, onMounted, onUnmounted, nextTick } from 'vue'
-	const iAmLeaving = ref(false)
+	import { getFirestore, doc, onSnapshot, getDoc } from 'firebase/firestore'
+	// 1. ИМПОРТИРУЕМ ВАШ КОМПОНЕНТ КАРТЫ
+	import Card from '../src/components/deck.vue'
+
 	const route = useRoute()
+	const router = useRouter()
 	const auth = getAuth()
 	const db = getFirestore()
-	const router = useRouter()
 	const sessionId = route.query.id
 	const session = ref(null)
-	const currentUserId = ref(null)
-	const opponentId = ref(null)
-	const newMessage = ref('')
-	const messages = ref([])
-	const messagesBox = ref(null)
+	const currentUserId = ref(auth.currentUser?.uid)
 	const userNicknames = ref({})
 	const opponentLeft = ref(false)
-	const unsubscribeSession = ref(null)
+	let unsubscribeSession = null
 
-	const leaveSession = async () => {
-		iAmLeaving.value = true
-		if (!sessionId) return
-		try {
-			await deleteDoc(doc(db, 'sessions', sessionId))
-			router.push('/duel')
-		} catch (e) {
-			console.error('Ошибка при выходе из боя:', e)
-		}
-	}
-	// Отправить сообщение в чат
-	const sendMessage = () => {
-		if (!newMessage.value.trim() || !currentUserId.value) return
-		const msg = {
-			sessionId,
-			uid: currentUserId.value,
-			text: newMessage.value.trim(),
-			createdAt: new Date().toISOString()
-		}
-		socket.emit("chatMessage", msg)
-		newMessage.value = ''
+	const nameMap = {
+		Furniture: 'Мебель', Animals: 'Животные', Clothes: 'Одежда', Food: 'Еда', Body: 'Части тела', Professions: 'Профессии', Transport: 'Транспорт', Colors: 'Цвета', Nature: 'Природа', Home: 'Дом', Zeit: 'Время', City: 'Город', School: 'Школа', DaysAndMonths: 'Дни и месяцы', Toys: 'Игрушки', CommonItems: 'Общие', BathroomItems: 'Ванная', Kosmetik: 'Косметика', Familie: 'Семья', Emotions: 'Эмоции', Werkzeuge: 'Инструменты', Kitchen: 'Кухня', Health: 'Здоровье', Sport: 'Спорт', Drinks: 'Напитки', Holidays: 'Праздники', SportEquipment: 'Фитнес', Travel: 'Путешествия', Musik: 'Музыка', Amount: 'Колличество', Informatik: 'Информатика'
 	}
 
-	socket.on("chatMessage", (msg) => {
-		if (msg.sessionId !== sessionId) return
-		messages.value.push(msg)
-		scrollToBottom()
-	})
-
-	const scrollToBottom = async () => {
-		await nextTick()
-		if (messagesBox.value) {
-			messagesBox.value.scrollTop = messagesBox.value.scrollHeight
-		}
-	}
-
-	const getName = (uid) => {
-		if (!uid) return 'Ожидание...'
-		if (uid === currentUserId.value) return 'Вы'
-		return userNicknames.value[uid] || uid
-	}
-
-	const formatTime = (seconds) => {
-		if (!seconds) return ''
-		const date = new Date(seconds * 1000)
-		return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
-	}
+	const isHost = computed(() => session.value && currentUserId.value === session.value.hostId)
+	const opponentId = computed(() => isHost.value ? session.value?.guestId : session.value?.hostId)
+	const myNickname = computed(() => userNicknames.value[currentUserId.value] || 'Вы')
+	const opponentNickname = computed(() => userNicknames.value[opponentId.value] || 'Противник')
+	const myTheme = computed(() => session.value ? (isHost.value ? session.value.hostTheme : session.value.guestTheme) : '')
+	const opponentTheme = computed(() => session.value ? (isHost.value ? session.value.guestTheme : session.value.hostTheme) : '')
+	const myDeck = computed(() => session.value ? (isHost.value ? session.value.hostDeck : session.value.guestDeck) || [] : [])
+	const opponentDeck = computed(() => session.value ? (isHost.value ? session.value.guestDeck : session.value.hostDeck) || [] : [])
+	const myThemeName = computed(() => nameMap[myTheme.value] || myTheme.value)
+	const opponentThemeName = computed(() => nameMap[opponentTheme.value] || opponentTheme.value)
 
 	const loadUserNickname = async (uid) => {
+		if (!uid || userNicknames.value[uid]) return
 		const docRef = doc(db, 'users', uid)
 		const snap = await getDoc(docRef)
-		if (snap.exists()) {
-			userNicknames.value[uid] = snap.data().nickname || uid
-		}
+		if (snap.exists()) { userNicknames.value[uid] = snap.data().nickname || `Игрок...` }
 	}
 
 	onMounted(() => {
-		if (!sessionId) return
-
+		if (!currentUserId.value) { router.push('/auth'); return }
+		if (!sessionId) { router.push('/duel'); return }
+		loadUserNickname(currentUserId.value)
 		const sessionRef = doc(db, 'sessions', sessionId)
-		unsubscribeSession.value = onSnapshot(sessionRef, async (docSnap) => {
-			if (!docSnap.exists()) {
-				if (!iAmLeaving.value) { // ← Показывать только если ты не сам уходишь!
-					opponentLeft.value = true
-					session.value = null
-					setTimeout(() => {
-						router.push('/duel')
-					}, 2200)
-				} else {
-					// Ты сам ушёл — просто переход на /duel
-					router.push('/duel')
-				}
-				return
-			}
+		unsubscribeSession = onSnapshot(sessionRef, async (docSnap) => {
+			if (!docSnap.exists()) { opponentLeft.value = true; setTimeout(() => router.push('/duel'), 3000); return }
 			const data = docSnap.data()
 			session.value = data
-			// Определяем currentUser/opponentId
-			if (currentUserId.value === data.hostId) {
-				opponentId.value = data.guestId
-			} else if (currentUserId.value === data.guestId) {
-				opponentId.value = data.hostId
-			} else if (data.hostId && !data.guestId) {
-				// Случай, когда ты хост, а соперника нет
-				opponentId.value = null
-			}
-			// Проверяем если противник вышел (uid исчез)
-			if ((currentUserId.value === data.hostId && !data.guestId)
-				|| (currentUserId.value === data.guestId && !data.hostId)) {
-				opponentLeft.value = true
-				setTimeout(() => {
-					router.push('/duel')
-				}, 4200)
-				return
-			}
-
-			// Никнеймы
-			if (data.hostId) await loadUserNickname(data.hostId)
-			if (data.guestId) await loadUserNickname(data.guestId)
-
-			// Чат
-			if (data.messages) {
-				messages.value = data.messages.sort(
-					(a, b) => (a.createdAt?.seconds || 0) - (b.createdAt?.seconds || 0)
-				)
-				scrollToBottom()
-			}
+			const oppId = data.hostId === currentUserId.value ? data.guestId : data.hostId
+			if (oppId) { await loadUserNickname(oppId) }
 		})
 	})
-
-	onMounted(() => {
-		console.log("🔌 socket подключен?", socket.connected)
-		const unsub = auth.onAuthStateChanged(async (user) => {
-			if (user?.uid) {
-				currentUserId.value = user.uid
-				await loadUserNickname(user.uid)
-			} else {
-				currentUserId.value = null
-			}
-		})
-		onUnmounted(() => unsub())
-	})
-
-	socket.on("connect", () => {
-		console.log("✅ Socket подключён, ID:", socket.id)
-	})
-
-	onUnmounted(() => {
-		if (unsubscribeSession.value) unsubscribeSession.value()
-	})
-
-	watch(currentUserId, (val) => {
-		if (val && sessionId) {
-			socket.emit("join", {
-				sessionId,
-				uid: val
-			});
-		}
-	});
-
+	onUnmounted(() => { if (unsubscribeSession) unsubscribeSession() })
 </script>
 
-
 <style scoped>
-
-	.leave-button {
-		margin-top: 20px;
-		background: #aa3a3a;
-		color: #fff;
-		padding: 10px 20px;
-		border-radius: 8px;
-		border: none;
-		font-weight: bold;
-		cursor: pointer;
-		transition: 0.2s;
-	}
-	.leave-button:hover {
-		background: #cc2c2c;
-	}
-
-	.battle {
-		max-width: 700px;
-		margin: 0 auto;
-		padding: 40px;
-		text-align: center;
-	}
-
-	.text {
-		width: 40px;
-		font-weight: bold;
-	}
-
-	.text_under{
-		font-size: 35px;
-	}
-
-	.chat {
-		margin-top: 30px;
-		text-align: left;
-	}
-
-	.messages {
-		max-height: 250px;
-		overflow-y: auto;
-		background: #f5f5f5;
-		padding: 12px;
-		border-radius: 10px;
-		margin-bottom: 12px;
-		font-size: 16px;
-	}
-
-	.message {
-		margin-bottom: 10px;
-		background: #e0e0e0;
-		padding: 8px 12px;
-		border-radius: 10px;
-		width: fit-content;
-		max-width: 80%;
-	}
-
-	.message.self {
-		background: #d1c4e9;
-		margin-left: auto;
-	}
-
-	.meta {
-		font-size: 12px;
-		color: #666;
-		margin-bottom: 4px;
-		display: flex;
-		justify-content: space-between;
-	}
-
-	input {
-		width: 100%;
-		padding: 8px;
-		margin-bottom: 6px;
-		border: 1px solid #ccc;
-		border-radius: 6px;
-	}
-
-	button {
-		padding: 8px 16px;
-		background: #6633cc;
-		color: white;
-		border-radius: 8px;
-		cursor: pointer;
-	}
-
-	.opponent-left {
-		margin: 20px auto 0 auto;
-		padding: 16px 32px;
-		background: #ffebe8;
-		color: #a11919;
-		font-weight: bold;
-		border-radius: 10px;
-		font-size: 18px;
-		max-width: 350px;
-	}
+	/* Стили остаются такими же, как я присылал ранее */
+	.battle-container { width: 100vw; height: 100vh; background: #f0e6d2; display: flex; justify-content: center; align-items: center; font-family: 'Georgia', serif; }
+	.loading-screen { text-align: center; color: #3e2e1f; }
+	.search-spinner { display: inline-block; width: 40px; height: 40px; border: 5px solid #e6c15c; border-radius: 50%; border-top-color: #a68836; animation: spin 1s linear infinite; margin-bottom: 10px; }
+	@keyframes spin { to { transform: rotate(360deg); } }
+	.battle-layout { width: 100%; height: 100%; max-width: 1400px; display: flex; flex-direction: column; padding: 20px; box-sizing: border-box; gap: 20px; }
+	.player-zone { flex: 1; display: flex; align-items: center; gap: 20px; padding: 15px; border: 4px solid #7a5b32; border-radius: 15px; background: #e0caa2; box-shadow: inset 0 0 15px #00000033; }
+	.player-info { display: flex; flex-direction: column; gap: 10px; background: #c9b07d; padding: 15px; border-radius: 10px; border: 2px solid #8c6c3a; text-align: center; min-width: 220px; box-shadow: 0 4px 8px #00000022; }
+	.nickname { font-size: 22px; font-weight: bold; color: #3a260e; }
+	.theme-display { font-size: 18px; color: #553a13; font-style: italic; }
+	.deck-area { flex: 1; display: flex; justify-content: center; align-items: center; gap: 15px; background: #c9b07d55; border-radius: 10px; min-height: 140px; padding: 10px; flex-wrap: wrap; }
+	.center-zone { flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 15px; color: #3e2e1f; }
+	.battle-title { margin: 0; font-size: 28px; color: #3e2e1f; text-shadow: 1px 1px 0px #fffbe8; }
+	.status-message.opponent-left { background: #ffebe8; color: #a11919; font-weight: bold; padding: 8px 16px; border-radius: 10px; }
+	/* Добавляем стиль для "рубашки" карты противника, если нужно */
+	.card-back-wrapper { opacity: 0.7; pointer-events: none; }
 </style>

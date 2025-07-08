@@ -1,7 +1,7 @@
 <template>
 	<div class="coffe-container">
 		<img class="coffe" @click="openDonationLink" src="../../assets/images/cupheart.svg" alt="">
-		<div class="support">Support us</div>
+		<div class="support">Support</div>
 	</div>
 </template>
 

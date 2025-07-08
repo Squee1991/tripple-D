@@ -1,369 +1,346 @@
 <template>
-	<main class="theory-main">
-		<section class="theory-hero">
-			<div class="theory-hero-content">
-				<h1 class="theory-title">
-					{{ t('examples.label')}}
-					<span class="theory-title-accent">Der</span>
-					<span class="theory-title-accent die">Die</span>
-					<span class="theory-title-accent das">Das</span>
-				</h1>
-				<p class="theory-subtitle">
-					{{ t('examples.title')}}
-				</p>
-			</div>
-		</section>
-		<section id="start-theory" class="theory-sections">
-			<article class="theory-card" id="intro">
-				<h2 class="theory-card-title"> {{ t('examplesFirstBlock.title')}}</h2>
-				<p class="theory-card-text">
-					{{ t('examplesFirstBlock.subtext')}}
-				</p>
-			</article>
-			<article class="theory-card" id="types">
-				<h2 class="theory-card-title">{{ t('examplesSecondBlock.title')}}</h2>
-				<ul class="theory-list">
-					<li v-for="item in data.items" :key="item.id" class="theory-list-item">
-						<span>{{ t(item.itemTitle)}}</span>: <i>der, die, das</i><br>
-						<span class="theory-desc">
-							{{ t(item.itemInfo)}}<br>
-							<span class="theory-example">{{t(item.example)}} <b>die</b> Katze schläft. — <b></b> {{ t(item.partTwo)}}</span>
-						</span>
-					</li>
-				</ul>
-			</article>
-			<article class="theory-card" id="indefinite-article">
-				<h2 class="theory-card-title">{{ t('exampleThirdBlock.label')}}</h2>
-				<p class="theory-card-text">{{ t('exampleThirdBlock.subtext')}}</p>
-				<ul class="theory-list">
-					<li v-for="item in data.itemSecond" :key="item.id" class="theory-list-item">
-						<span> {{t(item.value)}} <b>{{t(item.article)}}</b></span>
-						<span class="theory-example">{{ t(item.example)}} <b>ein Hund</b> {{t(item.sexExample)}}</span>
-					</li>
-				</ul>
-				<div class="theory-card-text">
-					<span class="theory__important"> {{t('exampleThirdBlock.important')}}</span>
-					<div> - Ich sehe Bücher</div>
-				</div>
-			</article>
-			<article class="theory-card" id="table">
-				<h2 class="theory-card-title">{{ t('exampleTabele.label') }}</h2>
-				<table class="theory-table">
-					<thead class="theory-table-head">
-					<tr class="theory-table-row">
-						<th class="theory-table-cell">{{ t('exampleTabele.family') }}</th>
-						<th class="theory-table-cell">{{ t('exampleTabele.definite') }}</th>
-						<th class="theory-table-cell">{{ t('exampleTabele.NotDefinite') }}</th>
-					</tr>
-					</thead>
-					<tbody class="theory-table-body">
-					<tr v-for="tr in data.tabele" :key="tr.id" class="theory-table-row">
-						<td class="theory-table-cell">{{ t(tr.sex) }}</td>
-						<td class="theory-table-cell">{{ t(tr.article) }}</td>
-						<td class="theory-table-cell">{{ t(tr.notDefiniteArticle) }}</td>
-					</tr>
-					</tbody>
-
-				</table>
-			</article>
-			<article class="theory-card" id="examples">
-				<h2 class="theory-card-title">Примеры с артиклями</h2>
-				<ul class="theory-list">
-					<li class="theory-list-item"><b>der Hund</b> — собака (м.р.)</li>
-					<li class="theory-list-item"><b>die Katze</b> — кошка (ж.р.)</li>
-					<li class="theory-list-item"><b>das Haus</b> — дом (ср.р.)</li>
-				</ul>
-			</article>
-			<!--			<article class="theory-card" id="quiz">-->
-			<!--				<h2 class="theory-card-title">Мини-квиз</h2>-->
-			<!--				<p class="theory-card-text">Скоро тут появится интерактивная проверка знаний 👀</p>-->
-			<!--			</article>-->
-			<!--			<div class="theory-actions">-->
-			<!--				<NuxtLink to="/selectedTopics" class="theory-btn theory-btn-next">Перейти к практике</NuxtLink>-->
-			<!--			</div>-->
-		</section>
-	</main>
+    <main class="theory-main">
+        <section class="theory-hero">
+            <div class="theory-hero-content">
+                <h1 class="theory-title">
+                    {{ t('examples.label')}}
+                    <span class="theory-title-accent der">Der</span>
+                    <span class="theory-title-accent die">Die</span>
+                    <span class="theory-title-accent das">Das</span>
+                </h1>
+                <p class="theory-subtitle">
+                    {{ t('examples.title')}}
+                </p>
+            </div>
+        </section>
+        <section id="start-theory" class="theory-sections">
+            <article class="theory-card" id="intro" ref="theoryCards">
+                <h2 class="theory-card-title"> {{ t('examplesFirstBlock.title')}}</h2>
+                <p class="theory-card-text">
+                    {{ t('examplesFirstBlock.subtext')}}
+                </p>
+            </article>
+            <article class="theory-card" id="types" ref="theoryCards">
+                <h2 class="theory-card-title">{{ t('examplesSecondBlock.title')}}</h2>
+                <ul class="theory-list">
+                    <li v-for="item in data.items" :key="item.id" class="theory-list-item">
+                        <span class="list-item-title">{{ t(item.itemTitle)}}</span>: <i>{{ item.article}}</i><br>
+                        <span class="theory-desc">
+                     {{ t(item.itemInfo)}}<br>
+                     <span class="theory-example">{{t(item.example)}} <b>{{t(item.art)}}</b> Katze schläft. <b></b> {{ t(item.partTwo)}}</span>
+                  </span>
+                    </li>
+                </ul>
+            </article>
+            <article class="theory-card" id="indefinite-article" ref="theoryCards">
+                <h2 class="theory-card-title">{{ t('exampleThirdBlock.label')}}</h2>
+                <p class="theory-card-text">{{ t('exampleThirdBlock.subtext')}}</p>
+                <ul class="theory-list">
+                    <li v-for="item in data.itemSecond" :key="item.id" class="theory-list-item">
+                        <span class="list-item-title"> {{t(item.value)}} <b> {{t(item.article)}}</b></span>
+                        <span class="theory-example"> {{ t(item.example)}} <b> {{t(item.word)}}</b> {{t(item.sexExample)}}</span>
+                    </li>
+                </ul>
+                <div class="theory-card-text">
+                    <span class="theory__important"> {{t('exampleThirdBlock.important')}}</span>
+                    <div class="example-line">- Ich sehe Bücher</div>
+                </div>
+            </article>
+            <article class="theory-card" id="table" ref="theoryCards">
+                <h2 class="theory-card-title">{{ t('exampleTabele.label') }}</h2>
+                <div class="table-wrapper">
+                    <table class="theory-table">
+                        <thead class="theory-table-head">
+                        <tr class="theory-table-row">
+                            <th class="theory-table-cell">{{ t('exampleTabele.family') }}</th>
+                            <th class="theory-table-cell">{{ t('exampleTabele.definite') }}</th>
+                            <th class="theory-table-cell">{{ t('exampleTabele.NotDefinite') }}</th>
+                        </tr>
+                        </thead>
+                        <tbody class="theory-table-body">
+                        <tr v-for="tr in data.tabele" :key="tr.id" class="theory-table-row">
+                            <td class="theory-table-cell">{{ t(tr.sex) }}</td>
+                            <td class="theory-table-cell article-cell">{{ t(tr.article) }}</td>
+                            <td class="theory-table-cell article-cell">{{ t(tr.notDefiniteArticle) }}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+            <!--			<article class="theory-card" id="examples" ref="theoryCards">-->
+            <!--				<h2 class="theory-card-title">Примеры с артиклями</h2>-->
+            <!--				<ul class="theory-list">-->
+            <!--					<li class="theory-list-item"><b>der Hund</b> — собака (м.р.)</li>-->
+            <!--					<li class="theory-list-item"><b>die Katze</b> — кошка (ж.р.)</li>-->
+            <!--					<li class="theory-list-item"><b>das Haus</b> — дом (ср.р.)</li>-->
+            <!--				</ul>-->
+            <!--			</article>-->
+        </section>
+    </main>
 </template>
 
-
 <script setup>
-	const {t} = useI18n()
-	const data = {
-		items: [
-			{
-				id: 1,
-				itemTitle: "examplesSecondBlock.first",
-				itemInfo: "examplesSecondBlock.exampleTitle",
-				example: "examplesSecondBlock.example",
-				partTwo: "examplesSecondBlock.exampleSecondhalf"
+    import {ref, onMounted} from 'vue';
+    const {t} = useI18n();
 
-			},
-			{
-				id: 2,
-				itemTitle: "examplesSecondBlock.second",
-				itemInfo: "examplesSecondBlock.exampleSecondTitle",
-				example: "examplesSecondBlock.example",
-				partTwo: "examplesSecondBlock.exampleNotDefinite"
-			},
-		],
-		itemSecond: [
-			{
-				id: 1,
-				value: "exampleThirdBlock.man",
-				example: "exampleThirdBlock.example",
-				sexExample: "exampleThirdBlock.mExample",
-				article: "ein"
-			},
-			{
-				id: 2,
-				value: "exampleThirdBlock.woman",
-				example: "examplesSecondBlock.example",
-				sexExample: "exampleThirdBlock.wExample",
-				article: "eine"
-			},
-			{
-				id: 3,
-				value: "exampleThirdBlock.is",
-				example: "examplesSecondBlock.example",
-				sexExample: "exampleThirdBlock.isExample",
-				article: "ein"
-			},
-		],
-		tabele: [
-			{
-				id: 1,
-				sex: "exampleTabele.m",
-				article: "der",
-				notDefiniteArticle: "ein"
-			},
-			{
-				id: 2,
+    const data = {
+        items: [
+            {
+                id: 1,
+                itemTitle: "examplesSecondBlock.first",
+                itemInfo: "examplesSecondBlock.exampleTitle",
+                example: "examplesSecondBlock.example",
+                partTwo: "examplesSecondBlock.exampleSecondhalf",
+                article: "der , die, das",
+                art:'die'
+            },
+            {
+                id: 2,
+                itemTitle: "examplesSecondBlock.second",
+                itemInfo: "examplesSecondBlock.exampleSecondTitle",
+                example: "examplesSecondBlock.example",
+                partTwo: "examplesSecondBlock.exampleNotDefinite",
+                article: "ein , eine, ein",
+                art:'eine'
 
-				sex: "exampleTabele.w",
-				article: "die",
-				notDefiniteArticle: "eine"
-			},
-			{
-				id: 3,
-				sex: "exampleTabele.is",
-				article: "das",
-				notDefiniteArticle: "ein"
-			},
-		]
-	}
+            },
+        ],
+        itemSecond: [
+            {
+                id: 1,
+                value: "exampleThirdBlock.man",
+                example: "exampleThirdBlock.mExample",
+                sexExample: "exampleThirdBlock.mExample",
+                article: "ein",
+                word:"Hund"
+            },
+            {
+                id: 2,
+                value: "exampleThirdBlock.woman",
+                example: "examplesSecondBlock.example",
+                sexExample: "exampleThirdBlock.wExample",
+                article: "eine",
+                word:"Lampe"
 
-	definePageMeta({
-		layout: 'footerlayout',
-	})
+            },
+            {
+                id: 3,
+                value: "exampleThirdBlock.is",
+                example: "examplesSecondBlock.example",
+                sexExample: "exampleThirdBlock.isExample",
+                article: "ein",
+                word: "Buch"
+            },
+        ],
+        tabele: [
+            {id: 1, sex: "exampleTabele.m", article: "der", notDefiniteArticle: "ein"},
+            {id: 2, sex: "exampleTabele.w", article: "die", notDefiniteArticle: "eine"},
+            {id: 3, sex: "exampleTabele.is", article: "das", notDefiniteArticle: "ein"},
+        ]
+    };
+
+    definePageMeta({
+        layout: 'footerlayout',
+    });
 </script>
 
 <style scoped>
 
-	.theory-main {
-		background: #e8e9ff;
-		min-height: 100vh;
-		padding-bottom: 64px;
-	}
+    .theory-main {
+        background: #fef8e4;
+        min-height: 100vh;
+        padding-bottom: 64px;
+        font-family: 'Inter', sans-serif;
+    }
 
-	.theory-hero {
-		padding: 70px 0 40px 0;
-		text-align: center;
-	}
+    .theory-hero {
+        padding: 70px 1.5rem 40px 1.5rem;
+        text-align: center;
+    }
 
-	.theory-hero-content {
-		max-width: 680px;
-		margin: 0 auto;
-	}
+    .theory-hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
 
-	.theory-title {
-		font-size: 40px;
-		font-weight: 800;
-		margin-bottom: 18px;
-		letter-spacing: 1px;
-		line-height: 1.2;
-		color: #1c1458;
-		font-family: 'Inter', sans-serif;
-		font-style: italic;
-	}
+    .theory-title {
+       font-family: "Nunito", sans-serif;
+        font-size: 2.8rem;
+        font-weight: 600;
+        color: white;
+        background: #f97028;
+        padding: 1rem 2rem;
+        border: 3px solid #1e1e1e;
+        border-radius: 16px;
+        transform: rotate(2deg);
+        box-shadow: 8px 8px 0px #1e1e1e;
+    }
 
-	.theory-title-accent {
-		font-weight: 900;
-	}
+    .theory-title-accent {
+        font-weight: 900;
+        text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+    }
 
-	.theory-title-accent.die {
-		color: #e53e3e;
-		margin-left: 4px;
-	}
+    .theory-title-accent.der {
+        color: #60a5fa;
+    }
 
-	.theory-title-accent.das {
-		color: #eab308;
-		margin-left: 4px;
-	}
+    .theory-title-accent.die {
+        color: #f87171;
+    }
 
-	.theory-subtitle {
-		font-size: 1.5rem;
-		color: #4b3bbd;
-		margin-bottom: 32px;
-		font-weight: 500;
-		line-height: 1.4;
-	}
+    .theory-title-accent.das {
+        color: #facc15;
+    }
 
-	.theory__important {
-		font-weight: bold;
-		font-size: 22px;
-		border-bottom: 3px solid red;
-	}
+    .theory-subtitle {
+        font-size: 1.25rem;
+        color: #555;
+        max-width: 600px;
+        line-height: 1.6;
+        margin: 20px;
+    }
 
-	.theory-btn {
-		display: inline-block;
-		background: linear-gradient(90deg, #6b7cff, #5172e0);
-		color: #fff;
-		font-family: 'Inter', sans-serif;
-		padding: 14px 44px;
-		border-radius: 14px 30px 14px 30px / 30px 14px 30px 14px;
-		font-size: 1.1rem;
-		font-weight: 700;
-		text-decoration: none;
-		box-shadow: 0 4px 18px #b5baf7a0;
-		transition: background .2s, transform .12s;
-	}
+    .theory-sections {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem 1.5rem 0 1.5rem;
+    }
 
-	.theory-btn:hover,
-	.theory-btn:focus {
-		background: linear-gradient(90deg, #5172e0, #6b7cff);
-		transform: translateY(-2px) scale(1.04);
-	}
-
-	.theory-sections {
-		display: flex;
-		flex-direction: column;
-		gap: 36px;
-		max-width: 860px;
-		margin: 0 auto;
-		padding: 28px 12px 0 12px;
-	}
-
-	.theory-card {
-		background: #fff;
-		border-radius: 18px;
-		box-shadow: 0 6px 24px rgba(130, 130, 255, 0.25);
-		padding: 30px 26px;
-		margin-bottom: 0;
-		font-size: 1.15rem;
-		line-height: 1.6;
-		color: #333;
-		border: 1px solid #dcdcff;
-	}
-
-	.theory-card-title {
-		font-size: 1.5rem;
-		color: #3c2db5;
-		margin-bottom: 16px;
-		font-weight: 700;
-	}
-
-	.theory-card-text {
-		font-size: 1.15rem;
-		color: #333;
-		line-height: 1.6;
-		margin-bottom: 14px;
-	}
-
-	.theory-list {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-	}
-
-	.theory-list-item {
-		margin-bottom: 12px;
-		font-size: 1.15rem;
-		color: #333;
-		line-height: 1.5;
-	}
-
-	.theory-desc {
-		display: block;
-		color: #4e51a0;
-		font-size: 1.08rem;
-		margin-top: 4px;
-		margin-bottom: 10px;
-	}
-
-	.theory-example {
-		color: #7379c3;
-		font-size: 1rem;
-		display: block;
-		margin-top: 3px;
-	}
-
-	.theory-table {
-		width: 100%;
-		border-collapse: collapse;
-		margin-top: 10px;
-	}
+    .theory-card {
+        background: #fff;
+        border-radius: 24px;
+        border: 3px solid #1e1e1e;
+        box-shadow: 8px 8px 0px #1e1e1e;
+        padding: 2rem;
+        transition: all 0.2s ease-in-out;
+    }
 
 
+    .theory-card-title {
+        font-family: 'Fredoka One', cursive;
+        font-size: 1.8rem;
+        color: #1e1e1e;
+        margin-bottom: 1rem;
+    }
 
-	.theory-table-cell {
-		border: 1px solid #d6d9f9;
-		padding: 10px 16px;
-		font-size: 1.05rem;
-		text-align: center;
-	}
+    .theory-card-text {
+        font-size: 1.1rem;
+        color: #555;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+    }
 
-	.theory-table-head .theory-table-cell {
-		background: #edf0fe;
-		color: #3c2db5;
-		font-weight: 700;
-	}
+    .theory-list {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
 
-	.theory-actions {
-		text-align: center;
-		margin-top: 24px;
-	}
+    .theory-list:nth-last-child(2) {
+        margin-bottom: 20px;
+    }
 
-	.theory-btn-next {
-		font-size: 1.2rem;
-		padding: 16px 52px;
-		margin-top: 16px;
-		background: linear-gradient(90deg, #6b7cff, #5172e0);
-	}
+    .theory-list-item {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        border-left: 4px solid #fca13a;
+        padding-left: 1rem;
+    }
 
-	.theory-btn-next:hover,
-	.theory-btn-next:focus {
-		background: linear-gradient(90deg, #5172e0, #6b7cff);
-		transform: translateY(-2px) scale(1.04);
-	}
+    .list-item-title {
+        font-weight: 700;
+        color: #1e1e1e;
+    }
 
-	@media (max-width: 768px) {
-		.theory-title {
-			font-size: 1.8rem;
-		}
+    .theory-desc, .theory-example {
+        font-size: 1rem;
+        color: #555;
+        margin-top: 0.25rem;
+    }
 
-		.theory-hero-content {
-			max-width: 99vw;
-		}
+    .theory-example {
+        opacity: 0.8;
+        font-style: italic;
+    }
 
-		.theory-subtitle {
-			font-size: 15px;
-			padding: 20px;
-			margin: 0;
-		}
+    .theory__important {
+        font-weight: 700;
+        font-size: 1.2rem;
+        background-color: #fca13a;
+        padding: 0.25rem 0.5rem;
+        border-radius: 8px;
+        border: 2px solid #1e1e1e;
+        margin-top: 10px;
+    }
 
-		.theory-card {
-			padding: 22px 14px;
-			font-size: 1.05rem;
-		}
+    .example-line {
+        margin-top: 1rem;
+        background: #f3f4f6;
+        border: 2px solid #e5e7eb;
+        padding: 0.75rem;
+        border-radius: 12px;
+        font-family: monospace;
+    }
 
-		.theory-table-cell {
-			font-size: 0.95rem;
-			padding: 8px 8px;
-		}
+    .table-wrapper {
+        border: 3px solid #1e1e1e;
+        border-radius: 16px;
+        overflow: hidden; /* Чтобы скруглить углы таблицы */
+        box-shadow: 4px 4px 0px #1e1e1e;
+    }
 
-		.theory-hero {
-			padding: 30px;
-		}
-	}
+    .theory-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .theory-table-cell {
+        border: 2px solid #1e1e1e;
+        padding: 0.75rem 1rem;
+        font-size: 1.05rem;
+        text-align: center;
+        background-color: #fff;
+    }
+
+    .theory-table-cell.article-cell {
+        font-family: 'Fredoka One', cursive;
+        font-size: 1.2rem;
+    }
+
+    .theory-table-head .theory-table-cell {
+        background: #60a5fa; /* Синяя шапка */
+        color: #ffffff;
+        font-family: 'Fredoka One', cursive;
+        font-size: 1.2rem;
+    }
+
+    @media (max-width: 768px) {
+        .theory-title {
+            font-size: 2rem;
+            transform: rotate(0deg); /* На мобильных убираем наклон */
+        }
+
+        .theory-subtitle {
+            font-size: 1.1rem;
+        }
+
+        .theory-card {
+            padding: 1.5rem;
+        }
+
+        .theory-card-title {
+            font-size: 1.5rem;
+        }
+    }
+
 
 </style>
