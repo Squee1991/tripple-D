@@ -38,13 +38,11 @@
         <button class="back-button" @click="goBack" aria-label="Назад">
             ←
         </button>
-
         <div class="prepare-container">
             <div class="header">
                 <h1>{{t('marathonPrepare.title')}}</h1>
                 <p class="subtitle">{{t('marathonPrepare.subtitle')}}</p>
             </div>
-
             <div v-if="authStore.uid" class="user-greeting">
                 <p>{{t('marathonPrepare.greetings')}}, <strong>{{ authStore.name }}</strong>!</p>
                 <p class="record">{{t('marathonPrepare.streak')}} <span>{{ currentRecord }}</span></p>
@@ -52,7 +50,6 @@
             <div v-else class="guest-greeting">
                 <p>{{t('marathonPrepare.notAuth')}}</p>
             </div>
-
             <div v-if="gameStore.isLoaded" class="settings-block">
                 <h2>{{t('marathonPrepare.chooseDifficulty')}}</h2>
                 <div class="difficulty-options">
@@ -82,7 +79,6 @@
             <div v-else class="loading">
                 <p>{{t('marathonPrepare.loading')}}</p>
             </div>
-
             <button
                     class="start-button"
                     @click="startGame"
@@ -103,10 +99,9 @@
         padding: 2rem;
         background-color: #fef8e4;
         font-family: 'Inter', sans-serif;
-        position: relative; /* Необходимо для позиционирования кнопки "назад" */
+        position: relative;
     }
 
-    /* --- Стили для новой кнопки "Назад" --- */
     .back-button {
         position: absolute;
         top: 2rem;
@@ -137,7 +132,6 @@
         transform: translate(4px, 4px);
         box-shadow: 0 0 0 #1e1e1e;
     }
-    /* --- Конец стилей для кнопки "Назад" --- */
 
     .prepare-container {
         width: 100%;
@@ -190,18 +184,19 @@
     }
 
     .user-greeting strong {
-        color: #f97028; /* Оранжевый акцент */
+        color: #f97028;
     }
 
     .user-greeting .record {
         margin-top: 0.75rem;
         font-weight: 700;
         color: #1e1e1e;
+        font-size: 10px;
     }
 
     .user-greeting .record span {
         display: inline-block;
-        background: #fca13a; /* Желтый фон */
+        background: #fca13a;
         color: #1e1e1e;
         padding: 0.25rem 0.75rem;
         border-radius: 8px;

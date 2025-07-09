@@ -10,8 +10,8 @@
 		"cardTwo": "Strange accent",
 		"cardThree": "Broken compass",
 		"paperOne": "A scrap of paper reads: \"I went where verbs are always regular.\" Seems like a dead end.",
-		"paperTwo": "A witness heard the page speaking with a creepy accent, mixing up 'der' and 'die'. Very suspicious.",
-		"paperThree": "The compass doesn’t point north but to the nearest library. Maybe the page just wanted to read?",
+		"paperTwo": "A witness heard, that the Page speaking with a creepy accent, mixing up 'der' and 'die'. Very suspicious.",
+		"paperThree": "The compass doesn’t point north but to the nearest library. Maybe the Page just wanted to read?",
 		"footerText": "Hmm, this case is tricky... Should we drop it and return to HQ?",
 		"btn": "Return to main page"
 	},

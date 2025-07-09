@@ -2,7 +2,8 @@
     import { useGameStore } from '../store/SentenceDuelStore.js';
     import { useRouter } from 'vue-router';
     import { watch, computed } from 'vue';
-
+    // import { useSentencesStore } from '../store/sentencesStore.js';
+    // const sentencesStore = useSentencesStore();
     const gameStore = useGameStore();
     const router = useRouter();
     const levels = ['A1', 'A2', 'B1', 'B2', 'C1'];
@@ -38,6 +39,7 @@
                     v-for="level in levels"
                     :key="level"
                     @click="handleFindGameClick(level)"
+
                     :disabled="gameStore.isSearching"
             >
                 Играть ({{ level }})
@@ -53,9 +55,3 @@
         </div>
     </div>
 </template>
-
-<style scoped>
-   body {
-
-   }
-</style>

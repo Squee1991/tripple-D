@@ -204,7 +204,7 @@
                                 <p class="result-subtitle">{{ t('trainerPage.save')}}</p>
                                 <button class="btn" @click="exit">{{ t('trainerPage.backToTheme')}}</button>
                             </div>
-                            <div v-else>
+                            <div class="result__inner" v-else>
                                 <div class="result-icon">🤔</div>
                                 <h3 class="result-title">{{ t('trainerPage.morePractice')}}</h3>
                                 <p class="result-subtitle">{{ t('trainerPage.result')}} {{ correctAnswers }} / {{
@@ -235,7 +235,6 @@
 </template>
 
 <style scoped>
-    /* ЗАМЕНИТЕ ВЕСЬ ВАШ <style> НА ЭТОТ КОД */
 
     @keyframes fadeIn {
         from {
@@ -266,7 +265,13 @@
         }
     }
 
-    /* --- ВАШИ ОРИГИНАЛЬНЫЕ СТИЛИ ДЛЯ КОМНАТЫ И ДЕКОРА (НЕ ИЗМЕНЕНЫ) --- */
+    .result__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     .trainer-page {
         position: relative;
         min-height: 100vh;
@@ -550,12 +555,7 @@
         margin-left: -1px
     }
 
-
-    /* --- ИЗМЕНЕНИЯ НАЧИНАЮТСЯ ЗДЕСЬ --- */
-
-    /* --- Модальное окно --- */
     .modal-content {
-        /* Стили модального окна из вашего кода, они хорошо подходят */
         background: #f0ebe5;
         padding: 2rem 2.5rem;
         border-radius: 12px;
@@ -589,19 +589,19 @@
         gap: 1rem;
     }
 
-    /* --- Основной блок тренажера (немного улучшенная версия вашей доски) --- */
+
     .trainer-app {
-        background: #5D4037; /* Ваша "деревянная" рама */
+        background: #5D4037;
         padding: 20px;
         border-radius: 15px;
         box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), inset 0 0 15px rgba(0, 0, 0, 0.5);
         width: 100%;
-        max-width: 700px; /* Немного шире для комфорта */
+        max-width: 700px;
         position: relative;
     }
 
     .trainer-app__board {
-        background: #2c3e50; /* Ваша "доска" */
+        background: #2c3e50;
         border: 10px solid #34495e;
         border-radius: 5px;
         padding: 2rem 2.5rem;
@@ -612,7 +612,6 @@
         flex-direction: column;
     }
 
-    /* Элементы на подставке доски (не изменены) */
     .trainer-app__ledge {
         position: absolute;
         bottom: 10px;
@@ -646,7 +645,6 @@
         transform: rotate(-5deg);
     }
 
-    /* --- Интерфейс на доске (Улучшенный "меловой" стиль) --- */
     .trainer-app__header {
         text-align: center;
         margin-bottom: 1.5rem;
@@ -804,6 +802,7 @@
     .result-subtitle {
         font-size: 1.2rem;
         color: #bdc3c7;
+        padding: 15px;
     }
 
     .result-actions {

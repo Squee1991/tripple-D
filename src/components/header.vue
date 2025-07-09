@@ -379,6 +379,7 @@
     }
 
     .header-nav__submenu-link {
+        cursor: pointer;
         display: block;
         padding: 0.8rem 1rem;
         color: #1e1e1e;
