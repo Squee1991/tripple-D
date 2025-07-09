@@ -34,14 +34,14 @@
 
     watch(() => gameStore.sessionData, (newData, oldData) => {
         if (!newData) return;
-        const host = newData.hostId === authStore.uid;
-        if (host && newData.status === 'starting' && !newData.currentRoundData?.scrambledWords) {
+        // Убрана проверка на хоста, теперь любой игрок инициирует prepareCurrentRound
+        if (newData.status === 'starting' && !newData.currentRoundData?.scrambledWords) {
             gameStore.prepareCurrentRound();
         }
 
         const newAnswers = JSON.stringify(newData.currentRoundData?.answers);
         const oldAnswers = JSON.stringify(oldData?.currentRoundData?.answers);
-        if (host && newData.status === 'in_progress' && newAnswers !== oldAnswers) {
+        if (newData.hostId === authStore.uid && newData.status === 'in_progress' && newAnswers !== oldAnswers) {
             gameStore.checkRoundWinner();
         }
     }, { deep: true });
