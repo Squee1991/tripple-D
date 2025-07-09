@@ -62,7 +62,7 @@
 <template>
     <div>
         <div v-if="!gameStore.sessionData">
-            <p>Загрузка игры...</p>
+            <p>Загрузка игры...!!</p>
         </div>
         <div v-else>
             <h1>Уровень: {{ gameStore.sessionData.level }}</h1>
