@@ -1,63 +1,62 @@
 <script setup>
-    import { useGameStore } from '../../store/SentenceDuelStore.js';
-    import { userAuthStore } from '../../store/authStore.js';
-    import { useRoute } from 'vue-router';
-    import { onMounted, onUnmounted, ref, watch } from 'vue';
+import { useGameStore } from '../../store/SentenceDuelStore.js';
+import { userAuthStore } from '../../store/authStore.js';
+import { useSentencesStore } from '../../store/sentencesStore.js';
+import { useRoute } from 'vue-router';
+import { onMounted, onUnmounted, ref, watch } from 'vue';
 
-    const route = useRoute();
-    const gameStore = useGameStore();
-    const authStore = userAuthStore();
-    const currentAnswer = ref('');
+const route = useRoute();
+const gameStore = useGameStore();
+const authStore = userAuthStore();
+const sentencesStore = useSentencesStore();  // ← добавили
+const currentAnswer = ref('');
 
-    onMounted(() => {
-        const sessionId = route.params.id;
-        if (sessionId) {
-            gameStore.listenToSession(sessionId);
-        }
-    });
+onMounted(async () => {
+    // 1) ждём загрузки предложений
+    await sentencesStore.loadSentences();
 
-    onUnmounted(() => {
-        gameStore.leaveSession();
-    });
-
-    function addWordToAnswer(word) {
-        if (currentAnswer.value === '') {
-            currentAnswer.value = word;
-        } else {
-            currentAnswer.value += ` ${word}`;
-        }
+    // 2) только после этого подключаемся к сессии
+    const sessionId = route.params.id;
+    if (sessionId) {
+        gameStore.listenToSession(sessionId);
     }
+});
 
-    function clearAnswer() {
-        currentAnswer.value = '';
-    }
+onUnmounted(() => gameStore.leaveSession());
 
-    watch(() => gameStore.sessionData, (newData, oldData) => {
-        if (!newData) return;
-        // Убрана проверка на хоста, теперь любой игрок инициирует prepareCurrentRound
-        if (newData.status === 'starting' && !newData.currentRoundData?.scrambledWords) {
+function addWordToAnswer(word) {
+    currentAnswer.value = currentAnswer.value
+        ? `${currentAnswer.value} ${word}`
+        : word;
+}
+
+function clearAnswer() {
+    currentAnswer.value = '';
+}
+
+// Запуск каждого раунда при переходе в “starting”, если ещё нет scrambledWords
+watch(
+    () => gameStore.sessionData?.status,
+    (newStatus) => {
+        if (
+            newStatus === 'starting' &&
+            !gameStore.sessionData.currentRoundData?.scrambledWords
+        ) {
+            currentAnswer.value = '';
             gameStore.prepareCurrentRound();
         }
+    }
+);
 
-        const newAnswers = JSON.stringify(newData.currentRoundData?.answers);
-        const oldAnswers = JSON.stringify(oldData?.currentRoundData?.answers);
-        if (newData.hostId === authStore.uid && newData.status === 'in_progress' && newAnswers !== oldAnswers) {
-            gameStore.checkRoundWinner();
-        }
-    }, { deep: true });
-
-    watch(() => gameStore.sessionData?.status, (newStatus, oldStatus) => {
-        if (newStatus === 'starting' && oldStatus === 'round_over') {
-            currentAnswer.value = '';
-        }
-    });
-
-    watch(currentAnswer, (newText) => {
-        if (gameStore.sessionData?.status === 'in_progress') {
-            gameStore.submitAnswer(newText);
-        }
-    });
+// Отправка ответа сразу при изменении currentAnswer
+watch(currentAnswer, (txt) => {
+    if (gameStore.sessionData?.status === 'in_progress') {
+        gameStore.submitAnswer(txt);
+    }
+});
 </script>
+
+
 
 <template>
     <div>

@@ -104,18 +104,39 @@ export const useGameStore = defineStore('game', () => {
     }
 
     function getSentenceById(id) {
-        if (!sentencesStore.db) {
+        const raw = sentencesStore.db;
+        if (!raw) {
             console.error("Хранилище предложений пустое!");
             return null;
-        };
-        for (const levelKey in sentencesStore.db.levels) {
-            const sentence = sentencesStore.db.levels[levelKey].sentences.find(s => s.id === id);
-            if (sentence) {
-                return sentence.original.toLowerCase().replace(/[.,!?;]/g, '');
+        }
+
+        // если у вас есть обёртка raw.levels, то используем её,
+        // иначе предполагаем, что raw[level] — это сразу объект с { sentences: [...] }
+        const levels = raw.levels ?? raw;
+
+        for (const levelKey in levels) {
+            const maybeContainer = levels[levelKey];
+            // либо уровень — это { sentences: [...] }
+            let arr = maybeContainer.sentences;
+            // либо он сразу равен массиву
+            if (!arr && Array.isArray(maybeContainer)) {
+                arr = maybeContainer;
+            }
+            if (!Array.isArray(arr)) continue;
+
+            const found = arr.find(s => s.id === id);
+            if (found && found.original) {
+                return found.original
+                    .toLowerCase()
+                    .replace(/[.,!?;]/g, '')
+                    .trim();
             }
         }
+
+        console.warn(`Предложение с id=${id} не найдено в словаре.`);
         return null;
     }
+
 
     function listenToSession(sessionId) {
         gameId.value = sessionId;
