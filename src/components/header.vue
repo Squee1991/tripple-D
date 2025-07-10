@@ -226,6 +226,7 @@
         {
             id: 'duel', valueKey: 'nav.gameMode', children: [
                 {id: 'duel-pvp', valueKey: 'nav.pvp', action: openDevModal},
+                {id: 'wordDuel', url: 'play', valueKey: 'sub.wordDuel'},
                 {id: 'duel-guess', url: 'guess', valueKey: 'nav.guess'},
                 {id: 'prepare', url: 'prepare', valueKey: 'nav.marathon'},
                 // {id: 'vocabulary', url: 'vocabulary', valueKey: 'nav.sinonim', action: openDevModal}

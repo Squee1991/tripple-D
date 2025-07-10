@@ -272,6 +272,18 @@
         align-items: center;
     }
 
+    .modal-overlay {
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.69);
+        position: fixed;
+        z-index: 20;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
     .trainer-page {
         position: relative;
         min-height: 100vh;
@@ -561,7 +573,6 @@
         border-radius: 12px;
         border: 4px solid #d3c2b2;
         color: #333;
-        width: 90%;
         max-width: 480px;
         text-align: center;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
