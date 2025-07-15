@@ -72,12 +72,10 @@
 </script>
 
 <style scoped>
-	/* Подключение шрифтов можно вынести в глобальные стили, если они используются во всем проекте */
-	@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Inter:wght@400;500&display=swap');
 
 	.achievement-group {
 		margin-bottom: 3rem;
-		font-family: 'Fredoka One', cursive; /* Основной шрифт для заголовков */
+		font-family: "Nunito", sans-serif;
 	}
 
 	.group-header {
@@ -110,13 +108,13 @@
 	}
 
 	.group-stats.all-completed {
-		background: #f1c40f; /* Золотой цвет для завершенных групп */
+		background: #f1c40f;
 	}
 
 	.achievements-list {
 		display: flex;
 		flex-direction: column;
-		gap: 20px; /* Добавлен отступ между карточками */
+		gap: 20px;
 	}
 
 	.achievement-card {
@@ -130,15 +128,15 @@
 		box-shadow: 6px 6px 0px #1e1e1e;
 		text-align: left;
 		transition: all 0.2s ease;
-		max-width: 650px; /* Увеличена ширина для соответствия */
-		margin-bottom: 0; /* Убрано из карточки, так как теперь есть gap в .achievements-list */
+		max-width: 650px;
+		margin-bottom: 0;
 	}
 
 	.achievement-icon-wrapper {
 		flex-shrink: 0;
 		width: 70px;
 		height: 70px;
-		background: #a855f7; /* Фиолетовый цвет иконки, как в примере */
+		background: #a855f7;
 		border-radius: 16px;
 		border: 3px solid #1e1e1e;
 		display: flex;
@@ -176,7 +174,7 @@
 
 	.progress-bar {
 		height: 100%;
-		background: #a855f7; /* Фиолетовый цвет прогресс-бара */
+		background: #a855f7;
 		border-radius: 0;
 		transition: width 0.5s ease-in-out;
 	}
@@ -196,7 +194,7 @@
 	.achievement-description {
 		font-size: 0.95rem;
 		color: #555;
-		font-family: 'Inter', sans-serif; /* Отдельный шрифт для описания */
+		font-family: 'Inter', sans-serif;
 		font-weight: 500;
 		margin: 0;
 		line-height: 1.4;

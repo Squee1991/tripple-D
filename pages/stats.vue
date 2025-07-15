@@ -187,7 +187,10 @@
                                 />
                             </ul>
                         </div>
-                        <div v-else class="blackboard__message">{{ t('ranked.notData')}}</div>
+                        <div v-else class="blackboard__message">
+                            <div>{{ t('ranked.notData')}}</div>
+                            <img src="../assets/images/leadership.svg" alt="">
+                        </div>
                     </div>
                     <div v-if="activeDiscipline === 'marathon'">
                         <div v-if="isMarathonLoading" class="blackboard__message">{{ t('ranked.loading')}}</div>
@@ -203,7 +206,10 @@
                                 />
                             </ul>
                         </div>
-                        <div v-else class="blackboard__message">{{ t('ranked.emptydifficult')}}</div>
+                        <div v-else class="blackboard__message">
+                            <div>{{ t('ranked.emptydifficult')}}</div>
+                            <img src="../assets/images/leadership.svg" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -358,7 +364,7 @@
 
     .ranked-leaderboard-blackboard {
         flex: 2;
-        background: #60a5fa;
+        background: #5a9ff3;
         border-radius: 24px;
         border: 3px solid #1e1e1e;
         box-shadow: 8px 8px 0px #1e1e1e;
@@ -389,6 +395,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         height: 100%;
         font-size: 1.5rem;
         color: #1e1e1e;
@@ -415,5 +422,18 @@
         background: #1e1e1e;
         border-radius: 6px;
         border: 3px solid #fca5a5;
+    }
+
+    @media (max-width: 1023px) {
+        .ranked-layout {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ranked-sidebar-corkboard {
+            width: 100%;
+            max-width: 90%;
+        }
     }
 </style>

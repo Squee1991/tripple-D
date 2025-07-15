@@ -1,5 +1,5 @@
 <template>
-    <header class="header" :class="{isShow : hideHeader}">
+    <header class="header" :class="{ isShow: hideHeader }">
         <Uioverlay :visible="showAuth" @close="closeAuth"/>
         <transition name="slide">
             <SignIn v-if="showAuth" @close-auth-form="closeAuth"/>
@@ -14,13 +14,9 @@
         <div class="header-container">
             <div class="header-left">
                 <NuxtLink to="/" class="header-logo">
-                    <img class="logo-img" src="../../assets/images/3dLogo.png" alt="Logo">
+                    <img class="logo-img" src="../../assets/images/3dLogo.png" alt="Logo"/>
                 </NuxtLink>
-                <nav
-                        ref="dropdownRefNav"
-                        class="header-nav"
-                        :class="{ 'header-nav--open': isMobileMenuOpen }"
-                >
+                <nav ref="dropdownRefNav" class="header-nav" :class="{ 'header-nav--open': isMobileMenuOpen }">
                     <ul class="header-nav__list">
                         <li
                                 v-for="item in menuItems"
@@ -28,31 +24,67 @@
                                 class="header-nav__item"
                                 @mouseover="isDesktop ? openSubmenu(item.id) : null"
                                 @mouseleave="isDesktop ? closeSubmenu() : null"
-
                         >
-                            <NuxtLink v-if="item.url" :to="item.url" class="header-nav__link" @click="closeMobileMenu">
+                            <NuxtLink v-if="item.url"
+                                      :to="item.url"
+                                      class="header-nav__link"
+                                      @click="closeAllMenus">
                                 {{ t(item.valueKey) }}
                             </NuxtLink>
                             <span @click="handleMenuItemClick(item)" v-else class="header-nav__link">
-                                {{ t(item.valueKey) }}
-                                <img v-if="item.children"
-                                     :class="['header-nav__arrow', { 'header-nav__arrow--active': clickedMenu === item.id }]"
-                                     :src="Arrow"
-                                     alt=">"
-                                >
+                                <span>{{ t(item.valueKey) }}</span>
+                                <img
+                                        v-if="item.children"
+                                        :class="['header-nav__arrow', { 'header-nav__arrow--active': clickedMenu === item.id }]"
+                                        :src="Arrow"
+                                        alt=">"
+                                />
                             </span>
                             <ul v-if="item.children && (hoveredMenu === item.id || clickedMenu === item.id)"
                                 class="header-nav__submenu">
-                                <li v-for="child in item.children" :key="child.id" class="header-nav__submenu-item">
-                                    <NuxtLink v-if="child.url" :to="child.url" class="header-nav__submenu-link"
-                                              @click="closeMobileMenu">
+                                <li v-for="child in item.children"
+                                    :key="child.id"
+                                    class="header-nav__submenu-item"
+                                >
+                                    <NuxtLink v-if="child.url"
+                                              :to="child.url"
+                                              class="header-nav__submenu-link"
+                                              @click="closeAllMenus"
+                                              @mouseenter="handleSubmenuEnter(child.id)"
+                                              @mouseleave="handleSubmenuLeave"
+                                    >
                                         {{ t(child.valueKey) }}
                                     </NuxtLink>
-                                    <span v-else class="header-nav__submenu-link"
-                                          @click.stop="handleSubmenuItemClick(child)">
-                                        {{ t(child.valueKey) }}
-                                    </span>
+                                    <span v-else
+                                          class="header-nav__submenu-link"
+                                          @click.stop="child.subChildren ? toggleSubChild(child.id) : handleSubmenuItemClick(child)"
+                                          @mouseenter="handleSubmenuEnter(child.id)"
+                                          @mouseleave="handleSubmenuLeave"
+                                    >
+                                           <span>{{ t(child.valueKey) }}</span>
+                                           <img v-if="child.subChildren"
+                                                :class="['header-nav__arrow', { 'header-nav__arrow--active': clickedSubChild === child.id }]"
+                                                :src="Arrow"
+                                                alt=""
+                                           />
+                                       </span>
+                                    <ul v-if="child.subChildren"
+                                        class="header-nav__submenu-sub"
+                                        :class="{ visible: hoveredChild === child.id || clickedSubChild === child.id }"
+                                        @mouseenter="handleSubmenuEnter(child.id)"
+                                        @mouseleave="handleSubmenuLeave"
+                                    >
+                                        <li v-for="sub in child.subChildren"
+                                            :key="sub.id"
+                                            class="header-nav__submenu-sub-item"
+                                        >
+                                            <NuxtLink :to="sub.url" class="header-nav__submenu-link"
+                                                      @click="closeAllMenus">{{ t(sub.valueKey) }}
+                                            </NuxtLink>
+                                        </li>
+                                    </ul>
                                 </li>
+
                             </ul>
                         </li>
                     </ul>
@@ -63,47 +95,36 @@
                     <ForTea/>
                 </div>
                 <div class="articlus__wrapper">
-                    <img class="articlus" src="../../assets/images/articlus.png" alt="">
+                    <img class="articlus" src="../../assets/images/articlus.png" alt=""/>
                     <div class="articlus__counter">{{ learningStore.points }}</div>
                 </div>
                 <div class="header-nav__lang">
                     <LanguageSelector/>
                 </div>
-                <div
-                        v-if="userAuth.name"
-                        class="header-user"
-                        @click="toggleMenu"
-                >
+                <div v-if="userAuth.name" class="header-user" @click="toggleMenu">
                     <img class="header-user__avatar" :src="userAuth.avatarUrl" alt="User avatar"/>
                     <span class="header-user__name">{{ userAuth.email }}</span>
                     <img
                             :class="['header-nav__arrow', { 'header-nav__arrow--active': menuOpen }]"
                             :src="Arrow"
                             alt="v"
-                    >
-                    <div v-if="menuOpen" class="header-user__dropdown">
+                    />
+                    <div ref="dropdownRef" v-if="menuOpen" class="header-user__dropdown">
                         <button
                                 v-for="item in menuActions"
                                 :key="item.id"
                                 class="header-user__dropdown-btn"
                                 @click.stop="item.action"
                         >
-                            <img class="header-user__dropdown-icon" :src="item.icon" alt="">
+                            <img class="header-user__dropdown-icon" :src="item.icon" alt=""/>
                             <span class="header__drop-text">{{ item.label }}</span>
                         </button>
                     </div>
                 </div>
-                <button
-                        v-else
-                        class="btn-login"
-                        @click="openAuth"
-                >
+                <button v-else class="btn-login" @click="openAuth">
                     {{ t('auth.logIn') }}
                 </button>
-                <BurgerMenu
-                        class="burger-button"
-                        v-model="isMobileMenuOpen"
-                />
+                <BurgerMenu class="burger-button" v-model="isMobileMenuOpen"/>
             </div>
         </div>
     </header>
@@ -126,13 +147,13 @@
     import Dev from '../../assets/images/dev.svg'
     import User from '../../assets/images/account.svg'
     import Logout from '../../assets/images/logout.svg'
+    import {onUnmounted} from "../../.nuxt/imports";
 
     const {t} = useI18n()
     const learningStore = userlangStore()
     const bp = useBreakPointsStore()
     const router = useRouter()
     const userAuth = userAuthStore()
-
     const hideHeader = ref(false)
     const showAuth = ref(false)
     const menuOpen = ref(false)
@@ -140,31 +161,41 @@
     const hoveredMenu = ref(null)
     const clickedMenu = ref(null)
     const showDevModal = ref(false)
+    const clickedSubChild = ref(null)
+    const hoveredChild = ref(null);
+    const hideSubmenuTimer = ref(null);
+    const closeAllMenus = () => {
+        hoveredMenu.value = null;
+        hoveredChild.value = null;
+        if (hideSubmenuTimer.value) {
+            clearTimeout(hideSubmenuTimer.value);
+            hideSubmenuTimer.value = null;
+        }
+        isMobileMenuOpen.value = false;
+        clickedMenu.value = null;
+        clickedSubChild.value = null;
+    }
 
+    const toggleSubChild = (id) => {
+        clickedSubChild.value = clickedSubChild.value === id ? null : id
+    }
     const dropdownRef = ref(null)
     const dropdownRefNav = ref(null)
-
     const isDesktop = computed(() => !bp.isMobile);
     const isMobile = computed(() => bp.isMobile);
-
     const openDevModal = () => showDevModal.value = true
     const closeDevModal = () => showDevModal.value = false
-
     const handleMenuItemClick = (item) => {
         if (isMobile.value) {
             if (item.children) {
                 toggleSubmenu(item.id);
-            }
-            else if (item.action) {
+            } else if (item.action) {
                 item.action();
-                closeMobileMenu();
+                closeAllMenus();
+            } else if (item.url) {
+                closeAllMenus();
             }
-
-            else if (item.url) {
-                closeMobileMenu();
-            }
-        }
-        else {
+        } else {
             if (item.action) {
                 item.action();
             }
@@ -174,22 +205,7 @@
     const handleSubmenuItemClick = (childItem) => {
         if (childItem.action) {
             childItem.action();
-            closeMobileMenu();
-            closeSubmenu();
-        }
-    }
-
-    const toggleMobileMenu = () => {
-        isMobileMenuOpen.value = !isMobileMenuOpen.value;
-        if (!isMobileMenuOpen.value) {
-            clickedMenu.value = null;
-        }
-    }
-
-    const closeMobileMenu = () => {
-        if (isMobile.value) {
-            isMobileMenuOpen.value = false;
-            clickedMenu.value = null;
+            closeAllMenus();
         }
     }
 
@@ -198,10 +214,17 @@
             hoveredMenu.value = id;
         }
     }
+
     const closeSubmenu = () => {
         if (isDesktop.value) {
             hoveredMenu.value = null;
+            if (hideSubmenuTimer.value) {
+                clearTimeout(hideSubmenuTimer.value);
+                hideSubmenuTimer.value = null;
+            }
+            hoveredChild.value = null;
         }
+        clickedSubChild.value = null;
     }
 
     const toggleSubmenu = (id) => {
@@ -210,26 +233,56 @@
         }
     }
 
+    const handleSubmenuEnter = (childId) => {
+        if (isDesktop.value) {
+            if (hideSubmenuTimer.value) {
+                clearTimeout(hideSubmenuTimer.value);
+                hideSubmenuTimer.value = null;
+            }
+            hoveredChild.value = childId;
+        }
+    };
+
+    const handleSubmenuLeave = () => {
+        if (isDesktop.value) {
+            hideSubmenuTimer.value = setTimeout(() => {
+                hoveredChild.value = null;
+            }, 500);
+        }
+    };
+
     const closeAuth = () => showAuth.value = false
     const openAuth = () => showAuth.value = true
 
     const menuItems = [
         {
             id: 'learn', valueKey: 'nav.training', children: [
-                {id: 'learn-tips', url: 'examples', valueKey: 'sub.prev'},
-                {id: 'learn-rules', url: 'rules', valueKey: 'sub.rules'},
-                {id: 'learn-selectedTopics', url: 'selectedTopics', valueKey: 'sub.artRules'},
+                {
+                    id: 'articles', valueKey: 'sub.articles', subChildren: [
+                        {id: 'learn-tips', url: 'examples', valueKey: 'underSub.prev'},
+                        {id: 'learn-rules', url: 'rules', valueKey: 'underSub.rules'},
+                        {id: 'learn-selectedTopics', url: 'articles', valueKey: 'underSub.artRules'},]
+                },
+                {
+                    id: "verbs", valueKey: 'sub.verbs', subChildren: [
+                        {id: 'tenses', url: 'tenses', valueKey: 'underSub.verbFirst'},
+                        {id: 'modalVerbs', url: 'modal-verbs', valueKey: 'underSub.verbSecond', },
+                        // {id: '', valueKey: 'underSub.verbThird', url: ''},
+                        // {id: '', valueKey: 'underSub.verbFourth', url: ''},
+                        // {id: '', valueKey: 'underSub.verbFifth', url: ''}
+                    ]
+                },
                 {id: 'cards', url: 'createCards', valueKey: 'sub.card'},
-                {id: 'themen', url: 'choiceTheme', valueKey: 'sub.themen'}
+                {id: 'themen', url: 'thematic-learning', valueKey: 'sub.themen'}
             ]
         },
         {
             id: 'duel', valueKey: 'nav.gameMode', children: [
-                {id: 'duel-pvp', valueKey: 'nav.pvp', action: openDevModal},
+                {id: 'duel-pvp', valueKey: 'sub.pvp', action: openDevModal},
                 {id: 'wordDuel', url: 'play', valueKey: 'sub.wordDuel'},
-                {id: 'duel-guess', url: 'guess', valueKey: 'nav.guess'},
-                {id: 'prepare', url: 'prepare', valueKey: 'nav.marathon'},
-                // {id: 'vocabulary', url: 'vocabulary', valueKey: 'nav.sinonim', action: openDevModal}
+                {id: 'wordDuel', url: 'recipes', valueKey: 'sub.quests'},
+                {id: 'duel-guess', url: 'guess', valueKey: 'sub.guess'},
+                {id: 'prepare', url: 'prepare', valueKey: 'sub.marathon'},
             ]
         },
         {id: 'achieve', url: 'achievmentsPage', valueKey: 'nav.achieve'},
@@ -252,7 +305,7 @@
             menuOpen.value = false
         }
         if (isDesktop.value && hoveredMenu.value && dropdownRefNav.value && !dropdownRefNav.value.contains(event.target)) {
-            hoveredMenu.value = null
+            closeSubmenu();
         }
     }
 
@@ -262,12 +315,15 @@
     onBeforeUnmount(() => {
         document.removeEventListener('mousedown', handleClickOutside)
     })
+
     watch(showAuth, (val) => {
         document.body.style.overflow = val ? 'hidden' : ''
     })
+
     watch(showDevModal, (val) => {
         document.body.style.overflow = val ? 'hidden' : ''
     })
+
 </script>
 
 <style scoped>
@@ -343,13 +399,13 @@
     }
 
     .header-nav__arrow--active {
-        transform: rotate(180deg);
+        transform: rotate(-90deg);
     }
 
     .header-nav__submenu {
         position: absolute;
         top: 100%;
-        left: 100%;
+        left: 0;
         z-index: 110;
         background: #FFFFFF;
         border: 3px solid #1e1e1e;
@@ -371,17 +427,22 @@
     @keyframes menu-pop {
         from {
             opacity: 0;
-            transform: translateX(-50%) translateY(-10px);
+            transform: translateY(10px);
         }
         to {
             opacity: 1;
-            transform: translateX(-50%) translateY(0);
+            transform: translateY(0);
         }
+    }
+
+    .header-nav__submenu-item {
+        position: relative;
     }
 
     .header-nav__submenu-link {
         cursor: pointer;
-        display: block;
+        display: flex;
+        justify-content: space-between;
         padding: 0.8rem 1rem;
         color: #1e1e1e;
         font-weight: 400;
@@ -510,7 +571,7 @@
         .header-nav {
             display: flex;
             position: fixed;
-            top: 84px;
+            top: 83px;
             left: 0;
             width: 100%;
             height: 100%;
@@ -523,7 +584,7 @@
         }
 
         .header-nav--open {
-            transform: translateX(0);
+            transform: translateX(1);
         }
 
         .header-nav__list {
@@ -578,4 +639,25 @@
             z-index: 102;
         }
     }
+
+    .header-nav__submenu-sub {
+        position: absolute;
+        top: -0.5rem;
+        left: 100%;
+        margin-left: 10px;
+        padding: 0.5rem;
+        background: #fff;
+        border: 2px solid #1e1e1e;
+        border-radius: 12px;
+        box-shadow: 4px 4px 0px #1e1e1e;
+        white-space: nowrap;
+        z-index: 120;
+        display: none;
+
+    }
+
+    .header-nav__submenu-sub.visible {
+        display: block;
+    }
+
 </style>

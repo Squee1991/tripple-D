@@ -1,11 +1,11 @@
 <script setup>
-    import {useTrainerStore} from '../store/themenProgressStore.js'
+    import {useTrainerStore} from '../../store/themenProgressStore.js'
     import {useRouter} from 'vue-router'
     import {ref, onMounted, onUnmounted, computed} from 'vue'
 
     const router = useRouter()
     const {t} = useI18n()
-    const trainer = useTrainerStore()
+    const thematic = useTrainerStore()
     const correctAnswers = ref(0)
     const loading = ref(true)
     const current = ref(0)
@@ -19,7 +19,7 @@
     const secondRotation = ref(0);
     let clockInterval = null;
 
-    const tasks = computed(() => trainer.selectedModule?.tasks || [])
+    const tasks = computed(() => thematic.selectedModule?.tasks || [])
     const progressPercent = computed(() => ((current.value + (finished.value ? 1 : 0)) / tasks.value.length) * 100)
     const visibleSentence = computed(() => {
         const task = tasks.value[current.value]
@@ -45,10 +45,10 @@
         } else {
             finished.value = true
             if (correctAnswers.value === tasks.value.length) {
-                const moduleId = trainer.selectedModule.id
-                if (!trainer.completedModules.includes(moduleId)) {
-                    trainer.completedModules.push(moduleId)
-                    await trainer.saveProgress()
+                const moduleId = thematic.selectedModule.id
+                if (!thematic.completedModules.includes(moduleId)) {
+                    thematic.completedModules.push(moduleId)
+                    await thematic.saveProgress()
                 }
             }
         }
@@ -59,13 +59,13 @@
         if (hasStarted && finished.value === false) {
             showExitModal.value = true
         } else {
-            router.push('choiceTheme')
+            router.back()
         }
     }
 
     const confirmExit = () => {
         showExitModal.value = false
-        router.push('/choiceTheme')
+        router.back()
     }
 
     const cancelExit = () => {
@@ -95,8 +95,8 @@
     };
 
     onMounted(async () => {
-        if (!trainer.selectedModule) {
-            await trainer.loadProgress()
+        if (!thematic.selectedModule) {
+            await thematic.loadProgress()
         }
         loading.value = false
         updateClock();
@@ -124,7 +124,7 @@
             </div>
             <div class="trainer-page__decorations">
                 <button class="exit-sign" @click="exit">
-                    <img class="exit-sign-icon" src="../assets/images/exit.svg" alt="">
+                    <img class="exit-sign-icon" src="../../assets/images/exit.svg" alt="">
                     <span class="exit-sign-text">{{ t('trainerPage.exit')}}</span>
                 </button>
                 <div class="scene-decoration scene-decoration--pencils">
@@ -161,9 +161,9 @@
                     <section v-if="loading" class="trainer-app__view trainer-app__view--loading">
                         <p>{{ t('trainerPage.loading')}}</p>
                     </section>
-                    <section v-else-if="trainer.selectedModule" class="trainer-app__view trainer-app__view--content">
+                    <section v-else-if="thematic.selectedModule" class="trainer-app__view trainer-app__view--content">
                         <header v-if="!finished" class="trainer-app__header">
-                            <h1 class="trainer-app__title">{{ trainer.selectedModule.title }}</h1>
+                            <h1 class="trainer-app__title">{{ thematic.selectedModule.title }}</h1>
                             <h2 class="trainer-app__subtitle">{{ t('trainerPage.quest')}} {{ current + 1 }} / {{
                                 tasks.length }}</h2>
                         </header>

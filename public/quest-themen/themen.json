@@ -1,0 +1,26 @@
+[
+  {
+    "id": "food",
+    "title": "",
+    "icon": "🍳",
+    "description": "",
+    "isActive": true,
+    "availableIds": ["food-day1", "food-day2", "food-day3", "food-day4", "food-day5", "food-day6", "food-day7"]
+  },
+  {
+    "id": "transport",
+    "title": "",
+    "icon": "🚗",
+    "description": "",
+    "isActive": true,
+    "availableIds": ["transport-day1", "transport-day2", "transport-day3", "transport-day4", "transport-day5", "transport-day6", "transport-day7"]
+  },
+  {
+    "id": "work",
+    "title": "",
+    "icon": "💼",
+    "description": "",
+    "isActive": false,
+    "availableIds": []
+  }
+]

@@ -45,7 +45,10 @@
             </div>
             <div v-if="authStore.uid" class="user-greeting">
                 <p>{{t('marathonPrepare.greetings')}}, <strong>{{ authStore.name }}</strong>!</p>
-                <p class="record">{{t('marathonPrepare.streak')}} <span>{{ currentRecord }}</span></p>
+                <p class="record">
+                    {{t('marathonPrepare.streak')}}
+                    <span class="record__value">{{ currentRecord }}</span>
+                </p>
             </div>
             <div v-else class="guest-greeting">
                 <p>{{t('marathonPrepare.notAuth')}}</p>
@@ -191,8 +194,13 @@
         margin-top: 0.75rem;
         font-weight: 700;
         color: #1e1e1e;
-        font-size: 10px;
+        font-size: 16px;
     }
+
+    .record__value {
+        font-size: 24px;
+    }
+
 
     .user-greeting .record span {
         display: inline-block;

@@ -78,7 +78,6 @@
                 }
             });
         }
-
         // if (whyFooterRef.value) {
         //     gsap.from(whyFooterRef.value, {
         //         xPercent: -100,
@@ -128,7 +127,7 @@
         padding: 30px 0;
         font-size: 3.1rem;
         font-weight: 600;
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         color: white;
         width: 90%;
         margin: 40px auto;
@@ -159,7 +158,7 @@
         display: flex;
         align-items: center;
         padding: 15px 15px  15px 25px;
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         font-size: 28px;
         font-style: italic;
         color: white;

@@ -62,7 +62,7 @@
 
     .achievement-group {
         margin-bottom: 3rem;
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
     }
 
     .group-header {

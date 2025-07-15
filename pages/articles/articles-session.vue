@@ -48,7 +48,7 @@
 							<div v-if="currentMode === 'audio'">
 								<p>{{t('sessionLabels.audioFor')}}:</p>
 								<button @click="speak(currentWord.de)" class="audio-btn">
-									<img class="megaphones__icon" src="../assets/images/megaphone.svg" alt="">
+									<img class="megaphones__icon" src="../../assets/images/megaphone.svg" alt="">
 									<span>Прослушать</span>
 								</button>
 								<input v-model="userInput" class="trainer-app__input"/>
@@ -93,7 +93,7 @@
 <script setup>
 	import {ref, computed, onMounted} from 'vue'
 	import {useRoute, useRouter} from 'vue-router'
-	import {userlangStore} from '../store/learningStore.js'
+	import {userlangStore} from '../../store/learningStore.js'
 
 	const {t, locale} = useI18n()
 	const wrongWords = ref([])
@@ -117,7 +117,7 @@
 	const currentLang = computed(() => locale.value);
 
 	const goBack = () => {
-		router.push('/selectedTopics')
+		router.back()
 	}
 
 	function modeLabel(mode) {

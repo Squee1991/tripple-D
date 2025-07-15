@@ -19,6 +19,14 @@ export const overAchievment = [
 				targetProgress: 31
 			},
 			{
+				id: "daily",
+				name: "generalCategory.dailyTitle",
+				description: "generalCategory.dailyText",
+				icon: "🔁",
+				currentProgress: 0,
+				targetProgress: 50
+			},
+			{
 				id: "MarginForError",
 				name: "generalCategory.marginLabel",
 				description: "generalCategory.marginText",
@@ -32,7 +40,7 @@ export const overAchievment = [
 				description: "generalCategory.edgeText",
 				icon: "⏳",
 				currentProgress: 0,
-				targetProgress: 20,
+				targetProgress: 50,
 			},
 			{
 				id: 'firstArticleAward',

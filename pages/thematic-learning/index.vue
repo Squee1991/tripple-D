@@ -1,18 +1,18 @@
 <script setup>
-    import {useTrainerStore} from '../store/themenProgressStore.js'
+    import {useTrainerStore} from '../../store/themenProgressStore.js'
     import {useRouter} from 'vue-router'
     import {ref, onMounted, computed, watch} from 'vue'
-    import HomeImg from '../assets/images/home.svg'
-    import Clothes from '../assets/images/clothes.svg'
-    import Health from '../assets/images/health.svg'
-    import Food from '../assets/images/food.svg'
-    import Transport from '../assets/images/Transport.svg'
-    import Weather from '../assets/images/weather.svg'
-    import Purchase from '../assets/images/buy.svg'
-    import Family from '../assets/images/family.svg'
-    import School from '../assets/images/school.svg'
-    import Travel from '../assets/images/travel.svg'
-    import Clock from '../assets/images/clock.svg'
+    import HomeImg from '../../assets/images/home.svg'
+    import Clothes from '../../assets/images/clothes.svg'
+    import Health from '../../assets/images/health.svg'
+    import Food from '../../assets/images/food.svg'
+    import Transport from '../../assets/images/Transport.svg'
+    import Weather from '../../assets/images/weather.svg'
+    import Purchase from '../../assets/images/buy.svg'
+    import Family from '../../assets/images/family.svg'
+    import School from '../../assets/images/school.svg'
+    import Travel from '../../assets/images/travel.svg'
+    import Clock from '../../assets/images/clock.svg'
 
     const router = useRouter()
     const trainer = useTrainerStore()
@@ -84,12 +84,12 @@
     }
 
     const goBack = () => {
-        router.push('/')
+        router.back()
     }
 
     const goToExercise = async (level, module) => {
         await trainer.setThemeAndModule(topic.value, level, module.id)
-        router.push('/trainer')
+        router.push('/thematic-learning/thematic-session')
     }
 
     const startSelectedModule = () => {

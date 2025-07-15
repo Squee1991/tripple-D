@@ -78,7 +78,7 @@ export const cpecialGroupAchievment = [
 				description:"specialCategory.generalSexthText",
 				icon: "⚡",
 				currentProgress: 0,
-				targetProgress: 500,
+				targetProgress: 1000,
 			},
 		]
 	}

@@ -294,7 +294,7 @@
         padding: 2rem;
         gap: 2rem;
         background-color: #fef8e4;
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         box-sizing: border-box;
     }
 
@@ -320,7 +320,7 @@
         cursor: pointer;
         color: #1e1e1e;
         font-size: 1.2rem;
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         box-shadow: 4px 4px 0px #1e1e1e;
         transition: all 0.1s ease-in-out;
         margin-bottom: 1.5rem;
@@ -341,11 +341,10 @@
     .nav__sidebar {
         flex: 1;
         overflow-y: auto;
-        /* Добавленные свойства для скрытия стандартного скроллбара */
-        -ms-overflow-style: none;  /* IE и Edge */
-        scrollbar-width: none;     /* Firefox */
+        -ms-overflow-style: none;
+        scrollbar-width: none;
     }
-    /* Дополнительное правило для WebKit-браузеров (Chrome, Safari) */
+
     .nav__sidebar::-webkit-scrollbar {
         display: none;
     }

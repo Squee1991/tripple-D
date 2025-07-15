@@ -174,7 +174,7 @@
         padding: 1rem 2rem;
         border: 3px solid #1e1e1e;
         border-radius: 16px;
-        transform: rotate(2deg);
+        transform: rotate(1deg);
         box-shadow: 8px 8px 0px #1e1e1e;
     }
 

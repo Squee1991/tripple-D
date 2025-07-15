@@ -88,11 +88,11 @@
     // ВАША ЛОГИКА ОСТАЕТСЯ ПОЛНОСТЬЮ БЕЗ ИЗМЕНЕНИЙ
     import {ref, computed, onMounted} from 'vue'
     import {useRouter} from 'vue-router'
-    import {userlangStore} from '../store/learningStore.js'
+    import {userlangStore} from '../../store/learningStore.js'
     import Lottie from 'lottie-web'
 
     const {t} = useI18n()
-    import NotFound from '../assets/animation/notFound.json'
+    import NotFound from '../../assets/animation/notFound.json'
 
     const showModesBlock = ref(false)
     const showNoTopicMessage = ref(true)
@@ -124,7 +124,7 @@
     }
 
     const goBack = () => {
-        router.push('/')
+        router.back()
     }
 
     const page = ref(0)
@@ -224,7 +224,7 @@
         await store.saveToFirebase()
 
         const path = localePath({
-            name: 'session',
+            path: '/articles/articles-session',
             query: {
                 topic: selectedTopic.value,
                 mode: selectedModes.value
@@ -234,11 +234,11 @@
 
     }
 
-
     onMounted(async () => {
         const res = await fetch('/words.json')
         themeList.value = await res.json()
     })
+
 </script>
 
 <style scoped>
@@ -614,6 +614,5 @@
     .slide-right-enter-from, .slide-right-leave-to {
         transform: translateX(110%);
     }
-
 
 </style>

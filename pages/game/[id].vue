@@ -44,7 +44,6 @@
     onMounted(() => {
         const sessionId = route.params.id;
         if (sessionId) gameStore.listenToSession(sessionId);
-
         const interval = setInterval(() => {
             countdown.value--;
             if (countdown.value === 0) {

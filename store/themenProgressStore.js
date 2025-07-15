@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import { getFirestore, doc, setDoc, getDoc } from 'firebase/firestore'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 
-export const useTrainerStore = defineStore('trainer', () => {
+export const useTrainerStore = defineStore('thematic', () => {
 	const topic = ref('')
 	const jsonData = ref(null)
 	const selectedLevel = ref(null)
