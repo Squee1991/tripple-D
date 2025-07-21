@@ -38,7 +38,7 @@
     }
 
     const backToMainPage = () => {
-        router.push('/')
+        router.back()
     }
 
     const isInGuessLeaderboard = computed(() =>
@@ -187,7 +187,10 @@
                                 />
                             </ul>
                         </div>
-                        <div v-else class="blackboard__message">{{ t('ranked.notData')}}</div>
+                        <div v-else class="blackboard__message">
+                            <div class="black__board-title">{{ t('ranked.notData')}}</div>
+                            <img src="../assets/images/leadership.svg" alt="">
+                        </div>
                     </div>
                     <div v-if="activeDiscipline === 'marathon'">
                         <div v-if="isMarathonLoading" class="blackboard__message">{{ t('ranked.loading')}}</div>
@@ -203,7 +206,10 @@
                                 />
                             </ul>
                         </div>
-                        <div v-else class="blackboard__message">{{ t('ranked.emptydifficult')}}</div>
+                        <div v-else class="blackboard__message">
+                            <div class="black__board-title">{{ t('ranked.emptydifficult')}}</div>
+                            <img src="../assets/images/leadership.svg" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -218,7 +224,7 @@
         padding: 2rem;
         min-height: 100vh;
         background-color: #fef8e4;
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         border: 4px solid #1e1e1e;
         box-sizing: border-box;
     }
@@ -235,11 +241,15 @@
     }
 
     .corkboard-title {
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         font-size: 35px;
         text-align: center;
         font-weight: 400;
         color: #1e1e1e;
+    }
+
+    .black__board-title {
+        text-align: center;
     }
 
     .ranked__side-btnBack {
@@ -252,7 +262,7 @@
         color: #1e1e1e;
         font-size: 1.2rem;
         font-weight: 400;
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         box-shadow: 4px 4px 0px #1e1e1e;
         transition: all 0.1s ease-in-out;
     }
@@ -290,7 +300,7 @@
         border-radius: 12px;
         cursor: pointer;
         font-size: 1.1rem;
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         background: #fff;
         color: #1e1e1e;
         box-shadow: 2px 2px 0px #1e1e1e;
@@ -341,8 +351,8 @@
         margin-top: 1rem;
         padding: 0.8rem;
         font-size: 1rem;
-        font-family: 'Fredoka One', cursive;
-        background: #a855f7; /* Фиолетовый */
+        font-family: "Nunito", sans-serif;
+        background: #a855f7;
         color: white;
         border: 3px solid #1e1e1e;
         border-radius: 12px;
@@ -358,12 +368,14 @@
 
     .ranked-leaderboard-blackboard {
         flex: 2;
-        background: #60a5fa;
+        background: #5a9ff3;
         border-radius: 24px;
         border: 3px solid #1e1e1e;
         box-shadow: 8px 8px 0px #1e1e1e;
         padding: 24px;
         display: flex;
+        width: 100%;
+        max-width: 100%;
     }
 
     .blackboard-frame, .blackboard {
@@ -379,7 +391,7 @@
     .blackboard__title {
         font-weight: 400;
         color: #1e1e1e;
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         font-size: 2rem;
         text-align: center;
         margin-bottom: 20px;
@@ -389,6 +401,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         height: 100%;
         font-size: 1.5rem;
         color: #1e1e1e;
@@ -415,5 +428,23 @@
         background: #1e1e1e;
         border-radius: 6px;
         border: 3px solid #fca5a5;
+    }
+
+    @media (max-width: 1023px) {
+        .ranked-layout {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ranked-sidebar-corkboard {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .ranked-layout {
+            gap: 13px;
+            padding: 1rem;
+        }
     }
 </style>

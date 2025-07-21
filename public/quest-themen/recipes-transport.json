@@ -1,0 +1,239 @@
+[
+  {
+    "id": "transport-day1",
+    "theme": "transport",
+    "title": "Mit dem Zug durch Deutschland",
+    "trophy": "Золотой билет",
+    "introDialogue": [
+      "Willkommen zu deiner ersten Reise durch das Land!",
+      "Heute fahren wir mit dem Zug. Eine der besten Arten, Deutschland zu erkunden.",
+      "Aber vorher: Kennst du die wichtigsten Wörter zum Thema Transport?"
+    ],
+    "ingredients": [
+      {
+        "word": "Zug",
+        "article": "der"
+      },
+      {
+        "word": "Fahrkarte",
+        "article": "die"
+      },
+      {
+        "word": "Bahnhof",
+        "article": "der"
+      },
+      {
+        "word": "Abfahrt",
+        "article": "die"
+      },
+      {
+        "word": "Ankunft",
+        "article": "die"
+      },
+      {
+        "word": "Gleis",
+        "article": "das"
+      }
+    ],
+    "knowledgeCheck": {
+      "prompt": "Bist du bereit, in den richtigen Artikel-Zug einzusteigen?",
+      "choices": [
+        {
+          "text": "Ich bin startklar!",
+          "response": "Perfekt! Dann schauen wir, wie gut du die Artikel kennst."
+        },
+        {
+          "text": "Ich bin mir nicht ganz sicher...",
+          "response": "Kein Problem! Wir wiederholen gemeinsam alles Wichtige."
+        }
+      ]
+    },
+    "postTestFeedback": {
+      "success": "Super! {accuracy}% richtig. Du bist bereit für die Fahrt.",
+      "failure": "{accuracy}% – das ist ein guter Start! Versuch es noch einmal, bevor der Zug abfährt."
+    },
+    "dialogue": [
+      {
+        "line": "Ich kaufe ___ Fahrkarte am Schalter.",
+        "article": "die"
+      },
+      {
+        "line": "Wir treffen uns am ___ Bahnhof um 8 Uhr.",
+        "article": "dem"
+      },
+      {
+        "line": "Der ___ Zug fährt in zehn Minuten ab!",
+        "article": "der"
+      },
+      {
+        "line": "Die ___ Abfahrt wurde verschoben.",
+        "article": "die"
+      },
+      {
+        "line": "Unsere ___ Ankunft ist um 17 Uhr geplant.",
+        "article": "die"
+      },
+      {
+        "line": "Steig bitte an ___ Gleis 3 ein.",
+        "article": "dem"
+      }
+    ]
+  },
+  {
+    "id": "transport-day2",
+    "theme": "transport",
+    "title": "",
+    "trophy": "",
+    "introDialogue": [],
+    "ingredients": [],
+    "knowledgeCheck": {
+      "prompt": "",
+      "choices": [
+        {
+          "text": "",
+          "response": ""
+        },
+        {
+          "text": "",
+          "response": ""
+        }
+      ]
+    },
+    "postTestFeedback": {
+      "success": "",
+      "failure": ""
+    },
+    "dialogue": []
+  },
+  {
+    "id": "transport-day3",
+    "theme": "transport",
+    "title": "",
+    "trophy": "",
+    "introDialogue": [],
+    "ingredients": [],
+    "knowledgeCheck": {
+      "prompt": "",
+      "choices": [
+        {
+          "text": "",
+          "response": ""
+        },
+        {
+          "text": "",
+          "response": ""
+        }
+      ]
+    },
+    "postTestFeedback": {
+      "success": "",
+      "failure": ""
+    },
+    "dialogue": []
+  },
+  {
+    "id": "transport-day4",
+    "theme": "transport",
+    "title": "",
+    "trophy": "",
+    "introDialogue": [],
+    "ingredients": [],
+    "knowledgeCheck": {
+      "prompt": "",
+      "choices": [
+        {
+          "text": "",
+          "response": ""
+        },
+        {
+          "text": "",
+          "response": ""
+        }
+      ]
+    },
+    "postTestFeedback": {
+      "success": "",
+      "failure": ""
+    },
+    "dialogue": []
+  },
+  {
+    "id": "transport-day5",
+    "theme": "transport",
+    "title": "",
+    "trophy": "",
+    "introDialogue": [],
+    "ingredients": [],
+    "knowledgeCheck": {
+      "prompt": "",
+      "choices": [
+        {
+          "text": "",
+          "response": ""
+        },
+        {
+          "text": "",
+          "response": ""
+        }
+      ]
+    },
+    "postTestFeedback": {
+      "success": "",
+      "failure": ""
+    },
+    "dialogue": []
+  },
+  {
+    "id": "transport-day6",
+    "theme": "transport",
+    "title": "",
+    "trophy": "",
+    "introDialogue": [],
+    "ingredients": [],
+    "knowledgeCheck": {
+      "prompt": "",
+      "choices": [
+        {
+          "text": "",
+          "response": ""
+        },
+        {
+          "text": "",
+          "response": ""
+        }
+      ]
+    },
+    "postTestFeedback": {
+      "success": "",
+      "failure": ""
+    },
+    "dialogue": []
+  },
+  {
+    "id": "transport-day7",
+    "theme": "transport",
+    "title": "",
+    "trophy": "",
+    "introDialogue": [],
+    "ingredients": [],
+    "knowledgeCheck": {
+      "prompt": "",
+      "choices": [
+        {
+          "text": "",
+          "response": ""
+        },
+        {
+          "text": "",
+          "response": ""
+        }
+      ]
+    },
+    "postTestFeedback": {
+      "success": "",
+      "failure": ""
+    },
+    "dialogue": []
+  }
+]
+

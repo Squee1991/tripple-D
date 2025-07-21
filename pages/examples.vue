@@ -174,7 +174,7 @@
         padding: 1rem 2rem;
         border: 3px solid #1e1e1e;
         border-radius: 16px;
-        transform: rotate(2deg);
+        transform: rotate(1deg);
         box-shadow: 8px 8px 0px #1e1e1e;
     }
 
@@ -223,7 +223,7 @@
 
 
     .theory-card-title {
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         font-size: 1.8rem;
         color: #1e1e1e;
         margin-bottom: 1rem;
@@ -294,7 +294,7 @@
     .table-wrapper {
         border: 3px solid #1e1e1e;
         border-radius: 16px;
-        overflow: hidden; /* Чтобы скруглить углы таблицы */
+        overflow: hidden;
         box-shadow: 4px 4px 0px #1e1e1e;
     }
 
@@ -312,21 +312,21 @@
     }
 
     .theory-table-cell.article-cell {
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         font-size: 1.2rem;
     }
 
     .theory-table-head .theory-table-cell {
-        background: #60a5fa; /* Синяя шапка */
+        background: #60a5fa;
         color: #ffffff;
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         font-size: 1.2rem;
     }
 
     @media (max-width: 768px) {
         .theory-title {
             font-size: 2rem;
-            transform: rotate(0deg); /* На мобильных убираем наклон */
+            transform: rotate(0deg);
         }
 
         .theory-subtitle {

@@ -1,0 +1,281 @@
+[
+  {
+    "id": "food-day1",
+    "theme": "food",
+    "title": "Schwäbischer Kartoffelsalat",
+    "trophy": "Золотая картофелина",
+    "introDialogue": [
+      "Na, bereit für ein neues Abenteuer in der deutschen Küche?",
+      "Heute zeige ich dir ein Geheimnis aus dem Süden Deutschlands.",
+      "Wir machen einen schwäbischen Kartoffelsalat. Er ist weltberühmt!",
+      "Aber das Wichtigste sind die Zutaten. Schau sie dir genau an:"
+    ],
+    "ingredients": [
+      {
+        "word": "Kartoffel",
+        "article": "die"
+      },
+      {
+        "word": "Zwiebel",
+        "article": "die"
+      },
+      {
+        "word": "Brühe",
+        "article": "die"
+      },
+      {
+        "word": "Essig",
+        "article": "der"
+      },
+      {
+        "word": "Öl",
+        "article": "das"
+      },
+      {
+        "word": "Senf",
+        "article": "der"
+      }
+    ],
+    "knowledgeCheck": {
+      "prompt": "Sieht einfach aus, oder? Bist du bei den Artikeln sicher?",
+      "choices": [
+        {
+          "text": "Ja, absolut sicher!",
+          "response": "Sehr gut! Dieses Selbstvertrauen gefällt mir. Aber zur Sicherheit prüfen wir es schnell."
+        },
+        {
+          "text": "Nicht bei allen...",
+          "response": "Danke für deine Ehrlichkeit! Das ist der erste Schritt zum Erfolg. Lass uns sehen, wo wir üben müssen."
+        }
+      ]
+    },
+    "postTestFeedback": {
+      "success": "Perfekt! {accuracy}% richtig. Du bist ein wahrer Kenner! Jetzt können wir kochen.",
+      "failure": "Okay, {accuracy}%. Ein guter Anfang! Wiederhole diese Wörter bitte nochmal, dann wird der Salat perfekt."
+    },
+    "dialogue": [
+      {
+        "line": "Also, fangen wir an. Zuerst koche ich ___ Kartoffeln in Salzwasser.",
+        "article": "die"
+      },
+      {
+        "line": "Während sie kochen, schneide ich ___ Zwiebel sehr fein.",
+        "article": "die"
+      },
+      {
+        "line": "Jetzt das Dressing. Wir brauchen ___ guten Essig aus der Flasche.",
+        "article": "einen"
+      },
+      {
+        "line": "Ich gebe auch ___ Öl hinzu, aber nicht zu viel.",
+        "article": "das"
+      },
+      {
+        "line": "Ein Löffel von ___ scharfen Senf gibt die richtige Würze.",
+        "article": "dem"
+      },
+      {
+        "line": "Zum Schluss kommt die heiße ___ Brühe über die Kartoffeln. Das ist das Geheimnis!",
+        "article": "die"
+      }
+    ]
+  },
+  {
+    "id": "food-day2",
+    "theme": "food",
+    "title": "Frischer Gemüsesalat",
+    "trophy": "Grüner Blattorden",
+    "introDialogue": [
+      "Willkommen in meiner Küche!",
+      "Heute zaubern wir gemeinsam einen frischen, knackigen Gemüsesalat.",
+      "Einfach, gesund und richtig lecker – perfekt für warme Tage.",
+      "Also, schnapp dir dein Schneidebrett. Hier sind unsere Zutaten:"
+    ],
+    "ingredients": [
+      { "word": "Tomate", "article": "die" },
+      { "word": "Gurke", "article": "die" },
+      { "word": "Paprika", "article": "die" },
+      { "word": "Salat", "article": "der" },
+      { "word": "Mais", "article": "der" },
+      { "word": "Öl", "article": "das" },
+      { "word": "Zitrone", "article": "die" }
+    ],
+    "knowledgeCheck": {
+      "prompt": "Na, traust du dir zu, die richtigen Artikel zu kennen?",
+      "choices": [
+        {
+          "text": "Natürlich, ich bin bereit!",
+          "response": "Sehr schön! Dann schauen wir gleich mal, ob du recht hast."
+        },
+        {
+          "text": "Hmm, nicht ganz sicher...",
+          "response": "Keine Sorge – gemeinsam wird's klappen. Fangen wir an!"
+        }
+      ]
+    },
+    "postTestFeedback": {
+      "success": "Bravo! {accuracy}% korrekt. Du bist auf dem besten Weg zum Küchenprofi!",
+      "failure": "Nicht schlecht – {accuracy}% richtig. Übung macht den Meister. Wiederhole die Artikel noch einmal und versuch’s erneut!"
+    },
+    "dialogue": [
+      {
+        "line": "Zuerst nehmen wir ___ frischen Tomaten und schneiden sie in kleine Würfel.",
+        "article": "die"
+      },
+      {
+        "line": "Jetzt kommt ___ knackige Gurke dran – schälen und in Scheiben schneiden.",
+        "article": "die"
+      },
+      {
+        "line": "Weiter geht’s mit ___ bunten Paprika. Die bringt Farbe auf den Teller!",
+        "article": "die"
+      },
+      {
+        "line": "Natürlich darf ___ grüner Salat nicht fehlen. Den zupfen wir schön klein.",
+        "article": "der"
+      },
+      {
+        "line": "Jetzt geben wir noch etwas von ___ süßen Mais dazu. Für den extra Biss!",
+        "article": "dem"
+      },
+      {
+        "line": "Für das Dressing nehmen wir einen Schuss von ___ feinem Öl.",
+        "article": "dem"
+      },
+      {
+        "line": "Und zum Schluss kommt der Saft von ___ frischen Zitrone dazu – das macht alles schön frisch!",
+        "article": "der"
+      }
+    ]
+  },
+  {
+    "id": "food-day3",
+    "theme": "food",
+    "title": "",
+    "trophy": "",
+    "introDialogue": [],
+    "ingredients": [],
+    "knowledgeCheck": {
+      "prompt": "",
+      "choices": [
+        {
+          "text": "",
+          "response": ""
+        },
+        {
+          "text": "",
+          "response": ""
+        }
+      ]
+    },
+    "postTestFeedback": {
+      "success": "",
+      "failure": ""
+    },
+    "dialogue": []
+  },
+  {
+    "id": "food-day4",
+    "theme": "food",
+    "title": "",
+    "trophy": "",
+    "introDialogue": [],
+    "ingredients": [],
+    "knowledgeCheck": {
+      "prompt": "",
+      "choices": [
+        {
+          "text": "",
+          "response": ""
+        },
+        {
+          "text": "",
+          "response": ""
+        }
+      ]
+    },
+    "postTestFeedback": {
+      "success": "",
+      "failure": ""
+    },
+    "dialogue": []
+  },
+  {
+    "id": "food-day5",
+    "theme": "food",
+    "title": "",
+    "trophy": "",
+    "introDialogue": [],
+    "ingredients": [],
+    "knowledgeCheck": {
+      "prompt": "",
+      "choices": [
+        {
+          "text": "",
+          "response": ""
+        },
+        {
+          "text": "",
+          "response": ""
+        }
+      ]
+    },
+    "postTestFeedback": {
+      "success": "",
+      "failure": ""
+    },
+    "dialogue": []
+  },
+  {
+    "id": "food-day6",
+    "theme": "food",
+    "title": "",
+    "trophy": "",
+    "introDialogue": [],
+    "ingredients": [],
+    "knowledgeCheck": {
+      "prompt": "",
+      "choices": [
+        {
+          "text": "",
+          "response": ""
+        },
+        {
+          "text": "",
+          "response": ""
+        }
+      ]
+    },
+    "postTestFeedback": {
+      "success": "",
+      "failure": ""
+    },
+    "dialogue": []
+  },
+  {
+    "id": "food-day7",
+    "theme": "food",
+    "title": "",
+    "trophy": "",
+    "introDialogue": [],
+    "ingredients": [],
+    "knowledgeCheck": {
+      "prompt": "",
+      "choices": [
+        {
+          "text": "",
+          "response": ""
+        },
+        {
+          "text": "",
+          "response": ""
+        }
+      ]
+    },
+    "postTestFeedback": {
+      "success": "",
+      "failure": ""
+    },
+    "dialogue": []
+  }
+]

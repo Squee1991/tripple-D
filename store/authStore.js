@@ -14,7 +14,7 @@ import {
 	signInWithPopup,
 	GoogleAuthProvider
 } from 'firebase/auth';
-import {doc, setDoc, getDoc, getFirestore, updateDoc, deleteDoc} from 'firebase/firestore';
+import {doc, setDoc, getDoc, getFirestore, updateDoc, deleteDoc, serverTimestamp} from 'firebase/firestore';
 let authStateUnsubscribe = null;
 export const userAuthStore = defineStore('auth', () => {
 	const name = ref(null)
@@ -35,6 +35,18 @@ export const userAuthStore = defineStore('auth', () => {
 	};
 
 	const avatarUrl = computed(() => getAvatarUrl(avatar.value));
+
+
+	const createInitialAchievementsObject = () => {
+		return {
+			achievements: {
+				A1: { wins: 0, streaks: 0, cleanSweeps: 0, flawlessWins: 0 },
+				A2: { wins: 0, streaks: 0, cleanSweeps: 0, flawlessWins: 0 },
+				B1: { wins: 0, streaks: 0, cleanSweeps: 0, flawlessWins: 0 },
+				B2: { wins: 0, streaks: 0, cleanSweeps: 0, flawlessWins: 0 }
+			}
+		};
+	};
 
 	const setUserData = (data) => {
 		name.value = data.name || null
@@ -59,53 +71,58 @@ export const userAuthStore = defineStore('auth', () => {
 	};
 
 	const loginWithGoogle = async () => {
-		try {
-			const auth = getAuth();
-			const provider = new GoogleAuthProvider();
-			const result = await signInWithPopup(auth, provider);
-			const user = result.user;
-			const userDocRef = doc(db, 'users', user.uid);
-			const userDoc = await getDoc(userDocRef);
-			if (!userDoc.exists()) {
-				await setDoc(userDocRef, {
-					nickname: user.displayName,
-					email: user.email,
-					registeredAt: user.metadata.creationTime,
-					avatar: '1.png'
-				});
-			}
-			const finalDoc = await getDoc(userDocRef);
-			const userDataFromDb = finalDoc.data() || {};
-			setUserData({
+		const auth = getAuth();
+		const provider = new GoogleAuthProvider();
+		const result = await signInWithPopup(auth, provider);
+		const user = result.user;
+		const userDocRef = doc(db, 'users', user.uid);
+		const userDoc = await getDoc(userDocRef);
+
+		if (!userDoc.exists()) {
+
+			await setDoc(userDocRef, {
 				name: user.displayName,
 				email: user.email,
-				registeredAt: user.metadata.creationTime,
-				uid: user.uid,
-				avatar: userDataFromDb.avatar || '1.png'
+				registeredAt: serverTimestamp(),
+				avatar: '1.png',
+				...createInitialAchievementsObject()
 			});
-		} catch (error) {
-			throw error;
 		}
+
+		const finalDoc = await getDoc(userDocRef);
+		const userDataFromDb = finalDoc.data() || {};
+		setUserData({
+			name: user.displayName,
+			email: user.email,
+			registeredAt: user.metadata.creationTime,
+			uid: user.uid,
+			avatar: userDataFromDb.avatar || '1.png'
+		});
 	};
 
 	const registerUser = async (userData) => {
 		const auth = getAuth()
 		const userCredential = await createUserWithEmailAndPassword(auth, userData.email, userData.password)
-		await updateProfile(userCredential.user, { displayName: userData.name })
-		await sendEmailVerification(userCredential.user)
+		const user = userCredential.user;
+
+		await updateProfile(user, { displayName: userData.name })
+		await sendEmailVerification(user)
+
 		const defaultAvatar = '1.png';
-		await setDoc(doc(db, 'users', userCredential.user.uid), {
-			nickname: userData.name,
+
+		await setDoc(doc(db, 'users', user.uid), {
+			name: userData.name,
 			email: userData.email,
-			registeredAt: userCredential.user.metadata.creationTime,
-			avatar: defaultAvatar
+			registeredAt: serverTimestamp(),
+			avatar: defaultAvatar,
+			...createInitialAchievementsObject()
 		})
 
 		setUserData({
 			name: userData.name,
 			email: userData.email,
-			registeredAt: userCredential.user.metadata.creationTime,
-			uid: userCredential.user.uid,
+			registeredAt: user.metadata.creationTime,
+			uid: user.uid,
 			avatar: defaultAvatar
 		})
 	}
@@ -114,9 +131,7 @@ export const userAuthStore = defineStore('auth', () => {
 	const loginUser = async ({ email, password }) => {
 		const auth = getAuth()
 		const userCredential = await signInWithEmailAndPassword(auth, email, password)
-		if (!userCredential.user.emailVerified) {
-			throw { code: 'auth/email-not-verified' }
-		}
+
 		const userDocRef = doc(db, 'users', userCredential.user.uid);
 		const userDoc = await getDoc(userDocRef);
 		const userDataFromDb = userDoc.exists() ? userDoc.data() : {};
@@ -159,6 +174,7 @@ export const userAuthStore = defineStore('auth', () => {
 		}
 	}
 
+	// ВОССТАНОВЛЕНО: Ваша функция fetchuser
 	const fetchuser = () => {
 		const auth = getAuth()
 		if (authStateUnsubscribe) {
@@ -168,21 +184,25 @@ export const userAuthStore = defineStore('auth', () => {
 			if (user) {
 				const userDocRef = doc(db, 'users', user.uid);
 				const userDoc = await getDoc(userDocRef);
-				const userDataFromDb = userDoc.exists() ? userDoc.data() : {};
-				setUserData({
-					name: user.displayName,
-					email: user.email,
-					registeredAt: user.metadata.creationTime,
-					uid: user.uid,
-					avatar: userDataFromDb.avatar || null
-				})
+				if (userDoc.exists()) {
+					const userDataFromDb = userDoc.data();
+					setUserData({
+						name: userDataFromDb.name, // Читаем из БД
+						email: user.email,
+						registeredAt: user.metadata.creationTime,
+						uid: user.uid,
+						avatar: userDataFromDb.avatar || null
+					})
+				}
 			} else {
 				setUserData({});
 			}
 		})
 	}
 
+	// Вызываем вашу функцию
 	fetchuser()
+
 	return {
 		name,
 		email,

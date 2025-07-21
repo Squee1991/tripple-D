@@ -8,7 +8,7 @@
 				</span>
 			</div>
 			<div class="achievements-card-container">
-				<div v-for="item in group.achievements" :key="item.id" class="achievement-card-overall">
+				<div v-for="item in group.achievements" :key="item.id" class="achievement__card">
 					<div class="achievement-icon-wrapper-overall">
 						<div class="achievement-icon-overall">
 							<span class="icon-img-overall">{{ item.icon }}</span>
@@ -34,12 +34,14 @@
 </template>
 
 <script setup>
-	import {ref, watch , computed} from 'vue'
+	import {ref, watch , onMounted} from 'vue'
 	import {overAchievment} from '../achieveGroup/overAllAchieve/overallAchievements.js'
 	import {userlangStore} from '../../store/learningStore.js'
 	import {userAuthStore} from '../../store/authStore.js'
 	import {useGameStore} from '../../store/marafonStore.js'
+	import { useQuestStore } from '../../store/questStore.js'
 	const gameStore = useGameStore()
+	const questStore = useQuestStore()
 	const langStore = userlangStore()
 	const authStore = userAuthStore()
 	const {t} = useI18n()
@@ -70,12 +72,24 @@
 			achievement.currentProgress = Math.min(newPoints, achievement.targetProgress);
 		}
 	}, {immediate: true});
+
+
+	watch(() => questStore.dailyQuestCount, (newPoints) => {
+		const ach = findAchievementById('daily');
+		if (ach) {
+			const currentPoints = (typeof newPoints === 'number' && !isNaN(newPoints)) ? newPoints : 0;
+			ach.currentProgress = Math.min(currentPoints, ach.targetProgress);
+		}
+	}, { immediate: true });
+
+
 	watch(() => langStore.exp, (newExp) => {
 		const achievement = findAchievementById('levelUpExp');
 		if (achievement) {
 			achievement.currentProgress = Math.min(newExp, achievement.targetProgress);
 		}
 	}, {immediate: true});
+
 	watch(() => langStore.learnedWords.length, (newLength) => {
 		const ach10 = findAchievementById('learned10Words');
 		if (ach10) {
@@ -86,12 +100,14 @@
 			ach100.currentProgress = Math.min(newLength, ach100.targetProgress);
 		}
 	}, {immediate: true});
+
 	watch(() => langStore.wrongAnswers.length, (newLength) => {
 		const achievement = findAchievementById('wrong100Answers');
 		if (achievement) {
 			achievement.currentProgress = Math.min(newLength, achievement.targetProgress);
 		}
 	}, {immediate: true});
+
 	watch(() => authStore.registeredAt, (registrationDate) => {
 		if (registrationDate) {
 			const achievement = findAchievementById('SiteRegular');
@@ -104,18 +120,21 @@
 			}
 		}
 	}, {immediate: true});
+
 	watch(() => gameStore.lastChanceProgress, (newProgress) => {
 		const ach = findAchievementById('LastChance');
 		if (ach) {
 			ach.currentProgress = newProgress;
 		}
 	}, { immediate: true });
+
 	watch(() => gameStore.marginForErrorProgress, (newProgress) => {
 		const ach = findAchievementById('MarginForError');
 		if (ach) {
 			ach.currentProgress = newProgress;
 		}
-	}, { immediate: true });
+	},
+			{ immediate: true });
 	watch(() => gameStore.onTheEdgeProgress, (newProgress) => {
 		const ach = findAchievementById('OnTheEdge');
 		if (ach) {
@@ -126,10 +145,9 @@
 </script>
 
 <style scoped>
-	@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 	.achievements {
-		font-family: 'Fredoka One', cursive;
+		font-family: "Nunito", sans-serif;
 		width: 100%;
 	}
 
@@ -142,7 +160,6 @@
 		align-items: center;
 		gap: 1rem;
 		margin-bottom: 1.5rem;
-		/* Добавляем линию-разделитель в стиле доски */
 		padding-bottom: 1rem;
 		border-bottom: 3px dashed rgba(27, 27, 27, 0.5);
 	}
@@ -177,7 +194,7 @@
 		flex-direction: column;
 	}
 
-	.achievement-card-overall {
+	.achievement__card {
 		display: flex;
 		align-items: flex-start;
 		gap: 1rem;
@@ -259,4 +276,11 @@
 		margin: 0;
 		line-height: 1.4;
 	}
+
+	@media (max-width: 1280px ) {
+		.achievement__card {
+			width: 100%;
+		}
+	}
+
 </style>

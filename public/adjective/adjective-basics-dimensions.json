@@ -1,0 +1,52 @@
+[
+  {
+    "question": "Der Turm ist ___.",
+    "options": ["hoch", "breit", "kurz", "tief"],
+    "answer": "hoch"
+  },
+  {
+    "question": "Die Schlange ist ___.",
+    "options": ["kurz", "eng", "lang", "flach"],
+    "answer": "lang"
+  },
+  {
+    "question": "Der Ozean ist ___.",
+    "options": ["flach", "tief", "hoch", "eng"],
+    "answer": "tief"
+  },
+  {
+    "question": "Der Fluss ist ___.",
+    "options": ["schmal", "breit", "kurz", "niedrig"],
+    "answer": "breit"
+  },
+  {
+    "question": "Der Korridor ist ___.",
+    "options": ["lang", "breit", "weit", "eng"],
+    "answer": "eng"
+  },
+  {
+    "question": "Das Buch ist ___.",
+    "options": ["dünn", "kurz", "dick", "schmal"],
+    "answer": "dick"
+  },
+  {
+    "question": "Der Pool ist ___.",
+    "options": ["hoch", "flach", "breit", "lang"],
+    "answer": "flach"
+  },
+  {
+    "question": "Der Weg ist ___.",
+    "options": ["nah", "eng", "weit", "tief"],
+    "answer": "weit"
+  },
+  {
+    "question": "Das Haar ist ___.",
+    "options": ["dick", "dünn", "schwer", "breit"],
+    "answer": "dünn"
+  },
+  {
+    "question": "Die Straße ist ___.",
+    "options": ["breit", "rund", "schmal", "quadratisch"],
+    "answer": "schmal"
+  }
+]

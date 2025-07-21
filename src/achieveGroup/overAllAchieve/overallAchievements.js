@@ -19,6 +19,14 @@ export const overAchievment = [
 				targetProgress: 31
 			},
 			{
+				id: "daily",
+				name: "generalCategory.dailyTitle",
+				description: "generalCategory.dailyText",
+				icon: "🔁",
+				currentProgress: 0,
+				targetProgress: 50
+			},
+			{
 				id: "MarginForError",
 				name: "generalCategory.marginLabel",
 				description: "generalCategory.marginText",
@@ -32,7 +40,7 @@ export const overAchievment = [
 				description: "generalCategory.edgeText",
 				icon: "⏳",
 				currentProgress: 0,
-				targetProgress: 20,
+				targetProgress: 50,
 			},
 			{
 				id: 'firstArticleAward',
@@ -65,6 +73,30 @@ export const overAchievment = [
 				icon: '📚',
 				currentProgress: 0,
 				targetProgress: 100,
+			},
+			{
+				id: 'grandmaster_sentences',
+				name: 'Гроссмейстер',
+				description: 'Составить 500 предложений в сумме на всех уровнях.',
+				icon: '🎓',
+				currentProgress: 0,
+				targetProgress: 500,
+			},
+			{
+				id: 'master_of_duels',
+				name: 'Магистр дуэлей',
+				description: 'Одержать 250 побед в сумме на всех уровнях.',
+				icon: '⚔',
+				currentProgress: 0,
+				targetProgress: 250,
+			},
+			{
+				id: 'long_word_hunter',
+				name: 'Охотник за словами',
+				description: 'Составить 10 предложений, содержащих слово из 12+ букв.',
+				icon: '🧐',
+				currentProgress: 0,
+				targetProgress: 10,
 			},
 			{
 				id: 'wrong100Answers',

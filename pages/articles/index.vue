@@ -85,14 +85,13 @@
 </template>
 
 <script setup>
-    // ВАША ЛОГИКА ОСТАЕТСЯ ПОЛНОСТЬЮ БЕЗ ИЗМЕНЕНИЙ
     import {ref, computed, onMounted} from 'vue'
     import {useRouter} from 'vue-router'
-    import {userlangStore} from '../store/learningStore.js'
+    import {userlangStore} from '../../store/learningStore.js'
     import Lottie from 'lottie-web'
-
+    import { nameMap } from '../../utils/nameMap.js'
     const {t} = useI18n()
-    import NotFound from '../assets/animation/notFound.json'
+    import NotFound from '../../assets/animation/notFound.json'
 
     const showModesBlock = ref(false)
     const showNoTopicMessage = ref(true)
@@ -124,7 +123,7 @@
     }
 
     const goBack = () => {
-        router.push('/')
+        router.back()
     }
 
     const page = ref(0)
@@ -148,37 +147,37 @@
         if (page.value > 0) page.value--
     }
 
-    const nameMap = {
-        Furniture: 'nameMap.Furniture',
-        Animals: 'nameMap.Animals',
-        Clothes: 'nameMap.Clothes',
-        Food: 'nameMap.Food',
-        Body: 'nameMap.Body',
-        Professions: 'nameMap.Professions',
-        Transport: 'nameMap.Transport',
-        Colors: 'nameMap.Colors',
-        Nature: 'nameMap.Nature',
-        Home: 'nameMap.Home',
-        Zeit: 'nameMap.Zeit',
-        City: 'nameMap.City',
-        School: 'nameMap.School',
-        DaysAndMonths: 'nameMap.DaysAndMonths',
-        Toys: 'nameMap.Toys',
-        CommonItems: 'nameMap.CommonItems',
-        BathroomItems: 'nameMap.BathroomItems',
-        Kosmetik: 'nameMap.Kosmetik',
-        Familie: 'nameMap.Familie',
-        Emotions: 'nameMap.Emotions',
-        Werkzeuge: 'nameMap.Werkzeuge',
-        Kitchen: 'nameMap.Kitchen',
-        Health: 'nameMap.Health',
-        Sport: 'nameMap.Sport',
-        SportEquipment: 'nameMap.SportEquipment',
-        Travel: 'nameMap.Travel',
-        Musik: 'nameMap.Musik',
-        Amount: 'nameMap.Amount',
-        Informatik: 'nameMap.Informatik'
-    }
+    // const nameMap = {
+    //     Furniture: 'nameMap.Furniture',
+    //     Animals: 'nameMap.Animals',
+    //     Clothes: 'nameMap.Clothes',
+    //     Food: 'nameMap.Food',
+    //     Body: 'nameMap.Body',
+    //     Professions: 'nameMap.Professions',
+    //     Transport: 'nameMap.Transport',
+    //     Colors: 'nameMap.Colors',
+    //     Nature: 'nameMap.Nature',
+    //     Home: 'nameMap.Home',
+    //     Zeit: 'nameMap.Zeit',
+    //     City: 'nameMap.City',
+    //     School: 'nameMap.School',
+    //     DaysAndMonths: 'nameMap.DaysAndMonths',
+    //     Toys: 'nameMap.Toys',
+    //     CommonItems: 'nameMap.CommonItems',
+    //     BathroomItems: 'nameMap.BathroomItems',
+    //     Kosmetik: 'nameMap.Kosmetik',
+    //     Familie: 'nameMap.Familie',
+    //     Emotions: 'nameMap.Emotions',
+    //     Werkzeuge: 'nameMap.Werkzeuge',
+    //     Kitchen: 'nameMap.Kitchen',
+    //     Health: 'nameMap.Health',
+    //     Sport: 'nameMap.Sport',
+    //     SportEquipment: 'nameMap.SportEquipment',
+    //     Travel: 'nameMap.Travel',
+    //     Musik: 'nameMap.Musik',
+    //     Amount: 'nameMap.Amount',
+    //     Informatik: 'nameMap.Informatik'
+    // }
 
     const modes = [
         {key: 'article', label: 'modes.article'},
@@ -224,7 +223,7 @@
         await store.saveToFirebase()
 
         const path = localePath({
-            name: 'session',
+            path: '/articles/articles-session',
             query: {
                 topic: selectedTopic.value,
                 mode: selectedModes.value
@@ -234,17 +233,17 @@
 
     }
 
-
     onMounted(async () => {
         const res = await fetch('/words.json')
         themeList.value = await res.json()
     })
+
 </script>
 
 <style scoped>
 
     .theme-page {
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         background-color: #fef8e4;
         min-height: 100vh;
         padding: 2rem;
@@ -276,7 +275,7 @@
     }
 
     .theme-title {
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         font-size: 2.5rem;
         color: #1e1e1e;
         text-align: center;
@@ -286,7 +285,7 @@
         display: flex;
         align-items: center;
         gap: 0.5rem;
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         font-weight: 400;
         font-size: 1.1rem;
         background: #fff;
@@ -401,12 +400,11 @@
     }
 
     .theme-card-title {
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         font-size: 1.5rem;
         color: #1e1e1e;
     }
 
-    /* Пагинация */
     .theme-pagination {
         display: flex;
         justify-content: center;
@@ -417,7 +415,7 @@
     }
 
     .theme-pagination button {
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         background: #fff;
         color: #1e1e1e;
         border: 3px solid #1e1e1e;
@@ -583,7 +581,7 @@
     .start-btn {
         width: 100%;
         padding: 1rem;
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         font-size: 1.5rem;
         background-color: #4ade80;
         border: 3px solid #1e1e1e;
@@ -615,5 +613,65 @@
         transform: translateX(110%);
     }
 
+    @media (max-width: 767px) {
+        .theme-content-area {
+            gap: 0;
+        }
+
+        .grid-area-wrapper {
+            width: 100%;
+        }
+
+        .learning-modes-block {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            max-width: 380px;
+            z-index: 2000;
+            border-radius: 0;
+            box-shadow: -5px 0px 15px rgba(0,0,0,0.1);
+            border: none;
+            border-left: 3px solid #1e1e1e;
+        }
+
+        .slide-right-enter-from,
+        .slide-right-leave-to {
+            transform: translateX(100%);
+        }
+
+        .theme-title {
+            font-size: 1.1rem;
+            margin: 0 0.5rem;
+            line-height: 1.2;
+        }
+        .theme__title-wrapper {
+            padding: 0 0.5rem 1rem 0.5rem;
+        }
+        .back-btn {
+            padding: 0.5rem 0.8rem;
+            width: auto;
+            flex-shrink: 0;
+        }
+        .title-spacer {
+            display: none;
+        }
+
+        .learning-modes-container {
+            width: 0;
+        }
+        .learning-modes-block {
+            max-width: 100%;
+        }
+
+        .theme-card {
+            padding: 15px 10px;
+        }
+
+        .theme-card-title {
+            font-size: 1.1rem;
+        }
+    }
 
 </style>

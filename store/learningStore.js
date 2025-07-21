@@ -99,23 +99,17 @@ export const userlangStore = defineStore('learning', () => {
 	}
 
 	const markAsLearned = async (word, selectedModes = []) => {
-		const requiredModes = selectedModes.length
-			? selectedModes
-			: ['article', 'letters', 'wordArticle', 'audio', 'plural']
-
-		const isFullyLearned = requiredModes.every(mode => word.progress?.[mode] === true)
-		if (!isFullyLearned) return
-		if (!learnedWords.value.find(w => w.de === word.de)) {
-			learnedWords.value.push({ ...word })
-
-			points.value++
-			totalEarnedPoints.value++
-			exp.value++
-			handleLeveling()
-
-			await saveToFirebase()
+		const requiredModes = ['article', 'letters', 'wordArticle', 'audio', 'plural'];
+		const progress = word.progress || {};
+		const allPassed = requiredModes.every(mode => progress[mode] === true);
+		if (!allPassed) return;
+		const alreadyLearned = learnedWords.value.some(w => w.de === word.de);
+		if (!alreadyLearned) {
+			learnedWords.value.push({ ...word });
+			await saveToFirebase();
 		}
 	}
+
 
 	const addWrongAnswers = async (word) => {
 		if (!word || !word.de) return;

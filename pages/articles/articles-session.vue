@@ -12,14 +12,14 @@
 				<div v-if="!finished && currentWord && currentMode">
 					<div class="session__theme">
 						<div class="session__theme-t">{{ t('sessionPage.theme')}}:</div>
-						<h1 class="session__topic">{{ topicTitle }}</h1>
+						<h1 class="session__topic">{{ translatedTopic }}</h1>
 					</div>
 					<div class="progress-line">
 						<span>{{ store.currentIndex + 1 }} / {{ totalWords }}</span>
 						<span>{{t('sessionPage.choice')}}: <b>{{ t(modeLabel(currentMode)) }}</b> ({{ currentModeIndex + 1 }}/{{ selectedModes.length }})</span>
 					</div>
 					<div class="word-block">
-						<div class="word-question">
+						<div v-if="!currentMode === 'audio'" class="word-question">
 							<span>{{t('sessionLabels.word')}}: {{ currentWord?.[currentLang] }}</span>
 						</div>
 						<div class="mode-exercise">
@@ -38,7 +38,8 @@
 								<input v-model="userInput" class="trainer-app__input" readonly/>
 							</div>
 							<div v-if="currentMode === 'wordArticle'">
-								<p>{{t('sessionLabels.articleWordFor')}}</p>
+<!--								<p>{{t('sessionLabels.articleWordFor')}} </p>-->
+								<p> <b>Слово : {{ currentWord.ru }}</b></p>
 								<input v-model="userInput" class="trainer-app__input"/>
 							</div>
 							<div v-if="currentMode === 'plural'">
@@ -48,7 +49,7 @@
 							<div v-if="currentMode === 'audio'">
 								<p>{{t('sessionLabels.audioFor')}}:</p>
 								<button @click="speak(currentWord.de)" class="audio-btn">
-									<img class="megaphones__icon" src="../assets/images/megaphone.svg" alt="">
+									<img class="megaphones__icon" src="../../assets/images/megaphone.svg" alt="">
 									<span>Прослушать</span>
 								</button>
 								<input v-model="userInput" class="trainer-app__input"/>
@@ -79,7 +80,7 @@
 								@click="repeatMistakes">
 							Повторить ошибки ({{ wrongWords.length }})
 						</button>
-						<router-link class="btn btn--secondary" to="/selectedTopics">Назад к темам</router-link>
+						<router-link class="btn btn--secondary" to="/articles">Назад к темам</router-link>
 					</div>
 				</div>
 			</div>
@@ -93,8 +94,9 @@
 <script setup>
 	import {ref, computed, onMounted} from 'vue'
 	import {useRoute, useRouter} from 'vue-router'
-	import {userlangStore} from '../store/learningStore.js'
-
+	import {userlangStore} from '../../store/learningStore.js'
+	import { getSpeechAudio } from '../../utils/googleTTS.js'
+	import { nameMap , nameMode  } from '../../utils/nameMap.js'
 	const {t, locale} = useI18n()
 	const wrongWords = ref([])
 	const allWords = ref([])
@@ -105,9 +107,9 @@
 	const selectedModes = ref([])
 	const sessionWords = ref([])
 	const finished = ref(false)
-	const topicTitle = ref('');
 	const userInput = ref('')
 	const result = ref('')
+	const topicTitle = ref('')
 	const usedLetters = ref([])
 	const isChecking = ref(false)
 	const currentModeIndex = computed(() => store.currentModeIndex)
@@ -115,20 +117,14 @@
 	const currentWord = computed(() => store.selectedWords[store.currentIndex])
 	const totalWords = computed(() => store.selectedWords.length)
 	const currentLang = computed(() => locale.value);
-
+	const translatedTopic = computed(() => t(nameMap[topicTitle.value]))
+	const isSpeaking = ref(false)
 	const goBack = () => {
-		router.push('/selectedTopics')
+		router.back()
 	}
 
 	function modeLabel(mode) {
-		const m = {
-			article: 'modes.article',
-			letters: 'modes.letters',
-			wordArticle: 'modes.articleWord',
-			plural: 'modes.plural',
-			audio: 'modes.audio'
-		}
-		return m[mode] || mode
+		return nameMode[mode] || mode
 	}
 
 	const shuffledLetters = computed(() => {
@@ -143,9 +139,12 @@
 	}
 
 	function speak(text) {
-		const u = new window.SpeechSynthesisUtterance(text)
-		u.lang = 'de-DE'
-		window.speechSynthesis.speak(u)
+		if (isSpeaking.value) return
+		isSpeaking.value = true
+		getSpeechAudio(text, )
+		setTimeout(() => {
+			isSpeaking.value = false
+		}, 3000)
 	}
 
 	function normalize(text) {
@@ -261,7 +260,7 @@
 
 <style scoped>
 	.session-page {
-		font-family: 'Nunito', sans-serif;
+		font-family: "Nunito", sans-serif;
 		background-color: #f0ebe5;
 		background-image: repeating-linear-gradient(90deg, #e9e2db, #e9e2db 20px, #f0ebe5 20px, #f0ebe5 40px);
 		min-height: 100vh;
@@ -387,7 +386,7 @@
 	}
 
 	.session__topic {
-		font-family: 'Caveat', cursive;
+		font-family: "Nunito", sans-serif;
 		font-size: 2.5rem;
 		color: #fff;
 	}
@@ -453,7 +452,7 @@
 	}
 
 	.letters button {
-		font-family: 'Caveat', cursive;
+		font-family: "Nunito", sans-serif;
 		font-size: 1.5rem;
 		width: 45px;
 		height: 45px;
@@ -520,7 +519,7 @@
 
 	.btn {
 		padding: 12px 24px;
-		font-family: 'Caveat', cursive;
+		font-family: "Nunito", sans-serif;
 		font-size: 1.5rem;
 		color: #f1c40f;
 		background-color: transparent;
@@ -556,7 +555,7 @@
 	}
 
 	.finish-block__title {
-		font-family: 'Caveat', cursive;
+		font-family: "Nunito", sans-serif;
 		font-size: 3rem;
 		color: #fff;
 	}

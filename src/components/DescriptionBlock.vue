@@ -75,7 +75,7 @@
     .features {
         background: #fef8e4;
         padding: 6rem 1.5rem;
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         overflow-x: hidden;
     }
 
@@ -89,7 +89,7 @@
         text-align: center;
         margin-bottom: 4rem;
         font-size: 3rem;
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         font-weight: 400;
         color: white;
         letter-spacing: -0.02em;

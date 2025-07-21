@@ -10,7 +10,9 @@
     import {userAuthStore} from './store/authStore.js'
     import {useSentencesStore} from './store/sentencesStore.js';
     import {useTrainerStore} from './store/themenProgressStore.js'
+    import { useQuestStore } from './store/questStore.js'
     import {onMounted} from "vue";
+    const questStore = useQuestStore()
     const learningStore = userlangStore()
     const trainerStore = userlangStore()
     const authStore = userAuthStore()
@@ -31,7 +33,8 @@
 
     onMounted(async () => {
         await learningStore.loadFromFirebase()
-        await sentencesStore.loadSentences()
+        sentencesStore.loadSentences()
+        questStore.loadDailyProgress()
     })
 
     // onMounted(() => {
