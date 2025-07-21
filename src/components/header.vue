@@ -1,5 +1,6 @@
 <template>
-    <header class="header" :class="{ isShow: hideHeader }">
+    <header class="header">
+        <div v-if="isMobileMenuOpen" class="mobile-nav-overlay" @click="isMobileMenuOpen = false"></div>
         <Uioverlay :visible="showAuth" @close="closeAuth"/>
         <transition name="slide">
             <SignIn v-if="showAuth" @close-auth-form="closeAuth"/>
@@ -16,75 +17,48 @@
                 <NuxtLink to="/" class="header-logo">
                     <img class="logo-img" src="../../assets/images/3dLogo.png" alt="Logo"/>
                 </NuxtLink>
-                <nav ref="dropdownRefNav" class="header-nav" :class="{ 'header-nav--open': isMobileMenuOpen }">
+                <nav ref="dropdownRefNav" class="header-nav" :class="{ 'is-open': isMobileMenuOpen }">
                     <ul class="header-nav__list">
-                        <li
-                                v-for="item in menuItems"
-                                :key="item.id"
-                                class="header-nav__item"
-                                @mouseover="isDesktop ? openSubmenu(item.id) : null"
-                                @mouseleave="isDesktop ? closeSubmenu() : null"
-                        >
-                            <NuxtLink v-if="item.url"
-                                      :to="item.url"
-                                      class="header-nav__link"
-                                      @click="closeAllMenus">
+                        <li v-for="item in menuItems" :key="item.id" class="header-nav__item">
+                            <NuxtLink v-if="item.url" :to="item.url" class="header-nav__link" @click="closeAllMenus">
                                 {{ t(item.valueKey) }}
                             </NuxtLink>
-                            <span @click="handleMenuItemClick(item)" v-else class="header-nav__link">
+                            <span v-else @click="handleMenuItemClick(item)" class="header-nav__link">
                                 <span>{{ t(item.valueKey) }}</span>
                                 <img
                                         v-if="item.children"
-                                        :class="['header-nav__arrow', { 'header-nav__arrow--active': clickedMenu === item.id }]"
+                                        :class="['header-nav__arrow', { 'rotated': clickedMenu === item.id }]"
                                         :src="Arrow"
                                         alt=">"
                                 />
                             </span>
-                            <ul v-if="item.children && (hoveredMenu === item.id || clickedMenu === item.id)"
-                                class="header-nav__submenu">
-                                <li v-for="child in item.children"
-                                    :key="child.id"
-                                    class="header-nav__submenu-item"
-                                >
-                                    <NuxtLink v-if="child.url"
-                                              :to="child.url"
-                                              class="header-nav__submenu-link"
-                                              @click="closeAllMenus"
-                                              @mouseenter="handleSubmenuEnter(child.id)"
-                                              @mouseleave="handleSubmenuLeave"
-                                    >
+                            <ul v-if="item.children && clickedMenu === item.id" class="header-nav__submenu">
+                                <li v-for="child in item.children" :key="child.id" class="header-nav__submenu-item">
+                                    <NuxtLink v-if="child.url" :to="child.url" class="header-nav__submenu-link"
+                                              @click="closeAllMenus">
                                         {{ t(child.valueKey) }}
                                     </NuxtLink>
-                                    <span v-else
-                                          class="header-nav__submenu-link"
-                                          @click.stop="child.subChildren ? toggleSubChild(child.id) : handleSubmenuItemClick(child)"
-                                          @mouseenter="handleSubmenuEnter(child.id)"
-                                          @mouseleave="handleSubmenuLeave"
-                                    >
-                                           <span>{{ t(child.valueKey) }}</span>
-                                           <img v-if="child.subChildren"
-                                                :class="['header-nav__arrow', { 'header-nav__arrow--active': clickedSubChild === child.id }]"
+                                    <span v-else class="header-nav__submenu-link"
+                                          @click.stop="handleSubmenuItemClick(child)">
+                                        <span>{{ t(child.valueKey) }}</span>
+                                        <img
+                                                v-if="child.subChildren"
+                                                :class="['header-nav__arrow', { 'rotated': clickedSubChild === child.id }]"
                                                 :src="Arrow"
                                                 alt=""
-                                           />
-                                       </span>
-                                    <ul v-if="child.subChildren"
-                                        class="header-nav__submenu-sub"
-                                        :class="{ visible: hoveredChild === child.id || clickedSubChild === child.id }"
-                                        @mouseenter="handleSubmenuEnter(child.id)"
-                                        @mouseleave="handleSubmenuLeave"
-                                    >
-                                        <li v-for="sub in child.subChildren"
-                                            :key="sub.id"
-                                            class="header-nav__submenu-sub-item"
-                                        >
+                                        />
+                                    </span>
+                                    <ul v-if="child.subChildren && clickedSubChild === child.id"
+                                        class="header-nav__submenu-sub">
+                                        <li v-for="sub in child.subChildren" :key="sub.id"
+                                            class="header-nav__submenu-sub-item">
                                             <NuxtLink :to="sub.url" class="header-nav__submenu-link"
-                                                      @click="closeAllMenus">{{ t(sub.valueKey) }}
+                                                      @click="closeAllMenus">
+                                                {{ t(sub.valueKey) }}
                                             </NuxtLink>
                                         </li>
                                     </ul>
                                 </li>
-
                             </ul>
                         </li>
                     </ul>
@@ -104,11 +78,7 @@
                 <div v-if="userAuth.name" class="header-user" @click="toggleMenu">
                     <img class="header-user__avatar" :src="userAuth.avatarUrl" alt="User avatar"/>
                     <span class="header-user__name">{{ userAuth.email }}</span>
-                    <img
-                            :class="['header-nav__arrow', { 'header-nav__arrow--active': menuOpen }]"
-                            :src="Arrow"
-                            alt="v"
-                    />
+                    <img :class="['header-nav__arrow', { 'rotated': menuOpen }]" :src="Arrow" alt="v"/>
                     <div ref="dropdownRef" v-if="menuOpen" class="header-user__dropdown">
                         <button
                                 v-for="item in menuActions"
@@ -117,7 +87,7 @@
                                 @click.stop="item.action"
                         >
                             <img class="header-user__dropdown-icon" :src="item.icon" alt=""/>
-                            <span class="header__drop-text">{{ item.label }}</span>
+                            <span class="header__drop-text">{{ t(item.label) }}</span>
                         </button>
                     </div>
                 </div>
@@ -147,7 +117,6 @@
     import Dev from '../../assets/images/dev.svg'
     import User from '../../assets/images/account.svg'
     import Logout from '../../assets/images/logout.svg'
-    import {onUnmounted} from "../../.nuxt/imports";
 
     const {t} = useI18n()
     const learningStore = userlangStore()
@@ -158,98 +127,64 @@
     const showAuth = ref(false)
     const menuOpen = ref(false)
     const isMobileMenuOpen = ref(false)
-    const hoveredMenu = ref(null)
     const clickedMenu = ref(null)
     const showDevModal = ref(false)
     const clickedSubChild = ref(null)
-    const hoveredChild = ref(null);
-    const hideSubmenuTimer = ref(null);
-    const closeAllMenus = () => {
-        hoveredMenu.value = null;
-        hoveredChild.value = null;
-        if (hideSubmenuTimer.value) {
-            clearTimeout(hideSubmenuTimer.value);
-            hideSubmenuTimer.value = null;
+
+    const dropdownRef = ref(null)
+    const dropdownRefNav = ref(null)
+    const isMobile = computed(() => bp.isMobile);
+
+    watch(isMobileMenuOpen, (newVal) => {
+        if (newVal) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
         }
+    });
+    watch(showAuth, (val) => {
+        document.body.style.overflow = val ? 'hidden' : ''
+    })
+    watch(showDevModal, (val) => {
+        document.body.style.overflow = val ? 'hidden' : ''
+    })
+    watch(isMobile, (isNowMobile) => {
+        if (!isNowMobile) {
+            closeAllMenus();
+        }
+    });
+
+    const closeAllMenus = () => {
         isMobileMenuOpen.value = false;
         clickedMenu.value = null;
         clickedSubChild.value = null;
     }
 
-    const toggleSubChild = (id) => {
-        clickedSubChild.value = clickedSubChild.value === id ? null : id
-    }
-    const dropdownRef = ref(null)
-    const dropdownRefNav = ref(null)
-    const isDesktop = computed(() => !bp.isMobile);
-    const isMobile = computed(() => bp.isMobile);
-    const openDevModal = () => showDevModal.value = true
-    const closeDevModal = () => showDevModal.value = false
     const handleMenuItemClick = (item) => {
-        if (isMobile.value) {
-            if (item.children) {
-                toggleSubmenu(item.id);
-            } else if (item.action) {
-                item.action();
-                closeAllMenus();
-            } else if (item.url) {
-                closeAllMenus();
-            }
-        } else {
-            if (item.action) {
-                item.action();
-            }
-        }
-    }
-
-    const handleSubmenuItemClick = (childItem) => {
-        if (childItem.action) {
-            childItem.action();
+        if (item.children) {
+            clickedMenu.value = clickedMenu.value === item.id ? null : item.id;
+            clickedSubChild.value = null;
+        } else if (item.action) {
+            item.action();
+            closeAllMenus();
+        } else if (item.url) {
             closeAllMenus();
         }
     }
 
-    const openSubmenu = (id) => {
-        if (isDesktop.value) {
-            hoveredMenu.value = id;
+    const handleSubmenuItemClick = (childItem) => {
+        if (childItem.subChildren) {
+            clickedSubChild.value = clickedSubChild.value === childItem.id ? null : childItem.id;
+        } else if (childItem.action) {
+            childItem.action();
+            closeAllMenus();
+        } else if (childItem.url) {
+            closeAllMenus();
         }
     }
 
-    const closeSubmenu = () => {
-        if (isDesktop.value) {
-            hoveredMenu.value = null;
-            if (hideSubmenuTimer.value) {
-                clearTimeout(hideSubmenuTimer.value);
-                hideSubmenuTimer.value = null;
-            }
-            hoveredChild.value = null;
-        }
-        clickedSubChild.value = null;
-    }
-
-    const toggleSubmenu = (id) => {
-        if (isMobile.value) {
-            clickedMenu.value = clickedMenu.value === id ? null : id
-        }
-    }
-
-    const handleSubmenuEnter = (childId) => {
-        if (isDesktop.value) {
-            if (hideSubmenuTimer.value) {
-                clearTimeout(hideSubmenuTimer.value);
-                hideSubmenuTimer.value = null;
-            }
-            hoveredChild.value = childId;
-        }
-    };
-
-    const handleSubmenuLeave = () => {
-        if (isDesktop.value) {
-            hideSubmenuTimer.value = setTimeout(() => {
-                hoveredChild.value = null;
-            }, 500);
-        }
-    };
+    const openDevModal = () => showDevModal.value = true
+    const closeDevModal = () => showDevModal.value = false
 
     const closeAuth = () => showAuth.value = false
     const openAuth = () => showAuth.value = true
@@ -266,10 +201,14 @@
                 {
                     id: "verbs", valueKey: 'sub.verbs', subChildren: [
                         {id: 'tenses', url: 'tenses', valueKey: 'underSub.verbFirst'},
-                        {id: 'modalVerbs', url: 'modal-verbs', valueKey: 'underSub.verbSecond', },
-                        // {id: '', valueKey: 'underSub.verbThird', url: ''},
-                        // {id: '', valueKey: 'underSub.verbFourth', url: ''},
-                        // {id: '', valueKey: 'underSub.verbFifth', url: ''}
+                        {id: 'modalVerbs', url: 'modal-verbs', valueKey: 'underSub.verbSecond',},
+                    ]
+                },
+                {
+                    id: 'adjectives', valueKey: 'sub.adjectives', subChildren: [
+                        {id: 'adjectives-basic' , url: 'adjective-basics' , valueKey: 'underSub.adjectivesBasic'},
+                        {id: 'declination' , url: 'adjective-declension' , valueKey: 'underSub.declination'},
+                        {id: 'comparison' , url: 'adjective-comparison' , valueKey: 'underSub.comparison'},
                     ]
                 },
                 {id: 'cards', url: 'createCards', valueKey: 'sub.card'},
@@ -285,16 +224,17 @@
                 {id: 'prepare', url: 'prepare', valueKey: 'sub.marathon'},
             ]
         },
-        {id: 'achieve', url: 'achievmentsPage', valueKey: 'nav.achieve'},
-        {id: 'stats', url: 'stats', valueKey: 'nav.stats'}
+        {id: 'achieve', url: '/achievements', valueKey: 'nav.achieve'},
+        {id: 'stats', url: '/stats', valueKey: 'nav.stats'}
     ]
 
     const menuActions = ref([
-        {id: 'cabinet', label: 'Кабинет', icon: User, action: () => goTo('cabinet')},
-        {id: 'logout', label: 'Выход', icon: Logout, action: () => userAuth.logOut()}
+        {id: 'cabinet', label: 'auth.cabinet', icon: User, action: () => goTo('cabinet')},
+        {id: 'logout', label: 'auth.logOut', icon: Logout, action: () => userAuth.logOut()}
     ])
 
     const toggleMenu = () => menuOpen.value = !menuOpen.value
+
     const goTo = (page) => {
         menuOpen.value = false
         router.push({path: `/${page}`})
@@ -304,30 +244,22 @@
         if (menuOpen.value && dropdownRef.value && !dropdownRef.value.contains(event.target)) {
             menuOpen.value = false
         }
-        if (isDesktop.value && hoveredMenu.value && dropdownRefNav.value && !dropdownRefNav.value.contains(event.target)) {
-            closeSubmenu();
+        if (clickedMenu.value && dropdownRefNav.value && !dropdownRefNav.value.contains(event.target)) {
+            closeAllMenus();
         }
     }
 
     onMounted(() => {
         document.addEventListener('mousedown', handleClickOutside)
     })
+
     onBeforeUnmount(() => {
         document.removeEventListener('mousedown', handleClickOutside)
+        document.body.style.overflow = '';
     })
-
-    watch(showAuth, (val) => {
-        document.body.style.overflow = val ? 'hidden' : ''
-    })
-
-    watch(showDevModal, (val) => {
-        document.body.style.overflow = val ? 'hidden' : ''
-    })
-
 </script>
 
 <style scoped>
-
     .header {
         font-family: "Nunito", sans-serif;
         position: sticky;
@@ -335,7 +267,6 @@
         z-index: 100;
         background-color: #fef8e4;
         border-bottom: 4px solid #1e1e1e;
-
     }
 
     .header-container {
@@ -378,33 +309,32 @@
         align-items: center;
         gap: 0.4rem;
         color: #1e1e1e;
-        font-weight: 400;
+        font-weight: 600;
         padding: 0.5rem 0.75rem;
         text-decoration: none;
         border-radius: 12px;
-        border-bottom: none;
         transition: all 0.2s;
         cursor: pointer;
+        user-select: none;
     }
 
     .header-nav__link:hover {
         background-color: #f1c40f;
         color: #1e1e1e;
-        border-bottom-color: transparent;
     }
 
     .header-nav__arrow {
         width: 1rem;
-        transition: transform 0.2s ease;
+        transition: transform 0.3s ease;
     }
 
-    .header-nav__arrow--active {
-        transform: rotate(-90deg);
+    .header-nav__arrow.rotated {
+        transform: rotate(90deg);
     }
 
     .header-nav__submenu {
         position: absolute;
-        top: 100%;
+        top: calc(100% + 5px);
         left: 0;
         z-index: 110;
         background: #FFFFFF;
@@ -413,26 +343,6 @@
         box-shadow: 4px 4px 0px #1e1e1e;
         padding: 0.5rem;
         min-width: 240px;
-        opacity: 0;
-        pointer-events: none;
-        animation: menu-pop 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-        animation-play-state: paused;
-    }
-
-    .header-nav__item:hover .header-nav__submenu {
-        pointer-events: auto;
-        animation-play-state: running;
-    }
-
-    @keyframes menu-pop {
-        from {
-            opacity: 0;
-            transform: translateY(10px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
     }
 
     .header-nav__submenu-item {
@@ -443,16 +353,32 @@
         cursor: pointer;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding: 0.8rem 1rem;
         color: #1e1e1e;
-        font-weight: 400;
+        font-weight: 600;
         text-decoration: none;
         border-radius: 12px;
         transition: all 0.2s;
+        user-select: none;
     }
 
     .header-nav__submenu-link:hover {
         background-color: #fef8e4;
+    }
+
+    .header-nav__submenu-sub {
+        position: absolute;
+        top: -0.5rem;
+        left: 100%;
+        margin-left: 10px;
+        padding: 0.5rem;
+        background: #fff;
+        border: 3px solid #1e1e1e;
+        border-radius: 12px;
+        box-shadow: 4px 4px 0px #1e1e1e;
+        white-space: nowrap;
+        z-index: 120;
     }
 
     .articlus__wrapper, .header-user {
@@ -468,13 +394,12 @@
 
     .articlus {
         width: 28px;
-
     }
 
     .articlus__counter {
         color: #1e1e1e;
         font-size: 1.2rem;
-        font-weight: 400;
+        font-weight: 600;
     }
 
     .header-user {
@@ -482,7 +407,6 @@
         cursor: pointer;
         position: relative;
         user-select: none;
-        height: 53px;
     }
 
     .header-user__avatar {
@@ -494,7 +418,7 @@
 
     .header-user__name {
         color: #1e1e1e;
-        font-weight: 400;
+        font-weight: 600;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -511,7 +435,6 @@
         border: 3px solid #1e1e1e;
         border-radius: 16px;
         box-shadow: 4px 4px 0px #1e1e1e;
-        /*padding: 0.5rem;*/
         overflow: hidden;
     }
 
@@ -527,7 +450,7 @@
         cursor: pointer;
         font-size: 1rem;
         color: #1e1e1e;
-        font-weight: 400;
+        font-weight: 600;
         font-family: 'Fredoka One', cursive;
         transition: all 0.2s;
         border-radius: 12px;
@@ -542,7 +465,9 @@
     }
 
     .btn-login {
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
+        font-style: italic;
+        font-weight: 600;
         padding: 0.8rem 1.5rem;
         font-size: 1.1rem;
         border-radius: 16px;
@@ -561,77 +486,130 @@
 
     .burger-button {
         display: none;
-        background: transparent;
-        border: none;
-        cursor: pointer;
     }
 
+    .mobile-nav-overlay {
+        display: none;
+    }
 
     @media (max-width: 1024px) {
-        .header-nav {
-            display: flex;
+        .header-container {
+            padding: 0.5rem 1rem;
+        }
+
+        .mobile-nav-overlay {
+            display: block;
             position: fixed;
-            top: 83px;
+            top: 0;
             left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 100;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .header.mobile-menu-active .mobile-nav-overlay {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .header-nav {
+            display: block;
+        }
+
+        .header-nav:not(.is-open) {
+            pointer-events: none;
+        }
+
+        .articlus__wrapper, .header-user__name, .header__drop-text {
+            display: none;
+        }
+
+        .logo-img {
+            display: none
+        }
+
+        .header-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
             width: 100%;
-            height: 100%;
-            padding-top: 1rem;
+            max-width: 100%;
+            padding: 1.5rem;
             background: #fef8e4;
-            flex-direction: column;
-            z-index: 1;
+            z-index: 101;
             transform: translateX(-100%);
-            transition: transform 0.2s ease;
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.2);
+            overflow-y: auto;
         }
 
-        .header-nav--open {
-            transform: translateX(1);
+        .header-nav.is-open {
+            transform: translateX(0);
+            pointer-events: auto;
         }
 
-        .header-nav__list {
+        .header-nav .header-nav__list {
+            display: flex;
             flex-direction: column;
+            gap: 0.5rem;
             width: 100%;
-            padding: 1rem;
+            padding-top: 40px;
         }
 
-        .header-nav__item {
-            border-bottom: 3px solid #1e1e1e;
+        .header-nav .header-nav__item {
+            border-bottom: 2px solid rgba(30, 30, 30, 0.1);
         }
 
-        .header-nav__link {
-            font-size: 1.5rem;
-            padding: 1rem;
+        .header-nav .header-nav__link {
+            font-size: 1.3rem;
+            padding: 1rem 0.5rem;
             justify-content: space-between;
         }
 
-        .header-nav__submenu {
+        .header-nav .header-nav__submenu {
             position: static;
             box-shadow: none;
             border: none;
-            padding-left: 1.5rem;
-            transform: none;
+            padding: 0.5rem 0 0.5rem 1.5rem;
             animation: none;
             background: none;
             opacity: 1;
             pointer-events: auto;
-            display: block !important;
+            min-width: auto;
         }
 
-        .header-nav__submenu-link {
-            padding: 0.8rem 1rem;
-            color: #555;
-            font-size: 1.2rem;
+        .header-nav .header-nav__submenu-link {
+            padding: 0.75rem;
+            color: #444;
+            font-size: 1.1rem;
         }
 
-        .header-nav__arrow {
+        .header-nav .header-nav__submenu-sub {
+            position: static;
+            box-shadow: none;
+            border: none;
+            padding: 0.5rem 0 0.5rem 1rem;
+            background: none;
+            white-space: normal;
+        }
+
+        .header-nav .header-nav__submenu-sub .header-nav__submenu-link {
+            font-size: 1rem;
+            color: #777;
+            padding: 0.5rem;
+        }
+
+        .header-nav .header-nav__arrow {
             transform: rotate(-90deg);
         }
 
-        .header-nav__arrow--active {
+        .header-nav .header-nav__arrow.rotated {
             transform: rotate(0deg);
-        }
-
-        .articlus__wrapper, .logo-img, .header-user__name, .header__drop-text {
-            display: none;
         }
 
         .burger-button {
@@ -639,25 +617,4 @@
             z-index: 102;
         }
     }
-
-    .header-nav__submenu-sub {
-        position: absolute;
-        top: -0.5rem;
-        left: 100%;
-        margin-left: 10px;
-        padding: 0.5rem;
-        background: #fff;
-        border: 2px solid #1e1e1e;
-        border-radius: 12px;
-        box-shadow: 4px 4px 0px #1e1e1e;
-        white-space: nowrap;
-        z-index: 120;
-        display: none;
-
-    }
-
-    .header-nav__submenu-sub.visible {
-        display: block;
-    }
-
 </style>

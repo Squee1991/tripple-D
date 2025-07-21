@@ -1,5 +1,5 @@
 <script setup>
-    import {useGameStore} from '../store/SentenceDuelStore.js';
+    import {useGameStore} from '../store/sentenceDuelStore.js';
     import {useRouter} from 'vue-router';
     import {watch, computed, ref , onUnmounted } from 'vue';
     import Modal from '../src/components/modal.vue'
@@ -12,9 +12,9 @@
     const isOpponentFound = computed(() => gameStore.sessionData?.status === 'starting');
 
     const overlayData = ref({
-        title: "Правила игры «Дуэль Порядка»",
-        text:"Ваша задача — быстрее соперника составить правильное предложение из перемешанных слов. Кто первый справился, тот и выиграл раунд. Удачи!",
-        subtext:"Победитель дуэли определяется по кол-ву выигранных раундов"
+        title: "wordDuel.rulesTitle",
+        text:"wordDuel.rulesText",
+        subtext:"wordDuel.subText"
     })
 
     const openModal = () => {
@@ -60,8 +60,8 @@
         <Modal
                 :visible="showDevModal"
                 @close="closeModal"
-                :title="overlayData.title"
-                :text="overlayData.text"
+                :title="t(overlayData.title)"
+                :text="t(overlayData.text)"
         />
         <div class="lobby-container">
             <div v-if="!isWaitingForOpponent && !isOpponentFound">
@@ -70,16 +70,16 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
                         </svg>
-                        <span>Назад</span>
+                        <span>{{t('wordDuel.btnBack')}}</span>
                     </button>
                     <div class="header-section">
-                        <h1 class="page-title">Добро пожаловать в «Дуэль Порядка»!</h1>
+                        <h1 class="page-title">{{ t('wordDuel.title')}}</h1>
                     </div>
                     <div @click="openModal">
                         <img class="duel__question-img" src="../assets/images/question.svg" alt="">
                     </div>
                 </div>
-                <p class="page-subtitle">Выберите уровень для начала битвы!</p>
+                <p class="page-subtitle">{{ t('wordDuel.subTitle')}}</p>
                 <div class="level-grid">
                     <button
                             v-for="level in levels"
@@ -88,18 +88,18 @@
                             class="level-card"
                             :disabled="gameStore.isSearching"
                     >
-                        <h2 class="card-level-title">Уровень: {{ level }}</h2>
+                        <h2 class="card-level-title">{{t('wordDuel.level')}} {{ level }}</h2>
                     </button>
                 </div>
             </div>
             <div v-else class="status-overlay">
                 <div v-if="isWaitingForOpponent">
-                    <p class="status-text">Идёт поиск соперника<span class="dots">...</span></p>
-                    <button @click="cancelSearch" class="cancel-button">Отменить</button>
+                    <p class="status-text">{{t('wordDuel.searching')}}<span class="dots">...</span></p>
+                    <button @click="cancelSearch" class="cancel-button">{{t('wordDuel.cancel')}}</button>
                 </div>
                 <div v-if="isOpponentFound">
-                    <p class="status-text">Противник найден!</p>
-                    <p class="page-subtitle">Приготовьтесь, игра вот-вот начнется...</p>
+                    <p class="status-text">{{t('wordDuel.found')}}</p>
+                    <p class="page-subtitle">{{t('wordDuel.prepare')}}</p>
                 </div>
             </div>
         </div>
@@ -125,7 +125,7 @@
         color: #1e1e1e;
         font-size: 1.2rem;
         font-weight: 400;
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         box-shadow: 4px 4px 0px #1e1e1e;
         transition: all 0.1s ease-in-out;
     }
@@ -157,7 +157,7 @@
         font-size: 2.8rem;
         font-weight: 800;
         color: #1e1e1e;
-        margin: 0;
+        text-align: center;
     }
 
     .page-subtitle {
@@ -174,6 +174,10 @@
         gap: 30px;
         max-width: 900px;
         margin: 0 auto;
+    }
+
+    .header-section {
+        padding: 12px;
     }
 
     .level-card {
@@ -261,5 +265,25 @@
         background-color: #E89C9C;
         color: white;
         transform: translateY(-2px);
+    }
+
+    @media (max-width: 1024px) {
+           .page-title {
+               font-size: 1.2rem;
+               text-align: center;
+           }
+        .duel__header {
+            padding: 0 10px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .back-button-global {
+            font-size: .9rem;
+            padding: 10px;
+        }
+        .duel__header {
+            flex-direction: column;
+        }
     }
 </style>

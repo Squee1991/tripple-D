@@ -1,15 +1,37 @@
 <template>
-    <main class="tenses-layout">
+    <main class="tenses-layout" :class="{ 'content-is-active': isContentVisible }">
+        <div v-if="showTips" class="tips__overlay" @click.self="showTips = false">
+            <div class="tips__content">
+                <button class="tips__close" @click="showTips = false">×</button>
+                <!--                <h2 class="tipps__title"> Советы : </h2>-->
+                <ul class="tips__list">
+                    <li
+                            v-for="(tip, index) in activeTipps"
+                            :key="tip.text"
+                            class="tips__item"
+                    >
+                        <div class="tips__text-xl" :class="['tips__text', { 'tips__under': index === activeTipps.length - 1 }]">
+                            {{t(tip.text) }}
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <aside class="tenses-sidebar">
-            <NuxtLink to="/" class="sidebar-button-home"> {{t('tenses.barBtn')}}</NuxtLink>
-            <h2 class="tenses-sidebar__title">{{t('tenses.times')}}</h2>
+            <NuxtLink to="/" class="sidebar-button-home">{{ t('tenses.barBtn') }}</NuxtLink>
+            <h2 class="tenses-sidebar__title">{{ t('tenses.times') }}</h2>
             <div v-for="group in tenseGroups" :key="group.level" class="level-group">
                 <h3 class="level-group__title">{{ group.level }}</h3>
                 <ul class="tense-menu">
-                    <li v-for="tense in group.tenses" :key="tense.name" class="tense-menu__item">
-                        <a class="tense-menu__link"
-                           :class="{ 'tense-menu__link--is-active': selectedTense && selectedTense.name === tense.name }"
-                           @click.prevent="selectTense(tense)"
+                    <li
+                            v-for="tense in group.tenses"
+                            :key="tense.name"
+                            class="tense-menu__item"
+                    >
+                        <a
+                                class="tense-menu__link"
+                                :class="{ 'tense-menu__link--is-active': selectedTense?.name === tense.name }"
+                                @click.prevent="selectTense(tense)"
                         >
                             <span class="tense-menu__icon">📚</span>
                             <span class="tense-menu__name">{{ tense.name }}</span>
@@ -20,20 +42,36 @@
             </div>
         </aside>
         <section class="tenses-content">
+            <button v-if="showCloseButton" class="close-content-btn" @click="closeContent">×</button>
             <div v-if="selectedTense" class="content-block">
-                <h1 class="content-block__title"> {{t('tenses.time')}}: {{ selectedTense.name }}</h1>
+                <h1 class="content-block__title">
+                    {{ t('tenses.time') }}: {{ selectedTense.name }}
+                </h1>
+
                 <div class="tense-module">
                     <div class="tense-module__content">
                         <div class="tense-module__info">
-                            <div v-for="block in selectedTense.infoBlocks" :key="block.title" class="info-block">
-                                <h4 class="info-block__title">{{ t(block.title) }}</h4>
-                                <code v-if="block.type === 'formula'" class="info-block__formula">
+                            <div
+                                    v-for="(block, index) in selectedTense.infoBlocks"
+                                    :key="index"
+                                    class="info-block"
+                            >
+                                <div class="info__wrapper">
+                                    <h4 class="info-block__title">{{ t(block.title) }}</h4>
+                                    <div
+                                            v-if="block.tipps"
+                                            class="info__icon-tips"
+                                            :ref="el => tipRefs[index] = el"
+                                            @click="openTips(block.tipps, index)"
+                                    ></div>
+                                </div>
+                                <div v-if="block.type === 'formula'" class="info-block__formula">
                                     {{ t(block.content) }}
-                                </code>
-
+                                </div>
                                 <ul v-else-if="block.type === 'rules'" class="info-block__rules">
                                     <li v-for="rule in block.content" :key="rule">{{ t(rule) }}</li>
                                 </ul>
+
                                 <ul v-else-if="block.type === 'examples'" class="example-list">
                                     <li v-for="example in block.content" :key="example.sentence" class="example-item">
                                         <p class="example-item__sentence" v-html="t(example.sentence)"></p>
@@ -44,14 +82,18 @@
                         </div>
                         <div class="tense-module__practice">
                             <div class="practice-list">
-                                <div v-for="drill in selectedTense.drills" :key="drill.title"
-                                    class="practice-list__item">
-<!--                                    <img :src="drill.icon" alt="icon" class="practice-list__icon" />-->
+                                <div
+                                        v-for="drill in selectedTense.drills"
+                                        :key="drill.title"
+                                        class="practice-list__item"
+                                >
                                     <div class="practice-list__details">
                                         <h4 class="practice-list__title">{{ t(drill.title) }}</h4>
                                         <p class="practice-list__description">{{ t(drill.description) }}</p>
                                     </div>
-                                    <NuxtLink :to="drill.url" class="practice-list__button">{{t('tenses.begin')}}</NuxtLink>
+                                    <NuxtLink :to="drill.url" class="practice-list__button">
+                                        {{ t('tenses.begin') }}
+                                    </NuxtLink>
                                 </div>
                             </div>
                         </div>
@@ -59,17 +101,33 @@
                 </div>
             </div>
             <div v-else class="placeholder">
-                <p>👈 Выберите время из меню слева.</p>
+                <p>👈 {{ t('tenses.chooseHint') }}</p>
             </div>
         </section>
     </main>
 </template>
 
 <script setup>
-    import {ref} from 'vue';
-    import ThinkingIcon from '../../assets/images/thinking.svg'
-    import Constructor from '../../assets/images/Construktor.svg'
-    const { t } = useI18n()
+    import {ref, onMounted, onUnmounted, watch, nextTick} from 'vue'
+    import Lottie from 'lottie-web'
+    import TipIcon from '../../assets/animation/info.json'
+
+    const {t} = useI18n()
+
+    const selectedTense = ref(null)
+    const showTips = ref(false)
+    const activeTipps = ref([])
+    const isContentVisible = ref(false)
+    const showCloseButton = ref(false)
+    const isMobileLayout = ref(false)
+    const tipRefs = ref([])
+    const lottieInstances = ref([])
+    const interval = ref(null)
+
+    const openTips = (tipps, index) => {
+        activeTipps.value = tipps
+        showTips.value = true
+    }
     const tenseGroups = ref([
         {
             level: 'A1 - A2',
@@ -78,19 +136,36 @@
                     name: 'Präsens',
                     level: 'A1',
                     infoBlocks: [
-                        {title: 'tenses.howToDo', type: 'formula', content: 'tensesPrasens.howToDo'},
+                        {
+                            title: 'tenses.howToDo',
+                            icon: TipIcon,
+                            type: 'formula',
+                            content: 'tensesPrasens.howToDo',
+                            tipps: [
+                                {text: "prasensTips.first"},
+                                {text: "prasensTips.second"},
+                                {text: "prasensTips.third"},
+                                {text: "prasensTips.fourth", className: "tips__under"},
+                            ]
+
+                        },
                         {
                             title: 'tenses.howToUse',
                             type: 'rules',
                             content: ['tensesPrasens.howToUseFirst', 'tensesPrasens.howToUseSecond', 'tensesPrasens.howToUseThird']
                         },
                         {
-                            title: 'tenses.examples', type: 'examples', content: [
+                            title: 'tenses.examples',
+                            type: 'examples',
+                            content: [
                                 {
                                     sentence: 'Ich <b>lerne</b> jeden Tag Deutsch.',
                                     translation: 'tensesPrasens.example'
                                 },
-                                {sentence: 'Er <b>spielt</b> Fußball.', translation: 'tensesPrasens.exampleTwo'}
+                                {
+                                    sentence: 'Er <b>spielt</b> Fußball.',
+                                    translation: 'tensesPrasens.exampleTwo'
+                                }
                             ]
                         }
                     ],
@@ -105,14 +180,30 @@
                     name: 'Perfekt',
                     level: 'A2',
                     infoBlocks: [
-                        {title: 'tenses.howToDo', type: 'formula', content: 'haben / sein + Partizip II'},
+                        {
+                            title: 'tenses.howToDo',
+                            icon: TipIcon,
+                            type: 'formula',
+                            content: 'haben / sein + Partizip II',
+                            tipps: [
+                                { text: 'perfectTips.first' },
+                                { text: 'perfectTips.second' },
+                                { text: 'perfectTips.third' },
+                                { text: 'perfectTips.fourth' },
+                                { text: 'perfectTips.fifth' },
+                                { text: 'perfectTips.sixth' }
+                            ]
+                        },
+
                         {
                             title: 'tenses.howToUse',
                             type: 'rules',
-                            content: ['perfect.howToUseFirst', 'perfect.howToUseSecond']
+                            content: ['perfect.howToUseFirst', 'perfect.howToUseSecond'],
                         },
                         {
-                            title: 'tenses.examples', type: 'examples', content: [
+                            title: 'tenses.examples',
+                            type: 'examples',
+                            content: [
                                 {
                                     sentence: 'Sie <b>hat</b> ein Buch <b>gelesen</b>.',
                                     translation: 'perfect.example'
@@ -126,19 +217,70 @@
                     ],
                     drills: [
                         {
-                            icon: ThinkingIcon,
+                            icon: '',
                             title: 'perfect.choose',
                             description: 'perfect.explain',
                             url: '/tenses/past-auxiliary'
                         },
                         {
-                            icon: Constructor,
+                            icon: '',
                             title: 'perfect.chooseTwo',
                             description: 'perfect.explainTwo',
                             url: '/tenses/past-participle'
                         }
                     ]
                 },
+                {
+                    name: 'Futur I',
+                    level: 'A2',
+                    infoBlocks: [
+                        {
+                            title: 'Как образуется?',
+                            icon: TipIcon,
+                            type: 'formula',
+                            content: 'werden (в Präsens) + инфинитив в конце',
+                            tipps: [
+                                { text: '1. Вспомогательный глагол werden спрягается: ich werde, du wirst, er/sie/es wird и т.д.' },
+                                { text: '2. Основной глагол (инфинитив) ставится в конец предложения' },
+                                { text: '3. Используется для обозначения будущих действий' },
+                                { text: '4. Заменяет Präsens, если нужно подчеркнуть намерение или сделать предположение' },
+                                { text: '5. Пример: Ich werde lernen. / Er wird bald kommen.' },
+                                { text: '6. Вопросительное предложение: Wirst du morgen kommen?' }
+                            ]
+                        },
+                        {
+                            title: 'Когда используется?',
+                            type: 'rules',
+                            content: [
+                                'Планируемые действия в будущем',
+                                'Предположения о настоящем или будущем'
+                            ]
+                        },
+                        {
+                            title: 'Примеры',
+                            type: 'examples',
+                            content: [
+                                {
+                                    sentence: 'Ich <b>werde</b> morgen <b>lernen</b>.',
+                                    translation: 'Я буду учиться завтра.'
+                                },
+                                {
+                                    sentence: 'Er <b>wird</b> bald <b>kommen</b>.',
+                                    translation: 'Он скоро придёт.'
+                                }
+                            ]
+                        }
+                    ],
+                    drills: [
+                        {
+                            icon: '',
+                            title: 'Спряжение werden',
+                            description: 'Выберите правильную форму глагола werden в зависимости от лица.',
+                            url: '/tenses/futur-session'
+                        },
+                    ]
+                }
+
             ]
         },
         {
@@ -150,16 +292,28 @@
                     infoBlocks: [
                         {
                             title: 'tenses.howToDo',
+                            icon: TipIcon,
                             type: 'formula',
-                            content: 'präteritum.howToDo'
+                            content: 'präteritum.howToDo',
+                            tipps: [
+                                { text: 'prateritumTips.first' },
+                                { text: 'prateritumTips.second' },
+                                { text: 'prateritumTips.third' },
+                                { text: 'prateritumTips.fourth' },
+                                { text: 'prateritumTips.fifth' }
+                            ]
+
                         },
                         {
                             title: 'tenses.howToUse',
                             type: 'rules',
-                            content: ['präteritum.howToUseFirst', 'präteritum.howToUseSecond']
+                            content: ['präteritum.howToUseFirst', 'präteritum.howToUseSecond'],
+
                         },
                         {
-                            title: 'tenses.examples', type: 'examples', content: [
+                            title: 'tenses.examples',
+                            type: 'examples',
+                            content: [
                                 {
                                     sentence: 'Die Prinzessin <b>lebte</b> in einem Schloss.',
                                     translation: 'präteritum.example'
@@ -184,16 +338,28 @@
                     infoBlocks: [
                         {
                             title: 'tenses.howToDo',
+                            icon: TipIcon,
                             type: 'formula',
-                            content: 'hatten / waren + Partizip II'
+                            content: 'hatten / waren + Partizip II',
+                            tipps: [
+                                { text: 'plusquamperfekt.first' },
+                                { text: 'plusquamperfekt.second' },
+                                { text: 'plusquamperfekt.third' },
+                                { text: 'plusquamperfekt.fourth' },
+                                { text: 'plusquamperfekt.fifth' }
+                            ]
                         },
                         {
                             title: 'tenses.howToDo',
                             type: 'rules',
-                            content: ['pqPerfect.howToUseFirst', 'pqPerfect.howToUseSecond']
+                            icon: TipIcon,
+                            content: ['pqPerfect.howToUseFirst', 'pqPerfect.howToUseSecond'],
+
                         },
                         {
-                            title: 'tenses.examples', type: 'examples', content: [
+                            title: 'tenses.examples',
+                            type: 'examples',
+                            content: [
                                 {
                                     sentence: 'Er <b>hatte</b> schon <b>gegessen</b>, als ich ankam.',
                                     translation: 'pqPerfect.example'
@@ -216,27 +382,88 @@
         }
     ]);
 
-    const selectedTense = ref(tenseGroups.value[0].tenses[0]);
+    const initLottieIcons = async () => {
+        await nextTick()
+        lottieInstances.value.forEach(i => i?.destroy())
+        lottieInstances.value = []
+
+        tipRefs.value.forEach(container => {
+            if (!container) return
+            const instance = Lottie.loadAnimation({
+                container,
+                renderer: 'svg',
+                loop: false,
+                autoplay: true,
+                animationData: TipIcon
+            })
+            lottieInstances.value.push(instance)
+        })
+    }
+
+    const checkScreenSize = () => {
+        isMobileLayout.value = window.innerWidth <= 1024
+        showCloseButton.value = isMobileLayout.value
+        if (!isMobileLayout.value) isContentVisible.value = false
+    }
+
+    const closeContent = () => {
+        isContentVisible.value = false
+    }
+
+    onMounted(async () => {
+        window.addEventListener('resize', checkScreenSize)
+        checkScreenSize()
+        if (!isMobileLayout.value) selectedTense.value = tenseGroups.value[0].tenses[0]
+        await initLottieIcons()
+
+        interval.value = setInterval(() => {
+            lottieInstances.value.forEach(instance => {
+                instance?.stop()
+                instance?.play()
+            })
+        }, 15000)
+    })
+
+    onUnmounted(() => {
+        window.removeEventListener('resize', checkScreenSize)
+        lottieInstances.value.forEach(i => i?.destroy())
+        clearInterval(interval.value)
+    })
+
+    watch(selectedTense, async () => {
+        await initLottieIcons()
+    })
 
     function selectTense(tense) {
-        selectedTense.value = tense;
+        selectedTense.value = tense
+        if (isMobileLayout.value) isContentVisible.value = true
     }
+
 </script>
 
 <style scoped>
-
     .practice-list__item {
         display: flex;
         flex-direction: column;
         flex: 1;
     }
 
+    .info__icon-tips {
+        width: 60px;
+        cursor: pointer;
+    }
+
+    .info__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
     .practice-list {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-
-
     }
 
     .example-item {
@@ -285,7 +512,7 @@
         display: block;
         text-align: center;
         width: 100%;
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         padding: 0.8rem;
         margin-bottom: 2rem;
         font-size: 1.2rem;
@@ -366,6 +593,7 @@
         overflow-y: auto;
         flex: 1;
         box-shadow: 6px 6px 0px #1e1e1e;
+        position: relative;
     }
 
     .content-block__title {
@@ -409,7 +637,6 @@
     .info-block__title {
         font-size: 1.7rem;
         font-weight: bold;
-        margin-bottom: 10px;
     }
 
     .info-block__formula {
@@ -477,7 +704,89 @@
         transform: translate(2px, 2px);
     }
 
-    @media (max-width: 1024px) {
+    .placeholder {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        font-size: 1.5rem;
+        color: #fff;
+    }
+
+    .close-content-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 44px;
+        height: 44px;
+        background-color: #fff;
+        border: 3px solid #1e1e1e;
+        border-radius: 50%;
+        font-size: 28px;
+        font-weight: bold;
+        color: #1e1e1e;
+        cursor: pointer;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1;
+        padding: 0;
+    }
+
+    .tips__text {
+        font-size: 1.4rem;
+        padding: 12px;
+        background: #f9f9f9;
+        border-radius: 8px;
+        border-left: 4px solid #60a5fa;
+        box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .tips__item {
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+        color: #333;
+        position: relative;
+    }
+
+    @media (max-width: 1023px) {
+        .tenses-layout {
+            display: block;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .content-block__title {
+            font-size: 1.6rem;
+        }
+
+        .tenses-sidebar {
+            width: 100%;
+            height: 100vh;
+            border-radius: 0;
+            border: none;
+            box-shadow: none;
+            min-width: unset;
+        }
+
+        .tenses-content {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 100%;
+            height: 100vh;
+            border-radius: 0;
+            z-index: 50;
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transform: translateX(0);
+        }
+
+        .tenses-layout.content-is-active .tenses-content {
+            transform: translateX(-100%);
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+        }
+
         .tense-module__content {
             display: flex;
             flex-direction: column;
@@ -487,7 +796,86 @@
         .tense-module__practice {
             width: 100%;
             padding: 10px 30px;
+            border-right: none;
         }
+
+        .tips__text {
+            color: #222;
+            font-size: .9rem;
+
+        }
+
+        .tips__item {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            color: #333;
+            position: relative;
+        }
+    }
+
+
+    .tips__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 9998;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tips__content {
+        position: relative;
+        z-index: 9999;
+        font-family: "Nunito", sans-serif;
+        border: 3px solid #1e1e1e;
+        padding: 2rem;
+        background: white;
+        border-radius: 16px;
+        box-shadow: 8px 8px 0 #1e1e1e;
+        width: 80%;
+        max-width: 600px;
+    }
+
+    .tips__close {
+        position: absolute;
+        top: 3px;
+        right: 10px;
+        background: #f97028;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        font-weight: bold;
+        border: 2px solid #1e1e1e;
+        box-shadow: 3px 3px 0 #1e1e1e;
+        transition: background 0.2s;
+    }
+
+    .tips__close:hover {
+        background: #ff8f50;
+    }
+
+    .tips__list {
+        padding: 5px;
+    }
+
+    .tipps__title {
+        padding: 12px 0;
+        font-size: 25px;
+    }
+
+    .tips__under {
+        background: #fffde7;
+        border-left-color: #fbc02d;
+        font-weight: bold;
+        color: #000;
     }
 
 </style>

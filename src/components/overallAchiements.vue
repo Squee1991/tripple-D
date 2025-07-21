@@ -8,7 +8,7 @@
 				</span>
 			</div>
 			<div class="achievements-card-container">
-				<div v-for="item in group.achievements" :key="item.id" class="achievement-card-overall">
+				<div v-for="item in group.achievements" :key="item.id" class="achievement__card">
 					<div class="achievement-icon-wrapper-overall">
 						<div class="achievement-icon-overall">
 							<span class="icon-img-overall">{{ item.icon }}</span>
@@ -194,7 +194,7 @@
 		flex-direction: column;
 	}
 
-	.achievement-card-overall {
+	.achievement__card {
 		display: flex;
 		align-items: flex-start;
 		gap: 1rem;
@@ -276,4 +276,11 @@
 		margin: 0;
 		line-height: 1.4;
 	}
+
+	@media (max-width: 1280px ) {
+		.achievement__card {
+			width: 100%;
+		}
+	}
+
 </style>

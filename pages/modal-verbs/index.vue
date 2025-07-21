@@ -1,5 +1,5 @@
 <template>
-    <main class="modals-layout">
+    <main class="modals-layout" :class="{ 'content-is-active': isContentVisible }">
         <div class="modals-sidebar">
             <NuxtLink to="/" class="sidebar-button-home">На главную</NuxtLink>
             <h2 class="modals-sidebar__title">Уровни</h2>
@@ -16,9 +16,12 @@
             </ul>
         </div>
         <section class="modals-content">
+            <button v-if="showCloseButton" @click="closeContent" class="close-content-btn" aria-label="Закрыть">
+                &times;
+            </button>
+
             <div v-if="selectedGroup" class="content-wrapper">
                 <h1 class="content-title">Модальные глаголы: {{ selectedGroup.level }}</h1>
-
                 <div class="verb-list-card">
                     <ul class="verb-list">
                         <li v-for="verb in selectedGroup.verbs" :key="verb.name" class="verb-list__item">
@@ -36,12 +39,41 @@
                     {{ selectedGroup.practice.icon }} {{ selectedGroup.practice.title }}
                 </NuxtLink>
             </div>
+            <div v-else class="placeholder-mobile">
+                <p>👈 Выберите уровень из меню</p>
+            </div>
         </section>
     </main>
 </template>
 
 <script setup>
-    import {ref} from 'vue';
+    import { ref, onMounted, onUnmounted } from 'vue';
+    const isMobileLayout = ref(false);
+    const showCloseButton = ref(false);
+    const isContentVisible = ref(false);
+
+    const checkScreenSize = () => {
+        const screenWidth = window.innerWidth;
+        isMobileLayout.value = screenWidth <= 1024;
+        showCloseButton.value = screenWidth <= 768;
+        if (!isMobileLayout.value) {
+            isContentVisible.value = false;
+        }
+    };
+
+    onMounted(() => {
+        window.addEventListener('resize', checkScreenSize);
+        checkScreenSize();
+    });
+
+    onUnmounted(() => {
+        window.removeEventListener('resize', checkScreenSize);
+    });
+
+    const closeContent = () => {
+        isContentVisible.value = false;
+    };
+
     const modalGroups = ref([
         {
             level: 'A1 - A2',
@@ -85,15 +117,24 @@
         }
     ]);
 
-    const selectedGroup = ref(modalGroups.value[0]);
+    const selectedGroup = ref(null);
+
+    onMounted(() => {
+        if (!isMobileLayout.value) {
+            selectedGroup.value = modalGroups.value[0];
+        }
+    });
+
     function selectGroup(group) {
         selectedGroup.value = group;
+        if (isMobileLayout.value) {
+            isContentVisible.value = true;
+        }
     }
-
 </script>
 
 <style scoped>
-
+    /* ... все твои старые стили остаются здесь ... */
     .modals-layout {
         display: grid;
         grid-template-columns: 280px 1fr;
@@ -171,6 +212,7 @@
         padding: 2.5rem;
         overflow-y: auto;
         background-color: #60a5fa;
+        position: relative; /* Для позиционирования крестика */
     }
 
     .content-title {
@@ -227,10 +269,6 @@
         margin-right: 0.5rem;
     }
 
-    .practice-footer {
-        margin-top: 1rem;
-    }
-
     .practice-footer__button {
         display: block;
         text-align: center;
@@ -252,16 +290,83 @@
         box-shadow: 2px 2px 0px #1e1e1e;
     }
 
+    .placeholder-mobile {
+        display: none;
+    }
+
+    .close-content-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 44px;
+        height: 44px;
+        background-color: #fff;
+        border: 3px solid #1e1e1e;
+        border-radius: 50%;
+        font-size: 28px;
+        font-weight: bold;
+        color: #1e1e1e;
+        cursor: pointer;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1;
+        padding: 0;
+    }
+
+    /* --- НОВЫЙ БЛОК: Стили для адаптации --- */
     @media (max-width: 1024px) {
+        .modals-layout {
+            display: block;
+            position: relative;
+            overflow-x: hidden;
+            padding: 0;
+            gap: 0;
+        }
+
+        .modals-sidebar {
+            width: 100%;
+            height: 100vh;
+            border-radius: 0;
+            border: none;
+            box-shadow: none;
+        }
+
+        .modals-content {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 100%;
+            height: 100vh;
+            border-radius: 0;
+            z-index: 50;
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transform: translateX(0);
+        }
+
+        .modals-layout.content-is-active .modals-content {
+            transform: translateX(-100%);
+            box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+        }
+
         .content-title {
             font-size: 1.5rem;
             padding: 10px;
         }
-    }
 
-    @media (max-width: 1024px) {
         .verb-list__main {
             flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .placeholder-mobile {
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.5rem;
         }
     }
 </style>

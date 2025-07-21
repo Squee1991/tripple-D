@@ -181,7 +181,7 @@
 
 </template>
 
-<style setup>
+<style>
     :root {
         --classroom-bg: #f0ebe5;
         --blackboard-bg: #2c3e50;
@@ -244,9 +244,9 @@
         transform: rotate(-5deg);
         transition: all 0.2s ease-in-out;
     }
-    .back-card-button:hover {
-        transform: rotate(0deg) scale(1.05);
-    }
+    /*.back-card-button:hover {*/
+    /*    transform: rotate(0deg) scale(1.05);*/
+    /*}*/
     .back-card-button .pin { display: none; }
     .back-card-button span {
         font-size: 1.2rem;
@@ -259,7 +259,6 @@
         display: flex;
         justify-content: center;
         gap: 1rem;
-        /*background: rgba(255,255,255,0.1);*/
         padding: 0.5rem;
         border-radius: 16px;
     }
@@ -398,5 +397,134 @@
         color: #1e1e1e;
         font-weight: 400;
     }
+
+    @media (max-width: 1023px) {
+        .classroom-layout {
+            padding: 0;
+            position: relative;
+        }
+
+        .blackboard-wrapper {
+            width: 100%;
+            height: 100%;
+            border-radius: 0;
+            border: none;
+            box-shadow: none;
+            padding: 1rem;
+            padding-bottom: 180px;
+        }
+        .blackboard {
+            padding: 1rem;
+        }
+        .back-card-button {
+            top: 10px;
+            left: 10px;
+            transform: rotate(0deg);
+        }
+
+        .corkboard {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 180px;
+            width: auto;
+            max-width: none;
+            background: transparent;
+            border: none;
+            box-shadow: none;
+            padding: 0;
+            z-index: 100;
+        }
+        .corkboard-title {
+            display: none;
+        }
+        .corkboard-themes {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            overflow-x: auto;
+            padding: 0 1.5rem;
+        }
+
+        .corkboard-themes::-webkit-scrollbar {
+            height: 8px;
+        }
+        .corkboard-themes::-webkit-scrollbar-thumb {
+            background: #1e1e1e;
+            border-radius: 4px;
+        }
+        .corkboard-themes::-webkit-scrollbar-track {
+            background: rgba(0,0,0,0.1);
+        }
+
+        .theme__card-choice {
+            position: static !important;
+            transform: none !important;
+            top: auto !important;
+            left: auto !important;
+            flex-shrink: 0;
+            width: 130px;
+            height: 130px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .blackboard-wrapper {
+            padding: 25px 25px 150px 25px;
+        }
+
+        .start-button-container {
+            padding: 0;
+        }
+
+        .level-selector {
+            flex-wrap: wrap;
+        }
+
+        .blackboard-content {
+            padding: 40px 10px;
+        }
+
+        .modules-grid {
+            display: flex;
+            flex-direction: column;
+        }
+        .module-btn {
+            padding: .7rem;
+        }
+
+        .corkboard {
+            height: 160px;
+        }
+        .theme__card-choice {
+            width: 110px;
+            height: 110px;
+        }
+        .theme__card-choice img {
+            width: 40px;
+            height: 40px;
+        }
+        .theme__card-choice span {
+            font-size: 1rem;
+        }
+        .back-card-button{
+            padding: 8px 16px;
+            top: 13px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .back-card-button span{
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 1280px) {
+        .scene-decoration--picture {
+            display: none;
+        }
+    }
+
 
 </style>

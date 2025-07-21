@@ -15,9 +15,10 @@
 			defaultLocale: 'en',
 			locales: [
 				{ code: 'ru', iso: 'ru-RU', name: 'Русский',   file: 'ru-RU.json' },
-				{ code: 'en', iso: 'en-US', name: 'English',   file: 'en-US.json' },
 				{ code: 'uk', iso: 'uk-UA', name: 'Українська',file: 'uk-UA.json' },
+				{ code: 'en', iso: 'en-US', name: 'English',   file: 'en-US.json' },
 				{ code: 'pl', iso: 'pl-PL', name: 'Polski',    file: 'pl-PL.json' },
+				{ code: 'tr-TR', name: 'Türkçe', file: 'tr-TR.json', iso: 'tr-TR' }
 			],
 
 			detectBrowserLanguage: {

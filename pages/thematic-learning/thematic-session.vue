@@ -820,4 +820,20 @@
         display: flex;
         gap: 1.5rem;
     }
+
+    @media (max-width: 767px) {
+        .trainer-app__input-group {
+            flex-direction: column;
+        }
+
+        .scene-decoration--clock {
+            display: none;
+        }
+    }
+
+    @media (max-width: 1280px) {
+        .scene-decoration--picture {
+            display: none;
+        }
+    }
 </style>

@@ -15,6 +15,34 @@
     "footerText": "Hmm, this case is tricky... Should we drop it and return to HQ?",
     "btn": "Return to main page"
   },
+  "prasensTips": {
+    "first": "1. Verb infinitive: e.g., lernen",
+    "second": "2. Remove -en ending (lernen => lern)",
+    "third": "3. Add an ending based on the subject (lern + e, st, t)",
+    "fourth": "4. This rule applies to all regular verbs."
+  },
+  "perfectTips": {
+    "first": "1. Important: 'haben' is used with actions, 'sein' with movement or state change",
+    "second": "2. Weak verbs: Partizip II = ge + stem + (e)t (e.g., gemacht, gelernt)",
+    "third": "3. Strong verbs: vowel change + -en ending (e.g., gesehen, gefahren)",
+    "fourth": "4. Separable prefix: ge goes inside (e.g., ankommen → angekommen)",
+    "fifth": "5. Inseparable prefix (ver-, be-, etc.): no ge (e.g., versprechen → versprochen)",
+    "sixth": "6. Auxiliary verb is conjugated; Partizip II goes to sentence end"
+  },
+  "prateritumTips": {
+    "first": "1. Regular verbs: add endings -te, -test, -te, -ten, -tet, -ten to the stem",
+    "second": "2. Example: spielen → spielte (ich), spieltest (du), spielte (er/sie/es)",
+    "third": "3. Irregular verbs: different stem (e.g., gehen → ging, sehen → sah)",
+    "fourth": "4. Same endings used with the new stem",
+    "fifth": "5. Unlike Perfekt, Partizip II and auxiliary verbs are not used"
+  },
+  "plusquamperfekt": {
+    "first": "1. Plusquamperfekt = Präteritum of haben/sein + Partizip II",
+    "second": "2. Example: hatte gemacht, war gegangen, hatte gesehen",
+    "third": "3. Use of haben/sein is the same as in Perfekt",
+    "fourth": "4. Partizip II is formed as usual: ge + stem + (e)t or irregular form",
+    "fifth": "5. Often used with 'nachdem', 'bevor', etc."
+  },
   "articleCategory": {
     "daslabel": "The Art of Das",
     "dasFirstlabel": "Das Slayer",
@@ -412,6 +440,33 @@
     "achieveTitle": "Great job!",
     "achieveText": "You’ve already completed today’s quest. A new one will be available tomorrow."
   },
+  "wordDuel": {
+    "title": "Welcome to the 'Order Duel'!",
+    "subTitle": "Choose a level to start the battle!",
+    "rulesTitle": "'Order Duel' Game Rules",
+    "rulesText": "Your task is to form the correct sentence from shuffled words faster than your opponent. The first to succeed wins the round. Good luck!",
+    "subText": "The winner is determined by the number of rounds won",
+    "level": "Level:",
+    "searching": "Searching for opponent",
+    "found": "Opponent found!",
+    "prepare": "Get ready, the game is about to start...",
+    "cancel": "Cancel",
+    "btnBack": "Back to home"
+  },
+  "wordDuelSession": {
+    "start": "Start!",
+    "loading": "Loading game...",
+    "round": "Round",
+    "ready": "Get ready...",
+    "clear": "Clear",
+    "leave": "Your opponent has left the session",
+    "leaveText": "You will be redirected to the matchmaking page!",
+    "leaveBtn": "Leave session",
+    "victory": "Victory",
+    "victoryText": "You were faster and smarter! Great job!",
+    "loss": "Defeat",
+    "lossText": "This time your opponent was stronger. Don't worry, try again!"
+  },
   "nav": {
     "training": "Training",
     "gameMode": "Games",
@@ -456,14 +511,16 @@
     "verbFifth": "Passive voice"
   },
   "auth": {
-    "logIn": "Log in",
-    "regs": "Sign up",
+    "logIn": "Log In",
+    "regs": "Sign Up",
     "auths": "Authorization",
-    "resetTitle": "Password recovery",
+    "resetTitle": "Reset Password",
     "resetBtn": "Send",
-    "btn": "Sign Up",
-    "forgot": "Forgot your password?",
-    "google": "Log in with Google"
+    "btn": "Register",
+    "forgot": "Forgot password?",
+    "google": "Sign in with Google",
+    "logOut": "Log Out",
+    "cabinet": "My Account"
   },
   "prasens": {
     "questionNumber": "Question:",

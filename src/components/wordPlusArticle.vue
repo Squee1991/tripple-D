@@ -7,7 +7,7 @@
 				</span>
 		</div>
 		<div class="achievment-list">
-			<div v-for="achievement in data.achievements" class="achievment__card">
+			<div v-for="achievement in data.achievements" class="achievement__card">
 				<div class="achievment__icon-wrapper">
 					<div class="achievement-icon">
 						<span class="icon-emoji">{{ achievement.icon }}</span>
@@ -102,7 +102,7 @@
 		flex-direction: column;
 	}
 
-	.achievment__card {
+	.achievement__card {
 		display: flex;
 		align-items: flex-start;
 		gap: 1rem;
@@ -181,5 +181,11 @@
 		font-weight: 500;
 		margin: 0;
 		line-height: 1.4;
+	}
+
+	@media (max-width: 1280px ) {
+		.achievement__card {
+			width: 100%;
+		}
 	}
 </style>

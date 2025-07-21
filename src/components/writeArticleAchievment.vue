@@ -199,4 +199,10 @@
 		margin: 0;
 		line-height: 1.4;
 	}
+
+	@media (max-width: 1280px ) {
+		.achievement-card {
+			width: 100%;
+		}
+	}
 </style>

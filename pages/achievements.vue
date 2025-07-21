@@ -39,7 +39,7 @@
                 </ul>
             </nav>
         </div>
-        <main class="content-area" >
+        <main class="content-area">
             <header class="content-header">
                 <h1>{{ t('categoryAchievments.achievmentAreaLabel')}}</h1>
             </header>
@@ -65,6 +65,7 @@
     import WriteArticle from '../src/components/writeArticleAchievment.vue'
     import WordsFromLetters from '../src/components/wordFromLetters.vue'
     import WordsPlusArticle from '../src/components/wordPlusArticle.vue'
+    import SentenceAchievement from '../src/components/sentenceAchievement.vue'
     import Plural from '../src/components/pluralAcvievements.vue'
     import Listen from '../src/components/listenAchievements.vue'
     import {overAchievment} from '../src/achieveGroup/overAllAchieve/overallAchievements.js'
@@ -78,6 +79,7 @@
     import {wordPlusArticleAchievment} from '../src/achieveGroup/article/wordPlusArticle.js'
     import {assembleWordGroupAchievement} from '../src/achieveGroup/article/wordsFromLetters.js'
     import {writeArticleGroupAchievment} from '../src/achieveGroup/article/writeArticle.js'
+    import {sentenceAchievement} from '../src/achieveGroup/sentenceDuel/sentenceAchievementsА1.js'
     import {useRouter} from 'vue-router'
 
     const router = useRouter()
@@ -93,6 +95,7 @@
     });
 
     const contentMap = {
+        sentence: SentenceAchievement,
         overall: OverallAchievments,
         guessWord: GuessAchievementDisplay,
         special: SpecialAchievments,
@@ -103,7 +106,7 @@
         listening: Listen,
         easy: EasyModeAchieve,
         normal: NormalModeAchieve,
-        hard: HardModeAchieve
+        hard: HardModeAchieve,
     };
 
     const currentContent = computed(() => contentMap[contentId.value]);
@@ -125,6 +128,7 @@
         pluralForm: pluraGroupAchievment,
         listening: listenAchieveGroup,
         special: cpecialGroupAchievment,
+        sentence: sentenceAchievement
     };
     const countNestedAchievements = (dataArray) => {
         let count = 0;
@@ -162,6 +166,10 @@
         if (allAchievementsData.guessWord) {
             guesss = countNestedAchievements(allAchievementsData.guessWord)
         }
+        let senten = 0
+        if (allAchievementsData.sentence) {
+            senten = countNestedAchievements(allAchievementsData.sentence)
+        }
         return {
             easy: easyCount,
             normal: normalCount,
@@ -169,6 +177,7 @@
             special: special,
             overall: overall,
             guessWord: guesss,
+            sentence: senten,
             total: easyCount + normalCount + hardCount
         }
     });
@@ -178,12 +187,14 @@
         const writeWordCount = countNestedAchievements(allAchievementsData.writeWord);
         const pluralFormCount = countNestedAchievements(allAchievementsData.pluralForm);
         const listeningCount = countNestedAchievements(allAchievementsData.listening);
+        const sentenceCount = countNestedAchievements(allAchievementsData.sentence)
         return {
             article: articleCount,
             buildWord: buildWordCount,
             writeWord: writeWordCount,
             pluralForm: pluralFormCount,
             listening: listeningCount,
+            sentence: sentenceCount,
             total: articleCount + buildWordCount + writeWordCount + pluralFormCount + listeningCount
         };
     });
@@ -199,6 +210,12 @@
             name: 'categoryAchievments.guess',
             icon: '🧠',
             length: modeComputed.value.guessWord,
+        },
+        {
+            id: 'sentence',
+            name: 'Дуэль фраз',
+            icon: '⚔️',
+            length: modeComputed.value.sentence,
         },
         {
             id: 'marathon',
@@ -298,6 +315,7 @@
         box-sizing: border-box;
     }
 
+
     .sidebar {
         min-width: 400px;
         max-width: 400px;
@@ -309,6 +327,7 @@
         box-shadow: 8px 8px 0px #1e1e1e;
         display: flex;
         flex-direction: column;
+        transition: all 0.3s ease;
     }
 
     .btn__back {
@@ -324,6 +343,7 @@
         box-shadow: 4px 4px 0px #1e1e1e;
         transition: all 0.1s ease-in-out;
         margin-bottom: 1.5rem;
+        flex-shrink: 0;
     }
 
     .btn__back:hover {
@@ -335,24 +355,20 @@
         text-align: center;
         margin-bottom: 1.5rem;
         color: #1e1e1e;
+        font-family: "Nunito", sans-serif;
         font-size: 2rem;
+        flex-shrink: 0;
     }
 
     .nav__sidebar {
-        flex: 1;
-        overflow-y: auto;
-        -ms-overflow-style: none;
+        flex-grow: 1;
+        min-height: 0;
+        overflow-y:  auto;
         scrollbar-width: none;
     }
 
     .nav__sidebar::-webkit-scrollbar {
         display: none;
-    }
-
-    .nav__sidebar::-webkit-scrollbar-thumb {
-        background: #1e1e1e;
-        border-radius: 6px;
-        border: 3px solid #fef8e4;
     }
 
     .achievement-categories {
@@ -370,21 +386,32 @@
         gap: 15px;
         font-size: 1.1rem;
         border-radius: 16px;
-        transition: background-color 0.2s ease;
+        transition: background-color 0.2s ease, transform 0.2s ease;
+        border: 2px solid transparent;
+        font-weight: 600;
     }
 
     .category-item:hover, .submenu-item:hover {
         background-color: #fef8e4;
+        border-color: #1e1e1e;
     }
 
-    .category-item.active, .submenu-item.active {
+    .category-item.active {
         background-color: #4ade80;
-        font-weight: 400;
+        color: #1e1e1e;
+        border-color: #1e1e1e;
+        box-shadow: 4px 4px 0px #1e1e1e;
+    }
+
+    .submenu-item.active {
+        background-color: #60a5fa;
+        color: #fff;
+        border-color: #1e1e1e;
     }
 
     .submenu-arrow {
         transition: transform .2s ease;
-        width: 20px;
+        width: 18px;
         margin-left: auto;
     }
 
@@ -393,8 +420,16 @@
     }
 
     .submenu {
-        padding-left: 20px;
-        margin-top: 10px;
+        padding-left: 25px;
+        list-style: none;
+        margin-top: 5px;
+        border-left: 2px dashed rgba(30, 30, 30, 0.2);
+    }
+
+    .submenu-item {
+        font-size: 1rem;
+        padding: 0.8rem 1rem;
+        gap: 10px;
     }
 
     .sub__item-length {
@@ -404,7 +439,7 @@
         padding: 0 5px;
         display: flex;
         color: #1e1e1e;
-        font-weight: 400;
+        font-weight: 600;
         justify-content: center;
         align-items: center;
         background: #e0e0e0;
@@ -414,7 +449,12 @@
     }
 
     .active .sub__item-length {
-        background-color: #fff;
+        background-color: #ffffff;
+        color: #1e1e1e;
+    }
+
+    .category-icon, .submenu-icon {
+        font-size: 1.5rem;
     }
 
     .content-area {
@@ -427,33 +467,112 @@
         display: flex;
         flex-direction: column;
         overflow: hidden;
-
     }
 
     .content-header {
-        padding: 0 0 1.5rem 0;
+        padding-bottom: 1.5rem;
         margin-bottom: 1.5rem;
-        border-bottom: 3px solid rgba(27, 27, 27, 0.5);
+        border-bottom: 4px solid #1e1e1e;
         text-align: center;
+        flex-shrink: 0;
     }
 
     .content-header h1 {
         font-size: 2.5em;
         color: #1e1e1e;
         margin: 0;
+        font-family: "Nunito", sans-serif;
     }
 
     .category-content {
-        flex: 1;
-        background-color: rgba(255, 255, 255, 0.3);
-        border-radius: 18px;
-        padding: 1.5rem;
+        flex-grow: 1;
         min-height: 0;
     }
 
     .category-description {
         font-size: 1.2em;
         color: #1e1e1e;
+    }
+
+    .achievements-list {
+        gap: 1.5rem;
+    }
+
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity 0.2s ease;
+    }
+
+    .fade-enter-from, .fade-leave-to {
+        opacity: 0;
+    }
+
+    .simplebar-scrollbar:before {
+        background-color: #1e1e1e;
+        border-radius: 4px;
+        left: 2px;
+        right: 2px;
+    }
+
+    .simplebar-track.simplebar-vertical {
+        background-color: rgba(30, 30, 30, 0.1);
+        width: 11px;
+        border-radius: 6px;
+    }
+
+    @media (max-width: 1024px) {
+        .achievements-page-container {
+            flex-direction: column;
+            padding: 1rem;
+            gap: 1rem;
+            height: auto;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            min-width: 100%;
+            max-width: 100%;
+            height: auto;
+            max-height: 55vh;
+        }
+
+        .content-area {
+            padding: 1.5rem;
+        }
+
+        .content-header h1 {
+            font-size: 2em;
+        }
+
+        .achievements-list {
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .achievements-page-container {
+            padding: 0;
+        }
+
+        .sidebar, .content-area {
+            border-radius: 0;
+            border-left: none;
+            border-right: none;
+            box-shadow: none;
+        }
+
+        .sidebar {
+            border-top: none;
+        }
+
+        .content-area {
+            border-bottom: none;
+        }
+
+        .achievements-list {
+            grid-template-columns: 1fr;
+        }
+
     }
 
 </style>

@@ -1,0 +1,62 @@
+[
+  {
+    "type": "futurOne",
+    "question": "Ich ___ morgen arbeiten.",
+    "options": ["werde", "wirst", "wird", "werden", "werdet"],
+    "answer": "werde"
+  },
+  {
+    "type": "futurOne",
+    "question": "Du ___ bald ankommen.",
+    "options": ["wirst", "werde", "wird", "werden", "warst"],
+    "answer": "wirst"
+  },
+  {
+    "type": "futurOne",
+    "question": "Er ___ das Auto reparieren.",
+    "options": ["wird", "werde", "wirst", "werden", "war"],
+    "answer": "wird"
+  },
+  {
+    "type": "futurOne",
+    "question": "Wir ___ nach Berlin fahren.",
+    "options": ["werden", "werdet", "wird", "werde", "war"],
+    "answer": "werden"
+  },
+  {
+    "type": "futurOne",
+    "question": "Ihr ___ das Spiel gewinnen.",
+    "options": ["werdet", "werden", "wird", "werde", "wart"],
+    "answer": "werdet"
+  },
+  {
+    "type": "futurOne",
+    "question": "Sie (они) ___ viel lernen.",
+    "options": ["werden", "wird", "werdet", "war", "seid"],
+    "answer": "werden"
+  },
+  {
+    "type": "futurOne",
+    "question": "Es ___ bald regnen.",
+    "options": ["wird", "werde", "werden", "wirst", "war"],
+    "answer": "wird"
+  },
+  {
+    "type": "futurOne",
+    "question": "Wir ___ das Haus verkaufen.",
+    "options": ["werden", "werdet", "wird", "seid", "hatten"],
+    "answer": "werden"
+  },
+  {
+    "type": "futurOne",
+    "question": "Ich ___ pünktlich kommen.",
+    "options": ["werde", "wirst", "wird", "werden", "kam"],
+    "answer": "werde"
+  },
+  {
+    "type": "futurOne",
+    "question": "Sie (вежл.) ___ Ihnen helfen.",
+    "options": ["werden", "werdet", "wirst", "wird", "war"],
+    "answer": "werden"
+  }
+]

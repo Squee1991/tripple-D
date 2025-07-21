@@ -116,7 +116,7 @@
         border: 3px solid #1e1e1e;
         border-radius: 50%;
         box-shadow: 4px 4px 0 #1e1e1e;
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         font-size: 2.5rem;
         color: #1e1e1e;
         display: flex;
@@ -155,7 +155,7 @@
     }
 
     .header h1 {
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         font-size: 2.5rem;
         font-weight: 600;
         color: #1e1e1e;
@@ -213,7 +213,7 @@
     }
 
     .settings-block h2 {
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         font-size: 1.8rem;
         text-align: center;
         margin-bottom: 1rem;
@@ -261,7 +261,7 @@
     }
 
     .button-content span:first-child {
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         font-size: 1.3rem;
         font-weight: 400;
     }
@@ -279,7 +279,7 @@
     }
 
     .start-button {
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         padding: 1rem 2.5rem;
         font-size: 1.5rem;
         font-weight: 400;

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "idiom1",
+    "expression": "Alles in Butter",
+    "translation": "Всё в порядке",
+    "explanation": "Когда всё идёт хорошо.",
+    "example": "Mach dir keine Sorgen – alles ist in Butter!",
+    "level": "A2"
+  },
+  {
+    "id": "idiom2",
+    "expression": "Tomaten auf den Augen haben",
+    "translation": "Не замечать очевидного",
+    "explanation": "Употребляется о человеке, который что-то упорно не видит.",
+    "example": "Hast du Tomaten auf den Augen? Der Bus ist schon weg!"
+  }
+]

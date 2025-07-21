@@ -1,0 +1,52 @@
+[
+  {
+    "question": "Der Elefant ist ___.",
+    "options": ["groß", "dünn", "jung", "klein"],
+    "answer": "groß"
+  },
+  {
+    "question": "Die Maus ist ___.",
+    "options": ["alt", "kurz", "schön", "klein"],
+    "answer": "klein"
+  },
+  {
+    "question": "Das Haus ist ___.",
+    "options": ["neu", "jung", "alt", "schnell"],
+    "answer": "alt"
+  },
+  {
+    "question": "Das Baby ist ___.",
+    "options": ["alt", "groß", "jung", "hoch"],
+    "answer": "jung"
+  },
+  {
+    "question": "Das Auto ist ___.",
+    "options": ["klein", "dick", "kurz", "neu"],
+    "answer": "neu"
+  },
+  {
+    "question": "Die Prinzessin ist ___.",
+    "options": ["breit", "dick", "schön", "hässlich"],
+    "answer": "schön"
+  },
+  {
+    "question": "Die Hexe ist ___.",
+    "options": ["schön", "hässlich", "jung", "neu"],
+    "answer": "hässlich"
+  },
+  {
+    "question": "Der Mann ist ___.",
+    "options": ["dick", "dünn", "klein", "kurz"],
+    "answer": "dick"
+  },
+  {
+    "question": "Das Model ist ___.",
+    "options": ["hoch", "dick", "dünn", "alt"],
+    "answer": "dünn"
+  },
+  {
+    "question": "Der Ball ist ___.",
+    "options": ["lang", "kurz", "rund", "eckig"],
+    "answer": "rund"
+  }
+]

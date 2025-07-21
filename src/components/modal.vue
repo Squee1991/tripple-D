@@ -8,6 +8,7 @@
                         <h3 class="modal-title">{{ props.title }}</h3>
                         <img class="modal__icon" :src="props.img" alt="">
                         <p class="modal-text"> {{ props.text }}</p>
+                        <p class="modal-text"> {{ props.description }}</p>
                     </div>
                 </div>
             </transition>
@@ -35,7 +36,11 @@
         },
         text: {
             type: String
+        },
+        description:{
+            type: [ Array , Object , String]
         }
+
     });
 
 
@@ -69,7 +74,7 @@
     }
 
     .modal-container {
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         position: relative;
         background: white;
         padding: 2.5rem;
@@ -128,4 +133,5 @@
     .pop-enter-from, .pop-leave-to {
         transform: scale(0.9);
     }
+
 </style>

@@ -56,7 +56,6 @@
         if (isCorrect.value) {
             playerScore.value += 1
         }
-        // В бою сюда добавится отправка на сервер, проверка времени и т.д.
     }
 </script>
 

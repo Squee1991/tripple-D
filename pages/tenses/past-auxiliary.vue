@@ -97,7 +97,6 @@
 </script>
 
 <style scoped>
-    @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 
     .btn__back {
         border: 3px solid #1e1e1e;

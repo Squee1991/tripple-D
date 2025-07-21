@@ -77,7 +77,7 @@
     }
 
     const startLearning = () => {
-        userAuth.name ? router.push('/choiceTheme') : openAuth()
+        userAuth.name ? router.push('/articles') : openAuth()
     }
 
     watch(showAuth, (val) => {
@@ -197,7 +197,7 @@
     }
 
     .banner__button {
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif ;
         padding: 1rem 2.5rem;
         font-size: 1.5rem;
         font-weight: 400;

@@ -15,6 +15,34 @@
     "footerText": "Hmm, zagmatwana sprawa... Może wróćmy do bazy?",
     "btn": "Wróć na stronę główną"
   },
+  "prasensTips": {
+    "first": "1. Bezokolicznik czasownika, np. lernen",
+    "second": "2. Usuń końcówkę -en (lernen → lern)",
+    "third": "3. Dodaj końcówkę w zależności od osoby (lern + e, st, t)",
+    "fourth": "4. Zasada dotyczy wszystkich czasowników regularnych."
+  },
+  "perfectTips": {
+    "first": "1. Ważne: 'haben' — dla czynności, 'sein' — dla ruchu/zmiany stanu",
+    "second": "2. Czasowniki słabe: Partizip II = ge + temat + (e)t (np. gemacht, gelernt)",
+    "third": "3. Czasowniki mocne: zmiana samogłoski + końcówka -en (np. gesehen, gefahren)",
+    "fourth": "4. Z przedrostkiem rozdzielnym: ge w środku (np. ankommen → angekommen)",
+    "fifth": "5. Z nierozdzielnym (ver-, be-, itd.): bez ge (np. versprechen → versprochen)",
+    "sixth": "6. Czasownik posiłkowy jest odmieniany, Partizip II na końcu zdania"
+  },
+  "prateritumTips": {
+    "first": "1. Czasowniki regularne: temat + -te, -test, -te, -ten, -tet, -ten",
+    "second": "2. Przykład: spielen → spielte (ich), spieltest (du), spielte (er/sie/es)",
+    "third": "3. Nieregularne mają inny temat (np. gehen → ging, sehen → sah)",
+    "fourth": "4. Te same końcówki dodawane do nowego tematu",
+    "fifth": "5. W przeciwieństwie do Perfekt, nie używa się Partizip II ani czasowników posiłkowych"
+  },
+  "plusquamperfekt": {
+    "first": "1. Plusquamperfekt = Präteritum haben/sein + Partizip II",
+    "second": "2. Przykład: hatte gemacht, war gegangen, hatte gesehen",
+    "third": "3. Zasady wyboru haben/sein takie same jak w Perfekt",
+    "fourth": "4. Partizip II: ge + temat + (e)t lub forma nieregularna",
+    "fifth": "5. Często używane z 'nachdem', 'bevor' itd."
+  },
   "articleCategory": {
     "daslabel": "Sztuka Das",
     "dasFirstlabel": "Pogromca Das",
@@ -412,6 +440,33 @@
     "achieveTitle": "Świetna robota!",
     "achieveText": "Już ukończyłeś dzisiejsze zadanie. Nowe będzie dostępne jutro."
   },
+  "wordDuel": {
+    "title": "Witamy w „Pojedynku Słów”!",
+    "subTitle": "Wybierz poziom, aby rozpocząć bitwę!",
+    "rulesTitle": "Zasady gry „Pojedynek Słów”",
+    "rulesText": "Twoim zadaniem jest jak najszybsze ułożenie poprawnego zdania z przetasowanych słów. Kto zrobi to pierwszy — wygrywa rundę. Powodzenia!",
+    "subText": "Zwycięzca pojedynku to ten, kto wygra najwięcej rund",
+    "level": "Poziom:",
+    "searching": "Trwa wyszukiwanie przeciwnika",
+    "found": "Znaleziono przeciwnika!",
+    "prepare": "Przygotuj się, gra zaraz się zacznie...",
+    "cancel": "Anuluj",
+    "btnBack": "Wróć do strony głównej"
+  },
+  "wordDuelSession": {
+    "start": "Start!",
+    "loading": "Ładowanie gry...",
+    "round": "Runda",
+    "ready": "Przygotuj się...",
+    "clear": "Wyczyść",
+    "leave": "Twój przeciwnik opuścił sesję",
+    "leaveText": "Zostaniesz przekierowany do strony wyszukiwania!",
+    "leaveBtn": "Opuść sesję",
+    "victory": "Zwycięstwo",
+    "victoryText": "Byłeś szybszy i bystrzejszy! Świetna robota!",
+    "loss": "Porażka",
+    "lossText": "Tym razem przeciwnik był silniejszy. Nie martw się, spróbuj ponownie!"
+  },
   "nav": {
     "training": "Szkolenie",
     "gameMode": "Gry",
@@ -443,7 +498,6 @@
     "themen": "Poziomy tematyczne",
     "wordDuel": "Pojedynek na zwroty",
     "quests": "Dziennik Zadań"
-
   },
   "underSub": {
     "prev": "Wprowadzenie",
@@ -458,12 +512,14 @@
   "auth": {
     "logIn": "Zaloguj się",
     "regs": "Rejestracja",
-    "auths": "Autoryzacja",
-    "resetTitle": "Odzyskaj hasło",
+    "auths": "Logowanie",
+    "resetTitle": "Resetuj hasło",
     "resetBtn": "Wyślij",
     "btn": "Zarejestruj się",
-    "forgot": "Zapomniałeś hasła?",
-    "google": "Zaloguj się przez Google"
+    "forgot": "Nie pamiętasz hasła?",
+    "google": "Zaloguj się przez Google",
+    "logOut": "Wyloguj się",
+    "cabinet": "Moje konto"
   },
   "tenses": {
     "barBtn": "Do strony głównej",
@@ -512,7 +568,6 @@
     "choose": "Użycie Plusquamperfekt",
     "explain": "Określ, która czynność wymaga Plusquamperfekt."
   },
-
   "prasens": {
     "questionNumber": "Pytanie:",
     "score": "Wynik:",
@@ -524,214 +579,215 @@
     "correct": "Poprawnie!",
     "wrong": "Ups! Poprawna odpowiedź:",
     "check": "Sprawdź",
-    "further": "Dalej!",
-    "placeholder": {
-      "name": "Wpisz imię lub nick",
-      "email": "Wpisz adres e-mail",
-      "password": "Wpisz hasło",
-      "confirm": "Potwierdź hasło"
-    },
-    "banner": {
-      "title": "Poznaj niemieckie rodzajniki, rozwijaj magiczne umiejętności i pokonuj przeciwników w bitwach na karty!",
-      "btn": "Rozpocznij przygodę"
-    },
-    "features": {
-      "title": "Co znajdziesz w środku?"
-    },
-    "cardWords": {
-      "title": "900+ słów",
-      "sub": "Naucz się ponad 900 słów i rodzajników w wygodnym systemie."
-    },
-    "cardMethod": {
-      "title": "5 metod nauki",
-      "sub": "Wybierz swój styl: wizualny, słuchowy, kinestetyczny — lub je łącz."
-    },
-    "gameCard": {
-      "title": "Elementy grywalizacji",
-      "sub": "Zdobywaj punkty, awansuj na wyższe poziomy i wykorzystuj grywalizację, aby przyspieszyć postępy."
-    },
-    "achievCard": {
-      "title": "System osiągnięć",
-      "sub": "Rozwijaj się, zdobywaj nagrody i odblokowuj nowe możliwości podczas nauki."
-    },
-    "feedBack": {
-      "label": "Opinie",
-      "title": "Masz jakieś uwagi? Wypełnij ten formularz, a my na pewno Ci odpowiemy.",
-      "btn": "Wyślij wiadomość",
-      "namePlaceholder": "Wprowadź swóje Imię",
-      "messagePlaceholder": "Wprowadź swoją wiadomość"
-    },
-    "errors": {
-      "errorEmail": "Wprowadź email",
-      "errorPassword": "Wprowadź hasło",
-      "errorName": "Wprowadź imię",
-      "errorConfirm": "Hasła nie są takie same",
-      "resetSent": "Wiadomość została wysłana na email",
-      "emailNotVerified": "Potwierdź email przed zalogowaniem się.",
-      "userNotFound": "Użytkownik nie został znaleziony.",
-      "wrongPassword": "Nieprawidłowe hasło.",
-      "generalError": "Wystąpił błąd. Spróbuj ponownie.",
-      "userExists": "Użytkownik z tym adresem email już istnieje",
-      "invalidEmail": "Nieprawidłowy format emaila",
-      "invalidCredential": "Nieprawidłowe lub przestarzałe dane logowania"
-    },
-    "about": {
-      "title": "Nudzi Cię nauka niemieckiego i rodzajników rzeczowników?",
-      "lead": "Masz dość zakuwania fiszek, przepisywania list słówek i ciągłego zapominania rodzajników?",
-      "whyFirst": "Zdobywaj osiągnięcia i nagrody",
-      "whySecond": "Graj w bitwy karciane z innymi",
-      "whyThird": "Ucz się słówek w różnych trybach",
-      "whyFourth": "Ucz się języka w formie zabawy!",
-      "whyFifth": "Ułóż słowo z liter alfabetu!",
-      "whySixth": "Powtórki interwałowe z minitestami",
-      "whyFooter": "Wypróbuj te sposoby i zobaczysz naukę w nowym świetle!"
-    },
-    "aboutList": {
-      "one": "Każde nowe słowo to nie tylko ptaszek na liście — to krok naprzód! Zdobywaj doświadczenie, odblokowuj kolejne poziomy, śledź postępy i zdobywaj osiągnięcia.",
-      "two": "System osiągnięć i nagród sprawia, że nauka staje się ekscytująca: wykonuj zadania, odkrywaj sekrety, zdobywaj trofea i kolekcjonuj rzadkie nagrody za swoje postępy w niemieckim.",
-      "three": "Nie ograniczaj się do nudnych powtórek: ćwicz pamięć w różnych trybach — słuchaj audio, układaj słowa z liter, wybierz jedną metodę albo wszystkie naraz i ucz się języka z różnych stron.",
-      "four": "Włącz tryb gry: układaj słowa z alfabetu jak z magicznych run! To nie tylko zabawa, ale też doskonały trening uwagi i pamięci wzrokowej.",
-      "five": "W tym trybie losowane jest przypadkowe słowo. Gracz odgaduje je, wybierając litery z alfabetu! Można próbować zgadnąć wcześniej (liczba prób jest ograniczona, żeby uniknąć zgadywania wszystkiego). Na końcu trzeba wpisać rodzajnik zgadywanego słowa.",
-      "six": "Powtórki interwałowe pomagają utrwalić wiedzę: system sam przypomni odpowiednie słowa i przeprowadzi mini-testy, abyś był zawsze w formie z niemieckiego."
-    },
-    "aboutAnimText": {
-      "first": "Myślisz, że inaczej się nie da?",
-      "second": "A co jeśli można inaczej?",
-      "third": "Chcesz to zmienić?",
-      "fourth": "Uczyć się języka z przyjemnością?",
-      "fifth": "To łatwiejsze niż myślisz",
-      "sixth": "To co, zaczynamy? ;-)"
-    },
-    "footer": {
-      "copy": "Der Die Das. Wszelkie prawa zastrzeżone."
-    },
-    "examples": {
-      "label": "Rodzajniki w języku niemieckim:",
-      "title": "Ucz się niemieckich rodzajników łatwo i na zawsze! Teoria krok po kroku z przykładami, zasady, triki i szybka praktyka."
-    },
-    "examplesFirstBlock": {
-      "title": "Czym są rodzajniki?",
-      "subtext": "Rodzajniki to towarzyszące części mowy (der, die, das), które wskazują na rodzaj, liczbę i przypadek. W języku niemieckim właściwy wybór rodzajnika jest kluczowy dla zrozumienia i poprawnej wypowiedzi."
-    },
-    "examplesSecondBlock": {
-      "title": "Rodzaje rodzajników",
-      "first": "Rodzajnik określony:",
-      "exampleTitle": "Używany, gdy mówimy o czymś konkretnym, już znanym.",
-      "example": "Przykład:",
-      "exampleSecondhalf": " — Ten (konkretny) kot śpi.",
-      "second": "Rodzajnik nieokreślony:",
-      "exampleSecondTitle": "Używany, gdy wspominamy o czymś po raz pierwszy, coś niekonkretnego.",
-      "exampleNotDefinite": "Przykład: eine Katze schläft. — Jakiś kot śpi."
-    },
-    "exampleThirdBlock": {
-      "label": "Jak stosować rodzajnik nieokreślony",
-      "subtext": "Rodzajnik nieokreślony (ein / eine / ein) zgadza się z rodzajem rzeczownika:",
-      "man": "Rodzaj męski:",
-      "mExample": " — (jeden, jakiś) pies",
-      "woman": "Rodzaj żeński:",
-      "wExample": " — (jedna, jakaś) lampa",
-      "is": "Rodzaj nijaki:",
-      "isExample": " — (jedna, jakaś) książka",
-      "important": "Ważne: w liczbie mnogiej nie używa się rodzajnika nieokreślonego!",
-      "importantExample": " — Widzę książki."
-    },
-    "exampleTabele": {
-      "label": "Tabela rodzajników według rodzaju",
-      "family": "Rodzaj",
-      "definite": "Określony",
-      "NotDefinite": "Nieokreślony",
-      "m": "Męski",
-      "w": "Żeński",
-      "is": "Nijaki"
-    },
-    "selectedpage": {
-      "title": "Wybierz temat do nauki",
-      "backBtn": "Wstecz",
-      "startBtn": "Rozpocznij naukę",
-      "choiceTitle": "Tryby nauki",
-      "topic": "Temat"
-    },
-    "nameMap": {
-      "Furniture": "Meble",
-      "Animals": "Zwierzęta",
-      "Clothes": "Ubrania",
-      "Food": "Jedzenie",
-      "Body": "Części ciała",
-      "Professions": "Zawody",
-      "Transport": "Transport",
-      "Colors": "Kolory",
-      "Nature": "Natura",
-      "Home": "Dom",
-      "Zeit": "Czas",
-      "City": "Miasto",
-      "School": "Szkoła",
-      "DaysAndMonths": "Dni i miesiące",
-      "Toys": "Zabawki",
-      "CommonItems": "Powszechne przedmioty",
-      "BathroomItems": "Przedmioty łazienkowe",
-      "Kosmetik": "Kosmetyki",
-      "Familie": "Rodzina",
-      "Emotions": "Emocje",
-      "Werkzeuge": "Narzędzia",
-      "Kitchen": "Kuchnia",
-      "Health": "Zdrowie",
-      "Sport": "Sport",
-      "SportEquipment": "Sprzęt fitness",
-      "Travel": "Podróże",
-      "Musik": "Muzyka",
-      "Amount": "Ilość",
-      "Informatik": "Informatyka"
-    },
-    "modes": {
-      "article": "Wstaw rodzajnik",
-      "letters": "Ułóż słowo z liter",
-      "articleWord": "Wstaw słowo i rodzajnik",
-      "plural": "Liczba mnoga",
-      "audio": "Słuchanie"
-    },
-    "sessionPage": {
-      "choice": "Metoda",
-      "btnCheck": "Sprawdź",
-      "continue": "Dalej",
-      "theme": "temat"
-    },
-    "sessionLabels": {
-      "word": "słowo",
-      "articleFor": "Wpisz rodzajnik dla",
-      "lettersFor": "Ułóż słowo z liter",
-      "articleWordFor": "Wpisz rodzajnik i słowo",
-      "pluralFor": "Wpisz formę liczby mnogiej dla",
-      "audioFor": "Posłuchaj i wpisz słowo"
-    },
-    "result": {
-      "correctAnswer": "Poprawna odpowiedź",
-      "correct": "Poprawnie"
-    },
-    "cardThemen": {
-      "Home": "Dom i gospodarstwo",
-      "Animals": "Zwierzęta",
-      "Clothes": "Ubrania",
-      "Food": "Jedzenie",
-      "Body": "Człowiek i ciało",
-      "Professions": "Zawody",
-      "Transport": "Transport",
-      "Colors": "Kolory",
-      "Nature": "Natura",
-      "City": "Miasto i szkoła",
-      "Time": "Czas",
-      "Tools": "Narzędzia",
-      "Sport": "Sport i fitness"
-    },
-    "choiceTheme": {
-      "theme": "Temat",
-      "create": "Utwórz kartę",
-      "available": "Dostępne karty",
-      "choice": "Wybierz temat",
-      "difficult": "Poziom trudności",
-      "search": "Szukaj według tematu",
-      "placeholder": "Wpisz niemieckie zdanie lub słowo z rodzajnikami",
-      "translate": "Tłumaczenie (opcjonalnie)",
-      "btn": "Utwórz"
-    }
+    "further": "Dalej!"
+  },
+  "placeholder": {
+    "name": "Wpisz imię lub nick",
+    "email": "Wpisz adres e-mail",
+    "password": "Wpisz hasło",
+    "confirm": "Potwierdź hasło"
+  },
+  "banner": {
+    "title": "Poznaj niemieckie rodzajniki, rozwijaj magiczne umiejętności i pokonuj przeciwników w bitwach na karty!",
+    "btn": "Rozpocznij przygodę"
+  },
+  "features": {
+    "title": "Co znajdziesz w środku?"
+  },
+  "cardWords": {
+    "title": "900+ słów",
+    "sub": "Naucz się ponad 900 słów i rodzajników w wygodnym systemie."
+  },
+  "cardMethod": {
+    "title": "5 metod nauki",
+    "sub": "Wybierz swój styl: wizualny, słuchowy, kinestetyczny — lub je łącz."
+  },
+  "gameCard": {
+    "title": "Elementy grywalizacji",
+    "sub": "Zdobywaj punkty, awansuj na wyższe poziomy i wykorzystuj grywalizację, aby przyspieszyć postępy."
+  },
+  "achievCard": {
+    "title": "System osiągnięć",
+    "sub": "Rozwijaj się, zdobywaj nagrody i odblokowuj nowe możliwości podczas nauki."
+  },
+  "feedBack": {
+    "label": "Opinie",
+    "title": "Masz jakieś uwagi? Wypełnij ten formularz, a my na pewno Ci odpowiemy.",
+    "btn": "Wyślij wiadomość",
+    "namePlaceholder": "Wprowadź swóje Imię",
+    "messagePlaceholder": "Wprowadź swoją wiadomość"
+  },
+  "errors": {
+    "errorEmail": "Wprowadź email",
+    "errorPassword": "Wprowadź hasło",
+    "errorName": "Wprowadź imię",
+    "errorConfirm": "Hasła nie są takie same",
+    "resetSent": "Wiadomość została wysłana na email",
+    "emailNotVerified": "Potwierdź email przed zalogowaniem się.",
+    "userNotFound": "Użytkownik nie został znaleziony.",
+    "wrongPassword": "Nieprawidłowe hasło.",
+    "generalError": "Wystąpił błąd. Spróbuj ponownie.",
+    "userExists": "Użytkownik z tym adresem email już istnieje",
+    "invalidEmail": "Nieprawidłowy format emaila",
+    "invalidCredential": "Nieprawidłowe lub przestarzałe dane logowania"
+  },
+  "about": {
+    "title": "Nudzi Cię nauka niemieckiego i rodzajników rzeczowników?",
+    "lead": "Masz dość zakuwania fiszek, przepisywania list słówek i ciągłego zapominania rodzajników?",
+    "whyFirst": "Zdobywaj osiągnięcia i nagrody",
+    "whySecond": "Graj w bitwy karciane z innymi",
+    "whyThird": "Ucz się słówek w różnych trybach",
+    "whyFourth": "Ucz się języka w formie zabawy!",
+    "whyFifth": "Ułóż słowo z liter alfabetu!",
+    "whySixth": "Powtórki interwałowe z minitestami",
+    "whyFooter": "Wypróbuj te sposoby i zobaczysz naukę w nowym świetle!"
+  },
+  "aboutList": {
+    "one": "Każde nowe słowo to nie tylko ptaszek na liście — to krok naprzód! Zdobywaj doświadczenie, odblokowuj kolejne poziomy, śledź postępy i zdobywaj osiągnięcia.",
+    "two": "System osiągnięć i nagród sprawia, że nauka staje się ekscytująca: wykonuj zadania, odkrywaj sekrety, zdobywaj trofea i kolekcjonuj rzadkie nagrody za swoje postępy w niemieckim.",
+    "three": "Nie ograniczaj się do nudnych powtórek: ćwicz pamięć w różnych trybach — słuchaj audio, układaj słowa z liter, wybierz jedną metodę albo wszystkie naraz i ucz się języka z różnych stron.",
+    "four": "Włącz tryb gry: układaj słowa z alfabetu jak z magicznych run! To nie tylko zabawa, ale też doskonały trening uwagi i pamięci wzrokowej.",
+    "five": "W tym trybie losowane jest przypadkowe słowo. Gracz odgaduje je, wybierając litery z alfabetu! Można próbować zgadnąć wcześniej (liczba prób jest ograniczona, żeby uniknąć zgadywania wszystkiego). Na końcu trzeba wpisać rodzajnik zgadywanego słowa.",
+    "six": "Powtórki interwałowe pomagają utrwalić wiedzę: system sam przypomni odpowiednie słowa i przeprowadzi mini-testy, abyś był zawsze w formie z niemieckiego."
+  },
+  "aboutAnimText": {
+    "first": "Myślisz, że inaczej się nie da?",
+    "second": "A co jeśli można inaczej?",
+    "third": "Chcesz to zmienić?",
+    "fourth": "Uczyć się języka z przyjemnością?",
+    "fifth": "To łatwiejsze niż myślisz",
+    "sixth": "To co, zaczynamy? ;-)"
+  },
+  "footer": {
+    "copy": "Der Die Das. Wszelkie prawa zastrzeżone."
+  },
+  "examples": {
+    "label": "Rodzajniki w języku niemieckim:",
+    "title": "Ucz się niemieckich rodzajników łatwo i na zawsze! Teoria krok po kroku z przykładami, zasady, triki i szybka praktyka."
+  },
+  "examplesFirstBlock": {
+    "title": "Czym są rodzajniki?",
+    "subtext": "Rodzajniki to towarzyszące części mowy (der, die, das), które wskazują na rodzaj, liczbę i przypadek. W języku niemieckim właściwy wybór rodzajnika jest kluczowy dla zrozumienia i poprawnej wypowiedzi."
+  },
+  "examplesSecondBlock": {
+    "title": "Rodzaje rodzajników",
+    "first": "Rodzajnik określony:",
+    "exampleTitle": "Używany, gdy mówimy o czymś konkretnym, już znanym.",
+    "example": "Przykład:",
+    "exampleSecondhalf": " — Ten (konkretny) kot śpi.",
+    "second": "Rodzajnik nieokreślony:",
+    "exampleSecondTitle": "Używany, gdy wspominamy o czymś po raz pierwszy, coś niekonkretnego.",
+    "exampleNotDefinite": "Przykład: eine Katze schläft. — Jakiś kot śpi."
+  },
+  "exampleThirdBlock": {
+    "label": "Jak stosować rodzajnik nieokreślony",
+    "subtext": "Rodzajnik nieokreślony (ein / eine / ein) zgadza się z rodzajem rzeczownika:",
+    "man": "Rodzaj męski:",
+    "mExample": " — (jeden, jakiś) pies",
+    "woman": "Rodzaj żeński:",
+    "wExample": " — (jedna, jakaś) lampa",
+    "is": "Rodzaj nijaki:",
+    "isExample": " — (jedna, jakaś) książka",
+    "important": "Ważne: w liczbie mnogiej nie używa się rodzajnika nieokreślonego!",
+    "importantExample": " — Widzę książki."
+  },
+  "exampleTabele": {
+    "label": "Tabela rodzajników według rodzaju",
+    "family": "Rodzaj",
+    "definite": "Określony",
+    "NotDefinite": "Nieokreślony",
+    "m": "Męski",
+    "w": "Żeński",
+    "is": "Nijaki"
+  },
+  "selectedpage": {
+    "title": "Wybierz temat do nauki",
+    "backBtn": "Wstecz",
+    "startBtn": "Rozpocznij naukę",
+    "choiceTitle": "Tryby nauki",
+    "topic": "Temat"
+  },
+  "nameMap": {
+    "Furniture": "Meble",
+    "Animals": "Zwierzęta",
+    "Clothes": "Ubrania",
+    "Food": "Jedzenie",
+    "Body": "Części ciała",
+    "Professions": "Zawody",
+    "Transport": "Transport",
+    "Colors": "Kolory",
+    "Nature": "Natura",
+    "Home": "Dom",
+    "Zeit": "Czas",
+    "City": "Miasto",
+    "School": "Szkoła",
+    "DaysAndMonths": "Dni i miesiące",
+    "Toys": "Zabawki",
+    "CommonItems": "Powszechne przedmioty",
+    "BathroomItems": "Przedmioty łazienkowe",
+    "Kosmetik": "Kosmetyki",
+    "Familie": "Rodzina",
+    "Emotions": "Emocje",
+    "Werkzeuge": "Narzędzia",
+    "Kitchen": "Kuchnia",
+    "Health": "Zdrowie",
+    "Sport": "Sport",
+    "SportEquipment": "Sprzęt fitness",
+    "Travel": "Podróże",
+    "Musik": "Muzyka",
+    "Amount": "Ilość",
+    "Informatik": "Informatyka"
+  },
+  "modes": {
+    "article": "Wstaw rodzajnik",
+    "letters": "Ułóż słowo z liter",
+    "articleWord": "Wstaw słowo i rodzajnik",
+    "plural": "Liczba mnoga",
+    "audio": "Słuchanie"
+  },
+  "sessionPage": {
+    "choice": "Metoda",
+    "btnCheck": "Sprawdź",
+    "continue": "Dalej",
+    "theme": "temat"
+  },
+  "sessionLabels": {
+    "word": "słowo",
+    "articleFor": "Wpisz rodzajnik dla",
+    "lettersFor": "Ułóż słowo z liter",
+    "articleWordFor": "Wpisz rodzajnik i słowo",
+    "pluralFor": "Wpisz formę liczby mnogiej dla",
+    "audioFor": "Posłuchaj i wpisz słowo"
+  },
+  "result": {
+    "correctAnswer": "Poprawna odpowiedź",
+    "correct": "Poprawnie"
+  },
+  "cardThemen": {
+    "Home": "Dom i gospodarstwo",
+    "Animals": "Zwierzęta",
+    "Clothes": "Ubrania",
+    "Food": "Jedzenie",
+    "Body": "Człowiek i ciało",
+    "Professions": "Zawody",
+    "Transport": "Transport",
+    "Colors": "Kolory",
+    "Nature": "Natura",
+    "City": "Miasto i szkoła",
+    "Time": "Czas",
+    "Tools": "Narzędzia",
+    "Sport": "Sport i fitness"
+  },
+  "choiceTheme": {
+    "theme": "Temat",
+    "create": "Utwórz kartę",
+    "available": "Dostępne karty",
+    "choice": "Wybierz temat",
+    "difficult": "Poziom trudności",
+    "search": "Szukaj według tematu",
+    "placeholder": "Wpisz niemieckie zdanie lub słowo z rodzajnikami",
+    "translate": "Tłumaczenie (opcjonalnie)",
+    "btn": "Utwórz"
   }
 }
+

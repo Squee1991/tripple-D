@@ -152,7 +152,7 @@
         z-index: 20;
         background: #fff;
         color: #1e1e1e;
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         font-size: 1rem;
         padding: 0.5rem 1rem;
         border: 3px solid #1e1e1e;
@@ -197,13 +197,13 @@
     }
 
     .widget-label {
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         font-size: 0.9rem;
         color: #555;
     }
 
     .widget-value {
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         font-size: 1.8rem;
         color: #1e1e1e;
         line-height: 1;
@@ -279,7 +279,7 @@
     }
 
     .word-display h1 {
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         font-size: 7rem;
         font-weight: 600;
         line-height: 1;
@@ -333,7 +333,7 @@
     }
 
     .article-btn {
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         font-size: 2.5rem;
         padding: 1.5rem 0;
         width: 150px;
@@ -387,7 +387,7 @@
     }
 
     .game-over__title {
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         font-size: 3rem;
         color: #1e1e1e;
     }
@@ -398,7 +398,7 @@
     }
 
     .game-over__streak-info span {
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         font-size: 2rem;
         color: #f97028;
         margin-left: 0.5rem;
@@ -421,7 +421,7 @@
         width: 100%;
         margin-top: 1rem;
         padding: 1rem;
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         font-size: 1.3rem;
         cursor: pointer;
         border: 3px solid #1e1e1e;
@@ -465,10 +465,18 @@
             flex-direction: column;
             align-items: center;
             gap: 1rem;
+            padding-top:40px
         }
 
         .lives-bar {
             position: static;
         }
     }
+
+    @media (max-width: 768px) {
+        .word-display h1 {
+            font-size: 2rem;
+        }
+    }
+
 </style>

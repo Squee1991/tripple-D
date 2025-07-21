@@ -242,7 +242,7 @@
         box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(0, 0, 0, 0.4);
         width: 100%;
         max-width: 1000px;
-		min-height: 640px;
+        min-height: 640px;
         position: relative;
     }
 
@@ -523,7 +523,7 @@
         font-family: 'Caveat', cursive;
         font-size: 24px;
         color: #f1c40f;
-		font-weight: bold;
+        font-weight: bold;
         background-color: transparent;
         border: 3px solid #f1c40f;
         border-radius: 8px;
@@ -692,11 +692,7 @@
         width: 100%;
     }
 
-    /* --- Адаптивность --- */
     @media (max-width: 768px) {
-        .exit-sign {
-            display: none;
-        }
 
         .trainer-app__board {
             padding: 1.5rem 1rem;
@@ -710,7 +706,7 @@
         }
 
         .guess__word {
-            font-size: 2.5rem;
+            font-size: 14px;
             min-height: 50px;
             margin-bottom: 1.5rem;
         }
@@ -720,9 +716,12 @@
         }
 
         .btn--letter {
-            width: 40px;
-            height: 40px;
-            font-size: 1.2rem;
+            width: 35px;
+            height: 35px;
+            font-size: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .guess__alphabet {
@@ -744,6 +743,17 @@
 
         .top-content-spacer {
             display: none;
+        }
+
+        .trainer-app__input-group {
+            flex-direction: column;
+        }
+
+        .exit-sign {
+            z-index: 1000;
+            padding: 4px;
+            font-size: 15px;
+            top: 0;
         }
     }
 </style>
