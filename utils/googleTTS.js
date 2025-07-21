@@ -1,5 +1,5 @@
 export async function getSpeechAudio(text, lang = 'de-DE') {
-    const apiKey = 'AIzaSyBYAcIR_4uEyFYmqJpzkUhlrbZxVfVA4qQ';
+    const apiKey = process.env.GOOGLE_API_KEY;
     const response = await fetch(`https://texttospeech.googleapis.com/v1/text:synthesize?key=${apiKey}`, {
         method: 'POST',
         headers: {

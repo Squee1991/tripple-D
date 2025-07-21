@@ -469,8 +469,7 @@
         align-items: center;
     }
     .info__icon-tips {
-        width: 50px;
-        height: 50px;
+        width: 60px;
         cursor: pointer;
     }
     .tips__overlay {
