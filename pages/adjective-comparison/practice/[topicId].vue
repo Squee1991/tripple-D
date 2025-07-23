@@ -1,62 +1,62 @@
 <template>
     <div class="comic-quiz-page">
-        <header v-if="!loading && quizStore.activeQuestion" class="quiz-header-comic">
+        <header v-if="!loading && store.activeQuestion" class="quiz-header-comic">
             <button class="btn__back" @click="backTo">{{ t('prasens.back')}}</button>
             <div class="header-item">
-                {{ t('prasens.questionNumber')}} {{ quizStore.currentQuestionIndex + 1 }} / {{ quizStore.currentQuestions.length }}
+                {{ t('prasens.questionNumber')}} {{ store.currentQuestionIndex + 1 }} / {{ store.currentQuestions.length }}
             </div>
             <div class="header-item score">
-                {{ t('prasens.score')}} {{ quizStore.score }}
+                {{ t('prasens.score')}} {{ store.score }}
             </div>
         </header>
         <main class="quiz-main-content">
             <div v-if="loading" class="fullscreen-state">
                 <p>{{ t('prasens.loading')}}</p>
             </div>
-            <div v-else-if="quizStore.quizCompleted" class="fullscreen-state">
+            <div v-else-if="store.quizCompleted" class="fullscreen-state">
                 <div class="quiz-summary-comic">
                     <h2>{{ t('prasens.end')}} </h2>
-                    <p>{{ t('prasens.result')}} {{ quizStore.score }} / {{ quizStore.currentQuestions.length }}</p>
+                    <p>{{ t('prasens.result')}} {{ store.score }} / {{ store.currentQuestions.length }}</p>
                     <button @click="startQuiz" class="action-button">{{ t('prasens.again')}}</button>
                     <button @click="backTo" class="action-button">{{ t('prasens.back')}}</button>
                 </div>
             </div>
-            <div v-else-if="quizStore.activeQuestion" class="quiz-content-comic">
+            <div v-else-if="store.activeQuestion" class="quiz-content-comic">
                 <div class="question-card-comic">
                     <p class="question-text-comic">
-                        <span>{{ quizStore.activeQuestion.question.split('___')[0] }}</span>
-                        <span class="blank-space">{{ quizStore.selectedOption || '( ... )' }}</span>
-                        <span>{{ quizStore.activeQuestion.question.split('___')[1] }}</span>
+                        <span>{{ store.activeQuestion.question.split('___')[0] }}</span>
+                        <span class="blank-space">{{ store.selectedOption || '( ... )' }}</span>
+                        <span>{{ store.activeQuestion.question.split('___')[1] }}</span>
                     </p>
                 </div>
                 <div class="options-grid-comic">
                     <button
-                            v-for="option in quizStore.activeQuestion.options"
+                            v-for="option in store.activeQuestion.options"
                             :key="option"
-                            @click="quizStore.chooseOption(option)"
+                            @click="store.chooseOption(option)"
                             class="option-button-comic"
-                            :class="{ selected: quizStore.selectedOption === option }"
-                            :disabled="quizStore.feedback !== null"
+                            :class="{ selected: store.selectedOption === option }"
+                            :disabled="store.feedback !== null"
                     >
                         {{ option }}
                     </button>
                 </div>
                 <div class="footer-controls-comic">
-                    <div v-if="quizStore.feedback" class="feedback-message-comic" :class="quizStore.feedback">
-                        <span v-if="quizStore.feedback === 'correct'">{{ t('prasens.correct')}}</span>
-                        <span v-else>{{ t('prasens.wrong')}} {{ quizStore.activeQuestion.answer }}</span>
+                    <div v-if="store.feedback" class="feedback-message-comic" :class="store.feedback">
+                        <span v-if="store.feedback === 'correct'">{{ t('prasens.correct')}}</span>
+                        <span v-else>{{ t('prasens.wrong')}} {{ store.activeQuestion.answer }}</span>
                     </div>
                     <button
-                            v-if="quizStore.feedback === null"
-                            @click="quizStore.checkAnswer()"
-                            :disabled="!quizStore.selectedOption"
+                            v-if="store.feedback === null"
+                            @click="store.checkAnswer()"
+                            :disabled="!store.selectedOption"
                             class="action-button check"
                     >
                         {{ t('prasens.check')}}
                     </button>
                     <button
                             v-else
-                            @click="quizStore.nextQuestion()"
+                            @click="store.nextQuestion()"
                             class="action-button next"
                     >
                         {{ t('prasens.further')}}
@@ -68,22 +68,27 @@
 </template>
 
 <script setup>
-
-    import {ref, onMounted,} from 'vue';
-    import {useQuizStore} from '../../store/usePrasensStore.js';
-    import { useRouter} from 'vue-router'
-    const router = useRouter()
-    const quizStore = useQuizStore();
+    import { ref, onMounted } from 'vue';
+    import { useQuizStore } from '../../../store/adjectiveStore.js';
+    import { useRoute, useRouter } from 'vue-router';
+    const router = useRouter();
+    const route = useRoute();
+    const store = useQuizStore();
     const loading = ref(true);
-    const { t } = useI18n()
+    const { t } = useI18n();
+
+    const category = 'adjective-comparison';
+    const { topicId } = route.params;
+
     async function startQuiz() {
         loading.value = true;
-        await quizStore.startNewQuiz('/verbs-data/modalVerbs.json');
+        const fileName = `/adjective/${category}-${topicId}.json`;
+        await store.startNewQuiz(fileName);
         loading.value = false;
     }
 
     const backTo = () => {
-        router.back()
+        router.push(`/adjective-comparison`);
     }
 
     onMounted(() => {
@@ -93,8 +98,6 @@
 </script>
 
 <style scoped>
-    @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
-
     .btn__back {
         border: 3px solid #1e1e1e;
         padding: 15px;
@@ -108,11 +111,9 @@
         box-shadow: 4px 4px 0px #1e1e1e;
         transition: all 0.1s ease-in-out;
     }
-
     .btn__back:hover {
         box-shadow: 2px 2px 0px #1e1e1e;
     }
-
     .comic-quiz-page {
         background-color: #f0e8d9;
         font-family: 'Bangers', cursive;
@@ -120,7 +121,6 @@
         min-height: 100vh;
         padding-top: 100px;
     }
-
     .quiz-header-comic {
         position: fixed;
         top: 0;
@@ -136,9 +136,7 @@
         font-size: 1.8rem;
         border-bottom: 3px solid #000;
         box-shadow: 0 4px 0 #000;
-
     }
-
     .quiz-main-content {
         display: flex;
         align-items: center;
@@ -147,13 +145,11 @@
         padding: 1.5rem;
         box-sizing: border-box;
     }
-
     .fullscreen-state {
         font-size: 4rem;
         color: #333;
         text-align: center;
     }
-
     .quiz-content-comic {
         width: 100%;
         max-width: 900px;
@@ -162,7 +158,6 @@
         gap: 2rem;
         padding: 15px;
     }
-
     .question-card-comic,
     .option-button-comic,
     .action-button,
@@ -172,39 +167,33 @@
         box-shadow: 6px 6px 0px #000;
         transition: all 0.1s ease-in-out;
     }
-
-
     .option-button-comic:hover,
     .action-button:hover,
     .quiz-summary-comic:hover {
         transform: translate(2px, 2px);
         box-shadow: 4px 4px 0px #000;
     }
-
     .question-card-comic {
         background: #fff;
         padding: 2rem;
         transform: rotate(.7deg);
     }
-
     .question-text-comic {
-        font-size: 2.5rem;
+        font-size: 1.7rem;
         text-align: center;
         color: #000;
     }
-
     .blank-space {
         color: #0077b6;
         text-decoration: underline;
     }
-
     .options-grid-comic {
         display: flex;
         justify-content: center;
         gap: 12px;
         padding: 15px;
+        flex-wrap: wrap;
     }
-
     .option-button-comic {
         background-color: #fff;
         color: #000;
@@ -213,21 +202,17 @@
         cursor: pointer;
         transform: rotate(-1.5deg);
     }
-
     .option-button-comic:nth-child(2n) {
         transform: rotate(1.5deg);
     }
-
     .option-button-comic.selected {
         background-color: #06d6a0;
         color: #000;
     }
-
     .option-button-comic:disabled {
         opacity: 0.7;
         background-color: #e9ecef;
     }
-
     .footer-controls-comic {
         min-height: 170px;
         display: flex;
@@ -236,7 +221,6 @@
         justify-content: flex-end;
         gap: 1rem;
     }
-
     .feedback-message-comic {
         font-size: 2rem;
         padding: 0.5rem 1rem;
@@ -244,17 +228,14 @@
         border: 3px solid black;
         margin-bottom: 10px;
     }
-
     .feedback-message-comic.correct {
         background-color: #06d6a0;
         transform: rotate(2deg);
     }
-
     .feedback-message-comic.incorrect {
         background-color: #ef476f;
         transform: rotate(-2deg);
     }
-
     .action-button {
         width: 100%;
         max-width: 450px;
@@ -262,34 +243,28 @@
         font-size: 2rem;
         cursor: pointer;
     }
-
     .action-button.check {
         background-color: #0077b6;
         color: white;
     }
-
     .action-button.check:disabled {
         background-color: #adb5bd;
         color: #495057;
         box-shadow: none;
         transform: none;
     }
-
     .action-button.next {
         background-color: #60a5fa;
         color: black;
     }
-
     .quiz-summary-comic {
         background: #fff;
         padding: 3rem;
         text-align: center;
     }
-
     .quiz-summary-comic h2 {
         font-size: 4rem;
     }
-
     .quiz-summary-comic p {
         font-size: 2rem;
         margin: 1rem 0 2rem;

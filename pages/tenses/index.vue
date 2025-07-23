@@ -74,7 +74,11 @@
 
                                 <ul v-else-if="block.type === 'examples'" class="example-list">
                                     <li v-for="example in block.content" :key="example.sentence" class="example-item">
-                                        <p class="example-item__sentence" v-html="t(example.sentence)"></p>
+                                        <div class="example__de-item">
+                                            <div class="example-item__sentence" v-html="t(example.sentence)"></div>
+                                            <SoundBtn :text="example.sentence"/>
+                                        </div>
+
                                         <p class="example-item__translation">{{ t(example.translation) }}</p>
                                     </li>
                                 </ul>
@@ -111,7 +115,7 @@
     import {ref, onMounted, onUnmounted, watch, nextTick} from 'vue'
     import Lottie from 'lottie-web'
     import TipIcon from '../../assets/animation/info.json'
-
+    import SoundBtn from '../../src/components/soundBtn.vue'
     const {t} = useI18n()
 
     const selectedTense = ref(null)
@@ -446,6 +450,12 @@
         display: flex;
         flex-direction: column;
         flex: 1;
+    }
+
+    .example__de-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .info__icon-tips {

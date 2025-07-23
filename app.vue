@@ -1,17 +1,21 @@
 <template>
     <NuxtLayout>
         <NuxtPage/>
+        <AccessibilityToggle />
     </NuxtLayout>
 </template>
 
 <script setup>
+    import AccessibilityToggle from './src/components/accessibilityMode.vue'
     import {useCurrentUser} from "vuefire";
     import {userlangStore} from './store/learningStore.js'
     import {userAuthStore} from './store/authStore.js'
     import {useSentencesStore} from './store/sentencesStore.js';
     import {useTrainerStore} from './store/themenProgressStore.js'
     import { useQuestStore } from './store/questStore.js'
+    import { useCardsStore } from './store/cardsStore.js'
     import {onMounted} from "vue";
+    const cardStore = useCardsStore()
     const questStore = useQuestStore()
     const learningStore = userlangStore()
     const trainerStore = userlangStore()
@@ -35,6 +39,7 @@
         await learningStore.loadFromFirebase()
         sentencesStore.loadSentences()
         questStore.loadDailyProgress()
+        cardStore.loadCreatedCount()
     })
 
     // onMounted(() => {
@@ -78,5 +83,9 @@
         margin: 0;
         box-sizing: border-box;
 
+    }
+
+    html {
+        font-size: 16px;
     }
 </style>

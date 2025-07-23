@@ -19,6 +19,14 @@ export const overAchievment = [
 				targetProgress: 31
 			},
 			{
+				id: "createdCountCard",
+				name: "Создатель колоды",
+				description: "Создай 36 карточек, чтобы получить это достижение!",
+				icon: "🃏",
+				currentProgress: 0,
+				targetProgress: 36
+			},
+			{
 				id: "daily",
 				name: "generalCategory.dailyTitle",
 				description: "generalCategory.dailyText",
@@ -89,14 +97,6 @@ export const overAchievment = [
 				icon: '⚔',
 				currentProgress: 0,
 				targetProgress: 250,
-			},
-			{
-				id: 'long_word_hunter',
-				name: 'Охотник за словами',
-				description: 'Составить 10 предложений, содержащих слово из 12+ букв.',
-				icon: '🧐',
-				currentProgress: 0,
-				targetProgress: 10,
 			},
 			{
 				id: 'wrong100Answers',

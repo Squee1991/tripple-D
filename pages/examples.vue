@@ -142,6 +142,7 @@
     definePageMeta({
         layout: 'footerlayout',
     });
+
 </script>
 
 <style scoped>

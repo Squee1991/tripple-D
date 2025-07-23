@@ -2,25 +2,31 @@
     <main class="trainer-page">
         <button @click="backToMainPage" class="exit-sign">
             <img class="exit-sign-icon" src="../assets/images/exit.svg" alt="">
-            <span class="exit-sign-text">Назад</span>
+            <span class="exit-sign-text">{{ t('guessWord.back')}}</span>
         </button>
+        <div class="guess__stats-bar">
+            <div>⚡ не больше 30 сек {{ fastGuessedCount }}</div>
+            <div>🛡️  ≥10 попыток {{ safeGuessedCount }}</div>
+            <div>🛡️ Последняя попытка {{ guessedOnLastTryWords }}</div>
+            <div>🛡️ Все попытки! тест {{ guessedPerfectWords }}</div>
+        </div>
         <div class="trainer-app">
             <div class="trainer-app__board">
-                <dv v-if="!isStarted" class="guess__start-screen">
-                    <h1 class="trainer-app__title start-screen__title">Угадай Слово</h1>
-                    <button class="btn" @click="startGame">Начать игру</button>
-                </dv>
+                <div v-if="!isStarted" class="guess__start-screen">
+                    <h1 class="trainer-app__title start-screen__title">{{ t('guessWord.guessTitle')}}</h1>
+                    <button class="btn" @click="startGame">{{ t('guessWord.startGame')}}</button>
+                </div>
                 <div class="guess__inner-session" v-else>
                     <div class="guess__top-content">
                         <div class="top-content-spacer"></div>
                         <div class="guess__status-group">
-                            <div v-if="isStarted && !store.win && !store.lose" class="guess__info">Время: {{
-                                Math.floor((now - store.timeStarted) / 1000) }} сек.
+<!--                            <div v-if="isStarted && !store.win && !store.lose" class="guess__info">{{ t('guessWord.time')}} {{-->
+<!--                                Math.floor((now - store.timeStarted) / 1000) }} {{ t('guessWord.sec')}}-->
+<!--                            </div>-->
+                            <div v-if="isStarted && !store.win && !store.lose && store.timeStarted" class="guess__info">
+                                {{ t('guessWord.time') }} {{ timePassed }} {{ t('guessWord.sec') }}
                             </div>
-                            <div v-if="isStarted && (store.win || store.lose)" class="guess__info">Время: {{
-                                store.timeSpent }} сек.
-                            </div>
-                            <div class="guess__info">Попыток: <span
+                            <div class="guess__info">{{ t('guessWord.try')}} <span
                                     class="guess__attempts-value">{{ store.attempts }}</span></div>
                         </div>
                         <button class="guess__restart" @click="startGame" title="Начать заново"><img
@@ -37,12 +43,12 @@
                     </div>
                     <div class="guess__input-area trainer-app__input-group">
                         <input v-model="guessInput" class="trainer-app__input" :disabled="store.win || store.lose"
-                               @keyup.enter="guessWord" placeholder="Введи слово целиком"/>
-                        <button class="btn" @click="guessWord" :disabled="store.win || store.lose">Угадать</button>
+                               @keyup.enter="guessWord" :placeholder="t('guessWord.placeholder')"/>
+                        <button class="btn" @click="guessWord" :disabled="store.win || store.lose">{{ t('guessWord.guess')}}</button>
                     </div>
 
-                    <div v-if="store.win" class="feedback__text feedback__text--success guess__result--win">Победа!
-                        Слово угадано.
+                    <div v-if="store.win" class="feedback__text feedback__text--success guess__result--win">
+                        {{ t('guessWord.victory')}}
                     </div>
                 </div>
             </div>
@@ -62,19 +68,20 @@
             <div v-if="showArticleModal" class="modal-overlay" @click.self="closeArticleModal">
                 <div class="modal-content">
                     <div class="modal__icon">🎉</div>
-                    <h3 class="modal-title">Ты молодец!</h3>
-                    <p class="modal-text">А теперь попробуй угадать артикль слова: <strong>{{ store.answer }}</strong>
+                    <h3 class="modal-title">{{ t('guessWord.good')}}</h3>
+                    <p class="modal-text">{{ t('guessWord.article')}} <strong>{{ store.answer }}</strong>
                     </p>
                     <form class="article__form" @submit.prevent="checkArticle">
                         <input v-model="articleGuess" class="trainer-app__input" placeholder="der / die / das"
                                :disabled="!!articleResult" @keyup.enter="checkArticle" maxlength="4"/>
-                        <button class="btn" @click="checkArticle" :disabled="!!articleResult">Проверить</button>
+                        <button class="btn" @click="checkArticle" :disabled="!!articleResult">{{ t('guessWord.check')}}</button>
                     </form>
                     <div v-if="articleResult" class="feedback__text"
                          :class="{'feedback__text--success': articleResult ==='Верно!', 'feedback__text--error': articleResult !=='Верно!'}">
                         {{ articleResult }}
                     </div>
-                    <button v-if="articleResult" class="btn modal__close-btn" @click="closeArticleModal">Продолжить
+                    <button v-if="articleResult" class="btn modal__close-btn" @click="closeArticleModal">
+                        {{ t('guessWord.further')}}
                     </button>
                 </div>
             </div>
@@ -83,12 +90,12 @@
             <div v-if="showLoseModal" class="modal-overlay" @click.self="closeLoseModal">
                 <div class="modal-content">
                     <div class="modal__icon">😔</div>
-                    <h3 class="modal-title">Не в этот раз...</h3>
-                    <p class="modal-text">Загаданное слово было: <strong class="modal__answer">{{ store.answer
+                    <h3 class="modal-title">{{ t('guessWord.notToday')}}</h3>
+                    <p class="modal-text"> {{ t('guessWord.guessed')}} <strong class="modal__answer">{{ store.answer
                         }}</strong></p>
                     <div class="modal-actions">
-                        <button class="btn btn--restart" @click="startGame">Попробовать снова</button>
-                        <NuxtLink to="/" class="btn btn--secondary">На главную</NuxtLink>
+                        <button class="btn btn--restart" @click="startGame">{{ t('guessWord.tryAgain')}}</button>
+                        <NuxtLink to="/" class="btn btn--secondary">{{ t('guessWord.btnToMain')}}</NuxtLink>
                     </div>
                 </div>
             </div>
@@ -97,11 +104,11 @@
 </template>
 
 <script setup>
-    /* ЛОГИКА ОСТАЕТСЯ БЕЗ ИЗМЕНЕНИЙ */
+
     import {ref, watch, onUnmounted} from 'vue'
     import {useGuessWordStore} from '../store/guesStore.js'
     import {useRouter} from 'vue-router'
-
+    const {t} = useI18n()
     const router = useRouter()
     const store = useGuessWordStore()
     const guessInput = ref('')
@@ -110,10 +117,16 @@
     const isStarted = ref(false)
     const showArticleModal = ref(false)
     const showLoseModal = ref(false)
-
     const now = ref(Date.now())
     let intervalId = null
-
+    const timePassed = computed(() => {
+        if (!store.timeStarted) return 0
+        return Math.max(0, Math.floor((now.value - store.timeStarted) / 1000))
+    })
+    const fastGuessedCount = computed(() => store.guessedFastWords.length)
+    const safeGuessedCount = computed(() => store.guessedSafeWords.length)
+    const guessedOnLastTryWords = computed(() => store.guessedOnLastTryWords.length)
+    const guessedPerfectWords = computed(() => store.guessedPerfectWords.length)
     const backToMainPage = () => {
         router.push('/')
     }
@@ -146,6 +159,7 @@
 
     async function startGame() {
         await store.startGame()
+        now.value = Date.now()
         isStarted.value = true
         guessInput.value = ''
         articleGuess.value = ''
@@ -182,9 +196,6 @@
 </script>
 
 <style scoped>
-    @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Nunito:wght@400;600;700&display=swap');
-
-    /* --- ОСНОВНАЯ СТРУКТУРА --- */
     .trainer-page {
         position: relative;
         min-height: 100vh;
@@ -381,7 +392,6 @@
         z-index: 0;
     }
 
-    /* --- СТИЛИ КОМПОНЕНТА GUESS --- */
     .guess__start-screen, .guess__inner-session {
         width: 100%;
         display: flex;
@@ -519,6 +529,9 @@
     }
 
     .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         padding: 12px 24px;
         font-family: 'Caveat', cursive;
         font-size: 24px;
@@ -580,14 +593,14 @@
     }
 
     .modal__icon {
-        font-size: 4rem;
+        font-size: 3rem;
         line-height: 1;
         margin-bottom: 1rem;
     }
 
     .modal-title {
         font-family: 'Caveat', cursive;
-        font-size: 3rem;
+        font-size: 2rem;
         margin: 0 0 1rem 0;
         color: #5D4037;
     }
@@ -612,16 +625,18 @@
 
     .article__form {
         display: flex;
-        gap: 0.5rem;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
         width: 100%;
-        max-width: 350px;
         margin-bottom: 1rem;
     }
 
     .article__form .trainer-app__input {
         border-color: rgba(44, 62, 80, 0.3);
         color: #2c3e50;
+        margin-bottom: 10px;
     }
 
     .article__form .trainer-app__input:focus {
@@ -631,6 +646,7 @@
     .modal-content .btn {
         border-color: #2c3e50;
         color: #2c3e50;
+        width: 100%;
     }
 
     .modal-content .btn:hover:not(:disabled) {
@@ -645,6 +661,7 @@
     .modal-actions {
         display: flex;
         justify-content: center;
+        flex-direction: column;
         gap: 1.5rem;
         margin-top: 1rem;
     }
@@ -670,7 +687,6 @@
         color: #fff;
     }
 
-    /* --- Стили для фидбека --- */
     .feedback__text {
         margin-top: 16px;
         min-height: 30px;

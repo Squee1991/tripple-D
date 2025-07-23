@@ -179,7 +179,7 @@
         transform: rotate(.7deg);
     }
     .question-text-comic {
-        font-size: 2.5rem;
+        font-size: 1.7rem;
         text-align: center;
         color: #000;
     }

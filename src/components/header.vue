@@ -1,7 +1,7 @@
 <template>
-    <header class="header">
+    <header class="header" :class="{ 'mobile-menu-active': isMobileMenuOpen }">
         <div v-if="isMobileMenuOpen" class="mobile-nav-overlay" @click="isMobileMenuOpen = false"></div>
-        <Uioverlay :visible="showAuth" @close="closeAuth"/>
+        <UiOverlay :visible="showAuth" @close="closeAuth"/>
         <transition name="slide">
             <SignIn v-if="showAuth" @close-auth-form="closeAuth"/>
         </transition>
@@ -23,7 +23,8 @@
                             <NuxtLink v-if="item.url" :to="item.url" class="header-nav__link" @click="closeAllMenus">
                                 {{ t(item.valueKey) }}
                             </NuxtLink>
-                            <span v-else @click="handleMenuItemClick(item)" class="header-nav__link">
+                            <button v-else @click="handleMenuItemClick(item)" class="header-nav__link"
+                                    :class="{'is-active-parent': clickedMenu === item.id}">
                                 <span>{{ t(item.valueKey) }}</span>
                                 <img
                                         v-if="item.children"
@@ -31,15 +32,15 @@
                                         :src="Arrow"
                                         alt=">"
                                 />
-                            </span>
+                            </button>
                             <ul v-if="item.children && clickedMenu === item.id" class="header-nav__submenu">
                                 <li v-for="child in item.children" :key="child.id" class="header-nav__submenu-item">
                                     <NuxtLink v-if="child.url" :to="child.url" class="header-nav__submenu-link"
                                               @click="closeAllMenus">
                                         {{ t(child.valueKey) }}
                                     </NuxtLink>
-                                    <span v-else class="header-nav__submenu-link"
-                                          @click.stop="handleSubmenuItemClick(child)">
+                                    <button v-else class="header-nav__submenu-link"
+                                            @click.stop="handleSubmenuItemClick(child)">
                                         <span>{{ t(child.valueKey) }}</span>
                                         <img
                                                 v-if="child.subChildren"
@@ -47,7 +48,7 @@
                                                 :src="Arrow"
                                                 alt=""
                                         />
-                                    </span>
+                                    </button>
                                     <ul v-if="child.subChildren && clickedSubChild === child.id"
                                         class="header-nav__submenu-sub">
                                         <li v-for="sub in child.subChildren" :key="sub.id"
@@ -75,11 +76,26 @@
                 <div class="header-nav__lang">
                     <LanguageSelector/>
                 </div>
-                <div v-if="userAuth.name" class="header-user" @click="toggleMenu">
-                    <img class="header-user__avatar" :src="userAuth.avatarUrl" alt="User avatar"/>
-                    <span class="header-user__name">{{ userAuth.email }}</span>
-                    <img :class="['header-nav__arrow', { 'rotated': menuOpen }]" :src="Arrow" alt="v"/>
-                    <div ref="dropdownRef" v-if="menuOpen" class="header-user__dropdown">
+
+                <div v-if="userAuth.name" class="header-user-wrapper">
+                    <button
+                            ref="userBtnRef"
+                            class="header-user"
+                            @click="toggleMenu"
+                            aria-haspopup="true"
+                            :aria-expanded="menuOpen.toString()"
+                            aria-controls="user-menu-dropdown"
+                    >
+                        <img class="header-user__avatar" :src="userAuth.avatarUrl" alt="User avatar"/>
+                        <span class="header-user__name">{{ userAuth.email }}</span>
+                        <img :class="['header-nav__arrow', { 'rotated': menuOpen }]" :src="Arrow" alt="v"/>
+                    </button>
+                    <div
+                            ref="dropdownRef"
+                            v-if="menuOpen"
+                            class="header-user__dropdown"
+                            id="user-menu-dropdown"
+                    >
                         <button
                                 v-for="item in menuActions"
                                 :key="item.id"
@@ -111,7 +127,7 @@
     import LanguageSelector from '../components/langSwitcher.vue'
     import ForTea from '../components/forTea.vue'
     import BurgerMenu from '../components/burgerMenu.vue'
-    import Uioverlay from '../components/Uioverlay.vue'
+    import UiOverlay from '../components/Uioverlay.vue'
     import ModalDev from '../components/modal.vue'
     import Arrow from '../../assets/images/arrowNav.svg'
     import Dev from '../../assets/images/dev.svg'
@@ -123,24 +139,20 @@
     const bp = useBreakPointsStore()
     const router = useRouter()
     const userAuth = userAuthStore()
-    const hideHeader = ref(false)
     const showAuth = ref(false)
     const menuOpen = ref(false)
     const isMobileMenuOpen = ref(false)
     const clickedMenu = ref(null)
     const showDevModal = ref(false)
     const clickedSubChild = ref(null)
-
+    const userBtnRef = ref(null);
     const dropdownRef = ref(null)
     const dropdownRefNav = ref(null)
     const isMobile = computed(() => bp.isMobile);
 
     watch(isMobileMenuOpen, (newVal) => {
-        if (newVal) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = '';
-        }
+        if (newVal) document.body.style.overflow = 'hidden';
+        else document.body.style.overflow = '';
     });
     watch(showAuth, (val) => {
         document.body.style.overflow = val ? 'hidden' : ''
@@ -149,9 +161,7 @@
         document.body.style.overflow = val ? 'hidden' : ''
     })
     watch(isMobile, (isNowMobile) => {
-        if (!isNowMobile) {
-            closeAllMenus();
-        }
+        if (!isNowMobile) closeAllMenus();
     });
 
     const closeAllMenus = () => {
@@ -185,7 +195,6 @@
 
     const openDevModal = () => showDevModal.value = true
     const closeDevModal = () => showDevModal.value = false
-
     const closeAuth = () => showAuth.value = false
     const openAuth = () => showAuth.value = true
 
@@ -202,18 +211,20 @@
                     id: "verbs", valueKey: 'sub.verbs', subChildren: [
                         {id: 'tenses', url: 'tenses', valueKey: 'underSub.verbFirst'},
                         {id: 'modalVerbs', url: 'modal-verbs', valueKey: 'underSub.verbSecond',},
+                        {id: 'verb-types', url: 'verb-types', valueKey: 'underSub.verbTypes',},
                     ]
                 },
                 {
                     id: 'adjectives', valueKey: 'sub.adjectives', subChildren: [
-                        {id: 'adjectives-basic' , url: 'adjective-basics' , valueKey: 'underSub.adjectivesBasic'},
-                        {id: 'declination' , url: 'adjective-declension' , valueKey: 'underSub.declination'},
-                        {id: 'comparison' , url: 'adjective-comparison' , valueKey: 'underSub.comparison'},
+                        {id: 'adjectives-basic', url: 'adjective-basics', valueKey: 'underSub.adjectivesBasic'},
+                        {id: 'declination', url: 'adjective-declension', valueKey: 'underSub.declination'},
+                        {id: 'comparison', url: 'adjective-comparison', valueKey: 'underSub.comparison'},
                     ]
                 },
+                {id: 'prepositions' , url:'prepositions', valueKey: 'sub.prepositions'},
                 {id: 'cards', url: 'createCards', valueKey: 'sub.card'},
                 {id: 'themen', url: 'thematic-learning', valueKey: 'sub.themen'}
-            ]
+            ],
         },
         {
             id: 'duel', valueKey: 'nav.gameMode', children: [
@@ -226,22 +237,20 @@
         },
         {id: 'achieve', url: '/achievements', valueKey: 'nav.achieve'},
         {id: 'stats', url: '/stats', valueKey: 'nav.stats'}
-    ]
 
+    ]
     const menuActions = ref([
         {id: 'cabinet', label: 'auth.cabinet', icon: User, action: () => goTo('cabinet')},
         {id: 'logout', label: 'auth.logOut', icon: Logout, action: () => userAuth.logOut()}
     ])
-
     const toggleMenu = () => menuOpen.value = !menuOpen.value
-
     const goTo = (page) => {
         menuOpen.value = false
         router.push({path: `/${page}`})
     }
 
     const handleClickOutside = (event) => {
-        if (menuOpen.value && dropdownRef.value && !dropdownRef.value.contains(event.target)) {
+        if (menuOpen.value && dropdownRef.value && !dropdownRef.value.contains(event.target) && userBtnRef.value && !userBtnRef.value.contains(event.target)) {
             menuOpen.value = false
         }
         if (clickedMenu.value && dropdownRefNav.value && !dropdownRefNav.value.contains(event.target)) {
@@ -252,7 +261,6 @@
     onMounted(() => {
         document.addEventListener('mousedown', handleClickOutside)
     })
-
     onBeforeUnmount(() => {
         document.removeEventListener('mousedown', handleClickOutside)
         document.body.style.overflow = '';
@@ -260,6 +268,10 @@
 </script>
 
 <style scoped>
+    .header-user-wrapper {
+        position: relative;
+    }
+
     .header {
         font-family: "Nunito", sans-serif;
         position: sticky;
@@ -302,12 +314,14 @@
 
     .header-nav__item {
         position: relative;
+        display: flex;
     }
 
     .header-nav__link {
         display: flex;
         align-items: center;
         gap: 0.4rem;
+        font-size: 17px;
         color: #1e1e1e;
         font-weight: 600;
         padding: 0.5rem 0.75rem;
@@ -316,6 +330,8 @@
         transition: all 0.2s;
         cursor: pointer;
         user-select: none;
+        border: none;
+        background: none;
     }
 
     .header-nav__link:hover {
@@ -361,6 +377,11 @@
         border-radius: 12px;
         transition: all 0.2s;
         user-select: none;
+        width: 100%;
+        border: none;
+        background: none;
+        font-size: 16px;
+        font-family: "Nunito", sans-serif;
     }
 
     .header-nav__submenu-link:hover {
@@ -407,6 +428,7 @@
         cursor: pointer;
         position: relative;
         user-select: none;
+        font-size: 16px;
     }
 
     .header-user__avatar {
@@ -451,9 +473,8 @@
         font-size: 1rem;
         color: #1e1e1e;
         font-weight: 600;
-        font-family: 'Fredoka One', cursive;
+        font-family: 'Nunito', sans-serif;
         transition: all 0.2s;
-        border-radius: 12px;
     }
 
     .header-user__dropdown-btn:hover {
@@ -461,7 +482,8 @@
     }
 
     .header-user__dropdown-icon {
-        width: 38px;
+        width: 24px;
+        height: 24px;
     }
 
     .btn-login {
@@ -497,39 +519,13 @@
             padding: 0.5rem 1rem;
         }
 
-        .mobile-nav-overlay {
-            display: block;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.6);
-            z-index: 100;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s ease;
-        }
-
         .header.mobile-menu-active .mobile-nav-overlay {
             opacity: 1;
             pointer-events: auto;
         }
 
-        .header-nav {
-            display: block;
-        }
-
-        .header-nav:not(.is-open) {
-            pointer-events: none;
-        }
-
-        .articlus__wrapper, .header-user__name, .header__drop-text {
+        .articlus__wrapper, .header-user__name, .header__drop-text, .logo-img {
             display: none;
-        }
-
-        .logo-img {
-            display: none
         }
 
         .header-nav {
@@ -550,11 +546,9 @@
 
         .header-nav.is-open {
             transform: translateX(0);
-            pointer-events: auto;
         }
 
         .header-nav .header-nav__list {
-            display: flex;
             flex-direction: column;
             gap: 0.5rem;
             width: 100%;
@@ -562,31 +556,52 @@
         }
 
         .header-nav .header-nav__item {
-            border-bottom: 2px solid rgba(30, 30, 30, 0.1);
+            flex-direction: column;
         }
 
         .header-nav .header-nav__link {
-            font-size: 1.3rem;
-            padding: 1rem 0.5rem;
+            font-size: 1.5rem;
+            padding: 1rem;
             justify-content: space-between;
+            border: 2px solid #1e1e1e;
+            background-color: #fff;
+            box-shadow: 3px 3px 0 #1e1e1e;
+            margin-bottom: 0.5rem;
+        }
+
+        .header-nav .header-nav__link.is-active-parent {
+            background-color: #f1c40f;
+            transform: translate(3px, 3px);
+            box-shadow: none;
         }
 
         .header-nav .header-nav__submenu {
             position: static;
             box-shadow: none;
             border: none;
-            padding: 0.5rem 0 0.5rem 1.5rem;
-            animation: none;
+            padding: 0.5rem 0 0.5rem 1.2rem;
             background: none;
-            opacity: 1;
-            pointer-events: auto;
             min-width: auto;
+            border-left: 3px solid #1e1e1e;
+            margin-left: 0.5rem;
+            margin-bottom: 0.5rem;
         }
 
         .header-nav .header-nav__submenu-link {
-            padding: 0.75rem;
-            color: #444;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
+            padding: 0.8rem 1rem;
+            color: #1e1e1e;
+            background-color: #fff;
+            border: 2px solid #1e1e1e;
+            box-shadow: 2px 2px 0 #1e1e1e;
+            border-radius: 12px;
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .header-nav .header-nav__submenu-link:hover {
+            background-color: #fde68a;
         }
 
         .header-nav .header-nav__submenu-sub {
@@ -596,12 +611,13 @@
             padding: 0.5rem 0 0.5rem 1rem;
             background: none;
             white-space: normal;
+            border-left: 3px solid #cccccc;
+            margin-left: 0.5rem;
         }
 
         .header-nav .header-nav__submenu-sub .header-nav__submenu-link {
             font-size: 1rem;
-            color: #777;
-            padding: 0.5rem;
+            background-color: #f5f5f5;
         }
 
         .header-nav .header-nav__arrow {

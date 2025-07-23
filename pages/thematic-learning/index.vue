@@ -54,16 +54,21 @@
         return jsonData.value.levels.find(l => l.level === Number(selectedLevel.value))
     })
 
+    const isModuleCompleted = (level, id) => {
+        return trainer.completedModules.some(m => m.level === level && m.id === id)
+    }
+
     const isModuleUnlocked = (level, moduleId) => {
-        if (level > 1) return false
         if (moduleId === 1) return true
-        return trainer.completedModules.includes(Number(moduleId - 1))
+        return isModuleCompleted(level, moduleId - 1)
     }
 
     const isLevelCompleted = (levelNumber) => {
         const level = jsonData.value?.levels.find(l => l.level === levelNumber)
         if (!level) return false
-        return level.modules.every(mod => trainer.completedModules.includes(mod.id))
+        return level.modules.every(mod =>
+            isModuleCompleted(levelNumber, mod.id)
+        )
     }
 
     const selectLevel = (levelNumber) => {
