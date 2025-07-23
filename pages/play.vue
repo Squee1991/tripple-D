@@ -1,57 +1,70 @@
 <script setup>
-    import {useGameStore} from '../store/sentenceDuelStore.js';
-    import {useRouter} from 'vue-router';
-    import {watch, computed, ref , onUnmounted } from 'vue';
-    import Modal from '../src/components/modal.vue'
-    const {t} = useI18n()
-    const gameStore = useGameStore();
-    const showDevModal = ref(false)
-    const router = useRouter();
-    const levels = ['A1', 'A2', 'B1', 'B2'];
-    const isWaitingForOpponent = computed(() => !!gameStore.gameId && gameStore.sessionData?.status === 'waiting');
-    const isOpponentFound = computed(() => gameStore.sessionData?.status === 'starting');
+    import { ref, computed, watch, onMounted, onUnmounted } from 'vue'
+    import { useSentencesStore } from '../store/sentencesStore.js'
+    import { useGameStore } from '../store/sentenceDuelStore.js'
+    import { useRouter } from 'vue-router'
+    import Modal from  '../src/components/modal.vue'
 
+    const { t } = useI18n()
+    const router = useRouter()
+    const gameStore = useGameStore()
+
+    const sentencesStore = useSentencesStore()
+    const mode = ref('online')
+    const isLoading = ref(true)
+
+    const showDevModal = ref(false)
+    const levels = ['A1', 'A2', 'B1', 'B2']
+
+    const isWaitingForOpponent = computed(() => mode.value === 'online' && !!gameStore.gameId && gameStore.sessionData?.status === 'waiting')
+    const isOpponentFound = computed(() => mode.value === 'online' && gameStore.sessionData?.status === 'starting')
     const overlayData = ref({
         title: "wordDuel.rulesTitle",
-        text:"wordDuel.rulesText",
-        subtext:"wordDuel.subText"
+        text: "wordDuel.rulesText",
+        subtext: "wordDuel.subText"
     })
 
-    const openModal = () => {
-        showDevModal.value = true
-    }
-
-    const closeModal = () => {
-        showDevModal.value = false
-    }
+    const openModal = () => { showDevModal.value = true }
+    const closeModal = () => { showDevModal.value = false }
 
     function cancelSearch() {
-        gameStore.cancelSearch();
+        gameStore.cancelSearch()
     }
-
     function goBack() {
         router.push('/')
         gameStore.cancelSearch()
     }
 
     function handleFindGameClick(level) {
-        gameStore.findGame(level);
+        if (mode.value === 'online') {
+            gameStore.findGame(level)
+        } else {
+            router.push({ path: '/duel-solo', query: { level } })
+        }
     }
 
     watch(() => gameStore.sessionData?.status, (newStatus) => {
-        if (newStatus === 'starting') {
+        if (mode.value === 'online' && newStatus === 'starting') {
             setTimeout(() => {
                 if (gameStore.gameId) {
-                    router.push(`/game/${gameStore.gameId}`);
+                    router.push(`/game/${gameStore.gameId}`)
                 }
-            }, 2000);
+            }, 2000)
         }
-    });
+    })
+
+    onMounted(async () => {
+        isLoading.value = true;
+        if (!sentencesStore.db) {
+            await sentencesStore.loadDb();
+        }
+        isLoading.value = false;
+    })
 
     onUnmounted(() => {
-       if (isWaitingForOpponent.value) {
-           gameStore.cancelSearch()
-       }
+        if (isWaitingForOpponent.value) {
+            gameStore.cancelSearch()
+        }
     })
 </script>
 
@@ -79,6 +92,26 @@
                         <img class="duel__question-img" src="../assets/images/question.svg" alt="">
                     </div>
                 </div>
+
+                <div class="mode-toggle-wrapper">
+                    <div
+                            class="mode-toggle-option"
+                            :class="{ 'mode-toggle-option--inactive': mode !== 'online' }"
+                            @click="mode = 'online'"
+                    >
+                        🌐  {{ t('wordDuel.online')}}
+                    </div>
+                    <div
+                            class="mode-toggle-option"
+                            :class="{ 'mode-toggle-option--inactive': mode !== 'local' }"
+                            @click="mode = 'local'"
+                    >
+                        👤  {{ t('wordDuel.local')}}
+                    </div>
+                    <div class="mode-toggle-slider" :class="{ 'mode-toggle-slider--local': mode === 'local' }"></div>
+                </div>
+
+
                 <p class="page-subtitle">{{ t('wordDuel.subTitle')}}</p>
                 <div class="level-grid">
                     <button
@@ -86,7 +119,7 @@
                             :key="level"
                             @click="handleFindGameClick(level)"
                             class="level-card"
-                            :disabled="gameStore.isSearching"
+                            :disabled="(mode === 'online' && gameStore.isSearching) || isLoading"
                     >
                         <h2 class="card-level-title">{{t('wordDuel.level')}} {{ level }}</h2>
                     </button>
@@ -105,7 +138,58 @@
         </div>
     </div>
 </template>
+
 <style scoped>
+
+    .mode-toggle-wrapper {
+        width: 320px;
+        display: flex;
+        background: #fff;
+        border-radius: 16px;
+        position: relative;
+        margin: 2rem auto;
+        box-shadow: 4px 4px 0px #1e1e1e;
+        border: 3px solid #1e1e1e;
+        overflow: hidden;
+        padding: 4px;
+    }
+
+    .mode-toggle-option {
+        flex: 1;
+        text-align: center;
+        padding: 14px 5px;
+        cursor: pointer;
+        color: #fff; /* Активный цвет текста */
+        font-family: "Nunito", sans-serif;
+        font-weight: 700;
+        font-size: 1.1rem;
+        position: relative;
+        transition: color 0.4s cubic-bezier(.38, 1.32, .39, 1);
+        user-select: none;
+        z-index: 1;
+    }
+
+    .mode-toggle-option--inactive {
+        color: #1e1e1e; /* Неактивный цвет текста */
+    }
+
+    .mode-toggle-slider {
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        width: calc(50% - 4px);
+        height: calc(100% - 8px);
+        background: #1e1e1e;
+        border-radius: 12px;
+        transition: transform 0.4s cubic-bezier(.38, 1.32, .39, 1);
+        z-index: 0;
+    }
+
+    .mode-toggle-slider--local {
+        transform: translateX(100%);
+    }
+
+    /* Остальные стили компонента */
     .duel__header {
         display: flex;
         justify-content: space-between;
@@ -268,10 +352,10 @@
     }
 
     @media (max-width: 1024px) {
-           .page-title {
-               font-size: 1.2rem;
-               text-align: center;
-           }
+        .page-title {
+            font-size: 1.2rem;
+            text-align: center;
+        }
         .duel__header {
             padding: 0 10px;
         }
@@ -283,6 +367,11 @@
             padding: 10px;
         }
         .duel__header {
+            flex-direction: column;
+        }
+
+        .level-grid {
+            display: flex;
             flex-direction: column;
         }
     }

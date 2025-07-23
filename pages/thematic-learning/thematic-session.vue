@@ -9,7 +9,7 @@
     const correctAnswers = ref(0)
     const loading = ref(true)
     const current = ref(0)
-    const userAnswer = ref('')
+    const answerOptions = ref([])
     const feedback = ref(null)
     const finished = ref(false)
     const isChecked = ref(false)
@@ -21,35 +21,61 @@
 
     const tasks = computed(() => thematic.selectedModule?.tasks || [])
     const progressPercent = computed(() => ((current.value + (finished.value ? 1 : 0)) / tasks.value.length) * 100)
+
     const visibleSentence = computed(() => {
         const task = tasks.value[current.value]
-        if (feedback.value !== null) {
+
+        if (isChecked.value && feedback.value?.isCorrect) {
             return task.question.replace('___', task.answer)
         }
         return task.question
     })
-    const check = () => {
+
+
+    const generateAnswerOptions = (correctAnswer) => {
+        const allArticles = ['der', 'die', 'das', 'den', 'dem', 'des', 'ein', 'eine', 'einen', 'einem'];
+        let distractors = allArticles.filter(item => item !== correctAnswer);
+
+
+        for (let i = distractors.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [distractors[i], distractors[j]] = [distractors[j], distractors[i]];
+        }
+        const options = [correctAnswer, distractors[0], distractors[1]];
+
+        for (let i = options.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [options[i], options[j]] = [options[j], options[i]];
+        }
+
+        answerOptions.value = options;
+    }
+
+    const setupCurrentQuestion = () => {
+        feedback.value = null;
+        isChecked.value = false;
+        const task = tasks.value[current.value];
+        generateAnswerOptions(task.answer);
+    }
+
+    const check = (selectedAnswer) => {
+        if (isChecked.value) return;
+
         const task = tasks.value[current.value]
-        const correct = task.answer
-        const isCorrect = userAnswer.value.trim().toLowerCase() === correct
-        feedback.value = isCorrect
+        const isCorrect = selectedAnswer === task.answer
+        feedback.value = { isCorrect, selected: selectedAnswer };
         isChecked.value = true
         if (isCorrect) correctAnswers.value += 1
     }
+
     const next = async () => {
-        feedback.value = null
-        userAnswer.value = ''
-        isChecked.value = false
         if (current.value < tasks.value.length - 1) {
             current.value++
+            setupCurrentQuestion();
         } else {
             finished.value = true
             if (correctAnswers.value === tasks.value.length) {
-                const moduleId = thematic.selectedModule.id
-                if (!thematic.completedModules.includes(moduleId)) {
-                    thematic.completedModules.push(moduleId)
-                    await thematic.saveProgress()
-                }
+                await thematic.addCompletedModule(thematic.selectedLevel.level, thematic.selectedModule.id)
             }
         }
     }
@@ -75,10 +101,8 @@
     const restartModule = () => {
         correctAnswers.value = 0
         current.value = 0
-        feedback.value = null
-        userAnswer.value = ''
-        isChecked.value = false
         finished.value = false
+        setupCurrentQuestion()
     }
 
     const updateClock = () => {
@@ -98,7 +122,10 @@
         if (!thematic.selectedModule) {
             await thematic.loadProgress()
         }
-        loading.value = false
+        loading.value = false;
+        if(tasks.value.length > 0) {
+            setupCurrentQuestion();
+        }
         updateClock();
         clockInterval = setInterval(updateClock, 1000);
         window.addEventListener('beforeunload', handleBeforeUnload);
@@ -122,6 +149,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="trainer-page__decorations">
                 <button class="exit-sign" @click="exit">
                     <img class="exit-sign-icon" src="../../assets/images/exit.svg" alt="">
@@ -156,11 +184,13 @@
                          :style="{ transform: `rotate(${secondRotation}deg)` }"></div>
                 </div>
             </div>
+
             <div class="trainer-app">
                 <div class="trainer-app__board">
                     <section v-if="loading" class="trainer-app__view trainer-app__view--loading">
                         <p>{{ t('trainerPage.loading')}}</p>
                     </section>
+
                     <section v-else-if="thematic.selectedModule" class="trainer-app__view trainer-app__view--content">
                         <header v-if="!finished" class="trainer-app__header">
                             <h1 class="trainer-app__title">{{ thematic.selectedModule.title }}</h1>
@@ -170,33 +200,44 @@
                         <div v-if="!finished" class="progress-bar">
                             <div class="progress-bar__fill" :style="{ width: progressPercent + '%' }"></div>
                         </div>
+
                         <div v-if="!finished" class="trainer-app__task">
-                            <p class="trainer-app__question" :class="{ 'is-correct': feedback === true }">
+                            <p class="trainer-app__question" :class="{ 'correct-reveal': feedback && feedback.isCorrect }">
                                 {{ visibleSentence }}
                             </p>
-                            <div class="trainer-app__input-group">
-                                <input
-                                        v-model="userAnswer"
-                                        class="trainer-app__input"
-                                        @keyup.enter="isChecked ? next() : check()"
+
+                            <div class="trainer-app__options-group">
+                                <button
+                                        v-for="option in answerOptions"
+                                        :key="option"
+                                        class="option-btn"
+                                        :class="{
+                                        'correct': isChecked && option === tasks[current].answer,
+                                        'incorrect': isChecked && feedback && feedback.selected === option && !feedback.isCorrect,
+                                        'disabled': isChecked && feedback && feedback.selected !== option
+                                    }"
+                                        @click="check(option)"
                                         :disabled="isChecked"
-                                        placeholder="..."
-                                        maxlength="3"
-                                />
-                                <button v-if="!isChecked" class="btn" @click="check">{{ t('trainerPage.check')}}
-                                </button>
-                                <button v-else class="btn btn--next" @click="next">{{ t('trainerPage.further')}}
+                                >
+                                    {{ option }}
                                 </button>
                             </div>
-                            <div v-if="feedback !== null" class="feedback">
-                                <p v-if="feedback === true" class="feedback__text feedback__text--success">
-                                    ✔ {{ t('trainerPage.right')}}
-                                </p>
-                                <p v-if="feedback === false" class="feedback__text feedback__text--error">
-                                    ✖ {{ t('trainerPage.false')}} {{ tasks[current].answer }}
-                                </p>
+
+                            <div class="trainer-app__footer">
+                                <div v-if="isChecked && feedback" class="feedback-message">
+                                    <span v-if="feedback.isCorrect" class="feedback-text--success">
+                                        ✔ Верно!
+                                    </span>
+                                    <span v-else class="feedback-text--error">
+                                        ✖ Неверно. Правильный ответ: «{{ tasks[current].answer }}»
+                                    </span>
+                                </div>
+                                <button v-if="isChecked" class="btn btn--next" @click="next">
+                                    {{ t('trainerPage.further')}}
+                                </button>
                             </div>
                         </div>
+
                         <div v-else class="trainer-app__view trainer-app__view--complete">
                             <div v-if="correctAnswers === tasks.length">
                                 <div class="result-icon">🏆</div>
@@ -207,23 +248,21 @@
                             <div class="result__inner" v-else>
                                 <div class="result-icon">🤔</div>
                                 <h3 class="result-title">{{ t('trainerPage.morePractice')}}</h3>
-                                <p class="result-subtitle">{{ t('trainerPage.result')}} {{ correctAnswers }} / {{
-                                    tasks.length }}</p>
+                                <p class="result-subtitle">{{ t('trainerPage.result')}} {{ correctAnswers }} / {{ tasks.length }}</p>
                                 <div class="result-actions">
-                                    <button class="btn btn--restart" @click="restartModule">{{
-                                        t('trainerPage.repeat')}}
-                                    </button>
-                                    <button class="btn btn--secondary" @click="exit">{{ t('trainerPage.toMain')}}
-                                    </button>
+                                    <button class="btn btn--restart" @click="restartModule">{{ t('trainerPage.repeat')}}</button>
+                                    <button class="btn btn--secondary" @click="exit">{{ t('trainerPage.toMain')}}</button>
                                 </div>
                             </div>
                         </div>
                     </section>
+
                     <section v-else class="trainer-app__view trainer-app__view--error">
                         <p class="error__text">{{ t('trainerPage.notFound')}}</p>
                         <button class="btn" @click="exit">{{ t('trainerPage.toMain')}}</button>
                     </section>
                 </div>
+
                 <div class="trainer-app__ledge">
                     <div class="duster"></div>
                     <div class="chalk"></div>
@@ -270,6 +309,13 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    .trainer-app__view {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 
     .modal-overlay {
@@ -495,7 +541,8 @@
         align-items: center;
     }
 
-    .clock-hand--numbers, .clock-hand, .clock-hand--hour, .clock-hand--minute, .clock-hand--second { /* ... все ваши стили для часов ... */
+    .clock-hand--numbers, .clock-hand, .clock-hand--hour, .clock-hand--minute, .clock-hand--second {
+
     }
 
     .clock-hand--numbers {
@@ -705,32 +752,11 @@
         flex-grow: 1;
         margin: 0 0 1.5rem 0;
         color: #fff;
+        transition: color 0.3s ease;
     }
 
-    .trainer-app__question.is-correct {
-        color: #2ecc71;
-    }
-
-    .trainer-app__input-group {
-        display: flex;
-        gap: 12px;
-    }
-
-    .trainer-app__input {
-        flex-grow: 1;
-        padding: 12px 16px;
-        font-size: 1.2rem;
-        font-weight: 700;
-        border: 3px dashed rgba(236, 240, 241, 0.4);
-        background: transparent;
-        color: #ecf0f1;
-        border-radius: 12px;
-    }
-
-    .trainer-app__input:focus {
-        outline: none;
-        border-color: #f1c40f;
-        border-style: solid;
+    .trainer-app__question.correct-reveal {
+        color: #f1c40f;
     }
 
     .btn {
@@ -781,33 +807,14 @@
         color: #2c3e50;
     }
 
-    .feedback {
-        margin-top: 1rem;
-        min-height: 50px;
-        text-align: center;
-    }
-
-    .feedback__text {
-        font-size: 1.3rem;
-        font-weight: 700;
-        font-family: 'Nunito', sans-serif;
-    }
-
-    .feedback__text--success {
-        color: #2ecc71;
-    }
-
-    .feedback__text--error {
-        color: #e74c3c;
-    }
-
     .result-icon {
         font-size: 4rem;
     }
 
     .result-title {
         font-family: 'Caveat', cursive;
-        font-size: 2.8rem;
+        font-size: 2rem;
+        text-align: center;
     }
 
     .result-subtitle {
@@ -836,4 +843,76 @@
             display: none;
         }
     }
+
+    .trainer-app__options-group {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .option-btn {
+        font-family: 'Caveat', cursive;
+        font-size: 2rem;
+        color: #ecf0f1;
+        background: transparent;
+        border: 2px dashed rgba(236, 240, 241, 0.4);
+        border-radius: 12px;
+        padding: 0.5rem 2rem;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .option-btn:not(:disabled):hover {
+        background: rgba(236, 240, 241, 0.1);
+        border-style: solid;
+    }
+
+    .option-btn.correct {
+        background: #2ecc71;
+        border-color: #2ecc71;
+        color: #2c3e50;
+        transform: scale(1.05);
+    }
+
+    .option-btn.incorrect {
+        background: #e74c3c;
+        border-color: #e74c3c;
+        color: #2c3e50;
+        opacity: 1;
+    }
+
+    .option-btn.disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+    }
+
+    .trainer-app__footer {
+        height: auto;
+        min-height: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .feedback-message {
+        min-height: 2.5rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+        font-family: 'Nunito', sans-serif;
+        text-align: center;
+        margin-bottom: 1rem;
+        animation: fadeIn 0.5s ease;
+    }
+
+    .feedback-text--success {
+        color: #2ecc71;
+    }
+
+    .feedback-text--error {
+        color: #e74c3c;
+    }
+
 </style>

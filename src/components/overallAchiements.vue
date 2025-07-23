@@ -34,13 +34,15 @@
 </template>
 
 <script setup>
-	import {ref, watch , onMounted} from 'vue'
+	import {ref, watch } from 'vue'
 	import {overAchievment} from '../achieveGroup/overAllAchieve/overallAchievements.js'
 	import {userlangStore} from '../../store/learningStore.js'
 	import {userAuthStore} from '../../store/authStore.js'
 	import {useGameStore} from '../../store/marafonStore.js'
 	import { useQuestStore } from '../../store/questStore.js'
+	import { useCardsStore } from '../../store/cardsStore.js'
 	const gameStore = useGameStore()
+	const cardStore = useCardsStore()
 	const questStore = useQuestStore()
 	const langStore = userlangStore()
 	const authStore = userAuthStore()
@@ -121,24 +123,32 @@
 		}
 	}, {immediate: true});
 
+	watch(()=> cardStore.createdCount , (newCount) => {
+		const ach = findAchievementById('createdCountCard')
+		if (ach) {
+			ach.currentProgress = Math.min(newCount, ach.targetProgress)
+		}
+	}, { immediate: true })
+
+
 	watch(() => gameStore.lastChanceProgress, (newProgress) => {
 		const ach = findAchievementById('LastChance');
 		if (ach) {
-			ach.currentProgress = newProgress;
+			ach.currentProgress = Math.min(newProgress, ach.targetProgress);
 		}
 	}, { immediate: true });
 
 	watch(() => gameStore.marginForErrorProgress, (newProgress) => {
 		const ach = findAchievementById('MarginForError');
 		if (ach) {
-			ach.currentProgress = newProgress;
+			ach.currentProgress = Math.min(newProgress, ach.targetProgress);
 		}
-	},
-			{ immediate: true });
+	}, { immediate: true });
+
 	watch(() => gameStore.onTheEdgeProgress, (newProgress) => {
 		const ach = findAchievementById('OnTheEdge');
 		if (ach) {
-			ach.currentProgress = newProgress;
+			ach.currentProgress = Math.min(newProgress, ach.targetProgress);
 		}
 	}, { immediate: true });
 

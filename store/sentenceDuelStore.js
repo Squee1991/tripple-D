@@ -11,7 +11,7 @@ export const useGameStore = defineStore('game', () => {
     const db = getFirestore();
     const authStore = userAuthStore();
     const sentencesStore = useSentencesStore();
-
+    const localTasks = ref([])
     const isSearching = ref(false);
     const gameId = ref(null);
     const error = ref(null);
@@ -20,29 +20,19 @@ export const useGameStore = defineStore('game', () => {
     const isCheckingWinner = ref(false);
 
 
-    // В файле store/gameStore.js ИЛИ store/sentenceDuelStore.js
+    async function loadLocalTasks(level) {
+        const all = sentencesStore.db?.levels[level]?.sentences || []
+        localTasks.value = all.sort(() => Math.random() - 0.5).slice(0, 8)
+    }
 
     async function updateUserStats(userId, level, isWin, isCleanSweep, isFlawless) {
-        // --- НАЧАЛО БЛОКА ДЛЯ ДИАГНОСТИКИ ---
-        console.log("=========================================");
-        console.log("======= ДИАГНОСТИКА updateUserStats =======");
-        console.log("=========================================");
-        console.log(`- Функция вызвана для пользователя: ${userId}`);
-        console.log(`- Уровень игры: ${level}`);
-        console.log(`- Это победа?: ${isWin}`);
-        // --- КОНЕЦ БЛОКА ДЛЯ ДИАГНОСТИКИ ---
-
         if (!userId || !level) {
-            console.error("!!! ОШИБКА: updateUserStats вызвана без userId или level!");
             return;
         }
-
         const userDocRef = doc(db, 'users', userId);
         const updates = {};
         const prefix = `achievements.${level}`;
-
         if (isWin) {
-            console.log("- Результат: ПОБЕДА. Готовлю данные для обновления...");
             updates[`${prefix}.wins`] = increment(1);
             updates[`${prefix}.streaks`] = increment(1);
             if (isCleanSweep) {
@@ -52,21 +42,13 @@ export const useGameStore = defineStore('game', () => {
                 updates[`${prefix}.flawlessWins`] = increment(1);
             }
         } else {
-            console.log("- Результат: ПОРАЖЕНИЕ. Готовлю сброс серии побед.");
             updates[`${prefix}.streaks`] = 0;
         }
 
-        console.log("- Финальный объект 'updates':", updates);
-
         try {
-            console.log("--> ВЫПОЛНЯЮ ЗАПИСЬ В БАЗУ ДАННЫХ (updateDoc)...");
             await updateDoc(userDocRef, updates);
-            console.log("✅ УСПЕХ! Статистика в Firestore успешно обновлена!");
-            alert("Статистика УСПЕШНО обновлена!");
-
         } catch (error) {
             console.error("!!! КРИТИЧЕСКАЯ ОШИБКА ПРИ ЗАПИСИ В БД !!!", error);
-            alert(`Не удалось обновить статистику! Ошибка: ${error.code}\n\nСообщение: ${error.message}`);
         }
     }
 
@@ -74,7 +56,6 @@ export const useGameStore = defineStore('game', () => {
 
     async function createGameSession(level, hostId) {
         if (!sentencesStore.db) {
-            console.error("Критическая ошибка");
             return null;
         }
 
@@ -349,6 +330,8 @@ export const useGameStore = defineStore('game', () => {
 
     return {
         isSearching, gameId, error, sessionData,
+        localTasks,
+        loadLocalTasks,
         findGame, listenToSession, leaveSession, submitAnswer,
         prepareCurrentRound, checkRoundWinner, cancelSearch
     };

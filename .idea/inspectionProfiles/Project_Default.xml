@@ -25,7 +25,7 @@
     <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="60">
+          <list size="63">
             <item index="0" class="java.lang.String" itemvalue="nobr" />
             <item index="1" class="java.lang.String" itemvalue="noembed" />
             <item index="2" class="java.lang.String" itemvalue="comment" />
@@ -86,6 +86,9 @@
             <item index="57" class="java.lang.String" itemvalue="modaldev" />
             <item index="58" class="java.lang.String" itemvalue="modal" />
             <item index="59" class="java.lang.String" itemvalue="banner" />
+            <item index="60" class="java.lang.String" itemvalue="soundbtn" />
+            <item index="61" class="java.lang.String" itemvalue="accessibility" />
+            <item index="62" class="java.lang.String" itemvalue="accessibilitytoggle" />
           </list>
         </value>
       </option>

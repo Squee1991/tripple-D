@@ -8,16 +8,17 @@ export const useTrainerStore = defineStore('thematic', () => {
 	const jsonData = ref(null)
 	const selectedLevel = ref(null)
 	const selectedModule = ref(null)
-	const completedModules = ref([])
+	const completedModules = ref([]) // [{ level, id }]
 
-	const setThemeAndModule = async (topicName, level, module) => {
-		topic.value = topicName
-		const res = await fetch(`/${topicName}.json`)
-		jsonData.value = await res.json()
-		selectedLevel.value = jsonData.value.levels.find(l => l.level === level)
-		selectedModule.value = selectedLevel.value.modules.find(m => m.id === module)
+	// Добавить пройденный модуль
+	const addCompletedModule = (level, id) => {
+		if (!completedModules.value.some(m => m.level === level && m.id === id)) {
+			completedModules.value.push({ level, id })
+			saveProgress()
+		}
 	}
 
+	// Сохранение прогресса
 	const saveProgress = async () => {
 		const auth = getAuth()
 		const db = getFirestore()
@@ -36,6 +37,7 @@ export const useTrainerStore = defineStore('thematic', () => {
 		await setDoc(docRef, data)
 	}
 
+	// Загрузка прогресса
 	const loadProgress = async () => {
 		const auth = getAuth()
 		const db = getFirestore()
@@ -64,7 +66,15 @@ export const useTrainerStore = defineStore('thematic', () => {
 			const data = docSnap.data()
 			if (data[topic.value]) {
 				const t = data[topic.value]
-				if (t.completedModules) completedModules.value = t.completedModules
+				// Миграция старого формата:
+				if (Array.isArray(t.completedModules) && typeof t.completedModules[0] === 'number') {
+					// если был старый формат [1,2,3]
+					completedModules.value = t.completedModules.map(id => ({ level: 1, id })) // по умолчанию, можно скорректировать если были уровни
+				} else if (Array.isArray(t.completedModules)) {
+					completedModules.value = t.completedModules
+				} else {
+					completedModules.value = []
+				}
 				if (t.level && t.module) {
 					await setThemeAndModule(topic.value, t.level, t.module)
 				}
@@ -76,11 +86,23 @@ export const useTrainerStore = defineStore('thematic', () => {
 		}
 	}
 
-
+	const setThemeAndModule = async (topicName, level, module) => {
+		topic.value = topicName
+		const res = await fetch(`/${topicName}.json`)
+		jsonData.value = await res.json()
+		selectedLevel.value = jsonData.value.levels.find(l => l.level === level)
+		selectedModule.value = selectedLevel.value.modules.find(m => m.id === module)
+	}
 
 	return {
-		topic, jsonData, selectedLevel, selectedModule, completedModules,
+		topic,
+		jsonData,
+		selectedLevel,
+		selectedModule,
+		completedModules,
 		setThemeAndModule,
-		saveProgress, loadProgress,
+		addCompletedModule,
+		saveProgress,
+		loadProgress,
 	}
 })

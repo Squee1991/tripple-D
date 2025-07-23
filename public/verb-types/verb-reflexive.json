@@ -1,0 +1,62 @@
+[
+  {
+    "type": "verbReflexive",
+    "question": "Ich interessiere ___ für deutsche Musik.",
+    "options": ["mich", "dich", "sich"],
+    "answer": "mich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Freust du ___ auf das Wochenende?",
+    "options": ["dich", "mich", "sich"],
+    "answer": "dich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Er muss ___ am Morgen immer beeilen.",
+    "options": ["sich", "mich", "dich"],
+    "answer": "sich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Wir treffen ___ um 19 Uhr vor dem Kino.",
+    "options": ["uns", "euch", "sich"],
+    "answer": "uns"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Warum ärgert ihr ___ so sehr?",
+    "options": ["euch", "uns", "sich"],
+    "answer": "euch"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Die Kinder waschen ___ vor dem Essen die Hände.",
+    "options": ["sich", "euch", "uns"],
+    "answer": "sich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Ich fühle ___ heute nicht so gut.",
+    "options": ["mich", "dich", "sich"],
+    "answer": "mich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Setzen Sie ___ bitte, Herr Schmidt!",
+    "options": ["sich", "euch", "uns"],
+    "answer": "sich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Du solltest ___ wärmer anziehen.",
+    "options": ["dich", "mich", "sich"],
+    "answer": "dich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Wir unterhalten ___ oft über Politik.",
+    "options": ["uns", "euch", "sich"],
+    "answer": "uns"
+  }
+]

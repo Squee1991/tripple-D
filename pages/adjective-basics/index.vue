@@ -1,9 +1,9 @@
 <template>
     <div class="adjective-page" :class="{ 'content-is-active': isContentVisible }">
         <div class="sidebar">
-            <button @click="backToMenu" class="btn__back">На главную</button>
-            <h2 class="sidebar__title">Уровни A1 - A2</h2>
-            <div class="sidebar__heading">Темы</div>
+            <button @click="backToMenu" @focus="speak(t('tenses.barBtn'))" class="btn__back">{{ t('tenses.barBtn')}}</button>
+            <h2 class="sidebar__title">{{ t('adjectiveBasicPageSideBar.title')}}</h2>
+            <div class="sidebar__heading">{{ t('adjectiveBasicPageSideBar.theme')}}</div>
             <ul class="sidebar__list">
                 <li
                         v-for="item in topics"
@@ -19,23 +19,23 @@
         <div class="content" v-if="currentTopicData">
             <button v-if="isMobileLayout" class="btn__close" @click="closeContent">×</button>
             <header class="content__header">
-                <h1 class="content__title">Прилагательные: {{ currentTopicData.title }}</h1>
+                <h1 class="content__title">{{ t('adjectiveBasicPageSideBar.adjective')}} {{ currentTopicData.title }}</h1>
             </header>
             <div class="content__body">
                 <div class="content__main-column">
                     <section class="info-section">
-                        <h3 class="info-section__title">Примеры</h3>
+                        <h3 class="info-section__title">{{ t('adjectiveBasicPageSideBar.example')}}</h3>
                         <div v-for="(example, index) in currentTopicData.examples" :key="index" class="example">
-                            <p class="example__sentence">
-                                {{ example.sentence_part1 }}<span
-                                    class="example__highlight">{{ example.highlight }}</span>{{ example.sentence_part2
-                                }}
-                            </p>
+                            <div class="example__sentence">
+                                <div>{{ example.sentence_part1 }}
+                                    <span class="example__highlight">{{ example.highlight }}</span>
+                                </div>
+                                <SoundBtn :text="example.sentence_part1 + example.highlight "/>
+                            </div>
                             <span class="example__translation">{{ example.translation }}</span>
                         </div>
                     </section>
                 </div>
-
                 <div class="practice-area">
                     <h3 class="practice-area__title">{{ currentTopicData.practice.title }}</h3>
                     <p class="practice-area__description">{{ currentTopicData.practice.description }}</p>
@@ -51,15 +51,208 @@
 <script setup>
     import {ref, computed, onMounted, onUnmounted} from 'vue'
     import {useRouter} from 'vue-router'
+    import Lottie from 'lottie-web';
+    import SoundBtn from '../../src/components/soundBtn.vue'
+    const { t , locale } = useI18n();
+    const topics = [
+        {
+            id: 'colors',
+            title: t('adjectiveBasicPageSideBar.first'),
+            examples: [
+                {
+                    sentence_part1: 'Die Blume ist ',
+                    highlight: 'rot',
+                    sentence_part2: '.',
+                    translation: t('adjectiveBasicPageSideBar.exampleFirstColors')
+                },
+                {
+                    sentence_part1: 'Der Himmel ist ',
+                    highlight: 'blau',
+                    sentence_part2: '.',
+                    translation: t('adjectiveBasicPageSideBar.exampleSecondColors')
+                },
+                {
+                    sentence_part1: 'Das Gras ist ',
+                    highlight: 'grün',
+                    sentence_part2: '.',
+                    translation: t('adjectiveBasicPageSideBar.exampleThirdColors')
+                }
+            ],
+            practice: {
+                title: 'Практика',
+                description: 'Проверьте, как хорошо вы знаете названия цветов на немецком.',
+                buttonText: 'Начать практику',
+            }
+        },
+        {
+            id: 'feelings',
+            title: t('adjectiveBasicPageSideBar.fourth'),
+            examples: [
+                {
+                    sentence_part1: 'Ich bin sehr ',
+                    highlight: 'glücklich',
+                    sentence_part2: ' heute.',
+                    translation:  t('adjectiveBasicPageSideBar.exampleFirstFeelings')
+                },
+                {
+                    sentence_part1: 'Warum bist du ',
+                    highlight: 'traurig',
+                    sentence_part2: '?',
+                    translation: t('adjectiveBasicPageSideBar.exampleSecondFeelings')
+                },
+                {
+                    sentence_part1: 'Nach der Arbeit ist er immer ',
+                    highlight: 'müde',
+                    sentence_part2: '.',
+                    translation:t('adjectiveBasicPageSideBar.exampleThirdFeelings')
+                }
+            ],
+            practice: {
+                title: t('adjectiveBasicPracticeSide.title'),
+                description: t('adjectiveBasicPracticeSide.descriptionSecond'),
+                buttonText: t('adjectiveBasicPracticeSide.buttonText'),
+            }
+        },
+        {
+            id: 'appearance',
+            title: t('adjectiveBasicPageSideBar.second'),
+            examples: [
+                {
+                    sentence_part1: 'Der Mann ist ',
+                    highlight: 'groß',
+                    sentence_part2: '.',
+                    translation: t('adjectiveBasicPageSideBar.exampleFirstAppearance')
+                },
+                {
+                    sentence_part1: 'Das Haus ist ',
+                    highlight: 'alt',
+                    sentence_part2: '.',
+                    translation: t('adjectiveBasicPageSideBar.exampleSecondAppearance')
+                },
+                {
+                    sentence_part1: 'Die Frau ist ',
+                    highlight: 'hübsch',
+                    sentence_part2: '.',
+                    translation: t('adjectiveBasicPageSideBar.exampleThirdAppearance')
+                },
+                {
+                    sentence_part1: 'Das Kind ist ',
+                    highlight: 'blond',
+                    sentence_part2: '.',
+                    translation: t('adjectiveBasicPageSideBar.exampleFourthAppearance')
+                }
+            ],
+            practice: {
+                title: t('adjectiveBasicPracticeSide.title'),
+                description: t('adjectiveBasicPracticeSide.descriptionThird'),
+                buttonText: t('adjectiveBasicPracticeSide.buttonText'),
+            }
+        },
+        {
+            id: 'character',
+            title: t('adjectiveBasicPageSideBar.third'),
+            examples: [
+                {
+                    sentence_part1: 'Sie ist sehr ',
+                    highlight: 'freundlich',
+                    sentence_part2: '.',
+                    translation: t('adjectiveBasicPageSideBar.exampleFirstCharacter')
+                },
+                {
+                    sentence_part1: 'Der Hund ist ',
+                    highlight: 'intelligent',
+                    sentence_part2: '.',
+                    translation: t('adjectiveBasicPageSideBar.exampleSecondCharacter')
+                },
+                {
+                    sentence_part1: 'Er ist ',
+                    highlight: 'nett',
+                    sentence_part2: '.',
+                    translation: t('adjectiveBasicPageSideBar.exampleThirdCharacter')
+                },
+                {
+                    sentence_part1: 'Das Mädchen ist ',
+                    highlight: 'lustig',
+                    sentence_part2: '.',
+                    translation: t('adjectiveBasicPageSideBar.exampleFourthCharacter')
+                }
+            ],
+            practice: {
+                title: t('adjectiveBasicPracticeSide.title'),
+                description: t('adjectiveBasicPracticeSide.descriptionFourth'),
+                buttonText: t('adjectiveBasicPracticeSide.buttonText'),
+            }
+        },
 
+        {
+            id: 'dimensions',
+            title: t('adjectiveBasicPageSideBar.fifth'),
+            examples: [
+                {
+                    sentence_part1: 'Ein Elefant ist ',
+                    highlight: 'groß',
+                    sentence_part2: '.',
+                    translation: t('adjectiveBasicPageSideBar.exampleFirstDimensions')
+                },
+                {
+                    sentence_part1: 'Eine Maus ist ',
+                    highlight: 'klein',
+                    sentence_part2: '.',
+                    translation: t('adjectiveBasicPageSideBar.exampleSecondDimensions')
+                },
+                {
+                    sentence_part1: 'Der Tisch ist ',
+                    highlight: 'rund',
+                    sentence_part2: '.',
+                    translation: t('adjectiveBasicPageSideBar.exampleThirdDimensions')
+                }
+            ],
+            practice: {
+                title: t('adjectiveBasicPracticeSide.title'),
+                description: t('adjectiveBasicPracticeSide.descriptionFifth'),
+                buttonText: t('adjectiveBasicPracticeSide.buttonText'),
+            }
+        }
+    ]
     const router = useRouter()
     const categoryId = 'adjective-basics';
     const topic = ref('colors')
     const backToMenu = () => {
         router.push('/')
     }
-    const currentTopicData = computed(() => topics.find(t => t.id === topic.value))
+    let speakTimeout = null;
 
+    function speak(text) {
+        if (!('speechSynthesis' in window)) {
+            console.error('Браузер не поддерживает Web Speech API.');
+            return;
+        }
+
+        clearTimeout(speakTimeout);
+        window.speechSynthesis.cancel();
+        if (!text) return;
+        speakTimeout = setTimeout(() => {
+            const utterance = new SpeechSynthesisUtterance(text);
+            const langMap = {
+                ru: 'ru-RU',
+                en: 'en-US',
+                de: 'de-DE',
+                uk: 'uk-UA',
+                pl: 'pl-PL',
+                tr: 'tr-TR'
+            };
+
+            utterance.lang = langMap[locale.value] || locale.value;
+            const voices = window.speechSynthesis.getVoices();
+            const targetVoice = voices.find(voice => voice.lang === utterance.lang);
+            if (targetVoice) {
+                utterance.voice = targetVoice;
+            }
+
+            window.speechSynthesis.speak(utterance);
+        }, 250);
+    }
+    const currentTopicData = computed(() => topics.find(t => t.id === topic.value))
 
     const isContentVisible = ref(false)
     const isMobileLayout = ref(false)
@@ -88,139 +281,10 @@
     });
 
     onUnmounted(() => {
+        clearTimeout(speakTimeout)
         window.removeEventListener('resize', checkScreenSize);
     });
 
-    const topics = [
-        {
-            id: 'colors',
-            title: 'Цвета',
-            examples: [
-                {
-                    sentence_part1: 'Die Blume ist ',
-                    highlight: 'rot',
-                    sentence_part2: '.',
-                    translation: 'Цветок — красный.'
-                },
-                {
-                    sentence_part1: 'Der Himmel ist ',
-                    highlight: 'blau',
-                    sentence_part2: '.',
-                    translation: 'Небо — синее.'
-                },
-                {
-                    sentence_part1: 'Das Gras ist ',
-                    highlight: 'grün',
-                    sentence_part2: '.',
-                    translation: 'Трава — зелёная.'
-                }
-            ],
-            practice: {
-                title: 'Практика по цветам',
-                description: 'Проверьте, как хорошо вы знаете названия цветов на немецком.',
-                buttonText: 'Начать практику',
-            }
-        },
-        {
-            id: 'appearance',
-            title: 'Внешность',
-            examples: [
-                {
-                    sentence_part1: 'Der Mann ist ',
-                    highlight: 'groß',
-                    sentence_part2: '.',
-                    translation: 'Мужчина — высокий.'
-                },
-                {sentence_part1: 'Das Haus ist ', highlight: 'alt', sentence_part2: '.', translation: 'Дом — старый.'}
-            ],
-            practice: {
-                title: 'Практика по внешности',
-                description: 'Опишите людей и предметы, используя правильные прилагательные.',
-                buttonText: 'Начать практику',
-            }
-        },
-        {
-            id: 'character',
-            title: 'Характер',
-            examples: [
-                {
-                    sentence_part1: 'Sie ist sehr ',
-                    highlight: 'freundlich',
-                    sentence_part2: '.',
-                    translation: 'Она очень дружелюбная.'
-                },
-                {
-                    sentence_part1: 'Der Hund ist ',
-                    highlight: 'intelligent',
-                    sentence_part2: '.',
-                    translation: 'Собака — умная.'
-                }
-            ],
-            practice: {
-                title: 'Практика по характеру',
-                description: 'Подберите прилагательные, которые описывают характер.',
-                buttonText: 'Начать практику',
-            }
-        },
-        {
-            id: 'feelings',
-            title: 'Чувства и Эмоции',
-            examples: [
-                {
-                    sentence_part1: 'Ich bin sehr ',
-                    highlight: 'glücklich',
-                    sentence_part2: ' heute.',
-                    translation: 'Я сегодня очень счастлив.'
-                },
-                {
-                    sentence_part1: 'Warum bist du ',
-                    highlight: 'traurig',
-                    sentence_part2: '?',
-                    translation: 'Почему ты грустный?'
-                },
-                {
-                    sentence_part1: 'Nach der Arbeit ist er immer ',
-                    highlight: 'müde',
-                    sentence_part2: '.',
-                    translation: 'После работы он всегда уставший.'
-                }
-            ],
-            practice: {
-                title: 'Практика по чувствам',
-                description: 'Опишите, как себя чувствуют люди в разных ситуациях.',
-                buttonText: 'Начать практику',
-            }
-        },
-        {
-            id: 'dimensions',
-            title: 'Размер и Форма',
-            examples: [
-                {
-                    sentence_part1: 'Ein Elefant ist ',
-                    highlight: 'groß',
-                    sentence_part2: '.',
-                    translation: 'Слон — большой.'
-                },
-                {
-                    sentence_part1: 'Eine Maus ist ',
-                    highlight: 'klein',
-                    sentence_part2: '.',
-                    translation: 'Мышь — маленькая.'
-                },
-                {
-                    sentence_part1: 'Der Tisch ist ',
-                    highlight: 'rund',
-                    sentence_part2: '.',
-                    translation: 'Стол — круглый.'
-                }
-            ],
-            practice: {
-                title: 'Практика по размерам',
-                description: 'Опишите различные предметы, указывая их размер и форму.',
-                buttonText: 'Начать практику',
-            }
-        }
-    ]
 </script>
 
 <style scoped>
@@ -369,7 +433,9 @@
     }
 
     .example__sentence {
-        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         font-weight: bold;
     }
 
@@ -381,7 +447,6 @@
         display: block;
         color: #777;
         font-size: 1rem;
-        margin-top: 5px;
         font-style: italic;
     }
 
@@ -526,4 +591,24 @@
             display: flex;
         }
     }
+
+    .speak-btn {
+        background: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    }
+    .speak-btn__icon {
+        width: 25px;
+        height: 50px;
+        transition: transform 0.2s;
+    }
+    .speak-btn:hover .speak-btn__icon {
+        transform: scale(1.1);
+    }
+    .speak-btn:disabled .speak-btn__icon {
+        filter: grayscale(1);
+        cursor: not-allowed;
+    }
+
 </style>
