@@ -15,7 +15,7 @@
         <div class="header-container">
             <div class="header-left">
                 <NuxtLink to="/" class="header-logo">
-                    <img class="logo-img" src="../../assets/images/3dLogo.png" alt="Logo"/>
+                    <img class="logo-img" src="../../assets/images/logo3d.png" alt="Logo"/>
                 </NuxtLink>
                 <nav ref="dropdownRefNav" class="header-nav" :class="{ 'is-open': isMobileMenuOpen }">
                     <ul class="header-nav__list">
@@ -285,6 +285,9 @@
     }
 
     .logo-img {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 55px;
         height: auto;
         display: block;
