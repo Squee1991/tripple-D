@@ -18,8 +18,15 @@ export const useGameStore = defineStore('game', () => {
     const sessionData = ref(null);
     let unsubscribeFromSession = null;
     const isCheckingWinner = ref(false);
+    const achievements = ref({});
 
-
+    async function loadUserAchievements() {
+        if (!uid.value) return;
+        const userDoc = await getDoc(doc(db, 'users', uid.value));
+        if (userDoc.exists()) {
+            achievements.value = userDoc.data().achievements || {};
+        }
+    }
     async function loadLocalTasks(level) {
         const all = sentencesStore.db?.levels[level]?.sentences || []
         localTasks.value = all.sort(() => Math.random() - 0.5).slice(0, 8)
@@ -51,8 +58,6 @@ export const useGameStore = defineStore('game', () => {
             console.error("!!! КРИТИЧЕСКАЯ ОШИБКА ПРИ ЗАПИСИ В БД !!!", error);
         }
     }
-
-
 
     async function createGameSession(level, hostId) {
         if (!sentencesStore.db) {
@@ -330,9 +335,9 @@ export const useGameStore = defineStore('game', () => {
 
     return {
         isSearching, gameId, error, sessionData,
-        localTasks,
+        localTasks, achievements,
         loadLocalTasks,
         findGame, listenToSession, leaveSession, submitAnswer,
-        prepareCurrentRound, checkRoundWinner, cancelSearch
+        prepareCurrentRound, checkRoundWinner, cancelSearch, loadUserAchievements
     };
 });

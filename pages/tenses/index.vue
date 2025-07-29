@@ -58,12 +58,13 @@
                             >
                                 <div class="info__wrapper">
                                     <h4 class="info-block__title">{{ t(block.title) }}</h4>
-                                    <div
+                                    <button
+                                            title="Советы по теме"
                                             v-if="block.tipps"
                                             class="info__icon-tips"
                                             :ref="el => tipRefs[index] = el"
                                             @click="openTips(block.tipps, index)"
-                                    ></div>
+                                    ></button>
                                 </div>
                                 <div v-if="block.type === 'formula'" class="info-block__formula">
                                     {{ t(block.content) }}
@@ -461,6 +462,8 @@
     .info__icon-tips {
         width: 60px;
         cursor: pointer;
+        background: none;
+        border: none;
     }
 
     .info__wrapper {
@@ -745,7 +748,7 @@
     }
 
     .tips__text {
-        font-size: 1.4rem;
+        font-size: 1.1rem;
         padding: 12px;
         background: #f9f9f9;
         border-radius: 8px;

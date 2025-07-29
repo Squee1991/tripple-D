@@ -2,10 +2,12 @@
     import {ref, computed, onMounted} from 'vue'
     import {useRouter, useRoute} from 'vue-router'
     import {useGameStore} from '../store/sentenceDuelStore.js'
+    import { useLocalStatGameStore } from '../store/localSentenceStore.js'
     const {t} = useI18n()
     const router = useRouter()
     const route = useRoute()
     const gameStore = useGameStore()
+    const statStore = useLocalStatGameStore()
     const level = route.query.level || 'A1'
     const tasks = ref([])
     const totalRounds = ref(8)
@@ -20,16 +22,22 @@
 
     const isAnswerChecked = ref(false)
     const feedback = ref(null)
-    function checkAnswer() {
+    async function checkAnswer() {
         if (!answer.value) return;
         isAnswerChecked.value = true;
-        if (answer.value.trim().toLowerCase() === currentQuestion.value.answer.trim().toLowerCase()) {
+
+        const userAnswer = answer.value.trim().toLowerCase()
+        const correctAnswer = currentQuestion.value.answer.trim().toLowerCase()
+
+        if (userAnswer === correctAnswer) {
             feedback.value = 'correct';
             correctAnswers.value++;
+            await statStore.incrementConstructedSentences()
         } else {
             feedback.value = 'incorrect';
         }
     }
+
 
     async function waitForNextQuestion(timeout = 1000) {
         const start = Date.now();
@@ -72,18 +80,25 @@
 
     onMounted(async () => {
         await gameStore.loadLocalTasks(level)
+
+        try {
+            await statStore.loadLocalStats()
+        } catch (e) {
+            console.warn("Ошибка при загрузке статистики:", e.message)
+        }
+
         tasks.value = gameStore.localTasks.map(sentence => {
-            const cleanSentence = sentence.original.toLowerCase().replace(/[.,!?;]/g, '');
+            const cleanSentence = sentence.original.toLowerCase().replace(/[.,!?;]/g, '')
             return {
                 question: cleanSentence,
                 answer: cleanSentence
-            };
-        }).slice(0, totalRounds.value);
+            }
+        }).slice(0, totalRounds.value)
 
         if (tasks.value.length > 0) {
             setScrambled()
         } else {
-            console.error("Не удалось загрузить или преобразовать задания для локальной игры.");
+            console.error("Не удалось загрузить или преобразовать задания для локальной игры.")
         }
 
         let n = 3
@@ -99,6 +114,7 @@
             }
         }, 1000)
     })
+
 </script>
 
 <template>
@@ -109,6 +125,7 @@
                 <p v-else class="countdown-number start">{{ t('wordDuelSession.start') }}</p>
             </div>
         </div>
+<!--        <div> {{ statStore.constructedSentences}}</div>-->
         <div class="game-page-wrapper">
             <div class="game-container">
                 <div v-if="!finished" class="game-board">
@@ -159,6 +176,7 @@
 </template>
 
 <style scoped>
+
     .countdown-overlay {
         position: fixed;
         top: 0;

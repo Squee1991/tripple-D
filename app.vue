@@ -1,21 +1,27 @@
 <template>
     <NuxtLayout>
         <NuxtPage/>
-        <AccessibilityToggle />
+<!--        <AccessibilityToggle/>-->
     </NuxtLayout>
 </template>
 
 <script setup>
+    import { ref , provide } from 'vue'
+    import { useRouter , useRoute} from 'vue-router'
     import AccessibilityToggle from './src/components/accessibilityMode.vue'
+    import AchPopup from './src/components/achievementPopup.vue'
     import {useCurrentUser} from "vuefire";
     import {userlangStore} from './store/learningStore.js'
     import {userAuthStore} from './store/authStore.js'
     import {useSentencesStore} from './store/sentencesStore.js';
     import {useTrainerStore} from './store/themenProgressStore.js'
-    import { useQuestStore } from './store/questStore.js'
-    import { useCardsStore } from './store/cardsStore.js'
+    import {useQuestStore} from './store/questStore.js'
+    import {useCardsStore} from './store/cardsStore.js'
+    import {useLocalStatGameStore} from './store/localSentenceStore.js'
     import {onMounted} from "vue";
+
     const cardStore = useCardsStore()
+    const statsStore = useLocalStatGameStore()
     const questStore = useQuestStore()
     const learningStore = userlangStore()
     const trainerStore = userlangStore()
@@ -24,6 +30,7 @@
     const route = useRoute()
     const user = useCurrentUser()
     const sentencesStore = useSentencesStore();
+
     onMounted(() => {
         watch(user, (user, prevUser) => {
             if (prevUser && !user) {
@@ -40,6 +47,8 @@
         sentencesStore.loadSentences()
         questStore.loadDailyProgress()
         cardStore.loadCreatedCount()
+        statsStore.loadLocalStats()
+        authStore
     })
 
     // onMounted(() => {

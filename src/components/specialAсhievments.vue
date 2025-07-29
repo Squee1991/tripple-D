@@ -38,11 +38,13 @@
     import {userlangStore} from '../../store/learningStore.js';
     import {userAuthStore} from '../../store/authStore.js';
     import {useGuessWordStore} from '../../store/guesStore.js';
+    import { useLocalStatGameStore } from '../../store/localSentenceStore.js';
 
     const {t} = useI18n()
     const guessStore = useGuessWordStore()
     const gameStore = useGameStore();
     const learningStore = userlangStore();
+    const statsStore = useLocalStatGameStore();
     const authStore = userAuthStore();
     const achievementGroups = ref(cpecialGroupAchievment);
     const allAchievements = ref(achievementGroups.value.flatMap(g => g.achievements));
@@ -72,6 +74,13 @@
         }
     }, {immediate: true});
 
+
+    watch(()=> statsStore.constructedSentences , (newValue) => {
+        const ach = allAchievements.value.find(a => a.id === 'sentences-master')
+        if (ach) {
+            ach.currentProgress = Math.min(newValue , ach.targetProgress )
+        }
+    }, {immediate: true})
 
     watch(() => learningStore.totalEarnedPoints, (newPoints) => {
         const ach = allAchievements.value.find(a => a.id === 'Hunderd');

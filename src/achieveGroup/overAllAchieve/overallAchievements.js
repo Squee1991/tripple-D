@@ -3,6 +3,14 @@ export const overAchievment = [
 		title: "generalCategory.generaLabel",
 		achievements: [
 			{
+				id: "registerAchievement",
+				name: "Первый шаг",
+				description: "Ты зарегистрировался и вступил в мир немецкого!",
+				icon: "🧙‍♂️",
+				currentProgress: 0,
+				targetProgress: 1
+			},
+			{
 				id: "LastChance",
 				name: "generalCategory.lastBreahtlabel",
 				description: "generalCategory.lastBreathText",
@@ -20,8 +28,8 @@ export const overAchievment = [
 			},
 			{
 				id: "createdCountCard",
-				name: "Создатель колоды",
-				description: "Создай 36 карточек, чтобы получить это достижение!",
+				name: "generalCategory.cardLabel",
+				description: "generalCategory.cardText",
 				icon: "🃏",
 				currentProgress: 0,
 				targetProgress: 36
@@ -84,16 +92,16 @@ export const overAchievment = [
 			},
 			{
 				id: 'grandmaster_sentences',
-				name: 'Гроссмейстер',
-				description: 'Составить 500 предложений в сумме на всех уровнях.',
+				name: 'generalCategory.grandmasterLabel',
+				description: 'generalCategory.grandmasterText',
 				icon: '🎓',
 				currentProgress: 0,
 				targetProgress: 500,
 			},
 			{
 				id: 'master_of_duels',
-				name: 'Магистр дуэлей',
-				description: 'Одержать 250 побед в сумме на всех уровнях.',
+				name: 'generalCategory.duelLabel',
+				description: 'generalCategory.duelText',
 				icon: '⚔',
 				currentProgress: 0,
 				targetProgress: 250,

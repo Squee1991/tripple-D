@@ -1,5 +1,6 @@
 import {defineStore} from "pinia";
 import {ref, computed} from 'vue'
+
 import {
 	getAuth,
 	createUserWithEmailAndPassword,
@@ -24,7 +25,7 @@ export const userAuthStore = defineStore('auth', () => {
 	const avatar = ref(null)
 	const uid = ref(null)
 	const availableAvatars = ref([ '1.png', '2.png', '3.png', '4.png', '5.png', '6.png',  '12.png', '7.png', '8.png' , '9.png' , '10.png' , '11.png' , '13.png', '14.png']);
-
+	const isPremium = ref(false)
 	const getAvatarUrl = (fileName) => {
 		if (!fileName) return '';
 		try {
@@ -54,6 +55,7 @@ export const userAuthStore = defineStore('auth', () => {
 		registeredAt.value = data.registeredAt || null
 		uid.value = data.uid || null
 		avatar.value = data.avatar || null
+		isPremium.value = data.isPremium || false
 	}
 
 	const updateUserAvatar = async (newAvatarFilename) => {
@@ -96,7 +98,9 @@ export const userAuthStore = defineStore('auth', () => {
 			email: user.email,
 			registeredAt: user.metadata.creationTime,
 			uid: user.uid,
-			avatar: userDataFromDb.avatar || '1.png'
+			avatar: userDataFromDb.avatar || '1.png',
+			isPremium: userDataFromDb.isPremium || false
+
 		});
 	};
 
@@ -115,6 +119,7 @@ export const userAuthStore = defineStore('auth', () => {
 			email: userData.email,
 			registeredAt: serverTimestamp(),
 			avatar: defaultAvatar,
+			isPremium: false,
 			...createInitialAchievementsObject()
 		})
 
@@ -123,7 +128,8 @@ export const userAuthStore = defineStore('auth', () => {
 			email: userData.email,
 			registeredAt: user.metadata.creationTime,
 			uid: user.uid,
-			avatar: defaultAvatar
+			avatar: defaultAvatar,
+			isPremium: false
 		})
 	}
 
@@ -141,7 +147,8 @@ export const userAuthStore = defineStore('auth', () => {
 			email: userCredential.user.email,
 			registeredAt: userCredential.user.metadata.creationTime,
 			uid: userCredential.user.uid,
-			avatar: userDataFromDb.avatar || null
+			avatar: userDataFromDb.avatar || null,
+			isPremium: userDataFromDb.isPremium || false
 		})
 	}
 
@@ -174,7 +181,6 @@ export const userAuthStore = defineStore('auth', () => {
 		}
 	}
 
-	// ВОССТАНОВЛЕНО: Ваша функция fetchuser
 	const fetchuser = () => {
 		const auth = getAuth()
 		if (authStateUnsubscribe) {
@@ -187,11 +193,12 @@ export const userAuthStore = defineStore('auth', () => {
 				if (userDoc.exists()) {
 					const userDataFromDb = userDoc.data();
 					setUserData({
-						name: userDataFromDb.name, // Читаем из БД
+						name: userDataFromDb.name,
 						email: user.email,
 						registeredAt: user.metadata.creationTime,
 						uid: user.uid,
-						avatar: userDataFromDb.avatar || null
+						avatar: userDataFromDb.avatar || null,
+						isPremium: userDataFromDb.isPremium || false
 					})
 				}
 			} else {
@@ -200,7 +207,7 @@ export const userAuthStore = defineStore('auth', () => {
 		})
 	}
 
-	// Вызываем вашу функцию
+
 	fetchuser()
 
 	return {
@@ -211,7 +218,7 @@ export const userAuthStore = defineStore('auth', () => {
 		avatar,
 		avatarUrl,
 		availableAvatars,
-
+		isPremium,
 		registerUser,
 		logOut,
 		loginUser,

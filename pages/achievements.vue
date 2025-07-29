@@ -1,8 +1,15 @@
 <template>
     <div class="achievements-page-container">
+        <Modal
+            :visible="achInfo"
+            @close="hideInfo"
+            :title="infoAch.title"
+            :img="infoAch.icon"
+            :text="infoAch.text"
+        />
         <div class="sidebar">
             <button class="btn__back" @click="backToMainPage">{{ t('chooseTheme.btnBack')}}</button>
-            <nav class="nav__sidebar" data-simplebar>
+            <nav class="nav__sidebar" ref="scrollRef">
                 <h3 class="sidebar-title">{{ t('categoryAchievments.categoryLabel')}}</h3>
                 <ul class="achievement-categories">
                     <template v-for="category in achievementCategories" :key="category.id">
@@ -42,8 +49,11 @@
         <main class="content-area">
             <header class="content-header">
                 <h1>{{ t('categoryAchievments.achievmentAreaLabel')}}</h1>
+                <button :title="t('hoverTitle.ach')" @click="showInfo" class="header__icon-info">
+                    <img :src=Quest alt="">
+                </button>
             </header>
-            <div class="category-content" data-simplebar>
+            <div class="category-content" ref="scrollRef">
                 <ClientOnly>
                     <div :class="wrapperClass">
                         <component v-if="currentContent" :is="currentContent"/>
@@ -55,7 +65,7 @@
 </template>
 
 <script setup>
-    import {ref, computed} from 'vue';
+    import {ref, computed , inject, nextTick , onMounted} from 'vue';
     import GuessAchievementDisplay from '../src/components/guessAchievment.vue';
     import OverallAchievments from '../src/components/overallAchiements.vue';
     import EasyModeAchieve from '../src/components/easyModeAchieve.vue'
@@ -80,20 +90,49 @@
     import {assembleWordGroupAchievement} from '../src/achieveGroup/article/wordsFromLetters.js'
     import {writeArticleGroupAchievment} from '../src/achieveGroup/article/writeArticle.js'
     import {sentenceAchievement} from '../src/achieveGroup/sentenceDuel/sentenceAchievementsА1.js'
+    import Modal from '../src/components/modal.vue'
+    import AchIcon from '../assets/images/ach.svg'
+    import Quest from '../assets/images/question.svg'
     import {useRouter} from 'vue-router'
-
+    const scrollRef = ref(null)
+    const { $SimpleBar } = useNuxtApp()
     const router = useRouter()
     const {t} = useI18n();
     const selectedId = ref('overall');
     const contentId = ref('overall');
+    const achInfo = ref(false)
     const backToMainPage = () => {
         router.push('/')
     }
+
+    const showInfo = () => {
+        achInfo.value = true
+    }
+
+    const hideInfo = () => {
+        achInfo.value = false
+    }
+
+    const infoAch = ref({
+        title: t('achModal.title'),
+        icon: AchIcon,
+        text: t('achModal.text')
+    })
+
+    onMounted(() => {
+        nextTick(() => {
+            if (scrollRef.value && $SimpleBar) {
+                new $SimpleBar(scrollRef.value, {
+                    autoHide: false
+                })
+            }
+        })
+    })
+
     const openSubmenus = ref({
         marathon: false,
         articles: false
     });
-
     const contentMap = {
         sentence: SentenceAchievement,
         overall: OverallAchievments,
@@ -108,7 +147,6 @@
         normal: NormalModeAchieve,
         hard: HardModeAchieve,
     };
-
     const currentContent = computed(() => contentMap[contentId.value]);
     const wrapperClass = computed(() => {
         const listCategories = ['easy', 'normal', 'hard'];
@@ -213,7 +251,7 @@
         },
         {
             id: 'sentence',
-            name: 'Дуэль фраз',
+            name: 'categoryAchievments.duel',
             icon: '⚔️',
             length: modeComputed.value.sentence,
         },
@@ -316,6 +354,12 @@
     }
 
 
+    .header__icon-info {
+        width: 60px;
+        cursor: pointer;
+        background: none;
+        border: none;
+    }
     .sidebar {
         min-width: 400px;
         max-width: 400px;
@@ -370,13 +414,7 @@
     .nav__sidebar::-webkit-scrollbar {
         display: none;
     }
-
-    .achievement-categories {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
+    
     .category-item, .submenu-item {
         padding: 1rem 1.25rem;
         margin-bottom: 10px;
@@ -420,7 +458,8 @@
     }
 
     .submenu {
-        padding-left: 25px;
+        padding-left: 10px;
+        margin-left: 15px;
         list-style: none;
         margin-top: 5px;
         border-left: 2px dashed rgba(30, 30, 30, 0.2);
@@ -457,6 +496,10 @@
         font-size: 1.5rem;
     }
 
+    .achievement-categories {
+        padding: 4px;
+    }
+
     .content-area {
         flex-grow: 1;
         padding: 2rem;
@@ -475,6 +518,8 @@
         border-bottom: 4px solid #1e1e1e;
         text-align: center;
         flex-shrink: 0;
+        display: flex;
+        justify-content: space-between;
     }
 
     .content-header h1 {

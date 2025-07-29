@@ -36,7 +36,9 @@
                             class="info-section">
                         <div class="info__wrapper">
                             <h3 class="info-section__title">{{ currentTopicData.contentBlocks[0].title }}</h3>
-                            <button v-if="currentTopicData.tips" class="info__icon-tips" ref="tipRef"
+                            <button
+                                    title="Советы по теме"
+                                    v-if="currentTopicData.tips" class="info__icon-tips" ref="tipRef"
                                     @click="openTips(currentTopicData.tips)"></button>
                         </div>
                         <p class="info-section__description">{{ currentTopicData.contentBlocks[0].content }}</p>

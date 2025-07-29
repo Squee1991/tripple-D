@@ -2,8 +2,15 @@
   "preloader": {
     "value": "You will be redirected to the main page..."
   },
-  "accessBtnHover": {
-    "btn": "Play Example"
+  "hoverTitle": {
+    "tips": "Topic tips",
+    "duelInfo": "Game rules",
+    "sound": "Play example",
+    "ach": "Achievements info"
+  },
+  "achModal": {
+    "title": "Achievements are rewards for your progress",
+    "text": "Complete tasks, learn words, gain experience and level up!"
   },
   "modalVerbsTipsTitle": {
     "tipsTitle": "Useful Tips:"
@@ -472,6 +479,7 @@
     "categoryLabel": "Achievement Categories",
     "achievmentAreaLabel": "Achievement Progress",
     "general": "General",
+    "duel": "Phrase Duel",
     "guess": "Guess the Word",
     "marathon": "Article Marathon",
     "easy": "Easy Mode",
@@ -493,6 +501,14 @@
     "specialSecondText": "Achieve first place on the leaderboard in normal mode.",
     "specialThirdLabel": "Hardcore Champion",
     "specialThirdText": "Achieve first place on the leaderboard in hard mode.",
+    "specialFourthLabel": "Lightning Fast",
+    "specialFourthText": "Guess 100 words in 20 seconds or less",
+    "specialFifthLabel": "Last Chance",
+    "specialFifthText": "Guess 100 words with no more than 1 attempt",
+    "specialSixthLabel": "Safe Game",
+    "specialSixthText": "Guess 100 words while keeping at least 10 attempts",
+    "specialSeventhLabel": "Flawless Game",
+    "specialSeventhText": "Guess 100 words while keeping all 15 attempts",
     "generalLabel": "General Achievements",
     "generalFirstLabel": "Thousand Articles",
     "generalFirstText": "Collect 1000 correctly guessed articles across all modes.",
@@ -505,7 +521,9 @@
     "generalFivethLabel": "Uninterrupted Flow",
     "generalFivethText": "Achieve a streak of 150 in hard mode without letting the timer drop below 2 seconds.",
     "generalSexthLabel": "Exhaust Supplies",
-    "generalSexthText": "Spend 1000 articles."
+    "generalSexthText": "Spend 1000 articles.",
+    "generalSeventhlabel": "Master of Sentences",
+    "generalSeventhText": "Construct 1000 sentences across all levels and become a sentence-building master"
   },
   "questThemeChoose": {
     "title": "Quest Board",
@@ -531,6 +549,14 @@
     "moonthText": "You've been with us for a whole month!",
     "marginLabel": "No Room for Error",
     "marginText": "Achieve a streak of 20 words in easy mode with 5 lives.",
+    "cardLabel": "Deck Creator",
+    "cardText": "Create 36 cards to earn this achievement!",
+    "grandmasterLabel": "Grandmaster",
+    "grandmasterText": "Create 500 sentences across all levels.",
+    "duelLabel": "Duel Master",
+    "duelText": "Achieve 250 victories across all levels.",
+
+
     "edgeLabel": "On the Edge",
     "edgeText": "Achieve a streak of 50 words in hard mode. The timer must not drop below 2 seconds.",
     "firstArtiklusLabel": "First Currency",
@@ -599,7 +625,7 @@
     "streakThirdLabel": "Unstoppable Flow.",
     "streakThirdText": "Achieve a streak of 100 correct answers in a row.",
     "streakFifthLabel": "Legendary Streak.",
-    "streakFifthText": "Achieve a streak of 200 correct answers in a row."
+    "streakFifthText": "Achieve a streak of 350 correct answers in a row."
   },
   "marathonHardMode": {
     "correctLabel": "Guessed words (Hard mode)",
@@ -608,11 +634,11 @@
     "correctSecondLabel": "Article Genius",
     "correctSecondText": "Guess 25 articles in hard mode.",
     "correctThirdLabel": "Article Grandmaster.",
-    "correctThirdText": "Guess 50 articles in hard mode.",
+    "correctThirdText": "Guess 75 articles in hard mode.",
     "correctFouthLabel": "Article Conqueror.",
-    "correctFouthText": "Guess 100 articles in hard mode.",
+    "correctFouthText": "Guess 150 articles in hard mode.",
     "correctFifthLabel": "Article Deity.",
-    "correctFifthText": "Guess 200 articles in hard mode.",
+    "correctFifthText": "Guess 400 articles in hard mode.",
     "streakLabel": "Record Streak (Hard mode)",
     "streakFirstLabel": "Fearless.",
     "streakFirstText": "Achieve a streak of 10 correct answers in a row.",
@@ -621,7 +647,7 @@
     "streakThirdLabel": "Dominator",
     "streakThirdText": "Achieve a streak of 100 correct answers in a row.",
     "streakFifthLabel": "Mythical Streak.",
-    "streakFifthText": "Achieve a streak of 200 correct answers in a row."
+    "streakFifthText": "Achieve a streak of 350 correct answers in a row."
   },
   "trainerPage": {
     "exit": "Exit",
@@ -777,15 +803,17 @@
   "wordDuel": {
     "title": "Welcome to the 'Order Duel'!",
     "subTitle": "Choose a level to start the battle!",
-    "rulesTitle": "'Order Duel' Game Rules",
-    "rulesText": "Your task is to form the correct sentence from shuffled words faster than your opponent. The first to succeed wins the round. Good luck!",
-    "subText": "The winner is determined by the number of rounds won",
+    "rulesTitle": "Rules of the 'Order Duel' Game",
+    "rulesText": "Your task is to build the correct sentence from shuffled words faster than your opponent. Whoever finishes first wins the round. Good luck!",
+    "subText": "The winner of the duel is determined by the number of rounds won",
     "level": "Level:",
-    "searching": "Searching for opponent",
+    "searching": "Searching for an opponent",
     "found": "Opponent found!",
     "prepare": "Get ready, the game is about to start...",
     "cancel": "Cancel",
-    "btnBack": "Back to home"
+    "btnBack": "Back to main",
+    "online": "Online",
+    "local": "Local"
   },
   "wordDuelSession": {
     "start": "Start!",

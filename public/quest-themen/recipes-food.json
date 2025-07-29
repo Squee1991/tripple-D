@@ -75,8 +75,8 @@
         "article": "dem"
       },
       {
-        "line": "Zum Schluss kommt die heiße ___ Brühe über die Kartoffeln. Das ist das Geheimnis!",
-        "article": "die"
+        "line": "Zum Schluss kommt noch etwas von ___ heißen Brühe über die Kartoffeln. Das ist das Geheimnis!",
+        "article": "der"
       }
     ]
   },
@@ -151,131 +151,396 @@
   {
     "id": "food-day3",
     "theme": "food",
-    "title": "",
-    "trophy": "",
-    "introDialogue": [],
-    "ingredients": [],
+    "title": "Käsespätzle aus dem Allgäu",
+    "trophy": "Käsekrone",
+    "introDialogue": [
+      "Hast du schon mal von Käsespätzle gehört?",
+      "Dieses Gericht kommt aus dem Allgäu und ist einfach unwiderstehlich.",
+      "Es ist wie deutsche Pasta – aber mit viel Käse!",
+      "Bevor wir loslegen, schau dir die Zutaten gut an. Merk dir die Artikel!"
+    ],
+    "ingredients": [
+      { "word": "Mehl", "article": "das" },
+      { "word": "Ei", "article": "das" },
+      { "word": "Milch", "article": "die" },
+      { "word": "Salz", "article": "das" },
+      { "word": "Käse", "article": "der" },
+      { "word": "Zwiebel", "article": "die" },
+      { "word": "Butter", "article": "die" }
+    ],
     "knowledgeCheck": {
-      "prompt": "",
+      "prompt": "Klingt lecker, oder? Bist du bereit, die Artikel zu testen?",
       "choices": [
         {
-          "text": "",
-          "response": ""
+          "text": "Ja, los geht's!",
+          "response": "Super! Dann schauen wir mal, wie gut du die Wörter kennst."
         },
         {
-          "text": "",
-          "response": ""
+          "text": "Ich bin mir nicht ganz sicher...",
+          "response": "Kein Problem – gemeinsam lernen wir das! Fangen wir an."
         }
       ]
     },
     "postTestFeedback": {
-      "success": "",
-      "failure": ""
+      "success": "Wow, {accuracy}% richtig! Du bist auf dem besten Weg zum Spätzle-Meister!",
+      "failure": "Du hast {accuracy}% richtig. Kein Problem – übe die Artikel noch ein wenig, dann klappt's!"
     },
-    "dialogue": []
+    "dialogue": [
+      {
+        "line": "Zuerst vermische ich ___ Mehl mit Eiern und Milch zu einem glatten Teig.",
+        "article": "das"
+      },
+      {
+        "line": "Dann gebe ich ___ frischen Eier dazu – am besten aus dem Bauernhof.",
+        "article": "die"
+      },
+      {
+        "line": "Ein Schuss von ___ Milch macht den Teig schön weich.",
+        "article": "der"
+      },
+      {
+        "line": "Nicht vergessen: Eine Prise von ___ feinen Salz kommt auch hinein.",
+        "article": "dem"
+      },
+      {
+        "line": "Jetzt kommt der wichtigste Teil: Ich reibe viel von ___ würzigen Käse.",
+        "article": "dem"
+      },
+      {
+        "line": "In einer Pfanne brate ich ___ Zwiebel goldbraun an – sie geben extra Geschmack.",
+        "article": "die"
+      },
+      {
+        "line": "Am Ende alles mit ___ Butter vermengen – fertig sind die Käsespätzle!",
+        "article": "der"
+      }
+    ]
   },
   {
     "id": "food-day4",
     "theme": "food",
-    "title": "",
-    "trophy": "",
-    "introDialogue": [],
-    "ingredients": [],
+    "title": "Berliner Pfannkuchen",
+    "trophy": "Zuckerstern",
+    "introDialogue": [
+      "Heute wird’s süß! Hast du Lust auf etwas Gebackenes?",
+      "Wir machen Berliner – die leckeren, mit Marmelade gefüllten Pfannkuchen.",
+      "Sie sind besonders zu Silvester beliebt – aber schmecken das ganze Jahr!",
+      "Achte gut auf die Zutaten, besonders auf die Artikel."
+    ],
+    "ingredients": [
+      { "word": "Mehl", "article": "das" },
+      { "word": "Hefe", "article": "die" },
+      { "word": "Milch", "article": "die" },
+      { "word": "Zucker", "article": "der" },
+      { "word": "Ei", "article": "das" },
+      { "word": "Butter", "article": "die" },
+      { "word": "Marmelade", "article": "die" }
+    ],
     "knowledgeCheck": {
-      "prompt": "",
+      "prompt": "Na, bist du bereit für etwas Süßes mit Grammatik?",
       "choices": [
         {
-          "text": "",
-          "response": ""
+          "text": "Ja, bring den Zucker!",
+          "response": "Sehr gut! Aber zuerst ein kleiner Artikel-Test."
         },
         {
-          "text": "",
-          "response": ""
+          "text": "Hmm... Grammatik ist nicht so süß wie Berliner.",
+          "response": "Keine Sorge, wir schaffen das zusammen. Du wirst sie lieben – und die Artikel auch!"
         }
       ]
     },
     "postTestFeedback": {
-      "success": "",
-      "failure": ""
+      "success": "Fantastisch! {accuracy}% richtig. Deine Grammatik ist fast so gut wie dein Geschmack!",
+      "failure": "Du hast {accuracy}% richtig. Kein Problem – mit etwas Übung wirst du zum Berliner-Profi!"
     },
-    "dialogue": []
+    "dialogue": [
+      {
+        "line": "Zuerst siebe ich ___ Mehl in eine große Schüssel.",
+        "article": "das"
+      },
+      {
+        "line": "Dann löse ich ___ Hefe in warmer Milch auf.",
+        "article": "die"
+      },
+      {
+        "line": "Ein bisschen von ___ Zucker darf auch nicht fehlen.",
+        "article": "dem"
+      },
+      {
+        "line": "Ich gebe auch ___ frisches Ei und weiche Butter dazu.",
+        "article": "das"
+      },
+      {
+        "line": "Jetzt kommt ___ Teig in eine Schüssel und ruht für eine Stunde.",
+        "article": "der"
+      },
+      {
+        "line": "Nach dem Ausbacken fülle ich ___ Marmelade in die Berliner.",
+        "article": "die"
+      },
+      {
+        "line": "Zum Schluss bestreue ich alles mit etwas von ___ feinen Zucker.",
+        "article": "dem"
+      }
+    ]
   },
   {
     "id": "food-day5",
     "theme": "food",
-    "title": "",
-    "trophy": "",
-    "introDialogue": [],
-    "ingredients": [],
+    "title": "Rote Linsensuppe",
+    "trophy": "Suppenkelle des Mutes",
+    "introDialogue": [
+      "Heute gibt’s etwas Wärmendes – perfekt für kühle Tage.",
+      "Wir kochen eine rote Linsensuppe. Einfach, gesund und voller Geschmack!",
+      "Diese Suppe ist ein echter Klassiker und schnell gemacht.",
+      "Achte gut auf die Zutaten – die Artikel helfen dir beim Verständnis."
+    ],
+    "ingredients": [
+      { "word": "Linse", "article": "die" },
+      { "word": "Karotte", "article": "die" },
+      { "word": "Zwiebel", "article": "die" },
+      { "word": "Knoblauch", "article": "der" },
+      { "word": "Brühe", "article": "die" },
+      { "word": "Kreuzkümmel", "article": "der" },
+      { "word": "Olivenöl", "article": "das" }
+    ],
     "knowledgeCheck": {
-      "prompt": "",
+      "prompt": "Bist du bereit, mit Artikeln zu würzen?",
       "choices": [
         {
-          "text": "",
-          "response": ""
+          "text": "Na klar – bring die Linsen!",
+          "response": "Sehr schön! Dann testen wir dein Artikel-Wissen."
         },
         {
-          "text": "",
-          "response": ""
+          "text": "Ich bin vorsichtig... wie mit scharfem Gewürz.",
+          "response": "Gute Einstellung! Gemeinsam bekommen wir die richtige Würze rein."
         }
       ]
     },
     "postTestFeedback": {
-      "success": "",
-      "failure": ""
+      "success": "Sehr gut! {accuracy}% richtig – du bist bereit für die Küche!",
+      "failure": "{accuracy}% geschafft – das ist ein Anfang. Übe die Artikel nochmal und probier’s erneut!"
     },
-    "dialogue": []
+    "dialogue": [
+      {
+        "line": "Zuerst wasche ich ___ roten Linsen und lasse sie abtropfen.",
+        "article": "die"
+      },
+      {
+        "line": "Dann schneide ich ___ Karotten und Zwiebeln in kleine Stücke.",
+        "article": "die"
+      },
+      {
+        "line": "Ich presse ___ Knoblauch und röste ihn kurz im Topf an.",
+        "article": "den"
+      },
+      {
+        "line": "Jetzt gieße ich ___ heiße Brühe darüber und lasse alles köcheln.",
+        "article": "die"
+      },
+      {
+        "line": "Ein halber Teelöffel von ___ Kreuzkümmel gibt der Suppe den orientalischen Geschmack.",
+        "article": "dem"
+      },
+      {
+        "line": "Zum Schluss verfeinere ich alles mit einem Schuss von ___ Olivenöl.",
+        "article": "dem"
+      }
+    ]
   },
   {
     "id": "food-day6",
     "theme": "food",
-    "title": "",
-    "trophy": "",
-    "introDialogue": [],
-    "ingredients": [],
+    "title": "Flammkuchen Elsässer Art",
+    "trophy": "Flammenmedaille",
+    "introDialogue": [
+      "Heute geht’s nach Frankreich – kulinarisch zumindest!",
+      "Wir machen Flammkuchen Elsässer Art: dünn, knusprig und voller Geschmack.",
+      "Der Teig ist leicht, der Belag herzhaft. Perfekt zum Teilen!",
+      "Schau dir die Zutaten genau an – besonders die Artikel helfen dir später."
+    ],
+    "ingredients": [
+      { "word": "Teig", "article": "der" },
+      { "word": "Schmand", "article": "der" },
+      { "word": "Zwiebel", "article": "die" },
+      { "word": "Speck", "article": "der" },
+      { "word": "Pfeffer", "article": "der" },
+      { "word": "Muskat", "article": "die" }
+    ],
     "knowledgeCheck": {
-      "prompt": "",
+      "prompt": "Kennst du dich mit den Artikeln schon gut aus?",
       "choices": [
         {
-          "text": "",
-          "response": ""
+          "text": "Ja, ich bin bereit zum Backen!",
+          "response": "Perfekt – dann sieh dir die Zutaten nochmal gut an, und los geht’s."
         },
         {
-          "text": "",
-          "response": ""
+          "text": "Hmm… lieber nochmal testen.",
+          "response": "Kein Problem – Übung macht den Flammkuchen-Meister!"
         }
       ]
     },
     "postTestFeedback": {
-      "success": "",
-      "failure": ""
+      "success": "Bravo! {accuracy}% richtig – dein Flammkuchen ist grammatikalisch perfekt!",
+      "failure": "{accuracy}% – guter Anfang. Schau dir die Artikel nochmal an, dann wird’s noch besser!"
     },
-    "dialogue": []
+    "dialogue": [
+      {
+        "line": "Zuerst rolle ich ___ dünnen Teig auf Backpapier aus.",
+        "article": "den"
+      },
+      {
+        "line": "Dann streiche ich eine Schicht von ___ cremigen Schmand darüber.",
+        "article": "dem"
+      },
+      {
+        "line": "Jetzt schneide ich ___ Zwiebel in Ringe und verteile sie gleichmäßig.",
+        "article": "die"
+      },
+      {
+        "line": "Dazu kommt noch etwas von ___ würzigen Speck – das macht’s besonders lecker.",
+        "article": "dem"
+      },
+      {
+        "line": "Ich würze alles mit einer Prise von ___ schwarzen Pfeffer.",
+        "article": "dem"
+      },
+      {
+        "line": "Und zum Schluss noch ein Hauch von ___ feinen Muskat – ab in den Ofen!",
+        "article": "der"
+      }
+    ]
   },
   {
     "id": "food-day7",
     "theme": "food",
-    "title": "",
-    "trophy": "",
-    "introDialogue": [],
-    "ingredients": [],
+    "title": "Apfelstrudel nach Oma's Art",
+    "trophy": "Goldener Apfelzweig",
+    "introDialogue": [
+      "Heute wird es wieder süß – aber mit Tradition!",
+      "Wir backen Apfelstrudel nach Omas Rezept. Außen knusprig, innen fruchtig.",
+      "Ein Klassiker aus Österreich, den auch die Deutschen lieben.",
+      "Merk dir gut die Zutaten und ihre Artikel – sie sind der Schlüssel zum Rezept!"
+    ],
+    "ingredients": [
+      { "word": "Apfel", "article": "der" },
+      { "word": "Teig", "article": "der" },
+      { "word": "Zucker", "article": "der" },
+      { "word": "Zimt", "article": "der" },
+      { "word": "Rosine", "article": "die" },
+      { "word": "Butter", "article": "die" },
+      { "word": "Paniermehl", "article": "das" }
+    ],
     "knowledgeCheck": {
-      "prompt": "",
+      "prompt": "Apfelstrudel klingt lecker, oder? Kennst du die Artikel der Zutaten?",
       "choices": [
         {
-          "text": "",
-          "response": ""
+          "text": "Na klar, ich liebe Apfelstrudel!",
+          "response": "Super – dann lass uns sehen, wie gut du die Artikel beherrschst."
         },
         {
-          "text": "",
-          "response": ""
+          "text": "Ich bin mir noch unsicher...",
+          "response": "Kein Problem – gemeinsam lernen wir das Rezept mit Grammatik!"
         }
       ]
     },
     "postTestFeedback": {
-      "success": "",
-      "failure": ""
+      "success": "Wunderbar! {accuracy}% richtig – ein echter Strudel-Profi!",
+      "failure": "Du hast {accuracy}% geschafft – ein guter Anfang! Übe die Artikel noch einmal, dann wird’s perfekt."
     },
-    "dialogue": []
+    "dialogue": [
+      {
+        "line": "Zuerst schäle ich ___ Äpfel und schneide sie in dünne Scheiben.",
+        "article": "die"
+      },
+      {
+        "line": "Dann rolle ich ___ Strudelteig ganz dünn aus.",
+        "article": "den"
+      },
+      {
+        "line": "Jetzt bestreue ich ___ Teig mit etwas Paniermehl.",
+        "article": "den"
+      },
+      {
+        "line": "Ich mische ___ Äpfel mit Zucker, Zimt und Rosinen.",
+        "article": "die"
+      },
+      {
+        "line": "Dann gebe ich alles auf ___ vorbereiteten Teig.",
+        "article": "den"
+      },
+      {
+        "line": "Zum Schluss bestreiche ich den Strudel mit geschmolzener Butter und backe ihn.",
+        "article": "die"
+      }
+    ]
+  },
+  {
+    "id": "food-day8",
+    "theme": "food",
+    "title": "Kürbissuppe mit Ingwer",
+    "trophy": "Feuriger Löffel",
+    "introDialogue": [
+      "Letzter Tag unserer kulinarischen Woche – und es wird nochmal besonders.",
+      "Wir kochen eine cremige Kürbissuppe mit einem Hauch Ingwer.",
+      "Perfekt für den Herbst, voller Wärme und Geschmack.",
+      "Merk dir die Zutaten und achte gut auf ihre Artikel – es kommt aufs Detail an!"
+    ],
+    "ingredients": [
+      { "word": "Kürbis", "article": "der" },
+      { "word": "Zwiebel", "article": "die" },
+      { "word": "Ingwer", "article": "der" },
+      { "word": "Brühe", "article": "die" },
+      { "word": "Sahne", "article": "die" },
+      { "word": "Pfeffer", "article": "der" },
+      { "word": "Salz", "article": "das" }
+    ],
+    "knowledgeCheck": {
+      "prompt": "Bist du bereit für das große Finale mit Artikeln?",
+      "choices": [
+        {
+          "text": "Ja! Ich kenn jetzt fast alles.",
+          "response": "Das freut mich! Dann testen wir dein Wissen ein letztes Mal."
+        },
+        {
+          "text": "Ich bin noch vorsichtig...",
+          "response": "Kein Problem – du hast schon so viel gelernt. Let’s go!"
+        }
+      ]
+    },
+    "postTestFeedback": {
+      "success": "Großartig! {accuracy}% korrekt – du hast dir den goldenen Kochlöffel verdient!",
+      "failure": "{accuracy}% – fast geschafft! Wiederhole noch einmal die Artikel, dann ist deine Woche komplett."
+    },
+    "dialogue": [
+      {
+        "line": "Zuerst schneide ich ___ Kürbis in kleine Stücke.",
+        "article": "den"
+      },
+      {
+        "line": "Dann schäle ich ___ Zwiebel und hacke sie fein.",
+        "article": "die"
+      },
+      {
+        "line": "Ich reibe ein Stück von ___ frischen Ingwer dazu.",
+        "article": "dem"
+      },
+      {
+        "line": "Jetzt gieße ich ___ heiße Brühe in den Topf.",
+        "article": "die"
+      },
+      {
+        "line": "Zum Verfeinern gebe ich einen Schuss von ___ Sahne hinein.",
+        "article": "der"
+      },
+      {
+        "line": "Ich würze mit etwas von ___ schwarzen Pfeffer und einer Prise Salz.",
+        "article": "dem"
+      },
+      {
+        "line": "Am Ende schmecke ich alles mit ___ feinen Salz ab.",
+        "article": "dem"
+      }
+    ]
   }
 ]

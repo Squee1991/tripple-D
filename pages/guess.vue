@@ -4,12 +4,12 @@
             <img class="exit-sign-icon" src="../assets/images/exit.svg" alt="">
             <span class="exit-sign-text">{{ t('guessWord.back')}}</span>
         </button>
-        <div class="guess__stats-bar">
-            <div>⚡ не больше 30 сек {{ fastGuessedCount }}</div>
-            <div>🛡️  ≥10 попыток {{ safeGuessedCount }}</div>
-            <div>🛡️ Последняя попытка {{ guessedOnLastTryWords }}</div>
-            <div>🛡️ Все попытки! тест {{ guessedPerfectWords }}</div>
-        </div>
+<!--        <div class="guess__stats-bar">-->
+<!--            <div>⚡ не больше 30 сек {{ fastGuessedCount }}</div>-->
+<!--            <div>🛡️  ≥10 попыток {{ safeGuessedCount }}</div>-->
+<!--            <div>🛡️ Последняя попытка {{ guessedOnLastTryWords }}</div>-->
+<!--            <div>🛡️ Все попытки! тест {{ guessedPerfectWords }}</div>-->
+<!--        </div>-->
         <div class="trainer-app">
             <div class="trainer-app__board">
                 <div v-if="!isStarted" class="guess__start-screen">

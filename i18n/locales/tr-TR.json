@@ -2,8 +2,15 @@
   "preloader": {
     "value": "Ana sayfaya yönlendirileceksiniz..."
   },
-  "accessBtnHover": {
-    "btn": "Örneği Oynat"
+  "hoverTitle": {
+    "tips": "Konu ipuçları",
+    "duelInfo": "Oyun kuralları",
+    "sound": "Örneği oynat",
+    "ach": "Başarı bilgisi"
+  },
+  "achModal": {
+    "title": "Başarılar, ilerlemen için ödüllerdir",
+    "text": "Görevleri tamamla, kelimeleri öğren, deneyim kazan ve seviyeni yükselt!"
   },
   "modalVerbsTipsTitle": {
     "tipsTitle": "Faydalı İpuçları:"
@@ -470,6 +477,7 @@
     "categoryLabel": "Başarı Kategorileri",
     "achievmentAreaLabel": "Başarı İlerlemesi",
     "general": "Genel",
+    "duel": "İfade Düellosu",
     "guess": "Kelimeyi Tahmin Et",
     "marathon": "Artikel Maratonu",
     "easy": "Kolay Mod",
@@ -491,6 +499,14 @@
     "specialSecondText": "Normal modda liderlik tablosunda birinci ol.",
     "specialThirdLabel": "Zorlu Şampiyon",
     "specialThirdText": "Zor modda liderlik tablosunda birinci ol.",
+    "specialFourthLabel": "Yıldırım Hızı",
+    "specialFourthText": "100 kelimeyi 20 saniyede veya daha kısa sürede tahmin et",
+    "specialFifthLabel": "Son Şans",
+    "specialFifthText": "En fazla 1 denemeyle 100 kelimeyi tahmin et",
+    "specialSixthLabel": "Güvenli Oyun",
+    "specialSixthText": "En az 10 hakkı koruyarak 100 kelimeyi tahmin et",
+    "specialSeventhLabel": "Kusursuz Oyun",
+    "specialSeventhText": "Tüm 15 hakkı koruyarak 100 kelimeyi doğru tahmin et",
     "generalLabel": "Genel Başarılar",
     "generalFirstLabel": "Bin Artikel",
     "generalFirstText": "Tüm modlarda 1000 doğru tahmin edilmiş artikel topla.",
@@ -503,7 +519,9 @@
     "generalFivethLabel": "Kesintisiz Akış",
     "generalFivethText": "Zor modda zamanlayıcı 2 saniyenin altına düşmeden 150'lik bir seri yakala.",
     "generalSexthLabel": "Stokları Tüket",
-    "generalSexthText": "1000 artikel harca."
+    "generalSexthText": "1000 artikel harca.",
+    "generalSeventhlabel": "Cümle Efendisi",
+    "generalSeventhText": "Tüm seviyelerde toplam 1000 cümle kur ve cümle kurma ustası ol"
   },
   "questThemeChoose": {
     "title": "Görev Panosu",
@@ -529,6 +547,12 @@
     "moonthText": "Bir aydır bizimlesin!",
     "marginLabel": "Hataya Yer Yok",
     "marginText": "Kolay modda 5 canla 20 kelimelik bir seri yakala.",
+    "cardLabel": "Deste Oluşturucu",
+    "cardText": "Bu başarıyı kazanmak için 36 kart oluştur!",
+    "grandmasterLabel": "Büyükusta",
+    "grandmasterText": "Tüm seviyelerde toplam 500 cümle oluştur.",
+    "duelLabel": "Düello Ustası",
+    "duelText": "Tüm seviyelerde toplam 250 zafer kazan.",
     "edgeLabel": "Sınırda",
     "edgeText": "Zor modda 50 kelimelik bir seri yakala. Zamanlayıcı 2 saniyenin altına düşmemeli.",
     "firstArtiklusLabel": "İlk Para Birimi",
@@ -606,11 +630,11 @@
     "correctSecondLabel": "Artikel Dehası",
     "correctSecondText": "Zor modda 25 artikel tahmin et.",
     "correctThirdLabel": "Artikel Büyükustası.",
-    "correctThirdText": "Zor modda 50 artikel tahmin et.",
+    "correctThirdText": "Zor modda 75 artikel tahmin et.",
     "correctFouthLabel": "Artikel Fatihi.",
-    "correctFouthText": "Zor modda 100 artikel tahmin et.",
+    "correctFouthText": "Zor modda 150 artikel tahmin et.",
     "correctFifthLabel": "Artikel Tanrısı.",
-    "correctFifthText": "Zor modda 200 artikel tahmin et.",
+    "correctFifthText": "Zor modda 400 artikel tahmin et.",
     "streakLabel": "Rekor Serisi (Zor mod)",
     "streakFirstLabel": "Korkusuz.",
     "streakFirstText": "Arka arkaya 10 doğru cevap serisi yakala.",
@@ -619,7 +643,7 @@
     "streakThirdLabel": "Hükmedici",
     "streakThirdText": "Arka arkaya 100 doğru cevap serisi yakala.",
     "streakFifthLabel": "Mistik Seri.",
-    "streakFifthText": "Arka arkaya 200 doğru cevap serisi yakala."
+    "streakFifthText": "Arka arkaya 350 doğru cevap serisi yakala."
   },
   "trainerPage": {
     "exit": "Çıkış",
@@ -776,14 +800,16 @@
     "title": "‘Sıra Düellosu’na Hoş Geldiniz!",
     "subTitle": "Savaşa başlamak için bir seviye seçin!",
     "rulesTitle": "‘Sıra Düellosu’ Oyun Kuralları",
-    "rulesText": "Göreviniz, karışık kelimelerden doğru cümleyi rakibinizden daha hızlı oluşturmaktır. İlk bitiren raundu kazanır. Bol şans!",
-    "subText": "Düelloyu en çok raund kazanan oyuncu kazanır",
+    "rulesText": "Göreviniz, karışık kelimelerden rakibinizden daha hızlı doğru bir cümle kurmaktır. İlk tamamlayan, raundu kazanır. Bol şans!",
+    "subText": "Düellonun galibi, kazanılan raunt sayısına göre belirlenir",
     "level": "Seviye:",
     "searching": "Rakip aranıyor",
     "found": "Rakip bulundu!",
-    "prepare": "Hazırlanın, oyun birazdan başlıyor...",
-    "cancel": "İptal",
-    "btnBack": "Ana sayfaya dön"
+    "prepare": "Hazırlanın, oyun başlamak üzere...",
+    "cancel": "İptal Et",
+    "btnBack": "Ana Sayfaya",
+    "online": "Çevrimiçi",
+    "local": "Yerel"
   },
   "wordDuelSession": {
     "start": "Başla!",

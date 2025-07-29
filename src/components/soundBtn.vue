@@ -1,5 +1,5 @@
 <template>
-    <button :title="t('accessBtnHover.btn')" @click="speak(text)" :disabled="isSpeaking" class="speak-btn">
+    <button :title="t('hoverTitle.sound')" @click="speak(text)" :disabled="isSpeaking" class="speak-btn">
         <img :src="icon" alt="Произнести" class="speak-btn__icon"/>
     </button>
 </template>

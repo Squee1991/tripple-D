@@ -9,7 +9,6 @@
                 {{ t('prasens.score')}} {{ quizStore.score }}
             </div>
         </header>
-
         <main class="quiz-main-content">
             <div v-if="loading" class="fullscreen-state">
                 <p>{{ t('prasens.loading')}}</p>

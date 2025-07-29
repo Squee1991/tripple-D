@@ -2,8 +2,15 @@
   "preloader": {
     "value": "Zostaniesz przekierowany na stronę główną..."
   },
-  "accessBtnHover": {
-    "btn": "Odtwórz przykład"
+  "hoverTitle": {
+    "tips": "Wskazówki do tematu",
+    "duelInfo": "Zasady gry",
+    "sound": "Odtwórz przykład",
+    "ach": "Informacje o osiągnięciach"
+  },
+  "achModal": {
+    "title": "Osiągnięcia to nagrody za Twój postęp",
+    "text": "Wykonuj zadania, ucz się słówek, zdobywaj doświadczenie i awansuj na wyższy poziom!"
   },
   "modalVerbsTipsTitle": {
     "tipsTitle": "Przydatne wskazówki:"
@@ -470,6 +477,7 @@
     "categoryLabel": "Kategorie osiągnięć",
     "achievmentAreaLabel": "Postęp osiągnięć",
     "general": "Ogólne",
+    "duel": "Pojedynek na frazy",
     "guess": "Zgadnij słowo",
     "marathon": "Maraton rodzajników",
     "easy": "Tryb łatwy",
@@ -491,6 +499,14 @@
     "specialSecondText": "Zajmij pierwsze miejsce w rankingu w trybie średnim.",
     "specialThirdLabel": "Hardcore'owy Mistrz",
     "specialThirdText": "Zajmij pierwsze miejsce w rankingu w trybie trudnym.",
+    "specialFourthLabel": "Błyskawiczny",
+    "specialFourthText": "Odgadnij 100 słów w 20 sekund lub szybciej",
+    "specialFifthLabel": "Ostatnia szansa",
+    "specialFifthText": "Odgadnij 100 słów mając maksymalnie 1 próbę",
+    "specialSixthLabel": "Bezpieczna gra",
+    "specialSixthText": "Odgadnij 100 słów, zachowując co najmniej 10 prób",
+    "specialSeventhLabel": "Bez skazy",
+    "specialSeventhText": "Odgadnij 100 słów, zachowując wszystkie 15 prób",
     "generalLabel": "Ogólne Osiągnięcia",
     "generalFirstLabel": "Tysiąc Artykułów",
     "generalFirstText": "Zbierz 1000 poprawnie odgadniętych artykułów we wszystkich trybach.",
@@ -503,7 +519,10 @@
     "generalFivethLabel": "Nieprzerwany Strumień",
     "generalFivethText": "Osiągnij serię 150 w trybie trudnym, nie pozwalając, by zegar spadł poniżej 2 sekund.",
     "generalSexthLabel": "Wyczerpać Zapasy",
-    "generalSexthText": "Wydaj 1000 artykułów."
+    "generalSexthText": "Wydaj 1000 artykułów.",
+    "generalSeventhlabel": "Władca zdań",
+    "generalSeventhText": "Ułóż 1000 zdań na wszystkich poziomach i zostań mistrzem tworzenia zdań"
+
   },
   "questThemeChoose": {
     "title": "Tablica Zadań",
@@ -529,6 +548,12 @@
     "moonthText": "Jesteś z nami już cały miesiąc!",
     "marginLabel": "Bez Prawa do Błędu",
     "marginText": "Zrób serię 20 słów w trybie łatwym, mając 5 żyć.",
+    "cardLabel": "Twórca talii",
+    "cardText": "Utwórz 36 kart, aby zdobyć to osiągnięcie!",
+    "grandmasterLabel": "Arcymistrz",
+    "grandmasterText": "Ułóż 500 zdań na wszystkich poziomach.",
+    "duelLabel": "Mistrz pojedynków",
+    "duelText": "Odnieś 250 zwycięstw na wszystkich poziomach.",
     "edgeLabel": "Na Krawędzi",
     "edgeText": "Zrób serię 50 słów w trybie trudnym. Zegar nie może spaść poniżej 2 sekund.",
     "firstArtiklusLabel": "Pierwsza Waluta",
@@ -597,7 +622,7 @@
     "streakThirdLabel": "Niepowstrzymana fala.",
     "streakThirdText": "Osiągnij passę 100 poprawnych odpowiedzi z rzędu.",
     "streakFifthLabel": "Legendarna passa.",
-    "streakFifthText": "Osiągnij passę 200 poprawnych odpowiedzi z rzędu."
+    "streakFifthText": "Osiągnij passę 350 poprawnych odpowiedzi z rzędu."
   },
   "marathonHardMode": {
     "correctLabel": "Zgadnięte słowa (Tryb trudny)",
@@ -606,11 +631,11 @@
     "correctSecondLabel": "Geniusz rodzajników",
     "correctSecondText": "Zgadnij 25 rodzajników w trybie trudnym.",
     "correctThirdLabel": "Arcymistrz rodzajników.",
-    "correctThirdText": "Zgadnij 50 rodzajników w trybie trudnym.",
+    "correctThirdText": "Zgadnij 75 rodzajników w trybie trudnym.",
     "correctFouthLabel": "Zdobywca rodzajników.",
-    "correctFouthText": "Zgadnij 100 rodzajników w trybie trudnym.",
+    "correctFouthText": "Zgadnij 150 rodzajników w trybie trudnym.",
     "correctFifthLabel": "Bóstwo rodzajników.",
-    "correctFifthText": "Zgadnij 200 rodzajników w trybie trudnym.",
+    "correctFifthText": "Zgadnij 400 rodzajników w trybie trudnym.",
     "streakLabel": "Rekordowa passa (Tryb trudny)",
     "streakFirstLabel": "Nieustraszony.",
     "streakFirstText": "Osiągnij passę 10 poprawnych odpowiedzi z rzędu.",
@@ -619,7 +644,7 @@
     "streakThirdLabel": "Dominator",
     "streakThirdText": "Osiągnij passę 100 poprawnych odpowiedzi z rzędu.",
     "streakFifthLabel": "Mityczna passa.",
-    "streakFifthText": "Osiągnij passę 200 poprawnych odpowiedzi z rzędu."
+    "streakFifthText": "Osiągnij passę 350 poprawnych odpowiedzi z rzędu."
   },
   "trainerPage": {
     "exit": "Wyjście",
