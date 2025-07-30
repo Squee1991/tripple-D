@@ -7,7 +7,7 @@
 <script setup>
     import {ref , defineProps} from 'vue'
     import {getSpeechAudio} from '../../utils/googleTTS.js'
-    import DefaultSoundIcon from '../../assets/images/sound.svg'
+    import DefaultSoundIcon from '../../assets/images/SoundIcon.svg'
     const { t } = useI18n()
     const isSpeaking = ref(false)
 
@@ -22,7 +22,6 @@
 
     function speak(htmlText) {
         if (isSpeaking.value) return
-
         const plainText = htmlText
             .replace(/<[^>]*>/g, ' ')
             .replace(/→/g, ', ')
@@ -45,7 +44,7 @@
     }
 
     .speak-btn__icon {
-        width: 22px;
+        width: 42px;
         transition: transform 0.2s;
     }
 

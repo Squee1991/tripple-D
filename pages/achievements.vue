@@ -91,7 +91,7 @@ import {assembleWordGroupAchievement} from '../src/achieveGroup/article/wordsFro
 import {writeArticleGroupAchievment} from '../src/achieveGroup/article/writeArticle.js'
 import {sentenceAchievement} from '../src/achieveGroup/sentenceDuel/sentenceAchievementsА1.js'
 import Modal from '../src/components/modal.vue'
-import AchIcon from '../assets/images/ach.svg'
+import AchIcon from '../assets/images/target.svg'
 import Quest from '../assets/images/question.svg'
 import {useRouter} from 'vue-router'
 
