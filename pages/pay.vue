@@ -37,7 +37,6 @@
         <li>✅ Доступ к будущим функциям</li>
       </ul>
 
-      <!-- 🔴 Нет подписки -->
       <button
           v-if="!authStore.isPremium"
           class="pay-btn"
@@ -46,7 +45,6 @@
         Оплатить {{ plan === 'monthly' ? 'за месяц' : 'за год' }}
       </button>
 
-      <!-- 🟢 Подписка активна -->
       <div v-if="authStore.isPremium && !authStore.subscriptionCancelled" style="margin-top: 1rem; color: #4caf50;">
         <p style="font-weight: bold;">
           ✅ Подписка активна
@@ -60,7 +58,6 @@
         </button>
       </div>
 
-      <!-- 🟠 Подписка отменена -->
       <div v-if="authStore.isPremium && authStore.subscriptionCancelled" style="margin-top: 1rem; color: #ff9800;">
         <p style="font-weight: bold;">
           ⚠️ Подписка отменена
@@ -124,7 +121,6 @@ async function cancelSubscription() {
       method: 'POST',
       body: { uid: authStore.uid },
     })
-
     if (res.success) {
       alert('Подписка будет отменена в конце текущего оплаченного периода.')
     } else {
