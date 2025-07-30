@@ -70,13 +70,25 @@
                 <div v-if="activeTab === 'info'" class="tab-content">
                     <div class="row"><span>Имя:</span><span>{{ authStore.name }}</span></div>
                     <div class="row"><span>Email:</span><span>{{ authStore.email }}</span></div>
-                    <div>Статус подписики</div>
+                    <div class="subscription-row">
+                        <div class="subscription-label">Статус подписки</div>
 
-                    <div>
-                        <button>отменить подписку</button>
-                        <div v-if="authStore.isPremium">галочка</div>
-                        <div v-else>хуй</div>
+                        <div class="subscription-status">
+                            <template v-if="authStore.isPremium && !authStore.subscriptionCancelled">
+                                <p class="active">✅ Подписка активна</p>
+                                <p>📅 Следующее списание: {{ formattedEndDate }}</p>
+                                <button class="pay-btn cancel-btn" @click="cancelSubscription">❌ Отменить подписку</button>
+                            </template>
 
+                            <template v-else-if="authStore.isPremium && authStore.subscriptionCancelled">
+                                <p class="cancelled">⚠️ Подписка отменена</p>
+                                <p>📅 Доступ до: {{ formattedEndDate }}</p>
+                            </template>
+
+                            <template v-else>
+                                <p>🔓 Без подписки</p>
+                            </template>
+                        </div>
                     </div>
                     <div>
                         <button>удалить аккаутн</button>
@@ -135,6 +147,39 @@ const activeTab = ref('info')
 const isAvatarModalOpen = ref(false);
 const selectedAvatar = ref(null);
 const openModal = ref(false)
+
+
+const formattedEndDate = computed(() => {
+    if (!authStore.subscriptionEndsAt) return 'неизвестно'
+    const date = new Date(authStore.subscriptionEndsAt)
+    return date.toLocaleDateString('ru-RU', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+    })
+})
+
+async function cancelSubscription() {
+    if (!authStore.uid) {
+        alert('Ошибка: не найден uid')
+        return
+    }
+
+    try {
+        const res = await $fetch('/api/stripe/cancel', {
+            method: 'POST',
+            body: {uid: authStore.uid},
+        })
+        if (res.success) {
+            alert('Подписка будет отменена в конце текущего оплаченного периода.')
+        } else {
+            alert('Ошибка отмены подписки: ' + res.error)
+        }
+    } catch (err) {
+        console.error('Ошибка отмены подписки:', err)
+        alert('Произошла ошибка. Попробуй позже.')
+    }
+}
 
 const dataModal = ref({
     tittle: 'Заголовок',
@@ -562,5 +607,48 @@ onMounted(async () => {
 .icon-articles {
     width: 40px;
     height: 40px;
+}
+
+.cancel-btn {
+    background: #f44336;
+    color: #fff;
+    margin-top: 1rem;
+}
+
+.cancel-btn:hover {
+    background: #d32f2f;
+}
+.subscription-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 1.5rem;
+    padding: 1rem 0;
+    border-bottom: 2px solid #f3f4f6;
+}
+.subscription-label {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #333;
+    min-width: 150px;
+}
+
+.subscription-status {
+    text-align: right;
+    flex: 1;
+}
+
+.subscription-status p {
+    margin: 0.25rem 0;
+}
+
+.subscription-status .active {
+    color: #4caf50;
+    font-weight: bold;
+}
+
+.subscription-status .cancelled {
+    color: #ff9800;
+    font-weight: bold;
 }
 </style>
