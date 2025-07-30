@@ -1,3 +1,88 @@
+<template>
+    <div class="lobby">
+        <Modal
+                :visible="showDevModal"
+                @close="closeModal"
+                :title="t(overlayData.title)"
+                :text="t(overlayData.text)"
+        />
+        <Modal
+                :visible="showAuthModal"
+                @close="closeAuthModal"
+                :title="authModalData.title"
+                :img="Login"
+                :text="authModalData.text"
+        />
+        <div class="lobby-container">
+
+            <div v-if="!isWaitingForOpponent && !isOpponentFound">
+                <div class="duel__header">
+                    <button @click="goBack" class="back-button-global" aria-label="Назад">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+                        </svg>
+                        <span>{{t('wordDuel.btnBack')}}</span>
+                    </button>
+                    <div class="header-section">
+                        <h1 class="page-title">{{ t('wordDuel.title')}}</h1>
+                    </div>
+                    <div @click="openModal">
+                        <img class="duel__question-img" :title="t('hoverTitle.duelInfo')" src="../assets/images/question.svg" alt="">
+                    </div>
+                </div>
+                <div class="mode-toggle-wrapper">
+                    <div
+                            class="mode-toggle-option"
+                            :class="{ 'mode-toggle-option--inactive': mode !== 'online' }"
+                            @click="mode = 'online'"
+                    >
+                        🌐  {{ t('wordDuel.online')}}
+                    </div>
+                    <div
+                            class="mode-toggle-option"
+                            :class="{ 'mode-toggle-option--inactive': mode !== 'local' }"
+                            @click="mode = 'local'"
+                    >
+                        👤  {{ t('wordDuel.local')}}
+                    </div>
+                    <div class="mode-toggle-slider" :class="{ 'mode-toggle-slider--local': mode === 'local' }"></div>
+                </div>
+                <p class="page-subtitle">{{ t('wordDuel.subTitle')}}</p>
+                <div class="level-grid">
+                    <button
+                            v-for="level in levels"
+                            :key="level"
+                            @click="handleFindGameClick(level)"
+                            class="level-card"
+                            :disabled="(mode === 'online' && gameStore.isSearching) || isLoading"
+                    >
+                        <h2 class="card-level-title">{{t('wordDuel.level')}} {{ level }}</h2>
+                    </button>
+                </div>
+            </div>
+            <div v-else class="status-overlay">
+                <div v-if="isWaitingForOpponent">
+                    <p class="status-text">{{t('wordDuel.searching')}}<span class="dots">...</span></p>
+                    <button @click="cancelSearch" class="cancel-button">{{t('wordDuel.cancel')}}</button>
+                </div>
+                <div v-if="isOpponentFound">
+                    <p class="status-text">{{t('wordDuel.found')}}</p>
+                    <p class="page-subtitle">{{t('wordDuel.prepare')}}</p>
+                </div>
+            </div>
+            <div v-if="authStore.isPremium" class="stats-block">
+                <h3>Твоя статистика по уровню {{ selectedLevel }}</h3>
+                <p>Побед: {{ levelStats.wins }}</p>
+                <p>Серия побед: {{ levelStats.streaks }}</p>
+                <p>Чистые победы: {{ levelStats.cleanSweeps }}</p>
+                <p>Без ошибок: {{ levelStats.flawlessWins }}</p>
+            </div>
+            <div v-else class="stats-block--locked">
+                <p>🔒 Подключите премиум, чтобы увидеть свою статистику!</p>
+            </div>
+        </div>
+    </div>
+</template>
 <script setup>
     import { ref, computed, watch, onMounted, onUnmounted } from 'vue'
     import { useSentencesStore } from '../store/sentencesStore.js'
@@ -89,91 +174,7 @@
     })
 </script>
 
-<template>
-    <div class="lobby">
-        <Modal
-                :visible="showDevModal"
-                @close="closeModal"
-                :title="t(overlayData.title)"
-                :text="t(overlayData.text)"
-        />
-        <Modal
-                :visible="showAuthModal"
-                @close="closeAuthModal"
-                :title="authModalData.title"
-                :img="Login"
-                :text="authModalData.text"
-        />
-        <div class="lobby-container">
 
-            <div v-if="!isWaitingForOpponent && !isOpponentFound">
-                <div class="duel__header">
-                    <button @click="goBack" class="back-button-global" aria-label="Назад">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
-                        </svg>
-                        <span>{{t('wordDuel.btnBack')}}</span>
-                    </button>
-                    <div class="header-section">
-                        <h1 class="page-title">{{ t('wordDuel.title')}}</h1>
-                    </div>
-                    <div @click="openModal">
-                        <img class="duel__question-img" :title="t('hoverTitle.duelInfo')" src="../assets/images/question.svg" alt="">
-                    </div>
-                </div>
-                <div class="mode-toggle-wrapper">
-                    <div
-                            class="mode-toggle-option"
-                            :class="{ 'mode-toggle-option--inactive': mode !== 'online' }"
-                            @click="mode = 'online'"
-                    >
-                        🌐  {{ t('wordDuel.online')}}
-                    </div>
-                    <div
-                            class="mode-toggle-option"
-                            :class="{ 'mode-toggle-option--inactive': mode !== 'local' }"
-                            @click="mode = 'local'"
-                    >
-                        👤  {{ t('wordDuel.local')}}
-                    </div>
-                    <div class="mode-toggle-slider" :class="{ 'mode-toggle-slider--local': mode === 'local' }"></div>
-                </div>
-                <p class="page-subtitle">{{ t('wordDuel.subTitle')}}</p>
-                <div class="level-grid">
-                    <button
-                            v-for="level in levels"
-                            :key="level"
-                            @click="handleFindGameClick(level)"
-                            class="level-card"
-                            :disabled="(mode === 'online' && gameStore.isSearching) || isLoading"
-                    >
-                        <h2 class="card-level-title">{{t('wordDuel.level')}} {{ level }}</h2>
-                    </button>
-                </div>
-            </div>
-            <div v-else class="status-overlay">
-                <div v-if="isWaitingForOpponent">
-                    <p class="status-text">{{t('wordDuel.searching')}}<span class="dots">...</span></p>
-                    <button @click="cancelSearch" class="cancel-button">{{t('wordDuel.cancel')}}</button>
-                </div>
-                <div v-if="isOpponentFound">
-                    <p class="status-text">{{t('wordDuel.found')}}</p>
-                    <p class="page-subtitle">{{t('wordDuel.prepare')}}</p>
-                </div>
-            </div>
-            <div v-if="authStore.isPremium" class="stats-block">
-                <h3>Твоя статистика по уровню {{ selectedLevel }}</h3>
-                <p>Побед: {{ levelStats.wins }}</p>
-                <p>Серия побед: {{ levelStats.streaks }}</p>
-                <p>Чистые победы: {{ levelStats.cleanSweeps }}</p>
-                <p>Без ошибок: {{ levelStats.flawlessWins }}</p>
-            </div>
-            <div v-else class="stats-block--locked">
-                <p>🔒 Подключите премиум, чтобы увидеть свою статистику!</p>
-            </div>
-        </div>
-    </div>
-</template>
 
 <style scoped>
 

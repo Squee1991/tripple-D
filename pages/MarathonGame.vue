@@ -13,7 +13,7 @@
                         <div class="widget-value">{{ gameStore.sessionStreak }}</div>
                     </div>
                     <div class="stat-widget record">
-                        <div class="widget-label">{{ t('marathonGame.record') }}</div>
+                        <div class="widget-label">{{t('marathonGame.record') }}</div>
                         <div class="widget-value">{{ currentDifficultyRecord }}</div>
                     </div>
                     <div v-if="gameStore.levelSettings.timer" class="stat-widget timer">

@@ -6,43 +6,34 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || '', {
 })
 
 export default defineEventHandler(async (event) => {
-    try {
-        const body = await readBody(event)
+    console.log('[checkout] POST /api/stripe/checkout hit')
 
-        const { priceId, userId, email } = body
+    const { priceId, userId, email } = await readBody(event)
+    console.log('[checkout] Тело запроса:', { priceId, userId, email })
 
-        if (!priceId || !userId || !email) {
-            return {
-                statusCode: 400,
-                body: 'Missing required fields: priceId, userId, or email',
-            }
-        }
-
-        const session = await stripe.checkout.sessions.create({
-            mode: 'subscription',
-            customer_email: email,
-            line_items: [
-                {
-                    price: priceId,
-                    quantity: 1,
-                },
-            ],
-            success_url: 'https://language-app-beta.vercel.app/success?session_id={CHECKOUT_SESSION_ID}',
-            cancel_url: 'https://language-app-beta.vercel.app/cancel',
-            metadata: {
-                firebaseUID: userId,
-            },
-        })
-
-        return { sessionId: session.id }
-    } catch (error) {
+    if (!priceId || !userId || !email) {
         return {
-            statusCode: 500,
-            body: {
-                error: 'Stripe error',
-                message: error.message,
-                type: error.type || 'unknown',
-            },
+            statusCode: 400,
+            body: 'Missing required fields: priceId, userId, or email',
         }
     }
+
+    const origin = 'http://localhost:3000'
+    const session = await stripe.checkout.sessions.create({
+        mode: 'subscription',
+        customer_email: email,
+        line_items: [
+            {
+                price: priceId,
+                quantity: 1,
+            },
+        ],
+        success_url: `${origin}/success?session_id={CHECKOUT_SESSION_ID}`,
+        cancel_url: `${origin}/cancel`,
+        metadata: {
+            firebaseUID: userId,
+        },
+    })
+
+    return { sessionId: session.id }
 })
