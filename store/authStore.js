@@ -24,6 +24,8 @@ export const userAuthStore = defineStore('auth', () => {
 	const db = getFirestore();
 	const avatar = ref(null)
 	const uid = ref(null)
+	const subscriptionEndsAt = ref(null)
+	const subscriptionCancelled = ref(false)
 	const availableAvatars = ref([ '1.png', '2.png', '3.png', '4.png', '5.png', '6.png',  '12.png', '7.png', '8.png' , '9.png' , '10.png' , '11.png' , '13.png', '14.png']);
 	const isPremium = ref(false)
 	const getAvatarUrl = (fileName) => {
@@ -56,6 +58,8 @@ export const userAuthStore = defineStore('auth', () => {
 		uid.value = data.uid || null
 		avatar.value = data.avatar || null
 		isPremium.value = data.isPremium || false
+		subscriptionEndsAt.value = data.subscriptionEndsAt || null
+		subscriptionCancelled.value = data.subscriptionCancelled || false
 	}
 
 	const updateUserAvatar = async (newAvatarFilename) => {
@@ -99,8 +103,9 @@ export const userAuthStore = defineStore('auth', () => {
 			registeredAt: user.metadata.creationTime,
 			uid: user.uid,
 			avatar: userDataFromDb.avatar || '1.png',
-			isPremium: userDataFromDb.isPremium || false
-
+			isPremium: userDataFromDb.isPremium || false,
+			subscriptionEndsAt: userDataFromDb.subscriptionEndsAt || null,
+			subscriptionCancelled: userDataFromDb.subscriptionCancelled || false
 		});
 	};
 
@@ -120,6 +125,7 @@ export const userAuthStore = defineStore('auth', () => {
 			registeredAt: serverTimestamp(),
 			avatar: defaultAvatar,
 			isPremium: false,
+			subscriptionEndsAt: null,
 			...createInitialAchievementsObject()
 		})
 
@@ -148,7 +154,9 @@ export const userAuthStore = defineStore('auth', () => {
 			registeredAt: userCredential.user.metadata.creationTime,
 			uid: userCredential.user.uid,
 			avatar: userDataFromDb.avatar || null,
-			isPremium: userDataFromDb.isPremium || false
+			isPremium: userDataFromDb.isPremium || false,
+			subscriptionEndsAt: userDataFromDb.subscriptionEndsAt || null,
+			subscriptionCancelled: userDataFromDb.subscriptionCancelled || false
 		})
 	}
 
@@ -198,7 +206,9 @@ export const userAuthStore = defineStore('auth', () => {
 						registeredAt: user.metadata.creationTime,
 						uid: user.uid,
 						avatar: userDataFromDb.avatar || null,
-						isPremium: userDataFromDb.isPremium || false
+						isPremium: userDataFromDb.isPremium || false,
+						subscriptionEndsAt: userDataFromDb.subscriptionEndsAt || null,
+						subscriptionCancelled: userDataFromDb.subscriptionCancelled || false
 					})
 				}
 			} else {
@@ -219,6 +229,8 @@ export const userAuthStore = defineStore('auth', () => {
 		avatarUrl,
 		availableAvatars,
 		isPremium,
+		subscriptionEndsAt,
+		subscriptionCancelled,
 		registerUser,
 		logOut,
 		loginUser,

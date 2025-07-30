@@ -6,31 +6,39 @@ import { db } from '../utils/firebase-admin.js'
 export default defineEventHandler(async (event) => {
     try {
         const { sessionId } = await readBody(event)
-        console.log('[stripe/confirm] body:', { sessionId })
 
         if (!sessionId) {
             return { success: false, error: 'Missing sessionId' }
         }
 
         const secretKey = process.env.STRIPE_SECRET_KEY
-        console.log('[stripe/confirm] using Stripe key:', secretKey ? '****' + secretKey.slice(-4) : 'undefined')
-
         const stripe = new Stripe(secretKey, { apiVersion: '2024-04-10' })
 
         const session = await stripe.checkout.sessions.retrieve(sessionId)
-        console.log('[stripe/confirm] session:', session.id, session.payment_status)
 
         if (session.payment_status !== 'paid') {
             return { success: false, error: 'Payment not completed' }
         }
 
         const uid = session.metadata?.firebaseUID
-        if (!uid) {
-            throw new Error('No firebaseUID in session.metadata')
-        }
+        if (!uid) throw new Error('No firebaseUID in session.metadata')
 
-        await db.collection('users').doc(uid).update({ isPremium: true })
-        console.log('[stripe/confirm] Firestore updated for', uid)
+        const subscriptionId = session.subscription
+        if (!subscriptionId) throw new Error('No subscriptionId in session')
+
+
+        const subscription = await stripe.subscriptions.retrieve(subscriptionId)
+
+
+        const subscriptionEndsAt = subscription.current_period_end * 1000
+
+
+        await db.collection('users').doc(uid).update({
+            isPremium: true,
+            subscriptionId,
+            subscriptionEndsAt,
+            subscriptionCancelled: false,
+        })
 
         return { success: true }
 
