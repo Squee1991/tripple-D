@@ -1,5 +1,13 @@
 <template>
     <div class="cabinet-wrapper">
+
+        <Modal
+                :visible="openModal"
+                :title="dataModal.tittle"
+                :text="dataModal.text"
+                :img="dataModal.img"
+                @close="openModal= false"
+        />
         <div class="sidebar">
             <button @click="pathBack" class="sidebar-btn back-btn" title="На главную">←</button>
             <button class="sidebar-btn" title="Настройки">⚙️</button>
@@ -48,7 +56,7 @@
                     <img class="tab-icon" src="../assets/images/progress.svg" alt="">
                     <span>Прогресс</span>
                 </button>
-                <button class="tab" :class="{ active: activeTab === 'skills' }" @click="setTab('skills')">
+                <button class="tab" :class="{ active: activeTab === 'skills' }" @click="openModalSkills">
                     <img class="tab-icon" src="../assets/images/magic-book.svg" alt="">
                     <span>Способности</span>
                 </button>
@@ -62,6 +70,17 @@
                 <div v-if="activeTab === 'info'" class="tab-content">
                     <div class="row"><span>Имя:</span><span>{{ authStore.name }}</span></div>
                     <div class="row"><span>Email:</span><span>{{ authStore.email }}</span></div>
+                    <div>Статус подписики</div>
+
+                    <div>
+                        <button>отменить подписку</button>
+                        <div v-if="authStore.isPremium">галочка</div>
+                        <div v-else>хуй</div>
+
+                    </div>
+                    <div>
+                        <button>удалить аккаутн</button>
+                    </div>
                 </div>
                 <div v-if="activeTab === 'progress'">
                     <Progress/>
@@ -106,6 +125,8 @@ import Progress from '../src/components/progress.vue'
 import Skills from '../src/components/skillz.vue'
 import {useRouter} from 'vue-router'
 import Shop from '../src/components/Shop.vue'
+import Modal from '../src/components/modal.vue'
+import DevelopmentIcon from '../assets/images/dev.svg'
 
 const authStore = userAuthStore()
 const learningStore = userlangStore()
@@ -113,6 +134,16 @@ const router = useRouter()
 const activeTab = ref('info')
 const isAvatarModalOpen = ref(false);
 const selectedAvatar = ref(null);
+const openModal = ref(false)
+
+const dataModal = ref({
+    tittle: 'Заголовок',
+    text: 'текст',
+    img: DevelopmentIcon
+})
+const openModalSkills = () => {
+    openModal.value = true
+}
 
 watch(isAvatarModalOpen, (newValue) => {
     if (newValue) {
@@ -336,15 +367,18 @@ onMounted(async () => {
     flex-direction: column;
     gap: 0.5rem;
 }
+
 .balance-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 .icon-articles {
     width: 32px;
     height: 32px;
 }
+
 .sub {
     font-size: 0.9rem;
     font-weight: 500;
