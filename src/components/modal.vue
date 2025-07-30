@@ -23,6 +23,7 @@
     const closeModal = () => {
         emit('close')
     }
+
     const props =  defineProps({
         visible: {
             type: Boolean,
@@ -109,6 +110,11 @@
         font-size: 2rem;
         color: #1e1e1e;
         margin-bottom: 1rem;
+    }
+
+    .modal__icon {
+        width: 150px;
+        margin: 20px;
     }
 
     .modal-text {

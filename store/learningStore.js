@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
-import { doc, setDoc, getDoc, getFirestore } from 'firebase/firestore'
+import { doc, setDoc, getDoc, getFirestore , updateDoc  } from 'firebase/firestore'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 export const userlangStore = defineStore('learning', () => {
 	const db = getFirestore()
@@ -16,7 +16,7 @@ export const userlangStore = defineStore('learning', () => {
 	const currentModeIndex = ref(0)      // тут индекс текущего способа обучения
 	const exp = ref(0)                   // тут опыт
 	const isLeveling = ref(0)            // тут уровень
-
+	const isLoaded = ref(false)
 	const topicStats = computed(() => {
 		const stats = {}
 		const topics = [...new Set(words.value.map(w => w.topic).filter(Boolean))]
@@ -161,6 +161,7 @@ export const userlangStore = defineStore('learning', () => {
 					currentIndex.value = data.currentIndex || 0
 					currentModeIndex.value = data.currentModeIndex || 0
 				}
+				isLoaded.value = true
 				resolve()
 			})
 		})
@@ -216,6 +217,28 @@ export const userlangStore = defineStore('learning', () => {
 		await saveToFirebase()
 	}
 
+	const incrementAchievementProgress = async (id) => {
+		const userDocRef = getUserDocRef()
+		if (!userDocRef) return
+		const docSnap = await getDoc(userDocRef)
+		if (!docSnap.exists()) return
+
+		const data = docSnap.data()
+		if (!data.achievements) data.achievements = {}
+
+		if (!data.achievements[id]) {
+			data.achievements[id] = { currentProgress: 0, targetProgress: 1 }
+		}
+
+		if (data.achievements[id].currentProgress < data.achievements[id].targetProgress) {
+			data.achievements[id].currentProgress += 1
+			await updateDoc(userDocRef, {
+				[`achievements.${id}.currentProgress`]: data.achievements[id].currentProgress
+			})
+		}
+	}
+
+
 	return {
 		words,
 		learnedWords,
@@ -230,6 +253,7 @@ export const userlangStore = defineStore('learning', () => {
 		currentModeIndex,
 		topicStats,
 		articlesSpentForAchievement,
+		isLoaded,
 		handleLeveling,
 		markProgress,
 		markAsLearned,
@@ -241,6 +265,7 @@ export const userlangStore = defineStore('learning', () => {
 		loadFromFirebase,
 		saveToFirebase,
 		clearAll,
-		addWordsToGlobal
+		addWordsToGlobal,
+		incrementAchievementProgress
 	}
 })

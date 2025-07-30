@@ -37,7 +37,7 @@
                     <section class="info-section">
                         <div class="info__wrapper">
                             <h3 class="info-section__title">{{ t('adjectiveDeclensionPage.ruleTitle')}}</h3>
-                            <button
+                            <button :title="t('hoverTitle.tips')"
                                     v-if="currentTopicData.tips"
                                     class="info__icon-tips"
                                     ref="tipRef"
@@ -105,6 +105,13 @@
     const router = useRouter()
     const categoryId = 'adjective-declension';
     const topic = ref('definite-article');
+    const showTips = ref(false);
+    const activeTipps = ref([]);
+    const tipRef = ref(null);
+    let lottieInstance = null;
+
+    const isContentVisible = ref(false);
+    const isMobileLayout = ref(false);
     const currentTopicData = computed(() => topics.find(t => t.id === topic.value));
     const backToMenu = () => {
         router.push('/')
@@ -196,14 +203,6 @@
             }
         }
     ];
-
-    const showTips = ref(false);
-    const activeTipps = ref([]);
-    const tipRef = ref(null);
-    let lottieInstance = null;
-
-    const isContentVisible = ref(false);
-    const isMobileLayout = ref(false);
 
     const checkScreenSize = () => {
         isMobileLayout.value = window.innerWidth <= 767;
@@ -620,8 +619,8 @@
 
     .btn__close {
         position: absolute;
-        top: 20px;
-        right: 20px;
+        top: 10px;
+        right: 10px;
         width: 40px;
         height: 40px;
         background-color: #f1c40f;

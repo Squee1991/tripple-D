@@ -1,7 +1,7 @@
 <template>
     <div class="adjective-page" :class="{ 'content-is-active': isContentVisible }">
         <div class="sidebar">
-            <button @click="backToMenu" @focus="speak(t('tenses.barBtn'))" class="btn__back">{{ t('tenses.barBtn')}}</button>
+            <button @click="backToMenu" class="btn__back">{{ t('tenses.barBtn')}}</button>
             <h2 class="sidebar__title">{{ t('adjectiveBasicPageSideBar.title')}}</h2>
             <div class="sidebar__heading">{{ t('adjectiveBasicPageSideBar.theme')}}</div>
             <ul class="sidebar__list">
@@ -222,36 +222,36 @@
     }
     let speakTimeout = null;
 
-    function speak(text) {
-        if (!('speechSynthesis' in window)) {
-            console.error('Браузер не поддерживает Web Speech API.');
-            return;
-        }
-
-        clearTimeout(speakTimeout);
-        window.speechSynthesis.cancel();
-        if (!text) return;
-        speakTimeout = setTimeout(() => {
-            const utterance = new SpeechSynthesisUtterance(text);
-            const langMap = {
-                ru: 'ru-RU',
-                en: 'en-US',
-                de: 'de-DE',
-                uk: 'uk-UA',
-                pl: 'pl-PL',
-                tr: 'tr-TR'
-            };
-
-            utterance.lang = langMap[locale.value] || locale.value;
-            const voices = window.speechSynthesis.getVoices();
-            const targetVoice = voices.find(voice => voice.lang === utterance.lang);
-            if (targetVoice) {
-                utterance.voice = targetVoice;
-            }
-
-            window.speechSynthesis.speak(utterance);
-        }, 250);
-    }
+    // function speak(text) {
+    //     if (!('speechSynthesis' in window)) {
+    //         console.error('Браузер не поддерживает Web Speech API.');
+    //         return;
+    //     }
+    //
+    //     clearTimeout(speakTimeout);
+    //     window.speechSynthesis.cancel();
+    //     if (!text) return;
+    //     speakTimeout = setTimeout(() => {
+    //         const utterance = new SpeechSynthesisUtterance(text);
+    //         const langMap = {
+    //             ru: 'ru-RU',
+    //             en: 'en-US',
+    //             de: 'de-DE',
+    //             uk: 'uk-UA',
+    //             pl: 'pl-PL',
+    //             tr: 'tr-TR'
+    //         };
+    //
+    //         utterance.lang = langMap[locale.value] || locale.value;
+    //         const voices = window.speechSynthesis.getVoices();
+    //         const targetVoice = voices.find(voice => voice.lang === utterance.lang);
+    //         if (targetVoice) {
+    //             utterance.voice = targetVoice;
+    //         }
+    //
+    //         window.speechSynthesis.speak(utterance);
+    //     }, 250);
+    // }
     const currentTopicData = computed(() => topics.find(t => t.id === topic.value))
 
     const isContentVisible = ref(false)
@@ -296,7 +296,7 @@
         padding: 20px;
         background: #e0f7fa;
         gap: 20px;
-        font-family: 'Comic Sans MS', 'Trebuchet MS', cursive;
+        font-family: "Nunito", sans-serif;
     }
 
     .sidebar {
@@ -517,8 +517,8 @@
 
     .btn__close {
         position: absolute;
-        top: 20px;
-        right: 20px;
+        top: 10px;
+        right: 10px;
         width: 40px;
         height: 40px;
         background-color: #f1c40f;

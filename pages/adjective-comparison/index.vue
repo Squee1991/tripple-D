@@ -38,6 +38,7 @@
                         <div class="info__wrapper">
                             <h3 class="info-section__title">{{ t('adjectiveComparisonPage.ruleTitle')}}</h3>
                             <button
+                                    title="Советы по теме"
                                     v-if="currentTopicData.tips"
                                     class="info__icon-tips"
                                     ref="tipRef"
@@ -92,7 +93,8 @@
     import SoundBtn from '../../src/components/soundBtn.vue'
     import Lottie from 'lottie-web';
     import TipIcon from '../../assets/animation/info.json';
-    const { t } = useI18n()
+
+    const {t} = useI18n()
     const router = useRouter();
     const categoryId = 'adjective-comparison';
 
@@ -102,10 +104,10 @@
             title: t('adjectiveComparisonPage.sideBarFirst'),
             rule: t('adjectiveComparisonContentSide.ruleOne'),
             tips: [
-                {text: t('adjectiveComparisonContentSide.firstThemeTipOne') },
-                {text: t('adjectiveComparisonContentSide.firstThemeTipTwo') },
-                {text: t('adjectiveComparisonContentSide.firstThemeTipThree') },
-                {text: t('adjectiveComparisonContentSide.firstThemeTipFour') }
+                {text: t('adjectiveComparisonContentSide.firstThemeTipOne')},
+                {text: t('adjectiveComparisonContentSide.firstThemeTipTwo')},
+                {text: t('adjectiveComparisonContentSide.firstThemeTipThree')},
+                {text: t('adjectiveComparisonContentSide.firstThemeTipFour')}
             ],
             examples: [
                 {
@@ -166,8 +168,8 @@
             title: t('adjectiveComparisonPage.sideBarThird'),
             rule: t('adjectiveComparisonContentSide.ruleThree'),
             tips: [
-                {text: t('adjectiveComparisonContentSide.thirdThemeTipOne') },
-                {text: t('adjectiveComparisonContentSide.thirdThemeTipTwo') },
+                {text: t('adjectiveComparisonContentSide.thirdThemeTipOne')},
+                {text: t('adjectiveComparisonContentSide.thirdThemeTipTwo')},
                 {text: t('adjectiveComparisonContentSide.thirdThemeTipThree')}
             ],
             specialCases: [
@@ -571,57 +573,114 @@
     }
 
     .tips__overlay {
-        position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-        background: rgba(0, 0, 0, 0.6); z-index: 1000; display: flex;
-        justify-content: center; align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+
     .tips__content {
-        position: relative; background: white; padding: 2rem; border-radius: 16px;
-        border: 3px solid #1e1e1e; box-shadow: 8px 8px 0 #1e1e1e;
-        width: 90%; max-width: 500px;
+        position: relative;
+        background: white;
+        padding: 2rem;
+        border-radius: 16px;
+        border: 3px solid #1e1e1e;
+        box-shadow: 8px 8px 0 #1e1e1e;
+        width: 90%;
+        max-width: 500px;
     }
+
     .tips__close {
-        position: absolute; top: 10px; right: 10px; background: #f97028;
-        color: #fff; border: 2px solid #1e1e1e; border-radius: 50%; width: 32px;
-        height: 32px; font-size: 1.5rem; font-weight: bold; cursor: pointer;
-        display: flex; align-items: center; justify-content: center;
-        line-height: 1; padding-bottom: 4px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: #f97028;
+        color: #fff;
+        border: 2px solid #1e1e1e;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+        padding-bottom: 4px;
     }
-    .tipps__title { font-size: 1.8rem; font-weight: bold; margin-bottom: 1.5rem; }
-    .tips__item { margin-bottom: 1rem; }
+
+    .tipps__title {
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+    }
+
+    .tips__item {
+        margin-bottom: 1rem;
+    }
+
     .tips__text {
-        font-size: 1.1rem; padding: 1rem; background: #f8f9fa;
-        border-radius: 8px; border-left: 5px solid #60a5fa;
+        font-size: 1.1rem;
+        padding: 1rem;
+        background: #f8f9fa;
+        border-radius: 8px;
+        border-left: 5px solid #60a5fa;
     }
+
     .example__line {
-        display: flex; justify-content: space-between;
-        align-items: center; gap: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
     }
 
     .btn__close {
-        position: absolute; top: 20px; right: 20px; width: 40px; height: 40px;
-        background-color: #f1c40f; border: 3px solid #1e1e1e; border-radius: 50%;
-        font-size: 24px; font-weight: bold; color: #1e1e1e; cursor: pointer;
-        z-index: 100; display: none; justify-content: center; align-items: center;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        background-color: #f1c40f;
+        border: 3px solid #1e1e1e;
+        border-radius: 50%;
+        font-size: 24px;
+        font-weight: bold;
+        color: #1e1e1e;
+        cursor: pointer;
+        z-index: 100;
+        display: none;
+        justify-content: center;
+        align-items: center;
     }
 
     @media (max-width: 1024px) {
         .content__body {
             flex-direction: column;
         }
+
         .content__main-column, .practice-area {
             width: 100%;
             border-right: none;
             padding: 1rem;
         }
+
         .content__main-column {
             border-bottom: 3px dashed #cccccc;
             padding-bottom: 2rem;
         }
+
         .practice-area {
             padding-top: 2rem;
             padding-left: 1rem;
         }
+
         .content__title {
             font-size: 1.8rem;
         }
@@ -635,6 +694,7 @@
             padding: 0;
             gap: 0;
         }
+
         .sidebar {
             width: 100%;
             height: 100vh;
@@ -643,6 +703,7 @@
             box-shadow: none;
             border: none;
         }
+
         .content {
             position: absolute;
             top: 0;
@@ -655,9 +716,11 @@
             box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
             padding: 15px;
         }
+
         .comparison-page.content-is-active .content {
             transform: translateX(-100%);
         }
+
         .btn__close {
             display: flex;
         }

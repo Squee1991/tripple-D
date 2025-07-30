@@ -58,15 +58,15 @@
         "article": "die"
       },
       {
-        "line": "Wir treffen uns am ___ Bahnhof um 8 Uhr.",
+        "line": "Wir treffen uns an ___ Bahnhof um 8 Uhr.",
         "article": "dem"
       },
       {
-        "line": "Der ___ Zug fährt in zehn Minuten ab!",
+        "line": "___ Zug fährt in zehn Minuten ab!",
         "article": "der"
       },
       {
-        "line": "Die ___ Abfahrt wurde verschoben.",
+        "line": "___ Abfahrt wurde wegen eines Sturms verschoben.",
         "article": "die"
       },
       {
@@ -82,158 +82,477 @@
   {
     "id": "transport-day2",
     "theme": "transport",
-    "title": "",
-    "trophy": "",
-    "introDialogue": [],
-    "ingredients": [],
+    "title": "Mit der U-Bahn durch die Stadt",
+    "trophy": "Silberne Schienenmedaille",
+    "introDialogue": [
+      "Heute fahren wir gemeinsam mit der U-Bahn.",
+      "Vom Ticketkauf bis zum Ausstieg – du lernst die wichtigsten Wörter.",
+      "Los geht’s, wir sind schon fast am Eingang!"
+    ],
+    "ingredients": [
+      { "word": "U-Bahn", "article": "die" },
+      { "word": "Eingang", "article": "der" },
+      { "word": "Ticketautomat", "article": "der" },
+      { "word": "Fahrgast", "article": "der" },
+      { "word": "Station", "article": "die" },
+      { "word": "Ausgang", "article": "der" }
+    ],
     "knowledgeCheck": {
-      "prompt": "",
+      "prompt": "Kennst du die richtigen Artikel für diese Wörter?",
       "choices": [
         {
-          "text": "",
-          "response": ""
+          "text": "Klar, ich bin bereit!",
+          "response": "Super, dann legen wir los!"
         },
         {
-          "text": "",
-          "response": ""
+          "text": "Nicht ganz sicher...",
+          "response": "Kein Problem – wir üben das zusammen!"
         }
       ]
     },
     "postTestFeedback": {
-      "success": "",
-      "failure": ""
+      "success": "Stark! {accuracy}% korrekt. Du findest dich bestens in der Stadt zurecht!",
+      "failure": "Mit {accuracy}% bist du gut gestartet – versuch’s gleich noch mal!"
     },
-    "dialogue": []
+    "dialogue": [
+      {
+        "line": "Wir gehen durch ___ Eingang zur U-Bahn-Station.",
+        "article": "den"
+      },
+      {
+        "line": "Zuerst kaufe ich ein Ticket an ___ Ticketautomat.",
+        "article": "dem"
+      },
+      {
+        "line": "Dann warten wir auf ___ U-Bahn Richtung Zentrum.",
+        "article": "die"
+      },
+      {
+        "line": "In der Bahn spricht ___ Fahrgast mit dem Fahrer.",
+        "article": "der"
+      },
+      {
+        "line": "An ___ Station Hauptbahnhof steigen wir aus.",
+        "article": "der"
+      },
+      {
+        "line": "Zum Schluss gehen wir durch ___ Ausgang zur Straße.",
+        "article": "den"
+      }
+    ]
   },
   {
     "id": "transport-day3",
     "theme": "transport",
-    "title": "",
-    "trophy": "",
-    "introDialogue": [],
-    "ingredients": [],
+    "title": "Mit dem Fahrrad unterwegs",
+    "trophy": "Grüner Pedalorden",
+    "introDialogue": [
+      "Hey, weißt du noch? Gestern waren wir mit der U-Bahn unterwegs.",
+      "Heute wird’s sportlich – wir fahren mit dem Fahrrad durch die Stadt.",
+      "Pack deinen Helm ein, wir starten gleich!"
+    ],
+    "ingredients": [
+      { "word": "Fahrrad", "article": "das" },
+      { "word": "Helm", "article": "der" },
+      { "word": "Straße", "article": "die" },
+      { "word": "Ampel", "article": "die" },
+      { "word": "Weg", "article": "der" },
+      { "word": "Park", "article": "der" }
+    ],
     "knowledgeCheck": {
-      "prompt": "",
+      "prompt": "Bereit für eine neue Runde mit frischer Luft und neuen Artikeln?",
       "choices": [
         {
-          "text": "",
-          "response": ""
+          "text": "Ja, los geht’s!",
+          "response": "Super! Dann schwing dich aufs Rad!"
         },
         {
-          "text": "",
-          "response": ""
+          "text": "Ich brauche noch ein bisschen Hilfe...",
+          "response": "Kein Problem, wir fahren gemeinsam los!"
         }
       ]
     },
     "postTestFeedback": {
-      "success": "",
-      "failure": ""
+      "success": "Wow, {accuracy}% richtig – du bist ein echter Fahrradprofi!",
+      "failure": "{accuracy}% – das war ein guter Versuch! Fahr die Runde ruhig nochmal."
     },
-    "dialogue": []
+    "dialogue": [
+      {
+        "line": "Gestern war die U-Bahn echt voll. Heute fahren wir lieber mit ___ Fahrrad, oder?",
+        "article": "dem"
+      },
+      {
+        "line": "Gute Idee! Ich habe ___ Helm dabei – Sicherheit geht vor.",
+        "article": "den"
+      },
+      {
+        "line": "Super, dann los! Wir fahren zuerst auf ___ ruhigen Straße bis zur Ampel.",
+        "article": "der"
+      },
+      {
+        "line": "An ___ Ampel biegen wir rechts ab, in Richtung Fluss.",
+        "article": "der"
+      },
+      {
+        "line": "Dort geht’s weiter auf ___ schönen Weg durch den Park.",
+        "article": "den"
+      },
+      {
+        "line": "Perfekt! Und im Schatten von ___ Park machen wir dann eine Pause.",
+        "article": "dem"
+      }
+    ]
   },
   {
     "id": "transport-day4",
     "theme": "transport",
-    "title": "",
-    "trophy": "",
-    "introDialogue": [],
-    "ingredients": [],
+    "title": "Mit dem Bus durch die Stadt",
+    "trophy": "Blauer Busticket-Pokal",
+    "introDialogue": [
+      "Nach der Fahrradtour gestern gönnen wir uns heute eine ruhigere Fahrt.",
+      "Wie wär’s mit dem Bus? Bequem, günstig und gut vernetzt.",
+      "Steig ein – wir schauen uns unterwegs wichtige Wörter an!"
+    ],
+    "ingredients": [
+      { "word": "Bus", "article": "der" },
+      { "word": "Haltestelle", "article": "die" },
+      { "word": "Fahrer", "article": "der" },
+      { "word": "Fahrplan", "article": "der" },
+      { "word": "Sitzplatz", "article": "der" },
+      { "word": "Linie", "article": "die" }
+    ],
     "knowledgeCheck": {
-      "prompt": "",
+      "prompt": "Weißt du, welche Artikel du an der Bushaltestelle brauchst?",
       "choices": [
         {
-          "text": "",
-          "response": ""
+          "text": "Na klar, ich fahr oft Bus!",
+          "response": "Super! Dann findest du dich bestimmt gut zurecht."
         },
         {
-          "text": "",
-          "response": ""
+          "text": "Ich bin mir noch nicht sicher...",
+          "response": "Kein Problem – dafür sind wir ja hier!"
         }
       ]
     },
     "postTestFeedback": {
-      "success": "",
-      "failure": ""
+      "success": "Klasse! {accuracy}% richtig – du bist ein echter Bus-Profi!",
+      "failure": "{accuracy}% – das ist ein guter Anfang. Üb die Artikel nochmal in Ruhe!"
     },
-    "dialogue": []
+    "dialogue": [
+      {
+        "line": "Nach der Radtour gestern fahren wir heute mit ___ Bus.",
+        "article": "dem"
+      },
+      {
+        "line": "Schau mal, an ___ Haltestelle warten schon ein paar Leute.",
+        "article": "der"
+      },
+      {
+        "line": "Laut ___ Fahrplan müsste der Bus gleich kommen.",
+        "article": "dem"
+      },
+      {
+        "line": "Ah, da ist er! Ich frage kurz ___ Fahrer, ob wir Tickets im Bus kaufen können.",
+        "article": "den"
+      },
+      {
+        "line": "Super, dann steigen wir ein. Ich sehe noch ___ Sitzplatz ganz hinten.",
+        "article": "einen"
+      },
+      {
+        "line": "Wir fahren mit ___ Linie 12 direkt bis zum Zentrum.",
+        "article": "der"
+      }
+    ]
   },
   {
     "id": "transport-day5",
     "theme": "transport",
-    "title": "",
-    "trophy": "",
-    "introDialogue": [],
-    "ingredients": [],
+    "title": "Zum Flughafen und ab in die Lüfte!",
+    "trophy": "Goldene Bordkarte",
+    "introDialogue": [
+      "Gestern waren wir mit dem Bus im Stadtzentrum unterwegs.",
+      "Heute fliegen wir – aber zuerst müssen wir zum Flughafen kommen!",
+      "Pack deine Sachen, es geht los!"
+    ],
+    "ingredients": [
+      { "word": "Flughafen", "article": "der" },
+      { "word": "Taxi", "article": "das" },
+      { "word": "Gepäck", "article": "das" },
+      { "word": "Bordkarte", "article": "die" },
+      { "word": "Pass", "article": "der" },
+      { "word": "Gate", "article": "das" }
+    ],
     "knowledgeCheck": {
-      "prompt": "",
+      "prompt": "Kennst du die richtigen Artikel für eine stressfreie Flugreise?",
       "choices": [
         {
-          "text": "",
-          "response": ""
+          "text": "Klar, ich bin bereit zum Abflug!",
+          "response": "Sehr gut – dann starten wir gleich mit dem Check-in."
         },
         {
-          "text": "",
-          "response": ""
+          "text": "Ich bin etwas nervös...",
+          "response": "Keine Sorge – mit den richtigen Wörtern kommst du überall durch!"
         }
       ]
     },
     "postTestFeedback": {
-      "success": "",
-      "failure": ""
+      "success": "Super! {accuracy}% richtig – du bist bereit für internationale Abenteuer!",
+      "failure": "Mit {accuracy}% bist du auf dem richtigen Weg. Bald fliegst du sicher wie ein Profi!"
     },
-    "dialogue": []
+    "dialogue": [
+      {
+        "line": "Bist du bereit? ___ Taxi zum Flughafen wartet schon draußen.",
+        "article": "das"
+      },
+      {
+        "line": "Okay, los geht’s! Ich hab ___ Gepäck schon im Kofferraum verstaut.",
+        "article": "das"
+      },
+      {
+        "line": "An ___ Flughafen ist heute ganz schön viel los.",
+        "article": "dem"
+      },
+      {
+        "line": "Wir brauchen noch ___ Bordkarte und müssen einchecken.",
+        "article": "die"
+      },
+      {
+        "line": "Hast du ___ Pass griffbereit für die Kontrolle?",
+        "article": "den"
+      },
+      {
+        "line": "Super, alles geschafft! Unser Flug geht bald an ___ Gate 12.",
+        "article": "dem"
+      }
+    ]
   },
   {
     "id": "transport-day6",
     "theme": "transport",
-    "title": "",
-    "trophy": "",
-    "introDialogue": [],
-    "ingredients": [],
+    "title": "Ankunft am Zielort",
+    "trophy": "Willkommensstempel",
+    "introDialogue": [
+      "Wir sind gelandet! Willkommen in einer neuen Stadt.",
+      "Jetzt müssen wir nur noch unser Gepäck holen und den Weg ins Hotel finden.",
+      "Los geht’s – der Flughafen hier ist riesig!"
+    ],
+    "ingredients": [
+      { "word": "Gepäckausgabe", "article": "die" },
+      { "word": "Passkontrolle", "article": "die" },
+      { "word": "Taxi", "article": "das" },
+      { "word": "Fahrt", "article": "die" },
+      { "word": "Hotel", "article": "das" },
+      { "word": "Rezeption", "article": "die" }
+    ],
     "knowledgeCheck": {
-      "prompt": "",
+      "prompt": "Schaffst du auch die letzte Etappe dieser Reise mit den richtigen Artikeln?",
       "choices": [
         {
-          "text": "",
-          "response": ""
+          "text": "Na klar, fast am Ziel!",
+          "response": "Perfekt – hol dir den letzten Stempel!"
         },
         {
-          "text": "",
-          "response": ""
+          "text": "Ich bin etwas müde vom Flug...",
+          "response": "Dann machen wir es ruhig und konzentriert. Du schaffst das!"
         }
       ]
     },
     "postTestFeedback": {
-      "success": "",
-      "failure": ""
+      "success": "Super! {accuracy}% – du bist sicher und sprachlich korrekt angekommen!",
+      "failure": "{accuracy}% – ganz okay! Wiederhole kurz die neuen Wörter und versuch’s nochmal."
     },
-    "dialogue": []
+    "dialogue": [
+      {
+        "line": "Endlich gelandet! Lass uns gleich zur ___ Gepäckausgabe gehen.",
+        "article": "der"
+      },
+      {
+        "line": "Danach müssen wir noch durch ___ Passkontrolle.",
+        "article": "die"
+      },
+      {
+        "line": "Draußen wartet schon ___ Taxi auf uns.",
+        "article": "das"
+      },
+      {
+        "line": "___ Fahrt ins Stadtzentrum dauert etwa 30 Minuten.",
+        "article": "Die"
+      },
+      {
+        "line": "___ Hotel liegt direkt neben einem kleinen Park.",
+        "article": "das"
+      },
+      {
+        "line": "Komm, wir gehen zur ___ Rezeption und checken ein.",
+        "article": "der"
+      }
+    ]
   },
   {
     "id": "transport-day7",
     "theme": "transport",
-    "title": "",
-    "trophy": "",
-    "introDialogue": [],
-    "ingredients": [],
+    "title": "Rundfahrt auf dem Fluss",
+    "trophy": "Silberne Schiffsmütze",
+    "introDialogue": [
+      "Nach all den Fahrten mit Zug, Bus und Flugzeug wird es Zeit für etwas Entspannung.",
+      "Heute machen wir eine gemütliche Schiffsrundfahrt auf dem Fluss.",
+      "Lehn dich zurück – aber vergiss die Artikel nicht!"
+    ],
+    "ingredients": [
+      { "word": "Schiff", "article": "das" },
+      { "word": "Hafen", "article": "der" },
+      { "word": "Deck", "article": "das" },
+      { "word": "Kapitän", "article": "der" },
+      { "word": "Rettungsweste", "article": "die" },
+      { "word": "Aussicht", "article": "die" }
+    ],
     "knowledgeCheck": {
-      "prompt": "",
+      "prompt": "Bereit für eine letzte Fahrt – diesmal auf dem Wasser?",
       "choices": [
         {
-          "text": "",
-          "response": ""
+          "text": "Aye aye, Kapitän!",
+          "response": "Dann los zur Anlegestelle!"
         },
         {
-          "text": "",
-          "response": ""
+          "text": "Ich bin lieber an Land...",
+          "response": "Keine Sorge – das wird eine ruhige Fahrt."
         }
       ]
     },
     "postTestFeedback": {
-      "success": "",
-      "failure": ""
+      "success": "Fantastisch! {accuracy}% richtig – du hast die ganze Woche gemeistert!",
+      "failure": "{accuracy}% – kein Problem. Wiederhole ein paar Wörter und entspann dich auf dem Schiff!"
     },
-    "dialogue": []
+    "dialogue": [
+      {
+        "line": "Heute machen wir eine Tour mit ___ Schiff auf dem Fluss.",
+        "article": "dem"
+      },
+      {
+        "line": "Wir gehen an ___ Hafen und steigen dort ein.",
+        "article": "den"
+      },
+      {
+        "line": "Oben auf ___ Deck hat man die beste Aussicht.",
+        "article": "dem"
+      },
+      {
+        "line": "___ Kapitän begrüßt alle Passagiere persönlich.",
+        "article": "der"
+      },
+      {
+        "line": "Sicherheit geht vor – jeder bekommt ___ Rettungsweste.",
+        "article": "eine"
+      },
+      {
+        "line": "Von hier sieht man ___ wunderschöne Aussicht über die Stadt.",
+        "article": "die"
+      }
+    ]
+  },
+  {
+    "id": "transport-day8",
+    "theme": "transport",
+    "title": "Die Heimreise",
+    "trophy": "Reisemeister",
+    "introDialogue": [
+      "Heute ist der letzte Tag dieses spannenden Reiseabenteuers.",
+      "Wir fahren nach Hause – aber keine Sorge, weitere Reisen warten schon auf uns!",
+      "Bevor wir aufbrechen, wiederholen wir noch einmal die wichtigsten Wörter."
+    ],
+    "ingredients": [
+      { "word": "Hotel", "article": "das" },
+      { "word": "Rezeption", "article": "die" },
+      { "word": "Gepäck", "article": "das" },
+      { "word": "Pass", "article": "der" },
+      { "word": "Flughafen", "article": "der" },
+      { "word": "Taxi", "article": "das" },
+      { "word": "Flug", "article": "der" },
+      { "word": "Sitzplatz", "article": "der" },
+      { "word": "Fenster", "article": "das" },
+      { "word": "Bahn", "article": "die" },
+      { "word": "Heimfahrt", "article": "die" },
+      { "word": "Koffer", "article": "der" },
+      { "word": "Abflug", "article": "der" },
+      { "word": "Ankunft", "article": "die" },
+      { "word": "Zuhause", "article": "das" }
+    ],
+    "knowledgeCheck": {
+      "prompt": "Bist du bereit für die Heimreise und ein großes Wiedersehen mit den Artikeln?",
+      "choices": [
+        {
+          "text": "Ja, los geht’s!",
+          "response": "Perfekt! Zeigen wir, was wir gelernt haben."
+        },
+        {
+          "text": "Ich brauche noch ein bisschen Hilfe...",
+          "response": "Kein Problem – wir wiederholen gemeinsam!"
+        }
+      ]
+    },
+    "postTestFeedback": {
+      "success": "Fantastisch! {accuracy}% richtig – du bist wirklich ein Reisemeister!",
+      "failure": "Mit {accuracy}% bist du auf dem richtigen Weg. Wiederhole die schwierigen Wörter noch einmal!"
+    },
+    "dialogue": [
+      {
+        "line": "Wir checken an ___ Rezeption aus.",
+        "article": "der"
+      },
+      {
+        "line": "Ich hole schnell ___ Koffer aus dem Zimmer.",
+        "article": "den"
+      },
+      {
+        "line": "Hast du ___ Pass dabei?",
+        "article": "den"
+      },
+      {
+        "line": "Wir nehmen ___ Taxi zum Flughafen.",
+        "article": "ein"
+      },
+      {
+        "line": "Vor dem ___ Flughafen steigen wir schnell aus.",
+        "article": "dem"
+      },
+      {
+        "line": "Wir geben ___ Gepäck ab und gehen durch die Kontrolle.",
+        "article": "das"
+      },
+      {
+        "line": "___ Flug startet in einer Stunde.",
+        "article": "Der"
+      },
+      {
+        "line": "Ich hoffe, wir bekommen ___ Sitzplatz am Fenster.",
+        "article": "einen"
+      },
+      {
+        "line": "Nach ___ Abflug lese ich noch ein bisschen.",
+        "article": "dem"
+      },
+      {
+        "line": " ___ Ankunft in unserem Heimatland ist um 16 Uhr.",
+        "article": "Die"
+      },
+      {
+        "line": "Dann nehmen wir ___ Bahn bis in die Stadt.",
+        "article": "die"
+      },
+      {
+        "line": "Die letzte Etappe ist ___ Heimfahrt mit dem Bus.",
+        "article": "die"
+      },
+      {
+        "line": "Endlich sehen wir wieder ___ Haustür unseres Hauses.",
+        "article": "die"
+      },
+      {
+        "line": "Weißt du noch, wie wir den ersten Tag mit ___ Zug begonnen haben? Dann sag ich nur: Bis zur nächsten Reise!",
+        "article": "dem"
+      }
+    ]
   }
 ]
 

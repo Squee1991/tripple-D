@@ -35,7 +35,9 @@
                         <section class="info-section">
                             <div class="info__wrapper">
                                 <h3 class="info-section__title">{{t('modalVerbsPage.examplesTitle')}}</h3>
-                                <button v-if="selectedGroup.tips" class="info__icon-tips" ref="tipRef"
+                                <button
+                                        title="Советы по теме"
+                                        v-if="selectedGroup.tips" class="info__icon-tips" ref="tipRef"
                                         @click="openTips(selectedGroup.tips)">
                                 </button>
                             </div>
@@ -331,6 +333,7 @@
         border-radius: 12px;
         padding: 20px;
         box-shadow: 5px 5px 0px #000;
+        margin-bottom: 20px;
     }
 
     .content__title {
@@ -463,8 +466,7 @@
     }
 
     .info__icon-tips {
-        width: 50px;
-        height: 50px;
+        width: 60px;
         cursor: pointer;
         border: none;
         background: none;

@@ -32,6 +32,14 @@ export const cpecialGroupAchievment = [
 		title: 'specialCategory.generalLabel',
 		achievements: [
 			{
+				id: "sentences-master",
+				name: "specialCategory.generalSeventhlabel",
+				description: "specialCategory.generalSeventhText",
+				icon: "📜",
+				currentProgress: 0,
+				targetProgress: 1000
+			},
+			{
 				id: "totalArticles1000",
 				name: "specialCategory.generalFirstLabel",
 				description: "specialCategory.generalFirstText",
@@ -82,35 +90,35 @@ export const cpecialGroupAchievment = [
 			},
 			{
 				id: 'guessedFastWords',
-				name: 'Молниеносный',
-				description: 'Угадай 100 слов за 20 секунд или быстрее',
+				name: 'specialCategory.specialFourthLabel',
+				description: 'specialCategory.specialFourthText',
 				icon: "⚡",
 				currentProgress: 0,
 				targetProgress: 100,
 			},
 			{
 				id: 'guessedOnLastTryWords',
-				name: 'Последний шанс',
-				description: 'Угадай 100 слов имея не больше 1 попытки',
+				name: 'specialCategory.specialFifthLabel',
+				description: 'specialCategory.specialFifthText',
 				icon: '🧨',
 				currentProgress: 0,
 				targetProgress: 100,
 			},
 			{
 				id: 'guessedSafeWords',
-				name: 'Безопасная игра',
-				description: 'Угадай 100 слов, сохранив минимум 10 попыток',
+				name: 'specialCategory.specialSixthLabel',
+				description: 'specialCategory.specialSixthText',
 				icon: '🛡️',
 				currentProgress: 0,
 				targetProgress: 100,
 			},
 			{
 				id: 'guessedPerfectWords',
-				name: 'Идеальный раунд',
-				description: 'Угадай 20 слов сохранив все попытки',
+				name: 'specialCategory.specialSeventhLabel',
+				description: 'specialCategory.specialSeventhText',
 				icon: '🎯',
 				currentProgress: 0,
-				targetProgress: 20,
+				targetProgress: 100,
 			},
 		]
 	}

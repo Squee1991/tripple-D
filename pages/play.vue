@@ -1,73 +1,3 @@
-<script setup>
-    import { ref, computed, watch, onMounted, onUnmounted } from 'vue'
-    import { useSentencesStore } from '../store/sentencesStore.js'
-    import { useGameStore } from '../store/sentenceDuelStore.js'
-    import { useRouter } from 'vue-router'
-    import Modal from  '../src/components/modal.vue'
-
-    const { t } = useI18n()
-    const router = useRouter()
-    const gameStore = useGameStore()
-
-    const sentencesStore = useSentencesStore()
-    const mode = ref('online')
-    const isLoading = ref(true)
-
-    const showDevModal = ref(false)
-    const levels = ['A1', 'A2', 'B1', 'B2']
-
-    const isWaitingForOpponent = computed(() => mode.value === 'online' && !!gameStore.gameId && gameStore.sessionData?.status === 'waiting')
-    const isOpponentFound = computed(() => mode.value === 'online' && gameStore.sessionData?.status === 'starting')
-    const overlayData = ref({
-        title: "wordDuel.rulesTitle",
-        text: "wordDuel.rulesText",
-        subtext: "wordDuel.subText"
-    })
-
-    const openModal = () => { showDevModal.value = true }
-    const closeModal = () => { showDevModal.value = false }
-
-    function cancelSearch() {
-        gameStore.cancelSearch()
-    }
-    function goBack() {
-        router.push('/')
-        gameStore.cancelSearch()
-    }
-
-    function handleFindGameClick(level) {
-        if (mode.value === 'online') {
-            gameStore.findGame(level)
-        } else {
-            router.push({ path: '/duel-solo', query: { level } })
-        }
-    }
-
-    watch(() => gameStore.sessionData?.status, (newStatus) => {
-        if (mode.value === 'online' && newStatus === 'starting') {
-            setTimeout(() => {
-                if (gameStore.gameId) {
-                    router.push(`/game/${gameStore.gameId}`)
-                }
-            }, 2000)
-        }
-    })
-
-    onMounted(async () => {
-        isLoading.value = true;
-        if (!sentencesStore.db) {
-            await sentencesStore.loadDb();
-        }
-        isLoading.value = false;
-    })
-
-    onUnmounted(() => {
-        if (isWaitingForOpponent.value) {
-            gameStore.cancelSearch()
-        }
-    })
-</script>
-
 <template>
     <div class="lobby">
         <Modal
@@ -76,7 +6,15 @@
                 :title="t(overlayData.title)"
                 :text="t(overlayData.text)"
         />
+        <Modal
+                :visible="showAuthModal"
+                @close="closeAuthModal"
+                :title="authModalData.title"
+                :img="Login"
+                :text="authModalData.text"
+        />
         <div class="lobby-container">
+
             <div v-if="!isWaitingForOpponent && !isOpponentFound">
                 <div class="duel__header">
                     <button @click="goBack" class="back-button-global" aria-label="Назад">
@@ -89,10 +27,9 @@
                         <h1 class="page-title">{{ t('wordDuel.title')}}</h1>
                     </div>
                     <div @click="openModal">
-                        <img class="duel__question-img" src="../assets/images/question.svg" alt="">
+                        <img class="duel__question-img" :title="t('hoverTitle.duelInfo')" src="../assets/images/question.svg" alt="">
                     </div>
                 </div>
-
                 <div class="mode-toggle-wrapper">
                     <div
                             class="mode-toggle-option"
@@ -110,8 +47,6 @@
                     </div>
                     <div class="mode-toggle-slider" :class="{ 'mode-toggle-slider--local': mode === 'local' }"></div>
                 </div>
-
-
                 <p class="page-subtitle">{{ t('wordDuel.subTitle')}}</p>
                 <div class="level-grid">
                     <button
@@ -135,9 +70,111 @@
                     <p class="page-subtitle">{{t('wordDuel.prepare')}}</p>
                 </div>
             </div>
+            <div v-if="authStore.isPremium" class="stats-block">
+                <h3>Твоя статистика по уровню {{ selectedLevel }}</h3>
+                <p>Побед: {{ levelStats.wins }}</p>
+                <p>Серия побед: {{ levelStats.streaks }}</p>
+                <p>Чистые победы: {{ levelStats.cleanSweeps }}</p>
+                <p>Без ошибок: {{ levelStats.flawlessWins }}</p>
+            </div>
+            <div v-else class="stats-block--locked">
+                <p>🔒 Подключите премиум, чтобы увидеть свою статистику!</p>
+            </div>
         </div>
     </div>
 </template>
+<script setup>
+    import { ref, computed, watch, onMounted, onUnmounted } from 'vue'
+    import { useSentencesStore } from '../store/sentencesStore.js'
+    import { useGameStore } from '../store/sentenceDuelStore.js'
+    import { userAuthStore } from '../store/authStore.js'
+    import { useRouter } from 'vue-router'
+    import Modal from  '../src/components/modal.vue'
+    import Login from '../assets/images/login.svg'
+    const authStore = userAuthStore()
+    const { t } = useI18n()
+    const router = useRouter()
+    const gameStore = useGameStore()
+    const isLoggedIn = computed(() => !!authStore.user)
+    const showAuthModal = ref(false)
+    const sentencesStore = useSentencesStore()
+    const mode = ref('online')
+    const isLoading = ref(true)
+    const authModalData = {
+        title: 'Требуется авторизация',
+        text: 'Чтобы играть в дуэли, пожалуйста, войдите в аккаунт или зарегистрируйтесь.'
+    }
+    const showDevModal = ref(false)
+    const levels = ['A1', 'A2', 'B1', 'B2']
+    const levelStats = computed(() => {
+        return gameStore.achievements[selectedLevel.value] || {
+            wins: 0,
+            streaks: 0,
+            cleanSweeps: 0,
+            flawlessWins: 0
+        }
+    })
+    const selectedLevel = ref('A1')
+    const isWaitingForOpponent = computed(() => mode.value === 'online' && !!gameStore.gameId && gameStore.sessionData?.status === 'waiting')
+    const isOpponentFound = computed(() => mode.value === 'online' && gameStore.sessionData?.status === 'starting')
+    const overlayData = ref({
+        title: "wordDuel.rulesTitle",
+        text: "wordDuel.rulesText",
+        subtext: "wordDuel.subText"
+    })
+
+    const openModal = () => { showDevModal.value = true }
+    const closeModal = () => { showDevModal.value = false }
+    const closeAuthModal = () => { showAuthModal.value = false }
+
+    function cancelSearch() {
+        gameStore.cancelSearch()
+    }
+    function goBack() {
+        router.push('/')
+        gameStore.cancelSearch()
+    }
+
+    function handleFindGameClick(level) {
+        if (!authStore.uid)  {
+            showAuthModal.value = true
+            return
+        }
+
+        if (mode.value === 'online') {
+            gameStore.findGame(level)
+        } else {
+            router.push({ path: '/duel-solo', query: { level } })
+        }
+    }
+
+    watch(() => gameStore.sessionData?.status, (newStatus) => {
+        if (mode.value === 'online' && newStatus === 'starting') {
+            setTimeout(() => {
+                if (gameStore.gameId) {
+                    router.push(`/game/${gameStore.gameId}`)
+                }
+            }, 2000)
+        }
+    })
+
+    onMounted(async () => {
+        isLoading.value = true;
+        if (!sentencesStore.db) {
+            await sentencesStore.loadSentences();
+        }
+        isLoading.value = false;
+    })
+
+    onUnmounted(() => {
+        if (isWaitingForOpponent.value) {
+            gameStore.cancelSearch()
+            gameStore.loadUserAchievements()
+        }
+    })
+</script>
+
+
 
 <style scoped>
 
@@ -159,7 +196,7 @@
         text-align: center;
         padding: 14px 5px;
         cursor: pointer;
-        color: #fff; /* Активный цвет текста */
+        color: #fff;
         font-family: "Nunito", sans-serif;
         font-weight: 700;
         font-size: 1.1rem;
@@ -170,7 +207,7 @@
     }
 
     .mode-toggle-option--inactive {
-        color: #1e1e1e; /* Неактивный цвет текста */
+        color: #1e1e1e;
     }
 
     .mode-toggle-slider {
@@ -189,7 +226,6 @@
         transform: translateX(100%);
     }
 
-    /* Остальные стили компонента */
     .duel__header {
         display: flex;
         justify-content: space-between;
