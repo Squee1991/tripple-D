@@ -4,7 +4,6 @@
         <p class="comic-description">
             Получи доступ ко всем функциям платформы: обучение, озвучка, прогресс, онлайн-сражения и многое другое!
         </p>
-
         <div class="mode-toggle-wrapper">
             <div
                     class="mode-toggle-option"
@@ -22,21 +21,19 @@
             </div>
             <div class="mode-toggle-slider" :class="{ 'mode-toggle-slider--local': plan === 'yearly' }"></div>
         </div>
-
         <div class="subscription-box">
             <h2 class="price">
                 {{ plan === 'monthly' ? '1.99€ / месяц' : '1.99€ / год' }}
             </h2>
-
             <ul class="benefits">
                 <li>✅ Онлайн-сражения</li>
+                <li>✅ Дополнительные артиклюсы</li>
                 <li>✅ Все режимы обучения</li>
                 <li>✅ Озвучка всех слов</li>
                 <li>✅ Поддержка разработчиков</li>
                 <li>✅ Тесты всех уровней</li>
                 <li>✅ Доступ к будущим функциям</li>
             </ul>
-
             <button
                     v-if="!authStore.isPremium"
                     class="pay-btn"
@@ -47,7 +44,6 @@
         </div>
     </div>
 </template>
-
 
 <script setup>
 import {ref, computed} from 'vue'

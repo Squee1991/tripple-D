@@ -22,7 +22,7 @@
 </script>
 
 <style scoped>
-    /* Общий фон страницы */
+
     .idiom-container {
         display: flex;
         justify-content: center;
@@ -39,7 +39,6 @@
         font-family: 'Comic Sans MS', 'Fredoka', sans-serif;
     }
 
-    /* Рамка комикса */
     .comic-frame {
         border: 6px double #ff6b00;
         background: #fffbe6;
@@ -51,7 +50,6 @@
         position: relative;
     }
 
-    /* Облачко реплики */
     .speech-bubble {
         background: #ffffff;
         border: 4px dashed #ffb347;
@@ -72,7 +70,6 @@
         border-top-color: #ffffff;
     }
 
-    /* Заголовок */
     h3 {
         font-size: 1.6rem;
         text-align: center;
@@ -81,7 +78,6 @@
         text-shadow: 1px 1px 0 #fff;
     }
 
-    /* Название фразеологизма */
     .idiom-title {
         font-size: 1.3rem;
         font-weight: bold;
@@ -93,7 +89,6 @@
         margin-bottom: 1rem;
     }
 
-    /* Кнопка */
     .comic-btn {
         background-color: #ffb347;
         border: 3px solid #ff6b00;
@@ -112,7 +107,6 @@
         box-shadow: none;
     }
 
-    /* Детали */
     .idiom-details {
         margin-top: 1rem;
         background: #fff9dd;

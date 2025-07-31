@@ -112,10 +112,11 @@
 <template>
     <div class="ranked-layout">
         <div v-if="isModal">
-            <ModalOverlay @close="isModal = false"
-                          :icon="CloseIcon"
-                          :text="t(modalValues.text)"
-                          :overlayBtn="t(modalValues.btn)"
+            <ModalOverlay
+                @close="isModal = false"
+                :icon="CloseIcon"
+                :text="t(modalValues.text)"
+                :overlayBtn="t(modalValues.btn)"
             />
         </div>
         <div class="ranked-sidebar-corkboard">
