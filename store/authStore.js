@@ -13,7 +13,7 @@ import {
 	sendPasswordResetEmail,
 	sendEmailVerification,
 	signInWithPopup,
-	GoogleAuthProvider
+	reauthenticateWithPopup, GoogleAuthProvider
 } from 'firebase/auth';
 import {doc, setDoc, getDoc, getFirestore, updateDoc, deleteDoc, serverTimestamp} from 'firebase/firestore';
 let authStateUnsubscribe = null;
@@ -22,12 +22,14 @@ export const userAuthStore = defineStore('auth', () => {
 	const email = ref(null)
 	const registeredAt = ref(null)
 	const db = getFirestore();
+	const providerId = ref('')
 	const avatar = ref(null)
 	const uid = ref(null)
 	const subscriptionEndsAt = ref(null)
 	const subscriptionCancelled = ref(false)
 	const availableAvatars = ref([ '1.png', '2.png', '3.png', '4.png', '5.png', '6.png',  '12.png', '7.png', '8.png' , '9.png' , '10.png' , '11.png' , '13.png', '14.png']);
 	const isPremium = ref(false)
+	const isGoogleUser = computed(() => providerId.value === 'google.com');
 	const getAvatarUrl = (fileName) => {
 		if (!fileName) return '';
 		try {
@@ -38,8 +40,6 @@ export const userAuthStore = defineStore('auth', () => {
 	};
 
 	const avatarUrl = computed(() => getAvatarUrl(avatar.value));
-
-
 	const createInitialAchievementsObject = () => {
 		return {
 			achievements: {
@@ -60,6 +60,7 @@ export const userAuthStore = defineStore('auth', () => {
 		isPremium.value = data.isPremium || false
 		subscriptionEndsAt.value = data.subscriptionEndsAt || null
 		subscriptionCancelled.value = data.subscriptionCancelled || false
+		providerId.value = data.providerId || ''
 	}
 
 	const updateUserAvatar = async (newAvatarFilename) => {
@@ -84,6 +85,7 @@ export const userAuthStore = defineStore('auth', () => {
 		const userDocRef = doc(db, 'users', user.uid);
 		const userDoc = await getDoc(userDocRef);
 
+
 		if (!userDoc.exists()) {
 
 			await setDoc(userDocRef, {
@@ -105,7 +107,8 @@ export const userAuthStore = defineStore('auth', () => {
 			avatar: userDataFromDb.avatar || '1.png',
 			isPremium: userDataFromDb.isPremium || false,
 			subscriptionEndsAt: userDataFromDb.subscriptionEndsAt || null,
-			subscriptionCancelled: userDataFromDb.subscriptionCancelled || false
+			subscriptionCancelled: userDataFromDb.subscriptionCancelled || false,
+			providerId: user.providerData[0]?.providerId || ''
 		});
 	};
 
@@ -143,7 +146,6 @@ export const userAuthStore = defineStore('auth', () => {
 	const loginUser = async ({ email, password }) => {
 		const auth = getAuth()
 		const userCredential = await signInWithEmailAndPassword(auth, email, password)
-
 		const userDocRef = doc(db, 'users', userCredential.user.uid);
 		const userDoc = await getDoc(userDocRef);
 		const userDataFromDb = userDoc.exists() ? userDoc.data() : {};
@@ -156,7 +158,8 @@ export const userAuthStore = defineStore('auth', () => {
 			avatar: userDataFromDb.avatar || null,
 			isPremium: userDataFromDb.isPremium || false,
 			subscriptionEndsAt: userDataFromDb.subscriptionEndsAt || null,
-			subscriptionCancelled: userDataFromDb.subscriptionCancelled || false
+			subscriptionCancelled: userDataFromDb.subscriptionCancelled || false,
+			providerId: user.providerData[0]?.providerId || ''
 		})
 	}
 
@@ -165,19 +168,31 @@ export const userAuthStore = defineStore('auth', () => {
 		await sendPasswordResetEmail(auth, email)
 	}
 
-	const deleteAccount = async (currentPassword) => {
+	const deleteAccount = async (password = null) => {
 		const auth = getAuth();
 		const user = auth.currentUser;
-		if (!user) return;
-		const credential = EmailAuthProvider.credential(
-			user.email,
-			currentPassword
-		);
-		await reauthenticateWithCredential(user, credential);
-		await deleteDoc(doc(db, 'users', user.uid));
-		await deleteUser(user);
-		setUserData({});
+		if (!user) throw new Error('Пользователь не найден');
+
+		try {
+			if (user.providerData.some(p => p.providerId === 'google.com')) {
+				const provider = new GoogleAuthProvider();
+				await reauthenticateWithPopup(user, provider);
+			} else {
+				if (!password || !user.email) throw new Error('Не указан пароль или email');
+				const credential = EmailAuthProvider.credential(user.email, password);
+				await reauthenticateWithCredential(user, credential);
+			}
+
+			await deleteDoc(doc(db, 'users', user.uid));
+			await deleteUser(user);
+			setUserData({});
+		} catch (err) {
+			console.error('Ошибка удаления:', err);
+			throw err;
+		}
 	};
+
+
 
 	const logOut = async () => {
 		const auth = getAuth()
@@ -208,7 +223,8 @@ export const userAuthStore = defineStore('auth', () => {
 						avatar: userDataFromDb.avatar || null,
 						isPremium: userDataFromDb.isPremium || false,
 						subscriptionEndsAt: userDataFromDb.subscriptionEndsAt || null,
-						subscriptionCancelled: userDataFromDb.subscriptionCancelled || false
+						subscriptionCancelled: userDataFromDb.subscriptionCancelled || false,
+						providerId: user.providerData[0]?.providerId || ''
 					})
 				}
 			} else {
@@ -217,14 +233,15 @@ export const userAuthStore = defineStore('auth', () => {
 		})
 	}
 
-
 	fetchuser()
 
 	return {
 		name,
 		email,
 		registeredAt,
+		providerId,
 		uid,
+		isGoogleUser,
 		avatar,
 		avatarUrl,
 		availableAvatars,

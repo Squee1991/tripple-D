@@ -105,7 +105,7 @@
             </div>
           </div>
           <div>
-            <button>удалить аккаунт</button>
+            <button @click="clearFields">удалить аккаунт</button>
           </div>
         </div>
         <div v-if="activeTab === 'progress'">
@@ -139,12 +139,35 @@
       </div>
     </div>
   </div>
+  <div v-if="showDeleteModal" class="cancel__modal-overlay" @click.self="showDeleteModal = false">
+    <div class="cancel__modal-wrapper">
+      <div class="cancel__title">Удалить аккаунт?</div>
+      <p class="cancel__text">После удаления аккаунта все Ваши данные будут утеряны безвозвратно</p>
+      <p v-if="!isGoogleUser" class="cancel__text-password">
+        Введите ваш пароль для подтверждения удаления аккаунта
+      </p>
+      <div v-if="!isGoogleUser" class="label">
+        <input class="input" v-model="deleteFields[0].value" type="password" />
+        <p v-if="deleteFields[0].error" class="delete-error">
+          {{ t(deleteFields[0].error) }}
+        </p>
+      </div>
+      <p v-else class="cancel__text-password">
+        Вы вошли через Google. Для удаления аккаунта откроется окно повторной авторизации.
+      </p>
+      <div class="cancel__actions">
+        <button class="cancel-btn cancel-btn-yes" @click="confirmDeleteAccount">Удалить</button>
+        <button class="cancel-btn cancel-btn-no" @click="showDeleteModal = false">Отмена</button>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup>
 
 import {userAuthStore} from '../store/authStore.js'
 import {userlangStore} from '../store/learningStore.js'
+import { mapErrors } from "../utils/errorsHandler.js";
 import {ref, computed, onMounted, watch} from 'vue'
 import Progress from '../src/components/progress.vue'
 import Skills from '../src/components/skillz.vue'
@@ -152,7 +175,7 @@ import {useRouter} from 'vue-router'
 import Shop from '../src/components/Shop.vue'
 import Modal from '../src/components/modal.vue'
 import DevelopmentIcon from '../assets/images/dev.svg'
-
+const { t } = useI18n()
 const isToggle = ref(false)
 const authStore = userAuthStore()
 const learningStore = userlangStore()
@@ -162,8 +185,11 @@ const isAvatarModalOpen = ref(false);
 const selectedAvatar = ref(null);
 const openModal = ref(false)
 const cancelModal = ref(false)
+const showDeleteModal = ref(false)
+const errorDeletePassword = ref('')
+const isGoogleUser = computed(() => authStore.isGoogleUser);
 const formattedEndDate = computed(() => {
-  if (!authStore.subscriptionEndsAt) return 'неизвестно'
+  if (!authStore.subscriptionEndsAt) return '-'
   const date = new Date(authStore.subscriptionEndsAt)
   return date.toLocaleDateString('ru-RU', {
     year: 'numeric',
@@ -171,19 +197,39 @@ const formattedEndDate = computed(() => {
     day: 'numeric',
   })
 })
+
 const openCancelModal = () => {
   cancelModal.value = true
+}
+
+const clearFields = () => {
+  showDeleteModal.value = true
+  deleteFields.value.forEach((item) => {
+    item.value = '',
+    item.error = ''
+  });
 }
 
 const closeCancelModal = () => {
   cancelModal.value = false
 }
 
-async function cancelSubscription() {
-  if (!authStore.uid) {
-    alert('Ошибка: не найден uid')
-    return
+const deleteFields = ref([
+  { name: 'deletePassword', value: '', error: '' }
+])
+
+async function confirmDeleteAccount() {
+  deleteFields.value[0].error = ''
+  try {
+    await authStore.deleteAccount(deleteFields.value[0].value)
+    router.push('/')
+  } catch (err) {
+    mapErrors(deleteFields.value, err.code)
   }
+}
+
+async function cancelSubscription() {
+  if (!authStore.uid) return
   try {
     const res = await $fetch('/api/stripe/cancel', {
       method: 'POST',
@@ -219,7 +265,6 @@ watch(isAvatarModalOpen, (newValue) => {
 const selectAvatar = (avatarName) => {
   selectedAvatar.value = avatarName;
 };
-
 const confirmAvatarChange = async () => {
   if (!selectedAvatar.value) return;
   try {
@@ -229,19 +274,15 @@ const confirmAvatarChange = async () => {
     console.error("Не удалось обновить аватар:", error);
   }
 };
-
 const toggle = () => {
   isToggle.value = !isToggle.value;
 }
-
 const pathBack = () => {
   router.push('/')
 }
-
 const setTab = (tab) => {
   activeTab.value = tab
 }
-
 const regDate = computed(() => {
   if (!authStore.registeredAt) return '-'
   return new Date(authStore.registeredAt).toLocaleDateString('ru-RU', {
@@ -254,9 +295,27 @@ const regDate = computed(() => {
 onMounted(async () => {
   await learningStore.loadFromFirebase()
 })
+
 </script>
 
 <style scoped>
+
+.delete-error {
+  color: #d32f2f;
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+  font-weight: bold;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.label {
+  height: 80px;
+}
 
 .subscription-title {
   padding: 0 0 10px 0;
@@ -269,6 +328,17 @@ onMounted(async () => {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.delete-password-input {
+  width: 90%;
+  box-shadow: 4px 4px 0 black;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.delete-password-input:active {
+
 }
 
 .cancel__modal-overlay {
@@ -338,6 +408,11 @@ onMounted(async () => {
   padding: 1.5rem 0;
   gap: 1.5rem;
   flex-shrink: 0;
+}
+
+.cancel__text-password {
+  font-size: 0.8rem;
+  margin-bottom: 10px;
 }
 
 .sidebar-btn {

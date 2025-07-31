@@ -995,10 +995,12 @@
     "userNotFound": "User not found.",
     "wrongPassword": "Incorrect password.",
     "generalError": "An error occurred. Please try again.",
-    "userExists": "A user with this email already exists",
+    "userExists": "A user with this email is already registered",
     "invalidEmail": "Invalid email format",
-    "invalidCredential": "Invalid or expired login credentials"
+    "invalidCredential": "Invalid or incorrect password",
+    "tooManyRequests": "Too many attempts. Please try again later"
   },
+
   "about": {
     "title": "Bored of learning German and noun articles?",
     "lead": "Tired of memorizing flashcards, rewriting word lists and still forgetting articles?",

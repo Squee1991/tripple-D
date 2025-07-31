@@ -982,16 +982,18 @@
     "errorEmail": "Wprowadź email",
     "errorPassword": "Wprowadź hasło",
     "errorName": "Wprowadź imię",
-    "errorConfirm": "Hasła nie są takie same",
+    "errorConfirm": "Hasła się nie zgadzają",
     "resetSent": "Wiadomość została wysłana na email",
-    "emailNotVerified": "Potwierdź email przed zalogowaniem się.",
-    "userNotFound": "Użytkownik nie został znaleziony.",
+    "emailNotVerified": "Potwierdź adres email przed zalogowaniem.",
+    "userNotFound": "Użytkownik nie znaleziony.",
     "wrongPassword": "Nieprawidłowe hasło.",
     "generalError": "Wystąpił błąd. Spróbuj ponownie.",
     "userExists": "Użytkownik z tym adresem email już istnieje",
-    "invalidEmail": "Nieprawidłowy format emaila",
-    "invalidCredential": "Nieprawidłowe lub przestarzałe dane logowania"
+    "invalidEmail": "Nieprawidłowy format email",
+    "invalidCredential": "Nieprawidłowe lub błędne hasło",
+    "tooManyRequests": "Zbyt wiele prób. Spróbuj później"
   },
+
   "about": {
     "title": "Nudzi Cię nauka niemieckiego i rodzajników rzeczowników?",
     "lead": "Masz dość zakuwania fiszek, przepisywania list słówek i ciągłego zapominania rodzajników?",

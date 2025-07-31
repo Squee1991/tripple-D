@@ -985,13 +985,14 @@
     "errorName": "İsim girin",
     "errorConfirm": "Şifreler eşleşmiyor",
     "resetSent": "E-posta gönderildi",
-    "emailNotVerified": "Giriş yapmadan önce lütfen e-postanızı doğrulayın.",
+    "emailNotVerified": "Giriş yapmadan önce e-postanızı doğrulayın.",
     "userNotFound": "Kullanıcı bulunamadı.",
     "wrongPassword": "Yanlış şifre.",
     "generalError": "Bir hata oluştu. Lütfen tekrar deneyin.",
-    "userExists": "Bu e-postaya sahip bir kullanıcı zaten mevcut",
+    "userExists": "Bu e-posta ile zaten bir kullanıcı kayıtlı",
     "invalidEmail": "Geçersiz e-posta formatı",
-    "invalidCredential": "Geçersiz veya süresi dolmuş giriş bilgileri"
+    "invalidCredential": "Geçersiz veya yanlış şifre",
+    "tooManyRequests": "Çok fazla deneme yapıldı. Lütfen daha sonra tekrar deneyin"
   },
   "about": {
     "title": "Almanca ve isim artikelleri öğrenmekten sıkıldınız mı?",
