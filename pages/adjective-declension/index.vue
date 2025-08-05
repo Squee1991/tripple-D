@@ -1,16 +1,10 @@
 <template>
     <div class="declension-page" :class="{ 'content-is-active': isContentVisible }">
-        <div v-if="showTips" class="tips__overlay" @click.self="showTips = false">
-            <div class="tips__content">
-                <button class="tips__close" @click="showTips = false">×</button>
-                <h2 class="tipps__title">{{ t('adjectiveDeclensionPage.tipTitle')}}</h2>
-                <ul class="tips__list">
-                    <li v-for="tip in activeTipps" :key="tip.text" class="tips__item">
-                        <div class="tips__text" v-html="tip.text"></div>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <VTips
+            v-model="showTips"
+            :title="t('adjectiveComparisonPage.tipTitle')"
+            :tips="currentTopicData?.tips"
+        />
         <div class="sidebar">
             <button @click="backToMenu" class="btn__back">На главную</button>
             <h2 class="sidebar__title">{{ t('adjectiveDeclensionPage.sideBarTitle')}}</h2>
@@ -97,6 +91,7 @@
 
 <script setup>
     import {ref, computed, onMounted, onUnmounted, watch, nextTick} from 'vue';
+    import VTips from "~/src/components/V-tips.vue";
     import Lottie from 'lottie-web';
     import TipIcon from '../../assets/animation/info.json';
     import {useRouter} from 'vue-router'
@@ -521,74 +516,6 @@
         cursor: pointer;
         border: none;
         background: none;
-    }
-
-    .tips__overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.6);
-        z-index: 1000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .tips__content {
-        position: relative;
-        background: white;
-        padding: 2rem;
-        border-radius: 16px;
-        border: 3px solid #1e1e1e;
-        box-shadow: 8px 8px 0 #1e1e1e;
-        width: 90%;
-        max-width: 500px;
-    }
-
-    .tips__close {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        background: #f97028;
-        color: #fff;
-        border: 2px solid #1e1e1e;
-        border-radius: 50%;
-        width: 32px;
-        height: 32px;
-        font-size: 1.5rem;
-        font-weight: bold;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        line-height: 1;
-        padding-bottom: 4px;
-    }
-
-    .tipps__title {
-        font-size: 1.8rem;
-        font-weight: bold;
-        margin-bottom: 1.5rem;
-    }
-
-    .tips__list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .tips__item {
-        margin-bottom: 1rem;
-    }
-
-    .tips__text {
-        font-size: 1.1rem;
-        padding: 1rem;
-        background: #f8f9fa;
-        border-radius: 8px;
-        border-left: 5px solid #60a5fa;
     }
 
     .example__de-text {

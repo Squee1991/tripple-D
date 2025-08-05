@@ -118,7 +118,7 @@
       "title": "Schreiben",
       "type": "text-input",
       "task": {
-        "instruction": "Напиши короткое сообщение другу (3–4 предложения) и пригласи его в кино на завтра.",
+        "instruction": "Schreib eine Nachricht an einen Freund. Lade ihn ins Kino morgen ein.",
         "exampleAnswer": "Hallo Max! Morgen gehe ich ins Kino. Willst du mitkommen? Der Film beginnt um 18 Uhr."
       }
     },
@@ -127,7 +127,7 @@
       "title": "Schreiben",
       "type": "text-input",
       "task": {
-        "instruction": "Напиши сообщение преподавателю, что ты сегодня не придёшь на курс (укажи причину).",
+        "instruction": "Schreib deiner Lehrerin oder deinem Lehrer. Du kommst heute nicht. Warum?",
         "exampleAnswer": "Guten Tag Frau Meier, ich bin heute krank und kann nicht zum Kurs kommen. Viele Grüße, Anna."
       }
     },
@@ -136,7 +136,7 @@
       "title": "Schreiben",
       "type": "text-input",
       "task": {
-        "instruction": "Напиши другу поздравление с днём рождения (2–3 предложения).",
+        "instruction": "Schreib deinem Freund zum Geburtstag. (2–3 Sätze)",
         "exampleAnswer": "Alles Gute zum Geburtstag, Lisa! Ich wünsche dir viel Glück und Gesundheit!"
       }
     },
@@ -145,7 +145,7 @@
       "title": "Schreiben",
       "type": "text-input",
       "task": {
-        "instruction": "Напиши короткое письмо в отель: спроси о свободных номерах и цене.",
+        "instruction": "Schreib dem Hotel. Gibt es Zimmer? Was kostet ein Zimmer?",
         "exampleAnswer": "Sehr geehrte Damen und Herren, ich möchte fragen, ob Sie am Wochenende ein freies Zimmer haben. Was kostet es pro Nacht?"
       }
     },
@@ -154,7 +154,7 @@
       "title": "Schreiben",
       "type": "text-input",
       "task": {
-        "instruction": "Напиши своему другу, что ты переехал в новую квартиру (укажи адрес и пригласи в гости).",
+        "instruction": "Schreib deinem Freund. Du hast eine neue Wohnung. Schreib die Adresse.",
         "exampleAnswer": "Hallo Paul! Ich bin umgezogen. Meine neue Adresse ist Gartenstraße 12. Komm doch mal vorbei!"
       }
     },

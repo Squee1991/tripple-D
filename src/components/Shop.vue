@@ -38,7 +38,6 @@ const items = [
 function buy(item) {
     if (learningStore.points >= item.cost) {
         learningStore.points -= item.cost
-        // TODO: сохранить покупку в Firebase, добавить в инвентарь
         alert(`Покупка: ${item.name}`)
     }
 }

@@ -15,6 +15,117 @@
   "modalVerbsTipsTitle": {
     "tipsTitle": "Faydalı İpuçları:"
   },
+  "articleOverlay": {
+    "title": "Artikleus nedir ve nasıl kazanılır?",
+    "first": "Artikleus iç oyun para birimidir",
+    "second": "‘Artikel alıştırması’ görevinden kazanılır",
+    "third": "İç mağazada harcanabilir"
+  },
+  "idioms": {
+    "title": "Deyimler ve Kalıplaşmış İfadeler",
+    "subTitle": "Sabitleşmiş ifadelerle gerçek dili anlama",
+    "whatIsIt": "Deyim ve kalıplaşmış ifadeler nedir?",
+    "frazeologizm": "Kalıplaşmış ifade",
+    "isFrazeologizm": "— anlamı tek tek kelimelerden her zaman anlaşılamayan sabit kelime grubu.",
+    "idiom": "Deyim",
+    "isIdiom": "— kelimelerin birebir anlamından çıkarılamayan özel bir ifade türüdür. Örneğin, 'kuş diliyle konuşmak' aslında 'anlaşılmaz şekilde konuşmak' anlamındadır, kuşlarla ilgili değildir.",
+    "explainFirstFrazeoligizm": "aklı başında olmak",
+    "explainSecondFrazeoligizm": "— mantıklı ve sağduyulu olmak.",
+    "explainFirstIdiom": "jemandem einen Bären aufbinden",
+    "explainSecondIdiom": "— 'birine ayı bağlamak' → 'kandırmak, kafaya almak'.",
+    "quiz": "Mini test: doğru deyimi seç",
+    "quest": "Soru",
+    "correct": "Doğru",
+    "unCorrect": "Yanlış. Doğru cevap:",
+    "result": "Sonuçlar",
+    "points": "Puanınız:",
+    "again": "Tekrar dene",
+    "showResult": "Sonucu göster",
+    "further": "Devam"
+  },
+  "idiomFirstCategory": {
+    "title": "Günlük ifadeler",
+    "firstMeaning": "Hiçbir şey anlamıyorum",
+    "secondMeaning": "Umurumda değil",
+    "thirdMeaning": "Her şey yolunda / tamam",
+    "fourthMeaning": "Tam isabet",
+    "fifthMeaning": "Yanlış ayakla kalkmak",
+    "SixthMeaning": "Tam isabet"
+  },
+  "idiomSecondCategory": {
+    "title": "İş ve eğitim",
+    "firstMeaning": "Harfi harfine çalışmak (inisiyatif almamak)",
+    "secondMeaning": "Hazırlıksız başlamak",
+    "thirdMeaning": "İnisiyatif almak",
+    "fourthMeaning": "Birini utanmadan kullanmak",
+    "fifthMeaning": "Kalıpların dışına çıkmak",
+    "SixthMeaning": "Hızlanmak / tempoyu artırmak"
+  },
+  "idiomThirdCategory": {
+    "title": "Duygular ve davranışlar",
+    "firstMeaning": "Kendini kaybetmek",
+    "secondMeaning": "Kalın derili olmak (eleştirilere karşı duyarsız)",
+    "thirdMeaning": "Birini azarlamak",
+    "fourthMeaning": "Ortam çok eğlenceli olacak",
+    "fifthMeaning": "Çok sakar",
+    "SixthMeaning": "Aklındakini açıkça söylemek (duyguları gizlemeden)"
+  },
+  "idiomQuizFirstQuest": {
+    "questionFirst": "\"Tomaten auf den Augen haben\" ne demek?",
+    "optionOneFirst": "Aşık olmak",
+    "optionTwoFirst": "Hiçbir şeyi fark etmemek",
+    "optionThreeFirst": "Kıskanmak",
+    "answer": "Hiçbir şeyi fark etmemek"
+  },
+  "idiomQuizSecondQuest": {
+    "questionFirst": "Hangi deyim \"her şey yolunda\" anlamına gelir?",
+    "optionOneFirst": "Alles in Butter",
+    "optionTwoFirst": "Durch den Wind",
+    "optionThreeFirst": "Ins Gras beißen",
+    "answer": "Alles in Butter"
+  },
+  "idiomQuizThirdQuest": {
+    "questionFirst": "Almanca'da \"aklındakini açıkça söylemek\" nasıl denir?",
+    "optionOneFirst": "Das Herz auf der Zunge tragen",
+    "optionTwoFirst": "Jemanden auf den Arm nehmen",
+    "optionThreeFirst": "Ein Auge zudrücken",
+    "answer": "Das Herz auf der Zunge tragen"
+  },
+  "idiomQuizFourthQuest": {
+    "questionFirst": "\"Ins kalte Wasser springen\" ne anlama gelir?",
+    "optionOneFirst": "Hazırlıksız başlamak",
+    "optionTwoFirst": "Çok ileri gitmek",
+    "optionThreeFirst": "Hata yüzünden yanmak",
+    "answer": "Hazırlıksız başlamak"
+  },
+  "idiomQuizFifthQuest": {
+    "questionFirst": "Hangi deyim \"sorunlardan kaçınmak\" anlamına gelir?",
+    "optionOneFirst": "Den Kopf in den Sand stecken",
+    "optionTwoFirst": "Auf Wolke sieben schweben",
+    "optionThreeFirst": "Jemandem die Daumen drücken",
+    "answer": "Den Kopf in den Sand stecken"
+  },
+  "idiomQuizSixthQuest": {
+    "questionFirst": "\"Ich verstehe nur Bahnhof\" ne anlama gelir?",
+    "optionOneFirst": "Hiçbir şey anlamıyorum",
+    "optionTwoFirst": "Her şeyi anladım",
+    "optionThreeFirst": "Her şeyden bıktım",
+    "answer": "Hiçbir şey anlamıyorum"
+  },
+  "idiomQuizSeventhQuest": {
+    "questionFirst": "\"Da steppt der Bär\" ne anlama gelir?",
+    "optionOneFirst": "Orası sıkıcı olacak",
+    "optionTwoFirst": "Orası çok eğlenceli olacak",
+    "optionThreeFirst": "Fırtına çıkacak",
+    "answer": "Orası çok eğlenceli olacak"
+  },
+  "idiomQuizEightQuest": {
+    "questionFirst": "Öğretmen \"ein Auge zudrückt\" dediğinde ne yapar?",
+    "optionOneFirst": "Seni izler",
+    "optionTwoFirst": "Hataları görmezden gelir",
+    "optionThreeFirst": "Şüpheli bakar",
+    "answer": "Hataları görmezden gelir"
+  },
   "guessWord": {
     "back": "Geri",
     "guessTitle": "Kelimeyi Tahmin Et",
@@ -317,7 +428,7 @@
     "chooseLevel": "Menüden bir seviye seçin"
   },
   "modalGroupA": {
-    "practice": "Alıştırma A1-A2",
+    "practice": "Alıştırma",
     "tipFirstA": "1. Modal fiil her zaman cümlenin ikinci sırasında yer alır ve çekimlenir.",
     "tipSecondA": "2. Ana fiil cümlenin sonuna mastar halinde gider.",
     "tipThirdA": "3. Örnek: Ich **kann** gut Deutsch **sprechen**.",
@@ -331,15 +442,27 @@
     "verbTranslateFourth": "istemek (kibarca)",
     "exampleTranslateFourth": "Bir kahve istiyorum, lütfen."
   },
-  "modalGroupB": {
-    "practice": "Alıştırma B1",
-    "tipFirstB": "1. `dürfen` izin anlamına gelir. `Nicht dürfen` — kesin yasaktır.",
-    "tipSecondB": "2. `sollen` — tavsiye, emir veya kural anlamına gelir.",
-    "tipThirdB": "3. Fark: `Ich muss lernen` (kendi sorumluluğum). `Ich soll lernen` (biri söyledi).",
-    "verbTranslateFirst": "izinli olmak",
-    "exampleTranslateFirst": "Burada sigara içmek yasak.",
-    "verbTranslateSecond": "gerekmek (tavsiye)",
-    "exampleTranslateSecond": "Daha fazla uyumam gerekiyor."
+  "modalGroupBTips": {
+    "practice": "Alıştırma",
+    "tipOne": "Yan cümlecikte fiil sondadır (örneğin: weil ich müde",
+    "tipTwo": "\"weil\" + modal fiil: weil ich früh",
+    "tipThree": "\"dass\" + modal fiil: dass er mehr",
+    "tipFour": "\"wenn\" + modal fiil: wenn du mitkommen",
+    "tipFive": "\"obwohl\" + modal fiil: obwohl sie nicht",
+    "tipSix": "\"damit\" + modal fiil: damit er pünktlich",
+    "tipSeven": "\"als\" + geçmiş zamanda modal fiil: als ich nicht"
+  },
+  "subordinateСlause": {
+    "verbTranslateOne": "çünkü",
+    "verbExampleOne": "Yorgun olduğum için eve gidiyorum.",
+    "verbTranslateTwo": "ki",
+    "verbExampleTwo": "Bence o bugün gelmeyecek.",
+    "verbTranslateThree": "eğer / ne zaman",
+    "verbExampleThree": "Eğer vaktim olursa, sana yardım ederim.",
+    "verbTranslateFour": "rağmen",
+    "verbExampleFour": "Yağmur yağmasına rağmen, yürüyüşe çıkıyoruz.",
+    "verbTranslateFive": "için",
+    "verbExampleFive": "Almanya'da çalışmak için Almanca öğreniyorum."
   },
   "error": {
     "title": "Vaka No. 404: Sayfa Buharlaştı!",
@@ -512,14 +635,17 @@
     "generalFirstText": "Tüm modlarda 1000 doğru tahmin edilmiş artikel topla.",
     "generalSecondLabel": "Gökyüzünün Üzerinde",
     "generalSecondText": "20. seviyeye ulaş.",
+    "generalSecondAward": "Ödül: Altın Heykelcik",
     "generalThirdLabel": "Yüzlerce Artikel... ve Arkadaşlar da",
     "generalThirdText": "100 artikel kazan.",
-    "generalFouthLabel": "Gazi",
-    "generalFouthText": "Sitede tam bir yıl! Topluluğumuzun gerçek bir efsanesisiniz.",
+    "generalFourthLabel": "Gazi",
+    "generalFourthText": "Sitede tam bir yıl! Topluluğumuzun gerçek bir efsanesisiniz.",
+    "generalFourthAward": "Ödül: Gazilik Madalyası",
     "generalFivethLabel": "Kesintisiz Akış",
     "generalFivethText": "Zor modda zamanlayıcı 2 saniyenin altına düşmeden 150'lik bir seri yakala.",
     "generalSexthLabel": "Stokları Tüket",
     "generalSexthText": "1000 artikel harca.",
+    "generalSexthAward": "Ödül: Artikleus Elması",
     "generalSeventhlabel": "Cümle Efendisi",
     "generalSeventhText": "Tüm seviyelerde toplam 1000 cümle kur ve cümle kurma ustası ol"
   },
@@ -541,6 +667,9 @@
     "generaLabel": "Genel Başarılar",
     "dailyTitle": "Demir İrade",
     "dailyText": "50 günlük görevi tamamla",
+    "firstStepLabel": "İlk adım",
+    "firstStepText": "Kaydoldun ve Almanca dünyasına adım attın!",
+    "firstStepAward": "Ödül: Katılımcı rozeti",
     "lastBreahtlabel": "Son Nefeste",
     "lastBreathText": "Maraton'da (kolay mod) 1 canla arka arkaya 20 artikel tahmin et.",
     "monthLabel": "Müdavim",
@@ -577,7 +706,9 @@
     "guessFourthLabel": "Kelime Bilgesi",
     "guessFourthText": "200 kelime tahmin et.",
     "guessfifthLabel": "Bilgelik Koruyucusu",
-    "guessfifthText": "600 kelime tahmin et."
+    "guessfifthText": "600 kelime tahmin et.",
+    "guessfifthAward": "Ödül: Bilgelik Heykeli"
+
   },
   "marathonEasyMode": {
     "correctLabel": "Tahmin Edilen Artikeller",
@@ -853,6 +984,7 @@
     "guess": "Kelime Tahmini",
     "card": "Kart Oluştur",
     "themen": "Tematik Seviyeler",
+    "idioms": "Deyimler",
     "wordDuel": "İfade Düellosu",
     "quests": "Görev Günlüğü"
   },

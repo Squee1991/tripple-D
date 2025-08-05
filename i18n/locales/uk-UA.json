@@ -15,15 +15,116 @@
   "modalVerbsTipsTitle": {
     "tipsTitle": "Корисні поради:"
   },
-  "preposition": {
-    "title": "Усе про німецькі прийменники",
-    "guideTitle": "Ваш повний гід з однієї з найважливіших тем у граматиці",
+  "articleOverlay": {
+    "title": "Що таке артиклюс і за що його отримувати",
+    "first": "Артиклюс — це внутрішня валюта",
+    "second": "Надається за завдання «Практика артиклів»",
+    "third": "Його можна витрачати у внутрішньому магазині"
+  },
+  "idioms": {
+    "title": "Ідіоми та фразеологізми",
+    "subTitle": "Розуміння живої мови через сталі вирази",
+    "whatIsIt": "Що таке ідіоми та фразеологізми?",
+    "frazeologizm": "Фразеологізм",
+    "isFrazeologizm": "— стале словосполучення, значення якого не завжди зрозуміле з окремих слів.",
+    "idiom": "Ідіома",
+    "isIdiom": "— різновид фразеологізму, значення якого неможливо зрозуміти дослівно. Наприклад, «говорити пташиною мовою» — означає «говорити незрозуміло», а не про птахів.",
+    "explainFirstFrazeoligizm": "мати голову на плечах",
+    "explainSecondFrazeoligizm": "— бути розсудливим.",
+    "explainFirstIdiom": "jemandem einen Bären aufbinden",
+    "explainSecondIdiom": "— «нав'язати ведмедя» → «вішати локшину».",
+    "quiz": "Міні-вікторина: обери правильну ідіому",
     "quest": "Питання",
-    "correct": "Вірно!",
-    "incorrect": "Неправильно. Правильна відповідь:",
-    "end": "Вікторина завершена!",
-    "result": "Ваш результат:",
-    "again": "Спробувати ще раз"
+    "correct": "Правильно",
+    "unCorrect": "Неправильно. Вірна відповідь:",
+    "result": "Результати",
+    "points": "Ви набрали",
+    "again": "Спробувати ще раз",
+    "showResult": "Показати результат",
+    "further": "Далі"
+  },
+  "idiomFirstCategory": {
+    "title": "Повсякденні вирази",
+    "firstMeaning": "Я нічого не розумію",
+    "secondMeaning": "Мені байдуже",
+    "thirdMeaning": "Все добре / Все в порядку",
+    "fourthMeaning": "Попасти в точку",
+    "fifthMeaning": "Встати не з тієї ноги",
+    "SixthMeaning": "Попасти в точку"
+  },
+  "idiomSecondCategory": {
+    "title": "Робота і навчання",
+    "firstMeaning": "Працювати строго за інструкцією (без ініціативи)",
+    "secondMeaning": "Почати щось без підготовки",
+    "thirdMeaning": "Взяти ініціативу",
+    "fourthMeaning": "Нагло користуватися кимось",
+    "fifthMeaning": "Мислити нестандартно",
+    "SixthMeaning": "Прискоритися / додати темп"
+  },
+  "idiomThirdCategory": {
+    "title": "Емоції та поведінка",
+    "firstMeaning": "Втратити самовладання",
+    "secondMeaning": "Мати товсту шкіру (бути нечутливим до критики)",
+    "thirdMeaning": "Висварити когось",
+    "fourthMeaning": "Там буде весело",
+    "fifthMeaning": "Дуже незграбний",
+    "SixthMeaning": "Говорити все, що думаєш (не стримуючи емоцій)"
+  },
+  "idiomQuizFirstQuest": {
+    "questionFirst": "Що означає \"Tomaten auf den Augen haben\"?",
+    "optionOneFirst": "Бути закоханим",
+    "optionTwoFirst": "Нічого не помічати",
+    "optionThreeFirst": "Ревнувати",
+    "answer": "Нічого не помічати"
+  },
+  "idiomQuizSecondQuest": {
+    "questionFirst": "Яка ідіома означає \"все в порядку\"?",
+    "optionOneFirst": "Alles in Butter",
+    "optionTwoFirst": "Durch den Wind",
+    "optionThreeFirst": "Ins Gras beißen",
+    "answer": "Alles in Butter"
+  },
+  "idiomQuizThirdQuest": {
+    "questionFirst": "Як німецькою сказати \"говорити все, що думаєш\"?",
+    "optionOneFirst": "Das Herz auf der Zunge tragen",
+    "optionTwoFirst": "Jemanden auf den Arm nehmen",
+    "optionThreeFirst": "Ein Auge zudrücken",
+    "answer": "Das Herz auf der Zunge tragen"
+  },
+  "idiomQuizFourthQuest": {
+    "questionFirst": "Що означає \"Ins kalte Wasser springen\"?",
+    "optionOneFirst": "Почати без підготовки",
+    "optionTwoFirst": "Зайти надто далеко",
+    "optionThreeFirst": "Обпектися на помилці",
+    "answer": "Почати без підготовки"
+  },
+  "idiomQuizFifthQuest": {
+    "questionFirst": "Яка ідіома означає \"уникати проблем\"?",
+    "optionOneFirst": "Den Kopf in den Sand stecken",
+    "optionTwoFirst": "Auf Wolke sieben schweben",
+    "optionThreeFirst": "Jemandem die Daumen drücken",
+    "answer": "Den Kopf in den Sand stecken"
+  },
+  "idiomQuizSixthQuest": {
+    "questionFirst": "Що означає \"Ich verstehe nur Bahnhof\"?",
+    "optionOneFirst": "Я нічого не розумію",
+    "optionTwoFirst": "Я все зрозумів",
+    "optionThreeFirst": "Мені все набридло",
+    "answer": "Я нічого не розумію"
+  },
+  "idiomQuizSeventhQuest": {
+    "questionFirst": "Що означає \"Da steppt der Bär\"?",
+    "optionOneFirst": "Там буде нудно",
+    "optionTwoFirst": "Там буде весело",
+    "optionThreeFirst": "Буде буря",
+    "answer": "Там буде весело"
+  },
+  "idiomQuizEightQuest": {
+    "questionFirst": "Що робить вчитель, коли \"ein Auge zudrückt\"?",
+    "optionOneFirst": "Слідкує за тобою",
+    "optionTwoFirst": "Закриває очі на помилку",
+    "optionThreeFirst": "Дивиться з підозрою",
+    "answer": "Закриває очі на помилку"
   },
   "guessWord": {
     "back": "Назад",
@@ -43,7 +144,16 @@
     "tryAgain": "Спробувати ще раз",
     "btnToMain": "На головну",
     "placeholder": "Введіть слово повністю"
-
+  },
+  "preposition": {
+    "title": "Усе про німецькі прийменники",
+    "guideTitle": "Ваш повний гід з однієї з найважливіших тем у граматиці",
+    "quest": "Питання",
+    "correct": "Вірно!",
+    "incorrect": "Неправильно. Правильна відповідь:",
+    "end": "Вікторина завершена!",
+    "result": "Ваш результат:",
+    "again": "Спробувати ще раз"
   },
   "prepositionsIntro": {
     "title": "Що таке прийменник",
@@ -318,7 +428,7 @@
     "chooseLevel": "Оберіть рівень з меню"
   },
   "modalGroupA": {
-    "practice": "Практика A1-A2",
+    "practice": "Практика",
     "tipFirstA": "1. Модальне дієслово завжди на другому місці в реченні та відмінюється.",
     "tipSecondA": "2. Основне дієслово йде в кінець у початковій формі (інфінітиві).",
     "tipThirdA": "3. Приклад: Ich **kann** gut Deutsch **sprechen**.",
@@ -332,16 +442,30 @@
     "verbTranslateFourth": "хотів би",
     "exampleTranslateFourth": "Я хотів би кави, будь ласка."
   },
-  "modalGroupB": {
-    "practice": "Практика B1",
-    "tipFirstB": "1. `dürfen` означає дозвіл. `Nicht dürfen` — сувора заборона.",
-    "tipSecondB": "2. `sollen` — це порада, наказ або норма.",
-    "tipThirdB": "3. Різниця: `Ich muss lernen` (мій обов’язок). `Ich soll lernen` (мені сказали).",
-    "verbTranslateFirst": "мати дозвіл",
-    "exampleTranslateFirst": "Тут не можна палити.",
-    "verbTranslateSecond": "бути зобов’язаним (порада)",
-    "exampleTranslateSecond": "Мені слід більше спати."
+
+  "modalGroupBTips": {
+    "practice": "Практика",
+    "tipOne": "У підрядному реченні дієслово в кінці (наприклад: weil ich müde",
+    "tipTwo": "\"weil\" + модальне: weil ich früh",
+    "tipThree": "\"dass\" + модальне: dass er mehr",
+    "tipFour": "\"wenn\" + модальне: wenn du mitkommen",
+    "tipFive": "\"obwohl\" + модальне: obwohl sie nicht",
+    "tipSix": "\"damit\" + модальне: damit er pünktlich",
+    "tipSeven": "\"als\" + модальне в минулому часі: als ich nicht"
   },
+  "subordinateСlause": {
+    "verbTranslateOne": "тому що",
+    "verbExampleOne": "Я йду додому, тому що втомився.",
+    "verbTranslateTwo": "що",
+    "verbExampleTwo": "Я думаю, що він сьогодні не прийде.",
+    "verbTranslateThree": "якщо / коли",
+    "verbExampleThree": "Якщо в мене буде час, я тобі допоможу.",
+    "verbTranslateFour": "хоча",
+    "verbExampleFour": "Хоча йде дощ, ми йдемо гуляти.",
+    "verbTranslateFive": "для того щоб",
+    "verbExampleFive": "Я вивчаю німецьку, щоб працювати в Німеччині."
+  },
+
   "error": {
     "title": "Справа №404: Сторінка зникла!",
     "subTitle": "Детективе, нам потрібна ваша допомога. Сторінка зникла, залишивши лише кілька дивних доказів. Вивчіть їх і допоможіть нам знайти дорогу додому.",
@@ -513,14 +637,17 @@
     "generalFirstText": "Зберіть 1000 правильно вгаданих артиклів у всіх режимах.",
     "generalSecondLabel": "Вище неба",
     "generalSecondText": "Досягніть 20 рівня.",
+    "generalSecondAward": "Нагорода: Золота статуетка",
     "generalThirdLabel": "Май сто артикулів... і друзів також",
     "generalThirdText": "Отримайте 100 артикулів.",
-    "generalFouthLabel": "Ветеран",
-    "generalFouthText": "Цілий рік на сайті! Ви — справжня легенда нашої спільноти.",
+    "generalFourthLabel": "Ветеран",
+    "generalFourthText": "Цілий рік на сайті! Ви — справжня легенда нашої спільноти.",
+    "generalFourthAward": "Нагорода: Медаль ветерана",
     "generalFivethLabel": "Безперервний потік",
     "generalFivethText": "Досягніть серії 150 у складному режимі, не даючи таймеру впасти нижче 2 секунд.",
     "generalSexthLabel": "Вичерпати запаси",
     "generalSexthText": "Витратьте 1000 артикулів.",
+    "generalSexthAward": "Нагорода: Діамант Артиклеуса",
     "generalSeventhlabel": "Повелитель речень",
     "generalSeventhText": "Складіть 1000 речень на всіх рівнях і станьте майстром побудови"
   },
@@ -542,6 +669,9 @@
     "generaLabel": "Загальні досягнення",
     "dailyTitle": "Залізна воля",
     "dailyText": "Виконай 50 щоденних завдань",
+    "firstStepLabel": "Перший крок",
+    "firstStepText": "Ти зареєструвався і увійшов у світ німецької мови!",
+    "firstStepAward": "Нагорода: Значок учасника",
     "lastBreahtlabel": "На останньому подиху",
     "lastBreathText": "Відгадайте 20 артиклів поспіль з 1 життям у Марафоні (легкий режим).",
     "monthLabel": "Постійний відвідувач",
@@ -566,7 +696,8 @@
     "magisterLabel": "Магістр Слів",
     "magisterText": "Досягніть майстерності, вивчивши 100 слів.",
     "mistakesLabel": "Помилки мені не завада!",
-    "mistakesText": "Кожна з них — це крок до знання!"
+    "mistakesText": "Кожна з них — це крок до знання!",
+    "mistakesAward": "Нагорода: Талісман терпіння"
   },
   "guessCategory": {
     "guessLabel": "Відгадати слово",
@@ -579,7 +710,9 @@
     "guessFourthLabel": "Словесний Мудрець",
     "guessFourthText": "Відгадайте 200 слів.",
     "guessfifthLabel": "Хранитель Мудрості",
-    "guessfifthText": "Відгадайте 600 слів."
+    "guessfifthText": "Відгадайте 600 слів.",
+    "guessfifthAward": "Нагорода: Статуетка мудрості"
+
   },
   "marathonEasyMode": {
     "correctLabel": "Відгадані Артиклі",
@@ -855,6 +988,7 @@
     "guess": "Вгадай слово",
     "card": "Створити картки",
     "themen": "Тематичні рівні",
+    "idioms": "Фразеологізми",
     "wordDuel": "Дуель фраз",
     "quests": "Журнал Завдань"
   },

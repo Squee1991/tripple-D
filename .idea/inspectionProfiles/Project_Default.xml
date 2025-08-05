@@ -25,7 +25,7 @@
     <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="64">
+          <list size="65">
             <item index="0" class="java.lang.String" itemvalue="nobr" />
             <item index="1" class="java.lang.String" itemvalue="noembed" />
             <item index="2" class="java.lang.String" itemvalue="comment" />
@@ -90,6 +90,7 @@
             <item index="61" class="java.lang.String" itemvalue="accessibility" />
             <item index="62" class="java.lang.String" itemvalue="accessibilitytoggle" />
             <item index="63" class="java.lang.String" itemvalue="achpopup" />
+            <item index="64" class="java.lang.String" itemvalue="TipsModal" />
           </list>
         </value>
       </option>

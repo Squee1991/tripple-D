@@ -25,6 +25,7 @@
                   </span>
                     </div>
                     <p class="achievement-description">{{ t(achievement.description) }}</p>
+                     <div class="achievement-awards" v-if="achievement.awards"> {{ t(achievement.awards) }}</div>
                 </div>
             </div>
         </div>
@@ -165,6 +166,16 @@
         font-family: 'Fredoka One', cursive;
     }
 
+    .achievement-awards {
+      text-align: center;
+      font-size: 13px;
+      color: white;
+      margin-top: 10px;
+      background: black;
+      padding: 5px;
+      border-radius: 10px;
+    }
+
     .group-header {
         display: flex;
         align-items: center;
@@ -208,7 +219,7 @@
         align-items: flex-start;
         gap: 1rem;
         border: 3px solid #1e1e1e;
-        padding: 1rem;
+        padding: 1rem 1rem 5px 1rem;
         border-radius: 20px;
         background-color: #fff;
         box-shadow: 6px 6px 0px #1e1e1e;
@@ -286,8 +297,8 @@
     .achievement-description {
         font-size: 0.95rem;
         color: #555;
-        font-family: 'Inter', sans-serif;
-        font-weight: 500;
+        font-family: "Nunito", sans-serif;
+        font-weight: 600;
         margin: 0;
         line-height: 1.4;
     }

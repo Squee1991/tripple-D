@@ -72,7 +72,7 @@
                 stagger: 0.1,
                 scrollTrigger: {
                     trigger: accordionWrapperRef.value,
-                    start: 'top 90%',
+                    start: 'top 80%',
                     end: 'center center',
                     scrub: 0.5,
                 }
@@ -93,7 +93,6 @@
         //     });
         // }
     });
-
     const data = {
         title: "about.title",
         lead: "about.lead",

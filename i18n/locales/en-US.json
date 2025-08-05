@@ -15,6 +15,117 @@
   "modalVerbsTipsTitle": {
     "tipsTitle": "Useful Tips:"
   },
+  "articleOverlay": {
+    "title": "What is an Artikleus and how to earn it",
+    "first": "Artikleus is an in-game currency",
+    "second": "Earned by completing the 'Article Practice' task",
+    "third": "Can be spent in the internal shop"
+  },
+  "idioms": {
+    "title": "Idioms and Phrases",
+    "subTitle": "Understanding real language through fixed expressions",
+    "whatIsIt": "What are idioms and phrases?",
+    "frazeologizm": "Phraseologism",
+    "isFrazeologizm": "— a fixed combination of words whose meaning is not always clear from the individual words.",
+    "idiom": "Idiom",
+    "isIdiom": "— a type of phraseologism whose meaning cannot be understood literally. Like 'speaking in riddles' — it means 'speaking unclearly', not about riddles.",
+    "explainFirstFrazeoligizm": "to have a good head on one's shoulders",
+    "explainSecondFrazeoligizm": "— to be reasonable.",
+    "explainFirstIdiom": "jemandem einen Bären aufbinden",
+    "explainSecondIdiom": "— 'to tie a bear to someone' → 'to pull someone’s leg'.",
+    "quiz": "Mini-quiz: choose the correct idiom",
+    "quest": "Question",
+    "correct": "Correct",
+    "unCorrect": "Incorrect. The right answer is:",
+    "result": "Results",
+    "points": "You scored",
+    "again": "Try again",
+    "showResult": "Show result",
+    "further": "Next"
+  },
+  "idiomFirstCategory": {
+    "title": "Everyday Expressions",
+    "firstMeaning": "I don't understand anything",
+    "secondMeaning": "I don't care",
+    "thirdMeaning": "Everything is fine / okay",
+    "fourthMeaning": "Hit the nail on the head",
+    "fifthMeaning": "Get up on the wrong side of the bed",
+    "SixthMeaning": "Hit the nail on the head"
+  },
+  "idiomSecondCategory": {
+    "title": "Work and Study",
+    "firstMeaning": "Work strictly by the book (no initiative)",
+    "secondMeaning": "Jump into something unprepared",
+    "thirdMeaning": "Take the initiative",
+    "fourthMeaning": "Take advantage of someone shamelessly",
+    "fifthMeaning": "Think outside the box",
+    "SixthMeaning": "Speed up / pick up the pace"
+  },
+  "idiomThirdCategory": {
+    "title": "Emotions and Behavior",
+    "firstMeaning": "Lose self-control",
+    "secondMeaning": "Have thick skin (not sensitive to criticism)",
+    "thirdMeaning": "Tell someone off",
+    "fourthMeaning": "It’s going to be wild/fun",
+    "fifthMeaning": "Very clumsy",
+    "SixthMeaning": "Say everything you think (without hiding emotions)"
+  },
+  "idiomQuizFirstQuest": {
+    "questionFirst": "What does \"Tomaten auf den Augen haben\" mean?",
+    "optionOneFirst": "To be in love",
+    "optionTwoFirst": "To notice nothing",
+    "optionThreeFirst": "To be jealous",
+    "answer": "To notice nothing"
+  },
+  "idiomQuizSecondQuest": {
+    "questionFirst": "Which idiom means \"everything is fine\"?",
+    "optionOneFirst": "Alles in Butter",
+    "optionTwoFirst": "Durch den Wind",
+    "optionThreeFirst": "Ins Gras beißen",
+    "answer": "Alles in Butter"
+  },
+  "idiomQuizThirdQuest": {
+    "questionFirst": "How do you say \"to speak your mind\" in German?",
+    "optionOneFirst": "Das Herz auf der Zunge tragen",
+    "optionTwoFirst": "Jemanden auf den Arm nehmen",
+    "optionThreeFirst": "Ein Auge zudrücken",
+    "answer": "Das Herz auf der Zunge tragen"
+  },
+  "idiomQuizFourthQuest": {
+    "questionFirst": "What does \"Ins kalte Wasser springen\" mean?",
+    "optionOneFirst": "To start unprepared",
+    "optionTwoFirst": "To go too far",
+    "optionThreeFirst": "To get burned by a mistake",
+    "answer": "To start unprepared"
+  },
+  "idiomQuizFifthQuest": {
+    "questionFirst": "Which idiom means \"to avoid problems\"?",
+    "optionOneFirst": "Den Kopf in den Sand stecken",
+    "optionTwoFirst": "Auf Wolke sieben schweben",
+    "optionThreeFirst": "Jemandem die Daumen drücken",
+    "answer": "Den Kopf in den Sand stecken"
+  },
+  "idiomQuizSixthQuest": {
+    "questionFirst": "What does \"Ich verstehe nur Bahnhof\" mean?",
+    "optionOneFirst": "I don’t understand anything",
+    "optionTwoFirst": "I understood everything",
+    "optionThreeFirst": "I’m fed up",
+    "answer": "I don’t understand anything"
+  },
+  "idiomQuizSeventhQuest": {
+    "questionFirst": "What does \"Da steppt der Bär\" mean?",
+    "optionOneFirst": "It will be boring there",
+    "optionTwoFirst": "It will be fun there",
+    "optionThreeFirst": "There will be a storm",
+    "answer": "It will be fun there"
+  },
+  "idiomQuizEightQuest": {
+    "questionFirst": "What does a teacher do when they \"ein Auge zudrücken\"?",
+    "optionOneFirst": "Watches you closely",
+    "optionTwoFirst": "Ignores a mistake",
+    "optionThreeFirst": "Looks suspiciously",
+    "answer": "Ignores a mistake"
+  },
   "guessWord": {
     "back": "Back",
     "guessTitle": "Guess the Word",
@@ -33,9 +144,7 @@
     "tryAgain": "Try again",
     "btnToMain": "To Main",
     "placeholder": "Enter the full word"
-
   },
-
   "preposition": {
     "title": "All About German Prepositions",
     "guideTitle": "Your complete guide to one of the most important grammar topics",
@@ -319,7 +428,7 @@
     "chooseLevel": "Choose a level from the menu"
   },
   "modalGroupA": {
-    "practice": "Practice A1-A2",
+    "practice": "Practice",
     "tipFirstA": "1. The modal verb is always in second position and is conjugated.",
     "tipSecondA": "2. The main verb goes to the end in the infinitive form.",
     "tipThirdA": "3. Example: Ich **kann** gut Deutsch **sprechen**.",
@@ -333,15 +442,27 @@
     "verbTranslateFourth": "would like to",
     "exampleTranslateFourth": "I would like a coffee, please."
   },
-  "modalGroupB": {
-    "practice": "Practice B1",
-    "tipFirstB": "1. `dürfen` means permission. `Nicht dürfen` — strict prohibition.",
-    "tipSecondB": "2. `sollen` means advice, command, or norm.",
-    "tipThirdB": "3. Difference: `Ich muss lernen` (my duty). `Ich soll lernen` (someone told me to).",
-    "verbTranslateFirst": "to be allowed to",
-    "exampleTranslateFirst": "You are not allowed to smoke here.",
-    "verbTranslateSecond": "should (advice)",
-    "exampleTranslateSecond": "I should sleep more."
+  "modalGroupBTips": {
+    "practice": "Practice",
+    "tipOne": "In a subordinate clause, the verb is at the end (e.g., weil ich müde",
+    "tipTwo": "\"weil\" + modal verb: weil ich früh",
+    "tipThree": "\"dass\" + modal verb: dass er mehr",
+    "tipFour": "\"wenn\" + modal verb: wenn du mitkommen",
+    "tipFive": "\"obwohl\" + modal verb: obwohl sie nicht",
+    "tipSix": "\"damit\" + modal verb: damit er pünktlich",
+    "tipSeven": "\"als\" + modal verb in the past tense: als ich nicht"
+  },
+  "subordinateСlause": {
+    "verbTranslateOne": "because",
+    "verbExampleOne": "I'm going home because I'm tired.",
+    "verbTranslateTwo": "that",
+    "verbExampleTwo": "I think that he won't come today.",
+    "verbTranslateThree": "if / when",
+    "verbExampleThree": "If I have time, I will help you.",
+    "verbTranslateFour": "although",
+    "verbExampleFour": "Although it's raining, we are going for a walk.",
+    "verbTranslateFive": "in order to",
+    "verbExampleFive": "I'm learning German in order to work in Germany."
   },
   "error": {
     "title": "Case No. 404: The Page Has Vanished!",
@@ -514,14 +635,17 @@
     "generalFirstText": "Collect 1000 correctly guessed articles across all modes.",
     "generalSecondLabel": "Above the Sky",
     "generalSecondText": "Reach level 20.",
+    "generalSecondAward": "Reward: Golden Statuette",
     "generalThirdLabel": "Have a Hundred Articles... and Friends Too",
     "generalThirdText": "Earn 100 articles.",
-    "generalFouthLabel": "Veteran",
-    "generalFouthText": "A whole year on the site! You are a true legend of our community.",
+    "generalFourthLabel": "Veteran",
+    "generalFourthText": "A whole year on the site! You are a true legend of our community.",
+    "generalFourthAward": "Reward: Veteran's Medal",
     "generalFivethLabel": "Uninterrupted Flow",
     "generalFivethText": "Achieve a streak of 150 in hard mode without letting the timer drop below 2 seconds.",
     "generalSexthLabel": "Exhaust Supplies",
     "generalSexthText": "Spend 1000 articles.",
+    "generalSexthAward": "Reward: Diamond of Artikleus",
     "generalSeventhlabel": "Master of Sentences",
     "generalSeventhText": "Construct 1000 sentences across all levels and become a sentence-building master"
   },
@@ -543,6 +667,9 @@
     "generaLabel": "General Achievements",
     "dailyTitle": "Iron Will",
     "dailyText": "Complete 50 daily tasks",
+    "firstStepLabel": "First step",
+    "firstStepText": "You've registered and entered the world of German!",
+    "firstStepAward": "Reward: Participant badge",
     "lastBreahtlabel": "On Last Breath",
     "lastBreathText": "Guess 20 articles in a row with 1 life in Marathon (easy mode).",
     "monthLabel": "Regular Customer",
@@ -568,7 +695,8 @@
     "magisterLabel": "Master of Words",
     "magisterText": "Achieve mastery by learning 100 words.",
     "mistakesLabel": "Mistakes Don't Stop Me!",
-    "mistakesText": "Each of them is a step towards knowledge!"
+    "mistakesText": "Each of them is a step towards knowledge!",
+    "mistakesAward": "Reward: Talisman of Patience"
   },
   "guessCategory": {
     "guessLabel": "Guess the word",
@@ -581,7 +709,8 @@
     "guessFourthLabel": "Word Sage",
     "guessFourthText": "Guess 200 words.",
     "guessfifthLabel": "Keeper of Wisdom",
-    "guessfifthText": "Guess 600 words."
+    "guessfifthText": "Guess 600 words.",
+    "guessfifthAward": "Reward: Statue of Wisdom",
   },
   "marathonEasyMode": {
     "correctLabel": "Articles Guessed",
@@ -857,13 +986,14 @@
     "guess": "Guess the Word",
     "card": "Create Cards",
     "themen": "Thematic Levels",
+    "idioms": "Idioms",
     "wordDuel": "Phrase Duel",
     "quests": "Quest Journal"
   },
   "underSub": {
     "prev": "Introduction",
     "rules": "Rules",
-    "artRules": "Practice",
+    "artRules": "Article Practice",
     "adjectivesBasic": "Basics",
     "declination": "Declension",
     "comparison": "Degrees of Comparison",

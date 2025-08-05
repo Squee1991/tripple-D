@@ -17,6 +17,10 @@
                 </ul>
             </div>
         </div>
+<!--        <VTips-->
+<!--            v-model="showTips"-->
+<!--            :tips="activeTipps"-->
+<!--        />-->
         <aside class="tenses-sidebar">
             <NuxtLink to="/" class="sidebar-button-home">{{ t('tenses.barBtn') }}</NuxtLink>
             <h2 class="tenses-sidebar__title">{{ t('tenses.times') }}</h2>
@@ -117,8 +121,8 @@
     import Lottie from 'lottie-web'
     import TipIcon from '../../assets/animation/info.json'
     import SoundBtn from '../../src/components/soundBtn.vue'
+    import VTips from "~/src/components/V-tips.vue";
     const {t} = useI18n()
-
     const selectedTense = ref(null)
     const showTips = ref(false)
     const activeTipps = ref([])

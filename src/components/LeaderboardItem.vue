@@ -100,7 +100,7 @@
 		color: black;
 		font-size: 20px;
 		font-weight: 600;
-		font-family: 'Fredoka One', cursive;;
+		font-family: "Nunito", sans-serif;
 	}
 
 	.leaderboard-score-wrapper {

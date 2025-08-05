@@ -29,9 +29,8 @@
                      {{ Math.min(guessWordStore.guessedWords.length, achievement.threshold) }} / {{ achievement.threshold }}
                   </span>
 					</div>
-					<p class="achievement-description">
-						{{ t(achievement.description) }}
-					</p>
+					<p class="achievement-description">{{ t(achievement.description) }}</p>
+          <div class="achievement__awards" v-if="achievement.awards"> {{ t(achievement.awards) }}</div>
 				</div>
 			</div>
 		</div>
@@ -65,6 +64,15 @@
 		font-family: "Nunito", sans-serif;
 	}
 
+  .achievement__awards  {
+    text-align: center;
+    font-size: 13px;
+    color: white;
+    margin-top: 10px;
+    background: black;
+    padding: 5px;
+    border-radius: 10px;
+  }
 
 	.group-header {
 		display: flex;

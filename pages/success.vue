@@ -7,29 +7,47 @@
     const router = useRouter()
     const auth = userAuthStore()
     const sessionId = route.query.session_id
-
-    onMounted(async () => {
-        if (sessionId) {
-            try {
-                console.log('Отправляю запрос на подтверждение сессии:', sessionId)
-                const response = await $fetch('/api/stripe/confirm', {
-                    method: 'POST',
-                    body: { sessionId }
-                })
-                console.log('Ответ от сервера:', response)
-                if (response.success) {
-                    await auth.fetchuser()
-                } else {
-                    console.error('Сервер вернул ошибку:', response.error)
-                }
-            } catch (e) {
-                console.error('Ошибка при выполнении запроса $fetch:', e)
+    import { getAuth, onAuthStateChanged } from 'firebase/auth'
+    onMounted(() => {
+      if (sessionId) {
+        const authInstance = getAuth()
+        onAuthStateChanged(authInstance, async (user) => {
+          if (!user) {
+            console.error('Пользователь не авторизован даже после ожидания')
+            return
+          }
+          try {
+            console.log('Пользователь авторизован, получаем токен...')
+            const token = await user.getIdToken()
+            const response = await $fetch('/api/stripe/confirm', {
+              method: 'POST',
+              headers: {
+                Authorization: `Bearer ${token}`
+              },
+              body: { sessionId }
+            })
+            console.log('Ответ от сервера:', response)
+            if (response.success) {
+              await auth.fetchuser()
+              if (!auth.isPremium) {
+                console.warn('⚠️ Премиум не обновился сразу, повторная попытка...')
+                await new Promise((r) => setTimeout(r, 1000))
+                await auth.fetchuser()
+              }
+            } else {
+              console.error('Сервер вернул ошибку:', response.error)
             }
-        }
-        setTimeout(() => {
+          } catch (e) {
+            console.error('Ошибка при выполнении запроса $fetch:', e)
+          }
+          setTimeout(() => {
             router.push('/')
-        }, 3000)
+          }, 3000)
+        })
+      }
     })
+
+
 </script>
 
 <template>

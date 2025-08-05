@@ -30,7 +30,8 @@ export const guessAchievment = [
 				icon: '⚗️',
 				threshold: 600,
 				title: 'guessCategory.guessfifthLabel',
-				description: 'guessCategory.guessfifthText',
+				awards: "guessCategory.guessfifthAward",
+				description: 'guessCategory.guessfifthAward',
 			},
 		]
 	}

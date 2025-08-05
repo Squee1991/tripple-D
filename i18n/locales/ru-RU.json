@@ -15,6 +15,118 @@
   "modalVerbsTipsTitle": {
     "tipsTitle": "Полезные советы:"
   },
+  "articleOverlay": {
+    "title": "Что такое артиклюс и за что его получать",
+    "first": "Артиклюс - это внутренняя валюта",
+    "second": "Получается за задание 'Практика артиклей'",
+    "third": "Можно тратить во внутреннем магазине"
+  },
+  "idioms": {
+    "title": "Идиомы и фразеологизмы",
+    "subTitle": "Понимание живого языка через устойчивые выражения",
+    "whatIsIt": "Что такое идиомы и фразеологизмы?",
+    "frazeologizm": "Фразеологизм",
+    "isFrazeologizm": "— устойчивое сочетание слов, значение которого не всегда понятно из отдельных слов.",
+    "idiom": "Идиома",
+    "isIdiom": "— подвид фразеологизма, значение которого невозможно понять дословно.  Это как «говорить на птичьем языке» — значит «говорить непонятно», а не о птицах.",
+    "explainFirstFrazeoligizm": "иметь голову на плечах",
+    "explainSecondFrazeoligizm": " — быть разумным.",
+    "explainFirstIdiom": "jemandem einen Bären aufbinden",
+    "explainSecondIdiom": "— «навязать медведя» → «вешать лапшу».",
+    "quiz": "Мини-квиз: выбери правильную идиому",
+    "quest": "Вопрос",
+    "correct": "Правильно",
+    "unCorrect": "Неправильно. Верно:",
+    "result": "Результаты",
+    "points": "Вы набрали",
+    "again": "Пройти ещё раз",
+    "showResult": "Показать результат",
+    "further": "Далее"
+  },
+  "idiomFirstCategory": {
+    "title": "Повседневные выражения",
+    "firstMeaning": "Я ничего не понимаю",
+    "secondMeaning": "Мне всё равно",
+    "thirdMeaning": "Всё хорошо / Всё в порядке",
+    "fourthMeaning": "Попасть в точку",
+    "fifthMeaning": "Встать не с той ноги",
+    "SixthMeaning": "Попасть в точку"
+  },
+  "idiomSecondCategory": {
+    "title": "Работа и учёба",
+    "firstMeaning": "Работать строго по инструкции (без инициативы)",
+    "secondMeaning": "Начать что-то без подготовки",
+    "thirdMeaning": "Взять инициативу",
+    "fourthMeaning": "Нагло пользоваться кем-то",
+    "fifthMeaning": "Смотреть шире / выходить за рамки",
+    "SixthMeaning": "Ускориться / прибавить темп"
+  },
+  "idiomThirdCategory": {
+    "title": "Эмоции и поведение",
+    "firstMeaning": "Терять самообладание",
+    "secondMeaning": "Иметь толстую кожу (быть невосприимчивым к критике)",
+    "thirdMeaning": "Отчитать кого-то",
+    "fourthMeaning": "Там будет весело",
+    "fifthMeaning": "Очень неуклюжий",
+    "SixthMeaning": "Говорить всё, что думаешь (не скрывая эмоций)"
+  },
+
+  "idiomQuizFirstQuest": {
+    "questionFirst": "Что значит \"Tomaten auf den Augen haben\"?",
+    "optionOneFirst": "Быть влюблённым",
+    "optionTwoFirst": "Ничего не замечать",
+    "optionThreeFirst": "Ревновать",
+    "answer": "Ничего не замечать"
+  },
+  "idiomQuizSecondQuest": {
+    "questionFirst": "Какая идиома означает \"всё в порядке\"?",
+    "optionOneFirst": "Alles in Butter",
+    "optionTwoFirst": "Durch den Wind",
+    "optionThreeFirst": "Ins Gras beißen",
+    "answer": "Alles in Butter"
+  },
+  "idiomQuizThirdQuest": {
+    "questionFirst": "Как по-немецки сказать \"говорить всё, что думаешь\"?",
+    "optionOneFirst": "Das Herz auf der Zunge tragen",
+    "optionTwoFirst": "Jemanden auf den Arm nehmen",
+    "optionThreeFirst": "Ein Auge zudrücken",
+    "answer": "Das Herz auf der Zunge tragen"
+  },
+  "idiomQuizFourthQuest": {
+    "questionFirst": "Что значит \"Ins kalte Wasser springen\"?",
+    "optionOneFirst": "Начать без подготовки",
+    "optionTwoFirst": "Зайти слишком далеко",
+    "optionThreeFirst": "Обжечься на ошибке",
+    "answer": "Начать без подготовки"
+  },
+  "idiomQuizFifthQuest": {
+    "questionFirst": "Какая идиома означает \"избегать проблем\"?",
+    "optionOneFirst": "Den Kopf in den Sand stecken",
+    "optionTwoFirst": "Auf Wolke sieben schweben",
+    "optionThreeFirst": "Jemandem die Daumen drücken",
+    "answer": "Den Kopf in den Sand stecken"
+  },
+  "idiomQuizSixthQuest": {
+    "questionFirst": "Что значит \"Ich verstehe nur Bahnhof\"?",
+    "optionOneFirst": "Я ничего не понимаю",
+    "optionTwoFirst": "Я всё понял",
+    "optionThreeFirst": "Мне всё надоело",
+    "answer": "Я ничего не понимаю"
+  },
+  "idiomQuizSeventhQuest": {
+    "questionFirst": "Что значит \"Da steppt der Bär\"?",
+    "optionOneFirst": "Там будет скучно",
+    "optionTwoFirst": "Там будет весело",
+    "optionThreeFirst": "Будет буря",
+    "answer": "Там будет весело"
+  },
+  "idiomQuizEightQuest": {
+    "questionFirst": "Что делает учитель, когда он \"ein Auge zudrückt\"?",
+    "optionOneFirst": "Следит за тобой",
+    "optionTwoFirst": "Закрывает глаза на ошибку",
+    "optionThreeFirst": "Смотрит с подозрением",
+    "answer": "Закрывает глаза на ошибку"
+  },
   "guessWord": {
     "back": "Назад",
     "guessTitle": "Угадай Слово",
@@ -317,7 +429,7 @@
     "chooseLevel": "Выберите уровень из меню"
   },
   "modalGroupA": {
-    "practice": "Практика A1-A2",
+    "practice": "Практика",
     "tipFirstA": "1. Модальный глагол всегда стоит на втором месте в предложении и спрягается.",
     "tipSecondA": "2. Основной глагол уходит в конец предложения в начальной форме (инфинитиве).",
     "tipThirdA": "3. Пример: Ich **kann** gut Deutsch **sprechen**.",
@@ -331,16 +443,29 @@
     "verbTranslateFourth": "хотел бы",
     "exampleTranslateFourth": "Я хотел бы кофе, пожалуйста."
   },
-  "modalGroupB": {
-    "practice": "Практика B1",
-    "tipFirstB": "1. `dürfen` означает разрешение. `Nicht dürfen` — строгий запрет.",
-    "tipSecondB": "2. `sollen` — это чей-то совет, приказ или норма.",
-    "tipThirdB": "3. Разница: `Ich muss lernen` (моя обязанность). `Ich soll lernen` (мне сказали учиться).",
-    "verbTranslateFirst": "иметь разрешение",
-    "exampleTranslateFirst": "Здесь нельзя курить.",
-    "verbTranslateSecond": "быть должным (совет)",
-    "exampleTranslateSecond": "Я должен больше спать."
+  "modalGroupBTips": {
+    "practice": "Практика",
+    "tipOne": "В придаточном глагол в конце (например: weil ich müde",
+    "tipTwo": "weil\" + модальный: weil ich früh",
+    "tipThree": "dass\" + модальный: dass er mehr",
+    "tipFour": "wenn\" + модальный: wenn du mitkommen",
+    "tipFive": "obwohl\" + модальный: obwohl sie nicht",
+    "tipSix": "damit\" + модальный: damit er pünktlich",
+    "tipSeven": "als\" + модальный в прошедшем: als ich nicht"
   },
+  "subordinateСlause": {
+    "verbTranslateOne": "потому что",
+    "verbExampleOne": "Я иду домой, потому что устал.",
+    "verbTranslateTwo": "что",
+    "verbExampleTwo": "Я думаю, что он сегодня не придёт.",
+    "verbTranslateThree": "если / когда",
+    "verbExampleThree": "Если у меня будет время, я помогу тебе.",
+    "verbTranslateFour": "хотя",
+    "verbExampleFour": "Хотя идёт дождь, мы идём гулять.",
+    "verbTranslateFive": "для того чтобы",
+    "verbExampleFive": "Я учу немецкий, чтобы работать в Германии.",
+  },
+
   "error": {
     "title": "Дело №404: Страница исчезла!",
     "subTitle": "Детектив, нам нужна ваша помощь. Страница испарилась, оставив лишь несколько странных улик. Изучите их и помогите нам найти дорогу домой.",
@@ -511,15 +636,18 @@
     "generalFirstLabel": "Тысяча артиклей",
     "generalFirstText": "Соберите 1000 правильно угаданных артиклей во всех режимах.",
     "generalSecondLabel": "Выше неба",
-    "generalSecondText": "достигните 20 уровня.",
+    "generalSecondText": "достигните двадцатого уровня .",
+    "generalSecondAward": "Награда: Золотая статуэтка ",
     "generalThirdLabel": "Имей сто артиклюсов... и друзей тоже",
     "generalThirdText": "Получите 100 артиклюсов.",
-    "generalFouthLabel": "Ветеран",
-    "generalFouthText": "Целый год на сайте! Вы — настоящая легенда нашего сообщества.",
+    "generalFourthLabel": "Ветеран",
+    "generalFourthText": "Целый год на сайте! Вы — настоящая легенда нашего сообщества.",
+    "generalFourthAward": "Награда: Медаль ветерана",
     "generalFivethLabel": "Не прерывный поток",
     "generalFivethText": "Достигни стрика 150 в сложном режиме, не давая таймеру упасть ниже 2 секунд.",
     "generalSexthLabel": "Исчерпать запасы",
     "generalSexthText": "Потратьте 1000 артиклюсов.",
+    "generalSexthAward": "Награда: Алмаз Артиклеуса",
     "generalSeventhlabel": "Повелитель предложений",
     "generalSeventhText": "Сложите 1000 предложений в сумме на всех уровнях и станьте мастером построения"
   },
@@ -541,6 +669,9 @@
     "generaLabel": "Общие достижения",
     "dailyTitle": "Железная воля",
     "dailyText": "Выполни 50 ежедневных заданий",
+    "firstStepLabel": "Первый шаг",
+    "firstStepText": "Ты зарегистрировался и вступил в мир немецкого!",
+    "firstStepAward": "Награда : Значок участника",
     "lastBreahtlabel": "На последнем дыхании",
     "lastBreathText": "Идея 1 жизнь в Марафоне отгадать 20 артиклей подряд ( легкий режим )",
     "monthLabel": "Постоялец",
@@ -565,7 +696,8 @@
     "magisterLabel": "Магистр Слов",
     "magisterText": "Достигните мастерства, изучив 100 слов.",
     "mistakesLabel": "Ошибки мне не помеха!",
-    "mistakesText": "Каждая из них — это шаг к знанию!"
+    "mistakesText": "Каждая из них — это шаг к знанию!",
+    "mistakesAward": "Награда: Талисман терпения"
   },
   "guessCategory": {
     "guessLabel": "Отгадать слово",
@@ -578,7 +710,8 @@
     "guessFourthLabel": "Словесный Мудрец",
     "guessFourthText": "Отгадайте 200 слов.",
     "guessfifthLabel": "Хранитель Мудрости.",
-    "guessfifthText": "Отгадайте 600 слов."
+    "guessfifthText": "Отгадайте 600 слов.",
+    "mistakesAward": "Награда: Талисман терпения"
   },
   "marathonEasyMode": {
     "correctLabel": "Угаданые слова",
@@ -795,7 +928,7 @@
     "textRanked": "Чтобы попасть в рейтинг нужно отгадать хотя бы 1 слово",
     "textBtn": "Отгадать слово",
     "achieveTitle": "Отличная работа!",
-    "achieveText": "Вы уже выполнили ежедневное задание. Новый квест будет доступен завтра.",
+    "achieveText": "Вы уже выполнили ежедневное задание. Новый квест будет доступен завтра."
   },
   "wordDuel": {
     "title": "Добро пожаловать в «Дуэль Порядка»!",
@@ -850,13 +983,14 @@
     "guess": "Отгадай слово",
     "card": "Создать карточки",
     "themen": "Тематические уровни",
+    "idioms": "Фразеологизмы",
     "wordDuel": "Дуэль фраз",
     "quests": "Журнал Заданий"
   },
   "underSub": {
     "prev": "Введение",
     "rules": "Правила",
-    "artRules": "Практика",
+    "artRules": "Практика артиклей",
     "adjectivesBasic": "Основы",
     "declination": "Склонение",
     "comparison": "Степень сравнения",

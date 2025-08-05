@@ -14,7 +14,11 @@
                 :text="authModalData.text"
         />
         <div class="lobby-container">
-
+          <TipsModal
+              v-model="showTips"
+              :title="t('adjectiveComparisonPage.tipTitle')"
+              :tips="tipsData.tips"
+          />
             <div v-if="!isWaitingForOpponent && !isOpponentFound">
                 <div class="duel__header">
                     <button @click="goBack" class="back-button-global" aria-label="Назад">
@@ -26,6 +30,7 @@
                     <div class="header-section">
                         <h1 class="page-title">{{ t('wordDuel.title')}}</h1>
                     </div>
+                  <div @click="tipsModule">Советы</div>
                     <div @click="openModal">
                         <img class="duel__question-img" :title="t('hoverTitle.duelInfo')" src="../assets/images/question.svg" alt="">
                     </div>
@@ -90,6 +95,7 @@
     import { userAuthStore } from '../store/authStore.js'
     import { useRouter } from 'vue-router'
     import Modal from  '../src/components/modal.vue'
+    import TipsModal from  '../src/components/V-tips.vue'
     import Login from '../assets/images/login.svg'
     const authStore = userAuthStore()
     const { t } = useI18n()
@@ -114,6 +120,7 @@
             flawlessWins: 0
         }
     })
+    const showTips = ref(false)
     const selectedLevel = ref('A1')
     const isWaitingForOpponent = computed(() => mode.value === 'online' && !!gameStore.gameId && gameStore.sessionData?.status === 'waiting')
     const isOpponentFound = computed(() => mode.value === 'online' && gameStore.sessionData?.status === 'starting')
@@ -122,10 +129,24 @@
         text: "wordDuel.rulesText",
         subtext: "wordDuel.subText"
     })
-
     const openModal = () => { showDevModal.value = true }
     const closeModal = () => { showDevModal.value = false }
     const closeAuthModal = () => { showAuthModal.value = false }
+    const tipsModule = () => {
+      showTips.value = true
+    }
+    const tipsData = ref({
+      tips: [
+        { id: '1', text: 'Глагол — на 2-м месте: Ich **lerne** Deutsch.' },
+        { id: '2', text: 'Место или время в начале? Глагол всё равно 2-й: **Heute** gehe ich.' },
+        { id: '3', text: 'Вопрос без слова: глагол на 1-м месте — **Kommst** du?' },
+        { id: '4', text: 'С вопросительным словом: **Wo** wohnst du?' },
+        { id: '5', text: 'Придаточное: глагол в конце — …weil ich **arbeite**.' },
+        { id: '6', text: 'Союз **und** не меняет порядок: Ich lerne und ich **spiele**.' },
+        { id: '7', text: 'Сначала подлежащее, потом глагол: Du **bist** müde.' }
+      ]
+    })
+
 
     function cancelSearch() {
         gameStore.cancelSearch()
@@ -134,7 +155,6 @@
         router.push('/')
         gameStore.cancelSearch()
     }
-
     function handleFindGameClick(level) {
         if (!authStore.uid)  {
             showAuthModal.value = true
@@ -147,7 +167,6 @@
             router.push({ path: '/duel-solo', query: { level } })
         }
     }
-
     watch(() => gameStore.sessionData?.status, (newStatus) => {
         if (mode.value === 'online' && newStatus === 'starting') {
             setTimeout(() => {
@@ -157,7 +176,6 @@
             }, 2000)
         }
     })
-
     onMounted(async () => {
         isLoading.value = true;
         if (!sentencesStore.db) {
@@ -165,7 +183,6 @@
         }
         isLoading.value = false;
     })
-
     onUnmounted(() => {
         if (isWaitingForOpponent.value) {
             gameStore.cancelSearch()

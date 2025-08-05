@@ -1,6 +1,5 @@
 import {defineStore} from "pinia";
 import {ref, computed} from 'vue'
-
 import {
 	getAuth,
 	createUserWithEmailAndPassword,
@@ -16,6 +15,7 @@ import {
 	reauthenticateWithPopup, GoogleAuthProvider
 } from 'firebase/auth';
 import {doc, setDoc, getDoc, getFirestore, updateDoc, deleteDoc, serverTimestamp} from 'firebase/firestore';
+import { userlangStore } from "./learningStore.js";
 let authStateUnsubscribe = null;
 export const userAuthStore = defineStore('auth', () => {
 	const name = ref(null)
@@ -51,7 +51,17 @@ export const userAuthStore = defineStore('auth', () => {
 		};
 	};
 
+	const grantPremiumBonusPoints = async () => {
+		const langStore = userlangStore()
+		if (langStore.gotPremiumBonus) return
+		langStore.points += 50
+		langStore.totalEarnedPoints += 50
+		langStore.gotPremiumBonus = true /
+		await langStore.saveToFirebase()
+	}
+
 	const setUserData = (data) => {
+		const wasPremium = isPremium.value
 		name.value = data.name || null
 		email.value = data.email || null
 		registeredAt.value = data.registeredAt || null
@@ -61,6 +71,9 @@ export const userAuthStore = defineStore('auth', () => {
 		subscriptionEndsAt.value = data.subscriptionEndsAt || null
 		subscriptionCancelled.value = data.subscriptionCancelled || false
 		providerId.value = data.providerId || ''
+		if(!wasPremium && isPremium.value) {
+			grantPremiumBonusPoints()
+		}
 	}
 
 	const updateUserAvatar = async (newAvatarFilename) => {
@@ -84,10 +97,7 @@ export const userAuthStore = defineStore('auth', () => {
 		const user = result.user;
 		const userDocRef = doc(db, 'users', user.uid);
 		const userDoc = await getDoc(userDocRef);
-
-
 		if (!userDoc.exists()) {
-
 			await setDoc(userDocRef, {
 				name: user.displayName,
 				email: user.email,
@@ -116,12 +126,9 @@ export const userAuthStore = defineStore('auth', () => {
 		const auth = getAuth()
 		const userCredential = await createUserWithEmailAndPassword(auth, userData.email, userData.password)
 		const user = userCredential.user;
-
 		await updateProfile(user, { displayName: userData.name })
 		await sendEmailVerification(user)
-
 		const defaultAvatar = '1.png';
-
 		await setDoc(doc(db, 'users', user.uid), {
 			name: userData.name,
 			email: userData.email,

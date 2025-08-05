@@ -9,7 +9,8 @@ export const userlangStore = defineStore('learning', () => {
 	const wrongAnswers = ref([])         // тут слова, где были ошибки
 	const selectedTopics = ref([])       // тут выбранные темы (ключи)
 	const selectedWords = ref([])        // тут слова, выбранные для сессии(текущая тема)
-	const points = ref(0)                // тут очки/баллы
+	const points = ref(0)
+	const gotPremiumBonus = ref(false)// тут артиклюсы
 	const totalEarnedPoints = ref(0)
 	const articlesSpentForAchievement = ref(0)
 	const currentIndex = ref(0)          // тут индекс текущего слова в сессии
@@ -160,6 +161,7 @@ export const userlangStore = defineStore('learning', () => {
 					isLeveling.value = data.isLeveling || 0
 					currentIndex.value = data.currentIndex || 0
 					currentModeIndex.value = data.currentModeIndex || 0
+					gotPremiumBonus.value = data.gotPremiumBonus || false
 				}
 				isLoaded.value = true
 				resolve()
@@ -188,7 +190,8 @@ export const userlangStore = defineStore('learning', () => {
 			exp: exp.value,
 			isLeveling: isLeveling.value,
 			currentIndex: currentIndex.value,
-			currentModeIndex: currentModeIndex.value
+			currentModeIndex: currentModeIndex.value,
+			gotPremiumBonus: gotPremiumBonus.value
 		}, { merge: true })
 	}
 

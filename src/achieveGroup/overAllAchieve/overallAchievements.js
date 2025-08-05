@@ -4,9 +4,10 @@ export const overAchievment = [
 		achievements: [
 			{
 				id: "registerAchievement",
-				name: "Первый шаг",
-				description: "Ты зарегистрировался и вступил в мир немецкого!",
+				name: "generalCategory.firstStepLabel",
+				description: "generalCategory.firstStepText",
 				icon: "🧙‍♂️",
+				awards: 'generalCategory.firstStepAward',
 				currentProgress: 0,
 				targetProgress: 1
 			},
@@ -111,6 +112,7 @@ export const overAchievment = [
 				name: 'generalCategory.mistakesLabel',
 				description: 'generalCategory.mistakesText',
 				icon: '💪',
+				awards: 'generalCategory.mistakesAward',
 				currentProgress: 0,
 				targetProgress: 100,
 			},
