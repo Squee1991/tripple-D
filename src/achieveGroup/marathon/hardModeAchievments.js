@@ -45,7 +45,7 @@ export const groupedHardModeAchievements = [
 				"description": "marathonHardMode.correctFifthText",
 				"icon": "🌟",
 				"currentProgress": 0,
-				"targetProgress": 300
+				"targetProgress": 400
 			}
 		]
 	},
@@ -86,7 +86,7 @@ export const groupedHardModeAchievements = [
 				"description": "marathonHardMode.streakFifthText",
 				"icon": "✨",
 				"currentProgress": 0,
-				"targetProgress": 200
+				"targetProgress": 350
 			}
 		]
 	}

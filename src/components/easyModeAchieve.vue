@@ -7,7 +7,7 @@
 				</span>
 		</div>
 		<div class="achievements-list">
-			<div v-for="achievement in group.achievements" :key="achievement.id" class="achievement-card">
+			<div v-for="achievement in group.achievements" :key="achievement.id" class="achievement__card">
 				<div class="achievement-icon-wrapper">
 					<div class="achievement-icon">
 						<span class="icon-emoji">{{ achievement.icon }}</span>
@@ -66,16 +66,11 @@
 
 <style scoped>
 
-	/* 1. Подключаем игровой шрифт */
-	@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
-	@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
-
 	.achievement-group {
 		margin-bottom: 3rem;
-		font-family: 'Fredoka One', cursive;
+		font-family: "Nunito", sans-serif;
 	}
 
-	/* --- Заголовок группы --- */
 	.group-header {
 		display: flex;
 		align-items: center;
@@ -105,17 +100,15 @@
 		transition: all 0.2s ease;
 	}
 	.group-stats.all-completed {
-		background: #f1c40f; /* Желтый, когда все выполнено */
+		background: #f1c40f;
 	}
 
-	/* --- Список карточек --- */
 	.achievements-list {
 		display: flex;
 		flex-direction: column;
 	}
 
-	/* --- Сама карточка достижения --- */
-	.achievement-card {
+	.achievement__card {
 		display: flex;
 		align-items: flex-start;
 		gap: 1rem;
@@ -130,12 +123,12 @@
 		margin-bottom: 20px;
 
 	}
-	/* Иконка */
+
 	.achievement-icon-wrapper {
 		flex-shrink: 0;
 		width: 70px;
 		height: 70px;
-		background: #fef8e4; /* Фон иконки в цвет фона страницы */
+		background: #fef8e4;
 		border-radius: 16px;
 		border: 3px solid #1e1e1e;
 		display: flex;
@@ -146,7 +139,6 @@
 		font-size: 40px;
 	}
 
-	/* Детали достижения */
 	.achievement-details {
 		flex-grow: 1;
 		display: flex;
@@ -164,6 +156,7 @@
 		font-weight: 400;
 		margin: 0;
 	}
+
 	.achievement-progress-text {
 		font-size: 1rem;
 		font-weight: 400;
@@ -174,7 +167,6 @@
 		border: 2px solid #1e1e1e;
 	}
 
-	/* --- Прогресс-бар --- */
 	.progress-bar-container {
 		width: 100%;
 		background-color: #e0e0e0;
@@ -187,7 +179,7 @@
 	}
 	.progress-bar {
 		height: 100%;
-		background: #4ade80; /* Яркий зеленый для прогресса */
+		background: #4ade80;
 		border-radius: 0;
 		transition: width 0.5s ease-in-out;
 	}
@@ -203,13 +195,19 @@
 		white-space: nowrap;
 	}
 
-	/* Описание */
 	.achievement-description {
 		font-size: 0.95rem;
 		color: #555;
-		font-family: 'Inter', sans-serif; /* Для лучшей читаемости */
+		font-family: "Nunito", sans-serif;
 		font-weight: 500;
 		margin: 0;
 		line-height: 1.4;
 	}
+
+	@media (max-width: 1280px ) {
+		.achievement__card {
+			width: 100%;
+		}
+	}
+
 </style>

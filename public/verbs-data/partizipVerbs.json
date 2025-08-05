@@ -1,0 +1,62 @@
+[
+  {
+    "type": "partizip",
+    "question": "Ich habe das Buch ___ .",
+    "options": ["gelesen", "lesen", "gelesst", "gelesiert", "geles"],
+    "answer": "gelesen"
+  },
+  {
+    "type": "partizip",
+    "question": "Sie hat einen Brief ___ .",
+    "options": ["geschrieben", "schreibt", "geschriebt", "schreiben", "geschrieb"],
+    "answer": "geschrieben"
+  },
+  {
+    "type": "partizip",
+    "question": "Wir haben das Auto ___ .",
+    "options": ["gewaschen", "waschen", "gewascht", "wäschten", "wusch"],
+    "answer": "gewaschen"
+  },
+  {
+    "type": "partizip",
+    "question": "Er hat den Kuchen ___ .",
+    "options": ["gebacken", "backen", "gebackt", "backte", "gebäckt"],
+    "answer": "gebacken"
+  },
+  {
+    "type": "partizip",
+    "question": "Du hast laut ___ .",
+    "options": ["gelacht", "lachen", "gelachtet", "lachst", "gelach"],
+    "answer": "gelacht"
+  },
+  {
+    "type": "partizip",
+    "question": "Wir haben das Fenster ___ .",
+    "options": ["geöffnet", "öffnen", "geöffnt", "öffnete", "geöfnet"],
+    "answer": "geöffnet"
+  },
+  {
+    "type": "partizip",
+    "question": "Ihr habt lange ___ .",
+    "options": ["gewartet", "warten", "wartet", "gewartete", "gewarten"],
+    "answer": "gewartet"
+  },
+  {
+    "type": "partizip",
+    "question": "Ich habe das Bild ___ .",
+    "options": ["gemalt", "malen", "gemahlen", "malte", "gemalet"],
+    "answer": "gemalt"
+  },
+  {
+    "type": "partizip",
+    "question": "Sie haben viel ___ .",
+    "options": ["gearbeitet", "arbeiten", "arbeitete", "gearbeit", "gearbeitest"],
+    "answer": "gearbeitet"
+  },
+  {
+    "type": "partizip",
+    "question": "Wir haben eine Reise ___ .",
+    "options": ["gemacht", "machen", "gemachen", "machten", "gemachte"],
+    "answer": "gemacht"
+  }
+]

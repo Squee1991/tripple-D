@@ -71,7 +71,6 @@
 			});
 		}
 
-		// --- ИЗМЕНЕНИЕ: Упрощенная анимация для всего блока формы ---
 		if (contactFormRef.value) {
 			gsap.from(contactFormRef.value, {
 				scrollTrigger: {

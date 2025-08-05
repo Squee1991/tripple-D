@@ -30,11 +30,9 @@
 <script setup>
 	import { ref } from 'vue'
 
-	// Массив еженедельных заданий (пример)
 	const weeklyTasks = ref([
 		{
 			id: 101,
-
 			title: 'Учись 5 дней подряд',
 			description: 'Не пропускай занятия всю неделю',
 			progress: 4,
@@ -44,7 +42,6 @@
 		},
 		{
 			id: 102,
-
 			title: 'Выполни 15 заданий за неделю',
 			description: 'Любые ежедневные задания',
 			progress: 15,

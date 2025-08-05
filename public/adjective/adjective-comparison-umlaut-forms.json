@@ -1,0 +1,102 @@
+[
+  {
+    "question": "Mein Bruder ist drei Jahre ___ als ich.",
+    "options": ["älter", "alter", "am ältesten", "alt"],
+    "answer": "älter"
+  },
+  {
+    "question": "Von allen europäischen Städten ist Berlin ___.",
+    "options": ["am größten", "größer", "am grösten", "größte"],
+    "answer": "am größten"
+  },
+  {
+    "question": "In den Bergen ist es oft ___ als im Tal.",
+    "options": ["kälter", "kalter", "kalt", "am kältesten"],
+    "answer": "kälter"
+  },
+  {
+    "question": "Wer ist die ___ Person in deiner Familie?",
+    "options": ["jüngste", "jüngere", "am jüngsten", "jünger"],
+    "answer": "jüngste"
+  },
+  {
+    "question": "Die Donau ist lang, aber der Nil ist noch ___.",
+    "options": ["länger", "lang", "langer", "am längsten"],
+    "answer": "länger"
+  },
+  {
+    "question": "Im Juli ist es in Deutschland meistens ___.",
+    "options": ["am wärmsten", "wärmer", "am warmsten", "wärmste"],
+    "answer": "am wärmsten"
+  },
+  {
+    "question": "Ein Bär ist viel ___ als ein Wolf.",
+    "options": ["stärker", "stark", "starker", "am stärksten"],
+    "answer": "stärker"
+  },
+  {
+    "question": "Von allen Monaten ist der Februar ___.",
+    "options": ["am kürzesten", "kürzer", "am kurzesten", "kürzeste"],
+    "answer": "am kürzesten"
+  },
+  {
+    "question": "Gemüse essen ist ___ als nur Süßigkeiten.",
+    "options": ["gesünder", "gesunder", "gesund", "am gesündesten"],
+    "answer": "gesünder"
+  },
+  {
+    "question": "Von den drei Brüdern war er mit Abstand ___.",
+    "options": ["am klügsten", "klüger", "am klugsten", "klügste"],
+    "answer": "am klügsten"
+  },
+  {
+    "question": "Seine Kritik war sehr ___, aber fair.",
+    "options": ["hart", "härter", "härteste", "am härtesten"],
+    "answer": "hart"
+  },
+  {
+    "question": "Diese Suppe ist scharf, aber die andere ist noch ___.",
+    "options": ["schärfer", "scharfer", "scharf", "am schärfsten"],
+    "answer": "schärfer"
+  },
+  {
+    "question": "Sein Gegner im Kampf war viel ___ als er.",
+    "options": ["schwächer", "schwacher", "am schwächsten", "schwach"],
+    "answer": "schwächer"
+  },
+  {
+    "question": "Von allen Antworten war seine ___.",
+    "options": ["am dümmsten", "dümmer", "dümmste", "dumm"],
+    "answer": "am dümmsten"
+  },
+  {
+    "question": "Nach der Grippe fühle ich mich noch ___ als letzte Woche.",
+    "options": ["kränker", "kranker", "krank", "am kränksten"],
+    "answer": "kränker"
+  },
+  {
+    "question": "Die Situation der Obdachlosen ist im Winter ___.",
+    "options": ["am ärmsten", "ärmer", "ärmste", "arm"],
+    "answer": "am ärmsten"
+  },
+  {
+    "question": "Diese Jacke hält dich im Winter ___.",
+    "options": ["wärmer", "warm", "am wärmsten", "warmer"],
+    "answer": "wärmer"
+  },
+  {
+    "question": "Der Test war ___, als ich dachte.",
+    "options": ["kürzer", "kurz", "am kürzesten", "kurzer"],
+    "answer": "kürzer"
+  },
+  {
+    "question": "Wessen Arme sind von allen ___?",
+    "options": ["am längsten", "länger", "längste", "lang"],
+    "answer": "am längsten"
+  },
+  {
+    "question": "Ein Elefant ist ___ als ein Pferd.",
+    "options": ["größer", "großer", "groß", "am größten"],
+    "answer": "größer"
+  }
+]

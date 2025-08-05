@@ -1,5 +1,4 @@
 <script setup>
-    // --- ИЗМЕНЕНИЕ 2: Импорты не изменились, но router нам нужен для новой функции ---
     import {ref, onMounted, computed} from 'vue';
     import {useRouter} from 'vue-router';
     import {useGameStore} from '../store/marafonStore.js';
@@ -39,21 +38,21 @@
         <button class="back-button" @click="goBack" aria-label="Назад">
             ←
         </button>
-
         <div class="prepare-container">
             <div class="header">
                 <h1>{{t('marathonPrepare.title')}}</h1>
                 <p class="subtitle">{{t('marathonPrepare.subtitle')}}</p>
             </div>
-
             <div v-if="authStore.uid" class="user-greeting">
                 <p>{{t('marathonPrepare.greetings')}}, <strong>{{ authStore.name }}</strong>!</p>
-                <p class="record">{{t('marathonPrepare.streak')}} <span>{{ currentRecord }}</span></p>
+                <p class="record">
+                    {{t('marathonPrepare.streak')}}
+                    <span class="record__value">{{ currentRecord }}</span>
+                </p>
             </div>
             <div v-else class="guest-greeting">
                 <p>{{t('marathonPrepare.notAuth')}}</p>
             </div>
-
             <div v-if="gameStore.isLoaded" class="settings-block">
                 <h2>{{t('marathonPrepare.chooseDifficulty')}}</h2>
                 <div class="difficulty-options">
@@ -83,7 +82,6 @@
             <div v-else class="loading">
                 <p>{{t('marathonPrepare.loading')}}</p>
             </div>
-
             <button
                     class="start-button"
                     @click="startGame"
@@ -104,10 +102,9 @@
         padding: 2rem;
         background-color: #fef8e4;
         font-family: 'Inter', sans-serif;
-        position: relative; /* Необходимо для позиционирования кнопки "назад" */
+        position: relative;
     }
 
-    /* --- Стили для новой кнопки "Назад" --- */
     .back-button {
         position: absolute;
         top: 2rem;
@@ -119,7 +116,7 @@
         border: 3px solid #1e1e1e;
         border-radius: 50%;
         box-shadow: 4px 4px 0 #1e1e1e;
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         font-size: 2.5rem;
         color: #1e1e1e;
         display: flex;
@@ -138,7 +135,6 @@
         transform: translate(4px, 4px);
         box-shadow: 0 0 0 #1e1e1e;
     }
-    /* --- Конец стилей для кнопки "Назад" --- */
 
     .prepare-container {
         width: 100%;
@@ -159,7 +155,7 @@
     }
 
     .header h1 {
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         font-size: 2.5rem;
         font-weight: 600;
         color: #1e1e1e;
@@ -191,18 +187,24 @@
     }
 
     .user-greeting strong {
-        color: #f97028; /* Оранжевый акцент */
+        color: #f97028;
     }
 
     .user-greeting .record {
         margin-top: 0.75rem;
         font-weight: 700;
         color: #1e1e1e;
+        font-size: 16px;
     }
+
+    .record__value {
+        font-size: 24px;
+    }
+
 
     .user-greeting .record span {
         display: inline-block;
-        background: #fca13a; /* Желтый фон */
+        background: #fca13a;
         color: #1e1e1e;
         padding: 0.25rem 0.75rem;
         border-radius: 8px;
@@ -211,7 +213,7 @@
     }
 
     .settings-block h2 {
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         font-size: 1.8rem;
         text-align: center;
         margin-bottom: 1rem;
@@ -259,7 +261,7 @@
     }
 
     .button-content span:first-child {
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         font-size: 1.3rem;
         font-weight: 400;
     }
@@ -277,7 +279,7 @@
     }
 
     .start-button {
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         padding: 1rem 2.5rem;
         font-size: 1.5rem;
         font-weight: 400;

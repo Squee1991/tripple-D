@@ -7,7 +7,7 @@
 				</span>
 		</div>
 		<div class="achievements-list">
-			<div v-for="achievement in group.achievements" :key="achievement.id" class="achievement-card">
+			<div v-for="achievement in group.achievements" :key="achievement.id" class="achievement__card">
 				<div class="achievement-icon-wrapper hard-mode">
 					<div class="achievement-icon">
 						<span class="icon-emoji">{{ achievement.icon }}</span>
@@ -64,16 +64,11 @@
 </script>
 
 <style scoped>
-	/* ЗАМЕНИТЕ ВЕСЬ ВАШ <style scoped> НА ЭТОТ КОД */
-
-	/* Шрифты должны быть подключены глобально в nuxt.config */
 
 	.achievement-group {
 		margin-bottom: 3rem;
-		font-family: 'Fredoka One', cursive;
+		font-family: "Nunito", sans-serif
 	}
-
-	/* --- Заголовок группы --- */
 	.group-header {
 		display: flex;
 		align-items: center;
@@ -106,14 +101,12 @@
 		background: #f1c40f;
 	}
 
-	/* --- Список карточек --- */
 	.achievements-list {
 		display: flex;
 		flex-direction: column;
 	}
 
-	/* --- Сама карточка достижения --- */
-	.achievement-card {
+	.achievement__card {
 		display: flex;
 		align-items: flex-start;
 		gap: 1rem;
@@ -128,7 +121,6 @@
 		margin-bottom: 20px;
 	}
 
-	/* Иконка */
 	.achievement-icon-wrapper {
 		flex-shrink: 0;
 		width: 70px;
@@ -139,15 +131,13 @@
 		justify-content: center;
 		align-items: center;
 	}
-	/* Новый цвет для иконок сложной сложности */
 	.achievement-icon-wrapper.hard-mode {
-		background: #fca5a5; /* Красно-розовый */
+		background: #fca5a5;
 	}
 	.icon-emoji {
 		font-size: 40px;
 	}
 
-	/* Детали достижения */
 	.achievement-details {
 		flex-grow: 1;
 		display: flex;
@@ -160,7 +150,6 @@
 		margin: 0 0 10px 0;
 	}
 
-	/* --- Прогресс-бар --- */
 	.progress-bar-container {
 		width: 100%;
 		background-color: #e0e0e0;
@@ -176,9 +165,9 @@
 		border-radius: 0;
 		transition: width 0.5s ease-in-out;
 	}
-	/* Новый цвет для прогресс-бара сложной сложности */
+
 	.progress-bar.hard-progress {
-		background: #ef4444; /* Насыщенный красный */
+		background: #ef4444;
 	}
 
 	.progress-text-overlay {
@@ -193,7 +182,6 @@
 		white-space: nowrap;
 	}
 
-	/* Описание */
 	.achievement-description {
 		font-size: 0.95rem;
 		color: #555;
@@ -203,4 +191,9 @@
 		line-height: 1.4;
 	}
 
+	@media (max-width: 1280px ) {
+		.achievement__card {
+			width: 100%;
+		}
+	}
 </style>

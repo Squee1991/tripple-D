@@ -32,6 +32,14 @@ export const cpecialGroupAchievment = [
 		title: 'specialCategory.generalLabel',
 		achievements: [
 			{
+				id: "sentences-master",
+				name: "specialCategory.generalSeventhlabel",
+				description: "specialCategory.generalSeventhText",
+				icon: "📜",
+				currentProgress: 0,
+				targetProgress: 1000
+			},
+			{
 				id: "totalArticles1000",
 				name: "specialCategory.generalFirstLabel",
 				description: "specialCategory.generalFirstText",
@@ -68,7 +76,7 @@ export const cpecialGroupAchievment = [
 				id: "Impuls",
 				name: "specialCategory.generalFivethLabel",
 				description:"specialCategory.generalFivethText",
-				icon: "⚡",
+				icon: "🔥",
 				currentProgress: 0,
 				targetProgress: 150,
 			},
@@ -76,9 +84,41 @@ export const cpecialGroupAchievment = [
 				id: "Articlus",
 				name: "specialCategory.generalSexthLabel",
 				description:"specialCategory.generalSexthText",
+				icon: '💸',
+				currentProgress: 0,
+				targetProgress: 100,
+			},
+			{
+				id: 'guessedFastWords',
+				name: 'specialCategory.specialFourthLabel',
+				description: 'specialCategory.specialFourthText',
 				icon: "⚡",
 				currentProgress: 0,
-				targetProgress: 500,
+				targetProgress: 100,
+			},
+			{
+				id: 'guessedOnLastTryWords',
+				name: 'specialCategory.specialFifthLabel',
+				description: 'specialCategory.specialFifthText',
+				icon: '🧨',
+				currentProgress: 0,
+				targetProgress: 100,
+			},
+			{
+				id: 'guessedSafeWords',
+				name: 'specialCategory.specialSixthLabel',
+				description: 'specialCategory.specialSixthText',
+				icon: '🛡️',
+				currentProgress: 0,
+				targetProgress: 100,
+			},
+			{
+				id: 'guessedPerfectWords',
+				name: 'specialCategory.specialSeventhLabel',
+				description: 'specialCategory.specialSeventhText',
+				icon: '🎯',
+				currentProgress: 0,
+				targetProgress: 100,
 			},
 		]
 	}

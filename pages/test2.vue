@@ -200,8 +200,7 @@
         if (ownerId === currentPlayerId.value && card.canAttack) {
             resetSelection();
             selectedAttacker.value = card;
-        }
-        else {
+        } else {
             resolveActionOnTarget(card);
         }
     }
@@ -234,9 +233,7 @@
                 target.hp -= attacker.attack;
             }
             attacker.canAttack = false;
-        }
-
-        else if (selectedMagicSpell.value) {
+        } else if (selectedMagicSpell.value) {
             const spell = selectedMagicSpell.value;
             const effect = spell.effect;
             if (effect.type === 'damage' && isFriendly) return;

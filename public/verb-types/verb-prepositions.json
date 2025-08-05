@@ -1,0 +1,62 @@
+[
+  {
+    "type": "verbPrepositions",
+    "question": "Ich warte schon eine Stunde ___ dich.",
+    "options": ["auf", "mit", "von"],
+    "answer": "auf"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Wir müssen dringend ___ dem Professor sprechen.",
+    "options": ["an", "mit", "über"],
+    "answer": "mit"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Denkst du oft ___ deine Zukunft?",
+    "options": ["von", "nach", "an"],
+    "answer": "an"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Nachts träume ich oft ___ dem Meer.",
+    "options": ["von", "über", "auf"],
+    "answer": "von"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Die Studenten interessieren sich ___ deutsche Literatur.",
+    "options": ["mit", "für", "von"],
+    "answer": "für"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Der Tourist fragt ___ dem Weg zum Bahnhof.",
+    "options": ["nach", "an", "auf"],
+    "answer": "nach"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Ärgerst du dich ___ das schlechte Wetter?",
+    "options": ["auf", "mit", "über"],
+    "answer": "über"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Ich möchte dich ___ meiner Party einladen.",
+    "options": ["an", "in", "zu"],
+    "answer": "zu"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Er nimmt aktiv ___ dem Unterricht teil.",
+    "options": ["an", "bei", "mit"],
+    "answer": "an"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Alles hängt ___ deiner Entscheidung ab.",
+    "options": ["mit", "von", "an"],
+    "answer": "von"
+  }
+]

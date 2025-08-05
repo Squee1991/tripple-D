@@ -1,0 +1,62 @@
+[
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ zu schnell!",
+    "options": ["fährst", "fahrst", "fahrt"],
+    "answer": "fährst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Er ___ fließend Spanisch.",
+    "options": ["spricht", "sprecht", "sprichst"],
+    "answer": "spricht"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Was ___ du da?",
+    "options": ["liest", "lesst", "lese"],
+    "answer": "liest"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Sie (она) ___ mir das Buch.",
+    "options": ["gibt", "gebt", "gibst"],
+    "answer": "gibt"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "___ du den Vogel dort?",
+    "options": ["Siehst", "Sehst", "Seht"],
+    "answer": "Siehst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Das Baby ___ sehr ruhig.",
+    "options": ["schläft", "schlaft", "schläfst"],
+    "answer": "schläft"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Warum ___ du mir nicht?",
+    "options": ["hilfst", "helfst", "helft"],
+    "answer": "hilfst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Er ___ den Bus zur Arbeit.",
+    "options": ["nimmt", "nehmt", "nimmst"],
+    "answer": "nimmt"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Mein Bruder ___ gern Pizza.",
+    "options": ["isst", "esst", "esse"],
+    "answer": "isst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Sie (она) ___ jeden Morgen im Park.",
+    "options": ["läuft", "lauft", "laufst"],
+    "answer": "läuft"
+  }
+]

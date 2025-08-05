@@ -1,0 +1,208 @@
+{
+  "level": "B1",
+  "modules": [
+    {
+      "id": "lesen-1",
+      "title": "Lesen",
+      "type": "multiple-choice",
+      "task": {
+        "text": "Liebe Kundin, lieber Kunde,\nunsere Filiale in der Hauptstraße ist ab dem 15. Juni geschlossen. Ab dem 20. Juni finden Sie uns in der Bahnhofstraße 12 mit erweiterten Öffnungszeiten.",
+        "question": "Wann öffnet die neue Filiale?",
+        "options": ["Am 15. Juni", "Am 20. Juni", "Am 12. Juni"],
+        "answer": "Am 20. Juni"
+      }
+    },
+    {
+      "id": "lesen-2",
+      "title": "Lesen",
+      "type": "multiple-choice",
+      "task": {
+        "text": "Ich habe letzten Sommer an einem Sprachkurs in Wien teilgenommen. Die Lehrer waren freundlich, und die Atmosphäre war sehr angenehm. Nur das Essen in der Kantine hat mir nicht so gut geschmeckt.",
+        "question": "Was hat der Person nicht gefallen?",
+        "options": ["Die Lehrer", "Die Atmosphäre", "Das Essen"],
+        "answer": "Das Essen"
+      }
+    },
+    {
+      "id": "lesen-3",
+      "title": "Lesen",
+      "type": "multiple-choice",
+      "task": {
+        "text": "Das Konzert beginnt um 19 Uhr. Bitte erscheinen Sie spätestens 15 Minuten vorher, da nach Beginn kein Einlass mehr möglich ist.",
+        "question": "Wann muss man spätestens da sein?",
+        "options": ["Um 18 Uhr", "Um 19 Uhr", "Um 18:45 Uhr"],
+        "answer": "Um 18:45 Uhr"
+      }
+    },
+    {
+      "id": "lesen-4",
+      "title": "Lesen",
+      "type": "multiple-choice",
+      "task": {
+        "text": "Online-Kommentar: Die Lieferung war schnell und das Produkt gut verpackt. Leider war der Kundendienst schwer zu erreichen und wenig hilfreich.",
+        "question": "Was war negativ an der Erfahrung?",
+        "options": ["Die Lieferung", "Der Kundendienst", "Die Verpackung"],
+        "answer": "Der Kundendienst"
+      }
+    },
+    {
+      "id": "lesen-5",
+      "title": "Lesen",
+      "type": "multiple-choice",
+      "task": {
+        "text": "Wegen Bauarbeiten ist die Linie U3 zwischen Hauptbahnhof und Westkreuz vom 3. bis 10. August gesperrt. Bitte nutzen Sie Ersatzbusse.",
+        "question": "Wie kommt man in dieser Zeit vom Hauptbahnhof nach Westkreuz?",
+        "options": ["Mit dem Auto", "Mit der U3", "Mit dem Ersatzbus"],
+        "answer": "Mit dem Ersatzbus"
+      }
+    },
+
+    {
+      "id": "hoeren-1",
+      "title": "Hören",
+      "type": "audio-choice",
+      "task": {
+        "text": "Ich habe meine neue Stelle vor zwei Wochen angefangen. Die Aufgaben sind interessant, aber ich brauche morgens fast eine Stunde zur Arbeit.",
+        "question": "Was gefällt der Person nicht?",
+        "options": ["Die Aufgaben", "Der Arbeitsweg", "Die Kollegen"],
+        "answer": "Der Arbeitsweg"
+      }
+    },
+    {
+      "id": "hoeren-2",
+      "title": "Hören",
+      "type": "audio-choice",
+      "task": {
+        "text": "Wir wollten grillen, aber dann hat es stark geregnet. Also sind wir spontan ins Kino gegangen.",
+        "question": "Was haben sie letztendlich gemacht?",
+        "options": ["Gegrillt", "Fern gesehen", "Kino besucht"],
+        "answer": "Kino besucht"
+      }
+    },
+    {
+      "id": "hoeren-3",
+      "title": "Hören",
+      "type": "audio-choice",
+      "task": {
+        "text": "Ich wollte ein Fahrrad kaufen, aber das Modell, das ich mir ausgesucht hatte, war ausverkauft.",
+        "question": "Warum hat die Person kein Fahrrad gekauft?",
+        "options": ["Es war zu teuer", "Es war ausverkauft", "Sie hatte keine Zeit"],
+        "answer": "Es war ausverkauft"
+      }
+    },
+    {
+      "id": "hoeren-4",
+      "title": "Hören",
+      "type": "audio-choice",
+      "task": {
+        "text": "In den Nachrichten: Die A7 ist nach einem Unfall zwischen Fulda und Kassel gesperrt. Autofahrer werden gebeten, die Umleitung zu nutzen.",
+        "question": "Was wird den Autofahrern empfohlen?",
+        "options": ["Langsamer fahren", "Andere Route wählen", "Warten"],
+        "answer": "Andere Route wählen"
+      }
+    },
+    {
+      "id": "hoeren-5",
+      "title": "Hören",
+      "type": "audio-choice",
+      "task": {
+        "text": "Ich habe gestern mein Portemonnaie verloren, aber ein netter Mann hat es gefunden und zur Polizei gebracht.",
+        "question": "Was ist mit dem Portemonnaie passiert?",
+        "options": ["Es wurde gefunden", "Es ist noch weg", "Es wurde gestohlen"],
+        "answer": "Es wurde gefunden"
+      }
+    },
+
+    {
+      "id": "schreiben-1",
+      "title": "Schreiben",
+      "type": "text-input",
+      "task": {
+        "instruction": "Du hast in einem Hotel übernachtet, aber es gab Probleme. Schreib eine Beschwerde an das Hotelmanagement (mind. 80 Wörter).",
+        "exampleAnswer": "Sehr geehrte Damen und Herren, ich war vom 10. bis 12. Juni Gast in Ihrem Hotel. Leider war das Zimmer nicht sauber und der Fernseher funktionierte nicht. Ich bitte Sie um eine Stellungnahme oder einen Preisnachlass. Mit freundlichen Grüßen, Martin Scholz"
+      }
+    },
+    {
+      "id": "schreiben-2",
+      "title": "Schreiben",
+      "type": "text-input",
+      "task": {
+        "instruction": "Du möchtest einen Sprachkurs besuchen. Schreib eine E-Mail an die Sprachschule und erkundige dich nach Kursbeginn, Preis und Dauer.",
+        "exampleAnswer": "Sehr geehrte Damen und Herren, ich interessiere mich für Ihren Deutschkurs. Können Sie mir bitte mitteilen, wann der nächste Kurs beginnt, wie lange er dauert und was er kostet? Vielen Dank im Voraus! Mit freundlichen Grüßen, Jana Becker"
+      }
+    },
+    {
+      "id": "schreiben-3",
+      "title": "Schreiben",
+      "type": "text-input",
+      "task": {
+        "instruction": "Du konntest an einer Geburtstagsfeier nicht teilnehmen. Schreib deinem Freund/deiner Freundin eine Nachricht und erkläre warum.",
+        "exampleAnswer": "Hallo Lisa, es tut mir leid, dass ich gestern nicht zu deiner Party kommen konnte. Ich war krank und musste zu Hause bleiben. Ich hoffe, du hattest einen schönen Tag. Wir holen das bald nach! Liebe Grüße, Tom"
+      }
+    },
+    {
+      "id": "schreiben-4",
+      "title": "Schreiben",
+      "type": "text-input",
+      "task": {
+        "instruction": "Schreib einem Freund oder einer Freundin über deine neue Wohnung. Beschreib sie und lade ihn/sie ein.",
+        "exampleAnswer": "Hallo Max! Ich bin letzte Woche umgezogen. Meine neue Wohnung ist hell und ruhig, mit einem schönen Balkon. Ich wohne jetzt in der Blumenstraße 5. Komm mich bald mal besuchen! Viele Grüße, Laura"
+      }
+    },
+    {
+      "id": "schreiben-5",
+      "title": "Schreiben",
+      "type": "text-input",
+      "task": {
+        "instruction": "Du hast bei einem Online-Shop ein defektes Gerät erhalten. Schreib eine Reklamation mit Bitte um Rückgabe oder Umtausch.",
+        "exampleAnswer": "Sehr geehrter Kundenservice, ich habe letzte Woche bei Ihnen einen Wasserkocher bestellt. Leider funktioniert das Gerät nicht richtig – es schaltet sich nicht automatisch aus. Ich bitte Sie um einen Austausch oder eine Rückerstattung. Vielen Dank!"
+      }
+    },
+
+    {
+      "id": "sprechen-1",
+      "title": "Sprechen",
+      "type": "speaking-prompt",
+      "task": {
+        "prompt": "Erzähl von einer Reise oder einem Ausflug, den du gemacht hast. Warum war es besonders?",
+        "expectedTopics": ["Reiseerlebnis", "Ort", "Gefühle"]
+      }
+    },
+    {
+      "id": "sprechen-2",
+      "title": "Sprechen",
+      "type": "speaking-prompt",
+      "task": {
+        "prompt": "Was ist für dich wichtiger: viel Geld oder Freizeit? Begründe deine Meinung.",
+        "expectedTopics": ["Werte", "Begründung", "Vergleich"]
+      }
+    },
+    {
+      "id": "sprechen-3",
+      "title": "Sprechen",
+      "type": "speaking-prompt",
+      "task": {
+        "prompt": "Beschreib deinen Alltag: Was machst du unter der Woche, was am Wochenende?",
+        "expectedTopics": ["Tagesablauf", "Freizeit", "Vergleich"]
+      }
+    },
+    {
+      "id": "sprechen-4",
+      "title": "Sprechen",
+      "type": "speaking-prompt",
+      "task": {
+        "prompt": "Wie informierst du dich über aktuelle Ereignisse? Zeitung, Internet, Fernsehen?",
+        "expectedTopics": ["Medien", "Information", "Vorlieben"]
+      }
+    },
+    {
+      "id": "sprechen-5",
+      "title": "Sprechen",
+      "type": "speaking-prompt",
+      "task": {
+        "prompt": "Erzähl von einer Situation, in der du jemandem geholfen hast oder dir geholfen wurde.",
+        "expectedTopics": ["Erfahrung", "Hilfe", "Reaktion"]
+      }
+    }
+  ]
+}

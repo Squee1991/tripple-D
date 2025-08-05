@@ -1,0 +1,52 @@
+[
+  {
+    "question": "Ich bin ___.",
+    "options": ["traurig", "glücklich", "wütend", "müde"],
+    "answer": "glücklich"
+  },
+  {
+    "question": "Du bist ___.",
+    "options": ["aufgeregt", "froh", "traurig", "lustig"],
+    "answer": "traurig"
+  },
+  {
+    "question": "Er ist ___.",
+    "options": ["wütend", "zufrieden", "ruhig", "glücklich"],
+    "answer": "wütend"
+  },
+  {
+    "question": "Sie ist ___.",
+    "options": ["wach", "energetisch", "müde", "überrascht"],
+    "answer": "müde"
+  },
+  {
+    "question": "Wir sind ___.",
+    "options": ["entspannt", "gelangweilt", "nervös", "ruhig"],
+    "answer": "nervös"
+  },
+  {
+    "question": "Ihr seid ___.",
+    "options": ["überrascht", "gelangweilt", "traurig", "wütend"],
+    "answer": "überrascht"
+  },
+  {
+    "question": "Ich bin ___.",
+    "options": ["gestresst", "hektisch", "nervös", "entspannt"],
+    "answer": "entspannt"
+  },
+  {
+    "question": "Du bist ___.",
+    "options": ["mutig", "ängstlich", "froh", "ruhig"],
+    "answer": "ängstlich"
+  },
+  {
+    "question": "Er ist ___.",
+    "options": ["dankbar", "enttäuscht", "sauer", "müde"],
+    "answer": "dankbar"
+  },
+  {
+    "question": "Sie ist ___.",
+    "options": ["stolz", "enttäuscht", "glücklich", "zufrieden"],
+    "answer": "stolz"
+  }
+]

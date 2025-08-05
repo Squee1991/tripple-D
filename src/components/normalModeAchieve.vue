@@ -7,7 +7,7 @@
 				</span>
 		</div>
 		<div class="achievements-list">
-			<div v-for="achievement in group.achievements" :key="achievement.id" class="achievement-card">
+			<div v-for="achievement in group.achievements" :key="achievement.id" class="achievement__card">
 				<div class="achievement-icon-wrapper medium-mode">
 					<div class="achievement-icon">
 						<span class="icon-emoji">{{ achievement.icon }}</span>
@@ -67,7 +67,7 @@
 
 	.achievement-group {
 		margin-bottom: 3rem;
-		font-family: 'Fredoka One', cursive;
+		font-family: "Nunito", sans-serif;
 	}
 
 	.group-header {
@@ -106,7 +106,7 @@
 		flex-direction: column;
 	}
 
-	.achievement-card {
+	.achievement__card {
 		display: flex;
 		align-items: flex-start;
 		gap: 1rem;
@@ -190,6 +190,12 @@
 		font-weight: 500;
 		margin: 0;
 		line-height: 1.4;
+	}
+
+	@media (max-width: 768px ) {
+		.achievement__card {
+			width: 100%;
+		}
 	}
 
 </style>

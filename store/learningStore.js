@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
-import { doc, setDoc, getDoc, getFirestore } from 'firebase/firestore'
+import { doc, setDoc, getDoc, getFirestore , updateDoc  } from 'firebase/firestore'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 export const userlangStore = defineStore('learning', () => {
 	const db = getFirestore()
@@ -9,14 +9,14 @@ export const userlangStore = defineStore('learning', () => {
 	const wrongAnswers = ref([])         // тут слова, где были ошибки
 	const selectedTopics = ref([])       // тут выбранные темы (ключи)
 	const selectedWords = ref([])        // тут слова, выбранные для сессии(текущая тема)
-	const points = ref(0)                // тут очки/баллы
-	const totalEarnedPoints = ref(0)
-	const articlesSpentForAchievement = ref(0)
+	const points = ref(100000)                // тут очки/баллы
+	const totalEarnedPoints = ref(1000000)
+	const articlesSpentForAchievement = ref(100000)
 	const currentIndex = ref(0)          // тут индекс текущего слова в сессии
-	const currentModeIndex = ref(0)      // тут индекс текущего способа обучения
+	const currentModeIndex = ref(1000000)      // тут индекс текущего способа обучения
 	const exp = ref(0)                   // тут опыт
 	const isLeveling = ref(0)            // тут уровень
-
+	const isLoaded = ref(false)
 	const topicStats = computed(() => {
 		const stats = {}
 		const topics = [...new Set(words.value.map(w => w.topic).filter(Boolean))]
@@ -99,23 +99,17 @@ export const userlangStore = defineStore('learning', () => {
 	}
 
 	const markAsLearned = async (word, selectedModes = []) => {
-		const requiredModes = selectedModes.length
-			? selectedModes
-			: ['article', 'letters', 'wordArticle', 'audio', 'plural']
-
-		const isFullyLearned = requiredModes.every(mode => word.progress?.[mode] === true)
-		if (!isFullyLearned) return
-		if (!learnedWords.value.find(w => w.de === word.de)) {
-			learnedWords.value.push({ ...word })
-
-			points.value++
-			totalEarnedPoints.value++
-			exp.value++
-			handleLeveling()
-
-			await saveToFirebase()
+		const requiredModes = ['article', 'letters', 'wordArticle', 'audio', 'plural'];
+		const progress = word.progress || {};
+		const allPassed = requiredModes.every(mode => progress[mode] === true);
+		if (!allPassed) return;
+		const alreadyLearned = learnedWords.value.some(w => w.de === word.de);
+		if (!alreadyLearned) {
+			learnedWords.value.push({ ...word });
+			await saveToFirebase();
 		}
 	}
+
 
 	const addWrongAnswers = async (word) => {
 		if (!word || !word.de) return;
@@ -167,6 +161,7 @@ export const userlangStore = defineStore('learning', () => {
 					currentIndex.value = data.currentIndex || 0
 					currentModeIndex.value = data.currentModeIndex || 0
 				}
+				isLoaded.value = true
 				resolve()
 			})
 		})
@@ -222,6 +217,28 @@ export const userlangStore = defineStore('learning', () => {
 		await saveToFirebase()
 	}
 
+	const incrementAchievementProgress = async (id) => {
+		const userDocRef = getUserDocRef()
+		if (!userDocRef) return
+		const docSnap = await getDoc(userDocRef)
+		if (!docSnap.exists()) return
+
+		const data = docSnap.data()
+		if (!data.achievements) data.achievements = {}
+
+		if (!data.achievements[id]) {
+			data.achievements[id] = { currentProgress: 0, targetProgress: 1 }
+		}
+
+		if (data.achievements[id].currentProgress < data.achievements[id].targetProgress) {
+			data.achievements[id].currentProgress += 1
+			await updateDoc(userDocRef, {
+				[`achievements.${id}.currentProgress`]: data.achievements[id].currentProgress
+			})
+		}
+	}
+
+
 	return {
 		words,
 		learnedWords,
@@ -236,6 +253,7 @@ export const userlangStore = defineStore('learning', () => {
 		currentModeIndex,
 		topicStats,
 		articlesSpentForAchievement,
+		isLoaded,
 		handleLeveling,
 		markProgress,
 		markAsLearned,
@@ -247,6 +265,7 @@ export const userlangStore = defineStore('learning', () => {
 		loadFromFirebase,
 		saveToFirebase,
 		clearAll,
-		addWordsToGlobal
+		addWordsToGlobal,
+		incrementAchievementProgress
 	}
 })

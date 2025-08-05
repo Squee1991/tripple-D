@@ -1,0 +1,52 @@
+[
+  {
+    "question": "Die Tomate ist ___.",
+    "options": ["rot", "blau", "grün", "gelb"],
+    "answer": "rot"
+  },
+  {
+    "question": "Der Himmel ist ___.",
+    "options": ["schwarz", "blau", "orange", "braun"],
+    "answer": "blau"
+  },
+  {
+    "question": "Das Gras ist ___.",
+    "options": ["lila", "weiß", "grün", "rot"],
+    "answer": "grün"
+  },
+  {
+    "question": "Die Banane ist ___.",
+    "options": ["grau", "gelb", "rosa", "schwarz"],
+    "answer": "gelb"
+  },
+  {
+    "question": "Der Schnee ist ___.",
+    "options": ["weiß", "blau", "rot", "grün"],
+    "answer": "weiß"
+  },
+  {
+    "question": "Die Karotte ist ___.",
+    "options": ["orange", "lila", "grau", "weiß"],
+    "answer": "orange"
+  },
+  {
+    "question": "Die Kohle ist ___.",
+    "options": ["weiß", "schwarz", "gelb", "blau"],
+    "answer": "schwarz"
+  },
+  {
+    "question": "Der Baumstamm ist ___.",
+    "options": ["braun", "rosa", "lila", "grün"],
+    "answer": "braun"
+  },
+  {
+    "question": "Der Stein ist ___.",
+    "options": ["grau", "bunt", "orange", "rot"],
+    "answer": "grau"
+  },
+  {
+    "question": "Die Aubergine ist ___.",
+    "options": ["lila", "gelb", "weiß", "schwarz"],
+    "answer": "lila"
+  }
+]

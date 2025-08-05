@@ -1,0 +1,52 @@
+[
+  {
+    "question": "Gut___ Wein kommt aus Italien.",
+    "options": ["er", "e", "en", "es"],
+    "answer": "er"
+  },
+  {
+    "question": "Ich trinke gern kalt___ Milch.",
+    "options": ["en", "e", "er", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Frisch___ Brot riecht gut.",
+    "options": ["er", "en", "e", "es"],
+    "answer": "es"
+  },
+  {
+    "question": "Wir essen frisch___ Gemüse.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "es"
+  },
+  {
+    "question": "Er spricht mit nett___ Leuten.",
+    "options": ["en", "e", "er", "em"],
+    "answer": "en"
+  },
+  {
+    "question": "Sie kauft teur___ Schuhe.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Ich höre laut___ Musik.",
+    "options": ["er", "e", "en", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Er trinkt stark___ Kaffee.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Wasser gut___ Qualität ist wichtig.",
+    "options": ["e", "en", "er", "em"],
+    "answer": "er"
+  },
+  {
+    "question": "Aus alt___ Papier macht man neues.",
+    "options": ["e", "er", "em", "en"],
+    "answer": "em"
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "question": "Von allen Tieren rennt der Gepard ___.",
+    "options": ["am schnellsten", "schneller", "schnellste", "am schnell"],
+    "answer": "am schnellsten"
+  },
+  {
+    "question": "Diese Kiste ist schwer, aber die andere ist noch ___.",
+    "options": ["schwerer", "schwer", "am schwersten", "schwersten"],
+    "answer": "schwerer"
+  },
+  {
+    "question": "Für mich war der Urlaub am Meer von allen Reisen ___.",
+    "options": ["am schönsten", "schöner", "schönste", "am schöner"],
+    "answer": "am schönsten"
+  },
+  {
+    "question": "Ein T-Shirt für 5 Euro ist wirklich ___.",
+    "options": ["billig", "billiger", "am billigsten", "billigste"],
+    "answer": "billig"
+  },
+  {
+    "question": "Physik ist interessant, aber Biologie finde ich ___.",
+    "options": ["interessanter", "interessant", "am interessantesten", "interessanteste"],
+    "answer": "interessanter"
+  },
+  {
+    "question": "Der neue Dokumentarfilm war ziemlich ___.",
+    "options": ["langweilig", "langweiliger", "am langweiligsten", "langweiligste"],
+    "answer": "langweilig"
+  },
+  {
+    "question": "Welches Thema in diesem Buch findest du ___?",
+    "options": ["am leichtesten", "leichter", "leichteste", "am leichter"],
+    "answer": "am leichtesten"
+  },
+  {
+    "question": "Diese Regel ist ___ als die vorherige.",
+    "options": ["wichtiger", "wichtig", "am wichtigsten", "wichtigste"],
+    "answer": "wichtiger"
+  },
+  {
+    "question": "Von diesen drei Sängern singt Maria ___.",
+    "options": ["am lautesten", "lauter", "lauteste", "am lauter"],
+    "answer": "am lautesten"
+  },
+  {
+    "question": "Kannst du bitte etwas ___ sprechen? Das Baby schläft.",
+    "options": ["leiser", "leise", "am leisesten", "leiseste"],
+    "answer": "leiser"
+  },
+  {
+    "question": "Von allen Modellen auf dem Markt ist dieses ___.",
+    "options": ["am neuesten", "neuer", "neueste", "neu"],
+    "answer": "am neuesten"
+  },
+  {
+    "question": "Mein Zimmer ist sauber, aber deins ist noch ___.",
+    "options": ["sauberer", "sauber", "am saubersten", "sauberste"],
+    "answer": "sauberer"
+  },
+  {
+    "question": "Nach dem Fußballspiel war sein Trikot ___ von allen.",
+    "options": ["am schmutzigsten", "schmutziger", "schmutzig", "schmutzigste"],
+    "answer": "am schmutzigsten"
+  },
+  {
+    "question": "Anna ist fleißig, aber ihr Bruder ist sogar noch ___.",
+    "options": ["fleißiger", "fleißig", "am fleißigsten", "fleißigste"],
+    "answer": "fleißiger"
+  },
+  {
+    "question": "Am Sonntag bin ich meistens sehr ___.",
+    "options": ["faul", "fauler", "am faulsten", "faulste"],
+    "answer": "faul"
+  },
+  {
+    "question": "Der erste Test war von allen ___.",
+    "options": ["am einfachsten", "einfacher", "einfachste", "einfach"],
+    "answer": "am einfachsten"
+  },
+  {
+    "question": "Klavier spielen ist schwierig, aber Geige ist ___.",
+    "options": ["schwieriger", "schwierig", "am schwierigsten", "schwierigste"],
+    "answer": "schwieriger"
+  },
+  {
+    "question": "Von allen Witzen war seiner ___.",
+    "options": ["am lustigsten", "lustiger", "lustigste", "lustig"],
+    "answer": "am lustigsten"
+  },
+  {
+    "question": "Das neue Museum ist viel ___ als das alte.",
+    "options": ["moderner", "modern", "am modernsten", "modernste"],
+    "answer": "moderner"
+  },
+  {
+    "question": "Dieser Sessel ist von allen im Laden ___.",
+    "options": ["am bequemsten", "bequemer", "bequemste", "bequem"],
+    "answer": "am bequemsten"
+  }
+]

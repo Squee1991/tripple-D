@@ -1,0 +1,62 @@
+[
+  {
+    "type": "verbSeparable",
+    "question": "Ich ___ meine Freundin an.",
+    "options": ["rufe", "rufst", "ruft"],
+    "answer": "rufe"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Wann ___ der Zug an?",
+    "options": ["kommt", "komme", "kommen"],
+    "answer": "kommt"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Jeden Samstag ___ wir im Supermarkt ein.",
+    "options": ["kaufen", "kaufe", "kauft"],
+    "answer": "kaufen"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Bitte ___ du das Fenster zu!",
+    "options": ["machst", "mache", "macht"],
+    "answer": "machst"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Er ___ jeden Abend fern.",
+    "options": ["sieht", "sehe", "seht"],
+    "answer": "sieht"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Wir ___ den Müll raus.",
+    "options": ["bringen", "bringt", "bringe"],
+    "answer": "bringen"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Sie (она) ___ ihre Oma vom Bahnhof ab.",
+    "options": ["holt", "hole", "holen"],
+    "answer": "holt"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Ich ___ gern im Park spazieren.",
+    "options": ["gehe", "gehst", "geht"],
+    "answer": "gehe"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Wann ___ du morgens auf?",
+    "options": ["stehst", "stehe", "steht"],
+    "answer": "stehst"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Ihr ___ eure Freunde zum Essen mit.",
+    "options": ["bringt", "bringe", "bringen"],
+    "answer": "bringt"
+  }
+]

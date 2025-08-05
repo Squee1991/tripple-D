@@ -51,10 +51,9 @@
 </template>
 
 <style scoped>
-	* {
-		font-family: 'Fredoka One', cursive;
-	}
+
 	.leaderboard-item {
+		font-family: "Nunito", sans-serif;
 		border-bottom: 1px solid #3a3f5e;
 		border-radius: 8px;
 		padding: 10px 20px;
