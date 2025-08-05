@@ -9,11 +9,11 @@ export const userlangStore = defineStore('learning', () => {
 	const wrongAnswers = ref([])         // тут слова, где были ошибки
 	const selectedTopics = ref([])       // тут выбранные темы (ключи)
 	const selectedWords = ref([])        // тут слова, выбранные для сессии(текущая тема)
-	const points = ref(0)                // тут очки/баллы
-	const totalEarnedPoints = ref(0)
-	const articlesSpentForAchievement = ref(0)
+	const points = ref(100000)                // тут очки/баллы
+	const totalEarnedPoints = ref(1000000)
+	const articlesSpentForAchievement = ref(100000)
 	const currentIndex = ref(0)          // тут индекс текущего слова в сессии
-	const currentModeIndex = ref(0)      // тут индекс текущего способа обучения
+	const currentModeIndex = ref(1000000)      // тут индекс текущего способа обучения
 	const exp = ref(0)                   // тут опыт
 	const isLeveling = ref(0)            // тут уровень
 	const isLoaded = ref(false)

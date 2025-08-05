@@ -86,7 +86,7 @@ export const cpecialGroupAchievment = [
 				description:"specialCategory.generalSexthText",
 				icon: '💸',
 				currentProgress: 0,
-				targetProgress: 1000,
+				targetProgress: 100,
 			},
 			{
 				id: 'guessedFastWords',
