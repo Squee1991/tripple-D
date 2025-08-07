@@ -26,8 +26,10 @@
                             <div v-if="isStarted && !store.win && !store.lose && store.timeStarted" class="guess__info">
                                 {{ t('guessWord.time') }} {{ timePassed }} {{ t('guessWord.sec') }}
                             </div>
-                            <div class="guess__info">{{ t('guessWord.try')}} <span
-                                    class="guess__attempts-value">{{ store.attempts }}</span></div>
+                          <AnimatedCounter :end-value="timePassed" />
+                            <div class="guess__info">{{ t('guessWord.try')}}
+                              <span class="guess__attempts-value">{{ store.attempts }}</span>
+                            </div>
                         </div>
                         <button class="guess__restart" @click="startGame" title="Начать заново"><img
                                 src="../assets/images/undo.svg" alt="restart"></button>
@@ -104,7 +106,6 @@
 </template>
 
 <script setup>
-
     import {ref, watch, onUnmounted} from 'vue'
     import {useGuessWordStore} from '../store/guesStore.js'
     import {useRouter} from 'vue-router'
@@ -141,7 +142,7 @@
     function checkArticle() {
         if (!store.currentWordObj) return
         const correct = articleGuess.value.trim().toLowerCase() === store.currentWordObj.article.toLowerCase()
-        articleResult.value = correct ? 'Верно!' : `Неверно. Это было: ${store.currentWordObj.article}`
+        articleResult.value = correct ? t('trainerPage.right') : `${t('trainerPage.false')}   ${store.currentWordObj.article}`
     }
 
     function closeArticleModal() {
@@ -470,7 +471,7 @@
         min-height: 80px;
         font-family: 'Caveat', cursive;
         color: #fff;
-        font-size: 4.5rem;
+        font-size: 2.5rem;
         letter-spacing: 0.5rem;
     }
 

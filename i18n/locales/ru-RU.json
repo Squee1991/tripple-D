@@ -144,7 +144,7 @@
     "guessed": "Загаданное слово было:",
     "tryAgain": "Попробовать снова",
     "btnToMain": "На главную",
-    "placeholder": "Введите слово целиком"
+    "placeholder": "Введите слово целиком",
   },
   "preposition": {
     "title": "Всё о немецких предлогах",
@@ -711,7 +711,7 @@
     "guessFourthText": "Отгадайте 200 слов.",
     "guessfifthLabel": "Хранитель Мудрости.",
     "guessfifthText": "Отгадайте 600 слов.",
-    "mistakesAward": "Награда: Талисман терпения"
+    "guessfifthAward": "Награда: Талисман терпения"
   },
   "marathonEasyMode": {
     "correctLabel": "Угаданые слова",
