@@ -23,6 +23,7 @@
     "firebase-functions": "^6.3.2",
     "gsap": "^3.13.0",
     "lottie-web": "^5.13.0",
+    "motion-v": "^1.7.0",
     "nuxt": "^3.15.0",
     "nuxt-vuefire": "^1.0.5",
     "phaser": "^3.90.0",

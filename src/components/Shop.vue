@@ -1,12 +1,12 @@
 <template>
     <div class="shop-wrapper">
         <h2 class="shop-title">Магазин</h2>
-
         <div class="shop-tabs">
             <button
                     v-for="tab in shopTabs"
                     :key="tab.key"
                     :class="{ active: currentShopTab === tab.key }"
+                    class="shop__buttons"
                     @click="currentShopTab = tab.key"
             >
                 <img v-if="tab.icon.endsWith('.svg')" class="tab-icon" :src="tab.icon" alt=""/>
@@ -14,11 +14,9 @@
                 <span class="tab-label">{{ tab.label }}</span>
             </button>
         </div>
-
         <transition name="slide-up" mode="out-in">
             <div class="shop-content" :key="currentShopTab">
                 <Skills v-if="currentShopTab === 'skills'"/>
-
                 <div v-if="currentShopTab === 'avatars'" class="items-grid">
                     <div
                             v-for="item in items"
@@ -32,12 +30,9 @@
                         <button @click="buy(item)" :disabled="item.cost > points">Купить</button>
                     </div>
                 </div>
-
-
                 <div v-if="currentShopTab === 'custom'" class="placeholder">
                     Тут будет кастомизация интерфейса
                 </div>
-
                 <div v-if="currentShopTab === 'backgrounds'" class="placeholder">
                     Тут будут фоны для выбора
                 </div>
@@ -95,7 +90,7 @@ async function buy(item) {
 </script>
 
 <style scoped>
-/* (Без изменений, всё изначально корректно) */
+
 .shop-wrapper {
     background-color: #fff8dc;
     padding: 2rem;
@@ -131,18 +126,6 @@ async function buy(item) {
     box-shadow: 4px 4px 0 #1e1e1e;
 }
 
-.shop-tabs button.active::after {
-    content: '';
-    position: absolute;
-    bottom: -6px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40%;
-    height: 3px;
-    background-color: #f97316;
-    border-radius: 2px;
-}
-
 .shop-content {
     min-height: 300px;
 }
@@ -151,6 +134,11 @@ async function buy(item) {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     gap: 1.5rem;
+}
+
+.shop__buttons {
+  display: flex;
+  align-items: center;
 }
 
 .shop-item.locked img {
@@ -245,5 +233,10 @@ button:disabled {
 
 .tab-icon {
     width: 30px;
+}
+
+.tab-label {
+  font-size: 20px;
+  margin-right: 5px;
 }
 </style>

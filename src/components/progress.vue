@@ -128,7 +128,7 @@
 <style scoped>
     .page-wrapper {
         background-color: #fef8e4;
-        min-height: 100vh;
+
         padding: 2rem;
         display: flex;
         justify-content: center;

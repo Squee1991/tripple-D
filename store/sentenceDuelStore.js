@@ -28,7 +28,7 @@ export const useGameStore = defineStore('game', () => {
         }
     }
     async function loadLocalTasks(level) {
-        const all = sentencesStore.db?.levels[level]?.sentences || []
+        const all =  sentencesStore.db?.levels[level]?.sentences || []
         localTasks.value = all.sort(() => Math.random() - 0.5).slice(0, 8)
     }
 
@@ -236,7 +236,7 @@ export const useGameStore = defineStore('game', () => {
         try {
             const sessionRef = doc(db, 'gameSessions', gameId.value);
             let isGameOver = false;
-            let finalSessionDataForStats = null; // Здесь будем хранить финальные данные для статистики
+            let finalSessionDataForStats = null;
 
             await runTransaction(db, async (transaction) => {
                 const sessionDoc = await transaction.get(sessionRef);
@@ -275,7 +275,6 @@ export const useGameStore = defineStore('game', () => {
                     transaction.update(sessionRef, updates);
 
                     if (isGameOver) {
-                        // Вручную собираем финальные данные, чтобы они были 100% верными
                         const finalPlayers = JSON.parse(JSON.stringify(data.players));
                         finalPlayers[winnerId].score = newScore;
                         finalSessionDataForStats = { ...data, ...updates, players: finalPlayers };
@@ -283,8 +282,6 @@ export const useGameStore = defineStore('game', () => {
                 }
             });
 
-            // ----- ЛОГИКА ИЗ HANDLEGAMEEND ТЕПЕРЬ ЗДЕСЬ -----
-            // После транзакции, если игра закончилась, обновляем статистику напрямую
             if (isGameOver && finalSessionDataForStats) {
                 console.log("ФИНАЛ: Игра окончена, обновляю статистику...");
                 const myUserId = authStore.uid;

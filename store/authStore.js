@@ -28,6 +28,7 @@ export const userAuthStore = defineStore('auth', () => {
 	const subscriptionEndsAt = ref(null)
 	const subscriptionCancelled = ref(false)
 	const availableAvatars = ref([ '1.png', '2.png', '3.png', '4.png', '5.png', '6.png',  '12.png', '7.png', '8.png' , '9.png' , '10.png' , '11.png' , '13.png', '14.png']);
+	const ownedAvatars = ref(['1.png', '2.png']);
 	const isPremium = ref(false)
 	const isGoogleUser = computed(() => providerId.value === 'google.com');
 	const getAvatarUrl = (fileName) => {
@@ -70,7 +71,8 @@ export const userAuthStore = defineStore('auth', () => {
 		isPremium.value = data.isPremium || false
 		subscriptionEndsAt.value = data.subscriptionEndsAt || null
 		subscriptionCancelled.value = data.subscriptionCancelled || false
-		providerId.value = data.providerId || ''
+		providerId.value = data.providerId || '',
+		ownedAvatars.value = data.ownedAvatars || ['1.png', '2.png'];
 		if(!wasPremium && isPremium.value) {
 			grantPremiumBonusPoints()
 		}
@@ -99,6 +101,7 @@ export const userAuthStore = defineStore('auth', () => {
 		const userDoc = await getDoc(userDocRef);
 		if (!userDoc.exists()) {
 			await setDoc(userDocRef, {
+				ownedAvatars: ['1.png', '2.png'],
 				name: user.displayName,
 				email: user.email,
 				registeredAt: serverTimestamp(),
@@ -118,7 +121,8 @@ export const userAuthStore = defineStore('auth', () => {
 			isPremium: userDataFromDb.isPremium || false,
 			subscriptionEndsAt: userDataFromDb.subscriptionEndsAt || null,
 			subscriptionCancelled: userDataFromDb.subscriptionCancelled || false,
-			providerId: user.providerData[0]?.providerId || ''
+			providerId: user.providerData[0]?.providerId || '',
+			ownedAvatars: userDataFromDb.ownedAvatars || ['1.png', '2.png']
 		});
 	};
 
@@ -130,6 +134,7 @@ export const userAuthStore = defineStore('auth', () => {
 		await sendEmailVerification(user)
 		const defaultAvatar = '1.png';
 		await setDoc(doc(db, 'users', user.uid), {
+			ownedAvatars: ['1.png', '2.png'],
 			name: userData.name,
 			email: userData.email,
 			registeredAt: serverTimestamp(),
@@ -166,7 +171,8 @@ export const userAuthStore = defineStore('auth', () => {
 			isPremium: userDataFromDb.isPremium || false,
 			subscriptionEndsAt: userDataFromDb.subscriptionEndsAt || null,
 			subscriptionCancelled: userDataFromDb.subscriptionCancelled || false,
-			providerId: user.providerData[0]?.providerId || ''
+			providerId: user.providerData[0]?.providerId || '',
+			ownedAvatars: userDataFromDb.ownedAvatars || ['1.png', '2.png']
 		})
 	}
 
@@ -199,6 +205,27 @@ export const userAuthStore = defineStore('auth', () => {
 		}
 	};
 
+	const purchaseAvatar = async (fileName) => {
+		const langStore = userlangStore();
+		if (ownedAvatars.value.includes(fileName)) return;
+
+		if (langStore.points < 50) {
+			throw new Error('Недостаточно Артиклюсов!');
+		}
+
+		// Списываем очки
+		langStore.points -= 50;
+		langStore.articlesSpentForAchievement += 50;
+		await langStore.saveToFirebase();
+
+		// Добавляем в купленные
+		ownedAvatars.value.push(fileName);
+
+		const userDocRef = doc(db, 'users', uid.value);
+		await updateDoc(userDocRef, {
+			ownedAvatars: ownedAvatars.value
+		});
+	};
 
 
 	const logOut = async () => {
@@ -231,7 +258,8 @@ export const userAuthStore = defineStore('auth', () => {
 						isPremium: userDataFromDb.isPremium || false,
 						subscriptionEndsAt: userDataFromDb.subscriptionEndsAt || null,
 						subscriptionCancelled: userDataFromDb.subscriptionCancelled || false,
-						providerId: user.providerData[0]?.providerId || ''
+						providerId: user.providerData[0]?.providerId || '',
+						ownedAvatars: userDataFromDb.ownedAvatars || ['1.png', '2.png']
 					})
 				}
 			} else {
@@ -255,6 +283,8 @@ export const userAuthStore = defineStore('auth', () => {
 		isPremium,
 		subscriptionEndsAt,
 		subscriptionCancelled,
+		ownedAvatars,
+		purchaseAvatar,
 		registerUser,
 		logOut,
 		loginUser,
