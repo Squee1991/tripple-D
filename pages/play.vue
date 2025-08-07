@@ -155,7 +155,7 @@
         router.push('/')
         gameStore.cancelSearch()
     }
-    function handleFindGameClick(level) {
+    async function  handleFindGameClick(level) {
         if (!authStore.uid)  {
             showAuthModal.value = true
             return
@@ -163,9 +163,13 @@
 
         if (mode.value === 'online') {
             gameStore.findGame(level)
-        } else {
-            router.push({ path: '/duel-solo', query: { level } })
         }
+
+        else {
+
+            setTimeout(() => {
+                router.push({ path: '/duel-solo', query: { level } })
+            } , 3000)        }
     }
     watch(() => gameStore.sessionData?.status, (newStatus) => {
         if (mode.value === 'online' && newStatus === 'starting') {

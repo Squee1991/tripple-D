@@ -48,7 +48,7 @@
         questStore.loadDailyProgress()
         cardStore.loadCreatedCount()
         statsStore.loadLocalStats()
-        authStore
+
     })
 
     // onMounted(() => {

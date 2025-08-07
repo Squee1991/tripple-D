@@ -27,8 +27,14 @@ export const useGameStore = defineStore('game', () => {
             achievements.value = userDoc.data().achievements || {};
         }
     }
+
     async function loadLocalTasks(level) {
-        const all = sentencesStore.db?.levels[level]?.sentences || []
+        const start = Date.now()
+        while (!sentencesStore.db?.levels?.[level]?.sentences && Date.now() - start < 2000) {
+            await new Promise(resolve => setTimeout(resolve, 50))
+        }
+
+        const all = sentencesStore.db?.levels?.[level]?.sentences || []
         localTasks.value = all.sort(() => Math.random() - 0.5).slice(0, 8)
     }
 
@@ -278,7 +284,7 @@ export const useGameStore = defineStore('game', () => {
                         // Вручную собираем финальные данные, чтобы они были 100% верными
                         const finalPlayers = JSON.parse(JSON.stringify(data.players));
                         finalPlayers[winnerId].score = newScore;
-                        finalSessionDataForStats = { ...data, ...updates, players: finalPlayers };
+                        finalSessionDataForStats = {...data, ...updates, players: finalPlayers};
                     }
                 }
             });
