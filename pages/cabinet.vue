@@ -24,6 +24,9 @@
     <!--            <button class="sidebar-btn" title="Настройки">⚙️</button>-->
     <!--        </div>-->
     <div class="main-content">
+      <button @click="backToMain" class="btn__back">
+        На главную
+      </button>
       <div class="header">
         <div class="user-block">
           <div class="avatar-container">
@@ -43,7 +46,7 @@
           </div>
         </div>
         <div v-for="img in unlockedAwards" class="awards__display">
-          <img :title="img.title" :src="img.icon" :alt="img.title">
+          <img class="awards__display-icons" :title="img.title" :src="img.icon" :alt="img.title">
         </div>
       </div>
       <div class="tabs">
@@ -55,10 +58,10 @@
           <img class="tab-icon" src="../assets/images/progress.svg" alt="">
           <span>Прогресс</span>
         </button>
-<!--        <button class="tab" :class="{ active: activeTab === 'shop' }" @click="setTab('shop')">-->
-<!--          <img class="tab-icon" src="../assets/images/chest.png" alt="">-->
-<!--          <span>Магазин</span>-->
-<!--        </button>-->
+        <!--        <button class="tab" :class="{ active: activeTab === 'shop' }" @click="setTab('shop')">-->
+        <!--          <img class="tab-icon" src="../assets/images/chest.png" alt="">-->
+        <!--          <span>Магазин</span>-->
+        <!--        </button>-->
         <button class="tab" :class="{ active: activeTab === 'award' }" @click="setTab('award')">
           <img class="tab-icon" src="../assets/images/awards/medal.svg" alt="">
           <span>Награды</span>
@@ -198,7 +201,6 @@ import wisdomStatue from '../assets/awards/wisdom statue.svg'
 import {cpecialGroupAchievment} from '../src/achieveGroup/specialAchieve/specialAchievment.js';
 import {overAchievment} from '../src/achieveGroup/overAllAchieve/overallAchievements.js'
 import {useGameStore} from '../store/marafonStore.js'
-
 const {t} = useI18n()
 const isToggle = ref(false)
 const authStore = userAuthStore()
@@ -223,6 +225,10 @@ const awards = ref([
   {id: 5, title: 'Талисман терпения', icon: talismanOfPatience, locked: true},
   {id: 6, title: 'На последнем дыхании', icon: wisdomStatue, locked: true},
 ])
+
+const backToMain = () => {
+  router.push('/')
+}
 
 const unlockedAwards = computed(() =>
     awards.value.filter(a => !a.locked)
@@ -407,8 +413,13 @@ watch(unlockedAwards, (val) => {
 
 <style scoped>
 
-.awards__display {
+.awards__display-icons {
   width: 90px;
+}
+
+.awards__display {
+  display: flex;
+  justify-content: start;
 }
 
 .delete-error {
@@ -416,6 +427,27 @@ watch(unlockedAwards, (val) => {
   font-size: 0.8rem;
   margin-top: 0.3rem;
   font-weight: bold;
+}
+
+.btn__back {
+  top: 10px;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 3px solid #1e1e1e;
+  padding: 15px;
+  background: #f1c40f;
+  border-radius: 16px;
+  cursor: pointer;
+  color: #1e1e1e;
+  font-size: 1.2rem;
+  font-family: "Nunito", sans-serif;
+  box-shadow: 4px 4px 0px #1e1e1e;
+  transition: all 0.1s ease-in-out;
+  margin-bottom: 1.5rem;
+  flex-shrink: 0;
+  position: fixed;
+  z-index: 100000;
 }
 
 .input {
@@ -508,10 +540,9 @@ watch(unlockedAwards, (val) => {
 }
 
 .cabinet-wrapper {
-  display: flex;
   min-height: 100vh;
   background: #fef8e4;
-  font-family: 'Inter', sans-serif;
+  font-family: "Nunito", sans-serif;
   color: #1e1e1e;
 }
 
@@ -576,6 +607,7 @@ watch(unlockedAwards, (val) => {
   align-items: flex-start;
   gap: 1.5rem;
   padding-bottom: 2rem;
+  padding: 10px;
 }
 
 .user-block {
@@ -586,6 +618,7 @@ watch(unlockedAwards, (val) => {
 
 .avatar-container {
   position: relative;
+  width: 100px;
 }
 
 .avatar-current, .avatar-placeholder {
@@ -734,9 +767,10 @@ watch(unlockedAwards, (val) => {
 .tab-content-wrapper {
   background-color: #fff;
   border: 3px solid #1e1e1e;
-  box-shadow: 8px 8px 0 #e5e7eb;
+  box-shadow: 4px 4px 0 #00000f;
   padding: 1.5rem;
   border-radius: 16px;
+  overflow: hidden;
 }
 
 .row {
@@ -1056,5 +1090,86 @@ watch(unlockedAwards, (val) => {
   box-shadow: 2px 2px 0 black;
 }
 
+@media (max-width: 1023px) {
+  .tabs {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 140px;
+    padding: 0.5rem 0;
+    z-index: 999;
+    align-items: end;
+    justify-content: center;
+    background: #fef8e4;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom: 3px solid #1e1e1e;
+  }
 
+  .tab {
+    padding: 0.3rem;
+    font-size: 0.9rem;
+    text-align: center;
+    justify-content: center;
+    gap: 4px;
+
+  }
+
+  .main-content {
+    margin-top: 125px;
+  }
+
+  .tab-icon {
+    width: 23px;
+    height: 26px;
+  }
+
+  .exp-bar {
+    width: 100%;
+  }
+
+  .tab-content-wrapper {
+    padding: 10px;
+    background: none;
+    border-top: 3px solid black;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+    box-shadow: none;
+    padding: 22px 0 0 0 ;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+
+  .subscription-status-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main-content {
+    padding: 16px
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .shop-item {
+    width: 50%;
+  }
+
+  .items-grid {
+    width: 100%;
+  }
+
+}
 </style>

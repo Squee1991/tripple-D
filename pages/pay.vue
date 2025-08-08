@@ -1,217 +1,250 @@
 <template>
-    <div class="comic-wrapper">
-        <h1 class="comic-title">🔥 Подключи суперсилу!</h1>
-        <p class="comic-description">
-            Получи доступ ко всем функциям платформы: обучение, озвучка, прогресс, онлайн-сражения и многое другое!
-        </p>
-        <div class="mode-toggle-wrapper">
-            <div
-                    class="mode-toggle-option"
-                    :class="{ 'mode-toggle-option--inactive': plan !== 'monthly' }"
-                    @click="plan = 'monthly'"
-            >
-                📆 Месяц
-            </div>
-            <div
-                    class="mode-toggle-option"
-                    :class="{ 'mode-toggle-option--inactive': plan !== 'yearly' }"
-                    @click="plan = 'yearly'"
-            >
-                📅 Год
-            </div>
-            <div class="mode-toggle-slider" :class="{ 'mode-toggle-slider--local': plan === 'yearly' }"></div>
+  <div class="comic-wrapper">
+    <div class="comic__wrapper">
+      <div class="comic__header">
+        <h2 class="comic-description">Получи максимум от платформы</h2>
+        <p class="sub__description">Обучение, награды, задания, прогресс и многое другое!</p>
+      </div>
+      <div class="subscription-box">
+        <div class="compare-header">
+          <span class="label">Функции</span>
+          <span class="label">Бесплатно</span>
+          <span class="label super-label">Подписка</span>
         </div>
-        <div class="subscription-box">
-            <h2 class="price">
-                {{ plan === 'monthly' ? '1.99€ / месяц' : '1.99€ / год' }}
-            </h2>
-            <ul class="benefits">
-                <li>✅ Онлайн-сражения</li>
-                <li>✅ Дополнительные артиклюсы</li>
-                <li>✅ Все режимы обучения</li>
-                <li>✅ Озвучка всех слов</li>
-                <li>✅ Поддержка разработчиков</li>
-                <li>✅ Тесты всех уровней</li>
-                <li>✅ Доступ к будущим функциям</li>
-            </ul>
-            <button
-                    v-if="!authStore.isPremium"
-                    class="pay-btn"
-                    @click="pay"
-            >
-                Оплатить {{ plan === 'monthly' ? 'за месяц' : 'за год' }}
-            </button>
+
+        <div class="compare-row" v-for="(feature, index) in features" :key="index">
+          <div class="compare__label">
+            <img class="compare__icon" :src="feature.icon" alt="">
+            <span class="compare__label-text">{{ feature.title }}</span>
+          </div>
+          <span>{{ feature.free ? '✔️' : '—' }}</span>
+          <span>{{ feature.premium ? '✔️' : '—' }}</span>
         </div>
+
+        <button
+            v-if="!authStore.isPremium"
+            class="pay-btn"
+            ref="payButton"
+            @click="pay"
+        >
+          Приобрести подписку  5.99$
+        </button>
+      </div>
     </div>
+    <transition name="slide-up">
+      <div v-if="showStickyFooter && !authStore.isPremium" class="sticky-footer">
+        <button class="footer-btn" @click="pay">Приобрести подписку 5.99$</button>
+      </div>
+    </transition>
+  </div>
 </template>
 
+
+
 <script setup>
-import {ref, computed} from 'vue'
-import {userAuthStore} from '../store/authStore.js'
-import {getStripe} from '@/utils/stripe'
+import { ref, onMounted, onUnmounted } from 'vue'
+import { userAuthStore } from '../store/authStore'
+import { getStripe } from '@/utils/stripe'
+import Books from '../assets/images/pay-images/books.svg'
+import Save from '../assets/images/pay-images/save.svg'
+import Ach from '../assets/images/pay-images/ach.svg'
+import Translate from '../assets/images/pay-images/translate.svg'
+import Award from '../assets/images/pay-images/award.svg'
+import Quests from '../assets/images/pay-images/Quests.svg'
+import Speaker from '../assets/images/pay-images/speaker.svg'
+import Exams from '../assets/images/pay-images/test.svg'
+import Competitions from '../assets/images/pay-images/competition.svg'
+import Future from '../assets/images/pay-images/future.svg'
 
 const authStore = userAuthStore()
-const plan = ref('monthly')
+const payButton = ref(null)
+const showStickyFooter = ref(false)
+let observer
+const features = [
+  { title: 'Учебный материал', free: true, premium: true , icon: Books},
+  { title: 'Сохранение прогресса', free: true, premium: true, icon: Save },
+  { title: 'Достижения', free: true, premium: true, icon: Ach },
+  { title: 'Переводчик', free: true, premium: true, icon: Translate },
+  { title: 'Получение наград', free: false, premium: true, icon: Award },
+  { title: 'Тесты с проверкой ИИ', free: false, premium: true, icon: Exams },
+  { title: 'Ежедневные задания', free: false, premium: true, icon: Quests },
+  { title: 'Озвучка', free: false, premium: true, icon: Speaker },
+  { title: 'Дуэли и рейтинг', free: false, premium: true, icon: Competitions },
+  { title: 'Будущие функциям', free: false, premium: true, icon: Future },
+]
 
+onMounted(() => {
+  observer = new IntersectionObserver(
+      ([entry]) => {
+        showStickyFooter.value = !entry.isIntersecting
+      },
+      { threshold: 1.0 }
+  )
 
+  if (payButton.value) {
+    observer.observe(payButton.value)
+  }
+})
+
+onUnmounted(() => {
+  if (observer && payButton.value) {
+    observer.unobserve(payButton.value)
+  }
+})
 
 async function pay() {
-    if (!authStore.uid || !authStore.email) {
-        alert('Сначала войди в аккаунт')
-        return
-    }
+  if (!authStore.uid || !authStore.email) {
+    alert('Сначала войди в аккаунт')
+    return
+  }
 
-    const priceId = plan.value === 'monthly'
-        ? 'price_1RqDZU0mqXJB1TZDSVvs8yyQ'
-        : 'price_yearly_id'
+  const priceId = 'price_1RqDZU0mqXJB1TZDSVvs8yyQ'
+  const response = await $fetch('/api/stripe/checkout', {
+    method: 'POST',
+    body: {
+      userId: authStore.uid,
+      email: authStore.email,
+      priceId,
+    },
+  })
 
-    const response = await $fetch('/api/stripe/checkout', {
-        method: 'POST',
-        body: {
-            userId: authStore.uid,
-            email: authStore.email,
-            priceId,
-        },
-    })
-
-    const stripe = await getStripe()
-    await stripe.redirectToCheckout({sessionId: response.sessionId})
+  const stripe = await getStripe()
+  await stripe.redirectToCheckout({ sessionId: response.sessionId })
 }
-
-
 </script>
+
 
 
 <style scoped>
 .comic-wrapper {
-    min-height: 100vh;
-    background-color: #fffbea;
-    padding: 60px 20px;
-    font-family: 'Bangers', cursive;
-    text-align: center;
-    color: #1e1e1e;
+  background: linear-gradient(to bottom, #261d12, #22193f);
 }
 
-.comic-title {
-    font-size: 3.5rem;
-    color: #e53935;
-    text-shadow: 3px 3px 0 #000;
-    margin-bottom: 20px;
+.comic__wrapper {
+  padding: 25px;
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+  color: #fff;
+  min-height: 100vh;
 }
 
+.compare__label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+  gap: 20px;
+}
+.compare__label-text {
+  width: 200px;
+  display: flex;
+  justify-content: start;
+}
 .comic-description {
-    font-size: 1.5rem;
-    margin-bottom: 40px;
-    color: #333;
-    max-width: 700px;
-    margin-inline: auto;
-    font-family: 'Nunito', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.compare__icon {
+  width: 40px;
+}
+
+.comic__header {
+  margin-bottom: 10px;
 }
 
 .subscription-box {
-    background: #fff;
-    border: 4px solid #000;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 6px 6px 0 #000;
-    display: inline-block;
-    min-width: 320px;
-    max-width: 440px;
-    font-family: 'Nunito', sans-serif;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #fff;
+  border-radius: 20px;
+  padding: 30px 20px;
+  max-width:1000px;
+  margin: 0 auto;
+  backdrop-filter: blur(10px);
 }
 
-.price {
-    font-size: 2rem;
-    color: #ff5722;
-    margin-bottom: 20px;
-    font-weight: bold;
+.compare-header, .compare-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 1.1rem;
 }
 
-.benefits {
-    text-align: left;
-    margin: 0 auto 30px;
-    padding-left: 0;
-    list-style: none;
+.compare-header {
+  font-weight: bold;
+  border-bottom: 2px solid #fff;
 }
 
-.benefits li {
-    font-size: 1.2rem;
-    margin: 12px 0;
-    position: relative;
-    padding-left: 30px;
+.super-label {
+  color: #fff;
+  background: linear-gradient(to right, #b04727, #ff9900);
+  border-radius: 25px;
+  font-weight: bold;
 }
 
-.benefits li::before {
-    content: '💥';
-    position: absolute;
-    left: 0;
-    top: 0;
+.label {
+  padding: 10px;
 }
 
 .pay-btn {
-    width: 100%;
-    background: #81c784;
-    color: #1e1e1e;
-    font-size: 1.3rem;
-    font-weight: bold;
-    padding: 14px 24px;
-    border: 3px solid #000;
-    border-radius: 12px;
-    cursor: pointer;
-    box-shadow: 4px 4px 0 #000;
-    transition: background 0.2s ease, transform 0.1s;
+  margin-top: 30px;
+  background: #00e676;
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 #000;
+  transition: background 0.2s ease;
 }
 
 .pay-btn:hover {
-    background: #66bb6a;
-    transform: translateY(-2px);
+  background: #00c853;
 }
 
-
-.mode-toggle-wrapper {
-    width: 320px;
-    display: flex;
-    background: #fff;
-    border-radius: 16px;
-    position: relative;
-    margin: 2rem auto;
-    box-shadow: 4px 4px 0px #1e1e1e;
-    border: 3px solid #1e1e1e;
-    overflow: hidden;
-    padding: 4px;
+.sticky-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(90deg, #222 0%, #3b2f63 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+  border-top: 2px solid #fff2;
 }
 
-.mode-toggle-option {
-    flex: 1;
-    text-align: center;
-    padding: 14px 5px;
-    cursor: pointer;
-    color: #fff;
-    font-family: "Nunito", sans-serif;
-    font-weight: 700;
-    font-size: 1.1rem;
-    transition: color 0.4s cubic-bezier(.38, 1.32, .39, 1);
-    user-select: none;
-    z-index: 1;
+.footer-btn {
+  background: #ffffff;
+  color: #111;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 18px 36px;
+  border-radius: 14px;
+  box-shadow: 0 4px #000;
+  border: none;
+  transition: all 0.2s ease;
+}
+.footer-btn:hover {
+  background: linear-gradient(to right, #b04727, #ff9900);
+  transform: translateY(-2px);
+  color: white;
 }
 
-.mode-toggle-option--inactive {
-    color: #1e1e1e;
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
-
-.mode-toggle-slider {
-    position: absolute;
-    top: 4px;
-    left: 4px;
-    width: calc(50% - 4px);
-    height: calc(100% - 8px);
-    background: #1e1e1e;
-    border-radius: 12px;
-    transition: transform 0.4s cubic-bezier(.38, 1.32, .39, 1);
-    z-index: 0;
-}
-
-.mode-toggle-slider--local {
-    transform: translateX(100%);
+.slide-up-enter-from,
+.slide-up-leave-to {
+  transform: translateY(100%);
+  opacity: 0;
 }
 </style>
