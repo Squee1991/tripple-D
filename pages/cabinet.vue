@@ -201,7 +201,9 @@ import wisdomStatue from '../assets/awards/wisdom statue.svg'
 import {cpecialGroupAchievment} from '../src/achieveGroup/specialAchieve/specialAchievment.js';
 import {overAchievment} from '../src/achieveGroup/overAllAchieve/overallAchievements.js'
 import {useGameStore} from '../store/marafonStore.js'
+import { useAchievementStore } from '../store/achievementStore.js'
 const {t} = useI18n()
+const achievementStore = useAchievementStore()
 const isToggle = ref(false)
 const authStore = userAuthStore()
 const learningStore = userlangStore()
@@ -217,13 +219,21 @@ const overAllAchievments = ref(overAchievment)
 const showDeleteModal = ref(false)
 const errorDeletePassword = ref('')
 const isGoogleUser = computed(() => authStore.isGoogleUser);
+const achievementToAwardMap = {
+    'registerAchievement': 'Значок участника',
+    'wrong100Answers': 'Талисман терпения',
+    'SiteRegular': 'Медаль ветерана',
+    'Articlus': 'Алмаз артиклеуса',
+    'level10': 'Золотая статуэтка',
+    'LastChance': 'На последнем дыхании'
+}
 const awards = ref([
-  {id: 1, title: 'Алмаз артиклеуса', icon: WasteMoney, locked: true},
-  {id: 2, title: 'Значок участника', icon: IdCard, locked: true},
-  {id: 3, title: 'Золотая статуэтка', icon: goldStatuette, locked: true},
-  {id: 4, title: 'Медаль ветерана', icon: veteranMedal, locked: true},
-  {id: 5, title: 'Талисман терпения', icon: talismanOfPatience, locked: true},
-  {id: 6, title: 'На последнем дыхании', icon: wisdomStatue, locked: true},
+    {id: 1, title: 'Алмаз артиклеуса', icon: WasteMoney, locked: true},
+    {id: 2, title: 'Значок участника', icon: IdCard, locked: true},
+    {id: 3, title: 'Золотая статуэтка', icon: goldStatuette, locked: true},
+    {id: 4, title: 'Медаль ветерана', icon: veteranMedal, locked: true},
+    {id: 5, title: 'Талисман терпения', icon: talismanOfPatience, locked: true},
+    {id: 6, title: 'На последнем дыхании', icon: wisdomStatue, locked: true},
 ])
 
 const backToMain = () => {
@@ -337,40 +347,29 @@ watch(isAvatarModalOpen, (newValue) => {
     selectedAvatar.value = authStore.avatar;
   }
 });
-watch(() => authStore.uid, (newUid) => {
-  if (!newUid) return
+watchEffect(() => {
+    for (const group of achievementStore.groups) {
+        for (const ach of group.achievements) {
+            if (ach.currentProgress >= ach.targetProgress) {
+                const awardTitle = achievementToAwardMap[ach.id]
+                if (!awardTitle) continue
 
-  const startAward = awards.value.find(a => a.title === 'Значок участника')
-  if (startAward && startAward.locked) {
-    startAward.locked = false
-  }
-}, {immediate: true})
+                const award = awards.value.find(a => a.title === awardTitle)
+                if (award && award.locked) {
+                    award.locked = false
 
-
-watch(
-    () => marathonStore.lastChanceProgress,
-    (newProgress) => {
-      const ach = findById('LastChance');
-      if (!ach) return;
-      ach.currentProgress = Math.min(newProgress, ach.targetProgress);
-      if (ach.currentProgress >= ach.targetProgress) {
-        const award = awards.value.find(a => a.title === 'На последнем дыхании');
-        if (award && award.locked) {
-          award.locked = false;
-
-
-          dataModal.value = {
-            title: 'Поздравляем!',
-            text: `Вы получили награду «${award.title}»!`,
-            img: award.value.icon
-          };
-          openModal.value = true;
+                    // Показать модальное окно
+                    dataModal.value = {
+                        title: 'Поздравляем!',
+                        text: `Вы получили награду «${award.title}»!`,
+                        img: award.icon
+                    }
+                    openModal.value = true
+                }
+            }
         }
-      }
-    },
-    {immediate: true}
-);
-
+    }
+})
 
 const selectAvatar = (avatarName) => {
   selectedAvatar.value = avatarName;

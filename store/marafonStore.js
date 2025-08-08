@@ -194,26 +194,30 @@ export const useGameStore = defineStore('game', () => {
             }
         } else {
             lives.value--;
-            // sessionStreak.value = 0;
+            sessionStreak.value = 0;
+            fastAnswerStreak.value = 0;
         }
 
         if (difficulty.value === 1 && lives.value === 1) {
             if (sessionStreak.value > lastChanceProgress.value) {
-                lastChanceProgress.value = Math.min(sessionStreak.value, 10);
+                lastChanceProgress.value = Math.min(sessionStreak.value, 20);
             }
         }
         if (difficulty.value === 1 && lives.value === 5) {
             if (sessionStreak.value > marginForErrorProgress.value) {
-                marginForErrorProgress.value = Math.min(sessionStreak.value, 10);
+                marginForErrorProgress.value = Math.min(sessionStreak.value, 20);
             }
         }
         if (isCorrect && difficulty.value === 3 && timeLeft >= 2) {
             fastAnswerStreak.value++;
         } else {
-            // fastAnswerStreak.value = 0;
+            if (!isCorrect) {
+                sessionStreak.value = 0;
+                fastAnswerStreak.value = 0;
+            }
         }
         if (fastAnswerStreak.value > onTheEdgeProgress.value) {
-            onTheEdgeProgress.value = Math.min(fastAnswerStreak.value, 10);
+            onTheEdgeProgress.value = Math.min(fastAnswerStreak.value, 20);
         }
 
         if (isCorrect) {
