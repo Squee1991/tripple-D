@@ -117,13 +117,13 @@ async function translateText() {
 
 <style scoped>
 .translator-sticker {
-  width: 85%;
+  width: 95%;
   max-width: 800px;
   margin: 0 auto;
   background: linear-gradient(145deg, #fff8f1, #f0e8d9);
   border: 4px solid #d9b68e;
   border-radius: 20px;
-  padding: 35px;
+  padding: 35px 12px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.15);
   font-family: 'Comic Sans MS', cursive, sans-serif;
   position: relative;
@@ -131,11 +131,11 @@ async function translateText() {
 
 .close-btn {
   position: absolute;
-  top: 10px;
+  top: 5px;
   right: 10px;
   background: transparent;
   border: none;
-  font-size: 18px;
+  font-size: 21px;
   cursor: pointer;
   color: #a36f2d;
   z-index: 10;
@@ -160,7 +160,7 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 20px 0;
+  margin: 10px 0;
   gap: 10px;
 }
 

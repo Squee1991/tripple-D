@@ -447,5 +447,9 @@
             gap: 13px;
             padding: 1rem;
         }
+
+      .ranked-leaderboard-blackboard {
+        padding: 3px;
+      }
     }
 </style>

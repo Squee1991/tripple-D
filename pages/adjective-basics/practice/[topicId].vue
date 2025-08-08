@@ -2,11 +2,13 @@
     <div class="comic-quiz-page">
         <header v-if="!loading && store.activeQuestion" class="quiz-header-comic">
             <button class="btn__back" @click="backTo">{{ t('prasens.back')}}</button>
-            <div class="header-item">
+            <div>
+              <div class="header-item">
                 {{ t('prasens.questionNumber')}} {{ store.currentQuestionIndex + 1 }} / {{ store.currentQuestions.length }}
-            </div>
-            <div class="header-item score">
+              </div>
+              <div class="header-item score">
                 {{ t('prasens.score')}} {{ store.score }}
+              </div>
             </div>
         </header>
         <main class="quiz-main-content">
@@ -269,4 +271,36 @@
         font-size: 2rem;
         margin: 1rem 0 2rem;
     }
+
+    @media (max-width: 767px) {
+      .quiz-header-comic {
+        gap: 10px;
+        padding: 10px;
+      }
+      .header-item {
+        font-size: 18px;
+      }
+      .btn__back {
+        padding: 10px;
+        font-size: 1rem;
+      }
+      .question-text-comic {
+        font-size: 1.3rem;
+      }
+      .option-button-comic {
+        font-size: 1.3rem;
+      }
+      .action-button {
+        font-size: 1.4rem;
+        font-family: "Nunito", sans-serif;
+        font-weight: 600;
+      }
+      .quiz-main-content {
+        padding: 5px;
+      }
+      .question-card-comic {
+        padding: 1rem;
+      }
+    }
+
 </style>

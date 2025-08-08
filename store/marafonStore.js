@@ -44,6 +44,7 @@ export const useGameStore = defineStore('game', () => {
         return settings[difficulty.value];
     });
 
+
     function resetGameState() {
         sessionStreak.value = 0;
         currentWord.value = null;

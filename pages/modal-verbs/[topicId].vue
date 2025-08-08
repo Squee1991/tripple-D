@@ -2,11 +2,13 @@
   <div class="comic-quiz-page">
     <header v-if="!loading && quizStore.activeQuestion" class="quiz-header-comic">
       <button class="btn__back" @click="backTo">{{ t('prasens.back')}}</button>
-      <div class="header-item">
-        {{ t('prasens.questionNumber')}} {{ quizStore.currentQuestionIndex + 1 }} / {{ quizStore.currentQuestions.length }}
-      </div>
-      <div class="header-item score">
-        {{ t('prasens.score')}} {{ quizStore.score }}
+      <div>
+        <div class="header-item">
+          {{ t('prasens.questionNumber')}} {{ quizStore.currentQuestionIndex + 1 }} / {{ quizStore.currentQuestions.length }}
+        </div>
+        <div class="header-item score">
+          {{ t('prasens.score')}} {{ quizStore.score }}
+        </div>
       </div>
     </header>
     <main class="quiz-main-content">
@@ -98,7 +100,6 @@ onMounted(() => {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 
 .btn__back {
   border: 3px solid #1e1e1e;
@@ -109,7 +110,7 @@ onMounted(() => {
   color: #1e1e1e;
   font-weight: 600;
   font-size: 1.2rem;
-  font-family: 'Bangers', cursive;
+  font-family: "Nunito", sans-serif;
   box-shadow: 4px 4px 0px #1e1e1e;
   transition: all 0.1s ease-in-out;
 }
@@ -120,7 +121,7 @@ onMounted(() => {
 
 .comic-quiz-page {
   background-color: #f0e8d9;
-  font-family: 'Bangers', cursive;
+  font-family: "Nunito", sans-serif;
   letter-spacing: 1.5px;
   min-height: 100vh;
   padding-top: 100px;
@@ -208,6 +209,7 @@ onMounted(() => {
   justify-content: center;
   gap: 12px;
   padding: 15px;
+  flex-wrap: wrap;
 }
 
 .option-button-comic {
@@ -299,4 +301,35 @@ onMounted(() => {
   font-size: 2rem;
   margin: 1rem 0 2rem;
 }
+@media (max-width: 767px) {
+  .quiz-header-comic {
+    gap: 10px;
+    padding: 10px;
+  }
+  .header-item {
+    font-size: 18px;
+  }
+  .btn__back {
+    padding: 10px;
+    font-size: 1rem;
+  }
+  .question-text-comic {
+    font-size: 1.3rem;
+  }
+  .option-button-comic {
+    font-size: 1.3rem;
+  }
+  .action-button {
+    font-size: 1.4rem;
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+  }
+  .quiz-main-content {
+    padding: 5px;
+  }
+  .question-card-comic {
+    padding: 1rem;
+  }
+}
+
 </style>

@@ -915,4 +915,18 @@
         color: #e74c3c;
     }
 
+    @media(max-width: 767px) {
+      .trainer-app__options-group {
+        gap: 10px;
+      }
+      .option-btn {
+        font-size: 1.4rem;
+        padding: 10px 15px;
+      }
+      .trainer-app__question,
+      .result-title{
+        font-size: 1.4rem ;
+      }
+
+    }
 </style>

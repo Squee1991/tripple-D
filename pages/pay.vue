@@ -70,7 +70,7 @@ const features = [
   { title: 'Ежедневные задания', free: false, premium: true, icon: Quests },
   { title: 'Озвучка', free: false, premium: true, icon: Speaker },
   { title: 'Дуэли и рейтинг', free: false, premium: true, icon: Competitions },
-  { title: 'Будущие функциям', free: false, premium: true, icon: Future },
+  { title: 'Будущие функции', free: false, premium: true, icon: Future },
 ]
 
 onMounted(() => {
@@ -177,6 +177,10 @@ async function pay() {
   border-bottom: 2px solid #fff;
 }
 
+.sub__description {
+  font-size: 0.8rem;
+}
+
 .super-label {
   color: #fff;
   background: linear-gradient(to right, #b04727, #ff9900);
@@ -246,5 +250,23 @@ async function pay() {
 .slide-up-leave-to {
   transform: translateY(100%);
   opacity: 0;
+}
+
+@media (max-width: 539px) {
+  .compare__label-text {
+    width: 130px;
+    text-align: start;
+    font-size: 0.9rem;
+  }
+  .compare__label {
+    margin-left: 1px;
+  }
+  .subscription-box {
+    padding: 15px;
+  }
+  .compare-header {
+    gap: 5px;
+    font-size: 0.9rem;
+  }
 }
 </style>
