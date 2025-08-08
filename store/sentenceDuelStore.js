@@ -7,7 +7,7 @@ import {
 import {userAuthStore} from './authStore.js';
 import {useSentencesStore} from './sentencesStore.js';
 
-export const useGameStore = defineStore('game', () => {
+export const useGameStore = defineStore('gameDuelStore', () => {
     const db = getFirestore();
     const authStore = userAuthStore();
     const sentencesStore = useSentencesStore();

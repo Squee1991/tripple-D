@@ -81,6 +81,7 @@ function clearAnswer() {
 }
 
 onMounted(async () => {
+  console.log('gameStore:', Object.keys(gameStore))
   await gameStore.loadLocalTasks(level)
   try {
     await statStore.loadLocalStats()

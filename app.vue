@@ -6,7 +6,6 @@
 </template>
 
 <script setup>
-    import { ref , provide } from 'vue'
     import { useRouter , useRoute} from 'vue-router'
     import AccessibilityToggle from './src/components/accessibilityMode.vue'
     import AchPopup from './src/components/achievementPopup.vue'

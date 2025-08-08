@@ -173,4 +173,15 @@ button:disabled {
   }
 }
 
+@media (max-width: 767px)  {
+  .shop-item {
+    width: 100%;
+  }
+
+  .items-grid {
+    width: 100%;
+  }
+
+}
+
 </style>
