@@ -2,11 +2,13 @@
     <div class="comic-quiz-page">
         <header v-if="!loading && store.activeQuestion" class="quiz-header-comic">
             <button class="btn__back" @click="backTo">{{ t('prasens.back')}}</button>
-            <div class="header-item">
-                {{ t('prasens.questionNumber')}} {{ store.currentQuestionIndex + 1 }} / {{ store.currentQuestions.length }}
-            </div>
-            <div class="header-item score">
+            <div>
+              <div class="header-item">
+                {{ t('prasens.questionNumber')}} {{ store.currentQuestionIndex + 1 }}/{{ store.currentQuestions.length }}
+              </div>
+              <div class="header-item score">
                 {{ t('prasens.score')}} {{ store.score }}
+              </div>
             </div>
         </header>
         <main class="quiz-main-content">
@@ -16,7 +18,7 @@
             <div v-else-if="store.quizCompleted" class="fullscreen-state">
                 <div class="quiz-summary-comic">
                     <h2>{{ t('prasens.end')}} </h2>
-                    <p>{{ t('prasens.result')}} {{ store.score }} / {{ store.currentQuestions.length }}</p>
+                    <p>{{ t('prasens.result')}} {{ store.score }}/{{ store.currentQuestions.length }}</p>
                     <button @click="startQuiz" class="action-button">{{ t('prasens.again')}}</button>
                     <button @click="backTo" class="action-button">{{ t('prasens.back')}}</button>
                 </div>
@@ -107,7 +109,7 @@
         color: #1e1e1e;
         font-weight: 600;
         font-size: 1.2rem;
-        font-family: 'Bangers', cursive;
+      font-family: "Nunito", sans-serif;
         box-shadow: 4px 4px 0px #1e1e1e;
         transition: all 0.1s ease-in-out;
     }
@@ -116,13 +118,11 @@
     }
     .comic-quiz-page {
         background-color: #f0e8d9;
-        font-family: 'Bangers', cursive;
+        font-family: "Nunito", sans-serif;
         letter-spacing: 1.5px;
         min-height: 100vh;
-        padding-top: 100px;
     }
     .quiz-header-comic {
-        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
@@ -143,7 +143,6 @@
         justify-content: center;
         width: 100%;
         padding: 1.5rem;
-        box-sizing: border-box;
     }
     .fullscreen-state {
         font-size: 4rem;
@@ -268,5 +267,36 @@
     .quiz-summary-comic p {
         font-size: 2rem;
         margin: 1rem 0 2rem;
+    }
+
+    @media (max-width: 767px) {
+      .quiz-header-comic {
+        gap: 10px;
+        padding: 10px;
+      }
+      .header-item {
+        font-size: 18px;
+      }
+      .btn__back {
+        padding: 10px;
+        font-size: 1rem;
+      }
+      .question-text-comic {
+        font-size: 1.3rem;
+      }
+      .option-button-comic {
+        font-size: 1.3rem;
+      }
+      .action-button {
+        font-size: 1.4rem;
+        font-family: "Nunito", sans-serif;
+        font-weight: 600;
+      }
+      .quiz-main-content {
+        padding: 5px;
+      }
+      .question-card-comic {
+        padding: 1rem;
+      }
     }
 </style>

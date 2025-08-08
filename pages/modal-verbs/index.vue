@@ -51,7 +51,7 @@
                     <SoundBtn :text="verb.name"/>
                   </div>
                   <div class="example-details">
-                    <div>
+                    <div class="example__sentence-wrapper">
                       <div class="example__sentence" v-html="verb.example"></div>
                       <div class="example__translation"> {{ t(verb.exampleTranslate) }}</div>
                     </div>
@@ -259,6 +259,10 @@ watch(selectedGroup, initLottieIcon);
   box-shadow: 6px 6px 0px #1e1e1e;
   flex-shrink: 0;
   overflow-y: auto;
+}
+
+.example__sentence-wrapper {
+  display: flex;
 }
 
 .btn__back {
@@ -598,12 +602,13 @@ watch(selectedGroup, initLottieIcon);
 @media (max-width: 1024px) {
   .content__body {
     flex-direction: column;
+    padding: 5px 0;
   }
   .content__main-column,
   .practice-area {
     width: 100%;
     border-right: none;
-    padding: 1rem;
+    padding: 5px;
   }
   .content__main-column {
     border-bottom: 3px dashed #cccccc;

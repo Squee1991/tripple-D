@@ -1,4 +1,4 @@
-<template>
+`<template>
     <div class="verb-types-page" :class="{ 'content-is-active': isContentVisible }">
         <div v-if="showTips" class="tips__overlay" @click.self="showTips = false">
             <div class="tips__content">

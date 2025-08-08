@@ -107,7 +107,7 @@
         color: #1e1e1e;
         font-weight: 600;
         font-size: 1.2rem;
-        font-family: 'Bangers', cursive;
+      font-family: "Nunito", sans-serif;
         box-shadow: 4px 4px 0px #1e1e1e;
         transition: all 0.1s ease-in-out;
     }
@@ -116,7 +116,7 @@
     }
     .comic-quiz-page {
         background-color: #f0e8d9;
-        font-family: 'Bangers', cursive;
+        font-family: "Nunito", sans-serif;
         letter-spacing: 1.5px;
         min-height: 100vh;
         padding-top: 100px;

@@ -54,7 +54,6 @@
 
 	.leaderboard-item {
 		font-family: "Nunito", sans-serif;
-		border-bottom: 1px solid #3a3f5e;
 		border-radius: 8px;
 		padding: 10px 20px;
 		transition: all 0.2s ease-in-out;

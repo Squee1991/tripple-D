@@ -25,7 +25,7 @@ function toggleTranslator() {
 <style scoped>
 .tool-sidebar {
   position: fixed;
-  bottom: 200px;
+  bottom: 130px;
   right: 10px;
   width: 60px;
   z-index: 1000;

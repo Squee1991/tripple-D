@@ -20,7 +20,7 @@
 
 	.coffe-container {
 		flex-direction: column;
-		bottom: 130px;
+		bottom: 70px;
 		right: 10px;
 		position: fixed;
 		display: flex;

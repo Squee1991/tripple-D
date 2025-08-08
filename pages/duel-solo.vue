@@ -434,4 +434,24 @@ onMounted(async () => {
   margin: 0 auto;
   background: #FFD24B;
 }
+
+@media (max-width: 767px) {
+  .answer-section {
+    flex-direction: column;
+    width: 100%;
+    border: none;
+  }
+  .game-board {
+    padding: 20px 8px
+  }
+  .answer-section input {
+    padding: 12px 6px;
+    font-size: 0.9rem;
+  }
+  .word-button {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+}
 </style>
