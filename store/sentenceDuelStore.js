@@ -6,11 +6,13 @@ import {
 } from 'firebase/firestore';
 import {userAuthStore} from './authStore.js';
 import {useSentencesStore} from './sentencesStore.js';
+import { useLocalStatGameStore } from '../store/localSentenceStore.js'
 
-export const useGameStore = defineStore('game', () => {
+export const useSentenceDuelStore = defineStore('sentenceDuel', () => {
     const db = getFirestore();
     const authStore = userAuthStore();
     const sentencesStore = useSentencesStore();
+    const localSentencesStore = useLocalStatGameStore()
     const localTasks = ref([])
     const isSearching = ref(false);
     const gameId = ref(null);
@@ -20,6 +22,8 @@ export const useGameStore = defineStore('game', () => {
     const isCheckingWinner = ref(false);
     const achievements = ref({});
 
+
+
     async function loadUserAchievements() {
         if (!uid.value) return;
         const userDoc = await getDoc(doc(db, 'users', uid.value));
@@ -28,7 +32,7 @@ export const useGameStore = defineStore('game', () => {
         }
     }
     async function loadLocalTasks(level) {
-        const all =  sentencesStore.db?.levels[level]?.sentences || []
+        const all =  localSentencesStore.db?.levels[level]?.sentences || []
         localTasks.value = all.sort(() => Math.random() - 0.5).slice(0, 8)
     }
 
@@ -92,50 +96,75 @@ export const useGameStore = defineStore('game', () => {
     }
 
     async function findGame(level) {
-        if (isSearching.value) return;
+        // 1. Проверка статуса поиска через состояние Pinia
+        if (this.isSearching) return;
+
         const myUserId = authStore.uid;
         if (!myUserId) {
-            error.value = "Ошибка: пользователь не авторизован.";
+            this.error = "Ошибка: пользователь не авторизован.";
             return;
         }
-        isSearching.value = true;
-        error.value = null;
 
-        const q = query(collection(db, 'gameSessions'),
-            where('guestId', '==', null),
-            where('status', '==', 'waiting'),
-            where('level', '==', level),
-            orderBy('createdAt'), limit(1));
-        const snapshot = await getDocs(q);
+        // 2. Устанавливаем состояние
+        this.isSearching = true;
+        this.error = null;
 
-        if (!snapshot.empty) {
-            const sessionToJoin = snapshot.docs[0];
-            const sessionRef = doc(db, 'gameSessions', sessionToJoin.id);
-            try {
+        try {
+            const q = query(
+                collection(db, 'gameSessions'),
+                where('guestId', '==', null),
+                where('status', '==', 'waiting'),
+                where('level', '==', level),
+                orderBy('createdAt'),
+                limit(1)
+            );
+
+            const snapshot = await getDocs(q);
+            let sessionId = null;
+
+            if (!snapshot.empty) {
+                const sessionToJoin = snapshot.docs[0];
+                sessionId = sessionToJoin.id;
+                const sessionRef = doc(db, 'gameSessions', sessionId);
+
                 await runTransaction(db, async (t) => {
                     const docSnap = await t.get(sessionRef);
                     if (!docSnap.exists() || docSnap.data().guestId) {
-                        throw 'Эту сессию уже заняли!';
+                        throw new Error('Сессия уже занята');
                     }
+
                     t.update(sessionRef, {
                         guestId: myUserId,
                         status: 'starting',
-                        [`players.${myUserId}`]: {score: 0, name: authStore.name, hasMadeError: false} // ИЗМЕНЕНО
+                        [`players.${myUserId}`]: {
+                            score: 0,
+                            name: authStore.name,
+                            hasMadeError: false
+                        }
                     });
                 });
-                listenToSession(sessionToJoin.id);
-            } catch (e) {
-                error.value = 'Не удалось присоединиться...';
-                setTimeout(() => findGame(level), 100);
+            } else {
+                // 3. Создаем новую сессию
+                sessionId = await this.createGameSession(level, myUserId);
             }
 
-        } else {
-            const newGameId = await createGameSession(level, myUserId);
-            if (newGameId) {
-                listenToSession(newGameId);
+            // 4. Начинаем слушать сессию только если она действительна
+            if (sessionId) {
+                this.listenToSession(sessionId);
+            }
+
+        } catch (e) {
+            console.error('Ошибка поиска игры:', e);
+
+            // 5. Условия для ретрая
+            if (e.message === 'Сессия уже занята') {
+                // Ретрай только для специфичных ошибок
+                setTimeout(() => this.findGame(level), 100);
+            } else {
+                this.error = 'Ошибка поиска игры';
+                this.isSearching = false;
             }
         }
-        isSearching.value = false;
     }
 
     function getSentenceById(id) {
