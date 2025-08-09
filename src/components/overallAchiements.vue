@@ -39,6 +39,7 @@
                         <p class="achievement-description-overall">
                             {{ t(item.description) }}
                         </p>
+                        <div class="achievement-awards" v-if="item.awards"> {{ t(item.awards) }}</div>
                     </div>
                 </div>
             </div>
@@ -201,6 +202,15 @@ onMounted(() => {
     font-weight: 500;
     margin: 0;
     line-height: 1.4;
+}
+.achievement-awards {
+    text-align: center;
+    font-size: 13px;
+    color: white;
+    margin-top: 10px;
+    background: black;
+    padding: 5px;
+    border-radius: 10px;
 }
 
 @media (max-width: 1280px ) {
