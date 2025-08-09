@@ -12,10 +12,19 @@ export const overAchievment = [
 				targetProgress: 1
 			},
 			{
+				id: "firstAward",
+				name: "Начало коллекции",
+				description: "Получите вашу первую награду",
+				icon: "🎁️",
+				currentProgress: 0,
+				targetProgress: 1
+			},
+			{
 				id: "LastChance",
 				name: "generalCategory.lastBreahtlabel",
 				description: "generalCategory.lastBreathText",
 				icon: "❤️",
+				awards: 'Награда: Тик-так Удачи',
 				currentProgress: 0,
 				targetProgress: 20,
 			},
@@ -40,6 +49,7 @@ export const overAchievment = [
 				name: "generalCategory.dailyTitle",
 				description: "generalCategory.dailyText",
 				icon: "🔁",
+				awards: "Награда: Песочные часы вечности",
 				currentProgress: 0,
 				targetProgress: 50
 			},

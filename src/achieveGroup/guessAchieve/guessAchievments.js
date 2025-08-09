@@ -31,7 +31,7 @@ export const guessAchievment = [
 				threshold: 600,
 				title: 'guessCategory.guessfifthLabel',
 				description: 'guessCategory.guessfifthText',
-				awards: "guessCategory.guessfifthAward",
+				awards: "Награда: Книга мудности",
 
 			},
 		]

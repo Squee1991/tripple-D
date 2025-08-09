@@ -37,7 +37,7 @@ export const cpecialGroupAchievment = [
 				name: "specialCategory.generalSecondLabel",
 				description: "specialCategory.generalSecondText",
 				icon: "⬆️",
-				awards: "specialCategory.generalSecondAward",
+				awards: "Награда: Кубок с крыльями",
 				currentProgress: 0,
 				targetProgress: 20
 			},
@@ -48,6 +48,15 @@ export const cpecialGroupAchievment = [
 				icon: "💎",
 				currentProgress: 0,
 				targetProgress: 1000
+			},
+			{
+				id: "Collection",
+				type: "Awards",
+				name: "Коллекционер",
+				description: "Соберите целую коллекцию из 10 наград",
+				icon: "🧰",
+				currentProgress: 0,
+				targetProgress: 10
 			},
 			{
 				id: 'Hunderd',
@@ -87,6 +96,7 @@ export const cpecialGroupAchievment = [
 				name: 'specialCategory.specialFourthLabel',
 				description: 'specialCategory.specialFourthText',
 				icon: "⚡",
+				awards: "Награда: Блиц-ракета",
 				currentProgress: 0,
 				targetProgress: 100,
 			},
@@ -103,6 +113,7 @@ export const cpecialGroupAchievment = [
 				name: 'specialCategory.specialSixthLabel',
 				description: 'specialCategory.specialSixthText',
 				icon: '🛡️',
+				awards: "Награда: Щит осторожности",
 				currentProgress: 0,
 				targetProgress: 100,
 			},
