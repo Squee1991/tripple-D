@@ -45,8 +45,10 @@
             <div class="level-info">Уровень: {{ learningStore.isLeveling }}</div>
           </div>
         </div>
-        <div v-for="img in unlockedAwards" class="awards__display">
-          <img class="awards__display-icons" :title="img.title" :src="img.icon" :alt="img.title">
+        <div>
+          <div v-for="img in unlockedAwards" class="awards__display">
+            <img class="awards__display-icons" :title="img.title" :src="img.icon" :alt="img.title">
+          </div>
         </div>
       </div>
       <div class="tabs">
@@ -194,10 +196,14 @@ import DevelopmentIcon from '../assets/images/dev.svg'
 import AwardsList from '../src/components/AwardsList.vue'
 import WasteMoney from '../assets/awards/wasteMoney.svg'
 import IdCard from '../assets/awards/idUser.svg'
-import goldStatuette from '../assets/awards/gold statuette.svg'
+import Wings from '../assets/awards/gold statuette.svg'
 import veteranMedal from '../assets/awards/veteran medal.svg'
 import talismanOfPatience from '../assets/awards/talisman of patience.svg'
-import wisdomStatue from '../assets/awards/wisdom statue.svg'
+import LastChance from '../assets/awards/last-chance.svg'
+import Rocket from '../assets/awards/Rocket.svg'
+import BookOfWisdom from '../assets/awards/bookOfWisdom.svg'
+import SandGlass from '../assets/awards/bookOfWisdom.svg'
+import Shield from '../assets/awards/bookOfWisdom.svg'
 import {cpecialGroupAchievment} from '../src/achieveGroup/specialAchieve/specialAchievment.js';
 import {overAchievment} from '../src/achieveGroup/overAllAchieve/overallAchievements.js'
 import {useGameStore} from '../store/marafonStore.js'
@@ -228,12 +234,16 @@ const achievementToAwardMap = {
     'LastChance': 'На последнем дыхании'
 }
 const awards = ref([
-    {id: 1, title: 'Алмаз артиклеуса', icon: WasteMoney, locked: true},
-    {id: 2, title: 'Значок участника', icon: IdCard, locked: true},
-    {id: 3, title: 'Золотая статуэтка', icon: goldStatuette, locked: true},
-    {id: 4, title: 'Медаль ветерана', icon: veteranMedal, locked: true},
-    {id: 5, title: 'Талисман терпения', icon: talismanOfPatience, locked: true},
-    {id: 6, title: 'На последнем дыхании', icon: wisdomStatue, locked: true},
+  {id: 1, title: 'Алмаз артиклеуса', icon: WasteMoney, locked: true},
+  {id: 2, title: 'Значок участника', icon: IdCard, locked: true},
+  {id: 3, title: 'Кубок с крыльями', icon: Wings, locked: true},
+  {id: 4, title: 'Медаль ветерана', icon: veteranMedal, locked: true},
+  {id: 5, title: 'Талисман терпения', icon: talismanOfPatience, locked: true},
+  {id: 6, title: 'Тик-тик удачи', icon: LastChance, locked: true},
+  {id: 7, title: 'Блиц-ракета', icon: Rocket, locked: true},
+  {id: 8, title: 'Книга мудрости', icon: BookOfWisdom, locked: true},
+  {id: 9, title: 'Песочные часы мудрости', icon: Shield, locked: true},
+  {id: 10, title: 'Щит осторожности', icon: SandGlass, locked: true},
 ])
 
 const backToMain = () => {
