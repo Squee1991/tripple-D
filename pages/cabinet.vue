@@ -10,24 +10,20 @@
         </div>
       </div>
     </div>
-
-    <Modal
-        :visible="isGenericModalOpen"
-        :title="genericModalData.title"
-        :text="genericModalData.text"
-        :img="genericModalData.img"
-        @close="isGenericModalOpen = false"
-    />
-
+    <!--    <Modal-->
+    <!--        :visible="isGenericModalOpen"-->
+    <!--        :title="genericModalData.title"-->
+    <!--        :text="genericModalData.text"-->
+    <!--        :img="genericModalData.img"-->
+    <!--        @close="isGenericModalOpen = false"-->
+    <!--    />-->
     <div class="layout">
       <aside class="sidebar-panel">
         <button class="back-btn" @click="backToMain" aria-label="На главную">
           <img :src="Home" alt=""/>
           <span class="back-label">На главную</span>
         </button>
-
         <div class="sidebar-title">Категории</div>
-
         <nav class="tabs-vertical">
           <button
               v-for="tabItem in TAB_ITEMS"
@@ -41,9 +37,8 @@
           </button>
         </nav>
       </aside>
-
       <section class="content-panel">
-        <div class="header-surface">
+        <div v-if="activeTabKey === 'info'" class="header-surface">
           <div class="user-block">
             <div class="avatar-container">
               <img v-if="authStore.avatarUrl" :src="authStore.avatarUrl" alt="Аватар" class="avatar-current"/>
@@ -52,19 +47,15 @@
                 <img src="../assets/images/add.svg" alt="Сменить"/>
               </button>
             </div>
-
             <div class="user-info">
               <div class="user-name">{{ authStore.name }}</div>
-
               <div class="exp-bar">
                 <div class="exp-fill" :style="{ width: `${(learningStore.exp / 100) * 100}%` }"></div>
                 <span class="exp-text">{{ learningStore.exp }} / 100 XP</span>
               </div>
-
               <div class="level-info">Уровень: {{ learningStore.isLeveling }}</div>
             </div>
           </div>
-
           <div class="award-strip">
             <div
                 v-for="awardItem in unlockedAwardList"
@@ -76,21 +67,18 @@
             </div>
           </div>
         </div>
-
         <div class="content-body">
           <div v-if="activeTabKey === 'info'" class="tab-content">
             <div v-for="infoRow in accountInfoRows" :key="infoRow.label" class="card-row">
               <span class="card-row__label">{{ infoRow.label }}</span>
               <span class="card-row__value">{{ infoRow.value }}</span>
             </div>
-
             <div class="accordion" :class="{ open: isAccountAccordionOpen }" @click="toggleAccountAccordion">
               <div class="accordion__head">
                 <div class="accordion__title">Управление аккаунтом</div>
                 <img class="accordion__arrow" :class="{ rotated: isAccountAccordionOpen }"
                      src="../assets/images/arrowNav.svg" alt=""/>
               </div>
-
               <div class="subscription-status-row">
                 <div class="subscription-label">Статус подписки</div>
                 <div class="subscription-status">
@@ -105,7 +93,6 @@
                   </template>
                 </div>
               </div>
-
               <transition name="fade">
                 <div v-show="isAccountAccordionOpen" class="accordion__body" @click.stop>
                   <template v-if="authStore.isPremium && !authStore.subscriptionCancelled">
@@ -118,14 +105,13 @@
                 </div>
               </transition>
             </div>
-
             <div class="accordion" :class="{ open: isSettingsAccordionOpen }" @click="toggleSettingsAccordion">
               <div class="accordion__head">
                 <div class="accordion__title">Настройки</div>
-                <img class="accordion__arrow" :class="{ rotated: isSettingsAccordionOpen }"
+                <img class="accordion__arrow"
+                     :class="{ rotated: isSettingsAccordionOpen }"
                      src="../assets/images/arrowNav.svg" alt=""/>
               </div>
-
               <transition name="fade">
                 <div v-show="isSettingsAccordionOpen" class="accordion__body settings__elements" @click.stop>
                   <div v-for="settingsItem in settingsToggleItems" :key="settingsItem.key" class="row__el--wrapper">
@@ -144,27 +130,22 @@
                 </div>
               </transition>
             </div>
-
             <div class="footer-actions">
               <button @click="openDeleteModal" class="btn btn-danger">Удалить аккаунт</button>
             </div>
           </div>
-
           <div v-else-if="activeTabKey === 'progress'">
             <Progress/>
           </div>
-
           <div v-else-if="activeTabKey === 'shop'">
             <Shop/>
           </div>
-
           <div v-else-if="activeTabKey === 'award'">
             <AwardsList :awards="awardList"/>
           </div>
         </div>
       </section>
     </div>
-
     <div v-if="isAvatarModalOpen" class="avatar-modal-overlay" @click.self="isAvatarModalOpen = false">
       <div class="avatar-modal-content">
         <h3>Выберите новый аватар</h3>
@@ -187,7 +168,6 @@
         </div>
       </div>
     </div>
-
     <div v-if="isPurchaseModalOpen" class="modal-overlay" @click.self="isPurchaseModalOpen = false">
       <div class="modal-card">
         <div class="modal-title">Купить аватар?</div>
@@ -198,20 +178,16 @@
         </div>
       </div>
     </div>
-
     <div v-if="isDeleteModalOpen" class="modal-overlay" @click.self="isDeleteModalOpen = false">
       <div class="modal-card">
         <div class="modal-title">Удалить аккаунт?</div>
         <p class="modal-text">После удаления аккаунта все Ваши данные будут утеряны безвозвратно</p>
-
         <p v-if="!isGoogleUser" class="modal-text">Введите ваш пароль для подтверждения удаления аккаунта</p>
         <div v-if="!isGoogleUser" class="label">
           <input class="input" v-model="deletePasswordField.value" type="password"/>
           <p v-if="deletePasswordField.error" class="delete-error">{{ t(deletePasswordField.error) }}</p>
         </div>
-        <p v-else class="modal-text">Вы вошли через Google. Для удаления аккаунта откроется окно повторной
-          авторизации.</p>
-
+        <p v-else class="modal-text">Вы вошли через Google. Для удаления аккаунта откроется окно повторной авторизации.</p>
         <div class="modal-actions">
           <button class="btn btn-danger" @click="confirmDeleteAccount">Удалить</button>
           <button class="btn" @click="isDeleteModalOpen = false">Отмена</button>
@@ -220,7 +196,6 @@
     </div>
   </div>
 </template>
-
 <script setup>
 import {ref, computed, onMounted, watch, watchEffect} from 'vue'
 import {useRouter} from 'vue-router'
@@ -276,6 +251,12 @@ const selectedAvatarName = ref(null)
 const isPurchaseModalOpen = ref(false)
 const purchaseAvatarName = ref(null)
 
+const achievementsNotifyEnabled = ref(true)
+if (typeof window !== 'undefined') {
+  const saved = localStorage.getItem('achievementsNotifyEnabled')
+  achievementsNotifyEnabled.value = saved === null ? true : saved === 'true'
+}
+
 const isDeleteModalOpen = ref(false)
 const deletePasswordField = ref({value: '', error: ''})
 
@@ -304,10 +285,24 @@ const accountInfoRows = computed(() => [
 
 const settingsToggleItems = [
   {key: 'sound', label: 'Звуковые уведомления', wrap: false},
-  {key: 'dark', label: 'Тёмный режим', wrap: true}
+  {key: 'dark', label: 'Тёмный режим', wrap: true},
+  {key: 'ach', label: 'Уведомление достижений', wrap: true},
 ]
-const getSettingValue = key => (key === 'sound' ? soundEnabled.value : darkMode.value)
-const onSettingChange = (key, value) => (key === 'sound' ? handleSoundToggle(value) : handleThemeToggle(value))
+
+const getSettingValue = key => {
+  if (key === 'sound') return soundEnabled.value
+  if (key === 'dark') return darkMode.value
+  if (key === 'ach') return achievementsNotifyEnabled.value
+}
+
+const onSettingChange = (key, value) => {
+  if (key === 'sound') return handleSoundToggle(value)
+  if (key === 'dark') return handleThemeToggle(value)
+  if (key === 'ach') {
+    achievementsNotifyEnabled.value = value
+    localStorage.setItem('achievementsNotifyEnabled', value)
+  }
+}
 
 const isAccountAccordionOpen = ref(false)
 const isSettingsAccordionOpen = ref(false)
@@ -442,7 +437,7 @@ async function confirmAvatarChange() {
 
 function openDeleteModal() {
   isDeleteModalOpen.value = true
-  deletePasswordField.value = {value: '', error: ''}
+  deletePasswordField.value = {name: 'deletePassword', value: '', error: ''}
 }
 
 async function confirmDeleteAccount() {
@@ -451,7 +446,8 @@ async function confirmDeleteAccount() {
     await authStore.deleteAccount(deletePasswordField.value.value)
     router.push('/')
   } catch (err) {
-    mapErrors([deletePasswordField.value], err.code)
+    if (!deletePasswordField.value.name) deletePasswordField.value.name = 'deletePassword'
+    mapErrors([deletePasswordField.value], err?.code || 'auth/unknown')
   }
 }
 
@@ -471,6 +467,7 @@ watch(
       awardList.value = baseAwards.map(a => ({...a, locked: !shownAwardsSet.value.has(a.title)}))
     }
 )
+
 watchEffect(() => {
   let justUnlocked = null
   const groups = achievementStore.groups || []
@@ -491,19 +488,19 @@ watchEffect(() => {
     }
     if (justUnlocked) break
   }
-  if (justUnlocked) {
+  if (justUnlocked && achievementsNotifyEnabled.value) {
     genericModalData.value = {
       title: 'Поздравляем!',
       text: `Вы получили награду «${justUnlocked.title}»!`,
-      img: justUnlocked.icon
     }
     isGenericModalOpen.value = true
     toast.success(`🎉 Вы получили награду «${justUnlocked.title}»!`, {
-      autoClose: 3000,
+      autoClose: 5000,
       position: toast.POSITION.TOP_CENTER
     })
   }
 })
+
 </script>
 
 <style scoped>
@@ -541,9 +538,10 @@ watchEffect(() => {
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
-  font-weight: 800;
-  font-size: 1.1rem;
+  font-weight: 600;
+  font-size: 1.2rem;
   background: #ffd54f;
   border-radius: 16px;
   padding: 12px 14px;
@@ -592,8 +590,9 @@ watchEffect(() => {
   box-shadow: 4px 4px 0 #000;
   cursor: pointer;
   transition: .15s;
-  font-weight: 800;
+  font-weight: 600;
   font-size: 1.05rem;
+  font-family: "Nunito", sans-serif;
 }
 
 .tab-vertical:hover {
@@ -611,7 +610,7 @@ watchEffect(() => {
 }
 
 .content-panel {
-  background: #7fa5ff;
+  //background: #7fa5ff;
   padding: 14px;
   border-radius: 28px;
   border: 3px solid #000;
@@ -634,6 +633,7 @@ watchEffect(() => {
   display: flex;
   align-items: center;
   gap: 16px;
+  margin-bottom: 15px;
 }
 
 .avatar-container {
@@ -673,10 +673,11 @@ watchEffect(() => {
 .user-name {
   font-size: 1.6rem;
   font-weight: 900;
+  color: var(--titleColor);
 }
 
 .exp-bar {
-  width: 260px;
+  width: 200px;
   height: 26px;
   background: #e5e7eb;
   border-radius: 14px;
@@ -750,6 +751,10 @@ watchEffect(() => {
   font-weight: 900;
 }
 
+.label {
+  height: 74px;
+}
+
 .card-row__value {
   font-weight: 700;
 }
@@ -801,7 +806,7 @@ watchEffect(() => {
   justify-content: space-between;
   align-items: center;
   margin-top: 10px;
-  padding: 10px 15px;
+  padding: 10px 8px;
 }
 
 .subscription-label {
@@ -825,8 +830,9 @@ watchEffect(() => {
   padding: 10px 16px;
   font-weight: 800;
   background: #f3f4f6;
-  box-shadow: 4px 4px 0 #000;
+  box-shadow: 2px 2px 0 #000;
   cursor: pointer;
+
 }
 
 .btn-success {
@@ -877,6 +883,19 @@ watchEffect(() => {
   margin-bottom: 1rem;
 }
 
+.input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.delete-error {
+  color: #dc4545;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+
+}
+
 .modal-actions {
   display: flex;
   gap: 12px;
@@ -911,7 +930,7 @@ watchEffect(() => {
   flex-wrap: wrap;
   justify-content: center;
   gap: 12px;
-  padding: 20px;
+  padding: 10px;
 }
 
 .avatar-option {
@@ -961,20 +980,20 @@ watchEffect(() => {
 .row__el--wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 10px 8px;
 }
 
 @media (max-width: 1024px) {
   .cabinet-wrapper {
     height: 100vh;
     overflow: hidden;
-    padding: 12px;
+    padding: 0;
   }
 
   .sidebar-panel {
     position: fixed;
     left: 50%;
-    bottom: 12px;
+    bottom: 20px;
     transform: translateX(-50%);
     width: 94%;
     height: 64px;
@@ -985,8 +1004,8 @@ watchEffect(() => {
     gap: 10px;
     border-radius: 18px;
     background: #fff;
-    box-shadow: 6px 6px 0 #000;
     border: none;
+    box-shadow: none;
   }
 
   .sidebar-title {
@@ -1036,13 +1055,22 @@ watchEffect(() => {
     height: 24px;
   }
 
+  .card-row,
+  .accordion{
+    box-shadow: 2px 2px 0 black;
+  }
+
   .content-panel {
     overflow: hidden;
-    padding-bottom: 96px;
+    padding: 5px 5px  80px 5px;
+    border: none;
+    box-shadow: none;
+    border-radius: 0px;
   }
 
   .content-body {
     overflow: auto;
+    padding: 5px;
   }
 }
 

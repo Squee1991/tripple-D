@@ -27,8 +27,8 @@ function onChange(e) {
   font-size: 17px;
   position: relative;
   display: inline-block;
-  width: 3.5em;
-  height: 2em;
+  width: 3em;
+  height: 25px;
 }
 .switch input {
   opacity: 0;
@@ -49,8 +49,8 @@ function onChange(e) {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 2em;
-  width: 2em;
+  height: 25px;
+  width: 25px;
   inset: 0;
   background-color: white;
   border-radius: 50px;

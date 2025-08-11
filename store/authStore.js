@@ -57,7 +57,7 @@ export const userAuthStore = defineStore('auth', () => {
 		if (langStore.gotPremiumBonus) return
 		langStore.points += 50
 		langStore.totalEarnedPoints += 50
-		langStore.gotPremiumBonus = true /
+		langStore.gotPremiumBonus = true
 		await langStore.saveToFirebase()
 	}
 
@@ -154,14 +154,12 @@ export const userAuthStore = defineStore('auth', () => {
 		})
 	}
 
-
 	const loginUser = async ({ email, password }) => {
 		const auth = getAuth()
 		const userCredential = await signInWithEmailAndPassword(auth, email, password)
 		const userDocRef = doc(db, 'users', userCredential.user.uid);
 		const userDoc = await getDoc(userDocRef);
 		const userDataFromDb = userDoc.exists() ? userDoc.data() : {};
-
 		setUserData({
 			name: userCredential.user.displayName,
 			email: userCredential.user.email,
@@ -184,24 +182,29 @@ export const userAuthStore = defineStore('auth', () => {
 	const deleteAccount = async (password = null) => {
 		const auth = getAuth();
 		const user = auth.currentUser;
-		if (!user) throw new Error('Пользователь не найден');
+		if (!user) throw { code: 'auth/no-current-user' };
 
 		try {
-			if (user.providerData.some(p => p.providerId === 'google.com')) {
+			const usesGoogle = user.providerData.some(p => p.providerId === 'google.com');
+			if (usesGoogle) {
 				const provider = new GoogleAuthProvider();
 				await reauthenticateWithPopup(user, provider);
 			} else {
-				if (!password || !user.email) throw new Error('Не указан пароль или email');
-				const credential = EmailAuthProvider.credential(user.email, password);
-				await reauthenticateWithCredential(user, credential);
+				if (!user.email) throw { code: 'auth/missing-email' };
+				if (!password) throw { code: 'auth/missing-password' };
+				const cred = EmailAuthProvider.credential(user.email, password);
+				await reauthenticateWithCredential(user, cred);
 			}
 
 			await deleteDoc(doc(db, 'users', user.uid));
 			await deleteUser(user);
 			setUserData({});
 		} catch (err) {
-			console.error('Ошибка удаления:', err);
-			throw err;
+			if (err && err.code) throw err;
+			const msg = String(err?.message || '');
+			if (msg.includes('requires-recent-login')) throw { code: 'auth/requires-recent-login' };
+			if (msg.includes('popup-closed'))         throw { code: 'auth/popup-closed-by-user' };
+			throw { code: 'auth/unknown' };
 		}
 	};
 
@@ -213,12 +216,9 @@ export const userAuthStore = defineStore('auth', () => {
 			throw new Error('Недостаточно Артиклюсов!');
 		}
 
-		// Списываем очки
 		langStore.points -= 50;
 		langStore.articlesSpentForAchievement += 50;
 		await langStore.saveToFirebase();
-
-		// Добавляем в купленные
 		ownedAvatars.value.push(fileName);
 
 		const userDocRef = doc(db, 'users', uid.value);

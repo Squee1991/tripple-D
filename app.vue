@@ -98,4 +98,10 @@
     html {
         font-size: 16px;
     }
+
+    * {
+      outline: none !important;
+    }
+
+
 </style>

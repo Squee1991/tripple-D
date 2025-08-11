@@ -314,13 +314,11 @@ onMounted(async () => {
   left: 0;
   right: 0;
   background: #fff;
-  border: 3px solid #1e1e1e;
   border-radius: 16px;
   max-height: 250px;
   overflow-y: auto;
   margin-top: 6px;
   z-index: 10;
-  box-shadow: 4px 4px 0 #1e1e1e;
 }
 
 .select-dropdown li {

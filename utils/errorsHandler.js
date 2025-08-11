@@ -11,7 +11,6 @@ export const errorValueMap = {
 	default: { field: 'deletePassword', error: 'errors.generalError' }
 }
 
-
 export function mapErrors(fields, errorCode) {
 	const match = errorValueMap[errorCode] || errorValueMap['default']
 	const field = fields.find(f => f.name === match.field)
