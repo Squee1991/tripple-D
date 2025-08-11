@@ -133,7 +133,7 @@ export const cpecialGroupAchievment = [
 				icon: '💸',
 				awards: 'specialCategory.generalSexthAward',
 				currentProgress: 0,
-				targetProgress: 1000,
+				targetProgress: 700,
 			},
 		]
 	}

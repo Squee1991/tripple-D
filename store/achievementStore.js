@@ -21,6 +21,7 @@ import {useLocalStatGameStore} from '../store/localSentenceStore.js'
 import {useCardsStore} from '../store/cardsStore.js'
 import {useGameStore} from '../store/marafonStore.js'
 import {useGuessWordStore} from '../store/guesStore.js'
+import {achievementToAwardMap} from '../src/awards/awardsMap.js'
 import {guessAchievment} from "../src/achieveGroup/guessAchieve/guessAchievments.js";
 
 export const useAchievementStore = defineStore('achievementStore', () => {
@@ -49,7 +50,8 @@ export const useAchievementStore = defineStore('achievementStore', () => {
             }))
         }))
     )
-
+    const lastUnlockedAward = ref(null) // {title, achId, ts}
+    const awardsKey = () => `awards_shown_v1_${authStore?.uid || 'anon'}`
     // --- 3) Подключаем сторы-источники ---
     const authStore = userAuthStore()
     const questStore = useQuestStore()
@@ -65,6 +67,32 @@ export const useAchievementStore = defineStore('achievementStore', () => {
     const popupAchievement = ref(null)
     const prevMap = new Map()
 
+
+    function loadShown() {
+        if (!process.client) return new Set()
+        try {
+            const raw = localStorage.getItem(awardsKey())
+            return new Set(raw ? JSON.parse(raw) : [])
+        } catch {
+            return new Set()
+        }
+    }
+
+    function saveShown(set) {
+        if (!process.client) return
+        try {
+            localStorage.setItem(awardsKey(), JSON.stringify([...set]))
+        } catch {
+        }
+    }
+
+    let shownSet = loadShown()
+
+// Перезагрузка «показанных» при смене пользователя
+    watch(() => authStore.uid, () => {
+        shownSet = loadShown()
+    })
+
     function findById(id) {
         for (const g of groups.value) {
             const ach = g.achievements.find(a => a.id === id)
@@ -78,12 +106,32 @@ export const useAchievementStore = defineStore('achievementStore', () => {
         if (!ach) return
         const prev = prevMap.get(id) || 0
         ach.currentProgress = Math.min(val, ach.targetProgress)
-        if (ach.currentProgress >= ach.targetProgress && prev < ach.targetProgress) {
+        const justCompleted = ach.currentProgress >= ach.targetProgress && prev < ach.targetProgress
+        if (justCompleted) {
+            // твой попап по ачивке
             popupQueue.value.push(ach)
             showNextPopup()
+
+            // 🎁 событие награды (если для этой ачивки есть награда)
+            const awardTitle = achievementToAwardMap[id]
+            if (awardTitle && !shownSet.has(awardTitle)) {
+                shownSet.add(awardTitle)
+                saveShown(shownSet)
+                // отдадим подписчикам: и главная (тост), и кабинет (модалка)
+                lastUnlockedAward.value = {
+                    title: awardTitle,
+                    achId: id,
+                    ts: Date.now()
+                }
+                // можно авто-очистку через тик:
+                setTimeout(() => {
+                    if (lastUnlockedAward.value?.achId === id) lastUnlockedAward.value = null
+                }, 0)
+            }
         }
         prevMap.set(id, ach.currentProgress)
     }
+
 
     function showNextPopup() {
         if (!showPopup.value && popupQueue.value.length) {
@@ -290,6 +338,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
         groups,
         showPopup,
         popupAchievement,
+        lastUnlockedAward,
         closePopup,
         initializeProgressTracking,
         updateProgress,
