@@ -1,9 +1,6 @@
 <template>
   <ColorScheme>
-    <div>
-      <div>Тема : {{ colorMode.preference }}</div>
-      <button @click="toggleColorMode">Переключить</button>
-    </div>
+
   </ColorScheme>
   <div class="layout">
     <slot></slot>
