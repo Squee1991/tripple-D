@@ -35,6 +35,7 @@
     "three": "^0.176.0",
     "vue": "latest",
     "vue-router": "latest",
+    "vue3-toastify": "^0.2.8",
     "vuedraggable": "^4.1.0",
     "vuefire": "^3.2.1"
   },

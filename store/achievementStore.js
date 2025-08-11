@@ -21,11 +21,13 @@ import {useLocalStatGameStore} from '../store/localSentenceStore.js'
 import {useCardsStore} from '../store/cardsStore.js'
 import {useGameStore} from '../store/marafonStore.js'
 import {useGuessWordStore} from '../store/guesStore.js'
+import {guessAchievment} from "../src/achieveGroup/guessAchieve/guessAchievments.js";
 
 export const useAchievementStore = defineStore('achievementStore', () => {
     // --- 1) Собираем все группы с категорией ---
     const rawGroups = [
         ...overAchievment.map(g => ({category: 'over', ...g})),
+        ...guessAchievment.map(g => ({category: 'guess', ...g})),
         ...groupedEasyModeAchievements.map(g => ({category: 'easy', ...g})),
         ...groupedNormalModeAchievements.map(g => ({category: 'normal', ...g})),
         ...groupedHardModeAchievements.map(g => ({category: 'hard', ...g})),
@@ -106,7 +108,8 @@ export const useAchievementStore = defineStore('achievementStore', () => {
             {id: 'learned10Words', source: () => langStore.learnedWords.length, compute: v => v},
             {id: 'learned100Words', source: () => langStore.learnedWords.length, compute: v => v},
             {id: 'wrong100Answers', source: () => langStore.wrongAnswers.length, compute: v => v},
-            {id: 'SiteRegular', source: () => authStore.registeredAt, compute: d => d
+            {
+                id: 'SiteRegular', source: () => authStore.registeredAt, compute: d => d
                     ? Math.floor((Date.now() - new Date(d).getTime()) / 86400000)
                     : 0
             },
@@ -115,11 +118,11 @@ export const useAchievementStore = defineStore('achievementStore', () => {
             {id: 'MarginForError', source: () => gameStore.marginForErrorProgress, compute: v => v || 0},
             {id: 'OnTheEdge', source: () => gameStore.onTheEdgeProgress, compute: v => v || 0},
             {id: 'Articlus', source: () => langStore.totalEarnedPoints, compute: v => v || 0},
-            {id: 'guessWordsTotal', source: () => guessStore.guessedWords.length, compute: v => v},
-            {id: 'guessFast', source: () => guessStore.guessedFastWords.length, compute: v => v},
-            {id: 'guessSafe', source: () => guessStore.guessedSafeWords.length, compute: v => v},
-            {id: 'guessOnLastTry', source: () => guessStore.guessedOnLastTryWords.length, compute: v => v},
-            {id: 'guessPerfect', source: () => guessStore.guessedPerfectWords.length, compute: v => v},
+            {id: 'guessFirst', source: () => guessStore.guessedWords.length, compute: v => v},
+            {id: 'guessSecond', source: () => guessStore.guessedWords.length, compute: v => v},
+            {id: 'guessThird', source: () => guessStore.guessedWords.length, compute: v => v},
+            {id: 'guessFourth', source: () => guessStore.guessedWords.length, compute: v => v},
+            {id: 'guessSixHundred', source: () => guessStore.guessedWords.length, compute: v => v},
         ]
 
         baseTrackers.forEach(({id, source, compute}) => {

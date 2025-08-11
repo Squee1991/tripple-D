@@ -171,7 +171,7 @@ export const userAuthStore = defineStore('auth', () => {
 			isPremium: userDataFromDb.isPremium || false,
 			subscriptionEndsAt: userDataFromDb.subscriptionEndsAt || null,
 			subscriptionCancelled: userDataFromDb.subscriptionCancelled || false,
-			providerId: user.providerData[0]?.providerId || '',
+			providerId: userCredential.user.providerData[0]?.providerId || '',
 			ownedAvatars: userDataFromDb.ownedAvatars || ['1.png', '2.png']
 		})
 	}

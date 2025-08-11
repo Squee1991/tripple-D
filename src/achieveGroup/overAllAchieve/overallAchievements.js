@@ -51,7 +51,7 @@ export const overAchievment = [
 				icon: "🔁",
 				awards: "Награда: Песочные часы вечности",
 				currentProgress: 0,
-				targetProgress: 50
+				targetProgress: 1
 			},
 			{
 				id: "MarginForError",
