@@ -110,10 +110,9 @@
 
 <style scoped>
 	.contact {
-		//background-color: #fef8e4;
 		padding: 6rem 1.5rem;
 		font-family: "Nunito", sans-serif;
-		overflow-x: hidden;
+		//overflow-x: hidden;
 	}
 
 	.contact__wrapper {

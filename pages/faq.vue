@@ -215,7 +215,6 @@ const isQAOpen = (si, qi) => !!openedQA.value.get(keyFor(si, qi))
   padding: 10px 10px 14px;
 }
 
-/* Внутренние QA-аккордионы */
 .qa-item{
   background: #ffffff;
   border: 3px solid #000;

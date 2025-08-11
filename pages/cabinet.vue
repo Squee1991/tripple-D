@@ -214,6 +214,7 @@ import {useAchievementStore} from '../store/achievementStore.js'
 import {useGameStore} from '../store/marafonStore.js'
 import {mapErrors} from '../utils/errorsHandler.js'
 import {isSoundEnabled, setSoundEnabled, unlockAudioByUserGesture} from '../utils/soundManager.js'
+import { useUiSettingsStore } from '../store/uiSettingsStore.js'
 
 import DevelopmentIcon from '../assets/images/dev.svg'
 import UserIcon from '../assets/images/user.svg'
@@ -238,6 +239,7 @@ const authStore = userAuthStore()
 const learningStore = userlangStore()
 const achievementStore = useAchievementStore()
 const gameStore = useGameStore()
+const uiSettings = useUiSettingsStore()
 
 const TAB_ITEMS = [
   {key: 'info', label: 'Параметры аккаунта', icon: UserIcon},
@@ -250,12 +252,6 @@ const isAvatarModalOpen = ref(false)
 const selectedAvatarName = ref(null)
 const isPurchaseModalOpen = ref(false)
 const purchaseAvatarName = ref(null)
-
-const achievementsNotifyEnabled = ref(true)
-if (typeof window !== 'undefined') {
-  const saved = localStorage.getItem('achievementsNotifyEnabled')
-  achievementsNotifyEnabled.value = saved === null ? true : saved === 'true'
-}
 
 const isDeleteModalOpen = ref(false)
 const deletePasswordField = ref({value: '', error: ''})
@@ -292,16 +288,13 @@ const settingsToggleItems = [
 const getSettingValue = key => {
   if (key === 'sound') return soundEnabled.value
   if (key === 'dark') return darkMode.value
-  if (key === 'ach') return achievementsNotifyEnabled.value
+  if (key === 'ach') return uiSettings.achievementsNotifyEnabled
 }
 
 const onSettingChange = (key, value) => {
   if (key === 'sound') return handleSoundToggle(value)
   if (key === 'dark') return handleThemeToggle(value)
-  if (key === 'ach') {
-    achievementsNotifyEnabled.value = value
-    localStorage.setItem('achievementsNotifyEnabled', value)
-  }
+  if (key === 'ach') return uiSettings.setAchievementsNotifyEnabled(value)
 }
 
 const isAccountAccordionOpen = ref(false)
@@ -488,17 +481,6 @@ watchEffect(() => {
     }
     if (justUnlocked) break
   }
-  if (justUnlocked && achievementsNotifyEnabled.value) {
-    genericModalData.value = {
-      title: 'Поздравляем!',
-      text: `Вы получили награду «${justUnlocked.title}»!`,
-    }
-    isGenericModalOpen.value = true
-    toast.success(`🎉 Вы получили награду «${justUnlocked.title}»!`, {
-      autoClose: 5000,
-      position: toast.POSITION.TOP_CENTER
-    })
-  }
 })
 
 </script>
@@ -520,7 +502,6 @@ watchEffect(() => {
 }
 
 .sidebar-panel {
-  background: #ffffff;
   padding: 16px;
   border-radius: 26px;
   border: 3px solid #000;
@@ -610,7 +591,6 @@ watchEffect(() => {
 }
 
 .content-panel {
-  //background: #7fa5ff;
   padding: 14px;
   border-radius: 28px;
   border: 3px solid #000;

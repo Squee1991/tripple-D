@@ -1,15 +1,13 @@
 <template>
     <NuxtLayout>
         <NuxtPage/>
-<!--        <AccessibilityToggle/>-->
     </NuxtLayout>
 </template>
 
 <script setup>
-    import { toast } from 'vue3-toastify';
+
     import { useRouter , useRoute} from 'vue-router'
-    import AccessibilityToggle from './src/components/accessibilityMode.vue'
-    import AchPopup from './src/components/achievementPopup.vue'
+
     import {useCurrentUser} from "vuefire";
     import {userlangStore} from './store/learningStore.js'
     import {userAuthStore} from './store/authStore.js'
@@ -18,7 +16,6 @@
     import {useQuestStore} from './store/questStore.js'
     import {useCardsStore} from './store/cardsStore.js'
     import {useLocalStatGameStore} from './store/localSentenceStore.js'
-    import 'vue3-toastify/dist/index.css';
     import {onMounted} from "vue";
 
     const cardStore = useCardsStore()
@@ -98,10 +95,4 @@
     html {
         font-size: 16px;
     }
-
-    * {
-      outline: none !important;
-    }
-
-
 </style>
