@@ -94,6 +94,7 @@ import Modal from '../src/components/modal.vue'
 import AchIcon from '../assets/images/target.svg'
 import Quest from '../assets/images/question.svg'
 import {useRouter} from 'vue-router'
+import {useAchievementStore} from '../store/achievementStore.js'
 
 const scrollRef = ref(null)
 const {$SimpleBar} = useNuxtApp()
@@ -102,6 +103,7 @@ const {t} = useI18n();
 const selectedId = ref('overall');
 const contentId = ref('overall');
 const achInfo = ref(false)
+const achStore = useAchievementStore()
 const backToMainPage = () => {
   router.push('/')
 }
@@ -121,6 +123,7 @@ const infoAch = ref({
 })
 
 onMounted(() => {
+    achStore.initializeProgressTracking()
   nextTick(() => {
     if (scrollRef.value && $SimpleBar) {
       new $SimpleBar(scrollRef.value, {

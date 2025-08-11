@@ -6,6 +6,7 @@
 </template>
 
 <script setup>
+    import { toast } from 'vue3-toastify';
     import { useRouter , useRoute} from 'vue-router'
     import AccessibilityToggle from './src/components/accessibilityMode.vue'
     import AchPopup from './src/components/achievementPopup.vue'
@@ -17,6 +18,7 @@
     import {useQuestStore} from './store/questStore.js'
     import {useCardsStore} from './store/cardsStore.js'
     import {useLocalStatGameStore} from './store/localSentenceStore.js'
+    import 'vue3-toastify/dist/index.css';
     import {onMounted} from "vue";
 
     const cardStore = useCardsStore()
@@ -47,7 +49,7 @@
         questStore.loadDailyProgress()
         cardStore.loadCreatedCount()
         statsStore.loadLocalStats()
-        authStore
+
     })
 
     // onMounted(() => {

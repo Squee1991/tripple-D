@@ -98,7 +98,7 @@ export const cpecialGroupAchievment = [
 				icon: "⚡",
 				awards: "Награда: Блиц-ракета",
 				currentProgress: 0,
-				targetProgress: 100,
+				targetProgress: 3,
 			},
 			{
 				id: 'guessedOnLastTryWords',
