@@ -1,12 +1,27 @@
 export default defineNuxtConfig({
 	compatibilityDate: '2024-11-01',
 	devtools: {enabled: true},
-	modules: ['@pinia/nuxt', 'nuxt-vuefire', '@nuxtjs/google-fonts', '@nuxtjs/i18n'],
+	modules: [
+		'@pinia/nuxt',
+		'nuxt-vuefire',
+		'@nuxtjs/google-fonts',
+		'@nuxtjs/i18n',
+		'@nuxtjs/color-mode',
+	],
 	css: [
 		'simplebar/dist/simplebar.min.css',
 		'~/assets/styles/simplebar.css',
 		'~/assets/styles/reset.css',
+		'~/assets/styles/theme.css',
 	],
+	colorMode: {
+		preference: 'system',
+		fallback: 'light',
+		globalName: '__NUXT_COLOR_MODE__',
+		classSuffix: '',
+		storage: 'localStorage',
+		storageKey: 'nuxt-color-mode'
+	},
 	i18n: {
 		strategy: 'prefix',
 		lazy: true,

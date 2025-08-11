@@ -350,7 +350,7 @@ const handleCategoryClick = (category) => {
   height: 100vh;
   padding: 2rem;
   gap: 2rem;
-  background-color: #fef8e4;
+
   font-family: "Nunito", sans-serif;
   box-sizing: border-box;
 }

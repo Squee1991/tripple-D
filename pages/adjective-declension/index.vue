@@ -275,7 +275,6 @@ watch(currentTopicData, initLottieIcon);
   width: 100%;
   height: 100vh;
   padding: 20px;
-  background: #f7f9fc;
   gap: 20px;
   font-family: 'Nunito', sans-serif;
 }

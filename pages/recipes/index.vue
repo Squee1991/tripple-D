@@ -93,12 +93,9 @@
 <style scoped>
 
     .quest-board-page {
-        background-color: #f0f0f0;
-        background-image: radial-gradient(#d4d4d4 0.5px, transparent 0.5px);
-        background-size: 15px 15px;
         min-height: 100vh;
         padding: 2rem;
-        font-family: 'Fredoka', sans-serif;
+        font-family: "Nunito", sans-serif;
         position: relative;
     }
 
@@ -138,7 +135,7 @@
     .page-header h1 {
         font-size: 5rem;
         font-weight: 700;
-        color: #ffcc00;
+        color: var(--titleColor);
         text-transform: uppercase;
         -webkit-text-stroke: 3px #111827;
         text-stroke: 3px #111827;

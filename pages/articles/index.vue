@@ -245,7 +245,6 @@ onMounted(async () => {
 
 .theme-page {
   font-family: "Nunito", sans-serif;
-  background-color: #fef8e4;
   min-height: 100vh;
   padding: 2rem;
   box-sizing: border-box;
@@ -278,7 +277,7 @@ onMounted(async () => {
 .theme-title {
   font-family: "Nunito", sans-serif;
   font-size: 2.5rem;
-  color: #1e1e1e;
+  color: var(--titleColor);
   text-align: center;
 }
 

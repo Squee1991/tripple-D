@@ -34,7 +34,7 @@
                 <div v-if="gameStore.gameActive && gameStore.currentWord" class="game-area">
                     <div class="word-display" :class="feedbackClass">
                         <h1>{{ gameStore.currentWord.de }}</h1>
-                        <p class="task">{{t('marathonGame.quest')}}</p>
+<!--                        <p class="task">{{t('marathonGame.quest')}}</p>-->
                     </div>
                     <div class="actions" :class="{ 'disabled': isChecking }">
                         <button @click="handleArticleChoice('der')" class="article-btn der">der</button>
@@ -69,66 +69,97 @@
 </template>
 
 <script setup>
-    import {ref, computed, onMounted, onUnmounted, watch} from 'vue';
-    import {useRouter} from 'vue-router';
-    import {useGameStore} from '../store/marafonStore.js';
+import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
+import { useRouter } from 'vue-router'
+import { useGameStore } from '../store/marafonStore.js'
 
-    const {t} = useI18n()
-    const gameStore = useGameStore();
-    const router = useRouter();
-    const feedback = ref(null);
-    const isChecking = ref(false)
-    const currentDifficultyRecord = computed(() => {
-        if (gameStore.personalBests && gameStore.difficulty) {
-            return gameStore.personalBests[gameStore.difficulty] || 0;
-        }
-        return 0;
-    });
+const { t } = useI18n()
 
-    const feedbackClass = computed(() => {
-        if (feedback.value === 'correct') return 'feedback-correct';
-        if (feedback.value === 'incorrect') return 'feedback-incorrect';
-        return '';
-    });
+import { playCorrect, playWrong, unlockAudioByUserGesture } from '../utils/soundManager.js'
 
-    function handleArticleChoice(chosenArticle) {
-        if (isChecking.value) return;
-        isChecking.value = true;
-        const isCorrect = chosenArticle === gameStore.currentWord.article;
-        feedback.value = isCorrect ? 'correct' : 'incorrect';
+const gameStore = useGameStore()
+const router = useRouter()
+const feedback = ref(null)
+const isChecking = ref(false)
+
+const currentDifficultyRecord = computed(() => {
+  if (gameStore.personalBests && gameStore.difficulty) {
+    return gameStore.personalBests[gameStore.difficulty] || 0
+  }
+  return 0
+})
+
+const feedbackClass = computed(() => {
+  if (feedback.value === 'correct') return 'feedback-correct'
+  if (feedback.value === 'incorrect') return 'feedback-incorrect'
+  return ''
+})
+
+
+function handleArticleChoice(chosenArticle) {
+  if (isChecking.value) return
+  isChecking.value = true
+
+  const isCorrect = chosenArticle === gameStore.currentWord.article
+  feedback.value = isCorrect ? 'correct' : 'incorrect'
+  if (isCorrect) {
+    playCorrect()
+  } else {
+    playWrong()
+  }
+
+  setTimeout(() => {
+    gameStore.submitAnswer(isCorrect)
+    feedback.value = null
+    isChecking.value = false
+  }, 800)
+}
+
+function goBackToPrepare() {
+  router.push('/prepare')
+}
+
+function toMain() {
+  router.push('/')
+}
+
+watch(
+    () => gameStore.gameReady,
+    (isReady) => {
+      if (!isReady) {
         setTimeout(() => {
-            gameStore.submitAnswer(isCorrect);
-            feedback.value = null;
-            isChecking.value = false;
-        }, 800);
-    }
+          router.push('/prepare')
+        }, 1500)
+      }
+    },
+    { immediate: true }
+)
 
-    function goBackToPrepare() {
-        router.push('/prepare');
-    }
+onMounted(() => {
+  if (gameStore.gameReady && !gameStore.gameActive) {
+    gameStore.startNewRound()
+  }
+})
 
-    function toMain() {
-        router.push('/');
-    }
+onMounted(() => {
+  const captureOpts = {
+    capture: true
+  };
+  const unlockOnce = () => {
+    unlockAudioByUserGesture();
+    window.removeEventListener('pointerdown', unlockOnce, captureOpts);
+    window.removeEventListener('keydown', unlockOnce, captureOpts);
+  };
+  window.addEventListener('pointerdown', unlockOnce, captureOpts);
+  window.addEventListener('keydown', unlockOnce, captureOpts);
 
-    watch(() => gameStore.gameReady, (isReady) => {
-        if (!isReady) {
-            setTimeout(() => {
-                router.push('/prepare');
-            }, 1500);
-        }
-    }, {immediate: true});
-
-    onMounted(() => {
-        if (gameStore.gameReady && !gameStore.gameActive) {
-            gameStore.startNewRound();
-        }
-    });
-
-    onUnmounted(() => {
-        gameStore.stopTimer();
-    });
+  if (gameStore.gameReady && !gameStore.gameActive) {
+    gameStore.startNewRound();
+  }
+});
 </script>
+
+
 
 <style scoped>
 

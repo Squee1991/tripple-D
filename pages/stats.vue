@@ -224,9 +224,9 @@
         gap: 2rem;
         padding: 2rem;
         min-height: 100vh;
-        background-color: #fef8e4;
+        background-color: var(--bg);
         font-family: "Nunito", sans-serif;
-        border: 4px solid #1e1e1e;
+        //border: 4px solid #1e1e1e;
         box-sizing: border-box;
     }
 
@@ -246,7 +246,7 @@
         font-size: 35px;
         text-align: center;
         font-weight: 400;
-        color: #1e1e1e;
+        color: var(--titleColor);
     }
 
     .black__board-title {

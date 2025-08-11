@@ -113,7 +113,8 @@ export const cpecialGroupAchievment = [
 				name: 'specialCategory.specialSixthLabel',
 				description: 'specialCategory.specialSixthText',
 				icon: '🛡️',
-				awards: "Награда: Щит осторожности",
+				awards: "Награда: " +
+					"",
 				currentProgress: 0,
 				targetProgress: 100,
 			},

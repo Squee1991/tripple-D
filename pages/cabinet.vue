@@ -74,6 +74,13 @@
           <div class="row"><span>Имя:</span><span>{{ authStore.name }}</span></div>
           <div class="row"><span>Email:</span><span>{{ authStore.email }}</span></div>
           <div class="row"><span>Дата регистрации:</span><span>{{ regDate || '—' }}</span></div>
+          <div>
+            <div class="row"><span>Настройки</span></div>
+            <div class="settings__el-wrapper">
+              <div>Звуковые эффекты</div>
+              <VToggle/>
+            </div>
+          </div>
           <div @click="toggle" class="subscription-row" :class="{ open: isToggle }">
             <div class="subscription-title-wrapper">
               <div class="subscription-title">Управление аккаунтом</div>
@@ -207,6 +214,8 @@ import Shield from '../assets/awards/bookOfWisdom.svg'
 import {cpecialGroupAchievment} from '../src/achieveGroup/specialAchieve/specialAchievment.js';
 import {overAchievment} from '../src/achieveGroup/overAllAchieve/overallAchievements.js'
 import {useGameStore} from '../store/marafonStore.js'
+import VToggle from "~/src/components/V-toggle.vue";
+
 const {t} = useI18n()
 const isToggle = ref(false)
 const authStore = userAuthStore()
@@ -238,6 +247,11 @@ const awards = ref([
 
 const backToMain = () => {
   router.push('/')
+}
+const sesstingsToggle = ref(false)
+
+const toggleSettings = () => {
+  sesstingsToggle.value = !sesstingsToggle.value
 }
 
 const unlockedAwards = computed(() =>
@@ -425,6 +439,12 @@ watch(unlockedAwards, (val) => {
 
 .awards__display-icons {
   width: 90px;
+}
+
+.settings__el-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .awards__display {
@@ -1147,7 +1167,7 @@ watch(unlockedAwards, (val) => {
     border-left: none;
     border-bottom: none;
     box-shadow: none;
-    padding: 22px 0 0 0 ;
+    padding: 22px 0 0 0;
   }
 
   .row {

@@ -184,7 +184,6 @@
 
 <style scoped>
 	.rules {
-		background: #fef8e4;
 		min-height: 100vh;
 		padding-bottom: 5rem;
     font-family: "Nunito", sans-serif;

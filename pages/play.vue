@@ -298,14 +298,13 @@ onUnmounted(() => {
 .lobby-container {
   padding: 40px;
   font-family: 'Nunito', sans-serif;
-  background-color: #FDF8F0;
   min-height: 100vh
 }
 
 .page-title {
   font-size: 2.8rem;
   font-weight: 800;
-  color: #1e1e1e;
+  color: var(--titleColor);
   text-align: center;
 }
 
@@ -313,7 +312,7 @@ onUnmounted(() => {
   text-align: center;
   padding: 20px;
   font-size: 1.2rem;
-  color: #666;
+  color: var(--titleColor);
   margin-top: 5px;
 }
 

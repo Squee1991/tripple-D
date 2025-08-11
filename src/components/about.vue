@@ -110,7 +110,7 @@
 <style scoped>
     .why {
         padding: 60px 0;
-        background-color: #fef8e4;
+        //background-color: #fef8e4;
         overflow-x: hidden;
     }
 

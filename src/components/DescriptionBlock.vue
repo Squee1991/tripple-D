@@ -137,7 +137,7 @@ onMounted(() => {
 
 <style scoped>
 .features {
-  background: #fef8e4;
+  //background: #fef8e4;
   padding: 6rem 1.5rem;
   font-family: "Nunito", sans-serif;
   overflow-x: hidden;
@@ -184,7 +184,7 @@ onMounted(() => {
 .features__card {
   border-radius: 24px;
   border: 3px solid #1e1e1e;
-  box-shadow: 8px 8px 0px #1e1e1e;
+  box-shadow: 5px 5px 0px #1e1e1e;
   padding: 2rem 1.5rem;
   text-align: center;
   display: flex;

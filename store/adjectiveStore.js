@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
+import { playCorrect, playWrong, unlockAudioByUserGesture } from '../utils/soundManager.js'
 
 export const useQuizStore = defineStore('quiz', () => {
     const allQuestions = ref([])
@@ -46,8 +47,15 @@ export const useQuizStore = defineStore('quiz', () => {
 
     function checkAnswer() {
         if (!selectedOption.value || !activeQuestion.value) return
+        unlockAudioByUserGesture()
         const isCorrect = selectedOption.value === activeQuestion.value.answer
         feedback.value = isCorrect ? 'correct' : 'incorrect'
+        if (isCorrect ) {
+            playCorrect()
+        }
+        else {
+            playWrong()
+        }
         userAnswers.value[currentQuestionIndex.value] = {
             answer: selectedOption.value,
             isCorrect

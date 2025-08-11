@@ -273,10 +273,6 @@ definePageMeta({
 
 <style scoped>
 
-.idioms {
-  background-color: #fff7ea;
-}
-
 .idioms__icon {
   width: 40px;
   margin-right: 10px;
@@ -311,7 +307,7 @@ definePageMeta({
 
 .idioms__subtitle {
   font-size: 1.2rem;
-  color: #555;
+  color: var(--titleColor);
 }
 
 .idioms__card {

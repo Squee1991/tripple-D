@@ -294,8 +294,8 @@ watch(isMobileMenuOpen, (newVal) => {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: #fef8e4;
-  border-bottom: 4px solid #1e1e1e;
+  background-color: var(--bg  );
+  border-bottom: 4px solid var(--borderBottom);
 }
 
 .header-container {
@@ -342,7 +342,7 @@ watch(isMobileMenuOpen, (newVal) => {
   align-items: center;
   gap: 0.4rem;
   font-size: 17px;
-  color: #1e1e1e;
+  color: var(--titleColor);
   font-weight: 600;
   padding: 0.5rem 0.75rem;
   text-decoration: none;

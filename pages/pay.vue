@@ -55,10 +55,11 @@ import Speaker from '../assets/images/pay-images/speaker.svg'
 import Exams from '../assets/images/pay-images/test.svg'
 import Competitions from '../assets/images/pay-images/competition.svg'
 import Future from '../assets/images/pay-images/future.svg'
-
+const audioRef = ref(null)
 const authStore = userAuthStore()
 const payButton = ref(null)
 const showStickyFooter = ref(false)
+
 let observer
 const features = [
   { title: 'Учебный материал', free: true, premium: true , icon: Books},
@@ -72,7 +73,6 @@ const features = [
   { title: 'Дуэли и рейтинг', free: false, premium: true, icon: Competitions },
   { title: 'Будущие функции', free: false, premium: true, icon: Future },
 ]
-
 onMounted(() => {
   observer = new IntersectionObserver(
       ([entry]) => {

@@ -92,9 +92,9 @@
             x: "100vw",
             ease: "none",
             scrollTrigger: {
-                trigger: document.body, // Триггер теперь весь документ
-                start: "top top",      // Анимация начинается, как только верх документа достигает верха окна просмотра
-                end: "bottom top", // Анимация заканчивается, когда нижняя часть триггера (документа) достигает верха окна просмотра
+                trigger: document.body,
+                start: "top top",
+                end: "bottom top",
                 scrub: true,
             }
         });
@@ -127,7 +127,7 @@
     }
 
     .banner__section {
-        background-color: #fef8e4;
+        //background-color: #fef8e4;
         padding: 8rem 2rem 13rem 2rem;
         /*border-bottom: 4px solid #1e1e1e;*/
     }
@@ -190,7 +190,7 @@
     .banner__title {
         font-size: 3.2rem;
         font-weight: 400;
-        color: #1e1e1e;
+        color: var(--titleColor);
         line-height: 1.1;
         letter-spacing: -0.03em;
         margin-bottom: 2.5rem;

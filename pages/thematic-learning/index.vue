@@ -210,7 +210,6 @@ watch(topic, loadThemeData)
   height: 100vh;
   padding: 2rem;
   gap: 2rem;
-  background-color: #fef8e4;
   font-family: "Nunito", sans-serif;
   overflow: hidden;
   box-sizing: border-box;

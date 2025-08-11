@@ -104,7 +104,6 @@ function goBack() {
   align-items: center;
   min-height: 100vh;
   padding: 2rem;
-  background-color: #fef8e4;
   font-family: 'Inter', sans-serif;
   position: relative;
 }

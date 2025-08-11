@@ -150,7 +150,6 @@ definePageMeta({
 <style scoped>
 
 .theory-main {
-  background: #fef8e4;
   min-height: 100vh;
   padding-bottom: 64px;
   font-family: 'Inter', sans-serif;
@@ -341,10 +340,10 @@ definePageMeta({
     font-size: 1.5rem;
   }
   .theory-table-cell {
-    max-width: 100px;       /* ваша заданная максимальная ширина */
-    white-space: nowrap;    /* запрещает перенос строк */
-    overflow: hidden;       /* обрезает всё, что выходит за пределы коробки */
-    text-overflow: ellipsis;/* отображает «...» вместо обрезанного текста */
+    max-width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 

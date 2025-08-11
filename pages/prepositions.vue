@@ -232,10 +232,8 @@
 </script>
 
 <style scoped>
-
     .prepositions-page {
         font-family: 'Nunito', sans-serif;
-        background-color: #fef8e4;
         color: #1e1e1e;
         padding: 2rem;
     }
@@ -262,7 +260,7 @@
 
     .page-subtitle {
         font-size: 1.2rem;
-        color: #555;
+        color: var(--titleColor);
     }
 
     .page-content {

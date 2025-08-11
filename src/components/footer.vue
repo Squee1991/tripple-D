@@ -46,7 +46,7 @@
 
 
 	.footer {
-		background-color: #fef8e4;
+		//background-color: #fef8e4;
 		border-top: 4px solid #1e1e1e;
 		padding: 3rem 1.5rem 2rem;
 		font-family: 'Fredoka One', cursive;

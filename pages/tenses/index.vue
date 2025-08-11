@@ -505,10 +505,9 @@ function selectTense(tense) {
 
 .tenses-layout {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   padding: 1rem;
   height: 100vh;
-  background-color: #f7f9fc;
 }
 
 .tenses-sidebar {
