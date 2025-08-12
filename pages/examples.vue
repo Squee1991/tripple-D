@@ -199,7 +199,7 @@ definePageMeta({
 
 .theory-subtitle {
   font-size: 1.25rem;
-  color: #555;
+  color: var(--titleColor);
   max-width: 600px;
   line-height: 1.6;
   margin: 20px;
@@ -322,10 +322,12 @@ definePageMeta({
   font-size: 1.2rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .theory-title {
-    font-size: 2rem;
     transform: rotate(0deg);
+    box-shadow: 3px 3px 0 #1e1e1e;
+    padding: 10px;
+    font-size: 1.5rem;
   }
 
   .theory-subtitle {
@@ -333,7 +335,12 @@ definePageMeta({
   }
 
   .theory-card {
-    padding: 1.5rem;
+    box-shadow: 3px 3px 0 #1e1e1e;
+    padding: 15px;
+  }
+
+  .theory-hero {
+    padding: 15px;
   }
 
   .theory-card-title {
@@ -344,6 +351,9 @@ definePageMeta({
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+  .theory-card-text {
+    font-size: 1rem ;
   }
 }
 

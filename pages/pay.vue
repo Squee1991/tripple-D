@@ -1,5 +1,8 @@
 <template>
   <div class="comic-wrapper">
+    <button @click="backToMain" class="back__btn">
+      <img class="btn__icon" src="../assets/images/close.svg" alt="">
+    </button>
     <div class="comic__wrapper">
       <div class="comic__header">
         <h2 class="comic-description">Получи максимум от платформы</h2>
@@ -43,6 +46,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import { useRouter } from 'vue-router'
 import { userAuthStore } from '../store/authStore'
 import { getStripe } from '@/utils/stripe'
 import Books from '../assets/images/pay-images/books.svg'
@@ -59,6 +63,11 @@ const audioRef = ref(null)
 const authStore = userAuthStore()
 const payButton = ref(null)
 const showStickyFooter = ref(false)
+const router = useRouter()
+
+const backToMain = () => {
+  router.push('/')
+}
 
 let observer
 const features = [
@@ -126,6 +135,17 @@ async function pay() {
   text-align: center;
   color: #fff;
   min-height: 100vh;
+}
+
+.back__btn {
+  border: none;
+  background: none;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.btn__icon {
+  width: 40px;
 }
 
 .compare__label {

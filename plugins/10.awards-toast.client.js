@@ -19,7 +19,10 @@ export default defineNuxtPlugin((nuxtApp) => {
 		const key = award?.key ?? award?.id ?? award?.title
 		if (!key || key === lastShownKey) return
 		lastShownKey = key
-		toast.success(`🎉 Вы получили награду «${award.title || 'Награда'}»!`)
+		setTimeout(() => {
+			toast.success(`🎉 Вы получили награду «${award.title || 'Награда'}»!`)
+			// ach.lastUnlockedAward = null
+		}, 1000)
 	}
 
 	ach.$subscribe((_m, state) => {

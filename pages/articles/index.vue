@@ -247,7 +247,6 @@ onMounted(async () => {
   font-family: "Nunito", sans-serif;
   min-height: 100vh;
   padding: 2rem;
-  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -289,7 +288,7 @@ onMounted(async () => {
   font-family: "Nunito", sans-serif;
   font-weight: 600;
   font-size: 1.2rem;
-  background: #fff;
+  background: #4ade80;
   border: 3px solid #1e1e1e;
   color: #1e1e1e;
   padding: 0.6rem 1rem;
@@ -619,8 +618,13 @@ onMounted(async () => {
     gap: 0;
   }
 
+  .theme-page {
+    padding: 10px;
+  }
+
   .grid-area-wrapper {
     width: 100%;
+    box-shadow: none;
   }
 
   .learning-modes-block {
@@ -676,6 +680,20 @@ onMounted(async () => {
 
   .theme-card-title {
     font-size: 1.1rem;
+  }
+}
+
+@media(max-width: 540px )  {
+  .theme__title-wrapper {
+    flex-direction: column;
+  }
+  .back-btn {
+    box-shadow: 2px 2px 0 black;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .theme-title {
+    font-size: 1.2rem;
   }
 }
 

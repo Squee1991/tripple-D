@@ -427,7 +427,7 @@ onUnmounted(() => {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .back-button-global {
     padding: 10px;
     width: 100%;
@@ -435,6 +435,11 @@ onUnmounted(() => {
     font-size: 1.1rem;
     font-family: "Nunito", sans-serif;
     font-weight: 600;
+    box-shadow: 2px 2px 0 black;
+  }
+
+  .lobby-container {
+    padding: 20px;
   }
 
   .card-level-title {
@@ -449,6 +454,10 @@ onUnmounted(() => {
   .level-grid {
     display: flex;
     flex-direction: column;
+  }
+
+  .level-card {
+    box-shadow: 2px 2px 2px #1e1e1e;
   }
 }
 </style>

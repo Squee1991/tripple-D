@@ -34,7 +34,6 @@
             if (prevUser && !user) {
                 router.push('/')
             } else if (user && typeof route.query.redirect === 'string') {
-
                 router.push(route.query.redirect)
             }
         })

@@ -100,4 +100,10 @@ const close = () => {
   border-radius: 8px;
   border-left: 5px solid #60a5fa;
 }
+
+@media (max-width: 767px) {
+  .tips__content {
+    box-shadow: 2px 2px 0 #1e1e1e;
+  }
+}
 </style>

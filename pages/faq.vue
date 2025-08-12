@@ -1,222 +1,251 @@
 <template>
-  <section class="faq-wrapper">
-    <h2 class="faq-title">Вопрос–ответ</h2>
-
+  <section class="faq">
+    <div class="faq__top-btn">
+      <button class="faq__btn-home" @click="goHome">На главную</button>
+    </div>
     <div
-        v-for="(section, si) in sections"
-        :key="si"
-        class="faq-section"
+        v-for="(section, sectionIndex) in faqSections"
+        :key="sectionIndex"
+        class="faq__section"
     >
-      <button
-          class="section-head"
-          @click="toggleSection(si)"
-          :aria-expanded="openedSections.has(si)"
-          :aria-controls="`section-${si}`"
-      >
-        <span class="section-title">{{ section.title }}</span>
-        <img class="section-arrow" :class="{ rotated: openedSections.has(si) }" src="../assets/images/arrowNav.svg" alt=""/>
-      </button>
-
-      <transition name="fade">
+      <div class="faq__section-header">
+        <span class="faq__section-title">{{ section.title }}</span>
+      </div>
+      <div class="faq__section-body">
         <div
-            v-show="openedSections.has(si)"
-            class="section-body"
-            :id="`section-${si}`"
+            v-for="(item, questionIndex) in section.items"
+            :key="questionIndex"
+            class="faq__item"
+            :class="{ 'faq__item--open': isQuestionOpen(sectionIndex, questionIndex) }"
         >
-          <!-- Внутренние аккордионы -->
-          <div
-              v-for="(item, qi) in section.items"
-              :key="qi"
-              class="qa-item"
+          <button
+              class="faq__item-toggle"
+              @click="toggleQuestion(sectionIndex, questionIndex)"
+              :aria-expanded="isQuestionOpen(sectionIndex, questionIndex)"
+              :aria-controls="`faq-item-${sectionIndex}-${questionIndex}`"
           >
-            <button
-                class="qa-head"
-                @click="toggleQA(si, qi)"
-                :aria-expanded="isQAOpen(si, qi)"
-                :aria-controls="`qa-${si}-${qi}`"
-            >
-              <span class="qa-question">{{ item.q }}</span>
-              <img class="qa-arrow" :class="{ rotated: isQAOpen(si, qi) }" src="../assets/images/arrowNav.svg" alt=""/>
-            </button>
-
-            <transition name="fade">
-              <div
-                  v-show="isQAOpen(si, qi)"
-                  class="qa-body"
-                  :id="`qa-${si}-${qi}`"
-                  v-html="item.a"
-              />
-            </transition>
+            <span class="faq__item-question">{{ item.question }}</span>
+            <img
+                class="faq__item-arrow"
+                src="../assets/images/arrowNav.svg"
+                alt="Раскрыть ответ"
+            />
+          </button>
+          <div
+              class="faq__item-body"
+              :id="`faq-item-${sectionIndex}-${questionIndex}`"
+          >
+            <template v-if="item.steps && item.steps.length">
+              <ol class="faq__steps">
+                <li
+                    v-for="(step, stepIndex) in item.steps"
+                    :key="stepIndex"
+                    class="faq__step"
+                >
+                  {{ step }}
+                </li>
+              </ol>
+              <p v-if="item.note" class="faq__note">{{ item.note }}</p>
+            </template>
+            <template v-else>
+              <p class="faq__answer">{{ item.answer }}</p>
+            </template>
           </div>
         </div>
-      </transition>
+      </div>
+    </div>
+    <div class="faq__bottom-btn">
+      <p class="faq__contact-text">Есть ещё вопросы? Напишите нам!</p>
+      <button class="faq__btn-contact" @click="openContactForm">
+        Отправить сообщение
+      </button>
     </div>
   </section>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import {ref} from 'vue'
+import {useRouter} from 'vue-router'
 
-/**
- * Данные FAQ.
- * Можно подтянуть с бэка, но пока статически.
- * Ответы в HTML, чтобы легко делать списки/жирный текст.
- */
-const sections = ref([
+const router = useRouter()
+
+function goHome() {
+  router.push('/')
+}
+
+function openContactForm() {
+  alert('Тут откроется форма обратной связи')
+}
+
+const faqSections = ref([
   {
     title: 'Как пользоваться',
     items: [
       {
-        q: 'Что такое достижение?',
-        a: `
-          <p>Достижения — это награды за активность в сервисе.
-          Вы получаете их за прогресс, отгадки в режимах, ежедневные задания и другие действия.
-          Открытые достижения отображаются в разделе <b>Кабинет → Награды</b>.</p>
-        `
+        question: 'Что такое достижение?',
+        answer: 'Достижение — это отметка за выполненную активность (прогресс, правильные ответы, ежедневные задания и т.п.).'
       },
       {
-        q: 'Как попасть в рейтинг?',
-        a: `
-          <p>Нужно получить как минимум <b>2 уровень</b>.
-          Уровень поднимается за отгадывание артиклей в режиме <b>Практика артиклей</b>.</p>
-        `
+        question: 'Что такое награды?',
+        answer: 'Награды выдаются за выполнение определённых достижений и отображаются в вашем кабинете.'
       },
       {
-        q: 'Что такое ежедневные задания?',
-        a: `
-          <p>Это задания по темам, которые можно выполнять <b>раз в день</b>.
-          Выполняйте их регулярно, чтобы получать прогресс и дополнительные награды.</p>
-        `
+        question: 'Что такое Артиклюс?',
+        answer: 'Артиклюс — это внутренняя валюта. Начисляется за правильные ответы в задании «Практика артиклей». Её можно тратить на повторные попытки или покупки на сайте.'
+      },
+      {
+        question: 'Как попасть в рейтинг?',
+        answer: 'Нужно получить минимум 2 уровень, играя в режим «Практика артиклей».'
+      },
+      {
+        question: 'Что такое ежедневные задания?',
+        answer: 'Это задания по темам, которые можно выполнять один раз в день. Регулярное выполнение даёт прогресс и дополнительные награды.'
       }
     ]
   },
-
   {
     title: 'Управление аккаунтом',
     items: [
       {
-        q: 'Как поменять имя или почту?',
-        a: `
-          <p>Перейдите в <b>Кабинет → Настройки</b>.
-          Там можно изменить имя и электронную почту.</p>
-        `
+        question: 'Как поменять имя или почту?',
+        answer: 'Перейдите в Кабинет → Настройки, где можно изменить имя и адрес электронной почты.'
       },
       {
-        q: 'Как удалить аккаунт?',
-        a: `
-          <p>В <b>Кабинет → Настройки</b> нажмите <b>Удалить аккаунт</b>.
-          Важно: после удаления <b>данные восстановить невозможно</b>.</p>
-        `
+        question: 'Как удалить аккаунт?',
+        answer: 'В Кабинет → Во вкладке "Параметры аккаунта" выберите «Удалить аккаунт». После удаления все ваши данные будут безвозвратно удалены и их невозможно будет восстановить.'
       },
       {
-        q: 'Как восстановить пароль?',
-        a: `
-          <p>Откройте форму входа/регистрации и выберите <b>Забыли пароль?</b>.
-          Мы отправим письмо со ссылкой на восстановление на указанный e-mail.
-          Убедитесь, что указываете <b>реальную почту</b> — письмо придёт именно туда.
-          Если указан фейковый адрес, восстановление <b>невозможно</b>.</p>
-        `
+        question: 'Как восстановить пароль?',
+        answer: 'На форме входа выберите «Забыли пароль?» и следуйте инструкциям. Письмо с ссылкой на восстановление будет отправлено на ваш почтовый ящик.'
       }
     ]
   },
-
   {
     title: 'Подписка (Премиум)',
     items: [
       {
-        q: 'Что даёт подписка?',
-        a: `
-          <ul>
-            <li>Доступ к тестам всех уровней с проверкой с помощью ИИ.</li>
-            <li>Озвучка и встроенный переводчик на сайте без лимита.</li>
-          </ul>
-        `
+        question: 'Что даёт подписка Премиум?',
+        steps: [
+          '1 Озвучка всех слов и предложений — тренируйте восприятие на слух.',
+          '2 Обучение без ограничений — проходите любое количество материала в день.',
+          '3 Доступ ко всем тестам с авто-проверкой и оценкой от ИИ.',
+          '4 Аудио-задания и задания на говорение для тренировки устной речи.',
+          '5 Эксклюзивные материалы и упражнения, недоступные в бесплатной версии.',
+          'Наша цель — сделать изучение немецкого доступным и увлекательным. Мы создаём атмосферу интерактива, игр и соревнований, чтобы учёба была приключением, в которое хочется возвращаться каждый день!'
+        ]
       },
       {
-        q: 'Как отключить Премиум?',
-        a: `
-          <p>В <b>Кабинет → Настройки</b> можно отключить подписку.
-          После отмены премиум останется активным <b>до конца оплаченного периода</b>.
-          <i>Пока что так:</i> возврат за оставшиеся дни не производится.</p>
-        `
+        question: 'Как отключить Премиум?',
+        steps: [
+          'Войдите в свой аккаунт.',
+          'Перейдите в раздел «Кабинет».',
+          'Откройте подраздел «Управление аккаунтом».',
+          'Нажмите «Отменить подписку».'
+        ],
+        note: 'После этого доступ сохранится до конца оплаченного периода.'
+      },
+      {
+        question: 'Есть ли возврат за оставшиеся дни?',
+        answer: 'Сейчас возврат за оставшиеся дни не предусмотрен.'
       }
     ]
   }
 ])
+const openQuestionBySection = ref(new Map())
 
-/** Открытые секции и QA */
-const openedSections = ref(new Set())
-const openedQA = ref(new Map()) // key: `${si}-${qi}` → true
-
-const toggleSection = (si) => {
-  if (openedSections.value.has(si)) openedSections.value.delete(si)
-  else openedSections.value.add(si)
+function toggleQuestion(sectionIndex, questionIndex) {
+  const current = openQuestionBySection.value.get(sectionIndex)
+  if (current === questionIndex) {
+    openQuestionBySection.value.delete(sectionIndex)
+  } else {
+    openQuestionBySection.value.set(sectionIndex, questionIndex)
+  }
 }
 
-const keyFor = (si, qi) => `${si}-${qi}`
-
-const toggleQA = (si, qi) => {
-  const key = keyFor(si, qi)
-  openedQA.value.set(key, !openedQA.value.get(key))
+function isQuestionOpen(sectionIndex, questionIndex) {
+  return openQuestionBySection.value.get(sectionIndex) === questionIndex
 }
-
-const isQAOpen = (si, qi) => !!openedQA.value.get(keyFor(si, qi))
 </script>
 
 <style scoped>
-.faq-wrapper{
-  display: block;
+
+* {
+  font-family: "Nunito", sans-serif;
+}
+
+.faq {
+  max-width: 1000px;
+  margin: 0 auto;
   border-radius: 24px;
-  padding: 12px;
+  padding: 22px;
 }
 
-.faq-title{
-  font-weight: 900;
-  font-size: 1.6rem;
-  margin: 0 0 10px;
+.faq__top-btn {
+  text-align: center;
+  margin-bottom: 16px;
 }
 
-.faq-section{
-  background: #fff7dd;
-  border: 3px solid #000;
-  border-radius: 18px;
-  box-shadow: 4px 4px 0 #000;
-  margin-bottom: 14px;
-  overflow: hidden;
-}
-
-/* Section head (верхний аккордион) */
-.section-head{
-  width: 100%;
-  text-align: left;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 14px;
-  background: #fffbea;
-  border: 0;
+.faq__btn-home {
+  background: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: none;
   cursor: pointer;
-  outline: none;
+  font-weight: 700;
+  min-width: 250px;
+  font-size: 1.3rem;
 }
 
-.section-title{
+.faq__btn-home:hover {
+  background: #0f72dc;
+}
+
+.faq__bottom-btn {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.faq__contact-text {
+  margin-bottom: 25px;
+  font-weight: 700;
+  color: var(--titleColor);
+  font-size: 1.4rem;
+}
+
+.faq__btn-contact {
+  background: #007bff;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  min-width: 260px;
+  font-size: 1.4rem;
+}
+
+.faq__btn-contact:hover {
+  background: #0056b3;
+}
+
+.faq__section-header {
+  display: flex;
+  justify-content: center;
+  color: var(--titleColor);
+}
+
+.faq__section-title {
   font-weight: 900;
-  font-size: 1.15rem;
+  font-size: 2rem;
 }
 
-.section-arrow{
-  width: 22px;
-  transition: transform .2s ease;
-}
-
-.section-arrow.rotated{ transform: rotate(180deg); }
-
-.section-body{
+.faq__section-body {
   padding: 10px 10px 14px;
 }
 
-.qa-item{
-  background: #ffffff;
+.faq__item {
+  background: #fff;
   border: 3px solid #000;
   border-radius: 16px;
   box-shadow: 3px 3px 0 #000;
@@ -224,38 +253,77 @@ const isQAOpen = (si, qi) => !!openedQA.value.get(keyFor(si, qi))
   overflow: hidden;
 }
 
-.qa-head{
+.faq__item-toggle {
   width: 100%;
-  text-align: left;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 12px;
+  padding: 15px;
   background: #f3f4f6;
   border: 0;
   cursor: pointer;
   font-weight: 800;
-  outline: none;
 }
 
-.qa-question{ font-weight: 900; }
+.faq__item-question {
+  font-weight: 900;
+  font-size: 1.4rem;
+}
 
-.qa-arrow{
+.faq__item-arrow {
   width: 20px;
   transition: transform .2s ease;
 }
 
-.qa-arrow.rotated{ transform: rotate(180deg); }
-
-.qa-body{
-  padding: 10px 12px 14px;
-  font-weight: 700;
+.faq__item--open .faq__item-arrow {
+  transform: rotate(180deg);
 }
 
-/* анимация */
-.fade-enter-active, .fade-leave-active { transition: opacity .2s ease; }
-.fade-enter-from, .fade-leave-to { opacity: 0; }
+.faq__item-body {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height .2s ease, opacity .2s ease, padding .2s ease;
+  padding: 0 15px;
+}
 
-/* убираем webkit highlight */
-button { -webkit-tap-highlight-color: transparent; -webkit-focus-ring-color: transparent; }
+.faq__item--open .faq__item-body {
+  max-height: 1000px;
+  opacity: 1;
+  padding: 10px 15px;
+}
+
+.faq__steps {
+  padding-left: 20px;
+  margin: 0 0 8px 0;
+}
+
+.faq__step {
+  margin: 4px 0;
+  font-size: 20px;
+}
+
+.faq__note {
+  margin-top: 8px;
+  font-weight: 700;
+  padding-left: 20px;
+}
+
+.faq__answer {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+@media (max-width: 767px) {
+  .faq__item-question {
+    font-size: 1rem;
+  }
+  .faq__answer {
+    font-size: 1rem ;
+  }
+  .faq__step {
+    font-size: 1rem;
+  }
+}
 </style>

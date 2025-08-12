@@ -18,8 +18,10 @@
           <li v-for="(idiom, iIndex) in group.expressions" :key="iIndex" class="idioms__item">
             <div class="idioms__example">
               <img class="idioms__icon" :src="Chat" alt="">
-              <p><b>{{ idiom.phrase }} — </b></p>
-              <span class="idioms__translation">{{ idiom.meaning }}</span>
+              <div class="idioms__example--wrapper">
+                <p><b>{{ idiom.phrase }} — </b></p>
+                <span class="idioms__translation">{{ idiom.meaning }}</span>
+              </div>
             </div>
             <div v-if="idiom.example" class="idioms__example">
               <img class="idioms__icon" :src="Pin" alt="">
@@ -320,6 +322,7 @@ definePageMeta({
 }
 
 .idioms__card-title {
+  text-align: center;
   font-size: 2rem;
   font-weight: 900;
   border-bottom: 3px solid #f2c94c;
@@ -336,6 +339,10 @@ definePageMeta({
 .idioms__list {
   list-style: none;
   padding-left: 0;
+}
+
+.idioms__example--wrapper {
+  display: flex;
 }
 
 .idioms__item {
@@ -446,17 +453,26 @@ definePageMeta({
   margin-bottom: 2rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .idioms__inner {
     padding: 1rem;
   }
 
   .idioms__title {
     font-size: 2.2rem;
+    padding: 15px;
+    box-shadow: 2px 2px 5px #2c2c2c;
   }
 
   .idioms__card-title {
     font-size: 1.6rem;
+  }
+  .idioms__card {
+    box-shadow: 2px 2px 5px #2c2c2c;
+  }
+  .idioms__example--wrapper {
+    display: flex;
+    flex-direction: column;
   }
 }
 

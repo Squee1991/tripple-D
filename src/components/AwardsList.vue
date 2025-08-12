@@ -75,8 +75,8 @@ function closeAward() {
 
 
 .shop-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 6px 6px 0 #1e1e1e;
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 0 #1e1e1e;
 }
 
 .item-img.locked {
@@ -176,6 +176,7 @@ button:disabled {
 @media (max-width: 767px)  {
   .shop-item {
     width: 100%;
+    box-shadow: 2px 2px 0 black;
   }
 
   .items-grid {

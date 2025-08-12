@@ -137,8 +137,8 @@
         align-items: center;
         max-width: 1280px;
         margin: 0 auto;
-        justify-content: space-between;
-        gap: 20px;
+        justify-content: center;
+        gap: 30px;
     }
 
     .banner__content {
@@ -265,7 +265,6 @@
         right: 0;
     }
 
-    
     @media (max-width: 900px) {
         .banner__wrapper {
             flex-direction: column;
@@ -288,7 +287,7 @@
         }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
         .banner__section {
             padding: 3rem 1.5rem;
         }
@@ -304,7 +303,11 @@
 
         .banner__button {
             width: 100%;
-            max-width: 300px;
         }
+
+      .banner__button {
+        border-radius: 25px;
+        box-shadow: 3px 3px 0 #1e1e1e;
+      }
     }
 </style>

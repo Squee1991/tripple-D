@@ -32,7 +32,7 @@ export default defineNuxtConfig({
 			{code: 'uk', iso: 'uk-UA', name: 'Українська', file: 'uk-UA.json'},
 			{code: 'en', iso: 'en-US', name: 'English', file: 'en-US.json'},
 			{code: 'pl', iso: 'pl-PL', name: 'Polski', file: 'pl-PL.json'},
-			{code: 'tr-TR', iso: 'tr-TR', name: 'Türkçe', file: 'tr-TR.json',}
+			{code: 'tr', iso: 'tr-TR', name: 'Türkçe', file: 'tr-TR.json',}
 		],
 
 		detectBrowserLanguage: {

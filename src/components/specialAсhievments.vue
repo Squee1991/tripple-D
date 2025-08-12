@@ -58,7 +58,6 @@ import { useAchievementStore } from '../../store/achievementStore.js'
 const { t } = useI18n()
 const achievementStore = useAchievementStore()
 
-// Берём только группы категории "special"
 const achievementGroups = computed(() =>
     achievementStore.groups.filter(g => g.category === 'special')
 )
@@ -70,7 +69,7 @@ const getCompletedCount = group =>
 <style scoped>
 .achievement-group {
     margin-bottom: 3rem;
-    font-family: 'Fredoka One', cursive;
+    font-family: "Nunito", sans-serif;
 }
 
 .group-header {

@@ -1,5 +1,5 @@
 <template>
-  <div class="achievements-page-container">
+  <div class="achievements-page-container" :class="{'is-mobile-open': isContentOpen}">
     <Modal
         :visible="achInfo"
         @close="hideInfo"
@@ -7,6 +7,7 @@
         :img="infoAch.icon"
         :text="infoAch.text"
     />
+
     <div class="sidebar">
       <button class="btn__back" @click="backToMainPage">{{ t('chooseTheme.btnBack') }}</button>
       <nav class="nav__sidebar" ref="scrollRef">
@@ -15,9 +16,9 @@
           <template v-for="category in achievementCategories" :key="category.id">
             <li
                 :class="{
-                            'active': selectedId === category.id || (category.submenu && category.submenu.some(sub => sub.id === selectedId)),
-                            'has-submenu': category.submenu
-                            }"
+                'active': selectedId === category.id || (category.submenu && category.submenu.some(sub => sub.id === selectedId)),
+                'has-submenu': category.submenu
+              }"
                 @click="handleCategoryClick(category)"
                 class="category-item"
             >
@@ -29,6 +30,7 @@
                    src="../assets/images/arrowNav.svg" alt="Стрелка">
               <span class="sub__item-length">{{ category.length }}</span>
             </li>
+
             <ul v-if="category.submenu && openSubmenus[category.id]" class="submenu">
               <li
                   v-for="subItem in category.submenu"
@@ -39,20 +41,31 @@
               >
                 <span v-if="subItem.icon" class="submenu-icon">{{ subItem.icon }}</span>
                 <span class="sub__item">{{ t(subItem.name) }}</span>
-                <span class="sub__item-length"> {{ subItem.length }}</span>
+                <span class="sub__item-length">{{ subItem.length }}</span>
               </li>
             </ul>
           </template>
         </ul>
       </nav>
     </div>
-    <main class="content-area">
+
+    <!-- Мобильный бэкдроп (показывается только на ≤1023 и когда открыт контент) -->
+    <div class="mobile-backdrop" @click="closeContent"/>
+
+    <main class="content-area" :class="{'open': isContentOpen}">
       <header class="content-header">
         <h1>{{ t('categoryAchievments.achievmentAreaLabel') }}</h1>
-        <button :title="t('hoverTitle.ach')" @click="showInfo" class="header__icon-info">
-          <img :src=Quest alt="">
-        </button>
+        <div class="content-header-actions">
+          <button :title="t('hoverTitle.ach')" @click="showInfo" class="header__icon-info">
+            <img :src="Quest" alt="">
+          </button>
+          <!-- Кнопка закрытия видна только на мобильном -->
+          <button class="content-close" @click="closeContent" aria-label="Close achievements panel">
+            ✖
+          </button>
+        </div>
       </header>
+
       <div class="category-content" ref="scrollRef">
         <ClientOnly>
           <div :class="wrapperClass">
@@ -65,7 +78,7 @@
 </template>
 
 <script setup>
-import {ref, computed, inject, nextTick, onMounted} from 'vue';
+import {ref, computed, nextTick, onMounted, onBeforeUnmount} from 'vue';
 import GuessAchievementDisplay from '../src/components/guessAchievment.vue';
 import OverallAchievments from '../src/components/overallAchiements.vue';
 import EasyModeAchieve from '../src/components/easyModeAchieve.vue'
@@ -104,6 +117,9 @@ const selectedId = ref('overall');
 const contentId = ref('overall');
 const achInfo = ref(false)
 const achStore = useAchievementStore()
+const QuestRef = Quest // избегаем предупреждений сборщика
+const isContentOpen = ref(false)
+
 const backToMainPage = () => {
   router.push('/')
 }
@@ -111,7 +127,6 @@ const backToMainPage = () => {
 const showInfo = () => {
   achInfo.value = true
 }
-const num = 1
 const hideInfo = () => {
   achInfo.value = false
 }
@@ -123,15 +138,24 @@ const infoAch = ref({
 })
 
 onMounted(() => {
-    achStore.initializeProgressTracking()
+  achStore.initializeProgressTracking()
   nextTick(() => {
     if (scrollRef.value && $SimpleBar) {
-      new $SimpleBar(scrollRef.value, {
-        autoHide: false
-      })
+      new $SimpleBar(scrollRef.value, {autoHide: false})
     }
   })
+  window.addEventListener('keydown', onEsc)
 })
+
+onBeforeUnmount(() => {
+  window.removeEventListener('keydown', onEsc)
+})
+
+const onEsc = (e) => {
+  if (e.key === 'Escape') {
+    closeContent()
+  }
+}
 
 const openSubmenus = ref({
   marathon: false,
@@ -266,24 +290,9 @@ const achievementCategories = computed(() => [
     icon: '🏃',
     length: modeComputed.value.total,
     submenu: [
-      {
-        id: 'easy',
-        name: 'categoryAchievments.easy',
-        icon: '🟢',
-        length: modeComputed.value.easy
-      },
-      {
-        id: 'normal',
-        name: 'categoryAchievments.normal',
-        icon: '🟡',
-        length: modeComputed.value.normal,
-      },
-      {
-        id: 'hard',
-        name: 'categoryAchievments.hard',
-        icon: '🔴',
-        length: modeComputed.value.hard,
-      },
+      {id: 'easy', name: 'categoryAchievments.easy', icon: '🟢', length: modeComputed.value.easy},
+      {id: 'normal', name: 'categoryAchievments.normal', icon: '🟡', length: modeComputed.value.normal},
+      {id: 'hard', name: 'categoryAchievments.hard', icon: '🔴', length: modeComputed.value.hard},
     ]
   },
   {
@@ -292,36 +301,21 @@ const achievementCategories = computed(() => [
     icon: '📚',
     length: articleComputed.value.total,
     submenu: [
-      {
-        id: 'article',
-        name: 'categoryAchievments.writeArticle',
-        icon: '📝',
-        length: articleComputed.value.article,
-      },
+      {id: 'article', name: 'categoryAchievments.writeArticle', icon: '📝', length: articleComputed.value.article},
       {
         id: 'buildWord',
         name: 'categoryAchievments.wordFromLetters',
         icon: '🧩',
-        length: articleComputed.value.buildWord,
+        length: articleComputed.value.buildWord
       },
       {
         id: 'writeWord',
         name: 'categoryAchievments.wordPlusArticle',
         icon: '✍️',
-        length: articleComputed.value.writeWord,
+        length: articleComputed.value.writeWord
       },
-      {
-        id: 'pluralForm',
-        name: 'categoryAchievments.plural',
-        icon: '🔢',
-        length: articleComputed.value.pluralForm,
-      },
-      {
-        id: 'listening',
-        name: 'categoryAchievments.audio',
-        icon: '👂',
-        length: articleComputed.value.listening,
-      },
+      {id: 'pluralForm', name: 'categoryAchievments.plural', icon: '🔢', length: articleComputed.value.pluralForm},
+      {id: 'listening', name: 'categoryAchievments.audio', icon: '👂', length: articleComputed.value.listening},
     ]
   },
   {
@@ -331,9 +325,18 @@ const achievementCategories = computed(() => [
     length: modeComputed.value.special,
   }
 ]);
+
+const openContent = () => {
+  isContentOpen.value = true
+}
+const closeContent = () => {
+  isContentOpen.value = false
+}
+
 const handleContentClick = (id) => {
   contentId.value = id;
   selectedId.value = id;
+  openContent(); // на мобильном выезжаем
 };
 const handleCategoryClick = (category) => {
   selectedId.value = category.id;
@@ -341,23 +344,21 @@ const handleCategoryClick = (category) => {
     openSubmenus.value[category.id] = !openSubmenus.value[category.id];
   } else {
     contentId.value = category.id;
+    openContent(); // на мобильном выезжаем
   }
 };
-
 </script>
 
 <style scoped>
-
 .achievements-page-container {
   display: flex;
   height: 100vh;
   padding: 2rem;
-  gap: 2rem;
-
+  gap: 10px;
   font-family: "Nunito", sans-serif;
   box-sizing: border-box;
+  position: relative;
 }
-
 
 .header__icon-info {
   width: 60px;
@@ -378,6 +379,7 @@ const handleCategoryClick = (category) => {
   display: flex;
   flex-direction: column;
   transition: all 0.3s ease;
+  z-index: 1;
 }
 
 .btn__back {
@@ -468,7 +470,7 @@ const handleCategoryClick = (category) => {
   margin-left: 15px;
   list-style: none;
   margin-top: 5px;
-  border-left: 2px dashed rgba(30, 30, 30, 0.2);
+  border-left: 3px dashed rgba(30, 30, 30, 0.2);
 }
 
 .submenu-item {
@@ -516,6 +518,8 @@ const handleCategoryClick = (category) => {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  transition: transform .3s ease;
+  z-index: 2;
 }
 
 .content-header {
@@ -526,6 +530,7 @@ const handleCategoryClick = (category) => {
   flex-shrink: 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .content-header h1 {
@@ -533,6 +538,23 @@ const handleCategoryClick = (category) => {
   color: #1e1e1e;
   margin: 0;
   font-family: "Nunito", sans-serif;
+}
+
+.content-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.content-close {
+  border: 3px solid #1e1e1e;
+  background: #fff;
+  border-radius: 12px;
+  padding: 8px 12px;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 #1e1e1e;
+  font-weight: 800;
+  display: none;
 }
 
 .category-content {
@@ -570,35 +592,57 @@ const handleCategoryClick = (category) => {
   border-radius: 6px;
 }
 
-@media (max-width: 1024px) {
-  .achievements-page-container {
-    flex-direction: column;
-    padding: 1rem;
-    gap: 1rem;
-    height: auto;
-    min-height: 100vh;
-  }
-
+@media (max-width: 1023px) {
   .sidebar {
+    width: 100%;
     min-width: 100%;
     max-width: 100%;
-    height: auto;
-    max-height: 55vh;
+  }
+
+  .content-close {
+    display: block;
+  }
+
+  .achievement__card {
+    box-shadow: 2px 2px 0 black;
   }
 
   .content-area {
-    padding: 1.5rem;
+    position: fixed;
+    padding: 10px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    transform: translateX(100%);
+    transition: transform .3s ease;
+    z-index: 2;
   }
 
-  .content-header h1 {
-    font-size: 2em;
+  .content-area.open {
+    transform: translateX(0);
   }
 
-  .achievements-list {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 1rem;
+  .mobile-backdrop {
+    display: none;
+  }
+
+  .is-mobile-open .mobile-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .25);
+    z-index: 1;
+  }
+
+  .content-close {
+    display: inline-flex;
   }
 }
+
 
 @media (max-width: 480px) {
   .achievements-page-container {
@@ -612,10 +656,6 @@ const handleCategoryClick = (category) => {
     box-shadow: none;
   }
 
-  .sidebar {
-    border-top: none;
-  }
-
   .content-area {
     border-bottom: none;
   }
@@ -623,7 +663,5 @@ const handleCategoryClick = (category) => {
   .achievements-list {
     grid-template-columns: 1fr;
   }
-
 }
-
 </style>

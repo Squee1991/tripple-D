@@ -12,7 +12,7 @@
       </div>
     </div>
     <aside class="sidebar">
-      <NuxtLink to="/" class="btn__back">{{ t('trainerPage.toMain') }}</NuxtLink>
+      <VBackBtn/>
       <h2 class="sidebar__title">{{ t('modalVerbsPage.title') }}</h2>
       <div class="sidebar__heading">{{ t('modalVerbsPage.level') }}</div>
       <ul class="sidebar__list">
@@ -82,6 +82,7 @@ import {useRouter} from 'vue-router';
 import Lottie from 'lottie-web';
 import TipIcon from '../../assets/animation/info.json';
 import SoundBtn from '../../src/components/soundBtn.vue';
+import VBackBtn from "~/src/components/V-back-btn.vue";
 
 const {t} = useI18n()
 const router = useRouter();

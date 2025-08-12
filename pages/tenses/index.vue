@@ -22,7 +22,8 @@
     <!--            :tips="activeTipps"-->
     <!--        />-->
     <aside class="tenses-sidebar">
-      <NuxtLink to="/" class="sidebar-button-home">{{ t('tenses.barBtn') }}</NuxtLink>
+<!--      <NuxtLink to="/" class="sidebar-button-home">{{ t('tenses.barBtn') }}</NuxtLink>-->
+      <VBackBtn/>
       <h2 class="tenses-sidebar__title">{{ t('tenses.times') }}</h2>
       <div v-for="group in tenseGroups" :key="group.level" class="level-group">
         <h3 class="level-group__title">{{ group.level }}</h3>
@@ -119,6 +120,7 @@ import Lottie from 'lottie-web'
 import TipIcon from '../../assets/animation/info.json'
 import SoundBtn from '../../src/components/soundBtn.vue'
 import VTips from "~/src/components/V-tips.vue";
+import VBackBtn from "~/src/components/V-back-btn.vue";
 
 const {t} = useI18n()
 const selectedTense = ref(null)

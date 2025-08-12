@@ -70,10 +70,10 @@
           <ForTea/>
         </div>
         <VTips
-         :title="articleData.title"
-         :tips="articleData.tips"
-         v-model="isArticleOpen"
-         />
+            :title="articleData.title"
+            :tips="articleData.tips"
+            v-model="isArticleOpen"
+        />
         <button @click="openArticleModal" class="articlus__wrapper">
           <img class="articlus" src="../../assets/images/articlus.png" alt=""/>
           <span class="articlus__counter">{{ learningStore.points }}</span>
@@ -242,9 +242,9 @@ const goTo = (page) => {
 const articleData = ref({
   title: t('articleOverlay.title'),
   tips: [
-    {id: 1 , text: t('articleOverlay.first') },
-    {id: 2 , text: t('articleOverlay.second') },
-    {id: 3 , text: t('articleOverlay.third') },
+    {id: 1, text: t('articleOverlay.first')},
+    {id: 2, text: t('articleOverlay.second')},
+    {id: 3, text: t('articleOverlay.third')},
   ]
 })
 
@@ -294,7 +294,7 @@ watch(isMobileMenuOpen, (newVal) => {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: var(--bg  );
+  background-color: var(--bg);
   border-bottom: 4px solid var(--borderBottom);
 }
 
@@ -302,7 +302,6 @@ watch(isMobileMenuOpen, (newVal) => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1280px;
   margin: 0 auto;
   padding: 13px;
 }
@@ -535,9 +534,9 @@ watch(isMobileMenuOpen, (newVal) => {
   display: none;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .header-container {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0;
   }
 
   .header.mobile-menu-active .mobile-nav-overlay {
@@ -545,7 +544,11 @@ watch(isMobileMenuOpen, (newVal) => {
     pointer-events: auto;
   }
 
-  .articlus__wrapper, .header-user__name, .header__drop-text, .logo-img {
+  .header-nav__link {
+    color: black;
+  }
+
+  .header-user__name, .header__drop-text, .logo-img {
     display: none;
   }
 
@@ -557,10 +560,10 @@ watch(isMobileMenuOpen, (newVal) => {
     width: 100%;
     max-width: 100%;
     padding: 1.5rem;
-    background: #fef8e4;
+    background: var(--bg);
     z-index: 101;
     transform: translateX(-100%);
-    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.2);
     overflow-y: auto;
   }
@@ -573,7 +576,7 @@ watch(isMobileMenuOpen, (newVal) => {
     flex-direction: column;
     gap: 0.5rem;
     width: 100%;
-    padding-top: 40px;
+    padding-top: 48px;
   }
 
   .header-nav .header-nav__item {
@@ -603,7 +606,7 @@ watch(isMobileMenuOpen, (newVal) => {
     padding: 0.5rem 0 0.5rem 1.2rem;
     background: none;
     min-width: auto;
-    border-left: 3px solid #1e1e1e;
+    border-left: 3px solid var(--titleColor);
     margin-left: 0.5rem;
     margin-bottom: 0.5rem;
   }
@@ -634,6 +637,7 @@ watch(isMobileMenuOpen, (newVal) => {
     white-space: normal;
     border-left: 3px solid #cccccc;
     margin-left: 0.5rem;
+    margin-bottom: 6px;
   }
 
   .header-nav .header-nav__submenu-sub .header-nav__submenu-link {
@@ -652,6 +656,41 @@ watch(isMobileMenuOpen, (newVal) => {
   .burger-button {
     display: block;
     z-index: 102;
+  }
+
+  @media (max-width: 767px) {
+    .header-user {
+      height: 45px;
+      box-shadow: 2px 2px 0 #1e1e1e;
+    }
+
+    .btn-login {
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 2px 2px 0 #1e1e1e;
+    }
+
+    .header-right {
+      gap: 7px;
+    }
+
+    .header-user__avatar {
+      width: 30px;
+      height: 30px;
+      border: 2px solid black;
+    }
+
+    .header-nav__link {
+      color: #1e1e1e;
+    }
+
+    .articlus__wrapper {
+      height: 45px;
+      box-shadow: 2px 2px 0 #1e1e1e;
+    }
+
   }
 }
 </style>
