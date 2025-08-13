@@ -69,7 +69,6 @@
   </div>
 </template>
 
-
 <script setup>
 import {ref} from 'vue'
 import Pin from '../assets/images/pin.svg'

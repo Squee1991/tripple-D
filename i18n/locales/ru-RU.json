@@ -1108,7 +1108,8 @@
     "title": "Имеются пожелания? Заполните эту форму, и мы обязательно ответим вам.",
     "btn": "отправить сообщение",
     "namePlaceholder": "Введите имя",
-    "messagePlaceholder": "Введите ваше сообщение"
+    "messagePlaceholder": "Введите ваше сообщение",
+    "emailPlaceholder": "Введите ваш email"
   },
   "errors": {
     "errorEmail": "Введите email",

@@ -363,7 +363,7 @@ watch(topic, loadThemeData)
   left: 50%;
   transform: translate(-50%, -50%) rotate(-4deg);
   color: #f1c40f;
-  font-family: 'Caveat', cursive;
+  font-family: "Nunito", sans-serif;
   font-size: 2rem;
   z-index: 100;
   text-align: center;

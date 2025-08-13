@@ -10,7 +10,6 @@
         </div>
       </div>
     </div>
-
     <div class="layout">
       <aside class="sidebar-panel">
         <button class="back-btn" @click="backToMain" aria-label="На главную">
@@ -31,7 +30,6 @@
           </button>
         </nav>
       </aside>
-
       <section class="content-panel">
         <div v-if="activeTabKey === 'info'" class="header-surface">
           <div class="user-block">
@@ -42,7 +40,6 @@
                 <img src="../assets/images/add.svg" alt="Сменить"/>
               </button>
             </div>
-
             <div class="user-info">
               <div class="user-name">{{ authStore.name }}</div>
               <div class="exp-bar">
@@ -52,7 +49,6 @@
               <div class="level-info">Уровень: {{ learningStore.isLeveling }}</div>
             </div>
           </div>
-
           <div class="award-strip">
             <div class="awards__get">
               <div class="awards__title">Полученные награды :</div>
@@ -69,7 +65,6 @@
             </div>
           </div>
         </div>
-
         <div class="content-body">
           <div v-if="activeTabKey === 'info'" class="tab-content">
             <div
@@ -162,7 +157,6 @@
               <button @click="openDeleteModal" class="btn btn-danger">Удалить аккаунт</button>
             </div>
           </div>
-
           <div v-else-if="activeTabKey === 'progress'">
             <Progress/>
           </div>
@@ -276,6 +270,7 @@ const ACCORDIONS = ref([
   { key: 'settings', title: 'Настройки',             icon: SettingsIcon,isLink: false },
   { key: 'faq',      title: 'Справочный центр',      icon: FaqIcon,     isLink: true  },
 ])
+
 const activeAccordion = ref(null)
 
 function toggleAccordion(key) {
@@ -1110,7 +1105,6 @@ watch(() => {
     overflow: auto;
     padding: 5px;
   }
-
 }
 
 @media (max-width: 420px) {

@@ -11,10 +11,7 @@
     --titleColor:white;
     --borderBottom: white;
     --navItems: white;
-
 }
-
-
 
 html, body {
     background: var(--bg);

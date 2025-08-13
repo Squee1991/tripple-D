@@ -175,7 +175,8 @@ button:disabled {
 
 @media (max-width: 767px)  {
   .shop-item {
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     box-shadow: 2px 2px 0 black;
   }
 

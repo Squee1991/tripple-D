@@ -280,7 +280,7 @@ watch(() => store.lose, (isLose) => {
 .trainer-app__board::before {
   content: '?';
   position: absolute;
-  font-family: 'Caveat', cursive;
+  font-family: "Nunito", sans-serif;
   font-size: 30rem;
   color: rgba(236, 240, 241, 0.05);
   top: 50%;
@@ -296,7 +296,7 @@ watch(() => store.lose, (isLose) => {
   right: 20px;
   background-color: #8B7355;
   color: #f0ebe5;
-  font-family: 'Caveat', cursive;
+  font-family: "Nunito", sans-serif;
   font-size: 1.5rem;
   padding: 5px 20px;
   border-radius: 4px;
@@ -364,7 +364,7 @@ watch(() => store.lose, (isLose) => {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Caveat', cursive;
+  font-family: "Nunito", sans-serif;
   font-size: 24px;
   color: #5D4037;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
@@ -537,7 +537,7 @@ watch(() => store.lose, (isLose) => {
   justify-content: center;
   align-items: center;
   padding: 12px 24px;
-  font-family: 'Caveat', cursive;
+  font-family: "Nunito", sans-serif;
   font-size: 24px;
   color: #f1c40f;
   font-weight: bold;
@@ -562,7 +562,6 @@ watch(() => store.lose, (isLose) => {
   cursor: not-allowed;
 }
 
-/* --- Стили модальных окон --- */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -730,7 +729,7 @@ watch(() => store.lose, (isLose) => {
   }
 
   .guess__word {
-    font-size: 14px;
+    font-size: 15px;
     min-height: 50px;
     margin: 1rem 0;
     gap: 0;

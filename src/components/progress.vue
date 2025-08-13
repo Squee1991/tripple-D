@@ -140,7 +140,7 @@ onMounted(async () => {
   font-family: "Nunito", sans-serif;
   font-size: 2.5rem;
   text-align: center;
-  color: #1e1e1e;
+  color: var(--titleColor);
   margin-bottom: 2rem;
 }
 
