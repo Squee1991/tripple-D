@@ -2,7 +2,7 @@ export const achievementToAwardMap = {
     registerAchievement: 'Значок участника',
     wrong100Answers: 'Талисман терпения',
     SiteRegular: 'Медаль ветерана',
-    Articlus: 'Алмаз артиклеуса',
+    ArticlusSpent: 'Алмаз артиклеуса',
     level10: 'Кубок с крыльями',
     LastChance: 'Тик-тик удачи',
     daily: 'Песочные часы вечности',
