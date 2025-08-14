@@ -11,23 +11,14 @@ export const overAchievment = [
 				currentProgress: 0,
 				targetProgress: 1
 			},
-			{
-				id: "firstAward",
-				name: "Начало коллекции",
-				description: "Получите вашу первую награду",
-				icon: "🎁️",
-				currentProgress: 0,
-				targetProgress: 1
-			},
-			{
-				id: "LastChance",
-				name: "generalCategory.lastBreahtlabel",
-				description: "generalCategory.lastBreathText",
-				icon: "❤️",
-				awards: 'Награда: Тик-так Удачи',
-				currentProgress: 0,
-				targetProgress: 20,
-			},
+			// {
+			// 	id: "firstAward",
+			// 	name: "generalCategory.firstAwardText",
+			// 	description: "generalCategory.firstAwardLabel",
+			// 	icon: "🎁️",
+			// 	currentProgress: 0,
+			// 	targetProgress: 1
+			// },
 			{
 				id: "SiteRegular",
 				name: "generalCategory.monthLabel",
@@ -35,6 +26,15 @@ export const overAchievment = [
 				icon: "🗓️",
 				currentProgress: 0,
 				targetProgress: 31
+			},
+			{
+				id: "LastChance",
+				name: "generalCategory.lastBreahtlabel",
+				description: "generalCategory.lastBreathText",
+				icon: "❤️",
+				awards: 'generalCategory.lastBreathAward',
+				currentProgress: 0,
+				targetProgress: 20,
 			},
 			{
 				id: "createdCountCard",
@@ -49,7 +49,7 @@ export const overAchievment = [
 				name: "generalCategory.dailyTitle",
 				description: "generalCategory.dailyText",
 				icon: "🔁",
-				awards: "Награда: Песочные часы вечности",
+				awards: "generalCategory.dailyAward",
 				currentProgress: 0,
 				targetProgress: 50
 			},

@@ -144,7 +144,7 @@
     "guessed": "Загаданное слово было:",
     "tryAgain": "Попробовать снова",
     "btnToMain": "На главную",
-    "placeholder": "Введите слово целиком",
+    "placeholder": "Введите слово целиком"
   },
   "preposition": {
     "title": "Всё о немецких предлогах",
@@ -463,7 +463,7 @@
     "verbTranslateFour": "хотя",
     "verbExampleFour": "Хотя идёт дождь, мы идём гулять.",
     "verbTranslateFive": "для того чтобы",
-    "verbExampleFive": "Я учу немецкий, чтобы работать в Германии.",
+    "verbExampleFive": "Я учу немецкий, чтобы работать в Германии."
   },
 
   "error": {
@@ -617,6 +617,8 @@
     "special": "Особые достижения"
   },
   "specialCategory": {
+    "specialCollectionText": "Коллекционер",
+    "specialCollectionLabel": "Соберите целую коллекцию из 10 наград",
     "specialLabel": "Лидерство в рейтинге",
     "specialFirstLabel": "Легкий чемпион",
     "specialFirstText": "Займите первое место в рейтинге в легком режиме.",
@@ -626,10 +628,12 @@
     "specialThirdText": "Займите первое место в рейтинге в сложном режиме.",
     "specialFourthLabel": "Молниеносный",
     "specialFourthText": "Угадай 100 слов за 20 секунд или быстрее",
+    "specialFourthAward": "Награда: Блиц-ракета",
     "specialFifthLabel": "Последний шанс",
     "specialFifthText": "Угадай 100 слов имея не больше 1 попытки",
     "specialSixthLabel": "Безопасная игра",
     "specialSixthText": "Угадай 100 слов, сохранив минимум 10 попыток",
+    "specialSixthAward": "Награда: Щит осторожности",
     "specialSeventhLabel": "Безупречная игра",
     "specialSeventhText": "Угадай 100 слов, сохранив все 15 попыток",
     "generalLabel": "Общие достижения",
@@ -637,7 +641,7 @@
     "generalFirstText": "Соберите 1000 правильно угаданных артиклей во всех режимах.",
     "generalSecondLabel": "Выше неба",
     "generalSecondText": "достигните двадцатого уровня .",
-    "generalSecondAward": "Награда: Золотая статуэтка ",
+    "generalSecondAward": "Награда: Кубок с крыльями",
     "generalThirdLabel": "Имей сто артиклюсов... и друзей тоже",
     "generalThirdText": "Получите 100 артиклюсов.",
     "generalFourthLabel": "Ветеран",
@@ -669,11 +673,15 @@
     "generaLabel": "Общие достижения",
     "dailyTitle": "Железная воля",
     "dailyText": "Выполни 50 ежедневных заданий",
+    "dailyAward": "Награда: Песочные часы вечности",
     "firstStepLabel": "Первый шаг",
+    "firstAwardText": "Начало коллекции",
+    "firstAwardLabel": "Получите вашу первую награду",
     "firstStepText": "Ты зарегистрировался и вступил в мир немецкого!",
     "firstStepAward": "Награда : Значок участника",
     "lastBreahtlabel": "На последнем дыхании",
     "lastBreathText": "Идея 1 жизнь в Марафоне отгадать 20 артиклей подряд ( легкий режим )",
+    "lastBreathAward": "Награда: Тик-так Удачи",
     "monthLabel": "Постоялец",
     "moonthText": "Вы с нами уже целый месяц!",
     "marginLabel": "Без права на ошибку",
@@ -684,7 +692,6 @@
     "grandmasterText": "Составить 500 предложений в сумме на всех уровнях.",
     "duelLabel": "Магистр дуэлей",
     "duelText": "Одержать 250 побед в сумме на всех уровнях.",
-
     "edgeLabel": "На грани",
     "edgeText": "Сделать стрик 50 слов в сложном режиме. Таймер не должен опускаться ниже 2 сек.",
     "firstArtiklusLabel": "Первая валюта",
@@ -711,7 +718,7 @@
     "guessFourthText": "Отгадайте 200 слов.",
     "guessfifthLabel": "Хранитель Мудрости.",
     "guessfifthText": "Отгадайте 600 слов.",
-    "guessfifthAward": "Награда: Талисман терпения"
+    "guessfifthAward": "Награда: Книга мудности"
   },
   "marathonEasyMode": {
     "correctLabel": "Угаданые слова",

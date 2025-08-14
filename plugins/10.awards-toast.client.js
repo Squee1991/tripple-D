@@ -1,213 +1,143 @@
 // plugins/achievements-toasts.client.js
-import {toast} from 'vue3-toastify';
-import 'vue3-toastify/dist/index.css';
-import {useAchievementStore} from '~/store/achievementStore';
-import {useUiSettingsStore} from '~/store/uiSettingsStore';
-
-
-// Firebase импорты — подстрой под свой проект
-import {getAuth, onAuthStateChanged} from 'firebase/auth'
-import {getFirestore, doc, getDoc, setDoc, updateDoc, serverTimestamp} from 'firebase/firestore'
-
+import { toast } from 'vue3-toastify'
+import 'vue3-toastify/dist/index.css'
+import { useAchievementStore } from '~/store/achievementStore'
+import { useUiSettingsStore } from '~/store/uiSettingsStore'
+import { getAuth, onAuthStateChanged } from 'firebase/auth'
+import { getFirestore, doc, getDoc, setDoc, updateDoc, serverTimestamp } from 'firebase/firestore'
 
 let inited = false
 let lastShownKey = null
 
 export default defineNuxtPlugin((nuxtApp) => {
-    if (process.server) return
-    if (inited) return
+    if (process.server || inited) return
     inited = true
 
-    const ach = useAchievementStore()
-    const ui = useUiSettingsStore()
-
-    // Firebase
+    const ach  = useAchievementStore()
+    const ui   = useUiSettingsStore()
     const auth = getAuth()
-    const db = getFirestore()
+    const db   = getFirestore()
 
-    // локальный кеш показанных ключей (для скорости и оффлайна)
+    const MIN_GAP = 1000
+    const BOOT_DELAY = 700
+    const CONTAINER_ID = 'achievements'
+
+    const i18n = nuxtApp?.$i18n || nuxtApp?.vueApp?.config?.globalProperties?.$i18n
+    const t = i18n?.t || ((s) => s)
+    const looksLikeKey = (s) => typeof s === 'string' && /^[A-Za-z0-9_.:-]+$/.test(s) && !/\s/.test(s)
+    const tr = (s) => { if (!s) return null; const res = t(s); return (res === s && looksLikeKey(s)) ? null : res }
     let shownSet = new Set()
     const lsKey = (uid) => `shown_toasts_v1_${uid || 'anon'}`
-    const loadLocal = (uid) => {
-        try {
-            return new Set(JSON.parse(localStorage.getItem(lsKey(uid)) || '[]'))
-        } catch {
-            return new Set()
-        }
-    }
-    const saveLocal = (uid, set) => {
-        try {
-            localStorage.setItem(lsKey(uid), JSON.stringify([...set]))
-        } catch {
-        }
-    }
-
-    async function loadShownFromCloud(uid) {
+    const loadLocal = (uid) => { try { return new Set(JSON.parse(localStorage.getItem(lsKey(uid)) || '[]')) } catch { return new Set() } }
+    const saveLocal = (uid, set) => { try { localStorage.setItem(lsKey(uid), JSON.stringify([...set])) } catch {} }
+    const currentUid = () => auth.currentUser?.uid || null
+    const isShown = (key) => shownSet.has(key)
+    async function initShown(uid) {
         shownSet = loadLocal(uid)
         if (!uid) return
         try {
             const ref = doc(db, 'users', uid, 'ui', 'toastFlags')
             const snap = await getDoc(ref)
-            const cloudMap = snap.exists() ? (snap.data().shown || {}) : {}
-            const keys = Object.keys(cloudMap)
-            shownSet = new Set([...shownSet, ...keys])
+            const cloud = snap.exists() ? (snap.data().shown || {}) : {}
+            shownSet = new Set([...shownSet, ...Object.keys(cloud)])
             saveLocal(uid, shownSet)
-        } catch (e) {
-            // игнорируем сеть: остаёмся на локальном кеше
-        }
-    }
-
-    const currentUid = () => auth.currentUser?.uid || null
-
-    function isShown(key) {
-        return shownSet.has(key)
+        } catch {}
     }
 
     async function markShown(key) {
-        if (!key) return
-        if (shownSet.has(key)) return
+        if (!key || shownSet.has(key)) return
         shownSet.add(key)
         saveLocal(currentUid(), shownSet)
-
         const uid = currentUid()
         if (!uid) return
         try {
             const ref = doc(db, 'users', uid, 'ui', 'toastFlags')
-            await setDoc(ref, {}, {merge: true})
-            await updateDoc(ref, {[`shown.${key}`]: serverTimestamp()})
-        } catch (e) {
-            // оффлайн — останется в локальном кеше
-        }
+            await setDoc(ref, {}, { merge: true })
+            await updateDoc(ref, { [`shown.${key}`]: serverTimestamp() })
+        } catch {}
     }
-
-    onAuthStateChanged(auth, (user) => {
-        loadShownFromCloud(user?.uid || null)
-    })
-
-    let appMounted = false
-
-    // очередь тостов
-    const MIN_GAP = 1000
-    const BOOT_DELAY = 700
-    const CONTAINER_ID = 'achievements'
-
-    const toastQueue = []
-    let processing = false
-    let lastAt = 0
-
-    const enqueueToast = (fn, extraDelay = 0) => {
-        toastQueue.push({fn, extraDelay})
-        if (appMounted) drainQueue()
-    }
-
-    const drainQueue = () => {
+    onAuthStateChanged(auth, (user) => initShown(user?.uid || null))
+    let appMounted = false, processing = false, lastAt = 0
+    const queue = []
+    const enqueue = (fn, extraDelay = 0) => { queue.push({ fn, extraDelay }); if (appMounted) drain() }
+    const drain = () => {
         if (processing) return
         processing = true
         const step = () => {
-            if (!toastQueue.length) {
-                processing = false;
-                return
-            }
-            const {fn, extraDelay} = toastQueue.shift()
-            const since = Date.now() - lastAt
-            const wait = Math.max(MIN_GAP - since, 0) + (extraDelay || 0)
-            setTimeout(() => {
-                try {
-                    fn()
-                } finally {
-                    lastAt = Date.now()
-                    step()
-                }
-            }, wait)
+            if (!queue.length) { processing = false; return }
+            const { fn, extraDelay } = queue.shift()
+            const wait = Math.max(MIN_GAP - (Date.now() - lastAt), 0) + (extraDelay || 0)
+            setTimeout(() => { try { fn() } finally { lastAt = Date.now(); step() } }, wait)
         }
         step()
     }
+    nuxtApp.hook('app:mounted', () => setTimeout(() => { appMounted = true; drain() }, BOOT_DELAY))
 
-    // i18n helper
-    const t =
-        nuxtApp?.$i18n?.t ||
-        nuxtApp?.vueApp?.config?.globalProperties?.$t ||
-        ((s) => s)
-
-    const makeAwardKey = (award) => {
-        const baseKey = award?.key ?? award?.achId ?? award?.title
-        return baseKey ? `award:${baseKey}` : null
+    const makeKey = (kind, obj) => {
+        const base = obj?.key ?? obj?.achId ?? obj?.title ?? obj?.name ?? obj?.id
+        return base ? `${kind}:${base}` : null
     }
-    const makeAchKey = (a) => a?.id ? `ach:${a.id}` : null
 
+    const resolveName = (a) => {
+        const fromStore = ach.findById ? ach.findById(a?.id) : null
+        const candidates = [
+            a?.name,
+            fromStore?.name,
+            a?.i18nKey,
+            a?.id && `achievements.${a.id}.name`,
+            a?.id && `achievements.${a.id}.title`,
+            a?.id,
+        ]
+        for (const c of candidates) {
+            const v = tr(c)
+            if (v) return v
+        }
+        return null
+    }
     const showAward = async (award) => {
-        const key = makeAwardKey(award)
-        if (!key || key === lastShownKey) return
-        if (isShown(key)) return
-
+        const key = makeKey('award', award)
+        if (!key || key === lastShownKey || isShown(key)) return
         lastShownKey = key
-        setTimeout(() => {
-            toast.success(`🎉 ${t('Вы получили награду')} «${t(award?.title || 'Награда')}»!`, {
-                position: toast.POSITION.TOP_RIGHT,
-                theme: 'colored',
-                style: {
-                    background: '#222', // фон
-                    color: '#fff',      // цвет текста
-                    fontSize: '16px',   // размер текста
-                    borderRadius: '12px', // скругление
-                },
-                toastId: key,
-                containerId: CONTAINER_ID,
-            })
 
-        }, 1000)
+        const name = tr(award?.name) || tr(award?.title) || tr('Награда') || 'Награда'
+        toast.success(`🎉 ${t('Вы получили награду')} «${name}»!`, {
+            toastId: key,
+            containerId: CONTAINER_ID,
+            position: toast.POSITION.TOP_RIGHT,
+            theme: 'colored',
+            style: { background: '#222', color: '#fff', fontSize: '16px', borderRadius: '12px' },
+        })
+
         await markShown(key)
-        setTimeout(() => {
-            if (lastShownKey === key) lastShownKey = null
-        }, 1200)
+        setTimeout(() => { if (lastShownKey === key) lastShownKey = null }, 1200)
     }
 
     const showAchievement = async (a) => {
-        const key = makeAchKey(a)
-        if (!key || key === lastShownKey) return
-        if (isShown(key)) return
-
+        const key = makeKey('ach', a)
+        if (!key || key === lastShownKey || isShown(key)) return
         lastShownKey = key
 
-        const rawTitle =
-            a?.title ||
-            (ach.findById ? ach.findById(a?.id)?.title : null) ||
-            a?.i18nKey || a?.id || 'Достижение'
+        const name = resolveName(a)
+        const msg = name
+            ? `🏆 ${t('Достижение')} «${name}» ${t('выполнено')}!`
+            : `🏆 ${t('Достижение выполнено')}!`
 
-        const title = t(rawTitle)
-
-        toast.success(`🏆 ${t('Достижение')} «${title}» ${t('выполнено')}!`, {
-            toastId: key,
-            containerId: CONTAINER_ID,
-        })
+        toast.success(msg, { toastId: key, containerId: CONTAINER_ID })
         await markShown(key)
-        setTimeout(() => {
-            if (lastShownKey === key) lastShownKey = null
-        }, 1200)
+        setTimeout(() => { if (lastShownKey === key) lastShownKey = null }, 1200)
     }
 
-    // единая подписка: кладём события в очередь (сначала награда, затем ачивка)
     ach.$subscribe((_m, state) => {
         if (!ui.achievementsNotifyEnabled) return
         const achievement = state.lastUnlockedAchievement
         const award = state.lastUnlockedAward
 
-        // 🔹 Спец-правило: при регистрации «Первый шаг» показываем раньше награды
         if (achievement?.id === 'registerAchievement') {
-            enqueueToast(() => showAchievement(achievement), 250)
-            if (award) enqueueToast(() => showAward(award), 350)
+            enqueue(() => showAchievement(achievement), 250)
+            if (award) enqueue(() => showAward(award), 350)
             return
         }
-
-        // остальной случай — как было (сначала награда, потом ачивка)
-        if (award) enqueueToast(() => showAward(award), 0)
-        if (achievement) enqueueToast(() => showAchievement(achievement), 250)
-    })
-
-    nuxtApp.hook('app:mounted', () => {
-        setTimeout(() => {
-            appMounted = true
-            drainQueue()
-        }, BOOT_DELAY)
+        if (award) enqueue(() => showAward(award))
+        if (achievement) enqueue(() => showAchievement(achievement), 250)
     })
 })

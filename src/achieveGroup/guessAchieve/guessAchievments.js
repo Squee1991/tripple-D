@@ -32,16 +32,16 @@ export const guessAchievment = [
 				description: "guessCategory.guessFourthText",
 				icon: "🦉",
 				currentProgress: 0,
-				targetProgress: 250
+				targetProgress: 200
 			},
 			{
 				id: "guessSixHundred",
 				name: "guessCategory.guessfifthLabel",
 				description: "guessCategory.guessfifthText",
 				icon: "⚗️",
-				awards: "Награда: Книга мудности",
+				awards: "guessCategory.guessfifthAward",
 				currentProgress: 0,
-				targetProgress: 12
+				targetProgress: 600
 			}
 		]
 	}

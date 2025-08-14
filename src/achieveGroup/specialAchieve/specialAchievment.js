@@ -37,7 +37,7 @@ export const cpecialGroupAchievment = [
 				name: "specialCategory.generalSecondLabel",
 				description: "specialCategory.generalSecondText",
 				icon: "⬆️",
-				awards: "Награда: Кубок с крыльями",
+				awards: "specialCategory.generalSecondAward",
 				currentProgress: 0,
 				targetProgress: 20
 			},
@@ -52,8 +52,8 @@ export const cpecialGroupAchievment = [
 			{
 				id: "Collection",
 				type: "Awards",
-				name: "Коллекционер",
-				description: "Соберите целую коллекцию из 10 наград",
+				name: "specialCategory.specialCollectionText",
+				description: "specialCategory.specialCollectionLabel",
 				icon: "🧰",
 				currentProgress: 0,
 				targetProgress: 10
@@ -96,9 +96,9 @@ export const cpecialGroupAchievment = [
 				name: 'specialCategory.specialFourthLabel',
 				description: 'specialCategory.specialFourthText',
 				icon: "⚡",
-				awards: "Награда: Блиц-ракета",
+				awards: "specialCategory.specialFourthAward",
 				currentProgress: 0,
-				targetProgress: 3,
+				targetProgress: 100,
 			},
 			{
 				id: 'guessedOnLastTryWords',
@@ -113,8 +113,7 @@ export const cpecialGroupAchievment = [
 				name: 'specialCategory.specialSixthLabel',
 				description: 'specialCategory.specialSixthText',
 				icon: '🛡️',
-				awards: "Награда: " +
-					"",
+				awards: "specialCategory.specialSixthAward",
 				currentProgress: 0,
 				targetProgress: 100,
 			},
