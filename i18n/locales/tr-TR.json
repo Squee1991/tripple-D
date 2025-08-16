@@ -15,6 +15,77 @@
   "modalVerbsTipsTitle": {
     "tipsTitle": "Faydalı İpuçları:"
   },
+  "awards": {
+    "articlus": "Articlus Elması",
+    "registerAchievement": "Katılımcı Rozeti",
+    "level10": "Kanatlı Kupa",
+    "siteRegular": "Vetera Madalyası",
+    "wrong100Answers": "Sabır Tılsımı",
+    "lastChance": "Şansın Tik-Tiki",
+    "guessedFastWords": "Yıldırım Roketi",
+    "guessSixHundred": "Bilgelik Kitabı",
+    "daily": "Ebediyet Kum Saati",
+    "guessedSafeWords": "Dikkat Kalkanı"
+  },
+  "awardsSection": {
+    "congratulations": "Tebrikler! Bu ödül zaten sizde!",
+    "close": "Kapat"
+  },
+  "cabinetSidebar": {
+    "valueOne": "Hesap Ayarları",
+    "valueTwo": "Artikel İlerlemesi",
+    "valueThree": "Ödüller"
+  },
+  "cabinetAccordion": {
+    "personalData": "Kişisel Veriler",
+    "account": "Hesap Yönetimi",
+    "settings": "Ayarlar",
+    "faq": "Yardım Merkezi"
+  },
+  "cabinetInfoRows": {
+    "name": "İsim",
+    "email": "E-posta",
+    "registerDate": "Kayıt Tarihi"
+  },
+  "cabinetToggle": {
+    "sound": "Sesli Bildirimler",
+    "theme": "Karanlık Mod",
+    "ach": "Başarı Bildirimleri"
+  },
+  "cabinet": {
+    "cancelPremium": "Abonelik iptal edilsin mi?",
+    "cancelPremiumText": "Aboneliğinizi iptal ederseniz, premium erişiminiz ödenmiş dönemin sonuna kadar devam edecektir.",
+    "accept": "Evet, iptal et",
+    "reject": "Hayır",
+    "main": "Ana Sayfa",
+    "category": "Kategoriler",
+    "level": "Seviye:",
+    "awards": "Kazanılan ödüller:",
+    "status": "Abonelik durumu",
+    "active": "Abonelik aktif",
+    "canceled": "Abonelik iptal edildi",
+    "withoutPremium": "Abonelik yok",
+    "buyPremium": "Satın al",
+    "nextPayment": "Sonraki ödeme:",
+    "cancelBtn": "Aboneliği iptal et",
+    "access": "Erişim süresi:",
+    "deleteAcc": "Hesabı sil",
+    "newAvatarTitle": "Yeni avatar seçin",
+    "avatarCancel": "İptal",
+    "avatarSave": "Kaydet",
+    "buyAvatar": "Avatar satın alınsın mı?",
+    "costs": "Bu avatarın fiyatı",
+    "price": "50 Artiklus",
+    "buyAvatarBtn": "Satın al",
+    "notBuyAvatarBtn": "İptal",
+    "deleteAccTitle": "Hesap silinsin mi?",
+    "deleteText": "Hesabınızı sildikten sonra tüm verileriniz kalıcı olarak silinecektir",
+    "checkPassword": "Hesap silme işlemini onaylamak için şifrenizi girin",
+    "checkGoogle": "Google ile giriş yaptınız. Hesabınızı silmek için tekrar kimlik doğrulama penceresi açılacaktır.",
+    "deleteAccBtnAccept": "Sil",
+    "deleteAccBtnReject": "İptal"
+  },
+
   "articleOverlay": {
     "title": "Artikleus nedir ve nasıl kazanılır?",
     "first": "Artikleus iç oyun para birimidir",
@@ -968,13 +1039,9 @@
   "nav": {
     "training": "Eğitim",
     "gameMode": "Oyunlar",
-    "sinonim": "Kelime Dağarcığı",
-    "about": "Hakkında",
-    "pvp": "Kart Savaşı",
-    "guess": "Kelimeyi tahmin et",
+    "tests": "Testler",
     "achieve": "Başarılar",
-    "stats": "Sıralama",
-    "marathon": "Artikel Maratonu"
+    "stats": "Sıralama"
   },
   "formLabel": {
     "name": "İsim",
@@ -1257,11 +1324,12 @@
   },
   "sessionLabels": {
     "word": "kelime",
-    "articleFor": "için artikeli girin",
-    "lettersFor": "Harflerden kelimeyi birleştirin",
-    "articleWordFor": "Artikel ve kelimeyi girin",
-    "pluralFor": "için çoğul formu girin",
-    "audioFor": "Dinleyin ve kelimeyi girin"
+    "articleFor": "İçin artikeli girin",
+    "lettersFor": "Harflerden kelime oluştur",
+    "articleWordFor": "Artikeli ve kelimeyi girin",
+    "pluralFor": "İçin çoğul formu girin",
+    "audioFor": "Dinle ve kelimeyi gir",
+    "listen": "Dinle"
   },
   "result": {
     "correctAnswer": "Doğru cevap",

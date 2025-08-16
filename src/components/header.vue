@@ -75,7 +75,7 @@
             v-model="isArticleOpen"
         />
         <button @click="openArticleModal" class="articlus__wrapper">
-          <img class="articlus" src="../../assets/images/articlus.png" alt=""/>
+          <img class="articlus" src="../../assets/images/articlus.png" alt="Articlus"/>
           <span class="articlus__counter">{{ learningStore.points }}</span>
         </button>
         <div class="header-nav__lang">
@@ -186,24 +186,33 @@ const openDevModal = () => showDevModal.value = true
 const closeDevModal = () => showDevModal.value = false
 const closeAuth = () => showAuth.value = false
 const openAuth = () => showAuth.value = true
-const menuItems = [
+const menuItems = computed(() => [
   {
-    id: 'learn', valueKey: 'nav.training', children: [
+    id: 'learn',
+    valueKey: 'nav.training',
+    children: [
       {
-        id: 'articles', valueKey: 'sub.articles', subChildren: [
+        id: 'articles',
+        valueKey: 'sub.articles',
+        subChildren: [
           {id: 'learn-tips', url: 'examples', valueKey: 'underSub.prev'},
           {id: 'learn-rules', url: 'rules', valueKey: 'underSub.rules'},
-          {id: 'learn-selectedTopics', url: 'articles', valueKey: 'underSub.artRules'},]
-      },
-      {
-        id: "verbs", valueKey: 'sub.verbs', subChildren: [
-          {id: 'tenses', url: 'tenses', valueKey: 'underSub.verbFirst'},
-          {id: 'modalVerbs', url: 'modal-verbs', valueKey: 'underSub.verbSecond',},
-          {id: 'verb-types', url: 'verb-types', valueKey: 'underSub.verbTypes',},
+          {id: 'learn-selectedTopics', url: 'articles', valueKey: 'underSub.artRules'},
         ]
       },
       {
-        id: 'adjectives', valueKey: 'sub.adjectives', subChildren: [
+        id: 'verbs',
+        valueKey: 'sub.verbs',
+        subChildren: [
+          {id: 'tenses', url: 'tenses', valueKey: 'underSub.verbFirst'},
+          {id: 'modalVerbs', url: 'modal-verbs', valueKey: 'underSub.verbSecond'},
+          {id: 'verb-types', url: 'verb-types', valueKey: 'underSub.verbTypes'},
+        ]
+      },
+      {
+        id: 'adjectives',
+        valueKey: 'sub.adjectives',
+        subChildren: [
           {id: 'adjectives-basic', url: 'adjective-basics', valueKey: 'underSub.adjectivesBasic'},
           {id: 'declination', url: 'adjective-declension', valueKey: 'underSub.declination'},
           {id: 'comparison', url: 'adjective-comparison', valueKey: 'underSub.comparison'},
@@ -212,23 +221,27 @@ const menuItems = [
       {id: 'themen', url: 'thematic-learning', valueKey: 'sub.themen'},
       {id: 'prepositions', url: 'prepositions', valueKey: 'sub.prepositions'},
       {id: 'cards', url: 'createCards', valueKey: 'sub.card'},
-
       {id: 'idioms', url: 'idioms', valueKey: 'sub.idioms'}
     ],
   },
   {
-    id: 'duel', valueKey: 'nav.gameMode', children: [
+    id: 'duel',
+    valueKey: 'nav.gameMode',
+    children: [
       {id: 'duel-pvp', valueKey: 'sub.pvp', action: openDevModal},
-      {id: 'wordDuel', url: 'play', valueKey: 'sub.wordDuel'},
-      {id: 'wordDuel', url: 'recipes', valueKey: 'sub.quests'},
-      {id: 'duel-guess', url: 'guess', valueKey: 'sub.guess'},
-      {id: 'prepare', url: 'prepare', valueKey: 'sub.marathon'},
+      {id: 'wordDuel', url: '/play', valueKey: 'sub.wordDuel'},
+      {id: 'wordDuel', url: '/recipes', valueKey: 'sub.quests'},
+      {id: 'duel-guess', url: '/guess', valueKey: 'sub.guess'},
+      {id: 'articlemarathon', url: '/article-marathon', valueKey: 'sub.marathon'},
     ]
   },
+  ...(userAuth.isPremium
+      ? [{id: 'test', url: '/exams', valueKey: 'nav.tests'}]
+      : []),
   {id: 'achieve', url: '/achievements', valueKey: 'nav.achieve'},
   {id: 'stats', url: '/stats', valueKey: 'nav.stats'}
+])
 
-]
 const menuActions = ref([
   {id: 'cabinet', label: 'auth.cabinet', icon: User, action: () => goTo('cabinet')},
   {id: 'logout', label: 'auth.logOut', icon: Logout, action: () => userAuth.logOut()}
@@ -296,6 +309,8 @@ watch(isMobileMenuOpen, (newVal) => {
   z-index: 100;
   background-color: var(--bg);
   border-bottom: 4px solid var(--borderBottom);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .header-container {
@@ -548,7 +563,7 @@ watch(isMobileMenuOpen, (newVal) => {
     color: black;
   }
 
-  .header-user__name, .header__drop-text, .logo-img {
+  .header__drop-text, .logo-img {
     display: none;
   }
 
@@ -657,7 +672,6 @@ watch(isMobileMenuOpen, (newVal) => {
     display: block;
     z-index: 102;
   }
-
   @media (max-width: 767px) {
     .header-user {
       height: 45px;
@@ -691,6 +705,14 @@ watch(isMobileMenuOpen, (newVal) => {
       box-shadow: 2px 2px 0 #1e1e1e;
     }
 
+  }
+
+
+}
+
+@media (max-width: 1200px) {
+  .header-user__name {
+    display: none;
   }
 }
 </style>

@@ -10,16 +10,16 @@ import SandGlass from '~/assets/awards/sandglass.svg'
 import Shield from '~/assets/awards/shield.svg'
 
 export const AWARDS = [
-	{ key: 'Articlus',            title: 'Алмаз артиклеуса',        icon: WasteMoney },
-	{ key: 'registerAchievement', title: 'Значок участника',        icon: IdCard },
-	{ key: 'level10',             title: 'Кубок с крыльями',        icon: Wings },
-	{ key: 'SiteRegular',         title: 'Медаль ветерана',         icon: veteranMedal },
-	{ key: 'wrong100Answers',     title: 'Талисман терпения',       icon: talismanOfPatience },
-	{ key: 'LastChance',          title: 'Тик-тик удачи',           icon: LastChance },
-	{ key: 'guessedFastWords',    title: 'Блиц-ракета',             icon: Rocket },
-	{ key: 'guessSixHundred',     title: 'Книга мудрости',          icon: BookOfWisdom },
-	{ key: 'daily',               title: 'Песочные часы вечности',  icon: SandGlass },
-	{ key: 'guessedSafeWords',    title: 'Щит осторожности',        icon: Shield },
+	{ key: 'Articlus',            title: 'awards.articlus',        icon: WasteMoney },
+	{ key: 'registerAchievement', title: 'awards.registerAchievement',        icon: IdCard },
+	{ key: 'level10',             title: 'awards.level10',        icon: Wings },
+	{ key: 'SiteRegular',         title: 'awards.siteRegular',         icon: veteranMedal },
+	{ key: 'wrong100Answers',     title: 'awards.wrong100Answers',       icon: talismanOfPatience },
+	{ key: 'LastChance',          title: 'awards.lastChance',           icon: LastChance },
+	{ key: 'guessedFastWords',    title: 'awards.guessedFastWords',             icon: Rocket },
+	{ key: 'guessSixHundred',     title: 'awards.guessSixHundred',          icon: BookOfWisdom },
+	{ key: 'daily',               title: 'awards.daily',  icon: SandGlass },
+	{ key: 'guessedSafeWords',    title: 'awards.guessedSafeWords',        icon: Shield },
 ]
 
 export const awardsByKey = Object.fromEntries(AWARDS.map(a => [a.key, a]))

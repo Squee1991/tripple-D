@@ -15,6 +15,76 @@
   "modalVerbsTipsTitle": {
     "tipsTitle": "Полезные советы:"
   },
+  "awards": {
+    "articlus": "Алмаз артиклеуса",
+    "registerAchievement": "Значок участника",
+    "level10": "Кубок с крыльями",
+    "siteRegular": "Медаль ветерана",
+    "wrong100Answers": "Талисман терпения",
+    "lastChance": "Тик-тик удачи",
+    "guessedFastWords": "Блиц-ракета",
+    "guessSixHundred": "Книга мудрости",
+    "daily": "Песочные часы вечности",
+    "guessedSafeWords": "Щит осторожности"
+  },
+  "awardsSection": {
+    "congratulations": "Поздравляем! Эта награда уже у вас!",
+    "close": "Закрыть"
+  },
+  "cabinetSidebar": {
+    "valueOne": "Параметры аккаунта",
+    "valueTwo": "Прогресс по артиклям",
+    "valueThree": "Награды"
+  },
+  "cabinetAccordion": {
+    "personalData": "Персональные данные",
+    "account": "Управление аккаунтом",
+    "settings": "Настройки",
+    "faq": "Справочный центр"
+  },
+  "cabinetInfoRows": {
+    "name": "Имя",
+    "email": "Email",
+    "registerDate": "Дата регистрации"
+  },
+  "cabinetToggle": {
+    "sound": "Звуковые уведомления",
+    "theme": "Тёмный режим",
+    "ach": "Уведомление достижений"
+  },
+  "cabinet": {
+    "cancelPremium": "Отменить подписку?",
+    "cancelPremiumText": "Если вы отмените подписку, премиум-доступ останется до конца оплаченного периода.",
+    "accept": "Да, отменить",
+    "reject": "Нет",
+    "main": "На главную",
+    "category": "Категории",
+    "level": "Уровень:",
+    "awards": "Полученные награды :",
+    "status": "Статус подписки",
+    "active": "Подписка активна",
+    "canceled": "Подписка отменена",
+    "withoutPremium": "Без подписки",
+    "buyPremium": "Приобрести",
+    "nextPayment": "Следующее списание:",
+    "cancelBtn": "Отменить подписку",
+    "access": "Доступ до:",
+    "deleteAcc": "Удалить аккаунт",
+    "newAvatarTitle": "Выберите новый аватар",
+    "avatarCancel": "Отмена",
+    "avatarSave": "Сохранить",
+    "buyAvatar": "Купить аватар?",
+    "costs": "Этот аватар стоит",
+    "price": "50 Артиклюсов",
+    "buyAvatarBtn": "Купить",
+    "notBuyAvatarBtn": "Отмена",
+    "deleteAccTitle": "Удалить аккаунт?",
+    "deleteText": "После удаления аккаунта все Ваши данные будут утеряны безвозвратно",
+    "checkPassword": "Введите ваш пароль для подтверждения удаления аккаунта",
+    "checkGoogle": "Вы вошли через Google. Для удаления аккаунта откроется окно повторной авторизации.",
+    "deleteAccBtnAccept": "Удалить",
+    "deleteAccBtnReject": "Отмена"
+  },
   "articleOverlay": {
     "title": "Что такое артиклюс и за что его получать",
     "first": "Артиклюс - это внутренняя валюта",
@@ -970,6 +1040,7 @@
   "nav": {
     "training": "Обучение",
     "gameMode": "Игры",
+    "tests": "Тесты",
     "achieve": "Достижения",
     "stats": "Рейтинг"
   },
@@ -1259,7 +1330,8 @@
     "lettersFor": "Собери слово из букв",
     "articleWordFor": "Впиши артикль и слово",
     "pluralFor": "Впиши форму множественного числа для",
-    "audioFor": "Прослушай и впиши слово"
+    "audioFor": "Прослушай и впиши слово",
+    "listen": "Прослушать"
   },
   "result": {
     "correctAnswer": "Правильный ответ",

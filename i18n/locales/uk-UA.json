@@ -15,6 +15,76 @@
   "modalVerbsTipsTitle": {
     "tipsTitle": "Корисні поради:"
   },
+  "awards": {
+    "articlus": "Діамант артиклеуса",
+    "registerAchievement": "Значок учасника",
+    "level10": "Кубок з крилами",
+    "siteRegular": "Медаль ветерана",
+    "wrong100Answers": "Талісман терпіння",
+    "lastChance": "Тік-тік удачі",
+    "guessedFastWords": "Бліц-ракета",
+    "guessSixHundred": "Книга мудрості",
+    "daily": "Пісочний годинник вічності",
+    "guessedSafeWords": "Щит обережності"
+  },
+  "awardsSection": {
+    "congratulations": "Вітаємо! Ця нагорода вже у вас!",
+    "close": "Закрити"
+  },
+  "cabinetSidebar": {
+    "valueOne": "Налаштування акаунта",
+    "valueTwo": "Прогрес по артиклях",
+    "valueThree": "Нагороди"
+  },
+  "cabinetAccordion": {
+    "personalData": "Персональні дані",
+    "account": "Керування акаунтом",
+    "settings": "Налаштування",
+    "faq": "Довідковий центр"
+  },
+  "cabinetInfoRows": {
+    "name": "Ім'я",
+    "email": "Email",
+    "registerDate": "Дата реєстрації"
+  },
+  "cabinetToggle": {
+    "sound": "Звукові сповіщення",
+    "theme": "Темний режим",
+    "ach": "Сповіщення про досягнення"
+  },
+  "cabinet": {
+    "cancelPremium": "Скасувати підписку?",
+    "cancelPremiumText": "Якщо ви скасуєте підписку, преміум-доступ залишиться до кінця оплаченого періоду.",
+    "accept": "Так, скасувати",
+    "reject": "Ні",
+    "main": "На головну",
+    "category": "Категорії",
+    "level": "Рівень:",
+    "awards": "Отримані нагороди:",
+    "status": "Статус підписки",
+    "active": "Підписка активна",
+    "canceled": "Підписка скасована",
+    "withoutPremium": "Без підписки",
+    "buyPremium": "Придбати",
+    "nextPayment": "Наступне списання:",
+    "cancelBtn": "Скасувати підписку",
+    "access": "Доступ до:",
+    "deleteAcc": "Видалити акаунт",
+    "newAvatarTitle": "Виберіть новий аватар",
+    "avatarCancel": "Скасувати",
+    "avatarSave": "Зберегти",
+    "buyAvatar": "Купити аватар?",
+    "costs": "Цей аватар коштує",
+    "price": "50 Артиклусів",
+    "buyAvatarBtn": "Купити",
+    "notBuyAvatarBtn": "Скасувати",
+    "deleteAccTitle": "Видалити акаунт?",
+    "deleteText": "Після видалення акаунта всі ваші дані буде безповоротно втрачено",
+    "checkPassword": "Введіть пароль для підтвердження видалення акаунта",
+    "checkGoogle": "Ви увійшли через Google. Для видалення акаунта відкриється вікно повторної авторизації.",
+    "deleteAccBtnAccept": "Видалити",
+    "deleteAccBtnReject": "Скасувати"
+  },
   "articleOverlay": {
     "title": "Що таке артиклюс і за що його отримувати",
     "first": "Артиклюс — це внутрішня валюта",
@@ -970,13 +1040,9 @@
   "nav": {
     "training": "Навчання",
     "gameMode": "Ігри",
-    "sinonim": "Лексика",
-    "about": "Про проект",
-    "pvp": "Картковий бій",
-    "guess": "Відгадай слово",
+    "tests": "Тести",
     "achieve": "Досягнення",
-    "stats": "Рейтинг",
-    "marathon": "Марафон артиклів"
+    "stats": "Рейтинг"
   },
   "formLabel": {
     "name": "Ім'я",
@@ -1260,11 +1326,12 @@
   },
   "sessionLabels": {
     "word": "слово",
-    "articleFor": "Впишіть артикль для",
-    "lettersFor": "Збери слово з літер",
-    "articleWordFor": "Впишіть артикль і слово",
-    "pluralFor": "Впишіть форму множини для",
-    "audioFor": "Прослухайте і впишіть слово"
+    "articleFor": "Введіть артикль для",
+    "lettersFor": "Складіть слово з букв",
+    "articleWordFor": "Введіть артикль і слово",
+    "pluralFor": "Введіть форму множини для",
+    "audioFor": "Прослухайте та введіть слово",
+    "listen": "Прослухати"
   },
   "result": {
     "correctAnswer": "Правильна відповідь",

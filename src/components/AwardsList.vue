@@ -12,16 +12,15 @@
           <img class="lock" src="../../assets/images/padlock.svg" alt="">
         </div>
       </div>
-      <p class="item-name">{{ award.title }}</p>
+      <p class="item-name">{{ t(award.title )}}</p>
     </div>
-
     <div v-if="showModal" class="modal-overlay" @click.self="closeAward">
       <div class="modal-content">
         <img :src="selectedAward.icon" class="modal-icon"/>
-        <h3>{{ selectedAward.title }}</h3>
-        <p v-if="selectedAward.locked">🔒 Награда пока не получена</p>
-        <p v-else>🎉 Поздравляем! Эта награда уже у вас!</p>
-        <button @click="closeAward">Закрыть</button>
+        <h3>{{ t(selectedAward.title) }}</h3>
+<!--        <p v-if="selectedAward.locked">🔒 Награда пока не получена</p>-->
+        <p>🎉 {{ t('awardsSection.congratulations')}}</p>
+        <button @click="closeAward">{{ t('awardsSection.close')}}</button>
       </div>
     </div>
   </div>
@@ -29,7 +28,7 @@
 
 <script setup>
 import {ref} from 'vue'
-
+const { t } = useI18n()
 const props = defineProps({
   awards: {
     type: Array,
@@ -137,16 +136,21 @@ function closeAward() {
   border: 3px solid #1e1e1e;
   box-shadow: 4px 4px 0 #1e1e1e;
   animation: zoomIn 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 
 .modal-icon {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   margin-bottom: 1rem;
 }
 
 button {
-  font-family: 'Fredoka One', cursive;
+  font-family: "Nunito", sans-serif;
   padding: 0.5rem 1rem;
   border-radius: 12px;
   border: 2px solid #1e1e1e;
@@ -154,6 +158,9 @@ button {
   box-shadow: 2px 2px 0 #1e1e1e;
   cursor: pointer;
   transition: all 0.2s ease;
+  width: 100%;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 button:disabled {

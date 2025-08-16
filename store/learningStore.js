@@ -10,7 +10,7 @@ export const userlangStore = defineStore('learning', () => {
 	const selectedTopics = ref([])       // тут выбранные темы (ключи)
 	const selectedWords = ref([])        // тут слова, выбранные для сессии(текущая тема)
 	const points = ref(0)
-	const gotPremiumBonus = ref(false)// тут артиклюсы
+	const gotPremiumBonus = ref(false)   // тут артиклюсы бонус
 	const totalEarnedPoints = ref(0)
 	const articlesSpentForAchievement = ref(0)
 	const currentIndex = ref(0)          // тут индекс текущего слова в сессии

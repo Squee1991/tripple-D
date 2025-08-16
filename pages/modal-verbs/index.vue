@@ -261,10 +261,6 @@ watch(selectedGroup, initLottieIcon);
   overflow-y: auto;
 }
 
-.example__sentence-wrapper {
-  display: flex;
-}
-
 .btn__back {
   display: block;
   text-align: center;

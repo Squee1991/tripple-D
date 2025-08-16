@@ -1,4 +1,4 @@
-// utils/showAwardsToast.js
+
 import { toast } from 'vue3-toastify'
 import { useAchievementStore } from '~/store/achievementStore'
 import { useUiSettingsStore } from '~/store/uiSettingsStore'
@@ -18,11 +18,9 @@ export function initAwardToastListener() {
 		const award = state.lastUnlockedAward
 		if (!award) return
 		if (!ui.achievementsNotifyEnabled) return
-
 		const key = award.id ?? award.title
 		if (key && key === lastShownKey) return
 		lastShownKey = key
-
 		toast.success(`🎉 Вы получили награду «${award.title}»!`)
 	})
 }

@@ -1,0 +1,274 @@
+[
+  {
+    "questId": "greetings-1",
+    "title": "Первая встреча",
+    "progress": "0/10",
+    "description": "Ты встречаешь путников на Восточной Равнине. Чтобы продолжить путь, нужно научиться здороваться и отвечать на приветствия на немецком языке. \n\n«Учтивость открывает больше дверей, чем меч» — шепчет старый торговец.",
+    "conditions": {
+      "goal": "Ответить правильно на все вопросы о приветствии.",
+      "minCorrect": 7,
+      "requiredTasks": 10
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 30
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "question": "Как сказать 'Привет!'?",
+        "options": [
+          "Hallo!",
+          "Tschüss!",
+          "Danke!"
+        ],
+        "answer": "Hallo!"
+      },
+      {
+        "id": 2,
+        "question": "Как сказать 'Доброе утро'?",
+        "options": [
+          "Guten Morgen!",
+          "Gute Nacht!",
+          "Auf Wiedersehen!"
+        ],
+        "answer": "Guten Morgen!"
+      },
+      {
+        "id": 3,
+        "question": "Как сказать 'Добрый день'?",
+        "options": [
+          "Guten Tag!",
+          "Hallo!",
+          "Bis bald!"
+        ],
+        "answer": "Guten Tag!"
+      },
+      {
+        "id": 4,
+        "question": "Как сказать 'Добрый вечер'?",
+        "options": [
+          "Guten Abend!",
+          "Gute Nacht!",
+          "Hallo!"
+        ],
+        "answer": "Guten Abend!"
+      },
+      {
+        "id": 5,
+        "question": "Как попрощаться по-немецки?",
+        "options": [
+          "Auf Wiedersehen!",
+          "Guten Morgen!",
+          "Hallo!"
+        ],
+        "answer": "Auf Wiedersehen!"
+      },
+      {
+        "id": 6,
+        "question": "Как сказать 'До свидания' неформально?",
+        "options": [
+          "Tschüss!",
+          "Danke!",
+          "Guten Abend!"
+        ],
+        "answer": "Tschüss!"
+      },
+      {
+        "id": 7,
+        "question": "Как сказать 'Доброй ночи'?",
+        "options": [
+          "Gute Nacht!",
+          "Guten Morgen!",
+          "Bis später!"
+        ],
+        "answer": "Gute Nacht!"
+      },
+      {
+        "id": 8,
+        "question": "Как спросить 'Как тебя зовут?'?",
+        "options": [
+          "Wie heißt du?",
+          "Wie geht’s?",
+          "Wo wohnst du?"
+        ],
+        "answer": "Wie heißt du?"
+      },
+      {
+        "id": 9,
+        "question": "Как ответить 'Меня зовут Анна'?",
+        "options": [
+          "Ich heiße Anna.",
+          "Mir geht’s gut.",
+          "Ich komme aus Berlin."
+        ],
+        "answer": "Ich heiße Anna."
+      },
+      {
+        "id": 10,
+        "question": "Как спросить 'Как дела?'?",
+        "options": [
+          "Wie geht’s?",
+          "Was machst du?",
+          "Woher kommst du?"
+        ],
+        "answer": "Wie geht’s?"
+      }
+    ]
+  },
+  {
+    "questId": "intro-2",
+    "title": "Представься",
+    "progress": "0/10",
+    "description": "После приветствия путники хотят узнать, кто ты такой. Чтобы тебя приняли в их круг, научись представляться.\n\nСова Граммариус шепчет: «Имя — начало всякой дружбы.»",
+    "conditions": {
+      "goal": "Научиться правильно представляться и спрашивать имя.",
+      "minCorrect": 7,
+      "requiredTasks": 10
+    },
+    "rewards": {
+      "points": 60,
+      "xp": 120
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "question": "Как сказать 'Меня зовут Том'?",
+        "options": [
+          "Ich heiße Tom.",
+          "Ich komme Tom.",
+          "Mein Tom ist."
+        ],
+        "answer": "Ich heiße Tom."
+      },
+      {
+        "id": 2,
+        "question": "Как спросить 'Как тебя зовут?'?",
+        "options": [
+          "Wie heißt du?",
+          "Woher kommst du?",
+          "Was machst du?"
+        ],
+        "answer": "Wie heißt du?"
+      },
+      {
+        "id": 3,
+        "question": "Как спросить вежливо 'Как Вас зовут?'?",
+        "options": [
+          "Wie heißen Sie?",
+          "Wer bist du?",
+          "Wie geht’s?"
+        ],
+        "answer": "Wie heißen Sie?"
+      },
+      {
+        "id": 4,
+        "question": "Как ответить 'Меня зовут Анна'?",
+        "options": [
+          "Ich heiße Anna.",
+          "Ich bin gut.",
+          "Ich komme aus Berlin."
+        ],
+        "answer": "Ich heiße Anna."
+      },
+      {
+        "id": 5,
+        "question": "Как сказать 'Моё имя Анна'?",
+        "options": [
+          "Mein Name ist Anna.",
+          "Ich heiße Anna.",
+          "Beide sind richtig."
+        ],
+        "answer": "Beide sind richtig."
+      },
+      {
+        "id": 6,
+        "question": "Как спросить 'Ты Анна?'?",
+        "options": [
+          "Bist du Anna?",
+          "Wie heißt du?",
+          "Wer ist Anna?"
+        ],
+        "answer": "Bist du Anna?"
+      },
+      {
+        "id": 7,
+        "question": "Как ответить 'Да, я Анна'?",
+        "options": [
+          "Ja, ich bin Anna.",
+          "Ja, ich heiße Anna.",
+          "Оба варианта верны."
+        ],
+        "answer": "Оба варианта верны."
+      },
+      {
+        "id": 8,
+        "question": "Как спросить 'Кто ты?'?",
+        "options": [
+          "Wer bist du?",
+          "Wie geht’s dir?",
+          "Wo wohnst du?"
+        ],
+        "answer": "Wer bist du?"
+      },
+      {
+        "id": 9,
+        "question": "Как сказать 'Я студент'?",
+        "options": [
+          "Ich bin Student.",
+          "Ich heiße Student.",
+          "Mein Name ist Student."
+        ],
+        "answer": "Ich bin Student."
+      },
+      {
+        "id": 10,
+        "question": "Как спросить 'Ты студент?'?",
+        "options": [
+          "Bist du Student?",
+          "Wie bist du Student?",
+          "Studierst du?"
+        ],
+        "answer": "Bist du Student?"
+      }
+    ]
+  },
+  {
+    "questId": "origin-3",
+    "title": "Откуда ты?",
+    "progress": "0/10",
+    "description": "Ты знакомишься дальше, и путники интересуются, откуда ты пришёл.\n\n«Знай, откуда ты — и путь станет яснее», говорит старейшина деревни.",
+    "conditions": { "goal": "Научиться говорить о месте жительства и происхождении.", "minCorrect": 7, "requiredTasks": 10},
+    "rewards": {"points": 70, "xp": 130},
+    "tasks": [
+      {"id": 1, "question": "Как спросить 'Откуда ты?'?", "options": ["Woher kommst du?", "Wo wohnst du?", "Wie heißt du?"], "answer": "Woher kommst du?"
+      },
+      {
+        "id": 2, "question": "Как ответить 'Я из Берлина'?", "options": ["Ich komme aus Berlin.", "Ich wohne Berlin.", "Ich heiße Berlin."], "answer": "Ich komme aus Berlin."
+      },
+      {
+        "id": 3, "question": "Как сказать 'Я живу в Берлине'?", "options": ["Ich wohne in Berlin.", "Ich komme in Berlin.", "Ich bin Berlin."], "answer": "Ich wohne in Berlin."
+      },
+      {
+        "id": 4, "question": "Как спросить 'Где ты живёшь?'?", "options": ["Wo wohnst du?", "Woher kommst du?", "Wo gehst du?"], "answer": "Wo wohnst du?"
+      },
+      {
+        "id": 5, "question": "Как сказать 'Я из Польши'?", "options": ["Ich komme aus Polen.", "Ich wohne Polen.", "Ich bin Polen."], "answer": "Ich komme aus Polen."
+      },
+      {
+        "id": 6, "question": "Как спросить 'Вы из Германии?'?", "options": ["Kommen Sie aus Deutschland?", "Wohnen Sie Deutschland?", "Seid ihr Deutschland?"], "answer": "Kommen Sie aus Deutschland?"
+      },
+      {
+        "id": 7, "question": "Как ответить 'Да, я из Германии'?", "options": ["Ja, ich komme aus Deutschland.", "Ja, ich wohne Deutschland.", "Ja, ich bin Deutschland."], "answer": "Ja, ich komme aus Deutschland."
+      },
+      {
+        "id": 8, "question": "Как сказать 'Она живёт в Вене'?", "options": ["Sie wohnt in Wien.", "Sie kommt Wien.", "Sie ist Wien."], "answer": "Sie wohnt in Wien."
+      },
+      {
+        "id": 9, "question": "Как сказать 'Он из Австрии'?", "options": ["Er kommt aus Österreich.", "Er wohnt Österreich.", "Er ist Österreich."], "answer": "Er kommt aus Österreich."
+      },
+      {
+        "id": 10, "question": "Как спросить 'Ты живёшь в Берлине?'?", "options": ["Wohnst du in Berlin?", "Kommst du aus Berlin?", "Bist du Berlin?"], "answer": "Wohnst du in Berlin?"}
+    ]
+  }
+]

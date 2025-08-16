@@ -263,7 +263,7 @@ onMounted(async () => {
   cursor: pointer;
   color: #1e1e1e;
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 600;
   font-family: "Nunito", sans-serif;
   box-shadow: 4px 4px 0px #1e1e1e;
   transition: all 0.1s ease-in-out;

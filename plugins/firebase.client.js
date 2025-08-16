@@ -1,22 +1,24 @@
-import { initializeApp } from 'firebase/app';
+import { getAuth, onAuthStateChanged } from 'firebase/auth'
 
-export default defineNuxtPlugin(() => {
-    const config = useRuntimeConfig();
+function waitForAuthReady() {
+    const auth = getAuth()
+    if (auth.currentUser !== null) return Promise.resolve(auth.currentUser)
+    return new Promise((resolve) => {
+        const off = onAuthStateChanged(auth, (u) => { off(); resolve(u) })
+    })
+}
 
-    const firebaseConfig = {
-        apiKey: config.public.firebaseApiKey,
-        authDomain: config.public.firebaseAuthDomain,
-        projectId: config.public.firebaseProjectId,
-        storageBucket: config.public.firebaseStorageBucket,
-        messagingSenderId: config.public.firebaseMessagingSenderId,
-        appId: config.public.firebaseAppId,
-    };
+export default defineNuxtRouteMiddleware(async (to) => {
+    if (import.meta.server) return
 
-    const app = initializeApp(firebaseConfig);
+    const publicPaths = new Set(['/', '/login', '/register', '/faq', '/pay'])
+    const user = await waitForAuthReady()
 
-    return {
-        provide: {
-            firebase: app
-        }
+    if (!user && !publicPaths.has(to.path)) {
+        return navigateTo({ path: '/', query: { redirect: to.fullPath } })
     }
-});
+
+    if (user && (to.path === '/login' || to.path === '/register')) {
+        return navigateTo(to.query.redirect || '/cabinet')
+    }
+})

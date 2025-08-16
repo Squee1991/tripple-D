@@ -30,10 +30,13 @@
           <div class="header-section">
             <h1 class="page-title">{{ t('wordDuel.title') }}</h1>
           </div>
-          <div @click="tipsModule">Советы</div>
-          <div @click="openModal">
-            <img class="duel__question-img" :title="t('hoverTitle.duelInfo')" src="../assets/images/question.svg"
-                 alt="">
+          <div class="tiips__info-wrapper">
+            <button class="btn__tips" @click="tipsModule">
+              <img class="tipps__icon" src="../assets/images/Tipps.svg" alt="">
+            </button>
+            <button class="btn__tips" @click="openModal">
+              <img class="duel__question-img" :title="t('hoverTitle.duelInfo')" src="../assets/images/question.svg" alt="">
+            </button>
           </div>
         </div>
         <div class="mode-toggle-wrapper">
@@ -220,6 +223,22 @@ onUnmounted(() => {
   padding: 4px;
 }
 
+.tipps__icon {
+  width: 50px;
+}
+
+.tiips__info-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.btn__tips {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 .mode-toggle-option {
   flex: 1;
   text-align: center;
@@ -302,10 +321,11 @@ onUnmounted(() => {
 }
 
 .page-title {
-  font-size: 2.8rem;
+  font-size: 2.3rem;
   font-weight: 800;
   color: var(--titleColor);
   text-align: center;
+  max-width: 500px;
 }
 
 .page-subtitle {

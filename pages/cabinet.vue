@@ -2,11 +2,11 @@
   <div class="cabinet-wrapper">
     <div v-if="isCancelModalOpen" class="modal-overlay" @click.self="closeCancelModal">
       <div class="modal-card">
-        <div class="modal-title">Отменить подписку?</div>
-        <p class="modal-text">Если вы отмените подписку, премиум-доступ останется до конца оплаченного периода.</p>
+        <div class="modal-title">{{ t('cabinet.cancelPremium') }}</div>
+        <p class="modal-text">{{ t('cabinet.cancelPremiumText') }}</p>
         <div class="modal-actions">
-          <button class="btn btn-danger" @click="cancelSubscription">Да, отменить</button>
-          <button class="btn" @click="closeCancelModal">Нет</button>
+          <button class="btn btn-danger" @click="cancelSubscription">{{ t('cabinet.accept') }}</button>
+          <button class="btn" @click="closeCancelModal">{{ t('cabinet.reject') }}</button>
         </div>
       </div>
     </div>
@@ -14,9 +14,9 @@
       <aside class="sidebar-panel">
         <button class="back-btn" @click="backToMain" aria-label="На главную">
           <img :src="Home" alt=""/>
-          <span class="back-label">На главную</span>
+          <span class="back-label">{{ t('cabinet.main') }}</span>
         </button>
-        <div class="sidebar-title">Категории</div>
+        <div class="sidebar-title">{{ t('cabinet.category') }}</div>
         <nav class="tabs-vertical">
           <button
               v-for="tabItem in TAB_ITEMS"
@@ -46,18 +46,18 @@
                 <div class="exp-fill" :style="{ width: `${(learningStore.exp / 100) * 100}%` }"></div>
                 <span class="exp-text">{{ learningStore.exp }} / 100 XP</span>
               </div>
-              <div class="level-info">Уровень: {{ learningStore.isLeveling }}</div>
+              <div class="level-info">{{ t('cabinet.level') }} {{ learningStore.isLeveling }}</div>
             </div>
           </div>
           <div class="award-strip">
             <div class="awards__get">
-              <div class="awards__title">Полученные награды :</div>
+              <div class="awards__title">{{ t('cabinet.awards') }}</div>
               <div class="awards__items">
                 <div
                     v-for="awardItem in unlockedAwardList"
                     :key="awardItem.key"
                     class="award-strip-item"
-                    :title="awardItem.title"
+                    :title="t(awardItem.title)"
                 >
                   <img class="award-strip-icon" :src="awardItem.icon" :alt="awardItem.title"/>
                 </div>
@@ -101,28 +101,31 @@
                   </template>
                   <template v-else-if="acc.key === 'account'">
                     <div class="subscription-status-row">
-                      <div class="subscription-label">Статус подписки</div>
+                      <div class="subscription-label">{{ t('cabinet.status') }}</div>
                       <div class="subscription-status">
                         <template v-if="authStore.isPremium && !authStore.subscriptionCancelled">
-                          <p class="active">✅ Подписка активна</p>
+                          <p class="active">✅ {{ t('cabinet.active') }}</p>
                         </template>
                         <template v-else-if="authStore.isPremium && authStore.subscriptionCancelled">
-                          <p class="cancelled">⚠️ Подписка отменена</p>
+                          <p class="cancelled">⚠️{{ t('cabinet.canceled') }}</p>
                         </template>
                         <template v-else>
-                          <p>🔓 Без подписки</p>
+                          <p>🔓 {{ t('cabinet.withoutPremium') }}</p>
                           <div class="premium__btn-wrapper">
-                            <button @click="routeToPay" class="premium__btn">Приобрести</button>
+                            <button @click="routeToPay" class="premium__btn">{{ t('cabinet.buyPremium') }}</button>
                           </div>
                         </template>
                       </div>
                     </div>
                     <template v-if="authStore.isPremium && !authStore.subscriptionCancelled">
-                      <p>📅 Следующее списание: {{ formattedSubscriptionEndDate }}</p>
-                      <button class="btn btn-danger" @click.stop="openCancelModal">Отменить подписку</button>
+                      <div class="premium__status-wrapper">
+                        <p>📅 {{ t('cabinet.nextPayment') }} {{ formattedSubscriptionEndDate }}</p>
+                        <button class="btn btn-danger" @click.stop="openCancelModal">{{ t('cabinet.cancelBtn') }}
+                        </button>
+                      </div>
                     </template>
                     <template v-else-if="authStore.isPremium && authStore.subscriptionCancelled">
-                      <p>📅 Доступ до: {{ formattedSubscriptionEndDate }}</p>
+                      <p class="access__text">📅 {{ t('cabinet.access') }} {{ formattedSubscriptionEndDate }}</p>
                     </template>
                   </template>
                   <template v-else-if="acc.key === 'settings'">
@@ -154,7 +157,7 @@
               </transition>
             </div>
             <div class="footer-actions">
-              <button @click="openDeleteModal" class="btn btn-danger">Удалить аккаунт</button>
+              <button @click="openDeleteModal" class="btn btn-danger">{{ t('cabinet.deleteAcc') }}</button>
             </div>
           </div>
           <div v-else-if="activeTabKey === 'progress'">
@@ -171,7 +174,7 @@
     </div>
     <div v-if="isAvatarModalOpen" class="avatar-modal-overlay" @click.self="isAvatarModalOpen = false">
       <div class="avatar-modal-content">
-        <h3>Выберите новый аватар</h3>
+        <h3>{{ t('cabinet.newAvatarTitle') }}</h3>
         <div class="avatar-grid">
           <div
               v-for="avatarName in authStore.availableAvatars"
@@ -185,34 +188,36 @@
           </div>
         </div>
         <div class="modal-actions">
-          <button @click="isAvatarModalOpen = false" class="btn">Отмена</button>
-          <button @click="confirmAvatarChange" :disabled="!selectedAvatarName" class="btn btn-success">Сохранить</button>
+          <button @click="isAvatarModalOpen = false" class="btn">{{ t('cabinet.avatarCancel') }}</button>
+          <button @click="confirmAvatarChange" :disabled="!selectedAvatarName" class="btn btn-success">
+            {{ t('cabinet.avatarSave') }}
+          </button>
         </div>
       </div>
     </div>
     <div v-if="isPurchaseModalOpen" class="modal-overlay" @click.self="isPurchaseModalOpen = false">
       <div class="modal-card">
-        <div class="modal-title">Купить аватар?</div>
-        <p class="modal-text">Этот аватар стоит <b>50 Артиклюсов</b>. Подтвердите покупку?</p>
+        <div class="modal-title">{{ t('cabinet.buyAvatar') }}</div>
+        <p class="modal-text">{{ t('cabinet.costs') }} <b>{{ t('cabinet.price') }}</b></p>
         <div class="modal-actions">
-          <button class="btn btn-success" @click="confirmPurchase">Купить</button>
-          <button class="btn" @click="isPurchaseModalOpen = false">Отмена</button>
+          <button class="btn btn-success" @click="confirmPurchase">{{ t('cabinet.buyAvatarBtn') }}</button>
+          <button class="btn" @click="isPurchaseModalOpen = false">{{ t('cabinet.notBuyAvatarBtn') }}</button>
         </div>
       </div>
     </div>
     <div v-if="isDeleteModalOpen" class="modal-overlay" @click.self="isDeleteModalOpen = false">
       <div class="modal-card">
-        <div class="modal-title">Удалить аккаунт?</div>
-        <p class="modal-text">После удаления аккаунта все Ваши данные будут утеряны безвозвратно</p>
-        <p v-if="!isGoogleUser" class="modal-text">Введите ваш пароль для подтверждения удаления аккаунта</p>
+        <div class="modal-title">{{ t('cabinet.deleteAccTitle') }}</div>
+        <p class="modal-text">{{ t('cabinet.deleteText') }}</p>
+        <p v-if="!isGoogleUser" class="modal-text">{{ t('cabinet.checkPassword') }}</p>
         <div v-if="!isGoogleUser" class="label">
           <input class="input" v-model="deletePasswordField.value" type="password"/>
           <p v-if="deletePasswordField.error" class="delete-error">{{ t(deletePasswordField.error) }}</p>
         </div>
-        <p v-else class="modal-text">Вы вошли через Google. Для удаления аккаунта откроется окно повторной авторизации.</p>
+        <p v-else class="modal-text">{{ t('cabinet.checkGoogle') }}</p>
         <div class="modal-actions">
-          <button class="btn btn-danger" @click="confirmDeleteAccount">Удалить</button>
-          <button class="btn" @click="isDeleteModalOpen = false">Отмена</button>
+          <button class="btn btn-danger" @click="confirmDeleteAccount">{{ t('cabinet.deleteAccBtnAccept') }}</button>
+          <button class="btn" @click="isDeleteModalOpen = false">{{ t('cabinet.deleteAccBtnReject') }}</button>
         </div>
       </div>
     </div>
@@ -220,6 +225,7 @@
 </template>
 
 <script setup>
+
 import {ref, computed, onMounted, watch} from 'vue'
 import {useRouter} from 'vue-router'
 import {useI18n} from 'vue-i18n'
@@ -249,33 +255,46 @@ import UserAccIcon from '../assets/accountToggleIcons/user.svg'
 import SettingsIcon from '../assets/accountToggleIcons/settings.svg'
 import FaqIcon from '../assets/accountToggleIcons/faq.svg'
 
-const {t} = useI18n()
+const {t, locales, locale} = useI18n()
 const router = useRouter()
 const authStore = userAuthStore()
 const learningStore = userlangStore()
 const achievementStore = useAchievementStore()
 const gameStore = useGameStore()
 const uiSettings = useUiSettingsStore()
-
-const TAB_ITEMS = [
-  {key: 'info', label: 'Параметры аккаунта', icon: UserIcon},
-  {key: 'progress', label: 'Прогресс по артиклям', icon: ProgressIcon},
-  {key: 'award', label: 'Награды', icon: AwardsIcon}
-]
 const activeTabKey = ref('info')
 
+const TAB_ITEMS = [
+  {key: 'info', label: t('cabinetSidebar.valueOne'), icon: UserIcon},
+  {key: 'progress', label: t('cabinetSidebar.valueTwo'), icon: ProgressIcon},
+  {key: 'award', label: t('cabinetSidebar.valueThree'), icon: AwardsIcon}
+]
+
 const ACCORDIONS = ref([
-  { key: 'personal', title: 'Персональные данные', icon: UserAccIcon, isLink: false },
-  { key: 'account',  title: 'Управление аккаунтом', icon: EditIcon,    isLink: false },
-  { key: 'settings', title: 'Настройки',             icon: SettingsIcon,isLink: false },
-  { key: 'faq',      title: 'Справочный центр',      icon: FaqIcon,     isLink: true  },
+  {key: 'personal', title: t('cabinetAccordion.personalData'), icon: UserAccIcon, isLink: false},
+  {key: 'account', title: t('cabinetAccordion.account'), icon: EditIcon, isLink: false},
+  {key: 'settings', title: t('cabinetAccordion.settings'), icon: SettingsIcon, isLink: false},
+  {key: 'faq', title: t('cabinetAccordion.faq'), icon: FaqIcon, isLink: true},
 ])
+
+const accountInfoRows = computed(() => [
+  {label: t('cabinetInfoRows.name'), value: authStore.name},
+  {label: t('cabinetInfoRows.email'), value: authStore.email},
+  {label: t('cabinetInfoRows.registerDate'), value: registrationDateText.value || '—'}
+])
+
+const settingsToggleItems = [
+  {key: 'sound', label: t('cabinetToggle.sound'), wrap: false},
+  {key: 'dark', label: t('cabinetToggle.theme'), wrap: true},
+  {key: 'ach', label: t('cabinetToggle.ach'), wrap: true},
+]
 
 const activeAccordion = ref(null)
 
 function toggleAccordion(key) {
   activeAccordion.value = activeAccordion.value === key ? null : key
 }
+
 function onAccordionClick(acc) {
   if (acc.isLink) {
     goToFaq()
@@ -292,23 +311,30 @@ const purchaseAvatarName = ref(null)
 const isDeleteModalOpen = ref(false)
 const deletePasswordField = ref({value: '', error: ''})
 
-const isGenericModalOpen = ref(false)
-const genericModalData = ref({title: 'Заголовок', text: 'текст', img: DevelopmentIcon})
-
 const isCancelModalOpen = ref(false)
 
-const soundEnabled = ref(isSoundEnabled())
+const soundEnabled = ref(false)
 const colorMode = useColorMode()
 const darkMode = ref(colorMode.preference === 'dark')
 
 const registrationDateText = computed(() => {
-  if (!authStore.registeredAt) return '-'
-  return new Date(authStore.registeredAt).toLocaleDateString('ru-RU', {
+  const registeredAt = authStore.registeredAt;
+  if (!registeredAt) return '—';
+  let date;
+  if (typeof registeredAt.toDate === 'function') {
+    date = registeredAt.toDate();
+  } else {
+    date = new Date(registeredAt);
+  }
+  if (isNaN(date.getTime())) {
+    return '—';
+  }
+  return date.toLocaleDateString('ru-RU', {
     day: '2-digit',
     month: '2-digit',
     year: 'numeric'
-  })
-})
+  });
+});
 
 const routeToPay = () => {
   router.push('/pay')
@@ -328,34 +354,27 @@ watch(() => authStore.uid, () => {
   awardList.value = AWARDS.map(a => ({...a, locked: !shownAwardsSet.value.has(a.key)}))
 })
 
-const accountInfoRows = computed(() => [
-  {label: 'Имя', value: authStore.name},
-  {label: 'Email', value: authStore.email},
-  {label: 'Дата регистрации', value: registrationDateText.value || '—'}
-])
-
-const settingsToggleItems = [
-  {key: 'sound', label: 'Звуковые уведомления', wrap: false},
-  {key: 'dark',  label: 'Тёмный режим',          wrap: true},
-  {key: 'ach',   label: 'Уведомление достижений',wrap: true},
-]
 
 const getSettingValue = key => {
   if (key === 'sound') return soundEnabled.value
-  if (key === 'dark')  return darkMode.value
-  if (key === 'ach')   return uiSettings.achievementsNotifyEnabled
+  if (key === 'dark') return darkMode.value
+  if (key === 'ach') return uiSettings.achievementsNotifyEnabled
 }
 
 const onSettingChange = (key, value) => {
   if (key === 'sound') return handleSoundToggle(value)
-  if (key === 'dark')  return handleThemeToggle(value)
-  if (key === 'ach')   return uiSettings.setAchievementsNotifyEnabled(value)
+  if (key === 'dark') return handleThemeToggle(value)
+  if (key === 'ach') return uiSettings.setAchievementsNotifyEnabled(value)
 }
 
 const formattedSubscriptionEndDate = computed(() => {
   if (!authStore.subscriptionEndsAt) return '-'
   const date = new Date(authStore.subscriptionEndsAt)
-  return date.toLocaleDateString('ru-RU', {year: 'numeric', month: 'long', day: 'numeric'})
+  return date.toLocaleDateString(locale.value, {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  })
 })
 const awardsStorageKey = computed(() => `awards_shown_v1_${authStore.uid || 'anon'}`)
 
@@ -373,7 +392,8 @@ function saveShownAwards(set) {
   try {
     if (typeof window === 'undefined') return
     localStorage.setItem(awardsStorageKey.value, JSON.stringify([...set]))
-  } catch {}
+  } catch {
+  }
 }
 
 function setActiveTab(key) {
@@ -442,7 +462,8 @@ async function confirmAvatarChange() {
   try {
     await authStore.updateUserAvatar(selectedAvatarName.value)
     isAvatarModalOpen.value = false
-  } catch {}
+  } catch {
+  }
 }
 
 function openDeleteModal() {
@@ -493,6 +514,13 @@ watch(() => {
     }
   }
 }, {immediate: true})
+
+
+onMounted(() => {
+  initSound()
+  soundEnabled.value = isSoundEnabled()
+})
+
 </script>
 
 <style scoped>
@@ -518,6 +546,12 @@ watch(() => {
 
 .premium__btn-wrapper {
   margin-top: 10px;
+}
+
+.premium__status-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8px;
 }
 
 .layout {
@@ -596,6 +630,7 @@ watch(() => {
   font-size: 1.15rem;
   text-align: center;
   margin-top: 4px;
+  color: var(--titleColor);
 }
 
 .tabs-vertical {
@@ -645,6 +680,7 @@ watch(() => {
   flex-direction: column;
   min-width: 0;
   height: 100%;
+  overflow-y: auto;
 }
 
 .header-surface {
@@ -659,7 +695,7 @@ watch(() => {
   align-items: center;
   gap: 16px;
   margin-bottom: 15px;
-  border-bottom: 2px solid var(--titleColor);
+  border-bottom: 3px solid var(--titleColor);
   border-radius: 15px;
   padding-bottom: 10px;
 }
@@ -760,7 +796,6 @@ watch(() => {
   margin-top: 14px;
   padding: 16px;
   flex: 1;
-  overflow: auto;
 }
 
 .card-row {
@@ -874,6 +909,11 @@ watch(() => {
   display: flex;
   justify-content: flex-end;
   margin-top: 14px;
+}
+
+.access__text {
+  text-align: end;
+  margin-top: 10px;
 }
 
 .modal-overlay {
@@ -1094,15 +1134,13 @@ watch(() => {
   }
 
   .content-panel {
-    overflow: hidden;
-    padding: 5px 5px 88px 5px;
+    padding: 10px 5px 95px 5px;
     border: none;
     box-shadow: none;
     border-radius: 0px;
   }
 
   .content-body {
-    overflow: auto;
     padding: 5px;
   }
 }
@@ -1120,4 +1158,12 @@ watch(() => {
     box-shadow: 2px 2px 0 #000;
   }
 }
+
+@media (max-width: 767px) {
+  .premium__status-wrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
 </style>
