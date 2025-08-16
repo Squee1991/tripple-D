@@ -29,7 +29,6 @@ export const useGuessWordStore = defineStore('guessWord', () => {
     const authStore = userAuthStore()
     const db = getFirestore()
 
-    // ---- State ----
     const answer = ref('')
     const masked = ref([])
     const attempts = ref(15)
@@ -53,11 +52,6 @@ export const useGuessWordStore = defineStore('guessWord', () => {
     const loadedWords = ref([])
     const currentWordObj = ref(null)
 
-    // ---- Achievement Tracking ----
-    // const achievementStore = useAchievementStore()
-    // achievementStore.initializeProgressTracking()
-
-    // ---- Helper Functions ----
     function resetState() {
         answer.value = ''
         masked.value = []
@@ -216,8 +210,6 @@ export const useGuessWordStore = defineStore('guessWord', () => {
     }
 
     const displayMasked = computed(() => masked.value.map(l => (l || '_')).join(' '))
-
-    // ---- Watches ----
     watch(win, async won => {
         if (!won || !answer.value) return
         const word = answer.value
@@ -238,7 +230,6 @@ export const useGuessWordStore = defineStore('guessWord', () => {
     }, { immediate: true })
 
     return {
-        // state
         answer,
         masked,
         attempts,

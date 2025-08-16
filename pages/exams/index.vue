@@ -1,7 +1,7 @@
 <template>
   <div class="exam">
-    <button @click="routeToMain">На главную</button>
-    <h1 class="exam__title">🎓 Подготовка к экзаменам</h1>
+    <button class="back__btn" @click="routeToMain">На главную</button>
+<!--    <h1 class="exam__title">🎓 Тренировка перед экзаменом</h1>-->
     <p class="exam__subtitle">
       Выбери уровень и начни практику всех модулей:
       <span class="exam__highlight">Lesen</span>,
@@ -9,7 +9,6 @@
       <span class="exam__highlight">Schreiben</span>,
       <span class="exam__highlight">Sprechen</span>
     </p>
-
     <div class="exam__levels">
       <div
           v-for="level in examLevels"
@@ -45,7 +44,7 @@ const examLevels = [
   {
     id: 'a1',
     icon: '📘',
-    title: 'A1 — Начальный уровень',
+    title: 'Уровень - A1 ',
     modules: [
       {text: '📖 Lesen — короткие тексты',},
       {text: '🎧 Hören — простые аудио',},
@@ -56,7 +55,7 @@ const examLevels = [
   {
     id: 'a2',
     icon: '📗',
-    title: 'A2 — Базовый уровень',
+    title: 'Уровень - A2',
     modules: [
       {text: '📖 Более сложные тексты'},
       {text: '🎧 Диалоги из повседневности'},
@@ -67,7 +66,7 @@ const examLevels = [
   {
     id: 'b1',
     icon: '📙',
-    title: 'B1 — Средний уровень',
+    title: 'Уровень - B1',
     modules: [
       {text: '📖 Новости, статьи, инструкции'},
       {text: '🎧 Длинные диалоги и мнения'},
@@ -78,7 +77,7 @@ const examLevels = [
   {
     id: 'b2',
     icon: '📕',
-    title: 'B2 — Продвинутый уровень',
+    title: 'Уровень - B2',
     modules: [
       {text: '📖 Тексты на абстрактные темы',},
       {text: '🎧 Новости и выступления'},
@@ -99,7 +98,7 @@ onMounted(() => {
 .exam {
   padding: 2rem;
   background-color: #fdf6e3;
-  font-family: 'Comic Sans MS', cursive;
+  font-family: "Nunito", sans-serif;
   min-height: 100vh;
   text-align: center;
 }
@@ -110,6 +109,7 @@ onMounted(() => {
 }
 
 .exam__subtitle {
+  margin-top: 15px;
   font-size: 1.2rem;
   color: #444;
   margin-bottom: 2rem;
@@ -167,6 +167,23 @@ onMounted(() => {
   margin-top: auto;
 }
 
+.back__btn {
+  background: #4ade80;
+  padding: 10px 20px;
+  font-size: 1.3rem;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 black;
+}
+
+@media (min-width: 1024px) {
+  .back__btn:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #1e1e1e;
+
+  }
+}
+
 .exam-card__button {
   background-color: #ffe58f;
   border: none;
@@ -197,5 +214,11 @@ onMounted(() => {
 
 .exam-card--b2 {
   border-color: #ef4444;
+}
+
+@media (max-width: 767px) {
+  .exam-card {
+    width: 80%
+  }
 }
 </style>

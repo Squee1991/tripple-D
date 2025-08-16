@@ -201,7 +201,7 @@
 
     .accordion-wrapper {
         margin: 0;
-        padding: 0 5%;
+        padding: 0 15px;
         position: relative;
         z-index: 1;
     }

@@ -3,7 +3,7 @@ import {ref, computed, onMounted, onBeforeUnmount} from 'vue'
 const {locales, locale, setLocale} = useI18n()
 const dropdownOpen = ref(false)
 const dropDownRef = ref(null)
-
+const openUpwards = ref(false)
 const currentLang = computed(() => (locales.value || []).find(local => local.code === locale.value))
 const localeCode = computed(() => locale.value)
 
@@ -37,7 +37,10 @@ onBeforeUnmount(() => document.removeEventListener('mousedown', clickOutside))
       <img src="../../assets/images/arrowDown.svg" alt="" class="arrow" :class="{ open: dropdownOpen }"/>
     </button>
 
-    <div v-if="dropdownOpen" class="dropdown">
+    <div v-if="dropdownOpen"
+         class="dropdown"
+         :class="{ upwards: openUpwards }"
+    >
       <div
           v-for="loc in locales"
           :key="loc.code"
@@ -70,7 +73,7 @@ onBeforeUnmount(() => document.removeEventListener('mousedown', clickOutside))
   border: 3px solid #1e1e1e;
   border-radius: 12px;
   color: #1e1e1e;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1rem;
   padding: 0.5rem 1rem;
   cursor: pointer;
@@ -89,7 +92,7 @@ onBeforeUnmount(() => document.removeEventListener('mousedown', clickOutside))
   width: 12px;
   transition: transform .3s ease;
   position: absolute;
-  right: 10px;
+  right: 20px;
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
@@ -98,7 +101,6 @@ onBeforeUnmount(() => document.removeEventListener('mousedown', clickOutside))
 .arrow.open {
   transform: translateY(-50%) rotate(180deg);
 }
-
 
 .dropdown {
   width: 100%;
@@ -112,6 +114,11 @@ onBeforeUnmount(() => document.removeEventListener('mousedown', clickOutside))
   box-shadow: 4px 4px 0 #1e1e1e;
   z-index: 10;
   padding: .5rem;
+}
+
+.dropdown.upwards {
+  bottom: calc(100% + 10px);
+  top: auto;
 }
 
 .dropdown__item {

@@ -32,16 +32,30 @@
               <div v-if="currentMode === 'letters'">
                 <p>{{ t('sessionLabels.lettersFor') }} <b>{{ currentWord.article }}</b></p>
                 <div class="letters">
-                  <button v-for="(letter, i) in shuffledLetters" :key="i" :disabled="usedLetters[i]"
-                          @click="addLetter(letter, i)">
+                  <button
+                      v-for="(letter, i) in shuffledLetters"
+                      :key="i"
+                      :disabled="usedLetters[i]"
+                      @click="addLetter(letter, i)"
+                  >
                     {{ letter === ' ' ? '␣' : letter }}
                   </button>
                 </div>
+                <button
+                    v-if="userInput"
+                    class="letters-clear"
+                    @click="clearLetters"
+                    type="button"
+                >
+                  {{ t('wordDuelSession.clear') || 'clear' }}
+                </button>
+
                 <input v-model="userInput" class="trainer-app__input" readonly/>
               </div>
+
               <div v-if="currentMode === 'wordArticle'">
                 <!--								<p>{{t('sessionLabels.articleWordFor')}} </p>-->
-                <p><b>Слово : {{ currentWord.ru }}</b></p>
+                <p><b>Слово : {{ currentWord.de }}</b></p>
                 <input v-model="userInput" class="trainer-app__input"/>
               </div>
               <div v-if="currentMode === 'plural'">
@@ -52,7 +66,7 @@
                 <p>{{ t('sessionLabels.audioFor') }}:</p>
                 <button @click="speak(currentWord.de)" class="audio-btn">
                   <img class="megaphones__icon" src="../../assets/images/megaphone.svg" alt="">
-                  <span>Прослушать</span>
+                  <span> {{ t('sessionLabels.listen')}}</span>
                 </button>
                 <input v-model="userInput" class="trainer-app__input"/>
               </div>
@@ -153,6 +167,12 @@ function speak(text) {
   setTimeout(() => {
     isSpeaking.value = false
   }, 3000)
+}
+
+
+function clearLetters() {
+  userInput.value = ''
+  usedLetters.value = []
 }
 
 function normalize(text) {
@@ -431,7 +451,7 @@ watch(userInput, (newVal, oldVal) => {
 }
 
 .word-block {
-  min-height: 180px;
+  min-height: 250px;
 }
 
 .word-question {
@@ -562,7 +582,6 @@ watch(userInput, (newVal, oldVal) => {
   display: inline-block;
   width: 100%;
   text-align: center;
-  margin-top: 1rem;
 }
 
 .btn:hover:not(:disabled) {
@@ -604,6 +623,24 @@ watch(userInput, (newVal, oldVal) => {
 
 .btn--secondary:hover:not(:disabled) {
   background-color: #95a5a6;
+  color: #2c3e50;
+}
+
+.letters-clear {
+  align-self: flex-start;
+  margin: 0.25rem 0 0.75rem;
+  padding: 6px 14px;
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  background: transparent;
+  color: #95a5a6;
+  border: 2px solid #95a5a6;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.letters-clear:hover {
+  background: #95a5a6;
   color: #2c3e50;
 }
 

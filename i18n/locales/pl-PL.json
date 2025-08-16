@@ -15,6 +15,76 @@
   "modalVerbsTipsTitle": {
     "tipsTitle": "Przydatne wskazówki:"
   },
+  "awards": {
+    "articlus": "Diament Articlusa",
+    "registerAchievement": "Odznaka uczestnika",
+    "level10": "Puchar ze skrzydłami",
+    "siteRegular": "Medal weterana",
+    "wrong100Answers": "Talisman cierpliwości",
+    "lastChance": "Tik-tak szczęścia",
+    "guessedFastWords": "Rakieta błyskawica",
+    "guessSixHundred": "Księga mądrości",
+    "daily": "Klepsydra wieczności",
+    "guessedSafeWords": "Tarcza ostrożności"
+  },
+  "awardsSection": {
+    "congratulations": "Gratulacje! Masz już tę nagrodę!",
+    "close": "Zamknij"
+  },
+  "cabinetSidebar": {
+    "valueOne": "Ustawienia konta",
+    "valueTwo": "Postęp w artykułach",
+    "valueThree": "Nagrody"
+  },
+  "cabinetAccordion": {
+    "personalData": "Dane osobowe",
+    "account": "Zarządzanie kontem",
+    "settings": "Ustawienia",
+    "faq": "Centrum pomocy"
+  },
+  "cabinetInfoRows": {
+    "name": "Imię",
+    "email": "Email",
+    "registerDate": "Data rejestracji"
+  },
+  "cabinetToggle": {
+    "sound": "Powiadomienia dźwiękowe",
+    "theme": "Tryb ciemny",
+    "ach": "Powiadomienia o osiągnięciach"
+  },
+  "cabinet": {
+    "cancelPremium": "Anulować subskrypcję?",
+    "cancelPremiumText": "Jeśli anulujesz subskrypcję, dostęp premium pozostanie do końca opłaconego okresu.",
+    "accept": "Tak, anuluj",
+    "reject": "Nie",
+    "main": "Strona główna",
+    "category": "Kategorie",
+    "level": "Poziom:",
+    "awards": "Otrzymane nagrody:",
+    "status": "Status subskrypcji",
+    "active": "Subskrypcja aktywna",
+    "canceled": "Subskrypcja anulowana",
+    "withoutPremium": "Bez subskrypcji",
+    "buyPremium": "Kup",
+    "nextPayment": "Następna płatność:",
+    "cancelBtn": "Anuluj subskrypcję",
+    "access": "Dostęp do:",
+    "deleteAcc": "Usuń konto",
+    "newAvatarTitle": "Wybierz nowy awatar",
+    "avatarCancel": "Anuluj",
+    "avatarSave": "Zapisz",
+    "buyAvatar": "Kupić awatar?",
+    "costs": "Ten awatar kosztuje",
+    "price": "50 Artiklusów",
+    "buyAvatarBtn": "Kup",
+    "notBuyAvatarBtn": "Anuluj",
+    "deleteAccTitle": "Usunąć konto?",
+    "deleteText": "Po usunięciu konta wszystkie dane zostaną trwale utracone",
+    "checkPassword": "Wprowadź hasło, aby potwierdzić usunięcie konta",
+    "checkGoogle": "Zalogowałeś się przez Google. W celu usunięcia konta otworzy się okno ponownej autoryzacji.",
+    "deleteAccBtnAccept": "Usuń",
+    "deleteAccBtnReject": "Anuluj"
+  },
   "articleOverlay": {
     "title": "Czym jest Artikleus i jak go zdobyć",
     "first": "Artikleus to wewnętrzna waluta",
@@ -964,15 +1034,11 @@
     "lossText": "Tym razem przeciwnik był silniejszy. Nie martw się, spróbuj ponownie!"
   },
   "nav": {
-    "training": "Szkolenie",
+    "training": "Trening",
     "gameMode": "Gry",
-    "sinonim": "Słownictwo",
-    "about": "O projekcie",
-    "pvp": "Bitwa karciana",
-    "guess": "Zgadnij słowo",
+    "tests": "Testy",
     "achieve": "Osiągnięcia",
-    "stats": "Ranking",
-    "marathon": "Maraton rodzajników"
+    "stats": "Ranking"
   },
   "formLabel": {
     "name": "Imię",
@@ -1260,7 +1326,8 @@
     "lettersFor": "Ułóż słowo z liter",
     "articleWordFor": "Wpisz rodzajnik i słowo",
     "pluralFor": "Wpisz formę liczby mnogiej dla",
-    "audioFor": "Posłuchaj i wpisz słowo"
+    "audioFor": "Posłuchaj i wpisz słowo",
+    "listen": "Posłuchaj"
   },
   "result": {
     "correctAnswer": "Poprawna odpowiedź",

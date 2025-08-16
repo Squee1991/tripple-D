@@ -261,7 +261,7 @@ onMounted(() => {
   background: #fdf6e3;
   min-height: 100vh;
   padding: 3rem 1rem;
-  font-family: 'Comic Neue', cursive;
+  font-family: "Nunito", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -319,6 +319,7 @@ onMounted(() => {
 .exam__task-text, .exam__task-audio, .exam__question, .exam__task-instruction, .exam__task-prompt, .exam__task-topics {
   margin-bottom: 1.2rem;
   font-size: 1.2rem;
+  display: flex;
 }
 
 .exam__options {
@@ -357,6 +358,7 @@ onMounted(() => {
 .exam__textarea {
   width: 100%;
   padding: 1rem;
+
   margin-bottom: 1rem;
   font-size: 1rem;
   border-radius: 8px;

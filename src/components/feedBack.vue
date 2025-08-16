@@ -122,7 +122,6 @@ const resetFields = () => {
 .contact {
   padding: 6rem 1.5rem;
   font-family: "Nunito", sans-serif;
-  //overflow-x: hidden;
 }
 
 .contact__wrapper {
@@ -193,7 +192,6 @@ const resetFields = () => {
 .input,
 .area {
   width: 100%;
-  box-sizing: border-box;
   font-family: 'Inter', sans-serif;
   font-weight: 700;
   color: #1e1e1e;
@@ -286,7 +284,19 @@ const resetFields = () => {
   }
 
   .form__title {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
   }
+
+  .form__header {
+    margin-bottom: 1rem;
+  }
+  .btn__back {
+    font-size: 1rem;
+  }
+
+  .btn--submit {
+    font-size: 1rem;
+  }
+
 }
 </style>

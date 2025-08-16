@@ -1,7 +1,6 @@
 import { defineEventHandler, readBody, createError } from 'h3'
 import Stripe from 'stripe'
 import { db } from '../utils/firebase-admin.js'
-
 export default defineEventHandler(async (event) => {
 	try {
 		const { uid } = await readBody(event)
@@ -29,11 +28,8 @@ export default defineEventHandler(async (event) => {
 		await userRef.update({
 			subscriptionCancelled: true,
 		})
-
 		console.log(`[cancel] Subscription ${userData.subscriptionId} scheduled to cancel at period end`)
-
 		return { success: true, message: 'Subscription will be canceled at period end' }
-
 	} catch (err) {
 		console.error('[cancel] ERROR:', err)
 		throw createError({ statusCode: 500, statusMessage: err.message })

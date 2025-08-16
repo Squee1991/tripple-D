@@ -25,7 +25,7 @@ onMounted( () => {
 function startGame() {
   if (!authStore.uid) return;
   gameStore.selectGameSettings(selectedDifficulty.value);
-  router.push('/MarathonGame');
+  router.push('/marathon-session');
 }
 
 function goBack() {

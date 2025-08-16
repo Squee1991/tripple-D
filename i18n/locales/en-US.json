@@ -15,6 +15,76 @@
   "modalVerbsTipsTitle": {
     "tipsTitle": "Useful Tips:"
   },
+  "awards": {
+    "articlus": "Diamond of Articlus",
+    "registerAchievement": "Participant Badge",
+    "level10": "Cup with Wings",
+    "siteRegular": "Veteran Medal",
+    "wrong100Answers": "Patience Talisman",
+    "lastChance": "Tick-Tick of Luck",
+    "guessedFastWords": "Blitz Rocket",
+    "guessSixHundred": "Book of Wisdom",
+    "daily": "Hourglass of Eternity",
+    "guessedSafeWords": "Shield of Caution"
+  },
+  "awardsSection": {
+    "congratulations": "Congratulations! You already have this award!",
+    "close": "Close"
+  },
+  "cabinetSidebar": {
+    "valueOne": "Account Settings",
+    "valueTwo": "Article Progress",
+    "valueThree": "Rewards"
+  },
+  "cabinetAccordion": {
+    "personalData": "Personal Data",
+    "account": "Account Management",
+    "settings": "Settings",
+    "faq": "Help Center"
+  },
+  "cabinetInfoRows": {
+    "name": "Name",
+    "email": "Email",
+    "registerDate": "Registration Date"
+  },
+  "cabinetToggle": {
+    "sound": "Sound Notifications",
+    "theme": "Dark Mode",
+    "ach": "Achievement Notifications"
+  },
+  "cabinet": {
+    "cancelPremium": "Cancel subscription?",
+    "cancelPremiumText": "If you cancel your subscription, premium access will remain until the end of the paid period.",
+    "accept": "Yes, cancel",
+    "reject": "No",
+    "main": "Home",
+    "category": "Categories",
+    "level": "Level:",
+    "awards": "Earned rewards:",
+    "status": "Subscription status",
+    "active": "Subscription active",
+    "canceled": "Subscription canceled",
+    "withoutPremium": "Without subscription",
+    "buyPremium": "Purchase",
+    "nextPayment": "Next payment:",
+    "cancelBtn": "Cancel subscription",
+    "access": "Access until:",
+    "deleteAcc": "Delete account",
+    "newAvatarTitle": "Choose a new avatar",
+    "avatarCancel": "Cancel",
+    "avatarSave": "Save",
+    "buyAvatar": "Buy avatar?",
+    "costs": "This avatar costs",
+    "price": "50 Artiklus",
+    "buyAvatarBtn": "Buy",
+    "notBuyAvatarBtn": "Cancel",
+    "deleteAccTitle": "Delete account?",
+    "deleteText": "After deleting your account, all your data will be permanently lost",
+    "checkPassword": "Enter your password to confirm account deletion",
+    "checkGoogle": "You signed in via Google. A re-authentication window will open to delete your account.",
+    "deleteAccBtnAccept": "Delete",
+    "deleteAccBtnReject": "Cancel"
+  },
   "articleOverlay": {
     "title": "What is an Artikleus and how to earn it",
     "first": "Artikleus is an in-game currency",
@@ -968,13 +1038,9 @@
   "nav": {
     "training": "Training",
     "gameMode": "Games",
-    "sinonim": "Vocabulary",
-    "about": "About",
-    "pvp": "Card Battle",
-    "guess": "Guess the word",
+    "tests": "Tests",
     "achieve": "Achievements",
-    "stats": "Rating",
-    "marathon": "Article Marathon"
+    "stats": "Ranking"
   },
   "formLabel": {
     "name": "Name",
@@ -1262,9 +1328,10 @@
     "word": "word",
     "articleFor": "Enter the article for",
     "lettersFor": "Assemble the word from letters",
-    "articleWordFor": "Enter the article and word",
+    "articleWordFor": "Enter the article and the word",
     "pluralFor": "Enter the plural form for",
-    "audioFor": "Listen and enter the word"
+    "audioFor": "Listen and enter the word",
+    "listen": "Listen"
   },
   "result": {
     "correctAnswer": "Correct answer",

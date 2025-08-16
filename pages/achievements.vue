@@ -396,6 +396,7 @@ const handleCategoryClick = (category) => {
   transition: all 0.1s ease-in-out;
   margin-bottom: 1.5rem;
   flex-shrink: 0;
+  font-weight: 600;
 }
 
 .btn__back:hover {

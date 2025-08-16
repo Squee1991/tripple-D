@@ -9,5 +9,4 @@ export const achievementToAwardMap = {
     guessedFastWords: 'Блиц-ракета',
     guessedSafeWords: 'Щит осторожности',
     guessSixHundred: 'Книга мудрости',
-    // добавляй по мере надобности
 };

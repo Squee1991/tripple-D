@@ -51,14 +51,13 @@ export const useAchievementStore = defineStore('achievementStore', () => {
         }))
     )
 
-    const lastUnlockedAward = ref(null)        // {title, achId, ts}
-    const lastUnlockedAchievement = ref(null)  // {id, title, ts}
+    const lastUnlockedAward = ref(null)
+    const lastUnlockedAchievement = ref(null)
 
-    // буферы событий, случившихся во время boot
+
     const bootUnlocked = [] // ачивки
     const bootAwards   = [] // награды
 
-    // --- 3) Подключаем сторы-источники ---
     const authStore  = userAuthStore()
     const questStore = useQuestStore()
     const langStore  = userlangStore()
@@ -67,19 +66,17 @@ export const useAchievementStore = defineStore('achievementStore', () => {
     const gameStore  = useGameStore()
     const guessStore = useGuessWordStore()
 
-    // --- 4) Popup-логика ---
     const popupQueue = ref([])
     const showPopup = ref(false)
     const popupAchievement = ref(null)
 
-    // аналитика прошлых значений
     const prevMap = new Map()
 
-    // --- Ключи localStorage (привязаны к пользователю) ---
+
     const awardsKey    = () => `awards_shown_v1_${authStore?.uid }`
     const completedKey = () => `achievements_completed_v1_${authStore?.uid }`
 
-    // --- persist: показанные награды ---
+
     function loadShown () {
         if (!process.client) return new Set()
         try {
@@ -93,7 +90,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
     }
     let shownSet = loadShown()
 
-    // --- persist: выполненные ачивки ---
     function loadCompleted () {
         if (!process.client) return new Set()
         try {

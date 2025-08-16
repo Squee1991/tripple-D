@@ -1,6 +1,8 @@
 <template>
   <div class="game-page-layout">
-    <VStopSessionBtn/>
+    <VStopSessionBtn
+        @close="backTo"
+    />
 <!--    <button @click="goBackToPrepare" class="back-btn">← Назад</button>-->
     <div v-if="!gameStore.gameReady" class="not-ready-container">
       <h1>{{ t('marathonGame.notReadyTitle') }}</h1>
@@ -83,13 +85,16 @@ const gameStore = useGameStore()
 const router = useRouter()
 const feedback = ref(null)
 const isChecking = ref(false)
-
 const currentDifficultyRecord = computed(() => {
   if (gameStore.personalBests && gameStore.difficulty) {
     return gameStore.personalBests[gameStore.difficulty] || 0
   }
   return 0
 })
+
+const backTo = () => {
+  router.back()
+}
 
 const feedbackClass = computed(() => {
   if (feedback.value === 'correct') return 'feedback-correct'
@@ -118,7 +123,7 @@ function handleArticleChoice(chosenArticle) {
 }
 
 function goBackToPrepare() {
-  router.push('/prepare')
+  router.push('/article-marathon')
 }
 
 function toMain() {
@@ -130,7 +135,7 @@ watch(
     (isReady) => {
       if (!isReady) {
         setTimeout(() => {
-          router.push('/prepare')
+          router.push('/article-marathon')
         }, 1500)
       }
     },
@@ -488,7 +493,7 @@ onMounted(() => {
   width: 100%;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1023px) {
   .back-btn {
     top: 1rem;
     left: 1rem;
