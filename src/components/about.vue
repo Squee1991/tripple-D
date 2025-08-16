@@ -28,7 +28,7 @@
                 </div>
             </div>
         </div>
-<!--        <div class="about__why" ref="whyFooterRef"> {{ t('about.whyFooter') }}</div>-->
+        <div class="about__why" ref="whyFooterRef"> {{ t('about.whyFooter') }}</div>
     </section>
 </template>
 
@@ -78,20 +78,20 @@
                 }
             });
         }
-        // if (whyFooterRef.value) {
-        //     gsap.from(whyFooterRef.value, {
-        //         xPercent: -100,
-        //         opacity: 0,
-        //         ease: 'power3.out',
-        //         scrollTrigger: {
-        //             trigger: '.why',
-        //
-        //             start: 'top 100%',
-        //             end: 'bottom center',
-        //             scrub: 1,
-        //         }
-        //     });
-        // }
+        if (whyFooterRef.value) {
+            gsap.from(whyFooterRef.value, {
+                xPercent: -100,
+                opacity: 0,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: '.why',
+
+                    start: 'top 100%',
+                    end: 'bottom center',
+                    scrub: 1,
+                }
+            });
+        }
     });
     const data = {
         title: "about.title",

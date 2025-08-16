@@ -1,4 +1,4 @@
-<template>
+    <template>
     <div class="quest-board-page">
         <button @click="goHome" class="back-button">
            {{ t('tenses.barBtn')}}
