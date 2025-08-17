@@ -1,88 +1,68 @@
 <template>
-  <div class="map-page">
-    <header class="topbar">
-      <div class="topbar__left">
-        <h1 class="worldname">{{ worldName }}</h1>
-        <span class="subtitle">Карта локаций (уровни 1–20)</span>
-      </div>
-      <div class="topbar__right">
-        <div class="levelpill">Твой уровень: <b>{{ clampedLevel }}</b> / 20</div>
-      </div>
-    </header>
-    <div class="map-container" @keydown.esc="closeModal" tabindex="0">
-      <div class="map-card">
-        <div class="map-card__header">
-          <h2 class="map-card__title">Карта мира</h2>
-          <div class="legend">
-            <span class="legend__item"><i class="dot dot--1"></i> 1–5</span>
-            <span class="legend__item"><i class="dot dot--2"></i> 6–10</span>
-            <span class="legend__item"><i class="dot dot--3"></i> 11–15</span>
-            <span class="legend__item"><i class="dot dot--4"></i> 16–20</span>
-          </div>
-        </div>
-        <div class="map-box">
-          <svg
-              class="map__svg"
-              viewBox="0 0 1200 700"
-              preserveAspectRatio="xMidYMid slice"
-              aria-labelledby="title desc"
-              role="img"
-          >
-            <title id="title">Карта локаций с делением по уровням (1–20)</title>
-            <desc id="desc">
-              6 локаций с требуемым уровнем. Фоновые полосы показывают диапазоны уровней.
-            </desc>
-            <rect x="0" y="0" width="1200" height="700" class="ocean"/>
-            <g class="tiers" aria-hidden="true">
-              <g class="tier tier--1">
-                <rect x="0" y="0" width="1200" height="175"/>
-              </g>
-              <g class="tier tier--2">
-                <rect x="0" y="175" width="1200" height="175"/>
-              </g>
-              <g class="tier tier--3">
-                <rect x="0" y="350" width="1200" height="175"/>
-              </g>
-              <g class="tier tier--4">
-                <rect x="0" y="525" width="1200" height="175"/>
-              </g>
-              <text class="tier__label" x="24" y="26">Ур. 1–5</text>
-              <text class="tier__label" x="24" y="201">Ур. 6–10</text>
-              <text class="tier__label" x="24" y="376">Ур. 11–15</text>
-              <text class="tier__label" x="24" y="551">Ур. 16–20</text>
-            </g>
-            <g class="fills">
-              <template v-for="r in regions" :key="r.id">
-                <path class="fill" :class="r.fillClass" :d="r.path"/>
-              </template>
-            </g>
-            <g class="borders" aria-hidden="true">
-              <template v-for="r in regions" :key="r.id + '-b'">
-                <path class="border" :d="r.path"/>
-              </template>
-            </g>
-            <g class="labels" aria-hidden="true">
-              <template v-for="r in regions" :key="r.id + '-l'">
-                <text class="label" :x="r.label.x" :y="r.label.y">{{ r.name }}</text>
-              </template>
-            </g>
-            <g class="hotzones" aria-label="Локации">
-              <template v-for="r in regions" :key="r.id + '-h'">
-                <path
-                    class="hot"
-                    :d="r.path"
-                    role="button"
-                    tabindex="0"
-                    :aria-label="`Открыть локацию ${r.name}`"
-                    @click="open(r)"
-                    @keydown.enter.prevent="open(r)"
-                    @keydown.space.prevent="open(r)"
-                />
-              </template>
-            </g>
-          </svg>
-        </div>
-      </div>
+  <div class="map__wrapper">
+    <h1 class="map__title">Карта изучения немецкого языка</h1>
+    <p class="map__sub">Пройди все квесты во всех локациях чтобы стать мастером немекцого!</p>
+    <div class="map-box">
+      <svg
+          class="map__svg"
+          viewBox="0 0 1200 700"
+          preserveAspectRatio="xMidYMid slice"
+          aria-labelledby="title desc"
+          role="img"
+      >
+        <title id="title">Карта локаций с делением по уровням (1–20)</title>
+        <desc id="desc">
+          6 локаций с требуемым уровнем. Фоновые полосы показывают диапазоны уровней.
+        </desc>
+        <rect x="0" y="0" width="1200" height="700" class="ocean"/>
+        <g class="tiers" aria-hidden="true">
+          <g class="tier tier--1">
+            <rect x="0" y="0" width="1200" height="175"/>
+          </g>
+          <g class="tier tier--2">
+            <rect x="0" y="175" width="1200" height="175"/>
+          </g>
+          <g class="tier tier--3">
+            <rect x="0" y="350" width="1200" height="175"/>
+          </g>
+          <g class="tier tier--4">
+            <rect x="0" y="525" width="1200" height="175"/>
+          </g>
+          <text class="tier__label" x="24" y="26">Ур. 1–5</text>
+          <text class="tier__label" x="24" y="201">Ур. 6–10</text>
+          <text class="tier__label" x="24" y="376">Ур. 11–15</text>
+          <text class="tier__label" x="24" y="551">Ур. 16–20</text>
+        </g>
+        <g class="fills">
+          <template v-for="r in regions" :key="r.id">
+            <path class="fill" :class="r.fillClass" :d="r.path"/>
+          </template>
+        </g>
+        <g class="borders" aria-hidden="true">
+          <template v-for="r in regions" :key="r.id + '-b'">
+            <path class="border" :d="r.path"/>
+          </template>
+        </g>
+        <g class="labels" aria-hidden="true">
+          <template v-for="r in regions" :key="r.id + '-l'">
+            <text class="label" :x="r.label.x" :y="r.label.y">{{ r.name }}</text>
+          </template>
+        </g>
+        <g class="hotzones" aria-label="Локации">
+          <template v-for="r in regions" :key="r.id + '-h'">
+            <path
+                class="hot"
+                :d="r.path"
+                role="button"
+                tabindex="0"
+                :aria-label="`Открыть локацию ${r.name}`"
+                @click="open(r)"
+                @keydown.enter.prevent="open(r)"
+                @keydown.space.prevent="open(r)"
+            />
+          </template>
+        </g>
+      </svg>
     </div>
     <div v-if="active" class="modal__backdrop" @click.self="closeModal">
       <div class="modal" role="dialog" aria-modal="true" :aria-labelledby="`modal-title-${active.id}`">
@@ -170,6 +150,13 @@ function go(region) {
   --locked-b: #fca5a5;
 }
 
+.map__sub {
+  padding: 15px;
+  font-size: 1rem;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+}
+
 .map-page {
   color: var(--titleColor);
   display: flex;
@@ -191,13 +178,6 @@ function go(region) {
   backdrop-filter: blur(8px)
 }
 
-.worldname {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 900;
-  letter-spacing: .03em
-}
-
 .subtitle {
   font-size: 12px;
   margin-left: 8px
@@ -209,14 +189,6 @@ function go(region) {
   gap: 6px
 }
 
-.levelpill {
-  background: rgba(96, 165, 250, .12);
-  color: #dbeafe;
-  border: 1px solid rgba(96, 165, 250, .25);
-  padding: 8px 12px;
-  border-radius: 999px;
-  font-weight: 800
-}
 
 .map-container {
   display: flex;
@@ -226,9 +198,6 @@ function go(region) {
 .map-card {
   width: 100%;
   border-radius: 18px;
-  border: 2px solid black;
-  overflow: hidden;
-  box-shadow: 6px 6px 0 black
 }
 
 .map-card__header {
@@ -285,10 +254,17 @@ function go(region) {
 
 .map-box {
   position: relative;
-  width: 100%;
+  width: 50%;
+  height: 300px;
   aspect-ratio: 16/9;
   background: linear-gradient(180deg, var(--ocean-top), var(--ocean-bot));
-  border: 2px solid black
+  border: 2px solid black;
+  transform: perspective(200px) rotateX(10deg);
+  transform-style: preserve-3d;
+  transform-origin: top;
+  box-shadow: 0 10px 0 black;
+  border-radius: 30px;
+  overflow: hidden;
 }
 
 .map__svg {
@@ -297,6 +273,14 @@ function go(region) {
   width: 100%;
   height: 100%;
   display: block
+}
+
+.map__wrapper {
+  flex-direction: column;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .tier rect {

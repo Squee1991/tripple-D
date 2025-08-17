@@ -31,17 +31,17 @@
 </template>
 
 <script setup>
-import { ref, computed, watch, onMounted } from "vue";
+import { ref, computed, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { regions } from "~/utils/regions.js";
 
 const route = useRoute();
 const router = useRouter();
+const regionKey = computed(() => String(route.query.region || route.params.id || ""));
 
-const routeParams = computed(() => String(route.params.id || ""));
-const region = computed(() => regions.find(region => region.pathTo === routeParams.value));
+const region = computed(() => regions.find(r => r.pathTo === regionKey.value));
 
-const url = computed(() => `/quests/quests-${routeParams.value}.json`);
+const url = computed(() => `/quests/quests-${regionKey.value}.json`);
 
 const quests = ref([]);
 const loading = ref(false);
@@ -53,23 +53,27 @@ async function loadQuests() {
   quests.value = [];
   try {
     const res = await fetch(url.value);
-    if (!res.ok) {
-      throw new Error(`${res.status} ${res.statusText}`)
-    }
-    quests.value = await res.json();
+    if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
+    const data = await res.json();
+    quests.value = Array.isArray(data) ? data : [data];
   } catch (err) {
     error.value = err.message;
   } finally {
     loading.value = false;
   }
 }
-watch(routeParams, loadQuests, { immediate: true });
+
+watch(regionKey, loadQuests, { immediate: true });
+
 function startQuest(q) {
-  if (q?.questId) {
-    router.push(`/quest/${q.questId}`);
-  }
+  if (!q?.questId) return
+  router.push({
+    path: `/location/quest-${q.questId}`,
+    query: { region: regionKey.value },
+  });
 }
 </script>
+
 
 
 <style>

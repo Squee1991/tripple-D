@@ -1,3 +1,5 @@
+// export const regions = [ ... ]
+
 export const regions = [
 	{
 		id: 'east-plain',
@@ -7,7 +9,8 @@ export const regions = [
 		desc: 'Стартовая зона с базовыми заданиями.',
 		path: 'M 0 0 L 380 0 L 360 120 L 420 270 L 200 240 L 0 260 Z',
 		fillClass: 'fill-a',
-		label: { x: 180, y: 120 }
+		label: { x: 180, y: 120 },
+		iconPos: { x: 140, y: 80 }
 	},
 	{
 		id: 'wind-valley',
