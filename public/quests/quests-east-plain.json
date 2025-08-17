@@ -238,37 +238,116 @@
     "title": "Откуда ты?",
     "progress": "0/10",
     "description": "Ты знакомишься дальше, и путники интересуются, откуда ты пришёл.\n\n«Знай, откуда ты — и путь станет яснее», говорит старейшина деревни.",
-    "conditions": { "goal": "Научиться говорить о месте жительства и происхождении.", "minCorrect": 7, "requiredTasks": 10},
-    "rewards": {"points": 70, "xp": 130},
+    "conditions": {
+      "goal": "Научиться говорить о месте жительства и происхождении.",
+      "minCorrect": 7,
+      "requiredTasks": 10
+    },
+    "rewards": {
+      "points": 70,
+      "xp": 130
+    },
     "tasks": [
-      {"id": 1, "question": "Как спросить 'Откуда ты?'?", "options": ["Woher kommst du?", "Wo wohnst du?", "Wie heißt du?"], "answer": "Woher kommst du?"
+      {
+        "id": 1,
+        "question": "Как спросить 'Откуда ты?'?",
+        "options": [
+          "Woher kommst du?",
+          "Wo wohnst du?",
+          "Wie heißt du?"
+        ],
+        "answer": "Woher kommst du?"
       },
       {
-        "id": 2, "question": "Как ответить 'Я из Берлина'?", "options": ["Ich komme aus Berlin.", "Ich wohne Berlin.", "Ich heiße Berlin."], "answer": "Ich komme aus Berlin."
+        "id": 2,
+        "question": "Как ответить 'Я из Берлина'?",
+        "options": [
+          "Ich komme aus Berlin.",
+          "Ich wohne Berlin.",
+          "Ich heiße Berlin."
+        ],
+        "answer": "Ich komme aus Berlin."
       },
       {
-        "id": 3, "question": "Как сказать 'Я живу в Берлине'?", "options": ["Ich wohne in Berlin.", "Ich komme in Berlin.", "Ich bin Berlin."], "answer": "Ich wohne in Berlin."
+        "id": 3,
+        "question": "Как сказать 'Я живу в Берлине'?",
+        "options": [
+          "Ich wohne in Berlin.",
+          "Ich komme in Berlin.",
+          "Ich bin Berlin."
+        ],
+        "answer": "Ich wohne in Berlin."
       },
       {
-        "id": 4, "question": "Как спросить 'Где ты живёшь?'?", "options": ["Wo wohnst du?", "Woher kommst du?", "Wo gehst du?"], "answer": "Wo wohnst du?"
+        "id": 4,
+        "question": "Как спросить 'Где ты живёшь?'?",
+        "options": [
+          "Wo wohnst du?",
+          "Woher kommst du?",
+          "Wo gehst du?"
+        ],
+        "answer": "Wo wohnst du?"
       },
       {
-        "id": 5, "question": "Как сказать 'Я из Польши'?", "options": ["Ich komme aus Polen.", "Ich wohne Polen.", "Ich bin Polen."], "answer": "Ich komme aus Polen."
+        "id": 5,
+        "question": "Как сказать 'Я из Польши'?",
+        "options": [
+          "Ich komme aus Polen.",
+          "Ich wohne Polen.",
+          "Ich bin Polen."
+        ],
+        "answer": "Ich komme aus Polen."
       },
       {
-        "id": 6, "question": "Как спросить 'Вы из Германии?'?", "options": ["Kommen Sie aus Deutschland?", "Wohnen Sie Deutschland?", "Seid ihr Deutschland?"], "answer": "Kommen Sie aus Deutschland?"
+        "id": 6,
+        "question": "Как спросить 'Вы из Германии?'?",
+        "options": [
+          "Kommen Sie aus Deutschland?",
+          "Wohnen Sie Deutschland?",
+          "Seid ihr Deutschland?"
+        ],
+        "answer": "Kommen Sie aus Deutschland?"
       },
       {
-        "id": 7, "question": "Как ответить 'Да, я из Германии'?", "options": ["Ja, ich komme aus Deutschland.", "Ja, ich wohne Deutschland.", "Ja, ich bin Deutschland."], "answer": "Ja, ich komme aus Deutschland."
+        "id": 7,
+        "question": "Как ответить 'Да, я из Германии'?",
+        "options": [
+          "Ja, ich komme aus Deutschland.",
+          "Ja, ich wohne Deutschland.",
+          "Ja, ich bin Deutschland."
+        ],
+        "answer": "Ja, ich komme aus Deutschland."
       },
       {
-        "id": 8, "question": "Как сказать 'Она живёт в Вене'?", "options": ["Sie wohnt in Wien.", "Sie kommt Wien.", "Sie ist Wien."], "answer": "Sie wohnt in Wien."
+        "id": 8,
+        "question": "Как сказать 'Она живёт в Вене'?",
+        "options": [
+          "Sie wohnt in Wien.",
+          "Sie kommt Wien.",
+          "Sie ist Wien."
+        ],
+        "answer": "Sie wohnt in Wien."
       },
       {
-        "id": 9, "question": "Как сказать 'Он из Австрии'?", "options": ["Er kommt aus Österreich.", "Er wohnt Österreich.", "Er ist Österreich."], "answer": "Er kommt aus Österreich."
+        "id": 9,
+        "question": "Как сказать 'Он из Австрии'?",
+        "options": [
+          "Er kommt aus Österreich.",
+          "Er wohnt Österreich.",
+          "Er ist Österreich."
+        ],
+        "answer": "Er kommt aus Österreich."
       },
       {
-        "id": 10, "question": "Как спросить 'Ты живёшь в Берлине?'?", "options": ["Wohnst du in Berlin?", "Kommst du aus Berlin?", "Bist du Berlin?"], "answer": "Wohnst du in Berlin?"}
+        "id": 10,
+        "question": "Как спросить 'Ты живёшь в Берлине?'?",
+        "options": [
+          "Wohnst du in Berlin?",
+          "Kommst du aus Berlin?",
+          "Bist du Berlin?"
+        ],
+        "answer": "Wohnst du in Berlin?"
+      }
     ]
   }
 ]
