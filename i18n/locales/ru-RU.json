@@ -15,6 +15,12 @@
   "modalVerbsTipsTitle": {
     "tipsTitle": "Полезные советы:"
   },
+  "eastPlainQuests": {
+    "description": "Научись приветсотвовать",
+    "questOne": "Как сказать 'Привет'",
+    "questTwo": "Как сказать 'Спасибо'"
+  },
+
   "awards": {
     "articlus": "Алмаз артиклеуса",
     "registerAchievement": "Значок участника",

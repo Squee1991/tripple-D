@@ -517,8 +517,8 @@ watch(isMobileMenuOpen, (newVal) => {
 }
 
 .header-user__dropdown-icon {
-  width: 24px;
-  height: 24px;
+  width: 36px;
+  height: 36px;
 }
 
 .btn-login {
@@ -678,6 +678,11 @@ watch(isMobileMenuOpen, (newVal) => {
       box-shadow: 2px 2px 0 #1e1e1e;
     }
 
+    .header-user__dropdown-icon {
+      width: 30px;
+      height: 30px;
+    }
+
     .btn-login {
       height: 45px;
       display: flex;
@@ -711,7 +716,8 @@ watch(isMobileMenuOpen, (newVal) => {
 }
 
 @media (max-width: 1200px) {
-  .header-user__name {
+  .header-user__name,
+  .header__drop-text{
     display: none;
   }
 }

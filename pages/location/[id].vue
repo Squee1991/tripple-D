@@ -4,22 +4,31 @@
       <h1>{{ region?.name }}</h1>
       <p class="location-desc">{{ region?.desc }}</p>
     </header>
+
     <div v-if="loading" class="loading">Загрузка квестов...</div>
+
     <div v-else class="quests">
       <h2>Квесты в этой зоне</h2>
+
       <div v-if="error" class="error">
-        Не удалось загрузить квесты.<br/>
+        Не удалось загрузить квесты.<br />
         <div class="tiny">
-          URL: {{ url }}<br/>
+          URL: {{ url }}<br />
           {{ error }}
         </div>
       </div>
+
       <ul v-else-if="quests.length" class="quest-list">
         <li v-for="q in quests" :key="q.questId" class="quest-card">
-          <h3>{{ q.title }}</h3>
-          <p>{{ q.description }}</p>
+          <h3 class="quest__title">{{ t(q.title) }}</h3>
+          <p>{{ t(q.description) }}</p>
+          <div v-if="q.details" class="quest-details">
+            <p v-if="q.details.goal"><strong>Цель:</strong> {{ q.details.goal }}</p>
+            <p v-if="q.details.hint"><strong>Подсказка:</strong> {{ q.details.hint }}</p>
+            <p v-if="q.details.level"><strong>Уровень:</strong> {{ q.details.level }}</p>
+          </div>
           <div class="quest-meta">
-            <span>Прогресс: {{ q.progress }}</span>
+            <span>Прогресс: {{ q.progress || '0%' }}</span>
             <span>Награда: {{ q.rewards.points }}💎, {{ q.rewards.xp }} XP</span>
           </div>
           <button class="btn" @click="startQuest(q)">Начать</button>
@@ -34,7 +43,7 @@
 import { ref, computed, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { regions } from "~/utils/regions.js";
-
+const { t } = useI18n();
 const route = useRoute();
 const router = useRouter();
 const regionKey = computed(() => String(route.query.region || route.params.id || ""));
@@ -55,13 +64,14 @@ async function loadQuests() {
     const res = await fetch(url.value);
     if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
     const data = await res.json();
-    quests.value = Array.isArray(data) ? data : [data];
+    quests.value = Array.isArray(data) ? data : data.quests || [data];
   } catch (err) {
     error.value = err.message;
   } finally {
     loading.value = false;
   }
 }
+
 
 watch(regionKey, loadQuests, { immediate: true });
 

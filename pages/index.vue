@@ -23,11 +23,7 @@ const authStore = userAuthStore()
     <div v-else>
       <Vmap/>
     </div>
-    <div v-if="!authStore.uid">
-      <Footer/>
-    </div>
-
-
+    <Footer/>
   </div>
 </template>
 
