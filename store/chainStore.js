@@ -1,8 +1,12 @@
 import { ref, computed, watch } from 'vue'
 import { defineStore } from 'pinia'
 import { regions } from '~/utils/regions.js'
+import { doc, setDoc, getDoc, getFirestore } from 'firebase/firestore'
+import { getAuth } from 'firebase/auth'
 
 export const userChainStore = defineStore('chain', () => {
+	const db = getFirestore()
+
 	const quest = ref(null)
 	const loading = ref(true)
 	const error = ref('')
@@ -17,16 +21,15 @@ export const userChainStore = defineStore('chain', () => {
 	const userInput = ref('')
 	const reorderSelection = ref([])
 	const reorderBank = ref([])
-
-	const requiredTasks = computed(() =>
-		quest.value?.conditions?.requiredTasks ?? quest.value?.tasks?.length ?? 0
-	)
-	const minCorrect = computed(() =>
-		quest.value?.conditions?.minCorrect ?? requiredTasks.value
-	)
-	const task = computed(() =>
-		finished.value ? null : quest.value?.tasks?.[currentIndex.value] ?? null
-	)
+	const maxLives = 5
+	const lives = ref(maxLives)
+	const currentQuestId = ref('')
+	const currentRegionKey = ref('')
+	const questProgress = ref({})
+	const sessionStarted = ref(false)
+	const requiredTasks = computed(() => quest.value?.conditions?.requiredTasks ?? quest.value?.tasks?.length ?? 0)
+	const minCorrect = computed(() => quest.value?.conditions?.minCorrect ?? requiredTasks.value)
+	const task = computed(() => finished.value ? null : quest.value?.tasks?.[currentIndex.value] ?? null)
 	const success = computed(() => correctCount.value >= minCorrect.value)
 	const correctAnswer = computed(() => {
 		if (!task.value) return ''
@@ -37,6 +40,7 @@ export const userChainStore = defineStore('chain', () => {
 			''
 		)
 	})
+
 	const isConfirmDisabled = computed(() => {
 		if (showResult.value) return true
 		if (!task.value) return true
@@ -63,15 +67,60 @@ export const userChainStore = defineStore('chain', () => {
 		reorderBank.value = []
 	}
 
+	function getUserDocRef() {
+		const user = getAuth().currentUser
+		if (!user) return null
+		return doc(db, 'users', user.uid)
+	}
+
+	async function loadProgressFromFirebase() {
+		const userDoc = getUserDocRef()
+		if (!userDoc) return
+		const snap = await getDoc(userDoc)
+		if (snap.exists()) {
+			const data = snap.data()
+			questProgress.value = data.questProgress || {}
+		}
+	}
+
+	async function saveFinalProgress() {
+		if (!currentQuestId.value) return
+		const userDoc = getUserDocRef()
+		if (!userDoc) return
+
+		const answered = Math.min(currentIndex.value + (showResult.value ? 1 : 0), requiredTasks.value)
+		const percent = requiredTasks.value
+			? Math.max(0, Math.min(100, Math.round((answered / requiredTasks.value) * 100)))
+			: 0
+
+		const payload = {
+			region: currentRegionKey.value || null,
+			progressPercent: percent,
+			correctCount: correctCount.value,
+			requiredTasks: requiredTasks.value,
+			completed: true,
+			success: success.value,
+			updatedAt: Date.now()
+		}
+
+		questProgress.value = {
+			...questProgress.value,
+			[currentQuestId.value]: payload
+		}
+
+		await setDoc(userDoc, { questProgress: { [currentQuestId.value]: payload } }, { merge: true })
+	}
+
 	async function loadQuest(questId, regionKey) {
 		loading.value = true
 		error.value = ''
 		quest.value = null
 		restart()
+		currentQuestId.value = String(questId || '')
+		currentRegionKey.value = String(regionKey || '')
 
 		try {
 			const allRegionKeys = regions.map(r => r.pathTo)
-
 			const tryLoadFrom = async region => {
 				const res = await fetch(`/quests/quests-${region}.json`)
 				if (!res.ok) return null
@@ -79,7 +128,6 @@ export const userChainStore = defineStore('chain', () => {
 				const arr = Array.isArray(list) ? list : [list]
 				return arr.find(q => q.questId === questId) || null
 			}
-
 			if (regionKey) {
 				const q = await tryLoadFrom(regionKey)
 				if (q) quest.value = q
@@ -89,11 +137,12 @@ export const userChainStore = defineStore('chain', () => {
 					const q = await tryLoadFrom(key)
 					if (q) {
 						quest.value = q
+						currentRegionKey.value = key
 						break
 					}
 				}
 			}
-			if (!quest.value) throw new Error('А нет!!!! нихуя')
+			if (!quest.value) throw new Error('Квест не найден')
 		} catch (e) {
 			error.value = e.message || String(e)
 		} finally {
@@ -109,8 +158,7 @@ export const userChainStore = defineStore('chain', () => {
 	function handleReorderWord(word, from) {
 		if (showResult.value) return
 		const source = from === 'bank' ? reorderBank.value : reorderSelection.value
-		const destination =
-			from === 'bank' ? reorderSelection.value : reorderBank.value
+		const destination = from === 'bank' ? reorderSelection.value : reorderBank.value
 		const index = source.findIndex(item => item === word)
 		if (index > -1) {
 			const [movedWord] = source.splice(index, 1)
@@ -118,9 +166,11 @@ export const userChainStore = defineStore('chain', () => {
 		}
 	}
 
-	function confirm() {
+	async function confirm() {
 		if (isConfirmDisabled.value) return
 		if (!task.value) return
+
+		sessionStarted.value = true
 
 		switch (task.value.type) {
 			case 'select':
@@ -147,11 +197,20 @@ export const userChainStore = defineStore('chain', () => {
 				break
 		}
 
-		if (isCorrect.value) correctCount.value += 1
+		if (isCorrect.value) {
+			correctCount.value += 1
+		} else {
+			lives.value = Math.max(0, lives.value - 1)
+			if (lives.value <= 0) {
+				finished.value = true // провал — это завершение
+			}
+		}
+
 		showResult.value = true
 	}
 
-	function nextTask() {
+	async function nextTask() {
+		if (finished.value) return
 		showResult.value = false
 		if (currentIndex.value + 1 >= requiredTasks.value) {
 			finished.value = true
@@ -161,7 +220,6 @@ export const userChainStore = defineStore('chain', () => {
 		resetInputs()
 	}
 
-
 	function restart() {
 		currentIndex.value = 0
 		correctCount.value = 0
@@ -169,8 +227,17 @@ export const userChainStore = defineStore('chain', () => {
 		showResult.value = false
 		isCorrect.value = false
 		quest.value = null
+		lives.value = maxLives
+		sessionStarted.value = false
 		resetInputs()
 	}
+
+	// когда завершаем — сохранить один раз
+	watch(finished, async (val) => {
+		if (val) {
+			try { await saveFinalProgress() } catch (_) {}
+		}
+	})
 
 	watch(task, newTask => {
 		if (newTask && newTask.type === 'reorder') {
@@ -198,6 +265,14 @@ export const userChainStore = defineStore('chain', () => {
 		success,
 		correctAnswer,
 		isConfirmDisabled,
+		lives,
+		maxLives,
+
+		questProgress,
+		loadProgressFromFirebase,
+
+		sessionStarted,
+
 		loadQuest,
 		choose,
 		handleReorderWord,
