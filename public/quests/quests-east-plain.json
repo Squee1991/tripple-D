@@ -1,352 +1,1754 @@
 [
   {
-    "questId": "greetings-1",
-    "title": "Первая встреча",
-    "progress": "0/10",
-    "description": "Ты встречаешь путников на Восточной Равнине. Чтобы продолжить путь, нужно научиться здороваться и отвечать на приветствия на немецком языке. \n\n«Учтивость открывает больше дверей, чем меч» — шепчет старый торговец.",
+    "questId": "menschen-a1-greetings",
+    "title": "eastPlainFirstQuests.title",
+    "progress": "0/15",
+    "description": "eastPlainFirstQuests.description",
     "conditions": {
-      "goal": "Ответить правильно на все вопросы о приветствии.",
-      "minCorrect": 7,
-      "requiredTasks": 10
+      "goal": "eastPlainFirstQuests.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
     },
     "rewards": {
-      "points": 10,
-      "xp": 30
+      "points": 200,
+      "xp": 300
     },
     "tasks": [
       {
         "id": 1,
-        "question": "Как сказать 'Привет!'?",
+        "type": "select",
+        "question": "eastPlainFirstQuests.questOne",
         "options": [
-          "Hallo!",
-          "Tschüss!",
-          "Danke!"
+          "Hallo",
+          "Guten Tag",
+          "Danke"
         ],
-        "answer": "Hallo!"
+        "answer": "Hallo"
       },
       {
         "id": 2,
-        "question": "Как сказать 'Доброе утро'?",
+        "type": "select",
+        "question": "eastPlainFirstQuests.questTwo",
         "options": [
-          "Guten Morgen!",
-          "Gute Nacht!",
-          "Auf Wiedersehen!"
+          "Danke",
+          "oder",
+          "Hallo"
         ],
-        "answer": "Guten Morgen!"
+        "answer": "Danke"
       },
       {
         "id": 3,
-        "question": "Как сказать 'Добрый день'?",
-        "options": [
-          "Guten Tag!",
-          "Hallo!",
-          "Bis bald!"
-        ],
-        "answer": "Guten Tag!"
+        "type": "textToSpeech",
+        "question": "Lies laut vor: Hallo",
+        "text": "Hallo"
       },
       {
         "id": 4,
-        "question": "Как сказать 'Добрый вечер'?",
+        "type": "select",
+        "question": "eastPlainFirstQuests.questFour",
         "options": [
-          "Guten Abend!",
-          "Gute Nacht!",
-          "Hallo!"
+          "Danke",
+          "Guten Tag",
+          "Guten Abend"
         ],
-        "answer": "Guten Abend!"
+        "answer": "Guten Abend"
       },
       {
         "id": 5,
-        "question": "Как попрощаться по-немецки?",
+        "type": "select",
+        "question": "eastPlainFirstQuests.questFive",
         "options": [
-          "Auf Wiedersehen!",
-          "Guten Morgen!",
-          "Hallo!"
+          "Hallo!",
+          "Wie geht's",
+          "Danke",
+          "Guten Tag",
+          "oder"
         ],
-        "answer": "Auf Wiedersehen!"
+        "answer": "Wie geht's"
       },
       {
         "id": 6,
-        "question": "Как сказать 'До свидания' неформально?",
-        "options": [
-          "Tschüss!",
-          "Danke!",
-          "Guten Abend!"
+        "type": "reorder",
+        "question": "eastPlainFirstQuests.questSix",
+        "words": [
+          "Hallo",
+          "oder",
+          "Danke",
+          "wie geht's"
         ],
-        "answer": "Tschüss!"
+        "correctOrder": [
+          "Hallo",
+          "wie geht's"
+        ]
       },
       {
         "id": 7,
-        "question": "Как сказать 'Доброй ночи'?",
+        "type": "select",
+        "question": "eastPlainFirstQuests.questSeven",
         "options": [
-          "Gute Nacht!",
-          "Guten Morgen!",
-          "Bis später!"
+          "Tschüss",
+          "Guten Tag!",
+          "Danke",
+          "wie geht's"
         ],
-        "answer": "Gute Nacht!"
+        "answer": "Tschüss"
       },
       {
         "id": 8,
-        "question": "Как спросить 'Как тебя зовут?'?",
+        "type": "select",
+        "question": "eastPlainFirstQuests.questEight",
         "options": [
-          "Wie heißt du?",
-          "Wie geht’s?",
-          "Wo wohnst du?"
+          "gut",
+          "Danke",
+          "Hallo"
         ],
-        "answer": "Wie heißt du?"
+        "answer": "gut"
       },
       {
         "id": 9,
-        "question": "Как ответить 'Меня зовут Анна'?",
-        "options": [
-          "Ich heiße Anna.",
-          "Mir geht’s gut.",
-          "Ich komme aus Berlin."
-        ],
-        "answer": "Ich heiße Anna."
+        "type": "speechToText",
+        "question": "eastPlainFirstQuests.questNine",
+        "text": "Hallo! wie geht's?",
+        "answer": "Hallo! wie geht's?"
       },
       {
         "id": 10,
-        "question": "Как спросить 'Как дела?'?",
-        "options": [
-          "Wie geht’s?",
-          "Was machst du?",
-          "Woher kommst du?"
+        "type": "reorder",
+        "question": "eastPlainFirstQuests.questTen",
+        "words": [
+          "Hallo",
+          "Guten Tag",
+          "Tschüss",
+          "danke",
+          "wie geht's",
+          "gut",
+          "Guten Abend"
         ],
-        "answer": "Wie geht’s?"
+        "correctOrder": [
+          "Hallo",
+          "wie geht's",
+          "gut",
+          "danke"
+        ]
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "eastPlainFirstQuests.questEleven",
+        "options": [
+          "gut",
+          "schlecht",
+          "danke",
+          "sehr gut"
+        ],
+        "answer": "schlecht"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "eastPlainFirstQuests.questTwelve",
+        "options": [
+          "gut",
+          "sehr gut",
+          "danke",
+          "Hallo"
+        ],
+        "answer": "sehr gut"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "eastPlainFirstQuests.questThirteen",
+        "options": [
+          "Auf Wiedersehen",
+          "Tschüss",
+          "danke",
+          "Hallo",
+          "wie geht's"
+        ],
+        "answer": "Auf Wiedersehen"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "eastPlainFirstQuests.questFourteen",
+        "words": [
+          "gut",
+          "sehr gut",
+          "danke",
+          "Hallo",
+          "Tschüss"
+        ],
+        "correctOrder": [
+          "sehr gut",
+          "danke"
+        ]
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "eastPlainFirstQuests.questFifteen",
+        "text": "Guten Tag! wie gehts? sehr gut , danke ",
+        "answer": "Guten Tag! wie gehts? sehr gut , danke "
       }
     ]
   },
   {
-    "questId": "intro-2",
-    "title": "Представься",
-    "progress": "0/10",
-    "description": "После приветствия путники хотят узнать, кто ты такой. Чтобы тебя приняли в их круг, научись представляться.\n\nСова Граммариус шепчет: «Имя — начало всякой дружбы.»",
+    "questId": "menschen-a1-greetings2",
+    "title": "eastPlainSecondQuests.title",
+    "progress": "0/15",
+    "description": "eastPlainSecondQuests.description",
     "conditions": {
-      "goal": "Научиться правильно представляться и спрашивать имя.",
-      "minCorrect": 7,
-      "requiredTasks": 10
+      "goal": "Lerne, über Herkunft und Sprache zu sprechen und höflich Fragen zu stellen",
+      "minCorrect": 12,
+      "requiredTasks": 15
     },
     "rewards": {
-      "points": 60,
-      "xp": 120
+      "points": 220,
+      "xp": 330
     },
     "tasks": [
       {
         "id": 1,
-        "question": "Как сказать 'Меня зовут Том'?",
+        "type": "select",
+        "question": "eastPlainSecondQuests.questOne",
         "options": [
-          "Ich heiße Tom.",
-          "Ich komme Tom.",
-          "Mein Tom ist."
+          "Bis morgen",
+          "Guten Tag",
+          "Hallo",
+          "gut"
         ],
-        "answer": "Ich heiße Tom."
+        "answer": "Bis morgen"
       },
       {
         "id": 2,
-        "question": "Как спросить 'Как тебя зовут?'?",
-        "options": [
-          "Wie heißt du?",
-          "Woher kommst du?",
-          "Was machst du?"
-        ],
-        "answer": "Wie heißt du?"
+        "type": "input",
+        "question": "eastPlainSecondQuests.questTwo",
+        "correctAnswer": "danke"
       },
       {
         "id": 3,
-        "question": "Как спросить вежливо 'Как Вас зовут?'?",
+        "type": "textToSpeech",
+        "question": "eastPlainSecondQuests.questTree",
+        "text": "Bis Morgen"
+      },
+      {
+        "id": 4,
+        "type": "speechToText",
+        "question": "eastPlainSecondQuests.questFour",
+        "text": "Bis Morgen",
+        "answer": "Bis Morgen"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "eastPlainSecondQuests.questFive",
+        "words": [
+          "bei dir",
+          "gut",
+          "und",
+          "Thomas",
+          "Hallo",
+          "Guten Tag",
+          "danke",
+          "gut",
+          "seht gut",
+          "Bis Morgen",
+          "wie gehts's"
+        ],
+        "correctOrder": [
+          "Hallo",
+          "Thomas",
+          "wie gehts's",
+          "gut",
+          "und",
+          "bei dir",
+          "gut",
+          "danke"
+        ]
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "eastPlainSecondQuests.questSix",
+        "words": [
+          "bei dir",
+          "Thomas",
+          "Hallo",
+          "Guten Tag",
+          "Bis bald"
+        ],
+        "correctOrder": [
+          "Bis bald",
+          "Thomas"
+        ]
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "eastPlainSecondQuests.questSeven",
+        "words": [
+          "kommst",
+          "bis bald",
+          "du",
+          "Hallo",
+          "Woher"
+        ],
+        "correctOrder": [
+          "Hallo",
+          "Woher",
+          "kommst",
+          "du"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "reorder",
+        "question": "eastPlainSecondQuests.questEight",
+        "words": [
+          "ich",
+          "komme",
+          "aus",
+          "Woher",
+          "du",
+          "danke"
+        ],
+        "correctOrder": [
+          "ich",
+          "komme",
+          "aus"
+        ]
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "eastPlainSecondQuests.questNine",
+        "text": "Hallo Thomas! Woher kommst du?",
+        "answer": "Hallo Thomas! Woher kommst du?"
+      },
+      {
+        "id": 10,
+        "type": "speechToText",
+        "question": "eastPlainSecondQuests.questTen",
+        "text": "Hallo! ich komme aus Polen",
+        "answer": "Hallo! ich komme aus Polen"
+      },
+      {
+        "id": 11,
+        "type": "textToSpeech",
+        "question": "eastPlainSecondQuests.questEleven",
+        "text": "Hallo! wie geht's"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "eastPlainSecondQuests.questTwelve",
         "options": [
           "Wie heißen Sie?",
-          "Wer bist du?",
-          "Wie geht’s?"
+          "Woher kommst du?",
+          "Bis bald",
+          "Guten Tag"
         ],
         "answer": "Wie heißen Sie?"
       },
       {
-        "id": 4,
-        "question": "Как ответить 'Меня зовут Анна'?",
-        "options": [
-          "Ich heiße Anna.",
-          "Ich bin gut.",
-          "Ich komme aus Berlin."
-        ],
-        "answer": "Ich heiße Anna."
+        "id": 13,
+        "type": "input",
+        "question": "eastPlainSecondQuests.questThirteen",
+        "correctAnswer": "Hallo! ich heiße Thomas"
       },
       {
-        "id": 5,
-        "question": "Как сказать 'Моё имя Анна'?",
+        "id": 14,
+        "type": "select",
+        "question": "eastPlainSecondQuests.questFourteen",
         "options": [
-          "Mein Name ist Anna.",
-          "Ich heiße Anna.",
-          "Beide sind richtig."
+          "Wie heißen Sie?",
+          "Woher kommst du?",
+          "Bis bald",
+          "Guten Tag"
         ],
-        "answer": "Beide sind richtig."
+        "answer": "Wie heißen Sie?"
       },
       {
-        "id": 6,
-        "question": "Как спросить 'Ты Анна?'?",
-        "options": [
-          "Bist du Anna?",
-          "Wie heißt du?",
-          "Wer ist Anna?"
-        ],
-        "answer": "Bist du Anna?"
-      },
-      {
-        "id": 7,
-        "question": "Как ответить 'Да, я Анна'?",
-        "options": [
-          "Ja, ich bin Anna.",
-          "Ja, ich heiße Anna.",
-          "Оба варианта верны."
-        ],
-        "answer": "Оба варианта верны."
-      },
-      {
-        "id": 8,
-        "question": "Как спросить 'Кто ты?'?",
-        "options": [
-          "Wer bist du?",
-          "Wie geht’s dir?",
-          "Wo wohnst du?"
-        ],
-        "answer": "Wer bist du?"
-      },
-      {
-        "id": 9,
-        "question": "Как сказать 'Я студент'?",
-        "options": [
-          "Ich bin Student.",
-          "Ich heiße Student.",
-          "Mein Name ist Student."
-        ],
-        "answer": "Ich bin Student."
-      },
-      {
-        "id": 10,
-        "question": "Как спросить 'Ты студент?'?",
-        "options": [
-          "Bist du Student?",
-          "Wie bist du Student?",
-          "Studierst du?"
-        ],
-        "answer": "Bist du Student?"
+        "id": 15,
+        "type": "speechToText",
+        "question": "eastPlainSecondQuests.questFifteen",
+        "text": "Guten Tag! Woher kommst du? ich komme aus Spanien und du? ich komme aus Deutschland",
+        "answer": "Guten Tag! Woher kommst du. ich komme aus Spanien und du? ich komme aus Deutschland"
       }
     ]
   },
   {
-    "questId": "origin-3",
-    "title": "Откуда ты?",
-    "progress": "0/10",
-    "description": "Ты знакомишься дальше, и путники интересуются, откуда ты пришёл.\n\n«Знай, откуда ты — и путь станет яснее», говорит старейшина деревни.",
+    "questId": "menschen-a1-shopping",
+    "title": "Что ты любишь делать?",
+    "progress": "0/15",
+    "description": "Ты общаешься с новыми друзьями в классе. Все рассказывают о том, чем любят заниматься в свободное время. Некоторые занимаются спортом, другие смотрят фильмы или читают. А что любишь делать ты?\n\n💡 **Подсказка:**\n- Ich spiele gern Fußball — Я люблю играть в футбол\n- Ich lese nicht gern — Я не люблю читать\n- Ich höre oft Musik — Я часто слушаю музыку\n- Was machst du gern? — Что ты любишь делать?",
     "conditions": {
-      "goal": "Научиться говорить о месте жительства и происхождении.",
-      "minCorrect": 7,
-      "requiredTasks": 10
+      "goal": "Научиться говорить о хобби и свободном времени",
+      "minCorrect": 12,
+      "requiredTasks": 15
     },
     "rewards": {
-      "points": 70,
-      "xp": 130
+      "points": 250,
+      "xp": 350
     },
     "tasks": [
       {
         "id": 1,
-        "question": "Как спросить 'Откуда ты?'?",
+        "type": "select",
+        "question": "Как сказать: 'Магазин'",
         "options": [
-          "Woher kommst du?",
-          "Wo wohnst du?",
-          "Wie heißt du?"
+          "der Laden",
+          "die Kasse",
+          "das Geld"
         ],
-        "answer": "Woher kommst du?"
+        "answer": "der Laden"
       },
       {
         "id": 2,
-        "question": "Как ответить 'Я из Берлина'?",
+        "type": "select",
+        "question": "Как сказать 'Купить",
         "options": [
-          "Ich komme aus Berlin.",
-          "Ich wohne Berlin.",
-          "Ich heiße Berlin."
+          "Kaufen",
+          "gehen",
+          "oder",
+          "danke"
         ],
-        "answer": "Ich komme aus Berlin."
+        "answer": "Kaufen"
       },
       {
         "id": 3,
-        "question": "Как сказать 'Я живу в Берлине'?",
-        "options": [
-          "Ich wohne in Berlin.",
-          "Ich komme in Berlin.",
-          "Ich bin Berlin."
+        "type": "reorder",
+        "question": "Как сказать 'Я иду в магазин",
+        "words": [
+          "ich",
+          "in",
+          "gut",
+          "den",
+          "gehe",
+          "danke",
+          "laden"
         ],
-        "answer": "Ich wohne in Berlin."
+        "correctOrder": [
+          "ich",
+          "gehe",
+          "in",
+          "den",
+          "laden"
+        ]
       },
       {
         "id": 4,
-        "question": "Как спросить 'Где ты живёшь?'?",
-        "options": [
-          "Wo wohnst du?",
-          "Woher kommst du?",
-          "Wo gehst du?"
-        ],
-        "answer": "Wo wohnst du?"
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ich kaufe Brot",
+        "answer": "Ich kaufe Brot"
       },
       {
         "id": 5,
-        "question": "Как сказать 'Я из Польши'?",
-        "options": [
-          "Ich komme aus Polen.",
-          "Ich wohne Polen.",
-          "Ich bin Polen."
+        "type": "reorder",
+        "question": "Как сказать: 'Привет!Куда ты идешь? Я иду в магазин'",
+        "words": [
+          "Hallo",
+          "danke",
+          "Wohin",
+          "gehst",
+          "danke",
+          "du",
+          "den",
+          "in",
+          "Laden",
+          "ich",
+          "gehe"
         ],
-        "answer": "Ich komme aus Polen."
+        "correctOrder": [
+          "Hallo",
+          "Wohin",
+          "gehst",
+          "du",
+          "ich",
+          "gehe",
+          "in",
+          "den",
+          "Laden"
+        ]
       },
       {
         "id": 6,
-        "question": "Как спросить 'Вы из Германии?'?",
-        "options": [
-          "Kommen Sie aus Deutschland?",
-          "Wohnen Sie Deutschland?",
-          "Seid ihr Deutschland?"
-        ],
-        "answer": "Kommen Sie aus Deutschland?"
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "ich gehe in den Laden",
+        "answer": "ich gehe in den Laden"
       },
       {
         "id": 7,
-        "question": "Как ответить 'Да, я из Германии'?",
-        "options": [
-          "Ja, ich komme aus Deutschland.",
-          "Ja, ich wohne Deutschland.",
-          "Ja, ich bin Deutschland."
+        "type": "reorder",
+        "question": "Как сказать 'Я тоже иду в магазин",
+        "words": [
+          "danke",
+          "auch",
+          "gehe",
+          "du",
+          "den",
+          "in",
+          "Laden",
+          "ich",
+          "gehe"
         ],
-        "answer": "Ja, ich komme aus Deutschland."
+        "correctOrder": [
+          "ich",
+          "gehe",
+          "auch",
+          "in",
+          "den",
+          "Laden"
+        ]
       },
       {
         "id": 8,
-        "question": "Как сказать 'Она живёт в Вене'?",
-        "options": [
-          "Sie wohnt in Wien.",
-          "Sie kommt Wien.",
-          "Sie ist Wien."
-        ],
-        "answer": "Sie wohnt in Wien."
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Hallo Thomas!Wohin gehst du? ich gehe in den Laden",
+        "answer": "Hallo Thomas!Wohin gehst du? ich gehe in den Laden"
       },
       {
         "id": 9,
-        "question": "Как сказать 'Он из Австрии'?",
+        "type": "select",
+        "question": "Как сказать 'Супермаркет",
         "options": [
-          "Er kommt aus Österreich.",
-          "Er wohnt Österreich.",
-          "Er ist Österreich."
+          "Supermarkt",
+          "Laden",
+          "kaufen",
+          "Hallo"
         ],
-        "answer": "Er kommt aus Österreich."
+        "answer": "Supermarkt"
       },
       {
         "id": 10,
-        "question": "Как спросить 'Ты живёшь в Берлине?'?",
-        "options": [
-          "Wohnst du in Berlin?",
-          "Kommst du aus Berlin?",
-          "Bist du Berlin?"
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ich gehe in den Supermarkt",
+        "answer": "Ich gehe in den Supermarkt"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Как сказать 'Я не иду в супермаркет",
+        "words": [
+          "Supermarkt",
+          "Laden",
+          "kaufen",
+          "den",
+          "gehe",
+          "Laden",
+          "nicht",
+          "in",
+          "ich",
+          "Brot"
         ],
-        "answer": "Wohnst du in Berlin?"
+        "correctOrder": [
+          "ich",
+          "gehe",
+          "nicht",
+          "in",
+          "den",
+          "Supermarkt"
+        ]
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "Как сказать 'Касса",
+        "options": [
+          "die Kasse",
+          "der Supermarkt",
+          "oder",
+          "danke"
+        ],
+        "answer": "die Kasse"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "Как сказать 'Цена",
+        "options": [
+          "die Kasse",
+          "der Preis",
+          "Hallo",
+          "danke",
+          "bis bald"
+        ],
+        "answer": "der Preis"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "Как сказать 'Чек",
+        "options": [
+          "die Rechnung",
+          "der Preis",
+          "Hallo",
+          "danke",
+          "nicht"
+        ],
+        "answer": "die Rechnung"
+      },
+      {
+        "id": 10,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "die Rechnung",
+        "answer": "die Rechnung"
+      }
+    ]
+  },
+  {
+    "questId": "menschen-a1-shopping2",
+    "title": "Ну что продолжим покупки?",
+    "progress": "0/15",
+    "description": "Ты рассказываешь о своём доме. Какие комнаты у тебя есть? Где стоит кровать? Где лампа? Учимся описывать жилище и расположение предметов.\n\n💡 **Подсказка:**\n- Ich wohne in einer Wohnung — Я живу в квартире\n- Das Bett ist im Schlafzimmer — Кровать в спальне\n- Der Tisch ist neben dem Fenster — Стол рядом с окном",
+    "conditions": {
+      "goal": "Научиться описывать своё жильё и расположение предметов",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 220,
+      "xp": 320
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Как сказать 'Очередь'",
+        "options": [
+          "die Schlange",
+          "der Korb",
+          "der Preis"
+        ],
+        "answer": "die Schlange"
+      },
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Как сказать 'Касса'",
+        "options": [
+          "die Kasse",
+          "der Korb",
+          "das Geld"
+        ],
+        "answer": "die Kasse"
+      },
+      {
+        "id": 3,
+        "type": "reorder",
+        "question": "Собери: Я стою в очереди",
+        "words": [
+          "in",
+          "ich",
+          "der",
+          "stehe",
+          "schlange",
+          "Preis",
+          "Hallo"
+        ],
+        "correctOrder": [
+          "ich",
+          "stehe",
+          "in",
+          "der",
+          "schlange"
+        ]
+      },
+      {
+        "id": 4,
+        "type": "speechToText",
+        "question": "Прослушай и напиши:",
+        "text": "Ich stehe in der schlange",
+        "answer": "Ich stehe in der schlange"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Как сказать 'Платить'?",
+        "options": [
+          "bezahlen",
+          "Hallo",
+          "Bis bald"
+        ],
+        "answer": "bezahlen"
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "Прослушай и напиши:",
+        "text": "Ich bezahle",
+        "answer": "Ich bezahle"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "Как сказать 'Деньги'?",
+        "options": [
+          "das Geld",
+          "Hallo",
+          "nicht",
+          "die Kasse"
+        ],
+        "answer": "das Geld"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "Как сказать 'Наличные'?",
+        "options": [
+          "das Bargeld",
+          "Hallo",
+          "nicht",
+          "das Geld"
+        ],
+        "answer": "das Bargeld"
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "Прослушай и напиши:",
+        "text": "ich bezahle bargeld",
+        "answer": "ich bezahle bargeld"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Как сказать 'Купюра'?",
+        "options": [
+          "das Bargeld",
+          "Hallo",
+          "der Schein",
+          "das Geld"
+        ],
+        "answer": "der Schein"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Собери: Платить картой",
+        "words": [
+          "bargeld",
+          "mit",
+          "der",
+          "der Schein",
+          "schlange",
+          "Preis",
+          "bezahlen"
+        ],
+        "correctOrder": [
+          "mit",
+          "bargeld",
+          "bezahlen"
+        ]
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "Прослушай и напиши:",
+        "text": "Ich bezahle mit Karte",
+        "answer": "Ich bezahle mit Karte"
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "Прослушай и напиши:",
+        "text": "Ich bezahle mit Karte oder bargeld",
+        "answer": "Ich bezahle mit Karte oder bargeld"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Как сказать 'Монета",
+        "options": [
+          "das Bargeld",
+          "Hallo",
+          "die Münze",
+          "das Geld"
+        ],
+        "answer": "der Schein"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Прослушай и напиши:",
+        "text": "die Münze",
+        "answer": "die Münze"
+      }
+    ]
+  },
+  {
+    "questId": "menschen-a1-essen",
+    "title": "Что ты ешь?",
+    "progress": "0/15",
+    "description": "Ты идёшь в магазин и в кафе. Покупаешь продукты, просишь воду, говоришь, что тебе нужно. Учимся называть еду, делать заказы и говорить вежливо.\n\n💡 **Подсказка:**\n- Ich möchte ein Brot — Я бы хотел хлеб\n- Was kostet das? — Сколько это стоит?\n- Eine Tasse Kaffee, bitte — Чашку кофе, пожалуйста",
+    "conditions": {
+      "goal": "Научиться говорить о еде, покупать и заказывать",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 250,
+      "xp": 350
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Ich möchte einen Apfel",
+        "options": [
+          "Я хочу яблоко",
+          "Я ем яблоко",
+          "Я люблю яблоки"
+        ],
+        "answer": "Я хочу яблоко"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "Впиши: Я бы хотел хлеб → Ich möchte ein ___",
+        "correctAnswer": "Brot"
+      },
+      {
+        "id": 3,
+        "type": "textToSpeech",
+        "question": "Прочитай вслух: Eine Tasse Tee, bitte",
+        "text": "Eine Tasse Tee, bitte"
+      },
+      {
+        "id": 4,
+        "type": "speechToText",
+        "question": "Прослушай и напиши: Ich nehme ein Wasser",
+        "text": "Ich nehme ein Wasser",
+        "answer": "Ich nehme ein Wasser"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "Собери: [Kaffee, Ich, bitte, einen, möchte]",
+        "words": [
+          "Kaffee",
+          "Ich",
+          "bitte",
+          "einen",
+          "möchte"
+        ],
+        "correctOrder": [
+          "Ich",
+          "möchte",
+          "einen",
+          "Kaffee",
+          "bitte"
+        ]
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "Was kostet das?",
+        "options": [
+          "Сколько это стоит?",
+          "Где это находится?",
+          "Что это такое?"
+        ],
+        "answer": "Сколько это стоит?"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "Впиши: килограмм яблок → ein Kilo ___",
+        "correctAnswer": "Äpfel"
+      },
+      {
+        "id": 8,
+        "type": "readAndAnswer",
+        "text": "Im Supermarkt kaufe ich Brot, Käse und zwei Flaschen Wasser.",
+        "question": "Что покупает человек?",
+        "options": [
+          "Только хлеб",
+          "Хлеб, сыр и воду",
+          "Молоко и сыр"
+        ],
+        "answer": "Хлеб, сыр и воду"
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "Прослушай и напиши: Ich kaufe Gemüse",
+        "text": "Ich kaufe Gemüse",
+        "answer": "Ich kaufe Gemüse"
+      },
+      {
+        "id": 10,
+        "type": "textToSpeech",
+        "question": "Прочитай вслух: Zwei Flaschen Wasser, bitte",
+        "text": "Zwei Flaschen Wasser, bitte"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "Ich trinke gern Tee",
+        "options": [
+          "Я люблю пить чай",
+          "Я готовлю чай",
+          "Я покупаю чай"
+        ],
+        "answer": "Я люблю пить чай"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "Впиши: Я ем сыр → Ich esse ___",
+        "correctAnswer": "Käse"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "Собери: [bitte, Eine, Wasser, Flasche]",
+        "words": [
+          "bitte",
+          "Eine",
+          "Wasser",
+          "Flasche"
+        ],
+        "correctOrder": [
+          "Eine",
+          "Flasche",
+          "Wasser",
+          "bitte"
+        ]
+      },
+      {
+        "id": 14,
+        "type": "readAndAnswer",
+        "text": "Ich bin im Café. Ich nehme einen Kaffee und ein Stück Kuchen.",
+        "question": "Что заказал человек?",
+        "options": [
+          "Только кофе",
+          "Кофе и торт",
+          "Только торт"
+        ],
+        "answer": "Кофе и торт"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Прослушай и напиши: Ich nehme ein Stück Käsekuchen",
+        "text": "Ich nehme ein Stück Käsekuchen",
+        "answer": "Ich nehme ein Stück Käsekuchen"
+      }
+    ]
+  },
+  {
+    "questId": "menschen-a1-beruf",
+    "title": "Кем ты работаешь?",
+    "progress": "0/15",
+    "description": "Ты знакомишься с новыми людьми. Все рассказывают, кто они по профессии. Учимся называть профессии, задавать вопросы о работе и правильно строить ответы.\n\n💡 **Подсказка:**\n- Ich bin Lehrer — Я учитель\n- Sie ist Ärztin — Она врач\n- Er arbeitet als Koch — Он работает поваром\n- Was bist du von Beruf? — Кто ты по профессии?",
+    "conditions": {
+      "goal": "Научиться говорить о профессии и задавать вопросы",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 240,
+      "xp": 360
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Ich bin Lehrer",
+        "options": [
+          "Я учитель",
+          "Я врач",
+          "Я студент"
+        ],
+        "answer": "Я учитель"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "Впиши: Она врач → Sie ist ___",
+        "correctAnswer": "Ärztin"
+      },
+      {
+        "id": 3,
+        "type": "textToSpeech",
+        "question": "Прочитай вслух: Ich bin Studentin",
+        "text": "Ich bin Studentin"
+      },
+      {
+        "id": 4,
+        "type": "speechToText",
+        "question": "Прослушай и напиши: Er arbeitet als Verkäufer",
+        "text": "Er arbeitet als Verkäufer",
+        "answer": "Er arbeitet als Verkäufer"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "Собери: [bist, von, Was, Beruf, du]",
+        "words": [
+          "bist",
+          "von",
+          "Was",
+          "Beruf",
+          "du"
+        ],
+        "correctOrder": [
+          "Was",
+          "bist",
+          "du",
+          "von",
+          "Beruf"
+        ]
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "Was machst du beruflich?",
+        "options": [
+          "Чем ты занимаешься по профессии?",
+          "Что ты делаешь дома?",
+          "Где ты работаешь?"
+        ],
+        "answer": "Чем ты занимаешься по профессии?"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "Впиши: Он работает врачом → Er arbeitet als ___",
+        "correctAnswer": "Arzt"
+      },
+      {
+        "id": 8,
+        "type": "readAndAnswer",
+        "text": "Hallo, ich heiße Nina. Ich bin Lehrerin und arbeite in einer Schule.",
+        "question": "Где работает Нина?",
+        "options": [
+          "В больнице",
+          "В школе",
+          "В офисе"
+        ],
+        "answer": "В школе"
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "Прослушай и напиши: Ich arbeite als Ingenieur",
+        "text": "Ich arbeite als Ingenieur",
+        "answer": "Ich arbeite als Ingenieur"
+      },
+      {
+        "id": 10,
+        "type": "textToSpeech",
+        "question": "Прочитай вслух: Ich bin Programmierer",
+        "text": "Ich bin Programmierer"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "Sie ist Verkäuferin",
+        "options": [
+          "Она продавец",
+          "Она официантка",
+          "Она врач"
+        ],
+        "answer": "Она продавец"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "Впиши: Я работаю врачом → Ich arbeite als ___",
+        "correctAnswer": "Arzt"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "Собери: [arbeitet, Er, Krankenhaus, im]",
+        "words": [
+          "arbeitet",
+          "Er",
+          "Krankenhaus",
+          "im"
+        ],
+        "correctOrder": [
+          "Er",
+          "arbeitet",
+          "im",
+          "Krankenhaus"
+        ]
+      },
+      {
+        "id": 14,
+        "type": "readAndAnswer",
+        "text": "Das ist Peter. Er ist Koch und arbeitet in einem Restaurant.",
+        "question": "Кем работает Петер?",
+        "options": [
+          "Учителем",
+          "Поваром",
+          "Врачом"
+        ],
+        "answer": "Поваром"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Прослушай и напиши: Ich arbeite nicht",
+        "text": "Ich arbeite nicht",
+        "answer": "Ich arbeite nicht"
+      }
+    ]
+  },
+  {
+    "questId": "menschen-a1-zahlen",
+    "title": "Сколько стоит и который час?",
+    "progress": "0/15",
+    "description": "Ты на рынке, в кафе и на вокзале. Постоянно слышишь числа: время отправления, цену кофе, дату встречи. Учимся понимать и называть числа, цену, время и дни недели.\n\n💡 **Подсказка:**\n- Wie viel kostet das? — Сколько это стоит?\n- Es ist zehn Uhr — Сейчас 10 часов\n- Heute ist Montag — Сегодня понедельник\n- Der 3. Mai — 3 мая",
+    "conditions": {
+      "goal": "Научиться понимать числа, цены, время и даты",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 250,
+      "xp": 350
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Wie viel kostet das?",
+        "options": [
+          "Сколько это стоит?",
+          "Который час?",
+          "Где это?"
+        ],
+        "answer": "Сколько это стоит?"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "Впиши число: dreiundzwanzig = ___",
+        "correctAnswer": "23"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Прослушай и напиши: achtundvierzig",
+        "text": "achtundvierzig",
+        "answer": "achtundvierzig"
+      },
+      {
+        "id": 4,
+        "type": "textToSpeech",
+        "question": "Прочитай вслух: fünfundsechzig",
+        "text": "fünfundsechzig"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Es ist zehn Uhr",
+        "options": [
+          "Сейчас 10 часов",
+          "Сегодня 10 мая",
+          "Через 10 минут"
+        ],
+        "answer": "Сейчас 10 часов"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "Впиши: Сегодня пятница → Heute ist ___",
+        "correctAnswer": "Freitag"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Собери фразу: [Uhr, Es, acht, ist]",
+        "words": [
+          "Uhr",
+          "Es",
+          "acht",
+          "ist"
+        ],
+        "correctOrder": [
+          "Es",
+          "ist",
+          "acht",
+          "Uhr"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "readAndAnswer",
+        "text": "Die Milch kostet 1 Euro 20. Der Käse kostet 2 Euro 50.",
+        "question": "Сколько стоит сыр?",
+        "options": [
+          "1.20",
+          "2.50",
+          "3.00"
+        ],
+        "answer": "2.50"
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "Прослушай и напиши: einundneunzig",
+        "text": "einundneunzig",
+        "answer": "einundneunzig"
+      },
+      {
+        "id": 10,
+        "type": "textToSpeech",
+        "question": "Прочитай вслух: Heute ist Dienstag",
+        "text": "Heute ist Dienstag"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "Der 3. Mai",
+        "options": [
+          "3 мая",
+          "3 марта",
+          "3 июня"
+        ],
+        "answer": "3 мая"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "Впиши: двадцать четыре → ___undvierzig",
+        "correctAnswer": "vier"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "Собери: [heute, Der, ist, März, 12.]",
+        "words": [
+          "heute",
+          "Der",
+          "ist",
+          "März",
+          "12."
+        ],
+        "correctOrder": [
+          "Der",
+          "12.",
+          "März",
+          "ist",
+          "heute"
+        ]
+      },
+      {
+        "id": 14,
+        "type": "readAndAnswer",
+        "text": "Der Zug kommt um siebzehn Uhr dreißig.",
+        "question": "Во сколько приходит поезд?",
+        "options": [
+          "17:30",
+          "7:30",
+          "13:30"
+        ],
+        "answer": "17:30"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Прослушай и напиши: Heute ist Donnerstag",
+        "text": "Heute ist Donnerstag",
+        "answer": "Heute ist Donnerstag"
+      }
+    ]
+  },
+  {
+    "questId": "menschen-a1-familie",
+    "title": "Моя семья",
+    "progress": "0/15",
+    "description": "Ты рассказываешь о своей семье, узнаёшь о других. Кто у тебя есть? Как зовут твоего брата? Где живёт твоя мама? Учимся говорить о родственниках, использовать mein/dein/seine/ihre и задавать простые вопросы.\n\n💡 **Подсказка:**\n- Das ist meine Mutter — Это моя мама\n- Hast du Geschwister? — У тебя есть братья/сёстры?\n- Er heißt Paul — Его зовут Пауль\n- Sie ist meine Schwester — Она моя сестра",
+    "conditions": {
+      "goal": "Научиться говорить о семье и задавать простые вопросы",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 260,
+      "xp": 360
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Das ist meine Mutter",
+        "options": [
+          "Это моя мама",
+          "Это моя дочь",
+          "Это мой отец"
+        ],
+        "answer": "Это моя мама"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "Впиши: У меня есть брат → Ich habe einen ___",
+        "correctAnswer": "Bruder"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Прослушай и напиши: Ich habe eine Schwester",
+        "text": "Ich habe eine Schwester",
+        "answer": "Ich habe eine Schwester"
+      },
+      {
+        "id": 4,
+        "type": "textToSpeech",
+        "question": "Прочитай вслух: Das ist mein Vater",
+        "text": "Das ist mein Vater"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Hast du Geschwister?",
+        "options": [
+          "У тебя есть братья/сёстры?",
+          "Ты живёшь с родителями?",
+          "У тебя есть дети?"
+        ],
+        "answer": "У тебя есть братья/сёстры?"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "Впиши: Это мой дедушка → Das ist mein ___",
+        "correctAnswer": "Opa"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Собери: [heißt, Meine, Mutter, Anna]",
+        "words": [
+          "heißt",
+          "Meine",
+          "Mutter",
+          "Anna"
+        ],
+        "correctOrder": [
+          "Meine",
+          "Mutter",
+          "heißt",
+          "Anna"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "readAndAnswer",
+        "text": "Ich habe einen Bruder. Er heißt Tim und wohnt in Berlin.",
+        "question": "Как зовут брата?",
+        "options": [
+          "Tom",
+          "Tim",
+          "Ben"
+        ],
+        "answer": "Tim"
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "Прослушай и напиши: Das ist ihre Tochter",
+        "text": "Das ist ihre Tochter",
+        "answer": "Das ist ihre Tochter"
+      },
+      {
+        "id": 10,
+        "type": "textToSpeech",
+        "question": "Прочитай вслух: Er ist mein Sohn",
+        "text": "Er ist mein Sohn"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "Er heißt Lukas",
+        "options": [
+          "Его зовут Лукас",
+          "Её зовут Лукас",
+          "Тебя зовут Лукас"
+        ],
+        "answer": "Его зовут Лукас"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "Впиши: Это моя бабушка → Das ist meine ___",
+        "correctAnswer": "Oma"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "Собери: [Sie, ist, meine, Schwester]",
+        "words": [
+          "Sie",
+          "ist",
+          "meine",
+          "Schwester"
+        ],
+        "correctOrder": [
+          "Sie",
+          "ist",
+          "meine",
+          "Schwester"
+        ]
+      },
+      {
+        "id": 14,
+        "type": "readAndAnswer",
+        "text": "Paul ist mein Vater. Er arbeitet als Lehrer.",
+        "question": "Кто такой Пауль?",
+        "options": [
+          "Брат",
+          "Отец",
+          "Дядя"
+        ],
+        "answer": "Отец"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Прослушай и напиши: Sie ist meine Tochter",
+        "text": "Sie ist meine Tochter",
+        "answer": "Sie ist meine Tochter"
+      }
+    ]
+  },
+  {
+    "questId": "menschen-a1-tagesablauf",
+    "title": "Мой день",
+    "progress": "0/15",
+    "description": "Ты рассказываешь, как проходит твой день. Когда ты просыпаешься? Завтракаешь? Работаешь или учишься? А когда ложишься спать?\n\n💡 **Подсказка:**\n- Ich stehe um 7 Uhr auf — Я встаю в 7 часов\n- Wann frühstückst du? — Когда ты завтракаешь?\n- Nachmittags arbeite ich — Днём я работаю",
+    "conditions": {
+      "goal": "Научиться описывать свой день и понимать, что делают другие",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 280,
+      "xp": 400
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Ich stehe um 6 Uhr auf",
+        "options": [
+          "Я встаю в 6 часов",
+          "Я ложусь в 6 часов",
+          "Я завтракаю в 6"
+        ],
+        "answer": "Я встаю в 6 часов"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "Впиши: Я завтракаю в 8 → Ich frühstücke um ___ Uhr",
+        "correctAnswer": "8"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Прослушай и напиши: Ich gehe um 22 Uhr schlafen",
+        "text": "Ich gehe um 22 Uhr schlafen",
+        "answer": "Ich gehe um 22 Uhr schlafen"
+      },
+      {
+        "id": 4,
+        "type": "textToSpeech",
+        "question": "Прочитай вслух: Ich arbeite von 9 bis 17 Uhr",
+        "text": "Ich arbeite von 9 bis 17 Uhr"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Was machst du morgens?",
+        "options": [
+          "Я завтракаю",
+          "Я сплю",
+          "Я ложусь спать"
+        ],
+        "answer": "Я завтракаю"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "Впиши: Я учусь днём → Ich lerne ___",
+        "correctAnswer": "nachmittags"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Собери: [Ich, auf, stehe, 7, um, Uhr]",
+        "words": [
+          "Ich",
+          "auf",
+          "stehe",
+          "7",
+          "um",
+          "Uhr"
+        ],
+        "correctOrder": [
+          "Ich",
+          "stehe",
+          "um",
+          "7",
+          "Uhr",
+          "auf"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "readAndAnswer",
+        "text": "Ich arbeite vormittags und habe nachmittags frei.",
+        "question": "Когда он работает?",
+        "options": [
+          "утром",
+          "днём",
+          "вечером"
+        ],
+        "answer": "утром"
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "Прослушай и напиши: Ich frühstücke um halb acht",
+        "text": "Ich frühstücke um halb acht",
+        "answer": "Ich frühstücke um halb acht"
+      },
+      {
+        "id": 10,
+        "type": "textToSpeech",
+        "question": "Прочитай вслух: Um wie viel Uhr gehst du schlafen?",
+        "text": "Um wie viel Uhr gehst du schlafen?"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "Ich habe abends frei",
+        "options": [
+          "У меня есть свободное время вечером",
+          "Я работаю вечером",
+          "Я обедаю вечером"
+        ],
+        "answer": "У меня есть свободное время вечером"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "Впиши: Я встаю в 7 → Ich ___ um 7 Uhr ___",
+        "correctAnswer": "stehe ... auf"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "Собери: [Er, geht, schlafen, um, 11, Uhr]",
+        "words": [
+          "Er",
+          "geht",
+          "schlafen",
+          "um",
+          "11",
+          "Uhr"
+        ],
+        "correctOrder": [
+          "Er",
+          "geht",
+          "um",
+          "11",
+          "Uhr",
+          "schlafen"
+        ]
+      },
+      {
+        "id": 14,
+        "type": "readAndAnswer",
+        "text": "Maria frühstückt um 7 Uhr und fährt um 8 zur Arbeit.",
+        "question": "Когда Мария едет на работу?",
+        "options": [
+          "В 7",
+          "В 8",
+          "В 9"
+        ],
+        "answer": "В 8"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Прослушай и напиши: Ich gehe um Mitternacht schlafen",
+        "text": "Ich gehe um Mitternacht schlafen",
+        "answer": "Ich gehe um Mitternacht schlafen"
+      }
+    ]
+  },
+  {
+    "questId": "menschen-a1-wohnort",
+    "title": "Где ты живёшь?",
+    "progress": "0/15",
+    "description": "Ты рассказываешь, где ты живёшь и откуда ты. Учишься использовать предлоги *in, aus, auf* и описывать жильё и место проживания.\n\n💡 **Подсказка:**\n- Ich wohne in einer Wohnung — Я живу в квартире\n- Er lebt auf dem Land — Он живёт за городом\n- Woher kommst du? — Откуда ты?",
+    "conditions": {
+      "goal": "Научиться описывать, где ты живёшь и откуда приехал",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 250,
+      "xp": 350
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Ich wohne in einer Wohnung",
+        "options": [
+          "Я живу в квартире",
+          "Я живу в доме",
+          "Я живу в отеле"
+        ],
+        "answer": "Я живу в квартире"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "Впиши: Я живу в Берлине → Ich wohne in ___",
+        "correctAnswer": "Berlin"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Прослушай и напиши: Ich wohne auf dem Land",
+        "text": "Ich wohne auf dem Land",
+        "answer": "Ich wohne auf dem Land"
+      },
+      {
+        "id": 4,
+        "type": "textToSpeech",
+        "question": "Прочитай вслух: Woher kommst du?",
+        "text": "Woher kommst du?"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Er lebt im Zentrum",
+        "options": [
+          "Он живёт в центре",
+          "Он живёт на ферме",
+          "Он живёт в горах"
+        ],
+        "answer": "Он живёт в центре"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "Впиши: Я из Германии → Ich komme aus ___",
+        "correctAnswer": "Deutschland"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Собери: [Ich, Berlin, wohne, in]",
+        "words": [
+          "Ich",
+          "Berlin",
+          "wohne",
+          "in"
+        ],
+        "correctOrder": [
+          "Ich",
+          "wohne",
+          "in",
+          "Berlin"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "readAndAnswer",
+        "text": "Thomas wohnt in einem Haus auf dem Land.",
+        "question": "Где живёт Томас?",
+        "options": [
+          "В городе",
+          "В центре",
+          "За городом"
+        ],
+        "answer": "За городом"
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "Прослушай и напиши: Ich komme aus Russland",
+        "text": "Ich komme aus Russland",
+        "answer": "Ich komme aus Russland"
+      },
+      {
+        "id": 10,
+        "type": "textToSpeech",
+        "question": "Прочитай вслух: Ich wohne in der Stadt",
+        "text": "Ich wohne in der Stadt"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "Sie wohnt in einem Haus",
+        "options": [
+          "Она живёт в доме",
+          "Она живёт в квартире",
+          "Она живёт в отеле"
+        ],
+        "answer": "Она живёт в доме"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "Впиши: Он живёт за городом → Er ___ auf dem Land",
+        "correctAnswer": "wohnt"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "Собери: [Sie, in, wohnt, einer, Wohnung]",
+        "words": [
+          "Sie",
+          "in",
+          "wohnt",
+          "einer",
+          "Wohnung"
+        ],
+        "correctOrder": [
+          "Sie",
+          "wohnt",
+          "in",
+          "einer",
+          "Wohnung"
+        ]
+      },
+      {
+        "id": 14,
+        "type": "readAndAnswer",
+        "text": "Anna kommt aus Österreich und lebt jetzt in Köln.",
+        "question": "Где Анна живёт сейчас?",
+        "options": [
+          "В Австрии",
+          "В Берлине",
+          "В Кёльне"
+        ],
+        "answer": "В Кёльне"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Прослушай и напиши: Ich wohne in einem kleinen Dorf",
+        "text": "Ich wohne in einem kleinen Dorf",
+        "answer": "Ich wohne in einem kleinen Dorf"
       }
     ]
   }
