@@ -16,36 +16,42 @@
     "tasks": [
       {
         "id": 1,
+        "type": "select",
         "question": "Что значит *der Tisch*?",
         "options": ["стол", "стул", "кровать"],
         "answer": "стол"
       },
       {
         "id": 2,
+        "type": "select",
         "question": "Что значит *die Lampe*?",
         "options": ["лампа", "стена", "полка"],
         "answer": "лампа"
       },
       {
         "id": 3,
+        "type": "select",
         "question": "Что значит *das Buch*?",
         "options": ["книга", "бутылка", "коробка"],
         "answer": "книга"
       },
       {
         "id": 4,
+        "type": "select",
         "question": "Что значит *klein*?",
         "options": ["маленький", "новый", "грязный"],
         "answer": "маленький"
       },
       {
         "id": 5,
+        "type": "select",
         "question": "Что значит *groß*?",
         "options": ["большой", "красивый", "старый"],
         "answer": "большой"
       },
       {
         "id": 6,
+        "type": "select",
         "question": "Выбери правильную фразу: 'маленькая лампа'",
         "options": ["die kleine Lampe", "der kleiner Lampe", "das kleines Lampe"],
         "answer": "die kleine Lampe"
@@ -751,6 +757,6 @@
         "answer": "Er ist vor der Schule"
       }
     ]
-  },
+  }
 ]
 

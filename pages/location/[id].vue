@@ -1,55 +1,64 @@
 <template>
   <div class="location-page">
-    <header class="location-header">
-      <h1>{{ region?.name }}</h1>
-      <p class="location-desc">{{ region?.desc }}</p>
-    </header>
-
-    <div v-if="loading" class="loading">Загрузка квестов...</div>
-
-    <div v-else class="quests">
-      <h2>Квесты в этой зоне</h2>
-
-      <div v-if="error" class="error">
-        Не удалось загрузить квесты.<br />
-        <div class="tiny">
-          URL: {{ url }}<br />
-          {{ error }}
+    <button class="close-btn" @click="goHome" aria-label="На главную">×</button>
+    <div class="location__wrapper">
+      <header class="location-header">
+        <h1>{{ region?.name }}</h1>
+        <p class="location-desc">{{ region?.desc }}</p>
+      </header>
+      <div v-if="loading" class="loading">Загрузка квестов...</div>
+      <div v-else class="quests">
+        <div v-if="error" class="error">
+          Не удалось загрузить квесты.<br/>
+          <div class="tiny">
+            URL: {{ url }}<br/>
+            {{ error }}
+          </div>
         </div>
+        <ul v-else-if="questsView.length" class="quest-list">
+          <li
+              v-for="q in questsView"
+              :key="q.questId"
+              class="quest-card"
+              :class="{ completed: q._success }"
+          >
+            <div v-if="q._success" class="stamp">ПРОЙДЕНО</div>
+            <h3 class="quest__title">
+              {{ t(q.title) }}
+            </h3>
+            <p class="quest__description">{{ t(q.description) }}</p>
+            <div v-if="q.details" class="quest-details">
+              <p v-if="q.details.goal"><strong>Цель:</strong> {{ q.details.goal }}</p>
+              <p v-if="q.details.hint"><strong>Подсказка:</strong> {{ q.details.hint }}</p>
+              <p v-if="q.details.level"><strong>Уровень:</strong> {{ q.details.level }}</p>
+            </div>
+            <div class="quest-meta">
+              <span>Награда: {{ q.rewards.points }}💎, {{ q.rewards.xp }} XP</span>
+            </div>
+            <button class="btn" @click="startQuest(q)">
+              {{ q._success ? 'Повторить' : 'Начать' }}
+            </button>
+          </li>
+        </ul>
+        <div v-else class="empty">Квесты не найдены.</div>
       </div>
-
-      <ul v-else-if="quests.length" class="quest-list">
-        <li v-for="q in quests" :key="q.questId" class="quest-card">
-          <h3 class="quest__title">{{ t(q.title) }}</h3>
-          <p>{{ t(q.description) }}</p>
-          <div v-if="q.details" class="quest-details">
-            <p v-if="q.details.goal"><strong>Цель:</strong> {{ q.details.goal }}</p>
-            <p v-if="q.details.hint"><strong>Подсказка:</strong> {{ q.details.hint }}</p>
-            <p v-if="q.details.level"><strong>Уровень:</strong> {{ q.details.level }}</p>
-          </div>
-          <div class="quest-meta">
-            <span>Прогресс: {{ q.progress || '0%' }}</span>
-            <span>Награда: {{ q.rewards.points }}💎, {{ q.rewards.xp }} XP</span>
-          </div>
-          <button class="btn" @click="startQuest(q)">Начать</button>
-        </li>
-      </ul>
-      <div v-else class="empty">Квесты не найдены.</div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, computed, watch } from "vue";
-import { useRoute, useRouter } from "vue-router";
-import { regions } from "~/utils/regions.js";
-const { t } = useI18n();
+import {ref, computed, watch, onMounted} from "vue";
+import {useRoute, useRouter} from "vue-router";
+import {regions} from "~/utils/regions.js";
+import {userChainStore} from "~/store/chainStore.js";
+
+const {t} = useI18n();
 const route = useRoute();
 const router = useRouter();
+const chainStore = userChainStore();
+
 const regionKey = computed(() => String(route.query.region || route.params.id || ""));
-
 const region = computed(() => regions.find(r => r.pathTo === regionKey.value));
-
 const url = computed(() => `/quests/quests-${regionKey.value}.json`);
 
 const quests = ref([]);
@@ -72,101 +81,441 @@ async function loadQuests() {
   }
 }
 
+onMounted(() => {
+  chainStore.loadProgressFromFirebase();
+});
+watch(regionKey, loadQuests, {immediate: true});
 
-watch(regionKey, loadQuests, { immediate: true });
+const questsView = computed(() =>
+    quests.value.map(q => {
+      const p = chainStore.questProgress?.[q.questId] || {};
+      return {
+        ...q,
+        _success: !!p.success,
+        _completed: !!p.completed
+      }
+    })
+);
 
 function startQuest(q) {
-  if (!q?.questId) return
-  router.push({
-    path: `/location/quest-${q.questId}`,
-    query: { region: regionKey.value },
-  });
+  if (!q?.questId) return;
+  router.push({path: `/location/quest-${q.questId}`, query: {region: regionKey.value}});
+}
+
+function goHome() {
+  router.push({path: "/"});
 }
 </script>
 
-
-
-<style>
+<style scoped>
 .location-page {
-  padding: 20px;
+  padding: 10px;
+  min-height: 100vh;
+  color: #1b1b1b;
+  font-family: "Nunito", sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.location__wrapper {
+  padding: 20px 50px;
+}
+
+.close-btn {
+  position: sticky;
+  top: 14px;
+  display: inline-grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 12px;
+  border: 3px solid #111;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #FFE690 0%, #FFD54D 100%);
+  color: #111;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 1;
+  box-shadow: 6px 6px 0 #2b2b2b;
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.close-btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 8px 8px 0 #2b2b2b;
+}
+
+.close-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 3px 3px 0 #2b2b2b;
+}
+
+.close-btn:focus-visible {
+  outline: 3px dashed #111;
+  outline-offset: 3px;
+}
+
+.location-header {
+  position: relative;
+  padding: 22px 24px 20px;
+  background: linear-gradient(180deg, #FFF4C8 0%, #FFEBA4 100%);
+  border: 3px solid #111;
+  border-radius: 22px;
+  box-shadow: 10px 10px 0 #2b2b2b;
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+
+.location-header::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border-radius: 18px;
+  outline: 10px solid #fff;
+  pointer-events: none;
+}
+
+.location-header::after {
+  content: "!";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 35% 30%, #ffe08a 0 45%, #facc15 46% 70%, #d97706 71% 100%);
+  color: #111;
+  font-weight: 900;
+  font-size: 34px;
+  line-height: 1;
+  border: 3px solid #111;
+  border-radius: 50%;
+  box-shadow: 8px 8px 0 #2b2b2b;
+  transform: rotate(8deg);
+  animation: bob 2.2s ease-in-out infinite;
+  z-index: 2;
 }
 
 .location-header h1 {
   margin: 0 0 6px;
+  font-size: 32px;
+  letter-spacing: .3px;
 }
 
 .location-desc {
-  margin: 0 0 12px;
-  color: #94a3b8;
+  margin: 0;
+  color: #3b3b3b;
 }
 
 .loading, .error, .empty {
   margin-top: 16px;
   padding: 12px 14px;
-  border-radius: 10px;
-  border: 1px solid #1f2937;
-  background: #0b1220;
-  color: #e5e7eb;
+  border-radius: 16px;
+  border: 3px solid #111;
+  background: #fff;
+  color: #111;
+  box-shadow: 6px 6px 0 #2b2b2b;
 }
 
 .error {
-  border-color: #7f1d1d;
-  background: #3f1d1d;
+  background: #FFE7E7;
 }
 
 .empty {
-  opacity: .9;
+  opacity: .96;
 }
 
 .tiny {
   font-size: 12px;
-  opacity: .8;
+  opacity: .85;
   margin-top: 6px;
-}
-
-.quests h2 {
-  margin: 16px 0 12px;
 }
 
 .quest-list {
   display: grid;
-  gap: 16px;
-  margin-top: 8px;
+  grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  align-items: stretch;
+  margin-top: 12px;
 }
 
 .quest-card {
-  border: 2px solid black;
-  border-radius: 12px;
-  padding: 16px;
-  background: #111827;
-  color: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+  background: linear-gradient(90deg, #8ddcff 0%, #bfa7ff 100%) 0 0/100% 12px no-repeat,
+  #FFFDF3;
+  color: #111;
+  border: 3px solid #111;
+  border-radius: 20px;
+  padding: 18px 16px 16px;
+  box-shadow: 10px 10px 0 #2b2b2b;
+  transform: translateY(0) rotate(-.1deg);
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease, opacity .18s ease;
+  opacity: 0;
+  animation: pop .45s cubic-bezier(.2, .8, .25, 1) forwards;
 }
 
-.quest-card h3 {
-  margin: 0 0 8px;
+.quest-card:nth-child(6n+2) {
+  background: linear-gradient(90deg, #ffb4b4 0%, #ffd19a 100%) 0 0/100% 12px no-repeat,
+  #FFFDF3;
+}
+
+.quest-card:nth-child(6n+3) {
+  background: linear-gradient(90deg, #b0f2b6 0%, #8be39a 100%) 0 0/100% 12px no-repeat,
+  #FFFDF3;
+}
+
+.quest-card:nth-child(6n+4) {
+  background: linear-gradient(90deg, #ffd88c 0%, #ffc26a 100%) 0 0/100% 12px no-repeat,
+  #FFFDF3;
+}
+
+.quest-card:nth-child(6n+5) {
+  background: linear-gradient(90deg, #a7f3eb 0%, #74d8e8 100%) 0 0/100% 12px no-repeat,
+  #FFFDF3;
+}
+
+.quest-card:nth-child(6n) {
+  background: linear-gradient(90deg, #f9a8ff 0%, #d8b4fe 100%) 0 0/100% 12px no-repeat,
+  #FFFDF3;
+}
+
+.quest-card::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border-radius: 16px;
+  outline: 10px solid #fff;
+  pointer-events: none;
+}
+
+.quest-card::after {
+  content: "!";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  background: #FFEC77;
+  color: #111;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 1;
+  border: 3px solid #111;
+  border-radius: 50%;
+  box-shadow: 6px 6px 0 #2b2b2b;
+  transform: rotate(-8deg);
+  animation: wiggle 2.8s ease-in-out infinite;
+}
+
+.quest-card:hover {
+  transform: translate(-2px, -2px) rotate(0deg);
+  box-shadow: 12px 12px 0 #2b2b2b;
+  filter: saturate(1.02);
+}
+
+.quest-card.completed {
+  opacity: .98;
+}
+
+.quest-card.completed .quest__title {
+  text-decoration: none;
+}
+
+.stamp {
+  position: absolute;
+  top: 10px;
+  right: -18px;
+  transform: rotate(-12deg);
+  background: linear-gradient(180deg, #b9f5c4 0%, #6ee7a0 100%);
+  color: #111;
+  border: 3px solid #111;
+  border-radius: 12px;
+  padding: 8px 14px;
+  font-weight: 900;
+  letter-spacing: .04em;
+  box-shadow: 6px 6px 0 #2b2b2b;
+  z-index: 3;
+}
+
+.quest__title {
+  margin: 2px 0 0;
+  font-size: 20px;
+  font-weight: 900;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.ok-mark {
+  font-size: 18px;
+}
+
+.quest__description {
+  margin: 4px 0 0;
+  color: #2b2b2b;
+}
+
+.quest-details {
+  margin: 0;
+  padding: 10px 12px;
+  background: #F4F7FF;
+  border: 3px solid #111;
+  border-radius: 12px;
+  box-shadow: 4px 4px 0 #2b2b2b;
+}
+
+.quest-details p {
+  margin: 6px 0;
 }
 
 .quest-meta {
-  font-size: 14px;
-  margin: 8px 0 12px;
-  color: #cbd5e1;
+  margin-top: auto;
   display: flex;
-  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.quest-meta span {
+  display: inline-block;
+  padding: 6px 10px;
+  font-size: 14px;
+  background: #FFF3D7;
+  border: 3px solid #111;
+  border-radius: 999px;
+  box-shadow: 4px 4px 0 #2b2b2b;
 }
 
 .btn {
-  height: 40px;
-  padding: 0 18px;
-  border-radius: 10px;
-  font-weight: 800;
+  position: relative;
+  height: 46px;
+  padding: 0 22px;
+  margin-top: 12px;
+  border-radius: 14px;
+  font-weight: 900;
   letter-spacing: .02em;
-  border: 1px solid #1f2937;
-  background: #0b1220;
-  color: #fff;
+  border: 3px solid #111;
+  background: linear-gradient(180deg, #B9F2B0 0%, #5EDB6A 100%);
+  color: #111;
   cursor: pointer;
+  box-shadow: 8px 8px 0 #2b2b2b;
+  transition: transform .12s ease, box-shadow .12s ease, filter .12s ease;
+  overflow: hidden;
 }
 
 .btn:hover {
-  background: #111827;
+  transform: translate(-2px, -2px);
+  box-shadow: 10px 10px 0 #2b2b2b;
+}
+
+.btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 4px 4px 0 #2b2b2b;
+}
+
+@keyframes bob {
+  0%, 100% {
+    transform: translateY(0) rotate(8deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(8deg);
+  }
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(-8deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-2deg) translateY(-2px);
+  }
+}
+
+@keyframes pop {
+  0% {
+    opacity: 0;
+    transform: translateY(12px) rotate(-.8deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(-.1deg);
+  }
+}
+
+.quest-card:nth-child(1) {
+  animation-delay: .02s;
+}
+
+.quest-card:nth-child(2) {
+  animation-delay: .06s;
+}
+
+.quest-card:nth-child(3) {
+  animation-delay: .10s;
+}
+
+.quest-card:nth-child(4) {
+  animation-delay: .14s;
+}
+
+.quest-card:nth-child(5) {
+  animation-delay: .18s;
+}
+
+.quest-card:nth-child(6) {
+  animation-delay: .22s;
+}
+
+.quest-card:nth-child(7) {
+  animation-delay: .26s;
+}
+
+.quest-card:nth-child(8) {
+  animation-delay: .30s;
+}
+
+.quest-card:nth-child(9) {
+  animation-delay: .34s;
+}
+
+.quest-card:nth-child(10) {
+  animation-delay: .38s;
+}
+
+@media (max-width: 640px) {
+  .close-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 26px;
+    top: 10px;
+  }
+
+  .quest-list {
+    grid-template-columns:1fr;
+    gap: 16px;
+  }
+
+  .location-header::after {
+    transform: scale(.9) rotate(8deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .location-header::after, .quest-card::after {
+    animation: none;
+  }
+
+  .quest-card, .btn {
+    transition: none;
+  }
 }
 </style>
