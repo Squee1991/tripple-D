@@ -7,7 +7,6 @@
         :img="infoAch.icon"
         :text="infoAch.text"
     />
-
     <div class="sidebar">
       <button class="btn__back" @click="backToMainPage">{{ t('chooseTheme.btnBack') }}</button>
       <nav class="nav__sidebar" ref="scrollRef">
@@ -30,7 +29,6 @@
                    src="../assets/images/arrowNav.svg" alt="Стрелка">
               <span class="sub__item-length">{{ category.length }}</span>
             </li>
-
             <ul v-if="category.submenu && openSubmenus[category.id]" class="submenu">
               <li
                   v-for="subItem in category.submenu"
@@ -48,10 +46,7 @@
         </ul>
       </nav>
     </div>
-
-    <!-- Мобильный бэкдроп (показывается только на ≤1023 и когда открыт контент) -->
     <div class="mobile-backdrop" @click="closeContent"/>
-
     <main class="content-area" :class="{'open': isContentOpen}">
       <header class="content-header">
         <h1>{{ t('categoryAchievments.achievmentAreaLabel') }}</h1>
@@ -59,13 +54,11 @@
           <button :title="t('hoverTitle.ach')" @click="showInfo" class="header__icon-info">
             <img :src="Quest" alt="">
           </button>
-          <!-- Кнопка закрытия видна только на мобильном -->
           <button class="content-close" @click="closeContent" aria-label="Close achievements panel">
             ✖
           </button>
         </div>
       </header>
-
       <div class="category-content" ref="scrollRef">
         <ClientOnly>
           <div :class="wrapperClass">
@@ -81,6 +74,7 @@
 import {ref, computed, nextTick, onMounted, onBeforeUnmount} from 'vue';
 import GuessAchievementDisplay from '../src/components/guessAchievment.vue';
 import OverallAchievments from '../src/components/overallAchiements.vue';
+import LocationsAchievements from '../src/components/locationAchievements.vue';
 import EasyModeAchieve from '../src/components/easyModeAchieve.vue'
 import NormalModeAchieve from '../src/components/normalModeAchieve.vue'
 import HardModeAchieve from '../src/components/hardModeAchieve.vue'
@@ -92,6 +86,7 @@ import SentenceAchievement from '../src/components/sentenceAchievement.vue'
 import Plural from '../src/components/pluralAcvievements.vue'
 import Listen from '../src/components/listenAchievements.vue'
 import {overAchievment} from '../src/achieveGroup/overAllAchieve/overallAchievements.js'
+import { wordAchievementsGroup } from '../src/achieveGroup/wordGroup/wordAchievements.js'
 import {guessAchievment} from '../src/achieveGroup/guessAchieve/guessAchievments.js'
 import {cpecialGroupAchievment} from '../src/achieveGroup/specialAchieve/specialAchievment.js'
 import {groupedEasyModeAchievements} from '../src/achieveGroup/marathon/easyModeAchievment.js'
@@ -117,7 +112,6 @@ const selectedId = ref('overall');
 const contentId = ref('overall');
 const achInfo = ref(false)
 const achStore = useAchievementStore()
-const QuestRef = Quest // избегаем предупреждений сборщика
 const isContentOpen = ref(false)
 
 const backToMainPage = () => {
@@ -175,6 +169,7 @@ const contentMap = {
   easy: EasyModeAchieve,
   normal: NormalModeAchieve,
   hard: HardModeAchieve,
+  locations: LocationsAchievements
 };
 const currentContent = computed(() => contentMap[contentId.value]);
 const wrapperClass = computed(() => {
@@ -195,7 +190,8 @@ const allAchievementsData = {
   pluralForm: pluraGroupAchievment,
   listening: listenAchieveGroup,
   special: cpecialGroupAchievment,
-  sentence: sentenceAchievement
+  sentence: sentenceAchievement,
+  locations: wordAchievementsGroup
 };
 const countNestedAchievements = (dataArray) => {
   let count = 0;
@@ -237,12 +233,17 @@ const modeComputed = computed(() => {
   if (allAchievementsData.sentence) {
     senten = countNestedAchievements(allAchievementsData.sentence)
   }
+  let locations = 0
+  if (allAchievementsData.locations) {
+    locations = countNestedAchievements(allAchievementsData.locations)
+  }
   return {
     easy: easyCount,
     normal: normalCount,
     hard: hardCount,
     special: special,
     overall: overall,
+    locations: locations,
     guessWord: guesss,
     sentence: senten,
     total: easyCount + normalCount + hardCount
@@ -277,6 +278,12 @@ const achievementCategories = computed(() => [
     name: 'categoryAchievments.guess',
     icon: '🧠',
     length: modeComputed.value.guessWord,
+  },
+  {
+    id: 'locations',
+    name: 'Языковые Земли',
+    icon: '🌍',
+    length: modeComputed.value.locations,
   },
   {
     id: 'sentence',
@@ -336,7 +343,7 @@ const closeContent = () => {
 const handleContentClick = (id) => {
   contentId.value = id;
   selectedId.value = id;
-  openContent(); // на мобильном выезжаем
+  openContent();
 };
 const handleCategoryClick = (category) => {
   selectedId.value = category.id;
@@ -344,7 +351,7 @@ const handleCategoryClick = (category) => {
     openSubmenus.value[category.id] = !openSubmenus.value[category.id];
   } else {
     contentId.value = category.id;
-    openContent(); // на мобильном выезжаем
+    openContent();
   }
 };
 </script>
@@ -353,7 +360,7 @@ const handleCategoryClick = (category) => {
 .achievements-page-container {
   display: flex;
   height: 100vh;
-  padding: 2rem;
+  padding: 1rem;
   gap: 10px;
   font-family: "Nunito", sans-serif;
   box-sizing: border-box;
@@ -524,8 +531,8 @@ const handleCategoryClick = (category) => {
 }
 
 .content-header {
-  padding-bottom: 1.5rem;
-  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 10px;
   border-bottom: 4px solid #1e1e1e;
   text-align: center;
   flex-shrink: 0;

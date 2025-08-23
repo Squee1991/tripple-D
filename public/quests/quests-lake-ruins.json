@@ -1,0 +1,1244 @@
+[
+  {
+    "questId": "weather-1",
+    "title": "Погода и одежда",
+    "progress": "0/15",
+    "description": "Как спросить о погоде и ответить: sonnig, regnerisch, warm, kalt. Немного одежды: die Jacke, die Mütze.",
+    "conditions": {
+      "goal": "Понимать базовые слова о погоде и составлять короткие фразы (Heute ist es ... / Es regnet / Ich brauche ...)",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 190,
+      "xp": 300
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Что значит: das Wetter",
+        "options": ["Погода", "Ветер", "Вода"],
+        "answer": "Погода"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "sonnig",
+        "options": ["Солнечно", "Дождливо", "Облачно"],
+        "answer": "Солнечно"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "regnerisch",
+        "options": ["Дождливо", "Туманно", "Снежно"],
+        "answer": "Дождливо"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "kalt",
+        "options": ["Холодно", "Тепло", "Жарко"],
+        "answer": "Холодно"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": ["sonnig", "ist", "es", "Heute"],
+        "correctOrder": ["Heute", "ist", "es", "sonnig"]
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Es ist kalt",
+        "answer": "Es ist kalt"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "Wie ist das Wetter?",
+        "options": ["Какая погода?", "Который час?", "Где ты живёшь?"],
+        "answer": "Какая погода?"
+      },
+      {
+        "id": 8,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": ["windig", "ist", "es", "Heute", "kalt", "und"],
+        "correctOrder": ["Heute", "ist", "es", "windig", "und", "kalt"]
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Heute ist es warm. Ich brauche keine Jacke.",
+        "question": "Нужна ли куртка сегодня?",
+        "options": ["Нет", "Да", "Неизвестно"],
+        "answer": "Нет"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "die Sonne",
+        "options": ["Солнце", "Туча", "Снег"],
+        "answer": "Солнце"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "der Regen",
+        "options": ["Дождь", "Ветер", "Гром"],
+        "answer": "Дождь"
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ich brauche eine Jacke",
+        "answer": "Ich brauche eine Jacke"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": ["warm", "Mütze", "ist", "Die"],
+        "correctOrder": ["Die", "Mütze", "ist", "warm"]
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "Es regnet",
+        "options": ["Идёт дождь", "Идёт снег", "Ветрено"],
+        "answer": "Идёт дождь"
+      },
+      {
+        "id": 15,
+        "type": "readAndAnswer",
+        "text": "Morgen ist es bewölkt, aber am Abend scheint die Sonne.",
+        "question": "Какая погода вечером?",
+        "options": ["Солнечно", "Облачно", "Дождливо"],
+        "answer": "Солнечно"
+      }
+    ]
+  },
+  {
+    "questId": "weather-2",
+    "title": "Времена года и температура",
+    "progress": "0/15",
+    "description": "Учимся говорить о температуре и одежде.",
+    "conditions": {
+      "goal": "Говорить о сезонах и погоде: Im Sommer…, Es ist kalt/warm, Es schneit/regnet, Grad; повторить Jacke/Mütze",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 190,
+      "xp": 300
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Что значит: der Frühling",
+        "options": ["Весна", "Лето", "Осень"],
+        "answer": "Весна"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "Что значит: der Sommer",
+        "options": ["Лето", "Зима", "Весна"],
+        "answer": "Лето"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "Что значит: der Herbst",
+        "options": ["Осень", "Весна", "Зима"],
+        "answer": "Осень"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "Что значит: der Winter",
+        "options": ["Зима", "Лето", "Осень"],
+        "answer": "Зима"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": ["kalt", "Winter", "es", "ist", "Im"],
+        "correctOrder": ["Im", "Winter", "ist", "es", "kalt"]
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Es schneit",
+        "answer": "Es schneit"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "Что значит: der Regenschirm",
+        "options": ["Зонт", "Шарф", "Куртка"],
+        "answer": "Зонт"
+      },
+      {
+        "id": 8,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": ["brauche", "Ich", "einen", "Regenschirm"],
+        "correctOrder": ["Ich", "brauche", "einen", "Regenschirm"]
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Im Sommer ist es heiß. Ich trage ein T-Shirt.",
+        "question": "Когда жарко?",
+        "options": ["Летом", "Зимой", "Осенью"],
+        "answer": "Летом"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Что значит: Grad",
+        "options": ["Градусы", "Гром", "Тучи"],
+        "answer": "Градусы"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "Впиши пропуск: Im ___ ist es warm. (подсказка: Sommer)",
+        "correctAnswer": "Sommer"
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Heute sind es zehn Grad",
+        "answer": "Heute sind es zehn Grad"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": ["eine", "Jacke", "eine", "trage", "und", "Ich", "Mütze"],
+        "correctOrder": ["Ich", "trage", "eine", "Jacke", "und", "eine", "Mütze"]
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "Переведи: Es regnet",
+        "options": ["Идёт дождь", "Снежит", "Ветрено"],
+        "answer": "Идёт дождь"
+      },
+      {
+        "id": 15,
+        "type": "readAndAnswer",
+        "text": "Im Herbst ist es windig und oft regnerisch.",
+        "question": "Какая погода осенью?",
+        "options": ["Ветрено и часто дождливо", "Снежно", "Жарко и сухо"],
+        "answer": "Ветрено и часто дождливо"
+      }
+    ]
+  },
+  {
+    "questId": "weather-3",
+    "title": "Прогноз и планы",
+    "progress": "0/15",
+    "description": "Учимся говорить про сегодня/завтра и планы.",
+    "conditions": {
+      "goal": "Говорить о погоде (без градусов) и связывать её с простыми планами: Heute/Morgen, es bleibt/es wird",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 190,
+      "xp": 320
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Что значит: der Nebel",
+        "options": ["Туман", "Гром", "Мороз"],
+        "answer": "Туман"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "trocken",
+        "options": ["Сухо", "Мокро", "Жарко"],
+        "answer": "Сухо"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "nass",
+        "options": ["Мокро/сыро", "Холодно", "Туманно"],
+        "answer": "Мокро/сыро"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "das Gewitter",
+        "options": ["Гроза", "Снегопад", "Тёплый ветер"],
+        "answer": "Гроза"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": ["Heute", "Abend", "ist", "es", "neblig"],
+        "correctOrder": ["Heute", "Abend", "ist", "es", "neblig"]
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Es ist kühl",
+        "answer": "Es ist kühl"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": ["Morgen", "wird", "es", "trocken"],
+        "correctOrder": ["Morgen", "wird", "es", "trocken"]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Es bleibt klar",
+        "answer": "Es bleibt klar"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Am Wochenende gibt es Gewitter. Wir bleiben zu Hause.",
+        "question": "Что мы делаем на выходных?",
+        "options": ["Остаёмся дома", "Идём купаться", "Едем в горы"],
+        "answer": "Остаёмся дома"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": ["Heute", "ist", "die", "Luft", "schwül"],
+        "correctOrder": ["Heute", "ist", "die", "Luft", "schwül"]
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ich nehme die Sonnenbrille",
+        "answer": "Ich nehme die Sonnenbrille"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "die Sonnenbrille",
+        "options": ["Солнечные очки", "Шарф", "Куртка"],
+        "answer": "Солнечные очки"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "Morgen früh ist es neblig. Ich fahre später.",
+        "question": "Когда он поедет?",
+        "options": ["Позже", "Сейчас", "Никогда"],
+        "answer": "Позже"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": ["Es", "gibt", "Nebel", "am", "Morgen"],
+        "correctOrder": ["Es", "gibt", "Nebel", "am", "Morgen"]
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Es ist trocken und klar",
+        "answer": "Es ist trocken und klar"
+      }
+    ]
+  },
+  {
+    "questId": "weather-4",
+    "title": "Прогноз и непогода",
+    "progress": "0/15",
+    "description": "Учимся описывать сильную погоду и что брать с собой.",
+    "conditions": {
+      "goal": "Расширить лексику по непогоде и строить простые фразы: Es donnert/Es blitzt, Am Himmel …, Ich nehme …",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 190,
+      "xp": 320
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Что значит: der Sturm",
+        "options": ["Шторм/буря", "Туман", "Мороз"],
+        "answer": "Шторм/буря"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "Что значит: die Wolke",
+        "options": ["Облако", "Град", "Солнце"],
+        "answer": "Облако"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "Что значит: der Blitz",
+        "options": ["Молния", "Дождь", "Туча"],
+        "answer": "Молния"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "Что значит: der Donner",
+        "options": ["Гром", "Ветер", "Снег"],
+        "answer": "Гром"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": ["Heute", "Abend", "gibt", "es", "Sturm"],
+        "correctOrder": ["Heute", "Abend", "gibt", "es", "Sturm"]
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Es blitzt",
+        "answer": "Es blitzt"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": ["Der", "Himmel", "ist", "grau"],
+        "correctOrder": ["Der", "Himmel", "ist", "grau"]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Es donnert",
+        "answer": "Es donnert"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Der Wetterbericht: Am Montag gibt es Sturm. Nimm Stiefel.",
+        "question": "Что советуют взять?",
+        "options": ["Сапоги", "Зонт", "Очки"],
+        "answer": "Сапоги"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Что значит: der Regenmantel",
+        "options": ["Дождевик/плащ", "Шарф", "Куртка-зима"],
+        "answer": "Дождевик/плащ"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": ["Ich", "nehme", "den", "Regenmantel"],
+        "correctOrder": ["Ich", "nehme", "den", "Regenmantel"]
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "Что значит: die Stiefel",
+        "options": ["Сапоги", "Перчатки", "Носки"],
+        "answer": "Сапоги"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "stürmisch",
+        "options": ["Штормовая погода", "Туманно", "Жарко"],
+        "answer": "Штормовая погода"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": ["Am", "Himmel", "sind", "Wolken"],
+        "correctOrder": ["Am", "Himmel", "sind", "Wolken"]
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Der Wetterbericht ist schlecht",
+        "answer": "Der Wetterbericht ist schlecht"
+      }
+    ]
+  },
+  {
+    "questId": "weather-5",
+    "title": "Туман, град и прогноз",
+    "progress": "0/15",
+    "description": "Туман, град, гроза; скользко на дороге. Учимся понимать прогноз (Vorhersage) и говорить, что взять с собой.",
+    "conditions": {
+      "goal": "Говорить о непогоде и прогнозе: Es wird …, Es ist glatt, Am Morgen/Abend …, Ich brauche …",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 190,
+      "xp": 320
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Что значит: der Nebel",
+        "options": ["Туман", "Град", "Жара"],
+        "answer": "Туман"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "Что значит: der Hagel",
+        "options": ["Град", "Туман", "Ветер"],
+        "answer": "Град"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "Что значит: das Gewitter",
+        "options": ["Гроза", "Снегопад", "Радуга"],
+        "answer": "Гроза"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "Что значит: glatt",
+        "options": ["Скользко", "Сухо", "Жарко"],
+        "answer": "Скользко"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": ["kälter", "wird", "Es"],
+        "correctOrder": ["Es", "wird", "kälter"]
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Am Morgen gibt es Nebel",
+        "answer": "Am Morgen gibt es Nebel"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": ["gibt", "Abend", "Am", "es", "Gewitter"],
+        "correctOrder": ["Am", "Abend", "gibt", "es", "Gewitter"]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Vorsicht, es ist glatt!",
+        "answer": "Vorsicht, es ist glatt!"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Die Vorhersage: Am Freitag wird es kühler, am Samstag regnet es, am Sonntag scheint die Sonne.",
+        "question": "Когда станет прохладнее?",
+        "options": ["В пятницу", "В субботу", "В воскресенье"],
+        "answer": "В пятницу"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Что значит: die Handschuhe",
+        "options": ["Перчатки", "Сапоги", "Шарф"],
+        "answer": "Перчатки"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": ["Handschuhe", "brauche", "Ich"],
+        "correctOrder": ["Ich", "brauche", "Handschuhe"]
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ich friere",
+        "answer": "Ich friere"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "Переведи: Es wird wärmer",
+        "options": ["Становится теплее", "Очень холодно", "Дует сильный ветер"],
+        "answer": "Становится теплее"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": ["es", "ist", "Heute", "mild"],
+        "correctOrder": ["Heute", "ist", "es", "mild"]
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Die Vorhersage ist gut",
+        "answer": "Die Vorhersage ist gut"
+      }
+    ]
+  },
+  {
+    "questId": "weather-6",
+    "title": "Жара и солнце",
+    "progress": "0/15",
+    "description": "Душно, сухо, жара и сильное солнце. Учимся говорить про тень, защиту от солнца и UV-индекс.",
+    "conditions": {
+      "goal": "Говорить о жаре и защите от солнца: schwül, trocken, die Hitze, der Schatten, Sonnencreme/Sonnenbrille, UV-Index; Ich bleibe … / Ich brauche …",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 190,
+      "xp": 320
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Что значит: der Schatten",
+        "options": ["Тень", "Снег", "Туман"],
+        "answer": "Тень"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "schwül",
+        "options": ["Душно", "Сухо", "Холодно"],
+        "answer": "Душно"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "die Sonnencreme",
+        "options": ["Солнцезащитный крем", "Зонт", "Перчатки"],
+        "answer": "Солнцезащитный крем"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "die Sonnenbrille",
+        "options": ["Солнечные очки", "Шарф", "Шапка"],
+        "answer": "Солнечные очки"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": ["schwül", "ist", "es", "Heute"],
+        "correctOrder": ["Heute", "ist", "es", "schwül"]
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Im Schatten ist es kühler",
+        "answer": "Im Schatten ist es kühler"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "text": "Es ist sehr heiß. Trage eine Sonnenbrille und Sonnencreme.",
+        "question": "Что советуют использовать?",
+        "options": ["Солнечные очки и крем", "Тёплую шапку", "Зимние перчатки"],
+        "answer": "Солнечные очки и крем"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "die Hitze",
+        "options": ["Жара", "Туман", "Лёд"],
+        "answer": "Жара"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": ["Schatten", "bleibe", "im", "Ich"],
+        "correctOrder": ["Ich", "bleibe", "im", "Schatten"]
+      },
+      {
+        "id": 10,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Der UV-Index ist hoch",
+        "answer": "Der UV-Index ist hoch"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "trocken",
+        "options": ["Сухо", "Мокро", "Снежно"],
+        "answer": "Сухо"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": ["Es", "warm", "trocken", "und", "ist"],
+        "correctOrder": ["Es", "ist", "trocken", "und", "warm"]
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "Heute über 30 Grad. Am Nachmittag wird es sehr heiß.",
+        "question": "Какая температура сегодня?",
+        "options": ["Больше 30°", "Меньше 10°", "Ровно 20°"],
+        "answer": "Больше 30°"
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ich brauche Wasser",
+        "answer": "Ich brauche Wasser"
+      },
+      {
+        "id": 15,
+        "type": "select",
+        "question": "Sonnenbrand",
+        "options": ["Солнечный ожог", "Дождь", "Радуга"],
+        "answer": "Солнечный ожог"
+      }
+    ]
+  },
+  {
+    "questId": "weather-7",
+    "title": "Прогноз и изменения погоды",
+    "progress": "0/15",
+    "description": "Учимся понимать прогноз: переменно, ясно, температура растёт/падает; говорим о дне и ночи, диапазонах и «до ... градусов».",
+    "conditions": {
+      "goal": "Понимать и говорить о прогнозе: die Vorhersage, wechselhaft, heiter, die Temperatur, steigt/sinkt/bleibt, nachts/tagsüber, bis zu, zwischen … und … Grad",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 195,
+      "xp": 320
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Что значит: die Vorhersage",
+        "options": ["Прогноз", "Гроза", "Тень"],
+        "answer": "Прогноз"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "wechselhaft",
+        "options": ["Переменная погода", "Снежная погода", "Сухая погода"],
+        "answer": "Переменная погода"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "heiter",
+        "options": ["Ясно", "Туманно", "Душно"],
+        "answer": "Ясно"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "die Temperatur",
+        "options": ["Температура", "Туча", "Снег"],
+        "answer": "Температура"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": ["steigt", "Temperatur", "Die"],
+        "correctOrder": ["Die", "Temperatur", "steigt"]
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Die Temperatur sinkt in der Nacht",
+        "answer": "Die Temperatur sinkt in der Nacht"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "nachts",
+        "options": ["Ночью", "Днём", "Утром"],
+        "answer": "Ночью"
+      },
+      {
+        "id": 8,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": ["kühl", "Morgen", "ist", "es", "Am"],
+        "correctOrder": ["Am", "Morgen", "ist", "es", "kühl"]
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Heute ist es wechselhaft: morgens regnet es, am Nachmittag scheint die Sonne.",
+        "question": "Какая погода днём?",
+        "options": ["Светит солнце", "Идёт снег", "Туман"],
+        "answer": "Светит солнце"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Что значит: bis zu 25 Grad",
+        "options": ["До 25 градусов", "Ровно 25 градусов", "Минимум 25 градусов"],
+        "answer": "До 25 градусов"
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Tagsüber sind es bis zu 25 Grad",
+        "answer": "Tagsüber sind es bis zu 25 Grad"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": ["Grad", "5", "10", "und", "Zwischen"],
+        "correctOrder": ["Zwischen", "5", "und", "10", "Grad"]
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "Im Wetterbericht: In Berlin bleibt es heute mild, die Temperatur liegt zwischen 12 und 16 Grad.",
+        "question": "Какая температура в Берлине?",
+        "options": ["Между 12 и 16", "Ровно 12", "Ниже 10"],
+        "answer": "Между 12 и 16"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "Es bleibt mild",
+        "options": ["Погода останется мягкой", "Станет жарко", "Станет морозно"],
+        "answer": "Погода останется мягкой"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Morgen wird es kälter",
+        "answer": "Morgen wird es kälter"
+      }
+    ]
+  },
+  {
+    "questId": "weather-8",
+    "title": "Комбинируем: сезон, погода, градусы, одежда",
+    "progress": "0/15",
+    "description": "Собираем всё вместе: сезоны, явления, температура и что надеть.",
+    "conditions": {
+      "goal": "Комбинировать фразы из тем 1–7: Im Sommer/Winter…, Es ist …, Es regnet/schneit, Grad, Jacke/Mütze/Regenschirm, nachts/tagsüber, bis zu, zwischen … und …, steigt/sinkt",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 195,
+      "xp": 330
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Переведи: Im Sommer ist es heiß.",
+        "options": ["Летом жарко", "Зимой холодно", "Весной дождливо"],
+        "answer": "Летом жарко"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "Переведи: Ich brauche einen Regenschirm.",
+        "options": ["Мне нужен зонт", "Мне нужны перчатки", "Мне нужна шапка"],
+        "answer": "Мне нужен зонт"
+      },
+      {
+        "id": 3,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": ["Heute", "ist", "es", "sonnig", "und", "warm"],
+        "correctOrder": ["Heute", "ist", "es", "sonnig", "und", "warm"]
+      },
+      {
+        "id": 4,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Nachts ist es kalt",
+        "answer": "Nachts ist es kalt"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Что значит: Zwischen 5 und 10 Grad",
+        "options": ["Между 5 и 10 градусами", "До 10 градусов", "Ровно 5 градусов"],
+        "answer": "Между 5 и 10 градусами"
+      },
+      {
+        "id": 6,
+        "type": "readAndAnswer",
+        "text": "Im Herbst ist es oft regnerisch und windig. Ich trage eine Jacke.",
+        "question": "Что делает человек?",
+        "options": ["Надевает куртку", "Берёт зонтик и шапку", "Идёт без куртки"],
+        "answer": "Надевает куртку"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": ["Die", "Temperatur", "steigt"],
+        "correctOrder": ["Die", "Temperatur", "steigt"]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Heute sind es zwanzig Grad",
+        "answer": "Heute sind es zwanzig Grad"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "Переведи: Morgen bleibt es heiter.",
+        "options": ["Завтра будет ясно", "Завтра сильный снег", "Завтра туманно весь день"],
+        "answer": "Завтра будет ясно"
+      },
+      {
+        "id": 10,
+        "type": "readAndAnswer",
+        "text": "Wetterbericht: Morgens ist es bewölkt, am Nachmittag sonnig, abends sinkt die Temperatur auf zehn Grad.",
+        "question": "Что вечером?",
+        "options": ["Температура падает до 10°", "Пасмурно и дождь", "Жарко, 25°"],
+        "answer": "Температура падает до 10°"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": ["Ich", "brauche", "eine", "Jacke", "und", "eine", "Mütze"],
+        "correctOrder": ["Ich", "brauche", "eine", "Jacke", "und", "eine", "Mütze"]
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Tagsüber sind es bis zu fünfzehn Grad",
+        "answer": "Tagsüber sind es bis zu fünfzehn Grad"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "Какая одежда подходит? Es ist kalt und windig.",
+        "options": ["Eine Jacke und eine Mütze", "Sonnenbrille und T-Shirt", "Keine Jacke"],
+        "answer": "Eine Jacke und eine Mütze"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": ["Im", "Winter", "schneit", "es", "oft"],
+        "correctOrder": ["Im", "Winter", "schneit", "es", "oft"]
+      },
+      {
+        "id": 15,
+        "type": "readAndAnswer",
+        "text": "— Wie ist das Wetter heute? — Es ist wechselhaft: zwischen 3 und 8 Grad. — Brauchst du eine Jacke? — Ja.",
+        "question": "Нужна ли куртка?",
+        "options": ["Да", "Нет", "Неизвестно"],
+        "answer": "Да"
+      }
+    ]
+  },
+  {
+    "questId": "weather-9",
+    "title": "Планируем день по прогнозу",
+    "progress": "0/15",
+    "description": "Сравниваем прогноз утром/днём/вечером, градусы и что надеть.",
+    "conditions": {
+      "goal": "Комбинировать известные слова о погоде и одежде",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 200,
+      "xp": 340
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Переведи: Wie ist das Wetter heute in Berlin?",
+        "options": ["Какая сегодня погода в Берлине?", "Когда поезд в Берлин?", "Где находится Берлин?"],
+        "answer": "Какая сегодня погода в Берлине?"
+      },
+      {
+        "id": 2,
+        "type": "readAndAnswer",
+        "text": "Berlin: Morgens ist es bewölkt, nachmittags sonnig.",
+        "question": "Когда солнечно в Берлине?",
+        "options": ["Днём", "Утром", "Вечером"],
+        "answer": "Днём"
+      },
+      {
+        "id": 3,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": ["Heute", "wechselhaft", "ist", "es"],
+        "correctOrder": ["Heute", "ist", "es", "wechselhaft"]
+      },
+      {
+        "id": 4,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Zwischen fünf und zehn Grad",
+        "answer": "Zwischen fünf und zehn Grad"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Es regnet. Was brauchst du?",
+        "options": ["Einen Regenschirm", "Eine Sonnenbrille", "Keine Jacke"],
+        "answer": "Einen Regenschirm"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": ["Abend", "Am", "sinkt", "Temperatur", "die"],
+        "correctOrder": ["Am", "Abend", "sinkt", "die", "Temperatur"]
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ich trage eine Jacke und eine Mütze",
+        "answer": "Ich trage eine Jacke und eine Mütze"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "Переведи: Tagsüber bleibt es warm.",
+        "options": ["Днём остаётся тепло", "Утром становится холодно", "Вечером идёт снег"],
+        "answer": "Днём остаётся тепло"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "München: Morgens 3°, nachmittags 8°, abends 4°. Es ist windig.",
+        "question": "Сколько градусов днём в Мюнхене?",
+        "options": ["3°", "8°", "4°"],
+        "answer": "8°"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": ["Im", "regnerisch", "ist", "oft", "es", "Herbst"],
+        "correctOrder": ["Im", "Herbst", "ist", "es", "oft", "regnerisch"]
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Morgens ist es kalt, aber sonnig",
+        "answer": "Morgens ist es kalt, aber sonnig"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "Переведи: Die Temperatur steigt.",
+        "options": ["Температура повышается", "Температура понижается", "Температура остаётся"],
+        "answer": "Температура повышается"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "— Brauchst du eine Jacke? — Nein, tagsüber sind es bis zu zwanzig Grad.",
+        "question": "Нужна ли куртка днём?",
+        "options": ["Нет", "Да", "Неизвестно"],
+        "answer": "Нет"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": ["Grad", "es", "sind", "zehn", "Heute"],
+        "correctOrder": ["Heute", "sind", "es", "zehn", "Grad"]
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Es bleibt bewölkt",
+        "answer": "Es bleibt bewölkt"
+      }
+    ]
+  },
+  {
+    "questId": "weather-10",
+    "title": "План на выходные",
+    "progress": "0/15",
+    "description": "Смотрим прогноз на завтра и выходные, сравниваем градусы и решаем, что взять с собой.",
+    "conditions": {
+      "goal": "Объединять всё пройденное: heute/morgen/am Wochenende, sonnig/bewölkt/windig/regnerisch, Grad, steigt/sinkt/bleibt, Kleidung (Jacke/Mütze/Regenschirm)",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 210,
+      "xp": 360
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Переведи: Morgen ist es warm.",
+        "options": ["Завтра тепло", "Сегодня холодно", "Вечером ветрено"],
+        "answer": "Завтра тепло"
+      },
+      {
+        "id": 2,
+        "type": "readAndAnswer",
+        "text": "Berlin: Heute bewölkt, 12°. Morgen sonnig, 18°.",
+        "question": "Когда теплее в Берлине?",
+        "options": ["Сегодня", "Завтра", "Вечером"],
+        "answer": "Завтра"
+      },
+      {
+        "id": 3,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": ["Ich", "brauche", "keinen", "Regenschirm"],
+        "correctOrder": ["Ich", "brauche", "keinen", "Regenschirm"]
+      },
+      {
+        "id": 4,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Heute zehn bis fünfzehn Grad",
+        "answer": "Heute zehn bis fünfzehn Grad"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Переведи: Die Temperatur sinkt am Abend.",
+        "options": ["Температура понижается вечером", "Температура повышается вечером", "Температура остаётся вечером"],
+        "answer": "Температура понижается вечером"
+      },
+      {
+        "id": 6,
+        "type": "readAndAnswer",
+        "text": "Hamburg: Vormittags 6°, nachmittags 11°, abends 5°. Es regnet.",
+        "question": "Что происходит с температурой вечером?",
+        "options": ["Повышается", "Понижается", "Остаётся такой же"],
+        "answer": "Понижается"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": ["Heute", "ist", "es", "windig", "und", "kalt"],
+        "correctOrder": ["Heute", "ist", "es", "windig", "und", "kalt"]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Morgens ist es kalt, nachmittags warm",
+        "answer": "Morgens ist es kalt, nachmittags warm"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "Es ist sonnig und warm. Was brauchst du nicht?",
+        "options": ["Einen Regenschirm", "Eine Jacke", "Eine Mütze"],
+        "answer": "Einen Regenschirm"
+      },
+      {
+        "id": 10,
+        "type": "readAndAnswer",
+        "text": "— Gehen wir in den Park? — Ja, heute ist es sonnig und zwanzig Grad.",
+        "question": "Куда они идут?",
+        "options": ["В парк", "В музей", "В кафе"],
+        "answer": "В парк"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": ["Grad", "sind", "nur", "es", "fünf", "Morgen"],
+        "correctOrder": ["Morgen", "sind", "es", "nur", "fünf", "Grad"]
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ich nehme eine Jacke, es ist windig",
+        "answer": "Ich nehme eine Jacke, es ist windig"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "Переведи: Es schneit nicht.",
+        "options": ["Снег не идёт", "Идёт снег", "Идёт дождь"],
+        "answer": "Снег не идёт"
+      },
+      {
+        "id": 14,
+        "type": "readAndAnswer",
+        "text": "Köln: 14°, sonnig. Leipzig: 9°, bewölkt und windig.",
+        "question": "Где теплее?",
+        "options": ["В Кёльне", "В Лейпциге", "Одинаково"],
+        "answer": "В Кёльне"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Am Wochenende bleibt es sonnig",
+        "answer": "Am Wochenende bleibt es sonnig"
+      }
+    ]
+  }
+]
+

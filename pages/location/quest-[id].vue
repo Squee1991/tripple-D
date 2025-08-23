@@ -1,33 +1,46 @@
 <template>
   <div>
-    <div class="quest__only">
-      <button class="back-btn" @click="openLeave('back')">×</button>
-      <div v-if="questStore.loading" class="loading">Загрузка квеста...</div>
-      <div v-else-if="questStore.error" class="error">
+    <div class="quest">
+      <button class="quest__back-btn" @click="openLeave('back')">×</button>
+
+      <!-- Штамп ПРОЙДЕНО -->
+      <div v-if="questStore.finished && questStore.success" class="quest__stamp quest__stamp--ok">ПРОЙДЕНО</div>
+
+      <!-- Загрузка -->
+      <div v-if="questStore.loading" class="quest__panel quest__panel--loading">Загрузка квеста...</div>
+
+      <!-- Ошибка -->
+      <div v-else-if="questStore.error" class="quest__panel quest__panel--error">
         Ошибка: {{ questStore.error }}
-        <div class="tiny">questId: {{ questId }} | region: {{ regionKey || '—' }}</div>
-        <button class="btn" @click="openLeave('back')">Назад</button>
+        <div class="quest__tiny">questId: {{ questId }} | region: {{ regionKey || '—' }}</div>
+        <button class="btn" @click="goThemes">Назад к темам</button>
       </div>
-      <div v-else-if="questStore.task" class="question-card">
-        <div class="q-top">
-          <div class="stats-bar">
-            <div class="stat-widget">
-              <div class="widget-value">{{ questStore.currentIndex + 1 }} / {{ questStore.requiredTasks }}</div>
+
+      <!-- Игровая карточка -->
+      <div v-else-if="questStore.task" class="quest__card">
+        <div class="quest__top">
+          <div class="quest__stats">
+            <div class="quest__stat">
+              <div class="quest__stat-value">{{ questStore.currentIndex + 1 }} / {{ questStore.requiredTasks }}</div>
             </div>
-            <div class="stat-widget">
-              <div class="widget-label">Верных:</div>
-              <div class="widget-value">{{ questStore.correctCount }}</div>
+            <div class="quest__stat">
+              <div class="quest__stat-label">Верных:</div>
+              <div class="quest__stat-value">{{ questStore.correctCount }}</div>
             </div>
           </div>
-          <div class="lives-bar">
-            <div class="hearts-container">
-              <span v-for="life in questStore.maxLives" :key="life" class="heart"
-                    :class="{ lost: life > questStore.lives }">❤️</span>
+          <div class="quest__lives" v-if="!previouslyCleared">
+            <div class="quest__hearts">
+              <span
+                  v-for="life in questStore.maxLives"
+                  :key="life"
+                  class="quest__heart"
+                  :class="{ 'quest__heart--lost': life > questStore.lives }"
+              >❤️</span>
             </div>
           </div>
         </div>
-        <div class="quest__task__section">
-          <div class="q-text bubble">
+        <div class="quest__section">
+          <div class="quest__question">
             <template v-if="questStore.task.type === 'input' && questStore.showResult">
               <span v-html="highlightedQuestion"></span>
             </template>
@@ -35,91 +48,157 @@
               {{ t(questStore.task.question) }}
             </template>
           </div>
-          <div class="task-body">
+
+          <div class="quest__body">
             <template v-if="questStore.task.type === 'select' || questStore.task.type === 'readAndAnswer'">
-              <div v-if="questStore.task.text" class="read-text">{{ t(questStore.task.text) }}</div>
-              <ul class="options" :class="{ locked: questStore.showResult }">
+              <div v-if="questStore.task.text" class="quest__read-text">{{ t(questStore.task.text) }}</div>
+              <ul class="quest__options" :class="{ 'quest__options--locked': questStore.showResult }">
                 <li v-for="opt in questStore.task.options" :key="opt">
-                  <button class="opt-btn" :class="optionClass(opt)" @click="questStore.choose(opt)">{{
+                  <button class="quest__option-btn" :class="optionClass(opt)" @click="questStore.choose(opt)">{{
                       t(opt)
                     }}
                   </button>
                 </li>
               </ul>
             </template>
+
             <template v-else-if="questStore.task.type === 'input'">
-              <input type="text" class="text-input" v-model="questStore.userInput" :disabled="questStore.showResult"
-                     @keyup.enter="handleClick" placeholder="Введите ответ..."/>
+              <input
+                  type="text"
+                  class="quest__input"
+                  v-model="questStore.userInput"
+                  :disabled="questStore.showResult"
+                  @keyup.enter="handleClick"
+                  placeholder="Введите ответ..."
+              />
             </template>
+
             <template v-else-if="questStore.task.type === 'speechToText'">
-              <div class="speech-controls">
+              <div class="quest__speech">
                 <SoundBtn :text="questStore.task.text"/>
-                <input type="text" class="text-input" v-model="questStore.userInput" :disabled="questStore.showResult"
-                       @keyup.enter="handleClick" placeholder="Напишите услышанное..."/>
+                <input
+                    type="text"
+                    class="quest__input"
+                    v-model="questStore.userInput"
+                    :disabled="questStore.showResult"
+                    @keyup.enter="handleClick"
+                    placeholder="Напишите услышанное..."
+                />
               </div>
             </template>
+
             <template v-else-if="questStore.task.type === 'reorder'">
-              <div class="reorder-container">
-                <div class="reorder-selection" :class="{ empty: questStore.reorderSelection.length === 0 }">
-                  <button v-for="(word, index) in questStore.reorderSelection" :key="`${word}-${index}`"
-                          class="word-btn" @click="questStore.handleReorderWord(word, 'selection')">{{ t(word) }}
+              <div class="quest__reorder">
+                <div
+                    class="quest__reorder-selection"
+                    :class="{ 'quest__reorder-selection--empty': questStore.reorderSelection.length === 0 }"
+                >
+                  <button
+                      v-for="(word, index) in questStore.reorderSelection"
+                      :key="`${word}-${index}`"
+                      class="quest__word-btn"
+                      @click="questStore.handleReorderWord(word, 'selection')"
+                  >
+                    {{ t(word) }}
                   </button>
                 </div>
-                <div class="word-bank">
-                  <button v-for="(word, index) in questStore.reorderBank" :key="`${word}-${index}`" class="word-btn"
-                          @click="questStore.handleReorderWord(word, 'bank')">{{ t(word) }}
+                <div class="quest__word-bank">
+                  <button
+                      v-for="(word, index) in questStore.reorderBank"
+                      :key="`${word}-${index}`"
+                      class="quest__word-btn"
+                      @click="questStore.handleReorderWord(word, 'bank')"
+                  >
+                    {{ t(word) }}
                   </button>
                 </div>
               </div>
             </template>
+
             <template v-else-if="questStore.task.type === 'textToSpeech'">
-              <div class="tts-box">
-                <p class="tts-text">"{{ t(questStore.task.text) }}"</p>
-                <p class="tts-tip">ℹ️ Нажмите «Ответить», когда будете готовы. В реальном приложении здесь была бы
-                  проверка произношения.</p>
+              <div class="quest__tts">
+                <p class="quest__tts-text">"{{ t(questStore.task.text) }}"</p>
+                <p class="quest__tts-hint">ℹ️ Нажмите «Ответить», когда будете готовы.</p>
               </div>
             </template>
           </div>
-          <div v-if="questStore.showResult" class="feedback" :class="questStore.isCorrect ? 'ok' : 'bad'">
-            <span class="icon">{{ questStore.isCorrect ? '✓' : '✗' }}</span>
-            <span class="text">{{
-                questStore.isCorrect ? 'Richtig' : `Richtig ist: ${questStore.correctAnswer}`
-              }}</span>
+
+          <div v-if="questStore.showResult" class="quest__feedback"
+               :class="questStore.isCorrect ? 'quest__feedback--ok' : 'quest__feedback--bad'">
+            <span class="quest__feedback-icon">{{ questStore.isCorrect ? '✓' : '✗' }}</span>
+            <span class="quest__feedback-text">
+              {{ questStore.isCorrect ? 'Правильно' : `Правильный ответ: ${questStore.correctAnswer}` }}
+            </span>
           </div>
         </div>
-        <div class="controls">
+
+        <div class="quest__controls">
           <button class="btn" :disabled="!questStore.showResult && questStore.isConfirmDisabled" @click="handleClick">
             {{ questStore.showResult ? 'Далее' : 'Проверить' }}
           </button>
         </div>
       </div>
-      <div v-else class="done-box">
-        <div class="done-title">{{ questStore.success ? 'Квест выполнен! 🎉' : 'Квест провален' }}</div>
-        <div class="done-sub">
-          Правильных: {{ questStore.correctCount }} из {{ questStore.requiredTasks }} (мин. {{ questStore.minCorrect }})
+
+      <!-- УСПЕШНЫЙ финиш с наградой -->
+      <div v-else-if="questStore.finished && questStore.success && questStore.justAwarded"
+           class="quest-complete quest-complete--solo">
+        <div class="quest-complete__title">Квест пройден</div>
+        <div class="quest-complete__subtitle">Вы получили награду.</div>
+        <div class="quest-complete__actions quest-complete__actions--one">
+          <button class="btn btn--primary" @click="goThemes">Назад к темам</button>
         </div>
-        <div v-if="isPerfect" class="bonus-pill">Идеально! +20💎 +20 XP</div>
-        <div class="done-actions">
-          <button
-              v-if="!questStore.success && questStore.lives === 0"
-              class="btn buy"
-              :disabled="langStore.points < 10"
-              @click="buyAttempt"
-          >
-            Купить попытку (10💎)
-          </button>
-          <button class="btn" @click="restart">Ещё раз</button>
-          <button class="btn primary" @click="openLeave('home')">На главную</button>
+      </div>
+
+      <!-- Общая финальная модалка -->
+      <div v-else class="modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__window">
+          <div class="modal__title">{{ questStore.success ? 'Квест завершён' : 'Квест не пройден' }}</div>
+          <div class="modal__actions">
+            <button class="btn" @click="restart">Ещё раз</button>
+            <button class="btn btn--primary" @click="goThemes">Назад к темам</button>
+          </div>
         </div>
       </div>
     </div>
-    <div v-if="showLeaveModal" class="modal__overlay">
-      <div class="modal__card">
+
+    <!-- Модалка «Купить жизнь» — отдельным слоем -->
+    <div v-if="forceRevive || showRevive" class="modal">
+      <div class="modal__overlay"></div>
+      <div class="modal__window">
+        <div class="modal__title">Жизни закончились</div>
+        <div class="modal__text">
+          Вы ответили верно {{ questStore.correctCount }} из {{ questStore.requiredTasks }}.<br/>
+          Купите дополнительную жизнь, чтобы продолжить.
+        </div>
+        <div class="wallet">
+          <div class="wallet__row">
+            <div class="wallet__label">Цена:</div>
+            <div class="wallet__value">10 Артиклюсов</div>
+          </div>
+          <div class="wallet__row">
+            <div class="wallet__label">У вас:</div>
+            <div class="wallet__value">{{ wallet }} Артиклюсов</div>
+          </div>
+        </div>
+        <div class="modal__actions">
+          <button class="btn" :disabled="!canBuyLife" @click="purchaseLife">
+            {{ canBuyLife ? 'Купить жизнь за 10' : 'Недостаточно' }}
+          </button>
+          <button class="btn btn--primary" @click="goThemes">Назад к темам</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Модалка подтверждения выхода -->
+    <div v-if="showLeaveModal" class="modal">
+      <div class="modal__overlay"></div>
+      <div class="modal__window">
         <div class="modal__title">Вы не завершили квест</div>
         <div class="modal__text">Если вы покинете сейчас, прогресс не будет сохранён.</div>
         <div class="modal__actions">
-          <button class="btn danger" @click="confirmLeave">Покинуть</button>
-          <button class="btn primary" @click="stayHere">Продолжить</button>
+          <button class="btn btn--danger" @click="confirmLeave">Покинуть</button>
+          <button class="btn btn--primary" @click="stayHere">Продолжить</button>
         </div>
       </div>
     </div>
@@ -127,113 +206,35 @@
 </template>
 
 <script setup>
-import {computed, onMounted, ref} from 'vue'
+import {computed, onMounted, ref, watch, watchEffect, nextTick} from 'vue'
 import {useRoute, useRouter, onBeforeRouteLeave} from 'vue-router'
 import {userChainStore} from '../../store/chainStore.js'
 import {userlangStore} from '../../store/learningStore.js'
+import {useI18n} from 'vue-i18n'
 import SoundBtn from '~/src/components/soundBtn.vue'
+import {playCorrect, playWrong, unlockAudioByUserGesture} from '../../utils/soundManager.js'
 
+const PRICE = 10
 const {t} = useI18n()
 const route = useRoute()
 const router = useRouter()
-const rewardApplied = ref(false)
-const isPerfect = computed(() =>
-    questStore.requiredTasks > 0 &&
-    questStore.correctCount === questStore.requiredTasks
-)
-const questId = computed(() => String(route.params.id || route.params.questId || ''))
-const regionKey = computed(() => String(route.query.region || ''))
-
 const questStore = userChainStore()
 const langStore = userlangStore()
-
-const showLeaveModal = ref(false)
-const pendingRoute = ref(null)
-let allowLeave = false
-let leaveIntent = ref('back')
-
-onMounted(() => {
-  questStore.loadQuest(questId.value, regionKey.value)
-})
-
-function restart() {
-  rewardApplied.value = false
-  questStore.restart()
-  questStore.loadQuest(questId.value, regionKey.value)
-}
-
-function optionClass(opt) {
-  if (questStore.showResult) {
-    if (opt === questStore.task?.answer) return 'correct pop'
-    if (opt === questStore.selected) return 'wrong shake'
-    return 'dim'
-  }
-  return questStore.selected === opt ? 'chosen' : ''
-}
-
-function handleClick() {
-  if (!questStore.showResult) questStore.confirm()
-  else questStore.nextTask()
-}
-
-function buyAttempt() {
-  if (langStore.points < 10) return
-  langStore.points -= 10
-  if (typeof langStore.saveToFirebase === 'function') langStore.saveToFirebase()
-  questStore.lives = 1
-  questStore.finished = false
-  questStore.showResult = false
-  questStore.selected = ''
-  questStore.userInput = ''
-  if (questStore.task?.type === 'reorder' && Array.isArray(questStore.task.words)) {
-    questStore.reorderSelection = []
-    questStore.reorderBank = [...questStore.task.words]
-  }
-}
-
-const hasDirtyInput = computed(() => {
-  return !!(questStore.selected ||
-      (questStore.userInput && questStore.userInput.trim()) ||
-      (questStore.reorderSelection && questStore.reorderSelection.length > 0) ||
-      questStore.currentIndex > 0)
-})
-const shouldBlockLeaving = computed(() =>
-    (questStore.sessionStarted && !questStore.finished) || (!questStore.finished && hasDirtyInput.value)
+const questId = computed(() => String(route.params.id || route.params.questId || ''))
+const regionKey = computed(() => String(route.query.region || ''))
+const progressEntry = computed(() => questStore.questProgress?.[questId.value] || null)
+const previouslyCleared = computed(() => !!(progressEntry.value?.success || progressEntry.value?.rewardClaimed))
+const wallet = computed(() => Number(langStore.points || 0))
+const canBuyLife = computed(() => wallet.value >= PRICE)
+const showRevive = computed(() =>
+    !previouslyCleared.value &&
+    questStore.requiredTasks > 0 &&
+    questStore.lives <= 0 &&
+    questStore.correctCount < questStore.requiredTasks &&
+    !questStore.success
 )
+const forceRevive = ref(false)
 
-function openLeave(type) {
-  leaveIntent.value = type
-  if (shouldBlockLeaving.value) {
-    pendingRoute.value = type === 'home' ? {path: '/'} : (regionKey.value ? {path: `/location/${regionKey.value}`} : {path: '/location'})
-    showLeaveModal.value = true
-  } else {
-    if (type === 'home') router.push('/')
-    else router.push(regionKey.value ? `/location/${regionKey.value}` : '/location')
-  }
-}
-
-onBeforeRouteLeave((to, from, next) => {
-  if (!allowLeave && shouldBlockLeaving.value) {
-    pendingRoute.value = to
-    showLeaveModal.value = true
-    next(false)
-  } else {
-    next()
-  }
-})
-
-function confirmLeave() {
-  allowLeave = true
-  showLeaveModal.value = false
-  const to = pendingRoute.value
-  if (to) router.push(to)
-  else router.push(leaveIntent.value === 'home' ? '/' : (regionKey.value ? `/location/${regionKey.value}` : '/location'))
-}
-
-function stayHere() {
-  pendingRoute.value = null
-  showLeaveModal.value = false
-}
 
 const highlightedQuestion = computed(() => {
   if (!questStore.task) return ''
@@ -242,50 +243,156 @@ const highlightedQuestion = computed(() => {
   return questStore.task.question.replace('___', `<strong class="${cls}">${questStore.correctAnswer}</strong>`)
 })
 
-watch(() => questStore.finished,
-    (fin) => {
-      if (!fin) return
-      if (isPerfect.value && !rewardApplied.value) {
-        langStore.points += 20
-        langStore.exp += 20
-        rewardApplied.value = true
-        if (typeof langStore.saveToFirebase === 'function') {
-          langStore.saveToFirebase()
-        }
-      }
-    }
+function goThemes() {
+  if (regionKey.value) {
+    router.push(`/location/${regionKey.value}`)
+  }
+  // else router.push('/location')
+}
+
+function restart() {
+  questStore.restart(previouslyCleared.value)
+  questStore.loadQuest(questId.value, regionKey.value)
+}
+
+function optionClass(opt) {
+  if (questStore.showResult) {
+    if (opt === questStore.task?.answer) return 'quest__option-btn--correct'
+    if (opt === questStore.selected) return 'quest__option-btn--wrong'
+    return 'quest__option-btn--dim'
+  }
+  return questStore.selected === opt ? 'quest__option-btn--chosen' : ''
+}
+
+function handleClick() {
+  unlockAudioByUserGesture()
+  if (!questStore.showResult) questStore.confirm(previouslyCleared.value)
+  else questStore.nextTask(previouslyCleared.value)
+}
+
+const showLeaveModal = ref(false)
+const pendingRoute = ref(null)
+let allowLeave = false
+const hasDirtyInput = computed(() =>
+    !!(questStore.selected ||
+        (questStore.userInput && questStore.userInput.trim()) ||
+        (questStore.reorderSelection && questStore.reorderSelection.length > 0) ||
+        questStore.currentIndex > 0)
 )
+const shouldBlockLeaving = computed(() =>
+    (questStore.sessionStarted && !questStore.finished) || (!questStore.finished && hasDirtyInput.value)
+)
+
+function openLeave() {
+  if (shouldBlockLeaving.value) {
+    pendingRoute.value = goThemes
+    showLeaveModal.value = true
+  } else {
+    goThemes()
+  }
+}
+
+onBeforeRouteLeave((to, from, next) => {
+  if (!allowLeave && shouldBlockLeaving.value) {
+    pendingRoute.value = () => router.push(to)
+    showLeaveModal.value = true
+    next(false)
+  } else next()
+})
+
+function confirmLeave() {
+  allowLeave = true
+  showLeaveModal.value = false
+  if (pendingRoute.value) pendingRoute.value()
+  else goThemes()
+}
+
+function stayHere() {
+  pendingRoute.value = null
+  showLeaveModal.value = false
+}
+
+watch(() => questStore.showResult, (shown) => {
+  if (!shown) return
+  if (questStore.isCorrect) playCorrect()
+  else playWrong()
+})
+
+async function trySpendLocal(amount) {
+  amount = Number(amount) || 0
+  if (amount <= 0) return true
+  if ((langStore.points ?? 0) < amount) return false
+
+  langStore.points -= amount
+  langStore.articlesSpentForAchievement = Number(langStore.articlesSpentForAchievement || 0) + amount
+  if (typeof langStore.saveToFirebase === 'function') {
+    try {
+      await langStore.saveToFirebase()
+    } catch {
+    }
+  }
+  return true
+}
+
+async function purchaseLife() {
+  if (!canBuyLife.value) return
+  const ok = await trySpendLocal(PRICE)
+  if (!ok) return
+  const nextLives = Math.max(1, Math.min((questStore.lives || 0) + 1, questStore.maxLives || 99))
+  questStore.lives = nextLives
+  if (questStore.finished && !questStore.success) questStore.finished = false
+  if (!questStore.sessionStarted) questStore.sessionStarted = true
+  forceRevive.value = false
+}
+
+onMounted(async () => {
+  await questStore.loadProgressFromFirebase?.()
+  await questStore.loadQuest(questId.value, regionKey.value)
+  await nextTick()
+  forceRevive.value = showRevive.value
+  window.addEventListener('beforeunload', (e) => {
+    e.preventDefault()
+  })
+})
+
+watchEffect(() => {
+  forceRevive.value = showRevive.value
+})
 
 </script>
 
 <style scoped>
-.quest__only {
+.quest {
   min-height: 100vh;
   font-family: "Nunito", sans-serif;
   color: #1e1e1e;
   display: flex;
   flex-direction: column;
-  padding: 1.5rem
+  padding: 1.5rem;
 }
 
-.quest__task__section {
-  margin-top: 50px;
-  min-height: 250px
+.quest__panel {
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+  padding: 18px 20px;
+  border-radius: 16px;
+  border: 3px solid #1e1e1e;
+  background: #fff;
+  box-shadow: 4px 4px 0 #1e1e1e;
 }
 
-.q-top {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 1rem;
-  padding-top: .25rem;
-  margin-bottom: .75rem
+.quest__panel--error {
+  background: #ffd5d2;
 }
 
-.back-btn {
+.quest__tiny {
+  font-size: 12px;
+  opacity: .85;
+  margin-top: 6px;
+}
+
+.quest__back-btn {
   position: absolute;
   left: 1.5rem;
   top: 1.5rem;
@@ -302,80 +409,88 @@ watch(() => questStore.finished,
   border-radius: 12px;
   box-shadow: 4px 4px 0 #1e1e1e;
   cursor: pointer;
-  transition: all .1s ease-in-out
+  transition: all .1s ease-in-out;
+  z-index: 100000;
 }
 
-.back-btn:hover {
+.quest__back-btn:hover {
   transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0 #1e1e1e
+  box-shadow: 2px 2px 0 #1e1e1e;
 }
 
-.back-btn:active {
+.quest__back-btn:active {
   transform: translate(4px, 4px);
-  box-shadow: 0 0 0 #1e1e1e
+  box-shadow: 0 0 0 #1e1e1e;
 }
 
-.stats-bar {
+.quest__card {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.quest__top {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: .25rem;
+  margin-bottom: .75rem;
+}
+
+.quest__stats {
   display: flex;
   gap: 1rem;
-  align-items: stretch
+  align-items: stretch;
 }
 
-.stat-widget {
+.quest__stat {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: .5rem 1rem;
   min-width: 120px;
-  text-align: center;
-  gap: 10px
+  gap: 10px;
 }
 
-.widget-label {
-  font-family: "Nunito", sans-serif;
+.quest__stat-label, .quest__stat-value {
   font-size: 1.4rem;
   font-weight: 600;
-  color: var(--titleColor)
+  color: var(--titleColor);
 }
 
-.widget-value {
-  font-family: "Nunito", sans-serif;
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: var(--titleColor)
-}
-
-.lives-bar {
+.quest__lives {
   margin-left: auto;
   padding: .5rem 1rem;
-  text-align: center
+  text-align: center;
 }
 
-.hearts-container {
+.quest__hearts {
   display: flex;
   gap: .5rem;
   font-size: 1.6rem;
   line-height: 1;
-  margin-top: 2px
+  margin-top: 2px;
 }
 
-.heart {
-  transition: transform .2s ease, filter .2s ease, opacity .2s ease
+.quest__heart {
+  transition: transform .2s ease, filter .2s ease, opacity .2s ease;
 }
 
-.heart.lost {
+.quest__heart--lost {
   transform: scale(.85);
   filter: grayscale(1);
-  opacity: .55
+  opacity: .55;
 }
 
-.question-card {
-  width: min(980px, 100%);
-  margin: 0 auto;
-  padding: 2.6rem
+.quest__section {
+  margin-top: 50px;
+  min-height: 250px;
 }
 
-.q-text.bubble {
+.quest__question {
   margin: 0 auto 1rem;
   text-align: center;
   font-size: 1.9rem;
@@ -383,18 +498,17 @@ watch(() => questStore.finished,
   padding: 1rem 1.25rem;
   color: var(--titleColor);
   font-weight: 600;
-  font-family: "Nunito", sans-serif
 }
 
-.task-body {
+.quest__body {
   width: min(900px, 100%);
   margin: 0 auto 1rem;
   display: flex;
   flex-direction: column;
-  gap: 14px
+  gap: 14px;
 }
 
-.read-text {
+.quest__read-text {
   background: #fff;
   border: 3px solid #1e1e1e;
   border-radius: 16px;
@@ -402,64 +516,63 @@ watch(() => questStore.finished,
   width: min(860px, 96%);
   margin: 0 auto;
   box-shadow: 4px 4px 0 #1e1e1e;
-  font-size: 18px
+  font-size: 18px;
 }
 
-.options {
+.quest__options {
   display: flex;
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
-  margin-top: .25rem
+  margin-top: .25rem;
 }
 
-.options.locked {
-  pointer-events: none
+.quest__options--locked {
+  pointer-events: none;
 }
 
-.opt-btn {
+.quest__option-btn {
   min-width: 88px;
   height: 60px;
   padding: 0 18px;
-  font-family: "Nunito", sans-serif;
   font-size: 20px;
   font-weight: 800;
   color: #1e1e1e;
   background: #fff;
-  border: 4px solid #1e1e1e;
+  border: 3px solid #1e1e1e;
   border-radius: 16px;
-  box-shadow: 6px 6px 0 #1e1e1e;
+  box-shadow: 4px 4px 0 #1e1e1e;
   cursor: pointer;
-  transition: all .1s ease-in-out
+  transition: all .1s ease-in-out;
 }
 
-.opt-btn:hover {
+.quest__option-btn:hover {
   transform: translate(2px, 2px);
-  box-shadow: 4px 4px 0 #1e1e1e
+  box-shadow: 2px 2px 0 #1e1e1e;
 }
 
-.opt-btn:active {
+.quest__option-btn:active {
   transform: translate(6px, 6px);
-  box-shadow: 0 0 0 #1e1e1e
+  box-shadow: 0 0 0 #1e1e1e;
 }
 
-.opt-btn.chosen {
-  background: #cde8ff
+.quest__option-btn--chosen {
+  background: #cde8ff;
 }
 
-.opt-btn.correct {
-  background: #b9f5c4 !important
+.quest__option-btn--correct {
+  background: #b9f5c4 !important;
 }
 
-.opt-btn.wrong {
-  background: #ffd0cc !important
+.quest__option-btn--wrong {
+  background: #ffd0cc !important;
 }
 
-.opt-btn.dim {
-  opacity: .6
+.quest__option-btn--dim {
+  opacity: .6;
 }
 
-.text-input {
+.quest__input {
   width: min(860px, 96%);
   margin: 0 auto;
   display: block;
@@ -469,20 +582,21 @@ watch(() => questStore.finished,
   color: #1e1e1e;
   border: 3px solid #1e1e1e;
   border-radius: 16px;
-  box-shadow: 4px 4px 0 #1e1e1e
+  box-shadow: 4px 4px 0 #1e1e1e;
 }
 
-.text-input:focus {
-  outline: none
-}
-
-.reorder-container {
+.quest__speech {
   display: grid;
   gap: 14px;
-  place-items: center
 }
 
-.reorder-selection {
+.quest__reorder {
+  display: grid;
+  gap: 14px;
+  place-items: center;
+}
+
+.quest__reorder-selection {
   min-height: 84px;
   width: min(860px, 96%);
   padding: 10px;
@@ -492,89 +606,134 @@ watch(() => questStore.finished,
   box-shadow: 4px 4px 0 #1e1e1e;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px
+  gap: 8px;
 }
 
-.word-bank {
+.quest__reorder-selection--empty {
+  background: #fffbe9;
+}
+
+.quest__word-bank {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px
+  gap: 10px;
 }
 
-.word-btn {
-  padding: 12px 16px;
-  font-size: 18px;
+.quest__word-btn {
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 600;
   background: #fff;
   color: #1e1e1e;
   border: 3px solid #1e1e1e;
   border-radius: 16px;
   box-shadow: 4px 4px 0 #1e1e1e;
   cursor: pointer;
-  transition: all .1s ease-in-out
+  transition: all .1s ease-in-out;
 }
 
-.word-btn:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0 #1e1e1e
-}
-
-.word-btn:active {
-  transform: translate(4px, 4px);
-  box-shadow: 0 0 0 #1e1e1e
-}
-
-.tts-box {
+.quest__tts {
   width: min(860px, 96%);
   margin: 0 auto;
   background: #fff;
   border: 3px solid #1e1e1e;
   border-radius: 16px;
   box-shadow: 4px 4px 0 #1e1e1e;
-  padding: 16px
+  padding: 16px;
 }
 
-.tts-text {
+.quest__tts-text {
   font-size: 22px;
-  margin: 0 0 6px
+  margin: 0 0 6px;
 }
 
-.tts-tip {
-  opacity: .85
+.quest__tts-hint {
+  opacity: .85;
 }
 
-.feedback {
-  width: min(560px, 96%);
+.quest__feedback {
   margin: 10px auto;
   text-align: center;
-  font-family: "Nunito", sans-serif;
   font-weight: 800;
-  padding: .75rem 1rem
+  padding: .75rem 1rem;
 }
 
-.feedback.ok {
+.quest__feedback--ok {
   color: #3fa65b;
   font-size: 2rem;
-  font-family: "Nunito", sans-serif;
-  font-weight: 600
 }
 
-.feedback.bad {
+.quest__feedback--bad {
   color: #d9534f;
   font-size: 2rem;
-  font-family: "Nunito", sans-serif;
-  font-weight: 600
 }
 
-.icon {
-  margin-right: 8px
+.quest__feedback-icon {
+  margin-right: 8px;
 }
 
-.controls {
+.quest__controls {
   display: flex;
   justify-content: center;
   gap: 16px;
-  margin-top: .25rem
+  margin-top: .25rem;
+}
+
+.quest__stamp {
+  position: fixed;
+  right: 24px;
+  top: 18px;
+  z-index: 50;
+  font-weight: 900;
+  border: 4px solid #1e1e1e;
+  padding: 6px 12px;
+  border-radius: 10px;
+  box-shadow: 6px 6px 0 #1e1e1e;
+  transform: rotate(-6deg);
+}
+
+.quest__stamp--ok {
+  background: #b9f5c4;
+  color: #0f5132;
+}
+
+.quest-complete {
+  text-align: center;
+  padding-top: 60px;
+}
+
+.quest-complete__title {
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  color: #3fa65b;
+}
+
+.quest-complete__subtitle {
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.quest-complete__actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  background: white;
+  padding: 2.5rem;
+  border-radius: 24px;
+  border: 4px solid #1e1e1e;
+  box-shadow: 8px 8px 0 #1e1e1e;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.quest-complete--solo .quest-complete__actions--one {
+  justify-content: center;
 }
 
 .btn {
@@ -586,172 +745,118 @@ watch(() => questStore.finished,
   font-size: 22px;
   border: 3px solid #1e1e1e;
   color: #1e1e1e;
-  background: #9ad0ff;
+  background: #9dceff;
   cursor: pointer;
   box-shadow: 4px 4px 0 #1e1e1e;
-  transition: all .1s ease-in-out
+  transition: all .1s ease-in-out;
 }
 
-.btn:hover:not(:disabled) {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0 #1e1e1e
+.btn--primary {
+  background: #a7ecb8;
 }
 
-.btn:active:not(:disabled) {
-  transform: translate(6px, 6px);
-  box-shadow: 0 0 0 #1e1e1e
+.btn--danger {
+  background: #ffd0cc;
 }
 
-.btn:disabled {
-  opacity: .6;
-  cursor: not-allowed;
-  transform: none;
-  box-shadow: 4px 4px 0 #1e1e1e
-}
-
-.btn.primary {
-  background: #a7ecb8
-}
-
-.btn.secondary {
-  background: #d6d6d6
-}
-
-.loading, .error {
-  width: min(640px, 96%);
-  margin: 24px auto 0;
-  text-align: center;
-  padding: 18px 20px;
-  border-radius: 16px;
-  border: 3px solid #1e1e1e;
-  background: #fff;
-  box-shadow: 8px 8px 0 #1e1e1e
-}
-
-.error {
-  background: #ffd5d2
-}
-
-.done-actions {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  flex-wrap: wrap
-}
-
-.btn.buy {
-  background: linear-gradient(180deg, #ffd166 0%, #f4a623 100%);
-  color: #1e1e1e
-}
-
-.btn.buy:disabled {
-  background: #e5e7eb;
-  color: #9ca3af;
-  cursor: not-allowed
-}
-
-@keyframes shake-kf {
-  0%, 100% {
-    transform: translateX(0)
-  }
-  25% {
-    transform: translateX(-12px)
-  }
-  75% {
-    transform: translateX(12px)
-  }
-}
-
-.bonus-pill{
-  display:inline-block;
-  margin: 10px auto 6px;
-  padding: 8px 14px;
-  border: 3px solid #1e1e1e;
-  border-radius: 999px;
-  background: linear-gradient(180deg,#ffe066 0%,#fca13a 100%);
-  box-shadow: 4px 4px 0 #1e1e1e;
-  font-weight: 900;
-}
-
-.shake {
-  animation: shake-kf .45s ease
-}
-
-@media (max-width: 1023px) {
-  .back-btn {
-    left: 1rem;
-    top: 1rem
-  }
-
-  .q-top {
-    flex-direction: column;
-    align-items: center;
-    gap: .75rem;
-    padding-top: 2.5rem
-  }
-
-  .lives-bar {
-    margin-left: 0
-  }
-}
-
-@media (max-width: 740px) {
-  .q-text.bubble {
-    font-size: 1.4rem
-  }
-
-  .opt-btn {
-    height: 56px;
-    font-size: 18px
-  }
-
-  .btn {
-    height: 52px;
-    padding: 0 28px;
-    font-size: 20px
-  }
-}
-
-/* modal */
-.modal__overlay {
+.modal {
   position: fixed;
   inset: 0;
-  z-index: 50;
-  background: rgba(0, 0, 0, .35);
+  z-index: 1000;
   display: grid;
-  place-items: center
+  place-items: center;
 }
 
-.modal__card {
-  width: min(540px, 92%);
+.modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, .35);
+  backdrop-filter: blur(2px);
+}
+
+.modal__window {
+  position: relative;
+  width: min(440px, 92%);
   background: #fff;
   border: 3px solid #111;
   border-radius: 18px;
   box-shadow: 12px 12px 0 #1e1e1e;
-  padding: 22px;
-  text-align: center
+  padding: 20px 35px;
+  text-align: center;
+  z-index: 1;
 }
 
 .modal__title {
   font-weight: 900;
-  font-size: 22px;
+  font-size: 28px;
   margin-bottom: 8px;
-  color: #111
+  color: #111;
 }
 
 .modal__text {
-  color: #333;
-  margin-bottom: 16px
+  padding: 10px;
 }
 
 .modal__actions {
   display: flex;
   justify-content: center;
+  flex-direction: column-reverse;
   gap: 12px;
-  flex-wrap: wrap
+  flex-wrap: wrap;
+  padding: 20px;
 }
 
-.btn.danger {
-  background: #ffd0cc
+.wallet {
+  margin: 8px auto 14px;
+  width: min(420px, 100%);
+}
+
+.wallet__row {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 800;
+  margin: 4px 0;
+}
+
+.wallet__label {
+  opacity: .8;
+}
+
+.wallet__value {
+}
+
+@media (max-width: 1023px) {
+  .quest__back-btn {
+    left: 1rem;
+    top: 1rem;
+  }
+
+  .quest__top {
+    flex-direction: column;
+    align-items: center;
+    gap: .75rem;
+  }
+
+  .quest__lives {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .quest__question {
+    font-size: 1.4rem;
+  }
+
+  .quest__option-btn {
+    height: 47px;
+    font-size: 18px;
+    box-shadow: 4px 4px 0 black;
+  }
+
+  .btn {
+    height: 52px;
+    padding: 0 28px;
+    font-size: 20px;
+  }
 }
 </style>

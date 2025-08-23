@@ -1,10 +1,9 @@
 <template>
   <div class="location-page">
-    <button class="close-btn" @click="goHome" aria-label="На главную">×</button>
     <div class="location__wrapper">
       <header class="location-header">
-        <h1>{{ region?.name }}</h1>
-        <p class="location-desc">{{ region?.desc }}</p>
+        <button class="close-btn" @click="goHome" aria-label="На главную">×</button>
+        <h1 class="region__title-name">{{ region?.name }}</h1>
       </header>
       <div v-if="loading" class="loading">Загрузка квестов...</div>
       <div v-else class="quests">
@@ -23,17 +22,16 @@
               :class="{ completed: q._success }"
           >
             <div v-if="q._success" class="stamp">ПРОЙДЕНО</div>
-            <h3 class="quest__title">
-              {{ t(q.title) }}
-            </h3>
+            <h3 class="quest__title">{{ t(q.title) }}</h3>
             <p class="quest__description">{{ t(q.description) }}</p>
             <div v-if="q.details" class="quest-details">
               <p v-if="q.details.goal"><strong>Цель:</strong> {{ q.details.goal }}</p>
               <p v-if="q.details.hint"><strong>Подсказка:</strong> {{ q.details.hint }}</p>
               <p v-if="q.details.level"><strong>Уровень:</strong> {{ q.details.level }}</p>
             </div>
-            <div class="quest-meta">
-              <span>Награда: {{ q.rewards.points }}💎, {{ q.rewards.xp }} XP</span>
+            <div  class="quest-meta">
+              <span v-if="!q._success">Награда: {{ q.rewards.points }}💎, {{ q.rewards.xp }} XP</span>
+              <span v-else> Награда получена</span>
             </div>
             <button class="btn" @click="startQuest(q)">
               {{ q._success ? 'Повторить' : 'Начать' }}
@@ -109,7 +107,7 @@ function goHome() {
 
 <style scoped>
 .location-page {
-  padding: 10px;
+  padding: 12px;
   min-height: 100vh;
   color: #1b1b1b;
   font-family: "Nunito", sans-serif;
@@ -117,18 +115,9 @@ function goHome() {
   margin: 0 auto;
 }
 
-.location__wrapper {
-  padding: 20px 50px;
-}
-
 .close-btn {
-  position: sticky;
-  top: 14px;
-  display: inline-grid;
-  place-items: center;
   width: 46px;
   height: 46px;
-  margin-bottom: 12px;
   border: 3px solid #111;
   border-radius: 14px;
   background: linear-gradient(180deg, #FFE690 0%, #FFD54D 100%);
@@ -136,14 +125,9 @@ function goHome() {
   font-weight: 900;
   font-size: 28px;
   line-height: 1;
-  box-shadow: 6px 6px 0 #2b2b2b;
+  box-shadow: 4px 4px 0 #2b2b2b;
   cursor: pointer;
-  transition: transform .12s ease, box-shadow .12s ease;
-}
-
-.close-btn:hover {
-  transform: translate(-1px, -1px);
-  box-shadow: 8px 8px 0 #2b2b2b;
+  transition: all .1s ease-in-out;
 }
 
 .close-btn:active {
@@ -157,51 +141,22 @@ function goHome() {
 }
 
 .location-header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
   position: relative;
   padding: 22px 24px 20px;
   background: linear-gradient(180deg, #FFF4C8 0%, #FFEBA4 100%);
   border: 3px solid #111;
   border-radius: 22px;
-  box-shadow: 10px 10px 0 #2b2b2b;
+  box-shadow: 4px 4px 0 #2b2b2b;
   margin-bottom: 18px;
-  overflow: hidden;
+  overflow: visible;
 }
 
-.location-header::before {
-  content: "";
-  position: absolute;
-  inset: 8px;
-  border-radius: 18px;
-  outline: 10px solid #fff;
-  pointer-events: none;
-}
-
-.location-header::after {
-  content: "!";
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  width: 56px;
-  height: 56px;
-  display: grid;
-  place-items: center;
-  background: radial-gradient(circle at 35% 30%, #ffe08a 0 45%, #facc15 46% 70%, #d97706 71% 100%);
-  color: #111;
-  font-weight: 900;
-  font-size: 34px;
-  line-height: 1;
-  border: 3px solid #111;
-  border-radius: 50%;
-  box-shadow: 8px 8px 0 #2b2b2b;
-  transform: rotate(8deg);
-  animation: bob 2.2s ease-in-out infinite;
-  z-index: 2;
-}
 
 .location-header h1 {
-  margin: 0 0 6px;
   font-size: 32px;
-  letter-spacing: .3px;
 }
 
 .location-desc {
@@ -247,15 +202,16 @@ function goHome() {
   flex-direction: column;
   gap: 12px;
   height: 100%;
+  min-height: 380px;
   background: linear-gradient(90deg, #8ddcff 0%, #bfa7ff 100%) 0 0/100% 12px no-repeat,
   #FFFDF3;
   color: #111;
   border: 3px solid #111;
   border-radius: 20px;
   padding: 18px 16px 16px;
-  box-shadow: 10px 10px 0 #2b2b2b;
+  box-shadow: 4px 4px 0 #2b2b2b;
   transform: translateY(0) rotate(-.1deg);
-  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease, opacity .18s ease;
+  transition: all .1s ease-in-out;
   opacity: 0;
   animation: pop .45s cubic-bezier(.2, .8, .25, 1) forwards;
 }
@@ -315,12 +271,6 @@ function goHome() {
   animation: wiggle 2.8s ease-in-out infinite;
 }
 
-.quest-card:hover {
-  transform: translate(-2px, -2px) rotate(0deg);
-  box-shadow: 12px 12px 0 #2b2b2b;
-  filter: saturate(1.02);
-}
-
 .quest-card.completed {
   opacity: .98;
 }
@@ -347,11 +297,12 @@ function goHome() {
 
 .quest__title {
   margin: 2px 0 0;
+  padding: 10px;
+  min-height: 75px;
   font-size: 20px;
   font-weight: 900;
   text-align: center;
   display: flex;
-  align-items: center;
   justify-content: center;
   gap: 6px;
 }
@@ -407,14 +358,9 @@ function goHome() {
   background: linear-gradient(180deg, #B9F2B0 0%, #5EDB6A 100%);
   color: #111;
   cursor: pointer;
-  box-shadow: 8px 8px 0 #2b2b2b;
+  box-shadow: 4px 4px 0 #2b2b2b;
   transition: transform .12s ease, box-shadow .12s ease, filter .12s ease;
   overflow: hidden;
-}
-
-.btn:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 10px 10px 0 #2b2b2b;
 }
 
 .btn:active {
@@ -491,7 +437,7 @@ function goHome() {
   animation-delay: .38s;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 767px) {
   .close-btn {
     width: 44px;
     height: 44px;
@@ -504,18 +450,54 @@ function goHome() {
     gap: 16px;
   }
 
-  .location-header::after {
+  .quest-card {
+    box-shadow: 4px 4px 0 black;
+  }
+  .location-header {
+    padding: 15px;
+  }
+
+  .location-header:after {
     transform: scale(.9) rotate(8deg);
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .location-header::after, .quest-card::after {
-    animation: none;
+@media (min-width: 1024px) {
+  .quest-card:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 #2b2b2b;
   }
 
-  .quest-card, .btn {
-    transition: none;
+  .btn:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 #2b2b2b;
+  }
+
+  .close-btn:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 #2b2b2b;
+  }
+
+  .location-header::after {
+    content: "!";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 56px;
+    height: 56px;
+    display: grid;
+    place-items: center;
+    background: radial-gradient(circle at 35% 30%, #ffe08a 0 45%, #facc15 46% 70%, #d97706 71% 100%);
+    color: #111;
+    font-weight: 900;
+    font-size: 34px;
+    line-height: 1;
+    border: 3px solid #111;
+    border-radius: 50%;
+    box-shadow: 8px 8px 0 #2b2b2b;
+    transform: rotate(8deg);
+    animation: bob 2.2s ease-in-out infinite;
+    z-index: 2;
   }
 }
 </style>

@@ -1,8 +1,8 @@
 import { defineStore } from 'pinia'
 import { ref, watch, watchEffect } from 'vue'
-
 // 1) Импорты всех групп достижений
 import { overAchievment } from '../src/achieveGroup/overAllAchieve/overallAchievements.js'
+import { wordAchievementsGroup } from '../src/achieveGroup/wordGroup/wordAchievements.js'
 import { groupedEasyModeAchievements } from '../src/achieveGroup/marathon/easyModeAchievment.js'
 import { groupedNormalModeAchievements } from '../src/achieveGroup/marathon/normalModeAchievement.js'
 import { groupedHardModeAchievements } from '../src/achieveGroup/marathon/hardModeAchievments.js'
@@ -14,6 +14,7 @@ import { assembleWordGroupAchievement } from '../src/achieveGroup/article/wordsF
 import { cpecialGroupAchievment } from '../src/achieveGroup/specialAchieve/specialAchievment.js'
 
 // 2) Сторы-источники
+import { userChainStore } from '../store/chainStore.js'
 import { userAuthStore } from '../store/authStore.js'
 import { useQuestStore } from '../store/questStore.js'
 import { userlangStore } from '../store/learningStore.js'
@@ -27,6 +28,7 @@ import { guessAchievment } from '../src/achieveGroup/guessAchieve/guessAchievmen
 export const useAchievementStore = defineStore('achievementStore', () => {
     // --- 1) Собираем все группы с категорией ---
     const rawGroups = [
+        ...wordAchievementsGroup.map(g => ({ category: 'locations', ...g })),
         ...overAchievment.map(g => ({ category: 'over', ...g })),
         ...guessAchievment.map(g => ({ category: 'guess', ...g })),
         ...groupedEasyModeAchievements.map(g => ({ category: 'easy', ...g })),
@@ -65,7 +67,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
     const cardStore  = useCardsStore()
     const gameStore  = useGameStore()
     const guessStore = useGuessWordStore()
-
+    const chainStore = userChainStore()
     const popupQueue = ref([])
     const showPopup = ref(false)
     const popupAchievement = ref(null)
@@ -194,6 +196,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
     function initializeProgressTracking () {
         // 5.1) over
         const baseTrackers = [
+
             { id: 'registerAchievement', source: () => authStore.uid,                       compute: (u) => (u ? 1 : 0) },
             { id: 'daily',               source: () => questStore.dailyQuestCount,          compute: (v) => v || 0 },
             { id: 'levelUpExp',          source: () => langStore.exp,                       compute: (v) => v || 0 },
@@ -201,11 +204,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
             { id: 'learned10Words',      source: () => langStore.learnedWords.length,       compute: (v) => v },
             { id: 'learned100Words',     source: () => langStore.learnedWords.length,       compute: (v) => v },
             { id: 'wrong100Answers',     source: () => langStore.wrongAnswers.length,       compute: (v) => v },
-            {
-                id: 'SiteRegular',
-                source: () => authStore.registeredAt,
-                compute: (d) => (d ? Math.floor((Date.now() - new Date(d).getTime()) / 86400000) : 0)
-            },
+            {id: 'SiteRegular', source: () => authStore.registeredAt, compute: (d) => (d ? Math.max(0, Math.floor((Date.now() - new Date(d).getTime()) / 86400000)) : 0)},
             { id: 'createdCountCard',    source: () => cardStore.createdCount,              compute: (v) => v || 0 },
             { id: 'LastChance',          source: () => gameStore.lastChanceProgress,        compute: (v) => v || 0 },
             { id: 'MarginForError',      source: () => gameStore.marginForErrorProgress,    compute: (v) => v || 0 },
@@ -298,6 +297,54 @@ export const useAchievementStore = defineStore('achievementStore', () => {
             { immediate: true }
         )
 
+
+        if (process.client) {
+            chainStore.loadProgressFromFirebase?.().catch(() => {})
+        }
+        watch(() => chainStore.questProgress, (qpRaw) => {
+            const qp = qpRaw || {}
+            const entries = Object.values(qp).filter(Boolean)
+
+            const isPerfect = (p) => {
+                const correct = Number(p?.correctCount ?? 0)
+                const required = Number(p?.requiredTasks ?? 0)
+                const wrong = Number(p?.wrongCount ?? p?.errors ?? 0)
+                const skipped = Number(p?.skipped ?? 0)
+                const partial = Boolean(p?.partial)
+                return Boolean(p?.success) && correct === required && wrong === 0 && skipped === 0 && !partial
+            }
+
+            const perfect = entries.filter(isPerfect)
+            const slugById = (id) => (id === 'eastPlain' ? 'east-plain' : id)
+            const countForId = (id) => {
+                const slug = slugById(id)
+
+                return perfect.filter(p => p.region === slug).length
+            }
+            const locationIds =
+                groups.value
+                    .filter(g => g.category === 'locations')
+                    .flatMap(g => g.achievements.map(a => a.id))
+                    .filter(id => id !== 'explorer')
+
+            locationIds.forEach((id) => {
+                updateProgress(id, countForId(id))
+            })
+
+            const targetOf = (id) => {
+                const ach = findById(id)
+                return ach?.targetProgress ?? 0
+            }
+
+            const completedLocations = locationIds.reduce((acc, id) => {
+                const cur = countForId(id)
+                return acc + (cur >= targetOf(id) ? 1 : 0)
+            }, 0)
+            updateProgress('explorer', completedLocations)
+            const totalCompletedPerfectQuests = locationIds.reduce((acc, id) => acc + countForId(id), 0)
+            updateProgress('languageLands50', totalCompletedPerfectQuests)
+        }, { immediate: true })
+
         // 5.7) letters
         watch(() => langStore.words.filter(w => w.progress?.letters).length,
             cnt => groups.value
@@ -350,7 +397,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 
         watch(() => authStore.registeredAt, date => {
             if (!date) return
-            const days = Math.floor((Date.now() - new Date(date).getTime()) / 86400000)
+            const days = Math.max(0, Math.floor((Date.now() - new Date(date).getTime()) / 86400000))
             updateProgress('OneYearVeteran', days)
         }, { immediate: true })
 
@@ -408,12 +455,10 @@ export const useAchievementStore = defineStore('achievementStore', () => {
         }, 0)
     }
 
-    // при любой новой награде — обновляем «Начало коллекции»
     watch(lastUnlockedAward, (award) => {
         if (award) updateProgress("firstAward", shownSet.size)
     })
 
-    // Запускаем трекинг только в клиенте
     if (process.client) initializeProgressTracking()
 
     return {

@@ -2,12 +2,18 @@
   <div class="map__wrapper">
     <div class="map__title-wrapper">
       <h1 class="map__title">Карта изучения немецкого языка</h1>
-      <p class="map__sub">
-        Пройди все квесты во всех локациях, чтобы стать мастером немецкого!
-      </p>
     </div>
     <div class="map-layout">
-      <div class="map-left" v-if="active">
+      <aside
+          class="map-left"
+          :class="{ 'is-open': isPanelOpen || windowWidth > 767 }"
+          v-if="active"
+      >
+        <button
+            v-if="windowWidth <= 767"
+            class="map-left__close"
+            @click="isPanelOpen = false"
+        >×</button>
         <div class="map-left__color" :style="{ backgroundColor: active?.color }">
           <img :src="active?.icon" alt="">
         </div>
@@ -17,15 +23,10 @@
           <span v-if="isUnlocked">Доступ открыт</span>
           <span v-else>Доступ с уровня {{ active.level }}</span>
         </p>
-        <button
-            class="map-btn"
-            :disabled="!isUnlocked"
-            @click="go(active)"
-        >
+        <button class="map-btn" :disabled="!isUnlocked" @click="go(active)">
           Выбрать
         </button>
-      </div>
-
+      </aside>
       <div class="map-right">
         <div
             v-for="r in regions"
@@ -35,7 +36,7 @@
             :style="{ backgroundColor: r.color }"
             @click="select(r)"
         >
-          <img class="" :src="r.icon" alt="">
+          <img :src="r.icon" alt="">
           <div class="region-card__title">{{ r.name }}</div>
         </div>
       </div>
@@ -44,15 +45,27 @@
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
+import { ref, computed, onMounted, onBeforeUnmount } from "vue";
 import { useRouter } from "vue-router";
 import { regions } from "@/utils/regions.js";
-const props = defineProps({
-  currentLevel: { type: Number, default: 1 }
-});
+
+const props = defineProps({ currentLevel: { type: Number, default: 1 } });
 
 const router = useRouter();
 const active = ref(regions[0]);
+const isPanelOpen = ref(false);
+const windowWidth = ref(window.innerWidth);
+
+function handleResize() {
+  windowWidth.value = window.innerWidth;
+}
+
+onMounted(() => {
+  window.addEventListener("resize", handleResize);
+});
+onBeforeUnmount(() => {
+  window.removeEventListener("resize", handleResize);
+});
 
 const clampedLevel = computed(() =>
     Math.min(Math.max(props.currentLevel, 1), 20)
@@ -64,6 +77,9 @@ const isUnlocked = computed(() =>
 
 function select(region) {
   active.value = region;
+  if (windowWidth.value <= 767) {
+    isPanelOpen.value = true; // только на мобилке открываем
+  }
 }
 
 function go(region) {
@@ -72,6 +88,7 @@ function go(region) {
   }
 }
 </script>
+
 
 <style>
 
@@ -83,7 +100,7 @@ function go(region) {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 30px;
+  padding: 20px;
   align-items: center;
   border: 3px solid black;
   border-radius: 20px;
@@ -115,7 +132,7 @@ function go(region) {
 
 .map-layout {
   display: flex;
-  gap: 30px;
+  gap: 10px;
   width: 100%;
 }
 
@@ -125,7 +142,7 @@ function go(region) {
   background: #fff;
   border: 3px solid black;
   border-radius: 12px;
-  padding: 20px;
+  padding: 10px;
   color: #222;
   overflow-y: auto;
   box-shadow: 4px 4px 0 black;
@@ -133,8 +150,8 @@ function go(region) {
 
 .map-left__color {
   width: 100%;
-  height: 220px;
-  max-height: 220px;
+  height: 190px;
+  max-height: 190px;
   border: 3px solid black;
   border-radius: 8px;
   margin-bottom: 15px;
@@ -143,13 +160,15 @@ function go(region) {
 }
 
 .map-left__title {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   margin: 0 0 10px;
-  font-weight: 700;
+  font-weight: 900;
+  font-style: italic;
 }
 
 .map-left__desc {
-  font-size: 1rem;
+  font-size: 15px;
+  font-weight: 600;
   margin-bottom: 10px;
   color: #333;
 }
@@ -175,12 +194,14 @@ function go(region) {
   border: 3px solid black;
   border-radius: 10px;
   cursor: pointer;
-  box-shadow: 3px 3px 0 black;
-  transition: transform 0.15s;
+  box-shadow: 4px 4px 0 black;
+  transition: all .1s ease-in-out;
+  width: 100%;
 }
 
 .map-btn:hover:not(:disabled) {
-  transform: scale(1.05);
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #1e1e1e;
 }
 
 .map-btn:disabled {
@@ -212,7 +233,7 @@ function go(region) {
   flex-direction: column;
   justify-content: center;
   box-shadow: 4px 4px 0 black;
-  height: 250px;
+  height: 190px;
   max-height: 250px;
   overflow: hidden;
   position: relative;
@@ -239,5 +260,62 @@ function go(region) {
   transform: translate(2px, 2px);
   box-shadow: 2px 2px 0 #1e1e1e;
 }
+
+@media (max-width: 767px) {
+  .map-layout {
+    position: relative;
+    display: block;
+    max-height: 75vh;
+    overflow-y: auto;
+  }
+
+  .map-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+    border: none;
+    transform: translateX(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform .25s ease, opacity .25s ease;
+    z-index: 1000;
+  }
+  .map-left.is-open {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .map__title {
+    font-size: 1.1rem;
+  }
+
+  .map-btn {
+    width: 100%;
+  }
+
+  .map-left__close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 32px;
+    height: 32px;
+    border: 3px solid #000;
+    border-radius: 8px;
+    background: #ffe066;
+    box-shadow: 2px 2px 0 #000;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .map-right {
+    grid-template-columns: 1fr;
+    box-shadow: none;
+  }
+}
+
 
 </style>

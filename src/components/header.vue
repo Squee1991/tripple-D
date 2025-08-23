@@ -13,58 +13,56 @@
         :text="t('inDevelopment.sub')"
     />
     <div class="header-container">
-      <div class="header-left">
-        <NuxtLink to="/" class="header-logo">
-          <img class="logo-img" src="../../assets/images/logo3d.png" alt="Logo"/>
-        </NuxtLink>
-        <nav ref="dropdownRefNav" class="header-nav" :class="{ 'is-open': isMobileMenuOpen }">
-          <ul class="header-nav__list">
-            <li v-for="item in menuItems" :key="item.id" class="header-nav__item">
-              <NuxtLink v-if="item.url" :to="item.url" class="header-nav__link" @click="closeAllMenus">
-                {{ t(item.valueKey) }}
-              </NuxtLink>
-              <button v-else @click="handleMenuItemClick(item)" class="header-nav__link"
-                      :class="{'is-active-parent': clickedMenu === item.id}">
-                <span>{{ t(item.valueKey) }}</span>
-                <img
-                    v-if="item.children"
-                    :class="['header-nav__arrow', { 'rotated': clickedMenu === item.id }]"
-                    :src="Arrow"
-                    alt=">"
-                />
-              </button>
-              <ul v-if="item.children && clickedMenu === item.id" class="header-nav__submenu">
-                <li v-for="child in item.children" :key="child.id" class="header-nav__submenu-item">
-                  <NuxtLink v-if="child.url" :to="child.url" class="header-nav__submenu-link"
-                            @click="closeAllMenus">
-                    {{ t(child.valueKey) }}
-                  </NuxtLink>
-                  <button v-else class="header-nav__submenu-link"
-                          @click.stop="handleSubmenuItemClick(child)">
-                    <span>{{ t(child.valueKey) }}</span>
-                    <img
-                        v-if="child.subChildren"
-                        :class="['header-nav__arrow', { 'rotated': clickedSubChild === child.id }]"
-                        :src="Arrow"
-                        alt=""
-                    />
-                  </button>
-                  <ul v-if="child.subChildren && clickedSubChild === child.id"
-                      class="header-nav__submenu-sub">
-                    <li v-for="sub in child.subChildren" :key="sub.id"
-                        class="header-nav__submenu-sub-item">
-                      <NuxtLink :to="sub.url" class="header-nav__submenu-link"
-                                @click="closeAllMenus">
-                        {{ t(sub.valueKey) }}
-                      </NuxtLink>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <NuxtLink to="/">
+        <span class="logo__name">LEXINGO</span>
+      </NuxtLink>
+      <nav ref="dropdownRefNav" class="header-nav" :class="{ 'is-open': isMobileMenuOpen }">
+        <ul class="header-nav__list">
+          <li v-for="item in menuItems" :key="item.id" class="header-nav__item">
+            <NuxtLink v-if="item.url" :to="item.url" class="header-nav__link" @click="closeAllMenus">
+              {{ t(item.valueKey) }}
+            </NuxtLink>
+            <button v-else @click="handleMenuItemClick(item)" class="header-nav__link"
+                    :class="{'is-active-parent': clickedMenu === item.id}">
+              <span>{{ t(item.valueKey) }}</span>
+              <img
+                  v-if="item.children"
+                  :class="['header-nav__arrow', { 'rotated': clickedMenu === item.id }]"
+                  :src="Arrow"
+                  alt=">"
+              />
+            </button>
+            <ul v-if="item.children && clickedMenu === item.id" class="header-nav__submenu">
+              <li v-for="child in item.children" :key="child.id" class="header-nav__submenu-item">
+                <NuxtLink v-if="child.url" :to="child.url" class="header-nav__submenu-link"
+                          @click="closeAllMenus">
+                  {{ t(child.valueKey) }}
+                </NuxtLink>
+                <button v-else class="header-nav__submenu-link"
+                        @click.stop="handleSubmenuItemClick(child)">
+                  <span>{{ t(child.valueKey) }}</span>
+                  <img
+                      v-if="child.subChildren"
+                      :class="['header-nav__arrow', { 'rotated': clickedSubChild === child.id }]"
+                      :src="Arrow"
+                      alt=""
+                  />
+                </button>
+                <ul v-if="child.subChildren && clickedSubChild === child.id"
+                    class="header-nav__submenu-sub">
+                  <li v-for="sub in child.subChildren" :key="sub.id"
+                      class="header-nav__submenu-sub-item">
+                    <NuxtLink :to="sub.url" class="header-nav__submenu-link"
+                              @click="closeAllMenus">
+                      {{ t(sub.valueKey) }}
+                    </NuxtLink>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
       <div class="header-right">
         <div class="header-nav__tea">
           <ForTea/>
@@ -204,6 +202,7 @@ const menuItems = computed(() => [
         id: 'verbs',
         valueKey: 'sub.verbs',
         subChildren: [
+          {id: 'verb-theory', url: 'verbs-theory', valueKey: 'underSub.verbsTheory'},
           {id: 'tenses', url: 'tenses', valueKey: 'underSub.verbFirst'},
           {id: 'modalVerbs', url: 'modal-verbs', valueKey: 'underSub.verbSecond'},
           {id: 'verb-types', url: 'verb-types', valueKey: 'underSub.verbTypes'},
@@ -213,6 +212,7 @@ const menuItems = computed(() => [
         id: 'adjectives',
         valueKey: 'sub.adjectives',
         subChildren: [
+          {id: 'adjectives-theory', url: 'adjectives-theory', valueKey: 'underSub.adjectiveTheory'},
           {id: 'adjectives-basic', url: 'adjective-basics', valueKey: 'underSub.adjectivesBasic'},
           {id: 'declination', url: 'adjective-declension', valueKey: 'underSub.declination'},
           {id: 'comparison', url: 'adjective-comparison', valueKey: 'underSub.comparison'},
@@ -311,6 +311,7 @@ watch(isMobileMenuOpen, (newVal) => {
   border-bottom: 4px solid var(--borderBottom);
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+  box-shadow: 6px 0 0 var(--bg);
 }
 
 .header-container {
@@ -324,7 +325,7 @@ watch(isMobileMenuOpen, (newVal) => {
 .header-left, .header-right {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.6rem;
 }
 
 .logo-img {
@@ -343,7 +344,6 @@ watch(isMobileMenuOpen, (newVal) => {
 
 .header-nav__list {
   display: flex;
-  gap: 1rem;
 }
 
 .header-nav__item {
@@ -355,7 +355,7 @@ watch(isMobileMenuOpen, (newVal) => {
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  font-size: 17px;
+  font-size: 16px;
   color: var(--titleColor);
   font-weight: 600;
   padding: 0.5rem 0.75rem;
@@ -376,10 +376,11 @@ watch(isMobileMenuOpen, (newVal) => {
 .header-nav__arrow {
   width: 1rem;
   transition: transform 0.3s ease;
+  transform: rotate(-90deg);
 }
 
 .header-nav__arrow.rotated {
-  transform: rotate(90deg);
+  transform: rotate(0deg);
 }
 
 .header-nav__submenu {
@@ -525,8 +526,8 @@ watch(isMobileMenuOpen, (newVal) => {
   font-family: "Nunito", sans-serif;
   font-style: italic;
   font-weight: 600;
-  padding: 0.8rem 1.5rem;
-  font-size: 1.1rem;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
   border-radius: 16px;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
@@ -551,12 +552,16 @@ watch(isMobileMenuOpen, (newVal) => {
 
 @media (max-width: 1023px) {
   .header-container {
-    padding: 0.5rem 0;
+    padding: 0.5rem 10px;
   }
 
   .header.mobile-menu-active .mobile-nav-overlay {
     opacity: 1;
     pointer-events: auto;
+  }
+
+  .logo__name {
+    display: none;
   }
 
   .header-nav__link {
@@ -672,6 +677,7 @@ watch(isMobileMenuOpen, (newVal) => {
     display: block;
     z-index: 102;
   }
+
   @media (max-width: 767px) {
     .header-user {
       height: 45px;
@@ -711,14 +717,31 @@ watch(isMobileMenuOpen, (newVal) => {
     }
 
   }
-
-
 }
+
 
 @media (max-width: 1200px) {
   .header-user__name,
-  .header__drop-text{
+  .header__drop-text {
     display: none;
   }
 }
+
+.logo__name {
+  color: #e39910;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-style: italic;
+  letter-spacing: 5px;
+  text-shadow: 2px 4px 0px white;
+  -webkit-text-stroke: 4px #e39910;
+  transition: .5s;
+}
+
+.logo__name:hover {
+  text-shadow: 2px 4px 2px white;
+  transition: .5s;
+}
+
 </style>

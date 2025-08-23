@@ -3,112 +3,121 @@
     "questId": "village-1",
     "title": "Добро пожаловать в деревню",
     "progress": "0/15",
-    "description": "Ты приходишь в деревню Граммельдорф. Всё ново: дома, предметы, цвета, звуки. Староста приветствует тебя и говорит: «Настоящий житель знает, что его окружает.»\n\n🪶 **Подсказка**: В немецком каждое существительное имеет свой род, и это влияет на форму артикля и прилагательного. Вместо заучивания, смотри на фразы целиком: **die kleine Lampe**, **das neue Buch**, **der große Tisch**. Запоминай их как устойчивые конструкции.",
+    "description": "Ты пришёл в деревню Граммельдорф. Всё ново: дома, предметы, звуки. Начнём с самых простых слов.",
     "conditions": {
-      "goal": "Выучить предметы, цвета, базовые прилагательные и правильно их использовать в простых фразах.",
+      "goal": "Познакомиться с первыми предметами и простыми фразами.",
       "minCorrect": 11,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 160,
-      "xp": 280
+      "points": 150,
+      "xp": 200
     },
     "tasks": [
       {
         "id": 1,
         "type": "select",
-        "question": "Что значит *der Tisch*?",
-        "options": ["стол", "стул", "кровать"],
-        "answer": "стол"
+        "question": "Что значит: der Tisch",
+        "options": ["Стол", "Стул", "Кровать"],
+        "answer": "Стол"
       },
       {
         "id": 2,
         "type": "select",
-        "question": "Что значит *die Lampe*?",
-        "options": ["лампа", "стена", "полка"],
-        "answer": "лампа"
+        "question": "Что значит: die Lampe",
+        "options": ["Лампа", "Стена", "Полка"],
+        "answer": "Лампа"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Что значит *das Buch*?",
-        "options": ["книга", "бутылка", "коробка"],
-        "answer": "книга"
+        "question": "Что значит: das Buch",
+        "options": ["Книга", "Бутылка", "Коробка"],
+        "answer": "Книга"
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Что значит *klein*?",
-        "options": ["маленький", "новый", "грязный"],
-        "answer": "маленький"
+        "question": "Что значит: klein",
+        "options": ["Маленький", "Новый", "Грязный"],
+        "answer": "Маленький"
       },
       {
         "id": 5,
         "type": "select",
-        "question": "Что значит *groß*?",
+        "question": "Что значит: groß",
         "options": ["большой", "красивый", "старый"],
         "answer": "большой"
       },
       {
-        "id": 6,
-        "type": "select",
-        "question": "Выбери правильную фразу: 'маленькая лампа'",
-        "options": ["die kleine Lampe", "der kleiner Lampe", "das kleines Lampe"],
-        "answer": "die kleine Lampe"
+        "id": 9,
+        "type": "reorder",
+        "question": "Собери предложение: Это лампа",
+        "words": ["eine", "Das", "ist", "Lampe"],
+        "correctOrder": ["Das", "ист", "eine", "Lampe"]
       },
       {
         "id": 7,
-        "question": "Выбери правильную фразу: 'большая собака'",
-        "options": ["der große Hund", "die große Hund", "das großer Hund"],
-        "answer": "der große Hund"
+        "type": "select",
+        "question": "Как сказать: Это книга",
+        "options": ["Das ist ein Buch", "Das ist eine Buch", "Das ist ein Buche"],
+        "answer": "Das ist ein Buch"
       },
       {
         "id": 8,
-        "question": "Выбери правильную фразу: 'новая книга'",
-        "options": ["das neue Buch", "die neuer Buch", "der neues Buch"],
-        "answer": "das neue Buch"
+        "type": "select",
+        "question": "Как сказать: Это лампа",
+        "options": ["Das ist eine Lampe", "Das ist ein Lampe", "Das ist eine Lampen"],
+        "answer": "Das ist eine Lampe"
       },
       {
         "id": 9,
-        "question": "Как правильно: 'Это старая лампа.'",
-        "options": ["Das ist eine alte Lampe.", "Das ist ein alter Lampe.", "Das ist eine alten Lampe."],
-        "answer": "Das ist eine alte Lampe."
+        "type": "reorder",
+        "question": "Собери предложение: Это стол",
+        "words": ["ein", "Tisch", "Das", "ist"],
+        "correctOrder": ["Das", "ist", "ein", "Tisch"]
       },
       {
         "id": 10,
-        "question": "Как правильно: 'Это маленькая бутылка.'",
-        "options": ["Das ist eine kleine Flasche.", "Das ist ein kleines Flasche.", "Das ist eine kleinen Flasche."],
-        "answer": "Das ist eine kleine Flasche."
+        "type": "speechToText",
+        "question": "Прослушай и напиши:",
+        "text": "Das ist eine Lampe",
+        "answer": "Das ist eine Lampe"
       },
       {
         "id": 11,
-        "question": "Как правильно: 'Это новый стол.'",
-        "options": ["Das ist ein neuer Tisch.", "Das ist eine neue Tisch.", "Das ist ein neues Tisch."],
-        "answer": "Das ist ein neuer Tisch."
+        "type": "select",
+        "question": "Что значит *das Fenster*?",
+        "options": ["Окно", "Дверь", "Полка"],
+        "answer": "Окно"
       },
       {
         "id": 12,
-        "question": "Как правильно: 'Это большая коробка.'",
-        "options": ["Das ist eine große Kiste.", "Das ist ein großer Kiste.", "Das ist eine großer Kiste."],
-        "answer": "Das ist eine große Kiste."
+        "type": "select",
+        "question": "Что значит *der Stuhl*?",
+        "options": ["Стул", "Стол", "Шкаф"],
+        "answer": "Стул"
       },
       {
         "id": 13,
-        "question": "Выбери правильную фразу: 'маленькая собака'",
-        "options": ["der kleine Hund", "die kleine Hund", "das kleiner Hund"],
-        "answer": "der kleine Hund"
+        "type": "select",
+        "question": "Что значит: neu",
+        "options": ["Новый", "Старый", "Маленький"],
+        "answer": "Новый"
       },
       {
         "id": 14,
-        "question": "Как правильно: 'Это новая лампа.'",
-        "options": ["Das ist eine neue Lampe.", "Das ist ein neuer Lampe.", "Das ist eine neuen Lampe."],
-        "answer": "Das ist eine neue Lampe."
+        "type": "select",
+        "question": "Что значит: alt",
+        "options": ["Cтарый", "Большой", "Дорогой"],
+        "answer": "Старый"
       },
       {
         "id": 15,
-        "question": "Как правильно: 'Это большое окно.'",
-        "options": ["Das ist ein großes Fenster.", "Das ist eine große Fenster.", "Das ist ein großer Fenster."],
-        "answer": "Das ist ein großes Fenster."
+        "type": "reorder",
+        "question": "Собери предложение: Это окно",
+        "words": ["ein", "Fenster", "Das", "ist"],
+        "correctOrder": ["Das", "ist", "ein", "Fenster"]
       }
     ]
   },
@@ -116,9 +125,9 @@
     "questId": "village-2",
     "title": "В доме травницы",
     "progress": "0/15",
-    "description": "Старуха-травница впускает тебя в свой дом: там пахнет травами, стены увешаны сушёными растениями. Она показывает тебе комнаты и говорит: «Если хочешь остаться — сначала научись называть вещи правильно.»\n\n🌿 **Подсказка:** Смотри внимательно на артикли! Запоминай названия комнат и предметов. Учимся говорить: **Ich sehe...** (Я вижу...) и **Das ist...** (Это...)\n\n➡️ Пример: *Ich sehe einen Tisch.* / *Das ist eine Lampe.*",
+    "description": "Старуха-травница впускает тебя в свой дом: там пахнет травами, стены увешаны сушёными растениями. Она показывает тебе комнаты и говорит: «Если хочешь остаться — сначала научись называть вещи правильно.",
     "conditions": {
-      "goal": "Научиться называть комнаты и предметы в доме, использовать Ich sehe и Das ist.",
+      "goal": "Научиться называть комнаты и предметы в доме",
       "minCorrect": 11,
       "requiredTasks": 15
     },
@@ -129,182 +138,230 @@
     "tasks": [
       {
         "id": 1,
-        "question": "Что значит *die Küche*?",
-        "options": ["кухня", "ванная", "спальня"],
-        "answer": "кухня"
+        "question": "Что значит: die Küche",
+        "options": ["Кухня", "Ванная", "Спальня"],
+        "answer": "Кухня"
       },
       {
         "id": 2,
-        "question": "Что значит *das Schlafzimmer*?",
-        "options": ["спальня", "гостиная", "детская"],
-        "answer": "спальня"
+        "question": "Что значит: das Schlafzimmer",
+        "options": ["Спальня", "гостиная", "детская"],
+        "answer": "Спальня"
       },
       {
         "id": 3,
-        "question": "Что значит *das Badezimmer*?",
-        "options": ["ванная", "балкон", "кухня"],
-        "answer": "ванная"
+        "type": "speechToText",
+        "question": "Прослушайте и запишите",
+        "text": "Das ist die Küche",
+        "answer": "Das ist die Küche"
       },
       {
         "id": 4,
-        "question": "Что значит *der Stuhl*?",
-        "options": ["стул", "стол", "полка"],
-        "answer": "стул"
+        "question": "Что значит: der Stuhl",
+        "options": ["Cтул", "Cтол", "Полка"],
+        "answer": "Стул"
       },
       {
         "id": 5,
-        "question": "Что значит *das Bett*?",
+        "question": "Что значит: das Bett",
         "options": ["кровать", "шкаф", "лампа"],
         "answer": "кровать"
       },
       {
         "id": 6,
-        "question": "Выбери правильную фразу: Я вижу стол.",
-        "options": ["Ich sehe einen Tisch.", "Ich sehe ein Tisch.", "Ich sehe eine Tisch."],
-        "answer": "Ich sehe einen Tisch."
+        "question": "Выбери правильную фразу: Это стол",
+        "options": ["Das ist der Tisch", "Das ist der Stuhl", "Ich sehe eine Lampe"],
+        "answer": "Das ist der Tisch"
       },
       {
         "id": 7,
-        "question": "Выбери правильную фразу: Это лампа.",
-        "options": ["Das ist eine Lampe.", "Das ist ein Lampe.", "Das ist einen Lampe."],
-        "answer": "Das ist eine Lampe."
+        "question": "Выбери правильную фразу: Это лампа",
+        "options": ["Das ist eine Lampe", "Das ist ein Lampe", "Das ist einen Lampe"],
+        "answer": "Das ist eine Lampe"
       },
       {
         "id": 8,
-        "question": "Выбери правильную фразу: Я вижу кровать.",
-        "options": ["Ich sehe ein Bett.", "Ich sehe eine Bett.", "Ich sehe einen Bett."],
-        "answer": "Ich sehe ein Bett."
+        "type": "speechToText",
+        "question": "Прослушайте и запишите",
+        "text": "Das ist das Bett",
+        "answer": "Das ist das Bett"
       },
       {
         "id": 9,
-        "question": "Выбери правильную фразу: Это спальня.",
-        "options": ["Das ist das Schlafzimmer.", "Das ist der Schlafzimmer.", "Das ist die Schlafzimmer."],
-        "answer": "Das ist das Schlafzimmer."
+        "question": "Выбери правильную фразу: Это спальня",
+        "options": ["Das ist das Schlafzimmer", "Das Bett ist groß", "Das ist das Bett"],
+        "answer": "Das ist das Schlafzimmer"
       },
       {
         "id": 10,
-        "question": "Выбери правильную фразу: Я вижу стул.",
-        "options": ["Ich sehe einen Stuhl.", "Ich sehe ein Stuhl.", "Ich sehe eine Stuhl."],
-        "answer": "Ich sehe einen Stuhl."
+        "question": "Что значит: Картина",
+        "options": ["das Bild", "das Bett", "die Lampe"],
+        "answer": "das Bild"
       },
       {
         "id": 11,
-        "question": "Что значит *die Tür*?",
-        "options": ["дверь", "окно", "полка"],
+        "question": "Выбери правильный вариант: Вилка",
+        "options": ["die Gabel", "das Fenster", "Das Messer"],
         "answer": "дверь"
       },
       {
         "id": 12,
-        "question": "Выбери правильную фразу: Это ванная.",
-        "options": ["Das ist das Badezimmer.", "Das ist der Badezimmer.", "Das ist die Badezimmer."],
-        "answer": "Das ist das Badezimmer."
+        "question": "Выбери правильную фразу: Это ванная",
+        "options": ["Das ist das Badezimmer", "Das ist der Badezimmer", "Das ist die Badezimmer"],
+        "answer": "Das ist das Badezimmer"
       },
       {
         "id": 13,
-        "question": "Выбери правильную фразу: Я вижу дверь.",
-        "options": ["Ich sehe eine Tür.", "Ich sehe ein Tür.", "Ich sehe einen Tür."],
-        "answer": "Ich sehe eine Tür."
+        "question": "Выбери правильную фразу: Это окно",
+        "options": ["Das ist das Fenster", "Das ist der Fenster", "Das ist die Lampe"],
+        "answer": "Das ist das Fenster"
       },
       {
         "id": 14,
-        "question": "Выбери правильную фразу: Это кухня.",
-        "options": ["Das ist die Küche.", "Das ist das Küche.", "Das ist der Küche."],
-        "answer": "Das ist die Küche."
+        "question": "Выбери правильную фразу: Это кухня",
+        "options": ["Das ist die Küche", "Das ist das Küche", "Das ist der Küche"],
+        "answer": "Das ist die Küche"
       },
       {
         "id": 15,
-        "question": "Выбери правильную фразу: Я вижу ванную.",
-        "options": ["Ich sehe ein Badezimmer.", "Ich sehe eine Badezimmer.", "Ich sehe einen Badezimmer."],
-        "answer": "Ich sehe ein Badezimmer."
+        "type": "speechToText",
+        "question": "Прослушайте и запишите",
+        "text": "Das ist das Bild",
+        "answer": "Das ist das Bild"
       }
     ]
   },
   {
     "questId": "village-3",
     "title": "Цвета вокруг",
-    "progress": "0/10",
-    "description": "Ты заходишь в дом к травнице, и она просит тебя помочь с сортировкой волшебных предметов по цветам.\n\n💡 **Подсказка:**\nНе переживай за грамматику! Просто запоминай сочетания артикля, цвета и предмета:\n- **ein grünes Bett** (зелёная кровать)\n- **eine rote Lampe** (красная лампа)\n- **einen blauen Tisch** (синий стол)\nПозже ты узнаешь, почему окончания такие. Сейчас — просто замечай форму и запоминай шаблоны.",
+    "progress": "0/15",
+    "description": "Тут надо описание",
     "conditions": {
-      "goal": "Научиться узнавать фразы с цветами и предметами",
+      "goal": "Научиться узнавать фразы с цветами и предметами.",
       "minCorrect": 7,
-      "requiredTasks": 10
+      "requiredTasks": 15
     },
     "rewards": {
-      "points": 150,
-      "xp": 250
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
         "id": 1,
-        "question": "Что значит *eine rote Lampe*?",
-        "options": ["Красная лампа", "Синяя лампа", "Красная тарелка"],
-        "answer": "Красная лампа"
+        "type": "select",
+        "question": "Что значит: Die Lampe ist rot",
+        "options": ["Лампа красная", "Синяя лампа", "Красная тарелка"],
+        "answer": "Лампа красная"
       },
       {
         "id": 2,
-        "question": "Что значит *ein grünes Bett*?",
-        "options": ["Зелёная кровать", "Синяя кровать", "Зелёный стол"],
-        "answer": "Зелёная кровать"
+        "type": "speechToText",
+        "question": "Прослушайте и запишите",
+        "text": "Der Tisch ist schwarz",
+        "answer": "Der Tisch ist schwarz"
       },
       {
         "id": 3,
-        "question": "Что значит *einen blauen Tisch*?",
-        "options": ["Синий стол", "Синий диван", "Красный стол"],
-        "answer": "Синий стол"
+        "type": "reorder",
+        "question": "Соберите: ein weißes Fenster",
+        "words": ["ein", "weißes", "Fenster"],
+        "correctOrder": ["ein", "weißes", "Fenster"]
       },
       {
         "id": 4,
-        "question": "*eine gelbe Blume* — это...",
-        "options": ["Жёлтый цветок", "Красная книга", "Синяя лампа"],
-        "answer": "Жёлтый цветок"
-      },
-      {
-        "id": 5,
-        "question": "*ein weißes Fenster* — это...",
-        "options": ["Белое окно", "Синяя дверь", "Чёрное окно"],
-        "answer": "Белое окно"
-      },
-      {
-        "id": 6,
-        "question": "*einen schwarzen Stuhl* — это...",
-        "options": ["Чёрный стул", "Чёрный стол", "Серый стул"],
-        "answer": "Чёрный стул"
-      },
-      {
-        "id": 7,
-        "question": "Как перевести: *eine blaue Tasse*?",
-        "options": ["Синяя кружка", "Синее окно", "Синяя тарелка"],
-        "answer": "Синяя кружка"
-      },
-      {
-        "id": 8,
-        "question": "*ein rotes Buch* — это...",
-        "options": ["Красная книга", "Синяя книга", "Красный стол"],
-        "answer": "Красная книга"
-      },
-      {
-        "id": 9,
-        "question": "Что из этого — *зелёный диван*?",
+        "type": "select",
+        "question": "Выбери вариант: зелёный диван",
         "options": ["ein grünes Sofa", "eine grüne Lampe", "ein grüner Tisch"],
         "answer": "ein grünes Sofa"
       },
       {
+        "id": 5,
+        "type": "speechToText",
+        "question": "Прослушайте и запишите",
+        "text": "Eine blaue Tasse",
+        "answer": "Eine blaue Tasse"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Соберите: das rote Buch",
+        "words": ["das", "rote", "Buch"],
+        "correctOrder": ["das", "rote", "Buch"]
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "Что значит: eine gelbe Blume",
+        "options": ["Жёлтый цветок", "Красная книга", "Синяя лампа"],
+        "answer": "Жёлтый цветок"
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "Прослушайте и запишите",
+        "text": "Die Tür ist schwarz",
+        "answer": "Die Tür ist schwarz"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "Соберите: die blaue Lampe",
+        "words": ["die", "blaue", "Lampe"],
+        "correctOrder": ["die", "blaue", "Lampe"]
+      },
+      {
         "id": 10,
-        "question": "Что из этого — *чёрная дверь*?",
-        "options": ["eine schwarze Tür", "eine schwarze Lampe", "ein schwarzes Fenster"],
-        "answer": "eine schwarze Tür"
+        "type": "select",
+        "question": "Выбери вариант: красная книга",
+        "options": ["das rote Buch", "die blaue Lampe", "der rote Tisch"],
+        "answer": "das rote Buch"
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "Прослушайте и запишите",
+        "text": "Das Fenster ist blau",
+        "answer": "Das Fenster ist blau"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "Соберите: der schwarze Stuhl",
+        "words": ["der", "schwarze", "Stuhl"],
+        "correctOrder": ["der", "schwarze", "Stuhl"]
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "Что значит: Der Teppich ist grün",
+        "options": ["Ковёр зелёный", "Ковёр чёрный", "Стол зелёный"],
+        "answer": "Ковёр зелёный"
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "Прослушайте и запишите",
+        "text": "Die Lampe ist gelb",
+        "answer": "Die Lampe ist gelb"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "Соберите: ein braunes Regal",
+        "words": ["ein", "braunes", "Regal"],
+        "correctOrder": ["ein", "braunes", "Regal"]
       }
     ]
   },
   {
     "questId": "village-4",
     "title": "Сколько всего?",
-    "progress": "0/10",
-    "description": "Старый столяр просит тебя пересчитать вещи в комнате: книги, стулья, лампы. Он постоянно повторяет фразы *es gibt…* и *ich habe…* — попробуй их запомнить!\n\n💡 **Подсказка:**\n- *Es gibt drei Lampen* — Есть три лампы\n- *Ich habe zwei Bücher* — У меня две книги\n- *Wie viele Stühle gibt es?* — Сколько стульев?\nНе бойся артиклей и форм — просто слушай и вникай в смысл!",
+    "progress": "0/15",
+    "description": "Старый столяр просит тебя пересчитать вещи в комнате: книги, стулья, лампы. Он постоянно повторяет фразы *es gibt…* и *ich habe…* — попробуй их запомнить!",
     "conditions": {
-      "goal": "Понимать фразы с числами и предметами: es gibt / ich habe / wie viele…",
-      "minCorrect": 7,
-      "requiredTasks": 10
+      "goal": "Понимать фразы с числами и предметами: es gibt / ich habe / wie viele",
+      "minCorrect": 12,
+      "requiredTasks": 15
     },
     "rewards": {
       "points": 180,
@@ -313,450 +370,841 @@
     "tasks": [
       {
         "id": 1,
-        "question": "Что значит *Ich habe zwei Bücher*?",
-        "options": ["У меня две книги", "Я читаю книги", "У меня три книги"],
-        "answer": "У меня две книги"
+        "type": "select",
+        "question": "Zwei Bücher",
+        "options": ["2 книги", "3 книги", "1 книга"],
+        "answer": "2 книги"
       },
       {
         "id": 2,
-        "question": "Что значит *Es gibt drei Stühle im Zimmer*?",
-        "options": ["В комнате три стула", "У меня три стула", "В комнате четыре стула"],
-        "answer": "В комнате три стула"
+        "type": "speechToText",
+        "question": "Прослушайте и запишите",
+        "text": "Drei Stühle",
+        "answer": "Drei Stühle"
       },
       {
         "id": 3,
-        "question": "Что значит *Wie viele Lampen gibt es?*",
-        "options": ["Сколько ламп?", "Где лампы?", "Что за лампы?"],
-        "answer": "Сколько ламп?"
+        "type": "reorder",
+        "question": "Соберите фразу",
+        "words": ["Lampe", "eine"],
+        "correctOrder": ["eine", "Lampe"]
       },
       {
         "id": 4,
-        "question": "*Ich habe fünf Tassen.* — Сколько кружек у тебя?",
-        "options": ["5", "3", "2"],
-        "answer": "5"
+        "type": "select",
+        "question": "Vier Lampen",
+        "options": ["4 лампы", "5 ламп", "3 лампы"],
+        "answer": "4 лампы"
       },
       {
         "id": 5,
-        "question": "*Es gibt acht Fenster im Haus.* — Сколько окон в доме?",
-        "options": ["8", "6", "4"],
-        "answer": "8"
+        "type": "speechToText",
+        "question": "Прослушайте и запишите",
+        "text": "Ein Fenster",
+        "answer": "Ein Fenster"
       },
       {
         "id": 6,
-        "question": "*Wie viele Bücher hast du?* — Ответ: *Ich habe sieben Bücher.*",
-        "options": ["У меня 7 книг", "У меня 5 книг", "У меня 9 книг"],
-        "answer": "У меня 7 книг"
+        "type": "reorder",
+        "question": "Соберите фразу",
+        "words": ["drei", "Tische"],
+        "correctOrder": ["drei", "Tische"]
       },
       {
         "id": 7,
-        "question": "*Es gibt nur einen Tisch.* — Что это значит?",
-        "options": ["Есть только один стол", "Нет стола", "Есть много столов"],
-        "answer": "Есть только один стол"
+        "type": "select",
+        "question": "Fünf Fenster",
+        "options": ["5 окон", "4 окна", "6 окон"],
+        "answer": "5 окон"
       },
       {
         "id": 8,
-        "question": "*Ich habe keine Lampe.* — Что это значит?",
-        "options": ["У меня нет лампы", "У меня одна лампа", "Я купил лампу"],
-        "answer": "У меня нет лампы"
+        "type": "speechToText",
+        "question": "Прослушайте и запишите",
+        "text": "Zwei Türen",
+        "answer": "Zwei Türen"
       },
       {
         "id": 9,
-        "question": "*Wie viele Stühle hat Anna?* — Ответ: *Sie hat vier Stühle.*",
-        "options": ["У Анны 4 стула", "У Анны 3 стула", "У Анны 6 стульев"],
-        "answer": "У Анны 4 стула"
+        "type": "reorder",
+        "question": "Соберите фразу",
+        "words": ["drei", "Stühle", "und", "zwei", "Tische"],
+        "correctOrder": ["drei", "Stühle", "und", "zwei", "Tische"]
       },
       {
         "id": 10,
-        "question": "Что значит *Es gibt zwei Türen und ein Fenster*?",
-        "options": ["Есть 2 двери и 1 окно", "У меня 2 двери", "Я открыл окно"],
-        "answer": "Есть 2 двери и 1 окно"
+        "type": "select",
+        "question": "Keine Bücher",
+        "options": ["0 книг", "1 книга", "2 книги"],
+        "answer": "0 книг"
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "Прослушайте и запишите",
+        "text": "Eine Tasse",
+        "answer": "Eine Tasse"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "Соберите фразу",
+        "words": ["acht", "Bücher"],
+        "correctOrder": ["acht", "Bücher"]
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "Neun Stühle",
+        "options": ["9 стульев", "8 стульев", "10 стульев"],
+        "answer": "9 стульев"
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "Прослушайте и запишите",
+        "text": "Sieben Bilder",
+        "answer": "Sieben Bilder"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "Соберите фразу",
+        "words": ["ein", "Tisch"],
+        "correctOrder": ["ein", "Tisch"]
       }
     ]
   },
   {
     "questId": "village-5",
-    "title": "Моя семья",
-    "progress": "0/10",
-    "description": "На деревенской площади проходят встречи соседей. Все рассказывают, кто они и кто в их семье.\n\n💡 **Подсказка:**\n- *Ich habe eine Schwester* — У меня есть сестра\n- *Mein Vater ist Arzt* — Мой папа — врач\n- *Meine Mutter ist Lehrerin* — Моя мама — учительница\nОбрати внимание: *mein* — для мужского, *meine* — для женского рода.",
+    "title": "На кухне",
+    "progress": "0/15",
+    "description": "Изба пахнет хлебом. Начнём с посуды и кухонных предметов.",
     "conditions": {
-      "goal": "Понимать фразы про семью и профессии с haben и sein",
-      "minCorrect": 7,
-      "requiredTasks": 10
+      "goal": "Учить кухонные предметы и простые фразы типа Das ist / ein, eine, der, die, das",
+      "minCorrect": 11,
+      "requiredTasks": 15
     },
     "rewards": {
-      "points": 200,
-      "xp": 320
+      "points": 170,
+      "xp": 300
     },
     "tasks": [
       {
         "id": 1,
-        "question": "Что значит *Ich habe einen Bruder*?",
-        "options": ["У меня есть брат", "Это мой брат", "Я брат"],
-        "answer": "У меня есть брат"
+        "type": "select",
+        "question": "Что значит: die Gabel",
+        "options": ["Вилка", "Ложка", "Нож"],
+        "answer": "Вилка"
       },
       {
         "id": 2,
-        "question": "Что значит *Meine Mutter ist Ärztin*?",
-        "options": ["Моя мама — врач", "Мама устала", "Мама дома"],
-        "answer": "Моя мама — врач"
+        "type": "reorder",
+        "question": "Собери: новая вилка",
+        "words": ["neue", "eine", "Gabel"],
+        "correctOrder": ["eine", "neue", "Gabel"]
       },
       {
         "id": 3,
-        "question": "*Mein Vater ist Lehrer.* — Кто он по профессии?",
-        "options": ["Учитель", "Доктор", "Повар"],
-        "answer": "Учитель"
+        "type": "select",
+        "question": "Как сказать: Это вилка",
+        "options": ["Das ist eine Gabel", "Das ist ein Gabel", "Das ist der Gabel"],
+        "answer": "Das ist eine Gabel"
       },
       {
         "id": 4,
-        "question": "*Ich habe zwei Schwestern.* — Сколько сестёр?",
-        "options": ["2", "1", "3"],
-        "answer": "2"
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Die Gabel",
+        "answer": "Die Gabel"
       },
       {
         "id": 5,
-        "question": "*Mein Bruder ist Student.* — Что это значит?",
-        "options": ["Мой брат — студент", "Мой брат — врач", "У меня есть брат"],
-        "answer": "Мой брат — студент"
+        "type": "select",
+        "question": "Что значит: der Löffel",
+        "options": ["Ложка", "Нож", "Тарелка"],
+        "answer": "Ложка"
       },
       {
         "id": 6,
-        "question": "*Hast du Geschwister?* — Что спрашивают?",
-        "options": ["Есть ли у тебя братья/сёстры?", "Где твой брат?", "Сколько у тебя друзей?"],
-        "answer": "Есть ли у тебя братья/сёстры?"
+        "type": "reorder",
+        "question": "Собери: большая ложка",
+        "words": ["ein", "großer", "Löffel"],
+        "correctOrder": ["ein", "großer", "Löffel"]
       },
       {
         "id": 7,
-        "question": "*Meine Schwester ist Kellnerin.* — Кто она?",
-        "options": ["Официантка", "Учительница", "Медсестра"],
-        "answer": "Официантка"
+        "type": "select",
+        "question": "Как сказать: Это ложка",
+        "options": ["Das ist ein Löffel", "Das ist eine Löffel", "Das ist der Löffel"],
+        "answer": "Das ist ein Löffel"
       },
       {
         "id": 8,
-        "question": "*Ich habe keine Geschwister.* — Что это значит?",
-        "options": ["У меня нет братьев и сестёр", "У меня есть брат", "Я живу с братом"],
-        "answer": "У меня нет братьев и сестёр"
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Der Löffel",
+        "answer": "Der Löffel"
       },
       {
         "id": 9,
-        "question": "*Mein Onkel ist Koch.* — Кто он?",
-        "options": ["Повар", "Доктор", "Пекарь"],
-        "answer": "Повар"
+        "type": "select",
+        "question": "Что значит: der Teller",
+        "options": ["Тарелка", "Чашка", "Стакан"],
+        "answer": "Тарелка"
       },
       {
         "id": 10,
-        "question": "*Mein Opa ist Rentner.* — Что это значит?",
-        "options": ["Мой дедушка — пенсионер", "Мой дедушка — водитель", "Мой дедушка — учитель"],
-        "answer": "Мой дедушка — пенсионер"
+        "type": "reorder",
+        "question": "Собери: две большие тарелки",
+        "words": ["zwei", "große", "Teller"],
+        "correctOrder": ["zwei", "große", "Teller"]
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "Как сказать: Это тарелка",
+        "options": ["Das ist ein Teller", "Das ist eine Teller", "Das ist der Tellerin"],
+        "answer": "Das ist ein Teller"
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Der Teller",
+        "answer": "Der Teller"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "Что значит: das Glas",
+        "options": ["Стакан", "Кружка", "Кастрюля"],
+        "answer": "Стакан"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "Собери: маленький стакан",
+        "words": ["ein", "kleines", "Glas"],
+        "correctOrder": ["ein", "kleines", "Glas"]
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Das Glas",
+        "answer": "Das Glas"
       }
     ]
   },
   {
     "questId": "village-6",
-    "title": "На рынке",
-    "progress": "0/10",
-    "description": "На деревенском рынке ты учишься называть еду по-немецки. Тебя встречает продавец фруктов, затем — сырник, пекарь и овощной торговец.\n\n💡 **Подсказка:**\nСначала просто выучи названия продуктов. Потом — обрати внимание, как строятся фразы с артиклями и глаголом *haben* (иметь) или *möchten* (хотеть).\n\nНапример:\n- *Ich möchte einen Apfel* — Я хочу яблоко\n- *Ich habe Brot* — У меня есть хлеб\n- *der Käse, das Brot, die Tomate* — запоминай вместе со статьями!",
+    "title": "В гостиной",
+    "progress": "0/15",
+    "description": "Мягкое кресло, ковёр и лампа над столом. Учим предметы в гостиной.",
     "conditions": {
-      "goal": "Выучить базовые слова о еде и понять простые фразы с ними",
-      "minCorrect": 7,
-      "requiredTasks": 10
+      "goal": "Называть предметы в гостиной и составлять простые фразы Das ist ...",
+      "минCorrect": 11,
+      "requiredTasks": 15
     },
     "rewards": {
-      "points": 220,
-      "xp": 350
+      "points": 175,
+      "xp": 300
     },
     "tasks": [
       {
         "id": 1,
-        "question": "Что значит *der Käse*?",
-        "options": ["сыр", "молоко", "йогурт"],
-        "answer": "сыр"
+        "type": "select",
+        "question": "Что значит: das Sofa",
+        "options": ["Диван", "Кресло", "Ковер"],
+        "answer": "Диван"
       },
       {
         "id": 2,
-        "question": "Что значит *die Tomate*?",
-        "options": ["помидор", "картофель", "огурец"],
-        "answer": "помидор"
+        "type": "select",
+        "question": "Что значит: der Sessel",
+        "options": ["Кресло", "Столик", "Шкаф"],
+        "answer": "Кресло"
       },
       {
         "id": 3,
-        "question": "Что значит *das Brot*?",
-        "options": ["хлеб", "масло", "булочка"],
-        "answer": "хлеб"
+        "type": "select",
+        "question": "Что значит: der Teppich",
+        "options": ["Ковер", "Плед", "Занавеска"],
+        "answer": "Ковер"
       },
       {
         "id": 4,
-        "question": "Что значит *die Banane*?",
-        "options": ["банан", "груша", "яблоко"],
-        "answer": "банан"
+        "type": "reorder",
+        "question": "Собери предложение: Это диван",
+        "words": ["Das", "ist", "das", "Sofa"],
+        "correctOrder": ["Das", "ist", "das", "Sofa"]
       },
       {
         "id": 5,
-        "question": "*Ich möchte einen Apfel* — это значит...",
-        "options": ["Я хочу яблоко", "У меня есть яблоко", "Я ем яблоко"],
-        "answer": "Я хочу яблоко"
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Der Tisch",
+        "answer": "Der Tisch"
       },
       {
         "id": 6,
-        "question": "*Ich habe Brot* — это значит...",
-        "options": ["У меня есть хлеб", "Я ем хлеб", "Я пеку хлеб"],
-        "answer": "У меня есть хлеб"
+        "type": "reorder",
+        "question": "Собери: большой ковер",
+        "words": ["ein", "Teppich", "großer"],
+        "correctOrder": ["ein", "großer", "Teppich"]
       },
       {
         "id": 7,
-        "question": "*Möchtest du Käse?* — Что спрашивают?",
-        "options": ["Хочешь сыра?", "Ты ешь сыр?", "Где сыр?"],
-        "answer": "Хочешь сыра?"
+        "type": "select",
+        "question": "Что значит: der Fernseher",
+        "options": ["Телевизор", "Холодильник", "Компьютер"],
+        "answer": "Телевизор"
       },
       {
         "id": 8,
-        "question": "*Er kauft eine Tomate* — это...",
-        "options": ["Он покупает помидор", "Он ест помидор", "Он варит помидор"],
-        "answer": "Он покупает помидор"
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Eine Uhr",
+        "answer": "Eine Uhr"
       },
       {
         "id": 9,
-        "question": "*Wir essen Bananen* — это значит...",
-        "options": ["Мы едим бананы", "Мы покупаем бананы", "Мы продаём бананы"],
-        "answer": "Мы едим бананы"
+        "type": "reorder",
+        "question": "Собери: зелёное растение",
+        "words": ["eine", "Pflanze", "grüne"],
+        "correctOrder": ["eine", "grüne", "Pflanze"]
       },
       {
         "id": 10,
-        "question": "*Ich nehme das Brot* — это значит...",
-        "options": ["Я беру хлеб", "Я режу хлеб", "Я пеку хлеб"],
-        "answer": "Я беру хлеб"
+        "type": "select",
+        "question": "Что значит: das Regal",
+        "options": ["Стеллаж", "Кресло", "Картина"],
+        "answer": "Стеллаж"
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Die Lampe",
+        "answer": "Die Lampe"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "Собери: маленький столик",
+        "words": ["ein", "Tisch", "kleiner"],
+        "correctOrder": ["ein", "kleiner", "Tisch"]
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "Что значит: das Bild",
+        "options": ["Картина", "Окно", "Дверь"],
+        "answer": "Картина"
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Zwei Sessel",
+        "answer": "Zwei Sessel"
+      },
+      {
+        "id": 15,
+        "type": "select",
+        "question": "Как сказать: Это ковер",
+        "options": ["Das ist der Teppich", "Das ist das Teppich", "Das ist die Teppich"],
+        "answer": "Das ist der Teppich"
       }
     ]
   },
   {
     "questId": "village-7",
-    "title": "Время есть",
-    "progress": "0/10",
-    "description": "Ты зашёл в таверну в центре деревни. За столами сидят жители и рассказывают, что они обычно делают утром, днём и вечером.\n\n💡 **Подсказка:**\nОбрати внимание на времена суток:\n- **am Morgen** — утром\n- **am Nachmittag** — днём\n- **am Abend** — вечером\nА также повтори фразы с *essen*, *möchten*, *haben*:\n- *Ich esse Brot am Morgen.* — Я ем хлеб утром\n- *Am Abend möchte ich Käse.* — Вечером я хочу сыр",
+    "title": "В ванной",
+    "progress": "0/15",
+    "description": "Пена, полотенца и зеркало. Закрепляем слова про ванную комнату.",
     "conditions": {
-      "goal": "Научиться понимать фразы про еду и действия в разное время суток",
-      "minCorrect": 7,
-      "requiredTasks": 10
+      "goal": "Называть предметы в ванной и простые словосочетания с числительными и прилагательными",
+      "minCorrect": 11,
+      "requiredTasks": 15
     },
     "rewards": {
-      "points": 250,
-      "xp": 380
+      "points": 180,
+      "xp": 320
     },
     "tasks": [
       {
         "id": 1,
-        "question": "Что значит *am Morgen*?",
-        "options": ["утром", "вечером", "ночью"],
-        "answer": "утром"
+        "type": "select",
+        "question": "Что значит: die Dusche",
+        "options": ["Душ", "Ванна", "Полотенце"],
+        "answer": "Душ"
       },
       {
         "id": 2,
-        "question": "Что значит *am Abend esse ich Brot*?",
-        "options": ["Я ем хлеб вечером", "Я купил хлеб утром", "Я хочу хлеб днём"],
-        "answer": "Я ем хлеб вечером"
+        "type": "select",
+        "question": "Что значит: die Badewanne",
+        "options": ["Ванна", "Раковина", "Зеркало"],
+        "answer": "Ванна"
       },
       {
         "id": 3,
-        "question": "*Am Morgen trinke ich Tee* — это значит...",
-        "options": ["Утром я пью чай", "Я пью чай вечером", "Я ем чай утром"],
-        "answer": "Утром я пью чай"
+        "type": "select",
+        "question": "Что значит: das Waschbecken",
+        "options": ["Раковина", "Полотенце", "Коврик"],
+        "answer": "Раковина"
       },
       {
         "id": 4,
-        "question": "*Ich esse Käse am Nachmittag* — это...",
-        "options": ["Я ем сыр днём", "Я пью сыр вечером", "Я хочу сыр утром"],
-        "answer": "Я ем сыр днём"
+        "type": "select",
+        "question": "Что значит: das Handtuch",
+        "options": ["Полотенце", "Щётка", "Шкаф"],
+        "answer": "Полотенце"
       },
       {
         "id": 5,
-        "question": "*Möchtest du Brot am Abend?* — Что спрашивают?",
-        "options": ["Хочешь хлеб вечером?", "Ты ел хлеб утром?", "Ты покупаешь хлеб вечером?"],
-        "answer": "Хочешь хлеб вечером?"
+        "type": "reorder",
+        "question": "Собери предложение: Это душ",
+        "words": ["Das", "ist", "die", "Dusche"],
+        "correctOrder": ["Das", "ist", "die", "Dusche"]
       },
       {
         "id": 6,
-        "question": "*Ich habe Tomaten am Morgen* — это значит...",
-        "options": ["У меня есть помидоры утром", "Я ем помидоры днём", "Я покупаю помидоры вечером"],
-        "answer": "У меня есть помидоры утром"
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Die Dusche",
+        "answer": "Die Dusche"
       },
       {
         "id": 7,
-        "question": "*Am Abend möchte ich Tee* — это...",
-        "options": ["Вечером я хочу чай", "Я пью чай днём", "Я продаю чай вечером"],
-        "answer": "Вечером я хочу чай"
+        "type": "reorder",
+        "question": "Собери: новая ванна",
+        "words": ["eine", "неue", "Badewanne"],
+        "correctOrder": ["eine", "neue", "Badewanne"]
       },
       {
         "id": 8,
-        "question": "Как сказать *днём* по-немецки?",
-        "options": ["am Nachmittag", "am Morgen", "am Abend"],
-        "answer": "am Nachmittag"
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Die Badewanne",
+        "answer": "Die Badewanne"
       },
       {
         "id": 9,
-        "question": "*Was isst du am Morgen?* — Что спрашивают?",
-        "options": ["Что ты ешь утром?", "Что ты пьёшь вечером?", "Ты ешь хлеб утром?"],
-        "answer": "Что ты ешь утром?"
+        "type": "reorder",
+        "question": "Собери: новая раковина",
+        "words": ["ein", "neues", "Waschbecken"],
+        "correctOrder": ["ein", "neues", "Waschbecken"]
       },
       {
         "id": 10,
-        "question": "*Ich trinke Wasser am Abend* — это...",
-        "options": ["Я пью воду вечером", "Я покупаю воду утром", "Я хочу воду днём"],
-        "answer": "Я пью воду вечером"
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Das Waschbecken",
+        "answer": "Das Waschbecken"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Собери: чистое полотенце",
+        "words": ["ein", "sauberes", "Handtuch"],
+        "correctOrder": ["ein", "sauberes", "Handtuch"]
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ein Handtuch",
+        "answer": "Ein Handtuch"
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ein sauberes Handtuch",
+        "answer": "Ein sauberes Handtuch"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "Что значит: zwei Handtücher",
+        "options": ["2 полотенца", "2 ванны", "2 раковины"],
+        "answer": "2 полотенца"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "Собери: два чистых полотенца",
+        "words": ["zwei", "saubere", "Handtücher"],
+        "correctOrder": ["zwei", "saubere", "Handtücher"]
       }
     ]
   },
   {
     "questId": "village-8",
-    "title": "Что ты любишь?",
-    "progress": "0/10",
-    "description": "После ужина ты беседуешь с детьми деревни, и они рассказывают, что им нравится.\n\n💡 **Подсказка:**\n- *Ich mag Tee* — Мне нравится чай\n- *Magst du Schokolade?* — Тебе нравится шоколад?\n- *Er mag Musik* — Ему нравится музыка\n\nСлова для запоминания:\nTee — чай, \nKaffee — кофе, \nSchokolade — шоколад, \nMusik — музыка, \nSport — спорт, \nFilme — фильмы\n\nОбрати внимание: **mag / magst / mögen / mögt** — это формы глагола *mögen* в зависимости от лица.",
+    "title": "В спальне",
+    "progress": "0/15",
+    "description": "Тихая спальня: кровать, подушка, тумбочка. Учим предметы и простые сочетания.",
     "conditions": {
-      "goal": "Понимать фразы со словом 'нравится' и любимыми вещами",
-      "minCorrect": 7,
-      "requiredTasks": 10
+      "goal": "Называть предметы спальни и собирать простые фразы Das ist / ein, eine, der, die, das",
+      "minCorrect": 11,
+      "requiredTasks": 15
     },
     "rewards": {
-      "points": 200,
+      "points": 170,
       "xp": 300
     },
     "tasks": [
       {
         "id": 1,
-        "question": "*Ich mag Tee*",
-        "options": ["Мне нравится чай", "Я пью чай", "Я делаю чай"],
-        "answer": "Мне нравится чай"
+        "type": "select",
+        "question": "das Bett",
+        "options": ["Кровать", "Стол", "Шкаф"],
+        "answer": "Кровать"
       },
       {
         "id": 2,
-        "question": "Тебе нравится музыка?",
-        "options": ["Magst du Musik?", "Möchtest du Musik?", "Hast du Musik?"],
-        "answer": "Magst du Musik?"
+        "type": "select",
+        "question": "das Kissen",
+        "options": ["Подушка", "Одеяло", "Зеркало"],
+        "answer": "Подушка"
       },
       {
         "id": 3,
-        "question": "*Er mag Filme*",
-        "options": ["Ему нравятся фильмы", "Он смотрит фильмы", "Он делает фильмы"],
-        "answer": "Ему нравятся фильмы"
+        "type": "select",
+        "question": "die Decke",
+        "options": ["Одеяло", "Штора", "Полка"],
+        "answer": "Одеяло"
       },
       {
         "id": 4,
-        "question": "*Ich mag Schokolade*",
-        "options": ["Мне нравится шоколад", "Я ем шоколад", "У меня есть шоколад"],
-        "answer": "Мне нравится шоколад"
+        "type": "reorder",
+        "question": "Собери предложение: Это кровать",
+        "words": ["Das", "ist", "das", "Bett"],
+        "correctOrder": ["Das", "ist", "das", "Bett"]
       },
       {
         "id": 5,
-        "question": "*Sie mag Sport*",
-        "options": ["Ей нравится спорт", "Она делает спорт", "Она умеет спорт"],
-        "answer": "Ей нравится спорт"
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ein Kissen",
+        "answer": "Ein Kissen"
       },
       {
         "id": 6,
-        "question": "Нам нравится музыка",
-        "options": ["Wir mögen Musik", "Wir haben Musik", "Wir hören Musik"],
-        "answer": "Wir mögen Musik"
+        "type": "select",
+        "question": "der Kleiderschrank",
+        "options": ["Шкаф для одежды", "Стул", "Дверь"],
+        "answer": "Шкаф для одежды"
       },
       {
         "id": 7,
-        "question": "*Magst du Kaffee?*",
-        "options": ["Тебе нравится кофе?", "Ты пьёшь кофе?", "Ты покупаешь кофе?"],
-        "answer": "Тебе нравится кофе?"
+        "type": "reorder",
+        "question": "Собери: занавески",
+        "words": ["die", "Vorhänge"],
+        "correctOrder": ["die", "Vorhänge"]
       },
       {
         "id": 8,
-        "question": "*Ich mag keine Filme*",
-        "options": ["Мне не нравятся фильмы", "Я смотрю фильмы", "Я делаю фильмы"],
-        "answer": "Мне не нравятся фильмы"
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Der Spiegel",
+        "answer": "Der Spiegel"
       },
       {
         "id": 9,
-        "question": "*Meine Mutter mag Tee und Musik*",
-        "options": ["Моей маме нравится чай и музыка", "Моя мама пьёт чай и слушает музыку", "Моя мама покупает чай и музыку"],
-        "answer": "Моей маме нравится чай и музыка"
+        "type": "select",
+        "question": "der Nachttisch",
+        "options": ["Тумбочка", "Стеллаж", "Ковёр"],
+        "answer": "Тумбочка"
       },
       {
         "id": 10,
-        "question": "Мы любим спорт",
-        "options": ["Wir mögen Sport", "Wir machen Sport", "Wir haben Sport"],
-        "answer": "Wir mögen Sport"
+        "type": "reorder",
+        "question": "Собери: мягкая подушка",
+        "words": ["ein", "weiches", "Kissen"],
+        "correctOrder": ["ein", "weiches", "Kissen"]
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Zwei Kissen",
+        "answer": "Zwei Kissen"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "die Lampe",
+        "options": ["Лампа", "Штора", "Картина"],
+        "answer": "Лампа"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "Собери предложение: Это зеркало",
+        "words": ["Das", "ist", "der", "Spiegel"],
+        "correctOrder": ["Das", "ist", "der", "Spiegel"]
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Eine Decke",
+        "answer": "Eine Decke"
+      },
+      {
+        "id": 15,
+        "type": "select",
+        "question": "der Wecker",
+        "options": ["Будильник", "Рюкзак", "Телефон"],
+        "answer": "Будильник"
       }
     ]
   },
   {
     "questId": "village-9",
-    "title": "Где ты?",
-    "progress": "0/10",
-    "description": "Ты ищешь местных жителей в деревне. Кто-то на площади, кто-то дома, а кто-то в лесу. Пора научиться говорить, **где кто находится**.\n\n💡 **Подсказка:**\n- *Ich bin auf dem Markt* — Я на рынке\n- *Er ist im Wald* — Он в лесу\n- *Sie ist zu Hause* — Она дома\n- *Wo bist du?* — Где ты?\n- *Ich bin neben der Schule* — Я рядом со школой\n\nОбрати внимание на предлоги **in / auf / neben / unter / vor / hinter** и формы после них: *im Wald* (in dem), *auf dem Markt*, *neben der Schule*.",
+    "title": "В прихожей",
+    "progress": "0/15",
+    "description": "У входа — дверь, ключи и одежда. Учим слова прихожей.",
     "conditions": {
-      "goal": "Научиться понимать и строить фразы с местоположением",
-      "minCorrect": 7,
-      "requiredTasks": 10
+      "goal": "Называть предметы прихожей и собирать короткие фразы с артиклями и числительными",
+      "minCorrect": 11,
+      "requiredTasks": 15
     },
     "rewards": {
-      "points": 200,
+      "points": 175,
       "xp": 300
     },
     "tasks": [
       {
         "id": 1,
-        "question": "*Ich bin im Haus*",
-        "options": ["Я в доме", "Я в школе", "Я на улице"],
-        "answer": "Я в доме"
+        "type": "select",
+        "question": "die Tür",
+        "options": ["Дверь", "Окно", "Пол"],
+        "answer": "Дверь"
       },
       {
         "id": 2,
-        "question": "*Wo bist du?*",
-        "options": ["Где ты?", "Кто ты?", "Как ты?"],
-        "answer": "Где ты?"
+        "type": "select",
+        "question": "der Schlüssel",
+        "options": ["Ключ", "Шкаф", "Ковер"],
+        "answer": "Ключ"
       },
       {
         "id": 3,
-        "question": "*Er ist auf dem Markt*",
-        "options": ["Он на рынке", "Он дома", "Он в лесу"],
-        "answer": "Он на рынке"
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "die Jacke",
+        "answer": "die Jacke"
       },
       {
         "id": 4,
-        "question": "*Sie ist zu Hause*",
-        "options": ["Она дома", "Она в школе", "Она на работе"],
-        "answer": "Она дома"
+        "type": "reorder",
+        "question": "Собери предложение: Это куртка",
+        "words": ["ist", "Das", "Jacke", "die"],
+        "correctOrder": ["Das", "ist", "die", "Jacke"]
       },
       {
         "id": 5,
-        "question": "Я рядом со школой",
-        "options": ["Ich bin neben der Schule", "Ich bin unter der Schule", "Ich bin über der Schule"],
-        "answer": "Ich bin neben der Schule"
+        "type": "select",
+        "question": "der Mantel",
+        "options": ["Пальто", "Шарф", "Шапка"],
+        "answer": "Пальто"
       },
       {
         "id": 6,
-        "question": "*Wir sind im Garten*",
-        "options": ["Мы в саду", "Мы на кухне", "Мы в школе"],
-        "answer": "Мы в саду"
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Eine Tasche",
+        "answer": "Eine Tasche"
       },
       {
         "id": 7,
-        "question": "Ты в лесу?",
-        "options": ["Bist du im Wald?", "Bist du auf dem Wald?", "Bist du hinter dem Wald?"],
-        "answer": "Bist du im Wald?"
+        "type": "reorder",
+        "question": "Собери: две новые ботинки",
+        "words": ["zwei", "neue", "Schuhe"],
+        "correctOrder": ["zwei", "neue", "Schuhe"]
       },
       {
         "id": 8,
-        "question": "*Der Hund ist unter dem Tisch*",
-        "options": ["Собака под столом", "Собака на столе", "Собака за столом"],
-        "answer": "Собака под столом"
+        "type": "select",
+        "question": "die Mütze",
+        "options": ["Шапка", "Перчатка", "Платье"],
+        "answer": "Шапка"
       },
       {
         "id": 9,
-        "question": "*Das Kind ist hinter dem Haus*",
-        "options": ["Ребёнок за домом", "Ребёнок в доме", "Ребёнок перед домом"],
-        "answer": "Ребёнок за домом"
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Der Schal",
+        "answer": "Der Schal"
       },
       {
         "id": 10,
-        "question": "Он перед школой",
-        "options": ["Er ist vor der Schule", "Er ist hinter der Schule", "Er ist neben der Schule"],
-        "answer": "Er ist vor der Schule"
+        "type": "reorder",
+        "question": "Собери: большая гардеробная",
+        "words": ["die", "große", "Garderobe"],
+        "correctOrder": ["die", "große", "Garderobe"]
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "der Rucksack",
+        "options": ["Рюкзак", "Пояс", "Зонт"],
+        "answer": "Рюкзак"
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Drei Schlüssel",
+        "answer": "Drei Schlüssel"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "Собери предложение: Это дверь",
+        "words": ["Das", "ist", "die", "Tür"],
+        "correctOrder": ["Das", "ist", "die", "Tür"]
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "der Teppich",
+        "options": ["Ковер", "Кресло", "Полка"],
+        "answer": "Ковер"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ein Hut",
+        "answer": "Ein Hut"
+      }
+    ]
+  },
+  {
+    "questId": "village-10",
+    "title": "В саду",
+    "progress": "0/15",
+    "description": "Дерево, цветы и скамейка. Учим слова сада и простые сочетания с цветами и числами.",
+    "conditions": {
+      "goal": "Называть предметы сада и собирать простые словосочетания с цветами и числами",
+      "minCorrect": 11,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 180,
+      "xp": 320
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Что значит: der Baum",
+        "options": ["Дерево", "Цветок", "Лопата"],
+        "answer": "Дерево"
+      },
+      {
+        "id": 2,
+        "type": "reorder",
+        "question": "Собери: ein großer Baum",
+        "words": ["ein", "großer", "Baum"],
+        "correctOrder": ["ein", "großer", "Baum"]
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "Что значит: zwei Bäume",
+        "options": ["2 дерева", "2 цветка", "2 лейки"],
+        "answer": "2 дерева"
+      },
+      {
+        "id": 4,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Der Baum",
+        "answer": "Der Baum"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Что значит: die Blume",
+        "options": ["Цветок", "Куст", "Трава"],
+        "answer": "Цветок"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Собери: eine rote Blume",
+        "words": ["rote", "eine", "Blume"],
+        "correctOrder": ["eine", "rote", "Blume"]
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "Что значит: drei Blumen",
+        "options": ["3 цветка", "3 дерева", "3 лопаты"],
+        "answer": "3 цветка"
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Die Blume",
+        "answer": "Die Blume"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "Что значит: die Gießkanne",
+        "options": ["Лейка", "Шланг", "Ведро"],
+        "answer": "Лейка"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "Собери: eine grüne Gießkanne",
+        "words": ["eine", "grüne", "Gießkanne"],
+        "correctOrder": ["eine", "grüne", "Gießkanne"]
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Die Gießkanne",
+        "answer": "Die Gießkanne"
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Eine Gießkanne",
+        "answer": "Eine Gießkanne"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "Что значит: die Schaufel",
+        "options": ["Лопата", "Камень", "Кувалда"],
+        "answer": "Лопата"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "Собери: eine neue Schaufel",
+        "words": ["eine", "neue", "Schaufel"],
+        "correctOrder": ["eine", "neue", "Schaufel"]
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Die Schaufel",
+        "answer": "Die Schaufel"
       }
     ]
   }
 ]
-

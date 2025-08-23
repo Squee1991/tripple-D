@@ -53,8 +53,8 @@
                     </div>
                 </form>
                 <div v-if="mode === 'login'" class="google__auth-wrapper" @click="handleGoogleLogin">
+                  <img class="google__icon" src="../../assets/images/search.svg" alt="">
                     <div class="google__auth">{{t('auth.google')}}</div>
-                    <img class="google__icon" src="../../assets/images/search.svg" alt="">
                 </div>
             </div>
         </div>
@@ -263,7 +263,7 @@
         font-weight: 600;
         font-style: italic;
         font-size: 1.2rem;
-        margin-right: 10px;
+        margin-left: 10px;
         color: #1e1e1e;
     }
 
@@ -444,7 +444,7 @@
         font-style: italic;
         font-weight: 600;
         font-size: 1.5rem;
-        padding: 16px 0;
+        padding: 12px 0;
         border-radius: 18px;
         cursor: pointer;
         box-shadow: 4px 4px 0px #1e1e1e;

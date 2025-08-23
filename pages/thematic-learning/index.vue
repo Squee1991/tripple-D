@@ -2,7 +2,7 @@
 import {useTrainerStore} from '../../store/themenProgressStore.js'
 import {useRouter} from 'vue-router'
 import {ref, onMounted, computed, watch} from 'vue'
-import HomeImg from '../../assets/images/home.svg'
+import HomeImg from '../../assets/images/house.svg'
 import Clothes from '../../assets/images/clothes.svg'
 import Health from '../../assets/images/health.svg'
 import Food from '../../assets/images/food.svg'

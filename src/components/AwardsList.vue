@@ -1,40 +1,69 @@
 <template>
-  <div class="items-grid">
-    <div
-        v-for="award in awards"
-        class="shop-item"
-        :class="{ locked: award.locked }"
-        @click="openAward(award)"
-    >
-      <div class="image-wrapper">
-        <img :class="{ locked: award.locked }" :src="award.icon" alt="award" class="item-img"/>
-        <div v-if="award.locked" class="locked-overlay">
-          <img class="lock" src="../../assets/images/padlock.svg" alt="">
-        </div>
-      </div>
-      <p class="item-name">{{ t(award.title )}}</p>
+  <div class="awards__section">
+      <VModal
+          :visible="showModal"
+          :title="modalData.title"
+          :img="modalData.icon"
+          :text="modalData.text"
+          @close="closeAward"
+      />
+    <div class="awards__header">
+      <h1 class="awards__title">Список наград</h1>
+      <button @click="questionModal" class="awards__info-btn">
+        <img class="awards__question-icon" :src="Question" alt="">
+      </button>
     </div>
-    <div v-if="showModal" class="modal-overlay" @click.self="closeAward">
-      <div class="modal-content">
-        <img :src="selectedAward.icon" class="modal-icon"/>
-        <h3>{{ t(selectedAward.title) }}</h3>
-<!--        <p v-if="selectedAward.locked">🔒 Награда пока не получена</p>-->
-        <p>🎉 {{ t('awardsSection.congratulations')}}</p>
-        <button @click="closeAward">{{ t('awardsSection.close')}}</button>
+    <div class="items-grid">
+      <div
+          v-for="award in awards"
+          class="shop-item"
+          :class="{ locked: award.locked }"
+          @click="openAward(award)"
+      >
+        <div class="image-wrapper">
+          <img :class="{ locked: award.locked }" :src="award.icon" alt="award" class="item-img"/>
+          <div v-if="award.locked" class="locked-overlay">
+            <img class="lock" src="../../assets/images/padlock.svg" alt="">
+          </div>
+        </div>
+        <p class="item-name">{{ t(award.title) }}</p>
       </div>
+<!--      <div v-if="showModal" class="modal-overlay" @click.self="closeAward">-->
+<!--        <div class="modal-content">-->
+<!--          <img :src="selectedAward.icon" class="modal-icon"/>-->
+<!--          <h3>{{ t(selectedAward.title) }}</h3>-->
+<!--          &lt;!&ndash;        <p v-if="selectedAward.locked">🔒 Награда пока не получена</p>&ndash;&gt;-->
+<!--          <p>🎉 {{ t('awardsSection.congratulations') }}</p>-->
+<!--          <button @click="closeAward">{{ t('awardsSection.close') }}</button>-->
+<!--        </div>-->
+<!--      </div>-->
     </div>
   </div>
 </template>
 
 <script setup>
 import {ref} from 'vue'
-const { t } = useI18n()
+import VModal from '~/src/components/modal.vue'
+import AwardIconModal from '../../assets/images/AwardForModal.svg'
+import Question from '../../assets/images/question.svg'
+
+const {t} = useI18n()
 const props = defineProps({
   awards: {
     type: Array,
     required: true,
   },
 })
+
+const modalData = ref({
+  title: 'Награды',
+  icon: AwardIconModal,
+  text: 'Награды даются за достижения к которым предусмотрена награда'
+})
+
+const questionModal = () => {
+  showModal.value = true
+}
 
 const showModal = ref(false)
 const selectedAward = ref({})
@@ -72,6 +101,28 @@ function closeAward() {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.awards__title {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Nunito", sans-serif;
+}
+
+.awards__question-icon {
+  min-width: 60px;
+  width: 100%;
+}
+
+.awards__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  background: #4ade80;
+  border: 2px solid black;
+  padding: 10px 20px;
+  border-radius: 16px;
+  box-shadow: 5px 5px 0 black;
+}
 
 .shop-item:hover {
   transform: translateY(-2px);
@@ -124,7 +175,7 @@ function closeAward() {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 999;
+  z-index: 9999;
 }
 
 .modal-content {
@@ -180,7 +231,7 @@ button:disabled {
   }
 }
 
-@media (max-width: 767px)  {
+@media (max-width: 767px) {
   .shop-item {
     width: 80%;
     margin: 0 auto;
@@ -190,7 +241,18 @@ button:disabled {
   .items-grid {
     width: 100%;
   }
+}
 
+.awards__info-btn {
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 10px;
+  width: 60px;
+  height: 60px;
+  box-shadow: none;
 }
 
 </style>

@@ -220,7 +220,6 @@
         if (!selectedAttacker.value && !selectedMagicSpell.value) return;
         const isFriendly = target.id === activePlayer.value.id || activePlayer.value.board.includes(target);
 
-        // АТАКА СУЩЕСТВОМ
         if (selectedAttacker.value) {
             if (isFriendly) return;
             const attacker = selectedAttacker.value;
