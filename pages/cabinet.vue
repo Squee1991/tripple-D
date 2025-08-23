@@ -13,7 +13,7 @@
     <div class="layout">
       <aside class="sidebar-panel">
         <button class="back-btn" @click="backToMain" aria-label="На главную">
-          <img :src="Home" alt=""/>
+          <img class="back__btn-icon" :src="Home" alt=""/>
           <span class="back-label">{{ t('cabinet.main') }}</span>
         </button>
         <div class="sidebar-title">{{ t('cabinet.category') }}</div>
@@ -209,6 +209,10 @@
       <div class="modal-card">
         <div class="modal-title">{{ t('cabinet.deleteAccTitle') }}</div>
         <p class="modal-text">{{ t('cabinet.deleteText') }}</p>
+        <p v-if="userAuthStore.isPremium" class="modal-text ">
+          <span class="warn">ВАЖНО!!!</span>
+          <span> При удалении аккаунта подписка не отменяется. Перед удалением отмените подписку</span>
+           </p>
         <p v-if="!isGoogleUser" class="modal-text">{{ t('cabinet.checkPassword') }}</p>
         <div v-if="!isGoogleUser" class="label">
           <input class="input" v-model="deletePasswordField.value" type="password"/>
@@ -496,10 +500,10 @@ watch(() => authStore.uid, () => {
   awardList.value = AWARDS.map(a => ({...a, locked: !shownAwardsSet.value.has(a.key)}))
 })
 const processed = new Set(shownAwardsSet.value)
-watch(() => {
+watchEffect(() => {
   const groups = achievementStore.groups || []
   for (const group of groups) {
-    for (const achievement of (group.achievements || [])) {
+    for (const achievement of group.achievements || []) {
       const id = achievement.id
       if (!id || processed.has(id)) continue
       if (achievement.currentProgress >= achievement.targetProgress) {
@@ -513,7 +517,7 @@ watch(() => {
       }
     }
   }
-}, {immediate: true})
+})
 
 
 onMounted(() => {
@@ -578,6 +582,7 @@ onMounted(() => {
   color: var(--titleColor);
   font-family: "Nunito", sans-serif;
   padding: 10px;
+  font-weight: 600;
 }
 
 .sidebar-panel {
@@ -617,9 +622,11 @@ onMounted(() => {
 }
 
 .back-btn img {
-  width: 22px;
-  height: 22px;
+  width: 40px;
+  height: 40px;
 }
+
+
 
 .back-label {
   display: inline;
@@ -793,8 +800,6 @@ onMounted(() => {
 }
 
 .content-body {
-  margin-top: 14px;
-  padding: 16px;
   flex: 1;
 }
 
@@ -947,6 +952,10 @@ onMounted(() => {
 .modal-text {
   font-size: 1.1rem;
   margin-bottom: 1rem;
+}
+
+.warn {
+  color: red;
 }
 
 .input {
@@ -1125,8 +1134,8 @@ onMounted(() => {
   }
 
   .back-btn img {
-    width: 24px;
-    height: 24px;
+    width: 34px;
+    height: 34px;
   }
 
   .accordion {

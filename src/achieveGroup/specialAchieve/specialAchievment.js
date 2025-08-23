@@ -134,6 +134,15 @@ export const cpecialGroupAchievment = [
 				currentProgress: 0,
 				targetProgress: 700,
 			},
+			{
+				id: "languageLands50",
+				name: "Следопыт Языковых земель",
+				description: "Выполните 50 заданий без ошибок в Языковых землях.",
+				icon: "🗺️",
+				awards: "Награда: Компас",
+				currentProgress: 0,
+				targetProgress: 50
+			}
 		]
 	}
 ];

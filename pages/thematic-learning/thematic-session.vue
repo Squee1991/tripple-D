@@ -32,18 +32,14 @@ const visibleSentence = computed(() => {
   return task.question
 })
 
-
 const generateAnswerOptions = (correctAnswer) => {
   const allArticles = ['der', 'die', 'das', 'den', 'dem', 'des', 'ein', 'eine', 'einen', 'einem'];
   let distractors = allArticles.filter(item => item !== correctAnswer);
-
-
   for (let i = distractors.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [distractors[i], distractors[j]] = [distractors[j], distractors[i]];
   }
   const options = [correctAnswer, distractors[0], distractors[1]];
-
   for (let i = options.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [options[i], options[j]] = [options[j], options[i]];
@@ -216,9 +212,9 @@ onUnmounted(() => {
                     :key="option"
                     class="option-btn"
                     :class="{
-                                        'correct': isChecked && option === tasks[current].answer,
-                                        'incorrect': isChecked && feedback && feedback.selected === option && !feedback.isCorrect,
-                                        'disabled': isChecked && feedback && feedback.selected !== option
+                            'correct': isChecked && option === tasks[current].answer,
+                            'incorrect': isChecked && feedback && feedback.selected === option && !feedback.isCorrect,
+                            'disabled': isChecked && feedback && feedback.selected !== option
                                     }"
                     @click="check(option)"
                     :disabled="isChecked"

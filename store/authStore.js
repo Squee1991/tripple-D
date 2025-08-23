@@ -43,6 +43,13 @@ export const userAuthStore = defineStore('auth', () => {
 		}
 	};
 
+	const normalizeDate = (v) => {
+		if (!v) return null;
+		if (typeof v?.toDate === 'function') return v.toDate().toISOString();
+		const d = new Date(v);
+		return isNaN(d.getTime()) ? null : d.toISOString();
+	};
+
 	const avatarUrl = computed(() => getAvatarUrl(avatar.value));
 	const createInitialAchievementsObject = () => {
 		return {
@@ -74,7 +81,7 @@ export const userAuthStore = defineStore('auth', () => {
 	const setUserData = (data) => {
 		name.value = data.name || null
 		email.value = data.email || null
-		registeredAt.value = data.registeredAt || null
+		registeredAt.value = normalizeDate(data.registeredAt)
 		uid.value = data.uid || null
 		avatar.value = data.avatar || null
 		isPremium.value = data.isPremium || false
@@ -133,33 +140,36 @@ export const userAuthStore = defineStore('auth', () => {
 	};
 
 	const registerUser = async (userData) => {
-		const auth = getAuth()
-		const userCredential = await createUserWithEmailAndPassword(auth, userData.email, userData.password)
+		const auth = getAuth();
+		const userCredential = await createUserWithEmailAndPassword(auth, userData.email, userData.password);
 		const user = userCredential.user;
-		await updateProfile(user, {displayName: userData.name})
-		await sendEmailVerification(user)
+		await updateProfile(user, { displayName: userData.name });
+		await sendEmailVerification(user);
 		const defaultAvatar = '1.png';
+		const initialOwnedAvatars = ['1.png', '2.png'];
 		await setDoc(doc(db, 'users', user.uid), {
-			ownedAvatars: ['1.png', '2.png'],
 			name: userData.name,
 			email: userData.email,
 			registeredAt: serverTimestamp(),
 			avatar: defaultAvatar,
+			ownedAvatars: initialOwnedAvatars,
 			isPremium: false,
 			subscriptionEndsAt: null,
 			gotPremiumBonus: false,
 			...createInitialAchievementsObject()
-		})
-
+		});
 		setUserData({
+			uid: user.uid,
 			name: userData.name,
 			email: userData.email,
 			registeredAt: user.metadata.creationTime,
-			uid: user.uid,
 			avatar: defaultAvatar,
-			isPremium: false
-		})
-	}
+			ownedAvatars: initialOwnedAvatars,
+			isPremium: false,
+			subscriptionEndsAt: null,
+			gotPremiumBonus: false,
+		});
+	};
 
 	const loginUser = async ({email, password}) => {
 		const auth = getAuth()
@@ -213,16 +223,13 @@ export const userAuthStore = defineStore('auth', () => {
 	const purchaseAvatar = async (fileName) => {
 		const langStore = userlangStore();
 		if (ownedAvatars.value.includes(fileName)) return;
-
 		if (langStore.points < 50) {
 			throw new Error('Недостаточно Артиклюсов!');
 		}
-
 		langStore.points -= 50;
 		langStore.articlesSpentForAchievement += 50;
 		await langStore.saveToFirebase();
 		ownedAvatars.value.push(fileName);
-
 		const userDocRef = doc(db, 'users', uid.value);
 		await updateDoc(userDocRef, {
 			ownedAvatars: ownedAvatars.value

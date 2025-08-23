@@ -44,7 +44,7 @@
       {
         "id": 5,
         "type": "select",
-        "question": "Скажите: 'как дела'",
+        "question": "Как сказать: как дела",
         "options": ["Hallo!", "Wie geht's", "Danke" , "Guten Tag" , "oder"],
         "answer": "Wie geht's"
       },

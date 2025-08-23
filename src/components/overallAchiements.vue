@@ -7,11 +7,7 @@
         >
             <div class="group-header">
                 <h2 class="group-title">{{ t(group.title) }}</h2>
-                <span
-                    :class="[
-            'group-stats',
-            { 'all-completed': completedCount(group) === group.achievements.length }
-          ]"
+                <span :class="[ 'group-stats', { 'all-completed': completedCount(group) === group.achievements.length }]"
                 >
           {{ completedCount(group) }} / {{ group.achievements.length }}
         </span>
@@ -55,17 +51,14 @@ import { useAchievementStore } from '../../store/achievementStore.js'
 const { t } = useI18n()
 const achievementStore = useAchievementStore()
 
-// Берём из стора только группы с category === 'over'
-const overGroups = computed(() =>
-    achievementStore.groups.filter(g => g.category === 'over')
+const overGroups = computed(() => achievementStore.groups.filter(g => g.category === 'over')
 )
 
-// Считаем, сколько ачивок в группе завершено
 const completedCount = group =>
     group.achievements.filter(a => a.currentProgress >= a.targetProgress).length
 
 onMounted(() => {
-    // Запускаем трекинг прогресса
+
     achievementStore.initializeProgressTracking()
 })
 </script>

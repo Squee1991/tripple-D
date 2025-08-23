@@ -1,0 +1,1833 @@
+[
+  {
+    "questId": "reise-hotel-1",
+    "title": "Бронь и заезд",
+    "progress": "0/15",
+    "description": "Бронируешь номер, заселяешься, спрашиваешь про цену и завтрак. Ключевые фразы у стойки регистрации.",
+    "conditions": {
+      "goal": "Rezeption, reservieren, Einzel-/Doppelzimmer, für zwei Nächte, Check-in/Check-out, Ausweis, Frühstück, pro Nacht",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 220,
+      "xp": 330
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Что значит: die Rezeption",
+        "options": [
+          "Стойка регистрации",
+          "Ресторан",
+          "Лифт"
+        ],
+        "answer": "Стойка регистрации"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "Что значит: reservieren",
+        "options": [
+          "Бронировать",
+          "Оплачивать",
+          "Убирать"
+        ],
+        "answer": "Бронировать"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "Что значит: das Einzelzimmer",
+        "options": [
+          "Одноместный номер",
+          "Двухместный номер",
+          "Семейный номер"
+        ],
+        "answer": "Одноместный номер"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "Что значит: das Doppelzimmer",
+        "options": [
+          "Двухместный номер",
+          "Одноместный номер",
+          "Номер-люкс"
+        ],
+        "answer": "Двухместный номер"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": [
+          "Zimmer",
+          "möchte",
+          "ein",
+          "Ich",
+          "reservieren"
+        ],
+        "correctOrder": [
+          "Ich",
+          "möchte",
+          "ein",
+          "Zimmer",
+          "reservieren"
+        ]
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ich habe eine Reservierung",
+        "answer": "Ich habe eine Reservierung"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "für zwei Nächte",
+        "options": [
+          "на две ночи",
+          "на одну неделю",
+          "на два месяца"
+        ],
+        "answer": "на две ночи"
+      },
+      {
+        "id": 8,
+        "type": "reorder",
+        "question": "Собери вопрос",
+        "words": [
+          "Zimmer",
+          "ein",
+          "Ist",
+          "frei"
+        ],
+        "correctOrder": [
+          "Ist",
+          "ein",
+          "Zimmer",
+          "frei"
+        ]
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Guten Tag! Haben Sie ein Doppelzimmer? – Ja, 80 Euro pro Nacht, Frühstück inklusive.",
+        "question": "Сколько стоит ночь?",
+        "options": [
+          "80 евро",
+          "70 евро",
+          "100 евро"
+        ],
+        "answer": "80 евро"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "der Ausweis",
+        "options": [
+          "Паспорт",
+          "Ключ-карта",
+          "Карта города"
+        ],
+        "answer": "Паспорт"
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Check-in ist ab 14 Uhr",
+        "answer": "Check-in ist ab 14 Uhr"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "Собери вопрос",
+        "words": [
+          "ohne",
+          "Frühstück",
+          "oder",
+          "Mit"
+        ],
+        "correctOrder": [
+          "Mit",
+          "Frühstück",
+          "oder",
+          "ohne"
+        ]
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "Что значит: Check-out",
+        "options": [
+          "Выезд",
+          "Заезд",
+          "Завтрак"
+        ],
+        "answer": "Выезд"
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Die Schlüsselkarte, bitte.",
+        "answer": "Die Schlüsselkarte, bitte."
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": [
+          "Ihren",
+          "Ausweis",
+          "Ich",
+          "brauche"
+        ],
+        "correctOrder": [
+          "Ich",
+          "brauche",
+          "Ihren",
+          "Ausweis"
+        ]
+      }
+    ]
+  },
+  {
+    "questId": "reise-hotel-2",
+    "title": "Вопросы на ресепшене",
+    "progress": "0/15",
+    "description": "Спрашиваешь про завтрак и Wi-Fi, уточняешь цену за ночь, просишь счёт и оплачиваешь.",
+    "conditions": {
+      "goal": "Frühstück/WLAN/Aufzug, Preis pro Nacht, Ich bezahle mit Karte/Bar, Rechnung",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 230,
+      "xp": 340
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "das Frühstück",
+        "options": [
+          "Завтрак",
+          "Ужин",
+          "Обед"
+        ],
+        "answer": "Завтрак"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "das WLAN",
+        "options": [
+          "Wi-Fi",
+          "Лифт",
+          "Кондиционер"
+        ],
+        "answer": "Wi-Fi"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "die Rechnung",
+        "options": [
+          "Счёт",
+          "Бронь",
+          "Карта города"
+        ],
+        "answer": "Счёт"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "der Aufzug",
+        "options": [
+          "Лифт",
+          "Лестница",
+          "Балкон"
+        ],
+        "answer": "Лифт"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "Собери вопрос",
+        "words": [
+          "ist",
+          "Frühstück",
+          "Wann"
+        ],
+        "correctOrder": [
+          "Wann",
+          "ist",
+          "Frühstück"
+        ]
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Frühstück ist von sieben bis zehn Uhr.",
+        "answer": "Frühstück ist von sieben bis zehn Uhr."
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Собери вопрос",
+        "words": [
+          "WLAN",
+          "es",
+          "Gibt"
+        ],
+        "correctOrder": [
+          "Gibt",
+          "es",
+          "WLAN"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Wie ist das WLAN-Passwort?",
+        "answer": "Wie ist das WLAN-Passwort?"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Einzelzimmer: 60 Euro pro Nacht. Doppelzimmer: 80 Euro pro Nacht.",
+        "question": "Сколько стоит двухместный номер?",
+        "options": [
+          "80 евро",
+          "60 евро",
+          "100 евро"
+        ],
+        "answer": "80 евро"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "mit Dusche",
+        "options": [
+          "с душем",
+          "с ванной",
+          "с балконом"
+        ],
+        "answer": "с душем"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": [
+          "Karte",
+          "bezahle",
+          "mit",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bezahle",
+          "mit",
+          "Karte"
+        ]
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Kann ich später auschecken?",
+        "answer": "Kann ich später auschecken?"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "Check-out ist um zwölf Uhr. Späterer Check-out kostet zehn Euro.",
+        "question": "Сколько стоит поздний выезд?",
+        "options": [
+          "10 евро",
+          "12 евро",
+          "20 евро"
+        ],
+        "answer": "10 евро"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "Собери просьбу",
+        "words": [
+          "ruhiges",
+          "Ein",
+          "bitte",
+          "Zimmer"
+        ],
+        "correctOrder": [
+          "Ein",
+          "ruhiges",
+          "Zimmer",
+          "bitte"
+        ]
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ich brauche die Rechnung.",
+        "answer": "Ich brauche die Rechnung."
+      }
+    ]
+  },
+  {
+    "questId": "reise-hotel-3",
+    "title": "Проблемы в номере",
+    "progress": "0/15",
+    "description": "Сообщаешь о неполадках, просишь помощь, дополнительные вещи и уборку.",
+    "conditions": {
+      "goal": "Melden: funktioniert nicht/kaputt; просить помощь и вещи: Handtuch, Kissen; Zimmerreinigung",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 220,
+      "xp": 330
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "die Heizung",
+        "options": [
+          "Отопление",
+          "Холодильник",
+          "Звонок"
+        ],
+        "answer": "Отопление"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "die Klimaanlage",
+        "options": [
+          "Кондиционер",
+          "Штора",
+          "Пылесос"
+        ],
+        "answer": "Кондиционер"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "das Handtuch",
+        "options": [
+          "Полотенце",
+          "Подушка",
+          "Простыня"
+        ],
+        "answer": "Полотенце"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "die Fernbedienung",
+        "options": [
+          "Пульт",
+          "Розетка",
+          "Лампочка"
+        ],
+        "answer": "Пульт"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": [
+          "gibt",
+          "Problem",
+          "ein",
+          "Es"
+        ],
+        "correctOrder": [
+          "Es",
+          "gibt",
+          "ein",
+          "Problem"
+        ]
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Die Heizung funktioniert nicht.",
+        "answer": "Die Heizung funktioniert nicht."
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Собери вежливую просьбу",
+        "words": [
+          "bitte",
+          "Sie",
+          "Können",
+          "helfen"
+        ],
+        "correctOrder": [
+          "Können",
+          "Sie",
+          "bitte",
+          "helfen"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Das WLAN funktioniert nicht.",
+        "answer": "Das WLAN funktioniert nicht."
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Im Zimmer gibt es keine Handtücher. Der Gast braucht zwei Handtücher.",
+        "question": "Что нужно гостю?",
+        "options": [
+          "Два полотенца",
+          "Одеяло",
+          "Пульт"
+        ],
+        "answer": "Два полотенца"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "Собери просьбу",
+        "words": [
+          "ein",
+          "zusätzliches",
+          "Kissen",
+          "bitte"
+        ],
+        "correctOrder": [
+          "ein",
+          "zusätzliches",
+          "Kissen",
+          "bitte"
+        ]
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Die Klimaanlage ist kaputt.",
+        "answer": "Die Klimaanlage ist kaputt."
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "die Zimmerreinigung",
+        "options": [
+          "Уборка номера",
+          "Карта города",
+          "Парковка"
+        ],
+        "answer": "Уборка номера"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "Die Zimmerreinigung kommt um vierzehn Uhr. Bitte nicht stören bis dreizehn Uhr.",
+        "question": "Во сколько придёт уборка?",
+        "options": [
+          "14:00",
+          "13:00",
+          "15:00"
+        ],
+        "answer": "14:00"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "Собери табличку на двери",
+        "words": [
+          "Bitte",
+          "nicht",
+          "stören"
+        ],
+        "correctOrder": [
+          "Bitte",
+          "nicht",
+          "stören"
+        ]
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ich brauche mehr Handtücher.",
+        "answer": "Ich brauche mehr Handtücher."
+      }
+    ]
+  },
+  {
+    "questId": "reise-hotel-4",
+    "title": "Сервисы и расписания",
+    "progress": "0/15",
+    "description": "Завтрак, лифт, лестница, парковка. Спрашиваешь «где/когда», узнаёшь расписания и детали.",
+    "conditions": {
+      "goal": "Wo?/Wann?, Frühstückszeiten, Aufzug/Treppe, Parkplatz, WLAN-Passwort, kostenlos/geöffnet",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 240,
+      "xp": 350
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Что значит: das Frühstück",
+        "options": [
+          "Завтрак",
+          "Ужин",
+          "Обед"
+        ],
+        "answer": "Завтрак"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "Что значит: der Aufzug",
+        "options": [
+          "Лифт",
+          "Лестница",
+          "Парковка"
+        ],
+        "answer": "Лифт"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "Что значит: die Treppe",
+        "options": [
+          "Лестница",
+          "Ресепшн",
+          "Комната"
+        ],
+        "answer": "Лестница"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "Что значит: der Parkplatz",
+        "options": [
+          "Парковка",
+          "Ресторан",
+          "Балкон"
+        ],
+        "answer": "Парковка"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": [
+          "Aufzug",
+          "ист",
+          "der",
+          "Wo"
+        ],
+        "correctOrder": [
+          "Wo",
+          "ist",
+          "der",
+          "Aufzug"
+        ]
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Wann ist das Frühstück?",
+        "answer": "Wann ist das Frühstück?"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": [
+          "Der",
+          "rechts",
+          "ist",
+          "Aufzug"
+        ],
+        "correctOrder": [
+          "Der",
+          "Aufzug",
+          "ist",
+          "rechts"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Das Frühstück ist von sieben bis zehn Uhr.",
+        "answer": "Das Frühstück ist von sieben bis zehn Uhr."
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Das Frühstück ist von sieben bis zehn Uhr. Der Parkplatz ist kostenlos.",
+        "question": "Стоянка платная?",
+        "options": [
+          "Нет",
+          "Да",
+          "Неизвестно"
+        ],
+        "answer": "Нет"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Переведи: kostenlos",
+        "options": [
+          "бесплатно",
+          "дорого",
+          "занято"
+        ],
+        "answer": "бесплатно"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Собери вопрос",
+        "words": [
+          "geöffnet",
+          "heute",
+          "Restaurant",
+          "das",
+          "Ist"
+        ],
+        "correctOrder": [
+          "Ist",
+          "das",
+          "Restaurant",
+          "heute",
+          "geöffnet"
+        ]
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ich brauche das WLAN-Passwort.",
+        "answer": "Ich brauche das WLAN-Passwort."
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "Check-out ist bis elf Uhr. Später? Fragen Sie an der Rezeption.",
+        "question": "До скольки чек-аут?",
+        "options": [
+          "до 11",
+          "до 10",
+          "до 12"
+        ],
+        "answer": "до 11"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "Собери вежливую просьбу",
+        "words": [
+          "Können",
+          "Sie",
+          "mir",
+          "die",
+          "Rechnung",
+          "geben"
+        ],
+        "correctOrder": [
+          "Können",
+          "Sie",
+          "mir",
+          "die",
+          "Rechnung",
+          "geben"
+        ]
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Wo ist die Rezeption?",
+        "answer": "Wo ist die Rezeption?"
+      }
+    ]
+  },
+  {
+    "questId": "reise-hotel-5",
+    "title": "Выезд и аэропорт",
+    "progress": "0/15",
+    "description": "Оплата, поздний выезд, багаж и дорога в аэропорт. Полезные фразы на выезде.",
+    "conditions": {
+      "goal": "Taxi/Flughafen, bezahlen (bar/Karte), Quittung/Rechnung, später auschecken, Gepäck dalassen, объявления",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 250,
+      "xp": 360
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Что значит: der Flughafen",
+        "options": [
+          "Аэропорт",
+          "Вокзал",
+          "Автовокзал"
+        ],
+        "answer": "Аэропорт"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "Что значит: das Gepäck",
+        "options": [
+          "Багаж",
+          "Билет",
+          "Карта"
+        ],
+        "answer": "Багаж"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "Что значит: die Quittung",
+        "options": [
+          "Чек (квитанция)",
+          "Ключ",
+          "Карта города"
+        ],
+        "answer": "Чек(квитанция)"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "Что значит: die Schlüsselkarte",
+        "options": [
+          "Ключ-карта",
+          "Визитка",
+          "Проездной"
+        ],
+        "answer": "Ключ-карта"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Выбери вежливую просьбу о такси",
+        "options": [
+          "Ein Taxi, bitte.",
+          "Ich brauche ein Zimmer.",
+          "Wo ist der Aufzug?"
+        ],
+        "answer": "Ein Taxi, bitte."
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ich möchte mit Karte bezahlen.",
+        "answer": "Ich möchte mit Karte bezahlen."
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Собери вопрос о позднем выезде",
+        "words": [
+          "auschecken",
+          "später",
+          "ich",
+          "Kann"
+        ],
+        "correctOrder": [
+          "Kann",
+          "ich",
+          "später",
+          "auschecken"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Kann ich mein Gepäck hier lassen?",
+        "answer": "Kann ich mein Gepäck hier lassen?"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Die Rechnung bekommen Sie an der Rezeption.",
+        "question": "Где получить счёт/чек?",
+        "options": [
+          "На ресепшене",
+          "В ресторане",
+          "В лифте"
+        ],
+        "answer": "На ресепшене"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Переведи: bar bezahlen",
+        "options": [
+          "платить наличными",
+          "платить картой",
+          "бронировать онлайн"
+        ],
+        "answer": "платить наличными"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Собери вопрос: Где аэропорт?",
+        "words": [
+          "Flughafen",
+          "ist",
+          "der",
+          "Wo"
+        ],
+        "correctOrder": [
+          "Wo",
+          "ist",
+          "der",
+          "Flughafen"
+        ]
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ich brauche eine Quittung.",
+        "answer": "Ich brauche eine Quittung."
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "Achtung: Der Aufzug funktioniert nicht. Bitte nehmen Sie die Treppe neben der Rezeption.",
+        "question": "Что не работает?",
+        "options": [
+          "Лифт",
+          "Парковка",
+          "Завтрак"
+        ],
+        "answer": "Лифт"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "Собери фразу: Это мой багаж",
+        "words": [
+          "Gepäck",
+          "Das",
+          "mein",
+          "ist"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "mein",
+          "Gepäck"
+        ]
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Können Sie mir ein Taxi zum Flughafen bestellen?",
+        "answer": "Können Sie mir ein Taxi zum Flughafen bestellen?"
+      }
+    ]
+  },
+  {
+    "questId": "reise-hotel-6",
+    "title": "Поездка и отель — мини-диалоги",
+    "progress": "0/15",
+    "description": "Тренируем готовые фразы: бронирование, заселение, просьбы, оплата, дорога в аэропорт. Без новых слов — только применение.",
+    "conditions": {
+      "goal": "Комбинировать выученные фразы: Reservierung, ruhiges Zimmer, Frühstückszeiten, Aufzug, Rechnung/Quittung, bezahlen (bar/Karte), Taxi/Flughafen",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": { "points": 20, "xp": 20 },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "readAndAnswer",
+        "text": "Guten Tag! Ich habe eine Reservierung für zwei Nächte.",
+        "question": "На сколько ночей бронь?",
+        "options": ["На две ночи", "На одну ночь", "Не указано"],
+        "answer": "На две ночи"
+      },
+      {
+        "id": 2,
+        "type": "reorder",
+        "question": "Собери: У меня есть бронь",
+        "words": ["eine", "Ich", "habe", "Reservierung"],
+        "correctOrder": ["Ich", "habe", "eine", "Reservierung"]
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ich brauche ein ruhiges Zimmer.",
+        "answer": "Ich brauche ein ruhiges Zimmer."
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "Собери: Завтрак с 7 до 10",
+        "words": ["Frühstück", "bis", "von", "sieben", "ist", "Uhr", "zehn"],
+        "correctOrder": ["Frühstück", "ist", "von", "sieben", "bis", "zehn", "Uhr"]
+      },
+      {
+        "id": 5,
+        "type": "readAndAnswer",
+        "text": "Check-out ist um elf Uhr. Ich bezahle mit Karte.",
+        "question": "Как он оплачивает?",
+        "options": ["Картой", "Наличными", "Он не платит"],
+        "answer": "Картой"
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Kann ich später auschecken?",
+        "answer": "Kann ich später auschecken?"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Собери: Я плачу картой",
+        "words": ["Karte", "bezahle", "mit", "Ich"],
+        "correctOrder": ["Ich", "bezahle", "mit", "Karte"]
+      },
+      {
+        "id": 8,
+        "type": "readAndAnswer",
+        "text": "Der Aufzug ist rechts.",
+        "question": "Где лифт?",
+        "options": ["Справа", "Слева", "Неизвестно"],
+        "answer": "Справа"
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Wo ist die Rezeption?",
+        "answer": "Wo ist die Rezeption?"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "Собери просьбу о полотенцах",
+        "words": ["Handtücher", "Ich", "zwei", "brauche"],
+        "correctOrder": ["Ich", "brauche", "zwei", "Handtücher"]
+      },
+      {
+        "id": 11,
+        "type": "readAndAnswer",
+        "text": "Check-in ist ab 14 Uhr. Der Parkplatz ist kostenlos.",
+        "question": "Когда начинается заселение?",
+        "options": ["В 14:00", "В 10:00", "В 12:00"],
+        "answer": "В 14:00"
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Können Sie mir ein Taxi zum Flughafen bestellen?",
+        "answer": "Können Sie mir ein Taxi zum Flughafen bestellen?"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "Собери: Мне нужна квитанция",
+        "words": ["Ich", "brauche", "eine", "Quittung"],
+        "correctOrder": ["Ich", "brauche", "eine", "Quittung"]
+      },
+      {
+        "id": 14,
+        "type": "readAndAnswer",
+        "text": "Achtung: Das WLAN funktioniert nicht. Bitte nicht stören.",
+        "question": "Что не работает?",
+        "options": ["Wi-Fi", "Лифт", "Парковка"],
+        "answer": "Wi-Fi"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Прослушай и напиши прощание",
+        "text": "Vielen Dank und auf Wiedersehen.",
+        "answer": "Vielen Dank und auf Wiedersehen."
+      }
+    ]
+  },
+  {
+    "questId": "reise-hotel-7",
+    "title": "Диалоги в отеле",
+    "progress": "0/15",
+    "description": "Короткие ситуации: бронирование, лифт, завтрак, проблемы в номере, оплата, дорога в аэропорт. Без новых слов — только применение.",
+    "conditions": {
+      "goal": "Быстро понимать и строить типовые фразы (Reservierung, Zimmer frei, Aufzug, Frühstückszeiten, WLAN, Rechnung/Quittung, bezahlen bar/Karte, Taxi/Flughafen)",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": { "points": 20, "xp": 20 },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "readAndAnswer",
+        "text": "Guten Tag! Ich habe eine Reservierung. Ein Doppelzimmer für zwei Nächte.",
+        "question": "Какой номер забронирован?",
+        "options": ["Одноместный", "Двухместный", "Не указано"],
+        "answer": "Двухместный"
+      },
+      {
+        "id": 2,
+        "type": "reorder",
+        "question": "Собери вопрос: «Свободен ли номер?»",
+        "words": ["Zimmer", "frei", "Ist", "ein"],
+        "correctOrder": ["Ist", "ein", "Zimmer", "frei"]
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ich brauche die Schlüsselkarte.",
+        "answer": "Ich brauche die Schlüsselkarte."
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "Собери ответ про лифт",
+        "words": ["rechts", "ist", "Aufzug", "Der"],
+        "correctOrder": ["Der", "Aufzug", "ist", "rechts"]
+      },
+      {
+        "id": 5,
+        "type": "readAndAnswer",
+        "text": "Das Frühstück ist von sieben bis zehn Uhr. Das WLAN-Passwort gibt es an der Rezeption.",
+        "question": "Где получить пароль от Wi-Fi?",
+        "options": ["На ресепшене", "В номере", "В ресторане"],
+        "answer": "На ресепшене"
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Die Heizung funktioniert nicht.",
+        "answer": "Die Heizung funktioniert nicht."
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Собери фразу: «В номере есть проблема»",
+        "words": ["Problem", "gibt", "ein", "Es", "Zimmer", "im"],
+        "correctOrder": ["Es", "gibt", "ein", "Problem", "im", "Zimmer"]
+      },
+      {
+        "id": 8,
+        "type": "readAndAnswer",
+        "text": "Ich brauche zwei Handtücher und ein Kissen.",
+        "question": "Что нужно гостю?",
+        "options": ["Два полотенца и одна подушка", "Одеяло и пульт", "Только полотенца"],
+        "answer": "Два полотенца и одна подушка"
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Kann ich später auschecken?",
+        "answer": "Kann ich später auschecken?"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "Собери: Я плачу наличными",
+        "words": ["bar", "bezahle", "Ich"],
+        "correctOrder": ["Ich", "bezahle", "bar"]
+      },
+      {
+        "id": 11,
+        "type": "readAndAnswer",
+        "text": "Das Taxi zum Flughafen kommt um zehn Uhr.",
+        "question": "Во сколько приезжает такси?",
+        "options": ["В 10:00", "В 12:00", "В 7:00"],
+        "answer": "В 10:00"
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ich brauche die Rechnung.",
+        "answer": "Ich brauche die Rechnung."
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "Собери вопрос: Где лестница?",
+        "words": ["Treppe", "die", "ist", "Wo"],
+        "correctOrder": ["Wo", "ist", "die", "Treppe"]
+      },
+      {
+        "id": 14,
+        "type": "readAndAnswer",
+        "text": "Achtung: Das WLAN funktioniert nicht. Bitte nicht stören.",
+        "question": "Что не работает?",
+        "options": ["Wi-Fi", "Лифт", "Парковка"],
+        "answer": "Wi-Fi"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Прослушай и напиши прощание",
+        "text": "Auf Wiedersehen.",
+        "answer": "Auf Wiedersehen."
+      }
+    ]
+  },
+  {
+    "questId": "reise-verkehr-8",
+    "title": "Поездка — транспорт по городу",
+    "progress": "0/15",
+    "description": "Автобус, метро, остановка и вокзал. Покупаешь билет, спрашиваешь дорогу и время.",
+    "conditions": {
+      "goal": "Использовать базовые фразы в городском транспорте: Bus, U-Bahn, Haltestelle, Bahnhof, Ticket; спрашивать «Wo/ Wohin …?» и время прибытия.",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 240,
+      "xp": 350
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "die Haltestelle",
+        "options": ["Остановка", "Лестница", "Лифт"],
+        "answer": "Остановка"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "der Bahnhof",
+        "options": ["Вокзал", "Аэропорт", "Кафе"],
+        "answer": "Вокзал"
+      },
+      {
+        "id": 3,
+        "type": "reorder",
+        "question": "Собери вопрос: Куда едет этот автобус?",
+        "words": ["Wohin", "Bus", "dieser", "fährt"],
+        "correctOrder": ["Wohin", "fährt", "dieser", "Bus"]
+      },
+      {
+        "id": 4,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Der Bus kommt um zehn Uhr",
+        "answer": "Der Bus kommt um zehn Uhr"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Как сказать: «Один билет, пожалуйста»",
+        "options": ["Ein Ticket, bitte", "Wo ist der Bahnhof?", "Guten Abend"],
+        "answer": "Ein Ticket, bitte"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Собери: Я еду на метро",
+        "words": ["mit", "der", "Ich", "fahre", "U-Bahn"],
+        "correctOrder": ["Ich", "fahre", "mit", "der", "U-Bahn"]
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Zwei Tickets, bitte",
+        "answer": "Zwei Tickets, bitte"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "Как сказать: «Где вокзал?»",
+        "options": ["Wo ist der Bahnhof?", "Wann ist Frühstück?", "Wie viel kostet das?"],
+        "answer": "Wo ist der Bahnhof?"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Die U-Bahn kommt um zwölf Uhr zehn. Der Bus kommt um zwölf Uhr zwanzig.",
+        "question": "Что приходит раньше?",
+        "options": ["Метро", "Автобус", "Одинаково"],
+        "answer": "Метро"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Как сказать водителю: «К вокзалу, пожалуйста»",
+        "options": ["Zum Bahnhof, bitte", "Zur Rezeption, bitte", "Mit Frühstück, bitte"],
+        "answer": "Zum Bahnhof, bitte"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Собери: Билет в метро, пожалуйста",
+        "words": ["bitte", "für", "Ticket", "die", "U-Bahn", "Ein"],
+        "correctOrder": ["Ein", "Ticket", "für", "die", "U-Bahn", "bitte"]
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Der Zug fährt nach Berlin",
+        "answer": "Der Zug fährt nach Berlin"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "Der Bus kommt um zehn Uhr. Die U-Bahn kommt um elf Uhr fünf.",
+        "question": "Во сколько приходит метро?",
+        "options": ["11:05", "10:00", "12:00"],
+        "answer": "11:05"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "Собери вопрос: Где остановка?",
+        "words": ["Wo", "die", "ist", "Haltestelle"],
+        "correctOrder": ["Wo", "ist", "die", "Haltestelle"]
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ich brauche zwei Tickets",
+        "answer": "Ich brauche zwei Tickets"
+      }
+    ]
+  },
+  {
+    "questId": "reise-bahn-9",
+    "title": "Поезд — вокзал и платформы",
+    "progress": "0/15",
+    "description": "Платформа/путь, отправление/прибытие, задержка. Где садиться и когда приезжает поезд.",
+    "conditions": {
+      "goal": "Понимать объявления и задавать вопросы на вокзале: Gleis, Bahnsteig, Abfahrt, Ankunft, Verspätung, umsteigen, Fahrplan.",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "das Gleis",
+        "options": ["Путь(платформа)", "Билет", "Лифт"],
+        "answer": "Путь (платформа)"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "die Ankunft",
+        "options": ["Прибытие", "Отправление", "Пересадка"],
+        "answer": "Прибытие"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "die Abfahrt",
+        "options": ["Отправление", "Прибытие", "Пересадка"],
+        "answer": "Отправление"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "die Ankunft",
+        "options": ["Прибытие", "Отправление", "Бронь"],
+        "answer": "Прибытие"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "Собери: Поезд отправляется с пути 4",
+        "words": ["ab", "4", "fährt", "von", "Gleis", "Zug", "Der"],
+        "correctOrder": ["Der", "Zug", "fährt", "von", "Gleis", "4", "ab"]
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Der Zug hat Verspätung",
+        "answer": "Der Zug hat Verspätung"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Собери вопрос: С какого пути отправляется поезд?",
+        "words": ["welchem", "Von", "Gleis", "der", "fährt", "Zug", "ab"],
+        "correctOrder": ["Von", "welchem", "Gleis", "fährt", "der", "Zug", "ab"]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ankunft um fünfzehn Uhr",
+        "answer": "Ankunft um fünfzehn Uhr"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Abfahrt: 10:20. Ankunft: 12:05. Der Zug fährt von Gleis 7.",
+        "question": "С какого пути отправляется поезд?",
+        "options": ["7", "5", "2"],
+        "answer": "7"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "umsteigen",
+        "options": ["Делать пересадку", "Оплачивать", "Бронировать"],
+        "answer": "Делать пересадку"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Собери: Я пересаживаюсь в Лейпциге",
+        "words": ["Ich", "Leipzig", "um", "steige", "in"],
+        "correctOrder": ["Ich", "steige", "in", "Leipzig", "um"]
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Der Zug kommt um halb neun an",
+        "answer": "Der Zug kommt um halb neun an"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "Der Zug nach Köln hat zwanzig Minuten Verspätung.",
+        "question": "На сколько задерживается поезд?",
+        "options": ["На 20 минут", "На 12 минут", "На 2 часа"],
+        "answer": "На 20 минут"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "Собери: Где платформа 3?",
+        "words": ["Bahnsteig", "der", "ist", "Wo", "3"],
+        "correctOrder": ["Wo", "ist", "der", "Bahnsteig", "3"]
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ich suche den Fahrplan",
+        "answer": "Ich suche den Fahrplan"
+      }
+    ]
+  },
+  {
+    "questId": "reise-flughafen-1",
+    "title": "Поездка — аэропорт и перелёт",
+    "progress": "0/15",
+    "description": "Регистрация, безопасность, выход на посадку, прилёт.",
+    "conditions": {
+      "goal": "Ориентироваться в аэропорту: Abflug/Ankunft, Gate, Bordkarte, Sicherheitskontrolle, Handgepäck, Gepäckausgabe, Verspätung.",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 240,
+      "xp": 350
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "der Abflug",
+        "options": ["Вылет", "Прилёт", "Посадка"],
+        "answer": "Вылет"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "die Ankunft",
+        "options": ["Прилёт", "Регистрация", "Контроль"],
+        "answer": "Прилёт"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "die Bordkarte",
+        "options": ["Посадочный талон", "Паспорт", "Багажная бирка"],
+        "answer": "Посадочный талон"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "das Gate",
+        "options": ["Выход на посадку", "Перрон", "Стойка регистрации"],
+        "answer": "Выход на посадку"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "Собери вопрос: «Где выход A12?»",
+        "words": ["ist", "das", "Gate", "Wo", "A12"],
+        "correctOrder": ["Wo", "ist", "das", "Gate", "A12"]
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ich habe eine Bordkarte",
+        "answer": "Ich habe eine Bordkarte"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "die Sicherheitskontrolle",
+        "options": ["Контроль безопасности", "Зал ожидания", "Паспортный контроль"],
+        "answer": "Контроль безопасности"
+      },
+      {
+        "id": 8,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": ["ist", "dort", "Die", "Sicherheitskontrolle"],
+        "correctOrder": ["Die", "Sicherheitskontrolle", "ist", "dort"]
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Abflug 16:20, Gate B5. Boarding um 15:50.",
+        "question": "Во сколько начинается посадка?",
+        "options": ["15:50", "16:20", "15:20"],
+        "answer": "15:50"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "das Handgepäck",
+        "options": ["Ручная кладь", "Основной багаж", "Чемодан на колёсах"],
+        "answer": "Ручная кладь"
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Wo ist die Gepäckausgabe",
+        "answer": "Wo ist die Gepäckausgabe"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": ["hat", "Verspätung", "Der", "Flug"],
+        "correctOrder": ["Der", "Flug", "hat", "Verspätung"]
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "der Sitzplatz",
+        "options": ["Место (в самолёте)", "Выход", "Проход"],
+        "answer": "Место (в самолёте)"
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Entschuldigung, wo ist Gate C3",
+        "answer": "Entschuldigung, wo ist Gate C3"
+      },
+      {
+        "id": 15,
+        "type": "readAndAnswer",
+        "text": "Achtung! Bitte gehen Sie sofort zum Gate B7. Das Boarding beginnt jetzt.",
+        "question": "К какому выходу нужно идти?",
+        "options": ["К B7", "К A7", "К B17"],
+        "answer": "К B7"
+      }
+    ]
+  },
+  {
+    "questId": "reise-mix-11",
+    "title": "Поездка — итоговая практика",
+    "progress": "0/15",
+    "description": "Отель, транспорт по городу, вокзал и аэропорт. Новых слов нет — только применение в новых ситуациях.",
+    "conditions": {
+      "goal": "Повторить и комбинировать: Rezeption/Reservierung/Zimmer, Frühstück, Aufzug/Treppe, WLAN, Rechnung/Quittung, bezahlen (bar/Karte), Taxi/Flughafen, Bahnhof/Haltestelle/Bus/U-Bahn/Ticket, Abfahrt/Ankunft/Gleis/Verspätung, Sicherheitskontrolle/Gate/Bordkarte/Handgepäck/Gepäckausgabe.",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 270,
+      "xp": 380
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "readAndAnswer",
+        "text": "An der Rezeption: „Guten Abend! Ein Einzelzimmer für zwei Nächte, 70 Euro pro Nacht. Check-in ab 14 Uhr.”",
+        "question": "Сколько стоит ночь?",
+        "options": ["70 евро", "60 евро", "80 евро"],
+        "answer": "70 евро"
+      },
+      {
+        "id": 2,
+        "type": "reorder",
+        "question": "Собери просьбу у стойки:",
+        "words": ["Ich", "brauche", "die", "Schlüsselkarte"],
+        "correctOrder": ["Ich", "brauche", "die", "Schlüsselkarte"]
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ich bezahle mit Karte.",
+        "answer": "Ich bezahle mit Karte."
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "die Quittung",
+        "options": ["Квитанция (чек)", "Ключ-карта", "Пароль от Wi-Fi"],
+        "answer": "Квитанция (чек)"
+      },
+      {
+        "id": 5,
+        "type": "readAndAnswer",
+        "text": "Abfahrt 09:15 von Gleis 3. Ankunft 11:05. Der Zug hat zehn Minuten Verspätung.",
+        "question": "На сколько задерживается поезд?",
+        "options": ["На 10 минут", "На 5 минут", "Без задержки"],
+        "answer": "На 10 минут"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Собери вопрос в аэропорту:",
+        "words": ["Sicherheitskontrolle", "ist", "die", "Wo"],
+        "correctOrder": ["Wo", "ist", "die", "Sicherheitskontrolle"]
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ich habe eine Bordkarte und Handgepäck.",
+        "answer": "Ich habe eine Bordkarte und Handgepäck."
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "die Gepäckausgabe",
+        "options": ["Выдача багажа", "Регистрация на рейс", "Паспортный контроль"],
+        "answer": "Выдача багажа"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Der Bus zum Flughafen fährt um 6:30 und um 7:00. Die U-Bahn fährt um 6:45.",
+        "question": "Что отправляется в 6:45?",
+        "options": ["Метро", "Автобус", "Такси"],
+        "answer": "Метро"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "Скажи водителю:",
+        "words": ["Bahnhof", "Zum", "bitte"],
+        "correctOrder": ["Zum", "Bahnhof", "bitte"]
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ich habe eine Reservierung.",
+        "answer": "Ich habe eine Reservierung."
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "kostenlos",
+        "options": ["бесплатно", "дорого", "закрыто"],
+        "answer": "бесплатно"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "Achtung: Der Aufzug ist links. Die Treppe ist rechts. Bitte nicht stören.",
+        "question": "Где находится лифт?",
+        "options": ["Слева", "Справа", "Не указано"],
+        "answer": "Слева"
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Kann ich mein Gepäck hier lassen?",
+        "answer": "Kann ich mein Gepäck hier lassen?"
+      },
+      {
+        "id": 15,
+        "type": "readAndAnswer",
+        "text": "Boarding um 18:20 am Gate A4.",
+        "question": "К какому выходу (Gate) нужно идти?",
+        "options": ["A4", "B4", "A14"],
+        "answer": "A4"
+      }
+    ]
+  },
+  {
+    "questId": "reise-mix-12",
+    "title": "Поездка — ещё практика",
+    "progress": "0/15",
+    "description": "Новые мини-ситуации: отель, городской транспорт, вокзал и аэропорт. Новых слов нет — только применение.",
+    "conditions": {
+      "goal": "Комбинировать выученное: Rezeption/Zimmer/Frühstück/WLAN/Aufzug/Treppe, Rechnung/Quittung, bezahlen (bar/Karte), Taxi/Flughafen, Haltestelle/Bahnhof/Bus/U-Bahn/Ticket, Abfahrt/Ankunft/Gleis/Verspätung, Sicherheitskontrolle/Gate/Bordkarte/Gepäckausgabe.",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": { "points": 275, "xp": 390 },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "readAndAnswer",
+        "text": "Frühstück von acht bis zehn Uhr. Check-out bis zwölf Uhr. Parkplatz kostenlos.",
+        "question": "До скольки чек-аут?",
+        "options": ["до 12", "до 10", "до 14"],
+        "answer": "до 12"
+      },
+      {
+        "id": 2,
+        "type": "reorder",
+        "question": "Собери фразу о номере:",
+        "words": ["Ein", "Doppelzimmer", "für", "zwei", "Nächte"],
+        "correctOrder": ["Ein", "Doppelzimmer", "für", "zwei", "Nächte"]
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ich bezahle bar.",
+        "answer": "Ich bezahle bar."
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "die Treppe",
+        "options": ["Лестница", "Лифт", "Парковка"],
+        "answer": "Лестница"
+      },
+      {
+        "id": 5,
+        "type": "readAndAnswer",
+        "text": "Abfahrt 08:40 von Gleis 5. Ankunft 10:10. Verspätung 5 Minuten.",
+        "question": "С какого пути отправляется поезд?",
+        "options": ["5", "8", "10"],
+        "answer": "5"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Собери вопрос на вокзале:",
+        "words": ["Wo", "ist", "der", "Bahnsteig", "2"],
+        "correctOrder": ["Wo", "ist", "der", "Bahnsteig", "2"]
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ich fahre mit der U-Bahn.",
+        "answer": "Ich fahre mit der U-Bahn."
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "das Ticket",
+        "options": ["Билет", "Перрон", "Лифт"],
+        "answer": "Билет"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Abflug 21:05, Gate C1. Boarding um 20:35.",
+        "question": "Во сколько начинается посадка?",
+        "options": ["20:35", "21:05", "20:15"],
+        "answer": "20:35"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "Собери жалобу в номер:",
+        "words": ["Das", "WLAN", "funktioniert", "nicht"],
+        "correctOrder": ["Das", "WLAN", "funktioniert", "nicht"]
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Können Sie mir ein Taxi bestellen?",
+        "answer": "Können Sie mir ein Taxi bestellen?"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "die Bordkarte",
+        "options": ["Посадочный талон", "Выдача багажа", "Паспортный контроль"],
+        "answer": "Посадочный талон"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "Der Bus fährt um 13:10, 13:20 und 13:40. Die U-Bahn fährt um 13:30.",
+        "question": "Когда следующий автобус после 13:10?",
+        "options": ["13:20", "13:30", "13:40"],
+        "answer": "13:20"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "Собери табличку на двери:",
+        "words": ["Bitte", "nicht", "stören"],
+        "correctOrder": ["Bitte", "nicht", "stören"]
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Wo ist das Gate B4?",
+        "answer": "Wo ist das Gate B4?"
+      }
+    ]
+  }
+
+
+]

@@ -119,14 +119,12 @@ const resetFields = () => {
 </script>
 
 <style scoped>
-.contact {
-  padding: 6rem 1.5rem;
-  font-family: "Nunito", sans-serif;
-}
 
 .contact__wrapper {
-  max-width: 1100px;
-  margin: 0 auto;
+  width: 100%;
+  padding: 2rem 1.5rem;
+  font-family: "Nunito", sans-serif;
+  margin-bottom: 50px;
 }
 
 .contact-form {
@@ -274,9 +272,15 @@ const resetFields = () => {
   }
 }
 
+@media (max-width: 767px) {
+  .contact__wrapper {
+    padding: 0 15px;
+  }
+}
+
 @media (max-width: 640px) {
-  .contact {
-    padding: 4rem 1rem;
+  .contact__wrapper {
+    padding: 1rem 15px;
   }
 
   .form__content {
@@ -297,6 +301,5 @@ const resetFields = () => {
   .btn--submit {
     font-size: 1rem;
   }
-
 }
 </style>

@@ -30,13 +30,13 @@
             ref="payButton"
             @click="pay"
         >
-          Приобрести подписку  5.99$
+          Приобрести подписку
         </button>
       </div>
     </div>
     <transition name="slide-up">
       <div v-if="showStickyFooter && !authStore.isPremium" class="sticky-footer">
-        <button class="footer-btn" @click="pay">Приобрести подписку 5.99$</button>
+        <button class="footer-btn" @click="pay">Приобрести подписку</button>
       </div>
     </transition>
   </div>

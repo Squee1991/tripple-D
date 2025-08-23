@@ -8,11 +8,15 @@ import Rocket from '~/assets/awards/Rocket.svg'
 import BookOfWisdom from '~/assets/awards/bookOfWisdom.svg'
 import SandGlass from '~/assets/awards/sandglass.svg'
 import Shield from '~/assets/awards/shield.svg'
+import Globus from '~/assets/awards/globus.svg'
+import Compass from '~/assets/awards/compass.svg'
 
 export const AWARDS = [
+	{ key: 'explorer',            title: 'Глобус исследователя',        icon: Globus },
 	{ key: 'Articlus',            title: 'awards.articlus',        icon: WasteMoney },
 	{ key: 'registerAchievement', title: 'awards.registerAchievement',        icon: IdCard },
 	{ key: 'level10',             title: 'awards.level10',        icon: Wings },
+	{ key: 'languageLands50',     title: 'Компас исследователя',        icon: Compass },
 	{ key: 'SiteRegular',         title: 'awards.siteRegular',         icon: veteranMedal },
 	{ key: 'wrong100Answers',     title: 'awards.wrong100Answers',       icon: talismanOfPatience },
 	{ key: 'LastChance',          title: 'awards.lastChance',           icon: LastChance },

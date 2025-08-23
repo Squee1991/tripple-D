@@ -82,8 +82,8 @@
 
 
 <style scoped>
+
 	.why {
-		background: #fdfaf3;
 		padding: 60px 0;
 	}
 
@@ -200,12 +200,6 @@
 		font-weight: bold;
 	}
 
-	@media (max-width: 768px ) {
-		.why__item-text {
-			font-size: 15px;
-		}
-	}
-
 	.accordion-wrapper {
 		padding: 40px;
 
@@ -226,14 +220,11 @@
 		transition: .3s;
 	}
 
-
-
 	.icon {
 		width: 35px;
 		height: 35px;
 		filter: grayscale(100%);
 		z-index: 2;
-
 	}
 
 	.filter {
@@ -299,7 +290,6 @@
 		max-height: 200px;
 	}
 
-
 	.arrow {
 		position: absolute;
 		top: 10px;
@@ -309,7 +299,6 @@
 		height: 22px;
 		padding: 5px;
 		border-radius: 50%;
-
 	}
 
 	.arrow-item {
@@ -321,5 +310,17 @@
 		transition: .5s;
 		transform: scale(-1);
 	}
+
+  @media (max-width: 768px ) {
+    .why__item-text {
+      font-size: 15px;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .why {
+      padding: 10px 0;
+    }
+  }
 
 </style>
