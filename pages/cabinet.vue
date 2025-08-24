@@ -227,9 +227,7 @@
     </div>
   </div>
 </template>
-
 <script setup>
-
 import {ref, computed, onMounted, watch} from 'vue'
 import {useRouter} from 'vue-router'
 import {useI18n} from 'vue-i18n'

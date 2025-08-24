@@ -51,7 +51,7 @@
     {},
   ])
 
-	const toDiscord = () => { window.open('https://discord.gg/a5bkqpeP') }
+	const toDiscord = () => { window.open('https://discord.gg/dJGRN4Yz') }
 
 </script>
 <style scoped>
