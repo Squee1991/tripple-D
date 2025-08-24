@@ -10,8 +10,8 @@
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 200,
-      "xp": 300
+      "points": 10,
+      "xp": 20
     },
     "tasks": [
       {
@@ -190,9 +190,6 @@
         "question": "eastPlainFirstQuests.questFifteen",
         "text": "Guten Tag! wie gehts? sehr gut , danke ",
         "answer": "Guten Tag! wie gehts? sehr gut , danke "
-        "question": "Прослушайте и напишите предложение:",
-        "text": "Hallo wie geht's? sehr gut danke",
-        "answer": "Hallo wie geht's? sehr gut danke"
       }
     ]
   },
@@ -383,11 +380,11 @@
   },
   {
     "questId": "menschen-a1-shopping",
-    "title": "Что ты любишь делать?",
+    "title": "eastPlainThirdQuests.title",
     "progress": "0/15",
-    "description": "Ты общаешься с новыми друзьями в классе. Все рассказывают о том, чем любят заниматься в свободное время. Некоторые занимаются спортом, другие смотрят фильмы или читают.",
+    "description": "eastPlainThirdQuests.description",
     "conditions": {
-      "goal": "Научиться говорить о хобби и свободном времени",
+      "goal": "eastPlainThirdQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
@@ -399,105 +396,207 @@
       {
         "id": 1,
         "type": "select",
-        "question": "Как сказать: 'Магазин'",
-        "options": ["der Laden", "die Kasse", "das Geld"],
+        "question": "eastPlainThirdQuests.questOne",
+        "options": [
+          "der Laden",
+          "die Kasse",
+          "das Geld"
+        ],
         "answer": "der Laden"
       },
       {
         "id": 2,
         "type": "select",
-        "question": "Как сказать 'Купить",
-        "options": ["Kaufen", "gehen", "oder", "danke"],
+        "question": "eastPlainThirdQuests.questTwo",
+        "options": [
+          "Kaufen",
+          "gehen",
+          "oder",
+          "danke"
+        ],
         "answer": "Kaufen"
       },
       {
         "id": 3,
         "type": "reorder",
-        "question": "Как сказать 'Я иду в магазин",
-        "words": ["ich", "in", "gut", "den" , "gehe", "danke" , "laden"],
-        "correctOrder": ["ich", "gehe", "in", "den", "laden"]
+        "question": "eastPlainThirdQuests.questTree",
+        "words": [
+          "ich",
+          "in",
+          "gut",
+          "den",
+          "gehe",
+          "danke",
+          "laden"
+        ],
+        "correctOrder": [
+          "ich",
+          "gehe",
+          "in",
+          "den",
+          "laden"
+        ]
       },
       {
         "id": 4,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "eastPlainThirdQuests.questFour",
         "text": "Ich kaufe Brot",
         "answer": "Ich kaufe Brot"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Как сказать: 'Привет!Куда ты идешь? Я иду в магазин'",
-        "words": ["Hallo", "danke", "Wohin", "gehst", "danke", "du", "den" , "in" , "Laden" , "ich" , "gehe"],
-        "correctOrder": ["Hallo", "Wohin", "gehst", "du", "ich", "gehe", "in", "den" , "Laden"]
+        "question": "eastPlainThirdQuests.questFive",
+        "words": [
+          "Hallo",
+          "danke",
+          "Wohin",
+          "gehst",
+          "danke",
+          "du",
+          "den",
+          "in",
+          "Laden",
+          "ich",
+          "gehe"
+        ],
+        "correctOrder": [
+          "Hallo",
+          "Wohin",
+          "gehst",
+          "du",
+          "ich",
+          "gehe",
+          "in",
+          "den",
+          "Laden"
+        ]
       },
       {
         "id": 6,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "eastPlainThirdQuests.questSix",
         "text": "ich gehe in den Laden",
         "answer": "ich gehe in den Laden"
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Как сказать 'Я тоже иду в магазин",
-        "words": ["danke", "auch", "gehe", "du", "den" , "in" , "Laden" , "ich" , "gehe"],
-        "correctOrder": ["ich", "gehe", "auch", "in", "den", "Laden"]
+        "question": "eastPlainThirdQuests.questSeven",
+        "words": [
+          "danke",
+          "auch",
+          "gehe",
+          "du",
+          "den",
+          "in",
+          "Laden",
+          "ich",
+          "gehe"
+        ],
+        "correctOrder": [
+          "ich",
+          "gehe",
+          "auch",
+          "in",
+          "den",
+          "Laden"
+        ]
       },
       {
         "id": 8,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "eastPlainThirdQuests.questEight",
         "text": "Hallo Thomas!Wohin gehst du? ich gehe in den Laden",
         "answer": "Hallo Thomas!Wohin gehst du? ich gehe in den Laden"
       },
       {
         "id": 9,
         "type": "select",
-        "question": "Как сказать 'Супермаркет",
-        "options": ["Supermarkt", "Laden", "kaufen", "Hallo"],
+        "question": "eastPlainThirdQuests.questNine",
+        "options": [
+          "Supermarkt",
+          "Laden",
+          "kaufen",
+          "Hallo"
+        ],
         "answer": "Supermarkt"
       },
       {
         "id": 10,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "eastPlainThirdQuests.questTen",
         "text": "Ich gehe in den Supermarkt",
         "answer": "Ich gehe in den Supermarkt"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Как сказать 'Я не иду в супермаркет",
-        "words": ["Supermarkt", "Laden", "kaufen", "den", "gehe", "Laden", "nicht", "in" , "ich" , "Brot"],
-        "correctOrder": ["ich", "gehe", "nicht", "in", "den", "Supermarkt"]
+        "question": "eastPlainThirdQuests.questEleven",
+        "words": [
+          "Supermarkt",
+          "Laden",
+          "kaufen",
+          "den",
+          "gehe",
+          "Laden",
+          "nicht",
+          "in",
+          "ich",
+          "Brot"
+        ],
+        "correctOrder": [
+          "ich",
+          "gehe",
+          "nicht",
+          "in",
+          "den",
+          "Supermarkt"
+        ]
       },
       {
         "id": 12,
         "type": "select",
-        "question": "Как сказать 'Касса",
-        "options": ["die Kasse", "der Supermarkt", "oder", "danke"],
+        "question": "eastPlainThirdQuests.questTwelve",
+        "options": [
+          "die Kasse",
+          "der Supermarkt",
+          "oder",
+          "danke"
+        ],
         "answer": "die Kasse"
       },
       {
         "id": 13,
         "type": "select",
-        "question": "Как сказать 'Цена",
-        "options": ["die Kasse", "der Preis", "Hallo", "danke" , "bis bald"],
+        "question": "eastPlainThirdQuests.questThirteen",
+        "options": [
+          "die Kasse",
+          "der Preis",
+          "Hallo",
+          "danke",
+          "bis bald"
+        ],
         "answer": "der Preis"
       },
       {
         "id": 14,
         "type": "select",
-        "question": "Как сказать 'Чек",
-        "options": ["die Rechnung", "der Preis", "Hallo", "danke" , "nicht"],
+        "question": "eastPlainThirdQuests.questFourteen",
+        "options": [
+          "die Rechnung",
+          "der Preis",
+          "Hallo",
+          "danke",
+          "nicht"
+        ],
         "answer": "die Rechnung"
       },
       {
-        "id": 10,
-        "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "id": 15,
+        "type": "speechToText.questFifteen",
+        "question": "eastPlainThirdQuests",
         "text": "die Rechnung",
         "answer": "die Rechnung"
       }
@@ -522,22 +621,44 @@
         "id": 1,
         "type": "select",
         "question": "Как сказать 'Очередь'",
-        "options": ["die Schlange", "der Korb", "der Preis"],
+        "options": [
+          "die Schlange",
+          "der Korb",
+          "der Preis"
+        ],
         "answer": "die Schlange"
       },
       {
-        "id": 1,
+        "id": 2,
         "type": "select",
         "question": "Как сказать 'Касса'",
-        "options": ["die Kasse", "der Korb", "das Geld"],
+        "options": [
+          "die Kasse",
+          "der Korb",
+          "das Geld"
+        ],
         "answer": "die Kasse"
       },
       {
         "id": 3,
         "type": "reorder",
         "question": "Собери: Я стою в очереди",
-        "words": ["in", "ich", "der", "stehe", "schlange" , "Preis" , "Hallo"],
-        "correctOrder": ["ich", "stehe", "in", "der", "schlange"]
+        "words": [
+          "in",
+          "ich",
+          "der",
+          "stehe",
+          "schlange",
+          "Preis",
+          "Hallo"
+        ],
+        "correctOrder": [
+          "ich",
+          "stehe",
+          "in",
+          "der",
+          "schlange"
+        ]
       },
       {
         "id": 4,
@@ -550,7 +671,11 @@
         "id": 5,
         "type": "select",
         "question": "Как сказать 'Платить'?",
-        "options": ["bezahlen", "Hallo", "Bis bald"],
+        "options": [
+          "bezahlen",
+          "Hallo",
+          "Bis bald"
+        ],
         "answer": "bezahlen"
       },
       {
@@ -564,14 +689,24 @@
         "id": 7,
         "type": "select",
         "question": "Как сказать 'Деньги'?",
-        "options": ["das Geld", "Hallo", "nicht" , "die Kasse"],
+        "options": [
+          "das Geld",
+          "Hallo",
+          "nicht",
+          "die Kasse"
+        ],
         "answer": "das Geld"
       },
       {
-        "id": 7,
+        "id": 8,
         "type": "select",
         "question": "Как сказать 'Наличные'?",
-        "options": ["das Bargeld", "Hallo", "nicht" , "das Geld"],
+        "options": [
+          "das Bargeld",
+          "Hallo",
+          "nicht",
+          "das Geld"
+        ],
         "answer": "das Bargeld"
       },
       {
@@ -585,15 +720,32 @@
         "id": 10,
         "type": "select",
         "question": "Как сказать 'Купюра'?",
-        "options": ["das Bargeld", "Hallo", "der Schein" , "das Geld"],
+        "options": [
+          "das Bargeld",
+          "Hallo",
+          "der Schein",
+          "das Geld"
+        ],
         "answer": "der Schein"
       },
       {
         "id": 11,
         "type": "reorder",
         "question": "Собери: Платить картой",
-        "words": ["bargeld", "mit", "der", "der Schein", "schlange" , "Preis" , "bezahlen"],
-        "correctOrder": ["mit", "bargeld", "bezahlen"]
+        "words": [
+          "bargeld",
+          "mit",
+          "der",
+          "der Schein",
+          "schlange",
+          "Preis",
+          "bezahlen"
+        ],
+        "correctOrder": [
+          "mit",
+          "bargeld",
+          "bezahlen"
+        ]
       },
       {
         "id": 12,
@@ -603,17 +755,22 @@
         "answer": "Ich bezahle mit Karte"
       },
       {
-        "id": 12,
+        "id": 13,
         "type": "speechToText",
         "question": "Прослушай и напиши:",
         "text": "Ich bezahle mit Karte oder bargeld",
         "answer": "Ich bezahle mit Karte oder bargeld"
       },
       {
-        "id": 10,
+        "id": 14,
         "type": "select",
         "question": "Как сказать 'Монета",
-        "options": ["das Bargeld", "Hallo", "die Münze" , "das Geld"],
+        "options": [
+          "das Bargeld",
+          "Hallo",
+          "die Münze",
+          "das Geld"
+        ],
         "answer": "der Schein"
       },
       {
@@ -644,21 +801,39 @@
         "id": 1,
         "type": "select",
         "question": "Как сказать 'Пожалуйста'",
-        "options": ["bitte", "danke", "Hallo"],
+        "options": [
+          "bitte",
+          "danke",
+          "Hallo"
+        ],
         "answer": "bitte"
       },
       {
         "id": 2,
         "type": "reorder",
         "question": "Как сказать: 'Чай, пожалуйста'",
-        "words": ["Tee", "Ich", "bitte", "Danke", "möchte"],
-        "correctOrder": ["Tee", "bitte"]
+        "words": [
+          "Tee",
+          "Ich",
+          "bitte",
+          "Danke",
+          "möchte"
+        ],
+        "correctOrder": [
+          "Tee",
+          "bitte"
+        ]
       },
       {
-        "id": 1,
+        "id": 3,
         "type": "select",
         "question": "Как сказать 'Купюра'",
-        "options": ["der Schein", "Danke", "Bis bald", "der Preis"],
+        "options": [
+          "der Schein",
+          "Danke",
+          "Bis bald",
+          "der Preis"
+        ],
         "answer": "der Schein"
       },
       {
@@ -672,15 +847,41 @@
         "id": 5,
         "type": "reorder",
         "question": "Собери предложение: Я хотел бы кофе пожалуйста",
-        "words": ["Kaffee", "Ich", "mit", "bitte", "einen", "möchte", "Tee"],
-        "correctOrder": ["Ich", "möchte", "einen", "Kaffee", "bitte"]
+        "words": [
+          "Kaffee",
+          "Ich",
+          "mit",
+          "bitte",
+          "einen",
+          "möchte",
+          "Tee"
+        ],
+        "correctOrder": [
+          "Ich",
+          "möchte",
+          "einen",
+          "Kaffee",
+          "bitte"
+        ]
       },
       {
-        "id": 5,
+        "id": 6,
         "type": "reorder",
         "question": "Как спросить: Сколько стоит?",
-        "words": ["Wie", "Tee", "kostet", "viel", "", "möchte", "Tee"],
-        "correctOrder": ["Wie", "viel", "kostet"]
+        "words": [
+          "Wie",
+          "Tee",
+          "kostet",
+          "viel",
+          "",
+          "möchte",
+          "Tee"
+        ],
+        "correctOrder": [
+          "Wie",
+          "viel",
+          "kostet"
+        ]
       },
       {
         "id": 7,
@@ -693,7 +894,11 @@
         "type": "readAndAnswer",
         "text": "Im Supermarkt kaufe ich Brot, Käse und zwei Flaschen Wasser.",
         "question": "Что покупатель хочет купить?",
-        "options": ["das Fleisch", "das Brot, der Käse und das Wasser", "die Milch"],
+        "options": [
+          "das Fleisch",
+          "das Brot, der Käse und das Wasser",
+          "die Milch"
+        ],
         "answer": "das Brot, der Käse und das Wasser"
       },
       {
@@ -707,14 +912,29 @@
         "id": 10,
         "type": "reorder",
         "question": "Как сказать: Бутылка воды",
-        "words": ["Tee", "Flasche", "die", "Wasser", "möchte", "Tee"],
-        "correctOrder": ["die", "Flasche", "Wasser"]
+        "words": [
+          "Tee",
+          "Flasche",
+          "die",
+          "Wasser",
+          "möchte",
+          "Tee"
+        ],
+        "correctOrder": [
+          "die",
+          "Flasche",
+          "Wasser"
+        ]
       },
       {
         "id": 11,
         "type": "select",
         "question": "Как сказать 'Я люблю пить чай'",
-        "options": ["ich trinke gern Tee", "ich kaufe brot", "Tee Bitte"],
+        "options": [
+          "ich trinke gern Tee",
+          "ich kaufe brot",
+          "Tee Bitte"
+        ],
         "answer": "ich trinke gern Tee"
       },
       {
@@ -727,15 +947,36 @@
         "id": 13,
         "type": "reorder",
         "question": "Собери предложение: Чай и хлеб с маслом пожалуйста",
-        "words": ["Tee", "und", "mit", "oder", "danke", "der Preis", "Butter", "bitte" , "Brot"],
-        "correctOrder": ["Tee", "und", "Brot", "mit" , "Butter" , "bitte"]
+        "words": [
+          "Tee",
+          "und",
+          "mit",
+          "oder",
+          "danke",
+          "der Preis",
+          "Butter",
+          "bitte",
+          "Brot"
+        ],
+        "correctOrder": [
+          "Tee",
+          "und",
+          "Brot",
+          "mit",
+          "Butter",
+          "bitte"
+        ]
       },
       {
         "id": 14,
         "type": "readAndAnswer",
         "text": "Ich nehme einen Kaffee Bitte",
         "question": "Что заказал человек?",
-        "options": ["der Kaffee", "der Kaffee und der Kuchen", "nur der Kuchen"],
+        "options": [
+          "der Kaffee",
+          "der Kaffee und der Kuchen",
+          "nur der Kuchen"
+        ],
         "answer": "der Kaffee"
       },
       {
@@ -766,7 +1007,11 @@
         "id": 1,
         "type": "select",
         "question": "Я учитель(мужчина)",
-        "options": ["ich bin Lehrer", "ich bin Lehrerin", "ich bin Student"],
+        "options": [
+          "ich bin Lehrer",
+          "ich bin Lehrerin",
+          "ich bin Student"
+        ],
         "answer": "ich bin Lehrer"
       },
       {
@@ -779,7 +1024,11 @@
         "id": 3,
         "type": "select",
         "question": "Как сказать: Оффициант",
-        "options": ["der Kellner", "der Fahrer", "die Lehrerin"],
+        "options": [
+          "der Kellner",
+          "der Fahrer",
+          "die Lehrerin"
+        ],
         "answer": "der Kellner"
       },
       {
@@ -800,8 +1049,20 @@
         "id": 6,
         "type": "reorder",
         "question": "Собери предложение: Какая у тебя профессия?",
-        "words": ["Was", "Beruf", "als", "Beruf", "ist" , "dein"],
-        "correctOrder": ["Was", "ist", "dein", "Beruf"]
+        "words": [
+          "Was",
+          "Beruf",
+          "als",
+          "Beruf",
+          "ist",
+          "dein"
+        ],
+        "correctOrder": [
+          "Was",
+          "ist",
+          "dein",
+          "Beruf"
+        ]
       },
       {
         "id": 7,
@@ -821,7 +1082,11 @@
         "type": "readAndAnswer",
         "text": "Hallo, ich heiße Nina. Ich bin Lehrerin und arbeite in einer Schule.",
         "question": "Где работает Нина?",
-        "options": ["В больнице", "В школе", "В офисе"],
+        "options": [
+          "В больнице",
+          "В школе",
+          "В офисе"
+        ],
         "answer": "В школе"
       },
       {
@@ -835,14 +1100,22 @@
         "id": 11,
         "type": "select",
         "question": "Повар(м.р)",
-        "options": ["der Koch", "die Lehrerin", "die Kellnerin"],
+        "options": [
+          "der Koch",
+          "die Lehrerin",
+          "die Kellnerin"
+        ],
         "answer": "Она продавец"
       },
       {
         "id": 12,
         "type": "select",
         "question": "Она парикмахер",
-        "options": ["die Friseurin", "der Koch", "der Elektriker"],
+        "options": [
+          "die Friseurin",
+          "der Koch",
+          "der Elektriker"
+        ],
         "answer": "die Friseurin"
       },
       {
@@ -855,15 +1128,30 @@
         "id": 14,
         "type": "reorder",
         "question": "Собери предложение: Он работает в больнице",
-        "words": ["arbeitet", "Er", "Krankenhaus", "im" , "Lager"],
-        "correctOrder": ["Er", "arbeitet", "im", "Krankenhaus"]
+        "words": [
+          "arbeitet",
+          "Er",
+          "Krankenhaus",
+          "im",
+          "Lager"
+        ],
+        "correctOrder": [
+          "Er",
+          "arbeitet",
+          "im",
+          "Krankenhaus"
+        ]
       },
       {
         "id": 15,
         "type": "readAndAnswer",
         "text": "Das ist Peter. Er ist Koch und arbeitet in einem Restaurant.",
         "question": "Кем работает Петер?",
-        "options": ["der Lehrer", "die Lehrerin", "der Koch"],
+        "options": [
+          "der Lehrer",
+          "die Lehrerin",
+          "der Koch"
+        ],
         "answer": "der Koch"
       }
     ]
@@ -887,7 +1175,11 @@
         "id": 1,
         "type": "select",
         "question": "Выбери правильный вариант ответа: Сколько это стоит?",
-        "options": ["Wie viel kostet das?", "Wie geht's?", "Wohin gehst du"],
+        "options": [
+          "Wie viel kostet das?",
+          "Wie geht's?",
+          "Wohin gehst du"
+        ],
         "answer": "Wie viel kostet das?"
       },
       {
@@ -913,7 +1205,12 @@
         "id": 5,
         "type": "select",
         "question": "Выбери вариант ответа: Cейчас 10 часов",
-        "options": ["Es ist Zehn Uhr", "Heute ist Mittwoch ", "Guten Abend" , "Tee Bitte"],
+        "options": [
+          "Es ist Zehn Uhr",
+          "Heute ist Mittwoch ",
+          "Guten Abend",
+          "Tee Bitte"
+        ],
         "answer": "Es ist Zehn Uhr"
       },
       {
@@ -921,22 +1218,40 @@
         "type": "readAndAnswer",
         "text": "Die Milch kostet 1 Euro 20. Der Käse kostet 2 Euro 50.",
         "question": "Сколько стоит сыр?",
-        "options": ["1.20", "2.50", "3.00"],
+        "options": [
+          "1.20",
+          "2.50",
+          "3.00"
+        ],
         "answer": "2.50"
       },
       {
         "id": 7,
         "type": "reorder",
         "question": "Собери предложение",
-        "words": ["Uhr", "Es", "acht", "ist"],
-        "correctOrder": ["Es", "ist", "acht", "Uhr"]
+        "words": [
+          "Uhr",
+          "Es",
+          "acht",
+          "ist"
+        ],
+        "correctOrder": [
+          "Es",
+          "ist",
+          "acht",
+          "Uhr"
+        ]
       },
       {
         "id": 8,
         "type": "readAndAnswer",
         "text": "Die Milch kostet 1 Euro 20. Das Brot kostet 1 Euro 10",
         "question": "Сколько стоит сыр?",
-        "options": ["1.20", "1.10", "2.50"],
+        "options": [
+          "1.20",
+          "1.10",
+          "2.50"
+        ],
         "answer": "2.10"
       },
       {
@@ -950,36 +1265,66 @@
         "id": 10,
         "type": "select",
         "question": "Как правильно сказать '3 мая' по-немецки?",
-        "options": ["drei Mai", "der drei Mai", "der dritte Mai", "dritter Mai"],
+        "options": [
+          "drei Mai",
+          "der drei Mai",
+          "der dritte Mai",
+          "dritter Mai"
+        ],
         "answer": "der dritte Mai"
       },
       {
         "id": 11,
         "type": "select",
         "question": "Der 3. Mai",
-        "options": ["3 мая", "3 марта", "3 июня"],
+        "options": [
+          "3 мая",
+          "3 марта",
+          "3 июня"
+        ],
         "answer": "3 мая"
       },
       {
         "id": 12,
         "type": "select",
         "question": "Как правильно сказать '10 октября'?",
-        "options": ["der zehn Oktober", "zehnter Oktober", "der zehnte Oktober", "zehnte Oktober"],
+        "options": [
+          "der zehn Oktober",
+          "zehnter Oktober",
+          "der zehnte Oktober",
+          "zehnte Oktober"
+        ],
         "answer": "der zehnte Oktober"
       },
       {
         "id": 13,
         "type": "reorder",
         "question": "Собери: [heute, Der, ist, März, 12.]",
-        "words": ["heute", "Der", "ist", "März", "12."],
-        "correctOrder": ["Der", "12.", "März", "ist", "heute"]
+        "words": [
+          "heute",
+          "Der",
+          "ist",
+          "März",
+          "12."
+        ],
+        "correctOrder": [
+          "Der",
+          "12.",
+          "März",
+          "ist",
+          "heute"
+        ]
       },
       {
         "id": 14,
         "type": "readAndAnswer",
         "text": "Der Zug kommt um siebzehn Uhr dreißig.",
         "question": "Во сколько приходит поезд?",
-        "options": ["17:30", "7:30", "13:30"],
+        "options": [
+          "17:30",
+          "7:30",
+          "13:30"
+        ],
         "answer": "17:30"
       },
       {
@@ -1010,7 +1355,11 @@
         "id": 1,
         "type": "select",
         "question": "Das ist meine Mutter",
-        "options": ["Это моя мама", "Это моя дочь", "Это мой отец"],
+        "options": [
+          "Это моя мама",
+          "Это моя дочь",
+          "Это мой отец"
+        ],
         "answer": "Это моя мама"
       },
       {
@@ -1028,84 +1377,128 @@
         "answer": "Ich habe eine Schwester"
       },
       {
-        "id": 5,
+        "id": 4,
         "type": "select",
         "question": "Hast du Geschwister?",
-        "options": ["У тебя есть братья/сёстры?", "Ты живёшь с родителями?", "У тебя есть дети?"],
+        "options": [
+          "У тебя есть братья/сёстры?",
+          "Ты живёшь с родителями?",
+          "У тебя есть дети?"
+        ],
         "answer": "У тебя есть братья/сёстры?"
       },
       {
         "id": 5,
-        "type": "select",
-        "question": "Hast du Geschwister?",
-        "options": ["У тебя есть братья/сёстры?", "Ты живёшь с родителями?", "У тебя есть дети?"],
-        "answer": "У тебя есть братья/сёстры?"
+        "type": "reorder",
+        "question": "Собери предложение: Он мой дядя",
+        "words": [
+          "mein",
+          "ist",
+          "Er",
+          "Onkel"
+        ],
+        "correctOrder": [
+          "Er",
+          "ist",
+          "mein",
+          "Onkel"
+        ]
       },
       {
         "id": 6,
         "type": "reorder",
-        "question": "Собери предложение: Он мой дядя",
-        "words": ["mein", "ist", "Er", "Onkel"],
-        "correctOrder": ["Er", "ist", "mein", "Onkel"]
+        "question": "Собери предложение: Мою маму зову Анна",
+        "words": [
+          "heißt",
+          "Meine",
+          "Mutter",
+          "Anna",
+          "Schwester",
+          "Oma"
+        ],
+        "correctOrder": [
+          "Meine",
+          "Mutter",
+          "heißt",
+          "Anna"
+        ]
       },
       {
         "id": 7,
-        "type": "reorder",
-        "question": "Собери предложение: Мою маму зову Анна",
-        "words": ["heißt", "Meine", "Mutter", "Anna", "Schwester" , "Oma"],
-        "correctOrder": ["Meine", "Mutter", "heißt", "Anna"]
-      },
-      {
-        "id": 8,
         "type": "readAndAnswer",
         "text": "Ich habe einen Bruder. Er heißt Tim und wohnt in Berlin.",
         "question": "Как зовут брата?",
-        "options": ["Tom", "Tim", "Ben" , "Berlin"],
+        "options": [
+          "Tom",
+          "Tim",
+          "Ben",
+          "Berlin"
+        ],
         "answer": "Tim"
       },
       {
-        "id": 9,
+        "id": 8,
         "type": "speechToText",
         "question": "Прослушай и напиши предложение",
         "text": "Das ist ihre Tochter",
         "answer": "Das ist ihre Tochter"
       },
       {
-        "id": 10,
+        "id": 9,
         "type": "textToSpeech",
         "question": "Прочитай вслух: Er ist mein Sohn",
         "text": "Er ist mein Sohn"
       },
       {
-        "id": 11,
+        "id": 10,
         "type": "select",
         "question": "Er heißt Lukas",
-        "options": ["Его зовут Лукас", "Её зовут Лукас", "Тебя зовут Лукас"],
+        "options": [
+          "Его зовут Лукас",
+          "Её зовут Лукас",
+          "Тебя зовут Лукас"
+        ],
         "answer": "Его зовут Лукас"
       },
       {
-        "id": 12,
+        "id": 11,
         "type": "input",
         "question": "Впиши: Это моя бабушка → Das ist meine ___",
         "correctAnswer": "Oma"
       },
       {
-        "id": 13,
+        "id": 12,
         "type": "reorder",
         "question": "Собери преджложение: Она моя мама",
-        "words": ["Schwester", "ist", "meine", "Sie" , "Opa" , "Mutter"],
-        "correctOrder": ["Sie", "ist", "meine", "Schwester"]
+        "words": [
+          "Schwester",
+          "ist",
+          "meine",
+          "Sie",
+          "Opa",
+          "Mutter"
+        ],
+        "correctOrder": [
+          "Sie",
+          "ist",
+          "meine",
+          "Schwester"
+        ]
       },
       {
-        "id": 14,
+        "id": 13,
         "type": "readAndAnswer",
         "text": "Paul ist mein Vater. Er arbeitet als Lehrer.",
         "question": "Кто такой Пауль?",
-        "options": ["Брат", "Отец", "Дядя"],
+        "options": [
+          "Брат",
+          "Отец",
+          "Дядя"
+        ],
         "answer": "Отец"
       },
       {
-        "id": 15,
+        "id": 14,
         "type": "speechToText",
         "question": "Прослушай и напиши предложение",
         "text": "Sie ist meine Tochter",
@@ -1132,7 +1525,11 @@
         "id": 1,
         "type": "select",
         "question": "Ich stehe um 6 Uhr auf",
-        "options": ["Я встаю в 6 часов", "Я ложусь в 6 часов", "Я завтракаю в 6"],
+        "options": [
+          "Я встаю в 6 часов",
+          "Я ложусь в 6 часов",
+          "Я завтракаю в 6"
+        ],
         "answer": "Я встаю в 6 часов"
       },
       {
@@ -1150,39 +1547,77 @@
         "answer": "Ich gehe zur Arbeit um 8 Uhr"
       },
       {
-        "id": 7,
+        "id": 4,
         "type": "reorder",
         "question": "Собери предложение",
-        "words": ["morgens", "ich", "trinke", "Wasser", "Heute", "Tee"],
-        "correctOrder": ["Morgens", "trinke", "ich", "Wasser"]
+        "words": [
+          "morgens",
+          "ich",
+          "trinke",
+          "Wasser",
+          "Heute",
+          "Tee"
+        ],
+        "correctOrder": [
+          "Morgens",
+          "trinke",
+          "ich",
+          "Wasser"
+        ]
       },
       {
         "id": 5,
         "type": "select",
         "question": "Was machst du morgens?",
-        "options": ["Я завтракаю", "Я сплю", "Я ложусь спать"],
+        "options": [
+          "Я завтракаю",
+          "Я сплю",
+          "Я ложусь спать"
+        ],
         "answer": "Я завтракаю"
       },
       {
         "id": 6,
         "type": "select",
         "question": "Как переводится на немецкий слово «днём»?",
-        "options": ["morgens", "nachmittags", "abends"],
+        "options": [
+          "morgens",
+          "nachmittags",
+          "abends"
+        ],
         "answer": "nachmittags"
       },
       {
         "id": 7,
         "type": "reorder",
         "question": "Собери предложение",
-        "words": ["auf", "ich", "stehe", "um", "7", "Uhr"],
-        "correctOrder": ["Ich", "stehe", "um", "7", "Uhr", "auf"]
+        "words": [
+          "auf",
+          "ich",
+          "stehe",
+          "um",
+          "7",
+          "Uhr"
+        ],
+        "correctOrder": [
+          "Ich",
+          "stehe",
+          "um",
+          "7",
+          "Uhr",
+          "auf"
+        ]
       },
       {
         "id": 8,
         "type": "readAndAnswer",
         "text": "Ich arbeite vormittags und habe nachmittags frei.",
         "question": "Когда он работает?",
-        "options": ["утром", "днём", "вечером"],
+        "options": [
+          "утром",
+          "днём",
+          "вечером"
+        ],
         "answer": "утром"
       },
       {
@@ -1203,29 +1638,68 @@
         "id": 11,
         "type": "select",
         "question": "Ich habe abends frei",
-        "options": ["Cвободное время вечером", "Я работаю вечером", "Я обедаю вечером"],
+        "options": [
+          "Cвободное время вечером",
+          "Я работаю вечером",
+          "Я обедаю вечером"
+        ],
         "answer": "Cвободное время вечером"
       },
       {
         "id": 12,
         "type": "reorder",
         "question": "Собери предложение",
-        "words": ["Er", "geht", "schlafen", "um", "11", "Uhr"],
-        "correctOrder": ["Er", "geht", "um", "11", "Uhr", "schlafen"]
+        "words": [
+          "Er",
+          "geht",
+          "schlafen",
+          "um",
+          "11",
+          "Uhr"
+        ],
+        "correctOrder": [
+          "Er",
+          "geht",
+          "um",
+          "11",
+          "Uhr",
+          "schlafen"
+        ]
       },
       {
         "id": 13,
         "type": "reorder",
         "question": "Построй предложение",
-        "words": ["Am", "liest", "Abend", "lese", "gern", "Buch", "ein", "ich"],
-        "correctOrder": ["Am", "Abend", "lese", "ich", "gern", "ein", "Buch"]
+        "words": [
+          "Am",
+          "liest",
+          "Abend",
+          "lese",
+          "gern",
+          "Buch",
+          "ein",
+          "ich"
+        ],
+        "correctOrder": [
+          "Am",
+          "Abend",
+          "lese",
+          "ich",
+          "gern",
+          "ein",
+          "Buch"
+        ]
       },
       {
         "id": 14,
         "type": "readAndAnswer",
         "text": "Maria frühstückt um 7 Uhr und fährt um Acht Uhr zur Arbeit.",
         "question": "Когда Мария едет на работу?",
-        "options": ["В 7 часов", "В 8 часов", "В 11 часов"],
+        "options": [
+          "В 7 часов",
+          "В 8 часов",
+          "В 11 часов"
+        ],
         "answer": "В 8 часов"
       },
       {
@@ -1256,7 +1730,11 @@
         "id": 1,
         "type": "select",
         "question": "Ich wohne in einer Wohnung",
-        "options": ["Я живу в квартире", "Я живу в доме", "Я живу в отеле"],
+        "options": [
+          "Я живу в квартире",
+          "Я живу в доме",
+          "Я живу в отеле"
+        ],
         "answer": "Я живу в квартире"
       },
       {
@@ -1270,22 +1748,40 @@
         "id": 3,
         "type": "select",
         "question": "Er lebt im Zentrum",
-        "options": ["Он живёт в центре", "Он живёт на ферме", "Он живёт в горах"],
+        "options": [
+          "Он живёт в центре",
+          "Он живёт на ферме",
+          "Он живёт в горах"
+        ],
         "answer": "Он живёт в центре"
       },
       {
         "id": 4,
         "type": "reorder",
         "question": "Собери предложение",
-        "words": ["Ich", "Berlin", "wohne", "in"],
-        "correctOrder": ["Ich", "wohne", "in", "Berlin"]
+        "words": [
+          "Ich",
+          "Berlin",
+          "wohne",
+          "in"
+        ],
+        "correctOrder": [
+          "Ich",
+          "wohne",
+          "in",
+          "Berlin"
+        ]
       },
       {
         "id": 5,
         "type": "readAndAnswer",
         "text": "Thomas wohnt in einem Haus auf dem Land.",
         "question": "Где живёт Томас?",
-        "options": ["В городе", "В центре", "За городом"],
+        "options": [
+          "В городе",
+          "В центре",
+          "За городом"
+        ],
         "answer": "За городом"
       },
       {
@@ -1300,14 +1796,22 @@
         "type": "readAndAnswer",
         "text": "Tom ist zwanzig Jahre alt und studiert in Berlin.",
         "question": "Сколько лет Тому?",
-        "options": ["10 лет", "20 лет", "30 лет"],
+        "options": [
+          "10 лет",
+          "20 лет",
+          "30 лет"
+        ],
         "answer": "20 лет"
       },
       {
         "id": 11,
         "type": "select",
         "question": "Sie wohnt in einem Haus",
-        "options": ["Она живёт в доме", "Она живёт в квартире", "Она живёт в отеле"],
+        "options": [
+          "Она живёт в доме",
+          "Она живёт в квартире",
+          "Она живёт в отеле"
+        ],
         "answer": "Она живёт в доме"
       },
       {
@@ -1315,22 +1819,44 @@
         "type": "readAndAnswer",
         "text": "Martin wohnt auf dem Land. Er arbeitet in der Stadt.",
         "question": "Где живёт Мартин?",
-        "options": ["В городе", "За городом", "В Германии"],
+        "options": [
+          "В городе",
+          "За городом",
+          "В Германии"
+        ],
         "answer": "За городом"
       },
       {
         "id": 13,
         "type": "reorder",
         "question": "Собери предложение",
-        "words": ["Sie", "in", "wohnt", "Wohnung", "einer" ,"Stadt" , "Tag"],
-        "correctOrder": ["Sie", "wohnt", "in", "einer", "Wohnung"]
+        "words": [
+          "Sie",
+          "in",
+          "wohnt",
+          "Wohnung",
+          "einer",
+          "Stadt",
+          "Tag"
+        ],
+        "correctOrder": [
+          "Sie",
+          "wohnt",
+          "in",
+          "einer",
+          "Wohnung"
+        ]
       },
       {
         "id": 14,
         "type": "readAndAnswer",
         "text": "Anna kommt aus Österreich und lebt jetzt in Köln.",
         "question": "Где Анна живёт сейчас?",
-        "options": ["В Австрии", "В Берлине", "В Кёльне"],
+        "options": [
+          "В Австрии",
+          "В Берлине",
+          "В Кёльне"
+        ],
         "answer": "В Кёльне"
       },
       {
