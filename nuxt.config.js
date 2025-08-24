@@ -74,12 +74,4 @@
 			firebaseClientId: process.env.FIREBASE_CLIENT_ID,
 		}
 	},
-		devServer: {
-			port: 3000
-		},
-		vite: {
-			server: {
-				strictPort: true
-			}
-		}
 })

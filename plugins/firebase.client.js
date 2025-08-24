@@ -22,3 +22,5 @@ export default defineNuxtRouteMiddleware(async (to) => {
         return navigateTo(to.query.redirect || '/cabinet')
     }
 })
+
+console.log(123)

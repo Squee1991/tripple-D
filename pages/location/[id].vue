@@ -107,7 +107,7 @@ function goHome() {
 
 <style scoped>
 .location-page {
-  padding: 12px;
+  padding: 20px;
   min-height: 100vh;
   color: #1b1b1b;
   font-family: "Nunito", sans-serif;
@@ -140,6 +140,10 @@ function goHome() {
   outline-offset: 3px;
 }
 
+.region__title-name {
+  font-size: 32px;
+}
+
 .location-header {
   display: flex;
   align-items: center;
@@ -152,11 +156,6 @@ function goHome() {
   box-shadow: 4px 4px 0 #2b2b2b;
   margin-bottom: 18px;
   overflow: visible;
-}
-
-
-.location-header h1 {
-  font-size: 32px;
 }
 
 .location-desc {
@@ -284,8 +283,10 @@ function goHome() {
   top: 10px;
   right: -18px;
   transform: rotate(-12deg);
-  background: linear-gradient(180deg, #b9f5c4 0%, #6ee7a0 100%);
-  color: #111;
+  background: linear-gradient(180deg, #6a74a5 0%, #5d7fc1 100%
+  100%
+  );
+  color: white;
   border: 3px solid #111;
   border-radius: 12px;
   padding: 8px 14px;
@@ -445,6 +446,13 @@ function goHome() {
     top: 10px;
   }
 
+  .location-header {
+    padding: 14px;
+  }
+  .region__title-name{
+    font-size: 24px;
+  }
+
   .quest-list {
     grid-template-columns:1fr;
     gap: 16px;
@@ -452,9 +460,6 @@ function goHome() {
 
   .quest-card {
     box-shadow: 4px 4px 0 black;
-  }
-  .location-header {
-    padding: 15px;
   }
 
   .location-header:after {
@@ -477,7 +482,8 @@ function goHome() {
     transform: translate(2px, 2px);
     box-shadow: 2px 2px 0 #2b2b2b;
   }
-
+}
+@media (min-width: 768px) {
   .location-header::after {
     content: "!";
     position: absolute;

@@ -328,6 +328,7 @@ definePageMeta({
     box-shadow: 3px 3px 0 #1e1e1e;
     padding: 10px;
     font-size: 1.5rem;
+    width: 100%;
   }
 
   .theory-subtitle {
