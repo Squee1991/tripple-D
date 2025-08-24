@@ -233,13 +233,11 @@
 import {ref, computed, onMounted, watch} from 'vue'
 import {useRouter} from 'vue-router'
 import {useI18n} from 'vue-i18n'
-
 import Progress from '../src/components/progress.vue'
 import Shop from '../src/components/Shop.vue'
 import Modal from '../src/components/modal.vue'
 import AwardsList from '../src/components/AwardsList.vue'
 import VToggle from '~/src/components/V-toggle.vue'
-
 import {userAuthStore} from '../store/authStore.js'
 import {userlangStore} from '../store/learningStore.js'
 import {useAchievementStore} from '../store/achievementStore.js'

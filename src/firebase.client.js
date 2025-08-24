@@ -1,42 +1,15 @@
-// plugins/firebase.client.js
-import { initializeApp } from 'firebase/app'
-import {
-    getAuth,
-    createUserWithEmailAndPassword,
-    signInWithEmailAndPassword,
-    setPersistence,
-    browserLocalPersistence
-} from 'firebase/auth'
-import {
-    getFirestore,
-    updateDoc,
-    deleteField,
-    deleteDoc
-} from 'firebase/firestore'
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, setPersistence, browserLocalPersistence } from 'firebase/auth';
+import { getFirestore, updateDoc, deleteField, deleteDoc } from 'firebase/firestore';
+import { useFirebase } from 'vuefire'
 
-import { firebaseConfig } from '../config/firebaseConfig.js'
 
-export default defineNuxtPlugin(() => {
-    // инициализация Firebase
-    const app = initializeApp(firebaseConfig)
+const { $firebase } = useFirebase()
+const auth = getAuth($firebase);
+const db = getFirestore($firebase);
 
-    const auth = getAuth(app)
-    const db = getFirestore(app)
+setPersistence(auth, browserLocalPersistence);
 
-    setPersistence(auth, browserLocalPersistence)
+export { auth, db, deleteField, deleteDoc, updateDoc, createUserWithEmailAndPassword, signInWithEmailAndPassword };
 
-    // пробрасываем в nuxtApp.$firebase
-    return {
-        provide: {
-            firebase: {
-                auth,
-                db,
-                deleteField,
-                deleteDoc,
-                updateDoc,
-                createUserWithEmailAndPassword,
-                signInWithEmailAndPassword
-            }
-        }
-    }
-})
+
+console.log(123)

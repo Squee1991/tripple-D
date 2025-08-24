@@ -628,6 +628,7 @@ const handleCategoryClick = (category) => {
     transform: translateX(100%);
     transition: transform .3s ease;
     z-index: 2;
+    border: none;
   }
 
   .content-area.open {
