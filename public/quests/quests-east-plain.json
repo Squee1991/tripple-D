@@ -10,7 +10,7 @@
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 10,
+      "points": 20,
       "xp": 20
     },
     "tasks": [
@@ -204,8 +204,8 @@
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 220,
-      "xp": 330
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
@@ -389,8 +389,8 @@
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 250,
-      "xp": 350
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
@@ -604,23 +604,23 @@
   },
   {
     "questId": "menschen-a1-shopping2",
-    "title": "продолжим покупки?",
+    "title": "eastPlainFourthQuests.title",
     "progress": "0/15",
-    "description": "Ты рассказываешь о своём доме. Какие комнаты у тебя есть? Где стоит кровать? Где лампа? Учимся описывать жилище и расположение предметов.",
+    "description": "eastPlainFourthQuests.description",
     "conditions": {
-      "goal": "Научиться описывать своё жильё и расположение предметов",
+      "goal": "eastPlainFourthQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 220,
-      "xp": 320
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
         "id": 1,
         "type": "select",
-        "question": "Как сказать 'Очередь'",
+        "question": "eastPlainFourthQuests.questOne",
         "options": [
           "die Schlange",
           "der Korb",
@@ -631,7 +631,7 @@
       {
         "id": 2,
         "type": "select",
-        "question": "Как сказать 'Касса'",
+        "question": "eastPlainFourthQuests.questTwo",
         "options": [
           "die Kasse",
           "der Korb",
@@ -642,7 +642,7 @@
       {
         "id": 3,
         "type": "reorder",
-        "question": "Собери: Я стою в очереди",
+        "question": "eastPlainFourthQuests.questTree",
         "words": [
           "in",
           "ich",
@@ -663,14 +663,14 @@
       {
         "id": 4,
         "type": "speechToText",
-        "question": "Прослушай и напиши:",
+        "question": "eastPlainFourthQuests.questFour",
         "text": "Ich stehe in der schlange",
         "answer": "Ich stehe in der schlange"
       },
       {
         "id": 5,
         "type": "select",
-        "question": "Как сказать 'Платить'?",
+        "question": "eastPlainFourthQuests.questFive",
         "options": [
           "bezahlen",
           "Hallo",
@@ -681,14 +681,14 @@
       {
         "id": 6,
         "type": "speechToText",
-        "question": "Прослушай и напиши:",
+        "question": "eastPlainFourthQuests.questSix",
         "text": "Ich bezahle",
         "answer": "Ich bezahle"
       },
       {
         "id": 7,
         "type": "select",
-        "question": "Как сказать 'Деньги'?",
+        "question": "eastPlainFourthQuests.questSeven",
         "options": [
           "das Geld",
           "Hallo",
@@ -700,7 +700,7 @@
       {
         "id": 8,
         "type": "select",
-        "question": "Как сказать 'Наличные'?",
+        "question": "eastPlainFourthQuests.questEight",
         "options": [
           "das Bargeld",
           "Hallo",
@@ -712,14 +712,14 @@
       {
         "id": 9,
         "type": "speechToText",
-        "question": "Прослушай и напиши:",
+        "question": "eastPlainFourthQuests.questNine",
         "text": "ich bezahle bargeld",
         "answer": "ich bezahle bargeld"
       },
       {
         "id": 10,
         "type": "select",
-        "question": "Как сказать 'Купюра'?",
+        "question": "eastPlainFourthQuests.questTen",
         "options": [
           "das Bargeld",
           "Hallo",
@@ -731,7 +731,7 @@
       {
         "id": 11,
         "type": "reorder",
-        "question": "Собери: Платить картой",
+        "question": "eastPlainFourthQuests.questEleven",
         "words": [
           "bargeld",
           "mit",
@@ -750,21 +750,21 @@
       {
         "id": 12,
         "type": "speechToText",
-        "question": "Прослушай и напиши:",
+        "question": "eastPlainFourthQuests.questTwelve",
         "text": "Ich bezahle mit Karte",
         "answer": "Ich bezahle mit Karte"
       },
       {
         "id": 13,
         "type": "speechToText",
-        "question": "Прослушай и напиши:",
+        "question": "eastPlainFourthQuests.questThirteen",
         "text": "Ich bezahle mit Karte oder bargeld",
         "answer": "Ich bezahle mit Karte oder bargeld"
       },
       {
         "id": 14,
         "type": "select",
-        "question": "Как сказать 'Монета",
+        "question": "eastPlainFourthQuests.questFourteen",
         "options": [
           "das Bargeld",
           "Hallo",
@@ -776,7 +776,7 @@
       {
         "id": 15,
         "type": "speechToText",
-        "question": "Прослушай и напиши:",
+        "question": "eastPlainFourthQuests.questFifteen",
         "text": "die Münze",
         "answer": "die Münze"
       }
@@ -784,23 +784,23 @@
   },
   {
     "questId": "menschen-a1-essen",
-    "title": "Что ты ешь?",
+    "title": "eastPlainFifthQuests.title",
     "progress": "0/15",
-    "description": "Ты идёшь в магазин и в кафе. Покупаешь продукты, просишь воду, говоришь, что тебе нужно. Учимся называть еду, делать заказы и говорить вежливо.",
+    "description": "eastPlainFifthQuests.description",
     "conditions": {
-      "goal": "Научиться говорить о еде, покупать и заказывать",
+      "goal": "eastPlainFifthQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 250,
-      "xp": 350
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
         "id": 1,
         "type": "select",
-        "question": "Как сказать 'Пожалуйста'",
+        "question": "eastPlainFifthQuests.questOne",
         "options": [
           "bitte",
           "danke",
@@ -811,7 +811,7 @@
       {
         "id": 2,
         "type": "reorder",
-        "question": "Как сказать: 'Чай, пожалуйста'",
+        "question": "eastPlainFifthQuests.questTwo",
         "words": [
           "Tee",
           "Ich",
@@ -827,7 +827,7 @@
       {
         "id": 3,
         "type": "select",
-        "question": "Как сказать 'Купюра'",
+        "question": "eastPlainFifthQuests.questTree",
         "options": [
           "der Schein",
           "Danke",
@@ -839,14 +839,14 @@
       {
         "id": 4,
         "type": "speechToText",
-        "question": "Прослушай и напиши:",
+        "question": "eastPlainFifthQuests.questFour",
         "text": "Bezahlen Sie bar oder mit Karte?",
         "answer": "Bezahlen Sie bargeld oder mit Karte?"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Собери предложение: Я хотел бы кофе пожалуйста",
+        "question": "eastPlainFifthQuests.questFive",
         "words": [
           "Kaffee",
           "Ich",
@@ -867,7 +867,7 @@
       {
         "id": 6,
         "type": "reorder",
-        "question": "Как спросить: Сколько стоит?",
+        "question": "eastPlainFifthQuests.questSix",
         "words": [
           "Wie",
           "Tee",
@@ -886,14 +886,14 @@
       {
         "id": 7,
         "type": "input",
-        "question": "Впиши:  Wie ___ kostet das Getränk?",
+        "question": "eastPlainFifthQuests.questSeven",
         "correctAnswer": "viel"
       },
       {
         "id": 8,
         "type": "readAndAnswer",
         "text": "Im Supermarkt kaufe ich Brot, Käse und zwei Flaschen Wasser.",
-        "question": "Что покупатель хочет купить?",
+        "question": "eastPlainFifthQuests.questEight",
         "options": [
           "das Fleisch",
           "das Brot, der Käse und das Wasser",
@@ -904,14 +904,14 @@
       {
         "id": 9,
         "type": "speechToText",
-        "question": "Прослушай и напиши предложение",
+        "question": "eastPlainFifthQuests.questNine",
         "text": "Ich kaufe Gemüse",
         "answer": "Ich kaufe Gemüse"
       },
       {
         "id": 10,
         "type": "reorder",
-        "question": "Как сказать: Бутылка воды",
+        "question": "eastPlainFifthQuests.questTen",
         "words": [
           "Tee",
           "Flasche",
@@ -929,7 +929,7 @@
       {
         "id": 11,
         "type": "select",
-        "question": "Как сказать 'Я люблю пить чай'",
+        "question": "eastPlainFifthQuests.questEleven",
         "options": [
           "ich trinke gern Tee",
           "ich kaufe brot",
@@ -940,13 +940,13 @@
       {
         "id": 12,
         "type": "input",
-        "question": "Заполни пропуск: ich trinke ___ Wasser",
+        "question": "eastPlainFifthQuests.questTwelve",
         "correctAnswer": "gern"
       },
       {
         "id": 13,
         "type": "reorder",
-        "question": "Собери предложение: Чай и хлеб с маслом пожалуйста",
+        "question": "eastPlainFifthQuests.questThirteen",
         "words": [
           "Tee",
           "und",
@@ -971,7 +971,7 @@
         "id": 14,
         "type": "readAndAnswer",
         "text": "Ich nehme einen Kaffee Bitte",
-        "question": "Что заказал человек?",
+        "question": "eastPlainFifthQuests.questFourteen",
         "options": [
           "der Kaffee",
           "der Kaffee und der Kuchen",
@@ -982,7 +982,7 @@
       {
         "id": 15,
         "type": "speechToText",
-        "question": "Прослушай и напиши предложение ",
+        "question": "eastPlainFifthQuests.questFifteen",
         "text": "Wie viel kostet eine Flasche Wasser?",
         "answer": "Wie viel kostet eine Flasche Wasser?"
       }
@@ -990,23 +990,23 @@
   },
   {
     "questId": "menschen-a1-beruf",
-    "title": "Кем ты работаешь?",
+    "title": "eastPlainSixthQuests.title",
     "progress": "0/15",
-    "description": "Ты знакомишься с новыми людьми. Все рассказывают, кто они по профессии. Учимся называть профессии, задавать вопросы о работе и правильно строить ответы.",
+    "description": "eastPlainSixthQuests.description",
     "conditions": {
-      "goal": "Научиться говорить о профессии и задавать вопросы",
+      "goal": "eastPlainSixthQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 240,
-      "xp": 360
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
         "id": 1,
         "type": "select",
-        "question": "Я учитель(мужчина)",
+        "question": "eastPlainSixthQuests.questOne",
         "options": [
           "ich bin Lehrer",
           "ich bin Lehrerin",
@@ -1017,13 +1017,13 @@
       {
         "id": 2,
         "type": "input",
-        "question": "Заполни пропуск: Sie ___ Ärztin",
+        "question": "eastPlainSixthQuests.questTwo",
         "correctAnswer": "ist"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Как сказать: Оффициант",
+        "question": "eastPlainSixthQuests.questTree",
         "options": [
           "der Kellner",
           "der Fahrer",
@@ -1034,21 +1034,21 @@
       {
         "id": 4,
         "type": "speechToText",
-        "question": "Прослушай и напиши предложение",
+        "question": "eastPlainSixthQuests.questFour",
         "text": "Er arbeitet als Kellner",
-        "answer": "Er arbeitet als Verkäufer"
+        "answer": "Er arbeitet als Kellner"
       },
       {
         "id": 5,
         "type": "speechToText",
-        "question": "Прослушай и напиши:",
+        "question": "eastPlainSixthQuests.questFive",
         "text": "Er arbeitet als Polizist",
         "answer": "Er arbeitet als Polizist"
       },
       {
         "id": 6,
         "type": "reorder",
-        "question": "Собери предложение: Какая у тебя профессия?",
+        "question": "eastPlainSixthQuests.questSix",
         "words": [
           "Was",
           "Beruf",
@@ -1067,39 +1067,39 @@
       {
         "id": 7,
         "type": "speechToText",
-        "question": "Прослушай и напиши:",
+        "question": "eastPlainSixthQuests.questSeven",
         "text": "Hallo ich bin Nina und ich arbeite als Lehrerin",
         "answer": "Hallo ich bin Nina und ich arbeite als Lehrerin"
       },
       {
         "id": 8,
         "type": "input",
-        "question": "Заполни пропуск: Er arbeitet ___ Journalist",
+        "question": "eastPlainSixthQuests.questEight",
         "correctAnswer": "als"
       },
       {
         "id": 9,
         "type": "readAndAnswer",
         "text": "Hallo, ich heiße Nina. Ich bin Lehrerin und arbeite in einer Schule.",
-        "question": "Где работает Нина?",
+        "question": "eastPlainSixthQuests.questNine",
         "options": [
-          "В больнице",
-          "В школе",
-          "В офисе"
+          "eastPlainSixthQuests.questNineFirstOption",
+          "eastPlainSixthQuests.questNineSecondOption",
+          "eastPlainSixthQuests.questNineThirdOption"
         ],
-        "answer": "В школе"
+        "answer": "eastPlainSixthQuests.questNineAnswer"
       },
       {
         "id": 10,
         "type": "speechToText",
-        "question": "Прослушай и напиши предложение",
+        "question": "eastPlainSixthQuests.questTen",
         "text": "Ich arbeite als Ingenieur",
         "answer": "Ich arbeite als Ingenieur"
       },
       {
         "id": 11,
         "type": "select",
-        "question": "Повар(м.р)",
+        "question": "eastPlainSixthQuests.questEleven",
         "options": [
           "der Koch",
           "die Lehrerin",
@@ -1110,7 +1110,7 @@
       {
         "id": 12,
         "type": "select",
-        "question": "Она парикмахер",
+        "question": "eastPlainSixthQuests.questTwelve",
         "options": [
           "die Friseurin",
           "der Koch",
@@ -1121,13 +1121,13 @@
       {
         "id": 13,
         "type": "input",
-        "question": "Впиши пропуск: Я работаю врачом → Ich arbeite als ___",
+        "question": "eastPlainSixthQuests.questThirteen",
         "correctAnswer": "Arzt"
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "Собери предложение: Он работает в больнице",
+        "question": "eastPlainSixthQuests.questFourteen",
         "words": [
           "arbeitet",
           "Er",
@@ -1146,7 +1146,7 @@
         "id": 15,
         "type": "readAndAnswer",
         "text": "Das ist Peter. Er ist Koch und arbeitet in einem Restaurant.",
-        "question": "Кем работает Петер?",
+        "question": "eastPlainSixthQuests.questFifteen",
         "options": [
           "der Lehrer",
           "die Lehrerin",
@@ -1158,23 +1158,23 @@
   },
   {
     "questId": "menschen-a1-zahlen",
-    "title": "Время и цены",
+    "title": "eastPlainSeventhQuests.title",
     "progress": "0/15",
-    "description": "Ты на рынке, в кафе и на вокзале. Постоянно слышишь числа: время отправления, цену кофе, дату встречи.",
+    "description": "eastPlainSeventhQuests.description",
     "conditions": {
-      "goal": "тут мы продолжим говорить о ценах и числах",
+      "goal": "eastPlainSeventhQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 250,
-      "xp": 350
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
         "id": 1,
         "type": "select",
-        "question": "Выбери правильный вариант ответа: Сколько это стоит?",
+        "question": "eastPlainSeventhQuests.questOne",
         "options": [
           "Wie viel kostet das?",
           "Wie geht's?",
@@ -1185,26 +1185,26 @@
       {
         "id": 2,
         "type": "input",
-        "question": "Впиши число: dreiundzwanzig = ___",
+        "question": "eastPlainSeventhQuests.questTwo",
         "correctAnswer": "23"
       },
       {
         "id": 3,
         "type": "speechToText",
-        "question": "Прослушай и напиши: achtundvierzig",
+        "question": "eastPlainSeventhQuests.questTree",
         "text": "achtundvierzig",
         "answer": "achtundvierzig"
       },
       {
         "id": 4,
         "type": "textToSpeech",
-        "question": "Прочитай вслух: fünfundsechzig",
+        "question": "eastPlainSeventhQuests.questFour",
         "text": "fünfundsechzig"
       },
       {
         "id": 5,
         "type": "select",
-        "question": "Выбери вариант ответа: Cейчас 10 часов",
+        "question": "eastPlainSeventhQuests.questFive",
         "options": [
           "Es ist Zehn Uhr",
           "Heute ist Mittwoch ",
@@ -1217,7 +1217,7 @@
         "id": 6,
         "type": "readAndAnswer",
         "text": "Die Milch kostet 1 Euro 20. Der Käse kostet 2 Euro 50.",
-        "question": "Сколько стоит сыр?",
+        "question": "eastPlainSeventhQuests.questSix",
         "options": [
           "1.20",
           "2.50",
@@ -1228,7 +1228,7 @@
       {
         "id": 7,
         "type": "reorder",
-        "question": "Собери предложение",
+        "question": "eastPlainSeventhQuests.questSeven",
         "words": [
           "Uhr",
           "Es",
@@ -1246,7 +1246,7 @@
         "id": 8,
         "type": "readAndAnswer",
         "text": "Die Milch kostet 1 Euro 20. Das Brot kostet 1 Euro 10",
-        "question": "Сколько стоит сыр?",
+        "question": "eastPlainSeventhQuests.questEight",
         "options": [
           "1.20",
           "1.10",
@@ -1257,14 +1257,14 @@
       {
         "id": 9,
         "type": "speechToText",
-        "question": "Прослушай и напиши: Wie viel kostet eine Flasche Wasser? Eine Flasche Wasser koster zwei euro",
+        "question": "eastPlainSeventhQuests.questNine",
         "text": " Wie viel kostet eine Flasche Wasser? Eine Flasche Wasser koster zwei euro",
         "answer": " Wie viel kostet eine Flasche Wasser? Eine Flasche Wasser koster zwei euro"
       },
       {
         "id": 10,
         "type": "select",
-        "question": "Как правильно сказать '3 мая' по-немецки?",
+        "question": "eastPlainSeventhQuests.questTen",
         "options": [
           "drei Mai",
           "der drei Mai",
@@ -1278,16 +1278,16 @@
         "type": "select",
         "question": "Der 3. Mai",
         "options": [
-          "3 мая",
-          "3 марта",
-          "3 июня"
+          "eastPlainSeventhQuests.questElevenFirstOption",
+          "eastPlainSeventhQuests.questElevenSecondOption",
+          "eastPlainSeventhQuests.questElevenThirdOption"
         ],
         "answer": "3 мая"
       },
       {
         "id": 12,
         "type": "select",
-        "question": "Как правильно сказать '10 октября'?",
+        "question": "eastPlainSeventhQuests.questTwelve",
         "options": [
           "der zehn Oktober",
           "zehnter Oktober",
@@ -1299,7 +1299,7 @@
       {
         "id": 13,
         "type": "reorder",
-        "question": "Собери: [heute, Der, ist, März, 12.]",
+        "question": "eastPlainSeventhQuests.questThirteen",
         "words": [
           "heute",
           "Der",
@@ -1319,7 +1319,7 @@
         "id": 14,
         "type": "readAndAnswer",
         "text": "Der Zug kommt um siebzehn Uhr dreißig.",
-        "question": "Во сколько приходит поезд?",
+        "question": "eastPlainSeventhQuests.questFourteen",
         "options": [
           "17:30",
           "7:30",
@@ -1330,7 +1330,7 @@
       {
         "id": 15,
         "type": "speechToText",
-        "question": "Прослушай и напиши предложение:",
+        "question": "eastPlainSeventhQuests.questFifteen",
         "text": "Das Ticket kostet zehn Euro.",
         "answer": "Das Ticket kostet zehn Euro."
       }
@@ -1338,11 +1338,11 @@
   },
   {
     "questId": "menschen-a1-familie",
-    "title": "Моя семья",
+    "title": "eastPlainEighthQuests.title",
     "progress": "0/15",
-    "description": "Ты рассказываешь о своей семье, узнаёшь о других. Кто у тебя есть? Как зовут твоего брата? Где живёт твоя мама? Учимся говорить о родственниках",
+    "description": "eastPlainEighthQuests.description",
     "conditions": {
-      "goal": "Научиться говорить о семье и задавать простые вопросы",
+      "goal": "eastPlainEighthQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
@@ -1356,23 +1356,23 @@
         "type": "select",
         "question": "Das ist meine Mutter",
         "options": [
-          "Это моя мама",
-          "Это моя дочь",
-          "Это мой отец"
+          "eastPlainEighthQuests.questOneFirstOption",
+          "eastPlainEighthQuests.questSecondFirstOption",
+          "eastPlainEighthQuests,questThirdFirstOption"
         ],
-        "answer": "Это моя мама"
+        "answer": "eastPlainEighthQuests.questThirdAnswer"
       },
       {
         "id": 2,
         "type": "speechToText",
-        "question": "Прослушай и напиши предложение",
+        "question": "eastPlainEighthQuests.questTwo",
         "text": "Ich habe einen Bruder",
         "answer": "Ich habe einen Bruder"
       },
       {
         "id": 3,
         "type": "speechToText",
-        "question": "Прослушай и напиши предложение",
+        "question": "eastPlainEighthQuests.questTree",
         "text": "Ich habe eine Schwester",
         "answer": "Ich habe eine Schwester"
       },
@@ -1381,16 +1381,16 @@
         "type": "select",
         "question": "Hast du Geschwister?",
         "options": [
-          "У тебя есть братья/сёстры?",
-          "Ты живёшь с родителями?",
-          "У тебя есть дети?"
+          "eastPlainEighthQuests.questFourFirstOption",
+          "eastPlainEighthQuests.questFourSecondOption",
+          "eastPlainEighthQuests.questFourThirdOption"
         ],
-        "answer": "У тебя есть братья/сёстры?"
+        "answer": "eastPlainEighthQuests.questFourAnswer"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Собери предложение: Он мой дядя",
+        "question": "eastPlainEighthQuests.questFive",
         "words": [
           "mein",
           "ist",
@@ -1407,7 +1407,7 @@
       {
         "id": 6,
         "type": "reorder",
-        "question": "Собери предложение: Мою маму зову Анна",
+        "question": "eastPlainEighthQuests.questSix",
         "words": [
           "heißt",
           "Meine",
@@ -1427,7 +1427,7 @@
         "id": 7,
         "type": "readAndAnswer",
         "text": "Ich habe einen Bruder. Er heißt Tim und wohnt in Berlin.",
-        "question": "Как зовут брата?",
+        "question": "eastPlainEighthQuests.questSeven",
         "options": [
           "Tom",
           "Tim",
@@ -1439,14 +1439,14 @@
       {
         "id": 8,
         "type": "speechToText",
-        "question": "Прослушай и напиши предложение",
+        "question": "eastPlainEighthQuests.questEight",
         "text": "Das ist ihre Tochter",
         "answer": "Das ist ihre Tochter"
       },
       {
         "id": 9,
         "type": "textToSpeech",
-        "question": "Прочитай вслух: Er ist mein Sohn",
+        "question": "eastPlainEighthQuests.questNine",
         "text": "Er ist mein Sohn"
       },
       {
@@ -1454,22 +1454,22 @@
         "type": "select",
         "question": "Er heißt Lukas",
         "options": [
-          "Его зовут Лукас",
-          "Её зовут Лукас",
-          "Тебя зовут Лукас"
+          "eastPlainEighthQuests.questTenFirstOption",
+          "eastPlainEighthQuests.questTenSecondOption",
+          "eastPlainEighthQuests.questTenThirdOption"
         ],
-        "answer": "Его зовут Лукас"
+        "answer": "eastPlainEighthQuests.questTenAnswer"
       },
       {
         "id": 11,
         "type": "input",
-        "question": "Впиши: Это моя бабушка → Das ist meine ___",
+        "question": "eastPlainEighthQuests.questEleven",
         "correctAnswer": "Oma"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "Собери преджложение: Она моя мама",
+        "question": "eastPlainEighthQuests.questTwelve",
         "words": [
           "Schwester",
           "ist",
@@ -1489,18 +1489,18 @@
         "id": 13,
         "type": "readAndAnswer",
         "text": "Paul ist mein Vater. Er arbeitet als Lehrer.",
-        "question": "Кто такой Пауль?",
+        "question": "eastPlainEighthQuests.questThirteen",
         "options": [
-          "Брат",
-          "Отец",
-          "Дядя"
+          "eastPlainEighthQuests.questThirteenFirstOption",
+          "eastPlainEighthQuests.questThirteenSecondOption",
+          "eastPlainEighthQuests.questThirteenThirdOption"
         ],
-        "answer": "Отец"
+        "answer": "eastPlainEighthQuests.questThirteenAnswer"
       },
       {
         "id": 14,
         "type": "speechToText",
-        "question": "Прослушай и напиши предложение",
+        "question": "eastPlainEighthQuests.questFourteen",
         "text": "Sie ist meine Tochter",
         "answer": "Sie ist meine Tochter"
       }
@@ -1508,17 +1508,17 @@
   },
   {
     "questId": "menschen-a1-tagesablauf",
-    "title": "Мой день",
+    "title": "eastPlainNinthQuests.title",
     "progress": "0/15",
-    "description": "Ты рассказываешь, как проходит твой день. Когда ты просыпаешься? Завтракаешь? Работаешь или учишься? А когда",
+    "description": "eastPlainNinthQuests.description",
     "conditions": {
-      "goal": "Научиться описывать свой день и понимать, что делают другие",
+      "goal": "eastPlainNinthQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 280,
-      "xp": 400
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
@@ -1526,30 +1526,30 @@
         "type": "select",
         "question": "Ich stehe um 6 Uhr auf",
         "options": [
-          "Я встаю в 6 часов",
-          "Я ложусь в 6 часов",
-          "Я завтракаю в 6"
+          "eastPlainNinthQuests.questOneFirstOption",
+          "eastPlainNinthQuests.questOneSecondOption",
+          "eastPlainNinthQuests.questOneThirdOption"
         ],
-        "answer": "Я встаю в 6 часов"
+        "answer": "eastPlainNinthQuests.questOneAnswer"
       },
       {
         "id": 2,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "eastPlainNinthQuests.questTwo",
         "text": "Ich gehe um 21 Uhr schlafen",
         "answer": "Ich gehe um 22 Uhr schlafen"
       },
       {
         "id": 3,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "eastPlainNinthQuests.questTree",
         "text": "Ich gehe zur Arbeit um 8 Uhr",
         "answer": "Ich gehe zur Arbeit um 8 Uhr"
       },
       {
         "id": 4,
         "type": "reorder",
-        "question": "Собери предложение",
+        "question": "eastPlainNinthQuests.questFour",
         "words": [
           "morgens",
           "ich",
@@ -1570,16 +1570,16 @@
         "type": "select",
         "question": "Was machst du morgens?",
         "options": [
-          "Я завтракаю",
-          "Я сплю",
-          "Я ложусь спать"
+          "eastPlainNinthQuests.questFiveFirstOption",
+          "eastPlainNinthQuests.questFiveSecondOption",
+          "eastPlainNinthQuests.questFiveThirdOption"
         ],
-        "answer": "Я завтракаю"
+        "answer": "eastPlainNinthQuests.questFiveAnswer"
       },
       {
         "id": 6,
         "type": "select",
-        "question": "Как переводится на немецкий слово «днём»?",
+        "question": "eastPlainNinthQuests.questSix",
         "options": [
           "morgens",
           "nachmittags",
@@ -1590,7 +1590,7 @@
       {
         "id": 7,
         "type": "reorder",
-        "question": "Собери предложение",
+        "question": "eastPlainNinthQuests.questSeven",
         "words": [
           "auf",
           "ich",
@@ -1612,25 +1612,25 @@
         "id": 8,
         "type": "readAndAnswer",
         "text": "Ich arbeite vormittags und habe nachmittags frei.",
-        "question": "Когда он работает?",
+        "question": "eastPlainNinthQuests.questEight",
         "options": [
-          "утром",
-          "днём",
-          "вечером"
+          "eastPlainNinthQuests.questEightFirstOption",
+          "eastPlainNinthQuests.questEightSecondOption",
+          "eastPlainNinthQuests.questEightThirdOption"
         ],
-        "answer": "утром"
+        "answer": "eastPlainNinthQuests.questEightAnswer"
       },
       {
         "id": 9,
         "type": "speechToText",
-        "question": "Прослушай и напиши предложение",
+        "question": "eastPlainNinthQuests.questNine",
         "text": "Ich frühstücke um halb acht",
         "answer": "Ich frühstücke um halb acht"
       },
       {
         "id": 10,
         "type": "speechToText",
-        "question": "Прослушай и напиши предложение",
+        "question": "eastPlainNinthQuests.questTen",
         "text": "Um wie viel Uhr gehst du schlafen?",
         "answer": "Um wie viel Uhr gehst du schlafen?"
       },
@@ -1639,16 +1639,16 @@
         "type": "select",
         "question": "Ich habe abends frei",
         "options": [
-          "Cвободное время вечером",
-          "Я работаю вечером",
-          "Я обедаю вечером"
+          "eastPlainNinthQuests.questElevenFirstOption",
+          "eastPlainNinthQuests.questElevenSecondOption",
+          "eastPlainNinthQuests.questElevenThirdOption"
         ],
-        "answer": "Cвободное время вечером"
+        "answer": "eastPlainNinthQuests.questElevenAnswer"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "Собери предложение",
+        "question": "eastPlainNinthQuests.questTwelve",
         "words": [
           "Er",
           "geht",
@@ -1669,7 +1669,7 @@
       {
         "id": 13,
         "type": "reorder",
-        "question": "Построй предложение",
+        "question": "eastPlainNinthQuests.questThirteen",
         "words": [
           "Am",
           "liest",
@@ -1694,36 +1694,37 @@
         "id": 14,
         "type": "readAndAnswer",
         "text": "Maria frühstückt um 7 Uhr und fährt um Acht Uhr zur Arbeit.",
-        "question": "Когда Мария едет на работу?",
+        "question": "eastPlainNinthQuests.questFourteen",
         "options": [
-          "В 7 часов",
-          "В 8 часов",
-          "В 11 часов"
+          "eastPlainNinthQuests.questFourteenFirstOption",
+          "eastPlainNinthQuests.questFourteenSecondOption",
+          "eastPlainNinthQuests.questFourteenThirdOption"
         ],
-        "answer": "В 8 часов"
+        "answer": "eastPlainNinthQuests.questFourteenAnswer"
       },
       {
         "id": 15,
-        "type": "speechToText",
-        "question": "Прослушай и напиши предложение",
+        "type": "speechToText.questFifteen",
+        "question": "eastPlainNinthQuests",
         "text": "Ich gehe um Mitternacht schlafen",
         "answer": "Ich gehe um Mitternacht schlafen"
       }
     ]
   },
+
   {
     "questId": "menschen-a1-wohnort",
-    "title": "Где ты живёшь?",
+    "title": "eastPlainTenthQuests.title",
     "progress": "0/15",
-    "description": "Ты рассказываешь, где ты живёшь и откуда ты. Учишься использовать предлоги *in, aus, auf* и описывать жильё и место",
+    "description": "eastPlainTenthQuests.description",
     "conditions": {
-      "goal": "Снова опишем где ты живёшь и откуда приехал",
+      "goal": "eastPlainTenthQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 250,
-      "xp": 350
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
@@ -1731,16 +1732,16 @@
         "type": "select",
         "question": "Ich wohne in einer Wohnung",
         "options": [
-          "Я живу в квартире",
-          "Я живу в доме",
-          "Я живу в отеле"
+          "eastPlainTenthQuests.questOneFirstOption",
+          "eastPlainTenthQuests.questOneSecondOption",
+          "eastPlainTenthQuests.questOneThirdOption"
         ],
-        "answer": "Я живу в квартире"
+        "answer": "eastPlainTenthQuests.questOneAnswer"
       },
       {
         "id": 2,
         "type": "speechToText",
-        "question": "Прослушай и напиши предложение",
+        "question": "eastPlainTenthQuests.questTwo",
         "text": "Ich wohne auf dem Land",
         "answer": "Ich wohne auf dem Land"
       },
@@ -1749,16 +1750,16 @@
         "type": "select",
         "question": "Er lebt im Zentrum",
         "options": [
-          "Он живёт в центре",
-          "Он живёт на ферме",
-          "Он живёт в горах"
+          "eastPlainTenthQuests.questTreeFirstOption",
+          "eastPlainTenthQuests.questTreeSecondOption",
+          "eastPlainTenthQuests.questTreeThirdOption"
         ],
-        "answer": "Он живёт в центре"
+        "answer": "eastPlainTenthQuests.questTreeAnswer"
       },
       {
         "id": 4,
         "type": "reorder",
-        "question": "Собери предложение",
+        "question": "eastPlainTenthQuests.eastPlainTenthQuests",
         "words": [
           "Ich",
           "Berlin",
@@ -1776,60 +1777,60 @@
         "id": 5,
         "type": "readAndAnswer",
         "text": "Thomas wohnt in einem Haus auf dem Land.",
-        "question": "Где живёт Томас?",
+        "question": "eastPlainTenthQuests.questFive",
         "options": [
-          "В городе",
-          "В центре",
-          "За городом"
+          "eastPlainTenthQuests.questFiveFirstOption",
+          "eastPlainTenthQuests.questFiveSecondOption",
+          "eastPlainTenthQuests.questFiveThirdOption"
         ],
-        "answer": "За городом"
+        "answer": "eastPlainTenthQuests.questFiveAnswer"
       },
       {
-        "id": 9,
+        "id": 6,
         "type": "speechToText",
-        "question": "Прослушай и напиши предложение",
+        "question": "eastPlainTenthQuests.questSix",
         "text": "Ich komme aus Russland",
         "answer": "Ich komme aus Russland"
       },
       {
-        "id": 15,
+        "id": 7,
         "type": "readAndAnswer",
         "text": "Tom ist zwanzig Jahre alt und studiert in Berlin.",
-        "question": "Сколько лет Тому?",
+        "question": "eastPlainTenthQuests.questSeven",
         "options": [
-          "10 лет",
-          "20 лет",
-          "30 лет"
+          "eastPlainTenthQuests.questSevenFirstOption",
+          "eastPlainTenthQuests.questSevenSecondOption",
+          "eastPlainTenthQuests.questSevenThirdOption"
         ],
-        "answer": "20 лет"
+        "answer": "eastPlainTenthQuests.questSevenAnswer"
       },
       {
-        "id": 11,
+        "id": 8,
         "type": "select",
         "question": "Sie wohnt in einem Haus",
         "options": [
-          "Она живёт в доме",
-          "Она живёт в квартире",
-          "Она живёт в отеле"
+          "eastPlainTenthQuests.questEightFirstOption",
+          "eastPlainTenthQuests.questEightSecondOption",
+          "eastPlainTenthQuests.questEightThirdOption"
         ],
-        "answer": "Она живёт в доме"
+        "answer": "eastPlainTenthQuests.questEightAnswer"
       },
       {
-        "id": 12,
+        "id": 9,
         "type": "readAndAnswer",
         "text": "Martin wohnt auf dem Land. Er arbeitet in der Stadt.",
-        "question": "Где живёт Мартин?",
+        "question": "eastPlainTenthQuests.questNine",
         "options": [
-          "В городе",
-          "За городом",
-          "В Германии"
+          "eastPlainTenthQuests.questNineFirstOption",
+          "eastPlainTenthQuests.questNineSecondOption",
+          "eastPlainTenthQuests.questNineThirdOption"
         ],
-        "answer": "За городом"
+        "answer": "eastPlainTenthQuests.questNineAnswer"
       },
       {
-        "id": 13,
+        "id": 10,
         "type": "reorder",
-        "question": "Собери предложение",
+        "question": "eastPlainTenthQuests.questTen",
         "words": [
           "Sie",
           "in",
@@ -1848,21 +1849,21 @@
         ]
       },
       {
-        "id": 14,
+        "id": 11,
         "type": "readAndAnswer",
         "text": "Anna kommt aus Österreich und lebt jetzt in Köln.",
         "question": "Где Анна живёт сейчас?",
         "options": [
-          "В Австрии",
-          "В Берлине",
-          "В Кёльне"
+          "eastPlainTenthQuests.questElevenFirstOption",
+          "eastPlainTenthQuests.questElevenSecondOption",
+          "eastPlainTenthQuests.questElevenThirdOption"
         ],
-        "answer": "В Кёльне"
+        "answer": "eastPlainTenthQuests.questElevenAnswer"
       },
       {
-        "id": 15,
+        "id": 12,
         "type": "speechToText",
-        "question": "Прослушай и напиши предложение",
+        "question": "eastPlainTenthQuests.questTwelve",
         "text": "Ich wohne in einem kleinen Dorf",
         "answer": "Ich wohne in einem kleinen Dorf"
       }

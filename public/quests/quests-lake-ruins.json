@@ -1,58 +1,84 @@
 [
   {
     "questId": "weather-1",
-    "title": "Погода и одежда",
+    "title": "questLakeRuinsFirstQuests.title",
     "progress": "0/15",
-    "description": "Как спросить о погоде и ответить: sonnig, regnerisch, warm, kalt. Немного одежды: die Jacke, die Mütze.",
+    "description": "questLakeRuinsFirstQuests.description",
     "conditions": {
-      "goal": "Понимать базовые слова о погоде и составлять короткие фразы (Heute ist es ... / Es regnet / Ich brauche ...)",
+      "goal": "questLakeRuinsFirstQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 190,
-      "xp": 300
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
         "id": 1,
         "type": "select",
-        "question": "Что значит: das Wetter",
-        "options": ["Погода", "Ветер", "Вода"],
-        "answer": "Погода"
+        "question": "questLakeRuinsFirstQuests.questOne",
+        "options": [
+          "questLakeRuinsFirstQuests.questOneFirstOption",
+          "questLakeRuinsFirstQuests.questOneSecondOption",
+          "questLakeRuinsFirstQuests.questOneThirdOption"
+        ],
+        "answer": "questLakeRuinsFirstQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "select",
         "question": "sonnig",
-        "options": ["Солнечно", "Дождливо", "Облачно"],
-        "answer": "Солнечно"
+        "options": [
+          "questLakeRuinsFirstQuests.questTwoFirstOption",
+          "questLakeRuinsFirstQuests.questTwoSecondOption",
+          "questLakeRuinsFirstQuests.questTwoThirdOption"
+        ],
+        "answer": "questLakeRuinsFirstQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "select",
         "question": "regnerisch",
-        "options": ["Дождливо", "Туманно", "Снежно"],
-        "answer": "Дождливо"
+        "options": [
+          "questLakeRuinsFirstQuests.questTreeFirstOption",
+          "questLakeRuinsFirstQuests.questTreeSecondOption",
+          "questLakeRuinsFirstQuests.questTreeThirdOption"
+        ],
+        "answer": "questLakeRuinsFirstQuests.questTreeFirstOption"
       },
       {
         "id": 4,
         "type": "select",
         "question": "kalt",
-        "options": ["Холодно", "Тепло", "Жарко"],
-        "answer": "Холодно"
+        "options": [
+          "questLakeRuinsFirstQuests.questFourFirstOption",
+          "questLakeRuinsFirstQuests.questFourSecondOption",
+          "questLakeRuinsFirstQuests.questFourThirdOption"
+        ],
+        "answer": "questLakeRuinsFirstQuests.questFourFirstOption"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["sonnig", "ist", "es", "Heute"],
-        "correctOrder": ["Heute", "ist", "es", "sonnig"]
+        "question": "questLakeRuinsFirstQuests.questFive",
+        "words": [
+          "sonnig",
+          "ist",
+          "es",
+          "Heute"
+        ],
+        "correctOrder": [
+          "Heute",
+          "ist",
+          "es",
+          "sonnig"
+        ]
       },
       {
         "id": 6,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questLakeRuinsFirstQuests.questSix",
         "text": "Es ist kalt",
         "answer": "Es ist kalt"
       },
@@ -60,260 +86,420 @@
         "id": 7,
         "type": "select",
         "question": "Wie ist das Wetter?",
-        "options": ["Какая погода?", "Который час?", "Где ты живёшь?"],
-        "answer": "Какая погода?"
+        "options": [
+          "questLakeRuinsFirstQuests.questSevenFirstOption",
+          "questLakeRuinsFirstQuests.questSevenSecondOption",
+          "questLakeRuinsFirstQuests.questSevenThirdOption"
+        ],
+        "answer": "questLakeRuinsFirstQuests.questSevenFirstOption"
       },
       {
         "id": 8,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["windig", "ist", "es", "Heute", "kalt", "und"],
-        "correctOrder": ["Heute", "ist", "es", "windig", "und", "kalt"]
+        "question": "questLakeRuinsFirstQuests.questEight",
+        "words": [
+          "windig",
+          "ist",
+          "es",
+          "Heute",
+          "kalt",
+          "und"
+        ],
+        "correctOrder": [
+          "Heute",
+          "ist",
+          "es",
+          "windig",
+          "und",
+          "kalt"
+        ]
       },
       {
         "id": 9,
         "type": "readAndAnswer",
         "text": "Heute ist es warm. Ich brauche keine Jacke.",
-        "question": "Нужна ли куртка сегодня?",
-        "options": ["Нет", "Да", "Неизвестно"],
-        "answer": "Нет"
+        "question": "questLakeRuinsFirstQuests.questNine",
+        "options": [
+          "questLakeRuinsFirstQuests.questNineFirstOption",
+          "questLakeRuinsFirstQuests.questNineSecondOption",
+          "questLakeRuinsFirstQuests.questNineThirdOption"
+        ],
+        "answer": "questLakeRuinsFirstQuests.questNineFirstOption"
       },
       {
         "id": 10,
         "type": "select",
         "question": "die Sonne",
-        "options": ["Солнце", "Туча", "Снег"],
-        "answer": "Солнце"
+        "options": [
+          "questLakeRuinsFirstQuests.questTenFirstOption",
+          "questLakeRuinsFirstQuests.questTenSecondOption",
+          "questLakeRuinsFirstQuests.questTenThirdOption"
+        ],
+        "answer": "questLakeRuinsFirstQuests.questTenFirstOption"
       },
       {
         "id": 11,
         "type": "select",
         "question": "der Regen",
-        "options": ["Дождь", "Ветер", "Гром"],
-        "answer": "Дождь"
+        "options": [
+          "questLakeRuinsFirstQuests.questElevenFirstOption",
+          "questLakeRuinsFirstQuests.questElevenSecondOption",
+          "questLakeRuinsFirstQuests.questElevenThirdOption"
+        ],
+        "answer": "questLakeRuinsFirstQuests.questElevenFirstOption"
       },
       {
         "id": 12,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questLakeRuinsFirstQuests.questTwelve",
         "text": "Ich brauche eine Jacke",
         "answer": "Ich brauche eine Jacke"
       },
       {
         "id": 13,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["warm", "Mütze", "ist", "Die"],
-        "correctOrder": ["Die", "Mütze", "ist", "warm"]
+        "question": "questLakeRuinsFirstQuests.questThirteen",
+        "words": [
+          "warm",
+          "Mütze",
+          "ist",
+          "Die"
+        ],
+        "correctOrder": [
+          "Die",
+          "Mütze",
+          "ist",
+          "warm"
+        ]
       },
       {
         "id": 14,
         "type": "select",
         "question": "Es regnet",
-        "options": ["Идёт дождь", "Идёт снег", "Ветрено"],
-        "answer": "Идёт дождь"
+        "options": [
+          "questLakeRuinsFirstQuests.questFourteenFirstOption",
+          "questLakeRuinsFirstQuests.questFourteenSecondOption",
+          "questLakeRuinsFirstQuests.questFourteenThirdOption"
+        ],
+        "answer": "questLakeRuinsFirstQuests.questFourteenFirstOption"
       },
       {
         "id": 15,
         "type": "readAndAnswer",
         "text": "Morgen ist es bewölkt, aber am Abend scheint die Sonne.",
-        "question": "Какая погода вечером?",
-        "options": ["Солнечно", "Облачно", "Дождливо"],
-        "answer": "Солнечно"
+        "question": "questLakeRuinsFirstQuests.questFifteen",
+        "options": [
+          "questLakeRuinsFirstQuests.questFifteenFirstOption",
+          "questLakeRuinsFirstQuests.questFifteenSecondOption",
+          "questLakeRuinsFirstQuests.questFifteenThirdOption"
+        ],
+        "answer": "questLakeRuinsFirstQuests.questFifteenFirstOption"
       }
     ]
   },
   {
     "questId": "weather-2",
-    "title": "Времена года и температура",
+    "title": "questLakeRuinsSecondQuests.title",
     "progress": "0/15",
-    "description": "Учимся говорить о температуре и одежде.",
+    "description": "questLakeRuinsSecondQuests.description",
     "conditions": {
-      "goal": "Говорить о сезонах и погоде: Im Sommer…, Es ist kalt/warm, Es schneit/regnet, Grad; повторить Jacke/Mütze",
+      "goal": "questLakeRuinsSecondQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 190,
-      "xp": 300
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
         "id": 1,
         "type": "select",
-        "question": "Что значит: der Frühling",
-        "options": ["Весна", "Лето", "Осень"],
-        "answer": "Весна"
+        "question": "questLakeRuinsSecondQuests.questOne",
+        "options": [
+          "questLakeRuinsSecondQuests.questOneFirstOption",
+          "questLakeRuinsSecondQuests.questOneSecondOption,",
+          "questLakeRuinsSecondQuests.questOneThirdOption"
+        ],
+        "answer": "questLakeRuinsSecondQuests"
       },
       {
         "id": 2,
         "type": "select",
-        "question": "Что значит: der Sommer",
-        "options": ["Лето", "Зима", "Весна"],
-        "answer": "Лето"
+        "question": "questLakeRuinsSecondQuests.questTwo",
+        "options": [
+          "questLakeRuinsSecondQuests.questTwoFirstOption",
+          "questLakeRuinsSecondQuests.questTwoSecondOption",
+          "questLakeRuinsSecondQuests.questTwoThirdOption"
+        ],
+        "answer": "questLakeRuinsSecondQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Что значит: der Herbst",
-        "options": ["Осень", "Весна", "Зима"],
-        "answer": "Осень"
+        "question": "questLakeRuinsSecondQuests.questThree",
+        "options": [
+          "questLakeRuinsSecondQuests.questTreeFirstOption",
+          "questLakeRuinsSecondQuests.questTreeSecondOption",
+          "questLakeRuinsSecondQuests.questTreeThirdOption"
+        ],
+        "answer": "questTreeFirstOption"
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Что значит: der Winter",
-        "options": ["Зима", "Лето", "Осень"],
-        "answer": "Зима"
+        "question": "questLakeRuinsSecondQuests.questFour",
+        "options": [
+          "questLakeRuinsSecondQuests.questFourFirstOption",
+          "questLakeRuinsSecondQuests.questFourSecondOption",
+          "questLakeRuinsSecondQuests.questFourThirdOption"
+        ],
+        "answer": "questLakeRuinsSecondQuests.questFourFirstOption"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["kalt", "Winter", "es", "ist", "Im"],
-        "correctOrder": ["Im", "Winter", "ist", "es", "kalt"]
+        "question": "questLakeRuinsSecondQuests.questFive",
+        "words": [
+          "kalt",
+          "Winter",
+          "es",
+          "ist",
+          "Im"
+        ],
+        "correctOrder": [
+          "Im",
+          "Winter",
+          "ist",
+          "es",
+          "kalt"
+        ]
       },
       {
         "id": 6,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questLakeRuinsSecondQuests.questSeven",
         "text": "Es schneit",
         "answer": "Es schneit"
       },
       {
         "id": 7,
         "type": "select",
-        "question": "Что значит: der Regenschirm",
-        "options": ["Зонт", "Шарф", "Куртка"],
-        "answer": "Зонт"
+        "question": "questLakeRuinsSecondQuests.questSeven",
+        "options": [
+          "questLakeRuinsSecondQuests.questSevenFirstOption",
+          "questLakeRuinsSecondQuests.questSevenSecondOption",
+          "questLakeRuinsSecondQuests.questSevenThirdOption"
+        ],
+        "answer": "questLakeRuinsSecondQuests.questSevenFirstOption"
       },
       {
         "id": 8,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["brauche", "Ich", "einen", "Regenschirm"],
-        "correctOrder": ["Ich", "brauche", "einen", "Regenschirm"]
+        "question": "questLakeRuinsSecondQuests.questEight",
+        "words": [
+          "brauche",
+          "Ich",
+          "einen",
+          "Regenschirm"
+        ],
+        "correctOrder": [
+          "Ich",
+          "brauche",
+          "einen",
+          "Regenschirm"
+        ]
       },
       {
         "id": 9,
         "type": "readAndAnswer",
         "text": "Im Sommer ist es heiß. Ich trage ein T-Shirt.",
-        "question": "Когда жарко?",
-        "options": ["Летом", "Зимой", "Осенью"],
-        "answer": "Летом"
+        "question": "questLakeRuinsSecondQuests.questNine",
+        "options": [
+          "questLakeRuinsSecondQuests.questNineFirstOption",
+          "questLakeRuinsSecondQuests.questNineSecondOption",
+          "questLakeRuinsSecondQuests.questNineThirdOption"
+        ],
+        "answer": "questLakeRuinsSecondQuests.questNineThirdOption"
       },
       {
         "id": 10,
         "type": "select",
         "question": "Что значит: Grad",
-        "options": ["Градусы", "Гром", "Тучи"],
-        "answer": "Градусы"
+        "options": [
+          "questLakeRuinsSecondQuests.questTenFirstOption",
+          "questLakeRuinsSecondQuests.questTenSecondOption",
+          "questLakeRuinsSecondQuests.questTenThirdOption"
+        ],
+        "answer": "questLakeRuinsSecondQuests.questTenFirstOption"
       },
       {
         "id": 11,
         "type": "input",
-        "question": "Впиши пропуск: Im ___ ist es warm. (подсказка: Sommer)",
+        "question": "questLakeRuinsSecondQuests.questEleven",
         "correctAnswer": "Sommer"
       },
       {
         "id": 12,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questLakeRuinsSecondQuests.questTwelve",
         "text": "Heute sind es zehn Grad",
         "answer": "Heute sind es zehn Grad"
       },
       {
         "id": 13,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["eine", "Jacke", "eine", "trage", "und", "Ich", "Mütze"],
-        "correctOrder": ["Ich", "trage", "eine", "Jacke", "und", "eine", "Mütze"]
+        "question": "questLakeRuinsSecondQuests.questThirteen",
+        "words": [
+          "eine",
+          "Jacke",
+          "eine",
+          "trage",
+          "und",
+          "Ich",
+          "Mütze"
+        ],
+        "correctOrder": [
+          "Ich",
+          "trage",
+          "eine",
+          "Jacke",
+          "und",
+          "eine",
+          "Mütze"
+        ]
       },
       {
         "id": 14,
         "type": "select",
         "question": "Переведи: Es regnet",
-        "options": ["Идёт дождь", "Снежит", "Ветрено"],
-        "answer": "Идёт дождь"
+        "options": [
+          "questLakeRuinsSecondQuests.questFourteenFirstOption",
+          "questLakeRuinsSecondQuests.questFourteenSecondOption",
+          "questLakeRuinsSecondQuests.questFourteenThirdOption"
+        ],
+        "answer": "questLakeRuinsSecondQuests.questFourteenFirstOption"
       },
       {
         "id": 15,
         "type": "readAndAnswer",
         "text": "Im Herbst ist es windig und oft regnerisch.",
-        "question": "Какая погода осенью?",
-        "options": ["Ветрено и часто дождливо", "Снежно", "Жарко и сухо"],
-        "answer": "Ветрено и часто дождливо"
+        "question": "",
+        "options": [
+          "questLakeRuinsSecondQuests.questFifteenFirstOption",
+          "questLakeRuinsSecondQuests.questFifteenSecondOption",
+          "questLakeRuinsSecondQuests.questFifteenThirdOption"
+        ],
+        "answer": "questLakeRuinsSecondQuests.questFifteenFirstOption"
       }
     ]
   },
   {
     "questId": "weather-3",
-    "title": "Прогноз и планы",
+    "title": "questLakeRuinsThirdQuests.title",
     "progress": "0/15",
-    "description": "Учимся говорить про сегодня/завтра и планы.",
+    "description": "questLakeRuinsThirdQuests.description",
     "conditions": {
-      "goal": "Говорить о погоде (без градусов) и связывать её с простыми планами: Heute/Morgen, es bleibt/es wird",
+      "goal": "questLakeRuinsThirdQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 190,
-      "xp": 320
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
         "id": 1,
         "type": "select",
-        "question": "Что значит: der Nebel",
-        "options": ["Туман", "Гром", "Мороз"],
-        "answer": "Туман"
+        "question": "questLakeRuinsThirdQuests.questOne",
+        "options": [
+          "questLakeRuinsThirdQuests.questOneFirstOption",
+          "questLakeRuinsThirdQuests.questOneSecondOption",
+          "questLakeRuinsThirdQuests.questOneThirdOption"
+        ],
+        "answer": "questLakeRuinsThirdQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "select",
         "question": "trocken",
-        "options": ["Сухо", "Мокро", "Жарко"],
-        "answer": "Сухо"
+        "options": [
+          "questLakeRuinsThirdQuests.questTwoFirstOption",
+          "questLakeRuinsThirdQuests.questTwoSecondOption",
+          "questLakeRuinsThirdQuests.questTwoThirdOption"
+        ],
+        "answer": "questLakeRuinsThirdQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "select",
         "question": "nass",
-        "options": ["Мокро/сыро", "Холодно", "Туманно"],
-        "answer": "Мокро/сыро"
+        "options": [
+          "questLakeRuinsThirdQuests.questThirdFirstOption",
+          "questLakeRuinsThirdQuests.questThirdSecondOption",
+          "questLakeRuinsThirdQuests.questThirdThirdOption"
+        ],
+        "answer": "questLakeRuinsThirdQuests.questThirdFirstOption"
       },
       {
         "id": 4,
         "type": "select",
         "question": "das Gewitter",
-        "options": ["Гроза", "Снегопад", "Тёплый ветер"],
-        "answer": "Гроза"
+        "options": [
+          "questLakeRuinsThirdQuests.questFourFirstOption",
+          "questLakeRuinsThirdQuests.questFourSecondOption",
+          "questLakeRuinsThirdQuests.questFourThirdOption"
+        ],
+        "answer": "questLakeRuinsThirdQuests.questFourFirstOption"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["Heute", "Abend", "ist", "es", "neblig"],
-        "correctOrder": ["Heute", "Abend", "ist", "es", "neblig"]
+        "question": "questLakeRuinsThirdQuests.questFive",
+        "words": [
+          "Heute",
+          "Abend",
+          "ist",
+          "es",
+          "neblig"
+        ],
+        "correctOrder": [
+          "Heute",
+          "Abend",
+          "ist",
+          "es",
+          "neblig"
+        ]
       },
       {
         "id": 6,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questLakeRuinsThirdQuests.questSix",
         "text": "Es ist kühl",
         "answer": "Es ist kühl"
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["Morgen", "wird", "es", "trocken"],
-        "correctOrder": ["Morgen", "wird", "es", "trocken"]
+        "question": "questLakeRuinsThirdQuests.questSeven",
+        "words": [
+          "Morgen",
+          "wird",
+          "es",
+          "trocken"
+        ],
+        "correctOrder": [
+          "Morgen",
+          "wird",
+          "es",
+          "trocken"
+        ]
       },
       {
         "id": 8,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questLakeRuinsThirdQuests.questEight",
         "text": "Es bleibt klar",
         "answer": "Es bleibt klar"
       },
@@ -321,21 +507,37 @@
         "id": 9,
         "type": "readAndAnswer",
         "text": "Am Wochenende gibt es Gewitter. Wir bleiben zu Hause.",
-        "question": "Что мы делаем на выходных?",
-        "options": ["Остаёмся дома", "Идём купаться", "Едем в горы"],
-        "answer": "Остаёмся дома"
+        "question": "",
+        "options": [
+          "questLakeRuinsThirdQuests.questNineFirstOption",
+          "questLakeRuinsThirdQuests.questNineSecondOption",
+          "questLakeRuinsThirdQuests.questNineThirdOption"
+        ],
+        "answer": "questLakeRuinsThirdQuests.questNineFirstOption"
       },
       {
         "id": 10,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["Heute", "ist", "die", "Luft", "schwül"],
-        "correctOrder": ["Heute", "ist", "die", "Luft", "schwül"]
+        "question": "questLakeRuinsThirdQuests.questTen",
+        "words": [
+          "Heute",
+          "ist",
+          "die",
+          "Luft",
+          "schwül"
+        ],
+        "correctOrder": [
+          "Heute",
+          "ist",
+          "die",
+          "Luft",
+          "schwül"
+        ]
       },
       {
         "id": 11,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questLakeRuinsThirdQuests.questEleven",
         "text": "Ich nehme die Sonnenbrille",
         "answer": "Ich nehme die Sonnenbrille"
       },
@@ -343,28 +545,48 @@
         "id": 12,
         "type": "select",
         "question": "die Sonnenbrille",
-        "options": ["Солнечные очки", "Шарф", "Куртка"],
-        "answer": "Солнечные очки"
+        "options": [
+          "questLakeRuinsThirdQuests.questTwelveFirstOption",
+          "questLakeRuinsThirdQuests.questTwelveSecondOption",
+          "questLakeRuinsThirdQuests.questTwelveThirdOption"
+        ],
+        "answer": "questLakeRuinsThirdQuests.questTwelveFirstOption"
       },
       {
         "id": 13,
         "type": "readAndAnswer",
         "text": "Morgen früh ist es neblig. Ich fahre später.",
-        "question": "Когда он поедет?",
-        "options": ["Позже", "Сейчас", "Никогда"],
-        "answer": "Позже"
+        "question": "questLakeRuinsThirdQuests.questThirteen",
+        "options": [
+          "questLakeRuinsThirdQuests.questThirteenFirstOption",
+          "questLakeRuinsThirdQuests.questThirteenSecondOption",
+          "questLakeRuinsThirdQuests.questThirteenThirdOption"
+        ],
+        "answer": "questLakeRuinsThirdQuests.questThirteenFirstOption"
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["Es", "gibt", "Nebel", "am", "Morgen"],
-        "correctOrder": ["Es", "gibt", "Nebel", "am", "Morgen"]
+        "question": "questLakeRuinsThirdQuests.questFourteen",
+        "words": [
+          "Es",
+          "gibt",
+          "Nebel",
+          "am",
+          "Morgen"
+        ],
+        "correctOrder": [
+          "Es",
+          "gibt",
+          "Nebel",
+          "am",
+          "Morgen"
+        ]
       },
       {
         "id": 15,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questLakeRuinsThirdQuests.questFifteen",
         "text": "Es ist trocken und klar",
         "answer": "Es ist trocken und klar"
       }
@@ -372,72 +594,110 @@
   },
   {
     "questId": "weather-4",
-    "title": "Прогноз и непогода",
+    "title": "questLakeRuinsFourthQuests.title",
     "progress": "0/15",
-    "description": "Учимся описывать сильную погоду и что брать с собой.",
+    "description": "questLakeRuinsFourthQuests.description",
     "conditions": {
-      "goal": "Расширить лексику по непогоде и строить простые фразы: Es donnert/Es blitzt, Am Himmel …, Ich nehme …",
+      "goal": "questLakeRuinsFourthQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 190,
-      "xp": 320
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
         "id": 1,
         "type": "select",
-        "question": "Что значит: der Sturm",
-        "options": ["Шторм/буря", "Туман", "Мороз"],
-        "answer": "Шторм/буря"
+        "question": "questLakeRuinsFourthQuests.questOne",
+        "options": [
+          "questLakeRuinsFourthQuests.questOneFirstOption",
+          "questLakeRuinsFourthQuests.questOneSecondOption",
+          "questLakeRuinsFourthQuests.questOneThirdOption"
+        ],
+        "answer": "questLakeRuinsFourthQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "select",
-        "question": "Что значит: die Wolke",
-        "options": ["Облако", "Град", "Солнце"],
-        "answer": "Облако"
+        "question": "questLakeRuinsFourthQuests",
+        "options": [
+          "questLakeRuinsFourthQuests.questTwoFirstOption",
+          "questLakeRuinsFourthQuests.questTwoSecondOption",
+          "questLakeRuinsFourthQuests.questTwoThirdOption"
+        ],
+        "answer": "questLakeRuinsFourthQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Что значит: der Blitz",
-        "options": ["Молния", "Дождь", "Туча"],
-        "answer": "Молния"
+        "question": "questLakeRuinsFourthQuests.questThird",
+        "options": [
+          "questLakeRuinsFourthQuests.questThirdFirstOption",
+          "questLakeRuinsFourthQuests.questThirdSecondOption",
+          "questLakeRuinsFourthQuests.questThirdThirdOption"
+        ],
+        "answer": "questLakeRuinsFourthQuests.questThirdFirstOption"
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Что значит: der Donner",
-        "options": ["Гром", "Ветер", "Снег"],
-        "answer": "Гром"
+        "question": "questLakeRuinsFourthQuests.questFour",
+        "options": [
+          "questLakeRuinsFourthQuests.questFourFirstOption",
+          "questLakeRuinsFourthQuests.questFourSecondOption",
+          "questLakeRuinsFourthQuests.questFourThirdOption"
+        ],
+        "answer": "questLakeRuinsFourthQuests.questFourFirstOption"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["Heute", "Abend", "gibt", "es", "Sturm"],
-        "correctOrder": ["Heute", "Abend", "gibt", "es", "Sturm"]
+        "question": "questLakeRuinsFourthQuests.questFive",
+        "words": [
+          "Heute",
+          "Abend",
+          "gibt",
+          "es",
+          "Sturm"
+        ],
+        "correctOrder": [
+          "Heute",
+          "Abend",
+          "gibt",
+          "es",
+          "Sturm"
+        ]
       },
       {
         "id": 6,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questLakeRuinsFourthQuests.questSix",
         "text": "Es blitzt",
         "answer": "Es blitzt"
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["Der", "Himmel", "ist", "grau"],
-        "correctOrder": ["Der", "Himmel", "ist", "grau"]
+        "question": "questLakeRuinsFourthQuests.questSeven",
+        "words": [
+          "Der",
+          "Himmel",
+          "ist",
+          "grau"
+        ],
+        "correctOrder": [
+          "Der",
+          "Himmel",
+          "ist",
+          "grau"
+        ]
       },
       {
         "id": 8,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questLakeRuinsFourthQuests.questEight",
         "text": "Es donnert",
         "answer": "Es donnert"
       },
@@ -445,49 +705,85 @@
         "id": 9,
         "type": "readAndAnswer",
         "text": "Der Wetterbericht: Am Montag gibt es Sturm. Nimm Stiefel.",
-        "question": "Что советуют взять?",
-        "options": ["Сапоги", "Зонт", "Очки"],
-        "answer": "Сапоги"
+        "question": "questLakeRuinsFourthQuests.questNine",
+        "options": [
+          "questLakeRuinsFourthQuests.questNineFirstOption",
+          "questLakeRuinsFourthQuests.questNineSecondOption",
+          "questLakeRuinsFourthQuests.questNineThirdOption"
+        ],
+        "answer": "questLakeRuinsFourthQuests.questNineFirstOption"
       },
       {
         "id": 10,
         "type": "select",
-        "question": "Что значит: der Regenmantel",
-        "options": ["Дождевик/плащ", "Шарф", "Куртка-зима"],
-        "answer": "Дождевик/плащ"
+        "question": "questLakeRuinsFourthQuests.questTen",
+        "options": [
+          "questLakeRuinsFourthQuests.questTenFirstOption",
+          "questLakeRuinsFourthQuests.questTenSecondOption",
+          "questLakeRuinsFourthQuests.questTenThirdOption"
+        ],
+        "answer": "questLakeRuinsFourthQuests.questTenFirstOption"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["Ich", "nehme", "den", "Regenmantel"],
-        "correctOrder": ["Ich", "nehme", "den", "Regenmantel"]
+        "question": "questLakeRuinsFourthQuests.questEleven",
+        "words": [
+          "Ich",
+          "nehme",
+          "den",
+          "Regenmantel"
+        ],
+        "correctOrder": [
+          "Ich",
+          "nehme",
+          "den",
+          "Regenmantel"
+        ]
       },
       {
         "id": 12,
         "type": "select",
-        "question": "Что значит: die Stiefel",
-        "options": ["Сапоги", "Перчатки", "Носки"],
-        "answer": "Сапоги"
+        "question": "questLakeRuinsFourthQuests.questTwelve",
+        "options": [
+          "questLakeRuinsFourthQuests.questTwelveFirstOption",
+          "questLakeRuinsFourthQuests.questTwelveSecondOption",
+          "questLakeRuinsFourthQuests.questTwelveThirdOption"
+        ],
+        "answer": "questLakeRuinsFourthQuests.questTwelveFirstOption"
       },
       {
         "id": 13,
         "type": "select",
         "question": "stürmisch",
-        "options": ["Штормовая погода", "Туманно", "Жарко"],
-        "answer": "Штормовая погода"
+        "options": [
+          "questLakeRuinsFourthQuests.questThirteenFirstOption",
+          "questLakeRuinsFourthQuests.questThirteenSecondOption",
+          "questLakeRuinsFourthQuests.questThirteenThirdOption"
+        ],
+        "answer": "questLakeRuinsFourthQuests.questThirteenFirstOption"
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["Am", "Himmel", "sind", "Wolken"],
-        "correctOrder": ["Am", "Himmel", "sind", "Wolken"]
+        "question": "questLakeRuinsFourthQuests.questFourteen",
+        "words": [
+          "Am",
+          "Himmel",
+          "sind",
+          "Wolken"
+        ],
+        "correctOrder": [
+          "Am",
+          "Himmel",
+          "sind",
+          "Wolken"
+        ]
       },
       {
         "id": 15,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questLakeRuinsFourthQuests.questFifteen",
         "text": "Der Wetterbericht ist schlecht",
         "answer": "Der Wetterbericht ist schlecht"
       }
@@ -495,72 +791,108 @@
   },
   {
     "questId": "weather-5",
-    "title": "Туман, град и прогноз",
+    "title": "questLakeRuinsFifthQuests.title",
     "progress": "0/15",
-    "description": "Туман, град, гроза; скользко на дороге. Учимся понимать прогноз (Vorhersage) и говорить, что взять с собой.",
+    "description": "questLakeRuinsFifthQuests.description",
     "conditions": {
-      "goal": "Говорить о непогоде и прогнозе: Es wird …, Es ist glatt, Am Morgen/Abend …, Ich brauche …",
+      "goal": "questLakeRuinsFifthQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 190,
-      "xp": 320
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
         "id": 1,
         "type": "select",
-        "question": "Что значит: der Nebel",
-        "options": ["Туман", "Град", "Жара"],
-        "answer": "Туман"
+        "question": "questLakeRuinsFifthQuests.questOne",
+        "options": [
+          "questLakeRuinsFifthQuests.questOneFirstOption",
+          "questLakeRuinsFifthQuests.questOneSecondOption",
+          "questLakeRuinsFifthQuests.questOneThirdOption"
+        ],
+        "answer": "questLakeRuinsFifthQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "select",
-        "question": "Что значит: der Hagel",
-        "options": ["Град", "Туман", "Ветер"],
-        "answer": "Град"
+        "question": "questLakeRuinsFifthQuests.questTwo",
+        "options": [
+          "questLakeRuinsFifthQuests.questTwoFirstOption",
+          "questLakeRuinsFifthQuests.questTwoSecondOption",
+          "questLakeRuinsFifthQuests.questTwoThirdOption"
+        ],
+        "answer": "questLakeRuinsFifthQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Что значит: das Gewitter",
-        "options": ["Гроза", "Снегопад", "Радуга"],
-        "answer": "Гроза"
+        "question": "questLakeRuinsFifthQuests.questThird",
+        "options": [
+          "questLakeRuinsFifthQuests.questThirdFirstOption",
+          "questLakeRuinsFifthQuests.questThirdSecondOption",
+          "questLakeRuinsFifthQuests.questThirdThirdOption"
+        ],
+        "answer": "questLakeRuinsFifthQuests.questThirdFirstOption"
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Что значит: glatt",
-        "options": ["Скользко", "Сухо", "Жарко"],
-        "answer": "Скользко"
+        "question": "questLakeRuinsFifthQuests.questFour",
+        "options": [
+          "questLakeRuinsFifthQuests.questFourFirstOption",
+          "questLakeRuinsFifthQuests.questFourSecondOption",
+          "questLakeRuinsFifthQuests.questFourThirdOption"
+        ],
+        "answer": "questLakeRuinsFifthQuests.questFourFirstOption"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["kälter", "wird", "Es"],
-        "correctOrder": ["Es", "wird", "kälter"]
+        "question": "questLakeRuinsFifthQuests.questFive",
+        "words": [
+          "kälter",
+          "wird",
+          "Es"
+        ],
+        "correctOrder": [
+          "Es",
+          "wird",
+          "kälter"
+        ]
       },
       {
         "id": 6,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questLakeRuinsFifthQuests.questSix",
         "text": "Am Morgen gibt es Nebel",
         "answer": "Am Morgen gibt es Nebel"
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["gibt", "Abend", "Am", "es", "Gewitter"],
-        "correctOrder": ["Am", "Abend", "gibt", "es", "Gewitter"]
+        "question": "questLakeRuinsFifthQuests.questSeven",
+        "words": [
+          "gibt",
+          "Abend",
+          "Am",
+          "es",
+          "Gewitter"
+        ],
+        "correctOrder": [
+          "Am",
+          "Abend",
+          "gibt",
+          "es",
+          "Gewitter"
+        ]
       },
       {
         "id": 8,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questLakeRuinsFifthQuests.questEight",
         "text": "Vorsicht, es ist glatt!",
         "answer": "Vorsicht, es ist glatt!"
       },
@@ -568,49 +900,79 @@
         "id": 9,
         "type": "readAndAnswer",
         "text": "Die Vorhersage: Am Freitag wird es kühler, am Samstag regnet es, am Sonntag scheint die Sonne.",
-        "question": "Когда станет прохладнее?",
-        "options": ["В пятницу", "В субботу", "В воскресенье"],
-        "answer": "В пятницу"
+        "question": "",
+        "options": [
+          "questLakeRuinsFifthQuests.questNineFirstOption",
+          "questLakeRuinsFifthQuests.questNineSecondOption",
+          "questLakeRuinsFifthQuests.questNinThirdOption"
+        ],
+        "answer": "questLakeRuinsFifthQuests.questNineFirstOption"
       },
       {
         "id": 10,
         "type": "select",
-        "question": "Что значит: die Handschuhe",
-        "options": ["Перчатки", "Сапоги", "Шарф"],
-        "answer": "Перчатки"
+        "question": "questLakeRuinsFifthQuests.questTen",
+        "options": [
+          "questLakeRuinsFifthQuests.questTenFirstOption",
+          "questLakeRuinsFifthQuests.questTenSecondOption",
+          "questLakeRuinsFifthQuests.questTenThirdOption"
+        ],
+        "answer": "questLakeRuinsFifthQuests.questTenFirstOption"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["Handschuhe", "brauche", "Ich"],
-        "correctOrder": ["Ich", "brauche", "Handschuhe"]
+        "question": "questLakeRuinsFifthQuests.questEleven",
+        "words": [
+          "Handschuhe",
+          "brauche",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "brauche",
+          "Handschuhe"
+        ]
       },
       {
         "id": 12,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questLakeRuinsFifthQuests.questTwelve",
         "text": "Ich friere",
         "answer": "Ich friere"
       },
       {
         "id": 13,
         "type": "select",
-        "question": "Переведи: Es wird wärmer",
-        "options": ["Становится теплее", "Очень холодно", "Дует сильный ветер"],
-        "answer": "Становится теплее"
+        "question": "questLakeRuinsFifthQuests.questThirteen",
+        "options": [
+          "questLakeRuinsFifthQuests.questThirteenFirstOption",
+          "questLakeRuinsFifthQuests.questThirteenSecondOption",
+          "questLakeRuinsFifthQuests.questThirteenThirdOption"
+        ],
+        "answer": "questLakeRuinsFifthQuests.questThirteenFirstOption"
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["es", "ist", "Heute", "mild"],
-        "correctOrder": ["Heute", "ist", "es", "mild"]
+        "question": "questLakeRuinsFifthQuests.questFourteen",
+        "words": [
+          "es",
+          "ist",
+          "Heute",
+          "mild"
+        ],
+        "correctOrder": [
+          "Heute",
+          "ist",
+          "es",
+          "mild"
+        ]
       },
       {
         "id": 15,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questLakeRuinsFifthQuests.questFifteen",
         "text": "Die Vorhersage ist gut",
         "answer": "Die Vorhersage ist gut"
       }
@@ -635,36 +997,62 @@
         "id": 1,
         "type": "select",
         "question": "Что значит: der Schatten",
-        "options": ["Тень", "Снег", "Туман"],
+        "options": [
+          "Тень",
+          "Снег",
+          "Туман"
+        ],
         "answer": "Тень"
       },
       {
         "id": 2,
         "type": "select",
         "question": "schwül",
-        "options": ["Душно", "Сухо", "Холодно"],
+        "options": [
+          "Душно",
+          "Сухо",
+          "Холодно"
+        ],
         "answer": "Душно"
       },
       {
         "id": 3,
         "type": "select",
         "question": "die Sonnencreme",
-        "options": ["Солнцезащитный крем", "Зонт", "Перчатки"],
+        "options": [
+          "Солнцезащитный крем",
+          "Зонт",
+          "Перчатки"
+        ],
         "answer": "Солнцезащитный крем"
       },
       {
         "id": 4,
         "type": "select",
         "question": "die Sonnenbrille",
-        "options": ["Солнечные очки", "Шарф", "Шапка"],
+        "options": [
+          "Солнечные очки",
+          "Шарф",
+          "Шапка"
+        ],
         "answer": "Солнечные очки"
       },
       {
         "id": 5,
         "type": "reorder",
         "question": "Собери фразу",
-        "words": ["schwül", "ist", "es", "Heute"],
-        "correctOrder": ["Heute", "ist", "es", "schwül"]
+        "words": [
+          "schwül",
+          "ist",
+          "es",
+          "Heute"
+        ],
+        "correctOrder": [
+          "Heute",
+          "ist",
+          "es",
+          "schwül"
+        ]
       },
       {
         "id": 6,
@@ -678,22 +1066,40 @@
         "type": "readAndAnswer",
         "text": "Es ist sehr heiß. Trage eine Sonnenbrille und Sonnencreme.",
         "question": "Что советуют использовать?",
-        "options": ["Солнечные очки и крем", "Тёплую шапку", "Зимние перчатки"],
+        "options": [
+          "Солнечные очки и крем",
+          "Тёплую шапку",
+          "Зимние перчатки"
+        ],
         "answer": "Солнечные очки и крем"
       },
       {
         "id": 8,
         "type": "select",
         "question": "die Hitze",
-        "options": ["Жара", "Туман", "Лёд"],
+        "options": [
+          "Жара",
+          "Туман",
+          "Лёд"
+        ],
         "answer": "Жара"
       },
       {
         "id": 9,
         "type": "reorder",
         "question": "Собери фразу",
-        "words": ["Schatten", "bleibe", "im", "Ich"],
-        "correctOrder": ["Ich", "bleibe", "im", "Schatten"]
+        "words": [
+          "Schatten",
+          "bleibe",
+          "im",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bleibe",
+          "im",
+          "Schatten"
+        ]
       },
       {
         "id": 10,
@@ -706,22 +1112,42 @@
         "id": 11,
         "type": "select",
         "question": "trocken",
-        "options": ["Сухо", "Мокро", "Снежно"],
+        "options": [
+          "Сухо",
+          "Мокро",
+          "Снежно"
+        ],
         "answer": "Сухо"
       },
       {
         "id": 12,
         "type": "reorder",
         "question": "Собери фразу",
-        "words": ["Es", "warm", "trocken", "und", "ist"],
-        "correctOrder": ["Es", "ist", "trocken", "und", "warm"]
+        "words": [
+          "Es",
+          "warm",
+          "trocken",
+          "und",
+          "ist"
+        ],
+        "correctOrder": [
+          "Es",
+          "ist",
+          "trocken",
+          "und",
+          "warm"
+        ]
       },
       {
         "id": 13,
         "type": "readAndAnswer",
         "text": "Heute über 30 Grad. Am Nachmittag wird es sehr heiß.",
         "question": "Какая температура сегодня?",
-        "options": ["Больше 30°", "Меньше 10°", "Ровно 20°"],
+        "options": [
+          "Больше 30°",
+          "Меньше 10°",
+          "Ровно 20°"
+        ],
         "answer": "Больше 30°"
       },
       {
@@ -735,7 +1161,11 @@
         "id": 15,
         "type": "select",
         "question": "Sonnenbrand",
-        "options": ["Солнечный ожог", "Дождь", "Радуга"],
+        "options": [
+          "Солнечный ожог",
+          "Дождь",
+          "Радуга"
+        ],
         "answer": "Солнечный ожог"
       }
     ]
@@ -759,36 +1189,60 @@
         "id": 1,
         "type": "select",
         "question": "Что значит: die Vorhersage",
-        "options": ["Прогноз", "Гроза", "Тень"],
+        "options": [
+          "Прогноз",
+          "Гроза",
+          "Тень"
+        ],
         "answer": "Прогноз"
       },
       {
         "id": 2,
         "type": "select",
         "question": "wechselhaft",
-        "options": ["Переменная погода", "Снежная погода", "Сухая погода"],
+        "options": [
+          "Переменная погода",
+          "Снежная погода",
+          "Сухая погода"
+        ],
         "answer": "Переменная погода"
       },
       {
         "id": 3,
         "type": "select",
         "question": "heiter",
-        "options": ["Ясно", "Туманно", "Душно"],
+        "options": [
+          "Ясно",
+          "Туманно",
+          "Душно"
+        ],
         "answer": "Ясно"
       },
       {
         "id": 4,
         "type": "select",
         "question": "die Temperatur",
-        "options": ["Температура", "Туча", "Снег"],
+        "options": [
+          "Температура",
+          "Туча",
+          "Снег"
+        ],
         "answer": "Температура"
       },
       {
         "id": 5,
         "type": "reorder",
         "question": "Собери фразу",
-        "words": ["steigt", "Temperatur", "Die"],
-        "correctOrder": ["Die", "Temperatur", "steigt"]
+        "words": [
+          "steigt",
+          "Temperatur",
+          "Die"
+        ],
+        "correctOrder": [
+          "Die",
+          "Temperatur",
+          "steigt"
+        ]
       },
       {
         "id": 6,
@@ -801,29 +1255,53 @@
         "id": 7,
         "type": "select",
         "question": "nachts",
-        "options": ["Ночью", "Днём", "Утром"],
+        "options": [
+          "Ночью",
+          "Днём",
+          "Утром"
+        ],
         "answer": "Ночью"
       },
       {
         "id": 8,
         "type": "reorder",
         "question": "Собери фразу",
-        "words": ["kühl", "Morgen", "ist", "es", "Am"],
-        "correctOrder": ["Am", "Morgen", "ist", "es", "kühl"]
+        "words": [
+          "kühl",
+          "Morgen",
+          "ist",
+          "es",
+          "Am"
+        ],
+        "correctOrder": [
+          "Am",
+          "Morgen",
+          "ist",
+          "es",
+          "kühl"
+        ]
       },
       {
         "id": 9,
         "type": "readAndAnswer",
         "text": "Heute ist es wechselhaft: morgens regnet es, am Nachmittag scheint die Sonne.",
         "question": "Какая погода днём?",
-        "options": ["Светит солнце", "Идёт снег", "Туман"],
+        "options": [
+          "Светит солнце",
+          "Идёт снег",
+          "Туман"
+        ],
         "answer": "Светит солнце"
       },
       {
         "id": 10,
         "type": "select",
         "question": "Что значит: bis zu 25 Grad",
-        "options": ["До 25 градусов", "Ровно 25 градусов", "Минимум 25 градусов"],
+        "options": [
+          "До 25 градусов",
+          "Ровно 25 градусов",
+          "Минимум 25 градусов"
+        ],
         "answer": "До 25 градусов"
       },
       {
@@ -837,22 +1315,42 @@
         "id": 12,
         "type": "reorder",
         "question": "Собери фразу",
-        "words": ["Grad", "5", "10", "und", "Zwischen"],
-        "correctOrder": ["Zwischen", "5", "und", "10", "Grad"]
+        "words": [
+          "Grad",
+          "5",
+          "10",
+          "und",
+          "Zwischen"
+        ],
+        "correctOrder": [
+          "Zwischen",
+          "5",
+          "und",
+          "10",
+          "Grad"
+        ]
       },
       {
         "id": 13,
         "type": "readAndAnswer",
         "text": "Im Wetterbericht: In Berlin bleibt es heute mild, die Temperatur liegt zwischen 12 und 16 Grad.",
         "question": "Какая температура в Берлине?",
-        "options": ["Между 12 и 16", "Ровно 12", "Ниже 10"],
+        "options": [
+          "Между 12 и 16",
+          "Ровно 12",
+          "Ниже 10"
+        ],
         "answer": "Между 12 и 16"
       },
       {
         "id": 14,
         "type": "select",
         "question": "Es bleibt mild",
-        "options": ["Погода останется мягкой", "Станет жарко", "Станет морозно"],
+        "options": [
+          "Погода останется мягкой",
+          "Станет жарко",
+          "Станет морозно"
+        ],
         "answer": "Погода останется мягкой"
       },
       {
@@ -883,22 +1381,44 @@
         "id": 1,
         "type": "select",
         "question": "Переведи: Im Sommer ist es heiß.",
-        "options": ["Летом жарко", "Зимой холодно", "Весной дождливо"],
+        "options": [
+          "Летом жарко",
+          "Зимой холодно",
+          "Весной дождливо"
+        ],
         "answer": "Летом жарко"
       },
       {
         "id": 2,
         "type": "select",
         "question": "Переведи: Ich brauche einen Regenschirm.",
-        "options": ["Мне нужен зонт", "Мне нужны перчатки", "Мне нужна шапка"],
+        "options": [
+          "Мне нужен зонт",
+          "Мне нужны перчатки",
+          "Мне нужна шапка"
+        ],
         "answer": "Мне нужен зонт"
       },
       {
         "id": 3,
         "type": "reorder",
         "question": "Собери фразу",
-        "words": ["Heute", "ist", "es", "sonnig", "und", "warm"],
-        "correctOrder": ["Heute", "ist", "es", "sonnig", "und", "warm"]
+        "words": [
+          "Heute",
+          "ist",
+          "es",
+          "sonnig",
+          "und",
+          "warm"
+        ],
+        "correctOrder": [
+          "Heute",
+          "ist",
+          "es",
+          "sonnig",
+          "und",
+          "warm"
+        ]
       },
       {
         "id": 4,
@@ -911,7 +1431,11 @@
         "id": 5,
         "type": "select",
         "question": "Что значит: Zwischen 5 und 10 Grad",
-        "options": ["Между 5 и 10 градусами", "До 10 градусов", "Ровно 5 градусов"],
+        "options": [
+          "Между 5 и 10 градусами",
+          "До 10 градусов",
+          "Ровно 5 градусов"
+        ],
         "answer": "Между 5 и 10 градусами"
       },
       {
@@ -919,15 +1443,27 @@
         "type": "readAndAnswer",
         "text": "Im Herbst ist es oft regnerisch und windig. Ich trage eine Jacke.",
         "question": "Что делает человек?",
-        "options": ["Надевает куртку", "Берёт зонтик и шапку", "Идёт без куртки"],
+        "options": [
+          "Надевает куртку",
+          "Берёт зонтик и шапку",
+          "Идёт без куртки"
+        ],
         "answer": "Надевает куртку"
       },
       {
         "id": 7,
         "type": "reorder",
         "question": "Собери фразу",
-        "words": ["Die", "Temperatur", "steigt"],
-        "correctOrder": ["Die", "Temperatur", "steigt"]
+        "words": [
+          "Die",
+          "Temperatur",
+          "steigt"
+        ],
+        "correctOrder": [
+          "Die",
+          "Temperatur",
+          "steigt"
+        ]
       },
       {
         "id": 8,
@@ -940,7 +1476,11 @@
         "id": 9,
         "type": "select",
         "question": "Переведи: Morgen bleibt es heiter.",
-        "options": ["Завтра будет ясно", "Завтра сильный снег", "Завтра туманно весь день"],
+        "options": [
+          "Завтра будет ясно",
+          "Завтра сильный снег",
+          "Завтра туманно весь день"
+        ],
         "answer": "Завтра будет ясно"
       },
       {
@@ -948,15 +1488,35 @@
         "type": "readAndAnswer",
         "text": "Wetterbericht: Morgens ist es bewölkt, am Nachmittag sonnig, abends sinkt die Temperatur auf zehn Grad.",
         "question": "Что вечером?",
-        "options": ["Температура падает до 10°", "Пасмурно и дождь", "Жарко, 25°"],
+        "options": [
+          "Температура падает до 10°",
+          "Пасмурно и дождь",
+          "Жарко, 25°"
+        ],
         "answer": "Температура падает до 10°"
       },
       {
         "id": 11,
         "type": "reorder",
         "question": "Собери фразу",
-        "words": ["Ich", "brauche", "eine", "Jacke", "und", "eine", "Mütze"],
-        "correctOrder": ["Ich", "brauche", "eine", "Jacke", "und", "eine", "Mütze"]
+        "words": [
+          "Ich",
+          "brauche",
+          "eine",
+          "Jacke",
+          "und",
+          "eine",
+          "Mütze"
+        ],
+        "correctOrder": [
+          "Ich",
+          "brauche",
+          "eine",
+          "Jacke",
+          "und",
+          "eine",
+          "Mütze"
+        ]
       },
       {
         "id": 12,
@@ -969,22 +1529,42 @@
         "id": 13,
         "type": "select",
         "question": "Какая одежда подходит? Es ist kalt und windig.",
-        "options": ["Eine Jacke und eine Mütze", "Sonnenbrille und T-Shirt", "Keine Jacke"],
+        "options": [
+          "Eine Jacke und eine Mütze",
+          "Sonnenbrille und T-Shirt",
+          "Keine Jacke"
+        ],
         "answer": "Eine Jacke und eine Mütze"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "Собери фразу",
-        "words": ["Im", "Winter", "schneit", "es", "oft"],
-        "correctOrder": ["Im", "Winter", "schneit", "es", "oft"]
+        "words": [
+          "Im",
+          "Winter",
+          "schneit",
+          "es",
+          "oft"
+        ],
+        "correctOrder": [
+          "Im",
+          "Winter",
+          "schneit",
+          "es",
+          "oft"
+        ]
       },
       {
         "id": 15,
         "type": "readAndAnswer",
         "text": "— Wie ist das Wetter heute? — Es ist wechselhaft: zwischen 3 und 8 Grad. — Brauchst du eine Jacke? — Ja.",
         "question": "Нужна ли куртка?",
-        "options": ["Да", "Нет", "Неизвестно"],
+        "options": [
+          "Да",
+          "Нет",
+          "Неизвестно"
+        ],
         "answer": "Да"
       }
     ]
@@ -1008,7 +1588,11 @@
         "id": 1,
         "type": "select",
         "question": "Переведи: Wie ist das Wetter heute in Berlin?",
-        "options": ["Какая сегодня погода в Берлине?", "Когда поезд в Берлин?", "Где находится Берлин?"],
+        "options": [
+          "Какая сегодня погода в Берлине?",
+          "Когда поезд в Берлин?",
+          "Где находится Берлин?"
+        ],
         "answer": "Какая сегодня погода в Берлине?"
       },
       {
@@ -1016,15 +1600,29 @@
         "type": "readAndAnswer",
         "text": "Berlin: Morgens ist es bewölkt, nachmittags sonnig.",
         "question": "Когда солнечно в Берлине?",
-        "options": ["Днём", "Утром", "Вечером"],
+        "options": [
+          "Днём",
+          "Утром",
+          "Вечером"
+        ],
         "answer": "Днём"
       },
       {
         "id": 3,
         "type": "reorder",
         "question": "Собери фразу",
-        "words": ["Heute", "wechselhaft", "ist", "es"],
-        "correctOrder": ["Heute", "ist", "es", "wechselhaft"]
+        "words": [
+          "Heute",
+          "wechselhaft",
+          "ist",
+          "es"
+        ],
+        "correctOrder": [
+          "Heute",
+          "ist",
+          "es",
+          "wechselhaft"
+        ]
       },
       {
         "id": 4,
@@ -1037,15 +1635,31 @@
         "id": 5,
         "type": "select",
         "question": "Es regnet. Was brauchst du?",
-        "options": ["Einen Regenschirm", "Eine Sonnenbrille", "Keine Jacke"],
+        "options": [
+          "Einen Regenschirm",
+          "Eine Sonnenbrille",
+          "Keine Jacke"
+        ],
         "answer": "Einen Regenschirm"
       },
       {
         "id": 6,
         "type": "reorder",
         "question": "Собери фразу",
-        "words": ["Abend", "Am", "sinkt", "Temperatur", "die"],
-        "correctOrder": ["Am", "Abend", "sinkt", "die", "Temperatur"]
+        "words": [
+          "Abend",
+          "Am",
+          "sinkt",
+          "Temperatur",
+          "die"
+        ],
+        "correctOrder": [
+          "Am",
+          "Abend",
+          "sinkt",
+          "die",
+          "Temperatur"
+        ]
       },
       {
         "id": 7,
@@ -1058,7 +1672,11 @@
         "id": 8,
         "type": "select",
         "question": "Переведи: Tagsüber bleibt es warm.",
-        "options": ["Днём остаётся тепло", "Утром становится холодно", "Вечером идёт снег"],
+        "options": [
+          "Днём остаётся тепло",
+          "Утром становится холодно",
+          "Вечером идёт снег"
+        ],
         "answer": "Днём остаётся тепло"
       },
       {
@@ -1066,15 +1684,33 @@
         "type": "readAndAnswer",
         "text": "München: Morgens 3°, nachmittags 8°, abends 4°. Es ist windig.",
         "question": "Сколько градусов днём в Мюнхене?",
-        "options": ["3°", "8°", "4°"],
+        "options": [
+          "3°",
+          "8°",
+          "4°"
+        ],
         "answer": "8°"
       },
       {
         "id": 10,
         "type": "reorder",
         "question": "Собери фразу",
-        "words": ["Im", "regnerisch", "ist", "oft", "es", "Herbst"],
-        "correctOrder": ["Im", "Herbst", "ist", "es", "oft", "regnerisch"]
+        "words": [
+          "Im",
+          "regnerisch",
+          "ist",
+          "oft",
+          "es",
+          "Herbst"
+        ],
+        "correctOrder": [
+          "Im",
+          "Herbst",
+          "ist",
+          "es",
+          "oft",
+          "regnerisch"
+        ]
       },
       {
         "id": 11,
@@ -1087,7 +1723,11 @@
         "id": 12,
         "type": "select",
         "question": "Переведи: Die Temperatur steigt.",
-        "options": ["Температура повышается", "Температура понижается", "Температура остаётся"],
+        "options": [
+          "Температура повышается",
+          "Температура понижается",
+          "Температура остаётся"
+        ],
         "answer": "Температура повышается"
       },
       {
@@ -1095,15 +1735,31 @@
         "type": "readAndAnswer",
         "text": "— Brauchst du eine Jacke? — Nein, tagsüber sind es bis zu zwanzig Grad.",
         "question": "Нужна ли куртка днём?",
-        "options": ["Нет", "Да", "Неизвестно"],
+        "options": [
+          "Нет",
+          "Да",
+          "Неизвестно"
+        ],
         "answer": "Нет"
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "Собери фразу",
-        "words": ["Grad", "es", "sind", "zehn", "Heute"],
-        "correctOrder": ["Heute", "sind", "es", "zehn", "Grad"]
+        "words": [
+          "Grad",
+          "es",
+          "sind",
+          "zehn",
+          "Heute"
+        ],
+        "correctOrder": [
+          "Heute",
+          "sind",
+          "es",
+          "zehn",
+          "Grad"
+        ]
       },
       {
         "id": 15,
@@ -1133,7 +1789,11 @@
         "id": 1,
         "type": "select",
         "question": "Переведи: Morgen ist es warm.",
-        "options": ["Завтра тепло", "Сегодня холодно", "Вечером ветрено"],
+        "options": [
+          "Завтра тепло",
+          "Сегодня холодно",
+          "Вечером ветрено"
+        ],
         "answer": "Завтра тепло"
       },
       {
@@ -1141,15 +1801,29 @@
         "type": "readAndAnswer",
         "text": "Berlin: Heute bewölkt, 12°. Morgen sonnig, 18°.",
         "question": "Когда теплее в Берлине?",
-        "options": ["Сегодня", "Завтра", "Вечером"],
+        "options": [
+          "Сегодня",
+          "Завтра",
+          "Вечером"
+        ],
         "answer": "Завтра"
       },
       {
         "id": 3,
         "type": "reorder",
         "question": "Собери фразу",
-        "words": ["Ich", "brauche", "keinen", "Regenschirm"],
-        "correctOrder": ["Ich", "brauche", "keinen", "Regenschirm"]
+        "words": [
+          "Ich",
+          "brauche",
+          "keinen",
+          "Regenschirm"
+        ],
+        "correctOrder": [
+          "Ich",
+          "brauche",
+          "keinen",
+          "Regenschirm"
+        ]
       },
       {
         "id": 4,
@@ -1162,7 +1836,11 @@
         "id": 5,
         "type": "select",
         "question": "Переведи: Die Temperatur sinkt am Abend.",
-        "options": ["Температура понижается вечером", "Температура повышается вечером", "Температура остаётся вечером"],
+        "options": [
+          "Температура понижается вечером",
+          "Температура повышается вечером",
+          "Температура остаётся вечером"
+        ],
         "answer": "Температура понижается вечером"
       },
       {
@@ -1170,15 +1848,33 @@
         "type": "readAndAnswer",
         "text": "Hamburg: Vormittags 6°, nachmittags 11°, abends 5°. Es regnet.",
         "question": "Что происходит с температурой вечером?",
-        "options": ["Повышается", "Понижается", "Остаётся такой же"],
+        "options": [
+          "Повышается",
+          "Понижается",
+          "Остаётся такой же"
+        ],
         "answer": "Понижается"
       },
       {
         "id": 7,
         "type": "reorder",
         "question": "Собери фразу",
-        "words": ["Heute", "ist", "es", "windig", "und", "kalt"],
-        "correctOrder": ["Heute", "ist", "es", "windig", "und", "kalt"]
+        "words": [
+          "Heute",
+          "ist",
+          "es",
+          "windig",
+          "und",
+          "kalt"
+        ],
+        "correctOrder": [
+          "Heute",
+          "ist",
+          "es",
+          "windig",
+          "und",
+          "kalt"
+        ]
       },
       {
         "id": 8,
@@ -1191,7 +1887,11 @@
         "id": 9,
         "type": "select",
         "question": "Es ist sonnig und warm. Was brauchst du nicht?",
-        "options": ["Einen Regenschirm", "Eine Jacke", "Eine Mütze"],
+        "options": [
+          "Einen Regenschirm",
+          "Eine Jacke",
+          "Eine Mütze"
+        ],
         "answer": "Einen Regenschirm"
       },
       {
@@ -1199,15 +1899,33 @@
         "type": "readAndAnswer",
         "text": "— Gehen wir in den Park? — Ja, heute ist es sonnig und zwanzig Grad.",
         "question": "Куда они идут?",
-        "options": ["В парк", "В музей", "В кафе"],
+        "options": [
+          "В парк",
+          "В музей",
+          "В кафе"
+        ],
         "answer": "В парк"
       },
       {
         "id": 11,
         "type": "reorder",
         "question": "Собери фразу",
-        "words": ["Grad", "sind", "nur", "es", "fünf", "Morgen"],
-        "correctOrder": ["Morgen", "sind", "es", "nur", "fünf", "Grad"]
+        "words": [
+          "Grad",
+          "sind",
+          "nur",
+          "es",
+          "fünf",
+          "Morgen"
+        ],
+        "correctOrder": [
+          "Morgen",
+          "sind",
+          "es",
+          "nur",
+          "fünf",
+          "Grad"
+        ]
       },
       {
         "id": 12,
@@ -1220,7 +1938,11 @@
         "id": 13,
         "type": "select",
         "question": "Переведи: Es schneit nicht.",
-        "options": ["Снег не идёт", "Идёт снег", "Идёт дождь"],
+        "options": [
+          "Снег не идёт",
+          "Идёт снег",
+          "Идёт дождь"
+        ],
         "answer": "Снег не идёт"
       },
       {
@@ -1228,7 +1950,11 @@
         "type": "readAndAnswer",
         "text": "Köln: 14°, sonnig. Leipzig: 9°, bewölkt und windig.",
         "question": "Где теплее?",
-        "options": ["В Кёльне", "В Лейпциге", "Одинаково"],
+        "options": [
+          "В Кёльне",
+          "В Лейпциге",
+          "Одинаково"
+        ],
         "answer": "В Кёльне"
       },
       {
