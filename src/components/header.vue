@@ -241,7 +241,14 @@ const menuItems = computed(() => [
           [
             {
               id: 'about', valueKey: 'О нас', url: '/info-about',
-            }
+            },
+            {
+              id: 'contact', valueKey: 'Контакт', url: '/support-request',
+            },
+            {
+              id: 'faq', valueKey: 'Вопрос/ответ', url: '/faq',
+            },
+
           ]
   ),
 

@@ -130,7 +130,7 @@
 import { ref } from 'vue'
 import Puzzle from '../assets/images/about-icons/puzzle.svg'
 import Podium from '../assets/images/about-icons/podium.svg'
-import Awards from '../assets/images/about-icons/awards.svg'
+import Awards from '../assets/images/about-icons/Awards.svg'
 import Duel from '../assets/images/about-icons/Duel.svg'
 import Test from '../assets/images/about-icons/Test.png'
 import Map from '../assets/images/about-icons/Map.svg'
@@ -138,11 +138,10 @@ import Marathon from '../assets/images/about-icons/Marathon.png'
 import Thematic from '../assets/images/about-icons/Thematic.svg'
 import Target from 'assets/images/about-icons/Target.svg'
 import Article from '../assets/images/about-icons/Article.png'
-import Start from '../assets/images/about-icons/Start.png'
 const heroContentRef = ref({
   title: 'О нас',
   subtitle:
-      'Мы — платформа для изучения немецкого языка с элементами игры: рейтинги, достижения, дуэли, квесты и умная практика.',
+      'Мы — платформа для практики немецкого языка с элементами игры: рейтинги, достижения, дуэли, квесты и многое другое.',
   imageUrl: Puzzle,
   imageAlt: 'Герой секции: обучение немецкому в игровом стиле'
 })

@@ -2,31 +2,23 @@
   <div class="verbs">
     <div class="verbs__inner">
       <header class="verbs__header">
-        <h1 class="verbs__title">Глаголы в немецком</h1>
-        <p class="verbs__subtitle">Основы для уверенного старта: Präsens, Perfekt, Präteritum и Futur I. Разбираем
-          порядок слов и частые ошибки.</p>
+        <h1 class="verbs__title">{{ t('verbsTheory.title')}}</h1>
+        <p class="verbs__subtitle">{{ t('verbsTheory.subTitle')}}</p>
       </header>
-
       <section v-for="section in contentSections" :key="section.id" class="verbs__card" :class="section.customClass">
         <h2 class="verbs__card-title">{{ section.title }}</h2>
-
         <template v-for="(item, index) in section.content" :key="index">
-
           <p v-if="item.type === 'paragraph'" class="verbs__paragraph" v-html="item.text"></p>
-
           <ul v-if="item.type === 'list'" class="verbs__list">
             <li v-for="(li, i) in item.items" :key="i" class="verbs__item" v-html="li"></li>
           </ul>
-
           <div v-if="item.type === 'note'" class="verbs__note" v-html="item.text"></div>
-
           <div v-if="item.type === 'example'" class="verbs__example">
             <img class="verbs__icon" :src="item.icon === 'Chat' ? Chat : Pin" alt="icon">
             <div class="verbs__example--wrapper">
               <p v-for="(line, i) in item.lines" :key="i" v-html="line"></p>
             </div>
           </div>
-
           <div v-if="item.type === 'table'" class="verbs__table-wrap">
             <table class="verbs__table">
               <thead>
@@ -41,14 +33,12 @@
               </tbody>
             </table>
           </div>
-
         </template>
       </section>
-
       <section class="verbs__card verbs__quiz">
-        <h2 class="verbs__card-title">7) Проверь себя: Мини-квиз</h2>
+        <h2 class="verbs__card-title">{{ t('verbsTheory.quiz')}}</h2>
         <div v-if="!quizFinished" class="verbs__quiz-body">
-          <p class="verbs__quiz-progress">Вопрос {{ quizIndex + 1 }} / {{ quizQuestions.length }}</p>
+          <p class="verbs__quiz-progress">{{ t('verbsTheory.quest')}} {{ quizIndex + 1 }} / {{ quizQuestions.length }}</p>
           <h3 class="verbs__quiz-question" v-html="quizQuestions[quizIndex].question"></h3>
           <div class="verbs__quiz-options">
             <button
@@ -62,19 +52,19 @@
             </button>
           </div>
           <div class="verbs__quiz-feedback">
-            <p v-if="quizFeedback==='correct'">✅ Отлично, всё верно!</p>
-            <p v-if="quizFeedback==='incorrect'">❌ Ошибка. Правильный ответ: <b>{{
+            <p v-if="quizFeedback==='correct'">✅ {{ t('verbsTheory.correct')}}</p>
+            <p v-if="quizFeedback==='incorrect'">❌ {{ t('verbsTheory.wrong')}} <b>{{
                 quizQuestions[quizIndex].answer
               }}</b></p>
           </div>
           <button v-if="selectedAnswer" @click="nextQuestion" class="verbs__quiz-next">
-            {{ quizIndex === quizQuestions.length - 1 ? 'Показать результат' : 'Следующий вопрос' }}
+            {{ quizIndex === quizQuestions.length - 1 ? t('verbTheorySeventhBlock.result') : t('verbTheorySeventhBlock.nextQuest') }}
           </button>
         </div>
         <div v-else class="verbs__quiz-results">
-          <h3 class="verbs__results-title">Ваш результат</h3>
-          <p class="verbs__results-score">Правильных ответов: {{ quizScore }} из {{ quizQuestions.length }}</p>
-          <button @click="resetQuiz" class="verbs__quiz-next">Пройти ещё раз</button>
+          <h3 class="verbs__results-title">{{ t('verbsTheory.result')}}</h3>
+          <p class="verbs__results-score">{{ t('verbsTheory.resultCount')}} {{ quizScore }} / {{ quizQuestions.length }}</p>
+          <button @click="resetQuiz" class="verbs__quiz-next">{{ t('verbsTheory.again')}}</button>
         </div>
       </section>
     </div>
@@ -85,33 +75,30 @@
 import {ref, computed} from 'vue'
 import Pin from '../assets/images/pin.svg'
 import Chat from '../assets/images/chat.svg'
-
-// ===============================================================
-// Весь контент для теоретических карточек теперь здесь
-// ===============================================================
+const { t } = useI18n()
 const contentSections = ref([
   {
     id: 1,
-    title: '1) Порядок слов: глагол на 2-м месте',
+    title: t('verbTheoryFirstBlock.title'),
     customClass: 'verbs__card--intro',
     content: [
       {
         type: 'paragraph',
-        text: '<b>Спряжение</b> — это изменение глагола по лицам и числам (я делаю, ты делаешь...). В немецком языке это основа предложения.'
+        text: `<b>${t('verbTheoryFirstBlock.subTitleFirstPart')}</b>${t('verbTheoryFirstBlock.subTitleSecondPart')}`
       },
       {
         type: 'note',
-        text: '<b>Золотое правило:</b> в простом утвердительном предложении спрягаемый (изменяемый) глагол <b>всегда стоит на втором месте</b>.'
+        text: `<b>${t('verbTheoryFirstBlock.rulePartFirst')}</b> ${t('verbTheoryFirstBlock.rulePartSecond')} <b>${t('verbTheoryFirstBlock.rulePartThird')}</b>.`
       },
       {
         type: 'example', icon: 'Chat', lines: [
-          '<u>Ich</u> <b>lerne</b> <u>heute Deutsch</u>. (Я учу сегодня немецкий.)',
-          '<u>Heute</u> <b>lerne</b> <u>ich Deutsch</u>. (Сегодня я учу немецкий.)'
+          `<u>Ich</u> <b>lerne</b> <u>heute Deutsch</u>. ${t('verbTheoryFirstBlock.firstExample')}`,
+          `<u>Heute</u> <b>lerne</b> <u>ich Deutsch</u>. ${t('verbTheoryFirstBlock.secondExample')}`
         ]
       },
       {
         type: 'paragraph',
-        text: 'Если в предложении есть второй глагол (например, в инфинитиве или Partizip II), он отправляется в самый <b>конец</b>.'
+        text: `${t('verbTheoryFirstBlock.paragraphPartOne')}<b>${t('verbTheoryFirstBlock.paragraphPartTwo')}</b>.`
       },
       {
         type: 'example', icon: 'Pin', lines: [
@@ -123,14 +110,14 @@ const contentSections = ref([
   },
   {
     id: 2,
-    title: '2) Präsens — настоящее время',
+    title: t('verbTheorySecondBlock.title'),
     content: [
       {
         type: 'paragraph',
-        text: 'Самое частое время, используется для описания действий в настоящем или будущем (с указанием времени). У большинства глаголов одинаковые окончания.'
+        text: t('verbTheorySecondBlock.subTitle')
       },
       {
-        type: 'table', headers: ['', 'machen (делать)', 'lernen (учить)'], rows: [
+        type: 'table', headers: ['', `machen${t('verbTheorySecondBlock.tableFirstExample')}`, `lernen${t('verbTheorySecondBlock.tableSecondExample')}`], rows: [
           ['ich', 'mach<b>e</b>', 'lern<b>e</b>'],
           ['du', 'mach<b>st</b>', 'lern<b>st</b>'],
           ['er/sie/es', 'mach<b>t</b>', 'lern<b>t</b>'],
@@ -141,76 +128,76 @@ const contentSections = ref([
       },
       {
         type: 'note',
-        text: '<b>Внимание на сильные глаголы!</b> У них во 2-м и 3-м лице ед.ч. (du, er/sie/es) часто меняется корневая гласная: f<b>a</b>hren → du f<b>ä</b>hrst, l<b>e</b>sen → du l<b>ie</b>st.'
+        text: `<b>${t('verbTheorySecondBlock.paragraphPartOne')}</b> ${t('verbTheorySecondBlock.paragraphPartTwo')}<b>a</b>hren → du f<b>ä</b>hrst, l<b>e</b>sen → du l<b>ie</b>st.`
       }
     ]
   },
   {
     id: 3,
-    title: '3) Perfekt — разговорное прошедшее время',
+    title: t('verbTheoryThirdBlock.title'),
     content: [
       {
         type: 'paragraph',
-        text: 'Используется для описания завершённых действий, особенно в устной речи. Строится по формуле:'
+        text: t('verbTheoryThirdBlock.subTitle')
       },
-      {type: 'note', text: '<b>haben / sein</b> (на 2-м месте) + <b>Partizip II</b> (в конце предложения).'},
+      {type: 'note', text: `<b>haben / sein</b> ${t('verbTheoryThirdBlock.noteOneFirstPart')} + <b>Partizip II</b> ${t('verbTheoryThirdBlock.noteOneSecondPart')}`},
       {
         type: 'list', items: [
-          'С <b>sein</b> идут глаголы движения (<i>gehen, fahren, fliegen</i>), смены состояния (<i>aufstehen, sterben</i>) и исключения (<i>sein, bleiben, werden</i>).',
-          'Большинство остальных глаголов — с <b>haben</b>.'
+          `${t('verbTheoryThirdBlock.noteTwoFirstPart')} <b>sein</b> ${t('verbTheoryThirdBlock.noteTwoSecondPart')} (<i>gehen, fahren, fliegen</i>), ${t('verbTheoryThirdBlock.noteTwoThirdPart')} (<i>aufstehen, sterben</i>) ${t('verbTheoryThirdBlock.noteTwoFourthPart')} (<i>sein, bleiben, werden</i>).`,
+          `${t('verbTheoryThirdBlock.noteThreeFirstPart')} <b>haben</b>.`
         ]
       },
       {
         type: 'example', icon: 'Pin', lines: [
-          'Er <b>ist</b> nach Berlin <u>gefahren</u>. (Движение → sein)',
-          'Wir <b>haben</b> viel <u>gemacht</u>. (Обычный глагол → haben)'
+         `Er <b>ist</b> nach Berlin <u>gefahren</u>. ${t('verbTheoryThirdBlock.noteFourPartFirst')}`,
+          `Wir <b>haben</b> viel <u>gemacht</u>. ${t('verbTheoryThirdBlock.noteFourPartSecond')}`
         ]
       }
     ]
   },
   {
     id: 4,
-    title: '4) Präteritum — "книжное" прошедшее время',
+    title: t('verbTheoryFourthBlock.title'),
     content: [
       {
         type: 'paragraph',
-        text: 'Это время чаще всего встречается в книгах, новостях и рассказах. В живой речи его используют в основном для глаголов <b>sein, haben</b> и <b>модальных</b>.'
+        text: `${t('verbTheoryFourthBlock.subTitlePartOne')} <b>sein, haben</b> и <b>${t('verbTheoryFourthBlock.subTitlePartTwo')}</b>.`
       },
       {
         type: 'example', icon: 'Chat', lines: [
-          'Früher <b>war</b> ich Student. (Раньше я был студентом.)',
-          'Gestern <b>hatte</b> ich keine Zeit. (Вчера у меня не было времени.)',
-          'Ich <b>konnte</b> nicht kommen. (Я не мог прийти.)'
+          `Früher <b>war</b> ich Student. ${t('verbTheoryFourthBlock.typeOne')}`,
+          `Gestern <b>hatte</b> ich keine Zeit. ${t('verbTheoryFourthBlock.typeTwo')}`,
+          `Ich <b>konnte</b> nicht kommen. ${t('verbTheoryFourthBlock.typeThree')}`
         ]
       }
     ]
   },
   {
     id: 5,
-    title: '5) Futur I — будущее время',
+    title: t('verbTheoryFifthBlock.title'),
     content: [
-      {type: 'paragraph', text: 'Используется для выражения планов или предположений о будущем. Формула проста:'},
-      {type: 'note', text: '<b>werden</b> (на 2-м месте) + <b>инфинитив</b> (в конце предложения).'},
+      {type: 'paragraph', text: `${t('verbTheoryFifthBlock.paragraph')}`},
+      {type: 'note', text: `<b>werden</b> ${t('verbTheoryFifthBlock.noteOneFirstPart')} + <b>${t('verbTheoryFifthBlock.noteOneSecondPart')}</b> ${t('verbTheoryFifthBlock.noteOneThirdPart')}`},
       {
         type: 'example', icon: 'Pin', lines: [
-          'Ich <b>werde</b> morgen Deutsch <u>lernen</u>. (Я буду завтра учить немецкий.)'
+          `Ich <b>werde</b> morgen Deutsch <u>lernen</u>.${t('verbTheoryFifthBlock.noteTwoFirstPart')}`
         ]
       },
       {
         type: 'paragraph',
-        text: '<b>Лайфхак:</b> в разговорной речи немцы часто используют Präsens для будущего, если из контекста и так всё понятно: <i>Ich lerne <b>morgen</b> Deutsch.</i>'
+        text: `<b>${t('verbTheoryFifthBlock.noteThreeFirstPart')}</b>${t('verbTheoryFifthBlock.noteThreeSecondPart')} <i>Ich lerne <b>morgen</b> Deutsch.</i>`
       }
     ]
   },
   {
     id: 6,
-    title: '6) Типичные ошибки новичков',
+    title: t('verbTheorySixthBlock.title'),
     content: [
       {
         type: 'list', items: [
-          '<b>Порядок слов:</b> Спрягаемый глагол не на втором месте.<br>❌ <span style="text-decoration: line-through;">Ich heute lerne Deutsch.</span><br>✅ Ich <b>lerne</b> heute Deutsch.',
-          '<b>Рамочная конструкция:</b> Вторая часть глагола (в Perfekt, Futur I) не в конце.<br>❌ <span style="text-decoration: line-through;">Ich habe gelernt heute.</span><br>✅ Ich habe heute <b>gelernt</b>.',
-          '<b>Выбор haben/sein:</b> Неправильный вспомогательный глагол в Perfekt.<br>❌ <span style="text-decoration: line-through;">Ich bin das Buch gelesen.</span><br>✅ Ich <b>habe</b> das Buch gelesen.'
+          `<b>${t('verbTheorySixthBlock.typeOnePartFirst')}</b> ${t('verbTheorySixthBlock.typeOnePartSecond')}<br>❌ <span style="text-decoration: line-through;">Ich heute lerne Deutsch.</span><br>✅ Ich <b>lerne</b> heute Deutsch.`,
+          `<b>${t('verbTheorySixthBlock.typeTwoPartOne')}</b> ${t('verbTheorySixthBlock.typeTwoPartTwo')}<br>❌ <span style="text-decoration: line-through;">Ich habe gelernt heute.</span><br>✅ Ich habe heute <b>gelernt</b>.`,
+          `<b>${t('verbTheorySixthBlock.typeThreePartOne')}</b> ${t('verbTheorySixthBlock.typeThreePartTwo')}<br>❌ <span style="text-decoration: line-through;">Ich bin das Buch gelesen.</span><br>✅ Ich <b>habe</b> das Buch gelesen.`
         ]
       }
     ]
@@ -219,37 +206,37 @@ const contentSections = ref([
 
 const quizQuestions = ref([
   {
-    question: 'Как правильно сказать: "Я учу немецкий"?',
+    question: t('verbTheorySeventhBlock.questOne'),
     options: ['Ich lerne Deutsch.', 'Ich Deutsch lerne.', 'Ich lernen Deutsch.'],
     answer: 'Ich lerne Deutsch.'
   },
   {
-    question: 'Выберите верный порядок слов: "Сегодня я иду в кино".',
+    question: t('verbTheorySeventhBlock.questTwo'),
     options: ['Heute gehe ich ins Kino.', 'Heute ich gehe ins Kino.', 'Ich gehe heute ins Kino.'],
     answer: 'Heute gehe ich ins Kino.'
   },
   {
-    question: 'Как будет в Perfekt: "Мы много сделали"?',
+    question: t('verbTheorySeventhBlock.questThree'),
     options: ['Wir haben viel gemacht.', 'Wir sind viel gemacht.', 'Wir haben viel machen.'],
     answer: 'Wir haben viel gemacht.'
   },
   {
-    question: 'Perfekt с глаголом движения: "Он поехал домой".',
+    question: t('verbTheorySeventhBlock.questFour'),
     options: ['Er ist nach Hause gefahren.', 'Er hat nach Hause gefahren.', 'Er ist gefahren nach Hause.'],
     answer: 'Er ist nach Hause gefahren.'
   },
   {
-    question: 'Präteritum от глагола "sein": "Я был уставший".',
+    question: t('verbTheorySeventhBlock.questFive'),
     options: ['Ich war müde.', 'Ich bin müde gewesen.', 'Ich hatte müde.'],
     answer: 'Ich war müde.'
   },
   {
-    question: 'Futur I: "Завтра она будет работать".',
+    question: t('verbTheorySeventhBlock.questSix'),
     options: ['Sie wird morgen arbeiten.', 'Sie werde morgen arbeiten.', 'Sie wird arbeiten morgen.'],
     answer: 'Sie wird morgen arbeiten.'
   },
   {
-    question: 'Выберите правильный Partizip II от глагола "sehen" (видеть).',
+    question: t('verbTheorySeventhBlock.questSeven'),
     options: ['gesehen', 'geseht', 'gesahen'],
     answer: 'gesehen'
   }

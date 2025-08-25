@@ -2,20 +2,15 @@
   <div class="adjs">
     <div class="adjs__inner">
       <header class="adjs__header">
-        <h1 class="adjs__title">Прилагательные в немецком: просто и понятно</h1>
-        <p class="adjs__subtitle">Что это, где стоят, как сравниваются и какие окончания брать. В конце — мини-квиз.</p>
+        <h1 class="adjs__title">{{ t('adjectiveTheory.title')}}</h1>
+        <p class="adjs__subtitle"> {{ t('adjectiveTheory.subTitle')}}</p>
       </header>
       <section v-for="section in contentSections" :key="section.id" class="adjs__card" :class="section.customClass">
         <h2 class="adjs__card-title">{{ section.title }}</h2>
-
         <template v-for="(item, index) in section.content" :key="index">
-
           <p v-if="item.type === 'paragraph'" class="adjs__paragraph" v-html="item.text"></p>
-
           <div v-if="item.type === 'note'" class="adjs__note" v-html="item.text"></div>
-
           <div v-if="item.type === 'tip'" class="adjs__tip" v-html="item.text"></div>
-
           <ul v-if="item.type === 'list'" class="adjs__list">
             <li v-for="(li, i) in item.items" :key="i" class="adjs__item">
               <div class="adjs__example">
@@ -56,9 +51,9 @@
         </template>
       </section>
       <section class="adjs__card adjs__quiz">
-        <h2 class="adjs__card-title">7) Мини-квиз</h2>
+        <h2 class="adjs__card-title">{{ t('adjectiveTheory.quizTitle')}}</h2>
         <div v-if="!quizFinished" class="adjs__quiz-body">
-          <p class="adjs__quiz-progress">Вопрос {{ quizIndex + 1 }} / {{ quizQuestions.length }}</p>
+          <p class="adjs__quiz-progress">{{ t('adjectiveTheory.question')}} {{ quizIndex + 1 }} / {{ quizQuestions.length }}</p>
           <h3 class="adjs__quiz-question" v-html="quizQuestions[quizIndex].question"></h3>
           <div class="adjs__quiz-options">
             <button
@@ -72,22 +67,23 @@
             </button>
           </div>
           <div class="adjs__quiz-feedback">
-            <p v-if="quizFeedback === 'correct'" class="adjs__feedback-text">✅ Верно!</p>
-            <p v-if="quizFeedback === 'incorrect'" class="adjs__feedback-text">❌ Неверно. Правильный ответ:
-              <b>{{ quizQuestions[quizIndex].answer }}</b></p>
+            <p v-if="quizFeedback === 'correct'" class="adjs__feedback-text">✅ {{ t('adjectiveTheory.correct')}}</p>
+            <p v-if="quizFeedback === 'incorrect'" class="adjs__feedback-text">❌ {{ t('adjectiveTheory.wrong')}}
+              <b>{{ quizQuestions[quizIndex].answer }}</b>
+            </p>
           </div>
           <button
               v-if="selectedAnswer"
               @click="nextQuestion"
               class="adjs__quiz-next"
           >
-            {{ quizIndex === quizQuestions.length - 1 ? 'Показать результат' : 'Дальше' }}
+            {{ quizIndex === quizQuestions.length - 1 ? t('adjectiveTheory.showResult') : t('adjectiveTheory.next') }}
           </button>
         </div>
         <div v-else class="adjs__quiz-results">
-          <h3 class="adjs__results-title">Результат</h3>
-          <p class="adjs__results-score">Баллы: {{ quizScore }} / {{ quizQuestions.length }}</p>
-          <button @click="resetQuiz" class="adjs__quiz-next">Пройти ещё раз</button>
+          <h3 class="adjs__results-title">{{ t('adjectiveTheory.result')}}</h3>
+          <p class="adjs__results-score">{{t('adjectiveTheory.points')}} {{ quizScore }} / {{ quizQuestions.length }}</p>
+          <button @click="resetQuiz" class="adjs__quiz-next">{{t('adjectiveTheory.again')}}</button>
         </div>
       </section>
     </div>
@@ -98,32 +94,32 @@
 import {ref} from 'vue'
 import Pin from '../assets/images/pin.svg'
 import Chat from '../assets/images/chat.svg'
-
+const { t } = useI18n()
 const contentSections = ref([
   {
     id: 1,
-    title: '1) Что такое прилагательное?',
+    title: t('adjectiveTheoryFirstBlock.title'),
     customClass: 'adjs__card--intro',
     content: [
       {
         type: 'paragraph',
-        text: '<b>Прилагательное</b> (Adjektiv) — слово, отвечающее на вопрос «какой?». Примеры: <i>schön</i> (красивый), <i>teuer</i> (дорогой), <i>schnell</i> (быстрый).'
+        text: `<b>${t('adjectiveTheoryFirstBlock.subtitlePartFirst')}</b> ${t('adjectiveTheoryFirstBlock.subtitlePartTwo')} <i>schön</i> ${t('adjectiveTheoryFirstBlock.subtitlePartThree')} <i>${t('adjectiveTheoryFirstBlock.subtitlePartFour')}</i> (дорогой), <i>schnell</i> ${t('adjectiveTheoryFirstBlock.subtitlePartFive')}`
       },
       {
         type: 'note',
-        text: '<b>Важно:</b> прилагательные бывают в двух позициях — от этого зависит, нужны ли окончания.'
+        text: `<b>${t('adjectiveTheoryFirstBlock.noteOnePartOne')}</b> ${t('adjectiveTheoryFirstBlock.noteOnePartTwo')}`
       },
       {
         type: 'list', items: [
           {
             icon: 'Chat',
-            mainText: '<b>Предикативная позиция</b> — после <i>sein/werden/bleiben</i>, <u>без окончаний</u>.',
-            translation: 'Die Schuhe sind <b>teuer</b>. — Обувь дорогая.'
+            mainText: `<b>${t('adjectiveTheoryFirstBlock.noteTwoPartOne')}</b> ${t('adjectiveTheoryFirstBlock.noteTwoPartTwo')} <i>sein/werden/bleiben</i>, <u>${t('adjectiveTheoryFirstBlock.noteTwoPartThree')}</u>.`,
+            translation: `Die Schuhe sind <b>teuer</b>. ${t('adjectiveTheoryFirstBlock.noteTranslateOne')}`
           },
           {
             icon: 'Chat',
-            mainText: '<b>Атрибутивная позиция</b> — перед существительным, <u>с окончаниями</u>.',
-            translation: 'ein <b>schönes</b> Haus; der <b>neue</b> Laptop'
+            mainText: `<b>${t('adjectiveTheoryFirstBlock.noteThreePartOne')}</b> ${t('adjectiveTheoryFirstBlock.noteThreePartTwo')} <u>${t('adjectiveTheoryFirstBlock.noteThreePartThree')}</u>.`,
+            translation: `ein <b>schönes</b> Haus; der <b>neue</b> Laptop`
           }
         ]
       }
@@ -131,61 +127,61 @@ const contentSections = ref([
   },
   {
     id: 2,
-    title: '2) Как выбрать окончание: супер-короткий алгоритм',
+    title: t('adjectiveTheorySecondBlock.title'),
     content: [
       {
         type: 'ordered-list', items: [
-          '<b>После sein/werden/bleiben?</b> — ставь <b>без окончания</b>: <i>ist schön</i>.',
-          '<b>Перед существительным?</b> Смотри на артикль: <ul class="adjs__bullets"><li><b>der/die/das, dieser, jeder…</b> (определённый) → <u>слабое склонение</u></li><li><b>ein/kein/mein…</b> (неопределённый) → <u>смешанное склонение</u></li><li><b>без артикля</b> → <u>сильное склонение</u></li></ul>',
-          '<b>Падеж?</b> В Akkusativ, Dativ и Genitiv почти всегда окончание <b>-en</b>.'
+          `<b>${t('adjectiveTheorySecondBlock.exampleOnePartOne')}</b> ${t('adjectiveTheorySecondBlock.exampleOnePartTwo')} <b>${t('adjectiveTheorySecondBlock.exampleOnePartThree')}</b>: <i>ist schön</i>.`,
+          `<b>${t('adjectiveTheorySecondBlock.exampleTwoPartOne')}</b> ${t('adjectiveTheorySecondBlock.exampleTwoPartTwo')} <ul class="adjs__bullets"><li><b>der/die/das, dieser, jeder…</b> ${t('adjectiveTheorySecondBlock.exampleTwoPartThree')} <u>${t('adjectiveTheorySecondBlock.exampleTwoPartFour')}</u></li><li><b>ein/kein/mein…</b> ${t('adjectiveTheorySecondBlock.exampleTwoPartFive')} <u>${t('adjectiveTheorySecondBlock.exampleTwoPartSeven')}</u></li><li><b>${t('adjectiveTheorySecondBlock.exampleTwoPartEight')}</b> → <u>${t('adjectiveTheorySecondBlock.exampleTwoPartNine')}</u></li></ul>`,
+          `<b>${t('adjectiveTheorySecondBlock.exampleThreePartOne')}</b> ${t('adjectiveTheorySecondBlock.exampleThreePartTwo')} <b>-en</b>.`
         ]
       },
       {
         type: 'tip',
-        text: '<b>Лайфхак:</b> если сомневаешься в косвенных падежах (Akk/Dat/Gen) — чаще всего подходит окончание <b>-en</b>.'
+        text: `<b>${t('adjectiveTheorySecondBlock.tipPartOne')}</b> ${t('adjectiveTheorySecondBlock.tipPartTwo')} <b>-en</b>.`
       }
     ]
   },
   {
     id: 3,
-    title: '3) Разбираем на примере: `ein` + прилагательное',
+    title: t('adjectiveTheoryThirdBlock.title'),
     content: [
       {
         type: 'paragraph',
-        text: 'Это самая важная тема для новичков. Артикль `ein` (один, какой-то) не всегда показывает род существительного. В этом случае прилагательное берёт эту работу на себя.'
+        text: t('adjectiveTheoryThirdBlock.paragraph')
       },
       {
         type: 'note',
-        text: '<b>Простая логика:</b> прилагательное получает окончание, которое "подсказывает" нам род существительного, как это сделал бы определённый артикль (d<b>er</b>, di<b>e</b>, da<b>s</b>).'
+        text: `<b>${t('adjectiveTheoryThirdBlock.noteOnePartOne')}</b> ${t('adjectiveTheoryThirdBlock.noteOnePartTwo')} (d<b>er</b>, di<b>e</b>, da<b>s</b>).`
       },
       {
         type: 'list',
         items: [
           {
             icon: 'Chat',
-            mainText: 'Мужской род (Maskulinum): de<b>r</b> Stuhl → ein gut<b>er</b> Stuhl',
-            translation: 'Мы видим окончание <b>-er</b> и сразу понимаем, что речь о мужском роде.'
+            mainText: `${t('adjectiveTheoryThirdBlock.explainExampleOnePartOne')} de<b>r</b> Stuhl → ein gut<b>er</b> Stuhl`,
+            translation: `${t('adjectiveTheoryThirdBlock.explainExampleOnePartOne')} <b>-er</b> ${t('adjectiveTheoryThirdBlock.explainExampleOnePartTwo')}`
           },
           {
             icon: 'Chat',
-            mainText: 'Женский род (Femininum): di<b>e</b> Lampe → ein<b>e</b> gut<b>e</b> Lampe',
-            translation: 'Артикль `eine` уже показал женский род, поэтому прилагательному достаточно простого окончания <b>-e</b>.'
+            mainText: `${t('adjectiveTheoryThirdBlock.exampleTwoPartOne')} di<b>e</b> Lampe → ein<b>e</b> gut<b>e</b> Lampe`,
+            translation: `${t('adjectiveTheoryThirdBlock.exampleThreePartOne')} <b>-e</b>.`
           },
           {
             icon: 'Chat',
-            mainText: 'Средний род (Neutrum): da<b>s</b> Buch → ein gut<b>es</b> Buch',
-            translation: 'Окончание <b>-es</b> безошибочно указывает на средний род.'
+            mainText: `${t('adjectiveTheoryThirdBlock.exampleFourPartOne')} da<b>s</b> Buch → ein gut<b>es</b> Buch`,
+            translation: `${t('adjectiveTheoryThirdBlock.exampleFivePartOne')} <b>-es</b> ${t('adjectiveTheoryThirdBlock.exampleFivePartTwo')}`
           }
         ]
       },
       {
         type: 'paragraph',
-        text: '<b>Посмотрим, как это работает в предложениях:</b>'
+        text: `<b>${t('adjectiveTheoryThirdBlock.paragraphTwo')}</b>`
       },
       {
         type: 'table',
-        title: 'Примеры в Nominativ (Кто? Что?) и Akkusativ (Кого? Что?)',
-        headers: ['Род', 'Nominativ (это есть...)', 'Akkusativ (я покупаю...)'],
+        title: `${t('adjectiveTheoryThirdBlock.tableExampleOne')}`,
+        headers: [`${t('adjectiveTheoryThirdBlock.tableHeaderOne')}`, `${t('adjectiveTheoryThirdBlock.tableHeaderTwo')}`, `${t('adjectiveTheoryThirdBlock.tableHeaderThree')}`],
         rows: [
           ['Mask. (m)', 'Das ist <b>ein schöner</b> Tisch.', 'Ich kaufe <b>einen schönen</b> Tisch.'],
           ['Fem. (f)', 'Das ist <b>eine schöne</b> Lampe.', 'Ich kaufe <b>eine schöne</b> Lampe.'],
@@ -194,27 +190,27 @@ const contentSections = ref([
       },
       {
         type: 'tip',
-        text: '<b>Запомните!</b> В Akkusativ мужской род меняется (`ein` → `einen`), а прилагательное почти всегда получает окончание <b>-en</b>. Женский и средний род в Akkusativ выглядят так же, как в Nominativ.'
+        text: `<b>${t('adjectiveTheoryThirdBlock.tipOnePartOne')}</b> ${t('adjectiveTheoryThirdBlock.tipOnePartTwo')} <b>-en</b>. ${t('adjectiveTheoryThirdBlock.tipOnePartThree')}`
       }
     ]
   },
   {
     id: 4,
-    title: '4) Мини-таблицы для старта',
+    title: t('adjectiveTheoryFourthBlock.title'),
     content: [
       {
         type: 'table',
-        title: 'A) Сильное склонение (без артикля), Nominativ',
+        title: t('adjectiveTheoryFourthBlock.tableFirstTitle'),
         headers: ['', 'Mask.', 'Fem.', 'Neut.', 'Plural'],
         rows: [
-          ['Окончан.', '-er', '-e', '-es', '-e'],
-          ['Пример', '<b>Guter</b> Mann', '<b>Gute</b> Frau', '<b>Gutes</b> Brot', '<b>Gute</b> Bücher']
+          [`${t('adjectiveTheoryFourthBlock.rowOne')}`, '-er', '-e', '-es', '-e'],
+          [`${t('adjectiveTheoryFourthBlock.rowTwo')}`, '<b>Guter</b> Mann', '<b>Gute</b> Frau', '<b>Gutes</b> Brot', '<b>Gute</b> Bücher']
         ]
       },
       {
         type: 'table',
-        title: 'B) Смешанное (после ein/kein/мой-твой…), Nom/Akk',
-        headers: ['Падеж', 'Mask.', 'Fem.', 'Neut.', 'Plural'],
+        title: `${t('adjectiveTheoryFourthBlock.tableSecondTitle')}`,
+        headers: [`${t('adjectiveTheoryFourthBlock.header')}`, 'Mask.', 'Fem.', 'Neut.', 'Plural'],
         rows: [
           ['Nom', 'ein <b>guter</b> Mann', 'eine <b>gute</b> Frau', 'ein <b>gutes</b> Brot', 'meine <b>guten</b> Freunde'],
           ['Akk', 'einen <b>guten</b> Mann', 'eine <b>gute</b> Frau', 'ein <b>gutes</b> Brot', 'meine <b>guten</b> Freunde']
@@ -222,12 +218,12 @@ const contentSections = ref([
       },
       {
         type: 'note',
-        text: 'Идея слабого склонения: в Nominativ ед.ч. часто <b>-e</b>, в остальных падежах — обычно <b>-en</b>.'
+        text: `${t('adjectiveTheoryFourthBlock.type')} <b>-e</b>, ${t('adjectiveTheoryFourthBlock.typeTwo')} <b>-en</b>.`
       },
       {
         type: 'table',
-        title: 'C) Слабое (после der/die/das, dieser…)',
-        headers: ['Падеж', 'Mask.', 'Fem.', 'Neut.', 'Plural'],
+        title: t('adjectiveTheoryFourthBlock.typeThree'),
+        headers: [`${t('adjectiveTheoryFourthBlock.header')}`, 'Mask.', 'Fem.', 'Neut.', 'Plural'],
         rows: [
           ['Nom', 'der <b>gute</b> Mann', 'die <b>gute</b> Frau', 'das <b>gute</b> Brot', 'die <b>guten</b> Freunde'],
           ['Akk', 'den <b>guten</b> Mann', 'die <b>gute</b> Frau', 'das <b>gute</b> Brot', 'die <b>guten</b> Freunde']
@@ -237,24 +233,24 @@ const contentSections = ref([
   },
   {
     id: 5,
-    title: '5) Степени сравнения (очень кратко)',
+    title: t('adjectiveTheoryFifthBlock.title'),
     content: [
       {
         type: 'list', items: [
           {
             icon: 'Chat',
-            mainText: '<b>Положительная форма</b> (обычная): <i>schnell, teuer, schön</i>',
+            mainText: `<b>${t('adjectiveTheoryFifthBlock.exampleOne')}</b> (обычная): <i>schnell, teuer, schön</i>`,
             translation: 'Das Auto ist <b>schnell</b>.'
           },
           {
             icon: 'Chat',
-            mainText: '<b>Komparativ</b> (сравнительная): +<b>-er</b> + <i>als</i>',
+            mainText: `<b>Komparativ</b> ${t('adjectiveTheoryFifthBlock.exampleTwo')}<b>-er</b> + <i>als</i>`,
             translation: 'schnell → <b>schneller</b> (als), teuer → <b>teurer</b> (als)',
             subExample: {icon: 'Pin', text: '<i>Mein Auto ist <b>schneller</b> als deins.</i>'}
           },
           {
             icon: 'Chat',
-            mainText: '<b>Superlativ</b> (превосходная): <i>am</i> + основа + <b>-sten</b> (как наречие) / <b>-ste</b> (перед сущ.)',
+            mainText: `<b>Superlativ</b> ${t('adjectiveTheoryFifthBlock.exampleThreePartOne')} <i>am</i> ${t('adjectiveTheoryFifthBlock.exampleThreePartTwo')} <b>-sten</b> ${t('adjectiveTheoryFifthBlock.exampleThreePartThree')} <b>-ste</b> ${t('adjectiveTheoryFifthBlock.exampleThreePartFourth')}`,
             translation: 'am <b>schnellsten</b>; der <b>schnellste</b> Weg',
             subExample: {icon: 'Pin', text: '<i>Er läuft <b>am schnellsten</b>.</i>'}
           }
@@ -262,33 +258,33 @@ const contentSections = ref([
       },
       {
         type: 'note',
-        text: '<b>Орфография:</b> после шипящих <i>(s, ß, x, z)</i> чаще <b>-esten</b>: <i>heiß → am heißesten</i>. Часто появляется умлаут: <i>alt → älter → am ältesten</i>.'
+        text: `<b>${t('adjectiveTheoryFifthBlock.exampleFourPartOne')}</b> ${t('adjectiveTheoryFifthBlock.exampleFourPartTwo')} <i>(s, ß, x, z)</i> ${t('adjectiveTheoryFifthBlock.exampleFourPartThree')} <b>-esten</b>: <i>heiß → am heißesten</i>. ${t('adjectiveTheoryFifthBlock.exampleFourPartFour')} <i>alt → älter → am ältesten</i>.`
       },
       {
         type: 'tip',
-        text: '<b>Неправильные формы:</b> gut → <b>besser</b> → <b>am besten</b>; viel → <b>mehr</b> → <b>am meisten</b>; hoch → <b>höher</b> → <b>am höchsten</b>.'
+        text: `<b>${t('adjectiveTheoryFifthBlock.exampleFivePartOne')}</b> gut → <b>besser</b> → <b>am besten</b>; viel → <b>mehr</b> → <b>am meisten</b>; hoch → <b>höher</b> → <b>am höchsten</b>.`
       }
     ]
   },
   {
     id: 6,
-    title: '6) Топ-ошибки и короткие правила',
+    title: t('adjectiveTheorySixthBlock.title'),
     content: [
       {
         type: 'list', items: [
           {
             icon: 'Chat',
-            mainText: '<b>Нет окончаний после sein/werden/bleiben</b>',
+            mainText: `<b>${t('adjectiveTheorySixthBlock.exampleFirst')}</b>`,
             translation: '✗ Die Schuhe sind <s>teuren</s> → ✓ Die Schuhe sind <b>teuer</b>.'
           },
           {
             icon: 'Chat',
-            mainText: '<b>Komparativ всегда используется с `als` (чем)</b>',
+            mainText: `<b>${t('adjectiveTheorySixthBlock.exampleSecond')}</b>`,
             translation: 'größer <b>als</b>…, besser <b>als</b>…'
           },
           {
             icon: 'Chat',
-            mainText: '<b>Dativ Plural</b>: у существительного обычно +<i>-n</i>',
+            mainText: `<b>Dativ Plural</b>${t('adjectiveTheorySixthBlock.exampleThird')}<i>-n</i>`,
             translation: 'mit den <b>guten</b> Freunde<b>n</b>'
           }
         ]
@@ -298,39 +294,41 @@ const contentSections = ref([
 ]);
 const quizQuestions = ref([
   {
-    question: 'Выбери форму: <b>Das ist ein ___ Tisch. (schön)</b>',
+    question: `${t('adjectiveTheoryQuiz.firstQuest')} <b>Das ist ein ___ Tisch. (schön)</b>`,
     options: ['schöner', 'schöne', 'schönes'],
     answer: 'schöner'
   },
   {
-    question: 'Акузатив м.р. после ein-слова: <b>Ich habe einen ___ Hund. (klein)</b>',
+    question: `${t('adjectiveTheoryQuiz.secondQuest')} <b>Ich habe einen ___ Hund. (klein)</b>`,
     options: ['kleinen', 'kleiner', 'kleine'],
     answer: 'kleinen'
   },
-  {question: 'Предикатив: <b>Die Schuhe sind ___.</b>', options: ['teuer', 'teuren', 'teure'], answer: 'teuer'},
   {
-    question: 'Опред. артикль, Akk Neut: <b>Sie kauft das ___ Kleid. (rot)</b>',
-    options: ['rote', 'rotes', 'roter'],
+    question: `${t('adjectiveTheoryQuiz.thirdQuest')} <b>Die Schuhe sind ___.</b>`,
+    options: ['teuer', 'teuren', 'teure'], answer: 'teuer'},
+  {
+    question: `${t('adjectiveTheoryQuiz.fourthQuest')} <b>Sie kauft das ___ Kleid. (rot)</b>`,
+    options: ['rotes', 'rote', 'roter'],
     answer: 'rote'
   },
   {
-    question: 'Dativ Plural: <b>Wir sprechen mit den ___ Nachbarn. (nett)</b>',
-    options: ['netten', 'nette', 'netter'],
+    question: `Dativ Plural: <b>Wir sprechen mit den ___ Nachbarn. (nett)</b>`,
+    options: ['netter', 'nette', 'netten'],
     answer: 'netten'
   },
   {
-    question: 'Komparativ: <b>Dieses Handy ist ___ als jenes. (leicht)</b>',
+    question: `Komparativ: <b>Dieses Handy ist ___ als jenes. (leicht)</b>`,
     options: ['leichter', 'am leichtesten', 'leichte'],
     answer: 'leichter'
   },
   {
-    question: 'Superlativ (как наречие): <b>Er läuft ___.</b>',
+    question: `${t('adjectiveTheoryQuiz.seventhQuest')} <b>Er läuft ___.</b>`,
     options: ['am schnellsten', 'schnellste', 'der schnellste'],
     answer: 'am schnellsten'
   },
   {
-    question: 'Сильное склонение (без артикля): <b>___ Brot ist frisch. (gut)</b>',
-    options: ['Gutes', 'Guter', 'Gute'],
+    question: `${t('adjectiveTheoryQuiz.eightQuest')} <b>___ Brot ist frisch. (gut)</b>`,
+    options: ['Guter', 'Gutes', 'Gute'],
     answer: 'Gutes'
   }
 ])
@@ -619,7 +617,7 @@ definePageMeta({
 
 @media (max-width: 767px) {
   .adjs__inner {
-    padding: 1rem;
+    padding: 14px;
   }
 
   .adjs__title {
@@ -630,6 +628,7 @@ definePageMeta({
 
   .adjs__card {
     box-shadow: 2px 2px 5px #1f2937;
+    padding: 1rem;
   }
 
   .adjs__card-title {

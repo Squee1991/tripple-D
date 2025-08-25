@@ -15,6 +15,235 @@
   "modalVerbsTipsTitle": {
     "tipsTitle": "Полезные советы:"
   },
+  "adjectiveTheory": {
+    "title": "Прилагательные в немецком: просто и понятно",
+    "subTitle": "Что это, где стоят, как сравниваются и какие окончания брать. В конце — мини-квиз.",
+    "quizTitle": "7) Мини-квиз",
+    "question": "Вопрос",
+    "correct": "Верно!",
+    "wrong": "Неверно. Правильный ответ:",
+    "result": "Результат",
+    "showResult": "Показать результат",
+    "next": "Дальше",
+    "points": "Баллы:",
+    "again": "Пройти ещё раз"
+  },
+  "adjectiveTheoryFirstBlock": {
+    "title": "1) Что такое прилагательное?",
+    "subtitlePartFirst": "Прилагательное",
+    "subtitlePartTwo": "(Adjektiv) — слово, отвечающее на вопрос «какой?». Примеры:",
+    "subtitlePartThree": "(красивый),",
+    "subtitlePartFour": "(красивый),",
+    "subtitlePartFive": "(быстрый).",
+    "noteOnePartOne": "Важно:",
+    "noteOnePartTwo": "прилагательные бывают в двух позициях — от этого зависит, нужны ли окончания.",
+    "noteTwoPartOne": "Предикативная позиция",
+    "noteTwoPartTwo": "— после",
+    "noteTwoPartThree": "без окончаний",
+    "noteTranslateOne": "— Обувь дорогая.",
+    "noteThreePartOne": "Атрибутивная позиция",
+    "noteThreePartTwo": "— перед существительным,",
+    "noteThreePartThree": "с окончаниями"
+  },
+  "adjectiveTheorySecondBlock": {
+    "title": "2) Как выбрать окончание: супер-короткий алгоритм",
+    "exampleOnePartOne": "После sein/werden/bleiben?",
+    "exampleOnePartTwo": "— ставь",
+    "exampleOnePartThree": "без окончания",
+    "exampleTwoPartOne": "Перед существительным?",
+    "exampleTwoPartTwo": "Смотри на артикль:",
+    "exampleTwoPartThree": "(определённый) →",
+    "exampleTwoPartFour": "слабое склонение",
+    "exampleTwoPartFive": "(неопределённый) →",
+    "exampleTwoPartSeven": "смешанное склонение",
+    "exampleTwoPartEight": "без артикля",
+    "exampleTwoPartNine": "сильное склонение",
+    "exampleThreePartOne": "Падеж",
+    "exampleThreePartTwo": "В Akkusativ, Dativ и Genitiv почти всегда окончание",
+    "tipPartOne": "Лайфхак:",
+    "tipPartTwo": "если сомневаешься в косвенных падежах (Akk/Dat/Gen) — чаще всего подходит окончание"
+  },
+  "adjectiveTheoryThirdBlock": {
+    "title": "3) Разбираем на примере: `ein` + прилагательное",
+    "paragraph": "Это самая важная тема для новичков. Артикль `ein` (один, какой-то) не всегда показывает род существительного. В этом случае прилагательное берёт эту работу на себя.",
+    "noteOnePartOne": "Простая логика:",
+    "noteOnePartTwo": "прилагательное получает окончание, которое \"подсказывает\" нам род существительного, как это сделал бы определённый артикль",
+    "exampleOnePartOne": "Мужской род (Maskulinum):",
+    "explainExampleOnePartOne": "Мы видим окончание",
+    "explainExampleOnePartTwo": "и сразу понимаем, что речь о мужском роде.",
+    "exampleTwoPartOne": "Женский род (Femininum):",
+    "exampleThreePartOne": "Артикль `eine` уже показал женский род, поэтому прилагательному достаточно простого окончания",
+    "exampleFourPartOne": "Средний род (Neutrum):",
+    "exampleFivePartOne": "Окончание",
+    "exampleFivePartTwo": "безошибочно указывает на средний род.",
+    "paragraphTwo": "Посмотрим, как это работает в предложениях:",
+    "tableExampleOne": "Примеры в Nominativ (Кто? Что?) и Akkusativ (Кого? Что?)",
+    "tableHeaderOne": "Род",
+    "tableHeaderTwo": "Nominativ (это есть...)",
+    "tableHeaderThree": "Akkusativ (я покупаю...)",
+    "tipOnePartOne": "Запомните!",
+    "tipOnePartTwo": "В Akkusativ мужской род меняется (`ein` → `einen`), а прилагательное почти всегда получает окончание",
+    "tipOnePartThree": "Женский и средний род в Akkusativ выглядят так же, как в Nominativ."
+  },
+  "adjectiveTheoryFourthBlock": {
+    "title": "4) Мини-таблицы для старта",
+    "tableFirstTitle": "A) Сильное склонение (без артикля), Nominativ",
+    "rowOne": "Окончан.",
+    "rowTwo": "Пример",
+    "tableSecondTitle": "B) Смешанное (после ein/kein/мой-твой…), Nom/Akk",
+    "header": "Падеж",
+    "type": "Идея слабого склонения: в Nominativ ед.ч. часто",
+    "typeTwo": "в остальных падежах — обычно",
+    "typeThree": "C) Слабое (после der/die/das, dieser…)"
+  },
+  "adjectiveTheoryFifthBlock": {
+    "title": "5) Степени сравнения (очень кратко)",
+    "exampleOne": "Положительная форма",
+    "exampleTwo": "(сравнительная): +",
+    "exampleThreePartOne": "(превосходная):",
+    "exampleThreePartTwo": "+ основа +",
+    "exampleThreePartThree": "(как наречие) /",
+    "exampleThreePartFourth": "(перед сущ.)",
+    "exampleFourPartOne": "Орфография:",
+    "exampleFourPartTwo": "после шипящих",
+    "exampleFourPartThree": "чаще",
+    "exampleFourPartFour": "Часто появляется умлаут:",
+    "exampleFivePartOne": "Неправильные формы:"
+  },
+  "adjectiveTheorySixthBlock": {
+    "title": "6) Топ-ошибки и короткие правила",
+    "exampleFirst": "Нет окончаний после sein/werden/bleiben",
+    "exampleSecond": "Komparativ всегда используется с \"als\" (чем)",
+    "exampleThird": ": у существительного обычно +"
+  },
+  "adjectiveTheoryQuiz": {
+    "firstQuest": "Выбери форму:",
+    "secondQuest": "Акузатив м.р. после ein-слова:",
+    "thirdQuest": "Предикатив:",
+    "fourthQuest": "Опред. артикль, Akk Neut:",
+    "fifthQuest": "",
+    "sixthQuest": "",
+    "seventhQuest": "Superlativ (как наречие):",
+    "eightQuest": "Сильное склонение (без артикля):",
+  },
+  "verbsTheory": {
+    "title": "Глаголы в немецком",
+    "subTitle": "Основы для уверенного старта: Präsens, Perfekt, Präteritum и Futur I. Разбираем\n          порядок слов и частые ошибки.",
+    "quiz": "7) Проверь себя: Мини-квиз",
+    "quest": "Вопрос",
+    "correct": "Отлично, всё верно!",
+    "wrong": " Ошибка. Правильный ответ:",
+    "result": "Ваш результат",
+    "resultCount": "Правильных ответов:",
+    "again": "Пройти ещё раз"
+  },
+  "verbTheoryFirstBlock": {
+    "title": "1) Порядок слов: глагол на 2-м месте",
+    "subTitleFirstPart": "Спряжение",
+    "subTitleSecondPart": " — это изменение глагола по лицам и числам (я делаю, ты делаешь...). В немецком языке это основа предложения.",
+    "rulePartFirst": "Золотое правило:",
+    "rulePartSecond": "в простом утвердительном предложении спрягаемый (изменяемый) глагол",
+    "rulePartThird": "всегда стоит на втором месте",
+    "firstExample": "(Я учу сегодня немецкий.)",
+    "secondExample": "(Сегодня я учу немецкий.)",
+    "paragraphPartOne": "Если в предложении есть второй глагол (например, в инфинитиве или Partizip II), он отправляется в самый",
+    "paragraphPartTwo": "конец"
+  },
+  "verbTheorySecondBlock": {
+    "title": "2) Präsens — настоящее время",
+    "subTitle": "Самое частое время, используется для описания действий в настоящем или будущем (с указанием времени). У большинства глаголов одинаковые окончания.",
+    "tableFirstExample": "(делать)",
+    "tableSecondExample": "(учить)",
+    "paragraphPartOne": "Внимание на сильные глаголы!",
+    "paragraphPartTwo": "У них во 2-м и 3-м лице ед.ч. (du, er/sie/es) часто меняется корневая гласная: f"
+  },
+  "verbTheoryThirdBlock": {
+    "title": "3) Perfekt — разговорное прошедшее время",
+    "subTitle": "Используется для описания завершённых действий, особенно в устной речи. Строится по формуле:",
+    "noteOneFirstPart": "(на 2-м месте)",
+    "noteOneSecondPart": "(в конце предложения).",
+    "noteTwoFirstPart": "С",
+    "noteTwoSecondPart": "идут глаголы движения",
+    "noteTwoThirdPart": "смены состояния",
+    "noteTwoFourthPart": "и исключения",
+    "noteThreeFirstPart": "Большинство остальных глаголов — с",
+    "noteFourPartFirst": "(Движение → sein)",
+    "noteFourPartSecond": "(Обычный глагол → haben)"
+  },
+  "verbTheoryFourthBlock": {
+    "title": "4) Präteritum — \"книжное\" прошедшее время",
+    "subTitlePartOne": "Это время чаще всего встречается в книгах, новостях и рассказах. В живой речи его используют в основном для глаголов",
+    "subTitlePartTwo": "модальных глалогов",
+    "typeOne": "(Раньше я был студентом.)",
+    "typeTwo": "(Вчера у меня не было времени.)",
+    "typeThree": "(Я не мог прийти.)"
+  },
+  "verbTheoryFifthBlock": {
+    "title": "5) Futur I — будущее время",
+    "paragraph": "Используется для выражения планов или предположений о будущем. Формула проста:",
+    "noteOneFirstPart": "(на 2-м месте)",
+    "noteOneSecondPart": "инфинитив",
+    "noteOneThirdPart": "(в конце предложения).",
+    "noteTwoFirstPart": "(Я буду завтра учить немецкий.",
+    "noteThreeFirstPart": "Лайфхак:",
+    "noteThreeSecondPart": "в разговорной речи немцы часто используют Präsens для будущего, если из контекста что речь о будущем(завтра , послезавтра):"
+  },
+  "verbTheorySixthBlock": {
+    "title": "6) Типичные ошибки",
+    "typeOnePartFirst": "Порядок слов:",
+    "typeOnePartSecond": "Спрягаемый глагол не на втором месте.",
+    "typeTwoPartOne": "Рамочная конструкция:",
+    "typeTwoPartTwo": " Вторая часть глагола (в Perfekt, Futur I) не в конце.",
+    "typeThreePartOne": "Выбор haben/sein:",
+    "typeThreePartTwo": "Неправильный вспомогательный глагол в Perfekt."
+  },
+  "verbTheorySeventhBlock": {
+    "questOne": "Как правильно сказать: \"Я учу немецкий\"?",
+    "questTwo": "Выберите верный порядок слов: \"Сегодня я иду в кино\".",
+    "questThree": "Как будет в Perfekt: \"Мы много сделали\"?",
+    "questFour": "Perfekt с глаголом движения: \"Он поехал домой\".",
+    "questFive": "Präteritum от глагола \"sein\": \"Я был уставший\".",
+    "questSix": "Futur I: \"Завтра она будет работать\".",
+    "questSeven": "Выберите правильный Partizip II от глагола \"sehen\" (видеть).",
+    "result": "Показать результат",
+    "nextQuest": "Следующий вопрос"
+  },
+  "locationAchievementsCategory": {
+    "title": "Восточная Равнина",
+    "firstName": "Восточная равнина",
+    "firstDescription": "Выполните все квесты без ошибок в Восточной равнине",
+    "secondName": "Каменный предел",
+    "secondDescription": "Выполните все квесты без ошибок в Каменных пределах",
+    "thirdName": "Долина ветров",
+    "thirdDescription": "Выполните все квесты без ошибок в Долина ветров",
+    "fourthName": "Руины озёрья",
+    "fourthDescription": "Выполните все квесты без ошибок  в Руинах озёрья",
+    "fifthName": "Северные утёсы",
+    "fifthDescription": "Выполните все квесты без ошибок в Северных утёсах",
+    "sixthName": "Штормовой берег",
+    "sixthDescription": "Завершите все квесты без ошибок в Штормовых берегах",
+    "fiveHearthName": "Хранитель пяти сердец",
+    "fiveHearthDescription": "Выполните двадцать заданий имея 5 жизней",
+    "fiveHearthAwards": "Глобус исследователя",
+    "allLocationsName": "Мастер Языковых Земель",
+    "allLocationsDescription": "Выполните все квесты во всех локациях",
+    "allLocationsAwards": "Глобус исследователя"
+  },
+  "awards": {
+    "title": "Список наград",
+    "articlus": "Алмаз артиклеуса",
+    "registerAchievement": "Значок участника",
+    "level10": "Кубок с крыльями",
+    "siteRegular": "Медаль ветерана",
+    "wrong100Answers": "Талисман терпения",
+    "lastChance": "Тик-тик удачи",
+    "guessedFastWords": "Блиц-ракета",
+    "guessSixHundred": "Книга мудрости",
+    "daily": "Песочные часы вечности",
+    "guessedSafeWords": "Щит осторожности",
+    "explorer": "Глобус исследователя",
+    "languageLands50": "Компас исследователя"
+  },
   "eastPlainFirstQuests": {
     "title": "Первая встреча",
     "description": "Вы оказались на незнакомом материке и на пути вам повстречался первый житель.Скажите привет.",
@@ -360,7 +589,7 @@
     "questFifteenSecondOption": "Снежно",
     "questFifteenThirdOption": "Жарко и сухо"
   },
-  "questLakeRuinsThirdQuests":{
+  "questLakeRuinsThirdQuests": {
     "title": "Прогноз и планы",
     "description": "Учимся говорить про сегодня/завтра и планы.",
     "goal": "Говорить о погоде (без градусов) и связывать её с простыми планами: Heute/Morgen, es bleibt/es wird",
@@ -397,7 +626,7 @@
     "questFourteen": "Собери фразу",
     "questFifteen": "Прослушай и напиши"
   },
-  "questLakeRuinsFourthQuests":{
+  "questLakeRuinsFourthQuests": {
     "title": "Прогноз и непогода",
     "description": "Учимся описывать сильную погоду и что брать с собой.",
     "goal": "Расширить лексику по непогоде и строить простые фразы: Es donnert/Es blitzt, Am Himmel …, Ich nehme …",
@@ -440,7 +669,7 @@
     "questFourteen": "Собери фразу",
     "questFifteen": "Прослушай и напиши"
   },
-  "questLakeRuinsFifthQuests":{
+  "questLakeRuinsFifthQuests": {
     "title": "Туман, град и прогноз",
     "description": "Туман, град, гроза; скользко на дороге. Учимся понимать прогноз (Vorhersage) и говорить, что взять с собой.",
     "goal": "Говорить о непогоде и прогнозе: Es wird …, Es ist glatt, Am Morgen/Abend …, Ich brauche …",
@@ -480,20 +709,6 @@
     "questThirteenThirdOption": "Дует сильный ветер",
     "questFourteen": "Собери фразу",
     "questFifteen": "Прослушай и напиши"
-  },
-
-
-  "awards": {
-    "articlus": "Алмаз артиклеуса",
-    "registerAchievement": "Значок участника",
-    "level10": "Кубок с крыльями",
-    "siteRegular": "Медаль ветерана",
-    "wrong100Answers": "Талисман терпения",
-    "lastChance": "Тик-тик удачи",
-    "guessedFastWords": "Блиц-ракета",
-    "guessSixHundred": "Книга мудрости",
-    "daily": "Песочные часы вечности",
-    "guessedSafeWords": "Щит осторожности"
   },
   "awardsSection": {
     "congratulations": "Поздравляем! Эта награда уже у вас!",
@@ -1146,6 +1361,7 @@
     "hard": "Сложный мод",
     "practice": "Практика артиклей",
     "writeArticle": "Вписать артикль",
+    "locations": "Языковые Земли",
     "wordFromLetters": "Собрать слово из букв",
     "wordPlusArticle": "Вписать слово и артикль",
     "plural": "Форма мн.ч.",
@@ -1188,6 +1404,9 @@
     "generalSexthLabel": "Исчерпать запасы",
     "generalSexthText": "Потратьте 1000 артиклюсов.",
     "generalSexthAward": "Награда: Алмаз Артиклеуса",
+    "specialLocationsName": "Следопыт Языковых земель",
+    "specialLocationsDescription": "Выполните 50 заданий без ошибок в Языковых землях.",
+    "specialLocationsAwards": "Награда: Компас",
     "generalSeventhlabel": "Повелитель предложений",
     "generalSeventhText": "Сложите 1000 предложений в сумме на всех уровнях и станьте мастером построения"
   },

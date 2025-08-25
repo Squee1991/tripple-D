@@ -281,7 +281,7 @@ const achievementCategories = computed(() => [
   },
   {
     id: 'locations',
-    name: 'Языковые Земли',
+    name: 'categoryAchievments.locations',
     icon: '🌍',
     length: modeComputed.value.locations,
   },

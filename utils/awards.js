@@ -12,11 +12,11 @@ import Globus from '~/assets/awards/globus.svg'
 import Compass from '~/assets/awards/compass.svg'
 
 export const AWARDS = [
-	{ key: 'explorer',            title: 'Глобус исследователя',        icon: Globus },
+	{ key: 'explorer',            title: 'awards.explorer',        icon: Globus },
 	{ key: 'Articlus',            title: 'awards.articlus',        icon: WasteMoney },
 	{ key: 'registerAchievement', title: 'awards.registerAchievement',        icon: IdCard },
 	{ key: 'level10',             title: 'awards.level10',        icon: Wings },
-	{ key: 'languageLands50',     title: 'Компас исследователя',        icon: Compass },
+	{ key: 'languageLands50',     title: 'awards.languageLands50',        icon: Compass },
 	{ key: 'SiteRegular',         title: 'awards.siteRegular',         icon: veteranMedal },
 	{ key: 'wrong100Answers',     title: 'awards.wrong100Answers',       icon: talismanOfPatience },
 	{ key: 'LastChance',          title: 'awards.lastChance',           icon: LastChance },

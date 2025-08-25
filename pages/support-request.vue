@@ -51,6 +51,8 @@ const pathFunction = (pathValue) => {
 
 .faq__section {
   padding: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 @media (min-width: 1023px) {

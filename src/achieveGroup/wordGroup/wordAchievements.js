@@ -1,72 +1,72 @@
 export const wordAchievementsGroup = [
 	{
-		title: 'Восточная Равнина',
+		title: 'locationAchievementsCategory.title',
 		achievements: [
 			{
 				id: 'eastPlain',
-				name: 'Восточная равнина',
-				description: 'Выполните все квесты без ошибок в Восточной равнине',
+				name: 'locationAchievementsCategory.firstName',
+				description: 'locationAchievementsCategory.firstDescription',
 				icon: '🌾',
 				currentProgress: 0,
 				targetProgress: 10
 			},
 			{
 				id: 'stone-reach',
-				name: 'Каменный предел',
-				description: 'Выполните все квесты без ошибок в Каменных пределах',
+				name: 'locationAchievementsCategory.secondName',
+				description: 'locationAchievementsCategory.secondDescription',
 				icon: '🏞️️',
 				currentProgress: 0,
 				targetProgress: 10
 			},
 			{
 				id: 'wind-valley',
-				name: 'Долина ветров',
-				description: 'Выполните все квесты без ошибок в Долина ветров',
+				name: 'locationAchievementsCategory.thirdName',
+				description: 'locationAchievementsCategory.thirdDescription',
 				icon: '💨',
 				currentProgress: 0,
 				targetProgress: 13
 			},
 			{
 				id: 'lake-ruins',
-				name: 'Руины озёрья',
-				description: 'Выполните все квесты без ошибок  в Руинах озёрья',
+				name: 'locationAchievementsCategory.fourthName',
+				description: 'locationAchievementsCategory.fourthDescription',
 				currentProgress: 0,
 				targetProgress: 10,
 				icon: '🏛️'
 			},
 			{
 				id: 'north-cliffs',
-				name: 'Северные утёсы',
-				description: 'Выполните все квесты без ошибок в Северных утёсах',
+				name: 'locationAchievementsCategory.fifthName',
+				description: 'locationAchievementsCategory.fifthDescription',
 				icon: '🏔️',
 				currentProgress: 0,
 				targetProgress: 12
 			},
 			{
 				id: 'storm-coast',
-				name: 'Штормовой берег',
-				description: 'Завершите все квесты без ошибок в Штормовых берегах',
+				name: 'locationAchievementsCategory.sixthName',
+				description: 'locationAchievementsCategory.sixthDescription',
 				icon: '🌊',
 				currentProgress: 0,
 				targetProgress: 10
 			},
 			{
 				id: 'FiveHearts',
-				name: 'Хранитель пяти сердец',
-				description: 'Выполните двадцать заданий имея 5 жизней',
+				name: 'locationAchievementsCategory.fiveHearthName',
+				description: 'locationAchievementsCategory.fiveHearthDescription',
 				icon: '💖',
 				currentProgress: 0,
 				targetProgress: 20,
-				awards: 'Глобус исследователя'
+				awards: 'locationAchievementsCategory.fiveHearthAwards'
 			},
 			{
 				id: 'explorer',
-				name: 'Мастер Языковых Земель',
-				description: 'Выполните все квесты во всех локациях',
+				name: 'locationAchievementsCategory.allLocationsName',
+				description: 'locationAchievementsCategory.allLocationsDescription',
 				icon: '🌍',
 				currentProgress: 0,
 				targetProgress: 6,
-				awards: 'Глобус исследователя'
+				awards: 'locationAchievementsCategory.allLocationsAwards'
 			}
 		]
 	}
