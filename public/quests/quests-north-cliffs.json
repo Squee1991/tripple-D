@@ -1,67 +1,67 @@
 [
   {
     "questId": "reise-hotel-1",
-    "title": "Бронь и заезд",
+    "title": "questsNorthCliffsFirstQuests.title",
     "progress": "0/15",
-    "description": "Бронируешь номер, заселяешься, спрашиваешь про цену и завтрак. Ключевые фразы у стойки регистрации.",
+    "description": "questsNorthCliffsFirstQuests.description",
     "conditions": {
       "goal": "Rezeption, reservieren, Einzel-/Doppelzimmer, für zwei Nächte, Check-in/Check-out, Ausweis, Frühstück, pro Nacht",
       "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 220,
-      "xp": 330
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
         "id": 1,
         "type": "select",
-        "question": "Что значит: die Rezeption",
+        "question": "",
         "options": [
-          "Стойка регистрации",
-          "Ресторан",
-          "Лифт"
+          "questsNorthCliffsFirstQuests.questOneFirstOption",
+          "questsNorthCliffsFirstQuests.questOneSecondOption",
+          "questsNorthCliffsFirstQuests.questOneThirdOption"
         ],
-        "answer": "Стойка регистрации"
+        "answer": "questsNorthCliffsFirstQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "select",
-        "question": "Что значит: reservieren",
+        "question": "",
         "options": [
-          "Бронировать",
-          "Оплачивать",
-          "Убирать"
+          "questsNorthCliffsFirstQuests.questTwoFirstOption",
+          "questsNorthCliffsFirstQuests.questTwoSecondOption",
+          "questsNorthCliffsFirstQuests.questTwoThirdOption"
         ],
-        "answer": "Бронировать"
+        "answer": "questsNorthCliffsFirstQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Что значит: das Einzelzimmer",
+        "question": "questsNorthCliffsFirstQuests.questThird",
         "options": [
-          "Одноместный номер",
-          "Двухместный номер",
-          "Семейный номер"
+          "questsNorthCliffsFirstQuests.questThirdFirstOption",
+          "questsNorthCliffsFirstQuests.questThirdSecondOption",
+          "questsNorthCliffsFirstQuests.questThirdThirdOption"
         ],
-        "answer": "Одноместный номер"
+        "answer": "questsNorthCliffsFirstQuests.questThirdFirstOption"
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Что значит: das Doppelzimmer",
+        "question": "questsNorthCliffsFirstQuests.questFour",
         "options": [
-          "Двухместный номер",
-          "Одноместный номер",
-          "Номер-люкс"
+          "questsNorthCliffsFirstQuests.questFourFirstOption",
+          "questsNorthCliffsFirstQuests.questFourSecondOption",
+          "questsNorthCliffsFirstQuests.questFourThirdOption"
         ],
-        "answer": "Двухместный номер"
+        "answer": "questsNorthCliffsFirstQuests.questFourFirstOption"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsNorthCliffsFirstQuests.questFive",
         "words": [
           "Zimmer",
           "möchte",
@@ -80,7 +80,7 @@
       {
         "id": 6,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsNorthCliffsFirstQuests.questSix",
         "text": "Ich habe eine Reservierung",
         "answer": "Ich habe eine Reservierung"
       },
@@ -89,16 +89,16 @@
         "type": "select",
         "question": "für zwei Nächte",
         "options": [
-          "на две ночи",
-          "на одну неделю",
-          "на два месяца"
+          "questsNorthCliffsFirstQuests.questSevenFirstOption",
+          "questsNorthCliffsFirstQuests.questSevenSecondOption",
+          "questsNorthCliffsFirstQuests.questSevenThirdOption"
         ],
-        "answer": "на две ночи"
+        "answer": "questsNorthCliffsFirstQuests.questSevenFirstOption"
       },
       {
         "id": 8,
         "type": "reorder",
-        "question": "Собери вопрос",
+        "question": "questsNorthCliffsFirstQuests.questEight",
         "words": [
           "Zimmer",
           "ein",
@@ -116,36 +116,36 @@
         "id": 9,
         "type": "readAndAnswer",
         "text": "Guten Tag! Haben Sie ein Doppelzimmer? – Ja, 80 Euro pro Nacht, Frühstück inklusive.",
-        "question": "Сколько стоит ночь?",
+        "question": "",
         "options": [
-          "80 евро",
-          "70 евро",
-          "100 евро"
+          "questsNorthCliffsFirstQuests.questNineFirstOption",
+          "questsNorthCliffsFirstQuests.questNineSecondOption",
+          "questsNorthCliffsFirstQuests.questNineThirdOption"
         ],
-        "answer": "80 евро"
+        "answer": "questsNorthCliffsFirstQuests.questNineFirstOption"
       },
       {
         "id": 10,
         "type": "select",
         "question": "der Ausweis",
         "options": [
-          "Паспорт",
-          "Ключ-карта",
-          "Карта города"
+          "questsNorthCliffsFirstQuests.questTenFirstOption",
+          "questsNorthCliffsFirstQuests.questTenSecondOption",
+          "questsNorthCliffsFirstQuests.questTenThirdOption"
         ],
-        "answer": "Паспорт"
+        "answer": "questsNorthCliffsFirstQuests.questTenFirstOption"
       },
       {
         "id": 11,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsNorthCliffsFirstQuests.questEleven",
         "text": "Check-in ist ab 14 Uhr",
         "answer": "Check-in ist ab 14 Uhr"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "Собери вопрос",
+        "question": "questsNorthCliffsFirstQuests.questTwelve",
         "words": [
           "ohne",
           "Frühstück",
@@ -162,25 +162,25 @@
       {
         "id": 13,
         "type": "select",
-        "question": "Что значит: Check-out",
+        "question": "",
         "options": [
-          "Выезд",
-          "Заезд",
-          "Завтрак"
+          "questsNorthCliffsFirstQuests.questThirteenFirstOption",
+          "questsNorthCliffsFirstQuests.questThirteenSecondOption",
+          "questsNorthCliffsFirstQuests.questThirteenThirdOption"
         ],
-        "answer": "Выезд"
+        "answer": "questsNorthCliffsFirstQuests.questThirteenFirstOption"
       },
       {
         "id": 14,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsNorthCliffsFirstQuests.questFourteen",
         "text": "Die Schlüsselkarte, bitte.",
         "answer": "Die Schlüsselkarte, bitte."
       },
       {
         "id": 15,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsNorthCliffsFirstQuests.questFifteen",
         "words": [
           "Ihren",
           "Ausweis",
@@ -198,17 +198,17 @@
   },
   {
     "questId": "reise-hotel-2",
-    "title": "Вопросы на ресепшене",
+    "title": "questsNorthCliffsSecondQuests.title",
     "progress": "0/15",
-    "description": "Спрашиваешь про завтрак и Wi-Fi, уточняешь цену за ночь, просишь счёт и оплачиваешь.",
+    "description": "questsNorthCliffsSecondQuests.description",
     "conditions": {
       "goal": "Frühstück/WLAN/Aufzug, Preis pro Nacht, Ich bezahle mit Karte/Bar, Rechnung",
       "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 230,
-      "xp": 340
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
@@ -216,49 +216,49 @@
         "type": "select",
         "question": "das Frühstück",
         "options": [
-          "Завтрак",
-          "Ужин",
-          "Обед"
+          "questsNorthCliffsSecondQuests.questOneFirstOption",
+          "questsNorthCliffsSecondQuests.questOneSecondOption",
+          "questsNorthCliffsSecondQuests.questOneThirdOption"
         ],
-        "answer": "Завтрак"
+        "answer": "questsNorthCliffsSecondQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "select",
         "question": "das WLAN",
         "options": [
-          "Wi-Fi",
-          "Лифт",
-          "Кондиционер"
+          "questsNorthCliffsSecondQuests.questTwoFirstOption",
+          "questsNorthCliffsSecondQuests.questTwoSecondOption",
+          "questsNorthCliffsSecondQuests.questTwoThirdOption"
         ],
-        "answer": "Wi-Fi"
+        "answer": "questsNorthCliffsSecondQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "select",
         "question": "die Rechnung",
         "options": [
-          "Счёт",
-          "Бронь",
-          "Карта города"
+          "questsNorthCliffsSecondQuests.questThirdFirstOption",
+          "questsNorthCliffsSecondQuests.questThirdSecondOption",
+          "questsNorthCliffsSecondQuests.questThirdThirdOption"
         ],
-        "answer": "Счёт"
+        "answer": "questsNorthCliffsSecondQuests.questThirdFirstOption"
       },
       {
         "id": 4,
         "type": "select",
         "question": "der Aufzug",
         "options": [
-          "Лифт",
-          "Лестница",
-          "Балкон"
+          "questsNorthCliffsSecondQuests.questFourFirstOption",
+          "questsNorthCliffsSecondQuests.questFourSecondOption",
+          "questsNorthCliffsSecondQuests.questFourThirdOption"
         ],
-        "answer": "Лифт"
+        "answer": "questsNorthCliffsSecondQuests.questFourFirstOption"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Собери вопрос",
+        "question": "questsNorthCliffsSecondQuests.questFive",
         "words": [
           "ist",
           "Frühstück",
@@ -273,14 +273,14 @@
       {
         "id": 6,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsNorthCliffsSecondQuests.questSix",
         "text": "Frühstück ist von sieben bis zehn Uhr.",
         "answer": "Frühstück ist von sieben bis zehn Uhr."
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Собери вопрос",
+        "question": "questsNorthCliffsSecondQuests.questSeven",
         "words": [
           "WLAN",
           "es",
@@ -295,7 +295,7 @@
       {
         "id": 8,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsNorthCliffsSecondQuests.questEight",
         "text": "Wie ist das WLAN-Passwort?",
         "answer": "Wie ist das WLAN-Passwort?"
       },
@@ -303,29 +303,29 @@
         "id": 9,
         "type": "readAndAnswer",
         "text": "Einzelzimmer: 60 Euro pro Nacht. Doppelzimmer: 80 Euro pro Nacht.",
-        "question": "Сколько стоит двухместный номер?",
+        "question": "questsNorthCliffsSecondQuests.questNine",
         "options": [
-          "80 евро",
-          "60 евро",
-          "100 евро"
+          "questsNorthCliffsSecondQuests.questNineFirstOption",
+          "questsNorthCliffsSecondQuests.questNineSecondOption",
+          "questsNorthCliffsSecondQuests.questNineThirdOption"
         ],
-        "answer": "80 евро"
+        "answer": "questNineFirstOption"
       },
       {
         "id": 10,
         "type": "select",
         "question": "mit Dusche",
         "options": [
-          "с душем",
-          "с ванной",
-          "с балконом"
+          "questsNorthCliffsSecondQuests.questTenFirstOption",
+          "questsNorthCliffsSecondQuests.questTenSecondOption",
+          "questsNorthCliffsSecondQuests.questTenThirdOption"
         ],
-        "answer": "с душем"
+        "answer": "questsNorthCliffsSecondQuests.questTenFirstOption"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsNorthCliffsSecondQuests.questEleven",
         "words": [
           "Karte",
           "bezahle",
@@ -342,7 +342,7 @@
       {
         "id": 12,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsNorthCliffsSecondQuests.questTwelve",
         "text": "Kann ich später auschecken?",
         "answer": "Kann ich später auschecken?"
       },
@@ -350,18 +350,18 @@
         "id": 13,
         "type": "readAndAnswer",
         "text": "Check-out ist um zwölf Uhr. Späterer Check-out kostet zehn Euro.",
-        "question": "Сколько стоит поздний выезд?",
+        "question": "questsNorthCliffsSecondQuests.questThirteen",
         "options": [
-          "10 евро",
-          "12 евро",
-          "20 евро"
+          "questsNorthCliffsSecondQuests.questThirteenFirstOption",
+          "questsNorthCliffsSecondQuests.questThirteenSecondOption",
+          "questsNorthCliffsSecondQuests.questThirteenThirdOption"
         ],
-        "answer": "10 евро"
+        "answer": "questsNorthCliffsSecondQuests.questThirteenFirstOption"
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "Собери просьбу",
+        "question": "questsNorthCliffsSecondQuests.questFourteen",
         "words": [
           "ruhiges",
           "Ein",
@@ -378,7 +378,7 @@
       {
         "id": 15,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsNorthCliffsSecondQuests.questFifteen",
         "text": "Ich brauche die Rechnung.",
         "answer": "Ich brauche die Rechnung."
       }
@@ -386,17 +386,17 @@
   },
   {
     "questId": "reise-hotel-3",
-    "title": "Проблемы в номере",
+    "title": "questsNorthCliffsThirdQuests.title",
     "progress": "0/15",
-    "description": "Сообщаешь о неполадках, просишь помощь, дополнительные вещи и уборку.",
+    "description": "questsNorthCliffsThirdQuests.description",
     "conditions": {
-      "goal": "Melden: funktioniert nicht/kaputt; просить помощь и вещи: Handtuch, Kissen; Zimmerreinigung",
+      "goal": "questsNorthCliffsThirdQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 220,
-      "xp": 330
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
@@ -404,31 +404,31 @@
         "type": "select",
         "question": "die Heizung",
         "options": [
-          "Отопление",
-          "Холодильник",
-          "Звонок"
+          "questsNorthCliffsThirdQuests.questOneFirstOption",
+          "questsNorthCliffsThirdQuests.questOneSecondOption",
+          "questsNorthCliffsThirdQuests.questOneThirdOption"
         ],
-        "answer": "Отопление"
+        "answer": "questsNorthCliffsThirdQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "select",
         "question": "die Klimaanlage",
         "options": [
-          "Кондиционер",
-          "Штора",
-          "Пылесос"
+          "questsNorthCliffsThirdQuests.questTwoFirstOption",
+          "questsNorthCliffsThirdQuests.questTwoSecondOption",
+          "questsNorthCliffsThirdQuests.questTwoThirdOption"
         ],
-        "answer": "Кондиционер"
+        "answer": "questsNorthCliffsThirdQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "select",
         "question": "das Handtuch",
         "options": [
-          "Полотенце",
-          "Подушка",
-          "Простыня"
+          "questsNorthCliffsThirdQuests.questThirdFirstOption",
+          "questsNorthCliffsThirdQuests.questThirdSecondOption",
+          "questsNorthCliffsThirdQuests.questThirdThirdOption"
         ],
         "answer": "Полотенце"
       },
@@ -437,16 +437,16 @@
         "type": "select",
         "question": "die Fernbedienung",
         "options": [
-          "Пульт",
-          "Розетка",
-          "Лампочка"
+          "questsNorthCliffsThirdQuests.questFourFirstOption",
+          "questsNorthCliffsThirdQuests.questFourSecondOption",
+          "questsNorthCliffsThirdQuests.questFourThirdOption"
         ],
-        "answer": "Пульт"
+        "answer": "questsNorthCliffsThirdQuests.questFourFirstOption"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsNorthCliffsThirdQuests.questFive",
         "words": [
           "gibt",
           "Problem",
@@ -463,14 +463,14 @@
       {
         "id": 6,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsNorthCliffsThirdQuests.questSix",
         "text": "Die Heizung funktioniert nicht.",
         "answer": "Die Heizung funktioniert nicht."
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Собери вежливую просьбу",
+        "question": "questsNorthCliffsThirdQuests.questSeven",
         "words": [
           "bitte",
           "Sie",
@@ -487,7 +487,7 @@
       {
         "id": 8,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsNorthCliffsThirdQuests.questEight",
         "text": "Das WLAN funktioniert nicht.",
         "answer": "Das WLAN funktioniert nicht."
       },
@@ -495,18 +495,18 @@
         "id": 9,
         "type": "readAndAnswer",
         "text": "Im Zimmer gibt es keine Handtücher. Der Gast braucht zwei Handtücher.",
-        "question": "Что нужно гостю?",
+        "question": "questsNorthCliffsThirdQuests.questNine",
         "options": [
-          "Два полотенца",
-          "Одеяло",
-          "Пульт"
+          "questsNorthCliffsThirdQuests.questNineFirstOption",
+          "questsNorthCliffsThirdQuests.questNineSecondOption",
+          "questsNorthCliffsThirdQuests.questNineThirdOption"
         ],
-        "answer": "Два полотенца"
+        "answer": "questsNorthCliffsThirdQuests.questNineFirstOption"
       },
       {
         "id": 10,
         "type": "reorder",
-        "question": "Собери просьбу",
+        "question": "questsNorthCliffsThirdQuests.questTen",
         "words": [
           "ein",
           "zusätzliches",
@@ -523,7 +523,7 @@
       {
         "id": 11,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsNorthCliffsThirdQuests.questEleven",
         "text": "Die Klimaanlage ist kaputt.",
         "answer": "Die Klimaanlage ist kaputt."
       },
@@ -532,17 +532,17 @@
         "type": "select",
         "question": "die Zimmerreinigung",
         "options": [
-          "Уборка номера",
-          "Карта города",
-          "Парковка"
+          "questsNorthCliffsThirdQuests.questTwelveFirstOption",
+          "questsNorthCliffsThirdQuests.questTwelveSecondOption",
+          "questsNorthCliffsThirdQuests.questTwelveThirdOption"
         ],
-        "answer": "Уборка номера"
+        "answer": "questsNorthCliffsThirdQuests.questTwelveFirstOption"
       },
       {
         "id": 13,
         "type": "readAndAnswer",
         "text": "Die Zimmerreinigung kommt um vierzehn Uhr. Bitte nicht stören bis dreizehn Uhr.",
-        "question": "Во сколько придёт уборка?",
+        "question": "questsNorthCliffsThirdQuests.questThirteen",
         "options": [
           "14:00",
           "13:00",
@@ -553,7 +553,7 @@
       {
         "id": 14,
         "type": "reorder",
-        "question": "Собери табличку на двери",
+        "question": "questsNorthCliffsThirdQuests.questFourteen",
         "words": [
           "Bitte",
           "nicht",
@@ -568,7 +568,7 @@
       {
         "id": 15,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsNorthCliffsThirdQuests.questFifteen",
         "text": "Ich brauche mehr Handtücher.",
         "answer": "Ich brauche mehr Handtücher."
       }
@@ -576,67 +576,67 @@
   },
   {
     "questId": "reise-hotel-4",
-    "title": "Сервисы и расписания",
+    "title": "questsNorthCliffsFourthQuests.title",
     "progress": "0/15",
-    "description": "Завтрак, лифт, лестница, парковка. Спрашиваешь «где/когда», узнаёшь расписания и детали.",
+    "description": "questsNorthCliffsFourthQuests.description",
     "conditions": {
       "goal": "Wo?/Wann?, Frühstückszeiten, Aufzug/Treppe, Parkplatz, WLAN-Passwort, kostenlos/geöffnet",
       "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 240,
-      "xp": 350
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
         "id": 1,
         "type": "select",
-        "question": "Что значит: das Frühstück",
+        "question": "questsNorthCliffsFourthQuests.questOne",
         "options": [
-          "Завтрак",
-          "Ужин",
-          "Обед"
+          "questsNorthCliffsFourthQuests.questOneFirstOption",
+          "questsNorthCliffsFourthQuests.questOneSecondOption",
+          "questsNorthCliffsFourthQuests.questOneThirdOption"
         ],
-        "answer": "Завтрак"
+        "answer": "questsNorthCliffsFourthQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "select",
-        "question": "Что значит: der Aufzug",
+        "question": "",
         "options": [
-          "Лифт",
-          "Лестница",
-          "Парковка"
+          "questsNorthCliffsFourthQuests.questTwoFirstOption",
+          "questsNorthCliffsFourthQuests.questTwoSecondOption",
+          "questsNorthCliffsFourthQuests.questTwoThirdOption"
         ],
-        "answer": "Лифт"
+        "answer": "questsNorthCliffsFourthQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Что значит: die Treppe",
+        "question": "questsNorthCliffsFourthQuests.questThird",
         "options": [
-          "Лестница",
-          "Ресепшн",
-          "Комната"
+          "questsNorthCliffsFourthQuests.questThirdFirstOption",
+          "questsNorthCliffsFourthQuests.questThirdSecondOption",
+          "questsNorthCliffsFourthQuests.questThirdThirdOption"
         ],
-        "answer": "Лестница"
+        "answer": "questsNorthCliffsFourthQuests.questThirdFirstOption"
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Что значит: der Parkplatz",
+        "question": "questsNorthCliffsFourthQuests.questFour",
         "options": [
-          "Парковка",
-          "Ресторан",
-          "Балкон"
+          "questsNorthCliffsFourthQuests.questFourFirstOption",
+          "questsNorthCliffsFourthQuests.questFourSecondOption",
+          "questsNorthCliffsFourthQuests.questFourThirdOption"
         ],
-        "answer": "Парковка"
+        "answer": "questsNorthCliffsFourthQuests.questFourFirstOption"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsNorthCliffsFourthQuests.questFive",
         "words": [
           "Aufzug",
           "ист",
@@ -653,14 +653,14 @@
       {
         "id": 6,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsNorthCliffsFourthQuests.questSix",
         "text": "Wann ist das Frühstück?",
         "answer": "Wann ist das Frühstück?"
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsNorthCliffsFourthQuests.questSeven",
         "words": [
           "Der",
           "rechts",
@@ -677,7 +677,7 @@
       {
         "id": 8,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsNorthCliffsFourthQuests.questEight",
         "text": "Das Frühstück ist von sieben bis zehn Uhr.",
         "answer": "Das Frühstück ist von sieben bis zehn Uhr."
       },
@@ -685,29 +685,29 @@
         "id": 9,
         "type": "readAndAnswer",
         "text": "Das Frühstück ist von sieben bis zehn Uhr. Der Parkplatz ist kostenlos.",
-        "question": "Стоянка платная?",
+        "question": "questsNorthCliffsFourthQuests.questNine",
         "options": [
-          "Нет",
-          "Да",
-          "Неизвестно"
+          "questsNorthCliffsFourthQuests.questNineFirstOption",
+          "questsNorthCliffsFourthQuests.questNineSecondOption",
+          "questsNorthCliffsFourthQuests.questNineThirdOption"
         ],
-        "answer": "Нет"
+        "answer": "questsNorthCliffsFourthQuests.questNineFirstOption"
       },
       {
         "id": 10,
         "type": "select",
         "question": "Переведи: kostenlos",
         "options": [
-          "бесплатно",
-          "дорого",
-          "занято"
+          "questsNorthCliffsFourthQuests.questTenFirstOption",
+          "questsNorthCliffsFourthQuests.questTenSecondOption",
+          "questsNorthCliffsFourthQuests.questTenThirdOption"
         ],
-        "answer": "бесплатно"
+        "answer": "questsNorthCliffsFourthQuests.questTenFirstOption"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Собери вопрос",
+        "question": "questsNorthCliffsFourthQuests.questEleven",
         "words": [
           "geöffnet",
           "heute",
@@ -726,7 +726,7 @@
       {
         "id": 12,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsNorthCliffsFourthQuests.questTwelve",
         "text": "Ich brauche das WLAN-Passwort.",
         "answer": "Ich brauche das WLAN-Passwort."
       },
@@ -734,18 +734,18 @@
         "id": 13,
         "type": "readAndAnswer",
         "text": "Check-out ist bis elf Uhr. Später? Fragen Sie an der Rezeption.",
-        "question": "До скольки чек-аут?",
+        "question": "questsNorthCliffsFourthQuests.questThirteen",
         "options": [
-          "до 11",
-          "до 10",
-          "до 12"
+          "questsNorthCliffsFourthQuests.questThirteenFirstOption",
+          "questsNorthCliffsFourthQuests.questThirteenSecondOption",
+          "questsNorthCliffsFourthQuests.questThirteenThirdOption"
         ],
-        "answer": "до 11"
+        "answer": "questsNorthCliffsFourthQuests.questThirteenFirstOption"
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "Собери вежливую просьбу",
+        "question": "questsNorthCliffsFourthQuests.questFourteen",
         "words": [
           "Können",
           "Sie",
@@ -766,7 +766,7 @@
       {
         "id": 15,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsNorthCliffsFourthQuests.questFifteen",
         "text": "Wo ist die Rezeption?",
         "answer": "Wo ist die Rezeption?"
       }
@@ -774,67 +774,67 @@
   },
   {
     "questId": "reise-hotel-5",
-    "title": "Выезд и аэропорт",
+    "title": "",
     "progress": "0/15",
-    "description": "Оплата, поздний выезд, багаж и дорога в аэропорт. Полезные фразы на выезде.",
+    "description": "questsNorthCliffsFifthQuests.description",
     "conditions": {
-      "goal": "Taxi/Flughafen, bezahlen (bar/Karte), Quittung/Rechnung, später auschecken, Gepäck dalassen, объявления",
+      "goal": "questsNorthCliffsFifthQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 250,
-      "xp": 360
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
         "id": 1,
         "type": "select",
-        "question": "Что значит: der Flughafen",
+        "question": "",
         "options": [
-          "Аэропорт",
-          "Вокзал",
-          "Автовокзал"
+          "questsNorthCliffsFifthQuests.questOneFirstOption",
+          "questsNorthCliffsFifthQuests.questOneSecondOption",
+          "questsNorthCliffsFifthQuests.questOneThirdOption"
         ],
-        "answer": "Аэропорт"
+        "answer": "questOneFirstOption"
       },
       {
         "id": 2,
         "type": "select",
-        "question": "Что значит: das Gepäck",
+        "question": "questsNorthCliffsFifthQuests.questTwo",
         "options": [
-          "Багаж",
-          "Билет",
-          "Карта"
+          "questsNorthCliffsFifthQuests.questTwoFirstOption",
+          "questsNorthCliffsFifthQuests.questTwoSecondOption",
+          "questsNorthCliffsFifthQuests.questTwoThirdOption"
         ],
-        "answer": "Багаж"
+        "answer": "questsNorthCliffsFifthQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Что значит: die Quittung",
+        "question": "questsNorthCliffsFifthQuests.questThird",
         "options": [
-          "Чек (квитанция)",
-          "Ключ",
-          "Карта города"
+          "questsNorthCliffsFifthQuests.questThirdFirstOption",
+          "questsNorthCliffsFifthQuests.questThirdSecondOption",
+          "questsNorthCliffsFifthQuests.questThirdThirdOption"
         ],
-        "answer": "Чек(квитанция)"
+        "answer": "questsNorthCliffsFifthQuests.questThirdFirstOption"
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Что значит: die Schlüsselkarte",
+        "question": "questsNorthCliffsFifthQuests.questFour",
         "options": [
-          "Ключ-карта",
-          "Визитка",
-          "Проездной"
+          "questsNorthCliffsFifthQuests.questFourFirstOption",
+          "questsNorthCliffsFifthQuests.questFourSecondOption",
+          "questsNorthCliffsFifthQuests.questFourThirdOption"
         ],
-        "answer": "Ключ-карта"
+        "answer": "questsNorthCliffsFifthQuests.questFourFirstOption"
       },
       {
         "id": 5,
         "type": "select",
-        "question": "Выбери вежливую просьбу о такси",
+        "question": "questsNorthCliffsFifthQuests.questFive",
         "options": [
           "Ein Taxi, bitte.",
           "Ich brauche ein Zimmer.",
@@ -845,14 +845,14 @@
       {
         "id": 6,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsNorthCliffsFifthQuests.questSix",
         "text": "Ich möchte mit Karte bezahlen.",
         "answer": "Ich möchte mit Karte bezahlen."
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Собери вопрос о позднем выезде",
+        "question": "questsNorthCliffsFifthQuests.questSeven",
         "words": [
           "auschecken",
           "später",
@@ -869,7 +869,7 @@
       {
         "id": 8,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsNorthCliffsFifthQuests.questEight",
         "text": "Kann ich mein Gepäck hier lassen?",
         "answer": "Kann ich mein Gepäck hier lassen?"
       },
@@ -877,29 +877,29 @@
         "id": 9,
         "type": "readAndAnswer",
         "text": "Die Rechnung bekommen Sie an der Rezeption.",
-        "question": "Где получить счёт/чек?",
+        "question": "questsNorthCliffsFifthQuests.questNine",
         "options": [
-          "На ресепшене",
-          "В ресторане",
-          "В лифте"
+          "questsNorthCliffsFifthQuests.questNineFirstOption",
+          "questsNorthCliffsFifthQuests.questNineSecondOption",
+          "questsNorthCliffsFifthQuests.questNineThirdOption"
         ],
-        "answer": "На ресепшене"
+        "answer": "questsNorthCliffsFifthQuests.questNineFirstOption"
       },
       {
         "id": 10,
         "type": "select",
-        "question": "Переведи: bar bezahlen",
+        "question": "questsNorthCliffsFifthQuests.questTen",
         "options": [
-          "платить наличными",
-          "платить картой",
-          "бронировать онлайн"
+          "questsNorthCliffsFifthQuests.questTenFirstOption",
+          "questsNorthCliffsFifthQuests.questTenSecondOption",
+          "questsNorthCliffsFifthQuests.questTenThirdOption"
         ],
-        "answer": "платить наличными"
+        "answer": "questsNorthCliffsFifthQuests.questTenFirstOption"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Собери вопрос: Где аэропорт?",
+        "question": "questsNorthCliffsFifthQuests.questEleven",
         "words": [
           "Flughafen",
           "ist",
@@ -916,7 +916,7 @@
       {
         "id": 12,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsNorthCliffsFifthQuests.questTwelve",
         "text": "Ich brauche eine Quittung.",
         "answer": "Ich brauche eine Quittung."
       },
@@ -924,18 +924,18 @@
         "id": 13,
         "type": "readAndAnswer",
         "text": "Achtung: Der Aufzug funktioniert nicht. Bitte nehmen Sie die Treppe neben der Rezeption.",
-        "question": "Что не работает?",
+        "question": "questsNorthCliffsFifthQuests.questThirteen",
         "options": [
-          "Лифт",
-          "Парковка",
-          "Завтрак"
+          "questsNorthCliffsFifthQuests.questThirteenFirstOption",
+          "questsNorthCliffsFifthQuests.questThirteenSecondOption",
+          "questsNorthCliffsFifthQuests.questThirteenThirdOption"
         ],
-        "answer": "Лифт"
+        "answer": "questsNorthCliffsFifthQuests.questThirteenFirstOption"
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "Собери фразу: Это мой багаж",
+        "question": "questsNorthCliffsFifthQuests.questFourteen",
         "words": [
           "Gepäck",
           "Das",
@@ -952,7 +952,7 @@
       {
         "id": 15,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsNorthCliffsFifthQuests.questFifteen",
         "text": "Können Sie mir ein Taxi zum Flughafen bestellen?",
         "answer": "Können Sie mir ein Taxi zum Flughafen bestellen?"
       }

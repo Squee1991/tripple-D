@@ -980,67 +980,67 @@
   },
   {
     "questId": "weather-6",
-    "title": "Жара и солнце",
+    "title": "questLakeRuinsSixthQuests.title",
     "progress": "0/15",
-    "description": "Душно, сухо, жара и сильное солнце. Учимся говорить про тень, защиту от солнца и UV-индекс.",
+    "description": "questLakeRuinsSixthQuests.description",
     "conditions": {
-      "goal": "Говорить о жаре и защите от солнца: schwül, trocken, die Hitze, der Schatten, Sonnencreme/Sonnenbrille, UV-Index; Ich bleibe … / Ich brauche …",
+      "goal": "questLakeRuinsSixthQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 190,
-      "xp": 320
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
         "id": 1,
         "type": "select",
-        "question": "Что значит: der Schatten",
+        "question": "",
         "options": [
-          "Тень",
-          "Снег",
-          "Туман"
+          "questLakeRuinsSixthQuests.questOneFirstOption",
+          "questLakeRuinsSixthQuests.questOneSecondOption",
+          "questLakeRuinsSixthQuests.questOneThirdOption"
         ],
-        "answer": "Тень"
+        "answer": "questLakeRuinsSixthQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "select",
         "question": "schwül",
         "options": [
-          "Душно",
-          "Сухо",
-          "Холодно"
+          "questLakeRuinsSixthQuests.questTwoFirstOption",
+          "questLakeRuinsSixthQuests.questTwoSecondOption",
+          "questLakeRuinsSixthQuests.questTwoThirdOption"
         ],
-        "answer": "Душно"
+        "answer": "questLakeRuinsSixthQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "select",
         "question": "die Sonnencreme",
         "options": [
-          "Солнцезащитный крем",
-          "Зонт",
-          "Перчатки"
+          "questLakeRuinsSixthQuests.questThirdFirstOption",
+          "questLakeRuinsSixthQuests.questThirdSecondOption",
+          "questLakeRuinsSixthQuests.questThirdThirdOption"
         ],
-        "answer": "Солнцезащитный крем"
+        "answer": "questLakeRuinsSixthQuests.questThirdFirstOption"
       },
       {
         "id": 4,
         "type": "select",
         "question": "die Sonnenbrille",
         "options": [
-          "Солнечные очки",
-          "Шарф",
-          "Шапка"
+          "questLakeRuinsSixthQuests.questFourFirstOption",
+          "questLakeRuinsSixthQuests.questFourSecondOption",
+          "questLakeRuinsSixthQuests.questFourThirdOption"
         ],
-        "answer": "Солнечные очки"
+        "answer": "questLakeRuinsSixthQuests.questFourFirstOption"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questLakeRuinsSixthQuests.questFive",
         "words": [
           "schwül",
           "ist",
@@ -1057,7 +1057,7 @@
       {
         "id": 6,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questLakeRuinsSixthQuests.questSix",
         "text": "Im Schatten ist es kühler",
         "answer": "Im Schatten ist es kühler"
       },
@@ -1065,29 +1065,29 @@
         "id": 7,
         "type": "readAndAnswer",
         "text": "Es ist sehr heiß. Trage eine Sonnenbrille und Sonnencreme.",
-        "question": "Что советуют использовать?",
+        "question": "questLakeRuinsSixthQuests.questSeven",
         "options": [
-          "Солнечные очки и крем",
-          "Тёплую шапку",
-          "Зимние перчатки"
+          "questLakeRuinsSixthQuests.questSevenFirstOption",
+          "questLakeRuinsSixthQuests.questSevenSecondOption",
+          "questLakeRuinsSixthQuests.questSevenThirdOption"
         ],
-        "answer": "Солнечные очки и крем"
+        "answer": "questLakeRuinsSixthQuests.questSevenFirstOption"
       },
       {
         "id": 8,
         "type": "select",
         "question": "die Hitze",
         "options": [
-          "Жара",
-          "Туман",
-          "Лёд"
+          "questLakeRuinsSixthQuests.questEightFirstOption",
+          "questLakeRuinsSixthQuests.questEightSecondOption",
+          "questLakeRuinsSixthQuests.questEightThirdOption"
         ],
-        "answer": "Жара"
+        "answer": "questLakeRuinsSixthQuests.questEightFirstOption"
       },
       {
         "id": 9,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questLakeRuinsSixthQuests.questNine",
         "words": [
           "Schatten",
           "bleibe",
@@ -1104,7 +1104,7 @@
       {
         "id": 10,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questLakeRuinsSixthQuests.questTen",
         "text": "Der UV-Index ist hoch",
         "answer": "Der UV-Index ist hoch"
       },
@@ -1113,16 +1113,16 @@
         "type": "select",
         "question": "trocken",
         "options": [
-          "Сухо",
-          "Мокро",
-          "Снежно"
+          "questLakeRuinsSixthQuests.questElevenFirstOption",
+          "questLakeRuinsSixthQuests.questElevenSecondOption",
+          "questLakeRuinsSixthQuests.questElevenThirdOption"
         ],
-        "answer": "Сухо"
+        "answer": "questLakeRuinsSixthQuests.questElevenFirstOption"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questLakeRuinsSixthQuests.questTwelve",
         "words": [
           "Es",
           "warm",
@@ -1142,18 +1142,18 @@
         "id": 13,
         "type": "readAndAnswer",
         "text": "Heute über 30 Grad. Am Nachmittag wird es sehr heiß.",
-        "question": "Какая температура сегодня?",
+        "question": "",
         "options": [
-          "Больше 30°",
-          "Меньше 10°",
-          "Ровно 20°"
+          "questLakeRuinsSixthQuests°.questThirteenFirstOption",
+          "questLakeRuinsSixthQuests.questThirteenSecondOption",
+          "questLakeRuinsSixthQuests.questThirteenThirdOption"
         ],
-        "answer": "Больше 30°"
+        "answer": "questLakeRuinsSixthQuests°.questThirteenFirstOption"
       },
       {
         "id": 14,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questLakeRuinsSixthQuests.questFourteen",
         "text": "Ich brauche Wasser",
         "answer": "Ich brauche Wasser"
       },
@@ -1162,77 +1162,77 @@
         "type": "select",
         "question": "Sonnenbrand",
         "options": [
-          "Солнечный ожог",
-          "Дождь",
-          "Радуга"
+          "questLakeRuinsSixthQuests.questFifteenFirstOption",
+          "questLakeRuinsSixthQuests.questFifteenSecondOption",
+          "questLakeRuinsSixthQuests.questFifteenThirdOption"
         ],
-        "answer": "Солнечный ожог"
+        "answer": "questLakeRuinsSixthQuests.questFifteenFirstOption"
       }
     ]
   },
   {
     "questId": "weather-7",
-    "title": "Прогноз и изменения погоды",
+    "title": "questLakeRuinsSeventhQuests.title",
     "progress": "0/15",
-    "description": "Учимся понимать прогноз: переменно, ясно, температура растёт/падает; говорим о дне и ночи, диапазонах и «до ... градусов».",
+    "description": "questLakeRuinsSeventhQuests.description",
     "conditions": {
-      "goal": "Понимать и говорить о прогнозе: die Vorhersage, wechselhaft, heiter, die Temperatur, steigt/sinkt/bleibt, nachts/tagsüber, bis zu, zwischen … und … Grad",
+      "goal": "questLakeRuinsSeventhQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 195,
-      "xp": 320
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
         "id": 1,
         "type": "select",
-        "question": "Что значит: die Vorhersage",
+        "question": "questLakeRuinsSeventhQuests.questOne",
         "options": [
-          "Прогноз",
-          "Гроза",
-          "Тень"
+          "questLakeRuinsSeventhQuests.questOneFirstOption",
+          "questLakeRuinsSeventhQuests.questOneSecondOption",
+          "questLakeRuinsSeventhQuests.questOneThirdOption"
         ],
-        "answer": "Прогноз"
+        "answer": "questLakeRuinsSeventhQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "select",
         "question": "wechselhaft",
         "options": [
-          "Переменная погода",
-          "Снежная погода",
-          "Сухая погода"
+          "questLakeRuinsSeventhQuests.questTwoFirstOption",
+          "questLakeRuinsSeventhQuests.questTwoSecondOption",
+          "questLakeRuinsSeventhQuests.questTwoThirdOption"
         ],
-        "answer": "Переменная погода"
+        "answer": "questLakeRuinsSeventhQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "select",
         "question": "heiter",
         "options": [
-          "Ясно",
-          "Туманно",
-          "Душно"
+          "questLakeRuinsSeventhQuests.questThirdFirstOption",
+          "questLakeRuinsSeventhQuests.questThirdSecondOption",
+          "questLakeRuinsSeventhQuests.questThirdThirdOption"
         ],
-        "answer": "Ясно"
+        "answer": "questLakeRuinsSeventhQuests.questThirdFirstOption"
       },
       {
         "id": 4,
         "type": "select",
         "question": "die Temperatur",
         "options": [
-          "Температура",
-          "Туча",
-          "Снег"
+          "questLakeRuinsSeventhQuests.questFourFirstOption",
+          "questLakeRuinsSeventhQuests.questFourSecondOption",
+          "questLakeRuinsSeventhQuests.questFourThirdOption"
         ],
-        "answer": "Температура"
+        "answer": "questLakeRuinsSeventhQuests.questFourFirstOption"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questLakeRuinsSeventhQuests.questFive",
         "words": [
           "steigt",
           "Temperatur",
@@ -1247,7 +1247,7 @@
       {
         "id": 6,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questLakeRuinsSeventhQuests.questSix",
         "text": "Die Temperatur sinkt in der Nacht",
         "answer": "Die Temperatur sinkt in der Nacht"
       },
@@ -1256,16 +1256,16 @@
         "type": "select",
         "question": "nachts",
         "options": [
-          "Ночью",
-          "Днём",
-          "Утром"
+          "questLakeRuinsSeventhQuests.questSevenFirstOption",
+          "questLakeRuinsSeventhQuests.questSevenSecondOption",
+          "questLakeRuinsSeventhQuests.questSevenThirdOption"
         ],
-        "answer": "Ночью"
+        "answer": "questLakeRuinsSeventhQuests.questSevenFirstOption"
       },
       {
         "id": 8,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questLakeRuinsSeventhQuests.questEight",
         "words": [
           "kühl",
           "Morgen",
@@ -1285,36 +1285,36 @@
         "id": 9,
         "type": "readAndAnswer",
         "text": "Heute ist es wechselhaft: morgens regnet es, am Nachmittag scheint die Sonne.",
-        "question": "Какая погода днём?",
+        "question": "",
         "options": [
-          "Светит солнце",
-          "Идёт снег",
-          "Туман"
+          "questLakeRuinsSeventhQuests.questNineFirstOption",
+          "questLakeRuinsSeventhQuests.questNineSecondOption",
+          "questLakeRuinsSeventhQuests.questNineThirdOption"
         ],
-        "answer": "Светит солнце"
+        "answer": "questLakeRuinsSeventhQuests.questNineFirstOption"
       },
       {
         "id": 10,
         "type": "select",
         "question": "Что значит: bis zu 25 Grad",
         "options": [
-          "До 25 градусов",
-          "Ровно 25 градусов",
-          "Минимум 25 градусов"
+          "questLakeRuinsSeventhQuests.questTenFirstOption",
+          "questLakeRuinsSeventhQuests.questTenSecondOption",
+          "questLakeRuinsSeventhQuests.questTenThirdOption"
         ],
-        "answer": "До 25 градусов"
+        "answer": "questLakeRuinsSeventhQuests.questTenFirstOption"
       },
       {
         "id": 11,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questLakeRuinsSeventhQuests.questEleven",
         "text": "Tagsüber sind es bis zu 25 Grad",
         "answer": "Tagsüber sind es bis zu 25 Grad"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questLakeRuinsSeventhQuests.questTwelve",
         "words": [
           "Grad",
           "5",
@@ -1334,29 +1334,29 @@
         "id": 13,
         "type": "readAndAnswer",
         "text": "Im Wetterbericht: In Berlin bleibt es heute mild, die Temperatur liegt zwischen 12 und 16 Grad.",
-        "question": "Какая температура в Берлине?",
+        "question": "",
         "options": [
-          "Между 12 и 16",
-          "Ровно 12",
-          "Ниже 10"
+          "questLakeRuinsSeventhQuests.questThirteenFirstOption",
+          "questLakeRuinsSeventhQuests.questThirteenSecondOption",
+          "questLakeRuinsSeventhQuests.questThirteenThirdOption"
         ],
-        "answer": "Между 12 и 16"
+        "answer": "questLakeRuinsSeventhQuests.questThirteenFirstOption"
       },
       {
         "id": 14,
         "type": "select",
         "question": "Es bleibt mild",
         "options": [
-          "Погода останется мягкой",
-          "Станет жарко",
-          "Станет морозно"
+          "questLakeRuinsSeventhQuests.questFourteenFirstOption",
+          "questLakeRuinsSeventhQuests.questFourteenSecondOption",
+          "questLakeRuinsSeventhQuests.questFourteenThirdOption"
         ],
-        "answer": "Погода останется мягкой"
+        "answer": "questLakeRuinsSeventhQuests.questFourteenFirstOption"
       },
       {
         "id": 15,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questLakeRuinsSeventhQuests.questFifteen",
         "text": "Morgen wird es kälter",
         "answer": "Morgen wird es kälter"
       }
@@ -1364,45 +1364,45 @@
   },
   {
     "questId": "weather-8",
-    "title": "Комбинируем: сезон, погода, градусы, одежда",
+    "title": "questLakeRuinsEighthQuests.title",
     "progress": "0/15",
-    "description": "Собираем всё вместе: сезоны, явления, температура и что надеть.",
+    "description": "questLakeRuinsEighthQuests.description",
     "conditions": {
-      "goal": "Комбинировать фразы из тем 1–7: Im Sommer/Winter…, Es ist …, Es regnet/schneit, Grad, Jacke/Mütze/Regenschirm, nachts/tagsüber, bis zu, zwischen … und …, steigt/sinkt",
+      "goal": "questLakeRuinsEighthQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 195,
-      "xp": 330
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
         "id": 1,
         "type": "select",
-        "question": "Переведи: Im Sommer ist es heiß.",
+        "question": "questLakeRuinsEighthQuests.questOne",
         "options": [
-          "Летом жарко",
-          "Зимой холодно",
-          "Весной дождливо"
+          "questLakeRuinsEighthQuests.questOneFirstOption",
+          "questLakeRuinsEighthQuests.questOneSecondOption",
+          "questLakeRuinsEighthQuests.questOneThirdOption"
         ],
-        "answer": "Летом жарко"
+        "answer": "questLakeRuinsEighthQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "select",
-        "question": "Переведи: Ich brauche einen Regenschirm.",
+        "question": "questLakeRuinsEighthQuests.questTwo",
         "options": [
-          "Мне нужен зонт",
-          "Мне нужны перчатки",
-          "Мне нужна шапка"
+          "questLakeRuinsEighthQuests.questTwoFirstOption",
+          "questLakeRuinsEighthQuests.questTwoSecondOption",
+          "questLakeRuinsEighthQuests.questTwoThirdOption"
         ],
-        "answer": "Мне нужен зонт"
+        "answer": "questLakeRuinsEighthQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questLakeRuinsEighthQuests.questThird",
         "words": [
           "Heute",
           "ist",
@@ -1423,37 +1423,37 @@
       {
         "id": 4,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questLakeRuinsEighthQuests.questFour",
         "text": "Nachts ist es kalt",
         "answer": "Nachts ist es kalt"
       },
       {
         "id": 5,
         "type": "select",
-        "question": "Что значит: Zwischen 5 und 10 Grad",
+        "question": "questLakeRuinsEighthQuests.questFive",
         "options": [
-          "Между 5 и 10 градусами",
-          "До 10 градусов",
-          "Ровно 5 градусов"
+          "questLakeRuinsEighthQuests.questFiveFirstOption",
+          "questLakeRuinsEighthQuests.questFiveSecondOption",
+          "questLakeRuinsEighthQuests.questFiveThirdOption"
         ],
-        "answer": "Между 5 и 10 градусами"
+        "answer": "questLakeRuinsEighthQuests.questFiveFirstOption"
       },
       {
         "id": 6,
         "type": "readAndAnswer",
         "text": "Im Herbst ist es oft regnerisch und windig. Ich trage eine Jacke.",
-        "question": "Что делает человек?",
+        "question": "questLakeRuinsEighthQuests.questSix",
         "options": [
-          "Надевает куртку",
-          "Берёт зонтик и шапку",
-          "Идёт без куртки"
+          "questLakeRuinsEighthQuests.questSixFirstOption",
+          "questLakeRuinsEighthQuests.questSixSecondOption",
+          "questLakeRuinsEighthQuests.questSixThirdOption"
         ],
-        "answer": "Надевает куртку"
+        "answer": "questLakeRuinsEighthQuests.questSixFirstOption"
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questLakeRuinsEighthQuests.questSeven",
         "words": [
           "Die",
           "Temperatur",
@@ -1468,37 +1468,37 @@
       {
         "id": 8,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questLakeRuinsEighthQuests.questEight",
         "text": "Heute sind es zwanzig Grad",
         "answer": "Heute sind es zwanzig Grad"
       },
       {
         "id": 9,
         "type": "select",
-        "question": "Переведи: Morgen bleibt es heiter.",
+        "question": "",
         "options": [
-          "Завтра будет ясно",
-          "Завтра сильный снег",
-          "Завтра туманно весь день"
+          "questLakeRuinsEighthQuests.questNineFirstOption",
+          "questLakeRuinsEighthQuests.questNineSecondOption",
+          "questLakeRuinsEighthQuests.questNineThirdOption"
         ],
-        "answer": "Завтра будет ясно"
+        "answer": "questLakeRuinsEighthQuests.questNineFirstOption"
       },
       {
         "id": 10,
         "type": "readAndAnswer",
         "text": "Wetterbericht: Morgens ist es bewölkt, am Nachmittag sonnig, abends sinkt die Temperatur auf zehn Grad.",
-        "question": "Что вечером?",
+        "question": "",
         "options": [
-          "Температура падает до 10°",
-          "Пасмурно и дождь",
-          "Жарко, 25°"
+          "questLakeRuinsEighthQuests.questTenFirstOption",
+          "questLakeRuinsEighthQuests.questTenSecondOption",
+          "questLakeRuinsEighthQuests.questTenThirdOption"
         ],
-        "answer": "Температура падает до 10°"
+        "answer": "questLakeRuinsEighthQuests.questTenFirstOption"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questLakeRuinsEighthQuests.questEleven",
         "words": [
           "Ich",
           "brauche",
@@ -1521,14 +1521,14 @@
       {
         "id": 12,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questLakeRuinsEighthQuests.questTwelve",
         "text": "Tagsüber sind es bis zu fünfzehn Grad",
         "answer": "Tagsüber sind es bis zu fünfzehn Grad"
       },
       {
         "id": 13,
         "type": "select",
-        "question": "Какая одежда подходит? Es ist kalt und windig.",
+        "question": "questLakeRuinsEighthQuests.questThirteen",
         "options": [
           "Eine Jacke und eine Mütze",
           "Sonnenbrille und T-Shirt",
@@ -1539,7 +1539,7 @@
       {
         "id": 14,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questLakeRuinsEighthQuests.questFourteen",
         "words": [
           "Im",
           "Winter",
@@ -1559,58 +1559,58 @@
         "id": 15,
         "type": "readAndAnswer",
         "text": "— Wie ist das Wetter heute? — Es ist wechselhaft: zwischen 3 und 8 Grad. — Brauchst du eine Jacke? — Ja.",
-        "question": "Нужна ли куртка?",
+        "question": "questLakeRuinsEighthQuests.questFifteen",
         "options": [
-          "Да",
-          "Нет",
-          "Неизвестно"
+          "questLakeRuinsEighthQuests.questFifteenFirstOption",
+          "questLakeRuinsEighthQuests.questFifteenSecondOption",
+          "questLakeRuinsEighthQuests.questFifteenThirdOption"
         ],
-        "answer": "Да"
+        "answer": "questLakeRuinsEighthQuests.questFifteenFirstOption"
       }
     ]
   },
   {
     "questId": "weather-9",
-    "title": "Планируем день по прогнозу",
+    "title": "questLakeRuinsNinthQuests.title",
     "progress": "0/15",
-    "description": "Сравниваем прогноз утром/днём/вечером, градусы и что надеть.",
+    "description": "questLakeRuinsNinthQuests.description",
     "conditions": {
-      "goal": "Комбинировать известные слова о погоде и одежде",
+      "goal": "questLakeRuinsNinthQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 200,
-      "xp": 340
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
         "id": 1,
         "type": "select",
-        "question": "Переведи: Wie ist das Wetter heute in Berlin?",
+        "question": "",
         "options": [
-          "Какая сегодня погода в Берлине?",
-          "Когда поезд в Берлин?",
-          "Где находится Берлин?"
+          "questLakeRuinsNinthQuests.questOneFirstOption",
+          "questLakeRuinsNinthQuests.questOneSecondOption",
+          "questLakeRuinsNinthQuests.questOneThirdOption"
         ],
-        "answer": "Какая сегодня погода в Берлине?"
+        "answer": "questLakeRuinsNinthQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "readAndAnswer",
         "text": "Berlin: Morgens ist es bewölkt, nachmittags sonnig.",
-        "question": "Когда солнечно в Берлине?",
+        "question": "",
         "options": [
-          "Днём",
-          "Утром",
-          "Вечером"
+          "questLakeRuinsNinthQuests.questTwoFirstOption",
+          "questLakeRuinsNinthQuests.questTwoSecondOption",
+          "questLakeRuinsNinthQuests.questTwoThirdOption"
         ],
-        "answer": "Днём"
+        "answer": "questLakeRuinsNinthQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questLakeRuinsNinthQuests.questThird",
         "words": [
           "Heute",
           "wechselhaft",
@@ -1627,7 +1627,7 @@
       {
         "id": 4,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questLakeRuinsNinthQuests.questFour",
         "text": "Zwischen fünf und zehn Grad",
         "answer": "Zwischen fünf und zehn Grad"
       },
@@ -1645,7 +1645,7 @@
       {
         "id": 6,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questLakeRuinsNinthQuests.questSix",
         "words": [
           "Abend",
           "Am",
@@ -1664,26 +1664,26 @@
       {
         "id": 7,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questLakeRuinsNinthQuests.questSeven",
         "text": "Ich trage eine Jacke und eine Mütze",
         "answer": "Ich trage eine Jacke und eine Mütze"
       },
       {
         "id": 8,
         "type": "select",
-        "question": "Переведи: Tagsüber bleibt es warm.",
+        "question": "questLakeRuinsNinthQuests.questEight",
         "options": [
-          "Днём остаётся тепло",
-          "Утром становится холодно",
-          "Вечером идёт снег"
+          "questLakeRuinsNinthQuests.questEightFirstOption",
+          "questLakeRuinsNinthQuests.questEightSecondOption",
+          "questLakeRuinsNinthQuests.questEightThirdOption"
         ],
-        "answer": "Днём остаётся тепло"
+        "answer": "questLakeRuinsNinthQuests.questEightFirstOption"
       },
       {
         "id": 9,
         "type": "readAndAnswer",
         "text": "München: Morgens 3°, nachmittags 8°, abends 4°. Es ist windig.",
-        "question": "Сколько градусов днём в Мюнхене?",
+        "question": "questLakeRuinsNinthQuests.questNine",
         "options": [
           "3°",
           "8°",
@@ -1694,7 +1694,7 @@
       {
         "id": 10,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questLakeRuinsNinthQuests.questTen",
         "words": [
           "Im",
           "regnerisch",
@@ -1715,37 +1715,37 @@
       {
         "id": 11,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questLakeRuinsNinthQuests.questEleven",
         "text": "Morgens ist es kalt, aber sonnig",
         "answer": "Morgens ist es kalt, aber sonnig"
       },
       {
         "id": 12,
         "type": "select",
-        "question": "Переведи: Die Temperatur steigt.",
+        "question": "questLakeRuinsNinthQuests.questTwelve",
         "options": [
-          "Температура повышается",
-          "Температура понижается",
-          "Температура остаётся"
+          "questLakeRuinsNinthQuests.questTwelveFirstOption",
+          "questLakeRuinsNinthQuests.questTwelveSecondOption",
+          "questLakeRuinsNinthQuests.questTwelveThirdOption"
         ],
-        "answer": "Температура повышается"
+        "answer": "questLakeRuinsNinthQuests.questTwelveFirstOption"
       },
       {
         "id": 13,
         "type": "readAndAnswer",
         "text": "— Brauchst du eine Jacke? — Nein, tagsüber sind es bis zu zwanzig Grad.",
-        "question": "Нужна ли куртка днём?",
+        "question": "questLakeRuinsNinthQuests.questThirteen",
         "options": [
-          "Нет",
-          "Да",
-          "Неизвестно"
+          "questLakeRuinsNinthQuests.questThirteenFirstOption",
+          "questLakeRuinsNinthQuests.questThirteenSecondOption",
+          "questLakeRuinsNinthQuests.questThirteenThirdOption"
         ],
-        "answer": "Нет"
+        "answer": "questLakeRuinsNinthQuests.questThirteenFirstOption"
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questLakeRuinsNinthQuests.questFourteen",
         "words": [
           "Grad",
           "es",
@@ -1763,8 +1763,8 @@
       },
       {
         "id": 15,
-        "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "type": "speechToText.questFifteen",
+        "question": "questLakeRuinsNinthQuests",
         "text": "Es bleibt bewölkt",
         "answer": "Es bleibt bewölkt"
       }
@@ -1772,46 +1772,46 @@
   },
   {
     "questId": "weather-10",
-    "title": "План на выходные",
+    "title": "questLakeRuinsTenthQuests.title",
     "progress": "0/15",
-    "description": "Смотрим прогноз на завтра и выходные, сравниваем градусы и решаем, что взять с собой.",
+    "description": "questLakeRuinsTenthQuests.description",
     "conditions": {
-      "goal": "Объединять всё пройденное: heute/morgen/am Wochenende, sonnig/bewölkt/windig/regnerisch, Grad, steigt/sinkt/bleibt, Kleidung (Jacke/Mütze/Regenschirm)",
+      "goal": "questLakeRuinsTenthQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 210,
-      "xp": 360
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
         "id": 1,
         "type": "select",
-        "question": "Переведи: Morgen ist es warm.",
+        "question": "questLakeRuinsTenthQuests.questOne",
         "options": [
-          "Завтра тепло",
-          "Сегодня холодно",
-          "Вечером ветрено"
+          "questLakeRuinsTenthQuests.questOneFirstOption",
+          "questLakeRuinsTenthQuests.questOneSecondOption",
+          "questLakeRuinsTenthQuests.questOneThirdOption"
         ],
-        "answer": "Завтра тепло"
+        "answer": "questLakeRuinsTenthQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "readAndAnswer",
         "text": "Berlin: Heute bewölkt, 12°. Morgen sonnig, 18°.",
-        "question": "Когда теплее в Берлине?",
+        "question": "",
         "options": [
-          "Сегодня",
-          "Завтра",
-          "Вечером"
+          "questLakeRuinsTenthQuests.questTwoFirstOption",
+          "questLakeRuinsTenthQuests.questTwoSecondOption",
+          "questLakeRuinsTenthQuests.questTwoThirdOption"
         ],
-        "answer": "Завтра"
+        "answer": "questLakeRuinsTenthQuests.questTwoSecondOption"
       },
       {
         "id": 3,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questLakeRuinsTenthQuests.questThird",
         "words": [
           "Ich",
           "brauche",
@@ -1828,37 +1828,37 @@
       {
         "id": 4,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questLakeRuinsTenthQuests.questFour",
         "text": "Heute zehn bis fünfzehn Grad",
         "answer": "Heute zehn bis fünfzehn Grad"
       },
       {
         "id": 5,
         "type": "select",
-        "question": "Переведи: Die Temperatur sinkt am Abend.",
+        "question": "",
         "options": [
-          "Температура понижается вечером",
-          "Температура повышается вечером",
-          "Температура остаётся вечером"
+          "questLakeRuinsTenthQuests.questFiveFirstOption",
+          "questLakeRuinsTenthQuests.questFiveSecondOption",
+          "questLakeRuinsTenthQuests.questFiveThirdOption"
         ],
-        "answer": "Температура понижается вечером"
+        "answer": "questLakeRuinsTenthQuests.questFiveFirstOption"
       },
       {
         "id": 6,
         "type": "readAndAnswer",
         "text": "Hamburg: Vormittags 6°, nachmittags 11°, abends 5°. Es regnet.",
-        "question": "Что происходит с температурой вечером?",
+        "question": "questLakeRuinsTenthQuests.questSix",
         "options": [
-          "Повышается",
-          "Понижается",
-          "Остаётся такой же"
+          "questLakeRuinsTenthQuests.questSixFirstOption",
+          "questLakeRuinsTenthQuests.questSixSecondOption",
+          "questLakeRuinsTenthQuests.questSixThirdOption"
         ],
-        "answer": "Понижается"
+        "answer": "questLakeRuinsTenthQuests.questSixSecondOption"
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questLakeRuinsTenthQuests.questSeven",
         "words": [
           "Heute",
           "ist",
@@ -1879,7 +1879,7 @@
       {
         "id": 8,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questLakeRuinsTenthQuests.questEight",
         "text": "Morgens ist es kalt, nachmittags warm",
         "answer": "Morgens ist es kalt, nachmittags warm"
       },
@@ -1898,18 +1898,18 @@
         "id": 10,
         "type": "readAndAnswer",
         "text": "— Gehen wir in den Park? — Ja, heute ist es sonnig und zwanzig Grad.",
-        "question": "Куда они идут?",
+        "question": "",
         "options": [
-          "В парк",
-          "В музей",
-          "В кафе"
+          "",
+          "questLakeRuinsTenthQuests.questTenSecondOption",
+          "questLakeRuinsTenthQuests.questTenThirdOption"
         ],
-        "answer": "В парк"
+        "answer": "questLakeRuinsTenthQuests.questTenFirstOption"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questLakeRuinsTenthQuests.questEleven",
         "words": [
           "Grad",
           "sind",
@@ -1930,37 +1930,37 @@
       {
         "id": 12,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questLakeRuinsTenthQuests.questTwelve",
         "text": "Ich nehme eine Jacke, es ist windig",
         "answer": "Ich nehme eine Jacke, es ist windig"
       },
       {
         "id": 13,
         "type": "select",
-        "question": "Переведи: Es schneit nicht.",
+        "question": "questLakeRuinsTenthQuests.questThirteen",
         "options": [
-          "Снег не идёт",
-          "Идёт снег",
-          "Идёт дождь"
+          "",
+          "questLakeRuinsTenthQuests.questThirteenSecondOption",
+          "questLakeRuinsTenthQuests.questThirteenThirdOption"
         ],
-        "answer": "Снег не идёт"
+        "answer": "questLakeRuinsTenthQuests.questThirteenFirstOption"
       },
       {
         "id": 14,
         "type": "readAndAnswer",
         "text": "Köln: 14°, sonnig. Leipzig: 9°, bewölkt und windig.",
-        "question": "Где теплее?",
+        "question": "questLakeRuinsTenthQuests.questFourteen",
         "options": [
-          "В Кёльне",
-          "В Лейпциге",
-          "Одинаково"
+          "",
+          "questLakeRuinsTenthQuests.questFourteenSecondOption",
+          "questLakeRuinsTenthQuests.questFourteenThirdOption"
         ],
-        "answer": "В Кёльне"
+        "answer": "questLakeRuinsTenthQuests.questFourteenFirstOption"
       },
       {
         "id": 15,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questLakeRuinsTenthQuests.questFifteen",
         "text": "Am Wochenende bleibt es sonnig",
         "answer": "Am Wochenende bleibt es sonnig"
       }
