@@ -194,7 +194,7 @@
 </template>
 
 <script setup>
-import {computed, onMounted, ref, watch, watchEffect, nextTick} from 'vue'
+import {computed, onMounted, ref, watch, watchEffect, nextTick , onBeforeUnmount } from 'vue'
 import {useRoute, useRouter, onBeforeRouteLeave} from 'vue-router'
 import {userChainStore} from '../../store/chainStore.js'
 import {userlangStore} from '../../store/learningStore.js'
@@ -344,8 +344,8 @@ async function purchaseLife() {
   if (!canBuyLife.value) return
   const ok = await trySpendLocal(PRICE)
   if (!ok) return
-  const nextLives = Math.max(1, Math.min((questStore.lives || 0) + 1, questStore.maxLives || 99))
-  questStore.lives = nextLives
+  await questStore.addLife(1)
+
   if (questStore.finished && !questStore.success) questStore.finished = false
   if (!questStore.sessionStarted) questStore.sessionStarted = true
   forceRevive.value = false

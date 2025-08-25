@@ -240,7 +240,7 @@ const menuItems = computed(() => [
           ] :
           [
             {
-              id: 'about', valueKey: 'О нас', url: '/info-about',
+              id: 'about', valueKey: 'О приложении', url: '/info-about',
             },
             {
               id: 'contact', valueKey: 'Контакт', url: '/support-request',

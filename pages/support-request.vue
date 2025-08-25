@@ -2,7 +2,7 @@
   <div class="faq__section">
     <div class="btns__wrapper">
       <div v-for="btn in data" :key="btn.id">
-        <button @click="pathFunction(btn.path)" class="back__btn "> {{ btn.text }}</button>
+        <button @click="pathFunction(btn.path)" class="back__btn"> {{ btn.text }}</button>
       </div>
     </div>
     <FeedBack/>
@@ -47,6 +47,7 @@ const pathFunction = (pathValue) => {
   display: flex;
   justify-content: center;
   gap: 20px;
+  margin-bottom: 15px;
 }
 
 .faq__section {
@@ -59,6 +60,16 @@ const pathFunction = (pathValue) => {
   .back__btn:hover {
     background: #1960ad;
     transition: .3s;
+  }
+}
+
+@media (max-width: 480px){
+  .btns__wrapper {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .back__btn {
+    width: 100%;
   }
 }
 </style>

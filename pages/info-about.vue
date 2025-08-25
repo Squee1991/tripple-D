@@ -138,6 +138,8 @@ import Marathon from '../assets/images/about-icons/Marathon.png'
 import Thematic from '../assets/images/about-icons/Thematic.svg'
 import Target from 'assets/images/about-icons/Target.svg'
 import Article from '../assets/images/about-icons/Article.png'
+import Theory from '../assets/images/about-icons/theory.svg'
+import Practice from '../assets/images/about-icons/practice.svg'
 const heroContentRef = ref({
   title: 'О нас',
   subtitle:
@@ -217,7 +219,7 @@ const theoryPracticeRef = ref([
     title: 'Теория ',
     description:
         'Теория по различным темам. Прилагательные существительные и т.д',
-    imageUrl: '/images/about/theory-articles.png',
+    imageUrl: Practice,
     imageAlt: 'Теория по артиклям',
     points: [
       { id: 'articles-rules', text: 'Правила употребления ' },
@@ -229,8 +231,8 @@ const theoryPracticeRef = ref([
     title: 'Прилагательные и глаголы',
     description:
         'Склонение прилагательных, времена и формы глаголов — с наглядными таблицами и практикой.',
-    imageUrl: '/images/about/theory-grammar.png',
-    imageAlt: 'Теория по прилагательным и глаголам',
+    imageUrl: Theory,
+    imageAlt: 'практика прилагательным и глаголам',
     points: [
       { id: 'adj-declension', text: 'Склонение прилагательных по падежам' },
       { id: 'verbs-practice', text: 'Практика спряжений и времён' }
@@ -270,7 +272,7 @@ const callToActionRef = ref({
   --about-accent: #8b6cff;
   --about-accent-2: #ffd166;
   --about-card: #171a24;
-  --about-stroke: #25293a;
+
   color: var(--titleColor);;
   padding: 65px 0 80px;
 }
@@ -377,10 +379,11 @@ const callToActionRef = ref({
 
 .about__card {
   background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.0));
-  border: 2px solid var(--about-stroke);
+  border: 2px solid #25293a;
   border-radius: 16px;
   padding: 16px;
   transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+  box-shadow: 4px 4px 0  #25293a;
 }
 
 .about__card:hover {
@@ -395,7 +398,7 @@ const callToActionRef = ref({
   overflow: hidden;
   margin-bottom: 12px;
   background: #0c0e14;
-  border: 1px solid var(--about-stroke);
+  border: 1px solid  #25293a;
 }
 
 .about__image--card {
@@ -422,15 +425,15 @@ const callToActionRef = ref({
 
 .about__double-item {
   background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.0));
-  border: 1px solid var(--about-stroke);
+  border: 3px solid  #25293a;
   border-radius: 16px;
   padding: 18px;
+  box-shadow: 4px 4px 0  #25293a;
 }
 
 .about__double-image {
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid var(--about-stroke);
   margin-bottom: 12px;
   background: #0c0e14;
 }
@@ -441,19 +444,14 @@ const callToActionRef = ref({
 }
 
 .about__double-title {
-  font-size: 20px;
+  font-size: 26px;
   margin: 6px 0;
 }
 
 .about__double-text {
-  font-size: 15px;
+  font-size: 17px;
   color: var(--titleColor);
   margin: 0 0 8px 0;
-}
-
-.about__list {
-  display: grid;
-  gap: 8px;
 }
 
 .about__list-item {
@@ -472,7 +470,7 @@ const callToActionRef = ref({
 }
 
 .about__list-text {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--titleColor);
 }
 
@@ -483,10 +481,11 @@ const callToActionRef = ref({
 }
 
 .about__mode-item {
-  border: 1px solid var(--about-stroke);
+  border: 3px solid  #25293a;
   border-radius: 14px;
   padding: 14px;
   background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.0));
+  box-shadow: 4px 4px 0  #25293a;
 }
 
 .about__mode-badge {
@@ -521,7 +520,7 @@ const callToActionRef = ref({
 }
 
 .about__mission-image {
-  border: 1px solid var(--about-stroke);
+  border: 1px solid  #25293a;
   border-radius: 18px;
   padding: 8px;
   background: #0c0e14;
@@ -587,7 +586,7 @@ const callToActionRef = ref({
 
 .about__cta-image {
   width: 400px;
-  border: 1px solid var(--about-stroke);
+  border: 1px solid  #25293a;
   border-radius: 14px;
   overflow: hidden;
   background: #0c0e14;

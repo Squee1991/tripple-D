@@ -280,7 +280,7 @@ const resetFields = () => {
 
 @media (max-width: 640px) {
   .contact__wrapper {
-    padding: 1rem 15px;
+    padding: 0;
   }
 
   .form__content {

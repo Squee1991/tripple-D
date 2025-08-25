@@ -188,8 +188,8 @@
         "id": 15,
         "type": "speechToText",
         "question": "eastPlainFirstQuests.questFifteen",
-        "text": "Guten Tag! wie gehts? sehr gut , danke ",
-        "answer": "Guten Tag! wie gehts? sehr gut , danke "
+        "text": "Hallo! wie geht's? sehr gut, danke",
+        "answer": "Hallo! wie geht's? sehr gut, danke"
       }
     ]
   },
@@ -222,7 +222,7 @@
       },
       {
         "id": 2,
-        "type": "input",
+        "type": "select",
         "question": "eastPlainSecondQuests.questTwo",
         "correctAnswer": "danke"
       },
@@ -596,7 +596,7 @@
       {
         "id": 15,
         "type": "speechToText.questFifteen",
-        "question": "eastPlainThirdQuests",
+        "question": "eastPlainThirdQuests.questFourteen",
         "text": "die Rechnung",
         "answer": "die Rechnung"
       }
@@ -1736,7 +1736,7 @@
           "eastPlainTenthQuests.questOneSecondOption",
           "eastPlainTenthQuests.questOneThirdOption"
         ],
-        "answer": "eastPlainTenthQuests.questOneAnswer"
+        "answer": "eastPlainTenthQuests.questOneFirstOption"
       },
       {
         "id": 2,
