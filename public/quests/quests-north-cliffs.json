@@ -1362,17 +1362,17 @@
   },
   {
     "questId": "reise-verkehr-8",
-    "title": "Поездка — транспорт по городу",
+    "title": "questsNorthCliffsEighthQuests.title",
     "progress": "0/15",
-    "description": "Автобус, метро, остановка и вокзал. Покупаешь билет, спрашиваешь дорогу и время.",
+    "description": "questsNorthCliffsEighthQuests.description",
     "conditions": {
-      "goal": "Использовать базовые фразы в городском транспорте: Bus, U-Bahn, Haltestelle, Bahnhof, Ticket; спрашивать «Wo/ Wohin …?» и время прибытия.",
+      "goal": "questsNorthCliffsEighthQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 240,
-      "xp": 350
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
@@ -1380,27 +1380,27 @@
         "type": "select",
         "question": "die Haltestelle",
         "options": [
-          "Остановка",
-          "Лестница",
-          "Лифт"
+          "questsNorthCliffsEighthQuests.questOneFirstOption",
+          "questsNorthCliffsEighthQuests.questOneSecondOption",
+          "questsNorthCliffsEighthQuests.questOneThirdOption"
         ],
-        "answer": "Остановка"
+        "answer": "questsNorthCliffsEighthQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "select",
         "question": "der Bahnhof",
         "options": [
-          "Вокзал",
-          "Аэропорт",
-          "Кафе"
+          "questsNorthCliffsEighthQuests.questTwoFirstOption",
+          "questsNorthCliffsEighthQuests.questTwoSecondOption",
+          "questsNorthCliffsEighthQuests.questTwoThirdOption"
         ],
-        "answer": "Вокзал"
+        "answer": "questsNorthCliffsEighthQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "reorder",
-        "question": "Собери вопрос: Куда едет этот автобус?",
+        "question": "questsNorthCliffsEighthQuests.questThird",
         "words": [
           "Wohin",
           "Bus",
@@ -1417,14 +1417,14 @@
       {
         "id": 4,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsNorthCliffsEighthQuests.questFour",
         "text": "Der Bus kommt um zehn Uhr",
         "answer": "Der Bus kommt um zehn Uhr"
       },
       {
         "id": 5,
         "type": "select",
-        "question": "Как сказать: «Один билет, пожалуйста»",
+        "question": "questsNorthCliffsEighthQuests.questFive",
         "options": [
           "Ein Ticket, bitte",
           "Wo ist der Bahnhof?",
@@ -1435,7 +1435,7 @@
       {
         "id": 6,
         "type": "reorder",
-        "question": "Собери: Я еду на метро",
+        "question": "questsNorthCliffsEighthQuests.questSix",
         "words": [
           "mit",
           "der",
@@ -1454,14 +1454,14 @@
       {
         "id": 7,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsNorthCliffsEighthQuests.questSeven",
         "text": "Zwei Tickets, bitte",
         "answer": "Zwei Tickets, bitte"
       },
       {
         "id": 8,
         "type": "select",
-        "question": "Как сказать: «Где вокзал?»",
+        "question": "questsNorthCliffsEighthQuests.questEight",
         "options": [
           "Wo ist der Bahnhof?",
           "Wann ist Frühstück?",
@@ -1473,18 +1473,18 @@
         "id": 9,
         "type": "readAndAnswer",
         "text": "Die U-Bahn kommt um zwölf Uhr zehn. Der Bus kommt um zwölf Uhr zwanzig.",
-        "question": "Что приходит раньше?",
+        "question": "",
         "options": [
-          "Метро",
-          "Автобус",
-          "Одинаково"
+          "questsNorthCliffsEighthQuests.questNineFirstOption",
+          "questsNorthCliffsEighthQuests.questNineSecondOption",
+          "questsNorthCliffsEighthQuests.questNineThirdOption"
         ],
-        "answer": "Метро"
+        "answer": "questsNorthCliffsEighthQuests.questNineFirstOption"
       },
       {
         "id": 10,
         "type": "select",
-        "question": "Как сказать водителю: «К вокзалу, пожалуйста»",
+        "question": "questsNorthCliffsEighthQuests.questTen",
         "options": [
           "Zum Bahnhof, bitte",
           "Zur Rezeption, bitte",
@@ -1495,7 +1495,7 @@
       {
         "id": 11,
         "type": "reorder",
-        "question": "Собери: Билет в метро, пожалуйста",
+        "question": "questsNorthCliffsEighthQuests.questEleven",
         "words": [
           "bitte",
           "für",
@@ -1516,7 +1516,7 @@
       {
         "id": 12,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsNorthCliffsEighthQuests.questTwelve",
         "text": "Der Zug fährt nach Berlin",
         "answer": "Der Zug fährt nach Berlin"
       },
@@ -1524,7 +1524,7 @@
         "id": 13,
         "type": "readAndAnswer",
         "text": "Der Bus kommt um zehn Uhr. Die U-Bahn kommt um elf Uhr fünf.",
-        "question": "Во сколько приходит метро?",
+        "question": "questsNorthCliffsEighthQuests.questThirteen",
         "options": [
           "11:05",
           "10:00",
@@ -1535,7 +1535,7 @@
       {
         "id": 14,
         "type": "reorder",
-        "question": "Собери вопрос: Где остановка?",
+        "question": "questsNorthCliffsEighthQuests.questFourteen",
         "words": [
           "Wo",
           "die",
@@ -1552,7 +1552,7 @@
       {
         "id": 15,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsNorthCliffsEighthQuests.questFifteen",
         "text": "Ich brauche zwei Tickets",
         "answer": "Ich brauche zwei Tickets"
       }
@@ -1560,11 +1560,11 @@
   },
   {
     "questId": "reise-bahn-9",
-    "title": "Поезд — вокзал и платформы",
+    "title": "questsNorthCliffsNinthQuests.title",
     "progress": "0/15",
-    "description": "Платформа/путь, отправление/прибытие, задержка. Где садиться и когда приезжает поезд.",
+    "description": "questsNorthCliffsNinthQuests.description",
     "conditions": {
-      "goal": "Понимать объявления и задавать вопросы на вокзале: Gleis, Bahnsteig, Abfahrt, Ankunft, Verspätung, umsteigen, Fahrplan.",
+      "goal": "questsNorthCliffsNinthQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
@@ -1578,49 +1578,49 @@
         "type": "select",
         "question": "das Gleis",
         "options": [
-          "Путь(платформа)",
-          "Билет",
-          "Лифт"
+          "questsNorthCliffsNinthQuests.questOneFirstOption",
+          "questsNorthCliffsNinthQuests.questOneSecondOption",
+          "questsNorthCliffsNinthQuests.questOneThirdOption"
         ],
-        "answer": "Путь (платформа)"
+        "answer": "questsNorthCliffsNinthQuests.questOneFirstOption"
       },
       {
-        "id": 3,
+        "id": 2,
         "type": "select",
         "question": "die Ankunft",
         "options": [
-          "Прибытие",
-          "Отправление",
-          "Пересадка"
+          "questsNorthCliffsNinthQuests.questTwoFirstOption",
+          "questsNorthCliffsNinthQuests.questTwoSecondOption",
+          "questsNorthCliffsNinthQuests.questTwoThirdOption"
         ],
-        "answer": "Прибытие"
+        "answer": "questsNorthCliffsNinthQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "select",
         "question": "die Abfahrt",
         "options": [
-          "Отправление",
-          "Прибытие",
-          "Пересадка"
+          "questsNorthCliffsNinthQuests.questThirdFirstOption",
+          "questsNorthCliffsNinthQuests.questThirdSecondOption",
+          "questsNorthCliffsNinthQuests.questThirdThirdOption"
         ],
-        "answer": "Отправление"
+        "answer": "questsNorthCliffsNinthQuests.questThirdFirstOption"
       },
       {
         "id": 4,
         "type": "select",
         "question": "die Ankunft",
         "options": [
-          "Прибытие",
-          "Отправление",
-          "Бронь"
+          "questsNorthCliffsNinthQuests.questFourFirstOption",
+          "questsNorthCliffsNinthQuests.questFourSecondOption",
+          "questsNorthCliffsNinthQuests.questFourThirdOption"
         ],
-        "answer": "Прибытие"
+        "answer": "questsNorthCliffsNinthQuests.questFourFirstOption"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Собери: Поезд отправляется с пути 4",
+        "question": "questsNorthCliffsNinthQuests.questFive",
         "words": [
           "ab",
           "4",
@@ -1643,14 +1643,14 @@
       {
         "id": 6,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsNorthCliffsNinthQuests.questSix",
         "text": "Der Zug hat Verspätung",
         "answer": "Der Zug hat Verspätung"
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Собери вопрос: С какого пути отправляется поезд?",
+        "question": "questsNorthCliffsNinthQuests.questSeven",
         "words": [
           "welchem",
           "Von",
@@ -1673,7 +1673,7 @@
       {
         "id": 8,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsNorthCliffsNinthQuests.questEight",
         "text": "Ankunft um fünfzehn Uhr",
         "answer": "Ankunft um fünfzehn Uhr"
       },
@@ -1681,7 +1681,7 @@
         "id": 9,
         "type": "readAndAnswer",
         "text": "Abfahrt: 10:20. Ankunft: 12:05. Der Zug fährt von Gleis 7.",
-        "question": "С какого пути отправляется поезд?",
+        "question": "questsNorthCliffsNinthQuests.questNine",
         "options": [
           "7",
           "5",
@@ -1694,16 +1694,16 @@
         "type": "select",
         "question": "umsteigen",
         "options": [
-          "Делать пересадку",
-          "Оплачивать",
-          "Бронировать"
+          "questsNorthCliffsNinthQuests.questTenFirstOption",
+          "questsNorthCliffsNinthQuests.questTenSecondOption",
+          "questsNorthCliffsNinthQuests.questTenThirdOption"
         ],
-        "answer": "Делать пересадку"
+        "answer": "questsNorthCliffsNinthQuests.questTenFirstOption"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Собери: Я пересаживаюсь в Лейпциге",
+        "question": "questsNorthCliffsNinthQuests.questEleven",
         "words": [
           "Ich",
           "Leipzig",
@@ -1722,7 +1722,7 @@
       {
         "id": 12,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsNorthCliffsNinthQuests.questTwelve",
         "text": "Der Zug kommt um halb neun an",
         "answer": "Der Zug kommt um halb neun an"
       },
@@ -1730,18 +1730,18 @@
         "id": 13,
         "type": "readAndAnswer",
         "text": "Der Zug nach Köln hat zwanzig Minuten Verspätung.",
-        "question": "На сколько задерживается поезд?",
+        "question": "questsNorthCliffsNinthQuests.questThirteen",
         "options": [
-          "На 20 минут",
-          "На 12 минут",
-          "На 2 часа"
+          "questsNorthCliffsNinthQuests.questThirteenFirstOption",
+          "questsNorthCliffsNinthQuests.questThirteenSecondOption",
+          "questsNorthCliffsNinthQuests.questThirteenThirdOption"
         ],
-        "answer": "На 20 минут"
+        "answer": "questsNorthCliffsNinthQuests.questThirteenFirstOption"
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "Собери: Где платформа 3?",
+        "question": "questsNorthCliffsNinthQuests.questFourteen",
         "words": [
           "Bahnsteig",
           "der",
@@ -1760,7 +1760,7 @@
       {
         "id": 15,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsNorthCliffsNinthQuests.questFifteen",
         "text": "Ich suche den Fahrplan",
         "answer": "Ich suche den Fahrplan"
       }
@@ -1768,17 +1768,17 @@
   },
   {
     "questId": "reise-flughafen-1",
-    "title": "Поездка — аэропорт и перелёт",
+    "title": "",
     "progress": "0/15",
-    "description": "Регистрация, безопасность, выход на посадку, прилёт.",
     "conditions": {
-      "goal": "Ориентироваться в аэропорту: Abflug/Ankunft, Gate, Bordkarte, Sicherheitskontrolle, Handgepäck, Gepäckausgabe, Verspätung.",
+      "description": "questsNorthCliffsTenthQuests.description",
+      "goal": "questsNorthCliffsTenthQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 240,
-      "xp": 350
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
@@ -1786,49 +1786,49 @@
         "type": "select",
         "question": "der Abflug",
         "options": [
-          "Вылет",
-          "Прилёт",
-          "Посадка"
+          "questsNorthCliffsTenthQuests.questOneFirstOption",
+          "questsNorthCliffsTenthQuests.questOneSecondOption",
+          "questsNorthCliffsTenthQuests.questOneThirdOption"
         ],
-        "answer": "Вылет"
+        "answer": "questsNorthCliffsTenthQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "select",
         "question": "die Ankunft",
         "options": [
-          "Прилёт",
-          "Регистрация",
-          "Контроль"
+          "questsNorthCliffsTenthQuests.questTwoFirstOption",
+          "questsNorthCliffsTenthQuests.questTwoSecondOption",
+          "questsNorthCliffsTenthQuests.questTwoThirdOption"
         ],
-        "answer": "Прилёт"
+        "answer": "questsNorthCliffsTenthQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "select",
         "question": "die Bordkarte",
         "options": [
-          "Посадочный талон",
-          "Паспорт",
-          "Багажная бирка"
+          "questsNorthCliffsTenthQuests.questOneThirdFirstOption",
+          "questsNorthCliffsTenthQuests.questOneThirdSecondOption",
+          "questsNorthCliffsTenthQuests.questOneThirdThirdOption"
         ],
-        "answer": "Посадочный талон"
+        "answer": "questsNorthCliffsTenthQuests.questOneThirdFirstOption"
       },
       {
         "id": 4,
         "type": "select",
         "question": "das Gate",
         "options": [
-          "Выход на посадку",
-          "Перрон",
-          "Стойка регистрации"
+          "questsNorthCliffsTenthQuests.questFourFirstOption",
+          "questsNorthCliffsTenthQuests.questFourSecondOption",
+          "questsNorthCliffsTenthQuests.questFourThirdOption"
         ],
-        "answer": "Выход на посадку"
+        "answer": "questsNorthCliffsTenthQuests.questFourFirstOption"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Собери вопрос: «Где выход A12?»",
+        "question": "questsNorthCliffsTenthQuests.questFive",
         "words": [
           "ist",
           "das",
@@ -1847,7 +1847,7 @@
       {
         "id": 6,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsNorthCliffsTenthQuests.questSix",
         "text": "Ich habe eine Bordkarte",
         "answer": "Ich habe eine Bordkarte"
       },
@@ -1856,16 +1856,16 @@
         "type": "select",
         "question": "die Sicherheitskontrolle",
         "options": [
-          "Контроль безопасности",
-          "Зал ожидания",
-          "Паспортный контроль"
+          "questsNorthCliffsTenthQuests.questSevenFirstOption",
+          "questsNorthCliffsTenthQuests.questSevenSecondOption",
+          "questsNorthCliffsTenthQuests.questSevenThirdOption"
         ],
-        "answer": "Контроль безопасности"
+        "answer": "questsNorthCliffsTenthQuests.questSevenFirstOption"
       },
       {
         "id": 8,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsNorthCliffsTenthQuests.questEight",
         "words": [
           "ist",
           "dort",
@@ -1883,7 +1883,7 @@
         "id": 9,
         "type": "readAndAnswer",
         "text": "Abflug 16:20, Gate B5. Boarding um 15:50.",
-        "question": "Во сколько начинается посадка?",
+        "question": "questsNorthCliffsTenthQuests.questNine",
         "options": [
           "15:50",
           "16:20",
@@ -1896,23 +1896,23 @@
         "type": "select",
         "question": "das Handgepäck",
         "options": [
-          "Ручная кладь",
-          "Основной багаж",
-          "Чемодан на колёсах"
+          "questsNorthCliffsTenthQuests.questTenFirstOption",
+          "questsNorthCliffsTenthQuests.questTenSecondOption",
+          "questsNorthCliffsTenthQuests.questTenThirdOption"
         ],
-        "answer": "Ручная кладь"
+        "answer": "questsNorthCliffsTenthQuests.questTenFirstOption"
       },
       {
         "id": 11,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsNorthCliffsTenthQuests.questEleven",
         "text": "Wo ist die Gepäckausgabe",
         "answer": "Wo ist die Gepäckausgabe"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsNorthCliffsTenthQuests.questTwelve",
         "words": [
           "hat",
           "Verspätung",
@@ -1931,16 +1931,16 @@
         "type": "select",
         "question": "der Sitzplatz",
         "options": [
-          "Место (в самолёте)",
-          "Выход",
-          "Проход"
+          "questsNorthCliffsTenthQuests.questThirteenFirstOption",
+          "questsNorthCliffsTenthQuests.questThirteenSecondOption",
+          "questsNorthCliffsTenthQuests.questThirteenThirdOption"
         ],
-        "answer": "Место (в самолёте)"
+        "answer": "questsNorthCliffsTenthQuests.questThirteenFirstOption"
       },
       {
         "id": 14,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsNorthCliffsTenthQuests.questFourteen",
         "text": "Entschuldigung, wo ist Gate C3",
         "answer": "Entschuldigung, wo ist Gate C3"
       },
@@ -1948,47 +1948,47 @@
         "id": 15,
         "type": "readAndAnswer",
         "text": "Achtung! Bitte gehen Sie sofort zum Gate B7. Das Boarding beginnt jetzt.",
-        "question": "К какому выходу нужно идти?",
+        "question": "questsNorthCliffsTenthQuests.questFifteen",
         "options": [
-          "К B7",
-          "К A7",
-          "К B17"
+          "questsNorthCliffsTenthQuests.questFifteenFirstOption",
+          "questsNorthCliffsTenthQuests.questFifteenSecondOption",
+          "questsNorthCliffsTenthQuests.questFifteenThirdOption"
         ],
-        "answer": "К B7"
+        "answer": "questsNorthCliffsTenthQuests.questFifteenFirstOption"
       }
     ]
   },
   {
     "questId": "reise-mix-11",
-    "title": "Поездка — итоговая практика",
+    "title": "questsNorthCliffsEleventhQuests.title",
     "progress": "0/15",
-    "description": "Отель, транспорт по городу, вокзал и аэропорт. Новых слов нет — только применение в новых ситуациях.",
+    "description": "questsNorthCliffsEleventhQuests.description",
     "conditions": {
-      "goal": "Повторить и комбинировать: Rezeption/Reservierung/Zimmer, Frühstück, Aufzug/Treppe, WLAN, Rechnung/Quittung, bezahlen (bar/Karte), Taxi/Flughafen, Bahnhof/Haltestelle/Bus/U-Bahn/Ticket, Abfahrt/Ankunft/Gleis/Verspätung, Sicherheitskontrolle/Gate/Bordkarte/Handgepäck/Gepäckausgabe.",
+      "goal": "questsNorthCliffsEleventhQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 270,
-      "xp": 380
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
         "id": 1,
         "type": "readAndAnswer",
         "text": "An der Rezeption: „Guten Abend! Ein Einzelzimmer für zwei Nächte, 70 Euro pro Nacht. Check-in ab 14 Uhr.”",
-        "question": "Сколько стоит ночь?",
+        "question": "questsNorthCliffsEleventhQuests.questOne",
         "options": [
-          "70 евро",
-          "60 евро",
-          "80 евро"
+          "questsNorthCliffsEleventhQuests.questOneFirstOption",
+          "questsNorthCliffsEleventhQuests.questOneSecondOption",
+          "questsNorthCliffsEleventhQuests.questOneThirdOption"
         ],
-        "answer": "70 евро"
+        "answer": "questsNorthCliffsEleventhQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "reorder",
-        "question": "Собери просьбу у стойки:",
+        "question": "questsNorthCliffsEleventhQuests.questTwo",
         "words": [
           "Ich",
           "brauche",
@@ -2005,7 +2005,7 @@
       {
         "id": 3,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsNorthCliffsEleventhQuests.questThird",
         "text": "Ich bezahle mit Karte.",
         "answer": "Ich bezahle mit Karte."
       },
@@ -2014,28 +2014,28 @@
         "type": "select",
         "question": "die Quittung",
         "options": [
-          "Квитанция (чек)",
-          "Ключ-карта",
-          "Пароль от Wi-Fi"
+          "questsNorthCliffsEleventhQuests.questFourFirstOption",
+          "questsNorthCliffsEleventhQuests.questFourSecondOption",
+          "questsNorthCliffsEleventhQuests.questFourThirdOption"
         ],
-        "answer": "Квитанция (чек)"
+        "answer": "questsNorthCliffsEleventhQuests.questFourFirstOption"
       },
       {
         "id": 5,
         "type": "readAndAnswer",
         "text": "Abfahrt 09:15 von Gleis 3. Ankunft 11:05. Der Zug hat zehn Minuten Verspätung.",
-        "question": "На сколько задерживается поезд?",
+        "question": "",
         "options": [
-          "На 10 минут",
-          "На 5 минут",
-          "Без задержки"
+          "questsNorthCliffsEleventhQuests.questFiveFirstOption",
+          "questsNorthCliffsEleventhQuests.questFiveSecondOption",
+          "questsNorthCliffsEleventhQuests.questFiveThirdOption"
         ],
-        "answer": "На 10 минут"
+        "answer": "questsNorthCliffsEleventhQuests.questFiveFirstOption"
       },
       {
         "id": 6,
         "type": "reorder",
-        "question": "Собери вопрос в аэропорту:",
+        "question": "questsNorthCliffsEleventhQuests.questSix",
         "words": [
           "Sicherheitskontrolle",
           "ist",
@@ -2052,7 +2052,7 @@
       {
         "id": 7,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsNorthCliffsEleventhQuests.questSeven",
         "text": "Ich habe eine Bordkarte und Handgepäck.",
         "answer": "Ich habe eine Bordkarte und Handgepäck."
       },
@@ -2061,28 +2061,28 @@
         "type": "select",
         "question": "die Gepäckausgabe",
         "options": [
-          "Выдача багажа",
-          "Регистрация на рейс",
-          "Паспортный контроль"
+          "questsNorthCliffsEleventhQuests.questOneEightFirstOption",
+          "questsNorthCliffsEleventhQuests.questOneEightSecondOption",
+          "questsNorthCliffsEleventhQuests.questOneEightThirdOption"
         ],
-        "answer": "Выдача багажа"
+        "answer": "questsNorthCliffsEleventhQuests.questOneEightFirstOption"
       },
       {
         "id": 9,
         "type": "readAndAnswer",
         "text": "Der Bus zum Flughafen fährt um 6:30 und um 7:00. Die U-Bahn fährt um 6:45.",
-        "question": "Что отправляется в 6:45?",
+        "question": "",
         "options": [
-          "Метро",
-          "Автобус",
-          "Такси"
+          "questsNorthCliffsEleventhQuests.questNineFirstOption",
+          "questsNorthCliffsEleventhQuests.questNineSecondOption",
+          "questsNorthCliffsEleventhQuests.questNineThirdOption"
         ],
-        "answer": "Метро"
+        "answer": "questsNorthCliffsEleventhQuests.questNineFirstOption"
       },
       {
         "id": 10,
         "type": "reorder",
-        "question": "Скажи водителю:",
+        "question": "questsNorthCliffsEleventhQuests.questTen",
         "words": [
           "Bahnhof",
           "Zum",
@@ -2097,7 +2097,7 @@
       {
         "id": 11,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsNorthCliffsEleventhQuests.questEleven",
         "text": "Ich habe eine Reservierung.",
         "answer": "Ich habe eine Reservierung."
       },
@@ -2106,28 +2106,28 @@
         "type": "select",
         "question": "kostenlos",
         "options": [
-          "бесплатно",
-          "дорого",
-          "закрыто"
+          "questsNorthCliffsEleventhQuests.questTwelveFirstOption",
+          "questsNorthCliffsEleventhQuests.questTwelveSecondOption",
+          "questsNorthCliffsEleventhQuests.questTwelveThirdOption"
         ],
-        "answer": "бесплатно"
+        "answer": "questsNorthCliffsEleventhQuests.questTwelveFirstOption"
       },
       {
         "id": 13,
         "type": "readAndAnswer",
         "text": "Achtung: Der Aufzug ist links. Die Treppe ist rechts. Bitte nicht stören.",
-        "question": "Где находится лифт?",
+        "question": "",
         "options": [
-          "Слева",
-          "Справа",
-          "Не указано"
+          "questsNorthCliffsEleventhQuests.questThirteenFirstOption",
+          "questsNorthCliffsEleventhQuests.questThirteenSecondOption",
+          "questsNorthCliffsEleventhQuests.questThirteenThirdOption"
         ],
-        "answer": "Слева"
+        "answer": "questsNorthCliffsEleventhQuests.questThirteenFirstOption"
       },
       {
         "id": 14,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsNorthCliffsEleventhQuests.questFourteen",
         "text": "Kann ich mein Gepäck hier lassen?",
         "answer": "Kann ich mein Gepäck hier lassen?"
       },
@@ -2135,7 +2135,7 @@
         "id": 15,
         "type": "readAndAnswer",
         "text": "Boarding um 18:20 am Gate A4.",
-        "question": "К какому выходу (Gate) нужно идти?",
+        "question": "questsNorthCliffsEleventhQuests.questFifteen",
         "options": [
           "A4",
           "B4",
@@ -2147,35 +2147,35 @@
   },
   {
     "questId": "reise-mix-12",
-    "title": "Поездка — ещё практика",
+    "title": "questsNorthCliffsTwelfthQuests.title",
     "progress": "0/15",
-    "description": "Новые мини-ситуации: отель, городской транспорт, вокзал и аэропорт. Новых слов нет — только применение.",
+    "description": "questsNorthCliffsTwelfthQuests.description",
     "conditions": {
-      "goal": "Комбинировать выученное: Rezeption/Zimmer/Frühstück/WLAN/Aufzug/Treppe, Rechnung/Quittung, bezahlen (bar/Karte), Taxi/Flughafen, Haltestelle/Bahnhof/Bus/U-Bahn/Ticket, Abfahrt/Ankunft/Gleis/Verspätung, Sicherheitskontrolle/Gate/Bordkarte/Gepäckausgabe.",
+      "goal": "questsNorthCliffsTwelfthQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 275,
-      "xp": 390
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
         "id": 1,
         "type": "readAndAnswer",
         "text": "Frühstück von acht bis zehn Uhr. Check-out bis zwölf Uhr. Parkplatz kostenlos.",
-        "question": "До скольки чек-аут?",
+        "question": "",
         "options": [
-          "до 12",
-          "до 10",
-          "до 14"
+          "questsNorthCliffsTwelfthQuests.questOneFirstOption",
+          "questsNorthCliffsTwelfthQuests.questOneSecondOption",
+          "questsNorthCliffsTwelfthQuests.questOneThirdOption"
         ],
-        "answer": "до 12"
+        "answer": "questsNorthCliffsTwelfthQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "reorder",
-        "question": "Собери фразу о номере:",
+        "question": "questsNorthCliffsTwelfthQuests.questTwo",
         "words": [
           "Ein",
           "Doppelzimmer",
@@ -2194,7 +2194,7 @@
       {
         "id": 3,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsNorthCliffsTwelfthQuests.questThird",
         "text": "Ich bezahle bar.",
         "answer": "Ich bezahle bar."
       },
@@ -2203,17 +2203,17 @@
         "type": "select",
         "question": "die Treppe",
         "options": [
-          "Лестница",
-          "Лифт",
-          "Парковка"
+          "questsNorthCliffsTwelfthQuests.questFourFirstOption",
+          "questsNorthCliffsTwelfthQuests.questFourSecondOption",
+          "questsNorthCliffsTwelfthQuests.questFourThirdOption"
         ],
-        "answer": "Лестница"
+        "answer": "questsNorthCliffsTwelfthQuests.questFourFirstOption"
       },
       {
         "id": 5,
         "type": "readAndAnswer",
         "text": "Abfahrt 08:40 von Gleis 5. Ankunft 10:10. Verspätung 5 Minuten.",
-        "question": "С какого пути отправляется поезд?",
+        "question": "questsNorthCliffsTwelfthQuests.questFive",
         "options": [
           "5",
           "8",
@@ -2224,7 +2224,7 @@
       {
         "id": 6,
         "type": "reorder",
-        "question": "Собери вопрос на вокзале:",
+        "question": "questsNorthCliffsTwelfthQuests.questSix",
         "words": [
           "Wo",
           "ist",
@@ -2243,7 +2243,7 @@
       {
         "id": 7,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsNorthCliffsTwelfthQuests.questSeven",
         "text": "Ich fahre mit der U-Bahn.",
         "answer": "Ich fahre mit der U-Bahn."
       },
@@ -2252,17 +2252,17 @@
         "type": "select",
         "question": "das Ticket",
         "options": [
-          "Билет",
-          "Перрон",
-          "Лифт"
+          "questsNorthCliffsTwelfthQuests.questEightFirstOption",
+          "questsNorthCliffsTwelfthQuests.questEightSecondOption",
+          "questsNorthCliffsTwelfthQuests.questEightThirdOption"
         ],
-        "answer": "Билет"
+        "answer": "questsNorthCliffsTwelfthQuests.questEightFirstOption"
       },
       {
         "id": 9,
         "type": "readAndAnswer",
         "text": "Abflug 21:05, Gate C1. Boarding um 20:35.",
-        "question": "Во сколько начинается посадка?",
+        "question": "questsNorthCliffsTwelfthQuests.questNine",
         "options": [
           "20:35",
           "21:05",
@@ -2273,7 +2273,7 @@
       {
         "id": 10,
         "type": "reorder",
-        "question": "Собери жалобу в номер:",
+        "question": "questsNorthCliffsTwelfthQuests.questTen",
         "words": [
           "Das",
           "WLAN",
@@ -2290,7 +2290,7 @@
       {
         "id": 11,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsNorthCliffsTwelfthQuests.questEleven",
         "text": "Können Sie mir ein Taxi bestellen?",
         "answer": "Können Sie mir ein Taxi bestellen?"
       },
@@ -2299,17 +2299,17 @@
         "type": "select",
         "question": "die Bordkarte",
         "options": [
-          "Посадочный талон",
-          "Выдача багажа",
-          "Паспортный контроль"
+          "questsNorthCliffsTwelfthQuests.questTwelveFirstOption",
+          "questsNorthCliffsTwelfthQuests.questTwelveSecondOption",
+          "questsNorthCliffsTwelfthQuests.questTwelveThirdOption"
         ],
-        "answer": "Посадочный талон"
+        "answer": "questsNorthCliffsTwelfthQuests.questTwelveFirstOption"
       },
       {
         "id": 13,
         "type": "readAndAnswer",
         "text": "Der Bus fährt um 13:10, 13:20 und 13:40. Die U-Bahn fährt um 13:30.",
-        "question": "Когда следующий автобус после 13:10?",
+        "question": "questsNorthCliffsTwelfthQuests.questThirteen",
         "options": [
           "13:20",
           "13:30",
@@ -2320,7 +2320,7 @@
       {
         "id": 14,
         "type": "reorder",
-        "question": "Собери табличку на двери:",
+        "question": "questsNorthCliffsTwelfthQuests.questFourteen",
         "words": [
           "Bitte",
           "nicht",
@@ -2335,7 +2335,7 @@
       {
         "id": 15,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsNorthCliffsTwelfthQuests.questFifteen",
         "text": "Wo ist das Gate B4?",
         "answer": "Wo ist das Gate B4?"
       }
