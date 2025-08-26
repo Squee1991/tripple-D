@@ -145,7 +145,7 @@ const pageSections = ref([
     caseBlocks: [
       {
         type: 'dative',
-        title: 'Всегда с Dativ (Дательный падеж)',
+        title: t('prepositionsThirdBlock.dativeTitle'),
         prepositions: 'mit, nach, aus, zu, von, bei, seit, gegenüber',
         example: `Ich fahre <b>mit dem</b> Bus. <span class="translation">${t('prepositionsThirdBlock.dativeExample')}</span>`
       },

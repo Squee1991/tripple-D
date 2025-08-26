@@ -726,6 +726,7 @@ onUnmounted(() => {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   white-space: nowrap;
+  width: 100%;
 }
 
 .btn:hover:not(:disabled) {
@@ -765,6 +766,7 @@ onUnmounted(() => {
 
 .result-icon {
   font-size: 4rem;
+  text-align: center;
 }
 
 .result-title {
@@ -905,6 +907,13 @@ onUnmounted(() => {
     width: 100%;
     align-items: center;
     display: flex;
+  }
+}
+
+@media (max-width: 500px)  {
+  .result-actions {
+    flex-direction: column;
+    width: 100%;
   }
 }
 </style>

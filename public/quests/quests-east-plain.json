@@ -224,7 +224,13 @@
         "id": 2,
         "type": "select",
         "question": "eastPlainSecondQuests.questTwo",
-        "correctAnswer": "danke"
+        "options": [
+          "Wir sehen uns",
+          "Guten Tag",
+          "Hallo",
+          "Danke sehr"
+        ],
+        "answer": "Wir sehen uns"
       },
       {
         "id": 3,

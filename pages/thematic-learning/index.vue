@@ -207,7 +207,7 @@ watch(topic, loadThemeData)
 
 .classroom-layout {
   display: flex;
-  height: 100vh;
+  height: 100svh;
   padding: 2rem;
   gap: 2rem;
   font-family: "Nunito", sans-serif;

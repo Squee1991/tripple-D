@@ -325,7 +325,7 @@ watch(isMobileMenuOpen, (newVal) => {
   font-family: "Nunito", sans-serif;
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 3;
   background-color: var(--bg);
   border-bottom: 4px solid var(--borderBottom);
   border-bottom-left-radius: 15px;

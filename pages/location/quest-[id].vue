@@ -924,8 +924,8 @@ watchEffect(() => {
 }
 
 .quest__dot {
-  width: 15px;
-  height: 15px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
   background: #ccc;
   transition: all 0.3s ease;

@@ -267,7 +267,7 @@
     "title": "День второй",
     "description": "На второй день ты узнаешь больше о местных жителях. Они расскажут, откуда они родом, на каком языке говорят и где живут. Кроме того, ты попрактикуешься в вежливом задавании вопросов.",
     "questOne": "Как сказать: До завтра",
-    "questTwo": "Допишите: gut ___",
+    "questTwo": "Как сказать: Увидимся",
     "questTree": "Произнесите: Bis Morgen",
     "questFour": "Прослушайте и напишите ответ",
     "questFive": "Соберите предложение: 'Привет Томас! как дела? Хорошо а твои? хорошо, спасибо!",
@@ -950,7 +950,7 @@
     "questFifteen": "Собери фразу"
   },
   "questsNorthCliffsSecondQuests": {
-    "title": "Вопросы на ресепшене",
+    "title": "Вопросы на ресепшене в отеле",
     "description": "Спрашиваешь про завтрак и Wi-Fi, уточняешь цену за ночь, просишь счёт и оплачиваешь.",
     "questOneFirstOption": "Завтрак",
     "questOneSecondOption": "Ужин",
@@ -1100,7 +1100,7 @@
   },
   "questsNorthCliffsSixthQuests": {
     "title": "Поездка и отель — мини-диалоги",
-    "description": "Тренируем готовые фразы: бронирование, заселение, просьбы, оплата, дорога в аэропорт. Без новых слов — только применение.",
+    "description": "Тренируем готовые фразы: бронирование, заселение, просьбы, оплата, дорога в аэропорт",
     "goal": "Комбинировать выученные фразы: Reservierung, ruhiges Zimmer, Frühstückszeiten, Aufzug, Rechnung/Quittung, bezahlen (bar/Karte), Taxi/Flughafen",
     "questOne": "На сколько ночей бронь?",
     "questOneFirstOption": "На две ночи",
@@ -1136,7 +1136,7 @@
 
   "questsNorthCliffsSeventhQuests":{
     "title": "Диалоги в отеле",
-    "description": "Короткие ситуации: бронирование, лифт, завтрак, проблемы в номере, оплата, дорога в аэропорт. Без новых слов — только применение.",
+    "description": "Короткие ситуации: бронирование, лифт, завтрак, проблемы в номере, оплата, дорога в аэропорт",
     "goal": "Быстро понимать и строить типовые фразы (Reservierung, Zimmer frei, Aufzug, Frühstückszeiten, WLAN, Rechnung/Quittung, bezahlen bar/Karte, Taxi/Flughafen)",
     "questOne": "Какой номер забронирован?",
     "questOneFirstOption": "Одноместный",
@@ -1161,14 +1161,12 @@
     "questElevenFirstOption": "В 10:00",
     "questElevenSecondOption": "В 12:00",
     "questElevenThirdOption": "В 7:00",
-
     "questTwelve": "Прослушай и напиши",
     "questThirteen": "Собери вопрос: Где лестница?",
     "questFourteen": "Что не работает?",
     "questFourteenFirstOption": "Wi-Fi",
     "questFourteenSecondOption": "Лифт",
     "questFourteenThirdOption": "Прослушай и напиши прощание",
-
     "questFifteen": ""
   },
   "awardsSection": {
