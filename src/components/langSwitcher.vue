@@ -65,7 +65,7 @@ onBeforeUnmount(() => document.removeEventListener('mousedown', clickOutside))
 
 .language__button {
   position: relative;
-  height: 53px;
+  height: 45px;
   display: flex;
   align-items: center;
   gap: .5rem;

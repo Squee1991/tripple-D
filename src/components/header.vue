@@ -220,6 +220,8 @@ const menuItems = computed(() => [
                     {id: 'comparison', url: 'adjective-comparison', valueKey: 'underSub.comparison'},
                   ]
                 },
+                {id: 'lands', url: 'lands', valueKey: 'Языковые земли'},
+
                 {id: 'themen', url: 'thematic-learning', valueKey: 'sub.themen'},
                 {id: 'prepositions', url: 'prepositions', valueKey: 'sub.prepositions'},
                 {id: 'cards', url: 'createCards', valueKey: 'sub.card'},
@@ -256,7 +258,8 @@ const menuItems = computed(() => [
       ? [{id: 'test', url: '/exams', valueKey: 'nav.tests'}]
       : []),
   ...(userAuth.uid
-      ? [{id: 'achieve', url: '/achievements', valueKey: 'nav.achieve'},
+      ? [
+        // ? [{id: 'achieve', url: '/achievements', valueKey: 'nav.achieve'},
         {id: 'stats', url: '/stats', valueKey: 'nav.stats'}
       ] : [])
 ])
@@ -363,6 +366,7 @@ watch(isMobileMenuOpen, (newVal) => {
 
 .header-nav__list {
   display: flex;
+  gap: 10px;
 }
 
 .header-nav__item {
@@ -375,7 +379,7 @@ watch(isMobileMenuOpen, (newVal) => {
   align-items: center;
   gap: 0.4rem;
   font-size: 16px;
-  color: var(--titleColor);
+  color: black;
   font-weight: 600;
   padding: 0.5rem 0.75rem;
   text-decoration: none;
@@ -383,11 +387,14 @@ watch(isMobileMenuOpen, (newVal) => {
   transition: all 0.2s;
   cursor: pointer;
   user-select: none;
-  border: none;
-  background: none;
+  border: 2px solid black;
+  box-shadow: 4px 4px 0 black;
+  background: white;
 }
 
 .header-nav__link:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 black;
   background-color: #f1c40f;
   color: #1e1e1e;
 }
@@ -457,11 +464,11 @@ watch(isMobileMenuOpen, (newVal) => {
 }
 
 .articlus__wrapper, .header-user {
-  height: 53px;
+  height: 45px;
   display: flex;
   align-items: center;
   background: #fff;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.7rem;
   border-radius: 12px;
   border: 3px solid #1e1e1e;
   box-shadow: 4px 4px 0px #1e1e1e;
@@ -542,6 +549,10 @@ watch(isMobileMenuOpen, (newVal) => {
 }
 
 .btn-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
   font-family: "Nunito", sans-serif;
   font-style: italic;
   font-weight: 600;
