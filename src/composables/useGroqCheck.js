@@ -91,11 +91,14 @@ Antwortformat **ausschließlich als JSON**:
 				'Content-Type': 'application/json'
 			},
 			body: JSON.stringify({
-				model: 'llama3-70b-8192',
+				model: 'llama-3.3-70b-versatile',
 				messages: [
 					{ role: 'system', content: 'Du bist ein strenger Deutschlehrer. Antworte nur auf Deutsch.' },
 					{ role: 'user', content: systemPrompt }
-				]
+				],
+				temperature: 0.2,
+				max_tokens: 900,
+				stream: false
 			})
 		})
 		const data = await res.json()

@@ -58,7 +58,6 @@
             @submit="submitTranscription"
         />
       </div>
-
     </div>
     <div v-else class="exam__card exam__card--finished">
       <h2 class="exam__card-title">🎉 Prüfung abgeschlossen!</h2>
@@ -67,8 +66,6 @@
         <strong class="exam__label">Durchschnittliche Punktzahl:</strong> {{ examResult.averageScore }} / 10
       </p>
       <div class="exam-results-container">
-
-
         <div
             v-for="(moduleData, moduleName) in examResult.groupedResults"
             :key="moduleName"
