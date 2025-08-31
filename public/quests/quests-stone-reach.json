@@ -897,56 +897,56 @@
   },
   {
     "questId": "village-6",
-    "title": "В гостиной",
+    "title": "questsStoneReachSixthQuests.title",
     "progress": "0/15",
-    "description": "Мягкое кресло, ковёр и лампа над столом. Учим предметы в гостиной.",
+    "description": "questsStoneReachSixthQuests.description",
     "conditions": {
-      "goal": "Называть предметы в гостиной и составлять простые фразы Das ist ...",
+      "goal": "questsStoneReachSixthQuests.goal",
       "минCorrect": 11,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 175,
-      "xp": 300
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
         "id": 1,
         "type": "select",
-        "question": "Что значит: das Sofa",
+        "question": "questsStoneReachSixthQuests.questOne",
         "options": [
-          "Диван",
-          "Кресло",
-          "Ковер"
+          "questsStoneReachSixthQuests.questOneFirstOption",
+          "questsStoneReachSixthQuests.questOneSecondOption",
+          "questsStoneReachSixthQuests.questOneThirdOption"
         ],
-        "answer": "Диван"
+        "answer": "questsStoneReachSixthQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "select",
-        "question": "Что значит: der Sessel",
+        "question": "questsStoneReachSixthQuests.questTwo",
         "options": [
-          "Кресло",
-          "Столик",
-          "Шкаф"
+          "questsStoneReachSixthQuests.questTwoFirstOption",
+          "questsStoneReachSixthQuests.questTwoSecondOption",
+          "questsStoneReachSixthQuests.questTwoThirdOption"
         ],
-        "answer": "Кресло"
+        "answer": "questsStoneReachSixthQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Что значит: der Teppich",
+        "question": "questsStoneReachSixthQuests.questThird",
         "options": [
-          "Ковер",
-          "Плед",
-          "Занавеска"
+          "questsStoneReachSixthQuests.questThirdFirstOption",
+          "questsStoneReachSixthQuests.questThirdSecondOption",
+          "questsStoneReachSixthQuests.questThirdThirdOption"
         ],
         "answer": "Ковер"
       },
       {
         "id": 4,
         "type": "reorder",
-        "question": "Собери предложение: Это диван",
+        "question": "questsStoneReachSixthQuests.questFour",
         "words": [
           "Das",
           "ist",
@@ -963,14 +963,14 @@
       {
         "id": 5,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsStoneReachSixthQuests.questFive",
         "text": "Der Tisch",
         "answer": "Der Tisch"
       },
       {
         "id": 6,
         "type": "reorder",
-        "question": "Собери: большой ковер",
+        "question": "questsStoneReachSixthQuests.questSix",
         "words": [
           "ein",
           "Teppich",
@@ -985,25 +985,25 @@
       {
         "id": 7,
         "type": "select",
-        "question": "Что значит: der Fernseher",
+        "question": "questsStoneReachSixthQuests.questSeven",
         "options": [
-          "Телевизор",
-          "Холодильник",
-          "Компьютер"
+          "questsStoneReachSixthQuests.questSevenFirstOption",
+          "questsStoneReachSixthQuests.questSevenSecondOption",
+          "questsStoneReachSixthQuests.questSevenThirdOption"
         ],
-        "answer": "Телевизор"
+        "answer": "questsStoneReachSixthQuests.questSevenFirstOption"
       },
       {
         "id": 8,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsStoneReachSixthQuests.questEight",
         "text": "Eine Uhr",
         "answer": "Eine Uhr"
       },
       {
         "id": 9,
         "type": "reorder",
-        "question": "Собери: зелёное растение",
+        "question": "questsStoneReachSixthQuests.questNine",
         "words": [
           "eine",
           "Pflanze",
@@ -1018,25 +1018,25 @@
       {
         "id": 10,
         "type": "select",
-        "question": "Что значит: das Regal",
+        "question": "questsStoneReachSixthQuests.questTen",
         "options": [
-          "Стеллаж",
-          "Кресло",
-          "Картина"
+          "questsStoneReachSixthQuests.questTenFirstOption",
+          "questsStoneReachSixthQuests.questTenSecondOption",
+          "questsStoneReachSixthQuests.questTenThirdOption"
         ],
-        "answer": "Стеллаж"
+        "answer": "questsStoneReachSixthQuests.questTenFirstOption"
       },
       {
         "id": 11,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsStoneReachSixthQuests.questEleven",
         "text": "Die Lampe",
         "answer": "Die Lampe"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "Собери: маленький столик",
+        "question": "questsStoneReachSixthQuests.questTwelve",
         "words": [
           "ein",
           "Tisch",
@@ -1051,25 +1051,25 @@
       {
         "id": 13,
         "type": "select",
-        "question": "Что значит: das Bild",
+        "question": "questsStoneReachSixthQuests.questThirteen",
         "options": [
-          "Картина",
-          "Окно",
-          "Дверь"
+          "questsStoneReachSixthQuests.questThirteenFirstOption",
+          "questsStoneReachSixthQuests.questThirteenSecondOption",
+          "questsStoneReachSixthQuests.questThirteenSecondOption"
         ],
-        "answer": "Картина"
+        "answer": "questsStoneReachSixthQuests.questThirteenFirstOption"
       },
       {
         "id": 14,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsStoneReachSixthQuests.questFourteen",
         "text": "Zwei Sessel",
         "answer": "Zwei Sessel"
       },
       {
         "id": 15,
         "type": "select",
-        "question": "Как сказать: Это ковер",
+        "question": "questsStoneReachSixthQuests.questFifteen",
         "options": [
           "Das ist der Teppich",
           "Das ist das Teppich",
@@ -1081,67 +1081,67 @@
   },
   {
     "questId": "village-7",
-    "title": "В ванной",
+    "title": "questsStoneReachSeventhQuests.title",
     "progress": "0/15",
-    "description": "Пена, полотенца и зеркало. Закрепляем слова про ванную комнату.",
+    "description": "questsStoneReachSeventhQuests.description",
     "conditions": {
-      "goal": "Называть предметы в ванной и простые словосочетания с числительными и прилагательными",
+      "goal": "questsStoneReachSeventhQuests.goal",
       "minCorrect": 11,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 180,
-      "xp": 320
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
         "id": 1,
         "type": "select",
-        "question": "Что значит: die Dusche",
+        "question": "questsStoneReachSeventhQuests.questOne",
         "options": [
-          "Душ",
-          "Ванна",
-          "Полотенце"
+          "questsStoneReachSeventhQuests.questOneFirstOption",
+          "questsStoneReachSeventhQuests.questOneSecondOption",
+          "questsStoneReachSeventhQuests.questOneThirdOption"
         ],
-        "answer": "Душ"
+        "answer": "questsStoneReachSeventhQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "select",
-        "question": "Что значит: die Badewanne",
+        "question": "questsStoneReachSeventhQuests.questTwo",
         "options": [
-          "Ванна",
-          "Раковина",
-          "Зеркало"
+          "questsStoneReachSeventhQuests.questTwoFirstOption",
+          "questsStoneReachSeventhQuests.questTwoSecondOption",
+          "questsStoneReachSeventhQuests.questTwoThirdOption"
         ],
-        "answer": "Ванна"
+        "answer": "questsStoneReachSeventhQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Что значит: das Waschbecken",
+        "question": "questsStoneReachSeventhQuests.questThird",
         "options": [
-          "Раковина",
-          "Полотенце",
-          "Коврик"
+          "questsStoneReachSeventhQuests.questThirdFirstOption",
+          "questsStoneReachSeventhQuests.questThirdSecondOption",
+          "questsStoneReachSeventhQuests.questThirdThirdOption"
         ],
-        "answer": "Раковина"
+        "answer": "questsStoneReachSeventhQuests.questThirdFirstOption"
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Что значит: das Handtuch",
+        "question": "questsStoneReachSeventhQuests.questFour",
         "options": [
-          "Полотенце",
-          "Щётка",
-          "Шкаф"
+          "questsStoneReachSeventhQuests.questFourFirstOption",
+          "questsStoneReachSeventhQuests.questFourSecondOption",
+          "questsStoneReachSeventhQuests.questFourThirdOption"
         ],
-        "answer": "Полотенце"
+        "answer": "questsStoneReachSeventhQuests.questFourFirstOption"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Собери предложение: Это душ",
+        "question": "questsStoneReachSeventhQuests.questFive",
         "words": [
           "Das",
           "ist",
@@ -1158,14 +1158,14 @@
       {
         "id": 6,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsStoneReachSeventhQuests.questSix",
         "text": "Die Dusche",
         "answer": "Die Dusche"
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Собери: новая ванна",
+        "question": "questsStoneReachSeventhQuests.questSeven",
         "words": [
           "eine",
           "неue",
@@ -1180,14 +1180,14 @@
       {
         "id": 8,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsStoneReachSeventhQuests.questEight",
         "text": "Die Badewanne",
         "answer": "Die Badewanne"
       },
       {
         "id": 9,
         "type": "reorder",
-        "question": "Собери: новая раковина",
+        "question": "questsStoneReachSeventhQuests.questNine",
         "words": [
           "ein",
           "neues",
@@ -1202,14 +1202,14 @@
       {
         "id": 10,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsStoneReachSeventhQuests.questTen",
         "text": "Das Waschbecken",
         "answer": "Das Waschbecken"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Собери: чистое полотенце",
+        "question": "questsStoneReachSeventhQuests.questEleven",
         "words": [
           "ein",
           "sauberes",
@@ -1224,32 +1224,32 @@
       {
         "id": 12,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsStoneReachSeventhQuests.questTwelve",
         "text": "Ein Handtuch",
         "answer": "Ein Handtuch"
       },
       {
         "id": 13,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsStoneReachSeventhQuests.questThirteen",
         "text": "Ein sauberes Handtuch",
         "answer": "Ein sauberes Handtuch"
       },
       {
         "id": 14,
         "type": "select",
-        "question": "Что значит: zwei Handtücher",
+        "question": "questsStoneReachSeventhQuests.questFourteen",
         "options": [
-          "2 полотенца",
-          "2 ванны",
-          "2 раковины"
+          "questsStoneReachSeventhQuests.questFourteenFirstOption",
+          "questsStoneReachSeventhQuests.questFourteenSecondOption",
+          "questsStoneReachSeventhQuests.questFourteenThirdOption"
         ],
-        "answer": "2 полотенца"
+        "answer": "questsStoneReachSeventhQuests.questFourteenFirstOption"
       },
       {
         "id": 15,
         "type": "reorder",
-        "question": "Собери: два чистых полотенца",
+        "question": "questsStoneReachSeventhQuests.questFifteen",
         "words": [
           "zwei",
           "saubere",
@@ -1265,17 +1265,17 @@
   },
   {
     "questId": "village-8",
-    "title": "В спальне",
+    "title": "questsStoneReachEighthQuests.title",
     "progress": "0/15",
-    "description": "Тихая спальня: кровать, подушка, тумбочка. Учим предметы и простые сочетания.",
+    "description": "questsStoneReachEighthQuests.description",
     "conditions": {
-      "goal": "Называть предметы спальни и собирать простые фразы Das ist / ein, eine, der, die, das",
+      "goal": "questsStoneReachEighthQuests.goal",
       "minCorrect": 11,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 170,
-      "xp": 300
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
@@ -1283,38 +1283,38 @@
         "type": "select",
         "question": "das Bett",
         "options": [
-          "Кровать",
-          "Стол",
-          "Шкаф"
+          "questsStoneReachEighthQuests.questOneFirstOption",
+          "questsStoneReachEighthQuests.questOneSecondOption",
+          "questsStoneReachEighthQuests.questOneThirdOption"
         ],
-        "answer": "Кровать"
+        "answer": "questsStoneReachEighthQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "select",
         "question": "das Kissen",
         "options": [
-          "Подушка",
-          "Одеяло",
-          "Зеркало"
+          "questsStoneReachEighthQuests.questTwoFirstOption",
+          "questsStoneReachEighthQuests.questTwoSecondOption",
+          "questsStoneReachEighthQuests.questTwoThirdOption"
         ],
-        "answer": "Подушка"
+        "answer": "questsStoneReachEighthQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "select",
         "question": "die Decke",
         "options": [
-          "Одеяло",
-          "Штора",
-          "Полка"
+          "questsStoneReachEighthQuests.questThirdFirstOption",
+          "questsStoneReachEighthQuests.questThirdSecondOption",
+          "questsStoneReachEighthQuests.questThirdThirdOption"
         ],
-        "answer": "Одеяло"
+        "answer": "questsStoneReachEighthQuests.questThirdFirstOption"
       },
       {
         "id": 4,
         "type": "reorder",
-        "question": "Собери предложение: Это кровать",
+        "question": "questsStoneReachEighthQuests.questFour",
         "words": [
           "Das",
           "ist",
@@ -1331,7 +1331,7 @@
       {
         "id": 5,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsStoneReachEighthQuests.questFive",
         "text": "Ein Kissen",
         "answer": "Ein Kissen"
       },
@@ -1340,16 +1340,16 @@
         "type": "select",
         "question": "der Kleiderschrank",
         "options": [
-          "Шкаф для одежды",
-          "Стул",
-          "Дверь"
+          "questsStoneReachEighthQuests.questSixFirstOption",
+          "questsStoneReachEighthQuests.questSixSecondOption",
+          "questsStoneReachEighthQuests.questSixThirdOption"
         ],
-        "answer": "Шкаф для одежды"
+        "answer": "questsStoneReachEighthQuests.questSixFirstOption"
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Собери: занавески",
+        "question": "questsStoneReachEighthQuests.questSeven",
         "words": [
           "die",
           "Vorhänge"
@@ -1362,7 +1362,7 @@
       {
         "id": 8,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsStoneReachEighthQuests.questEight",
         "text": "Der Spiegel",
         "answer": "Der Spiegel"
       },
@@ -1371,16 +1371,16 @@
         "type": "select",
         "question": "der Nachttisch",
         "options": [
-          "Тумбочка",
-          "Стеллаж",
-          "Ковёр"
+          "questsStoneReachEighthQuests.questNineFirstOption",
+          "questsStoneReachEighthQuests.questNineSecondOption",
+          "questsStoneReachEighthQuests.questNineThirdOption"
         ],
-        "answer": "Тумбочка"
+        "answer": "questsStoneReachEighthQuests.questNineFirstOption"
       },
       {
         "id": 10,
         "type": "reorder",
-        "question": "Собери: мягкая подушка",
+        "question": "questsStoneReachEighthQuests.questTen",
         "words": [
           "ein",
           "weiches",
@@ -1395,7 +1395,7 @@
       {
         "id": 11,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsStoneReachEighthQuests.questEleven",
         "text": "Zwei Kissen",
         "answer": "Zwei Kissen"
       },
@@ -1404,16 +1404,16 @@
         "type": "select",
         "question": "die Lampe",
         "options": [
-          "Лампа",
-          "Штора",
-          "Картина"
+          "questsStoneReachEighthQuests.questOneTwelveFirstOption",
+          "questsStoneReachEighthQuests.questOneTwelveSecondOption",
+          "questsStoneReachEighthQuests.questOneTwelveThirdOption"
         ],
-        "answer": "Лампа"
+        "answer": "questsStoneReachEighthQuests.questOneTwelveFirstOption"
       },
       {
         "id": 13,
         "type": "reorder",
-        "question": "Собери предложение: Это зеркало",
+        "question": "questsStoneReachEighthQuests.questThirteen",
         "words": [
           "Das",
           "ist",
@@ -1430,7 +1430,7 @@
       {
         "id": 14,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsStoneReachEighthQuests.questFourteen",
         "text": "Eine Decke",
         "answer": "Eine Decke"
       },
@@ -1439,27 +1439,27 @@
         "type": "select",
         "question": "der Wecker",
         "options": [
-          "Будильник",
-          "Рюкзак",
-          "Телефон"
+          "questsStoneReachEighthQuests.questFifteenFirstOption",
+          "questsStoneReachEighthQuests.questFifteenSecondOption",
+          "questsStoneReachEighthQuests.questFifteenThirdOption"
         ],
-        "answer": "Будильник"
+        "answer": "questsStoneReachEighthQuests.questFifteenFirstOption"
       }
     ]
   },
   {
     "questId": "village-9",
-    "title": "В прихожей",
+    "title": "questsStoneReachNinthQuests.title",
     "progress": "0/15",
-    "description": "У входа — дверь, ключи и одежда. Учим слова прихожей.",
+    "description": "questsStoneReachNinthQuests.description",
     "conditions": {
-      "goal": "Называть предметы прихожей и собирать короткие фразы с артиклями и числительными",
+      "goal": "questsStoneReachNinthQuests.goal",
       "minCorrect": 11,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 175,
-      "xp": 300
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
@@ -1467,34 +1467,34 @@
         "type": "select",
         "question": "die Tür",
         "options": [
-          "Дверь",
-          "Окно",
-          "Пол"
+          "questsStoneReachNinthQuests.questOneFirstOption",
+          "questsStoneReachNinthQuests.questOneSecondOption",
+          "questsStoneReachNinthQuests.questOneThirdOption"
         ],
-        "answer": "Дверь"
+        "answer": "questsStoneReachNinthQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "select",
         "question": "der Schlüssel",
         "options": [
-          "Ключ",
-          "Шкаф",
-          "Ковер"
+          "questsStoneReachNinthQuests.questTwoFirstOption",
+          "questsStoneReachNinthQuests.questTwoSecondOption",
+          "questsStoneReachNinthQuests.questTwoThirdOption"
         ],
-        "answer": "Ключ"
+        "answer": "questsStoneReachNinthQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsStoneReachNinthQuests.questThird",
         "text": "die Jacke",
         "answer": "die Jacke"
       },
       {
         "id": 4,
         "type": "reorder",
-        "question": "Собери предложение: Это куртка",
+        "question": "questsStoneReachNinthQuests.questFour",
         "words": [
           "ist",
           "Das",
@@ -1513,23 +1513,23 @@
         "type": "select",
         "question": "der Mantel",
         "options": [
-          "Пальто",
-          "Шарф",
-          "Шапка"
+          "questsStoneReachNinthQuests.questFiveFirstOption",
+          "questsStoneReachNinthQuests.questFiveSecondOption",
+          "questsStoneReachNinthQuests.questFiveThirdOption"
         ],
-        "answer": "Пальто"
+        "answer": "questsStoneReachNinthQuests.questFiveFirstOption"
       },
       {
         "id": 6,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsStoneReachNinthQuests.questSix",
         "text": "Eine Tasche",
         "answer": "Eine Tasche"
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Собери: две новые ботинки",
+        "question": "questsStoneReachNinthQuests.questSeven",
         "words": [
           "zwei",
           "neue",
@@ -1546,23 +1546,23 @@
         "type": "select",
         "question": "die Mütze",
         "options": [
-          "Шапка",
-          "Перчатка",
-          "Платье"
+          "questsStoneReachNinthQuests.questEightFirstOption",
+          "questsStoneReachNinthQuests.questEightSecondOption",
+          "questsStoneReachNinthQuests.questEightThirdOption"
         ],
-        "answer": "Шапка"
+        "answer": "questsStoneReachNinthQuests.questEightFirstOption"
       },
       {
         "id": 9,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsStoneReachNinthQuests.questNine",
         "text": "Der Schal",
         "answer": "Der Schal"
       },
       {
         "id": 10,
         "type": "reorder",
-        "question": "Собери: большая гардеробная",
+        "question": "questsStoneReachNinthQuests.questTen",
         "words": [
           "die",
           "große",
@@ -1579,23 +1579,23 @@
         "type": "select",
         "question": "der Rucksack",
         "options": [
-          "Рюкзак",
-          "Пояс",
-          "Зонт"
+          "questsStoneReachNinthQuests.questElevenFirstOption",
+          "questsStoneReachNinthQuests.questElevenSecondOption",
+          "questsStoneReachNinthQuests.questElevenThirdOption"
         ],
-        "answer": "Рюкзак"
+        "answer": "questsStoneReachNinthQuests.questElevenFirstOption"
       },
       {
         "id": 12,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsStoneReachNinthQuests.questTwelve",
         "text": "Drei Schlüssel",
         "answer": "Drei Schlüssel"
       },
       {
         "id": 13,
         "type": "reorder",
-        "question": "Собери предложение: Это дверь",
+        "question": "questsStoneReachNinthQuests.questThirteen",
         "words": [
           "Das",
           "ist",
@@ -1614,16 +1614,16 @@
         "type": "select",
         "question": "der Teppich",
         "options": [
-          "Ковер",
-          "Кресло",
-          "Полка"
+          "questsStoneReachNinthQuests.questFourteenFirstOption",
+          "questsStoneReachNinthQuests.questFourteenSecondOption",
+          "questsStoneReachNinthQuests.questFourteenThirdOption"
         ],
-        "answer": "Ковер"
+        "answer": "questsStoneReachNinthQuests.questFourteenFirstOption"
       },
       {
         "id": 15,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsStoneReachNinthQuests.questFifteen",
         "text": "Ein Hut",
         "answer": "Ein Hut"
       }
@@ -1631,34 +1631,34 @@
   },
   {
     "questId": "village-10",
-    "title": "В саду",
+    "title": "questsStoneReachTenthQuests.title",
     "progress": "0/15",
-    "description": "Дерево, цветы и скамейка. Учим слова сада и простые сочетания с цветами и числами.",
+    "description": "questsStoneReachTenthQuests.description",
     "conditions": {
-      "goal": "Называть предметы сада и собирать простые словосочетания с цветами и числами",
+      "goal": "questsStoneReachTenthQuests.goal",
       "minCorrect": 11,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 180,
-      "xp": 320
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
         "id": 1,
         "type": "select",
-        "question": "Что значит: der Baum",
+        "question": "questsStoneReachTenthQuests.questOne",
         "options": [
-          "Дерево",
-          "Цветок",
-          "Лопата"
+          "questsStoneReachTenthQuests.questOneFirstOption",
+          "questsStoneReachTenthQuests.questOneSecondOption",
+          "questsStoneReachTenthQuests.questOneThirdOption"
         ],
-        "answer": "Дерево"
+        "answer": "questsStoneReachTenthQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "reorder",
-        "question": "Собери: ein großer Baum",
+        "question": "questsStoneReachTenthQuests.questTwo",
         "words": [
           "ein",
           "großer",
@@ -1673,36 +1673,36 @@
       {
         "id": 3,
         "type": "select",
-        "question": "Что значит: zwei Bäume",
+        "question": "questsStoneReachTenthQuests.questThird",
         "options": [
-          "2 дерева",
-          "2 цветка",
-          "2 лейки"
+          "questsStoneReachTenthQuests.questThirdFirstOption",
+          "questsStoneReachTenthQuests.questThirdSecondOption",
+          "questsStoneReachTenthQuests.questThirdThirdOption"
         ],
-        "answer": "2 дерева"
+        "answer": "questsStoneReachTenthQuests.questThirdFirstOption"
       },
       {
         "id": 4,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsStoneReachTenthQuests.questFour",
         "text": "Der Baum",
         "answer": "Der Baum"
       },
       {
         "id": 5,
         "type": "select",
-        "question": "Что значит: die Blume",
+        "question": "questsStoneReachTenthQuests.questFive",
         "options": [
-          "Цветок",
-          "Куст",
-          "Трава"
+          "questsStoneReachTenthQuests.questFiveFirstOption",
+          "questsStoneReachTenthQuests.questFiveSecondOption",
+          "questsStoneReachTenthQuests.questFiveThirdOption"
         ],
-        "answer": "Цветок"
+        "answer": "questsStoneReachTenthQuests.questFiveFirstOption"
       },
       {
         "id": 6,
         "type": "reorder",
-        "question": "Собери: eine rote Blume",
+        "question": "questsStoneReachTenthQuests.questSix",
         "words": [
           "rote",
           "eine",
@@ -1717,36 +1717,36 @@
       {
         "id": 7,
         "type": "select",
-        "question": "Что значит: drei Blumen",
+        "question": "questsStoneReachTenthQuests.questSeven",
         "options": [
-          "3 цветка",
-          "3 дерева",
-          "3 лопаты"
+          "questsStoneReachTenthQuests.questSevenFirstOption",
+          "questsStoneReachTenthQuests.questSevenSecondOption",
+          "questsStoneReachTenthQuests.questSevenThirdOption"
         ],
-        "answer": "3 цветка"
+        "answer": "questsStoneReachTenthQuests.questSevenFirstOption"
       },
       {
         "id": 8,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsStoneReachTenthQuests.questEight",
         "text": "Die Blume",
         "answer": "Die Blume"
       },
       {
         "id": 9,
         "type": "select",
-        "question": "Что значит: die Gießkanne",
+        "question": "questsStoneReachTenthQuests.questNine",
         "options": [
-          "Лейка",
-          "Шланг",
-          "Ведро"
+          "questsStoneReachTenthQuests.questNineFirstOption",
+          "questsStoneReachTenthQuests.questNineSecondOption",
+          "questsStoneReachTenthQuests.questNineThirdOption"
         ],
-        "answer": "Лейка"
+        "answer": "questsStoneReachTenthQuests.questNineFirstOption"
       },
       {
         "id": 10,
         "type": "reorder",
-        "question": "Собери: eine grüne Gießkanne",
+        "question": "questsStoneReachTenthQuests.questTen",
         "words": [
           "eine",
           "grüne",
@@ -1761,32 +1761,32 @@
       {
         "id": 11,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsStoneReachTenthQuests.questEleven",
         "text": "Die Gießkanne",
         "answer": "Die Gießkanne"
       },
       {
         "id": 12,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsStoneReachTenthQuests.questTwelve",
         "text": "Eine Gießkanne",
         "answer": "Eine Gießkanne"
       },
       {
         "id": 13,
         "type": "select",
-        "question": "Что значит: die Schaufel",
+        "question": "questsStoneReachTenthQuests.questThirteen",
         "options": [
-          "Лопата",
-          "Камень",
-          "Кувалда"
+          "questsStoneReachTenthQuests.questThirteenFirstOption",
+          "questsStoneReachTenthQuests.questThirteenSecondOption",
+          "questsStoneReachTenthQuests.questThirteenThirdOption"
         ],
-        "answer": "Лопата"
+        "answer": "questsStoneReachTenthQuests.questThirteenFirstOption"
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "Собери: eine neue Schaufel",
+        "question": "questsStoneReachTenthQuests.questFourteen",
         "words": [
           "eine",
           "neue",
@@ -1801,7 +1801,7 @@
       {
         "id": 15,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsStoneReachTenthQuests.questFifteen",
         "text": "Die Schaufel",
         "answer": "Die Schaufel"
       }

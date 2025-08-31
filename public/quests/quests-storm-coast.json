@@ -1,11 +1,11 @@
 [
   {
     "questId": "feier-1",
-    "title": "Праздники — приглашение и время",
+    "title": "questsStormCoastsFirstQuests.title",
     "progress": "0/15",
-    "description": "Приглашение, день и время праздника, подтверждение прихода.",
+    "description": "questsStormCoastsFirstQuests.description",
     "conditions": {
-      "goal": "Понимать и использовать базовые фразы про приглашение и дату/время: Einladung, feiern, Party, am Samstag, um 18 Uhr, Adresse, kommen/nicht kommen",
+      "goal": "questsStormCoastsFirstQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
@@ -19,49 +19,49 @@
         "type": "select",
         "question": "die Einladung",
         "options": [
-          "Приглашение",
-          "Подарок",
-          "Открытка"
+          "questsStormCoastsFirstQuests.questOneFirstOption",
+          "questsStormCoastsFirstQuests.questOneSecondOption",
+          "questsStormCoastsFirstQuests.questOneThirdOption"
         ],
-        "answer": "Приглашение"
+        "answer": "questsStormCoastsFirstQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "select",
         "question": "feiern",
         "options": [
-          "праздновать",
-          "писать",
-          "готовить"
+          "questsStormCoastsFirstQuests.questTwoFirstOption",
+          "questsStormCoastsFirstQuests.questTwoSecondOption",
+          "questsStormCoastsFirstQuests.questTwoThirdOption"
         ],
-        "answer": "праздновать"
+        "answer": "questsStormCoastsFirstQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "select",
         "question": "die Party",
         "options": [
-          "Вечеринка",
-          "Поездка",
-          "Выставка"
+          "questsStormCoastsFirstQuests.questThirdFirstOption",
+          "questsStormCoastsFirstQuests.questThirdSecondOption",
+          "questsStormCoastsFirstQuests.questThirdThirdOption"
         ],
-        "answer": "Вечеринка"
+        "answer": "questsStormCoastsFirstQuests.questThirdFirstOption"
       },
       {
         "id": 4,
         "type": "select",
         "question": "der Geburtstag",
         "options": [
-          "День рождения",
-          "Календарь",
-          "Праздничный торт"
+          "questsStormCoastsFirstQuests.questFourFirstOption",
+          "questsStormCoastsFirstQuests.questFourSecondOption",
+          "questsStormCoastsFirstQuests.questFourThirdOption"
         ],
-        "answer": "День рождения"
+        "answer": "questsStormCoastsFirstQuests.questFourFirstOption"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Собери фразу: «Я праздную в субботу»",
+        "question": "questsStormCoastsFirstQuests.questFive",
         "words": [
           "am",
           "feiere",
@@ -78,7 +78,7 @@
       {
         "id": 6,
         "type": "select",
-        "question": "Выбери правильное предложение о дате вечеринки",
+        "question": "questsStormCoastsFirstQuests.questSix",
         "options": [
           "Die Party ist in Samstag",
           "Die Party ist am Samstag",
@@ -89,7 +89,7 @@
       {
         "id": 7,
         "type": "reorder",
-        "question": "Собери фразу: «Вечеринка начинается в 18 часов»",
+        "question": "questsStormCoastsFirstQuests.questSeven",
         "words": [
           "beginnt",
           "Party",
@@ -112,17 +112,17 @@
         "type": "select",
         "question": "die Adresse",
         "options": [
-          "Адрес",
-          "Дата",
-          "Цена"
+          "questsStormCoastsFirstQuests.questEightFirstOption",
+          "questsStormCoastsFirstQuests.questEightSecondOption",
+          "questsStormCoastsFirstQuests.questEightThirdOption"
         ],
-        "answer": "Адрес"
+        "answer": "questsStormCoastsFirstQuests.questEightFirstOption"
       },
       {
         "id": 9,
         "type": "readAndAnswer",
         "text": "Die Party ist am Samstag um 18 Uhr, in der Hauptstraße 10.",
-        "question": "Когда начинается вечеринка?",
+        "question": "questsStormCoastsFirstQuests.questNine",
         "options": [
           "18:00",
           "16:00",
@@ -133,39 +133,61 @@
       {
         "id": 10,
         "type": "select",
-        "question": "Как сказать: «Я приду»",
-        "options": ["Ich komme", "Ich wohne", "Ich esse"],
+        "question": "questsStormCoastsFirstQuests.questTen",
+        "options": [
+          "Ich komme",
+          "Ich wohne",
+          "Ich esse"
+        ],
         "answer": "Ich komme"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Собери подтверждение прихода",
-        "words": ["Ich", "kann", "kommen"],
-        "correctOrder": ["Ich", "kann", "kommen"]
+        "question": "questsStormCoastsFirstQuests.questEleven",
+        "words": [
+          "Ich",
+          "kann",
+          "kommen"
+        ],
+        "correctOrder": [
+          "Ich",
+          "kann",
+          "kommen"
+        ]
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "Собери вежливый отказ",
-        "words": ["leider", "kann", "Ich", "nicht"],
-        "correctOrder": ["Ich", "kann", "leider", "nicht"]
+        "question": "questsStormCoastsFirstQuests.questTwelve",
+        "words": [
+          "leider",
+          "kann",
+          "Ich",
+          "nicht"
+        ],
+        "correctOrder": [
+          "Ich",
+          "kann",
+          "leider",
+          "nicht"
+        ]
       },
       {
         "id": 13,
         "type": "select",
         "question": "am Samstag",
         "options": [
-          "в субботу",
-          "в пятницу",
-          "в воскресенье"
+          "questsStormCoastsFirstQuests.questThirteenFirstOption",
+          "questsStormCoastsFirstQuests.questThirteenSecondOption",
+          "questsStormCoastsFirstQuests.questThirteenThirdOption"
         ],
-        "answer": "в субботу"
+        "answer": "questsStormCoastsFirstQuests.questThirteenFirstOption"
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "Собери прощание до встречи",
+        "question": "questsStormCoastsFirstQuests.questFourteen",
         "words": [
           "Bis",
           "Samstag!"
@@ -179,7 +201,7 @@
         "id": 15,
         "type": "readAndAnswer",
         "text": "Anna lädt am Freitag ein. Die Feier ist um 19 Uhr.",
-        "question": "Во сколько праздник?",
+        "question": "questsStormCoastsFirstQuests.questFifteen",
         "options": [
           "18:00",
           "19:00",
@@ -191,17 +213,17 @@
   },
   {
     "questId": "feier-2",
-    "title": "Праздники — поздравления и подарки",
+    "title": "questsStormCoastsSecondQuests.title",
     "progress": "0/15",
-    "description": "Поздравить, пожелать, дарить и упаковывать подарки.",
+    "description": "questsStormCoastsSecondQuests.description",
     "conditions": {
-      "goal": "gratulieren, Geschenk, schenken, Blumen, Glückwunschkarte, verpacken; формулы поздравлений",
+      "goal": "questsStormCoastsSecondQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 230,
-      "xp": 340
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
@@ -209,49 +231,49 @@
         "type": "select",
         "question": "gratulieren",
         "options": [
-          "поздравлять",
-          "приглашать",
-          "планировать"
+          "questsStormCoastsSecondQuests.questOneFirstOption",
+          "questsStormCoastsSecondQuests.questOneSecondOption",
+          "questsStormCoastsSecondQuests.questOneThirdOption"
         ],
-        "answer": "поздравлять"
+        "answer": "questsStormCoastsSecondQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "select",
         "question": "das Geschenk",
         "options": [
-          "Подарок",
-          "Праздник",
-          "Открытка"
+          "questsStormCoastsSecondQuests.questTwoFirstOption",
+          "questsStormCoastsSecondQuests.questTwoSecondOption",
+          "questsStormCoastsSecondQuests.questTwoThirdOption"
         ],
-        "answer": "Подарок"
+        "answer": "questsStormCoastsSecondQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "select",
         "question": "schenken",
         "options": [
-          "дарить",
-          "покупать",
-          "готовить"
+          "questsStormCoastsSecondQuests.questThirdFirstOption",
+          "questsStormCoastsSecondQuests.questThirdSecondOption",
+          "questsStormCoastsSecondQuests.questThirdThirdOption"
         ],
-        "answer": "дарить"
+        "answer": "questsStormCoastsSecondQuests.questThirdFirstOption"
       },
       {
         "id": 4,
         "type": "select",
         "question": "die Blumen",
         "options": [
-          "Цветы",
-          "Свечи",
-          "Фрукты"
+          "questsStormCoastsSecondQuests.questFourFirstOption",
+          "questsStormCoastsSecondQuests.questFourSecondOption",
+          "questsStormCoastsSecondQuests.questFourThirdOption"
         ],
-        "answer": "Цветы"
+        "answer": "questsStormCoastsSecondQuests.questFourFirstOption"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Собери стандартное поздравление",
+        "question": "questsStormCoastsSecondQuests.questFive",
         "words": [
           "Herzlichen",
           "Glückwunsch!"
@@ -264,7 +286,7 @@
       {
         "id": 6,
         "type": "select",
-        "question": "Выбери короткое пожелание",
+        "question": "questsStormCoastsSecondQuests.questSix",
         "options": [
           "Alles Gute!",
           "Gute Nacht!",
@@ -277,16 +299,16 @@
         "type": "select",
         "question": "die Glückwunschkarte",
         "options": [
-          "Поздравительная открытка",
-          "Памятка",
-          "Билет"
+          "questsStormCoastsSecondQuests.questSevenFirstOption",
+          "questsStormCoastsSecondQuests.questSevenSecondOption",
+          "questsStormCoastsSecondQuests.questSevenThirdOption"
         ],
-        "answer": "Поздравительная открытка"
+        "answer": "questsStormCoastsSecondQuests.questSevenFirstOption"
       },
       {
         "id": 8,
         "type": "reorder",
-        "question": "Собери: У меня есть подарок",
+        "question": "questsStormCoastsSecondQuests.questEight",
         "words": [
           "Ich",
           "habe",
@@ -304,11 +326,11 @@
         "id": 9,
         "type": "readAndAnswer",
         "text": "Ich schenke Maria Blumen.",
-        "question": "Что дарит говорящий?",
+        "question": "questsStormCoastsSecondQuests.questNine",
         "options": [
-          "Цветы",
-          "Книгу",
-          "Торт"
+          "questsStormCoastsSecondQuests.questNineFirstOption",
+          "questsStormCoastsSecondQuests.questNineSecondOption",
+          "questsStormCoastsSecondQuests.questNineThirdOption"
         ],
         "answer": "Цветы"
       },
@@ -317,22 +339,22 @@
         "type": "select",
         "question": "verpacken",
         "options": [
-          "упаковывать",
-          "украшать",
-          "зажигать"
+          "questsStormCoastsSecondQuests.questTenFirstOption",
+          "questsStormCoastsSecondQuests.questTenSecondOption",
+          "questsStormCoastsSecondQuests.questTenThirdOption"
         ],
-        "answer": "упаковывать"
+        "answer": "questsStormCoastsSecondQuests.questTenFirstOption"
       },
       {
         "id": 11,
         "type": "input",
-        "question": "Впиши пропуск: Ich ___ dir (я поздравляю тебя)",
+        "question": "questsStormCoastsSecondQuests.questEleven",
         "correctAnswer": "gratuliere"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "Собери: «Свечи на торте»",
+        "question": "questsStormCoastsSecondQuests.questTwelve",
         "words": [
           "Die",
           "Kerzen",
@@ -354,18 +376,18 @@
         "id": 13,
         "type": "readAndAnswer",
         "text": "Heute hat Tom Geburtstag. Wir gratulieren ihm und singen.",
-        "question": "У кого сегодня день рождения?",
+        "question": "questsStormCoastsSecondQuests.questThirteen",
         "options": [
-          "У Тома",
-          "У Анны",
-          "Неизвестно"
+          "questsStormCoastsSecondQuests.questThirteenFirstOption",
+          "questsStormCoastsSecondQuests.questThirteenSecondOption",
+          "questsStormCoastsSecondQuests.questThirteenThirdOption"
         ],
-        "answer": "У Тома"
+        "answer": "questsStormCoastsSecondQuests.questThirteenFirstOption"
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "Собери полную формулу поздравления с днём рождения",
+        "question": "questsStormCoastsSecondQuests.questFourteen",
         "words": [
           "Herzlichen",
           "Glückwunsch",
@@ -382,7 +404,7 @@
       {
         "id": 15,
         "type": "select",
-        "question": "Как сказать «Я поздравляю»",
+        "question": "questsStormCoastsSecondQuests.questFifteen",
         "options": [
           "Ich gratuliere",
           "Ich reserviere",
@@ -394,11 +416,11 @@
   },
   {
     "questId": "feier-3",
-    "title": "Праздники — организация",
+    "title": "questsStormCoastsThirdQuests.title",
     "progress": "0/15",
-    "description": "План, гости, еда, музыка, место. Кто что приносит.",
+    "description": "questsStormCoastsThirdQuests.description",
     "conditions": {
-      "goal": "planen, Gäste, Dekoration, Kuchen, Musik, mitbringen, einkaufen, vorbereiten, Ort; договорённости",
+      "goal": "questsStormCoastsThirdQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
@@ -412,49 +434,49 @@
         "type": "select",
         "question": "planen",
         "options": [
-          "планировать",
-          "приглашать",
-          "путешествовать"
+          "questsStormCoastsThirdQuests.questOneFirstOption",
+          "questsStormCoastsThirdQuests.questOneSecondOption",
+          "questsStormCoastsThirdQuests.questOneThirdOption"
         ],
-        "answer": "планировать"
+        "answer": "questsStormCoastsThirdQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "select",
         "question": "die Gäste",
         "options": [
-          "Гости",
-          "Соседи",
-          "Родители"
+          "questsStormCoastsThirdQuests.questTwoFirstOption",
+          "questsStormCoastsThirdQuests.questTwoSecondOption",
+          "questsStormCoastsThirdQuests.questTwoThirdOption"
         ],
-        "answer": "Гости"
+        "answer": "questsStormCoastsThirdQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "select",
         "question": "die Dekoration",
         "options": [
-          "Украшения",
-          "Кухня",
-          "Музыка"
+          "questsStormCoastsThirdQuests.questThirdFirstOption",
+          "questsStormCoastsThirdQuests.questThirdSecondOption",
+          "questsStormCoastsThirdQuests.questThirdThirdOption"
         ],
-        "answer": "Украшения"
+        "answer": "questsStormCoastsThirdQuests.questThirdFirstOption"
       },
       {
         "id": 4,
         "type": "select",
         "question": "der Kuchen",
         "options": [
-          "Торт",
-          "Пирог из мяса",
-          "Печенье"
+          "questsStormCoastsThirdQuests.questFourFirstOption",
+          "questsStormCoastsThirdQuests.questFourSecondOption",
+          "questsStormCoastsThirdQuests.questFourThirdOption"
         ],
-        "answer": "Торт"
+        "answer": "questsStormCoastsThirdQuests.questFourFirstOption"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Собери: Мы празднуем в парке",
+        "question": "questsStormCoastsThirdQuests.questFive",
         "words": [
           "Park",
           "feiern",
@@ -471,7 +493,7 @@
       {
         "id": 6,
         "type": "input",
-        "question": "Впиши пропуск в вопрос: ___ du etwas mit?",
+        "question": "questsStormCoastsThirdQuests.questSix",
         "correctAnswer": "Bringst"
       },
       {
@@ -479,16 +501,16 @@
         "type": "select",
         "question": "einkaufen",
         "options": [
-          "закупаться",
-          "приглашать",
-          "петь"
+          "questsStormCoastsThirdQuests.questSevenFirstOption",
+          "questsStormCoastsThirdQuests.questSevenSecondOption",
+          "questsStormCoastsThirdQuests.questSevenThirdOption"
         ],
-        "answer": "закупаться"
+        "answer": "questsStormCoastsThirdQuests.questSevenFirstOption"
       },
       {
         "id": 8,
         "type": "reorder",
-        "question": "Собери: Я покупаю напитки",
+        "question": "questsStormCoastsThirdQuests.questEight",
         "words": [
           "kaufe",
           "Ich",
@@ -504,29 +526,29 @@
         "id": 9,
         "type": "readAndAnswer",
         "text": "Die Party ist zu Hause. Zehn Gäste kommen.",
-        "question": "Где проходит вечеринка?",
+        "question": "questsStormCoastsThirdQuests.questNine",
         "options": [
-          "Дома",
-          "В парке",
-          "В кафе"
+          "questsStormCoastsThirdQuests.questNineFirstOption",
+          "questsStormCoastsThirdQuests.questNineSecondOption",
+          "questsStormCoastsThirdQuests.questNineThirdOption"
         ],
-        "answer": "Дома"
+        "answer": "questsStormCoastsThirdQuests.questNineFirstOption"
       },
       {
         "id": 10,
         "type": "select",
         "question": "vorbereiten",
         "options": [
-          "подготавливать",
-          "переезжать",
-          "отменять"
+          "questsStormCoastsThirdQuests.questTenFirstOption",
+          "questsStormCoastsThirdQuests.questTenSecondOption",
+          "questsStormCoastsThirdQuests.questTenThirdOption"
         ],
-        "answer": "подготавливать"
+        "answer": "questsStormCoastsThirdQuests.questTenFirstOption"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Собери: Я подготавливаю торт",
+        "question": "questsStormCoastsThirdQuests.questEleven",
         "words": [
           "Kuchen",
           "bereite",
@@ -545,7 +567,7 @@
       {
         "id": 12,
         "type": "reorder",
-        "question": "Собери вопрос: Кто приносит музыку",
+        "question": "questsStormCoastsThirdQuests.questTwelve",
         "words": [
           "Musik",
           "bringt",
@@ -563,52 +585,52 @@
         "id": 13,
         "type": "readAndAnswer",
         "text": "Anna dekoriert den Raum. Max bringt Salat.",
-        "question": "Кто украшает комнату?",
+        "question": "questsStormCoastsThirdQuests.questThirteen",
         "options": [
-          "Анна",
-          "Макс",
-          "Неизвестно"
+          "questsStormCoastsThirdQuests.questThirteenFirstOption",
+          "questsStormCoastsThirdQuests.questThirteenSecondOption",
+          "questsStormCoastsThirdQuests.questThirteenThirdOption"
         ],
-        "answer": "Анна"
+        "answer": "questsStormCoastsThirdQuests.questThirteenFirstOption"
       },
       {
         "id": 14,
         "type": "readAndAnswer",
         "text": "Ich bringe einen Salat mit.",
-        "question": "Что приносит говорящий?",
+        "question": "questsStormCoastsThirdQuests.questFourteen",
         "options": [
-          "Салат",
-          "Торт",
-          "Напитки"
+          "questsStormCoastsThirdQuests.questFourteenFirstOption",
+          "questsStormCoastsThirdQuests.questFourteenSecondOption",
+          "questsStormCoastsThirdQuests.questFourteenThirdOption"
         ],
-        "answer": "Салат"
+        "answer": "questsStormCoastsThirdQuests.questFourteenFirstOption"
       },
       {
         "id": 15,
         "type": "select",
         "question": "der Ort",
         "options": [
-          "Место",
-          "Гость",
-          "Подарок"
+          "questsStormCoastsThirdQuests.questFifteenFirstOption",
+          "questsStormCoastsThirdQuests.questFifteenSecondOption",
+          "questsStormCoastsThirdQuests.questFifteenThirdOption"
         ],
-        "answer": "Место"
+        "answer": "questsStormCoastsThirdQuests.questFifteenFirstOption"
       }
     ]
   },
   {
     "questId": "feier-4",
-    "title": "Праздники — в течение года",
+    "title": "questsStormCoastsFourQuests.title",
     "progress": "0/15",
-    "description": "Основные праздники и традиции: когда и как отмечают.",
+    "description": "questsStormCoastsFourQuests.description",
     "conditions": {
-      "goal": "Weihnachten, Ostern, Silvester, Neujahr, der Feiertag, Tradition, frei haben; простые факты по датам",
+      "goal": "questsStormCoastsFourQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 245,
-      "xp": 360
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
@@ -616,49 +638,49 @@
         "type": "select",
         "question": "Weihnachten",
         "options": [
-          "Рождество",
-          "Пасха",
-          "Новый год"
+          "questsStormCoastsFourQuests.questOneFirstOption",
+          "questsStormCoastsFourQuests.questOneSecondOption",
+          "questsStormCoastsFourQuests.questOneThirdOption"
         ],
-        "answer": "Рождество"
+        "answer": "questsStormCoastsFourQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "select",
         "question": "Ostern",
         "options": [
-          "Пасха",
-          "Канун Нового года",
-          "День труда"
+          "questsStormCoastsFourQuests.questTwoFirstOption",
+          "questsStormCoastsFourQuests.questTwoSecondOption",
+          "questsStormCoastsFourQuests.questTwoThirdOption"
         ],
-        "answer": "Пасха"
+        "answer": "questsStormCoastsFourQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "select",
         "question": "Silvester",
         "options": [
-          "Канун Нового года",
-          "Рождество",
-          "Карнавал"
+          "questsStormCoastsFourQuests.questThirdFirstOption",
+          "questsStormCoastsFourQuests.questThirdSecondOption",
+          "questsStormCoastsFourQuests.questThirdThirdOption"
         ],
-        "answer": "Канун Нового года"
+        "answer": "questsStormCoastsFourQuests.questThirdFirstOption"
       },
       {
         "id": 4,
         "type": "select",
         "question": "Neujahr",
         "options": [
-          "Новый год",
-          "Старый Новый год",
-          "Осень"
+          "questsStormCoastsFourQuests.questFourFirstOption",
+          "questsStormCoastsFourQuests.questFourSecondOption",
+          "questsStormCoastsFourQuests.questFourThirdOption"
         ],
-        "answer": "Новый год"
+        "answer": "questsStormCoastsFourQuests.questFourFirstOption"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Собери: У нас выходной",
+        "question": "questsStormCoastsFourQuests.questFive",
         "words": [
           "frei",
           "haben",
@@ -673,7 +695,7 @@
       {
         "id": 6,
         "type": "select",
-        "question": "Выбери поздравление на Рождество",
+        "question": "questsStormCoastsFourQuests.questSix",
         "options": [
           "Frohe Weihnachten!",
           "Gute Reise!",
@@ -686,16 +708,16 @@
         "type": "select",
         "question": "der Feiertag",
         "options": [
-          "Праздничный выходной",
-          "Будний день",
-          "Субботник"
+          "questsStormCoastsFourQuests.questSevenFirstOption",
+          "questsStormCoastsFourQuests.questSevenSecondOption",
+          "questsStormCoastsFourQuests.questSevenThirdOption"
         ],
-        "answer": "Праздничный выходной"
+        "answer": "questsStormCoastsFourQuests.questSevenFirstOption"
       },
       {
         "id": 8,
         "type": "reorder",
-        "question": "Собери: 1 января — Новый год",
+        "question": "questsStormCoastsFourQuests.questEight",
         "words": [
           "Januar",
           "1.",
@@ -715,29 +737,29 @@
         "id": 9,
         "type": "readAndAnswer",
         "text": "An Silvester gibt es Feuerwerk. Am nächsten Tag ist Neujahr.",
-        "question": "Когда бывает фейерверк?",
+        "question": "questsStormCoastsFourQuests.questNine",
         "options": [
-          "В канун Нового года",
-          "На Рождество",
-          "На Пасху"
+          "questsStormCoastsFourQuests.questNineFirstOption",
+          "questsStormCoastsFourQuests.questNineSecondOption",
+          "questsStormCoastsFourQuests.questNineThirdOption"
         ],
-        "answer": "В канун Нового года"
+        "answer": "questsStormCoastsFourQuests.questNineFirstOption"
       },
       {
         "id": 10,
         "type": "select",
         "question": "die Tradition",
         "options": [
-          "Традиция",
-          "Поездка",
-          "Покупка"
+          "questsStormCoastsFourQuests.questTenFirstOption",
+          "questsStormCoastsFourQuests.questTenSecondOption",
+          "questsStormCoastsFourQuests.questTenThirdOption"
         ],
-        "answer": "Традиция"
+        "answer": "questsStormCoastsFourQuests.questTenFirstOption"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Собери: Мы празднуем с семьёй",
+        "question": "questsStormCoastsFourQuests.questEleven",
         "words": [
           "Wir",
           "feiern",
@@ -756,7 +778,7 @@
       {
         "id": 12,
         "type": "reorder",
-        "question": "Собери: На Пасху мы едим яйца",
+        "question": "questsStormCoastsFourQuests.questTwelve",
         "words": [
           "Zu",
           "Eier",
@@ -776,18 +798,18 @@
         "id": 13,
         "type": "readAndAnswer",
         "text": "Am 24. Dezember feiern viele Familien Weihnachten.",
-        "question": "Когда многие семьи празднуют Рождество?",
+        "question": "questsStormCoastsFourQuests.questThirteen",
         "options": [
-          "24 декабря",
-          "1 января",
-          "31 декабря"
+          "questsStormCoastsFourQuests.questThirteenFirstOption",
+          "questsStormCoastsFourQuests.questThirteenSecondOption",
+          "questsStormCoastsFourQuests.questThirteenThirdOption"
         ],
-        "answer": "24 декабря"
+        "answer": "questsStormCoastsFourQuests.questThirteenFirstOption"
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "Собери пожелание на Новый год",
+        "question": "questsStormCoastsFourQuests.questFourteen",
         "words": [
           "Jahr",
           "Gute",
@@ -808,45 +830,45 @@
         "type": "select",
         "question": "der Kalender",
         "options": [
-          "Календарь",
-          "Концерт",
-          "Костюм"
+          "questsStormCoastsFourQuests.questFifteenFirstOption",
+          "questsStormCoastsFourQuests.questFifteenSecondOption",
+          "questsStormCoastsFourQuests.questFifteenThirdOption"
         ],
-        "answer": "Календарь"
+        "answer": "questsStormCoastsFourQuests.questFifteenFirstOption"
       }
     ]
   },
   {
     "questId": "feier-5",
-    "title": "Праздники — мини-диалоги и практика",
+    "title": "questsStormCoastsFifthQuests.title",
     "progress": "0/15",
-    "description": "От приглашения до поздравлений. Только практика, без новых слов.",
+    "description": "questsStormCoastsFifthQuests.description",
     "conditions": {
-      "goal": "Комбинировать: Einladung, feiern, Zeit/Ort, gratulieren, Geschenk, Gäste, Dekoration, Musik, Silvester/Weihnachten/Ostern/Neujahr, Feiertag, frei haben",
+      "goal": "questsStormCoastsFifthQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 255,
-      "xp": 380
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
         "id": 1,
         "type": "readAndAnswer",
         "text": "Hallo! Ich lade dich zur Party am Samstag um 18 Uhr ein.",
-        "question": "Когда начинается вечеринка?",
+        "question": "questsStormCoastsFifthQuests.questOne",
         "options": [
-          "В 18:00",
-          "В 16:00",
-          "В 20:00"
+          "questsStormCoastsFifthQuests.questOneFirstOption",
+          "questsStormCoastsFifthQuests.questOneSecondOption",
+          "questsStormCoastsFifthQuests.questOneThirdOption"
         ],
-        "answer": "В 18:00"
+        "answer": "questsStormCoastsFifthQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "reorder",
-        "question": "Собери ответ-подтверждение",
+        "question": "questsStormCoastsFifthQuests.questTwo",
         "words": [
           "Ich",
           "gern",
@@ -861,25 +883,25 @@
       {
         "id": 3,
         "type": "input",
-        "question": "Впиши пропуск (вежливый отказ): Ich kann ___ nicht",
+        "question": "questsStormCoastsFifthQuests.questThird",
         "correctAnswer": "leider"
       },
       {
         "id": 4,
         "type": "readAndAnswer",
         "text": "Die Party ist zu Hause. Die Adresse steht in der Einladung.",
-        "question": "Где проходит вечеринка?",
+        "question": "questsStormCoastsFifthQuests.questFour",
         "options": [
-          "Дома",
-          "В парке",
-          "В кафе"
+          "questsStormCoastsFifthQuests.questFourFirstOption",
+          "questsStormCoastsFifthQuests.questFourSecondOption",
+          "questsStormCoastsFifthQuests.questFourThirdOption"
         ],
-        "answer": "Дома"
+        "answer": "questsStormCoastsFifthQuests.questFourFirstOption"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Собери просьбу о помощи с музыкой",
+        "question": "questsStormCoastsFifthQuests.questFive",
         "words": [
           "Bringst",
           "die",
@@ -898,25 +920,25 @@
       {
         "id": 6,
         "type": "input",
-        "question": "Впиши поздравление:",
+        "question": "questsStormCoastsFifthQuests.questSix",
         "correctAnswer": "Herzlichen Glückwunsch!"
       },
       {
         "id": 7,
         "type": "readAndAnswer",
         "text": "Ich habe ein Geschenk und eine Glückwunschkarte.",
-        "question": "Что у говорящего?",
+        "question": "questsStormCoastsFifthQuests.questSeven",
         "options": [
-          "Подарок и открытка",
-          "Цветы и свечи",
-          "Билет и карта"
+          "questsStormCoastsFifthQuests.questSevenFirstOption",
+          "questsStormCoastsFifthQuests.questSevenSecondOption",
+          "questsStormCoastsFifthQuests.questSevenThirdOption"
         ],
         "answer": "Подарок и открытка"
       },
       {
         "id": 8,
         "type": "reorder",
-        "question": "Собери: Мы готовим торт",
+        "question": "questsStormCoastsFifthQuests.questEight",
         "words": [
           "bereiten",
           "Wir",
@@ -935,25 +957,25 @@
       {
         "id": 9,
         "type": "input",
-        "question": "Впиши пропуск: Ich kaufe ___",
+        "question": "questsStormCoastsFifthQuests.questNine",
         "correctAnswer": "Getränke"
       },
       {
         "id": 10,
         "type": "readAndAnswer",
         "text": "An Silvester gibt es Feuerwerk. Am 1. Januar haben wir frei.",
-        "question": "Когда выходной?",
+        "question": "questsStormCoastsFifthQuests.questTen",
         "options": [
-          "1 января",
-          "31 декабря",
-          "24 декабря"
+          "questsStormCoastsFifthQuests.questTenFirstOption",
+          "questsStormCoastsFifthQuests.questTenSecondOption",
+          "questsStormCoastsFifthQuests.questTenThirdOption"
         ],
-        "answer": "1 января"
+        "answer": "questsStormCoastsFifthQuests.questTenFirstOption"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Собери пожелание на Рождество",
+        "question": "questsStormCoastsFifthQuests.questEleven",
         "words": [
           "Frohe",
           "Weihnachten!"
@@ -966,25 +988,25 @@
       {
         "id": 12,
         "type": "input",
-        "question": "Впиши пропуск: Wir feiern mit der ___",
+        "question": "questsStormCoastsFifthQuests.questTwelve",
         "correctAnswer": "Familie"
       },
       {
         "id": 13,
         "type": "readAndAnswer",
         "text": "Die Gäste kommen um 19 Uhr. Anna dekoriert den Raum.",
-        "question": "Когда приходят гости?",
+        "question": "",
         "options": [
-          "В 19:00",
-          "В 17:00",
-          "В 21:00"
+          "questsStormCoastsFifthQuests.questThirteenFirstOption",
+          "questsStormCoastsFifthQuests.questThirteenSecondOption",
+          "questsStormCoastsFifthQuests.questThirteenThirdOption"
         ],
-        "answer": "В 19:00"
+        "answer": "questThirteenFirstOption"
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "Собери: Я принесу салат",
+        "question": "questsStormCoastsFifthQuests.questFourteen",
         "words": [
           "bringe",
           "Ich",
@@ -1003,7 +1025,7 @@
       {
         "id": 15,
         "type": "select",
-        "question": "Выбери пожелание на Новый год",
+        "question": "questsStormCoastsFifthQuests.questFifteen",
         "options": [
           "Alles Gute zum neuen Jahr!",
           "Gute Reise!",
@@ -1015,11 +1037,11 @@
   },
   {
     "questId": "feier-6",
-    "title": "Праздники — дата, время и подтверждение",
+    "title": "questsStormCoastsSixQuests.title",
     "progress": "0/15",
-    "description": "Пишешь и понимаешь приглашения: дата, время, адрес, подтвердить/отказать, спросить можно ли прийти с кем-то.",
+    "description": "questsStormCoastsSixQuests.description",
     "conditions": {
-      "goal": "Datum, Uhrzeit, am/um, kommen/nicht kommen, vielleicht, mitbringen, Bescheid sagen",
+      "goal": "questsStormCoastsSixQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
@@ -1033,27 +1055,27 @@
         "type": "select",
         "question": "das Datum",
         "options": [
-          "Дата",
-          "Адрес",
-          "Подарок"
+          "questsStormCoastsSixQuests.questOneFirstOption",
+          "questsStormCoastsSixQuests.questOneSecondOption",
+          "questsStormCoastsSixQuests.questOneThirdOption"
         ],
-        "answer": "Дата"
+        "answer": "questsStormCoastsSixQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "select",
         "question": "die Uhrzeit",
         "options": [
-          "Время",
-          "Место",
-          "Цена"
+          "questsStormCoastsSixQuests.questTwoFirstOption",
+          "questsStormCoastsSixQuests.questTwoSecondOption",
+          "questsStormCoastsSixQuests.questTwoThirdOption"
         ],
-        "answer": "Время"
+        "answer": "questsStormCoastsSixQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "reorder",
-        "question": "Собери: Вечеринка 3 апреля",
+        "question": "questsStormCoastsSixQuests.questThird",
         "words": [
           "ist",
           "Party",
@@ -1074,7 +1096,7 @@
       {
         "id": 4,
         "type": "input",
-        "question": "Впиши пропуск: Bitte sag bis ___ Bescheid",
+        "question": "questsStormCoastsSixQuests.questFour",
         "correctAnswer": "Freitag"
       },
       {
@@ -1082,16 +1104,16 @@
         "type": "select",
         "question": "vielleicht",
         "options": [
-          "возможно",
-          "точно",
-          "никогда"
+          "questsStormCoastsSixQuests.questFiveFirstOption",
+          "questsStormCoastsSixQuests.questFiveSecondOption",
+          "questsStormCoastsSixQuests.questFiveThirdOption"
         ],
-        "answer": "возможно"
+        "answer": "questsStormCoastsSixQuests.questFiveFirstOption"
       },
       {
         "id": 6,
         "type": "reorder",
-        "question": "Собери вопрос: Ты можешь в субботу прийти?",
+        "question": "questsStormCoastsSixQuests.questSix",
         "words": [
           "Samstag",
           "du",
@@ -1110,7 +1132,7 @@
       {
         "id": 7,
         "type": "select",
-        "question": "Подтверди приход",
+        "question": "questsStormCoastsSixQuests.questSeven",
         "options": [
           "Ich komme",
           "Ich wohne",
@@ -1121,7 +1143,7 @@
       {
         "id": 8,
         "type": "select",
-        "question": "Выбери вежливый отказ",
+        "question": "questsStormCoastsSixQuests.questEight",
         "options": [
           "Ich kann leider nicht",
           "Ich komme sicher",
@@ -1133,29 +1155,29 @@
         "id": 9,
         "type": "readAndAnswer",
         "text": "Die Feier ist am 3. April um 18 Uhr. Bitte sag bis 1. April Bescheid.",
-        "question": "До какого дня нужно ответить?",
+        "question": "questsStormCoastsSixQuests.questNine",
         "options": [
-          "До 1 апреля",
-          "До 3 апреля",
-          "До 5 апреля"
+          "questsStormCoastsSixQuests.questNineFirstOption",
+          "questsStormCoastsSixQuests.questNineSecondOption",
+          "questsStormCoastsSixQuests.questNineThirdOption"
         ],
-        "answer": "До 1 апреля"
+        "answer": "questsStormCoastsSixQuests.questNineFirstOption"
       },
       {
         "id": 10,
         "type": "select",
         "question": "die Einladungskarte",
         "options": [
-          "Пригласительная открытка",
-          "Билет",
-          "Календарь"
+          "questsStormCoastsSixQuests.questTenFirstOption",
+          "questsStormCoastsSixQuests.questTenSecondOption",
+          "questsStormCoastsSixQuests.questTenThirdOption"
         ],
-        "answer": "Пригласительная открытка"
+        "answer": "questsStormCoastsSixQuests.questTenFirstOption"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Собери: Начинаем в 19:00",
+        "question": "questsStormCoastsSixQuests.questEleven",
         "words": [
           "Uhr",
           "beginnen",
@@ -1174,7 +1196,7 @@
       {
         "id": 12,
         "type": "reorder",
-        "question": "Собери: Я отправлю приглашение по e-mail",
+        "question": "questsStormCoastsSixQuests.questTwelve",
         "words": [
           "Ich",
           "schicke",
@@ -1196,18 +1218,18 @@
         "id": 13,
         "type": "readAndAnswer",
         "text": "Anna schreibt: Kann ich jemanden mitbringen?",
-        "question": "Что спрашивает Анна?",
+        "question": "questsStormCoastsSixQuests.questThirteen",
         "options": [
-          "Можно ли привести кого-то",
-          "Во сколько начало",
-          "Где адрес"
+          "questsStormCoastsSixQuests.questThirteenFirstOption",
+          "questsStormCoastsSixQuests.questThirteenSecondOption",
+          "questsStormCoastsSixQuests.questThirteenThirdOption"
         ],
         "answer": "Можно ли привести кого-то"
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "Собери предложение",
+        "question": "questsStormCoastsSixQuests.questFourteen",
         "words": [
           "Du",
           "kannst",
@@ -1228,27 +1250,27 @@
         "type": "select",
         "question": "mitbringen",
         "options": [
-          "принести/привести с собой",
-          "забыть",
-          "опоздать"
+          "questsStormCoastsSixQuests.questFifteenFirstOption",
+          "questsStormCoastsSixQuests.questFifteenSecondOption",
+          "questsStormCoastsSixQuests.questFifteenThirdOption"
         ],
-        "answer": "принести/привести с собой"
+        "answer": "questsStormCoastsSixQuests.questFifteenFirstOption"
       }
     ]
   },
   {
     "questId": "feier-7",
-    "title": "Праздники — еда и напитки",
+    "title": "questsStormCoastsSevenQuests.title",
     "progress": "0/15",
-    "description": "Договариваешься кто что приносит, выбираешь напитки и закуски, говоришь «без/с» и количества.",
+    "description": "questsStormCoastsSevenQuests.description",
     "conditions": {
-      "goal": "Getränke, Snacks, Saft, Wasser, Limonade, ohne/mit, vegetarisch, zwei Flaschen, eine Torte, mitbringen/verteilen",
+      "goal": "questsStormCoastsSevenQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 240,
-      "xp": 350
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
@@ -1256,49 +1278,49 @@
         "type": "select",
         "question": "die Getränke",
         "options": [
-          "Напитки",
-          "Украшения",
-          "Свечи"
+          "questsStormCoastsSevenQuests.questOneFirstOption",
+          "questsStormCoastsSevenQuests.questOneSecondOption",
+          "questsStormCoastsSevenQuests.questOneThirdOption"
         ],
-        "answer": "Напитки"
+        "answer": "questsStormCoastsSevenQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "select",
         "question": "die Snacks",
         "options": [
-          "Закуски",
-          "Игры",
-          "Музыка"
+          "questsStormCoastsSevenQuests.questTwoFirstOption",
+          "questsStormCoastsSevenQuests.questTwoSecondOption",
+          "questsStormCoastsSevenQuests.questTwoThirdOption"
         ],
-        "answer": "Закуски"
+        "answer": "questsStormCoastsSevenQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "select",
         "question": "die Limonade",
         "options": [
-          "Лимонад",
-          "Салат",
-          "Хлеб"
+          "questsStormCoastsSevenQuests.questThirdFirstOption",
+          "questsStormCoastsSevenQuests.questThirdSecondOption",
+          "questsStormCoastsSevenQuests.questThirdThirdOption"
         ],
-        "answer": "Лимонад"
+        "answer": "questsStormCoastsSevenQuests.questThirdFirstOption"
       },
       {
         "id": 4,
         "type": "select",
         "question": "vegetarisch",
         "options": [
-          "вегетарианский",
-          "острый",
-          "сладкий"
+          "questsStormCoastsSevenQuests.questFourFirstOption",
+          "questsStormCoastsSevenQuests.questFourSecondOption",
+          "questsStormCoastsSevenQuests.questFourThirdOption"
         ],
-        "answer": "вегетарианский"
+        "answer": "questsStormCoastsSevenQuests.questFourFirstOption"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Собери предложение",
+        "question": "questsStormCoastsSevenQuests.questFive",
         "words": [
           "Ich",
           "bringe",
@@ -1319,7 +1341,7 @@
       {
         "id": 6,
         "type": "reorder",
-        "question": "Собери предложение",
+        "question": "questsStormCoastsSevenQuests.questSix",
         "words": [
           "Zwei",
           "bitte",
@@ -1334,9 +1356,9 @@
         ]
       },
       {
-        "id": 6,
+        "id": 7,
         "type": "reorder",
-        "question": "Собери предложение",
+        "question": "questsStormCoastsSevenQuests.questSeven",
         "words": [
           "Ich",
           "bringe",
@@ -1355,9 +1377,9 @@
         ]
       },
       {
-        "id": 7,
+        "id": 8,
         "type": "reorder",
-        "question": "Собери: Без алкоголя, пожалуйста",
+        "question": "questsStormCoastsSevenQuests.questEight",
         "words": [
           "Ohne",
           "bitte",
@@ -1370,109 +1392,92 @@
         ]
       },
       {
-        "id": 8,
+        "id": 9,
         "type": "speechToText",
-        "question": "Попроси сок",
+        "question": "questsStormCoastsSevenQuests.questNine",
         "text": "Ein Glas Saft, bitte",
         "answer": "Ein Glas Saft, bitte"
       },
       {
-        "id": 9,
+        "id": 10,
         "type": "readAndAnswer",
         "text": "Wir haben Wasser, Limonade und Saft. Kein Alkohol.",
-        "question": "Что отсутствует?",
+        "question": "questsStormCoastsSevenQuests.questTen",
         "options": [
-          "Алкоголь",
-          "Лимонад",
-          "Сок"
+          "questsStormCoastsSevenQuests.questTenFirstOption",
+          "questsStormCoastsSevenQuests.questTenSecondOption",
+          "questsStormCoastsSevenQuests.questTenThirdOption"
         ],
-        "answer": "Алкоголь"
-      },
-      {
-        "id": 10,
-        "type": "select",
-        "question": "die Nüsse",
-        "options": [
-          "Орехи",
-          "Суп",
-          "Фрукты"
-        ],
-        "answer": "Орехи"
+        "answer": "questsStormCoastsSevenQuests.questTenFirstOption"
       },
       {
         "id": 11,
+        "type": "select",
+        "question": "die Nüsse",
+        "options": [
+          "questsStormCoastsSevenQuests.questElevenFirstOption",
+          "questsStormCoastsSevenQuests.questElevenSecondOption",
+          "questsStormCoastsSevenQuests.questElevenThirdOption"
+        ],
+        "answer": "questsStormCoastsSevenQuests.questElevenFirstOption"
+      },
+      {
+        "id": 12,
         "type": "speechToText",
-        "question": "Предложи распределить",
+        "question": "questsStormCoastsSevenQuests.questTwelve",
         "text": "Wir teilen das Essen",
         "answer": "Wir teilen das Essen"
       },
       {
-        "id": 11,
-        "type": "reorder",
-        "question": "Собери: Без алкоголя, пожалуйста",
-        "words": [
-          "das",
-          "Essen",
-          "Wir",
-          "teilen"
-        ],
-        "correctOrder": [
-          "Wir",
-          "teilen",
-          "das",
-          "Essen"
-        ]
-      },
-      {
-        "id": 12,
-        "type": "reorder",
-        "question": "Собери: «Одна тортa для всех»",
-        "words": [
-          "Eine",
-          "Torte",
-          "für",
-          "alle"
-        ],
-        "correctOrder": [
-          "Eine",
-          "Torte",
-          "für",
-          "alle"
-        ]
-      },
-      {
         "id": 13,
-        "type": "readAndAnswer",
-        "text": "Max bringt Chips, Anna bringt Salat, und ich bringe Getränke.",
-        "question": "Кто приносит салат?",
-        "options": [
-          "Анна",
-          "Макс",
-          "Ты"
+        "type": "reorder",
+        "question": "questsStormCoastsSevenQuests.questThirteen",
+        "words": [
+          "Eine",
+          "Torte",
+          "für",
+          "alle"
         ],
-        "answer": "Анна"
+        "correctOrder": [
+          "Eine",
+          "Torte",
+          "für",
+          "alle"
+        ]
       },
       {
         "id": 14,
-        "type": "reorder",
-        "question": "Собери: «С сахаром или без?»",
-        "words": [
-          "Mit",
-          "Zucker",
-          "oder",
-          "ohne"
+        "type": "readAndAnswer",
+        "text": "Max bringt Chips, Anna bringt Salat, und ich bringe Getränke.",
+        "question": "questsStormCoastsSevenQuests.questFourteen",
+        "options": [
+          "questsStormCoastsSevenQuests.questFourteenFirstOption",
+          "questsStormCoastsSevenQuests.questFourteenSecondOption",
+          "questsStormCoastsSevenQuests.questFourteenThirdOption"
         ],
-        "correctOrder": [
-          "Mit",
-          "Zucker",
-          "oder",
-          "ohne"
-        ]
+        "answer": "questsStormCoastsSevenQuests.questFourteenFirstOption"
       },
       {
         "id": 15,
         "type": "reorder",
-        "question": "Собери предложение",
+        "question": "questsStormCoastsSevenQuests.questFifteen",
+        "words": [
+          "Mit",
+          "Zucker",
+          "oder",
+          "ohne"
+        ],
+        "correctOrder": [
+          "Mit",
+          "Zucker",
+          "oder",
+          "ohne"
+        ]
+      },
+      {
+        "id": 16,
+        "type": "reorder",
+        "question": "questsStormCoastsSevenQuests.questSixteen",
         "words": [
           "esse",
           "vegetarisch",
@@ -1488,17 +1493,17 @@
   },
   {
     "questId": "feier-8",
-    "title": "Праздники — дресс-код и программа",
+    "title": "questsStormCoastsEighthQuests.title",
     "progress": "0/15",
-    "description": "Узнаёшь про дресс-код, чем занимаются на празднике: танцы, игры, фото, тосты.",
+    "description": "questsStormCoastsEighthQuests.description",
     "conditions": {
-      "goal": "Dresscode, schick/locker, das Kostüm, tanzen, spielen, Fotos machen, Programm, beginnt/endet um …, Musik leiser/lauter",
+      "goal": "questsStormCoastsEighthQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 245,
-      "xp": 360
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
@@ -1506,49 +1511,49 @@
         "type": "select",
         "question": "der Dresscode",
         "options": [
-          "Дресс-код",
-          "Подарок",
-          "Приглашение"
+          "questsStormCoastsEighthQuests.questOneFirstOption",
+          "questsStormCoastsEighthQuests.questOneSecondOption",
+          "questsStormCoastsEighthQuests.questOneThirdOption"
         ],
-        "answer": "Дресс-код"
+        "answer": "questsStormCoastsEighthQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "select",
         "question": "schick",
         "options": [
-          "нарядно",
-          "громко",
-          "далеко"
+          "questsStormCoastsEighthQuests.questTwoFirstOption",
+          "questsStormCoastsEighthQuests.questTwoSecondOption",
+          "questsStormCoastsEighthQuests.questTwoThirdOption"
         ],
-        "answer": "нарядно"
+        "answer": "questsStormCoastsEighthQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "select",
         "question": "locker",
         "options": [
-          "повседневно/свободно",
-          "рано",
-          "дорого"
+          "questsStormCoastsEighthQuests.questOneThirdFirstOption",
+          "questsStormCoastsEighthQuests.questOneThirdSecondOption",
+          "questsStormCoastsEighthQuests.questOneThirdThirdOption"
         ],
-        "answer": "повседневно/свободно"
+        "answer": "questsStormCoastsEighthQuests.questOneThirdFirstOption"
       },
       {
         "id": 4,
         "type": "select",
         "question": "das Kostüm",
         "options": [
-          "Костюм (карнавальный)",
-          "Пальто",
-          "Платье"
+          "questsStormCoastsEighthQuests.questFourFirstOption",
+          "questsStormCoastsEighthQuests.questFourSecondOption",
+          "questsStormCoastsEighthQuests.questFourThirdOption"
         ],
-        "answer": "Костюм (карнавальный)"
+        "answer": "questsStormCoastsEighthQuests.questFourFirstOption"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Собери предложение",
+        "question": "questsStormCoastsEighthQuests.questFive",
         "words": [
           "Das",
           "Programm",
@@ -1567,7 +1572,7 @@
       {
         "id": 6,
         "type": "reorder",
-        "question": "Собери просьбу сделать музыку тише",
+        "question": "questsStormCoastsEighthQuests.questSix",
         "words": [
           "Kannst",
           "du",
@@ -1588,7 +1593,7 @@
       {
         "id": 7,
         "type": "reorder",
-        "question": "Собери: «Мы танцуем и играем»",
+        "question": "questsStormCoastsEighthQuests.questSeven",
         "words": [
           "Wir",
           "tanzen",
@@ -1605,7 +1610,7 @@
       {
         "id": 8,
         "type": "select",
-        "question": "Как предложить сделать фото?",
+        "question": "questsStormCoastsEighthQuests.questEight",
         "options": [
           "Lass uns ein Foto machen",
           "Ich mache Musik",
@@ -1617,7 +1622,7 @@
         "id": 9,
         "type": "readAndAnswer",
         "text": "Dresscode: locker. Fotos um 20 Uhr, Spiele um 21 Uhr.",
-        "question": "Когда игры?",
+        "question": "questsStormCoastsEighthQuests.questNine",
         "options": [
           "21:00",
           "20:00",
@@ -1630,16 +1635,16 @@
         "type": "select",
         "question": "leiser/lauter",
         "options": [
-          "тише/громче",
-          "быстрее/медленнее",
-          "раньше/позже"
+          "questsStormCoastsEighthQuests.questTenFirstOption",
+          "questsStormCoastsEighthQuests.questTenSecondOption",
+          "questsStormCoastsEighthQuests.questTenThirdOption"
         ],
-        "answer": "тише/громче"
+        "answer": "questsStormCoastsEighthQuests.questTenFirstOption"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Собери: «Вечеринка заканчивается в полночь»",
+        "question": "questsStormCoastsEighthQuests.questEleven",
         "words": [
           "Die",
           "Party",
@@ -1658,7 +1663,7 @@
       {
         "id": 12,
         "type": "reorder",
-        "question": "Собери: «Тост за наш праздник!»",
+        "question": "questsStormCoastsEighthQuests.questTwelve",
         "words": [
           "Ein",
           "Toast",
@@ -1678,18 +1683,18 @@
         "id": 13,
         "type": "readAndAnswer",
         "text": "Kostümparty am Samstag. Bitte kommt schick.",
-        "question": "Какой дресс-код?",
+        "question": "questsStormCoastsEighthQuests.questThirteen",
         "options": [
-          "Нарядный",
-          "Свободный",
-          "Спортивный"
+          "questsStormCoastsEighthQuests.questThirteenFirstOption",
+          "questsStormCoastsEighthQuests.questThirteenSecondOption",
+          "questsStormCoastsEighthQuests.questThirteenThirdOption"
         ],
-        "answer": "Нарядный"
+        "answer": "questsStormCoastsEighthQuests.questThirteenFirstOption"
       },
       {
         "id": 14,
         "type": "select",
-        "question": "Как сказать: «Дресс-код свободный»",
+        "question": "questsStormCoastsEighthQuests.questFourteen",
         "options": [
           "Der Dresscode ist locker",
           "Die Musik ist lauter",
@@ -1702,27 +1707,27 @@
         "type": "select",
         "question": "Fotos machen",
         "options": [
-          "делать фото",
-          "выключить свет",
-          "мыть посуду"
+          "questsStormCoastsEighthQuests.questFifteenFirstOption",
+          "questsStormCoastsEighthQuests.questFifteenSecondOption",
+          "questsStormCoastsEighthQuests.questFifteenThirdOption"
         ],
-        "answer": "делать фото"
+        "answer": "questsStormCoastsEighthQuests.questFifteenFirstOption"
       }
     ]
   },
   {
     "questId": "feier-9",
-    "title": "Праздники — семейные события",
+    "title": "questsStormCoastsNinthQuests.title",
     "progress": "0/15",
-    "description": "Свадьба, юбилей, крестины: как поздравить, что надеть, что подарить.",
+    "description": "questsStormCoastsNinthQuests.description",
     "conditions": {
-      "goal": "die Hochzeit, das Jubiläum, die Taufe, gratulieren zu, zur Hochzeit/Zum Jubiläum, schick, Geschenk, Feier im Restaurant/Kirche",
+      "goal": "questsStormCoastsNinthQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 250,
-      "xp": 370
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
@@ -1730,49 +1735,49 @@
         "type": "select",
         "question": "die Hochzeit",
         "options": [
-          "Свадьба",
-          "День рождения",
-          "Карнавал"
+          "questsStormCoastsNinthQuests.questOneFirstOption",
+          "questsStormCoastsNinthQuests.questOneSecondOption",
+          "questsStormCoastsNinthQuests.questOneThirdOption"
         ],
-        "answer": "Свадьба"
+        "answer": "questsStormCoastsNinthQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "select",
         "question": "das Jubiläum",
         "options": [
-          "Юбилей",
-          "Отпуск",
-          "Экскурсия"
+          "questsStormCoastsNinthQuests.questTwoFirstOption",
+          "questsStormCoastsNinthQuests.questTwoSecondOption",
+          "questsStormCoastsNinthQuests.questTwoThirdOption"
         ],
-        "answer": "Юбилей"
+        "answer": "questsStormCoastsNinthQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "select",
         "question": "die Taufe",
         "options": [
-          "Крестины",
-          "Выпускной",
-          "Пикник"
+          "questsStormCoastsNinthQuests.questThirdFirstOption",
+          "questsStormCoastsNinthQuests.questThirdSecondOption",
+          "questsStormCoastsNinthQuests.questThirdThirdOption"
         ],
-        "answer": "Крестины"
+        "answer": "questsStormCoastsNinthQuests.questThirdFirstOption"
       },
       {
         "id": 4,
         "type": "select",
         "question": "gratulieren zu",
         "options": [
-          "поздравлять с",
-          "встречаться в",
-          "просить о"
+          "questsStormCoastsNinthQuests.questFourFirstOption",
+          "questsStormCoastsNinthQuests.questFourSecondOption",
+          "questsStormCoastsNinthQuests.questFourThirdOption"
         ],
-        "answer": "поздравлять с"
+        "answer": "questsStormCoastsNinthQuests.questFourFirstOption"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Собери: «Поздравляю со свадьбой!»",
+        "question": "questsStormCoastsNinthQuests.questFive",
         "words": [
           "Herzlichen",
           "Glückwunsch",
@@ -1789,7 +1794,7 @@
       {
         "id": 6,
         "type": "reorder",
-        "question": "Собери пожелание на юбилей",
+        "question": "questsStormCoastsNinthQuests.questSix",
         "words": [
           "Alles",
           "Gute",
@@ -1806,7 +1811,7 @@
       {
         "id": 7,
         "type": "reorder",
-        "question": "Собери: «Праздник в ресторане»",
+        "question": "questsStormCoastsNinthQuests.questSeven",
         "words": [
           "Die",
           "Feier",
@@ -1825,7 +1830,7 @@
       {
         "id": 8,
         "type": "reorder",
-        "question": "Собери вопрос про подарок",
+        "question": "questsStormCoastsNinthQuests.questEight",
         "words": [
           "Was",
           "schenken",
@@ -1841,29 +1846,29 @@
         "id": 9,
         "type": "readAndAnswer",
         "text": "Die Hochzeit ist am Samstag. Die Feier ist schick. Bitte keine Jeans.",
-        "question": "Что запрещено?",
+        "question": "questsStormCoastsNinthQuests.questNine",
         "options": [
-          "Джинсы",
-          "Платья",
-          "Костюмы"
+          "questsStormCoastsNinthQuests.questNineFirstOption",
+          "questsStormCoastsNinthQuests.questNineSecondOption",
+          "questsStormCoastsNinthQuests.questNineThirdOption"
         ],
-        "answer": "Джинсы"
+        "answer": "questsStormCoastsNinthQuests.questNineFirstOption"
       },
       {
         "id": 10,
         "type": "select",
         "question": "die Kirche",
         "options": [
-          "Церковь",
-          "Ресторан",
-          "Офис"
+          "questsStormCoastsNinthQuests.questTenFirstOption",
+          "questsStormCoastsNinthQuests.questTenSecondOption",
+          "questsStormCoastsNinthQuests.questTenThirdOption"
         ],
-        "answer": "Церковь"
+        "answer": "questsStormCoastsNinthQuests.questTenFirstOption"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Собери: «Мы поздравляем семью»",
+        "question": "questsStormCoastsNinthQuests.questEleven",
         "words": [
           "Wir",
           "gratulieren",
@@ -1880,7 +1885,7 @@
       {
         "id": 12,
         "type": "reorder",
-        "question": "Собери: «Подарок от нас»",
+        "question": "questsStormCoastsNinthQuests.questTwelve",
         "words": [
           "Ein",
           "Geschenk",
@@ -1898,18 +1903,18 @@
         "id": 13,
         "type": "readAndAnswer",
         "text": "Zur Taufe bringt die Familie Blumen und eine Karte.",
-        "question": "Что приносит семья?",
+        "question": "questsStormCoastsNinthQuests.questThirteen",
         "options": [
-          "Цветы и открытку",
-          "Игры и музыку",
-          "Только торт"
+          "questsStormCoastsNinthQuests.questThirteenFirstOption",
+          "questsStormCoastsNinthQuests.questThirteenSecondOption",
+          "questsStormCoastsNinthQuests.questThirteenThirdOption"
         ],
-        "answer": "Цветы и открытку"
+        "answer": "questsStormCoastsNinthQuests.questThirteenFirstOption"
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "Собери: «Мы одеты нарядно»",
+        "question": "questsStormCoastsNinthQuests.questFourteen",
         "words": [
           "Wir",
           "sind",
@@ -1928,45 +1933,45 @@
         "type": "select",
         "question": "die Glückwünsche",
         "options": [
-          "Поздравления",
-          "Правила",
-          "Расписание"
+          "questsStormCoastsNinthQuests.questFifteenFirstOption",
+          "questsStormCoastsNinthQuests.questFifteenSecondOption",
+          "questsStormCoastsNinthQuests.questFifteenThirdOption"
         ],
-        "answer": "Поздравления"
+        "answer": "questsStormCoastsNinthQuests.questFifteenFirstOption"
       }
     ]
   },
   {
     "questId": "feier-10",
-    "title": "Праздники — итоговая практика",
+    "title": "questsStormCoastsTenthQuests.title",
     "progress": "0/15",
-    "description": "Большая тренировка: приглашение, время и место, еда, поздравления и семейные события",
+    "description": "questsStormCoastsTenthQuests.description",
     "conditions": {
-      "goal": "Выполните все задания",
+      "goal": "questsStormCoastsTenthQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 270,
-      "xp": 390
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
         "id": 1,
         "type": "readAndAnswer",
         "text": "Einladung: Samstag, 18 Uhr, im Park.",
-        "question": "Где проходит вечеринка?",
+        "question": "questsStormCoastsTenthQuests.questOne",
         "options": [
-          "В парке",
-          "Дома",
-          "В кафе"
+          "questsStormCoastsTenthQuests.questOneFirstOption",
+          "questsStormCoastsTenthQuests.questOneSecondOption",
+          "questsStormCoastsTenthQuests.questOneThirdOption"
         ],
-        "answer": "В парке"
+        "answer": "questsStormCoastsTenthQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "reorder",
-        "question": "Собери подтверждение",
+        "question": "questsStormCoastsTenthQuests.questTwo",
         "words": [
           "Ich",
           "gern",
@@ -1981,7 +1986,7 @@
       {
         "id": 3,
         "type": "select",
-        "question": "Выбери вежливый отказ",
+        "question": "questsStormCoastsTenthQuests.questThird",
         "options": [
           "Ich kann leider nicht",
           "Ich komme gern",
@@ -1993,7 +1998,7 @@
         "id": 4,
         "type": "readAndAnswer",
         "text": "Die Party beginnt um 19:30 und endet um Mitternacht.",
-        "question": "Во сколько начинается?",
+        "question": "questsStormCoastsTenthQuests.questFour",
         "options": [
           "19:30",
           "18:00",
@@ -2004,7 +2009,7 @@
       {
         "id": 5,
         "type": "reorder",
-        "question": "Собери предложение",
+        "question": "questsStormCoastsTenthQuests.questFive",
         "words": [
           "mit",
           "du",
@@ -2021,7 +2026,7 @@
       {
         "id": 6,
         "type": "reorder",
-        "question": "Собери: Без алкоголя, пожалуйста",
+        "question": "questsStormCoastsTenthQuests.questSix",
         "words": [
           "Alkohol",
           "Ohne",
@@ -2037,18 +2042,18 @@
         "id": 7,
         "type": "readAndAnswer",
         "text": "Zur Hochzeit tragen wir schicke Kleidung.",
-        "question": "Какую одежду надевают?",
+        "question": "questsStormCoastsTenthQuests.questSeven",
         "options": [
-          "Нарядную",
-          "Спортивную",
-          "Рабочую"
+          "questsStormCoastsTenthQuests.questSevenFirstOption",
+          "questsStormCoastsTenthQuests.questSevenSecondOption",
+          "questsStormCoastsTenthQuests.questSevenThirdOption"
         ],
-        "answer": "Нарядную"
+        "answer": "questsStormCoastsTenthQuests.questSevenFirstOption"
       },
       {
         "id": 8,
         "type": "reorder",
-        "question": "Собери поздравление со свадьбой",
+        "question": "questsStormCoastsTenthQuests.questEight",
         "words": [
           "Herzlichen",
           "Glückwunsch",
@@ -2065,7 +2070,7 @@
       {
         "id": 9,
         "type": "reorder",
-        "question": "Собери: Мы делаем фото",
+        "question": "questsStormCoastsTenthQuests.questNine",
         "words": [
           "Wir",
           "machen",
@@ -2081,18 +2086,18 @@
         "id": 10,
         "type": "readAndAnswer",
         "text": "Getränke: Wasser, Saft, Limonade. Snacks: Chips und Nüsse.",
-        "question": "Какие закуски есть?",
+        "question": "questsStormCoastsTenthQuests.questTen",
         "options": [
-          "Чипсы и орехи",
-          "Салаты",
-          "Суп и хлеб"
+          "questsStormCoastsTenthQuests.questTenFirstOption",
+          "questsStormCoastsTenthQuests.questTenSecondOption",
+          "questsStormCoastsTenthQuests.questTenThirdOption"
         ],
-        "answer": "Чипсы и орехи"
+        "answer": "questsStormCoastsTenthQuests.questTenFirstOption"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Собери: Мы празднуем с семьёй",
+        "question": "questsStormCoastsTenthQuests.questEleven",
         "words": [
           "feiern",
           "Wir",
@@ -2111,7 +2116,7 @@
       {
         "id": 12,
         "type": "reorder",
-        "question": "Собери предложение",
+        "question": "questsStormCoastsTenthQuests.questTwelve",
         "words": [
           "sag",
           "Bitte",
@@ -2131,18 +2136,18 @@
         "id": 13,
         "type": "readAndAnswer",
         "text": "Anna bringt Salat mit. Max bringt Getränke.",
-        "question": "Кто приносит напитки?",
+        "question": "questsStormCoastsTenthQuests.questThirteen",
         "options": [
-          "Макс",
-          "Анна",
-          "Вы"
+          "questsStormCoastsTenthQuests.questThirteenFirstOption",
+          "questsStormCoastsTenthQuests.questThirteenSecondOption",
+          "questsStormCoastsTenthQuests.questThirteenThirdOption"
         ],
-        "answer": "Макс"
+        "answer": "questsStormCoastsTenthQuests.questThirteenFirstOption"
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "Собери пожелание на юбилей",
+        "question": "questsStormCoastsTenthQuests.questFourteen",
         "words": [
           "Jubiläum",
           "zum",
@@ -2159,7 +2164,7 @@
       {
         "id": 15,
         "type": "reorder",
-        "question": "Собери прощание после праздника",
+        "question": "questsStormCoastsTenthQuests.questFifteen",
         "words": [
           "tolle",
           "die",

@@ -1,133 +1,213 @@
 [
   {
     "questId": "city-1",
-    "title": "В городе",
+    "title": "questsWindValleyFirstQuests.title",
     "progress": "0/15",
-    "description": "Улица, парк, площадь, мост. Учим 4 слова и собираем простые фразы",
+    "description": "questsWindValleyFirstQuests.description",
     "conditions": {
-      "goal": "Называть базовые места в городе и собирать простые фразы Das ist",
+      "goal": "questsWindValleyFirstQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 180,
-      "xp": 320
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
         "id": 1,
         "type": "select",
-        "question": "Что значит: die Straße",
-        "options": ["Улица", "Парк", "Мост"],
-        "answer": "Улица"
+        "question": "questsWindValleyFirstQuests.questOne",
+        "options": [
+          "questsWindValleyFirstQuests.questOneFirstOption",
+          "questsWindValleyFirstQuests.questOneSecondOption",
+          "questsWindValleyFirstQuests.questOneThirdOption"
+        ],
+        "answer": "questsWindValleyFirstQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "select",
-        "question": "Что значит: der Park",
-        "options": ["Парк", "Площадь", "Остановка"],
-        "answer": "Парк"
+        "question": "questsWindValleyFirstQuests.questTwo",
+        "options": [
+          "questsWindValleyFirstQuests.questTwoFirstOption",
+          "questsWindValleyFirstQuests.questTwoSecondOption",
+          "questsWindValleyFirstQuests.questTwoThirdOption"
+        ],
+        "answer": "questsWindValleyFirstQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Что значит: der Platz",
-        "options": ["Площадь", "Мост", "Дорога"],
-        "answer": "Площадь"
+        "question": "questsWindValleyFirstQuests.questThird",
+        "options": [
+          "questsWindValleyFirstQuests.questThirdFirstOption",
+          "questsWindValleyFirstQuests.questThirdSecondOption",
+          "questsWindValleyFirstQuests.questThirdThirdOption"
+        ],
+        "answer": "questsWindValleyFirstQuests.questThirdFirstOption"
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Что значит: die Brücke",
-        "options": ["Мост", "Улица", "Парк"],
-        "answer": "Мост"
+        "question": "questsWindValleyFirstQuests.questFour",
+        "options": [
+          "questsWindValleyFirstQuests.questFourFirstOption",
+          "questsWindValleyFirstQuests.questFourSecondOption",
+          "questsWindValleyFirstQuests.questFourThirdOption"
+        ],
+        "answer": "questsWindValleyFirstQuests.questFourFirstOption"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["ist", "Straße", "die", "Das"],
-        "correctOrder": ["Das", "ist", "die", "Straße"]
+        "question": "questsWindValleyFirstQuests.questFive",
+        "words": [
+          "ist",
+          "Straße",
+          "die",
+          "Das"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "die",
+          "Straße"
+        ]
       },
       {
         "id": 6,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleyFirstQuests.questSix",
         "text": "Die Straße",
         "answer": "Die Straße"
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["ist", "Park", "Das", "der"],
-        "correctOrder": ["Das", "ist", "der", "Park"]
+        "question": "questsWindValleyFirstQuests.questSeven",
+        "words": [
+          "ist",
+          "Park",
+          "Das",
+          "der"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "der",
+          "Park"
+        ]
       },
       {
         "id": 8,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleyFirstQuests.questEight",
         "text": "Der Park",
         "answer": "Der Park"
       },
       {
         "id": 9,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["ist", "Platz", "der", "Das"],
-        "correctOrder": ["Das", "ist", "der", "Platz"]
+        "question": "questsWindValleyFirstQuests.questNine",
+        "words": [
+          "ist",
+          "Platz",
+          "der",
+          "Das"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "der",
+          "Platz"
+        ]
       },
       {
         "id": 10,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleyFirstQuests.questTen",
         "text": "Der Platz",
         "answer": "Der Platz"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["Brücke", "die", "Das", "ist"],
-        "correctOrder": ["Das", "ist", "die", "Brücke"]
+        "question": "questsWindValleyFirstQuests.questEleven",
+        "words": [
+          "Brücke",
+          "die",
+          "Das",
+          "ist"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "die",
+          "Brücke"
+        ]
       },
       {
         "id": 12,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleyFirstQuests.questTwelve",
         "text": "Die Brücke",
         "answer": "Die Brücke"
       },
       {
         "id": 13,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["Straße", "große", "eine"],
-        "correctOrder": ["eine", "große", "Straße"]
+        "question": "questsWindValleyFirstQuests.questThirteen",
+        "words": [
+          "Straße",
+          "große",
+          "eine"
+        ],
+        "correctOrder": [
+          "eine",
+          "große",
+          "Straße"
+        ]
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["kleiner", "ein", "Park"],
-        "correctOrder": ["ein", "kleiner", "Park"]
+        "question": "questsWindValleyFirstQuests.questFourteen",
+        "words": [
+          "kleiner",
+          "ein",
+          "Park"
+        ],
+        "correctOrder": [
+          "ein",
+          "kleiner",
+          "Park"
+        ]
       },
       {
         "id": 15,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["großer", "Platz", "ein"],
-        "correctOrder": ["ein", "großer", "Platz"]
+        "question": "questsWindValleyFirstQuests.questFifteen",
+        "words": [
+          "großer",
+          "Platz",
+          "ein"
+        ],
+        "correctOrder": [
+          "ein",
+          "großer",
+          "Platz"
+        ]
       }
     ]
   },
   {
     "questId": "city-2",
-    "title": "Транспорт",
+    "title": "questsWindValleySecondQuests.title",
     "progress": "0/15",
-    "description": "Автобус, метро, вокзал, билет. Учим 4 слова и собираем простые фразы",
+    "description": "questsWindValleySecondQuests.description",
     "conditions": {
-      "goal": "Называть транспорт и собирать простые фразы Das ist",
+      "goal": "questsWindValleySecondQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
@@ -139,117 +219,134 @@
       {
         "id": 1,
         "type": "select",
-        "question": "Что значит: die U-Bahn",
-        "options": ["Метро", "Автобус", "Вокзал"],
-        "answer": "Метро"
+        "question": "questsWindValleySecondQuests.questOne",
+        "options": [
+          "questsWindValleySecondQuests.questOneFirstOption",
+          "questsWindValleySecondQuests.questOneSecondOption",
+          "questsWindValleySecondQuests.questOneThirdOption"
+        ],
+        "answer": "questsWindValleySecondQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "select",
-        "question": "Что значит: der Bus",
-        "options": ["Автобус", "Билет", "Площадь"],
-        "answer": "Автобус"
+        "question": "questsWindValleySecondQuests.questTwo",
+        "options": [
+          "questsWindValleySecondQuests.questTwoFirstOption",
+          "questsWindValleySecondQuests.questTwoSecondOption",
+          "questsWindValleySecondQuests.questTwoThirdOption"
+        ],
+        "answer": "questsWindValleySecondQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Что значит: der Bahnhof",
-        "options": ["Вокзал", "Мост", "Магазин"],
-        "answer": "Вокзал"
+        "question": "questsWindValleySecondQuests.questThird",
+        "options": [
+          "questsWindValleySecondQuests.questThirdFirstOption",
+          "questsWindValleySecondQuests.questThirdSecondOption",
+          "questsWindValleySecondQuests.questThirdThirdOption"
+        ],
+        "answer": "questsWindValleySecondQuests.questThirdFirstOption"
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Что значит: das Ticket",
-        "options": ["Билет", "Деньги", "Касса"],
-        "answer": "Билет"
+        "question": "questsWindValleySecondQuests.questFour",
+        "options": [
+          "questsWindValleySecondQuests.questFourFirstOption",
+          "questsWindValleySecondQuests.questFourSecondOption",
+          "questsWindValleySecondQuests.questFourThirdOption"
+        ],
+        "answer": "questsWindValleySecondQuests.questFourFirstOption"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsWindValleySecondQuests.questFive",
         "words": ["ist", "die", "U-Bahn", "Das"],
-        "correctOrder": ["Das", "ист", "die", "U-Bahn"]
+        "correctOrder": ["Das", "ist", "die", "U-Bahn"]
       },
       {
         "id": 6,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleySecondQuests.questSix",
         "text": "Die U-Bahn",
         "answer": "Die U-Bahn"
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsWindValleySecondQuests.questSeven",
         "words": ["der", "ist", "Bus", "Das"],
         "correctOrder": ["Das", "ist", "der", "Bus"]
       },
       {
         "id": 8,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleySecondQuests.questEight",
         "text": "Der Bus",
         "answer": "Der Bus"
       },
       {
         "id": 9,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsWindValleySecondQuests.questNine",
         "words": ["ist", "Bahnhof", "Das", "der"],
         "correctOrder": ["Das", "ist", "der", "Bahnhof"]
       },
       {
         "id": 10,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleySecondQuests.questTen",
         "text": "Der Bahnhof",
         "answer": "Der Bahnhof"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsWindValleySecondQuests.questEleven",
         "words": ["ist", "Ticket", "Das", "ein"],
         "correctOrder": ["Das", "ist", "ein", "Ticket"]
       },
       {
         "id": 12,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleySecondQuests.questTwelve",
         "text": "Ein Ticket",
         "answer": "Ein Ticket"
       },
       {
         "id": 13,
         "type": "reorder",
-        "question": "Собери словосочетание",
+        "question": "questsWindValleySecondQuests.questThirteen",
         "words": ["neues", "ein", "Ticket"],
         "correctOrder": ["ein", "neues", "Ticket"]
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "Собери словосочетание",
+        "question": "questsWindValleySecondQuests.questFourteen",
         "words": ["großer", "ein", "Bahnhof"],
         "correctOrder": ["ein", "großer", "Bahnhof"]
       },
       {
         "id": 15,
         "type": "reorder",
-        "question": "Собери словосочетание",
+        "question": "questsWindValleySecondQuests.questFifteen",
         "words": ["ein", "kleiner", "Bus"],
         "correctOrder": ["ein", "kleiner", "Bus"]
       }
     ]
   },
+
   {
     "questId": "city-3",
-    "title": "Магазины в городе",
+    "title": "questsWindValleyThirdQuests.title",
     "progress": "0/15",
-    "description": "Пекарня, аптека, банк, супермаркет. Учим 4 слова и собираем простые фразы",
+    "description": "questsWindValleyThirdQuests.description",
     "conditions": {
-      "goal": "Называть магазины и места сервиса и собирать простые фразы Das ist",
+      "goal": "questsWindValleyThirdQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
@@ -261,117 +358,134 @@
       {
         "id": 1,
         "type": "select",
-        "question": "Что значит: die Bäckerei",
-        "options": ["Пекарня", "Аптека", "Банк"],
-        "answer": "Пекарня"
+        "question": "questsWindValleyThirdQuests.questOne",
+        "options": [
+          "questsWindValleyThirdQuests.questOneFirstOption",
+          "questsWindValleyThirdQuests.questOneSecondOption",
+          "questsWindValleyThirdQuests.questOneThirdOption"
+        ],
+        "answer": "questsWindValleyThirdQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "select",
-        "question": "Что значит: die Apotheke",
-        "options": ["Аптека", "Супермаркет", "Почта"],
-        "answer": "Аптека"
+        "question": "questsWindValleyThirdQuests.questTwo",
+        "options": [
+          "questsWindValleyThirdQuests.questTwoFirstOption",
+          "questsWindValleyThirdQuests.questTwoSecondOption",
+          "questsWindValleyThirdQuests.questTwoThirdOption"
+        ],
+        "answer": "questsWindValleyThirdQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Что значит: die Bank",
-        "options": ["Банк", "Площадь", "Пекарня"],
-        "answer": "Банк"
+        "question": "questsWindValleyThirdQuests.questThird",
+        "options": [
+          "questsWindValleyThirdQuests.questThirdFirstOption",
+          "questsWindValleyThirdQuests.questThirdSecondOption",
+          "questsWindValleyThirdQuests.questThirdThirdOption"
+        ],
+        "answer": "questsWindValleyThirdQuests.questThirdFirstOption"
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Что значит: der Supermarkt",
-        "options": ["Супермаркет", "Магазин одежды", "Аптека"],
-        "answer": "Супермаркет"
+        "question": "questsWindValleyThirdQuests.questFour",
+        "options": [
+          "questsWindValleyThirdQuests.questFourFirstOption",
+          "questsWindValleyThirdQuests.questFourSecondOption",
+          "questsWindValleyThirdQuests.questFourThirdOption"
+        ],
+        "answer": "questsWindValleyThirdQuests.questFourFirstOption"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsWindValleyThirdQuests.questFive",
         "words": ["ist", "Das", "die", "Bäckerei"],
         "correctOrder": ["Das", "ist", "die", "Bäckerei"]
       },
       {
         "id": 6,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleyThirdQuests.questSix",
         "text": "Die Bäckerei",
         "answer": "Die Bäckerei"
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsWindValleyThirdQuests.questSeven",
         "words": ["die", "ist", "Apotheke", "Das"],
         "correctOrder": ["Das", "ist", "die", "Apotheke"]
       },
       {
         "id": 8,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleyThirdQuests.questEight",
         "text": "Die Apotheke",
         "answer": "Die Apotheke"
       },
       {
         "id": 9,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsWindValleyThirdQuests.questNine",
         "words": ["ist", "die", "Das", "Bank"],
         "correctOrder": ["Das", "ist", "die", "Bank"]
       },
       {
         "id": 10,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleyThirdQuests.questTen",
         "text": "Die Bank",
         "answer": "Die Bank"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsWindValleyThirdQuests.questEleven",
         "words": ["Supermarkt", "ist", "der", "Das"],
         "correctOrder": ["Das", "ist", "der", "Supermarkt"]
       },
       {
         "id": 12,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleyThirdQuests.questTwelve",
         "text": "Der Supermarkt",
         "answer": "Der Supermarkt"
       },
       {
         "id": 13,
         "type": "reorder",
-        "question": "Собери словосочетание",
+        "question": "questsWindValleyThirdQuests.questThirteen",
         "words": ["eine", "kleine", "Bäckerei"],
         "correctOrder": ["eine", "kleine", "Bäckerei"]
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "Собери словосочетание",
+        "question": "questsWindValleyThirdQuests.questFourteen",
         "words": ["eine", "große", "Apotheke"],
-        "correctOrder": ["eine", "große", "Apotheke"]
+        "correctOrder": ["eine", "große", "Аптека"]
       },
       {
         "id": 15,
         "type": "reorder",
-        "question": "Собери словосочетание",
+        "question": "questsWindValleyThirdQuests.questFifteen",
         "words": ["ein", "großer", "Supermarkt"],
         "correctOrder": ["ein", "großer", "Supermarkt"]
       }
     ]
   },
+
   {
     "questId": "city-4",
-    "title": "На улице",
+    "title": "questsWindValleyFourthQuests.title",
     "progress": "0/15",
-    "description": "Остановка, перекрёсток, светофор, карта. Учим 4 слова и собираем простые фразы",
+    "description": "questsWindValleyFourthQuests.description",
     "conditions": {
-      "goal": "Называть ориентиры на улице и собирать простые фразы Das ist",
+      "goal": "questsWindValleyFourthQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
@@ -383,105 +497,121 @@
       {
         "id": 1,
         "type": "select",
-        "question": "Что значит: die Haltestelle",
-        "options": ["Остановка", "Площадь", "Мост"],
-        "answer": "Остановка"
+        "question": "questsWindValleyFourthQuests.questOne",
+        "options": [
+          "questsWindValleyFourthQuests.questOneFirstOption",
+          "questsWindValleyFourthQuests.questOneSecondOption",
+          "questsWindValleyFourthQuests.questOneThirdOption"
+        ],
+        "answer": "questsWindValleyFourthQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "select",
-        "question": "Что значит: die Kreuzung",
-        "options": ["Перекрёсток", "Парк", "Улица"],
-        "answer": "Перекрёсток"
+        "question": "questsWindValleyFourthQuests.questTwo",
+        "options": [
+          "questsWindValleyFourthQuests.questTwoFirstOption",
+          "questsWindValleyFourthQuests.questTwoSecondOption",
+          "questsWindValleyFourthQuests.questTwoThirdOption"
+        ],
+        "answer": "questsWindValleyFourthQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Что значит: die Ampel",
-        "options": ["Светофор", "Карта", "Остановка"],
-        "answer": "Светофор"
+        "question": "questsWindValleyFourthQuests.questThird",
+        "options": [
+          "questsWindValleyFourthQuests.questThirdFirstOption",
+          "questsWindValleyFourthQuests.questThirdSecondOption",
+          "questsWindValleyFourthQuests.questThirdThirdOption"
+        ],
+        "answer": "questsWindValleyFourthQuests.questThirdFirstOption"
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Что значит: die Karte",
-        "options": ["Карта", "Вокзал", "Магазин"],
-        "answer": "Карта"
+        "question": "questsWindValleyFourthQuests.questFour",
+        "options": [
+          "questsWindValleyFourthQuests.questFourFirstOption",
+          "questsWindValleyFourthQuests.questFourSecondOption",
+          "questsWindValleyFourthQuests.questFourThirdOption"
+        ],
+        "answer": "questsWindValleyFourthQuests.questFourFirstOption"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsWindValleyFourthQuests.questFive",
         "words": ["der", "Bus", "und", "die", "Haltestelle"],
         "correctOrder": ["der", "Bus", "und", "die", "Haltestelle"]
       },
       {
         "id": 6,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleyFourthQuests.questSix",
         "text": "Die Haltestelle",
         "answer": "Die Haltestelle"
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsWindValleyFourthQuests.questSeven",
         "words": ["die", "Straße", "und", "die", "Kreuzung"],
-        "correctOrder": ["die", "Straße", "и", "die", "Kreuzung"]
+        "correctOrder": ["die", "Straße", "und", "die", "Kreuzung"]
       },
       {
         "id": 8,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleyFourthQuests.questEight",
         "text": "Die Kreuzung",
         "answer": "Die Kreuzung"
       },
       {
         "id": 9,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsWindValleyFourthQuests.questNine",
         "words": ["die", "Ampel", "und", "der", "Park"],
         "correctOrder": ["die", "Ampel", "und", "der", "Park"]
       },
       {
         "id": 10,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleyFourthQuests.questTen",
         "text": "Die Ampel",
         "answer": "Die Ampel"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsWindValleyFourthQuests.questEleven",
         "words": ["die", "Bank", "und", "die", "Karte"],
         "correctOrder": ["die", "Bank", "und", "die", "Karte"]
       },
       {
         "id": 12,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleyFourthQuests.questTwelve",
         "text": "Die Karte",
         "answer": "Die Karte"
       },
       {
         "id": 13,
         "type": "reorder",
-        "question": "Собери словосочетание",
+        "question": "questsWindValleyFourthQuests.questThirteen",
         "words": ["eine", "rote", "Ampel"],
         "correctOrder": ["eine", "rote", "Ampel"]
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "Собери словосочетание",
+        "question": "questsWindValleyFourthQuests.questFourteen",
         "words": ["eine", "kleine", "Karte"],
         "correctOrder": ["eine", "kleine", "Karte"]
       },
       {
         "id": 15,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleyFourthQuests.questFifteen",
         "text": "Eine rote Ampel",
         "answer": "Eine rote Ampel"
       }
@@ -489,11 +619,11 @@
   },
   {
     "questId": "city-5",
-    "title": "Кафе и отдых",
+    "title": "questsWindValleyFifthQuests.title",
     "progress": "0/15",
-    "description": "Ресторан, кафе, отель, музей. Учим 4 слова и собираем простые фразы",
+    "description": "questsWindValleyFifthQuests.description",
     "conditions": {
-      "goal": "Называть места отдыха в городе и собирать простые фразы Das ist",
+      "goal": "questsWindValleyFifthQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
@@ -505,105 +635,121 @@
       {
         "id": 1,
         "type": "select",
-        "question": "Что значит: das Restaurant",
-        "options": ["Ресторан", "Отель", "Музей"],
-        "answer": "Ресторан"
+        "question": "questsWindValleyFifthQuests.questOne",
+        "options": [
+          "questsWindValleyFifthQuests.questOneFirstOption",
+          "questsWindValleyFifthQuests.questOneSecondOption",
+          "questsWindValleyFifthQuests.questOneThirdOption"
+        ],
+        "answer": "questsWindValleyFifthQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "select",
-        "question": "Что значит: das Café",
-        "options": ["Кафе", "Банк", "Вокзал"],
-        "answer": "Кафе"
+        "question": "questsWindValleyFifthQuests.questTwo",
+        "options": [
+          "questsWindValleyFifthQuests.questTwoFirstOption",
+          "questsWindValleyFifthQuests.questTwoSecondOption",
+          "questsWindValleyFifthQuests.questTwoThirdOption"
+        ],
+        "answer": "questsWindValleyFifthQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Что значит: das Hotel",
-        "options": ["Отель", "Парк", "Почта"],
-        "answer": "Отель"
+        "question": "questsWindValleyFifthQuests.questThird",
+        "options": [
+          "questsWindValleyFifthQuests.questThirdFirstOption",
+          "questsWindValleyFifthQuests.questThirdSecondOption",
+          "questsWindValleyFifthQuests.questThirdThirdOption"
+        ],
+        "answer": "questsWindValleyFifthQuests.questThirdFirstOption"
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Что значит: das Museum",
-        "options": ["Музей", "Магазин", "Мост"],
-        "answer": "Музей"
+        "question": "questsWindValleyFifthQuests.questFour",
+        "options": [
+          "questsWindValleyFifthQuests.questFourFirstOption",
+          "questsWindValleyFifthQuests.questFourSecondOption",
+          "questsWindValleyFifthQuests.questFourThirdOption"
+        ],
+        "answer": "questsWindValleyFifthQuests.questFourFirstOption"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsWindValleyFifthQuests.questFive",
         "words": ["Das", "ist", "das", "Restaurant"],
         "correctOrder": ["Das", "ist", "das", "Restaurant"]
       },
       {
         "id": 6,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleyFifthQuests.questSix",
         "text": "Das Restaurant",
         "answer": "Das Restaurant"
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsWindValleyFifthQuests.questSeven",
         "words": ["Das", "ist", "das", "Café"],
         "correctOrder": ["Das", "ist", "das", "Café"]
       },
       {
         "id": 8,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleyFifthQuests.questEight",
         "text": "Das Café",
         "answer": "Das Café"
       },
       {
         "id": 9,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsWindValleyFifthQuests.questNine",
         "words": ["Das", "ist", "das", "Hotel"],
         "correctOrder": ["Das", "ist", "das", "Hotel"]
       },
       {
         "id": 10,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleyFifthQuests.questTen",
         "text": "Das Hotel",
         "answer": "Das Hotel"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsWindValleyFifthQuests.questEleven",
         "words": ["Das", "ist", "das", "Museum"],
         "correctOrder": ["Das", "ist", "das", "Museum"]
       },
       {
         "id": 12,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleyFifthQuests.questTwelve",
         "text": "Das Museum",
         "answer": "Das Museum"
       },
       {
         "id": 13,
         "type": "reorder",
-        "question": "Собери словосочетание",
+        "question": "questsWindValleyFifthQuests.questThirteen",
         "words": ["ein", "kleines", "Café"],
         "correctOrder": ["ein", "kleines", "Café"]
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "Собери словосочетание",
+        "question": "questsWindValleyFifthQuests.questFourteen",
         "words": ["ein", "großes", "Hotel"],
         "correctOrder": ["ein", "großes", "Hotel"]
       },
       {
         "id": 15,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleyFifthQuests.questFifteen",
         "text": "Ein kleines Café",
         "answer": "Ein kleines Café"
       }
@@ -611,11 +757,11 @@
   },
   {
     "questId": "city-6",
-    "title": "Комбинируем места",
+    "title": "questsWindValleySixQuests.title",
     "progress": "0/15",
-    "description": "Повторяем городские места и соединяем их в короткие фразы",
+    "description": "questsWindValleySixQuests.description",
     "conditions": {
-      "goal": "Комбинировать слова из тем улица, транспорт, магазины и отдых",
+      "goal": "questsWindValleySixQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
@@ -627,105 +773,121 @@
       {
         "id": 1,
         "type": "select",
-        "question": "Что значит: die Kreuzung",
-        "options": ["Перекрёсток", "Остановка", "Банк"],
-        "answer": "Перекрёсток"
+        "question": "questsWindValleySixQuests.questOne",
+        "options": [
+          "questsWindValleySixQuests.questOneFirstOption",
+          "questsWindValleySixQuests.questOneSecondOption",
+          "questsWindValleySixQuests.questOneThirdOption"
+        ],
+        "answer": "questsWindValleySixQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsWindValleySixQuests.questTwo",
         "words": ["die", "Straße", "und", "der", "Park"],
         "correctOrder": ["die", "Straße", "und", "der", "Park"]
       },
       {
         "id": 3,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleySixQuests.questThree",
         "text": "Die Straße und der Park",
         "answer": "Die Straße und der Park"
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Что значит: der Bahnhof",
-        "options": ["Вокзал", "Музей", "Отель"],
-        "answer": "Вокзал"
+        "question": "questsWindValleySixQuests.questFour",
+        "options": [
+          "questsWindValleySixQuests.questFourFirstOption",
+          "questsWindValleySixQuests.questFourSecondOption",
+          "questsWindValleySixQuests.questFourThirdOption"
+        ],
+        "answer": "questsWindValleySixQuests.questFourFirstOption"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsWindValleySixQuests.questFive",
         "words": ["der", "Bahnhof", "und", "die", "U-Bahn"],
         "correctOrder": ["der", "Bahnhof", "und", "die", "U-Bahn"]
       },
       {
         "id": 6,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleySixQuests.questSix",
         "text": "Der Bahnhof und die U-Bahn",
         "answer": "Der Bahnhof und die U-Bahn"
       },
       {
         "id": 7,
         "type": "select",
-        "question": "Что значит: die Apotheke",
-        "options": ["Аптека", "Пекарня", "Почта"],
-        "answer": "Аптека"
+        "question": "questsWindValleySixQuests.questSeven",
+        "options": [
+          "questsWindValleySixQuests.questSevenFirstOption",
+          "questsWindValleySixQuests.questSevenSecondOption",
+          "questsWindValleySixQuests.questSevenThirdOption"
+        ],
+        "answer": "questsWindValleySixQuests.questSevenFirstOption"
       },
       {
         "id": 8,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsWindValleySixQuests.questEight",
         "words": ["die", "Bäckerei", "und", "die", "Apotheke"],
         "correctOrder": ["die", "Bäckerei", "und", "die", "Apotheke"]
       },
       {
         "id": 9,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleySixQuests.questNine",
         "text": "Die Bäckerei und die Apotheke",
         "answer": "Die Bäckerei und die Apotheke"
       },
       {
         "id": 10,
         "type": "select",
-        "question": "Что значит: das Restaurant",
-        "options": ["Ресторан", "Супермаркет", "Кафе"],
-        "answer": "Ресторан"
+        "question": "questsWindValleySixQuests.questTen",
+        "options": [
+          "questsWindValleySixQuests.questTenFirstOption",
+          "questsWindValleySixQuests.questTenSecondOption",
+          "questsWindValleySixQuests.questTenThirdOption"
+        ],
+        "answer": "questsWindValleySixQuests.questTenFirstOption"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsWindValleySixQuests.questEleven",
         "words": ["das", "Café", "und", "das", "Museum"],
         "correctOrder": ["das", "Café", "und", "das", "Museum"]
       },
       {
         "id": 12,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleySixQuests.questTwelve",
         "text": "Das Café und das Museum",
         "answer": "Das Café und das Museum"
       },
       {
         "id": 13,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsWindValleySixQuests.questThirteen",
         "words": ["ist", "die", "Haltestelle", "Das"],
         "correctOrder": ["Das", "ist", "die", "Haltestelle"]
       },
       {
         "id": 14,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleySixQuests.questFourteen",
         "text": "Das ist die Haltestelle",
         "answer": "Das ist die Haltestelle"
       },
       {
         "id": 15,
         "type": "reorder",
-        "question": "Собери словосочетание",
+        "question": "questsWindValleySixQuests.questFifteen",
         "words": ["ein", "neues", "Ticket"],
         "correctOrder": ["ein", "neues", "Ticket"]
       }
@@ -733,11 +895,11 @@
   },
   {
     "questId": "city-7",
-    "title": "Ориентиры",
+    "title": "questsWindValleySevenQuests.title",
     "progress": "0/15",
-    "description": "Слева, справа, прямо, напротив. Учим 4 слова и собираем простые фразы",
+    "description": "questsWindValleySevenQuests.description",
     "conditions": {
-      "goal": "Понимать базовые ориентиры и комбинировать с местами из прошлых тем",
+      "goal": "questsWindValleySevenQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
@@ -749,117 +911,137 @@
       {
         "id": 1,
         "type": "select",
-        "question": "Что значит: links",
-        "options": ["слева", "справа", "прямо"],
-        "answer": "слева"
+        "question": "questsWindValleySevenQuests.questOne",
+        "options": [
+          "questsWindValleySevenQuests.questOneFirstOption",
+          "questsWindValleySevenQuests.questOneSecondOption",
+          "questsWindValleySevenQuests.questOneThirdOption"
+        ],
+        "answer": "questsWindValleySevenQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "select",
-        "question": "Что значит: rechts",
-        "options": ["справа", "напротив", "прямо"],
-        "answer": "справа"
+        "question": "questsWindValleySevenQuests.questTwo",
+        "options": [
+          "questsWindValleySevenQuests.questTwoFirstOption",
+          "questsWindValleySevenQuests.questTwoSecondOption",
+          "questsWindValleySevenQuests.questTwoThirdOption"
+        ],
+        "answer": "questsWindValleySevenQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Что значит: geradeaus",
-        "options": ["прямо", "слева", "справа"],
-        "answer": "прямо"
+        "question": "questsWindValleySevenQuests.questThree",
+        "options": [
+          "questsWindValleySevenQuests.questThreeFirstOption",
+          "questsWindValleySevenQuests.questThreeSecondOption",
+          "questsWindValleySevenQuests.questThreeThirdOption"
+        ],
+        "answer": "questsWindValleySevenQuests.questThreeFirstOption"
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Что значит: gegenüber",
-        "options": ["напротив", "рядом", "позади"],
-        "answer": "напротив"
+        "question": "questsWindValleySevenQuests.questFour",
+        "options": [
+          "questsWindValleySevenQuests.questFourFirstOption",
+          "questsWindValleySevenQuests.questFourSecondOption",
+          "questsWindValleySevenQuests.questFourThirdOption"
+        ],
+        "answer": "questsWindValleySevenQuests.questFourFirstOption"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsWindValleySevenQuests.questFive",
         "words": ["Die", "Bank", "ist", "links"],
         "correctOrder": ["Die", "Bank", "ist", "links"]
       },
       {
         "id": 6,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleySevenQuests.questSix",
         "text": "Die Bank ist links",
         "answer": "Die Bank ist links"
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsWindValleySevenQuests.questSeven",
         "words": ["Der", "Park", "ist", "rechts"],
-        "correctOrder": ["Der", "Park", "ист", "rechts"]
+        "correctOrder": ["Der", "Park", "ist", "rechts"]
       },
       {
         "id": 8,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleySevenQuests.questEight",
         "text": "Der Park ist rechts",
         "answer": "Der Park ist rechts"
       },
       {
         "id": 9,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsWindValleySevenQuests.questNine",
         "words": ["Die", "U-Bahn", "ist", "geradeaus"],
         "correctOrder": ["Die", "U-Bahn", "ist", "geradeaus"]
       },
       {
         "id": 10,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleySevenQuests.questTen",
         "text": "Die U-Bahn ist geradeaus",
         "answer": "Die U-Bahn ist geradeaus"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsWindValleySevenQuests.questEleven",
         "words": ["Das", "Café", "ist", "gegenüber"],
         "correctOrder": ["Das", "Café", "ist", "gegenüber"]
       },
       {
         "id": 12,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleySevenQuests.questTwelve",
         "text": "Das Café ist gegenüber",
         "answer": "Das Café ist gegenüber"
       },
       {
         "id": 13,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsWindValleySevenQuests.questThirteen",
         "words": ["Das", "Museum", "ist", "gegenüber", "dem", "Hotel"],
         "correctOrder": ["Das", "Museum", "ist", "gegenüber", "dem", "Hotel"]
       },
       {
         "id": 14,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleySevenQuests.questFourteen",
         "text": "Das Museum ist gegenüber dem Hotel",
         "answer": "Das Museum ist gegenüber dem Hotel"
       },
       {
         "id": 15,
         "type": "select",
-        "question": "Что значит: rechts und dann geradeaus",
-        "options": ["направо и потом прямо", "налево и потом назад", "напротив и потом направо"],
-        "answer": "направо и потом прямо"
+        "question": "questsWindValleySevenQuests.questFifteen",
+        "options": [
+          "questsWindValleySevenQuests.questFifteenFirstOption",
+          "questsWindValleySevenQuests.questFifteenSecondOption",
+          "questsWindValleySevenQuests.questFifteenThirdOption"
+        ],
+        "answer": "questsWindValleySevenQuests.questFifteenFirstOption"
       }
     ]
   },
   {
     "questId": "city-8",
-    "title": "Где находится",
+    "title": "questsWindValleyEighthQuests.title",
     "progress": "0/15",
-    "description": "Рядом, перед, за, между. Учим 4 предлога и комбинируем с местами города",
+    "description": "questsWindValleyEighthQuests.description",
     "conditions": {
-      "goal": "Понимать предлоги места и строить короткие фразы с городскими словами",
+      "goal": "questsWindValleyEighthQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
@@ -871,117 +1053,137 @@
       {
         "id": 1,
         "type": "select",
-        "question": "Что значит: neben",
-        "options": ["рядом", "позади", "перед"],
-        "answer": "рядом"
+        "question": "questsWindValleyEighthQuests.questOne",
+        "options": [
+          "questsWindValleyEighthQuests.questOneFirstOption",
+          "questsWindValleyEighthQuests.questOneSecondOption",
+          "questsWindValleyEighthQuests.questOneThirdOption"
+        ],
+        "answer": "questsWindValleyEighthQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "select",
-        "question": "Что значит: vor",
-        "options": ["перед", "за", "между"],
-        "answer": "перед"
+        "question": "questsWindValleyEighthQuests.questTwo",
+        "options": [
+          "questsWindValleyEighthQuests.questTwoFirstOption",
+          "questsWindValleyEighthQuests.questTwoSecondOption",
+          "questsWindValleyEighthQuests.questTwoThirdOption"
+        ],
+        "answer": "questsWindValleyEighthQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Что значит: hinter",
-        "options": ["за", "рядом", "перед"],
-        "answer": "за"
+        "question": "questsWindValleyEighthQuests.questThree",
+        "options": [
+          "questsWindValleyEighthQuests.questThreeFirstOption",
+          "questsWindValleyEighthQuests.questThreeSecondOption",
+          "questsWindValleyEighthQuests.questThreeThirdOption"
+        ],
+        "answer": "questsWindValleyEighthQuests.questThreeFirstOption"
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Что значит: zwischen",
-        "options": ["между", "напротив", "слева"],
-        "answer": "между"
+        "question": "questsWindValleyEighthQuests.questFour",
+        "options": [
+          "questsWindValleyEighthQuests.questFourFirstOption",
+          "questsWindValleyEighthQuests.questFourSecondOption",
+          "questsWindValleyEighthQuests.questFourThirdOption"
+        ],
+        "answer": "questsWindValleyEighthQuests.questFourFirstOption"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsWindValleyEighthQuests.questFive",
         "words": ["Die", "Bank", "ist", "neben", "dem", "Park"],
         "correctOrder": ["Die", "Bank", "ist", "neben", "dem", "Park"]
       },
       {
         "id": 6,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleyEighthQuests.questSix",
         "text": "Die Bank ist neben dem Park",
         "answer": "Die Bank ist neben dem Park"
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsWindValleyEighthQuests.questSeven",
         "words": ["Das", "Café", "ist", "vor", "dem", "Museum"],
         "correctOrder": ["Das", "Café", "ist", "vor", "dem", "Museum"]
       },
       {
         "id": 8,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleyEighthQuests.questEight",
         "text": "Das Café ist vor dem Museum",
         "answer": "Das Café ist vor dem Museum"
       },
       {
         "id": 9,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsWindValleyEighthQuests.questNine",
         "words": ["Die", "U-Bahn", "ist", "hinter", "dem", "Bahnhof"],
         "correctOrder": ["Die", "U-Bahn", "ist", "hinter", "dem", "Bahnhof"]
       },
       {
         "id": 10,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleyEighthQuests.questTen",
         "text": "Die U-Bahn ist hinter dem Bahnhof",
         "answer": "Die U-Bahn ist hinter dem Bahnhof"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Собери предложение",
-        "words": ["der", "Apotheke", "ist", "und", "der", "Bank", "zwischen", "Die", "Bäckerei"],
+        "question": "questsWindValleyEighthQuests.questEleven",
+        "words": ["Die", "Apotheke", "ist", "zwischen", "der", "Bank", "und", "der", "Bäckerei"],
         "correctOrder": ["Die", "Apotheke", "ist", "zwischen", "der", "Bank", "und", "der", "Bäckerei"]
       },
       {
         "id": 12,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleyEighthQuests.questTwelve",
         "text": "Die Apotheke ist zwischen der Bank und der Bäckerei",
-        "answer": "Die Apotheke ist zwischen der Bank и der Bäckerei"
+        "answer": "Die Apotheke ist zwischen der Bank und der Bäckerei"
       },
       {
         "id": 13,
         "type": "reorder",
-        "question": "Собери предложение",
-        "words": ["der", "Haltestelle", "ist", "Straße", "Die", "neben"],
+        "question": "questsWindValleyEighthQuests.questThirteen",
+        "words": ["Die", "Haltestelle", "ist", "neben", "der", "Straße"],
         "correctOrder": ["Die", "Haltestelle", "ist", "neben", "der", "Straße"]
       },
       {
         "id": 14,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleyEighthQuests.questFourteen",
         "text": "Die Haltestelle ist neben der Straße",
         "answer": "Die Haltestelle ist neben der Straße"
       },
       {
         "id": 15,
         "type": "select",
-        "question": "Что значит: Die Brücke ist vor dem Park",
-        "options": ["Мост перед парком", "Мост за парком", "Мост рядом с парком"],
-        "answer": "Мост перед парком"
+        "question": "questsWindValleyEighthQuests.questFifteen",
+        "options": [
+          "questsWindValleyEighthQuests.questFifteenFirstOption",
+          "questsWindValleyEighthQuests.questFifteenSecondOption",
+          "questsWindValleyEighthQuests.questFifteenThirdOption"
+        ],
+        "answer": "questsWindValleyEighthQuests.questFifteenFirstOption"
       }
     ]
   },
   {
     "questId": "city-9",
-    "title": "Службы в городе",
+    "title": "questsWindValleyNinthQuests.title",
     "progress": "0/15",
-    "description": "Почта, полиция, больница, школа. Учим 4 слова и комбинируем с ориентирами",
+    "description": "questsWindValleyNinthQuests.description",
     "conditions": {
-      "goal": "Называть службы в городе и строить короткие фразы с предлогами и ориентирами",
+      "goal": "questsWindValleyNinthQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
@@ -993,471 +1195,674 @@
       {
         "id": 1,
         "type": "select",
-        "question": "Что значит: die Post",
-        "options": ["Почта", "Полиция", "Больница"],
-        "answer": "Почта"
+        "question": "questsWindValleyNinthQuests.questOne",
+        "options": [
+          "questsWindValleyNinthQuests.questOneFirstOption",
+          "questsWindValleyNinthQuests.questOneSecondOption",
+          "questsWindValleyNinthQuests.questOneThirdOption"
+        ],
+        "answer": "questsWindValleyNinthQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "select",
-        "question": "Что значит: die Polizei",
-        "options": ["Полиция", "Школа", "Почта"],
-        "answer": "Полиция"
+        "question": "questsWindValleyNinthQuests.questTwo",
+        "options": [
+          "questsWindValleyNinthQuests.questTwoFirstOption",
+          "questsWindValleyNinthQuests.questTwoSecondOption",
+          "questsWindValleyNinthQuests.questTwoThirdOption"
+        ],
+        "answer": "questsWindValleyNinthQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Что значит: das Krankenhaus",
-        "options": ["Больница", "Супермаркет", "Отель"],
-        "answer": "Больница"
+        "question": "questsWindValleyNinthQuests.questThree",
+        "options": [
+          "questsWindValleyNinthQuests.questThreeFirstOption",
+          "questsWindValleyNinthQuests.questThreeSecondOption",
+          "questsWindValleyNinthQuests.questThreeThirdOption"
+        ],
+        "answer": "questsWindValleyNinthQuests.questThreeFirstOption"
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Что значит: die Schule",
-        "options": ["Школа", "Площадь", "Музей"],
-        "answer": "Школа"
+        "question": "questsWindValleyNinthQuests.questFour",
+        "options": [
+          "questsWindValleyNinthQuests.questFourFirstOption",
+          "questsWindValleyNinthQuests.questFourSecondOption",
+          "questsWindValleyNinthQuests.questFourThirdOption"
+        ],
+        "answer": "questsWindValleyNinthQuests.questFourFirstOption"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsWindValleyNinthQuests.questFive",
         "words": ["Die", "Post", "ist", "in", "der", "Stadt"],
         "correctOrder": ["Die", "Post", "ist", "in", "der", "Stadt"]
       },
       {
         "id": 6,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleyNinthQuests.questSix",
         "text": "Die Post",
         "answer": "Die Post"
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["Polizei", "die", "ist", "Das"],
+        "question": "questsWindValleyNinthQuests.questSeven",
+        "words": ["Das", "ist", "die", "Polizei"],
         "correctOrder": ["Das", "ist", "die", "Polizei"]
       },
       {
         "id": 8,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleyNinthQuests.questEight",
         "text": "Die Polizei",
         "answer": "Die Polizei"
       },
       {
         "id": 9,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["Das", "das", "ist", "Krankenhaus"],
+        "question": "questsWindValleyNinthQuests.questNine",
+        "words": ["Das", "ist", "das", "Krankenhaus"],
         "correctOrder": ["Das", "ist", "das", "Krankenhaus"]
       },
       {
         "id": 10,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleyNinthQuests.questTen",
         "text": "Das Krankenhaus",
         "answer": "Das Krankenhaus"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["Bank", "Schule", "der", "neben", "ist", "Die"],
+        "question": "questsWindValleyNinthQuests.questEleven",
+        "words": ["Die", "Schule", "ist", "neben", "der", "Bank"],
         "correctOrder": ["Die", "Schule", "ist", "neben", "der", "Bank"]
       },
       {
         "id": 12,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleyNinthQuests.questTwelve",
         "text": "Die Schule ist neben der Bank",
         "answer": "Die Schule ist neben der Bank"
       },
       {
         "id": 13,
         "type": "reorder",
-        "question": "Собери предложение",
-        "words": ["Park", "Krankenhaus", "Das", "gegenüber", "dem", "ist"],
+        "question": "questsWindValleyNinthQuests.questThirteen",
+        "words": ["Das", "Krankenhaus", "ist", "gegenüber", "dem", "Park"],
         "correctOrder": ["Das", "Krankenhaus", "ist", "gegenüber", "dem", "Park"]
       },
       {
         "id": 14,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleyNinthQuests.questFourteen",
         "text": "Das Krankenhaus ist gegenüber dem Park",
         "answer": "Das Krankenhaus ist gegenüber dem Park"
       },
       {
         "id": 15,
         "type": "select",
-        "question": "Что значит: Die Post ist links",
-        "options": ["Почта слева", "Почта справа", "Почта напротив"],
-        "answer": "Почта слева"
+        "question": "questsWindValleyNinthQuests.questFifteen",
+        "options": [
+          "questsWindValleyNinthQuests.questFifteenFirstOption",
+          "questsWindValleyNinthQuests.questFifteenSecondOption",
+          "questsWindValleyNinthQuests.questFifteenThirdOption"
+        ],
+        "answer": "questsWindValleyNinthQuests.questFifteenFirstOption"
       }
     ]
   },
   {
     "questId": "city-10",
-    "title": "Маршрут по городу",
+    "title": "questsWindValleyTenthQuests.title",
     "progress": "0/15",
-    "description": "Комбинируем места и ориентиры: где что находится",
+    "description": "questsWindValleyTenthQuests.description",
     "conditions": {
-      "goal": "Строить короткие фразы с местами и ориентирами в городе",
+      "goal": "questsWindValleyTenthQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 180,
-      "xp": 320
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
         "id": 1,
         "type": "select",
-        "question": "Что значит: die Haltestelle",
-        "options": ["Остановка", "Площадь", "Мост"],
-        "answer": "Остановка"
+        "question": "questsWindValleyTenthQuests.questOne",
+        "options": [
+          "questsWindValleyTenthQuests.questOneFirstOption",
+          "questsWindValleyTenthQuests.questOneSecondOption",
+          "questsWindValleyTenthQuests.questOneThirdOption"
+        ],
+        "answer": "questsWindValleyTenthQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["Die", "Haltestelle", "ist", "links"],
-        "correctOrder": ["Die", "Haltestelle", "ist", "links"]
+        "question": "questsWindValleyTenthQuests.questTwo",
+        "words": [
+          "Die",
+          "Haltestelle",
+          "ist",
+          "links"
+        ],
+        "correctOrder": [
+          "Die",
+          "Haltestelle",
+          "ist",
+          "links"
+        ]
       },
       {
         "id": 3,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleyTenthQuests.questThird",
         "text": "Die Haltestelle ist links",
         "answer": "Die Haltestelle ist links"
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Что значит: der Bahnhof",
-        "options": ["Вокзал", "Музей", "Отель"],
-        "answer": "Вокзал"
+        "question": "questsWindValleyTenthQuests.",
+        "options": [
+          "questsWindValleyTenthQuests.questFourFirstOption",
+          "questsWindValleyTenthQuests.questFourSecondOption",
+          "questsWindValleyTenthQuests.questFourThirdOption"
+        ],
+        "answer": "questsWindValleyTenthQuests.questFourFirstOption"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["Der", "Bahnhof", "ist", "rechts"],
-        "correctOrder": ["Der", "Bahnhof", "ist", "rechts"]
+        "question": "questsWindValleyTenthQuests.questFive",
+        "words": [
+          "Der",
+          "Bahnhof",
+          "ist",
+          "rechts"
+        ],
+        "correctOrder": [
+          "Der",
+          "Bahnhof",
+          "ist",
+          "rechts"
+        ]
       },
       {
         "id": 6,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleyTenthQuests.questSix",
         "text": "Der Bahnhof ist rechts",
         "answer": "Der Bahnhof ist rechts"
       },
       {
         "id": 7,
         "type": "select",
-        "question": "Что значит: Das Café ist gegenüber dem Park",
-        "options": ["Кафе напротив парка", "Кафе за парком", "Кафе рядом с парком"],
-        "answer": "Кафе напротив парка"
+        "question": "questsWindValleyTenthQuests.questSeven",
+        "options": [
+          "questsWindValleyTenthQuests.questSvenFirstOption",
+          "questsWindValleyTenthQuests.questSvenSecondOption",
+          "questsWindValleyTenthQuests.questSvenThirdOption"
+        ],
+        "answer": "questsWindValleyTenthQuests.questSvenFirstOption"
       },
       {
         "id": 8,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["Das", "Café", "ist", "gegenüber", "dem", "Hotel"],
-        "correctOrder": ["Das", "Café", "ist", "gegenüber", "dem", "Hotel"]
+        "question": "questsWindValleyTenthQuests.questEight",
+        "words": [
+          "Das",
+          "Café",
+          "ist",
+          "gegenüber",
+          "dem",
+          "Hotel"
+        ],
+        "correctOrder": [
+          "Das",
+          "Café",
+          "ist",
+          "gegenüber",
+          "dem",
+          "Hotel"
+        ]
       },
       {
         "id": 9,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleyTenthQuests.questNine",
         "text": "Das Café ist gegenüber dem Hotel",
         "answer": "Das Café ist gegenüber dem Hotel"
       },
       {
         "id": 10,
         "type": "select",
-        "question": "Что значит: Die Apotheke ist neben der Bank",
-        "options": ["Аптека рядом с банком", "Аптека перед банком", "Аптека за банком"],
+        "question": "questsWindValleyTenthQuests.questTen",
+        "options": [
+          "questsWindValleyTenthQuests.questTenFirstOption",
+          "questsWindValleyTenthQuests.questTenSecondOption",
+          "questsWindValleyTenthQuests.questTenThirdOption"
+        ],
         "answer": "Аптека рядом с банком"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["Die", "Apotheke", "ist", "vor", "dem", "Museum"],
-        "correctOrder": ["Die", "Apotheke", "ist", "vor", "dem", "Museum"]
+        "question": "questsWindValleyTenthQuests.questEleven",
+        "words": [
+          "Die",
+          "Apotheke",
+          "ist",
+          "vor",
+          "dem",
+          "Museum"
+        ],
+        "correctOrder": [
+          "Die",
+          "Apotheke",
+          "ist",
+          "vor",
+          "dem",
+          "Museum"
+        ]
       },
       {
         "id": 12,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleyTenthQuests.questTwelve",
         "text": "Die Apotheke ist vor dem Museum",
         "answer": "Die Apotheke ist vor dem Museum"
       },
       {
         "id": 13,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["Die", "U-Bahn", "ist", "hinter", "dem", "Bahnhof"],
-        "correctOrder": ["Die", "U-Bahn", "ist", "hinter", "dem", "Bahnhof"]
+        "question": "questsWindValleyTenthQuests.questThirteen",
+        "words": [
+          "Die",
+          "U-Bahn",
+          "ist",
+          "hinter",
+          "dem",
+          "Bahnhof"
+        ],
+        "correctOrder": [
+          "Die",
+          "U-Bahn",
+          "ist",
+          "hinter",
+          "dem",
+          "Bahnhof"
+        ]
       },
       {
         "id": 14,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsWindValleyTenthQuests.questFourteen",
         "text": "Die U-Bahn ist hinter dem Bahnhof",
         "answer": "Die U-Bahn ist hinter dem Bahnhof"
       },
       {
         "id": 15,
         "type": "select",
-        "question": "Что значит: geradeaus und dann rechts",
-        "options": ["прямо а потом направо", "слева а потом прямо", "направо и потом налево"],
-        "answer": "прямо а потом направо"
+        "question": "questsWindValleyTenthQuests.questFifteen",
+        "options": [
+          "questsWindValleyTenthQuests.questFifteenFirstOption",
+          "questsWindValleyTenthQuests.questFifteenSecondOption",
+          "questsWindValleyTenthQuests.questFifteenThirdOption"
+        ],
+        "answer": "questsWindValleyTenthQuests.questFifteenFirstOption"
       }
     ]
   },
   {
     "questId": "city-11",
-    "title": "Спросить дорогу",
+    "title": "questsStoneReachEleventhQuests.title",
     "progress": "0/15",
-    "description": "Учим простые вопросы Wo ist ... и короткие ответы с ориентирами",
+    "description": "questsStoneReachEleventhQuests.description",
     "conditions": {
-      "goal": "Спросить дорогу и понять простой ответ с ориентиром",
+      "goal": "questsStoneReachEleventhQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 180,
-      "xp": 320
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
         "id": 1,
         "type": "select",
-        "question": "Что значит: Wo ist der Bahnhof",
-        "options": ["Где вокзал", "Это вокзал", "Где парк"],
-        "answer": "Где вокзал"
+        "question": "questsStoneReachEleventhQuests.questOne",
+        "options": [
+          "questsStoneReachEleventhQuests.questOneFirstOption",
+          "questsStoneReachEleventhQuests.questOneSecondOption",
+          "questsStoneReachEleventhQuests.questOneThirdOption"
+        ],
+        "answer": "questsStoneReachEleventhQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "reorder",
-        "question": "Собери вопрос",
+        "question": "questsStoneReachEleventhQuests.questTwo",
         "words": ["Wo", "ist", "die", "Haltestelle"],
         "correctOrder": ["Wo", "ist", "die", "Haltestelle"]
       },
       {
         "id": 3,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsStoneReachEleventhQuests.questThird",
         "text": "Wo ist die Haltestelle",
         "answer": "Wo ist die Haltestelle"
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Что значит: Entschuldigung",
-        "options": ["Извините", "Пожалуйста", "Спасибо"],
-        "answer": "Извините"
+        "question": "questsStoneReachEleventhQuests.questFour",
+        "options": [
+          "questsStoneReachEleventhQuests.questFourFirstOption",
+          "questsStoneReachEleventhQuests.questFourSecondOption",
+          "questsStoneReachEleventhQuests.questFourThirdOption"
+        ],
+        "answer": "questsStoneReachEleventhQuests.questFourFirstOption"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Собери вопрос",
+        "question": "questsStoneReachEleventhQuests.questFive",
         "words": ["Entschuldigung", "wo", "Park", "der", "ist"],
         "correctOrder": ["Entschuldigung", "wo", "ist", "der", "Park"]
       },
       {
         "id": 6,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsStoneReachEleventhQuests.questSix",
         "text": "Entschuldigung wo ist das Café",
         "answer": "Entschuldigung wo ist das Café"
       },
       {
         "id": 7,
         "type": "select",
-        "question": "Что значит: geradeaus und dann links",
-        "options": ["прямо а потом налево", "налево а потом направо", "направо а потом назад"],
-        "answer": "прямо а потом налево"
+        "question": "questsStoneReachEleventhQuests.questSeven",
+        "options": [
+          "questsStoneReachEleventhQuests.questSevenFirstOption",
+          "questsStoneReachEleventhQuests.questSevenSecondOption",
+          "questsStoneReachEleventhQuests.questSevenThirdOption"
+        ],
+        "answer": "questsStoneReachEleventhQuests.questSevenFirstOption"
       },
       {
         "id": 8,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsStoneReachEleventhQuests.questEight",
         "words": ["dem", "Apotheke", "Museum", "gegenüber", "Die", "ist"],
         "correctOrder": ["Die", "Apotheke", "ist", "gegenüber", "dem", "Museum"]
       },
       {
         "id": 9,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsStoneReachEleventhQuests.questNine",
         "text": "Die Apotheke ist gegenüber dem Museum",
         "answer": "Die Apotheke ist gegenüber dem Museum"
       },
       {
         "id": 10,
         "type": "select",
-        "question": "Что значит: Ist das die Straße zum Museum?",
-        "options": ["Это улица к музею?", "Где улица к музею?", "Это музей на улице?"],
-        "answer": "Это улица к музею"
+        "question": "questsStoneReachEleventhQuests.questTen",
+        "options": [
+          "questsStoneReachEleventhQuests.questTenFirstOption",
+          "questsStoneReachEleventhQuests.questTenSecondOption",
+          "questsStoneReachEleventhQuests.questTenThirdOption"
+        ],
+        "answer": "questsStoneReachEleventhQuests.questTenFirstOption"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsStoneReachEleventhQuests.questEleven",
         "words": ["Bank", "Hotel", "der", "neben", "ist", "das"],
         "correctOrder": ["Das", "Hotel", "ist", "neben", "der", "Bank"]
       },
       {
         "id": 12,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsStoneReachEleventhQuests.questTwelve",
         "text": "Das Hotel ist neben der Bank",
         "answer": "Das Hotel ist neben der Bank"
       },
       {
         "id": 13,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "questsStoneReachEleventhQuests.questThirteen",
         "words": ["ist", "Museum", "Das", "rechts"],
         "correctOrder": ["Das", "Museum", "ist", "rechts"]
       },
       {
         "id": 14,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsStoneReachEleventhQuests.questFourteen",
         "text": "Das Museum ist rechts",
         "answer": "Das Museum ist rechts"
       },
       {
         "id": 15,
         "type": "select",
-        "question": "Что значит: Wo ist die U-Bahn",
-        "options": ["Где метро", "Это метро", "Я еду в метро"],
-        "answer": "Где метро"
+        "question": "questsStoneReachEleventhQuests.questFifteenFirstOption",
+        "options": [
+          "questsStoneReachEleventhQuests.questFifteenSecondOption",
+          "questsStoneReachEleventhQuests.",
+          "questsStoneReachEleventhQuests.questFifteenThirdOption"
+        ],
+        "answer": "questsStoneReachEleventhQuests.questFifteenSecondOption"
       }
     ]
   },
+
   {
     "questId": "city-12",
-    "title": "Вход и выход",
+    "title": "questsStoneReachTwelfthQuests.title",
     "progress": "0/15",
-    "description": "Вход, выход, информация, лифт. Учим 4 слова и комбинируем с ориентирами",
+    "description": "questsStoneReachTwelfthQuests.description",
     "conditions": {
-      "goal": "Называть места входа/выхода и строить короткие фразы с ориентиром",
+      "goal": "questsStoneReachTwelfthQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 180,
-      "xp": 320
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
         "id": 1,
         "type": "select",
-        "question": "Что значит: der Eingang",
-        "options": ["Вход", "Выход", "Информация"],
-        "answer": "Вход"
+        "question": "questsStoneReachTwelfthQuests.questOne",
+        "options": [
+          "questsStoneReachTwelfthQuests.questOneFirstOption",
+          "questsStoneReachTwelfthQuests.questOneSecondOption",
+          "questsStoneReachTwelfthQuests.questOneThirdOption"
+        ],
+        "answer": "questsStoneReachTwelfthQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "select",
-        "question": "Что значит: der Ausgang",
-        "options": ["Выход", "Лифт", "Площадь"],
-        "answer": "Выход"
+        "question": "questsStoneReachTwelfthQuests.questTwo",
+        "options": [
+          "questsStoneReachTwelfthQuests.questTwoFirstOption",
+          "questsStoneReachTwelfthQuests.questTwoSecondOption",
+          "questsStoneReachTwelfthQuests.questTwoThirdOption"
+        ],
+        "answer": "questsStoneReachTwelfthQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Что значит: die Information",
-        "options": ["Справка", "Полиция", "Аптека"],
-        "answer": "Справка"
+        "question": "questsStoneReachTwelfthQuests.questThird",
+        "options": [
+          "questsStoneReachTwelfthQuests.questThirdFirstOption",
+          "questsStoneReachTwelfthQuests.questThirdSecondOption",
+          "questsStoneReachTwelfthQuests.questThirdThirdOption"
+        ],
+        "answer": "questsStoneReachTwelfthQuests.questThirdFirstOption"
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Что значит: der Aufzug",
-        "options": ["Лифт", "Автобус", "Музей"],
-        "answer": "Лифт"
+        "question": "questsStoneReachTwelfthQuests.questFour",
+        "options": [
+          "questsStoneReachTwelfthQuests.questFourFirstOption",
+          "questsStoneReachTwelfthQuests.questFourSecondOption",
+          "questsStoneReachTwelfthQuests.questFourThirdOption"
+        ],
+        "answer": "questsStoneReachTwelfthQuests.questFourFirstOption"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["Eingang", "ist", "der", "Das"],
-        "correctOrder": ["Das", "ist", "der", "Eingang"]
+        "question": "questsStoneReachTwelfthQuests.questFive",
+        "words": [
+          "Eingang",
+          "ist",
+          "der",
+          "Das"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "der",
+          "Eingang"
+        ]
       },
       {
         "id": 6,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsStoneReachTwelfthQuests.questSix",
         "text": "Der Eingang ist rechts",
         "answer": "Der Eingang ist rechts"
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["Das", "der", "ist", "Ausgang"],
-        "correctOrder": ["Das", "ist", "der", "Ausgang"]
+        "question": "questsStoneReachTwelfthQuests.questSeven",
+        "words": [
+          "Das",
+          "der",
+          "ist",
+          "Ausgang"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "der",
+          "Ausgang"
+        ]
       },
       {
         "id": 8,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsStoneReachTwelfthQuests.questEight",
         "text": "Der Ausgang ist links",
         "answer": "Der Ausgang ist links"
       },
       {
         "id": 9,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["dem", "Information", "ist", "gegenüber", "Die", "Museum"],
-        "correctOrder": ["Die", "Information", "ist", "gegenüber", "dem", "Museum"]
+        "question": "questsStoneReachTwelfthQuests.questNine",
+        "words": [
+          "dem",
+          "Information",
+          "ist",
+          "gegenüber",
+          "Die",
+          "Museum"
+        ],
+        "correctOrder": [
+          "Die",
+          "Information",
+          "ist",
+          "gegenüber",
+          "dem",
+          "Museum"
+        ]
       },
       {
         "id": 10,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsStoneReachTwelfthQuests.questTen",
         "text": "Die Information ist gegenüber dem Museum",
         "answer": "Die Information ist gegenüber dem Museum"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["Aufzug", "Der", "dem", "hinter", "ist", "Bahnhof"],
-        "correctOrder": ["Der", "Aufzug", "ist", "hinter", "dem", "Bahnhof"]
+        "question": "questsStoneReachTwelfthQuests.questEleven",
+        "words": [
+          "Aufzug",
+          "Der",
+          "dem",
+          "hinter",
+          "ist",
+          "Bahnhof"
+        ],
+        "correctOrder": [
+          "Der",
+          "Aufzug",
+          "ist",
+          "hinter",
+          "dem",
+          "Bahnhof"
+        ]
       },
       {
         "id": 12,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsStoneReachTwelfthQuests.questTwelve",
         "text": "Der Aufzug ist hinter dem Bahnhof",
         "answer": "Der Aufzug ist hinter dem Bahnhof"
       },
       {
         "id": 13,
         "type": "reorder",
-        "question": "Собери словосочетание",
-        "words": ["Aufzug", "neuer", "ein"],
-        "correctOrder": ["ein", "neuer", "Aufzug"]
+        "question": "questsStoneReachTwelfthQuests.questThirteen",
+        "words": [
+          "Aufzug",
+          "neuer",
+          "ein"
+        ],
+        "correctOrder": [
+          "ein",
+          "neuer",
+          "Aufzug"
+        ]
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "Собери словосочетание",
-        "words": ["Eingang", "großer", "ein"],
-        "correctOrder": ["ein", "großer", "Eingang"]
+        "question": "questsStoneReachTwelfthQuests.questFourteen",
+        "words": [
+          "Eingang",
+          "großer",
+          "ein"
+        ],
+        "correctOrder": [
+          "ein",
+          "großer",
+          "Eingang"
+        ]
       },
       {
         "id": 15,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsStoneReachTwelfthQuests.questFifteen",
         "text": "Ein großer Eingang",
         "answer": "Ein großer Eingang"
       }
@@ -1465,123 +1870,197 @@
   },
   {
     "questId": "city-13",
-    "title": "Достопримечательности",
+    "title": "questsStoneReachThirteenthQuests.title",
     "progress": "0/15",
-    "description": "Церковь, ратуша, рынок, башня. Учим 4 слова и комбинируем с ориентирами",
+    "description": "questsStoneReachThirteenthQuests.description",
     "conditions": {
-      "goal": "Называть достопримечательности и строить короткие фразы с предлогами места",
+      "goal": "questsStoneReachThirteenthQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 180,
-      "xp": 320
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
         "id": 1,
         "type": "select",
-        "question": "Что значит: die Kirche",
-        "options": ["Церковь", "Ратуша", "Башня"],
-        "answer": "Церковь"
+        "question": "questsStoneReachThirteenthQuests.questOne",
+        "options": [
+          "questsStoneReachThirteenthQuests.questOneFirstOption",
+          "questsStoneReachThirteenthQuests.questOneSecondOption",
+          "questsStoneReachThirteenthQuests.questOneThirdOption"
+        ],
+        "answer": "questsStoneReachThirteenthQuests.questOneFirstOption"
       },
       {
         "id": 2,
         "type": "select",
-        "question": "Что значит: das Rathaus",
-        "options": ["Ратуша", "Рынок", "Церковь"],
-        "answer": "Ратуша"
+        "question": "questsStoneReachThirteenthQuests.questTwo",
+        "options": [
+          "questsStoneReachThirteenthQuests.questTwoFirstOption",
+          "questsStoneReachThirteenthQuests.questTwoSecondOption",
+          "questsStoneReachThirteenthQuests.questTwoThirdOption"
+        ],
+        "answer": "questsStoneReachThirteenthQuests.questTwoFirstOption"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Что значит: der Markt",
-        "options": ["Рынок", "Мост", "Отель"],
-        "answer": "Рынок"
+        "question": "questsStoneReachThirteenthQuests.questThird",
+        "options": [
+          "questsStoneReachThirteenthQuests.questThirdFirstOption",
+          "questsStoneReachThirteenthQuests.questThirdSecondOption",
+          "questsStoneReachThirteenthQuests.questThirdThirdOption"
+        ],
+        "answer": "questsStoneReachThirteenthQuests.questThirdFirstOption"
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Что значит: der Turm",
-        "options": ["Башня", "Парк", "Площадь"],
-        "answer": "Башня"
+        "question": "questsStoneReachThirteenthQuests.",
+        "options": [
+          "questsStoneReachThirteenthQuests.questFourFirstOption",
+          "questsStoneReachThirteenthQuests.questFourSecondOption",
+          "questsStoneReachThirteenthQuests.questFourThirdOption"
+        ],
+        "answer": "questsStoneReachThirteenthQuests.questFourFirstOption"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["Das", "die", "ist", "Kirche"],
-        "correctOrder": ["Das", "ist", "die", "Kirche"]
+        "question": "questsStoneReachThirteenthQuests.questFive",
+        "words": [
+          "Das",
+          "die",
+          "ist",
+          "Kirche"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "die",
+          "Kirche"
+        ]
       },
       {
         "id": 6,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsStoneReachThirteenthQuests.questSix",
         "text": "Die Kirche",
         "answer": "Die Kirche"
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["Rathaus", "ist", "das", "Das"],
-        "correctOrder": ["Das", "ist", "das", "Rathaus"]
+        "question": "questsStoneReachThirteenthQuests.questSeven",
+        "words": [
+          "Rathaus",
+          "ist",
+          "das",
+          "Das"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "das",
+          "Rathaus"
+        ]
       },
       {
         "id": 8,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsStoneReachThirteenthQuests.questEight",
         "text": "Das Rathaus",
         "answer": "Das Rathaus"
       },
       {
         "id": 9,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["Das", "ist", "der", "Markt"],
-        "correctOrder": ["Das", "ist", "der", "Markt"]
+        "question": "questsStoneReachThirteenthQuests.questNine",
+        "words": [
+          "Das",
+          "ist",
+          "der",
+          "Markt"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "der",
+          "Markt"
+        ]
       },
       {
         "id": 10,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsStoneReachThirteenthQuests.questTen",
         "text": "Der Markt",
         "answer": "Der Markt"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["Das", "der", "ist", "Turm"],
-        "correctOrder": ["Das", "ist", "der", "Turm"]
+        "question": "questsStoneReachThirteenthQuests.questEleven",
+        "words": [
+          "Das",
+          "der",
+          "ist",
+          "Turm"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "der",
+          "Turm"
+        ]
       },
       {
         "id": 12,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsStoneReachThirteenthQuests.questTwelve",
         "text": "Der Turm",
         "answer": "Der Turm"
       },
       {
         "id": 13,
         "type": "reorder",
-        "question": "Собери фразу",
-        "words": ["Die", "Kirche", "dem", "Park", "ist", "neben"],
-        "correctOrder": ["Die", "Kirche", "ist", "neben", "dem", "Park"]
+        "question": "questsStoneReachThirteenthQuests.questThirteen",
+        "words": [
+          "Die",
+          "Kirche",
+          "dem",
+          "Park",
+          "ist",
+          "neben"
+        ],
+        "correctOrder": [
+          "Die",
+          "Kirche",
+          "ist",
+          "neben",
+          "dem",
+          "Park"
+        ]
       },
       {
         "id": 14,
         "type": "speechToText",
-        "question": "Прослушай и напиши",
+        "question": "questsStoneReachThirteenthQuests.questFourteen",
         "text": "Das Rathaus ist neben dem Museum",
         "answer": "Das Rathaus ist neben dem Museum"
       },
       {
         "id": 15,
         "type": "select",
-        "question": "Что значит: Der Turm ist gegenüber dem Hotel",
-        "options": ["Башня напротив отеля", "Башня рядом с отелем", "Башня за отелем"],
-        "answer": "Башня напротив отеля"
+        "question": "questsStoneReachThirteenthQuests.questFifteen",
+        "options": [
+          "questsStoneReachThirteenthQuests.questFifteenFirstOption",
+          "questsStoneReachThirteenthQuests.questFifteenSecondOption",
+          "questsStoneReachThirteenthQuests.questFifteenThirdOption"
+        ],
+        "answer": "questsStoneReachThirteenthQuests.questFifteenFirstOption"
       }
     ]
   }
