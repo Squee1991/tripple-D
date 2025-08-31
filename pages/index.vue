@@ -6,7 +6,8 @@ import Description from '../src/components/DescriptionBlock.vue'
 import About from '../src/components/about.vue'
 import FeedBack from '../src/components/feedBack.vue'
 import Footer from '../src/components/footer.vue'
-import Vmap from "~/src/components/Vmap.vue";
+import VUid from '../src/components/V-uid.vue'
+
 
 const authStore = userAuthStore()
 </script>
@@ -20,8 +21,9 @@ const authStore = userAuthStore()
       <About/>
       <FeedBack/>
     </div>
-    <div v-else>
-      <Vmap/>
+    <div class="stat" v-else>
+      <!--      <VMap/>-->
+      <VUid/>
     </div>
     <Footer/>
   </div>
@@ -29,8 +31,21 @@ const authStore = userAuthStore()
 
 <style scoped>
 .container {
-  max-width: 1400px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 10px;
+}
+
+.stat {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+@media (max-width: 767px) {
+  .stat {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 </style>

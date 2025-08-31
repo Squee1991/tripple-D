@@ -1,10 +1,13 @@
 <template>
-  <div class="map__wrapper">
+  <div v-if="regions" class="map__wrapper">
     <div class="map__title-wrapper">
+      <button @click="backToMain" class="back__to-main">
+        <img class="back__icon" src="../assets/images/close.svg" alt="">
+      </button>
       <h1 class="map__title">Карта изучения немецкого языка</h1>
     </div>
     <div class="map-layout">
-      <aside
+      <div
           class="map-left"
           :class="[
           { 'is-open': isPanelOpen || windowWidth > 767 },
@@ -31,7 +34,7 @@
         <button class="map-btn" :disabled="!isUnlocked" @click="go(active)">
           Выбрать
         </button>
-      </aside>
+      </div>
       <div class="map-right">
         <div
             v-for="r in regions"
@@ -60,40 +63,62 @@
 </template>
 
 <script setup>
-import {ref, computed, onMounted, onBeforeUnmount} from "vue";
-import {useRouter} from "vue-router";
-import {regions} from "@/utils/regions.js";
+import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
+import { useRouter } from 'vue-router'
+import { regions } from '@/utils/regions.js'
 
-const props = defineProps({currentLevel: {type: Number, default: 1}});
+const props = defineProps({ currentLevel: { type: Number, default: 1 } })
 
-const router = useRouter();
-const active = ref(regions[0]);
-const isPanelOpen = ref(false);
-const windowWidth = ref(window.innerWidth);
+const router = useRouter()
+const backToMain = () => router.push('/')
+
+const active = ref(regions[0])
+const isPanelOpen = ref(false)
+const windowWidth = ref(1024)
 
 function handleResize() {
-  windowWidth.value = window.innerWidth;
+  if (typeof window !== 'undefined') {
+    windowWidth.value = window.innerWidth
+  }
 }
 
-onMounted(() => window.addEventListener("resize", handleResize));
-onBeforeUnmount(() => window.removeEventListener("resize", handleResize));
+onMounted(() => {
+  handleResize()
+  if (typeof window !== 'undefined') {
+    window.addEventListener('resize', handleResize)
+  }
+})
 
-const clampedLevel = computed(() => Math.min(Math.max(props.currentLevel, 1), 20));
-const isUnlocked = computed(() => (active.value ? clampedLevel.value >= active.value.level : false));
+onBeforeUnmount(() => {
+  if (typeof window !== 'undefined') {
+    window.removeEventListener('resize', handleResize)
+  }
+})
+
+const clampedLevel = computed(() =>
+    Math.min(Math.max(props.currentLevel, 1), 20)
+)
+
+const isUnlocked = computed(() =>
+    active.value ? clampedLevel.value >= active.value.level : false
+)
 
 function themeOf(obj) {
-  return (obj && (obj.theme || obj.pathTo)) ? (obj.theme || obj.pathTo) : 'default';
+  return (obj && (obj.theme || obj.pathTo)) ? (obj.theme || obj.pathTo) : 'default'
 }
 
 function select(region) {
-  active.value = region;
-  if (windowWidth.value <= 767) isPanelOpen.value = true;
+  active.value = region
+  if (windowWidth.value <= 767) isPanelOpen.value = true
 }
 
 function go(region) {
-  if (clampedLevel.value >= region.level) router.push(`/location/${region.pathTo}`);
+  if (clampedLevel.value >= region.level) {
+    router.push(`/location/${region.pathTo}`)
+  }
 }
 </script>
+
 
 <style>
 
@@ -108,6 +133,22 @@ function go(region) {
   --shadow-hover: 2px 2px 0 var(--stroke);
 }
 
+.back__to-main {
+  border: none;
+  background: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.back__icon {
+  width: 100%;
+}
+
 .map__wrapper {
   display: flex;
   flex-direction: column;
@@ -115,26 +156,23 @@ function go(region) {
   padding: 20px;
   align-items: center;
   margin: 20px 0 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .map__title-wrapper {
+  display: flex;
+  align-items: center;
   width: 100%;
   border: 3px solid var(--stroke);
   border-radius: 14px;
   box-shadow: var(--shadow);
   padding: 12px;
-  background: linear-gradient(180deg, #94f3b6, #4ade80);
   position: relative;
   overflow: hidden;
+  background: #4ade80;
 }
 
-.map__title-wrapper::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(1200px 200px at -10% 0%, rgba(255, 255, 255, .4), transparent 60%);
-  pointer-events: none;
-}
 
 .map__title {
   font-size: 2.3rem;
@@ -357,7 +395,6 @@ function go(region) {
   .map-layout {
     position: relative;
     display: block;
-    max-height: 75vh;
     overflow-y: auto;
   }
 

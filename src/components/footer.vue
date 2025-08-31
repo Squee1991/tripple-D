@@ -1,11 +1,11 @@
 <template>
   <footer class="footer">
     <div class="footer__container">
-      <div class="footer-brand">
-        <NuxtLink to="/">
-          <span class="logo__name">LEXINGO</span>
-        </NuxtLink>
-      </div>
+<!--      <div class="footer-brand">-->
+<!--        <NuxtLink to="/">-->
+<!--          <span class="logo__name">LEXINGO</span>-->
+<!--        </NuxtLink>-->
+<!--      </div>-->
       <nav class="footer-links">
         <ul class="footer__links-nav">
           <li v-for="item in data" :key="item.id" class="footer__links-item">
@@ -77,11 +77,18 @@ const toDiscord = () => {
 
 <style scoped>
 .footer {
-  border-top: 4px solid #1e1e1e;
-  padding: 3rem 1.5rem 2rem;
   font-family: "Nunito", sans-serif;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+}
+
+.footer__container {
+  border: 3px solid black;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 4px 4px 0 black;
+  background: #4ade80;
+  width: 100%;
 }
 
 .footer__links-nav {
@@ -119,8 +126,6 @@ const toDiscord = () => {
 }
 
 .footer__container {
-  max-width: 1280px;
-  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
