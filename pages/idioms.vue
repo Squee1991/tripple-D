@@ -205,7 +205,7 @@ const idiomQuizQuestions = ref([
   },
   {
     question: t('idiomQuizFifthQuest.questionFirst'),
-    options: [t('idiomQuizFifthQuest.questionFirst'), t('idiomQuizFifthQuest.questionFirst'), t('idiomQuizFifthQuest.questionFirst')],
+    options: [t('idiomQuizFifthQuest.optionOneFirst'), t('idiomQuizFifthQuest.optionTwoFirst'), t('idiomQuizFifthQuest.optionThreeFirst')],
     answer: t('idiomQuizFifthQuest.answer'),
   },
   {

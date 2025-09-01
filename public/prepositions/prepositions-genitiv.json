@@ -1,0 +1,102 @@
+[
+  {
+    "question": "Trotz ___ gehen wir spazieren.",
+    "options": ["des Regens", "dem Regen", "den Regen", "der Regen"],
+    "answer": "des Regens"
+  },
+  {
+    "question": "Während ___ ist das Handy aus.",
+    "options": ["des Unterrichts", "dem Unterricht", "den Unterricht", "der Unterricht"],
+    "answer": "des Unterrichts"
+  },
+  {
+    "question": "Wegen ___ bleibt die Schule geschlossen.",
+    "options": ["der Kälte", "die Kälte", "dem Kälte", "den Kälte"],
+    "answer": "der Kälte"
+  },
+  {
+    "question": "Statt ___ nehme ich Honig.",
+    "options": ["des Zuckers", "dem Zucker", "den Zucker", "der Zucker"],
+    "answer": "des Zuckers"
+  },
+  {
+    "question": "Außerhalb ___ ist es ruhiger.",
+    "options": ["der Stadt", "die Stadt", "dem Stadt", "des Stadt"],
+    "answer": "der Stadt"
+  },
+  {
+    "question": "Innerhalb ___ darf man nicht rauchen.",
+    "options": ["des Gebäudes", "dem Gebäude", "den Gebäude", "der Gebäude"],
+    "answer": "des Gebäudes"
+  },
+  {
+    "question": "Jenseits ___ liegt ein Dorf.",
+    "options": ["des Flusses", "dem Fluss", "den Fluss", "der Fluss"],
+    "answer": "des Flusses"
+  },
+  {
+    "question": "Diesseits ___ ist ein Checkpoint.",
+    "options": ["der Grenze", "die Grenze", "dem Grenze", "den Grenze"],
+    "answer": "der Grenze"
+  },
+  {
+    "question": "Aufgrund ___ ist die Straße gesperrt.",
+    "options": ["der Bauarbeiten", "die Bauarbeiten", "den Bauarbeiten", "des Bauarbeiten"],
+    "answer": "der Bauarbeiten"
+  },
+  {
+    "question": "Infolge ___ kam es zu Verspätungen.",
+    "options": ["des Unfalls", "dem Unfall", "den Unfall", "der Unfall"],
+    "answer": "des Unfalls"
+  },
+  {
+    "question": "Anlässlich ___ treffen wir uns morgen.",
+    "options": ["der Feier", "die Feier", "dem Feier", "den Feier"],
+    "answer": "der Feier"
+  },
+  {
+    "question": "Aufgrund ___ bleibt das Museum geschlossen.",
+    "options": ["des Sturms", "dem Sturm", "den Sturm", "der Sturm"],
+    "answer": "des Sturms"
+  },
+  {
+    "question": "Angesichts ___ müssen wir handeln.",
+    "options": ["der Lage", "die Lage", "dem Lage", "den Lage"],
+    "answer": "der Lage"
+  },
+  {
+    "question": "Unweit ___ gibt es einen Parkplatz.",
+    "options": ["des Bahnhofs", "dem Bahnhof", "den Bahnhof", "der Bahnhof"],
+    "answer": "des Bahnhofs"
+  },
+  {
+    "question": "Oberhalb ___ liegt Schnee.",
+    "options": ["der Baumgrenze", "die Baumgrenze", "dem Baumgrenze", "den Baumgrenze"],
+    "answer": "der Baumgrenze"
+  },
+  {
+    "question": "Unterhalb ___ befindet sich der See.",
+    "options": ["des Berges", "dem Berg", "den Berg", "der Berg"],
+    "answer": "des Berges"
+  },
+  {
+    "question": "Bezüglich ___ habe ich eine Frage.",
+    "options": ["des Vertrags", "dem Vertrag", "den Vertrag", "der Vertrag"],
+    "answer": "des Vertrags"
+  },
+  {
+    "question": "Infolge ___ kam es zu Verspätungen.",
+    "options": ["des Unwetters", "dem Unwetter", "den Unwetter", "der Unwetter"],
+    "answer": "des Unwetters"
+  },
+  {
+    "question": "Statt ___ trinke ich Tee.",
+    "options": ["des Kaffees", "dem Kaffee", "den Kaffee", "der Kaffee"],
+    "answer": "des Kaffees"
+  },
+  {
+    "question": "Wegen ___ fallen die Züge aus.",
+    "options": ["der Bauarbeiten", "die Bauarbeiten", "den Bauarbeiten", "des Bauarbeiten"],
+    "answer": "der Bauarbeiten"
+  }
+]

@@ -1,7 +1,7 @@
 <template>
   <div class="ach__wrapper">
     <div>
-      <h1 class="title">Достижения</h1>
+      <h1 class="title">{{ t('nav.achieve')}}</h1>
       <button @click="pathThoAch" class="ach__route">Перейти</button>
     </div>
     <div>
@@ -12,6 +12,7 @@
 
 <script setup>
     import { useRouter} from "vue-router";
+    const { t } = useI18n();
     const router = useRouter();
     const pathThoAch = () => {
       router.push({ path: "/achievements" });

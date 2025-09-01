@@ -1,0 +1,102 @@
+[
+  {
+    "question": "Er kommt aus ___.",
+    "options": ["dem Haus", "den Haus", "der Haus", "des Hauses"],
+    "answer": "dem Haus"
+  },
+  {
+    "question": "Außer ___ war niemand da.",
+    "options": ["dem Kind", "den Kind", "der Kind", "des Kindes"],
+    "answer": "dem Kind"
+  },
+  {
+    "question": "Ich wohne bei ___.",
+    "options": ["meinen Eltern", "meine Eltern", "meinem Eltern", "meiner Eltern"],
+    "answer": "meinen Eltern"
+  },
+  {
+    "question": "Wir fahren mit ___.",
+    "options": ["dem Bus", "den Bus", "der Bus", "des Busses"],
+    "answer": "dem Bus"
+  },
+  {
+    "question": "Nach ___ lernen wir.",
+    "options": ["dem Essen", "den Essen", "der Essen", "des Essens"],
+    "answer": "dem Essen"
+  },
+  {
+    "question": "Ich lerne seit ___ Deutsch.",
+    "options": ["einem Jahr", "einen Jahr", "eines Jahr", "einer Jahr"],
+    "answer": "einem Jahr"
+  },
+  {
+    "question": "Der Zug fährt von ___ ab.",
+    "options": ["dem Bahnhof", "den Bahnhof", "der Bahnhof", "des Bahnhofs"],
+    "answer": "dem Bahnhof"
+  },
+  {
+    "question": "Ich gehe zu ___.",
+    "options": ["dem Arzt", "den Arzt", "der Arzt", "des Arztes"],
+    "answer": "dem Arzt"
+  },
+  {
+    "question": "Dem Haus ___ ist ein Park.",
+    "options": ["gegenüber", "nach", "durch", "für"],
+    "answer": "gegenüber"
+  },
+  {
+    "question": "Er bleibt bei ___.",
+    "options": ["seiner Tante", "seine Tante", "seinem Tante", "seinen Tante"],
+    "answer": "seiner Tante"
+  },
+  {
+    "question": "Ich fahre mit ___.",
+    "options": ["dem Fahrrad", "das Fahrrad", "des Fahrrads", "den Fahrrad"],
+    "answer": "dem Fahrrad"
+  },
+  {
+    "question": "Wir treffen uns bei ___.",
+    "options": ["meinem Freund", "meinen Freund", "meines Freundes", "mein Freund"],
+    "answer": "meinem Freund"
+  },
+  {
+    "question": "Nach ___ gehen wir ins Kino.",
+    "options": ["dem Unterricht", "den Unterricht", "des Unterrichts", "der Unterricht"],
+    "answer": "dem Unterricht"
+  },
+  {
+    "question": "Seit ___ wohnt er in Köln.",
+    "options": ["einem Jahr", "ein Jahr", "eines Jahres", "einen Jahr"],
+    "answer": "einem Jahr"
+  },
+  {
+    "question": "Er kommt aus ___.",
+    "options": ["der Schweiz", "die Schweiz", "dem Schweiz", "des Schweiz"],
+    "answer": "der Schweiz"
+  },
+  {
+    "question": "Dem Rathaus ___ liegt ein Café.",
+    "options": ["gegenüber", "entlang", "durch", "für"],
+    "answer": "gegenüber"
+  },
+  {
+    "question": "Ich gehe zu ___.",
+    "options": ["der Ärztin", "die Ärztin", "den Ärztin", "des Ärztin"],
+    "answer": "der Ärztin"
+  },
+  {
+    "question": "Wir bekommen Hilfe von ___.",
+    "options": ["unserem Lehrer", "unseren Lehrer", "unseres Lehrers", "unser Lehrer"],
+    "answer": "unserem Lehrer"
+  },
+  {
+    "question": "Er sitzt bei ___.",
+    "options": ["seinen Großeltern", "seine Großeltern", "seinem Großeltern", "seiner Großeltern"],
+    "answer": "seinen Großeltern"
+  },
+  {
+    "question": "Gemäß ___ ist das Gebäude geschlossen.",
+    "options": ["der Verordnung", "die Verordnung", "den Verordnung", "des Verordnung"],
+    "answer": "der Verordnung"
+  }
+]

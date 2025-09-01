@@ -169,6 +169,9 @@
           <div v-else-if="activeTabKey === 'award'">
             <AwardsList :awards="awardList"/>
           </div>
+          <div v-else-if="activeTabKey === 'archive'">
+            <VExampResulut/>
+          </div>
         </div>
       </section>
     </div>
@@ -212,7 +215,7 @@
         <p v-if="userAuthStore.isPremium" class="modal-text ">
           <span class="warn">ВАЖНО!!!</span>
           <span> При удалении аккаунта подписка не отменяется. Перед удалением отмените подписку</span>
-           </p>
+        </p>
         <p v-if="!isGoogleUser" class="modal-text">{{ t('cabinet.checkPassword') }}</p>
         <div v-if="!isGoogleUser" class="label">
           <input class="input" v-model="deletePasswordField.value" type="password"/>
@@ -235,6 +238,7 @@ import Progress from '../src/components/progress.vue'
 import Shop from '../src/components/Shop.vue'
 import Modal from '../src/components/modal.vue'
 import AwardsList from '../src/components/AwardsList.vue'
+import VExampResulut from "~/src/components/V-exampResulut.vue";
 import VToggle from '~/src/components/V-toggle.vue'
 import {userAuthStore} from '../store/authStore.js'
 import {userlangStore} from '../store/learningStore.js'
@@ -267,7 +271,8 @@ const activeTabKey = ref('info')
 const TAB_ITEMS = [
   {key: 'info', label: t('cabinetSidebar.valueOne'), icon: UserIcon},
   {key: 'progress', label: t('cabinetSidebar.valueTwo'), icon: ProgressIcon},
-  {key: 'award', label: t('cabinetSidebar.valueThree'), icon: AwardsIcon}
+  {key: 'award', label: t('cabinetSidebar.valueThree'), icon: AwardsIcon},
+  {key: 'archive', label: 'Архив экзаменов', icon: ProgressIcon},
 ]
 
 const ACCORDIONS = ref([
@@ -544,6 +549,11 @@ onMounted(() => {
   cursor: pointer;
 }
 
+.back__btn-icon {
+  width: 40px;
+  height: 40px;
+}
+
 .premium__btn-wrapper {
   margin-top: 10px;
 }
@@ -621,7 +631,6 @@ onMounted(() => {
   width: 40px;
   height: 40px;
 }
-
 
 
 .back-label {
@@ -806,7 +815,6 @@ onMounted(() => {
   border-bottom: 1px solid gray;
   padding: 10px 8px;
   margin-bottom: 10px;
-
 }
 
 .card-row__label {
@@ -894,7 +902,6 @@ onMounted(() => {
   background: #f3f4f6;
   box-shadow: 2px 2px 0 #000;
   cursor: pointer;
-
 }
 
 .btn-success {
@@ -964,7 +971,6 @@ onMounted(() => {
   color: #dc4545;
   font-family: "Nunito", sans-serif;
   font-weight: 600;
-
 }
 
 .modal-actions {
