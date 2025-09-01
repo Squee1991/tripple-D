@@ -16,7 +16,9 @@
       <button class="exam__button" @click="startExam">🚀 Prüfung starten</button>
     </div>
     <div v-else-if="!isExamFinished && currentExercise" class="exam__card exam__card--active">
-      <p class="exam__progress">Frage {{ examStore.currentIndex + 1 }} von {{ examStore.exercises.length }}</p>
+      <p class="exam__progress">
+        Frage {{ examStore.currentIndex + 1 }} von {{ examStore.exercises.length }}
+      </p>
       <h2 class="exam__card-title">{{ currentExercise.title }}</h2>
       <div v-if="['multiple-choice','audio-choice'].includes(currentExercise.type)">
         <div v-if="currentExercise.task.text && currentExercise.type==='multiple-choice'" class="exam__task-text">
@@ -28,12 +30,10 @@
         </div>
         <div class="exam__question">
           <strong class="exam__label">Frage:</strong> {{ currentExercise.task.question }}
-<!--          <SoundBtn v-if="currentExercise.type==='audio-choice'" :text="currentExercise.task.question" lang="de-DE"/>-->
         </div>
         <ul class="exam__options">
           <li v-for="option in currentExercise.task.options" :key="option" class="exam__option">
-            <button class="exam__button" @click="examStore.answerCurrent(option)">{{ option }}</button>
-<!--            <SoundBtn v-if="currentExercise.type==='audio-choice'" :text="option" lang="de-DE"/>-->
+            <button class="exam__button" @click="chooseOption(option)">{{ option }}</button>
           </li>
         </ul>
       </div>
@@ -41,14 +41,21 @@
         <p class="exam__task-instruction">
           <strong class="exam__label">Aufgabe:</strong> {{ currentExercise.task.instruction }}
         </p>
-        <textarea v-model="userInput" class="exam__textarea" placeholder="Antwort schreiben..." rows="4"/>
+        <textarea
+            v-model="userInput"
+            class="exam__textarea"
+            placeholder="Antwort schreiben..."
+            rows="4"
+        />
         <button class="exam__button" @click="submitTextAnswer">Antwort senden</button>
       </div>
       <div v-else-if="currentExercise.type==='speaking-prompt'" class="exam__speaking-prompt">
         <p class="exam__task-prompt">
           <strong class="exam__label">Sprechen Sie:</strong> {{ currentExercise.task.prompt }}
         </p>
-        <p class="exam__task-topics">🎯 Themen: {{ currentExercise.task.expectedTopics.join(', ') }}</p>
+        <p class="exam__task-topics">
+          🎯 Themen: {{ currentExercise.task.expectedTopics.join(', ') }}
+        </p>
         <div class="voice-indicator" v-if="isRecording">
           <span class="record-dot"/> Aufnahme läuft...
         </div>
@@ -63,7 +70,8 @@
       <h2 class="exam__card-title">🎉 Prüfung abgeschlossen!</h2>
       <h3 class="exam__card-subtitle">🧾 Ergebnis des Tests für Niveau {{ level }}</h3>
       <p class="exam__average-score">
-        <strong class="exam__label">Durchschnittliche Punktzahl:</strong> {{ examResult.averageScore }} / 10
+        <strong class="exam__label">Durchschnittliche Punktzahl:</strong>
+        {{ examResult.averageScore }} / 10
       </p>
       <div class="exam-results-container">
         <div
@@ -71,91 +79,130 @@
             :key="moduleName"
             :class="['exam-results-column', `module--${moduleName.toLowerCase()}`]"
         >
-          <h3 class="exam-module-title">{{ moduleName }} ({{ moduleData.averageScore }}/10)</h3>
+          <h3 class="exam-module-title">
+            {{ moduleName }} ({{ moduleData.averageScore }}/10)
+          </h3>
           <div v-for="item in moduleData.items" :key="item.id" class="exam-result-item">
             <div class="exam-result-item__content">
-              <p v-if="item.taskText"><strong class="exam__label">Aufgabe:</strong> {{ item.taskText }}</p>
-              <p v-if="item.question"><strong class="exam__label">Frage:</strong> {{ item.question }}</p>
+              <p v-if="item.taskText">
+                <strong class="exam__label">Aufgabe:</strong> {{ item.taskText }}
+              </p>
+              <p v-if="item.question">
+                <strong class="exam__label">Frage:</strong> {{ item.question }}
+              </p>
               <div v-if="item.feedback" class="exam-result-item__feedback">
-                <p><strong class="exam__label">Die Antwort:</strong> {{ item.answer || 'Keine Antwort' }}</p>
-                <p><strong class="exam__label">Die Bewertung:</strong> {{ item.feedback.result }}</p>
-                <p><strong class="exam__label">Der Kommentar:</strong> {{ item.feedback.feedback }}</p>
+                <p>
+                  <strong class="exam__label">Die Antwort:</strong>
+                  {{ item.answer || 'Keine Antwort' }}
+                </p>
+                <p>
+                  <strong class="exam__label">Die Bewertung:</strong>
+                  {{ item.feedback.result }}
+                </p>
+                <p>
+                  <strong class="exam__label">Der Kommentar:</strong>
+                  {{ item.feedback.feedback }}
+                </p>
                 <p v-if="item.feedback.correctedVersion">
-                  <strong class="exam__label">Korrektur:</strong><br/>{{ item.feedback.correctedVersion }}
+                  <strong class="exam__label">Korrektur:</strong><br />
+                  {{ item.feedback.correctedVersion }}
                 </p>
               </div>
             </div>
-            <p class="exam-result-item__score"><strong>{{ item.score }} / 10</strong></p>
+            <p class="exam-result-item__score">
+              <strong>{{ item.score }} / 10</strong>
+            </p>
           </div>
         </div>
       </div>
-      <NuxtLink to="/exams" class="exam__button exam__back-button">⬅ Zurück zu den Niveaus</NuxtLink>
+      <NuxtLink to="/exams" class="exam__button exam__back-button">
+        ⬅ Zurück zu den Niveaus
+      </NuxtLink>
     </div>
   </div>
 </template>
 
 <script setup>
-import {ref, computed, onMounted} from 'vue'
-import {useRoute} from 'vue-router'
-import {useI18n} from 'vue-i18n'
-import {userExamStore} from '../../../store/examStore'
-
+import { ref, computed, onMounted, watch } from 'vue'
+import { useRoute } from 'vue-router'
+import { useI18n } from 'vue-i18n'
+import { userExamStore } from '../../../store/examStore'
 import SoundBtn from '~/src/components/soundBtn.vue'
 import VoiceRecorder from '~/src/components/VoiceRecorder.vue'
-import {useGroqCheckHomeWork} from '~/src/composables/useGroqCheck.js'
-
+import { useGroqCheckHomeWork } from '~/src/composables/useGroqCheck.js'
 const route = useRoute()
-const {locale} = useI18n()
+const { locale } = useI18n()
 const examStore = userExamStore()
-const transcription = ref('')
 const userInput = ref('')
 const level = ref('')
 const isIntroVisible = ref(true)
 const isRecording = ref(false)
+
+const currentExercise = computed(() => examStore.currentExercise)
+const isExamFinished = computed(() => examStore.isFinished)
+
+const startExam = async () => {
+  isIntroVisible.value = false
+  try {
+    if (typeof examStore.startAttempt === 'function') {
+      await examStore.startAttempt({ level: level.value, locale: locale.value })
+    }
+  } catch (e) {
+    console.error('Start attempt failed:', e)
+  }
+}
+
+const chooseOption = async (option) => {
+  try {
+    await examStore.answerCurrent(option)
+  } catch (e) {
+    console.error('Answer failed:', e)
+  }
+}
+
+const submitTextAnswer = async () => {
+  const answer = (userInput.value || '').trim()
+  if (!answer) return
+  try {
+    const feedback = await useGroqCheckHomeWork({
+      task: currentExercise.value.task,
+      answer,
+      level: level.value,
+      locale: locale.value
+    })
+    await examStore.answerCurrent(answer, feedback)
+    userInput.value = ''
+  } catch (e) {
+    console.error('Text submit failed:', e)
+  }
+}
+
 const submitTranscription = async (text) => {
-  const answer = text.trim()
+  const answer = (text || '').trim()
   if (!answer) return
 
   const task = currentExercise.value?.task
   if (!task) return
 
-  const feedback = await useGroqCheckHomeWork({
-    task,
-    answer,
-    level: level.value,
-    locale: locale.value
-  })
+  try {
+    const feedback = await useGroqCheckHomeWork({
+      task,
+      answer,
+      level: level.value,
+      locale: locale.value
+    })
 
-  examStore.answerCurrent(answer, feedback)
-  transcription.value = ''
-}
+    if (typeof examStore.recordSpeakingMeta === 'function') {
+      await examStore.recordSpeakingMeta({
+        exerciseId: currentExercise.value?.id,
+        transcription: answer
+      })
+    }
 
-const currentExercise = computed(() => examStore.currentExercise)
-const isExamFinished = computed(() => examStore.isFinished)
-
-const startExam = () => {
-  isIntroVisible.value = false
-}
-
-const moduleCounts = computed(() => {
-  const counts = {}
-  for (const ex of examStore.exercises) {
-    const mod = ex.title || 'Unbekannt'
-    counts[mod] = (counts[mod] || 0) + 1
+    await examStore.answerCurrent(answer, feedback)
+  } catch (e) {
+    console.error('Speaking submit failed:', e)
   }
-  return Object.entries(counts).map(([name, count]) => ({name, count}))
-})
-
-const submitTextAnswer = async () => {
-  const answer = userInput.value.trim()
-  const feedback = await useGroqCheckHomeWork({
-    task: currentExercise.value.task,
-    answer,
-    level: route.params.level.toUpperCase(),
-    locale: locale.value
-  })
-  examStore.answerCurrent(answer, feedback)
-  userInput.value = ''
 }
 
 const examResult = computed(() => {
@@ -173,7 +220,7 @@ const examResult = computed(() => {
     if (exercise.type === 'multiple-choice' || exercise.type === 'audio-choice') {
       score = answer.correct ? 10 : 0
     } else if (exercise.type === 'text-input' || exercise.type === 'speaking-prompt') {
-      score = scoreMap[answer.feedback?.result?.toLowerCase()] ?? 0;
+      score = scoreMap[answer.feedback?.result?.toLowerCase()] ?? 0
     }
 
     return {
@@ -189,9 +236,7 @@ const examResult = computed(() => {
 
   const grouped = allResults.reduce((acc, result) => {
     const moduleName = result.module
-    if (!acc[moduleName]) {
-      acc[moduleName] = {items: [], totalScore: 0}
-    }
+    if (!acc[moduleName]) acc[moduleName] = { items: [], totalScore: 0 }
     acc[moduleName].items.push(result)
     acc[moduleName].totalScore += result.score
     return acc
@@ -205,10 +250,34 @@ const examResult = computed(() => {
   const totalScore = allResults.reduce((sum, r) => sum + r.score, 0)
   const averageScore = allResults.length > 0 ? (totalScore / (allResults.length * 10) * 10).toFixed(1) : '0.0'
 
-  return {
-    groupedResults: grouped,
-    averageScore
+  return { groupedResults: grouped, averageScore }
+})
+
+watch(isExamFinished, async (done) => {
+  if (done) {
+    try {
+      if (typeof examStore.finalizeAttemptAndSave === 'function') {
+        await examStore.finalizeAttemptAndSave()
+      } else {
+        if (typeof examStore.finishAttempt === 'function') examStore.finishAttempt()
+        if (typeof examStore.buildAttemptSnapshot === 'function') {
+          const snapshot = examStore.buildAttemptSnapshot()
+          console.log('Snapshot (no Firestore method found):', snapshot)
+        }
+      }
+    } catch (e) {
+      console.error('Finalize failed:', e)
+    }
   }
+})
+
+const moduleCounts = computed(() => {
+  const counts = {}
+  for (const ex of examStore.exercises) {
+    const mod = ex.title || 'Unbekannt'
+    counts[mod] = (counts[mod] || 0) + 1
+  }
+  return Object.entries(counts).map(([name, count]) => ({ name, count }))
 })
 
 onMounted(() => {
@@ -217,9 +286,7 @@ onMounted(() => {
 })
 </script>
 
-
 <style scoped>
-
 .exam__intro {
   background: #fffbe6;
   border: 3px dashed #fbc02d;
@@ -313,7 +380,12 @@ onMounted(() => {
   color: #1a237e;
 }
 
-.exam__task-text, .exam__task-audio, .exam__question, .exam__task-instruction, .exam__task-prompt, .exam__task-topics {
+.exam__task-text,
+.exam__task-audio,
+.exam__question,
+.exam__task-instruction,
+.exam__task-prompt,
+.exam__task-topics {
   margin-bottom: 1.2rem;
   font-size: 1.2rem;
   display: flex;
@@ -355,7 +427,6 @@ onMounted(() => {
 .exam__textarea {
   width: 100%;
   padding: 1rem;
-
   margin-bottom: 1rem;
   font-size: 1rem;
   border-radius: 8px;
@@ -368,7 +439,6 @@ onMounted(() => {
   border-color: #388e3c;
   transform: rotate(0deg);
   width: 100%;
-
   max-width: 1200px;
 }
 
@@ -485,26 +555,13 @@ onMounted(() => {
 }
 
 @keyframes pulseDot {
-  0% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.5;
-    transform: scale(1.4);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
+  0% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.4); }
+  100% { opacity: 1; transform: scale(1); }
 }
 
 @keyframes pulseText {
-  0%, 100% {
-    opacity: 1
-  }
-  50% {
-    opacity: 0.5
-  }
+  0%, 100% { opacity: 1 }
+  50% { opacity: 0.5 }
 }
 </style>

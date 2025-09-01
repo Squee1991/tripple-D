@@ -204,28 +204,32 @@ const menuItems = computed(() => [
                   id: 'verbs',
                   valueKey: 'sub.verbs',
                   subChildren: [
-                    {id: 'verb-theory', url: 'verbs-theory', valueKey: 'underSub.verbsTheory'},
-                    {id: 'tenses', url: 'tenses', valueKey: 'underSub.verbFirst'},
-                    {id: 'modalVerbs', url: 'modal-verbs', valueKey: 'underSub.verbSecond'},
-                    {id: 'verb-types', url: 'verb-types', valueKey: 'underSub.verbTypes'},
+                    {id: 'verb-theory', url: '/verbs-theory', valueKey: 'underSub.verbsTheory'},
+                    {id: 'tenses', url: '/tenses', valueKey: 'underSub.verbFirst'},
+                    {id: 'modalVerbs', url: '/modal-verbs', valueKey: 'underSub.verbSecond'},
+                    {id: 'verb-types', url: '/verb-types', valueKey: 'underSub.verbTypes'},
                   ]
                 },
+                {id: 'prepositions', valueKey: 'sub.prepositions' ,
+                  subChildren: [
+                    {id: 'prepositions-theory' , url: '/prepositions-theory' , valueKey: 'Правила'},
+                    {id: 'prepositions-practice' , url: '/prepositions' , valueKey: 'Практика предлогов'},
+                  ]},
                 {
                   id: 'adjectives',
                   valueKey: 'sub.adjectives',
                   subChildren: [
-                    {id: 'adjectives-theory', url: 'adjectives-theory', valueKey: 'underSub.adjectiveTheory'},
-                    {id: 'adjectives-basic', url: 'adjective-basics', valueKey: 'underSub.adjectivesBasic'},
-                    {id: 'declination', url: 'adjective-declension', valueKey: 'underSub.declination'},
-                    {id: 'comparison', url: 'adjective-comparison', valueKey: 'underSub.comparison'},
+                    {id: 'adjectives-theory', url: '/adjectives-theory', valueKey: 'underSub.adjectiveTheory'},
+                    {id: 'adjectives-basic', url: '/adjective-basics', valueKey: 'underSub.adjectivesBasic'},
+                    {id: 'declination', url: '/adjective-declension', valueKey: 'underSub.declination'},
+                    {id: 'comparison', url: '/adjective-comparison', valueKey: 'underSub.comparison'},
                   ]
                 },
                 {id: 'lands', url: 'lands', valueKey: 'Языковые земли'},
 
-                {id: 'themen', url: 'thematic-learning', valueKey: 'sub.themen'},
-                {id: 'prepositions', url: 'prepositions', valueKey: 'sub.prepositions'},
-                {id: 'cards', url: 'createCards', valueKey: 'sub.card'},
-                {id: 'idioms', url: 'idioms', valueKey: 'sub.idioms'}
+                {id: 'themen', url: '/thematic-learning', valueKey: 'sub.themen'},
+                {id: 'cards', url: '/createCards', valueKey: 'sub.card'},
+                {id: 'idioms', url: '/idioms', valueKey: 'sub.idioms'}
               ],
             },
             {

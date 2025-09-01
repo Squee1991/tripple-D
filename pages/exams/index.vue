@@ -1,7 +1,11 @@
 <template>
   <div class="exam">
+    <VConsentModal
+        v-if="showConsentModal"
+        @consent-given="handleConsentGiven"
+        @close="showConsentModal = false"
+    />
     <button class="back__btn" @click="routeToMain">На главную</button>
-<!--    <h1 class="exam__title">🎓 Тренировка перед экзаменом</h1>-->
     <p class="exam__subtitle">
       Выбери уровень и начни практику всех модулей:
       <span class="exam__highlight">Lesen</span>,
@@ -25,9 +29,12 @@
             {{ item.text }}
           </li>
         </ul>
-        <NuxtLink :to="`/exams/level/${level.id}`" class="exam-card__button">
+        <div
+            class="exam-card__button"
+            @click="attemptToStartExam(level.id)"
+        >
           Перейти к {{ level.id.toUpperCase() }}
-        </NuxtLink>
+        </div>
       </div>
     </div>
   </div>
@@ -37,9 +44,13 @@
 import {onMounted, ref} from 'vue'
 import {userExamStore} from '~/store/examStore.js'
 import {useRouter} from 'vue-router'
+import VConsentModal from "~/src/components/V-consentModal.vue";
 
+const showConsentModal = ref(false)
+const consentGiven = ref(false)
 const router = useRouter()
 const examStore = userExamStore()
+
 const examLevels = [
   {
     id: 'a1',
@@ -86,11 +97,32 @@ const examLevels = [
     ]
   }
 ]
+
 const routeToMain = () => {
   router.push('/')
 }
+
+const attemptToStartExam = (levelId) => {
+  if (consentGiven.value) {
+    router.push(`/exams/level/${levelId}`)
+  } else {
+    showConsentModal.value = true
+  }
+}
+
+const handleConsentGiven = () => {
+  consentGiven.value = true
+  showConsentModal.value = false
+  sessionStorage.setItem('voiceConsentGiven', 'true')
+}
+
 onMounted(() => {
   examStore.loadTopics('/exams/exam-A1.json')
+  if (sessionStorage.getItem('voiceConsentGiven') === 'true') {
+    consentGiven.value = true
+  } else {
+    showConsentModal.value = true
+  }
 })
 </script>
 
@@ -193,7 +225,12 @@ onMounted(() => {
   cursor: pointer;
   transition: background 0.2s;
   width: 100%;
-  max-width: 200px;
+  color: #333;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .exam-card__button:hover {
