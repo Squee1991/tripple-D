@@ -258,7 +258,7 @@ const menuItems = computed(() => [
           ]
   ),
 
-  ...(!userAuth.isPremium
+  ...(userAuth.uid
       ? [{id: 'test', url: '/exams', valueKey: 'nav.tests'}]
       : []),
   ...(userAuth.uid

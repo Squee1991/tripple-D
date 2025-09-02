@@ -138,7 +138,6 @@ onBeforeUnmount(() => document.removeEventListener('mousedown', clickOutside))
 
 .dropdown__item.active {
   background: #f1c40f;
-  font-weight: 400;
 }
 
 .language__label {

@@ -1,5 +1,6 @@
 <template>
   <div class="cabinet-wrapper">
+    <!-- Модалка отмены подписки (как у тебя) -->
     <div v-if="isCancelModalOpen" class="modal-overlay" @click.self="closeCancelModal">
       <div class="modal-card">
         <div class="modal-title">{{ t('cabinet.cancelPremium') }}</div>
@@ -10,13 +11,16 @@
         </div>
       </div>
     </div>
+
     <div class="layout">
       <aside class="sidebar-panel">
         <button class="back-btn" @click="backToMain" aria-label="На главную">
           <img class="back__btn-icon" :src="Home" alt=""/>
           <span class="back-label">{{ t('cabinet.main') }}</span>
         </button>
+
         <div class="sidebar-title">{{ t('cabinet.category') }}</div>
+
         <nav class="tabs-vertical">
           <button
               v-for="tabItem in TAB_ITEMS"
@@ -30,6 +34,7 @@
           </button>
         </nav>
       </aside>
+
       <section class="content-panel">
         <div v-if="activeTabKey === 'info'" class="header-surface">
           <div class="user-block">
@@ -40,6 +45,7 @@
                 <img src="../assets/images/add.svg" alt="Сменить"/>
               </button>
             </div>
+
             <div class="user-info">
               <div class="user-name">{{ authStore.name }}</div>
               <div class="exp-bar">
@@ -48,7 +54,13 @@
               </div>
               <div class="level-info">{{ t('cabinet.level') }} {{ learningStore.isLeveling }}</div>
             </div>
+
+            <button class="add__friend-wrapper" type="button" @click="openFriendSearchModal">
+              <img class="find__friend" src="../assets/images/magnifying-glass.svg" alt="">
+              <div class="find__text">Найти друзей</div>
+            </button>
           </div>
+
           <div class="award-strip">
             <div class="awards__get">
               <div class="awards__title">{{ t('cabinet.awards') }}</div>
@@ -65,6 +77,7 @@
             </div>
           </div>
         </div>
+
         <div class="content-body">
           <div v-if="activeTabKey === 'info'" class="tab-content">
             <div
@@ -87,6 +100,7 @@
                     alt=""
                 />
               </div>
+
               <transition name="fade">
                 <div
                     v-show="activeAccordion === acc.key && !acc.isLink"
@@ -99,6 +113,7 @@
                       <span class="card-row__value">{{ infoRow.value }}</span>
                     </div>
                   </template>
+
                   <template v-else-if="acc.key === 'account'">
                     <div class="subscription-status-row">
                       <div class="subscription-label">{{ t('cabinet.status') }}</div>
@@ -117,17 +132,18 @@
                         </template>
                       </div>
                     </div>
+
                     <template v-if="authStore.isPremium && !authStore.subscriptionCancelled">
                       <div class="premium__status-wrapper">
                         <p>📅 {{ t('cabinet.nextPayment') }} {{ formattedSubscriptionEndDate }}</p>
-                        <button class="btn btn-danger" @click.stop="openCancelModal">{{ t('cabinet.cancelBtn') }}
-                        </button>
+                        <button class="btn btn-danger" @click.stop="openCancelModal">{{ t('cabinet.cancelBtn') }}</button>
                       </div>
                     </template>
                     <template v-else-if="authStore.isPremium && authStore.subscriptionCancelled">
                       <p class="access__text">📅 {{ t('cabinet.access') }} {{ formattedSubscriptionEndDate }}</p>
                     </template>
                   </template>
+
                   <template v-else-if="acc.key === 'settings'">
                     <div class="settings__elements">
                       <div
@@ -156,25 +172,21 @@
                 </div>
               </transition>
             </div>
+
             <div class="footer-actions">
               <button @click="openDeleteModal" class="btn btn-danger">{{ t('cabinet.deleteAcc') }}</button>
             </div>
           </div>
-          <div v-else-if="activeTabKey === 'progress'">
-            <Progress/>
-          </div>
-          <div v-else-if="activeTabKey === 'shop'">
-            <Shop/>
-          </div>
-          <div v-else-if="activeTabKey === 'award'">
-            <AwardsList :awards="awardList"/>
-          </div>
-          <div v-else-if="activeTabKey === 'archive'">
-            <VExampResulut/>
-          </div>
+
+          <div v-else-if="activeTabKey === 'progress'"><Progress/></div>
+          <div v-else-if="activeTabKey === 'shop'"><Shop/></div>
+          <div v-else-if="activeTabKey === 'award'"><AwardsList :awards="awardList"/></div>
+          <div v-else-if="activeTabKey === 'archive'"><VExampResulut/></div>
         </div>
       </section>
     </div>
+
+    <!-- Модалка выбора аватара (как было) -->
     <div v-if="isAvatarModalOpen" class="avatar-modal-overlay" @click.self="isAvatarModalOpen = false">
       <div class="avatar-modal-content">
         <h3>{{ t('cabinet.newAvatarTitle') }}</h3>
@@ -198,6 +210,8 @@
         </div>
       </div>
     </div>
+
+    <!-- Модалка покупки аватара (как было) -->
     <div v-if="isPurchaseModalOpen" class="modal-overlay" @click.self="isPurchaseModalOpen = false">
       <div class="modal-card">
         <div class="modal-title">{{ t('cabinet.buyAvatar') }}</div>
@@ -208,20 +222,24 @@
         </div>
       </div>
     </div>
+
+    <!-- Модалка удаления аккаунта (как было) -->
     <div v-if="isDeleteModalOpen" class="modal-overlay" @click.self="isDeleteModalOpen = false">
       <div class="modal-card">
         <div class="modal-title">{{ t('cabinet.deleteAccTitle') }}</div>
         <p class="modal-text">{{ t('cabinet.deleteText') }}</p>
-        <p v-if="userAuthStore.isPremium" class="modal-text ">
+        <p v-if="userAuthStore.isPremium" class="modal-text">
           <span class="warn">ВАЖНО!!!</span>
           <span> При удалении аккаунта подписка не отменяется. Перед удалением отмените подписку</span>
         </p>
         <p v-if="!isGoogleUser" class="modal-text">{{ t('cabinet.checkPassword') }}</p>
+
         <div v-if="!isGoogleUser" class="label">
           <input class="input" v-model="deletePasswordField.value" type="password"/>
           <p v-if="deletePasswordField.error" class="delete-error">{{ t(deletePasswordField.error) }}</p>
         </div>
         <p v-else class="modal-text">{{ t('cabinet.checkGoogle') }}</p>
+
         <div class="modal-actions">
           <button class="btn btn-danger" @click="confirmDeleteAccount">{{ t('cabinet.deleteAccBtnAccept') }}</button>
           <button class="btn" @click="isDeleteModalOpen = false">{{ t('cabinet.deleteAccBtnReject') }}</button>
@@ -229,17 +247,30 @@
       </div>
     </div>
   </div>
+
+  <!-- ДРУЗЬЯ: модальное окно-оверлей БЕЗ инлайна -->
+  <div
+      v-if="isFriendSearchModalOpen"
+      class="modal-overlay"
+      @click.self="isFriendSearchModalOpen = false"
+  >
+    <div class="modal-card modal-card--friends">
+      <FriendSearch @close="isFriendSearchModalOpen = false" />
+    </div>
+  </div>
 </template>
+
 <script setup>
-import {ref, computed, onMounted, watch} from 'vue'
+import {ref, computed, onMounted, watch, watchEffect} from 'vue'
 import {useRouter} from 'vue-router'
 import {useI18n} from 'vue-i18n'
 import Progress from '../src/components/progress.vue'
 import Shop from '../src/components/Shop.vue'
-import Modal from '../src/components/modal.vue'
 import AwardsList from '../src/components/AwardsList.vue'
 import VExampResulut from "~/src/components/V-exampResulut.vue";
 import VToggle from '~/src/components/V-toggle.vue'
+import FriendSearch from "../src/components/friendSearch.vue"
+
 import {userAuthStore} from '../store/authStore.js'
 import {userlangStore} from '../store/learningStore.js'
 import {useAchievementStore} from '../store/achievementStore.js'
@@ -248,31 +279,38 @@ import {mapErrors} from '../utils/errorsHandler.js'
 import {isSoundEnabled, setSoundEnabled, unlockAudioByUserGesture} from '../utils/soundManager.js'
 import {useUiSettingsStore} from '../store/uiSettingsStore.js'
 import {AWARDS} from '~/utils/awards'
-import DevelopmentIcon from '../assets/images/dev.svg'
+
 import UserIcon from '../assets/images/user.svg'
 import ProgressIcon from '../assets/images/progress.svg'
 import AwardsIcon from '../assets/awards/award (7).svg'
 import Home from '../assets/images/home.svg'
-
+import Folder from '../assets/images/FolderNav.svg'
 import EditIcon from '../assets/accountToggleIcons/edit.svg'
 import UserAccIcon from '../assets/accountToggleIcons/user.svg'
 import SettingsIcon from '../assets/accountToggleIcons/settings.svg'
 import FaqIcon from '../assets/accountToggleIcons/faq.svg'
 
-const {t, locales, locale} = useI18n()
+const {t, locale} = useI18n()
 const router = useRouter()
+
 const authStore = userAuthStore()
 const learningStore = userlangStore()
 const achievementStore = useAchievementStore()
 const gameStore = useGameStore()
 const uiSettings = useUiSettingsStore()
+
 const activeTabKey = ref('info')
+const isFriendSearchModalOpen = ref(false)
+
+function openFriendSearchModal() {
+  isFriendSearchModalOpen.value = true
+}
 
 const TAB_ITEMS = [
   {key: 'info', label: t('cabinetSidebar.valueOne'), icon: UserIcon},
   {key: 'progress', label: t('cabinetSidebar.valueTwo'), icon: ProgressIcon},
   {key: 'award', label: t('cabinetSidebar.valueThree'), icon: AwardsIcon},
-  {key: 'archive', label: 'Архив экзаменов', icon: ProgressIcon},
+  {key: 'archive', label: 'Архив экзаменов', icon: Folder },
 ]
 
 const ACCORDIONS = ref([
@@ -331,56 +369,39 @@ const registrationDateText = computed(() => {
   } else {
     date = new Date(registeredAt);
   }
-  if (isNaN(date.getTime())) {
-    return '—';
-  }
-  return date.toLocaleDateString('ru-RU', {
-    day: '2-digit',
-    month: '2-digit',
-    year: 'numeric'
-  });
+  if (isNaN(date.getTime())) return '—';
+  return date.toLocaleDateString('ru-RU', { day: '2-digit', month: '2-digit', year: 'numeric' });
 });
 
-const routeToPay = () => {
-  router.push('/pay')
-}
+const routeToPay = () => router.push('/pay')
 
 const shownAwardsSet = ref(loadShownAwards())
-const awardList = ref(
-    AWARDS.map(a => ({...a, locked: !shownAwardsSet.value.has(a.key)}))
-)
-
-const unlockedAwardList = computed(() =>
-    awardList.value.filter(a => !a.locked)
-)
+const awardList = ref(AWARDS.map(a => ({...a, locked: !shownAwardsSet.value.has(a.key)})))
+const unlockedAwardList = computed(() => awardList.value.filter(a => !a.locked))
 
 watch(() => authStore.uid, () => {
   shownAwardsSet.value = loadShownAwards()
   awardList.value = AWARDS.map(a => ({...a, locked: !shownAwardsSet.value.has(a.key)}))
 })
 
-
 const getSettingValue = key => {
   if (key === 'sound') return soundEnabled.value
   if (key === 'dark') return darkMode.value
-  if (key === 'ach') return uiSettings.achievementsNotifyEnabled
+  if (key === 'ach')  return uiSettings.achievementsNotifyEnabled
 }
 
 const onSettingChange = (key, value) => {
   if (key === 'sound') return handleSoundToggle(value)
-  if (key === 'dark') return handleThemeToggle(value)
-  if (key === 'ach') return uiSettings.setAchievementsNotifyEnabled(value)
+  if (key === 'dark')  return handleThemeToggle(value)
+  if (key === 'ach')   return uiSettings.setAchievementsNotifyEnabled(value)
 }
 
 const formattedSubscriptionEndDate = computed(() => {
   if (!authStore.subscriptionEndsAt) return '-'
   const date = new Date(authStore.subscriptionEndsAt)
-  return date.toLocaleDateString(locale.value, {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  })
+  return date.toLocaleDateString(locale.value, { year: 'numeric', month: 'long', day: 'numeric' })
 })
+
 const awardsStorageKey = computed(() => `awards_shown_v1_${authStore.uid || 'anon'}`)
 
 function loadShownAwards() {
@@ -388,26 +409,18 @@ function loadShownAwards() {
     if (typeof window === 'undefined') return new Set()
     const raw = localStorage.getItem(awardsStorageKey.value)
     return new Set(raw ? JSON.parse(raw) : [])
-  } catch {
-    return new Set()
-  }
+  } catch { return new Set() }
 }
 
 function saveShownAwards(set) {
   try {
     if (typeof window === 'undefined') return
     localStorage.setItem(awardsStorageKey.value, JSON.stringify([...set]))
-  } catch {
-  }
+  } catch {}
 }
 
-function setActiveTab(key) {
-  activeTabKey.value = key
-}
-
-function backToMain() {
-  router.push('/')
-}
+function setActiveTab(key) { activeTabKey.value = key }
+function backToMain() { router.push('/') }
 
 function handleSoundToggle(value) {
   setSoundEnabled(value)
@@ -420,36 +433,25 @@ function handleThemeToggle(value) {
   darkMode.value = value
 }
 
-function openCancelModal() {
-  isCancelModalOpen.value = true
-}
-
-function closeCancelModal() {
-  isCancelModalOpen.value = false
-}
+function openCancelModal() { isCancelModalOpen.value = true }
+function closeCancelModal() { isCancelModalOpen.value = false }
 
 async function cancelSubscription() {
   if (!authStore.uid) return
   try {
     const res = await $fetch('/api/stripe/cancel', {method: 'POST', body: {uid: authStore.uid}})
     if (!res.success) alert('Ошибка отмены подписки: ' + res.error)
-  } catch {
-    alert('Произошла ошибка. Попробуй позже.')
-  }
+  } catch { alert('Произошла ошибка. Попробуй позже.') }
 }
 
-function goToFaq() {
-  router.push('/faq')
-}
+function goToFaq() { router.push('/faq') }
 
 function openPurchaseModal(name) {
   purchaseAvatarName.value = name
   isPurchaseModalOpen.value = true
 }
 
-function selectAvatar(name) {
-  selectedAvatarName.value = name
-}
+function selectAvatar(name) { selectedAvatarName.value = name }
 
 async function confirmPurchase() {
   try {
@@ -467,8 +469,7 @@ async function confirmAvatarChange() {
   try {
     await authStore.updateUserAvatar(selectedAvatarName.value)
     isAvatarModalOpen.value = false
-  } catch {
-  }
+  } catch {}
 }
 
 function openDeleteModal() {
@@ -491,15 +492,19 @@ const isGoogleUser = computed(() => authStore.isGoogleUser)
 
 onMounted(async () => {
   await learningStore.loadFromFirebase()
+  // УБРАНО initSound()
+  soundEnabled.value = isSoundEnabled()
 })
 
 watch(isAvatarModalOpen, opened => {
   if (opened) selectedAvatarName.value = authStore.avatar
 })
+
 watch(() => authStore.uid, () => {
   shownAwardsSet.value = loadShownAwards()
   awardList.value = AWARDS.map(a => ({...a, locked: !shownAwardsSet.value.has(a.key)}))
 })
+
 const processed = new Set(shownAwardsSet.value)
 watchEffect(() => {
   const groups = achievementStore.groups || []
@@ -519,13 +524,6 @@ watchEffect(() => {
     }
   }
 })
-
-
-onMounted(() => {
-  initSound()
-  soundEnabled.value = isSoundEnabled()
-})
-
 </script>
 
 <style scoped>
@@ -534,6 +532,11 @@ onMounted(() => {
   font-family: "Nunito", sans-serif;
   padding: 20px;
   overflow: hidden;
+}
+
+.modal-card--friends {
+  max-width: 720px;
+  width: 95%;
 }
 
 .premium__btn {
@@ -552,6 +555,30 @@ onMounted(() => {
 .back__btn-icon {
   width: 40px;
   height: 40px;
+}
+
+.add__friend-wrapper {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background: none;
+  padding: 5px 10px;
+  border: 3px solid black;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 4px 4px 0 black;
+}
+
+.find__friend {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.find__text {
+  color: black;
+  font-size: 20px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
 }
 
 .premium__btn-wrapper {
@@ -1075,7 +1102,7 @@ onMounted(() => {
   .sidebar-panel {
     position: fixed;
     left: 50%;
-    bottom: 20px;
+    bottom: 0;
     transform: translateX(-50%);
     width: 96%;
     height: 67px;
@@ -1166,6 +1193,10 @@ onMounted(() => {
 @media (min-width: 1024px) {
   .premium__btn:hover {
     transform: translate(1px, 1px);
+    box-shadow: 2px 2px 0 #000;
+  }
+  .add__friend-wrapper:hover {
+    transform: translate(2px, 2px);
     box-shadow: 2px 2px 0 #000;
   }
 }

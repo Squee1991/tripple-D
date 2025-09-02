@@ -1,45 +1,19 @@
 <script setup>
-import {ref, onMounted} from 'vue'
+import {onMounted} from 'vue'
 import {useRouter} from 'vue-router'
-import {getAuth, onAuthStateChanged} from 'firebase/auth'
-import {getFirestore, collection, query, where, orderBy, limit, getDocs} from 'firebase/firestore'
+import {userExamStore} from '../../store/examStore.js'
 
-const auth = getAuth()
-const db = getFirestore()
 const router = useRouter()
-const loading = ref(true)
-const error = ref(null)
-const attempts = ref([])
+const examStore = userExamStore()
 
-function toDateFlexible(v) {
-  if (!v) return null
+function toDateFlexible(value) {
+  if (!value) return null
   try {
-    if (typeof v.toDate === 'function') return v.toDate()
-    const d = new Date(v)
+    if (typeof value.toDate === 'function') return value.toDate()
+    const d = new Date(value)
     return isNaN(d) ? null : d
   } catch {
     return null
-  }
-}
-
-async function loadAttempts(uid) {
-  loading.value = true
-  error.value = null
-  attempts.value = []
-  try {
-    const q = query(
-        collection(db, 'examAttempts'),
-        where('ownerUid', '==', uid),
-        orderBy('startedAt', 'desc'),
-        limit(100)
-    )
-    const snap = await getDocs(q)
-    attempts.value = snap.docs.map(d => ({id: d.id, ...d.data()}))
-  } catch (e) {
-    console.error(e)
-    error.value = e?.message || 'Не удалось загрузить архив'
-  } finally {
-    loading.value = false
   }
 }
 
@@ -48,33 +22,22 @@ function openAttempt(id) {
 }
 
 onMounted(() => {
-  const u = auth.currentUser
-  if (u?.uid) {
-    loadAttempts(u.uid)
-  } else {
-    onAuthStateChanged(auth, (user) => {
-      if (user?.uid) loadAttempts(user.uid)
-      else {
-        loading.value = false;
-        attempts.value = []
-      }
-    })
-  }
+  examStore.loadArchiveAttempts()
 })
 </script>
 
 <template>
   <div class="exams-compact">
     <h2 class="ec__title">Архив экзаменов</h2>
-    <div v-if="loading" class="ec__box">Загрузка…</div>
-    <div v-else-if="error" class="ec__box ec__box--error">{{ error }}</div>
+    <div v-if="examStore.archiveLoading" class="ec__box">Загрузка…</div>
+    <div v-else-if="examStore.archiveError" class="ec__box ec__box--error">{{ examStore.archiveError }}</div>
     <div v-else>
-      <div class="ec__not" v-if="attempts.length === 0">
+      <div class="ec__not" v-if="examStore.archiveAttempts.length === 0">
         <img class="folder__icon" src="../../assets/images/folders.svg" alt="">
         <div class="ec__text-empty">Архив пуст</div>
       </div>
       <ul class="ec__list">
-        <li v-for="a in attempts" :key="a.id" class="ec__item">
+        <li v-for="a in examStore.archiveAttempts" :key="a.id" class="ec__item">
           <div class="ec__main">
             <div class="ec__line">
               <span class="ec__lvl">Niveau {{ a.level || '—' }}</span>
@@ -100,7 +63,6 @@ onMounted(() => {
 </template>
 
 <style scoped>
-
 .exams-compact {
   width: 100%;
 }
@@ -221,5 +183,4 @@ onMounted(() => {
   transform: translate(1px, 1px);
   box-shadow: 1px 1px 0 #000;
 }
-
 </style>
