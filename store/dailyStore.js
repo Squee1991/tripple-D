@@ -1,10 +1,12 @@
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
 import { dailyQuests } from '@/utils/dailyQuests.js'
+import {userlangStore} from  '../store/learningStore.js'
 export const dailyStore = defineStore('dailyStore', () => {
 	const QUESTS_PER_DAY = 3
 	const DAY_MS = 24 * 60 * 60 * 1000
 	const isClient = typeof window !== 'undefined'
+	const langStore = userlangStore()
 
 	function wrapSlice(arr, start, count) {
 		const len = arr.length
