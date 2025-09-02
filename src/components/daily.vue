@@ -33,7 +33,6 @@
 	const dailyTasks = ref([
 		{
 			id: 1,
-
 			title: 'Пройди 10 слов',
 			description: 'В любом режиме за сегодня',
 			progress: 7,
