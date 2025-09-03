@@ -1,6 +1,5 @@
 <template>
   <div class="cabinet-wrapper">
-    <!-- Модалка отмены подписки (как у тебя) -->
     <div v-if="isCancelModalOpen" class="modal-overlay" @click.self="closeCancelModal">
       <div class="modal-card">
         <div class="modal-title">{{ t('cabinet.cancelPremium') }}</div>
@@ -11,16 +10,13 @@
         </div>
       </div>
     </div>
-
     <div class="layout">
       <aside class="sidebar-panel">
         <button class="back-btn" @click="backToMain" aria-label="На главную">
           <img class="back__btn-icon" :src="Home" alt=""/>
           <span class="back-label">{{ t('cabinet.main') }}</span>
         </button>
-
         <div class="sidebar-title">{{ t('cabinet.category') }}</div>
-
         <nav class="tabs-vertical">
           <button
               v-for="tabItem in TAB_ITEMS"
@@ -34,7 +30,6 @@
           </button>
         </nav>
       </aside>
-
       <section class="content-panel">
         <div v-if="activeTabKey === 'info'" class="header-surface">
           <div class="user-block">
@@ -45,7 +40,6 @@
                 <img src="../assets/images/add.svg" alt="Сменить"/>
               </button>
             </div>
-
             <div class="user-info">
               <div class="user-name">{{ authStore.name }}</div>
               <div class="exp-bar">
@@ -54,13 +48,11 @@
               </div>
               <div class="level-info">{{ t('cabinet.level') }} {{ learningStore.isLeveling }}</div>
             </div>
-
-            <button class="add__friend-wrapper" type="button" @click="openFriendSearchModal">
-              <img class="find__friend" src="../assets/images/magnifying-glass.svg" alt="">
-              <div class="find__text">Найти друзей</div>
-            </button>
+<!--            <button class="add__friend-wrapper" type="button" @click="openFriendSearchModal">-->
+<!--              <img class="find__friend" src="../assets/images/magnifying-glass.svg" alt="">-->
+<!--              <div class="find__text">Найти друзей</div>-->
+<!--            </button>-->
           </div>
-
           <div class="award-strip">
             <div class="awards__get">
               <div class="awards__title">{{ t('cabinet.awards') }}</div>
@@ -77,7 +69,6 @@
             </div>
           </div>
         </div>
-
         <div class="content-body">
           <div v-if="activeTabKey === 'info'" class="tab-content">
             <div
@@ -100,7 +91,6 @@
                     alt=""
                 />
               </div>
-
               <transition name="fade">
                 <div
                     v-show="activeAccordion === acc.key && !acc.isLink"
@@ -113,7 +103,6 @@
                       <span class="card-row__value">{{ infoRow.value }}</span>
                     </div>
                   </template>
-
                   <template v-else-if="acc.key === 'account'">
                     <div class="subscription-status-row">
                       <div class="subscription-label">{{ t('cabinet.status') }}</div>
@@ -132,7 +121,6 @@
                         </template>
                       </div>
                     </div>
-
                     <template v-if="authStore.isPremium && !authStore.subscriptionCancelled">
                       <div class="premium__status-wrapper">
                         <p>📅 {{ t('cabinet.nextPayment') }} {{ formattedSubscriptionEndDate }}</p>
@@ -143,7 +131,6 @@
                       <p class="access__text">📅 {{ t('cabinet.access') }} {{ formattedSubscriptionEndDate }}</p>
                     </template>
                   </template>
-
                   <template v-else-if="acc.key === 'settings'">
                     <div class="settings__elements">
                       <div
@@ -172,7 +159,6 @@
                 </div>
               </transition>
             </div>
-
             <div class="footer-actions">
               <button @click="openDeleteModal" class="btn btn-danger">{{ t('cabinet.deleteAcc') }}</button>
             </div>
@@ -182,11 +168,10 @@
           <div v-else-if="activeTabKey === 'shop'"><Shop/></div>
           <div v-else-if="activeTabKey === 'award'"><AwardsList :awards="awardList"/></div>
           <div v-else-if="activeTabKey === 'archive'"><VExampResulut/></div>
+          <div v-else-if="activeTabKey === 'friends'"><FriendSearch/></div>
         </div>
       </section>
     </div>
-
-    <!-- Модалка выбора аватара (как было) -->
     <div v-if="isAvatarModalOpen" class="avatar-modal-overlay" @click.self="isAvatarModalOpen = false">
       <div class="avatar-modal-content">
         <h3>{{ t('cabinet.newAvatarTitle') }}</h3>
@@ -210,8 +195,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Модалка покупки аватара (как было) -->
     <div v-if="isPurchaseModalOpen" class="modal-overlay" @click.self="isPurchaseModalOpen = false">
       <div class="modal-card">
         <div class="modal-title">{{ t('cabinet.buyAvatar') }}</div>
@@ -222,8 +205,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Модалка удаления аккаунта (как было) -->
     <div v-if="isDeleteModalOpen" class="modal-overlay" @click.self="isDeleteModalOpen = false">
       <div class="modal-card">
         <div class="modal-title">{{ t('cabinet.deleteAccTitle') }}</div>
@@ -239,23 +220,11 @@
           <p v-if="deletePasswordField.error" class="delete-error">{{ t(deletePasswordField.error) }}</p>
         </div>
         <p v-else class="modal-text">{{ t('cabinet.checkGoogle') }}</p>
-
         <div class="modal-actions">
           <button class="btn btn-danger" @click="confirmDeleteAccount">{{ t('cabinet.deleteAccBtnAccept') }}</button>
           <button class="btn" @click="isDeleteModalOpen = false">{{ t('cabinet.deleteAccBtnReject') }}</button>
         </div>
       </div>
-    </div>
-  </div>
-
-  <!-- ДРУЗЬЯ: модальное окно-оверлей БЕЗ инлайна -->
-  <div
-      v-if="isFriendSearchModalOpen"
-      class="modal-overlay"
-      @click.self="isFriendSearchModalOpen = false"
-  >
-    <div class="modal-card modal-card--friends">
-      <FriendSearch @close="isFriendSearchModalOpen = false" />
     </div>
   </div>
 </template>
@@ -285,6 +254,7 @@ import ProgressIcon from '../assets/images/progress.svg'
 import AwardsIcon from '../assets/awards/award (7).svg'
 import Home from '../assets/images/home.svg'
 import Folder from '../assets/images/FolderNav.svg'
+import Find from '../assets/images/magnifying-glass.svg'
 import EditIcon from '../assets/accountToggleIcons/edit.svg'
 import UserAccIcon from '../assets/accountToggleIcons/user.svg'
 import SettingsIcon from '../assets/accountToggleIcons/settings.svg'
@@ -311,6 +281,7 @@ const TAB_ITEMS = [
   {key: 'progress', label: t('cabinetSidebar.valueTwo'), icon: ProgressIcon},
   {key: 'award', label: t('cabinetSidebar.valueThree'), icon: AwardsIcon},
   {key: 'archive', label: 'Архив экзаменов', icon: Folder },
+  {key: 'friends', label: 'Список друзей', icon: Find },
 ]
 
 const ACCORDIONS = ref([
@@ -492,7 +463,6 @@ const isGoogleUser = computed(() => authStore.isGoogleUser)
 
 onMounted(async () => {
   await learningStore.loadFromFirebase()
-  // УБРАНО initSound()
   soundEnabled.value = isSoundEnabled()
 })
 
@@ -553,8 +523,8 @@ watchEffect(() => {
 }
 
 .back__btn-icon {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
 }
 
 .add__friend-wrapper {
@@ -567,6 +537,7 @@ watchEffect(() => {
   border-radius: 16px;
   background: white;
   box-shadow: 4px 4px 0 black;
+  margin-left: auto;
 }
 
 .find__friend {
@@ -576,7 +547,7 @@ watchEffect(() => {
 
 .find__text {
   color: black;
-  font-size: 20px;
+  font-size: 18px;
   font-family: "Nunito", sans-serif;
   font-weight: 600;
 }
@@ -682,12 +653,13 @@ watchEffect(() => {
   display: flex;
   align-items: center;
   gap: 10px;
+  height: 48px;
   width: 100%;
   padding: 10px 12px;
-  border: 3px solid #000;
+  border: 2px solid #000;
   border-radius: 16px;
   background: #f3f4f6;
-  box-shadow: 4px 4px 0 #000;
+  box-shadow: 2px 2px 0 #000;
   cursor: pointer;
   transition: .15s;
   font-weight: 600;
@@ -697,7 +669,7 @@ watchEffect(() => {
 
 .tab-vertical:hover {
   transform: translate(1px, 1px);
-  box-shadow: 2px 2px 0 #000;
+  box-shadow: 0px 0px 0 #000;
 }
 
 .tab-vertical.active {
@@ -705,8 +677,7 @@ watchEffect(() => {
 }
 
 .tab-icon {
-  width: 22px;
-  height: 22px;
+  width: 30px;
 }
 
 .content-panel {
@@ -1106,7 +1077,7 @@ watchEffect(() => {
     transform: translateX(-50%);
     width: 96%;
     height: 67px;
-    padding: 8px 10px;
+    padding: 8px 8px;
     z-index: 1100;
     flex-direction: row;
     align-items: center;
@@ -1135,7 +1106,7 @@ watchEffect(() => {
     flex: 1;
     min-width: 0;
     justify-content: center;
-    padding: 8px;
+    padding: 6px;
   }
 
   .tab-label {
@@ -1143,8 +1114,8 @@ watchEffect(() => {
   }
 
   .tab-icon {
-    width: 26px;
-    height: 26px;
+    width: 28px;
+    height: 28px;
   }
 
   .back-btn {
@@ -1185,8 +1156,8 @@ watchEffect(() => {
 
 @media (max-width: 420px) {
   .tab-icon {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
   }
 }
 

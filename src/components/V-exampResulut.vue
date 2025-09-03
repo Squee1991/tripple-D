@@ -1,10 +1,36 @@
 <script setup>
-import {onMounted} from 'vue'
+import {onMounted , ref} from 'vue'
 import {useRouter} from 'vue-router'
 import {userExamStore} from '../../store/examStore.js'
-
+import VEditTest from "../../src/components/V-editTest.vue";
+import Dots from '../../assets/images/dots.svg'
+import Trash from '../../assets/images/trash.svg'
+import Share from '../../assets/images/share.svg'
 const router = useRouter()
 const examStore = userExamStore()
+const dotsEdit = ref(false)
+
+const data = ref([
+  {icon: Share , alt: 'Поделиться' , text: 'Поделиться'},
+  {icon: Trash , alt: 'Удалить' , text: 'Удалить'},
+])
+
+ async  function handleAction(btn) {
+  dotsEdit.value = false
+  if (btn.text === 'Удалить') {
+      await examStore.deleteExam(selectedExamId.value)
+  }
+  if (btn.text === 'Поделиться') {
+    console.log('Поделиться экзаменом', selectedExamId.value)
+  }
+}
+
+const selectedExamId = ref(null)
+
+function openMenu(id) {
+  selectedExamId.value = id
+  dotsEdit.value = true
+}
 
 function toDateFlexible(value) {
   if (!value) return null
@@ -49,13 +75,27 @@ onMounted(() => {
               <span>Начало:
                 {{ toDateFlexible(a.startedAt)?.toLocaleString?.() || '—' }}
               </span>
-              <span class="ec__dot">•</span>
-              <span>Пройдено: {{ a.currentIndex ?? 0 }}</span>
-              <span v-if="a.status === 'finished'" class="ec__dot">•</span>
+<!--              <span class="ec__dot">•</span>-->
+<!--              <span>Пройдено: {{ a.currentIndex ?? 0 }}</span>-->
+<!--              <span v-if="a.status === 'finished'" class="ec__dot"></span>-->
               <span v-if="a.status === 'finished'">Средний балл: <b>{{ a.averageScore }}</b> / 10</span>
             </div>
           </div>
           <button class="ec__btn" @click="openAttempt(a.id)">Посмотреть результат</button>
+          <div class="edit__wrapper">
+            <button class="dots__btn" @click="openMenu(a.id)">
+              <img class="dots__icon" :src="Dots" alt="">
+            </button>
+            <div class="edit__component">
+              <VEditTest
+                  v-if="dotsEdit"
+                  :open="dotsEdit"
+                  :buttons="data"
+                  @close="dotsEdit = false"
+                  @action="handleAction"
+              />
+            </div>
+          </div>
         </li>
       </ul>
     </div>
@@ -63,6 +103,27 @@ onMounted(() => {
 </template>
 
 <style scoped>
+.edit__wrapper {
+  position: relative;
+}
+
+.edit__component {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+}
+.dots__btn {
+  border-radius: 50%;
+  border: 3px solid  black;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  background: #798ad2;
+  box-shadow: 4px 4px 0 black;
+  margin-left: 10px;
+  cursor: pointer;
+}
 .exams-compact {
   width: 100%;
 }
@@ -76,6 +137,10 @@ onMounted(() => {
   font-size: 1.6rem;
   margin-bottom: 12px;
   color: var(--titleColor, #111);
+}
+
+.ec__btn {
+  margin-left: auto;
 }
 
 .ec__box {
@@ -118,9 +183,9 @@ onMounted(() => {
   gap: 10px;
   border: 3px solid #000;
   border-radius: 16px;
-  padding: 12px;
+  padding: 8px 12px;
   background: #f3f4f6;
-  box-shadow: 4px 4px 0 #000;
+  box-shadow: 3px 3px 0 #000;
 }
 
 .ec__main {
@@ -182,5 +247,16 @@ onMounted(() => {
 .ec__btn:hover {
   transform: translate(1px, 1px);
   box-shadow: 1px 1px 0 #000;
+}
+
+@media (min-width: 1024px) {
+  .dots__btn:hover {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0 #000;
+  }
+  .ec__btn:hover {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0 #000;
+  }
 }
 </style>

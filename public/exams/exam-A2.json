@@ -112,13 +112,12 @@
         "answer": "Später"
       }
     },
-
     {
       "id": "schreiben-1",
       "title": "Schreiben",
       "type": "text-input",
       "task": {
-        "instruction": "Напиши другу письмо и расскажи о своём новом городе (3–5 предложений).",
+        "instruction": "Schreibe einen Brief an einen Freund und erzähle über deine neue Stadt (3–5 Sätze).",
         "exampleAnswer": "Hallo Julia! Ich wohne jetzt in Köln. Die Stadt ist sehr schön und es gibt viele Cafés. Komm mich mal besuchen!"
       }
     },
@@ -127,7 +126,7 @@
       "title": "Schreiben",
       "type": "text-input",
       "task": {
-        "instruction": "Напиши письмо в библиотеку и спроси о продлении книги.",
+        "instruction": "Schreibe einen Brief an die Bibliothek und frage nach der Verlängerung eines Buches.",
         "exampleAnswer": "Sehr geehrte Damen und Herren, ich habe ein Buch bei Ihnen ausgeliehen. Kann ich die Leihfrist verlängern? Vielen Dank!"
       }
     },
@@ -136,7 +135,7 @@
       "title": "Schreiben",
       "type": "text-input",
       "task": {
-        "instruction": "Напиши другу, что ты не можешь прийти на встречу, и предложи другое время.",
+        "instruction": "Schreibe einem Freund, dass du nicht zum Treffen kommen kannst, und schlage eine andere Zeit vor.",
         "exampleAnswer": "Hallo Ben! Es tut mir leid, ich kann heute nicht kommen. Hast du morgen Zeit?"
       }
     },
@@ -145,7 +144,7 @@
       "title": "Schreiben",
       "type": "text-input",
       "task": {
-        "instruction": "Напиши короткое сообщение арендодателю о проблеме в квартире (например, нет горячей воды).",
+        "instruction": "Schreibe eine kurze Nachricht an den Vermieter über ein Problem in der Wohnung (z. B. kein warmes Wasser).",
         "exampleAnswer": "Sehr geehrter Herr Klein, in meiner Wohnung gibt es kein warmes Wasser. Können Sie bitte jemanden schicken? Danke!"
       }
     },
@@ -154,11 +153,10 @@
       "title": "Schreiben",
       "type": "text-input",
       "task": {
-        "instruction": "Напиши другу и пригласи его на твой день рождения (дата, время, место).",
+        "instruction": "Schreibe einem Freund und lade ihn zu deinem Geburtstag ein (Datum, Uhrzeit, Ort).",
         "exampleAnswer": "Hallo Anna! Ich feiere am Samstag meinen Geburtstag. Die Party beginnt um 17 Uhr bei mir zu Hause. Kommst du?"
       }
     },
-
     {
       "id": "sprechen-1",
       "title": "Sprechen",

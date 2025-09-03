@@ -1,96 +1,141 @@
 <template>
-  <div class="friends-tab-container">
-    <div class="search-section">
-      <h3 class="section-title">Найти друзей по email</h3>
+  <div class="friends">
+    <div class="panel panel--search">
+      <h3 class="panel__title">Найти друзей по email</h3>
 
-      <div class="search-input-wrapper">
+      <div class="search-row">
         <input
             v-model="searchEmail"
             type="email"
             placeholder="Введите email друга"
-            class="search-input"
+            class="input"
             @keyup.enter="handleSearch"
         />
-        <button class="search-btn" @click="handleSearch" :disabled="isSearching">
+        <button class="btn btn--primary" @click="handleSearch" :disabled="isSearching">
           {{ isSearching ? 'Поиск...' : 'Найти' }}
         </button>
       </div>
 
-      <div v-if="searchError" class="status-message error">{{ searchError }}</div>
-
-      <div v-if="foundUser" class="user-card">
-        <div class="user-info">
-          <div class="user-name">{{ foundUser.email || '—' }}</div>
-          <div class="user-email" v-if="foundUser.name">{{ foundUser.name }}</div>
-        </div>
-        <button class="action-btn add-friend-btn" @click="sendRequest" :disabled="isSending">
-          {{ isSending ? 'Отправка...' : 'Добавить' }}
-        </button>
-      </div>
-
-      <div v-if="successMessage" class="status-message success">{{ successMessage }}</div>
-    </div>
-
-    <div class="requests-section">
-      <h3 class="section-title">Входящие запросы ({{ friendsStore.requestsIncoming.length }})</h3>
-      <div v-if="friendsStore.requestsIncoming.length > 0" class="request-list">
-        <div v-for="request in friendsStore.requestsIncoming" :key="request.uid" class="request-item">
-          <div class="request-user">
-            <!-- показываем email, НЕ uid -->
-            <span class="user-name">{{ request.email || '—' }}</span>
+      <transition name="fade">
+        <div v-if="foundUser" class="found-card">
+          <div class="found-card__info">
+            <div class="found-card__email">{{ foundUser.email || '—' }}</div>
+            <div v-if="foundUser.name" class="found-card__name">{{ foundUser.name }}</div>
           </div>
-          <div class="request-actions">
-            <button
-                class="action-btn accept-btn"
-                :disabled="processingUid === request.uid"
-                @click="handleAccept(request.uid)"
+          <button class="btn btn--success" @click="sendRequest" :disabled="isSending">
+            {{ isSending ? 'Отправка…' : 'Добавить' }}
+          </button>
+        </div>
+      </transition>
+      <div v-if="searchError" class="msg msg--error">{{ searchError }}</div>
+      <div v-if="successMessage" class="msg msg--ok">{{ successMessage }}</div>
+    </div>
+    <div class="tabs">
+      <button
+          class="tabs__btn"
+          :class="{active: activeTab === 'incoming'}"
+          @click="activeTab = 'incoming'"
+      >
+        Входящие
+        <span class="tabs__badge" v-if="friendsStore.requestsIncoming.length">
+          {{ friendsStore.requestsIncoming.length }}
+        </span>
+      </button>
+
+      <button
+          class="tabs__btn"
+          :class="{active: activeTab === 'outgoing'}"
+          @click="activeTab = 'outgoing'"
+      >
+        Исходящие
+        <span class="tabs__badge" v-if="friendsStore.requestsOutgoing.length">
+          {{ friendsStore.requestsOutgoing.length }}
+        </span>
+      </button>
+      <button
+          class="tabs__btn"
+          :class="{active: activeTab === 'friends'}"
+          @click="activeTab = 'friends'"
+      >
+        Друзья
+        <span class="tabs__badge" v-if="friendsStore.friends.length">
+          {{ friendsStore.friends.length }}
+        </span>
+      </button>
+    </div>
+    <div class="panel">
+      <transition name="fade" mode="out-in">
+        <div v-if="activeTab === 'incoming'" key="incoming">
+          <div v-if="friendsStore.requestsIncoming.length === 0" class="empty">
+            Нет входящих запросов.
+          </div>
+          <ul v-else class="list">
+            <li
+                v-for="r in friendsStore.requestsIncoming"
+                :key="r.uid"
+                class="item"
             >
-              {{ processingUid === request.uid ? '...' : 'Принять' }}
-            </button>
-            <button
-                class="action-btn decline-btn"
-                :disabled="processingUid === request.uid"
-                @click="handleDecline(request.uid)"
-            >
-              {{ processingUid === request.uid ? '...' : 'Отклонить' }}
-            </button>
-          </div>
+              <div class="item__main">
+                <div class="item__email">{{ r.email || '—' }}</div>
+                <div v-if="r.name" class="item__secondary">{{ r.name }}</div>
+              </div>
+              <div class="item__actions">
+                <button
+                    class="btn btn--success"
+                    :disabled="processingUid === r.uid"
+                    @click="handleAccept(r.uid)"
+                >
+                  {{ processingUid === r.uid ? '…' : 'Принять' }}
+                </button>
+                <button
+                    class="btn btn--danger"
+                    :disabled="processingUid === r.uid"
+                    @click="handleDecline(r.uid)"
+                >
+                  {{ processingUid === r.uid ? '…' : 'Отклонить' }}
+                </button>
+              </div>
+            </li>
+          </ul>
         </div>
-      </div>
-      <div v-else class="empty-list">Нет входящих запросов.</div>
-    </div>
-
-    <div class="requests-section">
-      <h3 class="section-title">Исходящие запросы ({{ friendsStore.requestsOutgoing.length }})</h3>
-      <div v-if="friendsStore.requestsOutgoing.length > 0" class="request-list">
-        <div v-for="request in friendsStore.requestsOutgoing" :key="request.uid" class="request-item">
-          <div class="request-user">
-            <span class="user-name">{{ request.email || '—' }}</span>
+        <div v-else-if="activeTab === 'outgoing'" key="outgoing">
+          <div v-if="friendsStore.requestsOutgoing.length === 0" class="empty">
+            Нет исходящих запросов.
           </div>
-          <div class="request-actions">
-            <span class="status-pending">Ожидание</span>
+          <ul v-else class="list">
+            <li v-for="r in friendsStore.requestsOutgoing" :key="r.uid" class="item">
+              <div class="item__main">
+                <div class="item__email">{{ r.email || '—' }}</div>
+                <div v-if="r.name" class="item__secondary">{{ r.name }}</div>
+              </div>
+              <div class="item__right">
+                <span class="pill pill--pending">Ожидание</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div v-else key="friends">
+          <div v-if="friendsStore.friends.length === 0" class="empty">
+            У вас пока нет друзей.
           </div>
+          <ul v-else class="list">
+            <li v-for="f in friendsStore.friends" :key="f.uid" class="item">
+              <div class="item__main">
+                <div class="item__email">{{ f.email || '—' }}</div>
+                <div v-if="f.name" class="item__secondary">{{ f.name }}</div>
+              </div>
+            </li>
+          </ul>
         </div>
-      </div>
-      <div v-else class="empty-list">Нет исходящих запросов.</div>
-    </div>
-    <div class="friends-section">
-      <h3 class="section-title">Мои друзья ({{ friendsStore.friends.length }})</h3>
-      <div v-if="friendsStore.friends.length > 0" class="friend-list">
-        <div v-for="friend in friendsStore.friends" :key="friend.uid" class="friend-item">
-
-          <span class="user-name">{{ friend.email || '—' }}</span>
-        </div>
-      </div>
-      <div v-else class="empty-list">У вас пока нет друзей.</div>
+      </transition>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-import { useFriendsStore } from '../store/friendsStore.js'
-import { userAuthStore } from '../store/authStore.js'
+import {ref, onMounted} from 'vue'
+import {useFriendsStore} from '../store/friendsStore.js'
+import {userAuthStore} from '../store/authStore.js'
 
 const friendsStore = useFriendsStore()
 const authStore = userAuthStore()
@@ -101,8 +146,8 @@ const isSearching = ref(false)
 const isSending = ref(false)
 const searchError = ref('')
 const successMessage = ref('')
-
 const processingUid = ref(null)
+const activeTab = ref('friends')
 
 async function handleSearch() {
   if (!searchEmail.value) {
@@ -114,12 +159,10 @@ async function handleSearch() {
     foundUser.value = null
     return
   }
-
   isSearching.value = true
   searchError.value = ''
   foundUser.value = null
   successMessage.value = ''
-
   try {
     const user = await friendsStore.findUserByEmail(searchEmail.value)
     foundUser.value = user
@@ -140,6 +183,7 @@ async function sendRequest() {
     searchEmail.value = ''
     foundUser.value = null
     await friendsStore.loadFriends()
+    activeTab.value = 'outgoing'
   } catch (e) {
     searchError.value = e.message || 'Не удалось отправить запрос.'
   } finally {
@@ -152,6 +196,7 @@ async function handleAccept(fromUid) {
     processingUid.value = fromUid
     await friendsStore.acceptRequest(fromUid)
     await friendsStore.loadFriends()
+    activeTab.value = 'friends'
   } catch (e) {
     searchError.value = e?.message || 'Не удалось принять запрос.'
   } finally {
@@ -177,132 +222,220 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.friends-tab-container {
-  padding: 20px;
-  max-width: 800px;
+.friends {
+  padding: 20px 10px;
+  max-width: 920px;
   margin: 0 auto;
+  width: 100%;
 }
 
-.search-section,
-.requests-section,
-.friends-section {
+.panel {
   background: #fef8e4;
   border: 3px solid #000;
   border-radius: 20px;
   box-shadow: 6px 6px 0 #000;
   padding: 20px;
-  margin-bottom: 20px;
 }
 
-.section-title {
+.panel + .panel {
+  margin-top: 18px;
+}
+
+.panel--search {
+  margin-bottom: 16px;
+}
+
+.panel__title {
   font-weight: 900;
   font-size: 1.5rem;
-  color: var(--titleColor);
-  margin-bottom: 1rem;
+  color: black;
+  margin-bottom: 14px;
   text-align: center;
 }
 
-.search-input-wrapper {
-  display: flex;
+.search-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
   gap: 10px;
-  flex-direction: column;
 }
 
-.search-input {
-  flex: 1;
-  padding: 10px 15px;
+@media (max-width: 560px) {
+  .search-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.input {
+  padding: 10px 14px;
   border: 2px solid #000;
   border-radius: 12px;
   font-size: 1rem;
+  background: #fff;
 }
 
-.search-btn,
-.action-btn {
-  padding: 10px 20px;
-  border: 3px solid #000;
-  border-radius: 12px;
-  background: #bbf7d0;
-  box-shadow: 3px 3px 0 #000;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 0.1s, box-shadow 0.1s;
-}
-
-.search-btn:disabled,
-.action-btn:disabled {
-  background: #e5e7eb;
-  cursor: not-allowed;
-  box-shadow: none;
-  transform: none;
-}
-
-.search-btn:hover:not(:disabled),
-.action-btn:hover:not(:disabled) {
-  transform: translate(1px, 1px);
-  box-shadow: 2px 2px 0 #000;
-}
-
-.status-message {
-  text-align: center;
-  font-weight: 600;
-  margin-top: 10px;
-}
-
-.status-message.error { color: #ef4444; }
-.status-message.success { color: #10b981; }
-
-.user-card {
+.found-card {
+  margin-top: 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
   border: 3px solid #000;
   border-radius: 16px;
   background: #fff;
   box-shadow: 4px 4px 0 #000;
-  margin-top: 20px;
+  padding: 12px 14px;
 }
 
-.user-info { flex: 1; text-align: left; }
-.user-name { font-weight: 800; font-size: 1.2rem; }
-.user-email { font-size: 0.9rem; color: #6b7280; }
+.found-card__info {
+  max-width: 70%;
+}
 
-.add-friend-btn { background: #4ade80; }
+.found-card__email {
+  font-weight: 800;
+}
 
-.request-list,
-.friend-list {
+.found-card__name {
+  font-size: .9rem;
+  color: #6b7280;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin: 8px 0 16px 0;
+  flex-wrap: wrap;
+}
+
+.tabs__btn {
+  position: relative;
+  border: 3px solid #000;
+  border-radius: 14px;
+  padding: 8px 14px;
+  background: #f3f4f6;
+  box-shadow: 3px 3px 0 #000;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform .1s, box-shadow .1s;
+}
+
+.tabs__btn.active {
+  background: #bbf7d0;
+}
+
+.tabs__btn:hover {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0 #000;
+}
+
+.tabs__badge {
+  margin-left: 8px;
+  padding: 0 8px;
+  border: 2px solid #000;
+  border-radius: 9999px;
+  font-size: .85rem;
+  background: #fde047;
+}
+
+.list {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.request-item,
-.friend-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #fff;
+.item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
   border: 2px solid #000;
   border-radius: 12px;
-  padding: 10px 15px;
+  background: #fff;
+  padding: 10px 12px;
+  cursor: pointer;
 }
 
-.request-user { flex: 1; font-weight: 600; }
-.request-actions { display: flex; gap: 8px; }
-
-.accept-btn { background: #4ade80; }
-.decline-btn { background: #f87171; color: white; }
-
-.status-pending {
-  background: #fde047;
-  padding: 5px 10px;
-  border-radius: 10px;
-  font-weight: 700;
+.item__main {
+  display: flex;
+  flex-direction: column;
 }
 
-.empty-list {
-  text-align: center;
+.item__email {
+  font-weight: 800;
+}
+
+.item__secondary {
+  font-size: .9rem;
   color: #6b7280;
-  padding: 20px;
+}
+
+.item__actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.item__right {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  border: 3px solid #000;
+  border-radius: 12px;
+  padding: 8px 14px;
+  font-weight: 800;
+  background: #f3f4f6;
+  box-shadow: 2px 2px 0 #000;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  background: #e5e7eb;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.btn--primary {
+  background: #bbf7d0;
+}
+
+.btn--success {
+  background: #4ade80;
+}
+
+.btn--danger {
+  background: #f87171;
+  color: #fff;
+}
+
+.pill {
+  border: 2px solid #000;
+  border-radius: 9999px;
+  padding: 4px 10px;
+  font-weight: 800;
+}
+
+.pill--pending {
+  background: #fde047;
+}
+
+.msg {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.msg--error {
+  color: #ef4444;
+}
+
+.msg--ok {
+  color: #10b981;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .15s ease;
+}
+
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
 }
 </style>

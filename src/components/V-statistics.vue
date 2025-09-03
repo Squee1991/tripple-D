@@ -143,7 +143,7 @@ const { t, d } = useI18n()
 const lang = userlangStore()
 const chain = userChainStore()
 
-const viewMode = ref('articles')
+const viewMode = ref('lands')
 function setView(value) {
   viewMode.value = value
 }
