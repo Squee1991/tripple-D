@@ -47,7 +47,6 @@ const toPayment = () => {
   min-width: 360px;
   display: flex;
   width: 100%;
-  height: 100%;
 }
 
 .points-card {
@@ -58,6 +57,7 @@ const toPayment = () => {
   box-shadow: 4px 4px 0 #111;
   padding: 18px;
   width: 100%;
+  height: 100%;
 }
 
 .progress_exp-bar {
@@ -86,7 +86,8 @@ const toPayment = () => {
   background: #111;
   color: #fff;
   border-radius: 14px;
-  font-size: 16px;
+  font-size: 20px;
+  font-family: "Nunito", sans-serif;
 }
 
 .points-card__list {
@@ -220,10 +221,6 @@ const toPayment = () => {
 @media (max-width: 420px) {
   .points-card {
     padding: 14px;
-  }
-
-  .points-card__title {
-    font-size: 15px;
   }
 
   .points-card__value {

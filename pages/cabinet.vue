@@ -53,6 +53,12 @@
 <!--              <div class="find__text">Найти друзей</div>-->
 <!--            </button>-->
           </div>
+          <div>
+            <button class="find__friends" @click="pathToFriends">
+              <img class="find__icon" src="../assets/images/people.svg" alt="">
+              <div class="find__friends-text">Найти друзей</div>
+            </button>
+          </div>
           <div class="award-strip">
             <div class="awards__get">
               <div class="awards__title">{{ t('cabinet.awards') }}</div>
@@ -168,7 +174,7 @@
           <div v-else-if="activeTabKey === 'shop'"><Shop/></div>
           <div v-else-if="activeTabKey === 'award'"><AwardsList :awards="awardList"/></div>
           <div v-else-if="activeTabKey === 'archive'"><VExampResulut/></div>
-          <div v-else-if="activeTabKey === 'friends'"><FriendSearch/></div>
+<!--          <div v-else-if="activeTabKey === 'friends'"><FriendSearch/></div>-->
         </div>
       </section>
     </div>
@@ -238,7 +244,7 @@ import Shop from '../src/components/Shop.vue'
 import AwardsList from '../src/components/AwardsList.vue'
 import VExampResulut from "~/src/components/V-exampResulut.vue";
 import VToggle from '~/src/components/V-toggle.vue'
-import FriendSearch from "../src/components/friendSearch.vue"
+// import FriendSearch from "../src/components/friendSearch.vue"
 
 import {userAuthStore} from '../store/authStore.js'
 import {userlangStore} from '../store/learningStore.js'
@@ -259,6 +265,7 @@ import EditIcon from '../assets/accountToggleIcons/edit.svg'
 import UserAccIcon from '../assets/accountToggleIcons/user.svg'
 import SettingsIcon from '../assets/accountToggleIcons/settings.svg'
 import FaqIcon from '../assets/accountToggleIcons/faq.svg'
+import * as ROUTES from "postcss-selector-parser";
 
 const {t, locale} = useI18n()
 const router = useRouter()
@@ -281,7 +288,7 @@ const TAB_ITEMS = [
   {key: 'progress', label: t('cabinetSidebar.valueTwo'), icon: ProgressIcon},
   {key: 'award', label: t('cabinetSidebar.valueThree'), icon: AwardsIcon},
   {key: 'archive', label: 'Архив экзаменов', icon: Folder },
-  {key: 'friends', label: 'Список друзей', icon: Find },
+  // {key: 'friends', label: 'Список друзей', icon: Find },
 ]
 
 const ACCORDIONS = ref([
@@ -316,7 +323,9 @@ function onAccordionClick(acc) {
   }
   toggleAccordion(acc.key)
 }
-
+const pathToFriends = () => {
+  router.push('/user-search')
+}
 const isAvatarModalOpen = ref(false)
 const selectedAvatarName = ref(null)
 const isPurchaseModalOpen = ref(false)
@@ -497,6 +506,32 @@ watchEffect(() => {
 </script>
 
 <style scoped>
+
+.friends{
+  color: var(--titleColor);
+  font-size: 20px;
+  font-weight: 600;
+
+}
+
+.find__friends {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  padding: 5px;
+  border: 3px solid black;
+  box-shadow: 3px 3px 0 black;
+  border-radius: 15px;
+}
+
+.find__icon {
+  width: 32px;
+  margin-right: 10px;
+}
+
 .cabinet-wrapper {
   height: 100vh;
   font-family: "Nunito", sans-serif;
@@ -585,7 +620,7 @@ watchEffect(() => {
   font-size: 1.3rem;
   color: var(--titleColor);
   font-family: "Nunito", sans-serif;
-  padding: 10px;
+  padding: 12px 0 ;
   font-weight: 600;
 }
 
@@ -641,6 +676,10 @@ watchEffect(() => {
   text-align: center;
   margin-top: 4px;
   color: var(--titleColor);
+}
+
+.find__friends {
+  margin-bottom: 10px;
 }
 
 .tabs-vertical {
@@ -1169,6 +1208,10 @@ watchEffect(() => {
   .add__friend-wrapper:hover {
     transform: translate(2px, 2px);
     box-shadow: 2px 2px 0 #000;
+  }
+  .find__friends:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 #000;
   }
 }
 

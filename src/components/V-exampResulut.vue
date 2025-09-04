@@ -1,26 +1,29 @@
 <script setup>
-import {onMounted , ref} from 'vue'
+import {onMounted, ref} from 'vue'
 import {useRouter} from 'vue-router'
 import {userExamStore} from '../../store/examStore.js'
 import VEditTest from "../../src/components/V-editTest.vue";
 import Dots from '../../assets/images/dots.svg'
 import Trash from '../../assets/images/trash.svg'
 import Share from '../../assets/images/share.svg'
+
 const router = useRouter()
 const examStore = userExamStore()
 const dotsEdit = ref(false)
 
 const data = ref([
-  {icon: Share , alt: 'Поделиться' , text: 'Поделиться'},
-  {icon: Trash , alt: 'Удалить' , text: 'Удалить'},
+  {icon: Share, alt: 'Поделиться', text: 'Поделиться'},
+  {icon: Trash, alt: 'Удалить', text: 'Удалить'},
 ])
 
- async  function handleAction(btn) {
+
+async function handleAction(btn) {
+  const att = selectedExamId.value
   dotsEdit.value = false
+  if (!att) return
   if (btn.text === 'Удалить') {
-      await examStore.deleteExam(selectedExamId.value)
-  }
-  if (btn.text === 'Поделиться') {
+    await examStore.deleteExam(selectedExamId.value)
+  } else if (btn.text === 'Поделиться') {
     console.log('Поделиться экзаменом', selectedExamId.value)
   }
 }
@@ -64,31 +67,33 @@ onMounted(() => {
       </div>
       <ul class="ec__list">
         <li v-for="a in examStore.archiveAttempts" :key="a.id" class="ec__item">
-          <div class="ec__main">
-            <div class="ec__line">
-              <span class="ec__lvl">Niveau {{ a.level || '—' }}</span>
-              <span class="ec__badge" :class="a.status === 'finished' ? 'is-finished' : 'is-draft'">
+          <div class="ec__left__wrapper">
+            <div class="ec__main">
+              <div class="ec__line">
+                <span class="ec__lvl">Niveau {{ a.level || '—' }}</span>
+                <span class="ec__badge" :class="a.status === 'finished' ? 'is-finished' : 'is-draft'">
                 {{ a.status || 'draft' }}
               </span>
-            </div>
-            <div class="ec__meta">
+              </div>
+              <div class="ec__meta">
               <span>Начало:
                 {{ toDateFlexible(a.startedAt)?.toLocaleString?.() || '—' }}
               </span>
-<!--              <span class="ec__dot">•</span>-->
-<!--              <span>Пройдено: {{ a.currentIndex ?? 0 }}</span>-->
-<!--              <span v-if="a.status === 'finished'" class="ec__dot"></span>-->
-              <span v-if="a.status === 'finished'">Средний балл: <b>{{ a.averageScore }}</b> / 10</span>
+                <!--              <span class="ec__dot">•</span>-->
+                <!--              <span>Пройдено: {{ a.currentIndex ?? 0 }}</span>-->
+                <!--              <span v-if="a.status === 'finished'" class="ec__dot"></span>-->
+                <span v-if="a.status === 'finished'">Средний балл: <b>{{ a.averageScore }}</b> / 10</span>
+              </div>
             </div>
+            <button class="ec__btn" @click="openAttempt(a.id)">Посмотреть результат</button>
           </div>
-          <button class="ec__btn" @click="openAttempt(a.id)">Посмотреть результат</button>
           <div class="edit__wrapper">
             <button class="dots__btn" @click="openMenu(a.id)">
               <img class="dots__icon" :src="Dots" alt="">
             </button>
             <div class="edit__component">
               <VEditTest
-                  v-if="dotsEdit"
+                  v-if="dotsEdit && selectedExamId === a.id"
                   :open="dotsEdit"
                   :buttons="data"
                   @close="dotsEdit = false"
@@ -111,11 +116,17 @@ onMounted(() => {
   position: absolute;
   top: 0;
   right: 0;
-
+  z-index: 1;
 }
+
+.ec__left__wrapper {
+  display: flex;
+  flex: 1;
+}
+
 .dots__btn {
   border-radius: 50%;
-  border: 3px solid  black;
+  border: 3px solid black;
   width: 40px;
   height: 40px;
   padding: 5px;
@@ -124,6 +135,7 @@ onMounted(() => {
   margin-left: 10px;
   cursor: pointer;
 }
+
 .exams-compact {
   width: 100%;
 }
@@ -166,6 +178,7 @@ onMounted(() => {
   font-weight: 600;
   font-family: "Nunito", sans-serif;
   margin-top: 10px;
+  color: var(--titleColor);
 }
 
 .ec__not {
@@ -223,7 +236,7 @@ onMounted(() => {
 
 .ec__meta {
   display: flex;
-  flex-wrap: wrap;
+  width: 100%;
   gap: 6px;
   color: #374151;
   font-size: .95rem;
@@ -254,9 +267,26 @@ onMounted(() => {
     transform: translate(1px, 1px);
     box-shadow: 1px 1px 0 #000;
   }
+
   .ec__btn:hover {
     transform: translate(1px, 1px);
     box-shadow: 1px 1px 0 #000;
+  }
+}
+
+@media (max-width: 1140px) {
+  .ec__left__wrapper {
+    flex-direction: column;
+  }
+  .ec__btn {
+    margin-left: 0;
+    max-width: 300px;
+  }
+  .ec__meta {
+    flex-direction: column;
+  }
+  .ec__item {
+    align-items: start;
   }
 }
 </style>

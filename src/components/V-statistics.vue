@@ -279,10 +279,9 @@ function formatDate(ts) {
 .statistics {
   font-family: "Nunito", sans-serif;
   overflow: visible;
-  height: 589px;
-  max-height: 589px;
 }
 .stats__wrapper {
+  min-width: 340px;
   width: 100%;
   flex-grow: 1;
   padding: 15px 15px;
@@ -366,7 +365,7 @@ function formatDate(ts) {
   height: 100%;
   border: none;
   background: transparent;
-  font-weight: 800;
+  font-weight: 600;
   cursor: pointer;
   position: relative;
   z-index: 1;
@@ -415,7 +414,7 @@ function formatDate(ts) {
   border-radius: 10px;
   height: 40px;
   width: 50px;
-  padding: 15px;
+  padding: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -575,4 +574,5 @@ progress::-moz-progress-bar {
   font-weight: 600;
   padding: 10px;
 }
+
 </style>

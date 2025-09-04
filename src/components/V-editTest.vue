@@ -32,6 +32,7 @@ defineEmits(['close', 'action'])
   padding: 25px 16px;
   display: grid;
   gap: 12px;
+
 }
 
 .actions {
