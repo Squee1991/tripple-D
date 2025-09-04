@@ -14,14 +14,14 @@
 <style scoped>
 
 	.coffe {
-		width: 65px;
+		width: 55px;
 		cursor: pointer;
 	}
 
 	.coffe-container {
 		flex-direction: column;
-		bottom: 70px;
-		right: 10px;
+		bottom: 100px;
+		right: 5px;
 		position: fixed;
 		display: flex;
 		justify-content: center;

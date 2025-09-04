@@ -10,15 +10,13 @@
       </header>
 
       <ul class="qd__list">
-        <li class="qd__item" v-for="(q,i) in todayQuests" :key="q.id">
-          <div class="qd__icon" :data-idx="i">{{ icon(i) }}</div>
-
+        <li class="qd__item" v-for="(quest , index) in todayQuests" :key="quest.id">
+          <div class="qd__icon" :data-idx="index">{{ icon(index) }}</div>
           <div class="qd__body">
-            <h4 class="qd__name">{{ q.name }}</h4>
-
+            <h4 class="qd__name">{{ quest.name }}</h4>
             <div class="qd__barwrap">
-              <progress class="qd__progress" :value="cur(q)" :max="max(q)"></progress>
-              <span class="qd__barlabel">{{ cur(q) }} / {{ max(q) }}</span>
+              <progress class="qd__progress" :value="cur(quest)" :max="max(quest)"></progress>
+              <span class="qd__barlabel">{{ cur(quest) }} / {{ max(quest) }}</span>
             </div>
           </div>
           <div class="qd__chest" aria-hidden="true">🧰</div>
@@ -50,23 +48,22 @@ function max(q) {
 function prettyMs(x) {
   const ms = typeof x === 'number' ? x : Number(x?.value ?? 0)
   const tot = Math.max(0, Math.floor(ms / 1000))
-  const h = Math.floor(tot / 3600)
-  const m = Math.floor((tot % 3600) / 60)
+  const hour = Math.floor(tot / 3600)
+  const min = Math.floor((tot % 3600) / 60)
   const s = tot % 60
   const pad = n => String(n).padStart(2, '0')
-  return `${pad(h)}:${pad(m)}:${pad(s)}`
+  return `${pad(hour)}:${pad(min)}:${pad(s)}`
 }
 
-function icon(i) {
+function icon(icon) {
   const arr = ['⚡', '⏱️', '🎯', '📚', '🔊', '🧩', '📝', '🧠']
-  return arr[i % arr.length]
+  return arr[icon % arr.length]
 }
 </script>
 
 <style scoped>
 
 .qd {
-  padding: 10px;
   color: #e6edf3;
   font-family: "Nunito", sans-serif;
 }
@@ -116,7 +113,7 @@ function icon(i) {
   border-radius: 8px;
   background: #42ab1a;
   border: 3px solid #2b3240;
-  box-shadow: 4px 4px 0 black;
+  box-shadow: 2px 2px 0 black;
   color: white;
   font-size: 16px;
   font-weight: 600;

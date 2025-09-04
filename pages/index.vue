@@ -39,7 +39,7 @@ const authStore = userAuthStore()
 .stat {
   display: flex;
   justify-content: center;
-  margin-top: 25px;
+  margin-top: 10px;
 }
 
 @media (max-width: 767px) {

@@ -1,11 +1,11 @@
 <template>
   <footer class="footer">
-    <div class="footer__container">
-<!--      <div class="footer-brand">-->
-<!--        <NuxtLink to="/">-->
-<!--          <span class="logo__name">LEXINGO</span>-->
-<!--        </NuxtLink>-->
-<!--      </div>-->
+    <div class="footer__container" :class="{ 'absolut' : authStore.uid }">
+      <!--      <div class="footer-brand">-->
+      <!--        <NuxtLink to="/">-->
+      <!--          <span class="logo__name">LEXINGO</span>-->
+      <!--        </NuxtLink>-->
+      <!--      </div>-->
       <nav class="footer-links">
         <ul class="footer__links-nav">
           <li v-for="item in data" :key="item.id" class="footer__links-item">
@@ -61,13 +61,21 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import {ref} from 'vue'
+import {userAuthStore} from "~/store/authStore.js";
 
-const data = ref([
-  { id: 'about', valueKey: 'О приложении', url: '/info-about' },
-  { id: 'contact', valueKey: 'Контакт', url: '/support-request' },
+const authStore = userAuthStore()
+
+const data = computed(() => [
+  ...(!authStore.uid
+          ? [
+            { id: 'about',   valueKey: 'О приложении',  url: '/info-about' },
+            { id: 'contact', valueKey: 'Контакт',       url: '/support-request' },
+          ]
+          : []
+  ),
   { id: 'privacy', valueKey: 'Конфиденциальность', url: '/privacy' },
-  { id: 'terms', valueKey: 'Условия', url: '/terms' },
+  { id: 'terms',   valueKey: 'Условия',            url: '/terms'   },
 ])
 
 const toDiscord = () => {
@@ -76,24 +84,19 @@ const toDiscord = () => {
 </script>
 
 <style scoped>
-.footer {
-  font-family: "Nunito", sans-serif;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
 
 .footer__container {
   border: 3px solid black;
   padding: 40px;
-  border-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   box-shadow: 4px 4px 0 black;
   background: #4ade80;
   width: 100%;
 }
 
 .footer__links-nav {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   gap: 12px;
   justify-items: center;
 }
@@ -106,7 +109,7 @@ const toDiscord = () => {
 }
 
 .footer__links-item {
-  padding: 5px;
+  padding: 4px 10px;
   border-radius: 15px;
   box-shadow: 4px 4px 0 black;
   border: 2px solid #1e1e1e;
@@ -119,7 +122,7 @@ const toDiscord = () => {
 @media (min-width: 1024px) {
   .footer__links-item:hover {
     background: #f1c40f;
-    transform: translate(2px , 2px);
+    transform: translate(2px, 2px);
     box-shadow: 2px 2px 0 black;
     transition: .3s;
   }
@@ -127,10 +130,9 @@ const toDiscord = () => {
 
 .footer__container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  gap: 2rem;
+  gap: 1.3rem;
 }
 
 .footer__social-media {
@@ -190,11 +192,35 @@ svg {
   color: currentColor;
 }
 
-@media (max-width: 768px) {
-  .footer__container {
-    flex-direction: column;
-    gap: 2rem;
+@media (max-width: 767px) {
+  .absolut {
+    gap: 13px;
+    padding: 10px 15px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
   }
+
+  .social__media-icon {
+    padding: 3px;
+    box-shadow: 2px 2px 0 black;
+    border: 2px solid black;
+  }
+
+  svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .footer__link {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 440px) {
+.footer__links-nav {
+  flex-direction: column;
+}
 
 }
 </style>

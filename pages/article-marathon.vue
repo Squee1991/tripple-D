@@ -1,51 +1,82 @@
 <script setup>
-import {ref, onMounted, computed} from 'vue';
-import {useRouter} from 'vue-router';
-import {useGameStore} from '../store/marafonStore.js';
-import {userAuthStore} from '../store/authStore.js';
+import {ref, onMounted, computed} from 'vue'
+import {useRouter} from 'vue-router'
+import {useGameStore} from '../store/marafonStore.js'
+import {userAuthStore} from '../store/authStore.js'
+import {useI18n} from 'vue-i18n'
 
 const {t} = useI18n()
-const gameStore = useGameStore();
-const authStore = userAuthStore();
-const router = useRouter();
-const selectedDifficulty = ref(1);
+const gameStore = useGameStore()
+const authStore = userAuthStore()
+const router = useRouter()
+const selectedDifficulty = ref(1)
+
 const currentRecord = computed(() => {
   if (gameStore.personalBests) {
-    return gameStore.personalBests[selectedDifficulty.value] || 0;
+    return gameStore.personalBests[selectedDifficulty.value] || 0
   }
-  return 0;
-});
+  return 0
+})
 
-onMounted( () => {
+onMounted(() => {
   if (!gameStore.loadWords && typeof gameStore.loadWords !== 'function') return
-  gameStore.loadWords();
-  gameStore.fetchRecord();
-});
+  gameStore.loadWords()
+  gameStore.fetchRecord()
+})
 
 function startGame() {
-  if (!authStore.uid) return;
-  gameStore.selectGameSettings(selectedDifficulty.value);
-  router.push('/marathon-session');
+  if (!authStore.uid) return
+  gameStore.selectGameSettings(selectedDifficulty.value)
+  router.push('/marathon-session')
 }
 
 function goBack() {
-  router.push('/');
+  router.push('/')
 }
 
+const difficultyBase = ref([
+  {
+    value: 1,
+    base: 'easy',
+    icon: '🕊️',
+    titleKey: 'marathonPrepare.difficultEasy',
+    descKey: 'marathonPrepare.difficultDescriptionEasy'
+  },
+  {
+    value: 2,
+    base: 'normal',
+    icon: '⏱️',
+    titleKey: 'marathonPrepare.difficultNormal',
+    descKey: 'marathonPrepare.difficultDescriptionNormal'
+  },
+  {
+    value: 3,
+    base: 'hard',
+    icon: '🔥',
+    titleKey: 'marathonPrepare.difficultHard',
+    descKey: 'marathonPrepare.difficultDescriptionHard'
+  }
+])
+
+const difficultyClasses = computed(() =>
+    difficultyBase.value.reduce((map, o) => {
+      map[o.value] = `difficulty-btn ${o.base}${selectedDifficulty.value === o.value ? ' active' : ''}`
+      return map
+    }, {})
+)
 </script>
 
 <template>
   <div class="page-wrapper">
-    <button class="back-button" @click="goBack" aria-label="Назад">
-      ←
-    </button>
+    <button class="back-button" @click="goBack" aria-label="Назад">←</button>
     <div class="prepare-container">
       <div class="header">
         <h1>{{ t('marathonPrepare.title') }}</h1>
         <p class="subtitle">{{ t('marathonPrepare.subtitle') }}</p>
       </div>
+
       <div v-if="authStore.uid" class="user-greeting">
-        <p>{{ t('marathonPrepare.greetings') }}, <strong>{{ authStore.name }}</strong>!</p>
+        <p>{{ t('marathonPrepare.greetings') }}, <strong>{{ authStore.name }}</strong></p>
         <p class="record">
           {{ t('marathonPrepare.streak') }}
           <span class="record__value">{{ currentRecord }}</span>
@@ -54,38 +85,28 @@ function goBack() {
       <div v-else class="guest-greeting">
         <p>{{ t('marathonPrepare.notAuth') }}</p>
       </div>
+
       <div v-if="gameStore.isLoaded" class="settings-block">
         <h2>{{ t('marathonPrepare.chooseDifficulty') }}</h2>
         <div class="difficulty-options">
-          <button @click="selectedDifficulty = 1"
-                  :class="['difficulty-btn easy', { active: selectedDifficulty === 1 }]">
+          <button
+              v-for="opt in difficultyBase"
+              :key="opt.value"
+              @click="selectedDifficulty = opt.value"
+              :class="difficultyClasses[opt.value]"
+          >
             <div class="button-content">
-              <span>{{ t('marathonPrepare.difficultEasy') }}</span>
-              <span>{{ t('marathonPrepare.difficultDescriptionEasy') }}</span>
+              <span>{{ t(opt.titleKey) }}</span>
+              <span>{{ t(opt.descKey) }}</span>
             </div>
-            <span class="icon">🕊️</span>
-          </button>
-          <button @click="selectedDifficulty = 2"
-                  :class="['difficulty-btn normal', { active: selectedDifficulty === 2 }]">
-            <div class="button-content">
-              <span>{{ t('marathonPrepare.difficultNormal') }}</span>
-              <span>{{ t('marathonPrepare.difficultDescriptionNormal') }}</span>
-            </div>
-            <span class="icon">⏱️</span>
-          </button>
-          <button @click="selectedDifficulty = 3"
-                  :class="['difficulty-btn hard', { active: selectedDifficulty === 3 }]">
-            <div class="button-content">
-              <span>{{ t('marathonPrepare.difficultHard') }}</span>
-              <span>{{ t('marathonPrepare.difficultDescriptionHard') }}</span>
-            </div>
-            <span class="icon">🔥</span>
+            <span class="icon">{{ opt.icon }}</span>
           </button>
         </div>
       </div>
       <div v-else class="loading">
         <p>{{ t('marathonPrepare.loading') }}</p>
       </div>
+
       <button
           class="start-button"
           @click="startGame"
@@ -104,7 +125,7 @@ function goBack() {
   align-items: center;
   min-height: 100vh;
   padding: 2rem;
-  font-family: 'Inter', sans-serif;
+  font-family: "Nunito", sans-serif;
   position: relative;
 }
 
@@ -142,7 +163,6 @@ function goBack() {
 .prepare-container {
   width: 100%;
   max-width: 600px;
-  background: #ffffff;
   border: 3px solid #1e1e1e;
   box-shadow: 8px 8px 0 #1e1e1e;
   border-radius: 24px;
@@ -161,13 +181,13 @@ function goBack() {
   font-family: "Nunito", sans-serif;
   font-size: 2.5rem;
   font-weight: 600;
-  color: #1e1e1e;
+  color: var(--titleColor);
   margin: 0 0 0.5rem 0;
 }
 
 .subtitle {
   font-size: 1.1rem;
-  color: #555;
+  color: #868383;
   margin: 0;
 }
 
@@ -186,7 +206,7 @@ function goBack() {
 }
 
 .guest-greeting p {
-  color: #555;
+  color: var(--titleColor);
 }
 
 .user-greeting strong {
@@ -197,13 +217,12 @@ function goBack() {
   margin-top: 0.75rem;
   font-weight: 700;
   color: #1e1e1e;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .record__value {
   font-size: 24px;
 }
-
 
 .user-greeting .record span {
   display: inline-block;
@@ -219,8 +238,8 @@ function goBack() {
   font-family: "Nunito", sans-serif;
   font-size: 1.8rem;
   text-align: center;
-  margin-bottom: 1rem;
-  color: #1e1e1e;
+  margin-bottom: 10px;
+  color: var(--titleColor);
 }
 
 .difficulty-options {
@@ -291,9 +310,9 @@ function goBack() {
 
 .start-button {
   font-family: "Nunito", sans-serif;
-  padding: 1rem 2.5rem;
+  padding: 0.4rem 2.5rem;
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 600;
   border-radius: 16px;
   cursor: pointer;
   border: 3px solid #1e1e1e;
@@ -338,21 +357,39 @@ function goBack() {
   }
 }
 
+@media (max-width: 767px) {
+  .difficulty-btn {
+    padding: 6px 14px;
+  }
+
+  .subtitle {
+    font-size: 0.8rem;
+  }
+}
+
 @media (max-width: 640px) {
   .back-button {
-    top: 1rem;
-    left: 1rem;
-    width: 50px;
-    height: 50px;
+    top: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
     font-size: 2rem;
+    border-radius: 10px;
   }
 
   .prepare-container {
-    padding: 1.5rem;
+    padding-top: 44px;
+    height: 100vh;
+    border-radius: 0;
+    border: 0;
   }
 
   .header h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .page-wrapper {
+    padding: 0;
   }
 }
 </style>

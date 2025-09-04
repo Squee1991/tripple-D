@@ -54,11 +54,18 @@
     position: relative;
     box-shadow: 4px 4px 0 black;
   }
-
   .ach {
     width: 200px;
     position: absolute;
     right: -37px;
     bottom: -50px
+  }
+
+  @media (max-width: 767px) {
+    .ach {
+      width: 600px;
+      right: -70px;
+      bottom: -70px
+    }
   }
 </style>
