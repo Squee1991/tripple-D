@@ -11,6 +11,7 @@ import {
 	orderBy,
 	limit,
 	getDocs,
+	deleteDoc,
 	getDoc
 } from "firebase/firestore"
 import {getAuth} from "firebase/auth"
@@ -75,6 +76,25 @@ export const userExamStore = defineStore("exam", () => {
 			console.error("Failed to load topics", e)
 		} finally {
 			loading.value = false
+		}
+	}
+
+	async function deleteExam(examId) {
+		if (!examId) return
+		const uid = currentUserUid()
+		if (!uid) return
+		try {
+			const refDoc = doc(db, "examAttempts", examId)
+			const snap = await getDoc(refDoc)
+			if (!snap.exists()) return
+			const data = snap.data()
+			if (data.ownerUid !== uid) return
+			await deleteDoc(refDoc)
+			if (attemptId.value === examId) resetCurrentAttemptState()
+			archiveAttempts.value = archiveAttempts.value.filter(a => a.id !== examId)
+			if (currentArchiveAttempt.value?.id === examId) clearCurrentArchiveAttempt()
+		} catch (e) {
+			console.error("Ошибка при удалении:", e)
 		}
 	}
 
@@ -279,6 +299,18 @@ export const userExamStore = defineStore("exam", () => {
 		currentArchiveError.value = null
 	}
 
+	function resetCurrentAttemptState() {
+		attemptId.value = null
+		level.value = ""
+		locale.value = ""
+		startedAt.value = null
+		finishedAt.value = null
+		durationSec.value = 0
+		userAnswers.value = []
+		currentIndex.value = 0
+		speakingMedia.value = {}
+	}
+
 	return {
 		exercises, currentIndex, userAnswers, loading, attemptId, level, locale,
 		startedAt, finishedAt, durationSec, speakingMedia, currentExercise, isFinished,
@@ -287,5 +319,6 @@ export const userExamStore = defineStore("exam", () => {
 		archiveAttempts, archiveLoading, archiveError, loadArchiveAttempts,
 		currentArchiveAttempt, currentArchiveLoading, currentArchiveError,
 		loadSingleAttempt, clearCurrentArchiveAttempt,
+		deleteExam
 	}
 })

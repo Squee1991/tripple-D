@@ -1,4 +1,5 @@
-export const useGroqCheckHomeWork = async ({ task, answer, level = 'A1' }) => {
+// src/composables/useGroqCheck.js
+export const useGroqCheckHomeWork = async ({ task, answer, level = 'A1', locale = 'de' }) => {
 	if (!answer || !answer.trim()) {
 		return {
 			result: 'keine Antwort',
@@ -8,80 +9,50 @@ export const useGroqCheckHomeWork = async ({ task, answer, level = 'A1' }) => {
 		}
 	}
 
-	const apiKey = import.meta.env.VITE_GROQ_API_KEY
-	const isSpeaking = !!task.prompt && !!task.expectedTopics
-	const systemPrompt = isSpeaking
+	const apiKey = import.meta.env.VITE_GROQ_API_KEY;
+	const isSpeaking = !!task?.prompt && !!task?.expectedTopics;
+	const isLow = ['A1', 'A2'].includes(String(level).toUpperCase());
+	const outLangISO = String(locale || 'de');
+	const resultScale = 'ausgezeichnet, fast perfekt, gut, kleine Fehler, mittelmäßig, okay, viele Fehler, muss verbessert werden, schlecht, sehr schlecht, keine Antwort';
+
+	const systemPrompt = `
+Ты — строгий, но вежливый и поддерживающий AI-экзаменатор по немецкому языку. Оценивай честно и точно, избегай грубости и унижения. Формулируй комментарии уважительно и мотивирующе, с конструктивными подсказками. Твоя задача — оценить ответ студента уровня ${level} и вернуть ТОЛЬКО JSON-объект.
+
+— ТОН И СТИЛЬ —
+• Строго, но доброжелательно и поддерживающе.
+• Без грубости, сарказма и уничижительных формулировок.
+• В "feedback" давай короткое, тактичное и конструктивное замечание (2-3 предложения), по делу, без восклицательных знаков.
+
+— ПРАВИЛА ЯЗЫКА ДЛЯ ПОЛЕЙ JSON —
+1) "result": ВСЕГДА на НЕМЕЦКОМ. Одно из значений: ${resultScale}.
+2) "feedback": ${isLow ? `ОБЯЗАТЕЛЬНО на языке с ISO-кодом "${outLangISO}".` : 'ОБЯЗАТЕЛЬНО на НЕМЕЦКОМ.'}
+3) "mistakes": ВСЕГДА на НЕМЕЦКОМ (лаконичные ключевые слова).
+4) "correctedVersion": ВСЕГДА полный исправленный вариант ответа на НЕМЕЦКОМ.
+
+— ФОРМАТ ОТВЕТА —
+Только валидный JSON-объект без дополнительного текста до или после:
+{
+  "result": "...",
+  "feedback": "...",
+  "mistakes": ["...", "..."],
+  "correctedVersion": "..."
+}
+`.trim();
+
+	const userPrompt = isSpeaking
 		? `
-Du bist ein offizieller Deutschprüfer. Deine Aufgabe ist es, eine gesprochene Antwort eines Schülers auf dem Niveau ${level} zu bewerten.
-
-Gib deine Rückmeldung ausschließlich auf Deutsch. Verwende keine andere Sprache.
-
-Aufgabe (mündlich):
-${task.prompt}
-
-Erwartete Themen: ${task.expectedTopics.join(', ')}
-
-Antwort des Schülers (Transkription):
-${answer}
-
-Bewerte die Antwort anhand folgender Kriterien:
-1. Wurde die Frage verstanden und sinnvoll beantwortet?
-2. Entsprechen Inhalt und Sprache dem Niveau ${level}?
-3. Wurden relevante Themen erwähnt?
-
-Gib folgende Rückmeldung:
-- Bewertung (ausgezeichnet, fast perfekt, gut, kleine Fehler, mittelmäßig, okay, viele Fehler, muss verbessert werden, schlecht, sehr schlecht, keine Antwort)
-- Kurzes Feedback (max. 2 Sätze)
-- Fehlerliste (optional)
-- Korrigierte Version (optimiert)
-
-Antwort ausschließlich im JSON-Format:
-
-{
-  "result": "mittelmäßig",
-  "feedback": "Die Antwort ist teilweise verständlich, aber wichtige Informationen fehlen.",
-  "mistakes": ["fehlende Themen", "unvollständige Sätze"],
-  "correctedVersion": "Hallo! Ich heiße Lisa. Ich wohne in Berlin und arbeite als Lehrerin."
-}
-		`.trim()
+Проверь устный ответ студента.
+- Уровень: ${level}
+- Задание: "${task?.prompt ?? ''}"
+- Ожидаемые темы: ${task.expectedTopics?.join(', ') ?? 'N/A'}
+- Ответ студента (транскрипция): "${answer}"
+`.trim()
 		: `
-Du bist ein offizieller Deutschprüfer. Deine Aufgabe ist es, eine schriftliche Antwort eines Schülers auf dem Niveau ${level} zu bewerten.
-
-Gib deine Rückmeldung ausschließlich auf Deutsch. Verwende keine andere Sprache, auch nicht für Kommentare oder Beispiele.
-
-Aufgabenstellung:
-${task.instruction}
-
-Beispielantwort (falls vorhanden):
-${task.exampleAnswer || 'Keine'}
-
-Antwort des Schülers:
-${answer}
-
-Bewerte die Antwort anhand folgender Kriterien:
-1. Hat der Schüler die Aufgabe verstanden und richtig beantwortet?
-2. Gibt es Fehler in Grammatik, Wortschatz oder Satzbau?
-3. Entspricht die Sprache dem Niveau ${level}?
-
-Gib folgende Rückmeldung:
-- Bewertung auf einer Skala:
-  ausgezeichnet, fast perfekt, gut, kleine Fehler, mittelmäßig, okay, viele Fehler, muss verbessert werden, schlecht, sehr schlecht, keine Antwort
-
-- Kurzes Feedback (1–2 Sätze)
-
-- Liste der Fehler (Stichwörter)
-
-- Verbesserungsvorschlag (optimierte Version der Antwort)
-
-Antwortformat **ausschließlich als JSON**:
-
-{
-  "result": "kleine Fehler",
-  "feedback": "Die Nachricht ist verständlich, aber es fehlen wichtige Informationen.",
-  "mistakes": ["fehlende Begrüßung", "Grammatikfehler"],
-  "correctedVersion": "Hallo! Gehst du morgen mit mir ins Kino? Der Film beginnt um 18 Uhr."
-}
-		`.trim()
+Проверь письменный ответ студента.
+- Уровень: ${level}
+- Задание: "${task?.instruction ?? ''}"
+- Ответ студента: "${answer}"
+`.trim();
 
 	try {
 		const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
@@ -93,22 +64,29 @@ Antwortformat **ausschließlich als JSON**:
 			body: JSON.stringify({
 				model: 'llama-3.3-70b-versatile',
 				messages: [
-					{ role: 'system', content: 'Du bist ein strenger Deutschlehrer. Antworte nur auf Deutsch.' },
-					{ role: 'user', content: systemPrompt }
+					{ role: 'system', content: systemPrompt },
+					{ role: 'user', content: userPrompt }
 				],
-				temperature: 0.2,
+				temperature: 0.1,
 				max_tokens: 900,
-				stream: false
+				response_format: { type: 'json_object' }
 			})
-		})
-		const data = await res.json()
-		const content = data.choices?.[0]?.message?.content ?? '{}'
+		});
+
+		if (!res.ok) {
+			const errorText = await res.text();
+			return { error: 'API request failed', details: errorText };
+		}
+
+		const data = await res.json();
+		const content = data.choices?.[0]?.message?.content ?? '{}';
+
 		try {
-			return JSON.parse(content)
-		} catch {
-			return { error: 'Fehler beim Parsen der Antwort', raw: content }
+			return JSON.parse(content);
+		} catch (e) {
+			return { error: 'Failed to parse JSON response', raw: content };
 		}
 	} catch (error) {
-		return { error: 'Fehler bei der Anfrage', details: error }
+		return { error: 'Request failed', details: error.message };
 	}
 }
