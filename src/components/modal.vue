@@ -8,6 +8,7 @@
                         <h3 class="modal-title">{{ props.title }}</h3>
                         <img class="modal__icon" :src="props.img" alt="">
                         <p class="modal-text"> {{ props.text }}</p>
+                        <p class="modal-text"> {{ props.description }}</p>
                     </div>
                 </div>
             </transition>
@@ -22,6 +23,7 @@
     const closeModal = () => {
         emit('close')
     }
+
     const props =  defineProps({
         visible: {
             type: Boolean,
@@ -35,7 +37,11 @@
         },
         text: {
             type: String
+        },
+        description:{
+            type: [ Array , Object , String]
         }
+
     });
 
 
@@ -69,7 +75,7 @@
     }
 
     .modal-container {
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         position: relative;
         background: white;
         padding: 2.5rem;
@@ -106,6 +112,11 @@
         margin-bottom: 1rem;
     }
 
+    .modal__icon {
+        width: 150px;
+        margin: 20px;
+    }
+
     .modal-text {
         font-family: 'Inter', sans-serif;
         font-size: 1.1rem;
@@ -128,4 +139,5 @@
     .pop-enter-from, .pop-leave-to {
         transform: scale(0.9);
     }
+
 </style>

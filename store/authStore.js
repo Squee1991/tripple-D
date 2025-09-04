@@ -12,36 +12,86 @@ import {
 	sendPasswordResetEmail,
 	sendEmailVerification,
 	signInWithPopup,
-	GoogleAuthProvider
+	reauthenticateWithPopup, GoogleAuthProvider
 } from 'firebase/auth';
-import {doc, setDoc, getDoc, getFirestore, updateDoc, deleteDoc} from 'firebase/firestore';
+import {doc, setDoc, getDoc, getFirestore, updateDoc, deleteDoc, serverTimestamp} from 'firebase/firestore';
+import {userlangStore} from "./learningStore.js";
+
 let authStateUnsubscribe = null;
 export const userAuthStore = defineStore('auth', () => {
 	const name = ref(null)
 	const email = ref(null)
 	const registeredAt = ref(null)
 	const db = getFirestore();
+	const providerId = ref('')
 	const avatar = ref(null)
 	const uid = ref(null)
-	const availableAvatars = ref([ '1.png', '2.png', '3.png', '4.png', '5.png', '6.png',  '12.png', '7.png', '8.png' , '9.png' , '10.png' , '11.png' , '13.png', '14.png']);
-
+	const gotPremiumBonus = ref(false)
+	const subscriptionEndsAt = ref(null)
+	const subscriptionCancelled = ref(false)
+	const availableAvatars = ref(['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '12.png', '7.png', '8.png', '9.png', '10.png', '11.png', '13.png', '14.png']);
+	const ownedAvatars = ref(['1.png', '2.png']);
+	const isPremium = ref(false)
+	const isGoogleUser = computed(() => providerId.value === 'google.com');
 	const getAvatarUrl = (fileName) => {
 		if (!fileName) return '';
 		try {
 			return new URL(`../assets/images/avatars/${fileName}`, import.meta.url).href;
 		} catch (e) {
-			console.error(`Ошибка URL для аватара: ${fileName}`, e); return '';
+			console.error(`Ошибка URL для аватара: ${fileName}`, e);
+			return '';
 		}
 	};
 
+	const normalizeDate = (v) => {
+		if (!v) return null;
+		if (typeof v?.toDate === 'function') return v.toDate().toISOString();
+		const d = new Date(v);
+		return isNaN(d.getTime()) ? null : d.toISOString();
+	};
+
 	const avatarUrl = computed(() => getAvatarUrl(avatar.value));
+	const createInitialAchievementsObject = () => {
+		return {
+			achievements: {
+				A1: {wins: 0, streaks: 0, cleanSweeps: 0, flawlessWins: 0},
+				A2: {wins: 0, streaks: 0, cleanSweeps: 0, flawlessWins: 0},
+				B1: {wins: 0, streaks: 0, cleanSweeps: 0, flawlessWins: 0},
+				B2: {wins: 0, streaks: 0, cleanSweeps: 0, flawlessWins: 0}
+			}
+		};
+	};
+
+	const grantPremiumBonusPoints = async () => {
+		const auth = getAuth();
+		const user = auth.currentUser;
+		if (!user) return;
+		const userDocRef = doc(db, 'users', user.uid);
+		const snap = await getDoc(userDocRef);
+		const alreadyGranted = snap.exists() && snap.data().gotPremiumBonus === true;
+		if (alreadyGranted) return;
+		const langStore = userlangStore();
+		langStore.points += 50;
+		langStore.totalEarnedPoints += 50;
+		langStore.gotPremiumBonus = true;
+		await langStore.saveToFirebase();
+		await updateDoc(userDocRef, { gotPremiumBonus: true });
+	};
 
 	const setUserData = (data) => {
 		name.value = data.name || null
 		email.value = data.email || null
-		registeredAt.value = data.registeredAt || null
+		registeredAt.value = normalizeDate(data.registeredAt)
 		uid.value = data.uid || null
 		avatar.value = data.avatar || null
+		isPremium.value = data.isPremium || false
+		subscriptionEndsAt.value = data.subscriptionEndsAt || null
+		subscriptionCancelled.value = data.subscriptionCancelled || false
+		providerId.value = data.providerId || ''
+		ownedAvatars.value = data.ownedAvatars || ['1.png', '2.png'];
+		if (data.isPremium && !data.gotPremiumBonus) {
+			grantPremiumBonusPoints()
+		}
 	}
 
 	const updateUserAvatar = async (newAvatarFilename) => {
@@ -59,74 +109,80 @@ export const userAuthStore = defineStore('auth', () => {
 	};
 
 	const loginWithGoogle = async () => {
-		try {
-			const auth = getAuth();
-			const provider = new GoogleAuthProvider();
-			const result = await signInWithPopup(auth, provider);
-			const user = result.user;
-			const userDocRef = doc(db, 'users', user.uid);
-			const userDoc = await getDoc(userDocRef);
-			if (!userDoc.exists()) {
-				await setDoc(userDocRef, {
-					nickname: user.displayName,
-					email: user.email,
-					registeredAt: user.metadata.creationTime,
-					avatar: '1.png'
-				});
-			}
-			const finalDoc = await getDoc(userDocRef);
-			const userDataFromDb = finalDoc.data() || {};
-			setUserData({
+		const auth = getAuth();
+		const provider = new GoogleAuthProvider();
+		const result = await signInWithPopup(auth, provider);
+		const user = result.user;
+		const userDocRef = doc(db, 'users', user.uid);
+		const userDoc = await getDoc(userDocRef);
+		if (!userDoc.exists()) {
+			await setDoc(userDocRef, {
+				ownedAvatars: ['1.png', '2.png'],
 				name: user.displayName,
 				email: user.email,
-				registeredAt: user.metadata.creationTime,
-				uid: user.uid,
-				avatar: userDataFromDb.avatar || '1.png'
+				registeredAt: serverTimestamp(),
+				avatar: '1.png',
+				gotPremiumBonus: false,
+				...createInitialAchievementsObject()
 			});
-		} catch (error) {
-			throw error;
 		}
+
+		const finalDoc = await getDoc(userDocRef);
+		const userDataFromDb = finalDoc.data() || {};
+		setUserData({
+			name: user.displayName,
+			email: user.email,
+			registeredAt: user.metadata.creationTime,
+			uid: user.uid,
+			providerId: user.providerData[0]?.providerId || '',
+			...userDataFromDb
+		});
 	};
 
 	const registerUser = async (userData) => {
-		const auth = getAuth()
-		const userCredential = await createUserWithEmailAndPassword(auth, userData.email, userData.password)
-		await updateProfile(userCredential.user, { displayName: userData.name })
-		await sendEmailVerification(userCredential.user)
+		const auth = getAuth();
+		const userCredential = await createUserWithEmailAndPassword(auth, userData.email, userData.password);
+		const user = userCredential.user;
+		await updateProfile(user, { displayName: userData.name });
+		await sendEmailVerification(user);
 		const defaultAvatar = '1.png';
-		await setDoc(doc(db, 'users', userCredential.user.uid), {
-			nickname: userData.name,
-			email: userData.email,
-			registeredAt: userCredential.user.metadata.creationTime,
-			avatar: defaultAvatar
-		})
-
-		setUserData({
+		const initialOwnedAvatars = ['1.png', '2.png'];
+		await setDoc(doc(db, 'users', user.uid), {
 			name: userData.name,
 			email: userData.email,
-			registeredAt: userCredential.user.metadata.creationTime,
-			uid: userCredential.user.uid,
-			avatar: defaultAvatar
-		})
-	}
+			registeredAt: serverTimestamp(),
+			avatar: defaultAvatar,
+			ownedAvatars: initialOwnedAvatars,
+			isPremium: false,
+			subscriptionEndsAt: null,
+			gotPremiumBonus: false,
+			...createInitialAchievementsObject()
+		});
+		setUserData({
+			uid: user.uid,
+			name: userData.name,
+			email: userData.email,
+			registeredAt: user.metadata.creationTime,
+			avatar: defaultAvatar,
+			ownedAvatars: initialOwnedAvatars,
+			isPremium: false,
+			subscriptionEndsAt: null,
+			gotPremiumBonus: false,
+		});
+	};
 
-
-	const loginUser = async ({ email, password }) => {
+	const loginUser = async ({email, password}) => {
 		const auth = getAuth()
 		const userCredential = await signInWithEmailAndPassword(auth, email, password)
-		if (!userCredential.user.emailVerified) {
-			throw { code: 'auth/email-not-verified' }
-		}
 		const userDocRef = doc(db, 'users', userCredential.user.uid);
 		const userDoc = await getDoc(userDocRef);
 		const userDataFromDb = userDoc.exists() ? userDoc.data() : {};
-
 		setUserData({
 			name: userCredential.user.displayName,
 			email: userCredential.user.email,
 			registeredAt: userCredential.user.metadata.creationTime,
 			uid: userCredential.user.uid,
-			avatar: userDataFromDb.avatar || null
+			...userDataFromDb
 		})
 	}
 
@@ -135,19 +191,51 @@ export const userAuthStore = defineStore('auth', () => {
 		await sendPasswordResetEmail(auth, email)
 	}
 
-	const deleteAccount = async (currentPassword) => {
+	const deleteAccount = async (password = null) => {
 		const auth = getAuth();
 		const user = auth.currentUser;
-		if (!user) return;
-		const credential = EmailAuthProvider.credential(
-			user.email,
-			currentPassword
-		);
-		await reauthenticateWithCredential(user, credential);
-		await deleteDoc(doc(db, 'users', user.uid));
-		await deleteUser(user);
-		setUserData({});
+		if (!user) throw {code: 'auth/no-current-user'};
+
+		try {
+			const usesGoogle = user.providerData.some(p => p.providerId === 'google.com');
+			if (usesGoogle) {
+				const provider = new GoogleAuthProvider();
+				await reauthenticateWithPopup(user, provider);
+			} else {
+				if (!user.email) throw {code: 'auth/missing-email'};
+				if (!password) throw {code: 'auth/missing-password'};
+				const cred = EmailAuthProvider.credential(user.email, password);
+				await reauthenticateWithCredential(user, cred);
+			}
+
+			await deleteDoc(doc(db, 'users', user.uid));
+			await deleteUser(user);
+			setUserData({});
+		} catch (err) {
+			if (err && err.code) throw err;
+			const msg = String(err?.message || '');
+			if (msg.includes('requires-recent-login')) throw {code: 'auth/requires-recent-login'};
+			if (msg.includes('popup-closed')) throw {code: 'auth/popup-closed-by-user'};
+			throw {code: 'auth/unknown'};
+		}
 	};
+
+	const purchaseAvatar = async (fileName) => {
+		const langStore = userlangStore();
+		if (ownedAvatars.value.includes(fileName)) return;
+		if (langStore.points < 50) {
+			throw new Error('Недостаточно Артиклюсов!');
+		}
+		langStore.points -= 50;
+		langStore.articlesSpentForAchievement += 50;
+		await langStore.saveToFirebase();
+		ownedAvatars.value.push(fileName);
+		const userDocRef = doc(db, 'users', uid.value);
+		await updateDoc(userDocRef, {
+			ownedAvatars: ownedAvatars.value
+		});
+	};
+
 
 	const logOut = async () => {
 		const auth = getAuth()
@@ -168,14 +256,17 @@ export const userAuthStore = defineStore('auth', () => {
 			if (user) {
 				const userDocRef = doc(db, 'users', user.uid);
 				const userDoc = await getDoc(userDocRef);
-				const userDataFromDb = userDoc.exists() ? userDoc.data() : {};
-				setUserData({
-					name: user.displayName,
-					email: user.email,
-					registeredAt: user.metadata.creationTime,
-					uid: user.uid,
-					avatar: userDataFromDb.avatar || null
-				})
+				if (userDoc.exists()) {
+					const userDataFromDb = userDoc.data();
+					setUserData({
+						name: userDataFromDb.name,
+						email: user.email,
+						registeredAt: user.metadata.creationTime,
+						uid: user.uid,
+						providerId: user.providerData[0]?.providerId || '',
+						...userDataFromDb
+					})
+				}
 			} else {
 				setUserData({});
 			}
@@ -183,15 +274,22 @@ export const userAuthStore = defineStore('auth', () => {
 	}
 
 	fetchuser()
+
 	return {
 		name,
 		email,
 		registeredAt,
+		providerId,
 		uid,
+		isGoogleUser,
 		avatar,
 		avatarUrl,
 		availableAvatars,
-
+		isPremium,
+		subscriptionEndsAt,
+		subscriptionCancelled,
+		ownedAvatars,
+		purchaseAvatar,
 		registerUser,
 		logOut,
 		loginUser,

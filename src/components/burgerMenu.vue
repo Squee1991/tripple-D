@@ -57,7 +57,7 @@
 		left: 0;
 		width: 100%;
 		height: 5px;
-		background-color: black;
+		background-color: var(--titleColor);
 	}
 
 	.menu-label:before,
@@ -76,6 +76,7 @@
 
 	.menu-bar {
 		top: 24px;
+
 	}
 
 	.menu-bar:before {
@@ -84,7 +85,7 @@
 		top: 5px;
 		right: 0;
 		left: 0;
-		color: black;
+    color: var(--titleColor);
 		font-size: 10px;
 		font-weight: bold;
 		font-family: "Montserrat", Arial, Helvetica, sans-serif;

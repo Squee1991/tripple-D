@@ -184,10 +184,9 @@
 
 <style scoped>
 	.rules {
-		background: #fef8e4;
 		min-height: 100vh;
 		padding-bottom: 5rem;
-		font-family: 'Inter', sans-serif;
+    font-family: "Nunito", sans-serif;
 	}
 
 	.rules__wrapper {
@@ -206,7 +205,7 @@
 	}
 
 	.rules__title {
-		font-family: 'Inter', sans-serif;
+    font-family: "Nunito", sans-serif;
 		font-size: 2.5rem;
 		font-weight: 600;
 		color: white;
@@ -227,7 +226,7 @@
 		margin-top: 20px;
 		border-radius: 15px;
 		padding: 10px;
-		font-family: 'Inter', sans-serif;
+    font-family: "Nunito", sans-serif;
 		border: 4px solid black;
 	}
 
@@ -249,7 +248,7 @@
 
 
 	.rules__card-title {
-		font-family: 'Inter', sans-serif;
+    font-family: "Nunito", sans-serif;
 		font-size: 1.8rem;
 		color: #1e1e1e;
 		margin-bottom: 1.5rem;
@@ -265,8 +264,6 @@
 	}
 
 	.rules__list-item {
-		display: flex;
-		align-items: center;
 		font-size: 1.1rem;
 	}
 
@@ -324,8 +321,8 @@
 	.rules__table thead th {
 		background-color: #60a5fa;
 		color: white;
-		font-family: 'Fredoka One', cursive;
-		font-size: 1.1rem;
+		font-family: "Nunito", sans-serif;
+		font-size: 0.9rem;
 	}
 
 	.rules__table tbody td {
@@ -338,7 +335,6 @@
 		font-weight: 700;
 	}
 
-	/* --- Стили для Квиза --- */
 	.quiz-form {
 		display: flex;
 		flex-direction: column;
@@ -363,7 +359,7 @@
 	}
 
 	.quiz-input {
-		font-family: 'Inter', sans-serif;
+    font-family: "Nunito", sans-serif;
 		font-weight: 700;
 		padding: 0.75rem;
 		border-radius: 12px;
@@ -396,7 +392,7 @@
 	}
 
 	.quiz-button {
-		font-family: 'Fredoka One', cursive;
+    font-family: "Nunito", sans-serif;
 		padding: 0.75rem 1.5rem;
 		font-size: 1.2rem;
 		border-radius: 16px;
@@ -431,5 +427,17 @@
 		.rules__card {
 			padding: 1.5rem;
 		}
+    .rules__table thead th{
+      max-width: 40px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .rules__table tbody th {
+      width: 85px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
 	}
 </style>

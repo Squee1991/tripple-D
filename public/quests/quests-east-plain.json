@@ -1,0 +1,1878 @@
+[
+  {
+    "questId": "menschen-a1-greetings",
+    "title": "eastPlainFirstQuests.title",
+    "progress": "0/15",
+    "description": "eastPlainFirstQuests.description",
+    "conditions": {
+      "goal": "eastPlainFirstQuests.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "eastPlainFirstQuests.questOne",
+        "options": [
+          "Hallo",
+          "Guten Tag",
+          "Danke"
+        ],
+        "answer": "Hallo"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "eastPlainFirstQuests.questTwo",
+        "options": [
+          "Danke",
+          "oder",
+          "Hallo"
+        ],
+        "answer": "Danke"
+      },
+      {
+        "id": 3,
+        "type": "textToSpeech",
+        "question": "Lies laut vor: Hallo",
+        "text": "Hallo"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "eastPlainFirstQuests.questFour",
+        "options": [
+          "Danke",
+          "Guten Tag",
+          "Guten Abend"
+        ],
+        "answer": "Guten Abend"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "eastPlainFirstQuests.questFive",
+        "options": [
+          "Hallo!",
+          "Wie geht's",
+          "Danke",
+          "Guten Tag",
+          "oder"
+        ],
+        "answer": "Wie geht's"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "eastPlainFirstQuests.questSix",
+        "words": [
+          "Hallo",
+          "oder",
+          "Danke",
+          "wie geht's"
+        ],
+        "correctOrder": [
+          "Hallo",
+          "wie geht's"
+        ]
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "eastPlainFirstQuests.questSeven",
+        "options": [
+          "Tschüss",
+          "Guten Tag!",
+          "Danke",
+          "wie geht's"
+        ],
+        "answer": "Tschüss"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "eastPlainFirstQuests.questEight",
+        "options": [
+          "gut",
+          "Danke",
+          "Hallo"
+        ],
+        "answer": "gut"
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "eastPlainFirstQuests.questNine",
+        "text": "Hallo! wie geht's?",
+        "answer": "Hallo! wie geht's?"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "eastPlainFirstQuests.questTen",
+        "words": [
+          "Hallo",
+          "Guten Tag",
+          "Tschüss",
+          "danke",
+          "wie geht's",
+          "gut",
+          "Guten Abend"
+        ],
+        "correctOrder": [
+          "Hallo",
+          "wie geht's",
+          "gut",
+          "danke"
+        ]
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "eastPlainFirstQuests.questEleven",
+        "options": [
+          "gut",
+          "schlecht",
+          "danke",
+          "sehr gut"
+        ],
+        "answer": "schlecht"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "eastPlainFirstQuests.questTwelve",
+        "options": [
+          "gut",
+          "sehr gut",
+          "danke",
+          "Hallo"
+        ],
+        "answer": "sehr gut"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "eastPlainFirstQuests.questThirteen",
+        "options": [
+          "Auf Wiedersehen",
+          "Tschüss",
+          "danke",
+          "Hallo",
+          "wie geht's"
+        ],
+        "answer": "Auf Wiedersehen"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "eastPlainFirstQuests.questFourteen",
+        "words": [
+          "gut",
+          "sehr gut",
+          "danke",
+          "Hallo",
+          "Tschüss"
+        ],
+        "correctOrder": [
+          "sehr gut",
+          "danke"
+        ]
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "eastPlainFirstQuests.questFifteen",
+        "text": "Hallo! wie geht's? sehr gut, danke",
+        "answer": "Hallo! wie geht's? sehr gut, danke"
+      }
+    ]
+  },
+  {
+    "questId": "menschen-a1-greetings2",
+    "title": "eastPlainSecondQuests.title",
+    "progress": "0/15",
+    "description": "eastPlainSecondQuests.description",
+    "conditions": {
+      "goal": "Lerne, über Herkunft und Sprache zu sprechen und höflich Fragen zu stellen",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "eastPlainSecondQuests.questOne",
+        "options": [
+          "Bis morgen",
+          "Guten Tag",
+          "Hallo",
+          "gut"
+        ],
+        "answer": "Bis morgen"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "eastPlainSecondQuests.questTwo",
+        "options": [
+          "Wir sehen uns",
+          "Guten Tag",
+          "Hallo",
+          "Danke sehr"
+        ],
+        "answer": "Wir sehen uns"
+      },
+      {
+        "id": 3,
+        "type": "textToSpeech",
+        "question": "eastPlainSecondQuests.questTree",
+        "text": "Bis Morgen"
+      },
+      {
+        "id": 4,
+        "type": "speechToText",
+        "question": "eastPlainSecondQuests.questFour",
+        "text": "Bis Morgen",
+        "answer": "Bis Morgen"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "eastPlainSecondQuests.questFive",
+        "words": [
+          "bei dir",
+          "gut",
+          "und",
+          "Thomas",
+          "Hallo",
+          "Guten Tag",
+          "danke",
+          "gut",
+          "seht gut",
+          "Bis Morgen",
+          "wie gehts's"
+        ],
+        "correctOrder": [
+          "Hallo",
+          "Thomas",
+          "wie gehts's",
+          "gut",
+          "und",
+          "bei dir",
+          "gut",
+          "danke"
+        ]
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "eastPlainSecondQuests.questSix",
+        "words": [
+          "bei dir",
+          "Thomas",
+          "Hallo",
+          "Guten Tag",
+          "Bis bald"
+        ],
+        "correctOrder": [
+          "Bis bald",
+          "Thomas"
+        ]
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "eastPlainSecondQuests.questSeven",
+        "words": [
+          "kommst",
+          "bis bald",
+          "du",
+          "Hallo",
+          "Woher"
+        ],
+        "correctOrder": [
+          "Hallo",
+          "Woher",
+          "kommst",
+          "du"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "reorder",
+        "question": "eastPlainSecondQuests.questEight",
+        "words": [
+          "ich",
+          "komme",
+          "aus",
+          "Woher",
+          "du",
+          "danke"
+        ],
+        "correctOrder": [
+          "ich",
+          "komme",
+          "aus"
+        ]
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "eastPlainSecondQuests.questNine",
+        "text": "Hallo Thomas! Woher kommst du?",
+        "answer": "Hallo Thomas! Woher kommst du?"
+      },
+      {
+        "id": 10,
+        "type": "speechToText",
+        "question": "eastPlainSecondQuests.questTen",
+        "text": "Hallo! ich komme aus Polen",
+        "answer": "Hallo! ich komme aus Polen"
+      },
+      {
+        "id": 11,
+        "type": "textToSpeech",
+        "question": "eastPlainSecondQuests.questEleven",
+        "text": "Hallo! wie geht's"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "eastPlainSecondQuests.questTwelve",
+        "options": [
+          "Wie heißen Sie?",
+          "Woher kommst du?",
+          "Bis bald",
+          "Guten Tag"
+        ],
+        "answer": "Wie heißen Sie?"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "eastPlainSecondQuests.questThirteen",
+        "correctAnswer": "Hallo! ich heiße Thomas"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "eastPlainSecondQuests.questFourteen",
+        "options": [
+          "Wie heißen Sie?",
+          "Woher kommst du?",
+          "Bis bald",
+          "Guten Tag"
+        ],
+        "answer": "Wie heißen Sie?"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "eastPlainSecondQuests.questFifteen",
+        "text": "Guten Tag! Woher kommst du? ich komme aus Spanien und du? ich komme aus Deutschland",
+        "answer": "Guten Tag! Woher kommst du. ich komme aus Spanien und du? ich komme aus Deutschland"
+      }
+    ]
+  },
+  {
+    "questId": "menschen-a1-shopping",
+    "title": "eastPlainThirdQuests.title",
+    "progress": "0/15",
+    "description": "eastPlainThirdQuests.description",
+    "conditions": {
+      "goal": "eastPlainThirdQuests.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "eastPlainThirdQuests.questOne",
+        "options": [
+          "der Laden",
+          "die Kasse",
+          "das Geld"
+        ],
+        "answer": "der Laden"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "eastPlainThirdQuests.questTwo",
+        "options": [
+          "Kaufen",
+          "gehen",
+          "oder",
+          "danke"
+        ],
+        "answer": "Kaufen"
+      },
+      {
+        "id": 3,
+        "type": "reorder",
+        "question": "eastPlainThirdQuests.questTree",
+        "words": [
+          "ich",
+          "in",
+          "gut",
+          "den",
+          "gehe",
+          "danke",
+          "laden"
+        ],
+        "correctOrder": [
+          "ich",
+          "gehe",
+          "in",
+          "den",
+          "laden"
+        ]
+      },
+      {
+        "id": 4,
+        "type": "speechToText",
+        "question": "eastPlainThirdQuests.questFour",
+        "text": "Ich kaufe Brot",
+        "answer": "Ich kaufe Brot"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "eastPlainThirdQuests.questFive",
+        "words": [
+          "Hallo",
+          "danke",
+          "Wohin",
+          "gehst",
+          "danke",
+          "du",
+          "den",
+          "in",
+          "Laden",
+          "ich",
+          "gehe"
+        ],
+        "correctOrder": [
+          "Hallo",
+          "Wohin",
+          "gehst",
+          "du",
+          "ich",
+          "gehe",
+          "in",
+          "den",
+          "Laden"
+        ]
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "eastPlainThirdQuests.questSix",
+        "text": "ich gehe in den Laden",
+        "answer": "ich gehe in den Laden"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "eastPlainThirdQuests.questSeven",
+        "words": [
+          "danke",
+          "auch",
+          "gehe",
+          "du",
+          "den",
+          "in",
+          "Laden",
+          "ich",
+          "gehe"
+        ],
+        "correctOrder": [
+          "ich",
+          "gehe",
+          "auch",
+          "in",
+          "den",
+          "Laden"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "eastPlainThirdQuests.questEight",
+        "text": "Hallo Thomas!Wohin gehst du? ich gehe in den Laden",
+        "answer": "Hallo Thomas!Wohin gehst du? ich gehe in den Laden"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "eastPlainThirdQuests.questNine",
+        "options": [
+          "Supermarkt",
+          "Laden",
+          "kaufen",
+          "Hallo"
+        ],
+        "answer": "Supermarkt"
+      },
+      {
+        "id": 10,
+        "type": "speechToText",
+        "question": "eastPlainThirdQuests.questTen",
+        "text": "Ich gehe in den Supermarkt",
+        "answer": "Ich gehe in den Supermarkt"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "eastPlainThirdQuests.questEleven",
+        "words": [
+          "Supermarkt",
+          "Laden",
+          "kaufen",
+          "den",
+          "gehe",
+          "Laden",
+          "nicht",
+          "in",
+          "ich",
+          "Brot"
+        ],
+        "correctOrder": [
+          "ich",
+          "gehe",
+          "nicht",
+          "in",
+          "den",
+          "Supermarkt"
+        ]
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "eastPlainThirdQuests.questTwelve",
+        "options": [
+          "die Kasse",
+          "der Supermarkt",
+          "oder",
+          "danke"
+        ],
+        "answer": "die Kasse"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "eastPlainThirdQuests.questThirteen",
+        "options": [
+          "die Kasse",
+          "der Preis",
+          "Hallo",
+          "danke",
+          "bis bald"
+        ],
+        "answer": "der Preis"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "eastPlainThirdQuests.questFourteen",
+        "options": [
+          "die Rechnung",
+          "der Preis",
+          "Hallo",
+          "danke",
+          "nicht"
+        ],
+        "answer": "die Rechnung"
+      },
+      {
+        "id": 15,
+        "type": "speechToText.questFifteen",
+        "question": "eastPlainThirdQuests.questFourteen",
+        "text": "die Rechnung",
+        "answer": "die Rechnung"
+      }
+    ]
+  },
+  {
+    "questId": "menschen-a1-shopping2",
+    "title": "eastPlainFourthQuests.title",
+    "progress": "0/15",
+    "description": "eastPlainFourthQuests.description",
+    "conditions": {
+      "goal": "eastPlainFourthQuests.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "eastPlainFourthQuests.questOne",
+        "options": [
+          "die Schlange",
+          "der Korb",
+          "der Preis"
+        ],
+        "answer": "die Schlange"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "eastPlainFourthQuests.questTwo",
+        "options": [
+          "die Kasse",
+          "der Korb",
+          "das Geld"
+        ],
+        "answer": "die Kasse"
+      },
+      {
+        "id": 3,
+        "type": "reorder",
+        "question": "eastPlainFourthQuests.questTree",
+        "words": [
+          "in",
+          "ich",
+          "der",
+          "stehe",
+          "schlange",
+          "Preis",
+          "Hallo"
+        ],
+        "correctOrder": [
+          "ich",
+          "stehe",
+          "in",
+          "der",
+          "schlange"
+        ]
+      },
+      {
+        "id": 4,
+        "type": "speechToText",
+        "question": "eastPlainFourthQuests.questFour",
+        "text": "Ich stehe in der schlange",
+        "answer": "Ich stehe in der schlange"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "eastPlainFourthQuests.questFive",
+        "options": [
+          "bezahlen",
+          "Hallo",
+          "Bis bald"
+        ],
+        "answer": "bezahlen"
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "eastPlainFourthQuests.questSix",
+        "text": "Ich bezahle",
+        "answer": "Ich bezahle"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "eastPlainFourthQuests.questSeven",
+        "options": [
+          "das Geld",
+          "Hallo",
+          "nicht",
+          "die Kasse"
+        ],
+        "answer": "das Geld"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "eastPlainFourthQuests.questEight",
+        "options": [
+          "das Bargeld",
+          "Hallo",
+          "nicht",
+          "das Geld"
+        ],
+        "answer": "das Bargeld"
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "eastPlainFourthQuests.questNine",
+        "text": "ich bezahle bargeld",
+        "answer": "ich bezahle bargeld"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "eastPlainFourthQuests.questTen",
+        "options": [
+          "das Bargeld",
+          "Hallo",
+          "der Schein",
+          "das Geld"
+        ],
+        "answer": "der Schein"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "eastPlainFourthQuests.questEleven",
+        "words": [
+          "bargeld",
+          "mit",
+          "der",
+          "der Schein",
+          "schlange",
+          "Preis",
+          "bezahlen"
+        ],
+        "correctOrder": [
+          "mit",
+          "bargeld",
+          "bezahlen"
+        ]
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "eastPlainFourthQuests.questTwelve",
+        "text": "Ich bezahle mit Karte",
+        "answer": "Ich bezahle mit Karte"
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "eastPlainFourthQuests.questThirteen",
+        "text": "Ich bezahle mit Karte oder bargeld",
+        "answer": "Ich bezahle mit Karte oder bargeld"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "eastPlainFourthQuests.questFourteen",
+        "options": [
+          "das Bargeld",
+          "Hallo",
+          "die Münze",
+          "das Geld"
+        ],
+        "answer": "der Schein"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "eastPlainFourthQuests.questFifteen",
+        "text": "die Münze",
+        "answer": "die Münze"
+      }
+    ]
+  },
+  {
+    "questId": "menschen-a1-essen",
+    "title": "eastPlainFifthQuests.title",
+    "progress": "0/15",
+    "description": "eastPlainFifthQuests.description",
+    "conditions": {
+      "goal": "eastPlainFifthQuests.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "eastPlainFifthQuests.questOne",
+        "options": [
+          "bitte",
+          "danke",
+          "Hallo"
+        ],
+        "answer": "bitte"
+      },
+      {
+        "id": 2,
+        "type": "reorder",
+        "question": "eastPlainFifthQuests.questTwo",
+        "words": [
+          "Tee",
+          "Ich",
+          "bitte",
+          "Danke",
+          "möchte"
+        ],
+        "correctOrder": [
+          "Tee",
+          "bitte"
+        ]
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "eastPlainFifthQuests.questTree",
+        "options": [
+          "der Schein",
+          "Danke",
+          "Bis bald",
+          "der Preis"
+        ],
+        "answer": "der Schein"
+      },
+      {
+        "id": 4,
+        "type": "speechToText",
+        "question": "eastPlainFifthQuests.questFour",
+        "text": "Bezahlen Sie bar oder mit Karte?",
+        "answer": "Bezahlen Sie bargeld oder mit Karte?"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "eastPlainFifthQuests.questFive",
+        "words": [
+          "Kaffee",
+          "Ich",
+          "mit",
+          "bitte",
+          "einen",
+          "möchte",
+          "Tee"
+        ],
+        "correctOrder": [
+          "Ich",
+          "möchte",
+          "einen",
+          "Kaffee",
+          "bitte"
+        ]
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "eastPlainFifthQuests.questSix",
+        "words": [
+          "Wie",
+          "Tee",
+          "kostet",
+          "viel",
+          "",
+          "möchte",
+          "Tee"
+        ],
+        "correctOrder": [
+          "Wie",
+          "viel",
+          "kostet"
+        ]
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "eastPlainFifthQuests.questSeven",
+        "correctAnswer": "viel"
+      },
+      {
+        "id": 8,
+        "type": "readAndAnswer",
+        "text": "Im Supermarkt kaufe ich Brot, Käse und zwei Flaschen Wasser.",
+        "question": "eastPlainFifthQuests.questEight",
+        "options": [
+          "das Fleisch",
+          "das Brot, der Käse und das Wasser",
+          "die Milch"
+        ],
+        "answer": "das Brot, der Käse und das Wasser"
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "eastPlainFifthQuests.questNine",
+        "text": "Ich kaufe Gemüse",
+        "answer": "Ich kaufe Gemüse"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "eastPlainFifthQuests.questTen",
+        "words": [
+          "Tee",
+          "Flasche",
+          "die",
+          "Wasser",
+          "möchte",
+          "Tee"
+        ],
+        "correctOrder": [
+          "die",
+          "Flasche",
+          "Wasser"
+        ]
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "eastPlainFifthQuests.questEleven",
+        "options": [
+          "ich trinke gern Tee",
+          "ich kaufe brot",
+          "Tee Bitte"
+        ],
+        "answer": "ich trinke gern Tee"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "eastPlainFifthQuests.questTwelve",
+        "correctAnswer": "gern"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "eastPlainFifthQuests.questThirteen",
+        "words": [
+          "Tee",
+          "und",
+          "mit",
+          "oder",
+          "danke",
+          "der Preis",
+          "Butter",
+          "bitte",
+          "Brot"
+        ],
+        "correctOrder": [
+          "Tee",
+          "und",
+          "Brot",
+          "mit",
+          "Butter",
+          "bitte"
+        ]
+      },
+      {
+        "id": 14,
+        "type": "readAndAnswer",
+        "text": "Ich nehme einen Kaffee Bitte",
+        "question": "eastPlainFifthQuests.questFourteen",
+        "options": [
+          "der Kaffee",
+          "der Kaffee und der Kuchen",
+          "nur der Kuchen"
+        ],
+        "answer": "der Kaffee"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "eastPlainFifthQuests.questFifteen",
+        "text": "Wie viel kostet eine Flasche Wasser?",
+        "answer": "Wie viel kostet eine Flasche Wasser?"
+      }
+    ]
+  },
+  {
+    "questId": "menschen-a1-beruf",
+    "title": "eastPlainSixthQuests.title",
+    "progress": "0/15",
+    "description": "eastPlainSixthQuests.description",
+    "conditions": {
+      "goal": "eastPlainSixthQuests.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "eastPlainSixthQuests.questOne",
+        "options": [
+          "ich bin Lehrer",
+          "ich bin Lehrerin",
+          "ich bin Student"
+        ],
+        "answer": "ich bin Lehrer"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "eastPlainSixthQuests.questTwo",
+        "correctAnswer": "ist"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "eastPlainSixthQuests.questTree",
+        "options": [
+          "der Kellner",
+          "der Fahrer",
+          "die Lehrerin"
+        ],
+        "answer": "der Kellner"
+      },
+      {
+        "id": 4,
+        "type": "speechToText",
+        "question": "eastPlainSixthQuests.questFour",
+        "text": "Er arbeitet als Kellner",
+        "answer": "Er arbeitet als Kellner"
+      },
+      {
+        "id": 5,
+        "type": "speechToText",
+        "question": "eastPlainSixthQuests.questFive",
+        "text": "Er arbeitet als Polizist",
+        "answer": "Er arbeitet als Polizist"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "eastPlainSixthQuests.questSix",
+        "words": [
+          "Was",
+          "Beruf",
+          "als",
+          "Beruf",
+          "ist",
+          "dein"
+        ],
+        "correctOrder": [
+          "Was",
+          "ist",
+          "dein",
+          "Beruf"
+        ]
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "eastPlainSixthQuests.questSeven",
+        "text": "Hallo ich bin Nina und ich arbeite als Lehrerin",
+        "answer": "Hallo ich bin Nina und ich arbeite als Lehrerin"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "eastPlainSixthQuests.questEight",
+        "correctAnswer": "als"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Hallo, ich heiße Nina. Ich bin Lehrerin und arbeite in einer Schule.",
+        "question": "eastPlainSixthQuests.questNine",
+        "options": [
+          "eastPlainSixthQuests.questNineFirstOption",
+          "eastPlainSixthQuests.questNineSecondOption",
+          "eastPlainSixthQuests.questNineThirdOption"
+        ],
+        "answer": "eastPlainSixthQuests.questNineAnswer"
+      },
+      {
+        "id": 10,
+        "type": "speechToText",
+        "question": "eastPlainSixthQuests.questTen",
+        "text": "Ich arbeite als Ingenieur",
+        "answer": "Ich arbeite als Ingenieur"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "eastPlainSixthQuests.questEleven",
+        "options": [
+          "der Koch",
+          "die Lehrerin",
+          "die Kellnerin"
+        ],
+        "answer": "Она продавец"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "eastPlainSixthQuests.questTwelve",
+        "options": [
+          "die Friseurin",
+          "der Koch",
+          "der Elektriker"
+        ],
+        "answer": "die Friseurin"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "eastPlainSixthQuests.questThirteen",
+        "correctAnswer": "Arzt"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "eastPlainSixthQuests.questFourteen",
+        "words": [
+          "arbeitet",
+          "Er",
+          "Krankenhaus",
+          "im",
+          "Lager"
+        ],
+        "correctOrder": [
+          "Er",
+          "arbeitet",
+          "im",
+          "Krankenhaus"
+        ]
+      },
+      {
+        "id": 15,
+        "type": "readAndAnswer",
+        "text": "Das ist Peter. Er ist Koch und arbeitet in einem Restaurant.",
+        "question": "eastPlainSixthQuests.questFifteen",
+        "options": [
+          "der Lehrer",
+          "die Lehrerin",
+          "der Koch"
+        ],
+        "answer": "der Koch"
+      }
+    ]
+  },
+  {
+    "questId": "menschen-a1-zahlen",
+    "title": "eastPlainSeventhQuests.title",
+    "progress": "0/15",
+    "description": "eastPlainSeventhQuests.description",
+    "conditions": {
+      "goal": "eastPlainSeventhQuests.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "eastPlainSeventhQuests.questOne",
+        "options": [
+          "Wie viel kostet das?",
+          "Wie geht's?",
+          "Wohin gehst du"
+        ],
+        "answer": "Wie viel kostet das?"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "eastPlainSeventhQuests.questTwo",
+        "correctAnswer": "23"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "eastPlainSeventhQuests.questTree",
+        "text": "achtundvierzig",
+        "answer": "achtundvierzig"
+      },
+      {
+        "id": 4,
+        "type": "textToSpeech",
+        "question": "eastPlainSeventhQuests.questFour",
+        "text": "fünfundsechzig"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "eastPlainSeventhQuests.questFive",
+        "options": [
+          "Es ist Zehn Uhr",
+          "Heute ist Mittwoch ",
+          "Guten Abend",
+          "Tee Bitte"
+        ],
+        "answer": "Es ist Zehn Uhr"
+      },
+      {
+        "id": 6,
+        "type": "readAndAnswer",
+        "text": "Die Milch kostet 1 Euro 20. Der Käse kostet 2 Euro 50.",
+        "question": "eastPlainSeventhQuests.questSix",
+        "options": [
+          "1.20",
+          "2.50",
+          "3.00"
+        ],
+        "answer": "2.50"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "eastPlainSeventhQuests.questSeven",
+        "words": [
+          "Uhr",
+          "Es",
+          "acht",
+          "ist"
+        ],
+        "correctOrder": [
+          "Es",
+          "ist",
+          "acht",
+          "Uhr"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "readAndAnswer",
+        "text": "Die Milch kostet 1 Euro 20. Das Brot kostet 1 Euro 10",
+        "question": "eastPlainSeventhQuests.questEight",
+        "options": [
+          "1.20",
+          "1.10",
+          "2.50"
+        ],
+        "answer": "2.10"
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "eastPlainSeventhQuests.questNine",
+        "text": " Wie viel kostet eine Flasche Wasser? Eine Flasche Wasser koster zwei euro",
+        "answer": " Wie viel kostet eine Flasche Wasser? Eine Flasche Wasser koster zwei euro"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "eastPlainSeventhQuests.questTen",
+        "options": [
+          "drei Mai",
+          "der drei Mai",
+          "der dritte Mai",
+          "dritter Mai"
+        ],
+        "answer": "der dritte Mai"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "Der 3. Mai",
+        "options": [
+          "eastPlainSeventhQuests.questElevenFirstOption",
+          "eastPlainSeventhQuests.questElevenSecondOption",
+          "eastPlainSeventhQuests.questElevenThirdOption"
+        ],
+        "answer": "3 мая"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "eastPlainSeventhQuests.questTwelve",
+        "options": [
+          "der zehn Oktober",
+          "zehnter Oktober",
+          "der zehnte Oktober",
+          "zehnte Oktober"
+        ],
+        "answer": "der zehnte Oktober"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "eastPlainSeventhQuests.questThirteen",
+        "words": [
+          "heute",
+          "Der",
+          "ist",
+          "März",
+          "12."
+        ],
+        "correctOrder": [
+          "Der",
+          "12.",
+          "März",
+          "ist",
+          "heute"
+        ]
+      },
+      {
+        "id": 14,
+        "type": "readAndAnswer",
+        "text": "Der Zug kommt um siebzehn Uhr dreißig.",
+        "question": "eastPlainSeventhQuests.questFourteen",
+        "options": [
+          "17:30",
+          "7:30",
+          "13:30"
+        ],
+        "answer": "17:30"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "eastPlainSeventhQuests.questFifteen",
+        "text": "Das Ticket kostet zehn Euro.",
+        "answer": "Das Ticket kostet zehn Euro."
+      }
+    ]
+  },
+  {
+    "questId": "menschen-a1-familie",
+    "title": "eastPlainEighthQuests.title",
+    "progress": "0/15",
+    "description": "eastPlainEighthQuests.description",
+    "conditions": {
+      "goal": "eastPlainEighthQuests.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 260,
+      "xp": 360
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Das ist meine Mutter",
+        "options": [
+          "eastPlainEighthQuests.questOneFirstOption",
+          "eastPlainEighthQuests.questSecondFirstOption",
+          "eastPlainEighthQuests,questThirdFirstOption"
+        ],
+        "answer": "eastPlainEighthQuests.questThirdAnswer"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "eastPlainEighthQuests.questTwo",
+        "text": "Ich habe einen Bruder",
+        "answer": "Ich habe einen Bruder"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "eastPlainEighthQuests.questTree",
+        "text": "Ich habe eine Schwester",
+        "answer": "Ich habe eine Schwester"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "Hast du Geschwister?",
+        "options": [
+          "eastPlainEighthQuests.questFourFirstOption",
+          "eastPlainEighthQuests.questFourSecondOption",
+          "eastPlainEighthQuests.questFourThirdOption"
+        ],
+        "answer": "eastPlainEighthQuests.questFourAnswer"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "eastPlainEighthQuests.questFive",
+        "words": [
+          "mein",
+          "ist",
+          "Er",
+          "Onkel"
+        ],
+        "correctOrder": [
+          "Er",
+          "ist",
+          "mein",
+          "Onkel"
+        ]
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "eastPlainEighthQuests.questSix",
+        "words": [
+          "heißt",
+          "Meine",
+          "Mutter",
+          "Anna",
+          "Schwester",
+          "Oma"
+        ],
+        "correctOrder": [
+          "Meine",
+          "Mutter",
+          "heißt",
+          "Anna"
+        ]
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "text": "Ich habe einen Bruder. Er heißt Tim und wohnt in Berlin.",
+        "question": "eastPlainEighthQuests.questSeven",
+        "options": [
+          "Tom",
+          "Tim",
+          "Ben",
+          "Berlin"
+        ],
+        "answer": "Tim"
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "eastPlainEighthQuests.questEight",
+        "text": "Das ist ihre Tochter",
+        "answer": "Das ist ihre Tochter"
+      },
+      {
+        "id": 9,
+        "type": "textToSpeech",
+        "question": "eastPlainEighthQuests.questNine",
+        "text": "Er ist mein Sohn"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Er heißt Lukas",
+        "options": [
+          "eastPlainEighthQuests.questTenFirstOption",
+          "eastPlainEighthQuests.questTenSecondOption",
+          "eastPlainEighthQuests.questTenThirdOption"
+        ],
+        "answer": "eastPlainEighthQuests.questTenAnswer"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "eastPlainEighthQuests.questEleven",
+        "correctAnswer": "Oma"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "eastPlainEighthQuests.questTwelve",
+        "words": [
+          "Schwester",
+          "ist",
+          "meine",
+          "Sie",
+          "Opa",
+          "Mutter"
+        ],
+        "correctOrder": [
+          "Sie",
+          "ist",
+          "meine",
+          "Schwester"
+        ]
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "Paul ist mein Vater. Er arbeitet als Lehrer.",
+        "question": "eastPlainEighthQuests.questThirteen",
+        "options": [
+          "eastPlainEighthQuests.questThirteenFirstOption",
+          "eastPlainEighthQuests.questThirteenSecondOption",
+          "eastPlainEighthQuests.questThirteenThirdOption"
+        ],
+        "answer": "eastPlainEighthQuests.questThirteenAnswer"
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "eastPlainEighthQuests.questFourteen",
+        "text": "Sie ist meine Tochter",
+        "answer": "Sie ist meine Tochter"
+      }
+    ]
+  },
+  {
+    "questId": "menschen-a1-tagesablauf",
+    "title": "eastPlainNinthQuests.title",
+    "progress": "0/15",
+    "description": "eastPlainNinthQuests.description",
+    "conditions": {
+      "goal": "eastPlainNinthQuests.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Ich stehe um 6 Uhr auf",
+        "options": [
+          "eastPlainNinthQuests.questOneFirstOption",
+          "eastPlainNinthQuests.questOneSecondOption",
+          "eastPlainNinthQuests.questOneThirdOption"
+        ],
+        "answer": "eastPlainNinthQuests.questOneAnswer"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "eastPlainNinthQuests.questTwo",
+        "text": "Ich gehe um 21 Uhr schlafen",
+        "answer": "Ich gehe um 22 Uhr schlafen"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "eastPlainNinthQuests.questTree",
+        "text": "Ich gehe zur Arbeit um 8 Uhr",
+        "answer": "Ich gehe zur Arbeit um 8 Uhr"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "eastPlainNinthQuests.questFour",
+        "words": [
+          "morgens",
+          "ich",
+          "trinke",
+          "Wasser",
+          "Heute",
+          "Tee"
+        ],
+        "correctOrder": [
+          "Morgens",
+          "trinke",
+          "ich",
+          "Wasser"
+        ]
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Was machst du morgens?",
+        "options": [
+          "eastPlainNinthQuests.questFiveFirstOption",
+          "eastPlainNinthQuests.questFiveSecondOption",
+          "eastPlainNinthQuests.questFiveThirdOption"
+        ],
+        "answer": "eastPlainNinthQuests.questFiveAnswer"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "eastPlainNinthQuests.questSix",
+        "options": [
+          "morgens",
+          "nachmittags",
+          "abends"
+        ],
+        "answer": "nachmittags"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "eastPlainNinthQuests.questSeven",
+        "words": [
+          "auf",
+          "ich",
+          "stehe",
+          "um",
+          "7",
+          "Uhr"
+        ],
+        "correctOrder": [
+          "Ich",
+          "stehe",
+          "um",
+          "7",
+          "Uhr",
+          "auf"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "readAndAnswer",
+        "text": "Ich arbeite vormittags und habe nachmittags frei.",
+        "question": "eastPlainNinthQuests.questEight",
+        "options": [
+          "eastPlainNinthQuests.questEightFirstOption",
+          "eastPlainNinthQuests.questEightSecondOption",
+          "eastPlainNinthQuests.questEightThirdOption"
+        ],
+        "answer": "eastPlainNinthQuests.questEightAnswer"
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "eastPlainNinthQuests.questNine",
+        "text": "Ich frühstücke um halb acht",
+        "answer": "Ich frühstücke um halb acht"
+      },
+      {
+        "id": 10,
+        "type": "speechToText",
+        "question": "eastPlainNinthQuests.questTen",
+        "text": "Um wie viel Uhr gehst du schlafen?",
+        "answer": "Um wie viel Uhr gehst du schlafen?"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "Ich habe abends frei",
+        "options": [
+          "eastPlainNinthQuests.questElevenFirstOption",
+          "eastPlainNinthQuests.questElevenSecondOption",
+          "eastPlainNinthQuests.questElevenThirdOption"
+        ],
+        "answer": "eastPlainNinthQuests.questElevenAnswer"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "eastPlainNinthQuests.questTwelve",
+        "words": [
+          "Er",
+          "geht",
+          "schlafen",
+          "um",
+          "11",
+          "Uhr"
+        ],
+        "correctOrder": [
+          "Er",
+          "geht",
+          "um",
+          "11",
+          "Uhr",
+          "schlafen"
+        ]
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "eastPlainNinthQuests.questThirteen",
+        "words": [
+          "Am",
+          "liest",
+          "Abend",
+          "lese",
+          "gern",
+          "Buch",
+          "ein",
+          "ich"
+        ],
+        "correctOrder": [
+          "Am",
+          "Abend",
+          "lese",
+          "ich",
+          "gern",
+          "ein",
+          "Buch"
+        ]
+      },
+      {
+        "id": 14,
+        "type": "readAndAnswer",
+        "text": "Maria frühstückt um 7 Uhr und fährt um Acht Uhr zur Arbeit.",
+        "question": "eastPlainNinthQuests.questFourteen",
+        "options": [
+          "eastPlainNinthQuests.questFourteenFirstOption",
+          "eastPlainNinthQuests.questFourteenSecondOption",
+          "eastPlainNinthQuests.questFourteenThirdOption"
+        ],
+        "answer": "eastPlainNinthQuests.questFourteenAnswer"
+      },
+      {
+        "id": 15,
+        "type": "speechToText.questFifteen",
+        "question": "eastPlainNinthQuests",
+        "text": "Ich gehe um Mitternacht schlafen",
+        "answer": "Ich gehe um Mitternacht schlafen"
+      }
+    ]
+  },
+
+  {
+    "questId": "menschen-a1-wohnort",
+    "title": "eastPlainTenthQuests.title",
+    "progress": "0/15",
+    "description": "eastPlainTenthQuests.description",
+    "conditions": {
+      "goal": "eastPlainTenthQuests.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Ich wohne in einer Wohnung",
+        "options": [
+          "eastPlainTenthQuests.questOneFirstOption",
+          "eastPlainTenthQuests.questOneSecondOption",
+          "eastPlainTenthQuests.questOneThirdOption"
+        ],
+        "answer": "eastPlainTenthQuests.questOneFirstOption"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "eastPlainTenthQuests.questTwo",
+        "text": "Ich wohne auf dem Land",
+        "answer": "Ich wohne auf dem Land"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "Er lebt im Zentrum",
+        "options": [
+          "eastPlainTenthQuests.questTreeFirstOption",
+          "eastPlainTenthQuests.questTreeSecondOption",
+          "eastPlainTenthQuests.questTreeThirdOption"
+        ],
+        "answer": "eastPlainTenthQuests.questTreeAnswer"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "eastPlainTenthQuests.eastPlainTenthQuests",
+        "words": [
+          "Ich",
+          "Berlin",
+          "wohne",
+          "in"
+        ],
+        "correctOrder": [
+          "Ich",
+          "wohne",
+          "in",
+          "Berlin"
+        ]
+      },
+      {
+        "id": 5,
+        "type": "readAndAnswer",
+        "text": "Thomas wohnt in einem Haus auf dem Land.",
+        "question": "eastPlainTenthQuests.questFive",
+        "options": [
+          "eastPlainTenthQuests.questFiveFirstOption",
+          "eastPlainTenthQuests.questFiveSecondOption",
+          "eastPlainTenthQuests.questFiveThirdOption"
+        ],
+        "answer": "eastPlainTenthQuests.questFiveAnswer"
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "eastPlainTenthQuests.questSix",
+        "text": "Ich komme aus Russland",
+        "answer": "Ich komme aus Russland"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "text": "Tom ist zwanzig Jahre alt und studiert in Berlin.",
+        "question": "eastPlainTenthQuests.questSeven",
+        "options": [
+          "eastPlainTenthQuests.questSevenFirstOption",
+          "eastPlainTenthQuests.questSevenSecondOption",
+          "eastPlainTenthQuests.questSevenThirdOption"
+        ],
+        "answer": "eastPlainTenthQuests.questSevenAnswer"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "Sie wohnt in einem Haus",
+        "options": [
+          "eastPlainTenthQuests.questEightFirstOption",
+          "eastPlainTenthQuests.questEightSecondOption",
+          "eastPlainTenthQuests.questEightThirdOption"
+        ],
+        "answer": "eastPlainTenthQuests.questEightAnswer"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Martin wohnt auf dem Land. Er arbeitet in der Stadt.",
+        "question": "eastPlainTenthQuests.questNine",
+        "options": [
+          "eastPlainTenthQuests.questNineFirstOption",
+          "eastPlainTenthQuests.questNineSecondOption",
+          "eastPlainTenthQuests.questNineThirdOption"
+        ],
+        "answer": "eastPlainTenthQuests.questNineAnswer"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "eastPlainTenthQuests.questTen",
+        "words": [
+          "Sie",
+          "in",
+          "wohnt",
+          "Wohnung",
+          "einer",
+          "Stadt",
+          "Tag"
+        ],
+        "correctOrder": [
+          "Sie",
+          "wohnt",
+          "in",
+          "einer",
+          "Wohnung"
+        ]
+      },
+      {
+        "id": 11,
+        "type": "readAndAnswer",
+        "text": "Anna kommt aus Österreich und lebt jetzt in Köln.",
+        "question": "Где Анна живёт сейчас?",
+        "options": [
+          "eastPlainTenthQuests.questElevenFirstOption",
+          "eastPlainTenthQuests.questElevenSecondOption",
+          "eastPlainTenthQuests.questElevenThirdOption"
+        ],
+        "answer": "eastPlainTenthQuests.questElevenAnswer"
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "eastPlainTenthQuests.questTwelve",
+        "text": "Ich wohne in einem kleinen Dorf",
+        "answer": "Ich wohne in einem kleinen Dorf"
+      }
+    ]
+  }
+]

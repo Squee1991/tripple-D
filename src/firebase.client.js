@@ -2,7 +2,7 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, se
 import { getFirestore, updateDoc, deleteField, deleteDoc } from 'firebase/firestore';
 import { useFirebase } from 'vuefire'
 
-// Используем уже инициализированное приложение из nuxt-vuefire
+
 const { $firebase } = useFirebase()
 const auth = getAuth($firebase);
 const db = getFirestore($firebase);
@@ -10,3 +10,6 @@ const db = getFirestore($firebase);
 setPersistence(auth, browserLocalPersistence);
 
 export { auth, db, deleteField, deleteDoc, updateDoc, createUserWithEmailAndPassword, signInWithEmailAndPassword };
+
+
+console.log(123)

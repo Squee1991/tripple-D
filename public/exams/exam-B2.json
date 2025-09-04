@@ -1,0 +1,248 @@
+{
+  "level": "B2",
+  "modules": [
+    {
+      "id": "lesen-1",
+      "title": "Lesen",
+      "type": "multiple-choice",
+      "task": {
+        "text": "Kommentar: Wer Wohnraum wirklich gerechter verteilen will, darf nicht nur über Neubau reden. Viel wirksamer wäre es, Anreize für kleinere, effizientere Wohnungen zu setzen – etwa durch gestaffelte Nebenkosten oder Tauschprogramme für unterbelegte Wohnungen. Das ist unbequem, weil es Gewohnheiten hinterfragt. Aber solange Menschen allein in großzügigen Altbauwohnungen leben, während Familien kaum bezahlbare Optionen finden, bleibt der Markt verkrampft. Neubau ist nötig, löst aber das Verteilungsproblem nicht, wenn der vorhandene Bestand ungenutzt bleibt.",
+        "question": "Welches Hauptargument verwendet die Autorin?",
+        "options": [
+          "Kleinere, effizientere Wohnungen würden die Verteilung verbessern.",
+          "Mehr Parkplätze würden die Mieten senken.",
+          "Tourismus belebt den Wohnungsmarkt nachhaltig."
+        ],
+        "answer": "Kleinere, effizientere Wohnungen würden die Verteilung verbessern."
+      }
+    },
+    {
+      "id": "lesen-2",
+      "title": "Lesen",
+      "type": "multiple-choice",
+      "task": {
+        "text": "Studienzusammenfassung: In einem Pilotprojekt zur Vier-Tage-Woche stieg die Produktivität in den meisten Betrieben leicht an, während Krankmeldungen und Fluktuation sanken. Allerdings zeigte sich, dass die Effekte stark von der jeweiligen Organisation abhängen: Wo Prozesse bereits klar strukturiert und Ziele messbar waren, profitierten Teams deutlich. In Bereichen mit unklarem Erwartungsmanagement wurden Deadlines häufiger verfehlt.",
+        "question": "Welche Folgerung legt der Text nahe?",
+        "options": [
+          "Ein pauschales Modell ist wenig sinnvoll; Rahmenbedingungen sind entscheidend.",
+          "Die Vier-Tage-Woche funktioniert nur in der Industrie.",
+          "Die Vier-Tage-Woche führt generell zu geringerer Qualität."
+        ],
+        "answer": "Ein pauschales Modell ist wenig sinnvoll; Rahmenbedingungen sind entscheidend."
+      }
+    },
+    {
+      "id": "lesen-3",
+      "title": "Lesen",
+      "type": "multiple-choice",
+      "task": {
+        "text": "Unimitteilung: Die Fakultäten für Medien und Informatik werden zum kommenden Wintersemester zusammengelegt. Ziel ist es, Forschungsschwerpunkte zu bündeln und Drittmittel effizienter einzusetzen. Kritische Stimmen befürchten längere Wege für Studierende und eine Verwässerung spezieller Profile. Die Hochschulleitung betont dagegen, dass alle bestehenden Studiengänge erhalten bleiben; Änderungen betreffen vor allem Verwaltung und gemeinsame Labore.",
+        "question": "Warum erfolgt die Zusammenlegung laut Text?",
+        "options": [
+          "Um Forschung zu bündeln und Drittmittel effizienter zu nutzen",
+          "Um Studiengänge zu streichen",
+          "Weil die Gebäude renoviert werden"
+        ],
+        "answer": "Um Forschung zu bündeln und Drittmittel effizienter zu nutzen"
+      }
+    },
+    {
+      "id": "lesen-4",
+      "title": "Lesen",
+      "type": "multiple-choice",
+      "task": {
+        "text": "AGB-Änderung: Zum 1. Januar erhöht der Streamingdienst die Preise. Kundinnen und Kunden werden vier Wochen vorher per E-Mail informiert. Wer nicht zustimmt, kann den Vertrag innerhalb eines Monats nach Zugang der Mitteilung außerordentlich kündigen. Erfolgt keine Kündigung, gelten die neuen Preise als akzeptiert. Bereits gezahlte Jahresabos werden bis zum Laufzeitende nicht angepasst.",
+        "question": "Welche Rechte haben Kundinnen und Kunden?",
+        "options": [
+          "Sonderkündigungsrecht innerhalb eines Monats",
+          "Rückerstattung bereits gezahlter Jahresabos",
+          "Automatische Preisreduktion bei Nichtnutzung"
+        ],
+        "answer": "Sonderkündigungsrecht innerhalb eines Monats"
+      }
+    },
+    {
+      "id": "lesen-5",
+      "title": "Lesen",
+      "type": "multiple-choice",
+      "task": {
+        "text": "Ausstellungsrezension: Die Retrospektive würdigt die Künstlerin als Pionierin der Alltagsfotografie. Kuratorisch überzeugt die klare Chronologie, die Brüche ihres Lebens – Emigration, prekäre Jobs – werden jedoch nur angedeutet. Gerade diese biografischen Risse hätten dem glatten Bild mehr Kanten gegeben. Das Rahmenprogramm bleibt international, lässt aber lokale Perspektiven vermissen.",
+        "question": "Welche Kritik wird im Text geäußert?",
+        "options": [
+          "Biografische Brüche werden zu wenig beleuchtet.",
+          "Die Chronologie ist unverständlich.",
+          "Das Rahmenprogramm ist zu lokal ausgerichtet."
+        ],
+        "answer": "Biografische Brüche werden zu wenig beleuchtet."
+      }
+    },
+
+    {
+      "id": "hoeren-1",
+      "title": "Hören",
+      "type": "audio-choice",
+      "task": {
+        "text": "Teamleiterin: Wir bleiben beim hybriden Modell, aber Präsenztage sind künftig projektbezogen. Das heißt: Wenn eine Sprintplanung ansteht oder Kundentermine vor Ort sind, erwarten wir euch im Büro. Ansonsten entscheidet ihr selbst – wichtig ist, dass die Erreichbarkeit klar kommuniziert wird und Ergebnisse stimmen.",
+        "question": "Was ändert sich an den Präsenzzeiten?",
+        "options": [
+          "Sie richten sich nach Projekterfordernissen.",
+          "Es gibt feste Tage für alle.",
+          "Homeoffice ist nicht mehr erlaubt."
+        ],
+        "answer": "Sie richten sich nach Projekterfordernissen."
+      }
+    },
+    {
+      "id": "hoeren-2",
+      "title": "Hören",
+      "type": "audio-choice",
+      "task": {
+        "text": "Studierende: Ich wollte unbedingt ins Auslandssemester, aber die Partneruni hat kurzfristig die Zulassung verschoben. Statt abzusagen, habe ich ein Praktikum in einer NGO organisiert. Im Nachhinein war das Gold wert, weil ich jetzt weiß, in welchem Bereich ich wirklich arbeiten will.",
+        "question": "Wie bewertet die Sprecherin die Veränderung letztlich?",
+        "options": [
+          "Sie sieht den Nutzen der neuen Erfahrung.",
+          "Sie bereut ihre Entscheidung.",
+          "Sie will das Studium abbrechen."
+        ],
+        "answer": "Sie sieht den Nutzen der neuen Erfahrung."
+      }
+    },
+    {
+      "id": "hoeren-3",
+      "title": "Hören",
+      "type": "audio-choice",
+      "task": {
+        "text": "Radiobericht: Der Stadtrat lehnt die sofortige Einführung eines generellen Tempolimits ab, beauftragt aber die Verwaltung, für besonders belastete Viertel Pilotzonen zu planen. Damit reagiert er auf Kritik, ohne sich auf einen Schlag festzulegen.",
+        "question": "Welche Strategie verfolgt der Stadtrat?",
+        "options": [
+          "Schrittweise Einführung über Pilotzonen",
+          "Komplette Ablehnung ohne Alternative",
+          "Sofortige Umsetzung im gesamten Stadtgebiet"
+        ],
+        "answer": "Schrittweise Einführung über Pilotzonen"
+      }
+    },
+    {
+      "id": "hoeren-4",
+      "title": "Hören",
+      "type": "audio-choice",
+      "task": {
+        "text": "Konferenzankündigung: Unser Panel fragt, wie Künstliche Intelligenz in der Pflege helfen kann, ohne Beziehungen zu ersetzen. Beiträge aus Ethik, Technik und Praxis zeigen, dass Entlastung nur funktioniert, wenn Mitarbeitende mitgestalten und Daten transparent verarbeitet werden.",
+        "question": "Unter welcher Bedingung gilt KI als hilfreich?",
+        "options": [
+          "Wenn Mitarbeitende mitgestalten und Transparenz besteht",
+          "Wenn Personal vollständig ersetzt wird",
+          "Wenn nur Kosten gesenkt werden"
+        ],
+        "answer": "Wenn Mitarbeitende mitgestalten und Transparenz besteht"
+      }
+    },
+    {
+      "id": "hoeren-5",
+      "title": "Hören",
+      "type": "audio-choice",
+      "task": {
+        "text": "Flughafeninfo: Wegen Nebels werden Starts gebündelt, sobald die Sicht sich bessert. Reisende mit Anschlussflügen wenden sich bitte frühzeitig an die Airline; bei verpassten Verbindungen wird umgebucht.",
+        "question": "Was sollen Reisende mit Anschlussflügen tun?",
+        "options": [
+          "Sich frühzeitig an die Airline wenden",
+          "Am Gate warten, ohne etwas zu tun",
+          "Den Flug eigenständig stornieren"
+        ],
+        "answer": "Sich frühzeitig an die Airline wenden"
+      }
+    },
+
+    {
+      "id": "schreiben-1",
+      "title": "Schreiben",
+      "type": "text-input",
+      "task": {
+        "instruction": "Verfasse einen argumentativen Kommentar (mind. 140 Wörter): Sollten Städte autofreie Innenstädte einführen? Beziehe dich auf Wirtschaft, Umwelt und gesellschaftliche Teilhabe. Beziehe Gegenargumente ein und ziehe ein begründetes Fazit.",
+        "exampleAnswer": "Autofreie Innenstädte wirken auf den ersten Blick radikal, sind aber ein wirksames Mittel, um Lebensqualität zu steigern. Händlerinnen befürchten Umsatzverluste; tatsächlich zeigen Beispiele, dass Frequenz und Verweildauer zunehmen, wenn Plätze menschen- statt fahrzeuggerecht gestaltet werden. Lieferverkehr lässt sich zeitlich bündeln, Anwohner erhalten Durchfahrtsgenehmigungen. Umweltseitig sinken Lärm- und Emissionswerte deutlich, was Gesundheit und Tourismus zugutekommt. Kritisch ist die soziale Dimension: Wer schlecht angebunden ist, darf nicht ausgeschlossen werden. Dazu braucht es dichteren ÖPNV, regionale Buslinien und sichere Radwege. Richtig umgesetzt profitieren alle: Städte werden ruhiger, Aufenthaltsflächen entstehen, und der Handel gewinnt an Sichtbarkeit. Entscheidend ist, Maßnahmen mit Bürgerinnen und Bürgern zu planen, Ausnahmen transparent zu regeln und die Umstellung schrittweise zu evaluieren. Dann ist die autofreie Innenstadt keine Ideologie, sondern ein pragmatisches Stadtentwicklungsinstrument."
+      }
+    },
+    {
+      "id": "schreiben-2",
+      "title": "Schreiben",
+      "type": "text-input",
+      "task": {
+        "instruction": "Du hast einen Weiterbildungslehrgang gebucht, der hinter den zugesagten Standards zurückblieb. Verfasse eine formelle Beschwerde mit Bitte um teilweise Rückerstattung und konkreten Vorschlägen zur Qualitätsverbesserung (mind. 140 Wörter).",
+        "exampleAnswer": "Sehr geehrte Damen und Herren,\nich habe vom 3.–21. Juni am Lehrgang „Projektmanagement kompakt“ teilgenommen. Laut Ausschreibung sollten tägliche Praxisübungen und individuelles Feedback fest zum Konzept gehören. Tatsächlich fielen mehrere Übungen ersatzlos aus; die Rückmeldungen beschränkten sich auf allgemeine Hinweise. Da die erbrachte Leistung vom angekündigten Standard abwich, bitte ich um eine angemessene, teilweise Erstattung der Kursgebühr. Konstruktiv schlage ich vor, feste Feedback-Slots verbindlich in den Stundenplan aufzunehmen, digitale Materialien vorab bereitzustellen und ausgefallene Einheiten zeitnah per Video nachzuliefern. Ich schätze Ihr Institut und möchte es gern weiterempfehlen – dafür sind transparente Qualitätskriterien jedoch unerlässlich. Für Rückfragen stehe ich gern zur Verfügung.\nMit freundlichen Grüßen\nSvenja Richter"
+      }
+    },
+    {
+      "id": "schreiben-3",
+      "title": "Schreiben",
+      "type": "text-input",
+      "task": {
+        "instruction": "Schreibe einen Bericht (mind. 140 Wörter) für die interne Mitarbeitendenzeitung: Ein Pilotprojekt zur Vier-Tage-Woche wurde drei Monate getestet. Fasse die wichtigsten Ergebnisse zusammen und formuliere eine Empfehlung.",
+        "exampleAnswer": "Im dreimonatigen Pilotprojekt zur Vier-Tage-Woche nahmen 62 Mitarbeitende aus drei Abteilungen teil. Die Produktivität stieg laut Kennzahlen im Durchschnitt um 7 %, Krankentage sanken um 18 %. Besonders positiv wurde die bessere Konzentration an längeren, störungsarmen Arbeitstagen bewertet. Herausforderungen zeigten sich dort, wo Schnittstellen zu externen Partnern nicht synchronisiert waren. Deadlines wurden in zwei Fällen verfehlt, weil Freitage als Servicetage weggefallen sind. Empfehlung: Beibehaltung des Modells für Teams mit klar messbaren Zielen, ergänzt um rotierende Serviceteams und verbindliche Erreichbarkeitsfenster für Kundinnen und Kunden. Nach sechs Monaten sollte eine erneute Evaluation erfolgen."
+      }
+    },
+    {
+      "id": "schreiben-4",
+      "title": "Schreiben",
+      "type": "text-input",
+      "task": {
+        "instruction": "Bewirb dich per E-Mail als ehrenamtliche/r Mentor/in im Bildungsprojekt „Sprache & Beruf“. Betone Motivation, Erfahrungen und Verfügbarkeit; formeller Ton (mind. 140 Wörter).",
+        "exampleAnswer": "Sehr geehrtes Projektteam,\nmit großem Interesse bewerbe ich mich als Mentorin im Programm „Sprache & Beruf“. Seit zwei Jahren begleite ich Geflüchtete im Sprachtandem und habe dabei gelernt, Lernziele realistisch zu planen und berufsbezogene Situationen – etwa Telefonate oder Bewerbungsgespräche – gezielt zu trainieren. Besonders motiviert mich, dass Ihr Projekt Sprachförderung mit Berufsorientierung verbindet. Ich verfüge über C1-Deutschkenntnisse, arbeite strukturiert und wertschätzend und kann ab Oktober wöchentlich zwei Stunden anbieten, vorzugsweise am frühen Abend. Gern unterstütze ich auch bei der Materialerstellung. Über eine Einladung zum Kennenlernen freue ich mich.\nMit freundlichen Grüßen\nAliya Karim"
+      }
+    },
+    {
+      "id": "schreiben-5",
+      "title": "Schreiben",
+      "type": "text-input",
+      "task": {
+        "instruction": "Verfasse einen begründeten Vorschlag (170–210 Wörter) an die Stadtverwaltung: Wie kann die Innenstadt wiederbelebt werden, ohne kleine Läden zu verdrängen?",
+        "exampleAnswer": "Sehr geehrte Damen und Herren,\num die Innenstadt zu beleben, ohne kleine Läden zu benachteiligen, schlage ich ein Maßnahmenpaket vor. Erstens sollte es ein Förderprogramm für Zwischennutzungen geben, damit leere Flächen temporär von lokalen Initiativen, Pop-up-Stores oder Kulturprojekten genutzt werden können. Zweitens empfehle ich eine Miettransparenzplattform, auf der Eigentümerinnen und Eigentümer faire Konditionen veröffentlichen und Vermittlung erhalten. Drittens braucht es attraktivere Wege: mehr Sitzgelegenheiten, schattenspendende Begrünung und sichere Radspuren. Ergänzend könnten „lange Donnerstage“ mit Kultur und Kinderangeboten Besucher anziehen. Wichtig ist, Händlerinnen früh einzubinden und Wirkung regelmäßig zu messen: Frequenz, Aufenthaltsdauer, Leerstandsquote. So entsteht ein lebendiger Stadtraum, in dem Vielfalt wirtschaftlich bestehen kann.\nMit freundlichen Grüßen\nJonas Müller"
+      }
+    },
+
+    {
+      "id": "sprechen-1",
+      "title": "Sprechen",
+      "type": "speaking-prompt",
+      "task": {
+        "prompt": "Viele Unternehmen testen die Vier-Tage-Woche. Diskutieren Sie Chancen und Risiken für Wirtschaft und Mitarbeitende und formulieren Sie eine klare Empfehlung.",
+        "expectedTopics": ["Produktivität", "Gesundheit/Work-Life-Balance", "Kundenerwartungen", "Empfehlung"]
+      }
+    },
+    {
+      "id": "sprechen-2",
+      "title": "Sprechen",
+      "type": "speaking-prompt",
+      "task": {
+        "prompt": "Sollte der öffentliche Nahverkehr kostenlos sein? Legen Sie Pro- und Contra-Argumente dar und schlagen Sie einen realistischen Finanzierungsweg vor.",
+        "expectedTopics": ["Mobilität", "Soziale Teilhabe", "Finanzierung", "Kompromiss"]
+      }
+    },
+    {
+      "id": "sprechen-3",
+      "title": "Sprechen",
+      "type": "speaking-prompt",
+      "task": {
+        "prompt": "Berichten Sie von einem Konflikt in einem Team. Analysieren Sie Ursachen, beschreiben Sie den Lösungsprozess und reflektieren Sie, was Sie heute anders machen würden.",
+        "expectedTopics": ["Konfliktanalyse", "Mediation", "Rollen/Kommunikation", "Reflexion"]
+      }
+    },
+    {
+      "id": "sprechen-4",
+      "title": "Sprechen",
+      "type": "speaking-prompt",
+      "task": {
+        "prompt": "Algorithmen filtern unsere Informationen. Diskutieren Sie Chancen und Gefahren personalisierter Feeds und nennen Sie konkrete Strategien gegen Filterblasen.",
+        "expectedTopics": ["Medienkompetenz", "Datenschutz", "Transparenz", "Strategien"]
+      }
+    },
+    {
+      "id": "sprechen-5",
+      "title": "Sprechen",
+      "type": "speaking-prompt",
+      "task": {
+        "prompt": "Beschreiben Sie ein kulturelles Ereignis, das Ihre Sicht auf ein Thema verändert hat, und erläutern Sie die Wirkung auf Ihr Denken oder Handeln.",
+        "expectedTopics": ["Ereignis", "Interpretation", "Wirkung", "Übertrag auf Alltag"]
+      }
+    }
+  ]
+}

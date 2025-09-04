@@ -1,0 +1,62 @@
+[
+  {
+    "type": "fillInBlank",
+    "question": "Ich ___ schon gegessen, bevor er kam.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Nachdem wir angekommen waren, ___ wir das Hotel gefunden.",
+    "options": ["hatten", "waren", "haben", "sind"],
+    "answer": "hatten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Sie ___ das Buch gelesen, bevor sie den Film sah.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Er ___ das Fenster geschlossen, weil es kalt war.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir ___ schon gegangen, als du angerufen hast.",
+    "options": ["waren", "sind", "hatten", "haben"],
+    "answer": "waren"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Bevor sie nach Hause fuhr, ___ sie ihre Arbeit beendet.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Ich ___ den Schlüssel verloren, bevor ich zur Arbeit ging.",
+    "options": ["hatte", "habe", "war", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Er ___ eingeschlafen, bevor der Film begann.",
+    "options": ["war", "hatte", "ist", "hat"],
+    "answer": "war"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir ___ das Auto geparkt, bevor es regnete.",
+    "options": ["hatten", "waren", "haben", "sind"],
+    "answer": "hatten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Du ___ das Licht ausgemacht, bevor du gegangen bist.",
+    "options": ["hattest", "warst", "hast", "bist"],
+    "answer": "hattest"
+  }
+]

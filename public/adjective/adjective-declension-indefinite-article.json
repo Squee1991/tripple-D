@@ -1,0 +1,52 @@
+[
+  {
+    "question": "Ein gut___ Mann hilft immer.",
+    "options": ["er", "e", "en", "es"],
+    "answer": "er"
+  },
+  {
+    "question": "Ich habe eine schön___ Blume gekauft.",
+    "options": ["en", "e", "er", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Das ist ein schnell___ Auto.",
+    "options": ["er", "en", "e", "es"],
+    "answer": "es"
+  },
+  {
+    "question": "Er liest ein interessant___ Buch.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "es"
+  },
+  {
+    "question": "Sie hat einen neu___ Computer.",
+    "options": ["en", "e", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Mein klein___ Bruder spielt im Garten.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "er"
+  },
+  {
+    "question": "Wir wohnen in einem groß___ Haus.",
+    "options": ["er", "e", "en", "em"],
+    "answer": "en"
+  },
+  {
+    "question": "Kein gut___ Freund würde das tun.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "er"
+  },
+  {
+    "question": "Sie isst mit einer alt___ Freundin.",
+    "options": ["e", "en", "er", "em"],
+    "answer": "en"
+  },
+  {
+    "question": "Das ist der Hund meines gut___ Freundes.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "en"
+  }
+]

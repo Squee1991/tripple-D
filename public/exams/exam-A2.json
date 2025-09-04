@@ -1,0 +1,206 @@
+{
+  "level": "A2",
+  "modules": [
+    {
+      "id": "lesen-1",
+      "title": "Lesen",
+      "type": "multiple-choice",
+      "task": {
+        "text": "Liebe Gäste,\nwegen Renovierung bleibt unser Hotel vom 1. bis 10. Juli geschlossen.",
+        "question": "Ist das Hotel am 5. Juli geöffnet?",
+        "options": ["Ja", "Nein"],
+        "answer": "Nein"
+      }
+    },
+    {
+      "id": "lesen-2",
+      "title": "Lesen",
+      "type": "multiple-choice",
+      "task": {
+        "text": "Anna schreibt: Ich arbeite jetzt in einer neuen Firma. Die Kollegen sind sehr nett.",
+        "question": "Anna hat eine neue Arbeit gefunden.",
+        "options": ["Richtig", "Falsch"],
+        "answer": "Richtig"
+      }
+    },
+    {
+      "id": "lesen-3",
+      "title": "Lesen",
+      "type": "multiple-choice",
+      "task": {
+        "text": "Bibliothek: Öffnungszeiten Montag – Freitag 9:00–18:00 Uhr, Samstag 10:00–14:00 Uhr",
+        "question": "Ist die Bibliothek am Sonntag offen?",
+        "options": ["Ja", "Nein"],
+        "answer": "Nein"
+      }
+    },
+    {
+      "id": "lesen-4",
+      "title": "Lesen",
+      "type": "multiple-choice",
+      "task": {
+        "text": "Peter schreibt: Ich habe meine Prüfung bestanden! Jetzt beginnt mein Praktikum.",
+        "question": "Peter hat die Prüfung nicht geschafft.",
+        "options": ["Richtig", "Falsch"],
+        "answer": "Falsch"
+      }
+    },
+    {
+      "id": "lesen-5",
+      "title": "Lesen",
+      "type": "multiple-choice",
+      "task": {
+        "text": "Kursinformation: Deutschkurs B1 beginnt am 15. Oktober. Anmeldung bis 10. Oktober.",
+        "question": "Kann man sich am 12. Oktober noch anmelden?",
+        "options": ["Ja", "Nein"],
+        "answer": "Nein"
+      }
+    },
+
+    {
+      "id": "hoeren-1",
+      "title": "Hören",
+      "type": "audio-choice",
+      "task": {
+        "text": "Ich komme etwas später. Der Bus hatte Verspätung.",
+        "question": "Warum kommt die Person später?",
+        "options": ["Weil sie verschlafen hat", "Wegen des Busses", "Weil sie krank ist"],
+        "answer": "Wegen des Busses"
+      }
+    },
+    {
+      "id": "hoeren-2",
+      "title": "Hören",
+      "type": "audio-choice",
+      "task": {
+        "text": "Heute ist das Wetter schlecht. Wir verschieben unseren Ausflug auf morgen.",
+        "question": "Wann machen sie den Ausflug?",
+        "options": ["Heute", "Morgen", "Nächste Woche"],
+        "answer": "Morgen"
+      }
+    },
+    {
+      "id": "hoeren-3",
+      "title": "Hören",
+      "type": "audio-choice",
+      "task": {
+        "text": "Ich arbeite halbtags als Verkäuferin im Supermarkt.",
+        "question": "Was macht die Frau beruflich?",
+        "options": ["Sie ist Lehrerin", "Sie ist Verkäuferin", "Sie ist Ärztin"],
+        "answer": "Sie ist Verkäuferin"
+      }
+    },
+    {
+      "id": "hoeren-4",
+      "title": "Hören",
+      "type": "audio-choice",
+      "task": {
+        "text": "Bitte bringen Sie Ihren Ausweis zur Anmeldung mit.",
+        "question": "Was muss man zur Anmeldung mitbringen?",
+        "options": ["Einen Brief", "Einen Ausweis", "Ein Foto"],
+        "answer": "Einen Ausweis"
+      }
+    },
+    {
+      "id": "hoeren-5",
+      "title": "Hören",
+      "type": "audio-choice",
+      "task": {
+        "text": "Der Zug nach München hat 30 Minuten Verspätung.",
+        "question": "Wann kommt der Zug?",
+        "options": ["Pünktlich", "Früher", "Später"],
+        "answer": "Später"
+      }
+    },
+    {
+      "id": "schreiben-1",
+      "title": "Schreiben",
+      "type": "text-input",
+      "task": {
+        "instruction": "Schreibe einen Brief an einen Freund und erzähle über deine neue Stadt (3–5 Sätze).",
+        "exampleAnswer": "Hallo Julia! Ich wohne jetzt in Köln. Die Stadt ist sehr schön und es gibt viele Cafés. Komm mich mal besuchen!"
+      }
+    },
+    {
+      "id": "schreiben-2",
+      "title": "Schreiben",
+      "type": "text-input",
+      "task": {
+        "instruction": "Schreibe einen Brief an die Bibliothek und frage nach der Verlängerung eines Buches.",
+        "exampleAnswer": "Sehr geehrte Damen und Herren, ich habe ein Buch bei Ihnen ausgeliehen. Kann ich die Leihfrist verlängern? Vielen Dank!"
+      }
+    },
+    {
+      "id": "schreiben-3",
+      "title": "Schreiben",
+      "type": "text-input",
+      "task": {
+        "instruction": "Schreibe einem Freund, dass du nicht zum Treffen kommen kannst, und schlage eine andere Zeit vor.",
+        "exampleAnswer": "Hallo Ben! Es tut mir leid, ich kann heute nicht kommen. Hast du morgen Zeit?"
+      }
+    },
+    {
+      "id": "schreiben-4",
+      "title": "Schreiben",
+      "type": "text-input",
+      "task": {
+        "instruction": "Schreibe eine kurze Nachricht an den Vermieter über ein Problem in der Wohnung (z. B. kein warmes Wasser).",
+        "exampleAnswer": "Sehr geehrter Herr Klein, in meiner Wohnung gibt es kein warmes Wasser. Können Sie bitte jemanden schicken? Danke!"
+      }
+    },
+    {
+      "id": "schreiben-5",
+      "title": "Schreiben",
+      "type": "text-input",
+      "task": {
+        "instruction": "Schreibe einem Freund und lade ihn zu deinem Geburtstag ein (Datum, Uhrzeit, Ort).",
+        "exampleAnswer": "Hallo Anna! Ich feiere am Samstag meinen Geburtstag. Die Party beginnt um 17 Uhr bei mir zu Hause. Kommst du?"
+      }
+    },
+    {
+      "id": "sprechen-1",
+      "title": "Sprechen",
+      "type": "speaking-prompt",
+      "task": {
+        "prompt": "Erzähl über eine Reise, die du gemacht hast. Wohin? Was hast du gemacht?",
+        "expectedTopics": ["Reise", "Ort", "Aktivitäten"]
+      }
+    },
+    {
+      "id": "sprechen-2",
+      "title": "Sprechen",
+      "type": "speaking-prompt",
+      "task": {
+        "prompt": "Sprich über deinen Beruf oder dein Studium. Was machst du? Was findest du interessant?",
+        "expectedTopics": ["Beruf", "Studium", "Interessen"]
+      }
+    },
+    {
+      "id": "sprechen-3",
+      "title": "Sprechen",
+      "type": "speaking-prompt",
+      "task": {
+        "prompt": "Was machst du in deiner Freizeit? Hast du ein Hobby?",
+        "expectedTopics": ["Freizeit", "Hobby", "Aktivitäten"]
+      }
+    },
+    {
+      "id": "sprechen-4",
+      "title": "Sprechen",
+      "type": "speaking-prompt",
+      "task": {
+        "prompt": "Beschreib deine Wohnung oder dein Haus. Wie viele Zimmer? Was findest du besonders schön?",
+        "expectedTopics": ["Wohnung", "Zimmer", "Beschreibung"]
+      }
+    },
+    {
+      "id": "sprechen-5",
+      "title": "Sprechen",
+      "type": "speaking-prompt",
+      "task": {
+        "prompt": "Erzähl über deinen letzten Einkauf. Was hast du gekauft? Wo warst du?",
+        "expectedTopics": ["Einkauf", "Produkte", "Ort"]
+      }
+    }
+  ]
+}

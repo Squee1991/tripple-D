@@ -17,3 +17,13 @@ img {
 	height: auto;
 	display: block;
 }
+
+button,
+a,
+div,
+input,
+textarea {
+	-webkit-tap-highlight-color: transparent;
+	-webkit-focus-ring-color: transparent;
+	outline: none;
+}

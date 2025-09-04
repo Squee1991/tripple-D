@@ -3,13 +3,22 @@ export const overAchievment = [
 		title: "generalCategory.generaLabel",
 		achievements: [
 			{
-				id: "LastChance",
-				name: "generalCategory.lastBreahtlabel",
-				description: "generalCategory.lastBreathText",
-				icon: "❤️",
+				id: "registerAchievement",
+				name: "generalCategory.firstStepLabel",
+				description: "generalCategory.firstStepText",
+				icon: "🧙‍♂️",
+				awards: 'generalCategory.firstStepAward',
 				currentProgress: 0,
-				targetProgress: 20,
+				targetProgress: 1
 			},
+			// {
+			// 	id: "firstAward",
+			// 	name: "generalCategory.firstAwardText",
+			// 	description: "generalCategory.firstAwardLabel",
+			// 	icon: "🎁️",
+			// 	currentProgress: 0,
+			// 	targetProgress: 1
+			// },
 			{
 				id: "SiteRegular",
 				name: "generalCategory.monthLabel",
@@ -17,6 +26,32 @@ export const overAchievment = [
 				icon: "🗓️",
 				currentProgress: 0,
 				targetProgress: 31
+			},
+			{
+				id: "LastChance",
+				name: "generalCategory.lastBreahtlabel",
+				description: "generalCategory.lastBreathText",
+				icon: "❤️",
+				awards: 'generalCategory.lastBreathAward',
+				currentProgress: 0,
+				targetProgress: 20,
+			},
+			{
+				id: "createdCountCard",
+				name: "generalCategory.cardLabel",
+				description: "generalCategory.cardText",
+				icon: "🃏",
+				currentProgress: 0,
+				targetProgress: 36
+			},
+			{
+				id: "daily",
+				name: "generalCategory.dailyTitle",
+				description: "generalCategory.dailyText",
+				icon: "🔁",
+				awards: "generalCategory.dailyAward",
+				currentProgress: 0,
+				targetProgress: 50
 			},
 			{
 				id: "MarginForError",
@@ -32,7 +67,7 @@ export const overAchievment = [
 				description: "generalCategory.edgeText",
 				icon: "⏳",
 				currentProgress: 0,
-				targetProgress: 20,
+				targetProgress: 50,
 			},
 			{
 				id: 'firstArticleAward',
@@ -67,10 +102,27 @@ export const overAchievment = [
 				targetProgress: 100,
 			},
 			{
+				id: 'grandmaster_sentences',
+				name: 'generalCategory.grandmasterLabel',
+				description: 'generalCategory.grandmasterText',
+				icon: '🎓',
+				currentProgress: 0,
+				targetProgress: 500,
+			},
+			{
+				id: 'master_of_duels',
+				name: 'generalCategory.duelLabel',
+				description: 'generalCategory.duelText',
+				icon: '⚔',
+				currentProgress: 0,
+				targetProgress: 250,
+			},
+			{
 				id: 'wrong100Answers',
 				name: 'generalCategory.mistakesLabel',
 				description: 'generalCategory.mistakesText',
 				icon: '💪',
+				awards: 'generalCategory.mistakesAward',
 				currentProgress: 0,
 				targetProgress: 100,
 			},

@@ -1,0 +1,2344 @@
+[
+  {
+    "questId": "reise-hotel-1",
+    "title": "questsNorthCliffsFirstQuests.title",
+    "progress": "0/15",
+    "description": "questsNorthCliffsFirstQuests.description",
+    "conditions": {
+      "goal": "Rezeption, reservieren, Einzel-/Doppelzimmer, für zwei Nächte, Check-in/Check-out, Ausweis, Frühstück, pro Nacht",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "",
+        "options": [
+          "questsNorthCliffsFirstQuests.questOneFirstOption",
+          "questsNorthCliffsFirstQuests.questOneSecondOption",
+          "questsNorthCliffsFirstQuests.questOneThirdOption"
+        ],
+        "answer": "questsNorthCliffsFirstQuests.questOneFirstOption"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "",
+        "options": [
+          "questsNorthCliffsFirstQuests.questTwoFirstOption",
+          "questsNorthCliffsFirstQuests.questTwoSecondOption",
+          "questsNorthCliffsFirstQuests.questTwoThirdOption"
+        ],
+        "answer": "questsNorthCliffsFirstQuests.questTwoFirstOption"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "questsNorthCliffsFirstQuests.questThird",
+        "options": [
+          "questsNorthCliffsFirstQuests.questThirdFirstOption",
+          "questsNorthCliffsFirstQuests.questThirdSecondOption",
+          "questsNorthCliffsFirstQuests.questThirdThirdOption"
+        ],
+        "answer": "questsNorthCliffsFirstQuests.questThirdFirstOption"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "questsNorthCliffsFirstQuests.questFour",
+        "options": [
+          "questsNorthCliffsFirstQuests.questFourFirstOption",
+          "questsNorthCliffsFirstQuests.questFourSecondOption",
+          "questsNorthCliffsFirstQuests.questFourThirdOption"
+        ],
+        "answer": "questsNorthCliffsFirstQuests.questFourFirstOption"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "questsNorthCliffsFirstQuests.questFive",
+        "words": [
+          "Zimmer",
+          "möchte",
+          "ein",
+          "Ich",
+          "reservieren"
+        ],
+        "correctOrder": [
+          "Ich",
+          "möchte",
+          "ein",
+          "Zimmer",
+          "reservieren"
+        ]
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "questsNorthCliffsFirstQuests.questSix",
+        "text": "Ich habe eine Reservierung",
+        "answer": "Ich habe eine Reservierung"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "für zwei Nächte",
+        "options": [
+          "questsNorthCliffsFirstQuests.questSevenFirstOption",
+          "questsNorthCliffsFirstQuests.questSevenSecondOption",
+          "questsNorthCliffsFirstQuests.questSevenThirdOption"
+        ],
+        "answer": "questsNorthCliffsFirstQuests.questSevenFirstOption"
+      },
+      {
+        "id": 8,
+        "type": "reorder",
+        "question": "questsNorthCliffsFirstQuests.questEight",
+        "words": [
+          "Zimmer",
+          "ein",
+          "Ist",
+          "frei"
+        ],
+        "correctOrder": [
+          "Ist",
+          "ein",
+          "Zimmer",
+          "frei"
+        ]
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Guten Tag! Haben Sie ein Doppelzimmer? – Ja, 80 Euro pro Nacht, Frühstück inklusive.",
+        "question": "",
+        "options": [
+          "questsNorthCliffsFirstQuests.questNineFirstOption",
+          "questsNorthCliffsFirstQuests.questNineSecondOption",
+          "questsNorthCliffsFirstQuests.questNineThirdOption"
+        ],
+        "answer": "questsNorthCliffsFirstQuests.questNineFirstOption"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "der Ausweis",
+        "options": [
+          "questsNorthCliffsFirstQuests.questTenFirstOption",
+          "questsNorthCliffsFirstQuests.questTenSecondOption",
+          "questsNorthCliffsFirstQuests.questTenThirdOption"
+        ],
+        "answer": "questsNorthCliffsFirstQuests.questTenFirstOption"
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "questsNorthCliffsFirstQuests.questEleven",
+        "text": "Check-in ist ab 14 Uhr",
+        "answer": "Check-in ist ab 14 Uhr"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "questsNorthCliffsFirstQuests.questTwelve",
+        "words": [
+          "ohne",
+          "Frühstück",
+          "oder",
+          "Mit"
+        ],
+        "correctOrder": [
+          "Mit",
+          "Frühstück",
+          "oder",
+          "ohne"
+        ]
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "",
+        "options": [
+          "questsNorthCliffsFirstQuests.questThirteenFirstOption",
+          "questsNorthCliffsFirstQuests.questThirteenSecondOption",
+          "questsNorthCliffsFirstQuests.questThirteenThirdOption"
+        ],
+        "answer": "questsNorthCliffsFirstQuests.questThirteenFirstOption"
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "questsNorthCliffsFirstQuests.questFourteen",
+        "text": "Die Schlüsselkarte, bitte.",
+        "answer": "Die Schlüsselkarte, bitte."
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "questsNorthCliffsFirstQuests.questFifteen",
+        "words": [
+          "Ihren",
+          "Ausweis",
+          "Ich",
+          "brauche"
+        ],
+        "correctOrder": [
+          "Ich",
+          "brauche",
+          "Ihren",
+          "Ausweis"
+        ]
+      }
+    ]
+  },
+  {
+    "questId": "reise-hotel-2",
+    "title": "questsNorthCliffsSecondQuests.title",
+    "progress": "0/15",
+    "description": "questsNorthCliffsSecondQuests.description",
+    "conditions": {
+      "goal": "Frühstück/WLAN/Aufzug, Preis pro Nacht, Ich bezahle mit Karte/Bar, Rechnung",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "das Frühstück",
+        "options": [
+          "questsNorthCliffsSecondQuests.questOneFirstOption",
+          "questsNorthCliffsSecondQuests.questOneSecondOption",
+          "questsNorthCliffsSecondQuests.questOneThirdOption"
+        ],
+        "answer": "questsNorthCliffsSecondQuests.questOneFirstOption"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "das WLAN",
+        "options": [
+          "questsNorthCliffsSecondQuests.questTwoFirstOption",
+          "questsNorthCliffsSecondQuests.questTwoSecondOption",
+          "questsNorthCliffsSecondQuests.questTwoThirdOption"
+        ],
+        "answer": "questsNorthCliffsSecondQuests.questTwoFirstOption"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "die Rechnung",
+        "options": [
+          "questsNorthCliffsSecondQuests.questThirdFirstOption",
+          "questsNorthCliffsSecondQuests.questThirdSecondOption",
+          "questsNorthCliffsSecondQuests.questThirdThirdOption"
+        ],
+        "answer": "questsNorthCliffsSecondQuests.questThirdFirstOption"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "der Aufzug",
+        "options": [
+          "questsNorthCliffsSecondQuests.questFourFirstOption",
+          "questsNorthCliffsSecondQuests.questFourSecondOption",
+          "questsNorthCliffsSecondQuests.questFourThirdOption"
+        ],
+        "answer": "questsNorthCliffsSecondQuests.questFourFirstOption"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "questsNorthCliffsSecondQuests.questFive",
+        "words": [
+          "ist",
+          "Frühstück",
+          "Wann"
+        ],
+        "correctOrder": [
+          "Wann",
+          "ist",
+          "Frühstück"
+        ]
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "questsNorthCliffsSecondQuests.questSix",
+        "text": "Frühstück ist von sieben bis zehn Uhr.",
+        "answer": "Frühstück ist von sieben bis zehn Uhr."
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "questsNorthCliffsSecondQuests.questSeven",
+        "words": [
+          "WLAN",
+          "es",
+          "Gibt"
+        ],
+        "correctOrder": [
+          "Gibt",
+          "es",
+          "WLAN"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "questsNorthCliffsSecondQuests.questEight",
+        "text": "Wie ist das WLAN-Passwort?",
+        "answer": "Wie ist das WLAN-Passwort?"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Einzelzimmer: 60 Euro pro Nacht. Doppelzimmer: 80 Euro pro Nacht.",
+        "question": "questsNorthCliffsSecondQuests.questNine",
+        "options": [
+          "questsNorthCliffsSecondQuests.questNineFirstOption",
+          "questsNorthCliffsSecondQuests.questNineSecondOption",
+          "questsNorthCliffsSecondQuests.questNineThirdOption"
+        ],
+        "answer": "questNineFirstOption"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "mit Dusche",
+        "options": [
+          "questsNorthCliffsSecondQuests.questTenFirstOption",
+          "questsNorthCliffsSecondQuests.questTenSecondOption",
+          "questsNorthCliffsSecondQuests.questTenThirdOption"
+        ],
+        "answer": "questsNorthCliffsSecondQuests.questTenFirstOption"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "questsNorthCliffsSecondQuests.questEleven",
+        "words": [
+          "Karte",
+          "bezahle",
+          "mit",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bezahle",
+          "mit",
+          "Karte"
+        ]
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "questsNorthCliffsSecondQuests.questTwelve",
+        "text": "Kann ich später auschecken?",
+        "answer": "Kann ich später auschecken?"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "Check-out ist um zwölf Uhr. Späterer Check-out kostet zehn Euro.",
+        "question": "questsNorthCliffsSecondQuests.questThirteen",
+        "options": [
+          "questsNorthCliffsSecondQuests.questThirteenFirstOption",
+          "questsNorthCliffsSecondQuests.questThirteenSecondOption",
+          "questsNorthCliffsSecondQuests.questThirteenThirdOption"
+        ],
+        "answer": "questsNorthCliffsSecondQuests.questThirteenFirstOption"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "questsNorthCliffsSecondQuests.questFourteen",
+        "words": [
+          "ruhiges",
+          "Ein",
+          "bitte",
+          "Zimmer"
+        ],
+        "correctOrder": [
+          "Ein",
+          "ruhiges",
+          "Zimmer",
+          "bitte"
+        ]
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "questsNorthCliffsSecondQuests.questFifteen",
+        "text": "Ich brauche die Rechnung.",
+        "answer": "Ich brauche die Rechnung."
+      }
+    ]
+  },
+  {
+    "questId": "reise-hotel-3",
+    "title": "questsNorthCliffsThirdQuests.title",
+    "progress": "0/15",
+    "description": "questsNorthCliffsThirdQuests.description",
+    "conditions": {
+      "goal": "questsNorthCliffsThirdQuests.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "die Heizung",
+        "options": [
+          "questsNorthCliffsThirdQuests.questOneFirstOption",
+          "questsNorthCliffsThirdQuests.questOneSecondOption",
+          "questsNorthCliffsThirdQuests.questOneThirdOption"
+        ],
+        "answer": "questsNorthCliffsThirdQuests.questOneFirstOption"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "die Klimaanlage",
+        "options": [
+          "questsNorthCliffsThirdQuests.questTwoFirstOption",
+          "questsNorthCliffsThirdQuests.questTwoSecondOption",
+          "questsNorthCliffsThirdQuests.questTwoThirdOption"
+        ],
+        "answer": "questsNorthCliffsThirdQuests.questTwoFirstOption"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "das Handtuch",
+        "options": [
+          "questsNorthCliffsThirdQuests.questThirdFirstOption",
+          "questsNorthCliffsThirdQuests.questThirdSecondOption",
+          "questsNorthCliffsThirdQuests.questThirdThirdOption"
+        ],
+        "answer": "Полотенце"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "die Fernbedienung",
+        "options": [
+          "questsNorthCliffsThirdQuests.questFourFirstOption",
+          "questsNorthCliffsThirdQuests.questFourSecondOption",
+          "questsNorthCliffsThirdQuests.questFourThirdOption"
+        ],
+        "answer": "questsNorthCliffsThirdQuests.questFourFirstOption"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "questsNorthCliffsThirdQuests.questFive",
+        "words": [
+          "gibt",
+          "Problem",
+          "ein",
+          "Es"
+        ],
+        "correctOrder": [
+          "Es",
+          "gibt",
+          "ein",
+          "Problem"
+        ]
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "questsNorthCliffsThirdQuests.questSix",
+        "text": "Die Heizung funktioniert nicht.",
+        "answer": "Die Heizung funktioniert nicht."
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "questsNorthCliffsThirdQuests.questSeven",
+        "words": [
+          "bitte",
+          "Sie",
+          "Können",
+          "helfen"
+        ],
+        "correctOrder": [
+          "Können",
+          "Sie",
+          "bitte",
+          "helfen"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "questsNorthCliffsThirdQuests.questEight",
+        "text": "Das WLAN funktioniert nicht.",
+        "answer": "Das WLAN funktioniert nicht."
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Im Zimmer gibt es keine Handtücher. Der Gast braucht zwei Handtücher.",
+        "question": "questsNorthCliffsThirdQuests.questNine",
+        "options": [
+          "questsNorthCliffsThirdQuests.questNineFirstOption",
+          "questsNorthCliffsThirdQuests.questNineSecondOption",
+          "questsNorthCliffsThirdQuests.questNineThirdOption"
+        ],
+        "answer": "questsNorthCliffsThirdQuests.questNineFirstOption"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "questsNorthCliffsThirdQuests.questTen",
+        "words": [
+          "ein",
+          "zusätzliches",
+          "Kissen",
+          "bitte"
+        ],
+        "correctOrder": [
+          "ein",
+          "zusätzliches",
+          "Kissen",
+          "bitte"
+        ]
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "questsNorthCliffsThirdQuests.questEleven",
+        "text": "Die Klimaanlage ist kaputt.",
+        "answer": "Die Klimaanlage ist kaputt."
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "die Zimmerreinigung",
+        "options": [
+          "questsNorthCliffsThirdQuests.questTwelveFirstOption",
+          "questsNorthCliffsThirdQuests.questTwelveSecondOption",
+          "questsNorthCliffsThirdQuests.questTwelveThirdOption"
+        ],
+        "answer": "questsNorthCliffsThirdQuests.questTwelveFirstOption"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "Die Zimmerreinigung kommt um vierzehn Uhr. Bitte nicht stören bis dreizehn Uhr.",
+        "question": "questsNorthCliffsThirdQuests.questThirteen",
+        "options": [
+          "14:00",
+          "13:00",
+          "15:00"
+        ],
+        "answer": "14:00"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "questsNorthCliffsThirdQuests.questFourteen",
+        "words": [
+          "Bitte",
+          "nicht",
+          "stören"
+        ],
+        "correctOrder": [
+          "Bitte",
+          "nicht",
+          "stören"
+        ]
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "questsNorthCliffsThirdQuests.questFifteen",
+        "text": "Ich brauche mehr Handtücher.",
+        "answer": "Ich brauche mehr Handtücher."
+      }
+    ]
+  },
+  {
+    "questId": "reise-hotel-4",
+    "title": "questsNorthCliffsFourthQuests.title",
+    "progress": "0/15",
+    "description": "questsNorthCliffsFourthQuests.description",
+    "conditions": {
+      "goal": "Wo?/Wann?, Frühstückszeiten, Aufzug/Treppe, Parkplatz, WLAN-Passwort, kostenlos/geöffnet",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "questsNorthCliffsFourthQuests.questOne",
+        "options": [
+          "questsNorthCliffsFourthQuests.questOneFirstOption",
+          "questsNorthCliffsFourthQuests.questOneSecondOption",
+          "questsNorthCliffsFourthQuests.questOneThirdOption"
+        ],
+        "answer": "questsNorthCliffsFourthQuests.questOneFirstOption"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "",
+        "options": [
+          "questsNorthCliffsFourthQuests.questTwoFirstOption",
+          "questsNorthCliffsFourthQuests.questTwoSecondOption",
+          "questsNorthCliffsFourthQuests.questTwoThirdOption"
+        ],
+        "answer": "questsNorthCliffsFourthQuests.questTwoFirstOption"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "questsNorthCliffsFourthQuests.questThird",
+        "options": [
+          "questsNorthCliffsFourthQuests.questThirdFirstOption",
+          "questsNorthCliffsFourthQuests.questThirdSecondOption",
+          "questsNorthCliffsFourthQuests.questThirdThirdOption"
+        ],
+        "answer": "questsNorthCliffsFourthQuests.questThirdFirstOption"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "questsNorthCliffsFourthQuests.questFour",
+        "options": [
+          "questsNorthCliffsFourthQuests.questFourFirstOption",
+          "questsNorthCliffsFourthQuests.questFourSecondOption",
+          "questsNorthCliffsFourthQuests.questFourThirdOption"
+        ],
+        "answer": "questsNorthCliffsFourthQuests.questFourFirstOption"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "questsNorthCliffsFourthQuests.questFive",
+        "words": [
+          "Aufzug",
+          "ист",
+          "der",
+          "Wo"
+        ],
+        "correctOrder": [
+          "Wo",
+          "ist",
+          "der",
+          "Aufzug"
+        ]
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "questsNorthCliffsFourthQuests.questSix",
+        "text": "Wann ist das Frühstück?",
+        "answer": "Wann ist das Frühstück?"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "questsNorthCliffsFourthQuests.questSeven",
+        "words": [
+          "Der",
+          "rechts",
+          "ist",
+          "Aufzug"
+        ],
+        "correctOrder": [
+          "Der",
+          "Aufzug",
+          "ist",
+          "rechts"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "questsNorthCliffsFourthQuests.questEight",
+        "text": "Das Frühstück ist von sieben bis zehn Uhr.",
+        "answer": "Das Frühstück ist von sieben bis zehn Uhr."
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Das Frühstück ist von sieben bis zehn Uhr. Der Parkplatz ist kostenlos.",
+        "question": "questsNorthCliffsFourthQuests.questNine",
+        "options": [
+          "questsNorthCliffsFourthQuests.questNineFirstOption",
+          "questsNorthCliffsFourthQuests.questNineSecondOption",
+          "questsNorthCliffsFourthQuests.questNineThirdOption"
+        ],
+        "answer": "questsNorthCliffsFourthQuests.questNineFirstOption"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Переведи: kostenlos",
+        "options": [
+          "questsNorthCliffsFourthQuests.questTenFirstOption",
+          "questsNorthCliffsFourthQuests.questTenSecondOption",
+          "questsNorthCliffsFourthQuests.questTenThirdOption"
+        ],
+        "answer": "questsNorthCliffsFourthQuests.questTenFirstOption"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "questsNorthCliffsFourthQuests.questEleven",
+        "words": [
+          "geöffnet",
+          "heute",
+          "Restaurant",
+          "das",
+          "Ist"
+        ],
+        "correctOrder": [
+          "Ist",
+          "das",
+          "Restaurant",
+          "heute",
+          "geöffnet"
+        ]
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "questsNorthCliffsFourthQuests.questTwelve",
+        "text": "Ich brauche das WLAN-Passwort.",
+        "answer": "Ich brauche das WLAN-Passwort."
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "Check-out ist bis elf Uhr. Später? Fragen Sie an der Rezeption.",
+        "question": "questsNorthCliffsFourthQuests.questThirteen",
+        "options": [
+          "questsNorthCliffsFourthQuests.questThirteenFirstOption",
+          "questsNorthCliffsFourthQuests.questThirteenSecondOption",
+          "questsNorthCliffsFourthQuests.questThirteenThirdOption"
+        ],
+        "answer": "questsNorthCliffsFourthQuests.questThirteenFirstOption"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "questsNorthCliffsFourthQuests.questFourteen",
+        "words": [
+          "Können",
+          "Sie",
+          "mir",
+          "die",
+          "Rechnung",
+          "geben"
+        ],
+        "correctOrder": [
+          "Können",
+          "Sie",
+          "mir",
+          "die",
+          "Rechnung",
+          "geben"
+        ]
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "questsNorthCliffsFourthQuests.questFifteen",
+        "text": "Wo ist die Rezeption?",
+        "answer": "Wo ist die Rezeption?"
+      }
+    ]
+  },
+  {
+    "questId": "reise-hotel-5",
+    "title": "",
+    "progress": "0/15",
+    "description": "questsNorthCliffsFifthQuests.description",
+    "conditions": {
+      "goal": "questsNorthCliffsFifthQuests.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "",
+        "options": [
+          "questsNorthCliffsFifthQuests.questOneFirstOption",
+          "questsNorthCliffsFifthQuests.questOneSecondOption",
+          "questsNorthCliffsFifthQuests.questOneThirdOption"
+        ],
+        "answer": "questOneFirstOption"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "questsNorthCliffsFifthQuests.questTwo",
+        "options": [
+          "questsNorthCliffsFifthQuests.questTwoFirstOption",
+          "questsNorthCliffsFifthQuests.questTwoSecondOption",
+          "questsNorthCliffsFifthQuests.questTwoThirdOption"
+        ],
+        "answer": "questsNorthCliffsFifthQuests.questTwoFirstOption"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "questsNorthCliffsFifthQuests.questThird",
+        "options": [
+          "questsNorthCliffsFifthQuests.questThirdFirstOption",
+          "questsNorthCliffsFifthQuests.questThirdSecondOption",
+          "questsNorthCliffsFifthQuests.questThirdThirdOption"
+        ],
+        "answer": "questsNorthCliffsFifthQuests.questThirdFirstOption"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "questsNorthCliffsFifthQuests.questFour",
+        "options": [
+          "questsNorthCliffsFifthQuests.questFourFirstOption",
+          "questsNorthCliffsFifthQuests.questFourSecondOption",
+          "questsNorthCliffsFifthQuests.questFourThirdOption"
+        ],
+        "answer": "questsNorthCliffsFifthQuests.questFourFirstOption"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "questsNorthCliffsFifthQuests.questFive",
+        "options": [
+          "Ein Taxi, bitte.",
+          "Ich brauche ein Zimmer.",
+          "Wo ist der Aufzug?"
+        ],
+        "answer": "Ein Taxi, bitte."
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "questsNorthCliffsFifthQuests.questSix",
+        "text": "Ich möchte mit Karte bezahlen.",
+        "answer": "Ich möchte mit Karte bezahlen."
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "questsNorthCliffsFifthQuests.questSeven",
+        "words": [
+          "auschecken",
+          "später",
+          "ich",
+          "Kann"
+        ],
+        "correctOrder": [
+          "Kann",
+          "ich",
+          "später",
+          "auschecken"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "questsNorthCliffsFifthQuests.questEight",
+        "text": "Kann ich mein Gepäck hier lassen?",
+        "answer": "Kann ich mein Gepäck hier lassen?"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Die Rechnung bekommen Sie an der Rezeption.",
+        "question": "questsNorthCliffsFifthQuests.questNine",
+        "options": [
+          "questsNorthCliffsFifthQuests.questNineFirstOption",
+          "questsNorthCliffsFifthQuests.questNineSecondOption",
+          "questsNorthCliffsFifthQuests.questNineThirdOption"
+        ],
+        "answer": "questsNorthCliffsFifthQuests.questNineFirstOption"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "questsNorthCliffsFifthQuests.questTen",
+        "options": [
+          "questsNorthCliffsFifthQuests.questTenFirstOption",
+          "questsNorthCliffsFifthQuests.questTenSecondOption",
+          "questsNorthCliffsFifthQuests.questTenThirdOption"
+        ],
+        "answer": "questsNorthCliffsFifthQuests.questTenFirstOption"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "questsNorthCliffsFifthQuests.questEleven",
+        "words": [
+          "Flughafen",
+          "ist",
+          "der",
+          "Wo"
+        ],
+        "correctOrder": [
+          "Wo",
+          "ist",
+          "der",
+          "Flughafen"
+        ]
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "questsNorthCliffsFifthQuests.questTwelve",
+        "text": "Ich brauche eine Quittung.",
+        "answer": "Ich brauche eine Quittung."
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "Achtung: Der Aufzug funktioniert nicht. Bitte nehmen Sie die Treppe neben der Rezeption.",
+        "question": "questsNorthCliffsFifthQuests.questThirteen",
+        "options": [
+          "questsNorthCliffsFifthQuests.questThirteenFirstOption",
+          "questsNorthCliffsFifthQuests.questThirteenSecondOption",
+          "questsNorthCliffsFifthQuests.questThirteenThirdOption"
+        ],
+        "answer": "questsNorthCliffsFifthQuests.questThirteenFirstOption"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "questsNorthCliffsFifthQuests.questFourteen",
+        "words": [
+          "Gepäck",
+          "Das",
+          "mein",
+          "ist"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "mein",
+          "Gepäck"
+        ]
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "questsNorthCliffsFifthQuests.questFifteen",
+        "text": "Können Sie mir ein Taxi zum Flughafen bestellen?",
+        "answer": "Können Sie mir ein Taxi zum Flughafen bestellen?"
+      }
+    ]
+  },
+  {
+    "questId": "reise-hotel-6",
+    "title": "questsNorthCliffsSixthQuests.title",
+    "progress": "0/15",
+    "description": "questsNorthCliffsSixthQuests.description",
+    "conditions": {
+      "goal": "questsNorthCliffsSixthQuests.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "readAndAnswer",
+        "text": "Guten Tag! Ich habe eine Reservierung für zwei Nächte.",
+        "question": "questsNorthCliffsSixthQuests.questOne",
+        "options": [
+          "questsNorthCliffsSixthQuests.questOneFirstOption",
+          "questsNorthCliffsSixthQuests.questOneSecondOption",
+          "questsNorthCliffsSixthQuests.questOneThirdOption"
+        ],
+        "answer": "questOneFirstOption"
+      },
+      {
+        "id": 2,
+        "type": "reorder",
+        "question": "questsNorthCliffsSixthQuests.questTwo",
+        "words": [
+          "eine",
+          "Ich",
+          "habe",
+          "Reservierung"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "eine",
+          "Reservierung"
+        ]
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "questsNorthCliffsSixthQuests.questThird",
+        "text": "Ich brauche ein ruhiges Zimmer.",
+        "answer": "Ich brauche ein ruhiges Zimmer."
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "questsNorthCliffsSixthQuests.questFour",
+        "words": [
+          "Frühstück",
+          "bis",
+          "von",
+          "sieben",
+          "ist",
+          "Uhr",
+          "zehn"
+        ],
+        "correctOrder": [
+          "Frühstück",
+          "ist",
+          "von",
+          "sieben",
+          "bis",
+          "zehn",
+          "Uhr"
+        ]
+      },
+      {
+        "id": 5,
+        "type": "readAndAnswer",
+        "text": "Check-out ist um elf Uhr. Ich bezahle mit Karte.",
+        "question": "",
+        "options": [
+          "questsNorthCliffsSixthQuests.questFifthFirstOption",
+          "questsNorthCliffsSixthQuests.questFifthSecondOption",
+          "questsNorthCliffsSixthQuests.questFifthThirdOption"
+        ],
+        "answer": "questsNorthCliffsSixthQuests.questFifthFirstOption"
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "questsNorthCliffsSixthQuests.questSix",
+        "text": "Kann ich später auschecken?",
+        "answer": "Kann ich später auschecken?"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "questsNorthCliffsSixthQuests.questSeven",
+        "words": [
+          "Karte",
+          "bezahle",
+          "mit",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bezahle",
+          "mit",
+          "Karte"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "readAndAnswer",
+        "text": "Der Aufzug ist rechts.",
+        "question": "",
+        "options": [
+          "questsNorthCliffsSixthQuests.questEightFirstOption",
+          "questsNorthCliffsSixthQuests.questEightSecondOption",
+          "questsNorthCliffsSixthQuests.questEightThirdOption"
+        ],
+        "answer": "questsNorthCliffsSixthQuests.questEightFirstOption"
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "questsNorthCliffsSixthQuests.questNine",
+        "text": "Wo ist die Rezeption?",
+        "answer": "Wo ist die Rezeption?"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "questsNorthCliffsSixthQuests.questTen",
+        "words": [
+          "Handtücher",
+          "Ich",
+          "zwei",
+          "brauche"
+        ],
+        "correctOrder": [
+          "Ich",
+          "brauche",
+          "zwei",
+          "Handtücher"
+        ]
+      },
+      {
+        "id": 11,
+        "type": "readAndAnswer",
+        "text": "Check-in ist ab 14 Uhr. Der Parkplatz ist kostenlos.",
+        "question": "questsNorthCliffsSixthQuests.questEleven",
+        "options": [
+          "questsNorthCliffsSixthQuests.questElevenFirstOption",
+          "questsNorthCliffsSixthQuests.questElevenSecondOption",
+          "questsNorthCliffsSixthQuests.questElevenThirdOption"
+        ],
+        "answer": "questsNorthCliffsSixthQuests.questElevenFirstOption"
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "questsNorthCliffsSixthQuests.questTwelve",
+        "text": "Können Sie mir ein Taxi zum Flughafen bestellen?",
+        "answer": "Können Sie mir ein Taxi zum Flughafen bestellen?"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "questsNorthCliffsSixthQuests.questThirteen",
+        "words": [
+          "Ich",
+          "brauche",
+          "eine",
+          "Quittung"
+        ],
+        "correctOrder": [
+          "Ich",
+          "brauche",
+          "eine",
+          "Quittung"
+        ]
+      },
+      {
+        "id": 14,
+        "type": "readAndAnswer",
+        "text": "Achtung: Das WLAN funktioniert nicht. Bitte nicht stören.",
+        "question": "questsNorthCliffsSixthQuests.questFourteen",
+        "options": [
+          "questsNorthCliffsSixthQuests.questFourteenFirstOption",
+          "questsNorthCliffsSixthQuests.questFourteenSecondOption",
+          "questsNorthCliffsSixthQuests.questFourteenThirdOption"
+        ],
+        "answer": "questsNorthCliffsSixthQuests.questFourteenFirstOption"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "questsNorthCliffsSixthQuests.questFifteen",
+        "text": "Vielen Dank und auf Wiedersehen.",
+        "answer": "Vielen Dank und auf Wiedersehen."
+      }
+    ]
+  },
+  {
+    "questId": "reise-hotel-7",
+    "title": "questsNorthCliffsSeventhQuests.title",
+    "progress": "0/15",
+    "description": "questsNorthCliffsSeventhQuests.description",
+    "conditions": {
+      "goal": "questsNorthCliffsSeventhQuests.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "readAndAnswer",
+        "text": "Guten Tag! Ich habe eine Reservierung. Ein Doppelzimmer für zwei Nächte.",
+        "question": "questsNorthCliffsSeventhQuests.questOne",
+        "options": [
+          "questsNorthCliffsSeventhQuests.questOneFirstOption",
+          "questsNorthCliffsSeventhQuests.questOneSecondOption",
+          "questsNorthCliffsSeventhQuests.questOneThirdOption"
+        ],
+        "answer": "questsNorthCliffsSeventhQuests.questOneSecondOption"
+      },
+      {
+        "id": 2,
+        "type": "reorder",
+        "question": "questsNorthCliffsSeventhQuests.questTwo",
+        "words": [
+          "Zimmer",
+          "frei",
+          "Ist",
+          "ein"
+        ],
+        "correctOrder": [
+          "Ist",
+          "ein",
+          "Zimmer",
+          "frei"
+        ]
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "questsNorthCliffsSeventhQuests.questThird",
+        "text": "Ich brauche die Schlüsselkarte.",
+        "answer": "Ich brauche die Schlüsselkarte."
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "questsNorthCliffsSeventhQuests.questFour",
+        "words": [
+          "rechts",
+          "ist",
+          "Aufzug",
+          "Der"
+        ],
+        "correctOrder": [
+          "Der",
+          "Aufzug",
+          "ist",
+          "rechts"
+        ]
+      },
+      {
+        "id": 5,
+        "type": "readAndAnswer",
+        "text": "Das Frühstück ist von sieben bis zehn Uhr. Das WLAN-Passwort gibt es an der Rezeption.",
+        "question": "questsNorthCliffsSeventhQuests.questFive",
+        "options": [
+          "questsNorthCliffsSeventhQuests.questFiveFirstOption",
+          "questsNorthCliffsSeventhQuests.questFiveSecondOption",
+          "questsNorthCliffsSeventhQuests.questFiveThirdOption"
+        ],
+        "answer": "questsNorthCliffsSeventhQuests.questFiveFirstOption"
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "questsNorthCliffsSeventhQuests.questSix",
+        "text": "Die Heizung funktioniert nicht.",
+        "answer": "Die Heizung funktioniert nicht."
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "questsNorthCliffsSeventhQuests.questSeven",
+        "words": [
+          "Problem",
+          "gibt",
+          "ein",
+          "Es",
+          "Zimmer",
+          "im"
+        ],
+        "correctOrder": [
+          "Es",
+          "gibt",
+          "ein",
+          "Problem",
+          "im",
+          "Zimmer"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "readAndAnswer",
+        "text": "Ich brauche zwei Handtücher und ein Kissen.",
+        "question": "questsNorthCliffsSeventhQuests.questEight",
+        "options": [
+          "questsNorthCliffsSeventhQuests.questEightFirstOption",
+          "questsNorthCliffsSeventhQuests.questEightSecondOption",
+          "questsNorthCliffsSeventhQuests.questEightThirdOption"
+        ],
+        "answer": "questsNorthCliffsSeventhQuests.questEightFirstOption"
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "questsNorthCliffsSeventhQuests.questNine",
+        "text": "Kann ich später auschecken?",
+        "answer": "Kann ich später auschecken?"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "questsNorthCliffsSeventhQuests.questTen",
+        "words": [
+          "bar",
+          "bezahle",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bezahle",
+          "bar"
+        ]
+      },
+      {
+        "id": 11,
+        "type": "readAndAnswer",
+        "text": "Das Taxi zum Flughafen kommt um zehn Uhr.",
+        "question": "questsNorthCliffsSeventhQuests.questEleven",
+        "options": [
+          "questsNorthCliffsSeventhQuests.questElevenFirstOption",
+          "questsNorthCliffsSeventhQuests.questElevenSecondOption",
+          "questsNorthCliffsSeventhQuests.questElevenThirdOption"
+        ],
+        "answer": "questsNorthCliffsSeventhQuests.questElevenFirstOption"
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "questsNorthCliffsSeventhQuests.questTwelve",
+        "text": "Ich brauche die Rechnung.",
+        "answer": "Ich brauche die Rechnung."
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "questsNorthCliffsSeventhQuests.questThirteen",
+        "words": [
+          "Treppe",
+          "die",
+          "ist",
+          "Wo"
+        ],
+        "correctOrder": [
+          "Wo",
+          "ist",
+          "die",
+          "Treppe"
+        ]
+      },
+      {
+        "id": 14,
+        "type": "readAndAnswer",
+        "text": "Achtung: Das WLAN funktioniert nicht. Bitte nicht stören.",
+        "question": "questsNorthCliffsSeventhQuests.questFourteen",
+        "options": [
+          "questsNorthCliffsSeventhQuests",
+          "questsNorthCliffsSeventhQuests",
+          "questsNorthCliffsSeventhQuests"
+        ],
+        "answer": "Wi-Fi"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "questsNorthCliffsSeventhQuests.questFourteenThirdOption",
+        "text": "Auf Wiedersehen.",
+        "answer": "Auf Wiedersehen."
+      }
+    ]
+  },
+  {
+    "questId": "reise-verkehr-8",
+    "title": "Поездка — транспорт по городу",
+    "progress": "0/15",
+    "description": "Автобус, метро, остановка и вокзал. Покупаешь билет, спрашиваешь дорогу и время.",
+    "conditions": {
+      "goal": "Использовать базовые фразы в городском транспорте: Bus, U-Bahn, Haltestelle, Bahnhof, Ticket; спрашивать «Wo/ Wohin …?» и время прибытия.",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 240,
+      "xp": 350
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "die Haltestelle",
+        "options": [
+          "Остановка",
+          "Лестница",
+          "Лифт"
+        ],
+        "answer": "Остановка"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "der Bahnhof",
+        "options": [
+          "Вокзал",
+          "Аэропорт",
+          "Кафе"
+        ],
+        "answer": "Вокзал"
+      },
+      {
+        "id": 3,
+        "type": "reorder",
+        "question": "Собери вопрос: Куда едет этот автобус?",
+        "words": [
+          "Wohin",
+          "Bus",
+          "dieser",
+          "fährt"
+        ],
+        "correctOrder": [
+          "Wohin",
+          "fährt",
+          "dieser",
+          "Bus"
+        ]
+      },
+      {
+        "id": 4,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Der Bus kommt um zehn Uhr",
+        "answer": "Der Bus kommt um zehn Uhr"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Как сказать: «Один билет, пожалуйста»",
+        "options": [
+          "Ein Ticket, bitte",
+          "Wo ist der Bahnhof?",
+          "Guten Abend"
+        ],
+        "answer": "Ein Ticket, bitte"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Собери: Я еду на метро",
+        "words": [
+          "mit",
+          "der",
+          "Ich",
+          "fahre",
+          "U-Bahn"
+        ],
+        "correctOrder": [
+          "Ich",
+          "fahre",
+          "mit",
+          "der",
+          "U-Bahn"
+        ]
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Zwei Tickets, bitte",
+        "answer": "Zwei Tickets, bitte"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "Как сказать: «Где вокзал?»",
+        "options": [
+          "Wo ist der Bahnhof?",
+          "Wann ist Frühstück?",
+          "Wie viel kostet das?"
+        ],
+        "answer": "Wo ist der Bahnhof?"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Die U-Bahn kommt um zwölf Uhr zehn. Der Bus kommt um zwölf Uhr zwanzig.",
+        "question": "Что приходит раньше?",
+        "options": [
+          "Метро",
+          "Автобус",
+          "Одинаково"
+        ],
+        "answer": "Метро"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Как сказать водителю: «К вокзалу, пожалуйста»",
+        "options": [
+          "Zum Bahnhof, bitte",
+          "Zur Rezeption, bitte",
+          "Mit Frühstück, bitte"
+        ],
+        "answer": "Zum Bahnhof, bitte"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Собери: Билет в метро, пожалуйста",
+        "words": [
+          "bitte",
+          "für",
+          "Ticket",
+          "die",
+          "U-Bahn",
+          "Ein"
+        ],
+        "correctOrder": [
+          "Ein",
+          "Ticket",
+          "für",
+          "die",
+          "U-Bahn",
+          "bitte"
+        ]
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Der Zug fährt nach Berlin",
+        "answer": "Der Zug fährt nach Berlin"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "Der Bus kommt um zehn Uhr. Die U-Bahn kommt um elf Uhr fünf.",
+        "question": "Во сколько приходит метро?",
+        "options": [
+          "11:05",
+          "10:00",
+          "12:00"
+        ],
+        "answer": "11:05"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "Собери вопрос: Где остановка?",
+        "words": [
+          "Wo",
+          "die",
+          "ist",
+          "Haltestelle"
+        ],
+        "correctOrder": [
+          "Wo",
+          "ist",
+          "die",
+          "Haltestelle"
+        ]
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ich brauche zwei Tickets",
+        "answer": "Ich brauche zwei Tickets"
+      }
+    ]
+  },
+  {
+    "questId": "reise-bahn-9",
+    "title": "Поезд — вокзал и платформы",
+    "progress": "0/15",
+    "description": "Платформа/путь, отправление/прибытие, задержка. Где садиться и когда приезжает поезд.",
+    "conditions": {
+      "goal": "Понимать объявления и задавать вопросы на вокзале: Gleis, Bahnsteig, Abfahrt, Ankunft, Verspätung, umsteigen, Fahrplan.",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "das Gleis",
+        "options": [
+          "Путь(платформа)",
+          "Билет",
+          "Лифт"
+        ],
+        "answer": "Путь (платформа)"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "die Ankunft",
+        "options": [
+          "Прибытие",
+          "Отправление",
+          "Пересадка"
+        ],
+        "answer": "Прибытие"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "die Abfahrt",
+        "options": [
+          "Отправление",
+          "Прибытие",
+          "Пересадка"
+        ],
+        "answer": "Отправление"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "die Ankunft",
+        "options": [
+          "Прибытие",
+          "Отправление",
+          "Бронь"
+        ],
+        "answer": "Прибытие"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "Собери: Поезд отправляется с пути 4",
+        "words": [
+          "ab",
+          "4",
+          "fährt",
+          "von",
+          "Gleis",
+          "Zug",
+          "Der"
+        ],
+        "correctOrder": [
+          "Der",
+          "Zug",
+          "fährt",
+          "von",
+          "Gleis",
+          "4",
+          "ab"
+        ]
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Der Zug hat Verspätung",
+        "answer": "Der Zug hat Verspätung"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Собери вопрос: С какого пути отправляется поезд?",
+        "words": [
+          "welchem",
+          "Von",
+          "Gleis",
+          "der",
+          "fährt",
+          "Zug",
+          "ab"
+        ],
+        "correctOrder": [
+          "Von",
+          "welchem",
+          "Gleis",
+          "fährt",
+          "der",
+          "Zug",
+          "ab"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ankunft um fünfzehn Uhr",
+        "answer": "Ankunft um fünfzehn Uhr"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Abfahrt: 10:20. Ankunft: 12:05. Der Zug fährt von Gleis 7.",
+        "question": "С какого пути отправляется поезд?",
+        "options": [
+          "7",
+          "5",
+          "2"
+        ],
+        "answer": "7"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "umsteigen",
+        "options": [
+          "Делать пересадку",
+          "Оплачивать",
+          "Бронировать"
+        ],
+        "answer": "Делать пересадку"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Собери: Я пересаживаюсь в Лейпциге",
+        "words": [
+          "Ich",
+          "Leipzig",
+          "um",
+          "steige",
+          "in"
+        ],
+        "correctOrder": [
+          "Ich",
+          "steige",
+          "in",
+          "Leipzig",
+          "um"
+        ]
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Der Zug kommt um halb neun an",
+        "answer": "Der Zug kommt um halb neun an"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "Der Zug nach Köln hat zwanzig Minuten Verspätung.",
+        "question": "На сколько задерживается поезд?",
+        "options": [
+          "На 20 минут",
+          "На 12 минут",
+          "На 2 часа"
+        ],
+        "answer": "На 20 минут"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "Собери: Где платформа 3?",
+        "words": [
+          "Bahnsteig",
+          "der",
+          "ist",
+          "Wo",
+          "3"
+        ],
+        "correctOrder": [
+          "Wo",
+          "ist",
+          "der",
+          "Bahnsteig",
+          "3"
+        ]
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ich suche den Fahrplan",
+        "answer": "Ich suche den Fahrplan"
+      }
+    ]
+  },
+  {
+    "questId": "reise-flughafen-1",
+    "title": "Поездка — аэропорт и перелёт",
+    "progress": "0/15",
+    "description": "Регистрация, безопасность, выход на посадку, прилёт.",
+    "conditions": {
+      "goal": "Ориентироваться в аэропорту: Abflug/Ankunft, Gate, Bordkarte, Sicherheitskontrolle, Handgepäck, Gepäckausgabe, Verspätung.",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 240,
+      "xp": 350
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "der Abflug",
+        "options": [
+          "Вылет",
+          "Прилёт",
+          "Посадка"
+        ],
+        "answer": "Вылет"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "die Ankunft",
+        "options": [
+          "Прилёт",
+          "Регистрация",
+          "Контроль"
+        ],
+        "answer": "Прилёт"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "die Bordkarte",
+        "options": [
+          "Посадочный талон",
+          "Паспорт",
+          "Багажная бирка"
+        ],
+        "answer": "Посадочный талон"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "das Gate",
+        "options": [
+          "Выход на посадку",
+          "Перрон",
+          "Стойка регистрации"
+        ],
+        "answer": "Выход на посадку"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "Собери вопрос: «Где выход A12?»",
+        "words": [
+          "ist",
+          "das",
+          "Gate",
+          "Wo",
+          "A12"
+        ],
+        "correctOrder": [
+          "Wo",
+          "ist",
+          "das",
+          "Gate",
+          "A12"
+        ]
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ich habe eine Bordkarte",
+        "answer": "Ich habe eine Bordkarte"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "die Sicherheitskontrolle",
+        "options": [
+          "Контроль безопасности",
+          "Зал ожидания",
+          "Паспортный контроль"
+        ],
+        "answer": "Контроль безопасности"
+      },
+      {
+        "id": 8,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": [
+          "ist",
+          "dort",
+          "Die",
+          "Sicherheitskontrolle"
+        ],
+        "correctOrder": [
+          "Die",
+          "Sicherheitskontrolle",
+          "ist",
+          "dort"
+        ]
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Abflug 16:20, Gate B5. Boarding um 15:50.",
+        "question": "Во сколько начинается посадка?",
+        "options": [
+          "15:50",
+          "16:20",
+          "15:20"
+        ],
+        "answer": "15:50"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "das Handgepäck",
+        "options": [
+          "Ручная кладь",
+          "Основной багаж",
+          "Чемодан на колёсах"
+        ],
+        "answer": "Ручная кладь"
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Wo ist die Gepäckausgabe",
+        "answer": "Wo ist die Gepäckausgabe"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": [
+          "hat",
+          "Verspätung",
+          "Der",
+          "Flug"
+        ],
+        "correctOrder": [
+          "Der",
+          "Flug",
+          "hat",
+          "Verspätung"
+        ]
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "der Sitzplatz",
+        "options": [
+          "Место (в самолёте)",
+          "Выход",
+          "Проход"
+        ],
+        "answer": "Место (в самолёте)"
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Entschuldigung, wo ist Gate C3",
+        "answer": "Entschuldigung, wo ist Gate C3"
+      },
+      {
+        "id": 15,
+        "type": "readAndAnswer",
+        "text": "Achtung! Bitte gehen Sie sofort zum Gate B7. Das Boarding beginnt jetzt.",
+        "question": "К какому выходу нужно идти?",
+        "options": [
+          "К B7",
+          "К A7",
+          "К B17"
+        ],
+        "answer": "К B7"
+      }
+    ]
+  },
+  {
+    "questId": "reise-mix-11",
+    "title": "Поездка — итоговая практика",
+    "progress": "0/15",
+    "description": "Отель, транспорт по городу, вокзал и аэропорт. Новых слов нет — только применение в новых ситуациях.",
+    "conditions": {
+      "goal": "Повторить и комбинировать: Rezeption/Reservierung/Zimmer, Frühstück, Aufzug/Treppe, WLAN, Rechnung/Quittung, bezahlen (bar/Karte), Taxi/Flughafen, Bahnhof/Haltestelle/Bus/U-Bahn/Ticket, Abfahrt/Ankunft/Gleis/Verspätung, Sicherheitskontrolle/Gate/Bordkarte/Handgepäck/Gepäckausgabe.",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 270,
+      "xp": 380
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "readAndAnswer",
+        "text": "An der Rezeption: „Guten Abend! Ein Einzelzimmer für zwei Nächte, 70 Euro pro Nacht. Check-in ab 14 Uhr.”",
+        "question": "Сколько стоит ночь?",
+        "options": [
+          "70 евро",
+          "60 евро",
+          "80 евро"
+        ],
+        "answer": "70 евро"
+      },
+      {
+        "id": 2,
+        "type": "reorder",
+        "question": "Собери просьбу у стойки:",
+        "words": [
+          "Ich",
+          "brauche",
+          "die",
+          "Schlüsselkarte"
+        ],
+        "correctOrder": [
+          "Ich",
+          "brauche",
+          "die",
+          "Schlüsselkarte"
+        ]
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ich bezahle mit Karte.",
+        "answer": "Ich bezahle mit Karte."
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "die Quittung",
+        "options": [
+          "Квитанция (чек)",
+          "Ключ-карта",
+          "Пароль от Wi-Fi"
+        ],
+        "answer": "Квитанция (чек)"
+      },
+      {
+        "id": 5,
+        "type": "readAndAnswer",
+        "text": "Abfahrt 09:15 von Gleis 3. Ankunft 11:05. Der Zug hat zehn Minuten Verspätung.",
+        "question": "На сколько задерживается поезд?",
+        "options": [
+          "На 10 минут",
+          "На 5 минут",
+          "Без задержки"
+        ],
+        "answer": "На 10 минут"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Собери вопрос в аэропорту:",
+        "words": [
+          "Sicherheitskontrolle",
+          "ist",
+          "die",
+          "Wo"
+        ],
+        "correctOrder": [
+          "Wo",
+          "ist",
+          "die",
+          "Sicherheitskontrolle"
+        ]
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ich habe eine Bordkarte und Handgepäck.",
+        "answer": "Ich habe eine Bordkarte und Handgepäck."
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "die Gepäckausgabe",
+        "options": [
+          "Выдача багажа",
+          "Регистрация на рейс",
+          "Паспортный контроль"
+        ],
+        "answer": "Выдача багажа"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Der Bus zum Flughafen fährt um 6:30 und um 7:00. Die U-Bahn fährt um 6:45.",
+        "question": "Что отправляется в 6:45?",
+        "options": [
+          "Метро",
+          "Автобус",
+          "Такси"
+        ],
+        "answer": "Метро"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "Скажи водителю:",
+        "words": [
+          "Bahnhof",
+          "Zum",
+          "bitte"
+        ],
+        "correctOrder": [
+          "Zum",
+          "Bahnhof",
+          "bitte"
+        ]
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ich habe eine Reservierung.",
+        "answer": "Ich habe eine Reservierung."
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "kostenlos",
+        "options": [
+          "бесплатно",
+          "дорого",
+          "закрыто"
+        ],
+        "answer": "бесплатно"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "Achtung: Der Aufzug ist links. Die Treppe ist rechts. Bitte nicht stören.",
+        "question": "Где находится лифт?",
+        "options": [
+          "Слева",
+          "Справа",
+          "Не указано"
+        ],
+        "answer": "Слева"
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Kann ich mein Gepäck hier lassen?",
+        "answer": "Kann ich mein Gepäck hier lassen?"
+      },
+      {
+        "id": 15,
+        "type": "readAndAnswer",
+        "text": "Boarding um 18:20 am Gate A4.",
+        "question": "К какому выходу (Gate) нужно идти?",
+        "options": [
+          "A4",
+          "B4",
+          "A14"
+        ],
+        "answer": "A4"
+      }
+    ]
+  },
+  {
+    "questId": "reise-mix-12",
+    "title": "Поездка — ещё практика",
+    "progress": "0/15",
+    "description": "Новые мини-ситуации: отель, городской транспорт, вокзал и аэропорт. Новых слов нет — только применение.",
+    "conditions": {
+      "goal": "Комбинировать выученное: Rezeption/Zimmer/Frühstück/WLAN/Aufzug/Treppe, Rechnung/Quittung, bezahlen (bar/Karte), Taxi/Flughafen, Haltestelle/Bahnhof/Bus/U-Bahn/Ticket, Abfahrt/Ankunft/Gleis/Verspätung, Sicherheitskontrolle/Gate/Bordkarte/Gepäckausgabe.",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 275,
+      "xp": 390
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "readAndAnswer",
+        "text": "Frühstück von acht bis zehn Uhr. Check-out bis zwölf Uhr. Parkplatz kostenlos.",
+        "question": "До скольки чек-аут?",
+        "options": [
+          "до 12",
+          "до 10",
+          "до 14"
+        ],
+        "answer": "до 12"
+      },
+      {
+        "id": 2,
+        "type": "reorder",
+        "question": "Собери фразу о номере:",
+        "words": [
+          "Ein",
+          "Doppelzimmer",
+          "für",
+          "zwei",
+          "Nächte"
+        ],
+        "correctOrder": [
+          "Ein",
+          "Doppelzimmer",
+          "für",
+          "zwei",
+          "Nächte"
+        ]
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ich bezahle bar.",
+        "answer": "Ich bezahle bar."
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "die Treppe",
+        "options": [
+          "Лестница",
+          "Лифт",
+          "Парковка"
+        ],
+        "answer": "Лестница"
+      },
+      {
+        "id": 5,
+        "type": "readAndAnswer",
+        "text": "Abfahrt 08:40 von Gleis 5. Ankunft 10:10. Verspätung 5 Minuten.",
+        "question": "С какого пути отправляется поезд?",
+        "options": [
+          "5",
+          "8",
+          "10"
+        ],
+        "answer": "5"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Собери вопрос на вокзале:",
+        "words": [
+          "Wo",
+          "ist",
+          "der",
+          "Bahnsteig",
+          "2"
+        ],
+        "correctOrder": [
+          "Wo",
+          "ist",
+          "der",
+          "Bahnsteig",
+          "2"
+        ]
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ich fahre mit der U-Bahn.",
+        "answer": "Ich fahre mit der U-Bahn."
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "das Ticket",
+        "options": [
+          "Билет",
+          "Перрон",
+          "Лифт"
+        ],
+        "answer": "Билет"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Abflug 21:05, Gate C1. Boarding um 20:35.",
+        "question": "Во сколько начинается посадка?",
+        "options": [
+          "20:35",
+          "21:05",
+          "20:15"
+        ],
+        "answer": "20:35"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "Собери жалобу в номер:",
+        "words": [
+          "Das",
+          "WLAN",
+          "funktioniert",
+          "nicht"
+        ],
+        "correctOrder": [
+          "Das",
+          "WLAN",
+          "funktioniert",
+          "nicht"
+        ]
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Können Sie mir ein Taxi bestellen?",
+        "answer": "Können Sie mir ein Taxi bestellen?"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "die Bordkarte",
+        "options": [
+          "Посадочный талон",
+          "Выдача багажа",
+          "Паспортный контроль"
+        ],
+        "answer": "Посадочный талон"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "Der Bus fährt um 13:10, 13:20 und 13:40. Die U-Bahn fährt um 13:30.",
+        "question": "Когда следующий автобус после 13:10?",
+        "options": [
+          "13:20",
+          "13:30",
+          "13:40"
+        ],
+        "answer": "13:20"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "Собери табличку на двери:",
+        "words": [
+          "Bitte",
+          "nicht",
+          "stören"
+        ],
+        "correctOrder": [
+          "Bitte",
+          "nicht",
+          "stören"
+        ]
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Wo ist das Gate B4?",
+        "answer": "Wo ist das Gate B4?"
+      }
+    ]
+  }
+]

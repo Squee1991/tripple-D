@@ -1,0 +1,1210 @@
+[
+  {
+    "questId": "village-1",
+    "title": "Добро пожаловать в деревню",
+    "progress": "0/15",
+    "description": "Ты пришёл в деревню Граммельдорф. Всё ново: дома, предметы, звуки. Начнём с самых простых слов.",
+    "conditions": {
+      "goal": "Познакомиться с первыми предметами и простыми фразами.",
+      "minCorrect": 11,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 150,
+      "xp": 200
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Что значит: der Tisch",
+        "options": ["Стол", "Стул", "Кровать"],
+        "answer": "Стол"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "Что значит: die Lampe",
+        "options": ["Лампа", "Стена", "Полка"],
+        "answer": "Лампа"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "Что значит: das Buch",
+        "options": ["Книга", "Бутылка", "Коробка"],
+        "answer": "Книга"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "Что значит: klein",
+        "options": ["Маленький", "Новый", "Грязный"],
+        "answer": "Маленький"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Что значит: groß",
+        "options": ["большой", "красивый", "старый"],
+        "answer": "большой"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "Собери предложение: Это лампа",
+        "words": ["eine", "Das", "ist", "Lampe"],
+        "correctOrder": ["Das", "ист", "eine", "Lampe"]
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "Как сказать: Это книга",
+        "options": ["Das ist ein Buch", "Das ist eine Buch", "Das ist ein Buche"],
+        "answer": "Das ist ein Buch"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "Как сказать: Это лампа",
+        "options": ["Das ist eine Lampe", "Das ist ein Lampe", "Das ist eine Lampen"],
+        "answer": "Das ist eine Lampe"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "Собери предложение: Это стол",
+        "words": ["ein", "Tisch", "Das", "ist"],
+        "correctOrder": ["Das", "ist", "ein", "Tisch"]
+      },
+      {
+        "id": 10,
+        "type": "speechToText",
+        "question": "Прослушай и напиши:",
+        "text": "Das ist eine Lampe",
+        "answer": "Das ist eine Lampe"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "Что значит *das Fenster*?",
+        "options": ["Окно", "Дверь", "Полка"],
+        "answer": "Окно"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "Что значит *der Stuhl*?",
+        "options": ["Стул", "Стол", "Шкаф"],
+        "answer": "Стул"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "Что значит: neu",
+        "options": ["Новый", "Старый", "Маленький"],
+        "answer": "Новый"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "Что значит: alt",
+        "options": ["Cтарый", "Большой", "Дорогой"],
+        "answer": "Старый"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "Собери предложение: Это окно",
+        "words": ["ein", "Fenster", "Das", "ist"],
+        "correctOrder": ["Das", "ist", "ein", "Fenster"]
+      }
+    ]
+  },
+  {
+    "questId": "village-2",
+    "title": "В доме травницы",
+    "progress": "0/15",
+    "description": "Старуха-травница впускает тебя в свой дом: там пахнет травами, стены увешаны сушёными растениями. Она показывает тебе комнаты и говорит: «Если хочешь остаться — сначала научись называть вещи правильно.",
+    "conditions": {
+      "goal": "Научиться называть комнаты и предметы в доме",
+      "minCorrect": 11,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 160,
+      "xp": 280
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "question": "Что значит: die Küche",
+        "options": ["Кухня", "Ванная", "Спальня"],
+        "answer": "Кухня"
+      },
+      {
+        "id": 2,
+        "question": "Что значит: das Schlafzimmer",
+        "options": ["Спальня", "гостиная", "детская"],
+        "answer": "Спальня"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Прослушайте и запишите",
+        "text": "Das ist die Küche",
+        "answer": "Das ist die Küche"
+      },
+      {
+        "id": 4,
+        "question": "Что значит: der Stuhl",
+        "options": ["Cтул", "Cтол", "Полка"],
+        "answer": "Стул"
+      },
+      {
+        "id": 5,
+        "question": "Что значит: das Bett",
+        "options": ["кровать", "шкаф", "лампа"],
+        "answer": "кровать"
+      },
+      {
+        "id": 6,
+        "question": "Выбери правильную фразу: Это стол",
+        "options": ["Das ist der Tisch", "Das ist der Stuhl", "Ich sehe eine Lampe"],
+        "answer": "Das ist der Tisch"
+      },
+      {
+        "id": 7,
+        "question": "Выбери правильную фразу: Это лампа",
+        "options": ["Das ist eine Lampe", "Das ist ein Lampe", "Das ist einen Lampe"],
+        "answer": "Das ist eine Lampe"
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "Прослушайте и запишите",
+        "text": "Das ist das Bett",
+        "answer": "Das ist das Bett"
+      },
+      {
+        "id": 9,
+        "question": "Выбери правильную фразу: Это спальня",
+        "options": ["Das ist das Schlafzimmer", "Das Bett ist groß", "Das ist das Bett"],
+        "answer": "Das ist das Schlafzimmer"
+      },
+      {
+        "id": 10,
+        "question": "Что значит: Картина",
+        "options": ["das Bild", "das Bett", "die Lampe"],
+        "answer": "das Bild"
+      },
+      {
+        "id": 11,
+        "question": "Выбери правильный вариант: Вилка",
+        "options": ["die Gabel", "das Fenster", "Das Messer"],
+        "answer": "дверь"
+      },
+      {
+        "id": 12,
+        "question": "Выбери правильную фразу: Это ванная",
+        "options": ["Das ist das Badezimmer", "Das ist der Badezimmer", "Das ist die Badezimmer"],
+        "answer": "Das ist das Badezimmer"
+      },
+      {
+        "id": 13,
+        "question": "Выбери правильную фразу: Это окно",
+        "options": ["Das ist das Fenster", "Das ist der Fenster", "Das ist die Lampe"],
+        "answer": "Das ist das Fenster"
+      },
+      {
+        "id": 14,
+        "question": "Выбери правильную фразу: Это кухня",
+        "options": ["Das ist die Küche", "Das ist das Küche", "Das ist der Küche"],
+        "answer": "Das ist die Küche"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Прослушайте и запишите",
+        "text": "Das ist das Bild",
+        "answer": "Das ist das Bild"
+      }
+    ]
+  },
+  {
+    "questId": "village-3",
+    "title": "Цвета вокруг",
+    "progress": "0/15",
+    "description": "Тут надо описание",
+    "conditions": {
+      "goal": "Научиться узнавать фразы с цветами и предметами.",
+      "minCorrect": 7,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Что значит: Die Lampe ist rot",
+        "options": ["Лампа красная", "Синяя лампа", "Красная тарелка"],
+        "answer": "Лампа красная"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "Прослушайте и запишите",
+        "text": "Der Tisch ist schwarz",
+        "answer": "Der Tisch ist schwarz"
+      },
+      {
+        "id": 3,
+        "type": "reorder",
+        "question": "Соберите: ein weißes Fenster",
+        "words": ["ein", "weißes", "Fenster"],
+        "correctOrder": ["ein", "weißes", "Fenster"]
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "Выбери вариант: зелёный диван",
+        "options": ["ein grünes Sofa", "eine grüne Lampe", "ein grüner Tisch"],
+        "answer": "ein grünes Sofa"
+      },
+      {
+        "id": 5,
+        "type": "speechToText",
+        "question": "Прослушайте и запишите",
+        "text": "Eine blaue Tasse",
+        "answer": "Eine blaue Tasse"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Соберите: das rote Buch",
+        "words": ["das", "rote", "Buch"],
+        "correctOrder": ["das", "rote", "Buch"]
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "Что значит: eine gelbe Blume",
+        "options": ["Жёлтый цветок", "Красная книга", "Синяя лампа"],
+        "answer": "Жёлтый цветок"
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "Прослушайте и запишите",
+        "text": "Die Tür ist schwarz",
+        "answer": "Die Tür ist schwarz"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "Соберите: die blaue Lampe",
+        "words": ["die", "blaue", "Lampe"],
+        "correctOrder": ["die", "blaue", "Lampe"]
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Выбери вариант: красная книга",
+        "options": ["das rote Buch", "die blaue Lampe", "der rote Tisch"],
+        "answer": "das rote Buch"
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "Прослушайте и запишите",
+        "text": "Das Fenster ist blau",
+        "answer": "Das Fenster ist blau"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "Соберите: der schwarze Stuhl",
+        "words": ["der", "schwarze", "Stuhl"],
+        "correctOrder": ["der", "schwarze", "Stuhl"]
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "Что значит: Der Teppich ist grün",
+        "options": ["Ковёр зелёный", "Ковёр чёрный", "Стол зелёный"],
+        "answer": "Ковёр зелёный"
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "Прослушайте и запишите",
+        "text": "Die Lampe ist gelb",
+        "answer": "Die Lampe ist gelb"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "Соберите: ein braunes Regal",
+        "words": ["ein", "braunes", "Regal"],
+        "correctOrder": ["ein", "braunes", "Regal"]
+      }
+    ]
+  },
+  {
+    "questId": "village-4",
+    "title": "Сколько всего?",
+    "progress": "0/15",
+    "description": "Старый столяр просит тебя пересчитать вещи в комнате: книги, стулья, лампы. Он постоянно повторяет фразы *es gibt…* и *ich habe…* — попробуй их запомнить!",
+    "conditions": {
+      "goal": "Понимать фразы с числами и предметами: es gibt / ich habe / wie viele",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 180,
+      "xp": 300
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Zwei Bücher",
+        "options": ["2 книги", "3 книги", "1 книга"],
+        "answer": "2 книги"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "Прослушайте и запишите",
+        "text": "Drei Stühle",
+        "answer": "Drei Stühle"
+      },
+      {
+        "id": 3,
+        "type": "reorder",
+        "question": "Соберите фразу",
+        "words": ["Lampe", "eine"],
+        "correctOrder": ["eine", "Lampe"]
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "Vier Lampen",
+        "options": ["4 лампы", "5 ламп", "3 лампы"],
+        "answer": "4 лампы"
+      },
+      {
+        "id": 5,
+        "type": "speechToText",
+        "question": "Прослушайте и запишите",
+        "text": "Ein Fenster",
+        "answer": "Ein Fenster"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Соберите фразу",
+        "words": ["drei", "Tische"],
+        "correctOrder": ["drei", "Tische"]
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "Fünf Fenster",
+        "options": ["5 окон", "4 окна", "6 окон"],
+        "answer": "5 окон"
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "Прослушайте и запишите",
+        "text": "Zwei Türen",
+        "answer": "Zwei Türen"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "Соберите фразу",
+        "words": ["drei", "Stühle", "und", "zwei", "Tische"],
+        "correctOrder": ["drei", "Stühle", "und", "zwei", "Tische"]
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Keine Bücher",
+        "options": ["0 книг", "1 книга", "2 книги"],
+        "answer": "0 книг"
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "Прослушайте и запишите",
+        "text": "Eine Tasse",
+        "answer": "Eine Tasse"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "Соберите фразу",
+        "words": ["acht", "Bücher"],
+        "correctOrder": ["acht", "Bücher"]
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "Neun Stühle",
+        "options": ["9 стульев", "8 стульев", "10 стульев"],
+        "answer": "9 стульев"
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "Прослушайте и запишите",
+        "text": "Sieben Bilder",
+        "answer": "Sieben Bilder"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "Соберите фразу",
+        "words": ["ein", "Tisch"],
+        "correctOrder": ["ein", "Tisch"]
+      }
+    ]
+  },
+  {
+    "questId": "village-5",
+    "title": "На кухне",
+    "progress": "0/15",
+    "description": "Изба пахнет хлебом. Начнём с посуды и кухонных предметов.",
+    "conditions": {
+      "goal": "Учить кухонные предметы и простые фразы типа Das ist / ein, eine, der, die, das",
+      "minCorrect": 11,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 170,
+      "xp": 300
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Что значит: die Gabel",
+        "options": ["Вилка", "Ложка", "Нож"],
+        "answer": "Вилка"
+      },
+      {
+        "id": 2,
+        "type": "reorder",
+        "question": "Собери: новая вилка",
+        "words": ["neue", "eine", "Gabel"],
+        "correctOrder": ["eine", "neue", "Gabel"]
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "Как сказать: Это вилка",
+        "options": ["Das ist eine Gabel", "Das ist ein Gabel", "Das ist der Gabel"],
+        "answer": "Das ist eine Gabel"
+      },
+      {
+        "id": 4,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Die Gabel",
+        "answer": "Die Gabel"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Что значит: der Löffel",
+        "options": ["Ложка", "Нож", "Тарелка"],
+        "answer": "Ложка"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Собери: большая ложка",
+        "words": ["ein", "großer", "Löffel"],
+        "correctOrder": ["ein", "großer", "Löffel"]
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "Как сказать: Это ложка",
+        "options": ["Das ist ein Löffel", "Das ist eine Löffel", "Das ist der Löffel"],
+        "answer": "Das ist ein Löffel"
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Der Löffel",
+        "answer": "Der Löffel"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "Что значит: der Teller",
+        "options": ["Тарелка", "Чашка", "Стакан"],
+        "answer": "Тарелка"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "Собери: две большие тарелки",
+        "words": ["zwei", "große", "Teller"],
+        "correctOrder": ["zwei", "große", "Teller"]
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "Как сказать: Это тарелка",
+        "options": ["Das ist ein Teller", "Das ist eine Teller", "Das ist der Tellerin"],
+        "answer": "Das ist ein Teller"
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Der Teller",
+        "answer": "Der Teller"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "Что значит: das Glas",
+        "options": ["Стакан", "Кружка", "Кастрюля"],
+        "answer": "Стакан"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "Собери: маленький стакан",
+        "words": ["ein", "kleines", "Glas"],
+        "correctOrder": ["ein", "kleines", "Glas"]
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Das Glas",
+        "answer": "Das Glas"
+      }
+    ]
+  },
+  {
+    "questId": "village-6",
+    "title": "В гостиной",
+    "progress": "0/15",
+    "description": "Мягкое кресло, ковёр и лампа над столом. Учим предметы в гостиной.",
+    "conditions": {
+      "goal": "Называть предметы в гостиной и составлять простые фразы Das ist ...",
+      "минCorrect": 11,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 175,
+      "xp": 300
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Что значит: das Sofa",
+        "options": ["Диван", "Кресло", "Ковер"],
+        "answer": "Диван"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "Что значит: der Sessel",
+        "options": ["Кресло", "Столик", "Шкаф"],
+        "answer": "Кресло"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "Что значит: der Teppich",
+        "options": ["Ковер", "Плед", "Занавеска"],
+        "answer": "Ковер"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "Собери предложение: Это диван",
+        "words": ["Das", "ist", "das", "Sofa"],
+        "correctOrder": ["Das", "ist", "das", "Sofa"]
+      },
+      {
+        "id": 5,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Der Tisch",
+        "answer": "Der Tisch"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Собери: большой ковер",
+        "words": ["ein", "Teppich", "großer"],
+        "correctOrder": ["ein", "großer", "Teppich"]
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "Что значит: der Fernseher",
+        "options": ["Телевизор", "Холодильник", "Компьютер"],
+        "answer": "Телевизор"
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Eine Uhr",
+        "answer": "Eine Uhr"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "Собери: зелёное растение",
+        "words": ["eine", "Pflanze", "grüne"],
+        "correctOrder": ["eine", "grüne", "Pflanze"]
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Что значит: das Regal",
+        "options": ["Стеллаж", "Кресло", "Картина"],
+        "answer": "Стеллаж"
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Die Lampe",
+        "answer": "Die Lampe"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "Собери: маленький столик",
+        "words": ["ein", "Tisch", "kleiner"],
+        "correctOrder": ["ein", "kleiner", "Tisch"]
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "Что значит: das Bild",
+        "options": ["Картина", "Окно", "Дверь"],
+        "answer": "Картина"
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Zwei Sessel",
+        "answer": "Zwei Sessel"
+      },
+      {
+        "id": 15,
+        "type": "select",
+        "question": "Как сказать: Это ковер",
+        "options": ["Das ist der Teppich", "Das ist das Teppich", "Das ist die Teppich"],
+        "answer": "Das ist der Teppich"
+      }
+    ]
+  },
+  {
+    "questId": "village-7",
+    "title": "В ванной",
+    "progress": "0/15",
+    "description": "Пена, полотенца и зеркало. Закрепляем слова про ванную комнату.",
+    "conditions": {
+      "goal": "Называть предметы в ванной и простые словосочетания с числительными и прилагательными",
+      "minCorrect": 11,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 180,
+      "xp": 320
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Что значит: die Dusche",
+        "options": ["Душ", "Ванна", "Полотенце"],
+        "answer": "Душ"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "Что значит: die Badewanne",
+        "options": ["Ванна", "Раковина", "Зеркало"],
+        "answer": "Ванна"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "Что значит: das Waschbecken",
+        "options": ["Раковина", "Полотенце", "Коврик"],
+        "answer": "Раковина"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "Что значит: das Handtuch",
+        "options": ["Полотенце", "Щётка", "Шкаф"],
+        "answer": "Полотенце"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "Собери предложение: Это душ",
+        "words": ["Das", "ist", "die", "Dusche"],
+        "correctOrder": ["Das", "ist", "die", "Dusche"]
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Die Dusche",
+        "answer": "Die Dusche"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Собери: новая ванна",
+        "words": ["eine", "неue", "Badewanne"],
+        "correctOrder": ["eine", "neue", "Badewanne"]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Die Badewanne",
+        "answer": "Die Badewanne"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "Собери: новая раковина",
+        "words": ["ein", "neues", "Waschbecken"],
+        "correctOrder": ["ein", "neues", "Waschbecken"]
+      },
+      {
+        "id": 10,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Das Waschbecken",
+        "answer": "Das Waschbecken"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Собери: чистое полотенце",
+        "words": ["ein", "sauberes", "Handtuch"],
+        "correctOrder": ["ein", "sauberes", "Handtuch"]
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ein Handtuch",
+        "answer": "Ein Handtuch"
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ein sauberes Handtuch",
+        "answer": "Ein sauberes Handtuch"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "Что значит: zwei Handtücher",
+        "options": ["2 полотенца", "2 ванны", "2 раковины"],
+        "answer": "2 полотенца"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "Собери: два чистых полотенца",
+        "words": ["zwei", "saubere", "Handtücher"],
+        "correctOrder": ["zwei", "saubere", "Handtücher"]
+      }
+    ]
+  },
+  {
+    "questId": "village-8",
+    "title": "В спальне",
+    "progress": "0/15",
+    "description": "Тихая спальня: кровать, подушка, тумбочка. Учим предметы и простые сочетания.",
+    "conditions": {
+      "goal": "Называть предметы спальни и собирать простые фразы Das ist / ein, eine, der, die, das",
+      "minCorrect": 11,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 170,
+      "xp": 300
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "das Bett",
+        "options": ["Кровать", "Стол", "Шкаф"],
+        "answer": "Кровать"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "das Kissen",
+        "options": ["Подушка", "Одеяло", "Зеркало"],
+        "answer": "Подушка"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "die Decke",
+        "options": ["Одеяло", "Штора", "Полка"],
+        "answer": "Одеяло"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "Собери предложение: Это кровать",
+        "words": ["Das", "ist", "das", "Bett"],
+        "correctOrder": ["Das", "ist", "das", "Bett"]
+      },
+      {
+        "id": 5,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ein Kissen",
+        "answer": "Ein Kissen"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "der Kleiderschrank",
+        "options": ["Шкаф для одежды", "Стул", "Дверь"],
+        "answer": "Шкаф для одежды"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Собери: занавески",
+        "words": ["die", "Vorhänge"],
+        "correctOrder": ["die", "Vorhänge"]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Der Spiegel",
+        "answer": "Der Spiegel"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "der Nachttisch",
+        "options": ["Тумбочка", "Стеллаж", "Ковёр"],
+        "answer": "Тумбочка"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "Собери: мягкая подушка",
+        "words": ["ein", "weiches", "Kissen"],
+        "correctOrder": ["ein", "weiches", "Kissen"]
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Zwei Kissen",
+        "answer": "Zwei Kissen"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "die Lampe",
+        "options": ["Лампа", "Штора", "Картина"],
+        "answer": "Лампа"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "Собери предложение: Это зеркало",
+        "words": ["Das", "ist", "der", "Spiegel"],
+        "correctOrder": ["Das", "ist", "der", "Spiegel"]
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Eine Decke",
+        "answer": "Eine Decke"
+      },
+      {
+        "id": 15,
+        "type": "select",
+        "question": "der Wecker",
+        "options": ["Будильник", "Рюкзак", "Телефон"],
+        "answer": "Будильник"
+      }
+    ]
+  },
+  {
+    "questId": "village-9",
+    "title": "В прихожей",
+    "progress": "0/15",
+    "description": "У входа — дверь, ключи и одежда. Учим слова прихожей.",
+    "conditions": {
+      "goal": "Называть предметы прихожей и собирать короткие фразы с артиклями и числительными",
+      "minCorrect": 11,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 175,
+      "xp": 300
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "die Tür",
+        "options": ["Дверь", "Окно", "Пол"],
+        "answer": "Дверь"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "der Schlüssel",
+        "options": ["Ключ", "Шкаф", "Ковер"],
+        "answer": "Ключ"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "die Jacke",
+        "answer": "die Jacke"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "Собери предложение: Это куртка",
+        "words": ["ist", "Das", "Jacke", "die"],
+        "correctOrder": ["Das", "ist", "die", "Jacke"]
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "der Mantel",
+        "options": ["Пальто", "Шарф", "Шапка"],
+        "answer": "Пальто"
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Eine Tasche",
+        "answer": "Eine Tasche"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Собери: две новые ботинки",
+        "words": ["zwei", "neue", "Schuhe"],
+        "correctOrder": ["zwei", "neue", "Schuhe"]
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "die Mütze",
+        "options": ["Шапка", "Перчатка", "Платье"],
+        "answer": "Шапка"
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Der Schal",
+        "answer": "Der Schal"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "Собери: большая гардеробная",
+        "words": ["die", "große", "Garderobe"],
+        "correctOrder": ["die", "große", "Garderobe"]
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "der Rucksack",
+        "options": ["Рюкзак", "Пояс", "Зонт"],
+        "answer": "Рюкзак"
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Drei Schlüssel",
+        "answer": "Drei Schlüssel"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "Собери предложение: Это дверь",
+        "words": ["Das", "ist", "die", "Tür"],
+        "correctOrder": ["Das", "ist", "die", "Tür"]
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "der Teppich",
+        "options": ["Ковер", "Кресло", "Полка"],
+        "answer": "Ковер"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Ein Hut",
+        "answer": "Ein Hut"
+      }
+    ]
+  },
+  {
+    "questId": "village-10",
+    "title": "В саду",
+    "progress": "0/15",
+    "description": "Дерево, цветы и скамейка. Учим слова сада и простые сочетания с цветами и числами.",
+    "conditions": {
+      "goal": "Называть предметы сада и собирать простые словосочетания с цветами и числами",
+      "minCorrect": 11,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 180,
+      "xp": 320
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Что значит: der Baum",
+        "options": ["Дерево", "Цветок", "Лопата"],
+        "answer": "Дерево"
+      },
+      {
+        "id": 2,
+        "type": "reorder",
+        "question": "Собери: ein großer Baum",
+        "words": ["ein", "großer", "Baum"],
+        "correctOrder": ["ein", "großer", "Baum"]
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "Что значит: zwei Bäume",
+        "options": ["2 дерева", "2 цветка", "2 лейки"],
+        "answer": "2 дерева"
+      },
+      {
+        "id": 4,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Der Baum",
+        "answer": "Der Baum"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Что значит: die Blume",
+        "options": ["Цветок", "Куст", "Трава"],
+        "answer": "Цветок"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Собери: eine rote Blume",
+        "words": ["rote", "eine", "Blume"],
+        "correctOrder": ["eine", "rote", "Blume"]
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "Что значит: drei Blumen",
+        "options": ["3 цветка", "3 дерева", "3 лопаты"],
+        "answer": "3 цветка"
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Die Blume",
+        "answer": "Die Blume"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "Что значит: die Gießkanne",
+        "options": ["Лейка", "Шланг", "Ведро"],
+        "answer": "Лейка"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "Собери: eine grüne Gießkanne",
+        "words": ["eine", "grüne", "Gießkanne"],
+        "correctOrder": ["eine", "grüne", "Gießkanne"]
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Die Gießkanne",
+        "answer": "Die Gießkanne"
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Eine Gießkanne",
+        "answer": "Eine Gießkanne"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "Что значит: die Schaufel",
+        "options": ["Лопата", "Камень", "Кувалда"],
+        "answer": "Лопата"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "Собери: eine neue Schaufel",
+        "words": ["eine", "neue", "Schaufel"],
+        "correctOrder": ["eine", "neue", "Schaufel"]
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Прослушай и напиши",
+        "text": "Die Schaufel",
+        "answer": "Die Schaufel"
+      }
+    ]
+  }
+]

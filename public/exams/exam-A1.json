@@ -1,0 +1,208 @@
+{
+  "level": "A1",
+  "modules": [
+    {
+      "id": "lesen-1",
+      "title": "Lesen",
+      "type": "multiple-choice",
+      "task": {
+        "text": "Supermarkt Müller\nÖffnungszeiten: von Montag bis Samstag 8–20 Uhr",
+        "question": "Am Sonntag ist der Supermarkt geöffnet?",
+        "options": ["Richtig", "Falsch"],
+        "answer": "Falsch"
+      }
+    },
+    {
+      "id": "lesen-2",
+      "title": "Lesen",
+      "type": "multiple-choice",
+      "task": {
+        "text": "Kino am Park\nDienstag = Kinotag\nAlle Filme: nur 5 €\nNur am Dienstag",
+        "question": "Am Dienstag kostet der Film 5 Euro.",
+        "options": ["Richtig", "Falsch"],
+        "answer": "Richtig"
+      }
+    },
+    {
+      "id": "lesen-3",
+      "title": "Lesen",
+      "type": "multiple-choice",
+      "task": {
+        "text": "Maria schreibt: Ich bin krank. Ich kann heute nicht zur Schule kommen.",
+        "question": "Maria kommt heute zur Schule.",
+        "options": ["Richtig", "Falsch"],
+        "answer": "Falsch"
+      }
+    },
+    {
+      "id": "lesen-4",
+      "title": "Lesen",
+      "type": "multiple-choice",
+      "task": {
+        "text": "Restaurant Bella Italia\nHeute: Pizza Margherita nur 6 €",
+        "question": "Heute kostet die Pizza Margherita 6 Euro.",
+        "options": ["Richtig", "Falsch"],
+        "answer": "Richtig"
+      }
+    },
+    {
+      "id": "lesen-5",
+      "title": "Lesen",
+      "type": "multiple-choice",
+      "task": {
+        "text": "Lena schreibt: Ich bin im Urlaub. Wir sind am Meer und das Wetter ist super.",
+        "question": "Lena ist zu Hause.",
+        "options": ["Richtig", "Falsch"],
+        "answer": "Falsch"
+      }
+    },
+
+    {
+      "id": "hoeren-1",
+      "title": "Hören",
+      "type": "audio-choice",
+      "task": {
+        "text": "Ich komme nicht um acht. Ich komme erst um zehn, okay?",
+        "question": "Wann kommt sie?",
+        "options": ["Um 8 Uhr", "Um 10 Uhr", "Gar nicht"],
+        "answer": "Um 10 Uhr"
+      }
+    },
+    {
+      "id": "hoeren-2",
+      "title": "Hören",
+      "type": "audio-choice",
+      "task": {
+        "text": "Der Zug nach Berlin fährt heute nicht. Er fällt aus.",
+        "question": "Was ist mit dem Zug?",
+        "options": ["Er kommt später", "Er fällt aus", "Er fährt früher"],
+        "answer": "Er fällt aus"
+      }
+    },
+    {
+      "id": "hoeren-3",
+      "title": "Hören",
+      "type": "audio-choice",
+      "task": {
+        "text": "Heute ist es sehr warm. Wir gehen ins Schwimmbad.",
+        "question": "Wohin gehen sie?",
+        "options": ["Ins Kino", "Ins Schwimmbad", "In die Schule"],
+        "answer": "Ins Schwimmbad"
+      }
+    },
+    {
+      "id": "hoeren-4",
+      "title": "Hören",
+      "type": "audio-choice",
+      "task": {
+        "text": "Ich trinke morgens immer Kaffee und esse ein Brötchen.",
+        "question": "Was isst und trinkt die Person morgens?",
+        "options": ["Tee und Toast", "Kaffee und Brötchen", "Saft und Müsli"],
+        "answer": "Kaffee und Brötchen"
+      }
+    },
+    {
+      "id": "hoeren-5",
+      "title": "Hören",
+      "type": "audio-choice",
+      "task": {
+        "text": "Am Samstag habe ich keine Schule. Ich schlafe lange und frühstücke spät.",
+        "question": "Was macht die Person am Samstag?",
+        "options": ["Geht zur Schule", "Schläft lange", "Arbeitet"],
+        "answer": "Schläft lange"
+      }
+    },
+
+    {
+      "id": "schreiben-1",
+      "title": "Schreiben",
+      "type": "text-input",
+      "task": {
+        "instruction": "Schreib eine Nachricht an einen Freund. Lade ihn ins Kino morgen ein.",
+        "exampleAnswer": "Hallo Max! Morgen gehe ich ins Kino. Willst du mitkommen? Der Film beginnt um 18 Uhr."
+      }
+    },
+    {
+      "id": "schreiben-2",
+      "title": "Schreiben",
+      "type": "text-input",
+      "task": {
+        "instruction": "Schreib deiner Lehrerin oder deinem Lehrer. Du kommst heute nicht. Warum?",
+        "exampleAnswer": "Guten Tag Frau Meier, ich bin heute krank und kann nicht zum Kurs kommen. Viele Grüße, Anna."
+      }
+    },
+    {
+      "id": "schreiben-3",
+      "title": "Schreiben",
+      "type": "text-input",
+      "task": {
+        "instruction": "Schreib deinem Freund zum Geburtstag. (2–3 Sätze)",
+        "exampleAnswer": "Alles Gute zum Geburtstag, Lisa! Ich wünsche dir viel Glück und Gesundheit!"
+      }
+    },
+    {
+      "id": "schreiben-4",
+      "title": "Schreiben",
+      "type": "text-input",
+      "task": {
+        "instruction": "Schreib dem Hotel. Gibt es Zimmer? Was kostet ein Zimmer?",
+        "exampleAnswer": "Sehr geehrte Damen und Herren, ich möchte fragen, ob Sie am Wochenende ein freies Zimmer haben. Was kostet es pro Nacht?"
+      }
+    },
+    {
+      "id": "schreiben-5",
+      "title": "Schreiben",
+      "type": "text-input",
+      "task": {
+        "instruction": "Schreib deinem Freund. Du hast eine neue Wohnung. Schreib die Adresse.",
+        "exampleAnswer": "Hallo Paul! Ich bin umgezogen. Meine neue Adresse ist Gartenstraße 12. Komm doch mal vorbei!"
+      }
+    },
+
+    {
+      "id": "sprechen-1",
+      "title": "Sprechen",
+      "type": "speaking-prompt",
+      "task": {
+        "prompt": "Stell dich bitte vor. Wie heißt du? Woher kommst du? Was machst du gern?",
+        "expectedTopics": ["Name", "Herkunft", "Hobby"]
+      }
+    },
+    {
+      "id": "sprechen-2",
+      "title": "Sprechen",
+      "type": "speaking-prompt",
+      "task": {
+        "prompt": "Sprich über deinen Tagesablauf. Wann stehst du auf? Was machst du morgens?",
+        "expectedTopics": ["Tagesablauf", "Zeit", "Aktivitäten"]
+      }
+    },
+    {
+      "id": "sprechen-3",
+      "title": "Sprechen",
+      "type": "speaking-prompt",
+      "task": {
+        "prompt": "Was isst du gern? Was trinkst du zum Frühstück? Sprich über Essen und Trinken.",
+        "expectedTopics": ["Essen", "Trinken", "Frühstück"]
+      }
+    },
+    {
+      "id": "sprechen-4",
+      "title": "Sprechen",
+      "type": "speaking-prompt",
+      "task": {
+        "prompt": "Erzähle von deiner Familie. Hast du Geschwister? Wie heißen sie?",
+        "expectedTopics": ["Familie", "Geschwister", "Name"]
+      }
+    },
+    {
+      "id": "sprechen-5",
+      "title": "Sprechen",
+      "type": "speaking-prompt",
+      "task": {
+        "prompt": "Was machst du am Wochenende? Hast du Pläne?",
+        "expectedTopics": ["Wochenende", "Pläne", "Aktivitäten"]
+      }
+    }
+  ]
+}

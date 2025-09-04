@@ -1,47 +1,51 @@
-<template>
-    <div class="container">
-        <Header/>
-        <Baner/>
-        <Description/>
-        <About/>
-        <FeedBack/>
-        <Footer/>
-    </div>
-
-</template>
-
 <script setup>
+import {userAuthStore} from "~/store/authStore.js";
+import Header from '../src/components/header.vue'
+import Banner from '../src/components/baner.vue'
 import Description from '../src/components/DescriptionBlock.vue'
-import Coffe from '../src/components/forTea.vue'
-import Baner from '../src/components/baner.vue'
+import About from '../src/components/about.vue'
 import FeedBack from '../src/components/feedBack.vue'
 import Footer from '../src/components/footer.vue'
-import Header from '../src/components/header.vue'
-import About from '../src/components/about'
-import {useCurrentUser} from 'vuefire'
-import {onMounted} from 'vue'
-import {useRouter} from 'vue-router'
-import VScroll from "../src/components/v-scroll.vue";
-const user = useCurrentUser()
-const router = useRouter()
+import VUid from '../src/components/V-uid.vue'
 
 
-onMounted(() => {
-    if (!user.value) {
-        router.push('/')
-    }
-})
+const authStore = userAuthStore()
 </script>
 
+<template>
+  <div class="container">
+    <Header/>
+    <div v-if="!authStore.uid">
+      <Banner/>
+      <Description/>
+      <About/>
+      <FeedBack/>
+    </div>
+    <div class="stat" v-else>
+      <!--      <VMap/>-->
+      <VUid/>
+    </div>
+    <Footer/>
+  </div>
+</template>
+
 <style scoped>
-* {
-    padding: 0;
-    margin: 0;
-}
-
 .container {
-    max-width: 100%;
-    margin: 0 auto;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
+.stat {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+@media (max-width: 767px) {
+  .stat {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 </style>

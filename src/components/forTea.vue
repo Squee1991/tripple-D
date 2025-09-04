@@ -1,7 +1,7 @@
 <template>
 	<div class="coffe-container">
 		<img class="coffe" @click="openDonationLink" src="../../assets/images/cupheart.svg" alt="">
-		<div class="support">Support</div>
+<!--		<div class="support">Support</div>-->
 	</div>
 </template>
 
@@ -14,14 +14,14 @@
 <style scoped>
 
 	.coffe {
-		width: 65px;
+		width: 55px;
 		cursor: pointer;
 	}
 
 	.coffe-container {
 		flex-direction: column;
-		bottom: 67px;
-		right: 10px;
+		bottom: 100px;
+		right: 5px;
 		position: fixed;
 		display: flex;
 		justify-content: center;

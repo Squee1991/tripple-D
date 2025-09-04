@@ -200,8 +200,7 @@
         if (ownerId === currentPlayerId.value && card.canAttack) {
             resetSelection();
             selectedAttacker.value = card;
-        }
-        else {
+        } else {
             resolveActionOnTarget(card);
         }
     }
@@ -221,7 +220,6 @@
         if (!selectedAttacker.value && !selectedMagicSpell.value) return;
         const isFriendly = target.id === activePlayer.value.id || activePlayer.value.board.includes(target);
 
-        // АТАКА СУЩЕСТВОМ
         if (selectedAttacker.value) {
             if (isFriendly) return;
             const attacker = selectedAttacker.value;
@@ -234,9 +232,7 @@
                 target.hp -= attacker.attack;
             }
             attacker.canAttack = false;
-        }
-
-        else if (selectedMagicSpell.value) {
+        } else if (selectedMagicSpell.value) {
             const spell = selectedMagicSpell.value;
             const effect = spell.effect;
             if (effect.type === 'damage' && isFriendly) return;

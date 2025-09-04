@@ -1,13 +1,38 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
-// Добавим import для updateDoc
-import { collection, addDoc, getDocs, query, where, onSnapshot, getFirestore, deleteDoc, doc, updateDoc } from 'firebase/firestore'
-
+import { collection, addDoc, getDocs, query, where, onSnapshot, getFirestore, deleteDoc, doc, updateDoc, getDoc, setDoc } from 'firebase/firestore'
+import { getAuth } from 'firebase/auth'
+import {userAuthStore} from './authStore.js'
 export const useCardsStore = defineStore('cardsStore', () => {
 	const cards = ref([])
+	const createdCount = ref(0)
 	const db = getFirestore()
+    const authStore =  userAuthStore()
+	const getUserId = () => {
+		const user = getAuth().currentUser
+		return user ? user.uid : null
+	}
 
-	// Эта функция не используется в последней версии компонента, но пусть будет
+	const loadCreatedCount = async () => {
+		const uid = getUserId()
+		if (!uid) return
+		const statRef = doc(db, 'cardStats', uid)
+		const statSnap = await getDoc(statRef)
+		if (statSnap.exists()) {
+			createdCount.value = statSnap.data().createdCount || 0
+		}
+	}
+
+	const saveCreatedCount = async () => {
+		const uid = getUserId()
+		if (!uid) return
+		await setDoc(doc(db, 'cardStats', uid), {
+			createdCount: createdCount.value,
+			name: authStore.name || '',
+
+		}, { merge: true })
+	}
+
 	const loadPublicCards = async () => {
 		const q = query(collection(db, 'cards'), where('isPublic', '==', true))
 		const snapshot = await getDocs(q)
@@ -15,9 +40,9 @@ export const useCardsStore = defineStore('cardsStore', () => {
 			id: doc.id,
 			...doc.data(),
 		}))
+		await loadCreatedCount()
 	}
 
-	// Реал-тайм подписка на карточки
 	const subscribePublicCards = () => {
 		const q = query(collection(db, 'cards'), where('isPublic', '==', true))
 		return onSnapshot(q, (snapshot) => {
@@ -28,33 +53,34 @@ export const useCardsStore = defineStore('cardsStore', () => {
 		})
 	}
 
-	// Добавить новую карточку
 	const addCard = async (card) => {
+		const uid = getUserId()
+		if (!uid) return
+
 		await addDoc(collection(db, 'cards'), {
 			...card,
 			isPublic: true,
 			createdAt: new Date().toISOString(),
+			ownerId: uid
 		})
+
+		createdCount.value++
+		await saveCreatedCount()
 	}
 
-	// --- НОВАЯ ФУНКЦИЯ: для редактирования карточек ---
 	const updateCard = async (cardData) => {
 		if (!cardData.id) {
-			console.error("Ошибка обновления: отсутствует ID карточки");
-			return;
+			console.error("Ошибка обновления: отсутствует ID карточки")
+			return
 		}
-		const cardRef = doc(db, "cards", cardData.id);
-		// Убираем id из объекта данных, чтобы он не перезаписывался в документе
-		const { id, ...dataToUpdate } = cardData;
-		await updateDoc(cardRef, dataToUpdate);
+		const cardRef = doc(db, "cards", cardData.id)
+		const { id, ...dataToUpdate } = cardData
+		await updateDoc(cardRef, dataToUpdate)
 	}
 
-	// --- ПЕРЕИМЕНОВАНО: для соответствия компоненту (было deleteCard) ---
 	const removeCard = async (cardId) => {
 		try {
 			await deleteDoc(doc(db, 'cards', cardId))
-			// Локальное удаление можно убрать, так как onSnapshot сделает это за нас,
-			// но оно дает мгновенный эффект в интерфейсе. Оставим.
 			cards.value = cards.value.filter(card => card.id !== cardId)
 		} catch (error) {
 			console.error('Ошибка при удалении карточки:', error)
@@ -63,10 +89,12 @@ export const useCardsStore = defineStore('cardsStore', () => {
 
 	return {
 		cards,
+		createdCount,
 		loadPublicCards,
 		subscribePublicCards,
 		addCard,
-		updateCard, // <-- Добавили в return
-		removeCard, // <-- Изменили имя в return
+		updateCard,
+		removeCard,
+		loadCreatedCount,
 	}
 })

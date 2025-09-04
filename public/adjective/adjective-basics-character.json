@@ -1,0 +1,52 @@
+[
+  {
+    "question": "Der Schüler ist ___.",
+    "options": ["faul", "fleißig", "dumm", "lustig"],
+    "answer": "fleißig"
+  },
+  {
+    "question": "Der Clown ist ___.",
+    "options": ["traurig", "freundlich", "intelligent", "lustig"],
+    "answer": "lustig"
+  },
+  {
+    "question": "Die Katze ist ___.",
+    "options": ["aktiv", "faul", "schnell", "klug"],
+    "answer": "faul"
+  },
+  {
+    "question": "Der Professor ist ___.",
+    "options": ["dumm", "naiv", "klug", "jung"],
+    "answer": "klug"
+  },
+  {
+    "question": "Der Hund ist ___.",
+    "options": ["böse", "gemein", "treu", "ernst"],
+    "answer": "treu"
+  },
+  {
+    "question": "Der Held ist ___.",
+    "options": ["ängstlich", "mutig", "langsam", "faul"],
+    "answer": "mutig"
+  },
+  {
+    "question": "Das Kind ist ___.",
+    "options": ["leise", "offen", "schüchtern", "laut"],
+    "answer": "laut"
+  },
+  {
+    "question": "Der Richter ist ___.",
+    "options": ["unehrlich", "gerecht", "falsch", "laut"],
+    "answer": "gerecht"
+  },
+  {
+    "question": "Die Person ist ___.",
+    "options": ["gemein", "unfreundlich", "nett", "egoistisch"],
+    "answer": "nett"
+  },
+  {
+    "question": "Der Freund ist ___.",
+    "options": ["traurig", "langweilig", "ehrlich", "ernst"],
+    "answer": "ehrlich"
+  }
+]

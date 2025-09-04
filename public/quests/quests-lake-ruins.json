@@ -1,0 +1,1970 @@
+[
+  {
+    "questId": "weather-1",
+    "title": "questLakeRuinsFirstQuests.title",
+    "progress": "0/15",
+    "description": "questLakeRuinsFirstQuests.description",
+    "conditions": {
+      "goal": "questLakeRuinsFirstQuests.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "questLakeRuinsFirstQuests.questOne",
+        "options": [
+          "questLakeRuinsFirstQuests.questOneFirstOption",
+          "questLakeRuinsFirstQuests.questOneSecondOption",
+          "questLakeRuinsFirstQuests.questOneThirdOption"
+        ],
+        "answer": "questLakeRuinsFirstQuests.questOneFirstOption"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "sonnig",
+        "options": [
+          "questLakeRuinsFirstQuests.questTwoFirstOption",
+          "questLakeRuinsFirstQuests.questTwoSecondOption",
+          "questLakeRuinsFirstQuests.questTwoThirdOption"
+        ],
+        "answer": "questLakeRuinsFirstQuests.questTwoFirstOption"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "regnerisch",
+        "options": [
+          "questLakeRuinsFirstQuests.questTreeFirstOption",
+          "questLakeRuinsFirstQuests.questTreeSecondOption",
+          "questLakeRuinsFirstQuests.questTreeThirdOption"
+        ],
+        "answer": "questLakeRuinsFirstQuests.questTreeFirstOption"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "kalt",
+        "options": [
+          "questLakeRuinsFirstQuests.questFourFirstOption",
+          "questLakeRuinsFirstQuests.questFourSecondOption",
+          "questLakeRuinsFirstQuests.questFourThirdOption"
+        ],
+        "answer": "questLakeRuinsFirstQuests.questFourFirstOption"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "questLakeRuinsFirstQuests.questFive",
+        "words": [
+          "sonnig",
+          "ist",
+          "es",
+          "Heute"
+        ],
+        "correctOrder": [
+          "Heute",
+          "ist",
+          "es",
+          "sonnig"
+        ]
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "questLakeRuinsFirstQuests.questSix",
+        "text": "Es ist kalt",
+        "answer": "Es ist kalt"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "Wie ist das Wetter?",
+        "options": [
+          "questLakeRuinsFirstQuests.questSevenFirstOption",
+          "questLakeRuinsFirstQuests.questSevenSecondOption",
+          "questLakeRuinsFirstQuests.questSevenThirdOption"
+        ],
+        "answer": "questLakeRuinsFirstQuests.questSevenFirstOption"
+      },
+      {
+        "id": 8,
+        "type": "reorder",
+        "question": "questLakeRuinsFirstQuests.questEight",
+        "words": [
+          "windig",
+          "ist",
+          "es",
+          "Heute",
+          "kalt",
+          "und"
+        ],
+        "correctOrder": [
+          "Heute",
+          "ist",
+          "es",
+          "windig",
+          "und",
+          "kalt"
+        ]
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Heute ist es warm. Ich brauche keine Jacke.",
+        "question": "questLakeRuinsFirstQuests.questNine",
+        "options": [
+          "questLakeRuinsFirstQuests.questNineFirstOption",
+          "questLakeRuinsFirstQuests.questNineSecondOption",
+          "questLakeRuinsFirstQuests.questNineThirdOption"
+        ],
+        "answer": "questLakeRuinsFirstQuests.questNineFirstOption"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "die Sonne",
+        "options": [
+          "questLakeRuinsFirstQuests.questTenFirstOption",
+          "questLakeRuinsFirstQuests.questTenSecondOption",
+          "questLakeRuinsFirstQuests.questTenThirdOption"
+        ],
+        "answer": "questLakeRuinsFirstQuests.questTenFirstOption"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "der Regen",
+        "options": [
+          "questLakeRuinsFirstQuests.questElevenFirstOption",
+          "questLakeRuinsFirstQuests.questElevenSecondOption",
+          "questLakeRuinsFirstQuests.questElevenThirdOption"
+        ],
+        "answer": "questLakeRuinsFirstQuests.questElevenFirstOption"
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "questLakeRuinsFirstQuests.questTwelve",
+        "text": "Ich brauche eine Jacke",
+        "answer": "Ich brauche eine Jacke"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "questLakeRuinsFirstQuests.questThirteen",
+        "words": [
+          "warm",
+          "Mütze",
+          "ist",
+          "Die"
+        ],
+        "correctOrder": [
+          "Die",
+          "Mütze",
+          "ist",
+          "warm"
+        ]
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "Es regnet",
+        "options": [
+          "questLakeRuinsFirstQuests.questFourteenFirstOption",
+          "questLakeRuinsFirstQuests.questFourteenSecondOption",
+          "questLakeRuinsFirstQuests.questFourteenThirdOption"
+        ],
+        "answer": "questLakeRuinsFirstQuests.questFourteenFirstOption"
+      },
+      {
+        "id": 15,
+        "type": "readAndAnswer",
+        "text": "Morgen ist es bewölkt, aber am Abend scheint die Sonne.",
+        "question": "questLakeRuinsFirstQuests.questFifteen",
+        "options": [
+          "questLakeRuinsFirstQuests.questFifteenFirstOption",
+          "questLakeRuinsFirstQuests.questFifteenSecondOption",
+          "questLakeRuinsFirstQuests.questFifteenThirdOption"
+        ],
+        "answer": "questLakeRuinsFirstQuests.questFifteenFirstOption"
+      }
+    ]
+  },
+  {
+    "questId": "weather-2",
+    "title": "questLakeRuinsSecondQuests.title",
+    "progress": "0/15",
+    "description": "questLakeRuinsSecondQuests.description",
+    "conditions": {
+      "goal": "questLakeRuinsSecondQuests.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "questLakeRuinsSecondQuests.questOne",
+        "options": [
+          "questLakeRuinsSecondQuests.questOneFirstOption",
+          "questLakeRuinsSecondQuests.questOneSecondOption,",
+          "questLakeRuinsSecondQuests.questOneThirdOption"
+        ],
+        "answer": "questLakeRuinsSecondQuests"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "questLakeRuinsSecondQuests.questTwo",
+        "options": [
+          "questLakeRuinsSecondQuests.questTwoFirstOption",
+          "questLakeRuinsSecondQuests.questTwoSecondOption",
+          "questLakeRuinsSecondQuests.questTwoThirdOption"
+        ],
+        "answer": "questLakeRuinsSecondQuests.questTwoFirstOption"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "questLakeRuinsSecondQuests.questThree",
+        "options": [
+          "questLakeRuinsSecondQuests.questTreeFirstOption",
+          "questLakeRuinsSecondQuests.questTreeSecondOption",
+          "questLakeRuinsSecondQuests.questTreeThirdOption"
+        ],
+        "answer": "questTreeFirstOption"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "questLakeRuinsSecondQuests.questFour",
+        "options": [
+          "questLakeRuinsSecondQuests.questFourFirstOption",
+          "questLakeRuinsSecondQuests.questFourSecondOption",
+          "questLakeRuinsSecondQuests.questFourThirdOption"
+        ],
+        "answer": "questLakeRuinsSecondQuests.questFourFirstOption"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "questLakeRuinsSecondQuests.questFive",
+        "words": [
+          "kalt",
+          "Winter",
+          "es",
+          "ist",
+          "Im"
+        ],
+        "correctOrder": [
+          "Im",
+          "Winter",
+          "ist",
+          "es",
+          "kalt"
+        ]
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "questLakeRuinsSecondQuests.questSeven",
+        "text": "Es schneit",
+        "answer": "Es schneit"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "questLakeRuinsSecondQuests.questSeven",
+        "options": [
+          "questLakeRuinsSecondQuests.questSevenFirstOption",
+          "questLakeRuinsSecondQuests.questSevenSecondOption",
+          "questLakeRuinsSecondQuests.questSevenThirdOption"
+        ],
+        "answer": "questLakeRuinsSecondQuests.questSevenFirstOption"
+      },
+      {
+        "id": 8,
+        "type": "reorder",
+        "question": "questLakeRuinsSecondQuests.questEight",
+        "words": [
+          "brauche",
+          "Ich",
+          "einen",
+          "Regenschirm"
+        ],
+        "correctOrder": [
+          "Ich",
+          "brauche",
+          "einen",
+          "Regenschirm"
+        ]
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Im Sommer ist es heiß. Ich trage ein T-Shirt.",
+        "question": "questLakeRuinsSecondQuests.questNine",
+        "options": [
+          "questLakeRuinsSecondQuests.questNineFirstOption",
+          "questLakeRuinsSecondQuests.questNineSecondOption",
+          "questLakeRuinsSecondQuests.questNineThirdOption"
+        ],
+        "answer": "questLakeRuinsSecondQuests.questNineThirdOption"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Что значит: Grad",
+        "options": [
+          "questLakeRuinsSecondQuests.questTenFirstOption",
+          "questLakeRuinsSecondQuests.questTenSecondOption",
+          "questLakeRuinsSecondQuests.questTenThirdOption"
+        ],
+        "answer": "questLakeRuinsSecondQuests.questTenFirstOption"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "questLakeRuinsSecondQuests.questEleven",
+        "correctAnswer": "Sommer"
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "questLakeRuinsSecondQuests.questTwelve",
+        "text": "Heute sind es zehn Grad",
+        "answer": "Heute sind es zehn Grad"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "questLakeRuinsSecondQuests.questThirteen",
+        "words": [
+          "eine",
+          "Jacke",
+          "eine",
+          "trage",
+          "und",
+          "Ich",
+          "Mütze"
+        ],
+        "correctOrder": [
+          "Ich",
+          "trage",
+          "eine",
+          "Jacke",
+          "und",
+          "eine",
+          "Mütze"
+        ]
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "Переведи: Es regnet",
+        "options": [
+          "questLakeRuinsSecondQuests.questFourteenFirstOption",
+          "questLakeRuinsSecondQuests.questFourteenSecondOption",
+          "questLakeRuinsSecondQuests.questFourteenThirdOption"
+        ],
+        "answer": "questLakeRuinsSecondQuests.questFourteenFirstOption"
+      },
+      {
+        "id": 15,
+        "type": "readAndAnswer",
+        "text": "Im Herbst ist es windig und oft regnerisch.",
+        "question": "",
+        "options": [
+          "questLakeRuinsSecondQuests.questFifteenFirstOption",
+          "questLakeRuinsSecondQuests.questFifteenSecondOption",
+          "questLakeRuinsSecondQuests.questFifteenThirdOption"
+        ],
+        "answer": "questLakeRuinsSecondQuests.questFifteenFirstOption"
+      }
+    ]
+  },
+  {
+    "questId": "weather-3",
+    "title": "questLakeRuinsThirdQuests.title",
+    "progress": "0/15",
+    "description": "questLakeRuinsThirdQuests.description",
+    "conditions": {
+      "goal": "questLakeRuinsThirdQuests.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "questLakeRuinsThirdQuests.questOne",
+        "options": [
+          "questLakeRuinsThirdQuests.questOneFirstOption",
+          "questLakeRuinsThirdQuests.questOneSecondOption",
+          "questLakeRuinsThirdQuests.questOneThirdOption"
+        ],
+        "answer": "questLakeRuinsThirdQuests.questOneFirstOption"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "trocken",
+        "options": [
+          "questLakeRuinsThirdQuests.questTwoFirstOption",
+          "questLakeRuinsThirdQuests.questTwoSecondOption",
+          "questLakeRuinsThirdQuests.questTwoThirdOption"
+        ],
+        "answer": "questLakeRuinsThirdQuests.questTwoFirstOption"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "nass",
+        "options": [
+          "questLakeRuinsThirdQuests.questThirdFirstOption",
+          "questLakeRuinsThirdQuests.questThirdSecondOption",
+          "questLakeRuinsThirdQuests.questThirdThirdOption"
+        ],
+        "answer": "questLakeRuinsThirdQuests.questThirdFirstOption"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "das Gewitter",
+        "options": [
+          "questLakeRuinsThirdQuests.questFourFirstOption",
+          "questLakeRuinsThirdQuests.questFourSecondOption",
+          "questLakeRuinsThirdQuests.questFourThirdOption"
+        ],
+        "answer": "questLakeRuinsThirdQuests.questFourFirstOption"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "questLakeRuinsThirdQuests.questFive",
+        "words": [
+          "Heute",
+          "Abend",
+          "ist",
+          "es",
+          "neblig"
+        ],
+        "correctOrder": [
+          "Heute",
+          "Abend",
+          "ist",
+          "es",
+          "neblig"
+        ]
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "questLakeRuinsThirdQuests.questSix",
+        "text": "Es ist kühl",
+        "answer": "Es ist kühl"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "questLakeRuinsThirdQuests.questSeven",
+        "words": [
+          "Morgen",
+          "wird",
+          "es",
+          "trocken"
+        ],
+        "correctOrder": [
+          "Morgen",
+          "wird",
+          "es",
+          "trocken"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "questLakeRuinsThirdQuests.questEight",
+        "text": "Es bleibt klar",
+        "answer": "Es bleibt klar"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Am Wochenende gibt es Gewitter. Wir bleiben zu Hause.",
+        "question": "",
+        "options": [
+          "questLakeRuinsThirdQuests.questNineFirstOption",
+          "questLakeRuinsThirdQuests.questNineSecondOption",
+          "questLakeRuinsThirdQuests.questNineThirdOption"
+        ],
+        "answer": "questLakeRuinsThirdQuests.questNineFirstOption"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "questLakeRuinsThirdQuests.questTen",
+        "words": [
+          "Heute",
+          "ist",
+          "die",
+          "Luft",
+          "schwül"
+        ],
+        "correctOrder": [
+          "Heute",
+          "ist",
+          "die",
+          "Luft",
+          "schwül"
+        ]
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "questLakeRuinsThirdQuests.questEleven",
+        "text": "Ich nehme die Sonnenbrille",
+        "answer": "Ich nehme die Sonnenbrille"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "die Sonnenbrille",
+        "options": [
+          "questLakeRuinsThirdQuests.questTwelveFirstOption",
+          "questLakeRuinsThirdQuests.questTwelveSecondOption",
+          "questLakeRuinsThirdQuests.questTwelveThirdOption"
+        ],
+        "answer": "questLakeRuinsThirdQuests.questTwelveFirstOption"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "Morgen früh ist es neblig. Ich fahre später.",
+        "question": "questLakeRuinsThirdQuests.questThirteen",
+        "options": [
+          "questLakeRuinsThirdQuests.questThirteenFirstOption",
+          "questLakeRuinsThirdQuests.questThirteenSecondOption",
+          "questLakeRuinsThirdQuests.questThirteenThirdOption"
+        ],
+        "answer": "questLakeRuinsThirdQuests.questThirteenFirstOption"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "questLakeRuinsThirdQuests.questFourteen",
+        "words": [
+          "Es",
+          "gibt",
+          "Nebel",
+          "am",
+          "Morgen"
+        ],
+        "correctOrder": [
+          "Es",
+          "gibt",
+          "Nebel",
+          "am",
+          "Morgen"
+        ]
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "questLakeRuinsThirdQuests.questFifteen",
+        "text": "Es ist trocken und klar",
+        "answer": "Es ist trocken und klar"
+      }
+    ]
+  },
+  {
+    "questId": "weather-4",
+    "title": "questLakeRuinsFourthQuests.title",
+    "progress": "0/15",
+    "description": "questLakeRuinsFourthQuests.description",
+    "conditions": {
+      "goal": "questLakeRuinsFourthQuests.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "questLakeRuinsFourthQuests.questOne",
+        "options": [
+          "questLakeRuinsFourthQuests.questOneFirstOption",
+          "questLakeRuinsFourthQuests.questOneSecondOption",
+          "questLakeRuinsFourthQuests.questOneThirdOption"
+        ],
+        "answer": "questLakeRuinsFourthQuests.questOneFirstOption"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "questLakeRuinsFourthQuests",
+        "options": [
+          "questLakeRuinsFourthQuests.questTwoFirstOption",
+          "questLakeRuinsFourthQuests.questTwoSecondOption",
+          "questLakeRuinsFourthQuests.questTwoThirdOption"
+        ],
+        "answer": "questLakeRuinsFourthQuests.questTwoFirstOption"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "questLakeRuinsFourthQuests.questThird",
+        "options": [
+          "questLakeRuinsFourthQuests.questThirdFirstOption",
+          "questLakeRuinsFourthQuests.questThirdSecondOption",
+          "questLakeRuinsFourthQuests.questThirdThirdOption"
+        ],
+        "answer": "questLakeRuinsFourthQuests.questThirdFirstOption"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "questLakeRuinsFourthQuests.questFour",
+        "options": [
+          "questLakeRuinsFourthQuests.questFourFirstOption",
+          "questLakeRuinsFourthQuests.questFourSecondOption",
+          "questLakeRuinsFourthQuests.questFourThirdOption"
+        ],
+        "answer": "questLakeRuinsFourthQuests.questFourFirstOption"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "questLakeRuinsFourthQuests.questFive",
+        "words": [
+          "Heute",
+          "Abend",
+          "gibt",
+          "es",
+          "Sturm"
+        ],
+        "correctOrder": [
+          "Heute",
+          "Abend",
+          "gibt",
+          "es",
+          "Sturm"
+        ]
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "questLakeRuinsFourthQuests.questSix",
+        "text": "Es blitzt",
+        "answer": "Es blitzt"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "questLakeRuinsFourthQuests.questSeven",
+        "words": [
+          "Der",
+          "Himmel",
+          "ist",
+          "grau"
+        ],
+        "correctOrder": [
+          "Der",
+          "Himmel",
+          "ist",
+          "grau"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "questLakeRuinsFourthQuests.questEight",
+        "text": "Es donnert",
+        "answer": "Es donnert"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Der Wetterbericht: Am Montag gibt es Sturm. Nimm Stiefel.",
+        "question": "questLakeRuinsFourthQuests.questNine",
+        "options": [
+          "questLakeRuinsFourthQuests.questNineFirstOption",
+          "questLakeRuinsFourthQuests.questNineSecondOption",
+          "questLakeRuinsFourthQuests.questNineThirdOption"
+        ],
+        "answer": "questLakeRuinsFourthQuests.questNineFirstOption"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "questLakeRuinsFourthQuests.questTen",
+        "options": [
+          "questLakeRuinsFourthQuests.questTenFirstOption",
+          "questLakeRuinsFourthQuests.questTenSecondOption",
+          "questLakeRuinsFourthQuests.questTenThirdOption"
+        ],
+        "answer": "questLakeRuinsFourthQuests.questTenFirstOption"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "questLakeRuinsFourthQuests.questEleven",
+        "words": [
+          "Ich",
+          "nehme",
+          "den",
+          "Regenmantel"
+        ],
+        "correctOrder": [
+          "Ich",
+          "nehme",
+          "den",
+          "Regenmantel"
+        ]
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "questLakeRuinsFourthQuests.questTwelve",
+        "options": [
+          "questLakeRuinsFourthQuests.questTwelveFirstOption",
+          "questLakeRuinsFourthQuests.questTwelveSecondOption",
+          "questLakeRuinsFourthQuests.questTwelveThirdOption"
+        ],
+        "answer": "questLakeRuinsFourthQuests.questTwelveFirstOption"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "stürmisch",
+        "options": [
+          "questLakeRuinsFourthQuests.questThirteenFirstOption",
+          "questLakeRuinsFourthQuests.questThirteenSecondOption",
+          "questLakeRuinsFourthQuests.questThirteenThirdOption"
+        ],
+        "answer": "questLakeRuinsFourthQuests.questThirteenFirstOption"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "questLakeRuinsFourthQuests.questFourteen",
+        "words": [
+          "Am",
+          "Himmel",
+          "sind",
+          "Wolken"
+        ],
+        "correctOrder": [
+          "Am",
+          "Himmel",
+          "sind",
+          "Wolken"
+        ]
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "questLakeRuinsFourthQuests.questFifteen",
+        "text": "Der Wetterbericht ist schlecht",
+        "answer": "Der Wetterbericht ist schlecht"
+      }
+    ]
+  },
+  {
+    "questId": "weather-5",
+    "title": "questLakeRuinsFifthQuests.title",
+    "progress": "0/15",
+    "description": "questLakeRuinsFifthQuests.description",
+    "conditions": {
+      "goal": "questLakeRuinsFifthQuests.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "questLakeRuinsFifthQuests.questOne",
+        "options": [
+          "questLakeRuinsFifthQuests.questOneFirstOption",
+          "questLakeRuinsFifthQuests.questOneSecondOption",
+          "questLakeRuinsFifthQuests.questOneThirdOption"
+        ],
+        "answer": "questLakeRuinsFifthQuests.questOneFirstOption"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "questLakeRuinsFifthQuests.questTwo",
+        "options": [
+          "questLakeRuinsFifthQuests.questTwoFirstOption",
+          "questLakeRuinsFifthQuests.questTwoSecondOption",
+          "questLakeRuinsFifthQuests.questTwoThirdOption"
+        ],
+        "answer": "questLakeRuinsFifthQuests.questTwoFirstOption"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "questLakeRuinsFifthQuests.questThird",
+        "options": [
+          "questLakeRuinsFifthQuests.questThirdFirstOption",
+          "questLakeRuinsFifthQuests.questThirdSecondOption",
+          "questLakeRuinsFifthQuests.questThirdThirdOption"
+        ],
+        "answer": "questLakeRuinsFifthQuests.questThirdFirstOption"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "questLakeRuinsFifthQuests.questFour",
+        "options": [
+          "questLakeRuinsFifthQuests.questFourFirstOption",
+          "questLakeRuinsFifthQuests.questFourSecondOption",
+          "questLakeRuinsFifthQuests.questFourThirdOption"
+        ],
+        "answer": "questLakeRuinsFifthQuests.questFourFirstOption"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "questLakeRuinsFifthQuests.questFive",
+        "words": [
+          "kälter",
+          "wird",
+          "Es"
+        ],
+        "correctOrder": [
+          "Es",
+          "wird",
+          "kälter"
+        ]
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "questLakeRuinsFifthQuests.questSix",
+        "text": "Am Morgen gibt es Nebel",
+        "answer": "Am Morgen gibt es Nebel"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "questLakeRuinsFifthQuests.questSeven",
+        "words": [
+          "gibt",
+          "Abend",
+          "Am",
+          "es",
+          "Gewitter"
+        ],
+        "correctOrder": [
+          "Am",
+          "Abend",
+          "gibt",
+          "es",
+          "Gewitter"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "questLakeRuinsFifthQuests.questEight",
+        "text": "Vorsicht, es ist glatt!",
+        "answer": "Vorsicht, es ist glatt!"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Die Vorhersage: Am Freitag wird es kühler, am Samstag regnet es, am Sonntag scheint die Sonne.",
+        "question": "",
+        "options": [
+          "questLakeRuinsFifthQuests.questNineFirstOption",
+          "questLakeRuinsFifthQuests.questNineSecondOption",
+          "questLakeRuinsFifthQuests.questNinThirdOption"
+        ],
+        "answer": "questLakeRuinsFifthQuests.questNineFirstOption"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "questLakeRuinsFifthQuests.questTen",
+        "options": [
+          "questLakeRuinsFifthQuests.questTenFirstOption",
+          "questLakeRuinsFifthQuests.questTenSecondOption",
+          "questLakeRuinsFifthQuests.questTenThirdOption"
+        ],
+        "answer": "questLakeRuinsFifthQuests.questTenFirstOption"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "questLakeRuinsFifthQuests.questEleven",
+        "words": [
+          "Handschuhe",
+          "brauche",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "brauche",
+          "Handschuhe"
+        ]
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "questLakeRuinsFifthQuests.questTwelve",
+        "text": "Ich friere",
+        "answer": "Ich friere"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "questLakeRuinsFifthQuests.questThirteen",
+        "options": [
+          "questLakeRuinsFifthQuests.questThirteenFirstOption",
+          "questLakeRuinsFifthQuests.questThirteenSecondOption",
+          "questLakeRuinsFifthQuests.questThirteenThirdOption"
+        ],
+        "answer": "questLakeRuinsFifthQuests.questThirteenFirstOption"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "questLakeRuinsFifthQuests.questFourteen",
+        "words": [
+          "es",
+          "ist",
+          "Heute",
+          "mild"
+        ],
+        "correctOrder": [
+          "Heute",
+          "ist",
+          "es",
+          "mild"
+        ]
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "questLakeRuinsFifthQuests.questFifteen",
+        "text": "Die Vorhersage ist gut",
+        "answer": "Die Vorhersage ist gut"
+      }
+    ]
+  },
+  {
+    "questId": "weather-6",
+    "title": "questLakeRuinsSixthQuests.title",
+    "progress": "0/15",
+    "description": "questLakeRuinsSixthQuests.description",
+    "conditions": {
+      "goal": "questLakeRuinsSixthQuests.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "",
+        "options": [
+          "questLakeRuinsSixthQuests.questOneFirstOption",
+          "questLakeRuinsSixthQuests.questOneSecondOption",
+          "questLakeRuinsSixthQuests.questOneThirdOption"
+        ],
+        "answer": "questLakeRuinsSixthQuests.questOneFirstOption"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "schwül",
+        "options": [
+          "questLakeRuinsSixthQuests.questTwoFirstOption",
+          "questLakeRuinsSixthQuests.questTwoSecondOption",
+          "questLakeRuinsSixthQuests.questTwoThirdOption"
+        ],
+        "answer": "questLakeRuinsSixthQuests.questTwoFirstOption"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "die Sonnencreme",
+        "options": [
+          "questLakeRuinsSixthQuests.questThirdFirstOption",
+          "questLakeRuinsSixthQuests.questThirdSecondOption",
+          "questLakeRuinsSixthQuests.questThirdThirdOption"
+        ],
+        "answer": "questLakeRuinsSixthQuests.questThirdFirstOption"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "die Sonnenbrille",
+        "options": [
+          "questLakeRuinsSixthQuests.questFourFirstOption",
+          "questLakeRuinsSixthQuests.questFourSecondOption",
+          "questLakeRuinsSixthQuests.questFourThirdOption"
+        ],
+        "answer": "questLakeRuinsSixthQuests.questFourFirstOption"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "questLakeRuinsSixthQuests.questFive",
+        "words": [
+          "schwül",
+          "ist",
+          "es",
+          "Heute"
+        ],
+        "correctOrder": [
+          "Heute",
+          "ist",
+          "es",
+          "schwül"
+        ]
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "questLakeRuinsSixthQuests.questSix",
+        "text": "Im Schatten ist es kühler",
+        "answer": "Im Schatten ist es kühler"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "text": "Es ist sehr heiß. Trage eine Sonnenbrille und Sonnencreme.",
+        "question": "questLakeRuinsSixthQuests.questSeven",
+        "options": [
+          "questLakeRuinsSixthQuests.questSevenFirstOption",
+          "questLakeRuinsSixthQuests.questSevenSecondOption",
+          "questLakeRuinsSixthQuests.questSevenThirdOption"
+        ],
+        "answer": "questLakeRuinsSixthQuests.questSevenFirstOption"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "die Hitze",
+        "options": [
+          "questLakeRuinsSixthQuests.questEightFirstOption",
+          "questLakeRuinsSixthQuests.questEightSecondOption",
+          "questLakeRuinsSixthQuests.questEightThirdOption"
+        ],
+        "answer": "questLakeRuinsSixthQuests.questEightFirstOption"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "questLakeRuinsSixthQuests.questNine",
+        "words": [
+          "Schatten",
+          "bleibe",
+          "im",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bleibe",
+          "im",
+          "Schatten"
+        ]
+      },
+      {
+        "id": 10,
+        "type": "speechToText",
+        "question": "questLakeRuinsSixthQuests.questTen",
+        "text": "Der UV-Index ist hoch",
+        "answer": "Der UV-Index ist hoch"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "trocken",
+        "options": [
+          "questLakeRuinsSixthQuests.questElevenFirstOption",
+          "questLakeRuinsSixthQuests.questElevenSecondOption",
+          "questLakeRuinsSixthQuests.questElevenThirdOption"
+        ],
+        "answer": "questLakeRuinsSixthQuests.questElevenFirstOption"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "questLakeRuinsSixthQuests.questTwelve",
+        "words": [
+          "Es",
+          "warm",
+          "trocken",
+          "und",
+          "ist"
+        ],
+        "correctOrder": [
+          "Es",
+          "ist",
+          "trocken",
+          "und",
+          "warm"
+        ]
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "Heute über 30 Grad. Am Nachmittag wird es sehr heiß.",
+        "question": "",
+        "options": [
+          "questLakeRuinsSixthQuests°.questThirteenFirstOption",
+          "questLakeRuinsSixthQuests.questThirteenSecondOption",
+          "questLakeRuinsSixthQuests.questThirteenThirdOption"
+        ],
+        "answer": "questLakeRuinsSixthQuests°.questThirteenFirstOption"
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "questLakeRuinsSixthQuests.questFourteen",
+        "text": "Ich brauche Wasser",
+        "answer": "Ich brauche Wasser"
+      },
+      {
+        "id": 15,
+        "type": "select",
+        "question": "Sonnenbrand",
+        "options": [
+          "questLakeRuinsSixthQuests.questFifteenFirstOption",
+          "questLakeRuinsSixthQuests.questFifteenSecondOption",
+          "questLakeRuinsSixthQuests.questFifteenThirdOption"
+        ],
+        "answer": "questLakeRuinsSixthQuests.questFifteenFirstOption"
+      }
+    ]
+  },
+  {
+    "questId": "weather-7",
+    "title": "questLakeRuinsSeventhQuests.title",
+    "progress": "0/15",
+    "description": "questLakeRuinsSeventhQuests.description",
+    "conditions": {
+      "goal": "questLakeRuinsSeventhQuests.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "questLakeRuinsSeventhQuests.questOne",
+        "options": [
+          "questLakeRuinsSeventhQuests.questOneFirstOption",
+          "questLakeRuinsSeventhQuests.questOneSecondOption",
+          "questLakeRuinsSeventhQuests.questOneThirdOption"
+        ],
+        "answer": "questLakeRuinsSeventhQuests.questOneFirstOption"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "wechselhaft",
+        "options": [
+          "questLakeRuinsSeventhQuests.questTwoFirstOption",
+          "questLakeRuinsSeventhQuests.questTwoSecondOption",
+          "questLakeRuinsSeventhQuests.questTwoThirdOption"
+        ],
+        "answer": "questLakeRuinsSeventhQuests.questTwoFirstOption"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "heiter",
+        "options": [
+          "questLakeRuinsSeventhQuests.questThirdFirstOption",
+          "questLakeRuinsSeventhQuests.questThirdSecondOption",
+          "questLakeRuinsSeventhQuests.questThirdThirdOption"
+        ],
+        "answer": "questLakeRuinsSeventhQuests.questThirdFirstOption"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "die Temperatur",
+        "options": [
+          "questLakeRuinsSeventhQuests.questFourFirstOption",
+          "questLakeRuinsSeventhQuests.questFourSecondOption",
+          "questLakeRuinsSeventhQuests.questFourThirdOption"
+        ],
+        "answer": "questLakeRuinsSeventhQuests.questFourFirstOption"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "questLakeRuinsSeventhQuests.questFive",
+        "words": [
+          "steigt",
+          "Temperatur",
+          "Die"
+        ],
+        "correctOrder": [
+          "Die",
+          "Temperatur",
+          "steigt"
+        ]
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "questLakeRuinsSeventhQuests.questSix",
+        "text": "Die Temperatur sinkt in der Nacht",
+        "answer": "Die Temperatur sinkt in der Nacht"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "nachts",
+        "options": [
+          "questLakeRuinsSeventhQuests.questSevenFirstOption",
+          "questLakeRuinsSeventhQuests.questSevenSecondOption",
+          "questLakeRuinsSeventhQuests.questSevenThirdOption"
+        ],
+        "answer": "questLakeRuinsSeventhQuests.questSevenFirstOption"
+      },
+      {
+        "id": 8,
+        "type": "reorder",
+        "question": "questLakeRuinsSeventhQuests.questEight",
+        "words": [
+          "kühl",
+          "Morgen",
+          "ist",
+          "es",
+          "Am"
+        ],
+        "correctOrder": [
+          "Am",
+          "Morgen",
+          "ist",
+          "es",
+          "kühl"
+        ]
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Heute ist es wechselhaft: morgens regnet es, am Nachmittag scheint die Sonne.",
+        "question": "",
+        "options": [
+          "questLakeRuinsSeventhQuests.questNineFirstOption",
+          "questLakeRuinsSeventhQuests.questNineSecondOption",
+          "questLakeRuinsSeventhQuests.questNineThirdOption"
+        ],
+        "answer": "questLakeRuinsSeventhQuests.questNineFirstOption"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Что значит: bis zu 25 Grad",
+        "options": [
+          "questLakeRuinsSeventhQuests.questTenFirstOption",
+          "questLakeRuinsSeventhQuests.questTenSecondOption",
+          "questLakeRuinsSeventhQuests.questTenThirdOption"
+        ],
+        "answer": "questLakeRuinsSeventhQuests.questTenFirstOption"
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "questLakeRuinsSeventhQuests.questEleven",
+        "text": "Tagsüber sind es bis zu 25 Grad",
+        "answer": "Tagsüber sind es bis zu 25 Grad"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "questLakeRuinsSeventhQuests.questTwelve",
+        "words": [
+          "Grad",
+          "5",
+          "10",
+          "und",
+          "Zwischen"
+        ],
+        "correctOrder": [
+          "Zwischen",
+          "5",
+          "und",
+          "10",
+          "Grad"
+        ]
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "Im Wetterbericht: In Berlin bleibt es heute mild, die Temperatur liegt zwischen 12 und 16 Grad.",
+        "question": "",
+        "options": [
+          "questLakeRuinsSeventhQuests.questThirteenFirstOption",
+          "questLakeRuinsSeventhQuests.questThirteenSecondOption",
+          "questLakeRuinsSeventhQuests.questThirteenThirdOption"
+        ],
+        "answer": "questLakeRuinsSeventhQuests.questThirteenFirstOption"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "Es bleibt mild",
+        "options": [
+          "questLakeRuinsSeventhQuests.questFourteenFirstOption",
+          "questLakeRuinsSeventhQuests.questFourteenSecondOption",
+          "questLakeRuinsSeventhQuests.questFourteenThirdOption"
+        ],
+        "answer": "questLakeRuinsSeventhQuests.questFourteenFirstOption"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "questLakeRuinsSeventhQuests.questFifteen",
+        "text": "Morgen wird es kälter",
+        "answer": "Morgen wird es kälter"
+      }
+    ]
+  },
+  {
+    "questId": "weather-8",
+    "title": "questLakeRuinsEighthQuests.title",
+    "progress": "0/15",
+    "description": "questLakeRuinsEighthQuests.description",
+    "conditions": {
+      "goal": "questLakeRuinsEighthQuests.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "questLakeRuinsEighthQuests.questOne",
+        "options": [
+          "questLakeRuinsEighthQuests.questOneFirstOption",
+          "questLakeRuinsEighthQuests.questOneSecondOption",
+          "questLakeRuinsEighthQuests.questOneThirdOption"
+        ],
+        "answer": "questLakeRuinsEighthQuests.questOneFirstOption"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "questLakeRuinsEighthQuests.questTwo",
+        "options": [
+          "questLakeRuinsEighthQuests.questTwoFirstOption",
+          "questLakeRuinsEighthQuests.questTwoSecondOption",
+          "questLakeRuinsEighthQuests.questTwoThirdOption"
+        ],
+        "answer": "questLakeRuinsEighthQuests.questTwoFirstOption"
+      },
+      {
+        "id": 3,
+        "type": "reorder",
+        "question": "questLakeRuinsEighthQuests.questThird",
+        "words": [
+          "Heute",
+          "ist",
+          "es",
+          "sonnig",
+          "und",
+          "warm"
+        ],
+        "correctOrder": [
+          "Heute",
+          "ist",
+          "es",
+          "sonnig",
+          "und",
+          "warm"
+        ]
+      },
+      {
+        "id": 4,
+        "type": "speechToText",
+        "question": "questLakeRuinsEighthQuests.questFour",
+        "text": "Nachts ist es kalt",
+        "answer": "Nachts ist es kalt"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "questLakeRuinsEighthQuests.questFive",
+        "options": [
+          "questLakeRuinsEighthQuests.questFiveFirstOption",
+          "questLakeRuinsEighthQuests.questFiveSecondOption",
+          "questLakeRuinsEighthQuests.questFiveThirdOption"
+        ],
+        "answer": "questLakeRuinsEighthQuests.questFiveFirstOption"
+      },
+      {
+        "id": 6,
+        "type": "readAndAnswer",
+        "text": "Im Herbst ist es oft regnerisch und windig. Ich trage eine Jacke.",
+        "question": "questLakeRuinsEighthQuests.questSix",
+        "options": [
+          "questLakeRuinsEighthQuests.questSixFirstOption",
+          "questLakeRuinsEighthQuests.questSixSecondOption",
+          "questLakeRuinsEighthQuests.questSixThirdOption"
+        ],
+        "answer": "questLakeRuinsEighthQuests.questSixFirstOption"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "questLakeRuinsEighthQuests.questSeven",
+        "words": [
+          "Die",
+          "Temperatur",
+          "steigt"
+        ],
+        "correctOrder": [
+          "Die",
+          "Temperatur",
+          "steigt"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "questLakeRuinsEighthQuests.questEight",
+        "text": "Heute sind es zwanzig Grad",
+        "answer": "Heute sind es zwanzig Grad"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "",
+        "options": [
+          "questLakeRuinsEighthQuests.questNineFirstOption",
+          "questLakeRuinsEighthQuests.questNineSecondOption",
+          "questLakeRuinsEighthQuests.questNineThirdOption"
+        ],
+        "answer": "questLakeRuinsEighthQuests.questNineFirstOption"
+      },
+      {
+        "id": 10,
+        "type": "readAndAnswer",
+        "text": "Wetterbericht: Morgens ist es bewölkt, am Nachmittag sonnig, abends sinkt die Temperatur auf zehn Grad.",
+        "question": "",
+        "options": [
+          "questLakeRuinsEighthQuests.questTenFirstOption",
+          "questLakeRuinsEighthQuests.questTenSecondOption",
+          "questLakeRuinsEighthQuests.questTenThirdOption"
+        ],
+        "answer": "questLakeRuinsEighthQuests.questTenFirstOption"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "questLakeRuinsEighthQuests.questEleven",
+        "words": [
+          "Ich",
+          "brauche",
+          "eine",
+          "Jacke",
+          "und",
+          "eine",
+          "Mütze"
+        ],
+        "correctOrder": [
+          "Ich",
+          "brauche",
+          "eine",
+          "Jacke",
+          "und",
+          "eine",
+          "Mütze"
+        ]
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "questLakeRuinsEighthQuests.questTwelve",
+        "text": "Tagsüber sind es bis zu fünfzehn Grad",
+        "answer": "Tagsüber sind es bis zu fünfzehn Grad"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "questLakeRuinsEighthQuests.questThirteen",
+        "options": [
+          "Eine Jacke und eine Mütze",
+          "Sonnenbrille und T-Shirt",
+          "Keine Jacke"
+        ],
+        "answer": "Eine Jacke und eine Mütze"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "questLakeRuinsEighthQuests.questFourteen",
+        "words": [
+          "Im",
+          "Winter",
+          "schneit",
+          "es",
+          "oft"
+        ],
+        "correctOrder": [
+          "Im",
+          "Winter",
+          "schneit",
+          "es",
+          "oft"
+        ]
+      },
+      {
+        "id": 15,
+        "type": "readAndAnswer",
+        "text": "— Wie ist das Wetter heute? — Es ist wechselhaft: zwischen 3 und 8 Grad. — Brauchst du eine Jacke? — Ja.",
+        "question": "questLakeRuinsEighthQuests.questFifteen",
+        "options": [
+          "questLakeRuinsEighthQuests.questFifteenFirstOption",
+          "questLakeRuinsEighthQuests.questFifteenSecondOption",
+          "questLakeRuinsEighthQuests.questFifteenThirdOption"
+        ],
+        "answer": "questLakeRuinsEighthQuests.questFifteenFirstOption"
+      }
+    ]
+  },
+  {
+    "questId": "weather-9",
+    "title": "questLakeRuinsNinthQuests.title",
+    "progress": "0/15",
+    "description": "questLakeRuinsNinthQuests.description",
+    "conditions": {
+      "goal": "questLakeRuinsNinthQuests.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "",
+        "options": [
+          "questLakeRuinsNinthQuests.questOneFirstOption",
+          "questLakeRuinsNinthQuests.questOneSecondOption",
+          "questLakeRuinsNinthQuests.questOneThirdOption"
+        ],
+        "answer": "questLakeRuinsNinthQuests.questOneFirstOption"
+      },
+      {
+        "id": 2,
+        "type": "readAndAnswer",
+        "text": "Berlin: Morgens ist es bewölkt, nachmittags sonnig.",
+        "question": "",
+        "options": [
+          "questLakeRuinsNinthQuests.questTwoFirstOption",
+          "questLakeRuinsNinthQuests.questTwoSecondOption",
+          "questLakeRuinsNinthQuests.questTwoThirdOption"
+        ],
+        "answer": "questLakeRuinsNinthQuests.questTwoFirstOption"
+      },
+      {
+        "id": 3,
+        "type": "reorder",
+        "question": "questLakeRuinsNinthQuests.questThird",
+        "words": [
+          "Heute",
+          "wechselhaft",
+          "ist",
+          "es"
+        ],
+        "correctOrder": [
+          "Heute",
+          "ist",
+          "es",
+          "wechselhaft"
+        ]
+      },
+      {
+        "id": 4,
+        "type": "speechToText",
+        "question": "questLakeRuinsNinthQuests.questFour",
+        "text": "Zwischen fünf und zehn Grad",
+        "answer": "Zwischen fünf und zehn Grad"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Es regnet. Was brauchst du?",
+        "options": [
+          "Einen Regenschirm",
+          "Eine Sonnenbrille",
+          "Keine Jacke"
+        ],
+        "answer": "Einen Regenschirm"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "questLakeRuinsNinthQuests.questSix",
+        "words": [
+          "Abend",
+          "Am",
+          "sinkt",
+          "Temperatur",
+          "die"
+        ],
+        "correctOrder": [
+          "Am",
+          "Abend",
+          "sinkt",
+          "die",
+          "Temperatur"
+        ]
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "questLakeRuinsNinthQuests.questSeven",
+        "text": "Ich trage eine Jacke und eine Mütze",
+        "answer": "Ich trage eine Jacke und eine Mütze"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "questLakeRuinsNinthQuests.questEight",
+        "options": [
+          "questLakeRuinsNinthQuests.questEightFirstOption",
+          "questLakeRuinsNinthQuests.questEightSecondOption",
+          "questLakeRuinsNinthQuests.questEightThirdOption"
+        ],
+        "answer": "questLakeRuinsNinthQuests.questEightFirstOption"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "München: Morgens 3°, nachmittags 8°, abends 4°. Es ist windig.",
+        "question": "questLakeRuinsNinthQuests.questNine",
+        "options": [
+          "3°",
+          "8°",
+          "4°"
+        ],
+        "answer": "8°"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "questLakeRuinsNinthQuests.questTen",
+        "words": [
+          "Im",
+          "regnerisch",
+          "ist",
+          "oft",
+          "es",
+          "Herbst"
+        ],
+        "correctOrder": [
+          "Im",
+          "Herbst",
+          "ist",
+          "es",
+          "oft",
+          "regnerisch"
+        ]
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "questLakeRuinsNinthQuests.questEleven",
+        "text": "Morgens ist es kalt, aber sonnig",
+        "answer": "Morgens ist es kalt, aber sonnig"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "questLakeRuinsNinthQuests.questTwelve",
+        "options": [
+          "questLakeRuinsNinthQuests.questTwelveFirstOption",
+          "questLakeRuinsNinthQuests.questTwelveSecondOption",
+          "questLakeRuinsNinthQuests.questTwelveThirdOption"
+        ],
+        "answer": "questLakeRuinsNinthQuests.questTwelveFirstOption"
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "— Brauchst du eine Jacke? — Nein, tagsüber sind es bis zu zwanzig Grad.",
+        "question": "questLakeRuinsNinthQuests.questThirteen",
+        "options": [
+          "questLakeRuinsNinthQuests.questThirteenFirstOption",
+          "questLakeRuinsNinthQuests.questThirteenSecondOption",
+          "questLakeRuinsNinthQuests.questThirteenThirdOption"
+        ],
+        "answer": "questLakeRuinsNinthQuests.questThirteenFirstOption"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "questLakeRuinsNinthQuests.questFourteen",
+        "words": [
+          "Grad",
+          "es",
+          "sind",
+          "zehn",
+          "Heute"
+        ],
+        "correctOrder": [
+          "Heute",
+          "sind",
+          "es",
+          "zehn",
+          "Grad"
+        ]
+      },
+      {
+        "id": 15,
+        "type": "speechToText.questFifteen",
+        "question": "questLakeRuinsNinthQuests",
+        "text": "Es bleibt bewölkt",
+        "answer": "Es bleibt bewölkt"
+      }
+    ]
+  },
+  {
+    "questId": "weather-10",
+    "title": "questLakeRuinsTenthQuests.title",
+    "progress": "0/15",
+    "description": "questLakeRuinsTenthQuests.description",
+    "conditions": {
+      "goal": "questLakeRuinsTenthQuests.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "questLakeRuinsTenthQuests.questOne",
+        "options": [
+          "questLakeRuinsTenthQuests.questOneFirstOption",
+          "questLakeRuinsTenthQuests.questOneSecondOption",
+          "questLakeRuinsTenthQuests.questOneThirdOption"
+        ],
+        "answer": "questLakeRuinsTenthQuests.questOneFirstOption"
+      },
+      {
+        "id": 2,
+        "type": "readAndAnswer",
+        "text": "Berlin: Heute bewölkt, 12°. Morgen sonnig, 18°.",
+        "question": "",
+        "options": [
+          "questLakeRuinsTenthQuests.questTwoFirstOption",
+          "questLakeRuinsTenthQuests.questTwoSecondOption",
+          "questLakeRuinsTenthQuests.questTwoThirdOption"
+        ],
+        "answer": "questLakeRuinsTenthQuests.questTwoSecondOption"
+      },
+      {
+        "id": 3,
+        "type": "reorder",
+        "question": "questLakeRuinsTenthQuests.questThird",
+        "words": [
+          "Ich",
+          "brauche",
+          "keinen",
+          "Regenschirm"
+        ],
+        "correctOrder": [
+          "Ich",
+          "brauche",
+          "keinen",
+          "Regenschirm"
+        ]
+      },
+      {
+        "id": 4,
+        "type": "speechToText",
+        "question": "questLakeRuinsTenthQuests.questFour",
+        "text": "Heute zehn bis fünfzehn Grad",
+        "answer": "Heute zehn bis fünfzehn Grad"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "",
+        "options": [
+          "questLakeRuinsTenthQuests.questFiveFirstOption",
+          "questLakeRuinsTenthQuests.questFiveSecondOption",
+          "questLakeRuinsTenthQuests.questFiveThirdOption"
+        ],
+        "answer": "questLakeRuinsTenthQuests.questFiveFirstOption"
+      },
+      {
+        "id": 6,
+        "type": "readAndAnswer",
+        "text": "Hamburg: Vormittags 6°, nachmittags 11°, abends 5°. Es regnet.",
+        "question": "questLakeRuinsTenthQuests.questSix",
+        "options": [
+          "questLakeRuinsTenthQuests.questSixFirstOption",
+          "questLakeRuinsTenthQuests.questSixSecondOption",
+          "questLakeRuinsTenthQuests.questSixThirdOption"
+        ],
+        "answer": "questLakeRuinsTenthQuests.questSixSecondOption"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "questLakeRuinsTenthQuests.questSeven",
+        "words": [
+          "Heute",
+          "ist",
+          "es",
+          "windig",
+          "und",
+          "kalt"
+        ],
+        "correctOrder": [
+          "Heute",
+          "ist",
+          "es",
+          "windig",
+          "und",
+          "kalt"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "questLakeRuinsTenthQuests.questEight",
+        "text": "Morgens ist es kalt, nachmittags warm",
+        "answer": "Morgens ist es kalt, nachmittags warm"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "Es ist sonnig und warm. Was brauchst du nicht?",
+        "options": [
+          "Einen Regenschirm",
+          "Eine Jacke",
+          "Eine Mütze"
+        ],
+        "answer": "Einen Regenschirm"
+      },
+      {
+        "id": 10,
+        "type": "readAndAnswer",
+        "text": "— Gehen wir in den Park? — Ja, heute ist es sonnig und zwanzig Grad.",
+        "question": "",
+        "options": [
+          "",
+          "questLakeRuinsTenthQuests.questTenSecondOption",
+          "questLakeRuinsTenthQuests.questTenThirdOption"
+        ],
+        "answer": "questLakeRuinsTenthQuests.questTenFirstOption"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "questLakeRuinsTenthQuests.questEleven",
+        "words": [
+          "Grad",
+          "sind",
+          "nur",
+          "es",
+          "fünf",
+          "Morgen"
+        ],
+        "correctOrder": [
+          "Morgen",
+          "sind",
+          "es",
+          "nur",
+          "fünf",
+          "Grad"
+        ]
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "questLakeRuinsTenthQuests.questTwelve",
+        "text": "Ich nehme eine Jacke, es ist windig",
+        "answer": "Ich nehme eine Jacke, es ist windig"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "questLakeRuinsTenthQuests.questThirteen",
+        "options": [
+          "",
+          "questLakeRuinsTenthQuests.questThirteenSecondOption",
+          "questLakeRuinsTenthQuests.questThirteenThirdOption"
+        ],
+        "answer": "questLakeRuinsTenthQuests.questThirteenFirstOption"
+      },
+      {
+        "id": 14,
+        "type": "readAndAnswer",
+        "text": "Köln: 14°, sonnig. Leipzig: 9°, bewölkt und windig.",
+        "question": "questLakeRuinsTenthQuests.questFourteen",
+        "options": [
+          "",
+          "questLakeRuinsTenthQuests.questFourteenSecondOption",
+          "questLakeRuinsTenthQuests.questFourteenThirdOption"
+        ],
+        "answer": "questLakeRuinsTenthQuests.questFourteenFirstOption"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "questLakeRuinsTenthQuests.questFifteen",
+        "text": "Am Wochenende bleibt es sonnig",
+        "answer": "Am Wochenende bleibt es sonnig"
+      }
+    ]
+  }
+]
+

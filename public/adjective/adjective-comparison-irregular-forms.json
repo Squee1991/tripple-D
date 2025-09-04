@@ -1,0 +1,102 @@
+[
+  {
+    "question": "Ich spiele gut Fußball, aber du spielst ___.",
+    "options": ["besser", "guter", "mehr gut", "am besten"],
+    "answer": "besser"
+  },
+  {
+    "question": "Was isst du ___: Pizza, Pasta oder Döner?",
+    "options": ["am liebsten", "am gernsten", "lieber", "gerner"],
+    "answer": "am liebsten"
+  },
+  {
+    "question": "Er hat viel Geld, aber sein Bruder hat noch ___.",
+    "options": ["mehr", "vieler", "mehrer", "am meisten"],
+    "answer": "mehr"
+  },
+  {
+    "question": "Von diesen drei Türmen ist der Funkturm ___.",
+    "options": ["am höchsten", "höher", "am hohesten", "hochste"],
+    "answer": "am höchsten"
+  },
+  {
+    "question": "Ein Porsche ist teuer. Ein Ferrari ist oft noch ___.",
+    "options": ["teurer", "teuerer", "mehr teuer", "am teuersten"],
+    "answer": "teurer"
+  },
+  {
+    "question": "Welche Apotheke ist von hier aus ___?",
+    "options": ["am nächsten", "näher", "am nahesten", "nächste"],
+    "answer": "am nächsten"
+  },
+  {
+    "question": "Im Wald wird es abends schnell ___.",
+    "options": ["dunkler", "dunkeler", "dunkel", "am dunkelsten"],
+    "answer": "dunkler"
+  },
+  {
+    "question": "Von diesen drei Straßen ist die Hauptstraße ___.",
+    "options": ["am breitesten", "am breitsten", "breiter", "breiteste"],
+    "answer": "am breitesten"
+  },
+  {
+    "question": "Ich finde, dieses Restaurant kocht ___ in der ganzen Stadt.",
+    "options": ["am besten", "am gutesten", "besser", "beste"],
+    "answer": "am besten"
+  },
+  {
+    "question": "Von allen Schülern hat sie ___ geholfen.",
+    "options": ["am meisten", "mehr", "am vielsten", "meiste"],
+    "answer": "am meisten"
+  },
+  {
+    "question": "Ich komme bald, aber er kommt noch ___ als ich.",
+    "options": ["eher", "balder", "am ehesten", "bald"],
+    "answer": "eher"
+  },
+  {
+    "question": "Der Tisch ist hoch, aber der Schrank ist ___.",
+    "options": ["höher", "hoher", "am höchsten", "hoch"],
+    "answer": "höher"
+  },
+  {
+    "question": "Ich trinke gern Tee, aber Kaffee trinke ich ___.",
+    "options": ["lieber", "gerner", "am liebsten", "mehr gern"],
+    "answer": "lieber"
+  },
+  {
+    "question": "Der Sommer in Spanien ist von allen Jahreszeiten ___.",
+    "options": ["am heißesten", "am heißsten", "heißer", "heißeste"],
+    "answer": "am heißesten"
+  },
+  {
+    "question": "Die Schule ist nah, aber der Supermarkt ist noch ___.",
+    "options": ["näher", "naher", "am nächsten", "nah"],
+    "answer": "näher"
+  },
+  {
+    "question": "Ich finde Pizza gut, aber Pasta schmeckt mir ___.",
+    "options": ["besser", "guter", "am besten", "beste"],
+    "answer": "besser"
+  },
+  {
+    "question": "Wer von euch hat die ___ Erfahrung in diesem Bereich?",
+    "options": ["meiste", "meiste", "mehr", "viele"],
+    "answer": "meiste"
+  },
+  {
+    "question": "Von allen Sängern ist seine Stimme ___.",
+    "options": ["am dunkelsten", "dunkler", "am dunkesten", "dunkelste"],
+    "answer": "am dunkelsten"
+  },
+  {
+    "question": "Ein Ring aus Silber ist teuer, aber aus Gold ist er ___.",
+    "options": ["teurer", "teuerer", "am teuersten", "teuer"],
+    "answer": "teurer"
+  },
+  {
+    "question": "Deine Antwort war gut, seine war besser, aber ihre war ___.",
+    "options": ["am besten", "am gutesten", "die beste", "besser"],
+    "answer": "am besten"
+  }
+]

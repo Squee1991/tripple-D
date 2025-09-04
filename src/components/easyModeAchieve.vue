@@ -1,13 +1,13 @@
 <template>
-	<div v-for="group in achievementGroups" :key="group.title" class="achievement-group">
+	<div v-for="group in easyGroups" :key="group.title" class="achievement-group">
 		<div class="group-header">
 			<h2 class="group-title">{{ t(group.title) }}</h2>
 			<span :class="['group-stats', { 'all-completed': getCompletedCount(group) === group.achievements.length }]">
-					{{ getCompletedCount(group) }} / {{ group.achievements.length }}
-				</span>
+        {{ getCompletedCount(group) }} / {{ group.achievements.length }}
+      </span>
 		</div>
 		<div class="achievements-list">
-			<div v-for="achievement in group.achievements" :key="achievement.id" class="achievement-card">
+			<div v-for="achievement in group.achievements" :key="achievement.id" class="achievement__card">
 				<div class="achievement-icon-wrapper">
 					<div class="achievement-icon">
 						<span class="icon-emoji">{{ achievement.icon }}</span>
@@ -17,12 +17,12 @@
 					<h3 class="achievement-title">{{ t(achievement.name) }}</h3>
 					<div class="progress-bar-container">
 						<div
-							class="progress-bar"
-							:style="{ width: (achievement.currentProgress / achievement.targetProgress * 100) + '%' }"
+								class="progress-bar"
+								:style="{ width: (achievement.currentProgress / achievement.targetProgress * 100) + '%' }"
 						></div>
 						<span class="progress-text-overlay">
-                             {{ achievement.currentProgress }} /{{ achievement.targetProgress }}
-						</span>
+              {{ achievement.currentProgress }} / {{ achievement.targetProgress }}
+            </span>
 					</div>
 					<p class="achievement-description">{{ t(achievement.description) }}</p>
 				</div>
@@ -32,184 +32,149 @@
 </template>
 
 <script setup>
-	import {ref, watch} from 'vue';
-	import {groupedEasyModeAchievements} from '../achieveGroup/marathon/easyModeAchievment.js';
-	import {useGameStore} from '../../store/marafonStore.js';
+import { computed, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { useAchievementStore } from '../../store/achievementStore.js'
+import { groupedEasyModeAchievements } from '../achieveGroup/marathon/easyModeAchievment.js'
 
-	const {t} = useI18n()
-	const gameStore = useGameStore();
-	const achievementGroups = ref(groupedEasyModeAchievements);
-	const allAchievements = ref(achievementGroups.value.flatMap(g => g.achievements));
+const { t } = useI18n()
+const achievementStore = useAchievementStore()
 
-	const getCompletedCount = (group) => {
-		if (!group || !group.achievements) return 0;
-		return group.achievements.filter(ach => ach.currentProgress >= ach.targetProgress).length;
-	};
+onMounted(() => {
+	achievementStore.initializeProgressTracking()
+})
 
-	watch(() => gameStore.totalCorrectAnswers ? gameStore.totalCorrectAnswers[1] : 0, (newTotal) => {
-		allAchievements.value.forEach(ach => {
-			if (ach.type === 'total') {
-				ach.currentProgress = Math.min(newTotal || 0, ach.targetProgress);
-			}
-		});
-	}, {immediate: true});
+const easyTitles = groupedEasyModeAchievements.map(g => g.title)
+const easyGroups = computed(() =>
+		achievementStore.groups.filter(g => easyTitles.includes(g.title))
+)
 
-	watch(() => gameStore.personalBests[1], (newBestStreak) => {
-		allAchievements.value.forEach(ach => {
-			if (ach.type === 'streak') {
-				ach.currentProgress = Math.min(newBestStreak || 0, ach.targetProgress);
-			}
-		});
-	}, {immediate: true});
-
+const getCompletedCount = group =>
+		group.achievements.filter(a => a.currentProgress >= a.targetProgress).length
 </script>
 
 <style scoped>
+.achievement-group {
+	margin-bottom: 3rem;
+	font-family: "Nunito", sans-serif;
+}
 
-	/* 1. Подключаем игровой шрифт */
-	@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
-	@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+.group-header {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	padding-bottom: 1rem;
+	margin-bottom: 1.5rem;
+	border-bottom: 3px dashed rgba(27, 27, 27, 0.5);
+}
 
-	.achievement-group {
-		margin-bottom: 3rem;
-		font-family: 'Fredoka One', cursive;
-	}
+.group-title {
+	font-size: 2rem;
+	color: #1e1e1e;
+	margin: 0;
+}
 
-	/* --- Заголовок группы --- */
-	.group-header {
-		display: flex;
-		align-items: center;
-		gap: 1rem;
-		padding-bottom: 1rem;
-		margin-bottom: 1.5rem;
-		border-bottom: 3px dashed rgba(27, 27, 27, 0.5);
-	}
+.group-stats {
+	display: inline-block;
+	padding: 8px 16px;
+	font-size: 1rem;
+	font-weight: 400;
+	color: #1e1e1e;
+	background: #ffffff;
+	border-radius: 100px;
+	border: 3px solid #1e1e1e;
+	box-shadow: 2px 2px 0px #1e1e1e;
+	white-space: nowrap;
+	transition: all 0.2s ease;
+}
 
-	.group-title {
-		font-size: 2rem;
-		color: #1e1e1e;
-		margin: 0;
-	}
+.group-stats.all-completed {
+	background: #f1c40f;
+}
 
-	.group-stats {
-		display: inline-block;
-		padding: 8px 16px;
-		font-size: 1rem;
-		font-weight: 400;
-		color: #1e1e1e;
-		background: #ffffff;
-		border-radius: 100px;
-		border: 3px solid #1e1e1e;
-		box-shadow: 2px 2px 0px #1e1e1e;
-		white-space: nowrap;
-		transition: all 0.2s ease;
-	}
-	.group-stats.all-completed {
-		background: #f1c40f; /* Желтый, когда все выполнено */
-	}
+.achievements-list {
+	display: flex;
+	flex-direction: column;
+}
 
-	/* --- Список карточек --- */
-	.achievements-list {
-		display: flex;
-		flex-direction: column;
-	}
+.achievement__card {
+	display: flex;
+	align-items: flex-start;
+	gap: 1rem;
+	border: 3px solid #1e1e1e;
+	padding: 1rem;
+	border-radius: 20px;
+	background-color: #fff;
+	box-shadow: 6px 6px 0px #1e1e1e;
+	text-align: left;
+	transition: all 0.2s ease;
+	width: 650px;
+	margin-bottom: 20px;
+}
 
-	/* --- Сама карточка достижения --- */
-	.achievement-card {
-		display: flex;
-		align-items: flex-start;
-		gap: 1rem;
-		border: 3px solid #1e1e1e;
-		padding: 1rem;
-		border-radius: 20px;
-		background-color: #fff;
-		box-shadow: 6px 6px 0px #1e1e1e;
-		text-align: left;
-		transition: all 0.2s ease;
-		width: 650px;
-		margin-bottom: 20px;
+.achievement-icon-wrapper {
+	flex-shrink: 0;
+	width: 70px;
+	height: 70px;
+	background: #fef8e4;
+	border-radius: 16px;
+	border: 3px solid #1e1e1e;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
-	}
-	/* Иконка */
-	.achievement-icon-wrapper {
-		flex-shrink: 0;
-		width: 70px;
-		height: 70px;
-		background: #fef8e4; /* Фон иконки в цвет фона страницы */
-		border-radius: 16px;
-		border: 3px solid #1e1e1e;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-	.icon-emoji {
-		font-size: 40px;
-	}
+.icon-emoji {
+	font-size: 40px;
+}
 
-	/* Детали достижения */
-	.achievement-details {
-		flex-grow: 1;
-		display: flex;
-		flex-direction: column;
-	}
-	.achievement-header {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin-bottom: 10px;
-	}
-	.achievement-title {
-		font-size: 1.3rem;
-		color: #1e1e1e;
-		font-weight: 400;
-		margin: 0;
-	}
-	.achievement-progress-text {
-		font-size: 1rem;
-		font-weight: 400;
-		color: #1e1e1e;
-		background: #e0e0e0;
-		padding: 4px 10px;
-		border-radius: 100px;
-		border: 2px solid #1e1e1e;
-	}
+.achievement-details {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+}
 
-	/* --- Прогресс-бар --- */
-	.progress-bar-container {
+.progress-bar-container {
+	width: 100%;
+	background-color: #e0e0e0;
+	border-radius: 100px;
+	height: 28px;
+	margin-bottom: 10px;
+	position: relative;
+	border: 3px solid #1e1e1e;
+	overflow: hidden;
+}
+
+.progress-bar {
+	height: 100%;
+	background: #4ade80;
+	border-radius: 0;
+	transition: width 0.5s ease-in-out;
+}
+
+.progress-text-overlay {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #1e1e1e;
+	font-size: 0.9rem;
+	font-weight: 400;
+	white-space: nowrap;
+}
+
+.achievement-description {
+	font-size: 0.95rem;
+	color: #555;
+	font-family: "Nunito", sans-serif;
+	font-weight: 500;
+	margin: 0;
+	line-height: 1.4;
+}
+
+@media (max-width: 1280px) {
+	.achievement__card {
 		width: 100%;
-		background-color: #e0e0e0;
-		border-radius: 100px;
-		height: 28px;
-		margin-bottom: 10px;
-		position: relative;
-		border: 3px solid #1e1e1e;
-		overflow: hidden;
 	}
-	.progress-bar {
-		height: 100%;
-		background: #4ade80; /* Яркий зеленый для прогресса */
-		border-radius: 0;
-		transition: width 0.5s ease-in-out;
-	}
-	.progress-text-overlay {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		color: #1e1e1e;
-		font-size: 0.9rem;
-		font-weight: 400;
-		text-shadow: none;
-		white-space: nowrap;
-	}
-
-	/* Описание */
-	.achievement-description {
-		font-size: 0.95rem;
-		color: #555;
-		font-family: 'Inter', sans-serif; /* Для лучшей читаемости */
-		font-weight: 500;
-		margin: 0;
-		line-height: 1.4;
-	}
+}
 </style>

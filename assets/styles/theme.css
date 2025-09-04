@@ -1,0 +1,18 @@
+:root {
+    --bg: #fef8e4;
+    --titleColor: #000000;
+    --borderBottom: #000000;
+    --navItems: #000000;
+
+}
+
+.dark {
+    --bg: #2e2e33;
+    --titleColor:white;
+    --borderBottom: white;
+    --navItems: white;
+}
+
+html, body {
+    background: var(--bg);
+}

@@ -53,8 +53,8 @@
                     </div>
                 </form>
                 <div v-if="mode === 'login'" class="google__auth-wrapper" @click="handleGoogleLogin">
+                  <img class="google__icon" src="../../assets/images/search.svg" alt="">
                     <div class="google__auth">{{t('auth.google')}}</div>
-                    <img class="google__icon" src="../../assets/images/search.svg" alt="">
                 </div>
             </div>
         </div>
@@ -195,7 +195,8 @@
                     email: values.email,
                     password: values.password
                 })
-                router.push('/selectedTopics')
+                emits('close-auth-form')
+                router.push('/')
             }
 
             fields.value.forEach(f => f.value = '')
@@ -258,10 +259,11 @@
     }
 
     .google__auth {
-        font-family: 'Fredoka One', cursive;
-        font-weight: 400;
+        font-family: "Nunito", sans-serif;
+        font-weight: 600;
+        font-style: italic;
         font-size: 1.2rem;
-        margin-right: 10px;
+        margin-left: 10px;
         color: #1e1e1e;
     }
 
@@ -283,7 +285,7 @@
 
     .auth__label-text {
         font-size: 1rem;
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         color: #1e1e1e;
         display: block;
     }
@@ -301,6 +303,7 @@
         padding-top: 1rem;
         color: #1e1e1e;
         font-family: 'Inter', sans-serif;
+        font-style: italic;
         font-weight: 700;
         text-decoration: underline;
     }
@@ -326,7 +329,7 @@
         justify-content: center;
         align-items: center;
         font-size: 2rem;
-        font-family: 'Fredoka One', cursive;
+       font-family: "Nunito", sans-serif;
         font-weight: 400;
         margin-bottom: 2rem;
         color: #1e1e1e;
@@ -356,7 +359,7 @@
         padding: 14px 5px;
         cursor: pointer;
         color: #1e1e1e;
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         font-weight: 400;
         font-size: 1.2rem;
         position: relative;
@@ -404,7 +407,7 @@
         font-size: 1rem;
         color: #1e1e1e;
         text-shadow: none;
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         font-weight: 400;
         letter-spacing: 0;
     }
@@ -438,15 +441,16 @@
         background: #f1c40f;
         border: 3px solid #1e1e1e;
         color: #1e1e1e;
-        font-weight: 400;
+        font-style: italic;
+        font-weight: 600;
         font-size: 1.5rem;
-        padding: 16px 0;
+        padding: 12px 0;
         border-radius: 18px;
         cursor: pointer;
         box-shadow: 4px 4px 0px #1e1e1e;
         text-shadow: none;
         letter-spacing: 0;
-        font-family: 'Fredoka One', cursive;
+        font-family: "Nunito", sans-serif;
         transition: all 0.1s ease-in-out;
     }
 

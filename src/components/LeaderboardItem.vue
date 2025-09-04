@@ -51,11 +51,9 @@
 </template>
 
 <style scoped>
-	* {
-		font-family: 'Fredoka One', cursive;
-	}
+
 	.leaderboard-item {
-		border-bottom: 1px solid #3a3f5e;
+		font-family: "Nunito", sans-serif;
 		border-radius: 8px;
 		padding: 10px 20px;
 		transition: all 0.2s ease-in-out;
@@ -101,7 +99,7 @@
 		color: black;
 		font-size: 20px;
 		font-weight: 600;
-		font-family: 'Fredoka One', cursive;;
+		font-family: "Nunito", sans-serif;
 	}
 
 	.leaderboard-score-wrapper {

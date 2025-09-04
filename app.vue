@@ -5,12 +5,22 @@
 </template>
 
 <script setup>
+
+    import { useRouter , useRoute} from 'vue-router'
+
     import {useCurrentUser} from "vuefire";
     import {userlangStore} from './store/learningStore.js'
     import {userAuthStore} from './store/authStore.js'
     import {useSentencesStore} from './store/sentencesStore.js';
     import {useTrainerStore} from './store/themenProgressStore.js'
+    import {useQuestStore} from './store/questStore.js'
+    import {useCardsStore} from './store/cardsStore.js'
+    import {useLocalStatGameStore} from './store/localSentenceStore.js'
     import {onMounted} from "vue";
+
+    const cardStore = useCardsStore()
+    const statsStore = useLocalStatGameStore()
+    const questStore = useQuestStore()
     const learningStore = userlangStore()
     const trainerStore = userlangStore()
     const authStore = userAuthStore()
@@ -18,12 +28,12 @@
     const route = useRoute()
     const user = useCurrentUser()
     const sentencesStore = useSentencesStore();
+
     onMounted(() => {
         watch(user, (user, prevUser) => {
             if (prevUser && !user) {
                 router.push('/')
             } else if (user && typeof route.query.redirect === 'string') {
-
                 router.push(route.query.redirect)
             }
         })
@@ -31,7 +41,11 @@
 
     onMounted(async () => {
         await learningStore.loadFromFirebase()
-        sentencesStore.loadSentences();
+        sentencesStore.loadSentences()
+        questStore.loadDailyProgress()
+        cardStore.loadCreatedCount()
+        statsStore.loadLocalStats()
+
     })
 
     // onMounted(() => {
@@ -75,5 +89,9 @@
         margin: 0;
         box-sizing: border-box;
 
+    }
+
+    html {
+        font-size: 16px;
     }
 </style>
