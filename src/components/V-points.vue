@@ -2,28 +2,47 @@
   <div class="points">
     <section class="points-card" aria-label="Поинты и уровень">
       <header class="points-card__header">
-        <h2 class="points-card__title">Профиль</h2>
+        <h2 class="points-card__title">Панель игрока</h2>
       </header>
       <ul v-if="langStore" class="points-card__list" aria-label="Сводка">
         <li class="points-card__item">
-          <span class="points-card__label">Артиклюсы</span>
-          <span class="points-card__value"> {{ langStore.points}}</span>
+          <div class="points-card__label">Артиклюсы</div>
+          <div class="articlus__wrapper">
+            <img class="articlus__icon" src="../../assets/images/articlus.png" alt="">
+            <span class="points-card__value"> {{ langStore.points }}</span>
+          </div>
         </li>
         <li class="points-card__item">
           <span class="points-card__label">Уровень</span>
-          <span class="points-card__badge">{{ langStore.isLeveling}}</span>
-
+          <span class="points-card__badge">{{ langStore.isLeveling }}</span>
         </li>
         <div class="points-card__progress">
           <div v-if="langStore.exp" class="progress_exp-bar">
             <div class="progress__bar" :style="{width: `${(langStore.exp / 100) * 100}%`}"></div>
-            <div class="progress__meta">{{ langStore.exp}}/100 XP</div></div>
+            <div class="progress__meta">{{ langStore.exp }}/100 XP</div>
           </div>
-        <li class="points-card__item">
-          <span class="points-card__label">Подписка</span>
-          <span class="sub-badge sub-badge--off">Не активна</span>
-        </li>
+        </div>
+<!--        <li class="points-card__item">-->
+<!--          <span class="points-card__label">Подписка</span>-->
+<!--          <span class="sub-badge sub-badge&#45;&#45;off">Не активна</span>-->
+<!--        </li>-->
       </ul>
+      <div class="fiends__list-wrapper">
+        <h3 class="points-card__title"> Список друзей</h3>
+        <ul class="list">
+          <li v-for="friend in friendsStore.friends"
+              :key="friend.id"
+              class="list__item">
+            <img
+                v-if="friend.avatar"
+                :src="friend.avatar"
+                alt="Аватар"
+                class="list__avatar"
+            />
+            <div> {{ friend.name || ''}}</div>
+          </li>
+        </ul>
+      </div>
       <div class="sub-actions">
         <button @click="toPayment" class="btn-activate">Попробовать</button>
       </div>
@@ -33,20 +52,64 @@
 <script setup>
 
 import {userlangStore} from "~/store/learningStore.js";
-import { useRouter} from "vue-router";
+import {useRouter} from "vue-router";
+import { useFriendsStore } from '../../store/friendsStore.js'
+import {onMounted} from "vue";
 const langStore = userlangStore()
 const router = useRouter()
-
+const friendsStore = useFriendsStore()
 const toPayment = () => {
   router.push('/pay')
 }
 
+onMounted(() => {
+  friendsStore.loadFriends()
+})
+
 </script>
 <style scoped>
+
+.list__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border: 3px solid black;
+  border-radius: 15px;
+  background: wheat;
+  padding: 4px 10px;
+  font-weight: 600;
+  font-family: "Nunito", sans-serif;
+  box-shadow: 3px 3px 0 black;
+}
+
+.articlus__wrapper {
+  display: flex;
+  border: 2px solid black;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 1px 0.7rem;
+  height: 40px;
+  background: white;
+  box-shadow: 3px 3px 0 black;
+}
+
+.articlus__icon {
+  width: 30px;
+  height: 27px;
+}
+
 .points {
   min-width: 360px;
   display: flex;
   width: 100%;
+}
+
+.list__avatar {
+  width: 45px;
+  border-radius: 50%;
+  border: 2px solid black;
 }
 
 .points-card {
@@ -58,6 +121,7 @@ const toPayment = () => {
   padding: 18px;
   width: 100%;
   height: 100%;
+  margin-bottom: 15px;
 }
 
 .progress_exp-bar {
@@ -81,22 +145,21 @@ const toPayment = () => {
 
 .points-card__title {
   display: inline-block;
-  margin: 0;
   padding: 8px 14px;
   background: #111;
   color: #fff;
   border-radius: 14px;
   font-size: 20px;
   font-family: "Nunito", sans-serif;
+  margin-bottom: 10px;
 }
 
 .points-card__list {
-  list-style: none;
-  margin: 0;
   padding: 10px 12px;
   background: #ffe78a;
   border: 3px solid #111;
   border-radius: 14px;
+  margin-bottom: 10px;
 }
 
 .points-card__item {
@@ -113,37 +176,42 @@ const toPayment = () => {
 }
 
 .points-card__label {
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 19px;
+  font-weight: 600;
   color: #111;
+  font-family: "Nunito", sans-serif;
 }
 
 .points-card__value {
   font-size: 18px;
-  font-weight: 800;
+  font-weight: 600;
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  font-family: "Nunito", sans-serif;
   color: #111;
 }
 
 
 .points-card__badge {
-  font-size: 14px;
-  font-weight: 800;
+  font-size: 18px;
+  font-weight: 600;
   background: #fff;
-  border: 3px solid #111;
-  border-radius: 999px;
+  border: 2px solid #111;
+  box-shadow: 2px 2px 0 black;
+  border-radius: 10px;
+  font-family: "Nunito", sans-serif;
   padding: 4px 10px;
 }
 
 .sub-badge {
-  font-size: 12px;
-  font-weight: 800;
+  font-size: 14px;
+  font-weight: 600;
   border: 3px solid #111;
   border-radius: 999px;
   padding: 3px 10px;
   background: #fff;
+  font-family: "Nunito", sans-serif;
 }
 
 .sub-badge--off {
@@ -171,19 +239,18 @@ const toPayment = () => {
 }
 
 .btn-activate {
+  text-align: center;
   width: 100%;
-  appearance: none;
   background: #fff;
   color: #111;
+  font-size: 18px;
   border: 3px solid #111;
   border-radius: 15px;
   padding: 10px 16px;
-  font-weight: 900;
+  font-weight: 600;
   box-shadow: 4px 4px 0 #111;
   cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+  font-family: "Nunito", sans-serif;
   transition: transform .06s ease, box-shadow .06s ease, background .2s ease;
 }
 
@@ -208,14 +275,15 @@ const toPayment = () => {
 .progress__meta {
   display: flex;
   align-items: center;
-  justify-content:center;
-  font-size: 12px;
+  justify-content: center;
+  font-size: 13px;
   color: #111;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   font-weight: 600;
+  font-family: "Nunito", sans-serif;
 }
 
 @media (max-width: 420px) {

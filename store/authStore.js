@@ -35,13 +35,8 @@ export const userAuthStore = defineStore('auth', () => {
 	const isGoogleUser = computed(() => providerId.value === 'google.com');
 	const getAvatarUrl = (fileName) => {
 		if (!fileName) return '';
-		try {
-			return new URL(`../assets/images/avatars/${fileName}`, import.meta.url).href;
-		} catch (e) {
-			console.error(`Ошибка URL для аватара: ${fileName}`, e);
-			return '';
-		}
-	};
+		return `/images/avatars/${fileName}`;
+	}
 
 	const normalizeDate = (v) => {
 		if (!v) return null;
@@ -50,7 +45,10 @@ export const userAuthStore = defineStore('auth', () => {
 		return isNaN(d.getTime()) ? null : d.toISOString();
 	};
 
-	const avatarUrl = computed(() => getAvatarUrl(avatar.value));
+	const avatarUrl = computed(() => {
+		return avatar.value ? `/images/avatars/${avatar.value}` : '';
+	});
+
 	const createInitialAchievementsObject = () => {
 		return {
 			achievements: {

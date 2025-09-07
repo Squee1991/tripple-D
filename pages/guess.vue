@@ -19,20 +19,21 @@
         <div class="guess__inner-session" v-else>
           <div class="guess__top-content">
             <div class="top-content-spacer"></div>
+            <div class="guess__info" v-if="themeText">
+              <span class="guess__theme-value"> {{ t('choiceTheme.theme')}}: {{ themeText }}</span>
+            </div>
             <div class="guess__status-group">
-              <!--                            <div v-if="isStarted && !store.win && !store.lose" class="guess__info">{{ t('guessWord.time')}} {{-->
-              <!--                                Math.floor((now - store.timeStarted) / 1000) }} {{ t('guessWord.sec')}}-->
-              <!--                            </div>-->
               <div v-if="isStarted && !store.win && !store.lose && store.timeStarted" class="guess__info">
                 {{ t('guessWord.time') }} {{ timePassed }} {{ t('guessWord.sec') }}
               </div>
-              <AnimatedCounter :end-value="timePassed"/>
-              <div class="guess__info">{{ t('guessWord.try') }}
+              <div class="guess__info">
+                {{ t('guessWord.try') }}
                 <span class="guess__attempts-value">{{ store.attempts }}</span>
               </div>
             </div>
-            <button class="guess__restart" @click="startGame" title="Начать заново"><img
-                src="../assets/images/undo.svg" alt="restart"></button>
+            <button class="guess__restart" @click="startGame" title="Начать заново">
+              <img src="../assets/images/undo.svg" alt="restart">
+            </button>
           </div>
           <div class="guess__word">
             <span v-for="(char, i) in store.masked" :key="i" class="guess__letter">{{ char || '_' }}</span>
@@ -49,7 +50,6 @@
             <button class="btn" @click="guessWord" :disabled="store.win || store.lose">{{ t('guessWord.guess') }}
             </button>
           </div>
-
           <div v-if="store.win" class="feedback__text feedback__text--success guess__result--win">
             {{ t('guessWord.victory') }}
           </div>
@@ -111,7 +111,7 @@
 import {ref, watch, onUnmounted} from 'vue'
 import {useGuessWordStore} from '../store/guesStore.js'
 import {useRouter} from 'vue-router'
-
+import { nameMap } from '../utils/nameMap.js'
 const {t} = useI18n()
 const router = useRouter()
 const store = useGuessWordStore()
@@ -134,6 +134,19 @@ const guessedPerfectWords = computed(() => store.guessedPerfectWords.length)
 const backToMainPage = () => {
   router.push('/')
 }
+
+const themeText = computed(() => {
+  const obj = store.currentWordObj
+  if (!obj) return ''
+  const key = obj.theme || obj.topic || obj.category || ''
+  if (!key) return ''
+  const locKey = nameMap[key]
+  if (locKey) {
+    return t(locKey)
+  }
+  return key
+})
+
 
 function startTimer() {
   if (intervalId) clearInterval(intervalId)
@@ -200,6 +213,12 @@ watch(() => store.lose, (isLose) => {
 </script>
 
 <style scoped>
+
+.guess__theme-value {
+  color: #e9e0ee;
+  font-weight: 700;
+}
+
 .trainer-page {
   position: relative;
   min-height: 100vh;
