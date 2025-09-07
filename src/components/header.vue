@@ -638,13 +638,13 @@ watch(isMobileMenuOpen, (newVal) => {
   }
 
   .header-nav .header-nav__link {
-    font-size: 1.5rem;
-    padding: 1rem;
+    font-size: 1rem;
     justify-content: space-between;
     border: 2px solid #1e1e1e;
     background-color: #fff;
     box-shadow: 3px 3px 0 #1e1e1e;
     margin-bottom: 0.5rem;
+    padding: 12px;
   }
 
   .header-nav .header-nav__link.is-active-parent {
@@ -666,8 +666,8 @@ watch(isMobileMenuOpen, (newVal) => {
   }
 
   .header-nav .header-nav__submenu-link {
-    font-size: 1.2rem;
-    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    padding: 5px;
     color: #1e1e1e;
     background-color: #fff;
     border: 2px solid #1e1e1e;
@@ -686,7 +686,7 @@ watch(isMobileMenuOpen, (newVal) => {
     position: static;
     box-shadow: none;
     border: none;
-    padding: 0.5rem 0 0.5rem 1rem;
+    padding: 5px;
     background: none;
     white-space: normal;
     border-left: 3px solid #cccccc;

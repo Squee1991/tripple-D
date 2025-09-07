@@ -1,5 +1,10 @@
 <template>
   <div class="exam">
+    <transition name="fade">
+      <div v-if="showHint" class="exam-hint">
+        ℹ️ Мы используем автоматическую систему распознавания речи. Говорите чётко рядом с микрофоном.
+      </div>
+    </transition>
     <VConsentModal
         v-if="showConsentModal"
         @consent-given="handleConsentGiven"
@@ -50,7 +55,7 @@ const showConsentModal = ref(false)
 const consentGiven = ref(false)
 const router = useRouter()
 const examStore = userExamStore()
-
+const showHint = ref(false)
 const examLevels = [
   {
     id: 'a1',
@@ -114,6 +119,12 @@ const handleConsentGiven = () => {
   consentGiven.value = true
   showConsentModal.value = false
   sessionStorage.setItem('voiceConsentGiven', 'true')
+  if (consentGiven.value) {
+    showHint.value = true
+    setTimeout(() => {
+      showHint.value = false
+    }, 8000)
+  }
 }
 
 onMounted(() => {
@@ -257,5 +268,29 @@ onMounted(() => {
   .exam-card {
     width: 80%
   }
+}
+
+.exam-hint {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fffbe6;
+  color: #333;
+  border: 2px solid #fcd34d;
+  border-radius: 8px;
+  padding: 0.8rem 1.2rem;
+  box-shadow: 4px 4px 0 rgba(0,0,0,0.25);
+  font-size: 0.95rem;
+  font-weight: 600;
+  z-index: 999;
+  font-family: "Nunito", sans-serif;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.6s;
+}
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
 }
 </style>

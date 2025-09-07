@@ -58,7 +58,10 @@
         <VoiceRecorder
             :lang="'de-DE'"
             :key="examStore.currentIndex"
-            @submit="submitTranscription"
+            @start="isRecording = true"
+            @stop="isRecording = false"
+            @audio="onAudioRecorded"
+        @submit="submitTranscription"
         />
       </div>
     </div>
@@ -124,6 +127,18 @@ const startExam = async () => {
     await examStore.startAttempt({level: level.value, locale: locale.value})
   }
 }
+
+const onAudioRecorded = async ({ blob, durationSec }) => {
+  const exerciseId = currentExercise.value?.id
+  if (!exerciseId || !blob) return
+  await examStore.uploadSpeakingAudio({
+    exerciseId,
+    blob,
+    durationSec,
+    transcription: ''
+  })
+}
+
 
 const submitTextAnswer = async () => {
   const answer = (userInput.value || '').trim()

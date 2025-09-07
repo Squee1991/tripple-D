@@ -8,8 +8,8 @@
         <Vdaily/>
       </div>
       <div>
-        <VAchievements/>
         <VPoints/>
+        <VAchievements/>
       </div>
     </template>
     <template v-else>
@@ -49,7 +49,7 @@ import Stats from '../../assets/images/stats.svg'
 import Daily from '../../assets/images/daily.svg'
 
 const tabs = [
-  { id: 'profile', icon: AchIcon, alt: 'ach icon', label: 'Профиль', component: VPoints },
+  { id: 'profile', icon: AchIcon, alt: 'ach icon', label: 'Панель ученика', component: VPoints },
   { id: 'daily', icon: Daily, alt: 'daily icon', label: 'Ежедневки', component: Vdaily },
   { id: 'achievements', icon: AchIcon, alt: 'achIcon', label: 'Достижения', component: VAchievements },
   { id: 'points', icon: Stats, alt: 'stats icon', label: 'Статистика', component: VStatistics },

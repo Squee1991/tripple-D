@@ -146,10 +146,14 @@ export const useGuessWordStore = defineStore('guessWord', () => {
         if (loadedWords.value.length) return
         const res = await fetch('/words.json')
         const data = await res.json()
-        loadedWords.value = Object.values(data).flat()
+        loadedWords.value = Object.entries(data).flatMap(([themeKey, arr]) =>
+            (arr || []).map(w => ({
+                ...w,
+                theme: w.theme || w.topic || themeKey,
+            }))
+        )
     }
 
-    // ---- Game Flow ----
     async function startGame() {
         await loadWords()
         await loadGuessProgress()
@@ -248,8 +252,6 @@ export const useGuessWordStore = defineStore('guessWord', () => {
         guessedOnLastTryWords,
         guessedPerfectWords,
         guessedSafeWords,
-
-        // actions
         startGame,
         pickLetter,
         tryGuessWord,

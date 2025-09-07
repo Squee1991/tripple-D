@@ -6,16 +6,33 @@ import VEditTest from "../../src/components/V-editTest.vue";
 import Dots from '../../assets/images/dots.svg'
 import Trash from '../../assets/images/trash.svg'
 import Share from '../../assets/images/share.svg'
-
+import { useFriendsStore } from '../../store/friendsStore.js'
+import ShareExamModal from '../../src/components/shareModal.vue';
+const friendsStore = useFriendsStore()
 const router = useRouter()
 const examStore = userExamStore()
 const dotsEdit = ref(false)
-
+const showShareModal = ref(false)
+const isSharing = ref(false)
+const shareMessage = ref('')
 const data = ref([
   {icon: Share, alt: 'Поделиться', text: 'Поделиться'},
   {icon: Trash, alt: 'Удалить', text: 'Удалить'},
 ])
 
+async function handleShareWithFriend(friendUid) {
+  if (!selectedExamId.value || !friendUid) return;
+  isSharing.value = true;
+  try {
+    const res = await examStore.shareExamWithFriend(selectedExamId.value, friendUid);
+    shareMessage.value = res?.already ? 'Вы уже отправляли этот тест' : 'Тест отправлен';
+  } catch (e) {
+    console.error(e);
+    shareMessage.value = e?.message || 'Не удалось поделиться экзаменом';
+  } finally {
+    isSharing.value = false;
+  }
+}
 
 async function handleAction(btn) {
   const att = selectedExamId.value
@@ -24,6 +41,9 @@ async function handleAction(btn) {
   if (btn.text === 'Удалить') {
     await examStore.deleteExam(selectedExamId.value)
   } else if (btn.text === 'Поделиться') {
+    await friendsStore.loadFriends()
+    shareMessage.value = ''
+    showShareModal.value = true
     console.log('Поделиться экзаменом', selectedExamId.value)
   }
 }
@@ -57,6 +77,14 @@ onMounted(() => {
 
 <template>
   <div class="exams-compact">
+    <ShareExamModal
+        v-if="showShareModal"
+        :friends="friendsStore.friends"
+        :is-sending="isSharing"
+        :message="shareMessage"
+        @close="() => { showShareModal = false; shareMessage = '' }"
+        @share="handleShareWithFriend"
+    />
     <h2 class="ec__title">Архив экзаменов</h2>
     <div v-if="examStore.archiveLoading" class="ec__box">Загрузка…</div>
     <div v-else-if="examStore.archiveError" class="ec__box ec__box--error">{{ examStore.archiveError }}</div>
