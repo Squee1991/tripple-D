@@ -2,22 +2,30 @@ import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
 import { doc, setDoc, getDoc, getFirestore , updateDoc  } from 'firebase/firestore'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
+
 export const userlangStore = defineStore('learning', () => {
 	const db = getFirestore()
 	const words = ref([])
-	const learnedWords = ref([])         // тут слова, полностью изученные
-	const wrongAnswers = ref([])         // тут слова, где были ошибки
-	const selectedTopics = ref([])       // тут выбранные темы (ключи)
-	const selectedWords = ref([])        // тут слова, выбранные для сессии(текущая тема)
+	const learnedWords = ref([])
+	const wrongAnswers = ref([])
+	const selectedTopics = ref([])
+	const selectedWords = ref([])
 	const points = ref(0)
-	const gotPremiumBonus = ref(false)   // тут артиклюсы бонус
+	const gotPremiumBonus = ref(false)
 	const totalEarnedPoints = ref(0)
 	const articlesSpentForAchievement = ref(0)
-	const currentIndex = ref(0)          // тут индекс текущего слова в сессии
-	const currentModeIndex = ref(0)      // тут индекс текущего способа обучения
-	const exp = ref(0)                   // тут опыт
-	const isLeveling = ref(0)            // тут уровень
+	const currentIndex = ref(0)
+	const currentModeIndex = ref(0)
+	const exp = ref(0)
+	const isLeveling = ref(0)
 	const isLoaded = ref(false)
+
+	// === НОВЫЕ ПЕРЕМЕННЫЕ ДЛЯ ЕЖЕДНЕВНОГО ПРОГРЕССА ===
+	const bestStreakAnyMode = ref(0)
+	const bestStreakEasyArticle = ref(0)
+	const duelsPlayed = ref(0)
+	// === КОНЕЦ НОВЫХ ПЕРЕМЕННЫХ ===
+
 	const topicStats = computed(() => {
 		const stats = {}
 		const topics = [...new Set(words.value.map(w => w.topic).filter(Boolean))]
@@ -46,6 +54,36 @@ export const userlangStore = defineStore('learning', () => {
 		}
 		await saveToFirebase()
 	}
+
+	// === НОВЫЕ ФУНКЦИИ ДЛЯ ЕЖЕДНЕВНОГО ПРОГРЕССА ===
+	const recordAnswerResult = (isCorrect, { modeKey = null, difficulty = null } = {}) => {
+		// Логика для подсчета стрик-серий
+		let currentAny = Number(sessionStorage.getItem('streakAnyMode') || '0')
+		currentAny = isCorrect ? currentAny + 1 : 0
+		sessionStorage.setItem('streakAnyMode', String(currentAny))
+		if (currentAny > bestStreakAnyMode.value) {
+			bestStreakAnyMode.value = currentAny
+			saveToFirebase()
+		}
+
+		if (isCorrect && modeKey === 'wordArticle' && difficulty === 'easy') {
+			let currentEasy = Number(sessionStorage.getItem('streakEasyArticle') || '0')
+			currentEasy = currentEasy + 1
+			sessionStorage.setItem('streakEasyArticle', String(currentEasy))
+			if (currentEasy > bestStreakEasyArticle.value) {
+				bestStreakEasyArticle.value = currentEasy
+				saveToFirebase()
+			}
+		}
+		if (!isCorrect && modeKey === 'wordArticle' && difficulty === 'easy') {
+			sessionStorage.setItem('streakEasyArticle', '0')
+		}
+	}
+	const recordDuelPlayed = () => {
+		duelsPlayed.value++
+		saveToFirebase()
+	}
+	// === КОНЕЦ НОВЫХ ФУНКЦИЙ ===
 
 	const addWordsToGlobal = async (wordsList) => {
 		let added = false
@@ -111,7 +149,6 @@ export const userlangStore = defineStore('learning', () => {
 		}
 	}
 
-
 	const addWrongAnswers = async (word) => {
 		if (!word || !word.de) return;
 		const isAlreadyInWrong = wrongAnswers.value.find(w => w.de === word.de);
@@ -162,6 +199,11 @@ export const userlangStore = defineStore('learning', () => {
 					currentIndex.value = data.currentIndex || 0
 					currentModeIndex.value = data.currentModeIndex || 0
 					gotPremiumBonus.value = data.gotPremiumBonus || false
+					// === ЗАГРУЗКА НОВЫХ ДАННЫХ ===
+					bestStreakAnyMode.value = data.bestStreakAnyMode || 0
+					bestStreakEasyArticle.value = data.bestStreakEasyArticle || 0
+					duelsPlayed.value = data.duelsPlayed || 0
+					// === КОНЕЦ ЗАГРУЗКИ НОВЫХ ДАННЫХ ===
 				}
 				isLoaded.value = true
 				resolve()
@@ -191,7 +233,12 @@ export const userlangStore = defineStore('learning', () => {
 			isLeveling: isLeveling.value,
 			currentIndex: currentIndex.value,
 			currentModeIndex: currentModeIndex.value,
-			gotPremiumBonus: gotPremiumBonus.value
+			gotPremiumBonus: gotPremiumBonus.value,
+			// === СОХРАНЕНИЕ НОВЫХ ДАННЫХ ===
+			bestStreakAnyMode: bestStreakAnyMode.value,
+			bestStreakEasyArticle: bestStreakEasyArticle.value,
+			duelsPlayed: duelsPlayed.value
+			// === КОНЕЦ СОХРАНЕНИЯ НОВЫХ ДАННЫХ ===
 		}, { merge: true })
 	}
 
@@ -217,6 +264,11 @@ export const userlangStore = defineStore('learning', () => {
 		isLeveling.value = 1
 		currentIndex.value = 0
 		currentModeIndex.value = 0
+		// === СБРОС НОВЫХ ДАННЫХ ===
+		bestStreakAnyMode.value = 0
+		bestStreakEasyArticle.value = 0
+		duelsPlayed.value = 0
+		// === КОНЕЦ СБРОСА НОВЫХ ДАННЫХ ===
 		await saveToFirebase()
 	}
 
@@ -269,6 +321,13 @@ export const userlangStore = defineStore('learning', () => {
 		saveToFirebase,
 		clearAll,
 		addWordsToGlobal,
-		incrementAchievementProgress
+		incrementAchievementProgress,
+		// === НОВЫЕ СВОЙСТВА ДЛЯ ДОСТУПА ===
+		bestStreakAnyMode,
+		bestStreakEasyArticle,
+		duelsPlayed,
+		recordAnswerResult,
+		recordDuelPlayed
+		// === КОНЕЦ НОВЫХ СВОЙСТВ ===
 	}
 })

@@ -51,12 +51,7 @@ onMounted(async () => {
     statsStore.loadLocalStats()
 
 })
-onMounted(() => {
-    // Загружаем данные и запускаем отслеживание
-    langStore.loadFromFirebase().then(() => {
-        daily.start()
-    })
-})
+
 
 onUnmounted(() => {
     daily.stop()
