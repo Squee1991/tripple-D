@@ -107,7 +107,6 @@ import VTips from '../../src/components/V-tips.vue'
 
 const router = useRouter()
 const categoryId = 'prepositions'
-
 const topics = [
   {
     id: 'nominativ',
@@ -210,11 +209,9 @@ const topics = [
     }
   }
 ]
-
 const backTo = () => {
   router.push('/')
 }
-
 const topic = ref('nominativ')
 const currentTopicData = computed(() => topics.find(t => t.id === topic.value))
 

@@ -67,15 +67,6 @@
         <div class="header-nav__tea">
           <ForTea/>
         </div>
-        <VTips
-            :title="articleData.title"
-            :tips="articleData.tips"
-            v-model="isArticleOpen"
-        />
-        <button v-if="userAuth.uid" @click="openArticleModal" class="articlus__wrapper">
-          <img class="articlus" src="../../assets/images/articlus.png" alt="Articlus"/>
-          <span class="articlus__counter">{{ learningStore.points }}</span>
-        </button>
         <div class="header-nav__lang">
           <LanguageSelector/>
         </div>
@@ -151,7 +142,6 @@ const clickedSubChild = ref(null)
 const userBtnRef = ref(null);
 const dropdownRef = ref(null)
 const dropdownRefNav = ref(null)
-const isArticleOpen = ref(false)
 const isMobile = computed(() => bp.isMobile);
 
 const closeAllMenus = () => {
@@ -210,11 +200,13 @@ const menuItems = computed(() => [
                     {id: 'verb-types', url: '/verb-types', valueKey: 'underSub.verbTypes'},
                   ]
                 },
-                {id: 'prepositions', valueKey: 'sub.prepositions' ,
+                {
+                  id: 'prepositions', valueKey: 'sub.prepositions',
                   subChildren: [
-                    {id: 'prepositions-theory' , url: '/prepositions-theory' , valueKey: 'Правила'},
-                    {id: 'prepositions-practice' , url: '/prepositions' , valueKey: 'Практика предлогов'},
-                  ]},
+                    {id: 'prepositions-theory', url: '/prepositions-theory', valueKey: 'Правила'},
+                    {id: 'prepositions-practice', url: '/prepositions', valueKey: 'Практика предлогов'},
+                  ]
+                },
                 {
                   id: 'adjectives',
                   valueKey: 'sub.adjectives',
@@ -263,7 +255,7 @@ const menuItems = computed(() => [
       : []),
   ...(userAuth.uid
       ? [
-        // ? [{id: 'achieve', url: '/achievements', valueKey: 'nav.achieve'},
+        {id: 'achieve', url: '/achievements', valueKey: 'nav.achieve'},
         {id: 'stats', url: '/stats', valueKey: 'nav.stats'}
       ] : [])
 ])
@@ -277,17 +269,6 @@ const goTo = (page) => {
   menuOpen.value = false
   router.push({path: `/${page}`})
 }
-
-const articleData = ref({
-  title: t('articleOverlay.title'),
-  tips: [
-    {id: 1, text: t('articleOverlay.first')},
-    {id: 2, text: t('articleOverlay.second')},
-    {id: 3, text: t('articleOverlay.third')},
-  ]
-})
-
-const openArticleModal = () => isArticleOpen.value = true
 
 const handleClickOutside = (event) => {
   if (menuOpen.value && dropdownRef.value && !dropdownRef.value.contains(event.target) && userBtnRef.value && !userBtnRef.value.contains(event.target)) {
@@ -467,7 +448,7 @@ watch(isMobileMenuOpen, (newVal) => {
   z-index: 120;
 }
 
-.articlus__wrapper, .header-user {
+.header-user {
   height: 45px;
   display: flex;
   align-items: center;

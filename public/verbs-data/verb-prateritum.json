@@ -1,0 +1,62 @@
+[
+  {
+    "type": "fillInBlank",
+    "question": "Letztes Jahr _______ wir nach Spanien.",
+    "options": ["reiste", "reisten", "reist", "reisen"],
+    "answer": "reisten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Er _______ den ganzen Tag im Büro.",
+    "options": ["arbeitete", "arbeitest", "arbeitet", "arbeiten"],
+    "answer": "arbeitete"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Ich _______ gestern einen interessanten Film.",
+    "options": ["sah", "sehe", "sieht", "sehen"],
+    "answer": "sah"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Sie _______ früher sehr gut Klavier.",
+    "options": ["spielte", "spielst", "spielt", "spielen"],
+    "answer": "spielte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir _______ uns über das Geschenk.",
+    "options": ["freuten", "freut", "freuten sich", "freust"],
+    "answer": "freuten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Er _______ mir einen Brief.",
+    "options": ["schrieb", "schreibt", "schreibte", "schreiben"],
+    "answer": "schrieb"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Die Kinder _______ im Park.",
+    "options": ["spielten", "spielte", "spielt", "spielen"],
+    "answer": "spielten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Ich _______ gestern meine Hausaufgaben nicht.",
+    "options": ["machte", "macht", "machst", "machen"],
+    "answer": "machte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir _______ viele neue Leute kennen.",
+    "options": ["lernten", "lernte", "lernt", "lernen"],
+    "answer": "lernten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Sie _______ gestern sehr spät nach Hause.",
+    "options": ["kam", "kommen", "kamen", "kommt"],
+    "answer": "kam"
+  }
+]

@@ -142,6 +142,33 @@ export const cpecialGroupAchievment = [
 				awards: "specialCategory.specialLocationsAwards",
 				currentProgress: 0,
 				targetProgress: 50
+			},
+			{
+				id: 'all_cases',
+				name: 'Властелин Предлогов',
+				description: 'Овладей всеми предлогами Akkusativ, Dativ, Genitiv и Nominativ',
+				icon: '🌌',
+				currentProcess: 0,
+				awards: "награда: Жезл Склонений",
+				targetProgress: 1
+			},
+			{
+				id: 'all_cases',
+				name: 'Владыка Прилагательных',
+				description: 'Получи все достижения прилагательных: Основы , Склонения, Степень сравнения',
+				icon: '🌌',
+				currentProcess: 0,
+				awards: "награда: Жезл Склонений",
+				targetProgress: 1
+			},
+			{
+				id: 'all_cases',
+				name: 'Владыка глаголов',
+				description: 'Получи все достижения глаголов: Спряжение, времена , модальные, типы глаголов',
+				icon: '🌌',
+				currentProcess: 0,
+				awards: "награда: Меч",
+				targetProgress: 1
 			}
 		]
 	}

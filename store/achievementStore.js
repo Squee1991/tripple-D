@@ -1,5 +1,8 @@
 import { defineStore } from 'pinia'
 import { ref, watch, watchEffect } from 'vue'
+import { getFirestore, doc, onSnapshot } from 'firebase/firestore'
+import { getAuth } from 'firebase/auth'
+
 // 1) Импорты всех групп достижений
 import { overAchievment } from '../src/achieveGroup/overAllAchieve/overallAchievements.js'
 import { wordAchievementsGroup } from '../src/achieveGroup/wordGroup/wordAchievements.js'
@@ -12,6 +15,16 @@ import { writeArticleGroupAchievment } from '../src/achieveGroup/article/writeAr
 import { wordPlusArticleAchievment } from '../src/achieveGroup/article/wordPlusArticle.js'
 import { assembleWordGroupAchievement } from '../src/achieveGroup/article/wordsFromLetters.js'
 import { cpecialGroupAchievment } from '../src/achieveGroup/specialAchieve/specialAchievment.js'
+import { prepositionsNominativ } from '../src/achieveGroup/prepositions/prepNominativ.js'
+import { prepositionsAkkusativ } from '../src/achieveGroup/prepositions/prepAkkusativ.js'
+import { prepositionsGenitiv } from '../src/achieveGroup/prepositions/prepGenitiv.js'
+import { prepositionsDativ } from '../src/achieveGroup/prepositions/prepDativ.js'
+import { adjectiveBasic } from '../src/achieveGroup/adjective/adjectiveBasic.js'
+import { adjectiveDeclension } from '../src/achieveGroup/adjective/adjectiveDeclension.js'
+import { adjectiveComparison } from '../src/achieveGroup/adjective/adjectiveComparison.js'
+import { tensesVerbs} from "../src/achieveGroup/verbs/tensesVerbs.js";
+import { modalVerbs } from "../src/achieveGroup/verbs/modalVerbs.js";
+import { typeVerbs} from "../src/achieveGroup/verbs/typeVerbs.js";
 
 // 2) Сторы-источники
 import { userChainStore } from '../store/chainStore.js'
@@ -24,10 +37,21 @@ import { useGameStore } from '../store/marafonStore.js'
 import { useGuessWordStore } from '../store/guesStore.js'
 import { achievementToAwardMap } from '../src/awards/awardsMap.js'
 import { guessAchievment } from '../src/achieveGroup/guessAchieve/guessAchievments.js'
+import { useQuizStore } from '../store/adjectiveStore.js'
 
 export const useAchievementStore = defineStore('achievementStore', () => {
     // --- 1) Собираем все группы с категорией ---
     const rawGroups = [
+        ...typeVerbs.map(g => ({ category: 'typeVerbs', ...g })),
+        ...modalVerbs.map(g => ({ category: 'modalVerbs', ...g })),
+        ...tensesVerbs.map(g => ({ category: 'tensesVerbs', ...g })),
+        ...adjectiveComparison.map(g => ({ category: 'adjectiveComparison', ...g })),
+        ...adjectiveBasic.map(g => ({ category: 'basicAdjectives', ...g })),
+        ...adjectiveDeclension.map(g => ({ category: 'adjectiveDeclension', ...g })),
+        ...prepositionsDativ.map(g => ({ category: 'dativ', ...g })),
+        ...prepositionsNominativ.map(g => ({ category: 'nominativ', ...g })),
+        ...prepositionsGenitiv.map(g => ({ category: 'genitiv', ...g })),
+        ...prepositionsAkkusativ.map(g => ({ category: 'akkusativ', ...g })),
         ...wordAchievementsGroup.map(g => ({ category: 'locations', ...g })),
         ...overAchievment.map(g => ({ category: 'over', ...g })),
         ...guessAchievment.map(g => ({ category: 'guess', ...g })),
@@ -48,6 +72,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
             ...group,
             achievements: group.achievements.map(a => ({
                 ...a,
+                title: a.title || a.name,
                 currentProgress: 0
             }))
         }))
@@ -59,7 +84,8 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 
     const bootUnlocked = [] // ачивки
     const bootAwards   = [] // награды
-
+    const db = getFirestore()
+    const auth = getAuth()
     const authStore  = userAuthStore()
     const questStore = useQuestStore()
     const langStore  = userlangStore()
@@ -71,7 +97,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
     const popupQueue = ref([])
     const showPopup = ref(false)
     const popupAchievement = ref(null)
-
+    const quizStore = useQuizStore()
     const prevMap = new Map()
 
 
@@ -163,7 +189,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
                 setTimeout(() => {
                     if (lastUnlockedAchievement.value?.id === ach.id) lastUnlockedAchievement.value = null
                 }, 0)
-
                 // 🎁 награда (если есть и не показывали)
                 const awardTitle = achievementToAwardMap[id]
                 if (awardTitle && !shownSet.has(awardTitle)) {
@@ -194,9 +219,98 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 
     // --- 5) Навешиваем watch’еры для всех категорий ---
     function initializeProgressTracking () {
+        const prepositionsSetup = {
+            dativ:     'dat',
+            akkusativ: 'akk',
+            genitiv:   'gen',
+            nominativ: 'nom',
+        }
+        let prepositionUnsubs = []
+        const applyPrepositionSnapshots = (prefix, agg, sess) => {
+            const totalCorrectAgg = Number(agg?.totalCorrect || 0)
+            const sessionCorrect  = Object.values(sess?.userAnswersMap || {})
+                .filter(v => v && v.isCorrect).length
+            const totalNow = totalCorrectAgg + sessionCorrect
+            updateProgress(`${prefix}1`, totalNow > 0 ? 1 : 0)
+            updateProgress(`${prefix}2`, totalNow)
+            updateProgress(`${prefix}3`, totalNow)
+            const perfectCnt = Number(agg?.perfectSessionsCount || 0)
+            updateProgress(`${prefix}4`, perfectCnt)
+            const fastPerfectCnt = Number(agg?.fastPerfectSessionsCount || 0)
+            updateProgress(`${prefix}5`, fastPerfectCnt)
+            const req = [`${prefix}1`, `${prefix}2`, `${prefix}3`, `${prefix}4`, `${prefix}5`]
+            const allDone = req.every(id => {
+                const a = findById(id); if (!a) return false
+                const tp = Number(a.targetProgress || 1)
+                return Number(a.currentProgress || 0) >= tp
+            })
+            updateProgress(`${prefix}6`, allDone ? 1 : 0)
+        }
+        watch(() => authStore.uid, (uid) => {
+            prepositionUnsubs.forEach(fn => { try { fn && fn() } catch {} })
+            prepositionUnsubs = []
+            if (!uid) return
+            Object.entries(prepositionsSetup).forEach(([caseName, prefix]) => {
+                const docId = `prepositions_${caseName}`
+                const aggRef  = doc(db, 'users', uid, 'quizTopics',   docId)
+                const sessRef = doc(db, 'users', uid, 'quizSessions', docId)
+                let lastAgg = {}, lastSess = {}
+                const u1 = onSnapshot(aggRef,  s => {
+                    lastAgg = s.data() || {};
+                    applyPrepositionSnapshots(prefix, lastAgg, lastSess)
+                })
+                const u2 = onSnapshot(sessRef, s => {
+                    lastSess = s.data() || {};
+                    applyPrepositionSnapshots(prefix, lastAgg, lastSess)
+                })
+                prepositionUnsubs.push(u1, u2)
+            })
+        }, { immediate: true })
+
+        const adjectivesSetup = {
+            'adjective-basics_colors':     'col',
+            'adjective-basics_feelings':   'emo',
+            'adjective-basics_appearance': 'app',
+            'adjective-basics_character':  'char',
+            'adjective-basics_dimensions': 'dim',
+            'adjective-comparison_regular-forms': 'creg',
+            'adjective-comparison_umlaut-forms':  'cuml',
+            'adjective-comparison_irregular-forms': 'cspec',
+            'adjective-declension_definite-article':   'def',
+            'adjective-declension_indefinite-article': 'indef',
+            'adjective-declension_no-article':  'noart',
+
+            'verb_presens': 'pras',
+            'verb_perfect': 'perf',
+            'verb_futurOne': 'fut',
+            'verb_prateritum': 'prat',
+            'verb_plusquamperfect': 'plus',
+
+            'verb_modal': 'mod',
+            'verb_nebensatze': 'neb',
+
+            'verb_irregular': 'irr',
+            'verb_prepositions': 'fix',
+            'verb_reflexive': 'ref',
+            'verb_separable': 'sep',
+        }
+
+        let adjectivesUnsubs = []
+        watch(() => authStore.uid, (uid) => {
+            adjectivesUnsubs.forEach(fn => { try { fn && fn() } catch {} })
+            adjectivesUnsubs = []
+            if (!uid) return
+            Object.entries(adjectivesSetup).forEach(([docId, prefix]) => {
+                const aggRef  = doc(db, 'users', uid, 'quizTopics',   docId)
+                const sessRef = doc(db, 'users', uid, 'quizSessions', docId)
+                let lastAgg = {}, lastSess = {}
+                const u1 = onSnapshot(aggRef,  s => { lastAgg = s.data() || {};  applyPrepositionSnapshots(prefix, lastAgg, lastSess) })
+                const u2 = onSnapshot(sessRef, s => { lastSess = s.data() || {}; applyPrepositionSnapshots(prefix, lastAgg, lastSess) })
+                adjectivesUnsubs.push(u1, u2)
+            })
+        }, { immediate: true })
         // 5.1) over
         const baseTrackers = [
-
             { id: 'registerAchievement', source: () => authStore.uid,                       compute: (u) => (u ? 1 : 0) },
             { id: 'daily',               source: () => questStore.dailyQuestCount,          compute: (v) => v || 0 },
             { id: 'levelUpExp',          source: () => langStore.exp,                       compute: (v) => v || 0 },
@@ -248,6 +362,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
                 { immediate: true }
             )
         })
+
 
         // 5.3) listen
         watch(() => langStore.words.filter(w => w.progress?.audio).length,
@@ -431,7 +546,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
                     if (lastUnlockedAchievement.value?.id === 'registerAchievement') lastUnlockedAchievement.value = null
                 }, 0)
             }
-
             // 2) Награда (например, «Значок участника») — сразу после «Первого шага»
             setTimeout(() => {
                 if (bootAwards.length) {
@@ -442,7 +556,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
                     }, 0)
                 }
             }, 60)
-
             // 3) «Начало коллекции» — третьим
             setTimeout(() => {
                 if (shownSet.size >= 1) {

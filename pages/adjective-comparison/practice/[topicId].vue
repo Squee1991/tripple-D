@@ -70,34 +70,55 @@
 </template>
 
 <script setup>
-    import { ref, onMounted } from 'vue';
-    import { useQuizStore } from '../../../store/adjectiveStore.js';
-    import { useRoute, useRouter } from 'vue-router';
-    const router = useRouter();
-    const route = useRoute();
-    const store = useQuizStore();
-    const loading = ref(true);
-    const { t } = useI18n();
+import { ref, onMounted } from 'vue'
+import { useQuizStore } from '../../../store/adjectiveStore.js'
+import { useRoute, useRouter } from 'vue-router'
 
-    const category = 'adjective-comparison';
-    const { topicId } = route.params;
+const router = useRouter()
+const route = useRoute()
+const store = useQuizStore()
+const loading = ref(true)
+const { t } = useI18n()
 
-    async function startQuiz() {
-        loading.value = true;
-        const fileName = `/adjective/${category}-${topicId}.json`;
-        await store.startNewQuiz(fileName);
-        loading.value = false;
-    }
+const category = 'adjective-comparison'
+const { topicId } = route.params
 
-    const backTo = () => {
-        router.push(`/adjective-comparison`);
-    }
+async function startQuiz() {
+  loading.value = true
+  const fileName = `/adjective/${category}-${topicId}.json`
+  store.setContext({
+    modeId: category,
+    topicId,
+    fileName,
+    contentVersion: 'v1',
+  })
+  await store.startNewQuiz(fileName)
+  loading.value = false
+}
 
-    onMounted(() => {
-        startQuiz();
-    });
+const backTo = () => {
+  router.push(`/adjective-comparison`)
+}
 
+onMounted(async () => {
+  loading.value = true
+  const fileName = `/adjective/${category}-${topicId}.json`
+  store.setContext({
+    modeId: category,
+    topicId,
+    fileName,
+    contentVersion: 'v1',
+  })
+  await store.restoreOrStart({
+    modeId: category,
+    topicId,
+    fileName,
+    contentVersion: 'v1',
+  })
+  loading.value = false
+})
 </script>
+
 
 <style scoped>
     .btn__back {

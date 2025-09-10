@@ -102,10 +102,8 @@ onUnmounted(() => {
           </span>
         </div>
       </div>
-
       <div v-for="(list, mod) in itemsByModule" :key="mod" class="arch__module">
         <h2 class="arch__mod-title">{{ mod }}</h2>
-
         <div v-for="it in list" :key="it.id" class="arch__item">
           <div class="arch__left">
             <div class="arch__score">
@@ -332,5 +330,14 @@ onUnmounted(() => {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+}
+
+@media (max-width: 580px) {
+  .arch__head {
+    flex-direction: column;
+  }
+  .arch__back {
+    width: 100%;
+  }
 }
 </style>

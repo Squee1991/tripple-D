@@ -70,35 +70,58 @@
 </template>
 
 <script setup>
-import {ref, onMounted} from 'vue';
-import {useQuizStore} from '../../../store/adjectiveStore.js';
-import {useRoute, useRouter} from 'vue-router';
+import { ref, onMounted } from 'vue'
+import { useQuizStore } from '../../../store/adjectiveStore.js' // убедись, что этот стор = тот самый с сохранением
+import { useRoute, useRouter } from 'vue-router'
 
-const router = useRouter();
-const route = useRoute();
-const store = useQuizStore();
-const loading = ref(true);
-const {t} = useI18n();
+const router = useRouter()
+const route = useRoute()
+const store = useQuizStore()
+const loading = ref(true)
+const { t } = useI18n()
 
-const category = 'adjective-basics';
-const {topicId} = route.params;
+const category = 'adjective-basics'
+const { topicId } = route.params
 
+// Перезапуск попытки (кнопка "Сыграть снова")
 async function startQuiz() {
-  loading.value = true;
-  const fileName = `/adjective/${category}-${topicId}.json`;
-  await store.startNewQuiz(fileName);
-  loading.value = false;
+  loading.value = true
+  const fileName = `/adjective/${category}-${topicId}.json`
+  // ВАЖНО: сперва контекст
+  store.setContext({
+    modeId: category,
+    topicId,
+    fileName,
+    contentVersion: 'v1',
+  })
+  await store.startNewQuiz(fileName)
+  loading.value = false
 }
 
 const backTo = () => {
-  router.push(`/adjective-basics`);
+  router.push(`/adjective-basics`)
 }
 
-onMounted(() => {
-  startQuiz();
-});
-
+// При входе: восстановить незавершённую сессию или начать новую
+onMounted(async () => {
+  loading.value = true
+  const fileName = `/adjective/${category}-${topicId}.json`
+  store.setContext({
+    modeId: category,
+    topicId,
+    fileName,
+    contentVersion: 'v1',
+  })
+  await store.restoreOrStart({
+    modeId: category,
+    topicId,
+    fileName,
+    contentVersion: 'v1',
+  })
+  loading.value = false
+})
 </script>
+
 
 <style scoped>
 .btn__back {

@@ -72,7 +72,7 @@
 <script setup>
 
 import {ref, onMounted,} from 'vue';
-import {useQuizStore} from '../../store/usePrasensStore.js';
+import {useQuizStore} from '../../store/adjectiveStore.js';
 import { useRouter , useRoute} from 'vue-router'
 const router = useRouter()
 const route = useRoute();
@@ -83,9 +83,18 @@ const category = 'modal-verbs';
 
 const { topicId } = route.params;
 async function startQuiz() {
-  const fileName = `/verbs-data/${category}-${topicId}.json`;
   loading.value = true;
-  await quizStore.startNewQuiz(fileName);
+  const fileName = `/verbs-data/${category}-${topicId}.json`;
+  quizStore.setContext?.({
+    modeId: 'verb',
+    topicId,
+    fileName,
+    contentVersion: 'v1',
+  })
+  await (quizStore.restoreOrStart
+      ? quizStore.restoreOrStart({ modeId: 'verb', topicId, fileName, contentVersion: 'v1' })
+      : quizStore.startNewQuiz(fileName))
+
   loading.value = false;
 }
 

@@ -97,7 +97,7 @@ const backToMenu = () => router.push('/');
 const modalGroups = ref([
   {
     level: 'Modal verbs',
-    id: 'session-a1',
+    id: 'modal',
     practice: {
       title: 'modalGroupA.practice',
     },
@@ -135,8 +135,8 @@ const modalGroups = ref([
     ]
   },
   {
-    level: 'Nebensätze',
-    id: 'session-b1',
+    level: 'nebensatze',
+    id: 'nebensatze',
     practice: {
       title: 'modalGroupBTips.practice'
     },
