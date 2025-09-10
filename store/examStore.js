@@ -426,33 +426,43 @@ export const userExamStore = defineStore("exam", () => {
 	}
 
 	async function loadSharedExams() {
-		const myUid = currentUserUid();
-		if (!myUid) return;
-		sharedLoading.value = true;
-		sharedError.value = null;
+		// гарантируем uid (анонимная авторизация если нужно)
+		const myUid = await ensureAuth()
+		sharedLoading.value = true
+		sharedError.value = null
+		sharedExams.value = []
+
 		try {
-			const q = query(collection(db, 'users', myUid, 'sharedExams'), orderBy('createdAt', 'desc'));
-			const snap = await getDocs(q);
-			const promises = snap.docs.map(async (docData) => {
-				const shareInfo = docData.data();
-				const examSnap = await getDoc(doc(db, "examAttempts", shareInfo.examId));
-				if (examSnap.exists()) {
-					return {
-						shareId: docData.id,
-						...shareInfo,
-						examDetails: examSnap.data()
-					};
+			if (!myUid) {
+				sharedLoading.value = false
+				return
+			}
+			const q = query(
+				collection(db, 'users', myUid, 'sharedExams'),
+				orderBy('createdAt', 'desc')
+			)
+			const snap = await getDocs(q)
+
+			const promises = snap.docs.map(async (d) => {
+				const shareInfo = d.data()
+				const examSnap = await getDoc(doc(db, 'examAttempts', shareInfo.examId))
+				if (!examSnap.exists()) return null
+				return {
+					shareId: d.id,
+					...shareInfo,
+					examDetails: examSnap.data()
 				}
-				return null;
-			});
-			sharedExams.value = (await Promise.all(promises)).filter(Boolean);
+			})
+
+			sharedExams.value = (await Promise.all(promises)).filter(Boolean)
 		} catch (e) {
-			console.error("Ошибка загрузки расшаренных экзаменов:", e);
-			sharedError.value = "Не удалось загрузить экзамены, которыми с вами поделились";
+			console.error('Ошибка загрузки расшаренных экзаменов:', e)
+			sharedError.value = 'Не удалось загрузить экзамены, которыми с вами поделились'
 		} finally {
-			sharedLoading.value = false;
+			sharedLoading.value = false
 		}
 	}
+
 
 	async function acceptShare(shareInfo) {
 		const myUid = currentUserUid();

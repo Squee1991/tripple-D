@@ -1,16 +1,21 @@
 <template>
   <div class="points">
+    <VTips
+        :title="articleData.title"
+        :tips="articleData.tips"
+        v-model="isArticleOpen"
+    />
     <section class="points-card" aria-label="Поинты и уровень">
       <header class="points-card__header">
-        <h2 class="points-card__title">Панель игрока</h2>
+        <h2 class="points_title">Панель игрока</h2>
       </header>
       <ul v-if="langStore" class="points-card__list" aria-label="Сводка">
         <li class="points-card__item">
           <div class="points-card__label">Артиклюсы</div>
-          <div class="articlus__wrapper">
+          <button v-if="userAuth.uid" @click="openArticleModal" class="articlus__wrapper">
             <img class="articlus__icon" src="../../assets/images/articlus.png" alt="">
             <span class="points-card__value"> {{ langStore.points }}</span>
-          </div>
+          </button>
         </li>
         <li class="points-card__item">
           <span class="points-card__label">Уровень</span>
@@ -22,10 +27,10 @@
             <div class="progress__meta">{{ langStore.exp }}/100 XP</div>
           </div>
         </div>
-<!--        <li class="points-card__item">-->
-<!--          <span class="points-card__label">Подписка</span>-->
-<!--          <span class="sub-badge sub-badge&#45;&#45;off">Не активна</span>-->
-<!--        </li>-->
+        <!--        <li class="points-card__item">-->
+        <!--          <span class="points-card__label">Подписка</span>-->
+        <!--          <span class="sub-badge sub-badge&#45;&#45;off">Не активна</span>-->
+        <!--        </li>-->
       </ul>
       <div class="fiends__list-wrapper">
         <h3 class="points-card__title"> Список друзей</h3>
@@ -39,9 +44,15 @@
                 alt="Аватар"
                 class="list__avatar"
             />
-            <div> {{ friend.name || ''}}</div>
+            <div> {{ friend.name || '' }}</div>
           </li>
         </ul>
+      </div>
+      <div class="points__statistics">
+        <div class="points__statistics__items">
+          <h3 class="points-card__title">Статистика</h3>
+          <button @click="toStatistics" class="stats__btn">Посмотреть статистику</button>
+        </div>
       </div>
       <div class="sub-actions">
         <button @click="toPayment" class="btn-activate">Попробовать</button>
@@ -50,17 +61,36 @@
   </div>
 </template>
 <script setup>
-
+import VTips from "~/src/components/V-tips.vue";
 import {userlangStore} from "~/store/learningStore.js";
+import {userAuthStore} from '../../store/authStore.js'
 import {useRouter} from "vue-router";
-import { useFriendsStore } from '../../store/friendsStore.js'
-import {onMounted} from "vue";
+import {useFriendsStore} from '../../store/friendsStore.js'
+import {onMounted, ref} from "vue";
+
+const {t} = useI18n()
 const langStore = userlangStore()
+const userAuth = userAuthStore()
 const router = useRouter()
 const friendsStore = useFriendsStore()
+const isArticleOpen = ref(false)
 const toPayment = () => {
   router.push('/pay')
 }
+
+const toStatistics = () => {
+  router.push('/statistics')
+}
+
+const openArticleModal = () => isArticleOpen.value = true
+const articleData = ref({
+  title: t('articleOverlay.title'),
+  tips: [
+    {id: 1, text: t('articleOverlay.first')},
+    {id: 2, text: t('articleOverlay.second')},
+    {id: 3, text: t('articleOverlay.third')},
+  ]
+})
 
 onMounted(() => {
   friendsStore.loadFriends()
@@ -81,6 +111,32 @@ onMounted(() => {
   font-weight: 600;
   font-family: "Nunito", sans-serif;
   box-shadow: 3px 3px 0 black;
+  margin-bottom: 10px;
+}
+
+.points_title {
+  width: 100%;
+  background: #3b7ac4;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 0 black;
+  border: 2px solid black;
+}
+
+.stats__btn {
+  padding: 10px;
+  font-weight: 600;
+  font-family: "Nunito", sans-serif;
+  border-radius: 15px;
+  box-shadow: 3px 3px 0 black;
+  font-size: 18px;
+}
+
+.points__statistics__items {
+  display: flex;
+  flex-direction: column;
 }
 
 .articlus__wrapper {
@@ -107,9 +163,17 @@ onMounted(() => {
 }
 
 .list__avatar {
-  width: 45px;
+  width: 37px;
   border-radius: 50%;
   border: 2px solid black;
+}
+
+.list {
+  padding: 10px;
+  border: 3px solid black;
+  border-radius: 15px;
+  box-shadow: 3px 3px 0 black;
+  margin-bottom: 10px;
 }
 
 .points-card {

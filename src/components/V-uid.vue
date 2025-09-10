@@ -2,14 +2,14 @@
   <div class="uid__container">
     <template v-if="!isMobile">
       <div class="ui__statistics">
-        <VStatistics/>
+<!--        <VStatistics/>-->
       </div>
       <div class="stats__wrapper">
         <Vdaily/>
       </div>
       <div>
         <VPoints/>
-        <VAchievements/>
+        <VLands/>
       </div>
     </template>
     <template v-else>
@@ -41,18 +41,20 @@
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 
 import VPoints from "~/src/components/V-points.vue";
-import VStatistics from "~/src/components/V-statistics.vue";
+// import VStatistics from "~/src/components/V-statistics.vue";
 import Vdaily from "~/src/components/Vdaily.vue";
 import VAchievements from "~/src/components/V-achievements.vue";
-import AchIcon from '../../assets/images/achNav.svg'
-import Stats from '../../assets/images/stats.svg'
+import VLands from "~/src/components/V-lands.vue";
+import Location from '../../assets/images/location.svg'
+// import Stats from '../../assets/images/stats.svg'
 import Daily from '../../assets/images/daily.svg'
+import Card from '../../assets/images/card.svg'
 
 const tabs = [
-  { id: 'profile', icon: AchIcon, alt: 'ach icon', label: 'Панель ученика', component: VPoints },
+  { id: 'locations', icon: Location, alt: 'achIcon', label: 'Земли', component: VLands },
   { id: 'daily', icon: Daily, alt: 'daily icon', label: 'Ежедневки', component: Vdaily },
-  { id: 'achievements', icon: AchIcon, alt: 'achIcon', label: 'Достижения', component: VAchievements },
-  { id: 'points', icon: Stats, alt: 'stats icon', label: 'Статистика', component: VStatistics },
+  { id: 'profile', icon: Card, alt: 'ach icon', label: 'Панель ученика', component: VPoints },
+  // { id: 'points', icon: Stats, alt: 'stats icon', label: 'Статистика', component: VStatistics },
 ]
 
 const activeTabId = ref(tabs[0].id)

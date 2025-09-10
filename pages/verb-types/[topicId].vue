@@ -1,26 +1,24 @@
 <template>
   <div class="comic-quiz-page">
     <header v-if="!loading && store.activeQuestion" class="quiz-header-comic">
-      <button class="btn__back" @click="backTo">{{ t('prasens.back')}}</button>
-      <div>
-        <div class="header-item">
-          {{ t('prasens.questionNumber')}} {{ store.currentQuestionIndex + 1 }}/{{ store.currentQuestions.length }}
-        </div>
-        <div class="header-item score">
-          {{ t('prasens.score')}} {{ store.score }}
-        </div>
+      <button class="btn__back" @click="backTo">{{ t('prasens.back') }}</button>
+      <div class="header-item">
+        {{ t('prasens.questionNumber') }} {{ store.currentQuestionIndex + 1 }} / {{ store.currentQuestions.length }}
+      </div>
+      <div class="header-item score">
+        {{ t('prasens.score') }} {{ store.score }}
       </div>
     </header>
     <main class="quiz-main-content">
       <div v-if="loading" class="fullscreen-state">
-        <p>{{ t('prasens.loading')}}</p>
+        <p>{{ t('prasens.loading') }}</p>
       </div>
       <div v-else-if="store.quizCompleted" class="fullscreen-state">
         <div class="quiz-summary-comic">
-          <h2>{{ t('prasens.end')}} </h2>
-          <p>{{ t('prasens.result')}} {{ store.score }}/{{ store.currentQuestions.length }}</p>
-          <button @click="startQuiz" class="action-button">{{ t('prasens.again')}}</button>
-          <button @click="backTo" class="action-button">{{ t('prasens.back')}}</button>
+          <h2>{{ t('prasens.end') }} </h2>
+          <p>{{ t('prasens.result') }} {{ store.score }} / {{ store.currentQuestions.length }}</p>
+          <button @click="startQuiz" class="action-button">{{ t('prasens.again') }}</button>
+          <button @click="backTo" class="action-button">{{ t('prasens.back') }}</button>
         </div>
       </div>
       <div v-else-if="store.activeQuestion" class="quiz-content-comic">
@@ -45,8 +43,8 @@
         </div>
         <div class="footer-controls-comic">
           <div v-if="store.feedback" class="feedback-message-comic" :class="store.feedback">
-            <span v-if="store.feedback === 'correct'">{{ t('prasens.correct')}}</span>
-            <span v-else>{{ t('prasens.wrong')}} {{ store.activeQuestion.answer }}</span>
+            <span v-if="store.feedback === 'correct'">{{ t('prasens.correct') }}</span>
+            <span v-else>{{ t('prasens.wrong') }} {{ store.activeQuestion.answer }}</span>
           </div>
           <button
               v-if="store.feedback === null"
@@ -54,14 +52,14 @@
               :disabled="!store.selectedOption"
               class="action-button check"
           >
-            {{ t('prasens.check')}}
+            {{ t('prasens.check') }}
           </button>
           <button
               v-else
               @click="store.nextQuestion()"
               class="action-button next"
           >
-            {{ t('prasens.further')}}
+            {{ t('prasens.further') }}
           </button>
         </div>
       </div>
@@ -70,55 +68,42 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
-import { useQuizStore } from '../../../store/adjectiveStore.js'
-const router = useRouter()
-const route = useRoute()
-const store = useQuizStore()
-const loading = ref(true)
-const { t } = useI18n()
+import {ref, onMounted} from 'vue';
+import {useQuizStore} from '../../../store/adjectiveStore.js';
+import {useRoute, useRouter} from 'vue-router';
 
-const category = 'prepositions'
-const { topicId } = route.params
-
-
+const router = useRouter();
+const route = useRoute();
+const store = useQuizStore();
+const loading = ref(true);
+const {t} = useI18n();
+const category = 'verb';
+const {topicId} = route.params;
 async function startQuiz() {
-  loading.value = true
-  const fileName = `/prepositions/${category}-${topicId}.json`
-  store.setContext({
-    modeId: category,
+  loading.value = true;
+  const fileName = `/verb-types/${category}-${topicId}.json`;
+  store.setContext?.({
+    modeId: 'verb',
     topicId,
     fileName,
     contentVersion: 'v1',
   })
-  await store.startNewQuiz(fileName)
-  loading.value = false
+  await (store.restoreOrStart
+      ? store.restoreOrStart({ modeId: 'verb', topicId, fileName, contentVersion: 'v1' })
+      : store.startNewQuiz(fileName))
+
+  loading.value = false;
 }
 
 const backTo = () => {
-  router.push(`/prepositions`)
+  router.back()
 }
 
-onMounted(async () => {
-  loading.value = true
-  const fileName = `/prepositions/${category}-${topicId}.json`
-  store.setContext({
-    modeId: category,
-    topicId,
-    fileName,
-    contentVersion: 'v1',
-  })
-  await store.restoreOrStart({
-    modeId: category,
-    topicId,
-    fileName,
-    contentVersion: 'v1',
-  })
-  loading.value = false
-})
-</script>
+onMounted(() => {
+  startQuiz();
+});
 
+</script>
 
 <style scoped>
 .btn__back {
@@ -134,16 +119,21 @@ onMounted(async () => {
   box-shadow: 4px 4px 0px #1e1e1e;
   transition: all 0.1s ease-in-out;
 }
+
 .btn__back:hover {
   box-shadow: 2px 2px 0px #1e1e1e;
 }
+
 .comic-quiz-page {
   background-color: #f0e8d9;
   font-family: "Nunito", sans-serif;
   letter-spacing: 1.5px;
   min-height: 100vh;
+  padding-top: 100px;
 }
+
 .quiz-header-comic {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -158,18 +148,22 @@ onMounted(async () => {
   border-bottom: 3px solid #000;
   box-shadow: 0 4px 0 #000;
 }
+
 .quiz-main-content {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   padding: 1.5rem;
+  box-sizing: border-box;
 }
+
 .fullscreen-state {
   font-size: 4rem;
   color: #333;
   text-align: center;
 }
+
 .quiz-content-comic {
   width: 100%;
   max-width: 900px;
@@ -178,6 +172,7 @@ onMounted(async () => {
   gap: 2rem;
   padding: 15px;
 }
+
 .question-card-comic,
 .option-button-comic,
 .action-button,
@@ -187,26 +182,31 @@ onMounted(async () => {
   box-shadow: 6px 6px 0px #000;
   transition: all 0.1s ease-in-out;
 }
+
 .option-button-comic:hover,
 .action-button:hover,
 .quiz-summary-comic:hover {
   transform: translate(2px, 2px);
   box-shadow: 4px 4px 0px #000;
 }
+
 .question-card-comic {
   background: #fff;
   padding: 2rem;
   transform: rotate(.7deg);
 }
+
 .question-text-comic {
   font-size: 1.7rem;
   text-align: center;
   color: #000;
 }
+
 .blank-space {
   color: #0077b6;
   text-decoration: underline;
 }
+
 .options-grid-comic {
   display: flex;
   justify-content: center;
@@ -214,6 +214,7 @@ onMounted(async () => {
   padding: 15px;
   flex-wrap: wrap;
 }
+
 .option-button-comic {
   background-color: #fff;
   color: #000;
@@ -222,17 +223,21 @@ onMounted(async () => {
   cursor: pointer;
   transform: rotate(-1.5deg);
 }
+
 .option-button-comic:nth-child(2n) {
   transform: rotate(1.5deg);
 }
+
 .option-button-comic.selected {
   background-color: #06d6a0;
   color: #000;
 }
+
 .option-button-comic:disabled {
   opacity: 0.7;
   background-color: #e9ecef;
 }
+
 .footer-controls-comic {
   min-height: 170px;
   display: flex;
@@ -241,6 +246,7 @@ onMounted(async () => {
   justify-content: flex-end;
   gap: 1rem;
 }
+
 .feedback-message-comic {
   font-size: 2rem;
   padding: 0.5rem 1rem;
@@ -248,14 +254,17 @@ onMounted(async () => {
   border: 3px solid black;
   margin-bottom: 10px;
 }
+
 .feedback-message-comic.correct {
   background-color: #06d6a0;
   transform: rotate(2deg);
 }
+
 .feedback-message-comic.incorrect {
   background-color: #ef476f;
   transform: rotate(-2deg);
 }
+
 .action-button {
   width: 100%;
   max-width: 450px;
@@ -263,61 +272,36 @@ onMounted(async () => {
   font-size: 2rem;
   cursor: pointer;
 }
+
 .action-button.check {
   background-color: #0077b6;
   color: white;
 }
+
 .action-button.check:disabled {
   background-color: #adb5bd;
   color: #495057;
   box-shadow: none;
   transform: none;
 }
+
 .action-button.next {
   background-color: #60a5fa;
   color: black;
 }
+
 .quiz-summary-comic {
   background: #fff;
   padding: 3rem;
   text-align: center;
 }
+
 .quiz-summary-comic h2 {
   font-size: 4rem;
 }
+
 .quiz-summary-comic p {
   font-size: 2rem;
   margin: 1rem 0 2rem;
-}
-
-@media (max-width: 767px) {
-  .quiz-header-comic {
-    gap: 10px;
-    padding: 10px;
-  }
-  .header-item {
-    font-size: 18px;
-  }
-  .btn__back {
-    padding: 10px;
-    font-size: 1rem;
-  }
-  .question-text-comic {
-    font-size: 1.3rem;
-  }
-  .option-button-comic {
-    font-size: 1.3rem;
-  }
-  .action-button {
-    font-size: 1.4rem;
-    font-family: "Nunito", sans-serif;
-    font-weight: 600;
-  }
-  .quiz-main-content {
-    padding: 5px;
-  }
-  .question-card-comic {
-    padding: 1rem;
-  }
 }
 </style>

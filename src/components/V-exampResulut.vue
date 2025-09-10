@@ -131,11 +131,30 @@ onMounted(() => {
           </div>
         </li>
       </ul>
+      <NuxtLink class="friend__exam" to="/friend-exam">Экзамены друзей</NuxtLink>
     </div>
   </div>
 </template>
 
 <style scoped>
+
+.friend__exam {
+  display: flex;
+  box-shadow: 3px 3px 0 black;
+  border: 2px solid black;
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  color: white;
+  background: #c096ea;
+  border-radius: 15px;
+  padding: 10px;
+  font-weight: 600;
+  margin-top: 40px;
+  max-width: 200px;
+  text-align: center;
+  width: 100%;
+}
+
 .edit__wrapper {
   position: relative;
 }

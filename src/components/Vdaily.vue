@@ -74,6 +74,7 @@ function icon(icon) {
 
 .daily {
   width: 100%;
+  min-width: 390px;
   flex-grow: 1;
   border: 3px solid #22272e;
   border-radius: 16px;
