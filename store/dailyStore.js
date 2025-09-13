@@ -2,12 +2,14 @@ import {defineStore} from 'pinia'
 import {ref, computed, watch} from 'vue'
 import {dailyQuests} from '../utils/dailyQuests.js'
 import {userlangStore} from '../store/learningStore.js'
+import {useGuessWordStore} from '../store/guesStore.js'
 
 export const dailyStore = defineStore('dailyStore', () => {
     const QUESTS_PER_DAY = 3
     const DAY_MS = 24 * 60 * 60 * 1000
     const isClient = typeof window !== 'undefined'
     const langStore = userlangStore()
+    const guessStore = useGuessWordStore()
     const DEBUG_DAILY_MINUTE = true
     const CYCLE_MS = DEBUG_DAILY_MINUTE ? 60_000 : DAY_MS
 
@@ -56,7 +58,9 @@ export const dailyStore = defineStore('dailyStore', () => {
         bestStreakAnyMode: 0,
         bestStreakEasyArticle: 0,
         duelsPlayed: 0,
-        points: 0
+        points: 0,
+        guessedCount: 0,
+        wrongAnswers: 0
     })
 
     function countMode(modeKey) {
@@ -67,6 +71,7 @@ export const dailyStore = defineStore('dailyStore', () => {
         return {
             learnedWords: (langStore.learnedWords || []).length,
             totalEarnedPoints: langStore.totalEarnedPoints || 0,
+            guessedCount: guessStore.guessedCount || 0,
             lettersDone: countMode('letters'),
             wordArticleDone: countMode('wordArticle'),
             audioDone: countMode('audio'),
@@ -74,6 +79,7 @@ export const dailyStore = defineStore('dailyStore', () => {
             bestStreakAnyMode: langStore.bestStreakAnyMode || 0,
             bestStreakEasyArticle: langStore.bestStreakEasyArticle || 0,
             duelsPlayed: langStore.duelsPlayed || 0,
+            wrongAnswers: langStore.wrongAnswers || 0
         }
     }
 
@@ -104,10 +110,13 @@ export const dailyStore = defineStore('dailyStore', () => {
     // ---- вычисление прогресса по ID квеста -----------------------------------
     function getCurrentValueForQuestId(id) {
         const learnedDelta = Math.max(0, (langStore.learnedWords?.length || 0) - (baseline.value.learnedWords || 0))
+        const bestStreakAnyModeDelta = Math.max(0, (langStore.bestStreakAnyMode || 0) - (baseline.value.bestStreakAnyMode || 0))
         const pointsDelta = Math.max(0, (langStore.totalEarnedPoints || 0) - (baseline.value.totalEarnedPoints || 0))
         const points = Math.max(0, langStore.points || 0) - (baseline.value.points || 0)
         const lettersDelta = Math.max(0, countMode('letters') - (baseline.value.lettersDone || 0))
         const wordArticleDelta = Math.max(0, countMode('wordArticle') - (baseline.value.wordArticleDone || 0))
+        const guessWordsDelta = Math.max(0, (guessStore.guessedCount || 0) - (baseline.value.guessedCount || 0))
+        const wrongAnswerDelta = Math.max(0, (langStore.wrongAnswers || 0) - (baseline.value.wrongAnswers || 0))
 
 
         switch (id) {
@@ -120,14 +129,17 @@ export const dailyStore = defineStore('dailyStore', () => {
             case 4:
                 return langStore.bestStreakAnyMode
             case 5:
-                return lettersDelta
+                return langStore.wrongAnswers
             case 6:
+                return guessWordsDelta
+            case 7:
                 return wordArticleDelta
             case 8:
                 return langStore.duelsPlayed
             case 9:
                 return langStore.bestStreakEasyArticle
-
+            case 16:
+                return guessWordsDelta
             default:
                 return 0
         }

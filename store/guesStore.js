@@ -51,6 +51,7 @@ export const useGuessWordStore = defineStore('guessWord', () => {
     const alphabet = 'QWERTZUIOPÜASDFGHJKLÖÄYXCVBNM'.split('')
     const loadedWords = ref([])
     const currentWordObj = ref(null)
+    const guessedCount = computed(() => guessedWords.value.length)
 
     function resetState() {
         answer.value = ''
@@ -258,6 +259,7 @@ export const useGuessWordStore = defineStore('guessWord', () => {
         loadGuessProgress,
         saveGuessProgress,
         loadLeaderboard,
-        hasInLeaderboard
+        hasInLeaderboard,
+        guessedCount
     }
 })

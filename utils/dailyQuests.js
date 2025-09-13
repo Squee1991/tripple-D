@@ -25,9 +25,9 @@ export const dailyQuests = [
 	},
 	{
 		id: 5,
-		name: 'Ответь без ошибок на 10 слов подряд (любой режим)',
+		name: 'Ошибитесь 5 раз в обучениях артиклям (любой режим)',
 		currentValue: 0,
-		targetValue: 10
+		targetValue: 5
 	},
 	{
 		id: 6,
