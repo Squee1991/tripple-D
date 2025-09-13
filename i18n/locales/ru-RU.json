@@ -7,8 +7,7 @@
     "duelInfo": "Правила игры",
     "sound": "Воспроизвести пример",
     "ach": "Достижения инфо"
-  },
-  "achModal": {
+  },  "achModal": {
     "title": "Достижения — это награды за твой прогресс",
     "text": "Выполняй задания, изучай слова, зарабатывай опыт и повышай уровень!"
   },
@@ -16,8 +15,7 @@
     "tipsTitle": "Полезные советы:"
   },
   "examPage": {
-    "examHint": "Мы используем автоматическую систему распознавания речи. Говорите чётко рядом с микрофоном.",
-
+    "examHint": "Мы используем автоматическую систему распознавания речи. Говорите чётко рядом с микрофоном."
   },
   "friendExam": {
     "title": "Общие тесты от других участников",
@@ -2108,7 +2106,7 @@
     "questFourteen": "Собери пожелание на юбилей",
     "questFifteen": "Собери прощание после праздника"
   },
-  "questsWindValleyFirstQuests":{
+  "questsWindValleyFirstQuests": {
     "title": "В городе",
     "description": "Улица, парк, площадь, мост. Учим 4 слова и собираем простые фразы",
     "goal": "Называть базовые места в городе и собирать простые фразы Das ist",
@@ -2405,7 +2403,7 @@
     "questFifteenSecondOption": "Почта справа",
     "questFifteenThirdOption": "Почта напротив"
   },
-  "questsWindValleyTenthQuests":{
+  "questsWindValleyTenthQuests": {
     "title": "Маршрут по городу",
     "description": "Комбинируем места и ориентиры: где что находится",
     "goal": "Строить короткие фразы с местами и ориентирами в городе",
@@ -2431,7 +2429,6 @@
     "questTenFirstOption": "Аптека рядом с банком",
     "questTenSecondOption": "Аптека перед банком",
     "questTenThirdOption": "Аптека за банком",
-
     "questEleven": "Собери фразу",
     "questTwelve": "Прослушай и напиши",
     "questThirteen": "Собери фразу",
@@ -2441,7 +2438,7 @@
     "questFifteenSecondOption": "слева а потом прямо",
     "questFifteenThirdOption": "направо и потом налево"
   },
-  "questsStoneReachEleventhQuests":{
+  "questsStoneReachEleventhQuests": {
     "title": "Спросить дорогу",
     "description": "Учим простые вопросы Wo ist ... и короткие ответы с ориентирами",
     "goal": "Спросить дорогу и понять простой ответ с ориентиром",
@@ -2476,7 +2473,7 @@
     "questFifteenSecondOption": "Это метро",
     "": "Я еду в метро"
   },
-  "questsStoneReachTwelfthQuests":{
+  "questsStoneReachTwelfthQuests": {
     "title": "Вход и выход",
     "description": "Вход, выход, информация, лифт. Учим 4 слова и комбинируем с ориентирами",
     "goal": "Называть места входа/выхода и строить короткие фразы с ориентиром",
@@ -2508,7 +2505,7 @@
     "questFourteen": "Собери словосочетание",
     "questFifteen": "Прослушай и напиши"
   },
-  "questsStoneReachThirteenthQuests":{
+  "questsStoneReachThirteenthQuests": {
     "title": "Достопримечательности",
     "description": "Церковь, ратуша, рынок, башня. Учим 4 слова и комбинируем с ориентирами",
     "goal": "Называть достопримечательности и строить короткие фразы с предлогами места",
@@ -2543,7 +2540,6 @@
     "questFifteenSecondOption": "Башня рядом с отелем",
     "questFifteenThirdOption": "Башня за отелем"
   },
-
   "awardsSection": {
     "congratulations": "Поздравляем! Эта награда уже у вас!",
     "close": "Закрыть"

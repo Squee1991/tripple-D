@@ -1,8 +1,8 @@
-import {defineStore} from 'pinia'
-import {ref, computed, watch} from 'vue'
-import {dailyQuests} from '../utils/dailyQuests.js'
-import {userlangStore} from '../store/learningStore.js'
-import {useGuessWordStore} from '../store/guesStore.js'
+import { defineStore } from 'pinia'
+import { ref, computed, watch } from 'vue'
+import { dailyQuests } from '../utils/dailyQuests.js'
+import { userlangStore } from '../store/learningStore.js'
+import { useGuessWordStore } from '../store/guesStore.js'
 
 export const dailyStore = defineStore('dailyStore', () => {
     const QUESTS_PER_DAY = 3
@@ -17,7 +17,7 @@ export const dailyStore = defineStore('dailyStore', () => {
     function wrapSlice(arr, start, count) {
         const len = arr.length
         if (!len) return []
-        const end = (start + count)
+        const end = start + count
         return end <= len
             ? arr.slice(start, end)
             : [...arr.slice(start), ...arr.slice(0, end - len)]
@@ -60,11 +60,13 @@ export const dailyStore = defineStore('dailyStore', () => {
         duelsPlayed: 0,
         points: 0,
         guessedCount: 0,
-        wrongAnswers: 0
+        wrongAnswers: 0,
+        exp: 0
     })
 
     function countMode(modeKey) {
-        return (langStore.words || []).filter(w => w?.progress?.[modeKey] === true).length
+        return (langStore.words || []).filter(w => w?.progress?.[modeKey] === true)
+            .length
     }
 
     function currentCounters() {
@@ -75,11 +77,11 @@ export const dailyStore = defineStore('dailyStore', () => {
             lettersDone: countMode('letters'),
             wordArticleDone: countMode('wordArticle'),
             audioDone: countMode('audio'),
-            // Теперь эти значения берутся из langStore.js
             bestStreakAnyMode: langStore.bestStreakAnyMode || 0,
             bestStreakEasyArticle: langStore.bestStreakEasyArticle || 0,
             duelsPlayed: langStore.duelsPlayed || 0,
-            wrongAnswers: langStore.wrongAnswers || 0
+            wrongAnswers: langStore.wrongAnswers || 0,
+            exp: langStore.exp || 0
         }
     }
 
@@ -98,7 +100,7 @@ export const dailyStore = defineStore('dailyStore', () => {
         if (!isClient) return
         const all = JSON.parse(localStorage.getItem(BASELINE_KEY) || '{}')
         const key = String(dayIndex.value)
-        all[key] = {...(all[key] || currentCounters()), ...patch}
+        all[key] = { ...(all[key] || currentCounters()), ...patch }
         localStorage.setItem(BASELINE_KEY, JSON.stringify(all))
         baseline.value = all[key]
     }
@@ -107,44 +109,7 @@ export const dailyStore = defineStore('dailyStore', () => {
         ensureBaselineForToday()
     })
 
-    // ---- вычисление прогресса по ID квеста -----------------------------------
-    function getCurrentValueForQuestId(id) {
-        const learnedDelta = Math.max(0, (langStore.learnedWords?.length || 0) - (baseline.value.learnedWords || 0))
-        const bestStreakAnyModeDelta = Math.max(0, (langStore.bestStreakAnyMode || 0) - (baseline.value.bestStreakAnyMode || 0))
-        const pointsDelta = Math.max(0, (langStore.totalEarnedPoints || 0) - (baseline.value.totalEarnedPoints || 0))
-        const points = Math.max(0, langStore.points || 0) - (baseline.value.points || 0)
-        const lettersDelta = Math.max(0, countMode('letters') - (baseline.value.lettersDone || 0))
-        const wordArticleDelta = Math.max(0, countMode('wordArticle') - (baseline.value.wordArticleDone || 0))
-        const guessWordsDelta = Math.max(0, (guessStore.guessedCount || 0) - (baseline.value.guessedCount || 0))
-        const wrongAnswerDelta = Math.max(0, (langStore.wrongAnswers || 0) - (baseline.value.wrongAnswers || 0))
-
-
-        switch (id) {
-            case 1:
-                return learnedDelta
-            case 2:
-                return pointsDelta
-            case 3:
-                return points
-            case 4:
-                return langStore.bestStreakAnyMode
-            case 5:
-                return langStore.wrongAnswers
-            case 6:
-                return guessWordsDelta
-            case 7:
-                return wordArticleDelta
-            case 8:
-                return langStore.duelsPlayed
-            case 9:
-                return langStore.bestStreakEasyArticle
-            case 16:
-                return guessWordsDelta
-            default:
-                return 0
-        }
-    }
-
+    // ---- Единый computed для всех квестов ----------------------------------
     const offset = computed(() => {
         const len = dailyQuests.length || 1
         return (dayIndex.value * QUESTS_PER_DAY) % len
@@ -152,15 +117,35 @@ export const dailyStore = defineStore('dailyStore', () => {
 
     const todayQuests = computed(() => {
         const slice = wrapSlice(dailyQuests, offset.value, QUESTS_PER_DAY)
+
+        const learnedDelta = Math.max(0, (langStore.learnedWords?.length || 0) - (baseline.value.learnedWords || 0))
+        const pointsDelta = Math.max(0, (langStore.totalEarnedPoints || 0) - (baseline.value.totalEarnedPoints || 0))
+        const wordArticleDelta = Math.max(0, countMode('wordArticle') - (baseline.value.wordArticleDone || 0))
+        const guessWordsDelta = Math.max(0, (guessStore.guessedCount || 0) - (baseline.value.guessedCount || 0))
+        const exp = Math.max(0, (langStore.exp || 0) - (baseline.value.exp || 0))
+
+        const questValues = {
+            1: learnedDelta,
+            2: pointsDelta,
+            3: exp,
+            4: langStore.bestStreakAnyMode,
+            5: langStore.wrongAnswers,
+            6: guessWordsDelta,
+            7: wordArticleDelta,
+            8: langStore.duelsPlayed,
+            9: langStore.bestStreakEasyArticle,
+            16: guessWordsDelta,
+        }
+
         return slice.map(q => {
             const target = Math.max(1, Number(q.targetValue ?? 0))
-            const raw = Number(getCurrentValueForQuestId(q.id) ?? 0)
+            const raw = Number(questValues[q.id] ?? 0)
             const currentValue = Math.min(Math.max(0, raw), target)
             return {
                 ...q,
                 targetValue: target,
                 currentValue,
-                isCompleted: currentValue >= target
+                isCompleted: currentValue >= target,
             }
         })
     })
@@ -172,7 +157,9 @@ export const dailyStore = defineStore('dailyStore', () => {
     })
 
     return {
-        start, stop,
-        todayQuests, msLeft
+        start,
+        stop,
+        todayQuests,
+        msLeft,
     }
 })
