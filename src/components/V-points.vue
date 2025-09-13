@@ -7,7 +7,7 @@
     />
     <section class="points-card" aria-label="Поинты и уровень">
       <header class="points-card__header">
-        <h2 class="points_title">Панель игрока</h2>
+        <h2 class="points__title">Панель игрока</h2>
       </header>
       <ul v-if="langStore" class="points-card__list" aria-label="Сводка">
         <li class="points-card__item">
@@ -27,36 +27,54 @@
             <div class="progress__meta">{{ langStore.exp }}/100 XP</div>
           </div>
         </div>
+        <div class="points__statistics">
+          <div class="points__statistics__items">
+            <div class="points__stat-header">
+              <div class="points__stat-title">
+                <img class="points-card__title-icon" src="../../assets/images/graph.svg" alt="">
+                <h3 class="stats__title">Статистика</h3>
+              </div>
+              <button @click="toStatistics" class="stats__btn">
+                <span></span>
+                <img class="stat__icon" src="../../assets/images/dailyIcons/arrow-to.svg" alt="">
+              </button>
+            </div>
+
+          </div>
+        </div>
         <!--        <li class="points-card__item">-->
         <!--          <span class="points-card__label">Подписка</span>-->
         <!--          <span class="sub-badge sub-badge&#45;&#45;off">Не активна</span>-->
         <!--        </li>-->
       </ul>
-      <div class="fiends__list-wrapper">
-        <h3 class="points-card__title"> Список друзей</h3>
-        <ul class="list">
-          <li v-for="friend in friendsStore.friends"
-              :key="friend.id"
-              class="list__item">
-            <img
-                v-if="friend.avatar"
-                :src="friend.avatar"
-                alt="Аватар"
-                class="list__avatar"
-            />
-            <div> {{ friend.name || '' }}</div>
-          </li>
-        </ul>
-      </div>
-      <div class="points__statistics">
-        <div class="points__statistics__items">
-          <h3 class="points-card__title">Статистика</h3>
-          <button @click="toStatistics" class="stats__btn">Посмотреть статистику</button>
-        </div>
-      </div>
       <div class="sub-actions">
-        <button @click="toPayment" class="btn-activate">Попробовать</button>
+        <article class="super-card">
+          <div>
+            <span class="super-card__badge">Подписка</span>
+          </div>
+          <p class="sub__text">Получи максимум от платформы
+            Обучение, награды, задания, прогресс и многое другое!</p>
+          <button @click="toPayment" class="super-card__cta">
+            Попробовать
+          </button>
+        </article>
       </div>
+<!--      <div class="fiends__list-wrapper">-->
+<!--        <h3 class="points-card__title"> Список друзей</h3>-->
+<!--        <ul class="list">-->
+<!--          <li v-for="friend in friendsStore.friends"-->
+<!--              :key="friend.id"-->
+<!--              class="list__item">-->
+<!--            <img-->
+<!--                v-if="friend.avatar"-->
+<!--                :src="friend.avatar"-->
+<!--                alt="Аватар"-->
+<!--                class="list__avatar"-->
+<!--            />-->
+<!--            <div> {{ friend.name || '' }}</div>-->
+<!--          </li>-->
+<!--        </ul>-->
+<!--      </div>-->
     </section>
   </div>
 </template>
@@ -67,6 +85,10 @@ import {userAuthStore} from '../../store/authStore.js'
 import {useRouter} from "vue-router";
 import {useFriendsStore} from '../../store/friendsStore.js'
 import {onMounted, ref} from "vue";
+
+const istPremiumComputedStatus = computed(() =>
+    userAuth.isPremium ? 'Активна' : 'Не активна'
+)
 
 const {t} = useI18n()
 const langStore = userlangStore()
@@ -99,6 +121,34 @@ onMounted(() => {
 </script>
 <style scoped>
 
+.points-card__title-icon {
+  width: 40px;
+}
+
+.stats__title {
+  color: var(--titleColor);
+  margin-left: 5px;
+  font-size: 22px;
+}
+
+.points__title {
+  color: var(--titleColor);
+}
+
+.points__stat-title {
+  display: flex;
+  align-items: center;
+}
+
+.points__stat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  height: 63px;
+}
+
+
 .list__item {
   display: flex;
   align-items: center;
@@ -114,29 +164,37 @@ onMounted(() => {
   margin-bottom: 10px;
 }
 
-.points_title {
-  width: 100%;
-  background: #3b7ac4;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  border-radius: 15px;
-  box-shadow: 3px 3px 0 black;
-  border: 2px solid black;
+.stat__icon {
+  width: 40px;
+  transform: rotate(90deg);
+  margin-left: 5px;
+  transition: .3s;
+}
+
+@media (min-width: 1023px) {
+  .stat__icon:hover {
+    transform: scale(1.2) rotate(90deg);
+    transition: .3s;
+  }
 }
 
 .stats__btn {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
   padding: 10px;
   font-weight: 600;
-  font-family: "Nunito", sans-serif;
-  border-radius: 15px;
-  box-shadow: 3px 3px 0 black;
-  font-size: 18px;
+  font-size: 1.2rem;
+  color: #6ea4f1;
+  border-radius: 10px;
 }
 
 .points__statistics__items {
   display: flex;
   flex-direction: column;
+  margin-top: 10px;
+  border-top: 2px dashed var(--border);
 }
 
 .articlus__wrapper {
@@ -174,24 +232,23 @@ onMounted(() => {
   border-radius: 15px;
   box-shadow: 3px 3px 0 black;
   margin-bottom: 10px;
+  background: white;
 }
 
 .points-card {
   color: #111;
-  background: linear-gradient(180deg, #ffd83b, #f1c40f);
-  border: 4px solid #111;
+  border: 4px solid var(--border);
   border-radius: 20px;
-  box-shadow: 4px 4px 0 #111;
+  box-shadow: 2px 2px 0 var(--border);
   padding: 18px;
   width: 100%;
-  height: 100%;
   margin-bottom: 15px;
 }
 
 .progress_exp-bar {
   width: 100%;
   height: 20px;
-  background: white;
+  background: #e8eae5;
   border-radius: 10px;
   position: relative;
   overflow: hidden;
@@ -209,9 +266,8 @@ onMounted(() => {
 
 .points-card__title {
   display: inline-block;
-  padding: 8px 14px;
-  background: #111;
-  color: #fff;
+  padding: 8px 0;
+  color: black;
   border-radius: 14px;
   font-size: 20px;
   font-family: "Nunito", sans-serif;
@@ -220,8 +276,8 @@ onMounted(() => {
 
 .points-card__list {
   padding: 10px 12px;
-  background: #ffe78a;
-  border: 3px solid #111;
+  background: var(--bg);
+  border: 3px solid var(--border);
   border-radius: 14px;
   margin-bottom: 10px;
 }
@@ -232,7 +288,7 @@ onMounted(() => {
   justify-content: space-between;
   padding: 8px 4px;
   margin-top: 15px;
-  border-top: 3px dashed #111;
+  border-top: 3px dashed var(--border);
 }
 
 .points-card__item + .points-card__item {
@@ -242,7 +298,7 @@ onMounted(() => {
 .points-card__label {
   font-size: 19px;
   font-weight: 600;
-  color: #111;
+  color: var(--titleColor);
   font-family: "Nunito", sans-serif;
 }
 
@@ -333,7 +389,8 @@ onMounted(() => {
 }
 
 .points-card__progress {
-  margin-top: 5px;
+  margin: 10px 0;
+  padding-bottom: 10px;
 }
 
 .progress__meta {
@@ -359,4 +416,57 @@ onMounted(() => {
     font-size: 16px;
   }
 }
+
+.super-card {
+  position: relative;
+  width: 100%;
+  background: var(--bg);
+  border: 4px solid var(--border);
+  border-radius: 18px;
+  padding: 16px 16px 14px;
+  margin-bottom: 10px;
+}
+
+.super-card__badge {
+  display: inline-block;
+  font-weight: 900;
+  font-size: 1.5rem;
+  font-family: "Nunito", sans-serif;
+  color: var(--titleColor);
+  margin-bottom: 8px;
+}
+
+
+.super-card__cta {
+  width: 100%;
+  border: 1px solid #6ea4f1;
+  border-radius: 14px;
+  padding: 10px;
+  font-size: 19px;
+  font-weight: 600;
+  font-family: "Nunito", sans-serif;
+  color: white;
+  background: #1f68cb;
+  box-shadow: 0px 3px 0  #60a5fa;
+  cursor: pointer;
+  transition: transform .06s ease, box-shadow .06s ease, filter .2s ease;
+}
+
+.super-card__cta:hover {
+  filter: brightness(1.05);
+}
+
+.super-card__cta:active {
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0 #111;
+}
+
+.sub__text {
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 10px 0;
+  color: var(--titleColor);
+}
+
 </style>

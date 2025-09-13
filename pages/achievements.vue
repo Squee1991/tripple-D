@@ -29,7 +29,7 @@
                 <img v-if="category.submenu"
                      class="submenu-arrow"
                      :class="{ 'rotated': openSubmenus[category.id] }"
-                     src="../assets/images/arrowNav.svg" alt="Стрелка">
+                     src="../assets/images/arrowNav.svg" alt="Arrow">
                 <span class="sub__item-length">{{ category.length }}</span>
               </div>
             </li>
@@ -56,7 +56,7 @@
         <h1>{{ t('categoryAchievments.achievmentAreaLabel') }}</h1>
         <div class="content-header-actions">
           <button :title="t('hoverTitle.ach')" @click="showInfo" class="header__icon-info">
-            <img :src="Quest" alt="">
+            <img :src="Quest" alt="ques_icon">
           </button>
           <button class="content-close" @click="closeContent" aria-label="Close achievements panel">
             ✖

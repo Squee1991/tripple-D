@@ -1,15 +1,12 @@
 <template>
   <div class="uid__container">
     <template v-if="!isMobile">
-      <div class="ui__statistics">
-<!--        <VStatistics/>-->
+      <div>
+        <VLands/>
       </div>
       <div class="stats__wrapper">
-        <Vdaily/>
-      </div>
-      <div>
         <VPoints/>
-        <VLands/>
+        <Vdaily/>
       </div>
     </template>
     <template v-else>
@@ -38,7 +35,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
+import {ref, computed, onMounted, onBeforeUnmount} from 'vue'
 
 import VPoints from "~/src/components/V-points.vue";
 // import VStatistics from "~/src/components/V-statistics.vue";
@@ -51,20 +48,25 @@ import Daily from '../../assets/images/daily.svg'
 import Card from '../../assets/images/card.svg'
 
 const tabs = [
-  { id: 'locations', icon: Location, alt: 'achIcon', label: 'Земли', component: VLands },
-  { id: 'daily', icon: Daily, alt: 'daily icon', label: 'Ежедневки', component: Vdaily },
-  { id: 'profile', icon: Card, alt: 'ach icon', label: 'Панель ученика', component: VPoints },
-  // { id: 'points', icon: Stats, alt: 'stats icon', label: 'Статистика', component: VStatistics },
+  {id: 'locations', icon: Location, alt: 'achIcon', label: 'Земли', component: VLands},
+  {id: 'daily', icon: Daily, alt: 'daily icon', label: 'Ежедневки', component: Vdaily},
+  {id: 'profile', icon: Card, alt: 'ach icon', label: 'Панель ученика', component: VPoints},
 ]
 
 const activeTabId = ref(tabs[0].id)
 const currentTab = computed(() => tabs.find(t => t.id === activeTabId.value) || tabs[0])
 const currentComponent = computed(() => currentTab.value.component)
-function setTab(id) { activeTabId.value = id }
+
+function setTab(id) {
+  activeTabId.value = id
+}
 
 const isMobile = ref(false)
 let mql
-function updateIsMobile(e) { isMobile.value = e.matches }
+
+function updateIsMobile(e) {
+  isMobile.value = e.matches
+}
 
 onMounted(() => {
   mql = window.matchMedia('(max-width: 767px)')
@@ -85,26 +87,49 @@ onBeforeUnmount(() => {
   width: 50px;
   margin-right: 5px;
 }
+
 .tab__label {
   color: var(--titleColor);
 }
+
 .uid__container {
   display: flex;
   width: 100%;
   justify-content: space-between;
   margin-bottom: 20px;
+  height: 100dvh;
+  min-height: 0;
+  align-items: stretch;
 }
-.ui__statistics {
-  flex-grow: 1;
-}
+
 .stats__wrapper {
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 0 15px;
+  min-height: 0;
+  max-height: 100vh;
+  overflow: auto;
 }
 
-@media(max-width: 660px) {
+.stats__wrapper > * {
+  flex: 0 0 auto;
+}
+
+.stats__wrapper::-webkit-scrollbar {
+  width: 6px;
+}
+
+.stats__wrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.stats__wrapper::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+@media (max-width: 660px) {
   .tab__label {
     display: none;
   }
@@ -118,12 +143,14 @@ onBeforeUnmount(() => {
     height: calc(100dvh - 180px);
     overflow-y: auto;
   }
+
   .mobile-nav {
     display: flex;
     justify-content: space-between;
     gap: 10px;
     padding: 4px;
   }
+
   .mobile-nav__btn {
     border: none;
     background: none;
@@ -136,21 +163,25 @@ onBeforeUnmount(() => {
     cursor: pointer;
     transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.12s ease;
   }
+
   .mobile-nav__btn:active {
     transform: translateY(1px);
   }
+
   .mobile-nav__btn--active {
     background: #eeeaea;
     border: 3px solid black;
     box-shadow: 3px 3px 0 black;
     border-radius: 10px;
   }
+
   .mobile-panel {
     flex: 1;
     min-height: 0;
     display: flex;
     overflow: hidden;
   }
+
   .mobile-content {
     flex: 1;
     min-height: 0;
@@ -158,7 +189,9 @@ onBeforeUnmount(() => {
     width: 100%;
     overflow: auto;
     padding: 4px;
+    margin-top: 5px;
   }
+
   .mobile-content > * {
     flex: 1;
     width: 100%;
@@ -170,13 +203,16 @@ onBeforeUnmount(() => {
   opacity: 0;
   transform: translateY(6px);
 }
+
 .fade-slide-enter-active {
   transition: opacity 180ms ease, transform 180ms ease;
 }
+
 .fade-slide-leave-to {
   opacity: 0;
   transform: translateY(-6px);
 }
+
 .fade-slide-leave-active {
   transition: opacity 140ms ease, transform 140ms ease;
 }

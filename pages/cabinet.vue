@@ -169,7 +169,6 @@
               <button @click="openDeleteModal" class="btn btn-danger">{{ t('cabinet.deleteAcc') }}</button>
             </div>
           </div>
-
           <div v-else-if="activeTabKey === 'progress'"><Progress/></div>
           <div v-else-if="activeTabKey === 'shop'"><Shop/></div>
           <div v-else-if="activeTabKey === 'award'"><AwardsList :awards="awardList"/></div>
@@ -214,10 +213,10 @@
     <div v-if="isDeleteModalOpen" class="modal-overlay" @click.self="isDeleteModalOpen = false">
       <div class="modal-card">
         <div class="modal-title">{{ t('cabinet.deleteAccTitle') }}</div>
-        <p class="modal-text">{{ t('cabinet.deleteText') }}</p>
+        <p class="modal-text">ВАЖНО!!!</p>
         <p v-if="userAuthStore.isPremium" class="modal-text">
-          <span class="warn">ВАЖНО!!!</span>
-          <span> При удалении аккаунта подписка не отменяется. Перед удалением отмените подписку</span>
+          <span class="warn">{{ t('cabinet.important') }}</span>
+          <span> {{ t('cabinet.importantText') }}</span>
         </p>
         <p v-if="!isGoogleUser" class="modal-text">{{ t('cabinet.checkPassword') }}</p>
 
@@ -265,7 +264,6 @@ import EditIcon from '../assets/accountToggleIcons/edit.svg'
 import UserAccIcon from '../assets/accountToggleIcons/user.svg'
 import SettingsIcon from '../assets/accountToggleIcons/settings.svg'
 import FaqIcon from '../assets/accountToggleIcons/faq.svg'
-import * as ROUTES from "postcss-selector-parser";
 
 const {t, locale} = useI18n()
 const router = useRouter()
@@ -287,7 +285,7 @@ const TAB_ITEMS = [
   {key: 'info', label: t('cabinetSidebar.valueOne'), icon: UserIcon},
   {key: 'progress', label: t('cabinetSidebar.valueTwo'), icon: ProgressIcon},
   {key: 'award', label: t('cabinetSidebar.valueThree'), icon: AwardsIcon},
-  {key: 'archive', label: 'Архив экзаменов', icon: Folder },
+  {key: 'archive', label: t('cabinetSidebar.valueFour'), icon: Folder },
   // {key: 'friends', label: 'Список друзей', icon: Find },
 ]
 

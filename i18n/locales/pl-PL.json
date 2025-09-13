@@ -15,6 +15,62 @@
   "modalVerbsTipsTitle": {
     "tipsTitle": "Przydatne wskazówki:"
   },
+  "friendExam": {
+    "title": "Ogólne testy od innych uczestników",
+    "btnBack": "Na stronę główną",
+    "selectOne": "Wszystkie",
+    "selectTwo": "Niezaakceptowane",
+    "selectThree": "Wysoki wynik",
+    "selectFour": "Niski wynik",
+    "loading": "Ładowanie...",
+    "inbox": "Przychodzące zaproszenia",
+    "person": "zaprosił(a) na egzamin",
+    "level": "Poziom:",
+    "accept": "Akceptuj",
+    "reject": "Odrzuć",
+    "empty": "Brak przychodzących zaproszeń",
+    "available": "Zaakceptowane",
+    "notAccepted": "Nie masz jeszcze zaakceptowanych egzaminów",
+    "examFrom": "Egzamin od",
+    "gpa": "Średni wynik:",
+    "show": "Zobacz",
+    "notFound": "Nic nie znaleziono",
+    "placeholder": "Szukaj po imieniu"
+  },
+  "shareModal": {
+    "close": "Zamknij",
+    "shareWithFriend": "Udostępnij znajomemu",
+    "noFriends": "Nie masz jeszcze znajomych, z którymi możesz się podzielić.",
+    "friendsList": "Lista znajomych",
+    "friendNotFound": "Nie znaleziono znajomych.",
+    "send": "Wyślij",
+    "placeholder": "Szukaj po imieniu lub e-mailu..."
+  },
+  "examResult": {
+    "title": "Archiwum egzaminów",
+    "showResultButton": "Zobacz wynik",
+    "loading": "Ładowanie…",
+    "empty": "Archiwum jest puste",
+    "start": "Początek:",
+    "middle": "Średni wynik:",
+    "share": "Udostępnij",
+    "delete": "Usuń",
+    "sent": "Test wysłany",
+    "sended": "Już wysłałeś ten test",
+    "error": "Nie udało się udostępnić egzaminu"
+  },
+  "consentModal": {
+    "title": "Ważna informacja",
+    "textPartOne": "Aby wykonać zadania w module",
+    "textPartTwo": "twoja wymowa będzie",
+    "textPartThree": "nagrana i zapisana",
+    "textTwoPartOne": "Nagrania audio są używane wyłącznie do sprawdzania odpowiedzi. My",
+    "textTwoPartTwo": "nie przekazujemy",
+    "textTwoPartThree": "twoich danych osobom trzecim. Po ukończeniu zadania będziesz mieć możliwość odsłuchania swojego nagrania i, jeśli chcesz,",
+    "textTwoPartFour": "udostępnić je",
+    "agree": "Przeczytałem(am) i zgadzam się z warunkami",
+    "accept": "Akceptuj"
+  },
   "adjectiveTheory": {
     "title": "Przymiotniki w języku niemieckim: prosto i jasno",
     "subTitle": "Co to jest, gdzie stoją, jak się stopniują i jakie końcówki stosować. Na końcu — mini-quiz.",
@@ -249,7 +305,8 @@
   "cabinetSidebar": {
     "valueOne": "Ustawienia konta",
     "valueTwo": "Postęp w artykułach",
-    "valueThree": "Nagrody"
+    "valueThree": "Nagrody",
+    "valueFour": "Archiwum egzaminów"
   },
   "cabinetAccordion": {
     "personalData": "Dane osobowe",
@@ -268,6 +325,8 @@
     "ach": "Powiadomienia o osiągnięciach"
   },
   "cabinet": {
+    "important": "WAŻNE!!!",
+    "importantText": "Podczas usuwania konta subskrypcja nie zostaje anulowana. Przed usunięciem anuluj subskrypcję.",
     "cancelPremium": "Anulować subskrypcję?",
     "cancelPremiumText": "Jeśli anulujesz subskrypcję, dostęp premium pozostanie do końca opłaconego okresu.",
     "accept": "Tak, anuluj",
@@ -1253,12 +1312,16 @@
     "lossText": "Tym razem przeciwnik był silniejszy. Nie martw się, spróbuj ponownie!"
   },
   "nav": {
-    "training": "Trening",
+    "training": "Nauka",
     "gameMode": "Gry",
     "tests": "Testy",
     "achieve": "Osiągnięcia",
-    "stats": "Ranking"
+    "stats": "Ranking",
+    "about": "O aplikacji",
+    "contact": "Kontakt",
+    "quest": "Pytania i Odpowiedzi"
   },
+
   "formLabel": {
     "name": "Imię",
     "email": "E-mail",
@@ -1266,28 +1329,31 @@
     "confirm": "Potwierdź"
   },
   "sub": {
-    "sinonim": "Słownictwo",
+    "sinonim": "Leksyka",
     "articles": "Rodzajniki",
     "verbs": "Czasowniki",
     "adjectives": "Przymiotniki",
     "marathon": "Maraton rodzajników",
-    "pvp": "Pojedynek kart",
+    "pvp": "Bitwa karciana",
     "prepositions": "Przyimki",
     "guess": "Zgadnij słowo",
     "card": "Stwórz fiszki",
     "themen": "Poziomy tematyczne",
-    "idioms": "Idiomy",
+    "idioms": "Frazeologizmy",
     "wordDuel": "Pojedynek fraz",
-    "quests": "Dziennik Zadań"
+    "quests": "Dziennik Zadań",
+    "languagesLands": "Krainy Językowe"
   },
   "underSub": {
     "prev": "Wprowadzenie",
     "rules": "Zasady",
-    "artRules": "Praktyka",
+    "artRules": "Ćwiczenie rodzajników",
+    "adjectiveTheory": "Teoria i zasady",
     "adjectivesBasic": "Podstawy",
     "declination": "Odmiana",
     "comparison": "Stopniowanie",
-    "verbTypes": "Typy czasowników",
+    "verbsTheory": "Teoria i zasady",
+    "verbTypes": "Rodzaje czasowników",
     "verbFirst": "Odmiana i czasy",
     "verbSecond": "Czasowniki modalne",
     "verbThird": "Czasowniki zwrotne",
@@ -1334,6 +1400,26 @@
     "explain": "Określ poprawny czasownik posiłkowy.",
     "chooseTwo": "Konstruktor Partizip II",
     "explainTwo": "Utwórz poprawną formę Partizip II."
+  },
+  "futurOne": {
+    "tipOne": "1. Czasownik posiłkowy werden odmienia się: ich werde, du wirst, er/sie/es wird itd.",
+    "tipTwo": "2. Czasownik główny (bezokolicznik) stawiany jest na końcu zdania",
+    "tipThree": "3. Używany do oznaczania przyszłych działań",
+    "tipFour": "4. Zastępuje Präsens, jeśli chcemy podkreślić zamiar lub zrobić przypuszczenie",
+    "tipFive": "5. Przykład: Ich werde lernen. / Er wird bald kommen.",
+    "tipSix": "6. Zdanie pytające: Wirst du morgen kommen?",
+    "howToDoTitle": "Jak się tworzy?",
+    "howToDoExample": "werden (Präsens) + bezokolicznik na końcu zdania",
+    "howToUseTitle": "Kiedy się używa?",
+    "howToUseFirstExample": "Planowane działania w przyszłości",
+    "howToUseSecondExample": "Przypuszczenia dotyczące teraźniejszości lub przyszłości",
+    "example": "Przykłady",
+    "translateOne": "Będę się uczyć jutro.",
+    "translateTwo": "On wkrótce przyjdzie.",
+    "translateThree": "Nie będziemy spać.",
+    "tableTitle": "Odmiana werden",
+    "practiceDesc": "Wybierz poprawną formę werden i zbuduj Futur I.",
+    "begin": "Rozpocznij"
   },
   "präteritum": {
     "howToDo": "Temat czasownika mocnego ze zmianą samogłoski / temat słabego + “-te”",

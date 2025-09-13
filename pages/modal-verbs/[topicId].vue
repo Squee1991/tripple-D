@@ -15,13 +15,35 @@
       <div v-if="loading" class="fullscreen-state">
         <p>{{ t('prasens.loading')}}</p>
       </div>
-      <div v-else-if="quizStore.quizCompleted" class="fullscreen-state">
-        <div class="quiz-summary-comic">
-          <h2>{{ t('prasens.end')}} </h2>
-          <p>{{ t('prasens.result')}} {{ quizStore.score }} / {{ quizStore.currentQuestions.length }}</p>
-          <button @click="startQuiz" class="action-button">{{ t('prasens.again')}}</button>
-          <button @click="backTo" class="action-button">{{ t('prasens.back')}}</button>
-        </div>
+      <div v-else-if="quizStore.quizCompleted" class="finish-screen">
+        <CelebrationFireworks
+            v-model="showCelebration"
+            ref="celebration"
+            :score="quizStore.score"
+            :total="quizStore.currentQuestions.length"
+            :elapsed="elapsed"
+            :pointsStart="prevPoints"
+            :expStart="prevExp"
+            :levelStart="prevLevel"
+            :award="failMode ? 0 : AWARD"
+            :levelUpXp="LEVEL_UP_XP"
+            :showStats="!failMode"
+            :pieces="460"
+            :sparkCount="32"
+            :burstsCount="28"
+            :area-x="[10, 90]"
+            :area-y="[15, 75]"
+            :title="failMode ? FINISH_UI.tryAgainTitle : FINISH_UI.winTitle"
+            :resultLabel="FINISH_UI.result"
+            :timeLabel="FINISH_UI.time"
+            :pointsLabel="FINISH_UI.points"
+            :levelLabel="FINISH_UI.level"
+        >
+          <div class="actions">
+            <button class="btn primary" @click="startQuiz">{{ t('prasens.again') }}</button>
+            <button class="btn ghost" @click="backTo">{{ t('prasens.back') }}</button>
+          </div>
+        </CelebrationFireworks>
       </div>
       <div v-else-if="quizStore.activeQuestion" class="quiz-content-comic">
         <div class="question-card-comic">
@@ -71,40 +93,100 @@
 
 <script setup>
 
-import {ref, onMounted,} from 'vue';
+import {ref, onMounted, watch, nextTick,} from 'vue';
 import {useQuizStore} from '../../store/adjectiveStore.js';
 import { useRouter , useRoute} from 'vue-router'
+import {userlangStore} from '../../store/learningStore.js'
+import CelebrationFireworks from '../../src/components/CelebrationFireworks.vue'
+import { useRewardEngine } from '../../src/composables/useRewardEngine.js'
+
+const FINISH_UI = {
+  winTitle: 'Поздравляем!',
+  tryAgainTitle: 'Ещё чуть-чуть — и получится!',
+  result: 'Результат',
+  time: 'Время',
+  points: 'Артиклюсы',
+  level: 'Уровень',
+}
+
+
 const router = useRouter()
 const route = useRoute();
+const learning = userlangStore()
 const quizStore = useQuizStore();
 const loading = ref(true);
 const { t } = useI18n()
 const category = 'modal-verbs';
-
 const { topicId } = route.params;
-async function startQuiz() {
-  loading.value = true;
-  const fileName = `/verbs-data/${category}-${topicId}.json`;
-  quizStore.setContext?.({
-    modeId: 'verb',
-    topicId,
-    fileName,
-    contentVersion: 'v1',
-  })
-  await (quizStore.restoreOrStart
-      ? quizStore.restoreOrStart({ modeId: 'verb', topicId, fileName, contentVersion: 'v1' })
-      : quizStore.startNewQuiz(fileName))
 
-  loading.value = false;
+const showCelebration = ref(false)
+const celebration = ref(null)
+const startedAt = ref(Date.now())
+const elapsed = ref('0:00')
+
+const AWARD = 5
+const LEVEL_UP_XP = 100
+const PASS_RATIO = 0.8
+
+const prevPoints = ref(0)
+const prevExp = ref(0)
+const prevLevel = ref(1)
+const failMode = ref(false)
+
+function fmt(ms) {
+  const s = Math.floor(ms / 1000)
+  const m = Math.floor(s / 60)
+  const sec = s % 60
+  return `${m}:${sec.toString().padStart(2, '0')}`
 }
+
+async function startQuiz() {
+  loading.value = true
+  const fileName = `/verbs-data/${category}-${topicId}.json`
+  quizStore.setContext({modeId: category, topicId, fileName, contentVersion: 'v1'})
+  await quizStore.startNewQuiz(fileName)
+  loading.value = false
+  showCelebration.value = false
+  startedAt.value = Date.now()
+}
+
 
 const backTo = () => {
   router.back()
 }
 
-onMounted(() => {
-  startQuiz();
-});
+onMounted(async () => {
+  loading.value = true
+  const fileName = `/verbs-data/${category}-${topicId}.json`
+  quizStore.setContext({modeId: category, topicId, fileName, contentVersion: 'v1'})
+  await quizStore.restoreOrStart({modeId: category, topicId, fileName, contentVersion: 'v1'})
+  await learning.loadFromFirebase?.()
+  startedAt.value = Date.now()
+  loading.value = false
+})
+
+const {finalize} = useRewardEngine(learning)
+
+watch(() => quizStore.quizCompleted,
+    async (done) => {
+      if (!done) return
+      elapsed.value = fmt(Date.now() - startedAt.value)
+      const res = await finalize({
+        score: quizStore.score,
+        total: quizStore.currentQuestions.length || 10,
+        passRatio: PASS_RATIO,
+        baseAward: AWARD,
+        levelUpXp: LEVEL_UP_XP,
+        save: true,
+      })
+      prevPoints.value = res.pointsStart
+      prevExp.value = res.expStart
+      prevLevel.value = res.levelStart
+      failMode.value = !res.ok
+      await nextTick()
+      showCelebration.value = true
+      celebration.value?.play()
+    })
 
 </script>
 
@@ -310,6 +392,31 @@ onMounted(() => {
   font-size: 2rem;
   margin: 1rem 0 2rem;
 }
+.btn {
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 3px solid #000;
+  box-shadow: 6px 6px 0 #000;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn.primary {
+  background: #60a5fa;
+  color: #0b1220;
+}
+
+.btn.ghost {
+  background: #1c2636;
+  color: #e5edff;
+}
+
 @media (max-width: 767px) {
   .quiz-header-comic {
     gap: 10px;

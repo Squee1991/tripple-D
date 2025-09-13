@@ -10,8 +10,7 @@
       </header>
 
       <ul class="qd__list">
-        <li class="qd__item" v-for="(quest , index) in todayQuests" :key="quest.id">
-          <div class="qd__icon" :data-idx="index">{{ icon(index) }}</div>
+        <li class="qd__item" v-for="quest in todayQuests" :key="quest.id">
           <div class="qd__body">
             <h4 class="qd__name">{{ quest.name }}</h4>
             <div class="qd__barwrap">
@@ -19,7 +18,9 @@
               <span class="qd__barlabel">{{ cur(quest) }} / {{ max(quest) }}</span>
             </div>
           </div>
-          <div class="qd__chest" aria-hidden="true">🧰</div>
+          <div class="qd__chest" aria-hidden="true">
+            <img class="qd__icon" :src="completedDaily" alt="">
+          </div>
         </li>
       </ul>
     </section>
@@ -27,10 +28,16 @@
 </template>
 
 <script setup>
-import {onMounted, onUnmounted} from 'vue'
+import {onMounted, onUnmounted , computed} from 'vue'
 import {storeToRefs} from 'pinia'
+import { userAuthStore} from "~/store/authStore.js";
+const auth = userAuthStore()
 import {dailyStore} from '../../store/dailyStore'
+import NotCompleted from '../../assets/images/dailyIcons/dailyNotCompleted.svg'
+import Completed from '../../assets/images/dailyIcons/dailyCompleted.svg'
 
+const isCompleted = ref(true)
+const completedDaily = computed(() => isCompleted.value ? Completed : NotCompleted)
 const store = dailyStore()
 const {todayQuests, msLeft} = storeToRefs(store)
 
@@ -55,13 +62,14 @@ function prettyMs(x) {
   return `${pad(hour)}:${pad(min)}:${pad(s)}`
 }
 
-function icon(icon) {
-  const arr = ['⚡', '⏱️', '🎯', '📚', '🔊', '🧩', '📝', '🧠']
-  return arr[icon % arr.length]
-}
 </script>
 
 <style scoped>
+
+.qd__icon {
+  width: 75px;
+  height: 75px;
+}
 
 .qd {
   color: #e6edf3;
@@ -74,16 +82,14 @@ function icon(icon) {
 
 .daily {
   width: 100%;
-  min-width: 390px;
   flex-grow: 1;
-  border: 3px solid #22272e;
+  border: 3px solid var(--border);
   border-radius: 16px;
   padding: 16px;
-  color: #e6edf3;
-  background: #a855f7;
-  box-shadow: 4px 4px 0 black;
+  color: var(--titleColor);
+  box-shadow: 2px 2px 0 var(--border);
   font-family: "Nunito", sans-serif;
-
+  margin-bottom: 10px;
 }
 
 .qd__header {
@@ -97,7 +103,7 @@ function icon(icon) {
   font-size: 22px;
   font-weight: 800;
   font-family: "Nunito", sans-serif;
-  color: black;
+  color:var(--titleColor);
 }
 
 .qd__right {
@@ -126,40 +132,29 @@ function icon(icon) {
   flex-direction: column;
 }
 .qd__item {
-  display: grid;
-  grid-template-columns: 42px 1fr 28px;
+  display: flex;
+  justify-content: space-between;
   gap: 12px;
   align-items: center;
   background: #FFFFFF;
   border: 3px solid #273041;
   border-radius: 14px;
-  padding: 12px;
+  padding: 0px 10px;
   box-shadow: 4px 4px 0 #273041;
 }
 
-.qd__icon {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  font-size: 20px;
-  font-weight: 700;
-  background: #142233;
-  border: 1px solid #2a3a52;
-}
-
-
 .qd__body {
-  display: grid;
   gap: 8px;
+  flex-grow: 1;
+  min-width: 220px;
 }
 
 .qd__name {
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 700;
   line-height: 1.25;
   color: black;
+  margin-bottom: 10px;
 }
 
 
@@ -211,14 +206,11 @@ function icon(icon) {
 }
 
 .qd__chest {
-  width: 28px;
-  height: 28px;
+  width:90px;
+  height: 90px;
   display: grid;
   place-items: center;
   font-size: 16px;
   color: #f6c64f;
-  background: #1a2230;
-  border: 1px solid #2b3240;
-  border-radius: 6px;
 }
 </style>

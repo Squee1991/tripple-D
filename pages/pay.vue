@@ -130,7 +130,7 @@ async function pay() {
 }
 
 .comic__wrapper {
-  padding: 25px;
+  padding: 14px;
   font-family: 'Nunito', sans-serif;
   text-align: center;
   color: #fff;

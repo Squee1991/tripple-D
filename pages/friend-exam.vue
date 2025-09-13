@@ -2,8 +2,8 @@
   <div class="shared-exams-page">
     <header class="page-header">
       <div class="header__inner">
-        <button @click="router.push('/')" class="btn btn__back">На главную</button>
-        <h2 class="shared__title">Общие тесты от других участников</h2>
+        <button @click="router.push('/')" class="btn btn__back">{{ t('friendExam.btnBack')}}</button>
+        <h2 class="shared__title">{{ t('friendExam.title')}}</h2>
       </div>
       <div class="controls">
         <div class="search-sort">
@@ -12,13 +12,13 @@
               <path
                   d="M10 18a8 8 0 1 1 5.292-14.002A8 8 0 0 1 10 18Zm8.707-.293 3.586 3.586-1.414 1.414-3.586-3.586 1.414-1.414Z"/>
             </svg>
-            <input v-model.trim="query" type="text" placeholder="Поиск по имени"/>
+            <input v-model.trim="query" type="text" :placeholder="t('friendExam.placeholder')"/>
           </div>
           <select v-model="mode" class="select">
-            <option value="all">Все</option>
-            <option value="pending">Не принятые</option>
-            <option value="scoreDesc">Высокий балл</option>
-            <option value="scoreAsc">Низкий балл</option>
+            <option value="all">{{ t('friendExam.selectOne')}}</option>
+            <option value="pending">{{ t('friendExam.selectTwo')}}</option>
+            <option value="scoreDesc">{{ t('friendExam.selectThree')}}</option>
+            <option value="scoreAsc">{{ t('friendExam.selectFour')}}</option>
           </select>
         </div>
       </div>
@@ -28,7 +28,7 @@
     </div>
     <div v-else>
       <div v-if="examStore.sharedLoading" class="status-row">
-        <span class="badge badge-warn">Загрузка...</span>
+        <span class="badge badge-warn">{{ t('friendExam.loading')}}</span>
       </div>
       <div v-else-if="examStore.sharedError" class="status-row">
         <span class="badge badge-danger">{{ examStore.sharedError }}</span>
@@ -36,7 +36,7 @@
 
       <section v-if="showPending" class="section">
         <div class="section-title">
-          <h3>Входящие приглашения</h3>
+          <h3>{{ t('friendExam.inbox')}}</h3>
           <span class="counter">{{ visiblePending.length }}</span>
         </div>
         <ul class="cards">
@@ -44,50 +44,50 @@
             <div class="card-main">
               <div class="avatar">{{ initials(share.fromName) }}</div>
               <div class="meta">
-                <div class="title"><b>{{ share.fromName }}</b> пригласил(а) к экзамену</div>
+                <div class="title"><b>{{ share.fromName }}</b> {{ t('friendExam.person')}}</div>
                 <div class="sub">
-                  <span class="chip">Уровень: {{ (share.examDetails && share.examDetails.level) || 'N/A' }}</span>
+                  <span class="chip">{{ t('friendExam.level')}} {{ (share.examDetails && share.examDetails.level) || 'N/A' }}</span>
                 </div>
               </div>
             </div>
             <div class="card-actions">
-              <button class="btn btn-accept" @click="examStore.acceptShare(share)">Принять</button>
-              <button class="btn btn-outline" @click="examStore.declineShare(share)">Отклонить</button>
+              <button class="btn btn-accept" @click="examStore.acceptShare(share)">{{ t('friendExam.accept')}}</button>
+              <button class="btn btn-outline" @click="examStore.declineShare(share)">{{ t('friendExam.reject')}}</button>
             </div>
           </li>
-          <li v-if="!visiblePending.length" class="empty">Нет входящих приглашений</li>
+          <li v-if="!visiblePending.length" class="empty">{{ t('friendExam.empty')}}</li>
         </ul>
       </section>
 
       <section v-if="showAccepted" class="section">
         <div class="section-title">
-          <h3>Доступные вам</h3>
+          <h3>{{ t('friendExam.available')}}</h3>
           <span class="counter">{{ visibleAccepted.length }}</span>
         </div>
         <ul class="cards">
-          <li v-if="!visibleAccepted.length" class="empty">У вас пока нет принятых экзаменов</li>
+          <li v-if="!visibleAccepted.length" class="empty">{{ t('friendExam.notAccepted')}}</li>
           <li v-for="share in visibleAccepted" :key="share.shareId" class="card accepted">
             <div class="card-main">
               <div class="avatar alt">{{ initials(share.fromName) }}</div>
               <div class="meta">
-                <div class="title">Экзамен от <b>{{ share.fromName }}</b></div>
+                <div class="title">{{ t('friendExam.examFrom')}} <b>{{ share.fromName }}</b></div>
                 <div class="sub">
-                  <span class="chip">Уровень: {{ (share.examDetails && share.examDetails.level) || 'N/A' }}</span>
-                  <span class="chip chip-score">Средний балл: {{
+                  <span class="chip">{{ t('friendExam.gpa')}} {{ (share.examDetails && share.examDetails.level) || 'N/A' }}</span>
+                  <span class="chip chip-score">{{ t('friendExam.level')}} {{
                       (share.examDetails && share.examDetails.averageScore) || 'N/A'
                     }}</span>
                 </div>
               </div>
             </div>
             <div class="card-actions">
-              <button class="btn btn-primary" @click="openSharedAttempt(share.examId)">Посмотреть</button>
+              <button class="btn btn-primary" @click="openSharedAttempt(share.examId)">{{ t('friendExam.show')}}</button>
             </div>
           </li>
         </ul>
       </section>
 
       <div v-if="!showPending && !showAccepted && !examStore.sharedLoading" class="empty-state">
-        <p>Ничего не найдено</p>
+        <p>{{ t('friendExam.notFound')}}</p>
       </div>
     </div>
   </div>
@@ -100,7 +100,7 @@ import {userExamStore} from '../store/examStore.js'
 
 const examStore = userExamStore()
 const router = useRouter()
-
+const { t } = useI18n()
 const ready = ref(false)
 const query = ref('')
 const mode = ref('all')

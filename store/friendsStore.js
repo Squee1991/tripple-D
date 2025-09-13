@@ -104,6 +104,10 @@ export const useFriendsStore = defineStore('friends', () => {
 			await acceptRequest(theirUid)
 			return true
 		}
+		// --- ИЗМЕНЕНИЕ ДЛЯ РЕШЕНИЯ ЗАДАЧИ ---
+		// Мы по-прежнему копируем данные один раз при создании запроса,
+		// чтобы UI мог сразу что-то показать, не дожидаясь гидрации.
+		// Актуальные данные будут подгружены позже в loadFriends.
 		const theirProfile = user
 		const myProfile = await getProfile(myUid)
 		const theirEmail = theirProfile.email || null
@@ -146,8 +150,6 @@ export const useFriendsStore = defineStore('friends', () => {
 		return true
 	}
 
-
-
 	async function acceptRequest(fromUid) {
 		const myUid = currentUserUid()
 		if (!myUid) throw new Error('Не авторизован')
@@ -165,6 +167,7 @@ export const useFriendsStore = defineStore('friends', () => {
 		return true
 	}
 
+	// --- ЛОГИКА ОСТАЛАСЬ БЕЗ ИЗМЕНЕНИЙ, КАК ВЫ И ПРОСИЛИ ---
 	async function declineRequest(fromUid) {
 		const myUid = currentUserUid()
 		if (!myUid) throw new Error('Не авторизован')
@@ -182,26 +185,28 @@ export const useFriendsStore = defineStore('friends', () => {
 		return true
 	}
 
-	async function hydrateMissing(items) {
+	// --- ИЗМЕНЕНИЕ ДЛЯ РЕШЕНИЯ ЗАДАЧИ ---
+	// Функция `hydrateMissing` заменена на эту. Она всегда загружает свежий профиль
+	// и обновляет данные (имя, аватар) поверх тех, что уже есть.
+	async function hydrateWithLatestData(items) {
 		return Promise.all(
 			items.map(async (it) => {
-				const hasMain = it?.email && it?.name && it?.avatar
-				if (hasMain) {
-					return { ...it, avatar: normalizeAvatarPath(it.avatar) }
-				}
 				const prof = await getProfile(it.uid)
+				if (!prof) { // Если профиль не найден (удален), оставляем старые данные
+					return it
+				}
+				// Возвращаем старые данные 'it', перезаписав их свежими данными из 'prof'
 				return {
 					...it,
-					email: it.email ?? prof?.email ?? null,
-					name: it.name ?? prof?.name ?? prof?.displayName ?? null,
+					email: prof.email ?? it.email ?? null,
+					name: prof.name ?? prof.displayName ?? it.name ?? null,
 					avatar: normalizeAvatarPath(
-						it.avatar ?? prof?.avatarUrl ?? prof?.avatar ?? prof?.photoURL ?? null
+						prof.avatarUrl ?? prof.avatar ?? prof.photoURL ?? it.avatar ?? null
 					),
 				}
 			})
 		)
 	}
-
 	async function loadFriends() {
 		const myUid = currentUserUid()
 		if (!myUid) {
@@ -210,19 +215,17 @@ export const useFriendsStore = defineStore('friends', () => {
 			requestsOutgoing.value = []
 			return
 		}
-
 		loading.value = true
 		error.value = null
 		try {
 			const snap = await getDocs(collection(db, 'users', myUid, 'friends'))
 			const all = snap.docs.map(d => ({ uid: d.id, ...d.data() }))
-			const accepted = all.filter(f => f.status === 'accepted')
-			const incoming = all.filter(f => f.status === 'incoming')
-			const pending  = all.filter(f => f.status === 'pending')
+			const relevantRelations = all.filter(f => f.status === 'accepted' || f.status === 'incoming' || f.status === 'pending');
+			const hydratedList = await hydrateWithLatestData(relevantRelations)
+			friends.value          = hydratedList.filter(f => f.status === 'accepted')
+			requestsIncoming.value = hydratedList.filter(f => f.status === 'incoming')
+			requestsOutgoing.value = hydratedList.filter(f => f.status === 'pending')
 
-			friends.value          = await hydrateMissing(accepted)
-			requestsIncoming.value = await hydrateMissing(incoming)
-			requestsOutgoing.value = await hydrateMissing(pending)
 		} catch (e) {
 			console.error(e)
 			error.value = e?.message || 'Не удалось загрузить друзей'
@@ -230,7 +233,6 @@ export const useFriendsStore = defineStore('friends', () => {
 			loading.value = false
 		}
 	}
-
 	return {
 		friends,
 		requestsIncoming,

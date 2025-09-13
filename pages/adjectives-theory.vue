@@ -21,7 +21,7 @@
                 </div>
               </div>
               <div v-if="li.subExample" class="adjs__example" style="margin-top: 8px;">
-                <img class="adjs__icon" :src="li.subExample.icon === 'Chat' ? Chat : Pin" alt="icon">
+                <img class="adjs__icon" :src="li.subExample.icon === 'Chat' ? Chat : Pin" alt="Pin_icon">
                 <div class="adjs__example--wrapper">
                   <p v-html="li.subExample.text"></p>
                 </div>

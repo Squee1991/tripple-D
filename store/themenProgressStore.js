@@ -8,9 +8,7 @@ export const useTrainerStore = defineStore('thematic', () => {
 	const jsonData = ref(null)
 	const selectedLevel = ref(null)
 	const selectedModule = ref(null)
-	const completedModules = ref([]) // [{ level, id }]
-
-	// Добавить пройденный модуль
+	const completedModules = ref([])
 	const addCompletedModule = (level, id) => {
 		if (!completedModules.value.some(m => m.level === level && m.id === id)) {
 			completedModules.value.push({ level, id })
@@ -18,7 +16,6 @@ export const useTrainerStore = defineStore('thematic', () => {
 		}
 	}
 
-	// Сохранение прогресса
 	const saveProgress = async () => {
 		const auth = getAuth()
 		const db = getFirestore()
@@ -37,7 +34,6 @@ export const useTrainerStore = defineStore('thematic', () => {
 		await setDoc(docRef, data)
 	}
 
-	// Загрузка прогресса
 	const loadProgress = async () => {
 		const auth = getAuth()
 		const db = getFirestore()
@@ -66,10 +62,8 @@ export const useTrainerStore = defineStore('thematic', () => {
 			const data = docSnap.data()
 			if (data[topic.value]) {
 				const t = data[topic.value]
-				// Миграция старого формата:
 				if (Array.isArray(t.completedModules) && typeof t.completedModules[0] === 'number') {
-					// если был старый формат [1,2,3]
-					completedModules.value = t.completedModules.map(id => ({ level: 1, id })) // по умолчанию, можно скорректировать если были уровни
+					completedModules.value = t.completedModules.map(id => ({ level: 1, id }))
 				} else if (Array.isArray(t.completedModules)) {
 					completedModules.value = t.completedModules
 				} else {
@@ -85,7 +79,6 @@ export const useTrainerStore = defineStore('thematic', () => {
 			completedModules.value = []
 		}
 	}
-
 	const setThemeAndModule = async (topicName, level, module) => {
 		topic.value = topicName
 		const res = await fetch(`/${topicName}.json`)

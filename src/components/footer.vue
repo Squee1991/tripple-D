@@ -196,7 +196,7 @@ svg {
   .absolut {
     gap: 13px;
     padding: 10px 15px;
-    position: absolute;
+    position: sticky;
     left: 0;
     bottom: 0;
   }
