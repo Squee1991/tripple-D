@@ -1,52 +1,152 @@
 [
   {
-    "question": "Der Schüler ist ___.",
-    "options": ["faul", "fleißig", "dumm", "lustig"],
-    "answer": "fleißig"
-  },
-  {
     "question": "Der Clown ist ___.",
-    "options": ["traurig", "freundlich", "intelligent", "lustig"],
+    "options": ["lustig", "traurig", "ernst", "böse"],
     "answer": "lustig"
   },
   {
-    "question": "Die Katze ist ___.",
-    "options": ["aktiv", "faul", "schnell", "klug"],
-    "answer": "faul"
-  },
-  {
-    "question": "Der Professor ist ___.",
-    "options": ["dumm", "naiv", "klug", "jung"],
-    "answer": "klug"
-  },
-  {
-    "question": "Der Hund ist ___.",
-    "options": ["böse", "gemein", "treu", "ernst"],
-    "answer": "treu"
-  },
-  {
     "question": "Der Held ist ___.",
-    "options": ["ängstlich", "mutig", "langsam", "faul"],
+    "options": ["mutig", "ängstlich", "faul", "schüchtern"],
     "answer": "mutig"
   },
   {
-    "question": "Das Kind ist ___.",
-    "options": ["leise", "offen", "schüchtern", "laut"],
-    "answer": "laut"
-  },
-  {
-    "question": "Der Richter ist ___.",
-    "options": ["unehrlich", "gerecht", "falsch", "laut"],
-    "answer": "gerecht"
-  },
-  {
-    "question": "Die Person ist ___.",
-    "options": ["gemein", "unfreundlich", "nett", "egoistisch"],
-    "answer": "nett"
+    "question": "Der Lügner ist ___.",
+    "options": ["unehrlich", "ehrlich", "nett", "freundlich"],
+    "answer": "unehrlich"
   },
   {
     "question": "Der Freund ist ___.",
-    "options": ["traurig", "langweilig", "ehrlich", "ernst"],
-    "answer": "ehrlich"
+    "options": ["treu", "egoistisch", "gemein", "böse"],
+    "answer": "treu"
+  },
+  {
+    "question": "Das Baby ist ___.",
+    "options": ["laut", "still", "ruhig", "ernst"],
+    "answer": "laut"
+  },
+  {
+    "question": "Der Professor ist ___.",
+    "options": ["klug", "dumm", "faul", "naiv"],
+    "answer": "klug"
+  },
+  {
+    "question": "Der Dieb ist ___.",
+    "options": ["kriminell", "ehrlich", "gerecht", "nett"],
+    "answer": "kriminell"
+  },
+  {
+    "question": "Die Oma ist ___.",
+    "options": ["hilfsbereit", "gemein", "egoistisch", "böse"],
+    "answer": "hilfsbereit"
+  },
+  {
+    "question": "Der Richter ist ___.",
+    "options": ["gerecht", "ungerecht", "gemein", "falsch"],
+    "answer": "gerecht"
+  },
+  {
+    "question": "Der Feigling ist ___.",
+    "options": ["ängstlich", "mutig", "stark", "selbstbewusst"],
+    "answer": "ängstlich"
+  },
+  {
+    "question": "Die Katze ist ___.",
+    "options": ["verspielt", "traurig", "ernst", "böse"],
+    "answer": "verspielt"
+  },
+  {
+    "question": "Der Hund ist ___.",
+    "options": ["treu", "unehrlich", "gemein", "faul"],
+    "answer": "treu"
+  },
+  {
+    "question": "Der Künstler ist ___.",
+    "options": ["kreativ", "langweilig", "uninspiriert", "normal"],
+    "answer": "kreativ"
+  },
+  {
+    "question": "Der Wissenschaftler ist ___.",
+    "options": ["neugierig", "ignorant", "uninteressiert", "dumm"],
+    "answer": "neugierig"
+  },
+  {
+    "question": "Der Sportler ist ___.",
+    "options": ["ehrgeizig", "faul", "passiv", "schwach"],
+    "answer": "ehrgeizig"
+  },
+  {
+    "question": "Der Lehrer ist ___.",
+    "options": ["geduldig", "ungeduldig", "ignorant", "gemein"],
+    "answer": "geduldig"
+  },
+  {
+    "question": "Der Arzt ist ___.",
+    "options": ["fürsorglich", "gefühllos", "unfreundlich", "ignorant"],
+    "answer": "fürsorglich"
+  },
+  {
+    "question": "Der Soldat ist ___.",
+    "options": ["diszipliniert", "chaotisch", "unzuverlässig", "ängstlich"],
+    "answer": "diszipliniert"
+  },
+  {
+    "question": "Der Musiker ist ___.",
+    "options": ["talentiert", "unmusikalisch", "schlecht", "unbegabt"],
+    "answer": "talentiert"
+  },
+  {
+    "question": "Der Tänzer ist ___.",
+    "options": ["anmutig", "ungeschickt", "steif", "plump"],
+    "answer": "anmutig"
+  },
+  {
+    "question": "Der Koch ist ___.",
+    "options": ["leidenschaftlich", "uninteressiert", "lustlos", "schlecht"],
+    "answer": "leidenschaftlich"
+  },
+  {
+    "question": "Der Gärtner ist ___.",
+    "options": ["naturverbunden", "gleichgültig", "zerstörerisch", "unachtsam"],
+    "answer": "naturverbunden"
+  },
+  {
+    "question": "Der Schriftsteller ist ___.",
+    "options": ["fantasievoll", "ideenlos", "langweilig", "uninspiriert"],
+    "answer": "fantasievoll"
+  },
+  {
+    "question": "Der Schauspieler ist ___.",
+    "options": ["ausdrucksstark", "hölzern", "monoton", "langweilig"],
+    "answer": "ausdrucksstark"
+  },
+  {
+    "question": "Der Politiker ist ___.",
+    "options": ["charismatisch", "schüchtern", "unverständlich", "langweilig"],
+    "answer": "charismatisch"
+  },
+  {
+    "question": "Der Unternehmer ist ___.",
+    "options": ["risikofreudig", "vorsichtig", "ängstlich", "passiv"],
+    "answer": "risikofreudig"
+  },
+  {
+    "question": "Der Optimist ist ___.",
+    "options": ["hoffnungsvoll", "pessimistisch", "negativ", "traurig"],
+    "answer": "hoffnungsvoll"
+  },
+  {
+    "question": "Der Pessimist ist ___.",
+    "options": ["negativ", "optimistisch", "positiv", "fröhlich"],
+    "answer": "negativ"
+  },
+  {
+    "question": "Der Realist ist ___.",
+    "options": ["praktisch", "träumerisch", "unrealistisch", "naiv"],
+    "answer": "praktisch"
+  },
+  {
+    "question": "Das Kind ist ___.",
+    "options": ["unschuldig", "böse", "hinterhältig", "erwachsen"],
+    "answer": "unschuldig"
   }
 ]

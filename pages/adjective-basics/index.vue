@@ -39,7 +39,7 @@
         <div class="practice-area">
           <h3 class="practice-area__title">{{ currentTopicData.practice.title }}</h3>
           <p class="practice-area__description">{{ currentTopicData.practice.description }}</p>
-          <NuxtLink :to="`/${categoryId}/practice/${currentTopicData.id}`" class="practice-area__button">
+          <NuxtLink :to="`/${categoryId}/${currentTopicData.id}`" class="practice-area__button">
             {{ currentTopicData.practice.buttonText }}
           </NuxtLink>
         </div>

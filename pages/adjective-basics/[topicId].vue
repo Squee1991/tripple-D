@@ -1,18 +1,16 @@
 <template>
-  <div class="comic-quiz-page">
-    <header v-if="!loading && store.activeQuestion" class="quiz-header-comic">
-      <button class="btn__back" @click="backTo">{{ t('prasens.back') }}</button>
-      <div class="header-item">
-        {{ t('prasens.questionNumber') }} {{ store.currentQuestionIndex + 1 }} / {{ store.currentQuestions.length }}
-      </div>
-      <div class="header-item score">
-        {{ t('prasens.score') }} {{ store.score }}
+  <div class="page">
+    <header v-if="!loading && store.activeQuestion && !store.quizCompleted" class="quiz-header">
+      <button class="btn-back" @click="backTo">{{ t('prasens.back') }}</button>
+      <div class="header-right">
+        <div class="header-item">
+          {{ t('prasens.questionNumber') }} {{ store.currentQuestionIndex + 1 }} / {{ store.currentQuestions.length }}
+        </div>
+        <div class="header-item">{{ t('prasens.score') }} {{ store.score }}</div>
       </div>
     </header>
-    <main class="quiz-main-content">
-      <div v-if="loading" class="fullscreen-state">
-        <p>{{ t('prasens.loading') }}</p>
-      </div>
+    <main class="main">
+      <div v-if="loading" class="loading">{{ t('prasens.loading') }}</div>
       <div v-else-if="store.quizCompleted" class="finish-screen">
         <CelebrationFireworks
             v-model="showCelebration"
@@ -43,44 +41,40 @@
           </div>
         </CelebrationFireworks>
       </div>
-      <div v-else-if="store.activeQuestion" class="quiz-content-comic">
-        <div class="question-card-comic">
-          <p class="question-text-comic">
+      <div v-else-if="store.activeQuestion" class="quiz">
+        <div class="question">
+          <p class="question-text">
             <span>{{ store.activeQuestion.question.split('___')[0] }}</span>
-            <span class="blank-space">{{ store.selectedOption || '( ... )' }}</span>
+            <span class="blank">{{ store.selectedOption || '( ... )' }}</span>
             <span>{{ store.activeQuestion.question.split('___')[1] }}</span>
           </p>
         </div>
-        <div class="options-grid-comic">
+        <div class="options">
           <button
               v-for="option in store.activeQuestion.options"
               :key="option"
               @click="store.chooseOption(option)"
-              class="option-button-comic"
+              class="opt"
               :class="{ selected: store.selectedOption === option }"
               :disabled="store.feedback !== null"
           >
             {{ option }}
           </button>
         </div>
-        <div class="footer-controls-comic">
-          <div v-if="store.feedback" class="feedback-message-comic" :class="store.feedback">
+        <div class="controls">
+          <div v-if="store.feedback" class="fb" :class="store.feedback">
             <span v-if="store.feedback === 'correct'">{{ t('prasens.correct') }}</span>
             <span v-else>{{ t('prasens.wrong') }} {{ store.activeQuestion.answer }}</span>
           </div>
           <button
               v-if="store.feedback === null"
+              class="btn check"
               @click="store.checkAnswer()"
               :disabled="!store.selectedOption"
-              class="action-button check"
           >
             {{ t('prasens.check') }}
           </button>
-          <button
-              v-else
-              @click="store.nextQuestion()"
-              class="action-button next"
-          >
+          <button v-else class="btn next" @click="store.nextQuestion()">
             {{ t('prasens.further') }}
           </button>
         </div>
@@ -88,13 +82,12 @@
     </main>
   </div>
 </template>
-
 <script setup>
-import {ref, onMounted, watch, nextTick} from 'vue';
-import {useQuizStore} from '../../../store/adjectiveStore.js';
+import {ref, onMounted, watch, nextTick} from 'vue'
+import {useQuizStore} from '../../store/adjectiveStore.js'
 import {userlangStore} from '../../store/learningStore.js'
-import {useRoute, useRouter} from 'vue-router';
-import CelebrationFireworks from "~/src/components/CelebrationFireworks.vue";
+import {useRoute, useRouter} from 'vue-router'
+import CelebrationFireworks from '../../src/components/CelebrationFireworks.vue'
 import {useRewardEngine} from '../../src/composables/useRewardEngine.js'
 
 const FINISH_UI = {
@@ -105,14 +98,15 @@ const FINISH_UI = {
   points: 'Артиклюсы',
   level: 'Уровень',
 }
-const router = useRouter();
-const route = useRoute();
-const store = useQuizStore();
+const router = useRouter()
+const route = useRoute()
+const store = useQuizStore()
 const learning = userlangStore()
-const loading = ref(true);
-const {t} = useI18n();
-const category = 'verb';
-const {topicId} = route.params;
+const {t} = useI18n()
+
+const loading = ref(true)
+const category = 'adjective-basics'
+const {topicId} = route.params
 
 const showCelebration = ref(false)
 const celebration = ref(null)
@@ -137,7 +131,7 @@ function fmt(ms) {
 
 async function startQuiz() {
   loading.value = true
-  const fileName = `/verb-types/${category}-${topicId}.json`;
+  const fileName = `/adjective/${category}-${topicId}.json`
   store.setContext({modeId: category, topicId, fileName, contentVersion: 'v1'})
   await store.startNewQuiz(fileName)
   loading.value = false
@@ -145,20 +139,19 @@ async function startQuiz() {
   startedAt.value = Date.now()
 }
 
-const backTo = () => {
-  router.back()
-}
-const {finalize} = useRewardEngine(learning)
+const backTo = () => router.push(`/adjective-basics`)
 
 onMounted(async () => {
   loading.value = true
-  const fileName = `/verb-types/${category}-${topicId}.json`;
-  store.setContext({modeId:  topicId, fileName, contentVersion: 'v1'})
-  await store.restoreOrStart({modeId: topicId, fileName, contentVersion: 'v1'})
+  const fileName = `/adjective/${category}-${topicId}.json`
+  store.setContext({modeId: category, topicId, fileName, contentVersion: 'v1'})
+  await store.restoreOrStart({modeId: category, topicId, fileName, contentVersion: 'v1'})
   await learning.loadFromFirebase?.()
   startedAt.value = Date.now()
   loading.value = false
 })
+
+const {finalize} = useRewardEngine(learning)
 
 watch(() => store.quizCompleted,
     async (done) => {
@@ -180,207 +173,165 @@ watch(() => store.quizCompleted,
       showCelebration.value = true
       celebration.value?.play()
     })
-
 </script>
 
 <style scoped>
-.btn__back {
+.page {
+  min-height: 100vh;
+}
+
+.quiz-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: #ffd166;
+  border-bottom: 3px solid #000;
+  box-shadow: 0 4px 0 #000;
+  font-family: 'Bangers', cursive;
+  letter-spacing: 1.5px;
+}
+
+.btn-back {
   border: 3px solid #1e1e1e;
-  padding: 15px;
+  padding: 12px 16px;
   background: #f1c40f;
   border-radius: 16px;
   cursor: pointer;
-  color: #1e1e1e;
-  font-weight: 600;
-  font-size: 1.2rem;
-  font-family: "Nunito", sans-serif;
-  box-shadow: 4px 4px 0px #1e1e1e;
-  transition: all 0.1s ease-in-out;
+  font-weight: 700;
 }
 
-.btn__back:hover {
-  box-shadow: 2px 2px 0px #1e1e1e;
-}
-
-.comic-quiz-page {
-  background-color: #f0e8d9;
-  font-family: "Nunito", sans-serif;
-  letter-spacing: 1.5px;
-  min-height: 100vh;
-  padding-top: 100px;
-}
-
-.quiz-header-comic {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 1.5rem;
-  background: #ffd166;
-  color: #000;
-  font-size: 1.8rem;
-  border-bottom: 3px solid #000;
-  box-shadow: 0 4px 0 #000;
-}
-
-.quiz-main-content {
+.main {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 1.5rem;
-  box-sizing: border-box;
 }
 
-.fullscreen-state {
-  font-size: 4rem;
-  color: #333;
-  text-align: center;
+.loading {
+  font-size: 2rem;
 }
 
-.quiz-content-comic {
+.quiz {
   width: 100%;
   max-width: 900px;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 20px;
   padding: 15px;
+  font-family: 'Bangers', cursive;
 }
 
-.question-card-comic,
-.option-button-comic,
-.action-button,
-.quiz-summary-comic {
+.question {
+  background: #fff;
   border: 3px solid #000;
   border-radius: 12px;
-  box-shadow: 6px 6px 0px #000;
-  transition: all 0.1s ease-in-out;
-}
-
-.option-button-comic:hover,
-.action-button:hover,
-.quiz-summary-comic:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 4px 4px 0px #000;
-}
-
-.question-card-comic {
-  background: #fff;
-  padding: 2rem;
+  padding: 24px;
+  box-shadow: 6px 6px 0 #000;
   transform: rotate(.7deg);
 }
 
-.question-text-comic {
-  font-size: 1.7rem;
-  text-align: center;
+.question-text {
+  font-size: 1.6rem;
   color: #000;
+  text-align: center;
 }
 
-.blank-space {
+.blank {
   color: #0077b6;
   text-decoration: underline;
 }
 
-.options-grid-comic {
+.options {
   display: flex;
-  justify-content: center;
-  gap: 12px;
-  padding: 15px;
   flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
 }
 
-.option-button-comic {
-  background-color: #fff;
+.opt {
+  background: #fff;
   color: #000;
-  padding: 1rem;
-  font-size: 1.8rem;
+  padding: 12px 16px;
+  border: 3px solid #000;
+  border-radius: 12px;
+  box-shadow: 6px 6px 0 #000;
+  font-size: 1.4rem;
   cursor: pointer;
-  transform: rotate(-1.5deg);
+  transform: rotate(-1.2deg);
 }
 
-.option-button-comic:nth-child(2n) {
-  transform: rotate(1.5deg);
+.opt:nth-child(2n) {
+  transform: rotate(1.2deg);
 }
 
-.option-button-comic.selected {
-  background-color: #06d6a0;
-  color: #000;
+.opt.selected {
+  background: #06d6a0;
 }
 
-.option-button-comic:disabled {
-  opacity: 0.7;
-  background-color: #e9ecef;
-}
-
-.footer-controls-comic {
-  min-height: 170px;
+.controls {
+  min-height: 160px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  gap: 1rem;
+  gap: 12px;
 }
 
-.feedback-message-comic {
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  border: 3px solid black;
-  margin-bottom: 10px;
+.fb {
+  font-size: 1.6rem;
+  padding: 8px 12px;
+  border: 3px solid #000;
+  border-radius: 10px;
 }
 
-.feedback-message-comic.correct {
-  background-color: #06d6a0;
+.fb.correct {
+  background: #06d6a0;
   transform: rotate(2deg);
 }
 
-.feedback-message-comic.incorrect {
-  background-color: #ef476f;
+.fb.incorrect {
+  background: #ef476f;
   transform: rotate(-2deg);
 }
 
-.action-button {
-  width: 100%;
-  max-width: 450px;
-  padding: 1rem;
-  font-size: 2rem;
+.btn {
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 3px solid #000;
+  box-shadow: 6px 6px 0 #000;
   cursor: pointer;
+  font-weight: 800;
 }
 
-.action-button.check {
-  background-color: #0077b6;
-  color: white;
+.btn.check {
+  background: #0077b6;
+  color: #fff;
 }
 
-.action-button.check:disabled {
-  background-color: #adb5bd;
-  color: #495057;
-  box-shadow: none;
-  transform: none;
+.btn.next {
+  background: #60a5fa;
+  color: #000;
 }
 
-.action-button.next {
-  background-color: #60a5fa;
-  color: black;
+.finish-screen {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  padding: 0 10px;
 }
 
-.quiz-summary-comic {
-  background: #fff;
-  padding: 3rem;
+
+.finish-card {
+  width: 100%;
+  max-width: 420px;
   text-align: center;
-}
-
-.quiz-summary-comic h2 {
-  font-size: 4rem;
-}
-
-.quiz-summary-comic p {
-  font-size: 2rem;
-  margin: 1rem 0 2rem;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  color: #fff;
 }
 
 .actions {
@@ -399,42 +350,22 @@ watch(() => store.quizCompleted,
   color: #e5edff;
 }
 
-.btn {
-  padding: 14px 16px;
-  border-radius: 12px;
-  border: 3px solid #000;
-  box-shadow: 6px 6px 0 #000;
-  cursor: pointer;
-  font-weight: 800;
+.btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 0 #0a0f16;
 }
+
 @media (max-width: 767px) {
-  .quiz-header-comic {
-    gap: 10px;
+  .quiz-header {
     padding: 10px;
   }
-  .header-item {
-    font-size: 18px;
-  }
-  .btn__back {
-    padding: 10px;
-    font-size: 1rem;
-  }
-  .question-text-comic {
+
+  .question-text {
     font-size: 1.3rem;
   }
-  .option-button-comic {
-    font-size: 1.3rem;
-  }
-  .action-button {
-    font-size: 1.4rem;
-    font-family: "Nunito", sans-serif;
-    font-weight: 600;
-  }
-  .quiz-main-content {
-    padding: 5px;
-  }
-  .question-card-comic {
-    padding: 1rem;
+
+  .opt {
+    font-size: 1.2rem;
   }
 }
 </style>

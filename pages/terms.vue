@@ -1,32 +1,39 @@
 <template>
-  <div class="terms">
-    <h1>Условия предоставления услуг</h1>
-    <p class="last-updated">
-      Обратите внимание, что настоящие Условия предоставления услуг последний раз
-      пересматривались {{ lastUpdated }}.
-    </p>
-
-    <p class="legal-note">
-      ОБРАТИТЕ ВНИМАНИЕ, ЧТО НЕКОТОРЫЕ РАЗДЕЛЫ НАСТОЯЩИХ УСЛОВИЙ
-      СОДЕРЖАТ ВАЖНЫЕ ПОЛОЖЕНИЯ ОБ ОГРАНИЧЕНИИ ОТВЕТСТВЕННОСТИ,
-      ПРАВАХ НА КОНТЕНТ И ПОРЯДКЕ РАЗРЕШЕНИЯ СПОРОВ. ПРОЧИТАЙТЕ ИХ ВНИМАТЕЛЬНО.
-    </p>
-
-    <section v-for="(s, i) in sections" :key="i" class="section">
-      <h2>{{ s.heading }}</h2>
-      <p v-for="(p, j) in s.paragraphs" :key="j">{{ p }}</p>
-    </section>
+  <div>
+    <div class="btn__back-wrapper">
+      <button type="button" @click="path" class="btn__back">На главную</button>
+    </div>
+    <div class="terms">
+      <h1>Условия предоставления услуг</h1>
+      <p class="last-updated">
+        Обратите внимание, что настоящие Условия предоставления услуг последний раз
+        пересматривались {{ lastUpdated }}.
+      </p>
+      <p class="legal-note">
+        ОБРАТИТЕ ВНИМАНИЕ, ЧТО НЕКОТОРЫЕ РАЗДЕЛЫ НАСТОЯЩИХ УСЛОВИЙ
+        СОДЕРЖАТ ВАЖНЫЕ ПОЛОЖЕНИЯ ОБ ОГРАНИЧЕНИИ ОТВЕТСТВЕННОСТИ,
+        ПРАВАХ НА КОНТЕНТ И ПОРЯДКЕ РАЗРЕШЕНИЯ СПОРОВ. ПРОЧИТАЙТЕ ИХ ВНИМАТЕЛЬНО.
+      </p>
+      <section v-for="(s, i) in sections" :key="i" class="section">
+        <h2>{{ s.heading }}</h2>
+        <p v-for="(p, j) in s.paragraphs" :key="j">{{ p }}</p>
+      </section>
+    </div>
   </div>
 </template>
 
 <script setup>
 import { ref } from "vue"
-
+import { useRouter } from "vue-router"
 const PROJECT = "Lexingo"
 const EMAIL = "lexingo@gmail.com"
 const COUNTRY = "Польша"
-
+const router = useRouter()
 const lastUpdated = ref("05 сентября 2025 года")
+
+const path = () => {
+  router.push('/')
+}
 
 const sections = ref([
   {
@@ -153,16 +160,49 @@ const sections = ref([
   }
 ])
 
-definePageMeta({
-  layout: "footerlayout"
-})
 </script>
 
 <style scoped>
+
+.btn__back-wrapper{
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 10px;
+  border-bottom: 2px solid black;
+  border-radius: 15px;
+  background: var(--bg);
+}
+
+.btn__back {
+  width: 100%;
+  max-width: 320px;
+  padding: 10px;
+  border-radius: 12px;
+  border: 2px solid black;
+  box-shadow: 3px 3px 0 black;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  background: #f1c40f;
+}
+
+@media (min-width: 1024px) {
+  .btn__back:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 black;
+  }
+}
+
 .terms {
   max-width: 940px;
   margin: 0 auto;
-  padding: 32px 20px 64px;
+  padding: 32px 20px 90px;
   line-height: 1.75;
   font-family: "Nunito", sans-serif;
   color: var(--titleColor);

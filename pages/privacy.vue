@@ -1,26 +1,34 @@
 <template>
-  <div class="privacy">
-    <h1>Политика конфиденциальности</h1>
-
-    <section v-for="(s, i) in sections" :key="i" class="section">
-      <h2>{{ s.heading }}</h2>
-      <p v-for="(p, j) in s.paragraphs" :key="j">{{ p }}</p>
-    </section>
-    <p class="last-updated">
-      Последнее обновление: {{ lastUpdated }}
-    </p>
+  <div>
+    <div class="btn__back-wrapper">
+      <button type="button" @click="path" class="btn__back">На главную</button>
+    </div>
+    <div class="privacy">
+      <h1>Политика конфиденциальности</h1>
+      <section v-for="(s, i) in sections" :key="i" class="section">
+        <h2>{{ s.heading }}</h2>
+        <p v-for="(p, j) in s.paragraphs" :key="j">{{ p }}</p>
+      </section>
+      <p class="last-updated">
+        Последнее обновление: {{ lastUpdated }}
+      </p>
+    </div>
   </div>
 </template>
 
 <script setup>
 import { ref } from "vue"
-
+import { useRouter } from "vue-router"
+const router = useRouter()
 const PROJECT = "Lexingo"
 const EMAIL = "lexingo@gmail.com"
 const COUNTRY = "Польша"
 
-const lastUpdated = ref("05 сентября 2025 года")
 
+const path = () => {
+  router.push('/')
+}
+const lastUpdated = ref("05 сентября 2025 года")
 const sections = ref([
   {
     heading: "1. Введение",
@@ -35,7 +43,7 @@ const sections = ref([
       "— Данные аккаунта: имя, адрес электронной почты, пароль.",
       "— Данные использования: прогресс обучения, результаты тестов, внутриигровая активность.",
       "— Технические данные: IP-адрес, тип устройства, браузер, файлы cookie.",
-      "— Данные оплаты: информация о транзакциях при оформлении подписки (обрабатывается платёжными системами, мы не храним полные реквизиты карт)."
+      "— Данные оплаты: информация о транзакциях при оформлении подписки (обрабатывается платёжными системами, мы не храним реквизиты карт)."
     ]
   },
   {
@@ -100,7 +108,7 @@ const sections = ref([
     heading: "10. Изменения в Политике",
     paragraphs: [
       "Мы можем периодически обновлять Политику конфиденциальности.",
-      "Актуальная версия всегда доступна на сайте; дата последнего обновления указывается вверху документа.",
+      "Актуальная версия всегда доступна на сайте; дата последнего обновления указывается внизу документа.",
       "Продолжая использовать Сервис после изменений, вы соглашаетесь с обновлённой Политикой."
     ]
   },
@@ -112,14 +120,51 @@ const sections = ref([
   }
 ])
 
-definePageMeta({
-  layout: "footerlayout"
-})
 </script>
 
 <style scoped>
+
+* {
+  font-family: "Nunito", sans-serif ;
+}
+
+.btn__back-wrapper{
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 10px;
+  border-bottom: 2px solid black;
+  border-radius: 15px;
+  background: var(--bg);
+}
+
+.btn__back {
+  width: 100%;
+  max-width: 320px;
+  padding: 10px;
+  border-radius: 12px;
+  border: 2px solid black;
+  box-shadow: 3px 3px 0 black;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  background: #f1c40f;
+}
+
+@media (min-width: 1024px) {
+  .btn__back:hover {
+     transform: translate(2px, 2px);
+     box-shadow: 1px 1px 0 black;
+  }
+}
+
 .privacy {
-  max-width: 940px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 32px 20px 64px;
   line-height: 1.75;

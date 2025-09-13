@@ -1,46 +1,44 @@
 <template>
   <div class="modal-overlay" @click.self="closeModal">
     <div class="modal-content">
-      <h2 class="modal-title">🎙️ Важное уведомление</h2>
+      <h2 class="modal-title">🎙️ {{ t('consentModal.title')}}</h2>
       <p class="modal-text">
-        Для выполнения заданий в модуле <strong>Sprechen</strong>, ваше произношение будет <strong>записано и сохранено</strong> в вашем профиле.
+        {{ t('consentModal.textPartOne')}} <strong>Sprechen</strong>, {{ t('consentModal.textPartTwo')}} <strong>{{ t('consentModal.textPartThree')}}</strong>
       </p>
       <p class="modal-text">
-        Эти аудиозаписи используются исключительно для проверки ответов. Мы <strong>не передаем</strong> ваши данные третьим лицам. После выполнения задания у вас будет возможность прослушать свою запись и, при желании, <strong>поделиться ей</strong>.
+        {{ t('consentModal.textTwoPartOne')}} <strong>{{ t('consentModal.textTwoPartTwo')}}</strong> {{ t('consentModal.textTwoPartThree')}} <strong>{{ t('consentModal.textTwoPartFour')}}</strong>.
       </p>
       <label class="custom-checkbox">
         <input type="checkbox" v-model="isAgreed">
         <span class="checkmark"></span>
-        <span>Я прочитал(а) и согласен(на) с условиями</span>
+        <span>{{ t('consentModal.agree')}}</span>
       </label>
-
       <button
           class="modal-button"
           :disabled="!isAgreed"
           @click="giveConsent"
       >
-        Принять
+        {{ t('consentModal.accept')}}
       </button>
     </div>
   </div>
 </template>
 
 <script setup>
+
 import { ref } from 'vue'
-
 const emit = defineEmits(['consent-given', 'close'])
-
 const isAgreed = ref(false)
-
+const { t } = useI18n()
 const giveConsent = () => {
   if (isAgreed.value) {
     emit('consent-given')
   }
 }
-
 const closeModal = () => {
   emit('close')
 }
+
 </script>
 
 <style scoped>

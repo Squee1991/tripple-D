@@ -1,44 +1,61 @@
 <template>
-  <div class="exam">
-    <transition name="fade">
-      <div v-if="showHint" class="exam-hint">
-        ℹ️ Мы используем автоматическую систему распознавания речи. Говорите чётко рядом с микрофоном.
-      </div>
-    </transition>
-    <VConsentModal
-        v-if="showConsentModal"
-        @consent-given="handleConsentGiven"
-        @close="showConsentModal = false"
-    />
-    <button class="back__btn" @click="routeToMain">На главную</button>
-    <p class="exam__subtitle">
-      Выбери уровень и начни практику всех модулей:
-      <span class="exam__highlight">Lesen</span>,
-      <span class="exam__highlight">Hören</span>,
-      <span class="exam__highlight">Schreiben</span>,
-      <span class="exam__highlight">Sprechen</span>
-    </p>
-    <div class="exam__levels">
-      <div
-          v-for="level in examLevels"
-          :key="level.id"
-          :class="['exam-card', `exam-card--${level.id}`]"
-      >
-        <h2 class="exam-card__title">{{ level.icon }} {{ level.title }}</h2>
-        <ul class="exam-card__list">
-          <li
-              v-for="item in level.modules"
-              :key="item"
-              class="exam-card__item"
-          >
-            {{ item.text }}
-          </li>
-        </ul>
+  <div>
+    <div v-if="!authStore.premium" class="exam">
+      <transition name="fade">
+        <div v-if="showHint" class="exam-hint">
+          ℹ️ Мы используем автоматическую систему распознавания речи. Говорите чётко рядом с микрофоном.
+        </div>
+      </transition>
+      <VConsentModal
+          v-if="showConsentModal"
+          @consent-given="handleConsentGiven"
+          @close="showConsentModal = false"
+      />
+      <button type="button" class="back__btn" @click="routeToMain">На главную</button>
+      <p class="exam__subtitle">
+        Выбери уровень и начни практику всех модулей:
+        <span class="exam__highlight">Lesen</span>,
+        <span class="exam__highlight">Hören</span>,
+        <span class="exam__highlight">Schreiben</span>,
+        <span class="exam__highlight">Sprechen</span>
+      </p>
+      <div class="exam__levels">
         <div
-            class="exam-card__button"
-            @click="attemptToStartExam(level.id)"
+            v-for="level in examLevels"
+            :key="level.id"
+            :class="['exam-card', `exam-card--${level.id}`]"
         >
-          Перейти к {{ level.id.toUpperCase() }}
+          <h2 class="exam-card__title">{{ level.icon }} {{ level.title }}</h2>
+          <ul class="exam-card__list">
+            <li
+                v-for="item in level.modules"
+                :key="item.text"
+                class="exam-card__item"
+            >
+              {{ item.text }}
+            </li>
+          </ul>
+          <button
+              class="exam-card__button"
+              @click="attemptToStartExam(level.id)"
+          >
+            Перейти к {{ level.id.toUpperCase() }}
+          </button>
+        </div>
+      </div>
+    </div>
+    <div v-else class="exam__not-allowed">
+      <div class="exam__not-allowed-wrapper">
+        <h2 class="exam__not-allowed-title"> {{ notAllowed.title }}</h2>
+        <div class="buttons__wrapper">
+          <button
+              type="button"
+              @click="notAllowedPathBtn(btn.path)"
+              v-for="btn in notAllowed.btns"
+              :key="btn.id"
+              class="button__not-allowed">
+            {{ btn.value }}
+          </button>
         </div>
       </div>
     </div>
@@ -50,12 +67,27 @@ import {onMounted, ref} from 'vue'
 import {userExamStore} from '~/store/examStore.js'
 import {useRouter} from 'vue-router'
 import VConsentModal from "~/src/components/V-consentModal.vue";
+import {userAuthStore} from "../store/authStore.js";
 
+const authStore = userAuthStore()
 const showConsentModal = ref(false)
 const consentGiven = ref(false)
 const router = useRouter()
 const examStore = userExamStore()
 const showHint = ref(false)
+
+const notAllowed = ref({
+  title: 'Тесты доступны только аккаунтам с Подпиской',
+  btns: [
+    {id: 'back', path: '/', value: 'На главную'},
+    {id: 'premium', path: '/pay', value: 'Приобрести'},
+  ]
+})
+
+const notAllowedPathBtn = (to) => {
+  router.push(to)
+}
+
 const examLevels = [
   {
     id: 'a1',
@@ -123,7 +155,7 @@ const handleConsentGiven = () => {
     showHint.value = true
     setTimeout(() => {
       showHint.value = false
-    }, 8000)
+    }, 10000)
   }
 }
 
@@ -135,14 +167,55 @@ onMounted(() => {
     showConsentModal.value = true
   }
 })
+
 </script>
 
 <style scoped>
 .exam {
-  padding: 2rem;
+  padding: 1rem;
   background-color: #fdf6e3;
   font-family: "Nunito", sans-serif;
   min-height: 100vh;
+  text-align: center;
+}
+
+
+.button__not-allowed {
+  padding: 10px 15px;
+  margin-top: 15px;
+  border-radius: 10px;
+  width: 100%;
+  font-size: 1rem;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  box-shadow: 3px 3px 0 black;
+}
+
+.buttons__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.exam__not-allowed-wrapper {
+  max-width: 380px;
+  width: 100%;
+  padding: 20px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  border: 2px solid black;
+  border-radius: 20px;
+  box-shadow: 4px 4px 0 black;
+}
+
+.exam__not-allowed-title {
   text-align: center;
 }
 
@@ -229,7 +302,7 @@ onMounted(() => {
 
 .exam-card__button {
   background-color: #ffe58f;
-  border: none;
+  border: 2px solid transparent;
   padding: 0.6rem 1.2rem;
   border-radius: 8px;
   font-weight: bold;
@@ -266,7 +339,7 @@ onMounted(() => {
 
 @media (max-width: 767px) {
   .exam-card {
-    width: 80%
+    width: 90%
   }
 }
 
@@ -280,7 +353,7 @@ onMounted(() => {
   border: 2px solid #fcd34d;
   border-radius: 8px;
   padding: 0.8rem 1.2rem;
-  box-shadow: 4px 4px 0 rgba(0,0,0,0.25);
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.25);
   font-size: 0.95rem;
   font-weight: 600;
   z-index: 999;
@@ -290,6 +363,7 @@ onMounted(() => {
 .fade-enter-active, .fade-leave-active {
   transition: opacity 0.6s;
 }
+
 .fade-enter-from, .fade-leave-to {
   opacity: 0;
 }

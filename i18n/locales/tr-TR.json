@@ -15,6 +15,62 @@
   "modalVerbsTipsTitle": {
     "tipsTitle": "Faydalı İpuçları:"
   },
+  "friendExam": {
+    "title": "Diğer katılımcılardan genel testler",
+    "btnBack": "Ana sayfaya dön",
+    "selectOne": "Hepsi",
+    "selectTwo": "Kabul edilmemiş",
+    "selectThree": "Yüksek puan",
+    "selectFour": "Düşük puan",
+    "loading": "Yükleniyor...",
+    "inbox": "Gelen davetler",
+    "person": "sizi sınava davet etti",
+    "level": "Seviye:",
+    "accept": "Kabul et",
+    "reject": "Reddet",
+    "empty": "Gelen davet yok",
+    "available": "Kabul edilenler",
+    "notAccepted": "Henüz kabul edilmiş sınavınız yok",
+    "examFrom": "Sınav gönderen:",
+    "gpa": "Ortalama puan:",
+    "show": "Görüntüle",
+    "notFound": "Hiçbir şey bulunamadı",
+    "placeholder": "İsme göre ara"
+  },
+  "shareModal": {
+    "close": "Kapat",
+    "shareWithFriend": "Bir arkadaşınla paylaş",
+    "noFriends": "Henüz paylaşabileceğiniz bir arkadaşınız yok.",
+    "friendsList": "Arkadaş listesi",
+    "friendNotFound": "Arkadaş bulunamadı.",
+    "send": "Gönder",
+    "placeholder": "İsim veya e-posta ile ara..."
+  },
+  "examResult": {
+    "title": "Sınav Arşivi",
+    "showResultButton": "Sonucu Görüntüle",
+    "loading": "Yükleniyor…",
+    "empty": "Arşiv boş",
+    "start": "Başlangıç:",
+    "middle": "Ortalama puan:",
+    "share": "Paylaş",
+    "delete": "Sil",
+    "sent": "Test gönderildi",
+    "sended": "Bu testi zaten gönderdiniz",
+    "error": "Sınav paylaşılamadı"
+  },
+  "consentModal": {
+    "title": "Önemli Bilgilendirme",
+    "textPartOne": "Görevleri",
+    "textPartTwo": "modülünde tamamlamak için telaffuzunuz",
+    "textPartThree": "kaydedilecek ve saklanacaktır",
+    "textTwoPartOne": "Bu ses kayıtları yalnızca cevapların kontrolü için kullanılmaktadır. Biz",
+    "textTwoPartTwo": "üçüncü taraflarla",
+    "textTwoPartThree": "verilerinizi paylaşmıyoruz. Görevi tamamladıktan sonra kaydınızı dinleme ve isterseniz",
+    "textTwoPartFour": "paylaşma",
+    "agree": "Şartları okudum ve kabul ediyorum",
+    "accept": "Kabul Et"
+  },
   "adjectiveTheory": {
     "title": "Almanca'da Sıfatlar: basit ve anlaşılır",
     "subTitle": "Nedir, nerede durur, nasıl karşılaştırılır ve hangi ekler alınır. Sonda — mini-quiz.",
@@ -249,7 +305,8 @@
   "cabinetSidebar": {
     "valueOne": "Hesap Ayarları",
     "valueTwo": "Artikel İlerlemesi",
-    "valueThree": "Ödüller"
+    "valueThree": "Ödüller",
+    "valueFour": "Sınav Arşivi"
   },
   "cabinetAccordion": {
     "personalData": "Kişisel Veriler",
@@ -268,6 +325,8 @@
     "ach": "Başarı Bildirimleri"
   },
   "cabinet": {
+    "important": "ÖNEMLİ!!!",
+    "importantText": "Hesabınızı silerken abonelik iptal edilmez. Lütfen silmeden önce aboneliğinizi iptal edin.",
     "cancelPremium": "Abonelik iptal edilsin mi?",
     "cancelPremiumText": "Aboneliğinizi iptal ederseniz, premium erişiminiz ödenmiş dönemin sonuna kadar devam edecektir.",
     "accept": "Evet, iptal et",
@@ -1270,18 +1329,19 @@
   },
   "sub": {
     "sinonim": "Kelime Bilgisi",
-    "articles": "Tanımlıklar",
+    "articles": "Artikeller",
     "verbs": "Fiiller",
     "adjectives": "Sıfatlar",
-    "marathon": "Tanımlık Maratonu",
-    "pvp": "Kart Savaşı",
+    "marathon": "Artikel Maratonu",
+    "pvp": "Kart Dövüşü",
     "prepositions": "Edatlar",
-    "guess": "Kelime Tahmini",
-    "card": "Kart Oluştur",
+    "guess": "Kelimeyi Tahmin Et",
+    "card": "Kartlar Oluştur",
     "themen": "Tematik Seviyeler",
     "idioms": "Deyimler",
     "wordDuel": "İfade Düellosu",
-    "quests": "Görev Günlüğü"
+    "quests": "Görev Günlüğü",
+    "languagesLands": "Dil Diyarları"
   },
   "underSub": {
     "prev": "Giriş",
@@ -1351,6 +1411,26 @@
     "explain": "Doğru yardımcı fiili belirleyin.",
     "chooseTwo": "Partizip II oluşturucu",
     "explainTwo": "Doğru Partizip II'yi oluşturun."
+  },
+  "futurOne": {
+    "tipOne": "1. Yardımcı fiil werden şu şekilde çekimlenir: ich werde, du wirst, er/sie/es wird vb.",
+    "tipTwo": "2. Ana fiil (mastar) cümlenin sonuna gelir",
+    "tipThree": "3. Gelecekteki eylemleri ifade etmek için kullanılır",
+    "tipFour": "4. Präsens yerine, niyeti vurgulamak veya tahmin yapmak için kullanılır",
+    "tipFive": "5. Örnek: Ich werde lernen. / Er wird bald kommen.",
+    "tipSix": "6. Soru cümlesi: Wirst du morgen kommen?",
+    "howToDoTitle": "Nasıl oluşturulur?",
+    "howToDoExample": "werden (Präsens) + mastar cümlenin sonunda",
+    "howToUseTitle": "Ne zaman kullanılır?",
+    "howToUseFirstExample": "Gelecek için planlanan eylemler",
+    "howToUseSecondExample": "Şimdiki zaman veya gelecek hakkında varsayımlar",
+    "example": "Örnekler",
+    "translateOne": "Yarın ders çalışacağım.",
+    "translateTwo": "O yakında gelecek.",
+    "translateThree": "Biz uyumayacağız.",
+    "tableTitle": "werden’in çekimi",
+    "practiceDesc": "Doğru werden formunu seç ve Futur I cümlesi kur.",
+    "begin": "Başla"
   },
   "präteritum": {
     "howToDo": "Ünlü değişikliği ile güçlü fiil kökü / zayıf kök + “-te”",

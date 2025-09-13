@@ -203,8 +203,8 @@ const menuItems = computed(() => [
                 {
                   id: 'prepositions', valueKey: 'sub.prepositions',
                   subChildren: [
-                    {id: 'prepositions-theory', url: '/prepositions-theory', valueKey: 'Правила'},
-                    {id: 'prepositions-practice', url: '/prepositions', valueKey: 'Практика предлогов'},
+                    {id: 'prepositions-theory', url: '/prepositions-theory', valueKey: 'underSub.rules'},
+                    {id: 'prepositions-practice', url: '/prepositions', valueKey: 'underSub.prepositions'},
                   ]
                 },
                 {
@@ -217,8 +217,7 @@ const menuItems = computed(() => [
                     {id: 'comparison', url: '/adjective-comparison', valueKey: 'underSub.comparison'},
                   ]
                 },
-                {id: 'lands', url: 'lands', valueKey: 'Языковые земли'},
-
+                // {id: 'lands', url: 'lands', valueKey: 'sub.languagesLands'},
                 {id: 'themen', url: '/thematic-learning', valueKey: 'sub.themen'},
                 {id: 'cards', url: '/createCards', valueKey: 'sub.card'},
                 {id: 'idioms', url: '/idioms', valueKey: 'sub.idioms'}
@@ -238,18 +237,16 @@ const menuItems = computed(() => [
           ] :
           [
             {
-              id: 'about', valueKey: 'О приложении', url: '/info-about',
+              id: 'about', valueKey: 'nav.about', url: '/info-about',
             },
             {
-              id: 'contact', valueKey: 'Контакт', url: '/support-request',
+              id: 'contact', valueKey: 'nav.contact', url: '/support-request',
             },
             {
-              id: 'faq', valueKey: 'Вопрос/ответ', url: '/faq',
+              id: 'faq', valueKey: 'nav.quest', url: '/faq',
             },
-
           ]
   ),
-
   ...(userAuth.uid
       ? [{id: 'test', url: '/exams', valueKey: 'nav.tests'}]
       : []),

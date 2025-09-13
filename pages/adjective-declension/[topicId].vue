@@ -15,13 +15,35 @@
       <div v-if="loading" class="fullscreen-state">
         <p>{{ t('prasens.loading') }}</p>
       </div>
-      <div v-else-if="store.quizCompleted" class="fullscreen-state">
-        <div class="quiz-summary-comic">
-          <h2>{{ t('prasens.end') }} </h2>
-          <p>{{ t('prasens.result') }} {{ store.score }} / {{ store.currentQuestions.length }}</p>
-          <button @click="startQuiz" class="action-button">{{ t('prasens.again') }}</button>
-          <button @click="backTo" class="action-button">{{ t('prasens.back') }}</button>
-        </div>
+      <div v-else-if="store.quizCompleted" class="finish-screen">
+        <CelebrationFireworks
+            v-model="showCelebration"
+            ref="celebration"
+            :score="store.score"
+            :total="store.currentQuestions.length"
+            :elapsed="elapsed"
+            :pointsStart="prevPoints"
+            :expStart="prevExp"
+            :levelStart="prevLevel"
+            :award="failMode ? 0 : AWARD"
+            :levelUpXp="LEVEL_UP_XP"
+            :showStats="!failMode"
+            :pieces="460"
+            :sparkCount="32"
+            :burstsCount="28"
+            :area-x="[10, 90]"
+            :area-y="[15, 75]"
+            :title="failMode ? FINISH_UI.tryAgainTitle : FINISH_UI.winTitle"
+            :resultLabel="FINISH_UI.result"
+            :timeLabel="FINISH_UI.time"
+            :pointsLabel="FINISH_UI.points"
+            :levelLabel="FINISH_UI.level"
+        >
+          <div class="actions">
+            <button class="btn primary" @click="startQuiz">{{ t('prasens.again') }}</button>
+            <button class="btn ghost" @click="backTo">{{ t('prasens.back') }}</button>
+          </div>
+        </CelebrationFireworks>
       </div>
       <div v-else-if="store.activeQuestion" class="quiz-content-comic">
         <div class="question-card-comic">
@@ -70,56 +92,98 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-import { useQuizStore } from '../../../store/adjectiveStore.js' // убедись, что этот стор = тот самый с сохранением
+import {ref, onMounted, watch, nextTick} from 'vue'
+import { useQuizStore } from '../../../store/adjectiveStore.js'
 import { useRoute, useRouter } from 'vue-router'
+import CelebrationFireworks from '../../src/components/CelebrationFireworks.vue'
+import {useRewardEngine} from '../../src/composables/useRewardEngine.js'
+import {userlangStore} from '../../store/learningStore.js'
+
+const FINISH_UI = {
+  winTitle: 'Поздравляем!',
+  tryAgainTitle: 'Ещё чуть-чуть — и получится!',
+  result: 'Результат',
+  time: 'Время',
+  points: 'Артиклюсы',
+  level: 'Уровень',
+}
 
 const router = useRouter()
 const route = useRoute()
 const store = useQuizStore()
 const loading = ref(true)
+const learning = userlangStore()
 const { t } = useI18n()
 
-const category = 'adjective-basics'
+const category = 'adjective-declension'
 const { topicId } = route.params
+const showCelebration = ref(false)
+const celebration = ref(null)
+const startedAt = ref(Date.now())
+const elapsed = ref('0:00')
 
-// Перезапуск попытки (кнопка "Сыграть снова")
+const AWARD = 5
+const LEVEL_UP_XP = 100
+const PASS_RATIO = 0.8
+
+const prevPoints = ref(0)
+const prevExp = ref(0)
+const prevLevel = ref(1)
+const failMode = ref(false)
+
+function fmt(ms) {
+  const s = Math.floor(ms / 1000)
+  const m = Math.floor(s / 60)
+  const sec = s % 60
+  return `${m}:${sec.toString().padStart(2, '0')}`
+}
+
 async function startQuiz() {
   loading.value = true
   const fileName = `/adjective/${category}-${topicId}.json`
-  // ВАЖНО: сперва контекст
-  store.setContext({
-    modeId: category,
-    topicId,
-    fileName,
-    contentVersion: 'v1',
-  })
+  store.setContext({modeId: category, topicId, fileName, contentVersion: 'v1'})
   await store.startNewQuiz(fileName)
   loading.value = false
+  showCelebration.value = false
+  startedAt.value = Date.now()
 }
 
 const backTo = () => {
-  router.push(`/adjective-basics`)
+  router.push('/adjective-declension')
 }
 
-// При входе: восстановить незавершённую сессию или начать новую
 onMounted(async () => {
   loading.value = true
   const fileName = `/adjective/${category}-${topicId}.json`
-  store.setContext({
-    modeId: category,
-    topicId,
-    fileName,
-    contentVersion: 'v1',
-  })
-  await store.restoreOrStart({
-    modeId: category,
-    topicId,
-    fileName,
-    contentVersion: 'v1',
-  })
+  store.setContext({modeId: category, topicId, fileName, contentVersion: 'v1'})
+  await store.restoreOrStart({modeId: category, topicId, fileName, contentVersion: 'v1'})
+  await learning.loadFromFirebase?.()
+  startedAt.value = Date.now()
   loading.value = false
 })
+
+const {finalize} = useRewardEngine(learning)
+
+watch(() => store.quizCompleted,
+    async (done) => {
+      if (!done) return
+      elapsed.value = fmt(Date.now() - startedAt.value)
+      const res = await finalize({
+        score: store.score,
+        total: store.currentQuestions.length || 10,
+        passRatio: PASS_RATIO,
+        baseAward: AWARD,
+        levelUpXp: LEVEL_UP_XP,
+        save: true,
+      })
+      prevPoints.value = res.pointsStart
+      prevExp.value = res.expStart
+      prevLevel.value = res.levelStart
+      failMode.value = !res.ok
+      await nextTick()
+      showCelebration.value = true
+      celebration.value?.play()
+    })
 </script>
 
 
@@ -215,7 +279,7 @@ onMounted(async () => {
 }
 
 .question-text-comic {
-  font-size: 1.7rem;
+  font-size: 2.5rem;
   text-align: center;
   color: #000;
 }
@@ -323,39 +387,58 @@ onMounted(async () => {
   margin: 1rem 0 2rem;
 }
 
+.btn {
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 3px solid #000;
+  box-shadow: 6px 6px 0 #000;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn.primary {
+  background: #60a5fa;
+  color: #0b1220;
+}
+
+.btn.ghost {
+  background: #1c2636;
+  color: #e5edff;
+}
+
+
 @media (max-width: 767px) {
   .quiz-header-comic {
     gap: 10px;
     padding: 10px;
   }
-
   .header-item {
     font-size: 18px;
   }
-
   .btn__back {
     padding: 10px;
     font-size: 1rem;
   }
-
   .question-text-comic {
     font-size: 1.3rem;
   }
-
   .option-button-comic {
     font-size: 1.3rem;
   }
-
   .action-button {
     font-size: 1.4rem;
     font-family: "Nunito", sans-serif;
     font-weight: 600;
   }
-
   .quiz-main-content {
     padding: 5px;
   }
-
   .question-card-comic {
     padding: 1rem;
   }

@@ -3,21 +3,21 @@
     <div class="modal-content">
       <div v-if="message" class="result">
         <div class="result__text">{{ message }}</div>
-        <button class="close-btn share__btns" @click="$emit('close')">Закрыть</button>
+        <button class="close-btn share__btns" @click="$emit('close')">{{ t('shareModal.close')}}</button>
       </div>
       <template v-else>
-        <h2 class="modal-title">Поделиться с другом</h2>
+        <h2 class="modal-title">{{ t('shareModal.shareWithFriend')}}</h2>
         <input
             type="text"
             v-model="searchTerm"
-            placeholder="Поиск по имени или email..."
+            :placeholder="t('shareModal.placeholder')"
             class="search-input"
         >
         <div v-if="friends.length === 0" class="no-friends">
-          У вас пока нет друзей, чтобы поделиться.
+          {{ t('shareModal.noFriends')}}
         </div>
         <ul v-else-if="filteredFriends.length > 0" class="friends-list">
-          <div>Список друзей</div>
+          <div>{{ t('shareModal.friendsList')}}</div>
           <li v-for="friend in filteredFriends" :key="friend.uid" class="friend-item">
             <div class="friend-info">
               <img :src="friend.avatar || '/images/default-avatar.png'" alt="avatar" class="avatar">
@@ -28,12 +28,12 @@
                 class="share-btn share__btns"
                 :disabled="isSending"
             >
-              {{ isSending ? '...' : 'Отправить' }}
+              {{ isSending ? '...' : t('shareModal.send') }}
             </button>
           </li>
         </ul>
-        <div v-else class="no-friends">Друзья не найдены.</div>
-        <button class="close-btn share__btns" @click="$emit('close')">Закрыть</button>
+        <div v-else class="no-friends">{{ t('shareModal.friendNotFound')}}</div>
+        <button class="close-btn share__btns" @click="$emit('close')">{{ t('shareModal.close')}}</button>
       </template>
     </div>
   </div>
@@ -49,7 +49,7 @@ const props = defineProps({
 
 const emit = defineEmits(['close', 'share'])
 const searchTerm = ref('')
-
+const {t} = useI18n()
 const filteredFriends = computed(() => {
   if (!searchTerm.value) return props.friends
   const lower = searchTerm.value.toLowerCase()

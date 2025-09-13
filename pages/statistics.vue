@@ -1,7 +1,6 @@
 <template>
   <div class="page">
-    <div
-        class="page__stats-wrapper"
+    <div class="page__stats-wrapper"
         :class="{'is-mobile': isMobile, 'content-open': isMobile && isContentOpen}"
     >
       <aside class="sidebar">
@@ -140,22 +139,17 @@ const router = useRouter()
 const {t, d} = useI18n()
 const lang = userlangStore()
 const chain = userChainStore()
-
+const selectedRegionKey = ref('')
 const view = ref('articles')
 const backTo = () => router.push('/')
 const isMobile = ref(false)
 const isContentOpen = ref(false)
 
+
 function handleResize() {
   isMobile.value = window.innerWidth <= 767
   isContentOpen.value = !isMobile.value
 }
-
-onMounted(() => {
-  handleResize()
-  window.addEventListener('resize', handleResize)
-})
-onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
 
 function openPanel(target) {
   view.value = target
@@ -205,7 +199,6 @@ const colorMap = {article: '#60a5fa', letters: '#f59e0b', wordArticle: '#a78bfa'
 const modeColor = computed(() => colorMap[selectedMode.value])
 
 const regionKeys = computed(() => regions.map(r => String(r.pathTo)))
-const selectedRegionKey = ref('')
 watchEffect(() => {
   if (!selectedRegionKey.value && regionKeys.value.length) selectedRegionKey.value = regionKeys.value[0]
 })
@@ -282,6 +275,12 @@ onMounted(async () => {
   await chain.loadProgressFromFirebase()
   await fetchAllRegionQuests()
 })
+
+onMounted(() => {
+  handleResize()
+  window.addEventListener('resize', handleResize)
+})
+onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
 </script>
 
 <style scoped>

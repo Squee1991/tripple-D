@@ -18,6 +18,7 @@ import {doc, setDoc, getDoc, getFirestore, updateDoc, deleteDoc, serverTimestamp
 import {userlangStore} from "./learningStore.js";
 
 let authStateUnsubscribe = null;
+
 export const userAuthStore = defineStore('auth', () => {
 	const name = ref(null)
 	const email = ref(null)
@@ -32,6 +33,10 @@ export const userAuthStore = defineStore('auth', () => {
 	const availableAvatars = ref(['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '12.png', '7.png', '8.png', '9.png', '10.png', '11.png', '13.png', '14.png']);
 	const ownedAvatars = ref(['1.png', '2.png']);
 	const isPremium = ref(false)
+
+	const initialized = ref(false)
+	let initPromise = null
+
 	const isGoogleUser = computed(() => providerId.value === 'google.com');
 	const getAvatarUrl = (fileName) => {
 		if (!fileName) return '';
@@ -234,7 +239,6 @@ export const userAuthStore = defineStore('auth', () => {
 		});
 	};
 
-
 	const logOut = async () => {
 		const auth = getAuth()
 		await signOut(auth)
@@ -268,10 +272,45 @@ export const userAuthStore = defineStore('auth', () => {
 			} else {
 				setUserData({});
 			}
+			initialized.value = true
 		})
 	}
+	const initAuth = () => {
+		if (initialized.value) return Promise.resolve()
+		if (initPromise) return initPromise
+		initPromise = new Promise((resolve) => {
+			if (typeof window === 'undefined') {
+				initialized.value = true
+				resolve()
+				return
+			}
 
-	fetchuser()
+			const auth = getAuth()
+			if (authStateUnsubscribe) authStateUnsubscribe()
+
+			authStateUnsubscribe = onAuthStateChanged(auth, async (user) => {
+				if (user) {
+					const userDocRef = doc(db, 'users', user.uid);
+					const userDoc = await getDoc(userDocRef);
+					const userDataFromDb = userDoc.exists() ? userDoc.data() : {};
+					setUserData({
+						name: userDataFromDb.name ?? user.displayName,
+						email: user.email,
+						registeredAt: user.metadata.creationTime,
+						uid: user.uid,
+						providerId: user.providerData[0]?.providerId || '',
+						...userDataFromDb
+					})
+				} else {
+					setUserData({});
+				}
+				initialized.value = true
+				resolve()
+			})
+		})
+
+		return initPromise
+	}
 
 	return {
 		name,
@@ -279,23 +318,25 @@ export const userAuthStore = defineStore('auth', () => {
 		registeredAt,
 		providerId,
 		uid,
-		isGoogleUser,
-		avatar,
-		avatarUrl,
-		availableAvatars,
 		isPremium,
 		subscriptionEndsAt,
 		subscriptionCancelled,
+		avatar,
+		avatarUrl,
+		availableAvatars,
 		ownedAvatars,
-		purchaseAvatar,
+		initialized,
+		isGoogleUser,
+		initAuth,
+		fetchuser,
 		registerUser,
-		logOut,
 		loginUser,
+		loginWithGoogle,
 		resetPassword,
 		deleteAccount,
-		loginWithGoogle,
+		logOut,
+		purchaseAvatar,
 		updateUserAvatar,
 		getAvatarUrl,
-		fetchuser
 	}
 })

@@ -15,6 +15,62 @@
   "modalVerbsTipsTitle": {
     "tipsTitle": "Useful Tips:"
   },
+  "friendExam": {
+    "title": "General tests from other participants",
+    "btnBack": "Back to home",
+    "selectOne": "All",
+    "selectTwo": "Not accepted",
+    "selectThree": "High score",
+    "selectFour": "Low score",
+    "loading": "Loading...",
+    "inbox": "Incoming invitations",
+    "person": "invited to the exam",
+    "level": "Level:",
+    "accept": "Accept",
+    "reject": "Reject",
+    "empty": "No incoming invitations",
+    "available": "Accepted",
+    "notAccepted": "You don’t have any accepted exams yet",
+    "examFrom": "Exam from",
+    "gpa": "Average score:",
+    "show": "View",
+    "notFound": "Nothing found",
+    "placeholder": "Search by name"
+  },
+  "shareModal": {
+    "close": "Close",
+    "shareWithFriend": "Share with a friend",
+    "noFriends": "You don’t have any friends to share with yet.",
+    "friendsList": "Friends list",
+    "friendNotFound": "No friends found.",
+    "send": "Send",
+    "placeholder": "Search by name or email..."
+  },
+  "examResult": {
+    "title": "Exam Archive",
+    "showResultButton": "View Result",
+    "loading": "Loading…",
+    "empty": "Archive is empty",
+    "start": "Start:",
+    "middle": "Average score:",
+    "share": "Share",
+    "delete": "Delete",
+    "sent": "Test submitted",
+    "sended": "You have already submitted this test",
+    "error": "Failed to share the exam"
+  },
+  "consentModal": {
+    "title": "Important Notice",
+    "textPartOne": "To complete tasks in the",
+    "textPartTwo": "module, your pronunciation will be",
+    "textPartThree": "recorded and stored",
+    "textTwoPartOne": "These audio recordings are used solely for answer verification. We",
+    "textTwoPartTwo": "do not share",
+    "textTwoPartThree": "your data with third parties. After completing the task, you will have the opportunity to listen to your recording and, if you wish,",
+    "textTwoPartFour": "share it",
+    "agree": "I have read and agree to the terms",
+    "accept": "Accept"
+  },
   "adjectiveTheory": {
     "title": "Adjectives in German: simple and clear",
     "subTitle": "What they are, where they stand, how they are compared and which endings to use. At the end — mini quiz.",
@@ -250,7 +306,8 @@
   "cabinetSidebar": {
     "valueOne": "Account Settings",
     "valueTwo": "Article Progress",
-    "valueThree": "Rewards"
+    "valueThree": "Rewards",
+    "valueFour": "Exam Archive"
   },
   "cabinetAccordion": {
     "personalData": "Personal Data",
@@ -269,6 +326,8 @@
     "ach": "Achievement Notifications"
   },
   "cabinet": {
+    "important": "IMPORTANT!!!",
+    "importantText": "When deleting your account, the subscription is not canceled. Please cancel your subscription before deleting.",
     "cancelPremium": "Cancel subscription?",
     "cancelPremiumText": "If you cancel your subscription, premium access will remain until the end of the paid period.",
     "accept": "Yes, cancel",
@@ -1260,7 +1319,10 @@
     "gameMode": "Games",
     "tests": "Tests",
     "achieve": "Achievements",
-    "stats": "Ranking"
+    "stats": "Ranking",
+    "about": "About",
+    "contact": "Contact",
+    "quest": "Q&A"
   },
   "formLabel": {
     "name": "Name",
@@ -1281,23 +1343,25 @@
     "themen": "Thematic Levels",
     "idioms": "Idioms",
     "wordDuel": "Phrase Duel",
-    "quests": "Quest Journal"
+    "quests": "Quest Journal",
+    "languagesLands": "Language Lands"
   },
   "underSub": {
     "prev": "Introduction",
     "rules": "Rules",
     "artRules": "Article Practice",
+    "adjectiveTheory": "Theory and Rules",
     "adjectivesBasic": "Basics",
     "declination": "Declension",
-    "comparison": "Degrees of Comparison",
-    "verbTypes": "Verb Types",
+    "comparison": "Comparison of Degrees",
+    "verbsTheory": "Theory and Rules",
+    "verbTypes": "Types of Verbs",
     "verbFirst": "Conjugation and Tenses",
     "verbSecond": "Modal Verbs",
     "verbThird": "Reflexive Verbs",
     "verbFourth": "Verbs with Prepositions",
     "verbFifth": "Passive Voice"
   },
-
   "auth": {
     "logIn": "Log In",
     "regs": "Sign Up",
@@ -1352,6 +1416,26 @@
     "explain": "Determine the correct auxiliary verb.",
     "chooseTwo": "Partizip II builder",
     "explainTwo": "Form the correct Partizip II."
+  },
+  "futurOne": {
+    "tipOne": "1. The auxiliary verb werden is conjugated: ich werde, du wirst, er/sie/es wird, etc.",
+    "tipTwo": "2. The main verb (infinitive) is placed at the end of the sentence",
+    "tipThree": "3. Used to indicate future actions",
+    "tipFour": "4. Replaces Präsens if you want to emphasize intention or make a prediction",
+    "tipFive": "5. Example: Ich werde lernen. / Er wird bald kommen.",
+    "tipSix": "6. Question sentence: Wirst du morgen kommen?",
+    "howToDoTitle": "How is it formed?",
+    "howToDoExample": "werden (Präsens) + infinitive at the end of the sentence",
+    "howToUseTitle": "When is it used?",
+    "howToUseFirstExample": "Planned actions in the future",
+    "howToUseSecondExample": "Assumptions about the present or future",
+    "example": "Examples",
+    "translateOne": "I will study tomorrow.",
+    "translateTwo": "He will come soon.",
+    "translateThree": "We will not sleep.",
+    "tableTitle": "Conjugation of werden",
+    "practiceDesc": "Choose the correct form of werden and build Futur I.",
+    "begin": "Start"
   },
   "präteritum": {
     "howToDo": "Strong verb stem with vowel change / weak stem + “-te”",

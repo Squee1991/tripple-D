@@ -1,5 +1,5 @@
 <script setup>
-import {userAuthStore} from "~/store/authStore.js";
+import { userAuthStore } from "~/store/authStore.js";
 import Header from '../src/components/header.vue'
 import Banner from '../src/components/baner.vue'
 import Description from '../src/components/DescriptionBlock.vue'
@@ -8,24 +8,24 @@ import FeedBack from '../src/components/feedBack.vue'
 import Footer from '../src/components/footer.vue'
 import VUid from '../src/components/V-uid.vue'
 
-
 const authStore = userAuthStore()
 </script>
 
 <template>
-  <div class="container">
+  <div v-if="!authStore.initialized" class="loading">
+  </div>
+  <div v-else class="container">
     <Header/>
-    <div v-if="!authStore.uid">
+    <div v-if="authStore.uid" class="stat">
+      <VUid/>
+    </div>
+    <div v-else>
       <Banner/>
       <Description/>
       <About/>
       <FeedBack/>
+      <Footer/>
     </div>
-    <div class="stat" v-else>
-      <!--      <VMap/>-->
-      <VUid/>
-    </div>
-    <Footer/>
   </div>
 </template>
 
@@ -40,6 +40,8 @@ const authStore = userAuthStore()
   display: flex;
   justify-content: center;
   margin-top: 10px;
+  height: 100%;
+  overflow-y: auto;
 }
 
 @media (max-width: 767px) {
@@ -47,5 +49,12 @@ const authStore = userAuthStore()
     flex-direction: column;
     justify-content: center;
   }
+}
+
+
+.loading {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 </style>

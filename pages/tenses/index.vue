@@ -204,34 +204,32 @@ const topics = [
     id: 'futurOne',
     title: 'Futur I',
     tips: [
-      { text: '1. Вспомогательный глагол werden спрягается: ich werde, du wirst, er/sie/es wird и т.д.' },
-      { text: '2. Основной глагол (инфинитив) ставится в конец предложения' },
-      { text: '3. Используется для обозначения будущих действий' },
-      { text: '4. Заменяет Präsens, если нужно подчеркнуть намерение или сделать предположение' },
-      { text: '5. Пример: Ich werde lernen. / Er wird bald kommen.' },
-      { text: '6. Вопросительное предложение: Wirst du morgen kommen?' }
+      { text: t('futurOne.tipOne') },
+      { text: t('futurOne.tipTwo') },
+      { text: t('futurOne.tipThree') },
+      { text: t('futurOne.tipFour') },
+      { text: t('futurOne.tipFive') },
+      { text: t('futurOne.tipSix') }
     ],
     contentBlocks: [
-      { type: 'rule', title: 'Как образуется?', content: 'werden (Präsens) + Infinitiv am Satzende' },
-      { type: 'subheading', title: 'Когда используется?' },
-      {
-        type: 'rules',
-        content: [
-          'Планируемые действия в будущем',
-          'Предположения о настоящем или будущем'
+      { type: 'rule', title: t('futurOne.howToDoTitle'), content: t('futurOne.howToDoExample') },
+      { type: 'subheading', title: t('futurOne.howToUseTitle') },
+      {type: 'rules', content: [
+          t('futurOne.howToUseFirstExample'),
+          t('futurOne.howToUseSecondExample')
         ]
       },
-      { type: 'subheading', title: 'Примеры' },
-      {
-        type: 'examples',
+      { type: 'subheading', title: t('futurOne.example') },
+      { type: 'examples',
         content: [
-          { sentence: 'Ich <b>werde</b> morgen <b>lernen</b>.', translation: 'Я буду учиться завтра.' },
-          { sentence: 'Er <b>wird</b> bald <b>kommen</b>.', translation: 'Он скоро придёт.' }
+          { sentence: 'Ich <b>werde</b> morgen <b>lernen</b>.', translation: t('futurOne.translateOne') },
+          { sentence: 'Er <b>wird</b> bald <b>kommen</b>.', translation: t('futurOne.translateTwo') },
+          { sentence: 'Wir <b>werden</b> nicht <b>schlafen</b>.', translation: t('futurOne.translateThree') }
         ]
       },
       {
         type: 'table',
-        title: 'Спряжение werden',
+        title: t('futurOne.tableTitle'),
         content: [
           { person: 'ich', form: 'werde' },
           { person: 'du', form: 'wirst' },
@@ -243,9 +241,9 @@ const topics = [
       }
     ],
     practice: {
-      title: 'Futur I: тренировка',
-      description: 'Выбери правильную форму werden и построй Futur I.',
-      buttonText: 'Начать'
+      title: 'Futur I',
+      description: t('futurOne.practiceDesc'),
+      buttonText: t('futurOne.begin')
     }
   },
   {

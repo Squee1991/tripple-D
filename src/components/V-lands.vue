@@ -4,7 +4,7 @@
 <!--      <button @click="backToMain" class="back__to-main">-->
 <!--        <img class="back__icon" src="../assets/images/close.svg" alt="">-->
 <!--      </button>-->
-      <h1 class="map__title">Карта изучения немецкого языка</h1>
+      <h1 class="map__title">Карта языковых земель</h1>
     </div>
     <div class="map-layout">
       <div
@@ -21,7 +21,6 @@
             @click="isPanelOpen = false"
         >×
         </button>
-
         <div class="map-left__art">
           <img :src="active?.icon" alt="">
         </div>
@@ -126,13 +125,6 @@ function go(region) {
   font-family: "Nunito", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
 }
 
-:root {
-  --stroke: #1c1c1c;
-  --card-radius: 14px;
-  --shadow: 4px 4px 0 var(--stroke);
-  --shadow-hover: 2px 2px 0 var(--stroke);
-}
-
 .back__to-main {
   border: none;
   background: none;
@@ -153,7 +145,6 @@ function go(region) {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 5px;
   align-items: center;
   margin: 20px 0 30px;
   max-width: 1200px;
@@ -162,23 +153,18 @@ function go(region) {
 
 .map__title-wrapper {
   display: flex;
-  justify-content: center;
   align-items: center;
   width: 100%;
   border: 3px solid var(--stroke);
-  border-radius: 14px;
   box-shadow: var(--shadow);
-  padding: 12px;
   position: relative;
   overflow: hidden;
-  background: #4ade80;
-  margin-bottom: 10px;
 }
 
 
 .map__title {
   font-size: 2.3rem;
-  color: #212121;
+  color: var(--titleColor);
   font-weight: 900;
   letter-spacing: .2px;
 }
@@ -191,25 +177,23 @@ function go(region) {
 
 .map-left {
   flex: 1;
-  background: #fff;
-  border: 3px solid var(--stroke);
-  border-radius: var(--card-radius);
+  border: 3px solid var(--border);
+  border-radius: 15px;
   padding: 12px;
   color: #222;
   overflow-y: auto;
-  box-shadow: var(--shadow);
+  box-shadow: var(--border);
   position: relative;
 }
 
 .map-left__art {
   width: 100%;
   height: 190px;
-  border: 3px solid var(--stroke);
+  border: 3px solid var(--border);
   border-radius: 10px;
   margin-bottom: 14px;
-  box-shadow: 3px 3px 0 var(--stroke);
   overflow: hidden;
-  background: linear-gradient(180deg, var(--c1), var(--c2));
+  background: var(--bg);
 }
 
 .map-left__art img {
@@ -224,13 +208,14 @@ function go(region) {
   margin: 0 0 8px;
   font-weight: 900;
   font-style: italic;
+  color: var(--titleColor);
 }
 
 .map-left__desc {
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 400;
   margin-bottom: 12px;
-  color: #2b2b2b;
+  color: var(--titleColor);
 }
 
 .map-left__level {
@@ -240,10 +225,10 @@ function go(region) {
   font-weight: 800;
   margin-bottom: 18px;
   padding: 6px 10px;
-  border: 2px dashed var(--stroke);
+  border: 2px dashed var(--border);
   border-radius: 999px;
   background: #fff;
-  box-shadow: 2px 2px 0 var(--stroke);
+  box-shadow: 2px 2px 0 var(--border);
 }
 
 .map-left__level.ok {
@@ -256,20 +241,17 @@ function go(region) {
 
 .map-btn {
   padding: 12px 18px;
-  font-weight: 900;
-  background: linear-gradient(180deg, #ffe98d, #ffd255);
-  color: #222;
-  border: 3px solid var(--stroke);
+  background: #f1c40f;
+  color: black;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  border: 2px solid white;
   border-radius: 12px;
   cursor: pointer;
-  box-shadow: var(--shadow);
+  box-shadow: 0 3px 0  #ead064;
   transition: transform .12s ease, box-shadow .12s ease;
   width: 100%;
-}
-
-.map-btn:hover:not(:disabled) {
-  transform: translate(2px, 2px);
-  box-shadow: var(--shadow-hover);
 }
 
 .map-btn:disabled {
@@ -283,33 +265,29 @@ function go(region) {
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   overflow-y: auto;
-  padding: 12px;
-  border: 3px solid var(--stroke);
-  border-radius: var(--card-radius);
-  background: linear-gradient(180deg, #fff, #f7f7f7);
-  box-shadow: var(--shadow);
+  padding: 5px;
 }
 
 .region-card {
   position: relative;
   height: 190px;
-  border: 3px solid var(--stroke);
-  border-radius: var(--card-radius);
-  box-shadow: var(--shadow);
+  border: 3px solid var(--border);
+  border-radius: 15px;
+  box-shadow: 3px 3px 0 var(--border);
   cursor: pointer;
   overflow: hidden;
   transition: transform .12s ease, box-shadow .12s ease, filter .12s ease;
-  background: linear-gradient(180deg, var(--c1), var(--c2));
+  background: var(--bg)
 }
 
 .region-card.active {
   outline: 3px solid #fff;
-  box-shadow: 0 0 0 3px #fff, 6px 6px 0 var(--stroke);
+  box-shadow: 0 0 0 3px #fff, 6px 6px 0 var(--border);
 }
 
 .region-card:hover {
   transform: translate(2px, 2px);
-  box-shadow: var(--shadow-hover);
+  box-shadow: 1px 1px 0 var(--border);
 }
 
 .region-card__art {
@@ -320,7 +298,6 @@ function go(region) {
 .region-card__art img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
   display: block;
 }
 
@@ -334,11 +311,11 @@ function go(region) {
   justify-content: space-between;
   gap: 8px;
   padding: 6px 10px;
-  border: 2px solid var(--stroke);
+  border: 2px solid var(--border);
   border-radius: 10px;
   background: linear-gradient(180deg, rgba(255, 255, 255, .75), rgba(255, 255, 255, .55));
   backdrop-filter: blur(2px);
-  box-shadow: 2px 2px 0 var(--stroke);
+  box-shadow: 2px 2px 0 var(--border);
 }
 
 .region-card__title {
@@ -352,10 +329,10 @@ function go(region) {
   font-weight: 900;
   color: #1d1d1d;
   padding: 3px 8px;
-  border: 2px solid var(--stroke);
+  border: 2px solid var(--border);
   border-radius: 999px;
   background: linear-gradient(180deg, #fff, #eaeaea);
-  box-shadow: 1px 1px 0 var(--stroke);
+  box-shadow: 1px 1px 0 var(--border);
 }
 
 .theme--default {
@@ -436,10 +413,10 @@ function go(region) {
     right: 8px;
     width: 36px;
     height: 36px;
-    border: 3px solid var(--stroke);
+    border: 3px solid var(--border);
     border-radius: 10px;
     background: linear-gradient(180deg, #ffe98d, #ffd255);
-    box-shadow: 2px 2px 0 var(--stroke);
+    box-shadow: 2px 2px 0 var(--border);
     font-size: 22px;
     cursor: pointer;
   }
