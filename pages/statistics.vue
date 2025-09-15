@@ -394,7 +394,7 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
   border: 3px solid #000;
   border-radius: 14px;
   box-shadow: 4px 4px 0 #000;
-  padding: 14px;
+  padding:10px;
   scrollbar-width: thin;
   scrollbar-color: #e3efe1 transparent;
   scrollbar-gutter: stable both-edges;
@@ -416,14 +416,10 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
 
 .panel__head {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 12px;
-  padding: 20px;
-  border: 3px solid #000;
-  border-radius: 15px;
-  box-shadow: 4px 4px 0 #000;
+  align-items: start;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
 }
 
 .panel__top {
@@ -498,7 +494,6 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
   font-family: "Nunito", sans-serif
 }
 
-/* Стили для секции "Артикли" */
 .bars {
   display: grid;
   grid-template-columns: 40px 1fr;
@@ -534,7 +529,7 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
   border: 2px solid transparent;
   box-sizing: border-box;
   background: #eef2ff;
-  overflow: hidden;            /* <-- чтобы верхняя часть плавно обрезалась */
+  overflow: hidden;
 }
 
 .col__fill {
@@ -562,43 +557,53 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
 }
 
 .col--article {
-  border-color: #60a5fa
+  border-color: #60a5fa;
+  border-bottom: none;
 }
 
 .col__fill--article {
-  background: #60a5fa
+  background: #60a5fa;
+  border-bottom: none;
 }
 
 .col--letters {
-  border-color: #f59e0b
+  border-color: #f59e0b;
+  border-bottom: none;
 }
 
 .col__fill--letters {
-  background: #f59e0b
+  background: #f59e0b;
+  border-bottom: none;
 }
 
 .col--wordArticle {
-  border-color: #a78bfa
+  border-color: #a78bfa;
+  border-bottom: none;
 }
 
 .col__fill--wordArticle {
-  background: #a78bfa
+  background: #a78bfa;
+  border-bottom: none;
 }
 
 .col--audio {
-  border-color: #34d399
+  border-color: #34d399;
+  border-bottom: none;
 }
 
 .col__fill--audio {
-  background: #34d399
+  background: #34d399;
+  border-bottom: none;
 }
 
 .col--plural {
-  border-color: #f472b6
+  border-color: #f472b6;
+  border-bottom: none;
 }
 
 .col__fill--plural {
-  background: #f472b6
+  background: #f472b6;
+  border-bottom: none;
 }
 
 .chips {
@@ -678,8 +683,6 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
   font-weight: 900;
   color: #111
 }
-
-/* ===== УЛУЧШЕННЫЕ СТИЛИ ДЛЯ "ЯЗЫКОВЫХ ЗЕМЕЛЬ" ===== */
 
 .summary {
   display: grid;
@@ -844,9 +847,6 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
   color: white;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
-
-
-/* ===== Медиа-запросы и стили для мобильных устройств ===== */
 
 .is-mobile {
   display: block;

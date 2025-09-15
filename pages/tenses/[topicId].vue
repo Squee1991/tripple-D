@@ -141,8 +141,12 @@ function fmt(ms) {
 async function startQuiz() {
   loading.value = true
   const fileName = `/verbs-data/verb-${topicId}.json`
-  store.setContext({modeId: category, topicId, fileName, contentVersion: 'v1'})
-  await store.startNewQuiz(fileName)
+  await store.startNewQuiz({
+    modeId: 'verb',
+    topicId,
+    fileName,
+    contentVersion: 'v1'
+  })
   loading.value = false
   showCelebration.value = false
   startedAt.value = Date.now()
@@ -153,8 +157,12 @@ const backTo = () => router.push('/tenses')
 onMounted(async () => {
   loading.value = true
   const fileName = `/verbs-data/verb-${topicId}.json`
-  store.setContext({modeId:  topicId, fileName, contentVersion: 'v1'})
-  await store.restoreOrStart({modeId: topicId, fileName, contentVersion: 'v1'})
+  await store.restoreOrStart({
+    modeId: 'verb',
+    topicId,
+    fileName,
+    contentVersion: 'v1'
+  })
   await learning.loadFromFirebase?.()
   startedAt.value = Date.now()
   loading.value = false

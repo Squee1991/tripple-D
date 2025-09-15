@@ -14,7 +14,6 @@ import { userAuthStore } from './authStore.js'
 export const useLocalStatGameStore = defineStore('localStatGame', () => {
     const constructedSentences = ref(0)
     const db = getFirestore()
-
     const loadLocalStats = async () => {
         const auth = userAuthStore()
         const uid = auth.uid

@@ -16,7 +16,6 @@ import {
 } from 'firebase/auth';
 import {doc, setDoc, getDoc, getFirestore, updateDoc, deleteDoc, serverTimestamp} from 'firebase/firestore';
 import {userlangStore} from "./learningStore.js";
-
 let authStateUnsubscribe = null;
 
 export const userAuthStore = defineStore('auth', () => {
@@ -198,7 +197,6 @@ export const userAuthStore = defineStore('auth', () => {
 		const auth = getAuth();
 		const user = auth.currentUser;
 		if (!user) throw {code: 'auth/no-current-user'};
-
 		try {
 			const usesGoogle = user.providerData.some(p => p.providerId === 'google.com');
 			if (usesGoogle) {

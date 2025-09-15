@@ -68,7 +68,7 @@ onBeforeUnmount(stop)
 
 <style scoped>
 .typewriter {
-    white-space: pre-wrap;      /* переносы строк из текста сохраняются */
+    white-space: pre-wrap;
     line-height: 1.5;
 }
 .caret {
