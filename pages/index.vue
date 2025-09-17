@@ -1,6 +1,6 @@
 <script setup>
-import { ref, onMounted } from 'vue'
-import { userAuthStore } from "~/store/authStore.js";
+import {ref, onMounted} from 'vue'
+import {userAuthStore} from "~/store/authStore.js";
 import Header from '../src/components/header.vue'
 import Banner from '../src/components/baner.vue'
 import Description from '../src/components/DescriptionBlock.vue'
@@ -11,25 +11,26 @@ import VUid from '../src/components/V-uid.vue'
 
 const authStore = userAuthStore()
 const hydrated = ref(false)
-onMounted(() => {
 
+onMounted(() => {
   hydrated.value = true
 })
+
 </script>
 
 <template>
   <div v-if="!hydrated || !authStore.initialized" class="loading"></div>
   <div v-else class="container">
-    <Header />
+    <Header/>
     <div v-if="authStore.uid" class="stat">
-      <VUid />
+      <VUid/>
     </div>
     <div v-else>
-      <Banner />
-      <Description />
-      <About />
-      <FeedBack />
-      <Footer />
+      <Banner/>
+      <Description/>
+      <About/>
+      <FeedBack/>
+      <Footer/>
     </div>
   </div>
 </template>
@@ -40,6 +41,7 @@ onMounted(() => {
   margin: 0 auto;
   padding: 0 10px;
 }
+
 .stat {
   display: flex;
   justify-content: center;
@@ -47,9 +49,14 @@ onMounted(() => {
   height: 100%;
   overflow-y: auto;
 }
+
 @media (max-width: 767px) {
-  .stat { flex-direction: column; justify-content: center; }
+  .stat {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
+
 .loading {
   max-width: 1440px;
   margin: 0 auto;

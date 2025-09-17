@@ -1,50 +1,63 @@
 <template>
   <div class="friend-list">
-    <div v-if="showList" class="fiends__list-wrapper">
-      <div class="friends__list-header">
-        <h3 class="points-card__title">Список друзей</h3>
-        <div class="add__inner">
-          <div class="friends__incoming" v-if="friendsStore.requestsIncoming.length">
-            {{ friendsStore.requestsIncoming.length }}
+    <template v-if="openProfileUid && selectedFriend">
+      <div class="fiends__list-wrapper">
+        <div class="friends__list-header">
+          <div class="add__inner">
+            <button type="button" class="friend_list-btn" @click="openProfileUid = null">
+              К списку друзей
+            </button>
           </div>
-          <button @click="pathToFriends" type="button" class="add__friends">
-            <img class="add__friends-icon" :src="AddFriendIcon" alt="Add friends icon">
-          </button>
         </div>
+        <FriendPanel
+            :friend="selectedFriend"
+            @close="openProfileUid = null"
+        />
       </div>
-      <ul class="list">
-        <li v-for="friend in friendsStore.friends"
-            :key="friend.uid"
-            class="list__item">
-          <img
-              v-if="friend.avatar"
-              :src="friend.avatar"
-              alt="friend-Icon"
-              class="list__avatar"
-          />
-          <div class="friend__name"> {{ friend.name || '' }}</div>
-          <button @click="openEdit(friend.uid)" class="friend__dots-btn">
-            <img class="friend__dots-icon" :src="Dots" alt="Dots">
-          </button>
-          <div class="dots__edit-window" v-if="openMenuId === String(friend.uid)">
-            <VEdit
-                :open="true"
-                :buttons="friendEditModal"
-                @close="openMenuId = null"
-                @action="actionEditWindow"
-            />
+    </template>
+
+    <template v-else>
+      <div v-if="showList" class="fiends__list-wrapper">
+        <div class="friends__list-header">
+          <h3 class="points-card__title">Список друзей</h3>
+          <div class="add__inner">
+            <div class="friends__incoming" v-if="friendsStore.requestsIncoming.length">
+              {{ friendsStore.requestsIncoming.length }}
+            </div>
+            <button @click="pathToFriends" type="button" class="add__friends">
+              <img class="add__friends-icon" :src="AddFriendIcon" alt="Add friends icon">
+            </button>
           </div>
-        </li>
-      </ul>
-    </div>
-    <div v-else class="fiends__add-wrapper">
-      <div class="friend_add__btn-wrapper">
-        <button type="button" @click="toListFriends" class="friend_list-btn">К списку друзей</button>
+        </div>
+        <ul class="list">
+          <li v-for="friend in friendsStore.friends" :key="friend.uid" class="list__item">
+            <img v-if="friend.avatar" :src="friend.avatar" alt="friend-Icon" class="list__avatar" />
+            <div class="friend__name">{{ friend.name || '' }}</div>
+
+            <button @click="openEdit(friend.uid)" class="friend__dots-btn">
+              <img class="friend__dots-icon" :src="Dots" alt="Dots">
+            </button>
+            <div class="dots__edit-window" v-if="openMenuId === String(friend.uid)">
+              <VEdit
+                  :open="true"
+                  :buttons="friendEditModal"
+                  @close="openMenuId = null"
+                  @action="actionEditWindow"
+              />
+            </div>
+          </li>
+        </ul>
       </div>
-      <SearchFriend/>
-    </div>
+      <div v-else class="fiends__add-wrapper">
+        <div class="friend_add__btn-wrapper">
+          <button type="button" @click="toListFriends" class="friend_list-btn">К списку друзей</button>
+        </div>
+        <SearchFriend/>
+      </div>
+    </template>
   </div>
 </template>
+
 
 <script setup>
 import { ref } from "vue";
@@ -55,15 +68,18 @@ import Dots from '../../assets/images/dots.svg'
 import VEdit from '../../src/components/V-editTest.vue'
 import Profile from "assets/images/user.svg";
 import Trash from "assets/images/trash.svg";
+import FriendPanel from "../../src/components/v-friendPorifile.vue";
 
 const friendsStore = useFriendsStore()
 const openMenuId = ref(null)
 const closeWindow = ref(false)
-
+const openProfileUid = ref(null)
 const friendEditModal = ref([
   {icon: Profile, alt: 'Profile_icon', text: 'Профиль'},
   {icon: Trash, alt: 'delete_icon', text: 'Удалить'},
 ])
+
+const selectedFriend = computed(() => friendsStore.friends.find(f => String(f.uid) === String(openProfileUid.value)))
 
 const handleClose = () => {
   closeWindow.value = false
@@ -75,11 +91,22 @@ const openEdit = (uid) => {
   closeWindow.value = true
 }
 
-const actionEditWindow = (btn) => {
+const actionEditWindow = async (btn) => {
   if (btn.text === 'Профиль') {
     console.log('Profile', openMenuId.value)
+    openProfileUid.value = openMenuId.value
   } else if (btn.text === 'Удалить') {
-    console.log('Delete', openMenuId.value)
+    const uid = openMenuId.value
+    try {
+      const ok = window.confirm('Удалить пользователя из друзей?')
+      if (ok) {
+        await friendsStore.removeFriend(uid)
+        console.log('Удалён из друзей:', uid)
+      }
+    } catch (e) {
+      console.error(e)
+      alert(e?.message || 'Не удалось удалить друга')
+    }
   }
   openMenuId.value = null
 }

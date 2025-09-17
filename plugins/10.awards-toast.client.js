@@ -1,4 +1,3 @@
-// plugins/achievements-toasts.client.js
 import { toast } from 'vue3-toastify'
 import 'vue3-toastify/dist/index.css'
 import { useAchievementStore } from '~/store/achievementStore'
@@ -120,7 +119,7 @@ export default defineNuxtPlugin((nuxtApp) => {
         const name = resolveName(a)
         const msg = name
             ? `🏆 ${t('Достижение')} «${name}» ${t('выполнено')}!`
-            : `🏆 ${t('Достижение выполнено')}!`
+            : ''
 
         toast.success(msg, { toastId: key, containerId: CONTAINER_ID })
         await markShown(key)
