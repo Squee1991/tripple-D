@@ -51,7 +51,6 @@
                 <img class="stat__icon" src="../../assets/images/dailyIcons/arrow-to.svg" alt="">
               </button>
             </div>
-
           </div>
         </div>
         <!--        <li class="points-card__item">-->
@@ -87,9 +86,7 @@ import {useRouter} from "vue-router";
 import {useFriendsStore} from '../../store/friendsStore.js'
 import {onMounted, ref} from "vue";
 
-const istPremiumComputedStatus = computed(() =>
-    userAuth.isPremium ? 'Активна' : 'Не активна'
-)
+const istPremiumComputedStatus = computed(() => userAuth.isPremium ? 'Активна' : 'Не активна')
 
 const {t} = useI18n()
 const langStore = userlangStore()
@@ -123,7 +120,7 @@ onMounted(() => {
 <style scoped>
 
 .points-card__title-icon {
-  width: 40px;
+  width: 50px;
 }
 
 .stats__title {
@@ -169,12 +166,11 @@ onMounted(() => {
   width: 40px;
   transform: rotate(90deg);
   margin-left: 5px;
-  transition: .3s;
 }
 
 @media (min-width: 1023px) {
-  .stat__icon:hover {
-    transform: scale(1.2) rotate(90deg);
+  .stats__btn:hover {
+    transform: scale(1.05) ;
     transition: .3s;
   }
 }
@@ -182,13 +178,15 @@ onMounted(() => {
 .stats__btn {
   display: flex;
   align-items: center;
-  background: none;
-  border: none;
-  padding: 10px;
+  border: 2px solid var(--border);
+  box-shadow: 0 3px 0 var(--border);
+  border-radius: 10px;
   font-weight: 600;
   font-size: 1.2rem;
+  padding: 0 10px;
   color: #6ea4f1;
-  border-radius: 10px;
+  transition: .3s;
+  background: none;
 }
 
 .points__statistics__items {
@@ -203,6 +201,7 @@ onMounted(() => {
   border: 2px solid black;
   justify-content: center;
   align-items: center;
+
   border-radius: 10px;
   padding: 1px 0.7rem;
   height: 40px;

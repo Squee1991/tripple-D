@@ -53,12 +53,6 @@
 <!--              <div class="find__text">Найти друзей</div>-->
 <!--            </button>-->
           </div>
-          <div>
-            <button class="find__friends" @click="pathToFriends">
-              <img class="find__icon" src="../assets/images/people.svg" alt="">
-              <div class="find__friends-text">Найти друзей</div>
-            </button>
-          </div>
           <div class="award-strip">
             <div class="awards__get">
               <div class="awards__title">{{ t('cabinet.awards') }}</div>
@@ -169,11 +163,10 @@
               <button @click="openDeleteModal" class="btn btn-danger">{{ t('cabinet.deleteAcc') }}</button>
             </div>
           </div>
-          <div v-else-if="activeTabKey === 'progress'"><Progress/></div>
+          <div v-else-if="activeTabKey === 'friends'"><VFindFriends/></div>
           <div v-else-if="activeTabKey === 'shop'"><Shop/></div>
           <div v-else-if="activeTabKey === 'award'"><AwardsList :awards="awardList"/></div>
           <div v-else-if="activeTabKey === 'archive'"><VExampResulut/></div>
-<!--          <div v-else-if="activeTabKey === 'friends'"><FriendSearch/></div>-->
         </div>
       </section>
     </div>
@@ -213,8 +206,8 @@
     <div v-if="isDeleteModalOpen" class="modal-overlay" @click.self="isDeleteModalOpen = false">
       <div class="modal-card">
         <div class="modal-title">{{ t('cabinet.deleteAccTitle') }}</div>
-        <p class="modal-text">ВАЖНО!!!</p>
         <p v-if="userAuthStore.isPremium" class="modal-text">
+          <p class="modal-text">ВАЖНО!!!</p>
           <span class="warn">{{ t('cabinet.important') }}</span>
           <span> {{ t('cabinet.importantText') }}</span>
         </p>
@@ -241,10 +234,9 @@ import {useI18n} from 'vue-i18n'
 import Progress from '../src/components/progress.vue'
 import Shop from '../src/components/Shop.vue'
 import AwardsList from '../src/components/AwardsList.vue'
-import VExampResulut from "~/src/components/V-exampResulut.vue";
-import VToggle from '~/src/components/V-toggle.vue'
-// import FriendSearch from "../src/components/friendSearch.vue"
-
+import VExampResulut from "../src/components/V-exampResulut.vue";
+import VToggle from '../src/components/V-toggle.vue'
+import VFindFriends from '../src/components/V-findFriends.vue'
 import {userAuthStore} from '../store/authStore.js'
 import {userlangStore} from '../store/learningStore.js'
 import {useAchievementStore} from '../store/achievementStore.js'
@@ -255,7 +247,7 @@ import {useUiSettingsStore} from '../store/uiSettingsStore.js'
 import {AWARDS} from '~/utils/awards'
 
 import UserIcon from '../assets/images/user.svg'
-import ProgressIcon from '../assets/images/progress.svg'
+import FriendsIcon from '../assets/images/FriendList.svg'
 import AwardsIcon from '../assets/awards/award (7).svg'
 import Home from '../assets/images/home.svg'
 import Folder from '../assets/images/FolderNav.svg'
@@ -264,6 +256,7 @@ import EditIcon from '../assets/accountToggleIcons/edit.svg'
 import UserAccIcon from '../assets/accountToggleIcons/user.svg'
 import SettingsIcon from '../assets/accountToggleIcons/settings.svg'
 import FaqIcon from '../assets/accountToggleIcons/faq.svg'
+import {useFriendsStore} from '../../store/friendsStore.js'
 
 const {t, locale} = useI18n()
 const router = useRouter()
@@ -273,6 +266,7 @@ const learningStore = userlangStore()
 const achievementStore = useAchievementStore()
 const gameStore = useGameStore()
 const uiSettings = useUiSettingsStore()
+const friendsStore = useFriendsStore()
 
 const activeTabKey = ref('info')
 const isFriendSearchModalOpen = ref(false)
@@ -283,7 +277,7 @@ function openFriendSearchModal() {
 
 const TAB_ITEMS = [
   {key: 'info', label: t('cabinetSidebar.valueOne'), icon: UserIcon},
-  {key: 'progress', label: t('cabinetSidebar.valueTwo'), icon: ProgressIcon},
+  {key: 'friends', label: 'Друзья', icon: FriendsIcon},
   {key: 'award', label: t('cabinetSidebar.valueThree'), icon: AwardsIcon},
   {key: 'archive', label: t('cabinetSidebar.valueFour'), icon: Folder },
   // {key: 'friends', label: 'Список друзей', icon: Find },
@@ -321,9 +315,7 @@ function onAccordionClick(acc) {
   }
   toggleAccordion(acc.key)
 }
-const pathToFriends = () => {
-  router.push('/user-search')
-}
+
 const isAvatarModalOpen = ref(false)
 const selectedAvatarName = ref(null)
 const isPurchaseModalOpen = ref(false)
@@ -471,6 +463,10 @@ const isGoogleUser = computed(() => authStore.isGoogleUser)
 onMounted(async () => {
   await learningStore.loadFromFirebase()
   soundEnabled.value = isSoundEnabled()
+})
+
+onMounted(() => {
+  friendsStore.loadFriends()
 })
 
 watch(isAvatarModalOpen, opened => {

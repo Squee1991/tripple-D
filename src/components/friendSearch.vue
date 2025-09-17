@@ -30,7 +30,7 @@
             </div>
 
             <div class="found-card__info">
-              <div class="found-card__email">{{ foundUser.email || '—' }}</div>
+<!--              <div class="found-card__email">{{ foundUser.email || '—' }}</div>-->
               <div v-if="foundUser.name" class="found-card__name">{{ foundUser.name }}</div>
             </div>
           </div>
@@ -71,12 +71,12 @@
           {{ friendsStore.requestsOutgoing.length }}
         </span>
       </button>
-      <button class="tabs__btn" :class="{active: activeTab === 'friends'}" @click="activeTab = 'friends'">
-        Друзья
-        <span class="tabs__badge" v-if="friendsStore.friends.length">
-          {{ friendsStore.friends.length }}
-        </span>
-      </button>
+<!--      <button class="tabs__btn" :class="{active: activeTab === 'friends'}" @click="activeTab = 'friends'">-->
+<!--        Друзья-->
+<!--        <span class="tabs__badge" v-if="friendsStore.friends.length">-->
+<!--          {{ friendsStore.friends.length }}-->
+<!--        </span>-->
+<!--      </button>-->
     </div>
     <div class="panel">
       <transition name="fade" mode="out-in">
@@ -97,7 +97,7 @@
                   <div v-else class="avatar avatar--placeholder">👤</div>
                 </div>
                 <div class="item__main">
-                  <div class="item__email">{{ r.email || '—' }}</div>
+<!--                  <div class="item__email">{{ r.email || '—' }}</div>-->
                   <div v-if="r.name" class="item__secondary">{{ r.name }}</div>
                 </div>
               </div>
@@ -129,7 +129,7 @@
                   <div v-else class="avatar avatar--placeholder">👤</div>
                 </div>
                 <div class="item__main">
-                  <div class="item__email">{{ r.email || '—' }}</div>
+<!--                  <div class="item__email">{{ r.email || '—' }}</div>-->
                   <div v-if="r.name" class="item__secondary">{{ r.name }}</div>
                 </div>
               </div>
@@ -139,30 +139,30 @@
             </li>
           </ul>
         </div>
-        <div v-else key="friends">
-          <div v-if="friendsStore.friends.length === 0" class="empty">У вас пока нет друзей.</div>
-          <ul v-else class="list">
-            <li v-for="f in friendsStore.friends" :key="f.uid" class="item">
-              <div class="item__left">
-                <div class="avatar-wrapper">
-                  <img
-                      v-if="friendsStore.normalizeAvatarPath(f.avatarUrl || f.avatar)"
-                      :src="friendsStore.normalizeAvatarPath(f.avatarUrl || f.avatar)"
-                      alt="Аватар"
-                      class="avatar"
-                      loading="lazy"
-                      referrerpolicy="no-referrer"
-                  />
-                  <div v-else class="avatar avatar--placeholder">👤</div>
-                </div>
-                <div class="item__main">
-                  <div class="item__email">{{ f.email || '—' }}</div>
-                  <div v-if="f.name" class="item__secondary">{{ f.name }}</div>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
+<!--        <div v-else key="friends">-->
+<!--          <div v-if="friendsStore.friends.length === 0" class="empty">У вас пока нет друзей.</div>-->
+<!--          <ul v-else class="list">-->
+<!--            <li v-for="f in friendsStore.friends" :key="f.uid" class="item">-->
+<!--              <div class="item__left">-->
+<!--                <div class="avatar-wrapper">-->
+<!--                  <img-->
+<!--                      v-if="friendsStore.normalizeAvatarPath(f.avatarUrl || f.avatar)"-->
+<!--                      :src="friendsStore.normalizeAvatarPath(f.avatarUrl || f.avatar)"-->
+<!--                      alt="Аватар"-->
+<!--                      class="avatar"-->
+<!--                      loading="lazy"-->
+<!--                      referrerpolicy="no-referrer"-->
+<!--                  />-->
+<!--                  <div v-else class="avatar avatar&#45;&#45;placeholder">👤</div>-->
+<!--                </div>-->
+<!--                <div class="item__main">-->
+<!--                  <div class="item__email">{{ f.email || '—' }}</div>-->
+<!--                  <div v-if="f.name" class="item__secondary">{{ f.name }}</div>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </li>-->
+<!--          </ul>-->
+<!--        </div>-->
       </transition>
     </div>
   </div>
@@ -291,18 +291,7 @@ onMounted(() => {
 
 <style scoped>
 .friends {
-  padding: 20px 10px;
-  max-width: 920px;
-  margin: 0 auto;
   width: 100%;
-}
-
-.panel {
-  background: #fef8e4;
-  border: 3px solid #000;
-  border-radius: 20px;
-  box-shadow: 6px 6px 0 #000;
-  padding: 20px;
 }
 
 .panel + .panel {
@@ -318,7 +307,6 @@ onMounted(() => {
   font-size: 1.5rem;
   color: #000;
   margin-bottom: 14px;
-  text-align: center;
 }
 
 .search-row {
@@ -415,9 +403,10 @@ onMounted(() => {
   gap: 10px;
 }
 
+
 .item {
-  display: grid;
-  grid-template-columns: 1fr auto;
+  display: flex;
+  justify-content: space-between;
   gap: 10px;
   border: 2px solid #000;
   border-radius: 12px;
@@ -544,19 +533,11 @@ onMounted(() => {
 
 <style scoped>
 .friends {
-  padding: 20px 10px;
-  max-width: 920px;
-  margin: 0 auto;
+  padding: 5px 10px;
+  max-width: 767px;
   width: 100%;
 }
 
-.panel {
-  background: #fef8e4;
-  border: 3px solid #000;
-  border-radius: 20px;
-  box-shadow: 6px 6px 0 #000;
-  padding: 20px;
-}
 
 .panel + .panel {
   margin-top: 18px;
@@ -571,7 +552,6 @@ onMounted(() => {
   font-size: 1.5rem;
   color: #000;
   margin-bottom: 14px;
-  text-align: center;
 }
 
 .search-row {
@@ -629,7 +609,6 @@ onMounted(() => {
   display: flex;
   gap: 10px;
   margin: 8px 0 16px 0;
-  flex-wrap: wrap;
 }
 
 .tabs__btn {
@@ -662,21 +641,10 @@ onMounted(() => {
   background: #fde047;
 }
 
-/* LISTS */
 .list {
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-
-.item {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 10px;
-  border: 2px solid #000;
-  border-radius: 12px;
-  background: #fff;
-  padding: 10px 12px;
 }
 
 .item__left {
@@ -695,8 +663,10 @@ onMounted(() => {
 }
 
 .item__secondary {
-  font-size: .9rem;
+  font-size: 1rem;
   color: #6b7280;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
 }
 
 .item__actions {
@@ -733,7 +703,6 @@ onMounted(() => {
   line-height: 1;
 }
 
-/* BUTTONS */
 .btn {
   border: 3px solid #000;
   border-radius: 12px;
@@ -795,5 +764,22 @@ onMounted(() => {
 
 .fade-enter-from, .fade-leave-to {
   opacity: 0;
+}
+
+@media (max-width: 767px) {
+  .item {
+    flex-direction: column;
+  }
+
+  .tabs__btn {
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+  .item__left {
+    padding: 0 10px;
+  }
 }
 </style>

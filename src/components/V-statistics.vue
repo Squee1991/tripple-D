@@ -68,7 +68,6 @@
             <div class="not__active-title">Нет начатых тем</div>
           </div>
         </template>
-
         <template v-else>
           <div class="stats__block lands">
             <div class="lands__header" v-if="selectedRegionKey">

@@ -1,27 +1,15 @@
 <template>
   <div class="page">
-    <div class="page__stats-wrapper"
-        :class="{'is-mobile': isMobile, 'content-open': isMobile && isContentOpen}"
-    >
+    <div class="page__stats-wrapper" :class="{'is-mobile': isMobile, 'content-open': isMobile && isContentOpen}">
       <aside class="sidebar">
         <div class="sb__brand">
           <button @click="backTo" class="btn btn__back">На главную</button>
           <div class="sb__title">Статистика</div>
         </div>
         <nav class="sb__nav">
-          <button
-              class="sb__link"
-              :class="{active: view === 'articles'}"
-              @click="openPanel('articles')"
-          >
-            Артикли
+          <button class="sb__link" :class="{active: view === 'articles'}" @click="openPanel('articles')">Артикли
           </button>
-          <button
-              class="sb__link"
-              :class="{active: view === 'lands'}"
-              @click="openPanel('lands')"
-          >
-            Языковые земли
+          <button class="sb__link" :class="{active: view === 'lands'}" @click="openPanel('lands')">Языковые земли
           </button>
         </nav>
       </aside>
@@ -68,17 +56,15 @@
                   </div>
                 </div>
                 <div class="chips">
-                  <button
-                      v-for="m in MODES"
-                      :key="m"
-                      class="chip chip--mode"
-                      :class="{active:selectedMode===m}"
-                      @click="selectedMode=m"
-                  >
+                  <button v-for="m in MODES" :key="m" class="chip chip--mode" :class="{active:selectedMode===m}"
+                          @click="selectedMode=m">
                     <span class="dot" :class="'dot--'+m"></span>{{ t(nameMode[m]) }}
                   </button>
                 </div>
               </div>
+            </article>
+            <article class="card card--full">
+              <ProgressTable :selected-topic="selectedTopic"/>
             </article>
           </div>
           <div v-else class="empty">Нет начатых тем</div>
@@ -133,18 +119,19 @@ import {nameMap, nameMode} from '../utils/nameMap.js'
 import {userlangStore} from '../store/learningStore.js'
 import {userChainStore} from '../store/chainStore.js'
 import {regions} from '../utils/regions.js'
-import {useRouter} from "vue-router";
+import {useRouter} from 'vue-router'
+import ProgressTable from '../src/components/progress.vue'
 
 const router = useRouter()
 const {t, d} = useI18n()
 const lang = userlangStore()
 const chain = userChainStore()
-const selectedRegionKey = ref('')
+
 const view = ref('articles')
 const backTo = () => router.push('/')
+
 const isMobile = ref(false)
 const isContentOpen = ref(false)
-
 
 function handleResize() {
   isMobile.value = window.innerWidth <= 767
@@ -168,14 +155,14 @@ watchEffect(() => {
 })
 
 function prevTopic() {
-  if (!topics.value.length) return;
-  const i = topics.value.indexOf(selectedTopic.value);
+  if (!topics.value.length) return
+  const i = topics.value.indexOf(selectedTopic.value)
   selectedTopic.value = topics.value[(i - 1 + topics.value.length) % topics.value.length]
 }
 
 function nextTopic() {
-  if (!topics.value.length) return;
-  const i = topics.value.indexOf(selectedTopic.value);
+  if (!topics.value.length) return
+  const i = topics.value.indexOf(selectedTopic.value)
   selectedTopic.value = topics.value[(i + 1) % topics.value.length]
 }
 
@@ -190,28 +177,27 @@ const progressByMode = computed(() => {
   }
   return res
 })
-
 const bars = computed(() => MODES.map(key => ({key, val: progressByMode.value[key] || 0})))
-
 const selectedMode = ref(MODES[0])
 const selectedVal = computed(() => progressByMode.value[selectedMode.value] || 0)
 const colorMap = {article: '#60a5fa', letters: '#f59e0b', wordArticle: '#a78bfa', audio: '#34d399', plural: '#f472b6'}
 const modeColor = computed(() => colorMap[selectedMode.value])
 
+const selectedRegionKey = ref('')
 const regionKeys = computed(() => regions.map(r => String(r.pathTo)))
 watchEffect(() => {
   if (!selectedRegionKey.value && regionKeys.value.length) selectedRegionKey.value = regionKeys.value[0]
 })
 
 function prevRegion() {
-  if (!regionKeys.value.length) return;
-  const i = regionKeys.value.indexOf(selectedRegionKey.value);
+  if (!regionKeys.value.length) return
+  const i = regionKeys.value.indexOf(selectedRegionKey.value)
   selectedRegionKey.value = regionKeys.value[(i - 1 + regionKeys.value.length) % regionKeys.value.length]
 }
 
 function nextRegion() {
-  if (!regionKeys.value.length) return;
-  const i = regionKeys.value.indexOf(selectedRegionKey.value);
+  if (!regionKeys.value.length) return
+  const i = regionKeys.value.indexOf(selectedRegionKey.value)
   selectedRegionKey.value = regionKeys.value[(i + 1) % regionKeys.value.length]
 }
 
@@ -247,7 +233,8 @@ const regionQuestRows = computed(() => regionQuests.value.map(q => {
   const p = questProgressMap.value[q.questId] || {}
   const clamp = n => Math.max(0, Math.min(100, Math.round(n || 0)))
   return {
-    questId: q.questId, title: q.title,
+    questId: q.questId,
+    title: q.title,
     percent: clamp(p.progressPercent),
     correctCount: Number(p.correctCount || 0),
     requiredTasks: Number(p.requiredTasks || 0),
@@ -262,7 +249,7 @@ function formatDate(ts) {
   try {
     return d(new Date(ts), 'short')
   } catch {
-    const dt = new Date(ts);
+    const dt = new Date(ts)
     const y = dt.getFullYear()
     const m = String(dt.getMonth() + 1).padStart(2, '0')
     const d2 = String(dt.getDate()).padStart(2, '0')
@@ -290,7 +277,7 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
   display: flex;
   gap: 14px;
   padding: 20px;
-  position: relative;
+  position: relative
 }
 
 .btn__back {
@@ -299,9 +286,9 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
   font-weight: 600;
   font-family: "Nunito", sans-serif;
   border-radius: 12px;
-  box-shadow: 3px 3px 0 black;
+  box-shadow: 3px 3px 0 #000;
   width: 100%;
-  background: #f1c40f;
+  background: #f1c40f
 }
 
 .donut__wrapper {
@@ -309,8 +296,8 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
   justify-content: center;
   align-items: center;
   height: 160px;
-  border-bottom: 3px solid black;
-  width: 100%;
+  border-bottom: 3px solid #000;
+  width: 100%
 }
 
 .sidebar {
@@ -323,7 +310,7 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
   gap: 12px;
   align-content: start;
   min-width: 300px;
-  height: 100%;
+  height: 100%
 }
 
 .sb__brand {
@@ -333,11 +320,6 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
   gap: 8px
 }
 
-.sb__icon {
-  width: 28px;
-  height: 28px
-}
-
 .sb__title {
   text-align: center;
   margin-bottom: 1.5rem;
@@ -345,7 +327,7 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
   font-family: "Nunito", sans-serif;
   font-size: 2rem;
   padding: 10px 0;
-  font-weight: 600;
+  font-weight: 600
 }
 
 .sb__nav {
@@ -362,21 +344,21 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
   gap: 15px;
   font-size: 1.1rem;
   border-radius: 16px;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition: .2s;
   border: 3px solid transparent;
-  font-weight: 600;
+  font-weight: 600
 }
 
 .sb__link.active {
   background: #4ade80;
-  border: 3px solid black;
-  color: black;
-  box-shadow: 4px 4px 0 black;
+  border: 3px solid #000;
+  color: #000;
+  box-shadow: 4px 4px 0 #000
 }
 
 @media (min-width: 1024px) {
   .sb__link:hover {
-    border: 3px solid black;
+    border: 3px solid #000
   }
 }
 
@@ -384,7 +366,7 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
   flex-grow: 1;
   position: relative;
   display: flex;
-  min-height: 0;
+  min-height: 0
 }
 
 .panel {
@@ -394,43 +376,39 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
   border: 3px solid #000;
   border-radius: 14px;
   box-shadow: 4px 4px 0 #000;
-  padding: 14px;
+  padding: 10px;
   scrollbar-width: thin;
   scrollbar-color: #e3efe1 transparent;
-  scrollbar-gutter: stable both-edges;
+  scrollbar-gutter: stable both-edges
 }
 
 .panel::-webkit-scrollbar {
   width: 4px;
-  position: absolute;
+  position: absolute
 }
 
 .panel::-webkit-scrollbar-track {
-  background: transparent;
+  background: transparent
 }
 
 .panel::-webkit-scrollbar-thumb {
-  background-color: #e8c0c0;
-  border-radius: 10px;
+  background: #e8c0c0;
+  border-radius: 10px
 }
 
 .panel__head {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 12px;
-  padding: 20px;
-  border: 3px solid #000;
-  border-radius: 15px;
-  box-shadow: 4px 4px 0 #000;
+  align-items: start;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px
 }
 
 .panel__top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  gap: 10px
 }
 
 .btn--ghost {
@@ -439,13 +417,12 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
   border-radius: 10px;
   background: #f8fafc;
   font-weight: 800;
-  box-shadow: 2px 2px 0 #000;
+  box-shadow: 2px 2px 0 #000
 }
 
 .panel__title {
   font-size: 2rem;
   font-weight: 900
-
 }
 
 .topic-switch {
@@ -465,7 +442,6 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
   border-radius: 8px
 }
 
-
 .chip__theme {
   padding: 6px 10px;
   border: 2px solid #000;
@@ -473,7 +449,7 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
   background: #4ade80;
   font-weight: 900;
   min-width: 220px;
-  text-align: center;
+  text-align: center
 }
 
 .grid {
@@ -488,7 +464,11 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
   border-radius: 12px;
   box-shadow: 2px 2px 0 #000;
   background: #f8fafc;
-  padding: 20px 15px;
+  padding: 20px 15px
+}
+
+.card--full {
+  grid-column: 1/-1
 }
 
 .card__title {
@@ -498,7 +478,6 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
   font-family: "Nunito", sans-serif
 }
 
-/* Стили для секции "Артикли" */
 .bars {
   display: grid;
   grid-template-columns: 40px 1fr;
@@ -524,7 +503,7 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
   gap: 26px;
   border-bottom: 3px solid #0f172a;
   background: linear-gradient(#e5e7eb 0 0) 0% 0/100% 2px no-repeat, linear-gradient(#e5e7eb 0 0) 0% 25%/100% 2px no-repeat, linear-gradient(#e5e7eb 0 0) 0% 50%/100% 2px no-repeat, linear-gradient(#e5e7eb 0 0) 0% 75%/100% 2px no-repeat;
-  background-position: 0 0, 0 25%, 0 50%, 0 75%;
+  background-position: 0 0, 0 25%, 0 50%, 0 75%
 }
 
 .col {
@@ -534,14 +513,14 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
   border: 2px solid transparent;
   box-sizing: border-box;
   background: #eef2ff;
-  overflow: hidden;            /* <-- чтобы верхняя часть плавно обрезалась */
+  overflow: hidden
 }
 
 .col__fill {
   position: absolute;
   inset: auto 0 0 0;
   height: 0;
-  transition: height .45s ease-in-out;
+  transition: height .45s ease-in-out
 }
 
 .col__bg {
@@ -558,7 +537,7 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
   font-size: 13px;
   font-weight: 900;
   color: #111;
-  pointer-events: none;
+  pointer-events: none
 }
 
 .col--article {
@@ -607,11 +586,11 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
   gap: 8px;
   justify-content: center;
   width: 100%;
-  margin-top: 30px;
+  margin-top: 30px
 }
 
 .chips--bars {
-  margin-top: 30px;
+  margin-top: 30px
 }
 
 .chip--mode {
@@ -661,7 +640,7 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
 .donut {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center
 }
 
 .pie {
@@ -679,17 +658,15 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
   color: #111
 }
 
-/* ===== УЛУЧШЕННЫЕ СТИЛИ ДЛЯ "ЯЗЫКОВЫХ ЗЕМЕЛЬ" ===== */
-
 .summary {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 16px;
-  margin: 16px 0 24px 0;
+  margin: 16px 0 24px
 }
 
 .summary__row {
-  background-color: #f3f4f6;
+  background: #f3f4f6;
   border: 2px solid #000;
   border-radius: 12px;
   padding: 16px;
@@ -697,14 +674,14 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
   display: flex;
   flex-direction: column;
   gap: 4px;
-  box-shadow: 3px 3px 0 #000;
+  box-shadow: 3px 3px 0 #000
 }
 
 .summary__row span {
   font-family: "Nunito", sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  color: #4b5563;
+  color: #4b5563
 }
 
 .summary__row b {
@@ -712,7 +689,7 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
   font-size: 2.25rem;
   font-weight: 800;
   color: #111827;
-  line-height: 1;
+  line-height: 1
 }
 
 .quests {
@@ -720,7 +697,7 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
   margin: 16px 0 0;
   padding: 0;
   display: grid;
-  gap: 16px;
+  gap: 16px
 }
 
 .quest {
@@ -729,29 +706,29 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
   border-radius: 12px;
   padding: 16px;
   box-shadow: 3px 3px 0 #000;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: .2s;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 12px
 }
 
 .quest:hover {
   transform: translate(-2px, -2px);
-  box-shadow: 5px 5px 0 #000;
+  box-shadow: 5px 5px 0 #000
 }
 
 .quest__top {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 12px;
+  gap: 12px
 }
 
 .quest__title {
   font-family: "Nunito", sans-serif;
   font-weight: 800;
   font-size: 1.2rem;
-  color: #1f2937;
+  color: #1f2937
 }
 
 .badge {
@@ -766,22 +743,22 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
   color: #000;
   font-size: 1rem;
   font-weight: 900;
-  flex-shrink: 0;
+  flex-shrink: 0
 }
 
 .quest__meta {
   margin-top: 4px;
-  font-size: 0.8rem;
+  font-size: .8rem;
   color: #6b7280;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 8px;
+  gap: 8px
 }
 
 .pbar {
   position: relative;
-  height: 20px;
+  height: 20px
 }
 
 .pbar progress {
@@ -790,47 +767,29 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
   appearance: none;
   -webkit-appearance: none;
   border-radius: 99px;
-  overflow: hidden;
+  overflow: hidden
 }
 
 .pbar progress::-webkit-progress-bar {
   background: #e5e7eb;
   border: 2px solid #d1d5db;
-  border-radius: 99px;
+  border-radius: 99px
 }
 
 .pbar progress::-webkit-progress-value {
-  background-color: #22c55e;
-  background-image: linear-gradient(
-      45deg,
-      rgba(255, 255, 255, .2) 25%,
-      transparent 25%,
-      transparent 50%,
-      rgba(255, 255, 255, .2) 50%,
-      rgba(255, 255, 255, .2) 75%,
-      transparent 75%,
-      transparent
-  );
+  background: #22c55e;
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
   background-size: 24px 24px;
   border-radius: 99px;
-  transition: width 0.3s ease;
+  transition: width .3s
 }
 
 .pbar progress::-moz-progress-bar {
-  background-color: #22c55e;
-  background-image: linear-gradient(
-      45deg,
-      rgba(255, 255, 255, .2) 25%,
-      transparent 25%,
-      transparent 50%,
-      rgba(255, 255, 255, .2) 50%,
-      rgba(255, 255, 255, .2) 75%,
-      transparent 75%,
-      transparent
-  );
+  background: #22c55e;
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
   background-size: 24px 24px;
   border-radius: 99px;
-  transition: width 0.3s ease;
+  transition: width .3s
 }
 
 .pbar__val {
@@ -839,30 +798,27 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.8rem;
+  font-size: .8rem;
   font-weight: 700;
-  color: white;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .5)
 }
-
-
-/* ===== Медиа-запросы и стили для мобильных устройств ===== */
 
 .is-mobile {
   display: block;
-  padding: 10px;
+  padding: 10px
 }
 
 .is-mobile .sidebar {
   width: 100%;
-  min-width: 0;
+  min-width: 0
 }
 
 .is-mobile .main {
   position: fixed;
   inset: 0;
   padding: 10px;
-  pointer-events: none;
+  pointer-events: none
 }
 
 .is-mobile .panel {
@@ -870,45 +826,45 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
   inset: 0;
   transform: translateX(100%);
   transition: transform .35s ease-in-out;
-  pointer-events: auto;
+  pointer-events: auto
 }
 
 .is-mobile.content-open .panel {
-  transform: translateX(0);
+  transform: translateX(0)
 }
 
 .is-mobile.content-open .sidebar {
-  pointer-events: none;
+  pointer-events: none
 }
 
 @media (max-width: 1023px) {
   .chip {
     flex-grow: 1;
-    text-align: center;
+    text-align: center
   }
 
   .grid {
-    grid-template-columns: 1fr
+    grid-template-columns:1fr
   }
 
   .panel__title {
-    display: none;
+    display: none
   }
 
   .panel__head {
-    justify-content: center;
+    justify-content: center
   }
 }
 
 @media (max-width: 767px) {
   .panel__head {
     align-items: stretch;
-    flex-direction: column;
+    flex-direction: column
   }
 
   .chip {
     flex-grow: 1;
-    text-align: center;
+    text-align: center
   }
 }
 </style>

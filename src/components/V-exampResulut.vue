@@ -24,6 +24,7 @@ const data = ref([
 async function handleShareWithFriend(friendUid) {
   if (!selectedExamId.value || !friendUid) return;
   isSharing.value = true;
+
   try {
     const res = await examStore.shareExamWithFriend(selectedExamId.value, friendUid);
     shareMessage.value = res?.already ? t('examResult.sended') :  t('examResult.sent');
@@ -75,7 +76,6 @@ onMounted(() => {
   examStore.loadArchiveAttempts()
 })
 </script>
-
 <template>
   <div class="exams-compact">
     <ShareExamModal

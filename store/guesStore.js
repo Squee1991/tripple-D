@@ -13,6 +13,7 @@ import {
 } from 'firebase/firestore'
 import { userAuthStore } from './authStore.js'
 import { useAchievementStore } from './achievementStore.js'
+import { dailyStore} from "./store/dailyStore.js";
 
 async function getUser() {
     const auth = getAuth()
@@ -28,7 +29,7 @@ async function getUser() {
 export const useGuessWordStore = defineStore('guessWord', () => {
     const authStore = userAuthStore()
     const db = getFirestore()
-
+    const daily = dailyStore()
     const answer = ref('')
     const masked = ref([])
     const attempts = ref(15)
@@ -48,7 +49,7 @@ export const useGuessWordStore = defineStore('guessWord', () => {
             : null
     )
 
-    const alphabet = 'QWERTZUIOPÜASDFGHJKLÖÄYXCVBNM'.split('')
+    const alphabet = 'QWERTZUIOPÜASDFGHJKLÖÄYXCVBNM-'.split('')
     const loadedWords = ref([])
     const currentWordObj = ref(null)
     const guessedCount = computed(() => guessedWords.value.length)
@@ -225,6 +226,7 @@ export const useGuessWordStore = defineStore('guessWord', () => {
             if (attempts.value === 15 && !guessedPerfectWords.value.includes(word)) guessedPerfectWords.value.push(word)
             if (attempts.value === 1 && !guessedOnLastTryWords.value.includes(word)) guessedOnLastTryWords.value.push(word)
         }
+        try { daily.addGuessed(1) } catch {}
         await saveGuessProgress()
         if (authStore.name) await saveToLeaderboard(authStore.name, guessedWords.value.length)
     })
