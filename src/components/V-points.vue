@@ -6,6 +6,18 @@
         v-model="isArticleOpen"
     />
     <section class="points-card" aria-label="Поинты и уровень">
+        <div class="sub-actions ">
+            <article class="super-card">
+                <div>
+                    <span class="super-card__badge">Подписка</span>
+                </div>
+                <p class="sub__text">Получи максимум от платформы
+                    Обучение, награды, задания, прогресс и многое другое!</p>
+                <button @click="toPayment" class="super-card__cta">
+                    Попробовать
+                </button>
+            </article>
+        </div>
       <header class="points-card__header">
         <h2 class="points__title">Панель игрока</h2>
       </header>
@@ -47,18 +59,7 @@
         <!--          <span class="sub-badge sub-badge&#45;&#45;off">Не активна</span>-->
         <!--        </li>-->
       </ul>
-      <div class="sub-actions">
-        <article class="super-card">
-          <div>
-            <span class="super-card__badge">Подписка</span>
-          </div>
-          <p class="sub__text">Получи максимум от платформы
-            Обучение, награды, задания, прогресс и многое другое!</p>
-          <button @click="toPayment" class="super-card__cta">
-            Попробовать
-          </button>
-        </article>
-      </div>
+
 <!--      <div class="fiends__list-wrapper">-->
 <!--        <h3 class="points-card__title"> Список друзей</h3>-->
 <!--        <ul class="list">-->
@@ -420,11 +421,12 @@ onMounted(() => {
 .super-card {
   position: relative;
   width: 100%;
-  background: var(--bg);
-  border: 4px solid var(--border);
+    background: linear-gradient(to right, #B8860B, #DAA520, #FFD700, #DAA520, #B8860B);
+    background-size: 200% auto;
   border-radius: 18px;
   padding: 16px 16px 14px;
   margin-bottom: 10px;
+    animation: shimmer 5s linear infinite;
 }
 
 .super-card__badge {
@@ -454,11 +456,19 @@ onMounted(() => {
 
 .super-card__cta:hover {
   filter: brightness(1.05);
+    color: #fff; /* Выберите цвет текста */
+    background: #192A56; /* Выберите цвет кнопки */
+    border: 1px solid #111; /* Добавьте тонкий контур */
+    box-shadow: 4px 4px 0 #111;
+    transition: transform .06s ease, box-shadow .06s ease;
+}
+.super-card__cta:hover {
+    filter: brightness(1.2); /* Сделайте кнопку немного ярче */
 }
 
 .super-card__cta:active {
-  transform: translate(3px, 3px);
-  box-shadow: 1px 1px 0 #111;
+    transform: translate(3px, 3px);
+    box-shadow: 1px 1px 0 #111;
 }
 
 .sub__text {
@@ -468,5 +478,6 @@ onMounted(() => {
   padding: 10px 0;
   color: var(--titleColor);
 }
+
 
 </style>

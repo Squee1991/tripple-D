@@ -79,16 +79,16 @@
           <p class="page-subtitle">{{ t('wordDuel.prepare') }}</p>
         </div>
       </div>
-      <div v-if="authStore.isPremium" class="stats-block">
+      <div v-if="!authStore.isPremium" class="stats-block">
         <h3>Твоя статистика по уровню {{ selectedLevel }}</h3>
         <p>Побед: {{ levelStats.wins }}</p>
         <p>Серия побед: {{ levelStats.streaks }}</p>
         <p>Чистые победы: {{ levelStats.cleanSweeps }}</p>
         <p>Без ошибок: {{ levelStats.flawlessWins }}</p>
       </div>
-      <div v-else class="stats-block--locked">
-        <p>🔒 Подключите премиум, чтобы увидеть свою статистику!</p>
-      </div>
+<!--      <div v-else class="stats-block&#45;&#45;locked">-->
+<!--        <p>🔒 Подключите премиум, чтобы увидеть свою статистику!</p>-->
+<!--      </div>-->
     </div>
   </div>
 </template>
@@ -169,20 +169,22 @@ function goBack() {
 }
 
 async function handleFindGameClick(level) {
-  if (!authStore.uid) {
-    showAuthModal.value = true
-    return
-  }
-  if (mode.value === 'online') {
-    gameStore.findGame(level)
-  } else {
-    if (!sentencesStore.db) {
-      await sentencesStore.loadSentences()
-    }
-    router.push({path: '/duel-solo', query: {level}})
-  }
-}
+    // ИЗМЕНЕНИЕ 1: Обновляем выбранный уровень для отображения статистики
+    selectedLevel.value = level
 
+    if (!authStore.uid) {
+        showAuthModal.value = true
+        return
+    }
+    if (mode.value === 'online') {
+        gameStore.findGame(level)
+    } else {
+        if (!sentencesStore.db) {
+            await sentencesStore.loadSentences()
+        }
+        router.push({path: '/duel-solo', query: {level}})
+    }
+}
 watch(() => gameStore.sessionData?.status, (newStatus) => {
   if (mode.value === 'online' && newStatus === 'starting') {
     setTimeout(() => {
@@ -192,12 +194,23 @@ watch(() => gameStore.sessionData?.status, (newStatus) => {
     }, 2000)
   }
 })
+watch(() => authStore.uid, (newUid) => {
+    // Если newUid появился (пользователь вошел в аккаунт),
+    // загружаем его статистику
+    if (newUid) {
+        gameStore.loadUserAchievements();
+    }
+}, { immediate: false }); // immediate: false, чтобы не вызывать сразу, так как это уже делает onMounted
 onMounted(async () => {
-  isLoading.value = true;
-  if (!sentencesStore.db) {
-    await sentencesStore.loadSentences();
-  }
-  isLoading.value = false;
+    isLoading.value = true;
+    // ИЗМЕНЕНИЕ 2: Загружаем статистику пользователя при загрузке компонента
+    if (authStore.uid) {
+        await gameStore.loadUserAchievements()
+    }
+    if (!sentencesStore.db) {
+        await sentencesStore.loadSentences();
+    }
+    isLoading.value = false;
 })
 onUnmounted(() => {
   if (isWaitingForOpponent.value) {

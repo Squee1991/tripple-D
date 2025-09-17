@@ -33,6 +33,7 @@ export const userAuthStore = defineStore('auth', () => {
 	const availableAvatars = ref(['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '12.png', '7.png', '8.png', '9.png', '10.png', '11.png', '13.png', '14.png']);
 	const ownedAvatars = ref(['1.png', '2.png']);
 	const isPremium = ref(false)
+	const achievements = ref(null);
 
 	const initialized = ref(false)
 	let initPromise = null
@@ -92,6 +93,7 @@ export const userAuthStore = defineStore('auth', () => {
 		subscriptionCancelled.value = data.subscriptionCancelled || false
 		providerId.value = data.providerId || ''
 		ownedAvatars.value = data.ownedAvatars || ['1.png', '2.png'];
+		achievements.value = data.achievements || null;
 		if (data.isPremium && !data.gotPremiumBonus) {
 			grantPremiumBonusPoints()
 		}
@@ -327,6 +329,7 @@ export const userAuthStore = defineStore('auth', () => {
 		ownedAvatars,
 		initialized,
 		isGoogleUser,
+		achievements,
 		initAuth,
 		fetchuser,
 		registerUser,
