@@ -10,6 +10,7 @@ import {
 	where,
 	getDocs,
 	getDoc,
+	deleteDoc
 } from 'firebase/firestore'
 import { getAuth } from 'firebase/auth'
 
@@ -19,7 +20,6 @@ function normalizeAvatarPath(v) {
 	if (/^https?:\/\//i.test(s)) return s
 	const clean = s.split(/[?#]/)[0].replace(/^\/+/, '')
 	const file = clean.split('/').pop()
-
 	if (!file) return null
 	return '/images/avatars/' + file
 }
@@ -183,21 +183,25 @@ export const useFriendsStore = defineStore('friends', () => {
 		return Promise.all(
 			items.map(async (it) => {
 				const prof = await getProfile(it.uid)
-				if (!prof) {
-					return it
-				}
+				if (!prof) return it
+
+				const {
+					avatar: _dropAvatar,
+					avatarUrl: _dropAvatarUrl,
+					photoURL: _dropPhotoURL,
+					...restProf
+				} = prof
 
 				return {
 					...it,
-					email: prof.email ?? it.email ?? null,
-					name: prof.name ?? prof.displayName ?? it.name ?? null,
-					avatar: normalizeAvatarPath(
-						prof.avatarUrl ?? prof.avatar ?? prof.photoURL ?? it.avatar ?? null
-					),
+					...restProf,
+					email: restProf.email ?? it.email ?? null,
+					name: restProf.name ?? restProf.displayName ?? it.name ?? null,
 				}
 			})
 		)
 	}
+
 	async function loadFriends() {
 		const myUid = currentUserUid()
 		if (!myUid) {
@@ -224,12 +228,28 @@ export const useFriendsStore = defineStore('friends', () => {
 			loading.value = false
 		}
 	}
+	async function removeFriend(otherUid) {
+		const myUid = currentUserUid()
+		if (!myUid) throw new Error('Не авторизован')
+
+		await deleteDoc(doc(db, 'users', myUid, 'friends', otherUid))
+
+		friends.value = friends.value.filter(f => f.uid !== otherUid)
+		requestsIncoming.value = requestsIncoming.value.filter(f => f.uid !== otherUid)
+		requestsOutgoing.value = requestsOutgoing.value.filter(f => f.uid !== otherUid)
+
+		return true
+	}
+
+
+
 	return {
 		friends,
 		requestsIncoming,
 		requestsOutgoing,
 		loading,
 		error,
+		removeFriend,
 		normalizeAvatarPath,
 		findUserByEmail,
 		sendFriendRequest,

@@ -848,7 +848,7 @@ onUnmounted(() => {
 
 .trainer-app__footer {
   height: auto;
-  min-height: 120px;
+  min-height: 145px;
   display: flex;
   flex-direction: column;
   justify-content: center;
