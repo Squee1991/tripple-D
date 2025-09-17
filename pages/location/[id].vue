@@ -24,11 +24,11 @@
             <div v-if="q._success" class="stamp">ПРОЙДЕНО</div>
             <h3 class="quest__title">{{ t(q.title) }}</h3>
             <p class="quest__description">{{ t(q.description) }}</p>
-            <div v-if="q.details" class="quest-details">
-              <p v-if="q.details.goal"><strong>Цель:</strong> {{ q.details.goal }}</p>
-              <p v-if="q.details.hint"><strong>Подсказка:</strong> {{ q.details.hint }}</p>
-              <p v-if="q.details.level"><strong>Уровень:</strong> {{ q.details.level }}</p>
-            </div>
+<!--            <div v-if="q.details" class="quest-details">-->
+<!--              <p v-if="q.details.goal"><strong>Цель:</strong> {{ q.details.goal }}</p>-->
+<!--              <p v-if="q.details.hint"><strong>Подсказка:</strong> {{ q.details.hint }}</p>-->
+<!--              <p v-if="q.details.level"><strong>Уровень:</strong> {{ q.details.level }}</p>-->
+<!--            </div>-->
             <div  class="quest-meta">
               <span v-if="!q._success">Награда: {{ q.rewards.points }}💎, {{ q.rewards.xp }} XP</span>
               <span v-else> Награда получена</span>

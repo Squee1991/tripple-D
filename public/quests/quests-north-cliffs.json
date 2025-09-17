@@ -774,7 +774,7 @@
   },
   {
     "questId": "reise-hotel-5",
-    "title": "",
+    "title": "questsNorthCliffsFifthQuests.title",
     "progress": "0/15",
     "description": "questsNorthCliffsFifthQuests.description",
     "conditions": {
@@ -1767,11 +1767,11 @@
     ]
   },
   {
-    "questId": "reise-flughafen-1",
-    "title": "",
+    "questId": "reise-flughafen-10",
+    "title": "questsNorthCliffsTenthQuests.title",
     "progress": "0/15",
+    "description": "questsNorthCliffsTenthQuests.description",
     "conditions": {
-      "description": "questsNorthCliffsTenthQuests.description",
       "goal": "questsNorthCliffsTenthQuests.goal",
       "minCorrect": 12,
       "requiredTasks": 15
