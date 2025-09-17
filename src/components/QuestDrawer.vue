@@ -2,7 +2,6 @@
     <teleport to="body">
         <div v-if="open" class="overlay" @click="emit('close')"/>
         <aside :class="['drawer', { open }]">
-
             <header class="head">
                 <div class="npc">
                     <img :src="questAvatar" alt="npc"/>
@@ -12,9 +11,7 @@
                 </div>
                 <button class="x" @click="emit('close')">×</button>
             </header>
-
             <section class="body" v-if="quest">
-                <!-- Печатается ТУТ, в прокручиваемой области -->
                 <TypeWriter
                         :text="quest.description || ''"
                         :speed="26"
@@ -23,7 +20,6 @@
                         :smart-pause="true"
                         @done="typedDone = true"
                 />
-
                 <transition name="fade">
                     <div v-if="typedDone">
                         <ul class="conditions">
@@ -58,7 +54,6 @@ const typedDone = ref(false)
 
 const questAvatar = computed(() => npc)
 
-// перезапуск печати при открытии панели/смене квеста
 watch(() => [props.open, props.quest?.questId], () => {
     typedDone.value = false
 })

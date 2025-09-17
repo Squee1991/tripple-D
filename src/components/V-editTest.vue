@@ -22,7 +22,6 @@ defineEmits(['close', 'action'])
 
 <style scoped>
 
-
 .modal-card {
   width: 270px;
   background: #fff;

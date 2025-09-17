@@ -3,7 +3,6 @@
     <div class="marker" @click="$emit('open')">
         <div class="halo"></div>
         <img class="avatar" :src="avatarUrl" alt="npc"/>
-
          <span class="bang">!</span>
     </div>
 </template>

@@ -1,4 +1,3 @@
-// store/friendsStore.js
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
 import {
@@ -104,10 +103,6 @@ export const useFriendsStore = defineStore('friends', () => {
 			await acceptRequest(theirUid)
 			return true
 		}
-		// --- ИЗМЕНЕНИЕ ДЛЯ РЕШЕНИЯ ЗАДАЧИ ---
-		// Мы по-прежнему копируем данные один раз при создании запроса,
-		// чтобы UI мог сразу что-то показать, не дожидаясь гидрации.
-		// Актуальные данные будут подгружены позже в loadFriends.
 		const theirProfile = user
 		const myProfile = await getProfile(myUid)
 		const theirEmail = theirProfile.email || null
@@ -167,7 +162,6 @@ export const useFriendsStore = defineStore('friends', () => {
 		return true
 	}
 
-	// --- ЛОГИКА ОСТАЛАСЬ БЕЗ ИЗМЕНЕНИЙ, КАК ВЫ И ПРОСИЛИ ---
 	async function declineRequest(fromUid) {
 		const myUid = currentUserUid()
 		if (!myUid) throw new Error('Не авторизован')
@@ -185,17 +179,14 @@ export const useFriendsStore = defineStore('friends', () => {
 		return true
 	}
 
-	// --- ИЗМЕНЕНИЕ ДЛЯ РЕШЕНИЯ ЗАДАЧИ ---
-	// Функция `hydrateMissing` заменена на эту. Она всегда загружает свежий профиль
-	// и обновляет данные (имя, аватар) поверх тех, что уже есть.
 	async function hydrateWithLatestData(items) {
 		return Promise.all(
 			items.map(async (it) => {
 				const prof = await getProfile(it.uid)
-				if (!prof) { // Если профиль не найден (удален), оставляем старые данные
+				if (!prof) {
 					return it
 				}
-				// Возвращаем старые данные 'it', перезаписав их свежими данными из 'prof'
+
 				return {
 					...it,
 					email: prof.email ?? it.email ?? null,
