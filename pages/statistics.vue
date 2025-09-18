@@ -3,13 +3,18 @@
     <div class="page__stats-wrapper" :class="{'is-mobile': isMobile, 'content-open': isMobile && isContentOpen}">
       <aside class="sidebar">
         <div class="sb__brand">
-          <button @click="backTo" class="btn btn__back">На главную</button>
-          <div class="sb__title">Статистика</div>
+          <button @click="backTo" class="btn btn__back">{{ t('articlesStatistics.toMain')}}</button>
+          <div class="sb__title">{{ t('articlesStatistics.stats')}}</div>
         </div>
         <nav class="sb__nav">
-          <button class="sb__link" :class="{active: view === 'articles'}" @click="openPanel('articles')">Артикли
+          <button class="sb__link" :class="{active: view === 'articles'}" @click="openPanel('articles')">
+            {{ t('articlesStatistics.navFirst')}}
           </button>
-          <button class="sb__link" :class="{active: view === 'lands'}" @click="openPanel('lands')">Языковые земли
+          <button class="sb__link" :class="{active: view === 'lands'}" @click="openPanel('lands')">
+            {{ t('articlesStatistics.navSecond')}}
+          </button>
+          <button class="sb__link" :class="{active: view === 'thematic'}" @click="openPanel('thematic')">
+            {{ t('articlesStatistics.navThird')}}
           </button>
         </nav>
       </aside>
@@ -17,8 +22,8 @@
         <section v-if="view==='articles'" class="panel">
           <header class="panel__head">
             <div class="panel__top">
-              <h1 class="panel__title">Артикли</h1>
-              <button v-if="isMobile" class="btn btn--ghost" @click="closePanel">Скрыть</button>
+              <h1 class="panel__title">{{ t('articlesStatistics.navFirst')}}</h1>
+              <button v-if="isMobile" class="btn btn--ghost" @click="closePanel">{{ t('articlesStatistics.hide')}}</button>
             </div>
             <div class="topic-switch" v-if="hasAnyTopic">
               <button class="nav" @click="prevTopic"><img src="../assets/images/arrow-prew.svg" alt=""/></button>
@@ -28,7 +33,7 @@
           </header>
           <div v-if="hasAnyTopic" class="grid">
             <article class="card">
-              <h3 class="card__title">Вертикальный бар</h3>
+              <h3 class="card__title">{{ t('articlesStatistics.verticalBar')}}</h3>
               <div class="bars">
                 <div class="bars__scale">
                   <span v-for="m in [100,75,50,25,0]" :key="m">{{ m }}%</span>
@@ -48,7 +53,7 @@
               </div>
             </article>
             <article class="card">
-              <h3 class="card__title">Круговая диаграмма</h3>
+              <h3 class="card__title">{{ t('articlesStatistics.circle')}}</h3>
               <div class="donut">
                 <div class="donut__wrapper">
                   <div class="pie" :style="{'--pie-pct': selectedVal + '%','--pie-color': modeColor}">
@@ -56,8 +61,13 @@
                   </div>
                 </div>
                 <div class="chips">
-                  <button v-for="m in MODES" :key="m" class="chip chip--mode" :class="{active:selectedMode===m}"
-                          @click="selectedMode=m">
+                  <button
+                      v-for="m in MODES"
+                      :key="m"
+                      class="chip chip--mode"
+                      :class="{active:selectedMode===m}"
+                      @click="selectedMode=m"
+                  >
                     <span class="dot" :class="'dot--'+m"></span>{{ t(nameMode[m]) }}
                   </button>
                 </div>
@@ -67,13 +77,24 @@
               <ProgressTable :selected-topic="selectedTopic"/>
             </article>
           </div>
-          <div v-else class="empty">Нет начатых тем</div>
+          <div v-else class="empty">{{ t('articlesStatistics.notTopics')}}</div>
+        </section>
+        <section v-else-if="view==='thematic'" class="panel">
+          <header class="panel__head">
+            <div class="panel__top">
+              <h1 class="panel__title">{{ t('articlesStatistics.navThird')}}</h1>
+              <button v-if="isMobile" class="btn btn--ghost" @click="closePanel">{{ t('articlesStatistics.hide')}}</button>
+            </div>
+          </header>
+          <article class="card card--full">
+            <ThematicLevels/>
+          </article>
         </section>
         <section v-else class="panel">
           <header class="panel__head">
             <div class="panel__top">
-              <h1 class="panel__title">Языковые земли</h1>
-              <button v-if="isMobile" class="btn btn--ghost" @click="closePanel">Скрыть</button>
+              <h1 class="panel__title">{{ t('articlesStatistics.navSecond')}}</h1>
+              <button v-if="isMobile" class="btn btn--ghost" @click="closePanel">{{ t('articlesStatistics.hide')}}</button>
             </div>
             <div class="topic-switch" v-if="selectedRegionKey">
               <button class="nav" @click="prevRegion"><img src="../assets/images/arrow-prew.svg" alt=""/></button>
@@ -81,11 +102,12 @@
               <button class="nav" @click="nextRegion"><img src="../assets/images/arrow-next.svg" alt=""/></button>
             </div>
           </header>
+
           <article class="card">
-            <h3 class="card__title">Сводка</h3>
+            <h3 class="card__title">{{ t('articlesStatistics.summary')}}</h3>
             <div class="summary">
-              <div class="summary__row"><span>Квестов</span><b>{{ totalRegionQuests }}</b></div>
-              <div class="summary__row"><span>Завершено</span><b>{{ completedRegionQuests }} / {{
+              <div class="summary__row"><span>{{ t('articlesStatistics.quests')}}</span><b>{{ totalRegionQuests }}</b></div>
+              <div class="summary__row"><span>{{ t('articlesStatistics.finished')}}</span><b>{{ completedRegionQuests }} / {{
                   totalRegionQuests
                 }}</b></div>
             </div>
@@ -100,8 +122,8 @@
                   <span class="pbar__val">{{ q.percent }}%</span>
                 </div>
                 <div class="quest__meta">
-                  <span>Верных: {{ q.correctCount }}/{{ q.requiredTasks }}</span>
-                  <span v-if="q.updatedAtMs">• {{ formatDate(q.updatedAtMs) }}</span>
+                  <span>{{ t('articlesStatistics.rightAnswers')}} {{ q.correctCount }}/{{ q.requiredTasks }}</span>
+<!--                  <span v-if="q.updatedAtMs">• {{ formatDate(q.updatedAtMs) }}1</span>-->
                 </div>
               </li>
             </ul>
@@ -121,15 +143,14 @@ import {userChainStore} from '../store/chainStore.js'
 import {regions} from '../utils/regions.js'
 import {useRouter} from 'vue-router'
 import ProgressTable from '../src/components/progress.vue'
+import ThematicLevels from '../src/components/thematic-statistic.vue'
 
 const router = useRouter()
 const {t, d} = useI18n()
 const lang = userlangStore()
 const chain = userChainStore()
-
 const view = ref('articles')
 const backTo = () => router.push('/')
-
 const isMobile = ref(false)
 const isContentOpen = ref(false)
 
@@ -218,7 +239,7 @@ async function fetchAllRegionQuests() {
         ...questsByRegion.value,
         [key]: list.map(q => ({
           questId: String(q.questId ?? q.id ?? ''),
-          title: q.title || q.name || `Квест #${q.questId}`
+          title: q.title || q.name || `Quest #${q.questId}`
         }))
       }
     } catch {
@@ -242,6 +263,7 @@ const regionQuestRows = computed(() => regionQuests.value.map(q => {
     updatedAtMs: Number(p.updatedAtMs || 0)
   }
 }))
+
 const totalRegionQuests = computed(() => regionQuests.value.length)
 const completedRegionQuests = computed(() => regionQuestRows.value.filter(r => r.success || r.percent >= 100).length)
 
@@ -271,6 +293,7 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
 </script>
 
 <style scoped>
+
 .page__stats-wrapper {
   height: 100vh;
   overflow: hidden;
@@ -844,7 +867,7 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
   }
 
   .grid {
-    grid-template-columns:1fr
+    grid-template-columns: 1fr
   }
 
   .panel__title {

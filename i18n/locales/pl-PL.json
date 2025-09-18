@@ -2,11 +2,205 @@
   "preloader": {
     "value": "Zostaniesz przekierowany na stronę główną..."
   },
+  "articleTable": {
+    "title": "Postęp według tematu:",
+    "word": "Słowo",
+    "back": "Wstecz",
+    "forward": "Dalej",
+    "choice": "Wybierz temat, aby zobaczyć swój postęp!",
+    "modeArticle": "Rodzajnik",
+    "modeLetters": "Litery",
+    "modeWordArticle": "Słowo+rodzajnik",
+    "modeAudio": "Audio",
+    "modePlural": "L.mn.",
+    "learned": "Nauczone",
+    "wrong": "Błąd",
+    "notLearned": "Nienauczone"
+  },
+  "articlesStatistics": {
+    "toMain": "Na główną",
+    "stats": "Statystyka",
+    "navFirst": "Rodzajniki",
+    "navSecond": "Językowe krainy",
+    "navThird": "Poziomy tematyczne",
+    "articles": "Rodzajniki",
+    "hide": "Ukryj",
+    "verticalBar": "Pasek pionowy",
+    "circle": "Diagram kołowy",
+    "notTopics": "Brak rozpoczętych tematów",
+    "summary": "Podsumowanie",
+    "quests": "Questów",
+    "finished": "Zakończone",
+    "rightAnswers": "Poprawne:"
+  },
+  "thematicStatistics": {
+    "title": "Poziomy tematyczne",
+    "modules": "Łącznie modułów",
+    "module": "Moduł ",
+    "done": "Ukończono",
+    "progress": "Postęp",
+    "available": "Dostępne",
+    "closed": "Zamknięte",
+    "level": "Poziom",
+    "noData": "Brak danych dla tego tematu"
+  },
+  "examIndexPage": {
+    "notAllowedTitle": "Testy są dostępne tylko dla kont z subskrypcją",
+    "hint": "Używamy automatycznego systemu rozpoznawania mowy. Mów wyraźnie blisko mikrofonu.",
+    "toMain": "Strona główna",
+    "choice": "Wybierz poziom i zacznij ćwiczyć wszystkie moduły:",
+    "to": "Przejdź do",
+    "buy": "Kup"
+  },
+  "examLevelCardA1": {
+    "title": "Poziom - A1",
+    "textOne": "📖 Lesen — krótkie teksty",
+    "textTwo": "🎧 Hören — proste nagrania",
+    "textThree": "✍️ Schreiben — listy i formularze",
+    "textFour": "🗣️ Sprechen — mini dialogi"
+  },
+  "examLevelCardA2": {
+    "title": "Poziom - A2",
+    "textOne": "📖 Bardziej złożone teksty",
+    "textTwo": "🎧 Dialogi z codzienności",
+    "textThree": "✍️ Pisanie e-maili i notatek",
+    "textFour": "🗣️ Odpowiedzi na pytania osobiste"
+  },
+  "examLevelCardB1": {
+    "title": "Poziom - B1",
+    "textOne": "📖 Wiadomości, artykuły",
+    "textTwo": "🎧 Długie dialogi i opinie",
+    "textThree": "✍️ Pisanie listów formalnych",
+    "textFour": "🗣️ Dyskusje i argumenty"
+  },
+  "examLevelCardB2": {
+    "title": "Poziom - B2",
+    "textOne": "📖 Teksty na tematy abstrakcyjne",
+    "textTwo": "🎧 Wiadomości i wystąpienia",
+    "textThree": "✍️ Eseje, raporty i instrukcje",
+    "textFour": "🗣️ Uzasadniona wypowiedź"
+  },
+  "friendList": {
+    "title": "Lista znajomych",
+    "profile": "Profil",
+    "delete": "Usuń",
+    "list": "Powrót do listy znajomych",
+    "findEmail": "Znajdź znajomych po emailu",
+    "placeholder": "Wpisz email znajomego",
+    "find": "Szukaj",
+    "searching": "Wyszukiwanie...",
+    "in": "Przychodzące",
+    "out": "Wychodzące",
+    "hover": "Zaproszenie do znajomych",
+    "sending": "Wysyłanie…",
+    "add": "Dodaj",
+    "waiting": "Oczekiwanie",
+    "accept": "Akceptuj",
+    "reject": "Odrzuć",
+    "added": "Już w znajomych",
+    "empty": "Brak przychodzących zaproszeń."
+  },
+  "prepositionsIndexPage": {
+    "tipsTitle": "Wskazówki do tematu",
+    "btnBack": "Strona główna",
+    "prepositionsTitleNav": "Przyimki według przypadków",
+    "type": "TYP PRZYPADKU",
+    "rule": "Krótka zasada",
+    "examples": "Przykłady"
+  },
+  "nominativ": {
+    "rule": "Specjalnych przyimków dla mianownika prawie nie ma. Ten przypadek zwykle używany jest dla podmiotu oraz po czasownikach sein / werden / bleiben.",
+    "tipOne": "Nominativ odpowiada na pytania Wer? / Was?",
+    "tipTwo": "Po sein, werden, bleiben — orzecznik stoi w mianowniku.",
+    "tipThree": "Jeśli jest przyimek, prawie nigdy to nie jest mianownik.",
+    "translateExampleOne": "To jest stół.",
+    "translateExampleTwo": "Mężczyzna jest nauczycielem.",
+    "translateExampleThree": "Berlin jest stolicą.",
+    "practiceTitle": "Ćwiczenia: Nominativ",
+    "practiceDescription": "Określ użycie mianownika bez przyimków.",
+    "start": "Start"
+  },
+  "akkusativ": {
+    "rule": "Te przyimki zawsze wymagają biernika: durch, für, gegen, ohne, um, bis, a także entlang (często jako postpozycja).",
+    "tipOne": "Trik: FÜR, UM, DURCH, GEGEN, OHNE, (BIS), ENTLANG.",
+    "tipTwo": "Ruch „dokąd” często wyrażany jest biernikiem.",
+    "tipThree": "bis zwykle bez rodzajnika: bis Montag, bis Berlin.",
+    "tipFour": "entlang — jako postpozycja: den Fluss entlang.",
+    "translateOne": "Idziemy przez park.",
+    "translateTwo": "Prezent dla nauczyciela.",
+    "translateThree": "Jestem przeciwko planowi.",
+    "translateFour": "On idzie bez parasola.",
+    "translateFive": "Siedzimy wokół stołu.",
+    "translateSix": "Zostaję do następnego poniedziałku.",
+    "translateSeven": "Idziemy wzdłuż rzeki.",
+    "practiceTitle": "Ćwiczenia: Akkusativ",
+    "practiceDescription": "Utrwal przyimki, które wymagają biernika.",
+    "start": "Start"
+  },
+  "dativ": {
+    "rule": "Te przyimki zawsze wymagają celownika: aus, außer, bei, mit, nach, seit, von, zu, gegenüber.",
+    "tipOne": "Podstawowy zestaw: bei, mit, nach, seit, von, zu.",
+    "tipTwo": "Stan „gdzie?” często wyrażany jest celownikiem.",
+    "tipThree": "gegenüber może stać po rzeczowniku: dem Haus gegenüber.",
+    "translateOne": "On wychodzi z domu.",
+    "translateTwo": "Oprócz dziecka nikogo nie było.",
+    "translateThree": "Mieszkam u rodziców.",
+    "translateFour": "Jedziemy samochodem.",
+    "translateFive": "Po jedzeniu uczymy się.",
+    "translateSix": "Uczę się niemieckiego już rok.",
+    "translateSeven": "Pociąg odjeżdża ze stacji.",
+    "translateEight": "Idę do szkoły.",
+    "translateNine": "Naprzeciwko domu jest park.",
+    "practiceTitle": "Ćwiczenia: Dativ",
+    "practiceDescription": "Powtórz przyimki, które wymagają celownika.",
+    "start": "Start"
+  },
+  "genitiv": {
+    "rule": "Te przyimki wymagają dopełniacza: statt, trotz, während, wegen, außerhalb, innerhalb, jenseits/diesseits, aufgrund.",
+    "tipOne": "W języku potocznym dopełniacz często zastępuje się von + celownik.",
+    "tipTwo": "Rodzajniki: des/eines; rzeczowniki często dostają końcówkę -s/-es.",
+    "tipThree": "Przymiotniki w dopełniaczu mają końcówkę -en.",
+    "translateOne": "Zamiast cukru biorę miód.",
+    "translateTwo": "Mimo deszczu idziemy na spacer.",
+    "translateThree": "Podczas lekcji telefon jest wyłączony.",
+    "translateFour": "Z powodu zimna zostajemy w domu.",
+    "translateFive": "Poza miastem jest ciszej.",
+    "translateSix": "W ciągu tygodnia otrzymasz odpowiedź.",
+    "translateSeven": "Po tamtej stronie rzeki jest wieś.",
+    "translateEight": "Z powodu prac drogowych droga jest zamknięta.",
+    "practiceTitle": "Ćwiczenia: Genitiv",
+    "practiceDescription": "Utrwal użycie przyimków z dopełniaczem.",
+    "start": "Start"
+  },
+  "archiveExam": {
+    "title": "Wynik testu",
+    "btnBack": "← Wstecz",
+    "loading": "Ładowanie…",
+    "level": "Poziom:",
+    "status": "Status:",
+    "start": "Początek:",
+    "score": "Średni wynik:"
+  },
+  "dailyPanel": {
+    "title": "Codzienne zadania",
+    "loading": "Ładowanie…"
+  },
   "hoverTitle": {
     "tips": "Wskazówki do tematu",
     "duelInfo": "Zasady gry",
     "sound": "Odtwórz przykład",
-    "ach": "Informacje o osiągnięciach"
+    "ach": "Informacje o osiągnięciach",
+    "articles": "Artiklusy",
+    "level": "Poziom"
+  },
+  "accountPanel": {
+    "title": "Panel uczestnika",
+    "articles": "Artiklusy",
+    "level": "Poziom",
+    "stats": "Statystyki",
+    "premium": "Subskrypcja",
+    "premDescription": "Wykorzystaj maksimum z platformy. Nauka, nagrody, zadania, postęp i wiele więcej!",
+    "try": "Wypróbuj"
   },
   "achModal": {
     "title": "Osiągnięcia to nagrody za Twój postęp",
@@ -15,6 +209,24 @@
   "modalVerbsTipsTitle": {
     "tipsTitle": "Przydatne wskazówki:"
   },
+  "locationsMenu": {
+    "title": "Mapa językowych krain",
+    "access": "Dostęp otwarty",
+    "accessWithLevel": "Dostęp od poziomu",
+    "choose": "Wybierz"
+  },
+  "locationNames": {
+    "east-plain": "Wschodnia równina",
+    "stone-reach": "Kamienny kres",
+    "wind-valley": "Dolina wiatrów",
+    "lake-ruins": "Ruiny jeziora",
+    "north-cliffs": "Północne klify",
+    "storm-coast": "Burzowe wybrzeże"
+  },
+  "examPage": {
+    "examHint": "Używamy automatycznego systemu rozpoznawania mowy. Mów wyraźnie blisko mikrofonu."
+  },
+
   "friendExam": {
     "title": "Ogólne testy od innych uczestników",
     "btnBack": "Na stronę główną",
@@ -304,7 +516,7 @@
   },
   "cabinetSidebar": {
     "valueOne": "Ustawienia konta",
-    "valueTwo": "Postęp w artykułach",
+    "valueTwo": "Przyjaciele",
     "valueThree": "Nagrody",
     "valueFour": "Archiwum egzaminów"
   },
@@ -357,7 +569,10 @@
     "checkPassword": "Wprowadź hasło, aby potwierdzić usunięcie konta",
     "checkGoogle": "Zalogowałeś się przez Google. W celu usunięcia konta otworzy się okno ponownej autoryzacji.",
     "deleteAccBtnAccept": "Usuń",
-    "deleteAccBtnReject": "Anuluj"
+    "deleteAccBtnReject": "Anuluj",
+    "boughtAvatar": "Awatar kupiony",
+    "notEnoughtArticles": "Za mało Artiklusów",
+    "boughtBtn": "Ok"
   },
   "articleOverlay": {
     "title": "Czym jest Artikleus i jak go zdobyć",
@@ -1348,6 +1563,7 @@
     "prev": "Wprowadzenie",
     "rules": "Zasady",
     "artRules": "Ćwiczenie rodzajników",
+    "prepositions": "Ćwiczenia z przyimków",
     "adjectiveTheory": "Teoria i zasady",
     "adjectivesBasic": "Podstawy",
     "declination": "Odmiana",

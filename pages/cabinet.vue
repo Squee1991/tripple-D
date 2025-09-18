@@ -195,12 +195,26 @@
     </div>
     <div v-if="isPurchaseModalOpen" class="modal-overlay" @click.self="isPurchaseModalOpen = false">
       <div class="modal-card">
-        <div class="modal-title">{{ t('cabinet.buyAvatar') }}</div>
-        <p class="modal-text">{{ t('cabinet.costs') }} <b>{{ t('cabinet.price') }}</b></p>
-        <div class="modal-actions">
-          <button class="btn btn-success" @click="confirmPurchase">{{ t('cabinet.buyAvatarBtn') }}</button>
-          <button class="btn" @click="isPurchaseModalOpen = false">{{ t('cabinet.notBuyAvatarBtn') }}</button>
-        </div>
+        <template v-if="purchaseState === 'success'">
+          <div class="modal-title">{{ t('cabinet.boughtAvatar')}}</div>
+          <div class="modal-actions">
+            <button class="btn btn-success" @click="closePurchaseOk">{{ t('cabinet.boughtBtn')}}</button>
+          </div>
+        </template>
+        <template v-else-if="purchaseState === 'insufficient'">
+          <div class="modal-title">{{ t('cabinet.notEnoughtArticles')}}</div>
+          <div class="modal-actions">
+            <button class="btn" @click="closePurchaseOk">{{ t('cabinet.boughtBtn')}}</button>
+          </div>
+        </template>
+        <template v-else>
+          <div class="modal-title">{{ t('cabinet.buyAvatar') }}</div>
+          <p class="modal-text">{{ t('cabinet.costs') }} <b>{{ t('cabinet.price') }}</b></p>
+          <div class="modal-actions">
+            <button class="btn btn-success" @click="confirmPurchase">{{ t('cabinet.buyAvatarBtn') }}</button>
+            <button class="btn" @click="isPurchaseModalOpen = false">{{ t('cabinet.notBuyAvatarBtn') }}</button>
+          </div>
+        </template>
       </div>
     </div>
     <div v-if="isDeleteModalOpen" class="modal-overlay" @click.self="isDeleteModalOpen = false">
@@ -260,7 +274,7 @@ import {useFriendsStore} from '../../store/friendsStore.js'
 
 const {t, locale} = useI18n()
 const router = useRouter()
-
+const purchaseState = ref('default')
 const authStore = userAuthStore()
 const learningStore = userlangStore()
 const achievementStore = useAchievementStore()
@@ -277,10 +291,9 @@ function openFriendSearchModal() {
 
 const TAB_ITEMS = [
   {key: 'info', label: t('cabinetSidebar.valueOne'), icon: UserIcon},
-  {key: 'friends', label: 'Друзья', icon: FriendsIcon},
+  {key: 'friends', label: t('cabinetSidebar.valueTwo'), icon: FriendsIcon},
   {key: 'award', label: t('cabinetSidebar.valueThree'), icon: AwardsIcon},
   {key: 'archive', label: t('cabinetSidebar.valueFour'), icon: Folder },
-  // {key: 'friends', label: 'Список друзей', icon: Find },
 ]
 
 const ACCORDIONS = ref([
@@ -418,19 +431,21 @@ function goToFaq() { router.push('/faq') }
 
 function openPurchaseModal(name) {
   purchaseAvatarName.value = name
+  purchaseState.value = 'default'
   isPurchaseModalOpen.value = true
 }
 
 function selectAvatar(name) { selectedAvatarName.value = name }
 
 async function confirmPurchase() {
-  try {
-    await authStore.purchaseAvatar(purchaseAvatarName.value)
+  const status = await authStore.purchaseAvatar(purchaseAvatarName.value)
+  if (status === 'success' || status === 'owned') {
     selectedAvatarName.value = purchaseAvatarName.value
-    isPurchaseModalOpen.value = false
-  } catch (err) {
-    alert(err.message)
-    isPurchaseModalOpen.value = false
+    purchaseState.value = 'success'
+
+  } else if (status === 'insufficient') {
+    purchaseState.value = 'insufficient'
+    isPurchaseModalOpen.value = true
   }
 }
 
@@ -456,6 +471,13 @@ async function confirmDeleteAccount() {
     if (!deletePasswordField.value.name) deletePasswordField.value.name = 'deletePassword'
     mapErrors([deletePasswordField.value], err?.code || 'auth/unknown')
   }
+}
+
+function closePurchaseOk() {
+  isPurchaseModalOpen.value = false
+  isAvatarModalOpen.value = false
+  purchaseState.value = 'default'
+  authStore.clearNotEnoughArticle?.()
 }
 
 const isGoogleUser = computed(() => authStore.isGoogleUser)

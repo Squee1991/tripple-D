@@ -4,9 +4,7 @@
       <div class="fiends__list-wrapper">
         <div class="friends__list-header">
           <div class="add__inner">
-            <button type="button" class="friend_list-btn" @click="openProfileUid = null">
-              К списку друзей
-            </button>
+            <button type="button" class="friend_list-btn" @click="openProfileUid = null">{{ t('friendList.list')}}</button>
           </div>
         </div>
         <FriendPanel
@@ -15,13 +13,12 @@
         />
       </div>
     </template>
-
     <template v-else>
       <div v-if="showList" class="fiends__list-wrapper">
         <div class="friends__list-header">
-          <h3 class="points-card__title">Список друзей</h3>
+          <h3 class="points-card__title">{{ t('friendList.title')}}</h3>
           <div class="add__inner">
-            <div class="friends__incoming" v-if="friendsStore.requestsIncoming.length">
+            <div :title="t('friendList.hover')" class="friends__incoming" v-if="friendsStore.requestsIncoming.length">
               {{ friendsStore.requestsIncoming.length }}
             </div>
             <button @click="pathToFriends" type="button" class="add__friends">
@@ -50,15 +47,13 @@
       </div>
       <div v-else class="fiends__add-wrapper">
         <div class="friend_add__btn-wrapper">
-          <button type="button" @click="toListFriends" class="friend_list-btn">К списку друзей</button>
+          <button type="button" @click="toListFriends" class="friend_list-btn">{{ t('friendList.list')}}</button>
         </div>
         <SearchFriend/>
       </div>
     </template>
   </div>
 </template>
-
-
 <script setup>
 import { ref } from "vue";
 import {useFriendsStore} from '../../store/friendsStore.js'
@@ -74,10 +69,11 @@ const friendsStore = useFriendsStore()
 const openMenuId = ref(null)
 const closeWindow = ref(false)
 const openProfileUid = ref(null)
-const friendEditModal = ref([
-  {icon: Profile, alt: 'Profile_icon', text: 'Профиль'},
-  {icon: Trash, alt: 'delete_icon', text: 'Удалить'},
-])
+const { t } = useI18n()
+const friendEditModal = [
+  {icon: Profile, alt: 'Profile_icon', text: t('friendList.profile')},
+  {icon: Trash, alt: 'delete_icon', text: t('friendList.delete')},
+]
 
 const selectedFriend = computed(() => friendsStore.friends.find(f => String(f.uid) === String(openProfileUid.value)))
 

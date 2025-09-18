@@ -40,7 +40,6 @@ import { guessAchievment } from '../src/achieveGroup/guessAchieve/guessAchievmen
 import { useQuizStore } from '../store/adjectiveStore.js'
 
 export const useAchievementStore = defineStore('achievementStore', () => {
-    // --- 1) Собираем все группы с категорией ---
     const rawGroups = [
         ...typeVerbs.map(g => ({ category: 'typeVerbs', ...g })),
         ...modalVerbs.map(g => ({ category: 'modalVerbs', ...g })),

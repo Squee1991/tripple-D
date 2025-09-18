@@ -1,9 +1,9 @@
 <template>
   <div v-if="selectedTopic" class="progress-table">
-    <h3 class="pt__title">Прогресс по теме: {{ t(nameMap[selectedTopic]) || selectedTopic }}</h3>
+    <h3 class="pt__title">{{t('articleTable.title')}} {{ t(nameMap[selectedTopic]) || selectedTopic }}</h3>
     <div class="word-table">
       <div class="word-row header">
-        <div class="word-cell word-ru">Слово</div>
+        <div class="word-cell word-ru">{{t('articleTable.word')}}</div>
         <div v-for="mode in learningModes" :key="mode.key" class="word-cell mode-label">
           {{ mode.label }}
         </div>
@@ -18,13 +18,13 @@
       </div>
     </div>
     <div class="pagination" v-if="totalWords > wordsPerPage">
-      <button @click="prevPage" :disabled="currentPage === 1">Назад</button>
+      <button @click="prevPage" :disabled="currentPage === 1">{{t('articleTable.back')}}</button>
       <span>{{ currentPage }} / {{ totalPages }}</span>
-      <button @click="nextPage" :disabled="currentPage >= totalPages">Вперед</button>
+      <button @click="nextPage" :disabled="currentPage >= totalPages">{{t('articleTable.forward')}}</button>
     </div>
   </div>
   <div v-else class="placeholder">
-    <p>Выберите тему, чтобы увидеть ваш прогресс!</p>
+    <p>{{t('articleTable.choice')}}</p>
   </div>
 </template>
 
@@ -39,11 +39,11 @@ const {t} = useI18n()
 const store = userlangStore()
 
 const learningModes = [
-  {key: 'article', label: 'Артикль'},
-  {key: 'letters', label: 'Буквы'},
-  {key: 'wordArticle', label: 'Слово + Артикль'},
-  {key: 'audio', label: 'Аудио'},
-  {key: 'plural', label: 'Мн. число'}
+  {key: 'article', label: t('articleTable.modeArticle')},
+  {key: 'letters', label: t('articleTable.modeLetters')},
+  {key: 'wordArticle', label: t('articleTable.modeWordArticle')},
+  {key: 'audio', label: t('articleTable.modeAudio')},
+  {key: 'plural', label: t('articleTable.modePlural')}
 ]
 
 const currentPage = ref(1)
@@ -66,7 +66,7 @@ function nextPage() {
 }
 
 const getStatusIcon = s => s === true ? '✅' : s === false ? '❌' : '⏳'
-const getTooltip = s => s === true ? 'Изучено' : s === false ? 'Ошибка' : 'Не изучено'
+const getTooltip = s => s === true ? t('articleTable.learned') : s === false ? t('articleTable.wrong') : t('articleTable.notLearned')
 
 watch(() => props.selectedTopic, () => {
   currentPage.value = 1

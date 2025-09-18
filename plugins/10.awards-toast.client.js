@@ -119,7 +119,7 @@ export default defineNuxtPlugin((nuxtApp) => {
         const name = resolveName(a)
         const msg = name
             ? `🏆 ${t('Достижение')} «${name}» ${t('выполнено')}!`
-            : ''
+            : null
 
         toast.success(msg, { toastId: key, containerId: CONTAINER_ID })
         await markShown(key)
