@@ -26,6 +26,7 @@ export const userAuthStore = defineStore('auth', () => {
 	const providerId = ref('')
 	const avatar = ref(null)
 	const uid = ref(null)
+	const notEnoughArticle = ref(false)
 	const gotPremiumBonus = ref(false)
 	const subscriptionEndsAt = ref(null)
 	const subscriptionCancelled = ref(false)
@@ -224,20 +225,25 @@ export const userAuthStore = defineStore('auth', () => {
 	};
 
 	const purchaseAvatar = async (fileName) => {
-		const langStore = userlangStore();
-		if (ownedAvatars.value.includes(fileName)) return;
+		const langStore = userlangStore()
+		notEnoughArticle.value = false
+		if (ownedAvatars.value.includes(fileName)) return 'owned'
 		if (langStore.points < 50) {
-			throw new Error('Недостаточно Артиклюсов!');
+			notEnoughArticle.value = true
+			return 'insufficient'
 		}
-		langStore.points -= 50;
-		langStore.articlesSpentForAchievement += 50;
-		await langStore.saveToFirebase();
-		ownedAvatars.value.push(fileName);
-		const userDocRef = doc(db, 'users', uid.value);
-		await updateDoc(userDocRef, {
-			ownedAvatars: ownedAvatars.value
-		});
-	};
+		langStore.points -= 50
+		langStore.articlesSpentForAchievement += 50
+		await langStore.saveToFirebase()
+		ownedAvatars.value.push(fileName)
+		const userDocRef = doc(db, 'users', uid.value)
+		await updateDoc(userDocRef, { ownedAvatars: ownedAvatars.value })
+		return 'success'
+	}
+
+	const clearNotEnoughArticle = () => {
+		notEnoughArticle.value = false
+	}
 
 	const logOut = async () => {
 		const auth = getAuth()
@@ -327,6 +333,8 @@ export const userAuthStore = defineStore('auth', () => {
 		ownedAvatars,
 		initialized,
 		isGoogleUser,
+		notEnoughArticle,
+		clearNotEnoughArticle,
 		achievements,
 		initAuth,
 		fetchuser,

@@ -4,6 +4,7 @@ import {useRoute, useRouter} from 'vue-router'
 import {userExamStore} from '../store/examStore.js'
 import VPlayAudio from "../src/components/V-playAudio.vue";
 
+const { t } = useI18n();
 const route = useRoute()
 const router = useRouter()
 const examStore = userExamStore()
@@ -22,13 +23,11 @@ function toDateFlexible(value) {
 
 const itemsByModule = computed(() => {
   const acc = {}
-  const items = Array.isArray(examStore.currentArchiveAttempt?.items)
-      ? examStore.currentArchiveAttempt.items
-      : []
-  for (const it of items) {
-    const mod = it?.module || 'Unbekannt'
+  const items = Array.isArray(examStore.currentArchiveAttempt?.items) ? examStore.currentArchiveAttempt.items : []
+  for (const item of items) {
+    const mod = item?.module || 'Unbekannt'
     if (!acc[mod]) acc[mod] = []
-    acc[mod].push(it)
+    acc[mod].push(item)
   }
   return acc
 })
@@ -68,20 +67,20 @@ onUnmounted(() => {
 <template>
   <div class="arch">
     <div class="arch__head">
-      <button class="arch__back" @click="goBack">← Назад</button>
-      <h1 class="arch__title">Результат экзамена</h1>
+      <button class="arch__back" @click="goBack">{{ t('archiveExam.btnBack')}}</button>
+      <h1 class="arch__title">{{ t('archiveExam.title')}}</h1>
     </div>
 
-    <div v-if="examStore.currentArchiveLoading" class="arch__box">Загрузка…</div>
+    <div v-if="examStore.currentArchiveLoading" class="arch__box">{{ t('archiveExam.loading')}}</div>
     <div v-else-if="examStore.currentArchiveError" class="arch__box arch__box--error">
       {{ examStore.currentArchiveError }}
     </div>
 
     <div v-else-if="examStore.currentArchiveAttempt" class="arch__content">
       <div class="arch__card">
-        <div class="arch__row"><b>Уровень:</b> {{ examStore.currentArchiveAttempt.level || '—' }}</div>
+        <div class="arch__row"><b>{{ t('archiveExam.level')}}</b> {{ examStore.currentArchiveAttempt.level || '—' }}</div>
         <div class="arch__row">
-          <b>Статус:</b>
+          <b>{{ t('archiveExam.status')}}</b>
           <span
               class="arch__badge"
               :class="examStore.currentArchiveAttempt.status === 'finished' ? 'is-finished' : 'is-draft'"
@@ -90,11 +89,11 @@ onUnmounted(() => {
           </span>
         </div>
         <div class="arch__row">
-          <b>Начало:</b>
+          <b>{{ t('archiveExam.start')}}</b>
           {{ toDateFlexible(examStore.currentArchiveAttempt.startedAt)?.toLocaleString?.() || '—' }}
         </div>
         <div v-if="examStore.currentArchiveAttempt.status === 'finished'" class="arch__row">
-          <b>Средний балл:</b> {{ examStore.currentArchiveAttempt.averageScore }} / 10
+          <b>{{ t('archiveExam.score')}}</b> {{ examStore.currentArchiveAttempt.averageScore }} / 10
         </div>
         <div v-if="examStore.currentArchiveAttempt.perModuleScores" class="arch__chips">
           <span v-for="(score, mod) in examStore.currentArchiveAttempt.perModuleScores" :key="mod" class="arch__chip">
@@ -117,7 +116,7 @@ onUnmounted(() => {
                 <div class="arch__audio-meta">
                   <VPlayAudio :src="audio.url" label="Воспроизвести" pauseLabel="Пауза" preload="metadata"/>
                   <div class="timer__inner">
-                    <img class="timer" src="../assets/images/dailyIcons/timer.svg" alt="">
+                    <img class="timer" src="../assets/images/dailyIcons/timer.svg" alt="TimerIcon">
                     <div class="timer__value" v-if="audio.durationSec">{{ audio.durationSec }}s</div>
                   </div>
 <!--                  <span v-if="audio.transcription"><b>Transkription:</b> {{ audio.transcription }}</span>-->
@@ -125,10 +124,10 @@ onUnmounted(() => {
               </div>
             </div>
             <div v-if="it.feedback" class="arch__fb">
-<!--              <p v-if="it.feedback.result"><b>Оценка:</b> {{ it.feedback.result }}</p>-->
-              <p v-if="it.feedback.feedback"><b>Комментарий:</b> {{ it.feedback.feedback }}</p>
+              <p v-if="it.feedback.result"><b>Die Bewertung:</b> {{ it.feedback.result }}</p>
+              <p v-if="it.feedback.feedback"><b>Der Kommentar:</b> {{ it.feedback.feedback }}</p>
               <p v-if="it.feedback.correctedVersion" class="arch__pre">
-                <b>Korrektur:</b><br/>{{ it.feedback.correctedVersion }}</p>
+                <b>Die Korrektur:</b><br/>{{ it.feedback.correctedVersion }}</p>
             </div>
           </div>
         </div>

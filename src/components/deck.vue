@@ -35,18 +35,13 @@
 </template>
 
 <script setup>
-	// Файл: Deck.vue
-	// ЗАМЕНИТЕ ВАШ <script setup> НА ЭТОТ
 	import { computed } from 'vue'
-	import { storeToRefs } from 'pinia' // 1. Импортируйте storeToRefs
+	import { storeToRefs } from 'pinia'
 	import { userBattleStore } from '../../store/BattleStore.js'
 	import { useThemeCardStore } from '../../store/themeStore.js'
-	const battleStore = userBattleStore() // 2. Сначала получите сам store
+	const battleStore = userBattleStore()
 	const useTheme = useThemeCardStore()
-	// 3. Теперь сделайте userDeck реактивным с помощью storeToRefs
 	const { userDeck } = storeToRefs(battleStore)
-
-	// Эта часть кода у вас уже правильная
 	function getSpellIcon(id) {
 		try {
 			return new URL(`../../assets/images/spellIcons/${id}.svg`, import.meta.url).href

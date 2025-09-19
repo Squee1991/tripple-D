@@ -1,10 +1,10 @@
 <template>
   <div v-if="regions" class="map__wrapper">
     <div class="map__title-wrapper">
-<!--      <button @click="backToMain" class="back__to-main">-->
-<!--        <img class="back__icon" src="../assets/images/close.svg" alt="">-->
-<!--      </button>-->
-      <h1 class="map__title">Карта языковых земель</h1>
+      <!--      <button @click="backToMain" class="back__to-main">-->
+      <!--        <img class="back__icon" src="../assets/images/close.svg" alt="">-->
+      <!--      </button>-->
+      <h1 class="map__title">{{t('locationsMenu.title')}}</h1>
     </div>
     <div class="map-layout">
       <div
@@ -22,37 +22,36 @@
         >×
         </button>
         <div class="map-left__art">
-          <img :src="active?.icon" alt="">
+          <img :src="active?.icon" alt="Choose avatar location">
         </div>
-        <h2 class="map-left__title">{{ active.name }}</h2>
+        <h2 class="map-left__title">{{ t(active.name) }}</h2>
         <p class="map-left__desc">{{ active.desc }}</p>
         <p class="map-left__level" :class="isUnlocked ? 'ok' : 'locked'">
-          <span v-if="isUnlocked">Доступ открыт</span>
-          <span v-else>Доступ с уровня {{ active.level }}</span>
+          <span v-if="isUnlocked">{{t('locationsMenu.access')}}</span>
+          <span v-else>{{t('locationsMenu.accessWithLevel')}} {{ active.level }}</span>
         </p>
         <button class="map-btn" :disabled="!isUnlocked" @click="go(active)">
-          Выбрать
+          {{t('locationsMenu.choose')}}
         </button>
       </div>
       <div class="map-right">
         <div
-            v-for="r in regions"
-            :key="r.id"
+            v-for="region in regions"
+            :key="region.id"
             class="region-card"
             :class="[
-            'theme--' + themeOf(r),
-            { active: active?.id === r.id }
+            'theme--' + themeOf(region),
+            { active: active?.id === region.id }
           ]"
-            @click="select(r)"
+            @click="select(region)"
         >
           <div class="region-card__art">
-            <img :src="r.icon" alt="">
+            <img :src="region.icon" alt="Location avatar">
           </div>
-
           <div class="region-card__footer">
-            <span class="region-card__title">{{ r.name }}</span>
-            <span v-if="clampedLevel < r.level" class="region-card__badge">
-              lvl {{ r.level }}
+            <span class="region-card__title">{{ t(region.name) }}</span>
+            <span v-if="clampedLevel < region.level" class="region-card__badge">
+              lvl {{ region.level }}
             </span>
           </div>
         </div>
@@ -65,12 +64,10 @@
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 import { useRouter } from 'vue-router'
 import { regions } from '@/utils/regions.js'
-
+const { t } = useI18n()
 const props = defineProps({ currentLevel: { type: Number, default: 1 } })
 
 const router = useRouter()
-const backToMain = () => router.push('/')
-
 const active = ref(regions[0])
 const isPanelOpen = ref(false)
 const windowWidth = ref(1024)
@@ -122,7 +119,7 @@ function go(region) {
 <style>
 
 * {
-  font-family: "Nunito", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 .back__to-main {

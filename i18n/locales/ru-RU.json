@@ -2,18 +2,226 @@
   "preloader": {
     "value": "Вы будете перенаправлены на главную страницу..."
   },
-
+  "articleTable": {
+    "title": "Прогресс по теме:",
+    "word": "Слово",
+    "back": "Назад",
+    "forward": "Вперед",
+    "choice": "Выберите тему, чтобы увидеть ваш прогресс!",
+    "modeArticle": "Артикль",
+    "modeLetters": "Буквы",
+    "modeWordArticle": "Cлов+артикль",
+    "modeAudio": "Аудио",
+    "modePlural": "Мн.ч.",
+    "learned": "Изучено",
+    "wrong": "Ошибка",
+    "notLearned": "Не изучено"
+  },
+  "articlesStatistics": {
+    "toMain": "На главную",
+    "stats": "Статистика",
+    "navFirst": "Артикли",
+    "navSecond": "Языковые земли",
+    "navThird": "Тематические уровни",
+    "articles": "Артикли",
+    "hide": "Скрыть",
+    "verticalBar": "Вертикальный бар",
+    "circle": "Круговая диаграмма",
+    "notTopics": "Нет начатых тем",
+    "summary": "Сводка",
+    "quests": "Квестов",
+    "finished": "Завершено",
+    "rightAnswers": "Верных:"
+  },
+  "thematicStatistics": {
+    "title": "Тематические уровни",
+    "modules": "Всего модулей",
+    "module": "Модуль ",
+    "done": "Выполнено",
+    "progress": "Прогресс",
+    "available": "Доступно",
+    "closed": "Закрыто",
+    "level": "Уровень",
+    "noData": "Нет данных по теме"
+  },
+  "examIndexPage": {
+    "notAllowedTitle": "Тесты доступны только аккаунтам с Подпиской",
+    "hint": "Мы используем автоматическую систему распознавания речи. Говорите чётко рядом с микрофоном.",
+    "toMain": "На главную",
+    "choice": " Выбери уровень и начни практику всех модулей:",
+    "to": "Перейти к",
+    "buy": "Приобрести"
+  },
+  "examLevelCardA1": {
+    "title": "Уровень - A1",
+    "textOne": "\uD83D\uDCD6 Lesen — короткие тексты",
+    "textTwo": "\uD83C\uDFA7 Hören — простые аудио",
+    "textThree": "✍\uFE0F Schreiben — письма и формы",
+    "textFour": "\uD83D\uDDE3\uFE0F Sprechen — мини диалоги"
+  },
+  "examLevelCardA2": {
+    "title": "Уровень - A2",
+    "textOne": "\uD83D\uDCD6 Более сложные тексты",
+    "textTwo": "\uD83C\uDFA7 Диалоги из повседневности",
+    "textThree": "✍\uFE0F Написание e-mail и заметок",
+    "textFour": "\uD83D\uDDE3\uFE0F Ответы на личные вопросы"
+  },
+  "examLevelCardB1": {
+    "title": "Уровень - B1",
+    "textOne": "\uD83D\uDCD6 Новости, статьи",
+    "textTwo": "\uD83C\uDFA7 Длинные диалоги и мнения",
+    "textThree": "✍\uFE0F Написание формальных писем",
+    "textFour": "\uD83D\uDDE3\uFE0F Дискуссии и аргументы"
+  },
+  "examLevelCardB2": {
+    "title": "Уровень - B2",
+    "textOne": "\uD83D\uDCD6 Тексты на абстрактные темы",
+    "textTwo": "\uD83C\uDFA7 Новости и выступления",
+    "textThree": "✍\uFE0F Эссе, отчёты и инструкции",
+    "textFour": "\uD83D\uDDE3\uFE0F Аргументированная речь"
+  },
+  "friendList": {
+    "title": "Список друзей",
+    "profile": "Профиль",
+    "delete": "Удалить",
+    "list": "К списку друзей",
+    "findEmail": "Найти друзей по email",
+    "placeholder": "Ввведите email друга",
+    "find": "Найти",
+    "searching": "Поиск...",
+    "in": "Входящие",
+    "out": "Исходящие",
+    "hover": "Запрос в друзья",
+    "sending": "Отправка…",
+    "add": "Добавить",
+    "waiting": "Ожидание",
+    "accept": "Принять",
+    "reject": "Отклонить",
+    "added": "Уже в друзьях",
+    "empty": "Нет входящих запросов."
+  },
+  "prepositionsIndexPage": {
+    "tipsTitle": "Советы по теме",
+    "btnBack": "На главную",
+    "prepositionsTitleNav": "Предлоги по падежам",
+    "type": "ТИП ПАДЕЖА",
+    "rule": "Краткое правило",
+    "examples": "Примеры"
+  },
+  "nominativ": {
+    "rule": "Специальных предлогов под Nominativ почти нет. Этот падеж обычно употребляется для подлежащего и после глаголов sein / werden / bleiben.",
+    "tipOne": "Nominativ отвечает на вопросы Wer? / Was?",
+    "tipTwo": "После sein, werden, bleiben — именная часть сказуемого стоит в Nominativ.",
+    "tipThree": "Если есть предлог, почти всегда это не Nominativ.",
+    "translateExampleOne": "Это стол.",
+    "translateExampleTwo": "Мужчина — учитель.",
+    "translateExampleThree": "Берлин — столица.",
+    "practiceTitle": "Практика: Nominativ",
+    "practiceDescription": "Определите случаи употребления Nominativ без предлогов.",
+    "start": "Начать"
+  },
+  "akkusativ" : {
+    "rule": "Эти предлоги всегда требуют Akkusativ: durch, für, gegen, ohne, um, bis, а также entlang (часто как послелог).",
+    "tipOne": "Лайфхак: FÜR, UM, DURCH, GEGEN, OHNE, (BIS), ENTLANG.",
+    "tipTwo": "Движение «куда» часто выражается Akkusativом.",
+    "tipThree": "bis обычно без артикля: bis Montag, bis Berlin.",
+    "tipFour": "entlang — как послелог: den Fluss entlang.",
+    "translateOne": "Мы идём через парк.",
+    "translateTwo": "Подарок для учителя.",
+    "translateThree": "Я против плана.",
+    "translateFour": "Он идёт без зонта.",
+    "translateFive": "Мы сидим вокруг стола.",
+    "translateSix": "Я остаюсь до следующего понедельника.",
+    "translateSeven": "Мы идём вдоль реки.",
+    "practiceTitle": "Практика: Akkusativ",
+    "practiceDescription": "Закрепите предлоги, которые требуют Akkusativ.",
+    "start": "Начать"
+  },
+  "dativ": {
+    "rule": "Эти предлоги всегда требуют Dativ: aus, außer, bei, mit, nach, seit, von, zu, gegenüber.",
+    "tipOne": "Базовый набор: bei, mit, nach, seit, von, zu.",
+    "tipTwo": "Состояние «где?» часто выражается с Dativ.",
+    "tipThree": "gegenüber может стоять после существительного: dem Haus gegenüber.",
+    "translateOne": "Он выходит из дома.",
+    "translateTwo": "Кроме ребёнка никого не было.",
+    "translateThree": "Я живу у родителей.",
+    "translateFour": "Мы едем на машине.",
+    "translateFive": "После еды мы занимаемся.",
+    "translateSix": "Я учу немецкий уже год.",
+    "translateSeven": "Поезд отправляется со станции.",
+    "translateEight": "Я иду в школу.",
+    "translateNine": "Напротив дома — парк.",
+    "practiceTitle": "Практика: Dativ",
+    "practiceDescription": "Повторите предлоги, которые требуют Dativ.",
+    "start": "Начать"
+  },
+  "genitiv": {
+    "rule": "Эти предлоги требуют Genitiv: statt, trotz, während, wegen, außerhalb, innerhalb, jenseits/diesseits, aufgrund.",
+    "tipOne": "В разговорной речи Genitiv часто заменяют на von + Dativ.",
+    "tipTwo": "Артикли: des/eines; существительные часто получают окончание -s/-es.",
+    "tipThree": "Прилагательные в Genitiv получают окончание -en.",
+    "translateOne": "Вместо сахара я беру мёд.",
+    "translateTwo": "Несмотря на дождь, мы гуляем.",
+    "translateThree": "Во время урока телефон выключен.",
+    "translateFour": "Из-за холода мы остаёмся дома.",
+    "translateFive": "За пределами города тише.",
+    "translateSix": "В течение недели ты получишь ответ.",
+    "translateSeven": "По ту сторону реки — деревня.",
+    "translateEight": "Из-за ремонтных работ дорога перекрыта.",
+    "practiceTitle": "Практика: Genitiv",
+    "practiceDescription": "Закрепите употребление генитивных предлогов.",
+    "start": "Начать"
+  },
+  "archiveExam": {
+    "title": "Результат теста",
+    "btnBack": "← Назад",
+    "loading": "Загрузка…",
+    "level": "Уровень:",
+    "status": "Статус:",
+    "start": "Начало:",
+    "score": "Средний балл:"
+  },
+  "dailyPanel": {
+    "title": "Ежедневные задания",
+    "loading": "Загрузка…"
+  },
   "hoverTitle": {
     "tips": "Советы по теме",
     "duelInfo": "Правила игры",
     "sound": "Воспроизвести пример",
-    "ach": "Достижения инфо"
-  },  "achModal": {
+    "ach": "Достижения инфо",
+    "articles": "Артиклюсы",
+    "level": "Уровень"
+  },
+  "accountPanel": {
+    "title": "Панель участника",
+    "articles": "Артиклюсы",
+    "level": "Уровень",
+    'stats': "Статистика",
+    "premium": "Подписка",
+    "premDescription": "Получи максимум от платформы. Обучение, награды, задания, прогресс и многое другое!",
+    "try": "Попробовать"
+  },
+  "achModal": {
     "title": "Достижения — это награды за твой прогресс",
     "text": "Выполняй задания, изучай слова, зарабатывай опыт и повышай уровень!"
   },
   "modalVerbsTipsTitle": {
     "tipsTitle": "Полезные советы:"
+  },
+  "locationsMenu": {
+    "title": "Карта языковых земель",
+    "access": "Доступ открыт",
+    "accessWithLevel": "Доступ с уровня",
+    "choose": "Выбрать"
+  },
+  "locationNames": {
+    "east-plain": "Восточная равнина",
+    "stone-reach": "Каменный предел",
+    "wind-valley": "Долина ветров",
+    "lake-ruins": "Руины озёрья",
+    "north-cliffs": "Северные утёсы",
+    "storm-coast": "Штормовой берег"
   },
   "examPage": {
     "examHint": "Мы используем автоматическую систему распознавания речи. Говорите чётко рядом с микрофоном."
@@ -302,10 +510,6 @@
     "guessedSafeWords": "Щит осторожности",
     "explorer": "Глобус исследователя",
     "languageLands50": "Компас исследователя"
-  },
-  "ach": {
-    "achievement": "достижения",
-    "status": "выполнено"
   },
   "eastPlainFirstQuests": {
     "title": "Первая встреча",
@@ -2551,7 +2755,7 @@
   },
   "cabinetSidebar": {
     "valueOne": "Параметры аккаунта",
-    "valueTwo": "Прогресс по артиклям",
+    "valueTwo": "Друзья",
     "valueThree": "Награды",
     "valueFour": "Архив экзаменов"
   },
@@ -2604,7 +2808,10 @@
     "checkPassword": "Введите ваш пароль для подтверждения удаления аккаунта",
     "checkGoogle": "Вы вошли через Google. Для удаления аккаунта откроется окно повторной авторизации.",
     "deleteAccBtnAccept": "Удалить",
-    "deleteAccBtnReject": "Отмена"
+    "deleteAccBtnReject": "Отмена",
+    "boughtAvatar": "Аватар куплен",
+    "notEnoughtArticles": "Недостаточно артиклюсов",
+    "boughtBtn": "Ок"
   },
   "articleOverlay": {
     "title": "Что такое артиклюс и за что его получать",
@@ -3273,7 +3480,7 @@
     "firstStepText": "Ты зарегистрировался и вступил в мир немецкого!",
     "firstStepAward": "Награда : Значок участника",
     "lastBreahtlabel": "На последнем дыхании",
-    "lastBreathText": "Имея 1 жизнь в Марафоне отгадать 20 артиклей подряд ( легкий режим )",
+    "lastBreathText": "Идея 1 жизнь в Марафоне отгадать 20 артиклей подряд ( легкий режим )",
     "lastBreathAward": "Награда: Тик-так Удачи",
     "monthLabel": "Постоялец",
     "moonthText": "Вы с нами уже целый месяц!",

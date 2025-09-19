@@ -6,32 +6,20 @@
         v-model="isArticleOpen"
     />
     <section class="points-card" aria-label="Поинты и уровень">
-        <div class="sub-actions ">
-            <article class="super-card">
-                <div>
-                    <span class="super-card__badge">Подписка</span>
-                </div>
-                <p class="sub__text">Получи максимум от платформы
-                    Обучение, награды, задания, прогресс и многое другое!</p>
-                <button @click="toPayment" class="super-card__cta">
-                    Попробовать
-                </button>
-            </article>
-        </div>
       <header class="points-card__header">
-        <h2 class="points__title">Панель игрока</h2>
+        <h2 class="points__title">{{ t('accountPanel.title')}}</h2>
       </header>
       <ul v-if="langStore" class="points-card__list" aria-label="Сводка">
         <li class="points-card__item">
-          <div class="points-card__label">Артиклюсы</div>
-          <button v-if="userAuth.uid" @click="openArticleModal" class="articlus__wrapper">
+          <div class="points-card__label">{{ t('accountPanel.articles')}}</div>
+          <button :title="hoverTitle.title" v-if="userAuth.uid" @click="openArticleModal" class="articlus__wrapper">
             <img class="articlus__icon" src="../../assets/images/articlus.png" alt="">
             <span class="points-card__value"> {{ langStore.points }}</span>
           </button>
         </li>
         <li class="points-card__item">
-          <span class="points-card__label">Уровень</span>
-          <span class="points-card__badge">{{ langStore.isLeveling }}</span>
+          <span class="points-card__label">{{ t('accountPanel.level')}}</span>
+          <span :title="hoverTitle.level" class="points-card__badge">{{ langStore.isLeveling }}</span>
         </li>
         <div class="points-card__progress">
           <div v-if="langStore.exp" class="progress_exp-bar">
@@ -44,7 +32,7 @@
             <div class="points__stat-header">
               <div class="points__stat-title">
                 <img class="points-card__title-icon" src="../../assets/images/graph.svg" alt="">
-                <h3 class="stats__title">Статистика</h3>
+                <h3 class="stats__title">{{ t('accountPanel.stats')}}</h3>
               </div>
               <button @click="toStatistics" class="stats__btn">
                 <span></span>
@@ -58,7 +46,17 @@
         <!--          <span class="sub-badge sub-badge&#45;&#45;off">Не активна</span>-->
         <!--        </li>-->
       </ul>
-
+      <div class="sub-actions">
+        <article class="super-card">
+          <div>
+            <span class="super-card__badge">{{ t('accountPanel.premium')}}</span>
+          </div>
+          <p class="sub__text">{{ t('accountPanel.premDescription')}}</p>
+          <button @click="toPayment" class="super-card__cta">
+            {{ t('accountPanel.try')}}
+          </button>
+        </article>
+      </div>
 <!--      <div class="fiends__list-wrapper">-->
 <!--        <h3 class="points-card__title"> Список друзей</h3>-->
 <!--        <ul class="list">-->
@@ -86,8 +84,6 @@ import {useRouter} from "vue-router";
 import {useFriendsStore} from '../../store/friendsStore.js'
 import {onMounted, ref,watch} from "vue";
 
-const istPremiumComputedStatus = computed(() => userAuth.isPremium ? 'Активна' : 'Не активна')
-
 const {t} = useI18n()
 const langStore = userlangStore()
 const userAuth = userAuthStore()
@@ -101,6 +97,15 @@ const handleLeveling = () => {
         langStore.exp -= LEVEL_UP_XP
     }
 }
+
+const istPremiumComputedStatus = computed(() => userAuth.isPremium ? 'Активна' : 'Не активна')
+
+const hoverTitle = {
+  title: t('hoverTitle.articles'),
+  level: t('hoverTitle.level')
+}
+
+
 const toPayment = () => {
   router.push('/pay')
 }
@@ -429,12 +434,11 @@ onMounted(() => {
 .super-card {
   position: relative;
   width: 100%;
-    background: linear-gradient(to right, #B8860B, #DAA520, #FFD700, #DAA520, #B8860B);
-    background-size: 200% auto;
+  background: var(--bg);
+  border: 4px solid var(--border);
   border-radius: 18px;
   padding: 16px 16px 14px;
   margin-bottom: 10px;
-    animation: shimmer 5s linear infinite;
 }
 
 .super-card__badge {
@@ -464,14 +468,6 @@ onMounted(() => {
 
 .super-card__cta:hover {
   filter: brightness(1.05);
-    color: #fff; /* Выберите цвет текста */
-    background: #192A56; /* Выберите цвет кнопки */
-    border: 1px solid #111; /* Добавьте тонкий контур */
-    box-shadow: 4px 4px 0 #111;
-    transition: transform .06s ease, box-shadow .06s ease;
-}
-.super-card__cta:hover {
-    filter: brightness(1.2); /* Сделайте кнопку немного ярче */
 }
 
 .super-card__cta:active {

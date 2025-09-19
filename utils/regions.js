@@ -10,7 +10,7 @@ export const regions = [
 		id: "east-plain",
 		pathTo: "east-plain",
 		theme: "plain",
-		name: "Восточная Равнина",
+		name: "locationNames.east-plain",
 		level: 1,
 		desc: "Просторные земли, где каждый начинает своё путешествие. Здесь ты освоишь основы языка и получишь первые задания. Именно отсюда начинаются великие приключения.",
 		icon: FirstStep
@@ -19,7 +19,7 @@ export const regions = [
 		id: "stone-reach",
 		pathTo: "stone-reach",
 		theme: "stone",
-		name: "Каменный Предел",
+		name: "locationNames.stone-reach",
 		level: 1,
 		desc: "Суровый край с каменистыми дорогами и торговыми караванами. Здесь ты укрепишь свои навыки и встретишь первых серьёзных противников на пути к мастерству.",
 		icon: StoneReach
@@ -28,7 +28,7 @@ export const regions = [
 		id: "wind-valley",
 		pathTo: "wind-valley",
 		theme: "winds",
-		name: "Долина Ветров",
+		name: "locationNames.wind-valley",
 		level: 1,
 		desc: "Земля вечных бурь и переменчивой погоды. Порывы ветра приносят испытания, но вместе с ними и новые знания. Здесь тебя ждут первые настоящие вызовы на пути изучения языка.",
 		icon: WindValley
@@ -37,7 +37,7 @@ export const regions = [
 		id: "lake-ruins",
 		pathTo: "lake-ruins",
 		theme: "ruins",
-		name: "Руины Озёрья",
+		name: "locationNames.lake-ruins",
 		level: 1,
 		desc: "Туман окутывает древние постройки, а воды озёр хранят тайны прошлого. В этих землях скрыты забытые знания, которые помогут тебе углубиться в изучение языка.",
 		icon: LakeRuins
@@ -46,7 +46,7 @@ export const regions = [
 		id: "north-cliffs",
 		pathTo: "north-cliffs",
 		theme: "north",
-		name: "Северные Утёсы",
+		name: "locationNames.north-cliffs",
 		level: 1,
 		desc: "Высокие скалы возвышаются над морем, а холодные ветра испытывают стойкость каждого путника. Тебя ждут сложные задания, требующие упорства и внимательности.",
 		icon: NorthCliffs
@@ -55,7 +55,7 @@ export const regions = [
 		id: "storm-coast",
 		pathTo: "storm-coast",
 		theme: "storm",
-		name: "Штормовой Берег",
+		name: "locationNames.storm-coast",
 		level: 1,
 		desc: "Дикие прибрежные земли, где бушуют гром и молнии. Лишь смелые герои решаются ступить сюда. Здесь тебя ждут самые суровые испытания и настоящая проверка силы знаний.",
 		icon: StormCoast

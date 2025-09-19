@@ -3,7 +3,7 @@
     <div v-if="!authStore.premium" class="exam">
       <transition name="fade">
         <div v-if="showHint" class="exam-hint">
-          ℹ️ Мы используем автоматическую систему распознавания речи. Говорите чётко рядом с микрофоном.
+          ℹ️ {{t('examIndexPage.hint')}}
         </div>
       </transition>
       <VConsentModal
@@ -11,9 +11,9 @@
           @consent-given="handleConsentGiven"
           @close="showConsentModal = false"
       />
-      <button type="button" class="back__btn" @click="routeToMain">На главную</button>
+      <button type="button" class="back__btn" @click="routeToMain">{{t('examIndexPage.toMain')}}</button>
       <p class="exam__subtitle">
-        Выбери уровень и начни практику всех модулей:
+        {{t('examIndexPage.choice')}}
         <span class="exam__highlight">Lesen</span>,
         <span class="exam__highlight">Hören</span>,
         <span class="exam__highlight">Schreiben</span>,
@@ -39,7 +39,7 @@
               class="exam-card__button"
               @click="attemptToStartExam(level.id)"
           >
-            Перейти к {{ level.id.toUpperCase() }}
+            {{t('examIndexPage.to')}} {{ level.id.toUpperCase() }}
           </button>
         </div>
       </div>
@@ -75,15 +75,14 @@ const consentGiven = ref(false)
 const router = useRouter()
 const examStore = userExamStore()
 const showHint = ref(false)
-
+const { t } = useI18n()
 const notAllowed = ref({
-  title: 'Тесты доступны только аккаунтам с Подпиской',
+  title: t('examIndexPage.notAllowedTitle'),
   btns: [
-    {id: 'back', path: '/', value: 'На главную'},
-    {id: 'premium', path: '/pay', value: 'Приобрести'},
+    {id: 'back', path: '/', value: t('examIndexPage.notAllowedTitle')},
+    {id: 'premium', path: '/pay', value: t('examIndexPage.buy')},
   ]
 })
-
 const notAllowedPathBtn = (to) => {
   router.push(to)
 }
@@ -92,45 +91,45 @@ const examLevels = [
   {
     id: 'a1',
     icon: '📘',
-    title: 'Уровень - A1 ',
+    title: t('examLevelCardA1.title'),
     modules: [
-      {text: '📖 Lesen — короткие тексты',},
-      {text: '🎧 Hören — простые аудио',},
-      {text: '✍️ Schreiben — письма и формы',},
-      {text: '🗣️ Sprechen — себя и диалоги'}
+      {text: t('examLevelCardA1.textOne')},
+      {text: t('examLevelCardA1.textTwo')},
+      {text:  t('examLevelCardA1.textThree')},
+      {text: t('examLevelCardA1.textFour')}
     ]
   },
   {
     id: 'a2',
     icon: '📗',
-    title: 'Уровень - A2',
+    title: t('examLevelCardA2.title'),
     modules: [
-      {text: '📖 Более сложные тексты'},
-      {text: '🎧 Диалоги из повседневности'},
-      {text: '✍️ Написание e-mail и заметок'},
-      {text: '🗣️ Ответы на личные вопросы'},
+      {text: t('examLevelCardA2.textOne')},
+      {text: t('examLevelCardA2.textTwo')},
+      {text:  t('examLevelCardA2.textThree')},
+      {text: t('examLevelCardA2.textFour')}
     ]
   },
   {
     id: 'b1',
     icon: '📙',
-    title: 'Уровень - B1',
+    title: t('examLevelCardB1.title'),
     modules: [
-      {text: '📖 Новости, статьи, инструкции'},
-      {text: '🎧 Длинные диалоги и мнения'},
-      {text: '✍️ Формальные письма'},
-      {text: '🗣️ Дискуссии и аргументы'}
+      {text: t('examLevelCardB1.textOne')},
+      {text: t('examLevelCardB1.textTwo')},
+      {text:  t('examLevelCardB1.textThree')},
+      {text: t('examLevelCardB1.textFour')}
     ]
   },
   {
     id: 'b2',
     icon: '📕',
-    title: 'Уровень - B2',
+    title: t('examLevelCardB2.title'),
     modules: [
-      {text: '📖 Тексты на абстрактные темы',},
-      {text: '🎧 Новости и выступления'},
-      {text: '✍️ Эссе, отчёты и инструкции'},
-      {text: '🗣️ Аргументированная речь'}
+      {text: t('examLevelCardB2.textOne')},
+      {text: t('examLevelCardB2.textTwo')},
+      {text:  t('examLevelCardB2.textThree')},
+      {text: t('examLevelCardB2.textFour')}
     ]
   }
 ]

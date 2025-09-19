@@ -2,11 +2,205 @@
   "preloader": {
     "value": "Ana sayfaya yönlendirileceksiniz..."
   },
+  "articleTable": {
+    "title": "Konuya göre ilerleme:",
+    "word": "Kelime",
+    "back": "Geri",
+    "forward": "İleri",
+    "choice": "İlerlemenizi görmek için bir konu seçin!",
+    "modeArticle": "Artikeller",
+    "modeLetters": "Harfler",
+    "modeWordArticle": "Kelime+artikel",
+    "modeAudio": "Ses",
+    "modePlural": "Çoğul",
+    "learned": "Öğrenildi",
+    "wrong": "Hata",
+    "notLearned": "Öğrenilmedi"
+  },
+  "articlesStatistics": {
+    "toMain": "Ana sayfaya",
+    "stats": "İstatistikler",
+    "navFirst": "Artikeller",
+    "navSecond": "Dil Diyarları",
+    "navThird": "Tematik Düzeyler",
+    "articles": "Artikeller",
+    "hide": "Gizle",
+    "verticalBar": "Dikey çubuk",
+    "circle": "Pasta grafik",
+    "notTopics": "Başlatılmış konu yok",
+    "summary": "Özet",
+    "quests": "Görevler",
+    "finished": "Tamamlandı",
+    "rightAnswers": "Doğru:"
+  },
+  "thematicStatistics": {
+    "title": "Tematik Düzeyler",
+    "modules": "Toplam modül",
+    "module": "Modül ",
+    "done": "Tamamlandı",
+    "progress": "İlerleme",
+    "available": "Mevcut",
+    "closed": "Kapalı",
+    "level": "Düzey",
+    "noData": "Bu konu için veri yok"
+  },
+  "examIndexPage": {
+    "notAllowedTitle": "Testler yalnızca abonelik hesaplarına açıktır",
+    "hint": "Otomatik konuşma tanıma sistemi kullanıyoruz. Mikrofonun yanında net konuşun.",
+    "toMain": "Ana sayfa",
+    "choice": "Bir seviye seçin ve tüm modülleri pratik yapmaya başlayın:",
+    "to": "Git",
+    "buy": "Satın al"
+  },
+  "examLevelCardA1": {
+    "title": "Seviye - A1",
+    "textOne": "📖 Lesen — kısa metinler",
+    "textTwo": "🎧 Hören — basit sesler",
+    "textThree": "✍️ Schreiben — mektuplar ve formlar",
+    "textFour": "🗣️ Sprechen — mini diyaloglar"
+  },
+  "examLevelCardA2": {
+    "title": "Seviye - A2",
+    "textOne": "📖 Daha karmaşık metinler",
+    "textTwo": "🎧 Günlük hayattan diyaloglar",
+    "textThree": "✍️ E-posta ve not yazma",
+    "textFour": "🗣️ Kişisel sorulara cevaplar"
+  },
+  "examLevelCardB1": {
+    "title": "Seviye - B1",
+    "textOne": "📖 Haberler, makaleler",
+    "textTwo": "🎧 Uzun diyaloglar ve görüşler",
+    "textThree": "✍️ Resmi mektuplar yazma",
+    "textFour": "🗣️ Tartışmalar ve argümanlar"
+  },
+  "examLevelCardB2": {
+    "title": "Seviye - B2",
+    "textOne": "📖 Soyut konular üzerine metinler",
+    "textTwo": "🎧 Haberler ve konuşmalar",
+    "textThree": "✍️ Denemeler, raporlar ve talimatlar",
+    "textFour": "🗣️ Gerekçeli konuşma"
+  },
+  "friendList": {
+    "title": "Arkadaş listesi",
+    "profile": "Profil",
+    "delete": "Sil",
+    "list": "Arkadaş listesine dön",
+    "findEmail": "E-posta ile arkadaş bul",
+    "placeholder": "Arkadaşının e-postasını gir",
+    "find": "Bul",
+    "searching": "Aranıyor...",
+    "in": "Gelen",
+    "out": "Giden",
+    "hover": "Arkadaşlık isteği",
+    "sending": "Gönderiliyor…",
+    "add": "Ekle",
+    "waiting": "Bekleniyor",
+    "accept": "Kabul et",
+    "reject": "Reddet",
+    "added": "Zaten arkadaşsınız",
+    "empty": "Gelen istek yok."
+  },
+  "prepositionsIndexPage": {
+    "tipsTitle": "Konu ipuçları",
+    "btnBack": "Ana sayfa",
+    "prepositionsTitleNav": "Hâllere göre edatlar",
+    "type": "HÂL TÜRÜ",
+    "rule": "Kısa kural",
+    "examples": "Örnekler"
+  },
+  "nominativ": {
+    "rule": "Nominativ için özel edatlar neredeyse yoktur. Bu hâl genellikle özne ve sein / werden / bleiben fiillerinden sonra kullanılır.",
+    "tipOne": "Nominativ şu sorulara cevap verir: Wer? / Was?",
+    "tipTwo": "sein, werden, bleiben’den sonra yüklem kısmı nominativ hâlde olur.",
+    "tipThree": "Edat varsa, neredeyse hiçbir zaman nominativ değildir.",
+    "translateExampleOne": "Bu bir masa.",
+    "translateExampleTwo": "Adam öğretmendir.",
+    "translateExampleThree": "Berlin başkenttir.",
+    "practiceTitle": "Alıştırma: Nominativ",
+    "practiceDescription": "Edat olmadan nominativ kullanımını belirleyin.",
+    "start": "Başla"
+  },
+  "akkusativ": {
+    "rule": "Bu edatlar her zaman akkusativ gerektirir: durch, für, gegen, ohne, um, bis ve ayrıca entlang (genellikle edat sonrası).",
+    "tipOne": "Kural: FÜR, UM, DURCH, GEGEN, OHNE, (BIS), ENTLANG.",
+    "tipTwo": "“Nereye” hareketi genellikle akkusativ ile ifade edilir.",
+    "tipThree": "bis genellikle artikelsiz: bis Montag, bis Berlin.",
+    "tipFour": "entlang — edattan sonra: den Fluss entlang.",
+    "translateOne": "Parktan geçiyoruz.",
+    "translateTwo": "Öğretmen için hediye.",
+    "translateThree": "Ben plana karşıyım.",
+    "translateFour": "Şemsiyesiz gidiyor.",
+    "translateFive": "Masayı çevreleyerek oturuyoruz.",
+    "translateSix": "Gelecek pazartesiye kadar kalıyorum.",
+    "translateSeven": "Nehir boyunca yürüyoruz.",
+    "practiceTitle": "Alıştırma: Akkusativ",
+    "practiceDescription": "Akkusativ gerektiren edatları pekiştirin.",
+    "start": "Başla"
+  },
+  "dativ": {
+    "rule": "Bu edatlar her zaman dativ gerektirir: aus, außer, bei, mit, nach, seit, von, zu, gegenüber.",
+    "tipOne": "Temel set: bei, mit, nach, seit, von, zu.",
+    "tipTwo": "“Nerede?” durumu genellikle dativ ile ifade edilir.",
+    "tipThree": "gegenüber isimden sonra gelebilir: dem Haus gegenüber.",
+    "translateOne": "Evden çıkıyor.",
+    "translateTwo": "Çocuk dışında kimse yoktu.",
+    "translateThree": "Ailemle yaşıyorum.",
+    "translateFour": "Arabayla gidiyoruz.",
+    "translateFive": "Yemekten sonra ders çalışıyoruz.",
+    "translateSix": "Bir yıldır Almanca öğreniyorum.",
+    "translateSeven": "Tren istasyondan kalkıyor.",
+    "translateEight": "Okula gidiyorum.",
+    "translateNine": "Evin karşısında park var.",
+    "practiceTitle": "Alıştırma: Dativ",
+    "practiceDescription": "Dativ gerektiren edatları tekrar edin.",
+    "start": "Başla"
+  },
+  "genitiv": {
+    "rule": "Bu edatlar genitiv gerektirir: statt, trotz, während, wegen, außerhalb, innerhalb, jenseits/diesseits, aufgrund.",
+    "tipOne": "Günlük dilde genitiv genellikle von + dativ ile değiştirilir.",
+    "tipTwo": "Artikeller: des/eines; isimler genellikle -s/-es alır.",
+    "tipThree": "Genitiv hâlindeki sıfatlar -en alır.",
+    "translateOne": "Şeker yerine bal alıyorum.",
+    "translateTwo": "Yağmura rağmen yürüyoruz.",
+    "translateThree": "Ders sırasında telefon kapalıdır.",
+    "translateFour": "Soğuk yüzünden evde kalıyoruz.",
+    "translateFive": "Şehrin dışında daha sessizdir.",
+    "translateSix": "Bir hafta içinde cevap alacaksın.",
+    "translateSeven": "Nehirin öte tarafında köy var.",
+    "translateEight": "Yol çalışmaları nedeniyle yol kapalı.",
+    "practiceTitle": "Alıştırma: Genitiv",
+    "practiceDescription": "Genitiv edatlarının kullanımını pekiştirin.",
+    "start": "Başla"
+  },
+  "archiveExam": {
+    "title": "Test Sonucu",
+    "btnBack": "← Geri",
+    "loading": "Yükleniyor…",
+    "level": "Seviye:",
+    "status": "Durum:",
+    "start": "Başlangıç:",
+    "score": "Ortalama puan:"
+  },
+  "dailyPanel": {
+    "title": "Günlük Görevler",
+    "loading": "Yükleniyor…"
+  },
   "hoverTitle": {
     "tips": "Konu ipuçları",
     "duelInfo": "Oyun kuralları",
-    "sound": "Örneği oynat",
-    "ach": "Başarı bilgisi"
+    "sound": "Örnek çal",
+    "ach": "Başarı bilgisi",
+    "articles": "Artikluslar",
+    "level": "Seviye"
+  },
+  "accountPanel": {
+    "title": "Katılımcı Paneli",
+    "articles": "Artikluslar",
+    "level": "Seviye",
+    "stats": "İstatistikler",
+    "premium": "Abonelik",
+    "premDescription": "Platformdan en iyi şekilde yararlanın. Öğrenme, ödüller, görevler, ilerleme ve çok daha fazlası!",
+    "try": "Dene"
   },
   "achModal": {
     "title": "Başarılar, ilerlemen için ödüllerdir",
@@ -14,6 +208,23 @@
   },
   "modalVerbsTipsTitle": {
     "tipsTitle": "Faydalı İpuçları:"
+  },
+  "locationsMenu": {
+    "title": "Dil diyarlarının haritası",
+    "access": "Erişim açık",
+    "accessWithLevel": "Şu seviyeden erişim",
+    "choose": "Seç"
+  },
+  "locationNames": {
+    "east-plain": "Doğu Ovası",
+    "stone-reach": "Taş Uç",
+    "wind-valley": "Rüzgar Vadisi",
+    "lake-ruins": "Göl Harabeleri",
+    "north-cliffs": "Kuzey Kayalıkları",
+    "storm-coast": "Fırtına Kıyısı"
+  },
+  "examPage": {
+    "examHint": "Otomatik konuşma tanıma sistemi kullanıyoruz. Mikrofonun yanında net konuşun."
   },
   "friendExam": {
     "title": "Diğer katılımcılardan genel testler",
@@ -303,10 +514,10 @@
     "close": "Kapat"
   },
   "cabinetSidebar": {
-    "valueOne": "Hesap Ayarları",
-    "valueTwo": "Artikel İlerlemesi",
+    "valueOne": "Hesap ayarları",
+    "valueTwo": "Arkadaşlar",
     "valueThree": "Ödüller",
-    "valueFour": "Sınav Arşivi"
+    "valueFour": "Sınav arşivi"
   },
   "cabinetAccordion": {
     "personalData": "Kişisel Veriler",
@@ -357,9 +568,11 @@
     "checkPassword": "Hesap silme işlemini onaylamak için şifrenizi girin",
     "checkGoogle": "Google ile giriş yaptınız. Hesabınızı silmek için tekrar kimlik doğrulama penceresi açılacaktır.",
     "deleteAccBtnAccept": "Sil",
-    "deleteAccBtnReject": "İptal"
+    "deleteAccBtnReject": "İptal",
+    "boughtAvatar": "Avatar satın alındı",
+    "notEnoughtArticles": "Yeterli Artiklus yok",
+    "boughtBtn": "Tamam"
   },
-
   "articleOverlay": {
     "title": "Artikleus nedir ve nasıl kazanılır?",
     "first": "Artikleus iç oyun para birimidir",
@@ -1347,6 +1560,7 @@
     "prev": "Giriş",
     "rules": "Kurallar",
     "artRules": "Alıştırma",
+    "prepositions": "Edat alıştırmaları",
     "adjectivesBasic": "Temeller",
     "declination": "Çekim",
     "comparison": "Karşılaştırma Dereceleri",

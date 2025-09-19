@@ -1,17 +1,17 @@
 <template>
   <div class="friends">
     <div class="panel panel--search">
-      <h3 class="panel__title">Найти друзей по email</h3>
+      <h3 class="panel__title"> {{ t('friendList.findEmail')}}</h3>
       <div class="search-row">
         <input
             v-model="searchEmail"
             type="email"
-            placeholder="Введите email друга"
+            :placeholder="t('friendList.placeholder')"
             class="input"
             @keyup.enter="handleSearch"
         />
         <button class="btn btn--primary" @click="handleSearch" :disabled="isSearching">
-          {{ isSearching ? 'Поиск...' : 'Найти' }}
+          {{ isSearching ? t('friendList.searching') : t('friendList.find') }}
         </button>
       </div>
       <transition name="fade">
@@ -21,14 +21,13 @@
               <img
                   v-if="friendsStore.normalizeAvatarPath(foundUser.avatarUrl || foundUser.avatar)"
                   :src="friendsStore.normalizeAvatarPath(foundUser.avatarUrl || foundUser.avatar)"
-                  alt="Аватар пользователя"
+                  alt="User-Avatar"
                   class="avatar"
                   loading="lazy"
                   referrerpolicy="no-referrer"
               />
               <div v-else class="avatar avatar--placeholder">👤</div>
             </div>
-
             <div class="found-card__info">
 <!--              <div class="found-card__email">{{ foundUser.email || '—' }}</div>-->
               <div v-if="foundUser.name" class="found-card__name">{{ foundUser.name }}</div>
@@ -40,33 +39,32 @@
               @click="sendRequest"
               :disabled="isSending"
           >
-            {{ isSending ? 'Отправка…' : 'Добавить' }}
+            {{ isSending ? t('friendList.sending') : t('friendList.add') }}
           </button>
-          <span v-else-if="relationStatus === 'pending'" class="pill pill--pending">Ожидание</span>
+          <span v-else-if="relationStatus === 'pending'" class="pill pill--pending">{{ t('friendList.waiting')}}</span>
           <button
               v-else-if="relationStatus === 'incoming'"
               class="btn btn--success"
               @click="sendRequest"
               :disabled="isSending"
           >
-            Принять
+            {{ t('friendList.accept')}}
           </button>
-          <span v-else-if="relationStatus === 'accepted'" class="pill">Уже в друзьях</span>
+          <span v-else-if="relationStatus === 'accepted'" class="pill">{{ t('friendList.added')}}</span>
         </div>
       </transition>
-
       <div v-if="searchError" class="msg msg--error">{{ searchError }}</div>
       <div v-if="successMessage" class="msg msg--ok">{{ successMessage }}</div>
     </div>
     <div class="tabs">
       <button class="tabs__btn" :class="{active: activeTab === 'incoming'}" @click="activeTab = 'incoming'">
-        Входящие
+        {{t('friendList.in')}}
         <span class="tabs__badge" v-if="friendsStore.requestsIncoming.length">
           {{ friendsStore.requestsIncoming.length }}
         </span>
       </button>
       <button class="tabs__btn" :class="{active: activeTab === 'outgoing'}" @click="activeTab = 'outgoing'">
-        Исходящие
+        {{t('friendList.out')}}
         <span class="tabs__badge" v-if="friendsStore.requestsOutgoing.length">
           {{ friendsStore.requestsOutgoing.length }}
         </span>
@@ -81,7 +79,7 @@
     <div class="panel">
       <transition name="fade" mode="out-in">
         <div v-if="activeTab === 'incoming'" key="incoming">
-          <div v-if="friendsStore.requestsIncoming.length === 0" class="empty">Нет входящих запросов.</div>
+          <div v-if="friendsStore.requestsIncoming.length === 0" class="empty">{{t('friendList.empty')}}</div>
           <ul v-else class="list">
             <li v-for="r in friendsStore.requestsIncoming" :key="r.uid" class="item">
               <div class="item__left">
@@ -103,17 +101,17 @@
               </div>
               <div class="item__actions">
                 <button class="btn btn--success" :disabled="processingUid === r.uid" @click="handleAccept(r.uid)">
-                  {{ processingUid === r.uid ? '…' : 'Принять' }}
+                  {{ processingUid === r.uid ? '…' : t('friendList.accept') }}
                 </button>
                 <button class="btn btn--danger" :disabled="processingUid === r.uid" @click="handleDecline(r.uid)">
-                  {{ processingUid === r.uid ? '…' : 'Отклонить' }}
+                  {{ processingUid === r.uid ? '…' : t('friendList.reject') }}
                 </button>
               </div>
             </li>
           </ul>
         </div>
         <div v-else-if="activeTab === 'outgoing'" key="outgoing">
-          <div v-if="friendsStore.requestsOutgoing.length === 0" class="empty">Нет исходящих запросов.</div>
+          <div v-if="friendsStore.requestsOutgoing.length === 0" class="empty">{{t('friendList.empty')}}</div>
           <ul v-else class="list">
             <li v-for="r in friendsStore.requestsOutgoing" :key="r.uid" class="item">
               <div class="item__left">
@@ -134,7 +132,7 @@
                 </div>
               </div>
               <div class="item__right">
-                <span class="pill pill--pending">Ожидание</span>
+                <span class="pill pill--pending">{{t('friendList.waiting')}}</span>
               </div>
             </li>
           </ul>
@@ -183,7 +181,7 @@ const searchError = ref('')
 const successMessage = ref('')
 const processingUid = ref(null)
 const activeTab = ref('friends')
-
+const { t } = useI18n()
 const relationStatus = computed(() => {
   const uid = foundUser.value?.uid
   if (!uid) return 'none'

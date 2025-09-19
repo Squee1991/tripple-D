@@ -2,11 +2,205 @@
   "preloader": {
     "value": "You will be redirected to the main page..."
   },
+  "articleTable": {
+    "title": "Progress by topic:",
+    "word": "Word",
+    "back": "Back",
+    "forward": "Forward",
+    "choice": "Select a topic to see your progress!",
+    "modeArticle": "Article",
+    "modeLetters": "Letters",
+    "modeWordArticle": "Word+article",
+    "modeAudio": "Audio",
+    "modePlural": "Plural",
+    "learned": "Learned",
+    "wrong": "Wrong",
+    "notLearned": "Not learned"
+  },
+  "articlesStatistics": {
+    "toMain": "Back to main",
+    "stats": "Statistics",
+    "navFirst": "Articles",
+    "navSecond": "Language Lands",
+    "navThird": "Thematic Levels",
+    "articles": "Articles",
+    "hide": "Hide",
+    "verticalBar": "Vertical bar",
+    "circle": "Pie chart",
+    "notTopics": "No started topics",
+    "summary": "Summary",
+    "quests": "Quests",
+    "finished": "Finished",
+    "rightAnswers": "Correct:"
+  },
+  "thematicStatistics": {
+    "title": "Thematic Levels",
+    "modules": "Total modules",
+    "module": "Module ",
+    "done": "Completed",
+    "progress": "Progress",
+    "available": "Available",
+    "closed": "Closed",
+    "level": "Level",
+    "noData": "No data for this topic"
+  },
+  "examIndexPage": {
+    "notAllowedTitle": "Tests are available only for Subscription accounts",
+    "hint": "We use an automatic speech recognition system. Speak clearly near the microphone.",
+    "toMain": "Home",
+    "choice": "Choose a level and start practicing all modules:",
+    "to": "Go to",
+    "buy": "Purchase"
+  },
+  "examLevelCardA1": {
+    "title": "Level - A1",
+    "textOne": "📖 Lesen — short texts",
+    "textTwo": "🎧 Hören — simple audio",
+    "textThree": "✍️ Schreiben — letters and forms",
+    "textFour": "🗣️ Sprechen — mini dialogues"
+  },
+  "examLevelCardA2": {
+    "title": "Level - A2",
+    "textOne": "📖 More complex texts",
+    "textTwo": "🎧 Everyday dialogues",
+    "textThree": "✍️ Writing e-mails and notes",
+    "textFour": "🗣️ Answering personal questions"
+  },
+  "examLevelCardB1": {
+    "title": "Level - B1",
+    "textOne": "📖 News, articles",
+    "textTwo": "🎧 Long dialogues and opinions",
+    "textThree": "✍️ Writing formal letters",
+    "textFour": "🗣️ Discussions and arguments"
+  },
+  "examLevelCardB2": {
+    "title": "Level - B2",
+    "textOne": "📖 Texts on abstract topics",
+    "textTwo": "🎧 News and speeches",
+    "textThree": "✍️ Essays, reports and instructions",
+    "textFour": "🗣️ Reasoned speech"
+  },
+  "friendList": {
+    "title": "Friends list",
+    "profile": "Profile",
+    "delete": "Delete",
+    "list": "Back to friends list",
+    "findEmail": "Find friends by email",
+    "placeholder": "Enter friend's email",
+    "find": "Find",
+    "searching": "Searching...",
+    "in": "Incoming",
+    "out": "Outgoing",
+    "hover": "Friend request",
+    "sending": "Sending…",
+    "add": "Add",
+    "waiting": "Waiting",
+    "accept": "Accept",
+    "reject": "Reject",
+    "added": "Already friends",
+    "empty": "No incoming requests."
+  },
+  "prepositionsIndexPage": {
+    "tipsTitle": "Topic tips",
+    "btnBack": "Home",
+    "prepositionsTitleNav": "Prepositions by cases",
+    "type": "CASE TYPE",
+    "rule": "Short rule",
+    "examples": "Examples"
+  },
+  "nominativ": {
+    "rule": "There are almost no special prepositions for the nominative. This case is usually used for the subject and after the verbs sein / werden / bleiben.",
+    "tipOne": "Nominative answers the questions Wer? / Was?",
+    "tipTwo": "After sein, werden, bleiben — the predicate noun is in the nominative.",
+    "tipThree": "If there is a preposition, it is almost never nominative.",
+    "translateExampleOne": "This is a table.",
+    "translateExampleTwo": "The man is a teacher.",
+    "translateExampleThree": "Berlin is the capital.",
+    "practiceTitle": "Practice: Nominative",
+    "practiceDescription": "Identify the uses of nominative without prepositions.",
+    "start": "Start"
+  },
+  "akkusativ": {
+    "rule": "These prepositions always require the accusative: durch, für, gegen, ohne, um, bis, and also entlang (often as a postposition).",
+    "tipOne": "Hack: FÜR, UM, DURCH, GEGEN, OHNE, (BIS), ENTLANG.",
+    "tipTwo": "Movement 'to where' is often expressed with the accusative.",
+    "tipThree": "bis is usually without article: bis Montag, bis Berlin.",
+    "tipFour": "entlang — as a postposition: den Fluss entlang.",
+    "translateOne": "We are walking through the park.",
+    "translateTwo": "A gift for the teacher.",
+    "translateThree": "I am against the plan.",
+    "translateFour": "He walks without an umbrella.",
+    "translateFive": "We sit around the table.",
+    "translateSix": "I stay until next Monday.",
+    "translateSeven": "We walk along the river.",
+    "practiceTitle": "Practice: Accusative",
+    "practiceDescription": "Practice the prepositions that require the accusative.",
+    "start": "Start"
+  },
+  "dativ": {
+    "rule": "These prepositions always require the dative: aus, außer, bei, mit, nach, seit, von, zu, gegenüber.",
+    "tipOne": "Basic set: bei, mit, nach, seit, von, zu.",
+    "tipTwo": "The state 'where?' is often expressed with the dative.",
+    "tipThree": "gegenüber can stand after the noun: dem Haus gegenüber.",
+    "translateOne": "He comes out of the house.",
+    "translateTwo": "There was no one except the child.",
+    "translateThree": "I live with my parents.",
+    "translateFour": "We go by car.",
+    "translateFive": "After eating, we study.",
+    "translateSix": "I have been learning German for a year.",
+    "translateSeven": "The train leaves from the station.",
+    "translateEight": "I go to school.",
+    "translateNine": "Opposite the house is a park.",
+    "practiceTitle": "Practice: Dative",
+    "practiceDescription": "Review the prepositions that require the dative.",
+    "start": "Start"
+  },
+  "genitiv": {
+    "rule": "These prepositions require the genitive: statt, trotz, während, wegen, außerhalb, innerhalb, jenseits/diesseits, aufgrund.",
+    "tipOne": "In spoken German, the genitive is often replaced by von + dative.",
+    "tipTwo": "Articles: des/eines; nouns often get the ending -s/-es.",
+    "tipThree": "Adjectives in the genitive get the ending -en.",
+    "translateOne": "Instead of sugar I take honey.",
+    "translateTwo": "Despite the rain, we go for a walk.",
+    "translateThree": "During the lesson the phone is off.",
+    "translateFour": "Because of the cold we stay at home.",
+    "translateFive": "Outside the city it is quieter.",
+    "translateSix": "Within a week you will get an answer.",
+    "translateSeven": "On the other side of the river is a village.",
+    "translateEight": "Due to roadworks the road is closed.",
+    "practiceTitle": "Practice: Genitive",
+    "practiceDescription": "Practice the use of genitive prepositions.",
+    "start": "Start"
+  },
+  "archiveExam": {
+    "title": "Test Result",
+    "btnBack": "← Back",
+    "loading": "Loading…",
+    "level": "Level:",
+    "status": "Status:",
+    "start": "Start:",
+    "score": "Average score:"
+  },
+  "dailyPanel": {
+    "title": "Daily Tasks",
+    "loading": "Loading…"
+  },
   "hoverTitle": {
     "tips": "Topic tips",
     "duelInfo": "Game rules",
     "sound": "Play example",
-    "ach": "Achievements info"
+    "ach": "Achievements info",
+    "articles": "Articluses",
+    "level": "Level"
+  },
+  "accountPanel": {
+    "title": "Participant Panel",
+    "articles": "Articluses",
+    "level": "Level",
+    "stats": "Statistics",
+    "premium": "Subscription",
+    "premDescription": "Get the most out of the platform. Learning, rewards, quests, progress and much more!",
+    "try": "Try"
   },
   "achModal": {
     "title": "Achievements are rewards for your progress",
@@ -14,6 +208,23 @@
   },
   "modalVerbsTipsTitle": {
     "tipsTitle": "Useful Tips:"
+  },
+  "locationsMenu": {
+    "title": "Map of Language Lands",
+    "access": "Access granted",
+    "accessWithLevel": "Access from level",
+    "choose": "Choose"
+  },
+  "locationNames": {
+    "east-plain": "Eastern Plain",
+    "stone-reach": "Stone Reach",
+    "wind-valley": "Valley of Winds",
+    "lake-ruins": "Lake Ruins",
+    "north-cliffs": "Northern Cliffs",
+    "storm-coast": "Storm Coast"
+  },
+  "examPage": {
+    "examHint": "We use an automatic speech recognition system. Speak clearly near the microphone."
   },
   "friendExam": {
     "title": "General tests from other participants",
@@ -304,10 +515,10 @@
     "close": "Close"
   },
   "cabinetSidebar": {
-    "valueOne": "Account Settings",
-    "valueTwo": "Article Progress",
+    "valueOne": "Account settings",
+    "valueTwo": "Friends",
     "valueThree": "Rewards",
-    "valueFour": "Exam Archive"
+    "valueFour": "Exam archive"
   },
   "cabinetAccordion": {
     "personalData": "Personal Data",
@@ -358,7 +569,10 @@
     "checkPassword": "Enter your password to confirm account deletion",
     "checkGoogle": "You signed in via Google. A re-authentication window will open to delete your account.",
     "deleteAccBtnAccept": "Delete",
-    "deleteAccBtnReject": "Cancel"
+    "deleteAccBtnReject": "Cancel",
+    "boughtAvatar": "Avatar purchased",
+    "notEnoughtArticles": "Not enough Artiklus",
+    "boughtBtn": "Ok"
   },
   "articleOverlay": {
     "title": "What is an Artikleus and how to earn it",
@@ -1350,6 +1564,7 @@
     "prev": "Introduction",
     "rules": "Rules",
     "artRules": "Article Practice",
+    "prepositions": "Prepositions practice",
     "adjectiveTheory": "Theory and Rules",
     "adjectivesBasic": "Basics",
     "declination": "Declension",

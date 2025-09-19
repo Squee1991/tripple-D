@@ -2,7 +2,7 @@
   <div class="daily">
     <section class="qd" v-if="ready && todayQuests.length">
       <header class="qd__header">
-        <h3 class="qd__title">Ежедневные задания</h3>
+        <h3 class="qd__title">{{ t('dailyPanel.title')}}</h3>
         <div class="qd__right">
           <img class="timer__icon" src="../../assets/images/dailyIcons/timer.svg" alt="Timer_daily"/>
           <span class="qd__timer">{{ prettyMs(msLeft) }}</span>
@@ -25,13 +25,13 @@
     </section>
     <section v-else class="qd">
       <div class="qd__header">
-        <h3 class="qd__title">Ежедневные задания</h3>
+        <h3 class="qd__title">{{ t('dailyPanel.title')}}</h3>
         <div class="qd__right">
           <img class="timer__icon" src="../../assets/images/dailyIcons/timer.svg" alt="Timer_daily"/>
           <span class="qd__timer">--:--:--</span>
         </div>
       </div>
-      <p class="loading">Загрузка…</p>
+      <p class="loading">{{ t('dailyPanel.loading')}}</p>
     </section>
   </div>
 </template>
@@ -39,11 +39,11 @@
 <script setup>
 import {ref, onMounted, onUnmounted} from 'vue'
 import {storeToRefs} from 'pinia'
-import {dailyStore} from '../../store/dailyStore'
-
+import {dailyStore} from '../../store/dailyStore.js'
 import NotCompleted from '../../assets/images/dailyIcons/dailyNotCompleted.svg'
 import Completed from '../../assets/images/dailyIcons/dailyCompleted.svg'
 
+const { t } = useI18n()
 const store = dailyStore()
 const {todayQuests, msLeft} = storeToRefs(store)
 

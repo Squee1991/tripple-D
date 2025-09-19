@@ -44,7 +44,6 @@ import {useQuizStore} from '../store/adjectiveStore.js'
 
 
 export const useAchievementStore = defineStore('achievementStore', () => {
-    // --- 1) Собираем все группы с категорией ---
     const rawGroups = [
         ...sentenceAchievement.map(g => ({category: 'sentence', ...g})),
         ...typeVerbs.map(g => ({category: 'typeVerbs', ...g})),
