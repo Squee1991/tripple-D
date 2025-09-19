@@ -84,7 +84,7 @@ import {userlangStore} from "~/store/learningStore.js";
 import {userAuthStore} from '../../store/authStore.js'
 import {useRouter} from "vue-router";
 import {useFriendsStore} from '../../store/friendsStore.js'
-import {onMounted, ref} from "vue";
+import {onMounted, ref,watch} from "vue";
 
 const istPremiumComputedStatus = computed(() => userAuth.isPremium ? 'Активна' : 'Не активна')
 
@@ -94,6 +94,13 @@ const userAuth = userAuthStore()
 const router = useRouter()
 const friendsStore = useFriendsStore()
 const isArticleOpen = ref(false)
+const handleLeveling = () => {
+    const LEVEL_UP_XP = 100
+    if (langStore.exp >= LEVEL_UP_XP) {
+        langStore.isLeveling++
+        langStore.exp -= LEVEL_UP_XP
+    }
+}
 const toPayment = () => {
   router.push('/pay')
 }
@@ -111,7 +118,9 @@ const articleData = ref({
     {id: 3, text: t('articleOverlay.third')},
   ]
 })
-
+watch(() => langStore.exp, (newVal) => {
+    handleLeveling()
+})
 onMounted(() => {
   friendsStore.loadFriends()
 })

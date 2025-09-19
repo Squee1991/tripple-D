@@ -601,7 +601,7 @@
       },
       {
         "id": 15,
-        "type": "speechToText.questFifteen",
+        "type": "speechToText",
         "question": "eastPlainThirdQuests.questFourteen",
         "text": "die Rechnung",
         "answer": "die Rechnung"
@@ -777,7 +777,7 @@
           "die Münze",
           "das Geld"
         ],
-        "answer": "der Schein"
+        "answer": "die Münze"
       },
       {
         "id": 15,
@@ -879,7 +879,6 @@
           "Tee",
           "kostet",
           "viel",
-          "",
           "möchte",
           "Tee"
         ],
@@ -1059,7 +1058,6 @@
           "Was",
           "Beruf",
           "als",
-          "Beruf",
           "ist",
           "dein"
         ],
@@ -1093,7 +1091,7 @@
           "eastPlainSixthQuests.questNineSecondOption",
           "eastPlainSixthQuests.questNineThirdOption"
         ],
-        "answer": "eastPlainSixthQuests.questNineAnswer"
+        "answer": "eastPlainSixthQuests.questNineSecondOption"
       },
       {
         "id": 10,
@@ -1111,7 +1109,7 @@
           "die Lehrerin",
           "die Kellnerin"
         ],
-        "answer": "Она продавец"
+        "answer": "der Koch"
       },
       {
         "id": 12,
@@ -1258,14 +1256,14 @@
           "1.10",
           "2.50"
         ],
-        "answer": "2.10"
+        "answer": "1.10"
       },
       {
         "id": 9,
         "type": "speechToText",
         "question": "eastPlainSeventhQuests.questNine",
-        "text": " Wie viel kostet eine Flasche Wasser? Eine Flasche Wasser koster zwei euro",
-        "answer": " Wie viel kostet eine Flasche Wasser? Eine Flasche Wasser koster zwei euro"
+        "text": "Wie viel kostet eine Flasche Wasser? Eine Flasche Wasser koster zwei euro",
+        "answer": "Wie viel kostet eine Flasche Wasser? Eine Flasche Wasser koster zwei euro"
       },
       {
         "id": 10,
@@ -1288,7 +1286,7 @@
           "eastPlainSeventhQuests.questElevenSecondOption",
           "eastPlainSeventhQuests.questElevenThirdOption"
         ],
-        "answer": "3 мая"
+        "answer": "eastPlainSeventhQuests.questElevenFirstOption"
       },
       {
         "id": 12,
@@ -1364,9 +1362,9 @@
         "options": [
           "eastPlainEighthQuests.questOneFirstOption",
           "eastPlainEighthQuests.questSecondFirstOption",
-          "eastPlainEighthQuests,questThirdFirstOption"
+          "eastPlainEighthQuests.questThirdFirstOption"
         ],
-        "answer": "eastPlainEighthQuests.questThirdAnswer"
+        "answer": "eastPlainEighthQuests.questOneFirstOption"
       },
       {
         "id": 2,
@@ -1391,7 +1389,7 @@
           "eastPlainEighthQuests.questFourSecondOption",
           "eastPlainEighthQuests.questFourThirdOption"
         ],
-        "answer": "eastPlainEighthQuests.questFourAnswer"
+        "answer": "eastPlainEighthQuests.questFourFirstOption"
       },
       {
         "id": 5,
@@ -1464,7 +1462,7 @@
           "eastPlainEighthQuests.questTenSecondOption",
           "eastPlainEighthQuests.questTenThirdOption"
         ],
-        "answer": "eastPlainEighthQuests.questTenAnswer"
+        "answer": "eastPlainEighthQuests.questTenFirstOption"
       },
       {
         "id": 11,
@@ -1488,7 +1486,7 @@
           "Sie",
           "ist",
           "meine",
-          "Schwester"
+          "Mutter"
         ]
       },
       {
@@ -1501,7 +1499,7 @@
           "eastPlainEighthQuests.questThirteenSecondOption",
           "eastPlainEighthQuests.questThirteenThirdOption"
         ],
-        "answer": "eastPlainEighthQuests.questThirteenAnswer"
+        "answer": "eastPlainEighthQuests.questThirteenSecondOption"
       },
       {
         "id": 14,
@@ -1536,7 +1534,7 @@
           "eastPlainNinthQuests.questOneSecondOption",
           "eastPlainNinthQuests.questOneThirdOption"
         ],
-        "answer": "eastPlainNinthQuests.questOneAnswer"
+        "answer": "eastPlainNinthQuests.questOneFirstOption"
       },
       {
         "id": 2,
@@ -1550,14 +1548,14 @@
         "type": "speechToText",
         "question": "eastPlainNinthQuests.questTree",
         "text": "Ich gehe zur Arbeit um 8 Uhr",
-        "answer": "Ich gehe zur Arbeit um 8 Uhr"
+          "answer": "Ich gehe zur Arbeit um 8 Uhr"
       },
       {
         "id": 4,
         "type": "reorder",
         "question": "eastPlainNinthQuests.questFour",
         "words": [
-          "morgens",
+          "Morgens",
           "ich",
           "trinke",
           "Wasser",
@@ -1580,7 +1578,7 @@
           "eastPlainNinthQuests.questFiveSecondOption",
           "eastPlainNinthQuests.questFiveThirdOption"
         ],
-        "answer": "eastPlainNinthQuests.questFiveAnswer"
+        "answer": "eastPlainNinthQuests.questFiveFirstOption"
       },
       {
         "id": 6,
@@ -1599,7 +1597,7 @@
         "question": "eastPlainNinthQuests.questSeven",
         "words": [
           "auf",
-          "ich",
+          "Ich",
           "stehe",
           "um",
           "7",
@@ -1624,7 +1622,7 @@
           "eastPlainNinthQuests.questEightSecondOption",
           "eastPlainNinthQuests.questEightThirdOption"
         ],
-        "answer": "eastPlainNinthQuests.questEightAnswer"
+        "answer": "eastPlainNinthQuests.questEightFirstOption"
       },
       {
         "id": 9,
@@ -1649,7 +1647,7 @@
           "eastPlainNinthQuests.questElevenSecondOption",
           "eastPlainNinthQuests.questElevenThirdOption"
         ],
-        "answer": "eastPlainNinthQuests.questElevenAnswer"
+        "answer": "eastPlainNinthQuests.questElevenFirstOption"
       },
       {
         "id": 12,
@@ -1706,18 +1704,17 @@
           "eastPlainNinthQuests.questFourteenSecondOption",
           "eastPlainNinthQuests.questFourteenThirdOption"
         ],
-        "answer": "eastPlainNinthQuests.questFourteenAnswer"
+        "answer": "eastPlainNinthQuests.questFourteenSecondOption"
       },
       {
         "id": 15,
-        "type": "speechToText.questFifteen",
-        "question": "eastPlainNinthQuests",
+        "type": "speechToText",
+        "question": "eastPlainNinthQuests.questFifteen",
         "text": "Ich gehe um Mitternacht schlafen",
         "answer": "Ich gehe um Mitternacht schlafen"
       }
     ]
   },
-
   {
     "questId": "menschen-a1-wohnort",
     "title": "eastPlainTenthQuests.title",
@@ -1760,7 +1757,7 @@
           "eastPlainTenthQuests.questTreeSecondOption",
           "eastPlainTenthQuests.questTreeThirdOption"
         ],
-        "answer": "eastPlainTenthQuests.questTreeAnswer"
+        "answer": "eastPlainTenthQuests.questTreeFirstOption"
       },
       {
         "id": 4,
@@ -1789,7 +1786,7 @@
           "eastPlainTenthQuests.questFiveSecondOption",
           "eastPlainTenthQuests.questFiveThirdOption"
         ],
-        "answer": "eastPlainTenthQuests.questFiveAnswer"
+        "answer": "eastPlainTenthQuests.questFiveThirdOption"
       },
       {
         "id": 6,
@@ -1808,7 +1805,7 @@
           "eastPlainTenthQuests.questSevenSecondOption",
           "eastPlainTenthQuests.questSevenThirdOption"
         ],
-        "answer": "eastPlainTenthQuests.questSevenAnswer"
+        "answer": "eastPlainTenthQuests.questSevenSecondOption"
       },
       {
         "id": 8,
@@ -1819,7 +1816,7 @@
           "eastPlainTenthQuests.questEightSecondOption",
           "eastPlainTenthQuests.questEightThirdOption"
         ],
-        "answer": "eastPlainTenthQuests.questEightAnswer"
+        "answer": "eastPlainTenthQuests.questEightFirstOption"
       },
       {
         "id": 9,
@@ -1831,7 +1828,7 @@
           "eastPlainTenthQuests.questNineSecondOption",
           "eastPlainTenthQuests.questNineThirdOption"
         ],
-        "answer": "eastPlainTenthQuests.questNineAnswer"
+        "answer": "eastPlainTenthQuests.questNineSecondOption"
       },
       {
         "id": 10,
@@ -1864,7 +1861,7 @@
           "eastPlainTenthQuests.questElevenSecondOption",
           "eastPlainTenthQuests.questElevenThirdOption"
         ],
-        "answer": "eastPlainTenthQuests.questElevenAnswer"
+        "answer": "eastPlainTenthQuests.questElevenThirdOption"
       },
       {
         "id": 12,

@@ -467,7 +467,7 @@
         "type": "reorder",
         "question": "questsWindValleyThirdQuests.questFourteen",
         "words": ["eine", "große", "Apotheke"],
-        "correctOrder": ["eine", "große", "Аптека"]
+        "correctOrder": ["eine", "große", "Apotheke"]
       },
       {
         "id": 15,
@@ -557,7 +557,7 @@
         "type": "reorder",
         "question": "questsWindValleyFourthQuests.questSeven",
         "words": ["die", "Straße", "und", "die", "Kreuzung"],
-        "correctOrder": ["die", "Straße", "und", "die", "Kreuzung"]
+        "correctOrder": ["Kreuzung","die", "Straße", "und", "die", ]
       },
       {
         "id": 8,
@@ -571,7 +571,7 @@
         "type": "reorder",
         "question": "questsWindValleyFourthQuests.questNine",
         "words": ["die", "Ampel", "und", "der", "Park"],
-        "correctOrder": ["die", "Ampel", "und", "der", "Park"]
+        "correctOrder": ["die", "Ampel","Park", "und", "der", ]
       },
       {
         "id": 10,
@@ -585,7 +585,7 @@
         "type": "reorder",
         "question": "questsWindValleyFourthQuests.questEleven",
         "words": ["die", "Bank", "und", "die", "Karte"],
-        "correctOrder": ["die", "Bank", "und", "die", "Karte"]
+        "correctOrder": ["Karte","die", "die","Bank", "und",  ]
       },
       {
         "id": 12,
@@ -599,14 +599,14 @@
         "type": "reorder",
         "question": "questsWindValleyFourthQuests.questThirteen",
         "words": ["eine", "rote", "Ampel"],
-        "correctOrder": ["eine", "rote", "Ampel"]
+        "correctOrder": ["Ampel","eine", "rote", ]
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "questsWindValleyFourthQuests.questFourteen",
         "words": ["eine", "kleine", "Karte"],
-        "correctOrder": ["eine", "kleine", "Karte"]
+        "correctOrder": ["eine", "Karte","kleine", ]
       },
       {
         "id": 15,

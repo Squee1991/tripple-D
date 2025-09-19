@@ -118,7 +118,7 @@ export default defineNuxtPlugin((nuxtApp) => {
 
         const name = resolveName(a)
         const msg = name
-            ? `🏆 ${t('Достижение')} «${name}» ${t('выполнено')}!`
+            ? `🏆 ${(ach.achievement)} «${name}» ${t(ach.status)}!`
             : ''
 
         toast.success(msg, { toastId: key, containerId: CONTAINER_ID })

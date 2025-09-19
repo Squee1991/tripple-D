@@ -535,7 +535,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
             spent => updateProgress('ArticlusSpent', spent),
             {immediate: true}
         )
-        // 5.9) sentenceAchievements (Дуэли фраз)
+
         // 5.9) sentenceAchievements (Дуэли фраз)
         watch(() => authStore.achievements, (stats) => {
             // Если пользователь выходит, stats будет null
