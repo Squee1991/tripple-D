@@ -264,8 +264,18 @@
         "id": 5,
         "type": "reorder",
         "question": "questsWindValleySecondQuests.questFive",
-        "words": ["ist", "die", "U-Bahn", "Das"],
-        "correctOrder": ["Das", "ist", "die", "U-Bahn"]
+        "words": [
+          "ist",
+          "die",
+          "U-Bahn",
+          "Das"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "die",
+          "U-Bahn"
+        ]
       },
       {
         "id": 6,
@@ -278,8 +288,18 @@
         "id": 7,
         "type": "reorder",
         "question": "questsWindValleySecondQuests.questSeven",
-        "words": ["der", "ist", "Bus", "Das"],
-        "correctOrder": ["Das", "ist", "der", "Bus"]
+        "words": [
+          "der",
+          "ist",
+          "Bus",
+          "Das"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "der",
+          "Bus"
+        ]
       },
       {
         "id": 8,
@@ -292,8 +312,18 @@
         "id": 9,
         "type": "reorder",
         "question": "questsWindValleySecondQuests.questNine",
-        "words": ["ist", "Bahnhof", "Das", "der"],
-        "correctOrder": ["Das", "ist", "der", "Bahnhof"]
+        "words": [
+          "ist",
+          "Bahnhof",
+          "Das",
+          "der"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "der",
+          "Bahnhof"
+        ]
       },
       {
         "id": 10,
@@ -306,8 +336,18 @@
         "id": 11,
         "type": "reorder",
         "question": "questsWindValleySecondQuests.questEleven",
-        "words": ["ist", "Ticket", "Das", "ein"],
-        "correctOrder": ["Das", "ist", "ein", "Ticket"]
+        "words": [
+          "ist",
+          "Ticket",
+          "Das",
+          "ein"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "ein",
+          "Ticket"
+        ]
       },
       {
         "id": 12,
@@ -320,26 +360,49 @@
         "id": 13,
         "type": "reorder",
         "question": "questsWindValleySecondQuests.questThirteen",
-        "words": ["neues", "ein", "Ticket"],
-        "correctOrder": ["ein", "neues", "Ticket"]
+        "words": [
+          "neues",
+          "ein",
+          "Ticket"
+        ],
+        "correctOrder": [
+          "ein",
+          "neues",
+          "Ticket"
+        ]
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "questsWindValleySecondQuests.questFourteen",
-        "words": ["großer", "ein", "Bahnhof"],
-        "correctOrder": ["ein", "großer", "Bahnhof"]
+        "words": [
+          "großer",
+          "ein",
+          "Bahnhof"
+        ],
+        "correctOrder": [
+          "ein",
+          "großer",
+          "Bahnhof"
+        ]
       },
       {
         "id": 15,
         "type": "reorder",
         "question": "questsWindValleySecondQuests.questFifteen",
-        "words": ["ein", "kleiner", "Bus"],
-        "correctOrder": ["ein", "kleiner", "Bus"]
+        "words": [
+          "ein",
+          "kleiner",
+          "Bus"
+        ],
+        "correctOrder": [
+          "ein",
+          "kleiner",
+          "Bus"
+        ]
       }
     ]
   },
-
   {
     "questId": "city-3",
     "title": "questsWindValleyThirdQuests.title",
@@ -403,8 +466,18 @@
         "id": 5,
         "type": "reorder",
         "question": "questsWindValleyThirdQuests.questFive",
-        "words": ["ist", "Das", "die", "Bäckerei"],
-        "correctOrder": ["Das", "ist", "die", "Bäckerei"]
+        "words": [
+          "ist",
+          "Das",
+          "die",
+          "Bäckerei"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "die",
+          "Bäckerei"
+        ]
       },
       {
         "id": 6,
@@ -417,8 +490,18 @@
         "id": 7,
         "type": "reorder",
         "question": "questsWindValleyThirdQuests.questSeven",
-        "words": ["die", "ist", "Apotheke", "Das"],
-        "correctOrder": ["Das", "ist", "die", "Apotheke"]
+        "words": [
+          "die",
+          "ist",
+          "Apotheke",
+          "Das"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "die",
+          "Apotheke"
+        ]
       },
       {
         "id": 8,
@@ -431,8 +514,18 @@
         "id": 9,
         "type": "reorder",
         "question": "questsWindValleyThirdQuests.questNine",
-        "words": ["ist", "die", "Das", "Bank"],
-        "correctOrder": ["Das", "ist", "die", "Bank"]
+        "words": [
+          "ist",
+          "die",
+          "Das",
+          "Bank"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "die",
+          "Bank"
+        ]
       },
       {
         "id": 10,
@@ -445,8 +538,18 @@
         "id": 11,
         "type": "reorder",
         "question": "questsWindValleyThirdQuests.questEleven",
-        "words": ["Supermarkt", "ist", "der", "Das"],
-        "correctOrder": ["Das", "ist", "der", "Supermarkt"]
+        "words": [
+          "Supermarkt",
+          "ist",
+          "der",
+          "Das"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "der",
+          "Supermarkt"
+        ]
       },
       {
         "id": 12,
@@ -459,26 +562,49 @@
         "id": 13,
         "type": "reorder",
         "question": "questsWindValleyThirdQuests.questThirteen",
-        "words": ["eine", "kleine", "Bäckerei"],
-        "correctOrder": ["eine", "kleine", "Bäckerei"]
+        "words": [
+          "eine",
+          "kleine",
+          "Bäckerei"
+        ],
+        "correctOrder": [
+          "eine",
+          "kleine",
+          "Bäckerei"
+        ]
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "questsWindValleyThirdQuests.questFourteen",
-        "words": ["eine", "große", "Apotheke"],
-        "correctOrder": ["eine", "große", "Apotheke"]
+        "words": [
+          "eine",
+          "große",
+          "Apotheke"
+        ],
+        "correctOrder": [
+          "eine",
+          "große",
+          "Apotheke"
+        ]
       },
       {
         "id": 15,
         "type": "reorder",
         "question": "questsWindValleyThirdQuests.questFifteen",
-        "words": ["ein", "großer", "Supermarkt"],
-        "correctOrder": ["ein", "großer", "Supermarkt"]
+        "words": [
+          "ein",
+          "großer",
+          "Supermarkt"
+        ],
+        "correctOrder": [
+          "ein",
+          "großer",
+          "Supermarkt"
+        ]
       }
     ]
   },
-
   {
     "questId": "city-4",
     "title": "questsWindValleyFourthQuests.title",
@@ -542,8 +668,20 @@
         "id": 5,
         "type": "reorder",
         "question": "questsWindValleyFourthQuests.questFive",
-        "words": ["der", "Bus", "und", "die", "Haltestelle"],
-        "correctOrder": ["der", "Bus", "und", "die", "Haltestelle"]
+        "words": [
+          "der",
+          "Bus",
+          "und",
+          "die",
+          "Haltestelle"
+        ],
+        "correctOrder": [
+          "der",
+          "Bus",
+          "und",
+          "die",
+          "Haltestelle"
+        ]
       },
       {
         "id": 6,
@@ -556,8 +694,20 @@
         "id": 7,
         "type": "reorder",
         "question": "questsWindValleyFourthQuests.questSeven",
-        "words": ["die", "Straße", "und", "die", "Kreuzung"],
-        "correctOrder": ["Kreuzung","die", "Straße", "und", "die", ]
+        "words": [
+          "die",
+          "Straße",
+          "und",
+          "die",
+          "Kreuzung"
+        ],
+        "correctOrder": [
+          "Kreuzung",
+          "die",
+          "Straße",
+          "und",
+          "die"
+        ]
       },
       {
         "id": 8,
@@ -570,8 +720,20 @@
         "id": 9,
         "type": "reorder",
         "question": "questsWindValleyFourthQuests.questNine",
-        "words": ["die", "Ampel", "und", "der", "Park"],
-        "correctOrder": ["die", "Ampel","Park", "und", "der", ]
+        "words": [
+          "die",
+          "Ampel",
+          "und",
+          "der",
+          "Park"
+        ],
+        "correctOrder": [
+          "die",
+          "Ampel",
+          "Park",
+          "und",
+          "der"
+        ]
       },
       {
         "id": 10,
@@ -584,8 +746,20 @@
         "id": 11,
         "type": "reorder",
         "question": "questsWindValleyFourthQuests.questEleven",
-        "words": ["die", "Bank", "und", "die", "Karte"],
-        "correctOrder": ["Karte","die", "die","Bank", "und",  ]
+        "words": [
+          "die",
+          "Bank",
+          "und",
+          "die",
+          "Karte"
+        ],
+        "correctOrder": [
+          "Karte",
+          "die",
+          "die",
+          "Bank",
+          "und"
+        ]
       },
       {
         "id": 12,
@@ -598,15 +772,31 @@
         "id": 13,
         "type": "reorder",
         "question": "questsWindValleyFourthQuests.questThirteen",
-        "words": ["eine", "rote", "Ampel"],
-        "correctOrder": ["Ampel","eine", "rote", ]
+        "words": [
+          "eine",
+          "rote",
+          "Ampel"
+        ],
+        "correctOrder": [
+          "Ampel",
+          "eine",
+          "rote"
+        ]
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "questsWindValleyFourthQuests.questFourteen",
-        "words": ["eine", "kleine", "Karte"],
-        "correctOrder": ["eine", "Karte","kleine", ]
+        "words": [
+          "eine",
+          "kleine",
+          "Karte"
+        ],
+        "correctOrder": [
+          "eine",
+          "Karte",
+          "kleine"
+        ]
       },
       {
         "id": 15,
@@ -680,8 +870,18 @@
         "id": 5,
         "type": "reorder",
         "question": "questsWindValleyFifthQuests.questFive",
-        "words": ["Das", "ist", "das", "Restaurant"],
-        "correctOrder": ["Das", "ist", "das", "Restaurant"]
+        "words": [
+          "Das",
+          "ist",
+          "das",
+          "Restaurant"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "das",
+          "Restaurant"
+        ]
       },
       {
         "id": 6,
@@ -694,8 +894,18 @@
         "id": 7,
         "type": "reorder",
         "question": "questsWindValleyFifthQuests.questSeven",
-        "words": ["Das", "ist", "das", "Café"],
-        "correctOrder": ["Das", "ist", "das", "Café"]
+        "words": [
+          "Das",
+          "ist",
+          "das",
+          "Café"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "das",
+          "Café"
+        ]
       },
       {
         "id": 8,
@@ -708,8 +918,18 @@
         "id": 9,
         "type": "reorder",
         "question": "questsWindValleyFifthQuests.questNine",
-        "words": ["Das", "ist", "das", "Hotel"],
-        "correctOrder": ["Das", "ist", "das", "Hotel"]
+        "words": [
+          "Das",
+          "ist",
+          "das",
+          "Hotel"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "das",
+          "Hotel"
+        ]
       },
       {
         "id": 10,
@@ -722,8 +942,18 @@
         "id": 11,
         "type": "reorder",
         "question": "questsWindValleyFifthQuests.questEleven",
-        "words": ["Das", "ist", "das", "Museum"],
-        "correctOrder": ["Das", "ist", "das", "Museum"]
+        "words": [
+          "Das",
+          "ist",
+          "das",
+          "Museum"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "das",
+          "Museum"
+        ]
       },
       {
         "id": 12,
@@ -736,15 +966,31 @@
         "id": 13,
         "type": "reorder",
         "question": "questsWindValleyFifthQuests.questThirteen",
-        "words": ["ein", "kleines", "Café"],
-        "correctOrder": ["ein", "kleines", "Café"]
+        "words": [
+          "ein",
+          "Café",
+          "kleines"
+        ],
+        "correctOrder": [
+          "ein",
+          "kleines",
+          "Café"
+        ]
       },
       {
         "id": 14,
         "type": "reorder",
         "question": "questsWindValleyFifthQuests.questFourteen",
-        "words": ["ein", "großes", "Hotel"],
-        "correctOrder": ["ein", "großes", "Hotel"]
+        "words": [
+          "großes",
+          "ein",
+          "Hotel"
+        ],
+        "correctOrder": [
+          "ein",
+          "großes",
+          "Hotel"
+        ]
       },
       {
         "id": 15,
@@ -785,8 +1031,20 @@
         "id": 2,
         "type": "reorder",
         "question": "questsWindValleySixQuests.questTwo",
-        "words": ["die", "Straße", "und", "der", "Park"],
-        "correctOrder": ["die", "Straße", "und", "der", "Park"]
+        "words": [
+          "die",
+          "und",
+          "Straße",
+          "Park",
+          "der"
+        ],
+        "correctOrder": [
+          "die",
+          "Straße",
+          "und",
+          "der",
+          "Park"
+        ]
       },
       {
         "id": 3,
@@ -810,8 +1068,20 @@
         "id": 5,
         "type": "reorder",
         "question": "questsWindValleySixQuests.questFive",
-        "words": ["der", "Bahnhof", "und", "die", "U-Bahn"],
-        "correctOrder": ["der", "Bahnhof", "und", "die", "U-Bahn"]
+        "words": [
+          "der",
+          "Bahnhof",
+          "und",
+          "die",
+          "U-Bahn"
+        ],
+        "correctOrder": [
+          "der",
+          "Bahnhof",
+          "und",
+          "die",
+          "U-Bahn"
+        ]
       },
       {
         "id": 6,
@@ -835,8 +1105,20 @@
         "id": 8,
         "type": "reorder",
         "question": "questsWindValleySixQuests.questEight",
-        "words": ["die", "Bäckerei", "und", "die", "Apotheke"],
-        "correctOrder": ["die", "Bäckerei", "und", "die", "Apotheke"]
+        "words": [
+          "Bäckerei",
+          "die",
+          "und",
+          "Apotheke",
+          "die"
+        ],
+        "correctOrder": [
+          "die",
+          "Bäckerei",
+          "und",
+          "die",
+          "Apotheke"
+        ]
       },
       {
         "id": 9,
@@ -860,8 +1142,20 @@
         "id": 11,
         "type": "reorder",
         "question": "questsWindValleySixQuests.questEleven",
-        "words": ["das", "Café", "und", "das", "Museum"],
-        "correctOrder": ["das", "Café", "und", "das", "Museum"]
+        "words": [
+          "das",
+          "Café",
+          "und",
+          "das",
+          "Museum"
+        ],
+        "correctOrder": [
+          "das",
+          "Café",
+          "und",
+          "das",
+          "Museum"
+        ]
       },
       {
         "id": 12,
@@ -874,8 +1168,18 @@
         "id": 13,
         "type": "reorder",
         "question": "questsWindValleySixQuests.questThirteen",
-        "words": ["ist", "die", "Haltestelle", "Das"],
-        "correctOrder": ["Das", "ist", "die", "Haltestelle"]
+        "words": [
+          "ist",
+          "die",
+          "Haltestelle",
+          "Das"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "die",
+          "Haltestelle"
+        ]
       },
       {
         "id": 14,
@@ -888,8 +1192,16 @@
         "id": 15,
         "type": "reorder",
         "question": "questsWindValleySixQuests.questFifteen",
-        "words": ["ein", "neues", "Ticket"],
-        "correctOrder": ["ein", "neues", "Ticket"]
+        "words": [
+          "neues",
+          "ein",
+          "Ticket"
+        ],
+        "correctOrder": [
+          "ein",
+          "neues",
+          "Ticket"
+        ]
       }
     ]
   },
@@ -956,8 +1268,18 @@
         "id": 5,
         "type": "reorder",
         "question": "questsWindValleySevenQuests.questFive",
-        "words": ["Die", "Bank", "ist", "links"],
-        "correctOrder": ["Die", "Bank", "ist", "links"]
+        "words": [
+          "Die",
+          "links",
+          "Bank",
+          "ist"
+        ],
+        "correctOrder": [
+          "Die",
+          "Bank",
+          "ist",
+          "links"
+        ]
       },
       {
         "id": 6,
@@ -970,8 +1292,18 @@
         "id": 7,
         "type": "reorder",
         "question": "questsWindValleySevenQuests.questSeven",
-        "words": ["Der", "Park", "ist", "rechts"],
-        "correctOrder": ["Der", "Park", "ist", "rechts"]
+        "words": [
+          "Der",
+          "ist",
+          "Park",
+          "rechts"
+        ],
+        "correctOrder": [
+          "Der",
+          "Park",
+          "ist",
+          "rechts"
+        ]
       },
       {
         "id": 8,
@@ -984,8 +1316,18 @@
         "id": 9,
         "type": "reorder",
         "question": "questsWindValleySevenQuests.questNine",
-        "words": ["Die", "U-Bahn", "ist", "geradeaus"],
-        "correctOrder": ["Die", "U-Bahn", "ist", "geradeaus"]
+        "words": [
+          "Die",
+          "U-Bahn",
+          "ist",
+          "geradeaus"
+        ],
+        "correctOrder": [
+          "Die",
+          "U-Bahn",
+          "ist",
+          "geradeaus"
+        ]
       },
       {
         "id": 10,
@@ -998,8 +1340,18 @@
         "id": 11,
         "type": "reorder",
         "question": "questsWindValleySevenQuests.questEleven",
-        "words": ["Das", "Café", "ist", "gegenüber"],
-        "correctOrder": ["Das", "Café", "ist", "gegenüber"]
+        "words": [
+          "Das",
+          "Café",
+          "ist",
+          "gegenüber"
+        ],
+        "correctOrder": [
+          "Das",
+          "Café",
+          "ist",
+          "gegenüber"
+        ]
       },
       {
         "id": 12,
@@ -1012,8 +1364,22 @@
         "id": 13,
         "type": "reorder",
         "question": "questsWindValleySevenQuests.questThirteen",
-        "words": ["Das", "Museum", "ist", "gegenüber", "dem", "Hotel"],
-        "correctOrder": ["Das", "Museum", "ist", "gegenüber", "dem", "Hotel"]
+        "words": [
+          "Das",
+          "Museum",
+          "ist",
+          "gegenüber",
+          "dem",
+          "Hotel"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "Hotel",
+          "gegenüber",
+          "dem",
+          "Museum"
+        ]
       },
       {
         "id": 14,
@@ -1098,8 +1464,22 @@
         "id": 5,
         "type": "reorder",
         "question": "questsWindValleyEighthQuests.questFive",
-        "words": ["Die", "Bank", "ist", "neben", "dem", "Park"],
-        "correctOrder": ["Die", "Bank", "ist", "neben", "dem", "Park"]
+        "words": [
+          "Die",
+          "Park",
+          "dem",
+          "Bank",
+          "ist",
+          "neben"
+        ],
+        "correctOrder": [
+          "Die",
+          "Bank",
+          "ist",
+          "neben",
+          "dem",
+          "Park"
+        ]
       },
       {
         "id": 6,
@@ -1112,8 +1492,22 @@
         "id": 7,
         "type": "reorder",
         "question": "questsWindValleyEighthQuests.questSeven",
-        "words": ["Das", "Café", "ist", "vor", "dem", "Museum"],
-        "correctOrder": ["Das", "Café", "ist", "vor", "dem", "Museum"]
+        "words": [
+          "Das",
+          "Café",
+          "vor",
+          "ist",
+          "dem",
+          "Museum"
+        ],
+        "correctOrder": [
+          "Das",
+          "Café",
+          "ist",
+          "vor",
+          "dem",
+          "Museum"
+        ]
       },
       {
         "id": 8,
@@ -1126,8 +1520,22 @@
         "id": 9,
         "type": "reorder",
         "question": "questsWindValleyEighthQuests.questNine",
-        "words": ["Die", "U-Bahn", "ist", "hinter", "dem", "Bahnhof"],
-        "correctOrder": ["Die", "U-Bahn", "ist", "hinter", "dem", "Bahnhof"]
+        "words": [
+          "Die",
+          "U-Bahn",
+          "ist",
+          "hinter",
+          "dem",
+          "Bahnhof"
+        ],
+        "correctOrder": [
+          "Die",
+          "U-Bahn",
+          "ist",
+          "hinter",
+          "dem",
+          "Bahnhof"
+        ]
       },
       {
         "id": 10,
@@ -1140,8 +1548,28 @@
         "id": 11,
         "type": "reorder",
         "question": "questsWindValleyEighthQuests.questEleven",
-        "words": ["Die", "Apotheke", "ist", "zwischen", "der", "Bank", "und", "der", "Bäckerei"],
-        "correctOrder": ["Die", "Apotheke", "ist", "zwischen", "der", "Bank", "und", "der", "Bäckerei"]
+        "words": [
+          "Die",
+          "Apotheke",
+          "ist",
+          "zwischen",
+          "der",
+          "Bank",
+          "und",
+          "der",
+          "Bäckerei"
+        ],
+        "correctOrder": [
+          "Die",
+          "und",
+          "Apotheke",
+          "ist",
+          "Bäckerei",
+          "zwischen",
+          "der",
+          "Bank",
+          "der"
+        ]
       },
       {
         "id": 12,
@@ -1154,8 +1582,22 @@
         "id": 13,
         "type": "reorder",
         "question": "questsWindValleyEighthQuests.questThirteen",
-        "words": ["Die", "Haltestelle", "ist", "neben", "der", "Straße"],
-        "correctOrder": ["Die", "Haltestelle", "ist", "neben", "der", "Straße"]
+        "words": [
+          "Die",
+          "ist",
+          "Haltestelle",
+          "der",
+          "neben",
+          "Straße"
+        ],
+        "correctOrder": [
+          "Die",
+          "Haltestelle",
+          "ist",
+          "neben",
+          "der",
+          "Straße"
+        ]
       },
       {
         "id": 14,
@@ -1240,8 +1682,22 @@
         "id": 5,
         "type": "reorder",
         "question": "questsWindValleyNinthQuests.questFive",
-        "words": ["Die", "Post", "ist", "in", "der", "Stadt"],
-        "correctOrder": ["Die", "Post", "ist", "in", "der", "Stadt"]
+        "words": [
+          "Die",
+          "ist",
+          "Post",
+          "in",
+          "Stadt",
+          "der"
+        ],
+        "correctOrder": [
+          "Die",
+          "Post",
+          "ist",
+          "in",
+          "der",
+          "Stadt"
+        ]
       },
       {
         "id": 6,
@@ -1254,8 +1710,18 @@
         "id": 7,
         "type": "reorder",
         "question": "questsWindValleyNinthQuests.questSeven",
-        "words": ["Das", "ist", "die", "Polizei"],
-        "correctOrder": ["Das", "ist", "die", "Polizei"]
+        "words": [
+          "ist",
+          "Das",
+          "Polizei",
+          "die"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "die",
+          "Polizei"
+        ]
       },
       {
         "id": 8,
@@ -1268,8 +1734,18 @@
         "id": 9,
         "type": "reorder",
         "question": "questsWindValleyNinthQuests.questNine",
-        "words": ["Das", "ist", "das", "Krankenhaus"],
-        "correctOrder": ["Das", "ist", "das", "Krankenhaus"]
+        "words": [
+          "Das",
+          "ist",
+          "das",
+          "Krankenhaus"
+        ],
+        "correctOrder": [
+          "Das",
+          "ist",
+          "das",
+          "Krankenhaus"
+        ]
       },
       {
         "id": 10,
@@ -1282,8 +1758,22 @@
         "id": 11,
         "type": "reorder",
         "question": "questsWindValleyNinthQuests.questEleven",
-        "words": ["Die", "Schule", "ist", "neben", "der", "Bank"],
-        "correctOrder": ["Die", "Schule", "ist", "neben", "der", "Bank"]
+        "words": [
+          "Die",
+          "Schule",
+          "ist",
+          "neben",
+          "der",
+          "Bank"
+        ],
+        "correctOrder": [
+          "Die",
+          "Schule",
+          "ist",
+          "neben",
+          "der",
+          "Bank"
+        ]
       },
       {
         "id": 12,
@@ -1296,8 +1786,22 @@
         "id": 13,
         "type": "reorder",
         "question": "questsWindValleyNinthQuests.questThirteen",
-        "words": ["Das", "Krankenhaus", "ist", "gegenüber", "dem", "Park"],
-        "correctOrder": ["Das", "Krankenhaus", "ist", "gegenüber", "dem", "Park"]
+        "words": [
+          "Das",
+          "gegenüber",
+          "Krankenhaus",
+          "ist",
+          "Park",
+          "dem"
+        ],
+        "correctOrder": [
+          "Das",
+          "Krankenhaus",
+          "ist",
+          "gegenüber",
+          "dem",
+          "Park"
+        ]
       },
       {
         "id": 14,
@@ -1351,8 +1855,8 @@
         "question": "questsWindValleyTenthQuests.questTwo",
         "words": [
           "Die",
-          "Haltestelle",
           "ist",
+          "Haltestelle",
           "links"
         ],
         "correctOrder": [
@@ -1372,7 +1876,7 @@
       {
         "id": 4,
         "type": "select",
-        "question": "questsWindValleyTenthQuests.",
+        "question": "questsWindValleyTenthQuests.questFour",
         "options": [
           "questsWindValleyTenthQuests.questFourFirstOption",
           "questsWindValleyTenthQuests.questFourSecondOption",
@@ -1386,9 +1890,9 @@
         "question": "questsWindValleyTenthQuests.questFive",
         "words": [
           "Der",
-          "Bahnhof",
           "ist",
-          "rechts"
+          "rechts",
+          "Bahnhof"
         ],
         "correctOrder": [
           "Der",
@@ -1421,10 +1925,10 @@
         "question": "questsWindValleyTenthQuests.questEight",
         "words": [
           "Das",
-          "Café",
-          "ist",
           "gegenüber",
+          "Café",
           "dem",
+          "ist",
           "Hotel"
         ],
         "correctOrder": [
@@ -1452,7 +1956,7 @@
           "questsWindValleyTenthQuests.questTenSecondOption",
           "questsWindValleyTenthQuests.questTenThirdOption"
         ],
-        "answer": "Аптека рядом с банком"
+        "answer": "questsWindValleyTenthQuests.questTenFirstOption"
       },
       {
         "id": 11,
@@ -1468,8 +1972,8 @@
         ],
         "correctOrder": [
           "Die",
-          "Apotheke",
           "ist",
+          "Apotheke",
           "vor",
           "dem",
           "Museum"
@@ -1553,8 +2057,18 @@
         "id": 2,
         "type": "reorder",
         "question": "questsStoneReachEleventhQuests.questTwo",
-        "words": ["Wo", "ist", "die", "Haltestelle"],
-        "correctOrder": ["Wo", "ist", "die", "Haltestelle"]
+        "words": [
+          "Wo",
+          "ist",
+          "die",
+          "Haltestelle"
+        ],
+        "correctOrder": [
+          "Wo",
+          "ist",
+          "die",
+          "Haltestelle"
+        ]
       },
       {
         "id": 3,
@@ -1578,8 +2092,20 @@
         "id": 5,
         "type": "reorder",
         "question": "questsStoneReachEleventhQuests.questFive",
-        "words": ["Entschuldigung", "wo", "Park", "der", "ist"],
-        "correctOrder": ["Entschuldigung", "wo", "ist", "der", "Park"]
+        "words": [
+          "Entschuldigung",
+          "Park",
+          "wo",
+          "der",
+          "ist"
+        ],
+        "correctOrder": [
+          "Entschuldigung",
+          "wo",
+          "ist",
+          "der",
+          "Park"
+        ]
       },
       {
         "id": 6,
@@ -1603,8 +2129,22 @@
         "id": 8,
         "type": "reorder",
         "question": "questsStoneReachEleventhQuests.questEight",
-        "words": ["dem", "Apotheke", "Museum", "gegenüber", "Die", "ist"],
-        "correctOrder": ["Die", "Apotheke", "ist", "gegenüber", "dem", "Museum"]
+        "words": [
+          "dem",
+          "Apotheke",
+          "Museum",
+          "gegenüber",
+          "Die",
+          "ist"
+        ],
+        "correctOrder": [
+          "Die",
+          "Apotheke",
+          "ist",
+          "gegenüber",
+          "dem",
+          "Museum"
+        ]
       },
       {
         "id": 9,
@@ -1628,8 +2168,22 @@
         "id": 11,
         "type": "reorder",
         "question": "questsStoneReachEleventhQuests.questEleven",
-        "words": ["Bank", "Hotel", "der", "neben", "ist", "das"],
-        "correctOrder": ["Das", "Hotel", "ist", "neben", "der", "Bank"]
+        "words": [
+          "Bank",
+          "Hotel",
+          "der",
+          "neben",
+          "ist",
+          "Das"
+        ],
+        "correctOrder": [
+          "Das",
+          "Hotel",
+          "ist",
+          "neben",
+          "der",
+          "Bank"
+        ]
       },
       {
         "id": 12,
@@ -1642,8 +2196,18 @@
         "id": 13,
         "type": "reorder",
         "question": "questsStoneReachEleventhQuests.questThirteen",
-        "words": ["ist", "Museum", "Das", "rechts"],
-        "correctOrder": ["Das", "Museum", "ist", "rechts"]
+        "words": [
+          "ist",
+          "Museum",
+          "Das",
+          "rechts"
+        ],
+        "correctOrder": [
+          "Das",
+          "Museum",
+          "ist",
+          "rechts"
+        ]
       },
       {
         "id": 14,
@@ -1655,17 +2219,16 @@
       {
         "id": 15,
         "type": "select",
-        "question": "questsStoneReachEleventhQuests.questFifteenFirstOption",
+        "question": "questsStoneReachEleventhQuests.questFifteen",
         "options": [
+          "questsStoneReachEleventhQuests.questFifteenFirstOption",
           "questsStoneReachEleventhQuests.questFifteenSecondOption",
-          "questsStoneReachEleventhQuests.",
           "questsStoneReachEleventhQuests.questFifteenThirdOption"
         ],
         "answer": "questsStoneReachEleventhQuests.questFifteenSecondOption"
       }
     ]
   },
-
   {
     "questId": "city-12",
     "title": "questsStoneReachTwelfthQuests.title",
@@ -1919,7 +2482,7 @@
       {
         "id": 4,
         "type": "select",
-        "question": "questsStoneReachThirteenthQuests.",
+        "question": "questsStoneReachThirteenthQuests.questFour",
         "options": [
           "questsStoneReachThirteenthQuests.questFourFirstOption",
           "questsStoneReachThirteenthQuests.questFourSecondOption",

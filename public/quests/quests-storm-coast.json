@@ -146,8 +146,8 @@
         "type": "reorder",
         "question": "questsStormCoastsFirstQuests.questEleven",
         "words": [
-          "Ich",
           "kann",
+          "Ich",
           "kommen"
         ],
         "correctOrder": [
@@ -311,8 +311,8 @@
         "question": "questsStormCoastsSecondQuests.questEight",
         "words": [
           "Ich",
-          "habe",
           "ein",
+          "habe",
           "Geschenk"
         ],
         "correctOrder": [
@@ -332,7 +332,7 @@
           "questsStormCoastsSecondQuests.questNineSecondOption",
           "questsStormCoastsSecondQuests.questNineThirdOption"
         ],
-        "answer": "Цветы"
+        "answer": "questsStormCoastsSecondQuests.questNineFirstOption"
       },
       {
         "id": 10,
@@ -357,11 +357,11 @@
         "question": "questsStormCoastsSecondQuests.questTwelve",
         "words": [
           "Die",
-          "Kerzen",
+          "Kuchen",
           "sind",
-          "auf",
           "dem",
-          "Kuchen"
+          "auf",
+          "Kerzen"
         ],
         "correctOrder": [
           "Die",
@@ -389,10 +389,10 @@
         "type": "reorder",
         "question": "questsStormCoastsSecondQuests.questFourteen",
         "words": [
-          "Herzlichen",
+          "Geburtstag!",
           "Glückwunsch",
           "zum",
-          "Geburtstag!"
+          "Herzlichen"
         ],
         "correctOrder": [
           "Herzlichen",
@@ -761,11 +761,11 @@
         "type": "reorder",
         "question": "questsStormCoastsFourQuests.questEleven",
         "words": [
-          "Wir",
           "feiern",
+          "Familie",
           "mit",
           "der",
-          "Familie"
+          "Wir"
         ],
         "correctOrder": [
           "Wir",
@@ -933,7 +933,7 @@
           "questsStormCoastsFifthQuests.questSevenSecondOption",
           "questsStormCoastsFifthQuests.questSevenThirdOption"
         ],
-        "answer": "Подарок и открытка"
+        "answer": "questsStormCoastsFifthQuests.questSevenFirstOption"
       },
       {
         "id": 8,
@@ -1001,7 +1001,7 @@
           "questsStormCoastsFifthQuests.questThirteenSecondOption",
           "questsStormCoastsFifthQuests.questThirteenThirdOption"
         ],
-        "answer": "questThirteenFirstOption"
+        "answer": "questsStormCoastsFifthQuests.questThirteenFirstOption"
       },
       {
         "id": 14,
@@ -1082,7 +1082,7 @@
           "Die",
           "am",
           "April.",
-          "3"
+          "3."
         ],
         "correctOrder": [
           "Die",
@@ -1124,7 +1124,7 @@
         "correctOrder": [
           "Kannst",
           "du",
-          "ам",
+          "am",
           "Samstag",
           "kommen"
         ]
@@ -1224,7 +1224,7 @@
           "questsStormCoastsSixQuests.questThirteenSecondOption",
           "questsStormCoastsSixQuests.questThirteenThirdOption"
         ],
-        "answer": "Можно ли привести кого-то"
+        "answer": "questsStormCoastsSixQuests.questThirteenFirstOption"
       },
       {
         "id": 14,
@@ -1232,10 +1232,10 @@
         "question": "questsStormCoastsSixQuests.questFourteen",
         "words": [
           "Du",
+          "mitbringen",
           "kannst",
-          "eine",
           "Freundin",
-          "mitbringen"
+          "eine"
         ],
         "correctOrder": [
           "Du",
@@ -1324,10 +1324,10 @@
         "words": [
           "Ich",
           "bringe",
-          "Salate",
+          "mit",
           "und",
           "Getränke",
-          "mit"
+          "Salate"
         ],
         "correctOrder": [
           "Ich",
@@ -1361,10 +1361,10 @@
         "question": "questsStormCoastsSevenQuests.questSeven",
         "words": [
           "Ich",
-          "bringe",
           "Salate",
           "und",
           "Getränke",
+          "bringe",
           "mit"
         ],
         "correctOrder": [
@@ -1463,9 +1463,9 @@
         "question": "questsStormCoastsSevenQuests.questFifteen",
         "words": [
           "Mit",
-          "Zucker",
           "oder",
-          "ohne"
+          "ohne",
+          "Zucker"
         ],
         "correctOrder": [
           "Mit",
@@ -1555,9 +1555,9 @@
         "type": "reorder",
         "question": "questsStormCoastsEighthQuests.questFive",
         "words": [
-          "Das",
-          "Programm",
           "beginnt",
+          "Programm",
+          "Das",
           "um",
           "19:30"
         ],
@@ -1577,9 +1577,9 @@
           "Kannst",
           "du",
           "die",
-          "Musik",
+          "machen",
           "leiser",
-          "machen"
+          "Musik"
         ],
         "correctOrder": [
           "Kannst",
@@ -1596,9 +1596,9 @@
         "question": "questsStormCoastsEighthQuests.questSeven",
         "words": [
           "Wir",
-          "tanzen",
           "und",
-          "spielen"
+          "spielen",
+          "tanzen"
         ],
         "correctOrder": [
           "Wir",
@@ -1647,10 +1647,10 @@
         "question": "questsStormCoastsEighthQuests.questEleven",
         "words": [
           "Die",
-          "Party",
-          "endet",
           "um",
-          "Mitternacht"
+          "Party",
+          "Mitternacht",
+          "endet"
         ],
         "correctOrder": [
           "Die",
@@ -1665,11 +1665,11 @@
         "type": "reorder",
         "question": "questsStormCoastsEighthQuests.questTwelve",
         "words": [
-          "Ein",
+          "Fest",
           "Toast",
           "auf",
           "unser",
-          "Fest"
+          "Ein"
         ],
         "correctOrder": [
           "Ein",
@@ -1779,10 +1779,10 @@
         "type": "reorder",
         "question": "questsStormCoastsNinthQuests.questFive",
         "words": [
-          "Herzlichen",
           "Glückwunsch",
-          "zur",
-          "Hochzeit!"
+          "Herzlichen",
+          "Hochzeit!",
+          "zur"
         ],
         "correctOrder": [
           "Herzlichen",
@@ -1796,10 +1796,10 @@
         "type": "reorder",
         "question": "questsStormCoastsNinthQuests.questSix",
         "words": [
-          "Alles",
+          "Jubiläum",
           "Gute",
           "zum",
-          "Jubiläum"
+          "Alles"
         ],
         "correctOrder": [
           "Alles",
@@ -1813,16 +1813,16 @@
         "type": "reorder",
         "question": "questsStormCoastsNinthQuests.questSeven",
         "words": [
-          "Die",
           "Feier",
+          "Die",
           "ist",
-          "im",
-          "Restaurant"
+          "Restaurant",
+          "im"
         ],
         "correctOrder": [
           "Die",
           "Feier",
-          "ист",
+          "ist",
           "im",
           "Restaurant"
         ]
@@ -1832,9 +1832,9 @@
         "type": "reorder",
         "question": "questsStormCoastsNinthQuests.questEight",
         "words": [
-          "Was",
           "schenken",
-          "wir"
+          "wir",
+          "Was"
         ],
         "correctOrder": [
           "Was",
@@ -1870,10 +1870,10 @@
         "type": "reorder",
         "question": "questsStormCoastsNinthQuests.questEleven",
         "words": [
-          "Wir",
-          "gratulieren",
           "der",
-          "Familie"
+          "Wir",
+          "Familie",
+          "gratulieren"
         ],
         "correctOrder": [
           "Wir",
@@ -1889,8 +1889,8 @@
         "words": [
           "Ein",
           "Geschenk",
-          "von",
-          "uns"
+          "uns",
+          "von"
         ],
         "correctOrder": [
           "Ein",
@@ -1917,9 +1917,9 @@
         "question": "questsStormCoastsNinthQuests.questFourteen",
         "words": [
           "Wir",
-          "sind",
+          "angezogen",
           "schick",
-          "angezogen"
+          "sind"
         ],
         "correctOrder": [
           "Wir",
@@ -1975,7 +1975,7 @@
         "words": [
           "Ich",
           "gern",
-          "Ich"
+          "komme"
         ],
         "correctOrder": [
           "Ich",
@@ -2073,8 +2073,8 @@
         "question": "questsStormCoastsTenthQuests.questNine",
         "words": [
           "Wir",
-          "machen",
-          "Fotos"
+          "Fotos",
+          "machen"
         ],
         "correctOrder": [
           "Wir",
