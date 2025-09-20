@@ -44,6 +44,14 @@ export const sentenceAchievement = [
                 currentProgress: 0,
                 targetProgress: 5,
             },
+            {
+                id: 'a1_flawlessWins_2',
+                name: 'Перфекционист',
+                description: 'Выиграть 2 игр без единой ошибки на уровне A1.',
+                icon: '💎',
+                currentProgress: 0,
+                targetProgress: 2,
+            },
         ]
     },
     {

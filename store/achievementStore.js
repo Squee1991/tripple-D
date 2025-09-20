@@ -537,33 +537,52 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 
         // 5.9) sentenceAchievements (Дуэли фраз)
         watch(() => authStore.achievements, (stats) => {
-            // Если пользователь выходит, stats будет null
             if (!stats) {
-                // Можно сбросить прогресс, если нужно
-                updateProgress('a1_wins_1', 0);
-                // ... и для всех остальных достижений этой группы
+                // Если пользователь выходит, сбросить прогресс
+                // ... (ваш код для сброса)
                 return;
             }
 
-            // --- Статистика по победам ---
-            updateProgress('a1_wins_1', stats.A1?.wins || 0);
-            updateProgress('a2_wins_10', stats.A2?.wins || 0);
-            updateProgress('b1_wins_50', stats.B1?.wins || 0);
-            updateProgress('b2_wins_100', stats.B2?.wins || 0);
+            // --- Обновление побед ---
+            updateProgress('a1_wins_1', stats.a1?.wins || 0);
+            updateProgress('a2_wins_10', stats.a2?.wins || 0);
+            updateProgress('b1_wins_50', stats.b1?.wins || 0);
+            updateProgress('b2_wins_100', stats.b2?.wins || 0);
 
-            // --- Статистика по сериям побед (streaks) ---
-            updateProgress('a1_streaks_3', stats.A1?.streaks || 0);
-            updateProgress('a1_streaks_5', stats.A1?.streaks || 0);
-            updateProgress('a1_streaks_10', stats.A1?.streaks || 0);
-            updateProgress('a2_streaks_5', stats.A2?.streaks || 0);
-            updateProgress('b1_streaks_7', stats.B1?.streaks || 0);
-            updateProgress('b2_streaks_10', stats.B2?.streaks || 0);
+            // --- Обновление серий побед (streaks) ---
+            // Уровни A1
+            const a1Streaks = stats.a1?.streaks || 0;
+            const a1StreaksAchievs = groups.value.flatMap(g => g.achievements).filter(a => a.id.startsWith('a1_streaks'));
+            a1StreaksAchievs.forEach(ach => {
+                if (a1Streaks >= ach.targetProgress) {
+                    updateProgress(ach.id, ach.targetProgress); // Прогресс достигнут
+                } else {
+                    updateProgress(ach.id, a1Streaks); // Прогресс ещё не достигнут
+                }
+            });
 
-            // --- Статистика по чистым победам (clean sweeps / flawless) ---
-            updateProgress('a1_cleanSweeps_5', stats.A1?.cleanSweeps || 0);
-            updateProgress('a2_cleanSweeps_3', stats.A2?.cleanSweeps || 0);
-            updateProgress('b1_flawlessWins_25', stats.B1?.flawlessWins || 0);
-            updateProgress('b2_cleanSweeps_10', stats.B2?.cleanSweeps || 0);
+            // Уровни A2
+            updateProgress('a2_streaks_5', stats.a2?.streaks || 0); // здесь, если targetProgress - 5, то просто обновляем
+
+                        // Уровни B1
+            updateProgress('b1_streaks_7', stats.b1?.streaks || 0);
+
+            // Уровни B2
+            updateProgress('b2_streaks_10', stats.b2?.streaks || 0);
+
+            // --- Обновление чистых побед (clean sweeps / flawless) ---
+            // Уровни A1
+            updateProgress('a1_cleanSweeps_5', stats.a1?.cleanSweeps || 0);
+            updateProgress('a1_flawlessWins_2', stats.a1?.flawlessWins || 0);
+
+            // Уровни A2
+            updateProgress('a2_cleanSweeps_3', stats.a2?.cleanSweeps || 0);
+
+            // Уровни B1
+            updateProgress('b1_flawlessWins_25', stats.b1?.flawlessWins || 0);
+
+            // Уровни B2
+            updateProgress('b2_cleanSweeps_10', stats.b2?.cleanSweeps || 0);
 
         }, { deep: true, immediate: true });
 
