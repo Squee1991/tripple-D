@@ -1,12 +1,8 @@
 import {defineStore} from 'pinia';
 import {ref} from 'vue';
-import {
-    getFirestore, collection, query, where, addDoc, onSnapshot, getDocs, getDoc, doc,
-    serverTimestamp, updateDoc, orderBy, limit, runTransaction, deleteDoc, increment
-} from 'firebase/firestore';
+import {getFirestore, collection, query, where, addDoc, onSnapshot, getDocs, getDoc, doc, serverTimestamp, updateDoc, orderBy, limit, runTransaction, deleteDoc, increment} from 'firebase/firestore';
 import {userAuthStore} from './authStore.js';
 import {useSentencesStore} from './sentencesStore.js';
-
 export const useGameStore = defineStore('gameDuelStore', () => {
     const db = getFirestore();
     const authStore = userAuthStore();
@@ -19,28 +15,20 @@ export const useGameStore = defineStore('gameDuelStore', () => {
     let unsubscribeFromSession = null;
     const isCheckingWinner = ref(false);
     const achievements = ref({});
-
     async function loadUserAchievements() {
-        // Получаем ID пользователя из хранилища аутентификации
         const userId = authStore.uid;
-
-        // Проверяем, что ID существует
         if (!userId) return;
-
         try {
             const userDocRef = doc(db, 'users', userId);
             const userDoc = await getDoc(userDocRef);
-
             if (userDoc.exists()) {
-                // Записываем достижения в state
                 achievements.value = userDoc.data().achievements || {};
             } else {
-                // Если документа пользователя нет, можно установить пустой объект
                 achievements.value = {};
             }
         } catch (error) {
             console.error("Ошибка при загрузке достижений пользователя:", error);
-            achievements.value = {}; // В случае ошибки сбрасываем состояние
+            achievements.value = {};
         }
     }
 
@@ -50,9 +38,7 @@ export const useGameStore = defineStore('gameDuelStore', () => {
     }
 
     async function updateUserStats(userId, level, isWin, isCleanSweep, isFlawless) {
-        if (!userId || !level) {
-            return;
-        }
+        if (!userId || !level) return;
         const userDocRef = doc(db, 'users', userId);
         const updates = {};
         const prefix = `achievements.${level}`;
@@ -68,7 +54,6 @@ export const useGameStore = defineStore('gameDuelStore', () => {
         } else {
             updates[`${prefix}.streaks`] = 0;
         }
-
         try {
             await updateDoc(userDocRef, updates);
         } catch (error) {
@@ -80,7 +65,6 @@ export const useGameStore = defineStore('gameDuelStore', () => {
         if (!sentencesStore.db) {
             return null;
         }
-
         const allSentencesForLevel = sentencesStore.db?.levels[level]?.sentences || [];
         if (allSentencesForLevel.length < 11) {
             console.error("Недостаточно предложений для уровня:", level);
@@ -89,7 +73,6 @@ export const useGameStore = defineStore('gameDuelStore', () => {
 
         const shuffled = allSentencesForLevel.sort(() => 0.5 - Math.random());
         const selectedSentences = shuffled.slice(0, 11);
-
         const sessionsRef = collection(db, 'gameSessions');
         const newSession = {
             hostId: hostId,

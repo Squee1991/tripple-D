@@ -2,6 +2,33 @@
   "preloader": {
     "value": "Вы будете перенаправлены на главную страницу..."
   },
+  "duelA1": {
+    "title": "Дуэли фраз (Уровень A1)",
+    "firstWinName": "Первая победа",
+    "firstWinDescription": "Одержать первую победу на уровне A1",
+    "secondWinName": "Зов победы",
+    "secondWinDescription": "Победить в 10 играх на уровне А1",
+    "streak3Name": "На волне",
+    "streak3Description": "Победить в 3 играх подряд на уровне A1",
+    "streak10Name": "На волне",
+    "streak10Description": "Победить в 10 играх подряд на уровне A1",
+    "cleanSweeps5": "Чистый старт",
+    "cleanSweeps5Description": "Выиграть 20 игр на уровне А1, не допустив ни одной ошибки"
+  },
+  "duelA2": {
+    "title": "Дуэли фраз (Уровень A2)",
+    "firstWinName": "Первый трофей А2",
+    "firstWinDescription": "Одержать первую победу на уровне A2",
+    "secondWinName": "Десятник",
+    "secondWinDescription": "Одержать 10 побед на уровне A2",
+    "streak3Name": "Серия удачи",
+    "streak3Description": "Победить в 5 играх подряд на уровне A2",
+    "streak10Name": "Мастер точности",
+    "streak10Description": "Выиграть 20 игр на уровне A2 без единой ошибки",
+    "cleanSweeps5": "Чистый старт",
+    "cleanSweeps5Description": "Выиграть 20 игр на уровне А1, не допустив ни одной ошибки"
+  },
+
   "locationQuests": {
     "done": "ПРОЙДЕНО",
     "awards": "Награда:",
