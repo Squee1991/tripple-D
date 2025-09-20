@@ -48,5 +48,455 @@
     "question": "Das ist der Hund meines gut___ Freundes.",
     "options": ["e", "er", "es", "en"],
     "answer": "en"
+  },
+  {
+    "question": "Ich sehe ein klein___ Kind.",
+    "options": ["es", "en", "er", "e"],
+    "answer": "es"
+  },
+  {
+    "question": "Sie besucht eine jung___ Lehrerin.",
+    "options": ["er", "e", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Wir brauchen einen stark___ Mann.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "en"
+  },
+  {
+    "question": "Er schenkt einer nett___ Kollegin Blumen.",
+    "options": ["en", "e", "er", "em"],
+    "answer": "en"
+  },
+  {
+    "question": "Das ist ein lang___ Film.",
+    "options": ["e", "en", "er", "er"],
+    "answer": "er"
+  },
+  {
+    "question": "Ich fahre mit einem neu___ Fahrrad.",
+    "options": ["em", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Sie schreibt einen wichtig___ Brief.",
+    "options": ["en", "er", "es", "e"],
+    "answer": "en"
+  },
+  {
+    "question": "Wir haben eine schön___ Wohnung gefunden.",
+    "options": ["en", "er", "e", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Er lebt in einer modern___ Stadt.",
+    "options": ["en", "em", "e", "er"],
+    "answer": "en"
+  },
+  {
+    "question": "Das ist ein schwierig___ Problem.",
+    "options": ["e", "es", "er", "en"],
+    "answer": "es"
+  },
+  {
+    "question": "Er kauft einen teuer___ Laptop.",
+    "options": ["en", "er", "es", "e"],
+    "answer": "en"
+  },
+  {
+    "question": "Sie trägt eine elegant___ Jacke.",
+    "options": ["er", "e", "en", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Wir sehen ein bunt___ Bild.",
+    "options": ["er", "e", "en", "es"],
+    "answer": "es"
+  },
+  {
+    "question": "Ich spreche mit einem freundlich___ Mann.",
+    "options": ["en", "em", "er", "e"],
+    "answer": "en"
+  },
+  {
+    "question": "Das ist eine schwierig___ Aufgabe.",
+    "options": ["er", "es", "e", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Er wohnt in einem alt___ Haus.",
+    "options": ["en", "er", "em", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Sie liest ein spannend___ Buch.",
+    "options": ["es", "e", "en", "er"],
+    "answer": "es"
+  },
+  {
+    "question": "Wir haben eine frisch___ Idee.",
+    "options": ["es", "e", "en", "er"],
+    "answer": "e"
+  },
+  {
+    "question": "Das Kind spielt mit einem klein___ Ball.",
+    "options": ["en", "es", "er", "em"],
+    "answer": "en"
+  },
+  {
+    "question": "Ich sehe eine hübsch___ Frau.",
+    "options": ["er", "e", "en", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Er liest in einer interessant___ Zeitung.",
+    "options": ["er", "en", "e", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Wir besuchen einen alt___ Freund.",
+    "options": ["er", "en", "e", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Das ist ein hoch___ Berg.",
+    "options": ["er", "e", "en", "es"],
+    "answer": "er"
+  },
+  {
+    "question": "Ich schreibe mit einem neu___ Stift.",
+    "options": ["en", "er", "em", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Sie bestellt eine lecker___ Suppe.",
+    "options": ["en", "e", "es", "er"],
+    "answer": "e"
+  },
+  {
+    "question": "Wir hören ein laut___ Geräusch.",
+    "options": ["er", "es", "en", "e"],
+    "answer": "es"
+  },
+  {
+    "question": "Ich gehe mit einer jung___ Frau ins Kino.",
+    "options": ["e", "en", "er", "em"],
+    "answer": "en"
+  },
+  {
+    "question": "Das ist ein nett___ Nachbar.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "er"
+  },
+  {
+    "question": "Sie schenkt ihrem Vater einen gut___ Wein.",
+    "options": ["es", "en", "er", "e"],
+    "answer": "en"
+  },
+  {
+    "question": "Wir fahren mit einem schnell___ Zug.",
+    "options": ["er", "en", "em", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Das ist ein klein___ Dorf.",
+    "options": ["er", "e", "es", "en"],
+    "answer": "es"
+  },
+  {
+    "question": "Sie schreibt eine lang___ Nachricht.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Wir besuchen einen jung___ Arzt.",
+    "options": ["en", "er", "e", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Er spielt mit einem bunt___ Ball.",
+    "options": ["es", "en", "er", "em"],
+    "answer": "en"
+  },
+  {
+    "question": "Das ist eine neu___ Lampe.",
+    "options": ["en", "e", "er", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Ich höre ein schön___ Lied.",
+    "options": ["er", "es", "e", "en"],
+    "answer": "es"
+  },
+  {
+    "question": "Wir sehen eine alt___ Kirche.",
+    "options": ["e", "er", "en", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Sie trägt einen warm___ Mantel.",
+    "options": ["e", "es", "er", "en"],
+    "answer": "en"
+  },
+  {
+    "question": "Ich trinke einen frisch___ Saft.",
+    "options": ["e", "en", "es", "er"],
+    "answer": "en"
+  },
+  {
+    "question": "Das ist ein dunkel___ Zimmer.",
+    "options": ["es", "er", "e", "en"],
+    "answer": "es"
+  },
+  {
+    "question": "Er arbeitet in einer groß___ Firma.",
+    "options": ["er", "e", "en", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Wir haben eine interessant___ Idee.",
+    "options": ["er", "e", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Das Kind liest ein kurz___ Märchen.",
+    "options": ["es", "en", "e", "er"],
+    "answer": "es"
+  },
+  {
+    "question": "Sie schreibt einen wichtig___ Text.",
+    "options": ["en", "es", "e", "er"],
+    "answer": "en"
+  },
+  {
+    "question": "Ich wohne in einer ruhig___ Straße.",
+    "options": ["en", "er", "es", "e"],
+    "answer": "en"
+  },
+  {
+    "question": "Das ist ein teuer___ Geschenk.",
+    "options": ["er", "es", "e", "en"],
+    "answer": "es"
+  },
+  {
+    "question": "Wir machen eine spannend___ Reise.",
+    "options": ["e", "es", "en", "er"],
+    "answer": "e"
+  },
+  {
+    "question": "Er hat einen neu___ Anzug gekauft.",
+    "options": ["en", "er", "e", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Sie liest mit einem alt___ Freund ein Buch.",
+    "options": ["en", "es", "er", "em"],
+    "answer": "en"
+  },
+  {
+    "question": "Das ist ein hell___ Fenster.",
+    "options": ["e", "es", "er", "en"],
+    "answer": "es"
+  },
+  {
+    "question": "Ich kaufe eine neu___ Tasche.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Wir besuchen einen alt___ Lehrer.",
+    "options": ["en", "es", "er", "e"],
+    "answer": "en"
+  },
+  {
+    "question": "Das ist ein schön___ Bild.",
+    "options": ["er", "es", "e", "en"],
+    "answer": "es"
+  },
+  {
+    "question": "Sie wohnt in einer klein___ Wohnung.",
+    "options": ["e", "er", "en", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Ich sehe einen stark___ Hund.",
+    "options": ["en", "e", "es", "er"],
+    "answer": "en"
+  },
+  {
+    "question": "Er schenkt eine bunt___ Blume.",
+    "options": ["er", "es", "e", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Wir essen in einem gut___ Restaurant.",
+    "options": ["em", "en", "es", "er"],
+    "answer": "en"
+  },
+  {
+    "question": "Sie liest ein neu___ Buch.",
+    "options": ["es", "er", "e", "en"],
+    "answer": "es"
+  },
+  {
+    "question": "Ich habe eine wichtig___ Frage.",
+    "options": ["en", "e", "es", "er"],
+    "answer": "e"
+  },
+  {
+    "question": "Er besucht einen jung___ Arzt.",
+    "options": ["er", "en", "e", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Wir wohnen in einem modern___ Haus.",
+    "options": ["er", "es", "en", "em"],
+    "answer": "en"
+  },
+  {
+    "question": "Das ist ein interessant___ Film.",
+    "options": ["es", "er", "en", "e"],
+    "answer": "er"
+  },
+  {
+    "question": "Sie spielt mit einer nett___ Freundin.",
+    "options": ["en", "es", "e", "er"],
+    "answer": "en"
+  },
+  {
+    "question": "Er trägt einen dunkel___ Mantel.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Ich esse ein frisch___ Brötchen.",
+    "options": ["en", "e", "es", "er"],
+    "answer": "es"
+  },
+  {
+    "question": "Wir sprechen mit einem alt___ Nachbarn.",
+    "options": ["en", "er", "es", "em"],
+    "answer": "en"
+  },
+  {
+    "question": "Das ist eine klug___ Idee.",
+    "options": ["er", "e", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Er liest ein spannend___ Märchen.",
+    "options": ["es", "en", "er", "e"],
+    "answer": "es"
+  },
+  {
+    "question": "Ich höre eine schön___ Melodie.",
+    "options": ["es", "e", "er", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Wir besuchen einen berühmt___ Schauspieler.",
+    "options": ["e", "es", "en", "er"],
+    "answer": "en"
+  },
+  {
+    "question": "Das ist ein alt___ Schloss.",
+    "options": ["es", "er", "e", "en"],
+    "answer": "es"
+  },
+  {
+    "question": "Ich treffe eine nett___ Nachbarin.",
+    "options": ["en", "e", "er", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Wir besuchen einen bekannt___ Künstler.",
+    "options": ["en", "er", "e", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Er arbeitet in einer groß___ Bibliothek.",
+    "options": ["en", "e", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Ich sehe ein blau___ Auto.",
+    "options": ["es", "er", "en", "e"],
+    "answer": "es"
+  },
+  {
+    "question": "Sie bestellt eine heiß___ Suppe.",
+    "options": ["er", "en", "es", "e"],
+    "answer": "e"
+  },
+  {
+    "question": "Wir fahren mit einem neu___ Bus.",
+    "options": ["em", "en", "es", "er"],
+    "answer": "en"
+  },
+  {
+    "question": "Das ist ein schwierig___ Test.",
+    "options": ["es", "er", "en", "e"],
+    "answer": "er"
+  },
+  {
+    "question": "Ich trinke einen stark___ Kaffee.",
+    "options": ["er", "en", "e", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Sie wohnt in einer ruhig___ Gegend.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Wir lesen ein lang___ Gedicht.",
+    "options": ["er", "es", "e", "en"],
+    "answer": "es"
+  },
+  {
+    "question": "Er besucht eine alt___ Tante.",
+    "options": ["er", "e", "en", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Ich esse einen süß___ Apfel.",
+    "options": ["e", "er", "en", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Das ist ein jung___ Student.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "er"
+  },
+  {
+    "question": "Wir sprechen mit einem alt___ Professor.",
+    "options": ["er", "en", "em", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Sie hat eine neu___ Uhr gekauft.",
+    "options": ["es", "en", "er", "e"],
+    "answer": "e"
+  },
+  {
+    "question": "Ich sehe ein hell___ Licht.",
+    "options": ["er", "en", "es", "e"],
+    "answer": "es"
+  },
+  {
+    "question": "Er trägt einen elegant___ Anzug.",
+    "options": ["en", "es", "er", "e"],
+    "answer": "en"
+  },
+  {
+    "question": "Das ist eine schwierig___ Situation.",
+    "options": ["er", "en", "e", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Wir machen einen lang___ Spaziergang.",
+    "options": ["en", "es", "e", "er"],
+    "answer": "en"
   }
 ]

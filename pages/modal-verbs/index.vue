@@ -337,7 +337,6 @@ watch(selectedGroup, initLottieIcon);
   border: 3px solid #1e1e1e;
   flex-grow: 1;
   background: #fdfdfd;
-  padding: 30px;
   box-shadow: 6px 6px 0px #1e1e1e;
   display: flex;
   flex-direction: column;
@@ -377,6 +376,9 @@ watch(selectedGroup, initLottieIcon);
   flex-grow: 1;
   padding: 20px;
   overflow: hidden;
+  border: 3px solid black;
+  border-radius: 15px;
+  box-shadow: 5px 5px 0 black;
 }
 
 .content__main-column {
@@ -387,17 +389,14 @@ watch(selectedGroup, initLottieIcon);
 }
 
 .content-block {
-  border-radius: 15px;
-  border: 3px solid #1e1e1e;
   flex-grow: 1;
   background: #fdfdfd;
-  padding: 30px;
-  box-shadow: 6px 6px 0px #1e1e1e;
   display: flex;
   flex-direction: column;
   gap: 20px;
   position: relative;
   overflow: hidden;
+  padding: 1rem ;
 }
 
 .info-section {

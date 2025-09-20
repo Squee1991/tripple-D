@@ -102,7 +102,6 @@
               <button class="nav" @click="nextRegion"><img src="../assets/images/arrow-next.svg" alt=""/></button>
             </div>
           </header>
-
           <article class="card">
             <h3 class="card__title">{{ t('articlesStatistics.summary')}}</h3>
             <div class="summary">

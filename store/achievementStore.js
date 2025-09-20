@@ -158,51 +158,38 @@ export const useAchievementStore = defineStore('achievementStore', () => {
         showNextPopup()
     }
 
-    function updateProgress (id, val) {
+    function updateProgress(id, val) {
         const ach = findById(id)
         if (!ach) return
 
-        ach.currentProgress = Math.min(val, ach.targetProgress)
+        const target = Number(ach.targetProgress ?? 0)
+        const prev   = Number(ach.currentProgress ?? 0)
+        const next   = Math.max(prev, Number(val ?? 0)) // не уменьшаем
+        ach.currentProgress = Math.min(next, target)
 
-        const nowCompleted     = ach.currentProgress >= ach.targetProgress
+        const nowCompleted     = ach.currentProgress >= target
         const alreadyCompleted = completedSet.has(id)
         const justCompleted    = nowCompleted && !alreadyCompleted
 
         if (justCompleted) {
-            // фиксируем закрытие
             completedSet.add(id)
             saveCompleted(completedSet)
 
             if (!isBooting.value) {
-                // очередь попапов
                 popupQueue.value.push(ach)
                 showNextPopup()
+                lastUnlockedAchievement.value = { id: ach.id, title: ach.title, groupTitle: ach.groupTitle || null, ts: Date.now() }
+                setTimeout(() => { if (lastUnlockedAchievement.value?.id === ach.id) lastUnlockedAchievement.value = null }, 0)
 
-                // сигнал для тост-плагина
-                lastUnlockedAchievement.value = {
-                    id: ach.id,
-                    title: ach.title,
-                    groupTitle: ach.groupTitle || null,
-                    ts: Date.now()
-                }
-                setTimeout(() => {
-                    if (lastUnlockedAchievement.value?.id === ach.id) lastUnlockedAchievement.value = null
-                }, 0)
-                // 🎁 награда (если есть и не показывали)
                 const awardTitle = achievementToAwardMap[id]
                 if (awardTitle && !shownSet.has(awardTitle)) {
                     shownSet.add(awardTitle)
                     saveShown(shownSet)
                     lastUnlockedAward.value = { title: awardTitle, achId: id, ts: Date.now() }
-                    setTimeout(() => {
-                        if (lastUnlockedAward.value?.achId === id) lastUnlockedAward.value = null
-                    }, 0)
-
-                    // апдейт «Начало коллекции» по количеству наград
+                    setTimeout(() => { if (lastUnlockedAward.value?.achId === id) lastUnlockedAward.value = null }, 0)
                     updateProgress("firstAward", shownSet.size)
                 }
             } else {
-                // во время boot — копим для реплея
                 bootUnlocked.push(ach)
                 const awardTitle = achievementToAwardMap[id]
                 if (awardTitle && !shownSet.has(awardTitle)) {
@@ -216,6 +203,21 @@ export const useAchievementStore = defineStore('achievementStore', () => {
         prevMap.set(id, ach.currentProgress)
     }
 
+
+    function getPrefixIds(prefix) {
+        const ids = []
+        for (const g of groups.value) {
+            for (const a of g.achievements) {
+                if (typeof a.id === 'string' && a.id.startsWith(prefix)) {
+                    const n = Number(a.id.slice(prefix.length))
+                    if (Number.isFinite(n)) ids.push({ id: a.id, n })
+                }
+            }
+        }
+        ids.sort((a, b) => a.n - b.n)
+        return ids.map(x => x.id)
+    }
+
     // --- 5) Навешиваем watch’еры для всех категорий ---
     function initializeProgressTracking () {
         const prepositionsSetup = {
@@ -226,24 +228,29 @@ export const useAchievementStore = defineStore('achievementStore', () => {
         }
         let prepositionUnsubs = []
         const applyPrepositionSnapshots = (prefix, agg, sess) => {
-            const totalCorrectAgg = Number(agg?.totalCorrect || 0)
-            const sessionCorrect  = Object.values(sess?.userAnswersMap || {})
-                .filter(v => v && v.isCorrect).length
-            const totalNow = totalCorrectAgg + sessionCorrect
+            const totalNow = Number(agg?.totalCorrect || 0)
+
             updateProgress(`${prefix}1`, totalNow > 0 ? 1 : 0)
             updateProgress(`${prefix}2`, totalNow)
             updateProgress(`${prefix}3`, totalNow)
+
             const perfectCnt = Number(agg?.perfectSessionsCount || 0)
             updateProgress(`${prefix}4`, perfectCnt)
+
             const fastPerfectCnt = Number(agg?.fastPerfectSessionsCount || 0)
             updateProgress(`${prefix}5`, fastPerfectCnt)
-            const req = [`${prefix}1`, `${prefix}2`, `${prefix}3`, `${prefix}4`, `${prefix}5`]
-            const allDone = req.every(id => {
-                const a = findById(id); if (!a) return false
-                const tp = Number(a.targetProgress || 1)
-                return Number(a.currentProgress || 0) >= tp
-            })
-            updateProgress(`${prefix}6`, allDone ? 1 : 0)
+
+            const allIds = getPrefixIds(prefix)
+            if (allIds.length >= 2) {
+                const lastId = allIds[allIds.length - 1]
+                const prereqIds = allIds.slice(0, -1)
+                const allDone = prereqIds.every(id => {
+                    const a = findById(id); if (!a) return true
+                    const tp = Number(a.targetProgress || 1)
+                    return Number(a.currentProgress || 0) >= tp
+                })
+                updateProgress(lastId, allDone ? 1 : 0)
+            }
         }
         watch(() => authStore.uid, (uid) => {
             prepositionUnsubs.forEach(fn => { try { fn && fn() } catch {} })

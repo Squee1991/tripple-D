@@ -55,17 +55,14 @@ import { wordPlusArticleAchievment } from '../achieveGroup/article/wordPlusArtic
 const { t } = useI18n()
 const achievementStore = useAchievementStore()
 
-// Собираем список заголовков групп именно для word+article
 const wordArticleTitles = wordPlusArticleAchievment.map(g => g.title)
 
-// Фильтруем глобальные группы по этим заголовкам
 const wordArticleGroups = computed(() =>
     achievementStore.groups.filter(g =>
         wordArticleTitles.includes(g.title)
     )
 )
 
-// Счётчик выполненных ачивок в группе
 const getCompletedCount = group =>
     group.achievements.filter(a => a.currentProgress >= a.targetProgress).length
 </script>
@@ -86,7 +83,7 @@ const getCompletedCount = group =>
 }
 
 .group-title {
-    font-size: 2rem;
+  font-size: 1.8rem;
     color: #1e1e1e;
     margin: 0;
 }

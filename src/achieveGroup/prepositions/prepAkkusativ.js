@@ -1,51 +1,51 @@
 export const prepositionsAkkusativ = [
 	{
-		title: 'Аккузатив',
+		title: 'Akkusativ',
 		achievements: [
 			{
 				id: 'akk1',
-				name: 'Первый выстрел',
-				description: 'Ты правильно вставил первый предлог в Akkusativ',
+				name: 'prepositionsAkkusativ.firstName',
+				description: 'prepositionsAkkusativ.firstDescription',
 				icon: '🏹',
 				currentProcess: 0,
 				targetProgress: 1
 			},
 			{
 				id: 'akk2',
-				name: '🛡Точная защита',
-				description: 'Выполни верно 75 упражнений',
+				name: 'prepositionsAkkusativ.secondName',
+				description: 'prepositionsAkkusativ.secondDescription',
 				icon: '🛡️',
 				currentProcess: 0,
 				targetProgress: 75
 			},
 			{
 				id: 'akk3',
-				name: 'Воин Akkusativ',
-				description: 'выполните 150 упражнений на предлоги Akkusativ',
+				name: 'prepositionsAkkusativ.thirdName',
+				description: 'prepositionsAkkusativ.thirdDescription',
 				icon: '⚔️',
 				currentProcess: 0,
 				targetProgress: 150
 			},
 			{
 				id: 'akk4',
-				name: 'Меткий удар',
-				description: 'Заверши 15 сессий без единой ошибки',
+				name: 'prepositionsAkkusativ.fourthName',
+				description: 'prepositionsAkkusativ.fourthDescription',
 				icon: '🎯',
 				currentProcess: 0,
 				targetProgress: 15
 			},
 			{
 				id: 'akk5',
-				name: 'Быстрый рывок',
-				description: 'заверши 15 сессий меньше чем за 1 минуту',
+				name: 'prepositionsAkkusativ.fifthName',
+				description: 'prepositionsAkkusativ.fifthDescription',
 				icon: '⏳',
 				currentProcess: 0,
 				targetProgress: 15
 			},
 			{
 				id: 'akk6',
-				name: 'Герой Аккузатириус',
-				description: 'Выполни все достижения с предлогами аккузатив',
+				name: 'prepositionsAkkusativ.sixthName',
+				description: 'prepositionsAkkusativ.sixthDescription',
 				icon: '🏆',
 				currentProcess: 0,
 				targetProgress: 1

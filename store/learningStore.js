@@ -147,7 +147,7 @@ export const userlangStore = defineStore('learning', () => {
 
 	const handleLeveling = () => {
 		const LEVEL_UP_XP = 100
-		if (exp.value >= LEVEL_UP_XP) {
+		while (exp.value >= LEVEL_UP_XP) {
 			isLeveling.value++
 			exp.value -= LEVEL_UP_XP
 		}
@@ -220,7 +220,7 @@ export const userlangStore = defineStore('learning', () => {
 					articlesSpentForAchievement.value = data.articlesSpentForAchievement || 0
 					points.value = data.points || 0
 					exp.value = data.exp || 0
-					isLeveling.value = data.isLeveling || 0
+					isLeveling.value = data.isLeveling ?? 0
 					currentIndex.value = data.currentIndex || 0
 					currentModeIndex.value = data.currentModeIndex || 0
 					gotPremiumBonus.value = data.gotPremiumBonus || false
@@ -230,10 +230,18 @@ export const userlangStore = defineStore('learning', () => {
 					duelsPlayed.value = data.duelsPlayed || 0
 				}
 				isLoaded.value = true
+				const prevExp = exp.value
+				const prevLvl = isLeveling.value
+				handleLeveling()
+				if (exp.value !== prevExp || isLeveling.value !== prevLvl) {
+					await saveToFirebase()
+				}
+
 				resolve()
 			})
 		})
 	}
+
 
 	const getUserDocRef = () => {
 		const user = getAuth().currentUser
@@ -285,14 +293,12 @@ export const userlangStore = defineStore('learning', () => {
 		exp.value = 0
 		totalEarnedPoints.value = 0
 		articlesSpentForAchievement.value = 0
-		isLeveling.value = 1
+		isLeveling.value = 0
 		currentIndex.value = 0
 		currentModeIndex.value = 0
-
 		bestStreakAnyMode.value = 0
 		bestStreakEasyArticle.value = 0
 		duelsPlayed.value = 0
-
 		await saveToFirebase()
 	}
 

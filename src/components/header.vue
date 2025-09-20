@@ -14,7 +14,7 @@
     />
     <div class="header-container">
       <NuxtLink to="/">
-        <span class="logo__name">LEXINGO</span>
+        <span class="logo__name">German-corner</span>
       </NuxtLink>
       <nav ref="dropdownRefNav" class="header-nav" :class="{ 'is-open': isMobileMenuOpen }">
         <ul class="header-nav__list">
@@ -574,6 +574,7 @@ watch(isMobileMenuOpen, (newVal) => {
 
   .logo__name {
     display: none;
+
   }
 
   .header-nav__link {
@@ -743,12 +744,13 @@ watch(isMobileMenuOpen, (newVal) => {
   color: #e39910;
   font-family: "Nunito", sans-serif;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-style: italic;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   text-shadow: 2px 4px 0px white;
-  -webkit-text-stroke: 4px #e39910;
+  -webkit-text-stroke: 3px #e39910;
   transition: .5s;
+  text-transform: uppercase;
 }
 
 .logo__name:hover {

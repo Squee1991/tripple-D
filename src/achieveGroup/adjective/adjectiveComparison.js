@@ -1,51 +1,51 @@
 export const adjectiveComparison = [
 	{
-		title: 'Правильные формы',
+		title: 'adjectiveComparisonCorrect.title',
 		achievements: [
 			{
 				id: 'creg1',
-				name: 'Первый сравнительный',
-				description: 'Впервые правильно образуй степень сравнения в правильной форме',
+				name: 'adjectiveComparisonCorrect.firstName',
+				description: 'adjectiveComparisonCorrect.firstDescription',
 				icon: '🟢',
 				currentProcess: 0,
 				targetProgress: 1
 			},
 			{
 				id: 'creg2',
-				name: 'Тренировка формы',
-				description: 'Выполни 50 упражнений на правильные формы сравнения',
+				name: 'adjectiveComparisonCorrect.secondName',
+				description: 'adjectiveComparisonCorrect.secondDescription',
 				icon: '🏋️',
 				currentProcess: 0,
-				targetProgress: 50
+				targetProgress: 75
 			},
 			{
 				id: 'creg3',
-				name: 'Мастер сравнения',
-				description: 'Выполни 100 упражнений на правильные формы сравнения',
+				name: 'adjectiveComparisonCorrect.thirdName',
+				description: 'adjectiveComparisonCorrect.thirdDescription',
 				icon: '📈',
 				currentProcess: 0,
-				targetProgress: 100
+				targetProgress: 150
 			},
 			{
 				id: 'creg4',
-				name: 'Безупречная серия',
-				description: 'Заверши 10 сессий без единой ошибки (правильные формы)',
+				name: 'adjectiveComparisonCorrect.fourthName',
+				description: 'adjectiveComparisonCorrect.fourthDescription',
 				icon: '✨',
 				currentProcess: 0,
 				targetProgress: 10
 			},
 			{
 				id: 'creg5',
-				name: 'Скоростное сравнение',
-				description: 'Заверши 10 сессий менее чем за 1 минуту (правильные формы)',
+				name: 'adjectiveComparisonCorrect.fifthName',
+				description: 'adjectiveComparisonCorrect.fifthDescription',
 				icon: '⚡',
 				currentProcess: 0,
 				targetProgress: 10
 			},
 			{
 				id: 'creg6',
-				name: 'Повелитель правильных форм',
-				description: 'Выполни все достижения с правильными формами сравнения',
+				name: 'adjectiveComparisonCorrect.sixthName',
+				description: 'adjectiveComparisonCorrect.sixthDescription',
 				icon: '🏆',
 				currentProcess: 0,
 				targetProgress: 1
@@ -53,52 +53,52 @@ export const adjectiveComparison = [
 		]
 	},
 	{
-		title: 'Формы с умлаутом',
+		title: 'adjectiveComparisonUmlaut.title',
 		achievements: [
 			{
 				id: 'cuml1',
-				name: 'Первый умлаут',
-				description: 'Впервые правильно образуй степень сравнения с умлаутом',
+				name: 'adjectiveComparisonUmlaut.firstName',
+				description: 'adjectiveComparisonUmlaut.firstDescription',
 				icon: '🟣',
 				currentProcess: 0,
 				targetProgress: 1
 			},
 			{
 				id: 'cuml2',
-				name: 'Умляут-механика',
-				description: 'Выполни 50 упражнений на формы с умлаутом',
+				name: 'adjectiveComparisonUmlaut.secondName',
+				description: 'adjectiveComparisonUmlaut.secondDescription',
 				icon: '🔧',
 				currentProcess: 0,
-				targetProgress: 50
+				targetProgress: 75
 			},
 			{
 				id: 'cuml3',
-				name: 'Хранитель умлаута',
-				description: 'Выполни 100 упражнений на формы с умлаутом',
+				name: 'adjectiveComparisonUmlaut.thirdName',
+				description: 'adjectiveComparisonUmlaut.thirdDescription',
 				icon: '🛡️',
 				currentProcess: 0,
-				targetProgress: 100
+				targetProgress: 150
 			},
 			{
 				id: 'cuml4',
-				name: 'Чистая орфография',
-				description: 'Заверши 10 сессий без ошибок (формы с умлаутом)',
+				name: 'adjectiveComparisonUmlaut.fourthName',
+				description: 'adjectiveComparisonUmlaut.fourthDescription',
 				icon: '✅',
 				currentProcess: 0,
 				targetProgress: 10
 			},
 			{
 				id: 'cuml5',
-				name: 'Быстрый умлаут',
-				description: 'Заверши 10 сессий менее чем за 1 минуту (формы с умлаутом)',
+				name: 'adjectiveComparisonUmlaut.fifthName',
+				description: 'adjectiveComparisonUmlaut.fifthDescription',
 				icon: '⏱️',
 				currentProcess: 0,
 				targetProgress: 10
 			},
 			{
 				id: 'cuml6',
-				name: 'Повелитель умлаута',
-				description: 'Выполни все достижения с формами с умлаутом',
+				name: 'adjectiveComparisonUmlaut.sixthName',
+				description: 'adjectiveComparisonUmlaut.sixthDescription',
 				icon: '🏆',
 				currentProcess: 0,
 				targetProgress: 1
@@ -106,52 +106,52 @@ export const adjectiveComparison = [
 		]
 	},
 	{
-		title: 'Особые формы',
+		title: 'adjectiveComparisonSpecial.title',
 		achievements: [
 			{
 				id: 'cspec1',
-				name: 'Первое исключение',
-				description: 'Впервые правильно образуй особую форму сравнения',
+				name: 'adjectiveComparisonSpecial.firstName',
+				description: 'adjectiveComparisonSpecial.firstDescription',
 				icon: '🧩',
 				currentProcess: 0,
 				targetProgress: 1
 			},
 			{
 				id: 'cspec2',
-				name: 'Охотник за исключениями',
-				description: 'Выполни 50 упражнений на особые формы сравнения',
+				name: 'adjectiveComparisonSpecial.secondName',
+				description: 'adjectiveComparisonSpecial.secondDescription',
 				icon: '🗝️',
 				currentProcess: 0,
-				targetProgress: 50
+				targetProgress: 75
 			},
 			{
 				id: 'cspec3',
-				name: 'Повелитель исключений',
-				description: 'Выполни 100 упражнений на особые формы сравнения',
+				name: 'adjectiveComparisonSpecial.thirdName',
+				description: 'adjectiveComparisonSpecial.thirdDescription',
 				icon: '👑',
 				currentProcess: 0,
-				targetProgress: 100
+				targetProgress: 150
 			},
 			{
 				id: 'cspec4',
-				name: 'Идеальная точность',
-				description: 'Заверши 10 сессий без ошибок (особые формы)',
+				name: 'adjectiveComparisonSpecial.fourthName',
+				description: 'adjectiveComparisonSpecial.fourthDescription',
 				icon: '🎯',
 				currentProcess: 0,
 				targetProgress: 10
 			},
 			{
 				id: 'cspec5',
-				name: 'Скоростной исключитель',
-				description: 'Заверши 10 сессий менее чем за 1 минуту (особые формы)',
+				name: 'adjectiveComparisonSpecial.fifthName',
+				description: 'adjectiveComparisonSpecial.fifthDescription',
 				icon: '🚀',
 				currentProcess: 0,
 				targetProgress: 10
 			},
 			{
 				id: 'cspec6',
-				name: 'Мастер особых форм',
-				description: 'Выполни все достижения с особыми формами сравнения',
+				name: 'adjectiveComparisonSpecial.sixthName',
+				description: 'adjectiveComparisonSpecial.sixthDescription',
 				icon: '🏆',
 				currentProcess: 0,
 				targetProgress: 1

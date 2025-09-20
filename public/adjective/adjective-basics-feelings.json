@@ -1,52 +1,503 @@
 [
   {
-    "question": "Ich bin ___.",
-    "options": ["traurig", "glücklich", "wütend", "müde"],
-    "answer": "glücklich"
+    "question": "Ohne Frühstück bin ich ___.",
+    "options": ["hungrig", "glücklich", "stolz", "ruhig"],
+    "answer": "hungrig"
   },
   {
-    "question": "Du bist ___.",
-    "options": ["aufgeregt", "froh", "traurig", "lustig"],
-    "answer": "traurig"
-  },
-  {
-    "question": "Er ist ___.",
-    "options": ["wütend", "zufrieden", "ruhig", "glücklich"],
-    "answer": "wütend"
-  },
-  {
-    "question": "Sie ist ___.",
-    "options": ["wach", "energetisch", "müde", "überrascht"],
+    "question": "Nach dem Spiel war er ___.",
+    "options": ["müde", "froh", "wütend", "entspannt"],
     "answer": "müde"
   },
   {
-    "question": "Wir sind ___.",
-    "options": ["entspannt", "gelangweilt", "nervös", "ruhig"],
+    "question": "Sie hat Geburtstag und ist ___.",
+    "options": ["glücklich", "traurig", "ängstlich", "ruhig"],
+    "answer": "glücklich"
+  },
+
+  {
+    "question": "Vor der Prüfung bin ich ___.",
+    "options": ["nervös", "entspannt", "lustig", "ruhig"],
     "answer": "nervös"
   },
   {
-    "question": "Ihr seid ___.",
-    "options": ["überrascht", "gelangweilt", "traurig", "wütend"],
-    "answer": "überrascht"
+    "question": "Nach dem langen Warten war ich ___.",
+    "options": ["gelangweilt", "froh", "müde", "glücklich"],
+    "answer": "gelangweilt"
   },
   {
-    "question": "Ich bin ___.",
-    "options": ["gestresst", "hektisch", "nervös", "entspannt"],
-    "answer": "entspannt"
-  },
-  {
-    "question": "Du bist ___.",
-    "options": ["mutig", "ängstlich", "froh", "ruhig"],
+    "question": "Als er den Hund sah, war er ___.",
+    "options": ["ängstlich", "stolz", "ruhig", "lustig"],
     "answer": "ängstlich"
   },
   {
-    "question": "Er ist ___.",
-    "options": ["dankbar", "enttäuscht", "sauer", "müde"],
+    "question": "Nach dem Witz waren alle ___.",
+    "options": ["lustig", "traurig", "wütend", "müde"],
+    "answer": "lustig"
+  },
+  {
+    "question": "Sie verlor ihr Handy und war ___.",
+    "options": ["traurig", "froh", "glücklich", "entspannt"],
+    "answer": "traurig"
+  },
+  {
+    "question": "Nach dem Geschenk war sie ___.",
+    "options": ["überrascht", "nervös", "ruhig", "wütend"],
+    "answer": "überrascht"
+  },
+  {
+    "question": "Wir haben die Prüfung bestanden, wir sind ___.",
+    "options": ["stolz", "traurig", "ängstlich", "müde"],
+    "answer": "stolz"
+  },
+  {
+    "question": "Nach dem Streit war er ___.",
+    "options": ["wütend", "fröhlich", "entspannt", "stolz"],
+    "answer": "wütend"
+  },
+  {
+    "question": "Vor der Prüfung war sie sehr ___.",
+    "options": ["nervös", "ruhig", "lustig", "entspannt"],
+    "answer": "nervös"
+  },
+  {
+    "question": "Nach dem Marathon war ich völlig ___.",
+    "options": ["müde", "glücklich", "traurig", "entspannt"],
+    "answer": "müde"
+  },
+  {
+    "question": "Mit dem Geschenk war er ___.",
+    "options": ["überrascht", "wütend", "ängstlich", "traurig"],
+    "answer": "überrascht"
+  },
+  {
+    "question": "Ohne Essen bin ich schnell ___.",
+    "options": ["hungrig", "glücklich", "stolz", "lustig"],
+    "answer": "hungrig"
+  },
+  {
+    "question": "Nach dem Witz waren alle ___.",
+    "options": ["lustig", "traurig", "ängstlich", "ruhig"],
+    "answer": "lustig"
+  },
+  {
+    "question": "Nach der schlechten Note war sie ___.",
+    "options": ["traurig", "froh", "entspannt", "lustig"],
+    "answer": "traurig"
+  },
+  {
+    "question": "Als das Baby lachte, war die Mutter ___.",
+    "options": ["glücklich", "wütend", "nervös", "traurig"],
+    "answer": "glücklich"
+  },
+  {
+    "question": "Nach der Party waren wir sehr ___.",
+    "options": ["müde", "glücklich", "ruhig", "nervös"],
+    "answer": "müde"
+  },
+  {
+    "question": "Er hat die Prüfung bestanden und ist sehr ___.",
+    "options": ["stolz", "traurig", "wütend", "ängstlich"],
+    "answer": "stolz"
+  },
+  {
+    "question": "Vor der Operation war sie ___.",
+    "options": ["ängstlich", "froh", "lustig", "entspannt"],
+    "answer": "ängstlich"
+  },
+  {
+    "question": "Nach den Ferien war ich wieder ___.",
+    "options": ["entspannt", "wütend", "traurig", "hungrig"],
+    "answer": "entspannt"
+  },
+  {
+    "question": "Nach der langen Nacht bin ich ___.",
+    "options": ["müde", "glücklich", "froh", "entspannt"],
+    "answer": "müde"
+  },
+  {
+    "question": "Heute scheint die Sonne, ich bin ___.",
+    "options": ["glücklich", "traurig", "nervös", "hungrig"],
+    "answer": "glücklich"
+  },
+  {
+    "question": "Ohne Wasser bin ich ___.",
+    "options": ["durstig", "müde", "froh", "ruhig"],
+    "answer": "durstig"
+  },
+  {
+    "question": "Vor der Prüfung bin ich ___.",
+    "options": ["nervös", "fröhlich", "glücklich", "entspannt"],
+    "answer": "nervös"
+  },
+  {
+    "question": "Wenn ich Schokolade bekomme, bin ich ___.",
+    "options": ["froh", "traurig", "hungrig", "ruhig"],
+    "answer": "froh"
+  },
+  {
+    "question": "Nach dem Laufen war er sehr ___.",
+    "options": ["müde", "lustig", "ruhig", "hungrig"],
+    "answer": "müde"
+  },
+  {
+    "question": "Nach dem Geschenk war das Kind ___.",
+    "options": ["überrascht", "nervös", "traurig", "ruhig"],
+    "answer": "überrascht"
+  },
+  {
+    "question": "Nach dem Spiel sind wir ___.",
+    "options": ["hungrig", "traurig", "ruhig", "ängstlich"],
+    "answer": "hungrig"
+  },
+  {
+    "question": "Wenn es regnet, bin ich manchmal ___.",
+    "options": ["traurig", "fröhlich", "ruhig", "glücklich"],
+    "answer": "traurig"
+  },
+  {
+    "question": "Das Baby schläft, es ist ___.",
+    "options": ["ruhig", "müde", "hungrig", "wütend"],
+    "answer": "ruhig"
+  },
+  {
+    "question": "Nach der guten Note war sie sehr ___.",
+    "options": ["stolz", "traurig", "ängstlich", "müde"],
+    "answer": "stolz"
+  },
+  {
+    "question": "Nach dem schlechten Film war er ___.",
+    "options": ["gelangweilt", "lustig", "glücklich", "froh"],
+    "answer": "gelangweilt"
+  },
+  {
+    "question": "Vor der Reise bin ich immer ___.",
+    "options": ["aufgeregt", "müde", "traurig", "ruhig"],
+    "answer": "aufgeregt"
+  },
+  {
+    "question": "Nach dem Essen war ich ___.",
+    "options": ["zufrieden", "hungrig", "traurig", "nervös"],
+    "answer": "zufrieden"
+  },
+  {
+    "question": "Nach dem Sturz war das Kind ___.",
+    "options": ["ängstlich", "froh", "glücklich", "entspannt"],
+    "answer": "ängstlich"
+  },
+  {
+    "question": "Am Wochenende bin ich meistens ___.",
+    "options": ["entspannt", "nervös", "wütend", "traurig"],
+    "answer": "entspannt"
+  },
+  {
+    "question": "Nach dem Fußballspiel waren alle ___.",
+    "options": ["fröhlich", "traurig", "ängstlich", "hungrig"],
+    "answer": "fröhlich"
+  },
+  {
+    "question": "Nach vielen Hausaufgaben war ich sehr ___.",
+    "options": ["müde", "glücklich", "ruhig", "hungrig"],
+    "answer": "müde"
+  },
+  {
+    "question": "Vor dem Zahnarzttermin bin ich ___.",
+    "options": ["nervös", "ruhig", "fröhlich", "glücklich"],
+    "answer": "nervös"
+  },
+  {
+    "question": "Wenn ich krank bin, fühle ich mich ___.",
+    "options": ["schwach", "stolz", "glücklich", "lustig"],
+    "answer": "schwach"
+  },
+  {
+    "question": "Nach dem Fußballspiel war er ___.",
+    "options": ["erschöpft", "fröhlich", "traurig", "ruhig"],
+    "answer": "erschöpft"
+  },
+  {
+    "question": "Nach dem langen Arbeitstag war sie ___.",
+    "options": ["gestresst", "glücklich", "lustig", "stolz"],
+    "answer": "gestresst"
+  },
+  {
+    "question": "Nach der Überraschung war sie ___.",
+    "options": ["froh", "traurig", "wütend", "hungrig"],
+    "answer": "froh"
+  },
+  {
+    "question": "Nach dem Schock war er noch lange ___.",
+    "options": ["ruhig", "erschrocken", "fröhlich", "entspannt"],
+    "answer": "erschrocken"
+  },
+  {
+    "question": "Vor dem Auftritt war sie sehr ___.",
+    "options": ["aufgeregt", "ruhig", "stolz", "glücklich"],
+    "answer": "aufgeregt"
+  },
+  {
+    "question": "Nach der guten Nachricht war er ___.",
+    "options": ["glücklich", "traurig", "ängstlich", "müde"],
+    "answer": "glücklich"
+  },
+  {
+    "question": "Ohne Schlaf bin ich immer ___.",
+    "options": ["müde", "fröhlich", "stolz", "entspannt"],
+    "answer": "müde"
+  },
+  {
+    "question": "Als das Glas zerbrach, war er ___.",
+    "options": ["erschrocken", "ruhig", "froh", "lustig"],
+    "answer": "erschrocken"
+  },
+  {
+    "question": "Nach dem Geschenk war das Kind ___.",
+    "options": ["überglücklich", "traurig", "wütend", "ängstlich"],
+    "answer": "überglücklich"
+  },
+  {
+    "question": "Nach der Prüfung fühlte ich mich ___.",
+    "options": ["erleichtert", "traurig", "nervös", "hungrig"],
+    "answer": "erleichtert"
+  },
+  {
+    "question": "Im Regen ohne Schirm war er ___.",
+    "options": ["verärgert", "glücklich", "entspannt", "fröhlich"],
+    "answer": "verärgert"
+  },
+  {
+    "question": "Nach dem Unfall war sie lange ___.",
+    "options": ["traurig", "lustig", "froh", "hungrig"],
+    "answer": "traurig"
+  },
+  {
+    "question": "Vor dem Zahnarzttermin bin ich ___.",
+    "options": ["nervös", "entspannt", "stolz", "fröhlich"],
+    "answer": "nervös"
+  },
+  {
+    "question": "Nach dem Sieg waren alle ___.",
+    "options": ["fröhlich", "traurig", "erschrocken", "müde"],
+    "answer": "fröhlich"
+  },
+  {
+    "question": "Nach der langen Arbeit war er ___.",
+    "options": ["erschöpft", "glücklich", "nervös", "lustig"],
+    "answer": "erschöpft"
+  },
+  {
+    "question": "Sie war über die Hilfe sehr ___.",
+    "options": ["dankbar", "traurig", "wütend", "hungrig"],
     "answer": "dankbar"
   },
   {
-    "question": "Sie ist ___.",
-    "options": ["stolz", "enttäuscht", "glücklich", "zufrieden"],
+    "question": "Nach dem Verlust war sie lange ___.",
+    "options": ["traurig", "froh", "lustig", "glücklich"],
+    "answer": "traurig"
+  },
+  {
+    "question": "Nach dem Lob war er sehr ___.",
+    "options": ["stolz", "wütend", "ängstlich", "hungrig"],
     "answer": "stolz"
+  },
+  {
+    "question": "Nach dem Film war ich sehr ___.",
+    "options": ["gerührt", "wütend", "hungrig", "erschrocken"],
+    "answer": "gerührt"
+  },
+  {
+    "question": "Als das Kind fiel, war die Mutter ___.",
+    "options": ["besorgt", "fröhlich", "stolz", "lustig"],
+    "answer": "besorgt"
+  },
+  {
+    "question": "Vor der Klassenarbeit war er ___.",
+    "options": ["unsicher", "glücklich", "ruhig", "entspannt"],
+    "answer": "unsicher"
+  },
+  {
+    "question": "Nach der guten Nachricht waren wir alle ___.",
+    "options": ["erleichtert", "traurig", "ängstlich", "müde"],
+    "answer": "erleichtert"
+  },
+  {
+    "question": "Beim Anblick des Hundes war sie ___.",
+    "options": ["ängstlich", "fröhlich", "stolz", "hungrig"],
+    "answer": "ängstlich"
+  },
+  {
+    "question": "Nach der Hilfe war er sehr ___.",
+    "options": ["dankbar", "traurig", "wütend", "erschrocken"],
+    "answer": "dankbar"
+  },
+  {
+    "question": "Nach dem Lob vom Lehrer war sie ___.",
+    "options": ["stolz", "nervös", "traurig", "hungrig"],
+    "answer": "stolz"
+  },
+  {
+    "question": "Nach dem langen Flug waren wir alle ___.",
+    "options": ["erschöpft", "froh", "lustig", "ruhig"],
+    "answer": "erschöpft"
+  },
+  {
+    "question": "Beim Geschenk war das Kind sofort ___.",
+    "options": ["überglücklich", "wütend", "nervös", "hungrig"],
+    "answer": "überglücklich"
+  },
+  {
+    "question": "Vor dem Auftritt war er sehr ___.",
+    "options": ["aufgeregt", "entspannt", "ruhig", "lustig"],
+    "answer": "aufgeregt"
+  },
+  {
+    "question": "Nach dem Schock war sie lange ___.",
+    "options": ["verängstigt", "glücklich", "hungrig", "fröhlich"],
+    "answer": "verängstigt"
+  },
+  {
+    "question": "Nach dem Witz waren alle ___.",
+    "options": ["amüsiert", "traurig", "müde", "ängstlich"],
+    "answer": "amüsiert"
+  },
+  {
+    "question": "Nach dem Streit war er noch immer ___.",
+    "options": ["verärgert", "glücklich", "ruhig", "froh"],
+    "answer": "verärgert"
+  },
+  {
+    "question": "Als er das Ergebnis sah, war er ___.",
+    "options": ["enttäuscht", "lustig", "glücklich", "hungrig"],
+    "answer": "enttäuscht"
+  },
+  {
+    "question": "Nach dem Unfall war er sehr ___.",
+    "options": ["erschrocken", "ruhig", "froh", "lustig"],
+    "answer": "erschrocken"
+  },
+  {
+    "question": "Nach dem Fest waren wir alle ___.",
+    "options": ["müde", "hungrig", "glücklich", "nervös"],
+    "answer": "müde"
+  },
+  {
+    "question": "Sie war über die Blumen sehr ___.",
+    "options": ["gerührt", "traurig", "wütend", "hungrig"],
+    "answer": "gerührt"
+  },
+  {
+    "question": "Vor der Reise war ich schon ___.",
+    "options": ["aufgeregt", "ruhig", "traurig", "erschöpft"],
+    "answer": "aufgeregt"
+  },
+  {
+    "question": "Nach dem Gewitter war das Kind ___.",
+    "options": ["ängstlich", "froh", "hungrig", "entspannt"],
+    "answer": "ängstlich"
+  },
+  {
+    "question": "Nach der Prüfung war er endlich ___.",
+    "options": ["entspannt", "nervös", "wütend", "traurig"],
+    "answer": "entspannt"
+  },
+  {
+    "question": "Nach dem langen Tag bin ich ___.",
+    "options": ["müde", "glücklich", "traurig", "nervös"],
+    "answer": "müde"
+  },
+  {
+    "question": "Wenn ich gute Noten bekomme, bin ich ___.",
+    "options": ["froh", "wütend", "traurig", "müde"],
+    "answer": "froh"
+  },
+  {
+    "question": "Vor der Prüfung bin ich oft ___.",
+    "options": ["nervös", "glücklich", "entspannt", "lustig"],
+    "answer": "nervös"
+  },
+  {
+    "question": "Wenn ich krank bin, fühle ich mich ___.",
+    "options": ["schwach", "glücklich", "lustig", "froh"],
+    "answer": "schwach"
+  },
+  {
+    "question": "Wenn die Sonne scheint, bin ich ___.",
+    "options": ["glücklich", "traurig", "wütend", "müde"],
+    "answer": "glücklich"
+  },
+  {
+    "question": "Nach viel Sport bin ich ___.",
+    "options": ["erschöpft", "froh", "nervös", "ruhig"],
+    "answer": "erschöpft"
+  },
+  {
+    "question": "Wenn ich einen Witz höre, bin ich ___.",
+    "options": ["lustig", "traurig", "wütend", "erschöpft"],
+    "answer": "lustig"
+  },
+  {
+    "question": "Wenn ich ein Geschenk bekomme, bin ich ___.",
+    "options": ["überrascht", "traurig", "müde", "ruhig"],
+    "answer": "überrascht"
+  },
+  {
+    "question": "Nach dem Urlaub bin ich sehr ___.",
+    "options": ["entspannt", "wütend", "nervös", "traurig"],
+    "answer": "entspannt"
+  },
+  {
+    "question": "Wenn mein Freund nicht kommt, bin ich ___.",
+    "options": ["enttäuscht", "glücklich", "entspannt", "lustig"],
+    "answer": "enttäuscht"
+  },
+  {
+    "question": "Wenn ich Hunger habe, bin ich oft ___.",
+    "options": ["schlecht gelaunt", "glücklich", "ruhig", "lustig"],
+    "answer": "schlecht gelaunt"
+  },
+  {
+    "question": "Nach einem guten Essen bin ich ___.",
+    "options": ["zufrieden", "wütend", "traurig", "nervös"],
+    "answer": "zufrieden"
+  },
+  {
+    "question": "Wenn ich einen Fehler mache, bin ich ___.",
+    "options": ["verlegen", "glücklich", "ruhig", "lustig"],
+    "answer": "verlegen"
+  },
+  {
+    "question": "Wenn meine Freunde gewinnen, bin ich ___.",
+    "options": ["stolz", "traurig", "müde", "nervös"],
+    "answer": "stolz"
+  },
+  {
+    "question": "Vor dem Arzttermin bin ich oft ___.",
+    "options": ["ängstlich", "glücklich", "ruhig", "lustig"],
+    "answer": "ängstlich"
+  },
+  {
+    "question": "Wenn ich allein bin, fühle ich mich manchmal ___.",
+    "options": ["einsam", "glücklich", "froh", "entspannt"],
+    "answer": "einsam"
+  },
+  {
+    "question": "Nach dem Ausschlafen bin ich ___.",
+    "options": ["ausgeruht", "traurig", "nervös", "wütend"],
+    "answer": "ausgeruht"
+  },
+  {
+    "question": "Wenn ich lange warten muss, werde ich ___.",
+    "options": ["ungeduldig", "glücklich", "ruhig", "lustig"],
+    "answer": "ungeduldig"
+  },
+  {
+    "question": "Nach einem Fehler hilft mir ein Freund, und ich bin ___.",
+    "options": ["dankbar", "traurig", "erschöpft", "nervös"],
+    "answer": "dankbar"
+  },
+  {
+    "question": "Wenn alles klappt, bin ich einfach ___.",
+    "options": ["glücklich", "wütend", "müde", "ängstlich"],
+    "answer": "glücklich"
   }
 ]

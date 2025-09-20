@@ -457,6 +457,7 @@ onUnmounted(() => {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  justify-content: center;
 }
 
 .practice-area__title {
@@ -476,8 +477,8 @@ onUnmounted(() => {
 .practice-area__button {
   display: block;
   text-decoration: none;
-  background: #28a745;
-  color: #fff;
+  background: #f1c40f;
+  color: #484343;
   border: 2px solid #000;
   border-radius: 8px;
   padding: 12px 25px;
@@ -489,7 +490,7 @@ onUnmounted(() => {
 }
 
 .practice-area__button:hover {
-  background: #218838;
+  background: #ffe04d;
 }
 
 .practice-area__button:active {

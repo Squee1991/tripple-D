@@ -25,6 +25,306 @@
   },
   {
     "type": "verbSeparable",
+    "question": "Ich ___ die Kerzen an.",
+    "options": ["zünde", "zündest", "zündet"],
+    "answer": "zünde"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Wann ___ der Unterricht auf?",
+    "options": ["hört", "höre", "hören"],
+    "answer": "hört"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Wir ___ das Geschenk auf.",
+    "options": ["machen", "macht", "mache"],
+    "answer": "machen"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Du ___ bitte den Fernseher aus.",
+    "options": ["machst", "macht", "mache"],
+    "answer": "machst"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Sie ___ ihren Bruder vom Flughafen ab.",
+    "options": ["holt", "holst", "hole"],
+    "answer": "holt"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Ich ___ dir später zurück.",
+    "options": ["rufe", "rufst", "ruft"],
+    "answer": "rufe"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Ihr ___ bitte die Tür zu.",
+    "options": ["macht", "mache", "machen"],
+    "answer": "macht"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Die Kinder ___ das Spielzeug auf.",
+    "options": ["räumen", "räume", "räumt"],
+    "answer": "räumen"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Wir ___ morgen sehr früh los.",
+    "options": ["fahren", "fahre", "fahrt"],
+    "answer": "fahren"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Er ___ das Fenster auf.",
+    "options": ["macht", "machen", "mache"],
+    "answer": "macht"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Ich ___ meine Freunde zur Party ein.",
+    "options": ["lade", "lädst", "lädt"],
+    "answer": "lade"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Wann ___ ihr mit der Arbeit an?",
+    "options": ["fangt", "fangen", "fängt"],
+    "answer": "fangt"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Du ___ bitte deine Tasche auf.",
+    "options": ["machst", "mache", "macht"],
+    "answer": "machst"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Wir ___ die Lampe aus.",
+    "options": ["machen", "mache", "macht"],
+    "answer": "machen"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Sie ___ die Kinder von der Schule ab.",
+    "options": ["holt", "hole", "holen"],
+    "answer": "holt"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Ich ___ die Übung nach.",
+    "options": ["hole", "holst", "holt"],
+    "answer": "hole"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Ihr ___ morgen bei uns mit.",
+    "options": ["esst", "esse", "essen"],
+    "answer": "esst"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Wir ___ die Tafel ab.",
+    "options": ["wischen", "wischt", "wische"],
+    "answer": "wischen"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Du ___ bitte die Tür auf.",
+    "options": ["machst", "macht", "mache"],
+    "answer": "machst"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Sie ___ das Licht an.",
+    "options": ["macht", "mache", "machen"],
+    "answer": "macht"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Ich ___ das Radio aus.",
+    "options": ["mache", "machst", "macht"],
+    "answer": "mache"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Wann ___ der Film an?",
+    "options": ["fängt", "fangen", "fange"],
+    "answer": "fängt"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Wir ___ das neue Wort nach.",
+    "options": ["sprechen", "spricht", "spreche"],
+    "answer": "sprechen"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Du ___ bitte die Tür auf.",
+    "options": ["machst", "mache", "macht"],
+    "answer": "machst"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Sie ___ ihre Jacke aus.",
+    "options": ["zieht", "ziehen", "ziehe"],
+    "answer": "zieht"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Ich ___ dir morgen die Aufgabe vor.",
+    "options": ["lese", "liest", "lesen"],
+    "answer": "lese"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Ihr ___ die Bücher zu.",
+    "options": ["macht", "machen", "mache"],
+    "answer": "macht"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Der Lehrer ___ das Wort nach.",
+    "options": ["spricht", "sprechen", "spreche"],
+    "answer": "spricht"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Wir ___ am Sonntag früh auf.",
+    "options": ["stehen", "stehe", "steht"],
+    "answer": "stehen"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Er ___ sein Handy aus.",
+    "options": ["macht", "mache", "machen"],
+    "answer": "macht"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Ich ___ meine Eltern am Wochenende an.",
+    "options": ["rufe", "rufst", "ruft"],
+    "answer": "rufe"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Wann ___ ihr mit dem Kurs an?",
+    "options": ["fangt", "fängt", "fangen"],
+    "answer": "fangt"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Du ___ bitte das Licht an.",
+    "options": ["machst", "macht", "mache"],
+    "answer": "machst"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Wir ___ die Vokabeln nach.",
+    "options": ["sprechen", "spreche", "spricht"],
+    "answer": "sprechen"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Sie ___ ihre Tasche auf.",
+    "options": ["macht", "mache", "machen"],
+    "answer": "macht"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Ich ___ morgen meinen Freund mit.",
+    "options": ["bringe", "bringt", "bringen"],
+    "answer": "bringe"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Ihr ___ heute das Spiel an.",
+    "options": ["seht", "sehe", "sehen"],
+    "answer": "seht"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Wann ___ das Konzert auf?",
+    "options": ["hört", "höre", "hören"],
+    "answer": "hört"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Die Kinder ___ das Heft zu.",
+    "options": ["machen", "mache", "macht"],
+    "answer": "machen"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Ich ___ dir den Text vor.",
+    "options": ["lese", "liest", "lesen"],
+    "answer": "lese"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Wir ___ gleich mit dem Test an.",
+    "options": ["fangen", "fangt", "fange"],
+    "answer": "fangen"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Du ___ bitte deine Schuhe aus.",
+    "options": ["ziehst", "zieht", "ziehe"],
+    "answer": "ziehst"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Sie ___ den Tisch ab.",
+    "options": ["räumt", "räume", "räumen"],
+    "answer": "räumt"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Ich ___ morgen meine Tante ab.",
+    "options": ["hole", "holst", "holt"],
+    "answer": "hole"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Wir ___ heute zusammen ein.",
+    "options": ["kaufen", "kaufe", "kauft"],
+    "answer": "kaufen"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Er ___ die Übung nach.",
+    "options": ["holt", "hole", "holen"],
+    "answer": "holt"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Ihr ___ bitte leise mit.",
+    "options": ["singt", "singe", "singen"],
+    "answer": "singt"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Wann ___ du deine Eltern an?",
+    "options": ["rufst", "rufe", "ruft"],
+    "answer": "rufst"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Wir ___ das Fenster auf.",
+    "options": ["machen", "macht", "mache"],
+    "answer": "machen"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Sie ___ morgen früh los.",
+    "options": ["fährt", "fahren", "fahre"],
+    "answer": "fährt"
+  },
+  {
+    "type": "verbSeparable",
     "question": "Er ___ jeden Abend fern.",
     "options": ["sieht", "sehe", "seht"],
     "answer": "sieht"
@@ -40,6 +340,259 @@
     "question": "Sie (она) ___ ihre Oma vom Bahnhof ab.",
     "options": ["holt", "hole", "holen"],
     "answer": "holt"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Ich ___ meine Freundin an.",
+    "options": ["rufe", "rufst", "ruft"],
+    "answer": "rufe"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Wann ___ der Zug an?",
+    "options": ["kommt", "komme", "kommen"],
+    "answer": "kommt"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Jeden Samstag ___ wir im Supermarkt ein.",
+    "options": ["kaufen", "kaufe", "kauft"],
+    "answer": "kaufen"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Bitte ___ du das Fenster zu!",
+    "options": ["machst", "mache", "macht"],
+    "answer": "machst"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Er ___ jeden Abend fern.",
+    "options": ["sieht", "sehe", "seht"],
+    "answer": "sieht"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Wir ___ den Müll raus.",
+    "options": ["bringen", "bringt", "bringe"],
+    "answer": "bringen"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Sie (она) ___ ihre Oma vom Bahnhof ab.",
+    "options": ["holt", "hole", "holen"],
+    "answer": "holt"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Ich ___ gern im Park spazieren.",
+    "options": ["gehe", "gehst", "geht"],
+    "answer": "gehe"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Wann ___ du morgens auf?",
+    "options": ["stehst", "stehe", "steht"],
+    "answer": "stehst"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Ihr ___ eure Freunde zum Essen mit.",
+    "options": ["bringt", "bringe", "bringen"],
+    "answer": "bringt"
+  },
+
+  {
+    "type": "verbSeparable",
+    "question": "Wir ___ heute Abend einen Film an.",
+    "options": ["sehen", "siehst", "sehe"],
+    "answer": "sehen"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Ich ___ meine Schuhe an.",
+    "options": ["ziehe", "ziehst", "zieht"],
+    "answer": "ziehe"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Wann ___ der Unterricht an?",
+    "options": ["fängt", "fange", "fangen"],
+    "answer": "fängt"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Du ___ bitte deine Jacke aus.",
+    "options": ["ziehst", "zieht", "ziehe"],
+    "answer": "ziehst"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Wir ___ den Fernseher aus.",
+    "options": ["machen", "macht", "mache"],
+    "answer": "machen"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Er ___ den Text laut vor.",
+    "options": ["liest", "lesen", "liestest"],
+    "answer": "liest"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Die Kinder ___ das Lied nach.",
+    "options": ["singen", "singe", "singt"],
+    "answer": "singen"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Sie ___ morgen nach Berlin zurück.",
+    "options": ["fährt", "fahren", "fahre"],
+    "answer": "fährt"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Ich ___ meinen Bruder an.",
+    "options": ["rufe", "rufst", "ruft"],
+    "answer": "rufe"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Wann ___ ihr morgen auf?",
+    "options": ["steht", "stehen", "stehst"],
+    "answer": "steht"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Wir ___ gleich mit dem Essen an.",
+    "options": ["fangen", "fange", "fängt"],
+    "answer": "fangen"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Du ___ deine Freundin zum Bahnhof ab.",
+    "options": ["holst", "holt", "hole"],
+    "answer": "holst"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Die Kinder ___ ihre Schultaschen aus.",
+    "options": ["packen", "packe", "packt"],
+    "answer": "packen"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Ich ___ meine Hausaufgaben später nach.",
+    "options": ["hole", "holt", "holen"],
+    "answer": "hole"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Wir ___ morgen in den Urlaub ab.",
+    "options": ["fahren", "fahre", "fahrt"],
+    "answer": "fahren"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Er ___ das Fenster auf.",
+    "options": ["macht", "machen", "mache"],
+    "answer": "macht"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Ihr ___ die Musik leiser an.",
+    "options": ["stellt", "stelle", "stellen"],
+    "answer": "stellt"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Die Schüler ___ das Gedicht nach.",
+    "options": ["sprechen", "spricht", "spreche"],
+    "answer": "sprechen"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Ich ___ morgen früh auf.",
+    "options": ["stehe", "stehst", "steht"],
+    "answer": "stehe"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Er ___ das Wort dreimal nach.",
+    "options": ["spricht", "spreche", "sprechen"],
+    "answer": "spricht"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Wir ___ am Wochenende Freunde mit.",
+    "options": ["bringen", "bringe", "bringt"],
+    "answer": "bringen"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Sie ___ die Tür zu.",
+    "options": ["macht", "machen", "mache"],
+    "answer": "macht"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Wann ___ das Konzert an?",
+    "options": ["fängt", "fange", "fangen"],
+    "answer": "fängt"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Ich ___ das Bild an die Wand auf.",
+    "options": ["hänge", "hängst", "hängt"],
+    "answer": "hänge"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Wir ___ das Auto in der Garage ein.",
+    "options": ["parken", "parke", "parkt"],
+    "answer": "parken"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Du ___ bitte das Licht aus.",
+    "options": ["machst", "macht", "mache"],
+    "answer": "machst"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Ich ___ dir morgen zurück.",
+    "options": ["rufe", "rufst", "ruft"],
+    "answer": "rufe"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Wir ___ gleich mit dem Spiel an.",
+    "options": ["fangen", "fängt", "fange"],
+    "answer": "fangen"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Sie ___ heute Abend bei uns mit.",
+    "options": ["isst", "essen", "esse"],
+    "answer": "isst"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Ihr ___ bitte eure Bücher auf.",
+    "options": ["macht", "machen", "mache"],
+    "answer": "macht"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Er ___ die Lampe aus.",
+    "options": ["macht", "machen", "mache"],
+    "answer": "macht"
+  },
+  {
+    "type": "verbSeparable",
+    "question": "Wir ___ den Fehler nach.",
+    "options": ["sprechen", "spreche", "spricht"],
+    "answer": "sprechen"
   },
   {
     "type": "verbSeparable",

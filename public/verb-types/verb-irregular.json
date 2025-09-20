@@ -19,7 +19,7 @@
   },
   {
     "type": "verbIrregular",
-    "question": "Sie (она) ___ mir das Buch.",
+    "question": "Sie ___ mir das Buch.",
     "options": ["gibt", "gebt", "gibst"],
     "answer": "gibt"
   },
@@ -55,8 +55,560 @@
   },
   {
     "type": "verbIrregular",
-    "question": "Sie (она) ___ jeden Morgen im Park.",
+    "question": "Du ___ die schwere Tasche.",
+    "options": ["trägst", "tragst", "trägt"],
+    "answer": "trägst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Er ___ eine Mütze.",
+    "options": ["trägt", "trägst", "tragst"],
+    "answer": "trägt"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ das Buch fest.",
+    "options": ["hältst", "haltest", "hält"],
+    "answer": "hältst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Er ___ die Tasse fest.",
+    "options": ["hält", "haltet", "hältst"],
+    "answer": "hält"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ mich nicht ausreden.",
+    "options": ["lässt", "lasst", "lässtest"],
+    "answer": "lässt"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Sie ___ das Fenster zu.",
+    "options": ["lässt", "lasst", "lasset"],
+    "answer": "lässt"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Das Glas ___ auf den Boden.",
+    "options": ["fällt", "fallt", "fällst"],
+    "answer": "fällt"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ gleich hin!",
+    "options": ["fällst", "fallst", "fälltest"],
+    "answer": "fällst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Er ___ den Ball.",
+    "options": ["fängt", "fangt", "fängst"],
+    "answer": "fängt"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ die Maus.",
+    "options": ["fängst", "fangst", "fängt"],
+    "answer": "fängst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ dir die Hände.",
+    "options": ["wäschst", "waschst", "wäscht"],
+    "answer": "wäschst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Er ___ das Auto jeden Samstag.",
+    "options": ["wäscht", "wascht", "wäschst"],
+    "answer": "wäscht"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Das Kind ___ schnell.",
+    "options": ["wächst", "wachst", "wachst du"],
+    "answer": "wächst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ jeden Tag ein Stück.",
+    "options": ["wächst", "wachst", "wuchst"],
+    "answer": "wächst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Er ___ die Tür auf.",
+    "options": ["stößt", "stöst", "stößst"],
+    "answer": "stößt"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ den Ball weg.",
+    "options": ["stößt", "stöst", "stößst"],
+    "answer": "stößt"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Sie ___ die Kartoffeln in der Pfanne.",
+    "options": ["brät", "bratet", "brätst"],
+    "answer": "brät"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ das Fleisch goldbraun.",
+    "options": ["brätst", "bratest", "brät"],
+    "answer": "brätst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Er ___ die Augen auf.",
+    "options": ["schlägt", "schlagt", "schlägst"],
+    "answer": "schlägt"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ die Tür zu.",
+    "options": ["schlägst", "schlagst", "schlägt"],
+    "answer": "schlägst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Er ___ das Handy jeden Abend.",
+    "options": ["lädt", "ladet", "lädst"],
+    "answer": "lädt"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ die App herunter.",
+    "options": ["lädst", "ladest", "lädt"],
+    "answer": "lädst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Der Hund ___ ein Loch.",
+    "options": ["gräbt", "grabt", "gräbst"],
+    "answer": "gräbt"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ im Garten nach Kartoffeln.",
+    "options": ["gräbst", "grabst", "gräbt"],
+    "answer": "gräbst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Was ___ du mir?",
+    "options": ["rätst", "ratest", "rät"],
+    "answer": "rätst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Er ___ mir Ruhe.",
+    "options": ["rät", "rätst", "ratet"],
+    "answer": "rät"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ deine Freunde oft.",
+    "options": ["triffst", "treffst", "trifft"],
+    "answer": "triffst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Er ___ mich um acht Uhr.",
+    "options": ["trifft", "trefft", "triffst"],
+    "answer": "trifft"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ den Ball zu mir.",
+    "options": ["wirfst", "werf st", "wirft"],
+    "answer": "wirfst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Er ___ den Müll weg.",
+    "options": ["wirft", "werft", "wirfst"],
+    "answer": "wirft"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Der Dieb ___ das Fahrrad.",
+    "options": ["stiehlt", "stehlt", "stiehlst"],
+    "answer": "stiehlt"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ immer meine Ideen!",
+    "options": ["stiehlst", "stehlst", "stiehlt"],
+    "answer": "stiehlst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Pass auf! Du ___ auf den Schlauch.",
+    "options": ["trittst", "tretst", "tritt"],
+    "answer": "trittst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Er ___ zur Seite.",
+    "options": ["tritt", "trittst", "tretet"],
+    "answer": "tritt"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Der Arzt ___ deinen Puls.",
+    "options": ["misst", "mißt", "messt"],
+    "answer": "misst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ die Temperatur.",
+    "options": ["misst", "mißt", "messt"],
+    "answer": "misst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Er ___ das Glas.",
+    "options": ["bricht", "brichst", "brecht"],
+    "answer": "bricht"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ die Regel.",
+    "options": ["brichst", "bricht", "brecht"],
+    "answer": "brichst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Die Pflanze ___ ohne Wasser.",
+    "options": ["stirbt", "stirbst", "sterbt"],
+    "answer": "stirbt"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ vor Lachen!",
+    "options": ["stirbst", "stirbt", "sterbst"],
+    "answer": "stirbst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Er ___ oft die Schlüssel.",
+    "options": ["vergisst", "vergisst du", "vergisstt"],
+    "answer": "vergisst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Warum ___ du immer das Passwort?",
+    "options": ["vergisst", "vergißt", "vergessst"],
+    "answer": "vergisst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Was ___ hier?",
+    "options": ["geschieht", "geschehen", "geschiehst"],
+    "answer": "geschieht"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Er ___ mir dieses Buch.",
+    "options": ["empfiehlt", "empfehlst", "empfehlt"],
+    "answer": "empfiehlt"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Wen ___ du mir als Arzt?",
+    "options": ["empfiehlst", "empfehlst", "empfiehlt"],
+    "answer": "empfiehlst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Der Chef ___ Ruhe im Büro.",
+    "options": ["befiehlt", "befiehlst", "befehlt"],
+    "answer": "befiehlt"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ dem Hund, Platz zu machen.",
+    "options": ["befiehlst", "befehlen", "befiehlt"],
+    "answer": "befiehlst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Die Regel ___ für alle.",
+    "options": ["gilt", "gilst", "geltet"],
+    "answer": "gilt"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ die Quittung bitte.",
+    "options": ["behältst", "behaltst", "behält"],
+    "answer": "behältst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Er ___ alles im Kopf.",
+    "options": ["behält", "behältst", "behaltet"],
+    "answer": "behält"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Sie ___ das Licht an.",
+    "options": ["lässt", "lasst", "ließst"],
+    "answer": "lässt"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ den Ball ins Tor.",
+    "options": ["wirfst", "werfst", "wirft"],
+    "answer": "wirfst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Sie ___ jeden Morgen im Park.",
     "options": ["läuft", "lauft", "laufst"],
     "answer": "läuft"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ sehr schön.",
+    "options": ["singst", "sängst", "singt"],
+    "answer": "singst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Er ___ laut unter der Dusche.",
+    "options": ["singt", "sängt", "singst"],
+    "answer": "singt"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ mir eine Geschichte.",
+    "options": ["liest", "lesst", "liestest"],
+    "answer": "liest"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Er ___ gern Romane.",
+    "options": ["liest", "lesst", "liestet"],
+    "answer": "liest"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ gern Schokolade.",
+    "options": ["isst", "esst", "isstest"],
+    "answer": "isst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Mein Hund ___ alles, was er findet.",
+    "options": ["isst", "esst", "isstet"],
+    "answer": "isst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ zu schnell ins Ziel.",
+    "options": ["läufst", "laufst", "läuft"],
+    "answer": "läufst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Er ___ jeden Morgen fünf Kilometer.",
+    "options": ["läuft", "laufst", "laufet"],
+    "answer": "läuft"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ gern an der Tafel.",
+    "options": ["schreibst", "schreibst du", "schreibest"],
+    "answer": "schreibst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Er ___ viele Briefe pro Tag.",
+    "options": ["schreibt", "schreibst", "schreibe"],
+    "answer": "schreibt"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ gern neue Leute kennen.",
+    "options": ["triffst", "treffst", "trifft"],
+    "answer": "triffst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Sie ___ ihre Freunde oft im Park.",
+    "options": ["trifft", "trefft", "triffst"],
+    "answer": "trifft"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ den Ball hoch in die Luft.",
+    "options": ["wirfst", "wirft", "werf st"],
+    "answer": "wirfst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Er ___ den Apfel in den Korb.",
+    "options": ["wirft", "werft", "wirfst"],
+    "answer": "wirft"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ oft deine Schlüssel.",
+    "options": ["vergisst", "vergessst", "vergißt"],
+    "answer": "vergisst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Er ___ manchmal den Termin.",
+    "options": ["vergisst", "vergissst", "vergesst"],
+    "answer": "vergisst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ viel Zeit am Handy.",
+    "options": ["verbringst", "verbringt", "verbrächtest"],
+    "answer": "verbringst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Er ___ den ganzen Tag im Büro.",
+    "options": ["verbringt", "verbringst", "verbrächte"],
+    "answer": "verbringt"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ deine Jacke gern im Auto.",
+    "options": ["lässt", "lasst", "läßt"],
+    "answer": "lässt"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Sie ___ die Tür offen.",
+    "options": ["lässt", "lasst", "läßt"],
+    "answer": "lässt"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ das Problem sofort.",
+    "options": ["erkennst", "erkennt", "erkenn st"],
+    "answer": "erkennst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Er ___ mich gleich.",
+    "options": ["erkennt", "erkennst", "erkenne"],
+    "answer": "erkennt"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ zu spät zum Unterricht.",
+    "options": ["kommst", "kommt", "komme"],
+    "answer": "kommst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Er ___ pünktlich nach Hause.",
+    "options": ["kommt", "kommst", "kommen"],
+    "answer": "kommt"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ gern Abenteuer.",
+    "options": ["erlebst", "erlebt", "erleb st"],
+    "answer": "erlebst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Sie ___ viele neue Dinge.",
+    "options": ["erlebt", "erlebst", "erlebet"],
+    "answer": "erlebt"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ das Glas auf den Tisch.",
+    "options": ["stellst", "stellt", "stellest"],
+    "answer": "stellst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Er ___ viele Fragen.",
+    "options": ["stellt", "stellst", "stellte"],
+    "answer": "stellt"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ die Musik zu laut.",
+    "options": ["hörst", "hört", "höret"],
+    "answer": "hörst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Er ___ ein Lied.",
+    "options": ["hört", "höret", "hörst"],
+    "answer": "hört"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ immer sehr früh ins Bett.",
+    "options": ["gehst", "geht", "gehe"],
+    "answer": "gehst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Sie ___ ins Kino.",
+    "options": ["geht", "gehst", "gehet"],
+    "answer": "geht"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ gern am Wochenende weg.",
+    "options": ["fährst", "fahrst", "fahrt"],
+    "answer": "fährst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Er ___ mit dem Auto nach München.",
+    "options": ["fährt", "fahrt", "fährst"],
+    "answer": "fährt"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ ein neues Handy.",
+    "options": ["bekommst", "bekommt", "bekomme"],
+    "answer": "bekommst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Er ___ morgen ein Geschenk.",
+    "options": ["bekommt", "bekommst", "bekommen"],
+    "answer": "bekommt"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ die Lampe aus.",
+    "options": ["machst", "macht", "mache"],
+    "answer": "machst"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Er ___ das Licht an.",
+    "options": ["macht", "machst", "machet"],
+    "answer": "macht"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Du ___ eine Stunde auf den Bus.",
+    "options": ["wartest", "wartet", "warte"],
+    "answer": "wartest"
+  },
+  {
+    "type": "verbIrregular",
+    "question": "Er ___ immer sehr geduldig.",
+    "options": ["wartet", "wartest", "warten"],
+    "answer": "wartet"
   }
 ]

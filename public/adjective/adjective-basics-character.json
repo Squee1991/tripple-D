@@ -40,16 +40,6 @@
     "answer": "hilfsbereit"
   },
   {
-    "question": "Der Richter ist ___.",
-    "options": ["gerecht", "ungerecht", "gemein", "falsch"],
-    "answer": "gerecht"
-  },
-  {
-    "question": "Der Feigling ist ___.",
-    "options": ["ängstlich", "mutig", "stark", "selbstbewusst"],
-    "answer": "ängstlich"
-  },
-  {
     "question": "Die Katze ist ___.",
     "options": ["verspielt", "traurig", "ernst", "böse"],
     "answer": "verspielt"
@@ -80,61 +70,6 @@
     "answer": "geduldig"
   },
   {
-    "question": "Der Arzt ist ___.",
-    "options": ["fürsorglich", "gefühllos", "unfreundlich", "ignorant"],
-    "answer": "fürsorglich"
-  },
-  {
-    "question": "Der Soldat ist ___.",
-    "options": ["diszipliniert", "chaotisch", "unzuverlässig", "ängstlich"],
-    "answer": "diszipliniert"
-  },
-  {
-    "question": "Der Musiker ist ___.",
-    "options": ["talentiert", "unmusikalisch", "schlecht", "unbegabt"],
-    "answer": "talentiert"
-  },
-  {
-    "question": "Der Tänzer ist ___.",
-    "options": ["anmutig", "ungeschickt", "steif", "plump"],
-    "answer": "anmutig"
-  },
-  {
-    "question": "Der Koch ist ___.",
-    "options": ["leidenschaftlich", "uninteressiert", "lustlos", "schlecht"],
-    "answer": "leidenschaftlich"
-  },
-  {
-    "question": "Der Gärtner ist ___.",
-    "options": ["naturverbunden", "gleichgültig", "zerstörerisch", "unachtsam"],
-    "answer": "naturverbunden"
-  },
-  {
-    "question": "Der Schriftsteller ist ___.",
-    "options": ["fantasievoll", "ideenlos", "langweilig", "uninspiriert"],
-    "answer": "fantasievoll"
-  },
-  {
-    "question": "Der Schauspieler ist ___.",
-    "options": ["ausdrucksstark", "hölzern", "monoton", "langweilig"],
-    "answer": "ausdrucksstark"
-  },
-  {
-    "question": "Der Politiker ist ___.",
-    "options": ["charismatisch", "schüchtern", "unverständlich", "langweilig"],
-    "answer": "charismatisch"
-  },
-  {
-    "question": "Der Unternehmer ist ___.",
-    "options": ["risikofreudig", "vorsichtig", "ängstlich", "passiv"],
-    "answer": "risikofreudig"
-  },
-  {
-    "question": "Der Optimist ist ___.",
-    "options": ["hoffnungsvoll", "pessimistisch", "negativ", "traurig"],
-    "answer": "hoffnungsvoll"
-  },
-  {
     "question": "Der Pessimist ist ___.",
     "options": ["negativ", "optimistisch", "positiv", "fröhlich"],
     "answer": "negativ"
@@ -148,5 +83,399 @@
     "question": "Das Kind ist ___.",
     "options": ["unschuldig", "böse", "hinterhältig", "erwachsen"],
     "answer": "unschuldig"
+  },
+  {
+    "question": "Der Nachbar ist ___.",
+    "options": ["freundlich", "gemein", "böse", "egoistisch"],
+    "answer": "freundlich"
+  },
+  {
+    "question": "Der Chef ist manchmal ___.",
+    "options": ["streng", "locker", "faul", "schwach"],
+    "answer": "streng"
+  },
+  {
+    "question": "Die Schwester ist sehr ___.",
+    "options": ["geduldig", "ungeduldig", "laut", "gemein"],
+    "answer": "geduldig"
+  },
+  {
+    "question": "Der Junge ist oft ___.",
+    "options": ["faul", "fleißig", "nett", "klug"],
+    "answer": "faul"
+  },
+  {
+    "question": "Die Lehrerin ist ___.",
+    "options": ["streng", "freundlich", "böse", "egoistisch"],
+    "answer": "freundlich"
+  },
+  {
+    "question": "Die Mutter ist immer ___.",
+    "options": ["lieb", "streng", "klug", "freundlich"],
+    "answer": "lieb"
+  },
+  {
+    "question": "Der Vater ist sehr ___.",
+    "options": ["hilfsbereit", "faul", "laut", "ruhig"],
+    "answer": "hilfsbereit"
+  },
+  {
+    "question": "Die Schwester ist ___.",
+    "options": ["freundlich", "geduldig", "schüchtern", "ruhig"],
+    "answer": "freundlich"
+  },
+  {
+    "question": "Der Bruder ist oft ___.",
+    "options": ["lustig", "still", "klug", "ernst"],
+    "answer": "lustig"
+  },
+  {
+    "question": "Mein Freund ist sehr ___.",
+    "options": ["treu", "nett", "geduldig", "fleißig"],
+    "answer": "treu"
+  },
+  {
+    "question": "Meine Freundin ist ___.",
+    "options": ["klug", "lustig", "hilfsbereit", "lieb"],
+    "answer": "klug"
+  },
+  {
+    "question": "Der Lehrer ist ___.",
+    "options": ["geduldig", "freundlich", "streng", "klug"],
+    "answer": "geduldig"
+  },
+  {
+    "question": "Die Nachbarin ist ___.",
+    "options": ["nett", "hilfsbereit", "freundlich", "ruhig"],
+    "answer": "nett"
+  },
+  {
+    "question": "Der Student ist sehr ___.",
+    "options": ["fleißig", "klug", "geduldig", "neugierig"],
+    "answer": "fleißig"
+  },
+  {
+    "question": "Die Oma ist ___.",
+    "options": ["lieb", "ruhig", "geduldig", "hilfsbereit"],
+    "answer": "lieb"
+  },
+  {
+    "question": "Der Opa ist ___.",
+    "options": ["weise", "freundlich", "nett", "ruhig"],
+    "answer": "weise"
+  },
+  {
+    "question": "Die Tante ist ___.",
+    "options": ["hilfsbereit", "nett", "freundlich", "geduldig"],
+    "answer": "hilfsbereit"
+  },
+  {
+    "question": "Der Onkel ist ___.",
+    "options": ["lustig", "nett", "freundlich", "ruhig"],
+    "answer": "lustig"
+  },
+  {
+    "question": "Der Arzt ist ___.",
+    "options": ["freundlich", "hilfsbereit", "ruhig", "geduldig"],
+    "answer": "hilfsbereit"
+  },
+  {
+    "question": "Die Lehrerin ist ___.",
+    "options": ["geduldig", "nett", "freundlich", "klug"],
+    "answer": "freundlich"
+  },
+  {
+    "question": "Der Sportler ist sehr ___.",
+    "options": ["stark", "fleißig", "ehrgeizig", "ruhig"],
+    "answer": "ehrgeizig"
+  },
+  {
+    "question": "Die Schülerin ist ___.",
+    "options": ["fleißig", "nett", "freundlich", "ruhig"],
+    "answer": "fleißig"
+  },
+  {
+    "question": "Der Nachbar ist immer ___.",
+    "options": ["nett", "freundlich", "hilfsbereit", "ruhig"],
+    "answer": "freundlich"
+  },
+  {
+    "question": "Mein Nachbar ist immer ___.",
+    "options": ["freundlich", "böse", "traurig", "müde"],
+    "answer": "freundlich"
+  },
+  {
+    "question": "Das Kind ist sehr ___.",
+    "options": ["neugierig", "stolz", "faul", "müde"],
+    "answer": "neugierig"
+  },
+  {
+    "question": "Meine Schwester ist oft ___.",
+    "options": ["lustig", "traurig", "nervös", "schwach"],
+    "answer": "lustig"
+  },
+  {
+    "question": "Mein Vater ist ein sehr ___ Mensch.",
+    "options": ["streng", "ruhig", "freundlich", "ernst"],
+    "answer": "streng"
+  },
+  {
+    "question": "Die Lehrerin ist sehr ___.",
+    "options": ["geduldig", "ungeduldig", "traurig", "ruhig"],
+    "answer": "geduldig"
+  },
+  {
+    "question": "Der Junge ist noch sehr ___.",
+    "options": ["schüchtern", "laut", "ernst", "streng"],
+    "answer": "schüchtern"
+  },
+  {
+    "question": "Meine Mutter ist ___.",
+    "options": ["hilfsbereit", "müde", "ernst", "traurig"],
+    "answer": "hilfsbereit"
+  },
+  {
+    "question": "Meine Oma ist immer ___.",
+    "options": ["lieb", "böse", "nervös", "traurig"],
+    "answer": "lieb"
+  },
+  {
+    "question": "Mein Bruder ist sehr ___.",
+    "options": ["aktiv", "schwach", "krank", "müde"],
+    "answer": "aktiv"
+  },
+  {
+    "question": "Meine Tante ist oft sehr ___.",
+    "options": ["fröhlich", "traurig", "ernst", "böse"],
+    "answer": "fröhlich"
+  },
+
+  {
+    "question": "Der Polizist ist ein ___ Mann.",
+    "options": ["mutig", "ängstlich", "nervös", "ruhig"],
+    "answer": "mutig"
+  },
+  {
+    "question": "Mein Opa ist sehr ___.",
+    "options": ["ernst", "lustig", "freundlich", "müde"],
+    "answer": "ernst"
+  },
+  {
+    "question": "Das Mädchen ist sehr ___.",
+    "options": ["höflich", "laut", "streng", "böse"],
+    "answer": "höflich"
+  },
+  {
+    "question": "Mein Kollege ist sehr ___.",
+    "options": ["fleißig", "faul", "hungrig", "müde"],
+    "answer": "fleißig"
+  },
+  {
+    "question": "Meine Freundin ist sehr ___.",
+    "options": ["nett", "traurig", "böse", "laut"],
+    "answer": "nett"
+  },
+  {
+    "question": "Der Arzt ist sehr ___.",
+    "options": ["ruhig", "freundlich", "nervös", "traurig"],
+    "answer": "ruhig"
+  },
+  {
+    "question": "Die Kinder sind sehr ___.",
+    "options": ["verspielt", "ernst", "streng", "schwach"],
+    "answer": "verspielt"
+  },
+  {
+    "question": "Mein Onkel ist immer ___.",
+    "options": ["ordentlich", "faul", "laut", "traurig"],
+    "answer": "ordentlich"
+  },
+  {
+    "question": "Die Lehrerin ist sehr ___.",
+    "options": ["streng", "freundlich", "müde", "schwach"],
+    "answer": "streng"
+  },
+  {
+    "question": "Mein kleiner Bruder ist oft ___.",
+    "options": ["stolz", "traurig", "ernst", "ruhig"],
+    "answer": "stolz"
+  },
+
+  {
+    "question": "Meine Freundin ist sehr ___.",
+    "options": ["ehrlich", "unehrlich", "nervös", "faul"],
+    "answer": "ehrlich"
+  },
+  {
+    "question": "Der Kellner ist ___.",
+    "options": ["höflich", "laut", "streng", "ernst"],
+    "answer": "höflich"
+  },
+  {
+    "question": "Die Katze ist heute sehr ___.",
+    "options": ["ruhig", "laut", "ernst", "freundlich"],
+    "answer": "ruhig"
+  },
+  {
+    "question": "Meine Schwester ist sehr ___.",
+    "options": ["fleißig", "faul", "müde", "schwach"],
+    "answer": "fleißig"
+  },
+  {
+    "question": "Mein bester Freund ist sehr ___.",
+    "options": ["hilfsbereit", "egoistisch", "traurig", "böse"],
+    "answer": "hilfsbereit"
+  },
+  {
+    "question": "Meine Oma ist immer ___.",
+    "options": ["freundlich", "böse", "ernst", "laut"],
+    "answer": "freundlich"
+  },
+  {
+    "question": "Der Nachbar ist sehr ___.",
+    "options": ["nett", "traurig", "böse", "müde"],
+    "answer": "nett"
+  },
+  {
+    "question": "Die Kinder sind heute sehr ___.",
+    "options": ["laut", "ernst", "streng", "ruhig"],
+    "answer": "laut"
+  },
+  {
+    "question": "Mein Vater ist oft ___.",
+    "options": ["ernst", "fröhlich", "nervös", "ängstlich"],
+    "answer": "ernst"
+  },
+  {
+    "question": "Die Lehrerin ist ___.",
+    "options": ["geduldig", "nervös", "faul", "laut"],
+    "answer": "geduldig"
+  },
+
+  {
+    "question": "Mein Bruder ist sehr ___.",
+    "options": ["schüchtern", "mutig", "laut", "ernst"],
+    "answer": "schüchtern"
+  },
+  {
+    "question": "Meine Schwester ist sehr ___.",
+    "options": ["lustig", "traurig", "ernst", "ruhig"],
+    "answer": "lustig"
+  },
+  {
+    "question": "Die Kinder sind ___.",
+    "options": ["fröhlich", "traurig", "ängstlich", "streng"],
+    "answer": "fröhlich"
+  },
+  {
+    "question": "Der Junge ist heute ___.",
+    "options": ["stolz", "traurig", "ernst", "ruhig"],
+    "answer": "stolz"
+  },
+  {
+    "question": "Die Lehrerin ist immer sehr ___.",
+    "options": ["hilfsbereit", "böse", "nervös", "faul"],
+    "answer": "hilfsbereit"
+  },
+  {
+    "question": "Mein Opa ist oft ___.",
+    "options": ["ruhig", "laut", "nervös", "traurig"],
+    "answer": "ruhig"
+  },
+  {
+    "question": "Der Lehrer ist sehr ___.",
+    "options": ["streng", "lustig", "freundlich", "ruhig"],
+    "answer": "streng"
+  },
+  {
+    "question": "Meine Tante ist immer ___.",
+    "options": ["geduldig", "nervös", "laut", "ernst"],
+    "answer": "geduldig"
+  },
+  {
+    "question": "Mein Cousin ist sehr ___.",
+    "options": ["aktiv", "faul", "traurig", "müde"],
+    "answer": "aktiv"
+  },
+  {
+    "question": "Mein bester Freund ist ___.",
+    "options": ["ehrlich", "unehrlich", "laut", "nervös"],
+    "answer": "ehrlich"
+  },
+
+  {
+    "question": "Die Oma ist immer sehr ___.",
+    "options": ["lieb", "böse", "ernst", "nervös"],
+    "answer": "lieb"
+  },
+  {
+    "question": "Meine Schwester ist sehr ___.",
+    "options": ["neugierig", "faul", "ernst", "nervös"],
+    "answer": "neugierig"
+  },
+  {
+    "question": "Mein Bruder ist sehr ___.",
+    "options": ["fleißig", "faul", "müde", "traurig"],
+    "answer": "fleißig"
+  },
+  {
+    "question": "Mein Lehrer ist ___.",
+    "options": ["freundlich", "nervös", "böse", "laut"],
+    "answer": "freundlich"
+  },
+  {
+    "question": "Der Junge ist sehr ___.",
+    "options": ["mutig", "ängstlich", "nervös", "schwach"],
+    "answer": "mutig"
+  },
+  {
+    "question": "Die Kinder sind heute sehr ___.",
+    "options": ["fröhlich", "ernst", "streng", "laut"],
+    "answer": "fröhlich"
+  },
+  {
+    "question": "Meine Tante ist oft ___.",
+    "options": ["nett", "faul", "laut", "ernst"],
+    "answer": "nett"
+  },
+  {
+    "question": "Mein Vater ist sehr ___.",
+    "options": ["ordentlich", "faul", "laut", "traurig"],
+    "answer": "ordentlich"
+  },
+  {
+    "question": "Die Lehrerin ist ___.",
+    "options": ["geduldig", "freundlich", "ernst", "laut"],
+    "answer": "geduldig"
+  },
+  {
+    "question": "Mein bester Freund ist sehr ___.",
+    "options": ["hilfsbereit", "faul", "böse", "laut"],
+    "answer": "hilfsbereit"
+  },
+  {
+    "question": "Mein bester Freund ist ___.",
+    "options": ["treu", "hilfsbereit", "nett", "freundlich"],
+    "answer": "treu"
+  },
+  {
+    "question": "Der Schüler ist ___.",
+    "options": ["fleißig", "faul", "gemein", "unfreundlich"],
+    "answer": "fleißig"
+  },
+  {
+    "question": "Die Tante ist ___.",
+    "options": ["lieb", "gemein", "laut", "faul"],
+    "answer": "lieb"
+  },
+  {
+    "question": "Der Opa ist ___.",
+    "options": ["weise", "dumm", "naiv", "egoistisch"],
+    "answer": "weise"
+  },
+  {
+    "question": "Die Nachbarin ist ___.",
+    "options": ["neugierig", "schüchtern", "ruhig", "faul"],
+    "answer": "neugierig"
   }
 ]

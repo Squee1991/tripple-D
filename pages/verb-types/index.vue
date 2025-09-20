@@ -63,11 +63,9 @@
                 </tbody>
               </table>
             </section>
-
             <section v-if="block.type === 'subheading'" class="info-section">
               <h3 class="info-section__subheading">{{ block.title }}</h3>
             </section>
-
             <section v-if="block.type === 'examples'" class="info-section examples-container">
               <div v-for="(example, exIndex) in block.content" :key="exIndex" class="example">
                 <div class="example__de-text">
@@ -107,6 +105,7 @@ const selectTopic = (id) => {
     isContentVisible.value = true;
   }
 };
+
 const currentTopicData = computed(() => topics.find(t => t.id === topic.value));
 const backToMenu = () => router.push('/');
 
@@ -119,7 +118,6 @@ const parseTip = (text) => {
     }
   });
 };
-
 const topics = [
   {
     id: 'prepositions',

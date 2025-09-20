@@ -145,22 +145,34 @@ export const useQuizStore = defineStore('quiz', () => {
             const tRef = topicAggRef()
             const mSnap = await tx.get(mRef)
             const tSnap = await tx.get(tRef)
-            const m = mSnap.exists() ? mSnap.data() : { attemptsCount: 0, bestScore: 0, totalAnswered: 0, totalCorrect: 0, averageAccuracy: 0 }
-            const t = tSnap.exists() ? tSnap.data() : { attemptsCount: 0, bestScore: 0, totalAnswered: 0, totalCorrect: 0, averageAccuracy: 0, perfectSessionsCount: 0, fastestPerfectSec: null, hasPerfect: false, fastPerfectSessionsCount: 0 }
+            const m = mSnap.exists() ? mSnap.data() : { attemptsCount: 0, bestScore: 0 }
+            const t = tSnap.exists() ? tSnap.data() : { attemptsCount: 0, bestScore: 0, perfectSessionsCount: 0, fastestPerfectSec: null, hasPerfect: false, fastPerfectSessionsCount: 0 }
+
             const mAttempts = (m.attemptsCount || 0) + 1
-            const mAnswered = (m.totalAnswered || 0) + total
-            const mCorrect = (m.totalCorrect || 0) + correct
-            const mAcc = mAnswered ? mCorrect / mAnswered : 0
             const tAttempts = (t.attemptsCount || 0) + 1
-            const tAnswered = (t.totalAnswered || 0) + total
-            const tCorrect = (t.totalCorrect || 0) + correct
-            const tAcc = tAnswered ? tCorrect / tAnswered : 0
+
             const newPerfectCount = (t.perfectSessionsCount || 0) + (isPerfect ? 1 : 0)
             const newFastest = isPerfect ? Math.min(t.fastestPerfectSec ?? Infinity, durationSec ?? Infinity) : (t.fastestPerfectSec ?? null)
             const addFastPerfect = (isPerfect && (durationSec ?? 0) < 60) ? 1 : 0
             const newFastPerfectCount = (t.fastPerfectSessionsCount || 0) + addFastPerfect
-            tx.set(mRef, { attemptsCount: mAttempts, bestScore: Math.max(m.bestScore || 0, scoreVal), totalAnswered: mAnswered, totalCorrect: mCorrect, averageAccuracy: mAcc, lastPlayedAt: serverTimestamp() }, { merge: true })
-            tx.set(tRef, { attemptsCount: tAttempts, bestScore: Math.max(t.bestScore || 0, scoreVal), totalAnswered: tAnswered, totalCorrect: tCorrect, averageAccuracy: tAcc, lastPlayedAt: serverTimestamp(), modeId: context.value.modeId, topicId: context.value.topicId, perfectSessionsCount: newPerfectCount, fastestPerfectSec: Number.isFinite(newFastest) ? newFastest : (t.fastestPerfectSec ?? null), hasPerfect: (t.hasPerfect || isPerfect), fastPerfectSessionsCount: newFastPerfectCount }, { merge: true })
+
+            tx.set(mRef, {
+                attemptsCount: mAttempts,
+                bestScore: Math.max(m.bestScore || 0, scoreVal),
+                lastPlayedAt: serverTimestamp()
+            }, { merge: true })
+
+            tx.set(tRef, {
+                attemptsCount: tAttempts,
+                bestScore: Math.max(t.bestScore || 0, scoreVal),
+                lastPlayedAt: serverTimestamp(),
+                modeId: context.value.modeId,
+                topicId: context.value.topicId,
+                perfectSessionsCount: newPerfectCount,
+                fastestPerfectSec: Number.isFinite(newFastest) ? newFastest : (t.fastestPerfectSec ?? null),
+                hasPerfect: (t.hasPerfect || isPerfect),
+                fastPerfectSessionsCount: newFastPerfectCount
+            }, { merge: true })
         })
     }
 
@@ -200,37 +212,80 @@ export const useQuizStore = defineStore('quiz', () => {
         }
     }
 
+    async function bumpAggOnAnswer(isCorrect) {
+        try {
+            await runTransaction(db, async (tx) => {
+                const mRef = modeAggRef()
+                const tRef = topicAggRef()
+
+                const mSnap = await tx.get(mRef)
+                const tSnap = await tx.get(tRef)
+                const m = mSnap.exists() ? mSnap.data() : { totalAnswered: 0, totalCorrect: 0 }
+                const t = tSnap.exists() ? tSnap.data() : { totalAnswered: 0, totalCorrect: 0 }
+
+                const mAnswered = (m.totalAnswered || 0) + 1
+                const mCorrect  = (m.totalCorrect  || 0) + (isCorrect ? 1 : 0)
+                const tAnswered = (t.totalAnswered || 0) + 1
+                const tCorrect  = (t.totalCorrect  || 0) + (isCorrect ? 1 : 0)
+
+                tx.set(mRef, {
+                    totalAnswered: mAnswered,
+                    totalCorrect:  mCorrect,
+                    averageAccuracy: mAnswered ? mCorrect / mAnswered : 0,
+                    lastPlayedAt: serverTimestamp()
+                }, { merge: true })
+
+                tx.set(tRef, {
+                    totalAnswered: tAnswered,
+                    totalCorrect:  tCorrect,
+                    averageAccuracy: tAnswered ? tCorrect / tAnswered : 0,
+                    lastPlayedAt: serverTimestamp(),
+                    modeId: context.value.modeId,
+                    topicId: context.value.topicId
+                }, { merge: true })
+            })
+        } catch {}
+    }
+
+
     async function restoreOrStart({ modeId, topicId, fileName, contentVersion }) {
         setContext({ modeId, topicId, fileName, contentVersion })
         requireContext()
-        let snap = null
-        try {
-            const s = await getDoc(sessionRef())
-            snap = s.exists() ? s.data() : null
-        } catch {}
-        if (!snap || snap.fileName !== fileName || snap.contentVersion !== contentVersion || snap.completed) {
-            await startNewQuiz({ modeId, topicId, fileName, contentVersion })
-            return
-        }
-        try {
-            const res = await fetch(fileName)
-            allQuestions.value = await res.json()
-        } catch {
-            allQuestions.value = []
-        }
-        const idMap = new Map()
-        allQuestions.value.forEach(q => {
-            const id = getQuestionId(q)
-            idMap.set(id, { ...q, id })
-        })
-        currentQuestions.value = (snap.questionIdsOrder || []).map(id => idMap.get(id)).filter(Boolean)
-        questionIdsOrder.value  = snap.questionIdsOrder || []
-        currentQuestionIndex.value = snap.currentQuestionIndex || 0
-        selectedOption.value = snap.selectedOption || null
-        userAnswers.value = snap.userAnswersMap || {}
-        startedAt.value = snap.startedAt ? new Date(snap.startedAt).getTime() : Date.now()
-        feedback.value = null
+        await startNewQuiz({ modeId, topicId, fileName, contentVersion })
     }
+
+
+    // async function restoreOrStart({ modeId, topicId, fileName, contentVersion }) {
+    //     setContext({ modeId, topicId, fileName, contentVersion })
+    //     requireContext()
+    //     let snap = null
+    //     try {
+    //         const s = await getDoc(sessionRef())
+    //         snap = s.exists() ? s.data() : null
+    //     } catch {}
+    //     if (!snap || snap.fileName !== fileName || snap.contentVersion !== contentVersion || snap.completed) {
+    //         await startNewQuiz({ modeId, topicId, fileName, contentVersion })
+    //         return
+    //     }
+    //     try {
+    //         const res = await fetch(fileName)
+    //         allQuestions.value = await res.json()
+    //     } catch {
+    //         allQuestions.value = []
+    //     }
+    //     const idMap = new Map()
+    //     allQuestions.value.forEach(q => {
+    //         const id = getQuestionId(q)
+    //         idMap.set(id, { ...q, id })
+    //     })
+    //     currentQuestions.value = (snap.questionIdsOrder || []).map(id => idMap.get(id)).filter(Boolean)
+    //     questionIdsOrder.value  = snap.questionIdsOrder || []
+    //     currentQuestionIndex.value = snap.currentQuestionIndex || 0
+    //     selectedOption.value = snap.selectedOption || null
+    //     userAnswers.value = snap.userAnswersMap || {}
+    //     startedAt.value = snap.startedAt ? new Date(snap.startedAt).getTime() : Date.now()
+    //     feedback.value = null
+    // }
 
     function chooseOption(option) {
         if (feedback.value === null) selectedOption.value = option
@@ -238,13 +293,17 @@ export const useQuizStore = defineStore('quiz', () => {
 
     async function checkAnswer() {
         if (!selectedOption.value || !activeQuestion.value) return
+        if (feedback.value !== null) return
         unlockAudioByUserGesture()
         const isCorrect = selectedOption.value === activeQuestion.value.answer
         feedback.value = isCorrect ? 'correct' : 'incorrect'
         if (isCorrect) playCorrect(); else playWrong()
         userAnswers.value[currentQuestionIndex.value] = { answer: selectedOption.value, isCorrect }
         try { await saveAnswer(currentQuestionIndex.value, selectedOption.value, isCorrect) } catch {}
+        try { await bumpAggOnAnswer(isCorrect) } catch {}
     }
+
+
 
     async function nextQuestion() {
         if (currentQuestionIndex.value < currentQuestions.value.length) {
