@@ -42,10 +42,580 @@
     "options": ["möchte", "mag", "will", "muss"]
   },
   {
+    "question": "Ich ___ heute früh ins Büro gehen.",
+    "verb": "müssen",
+    "answer": "muss",
+    "options": ["muss", "soll", "will", "kann"]
+  },
+  {
+    "question": "Wir ___ morgen länger bleiben.",
+    "verb": "können",
+    "answer": "können",
+    "options": ["können", "dürfen", "müssen", "wollen"]
+  },
+  {
+    "question": "Du ___ gleich ins Bett gehen.",
+    "verb": "sollen",
+    "answer": "sollst",
+    "options": ["sollst", "musst", "kannst", "willst"]
+  },
+  {
+    "question": "Ich ___ jetzt lieber ins Kino gehen.",
+    "verb": "möchten",
+    "answer": "möchte",
+    "options": ["möchte", "mag", "will", "muss"]
+  },
+  {
+    "question": "Wenn ich Zeit hätte, ___ ich mehr lesen.",
+    "verb": "können",
+    "answer": "würde",
+    "options": ["würde", "könnte", "müsste", "sollte"]
+  },
+  {
+    "question": "Du ___ mir helfen, wenn du willst.",
+    "verb": "können",
+    "answer": "könntest",
+    "options": ["könntest", "dürftest", "müsstest", "solltest"]
+  },
+  {
+    "question": "Er ___ mehr lernen, aber er ist zu faul.",
+    "verb": "sollen",
+    "answer": "sollte",
+    "options": ["sollte", "müsste", "wollte", "könnte"]
+  },
+  {
+    "question": "Wir ___ gern nach Italien fahren.",
+    "verb": "möchten",
+    "answer": "möchten",
+    "options": ["möchten", "wollen", "dürfen", "müssen"]
+  },
+  {
+    "question": "Ihr ___ pünktlicher sein.",
+    "verb": "sollen",
+    "answer": "solltet",
+    "options": ["solltet", "müsstet", "könntet", "wolltet"]
+  },
+  {
+    "question": "Ich ___ jetzt einen Kaffee trinken.",
+    "verb": "möchten",
+    "answer": "möchte",
+    "options": ["möchte", "mag", "will", "kann"]
+  },
+  {
+    "question": "Man ___ höflicher sprechen.",
+    "verb": "sollen",
+    "answer": "sollte",
+    "options": ["sollte", "müsste", "könnte", "würde"]
+  },
+  {
+    "question": "Wir ___ gern mehr Zeit haben.",
+    "verb": "möchten",
+    "answer": "möchten",
+    "options": ["möchten", "wollen", "dürfen", "müssen"]
+  },
+  {
+    "question": "Er ___ dich anrufen, wenn er Zeit hätte.",
+    "verb": "können",
+    "answer": "würde",
+    "options": ["würde", "könnte", "müsste", "sollte"]
+  },
+  {
+    "question": "Du ___ freundlicher sein.",
+    "verb": "sollen",
+    "answer": "solltest",
+    "options": ["solltest", "müsstest", "könntest", "wolltest"]
+  },
+  {
+    "question": "Ich ___ jetzt gern ein Eis essen.",
+    "verb": "möchten",
+    "answer": "möchte",
+    "options": ["möchte", "mag", "will", "kann"]
+  },
+  {
+    "question": "Sie ___ pünktlich kommen, aber sie ist oft zu spät.",
+    "verb": "sollen",
+    "answer": "sollte",
+    "options": ["sollte", "müsste", "würde", "könnte"]
+  },
+  {
+    "question": "Wir ___ mehr schlafen, aber wir arbeiten zu viel.",
+    "verb": "müssen",
+    "answer": "müssten",
+    "options": ["müssten", "sollten", "könnten", "wollten"]
+  },
+  {
+    "question": "Er ___ dich besuchen, wenn er Zeit hätte.",
+    "verb": "wollen",
+    "answer": "würde",
+    "options": ["würde", "wollte", "möchte", "könnte"]
+  },
+  {
+    "question": "Er ___ gestern nicht mitkommen.",
+    "verb": "können",
+    "answer": "konnte",
+    "options": ["konnte", "musste", "sollte", "wollte"]
+  },
+  {
+    "question": "Sie ___ das Fenster sofort schließen.",
+    "verb": "müssen",
+    "answer": "müssen",
+    "options": ["müssen", "dürfen", "wollen", "mögen"]
+  },
+  {
+    "question": "Ihr ___ hier nicht laut sprechen.",
+    "verb": "dürfen",
+    "answer": "dürft",
+    "options": ["dürft", "müsst", "sollt", "wollt"]
+  },
+  {
+    "question": "Ich ___ dir morgen helfen.",
+    "verb": "können",
+    "answer": "kann",
+    "options": ["kann", "muss", "will", "soll"]
+  },
+  {
+    "question": "Wir ___ gestern nicht ins Kino gehen.",
+    "verb": "können",
+    "answer": "konnten",
+    "options": ["konnten", "mussten", "sollten", "wollten"]
+  },
+  {
+    "question": "Du ___ das heute nicht vergessen!",
+    "verb": "dürfen",
+    "answer": "darfst",
+    "options": ["darfst", "musst", "sollst", "willst"]
+  },
+  {
+    "question": "Er ___ als Kind gut malen.",
+    "verb": "können",
+    "answer": "konnte",
+    "options": ["konnte", "musste", "sollte", "wollte"]
+  },
+  {
+    "question": "Wir ___ nach dem Essen spazieren gehen.",
+    "verb": "wollen",
+    "answer": "wollen",
+    "options": ["wollen", "möchten", "dürfen", "sollen"]
+  },
+  {
+    "question": "Ich ___ nicht lange bleiben.",
+    "verb": "können",
+    "answer": "kann",
+    "options": ["kann", "muss", "soll", "mag"]
+  },
+  {
+    "question": "Ihr ___ sofort anfangen!",
+    "verb": "müssen",
+    "answer": "müsst",
+    "options": ["müsst", "dürft", "sollt", "wollt"]
+  },
+  {
+    "question": "Er ___ gestern nicht mitspielen.",
+    "verb": "dürfen",
+    "answer": "durfte",
+    "options": ["durfte", "musste", "konnte", "wollte"]
+  },
+  {
+    "question": "Ich ___ dich etwas fragen.",
+    "verb": "möchten",
+    "answer": "möchte",
+    "options": ["möchte", "mag", "will", "kann"]
+  },
+  {
+    "question": "Sie ___ als Kind keine Milch trinken.",
+    "verb": "mögen",
+    "answer": "mochte",
+    "options": ["mochte", "mag", "möchte", "wollte"]
+  },
+  {
+    "question": "Wir ___ morgen früher kommen.",
+    "verb": "sollen",
+    "answer": "sollen",
+    "options": ["sollen", "müssen", "wollen", "können"]
+  },
+  {
+    "question": "Du ___ mir sofort antworten.",
+    "verb": "müssen",
+    "answer": "musst",
+    "options": ["musst", "sollst", "willst", "kannst"]
+  },
+  {
+    "question": "Er ___ das Fenster schließen.",
+    "verb": "sollen",
+    "answer": "soll",
+    "options": ["soll", "muss", "will", "kann"]
+  },
+  {
+    "question": "Ich ___ ins Kino, aber niemand hatte Zeit.",
+    "verb": "wollen",
+    "answer": "wollte",
+    "options": ["wollte", "musste", "sollte", "konnte"]
+  },
+  {
+    "question": "Wir ___ das Geheimnis niemandem erzählen.",
+    "verb": "dürfen",
+    "answer": "dürfen",
+    "options": ["dürfen", "müssen", "wollen", "möchten"]
+  },
+  {
+    "question": "Ihr ___ sofort still sein.",
+    "verb": "sollen",
+    "answer": "sollt",
+    "options": ["sollt", "müsst", "dürft", "wollt"]
+  },
+  {
+    "question": "Er ___ immer Arzt werden.",
+    "verb": "wollen",
+    "answer": "wollte",
+    "options": ["wollte", "musste", "sollte", "konnte"]
+  },
+  {
+    "question": "Ich ___ nicht mehr warten.",
+    "verb": "können",
+    "answer": "kann",
+    "options": ["kann", "muss", "soll", "will"]
+  },
+  {
+    "question": "Wir ___ gestern lange auf ihn warten.",
+    "verb": "müssen",
+    "answer": "mussten",
+    "options": ["mussten", "wollten", "konnten", "sollten"]
+  },
+  {
+    "question": "Du ___ sofort zum Arzt gehen.",
+    "verb": "sollen",
+    "answer": "sollst",
+    "options": ["sollst", "musst", "willst", "kannst"]
+  },
+  {
+    "question": "Er ___ als Kind sehr gut schwimmen.",
+    "verb": "können",
+    "answer": "konnte",
+    "options": ["konnte", "musste", "sollte", "wollte"]
+  },
+  {
+    "question": "Wir ___ das Licht ausschalten.",
+    "verb": "müssen",
+    "answer": "müssen",
+    "options": ["müssen", "dürfen", "wollen", "sollen"]
+  },
+  {
+    "question": "Ihr ___ mehr Obst essen.",
+    "verb": "sollen",
+    "answer": "sollt",
+    "options": ["sollt", "müsst", "wollt", "könnt"]
+  },
+  {
+    "question": "Ich ___ lieber Tee trinken.",
+    "verb": "mögen",
+    "answer": "mag",
+    "options": ["mag", "möchte", "will", "muss"]
+  },
+  {
+    "question": "Sie ___ noch ein Stück Kuchen.",
+    "verb": "möchten",
+    "answer": "möchte",
+    "options": ["möchte", "mag", "will", "kann"]
+  },
+  {
+    "question": "Wir ___ gestern ins Museum gehen.",
+    "verb": "dürfen",
+    "answer": "durften",
+    "options": ["durften", "mussten", "sollten", "wollten"]
+  },
+  {
+    "question": "Du ___ bald mehr lernen.",
+    "verb": "müssen",
+    "answer": "musst",
+    "options": ["musst", "sollst", "willst", "kannst"]
+  },
+  {
+    "question": "Ich ___ im Sommer viel schwimmen.",
+    "verb": "können",
+    "answer": "konnte",
+    "options": ["konnte", "musste", "sollte", "wollte"]
+  },
+  {
+    "question": "Wir ___ heute nicht laut sein.",
+    "verb": "dürfen",
+    "answer": "dürfen",
+    "options": ["dürfen", "müssen", "sollen", "wollen"]
+  },
+  {
+    "question": "Ihr ___ sofort anfangen zu arbeiten.",
+    "verb": "müssen",
+    "answer": "müsst",
+    "options": ["müsst", "dürft", "sollt", "wollt"]
+  },
+  {
+    "question": "Ich ___ jetzt lieber nach Hause gehen.",
+    "verb": "wollen",
+    "answer": "will",
+    "options": ["will", "mag", "muss", "kann"]
+  },
+  {
+    "question": "Wir ___ bald ein neues Auto kaufen.",
+    "verb": "wollen",
+    "answer": "wollen",
+    "options": ["wollen", "möchten", "dürfen", "müssen"]
+  },
+  {
+    "question": "___ du heute Abend mitkommen?",
+    "verb": "wollen",
+    "answer": "Willst",
+    "options": ["Willst", "Musst", "Kannst", "Magst"]
+  },
+  {
+    "question": "Er ___ gestern früher gehen.",
+    "verb": "dürfen",
+    "answer": "durfte",
+    "options": ["durfte", "musste", "konnte", "sollte"]
+  },
+  {
+    "question": "Ich ___ dir die Wahrheit sagen.",
+    "verb": "müssen",
+    "answer": "muss",
+    "options": ["muss", "soll", "mag", "will"]
+  },
+  {
+    "question": "Wir ___ gestern viel lernen.",
+    "verb": "müssen",
+    "answer": "mussten",
+    "options": ["mussten", "konnten", "sollten", "wollten"]
+  },
+  {
+    "question": "Du ___ mehr Sport machen.",
+    "verb": "sollen",
+    "answer": "sollst",
+    "options": ["sollst", "musst", "kannst", "willst"]
+  },
+  {
+    "question": "Er ___ gern Schokolade essen.",
+    "verb": "mögen",
+    "answer": "mag",
+    "options": ["mag", "möchte", "will", "muss"]
+  },
+  {
+    "question": "Ich ___ jetzt lieber ins Kino gehen.",
+    "verb": "möchten",
+    "answer": "möchte",
+    "options": ["möchte", "mag", "will", "kann"]
+  },
+  {
+    "question": "___ Sie mir bitte helfen?",
+    "verb": "können",
+    "answer": "Können",
+    "options": ["Können", "Wollen", "Möchten", "Dürfen"]
+  },
+  {
+    "question": "Wir ___ ins Schwimmbad, aber es war zu kalt.",
+    "verb": "wollen",
+    "answer": "wollten",
+    "options": ["wollten", "mussten", "konnten", "sollten"]
+  },
+  {
+    "question": "Er ___ gestern nicht kommen, weil er krank war.",
+    "verb": "müssen",
+    "answer": "musste",
+    "options": ["musste", "wollte", "konnte", "sollte"]
+  },
+  {
+    "question": "Ich ___ dir etwas Wichtiges sagen.",
+    "verb": "möchten",
+    "answer": "möchte",
+    "options": ["möchte", "mag", "will", "kann"]
+  },
+  {
+    "question": "Ihr ___ gestern sehr früh ins Bett gehen.",
+    "verb": "sollen",
+    "answer": "solltet",
+    "options": ["solltet", "musstet", "wolltet", "konntet"]
+  },
+  {
+    "question": "Wir ___ in die Stadt fahren, aber es regnete.",
+    "verb": "wollen",
+    "answer": "wollten",
+    "options": ["wollten", "mussten", "sollten", "konnten"]
+  },
+  {
+    "question": "Du ___ gestern lange lernen.",
+    "verb": "müssen",
+    "answer": "musstest",
+    "options": ["musstest", "solltest", "konntest", "wolltest"]
+  },
+  {
+    "question": "Ich ___ nie Gemüse essen, als ich klein war.",
+    "verb": "mögen",
+    "answer": "mochte",
+    "options": ["mochte", "mag", "möchte", "will"]
+  },
+  {
+    "question": "Er ___ schon als Kind Geige spielen.",
+    "verb": "können",
+    "answer": "konnte",
+    "options": ["konnte", "musste", "sollte", "wollte"]
+  },
+  {
+    "question": "Wir ___ gestern den ganzen Tag arbeiten.",
+    "verb": "müssen",
+    "answer": "mussten",
+    "options": ["mussten", "sollten", "konnten", "wollten"]
+  },
+  {
+    "question": "Sie ___ schon immer Ärztin werden.",
+    "verb": "wollen",
+    "answer": "wollte",
+    "options": ["wollte", "musste", "sollte", "konnte"]
+  },
+  {
+    "question": "Ihr ___ gestern nicht laut sprechen.",
+    "verb": "dürfen",
+    "answer": "durftet",
+    "options": ["durftet", "musstet", "solltet", "wolltet"]
+  },
+  {
+    "question": "Ich ___ gestern früh nach Hause gehen.",
+    "verb": "dürfen",
+    "answer": "durfte",
+    "options": ["durfte", "musste", "sollte", "wollte"]
+  },
+  {
+    "question": "Wir ___ ihm sofort helfen.",
+    "verb": "sollen",
+    "answer": "sollten",
+    "options": ["sollten", "mussten", "konnten", "wollten"]
+  },
+  {
+    "question": "Du ___ gestern lange Klavier üben.",
+    "verb": "sollen",
+    "answer": "solltest",
+    "options": ["solltest", "musstest", "konntest", "wolltest"]
+  },
+  {
     "question": "___ Sie noch ein Stück Kuchen?",
     "verb": "möchten",
     "answer": "Möchten",
     "options": ["Möchten", "Wollen", "Dürfen", "Können"]
+  },
+  {
+    "question": "Ich ___ heute nicht kommen.",
+    "verb": "können",
+    "answer": "kann",
+    "options": ["kann", "muss", "soll", "will"]
+  },
+  {
+    "question": "___ du mir bitte helfen?",
+    "verb": "können",
+    "answer": "Kannst",
+    "options": ["Kannst", "Willst", "Magst", "Darfst"]
+  },
+  {
+    "question": "Wir ___ hier nicht rauchen.",
+    "verb": "dürfen",
+    "answer": "dürfen",
+    "options": ["dürfen", "können", "möchten", "wollen"]
+  },
+  {
+    "question": "Er ___ morgen nicht arbeiten.",
+    "verb": "müssen",
+    "answer": "muss",
+    "options": ["muss", "will", "kann", "soll"]
+  },
+  {
+    "question": "Du ___ mehr Wasser trinken.",
+    "verb": "sollen",
+    "answer": "sollst",
+    "options": ["sollst", "musst", "willst", "kannst"]
+  },
+  {
+    "question": "Ich ___ nicht ins Kino gehen, ich bin müde.",
+    "verb": "wollen",
+    "answer": "will",
+    "options": ["will", "mag", "muss", "soll"]
+  },
+  {
+    "question": "Wir ___ lieber zu Hause bleiben.",
+    "verb": "mögen",
+    "answer": "mögen",
+    "options": ["mögen", "wollen", "dürfen", "sollen"]
+  },
+  {
+    "question": "___ Sie bitte Platz nehmen?",
+    "verb": "möchten",
+    "answer": "Möchten",
+    "options": ["Möchten", "Können", "Wollen", "Dürfen"]
+  },
+  {
+    "question": "Er ___ kein Fleisch essen.",
+    "verb": "mögen",
+    "answer": "mag",
+    "options": ["mag", "möchte", "will", "kann"]
+  },
+  {
+    "question": "Ich ___ jetzt schlafen gehen.",
+    "verb": "möchten",
+    "answer": "möchte",
+    "options": ["möchte", "mag", "will", "kann"]
+  },
+  {
+    "question": "Ihr ___ leise sein, das Baby schläft.",
+    "verb": "müssen",
+    "answer": "müsst",
+    "options": ["müsst", "dürft", "sollt", "wollt"]
+  },
+  {
+    "question": "Wir ___ bald Urlaub machen.",
+    "verb": "wollen",
+    "answer": "wollen",
+    "options": ["wollen", "möchten", "dürfen", "sollen"]
+  },
+  {
+    "question": "Sie ___ gut Deutsch sprechen.",
+    "verb": "können",
+    "answer": "können",
+    "options": ["können", "dürfen", "möchten", "müssen"]
+  },
+  {
+    "question": "Du ___ nicht so schnell fahren.",
+    "verb": "dürfen",
+    "answer": "darfst",
+    "options": ["darfst", "musst", "willst", "kannst"]
+  },
+  {
+    "question": "Ich ___ dir später anrufen.",
+    "verb": "können",
+    "answer": "kann",
+    "options": ["kann", "muss", "soll", "will"]
+  },
+  {
+    "question": "___ wir hier sitzen?",
+    "verb": "dürfen",
+    "answer": "Dürfen",
+    "options": ["Dürfen", "Können", "Wollen", "Müssen"]
+  },
+  {
+    "question": "Er ___ nicht kommen, er war krank.",
+    "verb": "können",
+    "answer": "konnte",
+    "options": ["konnte", "musste", "sollte", "wollte"]
+  },
+  {
+    "question": "Ich ___ schon als Kind gut schwimmen.",
+    "verb": "können",
+    "answer": "konnte",
+    "options": ["konnte", "musste", "sollte", "wollte"]
+  },
+  {
+    "question": "Wir ___ gestern lange arbeiten.",
+    "verb": "müssen",
+    "answer": "mussten",
+    "options": ["mussten", "wollten", "konnten", "sollten"]
+  },
+  {
+    "question": "Sie ___ gestern früh ins Bett gehen.",
+    "verb": "sollen",
+    "answer": "sollten",
+    "options": ["sollten", "mussten", "wollten", "konnten"]
   },
   {
     "question": "Du ___ heute dein Zimmer putzen.",

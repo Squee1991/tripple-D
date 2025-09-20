@@ -37,6 +37,240 @@
   },
   {
     "type": "fillInBlank",
+    "question": "Letzte Woche _______ wir eine Wanderung.",
+    "options": ["machten", "machte", "macht", "machen"],
+    "answer": "machten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Ich _______ gestern ein neues Buch.",
+    "options": ["kaufte", "kaufe", "kaufen", "kauft"],
+    "answer": "kaufte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Sie _______ den ganzen Abend Musik.",
+    "options": ["hörte", "hörten", "hören", "hört"],
+    "answer": "hörte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Er _______ das Fenster, weil es warm war.",
+    "options": ["öffnete", "öffnen", "öffnete", "öffnet"],
+    "answer": "öffnete"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir _______ das Auto vor der Reise.",
+    "options": ["putzten", "putzte", "putzen", "putzt"],
+    "answer": "putzten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Ich _______ meine Eltern am Wochenende.",
+    "options": ["besuchte", "besuchen", "besucht", "besuchst"],
+    "answer": "besuchte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Die Lehrerin _______ die Aufgabe genau.",
+    "options": ["erklärte", "erklären", "erklärt", "erklärten"],
+    "answer": "erklärte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir _______ im Restaurant sehr gut.",
+    "options": ["aßen", "esse", "essen", "esst"],
+    "answer": "aßen"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Er _______ den Bus zur Arbeit.",
+    "options": ["nahm", "nimmt", "nehmen", "nimmt"],
+    "answer": "nahm"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Ich _______ gestern lange im Bett.",
+    "options": ["lag", "liege", "liegt", "liegen"],
+    "answer": "lag"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Die Kinder _______ laut im Garten.",
+    "options": ["lachten", "lachte", "lacht", "lachen"],
+    "answer": "lachten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Sie _______ sehr schöne Bilder im Museum.",
+    "options": ["sahen", "sieht", "sehen", "sah"],
+    "answer": "sahen"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir _______ zusammen ins Kino.",
+    "options": ["gingen", "geht", "gehen", "ging"],
+    "answer": "gingen"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Ich _______ gestern einen Brief an meinen Freund.",
+    "options": ["schrieb", "schreiben", "schreibt", "schreibte"],
+    "answer": "schrieb"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Er _______ schnell nach Hause.",
+    "options": ["rannte", "rennt", "rennen", "rann"],
+    "answer": "rannte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir _______ den Geburtstag mit einer großen Party.",
+    "options": ["feierten", "feierte", "feiert", "feiern"],
+    "answer": "feierten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Ich _______ meine Tasche im Bus.",
+    "options": ["vergaß", "vergisst", "vergessen", "vergass"],
+    "answer": "vergaß"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Sie _______ ihm die Wahrheit.",
+    "options": ["sagte", "sagten", "sagen", "sagst"],
+    "answer": "sagte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Die Katze _______ auf dem Sofa.",
+    "options": ["schlief", "schlafen", "schläft", "schlaft"],
+    "answer": "schlief"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir _______ das Fenster, weil es kalt war.",
+    "options": ["schlossen", "schloss", "schließt", "schließen"],
+    "answer": "schlossen"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Er _______ einen Apfel aus dem Korb.",
+    "options": ["nahm", "nehmen", "nimmt", "nahmen"],
+    "answer": "nahm"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Ich _______ die Aufgabe schnell.",
+    "options": ["löste", "lösen", "lösten", "löst"],
+    "answer": "löste"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Die Kinder _______ im Schnee.",
+    "options": ["spielten", "spielen", "spielte", "spielt"],
+    "answer": "spielten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir _______ gestern viele Fotos.",
+    "options": ["machten", "machen", "macht", "machte"],
+    "answer": "machten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Sie _______ eine lange E-Mail.",
+    "options": ["schrieb", "schreiben", "schreibt", "schrieben"],
+    "answer": "schrieb"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Ich _______ gestern meine Freunde im Café.",
+    "options": ["traf", "treffe", "trifft", "treffen"],
+    "answer": "traf"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir _______ im Sommer jeden Tag im See.",
+    "options": ["schwammen", "schwimmt", "schwammen", "schwimmen"],
+    "answer": "schwammen"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Er _______ die Lampe an der Decke.",
+    "options": ["hängte", "hängen", "hängt", "hängten"],
+    "answer": "hängte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Ich _______ die Tür zu.",
+    "options": ["machte", "machen", "machst", "macht"],
+    "answer": "machte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Sie _______ sehr freundlich mit uns.",
+    "options": ["sprach", "sprechen", "spricht", "sprachen"],
+    "answer": "sprach"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir _______ den Zug nach Berlin.",
+    "options": ["nahmen", "nahm", "nehmen", "nimmt"],
+    "answer": "nahmen"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Ich _______ in der Schule ein Gedicht.",
+    "options": ["lernte", "lernen", "lernt", "lernten"],
+    "answer": "lernte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Sie _______ gestern Abend im Hotel.",
+    "options": ["übernachteten", "übernachtete", "übernachten", "übernachtet"],
+    "answer": "übernachteten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir _______ im Unterricht viel Deutsch.",
+    "options": ["übten", "üben", "übt", "übte"],
+    "answer": "übten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Ich _______ am Wochenende nichts Besonderes.",
+    "options": ["tat", "tun", "tut", "taten"],
+    "answer": "tat"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Er _______ das Glas Wasser schnell.",
+    "options": ["trank", "trinken", "trinkt", "tranken"],
+    "answer": "trank"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir _______ im Garten viele Blumen.",
+    "options": ["pflanzten", "pflanzt", "pflanzen", "pflanzte"],
+    "answer": "pflanzten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Die Sonne _______ den ganzen Tag.",
+    "options": ["schien", "scheint", "scheinen", "schienen"],
+    "answer": "schien"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Ich _______ das Handy auf den Tisch.",
+    "options": ["legte", "legen", "legt", "legten"],
+    "answer": "legte"
+  },
+  {
+    "type": "fillInBlank",
     "question": "Die Kinder _______ im Park.",
     "options": ["spielten", "spielte", "spielt", "spielen"],
     "answer": "spielten"
@@ -46,6 +280,324 @@
     "question": "Ich _______ gestern meine Hausaufgaben nicht.",
     "options": ["machte", "macht", "machst", "machen"],
     "answer": "machte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Er _______ gestern das Auto zur Werkstatt.",
+    "options": ["brachte", "bringen", "bringt", "bracht"],
+    "answer": "brachte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir _______ am Wochenende viele Bücher.",
+    "options": ["lasen", "liest", "lesen", "las"],
+    "answer": "lasen"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Sie _______ sehr laut, als sie das hörte.",
+    "options": ["schrie", "schreien", "schreit", "schrien"],
+    "answer": "schrie"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Ich _______ ein Bild an die Wand.",
+    "options": ["malte", "malen", "malst", "malten"],
+    "answer": "malte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir _______ durch den Wald.",
+    "options": ["wanderten", "wandere", "wandert", "wandern"],
+    "answer": "wanderten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Die Schüler _______ die Aufgabe allein.",
+    "options": ["lösten", "lösen", "löste", "löst"],
+    "answer": "lösten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Ich _______ meine Schuhe in den Schrank.",
+    "options": ["stellte", "stellen", "stellt", "stellten"],
+    "answer": "stellte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir _______ gestern viele Freunde eingeladen.",
+    "options": ["hatten", "hattet", "haben", "habt"],
+    "answer": "hatten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Er _______ im Sommer nach Italien.",
+    "options": ["fuhr", "fahren", "fahrt", "fuhren"],
+    "answer": "fuhr"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Sie _______ die Blumen in eine Vase.",
+    "options": ["stellte", "stellt", "stellen", "stellten"],
+    "answer": "stellte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Die Touristen _______ viele Fotos vom Schloss.",
+    "options": ["machten", "macht", "machte", "machen"],
+    "answer": "machten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir _______ gestern den ganzen Tag.",
+    "options": ["ruhten", "ruhte", "ruhen", "ruht"],
+    "answer": "ruhten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Ich _______ letzte Nacht von einem Urlaub.",
+    "options": ["träumte", "träumen", "träumt", "träumten"],
+    "answer": "träumte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Die Familie _______ zusammen zu Abend.",
+    "options": ["aß", "essen", "isst", "aßen"],
+    "answer": "aß"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir _______ den ganzen Tag am Strand.",
+    "options": ["lagen", "liegt", "legen", "lag"],
+    "answer": "lagen"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Er _______ seinem Freund beim Umzug.",
+    "options": ["half", "helfen", "hilft", "halfen"],
+    "answer": "half"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Sie _______ die Küche sehr sauber.",
+    "options": ["machte", "macht", "machen", "machten"],
+    "answer": "machte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Ich _______ gestern mein Zimmer auf.",
+    "options": ["räumte", "räumen", "räumt", "räumten"],
+    "answer": "räumte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir _______ den Zug nach München.",
+    "options": ["erreichten", "erreichte", "erreichen", "erreicht"],
+    "answer": "erreichten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Die Kinder _______ ihre Spielsachen überall.",
+    "options": ["verteilten", "verteilen", "verteilte", "verteilt"],
+    "answer": "verteilten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Er _______ den ganzen Brief laut vor.",
+    "options": ["las", "lesen", "liest", "lasen"],
+    "answer": "las"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Ich _______ den Hund im Park.",
+    "options": ["führte", "führen", "führt", "führten"],
+    "answer": "führte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir _______ gestern ein Picknick.",
+    "options": ["hatten", "haben", "hattet", "hatte"],
+    "answer": "hatten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Die Studenten _______ die Prüfung leicht.",
+    "options": ["fanden", "finden", "fand", "findet"],
+    "answer": "fanden"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Ich _______ die Milch in den Kühlschrank.",
+    "options": ["stellte", "stellen", "stellt", "stellten"],
+    "answer": "stellte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir _______ sehr lange über das Thema.",
+    "options": ["diskutierten", "diskutierte", "diskutieren", "diskutiert"],
+    "answer": "diskutierten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Er _______ schnell eine Antwort.",
+    "options": ["fand", "finden", "findet", "fanden"],
+    "answer": "fand"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Sie _______ am Morgen Kaffee.",
+    "options": ["trank", "tranken", "trinken", "trinkt"],
+    "answer": "trank"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir _______ viele Jahre in Berlin.",
+    "options": ["lebten", "leben", "lebte", "lebt"],
+    "answer": "lebten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Ich _______ meine Tasche auf den Stuhl.",
+    "options": ["legte", "legen", "legt", "legten"],
+    "answer": "legte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Die Kinder _______ sehr lange draußen.",
+    "options": ["spielten", "spielt", "spielen", "spielte"],
+    "answer": "spielten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir _______ einen schönen Sonnenuntergang.",
+    "options": ["sahen", "sieht", "sehen", "sah"],
+    "answer": "sahen"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Er _______ das Fahrrad in die Garage.",
+    "options": ["stellte", "stellen", "stellt", "stellten"],
+    "answer": "stellte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Ich _______ gestern Abend eine Pizza.",
+    "options": ["aß", "essen", "isst", "aßen"],
+    "answer": "aß"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir _______ lange am Tisch zusammen.",
+    "options": ["saßen", "sitzt", "sitzen", "saß"],
+    "answer": "saßen"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Sie _______ die Antwort sofort.",
+    "options": ["gab", "geben", "gibt", "gaben"],
+    "answer": "gab"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Der Hund _______ laut, als der Postbote kam.",
+    "options": ["bellte", "bellt", "bellen", "bellten"],
+    "answer": "bellte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir _______ die Tür sofort auf.",
+    "options": ["öffneten", "öffnete", "öffnet", "öffnen"],
+    "answer": "öffneten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Ich _______ gestern ein neues Lied im Radio.",
+    "options": ["hörte", "hörten", "hören", "hört"],
+    "answer": "hörte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Die Schüler _______ leise im Klassenzimmer.",
+    "options": ["saßen", "sitzt", "sitzen", "saß"],
+    "answer": "saßen"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Er _______ die Zeitung am Morgen.",
+    "options": ["las", "lesen", "liest", "lasen"],
+    "answer": "las"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Die Touristen _______ die Stadt zu Fuß.",
+    "options": ["erkundeten", "erkundet", "erkunden", "erkundete"],
+    "answer": "erkundeten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Ich _______ den Kuchen in den Ofen.",
+    "options": ["stellte", "stellen", "stellt", "stellten"],
+    "answer": "stellte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir _______ gestern viele Stunden im Auto.",
+    "options": ["saßen", "sitzen", "sitzt", "saß"],
+    "answer": "saßen"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Er _______ seiner Mutter ein Geschenk.",
+    "options": ["gab", "geben", "gibt", "gaben"],
+    "answer": "gab"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Ich _______ den ganzen Tag an dich.",
+    "options": ["dachte", "denken", "denkt", "dachten"],
+    "answer": "dachte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir _______ einen neuen Tisch für die Küche.",
+    "options": ["kauften", "kaufen", "kauft", "kaufte"],
+    "answer": "kauften"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Die Kinder _______ viele Süßigkeiten.",
+    "options": ["aßen", "essen", "isst", "ass"],
+    "answer": "aßen"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Sie _______ gestern bis Mitternacht.",
+    "options": ["arbeiteten", "arbeitet", "arbeiten", "arbeitete"],
+    "answer": "arbeiteten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Ich _______ gestern eine Postkarte.",
+    "options": ["schrieb", "schreiben", "schreibt", "schrieben"],
+    "answer": "schrieb"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir _______ sehr laut im Theater.",
+    "options": ["lachten", "lacht", "lachen", "lachte"],
+    "answer": "lachten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Er _______ sofort nach der Arbeit ins Fitnessstudio.",
+    "options": ["ging", "gehen", "geht", "gingen"],
+    "answer": "ging"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Ich _______ eine Blume im Garten.",
+    "options": ["pflanzte", "pflanzen", "pflanzt", "pflanzten"],
+    "answer": "pflanzte"
   },
   {
     "type": "fillInBlank",

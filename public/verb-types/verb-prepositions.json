@@ -55,6 +55,546 @@
   },
   {
     "type": "verbPrepositions",
+    "question": "Ich warte ___ den Bus.",
+    "options": ["auf", "mit", "von"],
+    "answer": "auf"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Er denkt oft ___ seine Kindheit.",
+    "options": ["an", "mit", "von"],
+    "answer": "an"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Wir träumen ___ einem Haus am Meer.",
+    "options": ["von", "auf", "über"],
+    "answer": "von"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Sie interessiert sich sehr ___ Sport.",
+    "options": ["für", "mit", "über"],
+    "answer": "für"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Der Schüler fragt ___ der Bedeutung des Wortes.",
+    "options": ["nach", "mit", "an"],
+    "answer": "nach"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Ärgerst du dich ___ deine Fehler?",
+    "options": ["über", "auf", "an"],
+    "answer": "über"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Wir sprechen oft ___ Politik.",
+    "options": ["über", "mit", "an"],
+    "answer": "über"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Er bedankt sich ___ seinen Eltern.",
+    "options": ["bei", "an", "auf"],
+    "answer": "bei"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Ich verliebe mich ___ die Stadt Paris.",
+    "options": ["in", "auf", "über"],
+    "answer": "in"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Sie beschwert sich ___ dem Kellner.",
+    "options": ["bei", "an", "mit"],
+    "answer": "bei"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Wir hoffen ___ gutes Wetter.",
+    "options": ["auf", "in", "an"],
+    "answer": "auf"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Der Schüler bereitet sich ___ die Prüfung vor.",
+    "options": ["auf", "mit", "an"],
+    "answer": "auf"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Er konzentriert sich ___ seine Arbeit.",
+    "options": ["auf", "über", "mit"],
+    "answer": "auf"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Wir informieren uns ___ die Regeln.",
+    "options": ["über", "auf", "in"],
+    "answer": "über"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Sie beschäftigt sich gern ___ Kunst.",
+    "options": ["mit", "über", "auf"],
+    "answer": "mit"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Ich lache ___ den Witz.",
+    "options": ["über", "von", "auf"],
+    "answer": "über"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Der Lehrer erklärt ___ die Grammatik.",
+    "options": ["über", "an", "mit"],
+    "answer": "über"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Wir zählen ___ unsere Freunde.",
+    "options": ["auf", "an", "mit"],
+    "answer": "auf"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Die Mutter sorgt ___ ihre Kinder.",
+    "options": ["für", "mit", "an"],
+    "answer": "für"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Er entschuldigt sich ___ seinem Bruder.",
+    "options": ["bei", "von", "mit"],
+    "answer": "bei"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Wir gehören ___ dieser Gruppe.",
+    "options": ["zu", "an", "auf"],
+    "answer": "zu"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Er handelt ___ Geld.",
+    "options": ["mit", "über", "an"],
+    "answer": "mit"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Wir streiten oft ___ Kleinigkeiten.",
+    "options": ["über", "auf", "in"],
+    "answer": "über"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Sie diskutieren ___ das neue Projekt.",
+    "options": ["über", "mit", "von"],
+    "answer": "über"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Ich träume ___ einem Urlaub in Italien.",
+    "options": ["von", "über", "auf"],
+    "answer": "von"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Der Arzt klärt ___ die Nebenwirkungen auf.",
+    "options": ["über", "mit", "an"],
+    "answer": "über"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Wir wenden uns ___ die Polizei.",
+    "options": ["an", "auf", "über"],
+    "answer": "an"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Der Schüler lacht ___ seinen Fehler.",
+    "options": ["über", "auf", "von"],
+    "answer": "über"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Ich entscheide mich ___ den schwarzen Pullover.",
+    "options": ["für", "an", "mit"],
+    "answer": "für"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Wir helfen dir ___ dem Umzug.",
+    "options": ["bei", "in", "mit"],
+    "answer": "bei"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Die Geschichte handelt ___ einem mutigen Jungen.",
+    "options": ["von", "über", "an"],
+    "answer": "von"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Er glaubt nicht ___ Glück.",
+    "options": ["an", "auf", "in"],
+    "answer": "an"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Sie wartet ___ eine Nachricht.",
+    "options": ["auf", "von", "mit"],
+    "answer": "auf"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Wir zweifeln ___ seiner Ehrlichkeit.",
+    "options": ["an", "auf", "mit"],
+    "answer": "an"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Er erinnert sich ___ die alte Zeit.",
+    "options": ["an", "auf", "mit"],
+    "answer": "an"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Die Kinder lachen ___ den Clown.",
+    "options": ["über", "auf", "von"],
+    "answer": "über"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Ich verlasse mich ___ meine Familie.",
+    "options": ["auf", "in", "mit"],
+    "answer": "auf"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Ich erinnere mich gut ___ den Urlaub.",
+    "options": ["an", "mit", "von"],
+    "answer": "an"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Wir nehmen ___ der Konferenz teil.",
+    "options": ["an", "auf", "in"],
+    "answer": "an"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Alles hängt ___ deiner Entscheidung ab.",
+    "options": ["von", "auf", "mit"],
+    "answer": "von"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Ich hoffe ___ ein gutes Ergebnis.",
+    "options": ["auf", "mit", "an"],
+    "answer": "auf"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Er fürchtet sich ___ der Dunkelheit.",
+    "options": ["vor", "über", "an"],
+    "answer": "vor"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Wir freuen uns ___ die Ferien.",
+    "options": ["auf", "über", "mit"],
+    "answer": "auf"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Die Kinder freuen sich ___ das Geschenk.",
+    "options": ["über", "auf", "an"],
+    "answer": "über"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Sie kümmert sich ___ ihre kleine Schwester.",
+    "options": ["um", "an", "auf"],
+    "answer": "um"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Wir gratulieren dir herzlich ___ deinem Erfolg.",
+    "options": ["zu", "an", "mit"],
+    "answer": "zu"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Der Patient leidet ___ Kopfschmerzen.",
+    "options": ["an", "auf", "mit"],
+    "answer": "an"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Die Lehrerin achtet streng ___ die Hausaufgaben.",
+    "options": ["auf", "über", "von"],
+    "answer": "auf"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Er bedankt sich ___ die Einladung.",
+    "options": ["für", "an", "mit"],
+    "answer": "für"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Ich entschuldige mich ___ die Verspätung.",
+    "options": ["für", "von", "an"],
+    "answer": "für"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Wir gewöhnen uns ___ das neue Leben.",
+    "options": ["an", "auf", "mit"],
+    "answer": "an"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Er bittet ___ Hilfe.",
+    "options": ["um", "an", "auf"],
+    "answer": "um"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Der Chef informiert die Mitarbeiter ___ die Änderungen.",
+    "options": ["über", "an", "mit"],
+    "answer": "über"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Wir passen ___ die Kinder auf.",
+    "options": ["auf", "an", "mit"],
+    "answer": "auf"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Er besteht ___ seiner Meinung.",
+    "options": ["auf", "an", "mit"],
+    "answer": "auf"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Wir rechnen ___ deiner Hilfe.",
+    "options": ["mit", "an", "auf"],
+    "answer": "mit"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Sie zweifeln ___ seiner Ehrlichkeit.",
+    "options": ["an", "auf", "mit"],
+    "answer": "an"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Ich interessiere mich ___ klassische Musik.",
+    "options": ["für", "an", "mit"],
+    "answer": "für"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Wir nehmen Rücksicht ___ die Nachbarn.",
+    "options": ["auf", "an", "von"],
+    "answer": "auf"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Er kämpft ___ seine Rechte.",
+    "options": ["für", "an", "auf"],
+    "answer": "für"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Wir schützen uns ___ der Kälte.",
+    "options": ["vor", "an", "mit"],
+    "answer": "vor"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Ich lache ___ seinen Witz.",
+    "options": ["über", "auf", "an"],
+    "answer": "über"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Der Schüler konzentriert sich ___ die Aufgabe.",
+    "options": ["auf", "über", "an"],
+    "answer": "auf"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Wir sorgen ___ unsere Eltern.",
+    "options": ["für", "mit", "auf"],
+    "answer": "für"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Sie verliebt sich ___ einen Kollegen.",
+    "options": ["in", "auf", "mit"],
+    "answer": "in"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Er verabschiedet sich ___ seinen Kollegen.",
+    "options": ["von", "an", "auf"],
+    "answer": "von"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Wir danken dir ___ deine Hilfe.",
+    "options": ["für", "an", "mit"],
+    "answer": "für"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Er sucht ___ einer Lösung.",
+    "options": ["nach", "an", "auf"],
+    "answer": "nach"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Wir diskutieren ___ das Thema.",
+    "options": ["über", "mit", "an"],
+    "answer": "über"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Er schwärmt ___ die neue Sängerin.",
+    "options": ["für", "über", "mit"],
+    "answer": "für"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Wir streiten ___ den besten Platz.",
+    "options": ["um", "an", "mit"],
+    "answer": "um"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Ich wundere mich ___ seine Reaktion.",
+    "options": ["über", "an", "mit"],
+    "answer": "über"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Wir bestehen ___ der Prüfung.",
+    "options": ["in", "auf", "mit"],
+    "answer": "in"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Er beteiligt sich aktiv ___ dem Projekt.",
+    "options": ["an", "mit", "auf"],
+    "answer": "an"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Ich erinnere mich gern ___ unsere Reise.",
+    "options": ["an", "auf", "über"],
+    "answer": "an"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Wir erzählen viel ___ unserer Kindheit.",
+    "options": ["von", "an", "mit"],
+    "answer": "von"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Er entschuldigt sich ___ seinem Lehrer.",
+    "options": ["bei", "für", "mit"],
+    "answer": "bei"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Wir verabreden uns ___ morgen Abend.",
+    "options": ["für", "zu", "mit"],
+    "answer": "für"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Er informiert sich ___ die Prüfung.",
+    "options": ["über", "an", "mit"],
+    "answer": "über"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Wir warten ___ eine Antwort.",
+    "options": ["auf", "an", "mit"],
+    "answer": "auf"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Er erinnert sich ___ seinen alten Freund.",
+    "options": ["an", "auf", "von"],
+    "answer": "an"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Wir bitten dich ___ Geduld.",
+    "options": ["um", "für", "auf"],
+    "answer": "um"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Sie entscheidet sich ___ das rote Kleid.",
+    "options": ["für", "auf", "an"],
+    "answer": "für"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Er ärgert sich ___ den Lärm.",
+    "options": ["über", "auf", "an"],
+    "answer": "über"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Wir kümmern uns ___ die Pflanzen.",
+    "options": ["um", "für", "an"],
+    "answer": "um"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Ich verlasse mich ___ meine Freunde.",
+    "options": ["auf", "an", "mit"],
+    "answer": "auf"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Wir sprechen ___ unseren Lehrer.",
+    "options": ["mit", "an", "von"],
+    "answer": "mit"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Er lacht ___ seine eigene Geschichte.",
+    "options": ["über", "an", "auf"],
+    "answer": "über"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Wir zählen ___ deine Unterstützung.",
+    "options": ["auf", "an", "mit"],
+    "answer": "auf"
+  },
+  {
+    "type": "verbPrepositions",
+    "question": "Ich erinnere mich nicht ___ den Namen.",
+    "options": ["an", "auf", "mit"],
+    "answer": "an"
+  },
+  {
+    "type": "verbPrepositions",
     "question": "Alles hängt ___ deiner Entscheidung ab.",
     "options": ["mit", "von", "an"],
     "answer": "von"

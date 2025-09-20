@@ -22,7 +22,8 @@
           <span :title="hoverTitle.level" class="points-card__badge">{{ langStore.isLeveling }}</span>
         </li>
         <div class="points-card__progress">
-          <div v-if="langStore.exp" class="progress_exp-bar">
+
+          <div class="progress_exp-bar">
             <div class="progress__bar" :style="{width: `${(langStore.exp / 100) * 100}%`}"></div>
             <div class="progress__meta">{{ langStore.exp }}/100 XP</div>
           </div>

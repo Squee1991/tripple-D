@@ -3,12 +3,12 @@
     <div class="location__wrapper">
       <header class="location-header">
         <button class="close-btn" @click="goHome" aria-label="На главную">×</button>
-        <h1 class="region__title-name">{{ region?.name }}</h1>
+        <h1 class="region__title-name">{{ t(region?.name) }}</h1>
       </header>
-      <div v-if="loading" class="loading">Загрузка квестов...</div>
+      <div v-if="loading" class="loading">{{t('locationQuests.loading')}}</div>
       <div v-else class="quests">
         <div v-if="error" class="error">
-          Не удалось загрузить квесты.<br/>
+          {{t('locationQuests.error')}}<br/>
           <div class="tiny">
             URL: {{ url }}<br/>
             {{ error }}
@@ -21,7 +21,7 @@
               class="quest-card"
               :class="{ completed: q._success }"
           >
-            <div v-if="q._success" class="stamp">ПРОЙДЕНО</div>
+            <div v-if="q._success" class="stamp">{{t('locationQuests.done')}}</div>
             <h3 class="quest__title">{{ t(q.title) }}</h3>
             <p class="quest__description">{{ t(q.description) }}</p>
 <!--            <div v-if="q.details" class="quest-details">-->
@@ -30,15 +30,15 @@
 <!--              <p v-if="q.details.level"><strong>Уровень:</strong> {{ q.details.level }}</p>-->
 <!--            </div>-->
             <div  class="quest-meta">
-              <span v-if="!q._success">Награда: {{ q.rewards.points }}💎, {{ q.rewards.xp }} XP</span>
-              <span v-else> Награда получена</span>
+              <span v-if="!q._success">{{t('locationQuests.awards')}} {{ q.rewards.points }}💎, {{ q.rewards.xp }} XP</span>
+              <span v-else>{{t('locationQuests.gotAward')}}</span>
             </div>
             <button class="btn" @click="startQuest(q)">
-              {{ q._success ? 'Повторить' : 'Начать' }}
+              {{ q._success ? t('locationQuests.repeat') : t('locationQuests.start') }}
             </button>
           </li>
         </ul>
-        <div v-else class="empty">Квесты не найдены.</div>
+        <div v-else class="empty">Квесты не найдены</div>
       </div>
     </div>
   </div>
@@ -283,16 +283,14 @@ function goHome() {
   top: 10px;
   right: -18px;
   transform: rotate(-12deg);
-  background: linear-gradient(180deg, #6a74a5 0%, #5d7fc1 100%
-  100%
-  );
+  background: linear-gradient(180deg, #6a74a5 0%, #5d7fc1 100% 100%);
   color: white;
   border: 3px solid #111;
   border-radius: 12px;
   padding: 8px 14px;
   font-weight: 900;
   letter-spacing: .04em;
-  box-shadow: 6px 6px 0 #2b2b2b;
+  box-shadow: 4px 4px 0 #2b2b2b;
   z-index: 3;
 }
 

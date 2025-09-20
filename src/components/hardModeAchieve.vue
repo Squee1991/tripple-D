@@ -69,7 +69,7 @@ const getCompletedCount = group =>
 	border-bottom: 3px dashed rgba(27, 27, 27, 0.5);
 }
 .group-title {
-	font-size: 2rem;
+  font-size: 1.8rem;
 	color: #1e1e1e;
 	margin: 0;
 }

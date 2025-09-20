@@ -4,48 +4,48 @@ export const tensesVerbs = [
 		achievements: [
 			{
 				id: 'pras1',
-				name: 'Первое настоящее',
-				description: 'Ты впервые правильно использовал форму Präsens',
+				name: 'presensVerbs.firstName',
+				description: 'presensVerbs.firstDescription',
 				icon: '🌅',
 				currentProcess: 0,
 				targetProgress: 1
 			},
 			{
 				id: 'pras2',
-				name: 'Настоящий ученик',
-				description: 'Выполни 50 упражнений с Präsens',
+				name: 'presensVerbs.secondName',
+				description: 'presensVerbs.secondDescription',
 				icon: '📘',
 				currentProcess: 0,
 				targetProgress: 50
 			},
 			{
 				id: 'pras3',
-				name: 'Мастер настоящего',
-				description: 'Выполни 100 упражнений с Präsens',
+				name: 'presensVerbs.thirdName',
+				description: 'presensVerbs.thirdDescription',
 				icon: '⚡',
 				currentProcess: 0,
 				targetProgress: 100
 			},
 			{
 				id: 'pras4',
-				name: 'Безошибочное настоящее',
-				description: 'Заверши 10 сессий без ошибок (Präsens)',
+				name: 'presensVerbs.fourthName',
+				description: 'presensVerbs.fourthDescription',
 				icon: '✨',
 				currentProcess: 0,
 				targetProgress: 10
 			},
 			{
 				id: 'pras5',
-				name: 'Скорость момента',
-				description: 'Заверши 10 сессий менее чем за 1 минуту (Präsens)',
+				name: 'presensVerbs.fifthName',
+				description: 'presensVerbs.fifthDescription',
 				icon: '⏱️',
 				currentProcess: 0,
 				targetProgress: 10
 			},
 			{
 				id: 'pras6',
-				name: 'Повелитель Präsens',
-				description: 'Выполни все достижения с Präsens',
+				name: 'presensVerbs.sixthName',
+				description: 'presensVerbs.sixthDescription',
 				icon: '🏆',
 				currentProcess: 0,
 				targetProgress: 1
@@ -57,48 +57,48 @@ export const tensesVerbs = [
 		achievements: [
 			{
 				id: 'perf1',
-				name: 'Первое совершение',
-				description: 'Ты впервые правильно использовал форму Perfekt',
+				name: 'perfectVerbs.firstName',
+				description: 'perfectVerbs.firstDescription',
 				icon: '🌟',
 				currentProcess: 0,
 				targetProgress: 1
 			},
 			{
 				id: 'perf2',
-				name: 'Совершенный шаг',
-				description: 'Выполни 50 упражнений с Perfekt',
+				name: 'perfectVerbs.secondName',
+				description: 'perfectVerbs.secondDescription',
 				icon: '📗',
 				currentProcess: 0,
 				targetProgress: 50
 			},
 			{
 				id: 'perf3',
-				name: 'Мастер Perfekt',
-				description: 'Выполни 100 упражнений с Perfekt',
+				name: 'perfectVerbs.thirdName',
+				description: 'perfectVerbs.thirdDescription',
 				icon: '💎',
 				currentProcess: 0,
 				targetProgress: 100
 			},
 			{
 				id: 'perf4',
-				name: 'Идеальный результат',
-				description: 'Заверши 10 сессий без ошибок (Perfekt)',
+				name: 'perfectVerbs.fourthName',
+				description: 'perfectVerbs.fourthDescription',
 				icon: '✅',
 				currentProcess: 0,
 				targetProgress: 10
 			},
 			{
 				id: 'perf5',
-				name: 'Скоростное совершенство',
-				description: 'Заверши 10 сессий менее чем за 1 минуту (Perfekt)',
+				name: 'perfectVerbs.fifthName',
+				description: 'perfectVerbs.fifthDescription',
 				icon: '⚡',
 				currentProcess: 0,
 				targetProgress: 10
 			},
 			{
 				id: 'perf6',
-				name: 'Повелитель Perfekt',
-				description: 'Выполни все достижения с Perfekt',
+				name: 'perfectVerbs.sixthName',
+				description: 'perfectVerbs.sixthDescription',
 				icon: '🏆',
 				currentProcess: 0,
 				targetProgress: 1
@@ -110,48 +110,48 @@ export const tensesVerbs = [
 		achievements: [
 			{
 				id: 'fut1',
-				name: 'Первое будущее',
-				description: 'Ты впервые правильно использовал форму Futur I',
+				name: 'futur.firstName',
+				description: 'futur.firstDescription',
 				icon: '🌄',
 				currentProcess: 0,
 				targetProgress: 1
 			},
 			{
 				id: 'fut2',
-				name: 'Учёный будущего',
-				description: 'Выполни 50 упражнений с Futur I',
+				name: 'futur.secondName',
+				description: 'futur.secondDescription',
 				icon: '📙',
 				currentProcess: 0,
 				targetProgress: 75
 			},
 			{
 				id: 'fut3',
-				name: 'Мастер будущего',
-				description: 'Выполни 150 упражнений с Futur I',
+				name: 'futur.thirdName',
+				description: 'futur.thirdDescription',
 				icon: '🚀',
 				currentProcess: 0,
 				targetProgress: 150
 			},
 			{
 				id: 'fut4',
-				name: 'Чистое будущее',
-				description: 'Заверши 10 сессий без ошибок (Futur I)',
+				name: 'futur.fourthName',
+				description: 'futur.fourthDescription',
 				icon: '✨',
 				currentProcess: 0,
 				targetProgress: 10
 			},
 			{
 				id: 'fut5',
-				name: 'Скоростное будущее',
-				description: 'Заверши 10 сессий менее чем за 1 минуту (Futur I)',
+				name: 'futur.fifthName',
+				description: 'futur.fifthDescription',
 				icon: '⚡',
 				currentProcess: 0,
 				targetProgress: 10
 			},
 			{
 				id: 'fut6',
-				name: 'Повелитель Futur I',
-				description: 'Выполни все достижения с Futur I',
+				name: 'futur.sixthName',
+				description: 'futur.sixthDescription',
 				icon: '🏆',
 				currentProcess: 0,
 				targetProgress: 1
@@ -163,48 +163,48 @@ export const tensesVerbs = [
 		achievements: [
 			{
 				id: 'prat1',
-				name: 'Первое прошедшее',
-				description: 'Ты впервые правильно использовал форму Präteritum',
+				name: 'preteritum.firstName',
+				description: 'preteritum.firstDescription',
 				icon: '🌆',
 				currentProcess: 0,
 				targetProgress: 1
 			},
 			{
 				id: 'prat2',
-				name: 'Путешественник времени',
-				description: 'Выполни 75 упражнений с Präteritum',
+				name: 'preteritum.secondName',
+				description: 'preteritum.secondDescription',
 				icon: '📕',
 				currentProcess: 0,
 				targetProgress: 75
 			},
 			{
 				id: 'prat3',
-				name: 'Мастер прошедшего',
-				description: 'Выполни 100 упражнений с Präteritum',
+				name: 'preteritum.thirdName',
+				description: 'preteritum.thirdDescription',
 				icon: '🕰️',
 				currentProcess: 0,
 				targetProgress: 150
 			},
 			{
 				id: 'prat4',
-				name: 'Прошедшее без ошибок',
-				description: 'Заверши 10 сессий без ошибок (Präteritum)',
+				name: 'preteritum.fourthName',
+				description: 'preteritum.fourthDescription',
 				icon: '✨',
 				currentProcess: 0,
 				targetProgress: 10
 			},
 			{
 				id: 'prat5',
-				name: 'Скоростное прошедшее',
-				description: 'Заверши 10 сессий менее чем за 1 минуту (Präteritum)',
+				name: 'preteritum.fifthName',
+				description: 'preteritum.fifthDescription',
 				icon: '⚡',
 				currentProcess: 0,
 				targetProgress: 10
 			},
 			{
 				id: 'prat6',
-				name: 'Повелитель Präteritum',
-				description: 'Выполни все достижения с Präteritum',
+				name: 'preteritum.sixthName',
+				description: 'preteritum.sixthDescription',
 				icon: '🏆',
 				currentProcess: 0,
 				targetProgress: 1
@@ -216,48 +216,48 @@ export const tensesVerbs = [
 		achievements: [
 			{
 				id: 'plus1',
-				name: 'Первое предпрошедшее',
-				description: 'Ты впервые правильно использовал форму Plusquamperfekt',
-				icon: '🌌',
+				name: 'plusquamperfect.firstName',
+				description: 'plusquamperfect.firstDescription',
+				icon: '📜',
 				currentProcess: 0,
 				targetProgress: 1
 			},
 			{
 				id: 'plus2',
-				name: 'Учёный времени',
-				description: 'Выполни 75 упражнений с Plusquamperfekt',
+				name: 'plusquamperfect.secondName',
+				description: 'plusquamperfect.secondDescription',
 				icon: '📔',
 				currentProcess: 0,
 				targetProgress: 75
 			},
 			{
 				id: 'plus3',
-				name: 'Мастер Plusquamperfekt',
-				description: 'Выполни 150 упражнений с Plusquamperfekt',
+				name: 'plusquamperfect.thirdName',
+				description: 'plusquamperfect.thirdDescription',
 				icon: '🔮',
 				currentProcess: 0,
 				targetProgress: 150
 			},
 			{
 				id: 'plus4',
-				name: 'Идеальное предпрошедшее',
-				description: 'Заверши 10 сессий без ошибок (Plusquamperfekt)',
+				name: 'plusquamperfect.fourthName',
+				description: 'plusquamperfect.fourthDescription',
 				icon: '✨',
 				currentProcess: 0,
 				targetProgress: 10
 			},
 			{
 				id: 'plus5',
-				name: 'Скоростное предпрошедшее',
-				description: 'Заверши 10 сессий менее чем за 1 минуту (Plusquamperfekt)',
+				name: 'plusquamperfect.fifthName',
+				description: 'plusquamperfect.fifthDescription',
 				icon: '⚡',
 				currentProcess: 0,
 				targetProgress: 10
 			},
 			{
 				id: 'plus6',
-				name: 'Повелитель Plusquamperfekt',
-				description: 'Выполни все достижения с Plusquamperfekt',
+				name: 'plusquamperfect.sixthName',
+				description: 'plusquamperfect.sixthDescription',
 				icon: '🏆',
 				currentProcess: 0,
 				targetProgress: 1

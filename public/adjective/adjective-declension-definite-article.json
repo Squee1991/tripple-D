@@ -1,52 +1,502 @@
 [
   {
-    "question": "Ein gut___ Mann hilft immer.",
-    "options": ["er", "e", "en", "es"],
-    "answer": "er"
-  },
-  {
-    "question": "Ich habe eine schön___ Blume gekauft.",
-    "options": ["en", "e", "er", "es"],
+    "question": "Der klein___ Junge spielt im Park.",
+    "options": ["e", "en", "er", "es"],
     "answer": "e"
   },
   {
-    "question": "Das ist ein schnell___ Auto.",
-    "options": ["er", "en", "e", "es"],
-    "answer": "es"
+    "question": "Die alt___ Frau sitzt am Fenster.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "e"
   },
   {
-    "question": "Er liest ein interessant___ Buch.",
-    "options": ["e", "er", "es", "en"],
-    "answer": "es"
+    "question": "Das neu___ Auto ist sehr teuer.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "e"
   },
   {
-    "question": "Sie hat einen neu___ Computer.",
+    "question": "Ich sehe den schön___ Garten.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Wir sprechen mit dem nett___ Lehrer.",
+    "options": ["e", "en", "em", "er"],
+    "answer": "en"
+  },
+  {
+    "question": "Die Kinder spielen mit den bunt___ Bällen.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Das ist die Tasche der jung___ Frau.",
     "options": ["en", "e", "er", "es"],
     "answer": "en"
   },
   {
-    "question": "Mein klein___ Bruder spielt im Garten.",
-    "options": ["e", "en", "er", "es"],
-    "answer": "er"
-  },
-  {
-    "question": "Wir wohnen in einem groß___ Haus.",
-    "options": ["er", "e", "en", "em"],
+    "question": "Die Wohnung des reich___ Mannes ist groß.",
+    "options": ["en", "e", "er", "es"],
     "answer": "en"
   },
   {
-    "question": "Kein gut___ Freund würde das tun.",
-    "options": ["e", "en", "er", "es"],
-    "answer": "er"
-  },
-  {
-    "question": "Sie isst mit einer alt___ Freundin.",
-    "options": ["e", "en", "er", "em"],
+    "question": "Der Hund läuft zu der klein___ Katze.",
+    "options": ["en", "e", "er", "es"],
     "answer": "en"
   },
   {
-    "question": "Das ist der Hund meines gut___ Freundes.",
-    "options": ["e", "er", "es", "en"],
+    "question": "Das ist das Geschenk des lieb___ Kindes.",
+    "options": ["en", "e", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Der fleißig___ Student lernt jeden Tag.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Die groß___ Häuser stehen am Fluss.",
+    "options": ["en", "e", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Ich besuche den krank___ Onkel.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Wir fahren mit dem alt___ Zug.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Die Farbe des schön___ Kleides gefällt mir.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Der Lehrer erklärt den schwierig___ Text.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Das ist der Platz der neu___ Bibliothek.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Die Kinder spielen im groß___ Garten.",
+    "options": ["en", "e", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Wir danken dem hilfreich___ Nachbarn.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Das Zimmer der klein___ Schwester ist hell.",
+    "options": ["en", "e", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Der jung___ Arzt arbeitet im Krankenhaus.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Die fleißig___ Schülerin macht ihre Hausaufgaben.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Das schön___ Wetter gefällt uns allen.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Ich sehe den alt___ Freund meiner Mutter.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Wir gehen in den groß___ Supermarkt.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Er spricht mit der freundlich___ Nachbarin.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Die Touristen reisen mit dem modern___ Zug.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Das ist das Ende der lang___ Straße.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Die Farbe des dunkel___ Himmels ist schön.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Der Hund gehört der nett___ Familie.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Der klein___ Vogel singt im Baum.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Die bunt___ Blumen stehen auf dem Tisch.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Ich kaufe den frisch___ Fisch auf dem Markt.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Wir danken der hilfreich___ Lehrerin.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Das ist die Aufgabe des schwierig___ Tests.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Der Lehrer lobt die fleißig___ Kinder.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Die Schuhe des sportlich___ Jungen sind neu.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Die Gäste sitzen in dem gemütlich___ Restaurant.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Der Titel des bekannt___ Buches ist interessant.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Die Kinder spielen neben dem alt___ Haus.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Der neugierig___ Hund bellt laut.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Die altmodisch___ Möbel gefallen mir nicht.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Das jung___ Mädchen spielt Klavier.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Wir besuchen den berühmt___ Maler.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Er gratuliert der nett___ Kollegin zum Geburtstag.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Die Stadt liegt an dem breit___ Fluss.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Die Stimme des alt___ Sängers ist bekannt.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Die Farbe der schön___ Blumen ist intensiv.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Das ist der Freund des fleißig___ Studenten.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Ich sehe die freundlich___ Nachbarn im Garten.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Der groß___ Hund rennt schnell.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Die hell___ Sterne leuchten am Himmel.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Wir besuchen das neu eröffnet___ Museum.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Der Arzt behandelt den krank___ Patienten.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Wir wohnen in der modern___ Wohnung.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Das Dach des alt___ Hauses muss repariert werden.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Die Kinder hören auf den streng___ Lehrer.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Die Blätter des bunt___ Baumes fallen im Herbst.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Wir fahren mit den schnell___ Zügen nach Berlin.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Die Tasche der jung___ Studentin ist rot.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Das brav___ Kind bekommt ein Geschenk.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Die fröhlich___ Gäste tanzen bis spät in die Nacht.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Der Bauer verkauft das frisch geback___ Brot.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Wir sitzen in dem gemütlich___ Café.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Die Katze liegt auf dem warm___ Sofa.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Die Kinder spielen in den groß___ Zimmern.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Das ist die Meinung des bekannt___ Professors.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Der Hund schläft auf dem weich___ Teppich.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Die Geschichte des alt___ Königs ist spannend.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Der Schüler schreibt den lang___ Aufsatz.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Der alt___ Baum steht im Garten.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Die neugierig___ Kinder stellen viele Fragen.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Das klein___ Dorf liegt in den Bergen.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Ich trinke den heiß___ Kaffee am Morgen.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Wir warten auf die verspätet___ Züge.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Die Kinder spielen unter dem hoch___ Baum.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Die Eltern des jung___ Künstlers sind stolz.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Die Wände des neu___ Hauses sind weiß gestrichen.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Der Hund verfolgt die klein___ Maus.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Die Kinder helfen dem alt___ Nachbarn.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Das ist der Lehrer der neu___ Schule.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Wir essen in der schön dekoriert___ Küche.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Die Farbe des lang___ Flusses ist grünlich.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Der Tourist besucht das historisch___ Museum.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Wir hören den laut___ Vogel im Wald.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Die Gäste sitzen auf den bequem___ Stühlen.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Der Zug hält an der wichtig___ Station.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Das ist die Antwort der klug___ Schülerin.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Die Kinder laufen durch den dunkel___ Wald.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Der Arzt untersucht die krank___ Patienten.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Der nett___ Kellner bringt das Essen.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Die lang___ Brücke führt über den Fluss.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Das blau___ Meer sieht wunderschön aus.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Wir besuchen die neu eröffnet___ Bibliothek.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Die Touristen besichtigen den berühm___ Dom.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Wir danken den hilfreich___ Mitarbeitern.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Das Dach des hoch___ Gebäudes ist flach.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Die Blätter der alt___ Bäume fallen herunter.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Der Zug fährt durch den lang___ Tunnel.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "en"
+  },
+  {
+    "question": "Die Kinder spielen mit dem klein___ Ball.",
+    "options": ["e", "en", "er", "es"],
     "answer": "en"
   }
 ]

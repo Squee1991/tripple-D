@@ -49,14 +49,10 @@ import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useAchievementStore } from '../../store/achievementStore.js'
 import { writeArticleGroupAchievment } from '../achieveGroup/article/writeArticle.js'
-
-// i18n
 const { t } = useI18n()
 
-// глобальный стор
 const achievementStore = useAchievementStore()
 
-// берём только те группы, что описаны в writeArticleGroupAchievment
 const targetTitles = writeArticleGroupAchievment.map(g => g.title)
 const writeGroups = computed(() =>
 		achievementStore.groups.filter(g =>
@@ -64,7 +60,6 @@ const writeGroups = computed(() =>
 		)
 )
 
-// сколько выполнено в группе
 const getCompletedCount = group =>
 		group.achievements.filter(a => a.currentProgress >= a.targetProgress).length
 </script>
@@ -85,7 +80,7 @@ const getCompletedCount = group =>
 }
 
 .group-title {
-	font-size: 2rem;
+  font-size: 1.8rem;
 	color: #1e1e1e;
 	margin: 0;
 }

@@ -171,7 +171,7 @@ onUnmounted(() => {
 .qd__body {
   gap: 8px;
   flex-grow: 1;
-  min-width: 220px;
+  width: 250px;
 }
 
 .qd__name {

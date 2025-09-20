@@ -182,9 +182,9 @@ const getCompletedCount = group =>
 	line-height: 1.4;
 }
 
-@media (max-width: 768px) {
-	.achievement__card {
-		width: 100%;
-	}
+@media (max-width: 1280px) {
+  .achievement__card {
+    width: 100%;
+  }
 }
 </style>

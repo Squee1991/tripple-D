@@ -98,5 +98,308 @@
     "question": "Deine Antwort war gut, seine war besser, aber ihre war ___.",
     "options": ["am besten", "am gutesten", "die beste", "besser"],
     "answer": "am besten"
+  },
+  {
+    "question": "Dieses Essen ist ___ als das gestern.",
+    "options": ["besser", "gut", "am besten", "beste"],
+    "answer": "besser"
+  },
+  {
+    "question": "Von allen Schülern schreibt Paul ___.",
+    "options": ["am besten", "besser", "gut", "beste"],
+    "answer": "am besten"
+  },
+  {
+    "question": "Deine Idee ist ___ als meine.",
+    "options": ["besser", "gut", "am besten", "beste"],
+    "answer": "besser"
+  },
+  {
+    "question": "Von allen Liedern gefällt mir dieses ___.",
+    "options": ["am besten", "besser", "gut", "beste"],
+    "answer": "am besten"
+  },
+  {
+    "question": "Heute fühle ich mich ___ als gestern.",
+    "options": ["besser", "gut", "am besten", "beste"],
+    "answer": "besser"
+  },
+  {
+    "question": "Von allen Filmen fand ich diesen ___.",
+    "options": ["am besten", "besser", "gut", "beste"],
+    "answer": "am besten"
+  },
+  {
+    "question": "Er arbeitet ___ als sein Bruder.",
+    "options": ["besser", "gut", "am besten", "beste"],
+    "answer": "besser"
+  },
+  {
+    "question": "Von allen Lösungen war diese ___.",
+    "options": ["am besten", "besser", "gut", "beste"],
+    "answer": "am besten"
+  },
+  {
+    "question": "Sie spricht Deutsch ___ als ich.",
+    "options": ["besser", "gut", "am besten", "beste"],
+    "answer": "besser"
+  },
+  {
+    "question": "Von allen Sportarten kann ich Schwimmen ___.",
+    "options": ["am besten", "besser", "gut", "beste"],
+    "answer": "am besten"
+  },
+
+  {
+    "question": "Heute habe ich ___ Arbeit als gestern.",
+    "options": ["mehr", "viel", "am meisten", "meiste"],
+    "answer": "mehr"
+  },
+  {
+    "question": "Von allen Schülern hat Tom ___ Bücher gelesen.",
+    "options": ["am meisten", "mehr", "viel", "meiste"],
+    "answer": "am meisten"
+  },
+  {
+    "question": "Ich brauche ___ Zeit für diese Aufgabe.",
+    "options": ["mehr", "viel", "am meisten", "meiste"],
+    "answer": "mehr"
+  },
+  {
+    "question": "Wer hat von euch ___ Aufgaben gemacht?",
+    "options": ["am meisten", "mehr", "viel", "meiste"],
+    "answer": "am meisten"
+  },
+  {
+    "question": "Er verdient ___ Geld als sein Freund.",
+    "options": ["mehr", "viel", "am meisten", "meiste"],
+    "answer": "mehr"
+  },
+  {
+    "question": "Von allen Teilnehmern trinkt Lisa ___ Kaffee.",
+    "options": ["am meisten", "mehr", "viel", "meiste"],
+    "answer": "am meisten"
+  },
+  {
+    "question": "Dieses Thema interessiert mich ___ als das andere.",
+    "options": ["mehr", "viel", "am meisten", "meiste"],
+    "answer": "mehr"
+  },
+  {
+    "question": "Von allen Kindern isst Peter ___ Schokolade.",
+    "options": ["am meisten", "mehr", "viel", "meiste"],
+    "answer": "am meisten"
+  },
+  {
+    "question": "Ich habe heute ___ Aufgaben als gestern.",
+    "options": ["mehr", "viel", "am meisten", "meiste"],
+    "answer": "mehr"
+  },
+  {
+    "question": "Von allen Städten mag ich Berlin ___.",
+    "options": ["am meisten", "mehr", "viel", "meiste"],
+    "answer": "am meisten"
+  },
+
+  {
+    "question": "Ich esse Pizza ___ als Nudeln.",
+    "options": ["lieber", "gern", "am liebsten", "liebere"],
+    "answer": "lieber"
+  },
+  {
+    "question": "Von allen Getränken trinke ich Wasser ___.",
+    "options": ["am liebsten", "lieber", "gern", "liebere"],
+    "answer": "am liebsten"
+  },
+  {
+    "question": "Sie geht ___ ins Kino als ins Theater.",
+    "options": ["lieber", "gern", "am liebsten", "liebere"],
+    "answer": "lieber"
+  },
+  {
+    "question": "Von allen Farben mag ich Blau ___.",
+    "options": ["am liebsten", "lieber", "gern", "liebere"],
+    "answer": "am liebsten"
+  },
+  {
+    "question": "Ich spiele ___ Fußball als Basketball.",
+    "options": ["lieber", "gern", "am liebsten", "liebere"],
+    "answer": "lieber"
+  },
+  {
+    "question": "Von allen Tieren mag ich Hunde ___.",
+    "options": ["am liebsten", "lieber", "gern", "liebere"],
+    "answer": "am liebsten"
+  },
+  {
+    "question": "Sie fährt ___ mit dem Zug als mit dem Auto.",
+    "options": ["lieber", "gern", "am liebsten", "liebere"],
+    "answer": "lieber"
+  },
+  {
+    "question": "Von allen Fächern lerne ich Englisch ___.",
+    "options": ["am liebsten", "lieber", "gern", "liebere"],
+    "answer": "am liebsten"
+  },
+  {
+    "question": "Er isst ___ Obst als Gemüse.",
+    "options": ["lieber", "gern", "am liebsten", "liebere"],
+    "answer": "lieber"
+  },
+  {
+    "question": "Von allen Spielen spiele ich Schach ___.",
+    "options": ["am liebsten", "lieber", "gern", "liebere"],
+    "answer": "am liebsten"
+  },
+
+  {
+    "question": "Der Turm ist ___ als das Haus.",
+    "options": ["höher", "hoch", "am höchsten", "höchste"],
+    "answer": "höher"
+  },
+  {
+    "question": "Von allen Bergen ist dieser ___.",
+    "options": ["am höchsten", "höher", "hoch", "höchste"],
+    "answer": "am höchsten"
+  },
+  {
+    "question": "Dieses Gebäude ist ___ als das alte.",
+    "options": ["höher", "hoch", "am höchsten", "höchste"],
+    "answer": "höher"
+  },
+  {
+    "question": "Von allen Türmen ist dieser ___.",
+    "options": ["am höchsten", "höher", "hoch", "höchste"],
+    "answer": "am höchsten"
+  },
+  {
+    "question": "Die Mauer ist ___ als der Zaun.",
+    "options": ["höher", "hoch", "am höchsten", "höchste"],
+    "answer": "höher"
+  },
+  {
+    "question": "Von allen Gebäuden ist das Rathaus ___.",
+    "options": ["am höchsten", "höher", "hoch", "höchste"],
+    "answer": "am höchsten"
+  },
+  {
+    "question": "Dieser Berg ist ___ als der Hügel.",
+    "options": ["höher", "hoch", "am höchsten", "höchste"],
+    "answer": "höher"
+  },
+  {
+    "question": "Von allen Kirchtürmen ist dieser ___.",
+    "options": ["am höchsten", "höher", "hoch", "höchste"],
+    "answer": "am höchsten"
+  },
+  {
+    "question": "Das Hochhaus ist ___ als das Wohnhaus.",
+    "options": ["höher", "hoch", "am höchsten", "höchste"],
+    "answer": "höher"
+  },
+  {
+    "question": "Von allen Bergen ist die Zugspitze ___.",
+    "options": ["am höchsten", "höher", "hoch", "höchste"],
+    "answer": "am höchsten"
+  },
+  {
+    "question": "Das Geschäft ist ___ als die Schule.",
+    "options": ["näher", "nah", "am nächsten", "nähste"],
+    "answer": "näher"
+  },
+  {
+    "question": "Von allen Haltestellen ist diese ___.",
+    "options": ["am nächsten", "näher", "nah", "nähste"],
+    "answer": "am nächsten"
+  },
+  {
+    "question": "Die Post ist ___ als die Bank.",
+    "options": ["näher", "nah", "am nächsten", "nähste"],
+    "answer": "näher"
+  },
+  {
+    "question": "Von allen Städten liegt Leipzig ___.",
+    "options": ["am nächsten", "näher", "nah", "nähste"],
+    "answer": "am nächsten"
+  },
+  {
+    "question": "Das Kino ist ___ als der Park.",
+    "options": ["näher", "nah", "am nächsten", "nähste"],
+    "answer": "näher"
+  },
+  {
+    "question": "Von allen Dörfern ist dieses ___.",
+    "options": ["am nächsten", "näher", "nah", "nähste"],
+    "answer": "am nächsten"
+  },
+  {
+    "question": "Dieses Handy ist gut, aber das neue ist ___.",
+    "options": ["besser", "gut", "am besten", "beste"],
+    "answer": "besser"
+  },
+  {
+    "question": "Von allen Restaurants in der Stadt finde ich dieses ___.",
+    "options": ["am besten", "besser", "gut", "beste"],
+    "answer": "am besten"
+  },
+  {
+    "question": "Heute habe ich ___ Zeit als gestern.",
+    "options": ["mehr", "viel", "am meisten", "meiste"],
+    "answer": "mehr"
+  },
+  {
+    "question": "Von allen Kindern hat Lisa ___ Süßigkeiten gegessen.",
+    "options": ["am meisten", "mehr", "viel", "meiste"],
+    "answer": "am meisten"
+  },
+  {
+    "question": "Ich esse ___ Äpfel als Birnen.",
+    "options": ["lieber", "gern", "am liebsten", "liebere"],
+    "answer": "lieber"
+  },
+  {
+    "question": "Von allen Spielen spiele ich Schach ___.",
+    "options": ["am liebsten", "lieber", "gern", "liebere"],
+    "answer": "am liebsten"
+  },
+  {
+    "question": "Der Turm ist hoch, aber die Kirche ist noch ___.",
+    "options": ["höher", "hoch", "am höchsten", "höchste"],
+    "answer": "höher"
+  },
+  {
+    "question": "Von allen Bergen ist dieser ___.",
+    "options": ["am höchsten", "höher", "hoch", "höchste"],
+    "answer": "am höchsten"
+  },
+  {
+    "question": "Die Post ist nah, aber die Bank ist noch ___.",
+    "options": ["näher", "nah", "am nächsten", "nähste"],
+    "answer": "näher"
+  },
+  {
+    "question": "Von allen Geschäften ist die Apotheke ___.",
+    "options": ["am nächsten", "näher", "nah", "nähste"],
+    "answer": "am nächsten"
+  },
+  {
+    "question": "Die Apotheke ist ___ als der Supermarkt.",
+    "options": ["näher", "nah", "am nächsten", "nähste"],
+    "answer": "näher"
+  },
+  {
+    "question": "Von allen Geschäften ist das Bäckerei ___.",
+    "options": ["am nächsten", "näher", "nah", "nähste"],
+    "answer": "am nächsten"
+  },
+  {
+    "question": "Der Bahnhof ist ___ als der Flughafen.",
+    "options": ["näher", "nah", "am nächsten", "nähste"],
+    "answer": "näher"
+  },
+  {
+    "question": "Von allen Häusern steht dieses ___.",
+    "options": ["am nächsten", "näher", "nah", "nähste"],
+    "answer": "am nächsten"
   }
 ]

@@ -141,10 +141,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 
     function saveCompleted(set) {
         if (!process.client) return
-        try {
-            localStorage.setItem(completedKey(), JSON.stringify([...set]))
-        } catch {
-        }
+        try { localStorage.setItem(completedKey(), JSON.stringify([...set])) } catch {}
     }
 
     let completedSet = loadCompleted()
@@ -181,53 +178,40 @@ export const useAchievementStore = defineStore('achievementStore', () => {
         const ach = findById(id)
         if (!ach) return
 
-        ach.currentProgress = Math.min(val, ach.targetProgress)
+        const target = Number(ach.targetProgress ?? 0)
+        const prev   = Number(ach.currentProgress ?? 0)
+        const next   = Math.max(prev, Number(val ?? 0)) // не уменьшаем
+        ach.currentProgress = Math.min(next, target)
 
-        const nowCompleted = ach.currentProgress >= ach.targetProgress
+        const nowCompleted     = ach.currentProgress >= target
         const alreadyCompleted = completedSet.has(id)
-        const justCompleted = nowCompleted && !alreadyCompleted
+        const justCompleted    = nowCompleted && !alreadyCompleted
 
         if (justCompleted) {
-            // фиксируем закрытие
             completedSet.add(id)
             saveCompleted(completedSet)
 
             if (!isBooting.value) {
-                // очередь попапов
                 popupQueue.value.push(ach)
                 showNextPopup()
+                lastUnlockedAchievement.value = { id: ach.id, title: ach.title, groupTitle: ach.groupTitle || null, ts: Date.now() }
+                setTimeout(() => { if (lastUnlockedAchievement.value?.id === ach.id) lastUnlockedAchievement.value = null }, 0)
 
-                // сигнал для тост-плагина
-                lastUnlockedAchievement.value = {
-                    id: ach.id,
-                    title: ach.title,
-                    groupTitle: ach.groupTitle || null,
-                    ts: Date.now()
-                }
-                setTimeout(() => {
-                    if (lastUnlockedAchievement.value?.id === ach.id) lastUnlockedAchievement.value = null
-                }, 0)
-                // 🎁 награда (если есть и не показывали)
                 const awardTitle = achievementToAwardMap[id]
                 if (awardTitle && !shownSet.has(awardTitle)) {
                     shownSet.add(awardTitle)
                     saveShown(shownSet)
-                    lastUnlockedAward.value = {title: awardTitle, achId: id, ts: Date.now()}
-                    setTimeout(() => {
-                        if (lastUnlockedAward.value?.achId === id) lastUnlockedAward.value = null
-                    }, 0)
-
-                    // апдейт «Начало коллекции» по количеству наград
+                    lastUnlockedAward.value = { title: awardTitle, achId: id, ts: Date.now() }
+                    setTimeout(() => { if (lastUnlockedAward.value?.achId === id) lastUnlockedAward.value = null }, 0)
                     updateProgress("firstAward", shownSet.size)
                 }
             } else {
-                // во время boot — копим для реплея
                 bootUnlocked.push(ach)
                 const awardTitle = achievementToAwardMap[id]
                 if (awardTitle && !shownSet.has(awardTitle)) {
                     shownSet.add(awardTitle)
                     saveShown(shownSet)
-                    bootAwards.push({title: awardTitle, achId: id})
+                    bootAwards.push({ title: awardTitle, achId: id })
                 }
             }
         }
@@ -235,51 +219,65 @@ export const useAchievementStore = defineStore('achievementStore', () => {
         prevMap.set(id, ach.currentProgress)
     }
 
+
+    function getPrefixIds(prefix) {
+        const ids = []
+        for (const g of groups.value) {
+            for (const a of g.achievements) {
+                if (typeof a.id === 'string' && a.id.startsWith(prefix)) {
+                    const n = Number(a.id.slice(prefix.length))
+                    if (Number.isFinite(n)) ids.push({ id: a.id, n })
+                }
+            }
+        }
+        ids.sort((a, b) => a.n - b.n)
+        return ids.map(x => x.id)
+    }
+
     // --- 5) Навешиваем watch’еры для всех категорий ---
-    function initializeProgressTracking() {
+    function initializeProgressTracking () {
         const prepositionsSetup = {
-            dativ: 'dat',
+            dativ:     'dat',
             akkusativ: 'akk',
-            genitiv: 'gen',
+            genitiv:   'gen',
             nominativ: 'nom',
         }
         let prepositionUnsubs = []
         const applyPrepositionSnapshots = (prefix, agg, sess) => {
-            const totalCorrectAgg = Number(agg?.totalCorrect || 0)
-            const sessionCorrect = Object.values(sess?.userAnswersMap || {})
-                .filter(v => v && v.isCorrect).length
-            const totalNow = totalCorrectAgg + sessionCorrect
+            const totalNow = Number(agg?.totalCorrect || 0)
+
             updateProgress(`${prefix}1`, totalNow > 0 ? 1 : 0)
             updateProgress(`${prefix}2`, totalNow)
             updateProgress(`${prefix}3`, totalNow)
+
             const perfectCnt = Number(agg?.perfectSessionsCount || 0)
             updateProgress(`${prefix}4`, perfectCnt)
+
             const fastPerfectCnt = Number(agg?.fastPerfectSessionsCount || 0)
             updateProgress(`${prefix}5`, fastPerfectCnt)
-            const req = [`${prefix}1`, `${prefix}2`, `${prefix}3`, `${prefix}4`, `${prefix}5`]
-            const allDone = req.every(id => {
-                const a = findById(id);
-                if (!a) return false
-                const tp = Number(a.targetProgress || 1)
-                return Number(a.currentProgress || 0) >= tp
-            })
-            updateProgress(`${prefix}6`, allDone ? 1 : 0)
+
+            const allIds = getPrefixIds(prefix)
+            if (allIds.length >= 2) {
+                const lastId = allIds[allIds.length - 1]
+                const prereqIds = allIds.slice(0, -1)
+                const allDone = prereqIds.every(id => {
+                    const a = findById(id); if (!a) return true
+                    const tp = Number(a.targetProgress || 1)
+                    return Number(a.currentProgress || 0) >= tp
+                })
+                updateProgress(lastId, allDone ? 1 : 0)
+            }
         }
         watch(() => authStore.uid, (uid) => {
-            prepositionUnsubs.forEach(fn => {
-                try {
-                    fn && fn()
-                } catch {
-                }
-            })
+            prepositionUnsubs.forEach(fn => { try { fn && fn() } catch {} })
             prepositionUnsubs = []
             if (!uid) return
             Object.entries(prepositionsSetup).forEach(([caseName, prefix]) => {
                 const docId = `prepositions_${caseName}`
-                const aggRef = doc(db, 'users', uid, 'quizTopics', docId)
+                const aggRef  = doc(db, 'users', uid, 'quizTopics',   docId)
                 const sessRef = doc(db, 'users', uid, 'quizSessions', docId)
                 let lastAgg = {}, lastSess = {}
-                const u1 = onSnapshot(aggRef, s => {
+                const u1 = onSnapshot(aggRef,  s => {
                     lastAgg = s.data() || {};
                     applyPrepositionSnapshots(prefix, lastAgg, lastSess)
                 })
@@ -289,20 +287,20 @@ export const useAchievementStore = defineStore('achievementStore', () => {
                 })
                 prepositionUnsubs.push(u1, u2)
             })
-        }, {immediate: true})
+        }, { immediate: true })
 
         const adjectivesSetup = {
-            'adjective-basics_colors': 'col',
-            'adjective-basics_feelings': 'emo',
+            'adjective-basics_colors':     'col',
+            'adjective-basics_feelings':   'emo',
             'adjective-basics_appearance': 'app',
-            'adjective-basics_character': 'char',
+            'adjective-basics_character':  'char',
             'adjective-basics_dimensions': 'dim',
             'adjective-comparison_regular-forms': 'creg',
-            'adjective-comparison_umlaut-forms': 'cuml',
+            'adjective-comparison_umlaut-forms':  'cuml',
             'adjective-comparison_irregular-forms': 'cspec',
-            'adjective-declension_definite-article': 'def',
+            'adjective-declension_definite-article':   'def',
             'adjective-declension_indefinite-article': 'indef',
-            'adjective-declension_no-article': 'noart',
+            'adjective-declension_no-article':  'noart',
 
             'verb_presens': 'pras',
             'verb_perfect': 'perf',
@@ -321,26 +319,15 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 
         let adjectivesUnsubs = []
         watch(() => authStore.uid, (uid) => {
-            adjectivesUnsubs.forEach(fn => {
-                try {
-                    fn && fn()
-                } catch {
-                }
-            })
+            adjectivesUnsubs.forEach(fn => { try { fn && fn() } catch {} })
             adjectivesUnsubs = []
             if (!uid) return
             Object.entries(adjectivesSetup).forEach(([docId, prefix]) => {
-                const aggRef = doc(db, 'users', uid, 'quizTopics', docId)
+                const aggRef  = doc(db, 'users', uid, 'quizTopics',   docId)
                 const sessRef = doc(db, 'users', uid, 'quizSessions', docId)
                 let lastAgg = {}, lastSess = {}
-                const u1 = onSnapshot(aggRef, s => {
-                    lastAgg = s.data() || {};
-                    applyPrepositionSnapshots(prefix, lastAgg, lastSess)
-                })
-                const u2 = onSnapshot(sessRef, s => {
-                    lastSess = s.data() || {};
-                    applyPrepositionSnapshots(prefix, lastAgg, lastSess)
-                })
+                const u1 = onSnapshot(aggRef,  s => { lastAgg = s.data() || {};  applyPrepositionSnapshots(prefix, lastAgg, lastSess) })
+                const u2 = onSnapshot(sessRef, s => { lastSess = s.data() || {}; applyPrepositionSnapshots(prefix, lastAgg, lastSess) })
                 adjectivesUnsubs.push(u1, u2)
             })
         }, {immediate: true})
@@ -370,19 +357,18 @@ export const useAchievementStore = defineStore('achievementStore', () => {
             {id: 'guessSixHundred', source: () => guessStore.guessedWords.length, compute: (v) => v},
         ]
 
-        baseTrackers.forEach(({id, source, compute}) => {
+        baseTrackers.forEach(({ id, source, compute }) => {
             watch(source, raw => {
                 updateProgress(id, compute(raw))
-            }, {immediate: true})
+            }, { immediate: true })
         })
-
 
         // 5.2) marathon (easy/normal/hard)
         ;[
-            {category: 'easy', idx: 1},
-            {category: 'normal', idx: 2},
-            {category: 'hard', idx: 3},
-        ].forEach(({category, idx}) => {
+            { category: 'easy',   idx: 1 },
+            { category: 'normal', idx: 2 },
+            { category: 'hard',   idx: 3 },
+        ].forEach(({ category, idx }) => {
             watch(() => gameStore.totalCorrectAnswers?.[idx] || 0,
                 v => groups.value
                     .filter(g => g.category === category)
@@ -390,7 +376,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
                         .filter(a => a.type === 'total')
                         .forEach(a => updateProgress(a.id, v))
                     ),
-                {immediate: true}
+                { immediate: true }
             )
             watch(() => gameStore.personalBests?.[idx] || 0,
                 v => groups.value
@@ -409,7 +395,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
             cnt => groups.value
                 .filter(g => g.category === 'listen')
                 .forEach(g => g.achievements.forEach(a => updateProgress(a.id, cnt))),
-            {immediate: true}
+            { immediate: true }
         )
 
         // 5.4) plural
@@ -417,7 +403,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
             cnt => groups.value
                 .filter(g => g.category === 'plural')
                 .forEach(g => g.achievements.forEach(a => updateProgress(a.id, cnt))),
-            {immediate: true}
+            { immediate: true }
         )
 
         // 5.5) write (der/die/das)
@@ -429,19 +415,19 @@ export const useAchievementStore = defineStore('achievementStore', () => {
             cnt => groups.value
                 .filter(g => g.category === 'write' && g.title.toLowerCase().includes('der'))
                 .forEach(g => g.achievements.forEach(a => updateProgress(a.id, cnt))),
-            {immediate: true}
+            { immediate: true }
         )
         watch(dieCount,
             cnt => groups.value
                 .filter(g => g.category === 'write' && g.title.toLowerCase().includes('die'))
                 .forEach(g => g.achievements.forEach(a => updateProgress(a.id, cnt))),
-            {immediate: true}
+            { immediate: true }
         )
         watch(dasCount,
             cnt => groups.value
                 .filter(g => g.category === 'write' && g.title.toLowerCase().includes('das'))
                 .forEach(g => g.achievements.forEach(a => updateProgress(a.id, cnt))),
-            {immediate: true}
+            { immediate: true }
         )
 
         // 5.6) wordArticle
@@ -449,13 +435,12 @@ export const useAchievementStore = defineStore('achievementStore', () => {
             cnt => groups.value
                 .filter(g => g.category === 'wordArticle')
                 .forEach(g => g.achievements.forEach(a => updateProgress(a.id, cnt))),
-            {immediate: true}
+            { immediate: true }
         )
 
 
         if (process.client) {
-            chainStore.loadProgressFromFirebase?.().catch(() => {
-            })
+            chainStore.loadProgressFromFirebase?.().catch(() => {})
         }
         watch(() => chainStore.questProgress, (qpRaw) => {
             const qp = qpRaw || {}
@@ -499,94 +484,43 @@ export const useAchievementStore = defineStore('achievementStore', () => {
             updateProgress('explorer', completedLocations)
             const totalCompletedPerfectQuests = locationIds.reduce((acc, id) => acc + countForId(id), 0)
             updateProgress('languageLands50', totalCompletedPerfectQuests)
-        }, {immediate: true})
+        }, { immediate: true })
 
         // 5.7) letters
         watch(() => langStore.words.filter(w => w.progress?.letters).length,
             cnt => groups.value
                 .filter(g => g.category === 'letters')
                 .forEach(g => g.achievements.forEach(a => updateProgress(a.id, cnt))),
-            {immediate: true}
+            { immediate: true }
         )
 
         // 5.8) special
         watch(() => {
             const t = gameStore.totalCorrectAnswers || []
             return (t[1] || 0) + (t[2] || 0) + (t[3] || 0)
-        }, total => updateProgress('totalArticles1000', total), {immediate: true})
+        }, total => updateProgress('totalArticles1000', total), { immediate: true })
 
         watch(() => langStore.isLeveling,
             lvl => updateProgress('level10', lvl),
-            {immediate: true}
+            { immediate: true }
         )
 
         watch(() => statsStore.constructedSentences,
             n => updateProgress('sentences-master', n),
-            {immediate: true}
+            { immediate: true }
         )
 
         watch(() => langStore.totalEarnedPoints,
             pts => updateProgress('Hunderd', pts),
-            {immediate: true}
+            { immediate: true }
         )
 
         watch(() => langStore.articlesSpentForAchievement,
             spent => updateProgress('ArticlusSpent', spent),
-            {immediate: true}
+            { immediate: true }
         )
 
-        // 5.9) sentenceAchievements (Дуэли фраз)
-        watch(() => authStore.achievements, (stats) => {
-            if (!stats) {
-                // Если пользователь выходит, сбросить прогресс
-                // ... (ваш код для сброса)
-                return;
-            }
-
-            // --- Обновление побед ---
-            updateProgress('a1_wins_1', stats.a1?.wins || 0);
-            updateProgress('a2_wins_10', stats.a2?.wins || 0);
-            updateProgress('b1_wins_50', stats.b1?.wins || 0);
-            updateProgress('b2_wins_100', stats.b2?.wins || 0);
-
-            // --- Обновление серий побед (streaks) ---
-            // Уровни A1
-            const a1Streaks = stats.a1?.streaks || 0;
-            const a1StreaksAchievs = groups.value.flatMap(g => g.achievements).filter(a => a.id.startsWith('a1_streaks'));
-            a1StreaksAchievs.forEach(ach => {
-                if (a1Streaks >= ach.targetProgress) {
-                    updateProgress(ach.id, ach.targetProgress); // Прогресс достигнут
-                } else {
-                    updateProgress(ach.id, a1Streaks); // Прогресс ещё не достигнут
-                }
-            });
-
-            // Уровни A2
-            updateProgress('a2_streaks_5', stats.a2?.streaks || 0); // здесь, если targetProgress - 5, то просто обновляем
-
-                        // Уровни B1
-            updateProgress('b1_streaks_7', stats.b1?.streaks || 0);
-
-            // Уровни B2
-            updateProgress('b2_streaks_10', stats.b2?.streaks || 0);
-
-            // --- Обновление чистых побед (clean sweeps / flawless) ---
-            // Уровни A1
-            updateProgress('a1_cleanSweeps_5', stats.a1?.cleanSweeps || 0);
-            updateProgress('a1_flawlessWins_2', stats.a1?.flawlessWins || 0);
-
-            // Уровни A2
-            updateProgress('a2_cleanSweeps_3', stats.a2?.cleanSweeps || 0);
-
-            // Уровни B1
-            updateProgress('b1_flawlessWins_25', stats.b1?.flawlessWins || 0);
-
-            // Уровни B2
-            updateProgress('b2_cleanSweeps_10', stats.b2?.cleanSweeps || 0);
-
-        }, { deep: true, immediate: true });
-
-        async function checkLeaderboard() {
+        async function checkLeaderboard () {
             if (!authStore.uid) return
             const levels = [1, 2, 3]
             const ids = ['leaderboardEasy', 'leaderboardNormal', 'leaderboardHard']
@@ -595,26 +529,25 @@ export const useAchievementStore = defineStore('achievementStore', () => {
                 updateProgress(ids[i], lb.length > 0 && lb[0].id === authStore.uid ? 1 : 0)
             }
         }
-
         checkLeaderboard()
 
         watch(() => gameStore.onTheEdgeProgress,
             v => updateProgress('Impuls', v),
-            {immediate: true}
+            { immediate: true }
         )
 
         watch(() => authStore.registeredAt, date => {
             if (!date) return
             const days = Math.max(0, Math.floor((Date.now() - new Date(date).getTime()) / 86400000))
             updateProgress('OneYearVeteran', days)
-        }, {immediate: true})
+        }, { immediate: true })
 
         watchEffect(() => {
             const map = [
-                ['guessedFastWords', guessStore.guessedFastWords.length],
-                ['guessedSafeWords', guessStore.guessedSafeWords.length],
+                ['guessedFastWords',      guessStore.guessedFastWords.length],
+                ['guessedSafeWords',      guessStore.guessedSafeWords.length],
                 ['guessedOnLastTryWords', guessStore.guessedOnLastTryWords.length],
-                ['guessedPerfectWords', guessStore.guessedPerfectWords.length]
+                ['guessedPerfectWords',   guessStore.guessedPerfectWords.length]
             ]
             map.forEach(([id, val]) => updateProgress(id, val))
         })
@@ -634,7 +567,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
             const completed = regAch && regAch.currentProgress >= (regAch.targetProgress || 1)
             const wasBooted = bootUnlocked.find(a => a && a.id === 'registerAchievement')
             if (wasBooted || completed) {
-                lastUnlockedAchievement.value = {id: 'registerAchievement', title: 'Первый шаг', ts: Date.now()}
+                lastUnlockedAchievement.value = { id: 'registerAchievement', title: 'Первый шаг', ts: Date.now() }
                 setTimeout(() => {
                     if (lastUnlockedAchievement.value?.id === 'registerAchievement') lastUnlockedAchievement.value = null
                 }, 0)
@@ -643,7 +576,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
             setTimeout(() => {
                 if (bootAwards.length) {
                     const first = bootAwards[0]
-                    lastUnlockedAward.value = {...first, ts: Date.now()}
+                    lastUnlockedAward.value = { ...first, ts: Date.now() }
                     setTimeout(() => {
                         if (lastUnlockedAward.value?.achId === first.achId) lastUnlockedAward.value = null
                     }, 0)
@@ -652,7 +585,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
             // 3) «Начало коллекции» — третьим
             setTimeout(() => {
                 if (shownSet.size >= 1) {
-                    lastUnlockedAchievement.value = {id: 'collectionStart', title: 'Начало коллекции', ts: Date.now()}
+                    lastUnlockedAchievement.value = { id: 'collectionStart', title: 'Начало коллекции', ts: Date.now() }
                     setTimeout(() => {
                         if (lastUnlockedAchievement.value?.id === 'collectionStart') lastUnlockedAchievement.value = null
                     }, 0)

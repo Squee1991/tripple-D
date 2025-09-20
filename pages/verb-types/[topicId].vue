@@ -91,7 +91,7 @@
 
 <script setup>
 import {ref, onMounted, watch, nextTick} from 'vue';
-import {useQuizStore} from '../../../store/adjectiveStore.js';
+import {useQuizStore } from '../../../store/adjectiveStore.js';
 import {userlangStore} from '../../store/learningStore.js'
 import {useRoute, useRouter} from 'vue-router';
 import CelebrationFireworks from "~/src/components/CelebrationFireworks.vue";
@@ -135,14 +135,17 @@ function fmt(ms) {
   return `${m}:${sec.toString().padStart(2, '0')}`
 }
 
-async function startQuiz() {
+async function startQuiz () {
   loading.value = true
-  const fileName = `/verb-types/${category}-${topicId}.json`;
-  store.setContext({modeId: category, topicId, fileName, contentVersion: 'v1'})
+  const fileName = `/verb-types/${category}-${topicId}.json`
+  store.setContext({
+    modeId: category,
+    topicId,
+    fileName,
+    contentVersion: 'v1',
+  })
   await store.startNewQuiz(fileName)
   loading.value = false
-  showCelebration.value = false
-  startedAt.value = Date.now()
 }
 
 const backTo = () => {
@@ -152,11 +155,20 @@ const {finalize} = useRewardEngine(learning)
 
 onMounted(async () => {
   loading.value = true
-  const fileName = `/verb-types/${category}-${topicId}.json`;
-  store.setContext({modeId:  topicId, fileName, contentVersion: 'v1'})
-  await store.restoreOrStart({modeId: topicId, fileName, contentVersion: 'v1'})
+  const fileName = `/verb-types/${category}-${topicId}.json`
+  store.setContext({
+    modeId: category,
+    topicId,
+    fileName,
+    contentVersion: 'v1',
+  })
+  await store.restoreOrStart({
+    modeId: category,
+    topicId,
+    fileName,
+    contentVersion: 'v1',
+  })
   await learning.loadFromFirebase?.()
-  startedAt.value = Date.now()
   loading.value = false
 })
 

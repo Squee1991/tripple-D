@@ -4,48 +4,48 @@ export const modalVerbs = [
 		achievements: [
 			{
 				id: 'mod1',
-				name: 'Первый модал',
-				description: 'Ты впервые правильно использовал модальный глагол',
+				name: 'modalVerbs.firstName',
+				description: 'modalVerbs.firstDescription',
 				icon: '🔑',
 				currentProcess: 0,
 				targetProgress: 1
 			},
 			{
 				id: 'mod2',
-				name: 'Ключ к действию',
-				description: 'Выполни 50 упражнений с модальными глаголами',
+				name: 'modalVerbs.secondName',
+				description: 'modalVerbs.secondDescription',
 				icon: '🗝️',
 				currentProcess: 0,
 				targetProgress: 50
 			},
 			{
 				id: 'mod3',
-				name: 'Мастер модальности',
-				description: 'Выполни 100 упражнений с модальными глаголами',
+				name: 'modalVerbs.thirdName',
+				description: 'modalVerbs.thirdDescription',
 				icon: '⚡',
 				currentProcess: 0,
 				targetProgress: 100
 			},
 			{
 				id: 'mod4',
-				name: 'Безошибочная модальность',
-				description: 'Заверши 10 сессий без ошибок (модальные глаголы)',
+				name: 'modalVerbs.fourthName',
+				description: 'modalVerbs.fourthDescription',
 				icon: '✨',
 				currentProcess: 0,
 				targetProgress: 10
 			},
 			{
 				id: 'mod5',
-				name: 'Скоростной модал',
-				description: 'Заверши 10 сессий менее чем за 1 минуту (модальные глаголы)',
+				name: 'modalVerbs.fifthName',
+				description: 'modalVerbs.fifthDescription',
 				icon: '⏱️',
 				currentProcess: 0,
 				targetProgress: 10
 			},
 			{
 				id: 'mod6',
-				name: 'Повелитель модальных глаголов',
-				description: 'Выполни все достижения с модальными глаголами',
+				name: 'modalVerbs.sixthName',
+				description: 'modalVerbs.sixthDescription',
 				icon: '🏆',
 				currentProcess: 0,
 				targetProgress: 1
@@ -57,48 +57,48 @@ export const modalVerbs = [
 		achievements: [
 			{
 				id: 'neb1',
-				name: 'Первое придаточное',
-				description: 'Ты впервые правильно построил Nebensatz',
+				name: 'nebensatze.firstName',
+				description: 'nebensatze.firstDescription',
 				icon: '🌱',
 				currentProcess: 0,
 				targetProgress: 1
 			},
 			{
 				id: 'neb2',
-				name: 'Строитель предложений',
-				description: 'Выполни 50 упражнений с Nebensätze',
+				name: 'nebensatze.secondName',
+				description: 'nebensatze.secondDescription',
 				icon: '🏗️',
 				currentProcess: 0,
 				targetProgress: 50
 			},
 			{
 				id: 'neb3',
-				name: 'Мастер структуры',
-				description: 'Выполни 100 упражнений с Nebensätze',
+				name: 'nebensatze.thirdName',
+				description: 'nebensatze.thirdDescription',
 				icon: '📚',
 				currentProcess: 0,
 				targetProgress: 100
 			},
 			{
 				id: 'neb4',
-				name: 'Идеальное придаточное',
-				description: 'Заверши 10 сессий без ошибок (Nebensätze)',
+				name: 'nebensatze.fourthName',
+				description: 'nebensatze.fourthDescription',
 				icon: '✨',
 				currentProcess: 0,
 				targetProgress: 10
 			},
 			{
 				id: 'neb5',
-				name: 'Скоростной архитектор',
-				description: 'Заверши 10 сессий менее чем за 1 минуту (Nebensätze)',
+				name: 'nebensatze.fifthName',
+				description: 'nebensatze.fifthDescription',
 				icon: '⚡',
 				currentProcess: 0,
 				targetProgress: 10
 			},
 			{
 				id: 'neb6',
-				name: 'Повелитель Nebensätze',
-				description: 'Выполни все достижения с Nebensätze',
+				name: 'nebensatze.sixthName',
+				description: 'nebensatze.sixthDescription',
 				icon: '🏆',
 				currentProcess: 0,
 				targetProgress: 1

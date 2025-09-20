@@ -1,51 +1,51 @@
 export const prepositionsDativ = [
 	{
-		title: 'Датив',
+		title: 'Dativ',
 		achievements: [
 			{
 				id: 'dat1',
-				name: 'Первый успех',
-				description: 'Ты правильно вставил первый предлог в Dativ!',
+				name: 'prepositionsDativ.firstName',
+				description: 'prepositionsDativ.firstDescription',
 				icon: '📙',
 				currentProgress: 0,
 				targetProgress: 1
 			},
 			{
 				id: 'dat2',
-				name: 'Хранитель грамматики',
-				description: 'Вставь правильно 75 предлогов Dativ',
+				name: 'prepositionsDativ.secondName',
+				description: 'prepositionsDativ.secondDescription',
 				icon: '✅',
 				currentProgress: 0,
 				targetProgress: 75
 			},
 			{
 				id: 'dat3',
-				name: 'Владыка Dativ',
-				description: 'Освой 200 правильных предлогов в Dativ',
+				name: 'prepositionsDativ.thirdName',
+				description: 'prepositionsDativ.thirdDescription',
 				icon: '👑',
 				currentProgress: 0,
-				targetProgress: 200
+				targetProgress: 150
 			},
 			{
 				id: 'dat4',
-				name: 'Безупречный ученик',
-				description: 'заверши 15 сессий выполнив все задания без ошибок',
+				name: 'prepositionsDativ.fourthName',
+				description: 'prepositionsDativ.fourthDescription',
 				icon: '💯',
 				currentProgress: 0,
 				targetProgress: 15
 			},
 			{
 				id: 'dat5',
-				name: 'Скоростной мастер',
-				description: 'Заверши 15 сессий в Dativ без ошибок меньше чем за минуту',
+				name: 'prepositionsDativ.fifthName',
+				description: 'prepositionsDativ.fifthDescription',
 				icon: '⚡',
 				currentProgress: 0,
 				targetProgress: 15
 			},
 			{
 				id: 'dat6',
-				name: 'Мастер Дативариус',
-				description: 'Выполни все достижения с предлогами в Dativ',
+				name: 'prepositionsDativ.sixthName',
+				description: 'prepositionsDativ.sixthDescription',
 				icon: '🎓',
 				currentProgress: 0,
 				targetProgress: 1

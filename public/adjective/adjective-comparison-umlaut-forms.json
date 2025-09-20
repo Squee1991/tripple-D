@@ -1,102 +1,392 @@
 [
   {
-    "question": "Mein Bruder ist drei Jahre ___ als ich.",
+    "question": "Mein Vater ist fünf Jahre ___ als meine Mutter.",
     "options": ["älter", "alter", "am ältesten", "alt"],
     "answer": "älter"
   },
   {
-    "question": "Von allen europäischen Städten ist Berlin ___.",
-    "options": ["am größten", "größer", "am grösten", "größte"],
+    "question": "Von allen Lehrern ist Herr Schmidt der ___.",
+    "options": ["am ältesten", "älter", "alt", "alter"],
+    "answer": "am ältesten"
+  },
+  {
+    "question": "Meine Schwester ist zwei Jahre ___ als ich.",
+    "options": ["jünger", "jung", "jüngere", "am jüngsten"],
+    "answer": "jünger"
+  },
+  {
+    "question": "Von allen Kindern ist Tom der ___.",
+    "options": ["am jüngsten", "jüngste", "jünger", "jung"],
+    "answer": "am jüngsten"
+  },
+  {
+    "question": "Der Hund ist viel ___ als die Katze.",
+    "options": ["größer", "großer", "groß", "am größten"],
+    "answer": "größer"
+  },
+  {
+    "question": "Von allen Gebäuden ist der Dom der ___.",
+    "options": ["am größten", "größte", "größer", "groß"],
     "answer": "am größten"
   },
   {
-    "question": "In den Bergen ist es oft ___ als im Tal.",
-    "options": ["kälter", "kalter", "kalt", "am kältesten"],
-    "answer": "kälter"
-  },
-  {
-    "question": "Wer ist die ___ Person in deiner Familie?",
-    "options": ["jüngste", "jüngere", "am jüngsten", "jünger"],
-    "answer": "jüngste"
-  },
-  {
-    "question": "Die Donau ist lang, aber der Nil ist noch ___.",
-    "options": ["länger", "lang", "langer", "am längsten"],
+    "question": "Der Nil ist ___ als der Rhein.",
+    "options": ["länger", "lang", "am längsten", "langer"],
     "answer": "länger"
   },
   {
-    "question": "Im Juli ist es in Deutschland meistens ___.",
-    "options": ["am wärmsten", "wärmer", "am warmsten", "wärmste"],
-    "answer": "am wärmsten"
+    "question": "Von allen Flüssen ist der Amazonas der ___.",
+    "options": ["am längsten", "längste", "lang", "länger"],
+    "answer": "am längsten"
   },
   {
-    "question": "Ein Bär ist viel ___ als ein Wolf.",
-    "options": ["stärker", "stark", "starker", "am stärksten"],
-    "answer": "stärker"
-  },
-  {
-    "question": "Von allen Monaten ist der Februar ___.",
-    "options": ["am kürzesten", "kürzer", "am kurzesten", "kürzeste"],
-    "answer": "am kürzesten"
-  },
-  {
-    "question": "Gemüse essen ist ___ als nur Süßigkeiten.",
-    "options": ["gesünder", "gesunder", "gesund", "am gesündesten"],
-    "answer": "gesünder"
-  },
-  {
-    "question": "Von den drei Brüdern war er mit Abstand ___.",
-    "options": ["am klügsten", "klüger", "am klugsten", "klügste"],
-    "answer": "am klügsten"
-  },
-  {
-    "question": "Seine Kritik war sehr ___, aber fair.",
-    "options": ["hart", "härter", "härteste", "am härtesten"],
-    "answer": "hart"
-  },
-  {
-    "question": "Diese Suppe ist scharf, aber die andere ist noch ___.",
-    "options": ["schärfer", "scharfer", "scharf", "am schärfsten"],
-    "answer": "schärfer"
-  },
-  {
-    "question": "Sein Gegner im Kampf war viel ___ als er.",
-    "options": ["schwächer", "schwacher", "am schwächsten", "schwach"],
-    "answer": "schwächer"
-  },
-  {
-    "question": "Von allen Antworten war seine ___.",
-    "options": ["am dümmsten", "dümmer", "dümmste", "dumm"],
-    "answer": "am dümmsten"
-  },
-  {
-    "question": "Nach der Grippe fühle ich mich noch ___ als letzte Woche.",
-    "options": ["kränker", "kranker", "krank", "am kränksten"],
-    "answer": "kränker"
-  },
-  {
-    "question": "Die Situation der Obdachlosen ist im Winter ___.",
-    "options": ["am ärmsten", "ärmer", "ärmste", "arm"],
-    "answer": "am ärmsten"
-  },
-  {
-    "question": "Diese Jacke hält dich im Winter ___.",
-    "options": ["wärmer", "warm", "am wärmsten", "warmer"],
-    "answer": "wärmer"
-  },
-  {
-    "question": "Der Test war ___, als ich dachte.",
+    "question": "Der Film war ___ als erwartet.",
     "options": ["kürzer", "kurz", "am kürzesten", "kurzer"],
     "answer": "kürzer"
   },
   {
-    "question": "Wessen Arme sind von allen ___?",
-    "options": ["am längsten", "länger", "längste", "lang"],
+    "question": "Von allen Prüfungen war diese die ___.",
+    "options": ["am kürzesten", "kurzeste", "kurzer", "kurz"],
+    "answer": "am kürzesten"
+  },
+  {
+    "question": "Im Winter ist es hier viel ___ als im Sommer.",
+    "options": ["kälter", "kalt", "kalter", "am kältesten"],
+    "answer": "kälter"
+  },
+  {
+    "question": "Der Januar ist der ___ Monat.",
+    "options": ["am kältesten", "kälter", "kalte", "kalt"],
+    "answer": "am kältesten"
+  },
+  {
+    "question": "Heute ist es ___ als gestern.",
+    "options": ["wärmer", "warm", "warmer", "am wärmsten"],
+    "answer": "wärmer"
+  },
+  {
+    "question": "Der Juli ist in Deutschland der ___ Monat.",
+    "options": ["am wärmsten", "wärmer", "warme", "warm"],
+    "answer": "am wärmsten"
+  },
+  {
+    "question": "Der Bär ist viel ___ als der Hund.",
+    "options": ["stärker", "stark", "starker", "am stärksten"],
+    "answer": "stärker"
+  },
+  {
+    "question": "Von allen Kämpfern war er der ___.",
+    "options": ["am stärksten", "stärker", "starker", "stark"],
+    "answer": "am stärksten"
+  },
+  {
+    "question": "Seine Worte waren ___ als meine.",
+    "options": ["härter", "hart", "harte", "am härtesten"],
+    "answer": "härter"
+  },
+  {
+    "question": "Von allen Regeln ist diese die ___.",
+    "options": ["am härtesten", "harteste", "härter", "hart"],
+    "answer": "am härtesten"
+  },
+  {
+    "question": "Nach dem Verlust war er ___ als vorher.",
+    "options": ["ärmer", "arm", "arme", "am ärmsten"],
+    "answer": "ärmer"
+  },
+  {
+    "question": "Von allen Familien ist diese die ___.",
+    "options": ["am ärmsten", "ärmer", "arm", "ärmste"],
+    "answer": "am ärmsten"
+  },
+  {
+    "question": "Nach der Krankheit fühlte er sich ___ als zuvor.",
+    "options": ["kränker", "krank", "kranke", "am kränksten"],
+    "answer": "kränker"
+  },
+  {
+    "question": "Von allen Patienten ist er der ___.",
+    "options": ["am kränksten", "kränker", "krank", "kranke"],
+    "answer": "am kränksten"
+  },
+  {
+    "question": "Diese Idee ist ___ als deine.",
+    "options": ["dümmer", "dumm", "dumme", "am dümmsten"],
+    "answer": "dümmer"
+  },
+  {
+    "question": "Von allen Vorschlägen war das der ___.",
+    "options": ["am dümmsten", "dümmste", "dumm", "dümmer"],
+    "answer": "am dümmsten"
+  },
+  {
+    "question": "Die Antwort von Anna war ___ als die von Tom.",
+    "options": ["klüger", "klug", "kluge", "am klügsten"],
+    "answer": "klüger"
+  },
+  {
+    "question": "Von allen Schülern war sie die ___.",
+    "options": ["am klügsten", "klüger", "klug", "kluge"],
+    "answer": "am klügsten"
+  },
+  {
+    "question": "Dieses Kleid ist ___ als das rote.",
+    "options": ["schöner", "schön", "schöne", "am schönsten"],
+    "answer": "schöner"
+  },
+  {
+    "question": "Von allen Blumen ist diese die ___.",
+    "options": ["am schönsten", "schönste", "schöner", "schön"],
+    "answer": "am schönsten"
+  },
+  {
+    "question": "Nach der Verletzung war er viel ___ als vorher.",
+    "options": ["schwächer", "schwach", "schwache", "am schwächsten"],
+    "answer": "schwächer"
+  },
+  {
+    "question": "Von allen Spielern ist er der ___.",
+    "options": ["am schwächsten", "schwächer", "schwach", "schwache"],
+    "answer": "am schwächsten"
+  },
+  {
+    "question": "Mein Opa ist deutlich ___ als meine Oma.",
+    "options": ["älter", "alter", "alt", "am ältesten"],
+    "answer": "älter"
+  },
+  {
+    "question": "Von allen Politikern ist er der ___.",
+    "options": ["am ältesten", "alt", "älter", "alter"],
+    "answer": "am ältesten"
+  },
+  {
+    "question": "Lisa ist ein Jahr ___ als Paul.",
+    "options": ["jünger", "jung", "jüngere", "am jüngsten"],
+    "answer": "jünger"
+  },
+  {
+    "question": "Von allen Geschwistern ist Mia die ___.",
+    "options": ["am jüngsten", "jünger", "jung", "jüngere"],
+    "answer": "am jüngsten"
+  },
+  {
+    "question": "Dieser Tisch ist ___ als der andere.",
+    "options": ["größer", "groß", "großer", "am größten"],
+    "answer": "größer"
+  },
+  {
+    "question": "Von allen Sälen ist dieser der ___.",
+    "options": ["am größten", "größte", "großer", "groß"],
+    "answer": "am größten"
+  },
+  {
+    "question": "Die Pause war ___ als geplant.",
+    "options": ["kürzer", "kurz", "kurzer", "am kürzesten"],
+    "answer": "kürzer"
+  },
+  {
+    "question": "Von allen Vorträgen war dieser der ___.",
+    "options": ["am kürzesten", "kurzer", "kurz", "kürzer"],
+    "answer": "am kürzesten"
+  },
+  {
+    "question": "Die Nacht war ___ als der Tag.",
+    "options": ["kälter", "kalt", "kalter", "am kältesten"],
+    "answer": "kälter"
+  },
+  {
+    "question": "Von allen Tagen im Jahr ist der Januar der ___.",
+    "options": ["am kältesten", "kälter", "kalt", "kalter"],
+    "answer": "am kältesten"
+  },
+  {
+    "question": "Der Abend war ___ als der Morgen.",
+    "options": ["wärmer", "warm", "warmer", "am wärmsten"],
+    "answer": "wärmer"
+  },
+  {
+    "question": "Von allen Sommern war dieser der ___.",
+    "options": ["am wärmsten", "wärmer", "warm", "warmer"],
+    "answer": "am wärmsten"
+  },
+  {
+    "question": "Mein Bruder ist viel ___ als ich.",
+    "options": ["stärker", "stark", "starker", "am stärksten"],
+    "answer": "stärker"
+  },
+  {
+    "question": "Von allen Sportlern war er der ___.",
+    "options": ["am stärksten", "stärker", "stark", "starker"],
+    "answer": "am stärksten"
+  },
+  {
+    "question": "Seine Rede war ___ als gedacht.",
+    "options": ["härter", "hart", "harte", "am härtesten"],
+    "answer": "härter"
+  },
+  {
+    "question": "Von allen Aufgaben war diese die ___.",
+    "options": ["am härtesten", "härter", "hart", "harte"],
+    "answer": "am härtesten"
+  },
+  {
+    "question": "Nach dem Umzug waren sie ___ als vorher.",
+    "options": ["ärmer", "arm", "arme", "am ärmsten"],
+    "answer": "ärmer"
+  },
+  {
+    "question": "Von allen Nachbarn ist diese Familie die ___.",
+    "options": ["am ärmsten", "ärmer", "arm", "ärmste"],
+    "answer": "am ärmsten"
+  },
+  {
+    "question": "Nach der Operation war er noch ___ als zuvor.",
+    "options": ["kränker", "krank", "kranke", "am kränksten"],
+    "answer": "kränker"
+  },
+  {
+    "question": "Von allen Patienten ist sie die ___.",
+    "options": ["am kränksten", "kränker", "krank", "kranke"],
+    "answer": "am kränksten"
+  },
+  {
+    "question": "Seine Antwort war ___ als meine.",
+    "options": ["dümmer", "dumm", "dumme", "am dümmsten"],
+    "answer": "dümmer"
+  },
+  {
+    "question": "Von allen Ideen war diese die ___.",
+    "options": ["am dümmsten", "dümmer", "dumm", "dumme"],
+    "answer": "am dümmsten"
+  },
+  {
+    "question": "Er war ___ als seine Mitschüler.",
+    "options": ["klüger", "klug", "kluge", "am klügsten"],
+    "answer": "klüger"
+  },
+  {
+    "question": "Von allen Kandidaten war sie die ___.",
+    "options": ["am klügsten", "klüger", "klug", "kluge"],
+    "answer": "am klügsten"
+  },
+  {
+    "question": "Der Garten ist ___ als der Hof.",
+    "options": ["schöner", "schön", "schöne", "am schönsten"],
+    "answer": "schöner"
+  },
+  {
+    "question": "Von allen Orten ist dieser der ___.",
+    "options": ["am schönsten", "schönste", "schöner", "schön"],
+    "answer": "am schönsten"
+  },
+  {
+    "question": "Nach der Verletzung war er deutlich ___.",
+    "options": ["schwächer", "schwach", "schwache", "am schwächsten"],
+    "answer": "schwächer"
+  },
+  {
+    "question": "Von allen Spielern war er der ___.",
+    "options": ["am schwächsten", "schwächer", "schwach", "schwache"],
+    "answer": "am schwächsten"
+  },
+  {
+    "question": "Meine Tante ist ein Jahr ___ als meine Mutter.",
+    "options": ["älter", "alt", "am ältesten", "alter"],
+    "answer": "älter"
+  },
+  {
+    "question": "Von allen Nachbarn ist Herr Braun der ___.",
+    "options": ["am ältesten", "älter", "alt", "alter"],
+    "answer": "am ältesten"
+  },
+  {
+    "question": "Peter ist zwei Jahre ___ als sein Bruder.",
+    "options": ["jünger", "jung", "jüngere", "am jüngsten"],
+    "answer": "jünger"
+  },
+  {
+    "question": "Von allen Schülern ist Anna die ___.",
+    "options": ["am jüngsten", "jünger", "jung", "jüngere"],
+    "answer": "am jüngsten"
+  },
+  {
+    "question": "Der Baum ist viel ___ als das Haus.",
+    "options": ["größer", "groß", "am größten", "großer"],
+    "answer": "größer"
+  },
+  {
+    "question": "Von allen Gebäuden ist das Rathaus das ___.",
+    "options": ["am größten", "größer", "groß", "größte"],
+    "answer": "am größten"
+  },
+  {
+    "question": "Der Tunnel ist ___ als die Brücke.",
+    "options": ["länger", "lang", "am längsten", "langer"],
+    "answer": "länger"
+  },
+  {
+    "question": "Von allen Wegen ist dieser der ___.",
+    "options": ["am längsten", "längste", "länger", "lang"],
     "answer": "am längsten"
   },
   {
-    "question": "Ein Elefant ist ___ als ein Pferd.",
-    "options": ["größer", "großer", "groß", "am größten"],
-    "answer": "größer"
+    "question": "Der Vortrag war ___ als erwartet.",
+    "options": ["kürzer", "kurz", "kurzer", "am kürzesten"],
+    "answer": "kürzer"
+  },
+  {
+    "question": "Von allen Interviews war dieses das ___.",
+    "options": ["am kürzesten", "kürzer", "kurz", "kurzer"],
+    "answer": "am kürzesten"
+  },
+  {
+    "question": "Die Nacht war ___ als der Tag.",
+    "options": ["kälter", "kalt", "kalter", "am kältesten"],
+    "answer": "kälter"
+  },
+  {
+    "question": "Von allen Monaten ist der Februar der ___.",
+    "options": ["am kältesten", "kälter", "kalt", "kalter"],
+    "answer": "am kältesten"
+  },
+  {
+    "question": "Der Nachmittag war ___ als der Morgen.",
+    "options": ["wärmer", "warm", "warmer", "am wärmsten"],
+    "answer": "wärmer"
+  },
+  {
+    "question": "Von allen Tagen im Jahr war dieser der ___.",
+    "options": ["am wärmsten", "wärmer", "warm", "warmer"],
+    "answer": "am wärmsten"
+  },
+  {
+    "question": "Der Boxer ist ___ als sein Gegner.",
+    "options": ["stärker", "stark", "am stärksten", "starker"],
+    "answer": "stärker"
+  },
+  {
+    "question": "Von allen Sportlern war er der ___.",
+    "options": ["am stärksten", "stärker", "stark", "starker"],
+    "answer": "am stärksten"
+  },
+  {
+    "question": "Seine Stimme war ___ als erwartet.",
+    "options": ["härter", "hart", "harte", "am härtesten"],
+    "answer": "härter"
+  },
+  {
+    "question": "Von allen Tests war dieser der ___.",
+    "options": ["am härtesten", "härter", "hart", "harte"],
+    "answer": "am härtesten"
+  },
+  {
+    "question": "Nach dem Krieg waren viele Menschen ___ als zuvor.",
+    "options": ["ärmer", "arm", "arme", "am ärmsten"],
+    "answer": "ärmer"
+  },
+  {
+    "question": "Von allen Dörfern ist dieses das ___.",
+    "options": ["am ärmsten", "ärmer", "arm", "ärmste"],
+    "answer": "am ärmsten"
   }
 ]

@@ -1,51 +1,51 @@
 export const adjectiveBasic = [
 	{
-		title: 'Прилагательные (цвета)',
+		title: 'adjectiveBasicColors.title',
 		achievements: [
 			{
 				id: 'col1',
-				name: 'Первый штрих',
-				description: 'Ты правильно использовал первое прилагательное цвета',
+				name: 'adjectiveBasicColors.firstName',
+				description: 'adjectiveBasicColors.firstDescription',
 				icon: '🖌️',
 				currentProcess: 0,
 				targetProgress: 1
 			},
 			{
 				id: 'col2',
-				name: '🌈 Палитра знаний',
-				description: 'Выполни верно 75 упражнений с прилагательными цвета',
+				name: 'adjectiveBasicColors.secondName',
+				description: 'adjectiveBasicColors.secondDescription',
 				icon: '🎨',
 				currentProcess: 0,
 				targetProgress: 75
 			},
 			{
 				id: 'col3',
-				name: 'Художник слова',
-				description: 'Выполни 150 упражнений с прилагательными цвета',
+				name: 'adjectiveBasicColors.thirdName',
+				description: 'adjectiveBasicColors.thirdDescription',
 				icon: '🖼️',
 				currentProcess: 0,
 				targetProgress: 150
 			},
 			{
 				id: 'col4',
-				name: 'Безупречный оттенок',
-				description: 'Заверши 10 сессий без единой ошибки с цветами',
+				name: 'adjectiveBasicColors.fourthName',
+				description: 'adjectiveBasicColors.fourthDescription',
 				icon: '✨',
 				currentProcess: 0,
 				targetProgress: 10
 			},
 			{
 				id: 'col5',
-				name: 'Молния палитры',
-				description: 'Заверши 10 сессий меньше чем за 1 минуту',
+				name: 'adjectiveBasicColors.fifthName',
+				description: 'adjectiveBasicColors.fifthDescription',
 				icon: '⚡',
 				currentProcess: 0,
 				targetProgress: 10
 			},
 			{
 				id: 'col6',
-				name: 'Мастер Хроматики',
-				description: 'Выполни все достижения с прилагательными цвета',
+				name: 'adjectiveBasicColors.sixthName',
+				description: 'adjectiveBasicColors.sixthDescription',
 				icon: '🏆',
 				currentProcess: 0,
 				targetProgress: 1
@@ -53,52 +53,52 @@ export const adjectiveBasic = [
 		]
 	},
 	{
-		title: 'Прилагательные (чувства и эмоции)',
+		title: 'adjectiveBasicFeelings.title',
 		achievements: [
 			{
 				id: 'emo1',
-				name: 'Первая эмоция',
-				description: 'Ты правильно использовал первое прилагательное эмоции',
+				name: 'adjectiveBasicFeelings.firstName',
+				description: 'adjectiveBasicFeelings.firstDescription',
 				icon: '💡',
 				currentProcess: 0,
 				targetProgress: 1
 			},
 			{
 				id: 'emo2',
-				name: 'Сердце слов',
-				description: 'Выполни верно 75 упражнений с прилагательными эмоций',
+				name: 'adjectiveBasicFeelings.firstName',
+				description: 'adjectiveBasicFeelings.firstDescription',
 				icon: '❤️',
 				currentProcess: 0,
 				targetProgress: 75
 			},
 			{
 				id: 'emo3',
-				name: 'Эмоциональный мастер',
-				description: 'Выполни 150 упражнений с прилагательными эмоций',
+				name: 'adjectiveBasicFeelings.firstName',
+				description: 'adjectiveBasicFeelings.firstDescription',
 				icon: '🎭',
 				currentProcess: 0,
 				targetProgress: 150
 			},
 			{
 				id: 'emo4',
-				name: 'Контроль чувств',
-				description: 'Заверши 10 сессий без единой ошибки с эмоциями',
+				name: 'adjectiveBasicFeelings.fourthName',
+				description: 'adjectiveBasicFeelings.fourthDescription',
 				icon: '🧘',
 				currentProcess: 0,
 				targetProgress: 10
 			},
 			{
 				id: 'emo5',
-				name: 'Быстрый импульс',
-				description: 'Заверши 10 сессий меньше чем за 1 минуту',
+				name: 'adjectiveBasicFeelings.fifthName',
+				description: 'adjectiveBasicFeelings.fifthDescription',
 				icon: '⚡',
 				currentProcess: 0,
 				targetProgress: 10
 			},
 			{
 				id: 'emo6',
-				name: 'Повелитель Эмоций',
-				description: 'Выполни все достижения с прилагательными эмоций',
+				name: 'adjectiveBasicFeelings.sixthName',
+				description: 'adjectiveBasicFeelings.sixthDescription',
 				icon: '🏆',
 				currentProcess: 0,
 				targetProgress: 1
@@ -106,52 +106,52 @@ export const adjectiveBasic = [
 		]
 	},
 	{
-		title: 'Прилагательные (внешность)',
+		title: 'adjectiveBasicAppearance.title',
 		achievements: [
 			{
 				id: 'app1',
-				name: 'Первый взгляд',
-				description: 'Ты правильно использовал первое прилагательное внешности',
+				name: 'adjectiveBasicAppearance.firstName',
+				description: 'adjectiveBasicAppearance.firstDescription',
 				icon: '👀',
 				currentProcess: 0,
 				targetProgress: 1
 			},
 			{
 				id: 'app2',
-				name: 'Красота слов',
-				description: 'Выполни верно 75 упражнений с прилагательными внешности',
+				name: 'adjectiveBasicAppearance.secondName',
+				description: 'adjectiveBasicAppearance.secondDescription',
 				icon: '💎',
 				currentProcess: 0,
 				targetProgress: 75
 			},
 			{
 				id: 'app3',
-				name: 'Художник образов',
-				description: 'Выполни 150 упражнений с прилагательными внешности',
+				name: 'adjectiveBasicAppearance.thirdName',
+				description: 'adjectiveBasicAppearance.thirdDescription',
 				icon: '🖼️',
 				currentProcess: 0,
 				targetProgress: 150
 			},
 			{
 				id: 'app4',
-				name: 'Совершенный облик',
-				description: 'Заверши 10 сессий без единой ошибки с внешностью',
+				name: 'adjectiveBasicAppearance.fourthName',
+				description: 'adjectiveBasicAppearance.fourthDescription',
 				icon: '✨',
 				currentProcess: 0,
 				targetProgress: 10
 			},
 			{
 				id: 'app5',
-				name: 'Молниеносный взгляд',
-				description: 'Заверши 10 сессий меньше чем за 1 минуту',
+				name: 'adjectiveBasicAppearance.fifthName',
+				description: 'adjectiveBasicAppearance.fifthDescription',
 				icon: '⚡',
 				currentProcess: 0,
 				targetProgress: 10
 			},
 			{
 				id: 'app6',
-				name: 'Повелитель Образов',
-				description: 'Выполни все достижения с прилагательными внешности',
+				name: 'adjectiveBasicAppearance.sixthName',
+				description: 'adjectiveBasicAppearance.sixthDescription',
 				icon: '🏆',
 				currentProcess: 0,
 				targetProgress: 1
@@ -159,52 +159,52 @@ export const adjectiveBasic = [
 		]
 	},
 	{
-		title: 'Прилагательные (характер)',
+		title: 'adjectiveBasicCharacter.title',
 		achievements: [
 			{
 				id: 'char1',
-				name: 'Первый штрих характера',
-				description: 'Ты правильно использовал первое прилагательное характера',
+				name: 'adjectiveBasicCharacter.firstName',
+				description: 'adjectiveBasicCharacter.firstDescription',
 				icon: '✏️',
 				currentProcess: 0,
 				targetProgress: 1
 			},
 			{
 				id: 'char2',
-				name: 'Сила духа',
-				description: 'Выполни верно 75 упражнений с прилагательными характера',
+				name: 'adjectiveBasicCharacter.secondName',
+				description: 'adjectiveBasicCharacter.secondDescription',
 				icon: '🦁',
 				currentProcess: 0,
 				targetProgress: 75
 			},
 			{
 				id: 'char3',
-				name: 'Создатель личностей',
-				description: 'Выполни 150 упражнений с прилагательными характера',
+				name: 'adjectiveBasicCharacter.thirdName',
+				description: 'adjectiveBasicCharacter.thirdDescription',
 				icon: '🧩',
 				currentProcess: 0,
 				targetProgress: 150
 			},
 			{
 				id: 'char4',
-				name: 'Идеальный характер',
-				description: 'Заверши 10 сессий без единой ошибки с характером',
+				name: 'adjectiveBasicCharacter.fourthName',
+				description: 'adjectiveBasicCharacter.fourthDescription',
 				icon: '🌟',
 				currentProcess: 0,
 				targetProgress: 10
 			},
 			{
 				id: 'char5',
-				name: 'Импульс личности',
-				description: 'Заверши 10 сессий меньше чем за 1 минуту',
+				name: 'adjectiveBasicCharacter.fifthName',
+				description: 'adjectiveBasicCharacter.fifthDescription',
 				icon: '⚡',
 				currentProcess: 0,
 				targetProgress: 10
 			},
 			{
 				id: 'char6',
-				name: 'Мастер Характера',
-				description: 'Выполни все достижения с прилагательными характера',
+				name: 'adjectiveBasicCharacter.sixthName',
+				description: 'adjectiveBasicCharacter.sixthDescription',
 				icon: '🏆',
 				currentProcess: 0,
 				targetProgress: 1
@@ -212,52 +212,52 @@ export const adjectiveBasic = [
 		]
 	},
 	{
-		title: 'Прилагательные (размер и форма)',
+		title: 'adjectiveBasicSize.title',
 		achievements: [
 			{
 				id: 'dim1',
-				name: 'Первое измерение',
-				description: 'Ты правильно использовал первое прилагательное размера или формы',
+				name: 'adjectiveBasicSize.firstName',
+				description: 'adjectiveBasicSize.firstDescription',
 				icon: '📏',
 				currentProcess: 0,
 				targetProgress: 1
 			},
 			{
 				id: 'dim2',
-				name: 'Геометрия слов',
-				description: 'Выполни верно 75 упражнений с прилагательными размера и формы',
+				name: 'adjectiveBasicSize.secondName',
+				description: 'adjectiveBasicSize.secondDescription',
 				icon: '🔷',
 				currentProcess: 0,
 				targetProgress: 75
 			},
 			{
 				id: 'dim3',
-				name: 'Архитектор языка',
-				description: 'Выполни 150 упражнений с прилагательными размера и формы',
+				name: 'adjectiveBasicSize.thirdName',
+				description: 'adjectiveBasicSize.thirdDescription',
 				icon: '🏗️',
 				currentProcess: 0,
 				targetProgress: 150
 			},
 			{
 				id: 'dim4',
-				name: 'Совершенная форма',
-				description: 'Заверши 10 сессий без единой ошибки с размером и формой',
+				name: 'adjectiveBasicSize.fourthName',
+				description: 'adjectiveBasicSize.fourthDescription',
 				icon: '⚖️',
 				currentProcess: 0,
 				targetProgress: 10
 			},
 			{
 				id: 'dim5',
-				name: 'Молниеносный архитектор',
-				description: 'Заверши 10 сессий меньше чем за 1 минуту',
+				name: 'adjectiveBasicSize.fifthName',
+				description: 'adjectiveBasicSize.fifthDescription',
 				icon: '⚡',
 				currentProcess: 0,
 				targetProgress: 10
 			},
 			{
 				id: 'dim6',
-				name: 'Повелитель Измерений',
-				description: 'Выполни все достижения с прилагательными размера и формы',
+				name: 'adjectiveBasicSize.sixthName',
+				description: 'adjectiveBasicSize.sixthDescription',
 				icon: '🏆',
 				currentProcess: 0,
 				targetProgress: 1

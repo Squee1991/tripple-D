@@ -60,10 +60,9 @@ import { assembleWordGroupAchievement } from '../achieveGroup/article/wordsFromL
 const { t } = useI18n()
 const achievementStore = useAchievementStore()
 
-// Список заголовков групп из wordsFromLetters.js
 const targetTitles = assembleWordGroupAchievement.map(g => g.title)
 
-// Фильтруем из стора только нужные группы
+
 const filteredGroups = computed(() =>
     achievementStore.groups.filter(g => targetTitles.includes(g.title))
 )
@@ -88,7 +87,7 @@ const getCompletedCount = group =>
 }
 
 .group-title {
-    font-size: 2rem;
+  font-size: 1.8rem;
     color: #1e1e1e;
     margin: 0;
 }

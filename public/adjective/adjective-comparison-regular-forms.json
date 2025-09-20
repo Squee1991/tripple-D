@@ -1,102 +1,492 @@
 [
   {
-    "question": "Von allen Tieren rennt der Gepard ___.",
-    "options": ["am schnellsten", "schneller", "schnellste", "am schnell"],
-    "answer": "am schnellsten"
+    "question": "Von allen Tieren läuft die Schnecke ___.",
+    "options": ["am langsamsten", "langsamer", "langsam", "langsamste"],
+    "answer": "am langsamsten"
   },
   {
-    "question": "Diese Kiste ist schwer, aber die andere ist noch ___.",
-    "options": ["schwerer", "schwer", "am schwersten", "schwersten"],
-    "answer": "schwerer"
+    "question": "Dieses Handy ist ___ als das alte.",
+    "options": ["moderner", "modern", "am modernsten", "moderne"],
+    "answer": "moderner"
   },
   {
-    "question": "Für mich war der Urlaub am Meer von allen Reisen ___.",
-    "options": ["am schönsten", "schöner", "schönste", "am schöner"],
+    "question": "Die Lampe ist hell, aber die Sonne ist viel ___.",
+    "options": ["heller", "hell", "am hellsten", "helle"],
+    "answer": "heller"
+  },
+  {
+    "question": "Von allen Farben finde ich Blau ___.",
+    "options": ["am schön", "am schönsten", "schöner", "schönste"],
     "answer": "am schönsten"
   },
   {
-    "question": "Ein T-Shirt für 5 Euro ist wirklich ___.",
-    "options": ["billig", "billiger", "am billigsten", "billigste"],
-    "answer": "billig"
+    "question": "Dieses Sofa ist bequem, aber das andere ist noch ___.",
+    "options": ["bequemer", "bequem", "am bequemsten", "bequemste"],
+    "answer": "bequemer"
   },
   {
-    "question": "Physik ist interessant, aber Biologie finde ich ___.",
-    "options": ["interessanter", "interessant", "am interessantesten", "interessanteste"],
-    "answer": "interessanter"
+    "question": "Die Bibliothek ist der ___ Ort in der Stadt.",
+    "options": ["ruhigste", "ruhiger", "am ruhigsten", "ruhig"],
+    "answer": "ruhigste"
   },
   {
-    "question": "Der neue Dokumentarfilm war ziemlich ___.",
-    "options": ["langweilig", "langweiliger", "am langweiligsten", "langweiligste"],
-    "answer": "langweilig"
-  },
-  {
-    "question": "Welches Thema in diesem Buch findest du ___?",
-    "options": ["am leichtesten", "leichter", "leichteste", "am leichter"],
-    "answer": "am leichtesten"
-  },
-  {
-    "question": "Diese Regel ist ___ als die vorherige.",
-    "options": ["wichtiger", "wichtig", "am wichtigsten", "wichtigste"],
-    "answer": "wichtiger"
-  },
-  {
-    "question": "Von diesen drei Sängern singt Maria ___.",
-    "options": ["am lautesten", "lauter", "lauteste", "am lauter"],
-    "answer": "am lautesten"
-  },
-  {
-    "question": "Kannst du bitte etwas ___ sprechen? Das Baby schläft.",
-    "options": ["leiser", "leise", "am leisesten", "leiseste"],
-    "answer": "leiser"
-  },
-  {
-    "question": "Von allen Modellen auf dem Markt ist dieses ___.",
-    "options": ["am neuesten", "neuer", "neueste", "neu"],
-    "answer": "am neuesten"
-  },
-  {
-    "question": "Mein Zimmer ist sauber, aber deins ist noch ___.",
-    "options": ["sauberer", "sauber", "am saubersten", "sauberste"],
-    "answer": "sauberer"
-  },
-  {
-    "question": "Nach dem Fußballspiel war sein Trikot ___ von allen.",
-    "options": ["am schmutzigsten", "schmutziger", "schmutzig", "schmutzigste"],
-    "answer": "am schmutzigsten"
-  },
-  {
-    "question": "Anna ist fleißig, aber ihr Bruder ist sogar noch ___.",
-    "options": ["fleißiger", "fleißig", "am fleißigsten", "fleißigste"],
-    "answer": "fleißiger"
-  },
-  {
-    "question": "Am Sonntag bin ich meistens sehr ___.",
-    "options": ["faul", "fauler", "am faulsten", "faulste"],
-    "answer": "faul"
-  },
-  {
-    "question": "Der erste Test war von allen ___.",
+    "question": "Von allen Aufgaben war diese ___.",
     "options": ["am einfachsten", "einfacher", "einfachste", "einfach"],
     "answer": "am einfachsten"
   },
   {
-    "question": "Klavier spielen ist schwierig, aber Geige ist ___.",
-    "options": ["schwieriger", "schwierig", "am schwierigsten", "schwierigste"],
+    "question": "Dieser Text ist ___ als der vorherige.",
+    "options": ["schwieriger", "schwierig", "am schwierigsten", "schwierige"],
     "answer": "schwieriger"
   },
   {
-    "question": "Von allen Witzen war seiner ___.",
+    "question": "Das neue Kleid ist ___ als das alte.",
+    "options": ["schöner", "schön", "am schönsten", "schöne"],
+    "answer": "schöner"
+  },
+  {
+    "question": "Von allen Studenten ist Maria ___.",
+    "options": ["am fleißigsten", "fleißiger", "fleißig", "fleißigste"],
+    "answer": "am fleißigsten"
+  },
+  {
+    "question": "Heute war der Unterricht ___ als gestern.",
+    "options": ["langweiliger", "langweilig", "am langweiligsten", "langweilige"],
+    "answer": "langweiliger"
+  },
+  {
+    "question": "Diese Lösung ist ___ als deine.",
+    "options": ["wichtiger", "wichtig", "am wichtigsten", "wichtigste"],
+    "answer": "wichtiger"
+  },
+  {
+    "question": "Das Kind spricht ___ als der Erwachsene.",
+    "options": ["leiser", "leise", "am leisesten", "leiseste"],
+    "answer": "leiser"
+  },
+  {
+    "question": "Von allen Autos ist dieses Modell ___.",
+    "options": ["am neueste", "am neuesten", "neuer", "neue"],
+    "answer": "am neuesten"
+  },
+  {
+    "question": "Der Pullover ist sauber, aber die Hose ist noch ___.",
+    "options": ["sauberer", "sauber", "am saubersten", "sauberste"],
+    "answer": "sauberer"
+  },
+  {
+    "question": "Nach dem Spiel waren seine Schuhe von allen ___.",
+    "options": ["am schmutzigsten", "schmutziger", "schmutzigste", "schmutzig"],
+    "answer": "am schmutzigsten"
+  },
+  {
+    "question": "Mein Bruder ist faul, aber ich bin noch ___.",
+    "options": ["fauler", "faul", "am faulsten", "faulste"],
+    "answer": "fauler"
+  },
+  {
+    "question": "Von allen Geschichten war diese ___.",
     "options": ["am lustigsten", "lustiger", "lustigste", "lustig"],
     "answer": "am lustigsten"
   },
   {
-    "question": "Das neue Museum ist viel ___ als das alte.",
+    "question": "Der Stuhl ist unbequem, aber das Sofa ist ___.",
+    "options": ["bequemer", "bequem", "am bequemsten", "bequemste"],
+    "answer": "bequemer"
+  },
+  {
+    "question": "Heute war es ___ als gestern.",
+    "options": ["ruhiger", "ruhig", "am ruhigsten", "ruhigste"],
+    "answer": "ruhiger"
+  },
+  {
+    "question": "Von allen Tieren im Zoo war der Löwe ___.",
+    "options": ["am lautesten", "lauter", "laut", "lauteste"],
+    "answer": "am lautesten"
+  },
+  {
+    "question": "Diese Übung ist schwer, aber die nächste ist noch ___.",
+    "options": ["schwieriger", "schwierig", "am schwierigsten", "schwierige"],
+    "answer": "schwieriger"
+  },
+  {
+    "question": "Von allen Tagen war dieser ___.",
+    "options": ["am ruhigsten", "ruhiger", "ruhigste", "ruhig"],
+    "answer": "am ruhigsten"
+  },
+  {
+    "question": "Der Film gestern war ___ als der heute.",
+    "options": ["interessanter", "interessant", "am interessantesten", "interessante"],
+    "answer": "interessanter"
+  },
+  {
+    "question": "Von allen Spielen ist dieses ___ für Kinder.",
+    "options": ["am einfachsten", "einfacher", "einfachste", "einfach"],
+    "answer": "am einfachsten"
+  },
+  {
+    "question": "Dieses Restaurant ist ___ als das andere.",
+    "options": ["moderner", "modern", "am modernsten", "moderne"],
+    "answer": "moderner"
+  },
+  {
+    "question": "Von allen Lösungen ist diese ___.",
+    "options": ["am wichtigsten", "wichtiger", "wichtig", "wichtigste"],
+    "answer": "am wichtigsten"
+  },
+  {
+    "question": "Mein Hund ist brav, aber deiner ist noch ___.",
+    "options": ["freundlicher", "freundlich", "am freundlichsten", "freundlichste"],
+    "answer": "freundlicher"
+  },
+  {
+    "question": "Von allen Tests war dieser ___.",
+    "options": ["am schwierigsten", "schwieriger", "schwierigste", "schwierig"],
+    "answer": "am schwierigsten"
+  },
+  {
+    "question": "Dieses Kleid ist neu, aber jenes ist noch ___.",
+    "options": ["neuer", "neu", "am neuesten", "neue"],
+    "answer": "neuer"
+  },
+  {
+    "question": "Von allen Lampen ist diese ___.",
+    "options": ["am hellsten", "heller", "helle", "hellste"],
+    "answer": "am hellsten"
+  },
+  {
+    "question": "Der Vortrag war interessant, aber das Gespräch war noch ___.",
+    "options": ["interessanter", "interessant", "am interessantesten", "interessante"],
+    "answer": "interessanter"
+  },
+  {
+    "question": "Von allen Lösungen finde ich diese ___.",
+    "options": ["am einfachsten", "einfachste", "einfach", "einfacher"],
+    "answer": "am einfachsten"
+  },
+  {
+    "question": "Das Baby schläft, bitte sprich etwas ___.",
+    "options": ["leiser", "leise", "am leisesten", "leiseste"],
+    "answer": "leiser"
+  },
+  {
+    "question": "Von allen Freunden ist Paul der ___.",
+    "options": ["am lustigsten", "lustiger", "lustigste", "lustig"],
+    "answer": "am lustigsten"
+  },
+  {
+    "question": "Heute ist das Wetter ___ als gestern.",
+    "options": ["schöner", "schön", "am schönsten", "schöne"],
+    "answer": "schöner"
+  },
+  {
+    "question": "Von allen Aufgaben war Mathe ___.",
+    "options": ["am schwierigsten", "schwieriger", "schwierig", "schwierigste"],
+    "answer": "am schwierigsten"
+  },
+  {
+    "question": "Der Lehrer spricht laut, aber die Kinder sind noch ___.",
+    "options": ["lauter", "laut", "am lautesten", "lauteste"],
+    "answer": "lauter"
+  },
+  {
+    "question": "Von allen Möbeln finde ich dieses Sofa ___.",
+    "options": ["am bequemsten", "bequemer", "bequem", "bequemste"],
+    "answer": "am bequemsten"
+  },
+  {
+    "question": "Dieses Kleid ist billig, aber jenes ist noch ___.",
+    "options": ["billiger", "billig", "am billigsten", "billigste"],
+    "answer": "billiger"
+  },
+  {
+    "question": "Von allen Schülern ist er der ___.",
+    "options": ["am faulsten", "fauler", "faul", "faulste"],
+    "answer": "am faulsten"
+  },
+  {
+    "question": "Dieser Text ist schwer, aber der nächste ist noch ___.",
+    "options": ["schwieriger", "schwierig", "am schwierigsten", "schwierige"],
+    "answer": "schwieriger"
+  },
+  {
+    "question": "Von allen Gästen war sie die ___.",
+    "options": ["am freundlichsten", "freundlicher", "freundlichste", "freundlich"],
+    "answer": "am freundlichsten"
+  },
+  {
+    "question": "Das neue Auto ist ___ als das alte.",
+    "options": ["moderner", "modern", "am modernsten", "moderne"],
+    "answer": "moderner"
+  },
+  {
+    "question": "Von allen Abenden war dieser ___.",
+    "options": ["am ruhigsten", "ruhiger", "ruhig", "ruhigste"],
+    "answer": "am ruhigsten"
+  },
+  {
+    "question": "Dieser Stuhl ist unbequem, der andere ist ___.",
+    "options": ["bequemer", "bequem", "am bequemsten", "bequemste"],
+    "answer": "bequemer"
+  },
+  {
+    "question": "Von allen Geschichten war diese ___.",
+    "options": ["am langweiligsten", "langweiliger", "langweiligste", "langweilig"],
+    "answer": "am langweiligsten"
+  },
+  {
+    "question": "Der Witz war lustig, aber der nächste war noch ___.",
+    "options": ["lustiger", "lustig", "am lustigsten", "lustigste"],
+    "answer": "lustiger"
+  },
+  {
+    "question": "Von allen Zimmern ist dieses ___.",
+    "options": ["am saubersten", "sauberer", "sauber", "sauberste"],
+    "answer": "am saubersten"
+  },
+  {
+    "question": "Im Winter sind die Straßen oft ___ als im Sommer.",
+    "options": ["gefährlicher", "gefährlich", "am gefährlichsten", "gefährlichste"],
+    "answer": "gefährlicher"
+  },
+  {
+    "question": "Dieses neue Handy ist ___ und praktischer als mein altes.",
     "options": ["moderner", "modern", "am modernsten", "modernste"],
     "answer": "moderner"
   },
   {
-    "question": "Dieser Sessel ist von allen im Laden ___.",
-    "options": ["am bequemsten", "bequemer", "bequemste", "bequem"],
-    "answer": "am bequemsten"
+    "question": "Von allen Prüfungen war die in Mathematik ___.",
+    "options": ["am schwierigsten", "schwieriger", "schwierigste", "schwierig"],
+    "answer": "am schwierigsten"
+  },
+  {
+    "question": "Der Zug war ___ als das Auto, obwohl es viel Verkehr gab.",
+    "options": ["schneller", "schnell", "am schnellsten", "schnellste"],
+    "answer": "schneller"
+  },
+  {
+    "question": "Von allen Restaurants in der Stadt esse ich hier ___.",
+    "options": ["am liebsten", "lieber", "liebste", "lieb"],
+    "answer": "am liebsten"
+  },
+  {
+    "question": "Heute ist das Wetter viel ___ als gestern Nachmittag.",
+    "options": ["schöner", "schön", "am schönsten", "schöne"],
+    "answer": "schöner"
+  },
+  {
+    "question": "Dieses Kleid ist ___, aber auch eleganter als das andere.",
+    "options": ["teurer", "teuer", "am teuersten", "teure"],
+    "answer": "teurer"
+  },
+  {
+    "question": "Der Lehrer erklärt die Grammatik ___ als die Lehrerin im letzten Jahr.",
+    "options": ["klarer", "klar", "am klarsten", "klarste"],
+    "answer": "klarer"
+  },
+  {
+    "question": "Von allen Sportarten finde ich Schwimmen ___.",
+    "options": ["am besten", "besser", "gut", "beste"],
+    "answer": "am besten"
+  },
+  {
+    "question": "Meine Schwester ist zwei Jahre ___ als ich.",
+    "options": ["älter", "alt", "am ältesten", "alter"],
+    "answer": "älter"
+  },
+  {
+    "question": "Von allen Städten, die ich besucht habe, war Wien ___.",
+    "options": ["am schönsten", "schöner", "schönste", "schön"],
+    "answer": "am schönsten"
+  },
+  {
+    "question": "Dieses Sofa ist ___ und bequemer als das alte im Wohnzimmer.",
+    "options": ["moderner", "modern", "am modernsten", "moderne"],
+    "answer": "moderner"
+  },
+  {
+    "question": "Von allen Freunden ist Max der ___.",
+    "options": ["am zuverlässigsten", "zuverlässiger", "zuverlässig", "zuverlässigste"],
+    "answer": "am zuverlässigsten"
+  },
+  {
+    "question": "Das Wasser im See ist heute viel ___ als gestern.",
+    "options": ["kälter", "kalt", "am kältesten", "kalter"],
+    "answer": "kälter"
+  },
+  {
+    "question": "Von allen Aufgaben war diese ___.",
+    "options": ["am einfachsten", "einfacher", "einfachste", "einfach"],
+    "answer": "am einfachsten"
+  },
+  {
+    "question": "Dein Zimmer ist ___ als meines, aber nicht so hell.",
+    "options": ["größer", "groß", "am größten", "großer"],
+    "answer": "größer"
+  },
+  {
+    "question": "Dieses Restaurant ist ___ und billiger als das am Bahnhof.",
+    "options": ["besser", "gut", "am besten", "beste"],
+    "answer": "besser"
+  },
+  {
+    "question": "Von allen Filmen fand ich diesen ___.",
+    "options": ["am spannendsten", "spannender", "spannende", "spannend"],
+    "answer": "am spannendsten"
+  },
+  {
+    "question": "Die Übung war ___ als die letzte, aber auch interessanter.",
+    "options": ["schwieriger", "schwierig", "am schwierigsten", "schwierige"],
+    "answer": "schwieriger"
+  },
+  {
+    "question": "Von allen Blumen im Garten finde ich die Rosen ___.",
+    "options": ["am schönsten", "schöner", "schönste", "schön"],
+    "answer": "am schönsten"
+  },
+  {
+    "question": "Heute fühle ich mich viel ___ als gestern Abend.",
+    "options": ["besser", "gut", "am besten", "beste"],
+    "answer": "besser"
+  },
+  {
+    "question": "Dieses Auto ist ___ und schneller als das alte Modell.",
+    "options": ["moderner", "modern", "am modernsten", "moderne"],
+    "answer": "moderner"
+  },
+  {
+    "question": "Von allen Schülern war Anna die ___.",
+    "options": ["am fleißigsten", "fleißiger", "fleißig", "fleißigste"],
+    "answer": "am fleißigsten"
+  },
+  {
+    "question": "Das neue Buch ist ___ als der Film, den wir gesehen haben.",
+    "options": ["interessanter", "interessant", "am interessantesten", "interessante"],
+    "answer": "interessanter"
+  },
+  {
+    "question": "Von allen Kleidern finde ich dieses das ___.",
+    "options": ["am teuersten", "teurer", "teuer", "teure"],
+    "answer": "am teuersten"
+  },
+  {
+    "question": "Die Erklärung des Professors war viel ___ als die im Buch.",
+    "options": ["klarer", "klar", "am klarsten", "klarste"],
+    "answer": "klarer"
+  },
+  {
+    "question": "Von allen Antworten war deine ___.",
+    "options": ["am besten", "besser", "gut", "beste"],
+    "answer": "am besten"
+  },
+  {
+    "question": "Meine Tasche ist ___, aber auch praktischer als deine.",
+    "options": ["leichter", "leicht", "am leichtesten", "leichte"],
+    "answer": "leichter"
+  },
+  {
+    "question": "Von allen Tagen der Woche finde ich Samstag ___.",
+    "options": ["am schönsten", "schöner", "schönste", "schön"],
+    "answer": "am schönsten"
+  },
+  {
+    "question": "Dieses Bild ist ___ als die anderen in der Ausstellung.",
+    "options": ["schöner", "schön", "am schönsten", "schöne"],
+    "answer": "schöner"
+  },
+  {
+    "question": "Von allen Spielen war das letzte das ___.",
+    "options": ["am spannendsten", "spannender", "spannende", "spannend"],
+    "answer": "am spannendsten"
+  },
+  {
+    "question": "Heute ist die Aufgabe viel ___ als gestern.",
+    "options": ["leichter", "leicht", "am leichtesten", "leichte"],
+    "answer": "leichter"
+  },
+  {
+    "question": "Von allen Getränken schmeckt mir Wasser ___.",
+    "options": ["am besten", "besser", "gut", "beste"],
+    "answer": "am besten"
+  },
+  {
+    "question": "Dieses Lied ist ___ und fröhlicher als das vorige.",
+    "options": ["schöner", "schön", "am schönsten", "schöne"],
+    "answer": "schöner"
+  },
+  {
+    "question": "Von allen Bergen war dieser der ___.",
+    "options": ["am höchsten", "höher", "hoch", "höchste"],
+    "answer": "am höchsten"
+  },
+  {
+    "question": "Der neue Film war ___ als ich erwartet habe.",
+    "options": ["spannender", "spannend", "am spannendsten", "spannende"],
+    "answer": "spannender"
+  },
+  {
+    "question": "Von allen Lehrern erklärt Frau Müller die Grammatik ___.",
+    "options": ["am besten", "besser", "gut", "beste"],
+    "answer": "am besten"
+  },
+  {
+    "question": "Dieses Fahrrad ist ___ und leichter als mein altes.",
+    "options": ["moderner", "modern", "am modernsten", "moderne"],
+    "answer": "moderner"
+  },
+  {
+    "question": "Von allen Zimmern im Hotel ist dieses das ___.",
+    "options": ["am größten", "größer", "groß", "größte"],
+    "answer": "am größten"
+  },
+  {
+    "question": "Heute ist der Unterricht viel ___ als gestern.",
+    "options": ["interessanter", "interessant", "am interessantesten", "interessante"],
+    "answer": "interessanter"
+  },
+  {
+    "question": "Von allen Prüfungen war die letzte die ___.",
+    "options": ["am schwierigsten", "schwieriger", "schwierigste", "schwierig"],
+    "answer": "am schwierigsten"
+  },
+  {
+    "question": "Mein Hund ist ___ und schneller als der deiner Freundin.",
+    "options": ["stärker", "stark", "am stärksten", "starke"],
+    "answer": "stärker"
+  },
+  {
+    "question": "Von allen Kleidern sieht dieses am ___.",
+    "options": ["am schönsten", "schöner", "schönste", "schön"],
+    "answer": "am schönsten"
+  },
+  {
+    "question": "Der Vortrag gestern war viel ___ als der am Montag.",
+    "options": ["klarer", "klar", "am klarsten", "klarste"],
+    "answer": "klarer"
+  },
+  {
+    "question": "Von allen Städten Europas finde ich Prag ___.",
+    "options": ["am schönsten", "schöner", "schönste", "schön"],
+    "answer": "am schönsten"
+  },
+  {
+    "question": "Meine Tasche ist ___ und praktischer als deine.",
+    "options": ["leichter", "leicht", "am leichtesten", "leichte"],
+    "answer": "leichter"
+  },
+  {
+    "question": "Von allen Kursen war der Sprachkurs der ___.",
+    "options": ["am interessantesten", "interessanter", "interessant", "interessanteste"],
+    "answer": "am interessantesten"
+  },
+  {
+    "question": "Heute ist es viel ___ als letzte Woche.",
+    "options": ["wärmer", "warm", "am wärmsten", "warmer"],
+    "answer": "wärmer"
+  },
+  {
+    "question": "Von allen Tieren im Zoo finde ich die Giraffe ___.",
+    "options": ["am schönsten", "schöner", "schönste", "schön"],
+    "answer": "am schönsten"
   }
 ]

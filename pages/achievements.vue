@@ -425,25 +425,25 @@ const achievementCategories = computed(() => [
   },
   {
     id: 'verbs',
-    name: 'Глаголы',
+    name: 'categoryAchievments.verbs',
     icon: '🎬',
     length: modeComputed.value.verbsTotal,
     submenu: [
       {
         id: 'tensesVerbs',
-        name: 'Спряжение и времена',
+        name: 'categoryAchievments.verbConjugation',
         icon: '🕰️',
         length: modeComputed.value.tensesVerbs,
       },
       {
         id: 'modalVerbs',
-        name: 'Модальные',
+        name: 'categoryAchievments.modal',
         icon: '🔑',
         length: modeComputed.value.modalVerbs,
       },
       {
         id: 'typeVerbs',
-        name: 'Типы глаголов',
+        name: 'categoryAchievments.typeVerbs',
         icon: '📂',
         length: modeComputed.value.typeVerbs,
       }
@@ -451,31 +451,31 @@ const achievementCategories = computed(() => [
   },
   {
     id: 'prepositiones',
-    name: 'Предлоги',
+    name: 'categoryAchievments.prepositions',
     icon: '📖',
     length: modeComputed.value.prepositiones,
     submenu: [
       {
         id: 'nominativ',
-        name: 'Номинатив',
+        name: 'categoryAchievments.nominative',
         icon: '👤',
         length: modeComputed.value.nominativ
       },
       {
         id: 'akkusativ',
-        name: 'Аккузатив',
+        name: 'categoryAchievments.accusative',
         icon: '🎯',
         length: modeComputed.value.akkusativ
       },
       {
         id: 'genitiv',
-        name: 'Генитив',
+        name: 'categoryAchievments.genitive',
         icon: '📖',
         length: modeComputed.value.genitiv
       },
       {
         id: 'dativ',
-        name: 'Датив',
+        name: 'categoryAchievments.dative',
         icon: '🤝',
         length: modeComputed.value.dativ
       }
@@ -483,25 +483,25 @@ const achievementCategories = computed(() => [
   },
   {
     id: 'adjectives',
-    name: 'Прилагательные',
+    name: 'categoryAchievments.adjectives',
     icon: '🌈',
     length: modeComputed.value.adjectiveTotal,
     submenu: [
       {
         id: 'adjectiveBasic',
-        name: 'Основы',
+        name: 'categoryAchievments.adjectiveBasic',
         icon: '🌱',
         length: modeComputed.value.adjectiveBasic
       },
       {
         id: 'adjectiveDeclension',
-        name: 'Склонение',
+        name: 'categoryAchievments.adjectiveDeclension',
         icon: '🌀',
         length: modeComputed.value.adjectiveDeclension
       },
       {
         id: 'adjectiveComparison',
-        name: 'Степень Сравнения',
+        name: 'categoryAchievments.adjectiveComparison',
         icon: '⚖️',
         length: modeComputed.value.adjectiveComparison
       },

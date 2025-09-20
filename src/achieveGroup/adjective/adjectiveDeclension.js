@@ -1,35 +1,35 @@
 export const adjectiveDeclension = [
 	{
-		title: 'После определённого артикля',
+		title: 'adjectiveDeclinationArticle.title',
 		achievements: [
 			{
 				id: 'def1',
-				name: 'Первый шаг с артиклем',
-				description: 'Ты правильно использовал первое прилагательное после определённого артикля',
+				name: 'adjectiveDeclinationArticle.firstName',
+				description: 'adjectiveDeclinationArticle.firstDescription',
 				icon: '📝',
 				currentProcess: 0,
 				targetProgress: 1
 			},
 			{
 				id: 'def2',
-				name: 'Страж грамматики',
-				description: 'Выполни 75 упражнений после определённого артикля',
+				name: 'adjectiveDeclinationArticle.secondName',
+				description: 'adjectiveDeclinationArticle.secondDescription',
 				icon: '🛡️',
 				currentProcess: 0,
-				targetProgress: 75
+				targetProgress: 20
 			},
 			{
 				id: 'def3',
-				name: 'Рыцарь склонений',
-				description: 'Выполни 150 упражнений после определённого артикля',
+				name: 'adjectiveDeclinationArticle.thirdName',
+				description: 'adjectiveDeclinationArticle.thirdDescription',
 				icon: '⚔️',
 				currentProcess: 0,
-				targetProgress: 150
+				targetProgress: 25
 			},
 			{
 				id: 'def4',
-				name: 'Мастер определённого артикля',
-				description: 'Покори все задания с прилагательными после определённого артикля',
+				name: 'adjectiveDeclinationArticle.fourthName',
+				description: 'adjectiveDeclinationArticle.fourthDescription',
 				icon: '👑',
 				currentProcess: 0,
 				targetProgress: 1
@@ -37,36 +37,36 @@ export const adjectiveDeclension = [
 		]
 	},
 	{
-		title: 'После неопределённого артикля',
+		title: 'adjectiveDeclinationUncertainArticle.title',
 		achievements: [
 			{
 				id: 'indef1',
-				name: 'Первое открытие',
-				description: 'Ты правильно использовал первое прилагательное после неопределённого артикля',
+				name: 'adjectiveDeclinationUncertainArticle.firstName',
+				description: 'adjectiveDeclinationUncertainArticle.firstDescription',
 				icon: '📖',
 				currentProcess: 0,
 				targetProgress: 1
 			},
 			{
 				id: 'indef2',
-				name: 'Искатель грамматики',
-				description: 'Выполни 75 упражнений после неопределённого артикля',
+				name: 'adjectiveDeclinationUncertainArticle.secondName',
+				description: 'adjectiveDeclinationUncertainArticle.secondDescription',
 				icon: '🔍',
 				currentProcess: 0,
 				targetProgress: 75
 			},
 			{
 				id: 'indef3',
-				name: 'Рыцарь неопределённости',
-				description: 'Выполни 150 упражнений после неопределённого артикля',
+				name: 'adjectiveDeclinationUncertainArticle.thirdName',
+				description: 'adjectiveDeclinationUncertainArticle.thirdDescription',
 				icon: '🗡️',
 				currentProcess: 0,
 				targetProgress: 150
 			},
 			{
 				id: 'indef4',
-				name: 'Мастер неопределённого артикля',
-				description: 'Покори все задания с прилагательными после неопределённого артикля',
+				name: 'adjectiveDeclinationUncertainArticle.fourthName',
+				description: 'adjectiveDeclinationUncertainArticle.fourthDescription',
 				icon: '👑',
 				currentProcess: 0,
 				targetProgress: 1
@@ -74,36 +74,36 @@ export const adjectiveDeclension = [
 		]
 	},
 	{
-		title: 'Без артикля',
+		title: 'adjectiveDeclinationWithoutArticle.title',
 		achievements: [
 			{
 				id: 'noart1',
-				name: 'Свободный штрих',
-				description: 'Ты правильно использовал первое прилагательное без артикля',
+				name: 'adjectiveDeclinationWithoutArticle.firstName',
+				description: 'adjectiveDeclinationWithoutArticle.firstDescription',
 				icon: '✏️',
 				currentProcess: 0,
 				targetProgress: 1
 			},
 			{
 				id: 'noart2',
-				name: 'Чистая форма',
-				description: 'Выполни 75 упражнений без артикля',
+				name: 'adjectiveDeclinationWithoutArticle.secondName',
+				description: 'adjectiveDeclinationWithoutArticle.secondDescription',
 				icon: '✨',
 				currentProcess: 0,
 				targetProgress: 75
 			},
 			{
 				id: 'noart3',
-				name: 'Воин чистого слова',
-				description: 'Выполни 150 упражнений без артикля',
+				name: 'adjectiveDeclinationWithoutArticle.thirdName',
+				description: 'adjectiveDeclinationWithoutArticle.thirdDescription',
 				icon: '⚡',
 				currentProcess: 0,
 				targetProgress: 150
 			},
 			{
 				id: 'noart4',
-				name: 'Мастер без артикля',
-				description: 'Покори все задания с прилагательными без артикля',
+				name: 'adjectiveDeclinationWithoutArticle.fourthName',
+				description: 'adjectiveDeclinationWithoutArticle.fourthDescription',
 				icon: '🏆',
 				currentProcess: 0,
 				targetProgress: 1

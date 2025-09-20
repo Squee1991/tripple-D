@@ -1,51 +1,51 @@
 export const prepositionsGenitiv = [
 	{
-		title: 'Генитив',
+		title: 'Genitiv',
 		achievements: [
 			{
 				id: 'gen1',
-				name: 'Начало пути',
-				description: 'Ты правильно вставил первый предлог в Genitiv!',
+				name: 'prepositionsGenitiv.firstName',
+				description: 'prepositionsGenitiv.firstDescription',
 				icon: '📗',
 				currentProcess: 0,
 				targetProgress: 1
 			},
 			{
 				id: 'gen2',
-				name: 'Грамматический страж',
-				description: 'Вставь правильно 50 предлогов подряд в Genitiv',
-				icon: '✅',
+				name: 'prepositionsGenitiv.secondName',
+				description: 'prepositionsGenitiv.secondDescription',
+				icon: '🗿',
 				currentProcess: 0,
-				targetProgress: 50
+				targetProgress: 75
 			},
 			{
 				id: 'gen3',
-				name: 'Владыка Genitiv',
-				description: 'Освой 150 правильных предлогов в Genitiv',
+				name: 'prepositionsGenitiv.thirdName',
+				description: 'prepositionsGenitiv.thirdDescription',
 				icon: '👑',
 				currentProcess: 0,
 				targetProgress: 150
 			},
 			{
 				id: 'gen4',
-				name: 'Идеальная сессия',
-				description: 'Пройди 15 сессий в Genitiv без единой ошибки',
+				name: 'prepositionsGenitiv.fourthName',
+				description: 'prepositionsGenitiv.fourthDescription',
 				icon: '💯',
 				currentProcess: 0,
 				targetProgress: 15
 			},
 			{
 				id: 'gen5',
-				name: 'Быстрый ум',
-				description: 'Заверши 15 сессий в Genitiv без ошибок меньше чем за минуту',
+				name: 'prepositionsGenitiv.fifthName',
+				description: 'prepositionsGenitiv.fifthDescription',
 				icon: '⚡',
 				currentProcess: 0,
 				targetProgress: 15
 			},
 			{
 				id: 'gen6',
-				name: 'Мастер Генитивиус',
-				description: 'Выполни все достижения с предлогами в Genitiv',
+				name: 'prepositionsGenitiv.sixthName',
+				description: 'prepositionsGenitiv.sixthDescription',
 				icon: '🎓',
 				currentProcess: 0,
 				targetProgress: 1
