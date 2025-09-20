@@ -1,68 +1,73 @@
-import { defineStore } from 'pinia'
-import { ref, watch, watchEffect } from 'vue'
-import { getFirestore, doc, onSnapshot } from 'firebase/firestore'
-import { getAuth } from 'firebase/auth'
+import {defineStore} from 'pinia'
+import {ref, watch, watchEffect} from 'vue'
+import {getFirestore, doc, onSnapshot} from 'firebase/firestore'
+import {getAuth} from 'firebase/auth'
 
 // 1) Импорты всех групп достижений
-import { overAchievment } from '../src/achieveGroup/overAllAchieve/overallAchievements.js'
-import { wordAchievementsGroup } from '../src/achieveGroup/wordGroup/wordAchievements.js'
-import { groupedEasyModeAchievements } from '../src/achieveGroup/marathon/easyModeAchievment.js'
-import { groupedNormalModeAchievements } from '../src/achieveGroup/marathon/normalModeAchievement.js'
-import { groupedHardModeAchievements } from '../src/achieveGroup/marathon/hardModeAchievments.js'
-import { listenAchieveGroup } from '../src/achieveGroup/article/listen.js'
-import { pluraGroupAchievment } from '../src/achieveGroup/article/plural.js'
-import { writeArticleGroupAchievment } from '../src/achieveGroup/article/writeArticle.js'
-import { wordPlusArticleAchievment } from '../src/achieveGroup/article/wordPlusArticle.js'
-import { assembleWordGroupAchievement } from '../src/achieveGroup/article/wordsFromLetters.js'
-import { cpecialGroupAchievment } from '../src/achieveGroup/specialAchieve/specialAchievment.js'
-import { prepositionsNominativ } from '../src/achieveGroup/prepositions/prepNominativ.js'
-import { prepositionsAkkusativ } from '../src/achieveGroup/prepositions/prepAkkusativ.js'
-import { prepositionsGenitiv } from '../src/achieveGroup/prepositions/prepGenitiv.js'
-import { prepositionsDativ } from '../src/achieveGroup/prepositions/prepDativ.js'
-import { adjectiveBasic } from '../src/achieveGroup/adjective/adjectiveBasic.js'
-import { adjectiveDeclension } from '../src/achieveGroup/adjective/adjectiveDeclension.js'
-import { adjectiveComparison } from '../src/achieveGroup/adjective/adjectiveComparison.js'
-import { tensesVerbs} from "../src/achieveGroup/verbs/tensesVerbs.js";
-import { modalVerbs } from "../src/achieveGroup/verbs/modalVerbs.js";
-import { typeVerbs} from "../src/achieveGroup/verbs/typeVerbs.js";
+import {overAchievment} from '../src/achieveGroup/overAllAchieve/overallAchievements.js'
+import {wordAchievementsGroup} from '../src/achieveGroup/wordGroup/wordAchievements.js'
+import {groupedEasyModeAchievements} from '../src/achieveGroup/marathon/easyModeAchievment.js'
+import {groupedNormalModeAchievements} from '../src/achieveGroup/marathon/normalModeAchievement.js'
+import {groupedHardModeAchievements} from '../src/achieveGroup/marathon/hardModeAchievments.js'
+import {listenAchieveGroup} from '../src/achieveGroup/article/listen.js'
+import {pluraGroupAchievment} from '../src/achieveGroup/article/plural.js'
+import {writeArticleGroupAchievment} from '../src/achieveGroup/article/writeArticle.js'
+import {wordPlusArticleAchievment} from '../src/achieveGroup/article/wordPlusArticle.js'
+import {assembleWordGroupAchievement} from '../src/achieveGroup/article/wordsFromLetters.js'
+import {cpecialGroupAchievment} from '../src/achieveGroup/specialAchieve/specialAchievment.js'
+import {prepositionsNominativ} from '../src/achieveGroup/prepositions/prepNominativ.js'
+import {prepositionsAkkusativ} from '../src/achieveGroup/prepositions/prepAkkusativ.js'
+import {prepositionsGenitiv} from '../src/achieveGroup/prepositions/prepGenitiv.js'
+import {prepositionsDativ} from '../src/achieveGroup/prepositions/prepDativ.js'
+import {adjectiveBasic} from '../src/achieveGroup/adjective/adjectiveBasic.js'
+import {adjectiveDeclension} from '../src/achieveGroup/adjective/adjectiveDeclension.js'
+import {adjectiveComparison} from '../src/achieveGroup/adjective/adjectiveComparison.js'
+import {tensesVerbs} from "../src/achieveGroup/verbs/tensesVerbs.js";
+import {modalVerbs} from "../src/achieveGroup/verbs/modalVerbs.js";
+import {typeVerbs} from "../src/achieveGroup/verbs/typeVerbs.js";
+import {sentenceAchievement} from "../src/achieveGroup/sentenceDuel/sentenceAchievementsА1.js"
+
 
 // 2) Сторы-источники
-import { userChainStore } from '../store/chainStore.js'
-import { userAuthStore } from '../store/authStore.js'
-import { useQuestStore } from '../store/questStore.js'
-import { userlangStore } from '../store/learningStore.js'
-import { useLocalStatGameStore } from '../store/localSentenceStore.js'
-import { useCardsStore } from '../store/cardsStore.js'
-import { useGameStore } from '../store/marafonStore.js'
-import { useGuessWordStore } from '../store/guesStore.js'
-import { achievementToAwardMap } from '../src/awards/awardsMap.js'
-import { guessAchievment } from '../src/achieveGroup/guessAchieve/guessAchievments.js'
-import { useQuizStore } from '../store/adjectiveStore.js'
+import {userChainStore} from '../store/chainStore.js'
+import {userAuthStore} from '../store/authStore.js'
+import {useQuestStore} from '../store/questStore.js'
+import {userlangStore} from '../store/learningStore.js'
+import {useLocalStatGameStore} from '../store/localSentenceStore.js'
+import {useCardsStore} from '../store/cardsStore.js'
+import {useGameStore} from '../store/marafonStore.js'
+import {useGuessWordStore} from '../store/guesStore.js'
+import {achievementToAwardMap} from '../src/awards/awardsMap.js'
+import {guessAchievment} from '../src/achieveGroup/guessAchieve/guessAchievments.js'
+import {useQuizStore} from '../store/adjectiveStore.js'
+
+
 
 export const useAchievementStore = defineStore('achievementStore', () => {
     const rawGroups = [
-        ...typeVerbs.map(g => ({ category: 'typeVerbs', ...g })),
-        ...modalVerbs.map(g => ({ category: 'modalVerbs', ...g })),
-        ...tensesVerbs.map(g => ({ category: 'tensesVerbs', ...g })),
-        ...adjectiveComparison.map(g => ({ category: 'adjectiveComparison', ...g })),
-        ...adjectiveBasic.map(g => ({ category: 'basicAdjectives', ...g })),
-        ...adjectiveDeclension.map(g => ({ category: 'adjectiveDeclension', ...g })),
-        ...prepositionsDativ.map(g => ({ category: 'dativ', ...g })),
-        ...prepositionsNominativ.map(g => ({ category: 'nominativ', ...g })),
-        ...prepositionsGenitiv.map(g => ({ category: 'genitiv', ...g })),
-        ...prepositionsAkkusativ.map(g => ({ category: 'akkusativ', ...g })),
-        ...wordAchievementsGroup.map(g => ({ category: 'locations', ...g })),
-        ...overAchievment.map(g => ({ category: 'over', ...g })),
-        ...guessAchievment.map(g => ({ category: 'guess', ...g })),
-        ...groupedEasyModeAchievements.map(g => ({ category: 'easy', ...g })),
-        ...groupedNormalModeAchievements.map(g => ({ category: 'normal', ...g })),
-        ...groupedHardModeAchievements.map(g => ({ category: 'hard', ...g })),
-        ...listenAchieveGroup.map(g => ({ category: 'listen', ...g })),
-        ...pluraGroupAchievment.map(g => ({ category: 'plural', ...g })),
-        ...writeArticleGroupAchievment.map(g => ({ category: 'write', ...g })),
-        ...wordPlusArticleAchievment.map(g => ({ category: 'wordArticle', ...g })),
-        ...assembleWordGroupAchievement.map(g => ({ category: 'letters', ...g })),
-        ...cpecialGroupAchievment.map(g => ({ category: 'special', ...g }))
+        ...sentenceAchievement.map(g => ({category: 'sentence', ...g})),
+        ...typeVerbs.map(g => ({category: 'typeVerbs', ...g})),
+        ...modalVerbs.map(g => ({category: 'modalVerbs', ...g})),
+        ...tensesVerbs.map(g => ({category: 'tensesVerbs', ...g})),
+        ...adjectiveComparison.map(g => ({category: 'adjectiveComparison', ...g})),
+        ...adjectiveBasic.map(g => ({category: 'basicAdjectives', ...g})),
+        ...adjectiveDeclension.map(g => ({category: 'adjectiveDeclension', ...g})),
+        ...prepositionsDativ.map(g => ({category: 'dativ', ...g})),
+        ...prepositionsNominativ.map(g => ({category: 'nominativ', ...g})),
+        ...prepositionsGenitiv.map(g => ({category: 'genitiv', ...g})),
+        ...prepositionsAkkusativ.map(g => ({category: 'akkusativ', ...g})),
+        ...wordAchievementsGroup.map(g => ({category: 'locations', ...g})),
+        ...overAchievment.map(g => ({category: 'over', ...g})),
+        ...guessAchievment.map(g => ({category: 'guess', ...g})),
+        ...groupedEasyModeAchievements.map(g => ({category: 'easy', ...g})),
+        ...groupedNormalModeAchievements.map(g => ({category: 'normal', ...g})),
+        ...groupedHardModeAchievements.map(g => ({category: 'hard', ...g})),
+        ...listenAchieveGroup.map(g => ({category: 'listen', ...g})),
+        ...pluraGroupAchievment.map(g => ({category: 'plural', ...g})),
+        ...writeArticleGroupAchievment.map(g => ({category: 'write', ...g})),
+        ...wordPlusArticleAchievment.map(g => ({category: 'wordArticle', ...g})),
+        ...assembleWordGroupAchievement.map(g => ({category: 'letters', ...g})),
+        ...cpecialGroupAchievment.map(g => ({category: 'special', ...g}))
     ]
 
     // --- 2) Инициализация групп с currentProgress:0 ---
@@ -82,15 +87,15 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 
 
     const bootUnlocked = [] // ачивки
-    const bootAwards   = [] // награды
+    const bootAwards = [] // награды
     const db = getFirestore()
     const auth = getAuth()
-    const authStore  = userAuthStore()
+    const authStore = userAuthStore()
     const questStore = useQuestStore()
-    const langStore  = userlangStore()
+    const langStore = userlangStore()
     const statsStore = useLocalStatGameStore()
-    const cardStore  = useCardsStore()
-    const gameStore  = useGameStore()
+    const cardStore = useCardsStore()
+    const gameStore = useGameStore()
     const guessStore = useGuessWordStore()
     const chainStore = userChainStore()
     const popupQueue = ref([])
@@ -100,34 +105,45 @@ export const useAchievementStore = defineStore('achievementStore', () => {
     const prevMap = new Map()
 
 
-    const awardsKey    = () => `awards_shown_v1_${authStore?.uid }`
-    const completedKey = () => `achievements_completed_v1_${authStore?.uid }`
+    const awardsKey = () => `awards_shown_v1_${authStore?.uid}`
+    const completedKey = () => `achievements_completed_v1_${authStore?.uid}`
 
 
-    function loadShown () {
+    function loadShown() {
         if (!process.client) return new Set()
         try {
             const raw = localStorage.getItem(awardsKey())
             return new Set(raw ? JSON.parse(raw) : [])
-        } catch { return new Set() }
+        } catch {
+            return new Set()
+        }
     }
-    function saveShown (set) {
+
+    function saveShown(set) {
         if (!process.client) return
-        try { localStorage.setItem(awardsKey(), JSON.stringify([...set])) } catch {}
+        try {
+            localStorage.setItem(awardsKey(), JSON.stringify([...set]))
+        } catch {
+        }
     }
+
     let shownSet = loadShown()
 
-    function loadCompleted () {
+    function loadCompleted() {
         if (!process.client) return new Set()
         try {
             const raw = localStorage.getItem(completedKey())
             return new Set(raw ? JSON.parse(raw) : [])
-        } catch { return new Set() }
+        } catch {
+            return new Set()
+        }
     }
-    function saveCompleted (set) {
+
+    function saveCompleted(set) {
         if (!process.client) return
         try { localStorage.setItem(completedKey(), JSON.stringify([...set])) } catch {}
     }
+
     let completedSet = loadCompleted()
 
     // Перезагрузка наборов при смене пользователя
@@ -138,7 +154,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 
     const isBooting = ref(true)
 
-    function findById (id) {
+    function findById(id) {
         for (const g of groups.value) {
             const ach = g.achievements.find(a => a.id === id)
             if (ach) return ach
@@ -146,14 +162,14 @@ export const useAchievementStore = defineStore('achievementStore', () => {
         return null
     }
 
-    function showNextPopup () {
+    function showNextPopup() {
         if (!showPopup.value && popupQueue.value.length) {
             popupAchievement.value = popupQueue.value.shift()
             showPopup.value = true
         }
     }
 
-    function closePopup () {
+    function closePopup() {
         showPopup.value = false
         showNextPopup()
     }
@@ -314,27 +330,31 @@ export const useAchievementStore = defineStore('achievementStore', () => {
                 const u2 = onSnapshot(sessRef, s => { lastSess = s.data() || {}; applyPrepositionSnapshots(prefix, lastAgg, lastSess) })
                 adjectivesUnsubs.push(u1, u2)
             })
-        }, { immediate: true })
+        }, {immediate: true})
         // 5.1) over
         const baseTrackers = [
-            { id: 'registerAchievement', source: () => authStore.uid,                       compute: (u) => (u ? 1 : 0) },
-            { id: 'daily',               source: () => questStore.dailyQuestCount,          compute: (v) => v || 0 },
-            { id: 'levelUpExp',          source: () => langStore.exp,                       compute: (v) => v || 0 },
-            { id: 'grandmaster_sentences', source: () => statsStore.constructedSentences,   compute: (v) => v || 0 },
-            { id: 'learned10Words',      source: () => langStore.learnedWords.length,       compute: (v) => v },
-            { id: 'learned100Words',     source: () => langStore.learnedWords.length,       compute: (v) => v },
-            { id: 'wrong100Answers',     source: () => langStore.wrongAnswers.length,       compute: (v) => v },
-            {id: 'SiteRegular', source: () => authStore.registeredAt, compute: (d) => (d ? Math.max(0, Math.floor((Date.now() - new Date(d).getTime()) / 86400000)) : 0)},
-            { id: 'createdCountCard',    source: () => cardStore.createdCount,              compute: (v) => v || 0 },
-            { id: 'LastChance',          source: () => gameStore.lastChanceProgress,        compute: (v) => v || 0 },
-            { id: 'MarginForError',      source: () => gameStore.marginForErrorProgress,    compute: (v) => v || 0 },
-            { id: 'OnTheEdge',           source: () => gameStore.onTheEdgeProgress,         compute: (v) => v || 0 },
-            { id: 'firstArticleAward',   source: () => langStore.totalEarnedPoints,         compute: (v) => (v > 0 ? 1 : 0) },
-            { id: 'guessFirst',          source: () => guessStore.guessedWords.length,      compute: (v) => v },
-            { id: 'guessSecond',         source: () => guessStore.guessedWords.length,      compute: (v) => v },
-            { id: 'guessThird',          source: () => guessStore.guessedWords.length,      compute: (v) => v },
-            { id: 'guessFourth',         source: () => guessStore.guessedWords.length,      compute: (v) => v },
-            { id: 'guessSixHundred',     source: () => guessStore.guessedWords.length,      compute: (v) => v },
+            {id: 'registerAchievement', source: () => authStore.uid, compute: (u) => (u ? 1 : 0)},
+            {id: 'daily', source: () => questStore.dailyQuestCount, compute: (v) => v || 0},
+            {id: 'levelUpExp', source: () => langStore.exp, compute: (v) => v || 0},
+            {id: 'grandmaster_sentences', source: () => statsStore.constructedSentences, compute: (v) => v || 0},
+            {id: 'learned10Words', source: () => langStore.learnedWords.length, compute: (v) => v},
+            {id: 'learned100Words', source: () => langStore.learnedWords.length, compute: (v) => v},
+            {id: 'wrong100Answers', source: () => langStore.wrongAnswers.length, compute: (v) => v},
+            {
+                id: 'SiteRegular',
+                source: () => authStore.registeredAt,
+                compute: (d) => (d ? Math.max(0, Math.floor((Date.now() - new Date(d).getTime()) / 86400000)) : 0)
+            },
+            {id: 'createdCountCard', source: () => cardStore.createdCount, compute: (v) => v || 0},
+            {id: 'LastChance', source: () => gameStore.lastChanceProgress, compute: (v) => v || 0},
+            {id: 'MarginForError', source: () => gameStore.marginForErrorProgress, compute: (v) => v || 0},
+            {id: 'OnTheEdge', source: () => gameStore.onTheEdgeProgress, compute: (v) => v || 0},
+            {id: 'firstArticleAward', source: () => langStore.totalEarnedPoints, compute: (v) => (v > 0 ? 1 : 0)},
+            {id: 'guessFirst', source: () => guessStore.guessedWords.length, compute: (v) => v},
+            {id: 'guessSecond', source: () => guessStore.guessedWords.length, compute: (v) => v},
+            {id: 'guessThird', source: () => guessStore.guessedWords.length, compute: (v) => v},
+            {id: 'guessFourth', source: () => guessStore.guessedWords.length, compute: (v) => v},
+            {id: 'guessSixHundred', source: () => guessStore.guessedWords.length, compute: (v) => v},
         ]
 
         baseTrackers.forEach(({ id, source, compute }) => {
@@ -365,7 +385,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
                         .filter(a => a.type === 'streak')
                         .forEach(a => updateProgress(a.id, v))
                     ),
-                { immediate: true }
+                {immediate: true}
             )
         })
 

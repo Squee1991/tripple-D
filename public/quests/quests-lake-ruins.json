@@ -218,10 +218,10 @@
         "question": "questLakeRuinsSecondQuests.questOne",
         "options": [
           "questLakeRuinsSecondQuests.questOneFirstOption",
-          "questLakeRuinsSecondQuests.questOneSecondOption,",
+          "questLakeRuinsSecondQuests.questOneSecondOption",
           "questLakeRuinsSecondQuests.questOneThirdOption"
         ],
-        "answer": "questLakeRuinsSecondQuests"
+        "answer": "questLakeRuinsSecondQuests.questOneFirstOption"
       },
       {
         "id": 2,
@@ -243,7 +243,7 @@
           "questLakeRuinsSecondQuests.questTreeSecondOption",
           "questLakeRuinsSecondQuests.questTreeThirdOption"
         ],
-        "answer": "questTreeFirstOption"
+        "answer": "questLakeRuinsSecondQuests.questTreeFirstOption"
       },
       {
         "id": 4,
@@ -320,7 +320,7 @@
           "questLakeRuinsSecondQuests.questNineSecondOption",
           "questLakeRuinsSecondQuests.questNineThirdOption"
         ],
-        "answer": "questLakeRuinsSecondQuests.questNineThirdOption"
+        "answer": "questLakeRuinsSecondQuests.questNineFirstOption"
       },
       {
         "id": 10,
@@ -458,11 +458,11 @@
         "type": "reorder",
         "question": "questLakeRuinsThirdQuests.questFive",
         "words": [
+          "neblig",
           "Heute",
-          "Abend",
           "ist",
-          "es",
-          "neblig"
+          "Abend",
+          "es"
         ],
         "correctOrder": [
           "Heute",
@@ -484,10 +484,10 @@
         "type": "reorder",
         "question": "questLakeRuinsThirdQuests.questSeven",
         "words": [
+          "trocken",
           "Morgen",
           "wird",
-          "es",
-          "trocken"
+          "es"
         ],
         "correctOrder": [
           "Morgen",
@@ -520,11 +520,11 @@
         "type": "reorder",
         "question": "questLakeRuinsThirdQuests.questTen",
         "words": [
-          "Heute",
           "ist",
           "die",
           "Luft",
-          "schwül"
+          "schwül",
+          "Heute"
         ],
         "correctOrder": [
           "Heute",
@@ -569,11 +569,11 @@
         "type": "reorder",
         "question": "questLakeRuinsThirdQuests.questFourteen",
         "words": [
-          "Es",
           "gibt",
           "Nebel",
           "am",
-          "Morgen"
+          "Morgen",
+          "Es"
         ],
         "correctOrder": [
           "Es",
@@ -621,7 +621,7 @@
       {
         "id": 2,
         "type": "select",
-        "question": "questLakeRuinsFourthQuests",
+        "question": "questLakeRuinsFourthQuests.questTwo",
         "options": [
           "questLakeRuinsFourthQuests.questTwoFirstOption",
           "questLakeRuinsFourthQuests.questTwoSecondOption",
@@ -657,10 +657,10 @@
         "question": "questLakeRuinsFourthQuests.questFive",
         "words": [
           "Heute",
-          "Abend",
-          "gibt",
+          "Sturm",
           "es",
-          "Sturm"
+          "Abend",
+          "gibt"
         ],
         "correctOrder": [
           "Heute",
@@ -683,9 +683,9 @@
         "question": "questLakeRuinsFourthQuests.questSeven",
         "words": [
           "Der",
+          "grau",
           "Himmel",
-          "ist",
-          "grau"
+          "ist"
         ],
         "correctOrder": [
           "Der",
@@ -730,8 +730,8 @@
         "question": "questLakeRuinsFourthQuests.questEleven",
         "words": [
           "Ich",
-          "nehme",
           "den",
+          "nehme",
           "Regenmantel"
         ],
         "correctOrder": [
@@ -769,9 +769,9 @@
         "question": "questLakeRuinsFourthQuests.questFourteen",
         "words": [
           "Am",
+          "Wolken",
           "Himmel",
-          "sind",
-          "Wolken"
+          "sind"
         ],
         "correctOrder": [
           "Am",
@@ -996,7 +996,7 @@
       {
         "id": 1,
         "type": "select",
-        "question": "",
+        "question": "questLakeRuinsSixthQuests.questOne",
         "options": [
           "questLakeRuinsSixthQuests.questOneFirstOption",
           "questLakeRuinsSixthQuests.questOneSecondOption",
@@ -1144,11 +1144,11 @@
         "text": "Heute über 30 Grad. Am Nachmittag wird es sehr heiß.",
         "question": "",
         "options": [
-          "questLakeRuinsSixthQuests°.questThirteenFirstOption",
+          "questLakeRuinsSixthQuests.questThirteenFirstOption",
           "questLakeRuinsSixthQuests.questThirteenSecondOption",
           "questLakeRuinsSixthQuests.questThirteenThirdOption"
         ],
-        "answer": "questLakeRuinsSixthQuests°.questThirteenFirstOption"
+        "answer": "questLakeRuinsSixthQuests.questThirteenFirstOption"
       },
       {
         "id": 14,
@@ -1405,11 +1405,11 @@
         "question": "questLakeRuinsEighthQuests.questThird",
         "words": [
           "Heute",
-          "ist",
-          "es",
           "sonnig",
-          "und",
-          "warm"
+          "ist",
+          "warm",
+          "es",
+          "und"
         ],
         "correctOrder": [
           "Heute",
@@ -1461,8 +1461,8 @@
         ],
         "correctOrder": [
           "Die",
-          "Temperatur",
-          "steigt"
+          "steigt",
+          "Temperatur"
         ]
       },
       {
@@ -1502,11 +1502,11 @@
         "words": [
           "Ich",
           "brauche",
+          "Mütze",
           "eine",
-          "Jacke",
           "und",
-          "eine",
-          "Mütze"
+          "Jacke",
+          "eine"
         ],
         "correctOrder": [
           "Ich",
@@ -1541,9 +1541,9 @@
         "type": "reorder",
         "question": "questLakeRuinsEighthQuests.questFourteen",
         "words": [
-          "Im",
-          "Winter",
           "schneit",
+          "Winter",
+          "Im",
           "es",
           "oft"
         ],
@@ -1587,7 +1587,7 @@
       {
         "id": 1,
         "type": "select",
-        "question": "",
+        "question": "questLakeRuinsNinthQuests.questOne",
         "options": [
           "questLakeRuinsNinthQuests.questOneFirstOption",
           "questLakeRuinsNinthQuests.questOneSecondOption",
@@ -1599,7 +1599,7 @@
         "id": 2,
         "type": "readAndAnswer",
         "text": "Berlin: Morgens ist es bewölkt, nachmittags sonnig.",
-        "question": "",
+        "question": "questLakeRuinsNinthQuests.questTwo",
         "options": [
           "questLakeRuinsNinthQuests.questTwoFirstOption",
           "questLakeRuinsNinthQuests.questTwoSecondOption",
@@ -1763,8 +1763,8 @@
       },
       {
         "id": 15,
-        "type": "speechToText.questFifteen",
-        "question": "questLakeRuinsNinthQuests",
+        "type": "speechToText",
+        "question": "questLakeRuinsNinthQuests.questFifteen",
         "text": "Es bleibt bewölkt",
         "answer": "Es bleibt bewölkt"
       }

@@ -45,7 +45,9 @@
               <span v-html="highlightedQuestion"></span>
             </template>
             <template v-else>
-              {{ t(questStore.task.question) }}
+                <template v-if="questStore.task?.question">
+                    {{ t(questStore.task.question) }}
+                </template>
             </template>
           </div>
           <div class="quest__body">
@@ -226,10 +228,20 @@ const showRevive = computed(() =>
 )
 
 const highlightedQuestion = computed(() => {
-  if (!questStore.task) return ''
-  if (questStore.task.type !== 'input') return t(questStore.task.question)
-  const cls = questStore.isCorrect ? 'filled-answer-correct' : 'filled-answer-wrong'
-  return questStore.task.question.replace('___', `<strong class="${cls}">${questStore.correctAnswer}</strong>`)
+    if (!questStore.task || !questStore.task.question) {
+        return '';
+    }
+    try {
+        if (questStore.task.type !== 'input') {
+            return t(questStore.task.question);
+        }
+    } catch (e) {
+        // Если t() выбрасывает ошибку, возвращаем исходный текст
+        return questStore.task.question;
+    }
+
+    const cls = questStore.isCorrect ? 'filled-answer-correct' : 'filled-answer-wrong'
+    return questStore.task.question.replace('___', `<strong class="${cls}">${questStore.correctAnswer}</strong>`)
 })
 
 function goThemes() {

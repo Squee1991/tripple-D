@@ -83,7 +83,7 @@ import {userlangStore} from "~/store/learningStore.js";
 import {userAuthStore} from '../../store/authStore.js'
 import {useRouter} from "vue-router";
 import {useFriendsStore} from '../../store/friendsStore.js'
-import {onMounted, ref} from "vue";
+import {onMounted, ref,watch} from "vue";
 
 const {t} = useI18n()
 const langStore = userlangStore()
@@ -91,6 +91,13 @@ const userAuth = userAuthStore()
 const router = useRouter()
 const friendsStore = useFriendsStore()
 const isArticleOpen = ref(false)
+const handleLeveling = () => {
+    const LEVEL_UP_XP = 100
+    if (langStore.exp >= LEVEL_UP_XP) {
+        langStore.isLeveling++
+        langStore.exp -= LEVEL_UP_XP
+    }
+}
 
 const istPremiumComputedStatus = computed(() => userAuth.isPremium ? 'Активна' : 'Не активна')
 
@@ -117,7 +124,9 @@ const articleData = ref({
     {id: 3, text: t('articleOverlay.third')},
   ]
 })
-
+watch(() => langStore.exp, (newVal) => {
+    handleLeveling()
+})
 onMounted(() => {
   friendsStore.loadFriends()
 })
@@ -463,8 +472,8 @@ onMounted(() => {
 }
 
 .super-card__cta:active {
-  transform: translate(3px, 3px);
-  box-shadow: 1px 1px 0 #111;
+    transform: translate(3px, 3px);
+    box-shadow: 1px 1px 0 #111;
 }
 
 .sub__text {
@@ -474,5 +483,6 @@ onMounted(() => {
   padding: 10px 0;
   color: var(--titleColor);
 }
+
 
 </style>

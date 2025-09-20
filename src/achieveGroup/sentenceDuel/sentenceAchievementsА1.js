@@ -10,6 +10,15 @@ export const sentenceAchievement = [
                 currentProgress: 0,
                 targetProgress: 1,
             },
+
+            {
+                id: 'a1_streaks_5',
+                name: 'На волне',
+                description: 'Победить в 5 играх подряд на уровне A1.',
+                icon: '🔥',
+                currentProgress: 0,
+                targetProgress: 5,
+            },
             {
                 id: 'a1_streaks_3',
                 name: 'На волне',
@@ -19,7 +28,16 @@ export const sentenceAchievement = [
                 targetProgress: 3,
             },
             {
-                id: 'a1_flawlessWins_5',
+                id: 'a1_streaks_10',
+                name: 'На волне',
+                description: 'Победить в 10 играх подряд на уровне A1.',
+                icon: '🔥',
+                currentProgress: 0,
+                targetProgress: 10,
+            },
+
+            {
+                id: 'a1_cleanSweeps_5',
                 name: 'Чистый старт',
                 description: 'Выиграть 5 игр на уровне А1, не допустив ни одной ошибки.',
                 icon: '✨',

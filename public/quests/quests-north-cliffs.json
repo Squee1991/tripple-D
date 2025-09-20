@@ -17,7 +17,7 @@
       {
         "id": 1,
         "type": "select",
-        "question": "",
+        "question": "questsNorthCliffsFirstQuests.questOne",
         "options": [
           "questsNorthCliffsFirstQuests.questOneFirstOption",
           "questsNorthCliffsFirstQuests.questOneSecondOption",
@@ -28,7 +28,7 @@
       {
         "id": 2,
         "type": "select",
-        "question": "",
+        "question": "questsNorthCliffsFirstQuests.questTwo",
         "options": [
           "questsNorthCliffsFirstQuests.questTwoFirstOption",
           "questsNorthCliffsFirstQuests.questTwoSecondOption",
@@ -309,7 +309,7 @@
           "questsNorthCliffsSecondQuests.questNineSecondOption",
           "questsNorthCliffsSecondQuests.questNineThirdOption"
         ],
-        "answer": "questNineFirstOption"
+        "answer": "questsNorthCliffsSecondQuests.questNineFirstOption"
       },
       {
         "id": 10,
@@ -430,7 +430,7 @@
           "questsNorthCliffsThirdQuests.questThirdSecondOption",
           "questsNorthCliffsThirdQuests.questThirdThirdOption"
         ],
-        "answer": "Полотенце"
+        "answer": "questsNorthCliffsThirdQuests.questThirdFirstOption"
       },
       {
         "id": 4,
@@ -555,8 +555,8 @@
         "type": "reorder",
         "question": "questsNorthCliffsThirdQuests.questFourteen",
         "words": [
-          "Bitte",
           "nicht",
+          "Bitte",
           "stören"
         ],
         "correctOrder": [
@@ -603,7 +603,7 @@
       {
         "id": 2,
         "type": "select",
-        "question": "",
+        "question": "questsNorthCliffsFourthQuests.questTwo",
         "options": [
           "questsNorthCliffsFourthQuests.questTwoFirstOption",
           "questsNorthCliffsFourthQuests.questTwoSecondOption",
@@ -639,7 +639,7 @@
         "question": "questsNorthCliffsFourthQuests.questFive",
         "words": [
           "Aufzug",
-          "ист",
+          "ist",
           "der",
           "Wo"
         ],
@@ -747,11 +747,11 @@
         "type": "reorder",
         "question": "questsNorthCliffsFourthQuests.questFourteen",
         "words": [
-          "Können",
           "Sie",
           "mir",
-          "die",
           "Rechnung",
+          "die",
+          "Können",
           "geben"
         ],
         "correctOrder": [
@@ -790,13 +790,13 @@
       {
         "id": 1,
         "type": "select",
-        "question": "",
+        "question": "questsNorthCliffsFifthQuests.questOne",
         "options": [
           "questsNorthCliffsFifthQuests.questOneFirstOption",
           "questsNorthCliffsFifthQuests.questOneSecondOption",
           "questsNorthCliffsFifthQuests.questOneThirdOption"
         ],
-        "answer": "questOneFirstOption"
+        "answer": "questsNorthCliffsFifthQuests.questOneFirstOption"
       },
       {
         "id": 2,
@@ -983,7 +983,7 @@
           "questsNorthCliffsSixthQuests.questOneSecondOption",
           "questsNorthCliffsSixthQuests.questOneThirdOption"
         ],
-        "answer": "questOneFirstOption"
+        "answer": "questsNorthCliffsSixthQuests.questOneFirstOption"
       },
       {
         "id": 2,
@@ -1128,10 +1128,10 @@
         "type": "reorder",
         "question": "questsNorthCliffsSixthQuests.questThirteen",
         "words": [
-          "Ich",
-          "brauche",
           "eine",
-          "Quittung"
+          "Ich",
+          "Quittung",
+          "brauche"
         ],
         "correctOrder": [
           "Ich",
@@ -1345,11 +1345,11 @@
         "text": "Achtung: Das WLAN funktioniert nicht. Bitte nicht stören.",
         "question": "questsNorthCliffsSeventhQuests.questFourteen",
         "options": [
-          "questsNorthCliffsSeventhQuests",
-          "questsNorthCliffsSeventhQuests",
-          "questsNorthCliffsSeventhQuests"
+          "questsNorthCliffsSeventhQuests.FirstOption",
+          "questsNorthCliffsSeventhQuests.SecondOption",
+          "questsNorthCliffsSeventhQuests.ThirdOption"
         ],
-        "answer": "Wi-Fi"
+        "answer": "questsNorthCliffsSeventhQuests.FirstOption"
       },
       {
         "id": 15,
@@ -1991,9 +1991,9 @@
         "question": "questsNorthCliffsEleventhQuests.questTwo",
         "words": [
           "Ich",
+          "Schlüsselkarte",
           "brauche",
-          "die",
-          "Schlüsselkarte"
+          "die"
         ],
         "correctOrder": [
           "Ich",
@@ -2177,10 +2177,10 @@
         "type": "reorder",
         "question": "questsNorthCliffsTwelfthQuests.questTwo",
         "words": [
-          "Ein",
-          "Doppelzimmer",
           "für",
+          "Doppelzimmer",
           "zwei",
+          "Ein",
           "Nächte"
         ],
         "correctOrder": [
@@ -2226,10 +2226,10 @@
         "type": "reorder",
         "question": "questsNorthCliffsTwelfthQuests.questSix",
         "words": [
-          "Wo",
           "ist",
-          "der",
           "Bahnsteig",
+          "der",
+          "Wo",
           "2"
         ],
         "correctOrder": [
@@ -2276,9 +2276,9 @@
         "question": "questsNorthCliffsTwelfthQuests.questTen",
         "words": [
           "Das",
-          "WLAN",
+          "nicht",
           "funktioniert",
-          "nicht"
+          "WLAN"
         ],
         "correctOrder": [
           "Das",
@@ -2323,8 +2323,8 @@
         "question": "questsNorthCliffsTwelfthQuests.questFourteen",
         "words": [
           "Bitte",
-          "nicht",
-          "stören"
+          "stören",
+          "nicht"
         ],
         "correctOrder": [
           "Bitte",

@@ -81,7 +81,7 @@
         ],
         "correctOrder": [
           "Das",
-          "ист",
+          "ist",
           "eine",
           "Lampe"
         ]
@@ -212,6 +212,7 @@
     "tasks": [
       {
         "id": 1,
+        "type": "select",
         "question": "questsStoneReachSecondQuests.questOne",
         "options": [
           "questsStoneReachSecondQuests.questOneFirstOption",
@@ -222,6 +223,7 @@
       },
       {
         "id": 2,
+        "type": "select",
         "question": "questsStoneReachSecondQuests.questTwo",
         "options": [
           "questsStoneReachSecondQuests.questTwoFirstOption",
@@ -239,7 +241,8 @@
       },
       {
         "id": 4,
-        "question": "questsStoneReachSecondQuests.",
+        "type": "select",
+        "question": "questsStoneReachSecondQuests.questFour",
         "options": [
           "questsStoneReachSecondQuests.questFourFirstOption",
           "questsStoneReachSecondQuests.questFourSecondOption",
@@ -249,6 +252,7 @@
       },
       {
         "id": 5,
+        "type": "select",
         "question": "questsStoneReachSecondQuests.questFive",
         "options": [
           "questsStoneReachSecondQuests.questFiveFirstOption",
@@ -259,6 +263,7 @@
       },
       {
         "id": 6,
+        "type": "select",
         "question": "questsStoneReachSecondQuests.questSix",
         "options": [
           "Das ist der Tisch",
@@ -269,6 +274,7 @@
       },
       {
         "id": 7,
+        "type": "select",
         "question": "questsStoneReachSecondQuests.questSeven",
         "options": [
           "Das ist eine Lampe",
@@ -286,6 +292,7 @@
       },
       {
         "id": 9,
+        "type": "select",
         "question": "questsStoneReachSecondQuests.questNine",
         "options": [
           "Das ist das Schlafzimmer",
@@ -296,6 +303,7 @@
       },
       {
         "id": 10,
+        "type": "select",
         "question": "questsStoneReachSecondQuests.questTen",
         "options": [
           "das Bild",
@@ -306,6 +314,7 @@
       },
       {
         "id": 11,
+        "type": "select",
         "question": "questsStoneReachSecondQuests.questEleven",
         "options": [
           "die Gabel",
@@ -316,6 +325,7 @@
       },
       {
         "id": 12,
+        "type": "select",
         "question": "questsStoneReachSecondQuests.questTwelve",
         "options": [
           "Das ist das Badezimmer",
@@ -326,6 +336,7 @@
       },
       {
         "id": 13,
+        "type": "select",
         "question": "questsStoneReachSecondQuests.questThirteen",
         "options": [
           "Das ist das Fenster",
@@ -336,6 +347,7 @@
       },
       {
         "id": 14,
+        "type": "select",
         "question": "questsStoneReachSecondQuests.questFourteen",
         "options": [
           "Das ist die Küche",
@@ -642,11 +654,11 @@
           "Tische"
         ],
         "correctOrder": [
-          "drei",
-          "Stühle",
           "und",
           "zwei",
-          "Tische"
+          "Stühle",
+          "Tische",
+          "drei"
         ]
       },
       {
@@ -676,8 +688,8 @@
           "Bücher"
         ],
         "correctOrder": [
-          "acht",
-          "Bücher"
+          "Bücher",
+          "acht"
         ]
       },
       {
@@ -793,8 +805,8 @@
           "Löffel"
         ],
         "correctOrder": [
-          "ein",
           "großer",
+          "ein",
           "Löffel"
         ]
       },
@@ -803,8 +815,8 @@
         "type": "select",
         "question": "questsStoneReachFifthQuests.questSeven",
         "options": [
-          "Das ist ein Löffel",
           "Das ist eine Löffel",
+          "Das ist ein Löffel",
           "Das ist der Löffel"
         ],
         "answer": "Das ist ein Löffel"
@@ -838,8 +850,8 @@
         ],
         "correctOrder": [
           "zwei",
-          "große",
-          "Teller"
+          "Teller",
+          "große"
         ]
       },
       {
@@ -847,9 +859,9 @@
         "type": "select",
         "question": "questsStoneReachFifthQuests.questEleven",
         "options": [
-          "Das ist ein Teller",
           "Das ist eine Teller",
-          "Das ist der Tellerin"
+          "Das ist der Tellerin",
+          "Das ist ein Teller"
         ],
         "answer": "Das ist ein Teller"
       },
@@ -874,7 +886,7 @@
       {
         "id": 14,
         "type": "reorder",
-        "question": "questsStoneReachFifthQuests.questThirteenThirdOption",
+        "question": "questsStoneReachFifthQuests.questFourteenth",
         "words": [
           "ein",
           "kleines",
@@ -941,7 +953,7 @@
           "questsStoneReachSixthQuests.questThirdSecondOption",
           "questsStoneReachSixthQuests.questThirdThirdOption"
         ],
-        "answer": "Ковер"
+        "answer": "questsStoneReachSixthQuests.questThirdFirstOption"
       },
       {
         "id": 4,
@@ -1168,7 +1180,7 @@
         "question": "questsStoneReachSeventhQuests.questSeven",
         "words": [
           "eine",
-          "неue",
+          "nеue",
           "Badewanne"
         ],
         "correctOrder": [

@@ -54,7 +54,12 @@
                   </div>
                 </div>
                 <div class="modes-list">
-                  <label v-for="mode in modes" :key="mode.key" class="checkbox-container">
+                    <label
+                            v-for="mode in modes"
+                            :key="mode.key"
+                            class="checkbox-container"
+                            :class="{ 'active-mode': selectedModes.includes(mode.key) }"
+                    >
                     <input
                         type="checkbox"
                         v-model="selectedModes"
@@ -695,6 +700,10 @@ onMounted(async () => {
   .theme-title {
     font-size: 1.2rem;
   }
+}
+.checkbox-container.active-mode {
+    background-color: #f1c40f; /* Используем тот же цвет, что и для выбранной темы */
+    border-radius: 12px;
 }
 
 </style>
