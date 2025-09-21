@@ -66,7 +66,7 @@
                 <p>{{ t('sessionLabels.audioFor') }}:</p>
                 <button @click="speak(currentWord.de)" class="audio-btn">
                   <img class="megaphones__icon" src="../../assets/images/megaphone.svg" alt="">
-                  <span> {{ t('sessionLabels.listen')}}</span>
+                  <span> {{ t('sessionLabels.listen') }}</span>
                 </button>
                 <input v-model="userInput" class="trainer-app__input"/>
               </div>
@@ -112,12 +112,13 @@
   </div>
 </template>
 <script setup>
-import {ref, computed, onMounted} from 'vue'
+import {ref, computed, onMounted, watch, onBeforeUnmount} from 'vue'
 import {useRoute, useRouter} from 'vue-router'
+import {useI18n} from 'vue-i18n'
 import {userlangStore} from '../../store/learningStore.js'
 import {getSpeechAudio} from '../../utils/googleTTS.js'
 import {nameMap, nameMode} from '../../utils/nameMap.js'
-import { playWrong, playCorrect, unlockAudioByUserGesture } from '../../utils/soundManager.js'
+import {playWrong, playCorrect, unlockAudioByUserGesture} from '../../utils/soundManager.js'
 
 const {t, locale} = useI18n()
 const wrongWords = ref([])
@@ -134,16 +135,16 @@ const result = ref('')
 const topicTitle = ref('')
 const usedLetters = ref([])
 const isChecking = ref(false)
+const isSpeaking = ref(false)
+const practiceOnly = ref(false)
 const currentModeIndex = computed(() => store.currentModeIndex)
 const currentMode = computed(() => selectedModes.value[currentModeIndex.value])
 const currentWord = computed(() => store.selectedWords[store.currentIndex])
 const totalWords = computed(() => store.selectedWords.length)
-const currentLang = computed(() => locale.value);
+const currentLang = computed(() => locale.value)
 const translatedTopic = computed(() => t(nameMap[topicTitle.value]))
-const isSpeaking = ref(false)
-const goBack = () => {
-  router.back()
-}
+
+const goBack = () => router.back()
 
 function modeLabel(mode) {
   return nameMode[mode] || mode
@@ -163,12 +164,11 @@ function addLetter(letter, idx) {
 function speak(text) {
   if (isSpeaking.value) return
   isSpeaking.value = true
-  getSpeechAudio(text,)
+  getSpeechAudio(text)
   setTimeout(() => {
     isSpeaking.value = false
   }, 3000)
 }
-
 
 function clearLetters() {
   userInput.value = ''
@@ -180,46 +180,46 @@ function normalize(text) {
 }
 
 async function checkAnswer() {
-  if (!currentWord.value || isChecking.value) return;
-  isChecking.value = true;
-  let correct = '';
+  if (!currentWord.value || isChecking.value) return
+  isChecking.value = true
+
+  let correct = ''
   switch (currentMode.value) {
     case 'article':
-      correct = currentWord.value.article;
-      break;
+      correct = currentWord.value.article
+      break
     case 'letters':
-      correct = currentWord.value.de;
-      break;
+      correct = currentWord.value.de
+      break
     case 'wordArticle':
-      correct = `${currentWord.value.article} ${currentWord.value.de}`;
-      break;
+      correct = `${currentWord.value.article} ${currentWord.value.de}`
+      break
     case 'plural':
-      correct = currentWord.value.plural;
-      break;
+      correct = currentWord.value.plural
+      break
     case 'audio':
-      correct = currentWord.value.de;
-      break;
+      correct = currentWord.value.de
+      break
   }
-  const ok = normalize(userInput.value) === normalize(correct);
-  result.value = ok ? 'correct' : 'wrong';
-  if (ok) {
-    playCorrect()
-  }
-  else {
-    playWrong()
-  }
-  await store.markProgress(currentWord.value, currentMode.value, ok);
-  if (ok) {
-    await store.markAsLearned(currentWord.value, selectedModes.value);
 
-  } else {
-    if (!wrongWords.value.find(w => w.de === currentWord.value.de)) {
-      wrongWords.value.push(currentWord.value);
+  const ok = normalize(userInput.value) === normalize(correct)
+  result.value = ok ? 'correct' : 'wrong'
+  if (ok) playCorrect()
+  else playWrong()
+
+  if (!practiceOnly.value) {
+    await store.markProgress(currentWord.value, currentMode.value, ok)
+    if (ok) {
+      await store.markAsLearned(currentWord.value, selectedModes.value)
+    } else {
+      if (!wrongWords.value.find(w => w.de === currentWord.value.de)) {
+        wrongWords.value.push(currentWord.value)
+      }
+      await store.addWrongAnswers(currentWord.value)
     }
-    await store.addWrongAnswers(currentWord.value);
   }
 
-  isChecking.value = false;
+  isChecking.value = false
 }
 
 function nextStep() {
@@ -247,6 +247,7 @@ function restartAll() {
   usedLetters.value = []
   result.value = ''
   wrongWords.value = []
+  practiceOnly.value = true
 }
 
 function repeatMistakes() {
@@ -259,44 +260,48 @@ function repeatMistakes() {
   usedLetters.value = []
   result.value = ''
   wrongWords.value = []
+  practiceOnly.value = false
+}
+
+const captureOpts = {capture: true}
+const unlockOnce = () => {
+  unlockAudioByUserGesture()
+  window.removeEventListener('pointerdown', unlockOnce, captureOpts)
+  window.removeEventListener('keydown', unlockOnce, captureOpts)
 }
 
 onMounted(async () => {
-  const captureOpts = { capture: true };
-  const unlockOnce = () => {
-    unlockAudioByUserGesture();
-    window.removeEventListener('pointerdown', unlockOnce, captureOpts);
-    window.removeEventListener('keydown', unlockOnce, captureOpts);
-  };
-  window.addEventListener('pointerdown', unlockOnce, captureOpts);
-  window.addEventListener('keydown', unlockOnce, captureOpts);
+  window.addEventListener('pointerdown', unlockOnce, captureOpts)
+  window.addEventListener('keydown', unlockOnce, captureOpts)
 
   await store.loadFromFirebase()
   store.syncSelectedWordsProgress()
 
-  let mode = route.query.mode
-  selectedModes.value = Array.isArray(mode) ? mode : [mode]
+  const mode = route.query.mode
+  selectedModes.value = Array.isArray(mode) ? mode : [mode].filter(Boolean)
+
   allWords.value = [...store.selectedWords]
   sessionWords.value = store.selectedWords.filter(w => {
     const isLearned = selectedModes.value.every(m => w.progress?.[m] === true)
     return !isLearned
   })
-  store.selectedWords = sessionWords.value.length > 0
-      ? [...sessionWords.value]
-      : [...allWords.value]
+  store.selectedWords = sessionWords.value.length > 0 ? [...sessionWords.value] : [...allWords.value]
+
   if (store.currentIndex >= store.selectedWords.length) store.currentIndex = 0
   if (store.currentModeIndex >= selectedModes.value.length) store.currentModeIndex = 0
+
   if (route.query.topic) {
-    topicTitle.value = route.query.topic;
+    topicTitle.value = route.query.topic
   }
+
+  practiceOnly.value = false
   isReady.value = true
 })
 
 onBeforeUnmount(() => {
-  window.removeEventListener('pointerdown', unlockAudioByUserGesture, { capture: true })
-  window.removeEventListener('keydown', unlockAudioByUserGesture, { capture: true })
+  window.removeEventListener('pointerdown', unlockOnce, captureOpts)
+  window.removeEventListener('keydown', unlockOnce, captureOpts)
 })
-
 
 watch(userInput, (newVal, oldVal) => {
   if (currentMode.value !== 'letters') return
@@ -305,8 +310,8 @@ watch(userInput, (newVal, oldVal) => {
     usedLetters.value = []
   }
 })
-
 </script>
+
 
 <style scoped>
 .session-page {
@@ -639,6 +644,7 @@ watch(userInput, (newVal, oldVal) => {
   cursor: pointer;
   transition: all 0.2s;
 }
+
 .letters-clear:hover {
   background: #95a5a6;
   color: #2c3e50;

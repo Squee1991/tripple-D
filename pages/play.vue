@@ -79,12 +79,12 @@
           <p class="page-subtitle">{{ t('wordDuel.prepare') }}</p>
         </div>
       </div>
-      <div v-if="!authStore.isPremium" class="stats-block">
+      <div v-if="authStore.isPremium" class="stats-block">
         <h3>Твоя статистика по уровню {{ selectedLevel }}</h3>
         <p>Побед: {{ levelStats.wins }}</p>
         <p>Серия побед: {{ levelStats.streaks }}</p>
         <p>Чистые победы: {{ levelStats.cleanSweeps }}</p>
-        <p>Без ошибок: {{ levelStats.flawlessWins }}</p>
+<!--        <p>Без ошибок: {{ levelStats.flawlessWins }}</p>-->
       </div>
 <!--      <div v-else class="stats-block&#45;&#45;locked">-->
 <!--        <p>🔒 Подключите премиум, чтобы увидеть свою статистику!</p>-->
@@ -151,10 +151,9 @@ const tipsData = ref({
     {id: '1', text: 'Глагол — на 2-м месте: Ich **lerne** Deutsch.'},
     {id: '2', text: 'Место или время в начале? Глагол всё равно 2-й: **Heute** gehe ich.'},
     {id: '3', text: 'Вопрос без слова: глагол на 1-м месте — **Kommst** du?'},
-    {id: '4', text: 'С вопросительным словом: **Wo** wohnst du?'},
-    {id: '5', text: 'Придаточное: глагол в конце — …weil ich **arbeite**.'},
-    {id: '6', text: 'Союз **und** не меняет порядок: Ich lerne und ich **spiele**.'},
-    {id: '7', text: 'Сначала подлежащее, потом глагол: Du **bist** müde.'}
+    {id: '4', text: 'Придаточное: глагол в конце — …weil ich **arbeite**.'},
+    {id: '5', text: 'Союз **und** не меняет порядок: Ich lerne und ich **spiele**.'},
+    {id: '6', text: 'Сначала подлежащее, потом глагол: Du **bist** müde.'}
   ]
 })
 

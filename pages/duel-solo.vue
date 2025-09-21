@@ -1,13 +1,13 @@
 <script setup>
 import {ref, computed, onMounted} from 'vue'
 import {useRouter, useRoute} from 'vue-router'
-import {useGameStore} from '../store/sentenceDuelStore.js'
+import {useDuelStore} from '../store/sentenceDuelStore.js'
 import {useLocalStatGameStore} from '../store/localSentenceStore.js'
 
 const {t} = useI18n()
 const router = useRouter()
 const route = useRoute()
-const gameStore = useGameStore()
+const gameStore = useDuelStore()
 const statStore = useLocalStatGameStore()
 const level = route.query.level || 'A1'
 const tasks = ref([])

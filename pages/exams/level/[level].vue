@@ -2,7 +2,6 @@
   <div class="exam">
     <h1 class="exam__title">📘 Niveau {{ level }}</h1>
     <div v-if="examStore.loading" class="exam__loading">Aufgabe wird geladen...</div>
-
     <div v-else-if="isIntroVisible" class="exam__intro">
       <h2 class="exam__card-title">📘 Willkommen zur Prüfung!</h2>
       <p class="exam__intro-text">
@@ -16,11 +15,9 @@
       </ul>
       <button class="exam__button" @click="startExam">🚀 Prüfung starten</button>
     </div>
-
     <div v-else-if="!isExamFinished && currentExercise" class="exam__card exam__card--active">
       <p class="exam__progress">Frage {{ examStore.currentIndex + 1 }} von {{ examStore.exercises.length }}</p>
       <h2 class="exam__card-title">{{ currentExercise.title }}</h2>
-
       <div v-if="['multiple-choice','audio-choice'].includes(currentExercise.type)">
         <div v-if="currentExercise.task.text && currentExercise.type==='multiple-choice'" class="exam__task-text">
           <strong class="exam__label">Text:</strong> {{ currentExercise.task.text }}
@@ -38,7 +35,6 @@
           </li>
         </ul>
       </div>
-
       <div v-else-if="currentExercise.type==='text-input'" class="exam__text-input">
         <p class="exam__task-instruction">
           <strong class="exam__label">Aufgabe:</strong> {{ currentExercise.task.instruction }}
@@ -46,7 +42,6 @@
         <textarea v-model="userInput" class="exam__textarea" placeholder="Antwort schreiben..." rows="4"/>
         <button class="exam__button" @click="submitTextAnswer">Antwort senden</button>
       </div>
-
       <div v-else-if="currentExercise.type==='speaking-prompt'" class="exam__speaking-prompt">
         <p class="exam__task-prompt">
           <strong class="exam__label">Sprechen Sie:</strong> {{ currentExercise.task.prompt }}
@@ -65,7 +60,6 @@
         />
       </div>
     </div>
-
     <div v-else class="exam__card exam__card--finished">
       <h2 class="exam__card-title">🎉 Prüfung abgeschlossen!</h2>
       <h3 class="exam__card-subtitle">🧾 Ergebnis des Tests für Niveau {{ level }}</h3>
@@ -138,7 +132,6 @@ const onAudioRecorded = async ({ blob, durationSec }) => {
     transcription: ''
   })
 }
-
 
 const submitTextAnswer = async () => {
   const answer = (userInput.value || '').trim()
