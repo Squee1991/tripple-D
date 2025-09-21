@@ -41,8 +41,6 @@ import {achievementToAwardMap} from '../src/awards/awardsMap.js'
 import {guessAchievment} from '../src/achieveGroup/guessAchieve/guessAchievments.js'
 import {useQuizStore} from '../store/adjectiveStore.js'
 
-
-
 export const useAchievementStore = defineStore('achievementStore', () => {
     const rawGroups = [
         ...sentenceAchievement.map(g => ({category: 'sentence', ...g})),
