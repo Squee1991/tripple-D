@@ -94,6 +94,20 @@ export const userAuthStore = defineStore('auth', () => {
 		providerId.value = data.providerId || ''
 		ownedAvatars.value = data.ownedAvatars || ['1.png', '2.png'];
 		achievements.value = data.achievements || null;
+		const newAchievements = data.achievements || null;
+		if (newAchievements) {
+			// Если achievements.value ещё не объект, делаем его объектом
+			if (typeof achievements.value !== 'object' || achievements.value === null) {
+				achievements.value = {};
+			}
+			// Очищаем старые ключи
+			Object.keys(achievements.value).forEach(key => delete achievements.value[key]);
+			// Копируем новые данные
+			Object.assign(achievements.value, newAchievements);
+		} else {
+			achievements.value = null;
+		}
+		// --- КОНЕЦ ИСПРАВЛЕНИЯ ---
 		if (data.isPremium && !data.gotPremiumBonus) {
 			grantPremiumBonusPoints()
 		}

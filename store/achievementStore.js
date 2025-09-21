@@ -545,47 +545,47 @@ export const useAchievementStore = defineStore('achievementStore', () => {
             updateProgress('OneYearVeteran', days)
         }, { immediate: true })
 
-        // 5.9) Дуэли (предложения) - ДОБАВЬ ЭТОТ БЛОК
-        // Сначала убедимся, что данные о дуэлях загружаются при входе пользователя
-        watch(() => authStore.uid, (uid) => {
-            if (uid) {
-                duelStore.loadUserAchievements();
-            }
-        }, { immediate: true });
+        // В файле achievementStore.js
+// ПОЛНОСТЬЮ ЗАМЕНИТЕ ВАШ СУЩЕСТВУЮЩИЙ watch этим кодом
 
-        // Теперь следим за загруженными данными и обновляем прогресс
         watch(() => duelStore.achievements, (duelStats) => {
-            console.log('[ACHIEVEMENT STORE] Обнаружено изменение статистики дуэлей:', duelStats);
-            // Если данных нет, ничего не делаем
-            if (!duelStats || Object.keys(duelStats).length === 0) return;
+            // Новый, более детальный лог, который "разворачивает" Proxy
+            const plainStats = JSON.parse(JSON.stringify(duelStats));
 
-            // Находим все группы достижений, которые относятся к дуэлям
+
+            if (!plainStats || Object.keys(plainStats).length === 0) {
+
+                return;
+            }
+
             groups.value
                 .filter(g => g.category === 'sentence')
                 .forEach(group => {
                     group.achievements.forEach(ach => {
-                        // Разбираем ID достижения на части, например: 'a1_wins_10'
                         const parts = ach.id.split('_');
-                        if (parts.length < 2) return; // Пропускаем, если ID некорректный
+                        if (parts.length < 2) return;
 
-                        const level = parts[0].toUpperCase();  // 'a1'
-                        const metric = parts[1]; // 'wins', 'streaks', 'cleanSweeps' и т.д.
-
-                        // Получаем текущий прогресс из duelStore по уровню и метрике
-                        // Например, для 'a1_wins_10' мы ищем duelStats['a1']['wins']
-                        const currentProgress = duelStats[level]?.[metric] || 0;
-                        console.log(`[ACHIEVEMENT STORE] Попытка обновить "${ach.id}" значением: ${currentProgress}`);
+                        const level = parts[0].toUpperCase();
+                        const metric = parts[1];
 
 
-                        // Обновляем прогресс в сторе достижений
+
+
+                        const progressValue = plainStats[level]?.[metric];
+
+
+
+                        const currentProgress = progressValue || 0;
+
+
+
                         updateProgress(ach.id, currentProgress);
                     });
                 });
         }, {
-            immediate: true, // Проверить прогресс сразу после загрузки
-            deep: true       // Следить за изменениями внутри объекта
+            immediate: true,
+            deep: true
         });
-
         watchEffect(() => {
             const map = [
                 ['guessedFastWords',      guessStore.guessedFastWords.length],
