@@ -1,8 +1,26 @@
 import {defineStore} from 'pinia';
 import {ref} from 'vue';
-import {getFirestore, collection, query, where, addDoc, onSnapshot, getDocs, getDoc, doc, serverTimestamp, updateDoc, orderBy, limit, runTransaction, deleteDoc, increment} from 'firebase/firestore';
+import {
+    getFirestore,
+    collection,
+    query,
+    where,
+    addDoc,
+    onSnapshot,
+    getDocs,
+    getDoc,
+    doc,
+    serverTimestamp,
+    updateDoc,
+    orderBy,
+    limit,
+    runTransaction,
+    deleteDoc,
+    increment
+} from 'firebase/firestore';
 import {userAuthStore} from './authStore.js';
 import {useSentencesStore} from './sentencesStore.js';
+
 export const useDuelStore = defineStore('gameDuelStore', () => {
     const db = getFirestore();
     const authStore = userAuthStore();
@@ -15,22 +33,30 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
     let unsubscribeFromSession = null;
     const isCheckingWinner = ref(false);
     const achievements = ref({});
+
     async function loadUserAchievements() {
         const userId = authStore.uid;
         if (!userId) return;
         try {
             const userDocRef = doc(db, 'users', userId);
             const userDoc = await getDoc(userDocRef);
-            if (userDoc.exists()) {
-                achievements.value = userDoc.data().achievements || {};
-            } else {
-                achievements.value = {};
-            }
-            const plainObject = JSON.parse(JSON.stringify(achievements.value));
-            console.log('[DUEL STORE] Загружены данные из Firestore (в виде простого объекта):', plainObject);
+            const newAchievements = userDoc.exists() ? userDoc.data().achievements || {} : {};
+            // --- ИЗМЕНЕНИЯ ЗДЕСЬ ---
+            // 1. Очищаем текущий объект от старых ключей
+            Object.keys(achievements.value).forEach(key => {
+                delete achievements.value[key];
+            });
+
+            // 2. Копируем свойства из нового объекта в старый (мутируем его)
+            Object.assign(achievements.value, newAchievements);
+            // Вместо: achievements.value = newAchievements;
+            // --- КОНЕЦ ИЗМЕНЕНИЙ ---
+
+
         } catch (error) {
-            console.error("Ошибка при загрузке достижений пользователя:", error);
-            achievements.value = {};
+            console.error("Ошибка загрузки достижений:", error);
+            // В случае ошибки тоже очищаем, чтобы не показывать старые данные
+            Object.keys(achievements.value).forEach(key => delete achievements.value[key]);
         }
     }
 
@@ -40,10 +66,13 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
     }
 
     async function updateUserStats(userId, level, isWin, isCleanSweep, isFlawless) {
-        if (!userId || !level) return;
+        if (!userId || !level) {
+
+            return;
+        }
         const userDocRef = doc(db, 'users', userId);
         const updates = {};
-        const prefix = `achievements.${level}`;
+        const prefix = `achievements.${level.toUpperCase()}`;
         if (isWin) {
             updates[`${prefix}.wins`] = increment(1);
             updates[`${prefix}.streaks`] = increment(1);
@@ -56,12 +85,17 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
         } else {
             updates[`${prefix}.streaks`] = 0;
         }
+
         try {
             await updateDoc(userDocRef, updates);
-            // 👇 ВОТ ЭТА СТРОКА ВСЁ ИСПРАВИТ
-            await loadUserAchievements();
+            // 👇 ВОТ ЭТА СТРОКА УЛУЧШИТ ОПЫТ ХОСТА
+            // Это не решает проблему гостя, но делает обновление у хоста мгновенным.
+            // Основное решение - в listenToSession.
+            if (userId === authStore.uid) { // Обновляем локальные данные только для себя
+                await loadUserAchievements();
+            }
         } catch (error) {
-            console.error("!!! КРИТИЧЕСКАЯ ОШИБКА ПРИ ЗАПИСИ В БД !!!", error);
+            console.error("Ошибка обновления статистики для", userId, error);
         }
     }
 
@@ -71,7 +105,7 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
         }
         const allSentencesForLevel = sentencesStore.db?.levels[level]?.sentences || [];
         if (allSentencesForLevel.length < 11) {
-            console.error("Недостаточно предложений для уровня:", level);
+
             return null;
         }
 
@@ -162,8 +196,22 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
         if (unsubscribeFromSession) unsubscribeFromSession();
 
         unsubscribeFromSession = onSnapshot(sessionRef, (docSnap) => {
+            // Запоминаем старый статус игры перед обновлением
+            const oldStatus = sessionData.value?.status;
+
             if (docSnap.exists()) {
                 sessionData.value = {id: docSnap.id, ...docSnap.data()};
+                const newStatus = sessionData.value.status;
+
+                // 👇 ВОТ ОНО, ГЛАВНОЕ ИСПРАВЛЕНИЕ!
+                // Если игра ТОЛЬКО ЧТО перешла в статус 'finished'
+                if (newStatus === 'finished' && oldStatus !== 'finished') {
+
+                    // Каждый клиент (и хост, и гость) перезагрузит СВОИ данные.
+                    // К этому моменту хост уже должен был обновить данные в БД для обоих.
+                    loadUserAchievements();
+                }
+
             } else {
                 sessionData.value = null;
                 gameId.value = null;
@@ -287,26 +335,38 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
             });
 
             if (isGameOver && finalSessionDataForStats) {
-                console.log("Конец игры обновим статистику!!!!!!!!!!!!");
-                const myUserId = authStore.uid;
+
                 const finalData = finalSessionDataForStats;
+                const hostId = finalData.hostId;
+                const guestId = finalData.guestId;
 
-                if (!finalData.guestId || !myUserId) return;
+                // Проверяем, что оба игрока существуют
+                if (!guestId || !hostId) return;
 
-                const winnerId = finalData.players[finalData.hostId].score > finalData.players[finalData.guestId].score
-                    ? finalData.hostId
-                    : finalData.guestId;
+                const hostScore = finalData.players[hostId]?.score || 0;
+                const guestScore = finalData.players[guestId]?.score || 0;
 
-                if (myUserId === winnerId) {
-                    const winnerData = finalData.players[winnerId];
-                    const isCleanSweep = winnerData.score === finalData.totalRounds;
-                    const isFlawless = !winnerData.hasMadeError;
-                    await updateUserStats(myUserId, finalData.level, true, isCleanSweep, isFlawless);
-                    console.log("Статистика победы обновлена.");
-                } else {
-                    await updateUserStats(myUserId, finalData.level, false, false, false);
-                    console.log("Статистика поражения обновлена.");
-                }
+                const winnerId = hostScore > guestScore ? hostId : guestId;
+                const loserId = hostScore > guestScore ? guestId : hostId;
+
+                console.log(`[HOST DEBUG] Игра окончена. Хост: ${hostScore}, Гость: ${guestScore}`);
+                console.log(`[HOST DEBUG] ID Победителя: ${winnerId}, ID Проигравшего: ${loserId}`);
+                console.log(`[HOST DEBUG] Сейчас буду обновлять статистику для победителя...`);
+
+                // 1. Обновляем статистику победителя
+                const winnerData = finalData.players[winnerId];
+                const isCleanSweep = winnerData.score === finalData.totalRounds;
+                const isFlawless = !winnerData.hasMadeError;
+                await updateUserStats(winnerId, finalData.level, true, isCleanSweep, isFlawless);
+
+                console.log(`[HOST DEBUG] Статистика победителя обновлена. Теперь обновляю проигравшего...`);
+
+
+                // 2. Обновляем статистику проигравшего
+                await updateUserStats(loserId, finalData.level, false, false, false);
+
+                console.log(`[HOST DEBUG] Обновление статистики завершено.`);
+
             }
         } catch (e) {
             console.error("ошибка в checkRoundWinner: ", e);
