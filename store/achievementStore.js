@@ -36,6 +36,7 @@ import {userlangStore} from '../store/learningStore.js'
 import {useLocalStatGameStore} from '../store/localSentenceStore.js'
 import {useCardsStore} from '../store/cardsStore.js'
 import {useGameStore} from '../store/marafonStore.js'
+import {useDuelStore} from "../store/sentenceDuelStore.js";
 import {useGuessWordStore} from '../store/guesStore.js'
 import {achievementToAwardMap} from '../src/awards/awardsMap.js'
 import {guessAchievment} from '../src/achieveGroup/guessAchieve/guessAchievments.js'
@@ -101,6 +102,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
     const popupAchievement = ref(null)
     const quizStore = useQuizStore()
     const prevMap = new Map()
+    const duelStore = useDuelStore()
 
 
     const awardsKey = () => `awards_shown_v1_${authStore?.uid}`
@@ -266,7 +268,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
                 updateProgress(lastId, allDone ? 1 : 0)
             }
         }
-        watch(() => authStore.uid, (uid) => {
+        watch(() => authStore.uid,  (uid) => {
             prepositionUnsubs.forEach(fn => { try { fn && fn() } catch {} })
             prepositionUnsubs = []
             if (!uid) return
@@ -285,6 +287,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
                 })
                 prepositionUnsubs.push(u1, u2)
             })
+
         }, { immediate: true })
 
         const adjectivesSetup = {
@@ -539,6 +542,47 @@ export const useAchievementStore = defineStore('achievementStore', () => {
             const days = Math.max(0, Math.floor((Date.now() - new Date(date).getTime()) / 86400000))
             updateProgress('OneYearVeteran', days)
         }, { immediate: true })
+
+        // 5.9) Дуэли (предложения) - ДОБАВЬ ЭТОТ БЛОК
+        // Сначала убедимся, что данные о дуэлях загружаются при входе пользователя
+        watch(() => authStore.uid, (uid) => {
+            if (uid) {
+                duelStore.loadUserAchievements();
+            }
+        }, { immediate: true });
+
+        // Теперь следим за загруженными данными и обновляем прогресс
+        watch(() => duelStore.achievements, (duelStats) => {
+            console.log('[ACHIEVEMENT STORE] Обнаружено изменение статистики дуэлей:', duelStats);
+            // Если данных нет, ничего не делаем
+            if (!duelStats || Object.keys(duelStats).length === 0) return;
+
+            // Находим все группы достижений, которые относятся к дуэлям
+            groups.value
+                .filter(g => g.category === 'sentence')
+                .forEach(group => {
+                    group.achievements.forEach(ach => {
+                        // Разбираем ID достижения на части, например: 'a1_wins_10'
+                        const parts = ach.id.split('_');
+                        if (parts.length < 2) return; // Пропускаем, если ID некорректный
+
+                        const level = parts[0].toUpperCase();  // 'a1'
+                        const metric = parts[1]; // 'wins', 'streaks', 'cleanSweeps' и т.д.
+
+                        // Получаем текущий прогресс из duelStore по уровню и метрике
+                        // Например, для 'a1_wins_10' мы ищем duelStats['a1']['wins']
+                        const currentProgress = duelStats[level]?.[metric] || 0;
+                        console.log(`[ACHIEVEMENT STORE] Попытка обновить "${ach.id}" значением: ${currentProgress}`);
+
+
+                        // Обновляем прогресс в сторе достижений
+                        updateProgress(ach.id, currentProgress);
+                    });
+                });
+        }, {
+            immediate: true, // Проверить прогресс сразу после загрузки
+            deep: true       // Следить за изменениями внутри объекта
+        });
 
         watchEffect(() => {
             const map = [
