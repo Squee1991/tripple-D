@@ -1,5 +1,5 @@
     <script setup>
-        import {useGameStore} from '../../store/sentenceDuelStore.js';
+        import {useDuelStore} from '../../store/sentenceDuelStore.js';
         import {userAuthStore} from '../../store/authStore.js';
         import {useRoute, useRouter} from 'vue-router';
         import {onMounted, onUnmounted, ref, watch, computed} from 'vue';
@@ -7,7 +7,7 @@
         const { t } = useI18n()
         const route = useRoute();
         const router = useRouter();
-        const gameStore = useGameStore();
+        const gameStore = useDuelStore();
         const authStore = userAuthStore();
         const currentAnswer = ref('');
         const showCountdown = ref(true);

@@ -3,7 +3,7 @@ import {ref} from 'vue';
 import {getFirestore, collection, query, where, addDoc, onSnapshot, getDocs, getDoc, doc, serverTimestamp, updateDoc, orderBy, limit, runTransaction, deleteDoc, increment} from 'firebase/firestore';
 import {userAuthStore} from './authStore.js';
 import {useSentencesStore} from './sentencesStore.js';
-export const useGameStore = defineStore('gameDuelStore', () => {
+export const useDuelStore = defineStore('gameDuelStore', () => {
     const db = getFirestore();
     const authStore = userAuthStore();
     const sentencesStore = useSentencesStore();
@@ -26,6 +26,8 @@ export const useGameStore = defineStore('gameDuelStore', () => {
             } else {
                 achievements.value = {};
             }
+            const plainObject = JSON.parse(JSON.stringify(achievements.value));
+            console.log('[DUEL STORE] Загружены данные из Firestore (в виде простого объекта):', plainObject);
         } catch (error) {
             console.error("Ошибка при загрузке достижений пользователя:", error);
             achievements.value = {};
@@ -56,6 +58,8 @@ export const useGameStore = defineStore('gameDuelStore', () => {
         }
         try {
             await updateDoc(userDocRef, updates);
+            // 👇 ВОТ ЭТА СТРОКА ВСЁ ИСПРАВИТ
+            await loadUserAchievements();
         } catch (error) {
             console.error("!!! КРИТИЧЕСКАЯ ОШИБКА ПРИ ЗАПИСИ В БД !!!", error);
         }

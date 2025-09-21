@@ -95,7 +95,7 @@
 <script setup>
 import {ref, computed, watch, onMounted, onUnmounted} from 'vue'
 import {useSentencesStore} from '../store/sentencesStore.js'
-import {useGameStore} from '../store/sentenceDuelStore.js'
+import {useDuelStore} from '../store/sentenceDuelStore.js'
 import {userAuthStore} from '../store/authStore.js'
 import {useRouter} from 'vue-router'
 import Modal from '../src/components/modal.vue'
@@ -105,7 +105,7 @@ import Login from '../assets/images/login.svg'
 const authStore = userAuthStore()
 const {t} = useI18n()
 const router = useRouter()
-const gameStore = useGameStore()
+const gameStore = useDuelStore()
 const isLoggedIn = computed(() => !!authStore.user)
 const showAuthModal = ref(false)
 const sentencesStore = useSentencesStore()
