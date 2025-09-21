@@ -33,7 +33,7 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
     let unsubscribeFromSession = null;
     const isCheckingWinner = ref(false);
     const achievements = ref({});
-
+    const didFinalizeMyStats = ref(false);
     async function loadUserAchievements() {
         const userId = authStore.uid;
         if (!userId) return;
@@ -66,38 +66,30 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
     }
 
     async function updateUserStats(userId, level, isWin, isCleanSweep, isFlawless) {
-        if (!userId || !level) {
 
-            return;
-        }
+        if (!userId || !level || userId !== authStore.uid) return;
         const userDocRef = doc(db, 'users', userId);
         const updates = {};
         const prefix = `achievements.${level.toUpperCase()}`;
+
         if (isWin) {
-            updates[`${prefix}.wins`] = increment(1);
-            updates[`${prefix}.streaks`] = increment(1);
-            if (isCleanSweep) {
-                updates[`${prefix}.cleanSweeps`] = increment(1);
-            }
-            if (isFlawless) {
-                updates[`${prefix}.flawlessWins`] = increment(1);
-            }
+            updates[`${prefix}.wins`]        = increment(1);
+            updates[`${prefix}.streaks`]     = increment(1);
+            if (isCleanSweep) updates[`${prefix}.cleanSweeps`]  = increment(1);
+            if (isFlawless)   updates[`${prefix}.flawlessWins`] = increment(1);
         } else {
             updates[`${prefix}.streaks`] = 0;
         }
 
         try {
             await updateDoc(userDocRef, updates);
-            // 👇 ВОТ ЭТА СТРОКА УЛУЧШИТ ОПЫТ ХОСТА
-            // Это не решает проблему гостя, но делает обновление у хоста мгновенным.
-            // Основное решение - в listenToSession.
-            if (userId === authStore.uid) { // Обновляем локальные данные только для себя
-                await loadUserAchievements();
-            }
+            await loadUserAchievements();
+            console.log(`[STATS] ${isWin ? 'Победа' : 'Поражение'} для ${userId} на уровне ${level}`);
         } catch (error) {
-            console.error("Ошибка обновления статистики для", userId, error);
+            console.error(`[STATS ERROR] Не удалось обновить статистику для ${userId}`, error);
         }
     }
+
 
     async function createGameSession(level, hostId) {
         if (!sentencesStore.db) {
@@ -193,35 +185,51 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
     function listenToSession(sessionId) {
         gameId.value = sessionId;
         const sessionRef = doc(db, 'gameSessions', sessionId);
+
+        // сбрасываем флаг финализации на старт новой сессии
+        didFinalizeMyStats.value = false;
+
         if (unsubscribeFromSession) unsubscribeFromSession();
 
         unsubscribeFromSession = onSnapshot(sessionRef, (docSnap) => {
-            // Запоминаем старый статус игры перед обновлением
-            const oldStatus = sessionData.value?.status;
+            const prevStatus = sessionData.value?.status;
 
-            if (docSnap.exists()) {
-                sessionData.value = {id: docSnap.id, ...docSnap.data()};
-                const newStatus = sessionData.value.status;
-
-                // 👇 ВОТ ОНО, ГЛАВНОЕ ИСПРАВЛЕНИЕ!
-                // Если игра ТОЛЬКО ЧТО перешла в статус 'finished'
-                if (newStatus === 'finished' && oldStatus !== 'finished') {
-
-                    // Каждый клиент (и хост, и гость) перезагрузит СВОИ данные.
-                    // К этому моменту хост уже должен был обновить данные в БД для обоих.
-                    loadUserAchievements();
-                }
-
-            } else {
+            if (!docSnap.exists()) {
                 sessionData.value = null;
                 gameId.value = null;
                 if (unsubscribeFromSession) {
                     unsubscribeFromSession();
                     unsubscribeFromSession = null;
                 }
+                return;
+            }
+
+            sessionData.value = { id: docSnap.id, ...docSnap.data() };
+            const newStatus = sessionData.value.status;
+
+            // когда впервые увидели finished — обновляем СВОЮ статистику
+            if (newStatus === 'finished' && prevStatus !== 'finished' && !didFinalizeMyStats.value) {
+                const data = sessionData.value;
+                const hostId  = data.hostId;
+                const guestId = data.guestId;
+                if (!hostId || !guestId) return;
+
+                const hostScore  = data.players[hostId]?.score  || 0;
+                const guestScore = data.players[guestId]?.score || 0;
+                const winnerId   = hostScore > guestScore ? hostId : guestId;
+
+                const myUid   = authStore.uid;
+                const myState = data.players[myUid] || {};
+                const iWon        = myUid === winnerId;
+                const isCleanSweep = (myState.score || 0) === data.totalRounds;
+                const isFlawless   = !myState.hasMadeError;
+
+                updateUserStats(myUid, data.level, iWon, isCleanSweep, isFlawless)
+                    .finally(() => { didFinalizeMyStats.value = true; });
             }
         });
     }
+
 
     const cancelSearch = async () => {
         if (gameId.value && sessionData.value?.status === 'waiting') {
@@ -257,7 +265,6 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
             console.error("prepareCurrentRound вызван без gameId!");
             return;
         }
-
         const roundIndex = sessionData.value.currentRoundIndex;
         const sentenceId = sessionData.value.rounds[roundIndex]?.sentenceId;
         if (!sentenceId) {
@@ -287,93 +294,44 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
         isCheckingWinner.value = true;
         try {
             const sessionRef = doc(db, 'gameSessions', gameId.value);
-            let isGameOver = false;
-            let finalSessionDataForStats = null;
-
             await runTransaction(db, async (transaction) => {
                 const sessionDoc = await transaction.get(sessionRef);
-                if (!sessionDoc.exists() || sessionDoc.data().status !== 'in_progress') return;
-
+                if (!sessionDoc.exists()) return;
                 const data = sessionDoc.data();
+                if (data.status !== 'in_progress') return;
                 const roundIndex = data.currentRoundIndex;
                 if (roundIndex >= data.totalRounds) return;
-
                 const correctAnswer = getSentenceById(data.rounds[roundIndex]?.sentenceId);
-                const currentAnswers = data.currentRoundData.answers;
+                const currentAnswers = data.currentRoundData?.answers || {};
                 let winnerId = null;
                 for (const playerId in currentAnswers) {
-                    if (currentAnswers[playerId]?.toLowerCase().replace(/[.,!?;]/g, '').trim() === correctAnswer) {
+                    const ans = (currentAnswers[playerId] || '').toLowerCase().replace(/[.,!?;]/g, '').trim();
+                    if (ans === correctAnswer) {
                         winnerId = playerId;
                         break;
                     }
                 }
-
-                if (winnerId) {
-                    const newRounds = [...data.rounds];
-                    newRounds[roundIndex].winner = winnerId;
-                    const nextRoundIndex = roundIndex + 1;
-                    isGameOver = nextRoundIndex >= data.totalRounds;
-
-                    const currentScore = data.players[winnerId]?.score || 0;
-                    const newScore = currentScore + 1;
-
-                    const updates = {
-                        [`players.${winnerId}.score`]: newScore,
-                        status: isGameOver ? 'finished' : 'starting',
-                        currentRoundIndex: nextRoundIndex,
-                        currentRoundData: null,
-                        rounds: newRounds
-                    };
-                    transaction.update(sessionRef, updates);
-
-                    if (isGameOver) {
-                        const finalPlayers = JSON.parse(JSON.stringify(data.players));
-                        finalPlayers[winnerId].score = newScore;
-                        finalSessionDataForStats = {...data, ...updates, players: finalPlayers};
-                    }
-                }
+                if (!winnerId) return;
+                const nextRounds = [...data.rounds];
+                nextRounds[roundIndex] = { ...nextRounds[roundIndex], winner: winnerId };
+                const newScore = (data.players[winnerId]?.score || 0) + 1;
+                const nextIndex = roundIndex + 1;
+                const isGameOver = nextIndex >= data.totalRounds;
+                transaction.update(sessionRef, {
+                    [`players.${winnerId}.score`]: newScore,
+                    rounds: nextRounds,
+                    currentRoundIndex: nextIndex,
+                    currentRoundData: null,
+                    status: isGameOver ? 'finished' : 'starting'
+                });
             });
-
-            if (isGameOver && finalSessionDataForStats) {
-
-                const finalData = finalSessionDataForStats;
-                const hostId = finalData.hostId;
-                const guestId = finalData.guestId;
-
-                // Проверяем, что оба игрока существуют
-                if (!guestId || !hostId) return;
-
-                const hostScore = finalData.players[hostId]?.score || 0;
-                const guestScore = finalData.players[guestId]?.score || 0;
-
-                const winnerId = hostScore > guestScore ? hostId : guestId;
-                const loserId = hostScore > guestScore ? guestId : hostId;
-
-                console.log(`[HOST DEBUG] Игра окончена. Хост: ${hostScore}, Гость: ${guestScore}`);
-                console.log(`[HOST DEBUG] ID Победителя: ${winnerId}, ID Проигравшего: ${loserId}`);
-                console.log(`[HOST DEBUG] Сейчас буду обновлять статистику для победителя...`);
-
-                // 1. Обновляем статистику победителя
-                const winnerData = finalData.players[winnerId];
-                const isCleanSweep = winnerData.score === finalData.totalRounds;
-                const isFlawless = !winnerData.hasMadeError;
-                await updateUserStats(winnerId, finalData.level, true, isCleanSweep, isFlawless);
-
-                console.log(`[HOST DEBUG] Статистика победителя обновлена. Теперь обновляю проигравшего...`);
-
-
-                // 2. Обновляем статистику проигравшего
-                await updateUserStats(loserId, finalData.level, false, false, false);
-
-                console.log(`[HOST DEBUG] Обновление статистики завершено.`);
-
-            }
         } catch (e) {
-            console.error("ошибка в checkRoundWinner: ", e);
+            console.error("ошибка в checkRoundWinner:", e);
         } finally {
             isCheckingWinner.value = false;
         }
     }
+
 
     async function submitAnswer(answerText) {
         const myUserId = authStore.uid;
@@ -390,7 +348,6 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
         if (answerText.toLowerCase().replace(/[.,!?;]/g, '').trim() !== correctSentence) {
             updates[`players.${myUserId}.hasMadeError`] = true;
         }
-
         await updateDoc(sessionRef, updates);
     }
 
