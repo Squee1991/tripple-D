@@ -2,6 +2,67 @@
   "preloader": {
     "value": "Ana sayfaya yönlendirileceksiniz..."
   },
+  "duelGrammarTips": {
+    "authModal": "Yetkilendirme gerekli",
+    "authText": "Düello oynamak için lütfen giriş yapın veya kayıt olun.",
+    "tipOne": "Fiil 2. sırada: Ich **lerne** Deutsch.",
+    "tipTwo": "Yer veya zaman başta mı? Fiil yine 2.: **Heute** gehe ich.",
+    "tipThree": "Sorusuz soru (Evet/Hayır): fiil 1. sırada — **Kommst** du?",
+    "tipFour": "Yan cümlede: fiil sonda — …weil ich **arbeite**.",
+    "tipFive": "Bağlaç **und** kelime sırasını değiştirmez: Ich lerne und ich **spiele**.",
+  },
+  "duelA1": {
+    "title": "Cümle Düelloları (Seviye A1)",
+    "firstWinName": "İlk Zafer",
+    "firstWinDescription": "A1 seviyesinde ilk maçını kazan",
+    "secondWinName": "Zaferin Çağrısı",
+    "secondWinDescription": "A1 seviyesinde 10 maç kazan",
+    "streak3Name": "Seri Başladı",
+    "streak3Description": "A1 seviyesinde art arda 3 maç kazan",
+    "streak10Name": "Durmaksızın",
+    "streak10Description": "A1 seviyesinde art arda 10 maç kazan",
+    "cleanSweeps5": "Temiz Başlangıç",
+    "cleanSweeps5Description": "A1 seviyesinde 20 maçı sıfıra karşı kazan"
+  },
+  "duelA2": {
+    "title": "Cümle Düelloları (Seviye A2)",
+    "firstWinName": "İlk Kupa A2",
+    "firstWinDescription": "A2 seviyesinde ilk maçını kazan",
+    "secondWinName": "Onluk Kahraman",
+    "secondWinDescription": "A2 seviyesinde 10 maç kazan",
+    "streak5Name": "Zafer Serisi",
+    "streak5Description": "Beş maçlık galibiyet serisi yap",
+    "streak10Name": "Şans Serisi",
+    "streak10Description": "A2 seviyesinde art arda 10 maç kazan",
+    "cleanSweeps20": "Kesinlik Ustası",
+    "cleanSweeps20Description": "A2 seviyesinde 20 maçı sıfıra karşı kazan"
+  },
+  "duelB1": {
+    "title": "Cümle Düelloları (Seviye B1)",
+    "firstWinName": "İlk Zirve",
+    "firstWinDescription": "B1 seviyesinde ilk maçını kazan",
+    "secondWinName": "Arena Gazisi",
+    "secondWinDescription": "B1 seviyesinde 10 maç kazan",
+    "streak5Name": "Zafer Ustası",
+    "streak5Description": "Beş maçlık galibiyet serisi yap",
+    "streak10Name": "Durdurulamaz",
+    "streak10Description": "On maçlık galibiyet serisi yap",
+    "cleanSweeps20": "Kesinlik Ustası",
+    "cleanSweeps20Description": "B1 seviyesinde 20 maçı sıfıra karşı kazan"
+  },
+  "duelB2": {
+    "title": "Cümle Düelloları (Seviye B2)",
+    "firstWinName": "İlk Hücum",
+    "firstWinDescription": "B2 seviyesinde ilk maçını kazan",
+    "secondWinName": "Komutan",
+    "secondWinDescription": "B2 seviyesinde 20 maç kazan",
+    "streak5Name": "Hakim",
+    "streak5Description": "B2 seviyesinde art arda 5 maç kazan",
+    "streak10Name": "Yüce Hakim",
+    "streak10Description": "B2 seviyesinde art arda 10 maç kazan",
+    "cleanSweeps20": "Yaşayan Efsane",
+    "cleanSweeps20Description": "B2 seviyesinde 10 maçı sıfıra karşı kazan"
+  },
   "locationQuests": {
     "done": "TAMAMLANDI",
     "awards": "Ödül:",

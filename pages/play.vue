@@ -112,8 +112,8 @@ const sentencesStore = useSentencesStore()
 const mode = ref('online')
 const isLoading = ref(true)
 const authModalData = {
-  title: 'Требуется авторизация',
-  text: 'Чтобы играть в дуэли, пожалуйста, войдите в аккаунт или зарегистрируйтесь.'
+  title: t('duelGrammarTips.authModal'),
+  text: t('duelGrammarTips.authText')
 }
 const showDevModal = ref(false)
 const levels = ['A1', 'A2', 'B1', 'B2']
@@ -148,15 +148,13 @@ const tipsModule = () => {
 }
 const tipsData = ref({
   tips: [
-    {id: '1', text: 'Глагол — на 2-м месте: Ich **lerne** Deutsch.'},
-    {id: '2', text: 'Место или время в начале? Глагол всё равно 2-й: **Heute** gehe ich.'},
-    {id: '3', text: 'Вопрос без слова: глагол на 1-м месте — **Kommst** du?'},
-    {id: '4', text: 'Придаточное: глагол в конце — …weil ich **arbeite**.'},
-    {id: '5', text: 'Союз **und** не меняет порядок: Ich lerne und ich **spiele**.'},
-    {id: '6', text: 'Сначала подлежащее, потом глагол: Du **bist** müde.'}
+    {id: '1', text: t('duelGrammarTips.tipOne')},
+    {id: '2', text: t('duelGrammarTips.tipTwo')},
+    {id: '3', text: t('duelGrammarTips.tipThree')},
+    {id: '4', text: t('duelGrammarTips.tipFour')},
+    {id: '5', text: t('duelGrammarTips.tipFive')},
   ]
 })
-
 
 function cancelSearch() {
   gameStore.cancelSearch()
@@ -168,7 +166,6 @@ function goBack() {
 }
 
 async function handleFindGameClick(level) {
-    // ИЗМЕНЕНИЕ 1: Обновляем выбранный уровень для отображения статистики
     selectedLevel.value = level
 
     if (!authStore.uid) {
@@ -194,15 +191,14 @@ watch(() => gameStore.sessionData?.status, (newStatus) => {
   }
 })
 watch(() => authStore.uid, (newUid) => {
-    // Если newUid появился (пользователь вошел в аккаунт),
-    // загружаем его статистику
     if (newUid) {
         gameStore.loadUserAchievements();
     }
-}, { immediate: false }); // immediate: false, чтобы не вызывать сразу, так как это уже делает onMounted
+}, { immediate: false })
+
 onMounted(async () => {
     isLoading.value = true;
-    // ИЗМЕНЕНИЕ 2: Загружаем статистику пользователя при загрузке компонента
+
     if (authStore.uid) {
         await gameStore.loadUserAchievements()
     }
@@ -211,6 +207,7 @@ onMounted(async () => {
     }
     isLoading.value = false;
 })
+
 onUnmounted(() => {
   if (isWaitingForOpponent.value) {
     gameStore.cancelSearch()
@@ -221,6 +218,7 @@ onUnmounted(() => {
 watch(() => gameStore.sessionData?.status, async (s) => {
   if (s === 'finished') await gameStore.loadUserAchievements()
 })
+
 </script>
 
 

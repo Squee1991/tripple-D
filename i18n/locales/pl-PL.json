@@ -2,6 +2,67 @@
   "preloader": {
     "value": "Zostaniesz przekierowany na stronę główną..."
   },
+  "duelGrammarTips": {
+    "authModal": "Wymagana autoryzacja",
+    "authText": "Aby grać w pojedynki, zaloguj się lub zarejestruj.",
+    "tipOne": "Czasownik na 2. miejscu: Ich **lerne** Deutsch.",
+    "tipTwo": "Miejsce lub czas na początku? Czasownik i tak jest 2.: **Heute** gehe ich.",
+    "tipThree": "Pytanie bez słowa pytającego: czasownik na 1. miejscu — **Kommst** du?",
+    "tipFour": "Zdanie podrzędne: czasownik na końcu — …weil ich **arbeite**.",
+    "tipFive": "Spójnik **und** nie zmienia szyku: Ich lerne und ich **spiele**.",
+  },
+  "duelA1": {
+    "title": "Pojedynki fraz (Poziom A1)",
+    "firstWinName": "Pierwsze zwycięstwo",
+    "firstWinDescription": "Wygraj pierwszy pojedynek na poziomie A1",
+    "secondWinName": "Zew zwycięstwa",
+    "secondWinDescription": "Wygraj 10 pojedynków na poziomie A1",
+    "streak3Name": "Na fali",
+    "streak3Description": "Wygraj 3 pojedynki z rzędu na poziomie A1",
+    "streak10Name": "Niepowstrzymana fala",
+    "streak10Description": "Wygraj 10 pojedynków z rzędu na poziomie A1",
+    "cleanSweeps5": "Czysty start",
+    "cleanSweeps5Description": "Wygraj 20 pojedynków na poziomie A1 do zera"
+  },
+  "duelA2": {
+    "title": "Pojedynki fraz (Poziom A2)",
+    "firstWinName": "Pierwsze trofeum A2",
+    "firstWinDescription": "Wygraj pierwszy pojedynek na poziomie A2",
+    "secondWinName": "Dziesiętnik",
+    "secondWinDescription": "Wygraj 10 pojedynków na poziomie A2",
+    "streak5Name": "Seria zwycięstw",
+    "streak5Description": "Zdobądź serię pięciu zwycięstw",
+    "streak10Name": "Seria szczęścia",
+    "streak10Description": "Wygraj 10 pojedynków z rzędu na poziomie A2",
+    "cleanSweeps20": "Mistrz precyzji",
+    "cleanSweeps20Description": "Wygraj 20 pojedynków na poziomie A2 do zera"
+  },
+  "duelB1": {
+    "title": "Pojedynki fraz (Poziom B1)",
+    "firstWinName": "Pierwszy szczyt",
+    "firstWinDescription": "Wygraj pierwszy pojedynek na poziomie B1",
+    "secondWinName": "Weteran areny",
+    "secondWinDescription": "Wygraj 10 pojedynków na poziomie B1",
+    "streak5Name": "Mistrz zwycięstw",
+    "streak5Description": "Zdobądź serię pięciu zwycięstw",
+    "streak10Name": "Niepowstrzymany",
+    "streak10Description": "Zdobądź serię dziesięciu zwycięstw",
+    "cleanSweeps20": "Mistrz precyzji",
+    "cleanSweeps20Description": "Wygraj 20 pojedynków na poziomie B1 do zera"
+  },
+  "duelB2": {
+    "title": "Pojedynki fraz (Poziom B2)",
+    "firstWinName": "Pierwszy szturm",
+    "firstWinDescription": "Wygraj pierwszy pojedynek na poziomie B2",
+    "secondWinName": "Wódz",
+    "secondWinDescription": "Wygraj 20 pojedynków na poziomie B2",
+    "streak5Name": "Dominator",
+    "streak5Description": "Wygraj 5 pojedynków z rzędu na poziomie B2",
+    "streak10Name": "Najwyższy Dominator",
+    "streak10Description": "Wygraj 10 pojedynków z rzędu na poziomie B2",
+    "cleanSweeps20": "Żywa legenda",
+    "cleanSweeps20Description": "Wygraj 10 pojedynków do zera na poziomie B2"
+  },
   "adjectiveDeclinationArticle": {
     "title": "Po rodzajniku określonym",
     "firstName": "Pierwszy krok z rodzajnikiem",

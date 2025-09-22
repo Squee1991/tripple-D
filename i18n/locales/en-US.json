@@ -2,6 +2,67 @@
   "preloader": {
     "value": "You will be redirected to the main page..."
   },
+  "duelGrammarTips": {
+    "authModal": "Authorization required",
+    "authText": "To play duels, please log in or register.",
+    "tipOne": "Verb goes in 2nd position: Ich **lerne** Deutsch.",
+    "tipTwo": "Place or time at the beginning? Verb is still 2nd: **Heute** gehe ich.",
+    "tipThree": "Yes/No question: verb in 1st place — **Kommst** du?",
+    "tipFour": "Subordinate clause: verb at the end — …weil ich **arbeite**.",
+    "tipFive": "Conjunction **und** does not change word order: Ich lerne und ich **spiele**.",
+  },
+  "duelA1": {
+    "title": "Phrase Duels (Level A1)",
+    "firstWinName": "First Victory",
+    "firstWinDescription": "Win your first match at level A1",
+    "secondWinName": "Call of Victory",
+    "secondWinDescription": "Win 10 matches at level A1",
+    "streak3Name": "On a Roll",
+    "streak3Description": "Win 3 matches in a row at level A1",
+    "streak10Name": "Unstoppable Wave",
+    "streak10Description": "Win 10 matches in a row at level A1",
+    "cleanSweeps5": "Clean Start",
+    "cleanSweeps5Description": "Win 20 matches at level A1 with a clean sweep"
+  },
+  "duelA2": {
+    "title": "Phrase Duels (Level A2)",
+    "firstWinName": "First Trophy A2",
+    "firstWinDescription": "Win your first match at level A2",
+    "secondWinName": "Decimator",
+    "secondWinDescription": "Win 10 matches at level A2",
+    "streak5Name": "Winning Streak",
+    "streak5Description": "Get a streak of five wins",
+    "streak10Name": "Lucky Streak",
+    "streak10Description": "Win 10 matches in a row at level A2",
+    "cleanSweeps20": "Master of Precision",
+    "cleanSweeps20Description": "Win 20 matches at level A2 with a clean sweep"
+  },
+  "duelB1": {
+    "title": "Phrase Duels (Level B1)",
+    "firstWinName": "First Summit",
+    "firstWinDescription": "Win your first match at level B1",
+    "secondWinName": "Arena Veteran",
+    "secondWinDescription": "Win 10 matches at level B1",
+    "streak5Name": "Master of Victories",
+    "streak5Description": "Get a streak of five wins",
+    "streak10Name": "Unstoppable",
+    "streak10Description": "Get a streak of ten wins",
+    "cleanSweeps20": "Master of Precision",
+    "cleanSweeps20Description": "Win 20 matches at level B1 with a clean sweep"
+  },
+  "duelB2": {
+    "title": "Phrase Duels (Level B2)",
+    "firstWinName": "First Assault",
+    "firstWinDescription": "Win your first match at level B2",
+    "secondWinName": "Warlord",
+    "secondWinDescription": "Win 20 matches at level B2",
+    "streak5Name": "Dominator",
+    "streak5Description": "Win 5 matches in a row at level B2",
+    "streak10Name": "Supreme Dominator",
+    "streak10Description": "Win 10 matches in a row at level B2",
+    "cleanSweeps20": "Living Legend",
+    "cleanSweeps20Description": "Win 10 matches with a clean sweep at level B2"
+  },
   "locationQuests": {
     "done": "UKOŃCZONO",
     "awards": "Nagroda:",

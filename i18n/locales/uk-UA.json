@@ -2,6 +2,67 @@
   "preloader": {
     "value": "Вас буде перенаправлено на головну сторінку..."
   },
+  "duelGrammarTips": {
+    "authModal": "Потрібна авторизація",
+    "authText": "Щоб грати у дуелі, увійдіть до акаунта або зареєструйтеся.",
+    "tipOne": "Дієслово — на 2-му місці: Ich **lerne** Deutsch.",
+    "tipTwo": "Місце або час на початку? Дієслово все одно 2-е: **Heute** gehe ich.",
+    "tipThree": "Питання без слова: дієслово на 1-му місці — **Kommst** du?",
+    "tipFour": "Підрядне речення: дієслово в кінці — …weil ich **arbeite**.",
+    "tipFive": "Сполучник **und** не змінює порядок: Ich lerne und ich **spiele**.",
+  },
+  "duelA1": {
+    "title": "Дуелі фраз (Рівень A1)",
+    "firstWinName": "Перша перемога",
+    "firstWinDescription": "Здобути першу перемогу на рівні A1",
+    "secondWinName": "Поклик перемоги",
+    "secondWinDescription": "Перемогти у 10 іграх на рівні A1",
+    "streak3Name": "На хвилі",
+    "streak3Description": "Перемогти у 3 іграх поспіль на рівні A1",
+    "streak10Name": "Непереможна хвиля",
+    "streak10Description": "Перемогти у 10 іграх поспіль на рівні A1",
+    "cleanSweeps5": "Чистий старт",
+    "cleanSweeps5Description": "Виграти 20 ігор на рівні A1 всуху"
+  },
+  "duelA2": {
+    "title": "Дуелі фраз (Рівень A2)",
+    "firstWinName": "Перший трофей A2",
+    "firstWinDescription": "Здобути першу перемогу на рівні A2",
+    "secondWinName": "Десятник",
+    "secondWinDescription": "Здобути 10 перемог на рівні A2",
+    "streak5Name": "Серія перемог",
+    "streak5Description": "Зробити серію з п’яти перемог",
+    "streak10Name": "Смуга удачі",
+    "streak10Description": "Перемогти у 10 іграх поспіль на рівні A2",
+    "cleanSweeps20": "Майстер точності",
+    "cleanSweeps20Description": "Виграти 20 ігор на рівні A2 всуху"
+  },
+  "duelB1": {
+    "title": "Дуелі фраз (Рівень B1)",
+    "firstWinName": "Перша вершина",
+    "firstWinDescription": "Здобути першу перемогу на рівні B1",
+    "secondWinName": "Ветеран арени",
+    "secondWinDescription": "Здобути 10 перемог на рівні B1",
+    "streak5Name": "Майстер перемог",
+    "streak5Description": "Зробити серію з п’яти перемог",
+    "streak10Name": "Непереможний",
+    "streak10Description": "Зробити серію з десяти перемог",
+    "cleanSweeps20": "Майстер точності",
+    "cleanSweeps20Description": "Виграти 20 ігор на рівні B1 всуху"
+  },
+  "duelB2": {
+    "title": "Дуелі фраз (Рівень B2)",
+    "firstWinName": "Перший штурм",
+    "firstWinDescription": "Здобути першу перемогу на рівні B2",
+    "secondWinName": "Полководець",
+    "secondWinDescription": "Здобути 20 перемог на рівні B2",
+    "streak5Name": "Домінатор",
+    "streak5Description": "Перемогти у п’яти іграх поспіль на рівні B2",
+    "streak10Name": "Верховний Домінатор",
+    "streak10Description": "Перемогти у десяти іграх поспіль на рівні B2",
+    "cleanSweeps20": "Жива легенда",
+    "cleanSweeps20Description": "Виграти 10 ігор всуху на рівні B2"
+  },
   "locationQuests": {
     "done": "ПРОЙДЕНО",
     "awards": "Нагорода:",
