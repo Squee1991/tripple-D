@@ -79,7 +79,7 @@
           <p class="page-subtitle">{{ t('wordDuel.prepare') }}</p>
         </div>
       </div>
-      <div v-if="authStore.isPremium" class="stats-block">
+      <div v-if="!authStore.isPremium" class="stats-block">
         <h3>Твоя статистика по уровню {{ selectedLevel }}</h3>
         <p>Побед: {{ levelStats.wins }}</p>
         <p>Серия побед: {{ levelStats.streaks }}</p>
