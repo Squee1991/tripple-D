@@ -45,6 +45,7 @@
       </div>
       <div v-else-if="store.activeQuestion" class="quiz-content-comic">
         <div class="question-card-comic">
+          <SoundBtn :text="fullSentence"/>
           <p class="question-text-comic">
             <span>{{ store.activeQuestion.question.split('___')[0] }}</span>
             <span class="blank-space">{{ store.selectedOption || '( ... )' }}</span>
@@ -96,6 +97,7 @@ import {userlangStore} from '../../store/learningStore.js'
 import {useRoute, useRouter} from 'vue-router';
 import CelebrationFireworks from "~/src/components/CelebrationFireworks.vue";
 import {useRewardEngine} from '../../src/composables/useRewardEngine.js'
+import SoundBtn from '../../src/components/soundBtn.vue'
 
 const FINISH_UI = {
   winTitle: 'Поздравляем!',
@@ -118,6 +120,14 @@ const showCelebration = ref(false)
 const celebration = ref(null)
 const startedAt = ref(Date.now())
 const elapsed = ref('0:00')
+
+const fullSentence = computed(() => {
+  const quest = store.activeQuestion
+  if (!quest) return ''
+  const [pre , post = ''] = quest.question.split('___')
+  const word = store.selectedOption || ''
+  return `${pre}${word}${post}`
+})
 
 const AWARD = 5
 const LEVEL_UP_XP = 100

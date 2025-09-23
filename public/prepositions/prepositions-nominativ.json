@@ -15,6 +15,56 @@
     "answer": "meine Schwester"
   },
   {
+    "question": "___ ist alt.",
+    "options": ["Der Stuhl", "Den Stuhl", "Dem Stuhl", "Des Stuhles"],
+    "answer": "Der Stuhl"
+  },
+  {
+    "question": "___ ist neu.",
+    "options": ["Die Lampe", "Der Lampe", "Den Lampe", "Dem Lampe"],
+    "answer": "Die Lampe"
+  },
+  {
+    "question": "___ ist groß.",
+    "options": ["Das Zimmer", "Dem Zimmer", "Den Zimmer", "Des Zimmers"],
+    "answer": "Das Zimmer"
+  },
+  {
+    "question": "___ heißt Maria.",
+    "options": ["Meine Schwester", "Meiner Schwester", "Meinem Schwester", "Meinen Schwester"],
+    "answer": "Meine Schwester"
+  },
+  {
+    "question": "___ spielen im Garten.",
+    "options": ["Die Kinder", "Den Kindern", "Dem Kindern", "Des Kindes"],
+    "answer": "Die Kinder"
+  },
+  {
+    "question": "___ ist offen.",
+    "options": ["Die Tür", "Der Tür", "Den Tür", "Dem Tür"],
+    "answer": "Die Tür"
+  },
+  {
+    "question": "___ ist schnell.",
+    "options": ["Der Hund", "Den Hund", "Dem Hund", "Des Hundes"],
+    "answer": "Der Hund"
+  },
+  {
+    "question": "___ sind bunt.",
+    "options": ["Die Blumen", "Den Blumen", "Dem Blumen", "Des Blumes"],
+    "answer": "Die Blumen"
+  },
+  {
+    "question": "___ ist meine Lehrerin.",
+    "options": ["Frau Schmidt", "Der Frau Schmidt", "Den Frau Schmidt", "Dem Frau Schmidt"],
+    "answer": "Frau Schmidt"
+  },
+  {
+    "question": "___ ist müde.",
+    "options": ["Das Kind", "Dem Kind", "Den Kind", "Des Kindes"],
+    "answer": "Das Kind"
+  },
+  {
     "question": "___ fährt nach Berlin.",
     "options": ["Der Mann", "Den Mann", "Dem Mann", "Des Mannes"],
     "answer": "Der Mann"
@@ -25,9 +75,154 @@
     "answer": "die Hauptstadt"
   },
   {
-    "question": "Wie heißt du? — Ich bin ___.",
-    "options": ["Anna", "der Anna", "den Anna", "dem Anna"],
+    "question": "___ ist alt.",
+    "options": ["Der Tisch", "Den Tisch", "Dem Tisch", "Des Tisches"],
+    "answer": "Der Tisch"
+  },
+  {
+    "question": "___ spielen im Park.",
+    "options": ["Die Kinder", "Den Kindern", "Dem Kindern", "Des Kindes"],
+    "answer": "Die Kinder"
+  },
+  {
+    "question": "___ ist meine Freundin.",
+    "options": ["Lisa", "Lisas", "Der Lisa", "Den Lisa"],
+    "answer": "Lisa"
+  },
+  {
+    "question": "___ ist offen.",
+    "options": ["Das Fenster", "Dem Fenster", "Den Fenster", "Des Fensters"],
+    "answer": "Das Fenster"
+  },
+  {
+    "question": "___ bleibt Lehrer.",
+    "options": ["Er", "Ihn", "Ihm", "Seiner"],
+    "answer": "Er"
+  },
+  {
+    "question": "___ wird Ärztin.",
+    "options": ["Sie", "Ihr", "Ihre", "Ihrer"],
+    "answer": "Sie"
+  },
+  {
+    "question": "___ ist kalt.",
+    "options": ["Der Winter", "Den Winter", "Dem Winter", "Des Winters"],
+    "answer": "Der Winter"
+  },
+  {
+    "question": "___ sind schön.",
+    "options": ["Die Blumen", "Den Blumen", "Dem Blumen", "Des Blumes"],
+    "answer": "Die Blumen"
+  },
+  {
+    "question": "___ ist teuer.",
+    "options": ["Das Handy", "Den Handy", "Dem Handy", "Des Handys"],
+    "answer": "Das Handy"
+  },
+  {
+    "question": "___ heißt Thomas.",
+    "options": ["Mein Bruder", "Meinen Bruder", "Meinem Bruder", "Meines Bruders"],
+    "answer": "Mein Bruder"
+  },
+  {
+    "question": "___ ist rot.",
+    "options": ["Die Blume", "Der Blume", "Den Blume", "Dem Blume"],
+    "answer": "Die Blume"
+  },
+  {
+    "question": "___ sind meine Freunde.",
+    "options": ["Das", "Die", "Der", "Den"],
+    "answer": "Die"
+  },
+  {
+    "question": "___ ist meine Mutter.",
+    "options": ["Anna", "Annas", "Den Anna", "Dem Anna"],
     "answer": "Anna"
+  },
+  {
+    "question": "___ spielen Fußball.",
+    "options": ["Die Jungen", "Den Jungen", "Dem Jungen", "Des Jungen"],
+    "answer": "Die Jungen"
+  },
+  {
+    "question": "___ ist groß.",
+    "options": ["Der Hund", "Den Hund", "Dem Hund", "Des Hundes"],
+    "answer": "Der Hund"
+  },
+  {
+    "question": "___ sind leer.",
+    "options": ["Die Gläser", "Den Gläsern", "Dem Gläsern", "Des Glases"],
+    "answer": "Die Gläser"
+  },
+  {
+    "question": "___ ist mein Lehrer.",
+    "options": ["Herr Schmidt", "Den Herrn Schmidt", "Dem Herrn Schmidt", "Des Herrn Schmidt"],
+    "answer": "Herr Schmidt"
+  },
+  {
+    "question": "___ bleibt Chef.",
+    "options": ["Er", "Ihn", "Ihm", "Seiner"],
+    "answer": "Er"
+  },
+  {
+    "question": "___ ist alt.",
+    "options": ["Das Haus", "Dem Haus", "Den Haus", "Des Hauses"],
+    "answer": "Das Haus"
+  },
+  {
+    "question": "___ ist jung.",
+    "options": ["Die Frau", "Der Frau", "Den Frau", "Dem Frau"],
+    "answer": "Die Frau"
+  },
+  {
+    "question": "___ heißt Karl.",
+    "options": ["Der Mann", "Den Mann", "Dem Mann", "Des Mannes"],
+    "answer": "Der Mann"
+  },
+  {
+    "question": "___ ist meine Tasche.",
+    "options": ["Das", "Den", "Dem", "Des"],
+    "answer": "Das"
+  },
+  {
+    "question": "___ ist freundlich.",
+    "options": ["Die Lehrerin", "Der Lehrerin", "Den Lehrerin", "Dem Lehrerin"],
+    "answer": "Die Lehrerin"
+  },
+  {
+    "question": "___ ist warm.",
+    "options": ["Der Sommer", "Den Sommer", "Dem Sommer", "Des Sommers"],
+    "answer": "Der Sommer"
+  },
+  {
+    "question": "___ sind interessant.",
+    "options": ["Die Bücher", "Den Büchern", "Dem Büchern", "Des Buches"],
+    "answer": "Die Bücher"
+  },
+  {
+    "question": "___ ist krank.",
+    "options": ["Mein Vater", "Meinen Vater", "Meinem Vater", "Meines Vaters"],
+    "answer": "Mein Vater"
+  },
+  {
+    "question": "___ sind hier.",
+    "options": ["Wir", "Uns", "Unser", "Unseres"],
+    "answer": "Wir"
+  },
+  {
+    "question": "___ ist da.",
+    "options": ["Sie", "Ihr", "Ihrer", "Ihnen"],
+    "answer": "Sie"
+  },
+  {
+    "question": "___ sind müde.",
+    "options": ["Meine Freunde", "Meinen Freunde", "Meinem Freunde", "Meines Freundes"],
+    "answer": "Meine Freunde"
+  },
+  {
+    "question": "___ ist weg.",
+    "options": ["Das Kind", "Dem Kind", "Den Kind", "Des Kindes"],
+    "answer": "Das Kind"
   },
   {
     "question": "Das Buch? — ___ liegt auf dem Tisch.",
@@ -158,5 +353,155 @@
     "question": "Sie bleibt ___.",
     "options": ["Lehrerin", "der Lehrerin", "den Lehrerin", "des Lehrerin"],
     "answer": "Lehrerin"
+  },
+  {
+    "question": "___ ist mein Vater.",
+    "options": ["Das", "Den", "Dem", "Des"],
+    "answer": "Das"
+  },
+  {
+    "question": "___ ist meine Mutter.",
+    "options": ["Das", "Den", "Dem", "Des"],
+    "answer": "Das"
+  },
+  {
+    "question": "___ ist groß.",
+    "options": ["Der Hund", "Den Hund", "Dem Hund", "Des Hundes"],
+    "answer": "Der Hund"
+  },
+  {
+    "question": "___ ist klein.",
+    "options": ["Die Katze", "Der Katze", "Den Katze", "Dem Katze"],
+    "answer": "Die Katze"
+  },
+  {
+    "question": "___ ist interessant.",
+    "options": ["Das Buch", "Dem Buch", "Den Buch", "Des Buches"],
+    "answer": "Das Buch"
+  },
+  {
+    "question": "___ ist leer.",
+    "options": ["Die Flasche", "Der Flasche", "Den Flasche", "Dem Flasche"],
+    "answer": "Die Flasche"
+  },
+  {
+    "question": "___ ist neu.",
+    "options": ["Das Auto", "Dem Auto", "Den Auto", "Des Autos"],
+    "answer": "Das Auto"
+  },
+  {
+    "question": "___ sind meine Eltern.",
+    "options": ["Das", "Die", "Der", "Den"],
+    "answer": "Die"
+  },
+  {
+    "question": "___ ist freundlich.",
+    "options": ["Mein Freund", "Meinen Freund", "Meinem Freund", "Meines Freundes"],
+    "answer": "Mein Freund"
+  },
+  {
+    "question": "___ ist meine Freundin.",
+    "options": ["Anna", "Anna's", "Annas", "Annam"],
+    "answer": "Anna"
+  },
+  {
+    "question": "___ spielen Fußball.",
+    "options": ["Die Kinder", "Den Kindern", "Dem Kindern", "Des Kindes"],
+    "answer": "Die Kinder"
+  },
+  {
+    "question": "___ ist alt.",
+    "options": ["Das Haus", "Den Haus", "Dem Haus", "Des Hauses"],
+    "answer": "Das Haus"
+  },
+  {
+    "question": "___ ist teuer.",
+    "options": ["Das Handy", "Den Handy", "Dem Handy", "Des Handys"],
+    "answer": "Das Handy"
+  },
+  {
+    "question": "___ ist meine Lehrerin.",
+    "options": ["Frau Müller", "Der Frau Müller", "Den Frau Müller", "Dem Frau Müller"],
+    "answer": "Frau Müller"
+  },
+  {
+    "question": "___ sind laut.",
+    "options": ["Die Schüler", "Den Schülern", "Dem Schüler", "Des Schülers"],
+    "answer": "Die Schüler"
+  },
+  {
+    "question": "___ ist kalt.",
+    "options": ["Der Winter", "Den Winter", "Dem Winter", "Des Winters"],
+    "answer": "Der Winter"
+  },
+  {
+    "question": "___ ist warm.",
+    "options": ["Der Sommer", "Den Sommer", "Dem Sommer", "Des Sommers"],
+    "answer": "Der Sommer"
+  },
+  {
+    "question": "___ ist meine Tasche.",
+    "options": ["Das", "Den", "Dem", "Des"],
+    "answer": "Das"
+  },
+  {
+    "question": "___ ist rot.",
+    "options": ["Die Blume", "Der Blume", "Den Blume", "Dem Blume"],
+    "answer": "Die Blume"
+  },
+  {
+    "question": "___ ist freundlich.",
+    "options": ["Der Lehrer", "Den Lehrer", "Dem Lehrer", "Des Lehrers"],
+    "answer": "Der Lehrer"
+  },
+  {
+    "question": "___ ist meine Schwester.",
+    "options": ["Maria", "Marias", "Der Maria", "Den Maria"],
+    "answer": "Maria"
+  },
+  {
+    "question": "___ ist stark.",
+    "options": ["Der Mann", "Den Mann", "Dem Mann", "Des Mannes"],
+    "answer": "Der Mann"
+  },
+  {
+    "question": "___ ist schön.",
+    "options": ["Die Frau", "Der Frau", "Den Frau", "Dem Frau"],
+    "answer": "Die Frau"
+  },
+  {
+    "question": "___ sind müde.",
+    "options": ["Die Studenten", "Den Studenten", "Dem Studenten", "Des Studenten"],
+    "answer": "Die Studenten"
+  },
+  {
+    "question": "___ ist mein Bruder.",
+    "options": ["Peter", "Peters", "Den Peter", "Dem Peter"],
+    "answer": "Peter"
+  },
+  {
+    "question": "___ ist offen.",
+    "options": ["Die Tür", "Der Tür", "Den Tür", "Dem Tür"],
+    "answer": "Die Tür"
+  },
+  {
+    "question": "___ ist sauber.",
+    "options": ["Das Zimmer", "Dem Zimmer", "Den Zimmer", "Des Zimmers"],
+    "answer": "Das Zimmer"
+  },
+  {
+    "question": "___ sind meine Freunde.",
+    "options": ["Das", "Die", "Der", "Den"],
+    "answer": "Die"
+  },
+  {
+    "question": "___ ist alt.",
+    "options": ["Mein Computer", "Meinen Computer", "Meinem Computer", "Meines Computers"],
+    "answer": "Mein Computer"
+  },
+  {
+    "question": "___ sind interessant.",
+    "options": ["Die Bücher", "Den Büchern", "Dem Büchern", "Des Buches"],
+    "answer": "Die Bücher"
   }
 ]

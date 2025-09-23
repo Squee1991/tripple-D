@@ -65,16 +65,16 @@ export const adjectiveBasic = [
 			},
 			{
 				id: 'emo2',
-				name: 'adjectiveBasicFeelings.firstName',
-				description: 'adjectiveBasicFeelings.firstDescription',
+				name: 'adjectiveBasicFeelings.secondName',
+				description: 'adjectiveBasicFeelings.secondDescription',
 				icon: '❤️',
 				currentProcess: 0,
 				targetProgress: 75
 			},
 			{
 				id: 'emo3',
-				name: 'adjectiveBasicFeelings.firstName',
-				description: 'adjectiveBasicFeelings.firstDescription',
+				name: 'adjectiveBasicFeelings.thirdName',
+				description: 'adjectiveBasicFeelings.thirdDescription',
 				icon: '🎭',
 				currentProcess: 0,
 				targetProgress: 150

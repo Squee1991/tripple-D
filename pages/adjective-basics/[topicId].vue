@@ -9,46 +9,32 @@
         <div class="header-item">{{ t('prasens.score') }} {{ store.score }}</div>
       </div>
     </header>
+
     <main class="main">
       <div v-if="loading" class="loading">{{ t('prasens.loading') }}</div>
+
       <div v-else-if="store.quizCompleted" class="finish-screen">
+        <!-- важный key, чтобы компонент заново монтировался -->
         <CelebrationFireworks
-            v-model="showCelebration"
-            ref="celebration"
-            :score="store.score"
-            :total="store.currentQuestions.length"
-            :elapsed="elapsed"
-            :pointsStart="prevPoints"
-            :expStart="prevExp"
-            :levelStart="prevLevel"
-            :award="failMode ? 0 : AWARD"
-            :levelUpXp="LEVEL_UP_XP"
-            :showStats="!failMode"
-            :pieces="460"
-            :sparkCount="32"
-            :burstsCount="28"
-            :area-x="[10, 90]"
-            :area-y="[15, 75]"
-            :title="failMode ? FINISH_UI.tryAgainTitle : FINISH_UI.winTitle"
-            :resultLabel="FINISH_UI.result"
-            :timeLabel="FINISH_UI.time"
-            :pointsLabel="FINISH_UI.points"
-            :levelLabel="FINISH_UI.level"
-        >
-          <div class="actions">
-            <button class="btn primary" @click="startQuiz">{{ t('prasens.again') }}</button>
-            <button class="btn ghost" @click="backTo">{{ t('prasens.back') }}</button>
-          </div>
-        </CelebrationFireworks>
+            :key="`cw-${startExpLocal}-${targetExpLocal}-${startPointsLocal}-${targetPointsLocal}`"
+            :start-exp="startExpLocal"
+            :target-exp="targetExpLocal"
+            :start-points="startPointsLocal"
+            :target-points="targetPointsLocal"
+        />
+        <div class="actions"></div>
       </div>
+
       <div v-else-if="store.activeQuestion" class="quiz">
         <div class="question">
+          <SoundBtn :text="fullSentence"/>
           <p class="question-text">
             <span>{{ store.activeQuestion.question.split('___')[0] }}</span>
             <span class="blank">{{ store.selectedOption || '( ... )' }}</span>
             <span>{{ store.activeQuestion.question.split('___')[1] }}</span>
           </p>
         </div>
+
         <div class="options">
           <button
               v-for="option in store.activeQuestion.options"
@@ -61,11 +47,13 @@
             {{ option }}
           </button>
         </div>
+
         <div class="controls">
           <div v-if="store.feedback" class="fb" :class="store.feedback">
             <span v-if="store.feedback === 'correct'">{{ t('prasens.correct') }}</span>
             <span v-else>{{ t('prasens.wrong') }} {{ store.activeQuestion.answer }}</span>
           </div>
+
           <button
               v-if="store.feedback === null"
               class="btn check"
@@ -74,6 +62,7 @@
           >
             {{ t('prasens.check') }}
           </button>
+
           <button v-else class="btn next" @click="store.nextQuestion()">
             {{ t('prasens.further') }}
           </button>
@@ -82,52 +71,46 @@
     </main>
   </div>
 </template>
+
 <script setup>
-import {ref, onMounted, watch, nextTick} from 'vue'
+import {ref, onMounted, watch, computed} from 'vue'
 import {useQuizStore} from '../../store/adjectiveStore.js'
 import {userlangStore} from '../../store/learningStore.js'
 import {useRoute, useRouter} from 'vue-router'
 import CelebrationFireworks from '../../src/components/CelebrationFireworks.vue'
-import {useRewardEngine} from '../../src/composables/useRewardEngine.js'
+import SoundBtn from '../../src/components/soundBtn.vue'
+import {useI18n} from 'vue-i18n'
 
-const FINISH_UI = {
-  winTitle: 'Поздравляем!',
-  tryAgainTitle: 'Ещё чуть-чуть — и получится!',
-  result: 'Результат',
-  time: 'Время',
-  points: 'Артиклюсы',
-  level: 'Уровень',
-}
+// НАСТРОЙКИ
+const AWARD_EXP = 5
+const AWARD_POINTS = 5
+const DELAY_MS = 10000 // 10 секунд
+
 const router = useRouter()
 const route = useRoute()
 const store = useQuizStore()
 const learning = userlangStore()
 const {t} = useI18n()
 
+const fullSentence = computed(() => {
+  const q = store.activeQuestion
+  if (!q) return ''
+  const [pre, post = ''] = q.question.split('___')
+  const word = store.selectedOption || ''
+  return `${pre}${word}${post}`
+})
+
 const loading = ref(true)
 const category = 'adjective-basics'
 const {topicId} = route.params
 
-const showCelebration = ref(false)
-const celebration = ref(null)
-const startedAt = ref(Date.now())
-const elapsed = ref('0:00')
+// локальные start/target для анимации
+const startExpLocal = ref(0)
+const targetExpLocal = ref(0)
+const startPointsLocal = ref(0)
+const targetPointsLocal = ref(0)
 
-const AWARD = 5
-const LEVEL_UP_XP = 100
-const PASS_RATIO = 0.8
-
-const prevPoints = ref(0)
-const prevExp = ref(0)
-const prevLevel = ref(1)
-const failMode = ref(false)
-
-function fmt(ms) {
-  const s = Math.floor(ms / 1000)
-  const m = Math.floor(s / 60)
-  const sec = s % 60
-  return `${m}:${sec.toString().padStart(2, '0')}`
-}
+const backTo = () => router.push(`/adjective-basics`)
 
 async function startQuiz() {
   loading.value = true
@@ -135,11 +118,7 @@ async function startQuiz() {
   store.setContext({modeId: category, topicId, fileName, contentVersion: 'v1'})
   await store.startNewQuiz(fileName)
   loading.value = false
-  showCelebration.value = false
-  startedAt.value = Date.now()
 }
-
-const backTo = () => router.push(`/adjective-basics`)
 
 onMounted(async () => {
   loading.value = true
@@ -147,32 +126,30 @@ onMounted(async () => {
   store.setContext({modeId: category, topicId, fileName, contentVersion: 'v1'})
   await store.restoreOrStart({modeId: category, topicId, fileName, contentVersion: 'v1'})
   await learning.loadFromFirebase?.()
-  startedAt.value = Date.now()
   loading.value = false
 })
 
-const {finalize} = useRewardEngine(learning)
+// Важно: здесь НИЧЕГО не прибавляем сразу
+watch(() => store.quizCompleted, async (done) => {
+  if (!done) return
 
-watch(() => store.quizCompleted,
-    async (done) => {
-      if (!done) return
-      elapsed.value = fmt(Date.now() - startedAt.value)
-      const res = await finalize({
-        score: store.score,
-        total: store.currentQuestions.length || 10,
-        passRatio: PASS_RATIO,
-        baseAward: AWARD,
-        levelUpXp: LEVEL_UP_XP,
-        save: true,
-      })
-      prevPoints.value = res.pointsStart
-      prevExp.value = res.expStart
-      prevLevel.value = res.levelStart
-      failMode.value = !res.ok
-      await nextTick()
-      showCelebration.value = true
-      celebration.value?.play()
-    })
+  const curExp = Number(learning.exp || 0)
+  const curPoints = Number(learning.points || 0)
+
+  // передаём в экран поздравления, чтобы он нарисовал 40 -> 45 и т.п.
+  startExpLocal.value = curExp
+  targetExpLocal.value = curExp + AWARD_EXP
+  startPointsLocal.value = curPoints
+  targetPointsLocal.value = curPoints + AWARD_POINTS
+
+  // только через 10 сек реально пишем в стор/базу
+  setTimeout(async () => {
+    learning.exp = targetExpLocal.value
+    learning.points = targetPointsLocal.value
+    learning.handleLeveling?.()
+    await learning.saveToFirebase?.()
+  }, DELAY_MS)
+})
 </script>
 
 <style scoped>
@@ -320,18 +297,7 @@ watch(() => store.quizCompleted,
   align-items: center;
   justify-content: center;
   min-height: 100dvh;
-  padding: 0 10px;
-}
-
-
-.finish-card {
   width: 100%;
-  max-width: 420px;
-  text-align: center;
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  color: #fff;
 }
 
 .actions {
@@ -340,32 +306,17 @@ watch(() => store.quizCompleted,
   gap: 10px;
 }
 
-.btn.primary {
-  background: #60a5fa;
-  color: #0b1220;
-}
-
-.btn.ghost {
-  background: #1c2636;
-  color: #e5edff;
-}
-
-.btn:active {
-  transform: translateY(1px);
-  box-shadow: 0 4px 0 #0a0f16;
-}
-
 @media (max-width: 767px) {
   .quiz-header {
-    padding: 10px;
+    padding: 10px
   }
 
   .question-text {
-    font-size: 1.3rem;
+    font-size: 1.3rem
   }
 
   .opt {
-    font-size: 1.2rem;
+    font-size: 1.2rem
   }
 }
 </style>

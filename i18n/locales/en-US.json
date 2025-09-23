@@ -928,26 +928,25 @@
     "title": "Eastern Plain",
     "firstName": "Eastern Plain",
     "firstDescription": "Complete all quests without mistakes in the Eastern Plain",
-    "secondName": "Stone Border",
-    "secondDescription": "Complete all quests without mistakes in the Stone Borders",
+    "secondName": "Stone Frontier",
+    "secondDescription": "Complete all quests without mistakes in the Stone Frontier",
     "thirdName": "Valley of Winds",
     "thirdDescription": "Complete all quests without mistakes in the Valley of Winds",
     "fourthName": "Lake Ruins",
     "fourthDescription": "Complete all quests without mistakes in the Lake Ruins",
     "fifthName": "Northern Cliffs",
     "fifthDescription": "Complete all quests without mistakes in the Northern Cliffs",
-    "sixthName": "Stormy Coast",
-    "sixthDescription": "Complete all quests without mistakes on the Stormy Coast",
+    "sixthName": "Stormy Shore",
+    "sixthDescription": "Complete all quests without mistakes on the Stormy Shore",
     "fiveHearthName": "Keeper of Five Hearts",
-    "fiveHearthDescription": "Complete twenty tasks while having 5 lives",
-    "fiveHearthAwards": "Explorer's Globe",
-    "allLocationsName": "Master of the Language Lands",
+    "fiveHearthDescription": "Complete twenty quests while having 5 lives",
+    "fiveHearthAwards": "Reward: Shield of Life",
+    "allLocationsName": "Master of Language Lands",
     "allLocationsDescription": "Complete all quests in all locations",
-    "allLocationsAwards": "Explorer's Globe"
+    "allLocationsAwards": "Reward: Explorer's Globe"
   },
-
   "awards": {
-    "title": "List of Awards",
+    "title": "Awards List",
     "articlus": "Diamond of Articlus",
     "registerAchievement": "Participant Badge",
     "level10": "Cup with Wings",
@@ -957,8 +956,15 @@
     "guessedFastWords": "Blitz Rocket",
     "guessSixHundred": "Book of Wisdom",
     "daily": "Hourglass of Eternity",
-    "guessedSafeWords": "Shield of Caution"
+    "guessedSafeWords": "Shield of Caution",
+    "explorer": "Explorer's Globe",
+    "languageLands50": "Explorer's Compass",
+    "allVerbs": "Reward: Blades of Action",
+    "allAdjectives": "Reward: Palette of Eloquence",
+    "allСases": "Reward: Puzzle of Unity",
+    "fiveHearts": "Shield of Life"
   },
+
   "awardsSection": {
     "congratulations": "Congratulations! You already have this award!",
     "close": "Close"
@@ -1675,10 +1681,18 @@
     "specialLocationsName": "Pathfinder of the Language Lands",
     "specialLocationsDescription": "Complete 50 tasks without mistakes in the Language Lands.",
     "specialLocationsAwards": "Reward: Compass",
+    "specialAllCaseslabel": "Lord of Prepositions",
+    "specialAllCasesText": "Master all prepositions with Akkusativ, Dativ, Genitiv and Nominativ",
+    "specialAllCasesAward": "Reward: Puzzle of Unity",
+    "specialAllAdjectivesLabel": "Ruler of Adjectives",
+    "specialAllAdjectivesText": "Earn all adjective achievements: Basics, Declension, Degree of Comparison",
+    "specialAllAdjectivesAward": "Reward: Palette of Eloquence",
+    "specialAllVerbsLabel": "Master of Actions",
+    "specialAllVerbsText": "Earn all verb achievements: Conjugation, Tenses, Modals, Verb Types",
+    "specialAllVerbsAward": "Reward: Blades of Action",
     "generalSeventhlabel": "Master of Sentences",
     "generalSeventhText": "Compose 1000 sentences in total across all levels and become a master of construction"
   },
-
   "questThemeChoose": {
     "title": "Quest Board",
     "subTitle": "Choose your next adventure and become a master of German in all areas!",

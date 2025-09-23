@@ -929,10 +929,10 @@
     "sixthDescription": "Завершите все квесты без ошибок в Штормовых берегах",
     "fiveHearthName": "Хранитель пяти сердец",
     "fiveHearthDescription": "Выполните двадцать заданий имея 5 жизней",
-    "fiveHearthAwards": "Глобус исследователя",
+    "fiveHearthAwards": "Награда: Щит жизни",
     "allLocationsName": "Мастер Языковых Земель",
     "allLocationsDescription": "Выполните все квесты во всех локациях",
-    "allLocationsAwards": "Глобус исследователя"
+    "allLocationsAwards": "Награда: Глобус исследователя"
   },
   "awards": {
     "title": "Список наград",
@@ -947,7 +947,11 @@
     "daily": "Песочные часы вечности",
     "guessedSafeWords": "Щит осторожности",
     "explorer": "Глобус исследователя",
-    "languageLands50": "Компас исследователя"
+    "languageLands50": "Компас исследователя",
+    "allVerbs": "Клинки действия",
+    "allAdjectives": "Палитра красноречия",
+    "allСases": "Пазл Единения",
+    "fiveHearts": "Щит жизни"
   },
   "eastPlainFirstQuests": {
     "title": "Первая встреча",
@@ -3903,6 +3907,19 @@
     "specialLocationsName": "Следопыт Языковых земель",
     "specialLocationsDescription": "Выполните 50 заданий без ошибок в Языковых землях.",
     "specialLocationsAwards": "Награда: Компас",
+
+    "specialAllCaseslabel": "Властелин Предлогов",
+    "specialAllCasesText": "Овладей всеми предлогами Akkusativ, Dativ, Genitiv и Nominativ",
+    "specialAllCasesAward": "Награда: Пазл Единения",
+
+    "specialAllAdjectivesLabel": "Владыка Прилагательных",
+    "specialAllAdjectivesText": "Получи все достижения прилагательных: Основы , Склонения, Степень сравнения",
+    "specialAllAdjectivesAward": "Награда: Палитра красноречия",
+
+    "specialAllVerbsLabel": "Повелитель действий",
+    "specialAllVerbsText": "Получи все достижения глаголов: Спряжение, времена , модальные, типы глаголов",
+    "specialAllVerbsAward": "Награда: Клинки действия",
+
     "generalSeventhlabel": "Повелитель предложений",
     "generalSeventhText": "Сложите 1000 предложений в сумме на всех уровнях и станьте мастером построения"
   },

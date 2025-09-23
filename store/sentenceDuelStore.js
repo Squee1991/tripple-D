@@ -16,7 +16,8 @@ import {
     limit,
     runTransaction,
     deleteDoc,
-    increment
+    increment,
+    Timestamp // Убедитесь, что Timestamp импортирован
 } from 'firebase/firestore';
 import {userAuthStore} from './authStore.js';
 import {useSentencesStore} from './sentencesStore.js';
@@ -41,21 +42,12 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
             const userDocRef = doc(db, 'users', userId);
             const userDoc = await getDoc(userDocRef);
             const newAchievements = userDoc.exists() ? userDoc.data().achievements || {} : {};
-            // --- ИЗМЕНЕНИЯ ЗДЕСЬ ---
-            // 1. Очищаем текущий объект от старых ключей
             Object.keys(achievements.value).forEach(key => {
                 delete achievements.value[key];
             });
-
-            // 2. Копируем свойства из нового объекта в старый (мутируем его)
             Object.assign(achievements.value, newAchievements);
-            // Вместо: achievements.value = newAchievements;
-            // --- КОНЕЦ ИЗМЕНЕНИЙ ---
-
-
         } catch (error) {
             console.error("Ошибка загрузки достижений:", error);
-            // В случае ошибки тоже очищаем, чтобы не показывать старые данные
             Object.keys(achievements.value).forEach(key => delete achievements.value[key]);
         }
     }
@@ -103,6 +95,11 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
 
         const shuffled = allSentencesForLevel.sort(() => 0.5 - Math.random());
         const selectedSentences = shuffled.slice(0, 11);
+
+        // --- ИЗМЕНЕНИЕ 1 ---
+        // Устанавливаем "срок годности" сессии на 2 часа вперед для авто-очистки (TTL)
+        const expireAt = Timestamp.fromMillis(Date.now() + 60 * 1000); // 1 минута
+
         const sessionsRef = collection(db, 'gameSessions');
         const newSession = {
             hostId: hostId,
@@ -110,6 +107,7 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
             level: level,
             status: 'waiting',
             createdAt: serverTimestamp(),
+            expireAt: expireAt, // Добавляем поле в документ
             players: {[hostId]: {score: 0, name: authStore.name, hasMadeError: false}},
             rounds: selectedSentences.map(s => ({sentenceId: s.id, winner: null})),
             currentRoundIndex: 0,
@@ -150,7 +148,7 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
                     t.update(sessionRef, {
                         guestId: myUserId,
                         status: 'starting',
-                        [`players.${myUserId}`]: {score: 0, name: authStore.name, hasMadeError: false} // ИЗМЕНЕНО
+                        [`players.${myUserId}`]: {score: 0, name: authStore.name, hasMadeError: false}
                     });
                 });
                 listenToSession(sessionToJoin.id);
@@ -185,10 +183,7 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
     function listenToSession(sessionId) {
         gameId.value = sessionId;
         const sessionRef = doc(db, 'gameSessions', sessionId);
-
-        // сбрасываем флаг финализации на старт новой сессии
         didFinalizeMyStats.value = false;
-
         if (unsubscribeFromSession) unsubscribeFromSession();
 
         unsubscribeFromSession = onSnapshot(sessionRef, (docSnap) => {
@@ -204,28 +199,47 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
                 return;
             }
 
-            sessionData.value = { id: docSnap.id, ...docSnap.data() };
-            const newStatus = sessionData.value.status;
+            const data = { id: docSnap.id, ...docSnap.data() };
+            sessionData.value = data; // Сначала обновляем данные
+            const newStatus = data.status;
 
-            // когда впервые увидели finished — обновляем СВОЮ статистику
-            if (newStatus === 'finished' && prevStatus !== 'finished' && !didFinalizeMyStats.value) {
-                const data = sessionData.value;
-                const hostId  = data.hostId;
-                const guestId = data.guestId;
-                if (!hostId || !guestId) return;
+            // --- ИЗМЕНЕНИЕ 2 ---
+            // Когда игра впервые перешла в статус 'finished'
+            if (newStatus === 'finished' && prevStatus !== 'finished') {
 
-                const hostScore  = data.players[hostId]?.score  || 0;
-                const guestScore = data.players[guestId]?.score || 0;
-                const winnerId   = hostScore > guestScore ? hostId : guestId;
+                // 1. Каждый игрок обновляет СВОЮ статистику
+                if (!didFinalizeMyStats.value) {
+                    const hostId  = data.hostId;
+                    const guestId = data.guestId;
+                    if (!hostId || !guestId) return;
 
-                const myUid   = authStore.uid;
-                const myState = data.players[myUid] || {};
-                const iWon        = myUid === winnerId;
-                const isCleanSweep = (myState.score || 0) === data.totalRounds;
-                const isFlawless   = !myState.hasMadeError;
+                    const hostScore  = data.players[hostId]?.score  || 0;
+                    const guestScore = data.players[guestId]?.score || 0;
+                    const winnerId   = hostScore > guestScore ? hostId : (guestScore > hostScore ? guestId : null);
 
-                updateUserStats(myUid, data.level, iWon, isCleanSweep, isFlawless)
-                    .finally(() => { didFinalizeMyStats.value = true; });
+                    const myUid   = authStore.uid;
+                    const myState = data.players[myUid] || {};
+                    const iWon        = myUid === winnerId;
+                    const isCleanSweep = (myState.score || 0) === data.totalRounds;
+                    const isFlawless   = !myState.hasMadeError;
+
+                    updateUserStats(myUid, data.level, iWon, isCleanSweep, isFlawless)
+                        .finally(() => { didFinalizeMyStats.value = true; });
+                }
+
+                // 2. Только ХОСТ планирует удаление сессии
+                if (data.hostId === authStore.uid) {
+                    console.log(`Я хост, удаляю сессию ${data.id} через 10 секунд...`);
+                    // Задержка нужна, чтобы гость успел получить финальное состояние и обновить свою статистику
+                    setTimeout(async () => {
+                        try {
+                            await deleteDoc(doc(db, 'gameSessions', data.id));
+                            console.log(`Сессия ${data.id} успешно удалена.`);
+                        } catch (e) {
+                            console.log("Не удалось удалить сессию (возможно, она уже удалена).");
+                        }
+                    }, 10000); // 10 секунд
+                }
             }
         });
     }
@@ -247,11 +261,15 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
         if (unsubscribeFromSession) unsubscribeFromSession();
         unsubscribeFromSession = null;
         if (gameId.value) {
-            const sessionRef = doc(db, 'gameSessions', gameId.value);
-            try {
-                await deleteDoc(sessionRef);
-            } catch (e) {
-                console.error("Ошибка при удалении сессии:", e);
+            // При выходе из сессии также пытаемся её удалить, если мы хост
+            // Это поможет, если второй игрок уже отключился
+            if (sessionData.value && sessionData.value.hostId === authStore.uid) {
+                try {
+                    const sessionRef = doc(db, 'gameSessions', gameId.value);
+                    await deleteDoc(sessionRef);
+                } catch (e) {
+                    console.error("Ошибка при удалении сессии при выходе:", e);
+                }
             }
         }
         gameId.value = null;

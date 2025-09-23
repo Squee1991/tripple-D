@@ -1777,7 +1777,7 @@
     "description": "questLakeRuinsTenthQuests.description",
     "conditions": {
       "goal": "questLakeRuinsTenthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1835,7 +1835,7 @@
       {
         "id": 5,
         "type": "select",
-        "question": "",
+        "question": "questLakeRuinsTenthQuests.questFive",
         "options": [
           "questLakeRuinsTenthQuests.questFiveFirstOption",
           "questLakeRuinsTenthQuests.questFiveSecondOption",
@@ -1898,9 +1898,9 @@
         "id": 10,
         "type": "readAndAnswer",
         "text": "— Gehen wir in den Park? — Ja, heute ist es sonnig und zwanzig Grad.",
-        "question": "",
+        "question": "questLakeRuinsTenthQuests.questTen",
         "options": [
-          "",
+          "questLakeRuinsTenthQuests.questTenFirstOption",
           "questLakeRuinsTenthQuests.questTenSecondOption",
           "questLakeRuinsTenthQuests.questTenThirdOption"
         ],
@@ -1939,7 +1939,7 @@
         "type": "select",
         "question": "questLakeRuinsTenthQuests.questThirteen",
         "options": [
-          "",
+          "questLakeRuinsTenthQuests.questThirteenFirstOption",
           "questLakeRuinsTenthQuests.questThirteenSecondOption",
           "questLakeRuinsTenthQuests.questThirteenThirdOption"
         ],
@@ -1951,7 +1951,7 @@
         "text": "Köln: 14°, sonnig. Leipzig: 9°, bewölkt und windig.",
         "question": "questLakeRuinsTenthQuests.questFourteen",
         "options": [
-          "",
+          "questLakeRuinsTenthQuests.questFourteenFirstOption",
           "questLakeRuinsTenthQuests.questFourteenSecondOption",
           "questLakeRuinsTenthQuests.questFourteenThirdOption"
         ],

@@ -132,7 +132,7 @@ export const cpecialGroupAchievment = [
 				icon: '💸',
 				awards: 'specialCategory.generalSexthAward',
 				currentProgress: 0,
-				targetProgress: 700,
+				targetProgress: 1000,
 			},
 			{
 				id: "languageLands50",
@@ -145,29 +145,29 @@ export const cpecialGroupAchievment = [
 			},
 			{
 				id: 'all_cases',
-				name: 'Властелин Предлогов',
-				description: 'Овладей всеми предлогами Akkusativ, Dativ, Genitiv и Nominativ',
-				icon: '🌌',
+				name: 'specialCategory.specialAllCaseslabel',
+				description: 'specialCategory.specialAllCasesText',
+				icon: '🧩',
 				currentProcess: 0,
-				awards: "награда: Жезл Склонений",
+				awards: "specialCategory.specialAllCasesAward",
 				targetProgress: 1
 			},
 			{
-				id: 'all_cases',
-				name: 'Владыка Прилагательных',
-				description: 'Получи все достижения прилагательных: Основы , Склонения, Степень сравнения',
-				icon: '🌌',
+				id: 'all_adjectives',
+				name: 'specialCategory.specialAllAdjectivesLabel',
+				description: 'specialCategory.specialAllAdjectivesText',
+				icon: '🎨️',
 				currentProcess: 0,
-				awards: "награда: Жезл Склонений",
+				awards: "specialCategory.specialAllAdjectivesAward",
 				targetProgress: 1
 			},
 			{
-				id: 'all_cases',
-				name: 'Владыка глаголов',
-				description: 'Получи все достижения глаголов: Спряжение, времена , модальные, типы глаголов',
-				icon: '🌌',
+				id: 'all_verbs',
+				name: 'specialCategory.specialAllVerbsLabel',
+				description: 'specialCategory.specialAllVerbsText',
+				icon: '⚔️',
 				currentProcess: 0,
-				awards: "награда: Меч",
+				awards: "specialCategory.specialAllVerbsAward",
 				targetProgress: 1
 			}
 		]
