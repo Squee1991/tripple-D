@@ -64,11 +64,11 @@ import VEdit from '../../src/components/V-editTest.vue'
 import Profile from "assets/images/user.svg";
 import Trash from "assets/images/trash.svg";
 import FriendPanel from "../../src/components/v-friendPorifile.vue";
-
 const friendsStore = useFriendsStore()
 const openMenuId = ref(null)
 const closeWindow = ref(false)
 const openProfileUid = ref(null)
+const showList = ref(true)
 const { t } = useI18n()
 const friendEditModal = [
   {icon: Profile, alt: 'Profile_icon', text: t('friendList.profile')},
@@ -88,13 +88,13 @@ const openEdit = (uid) => {
 }
 
 const actionEditWindow = async (btn) => {
-  if (btn.text === 'Профиль') {
+  if (btn.text === t('friendList.profile')) {
     console.log('Profile', openMenuId.value)
     openProfileUid.value = openMenuId.value
-  } else if (btn.text === 'Удалить') {
+  } else if (btn.text === t('friendList.delete')) {
     const uid = openMenuId.value
     try {
-      const ok = window.confirm('Удалить пользователя из друзей?')
+      const ok = window.confirm('delete?')
       if (ok) {
         await friendsStore.removeFriend(uid)
         console.log('Удалён из друзей:', uid)
@@ -107,14 +107,12 @@ const actionEditWindow = async (btn) => {
   openMenuId.value = null
 }
 
-const showList = ref(true)
 const pathToFriends = () => {
   showList.value = false
 }
 const toListFriends = () => {
   showList.value = true
 }
-
 </script>
 
 <style scoped>

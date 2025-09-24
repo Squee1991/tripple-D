@@ -30,9 +30,9 @@
     "answer": "den Plan"
   },
   {
-    "question": "Wir fahren die Straße ___.",
-    "options": ["entlang", "gegenüber", "nach", "mit"],
-    "answer": "entlang"
+    "question": "Wir fahren ___ entlang.",
+    "options": ["die Straße", "der Straße", "des Straße", "der Straßen"],
+    "answer": "die Straße"
   },
   {
     "question": "Wir gehen durch ___.",
@@ -80,9 +80,9 @@
     "answer": "nächsten Freitag"
   },
   {
-    "question": "Spazierst du den Fluss ___?",
-    "options": ["entlang", "gegenüber", "nach", "mit"],
-    "answer": "entlang"
+    "question": "Spazierst du ___ entlang?",
+    "options": ["den Fluss", "dem Fluss", "des Flusses", "der Fluss"],
+    "answer": "den Fluss"
   },
   {
     "question": "Er handelt wider ___.",
@@ -98,5 +98,405 @@
     "question": "Ich habe etwas gegen ___.",
     "options": ["diesen Lärm", "diesem Lärm", "dieses Lärms", "dieser Lärm"],
     "answer": "diesen Lärm"
+  },
+  {
+    "question": "Wir gehen durch ___.",
+    "options": ["den Tunnel", "dem Tunnel", "des Tunnels", "der Tunnel"],
+    "answer": "den Tunnel"
+  },
+  {
+    "question": "Das ist ein Platz für ___.",
+    "options": ["meine Freunde", "meinen Freunden", "meiner Freunde", "mein Freund"],
+    "answer": "meine Freunde"
+  },
+  {
+    "question": "Er reist ohne ___.",
+    "options": ["seinen Koffer", "seinem Koffer", "seines Koffers", "sein Koffer"],
+    "answer": "seinen Koffer"
+  },
+  {
+    "question": "Wir stellen den Stuhl um ___.",
+    "options": ["den Tisch", "dem Tisch", "des Tisches", "der Tisch"],
+    "answer": "den Tisch"
+  },
+  {
+    "question": "Ich bleibe nur bis ___.",
+    "options": ["nächsten Mittwoch", "nächstem Mittwoch", "nächster Mittwoch", "nächsten Mittwochs"],
+    "answer": "nächsten Mittwoch"
+  },
+  {
+    "question": "Die Mannschaft spielt gegen ___.",
+    "options": ["die andere Mannschaft", "der anderen Mannschaft", "den anderen Mannschaft", "des anderen Mannschaft"],
+    "answer": "die andere Mannschaft"
+  },
+  {
+    "question": "Wir fahren ___ entlang.",
+    "options": ["den Fluss", "dem Fluss", "des Flusses", "der Fluss"],
+    "answer": "den Fluss"
+  },
+  {
+    "question": "Er handelt wider ___.",
+    "options": ["seinen Willen", "seinem Willen", "seines Willens", "sein Wille"],
+    "answer": "seinen Willen"
+  },
+  {
+    "question": "Die Kinder laufen durch ___.",
+    "options": ["den Garten", "dem Garten", "des Gartens", "der Garten"],
+    "answer": "den Garten"
+  },
+  {
+    "question": "Das ist ein Geschenk für ___.",
+    "options": ["meine Schwester", "meiner Schwester", "meines Schwester", "mein Schwester"],
+    "answer": "meine Schwester"
+  },
+  {
+    "question": "Er fährt ohne ___.",
+    "options": ["seinen Führerschein", "seinem Führerschein", "seines Führerscheins", "sein Führerschein"],
+    "answer": "seinen Führerschein"
+  },
+  {
+    "question": "Wir laufen um ___.",
+    "options": ["den See", "dem See", "des Sees", "der See"],
+    "answer": "den See"
+  },
+  {
+    "question": "Der Film dauert bis ___.",
+    "options": ["nächste Woche", "nächster Woche", "nächstem Woche", "nächsten Wochen"],
+    "answer": "nächste Woche"
+  },
+  {
+    "question": "Die Schüler sind gegen ___.",
+    "options": ["den Test", "dem Test", "des Tests", "der Test"],
+    "answer": "den Test"
+  },
+  {
+    "question": "Wir spazieren ___ entlang.",
+    "options": ["die Straße", "der Straße", "des Straße", "der Straßen"],
+    "answer": "die Straße"
+  },
+  {
+    "question": "Er kämpft wider ___.",
+    "options": ["den Feind", "dem Feind", "des Feindes", "der Feind"],
+    "answer": "den Feind"
+  },
+  {
+    "question": "Sie gehen durch ___.",
+    "options": ["das Tor", "dem Tor", "des Tores", "der Tor"],
+    "answer": "das Tor"
+  },
+  {
+    "question": "Das ist für ___.",
+    "options": ["den Lehrer", "dem Lehrer", "des Lehrers", "der Lehrer"],
+    "answer": "den Lehrer"
+  },
+  {
+    "question": "Er läuft ohne ___.",
+    "options": ["seine Schuhe", "seinen Schuhen", "seiner Schuhe", "sein Schuh"],
+    "answer": "seine Schuhe"
+  },
+  {
+    "question": "Wir stellen uns um ___.",
+    "options": ["das Feuer", "dem Feuer", "des Feuers", "der Feuer"],
+    "answer": "das Feuer"
+  },
+  {
+    "question": "Wir gehen durch ___.",
+    "options": ["die Stadt", "der Stadt", "des Stadt", "den Stadt"],
+    "answer": "die Stadt"
+  },
+  {
+    "question": "Das ist ein Platz für ___.",
+    "options": ["meinen Hund", "meinem Hund", "meines Hundes", "mein Hund"],
+    "answer": "meinen Hund"
+  },
+  {
+    "question": "Er kommt ohne ___.",
+    "options": ["sein Handy", "seinem Handy", "seines Handys", "seine Handy"],
+    "answer": "sein Handy"
+  },
+  {
+    "question": "Wir stellen die Stühle um ___.",
+    "options": ["den Tisch", "dem Tisch", "des Tisches", "der Tisch"],
+    "answer": "den Tisch"
+  },
+  {
+    "question": "Ich bleibe bis ___.",
+    "options": ["nächsten Abend", "nächstem Abend", "nächster Abend", "nächsten Abends"],
+    "answer": "nächsten Abend"
+  },
+  {
+    "question": "Das Team spielt gegen ___.",
+    "options": ["den Gegner", "dem Gegner", "des Gegners", "der Gegner"],
+    "answer": "den Gegner"
+  },
+  {
+    "question": "Wir laufen ___ entlang.",
+    "options": ["den Strand", "dem Strand", "des Strandes", "der Strand"],
+    "answer": "den Strand"
+  },
+  {
+    "question": "Er handelt wider ___.",
+    "options": ["die Regeln", "den Regeln", "der Regeln", "des Regeln"],
+    "answer": "die Regeln"
+  },
+  {
+    "question": "Die Kinder rennen durch ___.",
+    "options": ["den Park", "dem Park", "des Parks", "der Park"],
+    "answer": "den Park"
+  },
+  {
+    "question": "Das ist für ___.",
+    "options": ["meine Eltern", "meinen Eltern", "meiner Eltern", "meines Eltern"],
+    "answer": "meine Eltern"
+  },
+  {
+    "question": "Er fährt ohne ___.",
+    "options": ["seinen Helm", "seinem Helm", "seines Helms", "sein Helm"],
+    "answer": "seinen Helm"
+  },
+  {
+    "question": "Wir laufen um ___.",
+    "options": ["das Stadion", "dem Stadion", "des Stadions", "der Stadion"],
+    "answer": "das Stadion"
+  },
+  {
+    "question": "Der Kurs dauert bis ___.",
+    "options": ["nächsten Monat", "nächstem Monat", "nächster Monat", "nächsten Monats"],
+    "answer": "nächsten Monat"
+  },
+  {
+    "question": "Die Bürger sind gegen ___.",
+    "options": ["das Gesetz", "dem Gesetz", "des Gesetzes", "der Gesetz"],
+    "answer": "das Gesetz"
+  },
+  {
+    "question": "Wir gehen ___ entlang.",
+    "options": ["die Brücke", "der Brücke", "des Brücke", "den Brücke"],
+    "answer": "die Brücke"
+  },
+  {
+    "question": "Er kämpft wider ___.",
+    "options": ["die Ungerechtigkeit", "der Ungerechtigkeit", "den Ungerechtigkeit", "des Ungerechtigkeit"],
+    "answer": "die Ungerechtigkeit"
+  },
+  {
+    "question": "Sie gehen durch ___.",
+    "options": ["den Wald", "dem Wald", "des Waldes", "der Wald"],
+    "answer": "den Wald"
+  },
+  {
+    "question": "Das Geschenk ist für ___.",
+    "options": ["meine Tante", "meiner Tante", "meines Tante", "mein Tante"],
+    "answer": "meine Tante"
+  },
+  {
+    "question": "Er läuft ohne ___.",
+    "options": ["seine Jacke", "seiner Jacke", "seines Jacke", "sein Jacke"],
+    "answer": "seine Jacke"
+  },
+  {
+    "question": "Wir sitzen um ___.",
+    "options": ["das Lagerfeuer", "dem Lagerfeuer", "des Lagerfeuers", "der Lagerfeuer"],
+    "answer": "das Lagerfeuer"
+  },
+  {
+    "question": "Wir gehen durch ___.",
+    "options": ["den Flur", "dem Flur", "des Flurs", "der Flur"],
+    "answer": "den Flur"
+  },
+  {
+    "question": "Das ist für ___.",
+    "options": ["meinen Onkel", "meinem Onkel", "meines Onkels", "mein Onkel"],
+    "answer": "meinen Onkel"
+  },
+  {
+    "question": "Er reist ohne ___.",
+    "options": ["seinen Pass", "seinem Pass", "seines Passes", "sein Pass"],
+    "answer": "seinen Pass"
+  },
+  {
+    "question": "Wir stellen die Kisten um ___.",
+    "options": ["das Auto", "dem Auto", "des Autos", "der Auto"],
+    "answer": "das Auto"
+  },
+  {
+    "question": "Ich bleibe bis ___.",
+    "options": ["nächsten Samstag", "nächstem Samstag", "nächster Samstag", "nächsten Samstags"],
+    "answer": "nächsten Samstag"
+  },
+  {
+    "question": "Die Spieler kämpfen gegen ___.",
+    "options": ["die andere Mannschaft", "der anderen Mannschaft", "den anderen Mannschaft", "des anderen Mannschaft"],
+    "answer": "die andere Mannschaft"
+  },
+  {
+    "question": "Wir laufen ___ entlang.",
+    "options": ["den Weg", "dem Weg", "des Weges", "der Weg"],
+    "answer": "den Weg"
+  },
+  {
+    "question": "Er handelt wider ___.",
+    "options": ["die Wahrheit", "der Wahrheit", "den Wahrheit", "des Wahrheit"],
+    "answer": "die Wahrheit"
+  },
+  {
+    "question": "Die Kinder spielen durch ___.",
+    "options": ["den Hof", "dem Hof", "des Hofes", "der Hof"],
+    "answer": "den Hof"
+  },
+  {
+    "question": "Das ist ein Geschenk für ___.",
+    "options": ["meine Oma", "meiner Oma", "meines Oma", "mein Oma"],
+    "answer": "meine Oma"
+  },
+  {
+    "question": "Er fährt ohne ___.",
+    "options": ["seine Tasche", "seiner Tasche", "seines Tasche", "sein Tasche"],
+    "answer": "seine Tasche"
+  },
+  {
+    "question": "Wir laufen um ___.",
+    "options": ["den Platz", "dem Platz", "des Platzes", "der Platz"],
+    "answer": "den Platz"
+  },
+  {
+    "question": "Der Unterricht dauert bis ___.",
+    "options": ["nächste Stunde", "nächster Stunde", "nächstem Stunde", "nächsten Stunden"],
+    "answer": "nächste Stunde"
+  },
+  {
+    "question": "Die Leute protestieren gegen ___.",
+    "options": ["den Krieg", "dem Krieg", "des Krieges", "der Krieg"],
+    "answer": "den Krieg"
+  },
+  {
+    "question": "Wir spazieren ___ entlang.",
+    "options": ["die Allee", "der Allee", "des Allee", "den Allee"],
+    "answer": "die Allee"
+  },
+  {
+    "question": "Er kämpft wider ___.",
+    "options": ["den Schmerz", "dem Schmerz", "des Schmerzes", "der Schmerz"],
+    "answer": "den Schmerz"
+  },
+  {
+    "question": "Sie gehen durch ___.",
+    "options": ["den Markt", "dem Markt", "des Marktes", "der Markt"],
+    "answer": "den Markt"
+  },
+  {
+    "question": "Das ist für ___.",
+    "options": ["den Arzt", "dem Arzt", "des Arztes", "der Arzt"],
+    "answer": "den Arzt"
+  },
+  {
+    "question": "Er läuft ohne ___.",
+    "options": ["seinen Schal", "seinem Schal", "seines Schals", "sein Schal"],
+    "answer": "seinen Schal"
+  },
+  {
+    "question": "Wir sitzen um ___.",
+    "options": ["den Kamin", "dem Kamin", "des Kamins", "der Kamin"],
+    "answer": "den Kamin"
+  },
+  {
+    "question": "Wir gehen durch ___.",
+    "options": ["den Tunnel", "dem Tunnel", "des Tunnels", "der Tunnel"],
+    "answer": "den Tunnel"
+  },
+  {
+    "question": "Das ist für ___.",
+    "options": ["die Nachbarn", "den Nachbarn", "der Nachbarn", "des Nachbarn"],
+    "answer": "die Nachbarn"
+  },
+  {
+    "question": "Er reist ohne ___.",
+    "options": ["seinen Hut", "seinem Hut", "seines Hutes", "sein Hut"],
+    "answer": "seinen Hut"
+  },
+  {
+    "question": "Wir stellen den Schrank um ___.",
+    "options": ["die Ecke", "der Ecke", "des Ecke", "den Ecke"],
+    "answer": "die Ecke"
+  },
+  {
+    "question": "Ich bleibe bis ___.",
+    "options": ["nächsten Morgen", "nächstem Morgen", "nächster Morgen", "nächsten Morgens"],
+    "answer": "nächsten Morgen"
+  },
+  {
+    "question": "Die Bürger kämpfen gegen ___.",
+    "options": ["die Korruption", "der Korruption", "des Korruption", "den Korruption"],
+    "answer": "die Korruption"
+  },
+  {
+    "question": "Wir fahren ___ entlang.",
+    "options": ["den Kanal", "dem Kanal", "des Kanals", "der Kanal"],
+    "answer": "den Kanal"
+  },
+  {
+    "question": "Er handelt wider ___.",
+    "options": ["den Befehl", "dem Befehl", "des Befehls", "der Befehl"],
+    "answer": "den Befehl"
+  },
+  {
+    "question": "Die Kinder laufen durch ___.",
+    "options": ["den Regen", "dem Regen", "des Regens", "der Regen"],
+    "answer": "den Regen"
+  },
+  {
+    "question": "Das ist ein Geschenk für ___.",
+    "options": ["meine Cousine", "meiner Cousine", "meines Cousine", "mein Cousine"],
+    "answer": "meine Cousine"
+  },
+  {
+    "question": "Er fährt ohne ___.",
+    "options": ["seine Brille", "seiner Brille", "seines Brille", "sein Brille"],
+    "answer": "seine Brille"
+  },
+  {
+    "question": "Wir laufen um ___.",
+    "options": ["den Baum", "dem Baum", "des Baumes", "der Baum"],
+    "answer": "den Baum"
+  },
+  {
+    "question": "Der Film dauert bis ___.",
+    "options": ["nächste Nacht", "nächster Nacht", "nächstem Nacht", "nächsten Nächte"],
+    "answer": "nächste Nacht"
+  },
+  {
+    "question": "Die Studenten sind gegen ___.",
+    "options": ["die Prüfung", "der Prüfung", "des Prüfung", "den Prüfung"],
+    "answer": "die Prüfung"
+  },
+  {
+    "question": "Wir gehen ___ entlang.",
+    "options": ["die Küste", "der Küste", "des Küste", "den Küste"],
+    "answer": "die Küste"
+  },
+  {
+    "question": "Er kämpft wider ___.",
+    "options": ["den Hunger", "dem Hunger", "des Hungers", "der Hunger"],
+    "answer": "den Hunger"
+  },
+  {
+    "question": "Sie gehen durch ___.",
+    "options": ["das Feld", "dem Feld", "des Feldes", "der Feld"],
+    "answer": "das Feld"
+  },
+  {
+    "question": "Das ist für ___.",
+    "options": ["den Schüler", "dem Schüler", "des Schülers", "der Schüler"],
+    "answer": "den Schüler"
+  },
+  {
+    "question": "Er läuft ohne ___.",
+    "options": ["seine Uhr", "seiner Uhr", "seines Uhr", "sein Uhr"],
+    "answer": "seine Uhr"
+  },
+  {
+    "question": "Wir sitzen um ___.",
+    "options": ["den Brunnen", "dem Brunnen", "des Brunnens", "der Brunnen"],
+    "answer": "den Brunnen"
   }
 ]

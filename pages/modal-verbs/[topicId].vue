@@ -47,6 +47,7 @@
       </div>
       <div v-else-if="quizStore.activeQuestion" class="quiz-content-comic">
         <div class="question-card-comic">
+          <SoundBtn :text="fullSentence"/>
           <p class="question-text-comic">
             <span>{{ quizStore.activeQuestion.question.split('___')[0] }}</span>
             <span class="blank-space">{{ quizStore.selectedOption || '( ... )' }}</span>
@@ -99,6 +100,8 @@ import { useRouter , useRoute} from 'vue-router'
 import {userlangStore} from '../../store/learningStore.js'
 import CelebrationFireworks from '../../src/components/CelebrationFireworks.vue'
 import { useRewardEngine } from '../../src/composables/useRewardEngine.js'
+import SoundBtn from '../../src/components/soundBtn.vue'
+
 
 const FINISH_UI = {
   winTitle: 'Поздравляем!',
@@ -108,7 +111,6 @@ const FINISH_UI = {
   points: 'Артиклюсы',
   level: 'Уровень',
 }
-
 
 const router = useRouter()
 const route = useRoute();
@@ -139,6 +141,14 @@ function fmt(ms) {
   const sec = s % 60
   return `${m}:${sec.toString().padStart(2, '0')}`
 }
+
+const fullSentence = computed(() => {
+  const quest = quizStore.activeQuestion
+  if (!quest) return ''
+  const [pre , post = ''] = quest.question.split('___')
+  const word = quizStore.selectedOption || ''
+  return `${pre}${word}${post}`
+})
 
 async function startQuiz() {
   loading.value = true

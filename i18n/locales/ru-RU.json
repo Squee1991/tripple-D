@@ -2,6 +2,33 @@
   "preloader": {
     "value": "Вы будете перенаправлены на главную страницу..."
   },
+  "randomPhrases": {
+    "first": "Сегодня ты сделал ещё один шаг вперёд!",
+    "second": "Грамматика дрожит от твоего упорства",
+    "third": "Грамматика становится твоим союзником!",
+    "fourth": "Ты приручаешь немецкий язык",
+    "fifth": "Ух ты! Даже учитель Гёте бы гордился тобой!",
+    "sixth": "Фантастика! Ты почти волшебник артиклей",
+    "seventh": "Продолжай в том же духе, герой!",
+    "eighth": "Немецкий уже меньше сопротивляется",
+    "ninth": "Ещё одна победа в копилку знаний!",
+    "tenth": "Ты прокачал свой лингвистический уровень",
+    "eleventh": "Каждое слово — как новый трофей",
+    "twelfth": "Ты становишься мастером немецкого языка",
+    "thirteenth": "Синтаксис уже преклоняется перед тобой",
+    "fourteenth": "Немецкий язык не устоит против твоего упорства",
+    "fifteenth": "Ты выковываешь навык, как кузнец клинок",
+    "sixteenth": "Ещё немного — и немецкий сдастся без боя"
+  },
+  "duelGrammarTips": {
+    "authModal": "Требуется авторизация",
+    "authText": "Чтобы играть в дуэли, пожалуйста, войдите в аккаунт или зарегистрируйтесь.",
+    "tipOne": "Глагол — на 2-м месте: Ich **lerne** Deutsch.",
+    "tipTwo": "Место или время в начале? Глагол всё равно 2-й: **Heute** gehe ich.",
+    "tipThree": "Вопрос без слова: глагол на 1-м месте — **Kommst** du?",
+    "tipFour": "Придаточное: глагол в конце — …weil ich **arbeite**.",
+    "tipFive": "Союз **und** не меняет порядок: Ich lerne und ich **spiele**."
+  },
   "duelA1": {
     "title": "Дуэли фраз (Уровень A1)",
     "firstWinName": "Первая победа",
@@ -13,7 +40,7 @@
     "streak10Name": "На волне",
     "streak10Description": "Победить в 10 играх подряд на уровне A1",
     "cleanSweeps5": "Чистый старт",
-    "cleanSweeps5Description": "Выиграть 20 игр на уровне А1, не допустив ни одной ошибки"
+    "cleanSweeps5Description": "Выиграть 20 игр на уровне А1 всухую"
   },
   "duelA2": {
     "title": "Дуэли фраз (Уровень A2)",
@@ -21,14 +48,39 @@
     "firstWinDescription": "Одержать первую победу на уровне A2",
     "secondWinName": "Десятник",
     "secondWinDescription": "Одержать 10 побед на уровне A2",
-    "streak3Name": "Серия удачи",
-    "streak3Description": "Победить в 5 играх подряд на уровне A2",
-    "streak10Name": "Мастер точности",
-    "streak10Description": "Выиграть 20 игр на уровне A2 без единой ошибки",
-    "cleanSweeps5": "Чистый старт",
-    "cleanSweeps5Description": "Выиграть 20 игр на уровне А1, не допустив ни одной ошибки"
+    "streak5Name": "Серия побед",
+    "streak5Description": "Сделать стрик их пяти побед",
+    "streak10Name": "Серия удачи",
+    "streak10Description": "Победить в 10 играх подряд на уровне A2",
+    "cleanSweeps20": "Мастер точности",
+    "cleanSweeps20Description": "Выиграть 20 игр на уровне A2 всухую"
   },
-
+  "duelB1": {
+    "title": "Дуэли фраз (Уровень B1)",
+    "firstWinName": "Первая вершина",
+    "firstWinDescription": "Одержать первую победу на уровне B1",
+    "secondWinName": "Ветеран арены",
+    "secondWinDescription": "Одержать 10 побед на уровне B1",
+    "streak5Name": "Мастер побед",
+    "streak5Description": "Сделайте стрик их пяти побед",
+    "streak10Name": "Неудержимый",
+    "streak10Description": "Сделайте стрик из десяти побед",
+    "cleanSweeps20": "Мастер точности",
+    "cleanSweeps20Description": "Выиграть 20 игр на уровне B1 всухую"
+  },
+  "duelB2": {
+    "title": "Дуэли фраз (Уровень B2)",
+    "firstWinName": "Первый штурм",
+    "firstWinDescription": "Одержать первую победу на уровне B2",
+    "secondWinName": "Полководец",
+    "secondWinDescription": "Одержать 20 побед на уровне B2",
+    "streak5Name": "Доминатор",
+    "streak5Description": "Победить в пяти играх подряд на уровне B2",
+    "streak10Name": "Доминатор",
+    "streak10Description": "Победить в десяти играх подряд на уровне B2",
+    "cleanSweeps20": "Живая легенда",
+    "cleanSweeps20Description": "Выиграть 10 игр всухую на уровне B2"
+  },
   "locationQuests": {
     "done": "ПРОЙДЕНО",
     "awards": "Награда:",
@@ -895,10 +947,10 @@
     "sixthDescription": "Завершите все квесты без ошибок в Штормовых берегах",
     "fiveHearthName": "Хранитель пяти сердец",
     "fiveHearthDescription": "Выполните двадцать заданий имея 5 жизней",
-    "fiveHearthAwards": "Глобус исследователя",
+    "fiveHearthAwards": "Награда: Щит жизни",
     "allLocationsName": "Мастер Языковых Земель",
     "allLocationsDescription": "Выполните все квесты во всех локациях",
-    "allLocationsAwards": "Глобус исследователя"
+    "allLocationsAwards": "Награда: Глобус исследователя"
   },
   "awards": {
     "title": "Список наград",
@@ -913,7 +965,11 @@
     "daily": "Песочные часы вечности",
     "guessedSafeWords": "Щит осторожности",
     "explorer": "Глобус исследователя",
-    "languageLands50": "Компас исследователя"
+    "languageLands50": "Компас исследователя",
+    "allVerbs": "Клинки действия",
+    "allAdjectives": "Палитра красноречия",
+    "allСases": "Пазл Единения",
+    "fiveHearts": "Щит жизни"
   },
   "eastPlainFirstQuests": {
     "title": "Первая встреча",
@@ -3869,6 +3925,19 @@
     "specialLocationsName": "Следопыт Языковых земель",
     "specialLocationsDescription": "Выполните 50 заданий без ошибок в Языковых землях.",
     "specialLocationsAwards": "Награда: Компас",
+
+    "specialAllCaseslabel": "Властелин Предлогов",
+    "specialAllCasesText": "Овладей всеми предлогами Akkusativ, Dativ, Genitiv и Nominativ",
+    "specialAllCasesAward": "Награда: Пазл Единения",
+
+    "specialAllAdjectivesLabel": "Владыка Прилагательных",
+    "specialAllAdjectivesText": "Получи все достижения прилагательных: Основы , Склонения, Степень сравнения",
+    "specialAllAdjectivesAward": "Награда: Палитра красноречия",
+
+    "specialAllVerbsLabel": "Повелитель действий",
+    "specialAllVerbsText": "Получи все достижения глаголов: Спряжение, времена , модальные, типы глаголов",
+    "specialAllVerbsAward": "Награда: Клинки действия",
+
     "generalSeventhlabel": "Повелитель предложений",
     "generalSeventhText": "Сложите 1000 предложений в сумме на всех уровнях и станьте мастером построения"
   },

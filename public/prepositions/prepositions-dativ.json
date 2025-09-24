@@ -40,7 +40,7 @@
     "answer": "dem Arzt"
   },
   {
-    "question": "Dem Haus ___ ist ein Park.",
+    "question": "Ein Park liegt dem Haus ___.",
     "options": ["gegenüber", "nach", "durch", "für"],
     "answer": "gegenüber"
   },
@@ -75,7 +75,7 @@
     "answer": "der Schweiz"
   },
   {
-    "question": "Dem Rathaus ___ liegt ein Café.",
+    "question": "Ein Café liegt dem Rathaus ___.",
     "options": ["gegenüber", "entlang", "durch", "für"],
     "answer": "gegenüber"
   },
@@ -98,5 +98,435 @@
     "question": "Gemäß ___ ist das Gebäude geschlossen.",
     "options": ["der Verordnung", "die Verordnung", "den Verordnung", "des Verordnung"],
     "answer": "der Verordnung"
+  },
+  {
+    "question": "Das Kind kommt aus ___.",
+    "options": ["dem Zimmer", "den Zimmer", "der Zimmer", "des Zimmers"],
+    "answer": "dem Zimmer"
+  },
+  {
+    "question": "Außer ___ war niemand eingeladen.",
+    "options": ["meinem Bruder", "meinen Bruder", "meines Bruders", "mein Bruder"],
+    "answer": "meinem Bruder"
+  },
+  {
+    "question": "Ich bleibe bei ___.",
+    "options": ["meiner Freundin", "meine Freundin", "meines Freundin", "mein Freundin"],
+    "answer": "meiner Freundin"
+  },
+  {
+    "question": "Wir fahren mit ___.",
+    "options": ["der U-Bahn", "die U-Bahn", "den U-Bahn", "des U-Bahn"],
+    "answer": "der U-Bahn"
+  },
+  {
+    "question": "Nach ___ gehen wir nach Hause.",
+    "options": ["der Schule", "die Schule", "des Schule", "den Schule"],
+    "answer": "der Schule"
+  },
+  {
+    "question": "Er wohnt seit ___ in Berlin.",
+    "options": ["einem Monat", "einen Monat", "eines Monats", "ein Monat"],
+    "answer": "einem Monat"
+  },
+  {
+    "question": "Der Zug fährt von ___ ab.",
+    "options": ["dem Gleis", "den Gleis", "der Gleis", "des Gleises"],
+    "answer": "dem Gleis"
+  },
+  {
+    "question": "Ich gehe zu ___.",
+    "options": ["meinem Lehrer", "meinen Lehrer", "meines Lehrers", "mein Lehrer"],
+    "answer": "meinem Lehrer"
+  },
+  {
+    "question": "Das Café liegt der Kirche ___.",
+    "options": ["gegenüber", "nach", "durch", "für"],
+    "answer": "gegenüber"
+  },
+  {
+    "question": "Er bleibt bei ___.",
+    "options": ["seinen Freunden", "seine Freunde", "seinem Freunden", "meine Freunde"],
+    "answer": "seinen Freunden"
+  },
+  {
+    "question": "Ich fahre mit ___.",
+    "options": ["meiner Schwester", "meine Schwester", "meines Schwester", "mein Schwester"],
+    "answer": "meiner Schwester"
+  },
+  {
+    "question": "Wir treffen uns bei ___.",
+    "options": ["unserem Nachbarn", "unseren Nachbarn", "unseres Nachbarn", "unser Nachbar"],
+    "answer": "unserem Nachbarn"
+  },
+  {
+    "question": "Nach ___ gehen wir ins Theater.",
+    "options": ["dem Abendessen", "den Abendessen", "des Abendessens", "der Abendessen"],
+    "answer": "dem Abendessen"
+  },
+  {
+    "question": "Seit ___ wohnt er hier.",
+    "options": ["einer Woche", "eine Woche", "eines Woche", "einen Woche"],
+    "answer": "einer Woche"
+  },
+  {
+    "question": "Er kommt aus ___.",
+    "options": ["dem Dorf", "den Dorf", "der Dorf", "des Dorfes"],
+    "answer": "dem Dorf"
+  },
+  {
+    "question": "Ein Supermarkt liegt dem Bahnhof ___.",
+    "options": ["gegenüber", "entlang", "durch", "für"],
+    "answer": "gegenüber"
+  },
+  {
+    "question": "Ich gehe zu ___.",
+    "options": ["meiner Mutter", "meine Mutter", "meines Mutter", "mein Mutter"],
+    "answer": "meiner Mutter"
+  },
+  {
+    "question": "Wir bekommen Hilfe von ___.",
+    "options": ["unserem Onkel", "unseren Onkel", "unseres Onkels", "unser Onkel"],
+    "answer": "unserem Onkel"
+  },
+  {
+    "question": "Er sitzt bei ___.",
+    "options": ["meiner Oma", "meine Oma", "meines Oma", "mein Oma"],
+    "answer": "meiner Oma"
+  },
+  {
+    "question": "Gemäß ___ gilt die neue Regel.",
+    "options": ["dem Gesetz", "den Gesetz", "des Gesetzes", "der Gesetz"],
+    "answer": "dem Gesetz"
+  },
+  {
+    "question": "Wir gehen nach ___.",
+    "options": ["der Arbeit", "die Arbeit", "des Arbeit", "den Arbeit"],
+    "answer": "der Arbeit"
+  },
+  {
+    "question": "Das Kind spielt mit ___.",
+    "options": ["seinem Ball", "seinen Ball", "seines Balles", "sein Ball"],
+    "answer": "seinem Ball"
+  },
+  {
+    "question": "Er holt das Buch von ___.",
+    "options": ["dem Tisch", "den Tisch", "des Tisches", "der Tisch"],
+    "answer": "dem Tisch"
+  },
+  {
+    "question": "Wir gehen zu ___.",
+    "options": ["unserem Nachbarn", "unseren Nachbarn", "unseres Nachbarn", "unser Nachbar"],
+    "answer": "unserem Nachbarn"
+  },
+  {
+    "question": "Die Post liegt dem Kino ___.",
+    "options": ["gegenüber", "nach", "durch", "für"],
+    "answer": "gegenüber"
+  },
+  {
+    "question": "Seit ___ regnet es ununterbrochen.",
+    "options": ["drei Tagen", "drei Tage", "drei Tages", "drei Tag"],
+    "answer": "drei Tagen"
+  },
+  {
+    "question": "Er bleibt bei ___.",
+    "options": ["seinem Onkel", "seinen Onkel", "seines Onkels", "sein Onkel"],
+    "answer": "seinem Onkel"
+  },
+  {
+    "question": "Wir fahren mit ___.",
+    "options": ["dem Auto", "den Auto", "des Autos", "der Auto"],
+    "answer": "dem Auto"
+  },
+  {
+    "question": "Nach ___ gehen wir schlafen.",
+    "options": ["dem Spiel", "den Spiel", "des Spiels", "der Spiel"],
+    "answer": "dem Spiel"
+  },
+  {
+    "question": "Gemäß ___ darf man hier nicht rauchen.",
+    "options": ["der Regel", "die Regel", "den Regel", "des Regel"],
+    "answer": "der Regel"
+  },
+  {
+    "question": "Er kommt aus ___.",
+    "options": ["dem Kino", "den Kino", "der Kino", "des Kinos"],
+    "answer": "dem Kino"
+  },
+  {
+    "question": "Außer ___ war niemand krank.",
+    "options": ["meiner Schwester", "meine Schwester", "meines Schwester", "mein Schwester"],
+    "answer": "meiner Schwester"
+  },
+  {
+    "question": "Ich wohne bei ___.",
+    "options": ["meinem Onkel", "meinen Onkel", "meines Onkels", "mein Onkel"],
+    "answer": "meinem Onkel"
+  },
+  {
+    "question": "Wir fahren mit ___.",
+    "options": ["unserem Vater", "unseren Vater", "unseres Vaters", "unser Vater"],
+    "answer": "unserem Vater"
+  },
+  {
+    "question": "Nach ___ machen wir Pause.",
+    "options": ["dem Spiel", "den Spiel", "der Spiel", "des Spiels"],
+    "answer": "dem Spiel"
+  },
+  {
+    "question": "Ich lerne seit ___ Englisch.",
+    "options": ["zwei Jahren", "zwei Jahre", "zwei Jahres", "zwei Jahr"],
+    "answer": "zwei Jahren"
+  },
+  {
+    "question": "Wir bekommen Post von ___.",
+    "options": ["meiner Tante", "meine Tante", "meines Tante", "mein Tante"],
+    "answer": "meiner Tante"
+  },
+  {
+    "question": "Ich gehe zu ___.",
+    "options": ["meinem Bruder", "meinen Bruder", "meines Bruders", "mein Bruder"],
+    "answer": "meinem Bruder"
+  },
+  {
+    "question": "Das Café liegt der Post ___.",
+    "options": ["gegenüber", "nach", "durch", "für"],
+    "answer": "gegenüber"
+  },
+  {
+    "question": "Er bleibt bei ___.",
+    "options": ["seiner Oma", "seine Oma", "seines Oma", "mein Oma"],
+    "answer": "seiner Oma"
+  },
+  {
+    "question": "Ich fahre mit ___.",
+    "options": ["meinen Freunden", "meine Freunde", "meines Freunde", "mein Freunde"],
+    "answer": "meinen Freunden"
+  },
+  {
+    "question": "Wir treffen uns bei ___.",
+    "options": ["unserem Lehrer", "unseren Lehrer", "unseres Lehrers", "unser Lehrer"],
+    "answer": "unserem Lehrer"
+  },
+  {
+    "question": "Nach ___ gehen wir einkaufen.",
+    "options": ["der Schule", "die Schule", "den Schule", "des Schule"],
+    "answer": "der Schule"
+  },
+  {
+    "question": "Seit ___ wohne ich hier.",
+    "options": ["einem Jahr", "einen Jahr", "eines Jahres", "ein Jahr"],
+    "answer": "einem Jahr"
+  },
+  {
+    "question": "Er kommt aus ___.",
+    "options": ["dem Dorf", "den Dorf", "der Dorf", "des Dorfes"],
+    "answer": "dem Dorf"
+  },
+  {
+    "question": "Ein Museum liegt dem Theater ___.",
+    "options": ["gegenüber", "entlang", "durch", "für"],
+    "answer": "gegenüber"
+  },
+  {
+    "question": "Ich gehe zu ___.",
+    "options": ["meiner Freundin", "meine Freundin", "meines Freundin", "mein Freundin"],
+    "answer": "meiner Freundin"
+  },
+  {
+    "question": "Wir bekommen Hilfe von ___.",
+    "options": ["unserem Nachbarn", "unseren Nachbarn", "unseres Nachbarn", "unser Nachbar"],
+    "answer": "unserem Nachbarn"
+  },
+  {
+    "question": "Er sitzt bei ___.",
+    "options": ["seinen Eltern", "seine Eltern", "seinem Eltern", "mein Eltern"],
+    "answer": "seinen Eltern"
+  },
+  {
+    "question": "Gemäß ___ ist das Betreten verboten.",
+    "options": ["der Vorschrift", "die Vorschrift", "den Vorschrift", "des Vorschrift"],
+    "answer": "der Vorschrift"
+  },
+  {
+    "question": "Wir fahren mit ___.",
+    "options": ["dem Zug", "den Zug", "der Zug", "des Zuges"],
+    "answer": "dem Zug"
+  },
+  {
+    "question": "Nach ___ gehen wir zum Arzt.",
+    "options": ["dem Frühstück", "den Frühstück", "der Frühstück", "des Frühstücks"],
+    "answer": "dem Frühstück"
+  },
+  {
+    "question": "Seit ___ regnet es.",
+    "options": ["einem Tag", "einen Tag", "eines Tages", "ein Tag"],
+    "answer": "einem Tag"
+  },
+  {
+    "question": "Er kommt aus ___.",
+    "options": ["dem Büro", "den Büro", "der Büro", "des Büros"],
+    "answer": "dem Büro"
+  },
+  {
+    "question": "Die Bank liegt der Kirche ___.",
+    "options": ["gegenüber", "nach", "durch", "für"],
+    "answer": "gegenüber"
+  },
+  {
+    "question": "Ich gehe zu ___.",
+    "options": ["meinem Vater", "meinen Vater", "meines Vaters", "mein Vater"],
+    "answer": "meinem Vater"
+  },
+  {
+    "question": "Wir bekommen einen Brief von ___.",
+    "options": ["meinem Freund", "meinen Freund", "meines Freundes", "mein Freund"],
+    "answer": "meinem Freund"
+  },
+  {
+    "question": "Er sitzt bei ___.",
+    "options": ["seiner Schwester", "seine Schwester", "seines Schwester", "mein Schwester"],
+    "answer": "seiner Schwester"
+  },
+  {
+    "question": "Gemäß ___ beginnt der Unterricht später.",
+    "options": ["dem Stundenplan", "den Stundenplan", "des Stundenplans", "der Stundenplan"],
+    "answer": "dem Stundenplan"
+  },
+  {
+    "question": "Wir gehen nach ___.",
+    "options": ["dem Training", "den Training", "der Training", "des Trainings"],
+    "answer": "dem Training"
+  },
+  {
+    "question": "Wir fahren mit ___.",
+    "options": ["der Straßenbahn", "die Straßenbahn", "den Straßenbahn", "des Straßenbahn"],
+    "answer": "der Straßenbahn"
+  },
+  {
+    "question": "Nach ___ gehe ich schlafen.",
+    "options": ["dem Training", "den Training", "der Training", "des Trainings"],
+    "answer": "dem Training"
+  },
+  {
+    "question": "Seit ___ wohnt er hier.",
+    "options": ["einer Stunde", "eine Stunde", "eines Stunde", "einen Stunde"],
+    "answer": "einer Stunde"
+  },
+  {
+    "question": "Wir holen das Paket von ___.",
+    "options": ["der Post", "die Post", "den Post", "des Post"],
+    "answer": "der Post"
+  },
+  {
+    "question": "Ich gehe zu ___.",
+    "options": ["meiner Tante", "meine Tante", "meines Tante", "mein Tante"],
+    "answer": "meiner Tante"
+  },
+  {
+    "question": "Ein Park liegt der Schule ___.",
+    "options": ["gegenüber", "nach", "durch", "für"],
+    "answer": "gegenüber"
+  },
+  {
+    "question": "Er bleibt bei ___.",
+    "options": ["seiner Familie", "seine Familie", "seines Familie", "mein Familie"],
+    "answer": "seiner Familie"
+  },
+  {
+    "question": "Ich fahre mit ___.",
+    "options": ["meiner Mutter", "meine Mutter", "meines Mutter", "mein Mutter"],
+    "answer": "meiner Mutter"
+  },
+  {
+    "question": "Wir treffen uns bei ___.",
+    "options": ["meinem Onkel", "meinen Onkel", "meines Onkels", "mein Onkel"],
+    "answer": "meinem Onkel"
+  },
+  {
+    "question": "Nach ___ essen wir Kuchen.",
+    "options": ["dem Mittagessen", "den Mittagessen", "der Mittagessen", "des Mittagessens"],
+    "answer": "dem Mittagessen"
+  },
+  {
+    "question": "Seit ___ regnet es.",
+    "options": ["zwei Stunden", "zwei Stunde", "zwei Stundenes", "zwei Stundenen"],
+    "answer": "zwei Stunden"
+  },
+  {
+    "question": "Er kommt aus ___.",
+    "options": ["dem Zimmer", "den Zimmer", "der Zimmer", "des Zimmers"],
+    "answer": "dem Zimmer"
+  },
+  {
+    "question": "Ein Geschäft liegt dem Kino ___.",
+    "options": ["gegenüber", "nach", "durch", "für"],
+    "answer": "gegenüber"
+  },
+  {
+    "question": "Ich gehe zu ___.",
+    "options": ["meiner Schwester", "meine Schwester", "meines Schwester", "mein Schwester"],
+    "answer": "meiner Schwester"
+  },
+  {
+    "question": "Wir bekommen einen Brief von ___.",
+    "options": ["meinem Opa", "meinen Opa", "meines Opas", "mein Opa"],
+    "answer": "meinem Opa"
+  },
+  {
+    "question": "Er sitzt bei ___.",
+    "options": ["meinem Nachbarn", "meinen Nachbarn", "meines Nachbarn", "mein Nachbar"],
+    "answer": "meinem Nachbarn"
+  },
+  {
+    "question": "Gemäß ___ ist das verboten.",
+    "options": ["dem Gesetzbuch", "den Gesetzbuch", "der Gesetzbuch", "des Gesetzbuchs"],
+    "answer": "dem Gesetzbuch"
+  },
+  {
+    "question": "Wir fahren mit ___.",
+    "options": ["dem Taxi", "den Taxi", "der Taxi", "des Taxis"],
+    "answer": "dem Taxi"
+  },
+  {
+    "question": "Nach ___ gehen wir einkaufen.",
+    "options": ["der Arbeit", "die Arbeit", "den Arbeit", "des Arbeit"],
+    "answer": "der Arbeit"
+  },
+  {
+    "question": "Seit ___ wohne ich hier.",
+    "options": ["fünf Tagen", "fünf Tage", "fünf Tages", "fünf Tag"],
+    "answer": "fünf Tagen"
+  },
+  {
+    "question": "Er kommt aus ___.",
+    "options": ["dem Theater", "den Theater", "der Theater", "des Theaters"],
+    "answer": "dem Theater"
+  },
+  {
+    "question": "Die Bank liegt der Apotheke ___.",
+    "options": ["gegenüber", "nach", "durch", "für"],
+    "answer": "gegenüber"
+  },
+  {
+    "question": "Ich gehe zu ___.",
+    "options": ["dem Direktor", "den Direktor", "der Direktor", "des Direktors"],
+    "answer": "dem Direktor"
+  },
+  {
+    "question": "Wir bekommen eine Nachricht von ___.",
+    "options": ["meiner Freundin", "meine Freundin", "meines Freundin", "mein Freundin"],
+    "answer": "meiner Freundin"
+  },
+  {
+    "question": "Er sitzt bei ___.",
+    "options": ["meinen Kollegen", "meine Kollegen", "meines Kollegen", "mein Kollegen"],
+    "answer": "meinen Kollegen"
+  },
+  {
+    "question": "Gemäß ___ ist das erlaubt.",
+    "options": ["der Anordnung", "die Anordnung", "den Anordnung", "des Anordnung"],
+    "answer": "der Anordnung"
   }
 ]

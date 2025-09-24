@@ -1,453 +1,254 @@
 <template>
-  <section v-show="modelValue" class="celebration active" aria-live="polite">
-    <div class="stage">
-      <div class="fireworks">
-        <div v-for="b in bursts" :key="b.id" class="burst"
-             :style="{ left: b.x + '%', top: b.y + '%', animationDelay: b.delay + 's' }">
-          <span v-for="s in sparkCount" :key="s" class="spark" :style="sparkStyle(s)">
-            <i class="dot" :style="dotStyle(b, s)"></i>
-          </span>
-        </div>
-      </div>
-      <div class="confetti">
-        <span v-for="n in pieces" :key="n" class="piece" :style="pieceStyle()"></span>
+  <div class="fireWorks">
+    <div class="fireWorks__container" ref="container"></div>
+    <div class="congrats" role="status" aria-live="polite">
+      <div class="congrats__inner">
+        <transition name="fade-up" appear>
+          <div class="congrats__title" style="transition-delay:.2s">Поздравляем!</div>
+        </transition>
+        <transition name="fade-up" appear>
+          <p class="congrats__phrase" style="transition-delay:.3s">{{ randomPhrase }}</p>
+        </transition>
+        <transition name="fade-up" appear>
+          <div class="stats" style="transition-delay:.4s">
+            <div class="stats__card">
+              <div class="stats__label">Очки опыта</div>
+              <div class="stats__value">{{ shownExp }}</div>
+            </div>
+            <div class="stats__card">
+              <div class="stats__label">Артиклюсы</div>
+              <div class="stats__value">{{ shownPoints }}</div>
+            </div>
+          </div>
+        </transition>
       </div>
     </div>
-    <div class="finish-card" :style="{ zIndex: zIndex + 1 }">
-      <h2 class="title">{{ title }}</h2>
-      <p class="subtitle">{{ resultLabel }} {{ score }} / {{ total }}</p>
-      <template v-if="showStats">
-        <div class="level-wrap">
-          <div class="level-row">
-            <div class="level-label">{{ levelLabel }}</div>
-            <div class="level-value">{{ shownLevel }}</div>
-          </div>
-          <div class="xp-bar">
-            <div class="xp-fill" :style="{ width: xpWidth + '%' }"></div>
-          </div>
-          <div class="xp-numbers">{{ Math.round(shownExp) }} / {{ levelUpXp }} XP</div>
-        </div>
-        <div class="stats">
-          <div class="pill pill-time">
-            <span class="pill-label">{{ timeLabel }}</span>
-            <span class="pill-value">{{ elapsed }}</span>
-          </div>
-          <div class="pill pill-points">
-            <span class="pill-label">{{ pointsLabel }}</span>
-            <span class="pill-value">
-            {{ Math.round(shownPoints) }}
-            <i class="delta" v-if="justAwarded && award > 0">+{{ award }}</i>
-          </span>
-          </div>
-          <div class="pill pill-xp">
-            <span class="pill-label">XP</span>
-            <span class="pill-value">
-            {{ Math.round(shownExpDisplay) }}
-            <i class="delta" v-if="justAwarded && award > 0">+{{ award }}</i>
-          </span>
-          </div>
-        </div>
-      </template>
-      <slot/>
-    </div>
-  </section>
+    <transition name="fade-up" appear>
+      <div class="btn__back-wrapper" style="transition-delay:.8s">
+        <button @click="backTo" class="btn" type="button">Далее</button>
+      </div>
+    </transition>
+  </div>
 </template>
 
 <script setup>
-import {ref, nextTick, watch, onMounted, computed} from 'vue'
-
+import {ref, onMounted} from 'vue'
+import {useRouter} from 'vue-router'
+import Lottie from 'lottie-web'
+import FireWorks from '../../assets/animation/SuccessAnimation.json'
+const { t } = useI18n()
 const props = defineProps({
-  modelValue: {type: Boolean, default: false},
-  score: {type: Number, default: 0},
-  total: {type: Number, default: 0},
-  elapsed: {type: String, default: '0:00'},
-  showStats: { type: Boolean, default: true },
-  pointsStart: {type: Number, default: 0},
-  expStart: {type: Number, default: 0},
-  levelStart: {type: Number, default: 1},
-  award: {type: Number, default: 0},
-  levelUpXp: {type: Number, default: 100},
-  title: {type: String, default: ''},
-  resultLabel: {type: String, default: ''},
-  timeLabel: {type: String, default: ''},
-  pointsLabel: {type: String, default: ''},
-  levelLabel: {type: String, default: ''},
-  pieces: {type: Number, default: 240},
-  sparkCount: {type: Number, default: 30},
-  burstsCount: {type: Number, default: 28},
-  areaX: {type: Array, default: () => [10, 90]},
-  areaY: {type: Array, default: () => [15, 75]},
-  zIndex: {type: Number, default: 50},
+  startExp: {type: Number, required: true},
+  targetExp: {type: Number, required: true},
+  startPoints: {type: Number, required: true},
+  targetPoints: {type: Number, required: true},
 })
 
-const emit = defineEmits(['update:modelValue'])
-const bursts = ref([])
+const phrases = [
+  t("randomPhrases.first"),
+  t("randomPhrases.second"),
+  t("randomPhrases.third"),
+  t("randomPhrases.fourth"),
+  t("randomPhrases.fifth"),
+  t("randomPhrases.sixth"),
+  t("randomPhrases.seventh"),
+  t("randomPhrases.eighth"),
+  t("randomPhrases.ninth"),
+  t("randomPhrases.tenth"),
+  t("randomPhrases.eleventh"),
+  t("randomPhrases.twelfth"),
+  t("randomPhrases.thirteenth"),
+  t("randomPhrases.fourteenth"),
+  t("randomPhrases.fifteenth"),
+  t("randomPhrases.sixteenth"),
+]
 
-function rnd(min, max) {
-  return Math.random() * (max - min) + min
+const randomPhrase = ref("")
+
+function pickRandom(arr) {
+  return arr[Math.floor(Math.random() * arr.length)]
 }
 
-function rndInt(min, max) {
-  return Math.floor(rnd(min, max + 1))
-}
+const router = useRouter()
+const backTo = () => router.back()
 
-function pieceStyle() {
-  const h = rndInt(0, 360), l = rndInt(0, 100), r = rndInt(0, 360)
-  const d = rnd(0, 0.35), size = rndInt(6, 12)
-  const fallDur = rnd(2.4, 3.6), spinDur = fallDur * rnd(0.85, 1.15)
-  return {
-    left: l + '%',
-    width: size + 'px',
-    height: Math.max(3, Math.round(size * 0.35)) + 'px',
-    background: `hsl(${h} 90% 55%)`,
-    transform: `rotate(${r}deg)`,
-    animationDelay: d + 's, ' + d + 's',
-    animationDuration: fallDur + 's, ' + spinDur + 's',
+const container = ref(null)
+const shownExp = ref(props.startExp)
+const shownPoints = ref(props.startPoints)
+
+function animateInt(from, to, setter, duration = 900) {
+  if (to <= from) {
+    setter(to);
+    return
   }
-}
-
-function makeBursts() {
-  const [minX, maxX] = props.areaX
-  const [minY, maxY] = props.areaY
-  const list = []
-  for (let i = 0; i < props.burstsCount; i++) {
-    const x = Math.round(rnd(minX, maxX))
-    const y = Math.round(rnd(minY, maxY))
-    const delay = rnd(0, 0.18)
-    const hue = (i * 23 + Math.random() * 180) % 360
-    list.push({id: i + 1, x, y, delay, hue})
-  }
-  bursts.value = list
-}
-
-function sparkStyle(s) {
-  const angle = (360 / props.sparkCount) * s + rnd(-6, 6)
-  return {transform: `rotate(${angle}deg)`}
-}
-
-function dotStyle(b, s) {
-  const hue = Math.round((b.hue + s * 7) % 360)
-  const boomDur = rnd(0.9, 1.6), fadeDur = rnd(0.6, 1.4)
-  const boomDelay = b.delay + rnd(0.05, 0.25), fadeDelay = boomDelay + rnd(0.0, 0.25)
-  const size = rnd(3, 5)
-  return {
-    background: `hsl(${hue} 100% 70%)`,
-    width: size + 'px',
-    height: size + 'px',
-    animationDuration: boomDur + 's, ' + fadeDur + 's',
-    animationDelay: boomDelay + 's, ' + fadeDelay + 's',
-  }
-}
-
-async function play() {
-  makeBursts()
-  emit('update:modelValue', false)
-  await nextTick()
-  emit('update:modelValue', true)
-}
-
-defineExpose({play})
-
-const shownPoints = ref(0)
-const shownExp = ref(0)
-const shownLevel = ref(1)
-const xpWidth = ref(0)
-const justAwarded = ref(false)
-const shownExpDisplay = computed(() => shownExp.value)
-
-function setFromProps() {
-  shownPoints.value = props.pointsStart
-  shownExp.value = props.expStart
-  shownLevel.value = props.levelStart || 1
-  xpWidth.value = Math.min(100, (shownExp.value / props.levelUpXp) * 100)
-}
-
-function tween(refVal, from, to, ms = 800) {
-  const start = performance.now()
-  const step = (t) => {
-    const k = Math.min(1, (t - start) / ms)
-    const e = 1 - Math.pow(1 - k, 3)
-    refVal.value = from + (to - from) * e
-    if (k < 1) requestAnimationFrame(step)
+  const t0 = performance.now()
+  const delta = to - from
+  const step = (now) => {
+    const p = Math.min(1, (now - t0) / duration)
+    setter(Math.floor(from + delta * p))
+    if (p < 1) requestAnimationFrame(step)
+    else setter(to)
   }
   requestAnimationFrame(step)
 }
 
-function animateAward() {
-  justAwarded.value = true
-  const A = Math.max(0, props.award)
-  const CAP = props.levelUpXp
-  const e0 = props.expStart
-  const p0 = props.pointsStart
-  const lvl0 = props.levelStart || 1
-
-  tween(shownPoints, p0, p0 + A, 800)
-
-  if (e0 + A < CAP) {
-    tween(shownExp, e0, e0 + A, 900)
-    tween(xpWidth, (e0 / CAP) * 100, ((e0 + A) / CAP) * 100, 900)
-  } else {
-    tween(xpWidth, (e0 / CAP) * 100, 100, 500)
-    tween(shownExp, e0, CAP, 500)
-    setTimeout(() => {
-      shownLevel.value = lvl0 + 1
-      shownExp.value = 0
-      xpWidth.value = 0
-      const remainder = e0 + A - CAP
-      tween(shownExp, 0, remainder, 500)
-      tween(xpWidth, 0, (remainder / CAP) * 100, 500)
-    }, 520)
-  }
-  setTimeout(() => (justAwarded.value = false), 1200)
-}
-
 onMounted(() => {
-  if (props.modelValue) {
-    setFromProps()
-    nextTick().then(() => {
-      makeBursts()
-      animateAward()
+  if (container.value) {
+    const anim = Lottie.loadAnimation({
+      container: container.value,
+      loop: true, autoplay: true,
+      animationData: FireWorks, renderer: 'svg'
     })
+    anim.setSpeed(0.7)
   }
-})
-watch(() => props.modelValue, async (val, old) => {
-  if (val && !old) {
-    setFromProps()
-    await nextTick()
-    makeBursts()
-    animateAward()
-  }
+
+  randomPhrase.value = pickRandom(phrases)
+  shownExp.value = props.startExp
+  shownPoints.value = props.startPoints
+  setTimeout(() => {
+    animateInt(props.startExp, props.targetExp, v => (shownExp.value = v), 900)
+    animateInt(props.startPoints, props.targetPoints, v => (shownPoints.value = v), 900)
+  }, 2000)
 })
 </script>
 
 <style scoped>
-/* fullscreen + анимации */
-.celebration {
-  position: fixed;
-  inset: 0;
-  z-index: v-bind(zIndex);
-  pointer-events: none;
-  display: grid;
-  place-items: center;
-  padding: 24px;
-  background: transparent;
-  font-family: "Nunito", system-ui, -apple-system, Segoe UI, Roboto, sans-serif
-}
-
-.stage {
-  position: absolute;
-  inset: 0;
-  overflow: hidden
-}
-
-.fireworks, .confetti {
-  position: absolute;
-  inset: 0;
-  pointer-events: none
-}
-
-.burst {
-  position: absolute;
-  width: 0;
-  height: 0
-}
-
-.spark {
-  position: absolute;
-  transform-origin: 0 0
-}
-
-.dot {
-  position: absolute;
-  left: 0;
-  top: 0;
-  border-radius: 50%;
-  opacity: 0;
-  animation-name: boom, fade;
-  animation-timing-function: ease-out, linear;
-  animation-fill-mode: forwards, forwards
-}
-
-@keyframes boom {
-  0% {
-    transform: translateX(0) scale(.7)
-  }
-  70% {
-    transform: translateX(120px) scale(1)
-  }
-  100% {
-    transform: translateX(140px) scale(1)
-  }
-}
-
-@keyframes fade {
-  0% {
-    opacity: 1
-  }
-  80% {
-    opacity: 1
-  }
-  100% {
-    opacity: 0
-  }
-}
-
-.piece {
-  position: absolute;
-  top: -10%;
-  opacity: 0;
-  border-radius: 2px;
-  animation-name: fall, spin;
-  animation-timing-function: cubic-bezier(.2, .7, .2, 1), linear;
-  animation-fill-mode: both, both
-}
-
-.active .piece {
-  animation-play-state: running
-}
-
-@keyframes fall {
-  from {
-    transform: translateY(-20%);
-    opacity: 0
-  }
-  12% {
-    opacity: 1
-  }
-  to {
-    transform: translateY(165%);
-    opacity: 0
-  }
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0)
-  }
-  to {
-    transform: rotate(420deg)
-  }
-}
-
-/* карточка под твой стиль */
-.finish-card {
+.fireWorks {
   position: relative;
+  min-height: 100svh;
   width: 100%;
-  max-width: 560px;
-  text-align: center;
-  color: #1D1D1B;
-  background: #F6F1DE;
-  border: 3px solid #000;
-  border-radius: 22px;
-  padding: 28px 24px;
-  box-shadow: 8px 8px 0 #000;
-  pointer-events: auto
+  overflow: hidden;
+  padding-top: 40px;
 }
 
-.title {
-  font-size: 28px;
-  color: #1D1D1B;
-  margin: 0 0 8px;
-  font-weight: 900;
-  letter-spacing: .3px
-}
-
-.subtitle {
-  margin: 0 0 18px;
-  color: #2b2b2b
-}
-
-.level-wrap {
-  margin: 0 0 18px;
-  text-align: left
-}
-
-.level-row {
+.btn__back-wrapper {
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 10px;
-  margin-bottom: 8px
-}
-
-.level-label {
-  font-size: 14px;
-  opacity: .9
-}
-
-.level-value {
-  font-size: 22px;
-  font-weight: 900
-}
-
-.xp-bar {
   width: 100%;
-  height: 24px;
-  border-radius: 999px;
-  background: #a9a89f;
-  overflow: hidden
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 25px;
+  background: var(--bg);
+  border-top: 4px solid var(--border);
 }
 
-.xp-fill {
-  height: 100%;
-  width: 0;
-  background: linear-gradient(90deg, #d8ca6f, #F2D36C);
-  transition: width .35s ease
+.fireWorks__container {
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 320px;
+  max-width: 90vw;
+  pointer-events: none;
 }
 
-.xp-numbers {
-  margin-top: 6px;
-  font-size: 12px;
-  opacity: .85
-}
-
-.stats {
-  display: grid;
-  grid-template-columns:repeat(3, 1fr);
-  gap: 12px;
-  margin-bottom: 10px
-}
-
-.pill {
+.congrats {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
-  padding: 12px 10px;
-  border-radius: 16px;
-  background: #F6F1DE;
-  border: 3px solid #000;
-  box-shadow: 6px 6px 0 #000
+  gap: 14px;
+  padding: 10px;
+  min-height: 90vh;
 }
 
-.pill-time {
-  background: #E6F0FF
+.congrats__inner {
+  flex-grow: 1;
+  padding-top: 50px;
 }
 
-.pill-points {
-  background: #E9F9EF
+.fade-up-enter-from {
+  opacity: 0;
+  transform: translateY(12px) scale(0.98);
 }
 
-.pill-xp {
-  background: #FFF5D9
+.fade-up-enter-active {
+  transition: opacity .36s ease-out, transform .36s ease-out;
 }
 
-.pill-label {
-  font-size: 12px;
-  letter-spacing: .8px;
-  opacity: .85
+.fade-up-enter-to {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
-.pill-value {
+.congrats__title {
+  font-size: 64px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  background: linear-gradient(90deg, #ffd36e, #ff9f6e, #ffd36e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.congrats__phrase {
+  text-align: center;
+  max-width: 720px;
+  padding: 6px 10px;
   font-size: 18px;
-  font-weight: 900;
-  position: relative
+  line-height: 1.4;
+  color: #6a5b3a;
+  font-style: italic;
+  opacity: .95;
+  margin-top: 40px;
 }
 
-.delta {
-  margin-left: 6px;
-  font-size: 14px;
-  font-weight: 900;
-  color: #2e7d32
+.stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.stats__card {
+  width: 120px;
+  height: 90px;
+  background: #7a7a7a;
+  opacity: .95;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, .2);
+  overflow: hidden;
+}
+
+.stats__label {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #f1dcb9;
+  margin-bottom: 6px;
+  padding: 8px 5px;
+  text-align: center;
+  background: rgba(0, 0, 0, .54);
+}
+
+.stats__value {
+  font-size: 24px;
+  font-weight: 800;
+  color: #fff6dc;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.btn {
+  margin-top: auto;
+  border-radius: 12px;
+  border: 3px solid #000;
+  box-shadow: 3px 3px 0 #000;
+  cursor: pointer;
+  font-weight: 800;
+  padding: 10px 14px;
+  background: #4d524a;
+  color: white;
+  width: 100%;
+  max-width: 340px;
+}
+
+@media (max-width: 767px) {
+  .congrats__title {
+    font-size: 50px;
+  }
 }
 </style>

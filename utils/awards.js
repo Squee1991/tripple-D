@@ -10,7 +10,10 @@ import SandGlass from '~/assets/awards/sandglass.svg'
 import Shield from '~/assets/awards/shield.svg'
 import Globus from '~/assets/awards/globus.svg'
 import Compass from '~/assets/awards/compass.svg'
-import Staff from '~/assets/awards/staff.svg'
+import ColorPalette from '~/assets/awards/ColorPaletteAward.svg'
+import PuzzleAward from '~/assets/awards/puzzleAward.svg'
+import SwordAward from '~/assets/awards/SwordAwards.svg'
+import HeartAward from '~/assets/awards/heartAward.svg'
 
 export const AWARDS = [
 	{key: 'explorer', title: 'awards.explorer', icon: Globus},
@@ -25,7 +28,10 @@ export const AWARDS = [
 	{key: 'guessSixHundred', title: 'awards.guessSixHundred', icon: BookOfWisdom},
 	{key: 'daily', title: 'awards.daily', icon: SandGlass},
 	{key: 'guessedSafeWords', title: 'awards.guessedSafeWords', icon: Shield},
-	{key: 'all_cases', title: 'Посох склонений', icon: Staff},
+	{key: 'all_cases', title: 'awards.allСases', icon: PuzzleAward},
+	{key: 'all_adjectives', title: 'awards.allAdjectives', icon: ColorPalette},
+	{key: 'all_verbs', title: 'awards.allVerbs', icon: SwordAward},
+	{key: 'FiveHearts', title: 'awards.fiveHearts', icon: HeartAward},
 ]
 
 export const awardsByKey = Object.fromEntries(AWARDS.map(a => [a.key, a]))

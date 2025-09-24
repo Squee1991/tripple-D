@@ -107,7 +107,6 @@
         </div>
     </div>
 </template>
-
 <script setup>
 import {ref, computed, watch, onMounted, onUnmounted} from 'vue'
 import {useSentencesStore} from '../store/sentencesStore.js'
@@ -128,8 +127,8 @@ const sentencesStore = useSentencesStore()
 const mode = ref('online')
 const isLoading = ref(true)
 const authModalData = {
-    title: 'Требуется авторизация',
-    text: 'Чтобы играть в дуэли, пожалуйста, войдите в аккаунт или зарегистрируйтесь.'
+  title: t('duelGrammarTips.authModal'),
+  text: t('duelGrammarTips.authText')
 }
 const showDevModal = ref(false)
 const levels = ['A1', 'A2', 'B1', 'B2']
@@ -146,41 +145,39 @@ const selectedLevel = ref('A1')
 const isWaitingForOpponent = computed(() => mode.value === 'online' && !!gameStore.gameId && gameStore.sessionData?.status === 'waiting')
 const isOpponentFound = computed(() => mode.value === 'online' && gameStore.sessionData?.status === 'starting')
 const overlayData = ref({
-    title: "wordDuel.rulesTitle",
-    text: "wordDuel.rulesText",
-    subtext: "wordDuel.subText"
+  title: "wordDuel.rulesTitle",
+  text: "wordDuel.rulesText",
+  subtext: "wordDuel.subText"
 })
-
 const openModal = () => {
-    showDevModal.value = true
+  showDevModal.value = true
 }
 const closeModal = () => {
-    showDevModal.value = false
+  showDevModal.value = false
 }
 const closeAuthModal = () => {
-    showAuthModal.value = false
+  showAuthModal.value = false
 }
 const tipsModule = () => {
-    showTips.value = true
+  showTips.value = true
 }
 const tipsData = ref({
-    tips: [
-        {id: '1', text: 'Глагол — на 2-м месте: Ich **lerne** Deutsch.'},
-        {id: '2', text: 'Место или время в начале? Глагол всё равно 2-й: **Heute** gehe ich.'},
-        {id: '3', text: 'Вопрос без слова: глагол на 1-м месте — **Kommst** du?'},
-        {id: '4', text: 'Придаточное: глагол в конце — …weil ich **arbeite**.'},
-        {id: '5', text: 'Союз **und** не меняет порядок: Ich lerne und ich **spiele**.'},
-        {id: '6', text: 'Сначала подлежащее, потом глагол: Du **bist** müde.'}
-    ]
+  tips: [
+    {id: '1', text: t('duelGrammarTips.tipOne')},
+    {id: '2', text: t('duelGrammarTips.tipTwo')},
+    {id: '3', text: t('duelGrammarTips.tipThree')},
+    {id: '4', text: t('duelGrammarTips.tipFour')},
+    {id: '5', text: t('duelGrammarTips.tipFive')},
+  ]
 })
 
 function cancelSearch() {
-    gameStore.cancelSearch()
+  gameStore.cancelSearch()
 }
 
 function goBack() {
-    router.push('/')
-    gameStore.cancelSearch()
+  router.push('/')
+  gameStore.cancelSearch()
 }
 
 async function handleFindGameClick(level) {
@@ -199,25 +196,23 @@ async function handleFindGameClick(level) {
         router.push({path: '/duel-solo', query: {level}})
     }
 }
-
 watch(() => gameStore.sessionData?.status, (newStatus) => {
-    if (mode.value === 'online' && newStatus === 'starting') {
-        setTimeout(() => {
-            if (gameStore.gameId) {
-                router.push(`/game/${gameStore.gameId}`)
-            }
-        }, 2000)
-    }
+  if (mode.value === 'online' && newStatus === 'starting') {
+    setTimeout(() => {
+      if (gameStore.gameId) {
+        router.push(`/game/${gameStore.gameId}`)
+      }
+    }, 2000)
+  }
 })
-
 watch(() => authStore.uid, (newUid) => {
     if (newUid) {
         gameStore.loadUserAchievements();
     }
-}, {immediate: false});
-
+}, { immediate: false }); // immediate: false, чтобы не вызывать сразу, так как это уже делает onMounted
 onMounted(async () => {
     isLoading.value = true;
+    // ИЗМЕНЕНИЕ 2: Загружаем статистику пользователя при загрузке компонента
     if (authStore.uid) {
         await gameStore.loadUserAchievements()
     }
@@ -226,7 +221,6 @@ onMounted(async () => {
     }
     isLoading.value = false;
 })
-
 onUnmounted(() => {
     if (isWaitingForOpponent.value) {
         gameStore.cancelSearch()
@@ -402,11 +396,19 @@ watch(() => gameStore.sessionData?.status, async (s) => {
     cursor: not-allowed;
 }
 
+.level-card {
+  border-color: #1e1e1e;
+}
+
 .card-level-title {
     font-size: 2rem;
     font-weight: 800;
     margin: 0;
     color: #1e1e1e;
+}
+
+.level-card:hover:not(:disabled) .card-level-title {
+  color: #1e1e1e;
 }
 
 .status-overlay {

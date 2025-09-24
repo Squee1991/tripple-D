@@ -47,6 +47,7 @@
       </div>
       <div v-else-if="store.activeQuestion" class="quiz-content-comic">
         <div class="question-card-comic">
+          <SoundBtn :text="fullSentence"/>
           <p class="question-text-comic">
             <span>{{ store.activeQuestion.question.split('___')[0] }}</span>
             <span class="blank-space">{{ store.selectedOption || '( ... )' }}</span>
@@ -98,6 +99,7 @@ import { useRoute, useRouter } from 'vue-router'
 import CelebrationFireworks from '../../src/components/CelebrationFireworks.vue'
 import {useRewardEngine} from '../../src/composables/useRewardEngine.js'
 import {userlangStore} from '../../store/learningStore.js'
+import SoundBtn from '../../src/components/soundBtn.vue'
 
 const FINISH_UI = {
   winTitle: 'Поздравляем!',
@@ -114,6 +116,14 @@ const store = useQuizStore()
 const loading = ref(true)
 const learning = userlangStore()
 const { t } = useI18n()
+
+const fullSentence = computed(() => {
+  const quest = store.activeQuestion
+  if (!quest) return ''
+  const [pre , post ] = quest.question.split('___')
+  const word = store.selectedOption || ''
+  return `${pre}${word}${post}`
+})
 
 const category = 'adjective-declension'
 const { topicId } = route.params
