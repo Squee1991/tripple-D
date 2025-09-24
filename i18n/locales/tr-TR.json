@@ -2,6 +2,24 @@
   "preloader": {
     "value": "Ana sayfaya yönlendirileceksiniz..."
   },
+  "randomPhrases": {
+    "first": "Bugün bir adım daha ileri gittin!",
+    "second": "Dilbilgisi azmin karşısında titriyor",
+    "third": "Dilbilgisi senin müttefikin oluyor!",
+    "fourth": "Almanca dilini evcilleştiriyorsun",
+    "fifth": "Vay canına! Goethe bile seninle gurur duyardı!",
+    "sixth": "Harika! Neredeyse artikellerin büyücüsüsün",
+    "seventh": "Böyle devam et, kahraman!",
+    "eighth": "Almanca giderek daha az direniyor",
+    "ninth": "Bilgi hazineni bir zafer daha süslüyor!",
+    "tenth": "Dil becerinde seviye atladın",
+    "eleventh": "Her kelime yeni bir ganimet gibi",
+    "twelfth": "Almanca dilinin ustası oluyorsun",
+    "thirteenth": "Sözdizimi şimdiden önünde eğiliyor",
+    "fourteenth": "Almanca, azmine karşı koyamaz",
+    "fifteenth": "Beceriyi bir demircinin kılıç dövmesi gibi işliyorsun",
+    "sixteenth": "Az kaldı — Almanca savaşmadan teslim olacak"
+  },
   "duelGrammarTips": {
     "authModal": "Yetkilendirme gerekli",
     "authText": "Düello oynamak için lütfen giriş yapın veya kayıt olun.",

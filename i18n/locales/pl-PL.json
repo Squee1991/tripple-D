@@ -2,6 +2,24 @@
   "preloader": {
     "value": "Zostaniesz przekierowany na stronę główną..."
   },
+  "randomPhrases": {
+    "first": "Dziś zrobiłeś kolejny krok naprzód!",
+    "second": "Gramatyka drży od twojej wytrwałości",
+    "third": "Gramatyka staje się twoim sojusznikiem!",
+    "fourth": "Oswajasz język niemiecki",
+    "fifth": "Wow! Nawet Goethe byłby z ciebie dumny!",
+    "sixth": "Fantastycznie! Jesteś prawie czarodziejem rodzajników",
+    "seventh": "Tak trzymaj, bohaterze!",
+    "eighth": "Język niemiecki stawia coraz mniejszy opór",
+    "ninth": "Kolejne zwycięstwo do skarbca wiedzy!",
+    "tenth": "Awansowałeś na wyższy poziom językowy",
+    "eleventh": "Każde słowo to nowy trofeum",
+    "twelfth": "Stajesz się mistrzem języka niemieckiego",
+    "thirteenth": "Składnia już przed tobą się kłania",
+    "fourteenth": "Język niemiecki nie wytrzyma twojej wytrwałości",
+    "fifteenth": "Kujesz umiejętność jak kowal kuje miecz",
+    "sixteenth": "Jeszcze trochę — a niemiecki podda się bez walki"
+  },
   "duelGrammarTips": {
     "authModal": "Wymagana autoryzacja",
     "authText": "Aby grać w pojedynki, zaloguj się lub zarejestruj.",

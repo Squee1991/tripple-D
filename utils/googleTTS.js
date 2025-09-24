@@ -18,13 +18,11 @@ export async function getSpeechAudio(text, lang = 'de-DE') {
             }
         }),
     });
-
     const data = await response.json();
-
     if (data.audioContent) {
         const audio = new Audio(`data:audio/mp3;base64,${data.audioContent}`);
         audio.play();
     } else {
-        console.error('Ошибка TTS:', data);
+        console.error('Error TTS:', data);
     }
 }

@@ -4,11 +4,13 @@
     <div class="congrats" role="status" aria-live="polite">
       <div class="congrats__inner">
         <transition name="fade-up" appear>
-          <div class="congrats__title" style="transition-delay: .2s">Поздравляем!</div>
+          <div class="congrats__title" style="transition-delay:.2s">Поздравляем!</div>
         </transition>
         <transition name="fade-up" appear>
-          <div class="stats" style="transition-delay: .4s">
-
+          <p class="congrats__phrase" style="transition-delay:.3s">{{ randomPhrase }}</p>
+        </transition>
+        <transition name="fade-up" appear>
+          <div class="stats" style="transition-delay:.4s">
             <div class="stats__card">
               <div class="stats__label">Очки опыта</div>
               <div class="stats__value">{{ shownExp }}</div>
@@ -23,7 +25,7 @@
     </div>
     <transition name="fade-up" appear>
       <div class="btn__back-wrapper" style="transition-delay:.8s">
-        <button @click="backTo" class="btn" type="button" >Далее</button>
+        <button @click="backTo" class="btn" type="button">Далее</button>
       </div>
     </transition>
   </div>
@@ -34,14 +36,38 @@ import {ref, onMounted} from 'vue'
 import {useRouter} from 'vue-router'
 import Lottie from 'lottie-web'
 import FireWorks from '../../assets/animation/SuccessAnimation.json'
-
-
+const { t } = useI18n()
 const props = defineProps({
   startExp: {type: Number, required: true},
   targetExp: {type: Number, required: true},
   startPoints: {type: Number, required: true},
   targetPoints: {type: Number, required: true},
 })
+
+const phrases = [
+  t("randomPhrases.first"),
+  t("randomPhrases.second"),
+  t("randomPhrases.third"),
+  t("randomPhrases.fourth"),
+  t("randomPhrases.fifth"),
+  t("randomPhrases.sixth"),
+  t("randomPhrases.seventh"),
+  t("randomPhrases.eighth"),
+  t("randomPhrases.ninth"),
+  t("randomPhrases.tenth"),
+  t("randomPhrases.eleventh"),
+  t("randomPhrases.twelfth"),
+  t("randomPhrases.thirteenth"),
+  t("randomPhrases.fourteenth"),
+  t("randomPhrases.fifteenth"),
+  t("randomPhrases.sixteenth"),
+]
+
+const randomPhrase = ref("")
+
+function pickRandom(arr) {
+  return arr[Math.floor(Math.random() * arr.length)]
+}
 
 const router = useRouter()
 const backTo = () => router.back()
@@ -69,19 +95,21 @@ function animateInt(from, to, setter, duration = 900) {
 onMounted(() => {
   if (container.value) {
     const anim = Lottie.loadAnimation({
-      container: container.value, loop: true, autoplay: true,
+      container: container.value,
+      loop: true, autoplay: true,
       animationData: FireWorks, renderer: 'svg'
     })
     anim.setSpeed(0.7)
   }
+
+  randomPhrase.value = pickRandom(phrases)
   shownExp.value = props.startExp
   shownPoints.value = props.startPoints
   setTimeout(() => {
-    animateInt(props.startExp, props.targetExp, v => shownExp.value = v, 900)
-    animateInt(props.startPoints, props.targetPoints, v => shownPoints.value = v, 900)
+    animateInt(props.startExp, props.targetExp, v => (shownExp.value = v), 900)
+    animateInt(props.startPoints, props.targetPoints, v => (shownPoints.value = v), 900)
   }, 2000)
 })
-
 </script>
 
 <style scoped>
@@ -115,11 +143,6 @@ onMounted(() => {
   pointer-events: none;
 }
 
-.congrats__inner {
-  flex-grow: 1;
-  padding-top: 50px;
-}
-
 .congrats {
   display: flex;
   flex-direction: column;
@@ -127,6 +150,11 @@ onMounted(() => {
   gap: 14px;
   padding: 10px;
   min-height: 90vh;
+}
+
+.congrats__inner {
+  flex-grow: 1;
+  padding-top: 50px;
 }
 
 .fade-up-enter-from {
@@ -153,12 +181,24 @@ onMounted(() => {
   color: transparent;
 }
 
+.congrats__phrase {
+  text-align: center;
+  max-width: 720px;
+  padding: 6px 10px;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #6a5b3a;
+  font-style: italic;
+  opacity: .95;
+  margin-top: 40px;
+}
+
 .stats {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 14px;
-  margin-top: 36px;
+  margin-top: 24px;
   flex-wrap: wrap;
 }
 
@@ -181,7 +221,7 @@ onMounted(() => {
   margin-bottom: 6px;
   padding: 8px 5px;
   text-align: center;
-  background: rgba(0, 0, 0, 0.54);
+  background: rgba(0, 0, 0, .54);
 }
 
 .stats__value {
@@ -201,8 +241,14 @@ onMounted(() => {
   font-weight: 800;
   padding: 10px 14px;
   background: #4d524a;
-  color:white;
+  color: white;
   width: 100%;
   max-width: 340px;
+}
+
+@media (max-width: 767px) {
+  .congrats__title {
+    font-size: 50px;
+  }
 }
 </style>

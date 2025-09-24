@@ -14,7 +14,6 @@
       <div v-if="loading" class="loading">{{ t('prasens.loading') }}</div>
 
       <div v-else-if="store.quizCompleted" class="finish-screen">
-        <!-- важный key, чтобы компонент заново монтировался -->
         <CelebrationFireworks
             :key="`cw-${startExpLocal}-${targetExpLocal}-${startPointsLocal}-${targetPointsLocal}`"
             :start-exp="startExpLocal"
@@ -81,10 +80,9 @@ import CelebrationFireworks from '../../src/components/CelebrationFireworks.vue'
 import SoundBtn from '../../src/components/soundBtn.vue'
 import {useI18n} from 'vue-i18n'
 
-// НАСТРОЙКИ
 const AWARD_EXP = 5
 const AWARD_POINTS = 5
-const DELAY_MS = 10000 // 10 секунд
+const DELAY_MS = 4000
 
 const router = useRouter()
 const route = useRoute()
@@ -104,7 +102,6 @@ const loading = ref(true)
 const category = 'adjective-basics'
 const {topicId} = route.params
 
-// локальные start/target для анимации
 const startExpLocal = ref(0)
 const targetExpLocal = ref(0)
 const startPointsLocal = ref(0)
@@ -129,20 +126,15 @@ onMounted(async () => {
   loading.value = false
 })
 
-// Важно: здесь НИЧЕГО не прибавляем сразу
 watch(() => store.quizCompleted, async (done) => {
   if (!done) return
 
   const curExp = Number(learning.exp || 0)
   const curPoints = Number(learning.points || 0)
-
-  // передаём в экран поздравления, чтобы он нарисовал 40 -> 45 и т.п.
   startExpLocal.value = curExp
   targetExpLocal.value = curExp + AWARD_EXP
   startPointsLocal.value = curPoints
   targetPointsLocal.value = curPoints + AWARD_POINTS
-
-  // только через 10 сек реально пишем в стор/базу
   setTimeout(async () => {
     learning.exp = targetExpLocal.value
     learning.points = targetPointsLocal.value

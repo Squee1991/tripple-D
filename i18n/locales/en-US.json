@@ -2,6 +2,24 @@
   "preloader": {
     "value": "You will be redirected to the main page..."
   },
+  "randomPhrases": {
+    "first": "Today you took another step forward!",
+    "second": "Grammar trembles at your persistence",
+    "third": "Grammar is becoming your ally!",
+    "fourth": "You are taming the German language",
+    "fifth": "Wow! Even Goethe himself would be proud of you!",
+    "sixth": "Fantastic! You are almost a wizard of articles",
+    "seventh": "Keep it up, hero!",
+    "eighth": "German is resisting less and less",
+    "ninth": "Another victory in the treasury of knowledge!",
+    "tenth": "You have leveled up your linguistic skills",
+    "eleventh": "Every word is like a new trophy",
+    "twelfth": "You are becoming a master of the German language",
+    "thirteenth": "Syntax is already bowing before you",
+    "fourteenth": "The German language cannot withstand your persistence",
+    "fifteenth": "You forge skill like a blacksmith forges a blade",
+    "sixteenth": "Just a little more — and German will surrender without a fight"
+  },
   "duelGrammarTips": {
     "authModal": "Authorization required",
     "authText": "To play duels, please log in or register.",
