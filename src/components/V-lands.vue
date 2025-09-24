@@ -144,7 +144,7 @@ function go(region) {
   gap: 20px;
   align-items: center;
   margin: 20px 0 30px;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 

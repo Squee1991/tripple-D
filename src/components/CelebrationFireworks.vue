@@ -10,13 +10,13 @@
           <p class="congrats__phrase" style="transition-delay:.3s">{{ randomPhrase }}</p>
         </transition>
         <transition name="fade-up" appear>
-          <div class="stats" style="transition-delay:.4s">
+          <div class="stats">
             <div class="stats__card">
-              <div class="stats__label">Очки опыта</div>
+              <div class="stats__label stats__label--exp">Очки опыта</div>
               <div class="stats__value">{{ shownExp }}</div>
             </div>
             <div class="stats__card">
-              <div class="stats__label">Артиклюсы</div>
+              <div class="stats__label stats__label--points">Артиклюсы</div>
               <div class="stats__value">{{ shownPoints }}</div>
             </div>
           </div>
@@ -32,42 +32,40 @@
 </template>
 
 <script setup>
-import {ref, onMounted} from 'vue'
-import {useRouter} from 'vue-router'
+import { ref, onMounted } from 'vue'
+import { useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 import Lottie from 'lottie-web'
 import FireWorks from '../../assets/animation/SuccessAnimation.json'
+import { useSfx } from '../composables/useSfx.js'
+
 const { t } = useI18n()
 const props = defineProps({
-  startExp: {type: Number, required: true},
-  targetExp: {type: Number, required: true},
-  startPoints: {type: Number, required: true},
-  targetPoints: {type: Number, required: true},
+  startExp: { type: Number, required: true },
+  targetExp: { type: Number, required: true },
+  startPoints: { type: Number, required: true },
+  targetPoints: { type: Number, required: true },
 })
-
 const phrases = [
-  t("randomPhrases.first"),
-  t("randomPhrases.second"),
-  t("randomPhrases.third"),
-  t("randomPhrases.fourth"),
-  t("randomPhrases.fifth"),
-  t("randomPhrases.sixth"),
-  t("randomPhrases.seventh"),
-  t("randomPhrases.eighth"),
-  t("randomPhrases.ninth"),
-  t("randomPhrases.tenth"),
-  t("randomPhrases.eleventh"),
-  t("randomPhrases.twelfth"),
-  t("randomPhrases.thirteenth"),
-  t("randomPhrases.fourteenth"),
-  t("randomPhrases.fifteenth"),
-  t("randomPhrases.sixteenth"),
+  t('randomPhrases.first'),
+  t('randomPhrases.second'),
+  t('randomPhrases.third'),
+  t('randomPhrases.fourth'),
+  t('randomPhrases.fifth'),
+  t('randomPhrases.sixth'),
+  t('randomPhrases.seventh'),
+  t('randomPhrases.eighth'),
+  t('randomPhrases.ninth'),
+  t('randomPhrases.tenth'),
+  t('randomPhrases.eleventh'),
+  t('randomPhrases.twelfth'),
+  t('randomPhrases.thirteenth'),
+  t('randomPhrases.fourteenth'),
+  t('randomPhrases.fifteenth'),
+  t('randomPhrases.sixteenth'),
 ]
-
-const randomPhrase = ref("")
-
-function pickRandom(arr) {
-  return arr[Math.floor(Math.random() * arr.length)]
-}
+const randomPhrase = ref('')
+function pickRandom(arr) { return arr[Math.floor(Math.random() * arr.length)] }
 
 const router = useRouter()
 const backTo = () => router.back()
@@ -77,10 +75,7 @@ const shownExp = ref(props.startExp)
 const shownPoints = ref(props.startPoints)
 
 function animateInt(from, to, setter, duration = 900) {
-  if (to <= from) {
-    setter(to);
-    return
-  }
+  if (to <= from) { setter(to); return }
   const t0 = performance.now()
   const delta = to - from
   const step = (now) => {
@@ -92,12 +87,17 @@ function animateInt(from, to, setter, duration = 900) {
   requestAnimationFrame(step)
 }
 
+const sfx = useSfx()
+
 onMounted(() => {
+  sfx.load('winSound', '/sounds/winSound.mp3', 0.9)
   if (container.value) {
     const anim = Lottie.loadAnimation({
       container: container.value,
-      loop: true, autoplay: true,
-      animationData: FireWorks, renderer: 'svg'
+      loop: false,
+      autoplay: true,
+      animationData: FireWorks,
+      renderer: 'svg'
     })
     anim.setSpeed(0.7)
   }
@@ -105,6 +105,13 @@ onMounted(() => {
   randomPhrase.value = pickRandom(phrases)
   shownExp.value = props.startExp
   shownPoints.value = props.startPoints
+
+  const playNow = () => sfx.play('winSound').catch(() => {
+    const unlock = () => { sfx.play('winSound'); window.removeEventListener('pointerdown', unlock) }
+    window.addEventListener('pointerdown', unlock, { once: true })
+  })
+  setTimeout(playNow, 200)
+  setTimeout(playNow, 200)
   setTimeout(() => {
     animateInt(props.startExp, props.targetExp, v => (shownExp.value = v), 900)
     animateInt(props.startPoints, props.targetPoints, v => (shownPoints.value = v), 900)
@@ -112,7 +119,9 @@ onMounted(() => {
 })
 </script>
 
+
 <style scoped>
+
 .fireWorks {
   position: relative;
   min-height: 100svh;
@@ -138,7 +147,7 @@ onMounted(() => {
   bottom: 120px;
   left: 50%;
   transform: translateX(-50%);
-  width: 320px;
+  width: 400px;
   max-width: 90vw;
   pointer-events: none;
 }
@@ -217,11 +226,18 @@ onMounted(() => {
   font-weight: 600;
   font-size: 13px;
   text-transform: uppercase;
-  color: #f1dcb9;
+  color: white;
   margin-bottom: 6px;
   padding: 8px 5px;
   text-align: center;
-  background: rgba(0, 0, 0, .54);
+}
+
+.stats__label--exp {
+  background: #F1C40F;
+}
+
+.stats__label--points {
+  background: #27AE60;
 }
 
 .stats__value {

@@ -181,11 +181,14 @@ onMounted(async () => {
             <div v-else-if="guessRating.length">
               <h2 class="blackboard__title">{{ t('ranked.guesTabelelable') }}</h2>
               <ul class="leaderboard__items-container" data-simplebar>
-                <LeaderboardItem
-                    v-for="(r, index) in guessRating" :key="r.name" :player="r" :rank="index + 1"
-                    :is-current-user="authStore.name && r.name && r.name.trim().toLowerCase() === authStore.name.trim().toLowerCase()"
-                    score-field="guessed" score-unit=""
-                />
+                <li v-for="(r, index) in guessRating" :key="r.name">
+                  <LeaderboardItem
+                      :player="r"
+                      :rank="index + 1"
+                      :is-current-user="authStore.name && r.name && r.name.trim().toLowerCase() === authStore.name.trim().toLowerCase()"
+                      score-field="guessed" score-unit=""
+                  />
+                </li>
               </ul>
             </div>
             <div v-else class="blackboard__message">
@@ -200,17 +203,19 @@ onMounted(async () => {
                   t(difficultyLabels[activeMarathonDifficulty])
                 }}</h2>
               <ul class="leaderboard__items-container" data-simplebar>
-                <LeaderboardItem
-                    v-for="(player, index) in marathonRating" :key="player.id" :player="player"
-                    :rank="index + 1"
-                    :is-current-user="authStore.name && player.name && player.name.trim().toLowerCase() === authStore.name.trim().toLowerCase()"
-                    score-field="streak" score-unit=""
-                />
+                <li v-for="(player, index) in marathonRating" :key="player.id">
+                  <LeaderboardItem
+                      :player="player"
+                      :rank="index + 1"
+                      :is-current-user="authStore.name && player.name && player.name.trim().toLowerCase() === authStore.name.trim().toLowerCase()"
+                      score-field="streak" score-unit=""
+                  />
+                </li>
               </ul>
             </div>
             <div v-else class="blackboard__message">
               <div class="black__board-title">{{ t('ranked.emptydifficult') }}</div>
-              <img src="../assets/images/leadership.svg" alt="">
+              <img class="leaderboard__icon" src="../assets/images/leadership.svg" alt="leadership">
             </div>
           </div>
         </div>
@@ -220,15 +225,13 @@ onMounted(async () => {
 </template>
 
 <style scoped>
+
 .ranked-layout {
   display: flex;
   gap: 2rem;
   padding: 2rem;
   min-height: 100vh;
-  background-color: var(--bg);
   font-family: "Nunito", sans-serif;
-  //border: 4px solid #1e1e1e;
-  box-sizing: border-box;
 }
 
 .ranked-sidebar-corkboard {
@@ -238,91 +241,116 @@ onMounted(async () => {
   flex-direction: column;
   gap: 1.5rem;
   background: transparent;
-  box-shadow: none;
   padding: 0;
 }
 
 .corkboard-title {
   font-family: "Nunito", sans-serif;
-  font-size: 35px;
+  font-size: 34px;
   text-align: center;
-  font-weight: 400;
+  font-weight: 800;
   color: var(--titleColor);
+}
+
+.leaderboard__icon {
+  padding: 30px;
+  max-width: 400px;
 }
 
 .black__board-title {
   text-align: center;
+  font-weight: 800;
+  font-size: 1.8rem;
+  color: #ffffff;
 }
 
 .ranked__side-btnBack {
   width: 100%;
-  border: 3px solid #1e1e1e;
+  border: 4px solid #4a3f73;
   padding: 15px;
-  background: #4ade80;
-  border-radius: 16px;
+  background: #ffffff;
+  border-radius: 20px;
   cursor: pointer;
-  color: #1e1e1e;
+  color: #4a3f73;
   font-size: 1.2rem;
   font-weight: 600;
-  font-family: "Nunito", sans-serif;
-  box-shadow: 4px 4px 0px #1e1e1e;
+  font-family: "Baloo 2", sans-serif;
+  box-shadow: 0 5px 0 0 #4a3f73;
   transition: all 0.1s ease-in-out;
 }
 
 .ranked__side-btnBack:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0px #1e1e1e;
+  transform: translateY(2px);
+  box-shadow: 0 3px 0 0 #4a3f73;
 }
 
+.ranked__side-btnBack:active {
+  transform: translateY(5px);
+  box-shadow: 0 0px 0 0 #4a3f73;
+}
+
+
 .control-card {
-  background: #ffffff;
-  box-shadow: 4px 4px 0px #1e1e1e;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 6px 0 0 #c7bce1;
   padding: 20px;
-  border-radius: 20px;
-  border: 3px solid #1e1e1e;
+  border-radius: 24px;
+  border: 4px solid #4a3f73;
+  position: relative;
+}
+
+.pin {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 24px;
+  background: #ff8a80;
+  border-radius: 50%;
+  border: 3px solid #4a3f73;
 }
 
 .control-card__title {
   text-align: center;
-  font-weight: 400;
+  font-weight: 800;
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
-  color: #1e1e1e;
+  color: #4a3f73;
 }
 
 .discipline-selector, .difficulty-selector {
   display: flex;
   gap: 10px;
+  background: #e1dcf2;
+  padding: 8px;
+  border-radius: 50px;
 }
 
 .discipline-selector__button, .difficulty-selector__button {
   flex: 1;
-  padding: 1rem;
-  border: 3px solid #1e1e1e;
-  border-radius: 12px;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 50px;
   cursor: pointer;
-  font-size: 1.1rem;
-  font-family: "Nunito", sans-serif;
-  background: #fff;
-  color: #1e1e1e;
-  box-shadow: 2px 2px 0px #1e1e1e;
-  transition: all 0.1s ease-in-out;
+  font-size: 1rem;
+  font-family: "Baloo 2", sans-serif;
+  font-weight: 600;
+  background: transparent;
+  color: #4a3f73;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .discipline-selector__button:hover, .difficulty-selector__button:hover {
-  background-color: #fef8e4;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
-.discipline-selector__button.active {
-  background: #f1c40f;
-  transform: translate(2px, 2px);
-  box-shadow: 0px 0px 0px #1e1e1e;
-}
-
-.difficulty-selector__button.active {
-  background: #4ade80;
-  transform: translate(2px, 2px);
-  box-shadow: 0px 0px 0px #1e1e1e;
+.discipline-selector__button.active, .difficulty-selector__button.active {
+  background: #ffffff;
+  color: #6a5acd;
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .user-stats__item {
@@ -330,19 +358,20 @@ onMounted(async () => {
   justify-content: space-between;
   align-items: center;
   margin: 0.5rem 0;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1.1rem;
+  color: #4a3f73;
 }
 
 .user-stats__item span {
-  font-weight: 400;
+  font-weight: 800;
   font-size: 1.3em;
-  background: #fef8e4;
+  background: #ffffff;
   padding: 2px 8px;
-  border-radius: 8px;
-  border: 3px solid #1e1e1e;
-  width: 45px;
-  height: 39px;
+  border-radius: 12px;
+  border: 3px solid #d1c4e9;
+  min-width: 45px;
+  height: 42px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -352,28 +381,34 @@ onMounted(async () => {
   width: 100%;
   margin-top: 1rem;
   padding: 0.8rem;
-  font-size: 1rem;
-  font-family: "Nunito", sans-serif;
-  background: #a855f7;
-  color: white;
-  border: 3px solid #1e1e1e;
-  border-radius: 12px;
+  font-size: 1.1rem;
+  font-family: "Baloo 2", sans-serif;
+  font-weight: 800;
+  background: #80deea;
+  color: #4a3f73;
+  border: 4px solid #4a3f73;
+  border-radius: 50px;
   cursor: pointer;
-  box-shadow: 4px 4px 0px #1e1e1e;
+  box-shadow: 0 5px 0 0 #4a3f73;
   transition: all 0.1s ease-in-out;
 }
 
 .user-stats__action-btn:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0px #1e1e1e;
+  transform: translateY(2px);
+  box-shadow: 0 3px 0 0 #4a3f73;
+}
+
+.user-stats__action-btn:active {
+  transform: translateY(5px);
+  box-shadow: 0 0 0 0 #4a3f73;
 }
 
 .ranked-leaderboard-blackboard {
   flex: 2;
-  background: #5a9ff3;
-  border-radius: 24px;
-  border: 3px solid #1e1e1e;
-  box-shadow: 8px 8px 0px #1e1e1e;
+  background: #b39ddb;
+  border-radius: 30px;
+  border: 5px solid #4a3f73;
+  box-shadow: 0 10px 0 0 #4a3f73;
   padding: 24px;
   display: flex;
   width: 100%;
@@ -391,12 +426,13 @@ onMounted(async () => {
 }
 
 .blackboard__title {
-  font-weight: 400;
-  color: #1e1e1e;
+  font-weight: 800;
+  color: #ffffff;
   font-family: "Nunito", sans-serif;
   font-size: 2rem;
   text-align: center;
   margin-bottom: 20px;
+  text-shadow: 3px 3px 0 #8e7cc3;
 }
 
 .blackboard__message {
@@ -405,9 +441,9 @@ onMounted(async () => {
   align-items: center;
   flex-direction: column;
   height: 100%;
-  font-size: 1.5rem;
-  color: #1e1e1e;
-  opacity: 0.7;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .leaderboard__items-container {
@@ -418,49 +454,57 @@ onMounted(async () => {
   overflow-y: auto;
 }
 
+.leaderboard__items-container > li:nth-child(1) .leaderboard-item {
+  background: #fff9c4;
+}
+
+.leaderboard__items-container > li:nth-child(2) .leaderboard-item {
+  background: #c8e6c9;
+}
+
+.leaderboard__items-container > li:nth-child(3) .leaderboard-item {
+  background: #ffccbc;
+}
+
+
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 16px;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: #d1c4e9;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e1e1e;
-  border-radius: 6px;
-  border: 3px solid #fca5a5;
+  background: #ffffff;
+  border-radius: 10px;
+  border: 4px solid #d1c4e9;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #fffde7;
 }
 
 @media (max-width: 1023px) {
   .ranked-layout {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    gap: 20px;
+    padding: 10px;
   }
 
   .ranked-sidebar-corkboard {
     width: 100%;
     max-width: 100%;
   }
+  .ranked-leaderboard-blackboard, .control-card, .ranked__side-btnBack {
+    box-shadow: 0 6px 0 0 #4a3f73;
+  }
+}
 
-  .ranked-layout {
-    gap: 13px;
+@media (max-width: 767px) {
+  .ranked-leaderboard-blackboard {
     padding: 10px;
   }
-
-  .ranked-leaderboard-blackboard {
-    padding: 3px;
-    box-shadow: 2px 2px 0 #1e1e1e;
-  }
-
-  .control-card,
-  .ranked__side-btnBack{
-    box-shadow: 2px 2px 0 #1e1e1e;
-  }
-
-
-
-
 }
 </style>

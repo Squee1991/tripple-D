@@ -14,6 +14,10 @@
             <div class="panel center-panel">
                 <div class="center-panel-header">
                     <div class="panel-title">Темы</div>
+                  <button v-if="showDeck" class="find-button" style="padding:8px 12px; font-size:14px"
+                          @click="showDeck = false">
+                    ← К колодам
+                  </button>
                     <img @click="showInfo = true" class="theme__info" src="../../assets/images/sticker-question.svg"
                          alt="info">
                 </div>
@@ -85,6 +89,7 @@
         getFirestore, collection, query, where, orderBy, limit, getDocs,
         doc, updateDoc, addDoc, onSnapshot, serverTimestamp, deleteDoc, runTransaction
     } from 'firebase/firestore'
+    import Deck from "~/src/components/deck.vue";
 
     const userBattle = userBattleStore()
     const useTheme = useThemeCardStore()
@@ -93,7 +98,7 @@
     const router = useRouter()
 
     const loading = ref(false)
-    // const showDeck = ref(false)
+    const showDeck = ref(false)
     let showInfo = ref(false)
     const message = ref('')
     const sessionId = ref(null)
@@ -141,7 +146,7 @@
     const selectTheme = async (key) => {
         userBattle.selectedTheme = key
         await userBattle.generateuserDeck()
-        // Убираем showDeck.value = true
+        showDeck.value = true
     }
 
     const findOpponent = async () => {

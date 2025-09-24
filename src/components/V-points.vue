@@ -9,11 +9,11 @@
       <header class="points-card__header">
         <h2 class="points__title">{{ t('accountPanel.title')}}</h2>
       </header>
-      <ul v-if="langStore" class="points-card__list" aria-label="Сводка">
+      <ul v-if="langStore" class="points-card__list">
         <li class="points-card__item">
           <div class="points-card__label">{{ t('accountPanel.articles')}}</div>
           <button :title="hoverTitle.title" v-if="userAuth.uid" @click="openArticleModal" class="articlus__wrapper">
-            <img class="articlus__icon" src="../../assets/images/articlus.png" alt="">
+            <img class="articlus__icon" src="../../assets/images/articlus.png" alt="Articlus_icon">
             <span class="points-card__value"> {{ langStore.points }}</span>
           </button>
         </li>
@@ -32,22 +32,29 @@
           <div class="points__statistics__items">
             <div class="points__stat-header">
               <div class="points__stat-title">
-                <img class="points-card__title-icon" src="../../assets/images/graph.svg" alt="">
+                <img class="points-card__title-icon" src="../../assets/images/graph.svg" alt="Stats_icon">
                 <h3 class="stats__title">{{ t('accountPanel.stats')}}</h3>
               </div>
               <button @click="toStatistics" class="stats__btn">
                 <span></span>
-                <img class="stat__icon" src="../../assets/images/dailyIcons/arrow-to.svg" alt="">
+                <img class="stat__icon" src="../../assets/images/dailyIcons/arrow-to.svg" alt="Arrow_icon">
               </button>
             </div>
           </div>
         </div>
-        <!--        <li class="points-card__item">-->
-        <!--          <span class="points-card__label">Подписка</span>-->
-        <!--          <span class="sub-badge sub-badge&#45;&#45;off">Не активна</span>-->
-        <!--        </li>-->
+        <div class="ranked__wrapper">
+          <div class="ranked__inner">
+            <div class="ranked__title-icon">
+              <img class="points-card__title-icon" src="../../assets/images/RankedIcon.svg" alt="Ranked_icon">
+              <div class="ranked__title">Рейтинг</div>
+            </div>
+            <button @click="toRanked" class="stats__btn">
+              <img class="stat__icon" src="../../assets/images/dailyIcons/arrow-to.svg" alt="Arrow_icon">
+            </button>
+          </div>
+        </div>
       </ul>
-      <div class="sub-actions">
+      <div v-if="!userAuth.isPremium" class="sub-actions">
         <article class="super-card">
           <div>
             <span class="super-card__badge">{{ t('accountPanel.premium')}}</span>
@@ -58,22 +65,7 @@
           </button>
         </article>
       </div>
-<!--      <div class="fiends__list-wrapper">-->
-<!--        <h3 class="points-card__title"> Список друзей</h3>-->
-<!--        <ul class="list">-->
-<!--          <li v-for="friend in friendsStore.friends"-->
-<!--              :key="friend.id"-->
-<!--              class="list__item">-->
-<!--            <img-->
-<!--                v-if="friend.avatar"-->
-<!--                :src="friend.avatar"-->
-<!--                alt="Аватар"-->
-<!--                class="list__avatar"-->
-<!--            />-->
-<!--            <div> {{ friend.name || '' }}</div>-->
-<!--          </li>-->
-<!--        </ul>-->
-<!--      </div>-->
+
     </section>
   </div>
 </template>
@@ -106,13 +98,16 @@ const hoverTitle = {
   level: t('hoverTitle.level')
 }
 
-
 const toPayment = () => {
   router.push('/pay')
 }
 
 const toStatistics = () => {
   router.push('/statistics')
+}
+
+const toRanked = () => {
+  router.push('/leaderboard')
 }
 
 const openArticleModal = () => isArticleOpen.value = true
@@ -138,10 +133,24 @@ onMounted(() => {
   width: 50px;
 }
 
-.stats__title {
+.ranked__title-icon {
+  display: flex;
+  align-items: center;
+}
+
+.ranked__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.stats__title,
+.ranked__title{
   color: var(--titleColor);
-  margin-left: 5px;
   font-size: 22px;
+  margin-left: 8px;
+  font-weight: 600;
 }
 
 .points__title {
@@ -158,9 +167,10 @@ onMounted(() => {
   align-items: center;
   justify-content: space-between;
   margin-top: 10px;
-  height: 63px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 2px dashed black;
 }
-
 
 .list__item {
   display: flex;
@@ -290,10 +300,6 @@ onMounted(() => {
 }
 
 .points-card__list {
-  padding: 10px 12px;
-  background: var(--bg);
-  border: 3px solid var(--border);
-  border-radius: 14px;
   margin-bottom: 10px;
 }
 

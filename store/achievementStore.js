@@ -309,8 +309,8 @@ export const useAchievementStore = defineStore('achievementStore', () => {
             'verb_prateritum': 'prat',
             'verb_plusquamperfect': 'plus',
 
-            'verb_modal': 'mod',
-            'verb_nebensatze': 'neb',
+            'modal-verbs_modal': 'mod',
+            'modal-verbs_nebensatze': 'neb',
 
             'verb_irregular': 'irr',
             'verb_prepositions': 'fix',

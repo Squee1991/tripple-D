@@ -40,12 +40,6 @@ import { groupedHardModeAchievements } from '../achieveGroup/marathon/hardModeAc
 const { t } = useI18n()
 const achievementStore = useAchievementStore()
 
-// Запускаем трекинг при монтировании компонента (если ещё не запущен)
-// onMounted(() => {
-// 	achievementStore.initializeProgressTracking()
-// })
-
-// Отфильтровываем только группы hard-mode
 const hardTitles = groupedHardModeAchievements.map(g => g.title)
 const achievementGroups = computed(() =>
 		achievementStore.groups.filter(g => hardTitles.includes(g.title))
@@ -131,7 +125,7 @@ const getCompletedCount = group =>
 .achievement-title {
 	font-size: 1.3rem;
 	color: #1e1e1e;
-	font-weight: 400;
+  font-weight: 400;
 	margin: 0 0 10px 0;
 }
 .progress-bar-container {

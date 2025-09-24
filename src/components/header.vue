@@ -253,7 +253,7 @@ const menuItems = computed(() => [
   ...(userAuth.uid
       ? [
         {id: 'achieve', url: '/achievements', valueKey: 'nav.achieve'},
-        {id: 'stats', url: '/stats', valueKey: 'nav.stats'}
+        /*{id: 'stats', url: '/stats', valueKey: 'nav.stats'}*/
       ] : [])
 ])
 
