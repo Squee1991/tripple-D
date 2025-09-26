@@ -3,7 +3,7 @@ import { ref, watch } from 'vue'
 
 export const useUiSettingsStore = defineStore('uiSettings', () => {
 	const achievementsNotifyEnabled = ref(true)
-	const isUiReady = ref(false)
+
 
 	if (process.client) {
 		const saved = localStorage.getItem('achievementsNotifyEnabled')
@@ -23,6 +23,6 @@ export const useUiSettingsStore = defineStore('uiSettings', () => {
 	return {
 		achievementsNotifyEnabled,
 		setAchievementsNotifyEnabled,
-		isUiReady
+
 	}
 })
