@@ -22,7 +22,7 @@
           <h1 class="banner__title" v-once>{{ t('banner.title') }}</h1>
           <button class="banner__button" @click="startLearning" v-once>{{ t('banner.btn') }}</button>
         </div>
-        <div ref="orbit" class="banner__mage-container"  aria-hidden="true">ну
+        <div ref="orbit" class="banner__mage-container"  aria-hidden="true">
           <div class="banner__mage"></div>
         </div>
       </div>

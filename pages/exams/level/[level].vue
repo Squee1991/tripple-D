@@ -102,7 +102,7 @@ import {useI18n} from 'vue-i18n'
 import {userExamStore} from '../../../store/examStore'
 import SoundBtn from '~/src/components/soundBtn.vue'
 import VoiceRecorder from '~/src/components/VoiceRecorder.vue'
-import {useGroqCheckHomeWork} from '~/src/composables/useGroqCheck.js'
+import {useGroqCheckHomeWork} from '~/composables/useGroqCheck.js'
 
 import { useSeoMeta } from '#imports'
 useSeoMeta({
