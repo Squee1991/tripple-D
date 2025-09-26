@@ -58,7 +58,11 @@ export default defineNuxtPlugin((nuxtApp) => {
     onAuthStateChanged(auth, (user) => initShown(user?.uid || null))
     let appMounted = false, processing = false, lastAt = 0
     const queue = []
-    const enqueue = (fn, extraDelay = 0) => { queue.push({ fn, extraDelay }); if (appMounted) drain() }
+    const enqueue = (fn, extraDelay = 0) => {
+        console.log('[TOAST PLUGIN] Добавляю в очередь:', fn); // <-- ЛОГ
+        queue.push({ fn, extraDelay });
+        if (appMounted) drain()
+    }
     const drain = () => {
         if (processing) return
         processing = true
@@ -79,67 +83,52 @@ export default defineNuxtPlugin((nuxtApp) => {
 
     const resolveName = (a) => {
         const fromStore = ach.findById ? ach.findById(a?.id) : null
-        const candidates = [
-            a?.name,
-            fromStore?.name,
-            a?.i18nKey,
-            a?.id && `achievements.${a.id}.name`,
-            a?.id && `achievements.${a.id}.title`,
-            a?.id,
-        ]
+        const candidates = [ a?.name, fromStore?.name, a?.i18nKey, a?.id && `achievements.${a.id}.name`, a?.id && `achievements.${a.id}.title`, a?.id, ]
         for (const c of candidates) {
             const v = tr(c)
             if (v) return v
         }
         return null
     }
+
     const showAward = async (award) => {
         const key = makeKey('award', award)
+        console.log(`[TOAST PLUGIN] Пытаюсь показать НАГРАДУ. Ключ: ${key}, Уже показан?: ${isShown(key)}`); // <-- ЛОГ
         if (!key || key === lastShownKey || isShown(key)) return
         lastShownKey = key
-
         const name = tr(award?.name) || tr(award?.title) || tr('Награда') || 'Награда'
         toast.success(`🎉 ${t('Вы получили награду')} «${name}»!`, {
-            toastId: key,
-            containerId: CONTAINER_ID,
-            position: toast.POSITION.TOP_RIGHT,
-            theme: 'colored',
+            toastId: key, containerId: CONTAINER_ID, position: toast.POSITION.TOP_RIGHT, theme: 'colored',
             style: { background: '#222', color: '#fff', fontSize: '16px', borderRadius: '12px' },
         })
-
         await markShown(key)
         setTimeout(() => { if (lastShownKey === key) lastShownKey = null }, 1200)
     }
 
-
-
     const showAchievement = async (a) => {
         const key = makeKey('ach', a)
+        console.log(`[TOAST PLUGIN] Пытаюсь показать ДОСТИЖЕНИЕ. Ключ: ${key}, Уже показан?: ${isShown(key)}`); // <-- ЛОГ
         if (!key || key === lastShownKey || isShown(key)) return
         lastShownKey = key
-
         const name = resolveName(a)
-
-
-        const msg = name
-            ? `🏆 ${t('Достижение получено')}: «${name}»!`
-            : `🏆 ${t('Новое достижение разблокировано')}!`
-
+        const msg = name ? `🏆 ${t('Достижение получено')}: «${name}»!` : `🏆 ${t('Новое достижение разблокировано')}!`
         if (!msg.includes('null') && !msg.includes('undefined')) {
-            toast.success(msg, {
-                toastId: key,
-                containerId: CONTAINER_ID
-            })
+            toast.success(msg, { toastId: key, containerId: CONTAINER_ID })
         }
-
         await markShown(key)
         setTimeout(() => { if (lastShownKey === key) lastShownKey = null }, 1200)
     }
 
     ach.$subscribe((_m, state) => {
+        // --- ЭТО САМАЯ ВАЖНАЯ ПРОВЕРКА ---
+        console.log('[TOAST PLUGIN] Сработала подписка! Проверяю переключатель уведомлений:', { isEnabled: ui.achievementsNotifyEnabled }); // <-- ЛОГ
+
         if (!ui.achievementsNotifyEnabled) return
+
         const achievement = state.lastUnlockedAchievement
         const award = state.lastUnlockedAward
+
+        console.log('[TOAST PLUGIN] Получены данные из стора:', { achievement, award }); // <-- ЛОГ
 
         if (achievement?.id === 'registerAchievement') {
             enqueue(() => showAchievement(achievement), 250)

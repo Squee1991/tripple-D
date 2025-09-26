@@ -37,7 +37,7 @@ import { useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import Lottie from 'lottie-web'
 import FireWorks from '../../assets/animation/SuccessAnimation.json'
-import { useSfx } from '../composables/useSfx.js'
+import { useSfx } from '../../composables/useSfx.js'
 
 const { t } = useI18n()
 const props = defineProps({

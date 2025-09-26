@@ -96,7 +96,7 @@ import {useQuizStore } from '../../../store/adjectiveStore.js';
 import {userlangStore} from '../../store/learningStore.js'
 import {useRoute, useRouter} from 'vue-router';
 import CelebrationFireworks from "~/src/components/CelebrationFireworks.vue";
-import {useRewardEngine} from '../../src/composables/useRewardEngine.js'
+import {useRewardEngine} from '../../composables/useRewardEngine.js'
 import SoundBtn from '../../src/components/soundBtn.vue'
 import { useSeoMeta } from '#imports'
 

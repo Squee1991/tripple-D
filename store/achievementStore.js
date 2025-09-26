@@ -180,20 +180,39 @@ export const useAchievementStore = defineStore('achievementStore', () => {
     }
 
 
+    // store/achievementStore.js
+
     function updateProgress(id, val) {
+        // --- Логи для отладки можно пока оставить ---
+        console.log(`%c[ACHIEVEMENT DEBUG | ШАГ 2] updateProgress вызвана`, 'color: #0077be', { id, val });
+
         const ach = findById(id)
-        if (!ach) return
+        if (!ach) {
+            console.error(`[ACHIEVEMENT DEBUG] Достижение с ID "${id}" не найдено!`);
+            return
+        }
 
         const target = Number(ach.targetProgress ?? 0)
         const prev = Number(ach.currentProgress ?? 0)
-        const next = Math.max(prev, Number(val ?? 0)) // не уменьшаем
+        const next = Math.max(prev, Number(val ?? 0))
         ach.currentProgress = Math.min(next, target)
 
         const nowCompleted = ach.currentProgress >= target
         const alreadyCompleted = completedSet.has(id)
         const justCompleted = nowCompleted && !alreadyCompleted
 
+        console.log(`%c[ACHIEVEMENT DEBUG | ШАГ 3] Проверка выполнения для ID: ${id}`, 'color: #be5b00', {
+            target,
+            progress: ach.currentProgress,
+            nowCompleted,
+            alreadyCompleted,
+            justCompleted,
+            isBooting: isBooting.value,
+        });
+
         if (justCompleted) {
+            console.log(`%c[ACHIEVEMENT DEBUG | ШАГ 4] УСПЕХ! Достижение "${id}" только что выполнено.`, 'color: #009e2a; font-weight: bold');
+
             completedSet.add(id)
             saveCompleted(completedSet)
 
@@ -201,7 +220,9 @@ export const useAchievementStore = defineStore('achievementStore', () => {
                 popupQueue.value.push(ach)
                 showNextPopup()
 
-                // ✅ ИЗМЕНЕНИЕ ЗДЕСЬ: Убрали setTimeout для очистки
+                // ЭТО КЛЮЧЕВОЙ МОМЕНТ:
+                // Мы устанавливаем значение и НЕ очищаем его.
+                // Оно останется в состоянии, пока его не заменит следующее достижение.
                 lastUnlockedAchievement.value = {
                     id: ach.id,
                     title: ach.title,
@@ -209,14 +230,13 @@ export const useAchievementStore = defineStore('achievementStore', () => {
                     ts: Date.now()
                 }
 
+                console.log(`%c[ACHIEVEMENT DEBUG | ШАГ 5] lastUnlockedAchievement обновлено:`, 'color: #7d00be', lastUnlockedAchievement.value);
+
                 const awardTitle = achievementToAwardMap[id]
                 if (awardTitle && !shownSet.has(awardTitle)) {
                     shownSet.add(awardTitle)
                     saveShown(shownSet)
-
-                    // ✅ ИЗМЕНЕНИЕ ЗДЕСЬ: Убрали setTimeout для очистки
                     lastUnlockedAward.value = {title: awardTitle, achId: id, ts: Date.now()}
-
                     updateProgress("firstAward", shownSet.size)
                 }
             } else {
@@ -229,7 +249,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
                 }
             }
         }
-
         prevMap.set(id, ach.currentProgress)
     }
 
@@ -628,38 +647,46 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 
         // ✅ завершаем «бут» и делаем реплей трёх тостов с микро-задержками
         watch(() => uiStore.isUiReady, (isReady) => {
-            // Этот код сработает только один раз, когда isReady станет true
             if (!isReady) return;
 
-            isBooting.value = false
+            console.log(`%c[ACHIEVEMENT DEBUG] UI ГОТОВ! Запускаю обработку стартовых достижений.`, 'color: blue; font-weight: bold');
+            isBooting.value = false;
 
-            // на всякий случай: актуализируем прогресс «Начало коллекции»
-            updateProgress('collectionStart', shownSet.size)
+            // Сначала актуализируем прогресс для достижений, зависящих от количества наград
+            updateProgress('collectionStart', shownSet.size);
 
-            // 1) «Первый шаг» — ПЕРВЫМ
-            const regAch = findById('registerAchievement')
-            const completed = regAch && regAch.currentProgress >= (regAch.targetProgress || 1)
-            const wasBooted = bootUnlocked.find(a => a && a.id === 'registerAchievement')
-            if (wasBooted || completed) {
-                lastUnlockedAchievement.value = { id: 'registerAchievement', title: 'Первый шаг', ts: Date.now() }
-            }
-            // 2) Награда (например, «Значок участника») — сразу после «Первого шага»
-            setTimeout(() => {
-                if (bootAwards.length) {
-                    const first = bootAwards[0]
-                    lastUnlockedAward.value = { ...first, ts: Date.now() }
+            // Создаем единую очередь для показа
+            const startupQueue = [];
+
+            // Добавляем награды в очередь
+            bootAwards.forEach(award => {
+                startupQueue.push({ type: 'award', data: award });
+            });
+
+            // Добавляем достижения в очередь
+            bootUnlocked.forEach(ach => {
+                // Убедимся, что не дублируем награду, если она связана с достижением
+                const hasLinkedAward = bootAwards.some(b => b.achId === ach.id);
+                if (achievementToAwardMap[ach.id] && hasLinkedAward) {
+                    // Если у достижения есть награда и она уже в очереди, показываем только достижение
+                    startupQueue.push({ type: 'achievement', data: ach });
+                } else {
+                    startupQueue.push({ type: 'achievement', data: ach });
                 }
-            }, 60)
-            // 3) «Начало коллекции» — третьим
-            setTimeout(() => {
-                const collectionAch = findById('collectionStart');
-                if (collectionAch && collectionAch.currentProgress >= collectionAch.targetProgress) {
-                    lastUnlockedAchievement.value = { id: 'collectionStart', title: 'Начало коллекции', ts: Date.now() }
-                }
-            }, 120)
+            });
 
-        }, { once: true }) // { once: true } гарантирует, что watcher сработает лишь один раз
-    }
+            // Показываем все элементы из очереди с задержкой, чтобы они не перекрывали друг друга
+            startupQueue.forEach((item, index) => {
+                setTimeout(() => {
+                    if (item.type === 'achievement') {
+                        lastUnlockedAchievement.value = { ...item.data, ts: Date.now() };
+                    } else if (item.type === 'award') {
+                        lastUnlockedAward.value = { ...item.data, ts: Date.now() };
+                    }
+                }, index * 1200); // Задержка в 1.2 секунды между каждым тостом
+            });
+
+        }, { once: true });    }
 
 
     watch(lastUnlockedAward, (award) => {
