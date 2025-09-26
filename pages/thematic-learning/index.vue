@@ -13,6 +13,23 @@ import Family from '../../assets/images/family.svg'
 import School from '../../assets/images/school.svg'
 import Travel from '../../assets/images/travel.svg'
 import Clock from '../../assets/images/clock.svg'
+import { useHead, useSeoMeta, useRuntimeConfig } from '#imports'
+const canonical = useCanonical()
+const pageTitle = 'German Corner — Тематические уровни: вставляй der, die, das в нужном падеже'
+const pageDesc  = 'Выбирайте тему и проходите уровни сложности: тренируйте артикли der, die, das в Nominativ, Akkusativ, Dativ и Genitiv. Короткие предложения, чёткая прогрессия, геймификация.'
+useHead({
+  title: pageTitle,
+  link: [{ rel: 'canonical', href: canonical }]
+})
+useSeoMeta({
+  description: pageDesc,
+  ogTitle: pageTitle,
+  ogDescription: pageDesc,
+  ogType: 'article',
+  ogUrl: canonical,
+  ogImage: '/images/seo-thematic-levels.png',
+  robots: 'index, follow'
+})
 
 const router = useRouter()
 const trainer = useTrainerStore()
@@ -29,7 +46,6 @@ const themes = [
   {key: 'school', name: 'chooseThemeList.school', img: School, position: {top: '68%', left: '5%', rotate: '-8deg'}},
   {key: 'travel', name: 'chooseThemeList.travel', img: Travel, position: {top: '2%', left: '30%', rotate: '3deg'}}
 ]
-
 const selectedTopic = ref(themes[0].key)
 const jsonData = ref(null)
 const loading = ref(true)

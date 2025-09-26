@@ -142,18 +142,15 @@ import Theory from '../assets/images/about-icons/theory.svg'
 import Practice from '../assets/images/about-icons/practice.svg'
 const heroContentRef = ref({
   title: 'О нас',
-  subtitle:
-      'Мы — платформа для практики немецкого языка с элементами игры: рейтинги, достижения, дуэли, квесты и многое другое.',
+  subtitle: 'Мы — платформа для практики немецкого языка с элементами игры: рейтинги, достижения, дуэли, квесты и многое другое.',
   imageUrl: Puzzle,
   imageAlt: 'Герой секции: обучение немецкому в игровом стиле'
 })
-
 const missionPointsRef = ref([
   { id: 'mission-global', text: 'Доступно для каждой страны и каждого устройства' },
   { id: 'mission-interactive', text: 'Интерактивные задания и дуэли в дисциплине составления предложений' },
   { id: 'mission-fun', text: 'Обучение через игру: квесты, награды и марафоны' }
 ])
-
 const featureItemsRef = ref([
   {
     id: 'feature-rating',
@@ -212,7 +209,6 @@ const featureItemsRef = ref([
     imageAlt: 'Квестовая цепочка'
   }
 ])
-
 const theoryPracticeRef = ref([
   {
     id: 'theory-articles',
@@ -239,7 +235,6 @@ const theoryPracticeRef = ref([
     ]
   }
 ])
-
 const articleModesRef = ref([
   { id: 'mode-1', orderNumber: '01', title: 'Вписать артикль', description: 'Введи корректный der/die/das.' },
   { id: 'mode-2', orderNumber: '02', title: 'Собери слово', description: 'Собери слово и выбери артикль.' },
@@ -247,14 +242,12 @@ const articleModesRef = ref([
   { id: 'mode-4', orderNumber: '04', title: 'Множественное число', description: 'Выбери форму и артикль множественного.' },
   { id: 'mode-5', orderNumber: '05', title: 'Аудио-режим', description: 'Слушай и определяй артикль на слух.' }
 ])
-
 const valueItemsRef = ref([
   { id: 'value-access', text: 'Доступность и понятность' },
   { id: 'value-engagement', text: 'Увлекательность через игру' },
   { id: 'value-feedback', text: 'Мгновенная обратная связь' },
   { id: 'value-progress', text: 'Прозрачный прогресс и цели' }
 ])
-
 const callToActionRef = ref({
   title: 'Готов начать?',
   text: 'Присоединяйся и прокачай немецкий в своём темпе — от артиклей до уверенных предложений.',

@@ -83,6 +83,27 @@ import Lottie from 'lottie-web';
 import TipIcon from '../../assets/animation/info.json';
 import SoundBtn from '../../src/components/soundBtn.vue';
 import VBackBtn from "~/src/components/V-back-btn.vue";
+import { useHead, useSeoMeta, useRuntimeConfig } from '#imports'
+
+const canonical = useCanonical()
+const pageTitle = 'German Corner — Модальные глаголы и придаточные предложения (Nebensätze) в немецком языке'
+const pageDesc  = 'Изучайте модальные глаголы (können, müssen, wollen, mögen) и придаточные предложения (Nebensätze: weil, dass, wenn) в немецком языке. Примеры, перевод и практика для закрепления.'
+
+useHead({
+  title: pageTitle,
+  link: [
+    { rel: 'canonical', href: canonical }
+  ]
+})
+useSeoMeta({
+  description: pageDesc,
+  ogTitle: pageTitle,
+  ogDescription: pageDesc,
+  ogType: 'article',
+  ogUrl: canonical,
+  ogImage: '/images/seo-modal-nebensatze.png',
+  robots: 'index, follow'
+})
 
 const {t} = useI18n()
 const router = useRouter();

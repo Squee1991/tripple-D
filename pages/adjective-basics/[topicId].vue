@@ -78,7 +78,8 @@ import {userlangStore} from '../../store/learningStore.js'
 import {useRoute, useRouter} from 'vue-router'
 import CelebrationFireworks from '../../src/components/CelebrationFireworks.vue'
 import SoundBtn from '../../src/components/soundBtn.vue'
-import {useI18n} from 'vue-i18n'
+import {useSeoMeta} from '#imports'
+useSeoMeta({robots: 'noindex, nofollow'})
 
 const AWARD_EXP = 5
 const AWARD_POINTS = 5

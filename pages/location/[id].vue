@@ -24,11 +24,6 @@
                         <div v-if="q._success" class="stamp">{{ t('locationQuests.done') }}</div>
                         <h3 class="quest__title">{{ t(q.title) }}</h3>
                         <p class="quest__description">{{ t(q.description) }}</p>
-                        <!--            <div v-if="q.details" class="quest-details">-->
-                        <!--              <p v-if="q.details.goal"><strong>Цель:</strong> {{ q.details.goal }}</p>-->
-                        <!--              <p v-if="q.details.hint"><strong>Подсказка:</strong> {{ q.details.hint }}</p>-->
-                        <!--              <p v-if="q.details.level"><strong>Уровень:</strong> {{ q.details.level }}</p>-->
-                        <!--            </div>-->
                         <div class="quest-meta">
                             <span v-if="!q._success">{{ t('locationQuests.awards') }} {{
                                 q.rewards.points
@@ -51,9 +46,25 @@ import {ref, computed, watch, onMounted} from "vue";
 import {useRoute, useRouter} from "vue-router";
 import {regions} from "~/utils/regions.js";
 import {userChainStore} from "~/store/chainStore.js";
+import { useHead, useSeoMeta, useRuntimeConfig } from '#imports'
+const canonical = useCanonical()
+const pageTitle = 'German Corner — Языковые земли для изучения немецкого языка'
+const pageDesc  = 'Исследуйте языковые земли и прокачивайте немецкий язык, выполняя задания и проходя уровни. Учите лексику и грамматику в формате приключения с квестами и прогрессией, как в игре!'
+useHead({
+  title: pageTitle,
+  link: [{ rel: 'canonical', href: canonical }]
+})
+useSeoMeta({
+  description: pageDesc,
+  ogTitle: pageTitle,
+  ogDescription: pageDesc,
+  ogType: 'website',
+  ogUrl: canonical,
+  ogImage: '/images/seo-lands.png',
+  robots: 'index, follow'
+})
 
 const {t} = useI18n();
-const route = useRoute();
 const router = useRouter();
 const chainStore = userChainStore();
 

@@ -73,8 +73,31 @@
 import {ref} from 'vue'
 import Pin from '../assets/images/pin.svg'
 import Chat from '../assets/images/chat.svg'
-const { t } = useI18n()
+import { useHead, useSeoMeta, useRuntimeConfig } from '#imports'
+const route = useRoute()
+const runtime = useRuntimeConfig().public
 
+const pageTitle = 'German Corner — Немецкие идиомы и фразеологизмы с примерами и переводом'
+const pageDesc  = 'Разбираем немецкие идиомы и фразеологизмы: устойчивые выражения, образные значения и живые примеры из реальной речи. С переводом и объяснениями для начинающих и продолжающих плюс мини квиз'
+
+useHead({
+  title: pageTitle,
+  link: [
+    { rel: 'canonical', href: `${runtime.siteUrl}${route.fullPath}` }
+  ]
+})
+
+useSeoMeta({
+  description: pageDesc,
+  ogTitle: pageTitle,
+  ogDescription: pageDesc,
+  ogType: 'article',
+  ogUrl: `${runtime.siteUrl}${route.fullPath}`,
+  ogImage: '/images/seo-idioms.png',
+  robots: 'index, follow'
+})
+
+const { t } = useI18n()
 const idiomGroups = ref([
   {
     category: t('idiomFirstCategory.title'),

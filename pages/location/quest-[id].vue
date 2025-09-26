@@ -205,6 +205,8 @@ import SoundBtn from '~/src/components/soundBtn.vue'
 import {playCorrect, playWrong, unlockAudioByUserGesture} from '../../utils/soundManager.js'
 import RightIcon from '../../assets/images/location-icons/accept.svg'
 import WrongIcon from '../../assets/images/location-icons/cancel.svg'
+import { useSeoMeta } from '#imports'
+useSeoMeta({ robots: 'noindex, nofollow' })
 
 const PRICE = 10
 const {t} = useI18n()

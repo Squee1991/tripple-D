@@ -88,8 +88,29 @@
 
 <script setup>
 import {ref, computed} from 'vue';
+import { useHead, useSeoMeta, useRuntimeConfig } from '#imports'
+const route = useRoute()
+const runtime = useRuntimeConfig().public
+const { t } = useI18n()
 
-const {t} = useI18n()
+const pageTitle = 'German Corner — Немецкие предлоги по падежам с примерами и тестом'
+const pageDesc  = 'Изучайте немецкие предлоги по падежам: Dativ, Akkusativ, Genitiv и «хамелеоны». Примеры предложений, сокращения (am, im, ins) и мини-квиз для закрепления.'
+
+useHead({
+  title: pageTitle,
+  link: [{ rel: 'canonical', href: `${runtime.siteUrl}${route.fullPath}` }]
+})
+
+useSeoMeta({
+  description: pageDesc,
+  ogTitle: pageTitle,
+  ogDescription: pageDesc,
+  ogType: 'article',
+  ogUrl: `${runtime.siteUrl}${route.fullPath}`,
+  ogImage: '/images/seo-prepositions-cases.png',
+  robots: 'index, follow'
+})
+
 const pageSections = ref([
   {
     type: 'intro',

@@ -14,14 +14,22 @@
           <ul v-if="item.type === 'list'" class="adjs__list">
             <li v-for="(li, i) in item.items" :key="i" class="adjs__item">
               <div class="adjs__example">
-                <img class="adjs__icon" :src="li.icon === 'Chat' ? Chat : Pin" alt="icon">
+                <img
+                    class="adjs__icon"
+                    :src="li.icon === 'Chat' ? Chat : Pin"
+                    :alt="li.icon === 'Chat' ? 'Example icon' : 'Note pin icon'"
+                >
                 <div class="adjs__example--wrapper">
                   <p v-html="li.mainText"></p>
                   <span v-if="li.translation" class="adjs__translation" v-html="li.translation"></span>
                 </div>
               </div>
               <div v-if="li.subExample" class="adjs__example" style="margin-top: 8px;">
-                <img class="adjs__icon" :src="li.subExample.icon === 'Chat' ? Chat : Pin" alt="Pin_icon">
+                <img
+                    class="adjs__icon"
+                    :src="li.subExample.icon === 'Chat' ? Chat : Pin"
+                    :alt="li.subExample.icon === 'Chat' ? 'Example icon' : 'Note pin icon'"
+                >
                 <div class="adjs__example--wrapper">
                   <p v-html="li.subExample.text"></p>
                 </div>
@@ -94,6 +102,7 @@
 import {ref} from 'vue'
 import Pin from '../assets/images/pin.svg'
 import Chat from '../assets/images/chat.svg'
+import { useHead, useSeoMeta, useRuntimeConfig } from '#imports'
 const { t } = useI18n()
 const contentSections = ref([
   {
@@ -338,6 +347,27 @@ const selectedAnswer = ref(null)
 const quizScore = ref(0)
 const quizFinished = ref(false)
 const quizFeedback = ref('')
+const route = useRoute()
+const runtime = useRuntimeConfig().public
+const pageTitle = 'German Corner — Прилагательные в немецком: окончания, слабое/сильное склонение, степени сравнения'
+const pageDesc  = 'Разбор прилагательных в немецком: когда меняется окончание, слабое/сильное/смешанное склонение, таблицы по падежам, Komparativ и Superlativ, частые ошибки + мини-квиз.'
+
+useHead({
+  title: pageTitle,
+  link: [
+    { rel: 'canonical', href: `${runtime.siteUrl}${route.fullPath}` }
+  ]
+})
+
+useSeoMeta({
+  description: pageDesc,
+  ogTitle: pageTitle,
+  ogDescription: pageDesc,
+  ogType: 'article',
+  ogUrl: `${runtime.siteUrl}${route.fullPath}`,
+  ogImage: '/images/seo-adjectives.png',
+  robots: 'index, follow'
+})
 
 const checkAnswer = (option) => {
   selectedAnswer.value = option
@@ -377,6 +407,7 @@ const getOptionClass = (option) => {
 definePageMeta({
   layout: 'footerlayout',
 })
+
 </script>
 
 <style scoped>

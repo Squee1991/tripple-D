@@ -95,6 +95,23 @@ import {useRouter} from 'vue-router';
 import Lottie from 'lottie-web';
 import TipIcon from '../../assets/animation/info.json';
 import SoundBtn from '../../src/components/soundBtn';
+import { useHead, useSeoMeta, useRuntimeConfig } from '#imports'
+const canonical = useCanonical()
+const pageTitle = 'German Corner — Типы немецких глаголов: с предлогами, с отделяемыми приставками, сильные и возвратные'
+const pageDesc  = 'Разбираем типы глаголов в немецком: глаголы с фиксированными предлогами (auf, an, mit, von и др.), с отделяемыми приставками (anrufen, ankommen), неправильные/сильные (fahren, helfen, sprechen) и возвратные. Примеры, мини-правила и практика.'
+useHead({
+  title: pageTitle,
+  link: [{ rel: 'canonical', href: canonical }]
+})
+useSeoMeta({
+  description: pageDesc,
+  ogTitle: pageTitle,
+  ogDescription: pageDesc,
+  ogType: 'article',
+  ogUrl: canonical,
+  ogImage: '/images/seo-verb-types.png',
+  robots: 'index, follow'
+})
 
 const router = useRouter();
 const {t} = useI18n()

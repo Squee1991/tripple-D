@@ -82,7 +82,7 @@
               <div v-for="(example, exIndex) in block.content" :key="exIndex" class="example">
                 <div class="example__de-text">
                   <p class="example__sentence" v-html="example.sentence"></p>
-                  <SoundBtn :text="example.sentence" />
+                  <SoundBtn :text="example.sentence"/>
                 </div>
                 <span class="example__translation">{{ example.translation }}</span>
               </div>
@@ -102,12 +102,15 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onUnmounted, watch, nextTick } from 'vue'
-import { useRouter } from 'vue-router'
+import {useHead, useSeoMeta, useRuntimeConfig} from '#imports'
+import {useRoute} from 'vue-router'
+import {ref, computed, onMounted, onUnmounted, watch, nextTick} from 'vue'
+import {useRouter} from 'vue-router'
 import Lottie from 'lottie-web'
 import TipIcon from '../../assets/animation/info.json'
 import SoundBtn from '../../src/components/soundBtn.vue'
-const { t } = useI18n()
+
+const {t} = useI18n()
 const router = useRouter()
 const topic = ref('presens')
 const isContentVisible = ref(false)
@@ -116,6 +119,26 @@ const showTips = ref(false)
 const activeTipps = ref([])
 const tipRef = ref(null)
 let lottieInstance = null
+
+const canonical = useCanonical()
+const pageTitle = 'German Corner — Времена немецкого языка: Präsens, Perfekt, Präteritum, Futur I, Plusquamperfekt'
+const pageDesc = 'Понятные объяснения времён немецкого языка с примерами и таблицами: Präsens, Perfekt, Präteritum, Futur I и Plusquamperfekt. Начни практику по каждому времени.'
+useHead({
+  title: pageTitle,
+  link: [
+    { rel: 'canonical', href: canonical }
+  ]
+})
+useSeoMeta({
+  description: pageDesc,
+  ogTitle: pageTitle,
+  ogDescription: pageDesc,
+  ogType: 'article',
+  ogUrl: canonical,
+  ogImage: '/images/seo-tenses.png',
+  robots: 'index, follow'
+})
+
 
 const selectTopic = (id) => {
   topic.value = id
@@ -134,30 +157,33 @@ const parseTip = (text) => {
     }
   })
 }
+
 const topics = [
   {
     id: 'presens',
     title: 'Präsens',
     tips: [
-      { text: "'prasensTips.first'" },
-      { text: "'prasensTips.second'" },
-      { text: "'prasensTips.third'" },
-      { text: "'prasensTips.fourth'" }
+      {text: "'prasensTips.first'"},
+      {text: "'prasensTips.second'"},
+      {text: "'prasensTips.third'"},
+      {text: "'prasensTips.fourth'"}
     ],
     contentBlocks: [
-      { type: 'rule', title: t('tenses.howToDo'), content: t('tensesPrasens.howToDo') },
-      { type: 'subheading', title: t('tenses.howToUse') },
-      { type: 'rules', content: [
+      {type: 'rule', title: t('tenses.howToDo'), content: t('tensesPrasens.howToDo')},
+      {type: 'subheading', title: t('tenses.howToUse')},
+      {
+        type: 'rules', content: [
           t('tensesPrasens.howToUseFirst'),
           t('tensesPrasens.howToUseSecond'),
           t('tensesPrasens.howToUseThird')
-        ]},
-      { type: 'subheading', title: t('tenses.examples') },
+        ]
+      },
+      {type: 'subheading', title: t('tenses.examples')},
       {
         type: 'examples',
         content: [
-          { sentence: 'Ich <b>lerne</b> jeden Tag Deutsch.', translation: t('tensesPrasens.example') },
-          { sentence: 'Er <b>spielt</b> Fußball.', translation: t('tensesPrasens.exampleTwo') }
+          {sentence: 'Ich <b>lerne</b> jeden Tag Deutsch.', translation: t('tensesPrasens.example')},
+          {sentence: 'Er <b>spielt</b> Fußball.', translation: t('tensesPrasens.exampleTwo')}
         ]
       }
     ],
@@ -171,26 +197,28 @@ const topics = [
     id: 'perfect',
     title: 'Perfekt',
     tips: [
-      { text: "'perfectTips.first'" },
-      { text: "'perfectTips.second'" },
-      { text: "'perfectTips.third'" },
-      { text: "'perfectTips.fourth'" },
-      { text: "'perfectTips.fifth'" },
-      { text: "'perfectTips.sixth'" }
+      {text: "'perfectTips.first'"},
+      {text: "'perfectTips.second'"},
+      {text: "'perfectTips.third'"},
+      {text: "'perfectTips.fourth'"},
+      {text: "'perfectTips.fifth'"},
+      {text: "'perfectTips.sixth'"}
     ],
     contentBlocks: [
-      { type: 'rule', title: t('tenses.howToDo'), content: 'haben / sein + Partizip II' },
-      { type: 'subheading', title: t('tenses.howToUse') },
-      { type: 'rules', content: [
+      {type: 'rule', title: t('tenses.howToDo'), content: 'haben / sein + Partizip II'},
+      {type: 'subheading', title: t('tenses.howToUse')},
+      {
+        type: 'rules', content: [
           t('perfect.howToUseFirst'),
           t('perfect.howToUseSecond')
-        ]},
-      { type: 'subheading', title: t('tenses.examples') },
+        ]
+      },
+      {type: 'subheading', title: t('tenses.examples')},
       {
         type: 'examples',
         content: [
-          { sentence: 'Sie <b>hat</b> ein Buch <b>gelesen</b>.', translation: t('perfect.example') },
-          { sentence: 'Wir <b>sind</b> ins Kino <b>gegangen</b>.', translation: t('perfect.exampleTwo') }
+          {sentence: 'Sie <b>hat</b> ein Buch <b>gelesen</b>.', translation: t('perfect.example')},
+          {sentence: 'Wir <b>sind</b> ins Kino <b>gegangen</b>.', translation: t('perfect.exampleTwo')}
         ]
       }
     ],
@@ -204,39 +232,41 @@ const topics = [
     id: 'futurOne',
     title: 'Futur I',
     tips: [
-      { text: t('futurOne.tipOne') },
-      { text: t('futurOne.tipTwo') },
-      { text: t('futurOne.tipThree') },
-      { text: t('futurOne.tipFour') },
-      { text: t('futurOne.tipFive') },
-      { text: t('futurOne.tipSix') }
+      {text: t('futurOne.tipOne')},
+      {text: t('futurOne.tipTwo')},
+      {text: t('futurOne.tipThree')},
+      {text: t('futurOne.tipFour')},
+      {text: t('futurOne.tipFive')},
+      {text: t('futurOne.tipSix')}
     ],
     contentBlocks: [
-      { type: 'rule', title: t('futurOne.howToDoTitle'), content: t('futurOne.howToDoExample') },
-      { type: 'subheading', title: t('futurOne.howToUseTitle') },
-      {type: 'rules', content: [
+      {type: 'rule', title: t('futurOne.howToDoTitle'), content: t('futurOne.howToDoExample')},
+      {type: 'subheading', title: t('futurOne.howToUseTitle')},
+      {
+        type: 'rules', content: [
           t('futurOne.howToUseFirstExample'),
           t('futurOne.howToUseSecondExample')
         ]
       },
-      { type: 'subheading', title: t('futurOne.example') },
-      { type: 'examples',
+      {type: 'subheading', title: t('futurOne.example')},
+      {
+        type: 'examples',
         content: [
-          { sentence: 'Ich <b>werde</b> morgen <b>lernen</b>.', translation: t('futurOne.translateOne') },
-          { sentence: 'Er <b>wird</b> bald <b>kommen</b>.', translation: t('futurOne.translateTwo') },
-          { sentence: 'Wir <b>werden</b> nicht <b>schlafen</b>.', translation: t('futurOne.translateThree') }
+          {sentence: 'Ich <b>werde</b> morgen <b>lernen</b>.', translation: t('futurOne.translateOne')},
+          {sentence: 'Er <b>wird</b> bald <b>kommen</b>.', translation: t('futurOne.translateTwo')},
+          {sentence: 'Wir <b>werden</b> nicht <b>schlafen</b>.', translation: t('futurOne.translateThree')}
         ]
       },
       {
         type: 'table',
         title: t('futurOne.tableTitle'),
         content: [
-          { person: 'ich', form: 'werde' },
-          { person: 'du', form: 'wirst' },
-          { person: 'er/sie/es', form: 'wird' },
-          { person: 'wir', form: 'werden' },
-          { person: 'ihr', form: 'werdet' },
-          { person: 'sie/Sie', form: 'werden' }
+          {person: 'ich', form: 'werde'},
+          {person: 'du', form: 'wirst'},
+          {person: 'er/sie/es', form: 'wird'},
+          {person: 'wir', form: 'werden'},
+          {person: 'ihr', form: 'werdet'},
+          {person: 'sie/Sie', form: 'werden'}
         ]
       }
     ],
@@ -250,25 +280,27 @@ const topics = [
     id: 'prateritum',
     title: 'Präteritum',
     tips: [
-      { text: "'prateritumTips.first'" },
-      { text: "'prateritumTips.second'" },
-      { text: "'prateritumTips.third'" },
-      { text: "'prateritumTips.fourth'" },
-      { text: "'prateritumTips.fifth'" }
+      {text: "'prateritumTips.first'"},
+      {text: "'prateritumTips.second'"},
+      {text: "'prateritumTips.third'"},
+      {text: "'prateritumTips.fourth'"},
+      {text: "'prateritumTips.fifth'"}
     ],
     contentBlocks: [
-      { type: 'rule', title: t('tenses.howToDo'), content: t('präteritum.howToDo') },
-      { type: 'subheading', title: t('tenses.howToUse') },
-      { type: 'rules', content: [
+      {type: 'rule', title: t('tenses.howToDo'), content: t('präteritum.howToDo')},
+      {type: 'subheading', title: t('tenses.howToUse')},
+      {
+        type: 'rules', content: [
           t('präteritum.howToUseFirst'),
           t('präteritum.howToUseSecond')
-        ]},
-      { type: 'subheading', title: t('tenses.examples') },
+        ]
+      },
+      {type: 'subheading', title: t('tenses.examples')},
       {
         type: 'examples',
         content: [
-          { sentence: 'Die Prinzessin <b>lebte</b> in einem Schloss.', translation: t('präteritum.example') },
-          { sentence: 'Als Kind <b>las</b> ich sehr gern.', translation: t('präteritum.exampleTwo') }
+          {sentence: 'Die Prinzessin <b>lebte</b> in einem Schloss.', translation: t('präteritum.example')},
+          {sentence: 'Als Kind <b>las</b> ich sehr gern.', translation: t('präteritum.exampleTwo')}
         ]
       }
     ],
@@ -282,25 +314,30 @@ const topics = [
     id: 'plusquamperfect',
     title: 'Plusquamperfekt',
     tips: [
-      { text: "'plusquamperfekt.first'" },
-      { text: "'plusquamperfekt.second'" },
-      { text: "'plusquamperfekt.third'" },
-      { text: "'plusquamperfekt.fourth'" },
-      { text: "'plusquamperfekt.fifth'" }
+      {text: "'plusquamperfekt.first'"},
+      {text: "'plusquamperfekt.second'"},
+      {text: "'plusquamperfekt.third'"},
+      {text: "'plusquamperfekt.fourth'"},
+      {text: "'plusquamperfekt.fifth'"}
     ],
     contentBlocks: [
-      { type: 'rule', title: t('tenses.howToDo'), content: 'hatten / waren + Partizip II' },
-      { type: 'subheading', title: t('tenses.howToUse') },
-      { type: 'rules', content: [
+      {type: 'rule', title: t('tenses.howToDo'), content: 'hatten / waren + Partizip II'},
+      {type: 'subheading', title: t('tenses.howToUse')},
+      {
+        type: 'rules', content: [
           t('pqPerfect.howToUseFirst'),
           t('pqPerfect.howToUseSecond')
-        ]},
-      { type: 'subheading', title: t('tenses.examples') },
+        ]
+      },
+      {type: 'subheading', title: t('tenses.examples')},
       {
         type: 'examples',
         content: [
-          { sentence: 'Er <b>hatte</b> schon <b>gegessen</b>, als ich ankam.', translation: t('pqPerfect.example') },
-          { sentence: 'Nachdem sie die Arbeit <b>beendet hatte</b>, ging sie nach Hause.', translation: t('pqPerfect.exampleTwo') }
+          {sentence: 'Er <b>hatte</b> schon <b>gegessen</b>, als ich ankam.', translation: t('pqPerfect.example')},
+          {
+            sentence: 'Nachdem sie die Arbeit <b>beendet hatte</b>, ging sie nach Hause.',
+            translation: t('pqPerfect.exampleTwo')
+          }
         ]
       }
     ],
@@ -504,6 +541,7 @@ watch(currentTopicData, initLottieIcon)
   margin: 0;
   padding-left: 1.2rem;
 }
+
 .rules-item {
   margin-bottom: .5rem;
   list-style: disc;
@@ -740,18 +778,22 @@ watch(currentTopicData, initLottieIcon)
   .content__body {
     flex-direction: column
   }
+
   .content__main-column, .practice-area {
     width: 100%;
     border-right: none;
     padding: 1rem
   }
+
   .content__main-column {
     border-bottom: 3px dashed #cccccc;
     padding-bottom: 2rem
   }
+
   .practice-area {
     padding-top: 2rem
   }
+
   .content__title {
     font-size: 1.8rem
   }
@@ -765,6 +807,7 @@ watch(currentTopicData, initLottieIcon)
     padding: 0;
     gap: 0
   }
+
   .sidebar {
     width: 100%;
     height: 100%;
@@ -773,6 +816,7 @@ watch(currentTopicData, initLottieIcon)
     box-shadow: none;
     border: none
   }
+
   .content {
     position: absolute;
     top: 0;
@@ -784,9 +828,11 @@ watch(currentTopicData, initLottieIcon)
     border-radius: 0;
     box-shadow: -5px 0 15px rgba(0, 0, 0, .2)
   }
+
   .verb-types-page.content-is-active .content {
     transform: translateX(-100%)
   }
+
   .btn__close {
     display: flex
   }

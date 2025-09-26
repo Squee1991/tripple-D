@@ -47,9 +47,7 @@
       }
     })
 
-
 </script>
-
 <template>
     <div class="success-page">
         <div class="loader"></div>

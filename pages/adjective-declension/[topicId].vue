@@ -100,6 +100,8 @@ import CelebrationFireworks from '../../src/components/CelebrationFireworks.vue'
 import {useRewardEngine} from '../../src/composables/useRewardEngine.js'
 import {userlangStore} from '../../store/learningStore.js'
 import SoundBtn from '../../src/components/soundBtn.vue'
+import { useSeoMeta } from '#imports'
+useSeoMeta({ robots: 'noindex, nofollow' })
 
 const FINISH_UI = {
   winTitle: 'Поздравляем!',

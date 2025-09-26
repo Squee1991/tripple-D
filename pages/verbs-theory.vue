@@ -14,7 +14,11 @@
           </ul>
           <div v-if="item.type === 'note'" class="verbs__note" v-html="item.text"></div>
           <div v-if="item.type === 'example'" class="verbs__example">
-            <img class="verbs__icon" :src="item.icon === 'Chat' ? Chat : Pin" alt="icon">
+            <img
+                class="verbs__icon"
+                :src="item.icon === 'Chat' ? Chat : Pin" alt="icon"
+                :alt="item.icon === 'Chat' ? 'Dialogue example' : 'Note example'"
+            >
             <div class="verbs__example--wrapper">
               <p v-for="(line, i) in item.lines" :key="i" v-html="line"></p>
             </div>
@@ -72,10 +76,36 @@
 </template>
 
 <script setup>
+import { useHead, useSeoMeta, useRuntimeConfig } from '#imports'
+import { useRoute } from 'vue-router'
 import {ref, computed} from 'vue'
 import Pin from '../assets/images/pin.svg'
 import Chat from '../assets/images/chat.svg'
 const { t } = useI18n()
+
+const runtime = useRuntimeConfig().public
+const route = useRoute()
+
+const pageTitle = 'German Corner — Теория немецких глаголов с примерами и квизом'
+const pageDesc  = 'Разбор спряжения, времён и вспомогательных глаголов в немецком: machen/lernen, haben/sein, Futur, порядок слов. Примеры, таблицы и мини-квиз.'
+
+useSeoMeta({
+  description: pageDesc,
+  ogTitle: pageTitle,
+  ogDescription: pageDesc,
+  ogType: 'article',
+  ogUrl: `${runtime.siteUrl}${route.fullPath}`,
+  ogImage: '/images/seo-verbs.png',
+  robots: 'index, follow'
+})
+
+useHead({
+  title: pageTitle,
+  link: [
+    { rel: 'canonical', href: `${runtime.siteUrl}${route.fullPath}` }
+  ]
+})
+
 const contentSections = ref([
   {
     id: 1,

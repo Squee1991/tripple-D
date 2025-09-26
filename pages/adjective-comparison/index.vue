@@ -99,11 +99,31 @@
     import Lottie from 'lottie-web';
     import TipIcon from '../../assets/animation/info.json';
     import VTips from '../../src/components/V-tips.vue';
+    import { useHead, useSeoMeta, useRuntimeConfig } from '#imports'
+    const canonical = useCanonical()
+    const baseTitle = 'German Corner — Степени сравнения прилагательных (Komparativ, Superlativ)'
+
+    const pageDesc  = 'Как образуются степени сравнения прилагательных в немецком: правила для -er/-sten, формы с умлаутом (är/ö/ü), особые и неправильные формы. Примеры, озвучка и практика.'
+    useHead({
+      title: `${baseTitle}: правила, умлаут, особые формы`,
+      link: [
+        { rel: 'canonical', href: canonical }
+      ]
+    })
+
+    useSeoMeta({
+      description: pageDesc,
+      ogTitle: `${baseTitle}: правила, умлаут, особые формы`,
+      ogDescription: pageDesc,
+      ogType: 'article',
+      ogUrl: canonical,
+      ogImage: '/images/seo-adj-comparison.png',
+      robots: 'index, follow'
+    })
 
     const {t} = useI18n()
     const router = useRouter();
     const categoryId = 'adjective-comparison';
-
     const topics = [
         {
             id: 'regular-forms',

@@ -8,11 +8,10 @@
           </svg>
           {{ t('selectedpage.backBtn') }}
         </button>
-        <h2 class="theme-title">{{ t('selectedpage.title') }}</h2>
+        <h1 class="theme-title">{{ t('selectedpage.title') }}</h1>
         <div class="title-spacer"></div>
       </div>
       <div class="theme-content-area">
-
         <div class="grid-area-wrapper">
           <div class="theme__grid-container">
             <div class="theme-grid">
@@ -95,10 +94,9 @@ import {useRouter} from 'vue-router'
 import {userlangStore} from '../../store/learningStore.js'
 import Lottie from 'lottie-web'
 import {nameMap} from '../../utils/nameMap.js'
-
-const {t} = useI18n()
+import { useHead, useSeoMeta} from '#imports'
 import NotFound from '../../assets/animation/notFound.json'
-
+const {t} = useI18n()
 const showModesBlock = ref(false)
 const showNoTopicMessage = ref(true)
 const router = useRouter()
@@ -108,6 +106,28 @@ const selectedTopic = ref(null)
 const selectedModes = ref([])
 const animationContainer = ref(null)
 const localePath = useLocalePath()
+const canonical = useCanonical()
+
+const pageTitle = 'German Corner — Тренировка артиклей der, die, das в игровой форме'
+const pageDesc  = 'Изучайте немецкие артикли der, die, das легко и интересно! Выберите тему и тренируйтесь в пяти интерактивных режимах: запоминание, написание, множественное число, аудио и сборка слов.'
+
+useHead({
+  title: pageTitle,
+  link: [
+    { rel: 'canonical', href: canonical }
+  ]
+})
+
+useSeoMeta({
+  description: pageDesc,
+  ogTitle: pageTitle,
+  ogDescription: pageDesc,
+  ogType: 'website',
+  ogUrl: canonical,
+  ogImage: '/images/seo-articles.png',
+  robots: 'index, follow'
+})
+
 onMounted(() => {
   if (animationContainer.value) {
     Lottie.loadAnimation({
@@ -152,38 +172,6 @@ const nextPage = () => {
 const prevPage = () => {
   if (page.value > 0) page.value--
 }
-
-// const nameMap = {
-//     Furniture: 'nameMap.Furniture',
-//     Animals: 'nameMap.Animals',
-//     Clothes: 'nameMap.Clothes',
-//     Food: 'nameMap.Food',
-//     Body: 'nameMap.Body',
-//     Professions: 'nameMap.Professions',
-//     Transport: 'nameMap.Transport',
-//     Colors: 'nameMap.Colors',
-//     Nature: 'nameMap.Nature',
-//     Home: 'nameMap.Home',
-//     Zeit: 'nameMap.Zeit',
-//     City: 'nameMap.City',
-//     School: 'nameMap.School',
-//     DaysAndMonths: 'nameMap.DaysAndMonths',
-//     Toys: 'nameMap.Toys',
-//     CommonItems: 'nameMap.CommonItems',
-//     BathroomItems: 'nameMap.BathroomItems',
-//     Kosmetik: 'nameMap.Kosmetik',
-//     Familie: 'nameMap.Familie',
-//     Emotions: 'nameMap.Emotions',
-//     Werkzeuge: 'nameMap.Werkzeuge',
-//     Kitchen: 'nameMap.Kitchen',
-//     Health: 'nameMap.Health',
-//     Sport: 'nameMap.Sport',
-//     SportEquipment: 'nameMap.SportEquipment',
-//     Travel: 'nameMap.Travel',
-//     Musik: 'nameMap.Musik',
-//     Amount: 'nameMap.Amount',
-//     Informatik: 'nameMap.Informatik'
-// }
 
 const modes = [
   {key: 'article', label: 'modes.article'},

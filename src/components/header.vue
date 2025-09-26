@@ -16,7 +16,7 @@
       <NuxtLink to="/">
         <span class="logo__name">German-corner</span>
       </NuxtLink>
-      <nav ref="dropdownRefNav" class="header-nav" :class="{ 'is-open': isMobileMenuOpen }">
+      <nav ref="dropdownRefNav" class="header-nav" :class="{ 'is-open': isMobileMenuOpen }" aria-label="Main">
         <ul class="header-nav__list">
           <li v-for="item in menuItems" :key="item.id" class="header-nav__item">
             <NuxtLink v-if="item.url" :to="item.url" class="header-nav__link" @click="closeAllMenus">
@@ -29,7 +29,7 @@
                   v-if="item.children"
                   :class="['header-nav__arrow', { 'rotated': clickedMenu === item.id }]"
                   :src="Arrow"
-                  alt=">"
+                  alt="Arrow__icon"
               />
             </button>
             <ul v-if="item.children && clickedMenu === item.id" class="header-nav__submenu">
@@ -45,7 +45,7 @@
                       v-if="child.subChildren"
                       :class="['header-nav__arrow', { 'rotated': clickedSubChild === child.id }]"
                       :src="Arrow"
-                      alt=""
+                      alt="Arrow_icon"
                   />
                 </button>
                 <ul v-if="child.subChildren && clickedSubChild === child.id"
@@ -81,7 +81,7 @@
           >
             <img class="header-user__avatar" :src="userAuth.avatarUrl" alt="User avatar"/>
             <span class="header-user__name">{{ userAuth.email }}</span>
-            <img :class="['header-nav__arrow', { 'rotated': menuOpen }]" :src="Arrow" alt="v"/>
+            <img :class="['header-nav__arrow', { 'rotated': menuOpen }]" :src="Arrow" alt="Arrow"/>
           </button>
           <div
               ref="dropdownRef"
@@ -95,7 +95,7 @@
                 class="header-user__dropdown-btn"
                 @click.stop="item.action"
             >
-              <img class="header-user__dropdown-icon" :src="item.icon" alt=""/>
+              <img class="header-user__dropdown-icon" :src="item.icon" alt="Arrow_dropdown"/>
               <span class="header__drop-text">{{ t(item.label) }}</span>
             </button>
           </div>
@@ -112,7 +112,6 @@
 <script setup>
 import {ref, watch, onMounted, onBeforeUnmount, computed} from 'vue'
 import {useRouter} from 'vue-router'
-import {useI18n} from 'vue-i18n'
 import {userAuthStore} from '../../store/authStore.js'
 import {userlangStore} from '../../store/learningStore.js'
 import {useBreakPointsStore} from '../../store/breakPointsStore.js'
@@ -185,9 +184,9 @@ const menuItems = computed(() => [
                   id: 'articles',
                   valueKey: 'sub.articles',
                   subChildren: [
-                    {id: 'learn-tips', url: 'examples', valueKey: 'underSub.prev'},
-                    {id: 'learn-rules', url: 'rules', valueKey: 'underSub.rules'},
-                    {id: 'learn-selectedTopics', url: 'articles', valueKey: 'underSub.artRules'},
+                    {id: 'learn-tips', url: '/examples', valueKey: 'underSub.prev'},
+                    {id: 'learn-rules', url: '/rules', valueKey: 'underSub.rules'},
+                    {id: 'learn-selectedTopics', url: '/articles', valueKey: 'underSub.artRules'},
                   ]
                 },
                 {
@@ -229,22 +228,16 @@ const menuItems = computed(() => [
               children: [
                 {id: 'duel-pvp', valueKey: 'sub.pvp', action: openDevModal},
                 {id: 'wordDuel', url: '/play', valueKey: 'sub.wordDuel'},
-                {id: 'wordDuel', url: '/recipes', valueKey: 'sub.quests'},
+                {id: 'quests', url: '/recipes', valueKey: 'sub.quests'},
                 {id: 'duel-guess', url: '/guess', valueKey: 'sub.guess'},
                 {id: 'articlemarathon', url: '/article-marathon', valueKey: 'sub.marathon'},
               ]
             },
           ] :
           [
-            {
-              id: 'about', valueKey: 'nav.about', url: '/info-about',
-            },
-            {
-              id: 'contact', valueKey: 'nav.contact', url: '/support-request',
-            },
-            {
-              id: 'faq', valueKey: 'nav.quest', url: '/faq',
-            },
+            { id: 'about', valueKey: 'nav.about', url: '/info-about',},
+            { id: 'contact', valueKey: 'nav.contact', url: '/support-request',},
+            { id: 'faq', valueKey: 'nav.quest', url: '/faq', },
           ]
   ),
   ...(userAuth.uid
@@ -261,7 +254,9 @@ const menuActions = ref([
   {id: 'cabinet', label: 'auth.cabinet', icon: User, action: () => goTo('cabinet')},
   {id: 'logout', label: 'auth.logOut', icon: Logout, action: () => userAuth.logOut()}
 ])
+
 const toggleMenu = () => menuOpen.value = !menuOpen.value
+
 const goTo = (page) => {
   menuOpen.value = false
   router.push({path: `/${page}`})
@@ -298,10 +293,10 @@ watch(isMobileMenuOpen, (newVal) => {
   else document.body.style.overflow = '';
 });
 
-
 </script>
 
 <style scoped>
+
 .header-user-wrapper {
   position: relative;
 }
@@ -455,16 +450,6 @@ watch(isMobileMenuOpen, (newVal) => {
   border: 3px solid #1e1e1e;
   box-shadow: 4px 4px 0px #1e1e1e;
   cursor: pointer;
-}
-
-.articlus {
-  width: 28px;
-}
-
-.articlus__counter {
-  color: #1e1e1e;
-  font-size: 1.2rem;
-  font-weight: 600;
 }
 
 .header-user {
@@ -732,7 +717,6 @@ watch(isMobileMenuOpen, (newVal) => {
   }
 }
 
-
 @media (max-width: 1200px) {
   .header-user__name,
   .header__drop-text {
@@ -757,5 +741,4 @@ watch(isMobileMenuOpen, (newVal) => {
   text-shadow: 2px 4px 2px white;
   transition: .5s;
 }
-
 </style>

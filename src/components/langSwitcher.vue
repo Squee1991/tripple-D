@@ -34,7 +34,7 @@ onBeforeUnmount(() => document.removeEventListener('mousedown', clickOutside))
       >
         {{ currentLang?.name || currentLang?.code || '' }}
       </span>
-      <img src="../../assets/images/arrowDown.svg" alt="" class="arrow" :class="{ open: dropdownOpen }"/>
+      <img src="../../assets/images/arrowDown.svg" alt="arrow_down" class="arrow" :class="{ open: dropdownOpen }"/>
     </button>
 
     <div v-if="dropdownOpen"

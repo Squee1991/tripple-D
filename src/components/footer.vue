@@ -63,9 +63,7 @@
 <script setup>
 import {ref} from 'vue'
 import {userAuthStore} from "~/store/authStore.js";
-
 const authStore = userAuthStore()
-
 const data = computed(() => [
   ...(!authStore.uid
           ? [
@@ -77,7 +75,6 @@ const data = computed(() => [
   { id: 'privacy', valueKey: 'Конфиденциальность', url: '/privacy' },
   { id: 'terms',   valueKey: 'Условия',            url: '/terms'   },
 ])
-
 const toDiscord = () => {
   window.open('https://discord.gg/dJGRN4Yz')
 }

@@ -8,27 +8,21 @@
       <div class="banner__wrapper">
         <div class="banner__content">
           <div class="banner__orbit">
-                        <span
-                            class="banner__orbit-word banner__orbit-word--der"
-                            :class="{ 'glow-black': glowType === 'der', 'fade-glow': fadingGlow === 'der' }"
-                            @click="triggerGlow('der')">Der</span>
-            <span
-                class="banner__orbit-word banner__orbit-word--die"
-                :class="{ 'glow-red': glowType === 'die', 'fade-glow': fadingGlow === 'die' }"
-                @click="triggerGlow('die')">Die
-                        </span>
-            <span
-                class="banner__orbit-word banner__orbit-word--das"
-                :class="{ 'glow-gold': glowType === 'das', 'fade-glow': fadingGlow === 'das' }"
-                @click="triggerGlow('das')">Das
-                        </span>
+            <span class="banner__orbit-word banner__orbit-word--der"
+                  :class="{ 'glow-black': glowType === 'der', 'fade-glow': fadingGlow === 'der' }"
+                  @click="triggerGlow('der')">Der</span>
+            <span class="banner__orbit-word banner__orbit-word--die"
+                  :class="{ 'glow-red': glowType === 'die', 'fade-glow': fadingGlow === 'die' }"
+                  @click="triggerGlow('die')">Die</span>
+            <span class="banner__orbit-word banner__orbit-word--das"
+                  :class="{ 'glow-gold': glowType === 'das', 'fade-glow': fadingGlow === 'das' }"
+                  @click="triggerGlow('das')">Das
+            </span>
           </div>
-          <h1 class="banner__title">
-            {{ t('banner.title') }}
-          </h1>
-          <button class="banner__button" @click="startLearning">{{ t('banner.btn') }}</button>
+          <h1 class="banner__title" v-once>{{ t('banner.title') }}</h1>
+          <button class="banner__button" @click="startLearning" v-once>{{ t('banner.btn') }}</button>
         </div>
-        <div ref="orbit" class="banner__mage-container">
+        <div ref="orbit" class="banner__mage-container"  aria-hidden="true">ну
           <div class="banner__mage"></div>
         </div>
       </div>
@@ -105,22 +99,6 @@ onMounted(() => {
 
 <style scoped>
 
-.body {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  min-height: 100vh;
-  margin: 0;
-  overflow: hidden;
-}
-
-.box {
-  display: block;
-  width: 100px;
-  height: 100px;
-  background: red;
-}
-
 .banner {
   font-family: "Nunito", sans-serif;
   overflow: hidden;
@@ -128,9 +106,7 @@ onMounted(() => {
 }
 
 .banner__section {
-  //background-color: #fef8e4;
   padding: 8rem 2rem 13rem 2rem;
-  /*border-bottom: 4px solid #1e1e1e;*/
 }
 
 .banner__wrapper {
@@ -195,6 +171,7 @@ onMounted(() => {
   line-height: 1.1;
   letter-spacing: -0.03em;
   margin-bottom: 2.5rem;
+  text-wrap: balance;
 }
 
 .banner__button {
@@ -301,15 +278,13 @@ onMounted(() => {
   .banner__orbit-word {
     font-size: 1.5rem;
     padding: 0.6rem 1.5rem;
+    box-shadow: 2px 2px 0 #1e1e1e;
   }
 
   .banner__button {
     width: 100%;
-  }
-
-  .banner__button {
-    border-radius: 25px;
-    box-shadow: 3px 3px 0 #1e1e1e;
+    border-radius: 20px;
+    box-shadow: 2px 2px 0 #1e1e1e;
   }
 }
 </style>

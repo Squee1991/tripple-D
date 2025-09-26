@@ -3,6 +3,10 @@ import {useTrainerStore} from '../../store/themenProgressStore.js'
 import {useRouter} from 'vue-router'
 import {ref, onMounted, onUnmounted, computed} from 'vue'
 import VStopSessionBtn from "~/src/components/V-stopSessionBtn.vue";
+import { useSeoMeta } from '#imports'
+useSeoMeta({
+  robots: 'noindex, nofollow'
+})
 
 const router = useRouter()
 const {t} = useI18n()
