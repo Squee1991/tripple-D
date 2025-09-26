@@ -96,6 +96,7 @@ import Lottie from 'lottie-web'
 import {nameMap} from '../../utils/nameMap.js'
 import { useHead, useSeoMeta} from '#imports'
 import NotFound from '../../assets/animation/notFound.json'
+import { useCanonical } from '../../composables/useCanonical.js'
 const {t} = useI18n()
 const showModesBlock = ref(false)
 const showNoTopicMessage = ref(true)

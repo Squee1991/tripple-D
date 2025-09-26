@@ -1,10 +1,12 @@
 <template>
   <NuxtLayout>
     <NuxtPage/>
+    <AchievementToast/>
   </NuxtLayout>
 </template>
 
 <script setup>
+import AchievementToast from './src/components/AchievementToast.vue'
 import {useRouter, useRoute} from 'vue-router'
 import {useCurrentUser} from "vuefire";
 import {userlangStore} from './store/learningStore.js'
