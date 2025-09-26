@@ -96,6 +96,27 @@ import Lottie from 'lottie-web';
 import TipIcon from '../../assets/animation/info.json';
 import {useRouter} from 'vue-router'
 import SoundBtn from '../../src/components/soundBtn'
+import { useHead, useSeoMeta, useRuntimeConfig } from '#imports'
+const canonical = useCanonical()
+const baseTitle = 'German Corner — Склонение прилагательных в немецком'
+const pageDesc  = 'Правила и таблицы окончаний прилагательных в немецком: после определённого артикля (der/die/das), после неопределённого (ein/kein/mein) и без артикля. Примеры с переводом и переход к практике.'
+
+useHead({
+  title: `${baseTitle}: после определённого/неопределённого артикля и без артикля`,
+  link: [
+    { rel: 'canonical', href: canonical }
+  ]
+})
+
+useSeoMeta({
+  description: pageDesc,
+  ogTitle: `${baseTitle}: после определённого/неопределённого артикля и без артикля`,
+  ogDescription: pageDesc,
+  ogType: 'article',
+  ogUrl: canonical,
+  ogImage: '/images/seo-adj-declension.png',
+  robots: 'index, follow'
+})
 
 const {t} = useI18n()
 const router = useRouter()

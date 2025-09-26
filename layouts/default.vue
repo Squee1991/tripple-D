@@ -1,23 +1,16 @@
 <template>
-    <div class="layout">
-        <slot></slot>
-        <vScroll/>
-    </div>
+  <div class="layout">
+    <main id="main-content" role="main" tabindex="-1">
+      <slot />
+    </main>
+    <vScroll />
+  </div>
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
-import { useUiSettingsStore } from '../store/uiSettingsStore.js'
-
-const uiStore = useUiSettingsStore()
-
-onMounted(() => {
-    // Когда компонент макета смонтирован, мы считаем, что UI готов.
-    // Небольшая задержка, чтобы дать Vue закончить отрисовку.
-    setTimeout(() => {
-        uiStore.isUiReady = true
-    }, 3000 ) // 200мс — это небольшая страховка
-})
+import vScroll from '../src/components/v-scroll.vue'
+// import VSideBar from '../src/components/VToolsSideBar.vue'
+// import Coffe from '../src/components/forTea.vue'
 </script>
 
 <style scoped>

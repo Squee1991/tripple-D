@@ -14,11 +14,14 @@ import {
 	signInWithPopup,
 	reauthenticateWithPopup, GoogleAuthProvider
 } from 'firebase/auth';
-import {doc, setDoc, getDoc, getFirestore, updateDoc, deleteDoc, serverTimestamp} from 'firebase/firestore';
+import { doc, setDoc, getDoc, getFirestore, updateDoc, deleteDoc, serverTimestamp, writeBatch } from 'firebase/firestore';
 import {userlangStore} from "./learningStore.js";
 let authStateUnsubscribe = null;
 
 export const userAuthStore = defineStore('auth', () => {
+
+	const LEADERBOARD_COLLECTION = 'marathon_leaderboard';
+	const LEADERBOARD_GUESS = 'leaderboard_guess'
 	const name = ref(null)
 	const email = ref(null)
 	const registeredAt = ref(null)
@@ -96,18 +99,15 @@ export const userAuthStore = defineStore('auth', () => {
 		achievements.value = data.achievements || null;
 		const newAchievements = data.achievements || null;
 		if (newAchievements) {
-			// Если achievements.value ещё не объект, делаем его объектом
 			if (typeof achievements.value !== 'object' || achievements.value === null) {
 				achievements.value = {};
 			}
-			// Очищаем старые ключи
 			Object.keys(achievements.value).forEach(key => delete achievements.value[key]);
-			// Копируем новые данные
 			Object.assign(achievements.value, newAchievements);
 		} else {
 			achievements.value = null;
 		}
-		// --- КОНЕЦ ИСПРАВЛЕНИЯ ---
+
 		if (data.isPremium && !data.gotPremiumBonus) {
 			grantPremiumBonusPoints()
 		}
@@ -213,28 +213,32 @@ export const userAuthStore = defineStore('auth', () => {
 	const deleteAccount = async (password = null) => {
 		const auth = getAuth();
 		const user = auth.currentUser;
-		if (!user) throw {code: 'auth/no-current-user'};
+		if (!user) throw { code: 'auth/no-current-user' };
 		try {
 			const usesGoogle = user.providerData.some(p => p.providerId === 'google.com');
 			if (usesGoogle) {
 				const provider = new GoogleAuthProvider();
 				await reauthenticateWithPopup(user, provider);
 			} else {
-				if (!user.email) throw {code: 'auth/missing-email'};
-				if (!password) throw {code: 'auth/missing-password'};
+				if (!user.email) throw { code: 'auth/missing-email' };
+				if (!password) throw { code: 'auth/missing-password' };
 				const cred = EmailAuthProvider.credential(user.email, password);
 				await reauthenticateWithCredential(user, cred);
 			}
 
-			await deleteDoc(doc(db, 'users', user.uid));
+			const batch = writeBatch(db);
+			batch.delete(doc(db, 'users', user.uid));
+			batch.delete(doc(db, LEADERBOARD_COLLECTION, user.uid));
+			batch.delete(doc(db, LEADERBOARD_GUESS, user.uid));
+			await batch.commit();
 			await deleteUser(user);
 			setUserData({});
 		} catch (err) {
 			if (err && err.code) throw err;
 			const msg = String(err?.message || '');
-			if (msg.includes('requires-recent-login')) throw {code: 'auth/requires-recent-login'};
-			if (msg.includes('popup-closed')) throw {code: 'auth/popup-closed-by-user'};
-			throw {code: 'auth/unknown'};
+			if (msg.includes('requires-recent-login')) throw { code: 'auth/requires-recent-login' };
+			if (msg.includes('popup-closed')) throw { code: 'auth/popup-closed-by-user' };
+			throw { code: 'auth/unknown' };
 		}
 	};
 
@@ -328,7 +332,6 @@ export const userAuthStore = defineStore('auth', () => {
 				resolve()
 			})
 		})
-
 		return initPromise
 	}
 

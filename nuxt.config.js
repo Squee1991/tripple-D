@@ -1,4 +1,4 @@
-	export default defineNuxtConfig({
+export default defineNuxtConfig({
 	compatibilityDate: '2024-11-01',
 	devtools: {enabled: true},
 	modules: [
@@ -72,6 +72,21 @@
 			firebaseMessagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
 			firebaseAppId: process.env.FIREBASE_APP_ID,
 			firebaseClientId: process.env.FIREBASE_CLIENT_ID,
+			siteUrl: process.env.SITE_URL || 'https://language-app-beta.vercel.app'
 		}
 	},
+	nitro: {
+		preset: 'vercel',
+		prerender: {
+			routes: ['/', '/en', '/ru', '/uk', '/pl', '/tr']
+		}
+	},
+	routeRules: {
+		'/': {headers: {'cache-control': 'public, s-maxage=600, stale-while-revalidate=86400'}},
+		'/en': {headers: {'cache-control': 'public, s-maxage=600, stale-while-revalidate=86400'}},
+		'/ru': {headers: {'cache-control': 'public, s-maxage=600, stale-while-revalidate=86400'}},
+		'/uk': {headers: {'cache-control': 'public, s-maxage=600, stale-while-revalidate=86400'}},
+		'/pl': {headers: {'cache-control': 'public, s-maxage=600, stale-while-revalidate=86400'}},
+		'/tr': {headers: {'cache-control': 'public, s-maxage=600, stale-while-revalidate=86400'}}
+	}
 })

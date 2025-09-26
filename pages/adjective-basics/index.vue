@@ -53,6 +53,28 @@ import {ref, computed, onMounted, onUnmounted} from 'vue'
 import {useRouter} from 'vue-router'
 import Lottie from 'lottie-web';
 import SoundBtn from '../../src/components/soundBtn.vue'
+import { useHead, useSeoMeta } from '#imports'
+
+const canonical = useCanonical()
+const pageTitle = 'German Corner — Прилагательные A1–A2: цвета, чувства, внешность, характер, размер'
+const pageDesc  = 'Учите базовые прилагательные на немецком по темам: цвета, чувства и эмоции, внешность, характер, размер и форма. Примеры с переводом и озвучкой + тренажёры.'
+
+useHead({
+  title: pageTitle,
+  link: [
+    { rel: 'canonical', href: canonical }
+  ]
+})
+
+useSeoMeta({
+  description: pageDesc,
+  ogTitle: pageTitle,
+  ogDescription: pageDesc,
+  ogType: 'website',
+  ogUrl: canonical,
+  ogImage: '/images/seo-adjective-basics.png',
+  robots: 'index, follow'
+})
 
 const {t, locale} = useI18n();
 const topics = [
@@ -215,6 +237,8 @@ const topics = [
     }
   }
 ]
+const isContentVisible = ref(false)
+const isMobileLayout = ref(false)
 const router = useRouter()
 const categoryId = 'adjective-basics';
 const topic = ref('colors')
@@ -228,7 +252,6 @@ let speakTimeout = null;
 //         console.error('Браузер не поддерживает Web Speech API.');
 //         return;
 //     }
-//
 //     clearTimeout(speakTimeout);
 //     window.speechSynthesis.cancel();
 //     if (!text) return;
@@ -242,21 +265,17 @@ let speakTimeout = null;
 //             pl: 'pl-PL',
 //             tr: 'tr-TR'
 //         };
-//
 //         utterance.lang = langMap[locale.value] || locale.value;
 //         const voices = window.speechSynthesis.getVoices();
 //         const targetVoice = voices.find(voice => voice.lang === utterance.lang);
 //         if (targetVoice) {
 //             utterance.voice = targetVoice;
 //         }
-//
 //         window.speechSynthesis.speak(utterance);
 //     }, 250);
 // }
-const currentTopicData = computed(() => topics.find(t => t.id === topic.value))
 
-const isContentVisible = ref(false)
-const isMobileLayout = ref(false)
+const currentTopicData = computed(() => topics.find(t => t.id === topic.value))
 
 const checkScreenSize = () => {
   isMobileLayout.value = window.innerWidth <= 767;
@@ -280,7 +299,6 @@ onMounted(() => {
   checkScreenSize();
   window.addEventListener('resize', checkScreenSize);
 });
-
 onUnmounted(() => {
   clearTimeout(speakTimeout)
   window.removeEventListener('resize', checkScreenSize);

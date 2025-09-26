@@ -98,6 +98,7 @@
 
 <script setup>
 import { ref, computed, onMounted, onUnmounted, watch, nextTick } from 'vue'
+import { useHead, useSeoMeta, useRuntimeConfig } from '#imports'
 import { useRouter } from 'vue-router'
 import SoundBtn from '../../src/components/soundBtn.vue'
 import Lottie from 'lottie-web'
@@ -106,6 +107,25 @@ import VTips from '../../src/components/V-tips.vue'
 const { t} = useI18n()
 const router = useRouter()
 const categoryId = 'prepositions'
+const canonical = useCanonical()
+const pageTitle = 'German Corner — Немецкие предлоги по падежам: Nominativ, Akkusativ, Dativ, Genitiv'
+const pageDesc  = 'Учите немецкие предлоги по падежам: Nominativ, Akkusativ, Dativ и Genitiv. Простые правила, примеры и мини-квиз для закрепления.'
+useHead({
+  title: pageTitle,
+  link: [
+    { rel: 'canonical', href: canonical }
+  ]
+})
+useSeoMeta({
+  description: pageDesc,
+  ogTitle: pageTitle,
+  ogDescription: pageDesc,
+  ogType: 'article',
+  ogUrl: canonical,
+  ogImage: '/images/seo-prepositions-cases.png',
+  robots: 'index, follow'
+})
+
 const topics = [
   {
     id: 'nominativ',

@@ -39,7 +39,6 @@
 
 <script setup>
 import { computed, onMounted } from 'vue'
-import { useI18n } from 'vue-i18n'
 import { useAchievementStore } from '../../store/achievementStore.js'
 import { groupedNormalModeAchievements } from '../achieveGroup/marathon/normalModeAchievement.js'
 
@@ -79,6 +78,11 @@ const getCompletedCount = group =>
 	font-size: 2rem;
 	color: #1e1e1e;
 	margin: 0;
+}
+
+.achievement-title {
+  font-weight: 400;
+  margin: 0 0 10px 0;
 }
 
 .group-stats {

@@ -8,10 +8,30 @@ import About from '../src/components/about.vue'
 import FeedBack from '../src/components/feedBack.vue'
 import Footer from '../src/components/footer.vue'
 import VUid from '../src/components/V-uid.vue'
+import { useHead, useSeoMeta, useRuntimeConfig } from '#imports'
+const runtime = useRuntimeConfig().public
+
+const pageTitle = 'German Corner — Изучай немецкий язык в игровой форме'
+const pageDesc  = 'Главная страница платформы German Corner. Игровые тренировки артиклей der, die, das, тематические уровни, квесты и достижения. Учите немецкий с интересом!'
+useHead({
+  title: pageTitle,
+  link: [
+    { rel: 'canonical', href: `${runtime.siteUrl}/` }
+  ]
+})
+
+useSeoMeta({
+  description: pageDesc,
+  ogTitle: pageTitle,
+  ogDescription: pageDesc,
+  ogType: 'website',
+  ogUrl: `${runtime.siteUrl}/`,
+  ogImage: '/images/seo-main.png',
+  robots: 'index, follow'
+})
 
 const authStore = userAuthStore()
 const hydrated = ref(false)
-
 onMounted(() => {
   hydrated.value = true
 })

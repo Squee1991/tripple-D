@@ -68,21 +68,27 @@
           </table>
         </div>
       </article>
-      <!--			<article class="theory-card" id="examples" ref="theoryCards">-->
-      <!--				<h2 class="theory-card-title">Примеры с артиклями</h2>-->
-      <!--				<ul class="theory-list">-->
-      <!--					<li class="theory-list-item"><b>der Hund</b> — собака (м.р.)</li>-->
-      <!--					<li class="theory-list-item"><b>die Katze</b> — кошка (ж.р.)</li>-->
-      <!--					<li class="theory-list-item"><b>das Haus</b> — дом (ср.р.)</li>-->
-      <!--				</ul>-->
-      <!--			</article>-->
     </section>
   </main>
 </template>
-
 <script setup>
-import {ref, onMounted} from 'vue';
-
+import { useHead, useSeoMeta, useRuntimeConfig } from '#imports'
+const runtime = useRuntimeConfig().public
+const pageTitle = 'Der / Die / Das — примеры и таблица артиклей'
+const pageDesc  = 'Коротко и понятно: когда использовать der, die, das; определённые и неопределённые артикли, примеры и таблица по родам.'
+useHead({
+  link: [{ rel: 'canonical', href: `${runtime.siteUrl}/theory/articles` }]
+})
+useSeoMeta({
+  title: pageTitle,
+  description: pageDesc,
+  ogTitle: pageTitle,
+  ogDescription: pageDesc,
+  ogType: 'article',
+  ogUrl: `${runtime.siteUrl}/theory/articles`,
+  ogImage: '/images/seo-articles.png',
+  robots: 'index, follow'
+})
 const {t} = useI18n();
 
 const data = {
@@ -144,9 +150,7 @@ const data = {
 definePageMeta({
   layout: 'footerlayout',
 });
-
 </script>
-
 <style scoped>
 
 .theory-main {

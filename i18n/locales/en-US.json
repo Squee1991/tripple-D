@@ -2195,19 +2195,19 @@
   "errors": {
     "errorEmail": "Enter email",
     "errorPassword": "Enter password",
+    "enterMsg": "Enter your message",
     "errorName": "Enter name",
     "errorConfirm": "Passwords do not match",
     "resetSent": "Email has been sent",
     "emailNotVerified": "Please verify your email before logging in.",
     "userNotFound": "User not found.",
-    "wrongPassword": "Incorrect password.",
+    "wrongPassword": "Wrong password.",
     "generalError": "An error occurred. Please try again.",
-    "userExists": "A user with this email is already registered",
+    "userExists": "A user with this email already exists",
     "invalidEmail": "Invalid email format",
     "invalidCredential": "Invalid or incorrect password",
-    "tooManyRequests": "Too many attempts. Please try again later"
+    "tooManyRequests": "Too many attempts. Try again later"
   },
-
   "about": {
     "title": "Bored of learning German and noun articles?",
     "lead": "Tired of memorizing flashcards, rewriting word lists and still forgetting articles?",

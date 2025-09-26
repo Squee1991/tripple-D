@@ -25,7 +25,6 @@ import {ref, onMounted} from 'vue'
 import {useI18n} from 'vue-i18n'
 import {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
-
 import MagikBook from '../../assets/images/magicBook.svg'
 import Brain from '../../assets/images/brain.svg'
 import Controller from '../../assets/images/controller.svg'
@@ -39,7 +38,6 @@ gsap.registerPlugin(ScrollTrigger);
 const {t} = useI18n()
 const titleRef = ref(null);
 const cardsRef = ref([]);
-const cards = cardsRef.value;
 const items = [
   {src: MagikBook, alt: 'Book', title: 'Темы обучения', description: [
       {text: 'Артикли и предлоги'},
@@ -137,7 +135,6 @@ onMounted(() => {
 
 <style scoped>
 .features {
-  //background: #fef8e4;
   padding: 6rem 1.5rem;
   font-family: "Nunito", sans-serif;
   overflow-x: hidden;
@@ -149,10 +146,6 @@ onMounted(() => {
   margin: 0 auto;
 }
 
-.features__card-wrapper{
-
-}
-
 .features__title {
   text-align: center;
   margin-bottom: 4rem;
@@ -161,7 +154,7 @@ onMounted(() => {
   font-weight: 400;
   color: white;
   letter-spacing: -0.02em;
-  background: #f97028;
+  background: #e55b10;
   padding: 10px 20px;
   transform: rotate(3deg);
   border: 2px solid black;

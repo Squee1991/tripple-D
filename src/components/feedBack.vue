@@ -90,7 +90,7 @@ onMounted(() => {
 const sendMessage = async () => {
   errors.value = {name: '', message: ''};
   if (!userEmail.value.trim()) {
-    errors.value.name = t('errors.enterName');
+    errors.value.name = t('errors.errorEmail');
   }
   if (!userMessage.value.trim()) {
     errors.value.message = t('errors.enterMsg');
@@ -180,7 +180,7 @@ const resetFields = () => {
 }
 
 .form__field {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .form__field-label {

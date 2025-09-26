@@ -42,7 +42,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
                         showNext()
                     }
                 }
-
                 previousProgressMap.set(ach.id, curr)
             }
         }

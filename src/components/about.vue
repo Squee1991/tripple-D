@@ -10,6 +10,7 @@
         <div class="deco-stripe">{{ t('aboutAnimText.sixth') }}</div>
       </div>
       <div ref="accordionWrapperRef" class="accordion-wrapper">
+        <h2 id="why-title" class="visually-hidden">{{ t(data.title) }}</h2>
         <div v-for="(item, index) in data.items" :key="item.id"
              :class="{ box: isOpen.includes(index), 'overflow-visible': overflowIndex === index }"
              class="accordion-box">
@@ -22,7 +23,7 @@
             <div>{{ t(item.valueKey) }}</div>
             <div class="arrow" @click="toggle(index)">
               <img class="arrow-item" :class="{ rotated: isOpen.includes(index) }"
-                   src="../../assets/images/arrowNav.svg" alt=""/>
+                   src="../../assets/images/arrowNav.svg" alt="arrow_icon"/>
             </div>
           </div>
         </div>
@@ -111,6 +112,12 @@ const data = {
 
 <style scoped>
 
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden; clip: rect(1px,1px,1px,1px);
+  white-space: nowrap; border: 0; padding: 0; margin: -1px;
+}
 
 .why__wrapper {
   display: flex;

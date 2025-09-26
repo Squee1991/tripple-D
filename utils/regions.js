@@ -1,9 +1,9 @@
-import FirstStep  from "../assets/locations-images/FirstStep.png"
-import WindValley  from "../assets/locations-images/wind-valley.png"
-import NorthCliffs from '../assets/locations-images/north-cliffs.png'
-import LakeRuins from '../assets/locations-images/lake-ruins.png'
-import StormCoast from '../assets/locations-images/storm-coast.png'
-import StoneReach from '../assets/locations-images/stone-reach.png'
+import FirstStep  from "assets/images/locations-images/FirstStep.png"
+import WindValley  from "assets/images/locations-images/wind-valley.png"
+import NorthCliffs from 'assets/images/locations-images/north-cliffs.png'
+import LakeRuins from 'assets/images/locations-images/lake-ruins.png'
+import StormCoast from 'assets/images/locations-images/storm-coast.png'
+import StoneReach from 'assets/images/locations-images/stone-reach.png'
 
 export const regions = [
 	{

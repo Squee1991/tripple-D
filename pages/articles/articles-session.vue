@@ -118,6 +118,11 @@ import {userlangStore} from '../../store/learningStore.js'
 import {getSpeechAudio} from '../../utils/googleTTS.js'
 import {nameMap, nameMode} from '../../utils/nameMap.js'
 import { playWrong, playCorrect, unlockAudioByUserGesture } from '../../utils/soundManager.js'
+import { useSeoMeta } from '#imports'
+
+useSeoMeta({
+  robots: 'noindex, nofollow'
+})
 
 const {t, locale} = useI18n()
 const wrongWords = ref([])
