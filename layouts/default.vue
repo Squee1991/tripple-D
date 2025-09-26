@@ -6,24 +6,18 @@
 </template>
 
 <script setup>
-import vScroll from '../src/components/v-scroll.vue'
-// import VSideBar from '../src/components/VToolsSideBar.vue'
-// import Coffe from '../src/components/forTea.vue'
-// import {watch} from 'vue'
-// import {toast} from 'vue3-toastify'
-// import 'vue3-toastify/dist/index.css'
-// import {useAchievementStore} from '../store/achievementStore.js'
-//
-// const achievementStore = useAchievementStore()
-//
-// watch(() => achievementStore.lastUnlockedAward, (val) => {
-//     if (!val || !process.client) return
-//     console.log('[toast] lastUnlockedAward changed:', val)
-//     toast.success(`🎉 Вы получили награду «${val.title}»!`, {
-//         autoClose: 4000,
-//         position: toast.POSITION.TOP_CENTER,
-//     })
-// })
+import { onMounted } from 'vue'
+import { useUiSettingsStore } from '../store/uiSettingsStore.js'
+
+const uiStore = useUiSettingsStore()
+
+onMounted(() => {
+    // Когда компонент макета смонтирован, мы считаем, что UI готов.
+    // Небольшая задержка, чтобы дать Vue закончить отрисовку.
+    setTimeout(() => {
+        uiStore.isUiReady = true
+    }, 3000 ) // 200мс — это небольшая страховка
+})
 </script>
 
 <style scoped>

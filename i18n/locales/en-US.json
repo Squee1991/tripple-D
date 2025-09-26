@@ -27,7 +27,7 @@
     "tipTwo": "Place or time at the beginning? Verb is still 2nd: **Heute** gehe ich.",
     "tipThree": "Yes/No question: verb in 1st place — **Kommst** du?",
     "tipFour": "Subordinate clause: verb at the end — …weil ich **arbeite**.",
-    "tipFive": "Conjunction **und** does not change word order: Ich lerne und ich **spiele**.",
+    "tipFive": "Conjunction **und** does not change word order: Ich lerne und ich **spiele**."
   },
   "duelA1": {
     "title": "Phrase Duels (Level A1)",
@@ -81,16 +81,7 @@
     "cleanSweeps20": "Living Legend",
     "cleanSweeps20Description": "Win 10 matches with a clean sweep at level B2"
   },
-  "locationQuests": {
-    "done": "UKOŃCZONO",
-    "awards": "Nagroda:",
-    "gotAward": "Nagroda odebrana",
-    "repeat": "Powtórz",
-    "start": "Rozpocznij",
-    "notFound": "Nie znaleziono zadań",
-    "loading": "Ładowanie zadań...",
-    "error": "Nie udało się załadować zadań"
-  },
+
   "locationQuests": {
     "done": "COMPLETED",
     "awards": "Reward:",

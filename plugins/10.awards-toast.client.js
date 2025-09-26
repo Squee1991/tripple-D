@@ -111,17 +111,27 @@ export default defineNuxtPlugin((nuxtApp) => {
         setTimeout(() => { if (lastShownKey === key) lastShownKey = null }, 1200)
     }
 
+
+
     const showAchievement = async (a) => {
         const key = makeKey('ach', a)
         if (!key || key === lastShownKey || isShown(key)) return
         lastShownKey = key
 
         const name = resolveName(a)
-        const msg = name
-            ? `🏆 ${(ach.achievement)} «${name}» ${t(ach.status)}!`
-            : ''
 
-        toast.success(msg, { toastId: key, containerId: CONTAINER_ID })
+
+        const msg = name
+            ? `🏆 ${t('Достижение получено')}: «${name}»!`
+            : `🏆 ${t('Новое достижение разблокировано')}!`
+
+        if (!msg.includes('null') && !msg.includes('undefined')) {
+            toast.success(msg, {
+                toastId: key,
+                containerId: CONTAINER_ID
+            })
+        }
+
         await markShown(key)
         setTimeout(() => { if (lastShownKey === key) lastShownKey = null }, 1200)
     }

@@ -266,12 +266,12 @@ const highlightedQuestion = computed(() => {
             return t(questStore.task.question);
         }
     } catch (e) {
-        // Если t() выбрасывает ошибку, возвращаем исходный текст
-        return questStore.task.question;
+        // // Если t() выбрасывает ошибку, возвращаем исходный текст
+        // return questStore.task.question;
     }
 
     const cls = questStore.isCorrect ? 'filled-answer-correct' : 'filled-answer-wrong'
-    return questStore.task.question.replace('___', `<strong class="${cls}">${questStore.correctAnswer}</strong>`)
+    return t(questStore.task.question).replace('___', `<strong class="${cls}">${questStore.correctAnswer}</strong>`)
 })
 
 function goThemes() {

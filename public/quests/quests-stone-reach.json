@@ -20,7 +20,7 @@
         "question": "questsStoneReachFirstQuests.questOne",
         "options": [
           "questsStoneReachFirstQuests.questOneFirstOption",
-          "questsStoneReachFirstQuests.questOneFirstOption",
+          "questsStoneReachFirstQuests.questOneSecondOption",
           "questsStoneReachFirstQuests.questOneThirdOption"
         ],
         "answer": "questsStoneReachFirstQuests.questOneFirstOption"
