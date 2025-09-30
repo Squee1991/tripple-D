@@ -11,40 +11,25 @@
         </div>
       </div>
     </header>
+
     <main class="quiz-main-content">
       <div v-if="loading" class="fullscreen-state">
         <p>{{ t('prasens.loading') }}</p>
       </div>
+
       <div v-else-if="store.quizCompleted" class="finish-screen">
         <CelebrationFireworks
-            v-model="showCelebration"
-            ref="celebration"
-            :score="store.score"
-            :total="store.currentQuestions.length"
-            :elapsed="elapsed"
-            :pointsStart="prevPoints"
-            :expStart="prevExp"
-            :levelStart="prevLevel"
-            :award="failMode ? 0 : AWARD"
-            :levelUpXp="LEVEL_UP_XP"
-            :showStats="!failMode"
-            :pieces="460"
-            :sparkCount="32"
-            :burstsCount="28"
-            :area-x="[10, 90]"
-            :area-y="[15, 75]"
-            :title="failMode ? FINISH_UI.tryAgainTitle : FINISH_UI.winTitle"
-            :resultLabel="FINISH_UI.result"
-            :timeLabel="FINISH_UI.time"
-            :pointsLabel="FINISH_UI.points"
-            :levelLabel="FINISH_UI.level"
-        >
-          <div class="actions">
-            <button class="btn primary" @click="startQuiz">{{ t('prasens.again') }}</button>
-            <button class="btn ghost" @click="backTo">{{ t('prasens.back') }}</button>
-          </div>
-        </CelebrationFireworks>
+            :key="`cw-${startExpLocal}-${targetExpLocal}-${startPointsLocal}-${targetPointsLocal}`"
+            :start-exp="startExpLocal"
+            :target-exp="targetExpLocal"
+            :start-points="startPointsLocal"
+            :target-points="targetPointsLocal"
+            :level-start="startLevelLocal"
+            :level-end="endLevelLocal"
+        />
+        <div class="actions"></div>
       </div>
+
       <div v-else-if="store.activeQuestion" class="quiz-content-comic">
         <div class="question-card-comic">
           <SoundBtn :text="fullSentence"/>
@@ -54,6 +39,7 @@
             <span>{{ store.activeQuestion.question.split('___')[1] }}</span>
           </p>
         </div>
+
         <div class="options-grid-comic">
           <button
               v-for="option in store.activeQuestion.options"
@@ -66,11 +52,13 @@
             {{ option }}
           </button>
         </div>
+
         <div class="footer-controls-comic">
           <div v-if="store.feedback" class="feedback-message-comic" :class="store.feedback">
             <span v-if="store.feedback === 'correct'">{{ t('prasens.correct') }}</span>
             <span v-else>{{ t('prasens.wrong') }} {{ store.activeQuestion.answer }}</span>
           </div>
+
           <button
               v-if="store.feedback === null"
               @click="store.checkAnswer()"
@@ -79,6 +67,7 @@
           >
             {{ t('prasens.check') }}
           </button>
+
           <button
               v-else
               @click="store.nextQuestion()"
@@ -93,76 +82,48 @@
 </template>
 
 <script setup>
-import {ref, onMounted, watch, nextTick} from 'vue'
-import { useQuizStore } from '../../../store/adjectiveStore.js'
-import { useRoute, useRouter } from 'vue-router'
-import CelebrationFireworks from '../../src/components/CelebrationFireworks.vue'
-import {useRewardEngine} from '../../composables/useRewardEngine.js'
+import {ref, onMounted, watch, computed} from 'vue'
+import {useQuizStore} from '../../../store/adjectiveStore.js'
 import {userlangStore} from '../../store/learningStore.js'
+import {useRoute, useRouter} from 'vue-router'
+import CelebrationFireworks from '../../src/components/CelebrationFireworks.vue'
 import SoundBtn from '../../src/components/soundBtn.vue'
-import { useSeoMeta } from '#imports'
-useSeoMeta({ robots: 'noindex, nofollow' })
+import {useSeoMeta} from '#imports'
+import {useI18n} from 'vue-i18n'
 
-const FINISH_UI = {
-  winTitle: 'Поздравляем!',
-  tryAgainTitle: 'Ещё чуть-чуть — и получится!',
-  result: 'Результат',
-  time: 'Время',
-  points: 'Артиклюсы',
-  level: 'Уровень',
-}
+useSeoMeta({robots: 'noindex, nofollow'})
+
+const AWARD_EXP = 5
+const AWARD_POINTS = 5
+const DELAY_MS = 4000
+const LEVEL_UP_XP = 100
 
 const router = useRouter()
 const route = useRoute()
 const store = useQuizStore()
-const loading = ref(true)
 const learning = userlangStore()
-const { t } = useI18n()
+const {t} = useI18n()
+
+const loading = ref(true)
+const category = 'adjective-declension'
+const {topicId} = route.params
 
 const fullSentence = computed(() => {
-  const quest = store.activeQuestion
-  if (!quest) return ''
-  const [pre , post ] = quest.question.split('___')
+  const q = store.activeQuestion
+  if (!q) return ''
+  const [pre, post = ''] = q.question.split('___')
   const word = store.selectedOption || ''
   return `${pre}${word}${post}`
 })
 
-const category = 'adjective-declension'
-const { topicId } = route.params
-const showCelebration = ref(false)
-const celebration = ref(null)
-const startedAt = ref(Date.now())
-const elapsed = ref('0:00')
+const startExpLocal = ref(0)
+const targetExpLocal = ref(0)
+const startPointsLocal = ref(0)
+const targetPointsLocal = ref(0)
+const startLevelLocal = ref(0)
+const endLevelLocal = ref(0)
 
-const AWARD = 5
-const LEVEL_UP_XP = 100
-const PASS_RATIO = 0.8
-
-const prevPoints = ref(0)
-const prevExp = ref(0)
-const prevLevel = ref(1)
-const failMode = ref(false)
-
-function fmt(ms) {
-  const s = Math.floor(ms / 1000)
-  const m = Math.floor(s / 60)
-  const sec = s % 60
-  return `${m}:${sec.toString().padStart(2, '0')}`
-}
-
-async function startQuiz() {
-  loading.value = true
-  const fileName = `/adjective/${category}-${topicId}.json`
-  store.setContext({modeId: category, topicId, fileName, contentVersion: 'v1'})
-  await store.startNewQuiz(fileName)
-  loading.value = false
-  showCelebration.value = false
-  startedAt.value = Date.now()
-}
-
-const backTo = () => {
-  router.push('/adjective-declension')
-}
+const backTo = () => router.push('/adjective-declension')
 
 onMounted(async () => {
   loading.value = true
@@ -170,34 +131,32 @@ onMounted(async () => {
   store.setContext({modeId: category, topicId, fileName, contentVersion: 'v1'})
   await store.restoreOrStart({modeId: category, topicId, fileName, contentVersion: 'v1'})
   await learning.loadFromFirebase?.()
-  startedAt.value = Date.now()
   loading.value = false
 })
 
-const {finalize} = useRewardEngine(learning)
-
-watch(() => store.quizCompleted,
-    async (done) => {
-      if (!done) return
-      elapsed.value = fmt(Date.now() - startedAt.value)
-      const res = await finalize({
-        score: store.score,
-        total: store.currentQuestions.length || 10,
-        passRatio: PASS_RATIO,
-        baseAward: AWARD,
-        levelUpXp: LEVEL_UP_XP,
-        save: true,
-      })
-      prevPoints.value = res.pointsStart
-      prevExp.value = res.expStart
-      prevLevel.value = res.levelStart
-      failMode.value = !res.ok
-      await nextTick()
-      showCelebration.value = true
-      celebration.value?.play()
-    })
+watch(() => store.quizCompleted, async (done) => {
+  if (!done) return
+  const curExp = Number(learning.exp || 0)
+  const curPoints = Number(learning.points || 0)
+  const curLevel = Number(learning.isLeveling || 0)
+  const rawTargetExp = curExp + AWARD_EXP
+  const levelUps = Math.floor(rawTargetExp / LEVEL_UP_XP)
+  const endLevel = curLevel + levelUps
+  const endExpMod = rawTargetExp % LEVEL_UP_XP
+  startExpLocal.value = curExp
+  targetExpLocal.value = endExpMod
+  startPointsLocal.value = curPoints
+  targetPointsLocal.value = curPoints + AWARD_POINTS
+  startLevelLocal.value = curLevel
+  endLevelLocal.value = endLevel
+  setTimeout(async () => {
+    learning.exp = rawTargetExp
+    learning.points = targetPointsLocal.value
+    learning.handleLeveling?.()
+    await learning.saveToFirebase?.()
+  }, DELAY_MS)
+})
 </script>
-
 
 <style scoped>
 .btn__back {
@@ -223,13 +182,9 @@ watch(() => store.quizCompleted,
   font-family: 'Bangers', cursive;
   letter-spacing: 1.5px;
   min-height: 100vh;
-  padding-top: 100px;
 }
 
 .quiz-header-comic {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   z-index: 1000;
   display: flex;
@@ -248,8 +203,6 @@ watch(() => store.quizCompleted,
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 1.5rem;
-  box-sizing: border-box;
 }
 
 .fullscreen-state {
@@ -267,33 +220,32 @@ watch(() => store.quizCompleted,
   padding: 15px;
 }
 
-.question-card-comic,
-.option-button-comic,
-.action-button,
-.quiz-summary-comic {
+.question-card-comic, .option-button-comic, .action-button, .quiz-summary-comic {
   border: 3px solid #000;
   border-radius: 12px;
   box-shadow: 6px 6px 0px #000;
   transition: all 0.1s ease-in-out;
 }
 
-.option-button-comic:hover,
-.action-button:hover,
-.quiz-summary-comic:hover {
+.option-button-comic:hover, .action-button:hover, .quiz-summary-comic:hover {
   transform: translate(2px, 2px);
   box-shadow: 4px 4px 0px #000;
 }
 
 .question-card-comic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #fff;
   padding: 2rem;
   transform: rotate(.7deg);
 }
 
 .question-text-comic {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   text-align: center;
   color: #000;
+  margin-left: 8px;
 }
 
 .blank-space {
@@ -424,36 +376,41 @@ watch(() => store.quizCompleted,
   color: #e5edff;
 }
 
-
 @media (max-width: 767px) {
   .quiz-header-comic {
     gap: 10px;
     padding: 10px;
   }
+
   .header-item {
     font-size: 18px;
   }
+
   .btn__back {
     padding: 10px;
     font-size: 1rem;
   }
+
   .question-text-comic {
     font-size: 1.3rem;
   }
+
   .option-button-comic {
     font-size: 1.3rem;
   }
+
   .action-button {
     font-size: 1.4rem;
     font-family: "Nunito", sans-serif;
     font-weight: 600;
   }
+
   .quiz-main-content {
     padding: 5px;
   }
+
   .question-card-comic {
     padding: 1rem;
   }
 }
-
 </style>

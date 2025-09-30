@@ -94,12 +94,13 @@ onBeforeUnmount(() => document.removeEventListener('mousedown', clickOutside))
   position: absolute;
   right: 20px;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) scale(1);
   pointer-events: none;
 }
 
 .arrow.open {
-  transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%) scale(-1);
+  transition: .4s;
 }
 
 .dropdown {

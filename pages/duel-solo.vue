@@ -127,7 +127,6 @@ onMounted(async () => {
         <p v-else class="countdown-number start">{{ t('wordDuelSession.start') }}</p>
       </div>
     </div>
-    <!--        <div> {{ statStore.constructedSentences}}</div>-->
     <div class="game-page-wrapper">
       <div class="game-container">
         <div v-if="!finished" class="game-board">

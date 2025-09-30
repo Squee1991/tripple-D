@@ -13,8 +13,18 @@
         :text="t('inDevelopment.sub')"
     />
     <div class="header-container">
-      <NuxtLink to="/">
-        <span class="logo__name">German-corner</span>
+      <NuxtLink to="/" class="logo" aria-label="German Corner — Home">
+        <span class="logo__name">German</span>
+        <img
+            src="../../assets/images/logo/Logo.png"
+            alt="German Corner"
+            width="62"
+            height="62"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+        />
+        <span class="logo__name">corner</span>
       </NuxtLink>
       <nav ref="dropdownRefNav" class="header-nav" :class="{ 'is-open': isMobileMenuOpen }" aria-label="Main">
         <ul class="header-nav__list">
@@ -311,6 +321,11 @@ watch(isMobileMenuOpen, (newVal) => {
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   box-shadow: 6px 0 0 var(--bg);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
 }
 
 .header-container {
@@ -631,7 +646,7 @@ watch(isMobileMenuOpen, (newVal) => {
 
   .header-nav .header-nav__submenu-link {
     font-size: 1rem;
-    padding: 5px;
+    padding: 8px;
     color: #1e1e1e;
     background-color: #fff;
     border: 2px solid #1e1e1e;
@@ -728,7 +743,7 @@ watch(isMobileMenuOpen, (newVal) => {
   color: #e39910;
   font-family: "Nunito", sans-serif;
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-style: italic;
   letter-spacing: 3px;
   text-shadow: 2px 4px 0px white;

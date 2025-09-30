@@ -1,6 +1,197 @@
 {
+  "descriptionCardTheme": {
+    "title": "Learning topics",
+    "textOne": "Grammar with examples",
+    "textTwo": "Verbs and adjectives",
+    "textThree": "Phrases and idioms",
+    "textFour": "Sentence building"
+  },
+  "descriptionCardArticle": {
+    "title": "Article practice",
+    "textOne": "5 learning methods",
+    "textTwo": "Over 1000 words with articles",
+    "textThree": "Points and rewards for answers",
+    "textFour": "Training all word forms"
+  },
+  "descriptionCardGame": {
+    "title": "Game elements",
+    "textOne": "Earn Artikelus points",
+    "textTwo": "Spend them in the shop",
+    "textThree": "Join duels",
+    "textFour": "Guess words against the clock"
+  },
+  "descriptionCardRewards": {
+    "title": "Achievement system",
+    "textOne": "Earn medals",
+    "textTwo": "Collect rewards",
+    "textThree": "Track achievements",
+    "textFour": "Complete daily quests"
+  },
+  "descriptionCardRanked": {
+    "title": "Ranking system",
+    "textOne": "Compare progress",
+    "textTwo": "More than 3 disciplines",
+    "textThree": "Difficulty levels",
+    "textFour": "Motivation through competition"
+  },
+  "descriptionCardExam": {
+    "title": "Tests",
+    "textOne": "Task checking with AI",
+    "textTwo": "Writing texts",
+    "textThree": "Listen and choose the answer",
+    "textFour": "Understanding through reading",
+    "textFive": "Practice speaking"
+  },
+  "descriptionCardEvents": {
+    "title": "Seasonal events",
+    "textOne": "Special holiday events",
+    "textTwo": "Unique tasks",
+    "textThree": "Unique rewards",
+    "textFour": "Festive atmosphere"
+  },
+  "descriptionCardCards": {
+    "title": "Cards",
+    "textOne": "Sentences with articles",
+    "textTwo": "Divided by topics",
+    "textThree": "Difficulty level",
+    "textFour": "Cards from other users"
+  },
+  "aboutValueItemsRef": {
+    "textOne": "Accessibility and clarity",
+    "textTwo": "Engagement through play",
+    "textThree": "Instant feedback",
+    "textFour": "Transparent progress and rewards",
+    "textFive": "Pleasant and intuitive interface",
+    "ready": "Ready to start?",
+    "connect": "Join and improve your German at your own pace — from articles to confident sentences."
+  },
+  "aboutArticleModesRef": {
+    "modeOneTitle": "Fill in the article",
+    "modeOneDescription": "Enter the correct der/die/das.",
+    "modeTwoTitle": "Build the word",
+    "modeTwoDescription": "Assemble the word and choose the article.",
+    "modeThreeTitle": "Word + Article",
+    "modeThreeDescription": "Match the word with the correct article.",
+    "modeFourTitle": "Plural",
+    "modeFourDescription": "Choose the plural form and its article.",
+    "modeFiveTitle": "Audio mode",
+    "modeFiveDescription": "Listen and identify the article by ear."
+  },
+  "aboutTheoryPracticeRef": {
+    "title": "Theory",
+    "description": "Theory on various topics. Adjectives, nouns, etc.",
+    "textOne": "Usage rules",
+    "textTwo": "Exceptions and fixed forms",
+    "titleTwo": "Adjectives and verbs",
+    "descriptionTwo": "Declension of adjectives, tenses and verb forms — with visual tables and practice.",
+    "secondTextOne": "Adjective declension by cases",
+    "secondTextTwo": "Practice of conjugations and tenses"
+  },
+  "aboutFeatureItemsRef": {
+    "firstTitle": "Leaderboard",
+    "firstDescription": "Compete and climb to the global top in Articles",
+    "secondTitle": "Achievements, rewards, events",
+    "secondDescription": "Unlock rare achievements and rewards, participate in events",
+    "thirdTitle": "Make sentences",
+    "thirdDescription": "Online duels for speed and accuracy in syntax.",
+    "fourthTitle": "Article practice",
+    "fourthDescription": "Practice der/die/das in 5 unique modes.",
+    "fifthTitle": "Tests with AI feedback",
+    "fifthDescription": "Write, speak and get instant feedback.",
+    "sixthTitle": "Learning map",
+    "sixthDescription": "Level up along the roadmap of topics and levels.",
+    "seventhTitle": "Thematic topics",
+    "seventhDescription": "Learn the most useful everyday topics.",
+    "eighthTitle": "Quests and marathons",
+    "eighthDescription": "Complete daily tasks, join article marathons."
+  },
+  "aboutPageTitles": {
+    "insideTitle": "What’s inside the platform",
+    "theoryTitle": "Theory and practice",
+    "articleTitle": "Article practice: 5 modes",
+    "mission": "Our mission",
+    "missionLead": "We make learning accessible and interactive for people from any country — with game elements, quests and marathons."
+  },
+  "aboutHeroContentRef": {
+    "title": "About us",
+    "sbTitle": "We are a platform for practicing German with game elements: leaderboards, achievements, duels, quests and much more.",
+    "firstText": "Available for every country and every device",
+    "secondText": "Interactive tasks and duels in sentence building",
+    "thirdText": "Learning through play: quests, rewards, marathons and various events"
+  },
+  "faq": {
+    "btnBack": "Back to main",
+    "questions": "Still have questions? Write to us!",
+    "send": "Send message"
+  },
+  "howToUse": {
+    "title": "How to use",
+    "questOne": "How to start learning?",
+    "answerOne": "To start practicing German, simply register and create an account. Without this, access to tasks will be closed.",
+    "questTwo": "What are seasonal events?",
+    "answerTwo": "Seasonal events are temporary activities tied to holidays. They include special quests, themed tasks, and unique rewards available only for a limited time.",
+    "questThree": "What is an achievement?",
+    "answerThree": "An achievement is a mark for a completed activity (progress, correct answers, daily tasks, etc.).",
+    "questFour": "What are rewards?",
+    "answerFour": "Rewards are given for completing certain achievements and are displayed in your profile.",
+    "questFive": "Where to check progress on articles?",
+    "answerFive": "On the main page in the 'Participant Panel' select 'Statistics', then — the progress of the desired category. Important: if you don’t have active topics on articles, statistics will not be displayed.",
+    "questSix": "What is Artiklus?",
+    "answerSix": "Artiklus is the internal currency. It is earned for correct answers in the 'Article Practice' task and for completing tasks in Language Lands. It can be spent on extra attempts.",
+    "questSeven": "How to get into the ranking?",
+    "answerSeven": "You need to reach at least level 2 by playing 'Article Practice' or 'Language Lands'. After that, the ranking table becomes available.",
+    "questEight": "What are daily tasks?",
+    "answerEight": "These are tasks by topic that can be completed once a day. You can complete 3 tasks per day. They are available on the main page."
+  },
+  "accountManagement": {
+    "title": "Account Management",
+    "questOne": "How to change name or email?",
+    "questAnswer": "At the moment changing name or email is not supported.",
+    "questTwo": "How to delete an account?",
+    "answerTwo": "Profile → 'Account settings' tab → 'Delete account'. After deletion all your data will be permanently removed and cannot be restored.",
+    "questThree": "How to recover a password?",
+    "answerThree": "On the login form select 'Forgot password?' and follow the instructions. A recovery email will be sent to the address provided during registration. Important: use a real email address when registering."
+  },
+  "subscribe": {
+    "title": "Subscription (Premium)",
+    "questOne": "What does Premium give?",
+    "questOneStepOne": "1 Audio for all words and sentences — practice listening comprehension.",
+    "questOneStepTwo": "2 Unlimited learning — go through as much material as you want per day.",
+    "questOneStepThree": "3 Access to all tests with auto-check and AI evaluation.",
+    "questOneStepFour": "4 Audio tasks and speaking tasks for oral practice.",
+    "questOneStepFive": "5 Exclusive materials and exercises not available in the free version.",
+    "questOneStepSix": "6 Support developers — Premium helps us improve the project, release new tasks and enhance features for all students. Our goal is to make learning German accessible and fun. We create an atmosphere of interactivity, games and competition so that studying feels like an adventure you want to return to every day!",
+    "questTwo": "How to cancel Premium?",
+    "questTwoStepOne": "Log in to your account.",
+    "questTwoStepTwo": "Go to 'Profile'.",
+    "questTwoStepThree": "Open 'Account management'.",
+    "questTwoStepFour": "Click 'Cancel subscription'.",
+    "note": "After this, access remains until the end of the paid period.",
+    "questThree": "Is there a refund for unused days?",
+    "answerThree": "Currently refunds for unused days are not available."
+  },
+  "daily": {
+    "first": "Learn 20 words in all modes: Article Practice",
+    "second": "Get 20 Artiklus in Article Practice",
+    "third": "Make a streak of 20 words (easy mode) article marathon",
+    "fourth": "Get 15 experience points in Article Practice",
+    "fifth": "Guess 10 words in the mode: 'Guess the Word'",
+    "sixth": "Make a streak of 20 words (medium mode) article marathon",
+    "seventh": "Learn 15 plural words in Article Practice",
+    "eighth": "Learn 20 words in all modes: Article Practice",
+    "ninth": "Learn 15 words in audio mode: Article Practice",
+    "tenth": "Make a streak of 15 words (hard mode) article marathon",
+    "eleventh": "Get 10 experience points in Article Practice"
+  },
   "preloader": {
     "value": "You will be redirected to the main page..."
+  },
+  "useHeadApp": {
+    "title": "German Online A1–B1 — Grammar, Articles, Exercises | German Corner",
+    "content": "Learn German online at levels A1–B1: grammar, der/die/das articles, tenses, and exercises in a playful format. German Corner helps you study German easily and effectively!",
+    "contentTwo": "German online, German A1, German A2, German B1, German grammar, der die das articles, German tenses, German exercises",
+    "contentThree": "German Corner — German Online A1–B1",
+    "contentFour": "Grammar, articles, and German exercises in a playful format. Learn with fun and efficiency!"
   },
   "randomPhrases": {
     "first": "Today you took another step forward!",
@@ -82,19 +273,9 @@
     "cleanSweeps20Description": "Win 10 matches with a clean sweep at level B2"
   },
   "locationQuests": {
-    "done": "UKOŃCZONO",
-    "awards": "Nagroda:",
-    "gotAward": "Nagroda odebrana",
-    "repeat": "Powtórz",
-    "start": "Rozpocznij",
-    "notFound": "Nie znaleziono zadań",
-    "loading": "Ładowanie zadań...",
-    "error": "Nie udało się załadować zadań"
-  },
-  "locationQuests": {
     "done": "COMPLETED",
     "awards": "Reward:",
-    "gotAward": "Reward received",
+    "gotAward": "Reward claimed",
     "repeat": "Repeat",
     "start": "Start",
     "notFound": "No quests found",
@@ -662,6 +843,7 @@
   },
   "accountPanel": {
     "title": "Participant Panel",
+    "ranked": "Ranked",
     "articles": "Articluses",
     "level": "Level",
     "stats": "Statistics",
@@ -1746,8 +1928,8 @@
     "cardText": "Create 36 cards to earn this achievement!",
     "grandmasterLabel": "Grandmaster",
     "grandmasterText": "Compose a total of 500 sentences across all levels.",
-    "duelLabel": "Duel Master",
-    "duelText": "Achieve 250 victories across all levels.",
+    "duelLabel": "Master of Sentences",
+    "duelText": "Correctly compose 250 sentences at any level in solo mode",
     "edgeLabel": "On the Edge",
     "edgeText": "Make a 50-word streak in hard mode. Timer must not drop below 2 seconds.",
     "firstArtiklusLabel": "First Currency",
@@ -2020,7 +2202,8 @@
     "victory": "Victory",
     "victoryText": "You were faster and smarter! Great job!",
     "loss": "Defeat",
-    "lossText": "This time your opponent was stronger. Don't worry, try again!"
+    "lossText": "This time your opponent was stronger. Don't worry, try again!",
+    "end": "Congratulations! Exercise completed"
   },
   "nav": {
     "training": "Training",

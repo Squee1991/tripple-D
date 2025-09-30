@@ -9,6 +9,7 @@ export const useTrainerStore = defineStore('thematic', () => {
 	const selectedLevel = ref(null)
 	const selectedModule = ref(null)
 	const completedModules = ref([])
+	const progressDocRef = (uid) => doc(getFirestore(), 'users', uid, 'progress')
 	const addCompletedModule = (level, id) => {
 		if (!completedModules.value.some(m => m.level === level && m.id === id)) {
 			completedModules.value.push({ level, id })
@@ -18,7 +19,6 @@ export const useTrainerStore = defineStore('thematic', () => {
 
 	const saveProgress = async () => {
 		const auth = getAuth()
-		const db = getFirestore()
 		const user = auth.currentUser
 		if (!user) return
 		const progress = {
@@ -26,17 +26,19 @@ export const useTrainerStore = defineStore('thematic', () => {
 			module: selectedModule.value?.id,
 			completedModules: completedModules.value,
 		}
-		const docRef = doc(db, 'progress', user.uid)
+
+		const docRef = progressDocRef(user.uid)
 		const docSnap = await getDoc(docRef)
+
 		let data = {}
 		if (docSnap.exists()) data = docSnap.data()
+
 		data[topic.value] = progress
-		await setDoc(docRef, data)
+		await setDoc(docRef, data, { merge: true })
 	}
 
 	const loadProgress = async () => {
 		const auth = getAuth()
-		const db = getFirestore()
 		let user = auth.currentUser
 		if (!user) {
 			user = await new Promise(resolve => {
@@ -56,7 +58,8 @@ export const useTrainerStore = defineStore('thematic', () => {
 			completedModules.value = []
 			return
 		}
-		const docRef = doc(db, 'progress', user.uid)
+
+		const docRef = progressDocRef(user.uid)
 		const docSnap = await getDoc(docRef)
 		if (docSnap.exists()) {
 			const data = docSnap.data()
@@ -69,6 +72,7 @@ export const useTrainerStore = defineStore('thematic', () => {
 				} else {
 					completedModules.value = []
 				}
+
 				if (t.level && t.module) {
 					await setThemeAndModule(topic.value, t.level, t.module)
 				}
@@ -79,6 +83,7 @@ export const useTrainerStore = defineStore('thematic', () => {
 			completedModules.value = []
 		}
 	}
+
 	const setThemeAndModule = async (topicName, level, module) => {
 		topic.value = topicName
 		const res = await fetch(`/${topicName}.json`)

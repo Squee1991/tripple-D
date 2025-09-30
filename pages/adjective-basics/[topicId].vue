@@ -9,10 +9,8 @@
         <div class="header-item">{{ t('prasens.score') }} {{ store.score }}</div>
       </div>
     </header>
-
     <main class="main">
       <div v-if="loading" class="loading">{{ t('prasens.loading') }}</div>
-
       <div v-else-if="store.quizCompleted" class="finish-screen">
         <CelebrationFireworks
             :key="`cw-${startExpLocal}-${targetExpLocal}-${startPointsLocal}-${targetPointsLocal}`"
@@ -20,20 +18,20 @@
             :target-exp="targetExpLocal"
             :start-points="startPointsLocal"
             :target-points="targetPointsLocal"
+            :level-start="startLevelLocal"
+            :level-end="endLevelLocal"
         />
         <div class="actions"></div>
       </div>
-
       <div v-else-if="store.activeQuestion" class="quiz">
         <div class="question">
-          <SoundBtn :text="fullSentence"/>
+          <SoundBtn :text="fullSentence" />
           <p class="question-text">
             <span>{{ store.activeQuestion.question.split('___')[0] }}</span>
             <span class="blank">{{ store.selectedOption || '( ... )' }}</span>
             <span>{{ store.activeQuestion.question.split('___')[1] }}</span>
           </p>
         </div>
-
         <div class="options">
           <button
               v-for="option in store.activeQuestion.options"
@@ -46,13 +44,11 @@
             {{ option }}
           </button>
         </div>
-
         <div class="controls">
           <div v-if="store.feedback" class="fb" :class="store.feedback">
             <span v-if="store.feedback === 'correct'">{{ t('prasens.correct') }}</span>
             <span v-else>{{ t('prasens.wrong') }} {{ store.activeQuestion.answer }}</span>
           </div>
-
           <button
               v-if="store.feedback === null"
               class="btn check"
@@ -61,7 +57,6 @@
           >
             {{ t('prasens.check') }}
           </button>
-
           <button v-else class="btn next" @click="store.nextQuestion()">
             {{ t('prasens.further') }}
           </button>
@@ -72,24 +67,30 @@
 </template>
 
 <script setup>
-import {ref, onMounted, watch, computed} from 'vue'
-import {useQuizStore} from '../../store/adjectiveStore.js'
-import {userlangStore} from '../../store/learningStore.js'
-import {useRoute, useRouter} from 'vue-router'
+import { ref, onMounted, watch, computed } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
+import { useSeoMeta } from '#imports'
+import { useQuizStore } from '../../store/adjectiveStore.js'
+import { userlangStore } from '../../store/learningStore.js'
 import CelebrationFireworks from '../../src/components/CelebrationFireworks.vue'
 import SoundBtn from '../../src/components/soundBtn.vue'
-import {useSeoMeta} from '#imports'
-useSeoMeta({robots: 'noindex, nofollow'})
+useSeoMeta({ robots: 'noindex, nofollow' })
 
 const AWARD_EXP = 5
 const AWARD_POINTS = 5
 const DELAY_MS = 4000
+const LEVEL_UP_XP = 100
 
 const router = useRouter()
 const route = useRoute()
 const store = useQuizStore()
 const learning = userlangStore()
-const {t} = useI18n()
+const { t } = useI18n()
+
+const loading = ref(true)
+const category = 'adjective-basics'
+const { topicId } = route.params
 
 const fullSentence = computed(() => {
   const q = store.activeQuestion
@@ -99,45 +100,41 @@ const fullSentence = computed(() => {
   return `${pre}${word}${post}`
 })
 
-const loading = ref(true)
-const category = 'adjective-basics'
-const {topicId} = route.params
-
 const startExpLocal = ref(0)
 const targetExpLocal = ref(0)
 const startPointsLocal = ref(0)
 const targetPointsLocal = ref(0)
+const startLevelLocal = ref(0)
+const endLevelLocal = ref(0)
 
 const backTo = () => router.push(`/adjective-basics`)
-
-async function startQuiz() {
-  loading.value = true
-  const fileName = `/adjective/${category}-${topicId}.json`
-  store.setContext({modeId: category, topicId, fileName, contentVersion: 'v1'})
-  await store.startNewQuiz(fileName)
-  loading.value = false
-}
 
 onMounted(async () => {
   loading.value = true
   const fileName = `/adjective/${category}-${topicId}.json`
-  store.setContext({modeId: category, topicId, fileName, contentVersion: 'v1'})
-  await store.restoreOrStart({modeId: category, topicId, fileName, contentVersion: 'v1'})
+  store.setContext({ modeId: category, topicId, fileName, contentVersion: 'v1' })
+  await store.restoreOrStart({ modeId: category, topicId, fileName, contentVersion: 'v1' })
   await learning.loadFromFirebase?.()
   loading.value = false
 })
 
 watch(() => store.quizCompleted, async (done) => {
   if (!done) return
-
-  const curExp = Number(learning.exp || 0)
+  const curExp    = Number(learning.exp || 0)
   const curPoints = Number(learning.points || 0)
-  startExpLocal.value = curExp
-  targetExpLocal.value = curExp + AWARD_EXP
-  startPointsLocal.value = curPoints
+  const curLevel  = Number(learning.isLeveling || 0)
+  const rawTargetExp = curExp + AWARD_EXP
+  const levelUps     = Math.floor(rawTargetExp / LEVEL_UP_XP)
+  const endLevel     = curLevel + levelUps
+  const endExpMod    = rawTargetExp % LEVEL_UP_XP
+  startExpLocal.value     = curExp
+  targetExpLocal.value    = endExpMod
+  startPointsLocal.value  = curPoints
   targetPointsLocal.value = curPoints + AWARD_POINTS
+  startLevelLocal.value   = curLevel
+  endLevelLocal.value     = endLevel
   setTimeout(async () => {
-    learning.exp = targetExpLocal.value
+    learning.exp    = rawTargetExp
     learning.points = targetPointsLocal.value
     learning.handleLeveling?.()
     await learning.saveToFirebase?.()
@@ -193,6 +190,9 @@ watch(() => store.quizCompleted, async (done) => {
 }
 
 .question {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #fff;
   border: 3px solid #000;
   border-radius: 12px;
@@ -205,6 +205,7 @@ watch(() => store.quizCompleted, async (done) => {
   font-size: 1.6rem;
   color: #000;
   text-align: center;
+  margin-left: 8px;
 }
 
 .blank {
@@ -303,11 +304,9 @@ watch(() => store.quizCompleted, async (done) => {
   .quiz-header {
     padding: 10px
   }
-
   .question-text {
     font-size: 1.3rem
   }
-
   .opt {
     font-size: 1.2rem
   }

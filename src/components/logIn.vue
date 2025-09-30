@@ -265,7 +265,6 @@ onUnmounted(() => {
 .google__auth {
   font-family: "Nunito", sans-serif;
   font-weight: 600;
-  font-style: italic;
   font-size: 1.2rem;
   margin-left: 10px;
   color: #1e1e1e;
@@ -307,8 +306,7 @@ onUnmounted(() => {
   cursor: pointer;
   padding-top: 1rem;
   color: #1e1e1e;
-  font-family: 'Inter', sans-serif;
-  font-style: italic;
+  font-family: "Nunito", sans-serif;
   font-weight: 700;
   text-decoration: underline;
 }

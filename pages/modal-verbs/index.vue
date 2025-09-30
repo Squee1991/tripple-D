@@ -506,7 +506,7 @@ watch(selectedGroup, initLottieIcon);
 
 .practice-area__button {
   text-decoration: none;
-  background: #28a745;
+  background: #f1c40f;
   color: #fff;
   border: 3px solid #000;
   border-radius: 8px;

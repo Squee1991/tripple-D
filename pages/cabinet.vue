@@ -260,11 +260,11 @@ import {isSoundEnabled, setSoundEnabled, unlockAudioByUserGesture} from '../util
 import {useUiSettingsStore} from '../store/uiSettingsStore.js'
 import {AWARDS} from '~/utils/awards'
 
-import UserIcon from '../assets/images/user.svg'
-import FriendsIcon from '../assets/images/FriendList.svg'
-import AwardsIcon from '../assets/awards/award (7).svg'
+import UserIcon from '../assets/images/hedgehog.svg'
+import FriendsIcon from '../assets/images/friends.svg'
+import AwardsIcon from '../assets/images/rewards.svg'
 import Home from '../assets/images/home.svg'
-import Folder from '../assets/images/FolderNav.svg'
+import Folder from '../assets/images/folder.svg'
 import Find from '../assets/images/magnifying-glass.svg'
 import EditIcon from '../assets/accountToggleIcons/edit.svg'
 import UserAccIcon from '../assets/accountToggleIcons/user.svg'
@@ -359,7 +359,11 @@ const registrationDateText = computed(() => {
 const routeToPay = () => router.push('/pay')
 
 const shownAwardsSet = ref(loadShownAwards())
-const awardList = ref(AWARDS.map(a => ({...a, locked: !shownAwardsSet.value.has(a.key)})))
+const awardList = ref(
+    AWARDS.map(a => ({ ...a, locked: a.key === 'registerAchievement' ? false : !shownAwardsSet.value.has(a.key)
+    }))
+)
+
 const unlockedAwardList = computed(() => awardList.value.filter(a => !a.locked))
 
 watch(() => authStore.uid, () => {
@@ -424,7 +428,7 @@ async function cancelSubscription() {
   try {
     const res = await $fetch('/api/stripe/cancel', {method: 'POST', body: {uid: authStore.uid}})
     if (!res.success) alert('Ошибка отмены подписки: ' + res.error)
-  } catch { alert('Произошла ошибка. Попробуй позже.') }
+  } catch { alert('Error, try later') }
 }
 
 function goToFaq() { router.push('/faq') }
@@ -728,7 +732,7 @@ watchEffect(() => {
 }
 
 .tab-vertical.active {
-  background: #9ae6b4;
+  background: #9ea9a2;;
 }
 
 .tab-icon {

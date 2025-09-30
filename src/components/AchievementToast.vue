@@ -53,7 +53,6 @@
             <div class="ach-toast-title">
               {{ t(awardTitle) || 'Награда' }}
             </div>
-
             <div class="ach-toast-timer">
               <div class="ach-toast-timer__bar" :style="{ width: awardTimerPct + '%' }"></div>
             </div>
@@ -83,7 +82,7 @@ const achIcon = computed(() => {
   return {type: 'text', text: raw}
 })
 
-const AUTO_CLOSE_MS = 11116000
+const AUTO_CLOSE_MS = 4000
 let raf = null
 const remaining = ref(AUTO_CLOSE_MS)
 let lastTick = 0
@@ -160,7 +159,7 @@ function resolveTitle(a) {
 
 const awardVisible = ref(false)
 const awardTitle = ref('')
-const AWARD_AUTO_CLOSE_MS = 1200000
+const AWARD_AUTO_CLOSE_MS = 4000
 const awardRemaining = ref(AWARD_AUTO_CLOSE_MS)
 let awardLastTick = 0
 let awardRAF = null
@@ -172,7 +171,7 @@ const awardTimerPct = computed(() => {
 })
 
 function openAward(title) {
-  awardTitle.value = title || 'Награда'
+  awardTitle.value = title || 'Reward'
   awardVisible.value = true
   startAwardTimer()
 }

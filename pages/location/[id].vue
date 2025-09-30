@@ -2,7 +2,7 @@
     <div class="location-page">
         <div class="location__wrapper">
             <header class="location-header">
-                <button class="close-btn" @click="goHome" aria-label="На главную">×</button>
+                <button class="close-btn" @click="goHome" aria-label="to main">×</button>
                 <h1 class="region__title-name">{{ t(region?.name) }}</h1>
             </header>
             <div v-if="loading" class="loading">{{ t('locationQuests.loading') }}</div>
@@ -35,7 +35,7 @@
                         </button>
                     </li>
                 </ul>
-                <div v-else class="empty">Квесты не найдены</div>
+                <div v-else class="empty">{{ t('locationQuests.notFound')}}</div>
             </div>
         </div>
     </div>
@@ -47,6 +47,8 @@ import {useRoute, useRouter} from "vue-router";
 import {regions} from "~/utils/regions.js";
 import {userChainStore} from "~/store/chainStore.js";
 import { useHead, useSeoMeta, useRuntimeConfig } from '#imports'
+import { useCanonical } from "../../composables/useCanonical.js";
+const route = useRoute()
 const canonical = useCanonical()
 const pageTitle = 'German Corner — Языковые земли для изучения немецкого языка'
 const pageDesc  = 'Исследуйте языковые земли и прокачивайте немецкий язык, выполняя задания и проходя уровни. Учите лексику и грамматику в формате приключения с квестами и прогрессией, как в игре!'

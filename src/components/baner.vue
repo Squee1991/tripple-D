@@ -8,21 +8,21 @@
       <div class="banner__wrapper">
         <div class="banner__content">
           <div class="banner__orbit">
-            <span class="banner__orbit-word banner__orbit-word--der"
-                  :class="{ 'glow-black': glowType === 'der', 'fade-glow': fadingGlow === 'der' }"
-                  @click="triggerGlow('der')">Der</span>
-            <span class="banner__orbit-word banner__orbit-word--die"
-                  :class="{ 'glow-red': glowType === 'die', 'fade-glow': fadingGlow === 'die' }"
-                  @click="triggerGlow('die')">Die</span>
-            <span class="banner__orbit-word banner__orbit-word--das"
-                  :class="{ 'glow-gold': glowType === 'das', 'fade-glow': fadingGlow === 'das' }"
-                  @click="triggerGlow('das')">Das
-            </span>
+                <span v-for="(word, index) in orbitWords"
+                      :key="index"
+                      class="banner__orbit-word"
+                      :class="[ word.class,  {
+                    'glow-black': glowType === word.type && word.type === 'der',
+                    'glow-red': glowType === word.type && word.type === 'die',
+                    'glow-gold': glowType === word.type && word.type === 'das',
+                    'fade-glow': fadingGlow === word.type}]"
+                >{{ word.text }}
+                </span>
           </div>
           <h1 class="banner__title" v-once>{{ t('banner.title') }}</h1>
           <button class="banner__button" @click="startLearning" v-once>{{ t('banner.btn') }}</button>
         </div>
-        <div ref="orbit" class="banner__mage-container"  aria-hidden="true">
+        <div ref="orbit" class="banner__mage-container" aria-hidden="true">
           <div class="banner__mage"></div>
         </div>
       </div>
@@ -35,13 +35,19 @@ import SignIn from '../components/logIn.vue'
 import Overlay from '../components/Uioverlay.vue'
 import {gsap} from 'gsap'
 import {ScrollTrigger} from "gsap/ScrollTrigger";
+import SoundBtn from "../components/soundBtn.vue"
+
+const orbitWords = [
+  {text: 'Der', type: 'der', class: 'banner__orbit-word--der'},
+  {text: 'Die', type: 'die', class: 'banner__orbit-word--die'},
+  {text: 'Das', type: 'das', class: 'banner__orbit-word--das'}
+]
 
 gsap.registerPlugin(ScrollTrigger);
 import {onMounted} from 'vue'
 import {useRouter} from 'vue-router'
-import {userAuthStore} from '../../store/authStore'
+import {userAuthStore} from '../../store/authStore.js'
 import {ref, watch} from "vue";
-import {useI18n} from 'vue-i18n'
 
 const {t} = useI18n()
 const orbit = ref(null)

@@ -2,17 +2,21 @@
   <section class="features">
     <div class="features__inner">
       <div ref="titleRef" class="f__title">
-        <h2 class="features__title">{{ t('features.title') }}</h2>
+        <h1 class="features__title">{{ t('features.title') }}</h1>
       </div>
       <div class="features__grid">
         <div class="features__card" v-for="(item, index) in items" :key="index"
              :ref="el => { if (el) cardsRef[index] = el }">
-          <h3 class="features__card-title">{{ t(item.title) }}</h3>
+          <h2 class="features__card-title">{{ t(item.title) }}</h2>
           <div class="features__icon-wrapper">
             <img :src="item.src" :alt="item.alt" class="features__icon"/>
           </div>
           <div class="features__card-wrapper">
-            <p v-for="item in item.description" class="features__card-desc">{{ item.text }}</p>
+            <ul class="features__list">
+              <li v-for="(row, i) in item.description" :key="i" class="features__list-item">
+                {{ row.text }}
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -25,86 +29,88 @@ import {ref, onMounted} from 'vue'
 import {useI18n} from 'vue-i18n'
 import {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
-import MagikBook from '../../assets/images/magicBook.svg'
+import Book from '../../assets/images/DescBook.svg'
 import Brain from '../../assets/images/brain.svg'
-import Controller from '../../assets/images/controller.svg'
-import Cup from '../../assets/images/cubok.svg'
-import Dictionary from '../../assets/images/dictionary.svg'
+import Controller from '../../assets/images/video-game.svg'
+import AchCup from '../../assets/images/AchIcon.svg'
+import Dictionary from '../../assets/images/SeasonEvent.svg'
 import Exam from '../../assets/images/exam.svg'
 import Ranked from '../../assets/images/ranked.svg'
 
 gsap.registerPlugin(ScrollTrigger);
-
 const {t} = useI18n()
 const titleRef = ref(null);
 const cardsRef = ref([]);
+const cards = cardsRef.value;
 const items = [
-  {src: MagikBook, alt: 'Book', title: 'Темы обучения', description: [
-      {text: 'Артикли и предлоги'},
-      {text: 'Прилагательные и глаголы'},
-      {text: 'Граматика по темам'},
-      {text: 'Фразеологизмы и идиомы'},
-      {text: 'Построение предложений'}
-    ]
-  },
-  {src: Brain, alt: 'Brain', title: 'Практика артиклей', description: [
-      {text: 'Актикль к слову'},
-      {text: 'Слово + Артикль'},
-      {text: 'Аудио слов'},
-      {text: 'Множественное число'},
-      {text: 'Слова по буквам'}
-
-    ]
-  },
-  {src: Controller, alt: 'Controller', title: 'gameCard.title', description: [
-      {text: 'Зарабатывай артиклюсы'},
-      {text: 'Трать их в магазине'},
-      {text: 'Учавствуй в дуэлях'},
-      {text: 'Отгадывай слова на время'}
-    ]
-  },
-  {src: Cup, alt: 'Cup', title: 'achievCard.title', description: [
-      {text: 'Зарабатывай медали'},
-      {text: 'Собирай трофеи'},
-      {text: 'Отслеживай достижения'},
-      {text: ''}
-    ]
-  },
-  {src: Ranked, alt: 'Ranked', title: 'Система рейтига', description: [
-      {text: 'Сравнивай прогресс'},
-      {text: 'Более 3 дисциплин'},
-      {text: 'Уровни сложности'},
-      {text: 'Мотивация соперничества'},
+  {
+    src: Book, alt: 'Book', title: t('descriptionCardTheme.title'), description: [
+      {text: t('descriptionCardTheme.textOne')},
+      {text: t('descriptionCardTheme.textTwo')},
+      {text: t('descriptionCardTheme.textThree')},
+      {text: t('descriptionCardTheme.textFour')}
     ]
   },
   {
-    src: Exam, alt: 'Exam', title: 'Тесты', description: [
-      {text: "Проверка задание с ИИ"},
-      {text: "Написание текста"},
-      {text: "Слушай и выбирай ответ"},
-      {text: "Понимание через чтение"},
-      {text: "Тренируй говорение"},
-    ]
-  },
-  {src: Dictionary, alt: 'Dictionary', title: 'Переводчик', description: [
-      {text: 'Переводи прямо на сайте'},
-      {text: 'Нет ограничений'},
-      {text: 'Качество перевода'},
-      {text: ''}
+    src: Brain, alt: 'Brain', title: t('descriptionCardArticle.title'), description: [
+      {text: t('descriptionCardArticle.textOne')},
+      {text: t('descriptionCardArticle.textTwo')},
+      {text: t('descriptionCardArticle.textThree')},
+      {text: t('descriptionCardArticle.textFour')},
     ]
   },
   {
-    src: Cup, alt: 'Cup', title: 'Карточки', description: [
-      {text: 'Предложения с артиклями'},
-      {text: 'Разделение по темам'},
-      {text: 'Уровень сложности'},
-      {text: 'Примеры других пользователей'}
+    src: Controller, alt: 'Controller', title: t('descriptionCardGame.title'), description: [
+      {text: t('descriptionCardGame.textOne')},
+      {text: t('descriptionCardGame.textTwo')},
+      {text: t('descriptionCardGame.textThree')},
+      {text: t('descriptionCardGame.textFour')}
+    ]
+  },
+  {
+    src: AchCup, alt: 'Achievement icon', title: t('descriptionCardRewards.title'), description: [
+      {text: t('descriptionCardRewards.textOne')},
+      {text: t('descriptionCardRewards.textTwo')},
+      {text: t('descriptionCardRewards.textThree')},
+      {text: t('descriptionCardRewards.textFour')}
+    ]
+  },
+  {
+    src: Ranked, alt: 'Ranked', title: t('descriptionCardRanked.title'), description: [
+      {text: t('descriptionCardRanked.textOne')},
+      {text: t('descriptionCardRanked.textTwo')},
+      {text: t('descriptionCardRanked.textThree')},
+      {text: t('descriptionCardRanked.textFour')},
+    ]
+  },
+  {
+    src: Exam, alt: 'Exam', title: t('descriptionCardExam.title'), description: [
+      {text: t('descriptionCardExam.textOne')},
+      {text: t('descriptionCardExam.textTwo')},
+      {text: t('descriptionCardExam.textThree')},
+      {text: t('descriptionCardExam.textFour')},
+      {text: t('descriptionCardExam.textFive')},
+    ]
+  },
+  {
+    src: Dictionary, alt: 'Dictionary', title: t('descriptionCardEvents.title'), description: [
+      {text: t('descriptionCardEvents.textOne')},
+      {text: t('descriptionCardEvents.textTwo')},
+      {text: t('descriptionCardEvents.textThree')},
+      {text: t('descriptionCardEvents.textFour')}
+    ]
+  },
+  {
+    src: AchCup, alt: 'Cup', title: t('descriptionCardCards.title'), description: [
+      {text: t('descriptionCardCards.textOne')},
+      {text: t('descriptionCardCards.textTwo')},
+      {text: t('descriptionCardCards.textThree')},
+      {text: t('descriptionCardCards.textFour')}
     ]
   },
 ]
 
 onMounted(() => {
-
   gsap.from(titleRef.value, {
     scrollTrigger: {trigger: titleRef.value, start: "top 90%"},
     y: 50,
@@ -112,9 +118,7 @@ onMounted(() => {
     duration: 0.3,
     ease: "power3.out",
   });
-
-  const cards = cardsRef.value;
-
+  
   gsap.set(cards, {opacity: 0, y: 50});
   gsap.to(cards, {
     scrollTrigger: {
@@ -157,8 +161,34 @@ onMounted(() => {
   background: #e55b10;
   padding: 10px 20px;
   transform: rotate(3deg);
-  border: 2px solid black;
+  border: 3px solid black;
+  box-shadow: 3px 3px 0 black;
   border-radius: 10px;
+}
+
+.features__list-item::before {
+  content: "";
+  position: absolute;
+  left: .7rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #1e1e1e;
+  box-shadow: 1px 1px 0 black;
+  background: #fff;
+}
+
+.features__list-item {
+  position: relative;
+  padding: .55rem .75rem .55rem 2rem;
+  font-size: .98rem;
+  text-align: start;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: .1px;
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
 }
 
 .f__title {
@@ -178,7 +208,7 @@ onMounted(() => {
   border-radius: 24px;
   border: 3px solid #1e1e1e;
   box-shadow: 5px 5px 0px #1e1e1e;
-  padding: 2rem 1.5rem;
+  padding: 2rem 0.9rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -231,9 +261,7 @@ onMounted(() => {
   width: 110px;
   height: 110px;
   border-radius: 20px;
-  margin-bottom: 2rem;
-  border: 3px solid #1e1e1e;
-  background-color: #ffffff;
+  margin-bottom: 1rem;
   padding: 8px;
 }
 

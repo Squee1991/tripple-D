@@ -1,5 +1,5 @@
 <template>
-  <button v-if="authStore.isPremium" :title="t('hoverTitle.sound')" @click="speak(text)" :disabled="isSpeaking" class="speak-btn">
+  <button :title="t('hoverTitle.sound')" @click="speak(text)" :disabled="isSpeaking" class="speak-btn">
     <img :src="icon" alt="Произнести" class="speak-btn__icon"/>
   </button>
 </template>
@@ -42,10 +42,12 @@ function speak(htmlText) {
   border: none;
   padding: 0;
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 .speak-btn__icon {
   width: 42px;
+  height: 42px;
   transition: transform 0.2s;
 }
 

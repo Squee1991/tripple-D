@@ -316,6 +316,7 @@ definePageMeta({
 }
 
 .idioms__title {
+  width: 100%;
   font-size: 2.8rem;
   font-weight: 600;
   color: #fff;
@@ -481,7 +482,7 @@ definePageMeta({
   }
 
   .idioms__title {
-    font-size: 2.2rem;
+    font-size: 1.7rem;
     padding: 15px;
     box-shadow: 2px 2px 5px #2c2c2c;
   }
@@ -495,6 +496,12 @@ definePageMeta({
   .idioms__example--wrapper {
     display: flex;
     flex-direction: column;
+  }
+  .idioms__item {
+    font-size: 0.9rem;
+  }
+  .idioms__quiz-question{
+    font-size: 1.1rem;
   }
 }
 

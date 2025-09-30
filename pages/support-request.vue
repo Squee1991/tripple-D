@@ -14,10 +14,10 @@
 import FeedBack from "~/src/components/feedBack.vue";
 import { useRouter } from "vue-router";
 const router = useRouter();
-
+const { t } = useI18n();
 const data = ref([
-  {id: 1, text: 'На главную' , path: '/'},
-  {id: 2, text: 'Справочный центр' , path: '/faq'},
+  {id: 1, text: t('faq.btnBack') , path: '/'},
+  {id: 2, text: t('cabinetAccordion.faq') , path: '/faq'},
 ])
 
 const pathFunction = (pathValue) => {

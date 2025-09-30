@@ -1,7 +1,199 @@
 {
+  "descriptionCardTheme": {
+    "title": "Tematy nauki",
+    "textOne": "Gramatyka z przykładami",
+    "textTwo": "Czasowniki i przymiotniki",
+    "textThree": "Frazeologizmy i idiomy",
+    "textFour": "Budowanie zdań"
+  },
+  "descriptionCardArticle": {
+    "title": "Ćwiczenia z rodzajnikami",
+    "textOne": "5 metod nauki",
+    "textTwo": "Ponad 1000 słów z rodzajnikami",
+    "textThree": "Punkty i nagrody za odpowiedzi",
+    "textFour": "Trening wszystkich form słów"
+  },
+  "descriptionCardGame": {
+    "title": "Elementy gry",
+    "textOne": "Zarabiaj artykulusy",
+    "textTwo": "Wydawaj je w sklepie",
+    "textThree": "Bierz udział w pojedynkach",
+    "textFour": "Zgaduj słowa na czas"
+  },
+  "descriptionCardRewards": {
+    "title": "System osiągnięć",
+    "textOne": "Zdobądź medale",
+    "textTwo": "Zbieraj nagrody",
+    "textThree": "Śledź osiągnięcia",
+    "textFour": "Wykonuj codzienne questy"
+  },
+  "descriptionCardRanked": {
+    "title": "System rankingowy",
+    "textOne": "Porównuj postępy",
+    "textTwo": "Ponad 3 dyscypliny",
+    "textThree": "Poziomy trudności",
+    "textFour": "Motywacja przez rywalizację"
+  },
+  "descriptionCardExam": {
+    "title": "Testy",
+    "textOne": "Sprawdzanie zadań z AI",
+    "textTwo": "Pisanie tekstów",
+    "textThree": "Słuchaj i wybierz odpowiedź",
+    "textFour": "Rozumienie przez czytanie",
+    "textFive": "Ćwicz mówienie"
+  },
+  "descriptionCardEvents": {
+    "title": "Wydarzenia sezonowe",
+    "textOne": "Specjalne wydarzenia świąteczne",
+    "textTwo": "Unikalne zadania",
+    "textThree": "Unikalne nagrody",
+    "textFour": "Świąteczna atmosfera"
+  },
+  "descriptionCardCards": {
+    "title": "Karty",
+    "textOne": "Zdania z rodzajnikami",
+    "textTwo": "Podział na tematy",
+    "textThree": "Poziom trudności",
+    "textFour": "Karty innych uczestników"
+  },
+  "aboutValueItemsRef": {
+    "textOne": "Dostępność i przejrzystość",
+    "textTwo": "Zaangażowanie poprzez zabawę",
+    "textThree": "Natychmiastowa informacja zwrotna",
+    "textFour": "Przejrzysty postęp i nagrody",
+    "textFive": "Przyjemny i intuicyjny interfejs",
+    "ready": "Gotowy do rozpoczęcia?",
+    "connect": "Dołącz i rozwijaj niemiecki we własnym tempie — od rodzajników po pewne zdania."
+  },
+  "aboutArticleModesRef": {
+    "modeOneTitle": "Wpisz rodzajnik",
+    "modeOneDescription": "Wprowadź poprawny der/die/das.",
+    "modeTwoTitle": "Zbuduj słowo",
+    "modeTwoDescription": "Złóż słowo i wybierz rodzajnik.",
+    "modeThreeTitle": "Słowo + rodzajnik",
+    "modeThreeDescription": "Dopasuj słowo do poprawnego rodzajnika.",
+    "modeFourTitle": "Liczba mnoga",
+    "modeFourDescription": "Wybierz formę liczby mnogiej i jej rodzajnik.",
+    "modeFiveTitle": "Tryb audio",
+    "modeFiveDescription": "Słuchaj i rozpoznaj rodzajnik na słuch."
+  },
+  "aboutTheoryPracticeRef": {
+    "title": "Teoria",
+    "description": "Teoria z różnych tematów. Przymiotniki, rzeczowniki itp.",
+    "textOne": "Zasady użycia",
+    "textTwo": "Wyjątki i stałe formy",
+    "titleTwo": "Przymiotniki i czasowniki",
+    "descriptionTwo": "Odmiana przymiotników, czasy i formy czasowników — z tabelami i praktyką.",
+    "secondTextOne": "Odmiana przymiotników przez przypadki",
+    "secondTextTwo": "Ćwiczenia koniugacji i czasów"
+  },
+  "aboutFeatureItemsRef": {
+    "firstTitle": "Tabela rankingowa",
+    "firstDescription": "Rywalizuj i wspinaj się w globalnym rankingu Artykułów",
+    "secondTitle": "Osiągnięcia, nagrody, wydarzenia",
+    "secondDescription": "Odkrywaj rzadkie osiągnięcia i nagrody, bierz udział w wydarzeniach",
+    "thirdTitle": "Buduj zdania",
+    "thirdDescription": "Pojedynki online na szybkość i dokładność w składni.",
+    "fourthTitle": "Ćwiczenia z rodzajnikami",
+    "fourthDescription": "Ćwicz der/die/das w 5 unikalnych trybach.",
+    "fifthTitle": "Testy z oceną AI",
+    "fifthDescription": "Pisz, mów i otrzymuj natychmiastową informację zwrotną.",
+    "sixthTitle": "Mapa nauki",
+    "sixthDescription": "Rozwijaj się według mapy tematów i poziomów.",
+    "seventhTitle": "Tematyczne zagadnienia",
+    "seventhDescription": "Ucz się najbardziej przydatnych tematów codziennego życia.",
+    "eighthTitle": "Questy i maratony",
+    "eighthDescription": "Wykonuj codzienne zadania, uczestnicz w maratonach rodzajników."
+  },
+  "aboutPageTitles": {
+    "insideTitle": "Co znajduje się na platformie",
+    "theoryTitle": "Teoria i praktyka",
+    "articleTitle": "Ćwiczenia z rodzajnikami: 5 trybów",
+    "mission": "Nasza misja",
+    "missionLead": "Ułatwiamy naukę, czyniąc ją dostępną i interaktywną dla ludzi z całego świata — z elementami gry, questami i maratonami."
+  },
+  "aboutHeroContentRef": {
+    "title": "O nas",
+    "sbTitle": "Jesteśmy platformą do nauki niemieckiego z elementami gry: rankingi, osiągnięcia, pojedynki, questy i wiele więcej.",
+    "firstText": "Dostępne dla każdego kraju i każdego urządzenia",
+    "secondText": "Interaktywne zadania i pojedynki w budowaniu zdań",
+    "thirdText": "Nauka przez zabawę: questy, nagrody, maratony i różne wydarzenia"
+  },
+  "faq": {
+    "btnBack": "Na stronę główną",
+    "questions": "Masz jeszcze pytania? Napisz do nas!",
+    "send": "Wyślij wiadomość"
+  },
+  "howToUse": {
+    "title": "Jak korzystać",
+    "questOne": "Jak rozpocząć naukę?",
+    "answerOne": "Aby rozpocząć naukę niemieckiego, wystarczy się zarejestrować i utworzyć konto. Bez tego dostęp do zadań będzie zablokowany.",
+    "questTwo": "Czym są wydarzenia sezonowe?",
+    "answerTwo": "Wydarzenia sezonowe to czasowe aktywności związane ze świętami. Zawierają specjalne zadania, tematyczne wyzwania i unikalne nagrody dostępne tylko przez ograniczony czas.",
+    "questThree": "Czym jest osiągnięcie?",
+    "answerThree": "Osiągnięcie to odznaka za wykonaną aktywność (postęp, poprawne odpowiedzi, zadania dzienne itp.).",
+    "questFour": "Czym są nagrody?",
+    "answerFour": "Nagrody są przyznawane za wykonanie określonych osiągnięć i wyświetlane w twoim profilu.",
+    "questFive": "Gdzie sprawdzić postęp w artykułach?",
+    "answerFive": "Na stronie głównej w 'Panelu uczestnika' wybierz 'Statystyka', a następnie postęp wybranej kategorii. Ważne: jeśli nie masz aktywnych tematów artykułów, statystyki nie będą widoczne.",
+    "questSix": "Czym jest Artiklus?",
+    "answerSix": "Artiklus to wewnętrzna waluta. Zdobywa się ją za poprawne odpowiedzi w zadaniu 'Praktyka artykułów' i za wykonywanie zadań w Językowych krainach. Można ją wydawać na dodatkowe próby.",
+    "questSeven": "Jak dostać się do rankingu?",
+    "answerSeven": "Trzeba zdobyć co najmniej poziom 2, grając w 'Praktykę artykułów' lub 'Językowe krainy'. Potem tabela rankingowa staje się dostępna.",
+    "questEight": "Czym są zadania codzienne?",
+    "answerEight": "To zadania tematyczne, które można wykonać raz dziennie. Można wykonać 3 zadania dziennie. Są dostępne na stronie głównej."
+  },
+  "accountManagement": {
+    "title": "Zarządzanie kontem",
+    "questOne": "Jak zmienić imię lub e-mail?",
+    "questAnswer": "Obecnie zmiana imienia i e-maila nie jest możliwa.",
+    "questTwo": "Jak usunąć konto?",
+    "answerTwo": "Profil → zakładka 'Ustawienia konta' → 'Usuń konto'. Po usunięciu wszystkie dane zostaną trwale usunięte i nie będzie można ich odzyskać.",
+    "questThree": "Jak odzyskać hasło?",
+    "answerThree": "Na formularzu logowania wybierz 'Zapomniałeś hasła?' i postępuj zgodnie z instrukcjami. E-mail z linkiem do odzyskania hasła zostanie wysłany na adres podany przy rejestracji. Ważne: używaj prawdziwego adresu e-mail przy rejestracji."
+  },
+  "subscribe": {
+    "title": "Subskrypcja (Premium)",
+    "questOne": "Co daje Premium?",
+    "questOneStepOne": "1 Nagrania wszystkich słów i zdań — ćwicz rozumienie ze słuchu.",
+    "questOneStepTwo": "2 Nauka bez ograniczeń — ucz się dowolną ilość materiału dziennie.",
+    "questOneStepThree": "3 Dostęp do wszystkich testów z automatyczną oceną przez AI.",
+    "questOneStepFour": "4 Zadania audio i mówione do ćwiczenia mowy.",
+    "questOneStepFive": "5 Ekskluzywne materiały i ćwiczenia niedostępne w wersji darmowej.",
+    "questOneStepSix": "6 Wsparcie twórców — Premium pomaga rozwijać projekt, dodawać nowe zadania i ulepszać funkcje. Naszym celem jest uczynić naukę niemieckiego dostępną i przyjemną. Tworzymy atmosferę interakcji, gier i rywalizacji, aby nauka była przygodą, do której chce się wracać każdego dnia!",
+    "questTwo": "Jak anulować Premium?",
+    "questTwoStepOne": "Zaloguj się na swoje konto.",
+    "questTwoStepTwo": "Przejdź do 'Profilu'.",
+    "questTwoStepThree": "Otwórz 'Zarządzanie kontem'.",
+    "questTwoStepFour": "Kliknij 'Anuluj subskrypcję'.",
+    "note": "Dostęp pozostanie do końca opłaconego okresu.",
+    "questThree": "Czy jest zwrot za niewykorzystane dni?",
+    "answerThree": "Obecnie zwrot za niewykorzystane dni nie jest dostępny."
+  },
+  "daily": {
+    "first": "Naucz się 20 słów we wszystkich trybach: Ćwiczenie rodzajników",
+    "second": "Zdobądź 20 Artiklusów w Ćwiczeniu rodzajników",
+    "third": "Zrób serię 20 słów (łatwy tryb) maraton rodzajników",
+    "fourth": "Zdobądź 15 punktów doświadczenia w Ćwiczeniu rodzajników",
+    "fifth": "Odgadnij 10 słów w trybie: 'Zgadnij słowo'",
+    "sixth": "Zrób serię 20 słów (średni tryb) maraton rodzajników",
+    "seventh": "Naucz się 15 słów w liczbie mnogiej w Ćwiczeniu rodzajników",
+    "eighth": "Naucz się 20 słów we wszystkich trybach: Ćwiczenie rodzajników",
+    "ninth": "Naucz się 15 słów w trybie audio: Ćwiczenie rodzajników",
+    "tenth": "Zrób serię 15 słów (trudny tryb) maraton rodzajników",
+    "eleventh": "Zdobądź 10 punktów doświadczenia w Ćwiczeniu rodzajników"
+  },
   "preloader": {
     "value": "Zostaniesz przekierowany na stronę główną..."
   },
+  "useHeadApp": {
+    "title": "Język niemiecki online A1–B1 — gramatyka, rodzajniki, ćwiczenia | German Corner",
+    "content": "Ucz się języka niemieckiego online na poziomach A1–B1: gramatyka, rodzajniki der/die/das, czasy i ćwiczenia w formie zabawy. German Corner pomaga uczyć się niemieckiego łatwo i skutecznie!",
+    "contentTwo": "język niemiecki online, niemiecki A1, niemiecki A2, niemiecki B1, gramatyka niemiecka, rodzajniki der die das, czasy niemieckie, ćwiczenia z niemieckiego",
+    "contentThree": "German Corner — Język niemiecki online A1–B1",
+    "contentFour": "Gramatyka, rodzajniki i ćwiczenia z języka niemieckiego w formie zabawy. Ucz się z radością i skutecznie!"
+  },
+
   "randomPhrases": {
     "first": "Dziś zrobiłeś kolejny krok naprzód!",
     "second": "Gramatyka drży od twojej wytrwałości",
@@ -80,6 +272,16 @@
     "streak10Description": "Wygraj 10 pojedynków z rzędu na poziomie B2",
     "cleanSweeps20": "Żywa legenda",
     "cleanSweeps20Description": "Wygraj 10 pojedynków do zera na poziomie B2"
+  },
+  "locationQuests": {
+    "done": "UKOŃCZONE",
+    "awards": "Nagroda:",
+    "gotAward": "Nagroda odebrana",
+    "repeat": "Powtórz",
+    "start": "Rozpocznij",
+    "notFound": "Nie znaleziono questów",
+    "loading": "Ładowanie questów...",
+    "error": "Nie udało się załadować questów"
   },
   "adjectiveDeclinationArticle": {
     "title": "Po rodzajniku określonym",
@@ -628,7 +830,7 @@
     "score": "Średni wynik:"
   },
   "dailyPanel": {
-    "title": "Codzienne zadania",
+    "title": "Zadania dnia",
     "loading": "Ładowanie…"
   },
   "hoverTitle": {
@@ -641,6 +843,7 @@
   },
   "accountPanel": {
     "title": "Panel uczestnika",
+    "ranked": "Ranking",
     "articles": "Artiklusy",
     "level": "Poziom",
     "stats": "Statystyki",
@@ -1726,8 +1929,8 @@
     "cardText": "Stwórz 36 kart, aby zdobyć to osiągnięcie!",
     "grandmasterLabel": "Arcymistrz",
     "grandmasterText": "Ułóż łącznie 500 zdań na wszystkich poziomach.",
-    "duelLabel": "Mistrz pojedynków",
-    "duelText": "Wygraj 250 razy na wszystkich poziomach.",
+    "duelLabel": "Mistrz zdań",
+    "duelText": "Ułóż poprawnie 250 zdań na dowolnym poziomie w trybie solo",
     "edgeLabel": "Na krawędzi",
     "edgeText": "Zrób serię 50 słów w trudnym trybie. Czas nie może spaść poniżej 2 sekund.",
     "firstArtiklusLabel": "Pierwsza waluta",
@@ -1999,7 +2202,8 @@
     "victory": "Zwycięstwo",
     "victoryText": "Byłeś szybszy i bystrzejszy! Świetna robota!",
     "loss": "Porażka",
-    "lossText": "Tym razem przeciwnik był silniejszy. Nie martw się, spróbuj ponownie!"
+    "lossText": "Tym razem przeciwnik był silniejszy. Nie martw się, spróbuj ponownie!",
+    "end": "Gratulacje! Ćwiczenie zakończone"
   },
   "nav": {
     "training": "Nauka",

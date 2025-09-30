@@ -598,6 +598,7 @@ watch(currentTopicData, initLottieIcon);
   border: 3px solid #1e1e1e;
   border-radius: 16px;
   padding: 15px;
+  font-weight: 600;
   font-size: 1.2rem;
   transition: all 0.1s ease-in-out;
   box-shadow: 4px 4px 0px #1e1e1e;
@@ -607,10 +608,11 @@ watch(currentTopicData, initLottieIcon);
 .practice-area__button:hover {
   transform: translate(2px, 2px);
   background: #ffe04d;
+  box-shadow: 1px 1px 0 black;
 }
 
 .practice-area__button:active {
-  transform: translate(4px, 4px);
+  transform: translate(2px, 2px);
   box-shadow: none;
 }
 

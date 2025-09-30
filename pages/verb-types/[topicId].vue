@@ -9,33 +9,21 @@
         {{ t('prasens.score') }} {{ store.score }}
       </div>
     </header>
+
     <main class="quiz-main-content">
       <div v-if="loading" class="fullscreen-state">
         <p>{{ t('prasens.loading') }}</p>
       </div>
+
       <div v-else-if="store.quizCompleted" class="finish-screen">
         <CelebrationFireworks
-            v-model="showCelebration"
-            ref="celebration"
-            :score="store.score"
-            :total="store.currentQuestions.length"
-            :elapsed="elapsed"
-            :pointsStart="prevPoints"
-            :expStart="prevExp"
-            :levelStart="prevLevel"
-            :award="failMode ? 0 : AWARD"
-            :levelUpXp="LEVEL_UP_XP"
-            :showStats="!failMode"
-            :pieces="460"
-            :sparkCount="32"
-            :burstsCount="28"
-            :area-x="[10, 90]"
-            :area-y="[15, 75]"
-            :title="failMode ? FINISH_UI.tryAgainTitle : FINISH_UI.winTitle"
-            :resultLabel="FINISH_UI.result"
-            :timeLabel="FINISH_UI.time"
-            :pointsLabel="FINISH_UI.points"
-            :levelLabel="FINISH_UI.level"
+            :key="`cw-${startExpLocal}-${targetExpLocal}-${startPointsLocal}-${targetPointsLocal}-${startLevelLocal}-${endLevelLocal}`"
+            :start-exp="startExpLocal"
+            :target-exp="targetExpLocal"
+            :start-points="startPointsLocal"
+            :target-points="targetPointsLocal"
+            :level-start="startLevelLocal"
+            :level-end="endLevelLocal"
         >
           <div class="actions">
             <button class="btn primary" @click="startQuiz">{{ t('prasens.again') }}</button>
@@ -43,6 +31,7 @@
           </div>
         </CelebrationFireworks>
       </div>
+
       <div v-else-if="store.activeQuestion" class="quiz-content-comic">
         <div class="question-card-comic">
           <SoundBtn :text="fullSentence"/>
@@ -52,6 +41,7 @@
             <span>{{ store.activeQuestion.question.split('___')[1] }}</span>
           </p>
         </div>
+
         <div class="options-grid-comic">
           <button
               v-for="option in store.activeQuestion.options"
@@ -64,11 +54,13 @@
             {{ option }}
           </button>
         </div>
+
         <div class="footer-controls-comic">
           <div v-if="store.feedback" class="feedback-message-comic" :class="store.feedback">
             <span v-if="store.feedback === 'correct'">{{ t('prasens.correct') }}</span>
             <span v-else>{{ t('prasens.wrong') }} {{ store.activeQuestion.answer }}</span>
           </div>
+
           <button
               v-if="store.feedback === null"
               @click="store.checkAnswer()"
@@ -77,6 +69,7 @@
           >
             {{ t('prasens.check') }}
           </button>
+
           <button
               v-else
               @click="store.nextQuestion()"
@@ -91,123 +84,99 @@
 </template>
 
 <script setup>
-import {ref, onMounted, watch, nextTick} from 'vue';
-import {useQuizStore } from '../../../store/adjectiveStore.js';
+import {ref, computed, onMounted, watch} from 'vue'
+import {useRoute, useRouter} from 'vue-router'
+import {useSeoMeta} from '#imports'
+import {useI18n} from 'vue-i18n'
+
+import {useQuizStore} from '../../../store/adjectiveStore.js'
 import {userlangStore} from '../../store/learningStore.js'
-import {useRoute, useRouter} from 'vue-router';
-import CelebrationFireworks from "~/src/components/CelebrationFireworks.vue";
-import {useRewardEngine} from '../../composables/useRewardEngine.js'
+import CelebrationFireworks from '~/src/components/CelebrationFireworks.vue'
 import SoundBtn from '../../src/components/soundBtn.vue'
-import { useSeoMeta } from '#imports'
 
-useSeoMeta({
-  robots: 'noindex, nofollow'
-})
+useSeoMeta({robots: 'noindex, nofollow'})
 
-const FINISH_UI = {
-  winTitle: 'Поздравляем!',
-  tryAgainTitle: 'Ещё чуть-чуть — и получится!',
-  result: 'Результат',
-  time: 'Время',
-  points: 'Артиклюсы',
-  level: 'Уровень',
-}
-const router = useRouter();
-const route = useRoute();
-const store = useQuizStore();
+const {t} = useI18n()
+const route = useRoute()
+const router = useRouter()
+const store = useQuizStore()
 const learning = userlangStore()
-const loading = ref(true);
-const {t} = useI18n();
-const category = 'verb';
-const {topicId} = route.params;
 
-const showCelebration = ref(false)
-const celebration = ref(null)
-const startedAt = ref(Date.now())
-const elapsed = ref('0:00')
+const loading = ref(true)
+const category = 'verb'
+const {topicId} = route.params
 
+// Награда/порог
+const AWARD_EXP = 5
+const AWARD_POINTS = 5
+const LEVEL_UP_XP = 100
+const DELAY_MS = 4000
+
+// Текст для озвучки
 const fullSentence = computed(() => {
-  const quest = store.activeQuestion
-  if (!quest) return ''
-  const [pre , post = ''] = quest.question.split('___')
+  const q = store.activeQuestion
+  if (!q) return ''
+  const [pre, post = ''] = q.question.split('___')
   const word = store.selectedOption || ''
   return `${pre}${word}${post}`
 })
 
-const AWARD = 5
-const LEVEL_UP_XP = 100
-const PASS_RATIO = 0.8
+// Локальные значения для салюта (EXP по модулю 100 и анимация уровня без ремоунта)
+const startExpLocal = ref(0)
+const targetExpLocal = ref(0)
+const startPointsLocal = ref(0)
+const targetPointsLocal = ref(0)
+const startLevelLocal = ref(0)
+const endLevelLocal = ref(0)
 
-const prevPoints = ref(0)
-const prevExp = ref(0)
-const prevLevel = ref(1)
-const failMode = ref(false)
-
-function fmt(ms) {
-  const s = Math.floor(ms / 1000)
-  const m = Math.floor(s / 60)
-  const sec = s % 60
-  return `${m}:${sec.toString().padStart(2, '0')}`
-}
-
-async function startQuiz () {
+async function startQuiz() {
   loading.value = true
   const fileName = `/verb-types/${category}-${topicId}.json`
-  store.setContext({
-    modeId: category,
-    topicId,
-    fileName,
-    contentVersion: 'v1',
-  })
+  store.setContext({modeId: category, topicId, fileName, contentVersion: 'v1'})
   await store.startNewQuiz(fileName)
   loading.value = false
 }
 
-const backTo = () => {
-  router.back()
-}
-const {finalize} = useRewardEngine(learning)
+const backTo = () => router.back()
 
 onMounted(async () => {
   loading.value = true
   const fileName = `/verb-types/${category}-${topicId}.json`
-  store.setContext({
-    modeId: category,
-    topicId,
-    fileName,
-    contentVersion: 'v1',
-  })
-  await store.restoreOrStart({
-    modeId: category,
-    topicId,
-    fileName,
-    contentVersion: 'v1',
-  })
+  store.setContext({modeId: category, topicId, fileName, contentVersion: 'v1'})
+  await store.restoreOrStart({modeId: category, topicId, fileName, contentVersion: 'v1'})
   await learning.loadFromFirebase?.()
   loading.value = false
 })
 
-watch(() => store.quizCompleted,
-    async (done) => {
-      if (!done) return
-      elapsed.value = fmt(Date.now() - startedAt.value)
-      const res = await finalize({
-        score: store.score,
-        total: store.currentQuestions.length || 10,
-        passRatio: PASS_RATIO,
-        baseAward: AWARD,
-        levelUpXp: LEVEL_UP_XP,
-        save: true,
-      })
-      prevPoints.value = res.pointsStart
-      prevExp.value = res.expStart
-      prevLevel.value = res.levelStart
-      failMode.value = !res.ok
-      await nextTick()
-      showCelebration.value = true
-      celebration.value?.play()
-    })
+// Завершение квиза → посчитать целевые значения и отдать их салюту
+watch(() => store.quizCompleted, async (done) => {
+  if (!done) return
 
+  const curExp = Number(learning.exp || 0)      // остаток до 100 (0..99)
+  const curPoints = Number(learning.points || 0)
+  const curLevel = Number(learning.isLeveling || 0)
+
+  const rawTargetExp = curExp + AWARD_EXP
+  const levelUps = Math.floor(rawTargetExp / LEVEL_UP_XP)
+  const endLevel = curLevel + levelUps
+  const endExpMod = rawTargetExp % LEVEL_UP_XP
+
+  // значения для анимации (99 + 5 → 100 → 0 → 4 визуально)
+  startExpLocal.value = curExp
+  targetExpLocal.value = endExpMod
+  startPointsLocal.value = curPoints
+  targetPointsLocal.value = curPoints + AWARD_POINTS
+  startLevelLocal.value = curLevel
+  endLevelLocal.value = endLevel
+
+  // фактическая запись прогресса; handleLeveling сам перенесёт 100→0 и ++уровень
+  setTimeout(async () => {
+    learning.exp = rawTargetExp
+    learning.points = targetPointsLocal.value
+    learning.handleLeveling?.()
+    await learning.saveToFirebase?.()
+  }, DELAY_MS)
+})
 </script>
 
 <style scoped>
@@ -234,13 +203,9 @@ watch(() => store.quizCompleted,
   font-family: "Nunito", sans-serif;
   letter-spacing: 1.5px;
   min-height: 100vh;
-  padding-top: 100px;
 }
 
 .quiz-header-comic {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   z-index: 1000;
   display: flex;
@@ -252,6 +217,7 @@ watch(() => store.quizCompleted,
   font-size: 1.8rem;
   border-bottom: 3px solid #000;
   box-shadow: 0 4px 0 #000;
+  margin-bottom: 15px;
 }
 
 .quiz-main-content {
@@ -259,7 +225,6 @@ watch(() => store.quizCompleted,
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 1.5rem;
   box-sizing: border-box;
 }
 
@@ -270,9 +235,11 @@ watch(() => store.quizCompleted,
 }
 
 .quiz-content-comic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   max-width: 900px;
-  display: flex;
   flex-direction: column;
   gap: 2rem;
   padding: 15px;
@@ -296,15 +263,19 @@ watch(() => store.quizCompleted,
 }
 
 .question-card-comic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #fff;
   padding: 2rem;
   transform: rotate(.7deg);
 }
 
 .question-text-comic {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   text-align: center;
   color: #000;
+  margin-left: 8px;
 }
 
 .blank-space {
@@ -416,6 +387,15 @@ watch(() => store.quizCompleted,
   gap: 10px;
 }
 
+.btn {
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 3px solid #000;
+  box-shadow: 6px 6px 0 #000;
+  cursor: pointer;
+  font-weight: 800;
+}
+
 .btn.primary {
   background: #60a5fa;
   color: #0b1220;
@@ -426,40 +406,39 @@ watch(() => store.quizCompleted,
   color: #e5edff;
 }
 
-.btn {
-  padding: 14px 16px;
-  border-radius: 12px;
-  border: 3px solid #000;
-  box-shadow: 6px 6px 0 #000;
-  cursor: pointer;
-  font-weight: 800;
-}
 @media (max-width: 767px) {
   .quiz-header-comic {
     gap: 10px;
     padding: 10px;
   }
+
   .header-item {
     font-size: 18px;
   }
+
   .btn__back {
     padding: 10px;
     font-size: 1rem;
   }
+
   .question-text-comic {
     font-size: 1.3rem;
   }
+
   .option-button-comic {
     font-size: 1.3rem;
   }
+
   .action-button {
     font-size: 1.4rem;
     font-family: "Nunito", sans-serif;
     font-weight: 600;
   }
+
   .quiz-main-content {
     padding: 5px;
   }
+
   .question-card-comic {
     padding: 1rem;
   }

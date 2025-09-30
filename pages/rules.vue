@@ -131,7 +131,7 @@
 								/>
 								<span v-if="showResults"
 									  :class="['quiz-result', isCorrect(index) ? 'correct' : 'incorrect']">
-                           {{ isCorrect(index) ? '✔️' : '❌ (' + word.article + ')' }}
+                           {{ isCorrect(index) ? '✔️' : `'❌ ${word.article}` }}
                         </span>
 							</div>
 						</div>
@@ -190,7 +190,7 @@
 	}
 
 	.rules__wrapper {
-		max-width: 880px;
+		max-width: 1000px;
 		margin: 0 auto;
 		padding: 0 1.5rem;
 	}
@@ -205,6 +205,7 @@
 	}
 
 	.rules__title {
+    width: 100%;
     font-family: "Nunito", sans-serif;
 		font-size: 2.5rem;
 		font-weight: 600;

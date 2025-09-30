@@ -185,31 +185,23 @@ const routeToMain = () => {
   router.push('/')
 }
 const attemptToStartExam = (levelId) => {
-  if (consentGiven.value) {
+  if (authStore.voiceConsentGiven) {
     router.push(`/exams/level/${levelId}`)
   } else {
     showConsentModal.value = true
   }
 }
-const handleConsentGiven = () => {
-  consentGiven.value = true
+const handleConsentGiven = async () => {
+  await authStore.setVoiceConsent(true)
   showConsentModal.value = false
-  sessionStorage.setItem('voiceConsentGiven', 'true')
-  if (consentGiven.value) {
-    showHint.value = true
-    setTimeout(() => {
-      showHint.value = false
-    }, 10000)
-  }
+  showHint.value = true
+  setTimeout(() => showHint.value = false, 10000)
 }
 
-onMounted(() => {
+onMounted(async () => {
+  await authStore.initAuth()
   examStore.loadTopics('/exams/exam-A1.json')
-  if (sessionStorage.getItem('voiceConsentGiven') === 'true') {
-    consentGiven.value = true
-  } else {
-    showConsentModal.value = true
-  }
+  showConsentModal.value = !authStore.voiceConsentGiven
 })
 
 </script>

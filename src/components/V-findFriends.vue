@@ -135,6 +135,11 @@ const toListFriends = () => {
   border: 2px solid var(--border);
 }
 
+
+.friend__dots-icon {
+  transform: rotate(90deg);
+}
+
 .friend_list-btn {
   font-size: 1.2rem;
   padding: 10px 15px;
@@ -165,7 +170,6 @@ const toListFriends = () => {
   display: flex;
   align-items: center;
   gap: 10px
-
 }
 
 .friend_add__btn-wrapper {
@@ -187,6 +191,7 @@ const toListFriends = () => {
 .points-card__title {
   padding: 15px 0;
   font-size: 1.7rem;
+  color: var(--titleColor);
 }
 
 .list {

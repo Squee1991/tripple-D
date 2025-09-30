@@ -29,7 +29,7 @@
         </div>
       </section>
       <section class="about__section">
-        <h2 class="about__section-title">Что внутри платформы</h2>
+        <h2 class="about__section-title">{{ t('aboutPageTitles.insideTitle')}}</h2>
         <div class="about__grid">
           <article
               class="about__card"
@@ -50,7 +50,7 @@
         </div>
       </section>
       <section class="about__section">
-        <h2 class="about__section-title">Теория и практика</h2>
+        <h2 class="about__section-title">{{ t('aboutPageTitles.theoryTitle')}}</h2>
         <div class="about__double">
           <div class="about__double-item" v-for="theoryItem in theoryPracticeRef" :key="theoryItem.id">
             <div class="about__double-image">
@@ -73,7 +73,7 @@
         </div>
       </section>
       <section class="about__section">
-        <h2 class="about__section-title">Практика артиклей: 5 режимов</h2>
+        <h2 class="about__section-title">{{ t('aboutPageTitles.articleTitle')}}</h2>
         <ul class="about__modes">
           <li class="about__mode-item" v-for="modeItem in articleModesRef" :key="modeItem.id">
             <span class="about__mode-badge">{{ modeItem.orderNumber }}</span>
@@ -85,7 +85,7 @@
         </ul>
       </section>
       <section class="about__section">
-        <h2 class="about__section-title">Наша миссия</h2>
+        <h2 class="about__section-title">{{ t('aboutPageTitles.mission')}}</h2>
         <div class="about__mission">
           <div class="about__mission-image">
             <img
@@ -97,7 +97,7 @@
           </div>
           <div class="about__mission-content">
             <p class="about__mission-lead">
-              Делаем обучение доступным и интерактивным для людей из любой страны мира — с элементами игры, квестами и марафонами.
+              {{ t('aboutPageTitles.missionLead')}}
             </p>
             <ul class="about__values">
               <li class="about__value-item" v-for="valueItem in valueItemsRef" :key="valueItem.id">
@@ -110,24 +110,17 @@
       </section>
       <section class="about__cta">
         <div class="about__cta-content">
-          <h2 class="about__cta-title">{{ callToActionRef.title }}</h2>
-          <p class="about__cta-text">{{ callToActionRef.text }}</p>
+          <h2 class="about__cta-title">{{ t(callToActionRef.title) }}</h2>
+          <p class="about__cta-text">{{ t(callToActionRef.text) }}</p>
         </div>
-        <div class="about__cta-image">
-          <img
-              class="about__image about__image--cta"
-              :src="callToActionRef.imageUrl"
-              :alt="callToActionRef.imageAlt"
-              loading="lazy"
-          />
-        </div>
+        <button @click="routeToPath" class="btn__start">{{ t('locationQuests.start')}}</button>
       </section>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import {ref} from 'vue'
 import Puzzle from '../assets/images/about-icons/puzzle.svg'
 import Podium from '../assets/images/about-icons/podium.svg'
 import Awards from '../assets/images/about-icons/Awards.svg'
@@ -140,124 +133,133 @@ import Target from 'assets/images/about-icons/Target.svg'
 import Article from '../assets/images/about-icons/Article.png'
 import Theory from '../assets/images/about-icons/theory.svg'
 import Practice from '../assets/images/about-icons/practice.svg'
+import { useRouter } from "vue-router"
+const { t } = useI18n()
+const router = useRouter()
+
+const routeToPath = () => {
+  router.push('/')
+}
+
 const heroContentRef = ref({
-  title: 'О нас',
-  subtitle: 'Мы — платформа для практики немецкого языка с элементами игры: рейтинги, достижения, дуэли, квесты и многое другое.',
+  title: t('aboutHeroContentRef.title'),
+  subtitle: t('aboutHeroContentRef.sbTitle'),
   imageUrl: Puzzle,
-  imageAlt: 'Герой секции: обучение немецкому в игровом стиле'
+  imageAlt: 'Learn-german image'
 })
 const missionPointsRef = ref([
-  { id: 'mission-global', text: 'Доступно для каждой страны и каждого устройства' },
-  { id: 'mission-interactive', text: 'Интерактивные задания и дуэли в дисциплине составления предложений' },
-  { id: 'mission-fun', text: 'Обучение через игру: квесты, награды и марафоны' }
+  {id: 'mission-global', text: t('aboutHeroContentRef.firstText')},
+  {id: 'mission-interactive', text: t('aboutHeroContentRef.secondText')},
+  {id: 'mission-fun', text: t('aboutHeroContentRef.thirdText')}
 ])
 const featureItemsRef = ref([
   {
     id: 'feature-rating',
-    title: 'Таблица рейтинга',
-    description: 'Соревнуйся и поднимайся в глобальном топе.',
+    title: t('aboutFeatureItemsRef.firstTitle'),
+    description: t('aboutFeatureItemsRef.firstDescription'),
     imageUrl: Podium,
-    imageAlt: 'Иконка таблицы рейтинга'
+    imageAlt: 'Ranked icon'
   },
   {
     id: 'feature-achievements',
-    title: 'Достижения и награды',
-    description: 'Открывай редкие ачивки и получай награды за прогресс.',
+    title: t('aboutFeatureItemsRef.secondTitle'),
+    description: t('aboutFeatureItemsRef.secondDescription'),
     imageUrl: Awards,
-    imageAlt: 'Иконка достижений и наград'
+    imageAlt: 'Reward icon'
   },
   {
     id: 'feature-duel',
-    title: 'Дуэль: составь предложение',
-    description: 'Онлайн-поединки на скорость и точность в синтаксисе.',
+    title: t('aboutFeatureItemsRef.thirdTitle'),
+    description: t('aboutFeatureItemsRef.thirdDescription'),
     imageUrl: Duel,
-    imageAlt: 'Иконка дуэелей по составлению предложений'
+    imageAlt: 'Duel icon'
   },
   {
     id: 'feature-articles',
-    title: 'Практика артиклей',
-    description: 'Отрабатывай der/die/das в 5 уникальных режимах.',
+    title: t('aboutFeatureItemsRef.fourthTitle'),
+    description: t('aboutFeatureItemsRef.fourthDescription'),
     imageUrl: Article,
-    imageAlt: 'Тренажёр артиклей'
+    imageAlt: 'Article icon'
   },
   {
     id: 'feature-ai-tests',
-    title: 'Тесты с проверкой от ИИ',
-    description: 'Пиши, говори и получай мгновенную обратную связь.',
+    title: t('aboutFeatureItemsRef.fifthTitle'),
+    description: t('aboutFeatureItemsRef.fifthDescription'),
     imageUrl: Test,
-    imageAlt: 'Проверка работ ИИ'
+    imageAlt: 'AI icon'
   },
   {
     id: 'feature-map',
-    title: 'Карта изучения',
-    description: 'Прокачивайся по дорожной карте тем и уровней.',
+    title: t('aboutFeatureItemsRef.sixthTitle'),
+    description: t('aboutFeatureItemsRef.sixthDescription'),
     imageUrl: Map,
-    imageAlt: 'Карта навыков и тем'
+    imageAlt: 'Map title'
   },
   {
     id: 'feature-themes',
-    title: 'Тематические темы',
-    description: 'Учись по самым полезным темам повседневной речи.',
+    title: t('aboutFeatureItemsRef.seventhTitle'),
+    description: t('aboutFeatureItemsRef.seventhDescription'),
     imageUrl: Thematic,
-    imageAlt: 'Список тематик'
+    imageAlt: 'list themen icon'
   },
   {
     id: 'feature-quests',
-    title: 'Квесты и марафоны',
-    description: 'Проходи цепочки заданий и участвуй в марафонах артиклей.',
+    title: t('aboutFeatureItemsRef.eighthTitle'),
+    description: t('aboutFeatureItemsRef.eighthDescription'),
     imageUrl: Marathon,
-    imageAlt: 'Квестовая цепочка'
+    imageAlt: 'Quest icon'
   }
 ])
 const theoryPracticeRef = ref([
   {
     id: 'theory-articles',
-    title: 'Теория ',
-    description:
-        'Теория по различным темам. Прилагательные существительные и т.д',
+    title: t('aboutTheoryPracticeRef.title'),
+    description: t('aboutTheoryPracticeRef.description'),
     imageUrl: Practice,
-    imageAlt: 'Теория по артиклям',
+    imageAlt: 'Theory icon',
     points: [
-      { id: 'articles-rules', text: 'Правила употребления ' },
-      { id: 'articles-exceptions', text: 'Исключения и устойчивые формы' }
+      {id: 'articles-rules', text: t('aboutTheoryPracticeRef.textOne')},
+      {id: 'articles-exceptions', text: t('aboutTheoryPracticeRef.textTwo')}
     ]
   },
   {
     id: 'theory-adj-verbs',
-    title: 'Прилагательные и глаголы',
-    description:
-        'Склонение прилагательных, времена и формы глаголов — с наглядными таблицами и практикой.',
+    title: t('aboutTheoryPracticeRef.titleTwo'),
+    description: t('aboutTheoryPracticeRef.descriptionTwo'),
     imageUrl: Theory,
-    imageAlt: 'практика прилагательным и глаголам',
+    imageAlt: 'Practice verbs icon',
     points: [
-      { id: 'adj-declension', text: 'Склонение прилагательных по падежам' },
-      { id: 'verbs-practice', text: 'Практика спряжений и времён' }
+      {id: 'adj-declension', text: t('aboutTheoryPracticeRef.secondTextOne')},
+      {id: 'verbs-practice', text: t('aboutTheoryPracticeRef.secondTextTwo')}
     ]
   }
 ])
 const articleModesRef = ref([
-  { id: 'mode-1', orderNumber: '01', title: 'Вписать артикль', description: 'Введи корректный der/die/das.' },
-  { id: 'mode-2', orderNumber: '02', title: 'Собери слово', description: 'Собери слово и выбери артикль.' },
-  { id: 'mode-3', orderNumber: '03', title: 'Слово+Артикль', description: 'Соотнеси слово с правильным артиклем.' },
-  { id: 'mode-4', orderNumber: '04', title: 'Множественное число', description: 'Выбери форму и артикль множественного.' },
-  { id: 'mode-5', orderNumber: '05', title: 'Аудио-режим', description: 'Слушай и определяй артикль на слух.' }
+  {id: 'mode-1', orderNumber: '01', title: t('aboutArticleModesRef.modeOneTitle'), description: t('aboutArticleModesRef.modeOneDescription')},
+  {id: 'mode-2', orderNumber: '02', title: t('aboutArticleModesRef.modeTwoTitle'), description: t('aboutArticleModesRef.modeTwoDescription')},
+  {id: 'mode-3', orderNumber: '03', title: t('aboutArticleModesRef.modeThreeTitle'), description: t('aboutArticleModesRef.modeThreeDescription')},
+  {id: 'mode-4', orderNumber: '04', title: t('aboutArticleModesRef.modeFourTitle'), description: t('aboutArticleModesRef.modeFourDescription')},
+  {id: 'mode-5', orderNumber: '05', title: t('aboutArticleModesRef.modeFiveTitle'), description: t('aboutArticleModesRef.modeFiveDescription')}
 ])
 const valueItemsRef = ref([
-  { id: 'value-access', text: 'Доступность и понятность' },
-  { id: 'value-engagement', text: 'Увлекательность через игру' },
-  { id: 'value-feedback', text: 'Мгновенная обратная связь' },
-  { id: 'value-progress', text: 'Прозрачный прогресс и цели' }
+  {id: 'value-access', text: t('aboutValueItemsRef.textOne')},
+  {id: 'value-engagement', text: t('aboutValueItemsRef.textTwo')},
+  {id: 'value-feedback', text: t('aboutValueItemsRef.textThree')},
+  {id: 'value-progress', text: t('aboutValueItemsRef.textFour')},
+  {id: 'value-ui', text: t('aboutValueItemsRef.textFive')}
 ])
 const callToActionRef = ref({
-  title: 'Готов начать?',
-  text: 'Присоединяйся и прокачай немецкий в своём темпе — от артиклей до уверенных предложений.',
+  title: t('aboutValueItemsRef.ready'),
+  text: t('aboutValueItemsRef.connect'),
 })
+
 </script>
 
 <style scoped>
 * {
   font-family: "Nunito", sans-serif;
 }
+
 .about {
   --about-bg: #0f0f15;
   --about-fg: #f5f7fb;
@@ -270,6 +272,22 @@ const callToActionRef = ref({
   padding: 65px 0 80px;
 }
 
+.btn__start {
+  background: #007bff;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  min-width: 260px;
+  font-size: 1.4rem;
+}
+
+.btn__start:hover{
+  background: #0056b3;
+}
+
 .about__wrapper {
   width: 100%;
   max-width: 1200px;
@@ -280,7 +298,7 @@ const callToActionRef = ref({
 .link__back {
   font-weight: bold;
   position: absolute;
-  top:10px;
+  top: 10px;
   left: 20px;
   width: 40px;
 }
@@ -325,6 +343,7 @@ const callToActionRef = ref({
 
 .about__image--hero {
   max-width: 300px;
+  min-width: 200px;
 }
 
 .about__mission-list {
@@ -346,7 +365,7 @@ const callToActionRef = ref({
   margin-top: 6px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--about-accent), var(--about-accent-2));
-  box-shadow: 0 0 0 3px rgba(139,108,255,0.15);
+  box-shadow: 0 0 0 3px rgba(139, 108, 255, 0.15);
 }
 
 .about__mission-text {
@@ -371,18 +390,18 @@ const callToActionRef = ref({
 }
 
 .about__card {
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.0));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.0));
   border: 2px solid #25293a;
   border-radius: 16px;
   padding: 16px;
   transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
-  box-shadow: 4px 4px 0  #25293a;
+  box-shadow: 4px 4px 0 #25293a;
 }
 
 .about__card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.35);
-  border-color: rgba(139,108,255,0.45);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  border-color: rgba(139, 108, 255, 0.45);
 }
 
 .about__card-image-wrapper {
@@ -391,7 +410,7 @@ const callToActionRef = ref({
   overflow: hidden;
   margin-bottom: 12px;
   background: #0c0e14;
-  border: 1px solid  #25293a;
+  border: 1px solid #25293a;
 }
 
 .about__image--card {
@@ -399,7 +418,8 @@ const callToActionRef = ref({
 }
 
 .about__card-title {
-  font-size: 18px;
+  font-size: 17px;
+  font-weight: 600;
   margin: 6px 0 6px 0;
 }
 
@@ -417,11 +437,11 @@ const callToActionRef = ref({
 }
 
 .about__double-item {
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.0));
-  border: 3px solid  #25293a;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.0));
+  border: 3px solid #25293a;
   border-radius: 16px;
   padding: 18px;
-  box-shadow: 4px 4px 0  #25293a;
+  box-shadow: 4px 4px 0 #25293a;
 }
 
 .about__double-image {
@@ -474,11 +494,11 @@ const callToActionRef = ref({
 }
 
 .about__mode-item {
-  border: 3px solid  #25293a;
+  border: 3px solid #25293a;
   border-radius: 14px;
   padding: 14px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.0));
-  box-shadow: 4px 4px 0  #25293a;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.0));
+  box-shadow: 4px 4px 0 #25293a;
 }
 
 .about__mode-badge {
@@ -501,6 +521,7 @@ const callToActionRef = ref({
   font-size: 16px;
   margin: 2px 0 4px 0;
 }
+
 .about__mode-text {
   font-size: 14px;
   color: var(--titleColor);
@@ -513,7 +534,7 @@ const callToActionRef = ref({
 }
 
 .about__mission-image {
-  border: 1px solid  #25293a;
+  border: 1px solid #25293a;
   border-radius: 18px;
   padding: 8px;
   background: #0c0e14;
@@ -563,12 +584,14 @@ const callToActionRef = ref({
   display: flex;
   align-items: center;
   gap: 18px;
-  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .about__cta-title {
   font-size: 24px;
   margin: 0 0 8px 0;
+  text-align: center;
 }
 
 .about__cta-text {
@@ -577,33 +600,31 @@ const callToActionRef = ref({
   margin: 0;
 }
 
-.about__cta-image {
-  width: 400px;
-  border: 1px solid  #25293a;
-  border-radius: 14px;
-  overflow: hidden;
-  background: #0c0e14;
-}
-
 @media (max-width: 1023px) {
   .about__grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
   .about__modes {
     grid-template-columns: repeat(3, 1fr);
   }
+
   .about__hero {
     grid-template-columns: 1fr;
   }
+
   .about__mission {
     grid-template-columns: 1fr;
   }
+
   .about__cta {
     grid-template-columns: 1fr;
   }
+
   .about__title {
     text-align: center;
   }
+
   .about__section-title {
     font-size: 30px;
     text-align: center;
@@ -614,20 +635,38 @@ const callToActionRef = ref({
   .about {
     padding: 32px 0 56px;
   }
-  .about__mission-image{
+
+  .about__mission-image {
     display: none;
   }
+
   .about__grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .about__mission-lead {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
   .about__double {
     grid-template-columns: 1fr;
   }
+
   .about__modes {
     grid-template-columns: 1fr 1fr;
   }
+
   .about__title {
     font-size: 32px;
+  }
+}
+
+@media (max-width: 440px) {
+  .about__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .about__card {
+    padding: 24px;
   }
 }
 </style>

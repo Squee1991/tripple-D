@@ -36,14 +36,11 @@
 
 <script setup>
 import {ref, computed, onMounted, onBeforeUnmount} from 'vue'
-
 import VPoints from "~/src/components/V-points.vue";
-// import VStatistics from "~/src/components/V-statistics.vue";
 import Vdaily from "~/src/components/Vdaily.vue";
 import VAchievements from "~/src/components/V-achievements.vue";
 import VLands from "~/src/components/V-lands.vue";
 import Location from '../../assets/images/location.svg'
-// import Stats from '../../assets/images/stats.svg'
 import Daily from '../../assets/images/daily.svg'
 import Card from '../../assets/images/card.svg'
 
@@ -100,6 +97,7 @@ onBeforeUnmount(() => {
   height: 100dvh;
   min-height: 0;
   align-items: stretch;
+  gap: 10px;
 }
 
 .stats__wrapper {

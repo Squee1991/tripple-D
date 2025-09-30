@@ -9,11 +9,11 @@ import {
     getDocs,
     collection,
     query,
-    orderBy
+    orderBy,
+    deleteDoc
 } from 'firebase/firestore'
 import { userAuthStore } from './authStore.js'
-import { useAchievementStore } from './achievementStore.js'
-import { dailyStore} from "./store/dailyStore.js";
+import { dailyStore } from './dailyStore.js'
 
 async function getUser() {
     const auth = getAuth()
@@ -43,16 +43,12 @@ export const useGuessWordStore = defineStore('guessWord', () => {
     const lose = ref(false)
     const timeStarted = ref(null)
     const timeFinished = ref(null)
-    const timeSpent = computed(() =>
-        timeStarted.value && timeFinished.value
-            ? Math.floor((timeFinished.value - timeStarted.value) / 1000)
-            : null
-    )
-
+    const timeSpent = computed(() => timeStarted.value && timeFinished.value ? Math.floor((timeFinished.value - timeStarted.value) / 1000) : null)
     const alphabet = 'QWERTZUIOPÜASDFGHJKLÖÄYXCVBNM-'.split('')
     const loadedWords = ref([])
     const currentWordObj = ref(null)
     const guessedCount = computed(() => guessedWords.value.length)
+    const guessProgressDocRef = (uid) => doc(db, 'users', uid, 'guessProgress')
 
     function resetState() {
         answer.value = ''
@@ -94,8 +90,8 @@ export const useGuessWordStore = defineStore('guessWord', () => {
 
     async function loadLeaderboard() {
         const col = collection(db, 'leaderboard_guess')
-        const q = query(col, orderBy('guessed', 'desc'))
-        const snap = await getDocs(q)
+        const qy = query(col, orderBy('guessed', 'desc'))
+        const snap = await getDocs(qy)
         const list = []
         snap.forEach(docSnap => {
             const data = docSnap.data()
@@ -113,7 +109,7 @@ export const useGuessWordStore = defineStore('guessWord', () => {
         const user = await getUser()
         resetState()
         if (!user) return
-        const snap = await getDoc(doc(db, 'guessProgress', user.uid))
+        const snap = await getDoc(guessProgressDocRef(user.uid))
         if (snap.exists()) {
             const data = snap.data()
             if (Array.isArray(data.guessedWords)) guessedWords.value = data.guessedWords
@@ -129,13 +125,14 @@ export const useGuessWordStore = defineStore('guessWord', () => {
         if (!user) return
         try {
             await setDoc(
-                doc(db, 'guessProgress', user.uid),
+                guessProgressDocRef(user.uid),
                 {
                     guessedWords: guessedWords.value,
                     guessedFastWords: guessedFastWords.value,
                     guessedOnLastTryWords: guessedOnLastTryWords.value,
                     guessedPerfectWords: guessedPerfectWords.value,
-                    guessedSafeWords: guessedSafeWords.value
+                    guessedSafeWords: guessedSafeWords.value,
+                    updatedAt: Date.now(),
                 },
                 { merge: true }
             )
@@ -216,6 +213,7 @@ export const useGuessWordStore = defineStore('guessWord', () => {
     }
 
     const displayMasked = computed(() => masked.value.map(l => (l || '_')).join(' '))
+
     watch(win, async won => {
         if (!won || !answer.value) return
         const word = answer.value
@@ -235,6 +233,18 @@ export const useGuessWordStore = defineStore('guessWord', () => {
         if (newUid) loadGuessProgress()
         else resetState()
     }, { immediate: true })
+
+
+    async function migrateGuessProgress() {
+        const user = await getUser()
+        if (!user) return
+        const oldRef = doc(db, 'guessProgress', user.uid)
+        const oldSnap = await getDoc(oldRef)
+        if (oldSnap.exists()) {
+            const data = oldSnap.data()
+            await setDoc(guessProgressDocRef(user.uid), { ...data, migratedAt: Date.now() }, { merge: true })
+        }
+    }
 
     return {
         answer,
@@ -262,6 +272,7 @@ export const useGuessWordStore = defineStore('guessWord', () => {
         saveGuessProgress,
         loadLeaderboard,
         hasInLeaderboard,
-        guessedCount
+        guessedCount,
+        migrateGuessProgress,
     }
 })

@@ -149,11 +149,26 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 
 	let completedSet = loadCompleted()
 
-	watch(() => authStore.uid, () => {
+	// Перезагрузка наборов при смене пользователя
+	watch(() => authStore.uid, (uid) => {
+		// начинаем «бут» — ничего не всплывает, пока не пересчитаем
+		isBooting.value = true
+		// подгружаем наборы под нового пользователя
 		shownSet = loadShown()
 		completedSet = loadCompleted()
-	})
+		// сбрасываем всё, что могло остаться от прошлого пользователя
+		resetAllProgress()
 
+		// обновляем ачивку «Начало коллекции» под нового пользователя
+		updateProgress('firstAward', shownSet.size)
+		updateProgress('collectionStart', shownSet.size)
+
+		// если uid пустой — выходим (вышли из аккаунта)
+		if (!uid) {
+			isBooting.value = false
+			return
+		}
+	})
 	const isBooting = ref(true)
 
 	function findById(id) {

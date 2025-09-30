@@ -11,7 +11,7 @@
       <ul class="qd__list">
         <li class="qd__item" v-for="quest in todayQuests" :key="quest.id">
           <div class="qd__body">
-            <h4 class="qd__name">{{ quest.title }}</h4>
+            <h4 class="qd__name">{{ t(quest.title) }}</h4>
             <div class="qd__barwrap">
               <progress class="qd__progress" :value="quest.currentValue" :max="quest.targetValue"></progress>
               <span class="qd__barlabel">{{ quest.currentValue }} / {{ quest.targetValue }}</span>
@@ -50,11 +50,6 @@ const {todayQuests, msLeft} = storeToRefs(store)
 const ready = ref(false)
 
 onMounted(async () => {
-  try {
-    await store.ensureCycleDoc()
-  } catch (e) {
-    console.warn(e)
-  }
   store.start()
   store.startAutoSync()
   ready.value = true

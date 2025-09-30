@@ -247,34 +247,6 @@ const backToMenu = () => {
 }
 let speakTimeout = null;
 
-// function speak(text) {
-//     if (!('speechSynthesis' in window)) {
-//         console.error('Браузер не поддерживает Web Speech API.');
-//         return;
-//     }
-//     clearTimeout(speakTimeout);
-//     window.speechSynthesis.cancel();
-//     if (!text) return;
-//     speakTimeout = setTimeout(() => {
-//         const utterance = new SpeechSynthesisUtterance(text);
-//         const langMap = {
-//             ru: 'ru-RU',
-//             en: 'en-US',
-//             de: 'de-DE',
-//             uk: 'uk-UA',
-//             pl: 'pl-PL',
-//             tr: 'tr-TR'
-//         };
-//         utterance.lang = langMap[locale.value] || locale.value;
-//         const voices = window.speechSynthesis.getVoices();
-//         const targetVoice = voices.find(voice => voice.lang === utterance.lang);
-//         if (targetVoice) {
-//             utterance.voice = targetVoice;
-//         }
-//         window.speechSynthesis.speak(utterance);
-//     }, 250);
-// }
-
 const currentTopicData = computed(() => topics.find(t => t.id === topic.value))
 
 const checkScreenSize = () => {

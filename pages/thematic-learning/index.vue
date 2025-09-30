@@ -203,6 +203,7 @@ watch(topic, loadThemeData)
 </template>
 
 <style>
+
 :root {
   --classroom-bg: #f0ebe5;
   --blackboard-bg: #2c3e50;
@@ -265,9 +266,6 @@ watch(topic, loadThemeData)
   transition: all 0.2s ease-in-out;
 }
 
-/*.back-card-button:hover {*/
-/*    transform: rotate(0deg) scale(1.05);*/
-/*}*/
 .back-card-button .pin {
   display: none;
 }
@@ -276,7 +274,7 @@ watch(topic, loadThemeData)
   font-size: 1.2rem;
   color: #1e1e1e;
   font-weight: 400;
-  font-family: 'Fredoka One', cursive;
+  font-family: "Nunito", sans-serif;
 }
 
 .level-selector {
@@ -368,9 +366,11 @@ watch(topic, loadThemeData)
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-4deg);
-  color: #f1c40f;
+  color: #ee4c4c;
   font-family: "Nunito", sans-serif;
   font-size: 2rem;
+  font-weight: bold;
+  width: 100%;
   z-index: 100;
   text-align: center;
 }
@@ -425,7 +425,6 @@ watch(topic, loadThemeData)
 }
 
 .theme__card-choice:hover {
-  transform: scale(1.1) !important;
   z-index: 10;
 }
 

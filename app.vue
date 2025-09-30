@@ -28,24 +28,26 @@ useHead({
     lang: computed(() => locale.value),
     dir: computed(() => 'ltr')
   },
-  title: 'German Corner — Учим немецкий легко и интересно в игровой форме',
+  title: t('useHeadApp.title'),
   meta: [
     {
       name: 'description',
-      content: 'German Corner — онлайн-платформа для изучения немецкого языка: грамматика, артикли, времена, упражнения и обучение в игровой форме.'
+      content: t('useHeadApp.content')
     },
     {
       name: 'keywords',
-      content: 'немецкий язык, артикли, грамматика, учить немецкий онлайн, A1, A2, B1'
+      content: t('useHeadApp.contentTwo')
     },
-    {property: 'og:title', content: 'German Corner — Изучение немецкого языка'},
-    {property: 'og:description', content: 'Учи немецкий весело и эффективно с упражнениями и играми!'},
-    {property: 'og:type', content: 'website'},
-    {property: 'og:image', content: '/images/seo-preview.png'},
-    {name: 'google-site-verification', content: 'MLWdpLJXatGGAMkB8ks7yzFKK-K43'}
+    { property: 'og:title', content: t('useHeadApp.contentThree')},
+    { property: 'og:description', content: t('useHeadApp.contentFour') },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:image', content: '/images/seo-preview.png' },
+    { name: 'google-site-verification', content: 'MLWdpLJXatGGAMkB8ks7yzFKK-K43' },
+    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+    { name: 'robots', content: 'index, follow' }
   ],
   link: [
-    {rel: 'icon', type: 'image/png', href: '/favicon.png'},
+    { rel: 'icon', type: 'image/png', href: '/favicon.png' }
   ]
 })
 
@@ -77,7 +79,7 @@ onMounted(async () => {
   questStore.loadDailyProgress()
   cardStore.loadCreatedCount()
   statsStore.loadLocalStats()
-
+  authStore.uid
 })
 
 

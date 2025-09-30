@@ -5,8 +5,9 @@ import {
     getFirestore, doc, setDoc, onSnapshot, serverTimestamp, increment,
 } from 'firebase/firestore'
 import { dailyQuests } from '../utils/dailyQuests.js'
+
 export const dailyStore = defineStore('dailyStore', () => {
-    const CYCLE_MS =  60 * 1000
+    const CYCLE_MS = 24 * 60 * 60 * 1000
     const QUESTS_PER_CYCLE = 3
     const SYNC_MS = 30 * 1000
     const LOCAL_KEY = 'daily_cycle_v1'
@@ -14,7 +15,6 @@ export const dailyStore = defineStore('dailyStore', () => {
     const isClient = typeof window !== 'undefined'
     const auth = getAuth()
     const db = getFirestore()
-
 
     const nowMs = ref(isClient ? Date.now() : 0)
     const currentCycle = ref(null)
@@ -42,11 +42,31 @@ export const dailyStore = defineStore('dailyStore', () => {
         audioArticle: 0
     })
 
+    // === ВСПОМОГАТЕЛЬНОЕ: локальная полуночь ===
+    function nextLocalMidnightMs(fromMs = Date.now()) {
+        const d = new Date(fromMs)
+        d.setHours(24, 0, 0, 0) // 00:00 следующего дня (локально)
+        return d.getTime()
+    }
+    function startOfTodayLocalMs(fromMs = Date.now()) {
+        const d = new Date(fromMs)
+        d.setHours(0, 0, 0, 0) // 00:00 сегодня (локально)
+        return d.getTime()
+    }
+
+    // === ТАЙМЕР ДО ЛОКАЛЬНОЙ ПОЛУНОЧИ ===
     const msLeft = computed(() => {
-        const left = CYCLE_MS - ((nowMs.value || 0) % CYCLE_MS)
-        return left === CYCLE_MS ? 0 : left
+        const now = nowMs.value || Date.now()
+        const left = nextLocalMidnightMs(now) - now
+        return Math.max(0, left)
     })
-    const cycleKey = computed(() => Math.floor((nowMs.value || 0) / CYCLE_MS))
+
+    // === КЛЮЧ ЦИКЛА ПО ЛОКАЛЬНЫМ СУТКАМ ===
+    const cycleKey = computed(() => {
+        const startToday = startOfTodayLocalMs(nowMs.value || Date.now())
+        return Math.floor(startToday / CYCLE_MS)
+    })
+
     const offset = computed(() => {
         const len = dailyQuests.length || 1
         return (cycleKey.value * QUESTS_PER_CYCLE) % len
@@ -94,13 +114,15 @@ export const dailyStore = defineStore('dailyStore', () => {
         }
         const slice = wrapSlice(dailyQuests, offset.value, QUESTS_PER_CYCLE).map(sanitizeQuest)
         const start = Date.now()
+        const expiresAt = nextLocalMidnightMs(start) // ВАЖНО: локальная полночь
+
         return {
             cycleKey: key,
             quests: slice,
             counters: { ...counters.value },
             completedCount: 0,
             createdAtMs: start,
-            expiresAtMs: start - (start % CYCLE_MS) + CYCLE_MS,
+            expiresAtMs: expiresAt,           // было UTC-модулем; стало локальной 00:00
             lastUpdatedAtMs: start,
             updatedBy: uid() || 'local',
         }
@@ -108,7 +130,12 @@ export const dailyStore = defineStore('dailyStore', () => {
 
     function loadLocal() {
         if (!isClient) return null
-        try { const raw = localStorage.getItem(LOCAL_KEY); return raw ? JSON.parse(raw) : null } catch { return null }
+        try {
+            const raw = localStorage.getItem(LOCAL_KEY)
+            return raw ? JSON.parse(raw) : null
+        } catch {
+            return null
+        }
     }
     function saveLocal(obj) {
         if (!isClient) return
@@ -161,7 +188,10 @@ export const dailyStore = defineStore('dailyStore', () => {
     function ensureLocalCycle() {
         const key = cycleKey.value
         const exist = loadLocal()
-        if (!exist || exist.cycleKey !== key || Date.now() >= Number(exist.expiresAtMs || 0)) {
+        const now = Date.now()
+
+        // Если локально ничего нет / ключ дня другой / цикл истёк — создаём новый до локальной полуночи
+        if (!exist || exist.cycleKey !== key || now >= Number(exist.expiresAtMs || 0)) {
             const fresh = buildNewCyclePayload(key)
             currentCycle.value = fresh
             saveLocal(fresh)
@@ -233,6 +263,7 @@ export const dailyStore = defineStore('dailyStore', () => {
             const local = currentCycle.value
             if (!local) return
 
+            // если истёк срок (локальная полночь) или сменился ключ дня — старт нового цикла
             if (Date.now() >= Number(local.expiresAtMs || 0) || local.cycleKey !== cycleKey.value) {
                 const fresh = buildNewCyclePayload(cycleKey.value)
                 currentCycle.value = fresh
@@ -253,8 +284,8 @@ export const dailyStore = defineStore('dailyStore', () => {
     function addGuessed(n = 1) { counters.value.guessed += n; scheduleDailySync() }
     function addWordArticle(n = 1) { counters.value.wordArticleCnt += n; scheduleDailySync() }
     function addDuels(n = 1) { counters.value.duels += n; scheduleDailySync() }
-    function addPlural(n = 1) {counters.value.pluralCnt += n; scheduleDailySync()}
-    function addAudioArticle(n = 1) {counters.value.audioArticle += n; scheduleDailySync()}
+    function addPlural(n = 1) { counters.value.pluralCnt += n; scheduleDailySync() }
+    function addAudioArticle(n = 1) { counters.value.audioArticle += n; scheduleDailySync() }
     function noteEasyStreak(streak) {
         if (streak > counters.value.easyStreakBest) {
             counters.value.easyStreakBest = streak

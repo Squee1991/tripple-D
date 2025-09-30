@@ -46,7 +46,7 @@
           <div class="ranked__inner">
             <div class="ranked__title-icon">
               <img class="points-card__title-icon" src="../../assets/images/RankedIcon.svg" alt="Ranked_icon">
-              <div class="ranked__title">Рейтинг</div>
+              <div class="ranked__title">{{ t('accountPanel.ranked')}}</div>
             </div>
             <button @click="toRanked" class="stats__btn">
               <img class="stat__icon" src="../../assets/images/dailyIcons/arrow-to.svg" alt="Arrow_icon">
@@ -90,8 +90,6 @@ const handleLeveling = () => {
         langStore.exp -= LEVEL_UP_XP
     }
 }
-
-const istPremiumComputedStatus = computed(() => userAuth.isPremium ? 'Активна' : 'Не активна')
 
 const hoverTitle = {
   title: t('hoverTitle.articles'),
@@ -169,7 +167,7 @@ onMounted(() => {
   margin-top: 10px;
   margin-bottom: 15px;
   padding-bottom: 15px;
-  border-bottom: 2px dashed black;
+  border-bottom: 2px dashed var(--border);
 }
 
 .list__item {

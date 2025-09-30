@@ -22,6 +22,7 @@ export const userAuthStore = defineStore('auth', () => {
 
 	const LEADERBOARD_COLLECTION = 'marathon_leaderboard';
 	const LEADERBOARD_GUESS = 'leaderboard_guess'
+	const voiceConsentGiven = ref(false)
 	const name = ref(null)
 	const email = ref(null)
 	const registeredAt = ref(null)
@@ -97,6 +98,7 @@ export const userAuthStore = defineStore('auth', () => {
 		providerId.value = data.providerId || ''
 		ownedAvatars.value = data.ownedAvatars || ['1.png', '2.png'];
 		achievements.value = data.achievements || null;
+		voiceConsentGiven.value = data.voiceConsentGiven === true;
 		const newAchievements = data.achievements || null;
 		if (newAchievements) {
 			if (typeof achievements.value !== 'object' || achievements.value === null) {
@@ -142,6 +144,7 @@ export const userAuthStore = defineStore('auth', () => {
 				registeredAt: serverTimestamp(),
 				avatar: '1.png',
 				gotPremiumBonus: false,
+				voiceConsentGiven: false,
 				...createInitialAchievementsObject()
 			});
 		}
@@ -175,6 +178,7 @@ export const userAuthStore = defineStore('auth', () => {
 			isPremium: false,
 			subscriptionEndsAt: null,
 			gotPremiumBonus: false,
+			voiceConsentGiven: false,
 			...createInitialAchievementsObject()
 		});
 		setUserData({
@@ -187,6 +191,7 @@ export const userAuthStore = defineStore('auth', () => {
 			isPremium: false,
 			subscriptionEndsAt: null,
 			gotPremiumBonus: false,
+			voiceConsentGiven: false
 		});
 	};
 
@@ -209,6 +214,15 @@ export const userAuthStore = defineStore('auth', () => {
 		const auth = getAuth()
 		await sendPasswordResetEmail(auth, email)
 	}
+
+	const setVoiceConsent = async (value = true) => {
+		const auth = getAuth();
+		const user = auth.currentUser;
+		if (!user) return;
+		const userDocRef = doc(db, 'users', user.uid);
+		await updateDoc(userDocRef, { voiceConsentGiven: !!value });
+		voiceConsentGiven.value = !!value;
+	};
 
 	const deleteAccount = async (password = null) => {
 		const auth = getAuth();
@@ -308,10 +322,8 @@ export const userAuthStore = defineStore('auth', () => {
 				resolve()
 				return
 			}
-
 			const auth = getAuth()
 			if (authStateUnsubscribe) authStateUnsubscribe()
-
 			authStateUnsubscribe = onAuthStateChanged(auth, async (user) => {
 				if (user) {
 					const userDocRef = doc(db, 'users', user.uid);
@@ -351,6 +363,8 @@ export const userAuthStore = defineStore('auth', () => {
 		initialized,
 		isGoogleUser,
 		notEnoughArticle,
+		voiceConsentGiven,
+		setVoiceConsent,
 		clearNotEnoughArticle,
 		achievements,
 		initAuth,

@@ -1,6 +1,197 @@
 {
+  "descriptionCardTheme": {
+    "title": "Öğrenme konuları",
+    "textOne": "Örneklerle gramer",
+    "textTwo": "Fiiller ve sıfatlar",
+    "textThree": "Deyimler ve ifadeler",
+    "textFour": "Cümle kurma"
+  },
+  "descriptionCardArticle": {
+    "title": "Artikel pratiği",
+    "textOne": "5 öğrenme yöntemi",
+    "textTwo": "1000’den fazla artikel ile kelime",
+    "textThree": "Cevaplar için puan ve ödüller",
+    "textFour": "Tüm kelime formlarını çalış"
+  },
+  "descriptionCardGame": {
+    "title": "Oyun öğeleri",
+    "textOne": "Artiklus puanları kazan",
+    "textTwo": "Onları mağazada harca",
+    "textThree": "Düellolara katıl",
+    "textFour": "Kelimeyi sürede tahmin et"
+  },
+  "descriptionCardRewards": {
+    "title": "Başarı sistemi",
+    "textOne": "Madalya kazan",
+    "textTwo": "Ödülleri topla",
+    "textThree": "Başarılarını takip et",
+    "textFour": "Günlük görevleri tamamla"
+  },
+  "descriptionCardRanked": {
+    "title": "Sıralama sistemi",
+    "textOne": "İlerlemeni karşılaştır",
+    "textTwo": "3’ten fazla disiplin",
+    "textThree": "Zorluk seviyeleri",
+    "textFour": "Rekabetle motivasyon"
+  },
+  "descriptionCardExam": {
+    "title": "Testler",
+    "textOne": "Yapay zekâ ile görev kontrolü",
+    "textTwo": "Metin yazma",
+    "textThree": "Dinle ve doğru cevabı seç",
+    "textFour": "Okuma yoluyla anlama",
+    "textFive": "Konuşma pratiği yap"
+  },
+  "descriptionCardEvents": {
+    "title": "Sezonluk etkinlikler",
+    "textOne": "Özel tatil etkinlikleri",
+    "textTwo": "Benzersiz görevler",
+    "textThree": "Benzersiz ödüller",
+    "textFour": "Bayram atmosferi"
+  },
+  "descriptionCardCards": {
+    "title": "Kartlar",
+    "textOne": "Artikelli cümleler",
+    "textTwo": "Konulara göre ayrım",
+    "textThree": "Zorluk seviyesi",
+    "textFour": "Diğer katılımcıların kartları"
+  },
+  "aboutValueItemsRef": {
+    "textOne": "Erişilebilirlik ve anlaşılırlık",
+    "textTwo": "Oyun yoluyla ilgi çekicilik",
+    "textThree": "Anında geri bildirim",
+    "textFour": "Şeffaf ilerleme ve ödüller",
+    "textFive": "Hoş ve anlaşılır arayüz",
+    "ready": "Başlamaya hazır mısın?",
+    "connect": "Katıl ve Almancanı kendi hızında geliştir — artikellerden emin cümlelere kadar."
+  },
+  "aboutArticleModesRef": {
+    "modeOneTitle": "Artikeli yaz",
+    "modeOneDescription": "Doğru der/die/das gir.",
+    "modeTwoTitle": "Kelimeyi oluştur",
+    "modeTwoDescription": "Kelimeyi oluştur ve artikeli seç.",
+    "modeThreeTitle": "Kelime + Artikel",
+    "modeThreeDescription": "Kelimeyi doğru artikel ile eşleştir.",
+    "modeFourTitle": "Çoğul",
+    "modeFourDescription": "Çoğul biçimini ve artikeli seç.",
+    "modeFiveTitle": "Ses modu",
+    "modeFiveDescription": "Dinle ve artikeli kulakla belirle."
+  },
+  "aboutTheoryPracticeRef": {
+    "title": "Teori",
+    "description": "Çeşitli konularda teori. Sıfatlar, isimler vb.",
+    "textOne": "Kullanım kuralları",
+    "textTwo": "İstisnalar ve sabit formlar",
+    "titleTwo": "Sıfatlar ve fiiller",
+    "descriptionTwo": "Sıfatların çekimleri, zamanlar ve fiil formları — tablolar ve pratiklerle.",
+    "secondTextOne": "Sıfatların hal eklerine göre çekimi",
+    "secondTextTwo": "Fiil çekimleri ve zaman pratikleri"
+  },
+  "aboutFeatureItemsRef": {
+    "firstTitle": "Sıralama tablosu",
+    "firstDescription": "Yarış ve makale sıralamasında zirveye çık",
+    "secondTitle": "Başarılar, ödüller, etkinlikler",
+    "secondDescription": "Nadir başarıları aç, ödüller kazan, etkinliklere katıl",
+    "thirdTitle": "Cümle kur",
+    "thirdDescription": "Çevrimiçi düellolar: hız ve doğruluk için.",
+    "fourthTitle": "Artikel pratiği",
+    "fourthDescription": "der/die/das’ı 5 farklı modda çalış.",
+    "fifthTitle": "Yapay zekâ ile testler",
+    "fifthDescription": "Yaz, konuş ve anında geri bildirim al.",
+    "sixthTitle": "Öğrenme haritası",
+    "sixthDescription": "Konu ve seviye yol haritası boyunca ilerle.",
+    "seventhTitle": "Tematik konular",
+    "seventhDescription": "Günlük konuşmanın en faydalı konularını öğren.",
+    "eighthTitle": "Görevler ve maratonlar",
+    "eighthDescription": "Günlük görevleri tamamla, artikel maratonlarına katıl."
+  },
+  "aboutPageTitles": {
+    "insideTitle": "Platformda neler var",
+    "theoryTitle": "Teori ve pratik",
+    "articleTitle": "Artikel pratiği: 5 mod",
+    "mission": "Misyonumuz",
+    "missionLead": "Öğrenmeyi herkes için erişilebilir ve etkileşimli hale getiriyoruz — oyun öğeleri, görevler ve maratonlarla."
+  },
+  "aboutHeroContentRef": {
+    "title": "Hakkımızda",
+    "sbTitle": "Biz, oyun öğeleriyle Almanca pratiği yapan bir platformuz: sıralamalar, başarılar, düellolar, görevler ve daha fazlası.",
+    "firstText": "Her ülke ve cihaz için erişilebilir",
+    "secondText": "Cümle kurma disiplininde interaktif görevler ve düellolar",
+    "thirdText": "Oyun yoluyla öğrenme: görevler, ödüller, maratonlar ve çeşitli etkinlikler"
+  },
+  "faq": {
+    "btnBack": "Ana sayfaya dön",
+    "questions": "Başka sorularınız mı var? Bize yazın!",
+    "send": "Mesaj gönder"
+  },
+  "howToUse": {
+    "title": "Nasıl kullanılır",
+    "questOne": "Nasıl öğrenmeye başlanır?",
+    "answerOne": "Almanca pratiğine başlamak için kaydolup bir hesap oluşturmanız yeterlidir. Bunu yapmadan görevlere erişim kapalıdır.",
+    "questTwo": "Sezonluk etkinlikler nedir?",
+    "answerTwo": "Sezonluk etkinlikler tatillere bağlı geçici etkinliklerdir. Özel görevler, temalı alıştırmalar ve yalnızca sınırlı süre için mevcut olan benzersiz ödüller içerir.",
+    "questThree": "Başarı nedir?",
+    "answerThree": "Başarı, tamamlanan bir etkinlik için verilen işarettir (ilerleme, doğru cevaplar, günlük görevler vb.).",
+    "questFour": "Ödüller nedir?",
+    "answerFour": "Ödüller belirli başarıların tamamlanmasıyla verilir ve profilinizde görüntülenir.",
+    "questFive": "Artikel ilerlemesi nerede görülebilir?",
+    "answerFive": "Ana sayfada 'Katılımcı Paneli'nde 'İstatistik' seçin, ardından ilgili kategorinin ilerlemesini görüntüleyin. Önemli: aktif artikel konularınız yoksa istatistik gösterilmez.",
+    "questSix": "Artiklus nedir?",
+    "answerSix": "Artiklus, dahili para birimidir. 'Artikel pratiği' görevinde doğru cevaplar ve Dil Diyarı'ndaki görevler için kazanılır. Ek denemeler için harcanabilir.",
+    "questSeven": "Sıralamaya nasıl girilir?",
+    "answerSeven": "En az 2. seviyeye ulaşmanız gerekir. 'Artikel pratiği' veya 'Dil Diyarı' oynayarak. Bundan sonra sıralama tablosu açılır.",
+    "questEight": "Günlük görevler nedir?",
+    "answerEight": "Bunlar konuya göre görevlerdir ve günde bir kez yapılabilir. Günde 3 görev tamamlanabilir. Ana sayfada bulunur."
+  },
+  "accountManagement": {
+    "title": "Hesap yönetimi",
+    "questOne": "İsim veya e-posta nasıl değiştirilir?",
+    "questAnswer": "Şu anda isim veya e-posta değiştirme desteklenmemektedir.",
+    "questTwo": "Hesap nasıl silinir?",
+    "answerTwo": "Profil → 'Hesap ayarları' sekmesi → 'Hesabı sil'. Silme işleminden sonra tüm verileriniz kalıcı olarak silinecek ve geri yüklenemeyecektir.",
+    "questThree": "Şifre nasıl kurtarılır?",
+    "answerThree": "Giriş formunda 'Şifreyi mi unuttunuz?' seçeneğini tıklayın ve talimatları izleyin. Kurtarma bağlantısı kayıt sırasında verilen e-posta adresinize gönderilecektir. Önemli: kayıt olurken gerçek bir e-posta adresi kullanın."
+  },
+  "subscribe": {
+    "title": "Abonelik (Premium)",
+    "questOne": "Premium ne sağlar?",
+    "questOneStepOne": "1 Tüm kelimelerin ve cümlelerin seslendirilmesi — dinleme becerisini geliştirin.",
+    "questOneStepTwo": "2 Sınırsız öğrenme — günde istediğiniz kadar materyal öğrenin.",
+    "questOneStepThree": "3 Tüm testlere otomatik kontrol ve AI değerlendirmesiyle erişim.",
+    "questOneStepFour": "4 Konuşma pratiği için sesli ve konuşma görevleri.",
+    "questOneStepFive": "5 Ücretsiz sürümde bulunmayan özel materyaller ve alıştırmalar.",
+    "questOneStepSix": "6 Geliştiricilere destek — Premium, projeyi geliştirmemize, yeni görevler eklememize ve tüm öğrenciler için işlevleri iyileştirmemize yardımcı olur. Amacımız Almanca öğrenmeyi erişilebilir ve eğlenceli hale getirmektir. Etkileşim, oyun ve rekabet atmosferi yaratıyoruz, böylece öğrenmek her gün geri dönmek isteyeceğiniz bir macera olur!",
+    "questTwo": "Premium nasıl iptal edilir?",
+    "questTwoStepOne": "Hesabınıza giriş yapın.",
+    "questTwoStepTwo": "'Profil' bölümüne gidin.",
+    "questTwoStepThree": "'Hesap yönetimi'ni açın.",
+    "questTwoStepFour": "'Aboneliği iptal et'i tıklayın.",
+    "note": "Bundan sonra erişim, ödenen dönemin sonuna kadar devam eder.",
+    "questThree": "Kalan günler için iade var mı?",
+    "answerThree": "Şu anda kalan günler için iade mevcut değildir."
+  },
+  "daily": {
+    "first": "Tüm modlarda 20 kelime öğren: Artikel Pratiği",
+    "second": "Artikel Pratiğinde 20 Artiklus kazan",
+    "third": "20 kelimelik seri yap (kolay mod) artikel maratonu",
+    "fourth": "Artikel Pratiğinde 15 deneyim puanı kazan",
+    "fifth": "'Kelimeyi Tahmin Et' modunda 10 kelime bil",
+    "sixth": "20 kelimelik seri yap (orta mod) artikel maratonu",
+    "seventh": "Artikel Pratiğinde 15 çoğul kelime öğren",
+    "eighth": "Tüm modlarda 20 kelime öğren: Artikel Pratiği",
+    "ninth": "Ses modunda 15 kelime öğren: Artikel Pratiği",
+    "tenth": "15 kelimelik seri yap (zor mod) artikel maratonu",
+    "eleventh": "Artikel Pratiğinde 10 deneyim puanı kazan"
+  },
   "preloader": {
     "value": "Ana sayfaya yönlendirileceksiniz..."
+  },
+  "useHeadApp": {
+    "title": "Almanca online A1–B1 — dil bilgisi, artikeller, alıştırmalar | German Corner",
+    "content": "Almancayı A1–B1 seviyelerinde online öğren: dil bilgisi, der/die/das artikelleri, zamanlar ve eğlenceli alıştırmalar. German Corner, Almancayı kolay ve etkili şekilde öğrenmene yardımcı olur!",
+    "contentTwo": "Almanca online, Almanca A1, Almanca A2, Almanca B1, Almanca dil bilgisi, der die das artikelleri, Almanca zamanlar, Almanca alıştırmalar",
+    "contentThree": "German Corner — Almanca online A1–B1",
+    "contentFour": "Dil bilgisi, artikeller ve eğlenceli alıştırmalar. Almancayı keyifle ve verimli öğren!"
   },
   "randomPhrases": {
     "first": "Bugün bir adım daha ileri gittin!",
@@ -85,7 +276,7 @@
     "done": "TAMAMLANDI",
     "awards": "Ödül:",
     "gotAward": "Ödül alındı",
-    "repeat": "Tekrarla",
+    "repeat": "Tekrar et",
     "start": "Başla",
     "notFound": "Görev bulunamadı",
     "loading": "Görevler yükleniyor...",
@@ -638,7 +829,7 @@
     "score": "Ortalama puan:"
   },
   "dailyPanel": {
-    "title": "Günlük Görevler",
+    "title": "Günlük görevler",
     "loading": "Yükleniyor…"
   },
   "hoverTitle": {
@@ -651,6 +842,7 @@
   },
   "accountPanel": {
     "title": "Katılımcı Paneli",
+    "ranked": "Sıralama",
     "articles": "Artikluslar",
     "level": "Seviye",
     "stats": "İstatistikler",
@@ -1734,8 +1926,8 @@
     "cardText": "Bu başarıyı kazanmak için 36 kart oluştur!",
     "grandmasterLabel": "Büyük Usta",
     "grandmasterText": "Tüm seviyelerde toplam 500 cümle kur.",
-    "duelLabel": "Düello Ustası",
-    "duelText": "Tüm seviyelerde toplam 250 galibiyet kazan.",
+    "duelLabel": "Cümle Ustası",
+    "duelText": "Her seviyede solo modda 250 cümleyi doğru şekilde kur",
     "edgeLabel": "Sınırda",
     "edgeText": "Zor modda 50 kelimelik seri yap. Zamanlayıcı 2 saniyenin altına düşmemeli.",
     "firstArtiklusLabel": "İlk Para Birimi",
@@ -2008,7 +2200,8 @@
     "victory": "Zafer",
     "victoryText": "Daha hızlı ve zekiydiniz! Harika iş çıkardınız!",
     "loss": "Mağlubiyet",
-    "lossText": "Bu sefer rakibiniz daha güçlüydü. Üzülmeyin, tekrar deneyin!"
+    "lossText": "Bu sefer rakibiniz daha güçlüydü. Üzülmeyin, tekrar deneyin!",
+    "end": "Tebrikler! Alıştırma tamamlandı"
   },
   "nav": {
     "training": "Eğitim",

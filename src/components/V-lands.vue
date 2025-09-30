@@ -141,29 +141,37 @@ function go(region) {
 .map__wrapper {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 12px;
   align-items: center;
-  margin: 20px 0 30px;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .map__title-wrapper {
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 100%;
-  border: 3px solid var(--stroke);
-  box-shadow: var(--shadow);
+  border: 3px solid var(--border);
+  box-shadow: 3px 3px 0 var(--border);
+  border-radius: 15px;
+  padding: 10px;
+  background: linear-gradient(
+      to bottom,
+      #f9e7b2 0%,
+      #f2d77b 100%
+  );
   position: relative;
   overflow: hidden;
 }
 
-
 .map__title {
   font-size: 2.3rem;
-  color: var(--titleColor);
-  font-weight: 900;
+  color: #696767;
+  font-weight: 600;
   letter-spacing: .2px;
+  font-family: "Nunito", sans-serif;
 }
 
 .map-layout {
@@ -396,7 +404,8 @@ function go(region) {
   }
 
   .map__title {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    color: black;
   }
 
   .map-right {
