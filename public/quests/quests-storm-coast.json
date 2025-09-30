@@ -6,7 +6,7 @@
     "description": "questsStormCoastsFirstQuests.description",
     "conditions": {
       "goal": "questsStormCoastsFirstQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -218,7 +218,7 @@
     "description": "questsStormCoastsSecondQuests.description",
     "conditions": {
       "goal": "questsStormCoastsSecondQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -421,7 +421,7 @@
     "description": "questsStormCoastsThirdQuests.description",
     "conditions": {
       "goal": "questsStormCoastsThirdQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -625,7 +625,7 @@
     "description": "questsStormCoastsFourQuests.description",
     "conditions": {
       "goal": "questsStormCoastsFourQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -811,11 +811,11 @@
         "type": "reorder",
         "question": "questsStormCoastsFourQuests.questFourteen",
         "words": [
-          "Jahr",
-          "Gute",
           "neuen",
-          "zum",
-          "Alles!"
+          "Alles",
+          "Gute",
+          "Jahr!",
+          "zum"
         ],
         "correctOrder": [
           "Alles",
@@ -845,7 +845,7 @@
     "description": "questsStormCoastsFifthQuests.description",
     "conditions": {
       "goal": "questsStormCoastsFifthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1042,7 +1042,7 @@
     "description": "questsStormCoastsSixQuests.description",
     "conditions": {
       "goal": "questsStormCoastsSixQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1082,15 +1082,15 @@
           "Die",
           "am",
           "April.",
-          "3."
+          "3"
         ],
         "correctOrder": [
           "Die",
           "Party",
           "ist",
           "am",
-          "3.",
-          "April"
+          "3",
+          "April."
         ]
       },
       {
@@ -1201,9 +1201,9 @@
           "Ich",
           "schicke",
           "die",
+          "E-Mail",
           "Einladung",
-          "per",
-          "E-Mail"
+          "per"
         ],
         "correctOrder": [
           "Ich",
@@ -1265,8 +1265,8 @@
     "description": "questsStormCoastsSevenQuests.description",
     "conditions": {
       "goal": "questsStormCoastsSevenQuests.goal",
-      "minCorrect": 12,
-      "requiredTasks": 15
+      "minCorrect": 16,
+      "requiredTasks": 16
     },
     "rewards": {
       "points": 20,
@@ -1433,10 +1433,10 @@
         "type": "reorder",
         "question": "questsStormCoastsSevenQuests.questThirteen",
         "words": [
-          "Eine",
           "Torte",
+          "alle",
           "für",
-          "alle"
+          "Eine"
         ],
         "correctOrder": [
           "Eine",
@@ -1498,7 +1498,7 @@
     "description": "questsStormCoastsEighthQuests.description",
     "conditions": {
       "goal": "questsStormCoastsEighthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1722,7 +1722,7 @@
     "description": "questsStormCoastsNinthQuests.description",
     "conditions": {
       "goal": "questsStormCoastsNinthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1948,7 +1948,7 @@
     "description": "questsStormCoastsTenthQuests.description",
     "conditions": {
       "goal": "questsStormCoastsTenthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -2055,10 +2055,10 @@
         "type": "reorder",
         "question": "questsStormCoastsTenthQuests.questEight",
         "words": [
-          "Herzlichen",
-          "Glückwunsch",
           "zur",
-          "Hochzeit"
+          "Glückwunsch",
+          "Hochzeit",
+          "Herzlichen"
         ],
         "correctOrder": [
           "Herzlichen",

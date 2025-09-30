@@ -137,7 +137,7 @@ const levelStats = computed(() => {
         wins: 0,
         streaks: 0,
         cleanSweeps: 0,
-        flawlessWins: 0
+
     }
 })
 const showTips = ref(false)

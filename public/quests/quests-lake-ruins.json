@@ -6,7 +6,7 @@
     "description": "questLakeRuinsFirstQuests.description",
     "conditions": {
       "goal": "questLakeRuinsFirstQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -63,16 +63,16 @@
         "type": "reorder",
         "question": "questLakeRuinsFirstQuests.questFive",
         "words": [
-          "sonnig",
-          "ist",
-          "es",
-          "Heute"
-        ],
-        "correctOrder": [
           "Heute",
           "ist",
           "es",
           "sonnig"
+        ],
+        "correctOrder": [
+          "sonnig",
+          "ist",
+          "es",
+          "Heute"
         ]
       },
       {
@@ -204,7 +204,7 @@
     "description": "questLakeRuinsSecondQuests.description",
     "conditions": {
       "goal": "questLakeRuinsSecondQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -401,7 +401,7 @@
     "description": "questLakeRuinsThirdQuests.description",
     "conditions": {
       "goal": "questLakeRuinsThirdQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -599,7 +599,7 @@
     "description": "questLakeRuinsFourthQuests.description",
     "conditions": {
       "goal": "questLakeRuinsFourthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -796,7 +796,7 @@
     "description": "questLakeRuinsFifthQuests.description",
     "conditions": {
       "goal": "questLakeRuinsFifthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -985,7 +985,7 @@
     "description": "questLakeRuinsSixthQuests.description",
     "conditions": {
       "goal": "questLakeRuinsSixthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1177,7 +1177,7 @@
     "description": "questLakeRuinsSeventhQuests.description",
     "conditions": {
       "goal": "questLakeRuinsSeventhQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1369,7 +1369,7 @@
     "description": "questLakeRuinsEighthQuests.description",
     "conditions": {
       "goal": "questLakeRuinsEighthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1576,7 +1576,7 @@
     "description": "questLakeRuinsNinthQuests.description",
     "conditions": {
       "goal": "questLakeRuinsNinthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1802,7 +1802,7 @@
         "text": "Berlin: Heute bewölkt, 12°. Morgen sonnig, 18°.",
         "question": "",
         "options": [
-          "questLakeRuinsTenthQuests.questTwoFirstOption",
+          "questLakeRuinsTenthQuests.questOneFirstOption",
           "questLakeRuinsTenthQuests.questTwoSecondOption",
           "questLakeRuinsTenthQuests.questTwoThirdOption"
         ],
@@ -1861,11 +1861,11 @@
         "question": "questLakeRuinsTenthQuests.questSeven",
         "words": [
           "Heute",
+          "windig",
           "ist",
           "es",
-          "windig",
-          "und",
-          "kalt"
+          "kalt",
+          "und"
         ],
         "correctOrder": [
           "Heute",

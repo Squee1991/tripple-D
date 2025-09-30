@@ -23,6 +23,7 @@ export const userAuthStore = defineStore('auth', () => {
 
     const LEADERBOARD_COLLECTION = 'marathon_leaderboard';
     const LEADERBOARD_GUESS = 'leaderboard_guess'
+    const UI_COLLECTION = 'ui'
     const name = ref(null)
     const email = ref(null)
     const registeredAt = ref(null)
@@ -38,6 +39,7 @@ export const userAuthStore = defineStore('auth', () => {
     const ownedAvatars = ref(['1.png', '2.png']);
     const isPremium = ref(false)
     const achievements = ref(null);
+    const langStore = userlangStore()
 
     const initialized = ref(false)
     let initPromise = null
@@ -62,10 +64,10 @@ export const userAuthStore = defineStore('auth', () => {
     const createInitialAchievementsObject = () => {
         return {
             achievements: {
-                A1: {wins: 0, streaks: 0, cleanSweeps: 0, flawlessWins: 0},
-                A2: {wins: 0, streaks: 0, cleanSweeps: 0, flawlessWins: 0},
-                B1: {wins: 0, streaks: 0, cleanSweeps: 0, flawlessWins: 0},
-                B2: {wins: 0, streaks: 0, cleanSweeps: 0, flawlessWins: 0}
+                A1: {wins: 0, streaks: 0, cleanSweeps: 0},
+                A2: {wins: 0, streaks: 0, cleanSweeps: 0},
+                B1: {wins: 0, streaks: 0, cleanSweeps: 0},
+                B2: {wins: 0, streaks: 0, cleanSweeps: 0}
             }
         };
     };
@@ -237,9 +239,13 @@ export const userAuthStore = defineStore('auth', () => {
             batch.delete(doc(db, 'users', user.uid));
             batch.delete(doc(db, LEADERBOARD_COLLECTION, user.uid));
             batch.delete(doc(db, LEADERBOARD_GUESS, user.uid));
+
+            // batch.delete(doc(db,UI_COLLECTION, user.uid));
             await batch.commit();
             await deleteUser(user);
             setUserData({});
+            langStore.points = 0
+            langStore.exp = 0
 
         } catch (err) {
             if (err && err.code) throw err;
@@ -251,7 +257,7 @@ export const userAuthStore = defineStore('auth', () => {
     };
 
     const purchaseAvatar = async (fileName) => {
-        const langStore = userlangStore()
+
         notEnoughArticle.value = false
         if (ownedAvatars.value.includes(fileName)) return 'owned'
         if (langStore.points < 50) {

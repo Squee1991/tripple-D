@@ -6,7 +6,7 @@
     "description": "questsStoneReachFirstQuests.description",
     "conditions": {
       "goal": "questsStoneReachFirstQuests.goal",
-      "minCorrect": 11,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -202,7 +202,7 @@
     "description": "questsStoneReachSecondQuests.description",
     "conditions": {
       "goal": "questsStoneReachSecondQuests.goal",
-      "minCorrect": 11,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -321,7 +321,7 @@
           "das Fenster",
           "Das Messer"
         ],
-        "answer": "дверь"
+        "answer": "die Gabel"
       },
       {
         "id": 12,
@@ -372,7 +372,7 @@
     "description": "questsStoneReachThirdQuests.description",
     "conditions": {
       "goal": "questsStoneReachThirdQuests.goal",
-      "minCorrect": 7,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -554,7 +554,7 @@
     "description": "questsStoneReachFourthQuests.description",
     "conditions": {
       "goal": "questsStoneReachFourthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -631,7 +631,7 @@
         "options": [
           "questsStoneReachFourthQuests.questSevenFirstOption",
           "questsStoneReachFourthQuests.questSevenSecondOption",
-          "questsStoneReachFourthQuests.questSevenThirdOptions"
+          "questsStoneReachFourthQuests.questSevenThirdOption"
         ],
         "answer": "questsStoneReachFourthQuests.questSevenFirstOption"
       },
@@ -647,18 +647,18 @@
         "type": "reorder",
         "question": "questsStoneReachFourthQuests.questNine",
         "words": [
-          "drei",
-          "Stühle",
-          "und",
-          "zwei",
-          "Tische"
-        ],
-        "correctOrder": [
           "und",
           "zwei",
           "Stühle",
           "Tische",
           "drei"
+        ],
+        "correctOrder": [
+          "drei",
+          "Stühle",
+          "und",
+          "zwei",
+          "Tische"
         ]
       },
       {
@@ -684,12 +684,12 @@
         "type": "reorder",
         "question": "questsStoneReachFourthQuests.questTwelve",
         "words": [
-          "acht",
-          "Bücher"
-        ],
-        "correctOrder": [
           "Bücher",
           "acht"
+        ],
+        "correctOrder": [
+          "acht",
+          "Bücher"
         ]
       },
       {
@@ -732,7 +732,7 @@
     "description": "questsStoneReachFifthQuests.description",
     "conditions": {
       "goal": "questsStoneReachFifthQuests.goal",
-      "minCorrect": 11,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -800,13 +800,13 @@
         "type": "reorder",
         "question": "questsStoneReachFifthQuests.questSix",
         "words": [
-          "ein",
           "großer",
+          "ein",
           "Löffel"
         ],
         "correctOrder": [
-          "großer",
           "ein",
+          "großer",
           "Löffel"
         ]
       },
@@ -845,13 +845,13 @@
         "question": "questsStoneReachFifthQuests.questTen",
         "words": [
           "zwei",
-          "große",
-          "Teller"
+          "Teller",
+          "große"
         ],
         "correctOrder": [
           "zwei",
-          "Teller",
-          "große"
+          "große",
+          "Teller"
         ]
       },
       {
@@ -886,7 +886,7 @@
       {
         "id": 14,
         "type": "reorder",
-        "question": "questsStoneReachFifthQuests.questFourteenth",
+        "question": "questsStoneReachFifthQuests.questFourteen",
         "words": [
           "ein",
           "kleines",
@@ -914,7 +914,7 @@
     "description": "questsStoneReachSixthQuests.description",
     "conditions": {
       "goal": "questsStoneReachSixthQuests.goal",
-      "минCorrect": 11,
+      "минCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1098,7 +1098,7 @@
     "description": "questsStoneReachSeventhQuests.description",
     "conditions": {
       "goal": "questsStoneReachSeventhQuests.goal",
-      "minCorrect": 11,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1180,8 +1180,8 @@
         "question": "questsStoneReachSeventhQuests.questSeven",
         "words": [
           "eine",
-          "nеue",
-          "Badewanne"
+          "Badewanne",
+          "neue"
         ],
         "correctOrder": [
           "eine",
@@ -1282,7 +1282,7 @@
     "description": "questsStoneReachEighthQuests.description",
     "conditions": {
       "goal": "questsStoneReachEighthQuests.goal",
-      "minCorrect": 11,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1328,10 +1328,10 @@
         "type": "reorder",
         "question": "questsStoneReachEighthQuests.questFour",
         "words": [
-          "Das",
           "ist",
+          "Bett",
           "das",
-          "Bett"
+          "Das"
         ],
         "correctOrder": [
           "Das",
@@ -1395,8 +1395,8 @@
         "question": "questsStoneReachEighthQuests.questTen",
         "words": [
           "ein",
-          "weiches",
-          "Kissen"
+          "Kissen",
+          "weiches"
         ],
         "correctOrder": [
           "ein",
@@ -1466,7 +1466,7 @@
     "description": "questsStoneReachNinthQuests.description",
     "conditions": {
       "goal": "questsStoneReachNinthQuests.goal",
-      "minCorrect": 11,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1648,7 +1648,7 @@
     "description": "questsStoneReachTenthQuests.description",
     "conditions": {
       "goal": "questsStoneReachTenthQuests.goal",
-      "minCorrect": 11,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {

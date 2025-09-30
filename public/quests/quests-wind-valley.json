@@ -6,7 +6,7 @@
     "description": "questsWindValleyFirstQuests.description",
     "conditions": {
       "goal": "questsWindValleyFirstQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -208,7 +208,7 @@
     "description": "questsWindValleySecondQuests.description",
     "conditions": {
       "goal": "questsWindValleySecondQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -410,7 +410,7 @@
     "description": "questsWindValleyThirdQuests.description",
     "conditions": {
       "goal": "questsWindValleyThirdQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -612,7 +612,7 @@
     "description": "questsWindValleyFourthQuests.description",
     "conditions": {
       "goal": "questsWindValleyFourthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -702,11 +702,11 @@
           "Kreuzung"
         ],
         "correctOrder": [
-          "Kreuzung",
           "die",
           "Straße",
           "und",
-          "die"
+          "die",
+          "Kreuzung"
         ]
       },
       {
@@ -723,16 +723,16 @@
         "words": [
           "die",
           "Ampel",
+          "Park",
           "und",
-          "der",
-          "Park"
+          "der"
         ],
         "correctOrder": [
           "die",
           "Ampel",
-          "Park",
           "und",
-          "der"
+          "der",
+          "Park"
         ]
       },
       {
@@ -747,18 +747,18 @@
         "type": "reorder",
         "question": "questsWindValleyFourthQuests.questEleven",
         "words": [
-          "die",
-          "Bank",
-          "und",
-          "die",
-          "Karte"
-        ],
-        "correctOrder": [
           "Karte",
           "die",
           "die",
           "Bank",
           "und"
+        ],
+        "correctOrder": [
+          "die",
+          "Bank",
+          "und",
+          "die",
+          "Karte"
         ]
       },
       {
@@ -773,14 +773,14 @@
         "type": "reorder",
         "question": "questsWindValleyFourthQuests.questThirteen",
         "words": [
-          "eine",
-          "rote",
-          "Ampel"
-        ],
-        "correctOrder": [
           "Ampel",
           "eine",
           "rote"
+        ],
+        "correctOrder": [
+          "eine",
+          "rote",
+          "Ampel"
         ]
       },
       {
@@ -789,13 +789,13 @@
         "question": "questsWindValleyFourthQuests.questFourteen",
         "words": [
           "eine",
-          "kleine",
-          "Karte"
+          "Karte",
+          "kleine"
         ],
         "correctOrder": [
           "eine",
-          "Karte",
-          "kleine"
+          "kleine",
+          "Karte"
         ]
       },
       {
@@ -814,7 +814,7 @@
     "description": "questsWindValleyFifthQuests.description",
     "conditions": {
       "goal": "questsWindValleyFifthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1008,7 +1008,7 @@
     "description": "questsWindValleySixQuests.description",
     "conditions": {
       "goal": "questsWindValleySixQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1212,7 +1212,7 @@
     "description": "questsWindValleySevenQuests.description",
     "conditions": {
       "goal": "questsWindValleySevenQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1374,8 +1374,8 @@
         ],
         "correctOrder": [
           "Das",
-          "ist",
           "Hotel",
+          "ist",
           "gegenüber",
           "dem",
           "Museum"
@@ -1385,7 +1385,7 @@
         "id": 14,
         "type": "speechToText",
         "question": "questsWindValleySevenQuests.questFourteen",
-        "text": "Das Museum ist gegenüber dem Hotel",
+        "text": "Das Hotel ist gegenüber dem Museum.",
         "answer": "Das Museum ist gegenüber dem Hotel"
       },
       {
@@ -1408,7 +1408,7 @@
     "description": "questsWindValleyEighthQuests.description",
     "conditions": {
       "goal": "questsWindValleyEighthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1550,17 +1550,6 @@
         "question": "questsWindValleyEighthQuests.questEleven",
         "words": [
           "Die",
-          "Apotheke",
-          "ist",
-          "zwischen",
-          "der",
-          "Bank",
-          "und",
-          "der",
-          "Bäckerei"
-        ],
-        "correctOrder": [
-          "Die",
           "und",
           "Apotheke",
           "ist",
@@ -1569,6 +1558,17 @@
           "der",
           "Bank",
           "der"
+        ],
+        "correctOrder": [
+          "Die",
+          "Apotheke",
+          "ist",
+          "zwischen",
+          "der",
+          "Bank",
+          "und",
+          "der",
+          "Bäckerei"
         ]
       },
       {
@@ -1626,7 +1626,7 @@
     "description": "questsWindValleyNinthQuests.description",
     "conditions": {
       "goal": "questsWindValleyNinthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1760,11 +1760,11 @@
         "question": "questsWindValleyNinthQuests.questEleven",
         "words": [
           "Die",
+          "Bank",
           "Schule",
-          "ist",
           "neben",
-          "der",
-          "Bank"
+          "ist",
+          "der"
         ],
         "correctOrder": [
           "Die",
@@ -1830,7 +1830,7 @@
     "description": "questsWindValleyTenthQuests.description",
     "conditions": {
       "goal": "questsWindValleyTenthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1964,16 +1964,16 @@
         "question": "questsWindValleyTenthQuests.questEleven",
         "words": [
           "Die",
-          "Apotheke",
           "ist",
+          "Apotheke",
           "vor",
           "dem",
           "Museum"
         ],
         "correctOrder": [
           "Die",
-          "ist",
           "Apotheke",
+          "ist",
           "vor",
           "dem",
           "Museum"
@@ -2034,7 +2034,7 @@
     "description": "questsStoneReachEleventhQuests.description",
     "conditions": {
       "goal": "questsStoneReachEleventhQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -2058,10 +2058,10 @@
         "type": "reorder",
         "question": "questsStoneReachEleventhQuests.questTwo",
         "words": [
-          "Wo",
           "ist",
+          "Haltestelle",
           "die",
-          "Haltestelle"
+          "Wo"
         ],
         "correctOrder": [
           "Wo",
@@ -2236,7 +2236,7 @@
     "description": "questsStoneReachTwelfthQuests.description",
     "conditions": {
       "goal": "questsStoneReachTwelfthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -2438,7 +2438,7 @@
     "description": "questsStoneReachThirteenthQuests.description",
     "conditions": {
       "goal": "questsStoneReachThirteenthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {

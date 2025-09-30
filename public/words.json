@@ -748,7 +748,7 @@
 		{ "ru": "Бронирование", "de": "Buchung", "article": "die", "plural": "Buchungen", "pluralArticle": "die" },
 		{ "ru": "Регистрация", "de": "Check-in", "article": "der", "plural": "Check-ins", "pluralArticle": "die" },
 		{ "ru": "Туристическое агентство", "de": "Reisebüro", "article": "das", "plural": "Reisebüros", "pluralArticle": "die" },
-		{ "ru": "Путеводитель (книга)", "de": "Reiseführer (Buch)", "article": "der", "plural": "Reiseführer", "pluralArticle": "die" },
+		{ "ru": "Путеводитель (книга)", "de": "Reiseführer", "article": "der", "plural": "Reiseführer", "pluralArticle": "die" },
 		{ "ru": "Приключение", "de": "Abenteuer", "article": "das", "plural": "Abenteuer", "pluralArticle": "die" },
 		{ "ru": "Страховка", "de": "Versicherung", "article": "die", "plural": "Versicherungen", "pluralArticle": "die" },
 		{ "ru": "Пересадка", "de": "Umstieg", "article": "der", "plural": "Umstiege", "pluralArticle": "die" },

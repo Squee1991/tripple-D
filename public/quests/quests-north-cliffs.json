@@ -6,7 +6,7 @@
     "description": "questsNorthCliffsFirstQuests.description",
     "conditions": {
       "goal": "Rezeption, reservieren, Einzel-/Doppelzimmer, für zwei Nächte, Check-in/Check-out, Ausweis, Frühstück, pro Nacht",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -162,7 +162,7 @@
       {
         "id": 13,
         "type": "select",
-        "question": "",
+        "question": "questsNorthCliffsFirstQuests.questThirteen",
         "options": [
           "questsNorthCliffsFirstQuests.questThirteenFirstOption",
           "questsNorthCliffsFirstQuests.questThirteenSecondOption",
@@ -203,7 +203,7 @@
     "description": "questsNorthCliffsSecondQuests.description",
     "conditions": {
       "goal": "Frühstück/WLAN/Aufzug, Preis pro Nacht, Ich bezahle mit Karte/Bar, Rechnung",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -391,7 +391,7 @@
     "description": "questsNorthCliffsThirdQuests.description",
     "conditions": {
       "goal": "questsNorthCliffsThirdQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -509,9 +509,9 @@
         "question": "questsNorthCliffsThirdQuests.questTen",
         "words": [
           "ein",
-          "zusätzliches",
+          "bitte",
           "Kissen",
-          "bitte"
+          "zusätzliches"
         ],
         "correctOrder": [
           "ein",
@@ -581,7 +581,7 @@
     "description": "questsNorthCliffsFourthQuests.description",
     "conditions": {
       "goal": "Wo?/Wann?, Frühstückszeiten, Aufzug/Treppe, Parkplatz, WLAN-Passwort, kostenlos/geöffnet",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -696,7 +696,7 @@
       {
         "id": 10,
         "type": "select",
-        "question": "Переведи: kostenlos",
+        "question": "questsNorthCliffsFourthQuests.questTen",
         "options": [
           "questsNorthCliffsFourthQuests.questTenFirstOption",
           "questsNorthCliffsFourthQuests.questTenSecondOption",
@@ -779,7 +779,7 @@
     "description": "questsNorthCliffsFifthQuests.description",
     "conditions": {
       "goal": "questsNorthCliffsFifthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -965,7 +965,7 @@
     "description": "questsNorthCliffsSixthQuests.description",
     "conditions": {
       "goal": "questsNorthCliffsSixthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1168,7 +1168,7 @@
     "description": "questsNorthCliffsSeventhQuests.description",
     "conditions": {
       "goal": "questsNorthCliffsSeventhQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1345,11 +1345,11 @@
         "text": "Achtung: Das WLAN funktioniert nicht. Bitte nicht stören.",
         "question": "questsNorthCliffsSeventhQuests.questFourteen",
         "options": [
-          "questsNorthCliffsSeventhQuests.FirstOption",
-          "questsNorthCliffsSeventhQuests.SecondOption",
-          "questsNorthCliffsSeventhQuests.ThirdOption"
+          "questsNorthCliffsSeventhQuests.questFourteenFirstOption",
+          "questsNorthCliffsSeventhQuests.questFourteenSecondOption",
+          "questsNorthCliffsSeventhQuests.questFourteenThirdOption"
         ],
-        "answer": "questsNorthCliffsSeventhQuests.FirstOption"
+        "answer": "questsNorthCliffsSeventhQuests.questFourteenFirstOption"
       },
       {
         "id": 15,
@@ -1367,7 +1367,7 @@
     "description": "questsNorthCliffsEighthQuests.description",
     "conditions": {
       "goal": "questsNorthCliffsEighthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1565,7 +1565,7 @@
     "description": "questsNorthCliffsNinthQuests.description",
     "conditions": {
       "goal": "questsNorthCliffsNinthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1773,7 +1773,7 @@
     "description": "questsNorthCliffsTenthQuests.description",
     "conditions": {
       "goal": "questsNorthCliffsTenthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1958,14 +1958,14 @@
       }
     ]
   },
-  {
+    {
     "questId": "reise-mix-11",
     "title": "questsNorthCliffsEleventhQuests.title",
     "progress": "0/15",
     "description": "questsNorthCliffsEleventhQuests.description",
     "conditions": {
       "goal": "questsNorthCliffsEleventhQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -2007,7 +2007,7 @@
         "type": "speechToText",
         "question": "questsNorthCliffsEleventhQuests.questThird",
         "text": "Ich bezahle mit Karte.",
-        "answer": "Ich bezahle mit Karte."
+          "answer": "Ich bezahle mit Karte."
       },
       {
         "id": 4,
@@ -2152,7 +2152,7 @@
     "description": "questsNorthCliffsTwelfthQuests.description",
     "conditions": {
       "goal": "questsNorthCliffsTwelfthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {

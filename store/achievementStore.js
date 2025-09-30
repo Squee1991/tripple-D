@@ -84,7 +84,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 	const lastUnlockedAward = ref(null)
 	const lastUnlockedAchievement = ref(null)
 
-	const testVariable = ref(null)
+
 	const bootUnlocked = [] // ачивки
 	const bootAwards = [] // награды
 	const db = getFirestore()
