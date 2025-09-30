@@ -176,7 +176,7 @@ const awardTimerPct = computed(() => {
 })
 
 function openAward(title) {
-  awardTitle.value = title || 'Награда'
+  awardTitle.value = title || 'Reward'
   awardVisible.value = true
   startAwardTimer()
 }

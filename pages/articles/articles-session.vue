@@ -49,10 +49,8 @@
                 >
                   {{ t('wordDuelSession.clear') || 'clear' }}
                 </button>
-
                 <input v-model="userInput" class="trainer-app__input" readonly/>
               </div>
-
               <div v-if="currentMode === 'wordArticle'">
                 <!--								<p>{{t('sessionLabels.articleWordFor')}} </p>-->
                 <p><b>Слово : {{ currentWord.de }}</b></p>

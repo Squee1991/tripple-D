@@ -150,7 +150,7 @@ const clearSelectedTopic = () => {
 }
 
 const goBack = () => {
-  router.back()
+  router.push('/')
 }
 
 const page = ref(0)
