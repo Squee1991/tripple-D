@@ -1,66 +1,71 @@
 <template>
-  <Teleport to="body">
-    <div class="ach-toast-container" aria-live="polite" aria-atomic="true">
-      <transition name="ach-toast">
-        <div
-            v-if="ach.showPopup && ach.popupAchievement"
-            class="ach-toast-card"
-            role="status"
-            @mouseenter="pause()"
-            @mouseleave="resume()"
-        >
-          <button class="ach-toast-close" @click="forceClose()" aria-label="Закрыть">×</button>
-          <div class="ach-toast-icon">
-            <img
-                v-if="achIcon?.type === 'img'"
-                :src="achIcon.src"
-                alt=""
-                class="ach-toast-icon-img"
-                decoding="async"
-            />
-            <span v-else class="ach-toast-icon-emoji">{{ achIcon?.text }}</span>
-          </div>
-          <div class="ach-toast-body">
-            <div class="ach-toast-msg">
-              {{ t('Получено достижение!') }}
-            </div>
-            <div class="ach-toast-title">
-              {{ t(resolveTitle(ach.popupAchievement)) }}
-            </div>
-            <div v-if="ach.popupAchievement?.groupTitle" class="ach-toast-sub">
-              {{ t(ach.popupAchievement.groupTitle) }}
-            </div>
-            <div class="ach-toast-timer">
-              <div class="ach-toast-timer__bar" :style="{ width: timerPct + '%' }"></div>
-            </div>
-          </div>
+    <Teleport to="body">
+        <div class="ach-toast-container" aria-live="polite" aria-atomic="true">
+            <transition name="ach-toast">
+                <div
+                        v-if="ach.showPopup && ach.popupAchievement"
+                        class="ach-toast-card"
+                        role="status"
+                        @mouseenter="pause()"
+                        @mouseleave="resume()"
+                >
+                    <div class="sparkles"></div>
+                    <button class="ach-toast-close" @click="forceClose()" aria-label="Закрыть">×</button>
+                    <div class="ach-toast-icon">
+                        <img
+                                v-if="achIcon?.type === 'img'"
+                                :src="achIcon.src"
+                                alt=""
+                                class="ach-toast-icon-img"
+                                decoding="async"
+                        />
+                        <span v-else class="ach-toast-icon-emoji">{{ achIcon?.text }}</span>
+                    </div>
+                    <div class="ach-toast-body">
+                        <div class="ach-toast-msg">
+                            {{ t('Получено достижение!') }}
+                        </div>
+                        <div class="ach-toast-title">
+                            {{ t(resolveTitle(ach.popupAchievement)) }}
+                        </div>
+                        <div v-if="ach.popupAchievement?.groupTitle" class="ach-toast-sub">
+                            {{ t(ach.popupAchievement.groupTitle) }}
+                        </div>
+                        <div class="ach-toast-timer">
+                            <div class="ach-toast-timer__bar" :style="{ width: timerPct + '%' }"></div>
+                        </div>
+                    </div>
+                </div>
+            </transition>
+            <transition name="ach-toast">
+                <div
+                        v-if="awardVisible"
+                        class="ach-toast-card ach-toast-card--award"
+                        role="status"
+                        @mouseenter="pauseAward()"
+                        @mouseleave="resumeAward()"
+                >
+                    <div class="sparkles"></div>
+                    <button class="ach-toast-close" @click="awardVisible = false" aria-label="Закрыть">×</button>
+                    <div class="ach-toast-icon">
+                        <span class="ach-toast-icon-emoji">🎖️</span>
+                    </div>
+                    <div class="ach-toast-body">
+                        <div class="ach-toast-msg">
+                            {{ t('Вы получили новую награду!') }}
+                        </div>
+                        <div class="ach-toast-title">
+                            {{ t(awardTitle) || 'Награда' }}
+                        </div>
+
+                        <div class="ach-toast-timer">
+                            <div class="ach-toast-timer__bar" :style="{ width: awardTimerPct + '%' }"></div>
+                        </div>
+                    </div>
+                </div>
+            </transition>
         </div>
-      </transition>
-      <transition name="ach-toast">
-        <div
-            v-if="awardVisible"
-            class="ach-toast-card ach-toast-card--award"
-            role="status"
-            @mouseenter="pauseAward()"
-            @mouseleave="resumeAward()"
-        >
-          <button class="ach-toast-close" @click="awardVisible = false" aria-label="Закрыть">×</button>
-          <div class="ach-toast-icon">🎖️</div>
-          <div class="ach-toast-body">
-            <div class="ach-toast-msg">
-              {{ t('Вы получили новую награду!') }}
-            </div>
-            <div class="ach-toast-title">
-              {{ t(awardTitle) || 'Награда' }}
-            </div>
-            <div class="ach-toast-timer">
-              <div class="ach-toast-timer__bar" :style="{ width: awardTimerPct + '%' }"></div>
-            </div>
-          </div>
-        </div>
-      </transition>
-    </div>
-  </Teleport>
+    </Teleport>
 </template>
 
 <script setup>
@@ -82,7 +87,7 @@ const achIcon = computed(() => {
   return {type: 'text', text: raw}
 })
 
-const AUTO_CLOSE_MS = 4000
+const AUTO_CLOSE_MS = 11116000
 let raf = null
 const remaining = ref(AUTO_CLOSE_MS)
 let lastTick = 0
@@ -159,7 +164,7 @@ function resolveTitle(a) {
 
 const awardVisible = ref(false)
 const awardTitle = ref('')
-const AWARD_AUTO_CLOSE_MS = 4000
+const AWARD_AUTO_CLOSE_MS = 1200000
 const awardRemaining = ref(AWARD_AUTO_CLOSE_MS)
 let awardLastTick = 0
 let awardRAF = null
@@ -171,7 +176,7 @@ const awardTimerPct = computed(() => {
 })
 
 function openAward(title) {
-  awardTitle.value = title || 'Reward'
+  awardTitle.value = title || 'Награда'
   awardVisible.value = true
   startAwardTimer()
 }

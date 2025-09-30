@@ -1,18 +1,18 @@
 import {defineStore} from "pinia";
 import {ref, computed} from 'vue'
 import {
-	getAuth,
-	createUserWithEmailAndPassword,
-	signInWithEmailAndPassword,
-	EmailAuthProvider, reauthenticateWithCredential,
-	updateProfile,
-	signOut,
-	deleteUser,
-	onAuthStateChanged,
-	sendPasswordResetEmail,
-	sendEmailVerification,
-	signInWithPopup,
-	reauthenticateWithPopup, GoogleAuthProvider
+    getAuth,
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    EmailAuthProvider, reauthenticateWithCredential,
+    updateProfile,
+    signOut,
+    deleteUser,
+    onAuthStateChanged,
+    sendPasswordResetEmail,
+    sendEmailVerification,
+    signInWithPopup,
+    reauthenticateWithPopup, GoogleAuthProvider
 } from 'firebase/auth';
 import { doc, setDoc, getDoc, getFirestore, updateDoc, deleteDoc, serverTimestamp, writeBatch } from 'firebase/firestore';
 import {userlangStore} from "./learningStore.js";
@@ -59,16 +59,16 @@ export const userAuthStore = defineStore('auth', () => {
 		return avatar.value ? `/images/avatars/${avatar.value}` : '';
 	});
 
-	const createInitialAchievementsObject = () => {
-		return {
-			achievements: {
-				A1: {wins: 0, streaks: 0, cleanSweeps: 0, flawlessWins: 0},
-				A2: {wins: 0, streaks: 0, cleanSweeps: 0, flawlessWins: 0},
-				B1: {wins: 0, streaks: 0, cleanSweeps: 0, flawlessWins: 0},
-				B2: {wins: 0, streaks: 0, cleanSweeps: 0, flawlessWins: 0}
-			}
-		};
-	};
+    const createInitialAchievementsObject = () => {
+        return {
+            achievements: {
+                A1: {wins: 0, streaks: 0, cleanSweeps: 0},
+                A2: {wins: 0, streaks: 0, cleanSweeps: 0},
+                B1: {wins: 0, streaks: 0, cleanSweeps: 0},
+                B2: {wins: 0, streaks: 0, cleanSweeps: 0}
+            }
+        };
+    };
 
 	const grantPremiumBonusPoints = async () => {
 		const auth = getAuth();

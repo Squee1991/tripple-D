@@ -6,7 +6,7 @@
     "description": "eastPlainFirstQuests.description",
     "conditions": {
       "goal": "eastPlainFirstQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -200,7 +200,7 @@
     "description": "eastPlainSecondQuests.description",
     "conditions": {
       "goal": "Lerne, über Herkunft und Sprache zu sprechen und höflich Fragen zu stellen",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -391,7 +391,7 @@
     "description": "eastPlainThirdQuests.description",
     "conditions": {
       "goal": "eastPlainThirdQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -615,7 +615,7 @@
     "description": "eastPlainFourthQuests.description",
     "conditions": {
       "goal": "eastPlainFourthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -795,7 +795,7 @@
     "description": "eastPlainFifthQuests.description",
     "conditions": {
       "goal": "eastPlainFifthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1000,7 +1000,7 @@
     "description": "eastPlainSixthQuests.description",
     "conditions": {
       "goal": "eastPlainSixthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1167,7 +1167,7 @@
     "description": "eastPlainSeventhQuests.description",
     "conditions": {
       "goal": "eastPlainSeventhQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1347,8 +1347,8 @@
     "description": "eastPlainEighthQuests.description",
     "conditions": {
       "goal": "eastPlainEighthQuests.goal",
-      "minCorrect": 12,
-      "requiredTasks": 15
+      "minCorrect": 14,
+      "requiredTasks": 14
     },
     "rewards": {
       "points": 20,
@@ -1517,7 +1517,7 @@
     "description": "eastPlainNinthQuests.description",
     "conditions": {
       "goal": "eastPlainNinthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1723,7 +1723,7 @@
     "conditions": {
       "goal": "eastPlainTenthQuests.goal",
       "minCorrect": 12,
-      "requiredTasks": 15
+      "requiredTasks": 12
     },
     "rewards": {
       "points": 20,

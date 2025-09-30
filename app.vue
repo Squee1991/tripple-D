@@ -1,8 +1,8 @@
 <template>
-  <NuxtLayout>
-    <NuxtPage/>
-    <AchievementToast/>
-  </NuxtLayout>
+    <NuxtLayout>
+        <NuxtPage/>
+        <AchievementToast/>
+    </NuxtLayout>
 </template>
 
 <script setup>
@@ -20,6 +20,7 @@ import {onMounted} from "vue";
 import {dailyStore} from './store/dailyStore'
 import {useHead} from '#imports'
 import {computed} from 'vue'
+import {useDuelStore} from './store/sentenceDuelStore.js'
 
 const {locale, t} = useI18n()
 
@@ -62,29 +63,32 @@ const user = useCurrentUser()
 const sentencesStore = useSentencesStore();
 const langStore = userlangStore()
 const daily = dailyStore()
+const gameStore = useDuelStore()
 
 onMounted(() => {
-  watch(user, (user, prevUser) => {
-    if (prevUser && !user) {
-      router.push('/')
-    } else if (user && typeof route.query.redirect === 'string') {
-      router.push(route.query.redirect)
-    }
-  })
+    watch(user, (user, prevUser) => {
+        if (prevUser && !user) {
+            router.push('/')
+        } else if (user && typeof route.query.redirect === 'string') {
+            router.push(route.query.redirect)
+        }
+    })
 })
 
-onMounted(async () => {
-  await learningStore.loadFromFirebase()
-  sentencesStore.loadSentences()
-  questStore.loadDailyProgress()
-  cardStore.loadCreatedCount()
-  statsStore.loadLocalStats()
-  authStore.uid
+onMounted(() => {
+    learningStore.loadFromFirebase()
+    sentencesStore.loadSentences()
+    questStore.loadDailyProgress()
+    cardStore.loadCreatedCount()
+    statsStore.loadLocalStats()
+    gameStore.loadUserAchievements()
+
+
 })
 
 
 onUnmounted(() => {
-  daily.stop()
+    daily.stop()
 })
 
 // onMounted(() => {
@@ -124,13 +128,13 @@ onUnmounted(() => {
 
 <style>
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 
 }
 
 html {
-  font-size: 16px;
+    font-size: 16px;
 }
 </style>

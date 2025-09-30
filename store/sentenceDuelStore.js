@@ -59,6 +59,8 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
 
     async function updateUserStats(userId, level, isWin, isCleanSweep, isFlawless) {
 
+        console.log('--- [STATS UPDATE] Вызов функции с данными:', { userId, level, isWin });
+
         if (!userId || !level || userId !== authStore.uid) return;
         const userDocRef = doc(db, 'users', userId);
         const updates = {};

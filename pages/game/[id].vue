@@ -163,21 +163,21 @@ watch(currentAnswer, (newText) => {
         </div>
 
         <Modal
-            v-if="opponentLeft"
-            :visible="true"
-            :title="t('wordDuelSession.leave')"
-            :text="t('wordDuelSession.leaveText')"
-            type="info"
-            @close="LeaveSession"
+                v-if="opponentLeft"
+                :visible="true"
+                :title="t('wordDuelSession.leave')"
+                :text="t('wordDuelSession.leaveText')"
+                type="info"
+                @close="LeaveSession"
         />
 
         <Modal
-            v-if="endGameModalData"
-            :visible="showEndGameModal"
-            :title="endGameModalData.title"
-            :text="endGameModalData.text"
-            :type="endGameModalData.type"
-            @close="closeEndGameModal"
+                v-if="endGameModalData"
+                :visible="showEndGameModal"
+                :title="endGameModalData.title"
+                :text="endGameModalData.text"
+                :type="endGameModalData.type"
+                @close="closeEndGameModal"
         />
 
         <div class="game-page-wrapper">
@@ -187,7 +187,8 @@ watch(currentAnswer, (newText) => {
 
             <div v-else class="game-container">
                 <div class="player-display opponent-display">
-                    <img v-if="opponent?.avatar" :src="authStore.getAvatarUrl(opponent.avatar)" alt="Opponent Avatar" class="player-avatar"/>
+                    <img v-if="opponent?.avatar" :src="authStore.getAvatarUrl(opponent.avatar)" alt="Opponent Avatar"
+                         class="player-avatar"/>
                     <div v-else class="player-avatar-placeholder"></div>
                     <div class="player-text-info">
                         <span class="player-name">{{ opponent?.name || 'Ожидание...' }}</span>
@@ -200,7 +201,9 @@ watch(currentAnswer, (newText) => {
                     <div v-else class="player-avatar-placeholder"></div>
                     <div class="player-text-info">
                         <span class="player-name">{{ authStore.name }}</span>
-                        <span class="player-score">🏆 {{ gameStore.sessionData.players[authStore.uid]?.score || 0 }}</span>
+                        <span class="player-score">🏆 {{
+                            gameStore.sessionData.players[authStore.uid]?.score || 0
+                            }}</span>
                     </div>
                 </div>
 
@@ -213,10 +216,10 @@ watch(currentAnswer, (newText) => {
                     <div class="game-board">
                         <div class="answer-section">
                             <button
-                                v-for="(word, index) in answerWords"
-                                :key="`ans-${index}`"
-                                @click="removeWordFromAnswer(index)"
-                                class="word-button answer-word"
+                                    v-for="(word, index) in answerWords"
+                                    :key="`ans-${index}`"
+                                    @click="removeWordFromAnswer(index)"
+                                    class="word-button answer-word"
                             >
                                 {{ word }}
                             </button>
@@ -235,11 +238,11 @@ watch(currentAnswer, (newText) => {
                     <div class="game-footer">
                         <div class="word-pool">
                             <button
-                                v-if="gameStore.sessionData.status === 'in_progress'"
-                                v-for="(word, index) in availableWords"
-                                :key="`pool-${index}`"
-                                @click="addWordToAnswer(word)"
-                                class="word-button"
+                                    v-if="gameStore.sessionData.status === 'in_progress'"
+                                    v-for="(word, index) in availableWords"
+                                    :key="`pool-${index}`"
+                                    @click="addWordToAnswer(word)"
+                                    class="word-button"
                             >
                                 {{ word }}
                             </button>
@@ -272,14 +275,29 @@ watch(currentAnswer, (newText) => {
 }
 
 @keyframes countdown-pulse {
-    0% { transform: scale(.8); opacity: 0; }
-    50% { transform: scale(1.2); opacity: 1; }
-    100% { transform: scale(1); opacity: 1; }
+    0% {
+        transform: scale(.8);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 @keyframes start-fade-out {
-    0% { transform: scale(1); opacity: 1; }
-    100% { transform: scale(1.5); opacity: 0; }
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
 }
 
 .countdown-number {
@@ -462,7 +480,7 @@ watch(currentAnswer, (newText) => {
 }
 
 .answer-word {
-    background-color: #A2C9A2;
+    background-color: #7af37a
 }
 
 .answer-word:hover {
@@ -495,22 +513,43 @@ watch(currentAnswer, (newText) => {
         padding: 8px;
         width: 180px; /* Adjusted width for smaller screens */
     }
+
     .opponent-display, .local-player-display {
         left: 10px;
+        width: 100%;
     }
-    .opponent-display { top: 10px; }
-    .local-player-display { bottom: 10px; }
+
+    .opponent-display {
+        top: 10px;
+    }
+
+    .local-player-display {
+        bottom: 10px;
+    }
 
     .player-avatar, .player-avatar-placeholder {
         width: 45px;
         height: 45px;
     }
+
     .player-name, .player-score {
         font-size: 1rem;
     }
+
     .game-main {
         padding-top: 80px;
         padding-bottom: 80px;
+    }
+}
+
+@media (max-width: 425px) {
+    .word-button {
+        padding: 5px 10px;
+        box-shadow: 2px 2px 0 #1e1e1e;
+        background-color: #fff;
+        cursor: pointer;
+        transition: all .1s ease-in-out;
+        font-size: 14px;
     }
 }
 </style>

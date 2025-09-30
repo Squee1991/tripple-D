@@ -68,6 +68,7 @@ useSeoMeta({
 
 const {t} = useI18n();
 const router = useRouter();
+const route = useRoute()
 const chainStore = userChainStore();
 
 const regionKey = computed(() => String(route.query.region || route.params.id || ""));

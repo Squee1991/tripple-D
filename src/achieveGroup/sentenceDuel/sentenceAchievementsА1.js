@@ -64,7 +64,7 @@ export const sentenceAchievement = [
                 targetProgress: 10,
             },
             {
-                id: 'а2_streaks_5',
+                id: 'a2_streaks_5',
                 name: 'duelA2.streak5Name',
                 description: 'duelA2.streak5Description',
                 icon: '🦅',
@@ -125,12 +125,12 @@ export const sentenceAchievement = [
                 targetProgress: 10,
             },
             {
-                id: 'b1_flawlessWins_25',
+                id: 'b1_cleanSweeps_20',
                 name: 'duelB1.cleanSweeps20',
                 description: 'duelB1.cleanSweeps20Description',
                 icon: '💎',
                 currentProgress: 0,
-                targetProgress: 25,
+                targetProgress: 20,
             },
         ]
     },
@@ -151,7 +151,7 @@ export const sentenceAchievement = [
                 description: 'duelB2.secondWinDescription',
                 icon: '🐉',
                 currentProgress: 0,
-                targetProgress: 15,
+                targetProgress: 20,
             },
             {
                 id: 'b2_streaks_5',
@@ -170,7 +170,7 @@ export const sentenceAchievement = [
                 targetProgress: 10,
             },
             {
-                id: 'b2_flawlessWins_10',
+                id: 'b2_cleanSweeps_10',
                 name: 'duelB2.cleanSweeps20',
                 description: 'duelB2.cleanSweeps20Description',
                 icon: '⭐',
