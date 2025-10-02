@@ -109,14 +109,14 @@ export const overAchievment = [
 				currentProgress: 0,
 				targetProgress: 500,
 			},
-			{
-				id: 'master_of_duels',
-				name: 'generalCategory.duelLabel',
-				description: 'generalCategory.duelText',
-				icon: '⚔',
-				currentProgress: 0,
-				targetProgress: 250,
-			},
+			// {
+			// 	id: 'master_of_duels',
+			// 	name: 'generalCategory.duelLabel',
+			// 	description: 'generalCategory.duelText',
+			// 	icon: '⚔',
+			// 	currentProgress: 0,
+			// 	targetProgress: 250,
+			// },
 			{
 				id: 'wrong100Answers',
 				name: 'generalCategory.mistakesLabel',

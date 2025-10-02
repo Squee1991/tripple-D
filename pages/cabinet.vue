@@ -246,7 +246,6 @@ import {ref, computed, onMounted, watch, watchEffect} from 'vue'
 import {useRouter} from 'vue-router'
 import {useI18n} from 'vue-i18n'
 import Progress from '../src/components/progress.vue'
-import Shop from '../src/components/Shop.vue'
 import AwardsList from '../src/components/AwardsList.vue'
 import VExampResulut from "../src/components/V-exampResulut.vue";
 import VToggle from '../src/components/V-toggle.vue'

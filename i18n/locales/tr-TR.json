@@ -1,4 +1,19 @@
 {
+  "useHeadApp": {
+    "title": "German Corner — Almancayı oyunlarla kolay ve eğlenceli şekilde öğren",
+    "content": "German Corner — Almanca öğrenmek için çevrimiçi platform: dilbilgisi, artikeller, zamanlar, alıştırmalar ve oyun tabanlı öğrenme.",
+    "contentTwo": "Almanca, artikeller, dilbilgisi, çevrimiçi Almanca öğren, A1, A2, B1",
+    "contentThree": "German Corner — Almanca öğrenme",
+    "contentFour": "Almancayı egzersizler ve oyunlarla eğlenceli ve etkili bir şekilde öğren!"
+  },
+  "achievementToast": {
+    "awardTitle": "Yeni bir ödül kazandınız!",
+    "achievementTitle": "Başarı elde edildi!"
+  },
+  "awardModal": {
+    "title": "Ödüller",
+    "description": "Ödüller, ödül öngörülen başarılar için verilir"
+  },
   "descriptionCardTheme": {
     "title": "Öğrenme konuları",
     "textOne": "Örneklerle gramer",
@@ -1908,7 +1923,7 @@
   "generalCategory": {
     "generaLabel": "Genel Başarılar",
     "dailyTitle": "Demir İrade",
-    "dailyText": "50 günlük görev tamamla",
+    "dailyText": "Görev Günlüğünden 50 alıştırma yap",
     "dailyAward": "Ödül: Sonsuzluk Kum Saati",
     "firstStepLabel": "İlk Adım",
     "firstAwardText": "Koleksiyonun başlangıcı",
@@ -1933,11 +1948,11 @@
     "firstArtiklusLabel": "İlk Para Birimi",
     "firstArtiklusText": "İlk Artiklus’unu kazan!",
     "horizontLabel": "Yeni Ufuk",
-    "horizontText": "2. seviyeye ulaşmak için yeterli deneyim kazan.",
+    "horizontText": "2. seviyeye ulaşmak için Artikeller Pratiği görevlerini tamamlayarak deneyim kazan",
     "polyglotLabel": "Başlangıç Seviyesi Poliglot",
-    "polyglotText": "Tamamen 50 yeni kelime öğren.",
+    "polyglotText": "Artikel Pratiğinde tüm modlarda 50 kelime öğren",
     "magisterLabel": "Kelime Ustası",
-    "magisterText": "100 kelime öğrenerek ustalığa ulaş.",
+    "magisterText": "Artikel Pratiğinde tüm modlarda 100 kelime öğrenerek ustalık seviyesine ulaş",
     "mistakesLabel": "Hatalar Beni Durduramaz!",
     "mistakesText": "Her biri bilgiye atılan bir adım!",
     "mistakesAward": "Ödül: Sabır Tılsımı"
@@ -2320,7 +2335,7 @@
     "translateThree": "Biz uyumayacağız.",
     "tableTitle": "werden’in çekimi",
     "practiceDesc": "Doğru werden formunu seç ve Futur I cümlesi kur.",
-    "begin": "Başla"
+    "begin": "Pratiğe başla"
   },
   "präteritum": {
     "howToDo": "Ünlü değişikliği ile güçlü fiil kökü / zayıf kök + “-te”",
@@ -2512,13 +2527,17 @@
     "theme": "tema"
   },
   "sessionLabels": {
-    "word": "kelime",
-    "articleFor": "İçin artikeli girin",
-    "lettersFor": "Harflerden kelime oluştur",
+    "word": "Kelime",
+    "articleFor": "Belirtili artikeli girin",
+    "lettersFor": "Harflerden kelimeyi oluştur",
     "articleWordFor": "Artikeli ve kelimeyi girin",
-    "pluralFor": "İçin çoğul formu girin",
-    "audioFor": "Dinle ve kelimeyi gir",
-    "listen": "Dinle"
+    "pluralFor": "Çoğul formu girin",
+    "audioFor": "Dinle ve kelimeyi yaz",
+    "listen": "Dinle",
+    "end": "Eğitim tamamlandı!",
+    "again": "Konuyu tekrar et",
+    "mistakes": "Hataları tekrar et",
+    "back": "Konu listesine dön"
   },
   "result": {
     "correctAnswer": "Doğru cevap",

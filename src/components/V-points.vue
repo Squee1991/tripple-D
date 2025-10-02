@@ -238,7 +238,7 @@ onMounted(() => {
 }
 
 .points {
-  min-width: 360px;
+  min-width: 340px;
   display: flex;
   width: 100%;
 }

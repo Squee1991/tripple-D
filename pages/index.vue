@@ -1,6 +1,6 @@
 <script setup>
-import {ref, onMounted} from 'vue'
-import {userAuthStore} from "~/store/authStore.js";
+import { ref, onMounted } from 'vue'
+import { userAuthStore } from "~/store/authStore.js"
 import Header from '../src/components/header.vue'
 import Banner from '../src/components/baner.vue'
 import Description from '../src/components/DescriptionBlock.vue'
@@ -8,16 +8,18 @@ import About from '../src/components/about.vue'
 import FeedBack from '../src/components/feedBack.vue'
 import Footer from '../src/components/footer.vue'
 import VUid from '../src/components/V-uid.vue'
-import { useHead, useSeoMeta, useRuntimeConfig } from '#imports'
+import { useHead, useSeoMeta } from '#imports'
+import { useCanonical } from '~/composables/useCanonical'
+
 const runtime = useRuntimeConfig().public
+const canonical = useCanonical()
 
 const pageTitle = 'German Corner — Изучай немецкий язык в игровой форме'
 const pageDesc  = 'Главная страница платформы German Corner. Игровые тренировки артиклей der, die, das, тематические уровни, квесты и достижения. Учите немецкий с интересом!'
+
 useHead({
   title: pageTitle,
-  link: [
-    { rel: 'canonical', href: `${runtime.siteUrl}/` }
-  ]
+  link: [{ rel: 'canonical', href: canonical }]
 })
 
 useSeoMeta({
@@ -25,7 +27,7 @@ useSeoMeta({
   ogTitle: pageTitle,
   ogDescription: pageDesc,
   ogType: 'website',
-  ogUrl: `${runtime.siteUrl}/`,
+  ogUrl: canonical,
   ogImage: '/images/seo-main.png',
   robots: 'index, follow'
 })
@@ -35,8 +37,8 @@ const hydrated = ref(false)
 onMounted(() => {
   hydrated.value = true
 })
-
 </script>
+
 
 <template>
   <div v-if="!hydrated || !authStore.initialized" class="loading"></div>

@@ -10,7 +10,7 @@
     <div class="awards__header">
       <h1 class="awards__title">{{ t('awards.title') }}</h1>
       <button @click="questionModal" class="awards__info-btn">
-        <img class="awards__question-icon" :src="Question" alt="">
+        <img class="awards__question-icon" :src="Question" alt="quest_icon">
       </button>
     </div>
     <div class="items-grid">
@@ -18,25 +18,15 @@
           v-for="award in awards"
           class="shop-item"
           :class="{ locked: award.locked }"
-          @click="openAward(award)"
       >
         <div class="image-wrapper">
           <img :class="{ locked: award.locked }" :src="award.icon" alt="award" class="item-img"/>
           <div v-if="award.locked" class="locked-overlay">
-            <img class="lock" src="../../assets/images/padlock.svg" alt="">
+            <img class="lock" src="../../assets/images/padlock.svg" alt="lock icon">
           </div>
         </div>
         <p class="item-name">{{ t(award.title) }}</p>
       </div>
-<!--      <div v-if="showModal" class="modal-overlay" @click.self="closeAward">-->
-<!--        <div class="modal-content">-->
-<!--          <img :src="selectedAward.icon" class="modal-icon"/>-->
-<!--          <h3>{{ t(selectedAward.title) }}</h3>-->
-<!--          &lt;!&ndash;        <p v-if="selectedAward.locked">🔒 Награда пока не получена</p>&ndash;&gt;-->
-<!--          <p>🎉 {{ t('awardsSection.congratulations') }}</p>-->
-<!--          <button @click="closeAward">{{ t('awardsSection.close') }}</button>-->
-<!--        </div>-->
-<!--      </div>-->
     </div>
   </div>
 </template>
@@ -56,9 +46,9 @@ const props = defineProps({
 })
 
 const modalData = ref({
-  title: 'Награды',
+  title: t('awardModal.title'),
   icon: AwardIconModal,
-  text: 'Награды даются за достижения к которым предусмотрена награда'
+  text: t('awardModal.description')
 })
 
 const questionModal = () => {
@@ -80,6 +70,7 @@ function closeAward() {
 </script>
 
 <style scoped>
+
 .items-grid {
   display: flex;
   flex-wrap: wrap;
@@ -254,5 +245,4 @@ button:disabled {
   height: 60px;
   box-shadow: none;
 }
-
 </style>

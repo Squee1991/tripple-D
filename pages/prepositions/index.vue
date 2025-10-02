@@ -414,7 +414,7 @@ watch(currentTopicData, () => {
 
 .content__title {
   color: white;
-  font-size: 2rem;
+  font-size: 2.1rem;
   font-weight: bold;
   text-shadow: none;
 }

@@ -7,7 +7,7 @@
         "type": "multiple-choice",
         "task": {
           "text": "Supermarkt Müller\nÖffnungszeiten: von Montag bis Samstag 8–20 Uhr",
-          "question": "Am Sonntag ist der Supermarkt geöffnet?",
+          "question": "Am Sonntag is der Supermarkt geöffnet",
           "options": ["Richtig", "Falsch"],
           "answer": "Falsch"
         }
@@ -56,7 +56,6 @@
           "answer": "Falsch"
         }
       },
-
       {
         "id": "hoeren-1",
         "title": "Hören",
@@ -136,7 +135,7 @@
         "title": "Schreiben",
         "type": "text-input",
         "task": {
-          "instruction": "Schreib deinem Freund zum Geburtstag. (2–3 Sätze)",
+          "instruction": "Gratuliere deinem Freund zum Geburtstag. (2–3 Sätze)",
           "exampleAnswer": "Alles Gute zum Geburtstag, Lisa! Ich wünsche dir viel Glück und Gesundheit!"
         }
       },

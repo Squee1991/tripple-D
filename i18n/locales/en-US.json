@@ -1,4 +1,19 @@
 {
+  "useHeadApp": {
+    "title": "German Corner — Learn German easily and interestingly through games",
+    "content": "German Corner — an online platform for learning German: grammar, articles, tenses, exercises and game-based learning.",
+    "contentTwo": "German language, articles, grammar, learn German online, A1, A2, B1",
+    "contentThree": "German Corner — Learning German",
+    "contentFour": "Learn German in a fun and effective way with exercises and games!"
+  },
+  "achievementToast": {
+    "awardTitle": "You received a reward!",
+    "achievementTitle": "Achievement unlocked!"
+  },
+  "awardModal": {
+    "title": "Awards",
+    "description": "Awards are given for achievements that include a reward"
+  },
   "descriptionCardTheme": {
     "title": "Learning topics",
     "textOne": "Grammar with examples",
@@ -185,13 +200,6 @@
   },
   "preloader": {
     "value": "You will be redirected to the main page..."
-  },
-  "useHeadApp": {
-    "title": "German Online A1–B1 — Grammar, Articles, Exercises | German Corner",
-    "content": "Learn German online at levels A1–B1: grammar, der/die/das articles, tenses, and exercises in a playful format. German Corner helps you study German easily and effectively!",
-    "contentTwo": "German online, German A1, German A2, German B1, German grammar, der die das articles, German tenses, German exercises",
-    "contentThree": "German Corner — German Online A1–B1",
-    "contentFour": "Grammar, articles, and German exercises in a playful format. Learn with fun and efficiency!"
   },
   "randomPhrases": {
     "first": "Today you took another step forward!",
@@ -1910,7 +1918,7 @@
   "generalCategory": {
     "generaLabel": "General Achievements",
     "dailyTitle": "Iron Will",
-    "dailyText": "Complete 50 daily tasks",
+    "dailyText": "Complete 50 exercises from the Task Journal",
     "dailyAward": "Reward: Hourglass of Eternity",
     "firstStepLabel": "First Step",
     "firstAwardText": "Start of the collection",
@@ -1935,11 +1943,11 @@
     "firstArtiklusLabel": "First Currency",
     "firstArtiklusText": "Earn your first Artiklus!",
     "horizontLabel": "New Horizon",
-    "horizontText": "Gain enough experience to reach level 2.",
+    "horizontText": "Gain experience to reach Level 2 by completing the Article Practice tasks",
     "polyglotLabel": "Beginner Polyglot",
-    "polyglotText": "Fully learn 50 new words.",
+    "polyglotText": "Learn 50 words in all modes in Article Practice",
     "magisterLabel": "Word Master",
-    "magisterText": "Achieve mastery by learning 100 words.",
+    "magisterText": "Achieve mastery by learning 100 words in all modes in Article Practice",
     "mistakesLabel": "Mistakes Won’t Stop Me!",
     "mistakesText": "Each one is a step toward knowledge!",
     "mistakesAward": "Reward: Talisman of Patience"
@@ -2327,7 +2335,7 @@
     "translateThree": "We will not sleep.",
     "tableTitle": "Conjugation of werden",
     "practiceDesc": "Choose the correct form of werden and build Futur I.",
-    "begin": "Start"
+    "begin": "Start practice"
   },
   "präteritum": {
     "howToDo": "Strong verb stem with vowel change / weak stem + “-te”",
@@ -2521,13 +2529,17 @@
     "theme": "theme"
   },
   "sessionLabels": {
-    "word": "word",
-    "articleFor": "Enter the article for",
-    "lettersFor": "Assemble the word from letters",
-    "articleWordFor": "Enter the article and the word",
-    "pluralFor": "Enter the plural form for",
-    "audioFor": "Listen and enter the word",
-    "listen": "Listen"
+    "word": "Word",
+    "articleFor": "Insert the article for",
+    "lettersFor": "Spell the word from letters",
+    "articleWordFor": "Insert the article and the word",
+    "pluralFor": "Insert the plural form for",
+    "audioFor": "Listen and write the word",
+    "listen": "Listen",
+    "end": "Training completed!",
+    "again": "Repeat topic",
+    "mistakes": "Repeat mistakes",
+    "back": "Back to topics"
   },
   "result": {
     "correctAnswer": "Correct answer",

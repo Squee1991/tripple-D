@@ -1,71 +1,70 @@
 <template>
-    <Teleport to="body">
-        <div class="ach-toast-container" aria-live="polite" aria-atomic="true">
-            <transition name="ach-toast">
-                <div
-                        v-if="ach.showPopup && ach.popupAchievement"
-                        class="ach-toast-card"
-                        role="status"
-                        @mouseenter="pause()"
-                        @mouseleave="resume()"
-                >
-                    <div class="sparkles"></div>
-                    <button class="ach-toast-close" @click="forceClose()" aria-label="Закрыть">×</button>
-                    <div class="ach-toast-icon">
-                        <img
-                                v-if="achIcon?.type === 'img'"
-                                :src="achIcon.src"
-                                alt=""
-                                class="ach-toast-icon-img"
-                                decoding="async"
-                        />
-                        <span v-else class="ach-toast-icon-emoji">{{ achIcon?.text }}</span>
-                    </div>
-                    <div class="ach-toast-body">
-                        <div class="ach-toast-msg">
-                            {{ t('Получено достижение!') }}
-                        </div>
-                        <div class="ach-toast-title">
-                            {{ t(resolveTitle(ach.popupAchievement)) }}
-                        </div>
-                        <div v-if="ach.popupAchievement?.groupTitle" class="ach-toast-sub">
-                            {{ t(ach.popupAchievement.groupTitle) }}
-                        </div>
-                        <div class="ach-toast-timer">
-                            <div class="ach-toast-timer__bar" :style="{ width: timerPct + '%' }"></div>
-                        </div>
-                    </div>
-                </div>
-            </transition>
-            <transition name="ach-toast">
-                <div
-                        v-if="awardVisible"
-                        class="ach-toast-card ach-toast-card--award"
-                        role="status"
-                        @mouseenter="pauseAward()"
-                        @mouseleave="resumeAward()"
-                >
-                    <div class="sparkles"></div>
-                    <button class="ach-toast-close" @click="awardVisible = false" aria-label="Закрыть">×</button>
-                    <div class="ach-toast-icon">
-                        <span class="ach-toast-icon-emoji">🎖️</span>
-                    </div>
-                    <div class="ach-toast-body">
-                        <div class="ach-toast-msg">
-                            {{ t('Вы получили новую награду!') }}
-                        </div>
-                        <div class="ach-toast-title">
-                            {{ t(awardTitle) || 'Награда' }}
-                        </div>
-
-                        <div class="ach-toast-timer">
-                            <div class="ach-toast-timer__bar" :style="{ width: awardTimerPct + '%' }"></div>
-                        </div>
-                    </div>
-                </div>
-            </transition>
+  <Teleport to="body">
+    <div class="ach-toast-container" aria-live="polite" aria-atomic="true">
+      <transition name="ach-toast">
+        <div
+            v-if="ach.showPopup && ach.popupAchievement"
+            class="ach-toast-card"
+            role="status"
+            @mouseenter="pause()"
+            @mouseleave="resume()"
+        >
+          <div class="sparkles"></div>
+          <button class="ach-toast-close" @click="forceClose()" aria-label="Закрыть">×</button>
+          <div class="ach-toast-icon">
+            <img
+                v-if="achIcon?.type === 'img'"
+                :src="achIcon.src"
+                alt=""
+                class="ach-toast-icon-img"
+                decoding="async"
+            />
+            <span v-else class="ach-toast-icon-emoji">{{ achIcon?.text }}</span>
+          </div>
+          <div class="ach-toast-body">
+            <div class="ach-toast-msg">
+              {{ t('achievementToast.achievementTitle') }}
+            </div>
+            <div class="ach-toast-title">
+              {{ t(ach.popupAchievement?.title) }}
+            </div>
+            <div v-if="ach.popupAchievement?.groupTitle" class="ach-toast-sub">
+              {{ t(ach.popupAchievement.groupTitle) }}
+            </div>
+            <div class="ach-toast-timer">
+              <div class="ach-toast-timer__bar" :style="{ width: timerPct + '%' }"></div>
+            </div>
+          </div>
         </div>
-    </Teleport>
+      </transition>
+      <transition name="ach-toast">
+        <div
+            v-if="awardVisible"
+            class="ach-toast-card ach-toast-card--award"
+            role="status"
+            @mouseenter="pauseAward()"
+            @mouseleave="resumeAward()"
+        >
+          <div class="sparkles"></div>
+          <button class="ach-toast-close" @click="awardVisible = false" aria-label="Закрыть">×</button>
+          <div class="ach-toast-icon">
+            <span class="ach-toast-icon-emoji">🎖️</span>
+          </div>
+          <div class="ach-toast-body">
+            <div class="ach-toast-msg">
+              {{ t('achievementToast.awardTitle') }}
+            </div>
+            <div class="ach-toast-title">
+              {{ t(awardTitle) }}
+            </div>
+            <div class="ach-toast-timer">
+              <div class="ach-toast-timer__bar" :style="{ width: awardTimerPct + '%' }"></div>
+            </div>
+          </div>
+        </div>
+      </transition>
+    </div>
+  </Teleport>
 </template>
 
 <script setup>
@@ -92,22 +91,6 @@ let raf = null
 const remaining = ref(AUTO_CLOSE_MS)
 let lastTick = 0
 const running = ref(false)
-
-const hasProgress = computed(() => {
-  const a = ach.popupAchievement
-  if (!a) return false
-  const cur = Number(a.currentProgress ?? 0)
-  const target = Number(a.targetProgress ?? 0)
-  return target > 0 && cur > 0
-})
-
-const progressPct = computed(() => {
-  const a = ach.popupAchievement
-  if (!a) return 0
-  const cur = Number(a.currentProgress ?? 0)
-  const target = Math.max(1, Number(a.targetProgress ?? 1))
-  return Math.min(100, Math.round((cur / target) * 100))
-})
 
 const timerPct = computed(() => {
   const passed = Math.max(0, AUTO_CLOSE_MS - Math.max(0, remaining.value))
@@ -158,10 +141,6 @@ function forceClose() {
   ach.closePopup()
 }
 
-function resolveTitle(a) {
-  return a?.title || a?.name || a?.id || null
-}
-
 const awardVisible = ref(false)
 const awardTitle = ref('')
 const AWARD_AUTO_CLOSE_MS = 1200000
@@ -175,8 +154,8 @@ const awardTimerPct = computed(() => {
   return Math.min(100, (passed / AWARD_AUTO_CLOSE_MS) * 100)
 })
 
-function openAward(title) {
-  awardTitle.value = title || 'Reward'
+function openAward(titleKey) {
+  awardTitle.value = titleKey || 'achievementToast.defaultReward'
   awardVisible.value = true
   startAwardTimer()
 }
@@ -222,17 +201,20 @@ function clearAwardTimer() {
 }
 
 watch(() => ach.showPopup, v => (v ? startTimer() : clearTimer()), {immediate: true})
-watch(() => ach.lastUnlockedAward, aw => {
-  if (aw?.title) openAward(aw.title)
-}, {immediate: true, deep: true})
+
+watch(() => ach.lastUnlockedAward, (aw) => {
+  if (aw && aw.titleKey) openAward(aw.titleKey)
+}, { immediate: true, deep: true })
 
 onMounted(() => {
   if (ach.showPopup) startTimer()
 })
+
 onBeforeUnmount(() => {
   clearTimer();
   clearAwardTimer()
 })
+
 </script>
 
 <style scoped>
@@ -244,7 +226,7 @@ onBeforeUnmount(() => {
   z-index: 9999;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 6px;
   pointer-events: none;
 }
 
@@ -255,51 +237,50 @@ onBeforeUnmount(() => {
   gap: 12px;
   min-width: 350px;
   max-width: 100%;
-  background: rgba(20, 20, 20, 0.92);
+  background: linear-gradient(135deg, #1a1d2b, #232737eb);
   color: #fff;
   border-radius: 14px;
   padding: 14px 16px 18px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45),
+  inset 0 0 0 1px rgba(255, 255, 255, 0.05);
   position: relative;
   overflow: hidden;
 }
 
-.ach-toast-card--award {
-  background: linear-gradient(135deg, rgba(35, 28, 10, 0.95), rgba(60, 44, 16, 0.95));
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(255, 215, 128, 0.25);
-}
 
-.ach-toast-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: gray;
-  width: 60px;
-  height: 60px;
-  border-radius: 10px;
-  border: 2px solid white;
+.ach-toast-card--award {
+  background: linear-gradient(135deg, #8c6922, #604818);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6),
+  inset 0 0 0 1px rgba(255, 200, 100, 0.25);
 }
 
 .ach-toast-icon-img {
   width: 50px;
   height: 50px;
-
 }
 
 .ach-toast-icon-emoji {
-  font-size: 28px;
-  line-height: 1;
+  font-size: 50px;
+}
+
+.ach-toast-icon {
+  width: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .ach-toast-body {
   display: flex;
   flex-direction: column;
+  padding: 0 20px;
 }
 
 .ach-toast-title {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 14px;
   margin-top: 5px;
+  font-family: "Nunito", sans-serif;
 }
 
 .ach-toast-sub {
@@ -310,7 +291,7 @@ onBeforeUnmount(() => {
 .ach-toast-msg {
   font-size: 17px;
   font-weight: bold;
-  color: #a8a5a5;
+  color: #aba0a0;
 }
 
 .ach-toast-close {
@@ -349,9 +330,11 @@ onBeforeUnmount(() => {
 .ach-toast-enter-active {
   animation: bounce-in 0.5s;
 }
+
 .ach-toast-leave-active {
   animation: bounce-in 0.5s reverse;
 }
+
 @keyframes bounce-in {
   0% {
     transform: scale(0);
@@ -361,6 +344,20 @@ onBeforeUnmount(() => {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@media (max-width: 767px) {
+  .ach-toast-card {
+    width: 60%;
+  }
+  .ach-toast-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    padding: 0 15px;
   }
 }
 </style>

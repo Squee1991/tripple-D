@@ -20,14 +20,16 @@
       <h2 class="exam__card-title">{{ currentExercise.title }}</h2>
       <div v-if="['multiple-choice','audio-choice'].includes(currentExercise.type)">
         <div v-if="currentExercise.task.text && currentExercise.type==='multiple-choice'" class="exam__task-text">
-          <strong class="exam__label">Text:</strong> {{ currentExercise.task.text }}
+          <span><strong class="exam__label">Text: </strong></span>
+          <span class="exam__text-read">{{ currentExercise.task.text }}</span>
         </div>
         <div v-if="currentExercise.type==='audio-choice'" class="exam__task-audio">
           <strong class="exam__label">Hörbeispiel:</strong>
           <SoundBtn :text="currentExercise.task.text" lang="de-DE" title="Hörbeispiel anhören"/>
         </div>
         <div class="exam__question">
-          <strong class="exam__label">Frage:</strong> {{ currentExercise.task.question }}
+          <span><strong class="exam__label">Frage: </strong></span>
+          <span class="exam__text-read"> {{ currentExercise.task.question }}</span>
         </div>
         <ul class="exam__options">
           <li v-for="option in currentExercise.task.options" :key="option" class="exam__option">
@@ -37,7 +39,8 @@
       </div>
       <div v-else-if="currentExercise.type==='text-input'" class="exam__text-input">
         <p class="exam__task-instruction">
-          <strong class="exam__label">Aufgabe:</strong> {{ currentExercise.task.instruction }}
+          <span><strong class="exam__label">Aufgabe: </strong> </span>
+          <span class="exam__text-read">{{ currentExercise.task.instruction }}</span>
         </p>
         <textarea v-model="userInput" class="exam__textarea" placeholder="Antwort schreiben..." rows="4"/>
         <button class="exam__button" @click="submitTextAnswer">Antwort senden</button>
@@ -268,6 +271,7 @@ onMounted(() => {
 
 .exam__progress {
   font-size: 1.1rem;
+  text-align: center;
   font-weight: bold;
   color: #5d4037;
   margin-bottom: 0.5rem;
@@ -308,7 +312,7 @@ onMounted(() => {
   background: #ffffff;
   border: 4px solid #000;
   border-radius: 20px;
-  padding: 2rem;
+  padding: 1rem;
   max-width: 1200px;
   width: 100%;
   box-shadow: 6px 6px 0 #000;
@@ -330,18 +334,15 @@ onMounted(() => {
 
 .exam__label {
   color: #1a237e;
+  margin-right: 6px;
 }
 
 .exam__task-text, .exam__task-audio, .exam__question, .exam__task-instruction, .exam__task-prompt, .exam__task-topics {
   margin-bottom: 1.2rem;
   font-size: 1.2rem;
-  display: flex;
 }
 
 .exam__options {
-  list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -371,11 +372,17 @@ onMounted(() => {
   transform: translateY(-2px) rotate(1deg);
 }
 
+
+
 .exam__textarea {
   width: 100%;
-  padding: 1rem;
+  padding: 0.6rem;
+  resize: none;
+  width: 100%;
+  min-height: 150px;
   margin-bottom: 1rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
   border-radius: 8px;
   border: 1px solid #ccc;
   box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.1);
@@ -521,6 +528,13 @@ onMounted(() => {
   }
   50% {
     opacity: .5
+  }
+}
+
+@media (max-width: 767px) {
+  .exam__text-read {
+    font-size: 1rem;
+    font-weight: 600;
   }
 }
 </style>

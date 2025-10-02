@@ -8,8 +8,8 @@
           {{ mode.label }}
         </div>
       </div>
-      <div v-for="word in paginatedWords" :key="word.de + '-' + word.ru" class="word-row">
-        <div class="word-cell word-ru">{{ word.ru }}</div>
+      <div v-for="(word, idx) in paginatedWords" :key="idx" class="word-row">
+        <div class="word-cell word-ru">{{ word.de }}</div>
         <div v-for="mode in learningModes" :key="mode.key" class="word-cell status-cell">
           <span :title="getTooltip(word.progress?.[mode.key])">
             {{ getStatusIcon(word.progress?.[mode.key]) }}

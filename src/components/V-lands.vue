@@ -401,6 +401,7 @@ function go(region) {
     transform: translateX(0);
     opacity: 1;
     pointer-events: auto;
+    background: var(--bg);
   }
 
   .map__title {

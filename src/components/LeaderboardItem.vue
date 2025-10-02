@@ -109,27 +109,6 @@ const rankClass = computed(() => {
   color: #000000;
 }
 
-.rank--gold {
-  color: #ecc608;
-  font-size: 1.9rem;
-  display: flex;
-  align-items: center;
-}
-
-.rank--silver {
-  color: #c0c7d1;
-  font-size: 1.8rem;
-  display: flex;
-  align-items: center;
-}
-
-.rank--bronze {
-  color: #cd7f32;
-  font-size: 1.7rem;
-  display: flex;
-  align-items: center;
-}
-
 .leaderboard-score-wrapper {
   min-width: 62px;
   padding: 8px 14px;
