@@ -74,7 +74,7 @@ onBeforeUnmount(() => document.removeEventListener('mousedown', clickOutside))
   border-radius: 12px;
   color: #1e1e1e;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 15px;
   padding: 0.5rem 1rem;
   cursor: pointer;
   box-shadow: 4px 4px 0 #1e1e1e;

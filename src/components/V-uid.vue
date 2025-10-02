@@ -6,7 +6,7 @@
       </div>
       <div class="stats__wrapper">
         <VPoints/>
-        <Vdaily/>
+        <VDaily/>
       </div>
     </template>
     <template v-else>
@@ -37,8 +37,7 @@
 <script setup>
 import {ref, computed, onMounted, onBeforeUnmount} from 'vue'
 import VPoints from "~/src/components/V-points.vue";
-import Vdaily from "~/src/components/Vdaily.vue";
-import VAchievements from "~/src/components/V-achievements.vue";
+import VDaily from "~/src/components/Vdaily.vue";
 import VLands from "~/src/components/V-lands.vue";
 import Location from '../../assets/images/location.svg'
 import Daily from '../../assets/images/daily.svg'
@@ -46,7 +45,7 @@ import Card from '../../assets/images/card.svg'
 
 const tabs = [
   {id: 'locations', icon: Location, alt: 'achIcon', label: 'Земли', component: VLands},
-  {id: 'daily', icon: Daily, alt: 'daily icon', label: 'Ежедневки', component: Vdaily},
+  {id: 'daily', icon: Daily, alt: 'daily icon', label: 'Ежедневки', component: VDaily},
   {id: 'profile', icon: Card, alt: 'ach icon', label: 'Панель ученика', component: VPoints},
 ]
 

@@ -15,13 +15,12 @@
     <div class="header-container">
       <NuxtLink to="/" class="logo" aria-label="German Corner — Home">
         <span class="logo__name">German</span>
-        <img
-            src="../../assets/images/logo/Logo.png"
+        <NuxtImg
+            src="/images/logo/Logo.png"
             alt="German Corner"
-            width="62"
-            height="62"
+            class="logo__img"
+            format="webp"
             loading="eager"
-            decoding="async"
             fetchpriority="high"
         />
         <span class="logo__name">corner</span>
@@ -245,9 +244,9 @@ const menuItems = computed(() => [
             },
           ] :
           [
-            { id: 'about', valueKey: 'nav.about', url: '/info-about',},
-            { id: 'contact', valueKey: 'nav.contact', url: '/support-request',},
-            { id: 'faq', valueKey: 'nav.quest', url: '/faq', },
+            {id: 'about', valueKey: 'nav.about', url: '/info-about',},
+            {id: 'contact', valueKey: 'nav.contact', url: '/support-request',},
+            {id: 'faq', valueKey: 'nav.quest', url: '/faq',},
           ]
   ),
   ...(userAuth.uid
@@ -328,6 +327,13 @@ watch(isMobileMenuOpen, (newVal) => {
   align-items: center;
 }
 
+.logo__img {
+  width: 62px;
+  height: 62px;
+  object-fit: contain;
+  display: block;
+}
+
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -340,20 +346,6 @@ watch(isMobileMenuOpen, (newVal) => {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-}
-
-.logo-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 55px;
-  height: auto;
-  display: block;
-  transition: transform 0.2s ease;
-}
-
-.logo-img:hover {
-  transform: rotate(-8deg);
 }
 
 .header-nav__list {
@@ -370,7 +362,7 @@ watch(isMobileMenuOpen, (newVal) => {
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  font-size: 16px;
+  font-size: 15px;
   color: black;
   font-weight: 600;
   padding: 0.5rem 0.75rem;
@@ -476,8 +468,8 @@ watch(isMobileMenuOpen, (newVal) => {
 }
 
 .header-user__avatar {
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   border: 3px solid #1e1e1e;
 }
@@ -574,7 +566,10 @@ watch(isMobileMenuOpen, (newVal) => {
 
   .logo__name {
     display: none;
+  }
 
+  .logo {
+    opacity: 0;
   }
 
   .header-nav__link {
@@ -723,12 +718,6 @@ watch(isMobileMenuOpen, (newVal) => {
     .header-nav__link {
       color: #1e1e1e;
     }
-
-    .articlus__wrapper {
-      height: 45px;
-      box-shadow: 2px 2px 0 #1e1e1e;
-    }
-
   }
 }
 

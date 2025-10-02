@@ -386,10 +386,9 @@ watch(selectedGroup, initLottieIcon);
 
 .content__title {
   color: white;
-  font-size: 2.5rem;
+  font-size: 2.1rem;
   font-weight: bold;
   text-shadow: 2px 2px 0px #000;
-  text-align: center;
 }
 
 .content__body {
@@ -507,7 +506,7 @@ watch(selectedGroup, initLottieIcon);
 .practice-area__button {
   text-decoration: none;
   background: #f1c40f;
-  color: #fff;
+  color: black;
   border: 3px solid #000;
   border-radius: 8px;
   padding: 15px 30px;
@@ -516,7 +515,6 @@ watch(selectedGroup, initLottieIcon);
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   box-shadow: 4px 4px 0px #000;
-  width: 100%;
   text-align: center;
 }
 

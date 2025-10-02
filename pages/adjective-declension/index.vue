@@ -405,7 +405,7 @@ watch(currentTopicData, initLottieIcon);
 
 .content__title {
   color: white;
-  font-size: 2rem;
+  font-size: 2.1rem;
   font-weight: bold;
 }
 

@@ -193,11 +193,11 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 					if (lastUnlockedAchievement.value?.id === ach.id) lastUnlockedAchievement.value = null
 				}, 0)
 
-				const awardTitle = achievementToAwardMap[id]
-				if (awardTitle && !shownSet.has(awardTitle)) {
-					shownSet.add(awardTitle)
+				const mapVal = achievementToAwardMap[id]
+				if (mapVal && !shownSet.has(mapVal)) {
+					shownSet.add(mapVal)
 					saveShown(shownSet)
-					lastUnlockedAward.value = { title: awardTitle, achId: id, ts: Date.now() }
+					lastUnlockedAward.value = { titleKey: mapVal, achId: id, ts: Date.now() }
 					setTimeout(() => {
 						if (lastUnlockedAward.value?.achId === id) lastUnlockedAward.value = null
 					}, 0)
@@ -205,11 +205,11 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				}
 			} else {
 				bootUnlocked.push(ach)
-				const awardTitle = achievementToAwardMap[id]
-				if (awardTitle && !shownSet.has(awardTitle)) {
-					shownSet.add(awardTitle)
+				const mapVal = achievementToAwardMap[id]
+				if (mapVal && !shownSet.has(mapVal)) {
+					shownSet.add(mapVal)
 					saveShown(shownSet)
-					bootAwards.push({ title: awardTitle, achId: id })
+					bootAwards.push({ titleKey: mapVal, achId: id })
 				}
 			}
 		}

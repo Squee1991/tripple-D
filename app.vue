@@ -18,36 +18,24 @@ import {useCardsStore} from './store/cardsStore.js'
 import {useLocalStatGameStore} from './store/localSentenceStore.js'
 import {onMounted} from "vue";
 import {dailyStore} from './store/dailyStore'
-import {useHead} from '#imports'
 import {computed} from 'vue'
+import {useHead} from '#imports'
+const { locale, t } = useI18n()
 
-const {locale, t} = useI18n()
-
-useHead({
-  htmlAttrs: {
-    lang: computed(() => locale.value),
-    dir: computed(() => 'ltr')
-  },
-  title: 'German Corner — Учим немецкий легко и интересно в игровой форме',
+useHead(() => ({
+  htmlAttrs: { lang: locale.value, dir: 'ltr' },
+  title: () => t('useHeadApp.title'),
   meta: [
-    {
-      name: 'description',
-      content: 'German Corner — онлайн-платформа для изучения немецкого языка: грамматика, артикли, времена, упражнения и обучение в игровой форме.'
-    },
-    {
-      name: 'keywords',
-      content: 'немецкий язык, артикли, грамматика, учить немецкий онлайн, A1, A2, B1'
-    },
-    {property: 'og:title', content: 'German Corner — Изучение немецкого языка'},
-    {property: 'og:description', content: 'Учи немецкий весело и эффективно с упражнениями и играми!'},
-    {property: 'og:type', content: 'website'},
-    {property: 'og:image', content: '/images/seo-preview.png'},
-    {name: 'google-site-verification', content: 'MLWdpLJXatGGAMkB8ks7yzFKK-K43'}
+    { name: 'description', content: t('useHeadApp.content') },
+    { name: 'keywords', content: t('useHeadApp.contentTwo') },
+    { property: 'og:title', content: t('useHeadApp.contentThree') },
+    { property: 'og:description', content: t('useHeadApp.contentFour') },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:image', content: '/images/seo-preview.png' },
+    { name: 'google-site-verification', content: 'MLWdpLJXatGGAMkB8ks7yzFKK-K43' }
   ],
-  link: [
-    {rel: 'icon', type: 'image/png', href: '/favicon.png'},
-  ]
-})
+  link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }]
+}))
 
 const cardStore = useCardsStore()
 const statsStore = useLocalStatGameStore()
@@ -77,7 +65,6 @@ onMounted(async () => {
   questStore.loadDailyProgress()
   cardStore.loadCreatedCount()
   statsStore.loadLocalStats()
-
 })
 
 

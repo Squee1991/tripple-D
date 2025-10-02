@@ -164,7 +164,6 @@ function handleShare(friendUid) {
   padding: 20px 0;
 }
 
-/* Блок результата */
 .result {
   display: grid;
   gap: 12px;

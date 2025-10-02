@@ -486,7 +486,7 @@ watch(currentTopicData, initLottieIcon);
 
 .content__title {
   color: white;
-  font-size: 2.8rem;
+  font-size: 2.1rem;
   font-weight: 600;
 }
 
@@ -602,7 +602,6 @@ watch(currentTopicData, initLottieIcon);
   font-size: 1.2rem;
   transition: all 0.1s ease-in-out;
   box-shadow: 4px 4px 0px #1e1e1e;
-  width: 100%;
 }
 
 .practice-area__button:hover {

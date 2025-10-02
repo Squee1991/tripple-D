@@ -52,8 +52,7 @@
                 <input v-model="userInput" class="trainer-app__input" readonly/>
               </div>
               <div v-if="currentMode === 'wordArticle'">
-                <!--								<p>{{t('sessionLabels.articleWordFor')}} </p>-->
-                <p><b>Слово : {{ currentWord.de }}</b></p>
+                <p><b>{{ t('sessionLabels.word')}} : {{ uiWord }}</b></p>
                 <input v-model="userInput" class="trainer-app__input"/>
               </div>
               <div v-if="currentMode === 'plural'">
@@ -78,7 +77,7 @@
                 }}</span>
               <span v-if="currentMode === 'wordArticle'">{{ t('result.correct') }}: {{
                   currentWord.article
-                }} {{ currentWord.de }}</span>
+                }} {{ currentWord.de }} 111</span>
               <span v-if="currentMode === 'plural'">{{ t('result.correct') }}: {{ currentWord.plural }}</span>
             </div>
           </div>
@@ -91,14 +90,14 @@
           </button>
         </div>
         <div v-else class="finish-block">
-          <h2 class="finish-block__title">Обучение завершено!</h2>
+          <h2 class="finish-block__title">{{ t('sessionLabels.end')}}</h2>
           <div class="finish-block__actions">
-            <button class="btn" @click="restartAll">Повторить тему</button>
+            <button class="btn" @click="restartAll">{{ t('sessionLabels.again')}}</button>
             <button v-if="wrongWords.length" class="btn btn--secondary" :disabled="wrongWords.length === 0"
                     @click="repeatMistakes">
-              Повторить ошибки ({{ wrongWords.length }})
+              {{ t('sessionLabels.mistakes')}} ({{ wrongWords.length }})
             </button>
-            <router-link class="btn btn--secondary" to="/articles">Назад к темам</router-link>
+            <router-link class="btn btn--secondary" to="/articles">{{ t('sessionLabels.back')}}</router-link>
           </div>
         </div>
       </div>
@@ -144,6 +143,30 @@ const totalWords = computed(() => store.selectedWords.length)
 const currentLang = computed(() => locale.value);
 const translatedTopic = computed(() => t(nameMap[topicTitle.value]))
 const isSpeaking = ref(false)
+
+
+const localeToKeyMap = {
+  ru: 'ru', 'ru-RU': 'ru',
+  en: 'en', 'en-US': 'en', 'en-GB': 'en',
+  tr: 'tr', 'tr-TR': 'tr',
+  pl: 'pl', 'pl-PL': 'pl',
+  uk: 'uk', 'uk-UA': 'uk',
+  de: 'de', 'de-DE': 'de', 'de-AT': 'de', 'de-CH': 'de'
+}
+
+const currentLangKey = computed(() => {
+  const lc = String(locale.value || '').trim()
+  return localeToKeyMap[lc] || localeToKeyMap[lc.split('-')[0]] || 'en'
+})
+
+const uiWord = computed(() => {
+  const w = currentWord.value || {}
+  return (
+      w[currentLangKey.value] ??
+      w.en ?? w.ru ?? w.uk ?? w.tr ?? w.pl ?? w.de ?? ''
+  )
+})
+
 const goBack = () => {
   router.back()
 }

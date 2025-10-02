@@ -28,7 +28,7 @@ export const AWARDS = [
 	{key: 'guessSixHundred', title: 'awards.guessSixHundred', icon: BookOfWisdom},
 	{key: 'daily', title: 'awards.daily', icon: SandGlass},
 	{key: 'guessedSafeWords', title: 'awards.guessedSafeWords', icon: Shield},
-	{key: 'all_cases', title: 'awards.allСases', icon: PuzzleAward},
+	{key: 'all_cases', title: 'awards.allCases', icon: PuzzleAward},
 	{key: 'all_adjectives', title: 'awards.allAdjectives', icon: ColorPalette},
 	{key: 'all_verbs', title: 'awards.allVerbs', icon: SwordAward},
 	{key: 'FiveHearts', title: 'awards.fiveHearts', icon: HeartAward},

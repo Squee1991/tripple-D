@@ -1,4 +1,19 @@
 {
+  "useHeadApp": {
+    "title": "German Corner — Ucz się niemieckiego łatwo i ciekawie w formie gry",
+    "content": "German Corner — platforma online do nauki języka niemieckiego: gramatyka, rodzajniki, czasy, ćwiczenia i nauka w formie gry.",
+    "contentTwo": "język niemiecki, rodzajniki, gramatyka, ucz się niemieckiego online, A1, A2, B1",
+    "contentThree": "German Corner — Nauka języka niemieckiego",
+    "contentFour": "Ucz się niemieckiego wesoło i skutecznie dzięki ćwiczeniom i grom!"
+  },
+  "achievementToast": {
+    "awardTitle": "Otrzymałeś nagrodę!",
+    "achievementTitle": "Zdobyto osiągnięcie!"
+  },
+  "awardModal": {
+    "title": "Nagrody",
+    "description": "Nagrody są przyznawane za osiągnięcia, dla których przewidziano nagrodę"
+  },
   "descriptionCardTheme": {
     "title": "Tematy nauki",
     "textOne": "Gramatyka z przykładami",
@@ -1911,7 +1926,7 @@
   "generalCategory": {
     "generaLabel": "Ogólne osiągnięcia",
     "dailyTitle": "Żelazna wola",
-    "dailyText": "Wykonaj 50 codziennych zadań",
+    "dailyText": "Wykonaj 50 ćwiczeń z Dziennika zadań",
     "dailyAward": "Nagroda: Klepsydra wieczności",
     "firstStepLabel": "Pierwszy krok",
     "firstAwardText": "Początek kolekcji",
@@ -1936,11 +1951,11 @@
     "firstArtiklusLabel": "Pierwsza waluta",
     "firstArtiklusText": "Zdobądź swojego pierwszego Artiklusa!",
     "horizontLabel": "Nowy horyzont",
-    "horizontText": "Zdobądź doświadczenie potrzebne do osiągnięcia 2. poziomu.",
+    "horizontText": "Zdobądź doświadczenie, aby osiągnąć poziom 2, wykonując zadania Ćwiczenia z rodzajnikami",
     "polyglotLabel": "Początkujący poliglota",
-    "polyglotText": "Naucz się całkowicie 50 nowych słów.",
+    "polyglotText": "Naucz się 50 słów we wszystkich trybach w Ćwiczeniach z rodzajnikami",
     "magisterLabel": "Mistrz słów",
-    "magisterText": "Osiągnij mistrzostwo ucząc się 100 słów.",
+    "magisterText": "Osiągnij mistrzostwo, ucząc się 100 słów we wszystkich trybach w Ćwiczeniach z rodzajnikami",
     "mistakesLabel": "Błędy mnie nie zatrzymają!",
     "mistakesText": "Każdy z nich to krok do wiedzy!",
     "mistakesAward": "Nagroda: Talisman cierpliwości"
@@ -2314,7 +2329,7 @@
     "translateThree": "Nie będziemy spać.",
     "tableTitle": "Odmiana werden",
     "practiceDesc": "Wybierz poprawną formę werden i zbuduj Futur I.",
-    "begin": "Rozpocznij"
+    "begin": "Rozpocznij praktykę"
   },
   "präteritum": {
     "howToDo": "Temat czasownika mocnego ze zmianą samogłoski / temat słabego + “-te”",
@@ -2521,13 +2536,17 @@
     "theme": "temat"
   },
   "sessionLabels": {
-    "word": "słowo",
+    "word": "Słowo",
     "articleFor": "Wpisz rodzajnik dla",
     "lettersFor": "Ułóż słowo z liter",
     "articleWordFor": "Wpisz rodzajnik i słowo",
-    "pluralFor": "Wpisz formę liczby mnogiej dla",
+    "pluralFor": "Wpisz liczbę mnogą dla",
     "audioFor": "Posłuchaj i wpisz słowo",
-    "listen": "Posłuchaj"
+    "listen": "Posłuchaj",
+    "end": "Nauka zakończona!",
+    "again": "Powtórz temat",
+    "mistakes": "Powtórz błędy",
+    "back": "Wróć do tematów"
   },
   "result": {
     "correctAnswer": "Poprawna odpowiedź",

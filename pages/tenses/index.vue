@@ -484,7 +484,7 @@ watch(currentTopicData, initLottieIcon)
 
 .content__title {
   color: #fff;
-  font-size: 2.8rem;
+  font-size: 2.1rem;
   font-weight: 600
 }
 
@@ -536,7 +536,6 @@ watch(currentTopicData, initLottieIcon)
   padding-bottom: .5rem
 }
 
-/* добавлено под список правил */
 .rules-list {
   margin: 0;
   padding-left: 1.2rem;
@@ -612,7 +611,6 @@ watch(currentTopicData, initLottieIcon)
   font-size: 1.2rem;
   transition: all .1s ease-in-out;
   box-shadow: 4px 4px 0 #1e1e1e;
-  width: 100%
 }
 
 .practice-area__button:hover {

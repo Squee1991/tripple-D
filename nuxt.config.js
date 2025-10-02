@@ -2,6 +2,7 @@ export default defineNuxtConfig({
 	compatibilityDate: '2024-11-01',
 	devtools: {enabled: true},
 	modules: [
+		'@nuxt/image',
 		'@pinia/nuxt',
 		'nuxt-vuefire',
 		'@nuxtjs/google-fonts',
@@ -32,14 +33,14 @@ export default defineNuxtConfig({
 			{code: 'uk', iso: 'uk-UA', name: 'Українська', file: 'uk-UA.json'},
 			{code: 'en', iso: 'en-US', name: 'English', file: 'en-US.json'},
 			{code: 'pl', iso: 'pl-PL', name: 'Polski', file: 'pl-PL.json'},
-			{code: 'tr', iso: 'tr-TR', name: 'Türkçe', file: 'tr-TR.json',}
+			{code: 'tr', iso: 'tr-TR', name: 'Türkçe', file: 'tr-TR.json'},
+			{code: 'uz', iso: 'uz-UZ', name: 'Oʻzbekcha', file: 'uz-UZ.json'}
 		],
-
 		detectBrowserLanguage: {
 			useCookie: true,
 			cookieKey: 'i18n_redirected',
 			alwaysRedirect: false,
-			redirectOn: 'root',
+			redirectOn: 'no prefix',
 			fallbackLocale: 'en'
 		}
 	},
@@ -76,11 +77,27 @@ export default defineNuxtConfig({
 			siteUrl: process.env.SITE_URL || 'https://language-app-beta.vercel.app'
 		}
 	},
+	vite: {
+		build: {
+			minify: 'terser',
+			terserOptions: {
+				compress: {
+					passes: 2,
+					drop_console: true,
+					drop_debugger: true,
+					pure_funcs: ['console.info','console.debug','console.warn'],
+				},
+				mangle: true,
+				format: { comments: false }
+			}
+		}
+	},
 	nitro: {
 		preset: 'vercel',
 		prerender: {
 			routes: ['/', '/en', '/ru', '/uk', '/pl', '/tr']
-		}
+		},
+		compressPublicAssets: true
 	},
 	routeRules: {
 		'/': {headers: {'cache-control': 'public, s-maxage=600, stale-while-revalidate=86400'}},

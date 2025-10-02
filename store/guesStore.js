@@ -10,10 +10,9 @@ import {
     collection,
     query,
     orderBy,
-    deleteDoc
 } from 'firebase/firestore'
 import { userAuthStore } from './authStore.js'
-import { dailyStore } from './dailyStore.js'
+import { dailyStore } from './store/dailyStore.js'
 
 async function getUser() {
     const auth = getAuth()
@@ -26,29 +25,51 @@ async function getUser() {
     })
 }
 
+const guessProgressStateRef = (db, uid) =>
+    doc(db, 'users', uid, 'guessProgress', 'state')
+
+async function ensureUserDoc(db, uid, extra = {}) {
+    await setDoc(
+        doc(db, 'users', uid),
+        { uid, updatedAt: Date.now(), ...extra },
+        { merge: true }
+    )
+}
 export const useGuessWordStore = defineStore('guessWord', () => {
     const authStore = userAuthStore()
     const db = getFirestore()
     const daily = dailyStore()
+
     const answer = ref('')
     const masked = ref([])
     const attempts = ref(15)
     const usedLetters = ref([])
+
     const guessedWords = ref([])
     const guessedFastWords = ref([])
     const guessedOnLastTryWords = ref([])
     const guessedPerfectWords = ref([])
     const guessedSafeWords = ref([])
+
     const win = ref(false)
     const lose = ref(false)
+
     const timeStarted = ref(null)
     const timeFinished = ref(null)
-    const timeSpent = computed(() => timeStarted.value && timeFinished.value ? Math.floor((timeFinished.value - timeStarted.value) / 1000) : null)
+    const timeSpent = computed(() =>
+        timeStarted.value && timeFinished.value
+            ? Math.floor((timeFinished.value - timeStarted.value) / 1000)
+            : null
+    )
+
     const alphabet = 'QWERTZUIOPÜASDFGHJKLÖÄYXCVBNM-'.split('')
     const loadedWords = ref([])
     const currentWordObj = ref(null)
+
     const guessedCount = computed(() => guessedWords.value.length)
-    const guessProgressDocRef = (uid) => doc(db, 'users', uid, 'guessProgress')
+    const displayMasked = computed(() =>
+        masked.value.map(l => (l || '_')).join(' ')
+    )
 
     function resetState() {
         answer.value = ''
@@ -60,6 +81,11 @@ export const useGuessWordStore = defineStore('guessWord', () => {
         currentWordObj.value = null
         timeStarted.value = null
         timeFinished.value = null
+        guessedWords.value = []
+        guessedFastWords.value = []
+        guessedOnLastTryWords.value = []
+        guessedPerfectWords.value = []
+        guessedSafeWords.value = []
     }
 
     async function saveToLeaderboard(name, count) {
@@ -72,7 +98,7 @@ export const useGuessWordStore = defineStore('guessWord', () => {
                     name,
                     guessed: count,
                     updatedAt: Date.now(),
-                    avatar: authStore.avatar || '1.png'
+                    avatar: authStore.avatar || '1.png',
                 },
                 { merge: true }
             )
@@ -99,17 +125,27 @@ export const useGuessWordStore = defineStore('guessWord', () => {
                 id: docSnap.id,
                 name: data.name,
                 guessed: data.guessed,
-                avatar: data.avatar || '1.png'
+                avatar: data.avatar || '1.png',
             })
         })
         return list
     }
-
     async function loadGuessProgress() {
         const user = await getUser()
         resetState()
         if (!user) return
-        const snap = await getDoc(guessProgressDocRef(user.uid))
+        await ensureUserDoc(db, user.uid, {
+            name: authStore.name || null,
+            avatar: authStore.avatar || null,
+        })
+        guessedWords.value = []
+        guessedFastWords.value = []
+        guessedOnLastTryWords.value = []
+        guessedPerfectWords.value = []
+        guessedSafeWords.value = []
+
+        const ref = guessProgressStateRef(db, user.uid)
+        const snap = await getDoc(ref)
         if (snap.exists()) {
             const data = snap.data()
             if (Array.isArray(data.guessedWords)) guessedWords.value = data.guessedWords
@@ -119,13 +155,18 @@ export const useGuessWordStore = defineStore('guessWord', () => {
             if (Array.isArray(data.guessedSafeWords)) guessedSafeWords.value = data.guessedSafeWords
         }
     }
-
     async function saveGuessProgress() {
         const user = await getUser()
         if (!user) return
+        await ensureUserDoc(db, user.uid, {
+            name: authStore.name || null,
+            avatar: authStore.avatar || null,
+        })
+
+        const ref = guessProgressStateRef(db, user.uid)
         try {
             await setDoc(
-                guessProgressDocRef(user.uid),
+                ref,
                 {
                     guessedWords: guessedWords.value,
                     guessedFastWords: guessedFastWords.value,
@@ -138,6 +179,24 @@ export const useGuessWordStore = defineStore('guessWord', () => {
             )
         } catch (e) {
             console.error('Error saving progress:', e)
+        }
+    }
+
+    async function migrateGuessProgress() {
+        const user = await getUser()
+        if (!user) return
+
+        await ensureUserDoc(db, user.uid)
+
+        const oldRef = doc(db, 'guessProgress', user.uid)
+        const oldSnap = await getDoc(oldRef)
+        if (oldSnap.exists()) {
+            const data = oldSnap.data()
+            await setDoc(
+                guessProgressStateRef(db, user.uid),
+                { ...data, migratedAt: Date.now() },
+                { merge: true }
+            )
         }
     }
 
@@ -212,8 +271,6 @@ export const useGuessWordStore = defineStore('guessWord', () => {
         }
     }
 
-    const displayMasked = computed(() => masked.value.map(l => (l || '_')).join(' '))
-
     watch(win, async won => {
         if (!won || !answer.value) return
         const word = answer.value
@@ -228,23 +285,10 @@ export const useGuessWordStore = defineStore('guessWord', () => {
         await saveGuessProgress()
         if (authStore.name) await saveToLeaderboard(authStore.name, guessedWords.value.length)
     })
-
     watch(() => authStore.uid, newUid => {
         if (newUid) loadGuessProgress()
         else resetState()
     }, { immediate: true })
-
-
-    async function migrateGuessProgress() {
-        const user = await getUser()
-        if (!user) return
-        const oldRef = doc(db, 'guessProgress', user.uid)
-        const oldSnap = await getDoc(oldRef)
-        if (oldSnap.exists()) {
-            const data = oldSnap.data()
-            await setDoc(guessProgressDocRef(user.uid), { ...data, migratedAt: Date.now() }, { merge: true })
-        }
-    }
 
     return {
         answer,
@@ -270,9 +314,11 @@ export const useGuessWordStore = defineStore('guessWord', () => {
         tryGuessWord,
         loadGuessProgress,
         saveGuessProgress,
+        migrateGuessProgress,
         loadLeaderboard,
         hasInLeaderboard,
+
+        // computed
         guessedCount,
-        migrateGuessProgress,
     }
 })
