@@ -1,8 +1,8 @@
 <template>
-  <NuxtLayout>
-    <NuxtPage/>
-    <AchievementToast/>
-  </NuxtLayout>
+    <NuxtLayout>
+        <NuxtPage/>
+        <AchievementToast/>
+    </NuxtLayout>
 </template>
 
 <script setup>
@@ -24,29 +24,29 @@ import {computed} from 'vue'
 const {locale, t} = useI18n()
 
 useHead({
-  htmlAttrs: {
-    lang: computed(() => locale.value),
-    dir: computed(() => 'ltr')
-  },
-  title: 'German Corner — Учим немецкий легко и интересно в игровой форме',
-  meta: [
-    {
-      name: 'description',
-      content: 'German Corner — онлайн-платформа для изучения немецкого языка: грамматика, артикли, времена, упражнения и обучение в игровой форме.'
+    htmlAttrs: {
+        lang: computed(() => locale.value),
+        dir: computed(() => 'ltr')
     },
-    {
-      name: 'keywords',
-      content: 'немецкий язык, артикли, грамматика, учить немецкий онлайн, A1, A2, B1'
-    },
-    {property: 'og:title', content: 'German Corner — Изучение немецкого языка'},
-    {property: 'og:description', content: 'Учи немецкий весело и эффективно с упражнениями и играми!'},
-    {property: 'og:type', content: 'website'},
-    {property: 'og:image', content: '/images/seo-preview.png'},
-    {name: 'google-site-verification', content: 'MLWdpLJXatGGAMkB8ks7yzFKK-K43'}
-  ],
-  link: [
-    {rel: 'icon', type: 'image/png', href: '/favicon.png'},
-  ]
+    title: 'German Corner — Учим немецкий легко и интересно в игровой форме',
+    meta: [
+        {
+            name: 'description',
+            content: 'German Corner — онлайн-платформа для изучения немецкого языка: грамматика, артикли, времена, упражнения и обучение в игровой форме.'
+        },
+        {
+            name: 'keywords',
+            content: 'немецкий язык, артикли, грамматика, учить немецкий онлайн, A1, A2, B1'
+        },
+        {property: 'og:title', content: 'German Corner — Изучение немецкого языка'},
+        {property: 'og:description', content: 'Учи немецкий весело и эффективно с упражнениями и играми!'},
+        {property: 'og:type', content: 'website'},
+        {property: 'og:image', content: '/images/seo-preview.png'},
+        {name: 'google-site-verification', content: 'MLWdpLJXatGGAMkB8ks7yzFKK-K43'}
+    ],
+    link: [
+        {rel: 'icon', type: 'image/png', href: '/favicon.png'},
+    ]
 })
 
 const cardStore = useCardsStore()
@@ -62,27 +62,26 @@ const langStore = userlangStore()
 const daily = dailyStore()
 
 onMounted(() => {
-  watch(user, (user, prevUser) => {
-    if (prevUser && !user) {
-      router.push('/')
-    } else if (user && typeof route.query.redirect === 'string') {
-      router.push(route.query.redirect)
-    }
-  })
+    watch(user, (user, prevUser) => {
+        if (prevUser && !user) {
+            router.push('/')
+        } else if (user && typeof route.query.redirect === 'string') {
+            router.push(route.query.redirect)
+        }
+    })
 })
 
 onMounted(async () => {
-  await learningStore.loadFromFirebase()
-  sentencesStore.loadSentences()
-  questStore.loadDailyProgress()
-  cardStore.loadCreatedCount()
-  statsStore.loadLocalStats()
-
+    await learningStore.loadFromFirebase()
+    sentencesStore.loadSentences()
+    questStore.loadDailyProgress()
+    cardStore.loadCreatedCount()
+    statsStore.loadLocalStats()
 })
 
 
 onUnmounted(() => {
-  daily.stop()
+    daily.stop()
 })
 
 // onMounted(() => {
@@ -122,13 +121,13 @@ onUnmounted(() => {
 
 <style>
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 
 }
 
 html {
-  font-size: 16px;
+    font-size: 16px;
 }
 </style>
