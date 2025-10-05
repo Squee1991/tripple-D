@@ -1,6 +1,6 @@
 import WasteMoney from '~/assets/awards/wasteMoney.svg'
 import IdCard from '~/assets/awards/idUser.svg'
-import Wings from '~/assets/awards/gold statuette.svg'
+import Wings from '~/assets/awards/Wing.svg'
 import veteranMedal from '~/assets/awards/veteran medal.svg'
 import talismanOfPatience from '~/assets/awards/talisman of patience.svg'
 import LastChance from '~/assets/awards/last-chance.svg'
