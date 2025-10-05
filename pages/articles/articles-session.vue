@@ -77,7 +77,7 @@
                 }}</span>
               <span v-if="currentMode === 'wordArticle'">{{ t('result.correct') }}: {{
                   currentWord.article
-                }} {{ currentWord.de }} 111</span>
+                }} {{ currentWord.de }}</span>
               <span v-if="currentMode === 'plural'">{{ t('result.correct') }}: {{ currentWord.plural }}</span>
             </div>
           </div>

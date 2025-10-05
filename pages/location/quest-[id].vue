@@ -128,7 +128,7 @@
                             <div v-if="questStore.isCorrect">Правильно</div>
                             <div class="quest__correct-answer-block" v-else>
                                 <div> Правильный ответ:</div>
-                                <div> {{ questStore.correctAnswer }}</div>
+                                <div> {{ t(questStore.correctAnswer) }}</div>
                             </div>
                         </div>
                     </div>
