@@ -262,7 +262,7 @@ onMounted(async () => {
 
 .exam__subtitle {
   margin-top: 15px;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #444;
   margin-bottom: 2rem;
 }
@@ -292,8 +292,10 @@ onMounted(async () => {
   justify-content: space-between;
 }
 
-.exam-card:hover {
-  transform: scale(1.05);
+@media (min-width: 1024px) {
+  .exam-card:hover {
+    transform: scale(1.01);
+  }
 }
 
 .exam-card__title {
@@ -320,6 +322,7 @@ onMounted(async () => {
 }
 
 .back__btn {
+  min-width: 300px;
   background: #4ade80;
   padding: 10px 20px;
   font-size: 1.3rem;
@@ -376,6 +379,12 @@ onMounted(async () => {
 @media (max-width: 767px) {
   .exam-card {
     width: 90%
+  }
+}
+
+@media (max-width: 600px) {
+  .back__btn {
+    width: 100%;
   }
 }
 
