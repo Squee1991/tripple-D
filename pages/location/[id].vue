@@ -25,9 +25,11 @@
                         <h3 class="quest__title">{{ t(q.title) }}</h3>
                         <p class="quest__description">{{ t(q.description) }}</p>
                         <div class="quest-meta">
-                            <span v-if="!q._success">{{ t('locationQuests.awards') }} {{
-                                q.rewards.points
-                                }}💎, {{ q.rewards.xp }} XP</span>
+                            <span v-if="!q._success">
+        {{ t('locationQuests.awards') }} {{ q.rewards.points }}
+        <img src="assets/images/articlus.png" alt="Артиклюсы" class="icon-articlus">,
+        {{ q.rewards.xp }} XP
+    </span>
                             <span v-else>{{ t('locationQuests.gotAward') }}</span>
                         </div>
                         <button class="btn" @click="startQuest(q)">
@@ -35,7 +37,7 @@
                         </button>
                     </li>
                 </ul>
-                <div v-else class="empty">{{ t('locationQuests.notFound')}}</div>
+                <div v-else class="empty">{{ t('locationQuests.notFound') }}</div>
             </div>
         </div>
     </div>
@@ -46,24 +48,25 @@ import {ref, computed, watch, onMounted} from "vue";
 import {useRoute, useRouter} from "vue-router";
 import {regions} from "~/utils/regions.js";
 import {userChainStore} from "~/store/chainStore.js";
-import { useHead, useSeoMeta, useRuntimeConfig } from '#imports'
-import { useCanonical } from "../../composables/useCanonical.js";
+import {useHead, useSeoMeta, useRuntimeConfig} from '#imports'
+import {useCanonical} from "../../composables/useCanonical.js";
+
 const route = useRoute()
 const canonical = useCanonical()
 const pageTitle = 'German Corner — Языковые земли для изучения немецкого языка'
-const pageDesc  = 'Исследуйте языковые земли и прокачивайте немецкий язык, выполняя задания и проходя уровни. Учите лексику и грамматику в формате приключения с квестами и прогрессией, как в игре!'
+const pageDesc = 'Исследуйте языковые земли и прокачивайте немецкий язык, выполняя задания и проходя уровни. Учите лексику и грамматику в формате приключения с квестами и прогрессией, как в игре!'
 useHead({
-  title: pageTitle,
-  link: [{ rel: 'canonical', href: canonical }]
+    title: pageTitle,
+    link: [{rel: 'canonical', href: canonical}]
 })
 useSeoMeta({
-  description: pageDesc,
-  ogTitle: pageTitle,
-  ogDescription: pageDesc,
-  ogType: 'website',
-  ogUrl: canonical,
-  ogImage: '/images/seo-lands.png',
-  robots: 'index, follow'
+    description: pageDesc,
+    ogTitle: pageTitle,
+    ogDescription: pageDesc,
+    ogType: 'website',
+    ogUrl: canonical,
+    ogImage: '/images/seo-lands.png',
+    robots: 'index, follow'
 })
 
 const {t} = useI18n();
@@ -520,6 +523,20 @@ function goHome() {
         transform: rotate(8deg);
         animation: bob 2.2s ease-in-out infinite;
         z-index: 2;
+    }
+
+    .icon-articlus {
+
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+        margin: 0 4px;
+    }
+
+
+    .quest-meta span {
+        display: flex;
+        align-items: center;
     }
 }
 </style>

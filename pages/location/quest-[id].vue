@@ -128,7 +128,7 @@
                             <div v-if="questStore.isCorrect">Правильно</div>
                             <div class="quest__correct-answer-block" v-else>
                                 <div> Правильный ответ:</div>
-                                <div> {{ questStore.correctAnswer }}</div>
+                                <div> {{ t(questStore.correctAnswer) }}</div>
                             </div>
                         </div>
                     </div>
@@ -209,11 +209,12 @@ import SoundBtn from '../../src/components/soundBtn.vue'
 import {playCorrect, playWrong, unlockAudioByUserGesture} from '../../utils/soundManager.js'
 import RightIcon from '../../assets/images/location-icons/accept.svg'
 import WrongIcon from '../../assets/images/location-icons/cancel.svg'
-import { useSeoMeta } from '#imports'
-useSeoMeta({ robots: 'noindex, nofollow' })
+import {useSeoMeta} from '#imports'
+
+useSeoMeta({robots: 'noindex, nofollow'})
 
 const PRICE = 10
-const {t} = useI18n()
+const {t, locale} = useI18n()
 const route = useRoute()
 const router = useRouter()
 const questStore = userChainStore()
@@ -226,6 +227,8 @@ const previouslyCleared = computed(() => !!(progressEntry.value?.success || prog
 const wallet = computed(() => Number(langStore.points || 0))
 const canBuyLife = computed(() => wallet.value >= PRICE)
 const isSpeaking = ref(false)
+const learningLanguage = computed(() => langStore.learningLang)
+const TARGET_LANG_CODE = 'de' // Мы хотим озвучивать, только если это немецкий
 
 // Функция для озвучивания текста
 async function speakText(text) {
@@ -246,9 +249,13 @@ function handleOptionClick(opt) {
     // 1. Выполняем первое действие: выбираем ответ
     questStore.choose(opt);
 
-    // 2. Выполняем второе действие: озвучиваем текст этого ответа
-    const textToSpeak = t(opt);
-    speakText(textToSpeak);
+    // 2. Проверяем, что выбран язык обучения "Немецкий"
+    if (learningLanguage.value === TARGET_LANG_CODE) {
+        const textToSpeakRaw = opt; // <-- Используем НЕОБРАБОТАННЫЙ ключ
+        if (textToSpeakRaw.length > 2 && !textToSpeakRaw.includes('.')) {
+            speakText(textToSpeakRaw);
+        }
+    }
 }
 
 const showRevive = computed(() =>
