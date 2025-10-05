@@ -1,4 +1,3 @@
-// store/achievementStore.js
 import { defineStore } from 'pinia'
 import { ref, watch, watchEffect } from 'vue'
 import { getFirestore, doc, onSnapshot } from 'firebase/firestore'
@@ -96,6 +95,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 	const quizStore = useQuizStore()
 	const duelStore = useDuelStore()
 	const isBooting = ref(true)
+	const suppressReplaysUntil = ref(0)
 	const bootUnlocked = []
 	const bootAwards = []
 	const prevMap = new Map()
@@ -164,7 +164,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			bootAwards.length = 0
 		}
 	}
-	// Основной апдейтер прогресса
+
 	function updateProgress (id, val) {
 		const ach = findById(id)
 		if (!ach) return
@@ -173,20 +173,21 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		const incoming = Number(val ?? 0)
 		const next     = isBooting.value ? incoming : Math.max(prev, incoming)
 		ach.currentProgress = Math.min(next, target)
+
 		const nowCompleted     = ach.currentProgress >= target
 		const alreadyCompleted = completedSet.has(id)
 		const justCompleted    = nowCompleted && !alreadyCompleted
+
 		if (justCompleted) {
 			completedSet.add(id)
 			saveCompleted(completedSet)
-			if (!isBooting.value) {
+
+			const canShow = !isBooting.value && Date.now() >= suppressReplaysUntil.value
+			if (canShow) {
 				popupQueue.value.push(ach)
 				showNextPopup()
 				lastUnlockedAchievement.value = {
-					id: ach.id,
-					title: ach.title,
-					groupTitle: ach.groupTitle || null,
-					ts: Date.now()
+					id: ach.id, title: ach.title, groupTitle: ach.groupTitle || null, ts: Date.now()
 				}
 				setTimeout(() => {
 					if (lastUnlockedAchievement.value?.id === ach.id) lastUnlockedAchievement.value = null
@@ -201,14 +202,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 						if (lastUnlockedAward.value?.achId === id) lastUnlockedAward.value = null
 					}, 0)
 					updateProgress('firstAward', shownSet.size)
-				}
-			} else {
-				bootUnlocked.push(ach)
-				const mapVal = achievementToAwardMap[id]
-				if (mapVal && !shownSet.has(mapVal)) {
-					shownSet.add(mapVal)
-					saveShown(shownSet)
-					bootAwards.push({ titleKey: mapVal, achId: id })
 				}
 			}
 		}
@@ -241,14 +234,27 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		...ADJ_BUCKETS.declension,
 	]
 
-	const VERB_PREFIXES = ['pras', 'perf', 'fut', 'prat', 'plus', 'mod', 'neb', 'irr', 'fix', 'ref', 'sep']
+	const VERB_BUCKETS = {
+		tenses: ['pras', 'perf', 'fut', 'prat', 'plus'],
+		modal:  ['mod', 'neb'],
+		types:  ['irr', 'fix', 'ref', 'sep'],
+	}
+
+	const VERB_ALL_PREFIXES = [
+		...VERB_BUCKETS.tenses,
+		...VERB_BUCKETS.modal,
+		...VERB_BUCKETS.types,
+	]
 
 	function areAllPrefixesCompleted(prefixes) {
 		return prefixes.every(isGroupMasterCompleted)
 	}
 
 	function recomputeAllVerbsMeta() {
-		const done = VERB_PREFIXES.reduce((acc, p) => acc + (isGroupMasterCompleted(p) ? 1 : 0), 0)
+		let done = 0
+		if (areAllPrefixesCompleted(VERB_BUCKETS.tenses)) done++
+		if (areAllPrefixesCompleted(VERB_BUCKETS.modal))  done++
+		if (areAllPrefixesCompleted(VERB_BUCKETS.types))  done++
 		updateProgress('all_verbs', done)
 	}
 
@@ -276,45 +282,25 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		updateProgress('all_cases', done)  // покажет тост, когда станет 4/4
 	}
 
-	// Завершение «бута» и реплей всего накопленного
 	function finishBootAndReplay () {
 		isBooting.value = false
-		updateProgress('collectionStart', shownSet.size)
-		// Переигрываем ачивки через очередь — чтобы тосты реально появились
-		if (bootUnlocked.length) {
-			bootUnlocked.forEach(a => a && popupQueue.value.push(a))
-			bootUnlocked.length = 0
-			showNextPopup()
-		}
-		// Показываем первую награду из накопленных
-		if (bootAwards.length) {
-			const first = bootAwards[0]
-			lastUnlockedAward.value = { ...first, ts: Date.now() }
-			bootAwards.length = 0
-			setTimeout(() => {
-				if (lastUnlockedAward.value?.achId === first.achId) lastUnlockedAward.value = null
-			}, 0)
-		}
+		bootUnlocked.length = 0
+		bootAwards.length = 0
 	}
 	// --- 3) Реакция на смену пользователя (клиентом)
 	if (process.client) {
 		watch(() => authStore.uid, (uid) => {
-			// стартуем «бут»
 			isBooting.value = true
-			// user-specific LS
+			suppressReplaysUntil.value = Date.now() + 2000
 			shownSet = loadShown()
 			completedSet = loadCompleted()
-			// сбрасываем UI/локальный прогресс
 			resetAllProgress()
-			// базовые counters для нового юзера
 			updateProgress('firstAward', shownSet.size)
 			updateProgress('collectionStart', shownSet.size)
 			if (!uid) {
-				// вышли из аккаунта
 				isBooting.value = false
 				return
 			}
-			// даём тикам onSnapshot/watch отработать и воспроизводим
 			setTimeout(() => {
 				finishBootAndReplay()
 				recomputeAllCasesMeta()
@@ -338,10 +324,8 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			updateProgress(`${prefix}1`, totalNow > 0 ? 1 : 0)
 			updateProgress(`${prefix}2`, totalNow)
 			updateProgress(`${prefix}3`, totalNow)
-
 			const perfectCnt = Number(agg?.perfectSessionsCount || 0)
 			updateProgress(`${prefix}4`, perfectCnt)
-
 			const fastPerfectCnt = Number(agg?.fastPerfectSessionsCount || 0)
 			updateProgress(`${prefix}5`, fastPerfectCnt)
 
@@ -425,13 +409,13 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 					lastAgg = s.data() || {}
 					applyPrepositionSnapshots(prefix, lastAgg, lastSess)
 					if (ADJ_ALL_PREFIXES.includes(prefix)) recomputeAllAdjectivesMeta()
-					if (VERB_PREFIXES.includes(prefix))   recomputeAllVerbsMeta()
+					if (VERB_ALL_PREFIXES.includes(prefix)) recomputeAllVerbsMeta()
 				})
 				const u2 = onSnapshot(sesRef, s => {
 					lastSess = s.data() || {}
 					applyPrepositionSnapshots(prefix, lastAgg, lastSess)
 					if (ADJ_ALL_PREFIXES.includes(prefix)) recomputeAllAdjectivesMeta()
-					if (VERB_PREFIXES.includes(prefix))   recomputeAllVerbsMeta()
+					if (VERB_ALL_PREFIXES.includes(prefix)) recomputeAllVerbsMeta()
 				})
 				adjectivesUnsubs.push(u1, u2)
 			})
