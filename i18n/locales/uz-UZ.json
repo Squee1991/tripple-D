@@ -4115,7 +4115,7 @@
     "specialThirdLabel": "Qattiq chempion",
     "specialThirdText": "Qiyin rejimda reytingda birinchi o‘rinni egallang.",
     "specialFourthLabel": "Chaqmoqdek",
-    "specialFourthText": "20 soniya ichida yoki tezroq 100 ta so‘zni toping",
+    "specialFourthText": "100 ta so‘zni toping, har biriga 20 soniyadan ortiq sarflamang",
     "specialFourthAward": "Mukofot: Chaqmoq raketasi",
     "specialFifthLabel": "Oxirgi imkoniyat",
     "specialFifthText": "Faqat 1 ta imkoniyat bilan 100 ta so‘zni toping",
@@ -4153,7 +4153,7 @@
     "specialAllVerbsText": "Barcha fe’l yutuqlarini oling: Qo‘shilish, zamonlar, modal, turlar",
     "specialAllVerbsAward": "Mukofot: Harakat qilichlari",
     "generalSeventhlabel": "Gaplar hukmdori",
-    "generalSeventhText": "Barcha darajalarda jami 1000 ta gap tuzing va qurilish ustasi bo‘ling"
+    "generalSeventhText": "Har qanday qiyinlik darajasida Solo Iboralar Dueli rejimida 1000 ta gap tuzing"
   },
   "questThemeChoose": {
     "title": "Topshiriqlar doskasi",

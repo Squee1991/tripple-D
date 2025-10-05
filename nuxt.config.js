@@ -34,7 +34,8 @@ export default defineNuxtConfig({
 			{code: 'en', iso: 'en-US', name: 'English', file: 'en-US.json'},
 			{code: 'pl', iso: 'pl-PL', name: 'Polski', file: 'pl-PL.json'},
 			{code: 'tr', iso: 'tr-TR', name: 'Türkçe', file: 'tr-TR.json'},
-			{code: 'uz', iso: 'uz-UZ', name: 'Oʻzbekcha', file: 'uz-UZ.json'}
+			{code: 'uz', iso: 'uz-UZ', name: 'Oʻzbekcha', file: 'uz-UZ.json'},
+			{code: 'ar', iso: 'ar-SA', name: 'العربية', file: 'ar-SA.json'}
 		],
 		detectBrowserLanguage: {
 			useCookie: true,
@@ -97,7 +98,7 @@ export default defineNuxtConfig({
 	nitro: {
 		preset: 'vercel',
 		prerender: {
-			routes: ['/', '/en', '/ru', '/uk', '/pl', '/tr']
+			routes: ['/', '/en', '/ru', '/uk', '/pl', '/tr', '/uz']
 		},
 		compressPublicAssets: true
 	},

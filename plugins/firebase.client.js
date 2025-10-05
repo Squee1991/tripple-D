@@ -23,4 +23,5 @@ export default defineNuxtRouteMiddleware(async (to) => {
     }
 })
 
-console.log(123)
+
+

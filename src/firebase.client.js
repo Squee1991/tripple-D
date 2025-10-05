@@ -10,6 +10,3 @@ const db = getFirestore($firebase);
 setPersistence(auth, browserLocalPersistence);
 
 export { auth, db, deleteField, deleteDoc, updateDoc, createUserWithEmailAndPassword, signInWithEmailAndPassword };
-
-
-console.log(123)

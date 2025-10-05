@@ -1879,7 +1879,7 @@
     "specialThirdLabel": "Hardcore Champion",
     "specialThirdText": "Take first place in the leaderboard in hard mode.",
     "specialFourthLabel": "Lightning Fast",
-    "specialFourthText": "Guess 100 words in 20 seconds or faster",
+    "specialFourthText": "Guess 100 words, spending no more than 20 seconds on each",
     "specialFourthAward": "Reward: Blitz Rocket",
     "specialFifthLabel": "Last Chance",
     "specialFifthText": "Guess 100 words with no more than 1 attempt left",
@@ -1917,7 +1917,7 @@
     "specialAllVerbsText": "Earn all verb achievements: Conjugation, Tenses, Modals, Verb Types",
     "specialAllVerbsAward": "Reward: Blades of Action",
     "generalSeventhlabel": "Master of Sentences",
-    "generalSeventhText": "Compose 1000 sentences in total across all levels and become a master of construction"
+    "generalSeventhText": "Create 1000 sentences in Solo Phrase Duel mode at any difficulty level"
   },
   "questThemeChoose": {
     "title": "Quest Board",
@@ -2313,7 +2313,7 @@
     "howToDo": "How is it formed?",
     "howToUse": "When is it used?",
     "examples": "Examples",
-    "begin": "Start practice"
+    "begin": "Start"
   },
   "tensesPrasens": {
     "howToDo": "Verb stem + personal ending",

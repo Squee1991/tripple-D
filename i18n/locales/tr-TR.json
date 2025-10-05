@@ -1877,7 +1877,7 @@
     "specialThirdLabel": "Zor Şampiyon",
     "specialThirdText": "Zor modda liderlik tablosunda birinci ol.",
     "specialFourthLabel": "Şimşek Hızı",
-    "specialFourthText": "20 saniye veya daha kısa sürede 100 kelime tahmin et",
+    "specialFourthText": "100 kelimeyi tahmin et, her birine en fazla 20 saniye harca",
     "specialFourthAward": "Ödül: Blitz Roketi",
     "specialFifthLabel": "Son Şans",
     "specialFifthText": "En fazla 1 deneme hakkın kalmışken 100 kelime tahmin et",
@@ -1915,7 +1915,7 @@
     "specialAllVerbsText": "Tüm fiil başarılarını kazan: Çekim, Zamanlar, Modal Fiiller, Fiil Türleri",
     "specialAllVerbsAward": "Ödül: Eylem Kılıçları",
     "generalSeventhlabel": "Cümlelerin Efendisi",
-    "generalSeventhText": "Tüm seviyelerde toplam 1000 cümle kur ve kurma ustası ol"
+    "generalSeventhText": "Herhangi bir zorluk seviyesinde Solo İfade Düellosu modunda 1000 cümle kur"
   },
   "questThemeChoose": {
     "title": "Görev Panosu",
@@ -2306,7 +2306,7 @@
     "howToDo": "Nasıl oluşturulur?",
     "howToUse": "Ne zaman kullanılır?",
     "examples": "Örnekler",
-    "begin": "Pratiğe başla"
+    "begin": "Başla"
   },
   "tensesPrasens": {
     "howToDo": "Fiil kökü + şahıs eki",

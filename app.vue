@@ -23,7 +23,7 @@ import {useHead} from '#imports'
 const { locale, t } = useI18n()
 
 useHead(() => ({
-  htmlAttrs: { lang: locale.value, dir: 'ltr' },
+  htmlAttrs: { lang: locale.value, dir: locale.value === 'ar' ? 'rtl' : "ltr" },
   title: () => t('useHeadApp.title'),
   meta: [
     { name: 'description', content: t('useHeadApp.content') },

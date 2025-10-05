@@ -1887,7 +1887,7 @@
     "specialThirdLabel": "Mistrz trybu hardcore",
     "specialThirdText": "Zajmij pierwsze miejsce w rankingu w trudnym trybie.",
     "specialFourthLabel": "Błyskawiczny",
-    "specialFourthText": "Odgadnij 100 słów w 20 sekund lub szybciej",
+    "specialFourthText": "Odgadnij 100 słów, poświęcając na każde nie więcej niż 20 sekund",
     "specialFourthAward": "Nagroda: Rakieta Błyskawica",
     "specialFifthLabel": "Ostatnia szansa",
     "specialFifthText": "Odgadnij 100 słów mając nie więcej niż 1 próbę",
@@ -1925,7 +1925,7 @@
     "specialAllVerbsText": "Zdobądź wszystkie osiągnięcia czasowników: Konjugacja, Czasy, Modalne, Typy czasowników",
     "specialAllVerbsAward": "Nagroda: Ostrza działania",
     "generalSeventhlabel": "Władca zdań",
-    "generalSeventhText": "Ułóż łącznie 1000 zdań na wszystkich poziomach i zostań mistrzem konstrukcji"
+    "generalSeventhText": "Ułóż 1000 zdań w trybie Solo Pojedynek Fraz na dowolnym poziomie trudności"
   },
   "questThemeChoose": {
     "title": "Tablica Zadań",
@@ -2307,7 +2307,7 @@
     "howToDo": "Jak się tworzy?",
     "howToUse": "Kiedy się używa?",
     "examples": "Przykłady",
-    "begin": "Rozpocznij ćwiczenia"
+    "begin": "Rozpocznij"
   },
   "tensesPrasens": {
     "howToDo": "Temat czasownika + końcówka osobowa",

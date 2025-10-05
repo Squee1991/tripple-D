@@ -220,13 +220,11 @@
     <div v-if="isDeleteModalOpen" class="modal-overlay" @click.self="isDeleteModalOpen = false">
       <div class="modal-card">
         <div class="modal-title">{{ t('cabinet.deleteAccTitle') }}</div>
-        <p v-if="userAuthStore.isPremium" class="modal-text">
-          <p class="modal-text">ВАЖНО!!!</p>
+        <p v-if="authStore.isPremium" class="modal-text">
           <span class="warn">{{ t('cabinet.important') }}</span>
           <span> {{ t('cabinet.importantText') }}</span>
         </p>
         <p v-if="!isGoogleUser" class="modal-text">{{ t('cabinet.checkPassword') }}</p>
-
         <div v-if="!isGoogleUser" class="label">
           <input class="input" v-model="deletePasswordField.value" type="password"/>
           <p v-if="deletePasswordField.error" class="delete-error">{{ t(deletePasswordField.error) }}</p>
@@ -1015,6 +1013,8 @@ watchEffect(() => {
 
 .warn {
   color: red;
+  font-weight: bold;
+  display: block;
 }
 
 .input {
