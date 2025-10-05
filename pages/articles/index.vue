@@ -1,5 +1,8 @@
 <template>
   <div class="theme-page">
+    <Transition name="fade">
+      <VPreloader v-if="isLoading"/>
+    </Transition>
     <div class="theme-page-container">
       <div class="theme__title-wrapper">
         <button class="back-btn" @click="goBack">
@@ -53,12 +56,12 @@
                   </div>
                 </div>
                 <div class="modes-list">
-                    <label
-                            v-for="mode in modes"
-                            :key="mode.key"
-                            class="checkbox-container"
-                            :class="{ 'active-mode': selectedModes.includes(mode.key) }"
-                    >
+                  <label
+                      v-for="mode in modes"
+                      :key="mode.key"
+                      class="checkbox-container"
+                      :class="{ 'active-mode': selectedModes.includes(mode.key) }"
+                  >
                     <input
                         type="checkbox"
                         v-model="selectedModes"
@@ -74,7 +77,7 @@
                 </div>
                 <button
                     class="start-btn"
-                    :disabled="!selectedModes.length"
+                    :disabled="!selectedModes.length || isLoading"
                     @click="startLearning"
                 >
                   {{ t('selectedpage.startBtn') }}
@@ -89,14 +92,16 @@
 </template>
 
 <script setup>
-import {ref, computed, onMounted} from 'vue'
+import VPreloader from "../../src/components/V-preloader.vue";
+import {ref, computed, onMounted, nextTick} from 'vue'
 import {useRouter} from 'vue-router'
 import {userlangStore} from '../../store/learningStore.js'
 import Lottie from 'lottie-web'
 import {nameMap} from '../../utils/nameMap.js'
-import { useHead, useSeoMeta} from '#imports'
+import {useHead, useSeoMeta} from '#imports'
 import NotFound from '../../assets/animation/notFound.json'
-import { useCanonical } from '../../composables/useCanonical.js'
+import {useCanonical} from '../../composables/useCanonical.js'
+
 const {t} = useI18n()
 const showModesBlock = ref(false)
 const showNoTopicMessage = ref(true)
@@ -108,14 +113,14 @@ const selectedModes = ref([])
 const animationContainer = ref(null)
 const localePath = useLocalePath()
 const canonical = useCanonical()
-
+const isLoading = ref(false)
 const pageTitle = 'German Corner — Тренировка артиклей der, die, das в игровой форме'
-const pageDesc  = 'Изучайте немецкие артикли der, die, das легко и интересно! Выберите тему и тренируйтесь в пяти интерактивных режимах: запоминание, написание, множественное число, аудио и сборка слов.'
+const pageDesc = 'Изучайте немецкие артикли der, die, das легко и интересно! Выберите тему и тренируйтесь в пяти интерактивных режимах: запоминание, написание, множественное число, аудио и сборка слов.'
 
 useHead({
   title: pageTitle,
   link: [
-    { rel: 'canonical', href: canonical }
+    {rel: 'canonical', href: canonical}
   ]
 })
 
@@ -201,31 +206,33 @@ const selectTopic = (key) => {
 }
 
 const startLearning = async () => {
-  const topicWords = (themeList.value[selectedTopic.value] || [])
-      .filter(word => {
-        const globalWord = store.words.find(
-            w => w.de === word.de && w.topic === selectedTopic.value
-        )
-        return selectedModes.value.some(
-            mode => !(globalWord?.progress?.[mode] === true)
-        )
-      })
-      .map(w => ({...w, topic: selectedTopic.value}))
+  if (!selectedModes.value.length || isLoading.value) return
+  isLoading.value = true
+  try {
+    const topicWords = (themeList.value[selectedTopic.value] || [])
+        .filter(word => {
+          const globalWord = store.words.find(
+              w => w.de === word.de && w.topic === selectedTopic.value
+          )
+          return selectedModes.value.some(mode => !(globalWord?.progress?.[mode] === true))
+        })
+        .map(w => ({...w, topic: selectedTopic.value}))
 
-  await store.addWordsToGlobal(topicWords)
-  await store.setSelectedWords(topicWords)
-  await store.setSelectedTopics([selectedTopic.value])
-  await store.saveToFirebase()
+    await store.addWordsToGlobal(topicWords)
+    await store.setSelectedWords(topicWords)
+    await store.setSelectedTopics([selectedTopic.value])
+    await store.saveToFirebase()
 
-  const path = localePath({
-    path: '/articles/articles-session',
-    query: {
-      topic: selectedTopic.value,
-      mode: selectedModes.value
-    }
-  })
-  router.push(path)
-
+    await nextTick()
+    const path = localePath({
+      path: '/articles/articles-session',
+      query: {topic: selectedTopic.value, mode: selectedModes.value}
+    })
+    await router.push(path)
+  } catch (e) {
+    console.error(e)
+    isLoading.value = false
+  }
 }
 
 onMounted(async () => {
@@ -677,22 +684,44 @@ onMounted(async () => {
   }
 }
 
-@media(max-width: 540px )  {
+@media (max-width: 540px ) {
   .theme__title-wrapper {
     flex-direction: column;
   }
+
   .back-btn {
     box-shadow: 2px 2px 0 black;
     width: 100%;
     margin-bottom: 15px;
   }
+
   .theme-title {
     font-size: 1.2rem;
   }
 }
+
 .checkbox-container.active-mode {
-    background-color: #f1c40f; /* Используем тот же цвет, что и для выбранной темы */
-    border-radius: 12px;
+  background-color: #f1c40f;
+  border-radius: 12px;
+}
+
+.preloader-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .2s ease;
+}
+
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
 }
 
 </style>

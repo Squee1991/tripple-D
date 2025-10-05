@@ -1,4 +1,22 @@
 {
+  "payPage": {
+    "title": "Отримай максимум від платформи",
+    "description": "Навчання, нагороди, завдання, прогрес та багато іншого!",
+    "compareLabelOne": "Функції",
+    "compareLabelTwo": "Безкоштовно",
+    "compareLabelThree": "Підписка",
+    "getPremiumBtn": "Придбати підписку",
+    "featureOne": "Навчальний матеріал",
+    "featureTwo": "Збереження прогресу",
+    "featureThree": "Досягнення",
+    "featureFour": "Щоденні завдання",
+    "featureFive": "Сезонні івенти",
+    "featureSix": "Отримання нагород",
+    "featureSeven": "Тести з перевіркою ІІ",
+    "featureEight": "Озвучування",
+    "featureNine": "Дуелі та рейтинг",
+    "featureTen": "Майбутні функції"
+  },
   "achievementToast": {
     "awardTitle": "Ви отримали нагороду!",
     "achievementTitle": "Отримано досягнення!"

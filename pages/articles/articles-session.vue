@@ -75,9 +75,7 @@
               <span v-if="currentMode === 'letters' || currentMode === 'audio'">{{ t('result.correctAnswer') }}: {{
                   currentWord.de
                 }}</span>
-              <span v-if="currentMode === 'wordArticle'">{{ t('result.correct') }}: {{
-                  currentWord.article
-                }} {{ currentWord.de }}</span>
+              <span v-if="currentMode === 'wordArticle'">{{ t('result.correct') }}: {{currentWord.article}} {{ currentWord.de }} </span>
               <span v-if="currentMode === 'plural'">{{ t('result.correct') }}: {{ currentWord.plural }}</span>
             </div>
           </div>

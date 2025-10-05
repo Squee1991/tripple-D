@@ -10,7 +10,10 @@
       </div>
     </header>
     <main class="main">
-      <div v-if="loading" class="loading">{{ t('prasens.loading') }}</div>
+<!--      <div v-if="loading" class="loading">{{ t('prasens.loading') }}</div>-->
+      <div v-if="loading" class="loading">
+         <VPreloader/>
+      </div>
       <div v-else-if="store.quizCompleted" class="finish-screen">
         <CelebrationFireworks
             :key="`cw-${startExpLocal}-${targetExpLocal}-${startPointsLocal}-${targetPointsLocal}`"
@@ -68,6 +71,7 @@
 
 <script setup>
 import { ref, onMounted, watch, computed } from 'vue'
+import VPreloader from "../../src/components/V-preloader.vue";
 import { useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { useSeoMeta } from '#imports'
@@ -99,7 +103,6 @@ const fullSentence = computed(() => {
   const word = store.selectedOption || ''
   return `${pre}${word}${post}`
 })
-
 const startExpLocal = ref(0)
 const targetExpLocal = ref(0)
 const startPointsLocal = ref(0)
@@ -115,7 +118,9 @@ onMounted(async () => {
   store.setContext({ modeId: category, topicId, fileName, contentVersion: 'v1' })
   await store.restoreOrStart({ modeId: category, topicId, fileName, contentVersion: 'v1' })
   await learning.loadFromFirebase?.()
-  loading.value = false
+  setTimeout(() => {
+    loading.value = false
+  } , 2800)
 })
 
 watch(() => store.quizCompleted, async (done) => {
@@ -175,10 +180,6 @@ watch(() => store.quizCompleted, async (done) => {
   width: 100%;
 }
 
-.loading {
-  font-size: 2rem;
-}
-
 .quiz {
   width: 100%;
   max-width: 900px;
@@ -186,7 +187,7 @@ watch(() => store.quizCompleted, async (done) => {
   flex-direction: column;
   gap: 20px;
   padding: 15px;
-  font-family: 'Bangers', cursive;
+  font-family: "Nunito", sans-serif;
 }
 
 .question {

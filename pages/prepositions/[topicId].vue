@@ -11,12 +11,10 @@
         </div>
       </div>
     </header>
-
     <main class="quiz-main-content">
-      <div v-if="loading" class="fullscreen-state">
-        <p>{{ t('prasens.loading') }}</p>
+      <div v-if="loading" class="loading">
+        <VPreloader/>
       </div>
-
       <div v-else-if="store.quizCompleted" class="finish-screen">
         <CelebrationFireworks
             :key="`cw-${startExpLocal}-${targetExpLocal}-${startPointsLocal}-${targetPointsLocal}`"
@@ -91,6 +89,7 @@ import {userlangStore} from '../../store/learningStore.js'
 import {useQuizStore} from '../../../store/adjectiveStore.js'
 import CelebrationFireworks from '../../src/components/CelebrationFireworks.vue'
 import SoundBtn from '../../src/components/soundBtn.vue'
+import VPreloader from "~/src/components/V-preloader.vue";
 
 useSeoMeta({robots: 'noindex, nofollow'})
 
@@ -206,12 +205,6 @@ watch(() => store.quizCompleted, async (done) => {
   align-items: center;
   justify-content: center;
   width: 100%;
-}
-
-.fullscreen-state {
-  font-size: 4rem;
-  color: #333;
-  text-align: center;
 }
 
 .quiz-content-comic {

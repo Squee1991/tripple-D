@@ -12,8 +12,8 @@
       </div>
     </header>
     <main class="quiz-main-content">
-      <div v-if="loading" class="fullscreen-state">
-        <p>{{ t('prasens.loading') }}</p>
+      <div v-if="loading" class="loading">
+        <VPreloader/>
       </div>
       <div v-else-if="store.quizCompleted" class="finish-screen">
         <CelebrationFireworks
@@ -88,6 +88,7 @@ import {useQuizStore} from '../../store/adjectiveStore.js'
 import {userlangStore} from '../../store/learningStore.js'
 import CelebrationFireworks from '../../src/components/CelebrationFireworks.vue'
 import SoundBtn from '../../src/components/soundBtn.vue'
+import VPreloader from "~/src/components/V-preloader.vue";
 
 useSeoMeta({robots: 'noindex, nofollow'})
 
@@ -142,7 +143,9 @@ onMounted(async () => {
     contentVersion: 'v1'
   })
   await learning.loadFromFirebase?.()
-  loading.value = false
+  setTimeout(() => {
+    loading.value = false
+  } , 2800)
 })
 
 watch(() => store.quizCompleted, async (done) => {
@@ -216,12 +219,6 @@ watch(() => store.quizCompleted, async (done) => {
   align-items: center;
   justify-content: center;
   width: 100%;
-}
-
-.fullscreen-state {
-  font-size: 4rem;
-  color: #333;
-  text-align: center;
 }
 
 .quiz-content-comic {

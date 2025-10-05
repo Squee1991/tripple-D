@@ -74,7 +74,9 @@ export default defineNuxtConfig({
 			firebaseMessagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
 			firebaseAppId: process.env.FIREBASE_APP_ID,
 			firebaseClientId: process.env.FIREBASE_CLIENT_ID,
-			siteUrl: process.env.SITE_URL || 'https://language-app-beta.vercel.app'
+			siteUrl: process.env.SITE_URL || 'https://language-app-beta.vercel.app',
+			ADMIN_UID1: process.env.ADMIN_UID1,
+			ADMIN_UID2: process.env.ADMIN_UID2,
 		}
 	},
 	vite: {

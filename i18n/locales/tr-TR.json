@@ -1,4 +1,22 @@
 {
+  "payPage": {
+    "title": "Platformdan en iyi şekilde yararlan",
+    "description": "Eğitim, ödüller, görevler, ilerleme ve çok daha fazlası!",
+    "compareLabelOne": "Özellikler",
+    "compareLabelTwo": "Ücretsiz",
+    "compareLabelThree": "Abonelik",
+    "getPremiumBtn": "Abonelik satın al",
+    "featureOne": "Eğitim materyali",
+    "featureTwo": "İlerlemeyi kaydetme",
+    "featureThree": "Başarımlar",
+    "featureFour": "Günlük görevler",
+    "featureFive": "Sezonluk etkinlikler",
+    "featureSix": "Ödül kazanma",
+    "featureSeven": "Yapay zekâ kontrolü ile testler",
+    "featureEight": "Seslendirme",
+    "featureNine": "Düellolar ve sıralama",
+    "featureTen": "Gelecek özellikler"
+  },
   "useHeadApp": {
     "title": "German Corner — Almancayı oyunlarla kolay ve eğlenceli şekilde öğren",
     "content": "German Corner — Almanca öğrenmek için çevrimiçi platform: dilbilgisi, artikeller, zamanlar, alıştırmalar ve oyun tabanlı öğrenme.",
@@ -200,13 +218,6 @@
   },
   "preloader": {
     "value": "Ana sayfaya yönlendirileceksiniz..."
-  },
-  "useHeadApp": {
-    "title": "Almanca online A1–B1 — dil bilgisi, artikeller, alıştırmalar | German Corner",
-    "content": "Almancayı A1–B1 seviyelerinde online öğren: dil bilgisi, der/die/das artikelleri, zamanlar ve eğlenceli alıştırmalar. German Corner, Almancayı kolay ve etkili şekilde öğrenmene yardımcı olur!",
-    "contentTwo": "Almanca online, Almanca A1, Almanca A2, Almanca B1, Almanca dil bilgisi, der die das artikelleri, Almanca zamanlar, Almanca alıştırmalar",
-    "contentThree": "German Corner — Almanca online A1–B1",
-    "contentFour": "Dil bilgisi, artikeller ve eğlenceli alıştırmalar. Almancayı keyifle ve verimli öğren!"
   },
   "randomPhrases": {
     "first": "Bugün bir adım daha ileri gittin!",
