@@ -10,7 +10,8 @@ export const dailyStore = defineStore('dailyStore', () => {
     const CYCLE_MS = 24 * 60 * 60 * 1000
     const QUESTS_PER_CYCLE = 3
     const SYNC_MS = 30 * 1000
-    const LOCAL_KEY = 'daily_cycle_v1'
+    const LOCAL_KEY_BASE = 'daily_cycle_v2'
+    const localKey = () => `${LOCAL_KEY_BASE}_${uid() || 'anon'}`
 
     const isClient = typeof window !== 'undefined'
     const auth = getAuth()
@@ -114,7 +115,7 @@ export const dailyStore = defineStore('dailyStore', () => {
         }
         const slice = wrapSlice(dailyQuests, offset.value, QUESTS_PER_CYCLE).map(sanitizeQuest)
         const start = Date.now()
-        const expiresAt = nextLocalMidnightMs(start) // ВАЖНО: локальная полночь
+        const expiresAt = nextLocalMidnightMs(start)
 
         return {
             cycleKey: key,
@@ -122,24 +123,29 @@ export const dailyStore = defineStore('dailyStore', () => {
             counters: { ...counters.value },
             completedCount: 0,
             createdAtMs: start,
-            expiresAtMs: expiresAt,           // было UTC-модулем; стало локальной 00:00
+            expiresAtMs: expiresAt,
             lastUpdatedAtMs: start,
             updatedBy: uid() || 'local',
+            owner: uid() || 'anon',
         }
     }
+
 
     function loadLocal() {
         if (!isClient) return null
         try {
-            const raw = localStorage.getItem(LOCAL_KEY)
+            const raw = localStorage.getItem(localKey())
             return raw ? JSON.parse(raw) : null
         } catch {
             return null
         }
     }
+
     function saveLocal(obj) {
         if (!isClient) return
-        try { localStorage.setItem(LOCAL_KEY, JSON.stringify(obj)) } catch {}
+        try {
+            localStorage.setItem(localKey(), JSON.stringify(obj))
+        } catch {}
     }
 
     async function pushCurrentCycleToCloud(payload, merge = false) {
@@ -190,7 +196,15 @@ export const dailyStore = defineStore('dailyStore', () => {
         const exist = loadLocal()
         const now = Date.now()
 
-        // Если локально ничего нет / ключ дня другой / цикл истёк — создаём новый до локальной полуночи
+        // если локальный объект не наш — создаём новый цикл для текущего uid/anon
+        if (exist && exist.owner && exist.owner !== (uid() || 'anon')) {
+            const fresh = buildNewCyclePayload(key)
+            currentCycle.value = fresh
+            saveLocal(fresh)
+            pushCurrentCycleToCloud(fresh, false).catch(() => {})
+            return
+        }
+
         if (!exist || exist.cycleKey !== key || now >= Number(exist.expiresAtMs || 0)) {
             const fresh = buildNewCyclePayload(key)
             currentCycle.value = fresh
@@ -198,9 +212,11 @@ export const dailyStore = defineStore('dailyStore', () => {
             pushCurrentCycleToCloud(fresh, false).catch(() => {})
             return
         }
+
         currentCycle.value = exist
         counters.value = { ...(exist.counters || counters.value) }
     }
+
 
     function valueForQuestByCounters(qid) {
         const c = counters.value
@@ -371,12 +387,16 @@ export const dailyStore = defineStore('dailyStore', () => {
             detachCloudListener()
             if (uid()) {
                 attachCloudListener()
+                ensureLocalCycle()
                 if (currentCycle.value) {
                     pushCurrentCycleToCloud(currentCycle.value, true).catch(() => {})
                 }
+            } else {
+                ensureLocalCycle()
             }
         })
     }
+
 
     watch(cycleKey, () => { ensureLocalCycle() })
 

@@ -16,7 +16,7 @@ export const adjectiveDeclension = [
 				description: 'adjectiveDeclinationArticle.secondDescription',
 				icon: '🛡️',
 				currentProcess: 0,
-				targetProgress: 20
+				targetProgress: 75
 			},
 			{
 				id: 'def3',
@@ -24,7 +24,7 @@ export const adjectiveDeclension = [
 				description: 'adjectiveDeclinationArticle.thirdDescription',
 				icon: '⚔️',
 				currentProcess: 0,
-				targetProgress: 25
+				targetProgress: 150
 			},
 			{
 				id: 'def4',

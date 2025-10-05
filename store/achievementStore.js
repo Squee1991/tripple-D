@@ -170,7 +170,8 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		if (!ach) return
 		const target = Number(ach.targetProgress ?? 0)
 		const prev   = Number(ach.currentProgress ?? 0)
-		const next   = Math.max(prev, Number(val ?? 0))
+		const incoming = Number(val ?? 0)
+		const next     = isBooting.value ? incoming : Math.max(prev, incoming)
 		ach.currentProgress = Math.min(next, target)
 		const nowCompleted     = ach.currentProgress >= target
 		const alreadyCompleted = completedSet.has(id)
@@ -227,6 +228,54 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		ids.sort((a, b) => a.n - b.n)
 		return ids.map(x => x.id)
 	}
+
+	const CASE_PREFIXES = ['nom', 'akk', 'dat', 'gen']
+	const ADJ_BUCKETS = {
+		basic:      ['col', 'emo', 'app', 'char', 'dim'],
+		comparison: ['creg', 'cuml', 'cspec'],
+		declension: ['def', 'indef', 'noart'],
+	}
+	const ADJ_ALL_PREFIXES = [
+		...ADJ_BUCKETS.basic,
+		...ADJ_BUCKETS.comparison,
+		...ADJ_BUCKETS.declension,
+	]
+
+	const VERB_PREFIXES = ['pras', 'perf', 'fut', 'prat', 'plus', 'mod', 'neb', 'irr', 'fix', 'ref', 'sep']
+
+	function areAllPrefixesCompleted(prefixes) {
+		return prefixes.every(isGroupMasterCompleted)
+	}
+
+	function recomputeAllVerbsMeta() {
+		const done = VERB_PREFIXES.reduce((acc, p) => acc + (isGroupMasterCompleted(p) ? 1 : 0), 0)
+		updateProgress('all_verbs', done)
+	}
+
+	function recomputeAllAdjectivesMeta() {
+		let done = 0
+		if (areAllPrefixesCompleted(ADJ_BUCKETS.basic))      done++
+		if (areAllPrefixesCompleted(ADJ_BUCKETS.comparison)) done++
+		if (areAllPrefixesCompleted(ADJ_BUCKETS.declension)) done++
+		updateProgress('all_adjectives', done)
+	}
+
+	function isGroupMasterCompleted(prefix) {
+		const ids = getPrefixIds(prefix)
+		if (!ids.length) return false
+		const masterId = ids[ids.length - 1]
+		const a = findById(masterId)
+		if (!a) return false
+		const target = Number(a.targetProgress ?? 1)
+		const cur    = Number(a.currentProgress ?? 0)
+		return cur >= target
+	}
+
+	function recomputeAllCasesMeta() {
+		const done = CASE_PREFIXES.reduce((acc, p) => acc + (isGroupMasterCompleted(p) ? 1 : 0), 0)
+		updateProgress('all_cases', done)  // покажет тост, когда станет 4/4
+	}
+
 	// Завершение «бута» и реплей всего накопленного
 	function finishBootAndReplay () {
 		isBooting.value = false
@@ -268,6 +317,9 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			// даём тикам onSnapshot/watch отработать и воспроизводим
 			setTimeout(() => {
 				finishBootAndReplay()
+				recomputeAllCasesMeta()
+				recomputeAllAdjectivesMeta()
+				recomputeAllVerbsMeta()
 			}, 0)
 		}, { immediate: true })
 	}
@@ -286,23 +338,34 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			updateProgress(`${prefix}1`, totalNow > 0 ? 1 : 0)
 			updateProgress(`${prefix}2`, totalNow)
 			updateProgress(`${prefix}3`, totalNow)
+
 			const perfectCnt = Number(agg?.perfectSessionsCount || 0)
 			updateProgress(`${prefix}4`, perfectCnt)
+
 			const fastPerfectCnt = Number(agg?.fastPerfectSessionsCount || 0)
 			updateProgress(`${prefix}5`, fastPerfectCnt)
 
+			// ---- ВАЖНО: фикс проверки "мастера" ----
 			const allIds = getPrefixIds(prefix)
 			if (allIds.length >= 2) {
-				const lastId = allIds[allIds.length - 1]
+				const lastId    = allIds[allIds.length - 1]
 				const prereqIds = allIds.slice(0, -1)
 				const allDone = prereqIds.every(id => {
-					const a = findById(id); if (!a) return true
-					const tp = Number(a.targetProgress || 1)
-					return Number(a.currentProgress || 0) >= tp
+					const a = findById(id)
+					if (!a) return false                           // было true — неправильно
+					const tp  = Number(a.targetProgress ?? 1)      // не через ||, иначе 0 сломается
+					const cur = Number(a.currentProgress ?? 0)
+					return cur >= tp
 				})
 				updateProgress(lastId, allDone ? 1 : 0)
 			}
+
+			// ---- добавляем пересчёт мета-ачивки 0..4 ----
+			if (CASE_PREFIXES.includes(prefix)) {
+				recomputeAllCasesMeta()
+			}
 		}
+
 		watch(() => authStore.uid, (uid) => {
 			prepositionUnsubs.forEach(fn => { try { fn && fn() } catch {} })
 			prepositionUnsubs = []
@@ -361,15 +424,18 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				const u1 = onSnapshot(aggRef, s => {
 					lastAgg = s.data() || {}
 					applyPrepositionSnapshots(prefix, lastAgg, lastSess)
+					if (ADJ_ALL_PREFIXES.includes(prefix)) recomputeAllAdjectivesMeta()
+					if (VERB_PREFIXES.includes(prefix))   recomputeAllVerbsMeta()
 				})
 				const u2 = onSnapshot(sesRef, s => {
 					lastSess = s.data() || {}
 					applyPrepositionSnapshots(prefix, lastAgg, lastSess)
+					if (ADJ_ALL_PREFIXES.includes(prefix)) recomputeAllAdjectivesMeta()
+					if (VERB_PREFIXES.includes(prefix))   recomputeAllVerbsMeta()
 				})
 				adjectivesUnsubs.push(u1, u2)
 			})
 		}, { immediate: true })
-		// c) «over» и прочие локальные счётчики
 		const baseTrackers = [
 			{ id: 'registerAchievement', source: () => authStore.uid, compute: (u) => (u ? 1 : 0) },
 			{ id: 'daily', source: () => questStore.dailyQuestCount, compute: (v) => v || 0 },
@@ -431,6 +497,13 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				.forEach(g => g.achievements.forEach(a => updateProgress(a.id, cnt))),
 			{ immediate: true }
 		)
+
+		watch(() => langStore.words.filter(w => w.progress?.letters).length,
+			cnt => groups.value.filter(g => g.category === 'letters')
+				.forEach(g => g.achievements.forEach(a => updateProgress(a.id, cnt))),
+			{ immediate: true }
+		)
+
 		const derCount = () => langStore.words.filter(w => w.article === 'der' && w.progress?.article).length
 		const dieCount = () => langStore.words.filter(w => w.article === 'die' && w.progress?.article).length
 		const dasCount = () => langStore.words.filter(w => w.article === 'das' && w.progress?.article).length
@@ -449,8 +522,11 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				.forEach(g => g.achievements.forEach(a => updateProgress(a.id, cnt))),
 			{ immediate: true }
 		)
-		watch(() => langStore.words.filter(w => w.progress?.wordArticle).length,
-			cnt => groups.value.filter(g => g.category === 'wordArticle')
+		watch(() => langStore.words.filter(w =>
+				w?.progress?.wordArticle || w?.progress?.wordPlusArticle
+			).length,
+			cnt => groups.value
+				.filter(g => g.category === 'wordArticle')
 				.forEach(g => g.achievements.forEach(a => updateProgress(a.id, cnt))),
 			{ immediate: true }
 		)

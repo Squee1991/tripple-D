@@ -191,11 +191,9 @@
     justify-content: center;
     width: 100%;
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
     left: 0;
     padding: 25px;
-    background: var(--bg);
-    border-top: 4px solid var(--border);
   }
 
   .fireWorks__container {

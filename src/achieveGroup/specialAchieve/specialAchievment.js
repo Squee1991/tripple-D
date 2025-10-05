@@ -150,7 +150,7 @@ export const cpecialGroupAchievment = [
 				icon: '🧩',
 				currentProcess: 0,
 				awards: "specialCategory.specialAllCasesAward",
-				targetProgress: 1
+				targetProgress: 4
 			},
 			{
 				id: 'all_adjectives',
@@ -159,7 +159,7 @@ export const cpecialGroupAchievment = [
 				icon: '🎨️',
 				currentProcess: 0,
 				awards: "specialCategory.specialAllAdjectivesAward",
-				targetProgress: 1
+				targetProgress: 3
 			},
 			{
 				id: 'all_verbs',
@@ -168,7 +168,7 @@ export const cpecialGroupAchievment = [
 				icon: '⚔️',
 				currentProcess: 0,
 				awards: "specialCategory.specialAllVerbsAward",
-				targetProgress: 1
+				targetProgress: 3
 			}
 		]
 	}
