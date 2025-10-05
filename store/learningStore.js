@@ -13,6 +13,7 @@ export const userlangStore = defineStore('learning', () => {
     const selectedTopics = ref([])
     const selectedWords = ref([])
     const points = ref(0)
+    const learningLang = ref('de')
     const gotPremiumBonus = ref(false)
     const totalEarnedPoints = ref(0)
     const articlesSpentForAchievement = ref(0)
@@ -221,6 +222,8 @@ export const userlangStore = defineStore('learning', () => {
                     currentModeIndex.value = data.currentModeIndex || 0
                     gotPremiumBonus.value = data.gotPremiumBonus || false
 
+                    learningLang.value = data.learningLang || 'de'
+
                     bestStreakAnyMode.value = data.bestStreakAnyMode || 0
                     bestStreakEasyArticle.value = data.bestStreakEasyArticle || 0
 
@@ -263,6 +266,8 @@ export const userlangStore = defineStore('learning', () => {
             currentModeIndex: currentModeIndex.value,
             gotPremiumBonus: gotPremiumBonus.value,
 
+            learningLang: learningLang.value,
+
             bestStreakAnyMode: bestStreakAnyMode.value,
             bestStreakEasyArticle: bestStreakEasyArticle.value,
 
@@ -294,6 +299,7 @@ export const userlangStore = defineStore('learning', () => {
         currentModeIndex.value = 0
         bestStreakAnyMode.value = 0
         bestStreakEasyArticle.value = 0
+        learningLang.value = 'de'
         await saveToFirebase()
     }
 
@@ -313,6 +319,7 @@ export const userlangStore = defineStore('learning', () => {
         topicStats,
         articlesSpentForAchievement,
         isLoaded,
+        learningLang,
         handleLeveling,
         markProgress,
         markAsLearned,

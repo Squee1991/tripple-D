@@ -49,6 +49,8 @@ const sentencesStore = useSentencesStore();
 const langStore = userlangStore()
 const daily = dailyStore()
 
+const learningLanguage = computed(() => langStore.learningLang)
+
 onMounted(() => {
   watch(user, (user, prevUser) => {
     if (prevUser && !user) {

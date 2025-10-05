@@ -221,7 +221,7 @@
       <div class="modal-card">
         <div class="modal-title">{{ t('cabinet.deleteAccTitle') }}</div>
         <p v-if="userAuthStore.isPremium" class="modal-text">
-          <p class="modal-text">ВАЖНО!!!</p>
+          <span class="modal-text">ВАЖНО!!!</span>
           <span class="warn">{{ t('cabinet.important') }}</span>
           <span> {{ t('cabinet.importantText') }}</span>
         </p>
