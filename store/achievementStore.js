@@ -3,7 +3,6 @@ import { defineStore } from 'pinia'
 import { ref, watch, watchEffect } from 'vue'
 import { getFirestore, doc, onSnapshot } from 'firebase/firestore'
 import { getAuth } from 'firebase/auth'
-
 // --- 1) Импорты групп достижений
 import { overAchievment } from '../src/achieveGroup/overAllAchieve/overallAchievements.js'
 import { wordAchievementsGroup } from '../src/achieveGroup/wordGroup/wordAchievements.js'
@@ -40,7 +39,6 @@ import { useGuessWordStore } from '../store/guesStore.js'
 import { achievementToAwardMap } from '../src/awards/awardsMap.js'
 import { guessAchievment } from '../src/achieveGroup/guessAchieve/guessAchievments.js'
 import { useQuizStore } from '../store/adjectiveStore.js'
-
 export const useAchievementStore = defineStore('achievementStore', () => {
 	// --- Группы
 	const rawGroups = [
@@ -145,6 +143,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			showPopup.value = true
 		}
 	}
+
 	function closePopup () {
 		showPopup.value = false
 		showNextPopup()
@@ -176,7 +175,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		const nowCompleted     = ach.currentProgress >= target
 		const alreadyCompleted = completedSet.has(id)
 		const justCompleted    = nowCompleted && !alreadyCompleted
-
 		if (justCompleted) {
 			completedSet.add(id)
 			saveCompleted(completedSet)
@@ -213,7 +211,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				}
 			}
 		}
-
 		prevMap.set(id, ach.currentProgress)
 	}
 
@@ -234,7 +231,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 	function finishBootAndReplay () {
 		isBooting.value = false
 		updateProgress('collectionStart', shownSet.size)
-
 		// Переигрываем ачивки через очередь — чтобы тосты реально появились
 		if (bootUnlocked.length) {
 			bootUnlocked.forEach(a => a && popupQueue.value.push(a))
@@ -251,7 +247,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			}, 0)
 		}
 	}
-
 	// --- 3) Реакция на смену пользователя (клиентом)
 	if (process.client) {
 		watch(() => authStore.uid, (uid) => {
@@ -265,13 +260,11 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			// базовые counters для нового юзера
 			updateProgress('firstAward', shownSet.size)
 			updateProgress('collectionStart', shownSet.size)
-
 			if (!uid) {
 				// вышли из аккаунта
 				isBooting.value = false
 				return
 			}
-
 			// даём тикам onSnapshot/watch отработать и воспроизводим
 			setTimeout(() => {
 				finishBootAndReplay()
@@ -310,7 +303,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				updateProgress(lastId, allDone ? 1 : 0)
 			}
 		}
-
 		watch(() => authStore.uid, (uid) => {
 			prepositionUnsubs.forEach(fn => { try { fn && fn() } catch {} })
 			prepositionUnsubs = []
@@ -331,7 +323,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				prepositionUnsubs.push(u1, u2)
 			})
 		}, { immediate: true })
-
 		// b) Прилагательные/Глаголы/и т.п. (общий сетап)
 		const adjectivesSetup = {
 			'adjective-basics_colors': 'col',
@@ -345,16 +336,13 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			'adjective-declension_definite-article': 'def',
 			'adjective-declension_indefinite-article': 'indef',
 			'adjective-declension_no-article': 'noart',
-
 			'verb_presens': 'pras',
 			'verb_perfect': 'perf',
 			'verb_futurOne': 'fut',
 			'verb_prateritum': 'prat',
 			'verb_plusquamperfect': 'plus',
-
 			'modal-verbs_modal': 'mod',
 			'modal-verbs_nebensatze': 'neb',
-
 			'verb_irregular': 'irr',
 			'verb_prepositions': 'fix',
 			'verb_reflexive': 'ref',
@@ -381,7 +369,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				adjectivesUnsubs.push(u1, u2)
 			})
 		}, { immediate: true })
-
 		// c) «over» и прочие локальные счётчики
 		const baseTrackers = [
 			{ id: 'registerAchievement', source: () => authStore.uid, compute: (u) => (u ? 1 : 0) },
@@ -403,7 +390,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			{ id: 'guessFourth', source: () => guessStore.guessedWords.length, compute: (v) => v },
 			{ id: 'guessSixHundred', source: () => guessStore.guessedWords.length, compute: (v) => v }
 		]
-
 		baseTrackers.forEach(({ id, source, compute }) => {
 			watch(source, raw => {
 				updateProgress(id, compute(raw))
@@ -491,22 +477,18 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				const slug = slugById(id)
 				return perfect.filter(p => p.region === slug).length
 			}
-
 			const locationIds =
 				groups.value
 					.filter(g => g.category === 'locations')
 					.flatMap(g => g.achievements.map(a => a.id))
 					.filter(id => id !== 'explorer')
-
 			locationIds.forEach((id) => {
 				updateProgress(id, countForId(id))
 			})
-
 			const targetOf = (id) => {
 				const ach = findById(id)
 				return ach?.targetProgress ?? 0
 			}
-
 			const completedLocations = locationIds.reduce((acc, id) => {
 				const cur = countForId(id)
 				return acc + (cur >= targetOf(id) ? 1 : 0)
@@ -534,7 +516,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				updateProgress(ids[i], lb.length > 0 && lb[0].id === authStore.uid ? 1 : 0)
 			}
 		})()
-
 		watch(() => gameStore.onTheEdgeProgress, v => updateProgress('Impuls', v), { immediate: true })
 		watch(() => authStore.registeredAt, date => {
 			if (!date) return
@@ -545,7 +526,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		watch(() => duelStore.achievements, (duelStats) => {
 			const plainStats = JSON.parse(JSON.stringify(duelStats || {}))
 			if (!plainStats || Object.keys(plainStats).length === 0) return
-
 			groups.value
 				.filter(g => g.category === 'sentence')
 				.forEach(group => {
@@ -570,13 +550,11 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			]
 			map.forEach(([id, val]) => updateProgress(id, val))
 		})
-
 		updateProgress('firstAward', shownSet.size)
 		setTimeout(() => {
 			finishBootAndReplay()
 		}, 0)
 	}
-
 	watch(lastUnlockedAward, (award) => {
 		if (award) updateProgress('firstAward', shownSet.size)
 	})

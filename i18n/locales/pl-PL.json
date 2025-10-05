@@ -1,4 +1,22 @@
 {
+  "payPage": {
+    "title": "Wykorzystaj platformę w pełni",
+    "description": "Nauka, nagrody, zadania, postępy i wiele więcej!",
+    "compareLabelOne": "Funkcje",
+    "compareLabelTwo": "Darmowe",
+    "compareLabelThree": "Subskrypcja",
+    "getPremiumBtn": "Kup subskrypcję",
+    "featureOne": "Materiał dydaktyczny",
+    "featureTwo": "Zapisywanie postępów",
+    "featureThree": "Osiągnięcia",
+    "featureFour": "Codzienne zadania",
+    "featureFive": "Wydarzenia sezonowe",
+    "featureSix": "Odbieranie nagród",
+    "featureSeven": "Testy sprawdzane przez AI",
+    "featureEight": "Lektor / nagranie głosowe",
+    "featureNine": "Pojedynki i ranking",
+    "featureTen": "Przyszłe funkcje"
+  },
   "useHeadApp": {
     "title": "German Corner — Ucz się niemieckiego łatwo i ciekawie w formie gry",
     "content": "German Corner — platforma online do nauki języka niemieckiego: gramatyka, rodzajniki, czasy, ćwiczenia i nauka w formie gry.",

@@ -1,4 +1,22 @@
 {
+  "payPage": {
+    "title": "Get the most out of the platform",
+    "description": "Learning, rewards, quests, progress and much more!",
+    "compareLabelOne": "Features",
+    "compareLabelTwo": "Free",
+    "compareLabelThree": "Subscription",
+    "getPremiumBtn": "Get subscription",
+    "featureOne": "Learning material",
+    "featureTwo": "Progress saving",
+    "featureThree": "Achievements",
+    "featureFour": "Daily quests",
+    "featureFive": "Seasonal events",
+    "featureSix": "Reward collection",
+    "featureSeven": "AI-checked tests",
+    "featureEight": "Voice-over",
+    "featureNine": "Duels and ranking",
+    "featureTen": "Upcoming features"
+  },
   "useHeadApp": {
     "title": "German Corner — Learn German easily and interestingly through games",
     "content": "German Corner — an online platform for learning German: grammar, articles, tenses, exercises and game-based learning.",

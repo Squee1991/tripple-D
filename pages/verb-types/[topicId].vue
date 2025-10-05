@@ -11,10 +11,9 @@
     </header>
 
     <main class="quiz-main-content">
-      <div v-if="loading" class="fullscreen-state">
-        <p>{{ t('prasens.loading') }}</p>
+      <div v-if="loading" class="loading">
+        <VPreloader/>
       </div>
-
       <div v-else-if="store.quizCompleted" class="finish-screen">
         <CelebrationFireworks
             :key="`cw-${startExpLocal}-${targetExpLocal}-${startPointsLocal}-${targetPointsLocal}-${startLevelLocal}-${endLevelLocal}`"
@@ -93,6 +92,7 @@ import {useQuizStore} from '../../../store/adjectiveStore.js'
 import {userlangStore} from '../../store/learningStore.js'
 import CelebrationFireworks from '~/src/components/CelebrationFireworks.vue'
 import SoundBtn from '../../src/components/soundBtn.vue'
+import VPreloader from "~/src/components/V-preloader.vue";
 
 useSeoMeta({robots: 'noindex, nofollow'})
 
@@ -105,14 +105,11 @@ const learning = userlangStore()
 const loading = ref(true)
 const category = 'verb'
 const {topicId} = route.params
-
-// Награда/порог
 const AWARD_EXP = 5
 const AWARD_POINTS = 5
 const LEVEL_UP_XP = 100
 const DELAY_MS = 4000
 
-// Текст для озвучки
 const fullSentence = computed(() => {
   const q = store.activeQuestion
   if (!q) return ''
@@ -121,7 +118,6 @@ const fullSentence = computed(() => {
   return `${pre}${word}${post}`
 })
 
-// Локальные значения для салюта (EXP по модулю 100 и анимация уровня без ремоунта)
 const startExpLocal = ref(0)
 const targetExpLocal = ref(0)
 const startPointsLocal = ref(0)
@@ -145,14 +141,15 @@ onMounted(async () => {
   store.setContext({modeId: category, topicId, fileName, contentVersion: 'v1'})
   await store.restoreOrStart({modeId: category, topicId, fileName, contentVersion: 'v1'})
   await learning.loadFromFirebase?.()
-  loading.value = false
+  setTimeout(() => {
+    loading.value = false
+  } , 2800)
 })
 
-// Завершение квиза → посчитать целевые значения и отдать их салюту
 watch(() => store.quizCompleted, async (done) => {
   if (!done) return
 
-  const curExp = Number(learning.exp || 0)      // остаток до 100 (0..99)
+  const curExp = Number(learning.exp || 0)
   const curPoints = Number(learning.points || 0)
   const curLevel = Number(learning.isLeveling || 0)
 
@@ -160,16 +157,12 @@ watch(() => store.quizCompleted, async (done) => {
   const levelUps = Math.floor(rawTargetExp / LEVEL_UP_XP)
   const endLevel = curLevel + levelUps
   const endExpMod = rawTargetExp % LEVEL_UP_XP
-
-  // значения для анимации (99 + 5 → 100 → 0 → 4 визуально)
   startExpLocal.value = curExp
   targetExpLocal.value = endExpMod
   startPointsLocal.value = curPoints
   targetPointsLocal.value = curPoints + AWARD_POINTS
   startLevelLocal.value = curLevel
   endLevelLocal.value = endLevel
-
-  // фактическая запись прогресса; handleLeveling сам перенесёт 100→0 и ++уровень
   setTimeout(async () => {
     learning.exp = rawTargetExp
     learning.points = targetPointsLocal.value
@@ -226,12 +219,6 @@ watch(() => store.quizCompleted, async (done) => {
   justify-content: center;
   width: 100%;
   box-sizing: border-box;
-}
-
-.fullscreen-state {
-  font-size: 4rem;
-  color: #333;
-  text-align: center;
 }
 
 .quiz-content-comic {

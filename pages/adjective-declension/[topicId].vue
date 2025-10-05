@@ -13,10 +13,9 @@
     </header>
 
     <main class="quiz-main-content">
-      <div v-if="loading" class="fullscreen-state">
-        <p>{{ t('prasens.loading') }}</p>
+      <div v-if="loading" class="loading">
+        <VPreloader/>
       </div>
-
       <div v-else-if="store.quizCompleted" class="finish-screen">
         <CelebrationFireworks
             :key="`cw-${startExpLocal}-${targetExpLocal}-${startPointsLocal}-${targetPointsLocal}`"
@@ -90,6 +89,7 @@ import CelebrationFireworks from '../../src/components/CelebrationFireworks.vue'
 import SoundBtn from '../../src/components/soundBtn.vue'
 import {useSeoMeta} from '#imports'
 import {useI18n} from 'vue-i18n'
+import VPreloader from "../../src/components/V-preloader.vue";
 
 useSeoMeta({robots: 'noindex, nofollow'})
 
@@ -131,7 +131,9 @@ onMounted(async () => {
   store.setContext({modeId: category, topicId, fileName, contentVersion: 'v1'})
   await store.restoreOrStart({modeId: category, topicId, fileName, contentVersion: 'v1'})
   await learning.loadFromFirebase?.()
-  loading.value = false
+  setTimeout(() => {
+    loading.value = false
+  } , 2800)
 })
 
 watch(() => store.quizCompleted, async (done) => {

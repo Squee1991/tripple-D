@@ -1,10 +1,28 @@
 {
+  "payPage": {
+    "title": "Получи максимум от платформы",
+    "description": "Обучение, награды, задания, прогресс и многое другое!",
+    "compareLabelOne": "Функции",
+    "compareLabelTwo": "Бесплатно",
+    "compareLabelThree": "Подписка",
+    "getPremiumBtn": "Приобрести подписку",
+    "featureOne": "Учебный материал",
+    "featureTwo": "Сохранение прогресса",
+    "featureThree": "Достижения",
+    "featureFour": "Ежедневные задания",
+    "featureFive": "Сезонные ивенты",
+    "featureSix": "Получение наград",
+    "featureSeven": "Тесты с проверкой ИИ",
+    "featureEight": "Озвучка",
+    "featureNine": "Дуэли и рейтинг",
+    "featureTen": "Будущие функции"
+  },
   "useHeadApp": {
     "title": "German Corner — Учим немецкий легко и интересно в игровой форме",
     "content": "German Corner — онлайн-платформа для изучения немецкого языка: грамматика, артикли, времена, упражнения и обучение в игровой форме.",
     "contentTwo": "немецкий язык, артикли, грамматика, учить немецкий онлайн, A1, A2, B1",
     "contentThree": "German Corner — Изучение немецкого языка",
-    "contentFour": "Учи немецкий весело и эффективно с упражнениями и играми!",
+    "contentFour": "Учи немецкий весело и эффективно с упражнениями и играми!"
   },
   "achievementToast": {
     "awardTitle": "Вы получили награду!",
@@ -1428,8 +1446,8 @@
   },
   "questLakeRuinsFirstQuests": {
     "title": "Погода и одежда",
-    "description": "Как спросить о погоде и ответить: sonnig, regnerisch, warm, kalt. Немного одежды: die Jacke, die Mütze.",
-    "goal": "Понимать базовые слова о погоде и составлять короткие фразы (Heute ist es ... / Es regnet / Ich brauche ...)",
+    "description": "Как спросить о погоде и ответить",
+    "goal": "Понимать базовые слова о погоде и составлять короткие фразы",
     "questOne": "Что значит: das Wetter",
     "questOneFirstOption": "Погода",
     "questOneSecondOption": "Ветер",
@@ -1472,7 +1490,7 @@
   "questLakeRuinsSecondQuests": {
     "title": "Времена года и температура",
     "description": "Учимся говорить о температуре и одежде.",
-    "goal": "Говорить о сезонах и погоде: Im Sommer…, Es ist kalt/warm, Es schneit/regnet, Grad; повторить Jacke/Mütze",
+    "goal": "Говорить о сезонах и погоде",
     "questOne": "Что значит: der Frühling",
     "questOneFirstOption": "Весна",
     "questOneSecondOption": "Лето",
@@ -1519,7 +1537,7 @@
   "questLakeRuinsThirdQuests": {
     "title": "Прогноз и планы",
     "description": "Учимся говорить про сегодня/завтра и планы.",
-    "goal": "Говорить о погоде (без градусов) и связывать её с простыми планами: Heute/Morgen, es bleibt/es wird",
+    "goal": "Говорить о погоде (без градусов) и связывать её с простыми планами",
     "questOne": "Что значит: der Nebel",
     "questOneFirstOption": "Туман",
     "questOneSecondOption": "Гром",
@@ -1555,8 +1573,8 @@
   },
   "questLakeRuinsFourthQuests": {
     "title": "Прогноз и непогода",
-    "description": "Учимся описывать сильную погоду и что брать с собой.",
-    "goal": "Расширить лексику по непогоде и строить простые фразы: Es donnert/Es blitzt, Am Himmel …, Ich nehme …",
+    "description": "Учимся описывать погоду и что брать с собой.",
+    "goal": "Расширить лексику по непогоде и строить простые фразы",
     "questOne": "Что значит: der Sturm",
     "questOneFirstOption": "Шторм/буря",
     "questOneSecondOption": "Туман",
@@ -1599,7 +1617,7 @@
   "questLakeRuinsFifthQuests": {
     "title": "Туман, град и прогноз",
     "description": "Туман, град, гроза; скользко на дороге. Учимся понимать прогноз (Vorhersage) и говорить, что взять с собой.",
-    "goal": "Говорить о непогоде и прогнозе: Es wird …, Es ist glatt, Am Morgen/Abend …, Ich brauche …",
+    "goal": "Говорить о непогоде и прогнозе",
     "questOne": "Что значит: der Nebel",
     "questOneFirstOption": "Туман",
     "questOneSecondOption": "Град",
@@ -1640,7 +1658,7 @@
   "questLakeRuinsSixthQuests": {
     "title": "Жара и солнце",
     "description": "Душно, сухо, жара и сильное солнце. Учимся говорить про тень, защиту от солнца и UV-индекс.",
-    "goal": "Говорить о жаре и защите от солнца: schwül, trocken, die Hitze, der Schatten, Sonnencreme/Sonnenbrille, UV-Index; Ich bleibe … / Ich brauche …",
+    "goal": "Говорить о жаре и защите от солнца",
     "questOne": "Что значит: der Schatten",
     "questOneFirstOption": "Тень",
     "questOneSecondOption": "Снег",
@@ -1681,7 +1699,7 @@
   "questLakeRuinsSeventhQuests": {
     "title": "Прогноз и изменения погоды",
     "description": "Учимся понимать прогноз: переменно, ясно, температура растёт/падает; говорим о дне и ночи, диапазонах и «до ... градусов».",
-    "goal": "Понимать и говорить о прогнозе: die Vorhersage, wechselhaft, heiter, die Temperatur, steigt/sinkt/bleibt, nachts/tagsüber, bis zu, zwischen … und … Grad",
+    "goal": "Понимать и говорить о прогнозе",
     "questOne": "Что значит: die Vorhersage",
     "questOneFirstOption": "Прогноз",
     "questOneSecondOption": "Гроза",
@@ -1723,7 +1741,7 @@
   "questLakeRuinsEighthQuests": {
     "title": "Комбинируем: сезон, погода, градусы, одежда",
     "description": "Собираем всё вместе: сезоны, явления, температура и что надеть.",
-    "goal": "Комбинировать фразы из тем 1–7: Im Sommer/Winter…, Es ist …, Es regnet/schneit, Grad, Jacke/Mütze/Regenschirm, nachts/tagsüber, bis zu, zwischen … und …, steigt/sinkt",
+    "goal": "Комбинировать фразы из тем 1–7",
     "questOne": "Переведи: Im Sommer ist es heiß.",
     "questOneFirstOption": "Летом жарко",
     "questOneSecondOption": "Зимой холодно",
@@ -1798,7 +1816,7 @@
   "questLakeRuinsTenthQuests": {
     "title": "План на выходные",
     "description": "Смотрим прогноз на завтра и выходные, сравниваем градусы и решаем, что взять с собой.",
-    "goal": "Объединять всё пройденное: heute/morgen/am Wochenende, sonnig/bewölkt/windig/regnerisch, Grad, steigt/sinkt/bleibt, Kleidung (Jacke/Mütze/Regenschirm)",
+    "goal": "Объединять всё пройденное",
     "questOne": "Переведи: Morgen ist es warm.",
     "questOneFirstOption": "Завтра тепло",
     "questOneSecondOption": "Сегодня холодно",
@@ -1914,7 +1932,7 @@
   "questsNorthCliffsThirdQuests": {
     "title": "Проблемы в номере",
     "description": "Сообщаешь о неполадках, просишь помощь, дополнительные вещи и уборку.",
-    "goal": "Melden: funktioniert nicht/kaputt; просить помощь и вещи: Handtuch, Kissen; Zimmerreinigung",
+    "goal": "просить помощь с бытовыми вещами",
     "questOneFirstOption": "Отопление",
     "questOneSecondOption": "Холодильник",
     "questOneThirdOption": "Звонок",
@@ -2062,7 +2080,7 @@
   },
   "questsNorthCliffsSeventhQuests": {
     "title": "Диалоги в отеле",
-    "description": "Короткие ситуации: бронирование, лифт, завтрак, проблемы в номере, оплата, дорога в аэропорт",
+    "description": "Короткие ситуации: бронирование, завтрак, проблемы в номере, оплата",
     "goal": "Быстро понимать и строить типовые фразы (Reservierung, Zimmer frei, Aufzug, Frühstückszeiten, WLAN, Rechnung/Quittung, bezahlen bar/Karte, Taxi/Flughafen)",
     "questOne": "Какой номер забронирован?",
     "questOneFirstOption": "Одноместный",

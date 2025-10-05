@@ -81,6 +81,7 @@ const getCompletedCount = group =>
 }
 
 .achievement-title {
+  font-size: 1.3rem;
   font-weight: 400;
   margin: 0 0 10px 0;
 }
