@@ -520,27 +520,23 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		watch(() => chainStore.questProgress, (qpRaw) => {
 			const qp = qpRaw || {}
 			const entries = Object.values(qp).filter(Boolean)
-
+			// --- Новый критерий идеальности (без wrong/skipped) ---
 			const isPerfect = (p) => {
-				const correct = Number(p?.correctCount ?? 0)
+				const correct  = Number(p?.correctCount ?? 0)
 				const required = Number(p?.requiredTasks ?? 0)
-				const wrong = Number(p?.wrongCount ?? p?.errors ?? 0)
-				const skipped = Number(p?.skipped ?? 0)
-				const partial = Boolean(p?.partial)
-				return Boolean(p?.success) && correct === required && wrong === 0 && skipped === 0 && !partial
+				return Boolean(p?.success) && correct === required
 			}
-
-			const perfect = entries.filter(isPerfect)
+			// --- Локационные ачивки (как и было, только через isPerfect) ---
 			const slugById = (id) => (id === 'eastPlain' ? 'east-plain' : id)
 			const countForId = (id) => {
 				const slug = slugById(id)
-				return perfect.filter(p => p.region === slug).length
+				return entries.filter(p => isPerfect(p) && p.region === slug).length
 			}
 			const locationIds =
 				groups.value
 					.filter(g => g.category === 'locations')
 					.flatMap(g => g.achievements.map(a => a.id))
-					.filter(id => id !== 'explorer')
+					.filter(id => id !== 'explorer' && id !== 'FiveHearts') // исключим сводные, посчитаем отдельно
 			locationIds.forEach((id) => {
 				updateProgress(id, countForId(id))
 			})
@@ -555,7 +551,15 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			updateProgress('explorer', completedLocations)
 			const totalCompletedPerfectQuests = locationIds.reduce((acc, id) => acc + countForId(id), 0)
 			updateProgress('languageLands50', totalCompletedPerfectQuests)
+			const fiveHeartsCount = entries.filter(p => {
+				const req   = Number(p?.requiredTasks ?? 0)
+				const corr  = Number(p?.correctCount ?? 0)
+				const lifes = Number(p?.livesAtFinish ?? 0)
+				return Boolean(p?.success) && req === 20 && corr === req && lifes >= 5
+			}).length
+			updateProgress('FiveHearts', fiveHeartsCount)
 		}, { immediate: true })
+
 		// f) прочее
 		watch(() => {
 			const t = gameStore.totalCorrectAnswers || []
@@ -579,7 +583,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		watch(() => authStore.registeredAt, date => {
 			if (!date) return
 			const days = Math.max(0, Math.floor((Date.now() - new Date(date).getTime()) / 86400000))
-			updateProgress('OneYearVeteran', days)
+			updateProgress('OneYearVeteran', Math.min(days, 365))
 		}, { immediate: true })
 		// дуэль предложений
 		watch(duelStore.achievements, (duelStats) => {
