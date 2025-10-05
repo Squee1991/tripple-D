@@ -536,7 +536,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				groups.value
 					.filter(g => g.category === 'locations')
 					.flatMap(g => g.achievements.map(a => a.id))
-					.filter(id => id !== 'explorer' && id !== 'FiveHearts') // исключим сводные, посчитаем отдельно
+					.filter(id => id !== 'explorer' && id !== 'FiveHearts')
 			locationIds.forEach((id) => {
 				updateProgress(id, countForId(id))
 			})
@@ -558,8 +558,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				return Boolean(p?.success) && req === 20 && corr === req && lifes >= 5
 			}).length
 			updateProgress('FiveHearts', fiveHeartsCount)
-		}, { immediate: true })
-
+		}, { immediate: true, deep: true  })
 		// f) прочее
 		watch(() => {
 			const t = gameStore.totalCorrectAnswers || []
