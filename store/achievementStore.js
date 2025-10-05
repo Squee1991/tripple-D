@@ -279,7 +279,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 
 	function recomputeAllCasesMeta() {
 		const done = CASE_PREFIXES.reduce((acc, p) => acc + (isGroupMasterCompleted(p) ? 1 : 0), 0)
-		updateProgress('all_cases', done)  // покажет тост, когда станет 4/4
+		updateProgress('all_cases', done)
 	}
 
 	function finishBootAndReplay () {
@@ -335,14 +335,13 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				const prereqIds = allIds.slice(0, -1)
 				const allDone = prereqIds.every(id => {
 					const a = findById(id)
-					if (!a) return false                           // было true — неправильно
-					const tp  = Number(a.targetProgress ?? 1)      // не через ||, иначе 0 сломается
+					if (!a) return false
+					const tp  = Number(a.targetProgress ?? 1)
 					const cur = Number(a.currentProgress ?? 0)
 					return cur >= tp
 				})
 				updateProgress(lastId, allDone ? 1 : 0)
 			}
-
 			// ---- добавляем пересчёт мета-ачивки 0..4 ----
 			if (CASE_PREFIXES.includes(prefix)) {
 				recomputeAllCasesMeta()
@@ -555,7 +554,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				const req   = Number(p?.requiredTasks ?? 0)
 				const corr  = Number(p?.correctCount ?? 0)
 				const lifes = Number(p?.livesAtFinish ?? 0)
-				return Boolean(p?.success) && req === 20 && corr === req && lifes >= 5
+				return Boolean(p?.success) && req >= 10 && corr === req && lifes >= 5
 			}).length
 			updateProgress('FiveHearts', fiveHeartsCount)
 		}, { immediate: true, deep: true  })
