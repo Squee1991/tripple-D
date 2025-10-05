@@ -37,7 +37,6 @@ export const userlangStore = defineStore('learning', () => {
 
     const markProgress = async (word, modeKey, value = true) => {
         const selected = selectedWords.value.find(w => w.de === word.de)
-        const wasAlreadyTrue = selected?.progress?.[modeKey] === true
         if (selected) {
             if (!selected.progress) selected.progress = {}
             selected.progress[modeKey] = value
@@ -47,7 +46,9 @@ export const userlangStore = defineStore('learning', () => {
             if (!found.progress) found.progress = {}
             found.progress[modeKey] = value
         }
-        if (value === true && !wasAlreadyTrue) {
+
+        // ★ Начисляем за КАЖДЫЙ правильный ответ (без проверки wasAlreadyTrue)
+        if (value === true) {
             points.value++
             totalEarnedPoints.value++
             exp.value++
@@ -55,17 +56,10 @@ export const userlangStore = defineStore('learning', () => {
             try {
                 daily.addPoints(1)
                 daily.addExp(1)
-                if (modeKey === 'wordArticle') {
-                    daily.addWordArticle(1)
-                }
-                if (modeKey === 'plural') {
-                    daily.addPlural(1)
-                }
-                if (modeKey === 'audio') {
-                    daily.addAudioArticle(1)
-                }
-            } catch {
-            }
+                if (modeKey === 'wordArticle') daily.addWordArticle(1)
+                if (modeKey === 'plural')      daily.addPlural(1)
+                if (modeKey === 'audio')       daily.addAudioArticle(1)
+            } catch {}
         }
 
         const requiredModes = ['article', 'letters', 'wordArticle', 'audio', 'plural']
@@ -74,16 +68,14 @@ export const userlangStore = defineStore('learning', () => {
         if (allPassed) {
             const already = learnedWords.value.some(w => w.de === word.de)
             if (!already) {
-                learnedWords.value.push({...found, progress: {...p}})
-                try {
-                    daily.addLearned(1)
-                } catch {
-                }
+                learnedWords.value.push({ ...found, progress: { ...p } })
+                try { daily.addLearned(1) } catch {}
             }
         }
 
         await saveToFirebase()
     }
+
 
 
     const recordAnswerResult = (isCorrect, {modeKey = null, difficulty = null} = {}) => {

@@ -35,7 +35,6 @@
 
 <script setup>
 import { computed } from 'vue'
-import { useI18n } from 'vue-i18n'
 import { useAchievementStore } from '../../store/achievementStore.js'
 import { listenAchieveGroup } from '../achieveGroup/article/listen.js'
 
@@ -50,6 +49,7 @@ const listenGroups = computed(() =>
 
 const getCompletedCount = group =>
 		group.achievements.filter(a => a.currentProgress >= a.targetProgress).length
+
 </script>
 
 <style scoped>
