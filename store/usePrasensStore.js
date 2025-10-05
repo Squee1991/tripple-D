@@ -19,8 +19,6 @@ export const useQuizStore = defineStore('quiz', () => {
     const score = computed(() => Object.values(userAnswers.value).filter(a => a.isCorrect).length)
     const quizCompleted = computed(() => currentQuestions.value.length > 0 && currentQuestionIndex.value >= currentQuestions.value.length)
 
-
-
     async function startNewQuiz(fileName) {
         currentQuestions.value = []
         userAnswers.value = {}

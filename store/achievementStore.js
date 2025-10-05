@@ -201,7 +201,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 					setTimeout(() => {
 						if (lastUnlockedAward.value?.achId === id) lastUnlockedAward.value = null
 					}, 0)
-					updateProgress('firstAward', shownSet.size)
+					updateProgress('Collection', shownSet.size)
 				}
 			}
 		}
@@ -295,8 +295,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			shownSet = loadShown()
 			completedSet = loadCompleted()
 			resetAllProgress()
-			updateProgress('firstAward', shownSet.size)
-			updateProgress('collectionStart', shownSet.size)
+			updateProgress('Collection', shownSet.size)
 			if (!uid) {
 				isBooting.value = false
 				return
@@ -565,7 +564,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		watch(() => langStore.isLeveling, lvl => updateProgress('level10',  lvl), { immediate: true })
 		watch(() => statsStore.constructedSentences, n => updateProgress('sentences-master', n), { immediate: true })
 		watch(() => langStore.totalEarnedPoints,  pts => updateProgress('Hunderd', pts), { immediate: true })
-		watch(() => langStore.articlesSpentForAchievement, spent => updateProgress('ArticlusSpent', spent), { immediate: true })
+		watch(() => langStore.articlesSpentForAchievement, spent => updateProgress('Articlus', Number(spent) || 0), { immediate: true })
 		// лидерборды
 		;(async function checkLeaderboard () {
 			if (!authStore.uid) return
@@ -610,13 +609,13 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			]
 			map.forEach(([id, val]) => updateProgress(id, val))
 		})
-		updateProgress('firstAward', shownSet.size)
+		updateProgress('Collection', shownSet.size)
 		setTimeout(() => {
 			finishBootAndReplay()
 		}, 0)
 	}
 	watch(lastUnlockedAward, (award) => {
-		if (award) updateProgress('firstAward', shownSet.size)
+		if (award) updateProgress('Collection', shownSet.size)
 	})
 	if (process.client) initializeProgressTracking()
 

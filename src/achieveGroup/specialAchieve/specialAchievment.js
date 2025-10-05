@@ -56,7 +56,7 @@ export const cpecialGroupAchievment = [
 				description: "specialCategory.specialCollectionLabel",
 				icon: "🧰",
 				currentProgress: 0,
-				targetProgress: 10
+				targetProgress: 16
 			},
 			{
 				id: 'Hunderd',
