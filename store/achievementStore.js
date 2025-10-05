@@ -582,23 +582,32 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			updateProgress('OneYearVeteran', days)
 		}, { immediate: true })
 		// дуэль предложений
-		watch(() => duelStore.achievements, (duelStats) => {
-			const plainStats = JSON.parse(JSON.stringify(duelStats || {}))
-			if (!plainStats || Object.keys(plainStats).length === 0) return
-			groups.value
-				.filter(g => g.category === 'sentence')
-				.forEach(group => {
-					group.achievements.forEach(ach => {
-						const parts = (ach.id || '').split('_')
-						if (parts.length < 2) return
-						const level  = parts[0].toUpperCase()
-						const metric = parts[1]
-						const progressValue = plainStats[level]?.[metric]
-						const currentProgress = progressValue || 0
-						updateProgress(ach.id, currentProgress)
+		watch(duelStore.achievements, (duelStats) => {
+				const stats = duelStats || {}
+				if (Object.keys(stats).length === 0) return
+				groups.value
+					.filter(g => g.category === 'sentence')
+					.forEach(group => {
+						group.achievements.forEach(ach => {
+							const parts = (ach.id || '').split('_')
+							if (parts.length < 2) return
+							const level  = parts[0].toUpperCase()
+							const metric = parts[1]
+							const val = stats[level]?.[metric] ?? 0
+							updateProgress(ach.id, val)
+						})
 					})
-				})
-		}, { immediate: true, deep: true })
+			},
+			{ immediate: true, deep: true }
+		)
+
+		watch(() => authStore.uid, async (uid) => {
+			if (!uid) return
+			try {
+				await duelStore.loadUserAchievements()
+			} catch (e) {
+			}
+		}, { immediate: true })
 		// угадай-слово
 		watchEffect(() => {
 			const map = [
