@@ -101,7 +101,6 @@ import {nameMap} from '../../utils/nameMap.js'
 import {useHead, useSeoMeta} from '#imports'
 import NotFound from '../../assets/animation/notFound.json'
 import {useCanonical} from '../../composables/useCanonical.js'
-
 const {t} = useI18n()
 const showModesBlock = ref(false)
 const showNoTopicMessage = ref(true)
@@ -114,8 +113,11 @@ const animationContainer = ref(null)
 const localePath = useLocalePath()
 const canonical = useCanonical()
 const isLoading = ref(false)
-const pageTitle = 'German Corner — Тренировка артиклей der, die, das в игровой форме'
-const pageDesc = 'Изучайте немецкие артикли der, die, das легко и интересно! Выберите тему и тренируйтесь в пяти интерактивных режимах: запоминание, написание, множественное число, аудио и сборка слов.'
+const page = ref(0)
+const itemsPerPage = 9
+
+const pageTitle = t('metaArticle.title')
+const pageDesc = t('metaArticle.description')
 
 useHead({
   title: pageTitle,
@@ -125,6 +127,7 @@ useHead({
 })
 
 useSeoMeta({
+  title: pageTitle,
   description: pageDesc,
   ogTitle: pageTitle,
   ogDescription: pageDesc,
@@ -134,16 +137,6 @@ useSeoMeta({
   robots: 'index, follow'
 })
 
-onMounted(() => {
-  if (animationContainer.value) {
-    Lottie.loadAnimation({
-      container: animationContainer.value,
-      loop: false,
-      animationData: NotFound
-    })
-  }
-})
-
 const clearSelectedTopic = () => {
   showModesBlock.value = false
   setTimeout(() => {
@@ -151,15 +144,11 @@ const clearSelectedTopic = () => {
     selectedModes.value = []
     showNoTopicMessage.value = false
   }, 450)
-
 }
 
 const goBack = () => {
   router.push('/')
 }
-
-const page = ref(0)
-const itemsPerPage = 9
 
 const topicKeys = computed(() => Object.keys(nameMap))
 
@@ -238,6 +227,16 @@ const startLearning = async () => {
 onMounted(async () => {
   const res = await fetch('/words.json')
   themeList.value = await res.json()
+})
+
+onMounted(() => {
+  if (animationContainer.value) {
+    Lottie.loadAnimation({
+      container: animationContainer.value,
+      loop: false,
+      animationData: NotFound
+    })
+  }
 })
 
 </script>

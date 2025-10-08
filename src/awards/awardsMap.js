@@ -14,5 +14,7 @@ export const achievementToAwardMap = {
     all_cases: 'awards.allCases',
     all_adjectives: 'awards.allAdjectives',
     all_verbs: 'awards.allVerbs',
-    FiveHearts: 'awards.fiveHearts'
+    FiveHearts: 'awards.fiveHearts',
+    daily42:"awards.daily42",
+    iAmGroot:"awards.iAmGroot",
 }

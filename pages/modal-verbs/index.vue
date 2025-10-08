@@ -3,7 +3,7 @@
     <div v-if="showTips" class="tips__overlay" @click.self="showTips = false">
       <div class="tips__content">
         <button class="tips__close" @click="showTips = false">×</button>
-<!--        <h2 class="tipps__title">{{ t('modalVerbsTipsTitle.tipsTitle') }}</h2>-->
+        <!--        <h2 class="tipps__title">{{ t('modalVerbsTipsTitle.tipsTitle') }}</h2>-->
         <ul class="tips__list">
           <li v-for="tip in activeTipps" :key="tip.text" class="tips__item">
             <div class="tips__text" v-html="tip.text"></div>
@@ -36,7 +36,7 @@
               <div class="info__wrapper">
                 <h3 class="info-section__title">{{ t('modalVerbsPage.examplesTitle') }}</h3>
                 <button
-                    title="Советы по теме"
+                    :title="t('hoverTitle.tips')"
                     v-if="selectedGroup.tips" class="info__icon-tips" ref="tipRef"
                     @click="openTips(selectedGroup.tips)">
                 </button>
@@ -83,19 +83,21 @@ import Lottie from 'lottie-web';
 import TipIcon from '../../assets/animation/info.json';
 import SoundBtn from '../../src/components/soundBtn.vue';
 import VBackBtn from "~/src/components/V-back-btn.vue";
-import { useHead, useSeoMeta, useRuntimeConfig } from '#imports'
+import {useHead, useSeoMeta, useRuntimeConfig} from '#imports'
 
+const {t} = useI18n()
 const canonical = useCanonical()
-const pageTitle = 'German Corner — Модальные глаголы и придаточные предложения (Nebensätze) в немецком языке'
-const pageDesc  = 'Изучайте модальные глаголы (können, müssen, wollen, mögen) и придаточные предложения (Nebensätze: weil, dass, wenn) в немецком языке. Примеры, перевод и практика для закрепления.'
+const pageTitle = t('metaModalVerbs.title')
+const pageDesc = t('metaModalVerbs.description')
 
 useHead({
   title: pageTitle,
   link: [
-    { rel: 'canonical', href: canonical }
+    {rel: 'canonical', href: canonical}
   ]
 })
 useSeoMeta({
+  title: pageTitle,
   description: pageDesc,
   ogTitle: pageTitle,
   ogDescription: pageDesc,
@@ -105,7 +107,6 @@ useSeoMeta({
   robots: 'index, follow'
 })
 
-const {t} = useI18n()
 const router = useRouter();
 const isMobileLayout = ref(false);
 const isContentVisible = ref(false);
@@ -162,13 +163,13 @@ const modalGroups = ref([
       title: 'modalGroupBTips.practice'
     },
     tips: [
-      { text: `${t('modalGroupBTips.tipOne')} <b>bin</b>.` },
-      { text: `${t('modalGroupBTips.tipTwo')} <b>aufstehen muss</b>.` },
-      { text: `${t('modalGroupBTips.tipThree')} <b>lernen sollte</b>.` },
-      { text: `${t('modalGroupBTips.tipFour')}<b>willst</b>.` },
-      { text: `${t('modalGroupBTips.tipFive')} <b>helfen darf</b>.` },
-      { text: `${t('modalGroupBTips.tipSix')} <b>sein kann</b>.` },
-      { text: `${t('modalGroupBTips.tipSeven')} <b>mitkommen durfte</b>.` }
+      {text: `${t('modalGroupBTips.tipOne')} <b>bin</b>.`},
+      {text: `${t('modalGroupBTips.tipTwo')} <b>aufstehen muss</b>.`},
+      {text: `${t('modalGroupBTips.tipThree')} <b>lernen sollte</b>.`},
+      {text: `${t('modalGroupBTips.tipFour')}<b>willst</b>.`},
+      {text: `${t('modalGroupBTips.tipFive')} <b>helfen darf</b>.`},
+      {text: `${t('modalGroupBTips.tipSix')} <b>sein kann</b>.`},
+      {text: `${t('modalGroupBTips.tipSeven')} <b>mitkommen durfte</b>.`}
     ],
     verbs: [
       {
@@ -179,9 +180,9 @@ const modalGroups = ref([
       },
       {
         name: 'dass',
-        translation:  t('subordinateСlause.verbTranslateTwo'),
+        translation: t('subordinateСlause.verbTranslateTwo'),
         example: 'Ich denke, <b>dass er heute nicht kommt</b>.',
-        exampleTranslate:  t('subordinateСlause.verbExampleTwo')
+        exampleTranslate: t('subordinateСlause.verbExampleTwo')
       },
       {
         name: 'wenn',
@@ -191,9 +192,9 @@ const modalGroups = ref([
       },
       {
         name: 'obwohl',
-        translation:  t('subordinateСlause.verbTranslateFour'),
+        translation: t('subordinateСlause.verbTranslateFour'),
         example: '<b>Obwohl es regnet</b>, gehen wir spazieren.',
-        exampleTranslate:  t('subordinateСlause.verbExampleFour')
+        exampleTranslate: t('subordinateСlause.verbExampleFour')
       },
       {
         name: 'damit',
@@ -416,7 +417,7 @@ watch(selectedGroup, initLottieIcon);
   gap: 20px;
   position: relative;
   overflow: hidden;
-  padding: 1rem ;
+  padding: 1rem;
 }
 
 .info-section {
@@ -618,12 +619,14 @@ watch(selectedGroup, initLottieIcon);
     flex-direction: column;
     padding: 5px 0;
   }
+
   .content__main-column,
   .practice-area {
     width: 100%;
     border-right: none;
     padding: 5px;
   }
+
   .content__main-column {
     border-bottom: 3px dashed #cccccc;
     padding-bottom: 2rem;
@@ -638,6 +641,7 @@ watch(selectedGroup, initLottieIcon);
     padding: 0;
     gap: 0;
   }
+
   .sidebar {
     width: 100%;
     height: 100vh;
@@ -646,6 +650,7 @@ watch(selectedGroup, initLottieIcon);
     box-shadow: none;
     border: none;
   }
+
   .content {
     position: absolute;
     top: 0;
@@ -658,9 +663,11 @@ watch(selectedGroup, initLottieIcon);
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
     padding: 15px;
   }
+
   .modal-verbs-page.content-is-active .content {
     transform: translateX(-100%);
   }
+
   .btn__close {
     display: flex;
   }

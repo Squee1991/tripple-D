@@ -24,7 +24,8 @@ export const userlangStore = defineStore('learning', () => {
     const isLoaded = ref(false)
     const bestStreakAnyMode = ref(0)
     const bestStreakEasyArticle = ref(0)
-
+    const keyTopic = v => v ?? null
+    const findByKey = (arr, de, topic) => arr.find(w => w.de === de && keyTopic(w.topic) === keyTopic(topic))
     const topicStats = computed(() => {
         const stats = {}
         const topics = [...new Set(words.value.map(w => w.topic).filter(Boolean))]
@@ -37,37 +38,38 @@ export const userlangStore = defineStore('learning', () => {
     })
 
     const markProgress = async (word, modeKey, value = true) => {
-        const selected = selectedWords.value.find(w => w.de === word.de)
+        const topic = keyTopic(word.topic)
+
+        const selected = findByKey(selectedWords.value, word.de, topic)
         if (selected) {
             if (!selected.progress) selected.progress = {}
             selected.progress[modeKey] = value
         }
-        const found = words.value.find(w => w.de === word.de)
+
+        const found = findByKey(words.value, word.de, topic)
         if (found) {
             if (!found.progress) found.progress = {}
             found.progress[modeKey] = value
         }
 
-        // ★ Начисляем за КАЖДЫЙ правильный ответ (без проверки wasAlreadyTrue)
         if (value === true) {
             points.value++
             totalEarnedPoints.value++
             exp.value++
             handleLeveling()
             try {
-                daily.addPoints(1)
-                daily.addExp(1)
+                daily.addPoints(1); daily.addExp(1)
                 if (modeKey === 'wordArticle') daily.addWordArticle(1)
                 if (modeKey === 'plural')      daily.addPlural(1)
                 if (modeKey === 'audio')       daily.addAudioArticle(1)
             } catch {}
         }
-
-        const requiredModes = ['article', 'letters', 'wordArticle', 'audio', 'plural']
+        
+        const required = ['article','letters','wordArticle','audio','plural']
         const p = (found?.progress) || {}
-        const allPassed = requiredModes.every(m => p[m] === true)
+        const allPassed = required.every(m => p[m] === true)
         if (allPassed) {
-            const already = learnedWords.value.some(w => w.de === word.de)
+            const already = !!findByKey(learnedWords.value, word.de, topic)
             if (!already) {
                 learnedWords.value.push({ ...found, progress: { ...p } })
                 try { daily.addLearned(1) } catch {}
@@ -76,8 +78,6 @@ export const userlangStore = defineStore('learning', () => {
 
         await saveToFirebase()
     }
-
-
 
     const recordAnswerResult = (isCorrect, {modeKey = null, difficulty = null} = {}) => {
         let currentAny = Number(sessionStorage.getItem('streakAnyMode') || '0')
@@ -106,22 +106,17 @@ export const userlangStore = defineStore('learning', () => {
     const addWordsToGlobal = async (wordsList) => {
         let added = false
         wordsList.forEach(newWord => {
-            if (!words.value.find(w => w.de === newWord.de)) {
+            if (!findByKey(words.value, newWord.de, newWord.topic)) {
                 words.value.push({
                     ...newWord,
-                    progress: {
-                        article: null,
-                        letters: null,
-                        wordArticle: null,
-                        audio: null,
-                        plural: null
-                    }
+                    progress: { article: null, letters: null, wordArticle: null, audio: null, plural: null }
                 })
                 added = true
             }
         })
         if (added) await saveToFirebase()
     }
+
 
     const setSelectedWords = async (wordsList) => {
         selectedWords.value = wordsList.map(word => ({
@@ -155,19 +150,17 @@ export const userlangStore = defineStore('learning', () => {
         await saveToFirebase()
     }
 
-    const markAsLearned = async (word, selectedModes = []) => {
-        const requiredModes = ['article', 'letters', 'wordArticle', 'audio', 'plural'];
-        const progress = word.progress || {};
-        const allPassed = requiredModes.every(mode => progress[mode] === true);
-        if (!allPassed) return;
-        const alreadyLearned = learnedWords.value.some(w => w.de === word.de);
-        if (!alreadyLearned) {
-            learnedWords.value.push({...word});
-            try {
-                daily.addLearned(1)
-            } catch {
-            }
-            await saveToFirebase();
+    const markAsLearned = async (word) => {
+        const required = ['article','letters','wordArticle','audio','plural']
+        const p = word.progress || {}
+        if (!required.every(m => p[m] === true)) return
+
+        const topic = keyTopic(word.topic)
+        const already = !!findByKey(learnedWords.value, word.de, topic)
+        if (!already) {
+            learnedWords.value.push({ ...word })
+            try { daily.addLearned(1) } catch {}
+            await saveToFirebase()
         }
     }
 
@@ -276,14 +269,13 @@ export const userlangStore = defineStore('learning', () => {
     }
 
     const syncSelectedWordsProgress = () => {
-        selectedWords.value = selectedWords.value.map(selected => {
-            const fullWord = words.value.find(w => w.de === selected.de)
-            if (fullWord && fullWord.progress) {
-                selected.progress = fullWord.progress
-            }
-            return selected
+        selectedWords.value = selectedWords.value.map(sw => {
+            const full = findByKey(words.value, sw.de, keyTopic(sw.topic))
+            if (full?.progress) sw.progress = full.progress
+            return sw
         })
     }
+
     const clearAll = async () => {
         words.value = []
         learnedWords.value = []

@@ -22,12 +22,14 @@
 	onMounted(() => {
 		setTimeout(() => {
 			router.push('/')
-		}, 3300)
+		}, 3000)
 	})
 </script>
 
 <style scoped>
 	.preloader {
+    position: relative;
+    z-index: 999999;
 		min-height: 100vh;
 		display: flex;
 		flex-direction: column;

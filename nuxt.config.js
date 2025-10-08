@@ -1,6 +1,15 @@
+const siteUrl = process.env.NUXT_SITE_URL || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000');
+
 export default defineNuxtConfig({
 	compatibilityDate: '2024-11-01',
 	devtools: {enabled: true},
+	app: {
+		head: {
+			meta: [
+				{ name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' }
+			]
+		}
+	},
 	modules: [
 		'@nuxt/image',
 		'@pinia/nuxt',
@@ -8,7 +17,19 @@ export default defineNuxtConfig({
 		'@nuxtjs/google-fonts',
 		'@nuxtjs/i18n',
 		'@nuxtjs/color-mode',
+		'@nuxtjs/sitemap',
+		'@nuxtjs/robots'
 	],
+	sitemap: {
+		siteUrl,
+		autoLastmod: true
+	},
+	robots: {
+		rules: process.env.VERCEL_ENV === 'production'
+			? [{ userAgent: '*', allow: '/' }]
+			: [{ userAgent: '*', disallow: '/' }],
+		sitemap: `${siteUrl}/sitemap.xml`
+	},
 	css: [
 		'simplebar/dist/simplebar.min.css',
 		'~/assets/styles/simplebar.css',
@@ -48,7 +69,6 @@ export default defineNuxtConfig({
 			optimizeTranslationDirective: false
 		}
 	},
-
 	plugins: ['~/plugins/simplebar.client.js'],
 	googleFonts: {
 		families: {
@@ -78,7 +98,7 @@ export default defineNuxtConfig({
 			firebaseMessagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
 			firebaseAppId: process.env.FIREBASE_APP_ID,
 			firebaseClientId: process.env.FIREBASE_CLIENT_ID,
-			siteUrl: process.env.SITE_URL || 'https://language-app-beta.vercel.app',
+			siteUrl,
 			ADMIN_UID1: process.env.ADMIN_UID1,
 			ADMIN_UID2: process.env.ADMIN_UID2,
 		}
@@ -101,7 +121,7 @@ export default defineNuxtConfig({
 	nitro: {
 		preset: 'vercel',
 		prerender: {
-			routes: ['/', '/en', '/ru', '/uk', '/pl', '/tr', '/uz']
+			routes: ['/', '/en', '/ru', '/uk', '/pl', '/tr', '/uz' , '/ar']
 		},
 		compressPublicAssets: true
 	},

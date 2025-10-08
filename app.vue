@@ -26,8 +26,8 @@ useHead(() => ({
   htmlAttrs: { lang: locale.value, dir: locale.value === 'ar' ? 'rtl' : "ltr" },
   title: () => t('useHeadApp.title'),
   meta: [
+    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
     { name: 'description', content: t('useHeadApp.content') },
-    { name: 'keywords', content: t('useHeadApp.contentTwo') },
     { property: 'og:title', content: t('useHeadApp.contentThree') },
     { property: 'og:description', content: t('useHeadApp.contentFour') },
     { property: 'og:type', content: 'website' },
@@ -49,7 +49,6 @@ const sentencesStore = useSentencesStore();
 const langStore = userlangStore()
 const daily = dailyStore()
 
-const learningLanguage = computed(() => langStore.learningLang)
 
 onMounted(() => {
   watch(user, (user, prevUser) => {

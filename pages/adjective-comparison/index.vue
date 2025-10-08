@@ -17,7 +17,7 @@
             :tips="currentTopicData?.tips"
         />
         <div class="sidebar">
-            <button @click="backTo" class="btn__back">На главную</button>
+            <button @click="backTo" class="btn__back">{{ t('tenses.barBtn')}}</button>
             <h2 class="sidebar__title">{{ t('adjectiveComparisonPage.sideBarTitle')}}</h2>
             <div class="sidebar__heading">{{ t('adjectiveComparisonPage.sidebarUnderTitle')}}</div>
             <ul class="sidebar__list">
@@ -43,7 +43,7 @@
                         <div class="info__wrapper">
                             <h3 class="info-section__title">{{ t('adjectiveComparisonPage.ruleTitle')}}</h3>
                             <button
-                                    title="Советы по теме"
+                                   :title="t('hoverTitle.tips')"
                                     v-if="currentTopicData.tips"
                                     class="info__icon-tips"
                                     ref="tipRef"
@@ -99,21 +99,22 @@
     import Lottie from 'lottie-web';
     import TipIcon from '../../assets/animation/info.json';
     import VTips from '../../src/components/V-tips.vue';
-    import { useHead, useSeoMeta, useRuntimeConfig } from '#imports'
+    import { useHead, useSeoMeta } from '#imports'
     const canonical = useCanonical()
-    const baseTitle = 'German Corner — Степени сравнения прилагательных (Komparativ, Superlativ)'
 
-    const pageDesc  = 'Как образуются степени сравнения прилагательных в немецком: правила для -er/-sten, формы с умлаутом (är/ö/ü), особые и неправильные формы. Примеры, озвучка и практика.'
+    const baseTitle = t('adjectiveComparisonPage.title')
+    const pageDesc  = t('adjectiveComparisonPage.description')
     useHead({
-      title: `${baseTitle}: правила, умлаут, особые формы`,
+      title: baseTitle,
       link: [
         { rel: 'canonical', href: canonical }
       ]
     })
 
     useSeoMeta({
+      title: baseTitle,
       description: pageDesc,
-      ogTitle: `${baseTitle}: правила, умлаут, особые формы`,
+      ogTitle: baseTitle,
       ogDescription: pageDesc,
       ogType: 'article',
       ogUrl: canonical,

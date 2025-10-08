@@ -1,4 +1,78 @@
 {
+  "metaAdjectiveBasic": {
+    "title": "German Corner — Sifatlar A1–A2: ranglar, his-tuyg‘ular, tashqi ko‘rinish, xarakter, o‘lcham",
+    "description": "Nemis tilidagi asosiy sifatlarni mavzular bo‘yicha o‘rganing: ranglar, his-tuyg‘ular va emotsiyalar, tashqi ko‘rinish, xarakter, o‘lcham va shakl. Tarjima va ovozli misollar + mashqlar."
+  },
+  "metaAdjectiveComparison": {
+    "title": "Nemis tilida sifatlarning taqqoslash darajalari: Komparativ va Superlativ qoidalari, umlaut, maxsus shakllar",
+    "description": "Nemis tilida sifatlarning taqqoslash darajalari qanday hosil qilinadi: -er va -sten qo‘shimchalari uchun qoidalar, umlautli sifatlar (ä/ö/ü), istisnolar va noaniq shakllar. Tarjima, ovoz va mashqlar bilan misollar."
+  },
+  "metaAdjectiveDeclension": {
+    "title": "Nemis tilida sifatlarning kelishik bo‘yicha o‘zgarishi: aniqlovchi/aniqlovchisiz artikeldan keyin",
+    "description": "Nemis tilidagi sifat qo‘shimchalari uchun qoidalar va jadvallar: aniqlovchi artikel (der/die/das), aniqlovchisiz (ein/kein/mein) va artikelsiz. Misollar, tarjima, mashq."
+  },
+  "metaArticle": {
+    "title": "Nemis artikellari der, die, das o‘yin shaklida mashq",
+    "description": "Nemis artikellarini der, die, das oson va qiziqarli o‘rganing! Mavzuni tanlang va besh interaktiv rejimda mashq qiling: yodlash, yozish, ko‘plik, audio va so‘z yasash."
+  },
+  "metaTests": {
+    "title": "Nemis tili testlari: A1, A2, B1, B2 (Lesen, Hören, Schreiben, Sprechen)",
+    "description": "A1–B2 darajalari uchun nemis tili mashq testlari: o‘qish, tinglash, yozish va gapirish. Tezkor tekshiruv va natijani saqlash. Bilimingizni sinab ko‘ring.",
+    "main": "Bosh sahifa",
+    "tests": "Nemis tili testlari",
+    "testsLevels": "Nemis tili testlari — darajalar"
+  },
+  "metaLocation": {
+    "title": "German Corner — Nemis tili o‘rganish uchun til yurtlari",
+    "description": "Til yurtlarini kashf eting va topshiriqlarni bajarib, bosqichlarni o‘tib nemis tilingizni rivojlantiring. So‘z boyligi va grammatikani sarguzasht shaklida o‘rganing, topshiriqlar va rivojlanish bilan — xuddi o‘yindek!"
+  },
+  "metaModalVerbs": {
+    "title": "Nemis tilida modal fe’llar va qo‘shimcha gaplar (Nebensätze)",
+    "description": "Nemis tilida modal fe’llarni (können, müssen, wollen, mögen) va qo‘shimcha gaplarni (weil, dass, wenn) o‘rganing. Misollar, tarjima va mashqlar."
+  },
+  "metaPrepositions": {
+    "title": "Nemis tilidagi predloglar kelishiklarga ko‘ra: Nominativ, Akkusativ, Dativ, Genitiv",
+    "description": "Nemis tilidagi predloglarni kelishiklarga ko‘ra o‘rganing: Nominativ, Akkusativ, Dativ va Genitiv. Oddiy qoidalar, grammatika, misollar va mini-test."
+  },
+  "metaTenses": {
+    "title": "Nemis tili zamonlari: Präsens, Perfekt, Präteritum, Futur I, Plusquamperfekt",
+    "description": "Nemis tili zamonlari haqida sodda va tushunarli izohlar misollar va jadvallar bilan: Präsens, Perfekt, Präteritum, Futur I va Plusquamperfekt. Har bir zamonni mashq qila boshlang."
+  },
+  "metaThematic": {
+    "title": "Mavzuli darajalar: der, die, das ni to‘g‘ri kelishikda qo‘yish",
+    "description": "Mavzuni tanlang va qiyinchilik darajalaridan o‘ting: artikellar der, die, das ni Nominativ, Akkusativ, Dativ va Genitiv bo‘yicha mashq qiling. Qisqa gaplar, aniq rivojlanish, mashq."
+  },
+  "metaVerbTypes": {
+    "title": "Nemis fe’llarining turlari: predlogli, ajraladigan qo‘shimchali, kuchli va qaytar",
+    "description": "Nemis tilidagi fe’llar turlari: doimiy predlogli fe’llar (auf, an, mit, von va boshqalar), ajraladigan qo‘shimchali (anrufen, ankommen), kuchli/noaniq (fahren, helfen, sprechen) va qaytar fe’llar. Misollar, mini-qoidalar, nazariya va mashqlar."
+  },
+  "metaAdjectiveTheory": {
+    "title": "Nemis sifatlari: qo‘shimchalar, o‘zgarish, taqqoslash",
+    "description": "Nemis tilida sifatlar: qachon qo‘shimchalar o‘zgaradi, kuchsiz/kuchli/aralash o‘zgarish, kelishiklarga ko‘ra jadvallar, Komparativ va Superlativ, tez-tez uchraydigan xatolar + mini-test."
+  },
+  "metaArticles": {
+    "title": "Der / Die / Das — kirish. Artikellar nima",
+    "description": "Qisqa va aniq: qachon der, die, das ishlatiladi; aniqlovchi va aniqlovchisiz artikellar, jins jadvali."
+  },
+  "metaPrepositionsTheory": {
+    "title": "Nemis tilidagi predloglar kelishiklarga ko‘ra misollar va test bilan",
+    "description": "Nemis tilidagi predloglarni kelishiklarga ko‘ra o‘rganing: Dativ, Akkusativ, Genitiv va \"xameleonlar\". Gaplar misollari, qisqartmalar (am, im, ins) va mini-test."
+  },
+  "metaIdioms": {
+    "title": "Nemis tilidagi idiomlar va frazeologizmlar misollar va tarjima bilan",
+    "description": "Nemis tilidagi idiomlar va frazeologizmlarni o‘rganing: barqaror iboralar, ko‘chma ma’nolar va real hayotdan misollar. Tarjima va tushuntirishlar bilan + mini-test."
+  },
+  "metaMainPage": {
+    "title": "Nemis tilini o‘yin shaklida o‘rganing",
+    "description": "German Corner. O‘yin shaklidagi mashqlar: artikellar der, die, das, mavzuli darajalar, fe’llar, sifatlar, predloglar, topshiriqlar va yutuqlar. Nemis tilini qiziqarli o‘rganing!"
+  },
+  "metaVerbsTheory": {
+    "title": "Nemis fe’llari nazariyasi misollar va test bilan",
+    "description": "Nemis tilida fe’llarning tuslanishi, zamonlar va yordamchi fe’llarning umumiy ko‘rinishi: machen/lernen, haben/sein, Futur, so‘z tartibi. Misollar, jadvallar va mini-test."
+  },
+  "hideAuthMobileBtn": {
+    "text": "Yashirish"
+  },
   "payPage": {
     "title": "Platformadan maksimal foyda oling",
     "description": "O‘qish, mukofotlar, topshiriqlar, progress va yana ko‘p narsalar!",
@@ -1187,7 +1261,9 @@
     "allVerbs": "Harakat qilichlari",
     "allAdjectives": "Notiqlik palitrasi",
     "allCases": "Birlik jumboq",
-    "fiveHearts": "Hayot qalqoni"
+    "fiveHearts": "Hayot qalqoni",
+    "daily42": "Galaktik teleskop",
+    "iAmGroot": "Grootli guldon"
   },
   "eastPlainFirstQuests": {
     "title": "Birinchi uchrashuv",
@@ -4152,6 +4228,9 @@
     "specialAllVerbsLabel": "Harakatlar hukmdori",
     "specialAllVerbsText": "Barcha fe’l yutuqlarini oling: Qo‘shilish, zamonlar, modal, turlar",
     "specialAllVerbsAward": "Mukofot: Harakat qilichlari",
+    "specialGrotText": "Men Grootman",
+    "specialGrotLabel": "Har bir mavzuda o‘z daraxti bor va… bu xato emas! Uni artikl mashqida top va barcha usullar bilan yodla.",
+    "specialGrotAward": "Mukofot: Grootli guldon",
     "generalSeventhlabel": "Gaplar hukmdori",
     "generalSeventhText": "Har qanday qiyinlik darajasida Solo Iboralar Dueli rejimida 1000 ta gap tuzing"
   },
@@ -4174,6 +4253,9 @@
     "dailyTitle": "Temir iroda",
     "dailyText": "Topshiriqlar jurnalidan 50 marta mashqlarni bajaring",
     "dailyAward": "Mukofot: Abadiylik qum soati",
+    "dailyQuestText": "Hmm… javob yo‘q",
+    "dailyQuestDescription": "42 ta kundalik topshiriqni bajarding, ammo Koinotning asosiy savoli sirligicha qolmoqda",
+    "dailyQuestAward": "Mukofot: Galaktik Teleskop",
     "firstStepLabel": "Birinchi qadam",
     "firstAwardText": "To‘plam boshlanishi",
     "firstAwardLabel": "Birinchi mukofotni oling",

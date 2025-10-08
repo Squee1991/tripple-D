@@ -1,4 +1,3 @@
-`
 <template>
   <div class="verb-types-page" :class="{ 'content-is-active': isContentVisible }">
     <div v-if="showTips" class="tips__overlay" @click.self="showTips = false">
@@ -38,7 +37,7 @@
             <div class="info__wrapper">
               <h3 class="info-section__title">{{ currentTopicData.contentBlocks[0].title }}</h3>
               <button
-                  title="Советы по теме"
+                  :title="t('hoverTitle.tips')"
                   v-if="currentTopicData.tips" class="info__icon-tips" ref="tipRef"
                   @click="openTips(currentTopicData.tips)"></button>
             </div>
@@ -88,22 +87,23 @@
     </div>
   </div>
 </template>
-
 <script setup>
 import {ref, computed, onMounted, onUnmounted, watch, nextTick} from 'vue';
 import {useRouter} from 'vue-router';
 import Lottie from 'lottie-web';
 import TipIcon from '../../assets/animation/info.json';
 import SoundBtn from '../../src/components/soundBtn';
-import { useHead, useSeoMeta, useRuntimeConfig } from '#imports'
+import { useHead, useSeoMeta } from '#imports'
 const canonical = useCanonical()
-const pageTitle = 'German Corner — Типы немецких глаголов: с предлогами, с отделяемыми приставками, сильные и возвратные'
-const pageDesc  = 'Разбираем типы глаголов в немецком: глаголы с фиксированными предлогами (auf, an, mit, von и др.), с отделяемыми приставками (anrufen, ankommen), неправильные/сильные (fahren, helfen, sprechen) и возвратные. Примеры, мини-правила и практика.'
+const {t} = useI18n()
+const pageTitle = t('metaVerbTypes.title')
+const pageDesc  = t('metaVerbTypes.description')
 useHead({
   title: pageTitle,
   link: [{ rel: 'canonical', href: canonical }]
 })
 useSeoMeta({
+  title: pageTitle,
   description: pageDesc,
   ogTitle: pageTitle,
   ogDescription: pageDesc,
@@ -114,7 +114,6 @@ useSeoMeta({
 })
 
 const router = useRouter();
-const {t} = useI18n()
 const topic = ref('prepositions');
 const selectTopic = (id) => {
   topic.value = id;

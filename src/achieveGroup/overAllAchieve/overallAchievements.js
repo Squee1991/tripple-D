@@ -11,14 +11,15 @@ export const overAchievment = [
 				currentProgress: 0,
 				targetProgress: 1
 			},
-			// {
-			// 	id: "firstAward",
-			// 	name: "generalCategory.firstAwardText",
-			// 	description: "generalCategory.firstAwardLabel",
-			// 	icon: "🎁️",
-			// 	currentProgress: 0,
-			// 	targetProgress: 1
-			// },
+			{
+				id: "daily42",
+				name: "generalCategory.dailyQuestText",
+				description: "generalCategory.dailyQuestDescription",
+				icon: "❓",
+				awards: "generalCategory.dailyQuestAward",
+				currentProgress: 0,
+				targetProgress: 42
+			},
 			{
 				id: "SiteRegular",
 				name: "generalCategory.monthLabel",

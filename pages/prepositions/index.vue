@@ -43,7 +43,7 @@
             <div class="info__wrapper">
               <h3 class="info-section__title">{{ t('prepositionsIndexPage.rule')}}</h3>
               <button
-                  title="Советы по теме"
+                  :title="t('hoverTitle.tips')"
                   v-if="currentTopicData.tips"
                   class="info__icon-tips"
                   ref="tipRef"
@@ -95,10 +95,9 @@
     </div>
   </div>
 </template>
-
 <script setup>
 import { ref, computed, onMounted, onUnmounted, watch, nextTick } from 'vue'
-import { useHead, useSeoMeta, useRuntimeConfig } from '#imports'
+import { useHead, useSeoMeta} from '#imports'
 import { useRouter } from 'vue-router'
 import SoundBtn from '../../src/components/soundBtn.vue'
 import Lottie from 'lottie-web'
@@ -108,8 +107,8 @@ const { t} = useI18n()
 const router = useRouter()
 const categoryId = 'prepositions'
 const canonical = useCanonical()
-const pageTitle = 'German Corner — Немецкие предлоги по падежам: Nominativ, Akkusativ, Dativ, Genitiv'
-const pageDesc  = 'Учите немецкие предлоги по падежам: Nominativ, Akkusativ, Dativ и Genitiv. Простые правила, примеры и мини-квиз для закрепления.'
+const pageTitle = t('metaPrepositions.title')
+const pageDesc  = t('metaPrepositions.description')
 useHead({
   title: pageTitle,
   link: [
@@ -117,6 +116,7 @@ useHead({
   ]
 })
 useSeoMeta({
+  title: pageTitle,
   description: pageDesc,
   ogTitle: pageTitle,
   ogDescription: pageDesc,

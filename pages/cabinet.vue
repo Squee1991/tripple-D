@@ -258,7 +258,7 @@ import {useUiSettingsStore} from '../store/uiSettingsStore.js'
 import {AWARDS} from '~/utils/awards'
 
 import UserIcon from '../assets/images/hedgehog.svg'
-import FriendsIcon from '../assets/images/friends.svg'
+import FriendsIcon from '../assets/images/friend.svg'
 import AwardsIcon from '../assets/images/rewards.svg'
 import Home from '../assets/images/home.svg'
 import Folder from '../assets/images/folder.svg'

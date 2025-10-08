@@ -127,10 +127,7 @@ const timePassed = computed(() => {
   if (!store.timeStarted) return 0
   return Math.max(0, Math.floor((now.value - store.timeStarted) / 1000))
 })
-const fastGuessedCount = computed(() => store.guessedFastWords.length)
-const safeGuessedCount = computed(() => store.guessedSafeWords.length)
-const guessedOnLastTryWords = computed(() => store.guessedOnLastTryWords.length)
-const guessedPerfectWords = computed(() => store.guessedPerfectWords.length)
+
 const backToMainPage = () => {
   router.push('/')
 }
@@ -211,9 +208,7 @@ watch(() => store.lose, (isLose) => {
   }
 })
 </script>
-
 <style scoped>
-
 .guess__theme-value {
   color: #e9e0ee;
   font-weight: 700;
@@ -230,7 +225,6 @@ watch(() => store.lose, (isLose) => {
   justify-content: center;
   align-items: center;
   padding: 1.5rem;
-
 }
 
 .exit-sign-icon {

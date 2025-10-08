@@ -41,7 +41,7 @@
             <div class="info__wrapper">
               <h3 class="info-section__title">{{ currentTopicData.contentBlocks[0].title }}</h3>
               <button
-                  title="Советы по теме"
+                  :title="t('hoverTitle.tips')"
                   v-if="currentTopicData.tips"
                   class="info__icon-tips"
                   ref="tipRef"
@@ -100,9 +100,8 @@
     </div>
   </div>
 </template>
-
 <script setup>
-import {useHead, useSeoMeta, useRuntimeConfig} from '#imports'
+import {useHead, useSeoMeta} from '#imports'
 import {useRoute} from 'vue-router'
 import {ref, computed, onMounted, onUnmounted, watch, nextTick} from 'vue'
 import {useRouter} from 'vue-router'
@@ -121,8 +120,9 @@ const tipRef = ref(null)
 let lottieInstance = null
 
 const canonical = useCanonical()
-const pageTitle = 'German Corner — Времена немецкого языка: Präsens, Perfekt, Präteritum, Futur I, Plusquamperfekt'
-const pageDesc = 'Понятные объяснения времён немецкого языка с примерами и таблицами: Präsens, Perfekt, Präteritum, Futur I и Plusquamperfekt. Начни практику по каждому времени.'
+const pageTitle = t('metaTenses.title')
+const pageDesc = t('metaTenses.description')
+
 useHead({
   title: pageTitle,
   link: [
@@ -130,6 +130,7 @@ useHead({
   ]
 })
 useSeoMeta({
+  title: pageTitle,
   description: pageDesc,
   ogTitle: pageTitle,
   ogDescription: pageDesc,
@@ -138,7 +139,6 @@ useSeoMeta({
   ogImage: '/images/seo-tenses.png',
   robots: 'index, follow'
 })
-
 
 const selectTopic = (id) => {
   topic.value = id

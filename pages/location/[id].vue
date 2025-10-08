@@ -53,13 +53,16 @@ import {useCanonical} from "../../composables/useCanonical.js";
 
 const route = useRoute()
 const canonical = useCanonical()
-const pageTitle = 'German Corner — Языковые земли для изучения немецкого языка'
-const pageDesc = 'Исследуйте языковые земли и прокачивайте немецкий язык, выполняя задания и проходя уровни. Учите лексику и грамматику в формате приключения с квестами и прогрессией, как в игре!'
+const {t} = useI18n();
+
+const pageTitle = t('metaLocation.title')
+const pageDesc = t('metaLocation.description')
 useHead({
     title: pageTitle,
     link: [{rel: 'canonical', href: canonical}]
 })
 useSeoMeta({
+    title: pageTitle,
     description: pageDesc,
     ogTitle: pageTitle,
     ogDescription: pageDesc,
@@ -69,7 +72,6 @@ useSeoMeta({
     robots: 'index, follow'
 })
 
-const {t} = useI18n();
 const router = useRouter();
 const chainStore = userChainStore();
 

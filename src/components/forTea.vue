@@ -1,7 +1,6 @@
 <template>
 	<div class="coffe-container">
 		<img class="coffe" @click="openDonationLink" src="../../assets/images/cupheart.svg" alt="">
-<!--		<div class="support">Support</div>-->
 	</div>
 </template>
 
@@ -21,7 +20,7 @@
 	.coffe-container {
 		flex-direction: column;
 		bottom: 100px;
-		right: 5px;
+		right: 10px;
 		position: fixed;
 		display: flex;
 		justify-content: center;

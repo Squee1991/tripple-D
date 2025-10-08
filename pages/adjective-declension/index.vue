@@ -6,7 +6,7 @@
         :tips="currentTopicData?.tips"
     />
     <div class="sidebar">
-      <button @click="backToMenu" class="btn__back">На главную</button>
+      <button @click="backToMenu" class="btn__back">{{ t('tenses.barBtn')}}</button>
       <h2 class="sidebar__title">{{ t('adjectiveDeclensionPage.sideBarTitle') }}</h2>
       <div class="sidebar__heading">{{ t('adjectiveDeclensionPage.sidebarUnderTitle') }}</div>
       <ul class="sidebar__list">
@@ -98,27 +98,28 @@ import {useRouter} from 'vue-router'
 import SoundBtn from '../../src/components/soundBtn'
 import { useHead, useSeoMeta, useRuntimeConfig } from '#imports'
 const canonical = useCanonical()
-const baseTitle = 'German Corner — Склонение прилагательных в немецком'
-const pageDesc  = 'Правила и таблицы окончаний прилагательных в немецком: после определённого артикля (der/die/das), после неопределённого (ein/kein/mein) и без артикля. Примеры с переводом и переход к практике.'
+const {t} = useI18n()
+
+const baseTitle = t('metaAdjectiveDeclension.title')
+const pageDesc  = t('metaAdjectiveDeclension.description')
 
 useHead({
-  title: `${baseTitle}: после определённого/неопределённого артикля и без артикля`,
+  title: baseTitle,
   link: [
     { rel: 'canonical', href: canonical }
   ]
 })
 
 useSeoMeta({
+  title: baseTitle,
   description: pageDesc,
-  ogTitle: `${baseTitle}: после определённого/неопределённого артикля и без артикля`,
+  ogTitle: baseTitle,
   ogDescription: pageDesc,
   ogType: 'article',
   ogUrl: canonical,
   ogImage: '/images/seo-adj-declension.png',
   robots: 'index, follow'
 })
-
-const {t} = useI18n()
 const router = useRouter()
 const categoryId = 'adjective-declension';
 const topic = ref('definite-article');

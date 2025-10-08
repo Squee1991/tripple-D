@@ -1,4 +1,78 @@
 {
+  "metaAdjectiveBasic": {
+    "title": "German Corner — Sıfatlar A1–A2: renkler, duygular, dış görünüş, karakter, boyut",
+    "description": "Almanca temel sıfatları konulara göre öğrenin: renkler, duygular ve hisler, dış görünüş, karakter, boyut ve şekil. Çeviri ve seslendirmeli örnekler + alıştırmalar."
+  },
+  "metaAdjectiveComparison": {
+    "title": "Almanca sıfatların karşılaştırma dereceleri: Komparativ ve Superlativ kuralları, umlaut, özel formlar",
+    "description": "Almancada sıfatların karşılaştırma dereceleri nasıl yapılır: -er ve -sten ekleri için kurallar, umlautlu sıfatlar (ä/ö/ü), istisnalar ve düzensiz formlar. Çeviri, seslendirme ve alıştırmalarla örnekler."
+  },
+  "metaAdjectiveDeclension": {
+    "title": "Almanca sıfat çekimi: belirli/belirsiz artikelden sonra ve artikelsiz",
+    "description": "Almanca sıfat ekleri için kurallar ve tablolar: belirli artikel (der/die/das), belirsiz (ein/kein/mein) ve artikelsiz. Örnekler, çeviri, pratik."
+  },
+  "metaArticle": {
+    "title": "Almanca artikeller der, die, das oyun şeklinde pratik",
+    "description": "Almanca artikelleri der, die, das kolay ve eğlenceli bir şekilde öğrenin! Bir konu seçin ve beş etkileşimli modda pratik yapın: ezberleme, yazma, çoğul, sesli ve kelime oluşturma."
+  },
+  "metaTests": {
+    "title": "Almanca testler: A1, A2, B1, B2 (Lesen, Hören, Schreiben, Sprechen)",
+    "description": "A1–B2 seviyeleri için Almanca deneme testleri: okuma, dinleme, yazma ve konuşma. Anında kontrol ve sonuç kaydı. Bilginizi test edin.",
+    "main": "Ana sayfa",
+    "tests": "Almanca testler",
+    "testsLevels": "Almanca testler — seviyeler"
+  },
+  "metaLocation": {
+    "title": "German Corner — Almanca öğrenmek için dil toprakları",
+    "description": "Dil topraklarını keşfedin ve görevleri tamamlayarak seviyeleri geçin, Almancanızı geliştirin. Kelime haznesi ve dilbilgisini görevler ve ilerleme ile macera formatında öğrenin, tıpkı bir oyunda olduğu gibi!"
+  },
+  "metaModalVerbs": {
+    "title": "Almancada modal fiiller ve yan cümleler (Nebensätze)",
+    "description": "Almancada modal fiilleri (können, müssen, wollen, mögen) ve yan cümleleri (weil, dass, wenn) öğrenin. Örnekler, çeviri ve pratik."
+  },
+  "metaPrepositions": {
+    "title": "Almanca edatlar: Nominativ, Akkusativ, Dativ, Genitiv",
+    "description": "Almanca edatları hallere göre öğrenin: Nominativ, Akkusativ, Dativ ve Genitiv. Basit kurallar, dilbilgisi, örnekler ve mini quiz."
+  },
+  "metaTenses": {
+    "title": "Almanca zamanlar: Präsens, Perfekt, Präteritum, Futur I, Plusquamperfekt",
+    "description": "Almanca zamanların açık ve basit açıklamaları, örnekler ve tablolarla: Präsens, Perfekt, Präteritum, Futur I ve Plusquamperfekt. Her bir zamanı pratik etmeye başla."
+  },
+  "metaThematic": {
+    "title": "Tematik seviyeler: der, die, das doğru halde ekle",
+    "description": "Bir konu seçin ve zorluk seviyelerinde ilerleyin: der, die, das artikellerini Nominativ, Akkusativ, Dativ ve Genitiv’te pratik edin. Kısa cümleler, net ilerleme, pratik."
+  },
+  "metaVerbTypes": {
+    "title": "Almanca fiil türleri: edatlı, ayrılabilir ekli, güçlü ve dönüşlü",
+    "description": "Almancadaki fiil türleri: sabit edatlı fiiller (auf, an, mit, von vb.), ayrılabilir ekli (anrufen, ankommen), düzensiz/güçlü (fahren, helfen, sprechen) ve dönüşlü fiiller. Örnekler, mini kurallar, teori ve pratik."
+  },
+  "metaAdjectiveTheory": {
+    "title": "Almanca sıfatlar: ekler, çekim, karşılaştırma",
+    "description": "Almancada sıfatlar: eklerin ne zaman değiştiği, zayıf/güçlü/karma çekim, hallere göre tablolar, Komparativ ve Superlativ, sık yapılan hatalar + mini quiz."
+  },
+  "metaArticles": {
+    "title": "Der / Die / Das — giriş. Artikeller nedir",
+    "description": "Kısa ve net: der, die, das ne zaman kullanılır; belirli ve belirsiz artikeller, cinsiyet tablosu."
+  },
+  "metaPrepositionsTheory": {
+    "title": "Almanca edatlar hallere göre örneklerle ve testle",
+    "description": "Almanca edatları hallere göre öğrenin: Dativ, Akkusativ, Genitiv ve 'bukalemunlar'. Örnek cümleler, kısaltmalar (am, im, ins) ve mini quiz."
+  },
+  "metaIdioms": {
+    "title": "Almanca deyimler ve ifadeler örneklerle ve çeviriyle",
+    "description": "Almanca deyimleri ve ifadeleri öğrenin: sabit kalıplar, mecazi anlamlar ve gerçek hayattan örnekler. Çeviri ve açıklamalarla + mini quiz."
+  },
+  "metaMainPage": {
+    "title": "Almancayı oyun şeklinde öğren",
+    "description": "German Corner. Oyun tarzında pratik: artikeller der, die, das, tematik seviyeler, fiiller, sıfatlar, edatlar, görevler ve başarılar. Almanca öğrenmeyi eğlenceli hale getir!"
+  },
+  "metaVerbsTheory": {
+    "title": "Almanca fiil teorisi örnekler ve quiz ile",
+    "description": "Almancada çekim, zamanlar ve yardımcı fiillerin genel açıklaması: machen/lernen, haben/sein, Futur, sözdizimi. Örnekler, tablolar ve mini quiz."
+  },
+  "hideAuthMobileBtn": {
+    "text": "Gizle"
+  },
   "payPage": {
     "title": "Platformdan en iyi şekilde yararlan",
     "description": "Eğitim, ödüller, görevler, ilerleme ve çok daha fazlası!",
@@ -1187,7 +1261,9 @@
     "allVerbs": "Ödül: Eylem Kılıçları",
     "allAdjectives": "Ödül: Belagat Paleti",
     "allСases": "Ödül: Birlik Bulmacası",
-    "fiveHearts": "Hayat Kalkanı"
+    "fiveHearts": "Hayat Kalkanı",
+    "daily42": "Galaktik Teleskop",
+    "iAmGroot": "Groot ile Saksı"
   },
   "awardsSection": {
     "congratulations": "Tebrikler! Bu ödül zaten sizde!",
@@ -1914,6 +1990,9 @@
     "specialAllVerbsLabel": "Eylemlerin Efendisi",
     "specialAllVerbsText": "Tüm fiil başarılarını kazan: Çekim, Zamanlar, Modal Fiiller, Fiil Türleri",
     "specialAllVerbsAward": "Ödül: Eylem Kılıçları",
+    "specialGrotText": "Ben Groot",
+    "specialGrotLabel": "Her konunun kendi ağacı vardır ve… bu bir hata değil! Onu artikel pratiğinde bul ve tüm yöntemlerle öğren.",
+    "specialGrotAward": "Ödül: Groot ile saksı",
     "generalSeventhlabel": "Cümlelerin Efendisi",
     "generalSeventhText": "Herhangi bir zorluk seviyesinde Solo İfade Düellosu modunda 1000 cümle kur"
   },
@@ -1936,6 +2015,9 @@
     "dailyTitle": "Demir İrade",
     "dailyText": "Görev Günlüğünden 50 alıştırma yap",
     "dailyAward": "Ödül: Sonsuzluk Kum Saati",
+    "dailyQuestText": "Hımm… cevap yok",
+    "dailyQuestDescription": "42 günlük görevi tamamladın, ama Evrenin nihai sorusu gizemini koruyor",
+    "dailyQuestAward": "Ödül: Galaktik Teleskop",
     "firstStepLabel": "İlk Adım",
     "firstAwardText": "Koleksiyonun başlangıcı",
     "firstAwardLabel": "İlk ödülünü al",

@@ -23,7 +23,7 @@
           >
             {{ t(tab.label) }}
           </div>
-          <div class="auth__toggle" :class="`auth__toggle--${mode}`"></div>
+          <div class="auth__toggle" :style="{ transform: toggleTransform }"></div>
         </div>
         <form class="auth-form">
           <div class="auth__fields">
@@ -62,24 +62,35 @@
           <div class="google__auth">{{ t('auth.google') }}</div>
         </div>
       </div>
+      <div class="close__btn-modal-wrapper">
+        <button class="close__modal" @click="emits('close-auth-form')">
+          <div class="close__mob-auth-text">{{ t('hideAuthMobileBtn.text')}}</div>
+          <img class="close__auth-icon" src="../../assets/images/arrowNav.svg" alt="hide_auth_icon">
+        </button>
+      </div>
     </div>
   </div>
 </template>
-
 <script setup>
 import {ref, computed, watch} from 'vue'
 import {userAuthStore} from '../../store/authStore.js'
 import {useRouter} from 'vue-router'
 import {useI18n} from 'vue-i18n'
 import {mapErrors} from '../../utils/errorsHandler.js'
-
-const {t} = useI18n()
+const {t , locale} = useI18n()
 const router = useRouter()
 const emits = defineEmits(['close-auth-form'])
 const authStore = userAuthStore()
 const mode = ref('login')
 const resetSent = ref(false)
-const error = ref('')
+const toggleTransform = computed(() => {
+  if (locale.value === 'ar') {
+    return mode.value === 'login' ? 'translateX(100%)' : 'translateX(0%)'
+  } else {
+    return mode.value === 'login' ? 'translateX(0%)' : 'translateX(100%)'
+  }
+})
+
 const fields = ref([
   {
     id: 1,
@@ -222,6 +233,36 @@ onUnmounted(() => {
 
 <style>
 
+.close__auth-icon {
+  width: 22px;
+  height: 22px;
+  transform: rotate(-90deg);
+}
+
+.close__mob-auth-text {
+  color: black;
+  font-weight: 600;
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+}
+
+.close__btn-modal-wrapper{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  opacity: 0;
+}
+
+.close__modal {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border: none;
+  background: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
 .login__title {
   text-align: start;
   width: 100%;
@@ -316,6 +357,7 @@ onUnmounted(() => {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 12px;
 }
 
 .auth__form {
@@ -444,7 +486,6 @@ onUnmounted(() => {
   background: #f1c40f;
   border: 3px solid #1e1e1e;
   color: #1e1e1e;
-  font-style: italic;
   font-weight: 600;
   font-size: 1.5rem;
   padding: 12px 0;
@@ -476,6 +517,12 @@ onUnmounted(() => {
   color: #4ade80
 }
 
+@media (max-width: 767px) {
+  .close__btn-modal-wrapper {
+    opacity: 1;
+  }
+}
+
 @media (max-width: 600px) {
   .auth {
     width: 100vw;
@@ -497,5 +544,6 @@ onUnmounted(() => {
   .auth__tab {
     font-size: 1.1rem;
   }
+
 }
 </style>

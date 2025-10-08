@@ -9,20 +9,35 @@ import FeedBack from '../src/components/feedBack.vue'
 import Footer from '../src/components/footer.vue'
 import VUid from '../src/components/V-uid.vue'
 import { useHead, useSeoMeta } from '#imports'
-import { useCanonical } from '~/composables/useCanonical'
-
-const runtime = useRuntimeConfig().public
+const { public: { siteUrl } } = useRuntimeConfig()
+const base = (siteUrl || '').replace(/\/$/, '')
+const { t } = useI18n()
 const canonical = useCanonical()
 
-const pageTitle = 'German Corner — Изучай немецкий язык в игровой форме'
-const pageDesc  = 'Главная страница платформы German Corner. Игровые тренировки артиклей der, die, das, тематические уровни, квесты и достижения. Учите немецкий с интересом!'
+const pageTitle = t('metaMainPage.title')
+const pageDesc  = t('metaMainPage.description')
 
 useHead({
   title: pageTitle,
-  link: [{ rel: 'canonical', href: canonical }]
+  link: [{ rel: 'canonical', href: canonical }],
+  script: [{
+    type: 'application/ld+json',
+    children: JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: 'German Corner',
+      url: base + '/',
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: `${base}/search?q={search_term_string}`,
+        'query-input': 'required name=search_term_string'
+      }
+    })
+  }]
 })
 
 useSeoMeta({
+  title: pageTitle,
   description: pageDesc,
   ogTitle: pageTitle,
   ogDescription: pageDesc,
@@ -62,6 +77,7 @@ onMounted(() => {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 10px;
+  overflow: hidden;
 }
 
 .stat {

@@ -1,7 +1,7 @@
 import WasteMoney from '~/assets/awards/wasteMoney.svg'
 import IdCard from '~/assets/awards/idUser.svg'
 import Wings from '~/assets/awards/Wing.svg'
-import veteranMedal from '~/assets/awards/veteran medal.svg'
+import veteranMedal from '~/assets/awards/medal.svg'
 import talismanOfPatience from '~/assets/awards/talisman of patience.svg'
 import LastChance from '~/assets/awards/last-chance.svg'
 import Rocket from '~/assets/awards/Rocket.svg'
@@ -14,7 +14,8 @@ import ColorPalette from '~/assets/awards/ColorPaletteAward.svg'
 import PuzzleAward from '~/assets/awards/puzzleAward.svg'
 import SwordAward from '~/assets/awards/SwordAwards.svg'
 import HeartAward from '~/assets/awards/heartAward.svg'
-
+import Telescope from '~/assets/awards/telescope.svg'
+import Groot from '~/assets/awards/Groot.svg'
 export const AWARDS = [
 	{key: 'explorer', title: 'awards.explorer', icon: Globus},
 	{key: 'Articlus', title: 'awards.articlus', icon: WasteMoney},
@@ -32,6 +33,8 @@ export const AWARDS = [
 	{key: 'all_adjectives', title: 'awards.allAdjectives', icon: ColorPalette},
 	{key: 'all_verbs', title: 'awards.allVerbs', icon: SwordAward},
 	{key: 'FiveHearts', title: 'awards.fiveHearts', icon: HeartAward},
+	{key: 'daily42', title: 'awards.daily42', icon: Telescope},
+	{key: 'iAmGroot', title: 'awards.iAmGroot', icon: Groot},
 ]
 
 export const awardsByKey = Object.fromEntries(AWARDS.map(a => [a.key, a]))

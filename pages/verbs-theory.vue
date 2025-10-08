@@ -81,20 +81,20 @@ import { useRoute } from 'vue-router'
 import {ref, computed} from 'vue'
 import Pin from '../assets/images/pin.svg'
 import Chat from '../assets/images/chat.svg'
+const canonical = useCanonical();
 const { t } = useI18n()
 
-const runtime = useRuntimeConfig().public
 const route = useRoute()
-
-const pageTitle = 'German Corner — Теория немецких глаголов с примерами и квизом'
-const pageDesc  = 'Разбор спряжения, времён и вспомогательных глаголов в немецком: machen/lernen, haben/sein, Futur, порядок слов. Примеры, таблицы и мини-квиз.'
+const pageTitle = t('metaVerbsTheory.title')
+const pageDesc  = t('metaVerbsTheory.description')
 
 useSeoMeta({
+  title: pageTitle,
   description: pageDesc,
   ogTitle: pageTitle,
   ogDescription: pageDesc,
   ogType: 'article',
-  ogUrl: `${runtime.siteUrl}${route.fullPath}`,
+  ogUrl:  canonical,
   ogImage: '/images/seo-verbs.png',
   robots: 'index, follow'
 })
@@ -102,7 +102,7 @@ useSeoMeta({
 useHead({
   title: pageTitle,
   link: [
-    { rel: 'canonical', href: `${runtime.siteUrl}${route.fullPath}` }
+    { rel: 'canonical', href:canonical }
   ]
 })
 

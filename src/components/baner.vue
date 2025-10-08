@@ -112,7 +112,7 @@ onMounted(() => {
 }
 
 .banner__section {
-  padding: 8rem 2rem 13rem 2rem;
+  padding: 5rem 1rem 5rem 1rem;
 }
 
 .banner__wrapper {
@@ -184,7 +184,7 @@ onMounted(() => {
   font-family: "Nunito", sans-serif;
   padding: 1rem 2.5rem;
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 600;
   border-radius: 16px;
   cursor: pointer;
   border: 3px solid #1e1e1e;
@@ -250,6 +250,15 @@ onMounted(() => {
   right: 0;
 }
 
+@media (max-width: 1023px) {
+  .banner__title{
+    font-size: 2rem;
+  }
+  .banner__mage-container {
+    max-width: 350px;
+  }
+}
+
 @media (max-width: 900px) {
   .banner__wrapper {
     flex-direction: column;
@@ -288,9 +297,16 @@ onMounted(() => {
   }
 
   .banner__button {
-    width: 100%;
+    width: 80%;
     border-radius: 20px;
     box-shadow: 2px 2px 0 #1e1e1e;
+  }
+}
+
+@media (max-width: 500px) {
+  .banner__button {
+    width: 90%;
+    padding: 10px;
   }
 }
 </style>

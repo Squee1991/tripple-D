@@ -54,10 +54,10 @@ import {useRouter} from 'vue-router'
 import Lottie from 'lottie-web';
 import SoundBtn from '../../src/components/soundBtn.vue'
 import { useHead, useSeoMeta } from '#imports'
-
+const { t } = useI18n();
 const canonical = useCanonical()
-const pageTitle = 'German Corner — Прилагательные A1–A2: цвета, чувства, внешность, характер, размер'
-const pageDesc  = 'Учите базовые прилагательные на немецком по темам: цвета, чувства и эмоции, внешность, характер, размер и форма. Примеры с переводом и озвучкой + тренажёры.'
+const pageTitle = t('metaAdjectiveBasic.title')
+const pageDesc  = t('metaAdjectiveBasic.description')
 
 useHead({
   title: pageTitle,
@@ -67,6 +67,7 @@ useHead({
 })
 
 useSeoMeta({
+  title: pageTitle,
   description: pageDesc,
   ogTitle: pageTitle,
   ogDescription: pageDesc,
@@ -76,7 +77,6 @@ useSeoMeta({
   robots: 'index, follow'
 })
 
-const {t, locale} = useI18n();
 const topics = [
   {
     id: 'colors',

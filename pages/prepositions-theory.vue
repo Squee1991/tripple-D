@@ -88,25 +88,26 @@
 
 <script setup>
 import {ref, computed} from 'vue';
-import { useHead, useSeoMeta, useRuntimeConfig } from '#imports'
+import { useHead, useSeoMeta} from '#imports'
 const route = useRoute()
-const runtime = useRuntimeConfig().public
+const canonical = useCanonical()
 const { t } = useI18n()
 
-const pageTitle = 'German Corner — Немецкие предлоги по падежам с примерами и тестом'
-const pageDesc  = 'Изучайте немецкие предлоги по падежам: Dativ, Akkusativ, Genitiv и «хамелеоны». Примеры предложений, сокращения (am, im, ins) и мини-квиз для закрепления.'
+const pageTitle = t('metaPrepositionsTheory.title')
+const pageDesc  = t('metaPrepositionsTheory.description')
 
 useHead({
   title: pageTitle,
-  link: [{ rel: 'canonical', href: `${runtime.siteUrl}${route.fullPath}` }]
+  link: [{ rel: 'canonical', href: canonical }]
 })
 
 useSeoMeta({
+  title: pageTitle,
   description: pageDesc,
   ogTitle: pageTitle,
   ogDescription: pageDesc,
   ogType: 'article',
-  ogUrl: `${runtime.siteUrl}${route.fullPath}`,
+  ogUrl: canonical,
   ogImage: '/images/seo-prepositions-cases.png',
   robots: 'index, follow'
 })
@@ -214,7 +215,6 @@ const pageSections = ref([
     ]
   }
 ]);
-
 const quizQuestions = computed(() => pageSections.value.find(s => s.type === 'quiz')?.questions || []);
 const currentQuestionIndex = ref(0);
 const selectedAnswer = ref(null);

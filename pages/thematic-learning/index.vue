@@ -13,15 +13,18 @@ import Family from '../../assets/images/family.svg'
 import School from '../../assets/images/school.svg'
 import Travel from '../../assets/images/travel.svg'
 import Clock from '../../assets/images/clock.svg'
-import { useHead, useSeoMeta, useRuntimeConfig } from '#imports'
+import { useHead, useSeoMeta } from '#imports'
 const canonical = useCanonical()
-const pageTitle = 'German Corner — Тематические уровни: вставляй der, die, das в нужном падеже'
-const pageDesc  = 'Выбирайте тему и проходите уровни сложности: тренируйте артикли der, die, das в Nominativ, Akkusativ, Dativ и Genitiv. Короткие предложения, чёткая прогрессия, геймификация.'
+const {t} = useI18n()
+const pageTitle = t('metaThematic.title')
+const pageDesc  = t('metaThematic.description')
+
 useHead({
   title: pageTitle,
   link: [{ rel: 'canonical', href: canonical }]
 })
 useSeoMeta({
+  title: pageTitle,
   description: pageDesc,
   ogTitle: pageTitle,
   ogDescription: pageDesc,
@@ -55,7 +58,6 @@ const chalkMessage = ref('')
 const showChalkMessage = ref(false)
 let messageTimeout = null
 const moduleToStart = ref(null)
-const {t} = useI18n()
 const triggerChalkMessage = (text) => {
   clearTimeout(messageTimeout)
   chalkMessage.value = text

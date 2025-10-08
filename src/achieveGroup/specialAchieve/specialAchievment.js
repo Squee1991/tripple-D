@@ -42,6 +42,15 @@ export const cpecialGroupAchievment = [
 				targetProgress: 20
 			},
 			{
+				id: "iAmGroot",
+				name: "specialCategory.specialGrotText",
+				description: "specialCategory.specialGrotLabel",
+				icon: "🌱",
+				awards: "specialCategory.specialGrotAward",
+				currentProgress: 0,
+				targetProgress: 4,
+			},
+			{
 				id: "totalArticles1000",
 				name: "specialCategory.generalFirstLabel",
 				description: "specialCategory.generalFirstText",
@@ -56,7 +65,7 @@ export const cpecialGroupAchievment = [
 				description: "specialCategory.specialCollectionLabel",
 				icon: "🧰",
 				currentProgress: 0,
-				targetProgress: 16
+				targetProgress: 18
 			},
 			{
 				id: 'Hunderd',

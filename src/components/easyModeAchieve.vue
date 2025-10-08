@@ -99,6 +99,7 @@ const getCompletedCount = group =>
 .achievement-title {
   font-weight: 400;
   margin: 0 0 10px 0;
+  font-size: 1.3rem;
 }
 
 .achievement__card {

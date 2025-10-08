@@ -1,4 +1,78 @@
 {
+  "metaAdjectiveBasic": {
+    "title": "German Corner — Adjectives A1–A2: colors, feelings, appearance, character, size",
+    "description": "Learn basic German adjectives by topics: colors, feelings and emotions, appearance, character, size and shape. Examples with translation and audio + trainers."
+  },
+  "metaAdjectiveComparison": {
+    "title": "Degrees of comparison of adjectives in German: Komparativ and Superlativ rules, umlaut, special forms",
+    "description": "How to form degrees of comparison of adjectives in German: rules for forms with -er and -sten, adjectives with umlaut (ä/ö/ü), exceptions and irregular forms. Examples with translation, audio and exercises."
+  },
+  "metaAdjectiveDeclension": {
+    "title": "Declension of adjectives in German after definite/indefinite article and without article",
+    "description": "Rules and tables of adjective endings in German: after the definite article (der/die/das), after the indefinite (ein/kein/mein) and without an article. Examples, translation, practice."
+  },
+  "metaArticle": {
+    "title": "Training German articles der, die, das in game form",
+    "description": "Learn German articles der, die, das easily and with fun! Choose a topic and practice in five interactive modes: memorization, writing, plural, audio and word building."
+  },
+  "metaTests": {
+    "title": "German tests: A1, A2, B1, B2 (Lesen, Hören, Schreiben, Sprechen)",
+    "description": "Practice German tests for levels A1–B2: reading, listening, writing and speaking. Instant check and result saving. Test your knowledge.",
+    "main": "Home",
+    "tests": "German tests",
+    "testsLevels": "German tests — levels"
+  },
+  "metaLocation": {
+    "title": "German Corner — Language Lands for learning German",
+    "description": "Explore language lands and level up your German by completing tasks and passing levels. Learn vocabulary and grammar in adventure format with quests and progression, like in a game!"
+  },
+  "metaModalVerbs": {
+    "title": "Modal verbs and subordinate clauses (Nebensätze) in German",
+    "description": "Learn modal verbs (können, müssen, wollen, mögen) and subordinate clauses (Nebensätze: weil, dass, wenn) in German. Examples, translation and practice."
+  },
+  "metaPrepositions": {
+    "title": "German prepositions by cases: Nominativ, Akkusativ, Dativ, Genitiv",
+    "description": "Learn German prepositions by cases: Nominativ, Akkusativ, Dativ and Genitiv. Simple rules, grammar, examples and mini-quiz for practice."
+  },
+  "metaTenses": {
+    "title": "German tenses: Präsens, Perfekt, Präteritum, Futur I, Plusquamperfekt",
+    "description": "Clear and simple explanations of German tenses with examples and tables: Präsens, Perfekt, Präteritum, Futur I and Plusquamperfekt. Start practicing each tense."
+  },
+  "metaThematic": {
+    "title": "Thematic levels: insert der, die, das in the right case",
+    "description": "Choose a topic and go through difficulty levels: practice articles der, die, das in Nominativ, Akkusativ, Dativ and Genitiv. Short sentences, clear progression, practice."
+  },
+  "metaVerbTypes": {
+    "title": "Types of German verbs: with prepositions, separable prefixes, strong and reflexive",
+    "description": "Types of verbs in German: verbs with fixed prepositions (auf, an, mit, von etc.), with separable prefixes (anrufen, ankommen), irregular/strong (fahren, helfen, sprechen) and reflexive. Examples, mini-rules, theory and practice."
+  },
+  "metaAdjectiveTheory": {
+    "title": "German adjectives: endings, declension, comparison",
+    "description": "Overview of adjectives in German: when endings change, weak/strong/mixed declension, tables by cases, Komparativ and Superlativ, common mistakes + mini-quiz."
+  },
+  "metaArticles": {
+    "title": "Der / Die / Das — introduction. What are articles",
+    "description": "Short and clear: when to use der, die, das; definite and indefinite articles, gender table."
+  },
+  "metaPrepositionsTheory": {
+    "title": "German prepositions by cases with examples and test",
+    "description": "Learn German prepositions by cases: Dativ, Akkusativ, Genitiv and ‘chameleons’. Sentence examples, contractions (am, im, ins) and mini-quiz for practice."
+  },
+  "metaIdioms": {
+    "title": "German idioms and phrases with examples and translation",
+    "description": "Learn German idioms and phrases: fixed expressions, figurative meanings and real-life examples. With translation and explanations for beginners and advanced learners + mini-quiz."
+  },
+  "metaMainPage": {
+    "title": "Learn German in game form",
+    "description": "German Corner. Game-like training of articles der, die, das, thematic levels, verbs, adjectives, prepositions, quests and achievements. Learn German with fun!"
+  },
+  "metaVerbsTheory": {
+    "title": "Theory of German verbs with examples and quiz",
+    "description": "Overview of conjugation, tenses and auxiliary verbs in German: machen/lernen, haben/sein, Futur, word order. Examples, tables and mini-quiz."
+  },
+  "hideAuthMobileBtn": {
+    "text": "Hide"
+  },
   "payPage": {
     "title": "Get the most out of the platform",
     "description": "Learning, rewards, quests, progress and much more!",
@@ -1188,7 +1262,9 @@
     "allVerbs": "Reward: Blades of Action",
     "allAdjectives": "Reward: Palette of Eloquence",
     "allСases": "Reward: Puzzle of Unity",
-    "fiveHearts": "Shield of Life"
+    "fiveHearts": "Shield of Life",
+    "daily42": "Galactic Telescope",
+    "iAmGroot": "Pot with Groot"
   },
 
   "awardsSection": {
@@ -1916,6 +1992,9 @@
     "specialAllVerbsLabel": "Master of Actions",
     "specialAllVerbsText": "Earn all verb achievements: Conjugation, Tenses, Modals, Verb Types",
     "specialAllVerbsAward": "Reward: Blades of Action",
+    "specialGrotText": "I am Groot",
+    "specialGrotLabel": "Each topic has its own tree and… this is not a bug! Find it in the article practice and learn it in all ways.",
+    "specialGrotAward": "Reward: Pot with Groot",
     "generalSeventhlabel": "Master of Sentences",
     "generalSeventhText": "Create 1000 sentences in Solo Phrase Duel mode at any difficulty level"
   },
@@ -1938,6 +2017,9 @@
     "dailyTitle": "Iron Will",
     "dailyText": "Complete 50 exercises from the Task Journal",
     "dailyAward": "Reward: Hourglass of Eternity",
+    "dailyQuestText": "Hmm… no answer",
+    "dailyQuestDescription": "You completed 42 daily quests, but the ultimate question of the Universe remains a mystery",
+    "dailyQuestAward": "Reward: Galactic Telescope",
     "firstStepLabel": "First Step",
     "firstAwardText": "Start of the collection",
     "firstAwardLabel": "Receive your first reward",

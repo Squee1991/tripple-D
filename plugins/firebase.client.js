@@ -1,6 +1,5 @@
 import {getAuth, onAuthStateChanged} from 'firebase/auth'
 
-
 export default defineNuxtPlugin(async (to) => {
     function waitForAuthReady() {
         const auth = getAuth()
@@ -14,10 +13,8 @@ export default defineNuxtPlugin(async (to) => {
     }
 
     if (import.meta.server) return
-
     const publicPaths = new Set(['/', '/login', '/register', '/faq', '/pay'])
     const user = await waitForAuthReady()
-
     if (!user && !publicPaths.has(to.path)) {
         return navigateTo({path: '/', query: {redirect: to.fullPath}})
     }

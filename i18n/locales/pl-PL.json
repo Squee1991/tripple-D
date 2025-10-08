@@ -1,4 +1,78 @@
 {
+  "metaAdjectiveBasic": {
+    "title": "German Corner — Przymiotniki A1–A2: kolory, uczucia, wygląd, charakter, rozmiar",
+    "description": "Ucz się podstawowych przymiotników niemieckich według tematów: kolory, uczucia i emocje, wygląd, charakter, rozmiar i kształt. Przykłady z tłumaczeniem i nagraniem + ćwiczenia."
+  },
+  "metaAdjectiveComparison": {
+    "title": "Stopnie porównania przymiotników w niemieckim: Komparativ i Superlativ, zasady, umlaut, formy szczególne",
+    "description": "Jak tworzyć stopnie porównania przymiotników w języku niemieckim: zasady dla form z -er i -sten, przymiotniki z umlautem (ä/ö/ü), wyjątki i nieregularne formy. Przykłady z tłumaczeniem, nagraniem i ćwiczeniami."
+  },
+  "metaAdjectiveDeclension": {
+    "title": "Odmiana przymiotników w niemieckim po rodzajniku określonym/nieokreślonym i bez rodzajnika",
+    "description": "Zasady i tabele końcówek przymiotników w niemieckim: po rodzajniku określonym (der/die/das), po nieokreślonym (ein/kein/mein) i bez rodzajnika. Przykłady, tłumaczenie, ćwiczenia."
+  },
+  "metaArticle": {
+    "title": "Trening rodzajników der, die, das w formie gry",
+    "description": "Ucz się niemieckich rodzajników der, die, das łatwo i ciekawie! Wybierz temat i ćwicz w pięciu trybach interaktywnych: zapamiętywanie, pisanie, liczba mnoga, audio i budowanie słów."
+  },
+  "metaTests": {
+    "title": "Testy z niemieckiego: A1, A2, B1, B2 (Lesen, Hören, Schreiben, Sprechen)",
+    "description": "Testy ćwiczeniowe z niemieckiego dla poziomów A1–B2: czytanie, słuchanie, pisanie i mówienie. Szybka weryfikacja i zapis wyników. Sprawdź swoją wiedzę.",
+    "main": "Strona główna",
+    "tests": "Testy z niemieckiego",
+    "testsLevels": "Testy z niemieckiego — poziomy"
+  },
+  "metaLocation": {
+    "title": "German Corner — Językowe krainy do nauki niemieckiego",
+    "description": "Odkrywaj językowe krainy i rozwijaj niemiecki, wykonując zadania i przechodząc poziomy. Ucz się słownictwa i gramatyki w formie przygody z questami i progresją jak w grze!"
+  },
+  "metaModalVerbs": {
+    "title": "Czasowniki modalne i zdania podrzędne (Nebensätze) w niemieckim",
+    "description": "Ucz się czasowników modalnych (können, müssen, wollen, mögen) i zdań podrzędnych (Nebensätze: weil, dass, wenn) w języku niemieckim. Przykłady, tłumaczenie i ćwiczenia."
+  },
+  "metaPrepositions": {
+    "title": "Przyimki niemieckie według przypadków: Nominativ, Akkusativ, Dativ, Genitiv",
+    "description": "Ucz się niemieckich przyimków według przypadków: Nominativ, Akkusativ, Dativ i Genitiv. Proste zasady, gramatyka, przykłady i mini-quiz do utrwalenia."
+  },
+  "metaTenses": {
+    "title": "Czasy w języku niemieckim: Präsens, Perfekt, Präteritum, Futur I, Plusquamperfekt",
+    "description": "Jasne i proste wyjaśnienia czasów niemieckich z przykładami i tabelami: Präsens, Perfekt, Präteritum, Futur I i Plusquamperfekt. Zacznij ćwiczyć każdy czas."
+  },
+  "metaThematic": {
+    "title": "Poziomy tematyczne: wstaw der, die, das w odpowiednim przypadku",
+    "description": "Wybierz temat i przechodź kolejne poziomy trudności: ćwicz rodzajniki der, die, das w Nominativ, Akkusativ, Dativ i Genitiv. Krótkie zdania, jasna progresja, praktyka."
+  },
+  "metaVerbTypes": {
+    "title": "Typy czasowników niemieckich: z przyimkami, z przedrostkami rozdzielnymi, mocne i zwrotne",
+    "description": "Typy czasowników w niemieckim: czasowniki z przyimkami stałymi (auf, an, mit, von itd.), z przedrostkami rozdzielnymi (anrufen, ankommen), nieregularne/mocne (fahren, helfen, sprechen) i zwrotne. Przykłady, mini-zasady, teoria i praktyka."
+  },
+  "metaAdjectiveTheory": {
+    "title": "Przymiotniki w niemieckim: końcówki, odmiana, stopniowanie",
+    "description": "Omówienie przymiotników w języku niemieckim: kiedy zmienia się końcówka, odmiana słaba/mocna/mieszana, tabele według przypadków, Komparativ i Superlativ, częste błędy + mini-quiz."
+  },
+  "metaArticles": {
+    "title": "Der / Die / Das — wprowadzenie. Co to są rodzajniki",
+    "description": "Krótko i jasno: kiedy używać der, die, das; rodzajniki określone i nieokreślone, tabela rodzajów."
+  },
+  "metaPrepositionsTheory": {
+    "title": "Przyimki niemieckie według przypadków z przykładami i testem",
+    "description": "Ucz się przyimków niemieckich według przypadków: Dativ, Akkusativ, Genitiv i „kameleony”. Przykłady zdań, skróty (am, im, ins) i mini-quiz do utrwalenia."
+  },
+  "metaIdioms": {
+    "title": "Idiomy i frazeologizmy niemieckie z przykładami i tłumaczeniem",
+    "description": "Poznawaj idiomy i frazeologizmy niemieckie: stałe wyrażenia, znaczenia przenośne i przykłady z życia codziennego. Z tłumaczeniem i objaśnieniami dla początkujących i zaawansowanych + mini-quiz."
+  },
+  "metaMainPage": {
+    "title": "Ucz się niemieckiego w formie gry",
+    "description": "German Corner. Ćwiczenia w formie gry: rodzajniki der, die, das, poziomy tematyczne, czasowniki, przymiotniki, przyimki, questy i osiągnięcia. Ucz się niemieckiego z przyjemnością!"
+  },
+  "metaVerbsTheory": {
+    "title": "Teoria czasowników niemieckich z przykładami i quizem",
+    "description": "Omówienie koniugacji, czasów i czasowników posiłkowych w niemieckim: machen/lernen, haben/sein, Futur, szyk zdania. Przykłady, tabele i mini-quiz."
+  },
+  "hideAuthMobileBtn": {
+    "text": "Ukryj"
+  },
   "payPage": {
     "title": "Wykorzystaj platformę w pełni",
     "description": "Nauka, nagrody, zadania, postępy i wiele więcej!",
@@ -1197,7 +1271,9 @@
     "allVerbs": "Nagroda: Ostrza działania",
     "allAdjectives": "Nagroda: Paleta elokwencji",
     "allСases": "Nagroda: Puzzle jedności",
-    "fiveHearts": "Tarcza życia"
+    "fiveHearts": "Tarcza życia",
+    "daily42": "Galaktyczny teleskop",
+    "iAmGroot": "Doniczka z Grootem"
   },
   "awardsSection": {
     "congratulations": "Gratulacje! Masz już tę nagrodę!",
@@ -1924,6 +2000,9 @@
     "specialAllVerbsLabel": "Władca Czynności",
     "specialAllVerbsText": "Zdobądź wszystkie osiągnięcia czasowników: Konjugacja, Czasy, Modalne, Typy czasowników",
     "specialAllVerbsAward": "Nagroda: Ostrza działania",
+    "specialGrotText": "Jestem Groot",
+    "specialGrotLabel": "Każdy temat ma swoje drzewo i… to nie jest błąd! Znajdź je w praktyce rodzajników i naucz się wszystkimi sposobami.",
+    "specialGrotAward": "Nagroda: Doniczka z Grootem",
     "generalSeventhlabel": "Władca zdań",
     "generalSeventhText": "Ułóż 1000 zdań w trybie Solo Pojedynek Fraz na dowolnym poziomie trudności"
   },
@@ -1946,6 +2025,9 @@
     "dailyTitle": "Żelazna wola",
     "dailyText": "Wykonaj 50 ćwiczeń z Dziennika zadań",
     "dailyAward": "Nagroda: Klepsydra wieczności",
+    "dailyQuestText": "Hmm… brak odpowiedzi",
+    "dailyQuestDescription": "Ukończyłeś 42 codzienne zadania, ale ostateczne pytanie Wszechświata pozostaje tajemnicą",
+    "dailyQuestAward": "Nagroda: Teleskop Galaktyczny",
     "firstStepLabel": "Pierwszy krok",
     "firstAwardText": "Początek kolekcji",
     "firstAwardLabel": "Odbierz swoją pierwszą nagrodę",

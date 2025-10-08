@@ -349,8 +349,8 @@ const quizFinished = ref(false)
 const quizFeedback = ref('')
 const route = useRoute()
 const runtime = useRuntimeConfig().public
-const pageTitle = 'German Corner — Прилагательные в немецком: окончания, слабое/сильное склонение, степени сравнения'
-const pageDesc  = 'Разбор прилагательных в немецком: когда меняется окончание, слабое/сильное/смешанное склонение, таблицы по падежам, Komparativ и Superlativ, частые ошибки + мини-квиз.'
+const pageTitle = t('metaAdjectiveTheory.title')
+const pageDesc  = t('metaAdjectiveTheory.description')
 
 useHead({
   title: pageTitle,
@@ -360,6 +360,7 @@ useHead({
 })
 
 useSeoMeta({
+  title: pageTitle,
   description: pageDesc,
   ogTitle: pageTitle,
   ogDescription: pageDesc,

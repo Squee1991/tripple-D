@@ -43,7 +43,6 @@ export const dailyStore = defineStore('dailyStore', () => {
         audioArticle: 0
     })
 
-    // === ВСПОМОГАТЕЛЬНОЕ: локальная полуночь ===
     function nextLocalMidnightMs(fromMs = Date.now()) {
         const d = new Date(fromMs)
         d.setHours(24, 0, 0, 0) // 00:00 следующего дня (локально)
@@ -54,14 +53,12 @@ export const dailyStore = defineStore('dailyStore', () => {
         d.setHours(0, 0, 0, 0) // 00:00 сегодня (локально)
         return d.getTime()
     }
-
     // === ТАЙМЕР ДО ЛОКАЛЬНОЙ ПОЛУНОЧИ ===
     const msLeft = computed(() => {
         const now = nowMs.value || Date.now()
         const left = nextLocalMidnightMs(now) - now
         return Math.max(0, left)
     })
-
     // === КЛЮЧ ЦИКЛА ПО ЛОКАЛЬНЫМ СУТКАМ ===
     const cycleKey = computed(() => {
         const startToday = startOfTodayLocalMs(nowMs.value || Date.now())
@@ -217,7 +214,6 @@ export const dailyStore = defineStore('dailyStore', () => {
         counters.value = { ...(exist.counters || counters.value) }
     }
 
-
     function valueForQuestByCounters(qid) {
         const c = counters.value
         switch (String(qid)) {
@@ -278,7 +274,6 @@ export const dailyStore = defineStore('dailyStore', () => {
             ensureLocalCycle()
             const local = currentCycle.value
             if (!local) return
-
             // если истёк срок (локальная полночь) или сменился ключ дня — старт нового цикла
             if (Date.now() >= Number(local.expiresAtMs || 0) || local.cycleKey !== cycleKey.value) {
                 const fresh = buildNewCyclePayload(cycleKey.value)

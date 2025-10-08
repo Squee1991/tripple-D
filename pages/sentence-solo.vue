@@ -100,7 +100,7 @@ onMounted(async () => {
   if (tasks.value.length > 0) {
     setScrambled()
   } else {
-    console.error("Не удалось загрузить или преобразовать задания для локальной игры.")
+    console.error("")
   }
 
   let n = 3

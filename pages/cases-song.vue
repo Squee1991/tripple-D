@@ -1,8 +1,6 @@
 <template>
   <main class="page">
     <h1 class="title">🎵 Die vier Fälle</h1>
-
-    <!-- ROW 1 -->
     <section class="row">
       <div class="col text">
         <div class="stanza staircase">
@@ -27,8 +25,6 @@
         <img :src="NoteIcon" alt="Musical notes" class="note-icon"/>
       </div>
     </section>
-
-    <!-- ROW 2 -->
     <section class="row row--reverse">
       <div class="col text">
         <div class="stanza staircase">
@@ -53,8 +49,6 @@
         <img :src="NoteIcon" alt="Musical notes" class="note-icon"/>
       </div>
     </section>
-
-    <!-- ROW 3 -->
     <section class="row">
       <div class="col text">
         <div class="stanza staircase">
@@ -79,8 +73,6 @@
         <img :src="NoteIcon" alt="Musical notes" class="note-icon"/>
       </div>
     </section>
-
-    <!-- ROW 4 -->
     <section class="row row--reverse">
       <div class="col text">
         <div class="stanza staircase">
@@ -105,8 +97,6 @@
         <img :src="NoteIcon" alt="Musical notes" class="note-icon"/>
       </div>
     </section>
-
-    <!-- ROW 5 -->
     <section class="row row--center">
       <div class="col text">
         <div class="final kidfont staircase">
@@ -131,7 +121,6 @@ import NoteIcon from '../assets/images/song-images/musical-notes.svg'
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Luckiest+Guy&display=swap');
 
-/* БАЗА */
 .page {
   background: #fff;
   color: #222;

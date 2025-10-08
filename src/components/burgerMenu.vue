@@ -1,5 +1,5 @@
 <template>
-	<div class="menu-btn-container">
+	<div class="menu-btn-container" :style="positionClass">
 		<div class="menu-btn">
 			<input
 				type="checkbox"
@@ -16,6 +16,13 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
+
+const positionClass = computed(() => {
+   return locale.value === 'ar' ? { right: '10px'} : { left: '10px'}
+})
+
+  const { locale} = useI18n();
 	const props = defineProps({
 		modelValue: Boolean
 	})
@@ -29,7 +36,7 @@
 	.menu-btn-container {
 		position: absolute;
 		top: 50%;
-		left: 10px;
+
 		width: 39px;
 		transform: translateY(-50%);
 	}

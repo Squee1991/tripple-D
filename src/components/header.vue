@@ -25,7 +25,7 @@
         />
         <span class="logo__name">corner</span>
       </NuxtLink>
-      <nav ref="dropdownRefNav" class="header-nav" :class="{ 'is-open': isMobileMenuOpen }" aria-label="Main">
+      <nav ref="dropdownRefNav" class="header-nav" :class="{ 'is-open': isMobileMenuOpen, 'is-rtl': isAr }" aria-label="Main">
         <ul class="header-nav__list">
           <li v-for="item in menuItems" :key="item.id" class="header-nav__item">
             <NuxtLink v-if="item.url" :to="item.url" class="header-nav__link" @click="closeAllMenus">
@@ -122,7 +122,6 @@
 import {ref, watch, onMounted, onBeforeUnmount, computed} from 'vue'
 import {useRouter} from 'vue-router'
 import {userAuthStore} from '../../store/authStore.js'
-import {userlangStore} from '../../store/learningStore.js'
 import {useBreakPointsStore} from '../../store/breakPointsStore.js'
 import SignIn from '../components/logIn.vue'
 import LanguageSelector from '../components/langSwitcher.vue'
@@ -135,9 +134,9 @@ import Dev from '../../assets/images/dev.svg'
 import User from '../../assets/images/account.svg'
 import Logout from '../../assets/images/logout.svg'
 import VTips from "~/src/components/V-tips.vue";
+const { t, locale } = useI18n()
+const isAr = computed(() => locale.value === 'ar')
 
-const {t} = useI18n()
-const learningStore = userlangStore()
 const bp = useBreakPointsStore()
 const router = useRouter()
 const userAuth = userAuthStore()
@@ -227,7 +226,7 @@ const menuItems = computed(() => [
                 },
                 // {id: 'lands', url: 'lands', valueKey: 'sub.languagesLands'},
                 {id: 'themen', url: '/thematic-learning', valueKey: 'sub.themen'},
-                {id: 'cards', url: '/createCards', valueKey: 'sub.card'},
+                {id: 'cards', url: '/create-cards', valueKey: 'sub.card'},
                 {id: 'idioms', url: '/idioms', valueKey: 'sub.idioms'}
               ],
             },
@@ -236,9 +235,9 @@ const menuItems = computed(() => [
               valueKey: 'nav.gameMode',
               children: [
                 {id: 'duel-pvp', valueKey: 'sub.pvp', action: openDevModal},
-                {id: 'wordDuel', url: '/play', valueKey: 'sub.wordDuel'},
+                {id: 'wordDuel', url: '/sentence-duel', valueKey: 'sub.wordDuel'},
                 {id: 'quests', url: '/recipes', valueKey: 'sub.quests'},
-                {id: 'duel-guess', url: '/guess', valueKey: 'sub.guess'},
+                {id: 'duel-guess', url: '/guess-word', valueKey: 'sub.guess'},
                 {id: 'articlemarathon', url: '/article-marathon', valueKey: 'sub.marathon'},
               ]
             },
@@ -376,13 +375,6 @@ watch(isMobileMenuOpen, (newVal) => {
   background: white;
 }
 
-.header-nav__link:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0 black;
-  background-color: #f1c40f;
-  color: #1e1e1e;
-}
-
 .header-nav__arrow {
   width: 1rem;
   transition: transform 0.3s ease;
@@ -429,10 +421,6 @@ watch(isMobileMenuOpen, (newVal) => {
   font-family: "Nunito", sans-serif;
 }
 
-.header-nav__submenu-link:hover {
-  background-color: #fef8e4;
-}
-
 .header-nav__submenu-sub {
   position: absolute;
   top: -0.5rem;
@@ -445,6 +433,14 @@ watch(isMobileMenuOpen, (newVal) => {
   box-shadow: 4px 4px 0px #1e1e1e;
   white-space: nowrap;
   z-index: 120;
+}
+
+.is-rtl .header-nav__submenu-sub {
+  left: auto;
+  right: 100%;
+  margin-left: 0;
+  margin-right: 10px;
+  box-shadow: 0 4px 4px #1e1e1e;
 }
 
 .header-user {
@@ -513,10 +509,6 @@ watch(isMobileMenuOpen, (newVal) => {
   transition: all 0.2s;
 }
 
-.header-user__dropdown-btn:hover {
-  background-color: #fef8e4;
-}
-
 .header-user__dropdown-icon {
   width: 36px;
   height: 36px;
@@ -528,7 +520,6 @@ watch(isMobileMenuOpen, (newVal) => {
   justify-content: center;
   height: 45px;
   font-family: "Nunito", sans-serif;
-  font-style: italic;
   font-weight: 600;
   padding: 0.8rem 1rem;
   font-size: 1rem;
@@ -539,11 +530,6 @@ watch(isMobileMenuOpen, (newVal) => {
   color: #1e1e1e;
   border: 3px solid #1e1e1e;
   box-shadow: 4px 4px 0px #1e1e1e;
-}
-
-.btn-login:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0px #1e1e1e;
 }
 
 .burger-button {
@@ -559,26 +545,27 @@ watch(isMobileMenuOpen, (newVal) => {
     padding: 0.5rem 10px;
   }
 
+  .mobile-nav-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.35);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s ease;
+    z-index: 100;
+    display: block;
+  }
+
   .header.mobile-menu-active .mobile-nav-overlay {
     opacity: 1;
     pointer-events: auto;
   }
 
-  .logo__name {
-    display: none;
-  }
+  .logo__name { display: none; }
+  .logo { opacity: 0; }
 
-  .logo {
-    opacity: 0;
-  }
-
-  .header-nav__link {
-    color: black;
-  }
-
-  .header__drop-text, .logo-img {
-    display: none;
-  }
+  .header-nav__link { color: black; }
+  .header__drop-text, .logo-img { display: none; }
 
   .header-nav {
     position: fixed;
@@ -591,12 +578,22 @@ watch(isMobileMenuOpen, (newVal) => {
     background: var(--bg);
     z-index: 101;
     transform: translateX(-100%);
-    transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.2);
+    transition: transform .2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 5px 0 20px rgba(0,0,0,.2);
     overflow-y: auto;
   }
 
   .header-nav.is-open {
+    transform: translateX(0);
+  }
+
+  .header-nav.is-rtl {
+    left: auto;
+    right: 0;
+    transform: translateX(100%);
+  }
+
+  .header-nav.is-rtl.is-open {
     transform: translateX(0);
   }
 
@@ -639,6 +636,14 @@ watch(isMobileMenuOpen, (newVal) => {
     margin-bottom: 0.5rem;
   }
 
+  .header-nav.is-rtl .header-nav__submenu {
+    padding: 0.5rem 1.2rem 0.5rem 0;
+    border-left: none;
+    border-right: 3px solid var(--titleColor);
+    margin-left: 0;
+    margin-right: 0.5rem;
+  }
+
   .header-nav .header-nav__submenu-link {
     font-size: 1rem;
     padding: 8px;
@@ -652,10 +657,6 @@ watch(isMobileMenuOpen, (newVal) => {
     justify-content: space-between;
   }
 
-  .header-nav .header-nav__submenu-link:hover {
-    background-color: #fde68a;
-  }
-
   .header-nav .header-nav__submenu-sub {
     position: static;
     box-shadow: none;
@@ -666,6 +667,13 @@ watch(isMobileMenuOpen, (newVal) => {
     border-left: 3px solid #cccccc;
     margin-left: 0.5rem;
     margin-bottom: 6px;
+  }
+
+  .header-nav.is-rtl .header-nav__submenu-sub {
+    border-left: none;
+    border-right: 3px solid #cccccc;
+    margin-left: 0;
+    margin-right: 0.5rem;
   }
 
   .header-nav .header-nav__submenu-sub .header-nav__submenu-link {
@@ -741,8 +749,34 @@ watch(isMobileMenuOpen, (newVal) => {
   text-transform: uppercase;
 }
 
-.logo__name:hover {
-  text-shadow: 2px 4px 2px white;
-  transition: .5s;
+@media (min-width: 1024px) {
+  .header-nav__submenu-link:hover {
+    background-color: #fef8e4;
+  }
+  .header-nav__link:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 black;
+    background-color: #f1c40f;
+    color: #1e1e1e;
+  }
+  .header-user__dropdown-btn:hover {
+    background-color: #fef8e4;
+  }
+  .header-nav .header-nav__submenu-link:hover {
+    background-color: #fde68a;
+  }
+  .btn-login:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #1e1e1e;
+  }
+  .logo__name:hover {
+    text-shadow: 2px 4px 2px white;
+    transition: .5s;
+  }
+
+  .btn-login:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #1e1e1e;
+  }
 }
 </style>

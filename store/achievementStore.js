@@ -98,8 +98,8 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 	const suppressReplaysUntil = ref(0)
 	const bootUnlocked = []
 	const bootAwards = []
+	const dailyAggUnsub = ref(null)
 	const prevMap = new Map()
-	// --- Ключи localStorage
 	const awardsKey = () => `awards_shown_v1_${authStore?.uid}`
 	const completedKey = () => `achievements_completed_v1_${authStore?.uid}`
 	// --- LocalStorage helpers
@@ -165,6 +165,24 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		}
 	}
 
+	function detachDailyAggListener () {
+		if (dailyAggUnsub.value) {
+			try { dailyAggUnsub.value() } catch {}
+			dailyAggUnsub.value = null
+		}
+	}
+
+	function attachDailyAggListener () {
+		detachDailyAggListener()
+		const uid = authStore?.uid
+		if (!uid) return
+		const ref = doc(db, 'users', uid, 'dailyAgg', 'meta')
+		dailyAggUnsub.value = onSnapshot(ref, (snap) => {
+			const total = Number((snap.data() || {}).totalCompleted || 0)
+			updateProgress('daily42', total)
+		})
+	}
+
 	function updateProgress (id, val) {
 		const ach = findById(id)
 		if (!ach) return
@@ -173,38 +191,69 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		const incoming = Number(val ?? 0)
 		const next     = isBooting.value ? incoming : Math.max(prev, incoming)
 		ach.currentProgress = Math.min(next, target)
-
 		const nowCompleted     = ach.currentProgress >= target
 		const alreadyCompleted = completedSet.has(id)
 		const justCompleted    = nowCompleted && !alreadyCompleted
-
 		if (justCompleted) {
 			completedSet.add(id)
 			saveCompleted(completedSet)
 
-			const canShow = !isBooting.value && Date.now() >= suppressReplaysUntil.value
-			if (canShow) {
-				popupQueue.value.push(ach)
-				showNextPopup()
-				lastUnlockedAchievement.value = {
-					id: ach.id, title: ach.title, groupTitle: ach.groupTitle || null, ts: Date.now()
-				}
-				setTimeout(() => {
-					if (lastUnlockedAchievement.value?.id === ach.id) lastUnlockedAchievement.value = null
-				}, 0)
+			const mapVal = achievementToAwardMap[id]
 
-				const mapVal = achievementToAwardMap[id]
-				if (mapVal && !shownSet.has(mapVal)) {
-					shownSet.add(mapVal)
-					saveShown(shownSet)
-					lastUnlockedAward.value = { titleKey: mapVal, achId: id, ts: Date.now() }
+			if (isBooting.value) {
+				if (id === 'registerAchievement') {
+					// --- НОВЫЙ АКК: показать попап ачивки сразу ---
+					popupQueue.value.push(ach)
+					showNextPopup()
+					lastUnlockedAchievement.value = {
+						id: ach.id,
+						title: ach.title,
+						groupTitle: ach.groupTitle || null,
+						ts: Date.now()
+					}
+
+					// --- и сразу показать награду за регистрацию ---
+					if (mapVal && !shownSet.has(mapVal)) {
+						shownSet.add(mapVal)
+						saveShown(shownSet)
+						lastUnlockedAward.value = { titleKey: mapVal, achId: id, ts: Date.now() }
+						// подтянем коллекцию
+						updateProgress('Collection', shownSet.size)
+					}
+				} else {
+					// остальные — копим, покажем после boot (или молча отметим, как у тебя настроено)
+					bootUnlocked.push(ach.id)
+					if (mapVal && !shownSet.has(mapVal)) {
+						bootAwards.push({ titleKey: mapVal, achId: id })
+					}
+				}
+			} else {
+				// как и было для не-boot режима
+				const canShow = Date.now() >= suppressReplaysUntil.value
+				if (canShow) {
+					popupQueue.value.push(ach)
+					showNextPopup()
+					lastUnlockedAchievement.value = {
+						id: ach.id, title: ach.title, groupTitle: ach.groupTitle || null, ts: Date.now()
+					}
 					setTimeout(() => {
-						if (lastUnlockedAward.value?.achId === id) lastUnlockedAward.value = null
+						if (lastUnlockedAchievement.value?.id === ach.id) lastUnlockedAchievement.value = null
 					}, 0)
-					updateProgress('Collection', shownSet.size)
+
+					if (mapVal && !shownSet.has(mapVal)) {
+						shownSet.add(mapVal)
+						saveShown(shownSet)
+						lastUnlockedAward.value = { titleKey: mapVal, achId: id, ts: Date.now() }
+						setTimeout(() => {
+							if (lastUnlockedAward.value?.achId === id) lastUnlockedAward.value = null
+						}, 0)
+						updateProgress('Collection', shownSet.size)
+					}
 				}
 			}
 		}
+
+
 		prevMap.set(id, ach.currentProgress)
 	}
 
@@ -221,7 +270,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		ids.sort((a, b) => a.n - b.n)
 		return ids.map(x => x.id)
 	}
-
 	const CASE_PREFIXES = ['nom', 'akk', 'dat', 'gen']
 	const ADJ_BUCKETS = {
 		basic:      ['col', 'emo', 'app', 'char', 'dim'],
@@ -233,13 +281,11 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		...ADJ_BUCKETS.comparison,
 		...ADJ_BUCKETS.declension,
 	]
-
 	const VERB_BUCKETS = {
 		tenses: ['pras', 'perf', 'fut', 'prat', 'plus'],
 		modal:  ['mod', 'neb'],
 		types:  ['irr', 'fix', 'ref', 'sep'],
 	}
-
 	const VERB_ALL_PREFIXES = [
 		...VERB_BUCKETS.tenses,
 		...VERB_BUCKETS.modal,
@@ -284,6 +330,26 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 
 	function finishBootAndReplay () {
 		isBooting.value = false
+		// реплей ачивок
+		if (bootUnlocked.length) {
+			bootUnlocked
+				.map(id => findById(id))
+				.filter(Boolean)
+				.forEach(a => popupQueue.value.push(a))
+			showNextPopup()
+		}
+		// реплей наград
+		if (bootAwards.length) {
+			bootAwards.forEach(({ titleKey, achId }) => {
+				if (!shownSet.has(titleKey)) {
+					shownSet.add(titleKey)
+					saveShown(shownSet)
+					lastUnlockedAward.value = { titleKey, achId, ts: Date.now() }
+				}
+			})
+			updateProgress('Collection', shownSet.size)
+		}
+
 		bootUnlocked.length = 0
 		bootAwards.length = 0
 	}
@@ -296,10 +362,18 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			completedSet = loadCompleted()
 			resetAllProgress()
 			updateProgress('Collection', shownSet.size)
+			detachDailyAggListener()
 			if (!uid) {
 				isBooting.value = false
 				return
 			}
+			attachDailyAggListener()
+			setTimeout(() => {
+				const isNewAccount = !completedSet.has('registerAchievement')
+				if (isNewAccount) {
+					updateProgress('registerAchievement', 1)
+				}
+			}, 0)
 			setTimeout(() => {
 				finishBootAndReplay()
 				recomputeAllCasesMeta()
@@ -327,7 +401,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			updateProgress(`${prefix}4`, perfectCnt)
 			const fastPerfectCnt = Number(agg?.fastPerfectSessionsCount || 0)
 			updateProgress(`${prefix}5`, fastPerfectCnt)
-
 			// ---- ВАЖНО: фикс проверки "мастера" ----
 			const allIds = getPrefixIds(prefix)
 			if (allIds.length >= 2) {
@@ -393,7 +466,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			'verb_reflexive': 'ref',
 			'verb_separable': 'sep'
 		}
-
 		let adjectivesUnsubs = []
 		watch(() => authStore.uid, (uid) => {
 			adjectivesUnsubs.forEach(fn => { try { fn && fn() } catch {} })
@@ -599,6 +671,22 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 							updateProgress(ach.id, val)
 						})
 					})
+			},
+			{ immediate: true, deep: true }
+		)
+
+		watch(
+			() => {
+				const required = ['article','letters','wordArticle','audio','plural']
+				const topics = new Set(
+					langStore.learnedWords
+						.filter(w => w.de === 'Baum' && required.every(m => w?.progress?.[m] === true))
+						.map(w => (w.topic ?? '__no_topic__'))
+				)
+				return topics.size
+			},
+			(uniqueTopicsCount) => {
+				updateProgress('iAmGroot', uniqueTopicsCount)
 			},
 			{ immediate: true, deep: true }
 		)

@@ -21,7 +21,7 @@
               }}/{{ selectedModes.length }})</span>
           </div>
           <div class="word-block">
-            <div v-if="!currentMode === 'audio'" class="word-question">
+            <div v-if="currentMode === 'audio'" class="word-question">
               <span>{{ t('sessionLabels.word') }}: {{ currentWord?.[currentLang] }}</span>
             </div>
             <div class="mode-exercise">
@@ -122,6 +122,8 @@ useSeoMeta({
 const {t, locale} = useI18n()
 const wrongWords = ref([])
 const allWords = ref([])
+const isReview = ref(false)
+
 const store = userlangStore()
 const route = useRoute()
 const router = useRouter()
@@ -206,45 +208,41 @@ function normalize(text) {
 async function checkAnswer() {
   if (!currentWord.value || isChecking.value) return;
   isChecking.value = true;
+
   let correct = '';
   switch (currentMode.value) {
-    case 'article':
-      correct = currentWord.value.article;
-      break;
-    case 'letters':
-      correct = currentWord.value.de;
-      break;
-    case 'wordArticle':
-      correct = `${currentWord.value.article} ${currentWord.value.de}`;
-      break;
-    case 'plural':
-      correct = currentWord.value.plural;
-      break;
-    case 'audio':
-      correct = currentWord.value.de;
-      break;
+    case 'article':     correct = currentWord.value.article; break;
+    case 'letters':     correct = currentWord.value.de; break;
+    case 'wordArticle': correct = `${currentWord.value.article} ${currentWord.value.de}`; break;
+    case 'plural':      correct = currentWord.value.plural; break;
+    case 'audio':       correct = currentWord.value.de; break;
   }
+
   const ok = normalize(userInput.value) === normalize(correct);
   result.value = ok ? 'correct' : 'wrong';
-  if (ok) {
-    playCorrect()
-  }
-  else {
-    playWrong()
-  }
-  await store.markProgress(currentWord.value, currentMode.value, ok);
-  if (ok) {
-    await store.markAsLearned(currentWord.value, selectedModes.value);
+  ok ? playCorrect() : playWrong();
 
+  if (!isReview.value) {
+    // обычный режим — сохраняем
+    await store.markProgress(currentWord.value, currentMode.value, ok);
+    if (ok) {
+      await store.markAsLearned(currentWord.value, selectedModes.value);
+    } else {
+      if (!wrongWords.value.find(w => w.de === currentWord.value.de)) {
+        wrongWords.value.push(currentWord.value);
+      }
+      await store.addWrongAnswers(currentWord.value);
+    }
   } else {
-    if (!wrongWords.value.find(w => w.de === currentWord.value.de)) {
+    // повтор — ничего не сохраняем; локально собираем ошибки, если нужно
+    if (!ok && !wrongWords.value.find(w => w.de === currentWord.value.de)) {
       wrongWords.value.push(currentWord.value);
     }
-    await store.addWrongAnswers(currentWord.value);
   }
 
   isChecking.value = false;
 }
+
 
 function nextStep() {
   if (currentModeIndex.value < selectedModes.value.length - 1) {
@@ -263,7 +261,21 @@ function nextStep() {
 }
 
 function restartAll() {
-  store.selectedWords = [...allWords.value]
+  isReview.value = true
+  if (!Array.isArray(selectedModes.value) || selectedModes.value.length === 0 || selectedModes.value.every(m => !m)) {
+    selectedModes.value = ['article', 'letters', 'wordArticle', 'plural', 'audio']
+  }
+  let base = Array.isArray(allWords.value) ? allWords.value : []
+  if (!base.length) {
+    const topic = String(topicTitle.value || route.query.topic || '').trim()
+    const pool = Array.isArray(store.words) ? store.words : []
+    base = topic ? pool.filter(w => w.topic === topic) : pool.slice()
+  }
+  if (!base.length) {
+    finished.value = true
+    return
+  }
+  store.selectedWords = [...base]
   store.currentIndex = 0
   store.currentModeIndex = 0
   finished.value = false
@@ -294,27 +306,34 @@ onMounted(async () => {
   };
   window.addEventListener('pointerdown', unlockOnce, captureOpts);
   window.addEventListener('keydown', unlockOnce, captureOpts);
-
   await store.loadFromFirebase()
   store.syncSelectedWordsProgress()
+  const mode = route.query.mode
+  selectedModes.value = Array.isArray(mode) ? mode : [mode].filter(Boolean)
+  if (selectedModes.value.length === 0) {
+    selectedModes.value = ['article', 'letters', 'wordArticle', 'plural', 'audio']
+  }
+  isReview.value = ['1','true','yes','repeat','review','practice']
+      .includes(String(route.query.review || route.query.repeat || '').toLowerCase())
 
-  let mode = route.query.mode
-  selectedModes.value = Array.isArray(mode) ? mode : [mode]
   allWords.value = [...store.selectedWords]
-  sessionWords.value = store.selectedWords.filter(w => {
-    const isLearned = selectedModes.value.every(m => w.progress?.[m] === true)
-    return !isLearned
-  })
-  store.selectedWords = sessionWords.value.length > 0
-      ? [...sessionWords.value]
-      : [...allWords.value]
+  if (isReview.value) {
+    store.selectedWords = [...allWords.value]
+  } else {
+    sessionWords.value = store.selectedWords.filter(w => !selectedModes.value.every(m => w.progress?.[m] === true))
+    store.selectedWords = sessionWords.value.length ? [...sessionWords.value] : [...allWords.value]
+    if (sessionWords.value.length === 0) {
+      isReview.value = true
+    }
+  }
+
   if (store.currentIndex >= store.selectedWords.length) store.currentIndex = 0
   if (store.currentModeIndex >= selectedModes.value.length) store.currentModeIndex = 0
-  if (route.query.topic) {
-    topicTitle.value = route.query.topic;
-  }
+  if (route.query.topic) topicTitle.value = route.query.topic
+
   isReady.value = true
 })
+
 
 onBeforeUnmount(() => {
   window.removeEventListener('pointerdown', unlockAudioByUserGesture, { capture: true })

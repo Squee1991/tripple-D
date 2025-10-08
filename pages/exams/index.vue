@@ -69,11 +69,11 @@ import {userExamStore} from '~/store/examStore.js'
 import {useRouter} from 'vue-router'
 import VConsentModal from "../../src/components/V-consentModal.vue";
 import {userAuthStore} from "../../store/authStore.js";
-import { useHead, useSeoMeta, useRuntimeConfig } from '#imports'
+import { useHead, useSeoMeta } from '#imports'
 const canonical = useCanonical()
-
-const pageTitle = 'German Corner — Тесты по немецкому: A1, A2, B1, B2 (Lesen, Hören, Schreiben, Sprechen)'
-const pageDesc  = 'Тренировочные тесты по немецкому для уровней A1–B2: чтение, аудирование, письмо и говорение. Мгновенная проверка и сохранение результата'
+const { t } = useI18n()
+const pageTitle = t('metaTests.title')
+const pageDesc  = t('metaTests.description')
 
 useHead({
   title: pageTitle,
@@ -85,8 +85,8 @@ useHead({
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Главная", "item": canonical.replace(/\/exams.*/,'/') },
-          { "@type": "ListItem", "position": 2, "name": "Тесты по немецкому", "item": canonical }
+          { "@type": "ListItem", "position": 1, "name": t('metaTests.main'), "item": canonical.replace(/\/exams.*/,'/') },
+          { "@type": "ListItem", "position": 2, "name": t('metaTests.tests'), "item": canonical }
         ]
       })
     },
@@ -95,7 +95,7 @@ useHead({
       children: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "ItemList",
-        "name": "Тесты по немецкому — уровни",
+        "name": t('metaTests.testsLevels'),
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "url": canonical + 'level/a1', "name": "A1" },
           { "@type": "ListItem", "position": 2, "url": canonical + 'level/a2', "name": "A2" },
@@ -107,10 +107,11 @@ useHead({
   ]
 })
 useSeoMeta({
+  title: pageTitle,
   description: pageDesc,
   ogTitle: pageTitle,
   ogDescription: pageDesc,
-  ogType: 'website',            // каталог → website
+  ogType: 'website',
   ogUrl: canonical,
   ogImage: '/images/seo-exams.png',
   twitterCard: 'summary_large_image',
@@ -123,7 +124,6 @@ const consentGiven = ref(false)
 const router = useRouter()
 const examStore = userExamStore()
 const showHint = ref(false)
-const { t } = useI18n()
 const notAllowed = ref({
   title: t('examIndexPage.notAllowedTitle'),
   btns: [

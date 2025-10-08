@@ -23,8 +23,10 @@
 		{ "ru": "Табурет", "en": "Stool", "tr": "Tabure", "pl": "Stołek", "uk": "Табурет", "de": "Hocker", "article": "der", "plural": "Hocker", "pluralArticle": "die" },
 		{ "ru": "Настольная лампа", "en": "Table lamp", "tr": "Masa lambası", "pl": "Lampka stołowa", "uk": "Настільна лампа", "de": "Tischlampe", "article": "die", "plural": "Tischlampen", "pluralArticle": "die" },
 		{ "ru": "Подушка", "en": "Pillow", "tr": "Yastık", "pl": "Poduszka", "uk": "Подушка", "de": "Kissen", "article": "das", "plural": "Kissen", "pluralArticle": "die" },
+		{ "ru": "Дерево", "de": "Baum", "article": "der", "plural": "Bäume", "pluralArticle": "die" },
 		{ "ru": "Одеяло", "en": "Blanket", "tr": "Battaniye", "pl": "Koc", "uk": "Ковдра", "de": "Decke", "article": "die", "plural": "Decken", "pluralArticle": "die" },
 		{ "ru": "Скамья", "en": "Bench", "tr": "Bank", "pl": "Ławka", "uk": "Лавка", "de": "Bank", "article": "die", "plural": "Bänke", "pluralArticle": "die" }
+
 	],
 	"Animals": [
 		{ "ru": "Животное", "de": "Tier", "article": "das", "plural": "Tiere", "pluralArticle": "die" },
@@ -58,7 +60,6 @@
 		{ "ru": "Панда", "de": "Panda", "article": "der", "plural": "Pandas", "pluralArticle": "die" },
 		{ "ru": "Морская свинка", "de": "Meerschweinchen", "article": "das", "plural": "Meerschweinchen", "pluralArticle": "die" },
 		{ "ru": "Олень", "de": "Hirsch", "article": "der", "plural": "Hirsche", "pluralArticle": "die" },
-
 		{ "ru": "Слон", "de": "Elefant", "article": "der", "plural": "Elefanten", "pluralArticle": "die" },
 		{ "ru": "Бык", "de": "Stier", "article": "der", "plural": "Stiere", "pluralArticle": "die" },
 		{ "ru": "Крот", "de": "Maulwurf", "article": "der", "plural": "Maulwürfe", "pluralArticle": "die" },
@@ -296,11 +297,11 @@
 	],
 	"Nature": [
 		{ "ru": "Природа", "de": "Natur", "article": "die", "plural": "Naturen"},
-		{ "ru": "Дерево", "de": "Baum", "article": "der", "plural": "Bäume", "pluralArticle": "die" },
 		{ "ru": "Цветок", "de": "Blume", "article": "die", "plural": "Blumen", "pluralArticle": "die" },
 		{ "ru": "Трава", "de": "Gras", "article": "das", "plural": "Gräser", "pluralArticle": "die" },
 		{ "ru": "Гора", "de": "Berg", "article": "der", "plural": "Berge", "pluralArticle": "die" },
 		{ "ru": "Река", "de": "Fluss", "article": "der", "plural": "Flüsse", "pluralArticle": "die" },
+		{ "ru": "Дерево", "de": "Baum", "article": "der", "plural": "Bäume", "pluralArticle": "die" },
 		{ "ru": "Озеро", "de": "See", "article": "der", "plural": "Seen", "pluralArticle": "die" },
 		{ "ru": "Лес", "de": "Wald", "article": "der", "plural": "Wälder", "pluralArticle": "die" },
 		{ "ru": "Небо", "de": "Himmel", "article": "der", "plural": "Himmel", "pluralArticle": "die" },
@@ -531,7 +532,8 @@
 		{ "ru": "Калькулятор", "de": "Taschenrechner", "article": "der", "plural": "Taschenrechner", "pluralArticle": "die" },
 		{ "ru": "Резинка", "de": "Radiergummi", "article": "der", "plural": "Radiergummis", "pluralArticle": "die" },
 		{ "ru": "Визитка", "de": "Visitenkarte", "article": "die", "plural": "Visitenkarten", "pluralArticle": "die" },
-		{ "ru": "Пульт", "de": "Fernbedienung", "article": "die", "plural": "Fernbedienungen", "pluralArticle": "die" }
+		{ "ru": "Пульт", "de": "Fernbedienung", "article": "die", "plural": "Fernbedienungen", "pluralArticle": "die" },
+		{ "ru": "Дерево", "de": "Baum", "article": "der", "plural": "Bäume", "pluralArticle": "die" }
 	],
 	"BathroomItems": [
 		{ "ru": "Полотенце", "de": "Handtuch", "article": "das", "plural": "Handtücher", "pluralArticle": "die" },
@@ -679,6 +681,7 @@
 		{ "ru": "Кисть (малярная)", "de": "Pinsel", "article": "der", "plural": "Pinsel", "pluralArticle": "die" },
 		{ "ru": "Валик (для краски)", "de": "Farbroller", "article": "der", "plural": "Farbroller", "pluralArticle": "die" },
 		{ "ru": "Шпатель", "de": "Spachtel", "article": "der", "plural": "Spachtel", "pluralArticle": "die" },
+		{ "ru": "Дерево", "de": "Baum", "article": "der", "plural": "Bäume", "pluralArticle": "die" },
 		{ "ru": "Степлер строительный", "de": "Tacker", "article": "der", "plural": "Tacker", "pluralArticle": "die" },
 		{ "ru": "Лестница", "de": "Leiter", "article": "die", "plural": "Leitern", "pluralArticle": "die" },
 		{ "ru": "Перчатки рабочие", "de": "Arbeitshandschuhe", "article": "die", "plural": "Arbeitshandschuhe", "pluralArticle": "die" },
@@ -692,6 +695,7 @@
 		{ "ru": "Фонарик", "de": "Taschenlampe", "article": "die", "plural": "Taschenlampen", "pluralArticle": "die" },
 		{ "ru": "Сверло", "de": "Bohrer", "article": "der", "plural": "Bohrer", "pluralArticle": "die" },
 		{ "ru": "Пылесос строительный", "de": "Bau-Staubsauger", "article": "der", "plural": "Bau-Staubsauger", "pluralArticle": "die" }
+
 	],
 	"Kitchen": [
 		{ "ru": "Кухня", "de": "Küche", "article": "die", "plural": "Küchen", "pluralArticle": "die" },
@@ -846,7 +850,7 @@
 		{ "ru": "Бронирование", "de": "Buchung", "article": "die", "plural": "Buchungen", "pluralArticle": "die" },
 		{ "ru": "Регистрация", "de": "Check-in", "article": "der", "plural": "Check-ins", "pluralArticle": "die" },
 		{ "ru": "Туристическое агентство", "de": "Reisebüro", "article": "das", "plural": "Reisebüros", "pluralArticle": "die" },
-		{ "ru": "Путеводитель (книга)", "de": "Reiseführer", "article": "der", "plural": "Reiseführer", "pluralArticle": "die" },
+		{ "ru": "Путеводитель(книга)", "de": "Reiseführer", "article": "der", "plural": "Reiseführer", "pluralArticle": "die" },
 		{ "ru": "Приключение", "de": "Abenteuer", "article": "das", "plural": "Abenteuer", "pluralArticle": "die" },
 		{ "ru": "Страховка", "de": "Versicherung", "article": "die", "plural": "Versicherungen", "pluralArticle": "die" },
 		{ "ru": "Пересадка", "de": "Umstieg", "article": "der", "plural": "Umstiege", "pluralArticle": "die" },
@@ -1051,5 +1055,6 @@
 		{ "ru": "Сеть", "de": "Netzwerk", "article": "das", "plural": "Netzwerke", "pluralArticle": "die" },
 		{ "ru": "Браузер", "de": "Browser", "article": "der", "plural": "Browser", "pluralArticle": "die" },
 		{ "ru": "Облако", "de": "Cloud", "article": "die", "plural": "Clouds", "pluralArticle": "die" }
+
 	]
 }

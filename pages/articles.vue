@@ -72,12 +72,14 @@
   </main>
 </template>
 <script setup>
-import { useHead, useSeoMeta, useRuntimeConfig } from '#imports'
-const runtime = useRuntimeConfig().public
-const pageTitle = 'Der / Die / Das — примеры и таблица артиклей'
-const pageDesc  = 'Коротко и понятно: когда использовать der, die, das; определённые и неопределённые артикли, примеры и таблица по родам.'
+import { useHead, useSeoMeta} from '#imports'
+const {t} = useI18n();
+const canonical = useCanonical()
+const pageTitle = t('metaArticles.title')
+const pageDesc  = t('metaArticles.description')
 useHead({
-  link: [{ rel: 'canonical', href: `${runtime.siteUrl}/theory/articles` }]
+  title: pageTitle,
+  link: [{ rel: 'canonical', href: canonical }]
 })
 useSeoMeta({
   title: pageTitle,
@@ -85,11 +87,10 @@ useSeoMeta({
   ogTitle: pageTitle,
   ogDescription: pageDesc,
   ogType: 'article',
-  ogUrl: `${runtime.siteUrl}/theory/articles`,
+  ogUrl: canonical,
   ogImage: '/images/seo-articles.png',
   robots: 'index, follow'
 })
-const {t} = useI18n();
 
 const data = {
   items: [

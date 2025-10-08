@@ -1,5 +1,4 @@
 <script setup>
-// Секция <script setup> остаётся без изменений
 import {useDuelStore} from '../../store/sentenceDuelStore.js';
 import {userAuthStore} from '../../store/authStore.js';
 import {useRoute, useRouter} from 'vue-router';
