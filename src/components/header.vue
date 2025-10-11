@@ -192,8 +192,8 @@ const menuItems = computed(() => [
                   id: 'articles',
                   valueKey: 'sub.articles',
                   subChildren: [
-                    {id: 'learn-tips', url: '/examples', valueKey: 'underSub.prev'},
-                    {id: 'learn-rules', url: '/rules', valueKey: 'underSub.rules'},
+                    {id: 'learn-tips', url: '/article-basic', valueKey: 'underSub.prev'},
+                    {id: 'learn-rules', url: '/article-theory', valueKey: 'underSub.rules'},
                     {id: 'learn-selectedTopics', url: '/articles', valueKey: 'underSub.artRules'},
                   ]
                 },

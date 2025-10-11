@@ -27,9 +27,4 @@
 		align-items: center;
 	}
 
-	.support {
-		font-size: 10px;
-		font-weight: bold;
-	}
-
 </style>

@@ -82,6 +82,8 @@ const toDiscord = () => {
 
 <style scoped>
 
+
+
 .footer__container {
   border: 3px solid black;
   padding: 40px;

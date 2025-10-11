@@ -1,4 +1,9 @@
 {
+  "tabsMobile": {
+    "locations": "Locations",
+    "daily": "Dailies",
+    "profile": "Profile"
+  },
   "metaAdjectiveBasic": {
     "title": "German Corner — Adjectives A1–A2: colors, feelings, appearance, character, size",
     "description": "Learn basic German adjectives by topics: colors, feelings and emotions, appearance, character, size and shape. Examples with translation and audio + trainers."
