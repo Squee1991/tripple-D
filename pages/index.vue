@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch} from 'vue'
 import { userAuthStore } from "~/store/authStore.js"
 import Header from '../src/components/header.vue'
 import Banner from '../src/components/baner.vue'
@@ -8,12 +8,12 @@ import About from '../src/components/about.vue'
 import FeedBack from '../src/components/feedBack.vue'
 import Footer from '../src/components/footer.vue'
 import VUid from '../src/components/V-uid.vue'
+import VEventAvailableModal from "../src/components/V-eventAvailableModal.vue";
 import { useHead, useSeoMeta } from '#imports'
 const { public: { siteUrl } } = useRuntimeConfig()
 const base = (siteUrl || '').replace(/\/$/, '')
 const { t } = useI18n()
 const canonical = useCanonical()
-
 const pageTitle = t('metaMainPage.title')
 const pageDesc  = t('metaMainPage.description')
 
@@ -54,8 +54,8 @@ onMounted(() => {
 })
 </script>
 
-
 <template>
+  <VEventAvailableModal @close="false" v-if="authStore.initialized"/>
   <div v-if="!hydrated || !authStore.initialized" class="loading"></div>
   <div v-else class="container">
     <Header/>
@@ -85,6 +85,7 @@ onMounted(() => {
   justify-content: center;
   margin-top: 10px;
   height: 100%;
+  flex-direction: column;
   overflow-y: auto;
 }
 

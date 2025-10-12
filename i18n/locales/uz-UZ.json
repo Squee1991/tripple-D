@@ -1,4 +1,9 @@
 {
+  "tabsMobile": {
+    "locations": "Hududlar",
+    "daily": "Kundaliklar",
+    "profile": "Profil"
+  },
   "metaAdjectiveBasic": {
     "title": "German Corner — Sifatlar A1–A2: ranglar, his-tuyg‘ular, tashqi ko‘rinish, xarakter, o‘lcham",
     "description": "Nemis tilidagi asosiy sifatlarni mavzular bo‘yicha o‘rganing: ranglar, his-tuyg‘ular va emotsiyalar, tashqi ko‘rinish, xarakter, o‘lcham va shakl. Tarjima va ovozli misollar + mashqlar."
@@ -947,6 +952,7 @@
     "level": "Daraja",
     "stats": "Statistika",
     "premium": "Obuna",
+    "achievement": "Yutuqlar",
     "premDescription": "Platformadan maksimal foydalaning. Ta’lim, mukofotlar, topshiriqlar, progress va yana ko‘p narsa!",
     "try": "Sinab ko‘rish"
   },

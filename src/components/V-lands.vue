@@ -382,6 +382,10 @@ function go(region) {
     overflow-y: auto;
   }
 
+  .region-card {
+    height: 170px;
+  }
+
   .map-left {
     position: fixed;
     top: 0;
@@ -402,16 +406,12 @@ function go(region) {
     opacity: 1;
     pointer-events: auto;
     background: var(--bg);
+    padding: 55px 15px 10px 15px;
   }
 
   .map__title {
     font-size: 1.4rem;
     color: black;
-  }
-
-  .map-right {
-    grid-template-columns:1fr;
-    box-shadow: none;
   }
 
   .map-left__close {
@@ -426,6 +426,11 @@ function go(region) {
     box-shadow: 2px 2px 0 var(--border);
     font-size: 22px;
     cursor: pointer;
+  }
+
+  .region-card__title {
+    font-size: 0.8rem;
+    text-align: center;
   }
 }
 </style>

@@ -22,7 +22,8 @@ export const userAuthStore = defineStore('auth', () => {
 
 	const LEADERBOARD_COLLECTION = 'marathon_leaderboard';
 	const LEADERBOARD_GUESS = 'leaderboard_guess'
-
+	const DAILY__COLLECTION = 'daily';
+	const LOCAL_STAT_COLLECTION = 'localStatGame';
 	const voiceConsentGiven = ref(false)
 	const name = ref(null)
 	const email = ref(null)

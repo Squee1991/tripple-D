@@ -7,18 +7,18 @@
     />
     <section class="points-card" aria-label="Поинты и уровень">
       <header class="points-card__header">
-        <h2 class="points__title">{{ t('accountPanel.title')}}</h2>
+        <h2 class="points__title">{{ t('accountPanel.title') }}</h2>
       </header>
       <ul v-if="langStore" class="points-card__list">
         <li class="points-card__item">
-          <div class="points-card__label">{{ t('accountPanel.articles')}}</div>
+          <div class="points-card__label">{{ t('accountPanel.articles') }}</div>
           <button :title="hoverTitle.title" v-if="userAuth.uid" @click="openArticleModal" class="articlus__wrapper">
             <img class="articlus__icon" src="../../assets/images/articlus.png" alt="Articlus_icon">
             <span class="points-card__value"> {{ langStore.points }}</span>
           </button>
         </li>
         <li class="points-card__item">
-          <span class="points-card__label">{{ t('accountPanel.level')}}</span>
+          <span class="points-card__label">{{ t('accountPanel.level') }}</span>
           <span :title="hoverTitle.level" class="points-card__badge">{{ langStore.isLeveling }}</span>
         </li>
         <div class="points-card__progress">
@@ -28,40 +28,28 @@
             <div class="progress__meta">{{ langStore.exp }}/100 XP</div>
           </div>
         </div>
-        <div class="points__statistics">
-          <div class="points__statistics__items">
-            <div class="points__stat-header">
-              <div class="points__stat-title">
-                <img class="points-card__title-icon" src="../../assets/images/graph.svg" alt="Stats_icon">
-                <h3 class="stats__title">{{ t('accountPanel.stats')}}</h3>
+        <ul v-if="langStore" class="points-card__list">
+          <div v-for="section in sections" :key="section.key" class="ranked__wrapper">
+            <div class="ranked__inner">
+              <div class="ranked__title-icon">
+                <img class="points-card__title-icon" :src="section.icon" :alt="`${section.key}_icon`"/>
+                <div class="ranked__title">{{ section.title }}</div>
               </div>
-              <button @click="toStatistics" class="stats__btn">
-                <span></span>
-                <img class="stat__icon" src="../../assets/images/dailyIcons/arrow-to.svg" alt="Arrow_icon">
+              <button @click="pathTo(section.route)" class="stats__btn">
+                <img class="stat__icon" src="../../assets/images/dailyIcons/arrow-to.svg" alt="Arrow_icon"/>
               </button>
             </div>
           </div>
-        </div>
-        <div class="ranked__wrapper">
-          <div class="ranked__inner">
-            <div class="ranked__title-icon">
-              <img class="points-card__title-icon" src="../../assets/images/RankedIcon.svg" alt="Ranked_icon">
-              <div class="ranked__title">{{ t('accountPanel.ranked')}}</div>
-            </div>
-            <button @click="toRanked" class="stats__btn">
-              <img class="stat__icon" src="../../assets/images/dailyIcons/arrow-to.svg" alt="Arrow_icon">
-            </button>
-          </div>
-        </div>
+        </ul>
       </ul>
       <div v-if="!userAuth.isPremium" class="sub-actions">
         <article class="super-card">
           <div>
-            <span class="super-card__badge">{{ t('accountPanel.premium')}}</span>
+            <span class="super-card__badge">{{ t('accountPanel.premium') }}</span>
           </div>
-          <p class="sub__text">{{ t('accountPanel.premDescription')}}</p>
+          <p class="sub__text">{{ t('accountPanel.premDescription') }}</p>
           <button @click="toPayment" class="super-card__cta">
-            {{ t('accountPanel.try')}}
+            {{ t('accountPanel.try') }}
           </button>
         </article>
       </div>
@@ -75,7 +63,10 @@ import {userlangStore} from "~/store/learningStore.js";
 import {userAuthStore} from '../../store/authStore.js'
 import {useRouter} from "vue-router";
 import {useFriendsStore} from '../../store/friendsStore.js'
-import {onMounted, ref,watch} from "vue";
+import {onMounted, ref, watch} from "vue";
+import Graph from '../../assets/images/graph.svg'
+import AchPanelIcon from '../../assets/images/AchPanelIcon.svg'
+import RankedIcon from '../../assets/images/RankedIcon.svg'
 
 const {t} = useI18n()
 const langStore = userlangStore()
@@ -84,29 +75,32 @@ const router = useRouter()
 const friendsStore = useFriendsStore()
 const isArticleOpen = ref(false)
 const handleLeveling = () => {
-    const LEVEL_UP_XP = 100
-    if (langStore.exp >= LEVEL_UP_XP) {
-        langStore.isLeveling++
-        langStore.exp -= LEVEL_UP_XP
-    }
+  const LEVEL_UP_XP = 100
+  if (langStore.exp >= LEVEL_UP_XP) {
+    langStore.isLeveling++
+    langStore.exp -= LEVEL_UP_XP
+  }
 }
 
 const hoverTitle = {
   title: t('hoverTitle.articles'),
   level: t('hoverTitle.level')
 }
+const sections = ref([
+  {key: "stats", icon: Graph, alt: 'Graph', title: t('accountPanel.stats'), route: "/statistics"},
+  {key: "achievement", icon: AchPanelIcon, alt: 'AchPanel', title: t('accountPanel.achievement'), route: "/achievements"},
+  {key: "ranked", icon: RankedIcon, alt: 'Ranked', title: t('accountPanel.ranked'), route: "/leaderboard"},
+])
+
+
+const pathTo = (route) => {
+  router.push(route)
+}
 
 const toPayment = () => {
   router.push('/pay')
 }
 
-const toStatistics = () => {
-  router.push('/statistics')
-}
-
-const toRanked = () => {
-  router.push('/leaderboard')
-}
 
 const openArticleModal = () => isArticleOpen.value = true
 const articleData = ref({
@@ -118,7 +112,7 @@ const articleData = ref({
   ]
 })
 watch(() => langStore.exp, (newVal) => {
-    handleLeveling()
+  handleLeveling()
 })
 onMounted(() => {
   friendsStore.loadFriends()
@@ -140,11 +134,13 @@ onMounted(() => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  padding-bottom: 15px;
+  border-bottom: 2px dashed var(--border);
 }
 
 .stats__title,
-.ranked__title{
+.ranked__title {
   color: var(--titleColor);
   font-size: 22px;
   margin-left: 8px;
@@ -193,7 +189,7 @@ onMounted(() => {
 
 @media (min-width: 1023px) {
   .stats__btn:hover {
-    transform: scale(1.05) ;
+    transform: scale(1.05);
     transition: .3s;
   }
 }
@@ -466,7 +462,7 @@ onMounted(() => {
   font-family: "Nunito", sans-serif;
   color: white;
   background: #1f68cb;
-  box-shadow: 0px 3px 0  #60a5fa;
+  box-shadow: 0px 3px 0 #60a5fa;
   cursor: pointer;
   transition: transform .06s ease, box-shadow .06s ease, filter .2s ease;
 }
@@ -476,8 +472,8 @@ onMounted(() => {
 }
 
 .super-card__cta:active {
-    transform: translate(3px, 3px);
-    box-shadow: 1px 1px 0 #111;
+  transform: translate(3px, 3px);
+  box-shadow: 1px 1px 0 #111;
 }
 
 .sub__text {
