@@ -1,6 +1,6 @@
 <script setup>
 import {ref, computed} from 'vue'
-import VShowFall from "../src/components/V-showFall.vue";
+import VShowFall from "./V-showFall.vue";
 import Present from '../assets/images/mery-christmas/Present.svg'
 import { useRouter} from "vue-router";
 const router = useRouter();
@@ -13,7 +13,7 @@ const nav = [
 ]
 const selectedLevel = ref(1)
 const computedPanelTitle = computed(() =>
- activeTab.value === 'reputation' ? 'Магазин ивента' : 'Ежедневные задания'
+    activeTab.value === 'reputation' ? 'Магазин ивента' : 'Ежедневные задания'
 )
 
 const pathToMain = () => {
@@ -114,7 +114,7 @@ function resetAll() {
             </div>
             <div class="status achv-card --flat">
               <div class="status__row">
-<!--                <div class="status__value">{{ currentRankTitle }}</div>-->
+                <!--                <div class="status__value">{{ currentRankTitle }}</div>-->
                 <div class="status__value">Панель ивента</div>
               </div>
               <div class="bar">

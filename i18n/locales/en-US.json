@@ -947,12 +947,13 @@
     "level": "Level"
   },
   "accountPanel": {
-    "title": "Participant Panel",
-    "ranked": "Ranked",
+    "title": "Member Panel",
+    "ranked": "Ranking",
     "articles": "Articluses",
     "level": "Level",
     "stats": "Statistics",
     "premium": "Subscription",
+    "achievement": "Achievements",
     "premDescription": "Get the most out of the platform. Learning, rewards, quests, progress and much more!",
     "try": "Try"
   },

@@ -1,9 +1,9 @@
 <template>
-  <div v-if="visible && closeModal" class="modal-overlay">
+  <div v-if="visible && closeModal" class="modal-overlay" @click.self="closeEventModal">
     <div class="modal-content">
       <VShowFall/>
       <div class="modal-icon">
-        <img class="modal__icon-item" :src="Wreath" alt="">
+        <img class="modal__icon-item" :src="Wreath" alt="Wreath icon">
       </div>
       <h2 class="modal-title">Зимний шёпот</h2>
       <p class="modal-text">
@@ -11,8 +11,8 @@
         Успей принять участие и получить награды.
       </p>
       <div class="modal-actions">
-        <button class="btn-start" @click="beginEvent">Начать</button>
-        <button class="btn-start --close" @click="closeEventModal">Закрыть</button>
+        <button type="button" class="btn-start" @click="beginEvent">Начать</button>
+        <button type="button" class="btn-start --close" @click="closeEventModal">Закрыть</button>
       </div>
     </div>
   </div>

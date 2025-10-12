@@ -54,15 +54,13 @@ onMounted(() => {
 })
 </script>
 
-
 <template>
-  <VEventAvailableModal @close="false" />
+  <VEventAvailableModal @close="false" v-if="authStore.initialized"/>
   <div v-if="!hydrated || !authStore.initialized" class="loading"></div>
   <div v-else class="container">
     <Header/>
     <div v-if="authStore.uid" class="stat">
       <VUid/>
-
     </div>
     <div v-else>
       <Banner/>

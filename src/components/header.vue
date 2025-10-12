@@ -253,8 +253,12 @@ const menuItems = computed(() => [
       : []),
   ...(userAuth.uid
       ? [
-        {id: 'achieve', url: '/achievements', valueKey: 'nav.achieve'},
-        /*{id: 'stats', url: '/stats', valueKey: 'nav.stats'}*/
+        {id: 'events', valueKey: 'События' , children: [
+            {id: 'winter-event' , valueKey: 'Шепот зимы' , url: '/event-winter'},
+            {id: 'valentine' , valueKey: 'День Купидона' , url: '/event-valentine'},
+            {id: 'april' , valueKey: 'Праздник Цветения' , url: '/event-joke'},
+            {id: 'halloween' , valueKey: 'Праздник тыкв' , url: '/event-halloween'},
+          ]},
       ] : [])
 ])
 
