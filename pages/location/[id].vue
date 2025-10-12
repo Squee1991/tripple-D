@@ -485,6 +485,24 @@ function goHome() {
     .location-header:after {
         transform: scale(.9) rotate(8deg);
     }
+
+    .icon-articlus {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 4px;
+        width: 1em;
+        height: 1em;
+        object-fit: contain;
+        transform: translateY(-1px); /* идеально центрирует */
+    }
+    .quest-meta span {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        flex-wrap: wrap;
+        line-height: 1.3;
+    }
+
 }
 
 @media (min-width: 1024px) {
@@ -504,12 +522,106 @@ function goHome() {
     }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 766px) {
+    .location-page {
+        padding: 12px;
+    }
+
+    .location-header {
+        padding: 10px 14px;
+        gap: 15px;
+        margin-bottom: 12px;
+        border-radius: 16px;
+    }
+
+    .close-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+        border-radius: 12px;
+        box-shadow: 3px 3px 0 #2b2b2b;
+    }
+
+    .region__title-name {
+        font-size: 22px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .quest-list {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-top: 8px;
+    }
+
+    .quest-card {
+        min-height: auto;
+        padding: 14px;
+        gap: 8px;
+        border-radius: 16px;
+        box-shadow: 3px 3px 0 #2b2b2b;
+    }
+
+    .quest-card::before {
+        inset: 6px;
+        outline: 8px solid #fff;
+    }
+
+    .quest-card::after {
+        top: -8px;
+        left: -8px;
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+        border: 2px solid #111;
+        box-shadow: 4px 4px 0 #2b2b2b;
+    }
+
+    .quest__title {
+        font-size: 18px;
+        padding: 6px;
+    }
+
+    .quest__description {
+        font-size: 14px;
+    }
+
+    .quest-meta span {
+        font-size: 13px;
+        padding: 4px 8px;
+        box-shadow: 3px 3px 0 #2b2b2b;
+    }
+
+    .btn {
+        height: 40px;
+        margin-top: 8px;
+        font-size: 15px;
+        border-radius: 12px;
+        box-shadow: 3px 3px 0 #2b2b2b;
+    }
+
+    .stamp {
+        top: -4px;
+        right: -10px;
+        transform: rotate(5deg);
+        font-size: 12px;
+        padding: 6px 10px;
+        box-shadow: 3px 3px 0 #2b2b2b;
+    }
+
+    /* убираем декоративный значок с заголовка */
+    .location-header::after {
+        content: none;
+    }
+}
+
+@media (min-width: 767px) {
     .location-header::after {
         content: "!";
         position: absolute;
-        top: 0px;
-        right: 0px;
+        top: 0;
+        right: 0;
         width: 56px;
         height: 56px;
         display: grid;
@@ -525,20 +637,6 @@ function goHome() {
         transform: rotate(8deg);
         animation: bob 2.2s ease-in-out infinite;
         z-index: 2;
-    }
-
-    .icon-articlus {
-
-        width: 20px;
-        height: 20px;
-        vertical-align: middle;
-        margin: 0 4px;
-    }
-
-
-    .quest-meta span {
-        display: flex;
-        align-items: center;
     }
 }
 </style>

@@ -108,7 +108,8 @@
                                             v-for="(word, index) in questStore.reorderBank"
                                             :key="`${word}-${index}`"
                                             class="quest__word-btn"
-                                            @click="questStore.handleReorderWord(word, 'bank')"
+                                            @click="handleWordBankClick(word)"
+
                                     >
                                         {{ t(word) }}
                                     </button>
@@ -242,6 +243,20 @@ async function speakText(text) {
     } finally {
         isSpeaking.value = false;
     }
+}
+
+function handleWordBankClick(wordKey) {
+    // 1. Проверяем, что выбран язык обучения "Немецкий"
+    if (learningLanguage.value === TARGET_LANG_CODE) {
+        const textToSpeakRaw = wordKey; // <-- Используем НЕОБРАБОТАННЫЙ ключ
+        if (textToSpeakRaw.length > 0) {
+            // Озвучиваем слово
+            speakText(textToSpeakRaw);
+        }
+    }
+
+    // 2. Выполняем основное действие: перемещаем слово из банка в выбор
+    questStore.handleReorderWord(wordKey, 'bank');
 }
 
 // ✅ НОВАЯ ФУНКЦИЯ: Обработчик клика по кнопке
@@ -922,7 +937,7 @@ watchEffect(() => {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .quest__question {
         font-size: 1.2rem;
         border-bottom: 2px solid #9dceff;
