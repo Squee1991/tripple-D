@@ -1,18 +1,15 @@
 <template>
-  <div v-if="visible && closeModal" class="modal-overlay" @click.self="closeEventModal">
-    <div class="modal-content">
-      <VShowFall/>
+  <div v-if="visible && isModalOpen && activeEvent" class="modal-overlay" @click.self="handleCloseClick">
+    <div class="modal-content" role="dialog" aria-modal="true">
+      <VShowFall v-if="activeEvent.snow"/>
       <div class="modal-icon">
-        <img class="modal__icon-item" :src="Wreath" alt="Wreath icon">
+        <img class="modal__icon-item" :src="activeEvent.icon" :alt="`${activeEvent.title} icon`"/>
       </div>
-      <h2 class="modal-title">Зимний шёпот</h2>
-      <p class="modal-text">
-        С сегодняшнего дня стартует праздничное событие!
-        Успей принять участие и получить награды.
-      </p>
+      <h2 class="modal-title">{{ activeEvent.title }}</h2>
+      <p class="modal-text">{{ activeEvent.text }}</p>
       <div class="modal-actions">
-        <button type="button" class="btn-start" @click="beginEvent">Начать</button>
-        <button type="button" class="btn-start --close" @click="closeEventModal">Закрыть</button>
+        <button type="button" class="btn-start" @click="handleBeginClick">Начать</button>
+        <button type="button" class="btn-start --close" @click="handleCloseClick">Закрыть</button>
       </div>
     </div>
   </div>
@@ -20,43 +17,97 @@
 
 <script setup>
 import {useRouter} from "vue-router";
-import {defineProps, defineEmits, watch} from "vue";
+import {ref, watch, computed, onMounted, onUnmounted} from "vue";
 import VShowFall from "../components/V-showFall.vue";
 import Wreath from "../../assets/images/mery-christmas/christmas-wreath.svg";
+import Pumpkin from "../../assets/images/mery-christmas/pumkin.svg";
 
 const router = useRouter();
 
-defineProps({
-  visible: {
-    type: Boolean,
-    default: true
-  }
+const props = defineProps({
+  visible: {type: Boolean, default: true},
+  schedule: {
+    type: Array,
+    default: () => [
+      {
+        start: "10-31 00:00",
+        title: "Хэллоуин",
+        text: "Собирай конфеты и не бойся испытаний — новые награды уже ждут!",
+        icon: Pumpkin,
+        route: "/event-halloween",
+        snow: false,
+      },
+      {
+        start: "12-01 00:00",
+        title: "Зимний покров",
+        text: "Зимний сезон открыт! Успей принять участие и получить награды.",
+        icon: Wreath,
+        route: "/event-winter",
+        snow: true,
+      }
+    ]
+  },
+  tickMs: {type: Number, default: 1000}
 });
 
-const closeModal = ref(true);
 const emit = defineEmits(["close"]);
 
-const beginEvent = () => {
-  router.push("/season");
-  emit("close");
-};
+const isModalOpen = ref(true);
+const currentTime = ref(new Date());
+let intervalId = null;
 
-const closeEventModal = () => {
-  emit("close", closeModal.value = false);
+function parseAnnualStart(startString) {
+  const [datePart, timePart] = startString.split(" ");
+  const [month, day] = datePart.split("-").map(Number);
+  const [hours, minutes] = timePart.split(":").map(Number);
+  const currentYear = new Date().getFullYear();
+  return new Date(currentYear, month - 1, day, hours, minutes, 0, 0);
+}
+
+const annualCandidatesSorted = computed(() => {
+  const list = (props.schedule || []).map(entry => ({
+    ...entry,
+    startDate: parseAnnualStart(entry.start)
+  }));
+  return list.sort((a, b) => a.startDate - b.startDate);
+});
+
+const activeEvent = computed(() => {
+  const now = currentTime.value;
+  const list = annualCandidatesSorted.value;
+  const past = list.filter(item => item.startDate <= now);
+  return past.length ? past[past.length - 1] : null;
+});
+
+function handleBeginClick() {
+  router.push(activeEvent.value.route || "/");
+  emit("close");
+}
+
+function handleCloseClick() {
+  isModalOpen.value = false;
+  emit("close", false);
 }
 
 onMounted(() => {
-  document.body.style.overflow = "hidden";
+  if (props.visible && isModalOpen.value) document.body.style.overflow = "hidden";
+  intervalId = setInterval(() => {
+    currentTime.value = new Date();
+  }, props.tickMs);
 });
 
 onUnmounted(() => {
   document.body.style.overflow = "";
+  if (intervalId) clearInterval(intervalId);
 });
 
-watch(closeModal, (value) => {
-  document.body.style.overflow = value ? "hidden" : "";
-});
-
+watch(
+    () => [props.visible, isModalOpen.value],
+    ([isVisible, open]) => {
+      document.body.style.overflow = isVisible && open ? "hidden" : "";
+    },
+    {immediate: true}
+);
 </script>
 
 <style scoped>
@@ -79,8 +130,7 @@ watch(closeModal, (value) => {
   max-width: 420px;
   width: 90%;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25),
-  inset 0 0 12px rgba(255, 255, 255, 0.6);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25), inset 0 0 12px rgba(255, 255, 255, 0.6);
   overflow: hidden;
 }
 
@@ -102,7 +152,6 @@ watch(closeModal, (value) => {
   font-weight: 900;
   margin-bottom: 15px;
   color: wheat;
-
 }
 
 .modal-text {
@@ -145,10 +194,10 @@ watch(closeModal, (value) => {
 
 @keyframes float {
   0%, 100% {
-    transform: translateY(0);
+    transform: translateY(0)
   }
   50% {
-    transform: translateY(-6px);
+    transform: translateY(-6px)
   }
 }
 </style>
