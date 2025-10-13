@@ -278,7 +278,7 @@ function resetAll() {
   border: 2px solid whitesmoke;
   border-radius: 18px;
   padding: 15px;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(2px);
 }
 
 .status__value {
