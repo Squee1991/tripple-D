@@ -25,11 +25,15 @@
                         <h3 class="quest__title">{{ t(q.title) }}</h3>
                         <p class="quest__description">{{ t(q.description) }}</p>
                         <div class="quest-meta">
-                            <span v-if="!q._success">
-        {{ t('locationQuests.awards') }} {{ q.rewards.points }}
-        <img src="assets/images/articlus.png" alt="Артиклюсы" class="icon-articlus">,
-        {{ q.rewards.xp }} XP
-    </span>
+                            <span v-if="!q._success" class="rewards-container">
+                                <span class="reward-item">
+                                    {{ q.rewards.points }}
+                                    <img src="assets/images/articlus.png" alt="Артиклюсы" class="icon-articlus">
+                                </span>
+                                <span class="reward-item">
+                                    {{ q.rewards.xp }} XP
+                                </span>
+                            </span>
                             <span v-else>{{ t('locationQuests.gotAward') }}</span>
                         </div>
                         <button class="btn" @click="startQuest(q)">
@@ -349,6 +353,8 @@ function goHome() {
     margin: 6px 0;
 }
 
+/* === ИЗМЕНЕНИЯ НАЧИНАЮТСЯ ЗДЕСЬ === */
+
 .quest-meta {
     margin-top: auto;
     display: flex;
@@ -356,15 +362,32 @@ function goHome() {
     flex-wrap: wrap;
 }
 
-.quest-meta span {
-    display: inline-block;
-    padding: 6px 10px;
+.quest-meta .rewards-container {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px; /* Расстояние между XP и артиклями */
+    padding: 6px 12px;
     font-size: 14px;
     background: #FFF3D7;
     border: 3px solid #111;
     border-radius: 999px;
     box-shadow: 4px 4px 0 #2b2b2b;
 }
+
+.reward-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px; /* Расстояние между числом и иконкой/текстом */
+}
+
+.icon-articlus {
+    width: 30px;  /* Размер для десктопа */
+    height: 27px;
+    vertical-align: middle;
+}
+
+/* === ИЗМЕНЕНИЯ ЗАКАНЧИВАЮТСЯ ЗДЕСЬ === */
 
 .btn {
     position: relative;
@@ -417,45 +440,17 @@ function goHome() {
     }
 }
 
-.quest-card:nth-child(1) {
-    animation-delay: .02s;
-}
+.quest-card:nth-child(1) { animation-delay: .02s; }
+.quest-card:nth-child(2) { animation-delay: .06s; }
+.quest-card:nth-child(3) { animation-delay: .10s; }
+.quest-card:nth-child(4) { animation-delay: .14s; }
+.quest-card:nth-child(5) { animation-delay: .18s; }
+.quest-card:nth-child(6) { animation-delay: .22s; }
+.quest-card:nth-child(7) { animation-delay: .26s; }
+.quest-card:nth-child(8) { animation-delay: .30s; }
+.quest-card:nth-child(9) { animation-delay: .34s; }
+.quest-card:nth-child(10) { animation-delay: .38s; }
 
-.quest-card:nth-child(2) {
-    animation-delay: .06s;
-}
-
-.quest-card:nth-child(3) {
-    animation-delay: .10s;
-}
-
-.quest-card:nth-child(4) {
-    animation-delay: .14s;
-}
-
-.quest-card:nth-child(5) {
-    animation-delay: .18s;
-}
-
-.quest-card:nth-child(6) {
-    animation-delay: .22s;
-}
-
-.quest-card:nth-child(7) {
-    animation-delay: .26s;
-}
-
-.quest-card:nth-child(8) {
-    animation-delay: .30s;
-}
-
-.quest-card:nth-child(9) {
-    animation-delay: .34s;
-}
-
-.quest-card:nth-child(10) {
-    animation-delay: .38s;
-}
 
 @media (max-width: 767px) {
     .close-btn {
@@ -486,23 +481,11 @@ function goHome() {
         transform: scale(.9) rotate(8deg);
     }
 
+    /* ИСПРАВЛЕННЫЙ РАЗМЕР ИКОНКИ ДЛЯ МОБИЛЬНЫХ */
     .icon-articlus {
-        display: inline-block;
-        vertical-align: middle;
-        margin: 0 4px;
-        width: 1em;
-        height: 1em;
-        object-fit: contain;
-        transform: translateY(-1px); /* идеально центрирует */
+        width: 22px;
+        height: 20px;
     }
-    .quest-meta span {
-        display: inline-flex;
-        align-items: center;
-        gap: 4px;
-        flex-wrap: wrap;
-        line-height: 1.3;
-    }
-
 }
 
 @media (min-width: 1024px) {
@@ -587,7 +570,7 @@ function goHome() {
         font-size: 14px;
     }
 
-    .quest-meta span {
+    .quest-meta .rewards-container {
         font-size: 13px;
         padding: 4px 8px;
         box-shadow: 3px 3px 0 #2b2b2b;
@@ -610,7 +593,6 @@ function goHome() {
         box-shadow: 3px 3px 0 #2b2b2b;
     }
 
-    /* убираем декоративный значок с заголовка */
     .location-header::after {
         content: none;
     }
