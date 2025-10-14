@@ -1,9 +1,8 @@
 <template>
   <div class="points">
-    <VTips
-        :title="articleData.title"
-        :tips="articleData.tips"
-        v-model="isArticleOpen"
+    <VTips :title="articleData.title"
+           :tips="articleData.tips"
+           v-model="isArticleOpen"
     />
     <section class="points-card" aria-label="Поинты и уровень">
       <header class="points-card__header">
@@ -14,33 +13,35 @@
           <div class="points-card__label">{{ t('accountPanel.articles') }}</div>
           <button :title="hoverTitle.title" v-if="userAuth.uid" @click="openArticleModal" class="articlus__wrapper">
             <img class="articlus__icon" src="../../assets/images/articlus.png" alt="Articlus_icon">
-            <span class="points-card__value"> {{ langStore.points }}</span>
+            <span class="points-card__value">{{ langStore.points }}</span>
           </button>
         </li>
+
         <li class="points-card__item">
           <span class="points-card__label">{{ t('accountPanel.level') }}</span>
           <span :title="hoverTitle.level" class="points-card__badge">{{ langStore.isLeveling }}</span>
         </li>
-        <div class="points-card__progress">
 
+        <!-- прогресс тоже li -->
+        <li class="points-card__item points-card__progress">
           <div class="progress_exp-bar">
-            <div class="progress__bar" :style="{width: `${(langStore.exp / 100) * 100}%`}"></div>
+            <div class="progress__bar" :style="{ width: `${(langStore.exp / 100) * 100}%` }"></div>
             <div class="progress__meta">{{ langStore.exp }}/100 XP</div>
           </div>
-        </div>
-        <ul v-if="langStore" class="points-card__list">
-          <div v-for="section in sections" :key="section.key" class="ranked__wrapper">
-            <div class="ranked__inner">
-              <div class="ranked__title-icon">
-                <img class="points-card__title-icon" :src="section.icon" :alt="`${section.key}_icon`"/>
-                <div class="ranked__title">{{ section.title }}</div>
-              </div>
-              <button @click="pathTo(section.route)" class="stats__btn">
-                <img class="stat__icon" src="../../assets/images/dailyIcons/arrow-to.svg" alt="Arrow_icon"/>
-              </button>
+        </li>
+      </ul>
+      <ul v-if="langStore" class="points-card__list">
+        <li v-for="section in sections" :key="section.key" class="ranked__wrapper">
+          <div class="ranked__inner">
+            <div class="ranked__title-icon">
+              <img class="points-card__title-icon" :src="section.icon" :alt="`${section.key}_icon`" />
+              <div class="ranked__title">{{ section.title }}</div>
             </div>
+            <button @click="pathTo(section.route)" class="stats__btn">
+              <img class="stat__icon" src="../../assets/images/dailyIcons/arrow-to.svg" alt="Arrow_icon" />
+            </button>
           </div>
-        </ul>
+        </li>
       </ul>
       <div v-if="!userAuth.isPremium" class="sub-actions">
         <article class="super-card">
@@ -53,7 +54,6 @@
           </button>
         </article>
       </div>
-
     </section>
   </div>
 </template>
@@ -67,6 +67,7 @@ import {onMounted, ref, watch} from "vue";
 import Graph from '../../assets/images/graph.svg'
 import AchPanelIcon from '../../assets/images/AchPanelIcon.svg'
 import RankedIcon from '../../assets/images/RankedIcon.svg'
+import Calendar from '../../assets/images/calendar (2).svg'
 
 const {t} = useI18n()
 const langStore = userlangStore()
@@ -81,7 +82,6 @@ const handleLeveling = () => {
     langStore.exp -= LEVEL_UP_XP
   }
 }
-
 const hoverTitle = {
   title: t('hoverTitle.articles'),
   level: t('hoverTitle.level')
@@ -90,8 +90,8 @@ const sections = ref([
   {key: "stats", icon: Graph, alt: 'Graph', title: t('accountPanel.stats'), route: "/statistics"},
   {key: "achievement", icon: AchPanelIcon, alt: 'AchPanel', title: t('accountPanel.achievement'), route: "/achievements"},
   {key: "ranked", icon: RankedIcon, alt: 'Ranked', title: t('accountPanel.ranked'), route: "/leaderboard"},
+  {key: "calendar", icon: Calendar, alt: 'Ranked', title:'Календарь событий', route: "/calendar" },
 ])
-
 
 const pathTo = (route) => {
   router.push(route)
@@ -100,7 +100,6 @@ const pathTo = (route) => {
 const toPayment = () => {
   router.push('/pay')
 }
-
 
 const openArticleModal = () => isArticleOpen.value = true
 const articleData = ref({
@@ -139,46 +138,20 @@ onMounted(() => {
   border-bottom: 2px dashed var(--border);
 }
 
-.stats__title,
+.ranked__wrapper:last-child .ranked__inner {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
 .ranked__title {
   color: var(--titleColor);
-  font-size: 22px;
+  font-size: 21px;
   margin-left: 8px;
   font-weight: 600;
 }
 
 .points__title {
   color: var(--titleColor);
-}
-
-.points__stat-title {
-  display: flex;
-  align-items: center;
-}
-
-.points__stat-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 10px;
-  margin-bottom: 15px;
-  padding-bottom: 15px;
-  border-bottom: 2px dashed var(--border);
-}
-
-.list__item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  border: 3px solid black;
-  border-radius: 15px;
-  background: wheat;
-  padding: 4px 10px;
-  font-weight: 600;
-  font-family: "Nunito", sans-serif;
-  box-shadow: 3px 3px 0 black;
-  margin-bottom: 10px;
 }
 
 .stat__icon {
@@ -208,13 +181,6 @@ onMounted(() => {
   background: none;
 }
 
-.points__statistics__items {
-  display: flex;
-  flex-direction: column;
-  margin-top: 10px;
-  border-top: 2px dashed var(--border);
-}
-
 .articlus__wrapper {
   display: flex;
   border: 2px solid black;
@@ -237,21 +203,6 @@ onMounted(() => {
   min-width: 340px;
   display: flex;
   width: 100%;
-}
-
-.list__avatar {
-  width: 37px;
-  border-radius: 50%;
-  border: 2px solid black;
-}
-
-.list {
-  padding: 10px;
-  border: 3px solid black;
-  border-radius: 15px;
-  box-shadow: 3px 3px 0 black;
-  margin-bottom: 10px;
-  background: white;
 }
 
 .points-card {
@@ -281,16 +232,6 @@ onMounted(() => {
 
 .points-card__header {
   margin-bottom: 12px;
-}
-
-.points-card__title {
-  display: inline-block;
-  padding: 8px 0;
-  color: black;
-  border-radius: 14px;
-  font-size: 20px;
-  font-family: "Nunito", sans-serif;
-  margin-bottom: 10px;
 }
 
 .points-card__list {
@@ -327,7 +268,6 @@ onMounted(() => {
   color: #111;
 }
 
-
 .points-card__badge {
   font-size: 18px;
   font-weight: 600;
@@ -339,68 +279,10 @@ onMounted(() => {
   padding: 4px 10px;
 }
 
-.sub-badge {
-  font-size: 14px;
-  font-weight: 600;
-  border: 3px solid #111;
-  border-radius: 999px;
-  padding: 3px 10px;
-  background: #fff;
-  font-family: "Nunito", sans-serif;
-}
-
-.sub-badge--off {
-  position: relative;
-  padding-left: 28px;
-}
-
-.sub-badge--off::before {
-  content: "";
-  position: absolute;
-  left: 8px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: #ff4d4f;
-  border: 2px solid #111;
-}
-
 .sub-actions {
   margin-top: 10px;
   display: flex;
   justify-content: flex-end;
-}
-
-.btn-activate {
-  text-align: center;
-  width: 100%;
-  background: #fff;
-  color: #111;
-  font-size: 18px;
-  border: 3px solid #111;
-  border-radius: 15px;
-  padding: 10px 16px;
-  font-weight: 600;
-  box-shadow: 4px 4px 0 #111;
-  cursor: pointer;
-  font-family: "Nunito", sans-serif;
-  transition: transform .06s ease, box-shadow .06s ease, background .2s ease;
-}
-
-.btn-activate:hover {
-  background: #ffe78a;
-}
-
-.btn-activate:active {
-  transform: translate(3px, 3px);
-  box-shadow: 1px 1px 0 #111;
-}
-
-.btn-activate__icon {
-  font-size: 16px;
-  line-height: 1;
 }
 
 .points-card__progress {
@@ -426,9 +308,11 @@ onMounted(() => {
   .points-card {
     padding: 14px;
   }
-
   .points-card__value {
     font-size: 16px;
+  }
+  .ranked__title {
+    font-size: 18px;
   }
 }
 
@@ -450,7 +334,6 @@ onMounted(() => {
   color: var(--titleColor);
   margin-bottom: 8px;
 }
-
 
 .super-card__cta {
   width: 100%;
@@ -483,6 +366,4 @@ onMounted(() => {
   padding: 10px 0;
   color: var(--titleColor);
 }
-
-
 </style>

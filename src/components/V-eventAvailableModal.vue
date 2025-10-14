@@ -21,9 +21,7 @@ import {ref, watch, computed, onMounted, onUnmounted} from "vue";
 import VShowFall from "../components/V-showFall.vue";
 import Wreath from "../../assets/images/mery-christmas/christmas-wreath.svg";
 import Pumpkin from "../../assets/images/mery-christmas/pumkin.svg";
-
 const router = useRouter();
-
 const props = defineProps({
   visible: {type: Boolean, default: true},
   schedule: {
@@ -47,7 +45,10 @@ const props = defineProps({
       }
     ]
   },
-  tickMs: {type: Number, default: 1000}
+  tickMs: {
+    type: Number,
+    default: 1000
+  }
 });
 
 const emit = defineEmits(["close"]);
@@ -89,25 +90,25 @@ function handleCloseClick() {
   emit("close", false);
 }
 
-onMounted(() => {
-  if (props.visible && isModalOpen.value) document.body.style.overflow = "hidden";
-  intervalId = setInterval(() => {
-    currentTime.value = new Date();
-  }, props.tickMs);
-});
+// onMounted(() => {
+//   if (props.visible && isModalOpen.value) document.body.style.overflow = "hidden";
+//   intervalId = setInterval(() => {
+//     currentTime.value = new Date();
+//   }, props.tickMs);
+// });
+//
+// onUnmounted(() => {
+//   document.body.style.overflow = "";
+//   if (intervalId) clearInterval(intervalId);
+// });
 
-onUnmounted(() => {
-  document.body.style.overflow = "";
-  if (intervalId) clearInterval(intervalId);
-});
-
-watch(
-    () => [props.visible, isModalOpen.value],
-    ([isVisible, open]) => {
-      document.body.style.overflow = isVisible && open ? "hidden" : "";
-    },
-    {immediate: true}
-);
+// watch(
+//     () => [props.visible, isModalOpen.value],
+//     ([isVisible, open]) => {
+//       document.body.style.overflow = isVisible && open ? "hidden" : "";
+//     },
+//     {immediate: true}
+// );
 </script>
 
 <style scoped>

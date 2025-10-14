@@ -52,7 +52,7 @@ const close = () => {
   padding: 2rem;
   border-radius: 16px;
   border: 3px solid #1e1e1e;
-  box-shadow: 8px 8px 0 #1e1e1e;
+  box-shadow: 4px 4px 0 #1e1e1e;
   width: 90%;
   max-width: 500px;
 }
