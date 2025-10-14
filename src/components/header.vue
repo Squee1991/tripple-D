@@ -8,9 +8,11 @@
     <ModalDev
         :visible="showDevModal"
         @close="closeDevModal"
-        :title="t('inDevelopment.title')"
-        :img="Dev"
-        :text="t('inDevelopment.sub')"
+        :title="modalConfig.title"
+        :img="modalConfig.img"
+        :text="modalConfig.text"
+        :button="modalConfig.isEvent ? modalConfig.button : null"
+        @button="onDevModalButton"
     />
     <div class="header-container">
       <NuxtLink to="/" class="logo" aria-label="German Corner — Home">
@@ -119,196 +121,292 @@
 </template>
 
 <script setup>
-import {ref, watch, onMounted, onBeforeUnmount, computed} from 'vue'
-import {useRouter} from 'vue-router'
-import {userAuthStore} from '../../store/authStore.js'
-import {useBreakPointsStore} from '../../store/breakPointsStore.js'
+import { ref, computed, watch, onMounted, onBeforeUnmount } from 'vue'
+import { useRouter } from 'vue-router'
+import { userAuthStore } from '../../store/authStore.js'
+import { useBreakPointsStore } from '../../store/breakPointsStore.js'
+
 import SignIn from '../components/logIn.vue'
 import LanguageSelector from '../components/langSwitcher.vue'
 import ForTea from '../components/forTea.vue'
 import BurgerMenu from '../components/burgerMenu.vue'
 import UiOverlay from '../components/Uioverlay.vue'
 import ModalDev from '../components/modal.vue'
+
 import Arrow from '../../assets/images/arrowNav.svg'
 import Dev from '../../assets/images/dev.svg'
 import User from '../../assets/images/account.svg'
 import Logout from '../../assets/images/logout.svg'
-import VTips from "~/src/components/V-tips.vue";
-const { t, locale } = useI18n()
-const isAr = computed(() => locale.value === 'ar')
+import PadLock from '../../assets/images/padlock.svg'
 
-const bp = useBreakPointsStore()
+
 const router = useRouter()
+const { t, locale } = useI18n()
+const bp = useBreakPointsStore()
 const userAuth = userAuthStore()
+
 const showAuth = ref(false)
 const menuOpen = ref(false)
 const isMobileMenuOpen = ref(false)
+
 const clickedMenu = ref(null)
-const showDevModal = ref(false)
 const clickedSubChild = ref(null)
-const userBtnRef = ref(null);
+
+const showDevModal = ref(false)
+const modalType = ref(null)
+
+const userBtnRef = ref(null)
 const dropdownRef = ref(null)
 const dropdownRefNav = ref(null)
-const isMobile = computed(() => bp.isMobile);
+const isAr = computed(() => locale.value === 'ar')
+const isMobile = computed(() => bp.isMobile)
 
-const closeAllMenus = () => {
-  isMobileMenuOpen.value = false;
-  clickedMenu.value = null;
-  clickedSubChild.value = null;
-}
-const handleMenuItemClick = (item) => {
-  if (item.children) {
-    clickedMenu.value = clickedMenu.value === item.id ? null : item.id;
-    clickedSubChild.value = null;
-  } else if (item.action) {
-    item.action();
-    closeAllMenus();
-  } else if (item.url) {
-    closeAllMenus();
+const modalConfig = computed(() => {
+  switch (modalType.value) {
+    case 'dev':
+      return {
+        isEvent: false,
+        title: t('inDevelopment.title'),
+        text: t('inDevelopment.sub'),
+        button: null,
+        img: Dev,
+      }
+    case 'eventLocked':
+      return {
+        isEvent: true,
+        title: 'Ивент недоступен',
+        text: 'Событие недоступно. Загляни в календарь событий, чтобы узнать даты.',
+        button: { label: 'Посмотреть календарь', to: '/calendar' },
+        img: PadLock,
+      }
+    default:
+      return { isEvent: false, title: '', text: '', button: null, img: Dev }
   }
-}
-const handleSubmenuItemClick = (childItem) => {
-  if (childItem.subChildren) {
-    clickedSubChild.value = clickedSubChild.value === childItem.id ? null : childItem.id;
-  } else if (childItem.action) {
-    childItem.action();
-    closeAllMenus();
-  } else if (childItem.url) {
-    closeAllMenus();
+})
+
+const menuItems = computed(() => {
+  const items = [
+    ...(userAuth.uid
+        ? [
+          {
+            id: 'learn',
+            valueKey: 'nav.training',
+            children: [
+              {
+                id: 'articles',
+                valueKey: 'sub.articles',
+                subChildren: [
+                  { id: 'learn-tips', url: '/article-basic', valueKey: 'underSub.prev' },
+                  { id: 'learn-rules', url: '/article-theory', valueKey: 'underSub.rules' },
+                  { id: 'learn-selectedTopics', url: '/articles', valueKey: 'underSub.artRules' },
+                ],
+              },
+              {
+                id: 'verbs',
+                valueKey: 'sub.verbs',
+                subChildren: [
+                  { id: 'verb-theory', url: '/verbs-theory', valueKey: 'underSub.verbsTheory' },
+                  { id: 'tenses', url: '/tenses', valueKey: 'underSub.verbFirst' },
+                  { id: 'modalVerbs', url: '/modal-verbs', valueKey: 'underSub.verbSecond' },
+                  { id: 'verb-types', url: '/verb-types', valueKey: 'underSub.verbTypes' },
+                ],
+              },
+              {
+                id: 'prepositions',
+                valueKey: 'sub.prepositions',
+                subChildren: [
+                  { id: 'prepositions-theory', url: '/prepositions-theory', valueKey: 'underSub.rules' },
+                  { id: 'prepositions-practice', url: '/prepositions', valueKey: 'underSub.prepositions' },
+                ],
+              },
+              {
+                id: 'adjectives',
+                valueKey: 'sub.adjectives',
+                subChildren: [
+                  { id: 'adjectives-theory', url: '/adjectives-theory', valueKey: 'underSub.adjectiveTheory' },
+                  { id: 'adjectives-basic', url: '/adjective-basics', valueKey: 'underSub.adjectivesBasic' },
+                  { id: 'declination', url: '/adjective-declension', valueKey: 'underSub.declination' },
+                  { id: 'comparison', url: '/adjective-comparison', valueKey: 'underSub.comparison' },
+                ],
+              },
+              { id: 'themen', url: '/thematic-learning', valueKey: 'sub.themen' },
+              { id: 'cards', url: '/create-cards', valueKey: 'sub.card' },
+              { id: 'idioms', url: '/idioms', valueKey: 'sub.idioms' },
+            ],
+          },
+          {
+            id: 'duel',
+            valueKey: 'nav.gameMode',
+            children: [
+              { id: 'duel-pvp', valueKey: 'sub.pvp', action: openDevModal },
+              { id: 'wordDuel', url: '/sentence-duel', valueKey: 'sub.wordDuel' },
+              { id: 'quests', url: '/recipes', valueKey: 'sub.quests' },
+              { id: 'duel-guess', url: '/guess-word', valueKey: 'sub.guess' },
+              { id: 'articlemarathon', url: '/article-marathon', valueKey: 'sub.marathon' },
+            ],
+          },
+        ]
+        : [
+          { id: 'about', valueKey: 'nav.about', url: '/info-about' },
+          { id: 'contact', valueKey: 'nav.contact', url: '/support-request' },
+          { id: 'faq', valueKey: 'nav.quest', url: '/faq' },
+        ]),
+    ...(userAuth.uid ? [{ id: 'test', url: '/exams', valueKey: 'nav.tests' }] : []),
+  ]
+
+  if (userAuth.uid) {
+    const allEvents = [
+      { id: 'winter-event', valueKey: 'Шепот зимы', url: '/event-winter', isEvent: true, eventKey: 'winter', startDate: '14.10', endDate: '07.01' },
+      { id: 'valentine', valueKey: 'День Купидона', url: '/event-valentine', isEvent: true, eventKey: 'valentine', startDate: '14.02', endDate: '27.02' },
+      { id: 'april', valueKey: 'Шутим', url: '/event-joke', isEvent: true, eventKey: 'fools', startDate: '01.04', endDate: '01.04' },
+      { id: 'halloween', valueKey: 'Праздник тыкв', url: '/event-halloween', isEvent: true, eventKey: 'pumpkin', startDate: '31.10', endDate: '07.11' },
+    ]
+
+    const processedEvents = allEvents.map(event => ({
+      ...event,
+      url: isEventActive(event.startDate, event.endDate) ? event.url : null,
+    }))
+
+    items.push({
+      id: 'events',
+      valueKey: 'События',
+      children: processedEvents,
+    })
   }
-}
-const openDevModal = () => showDevModal.value = true
-const closeDevModal = () => showDevModal.value = false
-const closeAuth = () => showAuth.value = false
-const openAuth = () => showAuth.value = true
-const menuItems = computed(() => [
-  ...(userAuth.uid ?
-          [
-            {
-              id: 'learn',
-              valueKey: 'nav.training',
-              children: [
-                {
-                  id: 'articles',
-                  valueKey: 'sub.articles',
-                  subChildren: [
-                    {id: 'learn-tips', url: '/article-basic', valueKey: 'underSub.prev'},
-                    {id: 'learn-rules', url: '/article-theory', valueKey: 'underSub.rules'},
-                    {id: 'learn-selectedTopics', url: '/articles', valueKey: 'underSub.artRules'},
-                  ]
-                },
-                {
-                  id: 'verbs',
-                  valueKey: 'sub.verbs',
-                  subChildren: [
-                    {id: 'verb-theory', url: '/verbs-theory', valueKey: 'underSub.verbsTheory'},
-                    {id: 'tenses', url: '/tenses', valueKey: 'underSub.verbFirst'},
-                    {id: 'modalVerbs', url: '/modal-verbs', valueKey: 'underSub.verbSecond'},
-                    {id: 'verb-types', url: '/verb-types', valueKey: 'underSub.verbTypes'},
-                  ]
-                },
-                {
-                  id: 'prepositions', valueKey: 'sub.prepositions',
-                  subChildren: [
-                    {id: 'prepositions-theory', url: '/prepositions-theory', valueKey: 'underSub.rules'},
-                    {id: 'prepositions-practice', url: '/prepositions', valueKey: 'underSub.prepositions'},
-                  ]
-                },
-                {
-                  id: 'adjectives',
-                  valueKey: 'sub.adjectives',
-                  subChildren: [
-                    {id: 'adjectives-theory', url: '/adjectives-theory', valueKey: 'underSub.adjectiveTheory'},
-                    {id: 'adjectives-basic', url: '/adjective-basics', valueKey: 'underSub.adjectivesBasic'},
-                    {id: 'declination', url: '/adjective-declension', valueKey: 'underSub.declination'},
-                    {id: 'comparison', url: '/adjective-comparison', valueKey: 'underSub.comparison'},
-                  ]
-                },
-                // {id: 'lands', url: 'lands', valueKey: 'sub.languagesLands'},
-                {id: 'themen', url: '/thematic-learning', valueKey: 'sub.themen'},
-                {id: 'cards', url: '/create-cards', valueKey: 'sub.card'},
-                {id: 'idioms', url: '/idioms', valueKey: 'sub.idioms'}
-              ],
-            },
-            {
-              id: 'duel',
-              valueKey: 'nav.gameMode',
-              children: [
-                {id: 'duel-pvp', valueKey: 'sub.pvp', action: openDevModal},
-                {id: 'wordDuel', url: '/sentence-duel', valueKey: 'sub.wordDuel'},
-                {id: 'quests', url: '/recipes', valueKey: 'sub.quests'},
-                {id: 'duel-guess', url: '/guess-word', valueKey: 'sub.guess'},
-                {id: 'articlemarathon', url: '/article-marathon', valueKey: 'sub.marathon'},
-              ]
-            },
-          ] :
-          [
-            {id: 'about', valueKey: 'nav.about', url: '/info-about',},
-            {id: 'contact', valueKey: 'nav.contact', url: '/support-request',},
-            {id: 'faq', valueKey: 'nav.quest', url: '/faq',},
-          ]
-  ),
-  ...(userAuth.uid
-      ? [{id: 'test', url: '/exams', valueKey: 'nav.tests'}]
-      : []),
-  ...(userAuth.uid
-      ? [
-        {id: 'events', valueKey: 'События' , children: [
-            {id: 'winter-event' , valueKey: 'Шепот зимы' , url: '/event-winter'},
-            {id: 'valentine' , valueKey: 'День Купидона' , url: '/event-valentine'},
-            {id: 'april' , valueKey: 'Праздник Цветения' , url: '/event-joke'},
-            {id: 'halloween' , valueKey: 'Праздник тыкв' , url: '/event-halloween'},
-          ]},
-      ] : [])
-])
+
+  return items
+})
 
 const menuActions = ref([
-  {id: 'cabinet', label: 'auth.cabinet', icon: User, action: () => goTo('cabinet')},
-  {id: 'logout', label: 'auth.logOut', icon: Logout, action: () => userAuth.logOut()}
+  { id: 'cabinet', label: 'auth.cabinet', icon: User, action: () => goTo('cabinet') },
+  { id: 'logout', label: 'auth.logOut', icon: Logout, action: () => userAuth.logOut() },
 ])
 
-const toggleMenu = () => menuOpen.value = !menuOpen.value
+const closeAllMenus = () => {
+  isMobileMenuOpen.value = false
+  clickedMenu.value = null
+  clickedSubChild.value = null
+}
+
+const openDevModal = () => openModal('dev')
+const openModal = (type) => {
+  modalType.value = type
+  showDevModal.value = true
+}
+
+const openEventLockedModal = () => openModal('eventLocked')
+
+const onDevModalButton = () => {
+  const btn = modalConfig.value.button
+  if (!modalConfig.value.isEvent || !btn?.to) return
+  showDevModal.value = false
+  router.push(btn.to)
+}
+
+const closeDevModal = () => {
+  showDevModal.value = false
+  modalType.value = null
+}
+
+const closeAuth = () => (showAuth.value = false)
+const openAuth = () => (showAuth.value = true)
+
+const toggleMenu = () => (menuOpen.value = !menuOpen.value)
 
 const goTo = (page) => {
   menuOpen.value = false
-  router.push({path: `/${page}`})
+  router.push({ path: `/${page}` })
+}
+
+const handleMenuItemClick = (item) => {
+  if (item.children) {
+    clickedMenu.value = clickedMenu.value === item.id ? null : item.id
+    clickedSubChild.value = null
+  } else if (item.action) {
+    item.action()
+    closeAllMenus()
+  } else if (item.url) {
+    closeAllMenus()
+  }
+}
+
+const handleSubmenuItemClick = (childItem) => {
+  if (childItem.isEvent && !childItem.url) {
+    openEventLockedModal()
+    return
+  }
+  if (childItem.subChildren) {
+    clickedSubChild.value = clickedSubChild.value === childItem.id ? null : childItem.id
+  } else if (childItem.action) {
+    childItem.action()
+    closeAllMenus()
+  } else if (childItem.url) {
+    closeAllMenus()
+  }
+}
+
+const isEventActive = (startDateStr, endDateStr) => {
+  const today = new Date()
+  const currentYear = today.getFullYear()
+  today.setHours(0, 0, 0, 0)
+
+  const [startDay, startMonth] = startDateStr.split('.').map(Number)
+  const [endDay, endMonth] = endDateStr.split('.').map(Number)
+
+  let startDate = new Date(currentYear, startMonth - 1, startDay)
+  let endDate = new Date(currentYear, endMonth - 1, endDay)
+
+  if (startDate > endDate) {
+    if (today.getMonth() < startDate.getMonth()) {
+      startDate.setFullYear(currentYear - 1)
+    } else {
+      endDate.setFullYear(currentYear + 1)
+    }
+  }
+  return today >= startDate && today <= endDate
 }
 
 const handleClickOutside = (event) => {
-  if (menuOpen.value && dropdownRef.value && !dropdownRef.value.contains(event.target) && userBtnRef.value && !userBtnRef.value.contains(event.target)) {
+  if (
+      menuOpen.value &&
+      dropdownRef.value &&
+      !dropdownRef.value.contains(event.target) &&
+      userBtnRef.value &&
+      !userBtnRef.value.contains(event.target)
+  ) {
     menuOpen.value = false
   }
   if (clickedMenu.value && dropdownRefNav.value && !dropdownRefNav.value.contains(event.target)) {
-    closeAllMenus();
+    closeAllMenus()
   }
 }
+
+watch(showAuth, (val) => {
+  document.body.style.overflow = val ? 'hidden' : ''
+})
+
+watch(showDevModal, (val) => {
+  document.body.style.overflow = val ? 'hidden' : ''
+})
+
+watch(isMobile, (isNowMobile) => {
+  if (!isNowMobile) closeAllMenus()
+})
+
+watch(isMobileMenuOpen, (newVal) => {
+  document.body.style.overflow = newVal ? 'hidden' : ''
+})
 
 onMounted(() => {
   document.addEventListener('mousedown', handleClickOutside)
 })
+
 onBeforeUnmount(() => {
   document.removeEventListener('mousedown', handleClickOutside)
-  document.body.style.overflow = '';
+  document.body.style.overflow = ''
 })
-watch(showAuth, (val) => {
-  document.body.style.overflow = val ? 'hidden' : ''
-})
-watch(showDevModal, (val) => {
-  document.body.style.overflow = val ? 'hidden' : ''
-})
-watch(isMobile, (isNowMobile) => {
-  if (!isNowMobile) closeAllMenus();
-});
-
-watch(isMobileMenuOpen, (newVal) => {
-  if (newVal) document.body.style.overflow = 'hidden';
-  else document.body.style.overflow = '';
-});
-
 </script>
-
 <style scoped>
-
 .header-user-wrapper {
   position: relative;
 }

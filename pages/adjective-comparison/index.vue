@@ -101,7 +101,7 @@
     import VTips from '../../src/components/V-tips.vue';
     import { useHead, useSeoMeta } from '#imports'
     const canonical = useCanonical()
-
+    const {t} = useI18n()
     const baseTitle = t('adjectiveComparisonPage.title')
     const pageDesc  = t('adjectiveComparisonPage.description')
     useHead({
@@ -122,7 +122,6 @@
       robots: 'index, follow'
     })
 
-    const {t} = useI18n()
     const router = useRouter();
     const categoryId = 'adjective-comparison';
     const topics = [

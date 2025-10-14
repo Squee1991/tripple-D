@@ -10,21 +10,32 @@
       </div>
     </header>
     <main class="main">
-<!--      <div v-if="loading" class="loading">{{ t('prasens.loading') }}</div>-->
       <div v-if="loading" class="loading">
          <VPreloader/>
       </div>
       <div v-else-if="store.quizCompleted" class="finish-screen">
-        <CelebrationFireworks
-            :key="`cw-${startExpLocal}-${targetExpLocal}-${startPointsLocal}-${targetPointsLocal}`"
-            :start-exp="startExpLocal"
-            :target-exp="targetExpLocal"
-            :start-points="startPointsLocal"
-            :target-points="targetPointsLocal"
-            :level-start="startLevelLocal"
-            :level-end="endLevelLocal"
-        />
-        <div class="actions"></div>
+        <template v-if="isVictory">
+          <CelebrationFireworks
+              :key="`cw-${startExpLocal}-${targetExpLocal}-${startPointsLocal}-${targetPointsLocal}`"
+              :start-exp="startExpLocal"
+              :target-exp="targetExpLocal"
+              :start-points="startPointsLocal"
+              :target-points="targetPointsLocal"
+              :level-start="startLevelLocal"
+              :level-end="endLevelLocal"
+          />
+        </template>
+        <template v-else>
+          <div class="fail-card">
+            <p class="fail-emoji">🌱✨</p>
+            <p class="fail-text">Правильных {{ store.score }} из {{ store.currentQuestions.length }}.</p>
+            <p class="fail-sub">Для получения награды нужно минимум восемь правильных ответов<br>Попробуй ещё раз — у тебя получится!</p>
+            <div class="fail-actions">
+              <button class="btn try-again" @click="retryQuiz">Попробовать снова</button>
+              <button class="btn back" @click="backTo">Назад</button>
+            </div>
+          </div>
+        </template>
       </div>
       <div v-else-if="store.activeQuestion" class="quiz">
         <div class="question">
@@ -80,7 +91,6 @@ import { userlangStore } from '../../store/learningStore.js'
 import CelebrationFireworks from '../../src/components/CelebrationFireworks.vue'
 import SoundBtn from '../../src/components/soundBtn.vue'
 useSeoMeta({ robots: 'noindex, nofollow' })
-
 const AWARD_EXP = 5
 const AWARD_POINTS = 5
 const DELAY_MS = 4000
@@ -95,6 +105,15 @@ const { t } = useI18n()
 const loading = ref(true)
 const category = 'adjective-basics'
 const { topicId } = route.params
+
+const isVictory = computed(() => {
+  return store.currentQuestions.length === 10 && store.score >= 8
+})
+
+const retryQuiz = async () => {
+  const fileName = `/adjective/${category}-${topicId}.json`
+  await store.startNewQuiz({ modeId: category, topicId, fileName, contentVersion: 'v1' })
+}
 
 const fullSentence = computed(() => {
   const q = store.activeQuestion
@@ -295,10 +314,82 @@ watch(() => store.quizCompleted, async (done) => {
   width: 100%;
 }
 
-.actions {
+.fail-card {
+  max-width: 600px;
+  width: 90%;
+  background: #e0f7fa;
+  border: 4px solid #000;
+  border-radius: 20px;
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 5px 5px 0 #000;
+  transform: rotate(-1deg);
+  font-family: "Nunito", sans-serif;
+  animation: popIn 0.5s ease-out;
+}
+
+.fail-emoji {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.fail-text {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #0077b6;
+}
+
+.fail-sub {
+  font-size: 1.2rem;
+  margin-bottom: 24px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.fail-actions {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  justify-content: center;
+  gap: 16px;
+}
+
+.btn.try-again {
+  background: #06d6a0;
+  color: #fff;
+  border: 3px solid #000;
+  border-radius: 12px;
+  padding: 12px 18px;
+  box-shadow: 6px 6px 0 #000;
+  font-weight: 800;
+  transform: rotate(-1deg);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn.try-again:hover {
+  background: #1de9b6;
+}
+
+.btn.back {
+  background: #ffd166;
+  color: #000;
+  border: 3px solid #000;
+  border-radius: 12px;
+  padding: 12px 18px;
+  box-shadow: 6px 6px 0 #000;
+  font-weight: 800;
+  transform: rotate(1deg);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn.back:hover {
+  background: #ffe29a;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.8) rotate(-4deg); opacity: 0; }
+  to   { transform: scale(1) rotate(-1deg); opacity: 1; }
 }
 
 @media (max-width: 767px) {
