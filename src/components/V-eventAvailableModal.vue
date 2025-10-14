@@ -28,7 +28,7 @@ const props = defineProps({
     type: Array,
     default: () => [
       {
-        start: "10-31 00:00",
+        start: "10-13 19:00",
         title: "Хэллоуин",
         text: "Собирай конфеты и не бойся испытаний — новые награды уже ждут!",
         icon: Pumpkin,
@@ -36,7 +36,7 @@ const props = defineProps({
         snow: false,
       },
       {
-        start: "12-01 00:00",
+        start: "10-13 19:04",
         title: "Зимний покров",
         text: "Зимний сезон открыт! Успей принять участие и получить награды.",
         icon: Wreath,
