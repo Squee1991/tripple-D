@@ -30,11 +30,13 @@
         <template v-else>
           <div class="fail-card">
             <p class="fail-emoji">🌱✨</p>
-            <p class="fail-text">Правильных {{ store.score }} из {{ store.currentQuestions.length }}.</p>
-            <p class="fail-sub">Для получения награды нужно минимум восемь правильных ответов<br>Попробуй ещё раз — у тебя получится!</p>
+            <p class="fail-text">{{ t('sessionNotSuccessModal.failText')}} {{ store.score }} / {{ store.currentQuestions.length }}.</p>
+            <p class="fail-sub">
+              {{ t('sessionNotSuccessModal.failSub')}}
+            </p>
             <div class="fail-actions">
-              <button class="btn try-again" @click="retryQuiz">Попробовать снова</button>
-              <button class="btn back" @click="backTo">Назад</button>
+              <button class="btn try-again" @click="retryQuiz">{{ t('sessionNotSuccessModal.again')}}</button>
+              <button class="btn back" @click="backTo">{{ t('sessionNotSuccessModal.back')}}</button>
             </div>
           </div>
         </template>

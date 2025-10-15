@@ -1,4 +1,48 @@
 {
+  "calendarInfo": {
+    "eventsTitle": "Etkinlik Takvimi",
+    "pointsTitle": "Açıklamalar"
+  },
+  "calendarMonths": {
+    "january": "Ocak",
+    "february": "Şubat",
+    "march": "Mart",
+    "april": "Nisan",
+    "may": "Mayıs",
+    "june": "Haziran",
+    "july": "Temmuz",
+    "august": "Ağustos",
+    "september": "Eylül",
+    "october": "Ekim",
+    "november": "Kasım",
+    "december": "Aralık"
+  },
+  "calendarWeekDays": {
+    "monday": "Pzt",
+    "tuesday": "Sal",
+    "wednesday": "Çar",
+    "thursday": "Per",
+    "friday": "Cum",
+    "saturday": "Cmt",
+    "sunday": "Paz"
+  },
+  "eventLocked": {
+    "title": "Etkinlik Kullanılamıyor",
+    "text": "Bu etkinlik şu anda kullanılamıyor. Ayrıntılar ve başlangıç tarihi «Etkinlik Takvimi» içinde bulunabilir.",
+    "btn": "Takvimi Görüntüle"
+  },
+  "eventsNavNames": {
+    "winter": "Kışın Fısıltısı",
+    "valentine": "Kalpler Festivali",
+    "firstApril": "Şaka Geçidi",
+    "halloween": "Balkabağı Şenliği"
+  },
+  "sessionNotSuccessModal": {
+    "failText": "Doğru",
+    "failSub": "Ödülü almak için en az sekiz doğru cevap gerekiyor. Tekrar dene — başarabilirsin!",
+    "again": "Tekrar dene",
+    "back": "Geri"
+  },
   "tabsMobile": {
     "locations": "Bölgeler",
     "daily": "Günlükler",
@@ -253,7 +297,9 @@
     "questSeven": "Sıralamaya nasıl girilir?",
     "answerSeven": "En az 2. seviyeye ulaşmanız gerekir. 'Artikel pratiği' veya 'Dil Diyarı' oynayarak. Bundan sonra sıralama tablosu açılır.",
     "questEight": "Günlük görevler nedir?",
-    "answerEight": "Bunlar konuya göre görevlerdir ve günde bir kez yapılabilir. Günde 3 görev tamamlanabilir. Ana sayfada bulunur."
+    "answerEight": "Bunlar konuya göre görevlerdir ve günde bir kez yapılabilir. Günde 3 görev tamamlanabilir. Ana sayfada bulunur.",
+    "questNine": "Etkinlikler nedir?",
+    "answerNine": "Bunlar yılda bir kez gerçekleşen geçici etkinliklerdir. Aktif dönemde temalı görevler ve ödüller açılır. Tarih aralığı dışında bölüm erişilemez. Etkinlik tarihlerini Katılımcı Paneli'ndeki 'Etkinlik Takvimi'nden görebilirsiniz."
   },
   "accountManagement": {
     "title": "Hesap yönetimi",
@@ -296,7 +342,8 @@
     "eleventh": "Artikel Pratiğinde 10 deneyim puanı kazan"
   },
   "preloader": {
-    "value": "Ana sayfaya yönlendirileceksiniz..."
+    "value": "Ana sayfaya yönlendirileceksiniz...",
+    "sessionTitle": "Almanca dili yükleniyor…"
   },
   "randomPhrases": {
     "first": "Bugün bir adım daha ileri gittin!",
@@ -953,6 +1000,7 @@
     "stats": "İstatistikler",
     "premium": "Abonelik",
     "achievement": "Başarılar",
+    "eventCalendar": "Etkinlik Takvimi",
     "premDescription": "Platformdan en iyi şekilde yararlanın. Öğrenme, ödüller, görevler, ilerleme ve çok daha fazlası!",
     "try": "Dene"
   },
@@ -1265,8 +1313,8 @@
     "explorer": "Kaşifin Küresi",
     "languageLands50": "Kaşifin Pusulası",
     "allVerbs": "Ödül: Eylem Kılıçları",
-    "allAdjectives": "Ödül: Belagat Paleti",
-    "allСases": "Ödül: Birlik Bulmacası",
+    "allAdjectives": "Belagat Paleti",
+    "allCases": "Birlik Bulmacası",
     "fiveHearts": "Hayat Kalkanı",
     "daily42": "Galaktik Teleskop",
     "iAmGroot": "Groot ile Saksı"
@@ -2322,7 +2370,11 @@
     "gameMode": "Oyunlar",
     "tests": "Testler",
     "achieve": "Başarılar",
-    "stats": "Sıralama"
+    "stats": "Sıralama",
+    "about": "Uygulama Hakkında",
+    "contact": "İletişim",
+    "quest": "Soru/Cevap",
+    "events": "Etkinlikler"
   },
   "formLabel": {
     "name": "İsim",

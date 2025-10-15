@@ -6,8 +6,8 @@
       <!--          <span class="logo__name">LEXINGO</span>-->
       <!--        </NuxtLink>-->
       <!--      </div>-->
-      <nav class="footer-links">
-        <ul class="footer__links-nav">
+      <nav v-if="!authStore.uid" class="footer-links">
+        <ul  class="footer__links-nav">
           <li v-for="item in data" :key="item.id" class="footer__links-item">
             <NuxtLink class="footer__link" :to="item.url">
               {{ item.valueKey }}
@@ -85,11 +85,10 @@ const toDiscord = () => {
 
 
 .footer__container {
-  border: 3px solid black;
+  border-top: 3px solid black;
   padding: 40px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  box-shadow: 4px 4px 0 black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   background: #4ade80;
   width: 100%;
 }
@@ -137,29 +136,10 @@ const toDiscord = () => {
 .footer__social-media {
   display: flex;
   gap: 14px;
+  width: 100%;
+  justify-content: center;
 }
 
-.logo__name {
-  color: #e39910;
-  font-family: "Nunito", sans-serif;
-  font-weight: bold;
-  font-size: 2.3rem;
-  font-style: italic;
-  letter-spacing: 5px;
-  text-shadow: 5px 4px 0px white;
-  -webkit-text-stroke: 5px #e39910;
-  transition: .5s;
-}
-
-.logo__name:hover {
-  text-shadow: 5px 4px 3px white;
-  transition: .5s;
-}
-
-.footer-brand {
-  display: flex;
-  align-items: center;
-}
 
 .footer-links {
   flex: 1;
@@ -195,7 +175,7 @@ svg {
   .absolut {
     gap: 13px;
     padding: 10px 15px;
-    position: sticky;
+    position: absolute;
     left: 0;
     bottom: 0;
   }

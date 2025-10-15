@@ -120,8 +120,9 @@ const props = defineProps({
 }
 
 .modal-title {
-  font-size: 2rem;
+  font-size: 1.6rem;
   color: #1e1e1e;
+  font-weight: bold;
   margin-bottom: 1rem;
 }
 

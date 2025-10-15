@@ -1,4 +1,48 @@
 {
+  "calendarInfo": {
+    "eventsTitle": "Kalendarz wydarzeń",
+    "pointsTitle": "Legenda"
+  },
+  "calendarMonths": {
+    "january": "Styczeń",
+    "february": "Luty",
+    "march": "Marzec",
+    "april": "Kwiecień",
+    "may": "Maj",
+    "june": "Czerwiec",
+    "july": "Lipiec",
+    "august": "Sierpień",
+    "september": "Wrzesień",
+    "october": "Październik",
+    "november": "Listopad",
+    "december": "Grudzień"
+  },
+  "calendarWeekDays": {
+    "monday": "Pn",
+    "tuesday": "Wt",
+    "wednesday": "Śr",
+    "thursday": "Cz",
+    "friday": "Pt",
+    "saturday": "Sb",
+    "sunday": "Nd"
+  },
+  "eventLocked": {
+    "title": "Wydarzenie niedostępne",
+    "text": "To wydarzenie jest obecnie niedostępne. Szczegóły i datę rozpoczęcia można znaleźć w «Kalendarzu wydarzeń».",
+    "btn": "Zobacz kalendarz"
+  },
+  "eventsNavNames": {
+    "winter": "Szept zimy",
+    "valentine": "Festiwal serc",
+    "firstApril": "Parada żartów",
+    "halloween": "Święto dyń"
+  },
+  "sessionNotSuccessModal": {
+    "failText": "Poprawnych",
+    "failSub": "Aby otrzymać nagrodę, potrzebujesz co najmniej ośmiu poprawnych odpowiedzi. Spróbuj ponownie — dasz radę!",
+    "again": "Spróbuj ponownie",
+    "back": "Wstecz"
+  },
   "tabsMobile": {
     "locations": "Lokacje",
     "daily": "Dzienniki",
@@ -253,7 +297,9 @@
     "questSeven": "Jak dostać się do rankingu?",
     "answerSeven": "Trzeba zdobyć co najmniej poziom 2, grając w 'Praktykę artykułów' lub 'Językowe krainy'. Potem tabela rankingowa staje się dostępna.",
     "questEight": "Czym są zadania codzienne?",
-    "answerEight": "To zadania tematyczne, które można wykonać raz dziennie. Można wykonać 3 zadania dziennie. Są dostępne na stronie głównej."
+    "answerEight": "To zadania tematyczne, które można wykonać raz dziennie. Można wykonać 3 zadania dziennie. Są dostępne na stronie głównej.",
+    "questNine": "Czym są wydarzenia?",
+    "answerNine": "To są tymczasowe wydarzenia, które odbywają się raz w roku. W aktywnym okresie dostępne są tematyczne zadania i nagrody. Poza zakresem dat sekcja jest niedostępna. Terminy wydarzeń można sprawdzić w „Kalendarzu wydarzeń” w Panelu uczestnika."
   },
   "accountManagement": {
     "title": "Zarządzanie kontem",
@@ -296,7 +342,8 @@
     "eleventh": "Zdobądź 10 punktów doświadczenia w Ćwiczeniu rodzajników"
   },
   "preloader": {
-    "value": "Zostaniesz przekierowany na stronę główną..."
+    "value": "Zostaniesz przekierowany na stronę główną...",
+    "sessionTitle": "Ładujemy język niemiecki…"
   },
   "useHeadApp": {
     "title": "Język niemiecki online A1–B1 — gramatyka, rodzajniki, ćwiczenia | German Corner",
@@ -961,6 +1008,7 @@
     "stats": "Statystyki",
     "premium": "Subskrypcja",
     "achievement": "Osiągnięcia",
+    "eventCalendar": "Kalendarz wydarzeń",
     "premDescription": "Wykorzystaj maksimum z platformy. Nauka, nagrody, zadania, postęp i wiele więcej!",
     "try": "Wypróbuj"
   },
@@ -1274,9 +1322,9 @@
     "guessedSafeWords": "Tarcza ostrożności",
     "explorer": "Globus odkrywcy",
     "languageLands50": "Kompas odkrywcy",
-    "allVerbs": "Nagroda: Ostrza działania",
-    "allAdjectives": "Nagroda: Paleta elokwencji",
-    "allСases": "Nagroda: Puzzle jedności",
+    "allVerbs": "Ostrza działania",
+    "allAdjectives": "Paleta elokwencji",
+    "allCases": "Puzzle jedności",
     "fiveHearts": "Tarcza życia",
     "daily42": "Galaktyczny teleskop",
     "iAmGroot": "Doniczka z Grootem"
@@ -2334,9 +2382,9 @@
     "stats": "Ranking",
     "about": "O aplikacji",
     "contact": "Kontakt",
-    "quest": "Pytania i Odpowiedzi"
+    "quest": "Pytania i odpowiedzi",
+    "events": "Wydarzenia"
   },
-
   "formLabel": {
     "name": "Imię",
     "email": "E-mail",

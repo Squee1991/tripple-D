@@ -70,6 +70,7 @@ onBeforeUnmount(() => document.removeEventListener('mousedown', clickOutside))
   height: 45px;
   display: flex;
   align-items: center;
+  justify-content: space-around;
   gap: .5rem;
   background: #fff;
   border: 3px solid #1e1e1e;

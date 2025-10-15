@@ -228,9 +228,14 @@ button:disabled {
     margin: 0 auto;
     box-shadow: 2px 2px 0 black;
   }
-
   .items-grid {
     width: 100%;
+  }
+  .awards__title {
+    font-size: 1.7rem;
+  }
+  .awards__header {
+    padding: 5px;
   }
 }
 

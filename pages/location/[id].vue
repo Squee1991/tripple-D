@@ -353,8 +353,6 @@ function goHome() {
     margin: 6px 0;
 }
 
-/* === ИЗМЕНЕНИЯ НАЧИНАЮТСЯ ЗДЕСЬ === */
-
 .quest-meta {
     margin-top: auto;
     display: flex;
@@ -366,7 +364,7 @@ function goHome() {
     display: inline-flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 12px; /* Расстояние между XP и артиклями */
+    gap: 12px;
     padding: 6px 12px;
     font-size: 14px;
     background: #FFF3D7;
@@ -378,16 +376,13 @@ function goHome() {
 .reward-item {
     display: inline-flex;
     align-items: center;
-    gap: 4px; /* Расстояние между числом и иконкой/текстом */
 }
 
 .icon-articlus {
-    width: 30px;  /* Размер для десктопа */
+    width: 30px;
     height: 27px;
     vertical-align: middle;
 }
-
-/* === ИЗМЕНЕНИЯ ЗАКАНЧИВАЮТСЯ ЗДЕСЬ === */
 
 .btn {
     position: relative;
@@ -481,7 +476,6 @@ function goHome() {
         transform: scale(.9) rotate(8deg);
     }
 
-    /* ИСПРАВЛЕННЫЙ РАЗМЕР ИКОНКИ ДЛЯ МОБИЛЬНЫХ */
     .icon-articlus {
         width: 22px;
         height: 20px;

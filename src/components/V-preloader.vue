@@ -7,7 +7,7 @@
         <div class="umlaut umlaut-right">•</div>
         <div class="glyph">Ä</div>
       </div>
-      <h1 class="title">Загружаем немецкий язык…</h1>
+      <h1 class="title">{{ t('preloader.sessionTitle')}}</h1>
       <p class="subtitle"
           :key="phraseIndex"
           :style="{ color: currentPhrase.color }"
@@ -31,6 +31,7 @@
 
 <script setup>
 import {ref, computed, onMounted, onBeforeUnmount} from 'vue'
+const { t } = useI18n()
 const progress = ref(0)
 let progressTimer = null
 let phraseTimer = null
@@ -60,7 +61,7 @@ function start() {
   progressTimer = setInterval(() => {
     progress.value = Math.min(100, progress.value + 1)
     if (progress.value >= 100) finish()
-  }, 30)
+  }, 28)
 
   phraseTimer = setInterval(() => {
     phraseIndex.value = (phraseIndex.value + 1) % phraseSet.length

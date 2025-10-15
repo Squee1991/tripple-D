@@ -76,6 +76,9 @@ onBeforeUnmount(() => {
   if (mql.removeEventListener) mql.removeEventListener('change', updateIsMobile)
   else mql.removeListener(updateIsMobile)
 })
+
+
+
 </script>
 
 <style scoped>

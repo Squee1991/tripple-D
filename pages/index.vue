@@ -67,9 +67,10 @@ onMounted(() => {
       <Description/>
       <About/>
       <FeedBack/>
-      <Footer/>
     </div>
+    <Footer/>
   </div>
+
 </template>
 
 <style scoped>

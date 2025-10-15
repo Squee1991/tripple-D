@@ -174,9 +174,9 @@ const modalConfig = computed(() => {
     case 'eventLocked':
       return {
         isEvent: true,
-        title: 'Ивент недоступен',
-        text: 'Событие недоступно. Загляни в календарь событий, чтобы узнать даты.',
-        button: { label: 'Посмотреть календарь', to: '/calendar' },
+        title: t('eventLocked.title'),
+        text: t('eventLocked.text'),
+        button: { label: t('eventLocked.btn'), to: '/calendar' },
         img: PadLock,
       }
     default:
@@ -256,24 +256,18 @@ const menuItems = computed(() => {
 
   if (userAuth.uid) {
     const allEvents = [
-      { id: 'winter-event', valueKey: 'Шепот зимы', url: '/event-winter', isEvent: true, eventKey: 'winter', startDate: '14.10', endDate: '07.01' },
-      { id: 'valentine', valueKey: 'День Купидона', url: '/event-valentine', isEvent: true, eventKey: 'valentine', startDate: '14.02', endDate: '27.02' },
-      { id: 'april', valueKey: 'Шутим', url: '/event-joke', isEvent: true, eventKey: 'fools', startDate: '01.04', endDate: '01.04' },
-      { id: 'halloween', valueKey: 'Праздник тыкв', url: '/event-halloween', isEvent: true, eventKey: 'pumpkin', startDate: '31.10', endDate: '07.11' },
+      { id: 'winter-event', valueKey: 'eventsNavNames.winter', url: '/event-winter', isEvent: true, eventKey: 'winter', startDate: '01.12', endDate: '07.01' },
+      { id: 'valentine', valueKey: 'eventsNavNames.valentine', url: '/event-valentine', isEvent: true, eventKey: 'valentine', startDate: '14.02', endDate: '27.02' },
+      { id: 'april', valueKey: 'eventsNavNames.firstApril', url: '/event-joke', isEvent: true, eventKey: 'fools', startDate: '01.04', endDate: '01.04' },
+      { id: 'halloween', valueKey: 'eventsNavNames.halloween', url: '/event-halloween', isEvent: true, eventKey: 'pumpkin', startDate: '31.10', endDate: '07.11' },
     ]
-
     const processedEvents = allEvents.map(event => ({
       ...event,
       url: isEventActive(event.startDate, event.endDate) ? event.url : null,
     }))
-
-    items.push({
-      id: 'events',
-      valueKey: 'События',
-      children: processedEvents,
-    })
-  }
-
+    items.push(
+        { id: 'events', valueKey: 'nav.events', children: processedEvents }
+    )}
   return items
 })
 

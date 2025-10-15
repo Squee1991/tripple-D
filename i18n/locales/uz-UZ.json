@@ -1,4 +1,48 @@
 {
+  "calendarInfo": {
+    "eventsTitle": "Voqealar taqvimi",
+    "pointsTitle": "Belgilar"
+  },
+  "calendarMonths": {
+    "january": "Yanvar",
+    "february": "Fevral",
+    "march": "Mart",
+    "april": "Aprel",
+    "may": "May",
+    "june": "Iyun",
+    "july": "Iyul",
+    "august": "Avgust",
+    "september": "Sentyabr",
+    "october": "Oktyabr",
+    "november": "Noyabr",
+    "december": "Dekabr"
+  },
+  "calendarWeekDays": {
+    "monday": "Du",
+    "tuesday": "Se",
+    "wednesday": "Chor",
+    "thursday": "Pay",
+    "friday": "Ju",
+    "saturday": "Sha",
+    "sunday": "Yak"
+  },
+  "eventLocked": {
+    "title": "Voqea mavjud emas",
+    "text": "Bu voqea hozircha mavjud emas. Tafsilotlar va boshlanish sanasini «Voqealar taqvimi»dan topishingiz mumkin.",
+    "btn": "Taqvimni ko‘rish"
+  },
+  "eventsNavNames": {
+    "winter": "Qishning pichirlashi",
+    "valentine": "Yuraklar festivali",
+    "firstApril": "Hazillar paradi",
+    "halloween": "Qovoq bayrami"
+  },
+  "sessionNotSuccessModal": {
+    "failText": "Toʻgʻri",
+    "failSub": "Mukofot olish uchun kamida sakkizta toʻgʻri javob kerak. Yana urinib koʻr — qoʻlingdan keladi!",
+    "again": "Yana urinib koʻr",
+    "back": "Orqaga"
+  },
   "tabsMobile": {
     "locations": "Hududlar",
     "daily": "Kundaliklar",
@@ -253,7 +297,9 @@
     "questSeven": "Reytingga qanday kirish mumkin?",
     "answerSeven": "«Artikl mashqlari» yoki «Til mamlakatlari» rejimida o‘ynab, kamida 2-darajaga erishish kerak. Shundan keyin reyting jadvali ochiladi.",
     "questEight": "Kunlik topshiriqlar nima?",
-    "answerEight": "Bu mavzularga oid topshiriqlar bo‘lib, ularni kuniga faqat bir marta bajarish mumkin. Kuniga 3 ta topshiriq bajarish mumkin. Ular bosh sahifada mavjud."
+    "answerEight": "Bu mavzularga oid topshiriqlar bo‘lib, ularni kuniga faqat bir marta bajarish mumkin. Kuniga 3 ta topshiriq bajarish mumkin. Ular bosh sahifada mavjud.",
+    "questNine": "Voqealar nima?",
+    "answerNine": "Bular yiliga bir marta oʻtkaziladigan vaqtinchalik voqealardir. Faol davrda mavzuli topshiriqlar va mukofotlar ochiladi. Sana oraligʻidan tashqarida boʻlim mavjud emas. Voqealar sanasini Ishtirokchi Panelidagi «Voqealar taqvimi»dan koʻrish mumkin."
   },
   "accountManagement": {
     "title": "Akkauntni boshqarish",
@@ -296,7 +342,8 @@
     "eleventh": "Artikl mashqlarida 10 tajriba ballini oling"
   },
   "preloader": {
-    "value": "Siz asosiy sahifaga yo‘naltirilasiz..."
+    "value": "Siz asosiy sahifaga yo‘naltirilasiz...",
+    "sessionTitle": "Nemis tili yuklanmoqda…"
   },
   "randomPhrases": {
     "first": "Bugun sen yana bir qadam oldinga qo‘yding!",
@@ -953,6 +1000,7 @@
     "stats": "Statistika",
     "premium": "Obuna",
     "achievement": "Yutuqlar",
+    "eventCalendar": "Voqealar taqvimi",
     "premDescription": "Platformadan maksimal foydalaning. Ta’lim, mukofotlar, topshiriqlar, progress va yana ko‘p narsa!",
     "try": "Sinab ko‘rish"
   },
@@ -4556,14 +4604,15 @@
     "end": "Tabriklaymiz! Mashq tugallandi"
   },
   "nav": {
-    "training": "O‘qitish",
+    "training": "O‘qish",
     "gameMode": "O‘yinlar",
     "tests": "Testlar",
     "achieve": "Yutuqlar",
     "stats": "Reyting",
     "about": "Ilova haqida",
     "contact": "Aloqa",
-    "quest": "Savol/javob"
+    "quest": "Savol/javob",
+    "events": "Voqealar"
   },
   "formLabel": {
     "name": "Ism",
