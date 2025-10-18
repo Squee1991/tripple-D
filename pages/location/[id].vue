@@ -26,12 +26,13 @@
                         <p class="quest__description">{{ t(q.description) }}</p>
                         <div class="quest-meta">
                             <span v-if="!q._success" class="rewards-container">
+                                <span>{{ t('locationQuests.awards') }}</span>
                                 <span class="reward-item">
                                     {{ q.rewards.points }}
                                     <img src="assets/images/articlus.png" alt="Артиклюсы" class="icon-articlus">
                                 </span>
                                 <span class="reward-item">
-                                    {{ q.rewards.xp }} XP
+                                    {{ q.rewards.xp }} <span class="exp-label">Exp</span>
                                 </span>
                             </span>
                             <span v-else>{{ t('locationQuests.gotAward') }}</span>
@@ -353,7 +354,6 @@ function goHome() {
     margin: 6px 0;
 }
 
-/* === ИЗМЕНЕНИЯ НАЧИНАЮТСЯ ЗДЕСЬ === */
 
 .quest-meta {
     margin-top: auto;
@@ -366,7 +366,7 @@ function goHome() {
     display: inline-flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 12px; /* Расстояние между XP и артиклями */
+    gap: 4px;
     padding: 6px 12px;
     font-size: 14px;
     background: #FFF3D7;
@@ -382,13 +382,29 @@ function goHome() {
 }
 
 .icon-articlus {
-    width: 30px;  /* Размер для десктопа */
+    width: 30px; /* Размер для десктопа */
     height: 27px;
     vertical-align: middle;
 }
+.exp-label {
+    font-weight: 900;
+    background: linear-gradient(180deg, #FFD84D 0%, #FFA500 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 1px 0 #fff4b0, 0 2px 2px rgba(0,0,0,0.3);
+    letter-spacing: 0.5px;
+    font-size: 15px;
+    position: relative;
+    top: 1px;
+}
+/*@keyframes glow {*/
+/*    0%, 100% { filter: brightness(1); }*/
+/*    50% { filter: brightness(1.4); }*/
+/*}*/
 
-/* === ИЗМЕНЕНИЯ ЗАКАНЧИВАЮТСЯ ЗДЕСЬ === */
-
+.exp-label {
+    animation: glow 2.2s ease-in-out infinite;
+}
 .btn {
     position: relative;
     height: 46px;
@@ -440,16 +456,45 @@ function goHome() {
     }
 }
 
-.quest-card:nth-child(1) { animation-delay: .02s; }
-.quest-card:nth-child(2) { animation-delay: .06s; }
-.quest-card:nth-child(3) { animation-delay: .10s; }
-.quest-card:nth-child(4) { animation-delay: .14s; }
-.quest-card:nth-child(5) { animation-delay: .18s; }
-.quest-card:nth-child(6) { animation-delay: .22s; }
-.quest-card:nth-child(7) { animation-delay: .26s; }
-.quest-card:nth-child(8) { animation-delay: .30s; }
-.quest-card:nth-child(9) { animation-delay: .34s; }
-.quest-card:nth-child(10) { animation-delay: .38s; }
+.quest-card:nth-child(1) {
+    animation-delay: .02s;
+}
+
+.quest-card:nth-child(2) {
+    animation-delay: .06s;
+}
+
+.quest-card:nth-child(3) {
+    animation-delay: .10s;
+}
+
+.quest-card:nth-child(4) {
+    animation-delay: .14s;
+}
+
+.quest-card:nth-child(5) {
+    animation-delay: .18s;
+}
+
+.quest-card:nth-child(6) {
+    animation-delay: .22s;
+}
+
+.quest-card:nth-child(7) {
+    animation-delay: .26s;
+}
+
+.quest-card:nth-child(8) {
+    animation-delay: .30s;
+}
+
+.quest-card:nth-child(9) {
+    animation-delay: .34s;
+}
+
+.quest-card:nth-child(10) {
+    animation-delay: .38s;
+}
 
 
 @media (max-width: 767px) {

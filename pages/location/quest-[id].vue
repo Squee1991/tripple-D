@@ -20,22 +20,22 @@
                                 <div
                                         class="quest__dot"
                                         :class="{
-        'quest__dot--done': step === 'done',
-        'quest__dot--wrong': step === 'wrong',
-        'quest__dot--current': step === 'current',
-      }"
+            'quest__dot--done': step === 'done',
+            'quest__dot--wrong': step === 'wrong',
+            'quest__dot--current': step === 'current',
+          }"
                                 ></div>
                             </template>
                         </div>
                     </div>
                     <div class="quest__lives" v-if="!previouslyCleared">
                         <div class="quest__hearts">
-              <span
-                      v-for="life in questStore.maxLives"
-                      :key="life"
-                      class="quest__heart"
-                      :class="{ 'quest__heart--lost': life > questStore.lives }"
-              >❤️</span>
+      <span
+              v-for="life in questStore.maxLives"
+              :key="life"
+              class="quest__heart"
+              :class="{ 'quest__heart--lost': life > questStore.lives }"
+      >❤️</span>
                         </div>
                     </div>
                 </div>
@@ -543,11 +543,36 @@ watchEffect(() => {
     gap: 17px;
 }
 
-.quest__stat-label, .quest__stat-value {
-    font-size: 1.4rem;
+.quest__stat-value {
+    position: relative;
     font-weight: 600;
-    color: var(--titleColor);
+    font-size: 1.2rem;
+    color: #333;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 2px solid #ff82a9;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 8px rgba(255, 130, 169, 0.4);
 }
+.quest__stat-value::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(255, 130, 169, 0.6);
+    animation: pulse-ring 2s infinite;
+}
+@keyframes pulse-ring {
+    0% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.1); opacity: 0.4; }
+    100% { transform: scale(1); opacity: 0.8; }
+}
+
+
 
 .quest__lives {
     padding: .5rem 1rem;
@@ -938,6 +963,66 @@ watchEffect(() => {
 }
 
 @media (max-width: 768px) {
+    .quest__stat-value {
+        width: 4.3rem;
+        height: 2.3rem;
+        font-size: 1rem;
+        color: #fff;
+        border: none;
+        background: linear-gradient(135deg, #ff82a9 0%, #ffb6c1 50%, #ffd6e0 100%);
+        box-shadow: 0 0 10px rgba(255, 130, 169, 0.7);
+    }
+    .quest__stat-value::after {
+        box-shadow: 0 0 10px rgba(255, 160, 190, 0.8);
+    }
+    .quest__top {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .5rem;
+        background: none;
+        box-shadow: none;
+        border: none;
+    }
+    .quest__stat {
+        order: 2;
+        text-align: center;
+        align-items: center;
+        background: rgba(255,255,255,0.8);
+        border-radius: 12px;
+        padding: .3rem .7rem;
+        margin-top: 2.5rem;
+    }
+
+    /* Сердечки — в правом верхнем углу */
+    .quest__lives {
+        order: 1;
+        position: absolute;
+        right: 1rem;
+        top: .5rem;
+        background: none;
+        padding: 0;
+    }
+
+    .quest__hearts {
+        font-size: 1.6rem;
+        display: flex;
+        gap: .3rem;
+    }
+
+    /* Убираем фон и рамку у верхнего блока */
+    .quest__top {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        gap: 0.3rem;
+    }
+
+    /* Немного расстояния между прогрессом и вопросом */
+    .quest__section {
+        margin-top: 1rem;
+    }
     .quest__question {
         font-size: 1.2rem;
         border-bottom: 2px solid #9dceff;
