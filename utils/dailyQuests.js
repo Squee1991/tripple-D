@@ -9,7 +9,7 @@ export const dailyQuests = [
 		id: 'articles',
 		name: 'daily.second',
 		currentValue: 0,
-		targetValue: 15
+		targetValue: 20
 	},
 	{
 		id: 'streakEasy',

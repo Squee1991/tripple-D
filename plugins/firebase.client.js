@@ -1,8 +1,10 @@
-import {getAuth, onAuthStateChanged} from 'firebase/auth'
+
+import { useFirebaseAuth } from 'vuefire'
+import { onAuthStateChanged } from 'firebase/auth'
 
 export default defineNuxtPlugin(async (to) => {
     function waitForAuthReady() {
-        const auth = getAuth()
+        const auth = useFirebaseAuth()
         if (auth.currentUser !== null) return Promise.resolve(auth.currentUser)
         return new Promise((resolve) => {
             const off = onAuthStateChanged(auth, (u) => {

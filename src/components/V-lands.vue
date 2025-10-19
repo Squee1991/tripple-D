@@ -1,5 +1,5 @@
 <template>
-  <div v-if="regions" class="map__wrapper">
+  <div v-if="regions" class="map__wrapper" :dir="locale === 'ar' ? 'rtl' : 'ltr'">
     <div class="map__title-wrapper">
       <!--      <button @click="backToMain" class="back__to-main">-->
       <!--        <img class="back__icon" src="../assets/images/close.svg" alt="">-->
@@ -9,10 +9,7 @@
     <div class="map-layout">
       <div
           class="map-left"
-          :class="[
-          { 'is-open': isPanelOpen || windowWidth > 767 },
-          'theme--' + themeOf(active)
-        ]"
+          :class="[ { 'is-open': isPanelOpen || windowWidth > 767 },  'theme--' + themeOf(active), { rtl: locale === 'ar' } ]"
           v-if="active"
       >
         <button
@@ -25,7 +22,7 @@
           <img :src="active?.icon" alt="Choose avatar location">
         </div>
         <h2 class="map-left__title">{{ t(active.name) }}</h2>
-        <p class="map-left__desc">{{ active.desc }}</p>
+        <p class="map-left__desc">{{ t(active.desc) }}</p>
         <p class="map-left__level" :class="isUnlocked ? 'ok' : 'locked'">
           <span v-if="isUnlocked">{{t('locationsMenu.access')}}</span>
           <span v-else>{{t('locationsMenu.accessWithLevel')}} {{ active.level }}</span>
@@ -64,7 +61,7 @@
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 import { useRouter } from 'vue-router'
 import { regions } from '@/utils/regions.js'
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const props = defineProps({ currentLevel: { type: Number, default: 1 } })
 
 const router = useRouter()
@@ -399,6 +396,20 @@ function go(region) {
     pointer-events: none;
     transition: transform .25s ease, opacity .25s ease;
     z-index: 1000;
+  }
+
+  .map-left.rtl {
+    left: auto;
+    right: 0;
+    transform: translateX(100%);
+  }
+
+  .map-left.rtl.is-open {
+    transform: translateX(0);
+  }
+  .map-left.rtl .map-left__close {
+    left: 8px;
+    right: auto;
   }
 
   .map-left.is-open {

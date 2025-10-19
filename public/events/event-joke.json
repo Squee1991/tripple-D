@@ -1,0 +1,11 @@
+{
+  "quests": [
+    {
+      "id": "q1",
+      "title": "Шутливое слово",
+      "steps": [
+        { "type": "word", "props": { "word": "Witz" } }
+      ]
+    }
+  ]
+}
