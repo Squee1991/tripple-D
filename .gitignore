@@ -7,25 +7,22 @@
 dist
 
 # Node dependencies
-node_modules/
+node_modules
 
 # Logs
-logs/
+logs
 *.log
 
-# Environment files (local only)
+# Local env files
 .env
+.env.dev
 .env.*
 !.env.example
-
-# Firebase / Google credentials (do NOT commit!)
+echo service-account.json
+echo service-account-dev.json
+key: process.env.FIREBASE_RECAPTCHA_KEY || ''
 service-account.json
-service-account-dev.json
-*.pem
-*.p12
+.vercel
 
-# Vercel build output
-.vercel/
-
-# Admin / local dev tools
+# Admin tools
 admin/
