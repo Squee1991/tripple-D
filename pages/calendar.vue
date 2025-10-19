@@ -1,8 +1,8 @@
 <template>
   <div class="page">
     <header class="topbar">
-      <button class="back-btn" @click="goBack" aria-label="Назад">←</button>
-      <h1 class="page-title">Календарь событий</h1>
+      <button class="back-btn" @click="goBack" aria-label="back">←</button>
+      <h1 class="page-title">{{ t('calendarInfo.eventsTitle')}}</h1>
       <div class="spacer"></div>
     </header>
     <div class="layout">
@@ -10,7 +10,7 @@
         <div class="legend" aria-label="info">
           <div class="legend__wrappper">
             <div class="legend__title-wrap">
-              <h2 class="legend__title">Обозначения</h2>
+              <h2 class="legend__title">{{ t('calendarInfo.pointsTitle')}}</h2>
             </div>
             <ul class="legend__list">
               <li v-for="ev in legendList" :key="ev.id" class="legend__item">
@@ -78,23 +78,41 @@ import ChristmasIcon from '../../assets/images/calendar-icons/christmas-wreath.s
 import FoolDay from '../../assets/images/calendar-icons/FoolDay.svg'
 import Bees from '../../assets/images/calendar-icons/bees.svg'
 
+const { t} = useI18n()
 const router = useRouter()
 const goBack = () => {
     router.push('/')
 }
-
 const monthNames = [
-  'Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
-  'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'
+  t('calendarMonths.january'),
+  t('calendarMonths.february'),
+  t('calendarMonths.march'),
+  t('calendarMonths.april'),
+  t('calendarMonths.may'),
+  t('calendarMonths.june'),
+  t('calendarMonths.july'),
+  t('calendarMonths.august'),
+  t('calendarMonths.september'),
+  t('calendarMonths.october'),
+  t('calendarMonths.november'),
+  t('calendarMonths.december')
 ]
-const weekdayNames = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']
+const weekdayNames = [
+  t('calendarWeekDays.monday'),
+  t('calendarWeekDays.tuesday'),
+  t('calendarWeekDays.wednesday'),
+  t('calendarWeekDays.thursday'),
+  t('calendarWeekDays.friday'),
+  t('calendarWeekDays.saturday'),
+  t('calendarWeekDays.sunday')
+]
 
 const annualEvents = ref([
   {
     id: 'winter-veil',
     icon: ChristmasIcon,
     alt: 'ChristmasIcon',
-    title: 'Шёпот зимы',
+    title: t('eventsNavNames.winter'),
     typeId: 'winter',
     start: '12-14 00:00',
     end: '01-07 23:59'
@@ -103,7 +121,7 @@ const annualEvents = ref([
     id: 'valentine',
     icon: Bees,
     alt: 'Bees',
-    title: 'День купидона',
+    title: t('eventsNavNames.valentine'),
     typeId: 'valentine',
     start: '02-14 00:00',
     end: '02-27 23:59'
@@ -112,7 +130,7 @@ const annualEvents = ref([
     id: 'april',
     icon: FoolDay,
     alt: 'FoolDay',
-    title: 'Шутим',
+    title: t('eventsNavNames.firstApril'),
     typeId: 'fools',
     start: '04-01 00:00',
     end: '04-01 23:59'
@@ -121,7 +139,7 @@ const annualEvents = ref([
     id: 'pumpkin',
     icon: HalloweenIcon,
     alt: 'HalloweenIcon',
-    title: 'Праздник тыкв',
+    title: t('eventsNavNames.halloween'),
     typeId: 'pumpkin',
     start: '10-31 00:00',
     end: '11-07 23:59'
@@ -580,10 +598,15 @@ function humanizePeriod(start, end) {
     width: 50%;
   }
 
+  .legend__wrappper {
+    padding: 10px;
+  }
+
+
   .legend__icon-wrap {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
+    width: 48px;
+    height: 48px;
+    margin-right: 8px;
   }
   .legend__name {
     font-size: 15px;

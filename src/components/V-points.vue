@@ -90,7 +90,7 @@ const sections = ref([
   {key: "stats", icon: Graph, alt: 'Graph', title: t('accountPanel.stats'), route: "/statistics"},
   {key: "achievement", icon: AchPanelIcon, alt: 'AchPanel', title: t('accountPanel.achievement'), route: "/achievements"},
   {key: "ranked", icon: RankedIcon, alt: 'Ranked', title: t('accountPanel.ranked'), route: "/leaderboard"},
-  {key: "calendar", icon: Calendar, alt: 'Ranked', title:'Календарь событий', route: "/calendar" },
+  {key: "calendar", icon: Calendar, alt: 'Ranked', title: t('accountPanel.eventCalendar'), route: "/calendar" },
 ])
 
 const pathTo = (route) => {
@@ -175,7 +175,7 @@ onMounted(() => {
   border-radius: 10px;
   font-weight: 600;
   font-size: 1.2rem;
-  padding: 0 10px;
+  padding: 0 5px;
   color: #6ea4f1;
   transition: .3s;
   background: none;

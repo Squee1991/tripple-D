@@ -28,7 +28,7 @@ const props = defineProps({
     type: Array,
     default: () => [
       {
-        start: "10-13 19:00",
+        start: "10-29 12:37",
         title: "Хэллоуин",
         text: "Собирай конфеты и не бойся испытаний — новые награды уже ждут!",
         icon: Pumpkin,
@@ -36,7 +36,7 @@ const props = defineProps({
         snow: false,
       },
       {
-        start: "10-13 19:04",
+        start: "12-14 12:47",
         title: "Зимний покров",
         text: "Зимний сезон открыт! Успей принять участие и получить награды.",
         icon: Wreath,
@@ -52,10 +52,8 @@ const props = defineProps({
 });
 
 const emit = defineEmits(["close"]);
-
 const isModalOpen = ref(true);
 const currentTime = ref(new Date());
-let intervalId = null;
 
 function parseAnnualStart(startString) {
   const [datePart, timePart] = startString.split(" ");

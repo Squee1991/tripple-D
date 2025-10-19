@@ -1,4 +1,48 @@
 {
+  "calendarInfo": {
+    "eventsTitle": "Event Calendar",
+    "pointsTitle": "Legend"
+  },
+  "calendarMonths": {
+    "january": "January",
+    "february": "February",
+    "march": "March",
+    "april": "April",
+    "may": "May",
+    "june": "June",
+    "july": "July",
+    "august": "August",
+    "september": "September",
+    "october": "October",
+    "november": "November",
+    "december": "December"
+  },
+  "calendarWeekDays": {
+    "monday": "Mon",
+    "tuesday": "Tue",
+    "wednesday": "Wed",
+    "thursday": "Thu",
+    "friday": "Fri",
+    "saturday": "Sat",
+    "sunday": "Sun"
+  },
+  "eventLocked": {
+    "title": "Event Unavailable",
+    "text": "This event is currently unavailable. Details and the start date can be found in the «Event Calendar».",
+    "btn": "View Calendar"
+  },
+  "eventsNavNames": {
+    "winter": "Whisper of Winter",
+    "valentine": "Festival of Hearts",
+    "firstApril": "Parade of Pranks",
+    "halloween": "Pumpkin Festival"
+  },
+  "sessionNotSuccessModal": {
+    "failText": "Correct",
+    "failSub": "You need at least eight correct answers to get the reward. Try again — you can do it!",
+    "again": "Try again",
+    "back": "Back"
+  },
   "tabsMobile": {
     "locations": "Locations",
     "daily": "Dailies",
@@ -253,7 +297,9 @@
     "questSeven": "How to get into the ranking?",
     "answerSeven": "You need to reach at least level 2 by playing 'Article Practice' or 'Language Lands'. After that, the ranking table becomes available.",
     "questEight": "What are daily tasks?",
-    "answerEight": "These are tasks by topic that can be completed once a day. You can complete 3 tasks per day. They are available on the main page."
+    "answerEight": "These are tasks by topic that can be completed once a day. You can complete 3 tasks per day. They are available on the main page.",
+    "questNine": "What are events?",
+    "answerNine": "These are temporary events that take place once a year. During the active period, themed quests and rewards are available. Outside the date range, the section is inaccessible. The event dates can be found in the 'Event Calendar' in the Participant Panel."
   },
   "accountManagement": {
     "title": "Account Management",
@@ -296,7 +342,8 @@
     "eleventh": "Get 10 experience points in Article Practice"
   },
   "preloader": {
-    "value": "You will be redirected to the main page..."
+    "value": "You will be redirected to the main page...",
+    "sessionTitle": "Loading German language…"
   },
   "randomPhrases": {
     "first": "Today you took another step forward!",
@@ -954,6 +1001,7 @@
     "stats": "Statistics",
     "premium": "Subscription",
     "achievement": "Achievements",
+    "eventCalendar": "Event Calendar",
     "premDescription": "Get the most out of the platform. Learning, rewards, quests, progress and much more!",
     "try": "Try"
   },
@@ -1265,9 +1313,9 @@
     "guessedSafeWords": "Shield of Caution",
     "explorer": "Explorer's Globe",
     "languageLands50": "Explorer's Compass",
-    "allVerbs": "Reward: Blades of Action",
-    "allAdjectives": "Reward: Palette of Eloquence",
-    "allСases": "Reward: Puzzle of Unity",
+    "allVerbs": "Blades of Action",
+    "allAdjectives": "Palette of Eloquence",
+    "allCases": "Puzzle of Unity",
     "fiveHearts": "Shield of Life",
     "daily42": "Galactic Telescope",
     "iAmGroot": "Pot with Groot"
@@ -2327,7 +2375,8 @@
     "stats": "Ranking",
     "about": "About",
     "contact": "Contact",
-    "quest": "Q&A"
+    "quest": "Q&A",
+    "events": "Events"
   },
   "formLabel": {
     "name": "Name",
