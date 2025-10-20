@@ -4,7 +4,6 @@ import NorthCliffs from 'assets/images/locations-images/north-cliffs.png'
 import LakeRuins from 'assets/images/locations-images/lake-ruins.png'
 import StormCoast from 'assets/images/locations-images/storm-coast.png'
 import StoneReach from 'assets/images/locations-images/stone-reach.png'
-
 export const regions = [
 	{
 		id: "east-plain",
