@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "concurrently \"npm run socket\" \"nuxt dev\"",
+    "dev:dev": "cross-env NODE_ENV=development ENV_FILE=.env.dev concurrently \"npm run socket\" \"nuxt dev\"",
     "socket": "node server/server.js",
     "build": "nuxt build",
     "start": "node .output/server/index.mjs",
@@ -48,6 +49,7 @@
   "devDependencies": {
     "@nuxtjs/google-fonts": "3.2.0",
     "concurrently": "9.1.2",
+    "cross-env": "^10.1.0",
     "emailjs-com": "3.2.0",
     "pinia": "3.0.1"
   }
