@@ -111,6 +111,7 @@
 		{ "ru": "Шляпа", "de": "Hut", "article": "der", "plural": "Hüte", "pluralArticle": "die" }
 	],
 	"Food": [
+		{ "ru": "Салями", "de": "Salami", "article": "die", "plural": "Salamis", "pluralArticle": "die" },
 		{ "ru": "Яблоко", "de": "Apfel", "article": "der", "plural": "Äpfel", "pluralArticle": "die" },
 		{ "ru": "Банан", "de": "Banane", "article": "die", "plural": "Bananen", "pluralArticle": "die" },
 		{ "ru": "Хлеб", "de": "Brot", "article": "das", "plural": "Brote", "pluralArticle": "die" },

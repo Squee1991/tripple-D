@@ -100,6 +100,8 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 	const bootAwards = []
 	const dailyAggUnsub = ref(null)
 	const prevMap = new Map()
+	const required = ['article','letters','wordArticle','audio','plural']
+	const hasAllModes = (word) => required.every(m => word?.progress?.[m])
 	const awardsKey = () => `awards_shown_v1_${authStore?.uid}`
 	const completedKey = () => `achievements_completed_v1_${authStore?.uid}`
 	// --- LocalStorage helpers
@@ -675,12 +677,9 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			{ immediate: true, deep: true }
 		)
 
-		watch(
-			() => {
-				const required = ['article','letters','wordArticle','audio','plural']
-				const topics = new Set(
-					langStore.learnedWords
-						.filter(w => w.de === 'Baum' && required.every(m => w?.progress?.[m] === true))
+		watch(() => {
+				const topics = new Set(langStore.learnedWords
+					.filter(w => w.de === 'Baum' && required.every(m => w?.progress?.[m] === true))
 						.map(w => (w.topic ?? '__no_topic__'))
 				)
 				return topics.size
@@ -690,6 +689,21 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			},
 			{ immediate: true, deep: true }
 		)
+
+		watch(() => langStore.words, (words) => {
+			const salamiDone = words.some(w => w.de === 'Salami' && hasAllModes(w))
+			if (salamiDone) {
+				updateProgress('cowabungaSalami', 1)
+			}
+		}, { immediate: true, deep: true })
+
+		watch(() => langStore.words, (words) => {
+			const katzeDone = words.some(w => w.de === 'Katze' && hasAllModes(w))
+			const hundDone  = words.some(w => w.de === 'Hund' && hasAllModes(w))
+			if (katzeDone && hundDone) {
+				updateProgress('catDog', 1)
+			}
+		}, { immediate: true, deep: true })
 
 		watch(() => authStore.uid, async (uid) => {
 			if (!uid) return

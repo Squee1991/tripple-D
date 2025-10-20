@@ -1,4 +1,12 @@
 {
+  "regions": {
+    "descriptionEastPlain": "Har bir kishi o‘z sayohatini boshlaydigan keng yerlar. Bu yerda tilning asoslarini o‘rganasan va birinchi topshiriqlaringni olasan. Aynan shu joydan buyuk sarguzashtlar boshlanadi.",
+    "descriptionStoneReach": "Toshloq yo‘llar bilan qoplangan qattiq chekka. Bu yerda mahorat sari yo‘lda malakangni mustahkamlaysan.",
+    "descriptionWindValley": "Doimiy bo‘ronlar va o‘zgaruvchan ob-havo yurti. Shamol zarbalari sinovlarni olib keladi, biroq ular bilan birga yangi bilimlar ham. Bu yerda til o‘rganish yo‘lida haqiqiy chaqiriqlar seni kutmoqda.",
+    "descriptionLakeRuins": "Tuman qadimiy inshootlarni o‘rab olgan, ko‘l suvlari esa o'tmishning sirlarini saqlaydi. Bu yerda unutulgan bilimlar yashiringan bo‘lib, ular til o‘rganishni chuqurroq qilishga yordam beradi.",
+    "descriptionNorthCliffs": "Dengiz ustida ulkan qoyaliklar ko‘tarilgan, sovuq shamollar har bir sayohatchining chidamliligini sinaydi. Senga diqqat talab qiladigan topshiriqlar tayyor.",
+    "descriptionStormCoast": "Momaqaldiroq va chaqmoqlar g‘aroyibligida qo‘zg‘algan yovvoyi sohil yerlar. Faqat jasur qahramonlar bu yerga odim qo‘yishga jur’at etadi. Bu yerda bilim kuchingning haqiqiy sinovi seni kutmoqda."
+  },
   "calendarInfo": {
     "eventsTitle": "Voqealar taqvimi",
     "pointsTitle": "Belgilar"
@@ -4236,7 +4244,7 @@
   },
   "specialCategory": {
     "specialCollectionText": "To‘plovchi",
-    "specialCollectionLabel": "10 ta mukofotdan iborat to‘plamni yig‘ing",
+    "specialCollectionLabel": "Butun mukofotlar to‘plamini yig‘ing",
     "specialLabel": "Reyting yetakchiligi",
     "specialFirstLabel": "Oson chempion",
     "specialFirstText": "Oson rejimda reytingda birinchi o‘rinni egallang.",
@@ -4310,6 +4318,10 @@
     "dailyQuestText": "Hmm… javob yo‘q",
     "dailyQuestDescription": "42 ta kundalik topshiriqni bajarding, ammo Koinotning asosiy savoli sirligicha qolmoqda",
     "dailyQuestAward": "Mukofot: Galaktik Teleskop",
+    "catDotText": "Mushuk-It",
+    "catDotDescription": "Miyov-vov! “mushuk” va “it” so‘zlarini artikl mashqlarida barcha rejimlarda o‘rganing.",
+    "cowabungaText": "KOVABUNGA",
+    "cowabungaDescription": "Salami yoki pepperoni? Ninja toshbaqalari baribir yeydi. “salami” so‘zini artikl mashqlarida barcha rejimlarda o‘rganing.",
     "firstStepLabel": "Birinchi qadam",
     "firstAwardText": "To‘plam boshlanishi",
     "firstAwardLabel": "Birinchi mukofotni oling",

@@ -1,12 +1,25 @@
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, setPersistence, browserLocalPersistence } from 'firebase/auth';
-import { getFirestore, updateDoc, deleteField, deleteDoc } from 'firebase/firestore';
-import { useFirebase } from 'vuefire'
+import { useFirebaseApp, useFirebaseAuth, useFirestore } from 'vuefire'
+import {
+	browserLocalPersistence,
+	setPersistence,
+	createUserWithEmailAndPassword,
+	signInWithEmailAndPassword
+} from 'firebase/auth'
+import { updateDoc, deleteField, deleteDoc } from 'firebase/firestore'
 
+const app = useFirebaseApp()
+const auth = useFirebaseAuth()
+const db = useFirestore()
+setPersistence(auth, browserLocalPersistence)
 
-const { $firebase } = useFirebase()
-const auth = getAuth($firebase);
-const db = getFirestore($firebase);
+console.log('🔥 Using Firebase project:', app.options.projectId)
 
-setPersistence(auth, browserLocalPersistence);
-
-export { auth, db, deleteField, deleteDoc, updateDoc, createUserWithEmailAndPassword, signInWithEmailAndPassword };
+export {
+	auth,
+	db,
+	updateDoc,
+	deleteField,
+	deleteDoc,
+	createUserWithEmailAndPassword,
+	signInWithEmailAndPassword
+}

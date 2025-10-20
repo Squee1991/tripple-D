@@ -86,7 +86,6 @@ onMounted(() => {
   margin-top: 10px;
   height: 100%;
   flex-direction: column;
-  overflow-y: auto;
 }
 
 @media (max-width: 767px) {

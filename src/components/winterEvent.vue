@@ -2,8 +2,11 @@
 import {ref, computed} from 'vue'
 import VShowFall from "./V-showFall.vue";
 import Present from '../assets/images/mery-christmas/Present.svg'
-import { useRouter} from "vue-router";
-const router = useRouter();
+import { useRouter, useRoute } from "vue-router"
+
+const router = useRouter()
+const route = useRoute()
+
 const coins = ref(0)
 const coinIcon = '❄'
 const activeTab = ref('reputation')
@@ -51,6 +54,18 @@ const levelProgressText = computed(() => {
   const isMax = currentLevel.value === ranks[ranks.length - 1].level
   return isMax ? `${levelCurrent.value} / МАКС` : `${levelCurrent.value} / ${levelTotal.value}`
 })
+const localePath = useLocalePath()
+
+async function goToSession(questId) {
+  const to = localePath({
+    name: 'event-id-session',
+    params: { id: route.params.id },
+    query: { questId, step: '1' }
+  })
+  await router.push(to)
+}
+
+
 
 const setSelectedLevel = (lvl) => {selectedLevel.value = lvl}
 const shopByRank = ref({
@@ -78,13 +93,7 @@ function buyReward(level, rewardId) {
   coins.value -= item.priceCoins
   item.isOwned = true
 }
-function completeQuest(id) {
-  const q = quests.value.find(x => x.id === id)
-  if (!q || q.isDone) return
-  q.isDone = true
-  coins.value += q.rewardCoins
-  reputationPoints.value += q.rewardRep
-}
+
 function resetAll() {
   coins.value = 0
   reputationPoints.value = 0
@@ -206,7 +215,7 @@ function resetAll() {
                         <span class="meta__pill">{{ q.rewardRep }} реп.</span>
                         <span class="meta__pill">{{ q.rewardCoins }} {{ coinIcon }}</span>
                       </div>
-                      <button class="btn btn--candy" :disabled="q.isDone" @click="completeQuest(q.id)">
+                      <button class="btn btn--candy" :disabled="q.isDone" @click="goToSession(q.id)">
                         {{ q.isDone ? 'Выполнено' : 'Выполнить' }}
                       </button>
                     </div>

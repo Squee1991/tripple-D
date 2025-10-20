@@ -1,0 +1,11 @@
+{
+  "quests": [
+    {
+      "id": "q1",
+      "title": "Valentine слово",
+      "steps": [
+        { "type": "word", "props": { "word": "Liebe" } }
+      ]
+    }
+  ]
+}

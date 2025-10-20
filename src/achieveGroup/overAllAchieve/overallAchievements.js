@@ -21,6 +21,22 @@ export const overAchievment = [
 				targetProgress: 42
 			},
 			{
+				id: "catDog",
+				name: "generalCategory.catDotText",
+				description: "generalCategory.catDotDescription",
+				icon: "🐾",
+				currentProgress: 0,
+				targetProgress: 2
+			},
+			{
+				id: "cowabungaSalami",
+				name: "generalCategory.cowabungaText",
+				description: "generalCategory.cowabungaDescription" ,
+				icon: "🐢",
+				currentProgress: 0,
+				targetProgress: 1
+			},
+			{
 				id: "SiteRegular",
 				name: "generalCategory.monthLabel",
 				description: "generalCategory.moonthText",

@@ -19,7 +19,7 @@ import {userlangStore} from "./learningStore.js";
 let authStateUnsubscribe = null;
 
 export const userAuthStore = defineStore('auth', () => {
-
+	const auth = useFirebaseAuth()
 	const LEADERBOARD_COLLECTION = 'marathon_leaderboard';
 	const LEADERBOARD_GUESS = 'leaderboard_guess'
 	const DAILY__COLLECTION = 'daily';
@@ -98,23 +98,11 @@ export const userAuthStore = defineStore('auth', () => {
 		subscriptionEndsAt.value = data.subscriptionEndsAt || null
 		subscriptionCancelled.value = data.subscriptionCancelled || false
 		providerId.value = data.providerId || ''
-		ownedAvatars.value = data.ownedAvatars || ['1.png', '2.png'];
-		achievements.value = data.achievements || null;
-		voiceConsentGiven.value = data.voiceConsentGiven === true;
-		const newAchievements = data.achievements || null;
-		if (newAchievements) {
-			if (typeof achievements.value !== 'object' || achievements.value === null) {
-				achievements.value = {};
-			}
-			Object.keys(achievements.value).forEach(key => delete achievements.value[key]);
-			Object.assign(achievements.value, newAchievements);
-		} else {
-			achievements.value = null;
-		}
+		ownedAvatars.value = data.ownedAvatars || ['1.png', '2.png']
+		achievements.value = data.achievements || null
+		voiceConsentGiven.value = data.voiceConsentGiven === true
 
-		if (data.isPremium && !data.gotPremiumBonus) {
-			grantPremiumBonusPoints()
-		}
+		if (data.isPremium && !data.gotPremiumBonus) grantPremiumBonusPoints()
 	}
 
 	const updateUserAvatar = async (newAvatarFilename) => {
@@ -132,12 +120,11 @@ export const userAuthStore = defineStore('auth', () => {
 	};
 
 	const loginWithGoogle = async () => {
-		const auth = getAuth();
-		const provider = new GoogleAuthProvider();
-		const result = await signInWithPopup(auth, provider);
-		const user = result.user;
-		const userDocRef = doc(db, 'users', user.uid);
-		const userDoc = await getDoc(userDocRef);
+		const provider = new GoogleAuthProvider()
+		const result = await signInWithPopup(auth, provider)
+		const user = result.user
+		const userDocRef = doc(db, 'users', user.uid)
+		const userDoc = await getDoc(userDocRef)
 		if (!userDoc.exists()) {
 			await setDoc(userDocRef, {
 				ownedAvatars: ['1.png', '2.png'],
@@ -148,11 +135,10 @@ export const userAuthStore = defineStore('auth', () => {
 				gotPremiumBonus: false,
 				voiceConsentGiven: false,
 				...createInitialAchievementsObject()
-			});
+			})
 		}
-
-		const finalDoc = await getDoc(userDocRef);
-		const userDataFromDb = finalDoc.data() || {};
+		const finalDoc = await getDoc(userDocRef)
+		const userDataFromDb = finalDoc.data() || {}
 		setUserData({
 			name: user.displayName,
 			email: user.email,
@@ -160,42 +146,35 @@ export const userAuthStore = defineStore('auth', () => {
 			uid: user.uid,
 			providerId: user.providerData[0]?.providerId || '',
 			...userDataFromDb
-		});
-	};
+		})
+		console.log('✅ Logged into Firebase project:', auth.app.options.projectId)
+	}
 
 	const registerUser = async (userData) => {
-		const auth = getAuth();
-		const userCredential = await createUserWithEmailAndPassword(auth, userData.email, userData.password);
-		const user = userCredential.user;
-		await updateProfile(user, { displayName: userData.name });
-		await sendEmailVerification(user);
-		const defaultAvatar = '1.png';
-		const initialOwnedAvatars = ['1.png', '2.png'];
+		const userCredential = await createUserWithEmailAndPassword(auth, userData.email, userData.password)
+		const user = userCredential.user
+		await updateProfile(user, { displayName: userData.name })
+		await sendEmailVerification(user)
 		await setDoc(doc(db, 'users', user.uid), {
 			name: userData.name,
 			email: userData.email,
 			registeredAt: serverTimestamp(),
-			avatar: defaultAvatar,
-			ownedAvatars: initialOwnedAvatars,
+			avatar: '1.png',
+			ownedAvatars: ['1.png', '2.png'],
 			isPremium: false,
 			subscriptionEndsAt: null,
 			gotPremiumBonus: false,
 			voiceConsentGiven: false,
 			...createInitialAchievementsObject()
-		});
+		})
 		setUserData({
 			uid: user.uid,
 			name: userData.name,
 			email: userData.email,
-			registeredAt: user.metadata.creationTime,
-			avatar: defaultAvatar,
-			ownedAvatars: initialOwnedAvatars,
-			isPremium: false,
-			subscriptionEndsAt: null,
-			gotPremiumBonus: false,
-			voiceConsentGiven: false
-		});
-	};
+			registeredAt: user.metadata.creationTime
+		})
+		console.log('✅ Registered in Firebase project:', auth.app.options.projectId)
+	}
 
 	const loginUser = async ({email, password}) => {
 		const auth = getAuth()

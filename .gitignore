@@ -15,7 +15,6 @@ logs
 
 # Local env files
 .env
-.env.dev
 .env.*
 !.env.example
 echo service-account.json
@@ -23,9 +22,9 @@ echo service-account-dev.json
 service-account-dev.json
 service-account.json
 key: process.env.FIREBASE_RECAPTCHA_KEY || ''
-service-account.json
+/service-account-dev.json
+/service-account.json
 .vercel
-nuxt.config.js
 
 # Admin tools
 admin/
