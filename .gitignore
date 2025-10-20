@@ -23,6 +23,7 @@ service-account-dev.json
 service-account.json
 key: process.env.FIREBASE_RECAPTCHA_KEY || ''
 /service-account-dev.json
+/service-account.json
 .vercel
 
 # Admin tools
