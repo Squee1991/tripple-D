@@ -1,5 +1,4 @@
 import { readBody, createError, sendError } from 'h3'
-
 export default defineEventHandler(async (event) => {
   try {
     const systemPrompt = `
@@ -10,15 +9,11 @@ export default defineEventHandler(async (event) => {
 Старайся кратко формулировать выводы и переформулировать полученные от ученика правила своими словами.
 `.trim()
 
-
-    // читаем тело ОДИН раз
     const {
       messages: clientMessages = [],
       model = 'llama-3.3-70b-versatile',
       temperature = 0.2
     } = (await readBody(event)) || {}
-
-    // добавляем system prompt в начало истории
     const messages = [{ role: 'system', content: systemPrompt }, ...clientMessages]
 
     const key = (process.env.GROQ_API_KEY || '').trim()
@@ -32,7 +27,6 @@ export default defineEventHandler(async (event) => {
         Authorization: `Bearer ${key}`,
         'Content-Type': 'application/json'
       },
-      // ВАЖНО: отправляем messages с system prompt
       body: JSON.stringify({ model, messages, temperature, stream: false })
     })
 
@@ -41,7 +35,6 @@ export default defineEventHandler(async (event) => {
       console.error('Groq error:', txt)
       return sendError(event, createError({ statusCode: r.status, statusMessage: 'groq_failed', data: txt }))
     }
-
     return JSON.parse(txt)
   } catch (err) {
     console.error('Route crash:', err)

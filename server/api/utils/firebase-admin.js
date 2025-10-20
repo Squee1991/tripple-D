@@ -1,6 +1,3 @@
-import { config as loadEnv } from 'dotenv'
-loadEnv({ path: process.env.ENV_FILE || undefined, override: true })
-
 import { initializeApp, cert, getApps } from 'firebase-admin/app'
 import { getFirestore } from 'firebase-admin/firestore'
 import fs from 'fs'

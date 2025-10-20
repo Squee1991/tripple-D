@@ -1,4 +1,3 @@
-
 import { useFirebaseAuth } from 'vuefire'
 import { onAuthStateChanged } from 'firebase/auth'
 

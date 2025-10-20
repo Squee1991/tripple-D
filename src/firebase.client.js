@@ -10,8 +10,6 @@ import { updateDoc, deleteField, deleteDoc } from 'firebase/firestore'
 const app = useFirebaseApp()
 const auth = useFirebaseAuth()
 const db = useFirestore()
-
-// сохраняем логин между сессиями
 setPersistence(auth, browserLocalPersistence)
 
 console.log('🔥 Using Firebase project:', app.options.projectId)
