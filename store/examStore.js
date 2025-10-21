@@ -52,8 +52,8 @@ export const userExamStore = defineStore("exam", () => {
 	const speakingMedia = ref({})
 	const db = getFirestore()
 	const auth = getAuth()
-
-	const storage = getStorage(undefined, "gs://tripple-d-90bd2.firebasestorage.app")
+	const bucket = import.meta.env.MODE === "development" ? "tripple-d-dev.firebasestorage.app" : "tripple-d-90bd2.firebaseapp.com"
+	const storage = getStorage(undefined, `gs://${bucket}`)
 	const sref = (p) => storageRef(storage, p)
 
 	const archiveAttempts = ref([])

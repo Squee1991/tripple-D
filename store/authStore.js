@@ -153,9 +153,12 @@ export const userAuthStore = defineStore('auth', () => {
 	const registerUser = async (userData) => {
 		const userCredential = await createUserWithEmailAndPassword(auth, userData.email, userData.password)
 		const user = userCredential.user
+
 		await updateProfile(user, { displayName: userData.name })
 		await sendEmailVerification(user)
-		await setDoc(doc(db, 'users', user.uid), {
+
+		const userDocRef = doc(db, 'users', user.uid)
+		await setDoc(userDocRef, {
 			name: userData.name,
 			email: userData.email,
 			registeredAt: serverTimestamp(),
@@ -167,13 +170,18 @@ export const userAuthStore = defineStore('auth', () => {
 			voiceConsentGiven: false,
 			...createInitialAchievementsObject()
 		})
+
+		const finalDoc = await getDoc(userDocRef)
+		const data = finalDoc.data() || {}
+
 		setUserData({
+			name: data.name ?? userData.name,
+			email: data.email ?? userData.email,
+			registeredAt: user.metadata.creationTime,
 			uid: user.uid,
-			name: userData.name,
-			email: userData.email,
-			registeredAt: user.metadata.creationTime
+			providerId: user.providerData[0]?.providerId || '',
+			...data,
 		})
-		console.log('✅ Registered in Firebase project:', auth.app.options.projectId)
 	}
 
 	const loginUser = async ({email, password}) => {

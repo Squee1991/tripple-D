@@ -1,32 +1,8 @@
+
 import { defineNuxtConfig } from 'nuxt/config'
-import fs from 'fs'
-import path from 'path'
-import { parse } from 'dotenv'
 import { loadEnv } from 'vite'
-
-// 0) режим
 const mode = process.env.NODE_ENV === 'production' ? 'production' : 'development'
-
-// 1) подхватываем твои файлы: dev -> ent.development, prod -> env.production
-const customEnvFile = mode === 'production' ? 'env.production' : 'ent.development'
-const customEnvPath = path.resolve(process.cwd(), customEnvFile)
-
-if (fs.existsSync(customEnvPath)) {
-	const parsed = parse(fs.readFileSync(customEnvPath))
-	for (const [k, v] of Object.entries(parsed)) {
-		if (process.env[k] == null) process.env[k] = v
-	}
-	console.info('🔑 Loaded custom env from', customEnvFile)
-} else {
-	console.warn('⚠️ Custom env file not found:', customEnvFile)
-}
-
-// 2) (опционально) дополнительно читаем стандартные .env.* через Vite
 const env = loadEnv(mode, process.cwd(), '')
-
-console.log('🔥 Firebase Project:', process.env.FIREBASE_PROJECT_ID || env.FIREBASE_PROJECT_ID)
-console.log('🌍 Mode:', mode.toUpperCase())
-
 const firebaseConfig = {
 	apiKey: process.env.FIREBASE_API_KEY || env.FIREBASE_API_KEY,
 	authDomain: process.env.FIREBASE_AUTH_DOMAIN || env.FIREBASE_AUTH_DOMAIN,
@@ -36,12 +12,13 @@ const firebaseConfig = {
 	appId: process.env.FIREBASE_APP_ID || env.FIREBASE_APP_ID,
 }
 
-const saPath = (process.env.GOOGLE_APPLICATION_CREDENTIALS || env.GOOGLE_APPLICATION_CREDENTIALS)
-	? path.resolve(process.cwd(), process.env.GOOGLE_APPLICATION_CREDENTIALS || env.GOOGLE_APPLICATION_CREDENTIALS)
-	: ''
-const hasSA = saPath && fs.existsSync(saPath)
-const admin = hasSA ? { serviceAccount: JSON.parse(fs.readFileSync(saPath, 'utf8')) } : undefined
-const vuefireAuth = hasSA ? true : { enabled: false }
+const serviceAccountJson = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON
+let admin
+try {
+	admin = serviceAccountJson ? { serviceAccount: JSON.parse(serviceAccountJson) } : undefined
+} catch {
+	admin = undefined
+}
 
 const siteUrl =
 	process.env.NUXT_SITE_URL ||
@@ -50,6 +27,7 @@ const siteUrl =
 export default defineNuxtConfig({
 	compatibilityDate: '2024-11-01',
 	devtools: { enabled: true },
+	ssr: false,
 
 	modules: [
 		'@nuxt/image',
@@ -64,16 +42,16 @@ export default defineNuxtConfig({
 
 	vuefire: {
 		config: firebaseConfig,
-		auth: vuefireAuth,
+		auth: true,
 		...(admin ? { admin } : {}),
 	},
 
 	runtimeConfig: {
-		stripeSecret: process.env.STRIPE_SECRET_KEY,
-		stripeWebhookSecret: process.env.STRIPE_WEBHOOK_SECRET,
-		groqApiKey: process.env.GROQ_API_KEY,
-		ADMIN_UID1: process.env.ADMIN_UID1,
-		ADMIN_UID2: process.env.ADMIN_UID2,
+		stripeSecret: process.env.STRIPE_SECRET_KEY || env.STRIPE_SECRET_KEY,
+		stripeWebhookSecret: process.env.STRIPE_WEBHOOK_SECRET || env.STRIPE_WEBHOOK_SECRET,
+		groqApiKey: process.env.GROQ_API_KEY || env.GROQ_API_KEY,
+		ADMIN_UID1: process.env.ADMIN_UID1 || env.ADMIN_UID1,
+		ADMIN_UID2: process.env.ADMIN_UID2 || env.ADMIN_UID2,
 		public: {
 			firebaseApiKey: firebaseConfig.apiKey,
 			firebaseAuthDomain: firebaseConfig.authDomain,
