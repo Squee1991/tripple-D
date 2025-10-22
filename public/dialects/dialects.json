@@ -1,12 +1,8 @@
 [
   { "key": "Apfel", "article": "der", "by": "Apfa", "ch": "Öpfel" },
-
   { "key": "Bier", "article": "das", "by": "Bia" },
-
   { "key": "Junge", "article": "der", "at": "Bub", "by": "Bua", "ch": "Bueb" },
-
   { "key": "Brot", "article": "das", "by": "Laib" },
-
   {
     "key": "Brötchen",
     "article": "das",
@@ -19,7 +15,6 @@
       "ch": "«Bürli» — распространённый швейцарский вариант булочки."
     }
   },
-
   {
     "key": "Huhn",
     "article": "das",
@@ -30,29 +25,57 @@
       "ch": "Во всей Швейцарии «Poulet» (заимств. из фр.) употребляется и для птицы, и для мяса."
     }
   },
-
-  { "key": "Kaffee", "article": "der", "by": "Kaffä", "ch": "Kafi" },
-
-  { "key": "Tasse", "article": "die", "at": "Häferl", "by": "Haferl", "ch": "Chacheli" },
-
-  { "key": "Arzt", "article": "der", "by": "Dokta" },
-
-  { "key": "Abend", "article": "der", "at": "Omd", "by": "Omd", "ch": "Abig" },
-
-  { "key": "Mädchen", "article": "das", "at": "Madl", "by": "Dirndl", "ch": "Meitli" },
-
   {
-    "key": "Tschüss",
-    "article": null,
-    "at": "Baba",
-    "by": "Servus",
-    "ch": "Adieu",
+    "key": "Dienstag",
+    "article": "der",
+    "by": "Ertag",
+    "usage": {
+      "by": "В баварском диалекте вторник — «Ertag»."
+    }
+  },
+  {
+    "key": "Donnerstag",
+    "article": "der",
+    "by": "Pfinztag",
+    "usage": {
+      "by": "В баварском диалекте четверг — «Pfinztag» (вариант с -nz-)."
+    }
+  },
+  {
+    "key": "E-Mail",
+    "article": "die",
+    "at": "das Email",
+    "usage": {
+      "at": "В Австрии «das Email» — нейтрального рода, в отличие от стандартного «die E-Mail»."
+    }
+  },
+  {
+    "key": "Cola",
+    "article": "die",
+    "at": "das Cola",
+    "usage": {
+      "at": "В Австрии напиток «Cola» часто употребляется среднего рода: «das Cola»."
+    }
+  },
+  {
+    "key": "Radio",
+    "article": "das",
+    "at": "der Radio",
+    "usage": {
+      "at": "В Австрии принято «der Radio» (м.р.) вместо стандартного «das Radio»."
+    }
+  },
+  { "key": "Kaffee", "article": "der", "by": "Kaffä", "ch": "Kafi" },
+  { "key": "Tasse", "article": "die", "at": "Häferl", "by": "Haferl", "ch": "Chacheli" },
+  { "key": "Arzt", "article": "der", "by": "Dokta" },
+  { "key": "Abend", "article": "der", "at": "Omd", "by": "Omd", "ch": "Abig" },
+  { "key": "Mädchen", "article": "das", "at": "Madl", "by": "Dirndl", "ch": "Meitli" },
+  {"key": "Tschüss", "article": null, "at": "Baba", "by": "Servus", "ch": "Adieu",
     "usage": {
       "by": "«Servus» в Баварии — универсальное «привет/пока».",
       "at": "«Baba» — разговорное «пока»."
     }
   },
-
   {
     "key": "Hallo",
     "article": null,
@@ -63,13 +86,9 @@
       "ch": "«Grüezi» — типичное приветствие в Швейцарии (станд. и диал.)."
     }
   },
-
   { "key": "Pferd", "article": "das", "at": "Ross", "by": "Ross", "ch": "Ross" },
-
   { "key": "schauen", "article": null, "by": "schaun", "ch": "luege" },
-
   { "key": "nicht", "article": null, "at": "ned", "by": "ned", "ch": "nöd" },
-
   {
     "key": "Kartoffel",
     "article": "die",
@@ -81,13 +100,9 @@
       "ch": "«Härdöpfel» — стандартное швейцарское слово."
     }
   },
-
   { "key": "arbeiten", "article": null, "at": "hackeln", "by": "arbatn", "ch": "schaffe" },
-
   { "key": "bitte", "article": null, "by": "biddschee" },
-
   { "key": "Entschuldigung", "article": "die", "ch": "Sorry" },
-
   {
     "key": "Fahrrad",
     "article": "das",
@@ -98,37 +113,21 @@
       "ch": "«Velo» — основное слово в Швейцарии вместо «Fahrrad»."
     }
   },
-
   { "key": "Auto", "article": "das", "by": "Karrn" },
-
   { "key": "Fenster", "article": "das", "at": "Fensta", "by": "Fensta", "ch": "Fänschter" },
-
   { "key": "Tür", "article": "die", "by": "Dür" },
-
   { "key": "Küche", "article": "die", "at": "Kuchl", "by": "Kuchl", "ch": "Chuchi" },
-
   { "key": "Zimmer", "article": "das", "by": "Stubn" },
-
   { "key": "Stuhl", "article": "der", "at": "Sessl", "by": "Sessl", "ch": "Stuel" },
-
   { "key": "Tisch", "article": "der", "by": "Disch" },
-
   { "key": "Bad", "article": "das", "by": "Boad" },
-
   { "key": "Kind", "article": "das", "ch": "Chind" },
-
   { "key": "Mann", "article": "der", "at": "Mo", "by": "Mo", "ch": "Maa" },
-
   { "key": "Frau", "article": "die", "by": "Weib" },
-
   { "key": "Freund", "article": "der", "at": "Spezl", "by": "Spezl", "ch": "Kolleg" },
-
   { "key": "Freundin", "article": "die", "ch": "Fründin" },
-
   { "key": "Leute", "article": "die", "at": "Leit", "by": "Leit", "ch": "Lüt" },
-
   { "key": "Morgen", "article": "der", "at": "Morgn", "by": "Morgn", "ch": "Morge" },
-
   {
     "key": "Mittag",
     "article": "der",
@@ -138,15 +137,10 @@
       "ch": "«Zmittag» — и «полдень», и «обед» (приём пищи)."
     }
   },
-
   { "key": "Nacht", "article": "die", "at": "Nocht", "by": "Nocht" },
-
   { "key": "heute", "article": null, "at": "heut", "by": "heut", "ch": "hüt" },
-
   { "key": "morgen", "article": null, "by": "morgn", "ch": "morn" },
-
   { "key": "Wasser", "article": "das", "at": "Wossa", "by": "Wossa" },
-
   {
     "key": "Käse",
     "article": "der",
@@ -157,7 +151,6 @@
       "ch": "«Chäs» — швейцарская форма, регулярно встречается на упаковках."
     }
   },
-
   {
     "key": "Sahne",
     "article": "die",
@@ -169,7 +162,6 @@
       "ch": "«Rahm» — стандартно вместо «Sahne»."
     }
   },
-
   {
     "key": "Quark",
     "article": "der",
@@ -179,9 +171,7 @@
       "at": "«Topfen» — нормативный вариант в Австрии."
     }
   },
-
   { "key": "Joghurt", "article": "der", "at": "Jogurt", "by": "Jogurt" },
-
   {
     "key": "Eis",
     "article": "das",
@@ -190,27 +180,16 @@
       "ch": "«Glace» (фр.) — базовое слово для мороженого."
     }
   },
-
   { "key": "Regen", "article": "der", "at": "Regn", "by": "Regn", "ch": "Räge" },
-
   { "key": "Sonne", "article": "die", "at": "Sun", "by": "Sun", "ch": "Sunne" },
-
   { "key": "gehen", "article": null, "at": "gehn", "by": "geh", "ch": "gaa" },
-
   { "key": "kommen", "article": null, "at": "kumman", "by": "kema", "ch": "cho" },
-
   { "key": "essen", "article": null, "at": "essn", "by": "essn", "ch": "ässe" },
-
   { "key": "trinken", "article": null, "at": "trinkn", "by": "trinkn", "ch": "trinke" },
-
   { "key": "schlafen", "article": null, "at": "schlofn", "by": "schlofn", "ch": "schlafe" },
-
   { "key": "sprechen", "article": null, "at": "reden", "by": "redn", "ch": "rede" },
-
   { "key": "verstehen", "article": null, "at": "vastoan", "by": "vastoan", "ch": "verstaa" },
-
   { "key": "toll", "article": null, "at": "leiwand", "by": "geil", "ch": "mega" },
-
   { "key": "okay", "article": null, "at": "passt", "by": "passt", "ch": "guet" },
   {
     "key": "Tomate",
@@ -218,21 +197,17 @@
     "at": "Paradeiser",
     "usage": { "at": "Общеупотребительное слово в Австрии вместо «Tomate»." }
   },
-
-  {
-    "key": "Aprikose",
+  {"key": "Aprikose",
     "article": "die",
     "at": "Marille",
     "usage": { "at": "Нормативный австрийский вариант на товарах/в кулинарии." }
   },
-
   {
     "key": "Januar",
     "article": "der",
     "at": "Jänner",
     "usage": { "at": "В Австрии месяц январь — «Jänner»." }
   },
-
   {
     "key": "Tüte",
     "article": "die",
@@ -243,21 +218,18 @@
       "ch": "«Säckli» — уменьшительная форма; повсеместно в рознице."
     }
   },
-
   {
     "key": "Krankenhaus",
     "article": "das",
     "ch": "Spital",
     "usage": { "ch": "«Spital» — стандартное слово вместо «Krankenhaus»." }
   },
-
   {
     "key": "Fahrkarte",
     "article": "die",
     "ch": "Billett",
     "usage": { "ch": "«Billett» — билет на транспорт; также в ж/д онлайн-сервисах." }
   },
-
   {
     "key": "Aufzug",
     "article": "der",
@@ -268,7 +240,6 @@
       "ch": "«Lift» — нейтральная норма."
     }
   },
-
   {
     "key": "Straßenbahn",
     "article": "die",
@@ -277,14 +248,28 @@
       "ch": "В Швейцарии используется «Tram»; в местной норме часто нейтр. род."
     }
   },
-
   {
     "key": "Bahnsteig",
     "article": "der",
     "ch": "Perron",
     "usage": { "ch": "«Perron» — платформа на вокзале (официальная лексика SBB)." }
   },
-
+  {
+    "key": "daheim",
+    "article": null,
+    "by": "dahoam",
+    "usage": {
+      "by": "В Баварии «dahoam» — типичное произношение слова «daheim» (дома)."
+    }
+  },
+  {
+    "key": "damals",
+    "article": null,
+    "by": "damois",
+    "usage": {
+      "by": "В баварском диалекте «damals» произносится как «damois» (тогда)."
+    }
+  },
   {
     "key": "Handy",
     "article": "das",

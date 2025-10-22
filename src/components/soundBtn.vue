@@ -1,35 +1,32 @@
 <template>
-  <button :title="t('hoverTitle.sound')" @click="speak(text)" :disabled="isSpeaking" class="speak-btn">
-    <img :src="icon" alt="Произнести" class="speak-btn__icon"/>
+  <button
+      :title="t('hoverTitle.sound')"
+      @click="speak(text)"
+      :disabled="isSpeaking"
+      class="speak-btn"
+  >
+    <img :src="icon" alt="pronounce" class="speak-btn__icon"/>
   </button>
 </template>
 
 <script setup>
-import {userAuthStore} from "../../store/authStore.js";
 import {ref, defineProps} from 'vue'
 import {getSpeechAudio} from '../../utils/googleTTS.js'
 import DefaultSoundIcon from '../../assets/images/SoundIcon.svg'
-const authStore = userAuthStore()
 const {t} = useI18n()
 const isSpeaking = ref(false)
 
 const props = defineProps({
-  text: {
-    type: String, required: true
-  },
-  icon: {
-    type: String, default: DefaultSoundIcon
-  }
+  text: {type: String, required: true},
+  lang: {type: String, default: 'de-DE'},
+  icon: {type: String, default: DefaultSoundIcon}
 })
 
-function speak(htmlText) {
+async function speak(htmlText) {
   if (isSpeaking.value) return
-  const plainText = htmlText
-      .replace(/<[^>]*>/g, ' ')
-      .replace(/→/g, ', ')
-      .trim()
+  const plainText = htmlText.replace(/<[^>]*>/g, ' ').replace(/→/g, ', ').trim()
   isSpeaking.value = true
-  getSpeechAudio(plainText)
+  await getSpeechAudio(plainText, props.lang)
   setTimeout(() => {
     isSpeaking.value = false
   }, 2000)

@@ -19,7 +19,6 @@ export default defineNuxtPlugin(async (to) => {
     if (!user && !publicPaths.has(to.path)) {
         return navigateTo({path: '/', query: {redirect: to.fullPath}})
     }
-
     if (user && (to.path === '/login' || to.path === '/register')) {
         return navigateTo(to.query.redirect || '/cabinet')
     }
