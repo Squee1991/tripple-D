@@ -45,7 +45,7 @@
             </div>
 
             <ul class="translations">
-              <li v-if="item.at"><strong>AT (Австрия):</strong> {{ item.at }}</li>
+              <li v-if="item.at"><strong>AT (Австрия):</strong>{{ item.at }}</li>
               <li v-if="item.by"><strong>BY (Бавария):</strong> {{ item.by }}</li>
               <li v-if="item.ch"><strong>CH (Швейцария):</strong> {{ item.ch }}</li>
             </ul>
@@ -72,7 +72,6 @@
           </h4>
           <button class="modal-close" @click="closeUsage" aria-label="Закрыть">×</button>
         </div>
-
         <div class="modal-body">
           <p v-if="typeof currentItemUsage === 'string'">{{ currentItemUsage }}</p>
           <ul v-else class="usage-list">
@@ -102,7 +101,6 @@
 
 <script setup>
 import {ref, computed, onMounted} from 'vue';
-
 const allEntries = ref([]);
 const searchQuery = ref('');
 const loading = ref(true);

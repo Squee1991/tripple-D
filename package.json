@@ -9,7 +9,9 @@
     "socket": "node server/server.js",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "admin:add": "node admin/setAdmin.js add",
+    "admin:remove": "node admin/setAdmin.js remove"
   },
   "dependencies": {
     "@firebase/app-types": "0.9.3",
