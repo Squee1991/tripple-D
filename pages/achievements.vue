@@ -99,6 +99,9 @@ import AdjectiveComparisonAchievements from "../src/components/adjectiveComparis
 import TensesAchievements from "../src/components/tensesAchievements.vue";
 import ModalVerbs from "../src/components/modalVerbs.vue";
 import TypeVerbsAchievement from "../src/components/typeVerbsAchievement.vue";
+import WinterAchievement from '../src/components/winterAchievement.vue'
+
+import { eventWinterAchievements } from '../src/achieveGroup/eventAchievement/winterAchievements.js'
 import { tensesVerbs } from '../src/achieveGroup/verbs/tensesVerbs.js'
 import {modalVerbs} from "../src/achieveGroup/verbs/modalVerbs.js";
 import { typeVerbs} from "../src/achieveGroup/verbs/typeVerbs.js";
@@ -204,7 +207,8 @@ const contentMap = {
   adjectiveComparison: AdjectiveComparisonAchievements,
   tensesVerbs: TensesAchievements,
   modalVerbs: ModalVerbs,
-  typeVerbs: TypeVerbsAchievement
+  typeVerbs: TypeVerbsAchievement,
+  winter: WinterAchievement
 };
 const currentContent = computed(() => contentMap[contentId.value]);
 const wrapperClass = computed(() => {
@@ -236,7 +240,8 @@ const allAchievementsData = {
   adjectiveComparison: adjectiveComparison,
   tensesVerbs: tensesVerbs,
   modalVerbs: modalVerbs,
-  typeVerbs: typeVerbs
+  typeVerbs: typeVerbs,
+  winter: eventWinterAchievements
 };
 const countNestedAchievements = (dataArray) => {
   let count = 0;
@@ -322,6 +327,10 @@ const modeComputed = computed(() => {
   if (allAchievementsData.typeVerbs) {
     typeVerbs = countNestedAchievements(allAchievementsData.typeVerbs)
   }
+  let winter = 0
+  if (allAchievementsData.winter) {
+    winter = countNestedAchievements(allAchievementsData.winter)
+  }
   return {
     easy: easyCount,
     normal: normalCount,
@@ -335,12 +344,14 @@ const modeComputed = computed(() => {
     akkusativ: akkusativ,
     genitiv: genitiv,
     dativ: dativ,
+    eventsTotal: winter,
     tensesVerbs: tensesVerbs,
     modalVerbs: modalVerbs,
     typeVerbs: typeVerbs,
     adjectiveDeclension: adjectiveDeclension,
     adjectiveComparison: adjectiveComparison,
     adjectiveBasic: adjectiveBasic,
+    winter: winter,
     total: easyCount + normalCount + hardCount,
     prepositiones: nominativ + akkusativ + genitiv + dativ,
     adjectiveTotal: adjectiveDeclension + adjectiveBasic + adjectiveComparison,
@@ -512,6 +523,18 @@ const achievementCategories = computed(() => [
     name: "categoryAchievments.special",
     icon: "🌟",
     length: modeComputed.value.special,
+  },
+  {
+    id: 'events',
+    name: 'События',
+    icon: '🎊',
+    length: modeComputed.value.winter, // ✅
+    submenu: [
+      { id: 'winter', name: 'Щёпот зимы', icon: '❄️', length: modeComputed.value.winter }, // ✅
+      { id: 'valentine', name: 'Фестиваль сердец', icon: '💖' },
+      { id: 'foolDay', name: 'Парад приколов', icon: '🎭' },
+      { id: 'halloween', name: 'Праздник тыкв', icon: '🎃' },
+    ]
   }
 ]);
 

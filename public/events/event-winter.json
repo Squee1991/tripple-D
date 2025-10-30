@@ -1,164 +1,2554 @@
 {
   "quests": [
     {
-      "id": "q1",
-      "title": "Новогодние слова — тест (выбор)",
+      "id": "quest-1",
+      "title": "Рождественская викторина",
       "steps": [
-        { "id": 1,  "type": "mcq", "question": "Как по-немецки «ёлка»?", "options": ["Kerze", "Weihnachtsbaum", "Geschenk"], "answerIndex": 1 },
-        { "id": 2,  "type": "mcq", "question": "«Подарок» — это…",        "options": ["Geschenk", "Schnee", "Stern"],      "answerIndex": 0 },
-        { "id": 3,  "type": "mcq", "question": "«Гирлянда» — это…",        "options": ["Lametta", "Lichterkette", "Krippe"], "answerIndex": 1 },
-        { "id": 4,  "type": "mcq", "question": "«Имбирный пряник»?",       "options": ["Stollen", "Lebkuchen", "Kugel"],   "answerIndex": 1 },
-        { "id": 5,  "type": "mcq", "question": "«Санта» по-немецки…",      "options": ["Weihnachtsmann", "Nikolaus", "Elf"], "answerIndex": 0 },
-        { "id": 6,  "type": "mcq", "question": "«Рождественская ярмарка»", "options": ["Krippe", "Weihnachtsmarkt", "Werkstatt"], "answerIndex": 1 },
-        { "id": 7,  "type": "mcq", "question": "«Снежинка» — это…",        "options": ["Schneeflocke", "Frost", "Kälte"],  "answerIndex": 0 },
-        { "id": 8,  "type": "mcq", "question": "«Оленёнок Рудольф» — …",   "options": ["Rudolf", "Sack", "Liste"],         "answerIndex": 0 },
-        { "id": 9,  "type": "mcq", "question": "«Свеча» — это…",           "options": ["Kerze", "Kranz", "Krippe"],        "answerIndex": 0 },
-        { "id": 10, "type": "mcq", "question": "«Звезда» — это…",          "options": ["Stern", "Spitze", "Strophe"],      "answerIndex": 0 }
+        {
+          "type": "multiple-choice",
+          "id": "mcq-1",
+          "title": "Когда отмечают Рождество?",
+          "question": "In welcher Jahreszeit feiert man Weihnachten?",
+          "options": [
+            "im Sommer",
+            "im Herbst",
+            "im Winter",
+            "im Frühling"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-2",
+          "title": "Погода на Рождество",
+          "question": "Wie ist das Wetter zu Weihnachten (Nordliche Hemisphäre)?",
+          "options": [
+            "es ist sehr heiß",
+            "es schneit nie",
+            "es ist warm und sonnig",
+            "es ist kalt"
+          ],
+          "correctOptionIndex": 3
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-3",
+          "title": "Кто везёт сани Санты?",
+          "question": "Welche Tiere ziehen den Schlitten des Weihnachtsmannes?",
+          "options": [
+            "Pferde",
+            "Rentiere",
+            "Hunde",
+            "Bären"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-4",
+          "title": "Как Санта попадает в дом?",
+          "question": "Wie kommt der Weihnachtsmann ins Haus?",
+          "options": [
+            "durch die Tür",
+            "durchs Fenster",
+            "durch den Kamin",
+            "durch den Rauchfang"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-5",
+          "title": "Сколько свечей на венке?",
+          "question": "Wie viele Kerzen sind auf einem Adventskranz?",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "correctOptionIndex": 3
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-6",
+          "title": "Календарь ожидания",
+          "question": "Wie viele Türen hat der Adventskalender?",
+          "options": [
+            "19",
+            "24",
+            "25",
+            "10"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-7",
+          "title": "Что кладут под ёлку?",
+          "question": "Was legt man unter den Christbaum?",
+          "options": [
+            "Geschenke",
+            "das Abendessen",
+            "Kerzen",
+            "eine Krippe"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-8",
+          "title": "Кто не в яслях?",
+          "question": "Welche dieser Figuren ist nicht in der Krippe?",
+          "options": [
+            "Jesus",
+            "Maria",
+            "der Weihnachtsmann",
+            "die heiligen drei Könige"
+          ],
+          "correctOptionIndex": 2
+        }
       ]
     },
     {
-      "id": "q2",
-      "title": "Еда и напитки — тест (выбор)",
+      "id": "quest-2",
+      "title": "Традиции и обычаи ",
       "steps": [
-        { "id": 1,  "type": "mcq", "question": "Глинтвейн?",         "options": ["Kakao", "Glühwein", "Punsch"], "answerIndex": 1 },
-        { "id": 2,  "type": "mcq", "question": "Штоллен — это…",     "options": ["Stollen", "Stroh", "Stuhl"],   "answerIndex": 0 },
-        { "id": 3,  "type": "mcq", "question": "Печенье-звёздочки?", "options": ["Spekulatius", "Zimtstern", "Keks"], "answerIndex": 1 },
-        { "id": 4,  "type": "mcq", "question": "Марципан — …",       "options": ["Marzipan", "Marmelade", "Mais"], "answerIndex": 0 },
-        { "id": 5,  "type": "mcq", "question": "Детский пунш?",      "options": ["Kinderpunsch", "Kindersuppe", "Kindertee"], "answerIndex": 0 },
-        { "id": 6,  "type": "mcq", "question": "Пряники?",           "options": ["Plätzchen", "Lebkuchen", "Brot"], "answerIndex": 1 },
-        { "id": 7,  "type": "mcq", "question": "Какао — …",          "options": ["Kakao", "Kragen", "Kater"], "answerIndex": 0 },
-        { "id": 8,  "type": "mcq", "question": "Ванильные рожки?",   "options": ["Vanillekipferl", "Vanillekugel", "Vanillebrot"], "answerIndex": 0 },
-        { "id": 9,  "type": "mcq", "question": "Имбирное печенье?",  "options": ["Lebkuchen", "Leber", "Leben"], "answerIndex": 0 },
-        { "id": 10, "type": "mcq", "question": "Спекулятис — …",     "options": ["Spekulatius", "Spektrum", "Spekulant"], "answerIndex": 0 }
+        {
+          "type": "multiple-choice",
+          "id": "mcq-9",
+          "title": "Цвет Рождества",
+          "question": "Welche Farbe ist typisch für Weihnachten?",
+          "options": [
+            "gelb",
+            "rot",
+            "blau",
+            "lila"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-10",
+          "title": "Колокольчики звенят",
+          "question": "Welches Geräusch machen die Glocken?",
+          "options": [
+            "sie bimmeln",
+            "sie pfeifen",
+            "sie zirpen",
+            "sie rauschen"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-11",
+          "title": "Что не вешают на ёлку?",
+          "question": "Was hängt man nicht auf den Christbaum?",
+          "options": [
+            "Schmuck",
+            "Bonbons",
+            "Würstchen",
+            "Girlanden"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-12",
+          "title": "Под омелой",
+          "question": "Was machen die Leute unter den Misteln?",
+          "options": [
+            "sie fotografieren sich",
+            "sie küssen sich",
+            "sie trinken etwas",
+            "sie singen"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-13",
+          "title": "Какое дерево — рождественское?",
+          "question": "Welche Art von Baum ist der Christbaum?",
+          "options": [
+            "eine Birke",
+            "eine Eiche",
+            "eine Tanne",
+            "eine Trauerweide"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-14",
+          "title": "Нерождественские персонажи",
+          "question": "Welche Figuren gehören nicht zu Weihnachten?",
+          "options": [
+            "Heinzelmännchen",
+            "Engel",
+            "der Krampus",
+            "die Heiligen 3 Könige"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-15",
+          "title": "Что пишут Санте?",
+          "question": "Was schreiben die Kinder an den Weihnachtsmann?",
+          "options": [
+            "ein Buch",
+            "einen Wunschzettel",
+            "eine Postkarte",
+            "ein Gedicht"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-16",
+          "title": "Где рождественский рынок?",
+          "question": "In welcher deutschen Stadt findet der berühmte Christkindlesmarkt statt?",
+          "options": [
+            "Nürnberg",
+            "Berlin",
+            "München",
+            "Hamburg"
+          ],
+          "correctOptionIndex": 0
+        }
       ]
     },
     {
-      "id": "q3",
-      "title": "Правда / ложь (TF)",
+      "id": "quest-3",
+      "title": "Праздничные герои",
       "steps": [
-        { "id": 1,  "type": "tf", "statement": "Weihnachtsmarkt — это рождественский рынок.", "answerBool": true },
-        { "id": 2,  "type": "tf", "statement": "Geschenk — это «гирлянда».",                   "answerBool": false },
-        { "id": 3,  "type": "tf", "statement": "Stollen — традиционная выпечка.",              "answerBool": true },
-        { "id": 4,  "type": "tf", "statement": "Schneeflocke — это «снеговик».",               "answerBool": false },
-        { "id": 5,  "type": "tf", "statement": "Nikolaus — святой Николай.",                   "answerBool": true },
-        { "id": 6,  "type": "tf", "statement": "Engel — это «ангел».",                         "answerBool": true },
-        { "id": 7,  "type": "tf", "statement": "Lametta — это мишура.",                        "answerBool": true },
-        { "id": 8,  "type": "tf", "statement": "Kamin — это «камин».",                         "answerBool": true },
-        { "id": 9,  "type": "tf", "statement": "Rudolf — это вид печенья.",                    "answerBool": false },
-        { "id": 10, "type": "tf", "statement": "Krippe — это вертеп/ясельки.",                 "answerBool": true }
+        {
+          "type": "multiple-choice",
+          "id": "mcq-17",
+          "title": "6 декабря — день Николая",
+          "question": "Was stellen die Kinder am 6. Dezember vor die Tür?",
+          "options": [
+            "ihre Schuhe",
+            "ihre Mützen",
+            "ihre Teller",
+            "ihre Handschuhe"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-18",
+          "title": "Кнехт Рупрехт",
+          "question": "Was bringt der Knecht Ruprecht laut der Tradition?",
+          "options": [
+            "Süßigkeiten",
+            "Rute",
+            "Geschenke",
+            "Plätzchen"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-19",
+          "title": "Свечи Адвента",
+          "question": "Was zündet man an den vier Sonntagen vor Weihnachten an?",
+          "options": [
+            "Kerzen am Adventskranz",
+            "Feuerwerk",
+            "Laternen",
+            "Lichter am Baum"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-20",
+          "title": "Традиционный ужин",
+          "question": "Was isst man in Deutschland oft am Heiligabend?",
+          "options": [
+            "Würstchen mit Kartoffelsalat",
+            "Pizza",
+            "Sushi",
+            "Spaghetti"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-21",
+          "title": "Новый год в Германии",
+          "question": "Was macht man traditionell am Silvesterabend?",
+          "options": [
+            "man öffnet Geschenke",
+            "man schießt Feuerwerk",
+            "man bemalt Eier",
+            "man backt Kekse"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-22",
+          "title": "Цвета праздника",
+          "question": "Welche Farbe wird mit Weihnachten am meisten verbunden?",
+          "options": [
+            "Rot",
+            "Blau",
+            "Grün",
+            "Gelb"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-23",
+          "title": "Песня о Рождестве",
+          "question": "Welches Lied wird an Weihnachten oft gesungen?",
+          "options": [
+            "Stille Nacht",
+            "Alle meine Entchen",
+            "Happy Birthday",
+            "Bruder Jakob"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-24",
+          "title": "Украшение на макушке",
+          "question": "Was steckt man an die Spitze des Weihnachtsbaums?",
+          "options": [
+            "einen Stern",
+            "eine Glocke",
+            "eine Schleife",
+            "eine Kugel"
+          ],
+          "correctOptionIndex": 0
+        }
       ]
     },
     {
-      "id": "q4",
-      "title": "Вставь пропуск (fill)",
+      "id": "quest-4",
+      "title": "Адвент и ожидание",
       "steps": [
-        { "id": 1,  "type": "fill", "prompt": "Wir schmücken den ________ mit Lichterketten.", "answerText": "Weihnachtsbaum" },
-        { "id": 2,  "type": "fill", "prompt": "Zum Fest backen wir ________.",                 "answerText": "Plätzchen" },
-        { "id": 3,  "type": "fill", "prompt": "Die Kinder öffnen den ________ am Abend.",      "answerText": "Geschenke" },
-        { "id": 4,  "type": "fill", "prompt": "Auf dem Markt trinke ich heißen ________.",     "answerText": "Glühwein" },
-        { "id": 5,  "type": "fill", "prompt": "An der Spitze steht ein ________.",             "answerText": "Stern" },
-        { "id": 6,  "type": "fill", "prompt": "Die ________ hängt am Kamin.",                  "answerText": "Strumpf" },
-        { "id": 7,  "type": "fill", "prompt": "Der ________ singt Weihnachtslieder.",          "answerText": "Chor" },
-        { "id": 8,  "type": "fill", "prompt": "Wir schicken eine ________ mit Grüßen.",        "answerText": "Karte" },
-        { "id": 9,  "type": "fill", "prompt": "Die ________ ist süß und mit Nüssen.",          "answerText": "Stollen" },
-        { "id": 10, "type": "fill", "prompt": "Der ________ fällt leise in der Nacht.",        "answerText": "Schnee" }
+        {
+          "type": "multiple-choice",
+          "id": "mcq-25",
+          "title": "Адвент-календарь",
+          "question": "Was ist typisch für den Adventskalender?",
+          "options": [
+            "24 kleine Türen",
+            "12 Kerzen",
+            "ein großes Geschenk",
+            "eine Musikbox"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-26",
+          "title": "Напиток на рынке",
+          "question": "Was trinken viele Erwachsene auf dem Weihnachtsmarkt?",
+          "options": [
+            "Glühwein",
+            "Kaffee",
+            "Milch",
+            "Eistee"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-27",
+          "title": "Смысл венка",
+          "question": "Was symbolisiert der Adventskranz?",
+          "options": [
+            "das Warten auf Weihnachten",
+            "den Sommeranfang",
+            "den Weihnachtsmann",
+            "den Frühling"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-28",
+          "title": "Поцелуй под омелой",
+          "question": "Was macht man traditionell unter einem Mistelzweig?",
+          "options": [
+            "Man küsst sich",
+            "Man tanzt",
+            "Man schenkt Geld",
+            "Man isst Plätzchen"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-29",
+          "title": "Сладкий штоллен",
+          "question": "Wie heißt das Gebäck, das man zu Weihnachten oft mit Puderzucker bestreut?",
+          "options": [
+            "Stollen",
+            "Brezel",
+            "Käsekuchen",
+            "Croissant"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-30",
+          "title": "Письмо Санте",
+          "question": "Was schreibt man an den Weihnachtsmann?",
+          "options": [
+            "einen Wunschzettel",
+            "eine Einladung",
+            "einen Vertrag",
+            "ein Tagebuch"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-31",
+          "title": "Традиция под омелой",
+          "question": "Was macht man traditionell unter einem Mistelzweig?",
+          "options": [
+            "Man küsst sich",
+            "Man tanzt",
+            "Man schenkt Geld",
+            "Man isst Plätzchen"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-32",
+          "title": "Праздничная выпечка",
+          "question": "Wie heißt das Gebäck, das man zu Weihnachten oft mit Puderzucker bestreut?",
+          "options": [
+            "Stollen",
+            "Brezel",
+            "Käsekuchen",
+            "Croissant"
+          ],
+          "correctOptionIndex": 0
+        }
       ]
     },
     {
-      "id": "q5",
-      "title": "Расставь в правильном порядке (order)",
+      "id": "quest-5",
+      "title": "Желания и подарки",
       "steps": [
-        { "id": 1,  "type": "order", "items": ["Geschenkpapier", "Schleife", "Karte"], "correctOrder": [0, 1, 2] },
-        { "id": 2,  "type": "order", "items": ["Kerze", "Anzünden", "Duft"],           "correctOrder": [0, 1, 2] },
-        { "id": 3,  "type": "order", "items": ["Baum", "Lametta", "Stern"],            "correctOrder": [0, 1, 2] },
-        { "id": 4,  "type": "order", "items": ["Tasse", "Kakao", "Trinken"],           "correctOrder": [0, 1, 2] },
-        { "id": 5,  "type": "order", "items": ["Backen", "Plätzchen", "Teilen"],       "correctOrder": [0, 1, 2] },
-        { "id": 6,  "type": "order", "items": ["Markt", "Musik", "Tanzen"],            "correctOrder": [0, 1, 2] },
-        { "id": 7,  "type": "order", "items": ["Advent", "Kranz", "Kerzen"],           "correctOrder": [0, 1, 2] },
-        { "id": 8,  "type": "order", "items": ["Werkstatt", "Elf", "Spielzeug"],       "correctOrder": [0, 1, 2] },
-        { "id": 9,  "type": "order", "items": ["Rudolf", "Schlitten", "Fahrt"],        "correctOrder": [0, 1, 2] },
-        { "id": 10, "type": "order", "items": ["Kamin", "Strumpf", "Überraschung"],    "correctOrder": [0, 1, 2] }
+        {
+          "type": "multiple-choice",
+          "id": "mcq-33",
+          "title": "Желания детям",
+          "question": "Was schreibt man an den Weihnachtsmann?",
+          "options": [
+            "einen Wunschzettel",
+            "eine Einladung",
+            "einen Vertrag",
+            "ein Tagebuch"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-34",
+          "title": "Сколько свечей на венке?",
+          "question": "Was gehört NICHT zum Adventskranz?",
+          "options": [
+            "vier Kerzen",
+            "grüner Kranz",
+            "fünf Kerzen",
+            "Schleifen"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-35",
+          "title": "Кем является Рудольф?",
+          "question": "Welches Tier ist Rudolf?",
+          "options": [
+            "ein Pferd",
+            "ein Rentier",
+            "ein Hund",
+            "ein Bär"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-36",
+          "title": "Что такое Bescherung?",
+          "question": "Was macht man bei der Bescherung?",
+          "options": [
+            "man tanzt",
+            "man öffnet Geschenke",
+            "man singt Lieder",
+            "man schmückt den Baum"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-37",
+          "title": "Что такое ламета?",
+          "question": "Was ist „Lametta“?",
+          "options": [
+            "ein Getränk",
+            "eine Lichterkette",
+            "Tinselschmuck",
+            "ein Plätzchen"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-38",
+          "title": "Безалкогольный напиток",
+          "question": "Welches Getränk ist auf dem Weihnachtsmarkt warm und alkoholfrei?",
+          "options": [
+            "Glühwein",
+            "Kinderpunsch",
+            "Eistee",
+            "Kaffee"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-39",
+          "title": "Кто приносит подарки?",
+          "question": "Wer bringt in manchen Regionen statt des Weihnachtsmanns die Geschenke?",
+          "options": [
+            "der Osterhase",
+            "das Christkind",
+            "der Nikolaus",
+            "der Krampus"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "mcq-40",
+          "title": "Что вешают к камину?",
+          "question": "Was hängt man traditionell an den Kamin?",
+          "options": [
+            "den Hut",
+            "den Schal",
+            "den Handschuh",
+            "den Strumpf"
+          ],
+          "correctOptionIndex": 3
+        }
+      ]
+    },
+
+
+    {
+      "id": "quest-6",
+      "title": "Weihnachten in Deutschland",
+      "steps": [
+        {
+          "type": "reading",
+          "id": "reading-1",
+          "title": "Der Weihnachtsabend",
+          "text": "Am 24. Dezember feiern viele Familien in Deutschland Weihnachten. Die Kinder warten auf den Weihnachtsmann. Am Abend werden Geschenke geöffnet, Lichter brennen und es gibt leckeres Essen.",
+          "questions": [
+            {
+              "question": "Wann feiern die meisten Familien in Deutschland Weihnachten?",
+              "options": ["am 25. Dezember", "am 24. Dezember", "am 1. Januar", "am 6. Dezember"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Wer bringt die Geschenke?",
+              "options": ["der Nikolaus", "der Weihnachtsmann", "die Eltern", "der Engel"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Was machen die Kinder am Abend?",
+              "options": ["schlafen", "singen Lieder", "öffnen Geschenke", "gehen spazieren"],
+              "correctOptionIndex": 2
+            },
+            {
+              "question": "Was gibt es am Abend?",
+              "options": ["Eiscreme", "leckeres Essen", "Kuchen", "Pizza"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Wie ist die Stimmung am Weihnachtsabend?",
+              "options": ["traurig", "laut", "fröhlich", "langweilig"],
+              "correctOptionIndex": 2
+            }
+          ]
+        },
+        {
+          "type": "reading",
+          "id": "reading-2",
+          "title": "Der Weihnachtsmarkt",
+          "text": "Im Dezember gibt es in fast jeder Stadt in Deutschland einen Weihnachtsmarkt. Dort kann man Glühwein trinken, Plätzchen essen und Geschenke kaufen. Es duftet nach Zimt und Vanille, und überall leuchten Lichter.",
+          "questions": [
+            {
+              "question": "Wann findet der Weihnachtsmarkt statt?",
+              "options": ["im Oktober", "im Dezember", "im März", "im Sommer"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Was kann man auf dem Weihnachtsmarkt trinken?",
+              "options": ["Cola", "Eistee", "Glühwein", "Wasser"],
+              "correctOptionIndex": 2
+            },
+            {
+              "question": "Wonach duftet es auf dem Weihnachtsmarkt?",
+              "options": ["nach Apfel und Birne", "nach Zimt und Vanille", "nach Rosen", "nach Pfeffer"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Was kann man dort kaufen?",
+              "options": ["Kleidung", "Geschenke", "Autos", "Zeitungen"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Wie sieht der Markt aus?",
+              "options": ["Dunkel und leer", "Bunt und hell", "Schmutzig", "Geschlossen"],
+              "correctOptionIndex": 1
+            }
+          ]
+        },
+        {
+          "type": "reading",
+          "id": "reading-3",
+          "title": "Der Adventskranz",
+          "text": "Ein Adventskranz hat vier Kerzen. Jeden Sonntag vor Weihnachten wird eine Kerze angezündet. Wenn alle vier Kerzen brennen, ist bald Heiligabend.",
+          "questions": [
+            {
+              "question": "Wie viele Kerzen hat ein Adventskranz?",
+              "options": ["drei", "vier", "fünf", "sechs"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Wann zündet man die Kerzen an?",
+              "options": ["an jedem Sonntag im Advent", "an Weihnachten", "am Nikolaustag", "am Neujahrstag"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was zeigt der Adventskranz?",
+              "options": ["die Jahreszeiten", "die Zeit bis Weihnachten", "den Frühling", "die Familienfeier"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Wann ist Heiligabend?",
+              "options": ["nach der vierten Kerze", "nach der ersten Kerze", "vor der dritten Kerze", "nach Neujahr"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was macht man am Sonntag im Advent?",
+              "options": ["man zündet eine Kerze an", "man spielt Fußball", "man feiert Silvester", "man tanzt"],
+              "correctOptionIndex": 0
+            }
+          ]
+        },
+        {
+          "type": "reading",
+          "id": "reading-4",
+          "title": "Nikolaustag",
+          "text": "Am 6. Dezember kommt der Nikolaus. Kinder stellen ihre Schuhe vor die Tür. Wenn sie brav waren, finden sie am Morgen Süßigkeiten darin. Wenn nicht, bekommen sie eine Rute.",
+          "questions": [
+            {
+              "question": "Wann kommt der Nikolaus?",
+              "options": ["am 24. Dezember", "am 6. Dezember", "am 1. Januar", "am 31. Dezember"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Was stellen die Kinder vor die Tür?",
+              "options": ["ihre Mützen", "ihre Schuhe", "ihre Handschuhe", "ihre Teller"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Was finden brave Kinder am Morgen?",
+              "options": ["Süßigkeiten", "Bücher", "Spielzeugautos", "Kerzen"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was bekommen unartige Kinder?",
+              "options": ["eine Rute", "ein Geschenk", "ein Lied", "eine Karte"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Wer bringt die Geschenke am Nikolaustag?",
+              "options": ["der Weihnachtsmann", "der Nikolaus", "das Christkind", "der Engel"],
+              "correctOptionIndex": 1
+            }
+          ]
+        }
       ]
     },
     {
-      "id": "q6",
-      "title": "Соответствия (match)",
+      "id": "quest-7",
+      "title": "Weihnachten und Neujahr in Deutschland",
       "steps": [
-        { "id": 1,  "type": "match", "pairs": [ { "left": "Geschenk", "right": "Подарок" }, { "left": "Kerze", "right": "Свеча" } ] },
-        { "id": 2,  "type": "match", "pairs": [ { "left": "Weihnachtsbaum", "right": "Ёлка" }, { "left": "Stern", "right": "Звезда" } ] },
-        { "id": 3,  "type": "match", "pairs": [ { "left": "Schnee", "right": "Снег" }, { "left": "Frost", "right": "Мороз" } ] },
-        { "id": 4,  "type": "match", "pairs": [ { "left": "Elf", "right": "Эльф" }, { "left": "Werkstatt", "right": "Мастерская" } ] },
-        { "id": 5,  "type": "match", "pairs": [ { "left": "Kakao", "right": "Какао" }, { "left": "Tasse", "right": "Кружка" } ] },
-        { "id": 6,  "type": "match", "pairs": [ { "left": "Krippe", "right": "Вертеп" }, { "left": "Engel", "right": "Ангел" } ] },
-        { "id": 7,  "type": "match", "pairs": [ { "left": "Plätzchen", "right": "Печенье" }, { "left": "Backen", "right": "Печь" } ] },
-        { "id": 8,  "type": "match", "pairs": [ { "left": "Glühwein", "right": "Глинтвейн" }, { "left": "Becher", "right": "Стакан" } ] },
-        { "id": 9,  "type": "match", "pairs": [ { "left": "Rudolf", "right": "Рудольф" }, { "left": "Rentier", "right": "Олень" } ] },
-        { "id": 10, "type": "match", "pairs": [ { "left": "Lied", "right": "Песня" }, { "left": "Chor", "right": "Хор" } ] }
+        {
+          "type": "reading",
+          "id": "reading-1",
+          "title": "Silvesterabend",
+          "text": "Am 31. Dezember feiern die Menschen in Deutschland Silvester. Viele treffen sich mit Freunden, essen Raclette oder Fondue und schauen Feuerwerk. Um Mitternacht stoßen alle mit Sekt an und wünschen sich ein gutes neues Jahr.",
+          "questions": [
+            {
+              "question": "Wann ist Silvester in Deutschland?",
+              "options": ["am 24. Dezember", "am 31. Dezember", "am 1. Januar", "am 6. Januar"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Was essen viele Menschen an Silvester?",
+              "options": ["Pizza", "Raclette oder Fondue", "Kuchen", "Eis"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Was machen die Menschen um Mitternacht?",
+              "options": ["sie gehen schlafen", "sie singen Lieder", "sie stoßen mit Sekt an", "sie tanzen"],
+              "correctOptionIndex": 2
+            },
+            {
+              "question": "Was wünschen sich die Leute?",
+              "options": ["frohe Ostern", "ein gutes neues Jahr", "viel Spaß", "gute Reise"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Wie ist die Stimmung an Silvester?",
+              "options": ["ruhig", "traurig", "fröhlich und laut", "langweilig"],
+              "correctOptionIndex": 2
+            }
+          ]
+        },
+        {
+          "type": "reading",
+          "id": "reading-2",
+          "title": "Neujahrstag",
+          "text": "Am 1. Januar ist Neujahr. Viele Menschen schlafen lange, weil sie in der Nacht gefeiert haben. Es ist ein ruhiger Tag mit Familie, Spaziergängen und gutem Essen. Manche schreiben gute Vorsätze für das neue Jahr auf.",
+          "questions": [
+            {
+              "question": "Wann ist Neujahr?",
+              "options": ["am 24. Dezember", "am 31. Dezember", "am 1. Januar", "am 6. Januar"],
+              "correctOptionIndex": 2
+            },
+            {
+              "question": "Warum schlafen viele Menschen lange?",
+              "options": ["weil sie krank sind", "weil sie gefeiert haben", "weil sie reisen", "weil sie arbeiten"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Mit wem verbringt man oft den Neujahrstag?",
+              "options": ["mit Kollegen", "mit Freunden", "mit der Familie", "mit Nachbarn"],
+              "correctOptionIndex": 2
+            },
+            {
+              "question": "Was machen manche Menschen an Neujahr?",
+              "options": ["sie schreiben gute Vorsätze", "sie schmücken den Baum", "sie kaufen Geschenke", "sie feiern Geburtstag"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Wie ist der Tag meistens?",
+              "options": ["laut und hektisch", "ruhig und gemütlich", "langweilig", "kalt und dunkel"],
+              "correctOptionIndex": 1
+            }
+          ]
+        },
+        {
+          "type": "reading",
+          "id": "reading-3",
+          "title": "Neujahrsvorsätze",
+          "text": "Viele Menschen nehmen sich für das neue Jahr etwas vor. Zum Beispiel: mehr Sport machen, gesünder essen oder weniger Zeit am Handy verbringen. Doch oft halten die Vorsätze nur ein paar Wochen.",
+          "questions": [
+            {
+              "question": "Was machen viele Menschen zu Neujahr?",
+              "options": ["sie reisen", "sie machen gute Vorsätze", "sie schmücken den Baum", "sie schenken Geschenke"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Was ist ein typischer Vorsatz?",
+              "options": ["mehr schlafen", "mehr Sport machen", "mehr essen", "mehr fernsehen"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Wie lange halten viele Vorsätze?",
+              "options": ["das ganze Jahr", "ein paar Wochen", "einen Tag", "gar nicht"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Was wollen viele Menschen verbessern?",
+              "options": ["ihre Wohnung", "ihren Körper und ihr Leben", "ihre Arbeit", "ihre Kleidung"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Was wollen manche weniger tun?",
+              "options": ["arbeiten", "reisen", "am Handy sein", "lernen"],
+              "correctOptionIndex": 2
+            }
+          ]
+        },
+        {
+          "type": "reading",
+          "id": "reading-4",
+          "title": "Heilige Drei Könige",
+          "text": "Am 6. Januar feiern viele Menschen in Deutschland den Tag der Heiligen Drei Könige. Kinder verkleiden sich als Könige, singen Lieder und sammeln Geld für arme Kinder. Sie schreiben mit Kreide den Segen an die Haustüren.",
+          "questions": [
+            {
+              "question": "Wann ist der Tag der Heiligen Drei Könige?",
+              "options": ["am 24. Dezember", "am 31. Dezember", "am 6. Januar", "am 1. Januar"],
+              "correctOptionIndex": 2
+            },
+            {
+              "question": "Was machen die Kinder an diesem Tag?",
+              "options": ["sie essen Plätzchen", "sie verkleiden sich und singen", "sie lernen in der Schule", "sie schauen Fernsehen"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Wofür sammeln die Kinder Geld?",
+              "options": ["für ein Fest", "für arme Kinder", "für Geschenke", "für Musik"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Was schreiben sie an die Türen?",
+              "options": ["ihre Namen", "den Segen mit Kreide", "eine Zahl", "einen Brief"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Wie verkleiden sich die Kinder?",
+              "options": ["als Engel", "als Könige", "als Tiere", "als Hexen"],
+              "correctOptionIndex": 1
+            }
+          ]
+        }
       ]
     },
     {
-      "id": "q7",
-      "title": "Ситуации — выбор ответа (mcq)",
+      "id": "quest-8",
+      "title": "Silvester der Geister",
       "steps": [
-        { "id": 1,  "type": "mcq", "question": "Тебя пригласили на Heiligabend. Что это?", "options": ["Святой вечер (24.12)", "Карнавал", "Пасха"], "answerIndex": 0 },
-        { "id": 2,  "type": "mcq", "question": "Тебе подарили Adventskalender. Что с ним делают?", "options": ["Жгут", "Открывают окошки", "Едят"], "answerIndex": 1 },
-        { "id": 3,  "type": "mcq", "question": "Bescherung — это…", "options": ["Вручение подарков", "Уборка", "Колядки"], "answerIndex": 0 },
-        { "id": 4,  "type": "mcq", "question": "Adventskranz — это…", "options": ["Венок с 4 свечами", "Ёлочная игрушка", "Печенье"], "answerIndex": 0 },
-        { "id": 5,  "type": "mcq", "question": "Kindern bringt Geschenke…", "options": ["Weihnachtsmann", "Koch", "Lehrer"], "answerIndex": 0 },
-        { "id": 6,  "type": "mcq", "question": "Glühwein — это…", "options": ["Горячее вино", "Суп", "Морс"], "answerIndex": 0 },
-        { "id": 7,  "type": "mcq", "question": "Krippe ставят…", "options": ["Под ёлкой", "На крыше", "В гараже"], "answerIndex": 0 },
-        { "id": 8,  "type": "mcq", "question": "Spekulatius — это…", "options": ["Печенье", "Салат", "Напиток"], "answerIndex": 0 },
-        { "id": 9,  "type": "mcq", "question": "Kamin нужен для…", "options": ["Тепла/украшений", "Плавания", "Игры"], "answerIndex": 0 },
-        { "id": 10, "type": "mcq", "question": "Rentier тянет…", "options": ["Schlitten", "Fahrrad", "Auto"], "answerIndex": 0 }
+        {
+          "type": "reading",
+          "id": "reading-1",
+          "title": "Die alte Burg",
+          "text": "In einer alten Burg in Deutschland bereiten sich die Dorfbewohner auf Silvester vor. Doch in dieser Nacht soll der Geist des alten Ritters erscheinen! Die Menschen schmücken den Saal mit Kerzen und hoffen, dass der Geist freundlich ist.",
+          "questions": [
+            {
+              "question": "Wo spielt die Geschichte?",
+              "options": ["in einer Stadt", "in einer alten Burg", "in einem Wald", "auf einem Markt"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Was feiern die Dorfbewohner?",
+              "options": ["Weihnachten", "Silvester", "Ostern", "Halloween"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Wer soll in der Nacht erscheinen?",
+              "options": ["ein Zauberer", "der alte Ritter", "ein Wolf", "der Weihnachtsmann"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Wie schmücken die Menschen den Saal?",
+              "options": ["mit Blumen", "mit Kerzen", "mit Lichtern", "mit Geschenken"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Wie hoffen die Menschen, dass der Geist ist?",
+              "options": ["freundlich", "böse", "laut", "unsichtbar"],
+              "correctOptionIndex": 0
+            }
+          ]
+        },
+        {
+          "type": "reading",
+          "id": "reading-2",
+          "title": "Mitternacht",
+          "text": "Als die Uhr Mitternacht schlägt, wird es still. Ein kalter Wind weht durch den Saal. Plötzlich erscheint eine helle Gestalt – der Geist des Ritters! Er lächelt und sagt: 'Fürchtet euch nicht. Ich wünsche euch ein gutes neues Jahr!'",
+          "questions": [
+            {
+              "question": "Was passiert, wenn die Uhr Mitternacht schlägt?",
+              "options": ["die Musik beginnt", "es wird still", "die Kerzen gehen aus", "die Gäste tanzen"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Was weht durch den Saal?",
+              "options": ["ein warmer Wind", "ein kalter Wind", "Rauch", "Musik"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Wer erscheint plötzlich?",
+              "options": ["ein Ritter", "der Geist des Ritters", "ein König", "eine Hexe"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Was sagt der Geist?",
+              "options": ["Frohe Weihnachten!", "Fürchtet euch nicht!", "Wo ist mein Schwert?", "Guten Morgen!"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Wie ist der Geist?",
+              "options": ["freundlich", "böse", "traurig", "laut"],
+              "correctOptionIndex": 0
+            }
+          ]
+        },
+        {
+          "type": "reading",
+          "id": "reading-3",
+          "title": "Das Feuerwerk",
+          "text": "Draußen beginnt das Feuerwerk. Rote, blaue und goldene Lichter füllen den Himmel. Der Geist schaut hinauf und lacht. 'So schön habe ich es seit hundert Jahren nicht gesehen', sagt er. Die Menschen feiern mit Freude weiter.",
+          "questions": [
+            {
+              "question": "Was passiert draußen?",
+              "options": ["es schneit", "es beginnt ein Feuerwerk", "es regnet", "es donnert"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Welche Farben sieht man am Himmel?",
+              "options": ["rot, blau und gold", "grün und schwarz", "weiß und grau", "nur rot"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Wie reagiert der Geist?",
+              "options": ["er lacht", "er weint", "er verschwindet", "er schreit"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Wie lange hat der Geist so etwas nicht gesehen?",
+              "options": ["zehn Jahre", "fünfzig Jahre", "hundert Jahre", "seit gestern"],
+              "correctOptionIndex": 2
+            },
+            {
+              "question": "Wie fühlen sich die Menschen?",
+              "options": ["traurig", "ängstlich", "freudig", "erschöpft"],
+              "correctOptionIndex": 2
+            }
+          ]
+        },
+        {
+          "type": "reading",
+          "id": "reading-4",
+          "title": "Der Neujahrszauber",
+          "text": "Am Morgen ist der Geist verschwunden. Doch im Saal liegt ein goldenes Licht. Die Dorfbewohner glauben, dass es ein Zeichen für Glück im neuen Jahr ist. Seitdem feiern sie jedes Jahr Silvester in der alten Burg – und denken an den freundlichen Ritter.",
+          "questions": [
+            {
+              "question": "Was finden die Dorfbewohner am Morgen?",
+              "options": ["einen Brief", "ein goldenes Licht", "ein Schwert", "eine Kerze"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Was glauben die Menschen?",
+              "options": ["dass es ein Zauber ist", "dass es ein Zeichen für Glück ist", "dass der Geist böse war", "dass es ein Traum war"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Wo feiern die Dorfbewohner seitdem?",
+              "options": ["im Dorf", "in der alten Burg", "auf dem Markt", "im Wald"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "An wen denken sie jedes Jahr?",
+              "options": ["an den König", "an den alten Ritter", "an die Hexe", "an die Kinder"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Wie ist die Stimmung am Ende?",
+              "options": ["traurig", "glücklich und friedlich", "gruselig", "chaotisch"],
+              "correctOptionIndex": 1
+            }
+          ]
+        }
       ]
     },
     {
-      "id": "q8",
-      "title": "Мини-диалоги — вставь слово (fill)",
+      "id": "quest-9",
+      "title": "Neujahr im Zauberwald",
       "steps": [
-        { "id": 1,  "type": "fill", "prompt": "Frohe ________!", "answerText": "Weihnachten" },
-        { "id": 2,  "type": "fill", "prompt": "Schöne ________!", "answerText": "Feiertage" },
-        { "id": 3,  "type": "fill", "prompt": "Guten ________!", "answerText": "Rutsch" },
-        { "id": 4,  "type": "fill", "prompt": "Frohes ________!", "answerText": "Neues" },
-        { "id": 5,  "type": "fill", "prompt": "Fröhliche ________!", "answerText": "Weihnachten" },
-        { "id": 6,  "type": "fill", "prompt": "Schöne ________ Zeit!", "answerText": "Advents" },
-        { "id": 7,  "type": "fill", "prompt": "Frohes ________ Jahr!", "answerText": "Neues" },
-        { "id": 8,  "type": "fill", "prompt": "Gesegnete ________!", "answerText": "Weihnachten" },
-        { "id": 9,  "type": "fill", "prompt": "Ein glückliches ________!", "answerText": "Jahr" },
-        { "id": 10, "type": "fill", "prompt": "Frohe ________!", "answerText": "Festtage" }
+        {
+          "type": "reading",
+          "id": "reading-1",
+          "title": "Der verschneite Wald",
+          "text": "Am letzten Tag des Jahres liegt der Zauberwald still unter Schnee. Die Tiere schlafen, und nur der Wind flüstert durch die Bäume. Eine kleine Eule wacht und schaut auf den hellen Mond. Sie spürt, dass heute etwas Besonderes passieren wird.",
+          "questions": [
+            {
+              "question": "Wie ist der Zauberwald am letzten Tag des Jahres?",
+              "options": ["laut und bunt", "still und verschneit", "voller Menschen", "trocken und warm"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Was machen die Tiere?",
+              "options": ["sie tanzen", "sie schlafen", "sie singen", "sie essen"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Was flüstert durch die Bäume?",
+              "options": ["der Wind", "ein Vogel", "der Regen", "die Sonne"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Wer ist noch wach?",
+              "options": ["ein Hase", "eine Katze", "eine Eule", "ein Bär"],
+              "correctOptionIndex": 2
+            },
+            {
+              "question": "Was spürt die Eule?",
+              "options": ["dass etwas Besonderes passieren wird", "dass ein Sturm kommt", "dass es regnen wird", "dass der Frühling da ist"],
+              "correctOptionIndex": 0
+            }
+          ]
+        },
+        {
+          "type": "reading",
+          "id": "reading-2",
+          "title": "Das Licht zwischen den Bäumen",
+          "text": "Plötzlich sieht die Eule ein goldenes Licht zwischen den Tannen. Es bewegt sich langsam, als würde es tanzen. Neugierig fliegt sie näher und entdeckt kleine Elfen, die das neue Jahr begrüßen. Sie singen und malen Sterne in die Luft.",
+          "questions": [
+            {
+              "question": "Was sieht die Eule zwischen den Tannen?",
+              "options": ["ein Tier", "ein goldenes Licht", "einen Schneeberg", "eine Hütte"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Wie bewegt sich das Licht?",
+              "options": ["schnell und laut", "langsam und tanzend", "still und dunkel", "gar nicht"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Wer feiert das neue Jahr?",
+              "options": ["die Elfen", "die Menschen", "die Tiere", "die Sterne"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was machen die Elfen?",
+              "options": ["sie schlafen", "sie malen Sterne", "sie essen Plätzchen", "sie bauen ein Feuer"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Wie fühlt sich die Eule, als sie das sieht?",
+              "options": ["ängstlich", "neugierig", "müde", "traurig"],
+              "correctOptionIndex": 1
+            }
+          ]
+        },
+        {
+          "type": "reading",
+          "id": "reading-3",
+          "title": "Der Wunsch der Eule",
+          "text": "Die Eule schließt die Augen und wünscht sich, dass der Wald im neuen Jahr voller Frieden bleibt. Eine kleine Fee hört ihren Wunsch und lächelt. Sie streut funkelnden Staub über die Eule, und der ganze Wald leuchtet kurz in goldenem Glanz.",
+          "questions": [
+            {
+              "question": "Was wünscht sich die Eule?",
+              "options": ["mehr Schnee", "Frieden im Wald", "viele Freunde", "eine neue Höhle"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Wer hört den Wunsch der Eule?",
+              "options": ["eine Maus", "eine Fee", "ein Elf", "ein Fuchs"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Was macht die Fee?",
+              "options": ["sie fliegt weg", "sie streut funkelnden Staub", "sie singt ein Lied", "sie tanzt"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Wie sieht der Wald danach aus?",
+              "options": ["dunkel", "bunt", "golden und leuchtend", "leer"],
+              "correctOptionIndex": 2
+            },
+            {
+              "question": "Wie reagiert die Eule auf das Licht?",
+              "options": ["sie fliegt weg", "sie lächelt", "sie ruft laut", "sie versteckt sich"],
+              "correctOptionIndex": 1
+            }
+          ]
+        },
+        {
+          "type": "reading",
+          "id": "reading-4",
+          "title": "Das neue Jahr beginnt",
+          "text": "Als der erste Morgen des neuen Jahres kommt, funkelt der Schnee in allen Farben. Die Tiere wachen auf und hören das Lachen der Elfen. Die Eule denkt: ‚Ein neues Jahr voller Zauber und Freundschaft hat begonnen.‘ Und der Wald atmet leise vor Glück.",
+          "questions": [
+            {
+              "question": "Wann beginnt die Geschichte in diesem Teil?",
+              "options": ["am Abend", "in der Nacht", "am ersten Morgen des neuen Jahres", "am Nachmittag"],
+              "correctOptionIndex": 2
+            },
+            {
+              "question": "Wie sieht der Schnee am Morgen aus?",
+              "options": ["grau und nass", "funkelnd in vielen Farben", "schmutzig", "unsichtbar"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Was machen die Tiere, als der Morgen kommt?",
+              "options": ["sie schlafen weiter", "sie wachen auf", "sie fliegen davon", "sie bauen Häuser"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Was denkt die Eule?",
+              "options": [
+                "Das Jahr ist langweilig.",
+                "Ein neues Jahr voller Zauber und Freundschaft hat begonnen.",
+                "Ich will wieder schlafen.",
+                "Der Winter ist vorbei."
+              ],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Wie ist die Stimmung am Ende der Geschichte?",
+              "options": ["traurig", "friedlich und glücklich", "laut und wild", "ängstlich"],
+              "correctOptionIndex": 1
+            }
+          ]
+        }
       ]
     },
     {
-      "id": "q9",
-      "title": "Узнай предмет по описанию (mcq)",
+      "id": "quest-10",
+      "title": "Winterferien und Schulanfang",
       "steps": [
-        { "id": 1,  "type": "mcq", "question": "На вершине ёлки обычно…", "options": ["Stern", "Kugel", "Girlande"], "answerIndex": 0 },
-        { "id": 2,  "type": "mcq", "question": "Это сладкая выпечка с начинкой…", "options": ["Stollen", "Krippe", "Kranz"], "answerIndex": 0 },
-        { "id": 3,  "type": "mcq", "question": "Это декоративная мишура…", "options": ["Lametta", "Plätzchen", "Lied"], "answerIndex": 0 },
-        { "id": 4,  "type": "mcq", "question": "Это место для огня в доме…", "options": ["Kamin", "Krippe", "Werkstatt"], "answerIndex": 0 },
-        { "id": 5,  "type": "mcq", "question": "В этом приносят подарки детям…", "options": ["Sack", "Becher", "Strumpf"], "answerIndex": 0 },
-        { "id": 6,  "type": "mcq", "question": "Это кружка для горячего…", "options": ["Becher", "Besen", "Büro"], "answerIndex": 0 },
-        { "id": 7,  "type": "mcq", "question": "Эти печенья часто дарят…", "options": ["Plätzchen", "Plätze", "Platz"], "answerIndex": 0 },
-        { "id": 8,  "type": "mcq", "question": "Это вертеп/ясельки…", "options": ["Krippe", "Krippelei", "Krippekind"], "answerIndex": 0 },
-        { "id": 9,  "type": "mcq", "question": "Эти лампочки на ёлке…", "options": ["Lichterkette", "Lichtung", "Lichterei"], "answerIndex": 0 },
-        { "id": 10, "type": "mcq", "question": "Это пряник в форме звезды…", "options": ["Zimtstern", "Sternbild", "Sternchen"], "answerIndex": 0 }
+        {
+          "type": "reading",
+          "id": "reading-1",
+          "title": "Die Winterferien",
+          "text": "In Deutschland dauern die Winterferien meist zwei Wochen. Viele Familien fahren in die Berge oder besuchen Verwandte. Manche Kinder bleiben zu Hause, spielen im Schnee oder sehen Filme. Es ist eine Zeit zum Ausruhen und Spaß haben.",
+          "questions": [
+            {
+              "question": "Wie lange dauern die Winterferien meistens?",
+              "options": ["eine Woche", "zwei Wochen", "drei Tage", "einen Monat"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Wohin fahren viele Familien in den Ferien?",
+              "options": ["ans Meer", "in die Berge", "in die Stadt", "nach Italien"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Was machen Kinder, die zu Hause bleiben?",
+              "options": ["sie lernen für die Schule", "sie spielen im Schnee oder sehen Filme", "sie arbeiten", "sie reisen ins Ausland"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Wie ist die Stimmung in den Ferien?",
+              "options": ["gestresst", "traurig", "entspannt und fröhlich", "laut und unruhig"],
+              "correctOptionIndex": 2
+            },
+            {
+              "question": "Was ist typisch für Winterferien?",
+              "options": ["viele Hausaufgaben", "Erholung und Spaß", "lange Schultage", "Sportwettkämpfe"],
+              "correctOptionIndex": 1
+            }
+          ]
+        },
+        {
+          "type": "reading",
+          "id": "reading-2",
+          "title": "Ein Tag im Schnee",
+          "text": "Lena fährt mit ihrer Familie in den Schwarzwald. Sie bauen einen Schneemann und fahren Schlitten. Am Nachmittag trinken sie heißen Kakao und essen Kekse. Abends sehen sie einen Film und spielen Karten. Es ist ein perfekter Wintertag.",
+          "questions": [
+            {
+              "question": "Wohin fährt Lena mit ihrer Familie?",
+              "options": ["in die Stadt", "in den Schwarzwald", "nach Berlin", "an den See"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Was machen sie im Schnee?",
+              "options": ["sie spielen Fußball", "sie bauen einen Schneemann und fahren Schlitten", "sie machen Fotos", "sie tanzen"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Was trinken sie am Nachmittag?",
+              "options": ["Kaffee", "heißen Kakao", "Tee", "Milch"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Was machen sie am Abend?",
+              "options": ["sie lernen", "sie sehen einen Film und spielen Karten", "sie gehen spazieren", "sie schlafen früh"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Wie ist der Tag für Lena?",
+              "options": ["langweilig", "anstrengend", "perfekt und schön", "kalt und traurig"],
+              "correctOptionIndex": 2
+            }
+          ]
+        },
+        {
+          "type": "reading",
+          "id": "reading-3",
+          "title": "Zurück in der Schule",
+          "text": "Nach den Ferien beginnt wieder die Schule. Die Schüler erzählen, was sie erlebt haben. Manche zeigen Fotos, andere berichten von Reisen oder vom Schnee zu Hause. Die Lehrer freuen sich, alle wiederzusehen.",
+          "questions": [
+            {
+              "question": "Was beginnt nach den Winterferien?",
+              "options": ["der Sommer", "die Schule", "der Urlaub", "das Wochenende"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Was machen die Schüler am ersten Tag?",
+              "options": ["sie schlafen", "sie erzählen von ihren Ferien", "sie schreiben eine Prüfung", "sie malen"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Was zeigen manche Schüler?",
+              "options": ["ihre Hefte", "Fotos", "Hausaufgaben", "Bücher"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Worüber sprechen die Kinder?",
+              "options": ["über Reisen und Schnee", "über Filme", "über Musik", "über Sport"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Wie reagieren die Lehrer?",
+              "options": ["sie sind müde", "sie freuen sich", "sie sind streng", "sie sind überrascht"],
+              "correctOptionIndex": 1
+            }
+          ]
+        },
+        {
+          "type": "reading",
+          "id": "reading-4",
+          "title": "Neue Ziele im neuen Jahr",
+          "text": "In der ersten Schulwoche schreiben viele Schüler ihre Vorsätze auf: mehr lernen, pünktlich sein oder netter zu anderen sein. Auch Lehrer planen Neues: Projekte, Ausflüge und spannende Themen. Alle hoffen auf ein gutes neues Jahr.",
+          "questions": [
+            {
+              "question": "Was schreiben viele Schüler in der ersten Woche?",
+              "options": ["ihre Noten", "ihre Vorsätze", "ihre Hausaufgaben", "ihre Wünsche"],
+              "correctOptionIndex": 1
+            },
+            {
+              "question": "Was wollen viele Schüler tun?",
+              "options": ["mehr lernen und pünktlich sein", "mehr schlafen", "weniger lesen", "mehr essen"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was planen die Lehrer?",
+              "options": ["neue Projekte und Ausflüge", "Ferien", "Examen", "Sportfeste"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Was hoffen alle?",
+              "options": ["auf ein gutes neues Jahr", "auf mehr Ferien", "auf weniger Schule", "auf besseres Wetter"],
+              "correctOptionIndex": 0
+            },
+            {
+              "question": "Wie ist die Stimmung zu Beginn des Jahres?",
+              "options": ["negativ", "positiv und motiviert", "müde", "gleichgültig"],
+              "correctOptionIndex": 1
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "quest-11",
+      "title": "Соедини рождественские пары",
+      "steps": [
+        {
+          "type": "matching",
+          "id": "match-1",
+          "instruction": "Соедини символ с его описанием",
+          "pairsLeft": [
+            { "id": "l1", "text": "Adventskranz" },
+            { "id": "l2", "text": "Weihnachtsbaum" },
+            { "id": "l3", "text": "Geschenke" },
+            { "id": "l4", "text": "Weihnachtsmarkt" },
+            { "id": "l5", "text": "Plätzchen" },
+            { "id": "l6", "text": "Sterne" }
+          ],
+          "pairsRight": [
+            { "id": "r1", "text": "Vier Kerzen für die Adventszeit" },
+            { "id": "r2", "text": "Ein geschmückter Baum im Wohnzimmer" },
+            { "id": "r3", "text": "Man kauft und gibt sie an Weihnachten" },
+            { "id": "r4", "text": "Ein Ort mit Lichtern, Essen und Musik" },
+            { "id": "r5", "text": "Süßes Gebäck zu Weihnachten" },
+            { "id": "r6", "text": "Sie leuchten in der Nacht" }
+          ],
+          "correctPairs": [
+            ["l1", "r1"],
+            ["l2", "r2"],
+            ["l3", "r3"],
+            ["l4", "r4"],
+            ["l5", "r5"],
+            ["l6", "r6"]
+          ]
+        },
+        {
+          "type": "matching",
+          "id": "match-2",
+          "instruction": "Соедини персонажа и его действие",
+          "pairsLeft": [
+            { "id": "l1", "text": "Weihnachtsmann" },
+            { "id": "l2", "text": "Engel" },
+            { "id": "l3", "text": "Kinder" },
+            { "id": "l4", "text": "Nikolaus" },
+            { "id": "l5", "text": "Rentiere" },
+            { "id": "l6", "text": "Elfen" }
+          ],
+          "pairsRight": [
+            { "id": "r1", "text": "fliegen mit dem Schlitten" },
+            { "id": "r2", "text": "helfen beim Verpacken der Geschenke" },
+            { "id": "r3", "text": "bringen die Geschenke" },
+            { "id": "r4", "text": "spielen und freuen sich" },
+            { "id": "r5", "text": "bringt Süßigkeiten am 6. Dezember" },
+            { "id": "r6", "text": "singen vom Himmel" }
+          ],
+          "correctPairs": [
+            ["l1", "r3"],
+            ["l2", "r6"],
+            ["l3", "r4"],
+            ["l4", "r5"],
+            ["l5", "r1"],
+            ["l6", "r2"]
+          ]
+        },
+        {
+          "type": "matching",
+          "id": "match-3",
+          "instruction": "Соедини немецкое слово и его русский перевод",
+          "pairsLeft": [
+            { "id": "l1", "text": "Kerze" },
+            { "id": "l2", "text": "Schnee" },
+            { "id": "l3", "text": "Stern" },
+            { "id": "l4", "text": "Geschenk" },
+            { "id": "l5", "text": "Tanne" },
+            { "id": "l6", "text": "Glocke" }
+          ],
+          "pairsRight": [
+            { "id": "r1", "text": "Ёлка" },
+            { "id": "r2", "text": "Свеча" },
+            { "id": "r3", "text": "Снег" },
+            { "id": "r4", "text": "Подарок" },
+            { "id": "r5", "text": "Колокол" },
+            { "id": "r6", "text": "Звезда" }
+          ],
+          "correctPairs": [
+            ["l1", "r2"],
+            ["l2", "r3"],
+            ["l3", "r6"],
+            ["l4", "r4"],
+            ["l5", "r1"],
+            ["l6", "r5"]
+          ]
+        },
+        {
+          "type": "matching",
+          "id": "match-4",
+          "instruction": "Соедини праздник и дату",
+          "pairsLeft": [
+            { "id": "l1", "text": "Heiligabend" },
+            { "id": "l2", "text": "Nikolaustag" },
+            { "id": "l3", "text": "Silvester" },
+            { "id": "l4", "text": "Neujahr" },
+            { "id": "l5", "text": "Erster Advent" },
+            { "id": "l6", "text": "Weihnachten" }
+          ],
+          "pairsRight": [
+            { "id": "r1", "text": "6. Dezember" },
+            { "id": "r2", "text": "24. Dezember" },
+            { "id": "r3", "text": "25. Dezember" },
+            { "id": "r4", "text": "31. Dezember" },
+            { "id": "r5", "text": "1. Januar" },
+            { "id": "r6", "text": "vier Wochen vor Weihnachten" }
+          ],
+          "correctPairs": [
+            ["l1", "r2"],
+            ["l2", "r1"],
+            ["l3", "r4"],
+            ["l4", "r5"],
+            ["l5", "r6"],
+            ["l6", "r3"]
+          ]
+        }
       ]
     },
     {
-      "id": "q10",
-      "title": "Смешанные задания",
+      "id": "quest-12",
+      "title": "Соедини новогодние пары",
       "steps": [
-        { "id": 1,  "type": "tf",   "statement": "Advent — период ожидания Рождества.", "answerBool": true },
-        { "id": 2,  "type": "mcq",  "question": "Кто тянет санки Санты?", "options": ["Rentier", "Hund", "Katze"], "answerIndex": 0 },
-        { "id": 3,  "type": "fill", "prompt": "Frohes ________ Jahr!", "answerText": "Neues" },
-        { "id": 4,  "type": "order","items": ["Kerze", "Anzünden", "Duft"], "correctOrder": [0,1,2] },
-        { "id": 5,  "type": "match","pairs": [ { "left": "Geschenk", "right": "Подарок" }, { "left": "Karte", "right": "Открытка" } ] },
-        { "id": 6,  "type": "mcq",  "question": "Что пьют на рынке?", "options": ["Glühwein", "Wasser", "Milch"], "answerIndex": 0 },
-        { "id": 7,  "type": "tf",   "statement": "Stollen — солёное блюдо.", "answerBool": false },
-        { "id": 8,  "type": "fill", "prompt": "Schöne ________!", "answerText": "Feiertage" },
-        { "id": 9,  "type": "mcq",  "question": "Как называется вертеп?", "options": ["Krippe", "Kranz", "Krone"], "answerIndex": 0 },
-        { "id": 10, "type": "tf",   "statement": "Weihnachtsmann — это «Санта».", "answerBool": true }
+        {
+          "type": "matching",
+          "id": "match-1",
+          "instruction": "Соедини традицию с её описанием",
+          "pairsLeft": [
+            { "id": "l1", "text": "Feuerwerk" },
+            { "id": "l2", "text": "Raclette" },
+            { "id": "l3", "text": "Fondue" },
+            { "id": "l4", "text": "Countdown" },
+            { "id": "l5", "text": "Neujahrsvorsätze" },
+            { "id": "l6", "text": "Neujahrskonzert" }
+          ],
+          "pairsRight": [
+            { "id": "r1", "text": "Die letzten Sekunden laut mitzählen" },
+            { "id": "r2", "text": "Bunte Lichter am Himmel um Mitternacht" },
+            { "id": "r3", "text": "Ziele und Pläne für das neue Jahr" },
+            { "id": "r4", "text": "Geschmolzener Käse am Tisch" },
+            { "id": "r5", "text": "Klassische Musik am 1. Januar" },
+            { "id": "r6", "text": "Topf mit heißem Öl oder Brühe" }
+          ],
+          "correctPairs": [
+            ["l1", "r2"],
+            ["l2", "r4"],
+            ["l3", "r6"],
+            ["l4", "r1"],
+            ["l5", "r3"],
+            ["l6", "r5"]
+          ]
+        },
+        {
+          "type": "matching",
+          "id": "match-2",
+          "instruction": "Соедини новогодний символ и значение",
+          "pairsLeft": [
+            { "id": "l1", "text": "Schornsteinfeger" },
+            { "id": "l2", "text": "Marienkäfer" },
+            { "id": "l3", "text": "Glücksschwein" },
+            { "id": "l4", "text": "Vierblättriges Kleeblatt" },
+            { "id": "l5", "text": "Hufeisen" },
+            { "id": "l6", "text": "Bleigießen" }
+          ],
+          "pairsRight": [
+            { "id": "r1", "text": "Bringt Glück, wenn man ihn trifft" },
+            { "id": "r2", "text": "Kleines rotes Insekt als Glückszeichen" },
+            { "id": "r3", "text": "Wird über der Tür aufgehängt" },
+            { "id": "r4", "text": "Vier Blätter stehen für Glück" },
+            { "id": "r5", "text": "Figuren deuten die Zukunft" },
+            { "id": "r6", "text": "Symbol für Wohlstand und Erfolg" }
+          ],
+          "correctPairs": [
+            ["l1", "r1"],
+            ["l2", "r2"],
+            ["l3", "r6"],
+            ["l4", "r4"],
+            ["l5", "r3"],
+            ["l6", "r5"]
+          ]
+        },
+        {
+          "type": "matching",
+          "id": "match-3",
+          "instruction": "Соедини немецкое слово и русский перевод (тема: Новый год)",
+          "pairsLeft": [
+            { "id": "l1", "text": "Feuerwerk" },
+            { "id": "l2", "text": "Rakete" },
+            { "id": "l3", "text": "Sekt" },
+            { "id": "l4", "text": "Vorsatz" },
+            { "id": "l5", "text": "Mitternacht" },
+            { "id": "l6", "text": "Brandenburger Tor" }
+          ],
+          "pairsRight": [
+            { "id": "r1", "text": "полночь" },
+            { "id": "r2", "text": "обещание, цель" },
+            { "id": "r3", "text": "Бранденбургские ворота" },
+            { "id": "r4", "text": "фейерверк" },
+            { "id": "r5", "text": "ракета салюта" },
+            { "id": "r6", "text": "шампанское" }
+          ],
+          "correctPairs": [
+            ["l1", "r4"],
+            ["l2", "r5"],
+            ["l3", "r6"],
+            ["l4", "r2"],
+            ["l5", "r1"],
+            ["l6", "r3"]
+          ]
+        },
+        {
+          "type": "matching",
+          "id": "match-4",
+          "instruction": "Соедини событие и дату/время",
+          "pairsLeft": [
+            { "id": "l1", "text": "Silvesterabend" },
+            { "id": "l2", "text": "Mitternacht" },
+            { "id": "l3", "text": "Neujahr" },
+            { "id": "l4", "text": "Heilige Drei Könige" },
+            { "id": "l5", "text": "Bleigießen" },
+            { "id": "l6", "text": "Neujahrskonzert" }
+          ],
+          "pairsRight": [
+            { "id": "r1", "text": "31. Dezember abends" },
+            { "id": "r2", "text": "in der Silvesternacht" },
+            { "id": "r3", "text": "0:00 Uhr" },
+            { "id": "r4", "text": "1. Januar" },
+            { "id": "r5", "text": "6. Januar" },
+            { "id": "r6", "text": "am Vormittag des 1. Januar" }
+          ],
+          "correctPairs": [
+            ["l1", "r1"],
+            ["l2", "r3"],
+            ["l3", "r4"],
+            ["l4", "r5"],
+            ["l5", "r2"],
+            ["l6", "r6"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quest-13",
+      "title": "Соедини зимние традиции разных стран",
+      "steps": [
+        {
+          "type": "matching",
+          "id": "match-1",
+          "instruction": "Соедини страну и её зимнюю традицию",
+          "pairsLeft": [
+            { "id": "l1", "text": "Deutschland" },
+            { "id": "l2", "text": "Spanien" },
+            { "id": "l3", "text": "Italien" },
+            { "id": "l4", "text": "Dänemark" },
+            { "id": "l5", "text": "Schweiz" },
+            { "id": "l6", "text": "Österreich" }
+          ],
+          "pairsRight": [
+            { "id": "r1", "text": "Man isst um Mitternacht zwölf Trauben" },
+            { "id": "r2", "text": "Man wirft altes Geschirr aus dem Fenster" },
+            { "id": "r3", "text": "Man gießt Blei, um die Zukunft zu sehen" },
+            { "id": "r4", "text": "Man trägt rote Unterwäsche als Glücksbringer" },
+            { "id": "r5", "text": "Man hört das Neujahrskonzert aus Wien" },
+            { "id": "r6", "text": "Man stößt mit Sekt an und zündet Feuerwerk" }
+          ],
+          "correctPairs": [
+            ["l1", "r6"],
+            ["l2", "r1"],
+            ["l3", "r4"],
+            ["l4", "r2"],
+            ["l5", "r3"],
+            ["l6", "r5"]
+          ]
+        },
+        {
+          "type": "matching",
+          "id": "match-2",
+          "instruction": "Соедини предмет и его значение",
+          "pairsLeft": [
+            { "id": "l1", "text": "rote Unterwäsche" },
+            { "id": "l2", "text": "Trauben" },
+            { "id": "l3", "text": "Bleifigur" },
+            { "id": "l4", "text": "Sektglas" },
+            { "id": "l5", "text": "altes Geschirr" },
+            { "id": "l6", "text": "Kuhglocke" }
+          ],
+          "pairsRight": [
+            { "id": "r1", "text": "Symbol für Glück und Liebe" },
+            { "id": "r2", "text": "Bringt Glück, wenn man sie um Mitternacht isst" },
+            { "id": "r3", "text": "zeigt Zukunftsformen beim Schmelzen" },
+            { "id": "r4", "text": "wird zum Anstoßen in der Silvesternacht benutzt" },
+            { "id": "r5", "text": "wird aus dem Fenster geworfen, um Neues zu beginnen" },
+            { "id": "r6", "text": "klingt bei alpinen Neujahrsumzügen" }
+          ],
+          "correctPairs": [
+            ["l1", "r1"],
+            ["l2", "r2"],
+            ["l3", "r3"],
+            ["l4", "r4"],
+            ["l5", "r5"],
+            ["l6", "r6"]
+          ]
+        },
+        {
+          "type": "matching",
+          "id": "match-3",
+          "instruction": "Соедини немецкое слово и русский перевод (зимние традиции)",
+          "pairsLeft": [
+            { "id": "l1", "text": "Feuerwerk" },
+            { "id": "l2", "text": "Traube" },
+            { "id": "l3", "text": "Unterwäsche" },
+            { "id": "l4", "text": "Geschirr" },
+            { "id": "l5", "text": "Glocke" },
+            { "id": "l6", "text": "Vorsatz" }
+          ],
+          "pairsRight": [
+            { "id": "r1", "text": "фейерверк" },
+            { "id": "r2", "text": "виноград" },
+            { "id": "r3", "text": "нижнее бельё" },
+            { "id": "r4", "text": "посудa" },
+            { "id": "r5", "text": "колокол" },
+            { "id": "r6", "text": "новогоднее обещание" }
+          ],
+          "correctPairs": [
+            ["l1", "r1"],
+            ["l2", "r2"],
+            ["l3", "r3"],
+            ["l4", "r4"],
+            ["l5", "r5"],
+            ["l6", "r6"]
+          ]
+        },
+        {
+          "type": "matching",
+          "id": "match-4",
+          "instruction": "Соедини событие и время его празднования",
+          "pairsLeft": [
+            { "id": "l1", "text": "Silvester" },
+            { "id": "l2", "text": "Neujahr" },
+            { "id": "l3", "text": "Heilige Drei Könige" },
+            { "id": "l4", "text": "Dreikönigsumzug" },
+            { "id": "l5", "text": "Neujahrsbaden" },
+            { "id": "l6", "text": "Neujahrskonzert" }
+          ],
+          "pairsRight": [
+            { "id": "r1", "text": "31. Dezember" },
+            { "id": "r2", "text": "1. Januar" },
+            { "id": "r3", "text": "6. Januar" },
+            { "id": "r4", "text": "am 6. Januar in vielen Städten" },
+            { "id": "r5", "text": "frühmorgens im kalten Wasser" },
+            { "id": "r6", "text": "am Vormittag des 1. Januar" }
+          ],
+          "correctPairs": [
+            ["l1", "r1"],
+            ["l2", "r2"],
+            ["l3", "r3"],
+            ["l4", "r4"],
+            ["l5", "r5"],
+            ["l6", "r6"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quest-14",
+      "title": "Соедини зимние праздники и поверья Европы",
+      "steps": [
+        {
+          "type": "matching",
+          "id": "match-1",
+          "instruction": "Соедини праздник и страну, где его отмечают",
+          "pairsLeft": [
+            { "id": "l1", "text": "Perchtenlauf" },
+            { "id": "l2", "text": "La Befana" },
+            { "id": "l3", "text": "Día de los Reyes Magos" },
+            { "id": "l4", "text": "Krampusnacht" },
+            { "id": "l5", "text": "St. Lucia" },
+            { "id": "l6", "text": "Boxing Day" }
+          ],
+          "pairsRight": [
+            { "id": "r1", "text": "Österreich – Menschen tragen Masken gegen böse Geister" },
+            { "id": "r2", "text": "Italien – eine Hexe bringt Geschenke in der Nacht" },
+            { "id": "r3", "text": "Spanien – die Heiligen Drei Könige kommen mit Geschenken" },
+            { "id": "r4", "text": "Alpenregion – ein dunkler Begleiter des Nikolaus erscheint" },
+            { "id": "r5", "text": "Schweden – Mädchen tragen Kerzen auf dem Kopf" },
+            { "id": "r6", "text": "Großbritannien – Tag nach Weihnachten mit Geschenken für Angestellte" }
+          ],
+          "correctPairs": [
+            ["l1", "r1"],
+            ["l2", "r2"],
+            ["l3", "r3"],
+            ["l4", "r4"],
+            ["l5", "r5"],
+            ["l6", "r6"]
+          ]
+        },
+        {
+          "type": "matching",
+          "id": "match-2",
+          "instruction": "Соедини поверие и значение",
+          "pairsLeft": [
+            { "id": "l1", "text": "Mistelzweig" },
+            { "id": "l2", "text": "Schornsteinfeger berühren" },
+            { "id": "l3", "text": "Linsen essen" },
+            { "id": "l4", "text": "Eimer Wasser vor die Tür stellen" },
+            { "id": "l5", "text": "Erste Person am Neujahrstag" },
+            { "id": "l6", "text": "Tiere sprechen in der Nacht" }
+          ],
+          "pairsRight": [
+            { "id": "r1", "text": "Bringt Glück, wenn man darunter küsst" },
+            { "id": "r2", "text": "Soll Reichtum im neuen Jahr bringen" },
+            { "id": "r3", "text": "Bringt Glück, wenn es ein Mann mit dunklen Haaren ist" },
+            { "id": "r4", "text": "Bedeutet Reinigung und frischen Anfang" },
+            { "id": "r5", "text": "Ein altes englisches Silvester-Ritual" },
+            { "id": "r6", "text": "Ein alter Glaube aus Osteuropa" }
+          ],
+          "correctPairs": [
+            ["l1", "r1"],
+            ["l2", "r5"],
+            ["l3", "r2"],
+            ["l4", "r4"],
+            ["l5", "r3"],
+            ["l6", "r6"]
+          ]
+        },
+        {
+          "type": "matching",
+          "id": "match-3",
+          "instruction": "Соедини немецкое слово и русский перевод (зимние поверья)",
+          "pairsLeft": [
+            { "id": "l1", "text": "Mistelzweig" },
+            { "id": "l2", "text": "Krampus" },
+            { "id": "l3", "text": "Hexe" },
+            { "id": "l4", "text": "Linsen" },
+            { "id": "l5", "text": "Glück" },
+            { "id": "l6", "text": "Reichtum" }
+          ],
+          "pairsRight": [
+            { "id": "r1", "text": "омела" },
+            { "id": "r2", "text": "Крампус (рождественское чудовище)" },
+            { "id": "r3", "text": "ведьма" },
+            { "id": "r4", "text": "чечевица" },
+            { "id": "r5", "text": "счастье" },
+            { "id": "r6", "text": "богатство" }
+          ],
+          "correctPairs": [
+            ["l1", "r1"],
+            ["l2", "r2"],
+            ["l3", "r3"],
+            ["l4", "r4"],
+            ["l5", "r5"],
+            ["l6", "r6"]
+          ]
+        },
+        {
+          "type": "matching",
+          "id": "match-4",
+          "instruction": "Соедини событие и дату/время",
+          "pairsLeft": [
+            { "id": "l1", "text": "Krampusnacht" },
+            { "id": "l2", "text": "Perchtenlauf" },
+            { "id": "l3", "text": "La Befana" },
+            { "id": "l4", "text": "Día de los Reyes Magos" },
+            { "id": "l5", "text": "St. Lucia" },
+            { "id": "l6", "text": "Boxing Day" }
+          ],
+          "pairsRight": [
+            { "id": "r1", "text": "5. Dezember" },
+            { "id": "r2", "text": "Januar oder Februar – Winteraustreibung" },
+            { "id": "r3", "text": "6. Januar in Italien" },
+            { "id": "r4", "text": "6. Januar in Spanien" },
+            { "id": "r5", "text": "13. Dezember" },
+            { "id": "r6", "text": "26. Dezember" }
+          ],
+          "correctPairs": [
+            ["l1", "r1"],
+            ["l2", "r2"],
+            ["l3", "r3"],
+            ["l4", "r4"],
+            ["l5", "r5"],
+            ["l6", "r6"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quest-15",
+      "title": "Соедини зимние пары — Зима в Германии",
+      "steps": [
+        {
+          "type": "matching",
+          "id": "match-1",
+          "instruction": "Соедини зимний предмет или явление с его описанием",
+          "pairsLeft": [
+            { "id": "l1", "text": "Schneemann" },
+            { "id": "l2", "text": "Eiszapfen" },
+            { "id": "l3", "text": "Heizung" },
+            { "id": "l4", "text": "Schneeschaufel" },
+            { "id": "l5", "text": "Winterjacke" },
+            { "id": "l6", "text": "Thermobecher" }
+          ],
+          "pairsRight": [
+            { "id": "r1", "text": "Man baut ihn aus Schnee im Garten" },
+            { "id": "r2", "text": "Hängt am Dach, wenn es sehr kalt ist" },
+            { "id": "r3", "text": "Macht das Haus warm im Winter" },
+            { "id": "r4", "text": "Hilft beim Räumen des Schnees" },
+            { "id": "r5", "text": "Schützt vor Kälte und Wind" },
+            { "id": "r6", "text": "Hält den Tee oder Kaffee lange warm" }
+          ],
+          "correctPairs": [
+            ["l1", "r1"],
+            ["l2", "r2"],
+            ["l3", "r3"],
+            ["l4", "r4"],
+            ["l5", "r5"],
+            ["l6", "r6"]
+          ]
+        },
+        {
+          "type": "matching",
+          "id": "match-2",
+          "instruction": "Соедини зимнюю активность и описание",
+          "pairsLeft": [
+            { "id": "l1", "text": "Schlittschuh laufen" },
+            { "id": "l2", "text": "Schlitten fahren" },
+            { "id": "l3", "text": "Skifahren" },
+            { "id": "l4", "text": "Schneeballschlacht" },
+            { "id": "l5", "text": "Weihnachtsfilme schauen" },
+            { "id": "l6", "text": "Plätzchen backen" }
+          ],
+          "pairsRight": [
+            { "id": "r1", "text": "Mit Freunden auf dem Eis fahren" },
+            { "id": "r2", "text": "Vom Hügel hinunterrutschen" },
+            { "id": "r3", "text": "Mit Stöcken im Schnee fahren" },
+            { "id": "r4", "text": "Mit Schnee werfen und lachen" },
+            { "id": "r5", "text": "Gemütlich zu Hause auf dem Sofa" },
+            { "id": "r6", "text": "Süßes Gebäck im Ofen machen" }
+          ],
+          "correctPairs": [
+            ["l1", "r1"],
+            ["l2", "r2"],
+            ["l3", "r3"],
+            ["l4", "r4"],
+            ["l5", "r5"],
+            ["l6", "r6"]
+          ]
+        },
+        {
+          "type": "matching",
+          "id": "match-3",
+          "instruction": "Соедини немецкое слово и русский перевод (тема: зима)",
+          "pairsLeft": [
+            { "id": "l1", "text": "Schnee" },
+            { "id": "l2", "text": "Kälte" },
+            { "id": "l3", "text": "Mütze" },
+            { "id": "l4", "text": "Handschuhe" },
+            { "id": "l5", "text": "Ofen" },
+            { "id": "l6", "text": "Fensterbrett" }
+          ],
+          "pairsRight": [
+            { "id": "r1", "text": "снег" },
+            { "id": "r2", "text": "холод" },
+            { "id": "r3", "text": "шапка" },
+            { "id": "r4", "text": "перчатки" },
+            { "id": "r5", "text": "печь" },
+            { "id": "r6", "text": "подоконник" }
+          ],
+          "correctPairs": [
+            ["l1", "r1"],
+            ["l2", "r2"],
+            ["l3", "r3"],
+            ["l4", "r4"],
+            ["l5", "r5"],
+            ["l6", "r6"]
+          ]
+        },
+        {
+          "type": "matching",
+          "id": "match-4",
+          "instruction": "Соедини зимнее событие и время года/месяц",
+          "pairsLeft": [
+            { "id": "l1", "text": "Erster Schnee" },
+            { "id": "l2", "text": "Weihnachten" },
+            { "id": "l3", "text": "Silvester" },
+            { "id": "l4", "text": "Neujahr" },
+            { "id": "l5", "text": "Wintersportwoche" },
+            { "id": "l6", "text": "Karnevalsbeginn" }
+          ],
+          "pairsRight": [
+            { "id": "r1", "text": "meist im November" },
+            { "id": "r2", "text": "24. Dezember" },
+            { "id": "r3", "text": "31. Dezember" },
+            { "id": "r4", "text": "1. Januar" },
+            { "id": "r5", "text": "im Januar oder Februar" },
+            { "id": "r6", "text": "im Februar" }
+          ],
+          "correctPairs": [
+            ["l1", "r1"],
+            ["l2", "r2"],
+            ["l3", "r3"],
+            ["l4", "r4"],
+            ["l5", "r5"],
+            ["l6", "r6"]
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "quest-16",
+      "title": "Выбери правильное слово — Зима и Новый год",
+      "steps": [
+        {
+          "type": "choose-word",
+          "id": "cw-1",
+          "sentence": "Am 31. Dezember feiern die Menschen ___.",
+          "options": ["Weihnachten", "Silvester", "Ostern", "Pfingsten"],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-2",
+          "sentence": "Um Mitternacht sieht man am Himmel viele ___.",
+          "options": ["Sterne", "Flugzeuge", "Feuerwerke", "Kerzen"],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-3",
+          "sentence": "Viele Menschen stoßen mit ___ an.",
+          "options": ["Sekt", "Milch", "Kakao", "Wasser"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-4",
+          "sentence": "Am Neujahrstag wünschen sich alle ein ___ neues Jahr.",
+          "options": ["kurzes", "falsches", "glückliches", "langes"],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-5",
+          "sentence": "Im Winter tragen die Leute warme ___ und Mützen.",
+          "options": ["Jacken", "Hemden", "Kleider", "Hosen"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-6",
+          "sentence": "Auf den Straßen liegt viel ___.",
+          "options": ["Sand", "Laub", "Schnee", "Wasser"],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-7",
+          "sentence": "Kinder fahren gern mit dem ___ den Hügel hinunter.",
+          "options": ["Schlitten", "Auto", "Fahrrad", "Bus"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-8",
+          "sentence": "Viele Menschen machen zu Neujahr gute ___.",
+          "options": ["Pläne", "Freunde", "Vorsätze", "Kuchen"],
+          "correctOptionIndex": 2
+        }
+      ]
+    },
+    {
+      "id": "quest-17",
+      "title": "Выбери правильное слово",
+      "steps": [
+        {
+          "type": "choose-word",
+          "id": "cw-1",
+          "sentence": "Am 24. Dezember steht der ___ im Wohnzimmer.",
+          "options": ["Tannenbaum", "Schrank", "Tisch", "Sessel"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-2",
+          "sentence": "Die Kinder bekommen viele ___ zu Weihnachten.",
+          "options": ["Kekse", "Geschenke", "Kerzen", "Schuhe"],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-3",
+          "sentence": "Der Weihnachtsmann trägt einen ___ Mantel.",
+          "options": ["grünen", "blauen", "roten", "gelben"],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-4",
+          "sentence": "Auf dem Tisch stehen vier ___ vom Adventskranz.",
+          "options": ["Teller", "Kerzen", "Geschenke", "Karten"],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-5",
+          "sentence": "Die Familie ___ zusammen Weihnachtslieder.",
+          "options": ["tanzt", "singt", "liest", "spielt"],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-6",
+          "sentence": "Es ist kalt, und draußen fällt ___ .",
+          "options": ["Regen", "Schnee", "Sonne", "Nebel"],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-7",
+          "sentence": "Am Abend essen alle ___ und trinken Kakao.",
+          "options": ["Plätzchen", "Bananen", "Pommes", "Äpfel"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-8",
+          "sentence": "Die Kinder hängen bunte ___ an den Baum.",
+          "options": ["Lichter", "Blätter", "Kleider", "Poster"],
+          "correctOptionIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "quest-18",
+      "title": "Выбери правильное слово — Подготовка к Новому году",
+      "steps": [
+        {
+          "type": "choose-word",
+          "id": "cw-1",
+          "sentence": "Am Nachmittag kaufen die Leute viele ___.",
+          "options": ["Raketen", "Bücher", "Kerzen", "Karten"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-2",
+          "sentence": "Die Familie deckt den Tisch und stellt viele ___ darauf.",
+          "options": ["Teller", "Schuhe", "Kissen", "Tüten"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-3",
+          "sentence": "Viele Menschen tragen an Silvester elegante ___.",
+          "options": ["Kleidung", "Mützen", "Uniformen", "Schlafanzüge"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-4",
+          "sentence": "Die Kinder helfen, den Tisch mit ___ zu schmücken.",
+          "options": ["Luftballons", "Papier", "Spielzeug", "Plastik"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-5",
+          "sentence": "In der Küche riecht es nach leckerem ___.",
+          "options": ["Essen", "Rauch", "Parfüm", "Brot"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-6",
+          "sentence": "Am Abend zündet der Vater die ersten ___ an.",
+          "options": ["Kerzen", "Raketen", "Lichter", "Spiele"],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-7",
+          "sentence": "Alle sind fröhlich und warten auf ___.",
+          "options": ["Mitternacht", "Weihnachten", "Frühstück", "Ostern"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-8",
+          "sentence": "Die Mutter legt Süßigkeiten und kleine ___ auf den Tisch.",
+          "options": ["Geschenke", "Zeitungen", "Lampen", "Schlüssel"],
+          "correctOptionIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "quest-19",
+      "title": "Выбери правильное слово — Новогодняя ночь",
+      "steps": [
+        {
+          "type": "choose-word",
+          "id": "cw-1",
+          "sentence": "Um Mitternacht hört man überall laute ___.",
+          "options": ["Feuerwerke", "Autos", "Klingeln", "Tiere"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-2",
+          "sentence": "Die Menschen umarmen sich und sagen ___.",
+          "options": ["Gute Nacht!", "Frohes neues Jahr!", "Schönen Tag!", "Bis bald!"],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-3",
+          "sentence": "Viele Nachbarn kommen auf die Straße und ___ zusammen.",
+          "options": ["tanzen", "essen", "arbeiten", "laufen"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-4",
+          "sentence": "Am Himmel sieht man bunte ___.",
+          "options": ["Raketen", "Sterne", "Blätter", "Wolken"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-5",
+          "sentence": "Die Kinder lachen und schauen das Feuerwerk aus dem ___.",
+          "options": ["Fenster", "Auto", "Bett", "Hausflur"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-6",
+          "sentence": "Im Radio läuft fröhliche ___.",
+          "options": ["Musik", "Werbung", "Nachricht", "Kritik"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-7",
+          "sentence": "Manche Leute machen Fotos vom ___.",
+          "options": ["Feuerwerk", "Essen", "Tisch", "Baum"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-8",
+          "sentence": "Nach Mitternacht trinken viele noch etwas ___.",
+          "options": ["Kakao", "Sekt", "Wasser", "Milch"],
+          "correctOptionIndex": 1
+        }
+      ]
+    },
+    {
+      "id": "quest-20",
+      "title": "Выбери правильное слово — Как немцы празднуют Новый год",
+      "steps": [
+        {
+          "type": "choose-word",
+          "id": "cw-1",
+          "sentence": "In Deutschland sieht man an Silvester überall buntes ___.",
+          "options": ["Feuerwerk", "Laub", "Konfetti", "Licht"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-2",
+          "sentence": "Viele essen zu Mitternacht Glücksbringer aus ___.",
+          "options": ["Schokolade", "Marzipan", "Käse", "Zuckerwatte"],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-3",
+          "sentence": "Ein typisches Gericht an Silvester ist ___.",
+          "options": ["Raclette", "Spaghetti", "Kartoffelsuppe", "Pizza"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-4",
+          "sentence": "Um Mitternacht stoßen Freunde und Familie mit ___ an.",
+          "options": ["Sekt", "Saft", "Kaffee", "Wasser"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-5",
+          "sentence": "Ein altes Ritual ist das Bleigießen – man gießt heißes Blei in ___.",
+          "options": ["Wasser", "Milch", "Öl", "Kakao"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-6",
+          "sentence": "Was das Blei zeigt, soll Glück oder ___ im neuen Jahr bedeuten.",
+          "options": ["Erfolg", "Armut", "Schnee", "Ferien"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-7",
+          "sentence": "Viele wünschen sich im neuen Jahr Gesundheit und ___.",
+          "options": ["Glück", "Hitze", "Regen", "Ruhe"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-8",
+          "sentence": "In manchen Regionen bringt ein Schornsteinfeger ___.",
+          "options": ["Unglück", "Glück", "Arbeit", "Schnee"],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-9",
+          "sentence": "Am nächsten Tag wünschen sich alle: „___ neues Jahr!“",
+          "options": ["Schönes", "Frohes", "Altes", "Kaltes"],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-10",
+          "sentence": "In Berlin feiern viele Menschen am Brandenburger ___.",
+          "options": ["Tor", "Markt", "See", "Haus"],
+          "correctOptionIndex": 0
+        }
+      ]
+    },
+    {
+      "id": "quest-21",
+      "title": "Weihnachten: Bild → Wort (mit Artikel)",
+      "steps": [
+        {
+          "type": "multiple-choice",
+          "id": "img-1",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/cake.svg",
+          "options": [
+            "der Kuchen",
+            "der Kalender",
+            "die Kerze"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-2",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/calendar.svg",
+          "options": [
+            "das Bonbon",
+            "der Kalender",
+            "der Kamin"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-3",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/candle.svg",
+          "options": [
+            "die Kerze",
+            "der Champagner",
+            "die Christbaumkugel"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-4",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/candy.svg",
+          "options": [
+            "der Kamin",
+            "die Glocke",
+            "das Bonbon"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-5",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/champagne.svg",
+          "options": [
+            "der Weihnachtsschmuck",
+            "der Champagner",
+            "der Weihnachtsstrumpf"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-6",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/chimney.svg",
+          "options": [
+            "der Weihnachtsbaum",
+            "der Kamin",
+            "der Adventskranz"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-7",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/christmas-ball.svg",
+          "options": [
+            "die Christbaumkugel",
+            "die Plätzchen",
+            "die Fee"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-8",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/christmas-bell.svg",
+          "options": [
+            "die Glocke",
+            "das Feuerwerk",
+            "das Geschenk"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-9",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/christmas-decoration.svg",
+          "options": [
+            "die Geschenktüte",
+            "das Eis",
+            "der Weihnachtsschmuck"
+          ],
+          "correctOptionIndex":2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-10",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/christmas-stocking.svg",
+          "options": [
+            "die Schlittschuhe",
+            "die Fäustlinge",
+            "der Weihnachtsstrumpf"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-11",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/christmas-tree.svg",
+          "options": [
+            "die Torte",
+            "der Weihnachtsbaum",
+            "das Rentier"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-12",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/christmas-wreath.svg",
+          "options": [
+            "die Schleife",
+            "der Weihnachtsmann",
+            "der Adventskranz"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-13",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/cookies.svg",
+          "options": [
+            "die Weihnachtsmütze",
+            "die Plätzchen",
+            "der Schal"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-14",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/fairy.svg",
+          "options": [
+            "der Schlitten",
+            "die Fee",
+            "die Schneeflocke"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-15",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/firework.svg",
+          "options": [
+            "das Feuerwerk",
+            "der Schneemann",
+            "der Stern"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-16",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/gift.svg",
+          "options": [
+            "das Geschenk",
+            "der Kuchen",
+            "der Kalender"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-17",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/gift-bag.svg",
+          "options": [
+            "die Kerze",
+            "die Geschenktüte",
+            "der Champagner"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-18",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/ice.svg",
+          "options": [
+            "das Bonbon",
+            "der Kamin",
+            "das Eis"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-19",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/ice-skates.svg",
+          "options": [
+            "die Christbaumkugel",
+            "die Glocke",
+            "die Schlittschuhe"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-20",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/mittens.svg",
+          "options": [
+            "der Weihnachtsschmuck",
+            "die Fäustlinge",
+            "der Weihnachtsstrumpf"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-21",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/pie.svg",
+          "options": [
+            "die Torte",
+            "der Weihnachtsbaum",
+            "der Adventskranz"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-22",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/reindeer.svg",
+          "options": [
+            "das Rentier",
+            "die Plätzchen",
+            "die Fee"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-23",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/ribbon.svg",
+          "options": [
+            "das Feuerwerk",
+            "das Geschenk",
+            "die Schleife"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-24",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/Santa.svg",
+          "options": [
+            "die Geschenktüte",
+            "der Weihnachtsmann",
+            "das Eis"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-25",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/santa-hat.svg",
+          "options": [
+            "die Schlittschuhe",
+            "die Fäustlinge",
+            "die Weihnachtsmütze"
+          ],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-26",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/scarf.svg",
+          "options": [
+            "die Torte",
+            "der Schal",
+            "das Rentier"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-27",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/sled.svg",
+          "options": [
+            "die Schleife",
+            "der Schlitten",
+            "der Weihnachtsmann"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-28",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/snowflake.svg",
+          "options": [
+            "die Schneeflocke",
+            "die Weihnachtsmütze",
+            "der Schal"
+          ],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-29",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/snowman.svg",
+          "options": [
+            "der Schlitten",
+            "der Schneemann",
+            "die Schneeflocke"
+          ],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "img-30",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/winter-event/winter-words/star.svg",
+          "options": [
+            "der Kuchen",
+            "der Kalender",
+            "der Stern"
+          ],
+          "correctOptionIndex": 2
+        }
       ]
     }
+
   ]
 }

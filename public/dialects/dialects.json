@@ -70,7 +70,7 @@
   { "key": "Arzt", "article": "der", "by": "Dokta" },
   { "key": "Abend", "article": "der", "at": "Omd", "by": "Omd", "ch": "Abig" },
   { "key": "Mädchen", "article": "das", "at": "Madl", "by": "Dirndl", "ch": "Meitli" },
-  {"key": "Tschüss", "article": null, "at": "Baba", "by": "Servus", "ch": "Adieu",
+  {"key": "Tschüss", "article": null, "at": "Baba", "by": "Servus, Pfiadi", "ch": "Adieu",
     "usage": {
       "by": "«Servus» в Баварии — универсальное «привет/пока».",
       "at": "«Baba» — разговорное «пока»."
@@ -299,5 +299,277 @@
     "article": "das",
     "ch": "Gummibärli",
     "usage": { "ch": "Уменьшительная форма «-li» — типичная для CH." }
+  },
+  {
+    "key": "hinein",
+    "article": null,
+    "at": "eini",
+    "by": "eini",
+    "usage": {
+      "at": "В Австрии и Баварии часто говорят «eini» вместо стандартного «hinein» (внутрь).",
+      "by": "Форма «eini» типична для южно-баварских говоров."
+    }
+  },
+  {
+    "key": "einmal",
+    "article": null,
+    "at": "amoi",
+    "by": "amoi",
+    "usage": {
+      "at": "В Австрии вместо «einmal» обычно говорят «amoi».",
+      "by": "Баварское «amoi» соответствует стандартному «einmal» (один раз)."
+    }
+  },
+  {
+    "key": "Rotkohl",
+    "article": "der",
+    "at": "Blaukraut",
+    "by": "Blaukraut",
+    "usage": {
+      "at": "В Австрии говорят «Blaukraut» вместо стандартного «Rotkohl».",
+      "by": "В Баварии традиционно употребляется «Blaukraut»."
+    }
+  },
+  {
+    "key": "Pilze",
+    "article": "die",
+    "at": "Schwammerl",
+    "by": "Schwammerl",
+    "usage": {
+      "at": "В Австрии «Schwammerl» — общеупотребительное слово вместо «Pilze».",
+      "by": "В Баварии также говорят «Schwammerl» (мн.ч. форма та же)."
+    }
+  },
+  {
+    "key": "Junge",
+    "article": "der",
+    "at": "Bub",
+    "by": "Bua",
+    "ch": "Bueb",
+    "usage": {
+      "at": "В Австрии говорят «der Bub» вместо стандартного «der Junge».",
+      "by": "В Баварии типичная форма — «a Bua» (der Bua).",
+      "ch": "В Швейцарии — «der Bueb»."
+    }
+  },
+  {
+    "key": "Mädchen",
+    "article": "das",
+    "at": "Madl",
+    "by": "Madl",
+    "ch": "Meitli",
+    "usage": {
+      "at": "В Австрии говорят «das Madl» вместо стандартного «das Mädchen».",
+      "by": "В Баварии типичная форма — «a Madl» (девушка, девочка).",
+      "ch": "В Швейцарии используется «das Meitli»."
+    }
+  },
+  {
+    "key": "Mann",
+    "article": "der",
+    "at": "Mo",
+    "by": "Mo",
+    "ch": "Maa",
+    "usage": {
+      "at": "В Австрии часто говорят «der Mo» в разговорной речи вместо стандартного «der Mann».",
+      "by": "В Баварии форма «a Mo» (от «ein Mann») — повсеместно употребима.",
+      "ch": "В Швейцарии используется «der Maa»."
+    }
+  },
+  {
+    "key": "wir",
+    "article": null,
+    "by": "mia",
+    "usage": {
+      "by": "В Баварии и Австрии местоимение «wir» произносится как «mia»."
+    }
+  },
+  {
+    "key": "verrückt",
+    "article": null,
+    "by": "narrisch",
+    "usage": {
+      "by": "В Баварии вместо «verrückt» (сумасшедший, безумный) обычно говорят «narrisch»."
+    }
+  },
+  {
+    "key": "bleich",
+    "article": null,
+    "by": "kasig",
+    "usage": {
+      "by": "В Баварии вместо стандартного «bleich» (бледный) говорят «kasig» — от слова «Kaas» (сыр), по аналогии с бледным цветом сыра."
+    }
+  },
+  {
+    "key": "schön",
+    "article": null,
+    "by": "schee"
+  },
+  {
+    "key": "meckern",
+    "article": null,
+    "by": "granteln"
+  },
+  {
+    "key": "Tag",
+    "article": "der",
+    "by": "Dog"
+  },
+  {
+    "key": "ich",
+    "article": null,
+    "by": "i",
+    "at": "i"
+  },
+  {
+    "key": "Klo",
+    "article": "das",
+    "at": "Häusl",
+    "by": "Häusl"
+  },
+  {
+    "key": "hier",
+    "article": null,
+    "by": "do",
+    "at": "do"
+  },
+  {
+    "key": "Februar",
+    "article": "der",
+    "at": "Feber"
+  },
+  {
+    "key": "Kasse",
+    "article": "die",
+    "at": "Kassa"
+  },
+  {
+    "key": "Tüte",
+    "article": "die",
+    "at": "Sackerl",
+    "ch": "Säckli",
+    "usage": {
+      "at": "«Sackerl» — пакет (в магазинах, в быту).",
+      "ch": "«Säckli» — уменьшительная форма; повсеместно в рознице."
+    }
+  },
+  {
+    "key": "Klempner",
+    "article": "der",
+    "at": "Installateur",
+    "by": "Installateur",
+    "usage": {
+      "at": "В Австрии «Installateur» — официальное название профессии сантехника; слово «Klempner» почти не используется."
+    }
+  },
+  {
+    "key": "T-Shirt",
+    "article": "das",
+    "at": "Leiberl",
+    "by": "Leiberl",
+    "usage": {
+      "at": "В Австрии и Баварии «Leiberl» — обычное разговорное слово для футболки, особенно в спортивной и бытовой речи."
+    }
+  },
+  {
+    "key": "rein",
+    "article": null,
+    "at": "eini"
+  },
+  {
+    "key": "gucken",
+    "article": null,
+    "at": "schauen",
+    "by": "schaun",
+    "usage": {
+      "at": "В Австрии слово «gucken» не используется; вместо него говорят «schauen»."
+    }
+  },
+  {
+    "key": "Frikadelle",
+    "article": "die",
+    "at": "Fleischlaberl",
+    "by": "Fleischpflanzerl"
+  },
+  {
+    "key": "Meerrettich",
+    "article": "der",
+    "at": "Kren",
+    "by": "Kren",
+    "usage": {
+      "at": "В Австрии и Баварии «Kren» полностью заменяет слово «Meerrettich» и является общеупотребительным."
+    }
+  },
+  {
+    "key": "Aprikose",
+    "article": "die",
+    "at": "Marille",
+    "usage": {
+      "at": "В Австрии «Marille» — нормативное слово для абрикоса и употребляется вместо стандартного «Aprikose»."
+    }
+  },
+  {
+    "key": "Sahne",
+    "article": "die",
+    "at": "Obers, Schlag",
+    "usage": {
+      "at": "В Австрии слово «Sahne» заменено на «Obers» (сливки) или «Schlag» (взбитые сливки). Например, «Schlagobers» — взбитые сливки."
+    }
+  },
+  {
+    "key": "Alter",
+    "article": null,
+    "at": "Oida",
+    "usage": {
+      "at": "«Oida» — типичное австрийское разговорное слово, происходящее от «Alter». Используется как междометие («эй!», «блин!») или обращение к другу («чувак»)."
+    }
+  },
+  {
+    "key": "Witz",
+    "article": "der",
+    "at": "Schmäh",
+    "usage": {
+      "at": "«Schmäh» — это не просто шутка («Witz»), а особый австрийский стиль общения с юмором, очарованием и лёгкой иронией. Часто говорят «Wiener Schmäh» — венский шарм и остроумие."
+    }
+  },
+  {
+    "key": "Wurst",
+    "article": "die",
+    "at": "Eitrige",
+    "usage": {
+      "at": "Венский диалект: «a Eitrige» — разговорное название жареной/варёной колбасы; часто имеется в виду Käsekrainer."
+    }
+  },
+  {
+    "key": "Bier",
+    "article": "das",
+    "at": "Sechzehnerblech",
+    "usage": {
+      "at": "Венский диалект: «Sechzehnerblech» — разговорное название банки пива Ottakringer, названное так по 16-му району Вены (Ottakring), где находится пивоварня."
+    }
+  },
+  {
+    "key": "Rente",
+    "article": "die",
+    "at": "Pension",
+    "usage": {
+      "at": "В Австрии слово «Rente» почти не используется. Вместо него говорят «Pension». Соответственно, пенсионер — это «Pensionist» (муж.) или «Pensionistin» (жен.)."
+    }
+  },
+  {
+    "key": "anfassen",
+    "article": null,
+    "at": "angreifen",
+    "usage": {
+      "at": "В Австрии вместо стандартного «anfassen» употребляется «angreifen» — с тем же значением «дотронуться, потрогать»"
+    }
+  },
+  {
+    "key": "Kissen",
+    "article": "das",
+    "at": "Polster",
+    "usage": {
+      "at": "В Австрии слово «Kissen» заменяется на «Polster». Кроме того, меняется род: «das Kissen» → «der Polster»."
+    }
   }
 ]

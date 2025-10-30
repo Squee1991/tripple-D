@@ -256,7 +256,7 @@ const menuItems = computed(() => {
 
   if (userAuth.uid) {
     const allEvents = [
-      { id: 'winter-event', valueKey: 'eventsNavNames.winter', url: '/event-winter', isEvent: true, eventKey: 'winter', startDate: '01.12', endDate: '07.01' },
+      { id: 'winter-event', valueKey: 'eventsNavNames.winter', url: '/event-winter', isEvent: true, eventKey: 'winter', startDate: '27.10', endDate: '28.12' },
       { id: 'valentine', valueKey: 'eventsNavNames.valentine', url: '/event-valentine', isEvent: true, eventKey: 'valentine', startDate: '14.02', endDate: '27.02' },
       { id: 'april', valueKey: 'eventsNavNames.firstApril', url: '/event-joke', isEvent: true, eventKey: 'fools', startDate: '01.04', endDate: '01.04' },
       { id: 'halloween', valueKey: 'eventsNavNames.halloween', url: '/event-halloween', isEvent: true, eventKey: 'pumpkin', startDate: '31.10', endDate: '07.11' },

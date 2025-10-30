@@ -95,7 +95,6 @@ onBeforeUnmount(() => {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  margin-bottom: 20px;
   height: 100dvh;
   min-height: 0;
   align-items: stretch;

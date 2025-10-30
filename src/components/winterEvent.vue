@@ -1,90 +1,125 @@
 <script setup>
-import {ref, computed} from 'vue'
-import VShowFall from "./V-showFall.vue";
+import {ref, computed, onMounted} from 'vue'
+import VShowFall from "./V-showFall.vue"
 import Present from '../assets/images/mery-christmas/Present.svg'
-import { useRouter, useRoute } from "vue-router"
-
+import {useRouter, useRoute} from 'vue-router'
+import {useLocalePath} from '#i18n'
+import { useEventSessionStore } from '../../store/eventsStore.js'
+import Hat from 'assets/images/event-rewards/winter-event/winter-rewards/santa-hat.svg'
+import ChristmasBall from 'assets/images/event-rewards/winter-event/winter-rewards/christmas-ball.svg'
+import ChristmasWreath from 'assets/images/event-rewards/winter-event/winter-rewards/christmas-wreath.svg'
+import SantaIcon from 'assets/images/event-rewards/winter-event/winter-rewards/Santa-icon.svg'
+import DeepAvatar from 'assets/images/event-rewards/winter-event/winter-rewards/deerAvatar.png'
+import ElfIcon from 'assets/images/event-rewards/winter-event/winter-rewards/elf-icon.svg'
 const router = useRouter()
 const route = useRoute()
+const localePath = useLocalePath()
+const s = useEventSessionStore()
+
+const eventId = computed(() => String(route.params.id || ''))
 
 const coins = ref(0)
 const coinIcon = '❄'
 const activeTab = ref('reputation')
 const nav = [
   {id: 'reputation', label: 'Репутация', icon: '🏆'},
-  {id: 'quests', label: 'Задания', icon: '📜'}
+  {id: 'quests',     label: 'Задания',   icon: '📜'}
 ]
+
 const selectedLevel = ref(1)
 const computedPanelTitle = computed(() =>
-    activeTab.value === 'reputation' ? 'Магазин ивента' : 'Ежедневные задания'
+    activeTab.value === 'reputation' ? 'Магазин события' : 'Задания события'
 )
 
-const pathToMain = () => {
-  router.push('/')
-}
+const pathToMain = () => { router.push('/') }
 
 const reputationPoints = ref(0)
 const ranks = [
-  {level: 1, need: 0, title: 'Дружелюбие'},
-  {level: 2, need: 120, title: 'Уважение'},
-  {level: 3, need: 300, title: 'Превознесение'}
+  {level: 1, need: 0,   title: 'Снежное Доверие'},
+  {level: 2, need: 1000, title: 'Зимнее Почтение'},
 ]
+
 const quests = ref([
-  {id: 'q1', title: '10 зимних слов', rewardCoins: 20, rewardRep: 20, isDone: false, icon: '📘'},
-  {id: 'q2', title: 'Präsens: 5 предложений', rewardCoins: 25, rewardRep: 30, isDone: false, icon: '✍️'},
-  {id: 'q3', title: 'Артикли: 10 карточек', rewardCoins: 35, rewardRep: 40, isDone: false, icon: '🃏'},
-  {id: 'q4', title: 'Perfekt: составь 6 примеров', rewardCoins: 45, rewardRep: 60, isDone: false, icon: '⏳'},
-  {id: 'q5', title: 'Диалог в кафе: мини-сценка', rewardCoins: 60, rewardRep: 80, isDone: false, icon: '☕'}
+  { id: 'quest-1',  title: 'Рождественская викторина: основы',                           rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🎄' },
+  { id: 'quest-2',  title: 'Традиции и символы Рождества',                               rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🕯️' },
+  { id: 'quest-3',  title: 'Праздничные персонажи: Николаус и другие',                    rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🎅' },
+  { id: 'quest-4',  title: 'Адвент: венок, календарь, ожидание',                          rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🌟' },
+  { id: 'quest-5',  title: 'Желания и подарки: кто, что и как',                           rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🎁' },
+  { id: 'quest-6',  title: 'Рождество в Германии — чтение',                               rewardCoins: 5, rewardRep: 40, isDone: false, icon: '📖' },
+  { id: 'quest-7',  title: 'Рождество и Новый год в Германии — чтение',                   rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🎆' },
+  { id: 'quest-8',  title: 'Сильвестр призраков — новогодняя история',                    rewardCoins: 5, rewardRep: 40, isDone: false, icon: '👻' },
+  { id: 'quest-9',  title: 'Новый год в Заколдованном лесу — сказка',                      rewardCoins: 55, rewardRep: 40, isDone: false, icon: '✨' },
+  { id: 'quest-10', title: 'Зимние каникулы и школа — чтение',                            rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🏫' },
+  { id: 'quest-11', title: 'Рождественские пары: символ ↔ описание',                      rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🔗' },
+  { id: 'quest-12', title: 'Новогодние пары: традиция ↔ значение',                        rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🎇' },
+  { id: 'quest-13', title: 'Зимние традиции мира: страна ↔ обычай',                       rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🌍' },
+  { id: 'quest-14', title: 'Европейские зимние праздники и поверья ',                     rewardCoins: 5, rewardRep: 40, isDone: false,  icon: '✏️' },
+  { id: 'quest-15', title: 'Зима в Германии: предметы и занятия',                         rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🧣' },
+  { id: 'quest-16', title: 'Зима и Новый год: вставь слово ',                              rewardCoins: 5, rewardRep: 40, isDone: false, icon: '✏️' },
+  { id: 'quest-17', title: 'Рождество: вставь слово',                                   rewardCoins: 5, rewardRep: 40, isDone: false, icon: '✏️' },
+  { id: 'quest-18', title: 'Подготовка к Новому году: вставь слово',                    rewardCoins: 5, rewardRep: 40, isDone: false, icon: '✏️' },
+  { id: 'quest-19', title: 'Новогодняя ночь: вставь слово',                               rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🌃' },
+  { id: 'quest-20', title: 'Как немцы празднуют Новый год: вставь слово',                rewardCoins: 5, rewardRep: 40, isDone: false, icon: '✏️' },
+  { id: 'quest-21', title: 'Список слов',                rewardCoins: 5, rewardRep: 40, isDone: false,  icon: '✏️' },
 ])
+
 const currentLevel = computed(() => {
   let lvl = 1
   for (const r of ranks) if (reputationPoints.value >= r.need) lvl = r.level
   return lvl
 })
 const levelStart = computed(() => ranks[currentLevel.value - 1]?.need ?? 0)
-const nextNeed = computed(() => ranks[currentLevel.value]?.need ?? ranks.at(-1).need)
+const nextNeed   = computed(() => ranks[currentLevel.value]?.need ?? ranks.at(-1).need)
 const progressPct = computed(() => {
   const span = Math.max(nextNeed.value - levelStart.value, 1)
-  const cur = Math.min(Math.max(reputationPoints.value - levelStart.value, 0), span)
+  const cur  = Math.min(Math.max(reputationPoints.value - levelStart.value, 0), span)
   return Math.round((cur / span) * 100)
 })
-const levelTotal = computed(() => Math.max(nextNeed.value - levelStart.value, 1))
+const levelTotal   = computed(() => Math.max(nextNeed.value - levelStart.value, 1))
 const levelCurrent = computed(() => Math.max(reputationPoints.value - levelStart.value, 0))
 const levelProgressText = computed(() => {
   const isMax = currentLevel.value === ranks[ranks.length - 1].level
   return isMax ? `${levelCurrent.value} / МАКС` : `${levelCurrent.value} / ${levelTotal.value}`
 })
-const localePath = useLocalePath()
+
+function setSelectedLevel(lvl){ selectedLevel.value = lvl }
 
 async function goToSession(questId) {
-  const to = localePath({
-    name: 'event-id-session',
-    params: { id: route.params.id },
-    query: { questId, step: '1' }
-  })
+  s.start(eventId.value, String(questId))
+  const to = localePath({ name: 'event-id-session', params: { id: route.params.id } })
   await router.push(to)
 }
 
+function refreshProgressBadges() {
+  try {
+    const key = `event:${eventId.value}:progress`
+    const saved = JSON.parse(localStorage.getItem(key) || '{}')
+    quests.value = quests.value.map(q => ({
+      ...q,
+      isDone: !!saved?.[`${q.id}:done`]
+    }))
+  } catch {
 
+  }
+}
 
-const setSelectedLevel = (lvl) => {selectedLevel.value = lvl}
+onMounted(() => {
+  refreshProgressBadges()
+})
+
 const shopByRank = ref({
   1: [
-    {id: 'r1', title: 'Стикер «Снежинка»', priceCoins: 25, isOwned: false, icon: '🥶'},
-    {id: 'r2', title: 'Мини-рамка «Лёд»', priceCoins: 40, isOwned: false, icon: '🧊'},
-    {id: 'r3', title: 'Мини-рамка «Лёд»', priceCoins: 40, isOwned: false, icon: '🧊'},
+    {id: 'r1', title: 'Санта-шапка', priceCoins: 25, isOwned: false, icon: Hat},
+    {id: 'r2', title: 'Снежный шар',  priceCoins: 25, isOwned: false, icon: ChristmasBall},
+    {id: 'r3', title: 'Рождественский венок',  priceCoins: 25, isOwned: false, icon: ChristmasWreath}
   ],
   2: [
-    {id: 'r3', title: 'Тема «Winter Light»', priceCoins: 90, isOwned: false, icon: '✨'},
-    {id: 'r4', title: 'Иконка «Санта-шапка»', priceCoins: 75, isOwned: false, icon: '🎅'},
-    {id: 'r5', title: 'Иконка «Санта-шапка»', priceCoins: 75, isOwned: false, icon: '🎅'}
+    {id: 'r4', title: 'Аватар санты',  priceCoins: 50, isOwned: false, icon: SantaIcon},
+    {id: 'r5', title: 'Аватар Рунольда"', priceCoins: 50, isOwned: false, icon: DeepAvatar},
+    {id: 'r6', title: 'Иконка «Санта-шапка»', priceCoins: 50, isOwned: false, icon: ElfIcon}
   ],
-  3: [
-    {id: 'r6', title: 'Трофей «Wintermeister»', priceCoins: 180, isOwned: false, icon: '🏆'},
-    {id: 'r7', title: 'Фон «Северное сияние»', priceCoins: 150, isOwned: false, icon: '🌌'},
-    {id: 'r8', title: 'Фон «Северное сияние»', priceCoins: 150, isOwned: false, icon: '🌌'}
-  ]
 })
+
 function buyReward(level, rewardId) {
   if (currentLevel.value < level) return
   const item = shopByRank.value[level].find(i => i.id === rewardId)
@@ -100,9 +135,10 @@ function resetAll() {
   quests.value.forEach(q => (q.isDone = false))
   Object.values(shopByRank.value).forEach(list => list.forEach(r => (r.isOwned = false)))
   selectedLevel.value = 1
+  try { localStorage.removeItem(`event:${eventId.value}:progress`) } catch {}
 }
-
 </script>
+
 <template>
   <div>
     <div class="season__bg">
@@ -123,7 +159,6 @@ function resetAll() {
             </div>
             <div class="status achv-card --flat">
               <div class="status__row">
-                <!--                <div class="status__value">{{ currentRankTitle }}</div>-->
                 <div class="status__value">Панель ивента</div>
               </div>
               <div class="bar">
@@ -152,20 +187,9 @@ function resetAll() {
             </nav>
           </aside>
           <main class="achv-panel achv-card">
-            <!--            <img class="left__decor" :src="DecoLeft" alt="">-->
             <div class="panel__title">
-              <h1> {{ computedPanelTitle }}</h1>
-              <!--              <div class="panel__meta">-->
-              <!--                <span class="meta__pill">{{ currentRankTitle }}</span>-->
-              <!--              </div>-->
+              <h1>{{ computedPanelTitle }}</h1>
             </div>
-            <!--            <div class="tabs">-->
-            <!--              <button :class="['tab', { 'is-active': activeTab === 'reputation' }]" @click="activeTab = 'reputation'">-->
-            <!--                Репутация-->
-            <!--              </button>-->
-            <!--              <button :class="['tab', { 'is-active': activeTab === 'quests' }]" @click="activeTab = 'quests'">Задания-->
-            <!--              </button>-->
-            <!--            </div>-->
             <section v-if="activeTab === 'reputation'">
               <div class="section-head">
                 <h2>Магазин по репутации</h2>
@@ -181,9 +205,9 @@ function resetAll() {
               </div>
               <div class="cards">
                 <div v-for="reward in shopByRank[selectedLevel]" :key="reward.id" class="prize-card achv-card">
-                  <div class="prize-card__icon">{{ reward.icon }}</div>
+                  <div class="prize-card__title">{{ reward.title }}</div>
+                  <img class="prize-card__icon" :src="reward.icon" alt="">
                   <div class="prize-card__body">
-                    <div class="prize-card__title">{{ reward.title }}</div>
                     <div class="prize-card__foot">
                       <span class="price">{{ reward.priceCoins }} {{ coinIcon }}</span>
                       <button
@@ -203,13 +227,12 @@ function resetAll() {
             </section>
             <section v-if="activeTab === 'quests'">
               <div class="quests">
-                <div>
-                  <h2 class="daily__title">Ежедневные задания</h2>
-                </div>
+                <div><h2 class="daily__title">Задания</h2></div>
                 <div v-for="q in quests" :key="q.id" class="quest achv-card">
                   <div class="quest__icon">{{ q.icon }}</div>
                   <div class="quest__body">
-                    <div class="quest__title">{{ q.title }}</div>
+                    <div class="quest__title clickable">{{ q.title }}
+                    </div>
                     <div class="quest__meta">
                       <div class="quest__inner">
                         <span class="meta__pill">{{ q.rewardRep }} реп.</span>
@@ -334,7 +357,7 @@ function resetAll() {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  background: #ffffff52;;
+  background: #ffffff52;
 }
 
 .status__row {
@@ -374,7 +397,7 @@ function resetAll() {
   padding: 12px 14px;
   border: 2px solid whitesmoke;
   color: #1A2140;
-  font-weight: 900;
+  font-weight: 600;
   border-radius: 14px;
   cursor: pointer;
   font-size: 20px;
@@ -403,21 +426,9 @@ function resetAll() {
   flex-direction: column;
   overflow-y: auto;
 }
+
 .achv-panel section::-webkit-scrollbar {
   width: 0;
-}
-
-.quests::-webkit-scrollbar {
-  width: 0;
-}
-
-.achv-panel section::-webkit-scrollbar-thumb {
-  background: #9B8CFF;
-  border-radius: 2px;
-}
-
-.quests::-webkit-scrollbar-track {
-  background: transparent;
 }
 
 .panel__title {
@@ -433,32 +444,6 @@ function resetAll() {
   font-size: 32px;
   font-weight: 900;
   color: whitesmoke;
-}
-
-.tabs {
-  gap: 10px;
-  margin-bottom: 12px;
-  display: inline-block;
-  padding: 5px;
-  background: white;
-  border-radius: 14px;
-}
-
-.tab {
-  color: #3b3d75;
-  border-radius: 14px;
-  padding: 8px 14px;
-  font-weight: 900;
-  cursor: pointer;
-  border: none;
-  background: none;
-  font-size: 18px;
-}
-
-.tab.is-active {
-  background: #9B8CFF;
-  color: whitesmoke;
-  box-shadow: 0 3px 0 #8779df;
 }
 
 .section-head {
@@ -479,7 +464,6 @@ function resetAll() {
   padding: 5px;
   border-radius: 14px;
   gap: 8px;
-
 }
 
 .pill {
@@ -488,7 +472,7 @@ function resetAll() {
   background: none;
   border-radius: 14px;
   padding: 8px 12px;
-  font-weight: 900;
+  font-weight: 600;
   font-size: 17px;
 }
 
@@ -499,18 +483,19 @@ function resetAll() {
 
 .cards {
   display: flex;
-  flex-direction: column;
-  gap: 14px
+  gap: 10px
 }
 
 .prize-card {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 12px;
-  background: #ffffff52;;
+  background: #ffffff52;
 }
 
 .prize-card__icon {
-  font-size: 34px
+  width: 110px;
 }
 
 .prize-card__title {
@@ -531,26 +516,16 @@ function resetAll() {
   font-weight: 900;
   color: whitesmoke;
   background: #9B8CFF;
-  border: 2px solid #183a69;
+  height: 44px;
+  display: flex;
+  align-items: center;
   border-radius: 10px;
   padding: 5px 8px
 }
 
-.quest__inner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
 .quests {
   flex: 1 1 auto;
-  overflow: auto;
   min-height: 0;
-}
-
-.quest__body {
-  width: 100%;
 }
 
 .quest {
@@ -562,7 +537,11 @@ function resetAll() {
 }
 
 .quest__icon {
-  font-size: 30px
+  font-size: 50px
+}
+
+.quest__body {
+  width: 100%;
 }
 
 .quest__title {
@@ -578,19 +557,26 @@ function resetAll() {
   align-items: center
 }
 
+.quest__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
 .meta__pill {
   background: #c5e6ff;
   color: #5873c5;
   border: none;
   border-radius: 14px;
   padding: 6px 10px;
-  font-weight: 900;
+  font-weight: 600;
 }
 
 .btn {
   border-radius: 12px;
   padding: 14px;
-  font-weight: 900;
+  font-weight: 600;
   cursor: pointer
 }
 
@@ -608,13 +594,29 @@ function resetAll() {
   box-shadow: 0 5px #d79224;
   font-size: 18px;
   padding: 10px 25px;
+  font-family: "Nunito", sans-serif;
 }
 
 .btn--candy:disabled {
   background: #455268;
   color: #c7d1e6;
   border-color: #2a3850;
-  box-shadow: none
+  box-shadow: none;
+  height: 44px;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  text-decoration: underline;
+  color: #3453a9;
+}
+
+.clickable:focus {
+  outline: 3px solid #9B8CFF;
+  border-radius: 6px;
 }
 
 @media (max-width: 767px) {
@@ -624,11 +626,33 @@ function resetAll() {
   }
 }
 
+@media (max-width: 1023px) {
+  .quest {
+    flex-direction: column;
+  }
+  .quest__meta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .quest__inner {
+    justify-content: start;
+    margin-bottom: 10px;
+  }
+  .quest__title {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  .panel__title {
+    font-size: 26px;
+  }
+  .cards {
+    flex-wrap: wrap;
+  }
+}
+
 @media (min-width: 1024px) {
   .btn--home:hover {
     background: #e7a336;
   }
 }
-
 </style>
-

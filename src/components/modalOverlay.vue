@@ -38,7 +38,7 @@
 	}
 
 	const handleAction = () => {
-		router.push('/guess')
+		router.push('/guess-word')
 		closeModal()
 	}
 </script>

@@ -1,5 +1,9 @@
 <template>
-  <div v-if="visible && isModalOpen && activeEvent" class="modal-overlay" @click.self="handleCloseClick">
+  <div
+      v-if="visible && isModalOpen && activeEvent"
+      class="modal-overlay"
+      @click.self="handleCloseClick"
+  >
     <div class="modal-content" role="dialog" aria-modal="true">
       <VShowFall v-if="activeEvent.snow"/>
       <div class="modal-icon">
@@ -21,92 +25,147 @@ import {ref, watch, computed, onMounted, onUnmounted} from "vue";
 import VShowFall from "../components/V-showFall.vue";
 import Wreath from "../../assets/images/mery-christmas/christmas-wreath.svg";
 import Pumpkin from "../../assets/images/mery-christmas/pumkin.svg";
+
 const router = useRouter();
 const props = defineProps({
-  visible: {type: Boolean, default: true},
+  visible: { type: Boolean, default: true },
   schedule: {
     type: Array,
     default: () => [
       {
-        start: "10-29 12:37",
-        title: "Хэллоуин",
+        start: "10-28 13:25",
+        end:   "10-29 23:59",
+        title: "Праздник тыкв",
         text: "Собирай конфеты и не бойся испытаний — новые награды уже ждут!",
         icon: Pumpkin,
         route: "/event-halloween",
         snow: false,
       },
       {
-        start: "12-14 12:47",
-        title: "Зимний покров",
-        text: "Зимний сезон открыт! Успей принять участие и получить награды.",
+        start: "10-30 00:00",
+        end:   "12-31 23:59",
+        title: "Шепот зимы",
+        text: "Событие доступно! Успей принять участие и получить награды.",
         icon: Wreath,
         route: "/event-winter",
         snow: true,
       }
     ]
   },
-  tickMs: {
-    type: Number,
-    default: 1000
-  }
+  tickMs: { type: Number, default: 1000 }
 });
 
 const emit = defineEmits(["close"]);
+
 const isModalOpen = ref(true);
 const currentTime = ref(new Date());
 
-function parseAnnualStart(startString) {
-  const [datePart, timePart] = startString.split(" ");
+const lastEventKey = ref(null);
+
+function parseAnnualDate(str) {
+  const [datePart, timePart] = str.split(" ");
   const [month, day] = datePart.split("-").map(Number);
-  const [hours, minutes] = timePart.split(":").map(Number);
-  const currentYear = new Date().getFullYear();
-  return new Date(currentYear, month - 1, day, hours, minutes, 0, 0);
+  const [hours, minutes] = (timePart || "00:00").split(":").map(Number);
+  const y = new Date().getFullYear();
+  return new Date(y, month - 1, day, hours ?? 0, minutes ?? 0, 0, 0);
 }
 
+function makeEventKey(entry) {
+  return `${entry.title}|${entry.start}|${entry.end ?? ""}|${entry.startDate.getFullYear()}`;
+}
+
+function getDismissed(key) {
+  try { return localStorage.getItem(`eventModal.dismissed.${key}`) === "1"; }
+  catch { return false; }
+}
+
+function setDismissed(key, v=true) {
+  try { localStorage.setItem(`eventModal.dismissed.${key}`, v ? "1" : "0"); }
+  catch {  }
+}
+
+
 const annualCandidatesSorted = computed(() => {
-  const list = (props.schedule || []).map(entry => ({
-    ...entry,
-    startDate: parseAnnualStart(entry.start)
-  }));
+  const list = (props.schedule || []).map(entry => {
+    const startDate = parseAnnualDate(entry.start);
+    const endDate = entry.end ? parseAnnualDate(entry.end)
+        : new Date(startDate.getTime() + 24 * 60 * 60 * 1000);
+    return { ...entry, startDate, endDate };
+  });
+
+  for (const e of list) {
+    if (e.endDate <= e.startDate) {
+      const d = new Date(e.endDate);
+      d.setFullYear(d.getFullYear() + 1);
+      e.endDate = d;
+    }
+  }
   return list.sort((a, b) => a.startDate - b.startDate);
 });
 
 const activeEvent = computed(() => {
   const now = currentTime.value;
   const list = annualCandidatesSorted.value;
-  const past = list.filter(item => item.startDate <= now);
-  return past.length ? past[past.length - 1] : null;
+  const candidates = list.filter(e => e.startDate <= now && now < e.endDate);
+  if (!candidates.length) return null;
+  return candidates[candidates.length - 1];
 });
 
+function dismissCurrentEvent() {
+  if (!activeEvent.value) return;
+  const key = makeEventKey(activeEvent.value);
+  setDismissed(key, true);
+  isModalOpen.value = false;
+}
+
 function handleBeginClick() {
-  router.push(activeEvent.value.route || "/");
+  const to = activeEvent.value?.route || "/";
+  dismissCurrentEvent();
+  router.push(to);
   emit("close");
 }
 
 function handleCloseClick() {
-  isModalOpen.value = false;
+  dismissCurrentEvent();
   emit("close", false);
 }
 
-// onMounted(() => {
-//   if (props.visible && isModalOpen.value) document.body.style.overflow = "hidden";
-//   intervalId = setInterval(() => {
-//     currentTime.value = new Date();
-//   }, props.tickMs);
-// });
-//
-// onUnmounted(() => {
-//   document.body.style.overflow = "";
-//   if (intervalId) clearInterval(intervalId);
-// });
+let intervalId;
 
-// watch(
-//     () => [props.visible, isModalOpen.value],
-//     ([isVisible, open]) => {
-//       document.body.style.overflow = isVisible && open ? "hidden" : "";
-//     },
-//     {immediate: true}
-// );
+onMounted(() => {
+  if (props.visible && isModalOpen.value) document.body.style.overflow = "hidden";
+  intervalId = setInterval(() => {
+    currentTime.value = new Date();
+  }, props.tickMs);
+});
+
+onUnmounted(() => {
+  document.body.style.overflow = "";
+  if (intervalId) clearInterval(intervalId);
+});
+
+
+watch(() => activeEvent.value,
+    (val) => {
+      const key = val ? makeEventKey(val) : null;
+      if (!key) {
+        isModalOpen.value = false;
+        return;
+      }
+      if (key !== lastEventKey.value) {
+        lastEventKey.value = key;
+        isModalOpen.value = !getDismissed(key);
+      }
+    },
+    { immediate: true }
+);
+
+watch(() => [props.visible, isModalOpen.value, activeEvent.value],
+    ([isVisible, open, evt]) => {
+      document.body.style.overflow = (isVisible && open && !!evt) ? "hidden" : "";
+    },
+    { immediate: true }
+);
 </script>
 
 <style scoped>
@@ -192,11 +251,7 @@ function handleCloseClick() {
 }
 
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0)
-  }
-  50% {
-    transform: translateY(-6px)
-  }
+  0%, 100% { transform: translateY(0) }
+  50% { transform: translateY(-6px) }
 }
 </style>

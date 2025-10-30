@@ -43,7 +43,7 @@
           </div>
         </li>
       </ul>
-      <div v-if="!userAuth.isPremium" class="sub-actions">
+      <div v-if="userAuth.isPremium" class="sub-actions">
         <article class="super-card">
           <div>
             <span class="super-card__badge">{{ t('accountPanel.premium') }}</span>

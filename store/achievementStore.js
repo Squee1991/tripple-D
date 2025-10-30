@@ -25,6 +25,7 @@ import { tensesVerbs } from '../src/achieveGroup/verbs/tensesVerbs.js'
 import { modalVerbs } from '../src/achieveGroup/verbs/modalVerbs.js'
 import { typeVerbs } from '../src/achieveGroup/verbs/typeVerbs.js'
 import { sentenceAchievement } from '../src/achieveGroup/sentenceDuel/sentenceAchievementsА1.js'
+import { eventWinterAchievements } from '../src/achieveGroup/eventAchievement/winterAchievements.js'
 // --- 2) Сторы-источники
 import { userChainStore } from '../store/chainStore.js'
 import { userAuthStore } from '../store/authStore.js'
@@ -41,6 +42,7 @@ import { useQuizStore } from '../store/adjectiveStore.js'
 export const useAchievementStore = defineStore('achievementStore', () => {
 	// --- Группы
 	const rawGroups = [
+		...eventWinterAchievements.map(g => ({category: 'winter' , ...g})),
 		...sentenceAchievement.map(g => ({ category: 'sentence', ...g })),
 		...typeVerbs.map(g => ({ category: 'typeVerbs', ...g })),
 		...modalVerbs.map(g => ({ category: 'modalVerbs', ...g })),
@@ -101,6 +103,10 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 	const dailyAggUnsub = ref(null)
 	const prevMap = new Map()
 	const required = ['article','letters','wordArticle','audio','plural']
+	const VEGETABLES_DE = new Set([
+		'Kartoffel','Karotte','Tomate','Gurke','Zwiebel','Kohl','Paprika',
+		'Rote Bete','Radieschen','Bohne','Mais','Pilz','Knoblauch'
+	]);
 	const hasAllModes = (word) => required.every(m => word?.progress?.[m])
 	const awardsKey = () => `awards_shown_v1_${authStore?.uid}`
 	const completedKey = () => `achievements_completed_v1_${authStore?.uid}`
@@ -690,6 +696,13 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			{ immediate: true, deep: true }
 		)
 
+		watch(() => langStore.words, (words = []) => {
+			const targets = words.filter(w => w.topic === 'Food' && VEGETABLES_DE.has(w.de));
+			if (!targets.length) return updateProgress('vegan', 0);
+			const allLearned = targets.every(w => hasAllModes(w));
+			updateProgress('vegan', allLearned ? 1 : 0);
+		}, { immediate: true, deep: true });
+
 		watch(() => langStore.words, (words) => {
 			const salamiDone = words.some(w => w.de === 'Salami' && hasAllModes(w))
 			if (salamiDone) {
@@ -697,12 +710,17 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			}
 		}, { immediate: true, deep: true })
 
+		watch(() => langStore.words, (words = []) => {
+			const animals = words.filter(w => w.topic === 'Animals')
+			const allLearned = animals.length > 0 && animals.every(w => hasAllModes(w))
+			updateProgress('zoo', allLearned ? 1 : 0)
+		}, { immediate: true, deep: true })
+
 		watch(() => langStore.words, (words) => {
 			const katzeDone = words.some(w => w.de === 'Katze' && hasAllModes(w))
 			const hundDone  = words.some(w => w.de === 'Hund' && hasAllModes(w))
-			if (katzeDone && hundDone) {
-				updateProgress('catDog', 1)
-			}
+			const progress = [katzeDone, hundDone].filter(Boolean).length
+			updateProgress('catDog', progress)
 		}, { immediate: true, deep: true })
 
 		watch(() => authStore.uid, async (uid) => {

@@ -202,7 +202,7 @@ const handleSubmit = async () => {
         email: values.email,
         password: values.password
       })
-      router.push('/authUser')
+      // router.push('/authUser')
     } else {
       await authStore.loginUser({
         email: values.email,
