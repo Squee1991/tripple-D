@@ -37,6 +37,22 @@ export const overAchievment = [
 				targetProgress: 1
 			},
 			{
+				id: "zoo",
+				name: "generalCategory.zooText",
+				description: "generalCategory.zooDescription" ,
+				icon: "🦁",
+				currentProgress: 0,
+				targetProgress: 1
+			},
+			{
+				id: "vegan",
+				name: "generalCategory.veganText",
+				description: "generalCategory.veganDescription",
+				icon: "🥦",
+				currentProgress: 0,
+				targetProgress: 1
+			},
+			{
 				id: "SiteRegular",
 				name: "generalCategory.monthLabel",
 				description: "generalCategory.moonthText",

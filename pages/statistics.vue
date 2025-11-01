@@ -77,7 +77,11 @@
               <ProgressTable :selected-topic="selectedTopic"/>
             </article>
           </div>
-          <div v-else class="empty">{{ t('articlesStatistics.notTopics')}}</div>
+          <div v-else class="empty">
+            <h3 class="empty__title">{{ t('articlesStatistics.notTopics')}}</h3>
+            <img class="empty__icon" :src="NodataIcon" alt="">
+            <button @click="articleSessionPath" class="article__btn-path">К практике артиклей</button>
+          </div>
         </section>
         <section v-else-if="view==='thematic'" class="panel">
           <header class="panel__head">
@@ -143,6 +147,7 @@ import {regions} from '../utils/regions.js'
 import {useRouter} from 'vue-router'
 import ProgressTable from '../src/components/progress.vue'
 import ThematicLevels from '../src/components/thematic-statistic.vue'
+import NodataIcon from '../assets/images/research.svg'
 
 const router = useRouter()
 const {t, d} = useI18n()
@@ -152,6 +157,11 @@ const view = ref('articles')
 const backTo = () => router.push('/')
 const isMobile = ref(false)
 const isContentOpen = ref(false)
+
+const articleSessionPath = () => {
+  router.push('/articles')
+}
+
 
 function handleResize() {
   isMobile.value = window.innerWidth <= 767
@@ -302,6 +312,47 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
   position: relative
 }
 
+.empty__title {
+  font-size: 1.5rem;
+}
+
+.empty__icon {
+  width: 280px;
+}
+
+.empty {
+  margin-bottom: 10px;
+  position: absolute;
+  width: 90%;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+}
+
+.article__btn-path {
+  padding: 8px;
+  border-radius: 12px;
+  box-shadow: 3px 3px 0  black;
+  font-size: 1.1rem;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  transition: .3s;
+  background: #f6f5f5;
+}
+
+@media (min-width: 1024px) {
+  .article__btn-path:hover {
+    transform: translate(1px, 1px);
+    box-shadow: none;
+    transition: .3s;
+  }
+}
+
 .btn__back {
   padding: 12px;
   font-size: 1.2rem;
@@ -438,8 +489,10 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
   border: 2px solid #000;
   border-radius: 10px;
   background: #f8fafc;
-  font-weight: 800;
-  box-shadow: 2px 2px 0 #000
+  font-weight: 600;
+  box-shadow: 2px 2px 0 #000;
+  font-family: "Nunito", sans-serif;
+  margin-bottom: 10px;
 }
 
 .panel__title {
@@ -469,9 +522,10 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
   border: 2px solid #000;
   border-radius: 10px;
   background: #4ade80;
-  font-weight: 900;
+  font-weight: 600;
   min-width: 220px;
-  text-align: center
+  text-align: center;
+  font-family: "Nunito", sans-serif;
 }
 
 .grid {
@@ -709,7 +763,7 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
 .summary__row b {
   font-family: "Nunito", sans-serif;
   font-size: 2.25rem;
-  font-weight: 800;
+  font-weight: 600;
   color: #111827;
   line-height: 1
 }
@@ -735,8 +789,8 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
 }
 
 .quest:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 5px 5px 0 #000
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0 #000
 }
 
 .quest__top {
@@ -821,9 +875,8 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
   align-items: center;
   justify-content: center;
   font-size: .8rem;
-  font-weight: 700;
-  color: #fff;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, .5)
+  font-weight: 600;
+  color: #b4acac;
 }
 
 .is-mobile {
@@ -888,5 +941,13 @@ onBeforeUnmount(() => window.removeEventListener('resize', handleResize))
     flex-grow: 1;
     text-align: center
   }
+  .summary__row b {
+    font-size: 1.8rem;
+  }
+  .panel {
+    border-radius: 0;
+    border: none;
+  }
 }
+
 </style>

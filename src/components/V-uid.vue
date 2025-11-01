@@ -1,37 +1,37 @@
 <template>
-    <div class="uid__container">
-        <template v-if="!isMobile">
-            <div class="lands-container">
-                <VLands/>
-            </div>
-            <div class="stats__wrapper">
-                <VPoints/>
-                <VDaily/>
-            </div>
-        </template>
-        <template v-else>
-            <nav class="mobile-nav" role="tablist" aria-label="Статистика и прогресс">
-                <button
-                        v-for="tab in tabs"
-                        :key="tab.id"
-                        class="mobile-nav__btn"
-                        :class="{ 'mobile-nav__btn--active': activeTabId === tab.id }"
-                        role="tab"
-                        @click="setTab(tab.id)"
-                >
-                    <img class="tab__icon" :src="tab.icon" :alt="tab.alt">
-                    <div class="tab__label">{{ tab.label }}</div>
-                </button>
-            </nav>
-            <div class="mobile-panel" role="tabpanel">
-                <Transition name="fade-slide" mode="out-in">
-                    <div class="mobile-content" :key="currentTab.id">
-                        <component :is="currentComponent"/>
-                    </div>
-                </Transition>
-            </div>
-        </template>
-    </div>
+  <div class="uid__container">
+    <template v-if="!isMobile">
+      <div>
+        <VLands/>
+      </div>
+      <div class="stats__wrapper">
+        <VPoints/>
+        <VDaily/>
+      </div>
+    </template>
+    <template v-else>
+      <nav class="mobile-nav" role="tablist" aria-label="Статистика и прогресс">
+        <button
+            v-for="tab in tabs"
+            :key="tab.id"
+            class="mobile-nav__btn"
+            :class="{ 'mobile-nav__btn--active': activeTabId === tab.id }"
+            role="tab"
+            @click="setTab(tab.id)"
+        >
+          <img class="tab__icon" :src="tab.icon" :alt="tab.alt">
+          <div class="tab__label">{{ tab.label }}</div>
+        </button>
+      </nav>
+      <div class="mobile-panel" role="tabpanel">
+        <Transition name="fade-slide" mode="out-in">
+          <div class="mobile-content" :key="currentTab.id">
+            <component :is="currentComponent"/>
+          </div>
+        </Transition>
+      </div>
+    </template>
+  </div>
 </template>
 
 <script setup>
@@ -42,12 +42,11 @@ import VLands from "~/src/components/V-lands.vue";
 import Location from '../../assets/images/location.svg'
 import Daily from '../../assets/images/daily.svg'
 import Card from '../../assets/images/card.svg'
-
-const {t} = useI18n();
+const { t } = useI18n();
 const tabs = [
-    {id: 'locations', icon: Location, alt: 'achIcon', label: t('tabsMobile.locations'), component: VLands},
-    {id: 'daily', icon: Daily, alt: 'daily icon', label: t('tabsMobile.daily'), component: VDaily},
-    {id: 'profile', icon: Card, alt: 'ach icon', label: t('tabsMobile.profile'), component: VPoints},
+  {id: 'locations', icon: Location, alt: 'achIcon', label: t('tabsMobile.locations'), component: VLands},
+  {id: 'daily', icon: Daily, alt: 'daily icon', label: t('tabsMobile.daily'), component: VDaily},
+  {id: 'profile', icon: Card, alt: 'ach icon', label: t('tabsMobile.profile'), component: VPoints},
 ]
 
 const activeTabId = ref(tabs[0].id)
@@ -55,40 +54,41 @@ const currentTab = computed(() => tabs.find(t => t.id === activeTabId.value) || 
 const currentComponent = computed(() => currentTab.value.component)
 
 function setTab(id) {
-    activeTabId.value = id
+  activeTabId.value = id
 }
 
 const isMobile = ref(false)
 let mql
 
 function updateIsMobile(e) {
-    isMobile.value = e.matches
+  isMobile.value = e.matches
 }
 
 onMounted(() => {
-    mql = window.matchMedia('(max-width: 767px)')
-    isMobile.value = mql.matches
-    if (mql.addEventListener) mql.addEventListener('change', updateIsMobile)
-    else mql.addListener(updateIsMobile)
+  mql = window.matchMedia('(max-width: 767px)')
+  isMobile.value = mql.matches
+  if (mql.addEventListener) mql.addEventListener('change', updateIsMobile)
+  else mql.addListener(updateIsMobile)
 })
 
 onBeforeUnmount(() => {
-    if (!mql) return
-    if (mql.removeEventListener) mql.removeEventListener('change', updateIsMobile)
-    else mql.removeListener(updateIsMobile)
+  if (!mql) return
+  if (mql.removeEventListener) mql.removeEventListener('change', updateIsMobile)
+  else mql.removeListener(updateIsMobile)
 })
+
 
 
 </script>
 
 <style scoped>
 .tab__icon {
-    width: 50px;
-    margin-right: 5px;
+  width: 50px;
+  margin-right: 5px;
 }
 
 .tab__label {
-    color: var(--titleColor);
+  color: var(--titleColor);
 }
 
 .uid__container {

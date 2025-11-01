@@ -97,6 +97,7 @@ onUnmounted(() => {
 })
 
 async function pay() {
+  console.log('STRIPE_SECRET_KEY:', process.env.STRIPE_SECRET_KEY)
   if (!authStore.uid || !authStore.email) {
     alert('Сначала войди в аккаунт')
     return

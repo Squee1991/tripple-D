@@ -114,8 +114,8 @@ const annualEvents = ref([
     alt: 'ChristmasIcon',
     title: t('eventsNavNames.winter'),
     typeId: 'winter',
-    start: '12-14 00:00',
-    end: '01-07 23:59'
+    start: '12-23 00:00',
+    end: '01-03 23:59'
   },
   {
     id: 'valentine',
@@ -124,7 +124,7 @@ const annualEvents = ref([
     title: t('eventsNavNames.valentine'),
     typeId: 'valentine',
     start: '02-14 00:00',
-    end: '02-27 23:59'
+    end: '02-14 23:59'
   },
   {
     id: 'april',
@@ -141,8 +141,8 @@ const annualEvents = ref([
     alt: 'HalloweenIcon',
     title: t('eventsNavNames.halloween'),
     typeId: 'pumpkin',
-    start: '10-31 00:00',
-    end: '11-07 23:59'
+    start: '10-29 00:00',
+    end: '11-02 23:59'
   },
 ])
 

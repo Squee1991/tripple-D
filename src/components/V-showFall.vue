@@ -7,7 +7,7 @@ function rand(min, max) {
 }
 
 const snowflakes = ref(
-    Array.from({length: 50}).map((_, i) => {
+    Array.from({length: 100}).map((_, i) => {
       const size = Math.round(rand(12, 28))
       const left = Math.round(rand(0, 100))
       const fall = rand(14, 28)
