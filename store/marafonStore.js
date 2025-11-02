@@ -41,8 +41,8 @@ export const useGameStore = defineStore('game', () => {
 	const levelSettings = computed(() => {
 		const settings = {
 			1: {lives: 5, timer: null},
-			2: {lives: 5, timer: 100},
-			3: {lives: 1, timer: 500},
+			2: {lives: 5, timer: 10},
+			3: {lives: 1, timer: 5},
 		};
 		return settings[difficulty.value];
 	});

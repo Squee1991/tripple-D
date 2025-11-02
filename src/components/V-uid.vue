@@ -92,128 +92,146 @@ onBeforeUnmount(() => {
 }
 
 .uid__container {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  height: 100dvh;
-  min-height: 0;
-  align-items: stretch;
-  gap: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100dvh;
+    min-height: 0;
+    align-items: stretch;
+    gap: 10px;
+}
+
+.lands-container {
+    flex: 1; /* 1. Занять всё свободное место */
+    min-width: 0; /* 2. Решить проблему "сплющивания" дочернего grid-контейнера */
+
+    /* 3. Заставляем дочерний VLands растянуться на 100% высоты */
+    display: flex;
+}
+
+/* :deep() используется, чтобы "провалиться" в стили дочернего компонента VLands
+  и заставить его корневой элемент (.map__wrapper из прошлого файла)
+  растянуться на 100% ширины и высоты.
+*/
+.lands-container > :deep(.map__wrapper) {
+    width: 100%;
+    flex: 1;
 }
 
 .stats__wrapper {
-  min-width: 400px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 0 5px;
-  min-height: 0;
-  max-height: 100vh;
-  overflow: auto;
+    max-width: 400px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 5px;
+    min-height: 0;
+    max-height: 100vh;
+    overflow: auto;
 }
 
 .stats__wrapper > * {
-  flex: 0 0 auto;
+    flex: 0 0 auto;
 }
 
 .stats__wrapper::-webkit-scrollbar {
-  width: 6px;
+    width: 6px;
 }
 
 .stats__wrapper::-webkit-scrollbar-track {
-  background: transparent;
+    background: transparent;
 }
 
 .stats__wrapper::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
 }
 
 @media (max-width: 660px) {
-  .tab__label {
-    display: none;
-  }
+    .tab__label {
+        display: none;
+    }
 }
 
 @media (max-width: 767px) {
-  .uid__container {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 0;
-    height: calc(100dvh - 180px);
-    overflow-y: auto;
-  }
+    .uid__container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+        height: calc(100dvh - 180px);
+        overflow-y: auto;
+    }
 
-  .mobile-nav {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    padding: 4px;
-  }
+    .mobile-nav {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 4px;
+    }
 
-  .mobile-nav__btn {
-    border: none;
-    background: none;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 25%;
-    font-size: 16px;
-    cursor: pointer;
-    transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.12s ease;
-  }
+    .mobile-nav__btn {
+        border: none;
+        background: none;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25%;
+        font-size: 16px;
+        cursor: pointer;
+        transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.12s ease;
+    }
 
-  .mobile-nav__btn:active {
-    transform: translateY(1px);
-  }
+    .mobile-nav__btn:active {
+        transform: translateY(1px);
+    }
 
-  .mobile-nav__btn--active {
-    background: #eeeaea;
-    border: 3px solid black;
-    box-shadow: 3px 3px 0 black;
-    border-radius: 10px;
-  }
+    .mobile-nav__btn--active {
+        background: #eeeaea;
+        border: 3px solid black;
+        box-shadow: 3px 3px 0 black;
+        border-radius: 10px;
+    }
 
-  .mobile-panel {
-    flex: 1;
-    min-height: 0;
-    display: flex;
-    overflow: hidden;
-  }
+    .mobile-panel {
+        flex: 1;
+        min-height: 0;
+        display: flex;
+        overflow: hidden;
+    }
 
-  .mobile-content {
-    flex: 1;
-    min-height: 0;
-    display: flex;
-    width: 100%;
-    overflow: auto;
-    padding: 4px;
-    margin-top: 5px;
-  }
+    .mobile-content {
+        flex: 1;
+        min-height: 0;
+        display: flex;
+        width: 100%;
+        overflow: auto;
+        padding: 4px;
+        margin-top: 5px;
+    }
 
-  .mobile-content > * {
-    flex: 1;
-    width: 100%;
-    display: block;
-  }
+    .mobile-content > * {
+        flex: 1;
+        width: 100%;
+        display: block;
+    }
 }
 
 .fade-slide-enter-from {
-  opacity: 0;
-  transform: translateY(6px);
+    opacity: 0;
+    transform: translateY(6px);
 }
 
 .fade-slide-enter-active {
-  transition: opacity 180ms ease, transform 180ms ease;
+    transition: opacity 180ms ease, transform 180ms ease;
 }
 
 .fade-slide-leave-to {
-  opacity: 0;
-  transform: translateY(-6px);
+    opacity: 0;
+    transform: translateY(-6px);
 }
 
 .fade-slide-leave-active {
-  transition: opacity 140ms ease, transform 140ms ease;
+    transition: opacity 140ms ease, transform 140ms ease;
 }
 </style>

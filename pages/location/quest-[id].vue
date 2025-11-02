@@ -20,22 +20,22 @@
                                 <div
                                         class="quest__dot"
                                         :class="{
-        'quest__dot--done': step === 'done',
-        'quest__dot--wrong': step === 'wrong',
-        'quest__dot--current': step === 'current',
-      }"
+            'quest__dot--done': step === 'done',
+            'quest__dot--wrong': step === 'wrong',
+            'quest__dot--current': step === 'current',
+          }"
                                 ></div>
                             </template>
                         </div>
                     </div>
                     <div class="quest__lives" v-if="!previouslyCleared">
                         <div class="quest__hearts">
-              <span
-                      v-for="life in questStore.maxLives"
-                      :key="life"
-                      class="quest__heart"
-                      :class="{ 'quest__heart--lost': life > questStore.lives }"
-              >❤️</span>
+      <span
+              v-for="life in questStore.maxLives"
+              :key="life"
+              class="quest__heart"
+              :class="{ 'quest__heart--lost': life > questStore.lives }"
+      >❤️</span>
                         </div>
                     </div>
                 </div>
@@ -116,12 +116,12 @@
                                 </div>
                             </div>
                         </template>
-                        <template v-else-if="questStore.task.type === 'textToSpeech'">
-                            <div class="quest__tts">
-                                <p class="quest__tts-text">"{{ t(questStore.task.text) }}"</p>
-                                <p class="quest__tts-hint">ℹ️ Нажмите «Ответить», когда будете готовы.</p>
-                            </div>
-                        </template>
+<!--                        <template v-else-if="questStore.task.type === 'textToSpeech'">-->
+<!--                            <div class="quest__tts">-->
+<!--                                <p class="quest__tts-text">"{{ t(questStore.task.text) }}"</p>-->
+<!--                                <p class="quest__tts-hint">ℹ️ Нажмите «Ответить», когда будете готовы.</p>-->
+<!--                            </div>-->
+<!--                        </template>-->
                     </div>
                     <div v-if="questStore.showResult" :class="statusClassComputed" class="quest__feedback">
                         <img class="quest__feedback-icon" :src="questStore.isCorrect ? RightIcon : WrongIcon" alt="">
@@ -543,11 +543,37 @@ watchEffect(() => {
     gap: 17px;
 }
 
-.quest__stat-label, .quest__stat-value {
-    font-size: 1.4rem;
+.quest__stat-value {
+    position: relative;
     font-weight: 600;
-    color: var(--titleColor);
+    font-size: 1.2rem;
+    color: black;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.5rem;
+    height: 2.5rem;
+    /*border: 2px solid #ff82a9;*/
+    border-radius: 50%;
+    background: whitesmoke;
 }
+
+
+@keyframes pulse-ring {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.4;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+}
+
 
 .quest__lives {
     padding: .5rem 1rem;
@@ -938,6 +964,67 @@ watchEffect(() => {
 }
 
 @media (max-width: 768px) {
+    .quest__stat-value {
+        width: 4.3rem;
+        height: 2.3rem;
+        font-size: 1rem;
+        border: none;
+
+    }
+
+    .quest__stat-value::after {
+        box-shadow: 0 0 10px rgba(255, 160, 190, 0.8);
+    }
+
+    .quest__top {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .5rem;
+        background: none;
+        box-shadow: none;
+        border: none;
+    }
+
+    .quest__stat {
+        order: 2;
+        text-align: center;
+        align-items: center;
+        border-radius: 12px;
+        padding: .3rem .7rem;
+        margin-top: 2.5rem;
+    }
+
+    /* Сердечки — в правом верхнем углу */
+    .quest__lives {
+        order: 1;
+        position: absolute;
+        right: 1rem;
+        top: .5rem;
+        background: none;
+        padding: 0;
+    }
+
+    .quest__hearts {
+        font-size: 1.6rem;
+        display: flex;
+        gap: .3rem;
+    }
+
+    /* Убираем фон и рамку у верхнего блока */
+    .quest__top {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        gap: 0.3rem;
+    }
+
+    /* Немного расстояния между прогрессом и вопросом */
+    .quest__section {
+        margin-top: 1rem;
+    }
+
     .quest__question {
         font-size: 1.2rem;
         border-bottom: 2px solid #9dceff;
@@ -974,7 +1061,7 @@ watchEffect(() => {
         font-size: 15px;
         box-shadow: 3px 3px 0 black;
         border: 2px solid black;
-
+        width: 50%;
         padding: 5px;
     }
 
@@ -982,7 +1069,7 @@ watchEffect(() => {
         height: 52px;
         padding: 0 28px;
         font-size: 20px;
-        width: 100%;
+        max-width: 100%;
     }
 }
 
