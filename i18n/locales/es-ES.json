@@ -1,4 +1,7 @@
 {
+  "friendExam": {
+    "btn": "Exámenes de amigos"
+  },
   "regions": {
     "descriptionEastPlain": "Tierras expansivas donde cada uno inicia su viaje. Aquí dominarás los fundamentos del idioma y recibirás tus primeras misiones. Es desde aquí donde comienzan las grandes aventuras.",
     "descriptionStoneReach": "Una región dura con caminos pedregosos. Aquí fortalecerás tus habilidades en el camino hacia la maestría.",
@@ -4776,12 +4779,12 @@
     "title": "¿Qué te espera dentro?"
   },
   "feedBack": {
-    "label": "Contacto",
-    "title": "¿Tienes sugerencias? Rellena el formulario y te responderemos.",
-    "btn": "enviar mensaje",
+    "label": "Comentarios",
+    "title": "¿Tienes alguna sugerencia? Completa este formulario y te responderemos sin falta.",
+    "btn": "Enviar mensaje",
     "namePlaceholder": "Introduce tu nombre",
     "messagePlaceholder": "Introduce tu mensaje",
-    "emailPlaceholder": "Introduce tu email"
+    "emailPlaceholder": "Introduce tu correo electrónico"
   },
   "errors": {
     "errorEmail": "Introduce email",

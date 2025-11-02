@@ -300,7 +300,7 @@ const TAB_ITEMS = [
 
 const ACCORDIONS = ref([
   {key: 'personal', title: t('cabinetAccordion.personalData'), icon: UserAccIcon, isLink: false},
-  {key: 'account', title: t('cabinetAccordion.account'), icon: EditIcon, isLink: false},
+  // {key: 'account', title: t('cabinetAccordion.account'), icon: EditIcon, isLink: false},
   {key: 'settings', title: t('cabinetAccordion.settings'), icon: SettingsIcon, isLink: false},
   {key: 'faq', title: t('cabinetAccordion.faq'), icon: FaqIcon, isLink: true},
 ])

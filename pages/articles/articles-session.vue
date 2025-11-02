@@ -68,6 +68,11 @@
                 <input v-model="userInput" class="trainer-app__input"/>
               </div>
             </div>
+            <div v-if="currentMode === 'plural' || currentMode === 'wordArticle'" class="german__letters">
+              <button @click="addGErmanLetters(letter)" class="german__letters-item" v-for="(letter, index) in germanLetters" :key="index">
+                {{ letter}}
+              </button>
+            </div>
             <div v-if="result" class="answer-result" :class="result">
               <span v-if="result === 'correct'">✔ </span>
               <span v-if="result === 'wrong'">✖ </span>
@@ -143,7 +148,7 @@ const totalWords = computed(() => store.selectedWords.length)
 const currentLang = computed(() => locale.value);
 const translatedTopic = computed(() => t(nameMap[topicTitle.value]))
 const isSpeaking = ref(false)
-
+const germanLetters = ['ä', 'ö', 'ü', 'Ä', 'Ö', 'Ü', 'ß'];
 
 const localeToKeyMap = {
   ru: 'ru', 'ru-RU': 'ru',
@@ -151,6 +156,9 @@ const localeToKeyMap = {
   tr: 'tr', 'tr-TR': 'tr',
   pl: 'pl', 'pl-PL': 'pl',
   uk: 'uk', 'uk-UA': 'uk',
+  es: 'es', 'es-ES': 'es',
+  ar: 'ar', 'ar-AR': 'ar',
+  uz: 'uz', 'uz-UZ': 'uz',
   de: 'de', 'de-DE': 'de', 'de-AT': 'de', 'de-CH': 'de'
 }
 
@@ -184,6 +192,10 @@ function addLetter(letter, idx) {
   if (usedLetters.value[idx]) return
   userInput.value += letter
   usedLetters.value[idx] = true
+}
+
+const addGErmanLetters = (letter)  => {
+  userInput.value += letter
 }
 
 function speak(text) {
@@ -685,6 +697,22 @@ watch(userInput, (newVal, oldVal) => {
 .letters-clear:hover {
   background: #95a5a6;
   color: #2c3e50;
+}
+
+.german__letters {
+  display: flex;
+  gap: 5px;
+  margin: 8px 0;
+}
+
+.german__letters-item {
+  padding: 6px 9px;
+  border: 1px solid #95a5a6;
+  background: whitesmoke;
+  font-size: 17px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  border-radius: 7px;
 }
 
 @media (max-width: 768px) {

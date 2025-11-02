@@ -1,18 +1,17 @@
 <template>
   <div>
     <div class="btn__back-wrapper">
-      <button type="button" @click="path" class="btn__back">На главную</button>
+      <button type="button" @click="path" class="btn__back">Home</button>
     </div>
     <div class="terms">
-      <h1>Условия предоставления услуг</h1>
+      <h1>Terms of Service</h1>
       <p class="last-updated">
-        Обратите внимание, что настоящие Условия предоставления услуг последний раз
-        пересматривались {{ lastUpdated }}.
+        Please note that these Terms of Service were last reviewed on {{ lastUpdated }}.
       </p>
       <p class="legal-note">
-        ОБРАТИТЕ ВНИМАНИЕ, ЧТО НЕКОТОРЫЕ РАЗДЕЛЫ НАСТОЯЩИХ УСЛОВИЙ
-        СОДЕРЖАТ ВАЖНЫЕ ПОЛОЖЕНИЯ ОБ ОГРАНИЧЕНИИ ОТВЕТСТВЕННОСТИ,
-        ПРАВАХ НА КОНТЕНТ И ПОРЯДКЕ РАЗРЕШЕНИЯ СПОРОВ. ПРОЧИТАЙТЕ ИХ ВНИМАТЕЛЬНО.
+        PLEASE NOTE THAT SOME SECTIONS OF THESE TERMS CONTAIN IMPORTANT PROVISIONS
+        REGARDING LIMITATIONS OF LIABILITY, CONTENT RIGHTS, AND DISPUTE RESOLUTION PROCEDURES.
+        PLEASE READ THEM CAREFULLY.
       </p>
       <section v-for="(s, i) in sections" :key="i" class="section">
         <h2>{{ s.heading }}</h2>
@@ -22,12 +21,13 @@
   </div>
 </template>
 
+
 <script setup>
 import { ref } from "vue"
 import { useRouter } from "vue-router"
-const PROJECT = "Lexingo"
+const PROJECT = "Skill-up-german"
 const EMAIL = "lexingo@gmail.com"
-const COUNTRY = "Польша"
+const COUNTRY = "Poland"
 const router = useRouter()
 const lastUpdated = ref("05 сентября 2025 года")
 
@@ -37,128 +37,129 @@ const path = () => {
 
 const sections = ref([
   {
-    heading: "1. Общий",
+    heading: "1. General",
     paragraphs: [
-      `Веб-сайт и связанные сервисы ${PROJECT} (совместно — «Сервис») находятся под управлением правообладателя ${PROJECT}. Доступ к Сервису и его использование регулируются настоящими Условиями предоставления услуг («Условия»). Получая доступ или используя Сервис, вы подтверждаете, что прочитали, поняли и согласны соблюдать Условия, а также иные документы, на которые здесь даны ссылки (включая, помимо прочего, Политику конфиденциальности, размещённую отдельно). Если вы не согласны с Условиями, вы не вправе пользоваться Сервисом.`,
-      `${PROJECT} развивает продукты для изучения немецкого языка в игровой форме. Мы периодически обновляем Сервис, добавляя или изменяя функции, интерфейсы и материалы. Мы вправе вносить изменения в Условия. О существенных изменениях мы можем уведомлять посредством публикации новой редакции, а дата вступления в силу указывается вверху настоящего документа. Продолжение использования Сервиса после даты вступления в силу обновлённых Условий означает ваше согласие с ними.`
+      `The website and related services of Skill-Up-German (collectively, the “Service”) are operated by the rights holder Skill-Up-German. Access to and use of the Service are governed by these Terms of Service (“Terms”). By accessing or using the Service, you confirm that you have read, understood, and agree to be bound by these Terms, as well as other documents referenced herein (including, without limitation, the Privacy Policy provided separately). If you do not agree with the Terms, you are not authorized to use the Service.`,
+      `Skill-Up-German develops products for learning the German language in a gamified form. We periodically update the Service by adding or modifying features, interfaces, and materials. We reserve the right to amend these Terms. We may notify users of material changes by publishing a new version, and the effective date will be indicated at the top of this document. Continued use of the Service after the effective date of the updated Terms constitutes your acceptance of them.`
     ]
   },
   {
-    heading: "2. Определения",
+    heading: "2. Definitions",
     paragraphs: [
-      "«Пользователь» — лицо, получающее доступ к Сервису или использующее его любым образом. «Аккаунт» — учётная запись Пользователя, создаваемая для доступа к отдельным функциям. «Контент» — любые материалы Сервиса (тексты, задания, тесты, интерфейсы, изображения, аудио, видео, программный код и иные объекты). «Пользовательский контент» — данные, размещаемые, вводимые или загружаемые Пользователем (включая результаты тестов, прогресс обучения, комментарии и т. п.). «Подписка» или «Premium» — платный доступ к дополнительным возможностям Сервиса на оговорённый период."
+      "“User” means any individual who accesses or uses the Service in any way. “Account” means a User profile created to access certain features. “Content” means any materials of the Service (texts, exercises, tests, interfaces, images, audio, video, source code, and other objects). “User Content” means any data submitted, entered, or uploaded by the User (including test results, learning progress, comments, etc.). “Subscription” or “Premium” means paid access to additional Service features for a specified period."
     ]
   },
   {
-    heading: "3. Право на использование и возрастные ограничения",
+    heading: "3. Right to use and age restrictions",
     paragraphs: [
-      "Используя Сервис, вы подтверждаете, что обладаете правом заключать юридически обязывающее соглашение в соответствии с применимым правом и соответствуете минимальному возрасту, установленному законодательством. Если вы несовершеннолетний, вы заявляете, что получили согласие законного представителя на использование Сервиса и заключение настоящих Условий.",
-      "Вы несёте ответственность за соблюдение всех законов и правил юрисдикции, в которой вы находитесь, при доступе к Сервису и его использовании."
+      "By using the Service, you confirm that you have the legal capacity to enter into a binding agreement under applicable law and meet the minimum age required by law. If you are a minor, you represent that you have obtained consent from your legal guardian to use the Service and accept these Terms.",
+      "You are responsible for complying with all laws and regulations of your jurisdiction when accessing and using the Service."
     ]
   },
   {
-    heading: "4. Регистрация и безопасность аккаунта",
+    heading: "4. Registration and account security",
     paragraphs: [
-      "Для доступа к отдельным функциям Сервиса может потребоваться регистрация аккаунта. Вы обязуетесь предоставлять точную, актуальную и полную информацию при регистрации и поддерживать её актуальность. Вы несёте ответственность за сохранение конфиденциальности своих учётных данных и за все действия, совершаемые под вашим аккаунтом.",
-      `Вы обязуетесь незамедлительно уведомить ${PROJECT} о любом несанкционированном доступе или использовании аккаунта. Связаться с нами можно по адресу ${EMAIL}. ${PROJECT} оставляет за собой право приостановить или прекратить доступ к аккаунту при нарушении Условий или по соображениям безопасности.`
+      "To access certain features of the Service, you may need to register an account. You agree to provide accurate, current, and complete information during registration and to keep it up to date. You are responsible for maintaining the confidentiality of your login credentials and for all activities that occur under your account.",
+      `You agree to promptly notify Skill-Up-German of any unauthorized access to or use of your account. You can contact us at ${EMAIL}. Skill-Up-German reserves the right to suspend or terminate account access in case of Terms violations or for security reasons.`
     ]
   },
   {
-    heading: "5. Лицензия и допустимое использование",
+    heading: "5. License and permitted use",
     paragraphs: [
-      `При соблюдении Условий ${PROJECT} предоставляет вам ограниченную, неисключительную, непередаваемую и отзывную лицензию на доступ и использование Сервиса исключительно для личных образовательных целей. Любое иное использование, включая коммерческое, требует предварительного письменного согласия ${PROJECT}.`,
-      "Вы соглашаетесь не вмешиваться в работу Сервиса, не обходить технические ограничения, не осуществлять обратное проектирование, не публиковать вредоносный код и не использовать Сервис для противоправных целей либо нарушающих права третьих лиц. Мы вправе внедрять и изменять технические меры защиты и контроля доступа."
+      `Subject to compliance with these Terms, Skill-Up-German grants you a limited, non-exclusive, non-transferable, and revocable license to access and use the Service solely for personal educational purposes. Any other use, including commercial use, requires prior written consent from Skill-Up-German.`,
+      "You agree not to interfere with the Service, bypass technical limitations, perform reverse engineering, distribute malicious code, or use the Service for illegal purposes or in violation of third-party rights. We reserve the right to implement and modify technical protection and access control measures."
     ]
   },
   {
-    heading: "6. Подписки, оплата и продление",
+    heading: "6. Subscriptions, payment, and renewal",
     paragraphs: [
-      "Сервис может предоставляться на бесплатной основе, а также в формате платной подписки (Premium), предоставляющей доступ к расширенным функциям и материалам. Конкретный состав функций подписки и её стоимость могут меняться.",
-      "Подписка оформляется на период (например, месяц или год) и, как правило, продлевается автоматически до отмены. Если автопродление доступно в вашей стране и платёжной системе, стоимость подписки будет списываться в начале каждого нового периода. Вы можете отменить автопродление до даты следующего списания в интерфейсе аккаунта (если доступно) либо, при необходимости, обратившись к поддержке.",
-      "Мы можем предлагать пробные периоды и акции. Если иное не указано, по окончании пробного периода подписка становится платной, если вы её не отменили заранее. Возвраты средств осуществляются в пределах, установленных применимым законодательством и/или нашей политикой возвратов (если предусмотрена). Об изменении цены подписки мы можем сообщать заранее; новая цена применяется со следующего расчётного периода."
+      "The Service may be offered free of charge or as a paid subscription (Premium) providing access to extended features and materials. The exact scope of subscription features and its price may vary.",
+      "Subscriptions are offered for a period (for example, monthly or yearly) and generally renew automatically until canceled. If auto-renewal is available in your country and payment system, the subscription fee will be charged at the beginning of each new period. You can cancel auto-renewal before the next billing date in your account interface (if available) or by contacting support.",
+      "We may offer trial periods and promotions. Unless stated otherwise, after the trial period ends, the subscription becomes paid unless you cancel in advance. Refunds are provided in accordance with applicable laws and/or our refund policy (if any). We may notify users of price changes in advance; the new price applies from the next billing cycle."
     ]
   },
   {
-    heading: "7. Обучение, тесты и сохранение результатов",
+    heading: "7. Learning, tests, and data storage",
     paragraphs: [
-      "Сервис предоставляет доступ к заданиям, игровым режимам и тестам, ориентированным на изучение немецкого языка. Для отображения вашего прогресса, персонализации опыта и повышения качества обучения мы можем сохранять результаты прохождения, статистику и связанные технические журналы (логи).",
-      "Мы стремимся обеспечить надёжность хранения данных, однако не гарантируем постоянную доступность всех исторических записей и оставляем за собой право периодически агрегировать, архивировать или удалять устаревшие данные. Обработка персональных данных регулируется нашей Политикой конфиденциальности, опубликованной отдельно.",
-      "Вы понимаете и соглашаетесь, что индивидуальные результаты обучения зависят от множества факторов, и Сервис не гарантирует достижение определённого уровня владения языком или конкретных результатов."
+      "The Service provides access to exercises, game modes, and tests designed for learning the German language. To display your progress, personalize your experience, and improve learning quality, we may store your results, statistics, and related technical logs.",
+      "We strive to ensure reliable data storage but do not guarantee permanent availability of all historical records and reserve the right to aggregate, archive, or delete outdated data. Processing of personal data is governed by our separate Privacy Policy.",
+      "You understand and agree that individual learning results depend on many factors, and the Service does not guarantee achievement of any specific level of proficiency or particular outcomes."
     ]
   },
   {
-    heading: "8. Интеллектуальная собственность",
+    heading: "8. Intellectual property",
     paragraphs: [
-      `Все права на Контент ${PROJECT} и сам Сервис (включая дизайн, тексты, упражнения, изображения, аудио, видео, программный код и иные объекты) принадлежат ${PROJECT} либо используются на законном основании. Никакие права не передаются вам, кроме прямо предоставленных Условиями.`,
-      "Вы не вправе копировать, модифицировать, распространять, публично демонстрировать, публиковать или иным образом использовать Контент вне пределов предоставленной лицензии, за исключением случаев, прямо допускаемых применимым правом. Предоставляя нам отзывы, идеи и предложения, вы соглашаетесь, что мы можем использовать их без обязательств по выплате вознаграждения."
+      `All rights to the Content of Skill-Up-German and the Service itself (including design, texts, exercises, images, audio, video, source code, and other elements) belong to Skill-Up-German or are used under a valid license. No rights are transferred to you except those expressly granted by these Terms.`,
+      "You may not copy, modify, distribute, publicly display, publish, or otherwise use the Content beyond the scope of the granted license, except as expressly permitted by applicable law. By submitting feedback, ideas, or suggestions, you agree that we may use them without any obligation to compensate you."
     ]
   },
   {
-    heading: "9. Пользовательский контент",
+    heading: "9. User content",
     paragraphs: [
-      "Размещая Пользовательский контент в Сервисе, вы подтверждаете наличие прав, необходимых разрешений либо законных оснований для такого размещения. Вы предоставляете нам неисключительную лицензию на хранение, обработку, воспроизведение и отображение такого контента в объёме, необходимом для работы Сервиса.",
-      "Мы вправе удалять или ограничивать доступ к Пользовательскому контенту, если он нарушает Условия, права третьих лиц или применимое законодательство."
+      "By posting User Content in the Service, you confirm that you have the rights, permissions, or legal basis necessary to do so. You grant us a non-exclusive license to store, process, reproduce, and display such content as necessary for the operation of the Service.",
+      "We reserve the right to delete or restrict access to User Content that violates the Terms, third-party rights, or applicable law."
     ]
   },
   {
-    heading: "10. Конфиденциальность и безопасность данных",
+    heading: "10. Privacy and data security",
     paragraphs: [
-      "Порядок сбора, использования, хранения и раскрытия персональных данных Пользователей определяется Политикой конфиденциальности, размещённой на отдельной странице. Пожалуйста, ознакомьтесь с этим документом, чтобы понять, какие данные мы обрабатываем и на каких основаниях.",
-      "Мы применяем разумные технические и организационные меры для защиты данных, однако ни одна система не может гарантировать абсолютную безопасность."
+      "The collection, use, storage, and disclosure of Users’ personal data are governed by the Privacy Policy available on a separate page. Please review it to understand what data we process and on what basis.",
+      "We take reasonable technical and organizational measures to protect your data; however, no system can guarantee absolute security."
     ]
   },
   {
-    heading: "11. Доступность и изменения Сервиса",
+    heading: "11. Availability and modifications of the Service",
     paragraphs: [
-      `${PROJECT} вправе изменять, приостанавливать или прекращать предоставление Сервиса (полностью или частично) в любое время, включая проведение технических работ, обновлений и выпуск новых версий. В отдельных случаях доступ к Сервису может быть ограничен по причинам безопасности или в связи с требованиями закона.`
+      `Skill-Up-German may modify, suspend, or discontinue the Service (in whole or in part) at any time, including for technical maintenance, updates, or new releases. In certain cases, access to the Service may be restricted for security reasons or to comply with legal requirements.`
     ]
   },
   {
-    heading: "12. Отказ от гарантий",
+    heading: "12. Disclaimer of warranties",
     paragraphs: [
-      "СЕРВИС ПРЕДОСТАВЛЯЕТСЯ «КАК ЕСТЬ» И «ПО МЕРЕ ДОСТУПНОСТИ». В МАКСИМАЛЬНО ДОПУСТИМОЙ ЗАКОНОМ СТЕПЕНИ МЫ НЕ ПРЕДОСТАВЛЯЕМ НИКАКИХ ПРЯМЫХ ИЛИ ПОДРАЗУМЕВАЕМЫХ ГАРАНТИЙ, ВКЛЮЧАЯ ГАРАНТИИ КОММЕРЧЕСКОЙ ЦЕННОСТИ, ПРИГОДНОСТИ ДЛЯ ОПРЕДЕЛЁННОЙ ЦЕЛИ И НЕНАРУШЕНИЯ ПРАВ. МЫ НЕ ГАРАНТИРУЕМ, ЧТО СЕРВИС БУДЕТ БЕЗОШИБОЧНЫМ, НЕПРЕРЫВНЫМ ИЛИ СООТВЕТСТВУЮЩИМ ВАШИМ ОЖИДАНИЯМ."
+      "THE SERVICE IS PROVIDED “AS IS” AND “AS AVAILABLE.” TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE MAKE NO EXPRESS OR IMPLIED WARRANTIES, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE SERVICE WILL BE ERROR-FREE, UNINTERRUPTED, OR MEET YOUR EXPECTATIONS."
     ]
   },
   {
-    heading: "13. Ограничение ответственности",
+    heading: "13. Limitation of liability",
     paragraphs: [
-      "В максимально допустимой законом степени мы не несём ответственности за косвенные, случайные, специальные, штрафные убытки, упущенную выгоду, потерю данных, деловой репутации или иных нематериальных потерь, возникающих в связи с использованием или невозможностью использования Сервиса, даже если мы были уведомлены о возможности таких убытков.",
-      "В любом случае совокупная ответственность ${PROJECT} по любым требованиям ограничивается суммой, фактически уплаченной вами за доступ к Сервису за двенадцать (12) месяцев, непосредственно предшествующих событию, послужившему основанием для ответственности, если иное не предусмотрено императивными нормами права."
+      "To the maximum extent permitted by law, we are not liable for any indirect, incidental, special, consequential, punitive damages, loss of profits, data, goodwill, or other intangible losses arising from or related to your use or inability to use the Service, even if we have been advised of the possibility of such damages.",
+      "In any event, the total liability of Skill-Up-German for any claims shall not exceed the amount actually paid by you for access to the Service during the twelve (12) months preceding the event giving rise to such liability, unless otherwise required by mandatory law."
     ]
   },
   {
-    heading: "14. Возмещение убытков",
+    heading: "14. Indemnification",
     paragraphs: [
-      "Вы соглашаетесь защищать и возмещать нам убытки (в пределах, допускаемых законом), возникшие в связи с претензиями третьих лиц, вызванными нарушением вами настоящих Условий, прав третьих лиц или применимого законодательства, при условии, что соответствующие требования не являются результатом умысла или грубой неосторожности с нашей стороны."
+      "You agree to defend and indemnify us (to the extent permitted by law) against any third-party claims arising from your violation of these Terms, third-party rights, or applicable laws, provided that such claims are not the result of our willful misconduct or gross negligence."
     ]
   },
   {
-    heading: "15. Прекращение доступа",
+    heading: "15. Termination of access",
     paragraphs: [
-      "Мы вправе без предварительного уведомления приостановить или прекратить доступ к Сервису (полностью или частично), если вы нарушаете Условия, создаёте риски для Сервиса или иных Пользователей, либо если этого требует закон. Вы можете прекратить использование Сервиса в любое время; удаление аккаунта осуществляется согласно процедурам, описанным в Политике конфиденциальности."
+      "We may, without prior notice, suspend or terminate your access to the Service (in whole or in part) if you violate the Terms, pose risks to the Service or other Users, or if required by law. You may stop using the Service at any time; account deletion is carried out according to the procedures described in the Privacy Policy."
     ]
   },
   {
-    heading: "16. Применимое право и юрисдикция",
+    heading: "16. Governing law and jurisdiction",
     paragraphs: [
-      `Настоящие Условия регулируются законодательством государства ${COUNTRY}, без учёта коллизионных норм. Все споры, возникающие из Условий или в связи с ними, подлежат рассмотрению компетентными судами по месту регистрации правообладателя ${PROJECT}, если иное не предписано императивными нормами.`,
-      "Если какое-либо положение Условий признано недействительным или неисполнимым, это не влияет на действительность остальных положений; такое положение подлежит изменению в минимально необходимой степени для достижения целей исходного текста."
+      `These Terms are governed by the laws of ${COUNTRY}, without regard to conflict of laws principles. Any disputes arising out of or in connection with these Terms shall be resolved by the competent courts at the place of registration of Skill-Up-German, unless mandatory law provides otherwise.`,
+      "If any provision of these Terms is found invalid or unenforceable, it shall not affect the validity of the remaining provisions; such provision shall be modified to the minimum extent necessary to achieve the intent of the original text."
     ]
   },
   {
-    heading: "17. Передача прав, целостность соглашения и заголовки",
+    heading: "17. Assignment, entire agreement, and headings",
     paragraphs: [
-      `${PROJECT} может передавать (уступать) права и обязанности по настоящим Условиям третьим лицам в соответствии с законом; вы не вправе передавать свои права без нашего предварительного письменного согласия. Условия вместе с документами, на которые в них даны ссылки, составляют полное соглашение между вами и ${PROJECT} относительно предмета и заменяют собой все предыдущие договорённости по этому вопросу.`,
-      "Заголовки разделов используются исключительно для удобства и не влияют на толкование. Неприменение нами какого-либо права не считается отказом от него."
+      `Skill-Up-German may assign its rights and obligations under these Terms to third parties in accordance with the law; you may not transfer your rights without our prior written consent. These Terms, together with any referenced documents, constitute the entire agreement between you and Skill-Up-German regarding the subject matter and supersede all prior understandings or agreements.`,
+      "Section headings are provided for convenience only and do not affect interpretation. Our failure to enforce any right shall not be deemed a waiver of it."
     ]
   },
   {
-    heading: "18. Контакты",
+    heading: "18. Contacts",
     paragraphs: [
-      `По вопросам, связанным с Условиями или Сервисом, вы можете обратиться по адресу: ${EMAIL}. Мы стремимся отвечать своевременно.`
+      `For any questions related to these Terms or the Service, you can contact us at: ${EMAIL}. We strive to respond promptly.`
     ]
   }
 ])
+
 
 </script>
 

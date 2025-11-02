@@ -1,4 +1,7 @@
 {
+  "friendExam": {
+    "btn": "Arkadaşların Sınavları"
+  },
   "regions": {
     "descriptionEastPlain": "Herkesin yolculuğuna başladığı geniş topraklar. Burada dilin temellerini öğrenecek ve ilk görevlerini alacaksın. İşte büyük maceralar tam da buradan başlıyor.",
     "descriptionStoneReach": "Kayalık yollarla dolu sert bir bölge. Burada ustalığa giden yolda yeteneklerini pekiştireceksin.",
@@ -4790,11 +4793,12 @@
     "sub": "İlerleyin, ödüller kazanın ve öğrendikçe yeni özelliklerin kilidini açın."
   },
   "feedBack": {
-    "label": "Geri bildirim",
-    "title": "Herhangi bir öneriniz var mı? Bu formu doldurun, size geri döneceğiz.",
-    "btn": "Mesaj Gönder",
+    "label": "Geri Bildirim",
+    "title": "Öneriniz mi var? Bu formu doldurun, size mutlaka geri döneceğiz.",
+    "btn": "Mesaj gönder",
     "namePlaceholder": "Adınızı girin",
-    "messagePlaceholder": "Mesajınızı girin"
+    "messagePlaceholder": "Mesajınızı girin",
+    "emailPlaceholder": "E-posta adresinizi girin"
   },
   "errors": {
     "errorEmail": "E-posta girin",

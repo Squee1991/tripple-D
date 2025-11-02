@@ -86,7 +86,7 @@ const achIcon = computed(() => {
   return {type: 'text', text: raw}
 })
 
-const AUTO_CLOSE_MS = 411000
+const AUTO_CLOSE_MS = 2600
 let raf = null
 const remaining = ref(AUTO_CLOSE_MS)
 let lastTick = 0
@@ -143,7 +143,7 @@ function forceClose() {
 
 const awardVisible = ref(false)
 const awardTitle = ref('')
-const AWARD_AUTO_CLOSE_MS = 411000
+const AWARD_AUTO_CLOSE_MS = 2600
 const awardRemaining = ref(AWARD_AUTO_CLOSE_MS)
 let awardLastTick = 0
 let awardRAF = null

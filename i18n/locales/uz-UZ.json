@@ -1,4 +1,7 @@
 {
+  "friendExam": {
+    "btn": "Do'stlarning imtihonlari"
+  },
   "regions": {
     "descriptionEastPlain": "Har bir kishi o‘z sayohatini boshlaydigan keng yerlar. Bu yerda tilning asoslarini o‘rganasan va birinchi topshiriqlaringni olasan. Aynan shu joydan buyuk sarguzashtlar boshlanadi.",
     "descriptionStoneReach": "Toshloq yo‘llar bilan qoplangan qattiq chekka. Bu yerda mahorat sari yo‘lda malakangni mustahkamlaysan.",
@@ -4777,11 +4780,11 @@
   },
   "feedBack": {
     "label": "Fikr-mulohaza",
-    "title": "Takliflaringiz bormi? Ushbu shaklni to‘ldiring va biz albatta sizga javob beramiz.",
-    "btn": "xabar yuborish",
-    "namePlaceholder": "Ism kiriting",
-    "messagePlaceholder": "Xabaringizni yozing",
-    "emailPlaceholder": "Emailingizni kiriting"
+    "title": "Takliflaringiz bormi? Ushbu shaklni to‘ldiring va biz sizga albatta javob beramiz.",
+    "btn": "Xabar yuborish",
+    "namePlaceholder": "Ismingizni kiriting",
+    "messagePlaceholder": "Xabaringizni kiriting",
+    "emailPlaceholder": "Email manzilingizni kiriting"
   },
   "errors": {
     "errorEmail": "Email kiriting",

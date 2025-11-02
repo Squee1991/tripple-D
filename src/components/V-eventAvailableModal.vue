@@ -1,6 +1,6 @@
 <template>
   <div
-      v-if="visible && isModalOpen && activeEvent"
+      v-if="visible && isModalOpen && activeEvent &&  authStore.uid"
       class="modal-overlay"
       @click.self="handleCloseClick"
   >
@@ -22,10 +22,11 @@
 <script setup>
 import {useRouter} from "vue-router";
 import {ref, watch, computed, onMounted, onUnmounted} from "vue";
+import { userAuthStore } from '../../store/authStore.js'
 import VShowFall from "../components/V-showFall.vue";
 import Wreath from "../../assets/images/mery-christmas/christmas-wreath.svg";
 import Pumpkin from "../../assets/images/mery-christmas/pumkin.svg";
-
+const authStore = userAuthStore();
 const router = useRouter();
 const props = defineProps({
   visible: { type: Boolean, default: true },
@@ -33,8 +34,8 @@ const props = defineProps({
     type: Array,
     default: () => [
       {
-        start: "10-28 13:25",
-        end:   "10-29 23:59",
+        start: "10-28 00:00",
+        end:   "10-31 23:59",
         title: "Праздник тыкв",
         text: "Собирай конфеты и не бойся испытаний — новые награды уже ждут!",
         icon: Pumpkin,
@@ -42,8 +43,8 @@ const props = defineProps({
         snow: false,
       },
       {
-        start: "10-30 00:00",
-        end:   "12-31 23:59",
+        start: "12-24 00:00",
+        end:   "01-02 23:59",
         title: "Шепот зимы",
         text: "Событие доступно! Успей принять участие и получить награды.",
         icon: Wreath,

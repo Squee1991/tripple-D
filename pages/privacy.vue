@@ -1,126 +1,129 @@
 <template>
   <div>
     <div class="btn__back-wrapper">
-      <button type="button" @click="path" class="btn__back">На главную</button>
+      <button type="button" @click="path" class="btn__back">Home</button>
     </div>
     <div class="privacy">
-      <h1>Политика конфиденциальности</h1>
+      <h1>Privacy Policy</h1>
       <section v-for="(s, i) in sections" :key="i" class="section">
         <h2>{{ s.heading }}</h2>
         <p v-for="(p, j) in s.paragraphs" :key="j">{{ p }}</p>
       </section>
       <p class="last-updated">
-        Последнее обновление: {{ lastUpdated }}
+        Last updated: {{ lastUpdated }}
       </p>
     </div>
   </div>
 </template>
 
+
 <script setup>
 import { ref } from "vue"
 import { useRouter } from "vue-router"
 const router = useRouter()
-const PROJECT = "Lexingo"
-const EMAIL = "lexingo@gmail.com"
-const COUNTRY = "Польша"
+const PROJECT = "skill-up-german"
+const EMAIL = "skill-up-german@gmail.com"
+const COUNTRY = "Poland"
 
 
 const path = () => {
   router.push('/')
 }
-const lastUpdated = ref("05 сентября 2025 года")
+const lastUpdated = ref("October 1, 2025")
 const sections = ref([
   {
-    heading: "1. Введение",
+    heading: "1. Introduction",
     paragraphs: [
-      `Настоящая Политика конфиденциальности описывает, как ${PROJECT} собирает, использует и защищает персональные данные пользователей.`,
-      `Используя Сервис, вы соглашаетесь с условиями данной Политики.`
+      `This Privacy Policy describes how Skill-Up-German collects, uses, and protects users' personal data.`,
+      `By using the Service, you agree to the terms of this Policy.`
     ]
   },
   {
-    heading: "2. Какие данные мы собираем",
+    heading: "2. What data we collect",
     paragraphs: [
-      "— Данные аккаунта: имя (никнейм), адрес электронной почты, зашифрованный пароль (хранится в Firebase). Имя может быть псевдонимом.",
-      "— Данные использования: прогресс обучения (выученные слова, выполненные задания), результаты тестов, внутриигровая активность.",
-      "— Технические данные: некоторые сведения (например, IP-адрес или идентификаторы устройств) автоматически обрабатываются нашими провайдерами (Firebase, Stripe) для безопасности и работы сервиса. Мы сами не используем их для вашей идентификации.",
-      "— Данные оплаты: информация о транзакциях при оформлении подписки (обрабатывается платёжными системами, такими как Stripe,  мы не храним реквизиты банковских карт)."
+      "— Account data: name (nickname), email address, encrypted password (stored in Firebase). The name may be a pseudonym.",
+      "— Usage data: learning progress (learned words, completed tasks), test results, in-game activity.",
+      "— Technical data: certain information (e.g., IP address or device identifiers) is automatically processed by our providers (Firebase) for security and service operation. We do not use this information to identify you personally.",
+      "— Payment data: transaction information when subscribing (processed by payment systems such as Stripe; we do not store credit card details)."
     ]
   },
   {
-    heading: "3. Как мы используем данные",
+    heading: "3. How we use the data",
     paragraphs: [
-      "— Для предоставления доступа к Сервису и его функциям.",
-      "— Для сохранения и отображения вашего прогресса в обучении.",
-      "— Для обработки подписок и оплаты.",
-      "— Для улучшения качества работы Сервиса и персонализации обучения.",
-      "— Для отправки уведомлений и сообщений о важных изменениях."
+      "— To provide access to the Service and its features.",
+      "— To save and display your learning progress.",
+      "— To process subscriptions and payments.",
+      "— To improve the quality and personalization of the Service.",
+      "— To send notifications and messages about important updates."
     ]
   },
   {
-    heading: "4. Передача данных третьим лицам",
+    heading: "4. Data sharing with third parties",
     paragraphs: [
-      "Мы не продаём ваши персональные данные. Передача возможна только в следующих случаях:",
-      "— Когда это необходимо для работы Сервиса (например, провайдерам-обработчикам данных: Firebase/Google Cloud, Stripe, RevenueCat).",
-      "— Когда этого требует закон (например, по запросу суда или государственных органов)."
+      "We do not sell your personal data. Data sharing is only possible in the following cases:",
+      "— When necessary for the operation of the Service (e.g., to data processing providers such as Firebase/Google).",
+      "— When required by law (e.g., by court order or governmental request)."
     ]
   },
   {
-    heading: "5. Хранение и защита данных",
+    heading: "5. Data storage and protection",
     paragraphs: [
-      "Мы принимаем разумные технические и организационные меры для защиты данных от несанкционированного доступа, изменения или уничтожения.",
-      "Передача данных осуществляется по HTTPS; доступ к базе ограничен правилами безопасности (например, Firestore Security Rules).",
-      "Данные хранятся на серверах провайдеров с высоким уровнем безопасности (например, Google Firebase).",
-      "Несмотря на меры безопасности, ни один метод передачи данных через интернет не является абсолютно защищённым."
+      "We take reasonable technical and organizational measures to protect data from unauthorized access, alteration, or destruction.",
+      "Data transmission is performed over HTTPS; database access is restricted by security rules (e.g., Firestore Security Rules).",
+      "Data is stored on secure servers of our providers (e.g., Google Firebase).",
+      "Despite all security measures, no method of data transmission over the Internet is completely secure."
     ]
   },
   {
-    heading: "6. Cookies и аналитика",
+    heading: "6. Cookies and analytics",
     paragraphs: [
-      "Мы используем cookie-файлы только для авторизации и корректной работы Сервиса.",
-      "Для улучшения Сервиса мы собираем обезличенную статистику использования (например, количество посещений разделов, кликов на кнопки, время на страницах). Эти данные не позволяют идентифицировать конкретного пользователя и не используются для рекламы.",
-      "Если в будущем мы подключим сторонние сервисы аналитики (например, Google Analytics или Firebase Analytics), данная Политика будет обновлена, и пользователи будут уведомлены."
+      "We use cookies only for authentication and the correct operation of the Service.",
+      "To improve the Service, we collect anonymized usage statistics (e.g., number of section visits, button clicks, time spent on pages). This data does not allow identification of a specific user and is not used for advertising.",
+      "If we connect third-party analytics services in the future (e.g., Google Analytics or Firebase Analytics), this Policy will be updated, and users will be notified."
     ]
   },
   {
-    heading: "7. Права пользователей",
+    heading: "7. User rights",
     paragraphs: [
-      "Вы имеете право:",
-      "— Запросить копию ваших персональных данных.",
-      "— Исправить неточные или устаревшие данные.",
-      "— Удалить аккаунт и связанные данные.",
-      "— Ограничить или возразить против обработки данных.",
-      `Чтобы воспользоваться правами, напишите нам: ${EMAIL}.`
+      "You have the right to:",
+      "— Request a copy of your personal data.",
+      "— Correct inaccurate or outdated data.",
+      "— Delete your account and associated data.",
+      "— Restrict or object to data processing.",
+      `To exercise your rights, please contact us at: ${EMAIL}.`
     ]
   },
   {
-    heading: "8. Международная передача данных",
+    heading: "8. International data transfer",
     paragraphs: [
-      "Так как мы используем международные сервисы (например, Firebase, Stripe, RevenueCat), ваши данные могут передаваться за пределы страны проживания.",
-      "Мы предпринимаем меры для защиты данных в соответствии с применимым законодательством, включая GDPR/RODO в ЕС."
+      "Since we use international services (e.g., Firebase, Stripe, RevenueCat), your data may be transferred outside your country of residence.",
+      "We take measures to protect your data in accordance with applicable laws, including GDPR/RODO within the EU."
     ]
   },
   {
-    heading: "9. Срок хранения данных",
+    heading: "9. Data retention period",
     paragraphs: [
-      "Мы храним данные до тех пор, пока это необходимо для целей, описанных в настоящей Политике.",
-      "При удалении аккаунта все связанные с ним данные удаляются сразу и не сохраняются на наших серверах."
+      "We retain data for as long as necessary to achieve the purposes described in this Policy.",
+      "When an account is deleted, all associated data is removed immediately and not stored on our servers."
     ]
   },
   {
-    heading: "10. Изменения в Политике",
+    heading: "10. Changes to the Policy",
     paragraphs: [
-      "Мы можем периодически обновлять Политику конфиденциальности.",
-      "Актуальная версия всегда доступна на сайте; дата последнего обновления указывается внизу документа.",
-      "Продолжая использовать Сервис после изменений, вы соглашаетесь с обновлённой Политикой."
+      "We may periodically update this Privacy Policy.",
+      "The current version is always available on the website; the date of the last update is shown at the bottom of the document.",
+      "By continuing to use the Service after updates, you agree to the revised Policy."
     ]
   },
   {
-    heading: "11. Контакты",
+    heading: "11. Contacts",
     paragraphs: [
-      `По вопросам защиты данных и конфиденциальности обращайтесь: ${EMAIL}.`
+      `For questions regarding data protection and privacy, please contact us at: ${EMAIL}.`
     ]
   }
 ])
+
+
 
 
 </script>

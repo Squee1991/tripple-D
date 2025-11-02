@@ -1,4 +1,7 @@
 {
+  "friendExam": {
+    "btn": "Egzaminy przyjaciół"
+  },
   "regions": {
     "descriptionEastPlain": "Rozległe ziemie, gdzie każdy rozpoczyna swoją podróż. Tutaj opanujesz podstawy języka i otrzymasz pierwsze zadania. To właśnie stąd zaczynają się wielkie przygody.",
     "descriptionStoneReach": "Surowy kraniec z kamienistymi drogami. Tutaj wzmocnisz swoje umiejętności na drodze do mistrzostwa.",
@@ -4792,11 +4795,13 @@
   },
   "feedBack": {
     "label": "Opinie",
-    "title": "Masz jakieś uwagi? Wypełnij ten formularz, a my na pewno Ci odpowiemy.",
+    "title": "Masz jakieś sugestie? Wypełnij ten formularz, a na pewno się z Tobą skontaktujemy.",
     "btn": "Wyślij wiadomość",
-    "namePlaceholder": "Wprowadź swóje Imię",
-    "messagePlaceholder": "Wprowadź swoją wiadomość"
+    "namePlaceholder": "Wpisz swoje imię",
+    "messagePlaceholder": "Wpisz swoją wiadomość",
+    "emailPlaceholder": "Wpisz swój e-mail"
   },
+
   "errors": {
     "errorEmail": "Wprowadź email",
     "errorPassword": "Wprowadź hasło",

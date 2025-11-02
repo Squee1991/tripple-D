@@ -310,7 +310,7 @@ function resetAll() {
   border: 2px solid whitesmoke;
   border-radius: 18px;
   padding: 15px;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(1px);
 }
 
 .status__value {
@@ -647,6 +647,13 @@ function resetAll() {
   }
   .cards {
     flex-wrap: wrap;
+  }
+  .pill {
+    text-align: center;
+    width: 100%;
+  }
+  .rank-switch {
+    width: 100%;
   }
 }
 

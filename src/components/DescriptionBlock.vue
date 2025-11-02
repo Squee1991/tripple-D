@@ -36,6 +36,7 @@ import AchCup from '../../assets/images/AchIcon.svg'
 import Dictionary from '../../assets/images/SeasonEvent.svg'
 import Exam from '../../assets/images/exam.svg'
 import Ranked from '../../assets/images/ranked.svg'
+import Cards from '../../assets/images/greeting-card.svg'
 
 gsap.registerPlugin(ScrollTrigger);
 const {t} = useI18n()
@@ -101,7 +102,7 @@ const items = [
     ]
   },
   {
-    src: AchCup, alt: 'Cup', title: t('descriptionCardCards.title'), description: [
+    src: Cards, alt: 'Cup', title: t('descriptionCardCards.title'), description: [
       {text: t('descriptionCardCards.textOne')},
       {text: t('descriptionCardCards.textTwo')},
       {text: t('descriptionCardCards.textThree')},

@@ -2350,7 +2350,7 @@
           "image": "/assets/images/event-rewards/winter-event/winter-words/fairy.svg",
           "options": [
             "der Schlitten",
-            "die Fee",
+            "die Girlande",
             "die Schneeflocke"
           ],
           "correctOptionIndex": 1
@@ -2447,7 +2447,7 @@
           "options": [
             "das Rentier",
             "die Plätzchen",
-            "die Fee"
+            "die Girlande"
           ],
           "correctOptionIndex": 0
         },

@@ -132,7 +132,7 @@ onMounted(() => {
           </div>
         </li>
       </ul>
-      <NuxtLink class="friend__exam" to="/friend-exam">Экзамены друзей</NuxtLink>
+      <NuxtLink class="friend__exam" to="/friend-exam">{{ t('friendExam.btn')}}</NuxtLink>
     </div>
   </div>
 </template>

@@ -72,7 +72,7 @@
   </div>
 </template>
 <script setup>
-import {ref, computed, watch} from 'vue'
+import {ref, computed, watch , onUnmounted } from 'vue'
 import {userAuthStore} from '../../store/authStore.js'
 import {useRouter} from 'vue-router'
 import {useI18n} from 'vue-i18n'
@@ -83,6 +83,8 @@ const emits = defineEmits(['close-auth-form'])
 const authStore = userAuthStore()
 const mode = ref('login')
 const resetSent = ref(false)
+const isAuthed = computed(() => !!authStore.uid)
+
 const toggleTransform = computed(() => {
   if (locale.value === 'ar') {
     return mode.value === 'login' ? 'translateX(100%)' : 'translateX(0%)'
@@ -90,7 +92,6 @@ const toggleTransform = computed(() => {
     return mode.value === 'login' ? 'translateX(0%)' : 'translateX(100%)'
   }
 })
-
 const fields = ref([
   {
     id: 1,
@@ -202,7 +203,10 @@ const handleSubmit = async () => {
         email: values.email,
         password: values.password
       })
-      // router.push('/authUser')
+      emits('close-auth-form')
+      fields.value.forEach(field => field.value = '')
+      return
+      // router.push('/authUs     er')
     } else {
       await authStore.loginUser({
         email: values.email,
@@ -219,11 +223,16 @@ const handleSubmit = async () => {
     mapErrors(fields.value, e.code)
   }
 }
+
 watch(mode, () => {
   fields.value.forEach(field => {
     field.value = ''
     field.error = '';
   })
+})
+
+watch(isAuthed, (v) => {
+  if (v) emits('close-auth-form')
 })
 
 onUnmounted(() => {
