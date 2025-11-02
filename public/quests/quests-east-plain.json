@@ -2,12 +2,12 @@
   {
     "questId": "menschen-a1-greetings",
     "title": "eastPlainFirstQuests.title",
-    "progress": "0/15",
+    "progress": "0/14",
     "description": "eastPlainFirstQuests.description",
     "conditions": {
       "goal": "eastPlainFirstQuests.goal",
-      "minCorrect": 15,
-      "requiredTasks": 15
+      "minCorrect": 14,
+      "requiredTasks": 14
     },
     "rewards": {
       "points": 20,
@@ -38,12 +38,6 @@
       },
       {
         "id": 3,
-        "type": "textToSpeech",
-        "question": "Lies laut vor: Hallo",
-        "text": "Hallo"
-      },
-      {
-        "id": 4,
         "type": "select",
         "question": "eastPlainFirstQuests.questFour",
         "options": [
@@ -54,7 +48,7 @@
         "answer": "Guten Abend"
       },
       {
-        "id": 5,
+        "id": 4,
         "type": "select",
         "question": "eastPlainFirstQuests.questFive",
         "options": [
@@ -67,7 +61,7 @@
         "answer": "Wie geht's"
       },
       {
-        "id": 6,
+        "id": 5,
         "type": "reorder",
         "question": "eastPlainFirstQuests.questSix",
         "words": [
@@ -82,7 +76,7 @@
         ]
       },
       {
-        "id": 7,
+        "id": 6,
         "type": "select",
         "question": "eastPlainFirstQuests.questSeven",
         "options": [
@@ -94,7 +88,7 @@
         "answer": "Tschüss"
       },
       {
-        "id": 8,
+        "id": 7,
         "type": "select",
         "question": "eastPlainFirstQuests.questEight",
         "options": [
@@ -105,14 +99,14 @@
         "answer": "gut"
       },
       {
-        "id": 9,
+        "id": 8,
         "type": "speechToText",
         "question": "eastPlainFirstQuests.questNine",
         "text": "Hallo! wie geht's?",
         "answer": "Hallo! wie geht's?"
       },
       {
-        "id": 10,
+        "id": 9,
         "type": "reorder",
         "question": "eastPlainFirstQuests.questTen",
         "words": [
@@ -132,7 +126,7 @@
         ]
       },
       {
-        "id": 11,
+        "id": 10,
         "type": "select",
         "question": "eastPlainFirstQuests.questEleven",
         "options": [
@@ -144,7 +138,7 @@
         "answer": "schlecht"
       },
       {
-        "id": 12,
+        "id": 11,
         "type": "select",
         "question": "eastPlainFirstQuests.questTwelve",
         "options": [
@@ -156,7 +150,7 @@
         "answer": "sehr gut"
       },
       {
-        "id": 13,
+        "id": 12,
         "type": "select",
         "question": "eastPlainFirstQuests.questThirteen",
         "options": [
@@ -169,7 +163,7 @@
         "answer": "Auf Wiedersehen"
       },
       {
-        "id": 14,
+        "id": 13,
         "type": "reorder",
         "question": "eastPlainFirstQuests.questFourteen",
         "words": [
@@ -185,7 +179,7 @@
         ]
       },
       {
-        "id": 15,
+        "id": 14,
         "type": "speechToText",
         "question": "eastPlainFirstQuests.questFifteen",
         "text": "Hallo! wie geht's? sehr gut, danke",
@@ -196,12 +190,12 @@
   {
     "questId": "menschen-a1-greetings2",
     "title": "eastPlainSecondQuests.title",
-    "progress": "0/15",
+    "progress": "0/13",
     "description": "eastPlainSecondQuests.description",
     "conditions": {
       "goal": "Lerne, über Herkunft und Sprache zu sprechen und höflich Fragen zu stellen",
-      "minCorrect": 15,
-      "requiredTasks": 15
+      "minCorrect": 13,
+      "requiredTasks": 13
     },
     "rewards": {
       "points": 20,
@@ -232,21 +226,16 @@
         ],
         "answer": "Wir sehen uns"
       },
+
       {
         "id": 3,
-        "type": "textToSpeech",
-        "question": "eastPlainSecondQuests.questTree",
-        "text": "Bis Morgen"
-      },
-      {
-        "id": 4,
         "type": "speechToText",
         "question": "eastPlainSecondQuests.questFour",
         "text": "Bis Morgen",
         "answer": "Bis Morgen"
       },
       {
-        "id": 5,
+        "id": 4,
         "type": "reorder",
         "question": "eastPlainSecondQuests.questFive",
         "words": [
@@ -274,7 +263,7 @@
         ]
       },
       {
-        "id": 6,
+        "id": 5,
         "type": "reorder",
         "question": "eastPlainSecondQuests.questSix",
         "words": [
@@ -290,7 +279,7 @@
         ]
       },
       {
-        "id": 7,
+        "id": 6,
         "type": "reorder",
         "question": "eastPlainSecondQuests.questSeven",
         "words": [
@@ -308,7 +297,7 @@
         ]
       },
       {
-        "id": 8,
+        "id": 7,
         "type": "reorder",
         "question": "eastPlainSecondQuests.questEight",
         "words": [
@@ -326,27 +315,22 @@
         ]
       },
       {
-        "id": 9,
+        "id": 8,
         "type": "speechToText",
         "question": "eastPlainSecondQuests.questNine",
         "text": "Hallo Thomas! Woher kommst du?",
         "answer": "Hallo Thomas! Woher kommst du?"
       },
       {
-        "id": 10,
+        "id": 9,
         "type": "speechToText",
         "question": "eastPlainSecondQuests.questTen",
         "text": "Hallo! ich komme aus Polen",
         "answer": "Hallo! ich komme aus Polen"
       },
+
       {
-        "id": 11,
-        "type": "textToSpeech",
-        "question": "eastPlainSecondQuests.questEleven",
-        "text": "Hallo! wie geht's"
-      },
-      {
-        "id": 12,
+        "id": 10,
         "type": "select",
         "question": "eastPlainSecondQuests.questTwelve",
         "options": [
@@ -358,13 +342,13 @@
         "answer": "Wie heißen Sie?"
       },
       {
-        "id": 13,
+        "id": 11,
         "type": "input",
         "question": "eastPlainSecondQuests.questThirteen",
         "correctAnswer": "Hallo! ich heiße Thomas"
       },
       {
-        "id": 14,
+        "id": 12,
         "type": "select",
         "question": "eastPlainSecondQuests.questFourteen",
         "options": [
@@ -376,7 +360,7 @@
         "answer": "Wie heißen Sie?"
       },
       {
-        "id": 15,
+        "id": 13,
         "type": "speechToText",
         "question": "eastPlainSecondQuests.questFifteen",
         "text": "Guten Tag! Woher kommst du? ich komme aus Spanien und du? ich komme aus Deutschland",
@@ -1163,12 +1147,12 @@
   {
     "questId": "menschen-a1-zahlen",
     "title": "eastPlainSeventhQuests.title",
-    "progress": "0/15",
+    "progress": "0/14",
     "description": "eastPlainSeventhQuests.description",
     "conditions": {
       "goal": "eastPlainSeventhQuests.goal",
-      "minCorrect": 15,
-      "requiredTasks": 15
+      "minCorrect": 14,
+      "requiredTasks": 14
     },
     "rewards": {
       "points": 20,
@@ -1199,14 +1183,9 @@
         "text": "achtundvierzig",
         "answer": "achtundvierzig"
       },
+
       {
         "id": 4,
-        "type": "textToSpeech",
-        "question": "eastPlainSeventhQuests.questFour",
-        "text": "fünfundsechzig"
-      },
-      {
-        "id": 5,
         "type": "select",
         "question": "eastPlainSeventhQuests.questFive",
         "options": [
@@ -1218,7 +1197,7 @@
         "answer": "Es ist Zehn Uhr"
       },
       {
-        "id": 6,
+        "id": 5,
         "type": "readAndAnswer",
         "text": "Die Milch kostet 1 Euro 20. Der Käse kostet 2 Euro 50.",
         "question": "eastPlainSeventhQuests.questSix",
@@ -1230,7 +1209,7 @@
         "answer": "2.50"
       },
       {
-        "id": 7,
+        "id": 6,
         "type": "reorder",
         "question": "eastPlainSeventhQuests.questSeven",
         "words": [
@@ -1247,7 +1226,7 @@
         ]
       },
       {
-        "id": 8,
+        "id": 7,
         "type": "readAndAnswer",
         "text": "Die Milch kostet 1 Euro 20. Das Brot kostet 1 Euro 10",
         "question": "eastPlainSeventhQuests.questEight",
@@ -1259,14 +1238,14 @@
         "answer": "1.10"
       },
       {
-        "id": 9,
+        "id": 8,
         "type": "speechToText",
         "question": "eastPlainSeventhQuests.questNine",
         "text": "Wie viel kostet eine Flasche Wasser? Eine Flasche Wasser koster zwei euro",
         "answer": "Wie viel kostet eine Flasche Wasser? Eine Flasche Wasser koster zwei euro"
       },
       {
-        "id": 10,
+        "id": 9,
         "type": "select",
         "question": "eastPlainSeventhQuests.questTen",
         "options": [
@@ -1278,7 +1257,7 @@
         "answer": "der dritte Mai"
       },
       {
-        "id": 11,
+        "id": 10,
         "type": "select",
         "question": "Der 3. Mai",
         "options": [
@@ -1289,7 +1268,7 @@
         "answer": "eastPlainSeventhQuests.questElevenFirstOption"
       },
       {
-        "id": 12,
+        "id": 11,
         "type": "select",
         "question": "eastPlainSeventhQuests.questTwelve",
         "options": [
@@ -1301,7 +1280,7 @@
         "answer": "der zehnte Oktober"
       },
       {
-        "id": 13,
+        "id": 12,
         "type": "reorder",
         "question": "eastPlainSeventhQuests.questThirteen",
         "words": [
@@ -1320,7 +1299,7 @@
         ]
       },
       {
-        "id": 14,
+        "id": 13,
         "type": "readAndAnswer",
         "text": "Der Zug kommt um siebzehn Uhr dreißig.",
         "question": "eastPlainSeventhQuests.questFourteen",
@@ -1332,7 +1311,7 @@
         "answer": "17:30"
       },
       {
-        "id": 15,
+        "id": 14,
         "type": "speechToText",
         "question": "eastPlainSeventhQuests.questFifteen",
         "text": "Das Ticket kostet zehn Euro.",
@@ -1343,12 +1322,12 @@
   {
     "questId": "menschen-a1-familie",
     "title": "eastPlainEighthQuests.title",
-    "progress": "0/15",
+    "progress": "0/13",
     "description": "eastPlainEighthQuests.description",
     "conditions": {
       "goal": "eastPlainEighthQuests.goal",
-      "minCorrect": 14,
-      "requiredTasks": 14
+      "minCorrect": 13,
+      "requiredTasks": 13
     },
     "rewards": {
       "points": 20,
@@ -1447,14 +1426,9 @@
         "text": "Das ist ihre Tochter",
         "answer": "Das ist ihre Tochter"
       },
+
       {
         "id": 9,
-        "type": "textToSpeech",
-        "question": "eastPlainEighthQuests.questNine",
-        "text": "Er ist mein Sohn"
-      },
-      {
-        "id": 10,
         "type": "select",
         "question": "Er heißt Lukas",
         "options": [
@@ -1465,13 +1439,13 @@
         "answer": "eastPlainEighthQuests.questTenFirstOption"
       },
       {
-        "id": 11,
+        "id": 10,
         "type": "input",
         "question": "eastPlainEighthQuests.questEleven",
         "correctAnswer": "Oma"
       },
       {
-        "id": 12,
+        "id": 11,
         "type": "reorder",
         "question": "eastPlainEighthQuests.questTwelve",
         "words": [
@@ -1490,7 +1464,7 @@
         ]
       },
       {
-        "id": 13,
+        "id": 12,
         "type": "readAndAnswer",
         "text": "Paul ist mein Vater. Er arbeitet als Lehrer.",
         "question": "eastPlainEighthQuests.questThirteen",
@@ -1502,7 +1476,7 @@
         "answer": "eastPlainEighthQuests.questThirteenSecondOption"
       },
       {
-        "id": 14,
+        "id": 13,
         "type": "speechToText",
         "question": "eastPlainEighthQuests.questFourteen",
         "text": "Sie ist meine Tochter",
@@ -1548,7 +1522,7 @@
         "type": "speechToText",
         "question": "eastPlainNinthQuests.questTree",
         "text": "Ich gehe zur Arbeit um 8 Uhr",
-          "answer": "Ich gehe zur Arbeit um 8 Uhr"
+        "answer": "Ich gehe zur Arbeit um 8 Uhr"
       },
       {
         "id": 4,
@@ -1718,7 +1692,7 @@
   {
     "questId": "menschen-a1-wohnort",
     "title": "eastPlainTenthQuests.title",
-    "progress": "0/15",
+    "progress": "0/12",
     "description": "eastPlainTenthQuests.description",
     "conditions": {
       "goal": "eastPlainTenthQuests.goal",

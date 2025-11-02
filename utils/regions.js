@@ -10,7 +10,7 @@ export const regions = [
 		pathTo: "east-plain",
 		theme: "plain",
 		name: "locationNames.east-plain",
-		level: 1,
+		level: 0,
 		desc: "regions.descriptionEastPlain",
 		icon: FirstStep
 	},
@@ -19,7 +19,7 @@ export const regions = [
 		pathTo: "stone-reach",
 		theme: "stone",
 		name: "locationNames.stone-reach",
-		level: 1,
+		level: 3,
 		desc: "regions.descriptionStoneReach",
 		icon: StoneReach
 	},
@@ -28,7 +28,7 @@ export const regions = [
 		pathTo: "wind-valley",
 		theme: "winds",
 		name: "locationNames.wind-valley",
-		level: 1,
+		level: 5,
 		desc: "regions.descriptionWindValley",
 		icon: WindValley
 	},
@@ -37,7 +37,7 @@ export const regions = [
 		pathTo: "lake-ruins",
 		theme: "ruins",
 		name: "locationNames.lake-ruins",
-		level: 1,
+		level: 7,
 		desc: "regions.descriptionLakeRuins",
 		icon: LakeRuins
 	},
@@ -46,7 +46,7 @@ export const regions = [
 		pathTo: "north-cliffs",
 		theme: "north",
 		name: "locationNames.north-cliffs",
-		level: 1,
+		level: 9,
 		desc: "regions.descriptionNorthCliffs",
 		icon: NorthCliffs
 	},
@@ -55,7 +55,7 @@ export const regions = [
 		pathTo: "storm-coast",
 		theme: "storm",
 		name: "locationNames.storm-coast",
-		level: 1,
+		level: 11,
 		desc: "regions.descriptionStormCoast",
 		icon: StormCoast
 	}

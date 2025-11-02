@@ -44,9 +44,12 @@
                     </div>
                     <div class="region-card__footer">
                         <span class="region-card__title">{{ t(region.name) }}</span>
-                        <span v-if="clampedLevel < region.level" class="region-card__badge">
-              lvl {{ region.level }}
+                        <div class="region-card-badge-wrapper">
+                            <span v-if="clampedLevel < region.level" class="region-card__badge">
+             {{ region.level }}
             </span>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -55,19 +58,29 @@
 </template>
 
 <script setup>
-// Импортируем 'watch'
 import {ref, computed, onMounted, onBeforeUnmount, watch} from 'vue'
 import {useRouter} from 'vue-router'
+// 1. Убедитесь, что 'regions' импортируется здесь
 import {regions} from '@/utils/regions.js'
 
 const {t, locale} = useI18n()
 const props = defineProps({currentLevel: {type: Number, default: 1}})
 
 const router = useRouter()
-const active = ref(null)
-const isPanelOpen = ref(false)
-const windowWidth = ref(1024)
 
+// 2. НАЙТИ РЕГИОН ПО УМОЛЧАНИЮ СРАЗУ
+// Я предполагаю, что 'pathTo' для "Восточной равнины" это 'plain' (судя по CSS .theme--plain)
+// Если 'plain' не найдется, он возьмет первый регион из списка как запасной.
+const defaultRegion = regions.find(r => r.pathTo === 'plain') || regions[0] || null
+
+// 3. ИНИЦИАЛИЗИРОВАТЬ 'active' ЭТИМ ЗНАЧЕНИЕМ
+// Вместо ref(null), мы передаем найденный регион
+const active = ref(defaultRegion)
+
+const isPanelOpen = ref(false)
+const windowWidth = ref(1024) // Оставляем начальное значение
+
+// 4. ДОБАВЛЕНА НЕДОСТАЮЩАЯ ФУНКЦИЯ
 function handleResize() {
     if (typeof window !== 'undefined') {
         windowWidth.value = window.innerWidth
@@ -75,23 +88,23 @@ function handleResize() {
 }
 
 onMounted(() => {
-    handleResize()
+    handleResize() // Вызываем, чтобы получить реальную ширину окна
     if (typeof window !== 'undefined') {
         window.addEventListener('resize', handleResize)
     }
+    // Логика для установки 'active' отсюда убрана, так как 'active' уже установлен
 })
 
 onBeforeUnmount(() => {
     if (typeof window !== 'undefined') {
         window.removeEventListener('resize', handleResize)
     }
-    // Убедимся, что сбросили стиль при уходе со страницы
     if (typeof document !== 'undefined') {
         document.body.style.overflow = ''
     }
 })
 
-// НОВОЕ: Блокируем прокрутку фона при открытии мобильной панели
+// Блокируем прокрутку фона при открытии мобильной панели
 watch([isPanelOpen, windowWidth], ([newIsOpen, newWidth]) => {
     if (typeof document === 'undefined') return
 
@@ -116,7 +129,9 @@ function themeOf(obj) {
 
 function select(region) {
     active.value = region
-    if (windowWidth.value <= 1024) isPanelOpen.value = true
+    if (windowWidth.value <= 1024) {
+        isPanelOpen.value = true
+    }
 }
 
 function go(region) {
@@ -193,8 +208,10 @@ function go(region) {
 }
 
 .map-left {
-    width: 380px; /* Задаем фиксированную ширину */
-    flex-shrink: 0; /* Запрещаем сжиматься */
+    width: 100%;
+    max-width: 380px;
+    min-width: 300px;
+    flex: 1;
     border: 3px solid var(--border);
     border-radius: 15px;
     padding: 12px;
@@ -278,25 +295,32 @@ function go(region) {
 }
 
 .map-right {
-    flex: 1;
+    flex: 2;
     display: grid;
     gap: 16px;
     overflow-y: auto;
     padding: 5px;
-    min-width: 0; /* Это правильно, оставьте */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    min-width: 0;
+    grid-template-columns: repeat(2, 2fr);
 }
 
 .region-card {
     position: relative;
-    height: 190px;
+    height: auto;
     border: 3px solid var(--border);
     border-radius: 15px;
     box-shadow: 3px 3px 0 var(--border);
     cursor: pointer;
     overflow: hidden;
     transition: transform .12s ease, box-shadow .12s ease, filter .12s ease;
-    background: var(--bg)
+    background: var(--bg);
+}
+
+.region-card__art img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 .region-card.active {
@@ -310,16 +334,11 @@ function go(region) {
 }
 
 .region-card__art {
-    position: absolute;
-    inset: 0;
-}
-
-.region-card__art img {
+    position: relative;
     width: 100%;
     height: 100%;
-    display: block;
-    object-fit: cover;
 }
+
 
 .region-card__footer {
     position: absolute;
@@ -345,14 +364,27 @@ function go(region) {
 }
 
 .region-card__badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
     font-size: .82rem;
     font-weight: 900;
     color: #1d1d1d;
-    padding: 3px 8px;
     border: 2px solid var(--border);
-    border-radius: 999px;
+    border-radius: 50%;
     background: linear-gradient(180deg, #fff, #eaeaea);
     box-shadow: 1px 1px 0 var(--border);
+    padding: 0;
+}
+
+.region-card-badge-wrapper {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .theme--default {
@@ -390,7 +422,25 @@ function go(region) {
     --c2: #b5c7d6;
 }
 
+@media (max-width: 1244px) {
+    .region-card__title {
+        font-size: .74rem;
+    }
+}
 
+@media (max-width: 1159px) {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+@media (max-width: 1090px) {
+    .region-card{
+        height: 220px   ;
+    }
+    .map-right {
+        grid-template-columns: repeat(1, 2fr);
+    }
+
+}
 
 @media (max-width: 1024px) {
     .map-layout {
@@ -400,19 +450,20 @@ function go(region) {
     }
 
     .map__wrapper {
-        padding-left: 10px;
-        padding-right: 10px;
-        box-sizing: border-box; /* Гарантирует, что padding не сломает 100% ширину */
+        padding: 0 10px;
     }
 
     .map-right {
-        grid-template-columns: repeat(2, 1fr);
-        /* Убираем скролл, т.к. скроллится .map-layout */
+
+        grid-template-columns: repeat(2, 2fr);
         overflow-y: visible;
     }
 
-    .region-card {
-        height: 170px;
+    .region-card__art img {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
     }
 
     .map-left {
@@ -478,14 +529,63 @@ function go(region) {
         font-size: 0.9rem;
     }
 }
-@media (max-width: 700px){
-    .map-left{
+
+@media (max-width: 920px) {
+    .map-right {
+        grid-template-columns: repeat(2, 2fr);
+    }
+
+}
+@media (max-width: 800px) {
+    .region-card{
+        height: 220px   ;
+    }
+
+}
+
+@media (max-width: 766px) {
+    .map-right {
+
+        grid-template-columns: repeat(2, 2fr);
+        overflow-y: visible;
+    }
+
+}
+
+@media (max-width: 700px) {
+    .map-left {
         width: 50%;
     }
 }
-@media (max-width: 600px){
-    .map-left{
+
+@media (max-width: 636px) {
+    .map-left {
         width: 100%;
+    }
+
+    .map-left__art img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+@media (max-width: 500px) {
+    .region-card-badge-wrapper {
+        display: none;
+    }
+
+    .region-card__title {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 478px) {
+    .map-right {
+
+        grid-template-columns: repeat(2, 2fr);
+        overflow-y: visible;
     }
 }
 </style>

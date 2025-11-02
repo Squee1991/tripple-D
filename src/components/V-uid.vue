@@ -93,6 +93,7 @@ onBeforeUnmount(() => {
 
 .uid__container {
     display: flex;
+    justify-content: space-between;
     width: 100%;
     height: 100dvh;
     min-height: 0;

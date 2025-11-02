@@ -833,6 +833,11 @@ onBeforeUnmount(() => {
     }
   }
 }
+@media (max-width: 768px){
+    .header-nav {
+        max-width: 47%;
+    }
+}
 @media (max-width: 500px){
     .header-nav {
         max-width: 100%;

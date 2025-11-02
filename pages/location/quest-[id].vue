@@ -116,12 +116,12 @@
                                 </div>
                             </div>
                         </template>
-                        <template v-else-if="questStore.task.type === 'textToSpeech'">
-                            <div class="quest__tts">
-                                <p class="quest__tts-text">"{{ t(questStore.task.text) }}"</p>
-                                <p class="quest__tts-hint">ℹ️ Нажмите «Ответить», когда будете готовы.</p>
-                            </div>
-                        </template>
+<!--                        <template v-else-if="questStore.task.type === 'textToSpeech'">-->
+<!--                            <div class="quest__tts">-->
+<!--                                <p class="quest__tts-text">"{{ t(questStore.task.text) }}"</p>-->
+<!--                                <p class="quest__tts-hint">ℹ️ Нажмите «Ответить», когда будете готовы.</p>-->
+<!--                            </div>-->
+<!--                        </template>-->
                     </div>
                     <div v-if="questStore.showResult" :class="statusClassComputed" class="quest__feedback">
                         <img class="quest__feedback-icon" :src="questStore.isCorrect ? RightIcon : WrongIcon" alt="">
@@ -547,31 +547,32 @@ watchEffect(() => {
     position: relative;
     font-weight: 600;
     font-size: 1.2rem;
-    color: #333;
+    color: black;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 2.5rem;
+    width: 4.5rem;
     height: 2.5rem;
-    border: 2px solid #ff82a9;
+    /*border: 2px solid #ff82a9;*/
     border-radius: 50%;
-    background: #fff;
-    box-shadow: 0 0 8px rgba(255, 130, 169, 0.4);
-}
-.quest__stat-value::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: 50%;
-    box-shadow: 0 0 6px rgba(255, 130, 169, 0.6);
-    animation: pulse-ring 2s infinite;
-}
-@keyframes pulse-ring {
-    0% { transform: scale(1); opacity: 0.8; }
-    50% { transform: scale(1.1); opacity: 0.4; }
-    100% { transform: scale(1); opacity: 0.8; }
+    background: whitesmoke;
 }
 
+
+@keyframes pulse-ring {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.4;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+}
 
 
 .quest__lives {
@@ -967,14 +968,14 @@ watchEffect(() => {
         width: 4.3rem;
         height: 2.3rem;
         font-size: 1rem;
-        color: #fff;
         border: none;
-        background: linear-gradient(135deg, #ff82a9 0%, #ffb6c1 50%, #ffd6e0 100%);
-        box-shadow: 0 0 10px rgba(255, 130, 169, 0.7);
+
     }
+
     .quest__stat-value::after {
         box-shadow: 0 0 10px rgba(255, 160, 190, 0.8);
     }
+
     .quest__top {
         position: relative;
         display: flex;
@@ -985,11 +986,11 @@ watchEffect(() => {
         box-shadow: none;
         border: none;
     }
+
     .quest__stat {
         order: 2;
         text-align: center;
         align-items: center;
-        background: rgba(255,255,255,0.8);
         border-radius: 12px;
         padding: .3rem .7rem;
         margin-top: 2.5rem;
@@ -1023,6 +1024,7 @@ watchEffect(() => {
     .quest__section {
         margin-top: 1rem;
     }
+
     .quest__question {
         font-size: 1.2rem;
         border-bottom: 2px solid #9dceff;
@@ -1059,7 +1061,7 @@ watchEffect(() => {
         font-size: 15px;
         box-shadow: 3px 3px 0 black;
         border: 2px solid black;
-
+        width: 50%;
         padding: 5px;
     }
 
@@ -1067,7 +1069,7 @@ watchEffect(() => {
         height: 52px;
         padding: 0 28px;
         font-size: 20px;
-        width: 100%;
+        max-width: 100%;
     }
 }
 
