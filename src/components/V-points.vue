@@ -43,17 +43,17 @@
           </div>
         </li>
       </ul>
-      <div v-if="userAuth.isPremium" class="sub-actions">
-        <article class="super-card">
-          <div>
-            <span class="super-card__badge">{{ t('accountPanel.premium') }}</span>
-          </div>
-          <p class="sub__text">{{ t('accountPanel.premDescription') }}</p>
-          <button @click="toPayment" class="super-card__cta">
-            {{ t('accountPanel.try') }}
-          </button>
-        </article>
-      </div>
+<!--      <div v-if="userAuth.isPremium" class="sub-actions">-->
+<!--        <article class="super-card">-->
+<!--          <div>-->
+<!--            <span class="super-card__badge">{{ t('accountPanel.premium') }}</span>-->
+<!--          </div>-->
+<!--          <p class="sub__text">{{ t('accountPanel.premDescription') }}</p>-->
+<!--          <button @click="toPayment" class="super-card__cta">-->
+<!--            {{ t('accountPanel.try') }}-->
+<!--          </button>-->
+<!--        </article>-->
+<!--      </div>-->
     </section>
   </div>
 </template>

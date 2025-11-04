@@ -1,124 +1,124 @@
 <template>
-    <header class="header" :class="{ 'mobile-menu-active': isMobileMenuOpen }">
-        <div v-if="isMobileMenuOpen" class="mobile-nav-overlay" @click="isMobileMenuOpen = false"></div>
-        <UiOverlay :visible="showAuth" @close="closeAuth"/>
-        <transition name="slide">
-            <SignIn v-if="showAuth" @close-auth-form="closeAuth"/>
-        </transition>
-        <ModalDev
-                :visible="showDevModal"
-                @close="closeDevModal"
-                :title="modalConfig.title"
-                :img="modalConfig.img"
-                :text="modalConfig.text"
-                :button="modalConfig.isEvent ? modalConfig.button : null"
-                @button="onDevModalButton"
+  <header class="header" :class="{ 'mobile-menu-active': isMobileMenuOpen , 'is-rtl': isAr }">
+    <div v-if="isMobileMenuOpen" class="mobile-nav-overlay" @click="isMobileMenuOpen = false"></div>
+    <UiOverlay :visible="showAuth" @close="closeAuth"/>
+    <transition name="slide">
+      <SignIn v-if="showAuth" @close-auth-form="closeAuth"/>
+    </transition>
+    <ModalDev
+        :visible="showDevModal"
+        @close="closeDevModal"
+        :title="modalConfig.title"
+        :img="modalConfig.img"
+        :text="modalConfig.text"
+        :button="modalConfig.isEvent ? modalConfig.button : null"
+        @button="onDevModalButton"
+    />
+    <div class="header-container">
+      <NuxtLink to="/" class="logo" aria-label="German Corner — Home">
+        <span class="logo__name">skillup</span>
+        <NuxtImg
+            src="/images/logo/logotype.png"
+            alt="German Corner"
+            class="logo__img"
+            format="webp"
+            loading="eager"
+            fetchpriority="high"
         />
-        <div class="header-container">
-            <NuxtLink to="/" class="logo" aria-label="German Corner — Home">
-                <span class="logo__name">German</span>
-                <NuxtImg
-                        src="/images/logo/Logo.png"
-                        alt="German Corner"
-                        class="logo__img"
-                        format="webp"
-                        loading="eager"
-                        fetchpriority="high"
-                />
-                <span class="logo__name">corner</span>
+        <span class="logo__name">german</span>
+      </NuxtLink>
+      <nav ref="dropdownRefNav" class="header-nav" :class="{ 'is-open': isMobileMenuOpen, 'is-rtl': isAr }"
+           aria-label="Main">
+        <ul class="header-nav__list">
+          <li v-for="item in menuItems" :key="item.id" class="header-nav__item">
+            <NuxtLink v-if="item.url" :to="item.url" class="header-nav__link" @click="closeAllMenus">
+              {{ t(item.valueKey) }}
             </NuxtLink>
-            <nav ref="dropdownRefNav" class="header-nav" :class="{ 'is-open': isMobileMenuOpen, 'is-rtl': isAr }"
-                 aria-label="Main">
-                <ul class="header-nav__list">
-                    <li v-for="item in menuItems" :key="item.id" class="header-nav__item">
-                        <NuxtLink v-if="item.url" :to="item.url" class="header-nav__link" @click="closeAllMenus">
-                            {{ t(item.valueKey) }}
-                        </NuxtLink>
-                        <button v-else @click="handleMenuItemClick(item)" class="header-nav__link"
-                                :class="{'is-active-parent': clickedMenu === item.id}">
-                            <span>{{ t(item.valueKey) }}</span>
-                            <img
-                                    v-if="item.children"
-                                    :class="['header-nav__arrow', { 'rotated': clickedMenu === item.id }]"
-                                    :src="Arrow"
-                                    alt="Arrow__icon"
-                            />
-                        </button>
-                        <ul v-if="item.children && clickedMenu === item.id" class="header-nav__submenu">
-                            <li v-for="child in item.children" :key="child.id" class="header-nav__submenu-item">
-                                <NuxtLink v-if="child.url" :to="child.url" class="header-nav__submenu-link"
-                                          @click="closeAllMenus">
-                                    {{ t(child.valueKey) }}
-                                </NuxtLink>
-                                <button v-else class="header-nav__submenu-link"
-                                        @click.stop="handleSubmenuItemClick(child)">
-                                    <span>{{ t(child.valueKey) }}</span>
-                                    <img
-                                            v-if="child.subChildren"
-                                            :class="['header-nav__arrow', { 'rotated': clickedSubChild === child.id }]"
-                                            :src="Arrow"
-                                            alt="Arrow_icon"
-                                    />
-                                </button>
-                                <ul v-if="child.subChildren && clickedSubChild === child.id"
-                                    class="header-nav__submenu-sub">
-                                    <li v-for="sub in child.subChildren" :key="sub.id"
-                                        class="header-nav__submenu-sub-item">
-                                        <NuxtLink :to="sub.url" class="header-nav__submenu-link"
-                                                  @click="closeAllMenus">
-                                            {{ t(sub.valueKey) }}
-                                        </NuxtLink>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-            <div class="header-right">
-                <div class="header-nav__tea">
-                    <ForTea/>
-                </div>
-                <div class="header-nav__lang">
-                    <LanguageSelector/>
-                </div>
-                <div v-if="userAuth.name" class="header-user-wrapper">
-                    <button
-                            ref="userBtnRef"
-                            class="header-user"
-                            @click="toggleMenu"
-                            aria-haspopup="true"
-                            :aria-expanded="menuOpen.toString()"
-                            aria-controls="user-menu-dropdown"
-                    >
-                        <img class="header-user__avatar" :src="userAuth.avatarUrl" alt="User avatar"/>
-                        <span class="header-user__name">{{ userAuth.email }}</span>
-                        <img :class="['header-nav__arrow', { 'rotated': menuOpen }]" :src="Arrow" alt="Arrow"/>
-                    </button>
-                    <div
-                            ref="dropdownRef"
-                            v-if="menuOpen"
-                            class="header-user__dropdown"
-                            id="user-menu-dropdown"
-                    >
-                        <button
-                                v-for="item in menuActions"
-                                :key="item.id"
-                                class="header-user__dropdown-btn"
-                                @click.stop="item.action"
-                        >
-                            <img class="header-user__dropdown-icon" :src="item.icon" alt="Arrow_dropdown"/>
-                            <span class="header__drop-text">{{ t(item.label) }}</span>
-                        </button>
-                    </div>
-                </div>
-                <button v-else class="btn-login" @click="openAuth">
-                    {{ t('auth.logIn') }}
+            <button v-else @click="handleMenuItemClick(item)" class="header-nav__link"
+                    :class="{'is-active-parent': clickedMenu === item.id}">
+              <span>{{ t(item.valueKey) }}</span>
+              <img
+                  v-if="item.children"
+                  :class="['header-nav__arrow', { 'rotated': clickedMenu === item.id }]"
+                  :src="Arrow"
+                  alt="Arrow__icon"
+              />
+            </button>
+            <ul v-if="item.children && clickedMenu === item.id" class="header-nav__submenu">
+              <li v-for="child in item.children" :key="child.id" class="header-nav__submenu-item">
+                <NuxtLink v-if="child.url" :to="child.url" class="header-nav__submenu-link"
+                          @click="closeAllMenus">
+                  {{ t(child.valueKey) }}
+                </NuxtLink>
+                <button v-else class="header-nav__submenu-link"
+                        @click.stop="handleSubmenuItemClick(child)">
+                  <span>{{ t(child.valueKey) }}</span>
+                  <img
+                      v-if="child.subChildren"
+                      :class="['header-nav__arrow', { 'rotated': clickedSubChild === child.id }]"
+                      :src="Arrow"
+                      alt="Arrow_icon"
+                  />
                 </button>
-                <BurgerMenu class="burger-button" v-model="isMobileMenuOpen"/>
-            </div>
+                <ul v-if="child.subChildren && clickedSubChild === child.id"
+                    class="header-nav__submenu-sub">
+                  <li v-for="sub in child.subChildren" :key="sub.id"
+                      class="header-nav__submenu-sub-item">
+                    <NuxtLink :to="sub.url" class="header-nav__submenu-link"
+                              @click="closeAllMenus">
+                      {{ t(sub.valueKey) }}
+                    </NuxtLink>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="header-right">
+        <div class="header-nav__tea">
+          <ForTea/>
         </div>
-    </header>
+        <div class="header-nav__lang">
+          <LanguageSelector/>
+        </div>
+        <div v-if="userAuth.name" class="header-user-wrapper">
+          <button
+              ref="userBtnRef"
+              class="header-user"
+              @click="toggleMenu"
+              aria-haspopup="true"
+              :aria-expanded="menuOpen.toString()"
+              aria-controls="user-menu-dropdown"
+          >
+            <img class="header-user__avatar" :src="userAuth.avatarUrl" alt="User avatar"/>
+            <span class="header-user__name">{{ userAuth.email }}</span>
+            <img :class="['header-nav__arrow', { 'rotated': menuOpen }]" :src="Arrow" alt="Arrow"/>
+          </button>
+          <div
+              ref="dropdownRef"
+              v-if="menuOpen"
+              class="header-user__dropdown"
+              id="user-menu-dropdown"
+          >
+            <button
+                v-for="item in menuActions"
+                :key="item.id"
+                class="header-user__dropdown-btn"
+                @click.stop="item.action"
+            >
+              <img class="header-user__dropdown-icon" :src="item.icon" alt="Arrow_dropdown"/>
+              <span class="header__drop-text">{{ t(item.label) }}</span>
+            </button>
+          </div>
+        </div>
+        <button v-else class="btn-login" @click="openAuth">
+          {{ t('auth.logIn') }}
+        </button>
+        <BurgerMenu class="burger-button" v-model="isMobileMenuOpen"/>
+      </div>
+    </div>
+  </header>
 </template>
 
 <script setup>
@@ -163,126 +163,159 @@ const isAr = computed(() => locale.value === 'ar')
 const isMobile = computed(() => bp.isMobile)
 
 const modalConfig = computed(() => {
-    switch (modalType.value) {
-        case 'dev':
-            return {
-                isEvent: false,
-                title: t('inDevelopment.title'),
-                text: t('inDevelopment.sub'),
-                button: null,
-                img: Dev,
-            }
-        case 'eventLocked':
-            return {
-                isEvent: true,
-                title: t('eventLocked.title'),
-                text: t('eventLocked.text'),
-                button: {label: t('eventLocked.btn'), to: '/calendar'},
-                img: PadLock,
-            }
-        default:
-            return {isEvent: false, title: '', text: '', button: null, img: Dev}
-    }
+  switch (modalType.value) {
+    case 'dev':
+      return {
+        isEvent: false,
+        title: t('inDevelopment.title'),
+        text: t('inDevelopment.sub'),
+        button: null,
+        img: Dev,
+      }
+    case 'eventLocked':
+      return {
+        isEvent: true,
+        title: t('eventLocked.title'),
+        text: t('eventLocked.text'),
+        button: {label: t('eventLocked.btn'), to: '/calendar'},
+        img: PadLock,
+      }
+    default:
+      return {isEvent: false, title: '', text: '', button: null, img: Dev}
+  }
 })
 
 const menuItems = computed(() => {
-    const items = [
-        ...(userAuth.uid
-            ? [
-                {
-                    id: 'learn',
-                    valueKey: 'nav.training',
-                    children: [
-                        {
-                            id: 'articles',
-                            valueKey: 'sub.articles',
-                            subChildren: [
-                                {id: 'learn-tips', url: '/article-basic', valueKey: 'underSub.prev'},
-                                {id: 'learn-rules', url: '/article-theory', valueKey: 'underSub.rules'},
-                                {id: 'learn-selectedTopics', url: '/articles', valueKey: 'underSub.artRules'},
-                            ],
-                        },
-                        {
-                            id: 'verbs',
-                            valueKey: 'sub.verbs',
-                            subChildren: [
-                                {id: 'verb-theory', url: '/verbs-theory', valueKey: 'underSub.verbsTheory'},
-                                {id: 'tenses', url: '/tenses', valueKey: 'underSub.verbFirst'},
-                                {id: 'modalVerbs', url: '/modal-verbs', valueKey: 'underSub.verbSecond'},
-                                {id: 'verb-types', url: '/verb-types', valueKey: 'underSub.verbTypes'},
-                            ],
-                        },
-                        {
-                            id: 'prepositions',
-                            valueKey: 'sub.prepositions',
-                            subChildren: [
-                                {id: 'prepositions-theory', url: '/prepositions-theory', valueKey: 'underSub.rules'},
-                                {id: 'prepositions-practice', url: '/prepositions', valueKey: 'underSub.prepositions'},
-                            ],
-                        },
-                        {
-                            id: 'adjectives',
-                            valueKey: 'sub.adjectives',
-                            subChildren: [
-                                {
-                                    id: 'adjectives-theory',
-                                    url: '/adjectives-theory',
-                                    valueKey: 'underSub.adjectiveTheory'
-                                },
-                                {
-                                    id: 'adjectives-basic',
-                                    url: '/adjective-basics',
-                                    valueKey: 'underSub.adjectivesBasic'
-                                },
-                                {id: 'declination', url: '/adjective-declension', valueKey: 'underSub.declination'},
-                                {id: 'comparison', url: '/adjective-comparison', valueKey: 'underSub.comparison'},
-                            ],
-                        },
-                        {id: 'themen', url: '/thematic-learning', valueKey: 'sub.themen'},
-                        {id: 'cards', url: '/create-cards', valueKey: 'sub.card'},
-                        {id: 'idioms', url: '/idioms', valueKey: 'sub.idioms'},
-                    ],
-                },
-                {
-                    id: 'duel',
-                    valueKey: 'nav.gameMode',
-                    children: [
-                        {id: 'duel-pvp', valueKey: 'sub.pvp', action: openDevModal},
-                        {id: 'wordDuel', url: '/sentence-duel', valueKey: 'sub.wordDuel'},
-                        {id: 'quests', url: '/recipes', valueKey: 'sub.quests'},
-                        {id: 'duel-guess', url: '/guess-word', valueKey: 'sub.guess'},
-                        {id: 'articlemarathon', url: '/article-marathon', valueKey: 'sub.marathon'},
-                    ],
-                },
-            ]
-            : [
-                {id: 'about', valueKey: 'nav.about', url: '/info-about'},
-                {id: 'contact', valueKey: 'nav.contact', url: '/support-request'},
-                {id: 'faq', valueKey: 'nav.quest', url: '/faq'},
-            ]),
-        ...(userAuth.uid ? [{id: 'test', url: '/exams', valueKey: 'nav.tests'}] : []),
-    ]
+  const items = [
+    ...(userAuth.uid
+        ? [
+          {
+            id: 'learn',
+            valueKey: 'nav.training',
+            children: [
+              {
+                id: 'articles',
+                valueKey: 'sub.articles',
+                subChildren: [
+                  {id: 'learn-tips', url: '/article-basic', valueKey: 'underSub.prev'},
+                  {id: 'learn-rules', url: '/article-theory', valueKey: 'underSub.rules'},
+                  {id: 'learn-selectedTopics', url: '/articles', valueKey: 'underSub.artRules'},
+                ],
+              },
+              {
+                id: 'verbs',
+                valueKey: 'sub.verbs',
+                subChildren: [
+                  {id: 'verb-theory', url: '/verbs-theory', valueKey: 'underSub.verbsTheory'},
+                  {id: 'tenses', url: '/tenses', valueKey: 'underSub.verbFirst'},
+                  {id: 'modalVerbs', url: '/modal-verbs', valueKey: 'underSub.verbSecond'},
+                  {id: 'verb-types', url: '/verb-types', valueKey: 'underSub.verbTypes'},
+                ],
+              },
+              {
+                id: 'prepositions',
+                valueKey: 'sub.prepositions',
+                subChildren: [
+                  {id: 'prepositions-theory', url: '/prepositions-theory', valueKey: 'underSub.rules'},
+                  {id: 'prepositions-practice', url: '/prepositions', valueKey: 'underSub.prepositions'},
+                ],
+              },
+              {
+                id: 'adjectives',
+                valueKey: 'sub.adjectives',
+                subChildren: [
+                  {
+                    id: 'adjectives-theory',
+                    url: '/adjectives-theory',
+                    valueKey: 'underSub.adjectiveTheory'
+                  },
+                  {
+                    id: 'adjectives-basic',
+                    url: '/adjective-basics',
+                    valueKey: 'underSub.adjectivesBasic'
+                  },
+                  {id: 'declination', url: '/adjective-declension', valueKey: 'underSub.declination'},
+                  {id: 'comparison', url: '/adjective-comparison', valueKey: 'underSub.comparison'},
+                ],
+              },
+              {id: 'themen', url: '/thematic-learning', valueKey: 'sub.themen'},
+              {id: 'cards', url: '/create-cards', valueKey: 'sub.card'},
+              {id: 'idioms', url: '/idioms', valueKey: 'sub.idioms'},
+            ],
+          },
+          {
+            id: 'duel',
+            valueKey: 'nav.gameMode',
+            children: [
+              {id: 'duel-pvp', valueKey: 'sub.pvp', action: openDevModal},
+              {id: 'wordDuel', url: '/sentence-duel', valueKey: 'sub.wordDuel'},
+              {id: 'quests', url: '/recipes', valueKey: 'sub.quests'},
+              {id: 'duel-guess', url: '/guess-word', valueKey: 'sub.guess'},
+              {id: 'articlemarathon', url: '/article-marathon', valueKey: 'sub.marathon'},
+            ],
+          },
+        ]
+        : [
+          {id: 'about', valueKey: 'nav.about', url: '/info-about'},
+          {id: 'contact', valueKey: 'nav.contact', url: '/support-request'},
+          {id: 'faq', valueKey: 'nav.quest', url: '/faq'},
+        ]),
+    ...(userAuth.uid ? [{id: 'test', url: '/exams', valueKey: 'nav.tests'}] : []),
+  ]
 
   if (userAuth.uid) {
     const allEvents = [
-      { id: 'winter-event', valueKey: 'eventsNavNames.winter', url: '/event-winter', isEvent: true, eventKey: 'winter', startDate: '24.12', endDate: '01.02' },
-      { id: 'valentine', valueKey: 'eventsNavNames.valentine', url: '/event-valentine', isEvent: true, eventKey: 'valentine', startDate: '14.02', endDate: '16.02' },
-      { id: 'april', valueKey: 'eventsNavNames.firstApril', url: '/event-joke', isEvent: true, eventKey: 'fools', startDate: '01.04', endDate: '01.04' },
-      { id: 'halloween', valueKey: 'eventsNavNames.halloween', url: '/event-halloween', isEvent: true, eventKey: 'pumpkin', startDate: '29.10', endDate: '31.10' },
+      {
+        id: 'winter-event',
+        valueKey: 'eventsNavNames.winter',
+        url: '/event-winter',
+        isEvent: true,
+        eventKey: 'winter',
+        startDate: '24.12',
+        endDate: '01.02'
+      },
+      {
+        id: 'valentine',
+        valueKey: 'eventsNavNames.valentine',
+        url: '/event-valentine',
+        isEvent: true,
+        eventKey: 'valentine',
+        startDate: '14.02',
+        endDate: '16.02'
+      },
+      {
+        id: 'april',
+        valueKey: 'eventsNavNames.firstApril',
+        url: '/event-joke',
+        isEvent: true,
+        eventKey: 'fools',
+        startDate: '01.04',
+        endDate: '01.04'
+      },
+      {
+        id: 'halloween',
+        valueKey: 'eventsNavNames.halloween',
+        url: '/event-halloween',
+        isEvent: true,
+        eventKey: 'pumpkin',
+        startDate: '29.10',
+        endDate: '31.10'
+      },
     ]
     const processedEvents = allEvents.map(event => ({
       ...event,
       url: isEventActive(event.startDate, event.endDate) ? event.url : null,
     }))
     items.push(
-        { id: 'events', valueKey: 'nav.events', children: processedEvents }
-    )}
+        {id: 'events', valueKey: 'nav.events', children: processedEvents}
+    )
+  }
   return items
 })
 
 const menuActions = ref([
-  { id: 'cabinet', label: 'auth.cabinet', icon: User, action: () => goTo('cabinet') },
-  { id: 'logout', label: 'auth.logOut', icon: Logout, action: () => userAuth.logOut() },
+  {id: 'cabinet', label: 'auth.cabinet', icon: User, action: () => goTo('cabinet')},
+  {id: 'logout', label: 'auth.logOut', icon: Logout, action: () => userAuth.logOut()},
 ])
 
 const closeAllMenus = () => {
@@ -318,7 +351,7 @@ const toggleMenu = () => (menuOpen.value = !menuOpen.value)
 
 const goTo = (page) => {
   menuOpen.value = false
-  router.push({ path: `/${page}` })
+  router.push({path: `/${page}`})
 }
 
 const handleMenuItemClick = (item) => {
@@ -432,8 +465,8 @@ onBeforeUnmount(() => {
 }
 
 .logo__img {
-  width: 62px;
-  height: 62px;
+  width: 52px;
+  height: 52px;
   object-fit: contain;
   display: block;
 }
@@ -647,13 +680,13 @@ onBeforeUnmount(() => {
 
 @media (max-width: 1023px) {
   .header-container {
-    padding: 0.5rem 10px;
+    padding: 0.8rem 10px;
   }
 
   .mobile-nav-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,.35);
+    background: rgba(0, 0, 0, .35);
     opacity: 0;
     pointer-events: none;
     transition: opacity .2s ease;
@@ -666,11 +699,28 @@ onBeforeUnmount(() => {
     pointer-events: auto;
   }
 
-  .logo__name { display: none; }
-  .logo { opacity: 0; }
+  .logo__name {
+    display: none;
+  }
 
-  .header-nav__link { color: black; }
-  .header__drop-text, .logo-img { display: none; }
+
+  .header-nav__link {
+    color: black;
+  }
+
+  .header__drop-text {
+    display: none;
+  }
+  .logo__img {
+    position: absolute;
+    left: 55px;
+  }
+
+  .is-rtl .logo__img {
+    position: absolute;
+    left: auto;
+    right: 55px;
+  }
 
   .header-nav {
     position: fixed;
@@ -684,12 +734,13 @@ onBeforeUnmount(() => {
     z-index: 101;
     transform: translateX(-100%);
     transition: transform .2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    box-shadow: 5px 0 20px rgba(0,0,0,.2);
+    box-shadow: 5px 0 20px rgba(0, 0, 0, .2);
     overflow-y: auto;
   }
 
   .header-nav.is-open {
     transform: translateX(0);
+    width: 50%;
   }
 
   .header-nav.is-rtl {
@@ -831,17 +882,26 @@ onBeforeUnmount(() => {
     .header-nav__link {
       color: #1e1e1e;
     }
+    .header-nav.is-open {
+      width: 80%;
+    }
   }
 }
-@media (max-width: 768px){
-    .header-nav {
-        max-width: 47%;
-    }
+
+@media (max-width: 768px) {
+  .header-nav {
+    max-width: 70%;
+  }
 }
-@media (max-width: 500px){
-    .header-nav {
-        max-width: 100%;
-    }
+
+@media (max-width: 500px) {
+  .header-nav {
+    max-width: 100%;
+  }
+
+  .header-nav.is-open {
+    width: 100%;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -855,7 +915,7 @@ onBeforeUnmount(() => {
   color: #e39910;
   font-family: "Nunito", sans-serif;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-style: italic;
   letter-spacing: 3px;
   text-shadow: 2px 4px 0px white;
@@ -868,31 +928,36 @@ onBeforeUnmount(() => {
   .header-nav__submenu-link:hover {
     background-color: #fef8e4;
   }
+
   .header-nav__link:hover {
     transform: translate(2px, 2px);
     box-shadow: 2px 2px 0 black;
     background-color: #f1c40f;
     color: #1e1e1e;
   }
+
   .header-user__dropdown-btn:hover {
     background-color: #fef8e4;
   }
+
   .header-nav .header-nav__submenu-link:hover {
     background-color: #fde68a;
   }
+
   .btn-login:hover {
     transform: translate(2px, 2px);
     box-shadow: 2px 2px 0px #1e1e1e;
   }
+
   .logo__name:hover {
     text-shadow: 2px 4px 2px white;
     transition: .5s;
   }
 
-    .btn-login:hover {
-        transform: translate(2px, 2px);
-        box-shadow: 2px 2px 0px #1e1e1e;
-    }
+  .btn-login:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #1e1e1e;
+  }
 }
 
 </style>

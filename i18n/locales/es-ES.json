@@ -1,4 +1,11 @@
 {
+  "footer": {
+    "copy": "Der Die Das. Todos los derechos reservados.",
+    "about": "Acerca de",
+    "contact": "Contacto",
+    "privacy": "Política de privacidad",
+    "terms": "Términos de servicio"
+  },
   "friendExam": {
     "btn": "Exámenes de amigos"
   },
@@ -4827,9 +4834,6 @@
     "fourth": "¿Aprender el idioma con placer?",
     "fifth": "Es más fácil de lo que piensas",
     "sixth": "Bueno, ¿empezamos? ;-)"
-  },
-  "footer": {
-    "copy": "Der Die Das. Todos los derechos reservados."
   },
   "examples": {
     "label": "Artículos en alemán:",

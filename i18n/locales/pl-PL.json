@@ -1,4 +1,11 @@
 {
+  "footer": {
+    "copy": "Der Die Das. Wszelkie prawa zastrzeżone.",
+    "about": "O aplikacji",
+    "contact": "Kontakt",
+    "privacy": "Prywatność",
+    "terms": "Warunki korzystania"
+  },
   "friendExam": {
     "btn": "Egzaminy przyjaciół"
   },
@@ -4844,9 +4851,6 @@
     "fourth": "Uczyć się języka z przyjemnością?",
     "fifth": "To łatwiejsze niż myślisz",
     "sixth": "To co, zaczynamy? ;-)"
-  },
-  "footer": {
-    "copy": "Der Die Das. Wszelkie prawa zastrzeżone."
   },
   "examples": {
     "label": "Rodzajniki w języku niemieckim:",

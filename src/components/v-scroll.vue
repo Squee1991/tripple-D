@@ -34,7 +34,7 @@
 		width: 50px;
 		height: 50px;
 		position: fixed;
-		bottom: 35px;
+		bottom: 64px;
 		right: 10px;
 		background: #3e65fa;
 		color: white;

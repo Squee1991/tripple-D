@@ -161,7 +161,7 @@ onMounted(() => {
   letter-spacing: -0.02em;
   background: #e55b10;
   padding: 10px 20px;
-  transform: rotate(3deg);
+  transform: rotate(2deg);
   border: 3px solid black;
   box-shadow: 3px 3px 0 black;
   border-radius: 10px;

@@ -548,7 +548,7 @@ onMounted(() => {
 .panel__title {
   font-weight: 900;
   font-size: 1.5rem;
-  color: #000;
+  color: var(--titleColor);
   margin-bottom: 14px;
 }
 

@@ -102,17 +102,11 @@ onBeforeUnmount(() => {
 }
 
 .lands-container {
-    flex: 1; /* 1. Занять всё свободное место */
-    min-width: 0; /* 2. Решить проблему "сплющивания" дочернего grid-контейнера */
-
-    /* 3. Заставляем дочерний VLands растянуться на 100% высоты */
+    flex: 1;
+    min-width: 0;
     display: flex;
 }
 
-/* :deep() используется, чтобы "провалиться" в стили дочернего компонента VLands
-  и заставить его корневой элемент (.map__wrapper из прошлого файла)
-  растянуться на 100% ширины и высоты.
-*/
 .lands-container > :deep(.map__wrapper) {
     width: 100%;
     flex: 1;
@@ -128,6 +122,12 @@ onBeforeUnmount(() => {
     min-height: 0;
     max-height: 100vh;
     overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.stats__wrapper::-webkit-scrollbar {
+  display: none;
 }
 
 .stats__wrapper > * {
@@ -153,14 +153,26 @@ onBeforeUnmount(() => {
     }
 }
 
+@media (max-width: 1023px) {
+  .uid__container {
+    padding: 0 5px;
+  }
+}
+
 @media (max-width: 767px) {
-    .uid__container {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 0;
-        height: calc(100dvh - 180px);
-        overflow-y: auto;
-    }
+  .uid__container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    height: calc(100dvh - 190px);
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .uid__container::-webkit-scrollbar {
+    display: none;
+  }
 
     .mobile-nav {
         display: flex;
@@ -176,7 +188,7 @@ onBeforeUnmount(() => {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 25%;
+        width: 30%;
         font-size: 16px;
         cursor: pointer;
         transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.12s ease;
@@ -200,17 +212,24 @@ onBeforeUnmount(() => {
         overflow: hidden;
     }
 
-    .mobile-content {
-        flex: 1;
-        min-height: 0;
-        display: flex;
-        width: 100%;
-        overflow: auto;
-        padding: 4px;
-        margin-top: 5px;
-    }
+  .mobile-content {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    width: 100%;
+    overflow: auto;
+    padding: 4px;
+    margin-top: 5px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
 
-    .mobile-content > * {
+  .mobile-content::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  .mobile-content > * {
         flex: 1;
         width: 100%;
         display: block;

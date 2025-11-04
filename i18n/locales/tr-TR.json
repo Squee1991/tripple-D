@@ -1,4 +1,11 @@
 {
+  "footer": {
+    "copy": "Der Die Das. Tüm hakları saklıdır.",
+    "about": "Uygulama hakkında",
+    "contact": "İletişim",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Kullanım Şartları"
+  },
   "friendExam": {
     "btn": "Arkadaşların Sınavları"
   },
@@ -4841,9 +4848,6 @@
     "fourth": "Bir dili zevkle öğrenmek mi?",
     "fifth": "Düşündüğünden daha kolay",
     "sixth": "Başlayalım mı? ;-)"
-  },
-  "footer": {
-    "copy": "Der Die Das. Tüm hakları saklıdır."
   },
   "examples": {
     "label": "Almancada Artikeller:",

@@ -19,8 +19,8 @@
 
 	.coffe-container {
 		flex-direction: column;
-		bottom: 100px;
-		right: 10px;
+		bottom: 10px;
+		right: 5px;
 		position: fixed;
 		display: flex;
 		justify-content: center;

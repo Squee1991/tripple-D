@@ -63,10 +63,17 @@ const pathFunction = (pathValue) => {
   }
 }
 
+@media (max-width: 767px) {
+  .faq__section {
+    padding: 25px 0;
+  }
+}
+
 @media (max-width: 480px){
   .btns__wrapper {
     flex-direction: column;
     justify-content: space-between;
+    padding: 0 15px;
   }
   .back__btn {
     width: 100%;

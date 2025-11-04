@@ -1,4 +1,11 @@
 {
+  "footer": {
+    "copy": "Der Die Das. Barcha huquqlar himoyalangan.",
+    "about": "Ilova haqida",
+    "contact": "Aloqa",
+    "privacy": "Maxfiylik siyosati",
+    "terms": "Foydalanish shartlari"
+  },
   "friendExam": {
     "btn": "Do'stlarning imtihonlari"
   },
@@ -4827,9 +4834,6 @@
     "fourth": "Tilni zavq bilan o‘rganishni?",
     "fifth": "Bu o‘ylagandan osonroq",
     "sixth": "Xo‘sh, boshlaymizmi? ;-)"
-  },
-  "footer": {
-    "copy": "Der Die Das. Barcha huquqlar himoyalangan."
   },
   "examples": {
     "label": "Nemis tilidagi artikllar:",

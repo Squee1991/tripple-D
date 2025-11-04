@@ -100,4 +100,10 @@ onMounted(() => {
   margin: 0 auto;
   padding: 0 10px;
 }
+
+@media  (max-width: 767px) {
+  .container {
+    padding: 0;
+  }
+}
 </style>
