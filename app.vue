@@ -21,7 +21,7 @@ import {dailyStore} from './store/dailyStore'
 import {computed} from 'vue'
 import {useHead} from '#imports'
 const { locale, t } = useI18n()
-console.log('test')
+console.log('test123')
 useHead(() => ({
   htmlAttrs: { lang: locale.value, dir: locale.value === 'ar' ? 'rtl' : "ltr" },
   title: () => t('useHeadApp.title'),
