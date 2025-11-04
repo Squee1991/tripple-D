@@ -31,151 +31,144 @@
         </nav>
       </aside>
       <section class="content-panel">
-        <div v-if="activeTabKey === 'info'" class="header-surface">
-          <div class="user-block">
-            <div class="avatar-container">
-              <img v-if="authStore.avatarUrl" :src="authStore.avatarUrl" alt="Аватар" class="avatar-current"/>
-              <div v-else class="avatar-placeholder"></div>
-              <button @click="isAvatarModalOpen = true" class="change-avatar-btn" title="Сменить аватар">
-                <img src="../assets/images/add.svg" alt="Сменить"/>
-              </button>
-            </div>
-            <div class="user-info">
-              <div class="user-name">{{ authStore.name }}</div>
-              <div class="exp-bar">
-                <div class="exp-fill" :style="{ width: `${(learningStore.exp / 100) * 100}%` }"></div>
-                <span class="exp-text">{{ learningStore.exp }} / 100 XP</span>
+        <ClientOnly>
+          <div v-if="activeTabKey === 'info'" class="header-surface">
+            <div class="user-block">
+              <div class="avatar-container">
+                <img v-if="authStore.avatarUrl" :src="authStore.avatarUrl" alt="Аватар" class="avatar-current"/>
+                <div v-else class="avatar-placeholder"></div>
+                <button @click="isAvatarModalOpen = true" class="change-avatar-btn" title="Сменить аватар">
+                  <img src="../assets/images/add.svg" alt="Сменить"/>
+                </button>
               </div>
-              <div class="level-info">{{ t('cabinet.level') }} {{ learningStore.isLeveling }}</div>
+              <div class="user-info">
+                <div class="user-name">{{ userNameSafe }}</div>
+                <div class="exp-bar">
+                  <div class="exp-fill" :style="{ width: `${(learningStore.exp / 100) * 100}%` }"></div>
+                  <span class="exp-text">{{ learningStore.exp }} / 100 XP</span>
+                </div>
+                <div class="level-info">{{ t('cabinet.level') }} {{ learningStore.isLeveling }}</div>
+              </div>
+              <!--            <button class="add__friend-wrapper" type="button" @click="openFriendSearchModal">-->
+              <!--              <img class="find__friend" src="../assets/images/magnifying-glass.svg" alt="">-->
+              <!--              <div class="find__text">Найти друзей</div>-->
+              <!--            </button>-->
             </div>
-<!--            <button class="add__friend-wrapper" type="button" @click="openFriendSearchModal">-->
-<!--              <img class="find__friend" src="../assets/images/magnifying-glass.svg" alt="">-->
-<!--              <div class="find__text">Найти друзей</div>-->
-<!--            </button>-->
-          </div>
-          <div>
-            <button class="find__friends" @click="pathToFriends">
-              <img class="find__icon" src="../assets/images/people.svg" alt="">
-              <div class="find__friends-text">Найти друзей</div>
-            </button>
-          </div>
-          <div class="award-strip">
-            <div class="awards__get">
-              <div class="awards__title">{{ t('cabinet.awards') }}</div>
-              <div class="awards__items">
-                <div
-                    v-for="awardItem in unlockedAwardList"
-                    :key="awardItem.key"
-                    class="award-strip-item"
-                    :title="t(awardItem.title)"
-                >
-                  <img class="award-strip-icon" :src="awardItem.icon" :alt="awardItem.title"/>
+            <div class="award-strip">
+              <div class="awards__get">
+                <div class="awards__title">{{ t('cabinet.awards') }}</div>
+                <div class="awards__items">
+                  <div
+                      v-for="awardItem in unlockedAwardList"
+                      :key="awardItem.key"
+                      class="award-strip-item"
+                      :title="t(awardItem.title)"
+                  >
+                    <img class="award-strip-icon" :src="awardItem.icon" :alt="awardItem.title"/>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="content-body">
-          <div v-if="activeTabKey === 'info'" class="tab-content">
-            <div
-                v-for="acc in ACCORDIONS"
-                :key="acc.key"
-                class="accordion"
-                :class="{ open: activeAccordion === acc.key }"
-                @click="onAccordionClick(acc)"
-            >
-              <div class="accordion__head">
-                <div class="accordion__content-left">
-                  <img class="accordion__icon" :src="acc.icon" alt="">
-                  <div class="accordion__title">{{ acc.title }}</div>
+          <div class="content-body">
+            <div v-if="activeTabKey === 'info'" class="tab-content">
+              <div
+                  v-for="acc in ACCORDIONS"
+                  :key="acc.key"
+                  class="accordion"
+                  :class="{ open: activeAccordion === acc.key }"
+                  @click="onAccordionClick(acc)"
+              >
+                <div class="accordion__head">
+                  <div class="accordion__content-left">
+                    <img class="accordion__icon" :src="acc.icon" alt="">
+                    <div class="accordion__title">{{ acc.title }}</div>
+                  </div>
+                  <img
+                      v-if="!acc.isLink"
+                      class="accordion__arrow"
+                      :class="{ rotated: activeAccordion === acc.key }"
+                      src="../assets/images/arrowNav.svg"
+                      alt=""
+                  />
                 </div>
-                <img
-                    v-if="!acc.isLink"
-                    class="accordion__arrow"
-                    :class="{ rotated: activeAccordion === acc.key }"
-                    src="../assets/images/arrowNav.svg"
-                    alt=""
-                />
-              </div>
-              <transition name="fade">
-                <div
-                    v-show="activeAccordion === acc.key && !acc.isLink"
-                    class="accordion__body"
-                    @click.stop
-                >
-                  <template v-if="acc.key === 'personal'">
-                    <div v-for="infoRow in accountInfoRows" :key="infoRow.label" class="card-row">
-                      <span class="card-row__label">{{ infoRow.label }}</span>
-                      <span class="card-row__value">{{ infoRow.value }}</span>
-                    </div>
-                  </template>
-                  <template v-else-if="acc.key === 'account'">
-                    <div class="subscription-status-row">
-                      <div class="subscription-label">{{ t('cabinet.status') }}</div>
-                      <div class="subscription-status">
-                        <template v-if="authStore.isPremium && !authStore.subscriptionCancelled">
-                          <p class="active">✅ {{ t('cabinet.active') }}</p>
-                        </template>
-                        <template v-else-if="authStore.isPremium && authStore.subscriptionCancelled">
-                          <p class="cancelled">⚠️{{ t('cabinet.canceled') }}</p>
-                        </template>
-                        <template v-else>
-                          <p>🔓 {{ t('cabinet.withoutPremium') }}</p>
-                          <div class="premium__btn-wrapper">
-                            <button @click="routeToPay" class="premium__btn">{{ t('cabinet.buyPremium') }}</button>
-                          </div>
-                        </template>
-                      </div>
-                    </div>
-                    <template v-if="authStore.isPremium && !authStore.subscriptionCancelled">
-                      <div class="premium__status-wrapper">
-                        <p>📅 {{ t('cabinet.nextPayment') }} {{ formattedSubscriptionEndDate }}</p>
-                        <button class="btn btn-danger" @click.stop="openCancelModal">{{ t('cabinet.cancelBtn') }}</button>
+                <transition name="fade">
+                  <div
+                      v-show="activeAccordion === acc.key && !acc.isLink"
+                      class="accordion__body"
+                      @click.stop
+                  >
+                    <template v-if="acc.key === 'personal'">
+                      <div v-for="infoRow in accountInfoRows" :key="infoRow.label" class="card-row">
+                        <span class="card-row__label">{{ infoRow.label }}</span>
+                        <span class="card-row__value">{{ infoRow.value }}</span>
                       </div>
                     </template>
-                    <template v-else-if="authStore.isPremium && authStore.subscriptionCancelled">
-                      <p class="access__text">📅 {{ t('cabinet.access') }} {{ formattedSubscriptionEndDate }}</p>
-                    </template>
-                  </template>
-                  <template v-else-if="acc.key === 'settings'">
-                    <div class="settings__elements">
-                      <div
-                          v-for="settingsItem in settingsToggleItems"
-                          :key="settingsItem.key"
-                          class="row__el--wrapper"
-                      >
-                        <div class="toggle__wrapper">{{ settingsItem.label }}</div>
-                        <ClientOnly>
-                          <ColorScheme v-if="settingsItem.wrap">
-                            <VToggle
-                                :model-value="getSettingValue(settingsItem.key)"
-                                @change="value => onSettingChange(settingsItem.key, value)"
-                            />
-                          </ColorScheme>
-                          <template v-else>
-                            <VToggle
-                                :model-value="getSettingValue(settingsItem.key)"
-                                @change="value => onSettingChange(settingsItem.key, value)"
-                            />
+                    <template v-else-if="acc.key === 'account'">
+                      <div class="subscription-status-row">
+                        <div class="subscription-label">{{ t('cabinet.status') }}</div>
+                        <div class="subscription-status">
+                          <template v-if="authStore.isPremium && !authStore.subscriptionCancelled">
+                            <p class="active">✅ {{ t('cabinet.active') }}</p>
                           </template>
-                        </ClientOnly>
+                          <template v-else-if="authStore.isPremium && authStore.subscriptionCancelled">
+                            <p class="cancelled">⚠️{{ t('cabinet.canceled') }}</p>
+                          </template>
+                          <template v-else>
+                            <p>🔓 {{ t('cabinet.withoutPremium') }}</p>
+                            <div class="premium__btn-wrapper">
+                              <button @click="routeToPay" class="premium__btn">{{ t('cabinet.buyPremium') }}</button>
+                            </div>
+                          </template>
+                        </div>
                       </div>
-                    </div>
-                  </template>
-                </div>
-              </transition>
+                      <template v-if="authStore.isPremium && !authStore.subscriptionCancelled">
+                        <div class="premium__status-wrapper">
+                          <p>📅 {{ t('cabinet.nextPayment') }} {{ formattedSubscriptionEndDate }}</p>
+                          <button class="btn btn-danger" @click.stop="openCancelModal">{{ t('cabinet.cancelBtn') }}</button>
+                        </div>
+                      </template>
+                      <template v-else-if="authStore.isPremium && authStore.subscriptionCancelled">
+                        <p class="access__text">📅 {{ t('cabinet.access') }} {{ formattedSubscriptionEndDate }}</p>
+                      </template>
+                    </template>
+                    <template v-else-if="acc.key === 'settings'">
+                      <div class="settings__elements">
+                        <div
+                            v-for="settingsItem in settingsToggleItems"
+                            :key="settingsItem.key"
+                            class="row__el--wrapper"
+                        >
+                          <div class="toggle__wrapper">{{ settingsItem.label }}</div>
+                          <ClientOnly>
+                            <ColorScheme v-if="settingsItem.wrap">
+                              <VToggle
+                                  :model-value="getSettingValue(settingsItem.key)"
+                                  @change="value => onSettingChange(settingsItem.key, value)"
+                              />
+                            </ColorScheme>
+                            <template v-else>
+                              <VToggle
+                                  :model-value="getSettingValue(settingsItem.key)"
+                                  @change="value => onSettingChange(settingsItem.key, value)"
+                              />
+                            </template>
+                          </ClientOnly>
+                        </div>
+                      </div>
+                    </template>
+                  </div>
+                </transition>
+              </div>
+              <div class="footer-actions">
+                <button @click="openDeleteModal" class="btn btn-danger">{{ t('cabinet.deleteAcc') }}</button>
+              </div>
             </div>
-            <div class="footer-actions">
-              <button @click="openDeleteModal" class="btn btn-danger">{{ t('cabinet.deleteAcc') }}</button>
-            </div>
+            <div v-else-if="activeTabKey === 'friends'"><VFindFriends/></div>
+            <div v-else-if="activeTabKey === 'award'"><AwardsList :awards="awardList"/></div>
+            <div v-else-if="activeTabKey === 'archive'"><VExampResulut/></div>
           </div>
-
-          <div v-else-if="activeTabKey === 'progress'"><Progress/></div>
-          <div v-else-if="activeTabKey === 'shop'"><Shop/></div>
-          <div v-else-if="activeTabKey === 'award'"><AwardsList :awards="awardList"/></div>
-          <div v-else-if="activeTabKey === 'archive'"><VExampResulut/></div>
-<!--          <div v-else-if="activeTabKey === 'friends'"><FriendSearch/></div>-->
-        </div>
+        </ClientOnly>
       </section>
     </div>
     <div v-if="isAvatarModalOpen" class="avatar-modal-overlay" @click.self="isAvatarModalOpen = false">
@@ -203,24 +196,36 @@
     </div>
     <div v-if="isPurchaseModalOpen" class="modal-overlay" @click.self="isPurchaseModalOpen = false">
       <div class="modal-card">
-        <div class="modal-title">{{ t('cabinet.buyAvatar') }}</div>
-        <p class="modal-text">{{ t('cabinet.costs') }} <b>{{ t('cabinet.price') }}</b></p>
-        <div class="modal-actions">
-          <button class="btn btn-success" @click="confirmPurchase">{{ t('cabinet.buyAvatarBtn') }}</button>
-          <button class="btn" @click="isPurchaseModalOpen = false">{{ t('cabinet.notBuyAvatarBtn') }}</button>
-        </div>
+        <template v-if="purchaseState === 'success'">
+          <div class="modal-title">{{ t('cabinet.boughtAvatar')}}</div>
+          <div class="modal-actions">
+            <button class="btn btn-success" @click="closePurchaseOk">{{ t('cabinet.boughtBtn')}}</button>
+          </div>
+        </template>
+        <template v-else-if="purchaseState === 'insufficient'">
+          <div class="modal-title">{{ t('cabinet.notEnoughtArticles')}}</div>
+          <div class="modal-actions">
+            <button class="btn" @click="closePurchaseOk">{{ t('cabinet.boughtBtn')}}</button>
+          </div>
+        </template>
+        <template v-else>
+          <div class="modal-title">{{ t('cabinet.buyAvatar') }}</div>
+          <p class="modal-text">{{ t('cabinet.costs') }} <b>{{ t('cabinet.price') }}</b></p>
+          <div class="modal-actions">
+            <button class="btn btn-success" @click="confirmPurchase">{{ t('cabinet.buyAvatarBtn') }}</button>
+            <button class="btn" @click="isPurchaseModalOpen = false">{{ t('cabinet.notBuyAvatarBtn') }}</button>
+          </div>
+        </template>
       </div>
     </div>
     <div v-if="isDeleteModalOpen" class="modal-overlay" @click.self="isDeleteModalOpen = false">
       <div class="modal-card">
         <div class="modal-title">{{ t('cabinet.deleteAccTitle') }}</div>
-        <p class="modal-text">{{ t('cabinet.deleteText') }}</p>
-        <p v-if="userAuthStore.isPremium" class="modal-text">
-          <span class="warn">ВАЖНО!!!</span>
-          <span> При удалении аккаунта подписка не отменяется. Перед удалением отмените подписку</span>
+        <p v-if="authStore.isPremium" class="modal-text">
+          <span class="warn">{{ t('cabinet.important') }}</span>
+          <span> {{ t('cabinet.importantText') }}</span>
         </p>
         <p v-if="!isGoogleUser" class="modal-text">{{ t('cabinet.checkPassword') }}</p>
-
         <div v-if="!isGoogleUser" class="label">
           <input class="input" v-model="deletePasswordField.value" type="password"/>
           <p v-if="deletePasswordField.error" class="delete-error">{{ t(deletePasswordField.error) }}</p>
@@ -240,12 +245,10 @@ import {ref, computed, onMounted, watch, watchEffect} from 'vue'
 import {useRouter} from 'vue-router'
 import {useI18n} from 'vue-i18n'
 import Progress from '../src/components/progress.vue'
-import Shop from '../src/components/Shop.vue'
 import AwardsList from '../src/components/AwardsList.vue'
-import VExampResulut from "~/src/components/V-exampResulut.vue";
-import VToggle from '~/src/components/V-toggle.vue'
-// import FriendSearch from "../src/components/friendSearch.vue"
-
+import VExampResulut from "../src/components/V-exampResulut.vue";
+import VToggle from '../src/components/V-toggle.vue'
+import VFindFriends from '../src/components/V-findFriends.vue'
 import {userAuthStore} from '../store/authStore.js'
 import {userlangStore} from '../store/learningStore.js'
 import {useAchievementStore} from '../store/achievementStore.js'
@@ -255,29 +258,34 @@ import {isSoundEnabled, setSoundEnabled, unlockAudioByUserGesture} from '../util
 import {useUiSettingsStore} from '../store/uiSettingsStore.js'
 import {AWARDS} from '~/utils/awards'
 
-import UserIcon from '../assets/images/user.svg'
-import ProgressIcon from '../assets/images/progress.svg'
-import AwardsIcon from '../assets/awards/award (7).svg'
+import UserIcon from '../assets/images/hedgehog.svg'
+import FriendsIcon from '../assets/images/friend.svg'
+import AwardsIcon from '../assets/images/rewards.svg'
 import Home from '../assets/images/home.svg'
-import Folder from '../assets/images/FolderNav.svg'
+import Folder from '../assets/images/folder.svg'
 import Find from '../assets/images/magnifying-glass.svg'
 import EditIcon from '../assets/accountToggleIcons/edit.svg'
 import UserAccIcon from '../assets/accountToggleIcons/user.svg'
 import SettingsIcon from '../assets/accountToggleIcons/settings.svg'
 import FaqIcon from '../assets/accountToggleIcons/faq.svg'
-import * as ROUTES from "postcss-selector-parser";
+import {useFriendsStore} from '../../store/friendsStore.js'
 
 const {t, locale} = useI18n()
 const router = useRouter()
-
+const purchaseState = ref('default')
 const authStore = userAuthStore()
 const learningStore = userlangStore()
 const achievementStore = useAchievementStore()
 const gameStore = useGameStore()
 const uiSettings = useUiSettingsStore()
+const friendsStore = useFriendsStore()
 
 const activeTabKey = ref('info')
 const isFriendSearchModalOpen = ref(false)
+
+const userNameSafe = computed(() =>
+    authStore.initialized && authStore.name ? authStore.name : '—'
+);
 
 function openFriendSearchModal() {
   isFriendSearchModalOpen.value = true
@@ -285,15 +293,14 @@ function openFriendSearchModal() {
 
 const TAB_ITEMS = [
   {key: 'info', label: t('cabinetSidebar.valueOne'), icon: UserIcon},
-  {key: 'progress', label: t('cabinetSidebar.valueTwo'), icon: ProgressIcon},
+  {key: 'friends', label: t('cabinetSidebar.valueTwo'), icon: FriendsIcon},
   {key: 'award', label: t('cabinetSidebar.valueThree'), icon: AwardsIcon},
-  {key: 'archive', label: 'Архив экзаменов', icon: Folder },
-  // {key: 'friends', label: 'Список друзей', icon: Find },
+  {key: 'archive', label: t('cabinetSidebar.valueFour'), icon: Folder },
 ]
 
 const ACCORDIONS = ref([
   {key: 'personal', title: t('cabinetAccordion.personalData'), icon: UserAccIcon, isLink: false},
-  {key: 'account', title: t('cabinetAccordion.account'), icon: EditIcon, isLink: false},
+  // {key: 'account', title: t('cabinetAccordion.account'), icon: EditIcon, isLink: false},
   {key: 'settings', title: t('cabinetAccordion.settings'), icon: SettingsIcon, isLink: false},
   {key: 'faq', title: t('cabinetAccordion.faq'), icon: FaqIcon, isLink: true},
 ])
@@ -323,9 +330,7 @@ function onAccordionClick(acc) {
   }
   toggleAccordion(acc.key)
 }
-const pathToFriends = () => {
-  router.push('/user-search')
-}
+
 const isAvatarModalOpen = ref(false)
 const selectedAvatarName = ref(null)
 const isPurchaseModalOpen = ref(false)
@@ -356,7 +361,11 @@ const registrationDateText = computed(() => {
 const routeToPay = () => router.push('/pay')
 
 const shownAwardsSet = ref(loadShownAwards())
-const awardList = ref(AWARDS.map(a => ({...a, locked: !shownAwardsSet.value.has(a.key)})))
+const awardList = ref(
+    AWARDS.map(a => ({ ...a, locked: a.key === 'registerAchievement' ? false : !shownAwardsSet.value.has(a.key)
+    }))
+)
+
 const unlockedAwardList = computed(() => awardList.value.filter(a => !a.locked))
 
 watch(() => authStore.uid, () => {
@@ -421,26 +430,28 @@ async function cancelSubscription() {
   try {
     const res = await $fetch('/api/stripe/cancel', {method: 'POST', body: {uid: authStore.uid}})
     if (!res.success) alert('Ошибка отмены подписки: ' + res.error)
-  } catch { alert('Произошла ошибка. Попробуй позже.') }
+  } catch { alert('Error, try later') }
 }
 
 function goToFaq() { router.push('/faq') }
 
 function openPurchaseModal(name) {
   purchaseAvatarName.value = name
+  purchaseState.value = 'default'
   isPurchaseModalOpen.value = true
 }
 
 function selectAvatar(name) { selectedAvatarName.value = name }
 
 async function confirmPurchase() {
-  try {
-    await authStore.purchaseAvatar(purchaseAvatarName.value)
+  const status = await authStore.purchaseAvatar(purchaseAvatarName.value)
+  if (status === 'success' || status === 'owned') {
     selectedAvatarName.value = purchaseAvatarName.value
-    isPurchaseModalOpen.value = false
-  } catch (err) {
-    alert(err.message)
-    isPurchaseModalOpen.value = false
+    purchaseState.value = 'success'
+
+  } else if (status === 'insufficient') {
+    purchaseState.value = 'insufficient'
+    isPurchaseModalOpen.value = true
   }
 }
 
@@ -468,11 +479,22 @@ async function confirmDeleteAccount() {
   }
 }
 
+function closePurchaseOk() {
+  isPurchaseModalOpen.value = false
+  isAvatarModalOpen.value = false
+  purchaseState.value = 'default'
+  authStore.clearNotEnoughArticle?.()
+}
+
 const isGoogleUser = computed(() => authStore.isGoogleUser)
 
 onMounted(async () => {
   await learningStore.loadFromFirebase()
   soundEnabled.value = isSoundEnabled()
+})
+
+onMounted(() => {
+  friendsStore.loadFriends()
 })
 
 watch(isAvatarModalOpen, opened => {
@@ -712,7 +734,7 @@ watchEffect(() => {
 }
 
 .tab-vertical.active {
-  background: #9ae6b4;
+  background: #9ea9a2;;
 }
 
 .tab-icon {
@@ -996,6 +1018,8 @@ watchEffect(() => {
 
 .warn {
   color: red;
+  font-weight: bold;
+  display: block;
 }
 
 .input {

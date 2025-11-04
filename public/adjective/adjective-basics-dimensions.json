@@ -1,52 +1,547 @@
 [
   {
-    "question": "Der Turm ist ___.",
-    "options": ["hoch", "breit", "kurz", "tief"],
+    "question": "Der Turm in der Stadt ist sehr ___.",
+    "options": ["hoch", "breit", "rund", "kurz"],
     "answer": "hoch"
   },
   {
-    "question": "Die Schlange ist ___.",
-    "options": ["kurz", "eng", "lang", "flach"],
-    "answer": "lang"
+    "question": "Der Tisch im Wohnzimmer ist ziemlich ___.",
+    "options": ["rund", "eckig", "flach", "lang"],
+    "answer": "rund"
   },
   {
-    "question": "Der Ozean ist ___.",
-    "options": ["flach", "tief", "hoch", "eng"],
-    "answer": "tief"
-  },
-  {
-    "question": "Der Fluss ist ___.",
-    "options": ["schmal", "breit", "kurz", "niedrig"],
+    "question": "Der Fluss neben dem Dorf ist ___.",
+    "options": ["breit", "kurz", "schmal", "hoch"],
     "answer": "breit"
   },
   {
-    "question": "Der Korridor ist ___.",
-    "options": ["lang", "breit", "weit", "eng"],
-    "answer": "eng"
+    "question": "Die Tasse auf dem Tisch ist ___.",
+    "options": ["eckig", "rund", "flach", "lang"],
+    "answer": "rund"
   },
   {
-    "question": "Das Buch ist ___.",
-    "options": ["dünn", "kurz", "dick", "schmal"],
-    "answer": "dick"
+    "question": "Die Brücke über den See ist ___.",
+    "options": ["lang", "hoch", "dünn", "klein"],
+    "answer": "lang"
   },
   {
-    "question": "Der Pool ist ___.",
-    "options": ["hoch", "flach", "breit", "lang"],
-    "answer": "flach"
-  },
-  {
-    "question": "Der Weg ist ___.",
-    "options": ["nah", "eng", "weit", "tief"],
-    "answer": "weit"
-  },
-  {
-    "question": "Das Haar ist ___.",
-    "options": ["dick", "dünn", "schwer", "breit"],
+    "question": "Das Handy ist sehr ___.",
+    "options": ["dünn", "dick", "breit", "hoch"],
     "answer": "dünn"
   },
   {
-    "question": "Die Straße ist ___.",
-    "options": ["breit", "rund", "schmal", "quadratisch"],
+    "question": "Die Straße in der Stadt ist ___.",
+    "options": ["schmal", "breit", "kurz", "eng"],
     "answer": "schmal"
+  },
+  {
+    "question": "Das Fenster im Wohnzimmer ist sehr ___.",
+    "options": ["breit", "schmal", "kurz", "klein"],
+    "answer": "breit"
+  },
+  {
+    "question": "Der Korridor im Hotel ist ___.",
+    "options": ["eng", "weit", "flach", "kurz"],
+    "answer": "eng"
+  },
+  {
+    "question": "Die Tasse ist ___.",
+    "options": ["rund", "eckig", "lang", "breit"],
+    "answer": "rund"
+  },
+  {
+    "question": "Der Fluss in der Stadt ist sehr ___.",
+    "options": ["breit", "schmal", "kurz", "eng"],
+    "answer": "breit"
+  },
+  {
+    "question": "Die Leiter ist ___.",
+    "options": ["lang", "kurz", "breit", "flach"],
+    "answer": "lang"
+  },
+  {
+    "question": "Das Sofa im Zimmer ist ___.",
+    "options": ["groß", "klein", "kurz", "eng"],
+    "answer": "groß"
+  },
+  {
+    "question": "Die Bank im Park ist sehr ___.",
+    "options": ["kurz", "lang", "hoch", "breit"],
+    "answer": "lang"
+  },
+  {
+    "question": "Der Apfel ist ___.",
+    "options": ["rund", "eckig", "flach", "schmal"],
+    "answer": "rund"
+  },
+  {
+    "question": "Die Tüte ist ___.",
+    "options": ["leicht", "schwer", "flach", "eng"],
+    "answer": "leicht"
+  },
+  {
+    "question": "Der Koffer ist ___.",
+    "options": ["schwer", "leicht", "dünn", "kurz"],
+    "answer": "schwer"
+  },
+  {
+    "question": "Die Schachtel ist ___.",
+    "options": ["eckig", "rund", "kurz", "breit"],
+    "answer": "eckig"
+  },
+  {
+    "question": "Die Treppe im Garten ist sehr ___.",
+    "options": ["steil", "flach", "breit", "hoch"],
+    "answer": "steil"
+  },
+  {
+    "question": "Die Tasche ist ___.",
+    "options": ["klein", "groß", "lang", "eng"],
+    "answer": "klein"
+  },
+  {
+    "question": "Das Regal in meinem Zimmer ist ___.",
+    "options": ["hoch", "kurz", "breit", "klein"],
+    "answer": "hoch"
+  },
+  {
+    "question": "Der Flur in der Schule ist sehr ___.",
+    "options": ["lang", "kurz", "breit", "klein"],
+    "answer": "lang"
+  },
+  {
+    "question": "Das Heft ist ___.",
+    "options": ["dünn", "dick", "kurz", "schwer"],
+    "answer": "dünn"
+  },
+  {
+    "question": "Der Stein ist ___.",
+    "options": ["schwer", "leicht", "kurz", "flach"],
+    "answer": "schwer"
+  },
+  {
+    "question": "Die Lampe ist ___.",
+    "options": ["hoch", "kurz", "breit", "eng"],
+    "answer": "hoch"
+  },
+  {
+    "question": "Der Bildschirm ist sehr ___.",
+    "options": ["breit", "schmal", "kurz", "klein"],
+    "answer": "breit"
+  },
+  {
+    "question": "Das Buch ist ziemlich ___.",
+    "options": ["dick", "dünn", "flach", "klein"],
+    "answer": "dick"
+  },
+  {
+    "question": "Die Jacke ist mir zu ___.",
+    "options": ["eng", "weit", "kurz", "hoch"],
+    "answer": "eng"
+  },
+  {
+    "question": "Der Tunnel war ziemlich ___.",
+    "options": ["lang", "kurz", "hoch", "breit"],
+    "answer": "lang"
+  },
+  {
+    "question": "Die Schale ist ___.",
+    "options": ["rund", "eckig", "hoch", "schmal"],
+    "answer": "rund"
+  },
+  {
+    "question": "Das Paket ist sehr ___.",
+    "options": ["schwer", "leicht", "dünn", "klein"],
+    "answer": "schwer"
+  },
+  {
+    "question": "Der Teppich im Zimmer ist ___.",
+    "options": ["lang", "kurz", "rund", "breit"],
+    "answer": "lang"
+  },
+  {
+    "question": "Das Fenster ist ziemlich ___.",
+    "options": ["hoch", "niedrig", "schmal", "breit"],
+    "answer": "schmal"
+  },
+  {
+    "question": "Die Wand ist sehr ___.",
+    "options": ["dick", "dünn", "flach", "rund"],
+    "answer": "dick"
+  },
+  {
+    "question": "Die Straße durch den Wald ist ___.",
+    "options": ["eng", "breit", "kurz", "hoch"],
+    "answer": "eng"
+  },
+  {
+    "question": "Der Ballon ist ___.",
+    "options": ["rund", "eckig", "flach", "hoch"],
+    "answer": "rund"
+  },
+  {
+    "question": "Die Tasche ist sehr ___.",
+    "options": ["groß", "klein", "eng", "kurz"],
+    "answer": "groß"
+  },
+  {
+    "question": "Der Computerbildschirm ist ___.",
+    "options": ["breit", "schmal", "rund", "kurz"],
+    "answer": "breit"
+  },
+  {
+    "question": "Der Apfel ist ___.",
+    "options": ["rund", "eckig", "flach", "hoch"],
+    "answer": "rund"
+  },
+  {
+    "question": "Die Brücke ist sehr ___.",
+    "options": ["hoch", "kurz", "tief", "schmal"],
+    "answer": "hoch"
+  },
+  {
+    "question": "Das Regal im Wohnzimmer ist ___.",
+    "options": ["hoch", "kurz", "flach", "rund"],
+    "answer": "hoch"
+  },
+  {
+    "question": "Der Korridor in der Schule ist ___.",
+    "options": ["lang", "kurz", "eng", "klein"],
+    "answer": "lang"
+  },
+  {
+    "question": "Die Tasse ist ziemlich ___.",
+    "options": ["klein", "groß", "dick", "hoch"],
+    "answer": "klein"
+  },
+  {
+    "question": "Das Brot ist ___.",
+    "options": ["dick", "dünn", "rund", "flach"],
+    "answer": "dick"
+  },
+  {
+    "question": "Die Hose ist mir zu ___.",
+    "options": ["weit", "eng", "kurz", "hoch"],
+    "answer": "weit"
+  },
+  {
+    "question": "Der Tisch im Garten ist ___.",
+    "options": ["rund", "eckig", "kurz", "flach"],
+    "answer": "eckig"
+  },
+  {
+    "question": "Die Lampe ist sehr ___.",
+    "options": ["hoch", "kurz", "flach", "klein"],
+    "answer": "hoch"
+  },
+  {
+    "question": "Die Leiter ist ___.",
+    "options": ["lang", "kurz", "flach", "breit"],
+    "answer": "lang"
+  },
+  {
+    "question": "Die Kiste ist ___.",
+    "options": ["eckig", "rund", "flach", "hoch"],
+    "answer": "eckig"
+  },
+  {
+    "question": "Der See in den Bergen ist sehr ___.",
+    "options": ["tief", "flach", "kurz", "hoch"],
+    "answer": "tief"
+  },
+  {
+    "question": "Der Teppich im Zimmer ist ___.",
+    "options": ["flach", "hoch", "breit", "klein"],
+    "answer": "flach"
+  },
+  {
+    "question": "Das Sofa im Wohnzimmer ist ___.",
+    "options": ["groß", "klein", "kurz", "eng"],
+    "answer": "groß"
+  },
+  {
+    "question": "Das Auto ist zu ___.",
+    "options": ["klein", "hoch", "schmal", "kurz"],
+    "answer": "klein"
+  },
+  {
+    "question": "Das Glas ist sehr ___.",
+    "options": ["dünn", "dick", "breit", "eng"],
+    "answer": "dünn"
+  },
+  {
+    "question": "Der Rucksack ist ___.",
+    "options": ["schwer", "leicht", "klein", "kurz"],
+    "answer": "schwer"
+  },
+  {
+    "question": "Die Flasche ist ___.",
+    "options": ["hoch", "kurz", "rund", "flach"],
+    "answer": "hoch"
+  },
+  {
+    "question": "Der Tunnel ist sehr ___.",
+    "options": ["tief", "flach", "breit", "kurz"],
+    "answer": "tief"
+  },
+  {
+    "question": "Die Straße in der Stadt ist ___.",
+    "options": ["breit", "eng", "kurz", "rund"],
+    "answer": "breit"
+  },
+  {
+    "question": "Die Tür ist ___.",
+    "options": ["schmal", "breit", "hoch", "lang"],
+    "answer": "schmal"
+  },
+  {
+    "question": "Das Handy ist sehr ___.",
+    "options": ["dünn", "dick", "breit", "kurz"],
+    "answer": "dünn"
+  },
+  {
+    "question": "Die Brücke über den Fluss ist ___.",
+    "options": ["lang", "kurz", "hoch", "flach"],
+    "answer": "lang"
+  },
+  {
+    "question": "Der Karton ist ___.",
+    "options": ["eckig", "rund", "flach", "schmal"],
+    "answer": "eckig"
+  },
+  {
+    "question": "Die Treppe im Haus ist ___.",
+    "options": ["steil", "flach", "breit", "kurz"],
+    "answer": "steil"
+  },
+  {
+    "question": "Das Auto ist ___.",
+    "options": ["groß", "klein", "eng", "dünn"],
+    "answer": "groß"
+  },
+  {
+    "question": "Die Lampe im Zimmer ist ___.",
+    "options": ["hoch", "kurz", "flach", "breit"],
+    "answer": "hoch"
+  },
+  {
+    "question": "Das Brot ist innen sehr ___.",
+    "options": ["dick", "dünn", "breit", "lang"],
+    "answer": "dick"
+  },
+  {
+    "question": "Die Tür im Haus ist ziemlich ___.",
+    "options": ["breit", "schmal", "kurz", "klein"],
+    "answer": "breit"
+  },
+  {
+    "question": "Der Ball ist ___.",
+    "options": ["rund", "eckig", "hoch", "lang"],
+    "answer": "rund"
+  },
+  {
+    "question": "Das Fenster ist ___.",
+    "options": ["eckig", "rund", "schmal", "hoch"],
+    "answer": "eckig"
+  },
+  {
+    "question": "Die Tasche ist sehr ___.",
+    "options": ["schwer", "leicht", "dick", "flach"],
+    "answer": "leicht"
+  },
+  {
+    "question": "Der Schrank in meinem Zimmer ist ___.",
+    "options": ["groß", "klein", "flach", "kurz"],
+    "answer": "groß"
+  },
+  {
+    "question": "Der Turm im Zentrum ist sehr ___.",
+    "options": ["hoch", "breit", "kurz", "klein"],
+    "answer": "hoch"
+  },
+  {
+    "question": "Der Fluss bei unserer Stadt ist sehr ___.",
+    "options": ["breit", "schmal", "eng", "flach"],
+    "answer": "breit"
+  },
+  {
+    "question": "Die Gasse in der Altstadt ist ___.",
+    "options": ["schmal", "breit", "lang", "tief"],
+    "answer": "schmal"
+  },
+  {
+    "question": "Mein Zimmer ist nicht groß, sondern ___.",
+    "options": ["klein", "lang", "hoch", "breit"],
+    "answer": "klein"
+  },
+  {
+    "question": "Die Tafel im Klassenzimmer ist sehr ___.",
+    "options": ["breit", "hoch", "eng", "klein"],
+    "answer": "breit"
+  },
+  {
+    "question": "Der Baum im Park ist ___.",
+    "options": ["hoch", "kurz", "klein", "flach"],
+    "answer": "hoch"
+  },
+  {
+    "question": "Mein Schreibtisch ist ziemlich ___.",
+    "options": ["lang", "kurz", "rund", "hoch"],
+    "answer": "lang"
+  },
+  {
+    "question": "Die Tür ist nicht breit, sondern ___.",
+    "options": ["schmal", "flach", "hoch", "klein"],
+    "answer": "schmal"
+  },
+  {
+    "question": "Der Spiegel an der Wand ist ___.",
+    "options": ["rund", "eckig", "flach", "lang"],
+    "answer": "rund"
+  },
+  {
+    "question": "Der Schrank im Schlafzimmer ist sehr ___.",
+    "options": ["groß", "klein", "flach", "kurz"],
+    "answer": "groß"
+  },
+  {
+    "question": "Der Tisch in der Küche ist ___.",
+    "options": ["eckig", "rund", "flach", "hoch"],
+    "answer": "eckig"
+  },
+  {
+    "question": "Mein Bett ist nicht kurz, sondern ___.",
+    "options": ["lang", "breit", "hoch", "klein"],
+    "answer": "lang"
+  },
+  {
+    "question": "Die Straße ist ___.",
+    "options": ["breit", "schmal", "eng", "kurz"],
+    "answer": "breit"
+  },
+  {
+    "question": "Der Korridor im Haus ist sehr ___.",
+    "options": ["eng", "breit", "kurz", "hoch"],
+    "answer": "eng"
+  },
+  {
+    "question": "Das Glas auf dem Tisch ist ___.",
+    "options": ["dünn", "dick", "flach", "breit"],
+    "answer": "dünn"
+  },
+  {
+    "question": "Der See ist ziemlich ___.",
+    "options": ["tief", "flach", "kurz", "klein"],
+    "answer": "tief"
+  },
+  {
+    "question": "Der Teppich im Wohnzimmer ist ___.",
+    "options": ["flach", "hoch", "eng", "kurz"],
+    "answer": "flach"
+  },
+  {
+    "question": "Die Lampe ist sehr ___.",
+    "options": ["hoch", "kurz", "rund", "klein"],
+    "answer": "hoch"
+  },
+  {
+    "question": "Der Fernseher ist ziemlich ___.",
+    "options": ["groß", "klein", "hoch", "eng"],
+    "answer": "groß"
+  },
+  {
+    "question": "Das Handy ist sehr ___.",
+    "options": ["dünn", "dick", "breit", "hoch"],
+    "answer": "dünn"
+  },
+  {
+    "question": "Die Hose ist zu ___.",
+    "options": ["eng", "weit", "kurz", "hoch"],
+    "answer": "eng"
+  },
+  {
+    "question": "Die Wand ist ___.",
+    "options": ["hoch", "kurz", "schmal", "klein"],
+    "answer": "hoch"
+  },
+  {
+    "question": "Der Ball ist ___.",
+    "options": ["rund", "eckig", "hoch", "breit"],
+    "answer": "rund"
+  },
+  {
+    "question": "Der Karton ist ziemlich ___.",
+    "options": ["schwer", "leicht", "dick", "flach"],
+    "answer": "dick"
+  },
+  {
+    "question": "Die Brücke ist sehr ___.",
+    "options": ["lang", "kurz", "hoch", "breit"],
+    "answer": "lang"
+  },
+  {
+    "question": "Das Fenster ist ___.",
+    "options": ["eckig", "rund", "kurz", "hoch"],
+    "answer": "eckig"
+  },
+  {
+    "question": "Die Tasche ist ziemlich ___.",
+    "options": ["leicht", "schwer", "dick", "eng"],
+    "answer": "leicht"
+  },
+  {
+    "question": "Das Sofa ist ___.",
+    "options": ["groß", "klein", "eng", "flach"],
+    "answer": "groß"
+  },
+  {
+    "question": "Die Brille ist sehr ___.",
+    "options": ["dünn", "dick", "flach", "kurz"],
+    "answer": "dünn"
+  },
+  {
+    "question": "Das Heft ist ___.",
+    "options": ["dünn", "dick", "kurz", "flach"],
+    "answer": "dünn"
+  },
+  {
+    "question": "Die Straße hier ist sehr ___.",
+    "options": ["eng", "breit", "kurz", "flach"],
+    "answer": "eng"
+  },
+  {
+    "question": "Die Decke im Zimmer ist ___.",
+    "options": ["hoch", "niedrig", "flach", "breit"],
+    "answer": "hoch"
+  },
+  {
+    "question": "Die Torte ist ___.",
+    "options": ["rund", "eckig", "lang", "flach"],
+    "answer": "rund"
+  },
+  {
+    "question": "Die Kiste ist ___.",
+    "options": ["eckig", "rund", "hoch", "breit"],
+    "answer": "eckig"
+  },
+  {
+    "question": "Das Zimmer ist ___.",
+    "options": ["groß", "klein", "eng", "kurz"],
+    "answer": "klein"
+  },
+  {
+    "question": "Die Bank im Park ist sehr ___.",
+    "options": ["lang", "kurz", "hoch", "eng"],
+    "answer": "lang"
+  },
+  {
+    "question": "Der See ist im Sommer ___.",
+    "options": ["flach", "tief", "eng", "breit"],
+    "answer": "flach"
+  },
+  {
+    "question": "Das Sofa im Hotel ist sehr ___.",
+    "options": ["breit", "schmal", "kurz", "dünn"],
+    "answer": "breit"
   }
 ]

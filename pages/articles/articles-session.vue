@@ -21,7 +21,7 @@
               }}/{{ selectedModes.length }})</span>
           </div>
           <div class="word-block">
-            <div v-if="!currentMode === 'audio'" class="word-question">
+            <div v-if="currentMode === 'audio'" class="word-question">
               <span>{{ t('sessionLabels.word') }}: {{ currentWord?.[currentLang] }}</span>
             </div>
             <div class="mode-exercise">
@@ -49,13 +49,10 @@
                 >
                   {{ t('wordDuelSession.clear') || 'clear' }}
                 </button>
-
                 <input v-model="userInput" class="trainer-app__input" readonly/>
               </div>
-
               <div v-if="currentMode === 'wordArticle'">
-                <!--								<p>{{t('sessionLabels.articleWordFor')}} </p>-->
-                <p><b>Слово : {{ currentWord.de }}</b></p>
+                <p><b>{{ t('sessionLabels.word')}} : {{ uiWord }}</b></p>
                 <input v-model="userInput" class="trainer-app__input"/>
               </div>
               <div v-if="currentMode === 'plural'">
@@ -71,6 +68,11 @@
                 <input v-model="userInput" class="trainer-app__input"/>
               </div>
             </div>
+            <div v-if="currentMode === 'plural' || currentMode === 'wordArticle'" class="german__letters">
+              <button @click="addGErmanLetters(letter)" class="german__letters-item" v-for="(letter, index) in germanLetters" :key="index">
+                {{ letter}}
+              </button>
+            </div>
             <div v-if="result" class="answer-result" :class="result">
               <span v-if="result === 'correct'">✔ </span>
               <span v-if="result === 'wrong'">✖ </span>
@@ -78,9 +80,7 @@
               <span v-if="currentMode === 'letters' || currentMode === 'audio'">{{ t('result.correctAnswer') }}: {{
                   currentWord.de
                 }}</span>
-              <span v-if="currentMode === 'wordArticle'">{{ t('result.correct') }}: {{
-                  currentWord.article
-                }} {{ currentWord.de }}</span>
+              <span v-if="currentMode === 'wordArticle'">{{ t('result.correct') }}: {{currentWord.article}} {{ currentWord.de }} </span>
               <span v-if="currentMode === 'plural'">{{ t('result.correct') }}: {{ currentWord.plural }}</span>
             </div>
           </div>
@@ -93,14 +93,14 @@
           </button>
         </div>
         <div v-else class="finish-block">
-          <h2 class="finish-block__title">Обучение завершено!</h2>
+          <h2 class="finish-block__title">{{ t('sessionLabels.end')}}</h2>
           <div class="finish-block__actions">
-            <button class="btn" @click="restartAll">Повторить тему</button>
+            <button class="btn" @click="restartAll">{{ t('sessionLabels.again')}}</button>
             <button v-if="wrongWords.length" class="btn btn--secondary" :disabled="wrongWords.length === 0"
                     @click="repeatMistakes">
-              Повторить ошибки ({{ wrongWords.length }})
+              {{ t('sessionLabels.mistakes')}} ({{ wrongWords.length }})
             </button>
-            <router-link class="btn btn--secondary" to="/articles">Назад к темам</router-link>
+            <router-link class="btn btn--secondary" to="/articles">{{ t('sessionLabels.back')}}</router-link>
           </div>
         </div>
       </div>
@@ -118,10 +118,17 @@ import {userlangStore} from '../../store/learningStore.js'
 import {getSpeechAudio} from '../../utils/googleTTS.js'
 import {nameMap, nameMode} from '../../utils/nameMap.js'
 import { playWrong, playCorrect, unlockAudioByUserGesture } from '../../utils/soundManager.js'
+import { useSeoMeta } from '#imports'
+
+useSeoMeta({
+  robots: 'noindex, nofollow'
+})
 
 const {t, locale} = useI18n()
 const wrongWords = ref([])
 const allWords = ref([])
+const isReview = ref(false)
+
 const store = userlangStore()
 const route = useRoute()
 const router = useRouter()
@@ -141,6 +148,33 @@ const totalWords = computed(() => store.selectedWords.length)
 const currentLang = computed(() => locale.value);
 const translatedTopic = computed(() => t(nameMap[topicTitle.value]))
 const isSpeaking = ref(false)
+const germanLetters = ['ä', 'ö', 'ü', 'Ä', 'Ö', 'Ü', 'ß'];
+
+const localeToKeyMap = {
+  ru: 'ru', 'ru-RU': 'ru',
+  en: 'en', 'en-US': 'en', 'en-GB': 'en',
+  tr: 'tr', 'tr-TR': 'tr',
+  pl: 'pl', 'pl-PL': 'pl',
+  uk: 'uk', 'uk-UA': 'uk',
+  es: 'es', 'es-ES': 'es',
+  ar: 'ar', 'ar-AR': 'ar',
+  uz: 'uz', 'uz-UZ': 'uz',
+  de: 'de', 'de-DE': 'de', 'de-AT': 'de', 'de-CH': 'de'
+}
+
+const currentLangKey = computed(() => {
+  const lc = String(locale.value || '').trim()
+  return localeToKeyMap[lc] || localeToKeyMap[lc.split('-')[0]] || 'en'
+})
+
+const uiWord = computed(() => {
+  const w = currentWord.value || {}
+  return (
+      w[currentLangKey.value] ??
+      w.en ?? w.ru ?? w.uk ?? w.tr ?? w.pl ?? w.de ?? ''
+  )
+})
+
 const goBack = () => {
   router.back()
 }
@@ -158,6 +192,10 @@ function addLetter(letter, idx) {
   if (usedLetters.value[idx]) return
   userInput.value += letter
   usedLetters.value[idx] = true
+}
+
+const addGErmanLetters = (letter)  => {
+  userInput.value += letter
 }
 
 function speak(text) {
@@ -182,45 +220,41 @@ function normalize(text) {
 async function checkAnswer() {
   if (!currentWord.value || isChecking.value) return;
   isChecking.value = true;
+
   let correct = '';
   switch (currentMode.value) {
-    case 'article':
-      correct = currentWord.value.article;
-      break;
-    case 'letters':
-      correct = currentWord.value.de;
-      break;
-    case 'wordArticle':
-      correct = `${currentWord.value.article} ${currentWord.value.de}`;
-      break;
-    case 'plural':
-      correct = currentWord.value.plural;
-      break;
-    case 'audio':
-      correct = currentWord.value.de;
-      break;
+    case 'article':     correct = currentWord.value.article; break;
+    case 'letters':     correct = currentWord.value.de; break;
+    case 'wordArticle': correct = `${currentWord.value.article} ${currentWord.value.de}`; break;
+    case 'plural':      correct = currentWord.value.plural; break;
+    case 'audio':       correct = currentWord.value.de; break;
   }
+
   const ok = normalize(userInput.value) === normalize(correct);
   result.value = ok ? 'correct' : 'wrong';
-  if (ok) {
-    playCorrect()
-  }
-  else {
-    playWrong()
-  }
-  await store.markProgress(currentWord.value, currentMode.value, ok);
-  if (ok) {
-    await store.markAsLearned(currentWord.value, selectedModes.value);
+  ok ? playCorrect() : playWrong();
 
+  if (!isReview.value) {
+    // обычный режим — сохраняем
+    await store.markProgress(currentWord.value, currentMode.value, ok);
+    if (ok) {
+      await store.markAsLearned(currentWord.value, selectedModes.value);
+    } else {
+      if (!wrongWords.value.find(w => w.de === currentWord.value.de)) {
+        wrongWords.value.push(currentWord.value);
+      }
+      await store.addWrongAnswers(currentWord.value);
+    }
   } else {
-    if (!wrongWords.value.find(w => w.de === currentWord.value.de)) {
+    // повтор — ничего не сохраняем; локально собираем ошибки, если нужно
+    if (!ok && !wrongWords.value.find(w => w.de === currentWord.value.de)) {
       wrongWords.value.push(currentWord.value);
     }
-    await store.addWrongAnswers(currentWord.value);
   }
 
   isChecking.value = false;
 }
+
 
 function nextStep() {
   if (currentModeIndex.value < selectedModes.value.length - 1) {
@@ -239,7 +273,21 @@ function nextStep() {
 }
 
 function restartAll() {
-  store.selectedWords = [...allWords.value]
+  isReview.value = true
+  if (!Array.isArray(selectedModes.value) || selectedModes.value.length === 0 || selectedModes.value.every(m => !m)) {
+    selectedModes.value = ['article', 'letters', 'wordArticle', 'plural', 'audio']
+  }
+  let base = Array.isArray(allWords.value) ? allWords.value : []
+  if (!base.length) {
+    const topic = String(topicTitle.value || route.query.topic || '').trim()
+    const pool = Array.isArray(store.words) ? store.words : []
+    base = topic ? pool.filter(w => w.topic === topic) : pool.slice()
+  }
+  if (!base.length) {
+    finished.value = true
+    return
+  }
+  store.selectedWords = [...base]
   store.currentIndex = 0
   store.currentModeIndex = 0
   finished.value = false
@@ -270,27 +318,34 @@ onMounted(async () => {
   };
   window.addEventListener('pointerdown', unlockOnce, captureOpts);
   window.addEventListener('keydown', unlockOnce, captureOpts);
-
   await store.loadFromFirebase()
   store.syncSelectedWordsProgress()
+  const mode = route.query.mode
+  selectedModes.value = Array.isArray(mode) ? mode : [mode].filter(Boolean)
+  if (selectedModes.value.length === 0) {
+    selectedModes.value = ['article', 'letters', 'wordArticle', 'plural', 'audio']
+  }
+  isReview.value = ['1','true','yes','repeat','review','practice']
+      .includes(String(route.query.review || route.query.repeat || '').toLowerCase())
 
-  let mode = route.query.mode
-  selectedModes.value = Array.isArray(mode) ? mode : [mode]
   allWords.value = [...store.selectedWords]
-  sessionWords.value = store.selectedWords.filter(w => {
-    const isLearned = selectedModes.value.every(m => w.progress?.[m] === true)
-    return !isLearned
-  })
-  store.selectedWords = sessionWords.value.length > 0
-      ? [...sessionWords.value]
-      : [...allWords.value]
+  if (isReview.value) {
+    store.selectedWords = [...allWords.value]
+  } else {
+    sessionWords.value = store.selectedWords.filter(w => !selectedModes.value.every(m => w.progress?.[m] === true))
+    store.selectedWords = sessionWords.value.length ? [...sessionWords.value] : [...allWords.value]
+    if (sessionWords.value.length === 0) {
+      isReview.value = true
+    }
+  }
+
   if (store.currentIndex >= store.selectedWords.length) store.currentIndex = 0
   if (store.currentModeIndex >= selectedModes.value.length) store.currentModeIndex = 0
-  if (route.query.topic) {
-    topicTitle.value = route.query.topic;
-  }
+  if (route.query.topic) topicTitle.value = route.query.topic
+
   isReady.value = true
 })
+
 
 onBeforeUnmount(() => {
   window.removeEventListener('pointerdown', unlockAudioByUserGesture, { capture: true })
@@ -642,6 +697,22 @@ watch(userInput, (newVal, oldVal) => {
 .letters-clear:hover {
   background: #95a5a6;
   color: #2c3e50;
+}
+
+.german__letters {
+  display: flex;
+  gap: 5px;
+  margin: 8px 0;
+}
+
+.german__letters-item {
+  padding: 6px 9px;
+  border: 1px solid #95a5a6;
+  background: whitesmoke;
+  font-size: 17px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  border-radius: 7px;
 }
 
 @media (max-width: 768px) {

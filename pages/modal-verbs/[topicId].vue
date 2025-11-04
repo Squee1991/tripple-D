@@ -1,30 +1,50 @@
 <template>
   <div class="comic-quiz-page">
     <header v-if="!loading && quizStore.activeQuestion" class="quiz-header-comic">
-      <button class="btn__back" @click="backTo">{{ t('prasens.back')}}</button>
+      <button class="btn__back" @click="backTo">{{ t('prasens.back') }}</button>
       <div>
         <div class="header-item">
-          {{ t('prasens.questionNumber')}} {{ quizStore.currentQuestionIndex + 1 }} / {{ quizStore.currentQuestions.length }}
+          {{ t('prasens.questionNumber') }} {{ quizStore.currentQuestionIndex + 1 }} /
+          {{ quizStore.currentQuestions.length }}
         </div>
         <div class="header-item score">
-          {{ t('prasens.score')}} {{ quizStore.score }}
+          {{ t('prasens.score') }} {{ quizStore.score }}
         </div>
       </div>
     </header>
     <main class="quiz-main-content">
-      <div v-if="loading" class="fullscreen-state">
-        <p>{{ t('prasens.loading')}}</p>
+      <div v-if="loading" class="loading">
+        <VPreloader/>
       </div>
-      <div v-else-if="quizStore.quizCompleted" class="fullscreen-state">
-        <div class="quiz-summary-comic">
-          <h2>{{ t('prasens.end')}} </h2>
-          <p>{{ t('prasens.result')}} {{ quizStore.score }} / {{ quizStore.currentQuestions.length }}</p>
-          <button @click="startQuiz" class="action-button">{{ t('prasens.again')}}</button>
-          <button @click="backTo" class="action-button">{{ t('prasens.back')}}</button>
-        </div>
+      <div v-else-if="quizStore.quizCompleted" class="finish-screen">
+        <template v-if="isVictory">
+          <CelebrationFireworks
+              :key="`cw-${startExpLocal}-${targetExpLocal}-${startPointsLocal}-${targetPointsLocal}`"
+              :start-exp="startExpLocal"
+              :target-exp="targetExpLocal"
+              :start-points="startPointsLocal"
+              :target-points="targetPointsLocal"
+              :level-start="startLevelLocal"
+              :level-end="endLevelLocal"
+          />
+        </template>
+        <template v-else>
+          <div class="fail-card">
+            <p class="fail-emoji">🌱✨</p>
+            <p class="fail-text">{{ t('sessionNotSuccessModal.failText')}} {{ store.score }} / {{ store.currentQuestions.length }}.</p>
+            <p class="fail-sub">
+              {{ t('sessionNotSuccessModal.failSub')}}
+            </p>
+            <div class="fail-actions">
+              <button class="btn try-again" @click="retryQuiz">{{ t('sessionNotSuccessModal.again')}}</button>
+              <button class="btn back" @click="backTo">{{ t('sessionNotSuccessModal.back')}}</button>
+            </div>
+          </div>
+        </template>
       </div>
       <div v-else-if="quizStore.activeQuestion" class="quiz-content-comic">
         <div class="question-card-comic">
+          <SoundBtn :text="fullSentence"/>
           <p class="question-text-comic">
             <span>{{ quizStore.activeQuestion.question.split('___')[0] }}</span>
             <span class="blank-space">{{ quizStore.selectedOption || '( ... )' }}</span>
@@ -45,8 +65,8 @@
         </div>
         <div class="footer-controls-comic">
           <div v-if="quizStore.feedback" class="feedback-message-comic" :class="quizStore.feedback">
-            <span v-if="quizStore.feedback === 'correct'">{{ t('prasens.correct')}}</span>
-            <span v-else>{{ t('prasens.wrong')}} {{ quizStore.activeQuestion.answer }}</span>
+            <span v-if="quizStore.feedback === 'correct'">{{ t('prasens.correct') }}</span>
+            <span v-else>{{ t('prasens.wrong') }} {{ quizStore.activeQuestion.answer }}</span>
           </div>
           <button
               v-if="quizStore.feedback === null"
@@ -54,53 +74,111 @@
               :disabled="!quizStore.selectedOption"
               class="action-button check"
           >
-            {{ t('prasens.check')}}
+            {{ t('prasens.check') }}
           </button>
           <button
               v-else
               @click="quizStore.nextQuestion()"
               class="action-button next"
           >
-            {{ t('prasens.further')}}
+            {{ t('prasens.further') }}
           </button>
         </div>
       </div>
     </main>
   </div>
 </template>
-
 <script setup>
+import {ref, onMounted, watch, computed} from 'vue'
+import {useRouter, useRoute} from 'vue-router'
+import {useI18n} from 'vue-i18n'
+import {useSeoMeta} from '#imports'
 
-import {ref, onMounted,} from 'vue';
-import {useQuizStore} from '../../store/usePrasensStore.js';
-import { useRouter , useRoute} from 'vue-router'
+import {useQuizStore} from '../../store/adjectiveStore.js'
+import {userlangStore} from '../../store/learningStore.js'
+import CelebrationFireworks from '../../src/components/CelebrationFireworks.vue'
+import SoundBtn from '../../src/components/soundBtn.vue'
+import VPreloader from "~/src/components/V-preloader.vue";
+
+useSeoMeta({robots: 'noindex, nofollow'})
+
+const AWARD_EXP = 5
+const AWARD_POINTS = 5
+const DELAY_MS = 4000
+const LEVEL_UP_XP = 100
+
 const router = useRouter()
-const route = useRoute();
-const quizStore = useQuizStore();
-const loading = ref(true);
-const { t } = useI18n()
-const category = 'modal-verbs';
+const route = useRoute()
+const learning = userlangStore()
+const quizStore = useQuizStore()
+const {t} = useI18n()
 
-const { topicId } = route.params;
-async function startQuiz() {
-  const fileName = `/verbs-data/${category}-${topicId}.json`;
-  loading.value = true;
-  await quizStore.startNewQuiz(fileName);
-  loading.value = false;
+const loading = ref(true)
+const category = 'modal-verbs'
+const {topicId} = route.params
+
+const isVictory = computed(() => {
+  return quizStore.currentQuestions.length === 10 && quizStore.score >= 8
+})
+
+const retryQuiz = async () => {
+  const fileName = `/adjective/${category}-${topicId}.json`
+  await quizStore.startNewQuiz({ modeId: category, topicId, fileName, contentVersion: 'v1' })
 }
 
-const backTo = () => {
-  router.back()
-}
+const fullSentence = computed(() => {
+  const quest = quizStore.activeQuestion
+  if (!quest) return ''
+  const [pre, post = ''] = quest.question.split('___')
+  const word = quizStore.selectedOption || ''
+  return `${pre}${word}${post}`
+})
 
-onMounted(() => {
-  startQuiz();
-});
+const startExpLocal = ref(0)
+const targetExpLocal = ref(0)
+const startPointsLocal = ref(0)
+const targetPointsLocal = ref(0)
+const startLevelLocal = ref(0)
+const endLevelLocal = ref(0)
 
+const backTo = () => router.back()
+
+onMounted(async () => {
+  loading.value = true
+  const fileName = `/verbs-data/${category}-${topicId}.json`
+  quizStore.setContext({modeId: category, topicId, fileName, contentVersion: 'v1'})
+  await quizStore.restoreOrStart({modeId: category, topicId, fileName, contentVersion: 'v1'})
+  await learning.loadFromFirebase?.()
+  loading.value = false
+})
+
+watch(() => quizStore.quizCompleted, async (done) => {
+  if (!done) return
+
+  const curExp = Number(learning.exp || 0)
+  const curPoints = Number(learning.points || 0)
+  const curLevel = Number(learning.isLeveling || 0)
+
+  const rawTargetExp = curExp + AWARD_EXP
+  const levelUps = Math.floor(rawTargetExp / LEVEL_UP_XP)
+  const endLevel = curLevel + levelUps
+  const endExpMod = rawTargetExp % LEVEL_UP_XP
+  startExpLocal.value = curExp
+  targetExpLocal.value = endExpMod
+  startPointsLocal.value = curPoints
+  targetPointsLocal.value = curPoints + AWARD_POINTS
+  startLevelLocal.value = curLevel
+  endLevelLocal.value = endLevel
+  setTimeout(async () => {
+    learning.exp = rawTargetExp
+    learning.points = targetPointsLocal.value
+    learning.handleLeveling?.()
+    await learning.saveToFirebase?.()
+  }, DELAY_MS)
+})
 </script>
 
 <style scoped>
-
 .btn__back {
   border: 3px solid #1e1e1e;
   padding: 15px;
@@ -124,15 +202,10 @@ onMounted(() => {
   font-family: "Nunito", sans-serif;
   letter-spacing: 1.5px;
   min-height: 100vh;
-  padding-top: 100px;
 }
 
 .quiz-header-comic {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -142,7 +215,7 @@ onMounted(() => {
   font-size: 1.8rem;
   border-bottom: 3px solid #000;
   box-shadow: 0 4px 0 #000;
-
+  margin-bottom: 15px;
 }
 
 .quiz-main-content {
@@ -150,14 +223,7 @@ onMounted(() => {
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 1.5rem;
   box-sizing: border-box;
-}
-
-.fullscreen-state {
-  font-size: 4rem;
-  color: #333;
-  text-align: center;
 }
 
 .quiz-content-comic {
@@ -179,7 +245,6 @@ onMounted(() => {
   transition: all 0.1s ease-in-out;
 }
 
-
 .option-button-comic:hover,
 .action-button:hover,
 .quiz-summary-comic:hover {
@@ -188,15 +253,19 @@ onMounted(() => {
 }
 
 .question-card-comic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #fff;
   padding: 2rem;
   transform: rotate(.7deg);
 }
 
 .question-text-comic {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   text-align: center;
   color: #000;
+  margin-left: 8px;
 }
 
 .blank-space {
@@ -301,35 +370,129 @@ onMounted(() => {
   font-size: 2rem;
   margin: 1rem 0 2rem;
 }
+
+.finish-screen {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  width: 100%;
+}
+
+.fail-card {
+  max-width: 600px;
+  width: 90%;
+  background: #e0f7fa;
+  border: 4px solid #000;
+  border-radius: 20px;
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 5px 5px 0 #000;
+  transform: rotate(-1deg);
+  font-family: "Nunito", sans-serif;
+  animation: popIn 0.5s ease-out;
+}
+
+.fail-emoji {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.fail-text {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #0077b6;
+}
+
+.fail-sub {
+  font-size: 1.2rem;
+  margin-bottom: 24px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.fail-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.btn.try-again {
+  background: #06d6a0;
+  color: #fff;
+  border: 3px solid #000;
+  border-radius: 12px;
+  padding: 12px 18px;
+  box-shadow: 6px 6px 0 #000;
+  font-weight: 800;
+  transform: rotate(-1deg);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn.try-again:hover {
+  background: #1de9b6;
+}
+
+.btn.back {
+  background: #ffd166;
+  color: #000;
+  border: 3px solid #000;
+  border-radius: 12px;
+  padding: 12px 18px;
+  box-shadow: 6px 6px 0 #000;
+  font-weight: 800;
+  transform: rotate(1deg);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn.back:hover {
+  background: #ffe29a;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.8) rotate(-4deg); opacity: 0; }
+  to   { transform: scale(1) rotate(-1deg); opacity: 1; }
+}
+
 @media (max-width: 767px) {
   .quiz-header-comic {
     gap: 10px;
     padding: 10px;
   }
+
   .header-item {
     font-size: 18px;
   }
+
   .btn__back {
     padding: 10px;
     font-size: 1rem;
   }
+
   .question-text-comic {
     font-size: 1.3rem;
   }
+
   .option-button-comic {
     font-size: 1.3rem;
   }
+
   .action-button {
     font-size: 1.4rem;
     font-family: "Nunito", sans-serif;
     font-weight: 600;
   }
+
   .quiz-main-content {
     padding: 5px;
   }
+
   .question-card-comic {
     padding: 1rem;
   }
 }
-
 </style>

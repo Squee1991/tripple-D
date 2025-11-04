@@ -14,10 +14,10 @@
 import FeedBack from "~/src/components/feedBack.vue";
 import { useRouter } from "vue-router";
 const router = useRouter();
-
+const { t } = useI18n();
 const data = ref([
-  {id: 1, text: 'На главную' , path: '/'},
-  {id: 2, text: 'Справочный центр' , path: '/faq'},
+  {id: 1, text: t('faq.btnBack') , path: '/'},
+  {id: 2, text: t('cabinetAccordion.faq') , path: '/faq'},
 ])
 
 const pathFunction = (pathValue) => {
@@ -63,10 +63,17 @@ const pathFunction = (pathValue) => {
   }
 }
 
+@media (max-width: 767px) {
+  .faq__section {
+    padding: 25px 0;
+  }
+}
+
 @media (max-width: 480px){
   .btns__wrapper {
     flex-direction: column;
     justify-content: space-between;
+    padding: 0 15px;
   }
   .back__btn {
     width: 100%;

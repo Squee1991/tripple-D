@@ -13,6 +13,26 @@ import Family from '../../assets/images/family.svg'
 import School from '../../assets/images/school.svg'
 import Travel from '../../assets/images/travel.svg'
 import Clock from '../../assets/images/clock.svg'
+import { useHead, useSeoMeta } from '#imports'
+const canonical = useCanonical()
+const {t} = useI18n()
+const pageTitle = t('metaThematic.title')
+const pageDesc  = t('metaThematic.description')
+
+useHead({
+  title: pageTitle,
+  link: [{ rel: 'canonical', href: canonical }]
+})
+useSeoMeta({
+  title: pageTitle,
+  description: pageDesc,
+  ogTitle: pageTitle,
+  ogDescription: pageDesc,
+  ogType: 'article',
+  ogUrl: canonical,
+  ogImage: '/images/seo-thematic-levels.png',
+  robots: 'index, follow'
+})
 
 const router = useRouter()
 const trainer = useTrainerStore()
@@ -21,25 +41,14 @@ const themes = [
   {key: 'zeit', name: 'chooseThemeList.time', img: Clock, position: {top: '25%', left: '55%', rotate: '4deg'}},
   {key: 'family', name: 'chooseThemeList.family', img: Family, position: {top: '2%', left: '60%', rotate: '8deg'}},
   {key: 'food', name: 'chooseThemeList.food', img: Food, position: {top: '45%', left: '13%', rotate: '-3deg'}},
-  {
-    key: 'purchases',
-    name: 'chooseThemeList.purchases',
-    img: Purchase,
-    position: {top: '30%', left: '35%', rotate: '-6deg'}
-  },
+  {key: 'purchases', name: 'chooseThemeList.purchases', img: Purchase, position: {top: '30%', left: '35%', rotate: '-6deg'}},
   {key: 'health', name: 'chooseThemeList.health', img: Health, position: {top: '20%', left: '2%', rotate: '7deg'}},
   {key: 'weather', name: 'chooseThemeList.weather', img: Weather, position: {top: '70%', left: '55%', rotate: '-5deg'}},
   {key: 'clothes', name: 'chooseThemeList.clothes', img: Clothes, position: {top: '48%', left: '65%', rotate: '-3deg'}},
-  {
-    key: 'transport',
-    name: 'chooseThemeList.transport',
-    img: Transport,
-    position: {top: '55%', left: '30%', rotate: '4deg'}
-  },
+  {key: 'transport', name: 'chooseThemeList.transport', img: Transport, position: {top: '55%', left: '30%', rotate: '4deg'}},
   {key: 'school', name: 'chooseThemeList.school', img: School, position: {top: '68%', left: '5%', rotate: '-8deg'}},
   {key: 'travel', name: 'chooseThemeList.travel', img: Travel, position: {top: '2%', left: '30%', rotate: '3deg'}}
 ]
-
 const selectedTopic = ref(themes[0].key)
 const jsonData = ref(null)
 const loading = ref(true)
@@ -49,7 +58,6 @@ const chalkMessage = ref('')
 const showChalkMessage = ref(false)
 let messageTimeout = null
 const moduleToStart = ref(null)
-const {t} = useI18n()
 const triggerChalkMessage = (text) => {
   clearTimeout(messageTimeout)
   chalkMessage.value = text
@@ -197,6 +205,7 @@ watch(topic, loadThemeData)
 </template>
 
 <style>
+
 :root {
   --classroom-bg: #f0ebe5;
   --blackboard-bg: #2c3e50;
@@ -259,9 +268,6 @@ watch(topic, loadThemeData)
   transition: all 0.2s ease-in-out;
 }
 
-/*.back-card-button:hover {*/
-/*    transform: rotate(0deg) scale(1.05);*/
-/*}*/
 .back-card-button .pin {
   display: none;
 }
@@ -270,7 +276,7 @@ watch(topic, loadThemeData)
   font-size: 1.2rem;
   color: #1e1e1e;
   font-weight: 400;
-  font-family: 'Fredoka One', cursive;
+  font-family: "Nunito", sans-serif;
 }
 
 .level-selector {
@@ -362,9 +368,11 @@ watch(topic, loadThemeData)
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(-4deg);
-  color: #f1c40f;
+  color: #ee4c4c;
   font-family: "Nunito", sans-serif;
   font-size: 2rem;
+  font-weight: bold;
+  width: 100%;
   z-index: 100;
   text-align: center;
 }
@@ -419,7 +427,6 @@ watch(topic, loadThemeData)
 }
 
 .theme__card-choice:hover {
-  transform: scale(1.1) !important;
   z-index: 10;
 }
 

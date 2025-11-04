@@ -1,5 +1,8 @@
 <template>
   <div class="theme-page">
+    <Transition name="fade">
+      <VPreloader v-if="isLoading"/>
+    </Transition>
     <div class="theme-page-container">
       <div class="theme__title-wrapper">
         <button class="back-btn" @click="goBack">
@@ -8,11 +11,10 @@
           </svg>
           {{ t('selectedpage.backBtn') }}
         </button>
-        <h2 class="theme-title">{{ t('selectedpage.title') }}</h2>
+        <h1 class="theme-title">{{ t('selectedpage.title') }}</h1>
         <div class="title-spacer"></div>
       </div>
       <div class="theme-content-area">
-
         <div class="grid-area-wrapper">
           <div class="theme__grid-container">
             <div class="theme-grid">
@@ -54,7 +56,12 @@
                   </div>
                 </div>
                 <div class="modes-list">
-                  <label v-for="mode in modes" :key="mode.key" class="checkbox-container">
+                  <label
+                      v-for="mode in modes"
+                      :key="mode.key"
+                      class="checkbox-container"
+                      :class="{ 'active-mode': selectedModes.includes(mode.key) }"
+                  >
                     <input
                         type="checkbox"
                         v-model="selectedModes"
@@ -70,7 +77,7 @@
                 </div>
                 <button
                     class="start-btn"
-                    :disabled="!selectedModes.length"
+                    :disabled="!selectedModes.length || isLoading"
                     @click="startLearning"
                 >
                   {{ t('selectedpage.startBtn') }}
@@ -85,15 +92,16 @@
 </template>
 
 <script setup>
-import {ref, computed, onMounted} from 'vue'
+import VPreloader from "../../src/components/V-preloader.vue";
+import {ref, computed, onMounted, nextTick} from 'vue'
 import {useRouter} from 'vue-router'
 import {userlangStore} from '../../store/learningStore.js'
 import Lottie from 'lottie-web'
 import {nameMap} from '../../utils/nameMap.js'
-
-const {t} = useI18n()
+import {useHead, useSeoMeta} from '#imports'
 import NotFound from '../../assets/animation/notFound.json'
-
+import {useCanonical} from '../../composables/useCanonical.js'
+const {t} = useI18n()
 const showModesBlock = ref(false)
 const showNoTopicMessage = ref(true)
 const router = useRouter()
@@ -103,14 +111,30 @@ const selectedTopic = ref(null)
 const selectedModes = ref([])
 const animationContainer = ref(null)
 const localePath = useLocalePath()
-onMounted(() => {
-  if (animationContainer.value) {
-    Lottie.loadAnimation({
-      container: animationContainer.value,
-      loop: false,
-      animationData: NotFound
-    })
-  }
+const canonical = useCanonical()
+const isLoading = ref(false)
+const page = ref(0)
+const itemsPerPage = 9
+
+const pageTitle = t('metaArticle.title')
+const pageDesc = t('metaArticle.description')
+
+useHead({
+  title: pageTitle,
+  link: [
+    {rel: 'canonical', href: canonical}
+  ]
+})
+
+useSeoMeta({
+  title: pageTitle,
+  description: pageDesc,
+  ogTitle: pageTitle,
+  ogDescription: pageDesc,
+  ogType: 'website',
+  ogUrl: canonical,
+  ogImage: '/images/seo-articles.png',
+  robots: 'index, follow'
 })
 
 const clearSelectedTopic = () => {
@@ -120,15 +144,11 @@ const clearSelectedTopic = () => {
     selectedModes.value = []
     showNoTopicMessage.value = false
   }, 450)
-
 }
 
 const goBack = () => {
-  router.back()
+  router.push('/')
 }
-
-const page = ref(0)
-const itemsPerPage = 9
 
 const topicKeys = computed(() => Object.keys(nameMap))
 
@@ -147,38 +167,6 @@ const nextPage = () => {
 const prevPage = () => {
   if (page.value > 0) page.value--
 }
-
-// const nameMap = {
-//     Furniture: 'nameMap.Furniture',
-//     Animals: 'nameMap.Animals',
-//     Clothes: 'nameMap.Clothes',
-//     Food: 'nameMap.Food',
-//     Body: 'nameMap.Body',
-//     Professions: 'nameMap.Professions',
-//     Transport: 'nameMap.Transport',
-//     Colors: 'nameMap.Colors',
-//     Nature: 'nameMap.Nature',
-//     Home: 'nameMap.Home',
-//     Zeit: 'nameMap.Zeit',
-//     City: 'nameMap.City',
-//     School: 'nameMap.School',
-//     DaysAndMonths: 'nameMap.DaysAndMonths',
-//     Toys: 'nameMap.Toys',
-//     CommonItems: 'nameMap.CommonItems',
-//     BathroomItems: 'nameMap.BathroomItems',
-//     Kosmetik: 'nameMap.Kosmetik',
-//     Familie: 'nameMap.Familie',
-//     Emotions: 'nameMap.Emotions',
-//     Werkzeuge: 'nameMap.Werkzeuge',
-//     Kitchen: 'nameMap.Kitchen',
-//     Health: 'nameMap.Health',
-//     Sport: 'nameMap.Sport',
-//     SportEquipment: 'nameMap.SportEquipment',
-//     Travel: 'nameMap.Travel',
-//     Musik: 'nameMap.Musik',
-//     Amount: 'nameMap.Amount',
-//     Informatik: 'nameMap.Informatik'
-// }
 
 const modes = [
   {key: 'article', label: 'modes.article'},
@@ -207,36 +195,48 @@ const selectTopic = (key) => {
 }
 
 const startLearning = async () => {
-  const topicWords = (themeList.value[selectedTopic.value] || [])
-      .filter(word => {
-        const globalWord = store.words.find(
-            w => w.de === word.de && w.topic === selectedTopic.value
-        )
-        return selectedModes.value.some(
-            mode => !(globalWord?.progress?.[mode] === true)
-        )
-      })
-      .map(w => ({...w, topic: selectedTopic.value}))
+  if (!selectedModes.value.length || isLoading.value) return
+  isLoading.value = true
+  try {
+    const topicWords = (themeList.value[selectedTopic.value] || [])
+        .filter(word => {
+          const globalWord = store.words.find(
+              w => w.de === word.de && w.topic === selectedTopic.value
+          )
+          return selectedModes.value.some(mode => !(globalWord?.progress?.[mode] === true))
+        })
+        .map(w => ({...w, topic: selectedTopic.value}))
 
-  await store.addWordsToGlobal(topicWords)
-  await store.setSelectedWords(topicWords)
-  await store.setSelectedTopics([selectedTopic.value])
-  await store.saveToFirebase()
+    await store.addWordsToGlobal(topicWords)
+    await store.setSelectedWords(topicWords)
+    await store.setSelectedTopics([selectedTopic.value])
+    await store.saveToFirebase()
 
-  const path = localePath({
-    path: '/articles/articles-session',
-    query: {
-      topic: selectedTopic.value,
-      mode: selectedModes.value
-    }
-  })
-  router.push(path)
-
+    await nextTick()
+    const path = localePath({
+      path: '/articles/articles-session',
+      query: {topic: selectedTopic.value, mode: selectedModes.value}
+    })
+    await router.push(path)
+  } catch (e) {
+    console.error(e)
+    isLoading.value = false
+  }
 }
 
 onMounted(async () => {
   const res = await fetch('/words.json')
   themeList.value = await res.json()
+})
+
+onMounted(() => {
+  if (animationContainer.value) {
+    Lottie.loadAnimation({
+      container: animationContainer.value,
+      loop: false,
+      animationData: NotFound
+    })
+  }
 })
 
 </script>
@@ -683,18 +683,44 @@ onMounted(async () => {
   }
 }
 
-@media(max-width: 540px )  {
+@media (max-width: 540px ) {
   .theme__title-wrapper {
     flex-direction: column;
   }
+
   .back-btn {
     box-shadow: 2px 2px 0 black;
     width: 100%;
     margin-bottom: 15px;
   }
+
   .theme-title {
     font-size: 1.2rem;
   }
+}
+
+.checkbox-container.active-mode {
+  background-color: #f1c40f;
+  border-radius: 12px;
+}
+
+.preloader-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .2s ease;
+}
+
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
 }
 
 </style>

@@ -1,24 +1,30 @@
 import {defineStore} from "pinia";
 import {ref, computed} from 'vue'
 import {
-	getAuth,
-	createUserWithEmailAndPassword,
-	signInWithEmailAndPassword,
-	EmailAuthProvider, reauthenticateWithCredential,
-	updateProfile,
-	signOut,
-	deleteUser,
-	onAuthStateChanged,
-	sendPasswordResetEmail,
-	sendEmailVerification,
-	signInWithPopup,
-	reauthenticateWithPopup, GoogleAuthProvider
+    getAuth,
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    EmailAuthProvider, reauthenticateWithCredential,
+    updateProfile,
+    signOut,
+    deleteUser,
+    onAuthStateChanged,
+    sendPasswordResetEmail,
+    sendEmailVerification,
+    signInWithPopup,
+    reauthenticateWithPopup, GoogleAuthProvider
 } from 'firebase/auth';
-import {doc, setDoc, getDoc, getFirestore, updateDoc, deleteDoc, serverTimestamp} from 'firebase/firestore';
+import { doc, setDoc, getDoc, getFirestore, updateDoc, deleteDoc, serverTimestamp, writeBatch } from 'firebase/firestore';
 import {userlangStore} from "./learningStore.js";
-
 let authStateUnsubscribe = null;
+
 export const userAuthStore = defineStore('auth', () => {
+	const auth = useFirebaseAuth()
+	const LEADERBOARD_COLLECTION = 'marathon_leaderboard';
+	const LEADERBOARD_GUESS = 'leaderboard_guess'
+	const DAILY__COLLECTION = 'daily';
+	const LOCAL_STAT_COLLECTION = 'localStatGame';
+	const voiceConsentGiven = ref(false)
 	const name = ref(null)
 	const email = ref(null)
 	const registeredAt = ref(null)
@@ -26,22 +32,23 @@ export const userAuthStore = defineStore('auth', () => {
 	const providerId = ref('')
 	const avatar = ref(null)
 	const uid = ref(null)
+	const notEnoughArticle = ref(false)
 	const gotPremiumBonus = ref(false)
 	const subscriptionEndsAt = ref(null)
 	const subscriptionCancelled = ref(false)
 	const availableAvatars = ref(['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '12.png', '7.png', '8.png', '9.png', '10.png', '11.png', '13.png', '14.png']);
 	const ownedAvatars = ref(['1.png', '2.png']);
 	const isPremium = ref(false)
+	const achievements = ref(null);
+
+	const initialized = ref(false)
+	let initPromise = null
+
 	const isGoogleUser = computed(() => providerId.value === 'google.com');
 	const getAvatarUrl = (fileName) => {
 		if (!fileName) return '';
-		try {
-			return new URL(`../assets/images/avatars/${fileName}`, import.meta.url).href;
-		} catch (e) {
-			console.error(`Ошибка URL для аватара: ${fileName}`, e);
-			return '';
-		}
-	};
+		return `/images/avatars/${fileName}`;
+	}
 
 	const normalizeDate = (v) => {
 		if (!v) return null;
@@ -50,17 +57,20 @@ export const userAuthStore = defineStore('auth', () => {
 		return isNaN(d.getTime()) ? null : d.toISOString();
 	};
 
-	const avatarUrl = computed(() => getAvatarUrl(avatar.value));
-	const createInitialAchievementsObject = () => {
-		return {
-			achievements: {
-				A1: {wins: 0, streaks: 0, cleanSweeps: 0, flawlessWins: 0},
-				A2: {wins: 0, streaks: 0, cleanSweeps: 0, flawlessWins: 0},
-				B1: {wins: 0, streaks: 0, cleanSweeps: 0, flawlessWins: 0},
-				B2: {wins: 0, streaks: 0, cleanSweeps: 0, flawlessWins: 0}
-			}
-		};
-	};
+	const avatarUrl = computed(() => {
+		return avatar.value ? `/images/avatars/${avatar.value}` : '';
+	});
+
+    const createInitialAchievementsObject = () => {
+        return {
+            achievements: {
+                A1: {wins: 0, streaks: 0, cleanSweeps: 0},
+                A2: {wins: 0, streaks: 0, cleanSweeps: 0},
+                B1: {wins: 0, streaks: 0, cleanSweeps: 0},
+                B2: {wins: 0, streaks: 0, cleanSweeps: 0}
+            }
+        };
+    };
 
 	const grantPremiumBonusPoints = async () => {
 		const auth = getAuth();
@@ -88,10 +98,11 @@ export const userAuthStore = defineStore('auth', () => {
 		subscriptionEndsAt.value = data.subscriptionEndsAt || null
 		subscriptionCancelled.value = data.subscriptionCancelled || false
 		providerId.value = data.providerId || ''
-		ownedAvatars.value = data.ownedAvatars || ['1.png', '2.png'];
-		if (data.isPremium && !data.gotPremiumBonus) {
-			grantPremiumBonusPoints()
-		}
+		ownedAvatars.value = data.ownedAvatars || ['1.png', '2.png']
+		achievements.value = data.achievements || null
+		voiceConsentGiven.value = data.voiceConsentGiven === true
+
+		if (data.isPremium && !data.gotPremiumBonus) grantPremiumBonusPoints()
 	}
 
 	const updateUserAvatar = async (newAvatarFilename) => {
@@ -109,12 +120,11 @@ export const userAuthStore = defineStore('auth', () => {
 	};
 
 	const loginWithGoogle = async () => {
-		const auth = getAuth();
-		const provider = new GoogleAuthProvider();
-		const result = await signInWithPopup(auth, provider);
-		const user = result.user;
-		const userDocRef = doc(db, 'users', user.uid);
-		const userDoc = await getDoc(userDocRef);
+		const provider = new GoogleAuthProvider()
+		const result = await signInWithPopup(auth, provider)
+		const user = result.user
+		const userDocRef = doc(db, 'users', user.uid)
+		const userDoc = await getDoc(userDocRef)
 		if (!userDoc.exists()) {
 			await setDoc(userDocRef, {
 				ownedAvatars: ['1.png', '2.png'],
@@ -123,12 +133,12 @@ export const userAuthStore = defineStore('auth', () => {
 				registeredAt: serverTimestamp(),
 				avatar: '1.png',
 				gotPremiumBonus: false,
+				voiceConsentGiven: false,
 				...createInitialAchievementsObject()
-			});
+			})
 		}
-
-		const finalDoc = await getDoc(userDocRef);
-		const userDataFromDb = finalDoc.data() || {};
+		const finalDoc = await getDoc(userDocRef)
+		const userDataFromDb = finalDoc.data() || {}
 		setUserData({
 			name: user.displayName,
 			email: user.email,
@@ -136,40 +146,43 @@ export const userAuthStore = defineStore('auth', () => {
 			uid: user.uid,
 			providerId: user.providerData[0]?.providerId || '',
 			...userDataFromDb
-		});
-	};
+		})
+		console.log('✅ Logged into Firebase project:', auth.app.options.projectId)
+	}
 
 	const registerUser = async (userData) => {
-		const auth = getAuth();
-		const userCredential = await createUserWithEmailAndPassword(auth, userData.email, userData.password);
-		const user = userCredential.user;
-		await updateProfile(user, { displayName: userData.name });
-		await sendEmailVerification(user);
-		const defaultAvatar = '1.png';
-		const initialOwnedAvatars = ['1.png', '2.png'];
-		await setDoc(doc(db, 'users', user.uid), {
+		const userCredential = await createUserWithEmailAndPassword(auth, userData.email, userData.password)
+		const user = userCredential.user
+
+		await updateProfile(user, { displayName: userData.name })
+		await sendEmailVerification(user)
+
+		const userDocRef = doc(db, 'users', user.uid)
+		await setDoc(userDocRef, {
 			name: userData.name,
 			email: userData.email,
 			registeredAt: serverTimestamp(),
-			avatar: defaultAvatar,
-			ownedAvatars: initialOwnedAvatars,
+			avatar: '1.png',
+			ownedAvatars: ['1.png', '2.png'],
 			isPremium: false,
 			subscriptionEndsAt: null,
 			gotPremiumBonus: false,
+			voiceConsentGiven: false,
 			...createInitialAchievementsObject()
-		});
+		})
+
+		const finalDoc = await getDoc(userDocRef)
+		const data = finalDoc.data() || {}
+
 		setUserData({
-			uid: user.uid,
-			name: userData.name,
-			email: userData.email,
+			name: data.name ?? userData.name,
+			email: data.email ?? userData.email,
 			registeredAt: user.metadata.creationTime,
-			avatar: defaultAvatar,
-			ownedAvatars: initialOwnedAvatars,
-			isPremium: false,
-			subscriptionEndsAt: null,
-			gotPremiumBonus: false,
-		});
-	};
+			uid: user.uid,
+			providerId: user.providerData[0]?.providerId || '',
+			...data,
+		})
+	}
 
 	const loginUser = async ({email, password}) => {
 		const auth = getAuth()
@@ -191,51 +204,67 @@ export const userAuthStore = defineStore('auth', () => {
 		await sendPasswordResetEmail(auth, email)
 	}
 
+	const setVoiceConsent = async (value = true) => {
+		const auth = getAuth();
+		const user = auth.currentUser;
+		if (!user) return;
+		const userDocRef = doc(db, 'users', user.uid);
+		await updateDoc(userDocRef, { voiceConsentGiven: !!value });
+		voiceConsentGiven.value = !!value;
+	};
+
 	const deleteAccount = async (password = null) => {
 		const auth = getAuth();
 		const user = auth.currentUser;
-		if (!user) throw {code: 'auth/no-current-user'};
-
+		if (!user) throw { code: 'auth/no-current-user' };
 		try {
 			const usesGoogle = user.providerData.some(p => p.providerId === 'google.com');
 			if (usesGoogle) {
 				const provider = new GoogleAuthProvider();
 				await reauthenticateWithPopup(user, provider);
 			} else {
-				if (!user.email) throw {code: 'auth/missing-email'};
-				if (!password) throw {code: 'auth/missing-password'};
+				if (!user.email) throw { code: 'auth/missing-email' };
+				if (!password) throw { code: 'auth/missing-password' };
 				const cred = EmailAuthProvider.credential(user.email, password);
 				await reauthenticateWithCredential(user, cred);
 			}
 
-			await deleteDoc(doc(db, 'users', user.uid));
+			const batch = writeBatch(db);
+			batch.delete(doc(db, 'users', user.uid));
+			batch.delete(doc(db, LEADERBOARD_COLLECTION, user.uid));
+			batch.delete(doc(db, LEADERBOARD_GUESS, user.uid));
+			await batch.commit();
 			await deleteUser(user);
 			setUserData({});
 		} catch (err) {
 			if (err && err.code) throw err;
 			const msg = String(err?.message || '');
-			if (msg.includes('requires-recent-login')) throw {code: 'auth/requires-recent-login'};
-			if (msg.includes('popup-closed')) throw {code: 'auth/popup-closed-by-user'};
-			throw {code: 'auth/unknown'};
+			if (msg.includes('requires-recent-login')) throw { code: 'auth/requires-recent-login' };
+			if (msg.includes('popup-closed')) throw { code: 'auth/popup-closed-by-user' };
+			throw { code: 'auth/unknown' };
 		}
 	};
 
 	const purchaseAvatar = async (fileName) => {
-		const langStore = userlangStore();
-		if (ownedAvatars.value.includes(fileName)) return;
+		const langStore = userlangStore()
+		notEnoughArticle.value = false
+		if (ownedAvatars.value.includes(fileName)) return 'owned'
 		if (langStore.points < 50) {
-			throw new Error('Недостаточно Артиклюсов!');
+			notEnoughArticle.value = true
+			return 'insufficient'
 		}
-		langStore.points -= 50;
-		langStore.articlesSpentForAchievement += 50;
-		await langStore.saveToFirebase();
-		ownedAvatars.value.push(fileName);
-		const userDocRef = doc(db, 'users', uid.value);
-		await updateDoc(userDocRef, {
-			ownedAvatars: ownedAvatars.value
-		});
-	};
+		langStore.points -= 50
+		langStore.articlesSpentForAchievement += 50
+		await langStore.saveToFirebase()
+		ownedAvatars.value.push(fileName)
+		const userDocRef = doc(db, 'users', uid.value)
+		await updateDoc(userDocRef, { ownedAvatars: ownedAvatars.value })
+		return 'success'
+	}
 
+	const clearNotEnoughArticle = () => {
+		notEnoughArticle.value = false
+	}
 
 	const logOut = async () => {
 		const auth = getAuth()
@@ -270,10 +299,42 @@ export const userAuthStore = defineStore('auth', () => {
 			} else {
 				setUserData({});
 			}
+			initialized.value = true
 		})
 	}
-
-	fetchuser()
+	const initAuth = () => {
+		if (initialized.value) return Promise.resolve()
+		if (initPromise) return initPromise
+		initPromise = new Promise((resolve) => {
+			if (typeof window === 'undefined') {
+				initialized.value = true
+				resolve()
+				return
+			}
+			const auth = getAuth()
+			if (authStateUnsubscribe) authStateUnsubscribe()
+			authStateUnsubscribe = onAuthStateChanged(auth, async (user) => {
+				if (user) {
+					const userDocRef = doc(db, 'users', user.uid);
+					const userDoc = await getDoc(userDocRef);
+					const userDataFromDb = userDoc.exists() ? userDoc.data() : {};
+					setUserData({
+						name: userDataFromDb.name ?? user.displayName,
+						email: user.email,
+						registeredAt: user.metadata.creationTime,
+						uid: user.uid,
+						providerId: user.providerData[0]?.providerId || '',
+						...userDataFromDb
+					})
+				} else {
+					setUserData({});
+				}
+				initialized.value = true
+				resolve()
+			})
+		})
+		return initPromise
+	}
 
 	return {
 		name,
@@ -281,23 +342,30 @@ export const userAuthStore = defineStore('auth', () => {
 		registeredAt,
 		providerId,
 		uid,
-		isGoogleUser,
-		avatar,
-		avatarUrl,
-		availableAvatars,
 		isPremium,
 		subscriptionEndsAt,
 		subscriptionCancelled,
+		avatar,
+		avatarUrl,
+		availableAvatars,
 		ownedAvatars,
-		purchaseAvatar,
+		initialized,
+		isGoogleUser,
+		notEnoughArticle,
+		voiceConsentGiven,
+		setVoiceConsent,
+		clearNotEnoughArticle,
+		achievements,
+		initAuth,
+		fetchuser,
 		registerUser,
-		logOut,
 		loginUser,
+		loginWithGoogle,
 		resetPassword,
 		deleteAccount,
-		loginWithGoogle,
+		logOut,
+		purchaseAvatar,
 		updateUserAvatar,
 		getAvatarUrl,
-		fetchuser
 	}
 })

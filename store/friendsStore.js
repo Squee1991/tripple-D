@@ -4,19 +4,30 @@ import {
 	getFirestore,
 	doc,
 	setDoc,
-	updateDoc,
 	serverTimestamp,
 	collection,
 	query,
 	where,
 	getDocs,
 	getDoc,
+	deleteDoc
 } from 'firebase/firestore'
 import { getAuth } from 'firebase/auth'
+
+function normalizeAvatarPath(v) {
+	if (!v) return null
+	const s = String(v).trim()
+	if (/^https?:\/\//i.test(s)) return s
+	const clean = s.split(/[?#]/)[0].replace(/^\/+/, '')
+	const file = clean.split('/').pop()
+	if (!file) return null
+	return '/images/avatars/' + file
+}
 
 export const useFriendsStore = defineStore('friends', () => {
 	const db = getFirestore()
 	const auth = getAuth()
+
 	const friends = ref([])
 	const requestsIncoming = ref([])
 	const requestsOutgoing = ref([])
@@ -41,6 +52,7 @@ export const useFriendsStore = defineStore('friends', () => {
 		const emailTrim = (email || '').trim()
 		const emailNorm = emailTrim.toLowerCase()
 		if (!emailTrim) throw new Error('Укажи email')
+
 		const usersCol = collection(db, 'users')
 		let snap = await getDocs(query(usersCol, where('emailLower', '==', emailNorm)))
 		if (snap.empty) snap = await getDocs(query(usersCol, where('email', '==', emailNorm)))
@@ -51,24 +63,58 @@ export const useFriendsStore = defineStore('friends', () => {
 		return { uid: d.id, ...d.data() }
 	}
 
-	async function sendFriendRequest(email) {
+	async function getRelationStatus(uidA, uidB) {
+		if (!uidA || !uidB) return 'none'
+		try {
+			const s = await getDoc(doc(db, 'users', uidA, 'friends', uidB))
+			return s.exists() ? (s.data()?.status || 'none') : 'none'
+		} catch {
+			return 'none'
+		}
+	}
+
+	async function resolveUser(identifier) {
+		const id = String(identifier || '').trim()
+		if (!id) return null
+		if (id.includes('@')) return await findUserByEmail(id)
+
+		const prof = await getProfile(id)
+		return prof ? { uid: id, ...prof } : null
+	}
+
+
+	async function sendFriendRequest(identifier) {
 		const myUid = currentUserUid()
 		if (!myUid) throw new Error('Не авторизован')
-
-		const user = await findUserByEmail(email)
+		const user = await resolveUser(identifier)
 		if (!user) throw new Error('Пользователь не найден')
-
 		const theirUid = user.uid
 		if (!theirUid) throw new Error('Некорректный UID')
 		if (theirUid === myUid) throw new Error('Нельзя добавить себя')
-
-		const theirProfile = user // уже есть
+		const statusMe   = await getRelationStatus(myUid, theirUid)
+		const statusThem = await getRelationStatus(theirUid, myUid)
+		if (statusMe === 'accepted' || statusThem === 'accepted') {
+			throw new Error('Этот пользователь уже у вас в друзьях.')
+		}
+		if (statusMe === 'pending') {
+			throw new Error('Запрос уже отправлён.')
+		}
+		if (statusMe === 'incoming') {
+			await acceptRequest(theirUid)
+			return true
+		}
+		const theirProfile = user
+		const myProfile = await getProfile(myUid)
 		const theirEmail = theirProfile.email || null
 		const theirName  = theirProfile.name || theirProfile.displayName || null
-
-		const myProfile = await getProfile(myUid)
-		const myEmail = myProfile?.email || null
-		const myName  = myProfile?.name || myProfile?.displayName || null
+		const myEmail    = myProfile?.email || null
+		const myName     = myProfile?.name || myProfile?.displayName || null
+		const theirAvatar = normalizeAvatarPath(
+			theirProfile.avatarUrl || theirProfile.avatar || theirProfile.photoURL || null
+		)
+		const myAvatar = normalizeAvatarPath(
+			myProfile?.avatarUrl || myProfile?.avatar || myProfile?.photoURL || null
+		)
 
 		await setDoc(
 			doc(db, 'users', myUid, 'friends', theirUid),
@@ -76,6 +122,7 @@ export const useFriendsStore = defineStore('friends', () => {
 				status: 'pending',
 				email: theirEmail,
 				name: theirName,
+				avatar: theirAvatar,
 				createdAt: serverTimestamp(),
 				updatedAt: serverTimestamp(),
 			},
@@ -88,6 +135,7 @@ export const useFriendsStore = defineStore('friends', () => {
 				status: 'incoming',
 				email: myEmail,
 				name: myName,
+				avatar: myAvatar,
 				createdAt: serverTimestamp(),
 				updatedAt: serverTimestamp(),
 			},
@@ -101,7 +149,6 @@ export const useFriendsStore = defineStore('friends', () => {
 		const myUid = currentUserUid()
 		if (!myUid) throw new Error('Не авторизован')
 		if (!fromUid) throw new Error('Некорректный UID')
-
 		await setDoc(
 			doc(db, 'users', myUid, 'friends', fromUid),
 			{ status: 'accepted', updatedAt: serverTimestamp() },
@@ -119,7 +166,6 @@ export const useFriendsStore = defineStore('friends', () => {
 		const myUid = currentUserUid()
 		if (!myUid) throw new Error('Не авторизован')
 		if (!fromUid) throw new Error('Некорректный UID')
-
 		await setDoc(
 			doc(db, 'users', myUid, 'friends', fromUid),
 			{ status: 'declined', updatedAt: serverTimestamp() },
@@ -133,15 +179,24 @@ export const useFriendsStore = defineStore('friends', () => {
 		return true
 	}
 
-	async function hydrateMissing(items) {
+	async function hydrateWithLatestData(items) {
 		return Promise.all(
 			items.map(async (it) => {
-				if (it?.email && it?.name) return it
 				const prof = await getProfile(it.uid)
+				if (!prof) return it
+
+				const {
+					avatar: _dropAvatar,
+					avatarUrl: _dropAvatarUrl,
+					photoURL: _dropPhotoURL,
+					...restProf
+				} = prof
+
 				return {
 					...it,
-					email: it.email ?? prof?.email ?? null,
-					name: it.name ?? prof?.name ?? prof?.displayName ?? null,
+					...restProf,
+					email: restProf.email ?? it.email ?? null,
+					name: restProf.name ?? restProf.displayName ?? it.name ?? null,
 				}
 			})
 		)
@@ -155,18 +210,17 @@ export const useFriendsStore = defineStore('friends', () => {
 			requestsOutgoing.value = []
 			return
 		}
-
 		loading.value = true
 		error.value = null
 		try {
 			const snap = await getDocs(collection(db, 'users', myUid, 'friends'))
 			const all = snap.docs.map(d => ({ uid: d.id, ...d.data() }))
-			const accepted = all.filter(f => f.status === 'accepted')
-			const incoming = all.filter(f => f.status === 'incoming')
-			const pending  = all.filter(f => f.status === 'pending')
-			friends.value          = await hydrateMissing(accepted)
-			requestsIncoming.value = await hydrateMissing(incoming)
-			requestsOutgoing.value = await hydrateMissing(pending)
+			const relevantRelations = all.filter(f => f.status === 'accepted' || f.status === 'incoming' || f.status === 'pending');
+			const hydratedList = await hydrateWithLatestData(relevantRelations)
+			friends.value          = hydratedList.filter(f => f.status === 'accepted')
+			requestsIncoming.value = hydratedList.filter(f => f.status === 'incoming')
+			requestsOutgoing.value = hydratedList.filter(f => f.status === 'pending')
+
 		} catch (e) {
 			console.error(e)
 			error.value = e?.message || 'Не удалось загрузить друзей'
@@ -174,6 +228,20 @@ export const useFriendsStore = defineStore('friends', () => {
 			loading.value = false
 		}
 	}
+	async function removeFriend(otherUid) {
+		const myUid = currentUserUid()
+		if (!myUid) throw new Error('Не авторизован')
+
+		await deleteDoc(doc(db, 'users', myUid, 'friends', otherUid))
+
+		friends.value = friends.value.filter(f => f.uid !== otherUid)
+		requestsIncoming.value = requestsIncoming.value.filter(f => f.uid !== otherUid)
+		requestsOutgoing.value = requestsOutgoing.value.filter(f => f.uid !== otherUid)
+
+		return true
+	}
+
+
 
 	return {
 		friends,
@@ -181,7 +249,8 @@ export const useFriendsStore = defineStore('friends', () => {
 		requestsOutgoing,
 		loading,
 		error,
-
+		removeFriend,
+		normalizeAvatarPath,
 		findUserByEmail,
 		sendFriendRequest,
 		acceptRequest,

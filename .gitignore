@@ -14,11 +14,17 @@ logs
 *.log
 
 # Local env files
-.env
+.env.development
 .env.*
 !.env.example
 echo service-account.json
-key: process.env.FIREBASE_RECAPTCHA_KEY || ''
+echo service-account-dev.json
+service-account-dev.json
 service-account.json
+key: process.env.FIREBASE_RECAPTCHA_KEY || ''
+/service-account-dev.json
+/service-account.json
 .vercel
 
+# Admin tools
+admin/

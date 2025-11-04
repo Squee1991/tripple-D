@@ -1,0 +1,615 @@
+[
+  {
+    "type": "fillInBlank",
+    "question": "Ich ___ schon gegessen, bevor er kam.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Nachdem wir angekommen waren, ___ wir das Hotel gefunden.",
+    "options": ["hatten", "waren", "haben", "sind"],
+    "answer": "hatten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Sie ___ das Buch gelesen, bevor sie den Film sah.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Er ___ das Fenster geschlossen, weil es kalt war.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir ___ schon gegangen, als du angerufen hast.",
+    "options": ["waren", "sind", "hatten", "haben"],
+    "answer": "waren"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Bevor sie nach Hause fuhr, ___ sie ihre Arbeit beendet.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Ich ___ den Schlüssel verloren, bevor ich zur Arbeit ging.",
+    "options": ["hatte", "habe", "war", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Nachdem wir die Wohnung geputzt ___, machten wir eine Pause.",
+    "options": ["hatten", "waren", "haben", "sind"],
+    "answer": "hatten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Sie konnte nicht schlafen, weil sie zu viel Kaffee getrunken ___.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir waren müde, weil wir den ganzen Tag gearbeitet ___.",
+    "options": ["hatten", "waren", "haben", "sind"],
+    "answer": "hatten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Bevor er ins Bett ging, ___ er noch ferngesehen.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Nachdem sie den Brief geschrieben ___, brachte sie ihn zur Post.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir konnten nicht weiterfahren, weil das Auto kaputt gegangen ___.",
+    "options": ["war", "hatte", "bin", "habe"],
+    "answer": "war"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Er war sehr nervös, weil er die Antwort vergessen ___.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Nachdem sie gefrühstückt ___, ging sie zur Arbeit.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir waren nervös, weil wir lange auf die Prüfung gewartet ___.",
+    "options": ["hatten", "waren", "haben", "sind"],
+    "answer": "hatten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Bevor er das Haus verließ, ___ er seine Jacke angezogen.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Bevor sie anrief, ___ sie lange überlegt.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Nachdem wir angekommen ___, suchten wir das Restaurant.",
+    "options": ["waren", "hatten", "sind", "haben"],
+    "answer": "waren"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Die Kinder spielten draußen, nachdem sie die Hausaufgaben gemacht ___.",
+    "options": ["hatten", "waren", "haben", "sind"],
+    "answer": "hatten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Ich konnte nicht anrufen, weil ich mein Handy verloren ___.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Nachdem der Unterricht begonnen ___, kam er zu spät.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir waren froh, weil wir die Prüfung geschafft ___.",
+    "options": ["hatten", "waren", "haben", "sind"],
+    "answer": "hatten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Bevor wir abreisten, ___ wir alle Fenster geschlossen.",
+    "options": ["hatten", "waren", "haben", "sind"],
+    "answer": "hatten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Nachdem er die E-Mail gelesen ___, antwortete er sofort.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Sie war glücklich, weil sie ein Geschenk bekommen ___.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir konnten nicht schwimmen, weil wir die Badesachen vergessen ___.",
+    "options": ["hatten", "waren", "haben", "sind"],
+    "answer": "hatten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Nachdem er aufgestanden ___, machte er Kaffee.",
+    "options": ["war", "hatte", "bin", "habe"],
+    "answer": "war"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Bevor sie ins Kino ging, ___ sie ihre Freundin angerufen.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir hatten Hunger, weil wir den ganzen Tag nichts gegessen ___.",
+    "options": ["hatten", "waren", "haben", "sind"],
+    "answer": "hatten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Nachdem sie das Bild gemalt ___, zeigte sie es ihrer Mutter.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Bevor ich zur Arbeit fuhr, ___ ich das Frühstück gemacht.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Er war nass, weil er den Regenschirm vergessen ___.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir konnten das Spiel nicht sehen, weil wir zu spät gekommen ___.",
+    "options": ["waren", "hatten", "sind", "haben"],
+    "answer": "waren"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Nachdem sie die Tür geschlossen ___, ging sie ins Bett.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Bevor er nach Hause ging, ___ er seine Tasche gepackt.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Nachdem sie angekommen ___, riefen sie ihre Freunde an.",
+    "options": ["waren", "hatten", "sind", "haben"],
+    "answer": "waren"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Ich war müde, weil ich die ganze Nacht nicht geschlafen ___.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir gingen nicht ins Kino, weil wir schon den Film gesehen ___.",
+    "options": ["hatten", "waren", "haben", "sind"],
+    "answer": "hatten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Nachdem der Lehrer die Aufgabe erklärt ___, konnten wir sie lösen.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Er ___ eingeschlafen, bevor der Film begann.",
+    "options": ["war", "hatte", "ist", "hat"],
+    "answer": "war"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Nachdem er gegessen ___, fühlte er sich besser.",
+    "options": ["hatte", "war", "habe", "ist"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Nachdem wir die Stadt besichtigt ___, gingen wir essen.",
+    "options": ["hatten", "waren", "haben", "sind"],
+    "answer": "hatten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Sie war traurig, weil sie ihre Freunde lange nicht gesehen ___.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Bevor er ins Büro ging, ___ er seinen Hund gefüttert.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Nachdem sie die Nachricht gelesen ___, rief sie sofort zurück.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir konnten die Tür nicht öffnen, weil wir den Schlüssel im Auto gelassen ___.",
+    "options": ["hatten", "waren", "haben", "sind"],
+    "answer": "hatten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Nachdem er im Ausland gewesen ___, sprach er besser Englisch.",
+    "options": ["war", "hatte", "bin", "habe"],
+    "answer": "war"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Bevor sie ging, ___ sie sich von allen verabschiedet.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Die Kinder konnten spielen, nachdem sie ihre Aufgaben erledigt ___.",
+    "options": ["hatten", "waren", "haben", "sind"],
+    "answer": "hatten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir waren glücklich, weil wir neue Freunde gefunden ___.",
+    "options": ["hatten", "waren", "haben", "sind"],
+    "answer": "hatten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Nachdem er sein Zimmer aufgeräumt ___, durfte er fernsehen.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Ich war nervös, weil ich das Dokument zu Hause vergessen ___.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Nachdem wir im Hotel eingecheckt ___, gingen wir spazieren.",
+    "options": ["hatten", "waren", "haben", "sind"],
+    "answer": "hatten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Sie konnte nicht mitfahren, weil sie krank geworden ___.",
+    "options": ["war", "hatte", "ist", "habe"],
+    "answer": "war"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Bevor er das Haus verließ, ___ er alle Fenster zugemacht.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir waren zufrieden, weil wir gute Noten bekommen ___.",
+    "options": ["hatten", "waren", "haben", "sind"],
+    "answer": "hatten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Nachdem sie ihre Tasche gepackt ___, ging sie zum Bahnhof.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Bevor ich einkaufen ging, ___ ich eine Liste geschrieben.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Nachdem wir Fußball gespielt ___, waren wir sehr müde.",
+    "options": ["hatten", "waren", "haben", "sind"],
+    "answer": "hatten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Sie war erleichtert, weil sie den Test bestanden ___.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir konnten nicht schwimmen, weil wir die Badekarten zu Hause gelassen ___.",
+    "options": ["hatten", "waren", "haben", "sind"],
+    "answer": "hatten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Nachdem er seine Hausaufgaben gemacht ___, ging er raus.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Bevor sie ins Büro ging, ___ sie einen Kaffee getrunken.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir waren enttäuscht, weil wir das Spiel verloren ___.",
+    "options": ["hatten", "waren", "haben", "sind"],
+    "answer": "hatten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Nachdem er den Film gesehen ___, erzählte er die Geschichte.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Sie war froh, weil sie viele Freunde eingeladen ___.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Nachdem wir gegessen ___, spielten wir Karten.",
+    "options": ["hatten", "waren", "haben", "sind"],
+    "answer": "hatten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Bevor ich zur Arbeit ging, ___ ich meinen Bruder angerufen.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Er konnte nicht sprechen, weil er seine Stimme verloren ___.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Nachdem wir im Park spaziert ___, fuhren wir nach Hause.",
+    "options": ["waren", "hatten", "sind", "haben"],
+    "answer": "waren"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Bevor sie sich schlafen legte, ___ sie das Fenster geöffnet.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir waren zufrieden, weil wir alles rechtzeitig geschafft ___.",
+    "options": ["hatten", "waren", "haben", "sind"],
+    "answer": "hatten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Nachdem er das Buch gelesen ___, konnte er die Fragen beantworten.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Sie war müde, weil sie die ganze Nacht gearbeitet ___.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Bevor wir ausgingen, ___ wir die Wohnung aufgeräumt.",
+    "options": ["hatten", "waren", "haben", "sind"],
+    "answer": "hatten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Nachdem sie das Bild gesehen ___, war sie begeistert.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir waren erleichtert, weil wir Hilfe bekommen ___.",
+    "options": ["hatten", "waren", "haben", "sind"],
+    "answer": "hatten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Nachdem er den Brief geöffnet ___, war er überrascht.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Bevor sie zur Arbeit fuhr, ___ sie die Kinder geweckt.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir waren enttäuscht, weil der Zug Verspätung gehabt ___.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir gingen ins Kino, nachdem wir die Tickets gekauft ___.",
+    "options": ["hatten", "waren", "haben", "sind"],
+    "answer": "hatten"
+  },
+
+  {
+    "type": "fillInBlank",
+    "question": "Sie konnte nicht kommen, weil sie krank geworden ___.",
+    "options": ["war", "hatte", "ist", "habe"],
+    "answer": "war"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Bevor ich einschlief, ___ ich noch ein Kapitel gelesen.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Er war müde, weil er die ganze Nacht gearbeitet ___.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Nachdem sie nach Hause gekommen ___, rief sie ihre Mutter an.",
+    "options": ["war", "hatte", "ist", "hat"],
+    "answer": "war"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir konnten nicht ins Haus, weil wir den Schlüssel vergessen ___.",
+    "options": ["hatten", "waren", "haben", "sind"],
+    "answer": "hatten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Nachdem ihr angekommen ___, habt ihr sofort gegessen.",
+    "options": ["wart", "hattet", "seid", "habt"],
+    "answer": "wart"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Bevor er an die Uni ging, ___ er eine Ausbildung gemacht.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Nachdem wir gegessen ___, machten wir einen Spaziergang.",
+    "options": ["hatten", "waren", "haben", "sind"],
+    "answer": "hatten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Sie war froh, weil sie die Prüfung bestanden ___.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Bevor ich zur Arbeit ging, ___ ich gefrühstückt.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Nachdem er das Auto repariert ___, konnte er wieder fahren.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir kamen zu spät, weil wir den Bus verpasst ___.",
+    "options": ["hatten", "waren", "haben", "sind"],
+    "answer": "hatten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Bevor sie ins Bett ging, ___ sie die Zähne geputzt.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Nachdem der Regen aufgehört ___, gingen wir spazieren.",
+    "options": ["hatte", "war", "habe", "ist"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Er konnte die Übung leicht machen, weil er schon viel geübt ___.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir waren nervös, weil wir die Antwort nicht vorbereitet ___.",
+    "options": ["hatten", "waren", "haben", "sind"],
+    "answer": "hatten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Bevor die Sonne aufging, ___ wir aufgestanden.",
+    "options": ["waren", "sind", "hatten", "haben"],
+    "answer": "waren"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Nachdem er die Zeitung gelesen ___, ging er zur Arbeit.",
+    "options": ["hatte", "war", "habe", "bin"],
+    "answer": "hatte"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Wir ___ das Auto geparkt, bevor es regnete.",
+    "options": ["hatten", "waren", "haben", "sind"],
+    "answer": "hatten"
+  },
+  {
+    "type": "fillInBlank",
+    "question": "Du ___ das Licht ausgemacht, bevor du gegangen bist.",
+    "options": ["hattest", "warst", "hast", "bist"],
+    "answer": "hattest"
+  }
+]

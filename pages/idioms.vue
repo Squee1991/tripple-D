@@ -73,7 +73,30 @@
 import {ref} from 'vue'
 import Pin from '../assets/images/pin.svg'
 import Chat from '../assets/images/chat.svg'
+import { useHead, useSeoMeta } from '#imports'
 const { t } = useI18n()
+const route = useRoute()
+const canonical = useCanonical()
+const pageTitle = t('metaIdioms.title')
+const pageDesc  = t('metaIdioms.description')
+
+useHead({
+  title: pageTitle,
+  link: [
+    { rel: 'canonical', href: canonical }
+  ]
+})
+
+useSeoMeta({
+  title: pageTitle,
+  description: pageDesc,
+  ogTitle: pageTitle,
+  ogDescription: pageDesc,
+  ogType: 'article',
+  ogUrl: canonical,
+  ogImage: '/images/seo-idioms.png',
+  robots: 'index, follow'
+})
 
 const idiomGroups = ref([
   {
@@ -293,6 +316,7 @@ definePageMeta({
 }
 
 .idioms__title {
+  width: 100%;
   font-size: 2.8rem;
   font-weight: 600;
   color: #fff;
@@ -458,7 +482,7 @@ definePageMeta({
   }
 
   .idioms__title {
-    font-size: 2.2rem;
+    font-size: 1.7rem;
     padding: 15px;
     box-shadow: 2px 2px 5px #2c2c2c;
   }
@@ -472,6 +496,12 @@ definePageMeta({
   .idioms__example--wrapper {
     display: flex;
     flex-direction: column;
+  }
+  .idioms__item {
+    font-size: 0.9rem;
+  }
+  .idioms__quiz-question{
+    font-size: 1.1rem;
   }
 }
 

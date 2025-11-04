@@ -17,7 +17,7 @@
             :tips="currentTopicData?.tips"
         />
         <div class="sidebar">
-            <button @click="backTo" class="btn__back">На главную</button>
+            <button @click="backTo" class="btn__back">{{ t('tenses.barBtn')}}</button>
             <h2 class="sidebar__title">{{ t('adjectiveComparisonPage.sideBarTitle')}}</h2>
             <div class="sidebar__heading">{{ t('adjectiveComparisonPage.sidebarUnderTitle')}}</div>
             <ul class="sidebar__list">
@@ -43,7 +43,7 @@
                         <div class="info__wrapper">
                             <h3 class="info-section__title">{{ t('adjectiveComparisonPage.ruleTitle')}}</h3>
                             <button
-                                    title="Советы по теме"
+                                   :title="t('hoverTitle.tips')"
                                     v-if="currentTopicData.tips"
                                     class="info__icon-tips"
                                     ref="tipRef"
@@ -83,7 +83,7 @@
                 <div class="practice-area">
                     <h3 class="practice-area__title">{{ currentTopicData.practice.title }}</h3>
                     <p class="practice-area__description">{{ currentTopicData.practice.description }}</p>
-                    <NuxtLink :to="`/${categoryId}/practice/${currentTopicData.id}`" class="practice-area__button">
+                    <NuxtLink :to="`/${categoryId}/${currentTopicData.id}`" class="practice-area__button">
                         {{ currentTopicData.practice.buttonText }}
                     </NuxtLink>
                 </div>
@@ -99,11 +99,31 @@
     import Lottie from 'lottie-web';
     import TipIcon from '../../assets/animation/info.json';
     import VTips from '../../src/components/V-tips.vue';
-
+    import { useHead, useSeoMeta } from '#imports'
+    const canonical = useCanonical()
     const {t} = useI18n()
+    const baseTitle = t('adjectiveComparisonPage.title')
+    const pageDesc  = t('adjectiveComparisonPage.description')
+    useHead({
+      title: baseTitle,
+      link: [
+        { rel: 'canonical', href: canonical }
+      ]
+    })
+
+    useSeoMeta({
+      title: baseTitle,
+      description: pageDesc,
+      ogTitle: baseTitle,
+      ogDescription: pageDesc,
+      ogType: 'article',
+      ogUrl: canonical,
+      ogImage: '/images/seo-adj-comparison.png',
+      robots: 'index, follow'
+    })
+
     const router = useRouter();
     const categoryId = 'adjective-comparison';
-
     const topics = [
         {
             id: 'regular-forms',
@@ -435,7 +455,7 @@
 
 .content__title {
   color: white;
-  font-size: 2rem;
+  font-size: 2.1rem;
   font-weight: bold;
   text-shadow: none;
 }

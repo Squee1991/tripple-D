@@ -1,15 +1,12 @@
 <template>
   <div class="uid__container">
     <template v-if="!isMobile">
-      <div class="ui__statistics">
-        <VStatistics/>
+      <div>
+        <VLands/>
       </div>
       <div class="stats__wrapper">
-        <Vdaily/>
-      </div>
-      <div>
-        <VAchievements/>
         <VPoints/>
+        <VDaily/>
       </div>
     </template>
     <template v-else>
@@ -38,31 +35,34 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
-
+import {ref, computed, onMounted, onBeforeUnmount} from 'vue'
 import VPoints from "~/src/components/V-points.vue";
-import VStatistics from "~/src/components/V-statistics.vue";
-import Vdaily from "~/src/components/Vdaily.vue";
-import VAchievements from "~/src/components/V-achievements.vue";
-import AchIcon from '../../assets/images/achNav.svg'
-import Stats from '../../assets/images/stats.svg'
+import VDaily from "~/src/components/Vdaily.vue";
+import VLands from "~/src/components/V-lands.vue";
+import Location from '../../assets/images/location.svg'
 import Daily from '../../assets/images/daily.svg'
-
+import Card from '../../assets/images/card.svg'
+const { t } = useI18n();
 const tabs = [
-  { id: 'profile', icon: AchIcon, alt: 'ach icon', label: 'Профиль', component: VPoints },
-  { id: 'daily', icon: Daily, alt: 'daily icon', label: 'Ежедневки', component: Vdaily },
-  { id: 'achievements', icon: AchIcon, alt: 'achIcon', label: 'Достижения', component: VAchievements },
-  { id: 'points', icon: Stats, alt: 'stats icon', label: 'Статистика', component: VStatistics },
+  {id: 'locations', icon: Location, alt: 'achIcon', label: t('tabsMobile.locations'), component: VLands},
+  {id: 'daily', icon: Daily, alt: 'daily icon', label: t('tabsMobile.daily'), component: VDaily},
+  {id: 'profile', icon: Card, alt: 'ach icon', label: t('tabsMobile.profile'), component: VPoints},
 ]
 
 const activeTabId = ref(tabs[0].id)
 const currentTab = computed(() => tabs.find(t => t.id === activeTabId.value) || tabs[0])
 const currentComponent = computed(() => currentTab.value.component)
-function setTab(id) { activeTabId.value = id }
+
+function setTab(id) {
+  activeTabId.value = id
+}
 
 const isMobile = ref(false)
 let mql
-function updateIsMobile(e) { isMobile.value = e.matches }
+
+function updateIsMobile(e) {
+  isMobile.value = e.matches
+}
 
 onMounted(() => {
   mql = window.matchMedia('(max-width: 767px)')
@@ -76,6 +76,9 @@ onBeforeUnmount(() => {
   if (mql.removeEventListener) mql.removeEventListener('change', updateIsMobile)
   else mql.removeListener(updateIsMobile)
 })
+
+
+
 </script>
 
 <style scoped>
@@ -83,28 +86,76 @@ onBeforeUnmount(() => {
   width: 50px;
   margin-right: 5px;
 }
+
 .tab__label {
   color: var(--titleColor);
 }
+
 .uid__container {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-.ui__statistics {
-  flex-grow: 1;
-}
-.stats__wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100dvh;
+    min-height: 0;
+    align-items: stretch;
+    gap: 10px;
 }
 
-@media(max-width: 660px) {
-  .tab__label {
-    display: none;
+.lands-container {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+}
+
+.lands-container > :deep(.map__wrapper) {
+    width: 100%;
+    flex: 1;
+}
+
+.stats__wrapper {
+    max-width: 400px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 5px;
+    min-height: 0;
+    max-height: 100vh;
+    overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.stats__wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.stats__wrapper > * {
+    flex: 0 0 auto;
+}
+
+.stats__wrapper::-webkit-scrollbar {
+    width: 6px;
+}
+
+.stats__wrapper::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.stats__wrapper::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+@media (max-width: 660px) {
+    .tab__label {
+        display: none;
+    }
+}
+
+@media (max-width: 1023px) {
+  .uid__container {
+    padding: 0 5px;
   }
 }
 
@@ -113,42 +164,54 @@ onBeforeUnmount(() => {
     display: flex;
     flex-direction: column;
     margin-bottom: 0;
-    height: calc(100dvh - 180px);
+    height: calc(100dvh - 190px);
     overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
-  .mobile-nav {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    padding: 4px;
+
+  .uid__container::-webkit-scrollbar {
+    display: none;
   }
-  .mobile-nav__btn {
-    border: none;
-    background: none;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 25%;
-    font-size: 16px;
-    cursor: pointer;
-    transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.12s ease;
-  }
-  .mobile-nav__btn:active {
-    transform: translateY(1px);
-  }
-  .mobile-nav__btn--active {
-    background: #eeeaea;
-    border: 3px solid black;
-    box-shadow: 3px 3px 0 black;
-    border-radius: 10px;
-  }
-  .mobile-panel {
-    flex: 1;
-    min-height: 0;
-    display: flex;
-    overflow: hidden;
-  }
+
+    .mobile-nav {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 4px;
+    }
+
+    .mobile-nav__btn {
+        border: none;
+        background: none;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+        font-size: 16px;
+        cursor: pointer;
+        transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.12s ease;
+    }
+
+    .mobile-nav__btn:active {
+        transform: translateY(1px);
+    }
+
+    .mobile-nav__btn--active {
+        background: #eeeaea;
+        border: 3px solid black;
+        box-shadow: 3px 3px 0 black;
+        border-radius: 10px;
+    }
+
+    .mobile-panel {
+        flex: 1;
+        min-height: 0;
+        display: flex;
+        overflow: hidden;
+    }
+
   .mobile-content {
     flex: 1;
     min-height: 0;
@@ -156,26 +219,38 @@ onBeforeUnmount(() => {
     width: 100%;
     overflow: auto;
     padding: 4px;
+    margin-top: 5px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
+
+  .mobile-content::-webkit-scrollbar {
+    display: none;
+  }
+
+
   .mobile-content > * {
-    flex: 1;
-    width: 100%;
-    display: block;
-  }
+        flex: 1;
+        width: 100%;
+        display: block;
+    }
 }
 
 .fade-slide-enter-from {
-  opacity: 0;
-  transform: translateY(6px);
+    opacity: 0;
+    transform: translateY(6px);
 }
+
 .fade-slide-enter-active {
-  transition: opacity 180ms ease, transform 180ms ease;
+    transition: opacity 180ms ease, transform 180ms ease;
 }
+
 .fade-slide-leave-to {
-  opacity: 0;
-  transform: translateY(-6px);
+    opacity: 0;
+    transform: translateY(-6px);
 }
+
 .fade-slide-leave-active {
-  transition: opacity 140ms ease, transform 140ms ease;
+    transition: opacity 140ms ease, transform 140ms ease;
 }
 </style>

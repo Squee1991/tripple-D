@@ -3,7 +3,7 @@
     --titleColor: #000000;
     --borderBottom: #000000;
     --navItems: #000000;
-
+    --border: #000000;
 }
 
 .dark {
@@ -11,8 +11,17 @@
     --titleColor:white;
     --borderBottom: white;
     --navItems: white;
+    --border: #e8e2e2;
 }
 
 html, body {
     background: var(--bg);
+}
+
+button {
+    cursor: pointer;
+}
+
+button:focus {
+    border: 2px solid #989191;
 }

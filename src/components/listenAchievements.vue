@@ -35,24 +35,21 @@
 
 <script setup>
 import { computed } from 'vue'
-import { useI18n } from 'vue-i18n'
 import { useAchievementStore } from '../../store/achievementStore.js'
 import { listenAchieveGroup } from '../achieveGroup/article/listen.js'
 
 const { t } = useI18n()
 const achievementStore = useAchievementStore()
 
-// Список заголовков только для «listen»
 const listenTitles = listenAchieveGroup.map(g => g.title)
 
-// Фильтруем глобальный массив групп по заголовкам «listen»
 const listenGroups = computed(() =>
 		achievementStore.groups.filter(g => listenTitles.includes(g.title))
 )
 
-// Количество завершённых в группе
 const getCompletedCount = group =>
 		group.achievements.filter(a => a.currentProgress >= a.targetProgress).length
+
 </script>
 
 <style scoped>
@@ -69,7 +66,7 @@ const getCompletedCount = group =>
 	border-bottom: 3px dashed rgba(27, 27, 27, 0.5);
 }
 .group-title {
-	font-size: 2rem;
+  font-size: 1.8rem;
 	color: #1e1e1e;
 	margin: 0;
 }

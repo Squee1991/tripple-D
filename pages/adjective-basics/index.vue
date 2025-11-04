@@ -39,7 +39,7 @@
         <div class="practice-area">
           <h3 class="practice-area__title">{{ currentTopicData.practice.title }}</h3>
           <p class="practice-area__description">{{ currentTopicData.practice.description }}</p>
-          <NuxtLink :to="`/${categoryId}/practice/${currentTopicData.id}`" class="practice-area__button">
+          <NuxtLink :to="`/${categoryId}/${currentTopicData.id}`" class="practice-area__button">
             {{ currentTopicData.practice.buttonText }}
           </NuxtLink>
         </div>
@@ -53,8 +53,30 @@ import {ref, computed, onMounted, onUnmounted} from 'vue'
 import {useRouter} from 'vue-router'
 import Lottie from 'lottie-web';
 import SoundBtn from '../../src/components/soundBtn.vue'
+import { useHead, useSeoMeta } from '#imports'
+const { t } = useI18n();
+const canonical = useCanonical()
+const pageTitle = t('metaAdjectiveBasic.title')
+const pageDesc  = t('metaAdjectiveBasic.description')
 
-const {t, locale} = useI18n();
+useHead({
+  title: pageTitle,
+  link: [
+    { rel: 'canonical', href: canonical }
+  ]
+})
+
+useSeoMeta({
+  title: pageTitle,
+  description: pageDesc,
+  ogTitle: pageTitle,
+  ogDescription: pageDesc,
+  ogType: 'website',
+  ogUrl: canonical,
+  ogImage: '/images/seo-adjective-basics.png',
+  robots: 'index, follow'
+})
+
 const topics = [
   {
     id: 'colors',
@@ -215,6 +237,8 @@ const topics = [
     }
   }
 ]
+const isContentVisible = ref(false)
+const isMobileLayout = ref(false)
 const router = useRouter()
 const categoryId = 'adjective-basics';
 const topic = ref('colors')
@@ -223,40 +247,7 @@ const backToMenu = () => {
 }
 let speakTimeout = null;
 
-// function speak(text) {
-//     if (!('speechSynthesis' in window)) {
-//         console.error('Браузер не поддерживает Web Speech API.');
-//         return;
-//     }
-//
-//     clearTimeout(speakTimeout);
-//     window.speechSynthesis.cancel();
-//     if (!text) return;
-//     speakTimeout = setTimeout(() => {
-//         const utterance = new SpeechSynthesisUtterance(text);
-//         const langMap = {
-//             ru: 'ru-RU',
-//             en: 'en-US',
-//             de: 'de-DE',
-//             uk: 'uk-UA',
-//             pl: 'pl-PL',
-//             tr: 'tr-TR'
-//         };
-//
-//         utterance.lang = langMap[locale.value] || locale.value;
-//         const voices = window.speechSynthesis.getVoices();
-//         const targetVoice = voices.find(voice => voice.lang === utterance.lang);
-//         if (targetVoice) {
-//             utterance.voice = targetVoice;
-//         }
-//
-//         window.speechSynthesis.speak(utterance);
-//     }, 250);
-// }
 const currentTopicData = computed(() => topics.find(t => t.id === topic.value))
-
-const isContentVisible = ref(false)
-const isMobileLayout = ref(false)
 
 const checkScreenSize = () => {
   isMobileLayout.value = window.innerWidth <= 767;
@@ -280,7 +271,6 @@ onMounted(() => {
   checkScreenSize();
   window.addEventListener('resize', checkScreenSize);
 });
-
 onUnmounted(() => {
   clearTimeout(speakTimeout)
   window.removeEventListener('resize', checkScreenSize);
@@ -385,7 +375,7 @@ onUnmounted(() => {
 
 .content__title {
   color: white;
-  font-size: 2rem;
+  font-size: 2.1rem;
   font-weight: bold;
   text-shadow: 2px 2px 0px #000;
 }
@@ -457,6 +447,7 @@ onUnmounted(() => {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  justify-content: center;
 }
 
 .practice-area__title {
@@ -476,8 +467,8 @@ onUnmounted(() => {
 .practice-area__button {
   display: block;
   text-decoration: none;
-  background: #28a745;
-  color: #fff;
+  background: #f1c40f;
+  color: #484343;
   border: 2px solid #000;
   border-radius: 8px;
   padding: 12px 25px;
@@ -489,7 +480,7 @@ onUnmounted(() => {
 }
 
 .practice-area__button:hover {
-  background: #218838;
+  background: #ffe04d;
 }
 
 .practice-area__button:active {

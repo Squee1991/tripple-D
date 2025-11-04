@@ -6,24 +6,46 @@ import VEditTest from "../../src/components/V-editTest.vue";
 import Dots from '../../assets/images/dots.svg'
 import Trash from '../../assets/images/trash.svg'
 import Share from '../../assets/images/share.svg'
-
+import { useFriendsStore } from '../../store/friendsStore.js'
+import ShareExamModal from '../../src/components/shareModal.vue';
+const { t } = useI18n( )
+const friendsStore = useFriendsStore()
 const router = useRouter()
 const examStore = userExamStore()
 const dotsEdit = ref(false)
-
+const showShareModal = ref(false)
+const isSharing = ref(false)
+const shareMessage = ref('')
 const data = ref([
-  {icon: Share, alt: 'Поделиться', text: 'Поделиться'},
-  {icon: Trash, alt: 'Удалить', text: 'Удалить'},
+  {icon: Share, alt: t('examResult.share'), text:  t('examResult.share')},
+  {icon: Trash, alt: t('examResult.delete'), text: t('examResult.delete')},
 ])
 
+async function handleShareWithFriend(friendUid) {
+  if (!selectedExamId.value || !friendUid) return;
+  isSharing.value = true;
+
+  try {
+    const res = await examStore.shareExamWithFriend(selectedExamId.value, friendUid);
+    shareMessage.value = res?.already ? t('examResult.sended') :  t('examResult.sent');
+  } catch (e) {
+    console.error(e);
+    shareMessage.value = e?.message || t('examResult.error');
+  } finally {
+    isSharing.value = false;
+  }
+}
 
 async function handleAction(btn) {
   const att = selectedExamId.value
   dotsEdit.value = false
   if (!att) return
-  if (btn.text === 'Удалить') {
+  if (btn.text ===  t('examResult.delete')) {
     await examStore.deleteExam(selectedExamId.value)
-  } else if (btn.text === 'Поделиться') {
+  } else if (btn.text === t('examResult.share')) {
+    await friendsStore.loadFriends()
+    shareMessage.value = ''
+    showShareModal.value = true
     console.log('Поделиться экзаменом', selectedExamId.value)
   }
 }
@@ -54,16 +76,23 @@ onMounted(() => {
   examStore.loadArchiveAttempts()
 })
 </script>
-
 <template>
   <div class="exams-compact">
-    <h2 class="ec__title">Архив экзаменов</h2>
-    <div v-if="examStore.archiveLoading" class="ec__box">Загрузка…</div>
+    <ShareExamModal
+        v-if="showShareModal"
+        :friends="friendsStore.friends"
+        :is-sending="isSharing"
+        :message="shareMessage"
+        @close="() => { showShareModal = false; shareMessage = '' }"
+        @share="handleShareWithFriend"
+    />
+    <h2 class="ec__title">{{ t('examResult.title') }}</h2>
+    <div v-if="examStore.archiveLoading" class="ec__box">{{ t('examResult.loading') }}</div>
     <div v-else-if="examStore.archiveError" class="ec__box ec__box--error">{{ examStore.archiveError }}</div>
     <div v-else>
       <div class="ec__not" v-if="examStore.archiveAttempts.length === 0">
         <img class="folder__icon" src="../../assets/images/folders.svg" alt="">
-        <div class="ec__text-empty">Архив пуст</div>
+        <div class="ec__text-empty">{{ t('examResult.empty') }}</div>
       </div>
       <ul class="ec__list">
         <li v-for="a in examStore.archiveAttempts" :key="a.id" class="ec__item">
@@ -76,16 +105,16 @@ onMounted(() => {
               </span>
               </div>
               <div class="ec__meta">
-              <span>Начало:
+              <span>{{ t('examResult.start') }}
                 {{ toDateFlexible(a.startedAt)?.toLocaleString?.() || '—' }}
               </span>
                 <!--              <span class="ec__dot">•</span>-->
                 <!--              <span>Пройдено: {{ a.currentIndex ?? 0 }}</span>-->
                 <!--              <span v-if="a.status === 'finished'" class="ec__dot"></span>-->
-                <span v-if="a.status === 'finished'">Средний балл: <b>{{ a.averageScore }}</b> / 10</span>
+                <span v-if="a.status === 'finished'">{{ t('examResult.middle') }} <b>{{ a.averageScore }}</b> / 10</span>
               </div>
             </div>
-            <button class="ec__btn" @click="openAttempt(a.id)">Посмотреть результат</button>
+            <button class="ec__btn" @click="openAttempt(a.id)">{{ t('examResult.showResultButton') }}</button>
           </div>
           <div class="edit__wrapper">
             <button class="dots__btn" @click="openMenu(a.id)">
@@ -103,11 +132,30 @@ onMounted(() => {
           </div>
         </li>
       </ul>
+      <NuxtLink class="friend__exam" to="/friend-exam">{{ t('friendExam.btn')}}</NuxtLink>
     </div>
   </div>
 </template>
 
 <style scoped>
+
+.friend__exam {
+  display: flex;
+  box-shadow: 3px 3px 0 black;
+  border: 2px solid black;
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  color: white;
+  background: #c096ea;
+  border-radius: 15px;
+  padding: 10px;
+  font-weight: 600;
+  margin-top: 40px;
+  max-width: 200px;
+  text-align: center;
+  width: 100%;
+}
+
 .edit__wrapper {
   position: relative;
 }

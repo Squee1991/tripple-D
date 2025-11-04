@@ -33,7 +33,6 @@
 
 <script setup>
 import { computed, onMounted } from 'vue'
-import { useI18n } from 'vue-i18n'
 import { useAchievementStore } from '../../store/achievementStore.js'
 import { groupedEasyModeAchievements } from '../achieveGroup/marathon/easyModeAchievment.js'
 
@@ -69,7 +68,7 @@ const getCompletedCount = group =>
 }
 
 .group-title {
-	font-size: 2rem;
+  font-size: 1.8rem;
 	color: #1e1e1e;
 	margin: 0;
 }
@@ -95,6 +94,12 @@ const getCompletedCount = group =>
 .achievements-list {
 	display: flex;
 	flex-direction: column;
+}
+
+.achievement-title {
+  font-weight: 400;
+  margin: 0 0 10px 0;
+  font-size: 1.3rem;
 }
 
 .achievement__card {

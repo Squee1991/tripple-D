@@ -1,14 +1,14 @@
 <template>
   <div class="location-page">
     <div class="location__wrapper">
-      <header class="location-header">
-        <button class="close-btn" @click="goHome" aria-label="На главную">×</button>
-        <h1 class="region__title-name">{{ region?.name }}</h1>
+      <header class="location-header" :class="{ 'rtl-locale': locale === 'ar' }">
+        <button class="close-btn" @click="goHome" aria-label="to main">×</button>
+        <h1 class="region__title-name">{{ t(region?.name) }}</h1>
       </header>
-      <div v-if="loading" class="loading">Загрузка квестов...</div>
+      <div v-if="loading" class="loading">{{ t('locationQuests.loading') }}</div>
       <div v-else class="quests">
         <div v-if="error" class="error">
-          Не удалось загрузить квесты.<br/>
+          {{ t('locationQuests.error') }}<br/>
           <div class="tiny">
             URL: {{ url }}<br/>
             {{ error }}
@@ -21,24 +21,27 @@
               class="quest-card"
               :class="{ completed: q._success }"
           >
-            <div v-if="q._success" class="stamp">ПРОЙДЕНО</div>
+            <div v-if="q._success" class="stamp">{{ t('locationQuests.done') }}</div>
             <h3 class="quest__title">{{ t(q.title) }}</h3>
             <p class="quest__description">{{ t(q.description) }}</p>
-            <div v-if="q.details" class="quest-details">
-              <p v-if="q.details.goal"><strong>Цель:</strong> {{ q.details.goal }}</p>
-              <p v-if="q.details.hint"><strong>Подсказка:</strong> {{ q.details.hint }}</p>
-              <p v-if="q.details.level"><strong>Уровень:</strong> {{ q.details.level }}</p>
-            </div>
-            <div  class="quest-meta">
-              <span v-if="!q._success">Награда: {{ q.rewards.points }}💎, {{ q.rewards.xp }} XP</span>
-              <span v-else> Награда получена</span>
+            <div class="quest-meta">
+                            <span v-if="!q._success" class="rewards-container">
+                                <span class="reward-item">
+                                    {{ q.rewards.points }}
+                                    <img src="assets/images/articlus.png" alt="Артиклюсы" class="icon-articlus">
+                                </span>
+                                <span class="reward-item">
+                                    {{ q.rewards.xp }} XP
+                                </span>
+                            </span>
+              <span v-else>{{ t('locationQuests.gotAward') }}</span>
             </div>
             <button class="btn" @click="startQuest(q)">
-              {{ q._success ? 'Повторить' : 'Начать' }}
+              {{ q._success ? t('locationQuests.repeat') : t('locationQuests.start') }}
             </button>
           </li>
         </ul>
-        <div v-else class="empty">Квесты не найдены.</div>
+        <div v-else class="empty">{{ t('locationQuests.notFound') }}</div>
       </div>
     </div>
   </div>
@@ -49,9 +52,30 @@ import {ref, computed, watch, onMounted} from "vue";
 import {useRoute, useRouter} from "vue-router";
 import {regions} from "~/utils/regions.js";
 import {userChainStore} from "~/store/chainStore.js";
+import {useHead, useSeoMeta, useRuntimeConfig} from '#imports'
+import {useCanonical} from "../../composables/useCanonical.js";
 
-const {t} = useI18n();
-const route = useRoute();
+const route = useRoute()
+const canonical = useCanonical()
+const {t, locale} = useI18n();
+
+const pageTitle = t('metaLocation.title')
+const pageDesc = t('metaLocation.description')
+useHead({
+  title: pageTitle,
+  link: [{rel: 'canonical', href: canonical}]
+})
+useSeoMeta({
+  title: pageTitle,
+  description: pageDesc,
+  ogTitle: pageTitle,
+  ogDescription: pageDesc,
+  ogType: 'website',
+  ogUrl: canonical,
+  ogImage: '/images/seo-lands.png',
+  robots: 'index, follow'
+})
+
 const router = useRouter();
 const chainStore = userChainStore();
 
@@ -280,19 +304,18 @@ function goHome() {
 
 .stamp {
   position: absolute;
-  top: 10px;
-  right: -18px;
-  transform: rotate(-12deg);
-  background: linear-gradient(180deg, #6a74a5 0%, #5d7fc1 100%
-  100%
-  );
+  top: -6px;
+  right: -20px;
+  transform: rotate(9deg);
+  font-size: 14px;
+  background: linear-gradient(180deg, #6a74a5 0%, #5d7fc1 100% 100%);
   color: white;
   border: 3px solid #111;
   border-radius: 12px;
   padding: 8px 14px;
   font-weight: 900;
   letter-spacing: .04em;
-  box-shadow: 6px 6px 0 #2b2b2b;
+  box-shadow: 4px 4px 0 #2b2b2b;
   z-index: 3;
 }
 
@@ -337,14 +360,28 @@ function goHome() {
   flex-wrap: wrap;
 }
 
-.quest-meta span {
-  display: inline-block;
-  padding: 6px 10px;
+.quest-meta .rewards-container {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 6px 12px;
   font-size: 14px;
   background: #FFF3D7;
   border: 3px solid #111;
   border-radius: 999px;
   box-shadow: 4px 4px 0 #2b2b2b;
+}
+
+.reward-item {
+  display: inline-flex;
+  align-items: center;
+}
+
+.icon-articlus {
+  width: 30px;
+  height: 27px;
+  vertical-align: middle;
 }
 
 .btn {
@@ -438,6 +475,7 @@ function goHome() {
   animation-delay: .38s;
 }
 
+
 @media (max-width: 767px) {
   .close-btn {
     width: 44px;
@@ -449,7 +487,8 @@ function goHome() {
   .location-header {
     padding: 14px;
   }
-  .region__title-name{
+
+  .region__title-name {
     font-size: 24px;
   }
 
@@ -464,6 +503,11 @@ function goHome() {
 
   .location-header:after {
     transform: scale(.9) rotate(8deg);
+  }
+
+  .icon-articlus {
+    width: 22px;
+    height: 20px;
   }
 }
 
@@ -483,12 +527,106 @@ function goHome() {
     box-shadow: 2px 2px 0 #2b2b2b;
   }
 }
+
+@media (max-width: 766px) {
+  .location-page {
+    padding: 12px;
+  }
+
+  .location-header {
+    padding: 10px 14px;
+    gap: 15px;
+    margin-bottom: 12px;
+    border-radius: 16px;
+  }
+
+  .close-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    border-radius: 12px;
+    box-shadow: 3px 3px 0 #2b2b2b;
+  }
+
+  .region__title-name {
+    font-size: 22px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .quest-list {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 8px;
+  }
+
+  .quest-card {
+    min-height: auto;
+    padding: 14px;
+    gap: 8px;
+    border-radius: 16px;
+    box-shadow: 3px 3px 0 #2b2b2b;
+  }
+
+  .quest-card::before {
+    inset: 6px;
+    outline: 8px solid #fff;
+  }
+
+  .quest-card::after {
+    top: -8px;
+    left: -8px;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    border: 2px solid #111;
+    box-shadow: 4px 4px 0 #2b2b2b;
+  }
+
+  .quest__title {
+    font-size: 18px;
+    padding: 6px;
+  }
+
+  .quest__description {
+    font-size: 14px;
+  }
+
+  .quest-meta .rewards-container {
+    font-size: 13px;
+    padding: 4px 8px;
+    box-shadow: 3px 3px 0 #2b2b2b;
+  }
+
+  .btn {
+    height: 40px;
+    margin-top: 8px;
+    font-size: 15px;
+    border-radius: 12px;
+    box-shadow: 3px 3px 0 #2b2b2b;
+  }
+
+  .stamp {
+    top: -4px;
+    right: -10px;
+    transform: rotate(5deg);
+    font-size: 12px;
+    padding: 6px 10px;
+    box-shadow: 3px 3px 0 #2b2b2b;
+  }
+
+  .location-header::after {
+    content: none;
+  }
+}
+
 @media (min-width: 768px) {
   .location-header::after {
     content: "!";
     position: absolute;
-    top: 0px;
-    right: 0px;
+    top: 0;
+    right: 0;
     width: 56px;
     height: 56px;
     display: grid;
@@ -504,6 +642,12 @@ function goHome() {
     transform: rotate(8deg);
     animation: bob 2.2s ease-in-out infinite;
     z-index: 2;
+  }
+
+  .location-header.rtl-locale::after {
+    right: auto;
+    left: 0;
+    transform: rotate(-8deg);
   }
 }
 </style>

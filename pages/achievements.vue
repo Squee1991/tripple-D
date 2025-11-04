@@ -21,13 +21,17 @@
                 @click="handleCategoryClick(category)"
                 class="category-item"
             >
-              <span class="category-icon">{{ category.icon }}</span>
-              <span>{{ t(category.name) }}</span>
-              <img v-if="category.submenu"
-                   class="submenu-arrow"
-                   :class="{ 'rotated': openSubmenus[category.id] }"
-                   src="../assets/images/arrowNav.svg" alt="Стрелка">
-              <span class="sub__item-length">{{ category.length }}</span>
+              <div class="category__item-left">
+                <span class="category-icon">{{ category.icon }}</span>
+                <span>{{ t(category.name) }}</span>
+              </div>
+              <div class="category__item-right">
+                <img v-if="category.submenu"
+                     class="submenu-arrow"
+                     :class="{ 'rotated': openSubmenus[category.id] }"
+                     src="../assets/images/arrowNav.svg" alt="Arrow">
+                <span class="sub__item-length">{{ category.length }}</span>
+              </div>
             </li>
             <ul v-if="category.submenu && openSubmenus[category.id]" class="submenu">
               <li
@@ -39,7 +43,7 @@
               >
                 <span v-if="subItem.icon" class="submenu-icon">{{ subItem.icon }}</span>
                 <span class="sub__item">{{ t(subItem.name) }}</span>
-                <span class="sub__item-length">{{ subItem.length }}</span>
+                <span class="sub__item-length--sub">{{ subItem.length }}</span>
               </li>
             </ul>
           </template>
@@ -52,7 +56,7 @@
         <h1>{{ t('categoryAchievments.achievmentAreaLabel') }}</h1>
         <div class="content-header-actions">
           <button :title="t('hoverTitle.ach')" @click="showInfo" class="header__icon-info">
-            <img :src="Quest" alt="">
+            <img :src="Quest" alt="ques_icon">
           </button>
           <button class="content-close" @click="closeContent" aria-label="Close achievements panel">
             ✖
@@ -85,8 +89,28 @@ import WordsPlusArticle from '../src/components/wordPlusArticle.vue'
 import SentenceAchievement from '../src/components/sentenceAchievement.vue'
 import Plural from '../src/components/pluralAcvievements.vue'
 import Listen from '../src/components/listenAchievements.vue'
+import NominativAchievements from "../src/components/nominativAchievements.vue";
+import AkkusativAchievements from "../src/components/akkusativAchievements.vue";
+import GenitivAchievements from "../src/components/genitivAchievements.vue";
+import DativAchievements from "../src/components/dativAchievements.vue";
+import AdjectiveBasicAchievements from "../src/components/adjectiveBasicAchievements.vue";
+import AdjectiveDeclensionAchievements from "../src/components/adjectiveDeclensionAchievements.vue";
+import AdjectiveComparisonAchievements from "../src/components/adjectiveComparisonAchievements.vue";
+import TensesAchievements from "../src/components/tensesAchievements.vue";
+import ModalVerbs from "../src/components/modalVerbs.vue";
+import TypeVerbsAchievement from "../src/components/typeVerbsAchievement.vue";
+import WinterAchievement from '../src/components/winterAchievement.vue'
+
+import { eventWinterAchievements } from '../src/achieveGroup/eventAchievement/winterAchievements.js'
+import { tensesVerbs } from '../src/achieveGroup/verbs/tensesVerbs.js'
+import {modalVerbs} from "../src/achieveGroup/verbs/modalVerbs.js";
+import { typeVerbs} from "../src/achieveGroup/verbs/typeVerbs.js";
+import {prepositionsDativ} from '../src/achieveGroup/prepositions/prepDativ.js'
+import {prepositionsGenitiv} from '../src/achieveGroup/prepositions/prepGenitiv.js'
+import {prepositionsAkkusativ} from '../src/achieveGroup/prepositions/prepAkkusativ.js'
 import {overAchievment} from '../src/achieveGroup/overAllAchieve/overallAchievements.js'
-import { wordAchievementsGroup } from '../src/achieveGroup/wordGroup/wordAchievements.js'
+import {prepositionsNominativ} from '../src/achieveGroup/prepositions/prepNominativ.js'
+import {wordAchievementsGroup} from '../src/achieveGroup/wordGroup/wordAchievements.js'
 import {guessAchievment} from '../src/achieveGroup/guessAchieve/guessAchievments.js'
 import {cpecialGroupAchievment} from '../src/achieveGroup/specialAchieve/specialAchievment.js'
 import {groupedEasyModeAchievements} from '../src/achieveGroup/marathon/easyModeAchievment.js'
@@ -98,11 +122,15 @@ import {wordPlusArticleAchievment} from '../src/achieveGroup/article/wordPlusArt
 import {assembleWordGroupAchievement} from '../src/achieveGroup/article/wordsFromLetters.js'
 import {writeArticleGroupAchievment} from '../src/achieveGroup/article/writeArticle.js'
 import {sentenceAchievement} from '../src/achieveGroup/sentenceDuel/sentenceAchievementsА1.js'
+import {adjectiveBasic} from '../src/achieveGroup/adjective/adjectiveBasic.js'
+import {adjectiveDeclension} from "../src/achieveGroup/adjective/adjectiveDeclension.js";
+import {adjectiveComparison} from '../src/achieveGroup/adjective/adjectiveComparison.js'
 import Modal from '../src/components/modal.vue'
 import AchIcon from '../assets/images/target.svg'
 import Quest from '../assets/images/question.svg'
 import {useRouter} from 'vue-router'
 import {useAchievementStore} from '../store/achievementStore.js'
+
 
 const scrollRef = ref(null)
 const {$SimpleBar} = useNuxtApp()
@@ -169,7 +197,18 @@ const contentMap = {
   easy: EasyModeAchieve,
   normal: NormalModeAchieve,
   hard: HardModeAchieve,
-  locations: LocationsAchievements
+  locations: LocationsAchievements,
+  nominativ: NominativAchievements,
+  akkusativ: AkkusativAchievements,
+  genitiv: GenitivAchievements,
+  dativ: DativAchievements,
+  adjectiveBasic: AdjectiveBasicAchievements,
+  adjectiveDeclension: AdjectiveDeclensionAchievements,
+  adjectiveComparison: AdjectiveComparisonAchievements,
+  tensesVerbs: TensesAchievements,
+  modalVerbs: ModalVerbs,
+  typeVerbs: TypeVerbsAchievement,
+  winter: WinterAchievement
 };
 const currentContent = computed(() => contentMap[contentId.value]);
 const wrapperClass = computed(() => {
@@ -191,7 +230,18 @@ const allAchievementsData = {
   listening: listenAchieveGroup,
   special: cpecialGroupAchievment,
   sentence: sentenceAchievement,
-  locations: wordAchievementsGroup
+  locations: wordAchievementsGroup,
+  nominativ: prepositionsNominativ,
+  akkusativ: prepositionsAkkusativ,
+  genitiv: prepositionsGenitiv,
+  dativ: prepositionsDativ,
+  adjectiveBasic: adjectiveBasic,
+  adjectiveDeclension: adjectiveDeclension,
+  adjectiveComparison: adjectiveComparison,
+  tensesVerbs: tensesVerbs,
+  modalVerbs: modalVerbs,
+  typeVerbs: typeVerbs,
+  winter: eventWinterAchievements
 };
 const countNestedAchievements = (dataArray) => {
   let count = 0;
@@ -237,6 +287,50 @@ const modeComputed = computed(() => {
   if (allAchievementsData.locations) {
     locations = countNestedAchievements(allAchievementsData.locations)
   }
+  let nominativ = 0
+  if (allAchievementsData.nominativ) {
+    nominativ = countNestedAchievements(allAchievementsData.nominativ)
+  }
+  let akkusativ = 0
+  if (allAchievementsData.akkusativ) {
+    akkusativ = countNestedAchievements(allAchievementsData.akkusativ)
+  }
+  let genitiv = 0
+  if (allAchievementsData.genitiv) {
+    genitiv = countNestedAchievements(allAchievementsData.genitiv)
+  }
+  let dativ = 0
+  if (allAchievementsData.dativ) {
+    dativ = countNestedAchievements(allAchievementsData.dativ)
+  }
+  let adjectiveBasic = 0
+  if (allAchievementsData.adjectiveBasic) {
+    adjectiveBasic = countNestedAchievements(allAchievementsData.adjectiveBasic)
+  }
+  let adjectiveDeclension = 0
+  if (allAchievementsData.adjectiveDeclension) {
+    adjectiveDeclension = countNestedAchievements(allAchievementsData.adjectiveDeclension)
+  }
+  let adjectiveComparison = 0
+  if (allAchievementsData.adjectiveComparison) {
+    adjectiveComparison = countNestedAchievements(allAchievementsData.adjectiveComparison)
+  }
+  let tensesVerbs = 0
+  if (allAchievementsData.tensesVerbs) {
+    tensesVerbs = countNestedAchievements(allAchievementsData.tensesVerbs)
+  }
+  let modalVerbs = 0
+  if (allAchievementsData.modalVerbs) {
+    modalVerbs = countNestedAchievements(allAchievementsData.modalVerbs)
+  }
+  let typeVerbs = 0
+  if (allAchievementsData.typeVerbs) {
+    typeVerbs = countNestedAchievements(allAchievementsData.typeVerbs)
+  }
+  let winter = 0
+  if (allAchievementsData.winter) {
+    winter = countNestedAchievements(allAchievementsData.winter)
+  }
   return {
     easy: easyCount,
     normal: normalCount,
@@ -246,7 +340,22 @@ const modeComputed = computed(() => {
     locations: locations,
     guessWord: guesss,
     sentence: senten,
-    total: easyCount + normalCount + hardCount
+    nominativ: nominativ,
+    akkusativ: akkusativ,
+    genitiv: genitiv,
+    dativ: dativ,
+    eventsTotal: winter,
+    tensesVerbs: tensesVerbs,
+    modalVerbs: modalVerbs,
+    typeVerbs: typeVerbs,
+    adjectiveDeclension: adjectiveDeclension,
+    adjectiveComparison: adjectiveComparison,
+    adjectiveBasic: adjectiveBasic,
+    winter: winter,
+    total: easyCount + normalCount + hardCount,
+    prepositiones: nominativ + akkusativ + genitiv + dativ,
+    adjectiveTotal: adjectiveDeclension + adjectiveBasic + adjectiveComparison,
+    verbsTotal: tensesVerbs + modalVerbs + typeVerbs
   }
 });
 const articleComputed = computed(() => {
@@ -326,10 +435,106 @@ const achievementCategories = computed(() => [
     ]
   },
   {
+    id: 'verbs',
+    name: 'categoryAchievments.verbs',
+    icon: '🎬',
+    length: modeComputed.value.verbsTotal,
+    submenu: [
+      {
+        id: 'tensesVerbs',
+        name: 'categoryAchievments.verbConjugation',
+        icon: '🕰️',
+        length: modeComputed.value.tensesVerbs,
+      },
+      {
+        id: 'modalVerbs',
+        name: 'categoryAchievments.modal',
+        icon: '🔑',
+        length: modeComputed.value.modalVerbs,
+      },
+      {
+        id: 'typeVerbs',
+        name: 'categoryAchievments.typeVerbs',
+        icon: '📂',
+        length: modeComputed.value.typeVerbs,
+      }
+    ]
+  },
+  {
+    id: 'prepositiones',
+    name: 'categoryAchievments.prepositions',
+    icon: '📖',
+    length: modeComputed.value.prepositiones,
+    submenu: [
+      {
+        id: 'nominativ',
+        name: 'categoryAchievments.nominative',
+        icon: '👤',
+        length: modeComputed.value.nominativ
+      },
+      {
+        id: 'akkusativ',
+        name: 'categoryAchievments.accusative',
+        icon: '🎯',
+        length: modeComputed.value.akkusativ
+      },
+      {
+        id: 'genitiv',
+        name: 'categoryAchievments.genitive',
+        icon: '📖',
+        length: modeComputed.value.genitiv
+      },
+      {
+        id: 'dativ',
+        name: 'categoryAchievments.dative',
+        icon: '🤝',
+        length: modeComputed.value.dativ
+      }
+    ]
+  },
+  {
+    id: 'adjectives',
+    name: 'categoryAchievments.adjectives',
+    icon: '🌈',
+    length: modeComputed.value.adjectiveTotal,
+    submenu: [
+      {
+        id: 'adjectiveBasic',
+        name: 'categoryAchievments.adjectiveBasic',
+        icon: '🌱',
+        length: modeComputed.value.adjectiveBasic
+      },
+      {
+        id: 'adjectiveDeclension',
+        name: 'categoryAchievments.adjectiveDeclension',
+        icon: '🌀',
+        length: modeComputed.value.adjectiveDeclension
+      },
+      {
+        id: 'adjectiveComparison',
+        name: 'categoryAchievments.adjectiveComparison',
+        icon: '⚖️',
+        length: modeComputed.value.adjectiveComparison
+      },
+    ]
+  },
+  {
     id: "special",
     name: "categoryAchievments.special",
     icon: "🌟",
     length: modeComputed.value.special,
+  },
+  {
+    id: 'events',
+    name: 'События',
+    icon: '🎊',
+    length: modeComputed.value.winter, // ✅
+    submenu: [
+      { id: 'winter', name: 'Щёпот зимы', icon: '❄️', length: modeComputed.value.winter }, // ✅
+      { id: 'valentine', name: 'Фестиваль сердец', icon: '💖' },
+      { id: 'foolDay', name: 'Парад приколов', icon: '🎭' },
+      { id: 'halloween', name: 'Праздник тыкв', icon: '🎃' },
+    ]
   }
 ]);
 
@@ -365,6 +570,18 @@ const handleCategoryClick = (category) => {
   font-family: "Nunito", sans-serif;
   box-sizing: border-box;
   position: relative;
+}
+
+.category__item-left {
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+}
+
+.category__item-right {
+  display: flex;
+  align-items: center;
+  gap: 0 14px;
 }
 
 .header__icon-info {
@@ -437,6 +654,7 @@ const handleCategoryClick = (category) => {
   cursor: pointer;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 15px;
   font-size: 1.1rem;
   border-radius: 16px;
@@ -467,10 +685,11 @@ const handleCategoryClick = (category) => {
   transition: transform .2s ease;
   width: 18px;
   margin-left: auto;
+  transform: rotate(-90deg);
 }
 
 .submenu-arrow.rotated {
-  transform: rotate(90deg);
+  transform: rotate(0deg);
 }
 
 .submenu {
@@ -489,6 +708,23 @@ const handleCategoryClick = (category) => {
 
 .sub__item-length {
   margin-left: auto;
+  min-width: 32px;
+  height: 32px;
+  padding: 0 5px;
+  display: flex;
+  color: #1e1e1e;
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
+  background: #e0e0e0;
+  border: 2px solid #1e1e1e;
+  border-radius: 50%;
+  font-family: "Nunito", sans-serif;
+  font-size: 17px;
+}
+
+.sub__item-length--sub {
+  margin-left: auto;
   min-width: 30px;
   height: 30px;
   padding: 0 5px;
@@ -500,7 +736,7 @@ const handleCategoryClick = (category) => {
   background: #e0e0e0;
   border: 2px solid #1e1e1e;
   border-radius: 100px;
-  font-size: 0.9rem;
+  font-size: 13px;
 }
 
 .active .sub__item-length {

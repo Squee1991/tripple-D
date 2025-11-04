@@ -1,26 +1,28 @@
-import { getAuth, onAuthStateChanged } from 'firebase/auth'
+import { useFirebaseAuth } from 'vuefire'
+import { onAuthStateChanged } from 'firebase/auth'
 
-function waitForAuthReady() {
-    const auth = getAuth()
-    if (auth.currentUser !== null) return Promise.resolve(auth.currentUser)
-    return new Promise((resolve) => {
-        const off = onAuthStateChanged(auth, (u) => { off(); resolve(u) })
-    })
-}
-
-export default defineNuxtRouteMiddleware(async (to) => {
-    if (import.meta.server) return
-
-    const publicPaths = new Set(['/', '/login', '/register', '/faq', '/pay'])
-    const user = await waitForAuthReady()
-
-    if (!user && !publicPaths.has(to.path)) {
-        return navigateTo({ path: '/', query: { redirect: to.fullPath } })
+export default defineNuxtPlugin(async (to) => {
+    function waitForAuthReady() {
+        const auth = useFirebaseAuth()
+        if (auth.currentUser !== null) return Promise.resolve(auth.currentUser)
+        return new Promise((resolve) => {
+            const off = onAuthStateChanged(auth, (u) => {
+                off();
+                resolve(u)
+            })
+        })
     }
 
+    if (import.meta.server) return
+    const publicPaths = new Set(['/', '/login', '/register', '/faq', '/pay'])
+    const user = await waitForAuthReady()
+    if (!user && !publicPaths.has(to.path)) {
+        return navigateTo({path: '/', query: {redirect: to.fullPath}})
+    }
     if (user && (to.path === '/login' || to.path === '/register')) {
         return navigateTo(to.query.redirect || '/cabinet')
     }
 })
 
-console.log(123)
+
+

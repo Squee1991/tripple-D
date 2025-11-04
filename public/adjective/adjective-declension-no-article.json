@@ -48,5 +48,455 @@
     "question": "Aus alt___ Papier macht man neues.",
     "options": ["e", "er", "em", "en"],
     "answer": "em"
+  },
+  {
+    "question": "Alt___ Häuser stehen in dieser Straße.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Kalt___ Wasser tut gut im Sommer.",
+    "options": ["es", "er", "e", "en"],
+    "answer": "es"
+  },
+  {
+    "question": "Frisch___ Obst ist gesund.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "es"
+  },
+  {
+    "question": "Jung___ Leute reisen gern.",
+    "options": ["e", "er", "en", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Neu___ Möbel sind sehr teuer.",
+    "options": ["en", "e", "er", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Interessant___ Bücher liegen auf dem Tisch.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Gutes Essen braucht frisch___ Zutaten.",
+    "options": ["en", "e", "er", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Klar___ Regeln sind wichtig.",
+    "options": ["e", "er", "en", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Schwer___ Arbeit macht müde.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Schnell___ Autos fahren auf der Autobahn.",
+    "options": ["en", "e", "er", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Alt___ Menschen brauchen Ruhe.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Schön___ Kleidung hängt im Schrank.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Gut___ Freunde helfen immer.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Fett___ Essen ist ungesund.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "es"
+  },
+  {
+    "question": "Laut___ Musik stört die Nachbarn.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Trocken___ Brot schmeckt nicht gut.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "es"
+  },
+  {
+    "question": "Alt___ Städte haben viel Geschichte.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Schwer___ Taschen trägt niemand gern.",
+    "options": ["e", "er", "en", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Kalt___ Winter sind unangenehm.",
+    "options": ["e", "er", "en", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Heiß___ Sommer machen müde.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Sauber___ Luft ist wichtig für Gesundheit.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Grün___ Wiesen sehen schön aus.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Dick___ Bücher lesen wir selten.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Klein___ Kinder spielen im Garten.",
+    "options": ["e", "er", "en", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Neu___ Nachrichten hört man im Radio.",
+    "options": ["e", "er", "en", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Modern___ Technik verändert die Welt.",
+    "options": ["e", "er", "en", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Fleißig___ Studenten bestehen Prüfungen.",
+    "options": ["e", "er", "en", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Hart___ Arbeit bringt Erfolg.",
+    "options": ["e", "er", "en", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Schwierig___ Aufgaben lösen wir zusammen.",
+    "options": ["e", "er", "en", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Dunkel___ Nächte sind lang im Winter.",
+    "options": ["e", "er", "en", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Schwer___ Regen fällt seit gestern.",
+    "options": ["er", "e", "es", "en"],
+    "answer": "er"
+  },
+  {
+    "question": "Hoch___ Berge stehen im Hintergrund.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Schön___ Wetter macht uns glücklich.",
+    "options": ["es", "er", "e", "en"],
+    "answer": "es"
+  },
+  {
+    "question": "Lang___ Straßen führen durch die Stadt.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Stark___ Wind weht vom Meer.",
+    "options": ["er", "e", "es", "en"],
+    "answer": "er"
+  },
+  {
+    "question": "Ruhig___ Nächte genieße ich sehr.",
+    "options": ["e", "en", "er", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Gesund___ Ernährung ist wichtig.",
+    "options": ["e", "er", "en", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Alt___ Brücken sind oft aus Stein gebaut.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Fröhlich___ Kinder spielen auf der Wiese.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Hart___ Winter erschweren das Leben.",
+    "options": ["e", "er", "en", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Blau___ Himmel sieht man selten im Winter.",
+    "options": ["er", "e", "en", "es"],
+    "answer": "er"
+  },
+  {
+    "question": "Billig___ Kleidung hält nicht lange.",
+    "options": ["e", "er", "en", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Leise___ Musik beruhigt die Nerven.",
+    "options": ["e", "er", "en", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Gefährlich___ Situationen muss man vermeiden.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Warm___ Tee trinke ich gern im Winter.",
+    "options": ["er", "e", "es", "en"],
+    "answer": "er"
+  },
+  {
+    "question": "Sauber___ Zimmer gefallen mir.",
+    "options": ["e", "er", "en", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Klein___ Probleme lösen wir sofort.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Dunkel___ Wolken bedecken den Himmel.",
+    "options": ["e", "er", "en", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Schwierig___ Fragen stellt der Lehrer.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Fröhlich___ Gesichter sieht man überall.",
+    "options": ["e", "er", "en", "es"],
+    "answer": "e"
+  },
+  {
+    "question": "Kühl___ Getränke sind im Sommer beliebt.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Alt___ Möbel stehen im Keller.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Schmal___ Wege führen in den Wald.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Roter___ Wein schmeckt kräftig.",
+    "options": ["e", "es", "er", "en"],
+    "answer": "er"
+  },
+  {
+    "question": "Hell___ Licht blendet die Augen.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "es"
+  },
+  {
+    "question": "Unruhig___ Kinder sitzen im Klassenzimmer.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Teuer___ Smartphones kauft er selten.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Hart___ Brot kann man kaum essen.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "es"
+  },
+  {
+    "question": "Freundlich___ Nachbarn helfen einander.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Altmodisch___ Kleidung trägt er nicht.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Schwer___ Schnee bedeckt die Dächer.",
+    "options": ["er", "e", "es", "en"],
+    "answer": "er"
+  },
+  {
+    "question": "Langsam___ Züge halten an allen Stationen.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Hell___ Sterne leuchten am Himmel.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Schnell___ Hilfe ist notwendig.",
+    "options": ["e", "es", "er", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Wichtig___ Informationen fehlen im Text.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Alt___ Bäume stehen im Park.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Nützlich___ Tipps bekommt man online.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Ruhig___ Wasser fließt tief.",
+    "options": ["es", "er", "e", "en"],
+    "answer": "es"
+  },
+  {
+    "question": "Bekannt___ Musiker treten heute auf.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Kalt___ Wind weht durch das Fenster.",
+    "options": ["er", "es", "e", "en"],
+    "answer": "er"
+  },
+  {
+    "question": "Modern___ Gebäude stehen in der Stadt.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Schwierig___ Texte versteht er nicht.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Tief___ Wasser ist gefährlich.",
+    "options": ["es", "er", "e", "en"],
+    "answer": "es"
+  },
+  {
+    "question": "Interessant___ Filme laufen im Kino.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Neu___ Ideen bringen Erfolg.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Groß___ Probleme müssen wir lösen.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Trocken___ Luft macht den Hals rau.",
+    "options": ["e", "es", "er", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Hoch___ Preise schrecken Käufer ab.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Dunkel___ Keller sind unheimlich.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Lecker___ Kuchen liegt auf dem Teller.",
+    "options": ["er", "es", "e", "en"],
+    "answer": "er"
+  },
+  {
+    "question": "Streng___ Lehrer geben viele Hausaufgaben.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Gefährlich___ Tiere leben im Dschungel.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Klar___ Wasser fließt aus der Quelle.",
+    "options": ["es", "er", "e", "en"],
+    "answer": "es"
+  },
+  {
+    "question": "Warm___ Jacken braucht man im Winter.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Neu___ Technologien entwickeln sich schnell.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Günstig___ Angebote findet man online.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Leicht___ Aufgaben sind schnell erledigt.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Rot___ Rosen stehen im Garten.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Süß___ Früchte schmecken gut.",
+    "options": ["e", "er", "es", "en"],
+    "answer": "e"
+  },
+  {
+    "question": "Hart___ Stein liegt auf dem Weg.",
+    "options": ["er", "e", "es", "en"],
+    "answer": "er"
   }
 ]

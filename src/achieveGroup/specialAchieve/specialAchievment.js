@@ -42,6 +42,15 @@ export const cpecialGroupAchievment = [
 				targetProgress: 20
 			},
 			{
+				id: "iAmGroot",
+				name: "specialCategory.specialGrotText",
+				description: "specialCategory.specialGrotLabel",
+				icon: "🌱",
+				awards: "specialCategory.specialGrotAward",
+				currentProgress: 0,
+				targetProgress: 4,
+			},
+			{
 				id: "totalArticles1000",
 				name: "specialCategory.generalFirstLabel",
 				description: "specialCategory.generalFirstText",
@@ -56,7 +65,7 @@ export const cpecialGroupAchievment = [
 				description: "specialCategory.specialCollectionLabel",
 				icon: "🧰",
 				currentProgress: 0,
-				targetProgress: 10
+				targetProgress: 18
 			},
 			{
 				id: 'Hunderd',
@@ -132,7 +141,7 @@ export const cpecialGroupAchievment = [
 				icon: '💸',
 				awards: 'specialCategory.generalSexthAward',
 				currentProgress: 0,
-				targetProgress: 700,
+				targetProgress: 1000,
 			},
 			{
 				id: "languageLands50",
@@ -142,6 +151,33 @@ export const cpecialGroupAchievment = [
 				awards: "specialCategory.specialLocationsAwards",
 				currentProgress: 0,
 				targetProgress: 50
+			},
+			{
+				id: 'all_cases',
+				name: 'specialCategory.specialAllCaseslabel',
+				description: 'specialCategory.specialAllCasesText',
+				icon: '🧩',
+				currentProcess: 0,
+				awards: "specialCategory.specialAllCasesAward",
+				targetProgress: 4
+			},
+			{
+				id: 'all_adjectives',
+				name: 'specialCategory.specialAllAdjectivesLabel',
+				description: 'specialCategory.specialAllAdjectivesText',
+				icon: '🎨️',
+				currentProcess: 0,
+				awards: "specialCategory.specialAllAdjectivesAward",
+				targetProgress: 3
+			},
+			{
+				id: 'all_verbs',
+				name: 'specialCategory.specialAllVerbsLabel',
+				description: 'specialCategory.specialAllVerbsText',
+				icon: '⚔️',
+				currentProcess: 0,
+				awards: "specialCategory.specialAllVerbsAward",
+				targetProgress: 3
 			}
 		]
 	}

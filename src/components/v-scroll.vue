@@ -34,8 +34,8 @@
 		width: 50px;
 		height: 50px;
 		position: fixed;
-		bottom: 12px;
-		right: 20px;
+		bottom: 64px;
+		right: 10px;
 		background: #3e65fa;
 		color: white;
 		border: none;
@@ -43,7 +43,7 @@
 		padding: 10px;
 		cursor: pointer;
 		transition: .4s ease-in-out;
-		z-index: 99999;
+		z-index: 1;
 	}
 
 	.scroll-to-top:hover {

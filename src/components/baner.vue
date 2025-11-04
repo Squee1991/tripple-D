@@ -8,27 +8,21 @@
       <div class="banner__wrapper">
         <div class="banner__content">
           <div class="banner__orbit">
-                        <span
-                            class="banner__orbit-word banner__orbit-word--der"
-                            :class="{ 'glow-black': glowType === 'der', 'fade-glow': fadingGlow === 'der' }"
-                            @click="triggerGlow('der')">Der</span>
-            <span
-                class="banner__orbit-word banner__orbit-word--die"
-                :class="{ 'glow-red': glowType === 'die', 'fade-glow': fadingGlow === 'die' }"
-                @click="triggerGlow('die')">Die
-                        </span>
-            <span
-                class="banner__orbit-word banner__orbit-word--das"
-                :class="{ 'glow-gold': glowType === 'das', 'fade-glow': fadingGlow === 'das' }"
-                @click="triggerGlow('das')">Das
-                        </span>
+                <span v-for="(word, index) in orbitWords"
+                      :key="index"
+                      class="banner__orbit-word"
+                      :class="[ word.class,  {
+                    'glow-black': glowType === word.type && word.type === 'der',
+                    'glow-red': glowType === word.type && word.type === 'die',
+                    'glow-gold': glowType === word.type && word.type === 'das',
+                    'fade-glow': fadingGlow === word.type}]"
+                >{{ word.text }}
+                </span>
           </div>
-          <h1 class="banner__title">
-            {{ t('banner.title') }}
-          </h1>
-          <button class="banner__button" @click="startLearning">{{ t('banner.btn') }}</button>
+          <h1 class="banner__title" v-once>{{ t('banner.title') }}</h1>
+          <button class="banner__button" @click="startLearning" v-once>{{ t('banner.btn') }}</button>
         </div>
-        <div ref="orbit" class="banner__mage-container">
+        <div ref="orbit" class="banner__mage-container" aria-hidden="true">
           <div class="banner__mage"></div>
         </div>
       </div>
@@ -41,13 +35,19 @@ import SignIn from '../components/logIn.vue'
 import Overlay from '../components/Uioverlay.vue'
 import {gsap} from 'gsap'
 import {ScrollTrigger} from "gsap/ScrollTrigger";
+import SoundBtn from "../components/soundBtn.vue"
+
+const orbitWords = [
+  {text: 'Der', type: 'der', class: 'banner__orbit-word--der'},
+  {text: 'Die', type: 'die', class: 'banner__orbit-word--die'},
+  {text: 'Das', type: 'das', class: 'banner__orbit-word--das'}
+]
 
 gsap.registerPlugin(ScrollTrigger);
 import {onMounted} from 'vue'
 import {useRouter} from 'vue-router'
-import {userAuthStore} from '../../store/authStore'
+import {userAuthStore} from '../../store/authStore.js'
 import {ref, watch} from "vue";
-import {useI18n} from 'vue-i18n'
 
 const {t} = useI18n()
 const orbit = ref(null)
@@ -105,22 +105,6 @@ onMounted(() => {
 
 <style scoped>
 
-.body {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  min-height: 100vh;
-  margin: 0;
-  overflow: hidden;
-}
-
-.box {
-  display: block;
-  width: 100px;
-  height: 100px;
-  background: red;
-}
-
 .banner {
   font-family: "Nunito", sans-serif;
   overflow: hidden;
@@ -128,9 +112,7 @@ onMounted(() => {
 }
 
 .banner__section {
-  //background-color: #fef8e4;
-  padding: 8rem 2rem 13rem 2rem;
-  /*border-bottom: 4px solid #1e1e1e;*/
+  padding: 5rem 1rem 5rem 1rem;
 }
 
 .banner__wrapper {
@@ -195,13 +177,14 @@ onMounted(() => {
   line-height: 1.1;
   letter-spacing: -0.03em;
   margin-bottom: 2.5rem;
+  text-wrap: balance;
 }
 
 .banner__button {
   font-family: "Nunito", sans-serif;
   padding: 1rem 2.5rem;
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 600;
   border-radius: 16px;
   cursor: pointer;
   border: 3px solid #1e1e1e;
@@ -267,6 +250,15 @@ onMounted(() => {
   right: 0;
 }
 
+@media (max-width: 1023px) {
+  .banner__title{
+    font-size: 2rem;
+  }
+  .banner__mage-container {
+    max-width: 350px;
+  }
+}
+
 @media (max-width: 900px) {
   .banner__wrapper {
     flex-direction: column;
@@ -301,15 +293,20 @@ onMounted(() => {
   .banner__orbit-word {
     font-size: 1.5rem;
     padding: 0.6rem 1.5rem;
+    box-shadow: 2px 2px 0 #1e1e1e;
   }
 
   .banner__button {
-    width: 100%;
+    width: 80%;
+    border-radius: 20px;
+    box-shadow: 2px 2px 0 #1e1e1e;
   }
+}
 
+@media (max-width: 500px) {
   .banner__button {
-    border-radius: 25px;
-    box-shadow: 3px 3px 0 #1e1e1e;
+    width: 90%;
+    padding: 10px;
   }
 }
 </style>

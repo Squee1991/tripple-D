@@ -1,0 +1,620 @@
+[
+  {
+    "type": "futur1",
+    "question": "Ich ___ morgen nach Berlin fahren.",
+    "options": ["werde", "wirst", "wird", "werden", "werdet"],
+    "answer": "werde"
+  },
+  {
+    "type": "futur1",
+    "question": "Du ___ bald eine Prüfung schreiben.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wirst"
+  },
+  {
+    "type": "futur1",
+    "question": "Er ___ heute Abend Fußball spielen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wird"
+  },
+  {
+    "type": "futur1",
+    "question": "Wir ___ nächste Woche in den Urlaub fliegen.",
+    "options": ["werde", "wirst", "wird", "werden", "werdet"],
+    "answer": "werden"
+  },
+  {
+    "type": "futur1",
+    "question": "Ihr ___ bald das Ergebnis bekommen.",
+    "options": ["werde", "wirst", "wird", "werden", "werdet"],
+    "answer": "werdet"
+  },
+  {
+    "type": "futur1",
+    "question": "Sie (Singular) ___ morgen ihre Oma besuchen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wird"
+  },
+  {
+    "type": "futur1",
+    "question": "Ich ___ nächsten Monat nach München ziehen.",
+    "options": ["werde", "wirst", "wird", "werden", "werdet"],
+    "answer": "werde"
+  },
+  {
+    "type": "futur1",
+    "question": "Du ___ bald eine Überraschung erleben.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wirst"
+  },
+  {
+    "type": "futur1",
+    "question": "Wir ___ morgen einen Test schreiben.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "werden"
+  },
+  {
+    "type": "futur1",
+    "question": "Er ___ später seine Hausaufgaben machen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wird"
+  },
+  {
+    "type": "futur1",
+    "question": "Ihr ___ bald ins Kino gehen.",
+    "options": ["werde", "wirst", "wird", "werden", "werdet"],
+    "answer": "werdet"
+  },
+  {
+    "type": "futur1",
+    "question": "Sie (Plural) ___ im Sommer nach Italien fahren.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "werden"
+  },
+  {
+    "type": "futur1",
+    "question": "Ich ___ am Wochenende ein Buch lesen.",
+    "options": ["werde", "wirst", "wird", "werden", "werdet"],
+    "answer": "werde"
+  },
+  {
+    "type": "futur1",
+    "question": "Du ___ bald eine neue Wohnung finden.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wirst"
+  },
+  {
+    "type": "futur1",
+    "question": "Er ___ später seine Eltern besuchen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wird"
+  },
+  {
+    "type": "futur1",
+    "question": "Wir ___ morgen das Spiel gewinnen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "werden"
+  },
+  {
+    "type": "futur1",
+    "question": "Ihr ___ gleich Mittag essen.",
+    "options": ["werde", "wirst", "wird", "werden", "werdet"],
+    "answer": "werdet"
+  },
+  {
+    "type": "futur1",
+    "question": "Sie (Plural) ___ bald in ein neues Haus ziehen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "werden"
+  },
+  {
+    "type": "futur1",
+    "question": "Ich ___ dir morgen eine E-Mail schreiben.",
+    "options": ["werde", "wirst", "wird", "werden", "werdet"],
+    "answer": "werde"
+  },
+  {
+    "type": "futur1",
+    "question": "Du ___ bald einen neuen Job finden.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wirst"
+  },
+  {
+    "type": "futur1",
+    "question": "Er ___ später ins Fitnessstudio gehen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wird"
+  },
+  {
+    "type": "futur1",
+    "question": "Wir ___ am Abend zusammen kochen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "werden"
+  },
+  {
+    "type": "futur1",
+    "question": "Ihr ___ bald ein Konzert besuchen.",
+    "options": ["werde", "wirst", "wird", "werden", "werdet"],
+    "answer": "werdet"
+  },
+  {
+    "type": "futur1",
+    "question": "Sie (Singular) ___ morgen viel lernen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wird"
+  },
+  {
+    "type": "futur1",
+    "question": "Ich ___ später mit dir telefonieren.",
+    "options": ["werde", "wirst", "wird", "werden", "werdet"],
+    "answer": "werde"
+  },
+  {
+    "type": "futur1",
+    "question": "Du ___ gleich deine Hausaufgaben machen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wirst"
+  },
+  {
+    "type": "futur1",
+    "question": "Er ___ bald nach Hause zurückkehren.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wird"
+  },
+  {
+    "type": "futur1",
+    "question": "Ich ___ bald ein neues Handy kaufen.",
+    "options": ["werde", "wirst", "wird", "werden", "werdet"],
+    "answer": "werde"
+  },
+  {
+    "type": "futur1",
+    "question": "Du ___ morgen deine Eltern besuchen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wirst"
+  },
+  {
+    "type": "futur1",
+    "question": "Er ___ später eine Geschichte erzählen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wird"
+  },
+  {
+    "type": "futur1",
+    "question": "Wir ___ in den Ferien ans Meer fahren.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "werden"
+  },
+  {
+    "type": "futur1",
+    "question": "Ihr ___ bald ein neues Projekt starten.",
+    "options": ["werde", "wirst", "wird", "werden", "werdet"],
+    "answer": "werdet"
+  },
+  {
+    "type": "futur1",
+    "question": "Sie (Plural) ___ in einer Woche die Prüfung schreiben.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "werden"
+  },
+  {
+    "type": "futur1",
+    "question": "Ich ___ morgen früh aufstehen.",
+    "options": ["werde", "wirst", "wird", "werden", "werdet"],
+    "answer": "werde"
+  },
+  {
+    "type": "futur1",
+    "question": "Du ___ bald eine gute Nachricht bekommen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wirst"
+  },
+  {
+    "type": "futur1",
+    "question": "Er ___ heute Abend ein Buch lesen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wird"
+  },
+  {
+    "type": "futur1",
+    "question": "Wir ___ bald eine neue Lehrerin haben.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "werden"
+  },
+  {
+    "type": "futur1",
+    "question": "Ihr ___ das Spiel am Samstag sehen.",
+    "options": ["werde", "wirst", "wird", "werden", "werdet"],
+    "answer": "werdet"
+  },
+  {
+    "type": "futur1",
+    "question": "Sie (Singular) ___ bald nach Hause zurückkehren.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wird"
+  },
+  {
+    "type": "futur1",
+    "question": "Ich ___ nächste Woche einen Termin haben.",
+    "options": ["werde", "wirst", "wird", "werden", "werdet"],
+    "answer": "werde"
+  },
+  {
+    "type": "futur1",
+    "question": "Du ___ morgen ein Geschenk bekommen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wirst"
+  },
+  {
+    "type": "futur1",
+    "question": "Er ___ später ein Gedicht schreiben.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wird"
+  },
+  {
+    "type": "futur1",
+    "question": "Wir ___ am Wochenende eine Party feiern.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "werden"
+  },
+  {
+    "type": "futur1",
+    "question": "Ihr ___ bald viele Fotos machen.",
+    "options": ["werde", "wirst", "wird", "werden", "werdet"],
+    "answer": "werdet"
+  },
+  {
+    "type": "futur1",
+    "question": "Sie (Plural) ___ morgen den Zug nehmen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "werden"
+  },
+  {
+    "type": "futur1",
+    "question": "Ich ___ dir bald ein Geheimnis erzählen.",
+    "options": ["werde", "wirst", "wird", "werden", "werdet"],
+    "answer": "werde"
+  },
+  {
+    "type": "futur1",
+    "question": "Du ___ später einen Kuchen backen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wirst"
+  },
+  {
+    "type": "futur1",
+    "question": "Er ___ morgen neue Schuhe kaufen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wird"
+  },
+  {
+    "type": "futur1",
+    "question": "Wir ___ später ein Lied singen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "werden"
+  },
+  {
+    "type": "futur1",
+    "question": "Ihr ___ nächste Woche ein Theaterstück sehen.",
+    "options": ["werde", "wirst", "wird", "werden", "werdet"],
+    "answer": "werdet"
+  },
+  {
+    "type": "futur1",
+    "question": "Sie (Singular) ___ bald eine Reise planen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wird"
+  },
+  {
+    "type": "futur1",
+    "question": "Ich ___ morgen einen langen Spaziergang machen.",
+    "options": ["werde", "wirst", "wird", "werden", "werdet"],
+    "answer": "werde"
+  },
+  {
+    "type": "futur1",
+    "question": "Du ___ bald eine Prüfung bestehen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wirst"
+  },
+  {
+    "type": "futur1",
+    "question": "Er ___ am Nachmittag ins Schwimmbad gehen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wird"
+  },
+  {
+    "type": "futur1",
+    "question": "Wir ___ bald eine Lösung finden.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "werden"
+  },
+  {
+    "type": "futur1",
+    "question": "Ihr ___ morgen eine Überraschung erleben.",
+    "options": ["werde", "wirst", "wird", "werden", "werdet"],
+    "answer": "werdet"
+  },
+  {
+    "type": "futur1",
+    "question": "Sie (Plural) ___ bald einen neuen Film sehen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "werden"
+  },
+  {
+    "type": "futur1",
+    "question": "Ich ___ gleich etwas essen.",
+    "options": ["werde", "wirst", "wird", "werden", "werdet"],
+    "answer": "werde"
+  },
+  {
+    "type": "futur1",
+    "question": "Du ___ bald eine neue Sprache lernen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wirst"
+  },
+  {
+    "type": "futur1",
+    "question": "Er ___ morgen mit dem Zug fahren.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wird"
+  },
+  {
+    "type": "futur1",
+    "question": "Wir ___ später im Garten arbeiten.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "werden"
+  },
+  {
+    "type": "futur1",
+    "question": "Ihr ___ am Abend Fußball spielen.",
+    "options": ["werde", "wirst", "wird", "werden", "werdet"],
+    "answer": "werdet"
+  },
+  {
+    "type": "futur1",
+    "question": "Sie (Singular) ___ bald einen Brief schreiben.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wird"
+  },
+  {
+    "type": "futur1",
+    "question": "Ich ___ morgen ins Theater gehen.",
+    "options": ["werde", "wirst", "wird", "werden", "werdet"],
+    "answer": "werde"
+  },
+  {
+    "type": "futur1",
+    "question": "Du ___ später deine Tasche packen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wirst"
+  },
+  {
+    "type": "futur1",
+    "question": "Er ___ bald einen Freund treffen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wird"
+  },
+  {
+    "type": "futur1",
+    "question": "Ich ___ morgen meine Großeltern besuchen.",
+    "options": ["werde", "wirst", "wird", "werden", "werdet"],
+    "answer": "werde"
+  },
+  {
+    "type": "futur1",
+    "question": "Du ___ bald eine neue Wohnung finden.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wirst"
+  },
+  {
+    "type": "futur1",
+    "question": "Wir ___ im Sommer nach Spanien reisen.",
+    "options": ["werde", "wirst", "wird", "werden", "werdet"],
+    "answer": "werden"
+  },
+  {
+    "type": "futur1",
+    "question": "Wir ___ gleich das Abendessen kochen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "werden"
+  },
+  {
+    "type": "futur1",
+    "question": "Wir ___ nächste Woche feiern.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "werden"
+  },
+  {
+    "type": "futur1",
+    "question": "Ihr ___ später den Bus nehmen.",
+    "options": ["werde", "wirst", "wird", "werden", "werdet"],
+    "answer": "werdet"
+  },
+  {
+    "type": "futur1",
+    "question": "Sie (Plural) ___ bald eine Wohnung mieten.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "werden"
+  },
+  {
+    "type": "futur1",
+    "question": "Ich ___ morgen ins Kino gehen.",
+    "options": ["werde", "wirst", "wird", "werden", "werdet"],
+    "answer": "werde"
+  },
+  {
+    "type": "futur1",
+    "question": "Du ___ bald einen neuen Freund kennenlernen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wirst"
+  },
+  {
+    "type": "futur1",
+    "question": "Er ___ gleich etwas essen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wird"
+  },
+  {
+    "type": "futur1",
+    "question": "Wir ___ morgen ein Picknick machen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "werden"
+  },
+  {
+    "type": "futur1",
+    "question": "Ihr ___ bald eine Prüfung bestehen.",
+    "options": ["werde", "wirst", "wird", "werden", "werdet"],
+    "answer": "werdet"
+  },
+  {
+    "type": "futur1",
+    "question": "Sie (Singular) ___ später einen Kuchen backen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wird"
+  },
+  {
+    "type": "futur1",
+    "question": "Ich ___ bald ein Fahrrad kaufen.",
+    "options": ["werde", "wirst", "wird", "werden", "werdet"],
+    "answer": "werde"
+  },
+  {
+    "type": "futur1",
+    "question": "Du ___ morgen mit mir lernen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wirst"
+  },
+  {
+    "type": "futur1",
+    "question": "Er ___ bald ein Buch schreiben.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wird"
+  },
+  {
+    "type": "futur1",
+    "question": "Wir ___ später ein Spiel spielen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "werden"
+  },
+  {
+    "type": "futur1",
+    "question": "Ihr ___ bald viele neue Wörter lernen.",
+    "options": ["werde", "wirst", "wird", "werden", "werdet"],
+    "answer": "werdet"
+  },
+  {
+    "type": "futur1",
+    "question": "Sie (Plural) ___ morgen ein Fußballspiel sehen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "werden"
+  },
+  {
+    "type": "futur1",
+    "question": "Ich ___ am Nachmittag Kaffee trinken.",
+    "options": ["werde", "wirst", "wird", "werden", "werdet"],
+    "answer": "werde"
+  },
+  {
+    "type": "futur1",
+    "question": "Du ___ gleich eine Pause machen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wirst"
+  },
+  {
+    "type": "futur1",
+    "question": "Er ___ später das Zimmer aufräumen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wird"
+  },
+  {
+    "type": "futur1",
+    "question": "Wir ___ bald eine Party organisieren.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "werden"
+  },
+  {
+    "type": "futur1",
+    "question": "Ihr ___ morgen das Haus putzen.",
+    "options": ["werde", "wirst", "wird", "werden", "werdet"],
+    "answer": "werdet"
+  },
+  {
+    "type": "futur1",
+    "question": "Sie (Singular) ___ später einkaufen gehen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wird"
+  },
+  {
+    "type": "futur1",
+    "question": "Ich ___ dir bald ein Geschenk bringen.",
+    "options": ["werde", "wirst", "wird", "werden", "werdet"],
+    "answer": "werde"
+  },
+  {
+    "type": "futur1",
+    "question": "Du ___ morgen das Auto waschen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wirst"
+  },
+  {
+    "type": "futur1",
+    "question": "Er ___ bald eine neue Sprache lernen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wird"
+  },
+  {
+    "type": "futur1",
+    "question": "Wir ___ morgen einen Ausflug machen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "werden"
+  },
+  {
+    "type": "futur1",
+    "question": "Ihr ___ bald eine E-Mail schreiben.",
+    "options": ["werde", "wirst", "wird", "werden", "werdet"],
+    "answer": "werdet"
+  },
+  {
+    "type": "futur1",
+    "question": "Sie (Plural) ___ am Abend Musik hören.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "werden"
+  },
+  {
+    "type": "futur1",
+    "question": "Ihr ___ bald ein neues Auto kaufen.",
+    "options": ["werde", "wirst", "wird", "werden", "werdet"],
+    "answer": "werdet"
+  },
+  {
+    "type": "futur1",
+    "question": "Sie (Plural) ___ morgen viel arbeiten.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "werden"
+  },
+  {
+    "type": "futur1",
+    "question": "Ich ___ dir später helfen.",
+    "options": ["werde", "wirst", "wird", "werden", "habe"],
+    "answer": "werde"
+  },
+  {
+    "type": "futur1",
+    "question": "Du ___ bald besser Deutsch sprechen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "wirst"
+  },
+  {
+    "type": "futur1",
+    "question": "Er ___ morgen nach Hause kommen.",
+    "options": ["werde", "wirst", "wird", "werden", "bist"],
+    "answer": "wird"
+  },
+  {
+    "type": "futur1",
+    "question": "Wir ___ die Aufgabe zusammen machen.",
+    "options": ["werde", "wirst", "wird", "werden", "seid"],
+    "answer": "werden"
+  }
+]

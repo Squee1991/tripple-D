@@ -514,4 +514,173 @@ watch(displayedMessages, () => {
         transform: translateY(-8px);
     }
 }
+/* ДОБАВЬТЕ ЭТОТ КОД В КОНЕЦ ВАШЕГО <style scoped> */
+
+@media (max-width: 768px) {
+    /* Меняем направление flex-контейнера на вертикальное */
+    .dialogue-scene {
+        flex-direction: column;
+        overflow-y: hidden; /* Предотвращаем двойной скролл */
+    }
+
+    /* Контейнер с шефом теперь сверху и занимает 35% высоты экрана */
+    .dialogue-scene__chef-container {
+        width: 100%;
+        height: 35vh;
+        padding: 1rem;
+        order: 1; /* Явно указываем порядок, хотя он и так будет первым */
+    }
+
+    .dialogue-scene__chef-img {
+        max-height: 100%; /* Изображение занимает всю высоту своего нового контейнера */
+        max-width: 200px;
+    }
+
+    /* Основной контент занимает оставшиеся 65% высоты */
+    .dialogue-scene__main-content {
+        width: 100%;
+        height: 65vh; /* 100vh - 35vh = 65vh */
+        order: 2;
+    }
+
+    /* Уменьшаем отступы в области сообщений */
+    .dialogue-scene__messages {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .message-bubble__content {
+        padding: 0.75rem 1.25rem;
+        font-size: 1rem; /* Немного уменьшаем шрифт */
+    }
+
+    /* Адаптируем футер */
+    .dialogue-scene__footer {
+        min-height: auto; /* Высота подстраивается под контент */
+        padding: 1rem;
+        flex-shrink: 0; /* Футер не должен сжиматься */
+    }
+
+    /* Уменьшаем шрифт для слова в тесте */
+    .article-test__word {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Кнопки теперь располагаются вертикально */
+    .article-test__buttons,
+    .choice-buttons {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center; /* Центрируем кнопки в колонке */
+        width: 100%;
+    }
+
+    .article-test__button,
+    .choice-buttons__button,
+    .start-button {
+        width: 100%; /* Кнопки занимают всю доступную ширину */
+        max-width: 400px; /* Но не слишком широкие на планшетах */
+        font-size: 1.2rem;
+        padding: 1rem;
+        min-width: unset; /* Сбрасываем минимальную ширину */
+        box-shadow: 4px 4px 0px #d1d5db; /* Уменьшаем тень */
+    }
+
+    .article-test__button:hover,
+    .choice-buttons__button:hover {
+        transform: none; /* Отключаем hover-эффект смещения на тач-устройствах */
+        box-shadow: 4px 4px 0px #d1d5db;
+    }
+
+    .article-test__button:active,
+    .choice-buttons__button:active {
+        transform: translate(2px, 2px); /* Делаем active-эффект менее выраженным */
+        box-shadow: 2px 2px 0px #d1d5db;
+    }
+}
+
+/* Дополнительная адаптация для очень маленьких экранов */
+/* ДОБАВЬТЕ ЭТОТ ОБНОВЛЕННЫЙ КОД В КОНЕЦ ВАШЕГО <style scoped> */
+
+@media (max-width: 768px) {
+    /* Полностью скрываем блок с шефом на мобильных устройствах */
+    .dialogue-scene__chef-container {
+        display: none;
+    }
+
+    /* Основной контент теперь занимает всю высоту экрана */
+    .dialogue-scene__main-content {
+        width: 100%;
+        height: 100%; /* Занимает 100% высоты родителя (.dialogue-scene) */
+    }
+
+    /* Уменьшаем отступы в области сообщений */
+    .dialogue-scene__messages {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .message-bubble__content {
+        padding: 0.75rem 1.25rem;
+        font-size: 1rem;
+    }
+
+    /* Адаптируем футер */
+    .dialogue-scene__footer {
+        min-height: auto;
+        padding: 1rem;
+        flex-shrink: 0;
+        border-top: 1px solid;
+    }
+
+    /* Уменьшаем шрифт для слова в тесте */
+    .article-test__word {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Кнопки теперь располагаются вертикально */
+    .article-test__buttons,
+    .choice-buttons {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        width: 100%;
+        font-size:16px;
+        border: none;
+        box-shadow:none;
+        padding: 0;
+    }
+
+    .article-test__button,
+    .choice-buttons__button,
+    .start-button {
+        width: 100%;
+        max-width: 400px;
+        font-size: 1.2rem;
+        padding: 1rem;
+        min-width: unset;
+        box-shadow: 4px 4px 0px #d1d5db;
+    }
+
+    .article-test__button:active,
+    .choice-buttons__button:active {
+        transform: translate(2px, 2px);
+        box-shadow: 2px 2px 0px #d1d5db;
+    }
+}
+
+/* Дополнительная адаптация для очень маленьких экранов */
+@media (max-width: 380px) {
+    .article-test__word {
+        font-size: 2rem;
+    }
+
+    .article-test__button,
+    .choice-buttons__button,
+    .start-button {
+        font-size: 1rem;
+    }
+}
 </style>

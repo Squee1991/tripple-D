@@ -5,16 +5,15 @@
     </button>
     <div class="comic__wrapper">
       <div class="comic__header">
-        <h2 class="comic-description">Получи максимум от платформы</h2>
-        <p class="sub__description">Обучение, награды, задания, прогресс и многое другое!</p>
+        <h1 class="comic-description">{{ t('payPage.title')}}</h1>
+        <p class="sub__description">{{ t('payPage.description')}}</p>
       </div>
       <div class="subscription-box">
         <div class="compare-header">
-          <span class="label">Функции</span>
-          <span class="label">Бесплатно</span>
-          <span class="label super-label">Подписка</span>
+          <span class="label">{{ t('payPage.compareLabelOne')}}</span>
+          <span class="label">{{ t('payPage.compareLabelTwo')}}</span>
+          <span class="label super-label">{{ t('payPage.compareLabelThree')}}</span>
         </div>
-
         <div class="compare-row" v-for="(feature, index) in features" :key="index">
           <div class="compare__label">
             <img class="compare__icon" :src="feature.icon" alt="">
@@ -30,19 +29,17 @@
             ref="payButton"
             @click="pay"
         >
-          Приобрести подписку
+          {{ t('payPage.getPremiumBtn')}}
         </button>
       </div>
     </div>
     <transition name="slide-up">
       <div v-if="showStickyFooter && !authStore.isPremium" class="sticky-footer">
-        <button class="footer-btn" @click="pay">Приобрести подписку</button>
+        <button class="footer-btn" @click="pay">{{ t('payPage.getPremiumBtn')}}</button>
       </div>
     </transition>
   </div>
 </template>
-
-
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
@@ -59,28 +56,27 @@ import Speaker from '../assets/images/pay-images/speaker.svg'
 import Exams from '../assets/images/pay-images/test.svg'
 import Competitions from '../assets/images/pay-images/competition.svg'
 import Future from '../assets/images/pay-images/future.svg'
-const audioRef = ref(null)
 const authStore = userAuthStore()
 const payButton = ref(null)
 const showStickyFooter = ref(false)
 const router = useRouter()
-
+const { t } = useI18n()
 const backToMain = () => {
   router.push('/')
 }
 
 let observer
 const features = [
-  { title: 'Учебный материал', free: true, premium: true , icon: Books},
-  { title: 'Сохранение прогресса', free: true, premium: true, icon: Save },
-  { title: 'Достижения', free: true, premium: true, icon: Ach },
-  { title: 'Переводчик', free: true, premium: true, icon: Translate },
-  { title: 'Получение наград', free: false, premium: true, icon: Award },
-  { title: 'Тесты с проверкой ИИ', free: false, premium: true, icon: Exams },
-  { title: 'Ежедневные задания', free: false, premium: true, icon: Quests },
-  { title: 'Озвучка', free: false, premium: true, icon: Speaker },
-  { title: 'Дуэли и рейтинг', free: false, premium: true, icon: Competitions },
-  { title: 'Будущие функции', free: false, premium: true, icon: Future },
+  { title: t('payPage.featureOne'), free: true, premium: true , icon: Books},
+  { title: t('payPage.featureTwo'), free: true, premium: true, icon: Save },
+  { title: t('payPage.featureThree'), free: true, premium: true, icon: Ach },
+  { title: t('payPage.featureFour'), free: true, premium: true, icon: Quests },
+  { title: t('payPage.featureFive'), free: false, premium: true, icon: Translate },
+  { title: t('payPage.featureSix'), free: false, premium: true, icon: Award },
+  { title: t('payPage.featureSeven'), free: false, premium: true, icon: Exams },
+  { title: t('payPage.featureEight'), free: false, premium: true, icon: Speaker },
+  { title: t('payPage.featureNine'), free: false, premium: true, icon: Competitions },
+  { title: t('payPage.featureTen'), free: false, premium: true, icon: Future },
 ]
 onMounted(() => {
   observer = new IntersectionObserver(
@@ -89,7 +85,6 @@ onMounted(() => {
       },
       { threshold: 1.0 }
   )
-
   if (payButton.value) {
     observer.observe(payButton.value)
   }
@@ -102,6 +97,7 @@ onUnmounted(() => {
 })
 
 async function pay() {
+  console.log('STRIPE_SECRET_KEY:', process.env.STRIPE_SECRET_KEY)
   if (!authStore.uid || !authStore.email) {
     alert('Сначала войди в аккаунт')
     return
@@ -116,13 +112,10 @@ async function pay() {
       priceId,
     },
   })
-
   const stripe = await getStripe()
   await stripe.redirectToCheckout({ sessionId: response.sessionId })
 }
 </script>
-
-
 
 <style scoped>
 .comic-wrapper {
@@ -130,7 +123,7 @@ async function pay() {
 }
 
 .comic__wrapper {
-  padding: 25px;
+  padding: 14px;
   font-family: 'Nunito', sans-serif;
   text-align: center;
   color: #fff;
@@ -186,7 +179,6 @@ async function pay() {
 .compare-header, .compare-row {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  gap: 10px;
   padding: 12px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   font-size: 1.1rem;
@@ -285,7 +277,6 @@ async function pay() {
     padding: 15px;
   }
   .compare-header {
-    gap: 5px;
     font-size: 0.9rem;
   }
 }

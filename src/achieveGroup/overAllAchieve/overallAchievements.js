@@ -11,14 +11,47 @@ export const overAchievment = [
 				currentProgress: 0,
 				targetProgress: 1
 			},
-			// {
-			// 	id: "firstAward",
-			// 	name: "generalCategory.firstAwardText",
-			// 	description: "generalCategory.firstAwardLabel",
-			// 	icon: "🎁️",
-			// 	currentProgress: 0,
-			// 	targetProgress: 1
-			// },
+			{
+				id: "daily42",
+				name: "generalCategory.dailyQuestText",
+				description: "generalCategory.dailyQuestDescription",
+				icon: "❓",
+				awards: "generalCategory.dailyQuestAward",
+				currentProgress: 0,
+				targetProgress: 42
+			},
+			{
+				id: "catDog",
+				name: "generalCategory.catDotText",
+				description: "generalCategory.catDotDescription",
+				icon: "🐾",
+				currentProgress: 0,
+				targetProgress: 2
+			},
+			{
+				id: "cowabungaSalami",
+				name: "generalCategory.cowabungaText",
+				description: "generalCategory.cowabungaDescription" ,
+				icon: "🐢",
+				currentProgress: 0,
+				targetProgress: 1
+			},
+			{
+				id: "zoo",
+				name: "generalCategory.zooText",
+				description: "generalCategory.zooDescription" ,
+				icon: "🦁",
+				currentProgress: 0,
+				targetProgress: 1
+			},
+			{
+				id: "vegan",
+				name: "generalCategory.veganText",
+				description: "generalCategory.veganDescription",
+				icon: "🥦",
+				currentProgress: 0,
+				targetProgress: 1
+			},
 			{
 				id: "SiteRegular",
 				name: "generalCategory.monthLabel",
@@ -109,14 +142,14 @@ export const overAchievment = [
 				currentProgress: 0,
 				targetProgress: 500,
 			},
-			{
-				id: 'master_of_duels',
-				name: 'generalCategory.duelLabel',
-				description: 'generalCategory.duelText',
-				icon: '⚔',
-				currentProgress: 0,
-				targetProgress: 250,
-			},
+			// {
+			// 	id: 'master_of_duels',
+			// 	name: 'generalCategory.duelLabel',
+			// 	description: 'generalCategory.duelText',
+			// 	icon: '⚔',
+			// 	currentProgress: 0,
+			// 	targetProgress: 250,
+			// },
 			{
 				id: 'wrong100Answers',
 				name: 'generalCategory.mistakesLabel',

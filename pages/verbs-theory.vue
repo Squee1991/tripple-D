@@ -14,7 +14,11 @@
           </ul>
           <div v-if="item.type === 'note'" class="verbs__note" v-html="item.text"></div>
           <div v-if="item.type === 'example'" class="verbs__example">
-            <img class="verbs__icon" :src="item.icon === 'Chat' ? Chat : Pin" alt="icon">
+            <img
+                class="verbs__icon"
+                :src="item.icon === 'Chat' ? Chat : Pin" alt="icon"
+                :alt="item.icon === 'Chat' ? 'Dialogue example' : 'Note example'"
+            >
             <div class="verbs__example--wrapper">
               <p v-for="(line, i) in item.lines" :key="i" v-html="line"></p>
             </div>
@@ -72,10 +76,36 @@
 </template>
 
 <script setup>
+import { useHead, useSeoMeta, useRuntimeConfig } from '#imports'
+import { useRoute } from 'vue-router'
 import {ref, computed} from 'vue'
 import Pin from '../assets/images/pin.svg'
 import Chat from '../assets/images/chat.svg'
+const canonical = useCanonical();
 const { t } = useI18n()
+
+const route = useRoute()
+const pageTitle = t('metaVerbsTheory.title')
+const pageDesc  = t('metaVerbsTheory.description')
+
+useSeoMeta({
+  title: pageTitle,
+  description: pageDesc,
+  ogTitle: pageTitle,
+  ogDescription: pageDesc,
+  ogType: 'article',
+  ogUrl:  canonical,
+  ogImage: '/images/seo-verbs.png',
+  robots: 'index, follow'
+})
+
+useHead({
+  title: pageTitle,
+  link: [
+    { rel: 'canonical', href:canonical }
+  ]
+})
+
 const contentSections = ref([
   {
     id: 1,

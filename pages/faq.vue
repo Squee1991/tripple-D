@@ -1,7 +1,7 @@
 <template>
   <section class="faq">
     <div class="faq__top-btn">
-      <button class="faq__btn-home" @click="goHome">На главную</button>
+      <button class="faq__btn-home" @click="goHome">{{ t('faq.btnBack')}}</button>
     </div>
     <div
         v-for="(section, sectionIndex) in faqSections"
@@ -9,7 +9,7 @@
         class="faq__section"
     >
       <div class="faq__section-header">
-        <span class="faq__section-title">{{ section.title }}</span>
+        <h2 class="faq__section-title">{{ section.title }}</h2>
       </div>
       <div class="faq__section-body">
         <div
@@ -18,22 +18,23 @@
             class="faq__item"
             :class="{ 'faq__item--open': isQuestionOpen(sectionIndex, questionIndex) }"
         >
-          <button
-              class="faq__item-toggle"
-              @click="toggleQuestion(sectionIndex, questionIndex)"
-              :aria-expanded="isQuestionOpen(sectionIndex, questionIndex)"
-              :aria-controls="`faq-item-${sectionIndex}-${questionIndex}`"
-          >
-            <span class="faq__item-question">{{ item.question }}</span>
-            <img
-                class="faq__item-arrow"
-                src="../assets/images/arrowNav.svg"
-                alt="Раскрыть ответ"
-            />
-          </button>
-          <div
-              class="faq__item-body"
-              :id="`faq-item-${sectionIndex}-${questionIndex}`"
+          <h3 class="faq__item-question">
+            <button
+                class="faq__item-toggle"
+                @click="toggleQuestion(sectionIndex, questionIndex)"
+                :aria-expanded="isQuestionOpen(sectionIndex, questionIndex)"
+                :aria-controls="`faq-item-${sectionIndex}-${questionIndex}`"
+            >
+              <span class="faq__item-question-text">{{ item.question }}</span>
+              <img
+                  class="faq__item-arrow"
+                  src="../assets/images/arrowNav.svg"
+                  alt="Show_answer"
+              />
+            </button>
+          </h3>
+          <div class="faq__item-body"
+               :id="`faq-item-${sectionIndex}-${questionIndex}`"
           >
             <template v-if="item.steps && item.steps.length">
               <ol class="faq__steps">
@@ -55,10 +56,8 @@
       </div>
     </div>
     <div class="faq__bottom-btn">
-      <p class="faq__contact-text">Есть ещё вопросы? Напишите нам!</p>
-      <button class="faq__btn-contact" @click="openContactForm">
-        Отправить сообщение
-      </button>
+      <p class="faq__contact-text">{{ t('faq.questions')}}</p>
+      <button class="faq__btn-contact" @click="openContactForm">{{ t('faq.send')}}</button>
     </div>
   </section>
 </template>
@@ -66,7 +65,8 @@
 <script setup>
 import {ref} from 'vue'
 import {useRouter} from 'vue-router'
-
+import {useHead} from '#imports'
+const { t } = useI18n()
 const router = useRouter()
 
 function goHome() {
@@ -79,86 +79,119 @@ function openContactForm() {
 
 const faqSections = ref([
   {
-    title: 'Как пользоваться',
+    title: t('howToUse.title'),
     items: [
       {
-        question: 'Как начать обучение?',
-        answer: 'Чтобы начать практику немецкого, достаточно зарегистрироваться и создать аккаунт. Без этого доступ к заданиям будет закрыт.'
+        question: t('howToUse.questOne'),
+        answer: t('howToUse.answerOne'),
       },
       {
-        question: 'Что такое достижение?',
-        answer: 'Достижение — это отметка за выполненную активность (прогресс, правильные ответы, ежедневные задания и т.п.).'
+        question: t('howToUse.questTwo'),
+        answer: t('howToUse.answerTwo'),
       },
       {
-        question: 'Что такое награды?',
-        answer: 'Награды выдаются за выполнение определённых достижений и отображаются в вашем кабинете.'
+        question: t('howToUse.questThree'),
+        answer: t('howToUse.answerThree')
       },
       {
-        question: 'Где посмотреть прогресс по артиклям?',
-        answer: 'Зайди в Личный кабинет, выбери «Категории» и нажми «Прогресс по артиклям».'
+        question: t('howToUse.questFour'),
+        answer: t('howToUse.answerFour'),
       },
       {
-        question: 'Что такое Артиклюс?',
-        answer: 'Артиклюс — это внутренняя валюта. Начисляется за правильные ответы в задании «Практика артиклей» и за выполнение заданий в Языковых землях. Её можно тратить на повторные попытки или покупки на сайте.'
+        question: t('howToUse.questFive'),
+        answer: t('howToUse.answerFive')
       },
       {
-        question: 'Как попасть в рейтинг?',
-        answer: 'Нужно получить минимум 2 уровень, играя в режим «Практика артиклей».'
+        question: t('howToUse.questSix'),
+        answer: t('howToUse.answerSix')
       },
       {
-        question: 'Что такое ежедневные задания?',
-        answer: 'Это задания по темам, которые можно выполнять один раз в день. Регулярное выполнение даёт прогресс и дополнительные награды.'
+        question: t('howToUse.questSeven'),
+        answer: t('howToUse.answerSeven'),
+      },
+      {
+        question: t('howToUse.questEight'),
+        answer: t('howToUse.answerEight')
+      },
+      {
+        question: t('howToUse.questNine'),
+        answer: t('howToUse.answerNine')
+      },
+    ]
+  },
+  {
+    title: t('accountManagement.title'),
+    items: [
+      {
+        question: t('accountManagement.questOne'),
+        answer: t('accountManagement.questAnswer')
+      },
+      {
+        question:  t('accountManagement.questTwo'),
+        answer: t('accountManagement.answerTwo')
+      },
+      {
+        question: t('accountManagement.questThree'),
+        answer:t('accountManagement.answerThree')
       }
     ]
   },
   {
-    title: 'Управление аккаунтом',
+    title: t('subscribe.title'),
     items: [
       {
-        question: 'Как поменять имя или почту?',
-        answer: 'Перейдите в Кабинет → Настройки, где можно изменить имя и адрес электронной почты.'
-      },
-      {
-        question: 'Как удалить аккаунт?',
-        answer: 'В Кабинет → Во вкладке "Параметры аккаунта" выберите «Удалить аккаунт». После удаления все ваши данные будут безвозвратно удалены и их невозможно будет восстановить.'
-      },
-      {
-        question: 'Как восстановить пароль?',
-        answer: 'На форме входа выберите «Забыли пароль?» и следуйте инструкциям. Письмо с ссылкой на восстановление будет отправлено на указанный при регистрации почтовый ящик. Важно: используйте реальный и верный адрес электронной почты при регистрации, иначе восстановить пароль будет невозможно.'
-      }
-    ]
-  },
-  {
-    title: 'Подписка (Премиум)',
-    items: [
-      {
-        question: 'Что даёт подписка Премиум?',
+        question: t('subscribe.questOne'),
         steps: [
-          '1 Озвучка всех слов и предложений — тренируйте восприятие на слух.',
-          '2 Обучение без ограничений — проходите любое количество материала в день.',
-          '3 Доступ ко всем тестам с авто-проверкой и оценкой от ИИ.',
-          '4 Аудио-задания и задания на говорение для тренировки устной речи.',
-          '5 Эксклюзивные материалы и упражнения, недоступные в бесплатной версии.',
-          'Наша цель — сделать изучение немецкого доступным и увлекательным. Мы создаём атмосферу интерактива, игр и соревнований, чтобы учёба была приключением, в которое хочется возвращаться каждый день!'
+          t('subscribe.questOneStepOne'),
+          t('subscribe.questOneStepTwo'),
+          t('subscribe.questOneStepThree'),
+          t('subscribe.questOneStepFour'),
+          t('subscribe.questOneStepFive'),
+          t('subscribe.questOneStepSix'),
         ]
       },
       {
-        question: 'Как отключить Премиум?',
+        question: t('subscribe.questTwo'),
         steps: [
-          'Войдите в свой аккаунт.',
-          'Перейдите в раздел «Кабинет».',
-          'Откройте подраздел «Управление аккаунтом».',
-          'Нажмите «Отменить подписку».'
+          t('subscribe.questTwoStepOne'),
+          t('subscribe.questTwoStepTwo'),
+          t('subscribe.questTwoStepThree'),
+          t('subscribe.questTwoStepFour'),
         ],
-        note: 'После этого доступ сохранится до конца оплаченного периода.'
+        note: t('subscribe.note'),
       },
       {
-        question: 'Есть ли возврат за оставшиеся дни?',
-        answer: 'Сейчас возврат за оставшиеся дни не предусмотрен.'
+        question: t('subscribe.questThree'),
+        answer: t('subscribe.answerThree'),
       }
     ]
   }
 ])
+
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqSections.value.flatMap((section) =>
+            section.items.map((item) => ({
+              '@type': 'Question',
+              name: item.question,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text:
+                    item.answer ??
+                    (item.steps ? item.steps.join(' ') : '')
+              }
+            }))
+        )
+      })
+    }
+  ]
+})
+
 const openQuestionBySection = ref(new Map())
 
 function toggleQuestion(sectionIndex, questionIndex) {
@@ -176,7 +209,6 @@ function isQuestionOpen(sectionIndex, questionIndex) {
 </script>
 
 <style scoped>
-
 * {
   font-family: "Nunito", sans-serif;
 }
@@ -261,7 +293,11 @@ function isQuestionOpen(sectionIndex, questionIndex) {
   overflow: hidden;
 }
 
-.faq__item-toggle {
+.faq__item-question {
+  margin: 0;
+}
+
+.faq__item-question .faq__item-toggle {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -271,9 +307,10 @@ function isQuestionOpen(sectionIndex, questionIndex) {
   border: 0;
   cursor: pointer;
   font-weight: 800;
+  text-align: left;
 }
 
-.faq__item-question {
+.faq__item-question-text {
   font-weight: 900;
   font-size: 1.4rem;
 }
@@ -324,12 +361,14 @@ function isQuestionOpen(sectionIndex, questionIndex) {
 }
 
 @media (max-width: 767px) {
-  .faq__item-question {
+  .faq__item-question-text {
     font-size: 1rem;
   }
+
   .faq__answer {
-    font-size: 1rem ;
+    font-size: 1rem;
   }
+
   .faq__step {
     font-size: 1rem;
   }

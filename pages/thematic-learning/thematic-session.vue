@@ -3,6 +3,12 @@ import {useTrainerStore} from '../../store/themenProgressStore.js'
 import {useRouter} from 'vue-router'
 import {ref, onMounted, onUnmounted, computed} from 'vue'
 import VStopSessionBtn from "~/src/components/V-stopSessionBtn.vue";
+import SoundBtn from "../../src/components/soundBtn.vue";
+import { useSeoMeta } from '#imports'
+import task from "~/pages/recipes/[id]/task.vue";
+useSeoMeta({
+  robots: 'noindex, nofollow'
+})
 
 const router = useRouter()
 const {t} = useI18n()
@@ -32,6 +38,10 @@ const visibleSentence = computed(() => {
   return task.question
 })
 
+const cleanText = (text) => {
+  return text.replace(/_/g, '').trim()
+}
+
 const generateAnswerOptions = (correctAnswer) => {
   const allArticles = ['der', 'die', 'das', 'den', 'dem', 'des', 'ein', 'eine', 'einen', 'einem'];
   let distractors = allArticles.filter(item => item !== correctAnswer);
@@ -47,14 +57,12 @@ const generateAnswerOptions = (correctAnswer) => {
 
   answerOptions.value = options;
 }
-
 const setupCurrentQuestion = () => {
   feedback.value = null;
   isChecked.value = false;
   const task = tasks.value[current.value];
   generateAnswerOptions(task.answer);
 }
-
 const check = (selectedAnswer) => {
   if (isChecked.value) return;
 
@@ -64,7 +72,6 @@ const check = (selectedAnswer) => {
   isChecked.value = true
   if (isCorrect) correctAnswers.value += 1
 }
-
 const next = async () => {
   if (current.value < tasks.value.length - 1) {
     current.value++
@@ -76,7 +83,6 @@ const next = async () => {
     }
   }
 }
-
 const exit = () => {
   const hasStarted = current.value > 0 || isChecked.value === true
   if (hasStarted && finished.value === false) {
@@ -127,11 +133,11 @@ onMounted(async () => {
   clockInterval = setInterval(updateClock, 1000);
   window.addEventListener('beforeunload', handleBeforeUnload);
 })
-
 onUnmounted(() => {
   clearInterval(clockInterval);
   window.removeEventListener('beforeunload', handleBeforeUnload);
 })
+
 </script>
 <template>
   <main class="trainer-page">
@@ -200,12 +206,13 @@ onUnmounted(() => {
             <div v-if="!finished" class="progress-bar">
               <div class="progress-bar__fill" :style="{ width: progressPercent + '%' }"></div>
             </div>
-
             <div v-if="!finished" class="trainer-app__task">
-              <p class="trainer-app__question" :class="{ 'correct-reveal': feedback && feedback.isCorrect }">
-                {{ visibleSentence }}
-              </p>
-
+              <div class="app__question-inner">
+                <SoundBtn :text="cleanText(visibleSentence)"/>
+                <p class="trainer-app__question" :class="{ 'correct-reveal': feedback && feedback.isCorrect }">
+                  {{ visibleSentence }}
+                </p>
+              </div>
               <div class="trainer-app__options-group">
                 <button
                     v-for="option in answerOptions"
@@ -222,11 +229,10 @@ onUnmounted(() => {
                   {{ option }}
                 </button>
               </div>
-
               <div class="trainer-app__footer">
                 <div v-if="isChecked && feedback" class="feedback-message">
-                  <span v-if="feedback.isCorrect" class="feedback-text--success">✔ Верно!</span>
-                  <span v-else class="feedback-text--error">✖ Неверно. Правильный ответ: «{{ tasks[current].answer }}»</span>
+                  <span v-if="feedback.isCorrect" class="feedback-text--success">✔ {{ t('trainerPage.right') }}</span>
+                  <span v-else class="feedback-text--error">✖ {{ t('trainerPage.false') }} «{{ tasks[current].answer }}»</span>
                 </div>
                 <button v-if="isChecked" class="btn btn--next" @click="next">
                   {{ t('trainerPage.further') }}
@@ -295,6 +301,13 @@ onUnmounted(() => {
   to {
     opacity: 1;
   }
+}
+
+.app__question-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
 }
 
 .result__inner {
@@ -705,10 +718,9 @@ onUnmounted(() => {
   font-size: 1.8rem;
   line-height: 1.6;
   text-align: center;
-  flex-grow: 1;
-  margin: 0 0 1.5rem 0;
   color: #fff;
   transition: color 0.3s ease;
+  margin-left: 8px;
 }
 
 .trainer-app__question.correct-reveal {
@@ -848,7 +860,7 @@ onUnmounted(() => {
 
 .trainer-app__footer {
   height: auto;
-  min-height: 120px;
+  min-height: 145px;
   display: flex;
   flex-direction: column;
   justify-content: center;

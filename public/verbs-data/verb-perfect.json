@@ -1,0 +1,626 @@
+[
+  {
+    "type": "auxiliary",
+    "question": "Du ___ sehr schnell gelaufen.",
+    "options": ["bist", "warst", "hast", "waren", "hattest"],
+    "answer": "bist"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Er ___ nach Berlin gefahren.",
+    "options": ["ist", "war", "hat", "waren", "hast"],
+    "answer": "ist"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Wir ___ lange geschlafen.",
+    "options": ["haben", "sind", "waren", "hattet", "warst"],
+    "answer": "haben"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Ihr ___ zu Hause geblieben.",
+    "options": ["seid", "wart", "habt", "war", "hatten"],
+    "answer": "seid"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Wir ___ gestern im Park spazieren gegangen.",
+    "options": ["sind", "haben", "wart", "waren", "habt"],
+    "answer": "sind"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Ich ___ ein neues Buch gekauft.",
+    "options": ["habe", "bin", "war", "hat", "bist"],
+    "answer": "habe"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Du ___ sehr schön gesungen.",
+    "options": ["hast", "bist", "warst", "habt", "seid"],
+    "answer": "hast"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Er ___ seine Freunde angerufen.",
+    "options": ["hat", "ist", "war", "haben", "seid"],
+    "answer": "hat"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Ihr ___ gestern Pizza gegessen.",
+    "options": ["habt", "seid", "wart", "waren", "hatten"],
+    "answer": "habt"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Sie ___ im Sommer nach Spanien geflogen.",
+    "options": ["ist", "hat", "war", "haben", "seid"],
+    "answer": "ist"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Wir ___ einen neuen Film angeschaut.",
+    "options": ["haben", "sind", "wart", "waren", "habt"],
+    "answer": "haben"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Ich ___ meine Schlüssel verloren.",
+    "options": ["habe", "bin", "war", "hat", "bist"],
+    "answer": "habe"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Du ___ das Fenster zugemacht.",
+    "options": ["hast", "bist", "warst", "habt", "seid"],
+    "answer": "hast"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Er ___ eine halbe Stunde gewartet.",
+    "options": ["hat", "ist", "war", "haben", "seid"],
+    "answer": "hat"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Ihr ___ schnell gerannt.",
+    "options": ["seid", "habt", "wart", "waren", "hatten"],
+    "answer": "seid"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Sie ___ eine Tasse Kaffee getrunken.",
+    "options": ["hat", "ist", "war", "haben", "seid"],
+    "answer": "hat"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Wir ___ einen Brief geschrieben.",
+    "options": ["haben", "sind", "wart", "waren", "habt"],
+    "answer": "haben"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Ich ___ den ganzen Tag gelernt.",
+    "options": ["habe", "bin", "war", "hat", "bist"],
+    "answer": "habe"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Du ___ sehr lange ferngesehen.",
+    "options": ["hast", "bist", "warst", "habt", "seid"],
+    "answer": "hast"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Er ___ eine Geschichte erzählt.",
+    "options": ["hat", "ist", "war", "haben", "seid"],
+    "answer": "hat"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Ihr ___ im Garten gearbeitet.",
+    "options": ["habt", "seid", "wart", "waren", "hatten"],
+    "answer": "habt"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Sie ___ ein Foto gemacht.",
+    "options": ["hat", "ist", "war", "haben", "seid"],
+    "answer": "hat"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Wir ___ das Auto gewaschen.",
+    "options": ["haben", "sind", "wart", "waren", "habt"],
+    "answer": "haben"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Ich ___ meine Eltern besucht.",
+    "options": ["habe", "bin", "war", "hat", "bist"],
+    "answer": "habe"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Du ___ ein Lied gesungen.",
+    "options": ["hast", "bist", "warst", "habt", "seid"],
+    "answer": "hast"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Er ___ das Fenster geöffnet.",
+    "options": ["hat", "ist", "war", "haben", "seid"],
+    "answer": "hat"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Ihr ___ ein Geschenk bekommen.",
+    "options": ["habt", "seid", "wart", "waren", "hatten"],
+    "answer": "habt"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Sie ___ in die Schule gegangen.",
+    "options": ["ist", "hat", "war", "haben", "seid"],
+    "answer": "ist"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Wir ___ eine Pizza gebacken.",
+    "options": ["haben", "sind", "wart", "waren", "habt"],
+    "answer": "haben"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Ich ___ ein Glas Wasser getrunken.",
+    "options": ["habe", "bin", "war", "hat", "bist"],
+    "answer": "habe"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Du ___ die Tür geschlossen.",
+    "options": ["hast", "bist", "warst", "habt", "seid"],
+    "answer": "hast"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Er ___ im See geschwommen.",
+    "options": ["ist", "hat", "war", "haben", "seid"],
+    "answer": "ist"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Ihr ___ sehr laut gesungen.",
+    "options": ["habt", "seid", "wart", "waren", "hatten"],
+    "answer": "habt"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Sie ___ den Bus verpasst.",
+    "options": ["hat", "ist", "war", "haben", "seid"],
+    "answer": "hat"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Wir ___ die Wohnung geputzt.",
+    "options": ["haben", "sind", "wart", "waren", "habt"],
+    "answer": "haben"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Ich ___ lange geschlafen.",
+    "options": ["habe", "bin", "war", "hat", "bist"],
+    "answer": "habe"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Du ___ einen Ball geworfen.",
+    "options": ["hast", "bist", "warst", "habt", "seid"],
+    "answer": "hast"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Er ___ eine Tür repariert.",
+    "options": ["hat", "ist", "war", "haben", "seid"],
+    "answer": "hat"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Ihr ___ ein Lied gehört.",
+    "options": ["habt", "seid", "wart", "waren", "hatten"],
+    "answer": "habt"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Sie ___ lange telefoniert.",
+    "options": ["hat", "ist", "war", "haben", "seid"],
+    "answer": "hat"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Wir ___ nach Hamburg gefahren.",
+    "options": ["sind", "haben", "wart", "waren", "habt"],
+    "answer": "sind"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Ich ___ meine Tasche getragen.",
+    "options": ["habe", "bin", "war", "hat", "bist"],
+    "answer": "habe"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Du ___ ein Gedicht gelernt.",
+    "options": ["hast", "bist", "warst", "habt", "seid"],
+    "answer": "hast"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Er ___ ein Geschenk bekommen.",
+    "options": ["hat", "ist", "war", "haben", "seid"],
+    "answer": "hat"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Ihr ___ eine neue Wohnung gemietet.",
+    "options": ["habt", "seid", "wart", "waren", "hatten"],
+    "answer": "habt"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Sie ___ ein Glas Wasser verschüttet.",
+    "options": ["hat", "ist", "war", "haben", "seid"],
+    "answer": "hat"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Wir ___ ein schönes Lied gesungen.",
+    "options": ["haben", "sind", "wart", "waren", "habt"],
+    "answer": "haben"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Ich ___ meine Schwester besucht.",
+    "options": ["habe", "bin", "war", "hat", "bist"],
+    "answer": "habe"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Sie ___ sehr früh aufgestanden.",
+    "options": ["ist", "war", "hat", "waren", "hast"],
+    "answer": "ist"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Ich ___ gestern viel gearbeitet.",
+    "options": ["habe", "bin", "war", "waren", "hattest"],
+    "answer": "habe"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Wir ___ ins Kino gegangen.",
+    "options": ["sind", "haben", "wart", "waren", "hat"],
+    "answer": "sind"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Du ___ das Buch gelesen.",
+    "options": ["hast", "bist", "warst", "waren", "hattest"],
+    "answer": "hast"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Wir ___ eine Reise nach Italien gemacht.",
+    "options": ["haben", "sind", "wart", "war", "seid"],
+    "answer": "haben"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Er ___ gestern einen Film gesehen.",
+    "options": ["hat", "ist", "war", "habt", "seid"],
+    "answer": "hat"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Sie ___ spät nach Hause gekommen.",
+    "options": ["ist", "hat", "war", "haben", "seid"],
+    "answer": "ist"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Du ___ mir eine Nachricht geschrieben.",
+    "options": ["hast", "bist", "warst", "hatte", "seid"],
+    "answer": "hast"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Ich ___ gestern viel gelernt.",
+    "options": ["habe", "bin", "war", "seid", "hast"],
+    "answer": "habe"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Wir ___ lange im Park gesessen.",
+    "options": ["haben", "sind", "waren", "habt", "seid"],
+    "answer": "haben"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Er ___ schnell eingeschlafen.",
+    "options": ["ist", "hat", "war", "seid", "haben"],
+    "answer": "ist"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Ihr ___ einen Brief an die Lehrerin geschrieben.",
+    "options": ["habt", "seid", "hatten", "wart", "waren"],
+    "answer": "habt"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Sie ___ ihre Tasche verloren.",
+    "options": ["hat", "ist", "war", "habt", "waren"],
+    "answer": "hat"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Du ___ deine Hausaufgaben gemacht.",
+    "options": ["hast", "bist", "warst", "habt", "seid"],
+    "answer": "hast"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Wir ___ im See geschwommen.",
+    "options": ["sind", "haben", "wart", "hatten", "waren"],
+    "answer": "sind"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Ich ___ heute Morgen Kaffee getrunken.",
+    "options": ["habe", "bin", "war", "habt", "bist"],
+    "answer": "habe"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Er ___ sehr früh aufgestanden.",
+    "options": ["ist", "hat", "war", "haben", "bist"],
+    "answer": "ist"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Ihr ___ ein neues Spiel gekauft.",
+    "options": ["habt", "seid", "wart", "waren", "hat"],
+    "answer": "habt"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Sie ___ lange gewartet.",
+    "options": ["haben", "sind", "waren", "habt", "ist"],
+    "answer": "haben"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Du ___ gestern spät ins Bett gegangen.",
+    "options": ["bist", "hast", "warst", "seid", "habt"],
+    "answer": "bist"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Wir ___ in einem Restaurant gegessen.",
+    "options": ["haben", "sind", "waren", "habt", "seid"],
+    "answer": "haben"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Ich ___ meine Freunde im Café getroffen.",
+    "options": ["habe", "bin", "war", "hat", "bist"],
+    "answer": "habe"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Er ___ nach Hause gelaufen.",
+    "options": ["ist", "hat", "war", "haben", "seid"],
+    "answer": "ist"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Ihr ___ laut gelacht.",
+    "options": ["habt", "seid", "wart", "waren", "hatten"],
+    "answer": "habt"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Sie ___ eine Bluse gekauft.",
+    "options": ["hat", "ist", "war", "haben", "seid"],
+    "answer": "hat"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Wir ___ einen Ausflug gemacht.",
+    "options": ["haben", "sind", "wart", "waren", "habt"],
+    "answer": "haben"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Ich ___ meine Oma besucht.",
+    "options": ["habe", "bin", "war", "hat", "bist"],
+    "answer": "habe"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Er ___ das Fenster zugemacht.",
+    "options": ["hat", "ist", "war", "haben", "seid"],
+    "answer": "hat"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Du ___ heute viel Sport gemacht.",
+    "options": ["hast", "bist", "warst", "habt", "seid"],
+    "answer": "hast"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Wir ___ spät angekommen.",
+    "options": ["sind", "haben", "waren", "wart", "habt"],
+    "answer": "sind"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Ihr ___ die Aufgaben schnell gelöst.",
+    "options": ["habt", "seid", "hatten", "wart", "waren"],
+    "answer": "habt"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Sie ___ im Kino gewesen.",
+    "options": ["sind", "haben", "waren", "habt", "ist"],
+    "answer": "sind"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Ich ___ gestern lange gearbeitet.",
+    "options": ["habe", "bin", "war", "hat", "bist"],
+    "answer": "habe"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Er ___ die Hausaufgabe vergessen.",
+    "options": ["hat", "ist", "war", "haben", "seid"],
+    "answer": "hat"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Wir ___ im Sommer viel gereist.",
+    "options": ["sind", "haben", "wart", "waren", "habt"],
+    "answer": "sind"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Du ___ ein schönes Bild gemalt.",
+    "options": ["hast", "bist", "warst", "habt", "seid"],
+    "answer": "hast"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Sie ___ den ganzen Tag gelesen.",
+    "options": ["hat", "ist", "war", "haben", "seid"],
+    "answer": "hat"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Ihr ___ gestern Musik gehört.",
+    "options": ["habt", "seid", "wart", "waren", "hatten"],
+    "answer": "habt"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Wir ___ sehr spät ins Bett gegangen.",
+    "options": ["sind", "haben", "wart", "waren", "habt"],
+    "answer": "sind"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Ich ___ meine Tasche vergessen.",
+    "options": ["habe", "bin", "war", "hat", "bist"],
+    "answer": "habe"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Er ___ viel Wasser getrunken.",
+    "options": ["hat", "ist", "war", "haben", "seid"],
+    "answer": "hat"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Sie ___ einen Hund gekauft.",
+    "options": ["haben", "sind", "wart", "waren", "habt"],
+    "answer": "haben"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Ihr ___ nach München gefahren.",
+    "options": ["seid", "habt", "wart", "waren", "hatten"],
+    "answer": "seid"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Wir ___ die Stadt besichtigt.",
+    "options": ["haben", "sind", "wart", "waren", "habt"],
+    "answer": "haben"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Ich ___ heute eine E-Mail geschrieben.",
+    "options": ["habe", "bin", "war", "hat", "bist"],
+    "answer": "habe"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Du ___ deine Freunde besucht.",
+    "options": ["hast", "bist", "warst", "habt", "seid"],
+    "answer": "hast"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Er ___ mit dem Bus gefahren.",
+    "options": ["ist", "hat", "war", "haben", "seid"],
+    "answer": "ist"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Ihr ___ gestern lange telefoniert.",
+    "options": ["habt", "seid", "wart", "waren", "hatten"],
+    "answer": "habt"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Wir ___ eine Wohnung gefunden.",
+    "options": ["haben", "sind", "wart", "waren", "habt"],
+    "answer": "haben"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Sie ___ das Auto repariert.",
+    "options": ["hat", "ist", "war", "haben", "seid"],
+    "answer": "hat"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Ich ___ viel Spaß gehabt.",
+    "options": ["habe", "bin", "war", "hat", "bist"],
+    "answer": "habe"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Er ___ ins Büro gegangen.",
+    "options": ["ist", "hat", "war", "haben", "seid"],
+    "answer": "ist"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Wir ___ eine Stunde im Stau gestanden.",
+    "options": ["haben", "sind", "wart", "waren", "habt"],
+    "answer": "haben"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Ihr ___ gestern Fußball gespielt.",
+    "options": ["habt", "seid", "wart", "waren", "hatten"],
+    "answer": "habt"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Sie ___ das Fenster geöffnet.",
+    "options": ["hat", "ist", "war", "waren", "habt"],
+    "answer": "hat"
+  },
+  {
+    "type": "auxiliary",
+    "question": "Ihr ___ laut gesprochen.",
+    "options": ["habt", "seid", "wart", "waren", "hatten"],
+    "answer": "habt"
+  }
+]

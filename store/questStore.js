@@ -1,7 +1,6 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
 
-// --- helpers ---
 const isClient = import.meta.client
 const LOCAL_COOLDOWN_MS = 10 * 1000
 
@@ -12,7 +11,6 @@ function getLocalDateKey(d = new Date()) {
     return `${y}-${m}-${day}`
 }
 
-// Ленивая инициализация Firebase только на клиенте (ESM)
 let db = null, auth = null, fb = null, fba = null
 async function initFirebase() {
     if (!isClient) return false
@@ -35,7 +33,6 @@ export const useQuestStore = defineStore('quest', () => {
         { title: 'questThemeList.ThirdTitle',  description: 'questThemeList.ThirdDescription'  }
     ]
 
-    // === data loading (только на клиенте, чтобы не плодить SSR-разницу) ===
     async function loadThemesAndRecipes() {
         if (!isClient) return
         try {
@@ -52,12 +49,10 @@ export const useQuestStore = defineStore('quest', () => {
                     console.warn(`Не удалось загрузить рецепты для темы "${item.id}"`)
                 }
             }
-
             themes.value = data.map((item, index) => {
                 const availableIds = allRecipes
                     .filter(r => r.theme === item.id && r.title)
                     .map(r => r.id)
-
                 return {
                     ...item,
                     title: themenMap[index]?.title || '',
@@ -75,7 +70,6 @@ export const useQuestStore = defineStore('quest', () => {
         const user = auth.currentUser
         if (!user) return
         const todayKey = getLocalDateKey()
-
         const { getDocs, collection, where, query } = fb
         const q = query(collection(db, 'users', user.uid, 'questProgress'), where('dateKey', '==', todayKey))
         const snap = await getDocs(q)
@@ -108,7 +102,6 @@ export const useQuestStore = defineStore('quest', () => {
         if (!await initFirebase()) return console.warn('Firebase не инициализирован')
         const user = auth.currentUser
         if (!user) return console.warn('Пользователь не авторизован')
-
         const { doc, getDoc, setDoc } = fb
         const todayKey = getLocalDateKey()
         const recipeRef = doc(db, 'users', user.uid, 'questProgress', recipeId)

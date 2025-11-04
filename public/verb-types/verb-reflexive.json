@@ -43,6 +43,552 @@
   },
   {
     "type": "verbReflexive",
+    "question": "Ich konzentriere ___ auf die Prüfung.",
+    "options": ["mich", "dich", "sich"],
+    "answer": "mich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Wir verabreden ___ morgen im Park.",
+    "options": ["uns", "euch", "sich"],
+    "answer": "uns"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Er erkältet ___ leicht im Winter.",
+    "options": ["sich", "mich", "uns"],
+    "answer": "sich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Du interessierst ___ für moderne Kunst.",
+    "options": ["dich", "mich", "sich"],
+    "answer": "dich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Wir verlieben ___ sofort ineinander.",
+    "options": ["uns", "euch", "sich"],
+    "answer": "uns"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Sie kümmert ___ um ihre kleine Schwester.",
+    "options": ["sich", "mich", "uns"],
+    "answer": "sich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Ich wundere ___ über das Ergebnis.",
+    "options": ["mich", "dich", "uns"],
+    "answer": "mich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Ihr beeilt ___, sonst verpasst ihr den Bus.",
+    "options": ["euch", "uns", "sich"],
+    "answer": "euch"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Die Studenten setzen ___ in den Hörsaal.",
+    "options": ["sich", "uns", "euch"],
+    "answer": "sich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Ich erwarte, dass du ___ entschuldigst.",
+    "options": ["dich", "mich", "uns"],
+    "answer": "dich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Wir bedanken ___ herzlich für die Einladung.",
+    "options": ["uns", "euch", "sich"],
+    "answer": "uns"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Er erinnert ___ nicht an den Termin.",
+    "options": ["sich", "mich", "uns"],
+    "answer": "sich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Ich verlasse ___ auf meine Freunde.",
+    "options": ["mich", "dich", "sich"],
+    "answer": "mich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Du setzt ___ neben mich.",
+    "options": ["dich", "mich", "uns"],
+    "answer": "dich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Wir erholen ___ im Sommer am Meer.",
+    "options": ["uns", "euch", "sich"],
+    "answer": "uns"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Sie entschuldigen ___ für den Lärm.",
+    "options": ["sich", "uns", "euch"],
+    "answer": "sich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Ich entspanne ___ nach der Arbeit auf dem Sofa.",
+    "options": ["mich", "dich", "uns"],
+    "answer": "mich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Ihr interessiert ___ für Sport.",
+    "options": ["euch", "uns", "sich"],
+    "answer": "euch"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Er freut ___ über die gute Note.",
+    "options": ["sich", "uns", "dich"],
+    "answer": "sich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Wir treffen ___ am Abend mit Freunden.",
+    "options": ["uns", "euch", "sich"],
+    "answer": "uns"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Du beschwerst ___ beim Lehrer.",
+    "options": ["dich", "mich", "uns"],
+    "answer": "dich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Ich entschuldige ___ bei dir.",
+    "options": ["mich", "dich", "uns"],
+    "answer": "mich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Sie ärgert ___ über den Fehler.",
+    "options": ["sich", "uns", "mich"],
+    "answer": "sich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Wir freuen ___ auf die Ferien.",
+    "options": ["uns", "euch", "sich"],
+    "answer": "uns"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Du stellst ___ eine interessante Frage.",
+    "options": ["dir", "dich", "mich"],
+    "answer": "dir"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Ich stelle ___ vor, wie schön der Urlaub wird.",
+    "options": ["mir", "mich", "sich"],
+    "answer": "mir"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Wir kämmen ___ die Haare.",
+    "options": ["uns", "euch", "sich"],
+    "answer": "uns"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Die Katze putzt ___ nach dem Essen.",
+    "options": ["sich", "uns", "euch"],
+    "answer": "sich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Ich setze ___ ins Wohnzimmer.",
+    "options": ["mich", "dich", "uns"],
+    "answer": "mich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Du wunderst ___ über seine Antwort.",
+    "options": ["dich", "mich", "uns"],
+    "answer": "dich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Wir waschen ___ nach dem Sport.",
+    "options": ["uns", "euch", "sich"],
+    "answer": "uns"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Sie zieht ___ elegant an.",
+    "options": ["sich", "uns", "mich"],
+    "answer": "sich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Ich verabrede ___ gern mit Freunden.",
+    "options": ["mich", "dich", "uns"],
+    "answer": "mich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Trefft ihr ___ nach der Schule?",
+    "options": ["euch", "uns", "sich"],
+    "answer": "euch"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Ich erkälte ___ leicht im Herbst.",
+    "options": ["mich", "dich", "uns"],
+    "answer": "mich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Wir verabschieden ___ von den Gästen.",
+    "options": ["uns", "euch", "sich"],
+    "answer": "uns"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Sie interessieren ___ für Technik.",
+    "options": ["sich", "uns", "euch"],
+    "answer": "sich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Ich ärgere ___ über den Verkehr.",
+    "options": ["mich", "dich", "sich"],
+    "answer": "mich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Ihr freut ___ über das Geschenk.",
+    "options": ["euch", "uns", "sich"],
+    "answer": "euch"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Ich erinnere ___ nicht an seinen Namen.",
+    "options": ["mich", "dich", "sich"],
+    "answer": "mich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Er erinnert ___ gern an die Ferien.",
+    "options": ["sich", "dich", "uns"],
+    "answer": "sich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Wir waschen ___ jeden Morgen das Gesicht.",
+    "options": ["uns", "euch", "sich"],
+    "answer": "uns"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Ihr solltet ___ beeilen, sonst kommt ihr zu spät.",
+    "options": ["euch", "uns", "sich"],
+    "answer": "euch"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Die Kinder setzen ___ auf den Boden.",
+    "options": ["sich", "uns", "dich"],
+    "answer": "sich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Ich ziehe ___ schnell an.",
+    "options": ["mich", "dich", "uns"],
+    "answer": "mich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Ziehst du ___ warm genug an?",
+    "options": ["dich", "mich", "euch"],
+    "answer": "dich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Wir ruhen ___ nach der Arbeit ein bisschen aus.",
+    "options": ["uns", "euch", "sich"],
+    "answer": "uns"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Er stellt ___ den neuen Kollegen vor.",
+    "options": ["sich", "dich", "uns"],
+    "answer": "sich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Ich möchte ___ kurz vorstellen.",
+    "options": ["mich", "dich", "uns"],
+    "answer": "mich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Entschuldigt ___ bitte für die Verspätung!",
+    "options": ["euch", "uns", "sich"],
+    "answer": "euch"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Wir entschuldigen ___ bei dem Lehrer.",
+    "options": ["uns", "euch", "sich"],
+    "answer": "uns"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Sie entspannen ___ im Urlaub am Strand.",
+    "options": ["sich", "uns", "euch"],
+    "answer": "sich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Ich entspanne ___ am liebsten beim Lesen.",
+    "options": ["mich", "dich", "sich"],
+    "answer": "mich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Wir treffen ___ jeden Freitag im Café.",
+    "options": ["uns", "euch", "sich"],
+    "answer": "uns"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Streitet ihr ___ wieder um das Spiel?",
+    "options": ["euch", "uns", "sich"],
+    "answer": "euch"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Die Nachbarn streiten ___ oft wegen Kleinigkeiten.",
+    "options": ["sich", "uns", "euch"],
+    "answer": "sich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Ich interessiere ___ nicht für Politik.",
+    "options": ["mich", "dich", "sich"],
+    "answer": "mich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Interessierst du ___ für Geschichte?",
+    "options": ["dich", "mich", "uns"],
+    "answer": "dich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Wir bereiten ___ auf die Prüfung vor.",
+    "options": ["uns", "euch", "sich"],
+    "answer": "uns"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Er bereitet ___ auf die Reise vor.",
+    "options": ["sich", "mich", "uns"],
+    "answer": "sich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Ziehst du ___ schon aus?",
+    "options": ["dich", "mich", "uns"],
+    "answer": "dich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Ich ziehe ___ nach der Arbeit um.",
+    "options": ["mich", "dich", "uns"],
+    "answer": "mich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Wir freuen ___ über das schöne Wetter.",
+    "options": ["uns", "euch", "sich"],
+    "answer": "uns"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Sie freut ___ auf den Urlaub.",
+    "options": ["sich", "dich", "uns"],
+    "answer": "sich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Ich erinnere ___ gern an meine Kindheit.",
+    "options": ["mich", "dich", "sich"],
+    "answer": "mich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Wir erinnern ___ an den Ausflug.",
+    "options": ["uns", "euch", "sich"],
+    "answer": "uns"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Warum beschwerst du ___ schon wieder?",
+    "options": ["dich", "mich", "uns"],
+    "answer": "dich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Die Frau beschwert ___ über den Lärm.",
+    "options": ["sich", "uns", "euch"],
+    "answer": "sich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Wir bedanken ___ für die Hilfe.",
+    "options": ["uns", "euch", "sich"],
+    "answer": "uns"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Bedankst du ___ bei deinem Lehrer?",
+    "options": ["dich", "mich", "uns"],
+    "answer": "dich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Ich verlaufe ___ oft in dieser Stadt.",
+    "options": ["mich", "dich", "sich"],
+    "answer": "mich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Die Touristen verlaufen ___ im Wald.",
+    "options": ["sich", "uns", "euch"],
+    "answer": "sich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Wir treffen ___ morgen im Park.",
+    "options": ["uns", "euch", "sich"],
+    "answer": "uns"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Setzt ihr ___ bitte an den Tisch.",
+    "options": ["euch", "uns", "sich"],
+    "answer": "euch"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Ich setze ___ neben meinen Freund.",
+    "options": ["mich", "dich", "uns"],
+    "answer": "mich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Er konzentriert ___ nicht auf die Aufgabe.",
+    "options": ["sich", "uns", "euch"],
+    "answer": "sich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Wir konzentrieren ___ auf das Spiel.",
+    "options": ["uns", "euch", "sich"],
+    "answer": "uns"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Freust du ___ über das Geschenk?",
+    "options": ["dich", "mich", "uns"],
+    "answer": "dich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Die Kinder freuen ___ über die Ferien.",
+    "options": ["sich", "euch", "uns"],
+    "answer": "sich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Ich wasche ___ jeden Abend die Haare.",
+    "options": ["mir", "mich", "dich"],
+    "answer": "mir"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Du wäschst ___ die Hände.",
+    "options": ["dir", "dich", "mich"],
+    "answer": "dir"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Wir kämmen ___ die Haare vor dem Schlafengehen.",
+    "options": ["uns", "euch", "sich"],
+    "answer": "uns"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Er kämmt ___ die Haare im Bad.",
+    "options": ["sich", "ihm", "ihn"],
+    "answer": "sich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Ich schminke ___ vor der Party.",
+    "options": ["mich", "dich", "sich"],
+    "answer": "mich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Sie schminkt ___ sehr gern.",
+    "options": ["sich", "mich", "uns"],
+    "answer": "sich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Wir verabschieden ___ von unseren Freunden.",
+    "options": ["uns", "euch", "sich"],
+    "answer": "uns"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Ich verabschiede ___ von dir.",
+    "options": ["mich", "dich", "sich"],
+    "answer": "mich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Warum beschwert ihr ___ so oft?",
+    "options": ["euch", "uns", "sich"],
+    "answer": "euch"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Der Mann entschuldigt ___ bei seiner Frau.",
+    "options": ["sich", "uns", "mich"],
+    "answer": "sich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Ich entschuldige ___ für den Fehler.",
+    "options": ["mich", "dich", "sich"],
+    "answer": "mich"
+  },
+  {
+    "type": "verbReflexive",
+    "question": "Wir entschuldigen ___ für die Verspätung.",
+    "options": ["uns", "euch", "sich"],
+    "answer": "uns"
+  },
+  {
+    "type": "verbReflexive",
     "question": "Setzen Sie ___ bitte, Herr Schmidt!",
     "options": ["sich", "euch", "uns"],
     "answer": "sich"

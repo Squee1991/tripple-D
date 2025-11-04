@@ -34,7 +34,9 @@ onBeforeUnmount(() => document.removeEventListener('mousedown', clickOutside))
       >
         {{ currentLang?.name || currentLang?.code || '' }}
       </span>
-      <img src="../../assets/images/arrowDown.svg" alt="" class="arrow" :class="{ open: dropdownOpen }"/>
+      <div class="arrow__wrapper">
+        <img src="../../assets/images/arrowDown.svg" alt="arrow_down" class="arrow" :class="{ open: dropdownOpen }"/>
+      </div>
     </button>
 
     <div v-if="dropdownOpen"
@@ -68,13 +70,14 @@ onBeforeUnmount(() => document.removeEventListener('mousedown', clickOutside))
   height: 45px;
   display: flex;
   align-items: center;
+  justify-content: space-around;
   gap: .5rem;
   background: #fff;
   border: 3px solid #1e1e1e;
   border-radius: 12px;
   color: #1e1e1e;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 15px;
   padding: 0.5rem 1rem;
   cursor: pointer;
   box-shadow: 4px 4px 0 #1e1e1e;
@@ -83,23 +86,20 @@ onBeforeUnmount(() => document.removeEventListener('mousedown', clickOutside))
   width: 147px;
 }
 
-.language__button:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0 #1e1e1e;
+.arrow__wrapper {
+  display: flex;
+  align-items: center;
 }
 
 .arrow {
   width: 12px;
   transition: transform .3s ease;
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
+  transform: scale(1);
 }
 
 .arrow.open {
-  transform: translateY(-50%) rotate(180deg);
+  transform: scale(-1);
+  transition: .4s;
 }
 
 .dropdown {
@@ -107,10 +107,10 @@ onBeforeUnmount(() => document.removeEventListener('mousedown', clickOutside))
   overflow: hidden;
   position: absolute;
   left: 0;
-  top: calc(100% + 10px);
+  top: calc(100% + 5px);
   background: #fff;
   border: 3px solid #1e1e1e;
-  border-radius: 16px;
+  border-radius: 12px;
   box-shadow: 4px 4px 0 #1e1e1e;
   z-index: 10;
   padding: .5rem;
@@ -132,10 +132,6 @@ onBeforeUnmount(() => document.removeEventListener('mousedown', clickOutside))
   position: relative;
 }
 
-.dropdown__item:hover {
-  background: #fef8e4;
-}
-
 .dropdown__item.active {
   background: #f1c40f;
 }
@@ -144,17 +140,22 @@ onBeforeUnmount(() => document.removeEventListener('mousedown', clickOutside))
   display: inline;
 }
 
+@media (max-width: 1023px) {
+}
+
 @media (max-width: 767px) {
   .language__button {
     height: 45px;
     box-shadow: 2px 2px 0 #1e1e1e;
     text-transform: uppercase;
-    width: 80px;
-    max-width: 80px;
-    gap: 0;
-    padding: 0 28px 0 8px;
+    max-width: 66px;
+    display: flex;
+    justify-content: center;
   }
 
+  .arrow__wrapper {
+    display: none;
+  }
   .language__label {
     position: relative;
     font-size: 0;
@@ -185,6 +186,16 @@ onBeforeUnmount(() => document.removeEventListener('mousedown', clickOutside))
     font-size: 14px;
     line-height: 1.2;
     color: #1e1e1e;
+  }
+
+  @media (min-width: 1024px) {
+    .language__button:hover {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0 #1e1e1e;
+    }
+    .dropdown__item:hover {
+      background: #fef8e4;
+    }
   }
 }
 </style>

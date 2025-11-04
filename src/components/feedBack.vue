@@ -90,7 +90,7 @@ onMounted(() => {
 const sendMessage = async () => {
   errors.value = {name: '', message: ''};
   if (!userEmail.value.trim()) {
-    errors.value.name = t('errors.enterName');
+    errors.value.name = t('errors.errorEmail');
   }
   if (!userMessage.value.trim()) {
     errors.value.message = t('errors.enterMsg');
@@ -180,7 +180,7 @@ const resetFields = () => {
 }
 
 .form__field {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .form__field-label {
@@ -224,11 +224,10 @@ const resetFields = () => {
 .error__message {
   color: #e53935;
   font-size: 0.9rem;
-  font-family: 'Inter', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 700;
   display: block;
-  margin-top: 0.5rem;
-  text-align: right;
+  margin-top: 0.2rem;
 }
 
 .btn--submit {
@@ -269,6 +268,7 @@ const resetFields = () => {
     width: 100%;
     flex-basis: auto;
     padding: 2.5rem;
+    box-shadow: none;
   }
 }
 
@@ -279,9 +279,6 @@ const resetFields = () => {
 }
 
 @media (max-width: 640px) {
-  .contact__wrapper {
-    padding: 0;
-  }
 
   .form__content {
     padding: 2rem 1.5rem;

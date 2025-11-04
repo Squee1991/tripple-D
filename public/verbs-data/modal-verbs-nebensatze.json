@@ -1,0 +1,601 @@
+[
+  {
+    "question": "Ich bleibe zu Hause, ___ ich krank bin.",
+    "verb": "weil",
+    "answer": "weil",
+    "options": ["weil", "obwohl", "dass", "wenn"]
+  },
+  {
+    "question": "Er sagt, ___ er keine Zeit hat.",
+    "verb": "dass",
+    "answer": "dass",
+    "options": ["dass", "weil", "obwohl", "wenn"]
+  },
+  {
+    "question": "Wir gehen ins Kino, ___ wir den Film sehen wollen.",
+    "verb": "weil",
+    "answer": "weil",
+    "options": ["weil", "damit", "obwohl", "dass"]
+  },
+  {
+    "question": "Ich weiß nicht, ___ sie heute kommt.",
+    "verb": "ob",
+    "answer": "ob",
+    "options": ["ob", "wenn", "dass", "weil"]
+  },
+  {
+    "question": "___ ich Zeit habe, helfe ich dir.",
+    "verb": "wenn",
+    "answer": "Wenn",
+    "options": ["Wenn", "Weil", "Dass", "Ob"]
+  },
+  {
+    "question": "Er bleibt zu Hause, ___ es regnet.",
+    "verb": "weil",
+    "answer": "weil",
+    "options": ["weil", "wenn", "obwohl", "dass"]
+  },
+  {
+    "question": "___ er krank ist, geht er zur Arbeit.",
+    "verb": "obwohl",
+    "answer": "Obwohl",
+    "options": ["Obwohl", "Weil", "Wenn", "Dass"]
+  },
+  {
+    "question": "Sie lernt viel, ___ sie die Prüfung bestehen kann.",
+    "verb": "damit",
+    "answer": "damit",
+    "options": ["damit", "weil", "ob", "wenn"]
+  },
+  {
+    "question": "Ich habe gehört, ___ du in Berlin wohnst.",
+    "verb": "dass",
+    "answer": "dass",
+    "options": ["dass", "obwohl", "wenn", "damit"]
+  },
+  {
+    "question": "___ du willst, können wir zusammen lernen.",
+    "verb": "wenn",
+    "answer": "Wenn",
+    "options": ["Wenn", "Weil", "Dass", "Obwohl"]
+  },
+    {
+      "question": "Ich gehe ins Bett, ___ ich müde bin.",
+      "verb": "weil",
+      "answer": "weil",
+      "options": ["weil", "wenn", "damit", "obwohl"]
+    },
+    {
+      "question": "Wir essen Eis, ___ es sehr heiß ist.",
+      "verb": "weil",
+      "answer": "weil",
+      "options": ["weil", "ob", "dass", "damit"]
+    },
+  {
+    "question": "Wir bleiben zu Hause, ___ es schneit.",
+    "verb": "weil",
+    "answer": "weil",
+    "options": ["weil", "wenn", "ob", "dass"]
+  },
+  {
+    "question": "Ich gehe früh ins Bett, ___ ich morgen fit bin.",
+    "verb": "damit",
+    "answer": "damit",
+    "options": ["damit", "weil", "wenn", "obwohl"]
+  },
+  {
+    "question": "Sie weint, ___ sie traurig ist.",
+    "verb": "weil",
+    "answer": "weil",
+    "options": ["weil", "wenn", "dass", "obwohl"]
+  },
+  {
+    "question": "Ich frage, ___ er den Film gesehen hat.",
+    "verb": "ob",
+    "answer": "ob",
+    "options": ["ob", "dass", "weil", "wenn"]
+  },
+  {
+    "question": "___ die Sonne scheint, gehen wir schwimmen.",
+    "verb": "wenn",
+    "answer": "Wenn",
+    "options": ["Wenn", "Weil", "Dass", "Obwohl"]
+  },
+  {
+    "question": "Ich weiß, ___ du fleißig bist.",
+    "verb": "dass",
+    "answer": "dass",
+    "options": ["dass", "weil", "wenn", "ob"]
+  },
+  {
+    "question": "Wir fahren nicht weg, ___ wir kein Geld haben.",
+    "verb": "weil",
+    "answer": "weil",
+    "options": ["weil", "damit", "wenn", "ob"]
+  },
+  {
+    "question": "___ er krank war, kam er trotzdem zur Schule.",
+    "verb": "obwohl",
+    "answer": "Obwohl",
+    "options": ["Obwohl", "Weil", "Wenn", "Dass"]
+  },
+  {
+    "question": "Er sagt, ___ er schon gegessen hat.",
+    "verb": "dass",
+    "answer": "dass",
+    "options": ["dass", "weil", "wenn", "ob"]
+  },
+  {
+    "question": "Ich habe gehört, ___ sie nach München zieht.",
+    "verb": "dass",
+    "answer": "dass",
+    "options": ["dass", "obwohl", "weil", "ob"]
+  },
+  {
+    "question": "Wir kaufen ein, ___ wir kochen können.",
+    "verb": "damit",
+    "answer": "damit",
+    "options": ["damit", "weil", "wenn", "ob"]
+  },
+  {
+    "question": "___ er viel gelernt hat, war die Prüfung schwer.",
+    "verb": "obwohl",
+    "answer": "Obwohl",
+    "options": ["Obwohl", "Weil", "Wenn", "Dass"]
+  },
+  {
+    "question": "Ich frage mich, ___ er zufrieden ist.",
+    "verb": "ob",
+    "answer": "ob",
+    "options": ["ob", "dass", "weil", "wenn"]
+  },
+  {
+    "question": "___ ich Geld spare, kaufe ich ein neues Auto.",
+    "verb": "wenn",
+    "answer": "Wenn",
+    "options": ["Wenn", "Weil", "Dass", "Ob"]
+  },
+  {
+    "question": "Wir wissen, ___ du recht hast.",
+    "verb": "dass",
+    "answer": "dass",
+    "options": ["dass", "weil", "wenn", "obwohl"]
+  },
+  {
+    "question": "Ich gehe raus, ___ die Sonne scheint.",
+    "verb": "weil",
+    "answer": "weil",
+    "options": ["weil", "wenn", "dass", "ob"]
+  },
+  {
+    "question": "Sie bleibt zu Hause, ___ sie Gäste erwartet.",
+    "verb": "weil",
+    "answer": "weil",
+    "options": ["weil", "wenn", "dass", "obwohl"]
+  },
+  {
+    "question": "___ es dunkel ist, machen wir das Licht an.",
+    "verb": "wenn",
+    "answer": "Wenn",
+    "options": ["Wenn", "Weil", "Dass", "Obwohl"]
+  },
+  {
+    "question": "Ich hoffe, ___ ihr bald kommt.",
+    "verb": "dass",
+    "answer": "dass",
+    "options": ["dass", "weil", "wenn", "ob"]
+  },
+  {
+    "question": "Wir essen viel, ___ wir Hunger haben.",
+    "verb": "weil",
+    "answer": "weil",
+    "options": ["weil", "wenn", "dass", "ob"]
+  },
+  {
+    "question": "Er bleibt im Bett, ___ er krank ist.",
+    "verb": "weil",
+    "answer": "weil",
+    "options": ["weil", "damit", "wenn", "ob"]
+  },
+  {
+    "question": "___ er reich ist, lebt er sehr bescheiden.",
+    "verb": "obwohl",
+    "answer": "Obwohl",
+    "options": ["Obwohl", "Weil", "Wenn", "Dass"]
+  },
+  {
+    "question": "Ich frage, ___ du kommen willst.",
+    "verb": "ob",
+    "answer": "ob",
+    "options": ["ob", "dass", "weil", "wenn"]
+  },
+  {
+    "question": "Wir arbeiten viel, ___ wir gute Noten bekommen.",
+    "verb": "damit",
+    "answer": "damit",
+    "options": ["damit", "weil", "dass", "wenn"]
+  },
+  {
+    "question": "Er sagt, ___ er morgen früh abreist.",
+    "verb": "dass",
+    "answer": "dass",
+    "options": ["dass", "weil", "wenn", "obwohl"]
+  },
+  {
+    "question": "___ es regnet, nehme ich einen Schirm.",
+    "verb": "wenn",
+    "answer": "Wenn",
+    "options": ["Wenn", "Weil", "Dass", "Ob"]
+  },
+  {
+    "question": "Ich bin glücklich, ___ ich frei habe.",
+    "verb": "weil",
+    "answer": "weil",
+    "options": ["weil", "wenn", "dass", "ob"]
+  },
+  {
+    "question": "Wir denken, ___ er im Ausland lebt.",
+    "verb": "dass",
+    "answer": "dass",
+    "options": ["dass", "weil", "ob", "wenn"]
+  },
+  {
+    "question": "___ er alt ist, arbeitet er noch immer.",
+    "verb": "obwohl",
+    "answer": "Obwohl",
+    "options": ["Obwohl", "Weil", "Wenn", "Dass"]
+  },
+  {
+    "question": "Sie bleibt hier, ___ sie Angst hat.",
+    "verb": "weil",
+    "answer": "weil",
+    "options": ["weil", "wenn", "dass", "obwohl"]
+  },
+  {
+    "question": "Ich frage, ___ sie nach Hause geht.",
+    "verb": "ob",
+    "answer": "ob",
+    "options": ["ob", "weil", "wenn", "dass"]
+  },
+  {
+    "question": "Wir arbeiten viel, ___ wir das Projekt schaffen.",
+    "verb": "damit",
+    "answer": "damit",
+    "options": ["damit", "weil", "dass", "wenn"]
+  },
+  {
+    "question": "Ich weiß, ___ du müde bist.",
+    "verb": "dass",
+    "answer": "dass",
+    "options": ["dass", "weil", "ob", "wenn"]
+  },
+  {
+    "question": "___ er fleißig ist, hat er schlechte Noten.",
+    "verb": "obwohl",
+    "answer": "Obwohl",
+    "options": ["Obwohl", "Weil", "Wenn", "Dass"]
+  },
+  {
+    "question": "Ich gehe einkaufen, ___ ich nichts zu Hause habe.",
+    "verb": "weil",
+    "answer": "weil",
+    "options": ["weil", "wenn", "dass", "ob"]
+  },
+  {
+    "question": "Wir kommen, ___ wir eingeladen sind.",
+    "verb": "weil",
+    "answer": "weil",
+    "options": ["weil", "obwohl", "dass", "wenn"]
+  },
+  {
+    "question": "___ du fertig bist, können wir anfangen.",
+    "verb": "wenn",
+    "answer": "Wenn",
+    "options": ["Wenn", "Weil", "Dass", "Ob"]
+  },
+  {
+    "question": "Ich hoffe, ___ das Wetter schön bleibt.",
+    "verb": "dass",
+    "answer": "dass",
+    "options": ["dass", "weil", "wenn", "ob"]
+  },
+  {
+    "question": "Er lacht, ___ er glücklich ist.",
+    "verb": "weil",
+    "answer": "weil",
+    "options": ["weil", "wenn", "dass", "ob"]
+  },
+  {
+    "question": "Er sagt, ___ er morgen nicht kommen kann.",
+    "verb": "dass",
+    "answer": "dass",
+    "options": ["dass", "weil", "wenn", "obwohl"]
+  },
+  {
+    "question": "___ wir hungrig waren, haben wir gekocht.",
+    "verb": "weil",
+    "answer": "Weil",
+    "options": ["Weil", "Wenn", "Dass", "Obwohl"]
+  },
+  {
+    "question": "Ich bleibe zu Hause, ___ es draußen kalt ist.",
+    "verb": "weil",
+    "answer": "weil",
+    "options": ["weil", "wenn", "dass", "obwohl"]
+  },
+  {
+    "question": "Wir lachen, ___ der Film lustig ist.",
+    "verb": "weil",
+    "answer": "weil",
+    "options": ["weil", "damit", "ob", "dass"]
+  },
+  {
+    "question": "Sie geht nicht mit, ___ sie krank ist.",
+    "verb": "weil",
+    "answer": "weil",
+    "options": ["weil", "wenn", "ob", "dass"]
+  },
+  {
+    "question": "Ich lerne Deutsch, ___ ich in Deutschland arbeiten will.",
+    "verb": "weil",
+    "answer": "weil",
+    "options": ["weil", "obwohl", "damit", "dass"]
+  },
+  {
+    "question": "Wir sind müde, ___ wir wenig geschlafen haben.",
+    "verb": "weil",
+    "answer": "weil",
+    "options": ["weil", "wenn", "dass", "ob"]
+  },
+  {
+    "question": "Sie bleibt zu Hause, ___ es stark regnet.",
+    "verb": "weil",
+    "answer": "weil",
+    "options": ["weil", "ob", "wenn", "dass"]
+  },
+  {
+    "question": "Er kauft das Buch, ___ es interessant ist.",
+    "verb": "weil",
+    "answer": "weil",
+    "options": ["weil", "damit", "dass", "wenn"]
+  },
+  {
+    "question": "Wir sind glücklich, ___ wir Urlaub haben.",
+    "verb": "weil",
+    "answer": "weil",
+    "options": ["weil", "obwohl", "dass", "wenn"]
+  },
+  {
+    "question": "Ich bleibe länger, ___ ich noch arbeiten muss.",
+    "verb": "weil",
+    "answer": "weil",
+    "options": ["weil", "obwohl", "damit", "dass"]
+  },
+  {
+    "question": "Sie weint, ___ sie den Film traurig findet.",
+    "verb": "weil",
+    "answer": "weil",
+    "options": ["weil", "wenn", "dass", "obwohl"]
+  },
+
+  {
+    "question": "Er sagt, ___ er morgen keine Zeit hat.",
+    "verb": "dass",
+    "answer": "dass",
+    "options": ["dass", "weil", "wenn", "ob"]
+  },
+  {
+    "question": "Ich glaube, ___ er schon gegangen ist.",
+    "verb": "dass",
+    "answer": "dass",
+    "options": ["dass", "obwohl", "weil", "wenn"]
+  },
+  {
+    "question": "Wir wissen, ___ sie sehr fleißig ist.",
+    "verb": "dass",
+    "answer": "dass",
+    "options": ["dass", "ob", "weil", "damit"]
+  },
+  {
+    "question": "Sie meint, ___ es morgen regnet.",
+    "verb": "dass",
+    "answer": "dass",
+    "options": ["dass", "wenn", "weil", "obwohl"]
+  },
+  {
+    "question": "Ich höre, ___ er in Berlin wohnt.",
+    "verb": "dass",
+    "answer": "dass",
+    "options": ["dass", "weil", "damit", "ob"]
+  },
+  {
+    "question": "Er erzählt, ___ er im Sommer nach Spanien fährt.",
+    "verb": "dass",
+    "answer": "dass",
+    "options": ["dass", "weil", "wenn", "ob"]
+  },
+  {
+    "question": "Wir hoffen, ___ du bald kommst.",
+    "verb": "dass",
+    "answer": "dass",
+    "options": ["dass", "ob", "weil", "wenn"]
+  },
+  {
+    "question": "Sie glaubt, ___ er recht hat.",
+    "verb": "dass",
+    "answer": "dass",
+    "options": ["dass", "weil", "damit", "obwohl"]
+  },
+
+  {
+    "question": "___ es regnet, bleiben wir zu Hause.",
+    "verb": "wenn",
+    "answer": "Wenn",
+    "options": ["Wenn", "Weil", "Dass", "Ob"]
+  },
+  {
+    "question": "___ ich Hunger habe, esse ich ein Sandwich.",
+    "verb": "wenn",
+    "answer": "Wenn",
+    "options": ["Wenn", "Weil", "Obwohl", "Dass"]
+  },
+  {
+    "question": "___ du willst, helfe ich dir.",
+    "verb": "wenn",
+    "answer": "Wenn",
+    "options": ["Wenn", "Weil", "Dass", "Ob"]
+  },
+  {
+    "question": "___ er Zeit hat, ruft er mich an.",
+    "verb": "wenn",
+    "answer": "Wenn",
+    "options": ["Wenn", "Weil", "Dass", "Ob"]
+  },
+  {
+    "question": "___ ich Geld habe, kaufe ich ein neues Handy.",
+    "verb": "wenn",
+    "answer": "Wenn",
+    "options": ["Wenn", "Weil", "Obwohl", "Dass"]
+  },
+  {
+    "question": "___ sie frei hat, fährt sie zu ihren Eltern.",
+    "verb": "wenn",
+    "answer": "Wenn",
+    "options": ["Wenn", "Weil", "Dass", "Obwohl"]
+  },
+  {
+    "question": "___ es dunkel wird, gehen die Lichter an.",
+    "verb": "wenn",
+    "answer": "Wenn",
+    "options": ["Wenn", "Weil", "Dass", "Ob"]
+  },
+  {
+    "question": "___ du lernst, wirst du Erfolg haben.",
+    "verb": "wenn",
+    "answer": "Wenn",
+    "options": ["Wenn", "Weil", "Dass", "Obwohl"]
+  },
+
+  {
+    "question": "___ es kalt ist, trägt er keine Jacke.",
+    "verb": "obwohl",
+    "answer": "Obwohl",
+    "options": ["Obwohl", "Weil", "Wenn", "Dass"]
+  },
+  {
+    "question": "Er geht spazieren, ___ es stark schneit.",
+    "verb": "obwohl",
+    "answer": "obwohl",
+    "options": ["obwohl", "weil", "wenn", "dass"]
+  },
+  {
+    "question": "___ sie müde ist, macht sie ihre Hausaufgaben.",
+    "verb": "obwohl",
+    "answer": "Obwohl",
+    "options": ["Obwohl", "Weil", "Wenn", "Dass"]
+  },
+  {
+    "question": "Sie arbeitet weiter, ___ sie krank ist.",
+    "verb": "obwohl",
+    "answer": "obwohl",
+    "options": ["obwohl", "weil", "wenn", "dass"]
+  },
+  {
+    "question": "___ er kein Geld hat, reist er viel.",
+    "verb": "obwohl",
+    "answer": "Obwohl",
+    "options": ["Obwohl", "Weil", "Wenn", "Dass"]
+  },
+  {
+    "question": "Er lernt fleißig, ___ er wenig Zeit hat.",
+    "verb": "obwohl",
+    "answer": "obwohl",
+    "options": ["obwohl", "weil", "wenn", "dass"]
+  },
+
+  {
+    "question": "Ich frage mich, ___ er die Wahrheit sagt.",
+    "verb": "ob",
+    "answer": "ob",
+    "options": ["ob", "dass", "weil", "wenn"]
+  },
+  {
+    "question": "Sie weiß nicht, ___ er heute kommt.",
+    "verb": "ob",
+    "answer": "ob",
+    "options": ["ob", "dass", "wenn", "weil"]
+  },
+  {
+    "question": "Er fragt, ___ sie verheiratet ist.",
+    "verb": "ob",
+    "answer": "ob",
+    "options": ["ob", "weil", "dass", "wenn"]
+  },
+  {
+    "question": "Ich überlege, ___ er morgen frei hat.",
+    "verb": "ob",
+    "answer": "ob",
+    "options": ["ob", "dass", "wenn", "weil"]
+  },
+  {
+    "question": "Ich lerne viel, ___ ich die Prüfung bestehe.",
+    "verb": "damit",
+    "answer": "damit",
+    "options": ["damit", "weil", "dass", "wenn"]
+  },
+  {
+    "question": "Er spricht laut, ___ alle ihn hören können.",
+    "verb": "damit",
+    "answer": "damit",
+    "options": ["damit", "weil", "dass", "wenn"]
+  },
+  {
+    "question": "Wir sparen Geld, ___ wir eine Reise machen können.",
+    "verb": "damit",
+    "answer": "damit",
+    "options": ["damit", "weil", "dass", "wenn"]
+  },
+  {
+    "question": "Sie schreibt alles auf, ___ sie nichts vergisst.",
+    "verb": "damit",
+    "answer": "damit",
+    "options": ["damit", "weil", "dass", "obwohl"]
+  },
+    {
+      "question": "Ich frage, ___ er heute kommt oder nicht.",
+      "verb": "ob",
+      "answer": "ob",
+      "options": ["ob", "dass", "weil", "wenn"]
+    },
+    {
+      "question": "Sie kauft ein, ___ sie kochen will.",
+      "verb": "weil",
+      "answer": "weil",
+      "options": ["weil", "damit", "wenn", "obwohl"]
+    },
+    {
+      "question": "Ich weiß, ___ du mir helfen kannst.",
+      "verb": "dass",
+      "answer": "dass",
+      "options": ["dass", "weil", "obwohl", "damit"]
+    },
+    {
+      "question": "___ das Wetter schlecht ist, machen wir einen Spaziergang.",
+      "verb": "obwohl",
+      "answer": "Obwohl",
+      "options": ["Obwohl", "Weil", "Wenn", "Dass"]
+    },
+    {
+      "question": "Wir gehen früh schlafen, ___ wir morgen fit sind.",
+      "verb": "damit",
+      "answer": "damit",
+      "options": ["damit", "weil", "wenn", "ob"]
+    },
+    {
+      "question": "___ du Fragen hast, kannst du mich anrufen.",
+      "verb": "wenn",
+      "answer": "Wenn",
+      "options": ["Wenn", "Weil", "Dass", "Ob"]
+    }
+  ]
+

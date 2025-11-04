@@ -1,67 +1,96 @@
 <template>
   <div class="daily">
-    <section class="qd">
+    <section class="qd" v-if="ready && todayQuests.length">
       <header class="qd__header">
-        <h3 class="qd__title">Ежедневные задания</h3>
+        <h3 class="qd__title">{{ t('dailyPanel.title')}}</h3>
         <div class="qd__right">
-          <img class="timer__icon" src="../../assets/images/dailyIcons/timer.svg" alt="Timer_daily">
+          <img class="timer__icon" src="../../assets/images/dailyIcons/timer.svg" alt="Timer_daily"/>
           <span class="qd__timer">{{ prettyMs(msLeft) }}</span>
         </div>
       </header>
-
       <ul class="qd__list">
-        <li class="qd__item" v-for="(quest , index) in todayQuests" :key="quest.id">
-          <div class="qd__icon" :data-idx="index">{{ icon(index) }}</div>
+        <li class="qd__item" v-for="quest in todayQuests" :key="quest.id">
           <div class="qd__body">
-            <h4 class="qd__name">{{ quest.name }}</h4>
+            <h4 class="qd__name">{{ t(quest.title) }}</h4>
             <div class="qd__barwrap">
-              <progress class="qd__progress" :value="cur(quest)" :max="max(quest)"></progress>
-              <span class="qd__barlabel">{{ cur(quest) }} / {{ max(quest) }}</span>
+              <progress class="qd__progress" :value="quest.currentValue" :max="quest.targetValue"></progress>
+              <span class="qd__barlabel">{{ quest.currentValue }} / {{ quest.targetValue }}</span>
             </div>
           </div>
-          <div class="qd__chest" aria-hidden="true">🧰</div>
+          <div class="qd__chest">
+            <img class="qd__icon" :src="getIconSrc(quest)" alt=""/>
+          </div>
         </li>
       </ul>
+    </section>
+    <section v-else class="qd">
+      <div class="qd__header">
+        <h3 class="qd__title">{{ t('dailyPanel.title')}}</h3>
+        <div class="qd__right">
+          <img class="timer__icon" src="../../assets/images/dailyIcons/timer.svg" alt="Timer_daily"/>
+          <span class="qd__timer">--:--:--</span>
+        </div>
+      </div>
+      <p class="loading">{{ t('dailyPanel.loading')}}</p>
     </section>
   </div>
 </template>
 
 <script setup>
-import {onMounted, onUnmounted} from 'vue'
+import {ref, onMounted, onUnmounted} from 'vue'
 import {storeToRefs} from 'pinia'
-import {dailyStore} from '../../store/dailyStore'
+import {dailyStore} from '../../store/dailyStore.js'
+import NotCompleted from '../../assets/images/dailyIcons/dailyNotCompleted.svg'
+import Completed from '../../assets/images/dailyIcons/dailyCompleted.svg'
 
+const { t } = useI18n()
 const store = dailyStore()
 const {todayQuests, msLeft} = storeToRefs(store)
 
-onMounted(() => store.start())
-onUnmounted(() => store.stop())
+const ready = ref(false)
 
-function cur(q) {
-  return Number(q.currentValue ?? 0)
-}
+onMounted(async () => {
+  store.start()
+  store.startAutoSync()
+  ready.value = true
+})
+onUnmounted(() => {
+  store.stopAutoSync();
+  store.stop()
+})
 
-function max(q) {
-  return Math.max(1, Number(q.targetValue ?? 0))
+
+function getIconSrc(q) {
+  return q?.isCompleted ? Completed : NotCompleted
 }
 
 function prettyMs(x) {
   const ms = typeof x === 'number' ? x : Number(x?.value ?? 0)
   const tot = Math.max(0, Math.floor(ms / 1000))
-  const hour = Math.floor(tot / 3600)
-  const min = Math.floor((tot % 3600) / 60)
+  const h = Math.floor(tot / 3600)
+  const m = Math.floor((tot % 3600) / 60)
   const s = tot % 60
   const pad = n => String(n).padStart(2, '0')
-  return `${pad(hour)}:${pad(min)}:${pad(s)}`
+  return `${pad(h)}:${pad(m)}:${pad(s)}`
 }
 
-function icon(icon) {
-  const arr = ['⚡', '⏱️', '🎯', '📚', '🔊', '🧩', '📝', '🧠']
-  return arr[icon % arr.length]
-}
+
+onMounted(() => {
+  store.init()
+})
+
+onUnmounted(() => {
+  store.stopAutoSync()
+  store.stop()
+})
+
 </script>
 
 <style scoped>
+.qd__icon {
+  width: 75px;
+  height: 75px;
+}
 
 .qd {
   color: #e6edf3;
@@ -75,14 +104,12 @@ function icon(icon) {
 .daily {
   width: 100%;
   flex-grow: 1;
-  border: 3px solid #22272e;
+  border: 4px solid var(--border);
   border-radius: 16px;
   padding: 16px;
-  color: #e6edf3;
-  background: #a855f7;
-  box-shadow: 4px 4px 0 black;
-  font-family: "Nunito", sans-serif;
-
+  color: var(--titleColor);
+  box-shadow: 2px 2px 0 var(--border);
+  margin-bottom: 10px;
 }
 
 .qd__header {
@@ -95,8 +122,7 @@ function icon(icon) {
 .qd__title {
   font-size: 22px;
   font-weight: 800;
-  font-family: "Nunito", sans-serif;
-  color: black;
+  color: var(--titleColor);
 }
 
 .qd__right {
@@ -113,8 +139,8 @@ function icon(icon) {
   border-radius: 8px;
   background: #42ab1a;
   border: 3px solid #2b3240;
-  box-shadow: 2px 2px 0 black;
-  color: white;
+  box-shadow: 2px 2px 0 #000;
+  color: #fff;
   font-size: 16px;
   font-weight: 600;
 }
@@ -124,43 +150,32 @@ function icon(icon) {
   display: flex;
   flex-direction: column;
 }
+
 .qd__item {
-  display: grid;
-  grid-template-columns: 42px 1fr 28px;
+  display: flex;
+  justify-content: space-between;
   gap: 12px;
   align-items: center;
-  background: #FFFFFF;
+  background: #fff;
   border: 3px solid #273041;
   border-radius: 14px;
-  padding: 12px;
+  padding: 0 10px;
   box-shadow: 4px 4px 0 #273041;
 }
 
-.qd__icon {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  font-size: 20px;
-  font-weight: 700;
-  background: #142233;
-  border: 1px solid #2a3a52;
-}
-
-
 .qd__body {
-  display: grid;
   gap: 8px;
+  flex-grow: 1;
+  width: 250px;
 }
 
 .qd__name {
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 700;
   line-height: 1.25;
-  color: black;
+  color: #000;
+  margin-bottom: 10px;
 }
-
 
 .qd__barwrap {
   position: relative;
@@ -168,20 +183,13 @@ function icon(icon) {
 
 .qd__barlabel {
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  inset: 0;
   display: grid;
   place-items: center;
   font-size: 12px;
   font-weight: 800;
   color: #c9d4df;
   pointer-events: none;
-}
-
-.qd__timer-label {
-  color: white;
 }
 
 .qd__progress {
@@ -200,7 +208,6 @@ function icon(icon) {
 }
 
 .qd__progress::-webkit-progress-value {
-
   background: linear-gradient(90deg, #42b9ff 0%, #3ed2a6 100%);
   transition: width .25s ease;
 }
@@ -210,14 +217,17 @@ function icon(icon) {
 }
 
 .qd__chest {
-  width: 28px;
-  height: 28px;
+  width: 90px;
+  height: 90px;
   display: grid;
   place-items: center;
-  font-size: 16px;
-  color: #f6c64f;
-  background: #1a2230;
-  border: 1px solid #2b3240;
-  border-radius: 6px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.loading {
+  color: #9aa6b2;
+  padding: 12px 0;
 }
 </style>

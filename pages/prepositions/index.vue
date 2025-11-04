@@ -3,7 +3,7 @@
     <div v-if="showTips" class="tips__overlay" @click.self="showTips = false">
       <div class="tips__content">
         <button class="tips__close" @click="showTips = false">×</button>
-        <h2 class="tipps__title">Советы по теме</h2>
+        <h2 class="tipps__title">{{ t('prepositionsIndexPage.tipsTitle')}}</h2>
         <ul class="tips__list">
           <li v-for="tip in activeTipps" :key="tip.text" class="tips__item">
             <div class="tips__text">{{ tip.text }}</div>
@@ -13,14 +13,13 @@
     </div>
     <VTips
         v-model="showTips"
-        title="Советы по теме"
+        :title="t('prepositionsIndexPage.tipsTitle')"
         :tips="currentTopicData?.tips"
     />
     <div class="sidebar">
-      <button @click="backTo" class="btn__back">На главную</button>
-      <h2 class="sidebar__title">Предлоги по падежам</h2>
-      <div class="sidebar__heading">ТИП ПАДЕЖА</div>
-
+      <button @click="backTo" class="btn__back">{{ t('prepositionsIndexPage.btnBack')}}</button>
+      <h2 class="sidebar__title">{{ t('prepositionsIndexPage.prepositionsTitleNav')}}</h2>
+      <div class="sidebar__heading">{{ t('prepositionsIndexPage.type')}}</div>
       <ul class="sidebar__list">
         <li
             v-for="item in topics"
@@ -42,9 +41,9 @@
         <div class="content__main-column">
           <section class="info-section">
             <div class="info__wrapper">
-              <h3 class="info-section__title">Краткое правило</h3>
+              <h3 class="info-section__title">{{ t('prepositionsIndexPage.rule')}}</h3>
               <button
-                  title="Советы по теме"
+                  :title="t('hoverTitle.tips')"
                   v-if="currentTopicData.tips"
                   class="info__icon-tips"
                   ref="tipRef"
@@ -56,7 +55,7 @@
             </p>
           </section>
           <section class="info-section">
-            <h3 class="info-section__title">Примеры</h3>
+            <h3 class="info-section__title">{{ t('prepositionsIndexPage.examples')}}</h3>
 
             <div v-if="currentTopicData.examples && currentTopicData.examples.length">
               <div v-for="(example, index) in currentTopicData.examples" :key="index" class="example">
@@ -96,125 +95,138 @@
     </div>
   </div>
 </template>
-
 <script setup>
 import { ref, computed, onMounted, onUnmounted, watch, nextTick } from 'vue'
+import { useHead, useSeoMeta} from '#imports'
 import { useRouter } from 'vue-router'
 import SoundBtn from '../../src/components/soundBtn.vue'
 import Lottie from 'lottie-web'
 import TipIcon from '../../assets/animation/info.json'
 import VTips from '../../src/components/V-tips.vue'
-
+const { t} = useI18n()
 const router = useRouter()
 const categoryId = 'prepositions'
+const canonical = useCanonical()
+const pageTitle = t('metaPrepositions.title')
+const pageDesc  = t('metaPrepositions.description')
+useHead({
+  title: pageTitle,
+  link: [
+    { rel: 'canonical', href: canonical }
+  ]
+})
+useSeoMeta({
+  title: pageTitle,
+  description: pageDesc,
+  ogTitle: pageTitle,
+  ogDescription: pageDesc,
+  ogType: 'article',
+  ogUrl: canonical,
+  ogImage: '/images/seo-prepositions-cases.png',
+  robots: 'index, follow'
+})
 
 const topics = [
   {
     id: 'nominativ',
     title: 'Nominativ',
-    rule:
-        'Специальных предлогов под Nominativ почти нет. Этот падеж обычно употребляется для подлежащего и после глаголов sein / werden / bleiben.',
+    rule: t('nominativ.rule'),
     tips: [
-      { text: 'Nominativ отвечает на вопросы Wer? / Was?' },
-      { text: 'После sein, werden, bleiben — именная часть сказуемого стоит в Nominativ.' },
-      { text: 'Если есть предлог, почти всегда это не Nominativ.' }
+      { text: t('nominativ.tipOne') },
+      { text: t('nominativ.tipTwo') },
+      { text: t('nominativ.tipThree') }
     ],
     examples: [
-      { sentence: 'Das ist ein Tisch.', translation: 'Это стол.' },
-      { sentence: 'Der Mann ist Lehrer.', translation: 'Мужчина — учитель.' },
-      { sentence: 'Berlin ist die Hauptstadt.', translation: 'Берлин — столица.' }
+      { sentence: 'Das ist ein Tisch.', translation: t('nominativ.translateExampleOne') },
+      { sentence: 'Der Mann ist Lehrer.', translation: t('nominativ.translateExampleTwo') },
+      { sentence: 'Berlin ist die Hauptstadt.', translation: t('nominativ.translateExampleThree') }
     ],
     practice: {
-      title: 'Практика: Nominativ',
-      description: 'Определите случаи употребления Nominativ без предлогов.',
-      buttonText: 'Начать'
+      title: t('nominativ.practiceTitle'),
+      description: t('nominativ.practiceDescription'),
+      buttonText: t('nominativ.start')
     }
   },
   {
     id: 'akkusativ',
     title: 'Akkusativ',
-    rule:
-        'Эти предлоги всегда требуют Akkusativ: durch, für, gegen, ohne, um, bis, а также entlang (часто как послелог).',
+    rule: t('akkusativ.rule'),
     tips: [
-      { text: 'Лайфхак: FÜR, UM, DURCH, GEGEN, OHNE, (BIS), ENTLANG.' },
-      { text: 'Движение «куда» часто выражается Akkusativом.' },
-      { text: 'bis обычно без артикля: bis Montag, bis Berlin.' },
-      { text: 'entlang — как послелог: den Fluss entlang.' }
+      { text: t('akkusativ.tipOne') },
+      { text: t('akkusativ.tipTwo') },
+      { text: t('akkusativ.tipThree') },
+      { text: t('akkusativ.tipFour') }
     ],
     examples: [
-      { sentence: 'Wir gehen durch den Park.', translation: 'Мы идём через парк.' },
-      { sentence: 'Das Geschenk ist für den Lehrer.', translation: 'Подарок для учителя.' },
-      { sentence: 'Ich bin gegen den Plan.', translation: 'Я против плана.' },
-      { sentence: 'Er kommt ohne den Regenschirm.', translation: 'Он идёт без зонта.' },
-      { sentence: 'Wir sitzen um den Tisch.', translation: 'Мы сидим вокруг стола.' },
-      { sentence: 'Ich bleibe bis nächsten Montag.', translation: 'Я остаюсь до следующего понедельника.' },
-      { sentence: 'Wir gehen den Fluss entlang.', translation: 'Мы идём вдоль реки.' }
+      { sentence: 'Wir gehen durch den Park.', translation: t('akkusativ.translateOne') },
+      { sentence: 'Das Geschenk ist für den Lehrer.', translation: t('akkusativ.translateTwo') },
+      { sentence: 'Ich bin gegen den Plan.', translation: t('akkusativ.translateThree') },
+      { sentence: 'Er kommt ohne den Regenschirm.', translation: t('akkusativ.translateFour') },
+      { sentence: 'Wir sitzen um den Tisch.', translation: t('akkusativ.translateFive') },
+      { sentence: 'Ich bleibe bis nächsten Montag.', translation: t('akkusativ.translateSix') },
+      { sentence: 'Wir gehen den Fluss entlang.', translation: t('akkusativ.translateSeven') }
     ],
     practice: {
-      title: 'Практика: Akkusativ',
-      description: 'Закрепите предлоги, которые требуют Akkusativ.',
-      buttonText: 'Начать'
+      title: t('akkusativ.practiceTitle'),
+      description: t('akkusativ.practiceDescription'),
+      buttonText: t('akkusativ.start')
     }
   },
   {
     id: 'dativ',
     title: 'Dativ',
-    rule:
-        'Эти предлоги всегда требуют Dativ: aus, außer, bei, mit, nach, seit, von, zu, gegenüber.',
+    rule: t('dativ.rule'),
     tips: [
-      { text: 'Базовый набор: bei, mit, nach, seit, von, zu.' },
-      { text: 'Состояние «где?» часто выражается с Dativ.' },
-      { text: 'gegenüber может стоять после существительного: dem Haus gegenüber.' }
+      { text: t('dativ.tipOne') },
+      { text: t('dativ.tipTwo') },
+      { text: t('dativ.tipThree') }
     ],
     examples: [
-      { sentence: 'Er kommt aus dem Haus.', translation: 'Он выходит из дома.' },
-      { sentence: 'Außer dem Kind war niemand da.', translation: 'Кроме ребёнка никого не было.' },
-      { sentence: 'Ich wohne bei meinen Eltern.', translation: 'Я живу у родителей.' },
-      { sentence: 'Wir fahren mit dem Auto.', translation: 'Мы едем на машине.' },
-      { sentence: 'Nach dem Essen lernen wir.', translation: 'После еды мы занимаемся.' },
-      { sentence: 'Ich lerne seit einem Jahr Deutsch.', translation: 'Я учу немецкий уже год.' },
-      { sentence: 'Der Zug fährt vom Bahnhof.', translation: 'Поезд отправляется со станции.' },
-      { sentence: 'Ich gehe zur Schule.', translation: 'Я иду в школу.' },
-      { sentence: 'Dem Haus gegenüber ist ein Park.', translation: 'Напротив дома — парк.' }
+      { sentence: 'Er kommt aus dem Haus.', translation: t('dativ.translateOne') },
+      { sentence: 'Außer dem Kind war niemand da.', translation: t('dativ.translateTwo') },
+      { sentence: 'Ich wohne bei meinen Eltern.', translation: t('dativ.translateThree') },
+      { sentence: 'Wir fahren mit dem Auto.', translation: t('dativ.translateFour') },
+      { sentence: 'Nach dem Essen lernen wir.', translation: t('dativ.translateFive') },
+      { sentence: 'Ich lerne seit einem Jahr Deutsch.', translation: t('dativ.translateSix') },
+      { sentence: 'Der Zug fährt vom Bahnhof.', translation: t('dativ.translateSeven') },
+      { sentence: 'Ich gehe zur Schule.', translation: t('dativ.translateEight') },
+      { sentence: 'Dem Haus gegenüber ist ein Park.', translation: t('dativ.translateNine') }
     ],
     practice: {
-      title: 'Практика: Dativ',
-      description: 'Повторите предлоги, которые требуют Dativ.',
-      buttonText: 'Начать'
+      title: t('dativ.practiceTitle'),
+      description: t('dativ.practiceDescription'),
+      buttonText: t('dativ.start')
     }
   },
   {
     id: 'genitiv',
     title: 'Genitiv',
-    rule:
-        'Эти предлоги требуют Genitiv: statt, trotz, während, wegen, außerhalb, innerhalb, jenseits/diesseits, aufgrund.',
+    rule: t('genitiv.rule'),
     tips: [
-      { text: 'В разговорной речи Genitiv часто заменяют на von + Dativ.' },
-      { text: 'Артикли: des/eines; существительные часто получают окончание -s/-es.' },
-      { text: 'Прилагательные в Genitiv получают окончание -en.' }
+      { text: t('genitiv.tipOne') },
+      { text: t('genitiv.tipTwo') },
+      { text: t('genitiv.tipThree') }
     ],
     examples: [
-      { sentence: 'Statt des Zuckers nehme ich Honig.', translation: 'Вместо сахара я беру мёд.' },
-      { sentence: 'Trotz des Regens gehen wir spazieren.', translation: 'Несмотря на дождь, мы гуляем.' },
-      { sentence: 'Während des Unterrichts ist das Handy aus.', translation: 'Во время урока телефон выключен.' },
-      { sentence: 'Wegen der Kälte bleiben wir zu Hause.', translation: 'Из-за холода мы остаёмся дома.' },
-      { sentence: 'Außerhalb der Stadt ist es ruhiger.', translation: 'За пределами города тише.' },
-      { sentence: 'Innerhalb einer Woche bekommst du die Antwort.', translation: 'В течение недели ты получишь ответ.' },
-      { sentence: 'Jenseits des Flusses liegt ein Dorf.', translation: 'По ту сторону реки — деревня.' },
-      { sentence: 'Aufgrund der Arbeiten ist die Straße gesperrt.', translation: 'Из-за ремонтных работ дорога перекрыта.' }
+      { sentence: 'Statt des Zuckers nehme ich Honig.', translation: t('genitiv.translateOne') },
+      { sentence: 'Trotz des Regens gehen wir spazieren.', translation: t('genitiv.translateTwo') },
+      { sentence: 'Während des Unterrichts ist das Handy aus.', translation: t('genitiv.translateThree') },
+      { sentence: 'Wegen der Kälte bleiben wir zu Hause.', translation: t('genitiv.translateFour') },
+      { sentence: 'Außerhalb der Stadt ist es ruhiger.', translation: t('genitiv.translateFive') },
+      { sentence: 'Innerhalb einer Woche bekommst du die Antwort.', translation: t('genitiv.translateSix') },
+      { sentence: 'Jenseits des Flusses liegt ein Dorf.', translation: t('genitiv.translateSeven') },
+      { sentence: 'Aufgrund der Arbeiten ist die Straße gesperrt.', translation: t('genitiv.translateEight') }
     ],
     practice: {
-      title: 'Практика: Genitiv',
-      description: 'Закрепите употребление генитивных предлогов.',
-      buttonText: 'Начать'
+      title: t('genitiv.practiceTitle'),
+      description: t('genitiv.practiceDescription'),
+      buttonText: t('genitiv.start')
     }
   }
 ]
-
 const backTo = () => {
   router.push('/')
 }
-
 const topic = ref('nominativ')
 const currentTopicData = computed(() => topics.find(t => t.id === topic.value))
 
@@ -402,7 +414,7 @@ watch(currentTopicData, () => {
 
 .content__title {
   color: white;
-  font-size: 2rem;
+  font-size: 2.1rem;
   font-weight: bold;
   text-shadow: none;
 }
@@ -592,6 +604,7 @@ watch(currentTopicData, () => {
   font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
+  color: red;
 }
 
 .tips__item {

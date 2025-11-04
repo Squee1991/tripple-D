@@ -1,26 +1,14 @@
 <template>
-    <div
-            v-for="group in wordArticleGroups"
-            :key="group.title"
-            class="achievement-group"
-    >
+    <div v-for="group in wordArticleGroups" :key="group.title" class="achievement-group">
         <div class="group-header">
             <h2 class="group-title">{{ t(group.title) }}</h2>
-            <span
-                    :class="[
-          'group-stats',
-          { 'all-completed': getCompletedCount(group) === group.achievements.length }
-        ]"
+            <span :class="[ 'group-stats',  { 'all-completed': getCompletedCount(group) === group.achievements.length }  ]"
             >
         {{ getCompletedCount(group) }} / {{ group.achievements.length }}
       </span>
         </div>
         <div class="achievment-list">
-            <div
-                    v-for="achievement in group.achievements"
-                    :key="achievement.id"
-                    class="achievement__card"
-            >
+            <div v-for="achievement in group.achievements" :key="achievement.id" class="achievement__card">
                 <div class="achievment__icon-wrapper">
                     <div class="achievement-icon">
                         <span class="icon-emoji">{{ achievement.icon }}</span>
@@ -29,17 +17,12 @@
                 <div class="achievment__details">
                     <h3 class="achievment__title">{{ t(achievement.name) }}</h3>
                     <div class="progress-bar-container">
-                        <div
-                                class="progress-bar"
-                                :style="{ width: (achievement.currentProgress / achievement.targetProgress * 100) + '%' }"
-                        ></div>
+                        <div class="progress-bar" :style="{ width: (achievement.currentProgress / achievement.targetProgress * 100) + '%' }"></div>
                         <span class="progress-text-overlay">
-              {{ achievement.currentProgress }} / {{ achievement.targetProgress }}
-            </span>
+                          {{ achievement.currentProgress }} / {{ achievement.targetProgress }}
+                        </span>
                     </div>
-                    <p class="achievment__description">
-                        {{ t(achievement.description) }}
-                    </p>
+                    <p class="achievment__description">{{ t(achievement.description) }}</p>
                 </div>
             </div>
         </div>
@@ -48,26 +31,23 @@
 
 <script setup>
 import { computed } from 'vue'
-import { useI18n } from 'vue-i18n'
 import { useAchievementStore } from '../../store/achievementStore.js'
 import { wordPlusArticleAchievment } from '../achieveGroup/article/wordPlusArticle.js'
 
 const { t } = useI18n()
 const achievementStore = useAchievementStore()
 
-// Собираем список заголовков групп именно для word+article
 const wordArticleTitles = wordPlusArticleAchievment.map(g => g.title)
 
-// Фильтруем глобальные группы по этим заголовкам
 const wordArticleGroups = computed(() =>
     achievementStore.groups.filter(g =>
         wordArticleTitles.includes(g.title)
     )
 )
 
-// Счётчик выполненных ачивок в группе
 const getCompletedCount = group =>
     group.achievements.filter(a => a.currentProgress >= a.targetProgress).length
+
 </script>
 
 <style scoped>
@@ -86,7 +66,7 @@ const getCompletedCount = group =>
 }
 
 .group-title {
-    font-size: 2rem;
+  font-size: 1.8rem;
     color: #1e1e1e;
     margin: 0;
 }

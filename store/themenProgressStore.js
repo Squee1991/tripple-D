@@ -1,16 +1,25 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
-import { getFirestore, doc, setDoc, getDoc } from 'firebase/firestore'
+import {
+	getFirestore,
+	doc,
+	setDoc,
+	getDoc,
+	serverTimestamp
+} from 'firebase/firestore'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 
 export const useTrainerStore = defineStore('thematic', () => {
 	const topic = ref('')
 	const jsonData = ref(null)
-	const selectedLevel = ref(null)
-	const selectedModule = ref(null)
-	const completedModules = ref([]) // [{ level, id }]
+	const selectedLevel = ref(null)       // { level, modules: [...] }
+	const selectedModule = ref(null)      // { id, ... }
+	const completedModules = ref([])      // [{ level, id }, ...]
 
-	// Добавить пройденный модуль
+	const db = getFirestore()
+	const progressDocRef = (uid, topicKey) =>
+		doc(db, 'users', uid, 'thematicProgress', topicKey)
+
 	const addCompletedModule = (level, id) => {
 		if (!completedModules.value.some(m => m.level === level && m.id === id)) {
 			completedModules.value.push({ level, id })
@@ -18,80 +27,73 @@ export const useTrainerStore = defineStore('thematic', () => {
 		}
 	}
 
-	// Сохранение прогресса
-	const saveProgress = async () => {
+	const ensureUser = async () => {
 		const auth = getAuth()
-		const db = getFirestore()
-		const user = auth.currentUser
-		if (!user) return
-		const progress = {
-			level: selectedLevel.value?.level,
-			module: selectedModule.value?.id,
-			completedModules: completedModules.value,
-		}
-		const docRef = doc(db, 'progress', user.uid)
-		const docSnap = await getDoc(docRef)
-		let data = {}
-		if (docSnap.exists()) data = docSnap.data()
-		data[topic.value] = progress
-		await setDoc(docRef, data)
+		if (auth.currentUser) return auth.currentUser
+		return await new Promise(resolve => {
+			const unsub = onAuthStateChanged(auth, u => {
+				if (u) { unsub(); resolve(u) }
+			})
+			setTimeout(() => { unsub(); resolve(null) }, 1300)
+		})
 	}
 
-	// Загрузка прогресса
-	const loadProgress = async () => {
-		const auth = getAuth()
-		const db = getFirestore()
-		let user = auth.currentUser
-		if (!user) {
-			user = await new Promise(resolve => {
-				const unsubscribe = onAuthStateChanged(auth, usr => {
-					if (usr) {
-						unsubscribe()
-						resolve(usr)
-					}
-				})
-				setTimeout(() => {
-					unsubscribe()
-					resolve(null)
-				}, 1300)
-			})
+	const saveProgress = async () => {
+		const user = await ensureUser()
+		if (!user || !topic.value) return
+
+		const progress = {
+			level: selectedLevel.value?.level ?? null,
+			module: selectedModule.value?.id ?? null,
+			completedModules: completedModules.value ?? [],
+			updatedAt: serverTimestamp()
 		}
-		if (!user) {
+
+		const docRef = progressDocRef(user.uid, topic.value)
+		await setDoc(docRef, progress, { merge: true })
+	}
+
+	const loadProgress = async () => {
+		const user = await ensureUser()
+		if (!user || !topic.value) {
 			completedModules.value = []
 			return
 		}
-		const docRef = doc(db, 'progress', user.uid)
-		const docSnap = await getDoc(docRef)
-		if (docSnap.exists()) {
-			const data = docSnap.data()
-			if (data[topic.value]) {
-				const t = data[topic.value]
-				// Миграция старого формата:
-				if (Array.isArray(t.completedModules) && typeof t.completedModules[0] === 'number') {
-					// если был старый формат [1,2,3]
-					completedModules.value = t.completedModules.map(id => ({ level: 1, id })) // по умолчанию, можно скорректировать если были уровни
-				} else if (Array.isArray(t.completedModules)) {
-					completedModules.value = t.completedModules
-				} else {
-					completedModules.value = []
-				}
-				if (t.level && t.module) {
-					await setThemeAndModule(topic.value, t.level, t.module)
-				}
-			} else {
-				completedModules.value = []
-			}
+
+		const docRef = progressDocRef(user.uid, topic.value)
+		const snap = await getDoc(docRef)
+
+		if (!snap.exists()) {
+			completedModules.value = []
+			return
+		}
+
+		const t = snap.data()
+
+		// Поддержка старого формата: [1,2,3] → [{level:1,id:1},...]
+		if (Array.isArray(t.completedModules) && typeof t.completedModules[0] === 'number') {
+			completedModules.value = t.completedModules.map(id => ({ level: 1, id }))
+		} else if (Array.isArray(t.completedModules)) {
+			completedModules.value = t.completedModules
 		} else {
 			completedModules.value = []
 		}
+
+		if (t.level && t.module) {
+			await setThemeAndModule(topic.value, t.level, t.module)
+		}
 	}
 
-	const setThemeAndModule = async (topicName, level, module) => {
+	const setThemeAndModule = async (topicName, level, moduleId) => {
 		topic.value = topicName
+
 		const res = await fetch(`/${topicName}.json`)
 		jsonData.value = await res.json()
-		selectedLevel.value = jsonData.value.levels.find(l => l.level === level)
-		selectedModule.value = selectedLevel.value.modules.find(m => m.id === module)
+
+		selectedLevel.value = jsonData.value.levels.find(l => l.level === Number(level)) ?? null
+		selectedModule.value = selectedLevel.value
+			? selectedLevel.value.modules.find(m => m.id === Number(moduleId)) ?? null
+			: null
 	}
 
 	return {

@@ -2,7 +2,6 @@
   <div class="exam">
     <h1 class="exam__title">📘 Niveau {{ level }}</h1>
     <div v-if="examStore.loading" class="exam__loading">Aufgabe wird geladen...</div>
-
     <div v-else-if="isIntroVisible" class="exam__intro">
       <h2 class="exam__card-title">📘 Willkommen zur Prüfung!</h2>
       <p class="exam__intro-text">
@@ -16,21 +15,21 @@
       </ul>
       <button class="exam__button" @click="startExam">🚀 Prüfung starten</button>
     </div>
-
     <div v-else-if="!isExamFinished && currentExercise" class="exam__card exam__card--active">
       <p class="exam__progress">Frage {{ examStore.currentIndex + 1 }} von {{ examStore.exercises.length }}</p>
       <h2 class="exam__card-title">{{ currentExercise.title }}</h2>
-
       <div v-if="['multiple-choice','audio-choice'].includes(currentExercise.type)">
         <div v-if="currentExercise.task.text && currentExercise.type==='multiple-choice'" class="exam__task-text">
-          <strong class="exam__label">Text:</strong> {{ currentExercise.task.text }}
+          <span><strong class="exam__label">Text: </strong></span>
+          <span class="exam__text-read">{{ currentExercise.task.text }}</span>
         </div>
         <div v-if="currentExercise.type==='audio-choice'" class="exam__task-audio">
           <strong class="exam__label">Hörbeispiel:</strong>
           <SoundBtn :text="currentExercise.task.text" lang="de-DE" title="Hörbeispiel anhören"/>
         </div>
         <div class="exam__question">
-          <strong class="exam__label">Frage:</strong> {{ currentExercise.task.question }}
+          <span><strong class="exam__label">Frage: </strong></span>
+          <span class="exam__text-read"> {{ currentExercise.task.question }}</span>
         </div>
         <ul class="exam__options">
           <li v-for="option in currentExercise.task.options" :key="option" class="exam__option">
@@ -38,15 +37,14 @@
           </li>
         </ul>
       </div>
-
       <div v-else-if="currentExercise.type==='text-input'" class="exam__text-input">
         <p class="exam__task-instruction">
-          <strong class="exam__label">Aufgabe:</strong> {{ currentExercise.task.instruction }}
+          <span><strong class="exam__label">Aufgabe: </strong> </span>
+          <span class="exam__text-read">{{ currentExercise.task.instruction }}</span>
         </p>
         <textarea v-model="userInput" class="exam__textarea" placeholder="Antwort schreiben..." rows="4"/>
         <button class="exam__button" @click="submitTextAnswer">Antwort senden</button>
       </div>
-
       <div v-else-if="currentExercise.type==='speaking-prompt'" class="exam__speaking-prompt">
         <p class="exam__task-prompt">
           <strong class="exam__label">Sprechen Sie:</strong> {{ currentExercise.task.prompt }}
@@ -58,11 +56,13 @@
         <VoiceRecorder
             :lang="'de-DE'"
             :key="examStore.currentIndex"
-            @submit="submitTranscription"
+            @start="isRecording = true"
+            @stop="isRecording = false"
+            @audio="onAudioRecorded"
+        @submit="submitTranscription"
         />
       </div>
     </div>
-
     <div v-else class="exam__card exam__card--finished">
       <h2 class="exam__card-title">🎉 Prüfung abgeschlossen!</h2>
       <h3 class="exam__card-subtitle">🧾 Ergebnis des Tests für Niveau {{ level }}</h3>
@@ -105,7 +105,12 @@ import {useI18n} from 'vue-i18n'
 import {userExamStore} from '../../../store/examStore'
 import SoundBtn from '~/src/components/soundBtn.vue'
 import VoiceRecorder from '~/src/components/VoiceRecorder.vue'
-import {useGroqCheckHomeWork} from '~/src/composables/useGroqCheck.js'
+import {useGroqCheckHomeWork} from '~/composables/useGroqCheck.js'
+
+import { useSeoMeta } from '#imports'
+useSeoMeta({
+  robots: 'noindex, follow'
+})
 
 const route = useRoute()
 const {locale} = useI18n()
@@ -123,6 +128,17 @@ const startExam = async () => {
   if (typeof examStore.startAttempt === 'function') {
     await examStore.startAttempt({level: level.value, locale: locale.value})
   }
+}
+
+const onAudioRecorded = async ({ blob, durationSec }) => {
+  const exerciseId = currentExercise.value?.id
+  if (!exerciseId || !blob) return
+  await examStore.uploadSpeakingAudio({
+    exerciseId,
+    blob,
+    durationSec,
+    transcription: ''
+  })
 }
 
 const submitTextAnswer = async () => {
@@ -255,6 +271,7 @@ onMounted(() => {
 
 .exam__progress {
   font-size: 1.1rem;
+  text-align: center;
   font-weight: bold;
   color: #5d4037;
   margin-bottom: 0.5rem;
@@ -295,7 +312,7 @@ onMounted(() => {
   background: #ffffff;
   border: 4px solid #000;
   border-radius: 20px;
-  padding: 2rem;
+  padding: 1rem;
   max-width: 1200px;
   width: 100%;
   box-shadow: 6px 6px 0 #000;
@@ -317,18 +334,15 @@ onMounted(() => {
 
 .exam__label {
   color: #1a237e;
+  margin-right: 6px;
 }
 
 .exam__task-text, .exam__task-audio, .exam__question, .exam__task-instruction, .exam__task-prompt, .exam__task-topics {
   margin-bottom: 1.2rem;
   font-size: 1.2rem;
-  display: flex;
 }
 
 .exam__options {
-  list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -358,11 +372,17 @@ onMounted(() => {
   transform: translateY(-2px) rotate(1deg);
 }
 
+
+
 .exam__textarea {
   width: 100%;
-  padding: 1rem;
+  padding: 0.6rem;
+  resize: none;
+  width: 100%;
+  min-height: 150px;
   margin-bottom: 1rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
   border-radius: 8px;
   border: 1px solid #ccc;
   box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.1);
@@ -508,6 +528,13 @@ onMounted(() => {
   }
   50% {
     opacity: .5
+  }
+}
+
+@media (max-width: 767px) {
+  .exam__text-read {
+    font-size: 1rem;
+    font-weight: 600;
   }
 }
 </style>

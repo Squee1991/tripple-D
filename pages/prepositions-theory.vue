@@ -88,8 +88,30 @@
 
 <script setup>
 import {ref, computed} from 'vue';
+import { useHead, useSeoMeta} from '#imports'
+const route = useRoute()
+const canonical = useCanonical()
+const { t } = useI18n()
 
-const {t} = useI18n()
+const pageTitle = t('metaPrepositionsTheory.title')
+const pageDesc  = t('metaPrepositionsTheory.description')
+
+useHead({
+  title: pageTitle,
+  link: [{ rel: 'canonical', href: canonical }]
+})
+
+useSeoMeta({
+  title: pageTitle,
+  description: pageDesc,
+  ogTitle: pageTitle,
+  ogDescription: pageDesc,
+  ogType: 'article',
+  ogUrl: canonical,
+  ogImage: '/images/seo-prepositions-cases.png',
+  robots: 'index, follow'
+})
+
 const pageSections = ref([
   {
     type: 'intro',
@@ -193,7 +215,6 @@ const pageSections = ref([
     ]
   }
 ]);
-
 const quizQuestions = computed(() => pageSections.value.find(s => s.type === 'quiz')?.questions || []);
 const currentQuestionIndex = ref(0);
 const selectedAnswer = ref(null);
@@ -274,7 +295,7 @@ definePageMeta({
 }
 
 .page-content {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 

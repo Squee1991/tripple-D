@@ -1,5 +1,5 @@
 <template>
-  <header class="header" :class="{ 'mobile-menu-active': isMobileMenuOpen }">
+  <header class="header" :class="{ 'mobile-menu-active': isMobileMenuOpen , 'is-rtl': isAr }">
     <div v-if="isMobileMenuOpen" class="mobile-nav-overlay" @click="isMobileMenuOpen = false"></div>
     <UiOverlay :visible="showAuth" @close="closeAuth"/>
     <transition name="slide">
@@ -8,15 +8,27 @@
     <ModalDev
         :visible="showDevModal"
         @close="closeDevModal"
-        :title="t('inDevelopment.title')"
-        :img="Dev"
-        :text="t('inDevelopment.sub')"
+        :title="modalConfig.title"
+        :img="modalConfig.img"
+        :text="modalConfig.text"
+        :button="modalConfig.isEvent ? modalConfig.button : null"
+        @button="onDevModalButton"
     />
     <div class="header-container">
-      <NuxtLink to="/">
-        <span class="logo__name">LEXINGO</span>
+      <NuxtLink to="/" class="logo" aria-label="German Corner — Home">
+        <span class="logo__name">skillup</span>
+        <NuxtImg
+            src="/images/logo/logotype.png"
+            alt="German Corner"
+            class="logo__img"
+            format="webp"
+            loading="eager"
+            fetchpriority="high"
+        />
+        <span class="logo__name">german</span>
       </NuxtLink>
-      <nav ref="dropdownRefNav" class="header-nav" :class="{ 'is-open': isMobileMenuOpen }">
+      <nav ref="dropdownRefNav" class="header-nav" :class="{ 'is-open': isMobileMenuOpen, 'is-rtl': isAr }"
+           aria-label="Main">
         <ul class="header-nav__list">
           <li v-for="item in menuItems" :key="item.id" class="header-nav__item">
             <NuxtLink v-if="item.url" :to="item.url" class="header-nav__link" @click="closeAllMenus">
@@ -29,7 +41,7 @@
                   v-if="item.children"
                   :class="['header-nav__arrow', { 'rotated': clickedMenu === item.id }]"
                   :src="Arrow"
-                  alt=">"
+                  alt="Arrow__icon"
               />
             </button>
             <ul v-if="item.children && clickedMenu === item.id" class="header-nav__submenu">
@@ -45,7 +57,7 @@
                       v-if="child.subChildren"
                       :class="['header-nav__arrow', { 'rotated': clickedSubChild === child.id }]"
                       :src="Arrow"
-                      alt=""
+                      alt="Arrow_icon"
                   />
                 </button>
                 <ul v-if="child.subChildren && clickedSubChild === child.id"
@@ -67,15 +79,6 @@
         <div class="header-nav__tea">
           <ForTea/>
         </div>
-        <VTips
-            :title="articleData.title"
-            :tips="articleData.tips"
-            v-model="isArticleOpen"
-        />
-        <button v-if="userAuth.uid" @click="openArticleModal" class="articlus__wrapper">
-          <img class="articlus" src="../../assets/images/articlus.png" alt="Articlus"/>
-          <span class="articlus__counter">{{ learningStore.points }}</span>
-        </button>
         <div class="header-nav__lang">
           <LanguageSelector/>
         </div>
@@ -90,7 +93,7 @@
           >
             <img class="header-user__avatar" :src="userAuth.avatarUrl" alt="User avatar"/>
             <span class="header-user__name">{{ userAuth.email }}</span>
-            <img :class="['header-nav__arrow', { 'rotated': menuOpen }]" :src="Arrow" alt="v"/>
+            <img :class="['header-nav__arrow', { 'rotated': menuOpen }]" :src="Arrow" alt="Arrow"/>
           </button>
           <div
               ref="dropdownRef"
@@ -104,7 +107,7 @@
                 class="header-user__dropdown-btn"
                 @click.stop="item.action"
             >
-              <img class="header-user__dropdown-icon" :src="item.icon" alt=""/>
+              <img class="header-user__dropdown-icon" :src="item.icon" alt="Arrow_dropdown"/>
               <span class="header__drop-text">{{ t(item.label) }}</span>
             </button>
           </div>
@@ -119,210 +122,326 @@
 </template>
 
 <script setup>
-import {ref, watch, onMounted, onBeforeUnmount, computed} from 'vue'
+import {ref, computed, watch, onMounted, onBeforeUnmount} from 'vue'
 import {useRouter} from 'vue-router'
-import {useI18n} from 'vue-i18n'
 import {userAuthStore} from '../../store/authStore.js'
-import {userlangStore} from '../../store/learningStore.js'
 import {useBreakPointsStore} from '../../store/breakPointsStore.js'
+
 import SignIn from '../components/logIn.vue'
 import LanguageSelector from '../components/langSwitcher.vue'
 import ForTea from '../components/forTea.vue'
 import BurgerMenu from '../components/burgerMenu.vue'
 import UiOverlay from '../components/Uioverlay.vue'
 import ModalDev from '../components/modal.vue'
+
 import Arrow from '../../assets/images/arrowNav.svg'
 import Dev from '../../assets/images/dev.svg'
 import User from '../../assets/images/account.svg'
 import Logout from '../../assets/images/logout.svg'
-import VTips from "~/src/components/V-tips.vue";
+import PadLock from '../../assets/images/padlock.svg'
 
-const {t} = useI18n()
-const learningStore = userlangStore()
-const bp = useBreakPointsStore()
+
 const router = useRouter()
+const {t, locale} = useI18n()
+const bp = useBreakPointsStore()
 const userAuth = userAuthStore()
+
 const showAuth = ref(false)
 const menuOpen = ref(false)
 const isMobileMenuOpen = ref(false)
+
 const clickedMenu = ref(null)
-const showDevModal = ref(false)
 const clickedSubChild = ref(null)
-const userBtnRef = ref(null);
+
+const showDevModal = ref(false)
+const modalType = ref(null)
+
+const userBtnRef = ref(null)
 const dropdownRef = ref(null)
 const dropdownRefNav = ref(null)
-const isArticleOpen = ref(false)
-const isMobile = computed(() => bp.isMobile);
+const isAr = computed(() => locale.value === 'ar')
+const isMobile = computed(() => bp.isMobile)
 
-const closeAllMenus = () => {
-  isMobileMenuOpen.value = false;
-  clickedMenu.value = null;
-  clickedSubChild.value = null;
-}
-const handleMenuItemClick = (item) => {
-  if (item.children) {
-    clickedMenu.value = clickedMenu.value === item.id ? null : item.id;
-    clickedSubChild.value = null;
-  } else if (item.action) {
-    item.action();
-    closeAllMenus();
-  } else if (item.url) {
-    closeAllMenus();
+const modalConfig = computed(() => {
+  switch (modalType.value) {
+    case 'dev':
+      return {
+        isEvent: false,
+        title: t('inDevelopment.title'),
+        text: t('inDevelopment.sub'),
+        button: null,
+        img: Dev,
+      }
+    case 'eventLocked':
+      return {
+        isEvent: true,
+        title: t('eventLocked.title'),
+        text: t('eventLocked.text'),
+        button: {label: t('eventLocked.btn'), to: '/calendar'},
+        img: PadLock,
+      }
+    default:
+      return {isEvent: false, title: '', text: '', button: null, img: Dev}
   }
-}
-const handleSubmenuItemClick = (childItem) => {
-  if (childItem.subChildren) {
-    clickedSubChild.value = clickedSubChild.value === childItem.id ? null : childItem.id;
-  } else if (childItem.action) {
-    childItem.action();
-    closeAllMenus();
-  } else if (childItem.url) {
-    closeAllMenus();
+})
+
+const menuItems = computed(() => {
+  const items = [
+    ...(userAuth.uid
+        ? [
+          {
+            id: 'learn',
+            valueKey: 'nav.training',
+            children: [
+              {
+                id: 'articles',
+                valueKey: 'sub.articles',
+                subChildren: [
+                  {id: 'learn-tips', url: '/article-basic', valueKey: 'underSub.prev'},
+                  {id: 'learn-rules', url: '/article-theory', valueKey: 'underSub.rules'},
+                  {id: 'learn-selectedTopics', url: '/articles', valueKey: 'underSub.artRules'},
+                ],
+              },
+              {
+                id: 'verbs',
+                valueKey: 'sub.verbs',
+                subChildren: [
+                  {id: 'verb-theory', url: '/verbs-theory', valueKey: 'underSub.verbsTheory'},
+                  {id: 'tenses', url: '/tenses', valueKey: 'underSub.verbFirst'},
+                  {id: 'modalVerbs', url: '/modal-verbs', valueKey: 'underSub.verbSecond'},
+                  {id: 'verb-types', url: '/verb-types', valueKey: 'underSub.verbTypes'},
+                ],
+              },
+              {
+                id: 'prepositions',
+                valueKey: 'sub.prepositions',
+                subChildren: [
+                  {id: 'prepositions-theory', url: '/prepositions-theory', valueKey: 'underSub.rules'},
+                  {id: 'prepositions-practice', url: '/prepositions', valueKey: 'underSub.prepositions'},
+                ],
+              },
+              {
+                id: 'adjectives',
+                valueKey: 'sub.adjectives',
+                subChildren: [
+                  {
+                    id: 'adjectives-theory',
+                    url: '/adjectives-theory',
+                    valueKey: 'underSub.adjectiveTheory'
+                  },
+                  {
+                    id: 'adjectives-basic',
+                    url: '/adjective-basics',
+                    valueKey: 'underSub.adjectivesBasic'
+                  },
+                  {id: 'declination', url: '/adjective-declension', valueKey: 'underSub.declination'},
+                  {id: 'comparison', url: '/adjective-comparison', valueKey: 'underSub.comparison'},
+                ],
+              },
+              {id: 'themen', url: '/thematic-learning', valueKey: 'sub.themen'},
+              {id: 'cards', url: '/create-cards', valueKey: 'sub.card'},
+              {id: 'idioms', url: '/idioms', valueKey: 'sub.idioms'},
+            ],
+          },
+          {
+            id: 'duel',
+            valueKey: 'nav.gameMode',
+            children: [
+              {id: 'duel-pvp', valueKey: 'sub.pvp', action: openDevModal},
+              {id: 'wordDuel', url: '/sentence-duel', valueKey: 'sub.wordDuel'},
+              {id: 'quests', url: '/recipes', valueKey: 'sub.quests'},
+              {id: 'duel-guess', url: '/guess-word', valueKey: 'sub.guess'},
+              {id: 'articlemarathon', url: '/article-marathon', valueKey: 'sub.marathon'},
+            ],
+          },
+        ]
+        : [
+          {id: 'about', valueKey: 'nav.about', url: '/info-about'},
+          {id: 'contact', valueKey: 'nav.contact', url: '/support-request'},
+          {id: 'faq', valueKey: 'nav.quest', url: '/faq'},
+        ]),
+    ...(userAuth.uid ? [{id: 'test', url: '/exams', valueKey: 'nav.tests'}] : []),
+  ]
+
+  if (userAuth.uid) {
+    const allEvents = [
+      {
+        id: 'winter-event',
+        valueKey: 'eventsNavNames.winter',
+        url: '/event-winter',
+        isEvent: true,
+        eventKey: 'winter',
+        startDate: '24.12',
+        endDate: '01.02'
+      },
+      {
+        id: 'valentine',
+        valueKey: 'eventsNavNames.valentine',
+        url: '/event-valentine',
+        isEvent: true,
+        eventKey: 'valentine',
+        startDate: '14.02',
+        endDate: '16.02'
+      },
+      {
+        id: 'april',
+        valueKey: 'eventsNavNames.firstApril',
+        url: '/event-joke',
+        isEvent: true,
+        eventKey: 'fools',
+        startDate: '01.04',
+        endDate: '01.04'
+      },
+      {
+        id: 'halloween',
+        valueKey: 'eventsNavNames.halloween',
+        url: '/event-halloween',
+        isEvent: true,
+        eventKey: 'pumpkin',
+        startDate: '29.10',
+        endDate: '31.10'
+      },
+    ]
+    const processedEvents = allEvents.map(event => ({
+      ...event,
+      url: isEventActive(event.startDate, event.endDate) ? event.url : null,
+    }))
+    items.push(
+        {id: 'events', valueKey: 'nav.events', children: processedEvents}
+    )
   }
-}
-const openDevModal = () => showDevModal.value = true
-const closeDevModal = () => showDevModal.value = false
-const closeAuth = () => showAuth.value = false
-const openAuth = () => showAuth.value = true
-const menuItems = computed(() => [
-  ...(userAuth.uid ?
-          [
-            {
-              id: 'learn',
-              valueKey: 'nav.training',
-              children: [
-                {
-                  id: 'articles',
-                  valueKey: 'sub.articles',
-                  subChildren: [
-                    {id: 'learn-tips', url: 'examples', valueKey: 'underSub.prev'},
-                    {id: 'learn-rules', url: 'rules', valueKey: 'underSub.rules'},
-                    {id: 'learn-selectedTopics', url: 'articles', valueKey: 'underSub.artRules'},
-                  ]
-                },
-                {
-                  id: 'verbs',
-                  valueKey: 'sub.verbs',
-                  subChildren: [
-                    {id: 'verb-theory', url: '/verbs-theory', valueKey: 'underSub.verbsTheory'},
-                    {id: 'tenses', url: '/tenses', valueKey: 'underSub.verbFirst'},
-                    {id: 'modalVerbs', url: '/modal-verbs', valueKey: 'underSub.verbSecond'},
-                    {id: 'verb-types', url: '/verb-types', valueKey: 'underSub.verbTypes'},
-                  ]
-                },
-                {id: 'prepositions', valueKey: 'sub.prepositions' ,
-                  subChildren: [
-                    {id: 'prepositions-theory' , url: '/prepositions-theory' , valueKey: 'Правила'},
-                    {id: 'prepositions-practice' , url: '/prepositions' , valueKey: 'Практика предлогов'},
-                  ]},
-                {
-                  id: 'adjectives',
-                  valueKey: 'sub.adjectives',
-                  subChildren: [
-                    {id: 'adjectives-theory', url: '/adjectives-theory', valueKey: 'underSub.adjectiveTheory'},
-                    {id: 'adjectives-basic', url: '/adjective-basics', valueKey: 'underSub.adjectivesBasic'},
-                    {id: 'declination', url: '/adjective-declension', valueKey: 'underSub.declination'},
-                    {id: 'comparison', url: '/adjective-comparison', valueKey: 'underSub.comparison'},
-                  ]
-                },
-                {id: 'lands', url: 'lands', valueKey: 'Языковые земли'},
-
-                {id: 'themen', url: '/thematic-learning', valueKey: 'sub.themen'},
-                {id: 'cards', url: '/createCards', valueKey: 'sub.card'},
-                {id: 'idioms', url: '/idioms', valueKey: 'sub.idioms'}
-              ],
-            },
-            {
-              id: 'duel',
-              valueKey: 'nav.gameMode',
-              children: [
-                {id: 'duel-pvp', valueKey: 'sub.pvp', action: openDevModal},
-                {id: 'wordDuel', url: '/play', valueKey: 'sub.wordDuel'},
-                {id: 'wordDuel', url: '/recipes', valueKey: 'sub.quests'},
-                {id: 'duel-guess', url: '/guess', valueKey: 'sub.guess'},
-                {id: 'articlemarathon', url: '/article-marathon', valueKey: 'sub.marathon'},
-              ]
-            },
-          ] :
-          [
-            {
-              id: 'about', valueKey: 'О приложении', url: '/info-about',
-            },
-            {
-              id: 'contact', valueKey: 'Контакт', url: '/support-request',
-            },
-            {
-              id: 'faq', valueKey: 'Вопрос/ответ', url: '/faq',
-            },
-
-          ]
-  ),
-
-  ...(userAuth.uid
-      ? [{id: 'test', url: '/exams', valueKey: 'nav.tests'}]
-      : []),
-  ...(userAuth.uid
-      ? [
-        // ? [{id: 'achieve', url: '/achievements', valueKey: 'nav.achieve'},
-        {id: 'stats', url: '/stats', valueKey: 'nav.stats'}
-      ] : [])
-])
+  return items
+})
 
 const menuActions = ref([
   {id: 'cabinet', label: 'auth.cabinet', icon: User, action: () => goTo('cabinet')},
-  {id: 'logout', label: 'auth.logOut', icon: Logout, action: () => userAuth.logOut()}
+  {id: 'logout', label: 'auth.logOut', icon: Logout, action: () => userAuth.logOut()},
 ])
-const toggleMenu = () => menuOpen.value = !menuOpen.value
+
+const closeAllMenus = () => {
+  isMobileMenuOpen.value = false
+  clickedMenu.value = null
+  clickedSubChild.value = null
+}
+
+const openDevModal = () => openModal('dev')
+const openModal = (type) => {
+  modalType.value = type
+  showDevModal.value = true
+}
+
+const openEventLockedModal = () => openModal('eventLocked')
+
+const onDevModalButton = () => {
+  const btn = modalConfig.value.button
+  if (!modalConfig.value.isEvent || !btn?.to) return
+  showDevModal.value = false
+  router.push(btn.to)
+}
+
+const closeDevModal = () => {
+  showDevModal.value = false
+  modalType.value = null
+}
+
+const closeAuth = () => (showAuth.value = false)
+const openAuth = () => (showAuth.value = true)
+
+const toggleMenu = () => (menuOpen.value = !menuOpen.value)
+
 const goTo = (page) => {
   menuOpen.value = false
   router.push({path: `/${page}`})
 }
 
-const articleData = ref({
-  title: t('articleOverlay.title'),
-  tips: [
-    {id: 1, text: t('articleOverlay.first')},
-    {id: 2, text: t('articleOverlay.second')},
-    {id: 3, text: t('articleOverlay.third')},
-  ]
-})
+const handleMenuItemClick = (item) => {
+  if (item.children) {
+    clickedMenu.value = clickedMenu.value === item.id ? null : item.id
+    clickedSubChild.value = null
+  } else if (item.action) {
+    item.action()
+    closeAllMenus()
+  } else if (item.url) {
+    closeAllMenus()
+  }
+}
 
-const openArticleModal = () => isArticleOpen.value = true
+const handleSubmenuItemClick = (childItem) => {
+  if (childItem.isEvent && !childItem.url) {
+    openEventLockedModal()
+    return
+  }
+  if (childItem.subChildren) {
+    clickedSubChild.value = clickedSubChild.value === childItem.id ? null : childItem.id
+  } else if (childItem.action) {
+    childItem.action()
+    closeAllMenus()
+  } else if (childItem.url) {
+    closeAllMenus()
+  }
+}
+
+const isEventActive = (startDateStr, endDateStr) => {
+  const today = new Date()
+  const currentYear = today.getFullYear()
+  today.setHours(0, 0, 0, 0)
+
+  const [startDay, startMonth] = startDateStr.split('.').map(Number)
+  const [endDay, endMonth] = endDateStr.split('.').map(Number)
+
+  let startDate = new Date(currentYear, startMonth - 1, startDay)
+  let endDate = new Date(currentYear, endMonth - 1, endDay)
+
+  if (startDate > endDate) {
+    if (today.getMonth() < startDate.getMonth()) {
+      startDate.setFullYear(currentYear - 1)
+    } else {
+      endDate.setFullYear(currentYear + 1)
+    }
+  }
+  return today >= startDate && today <= endDate
+}
 
 const handleClickOutside = (event) => {
-  if (menuOpen.value && dropdownRef.value && !dropdownRef.value.contains(event.target) && userBtnRef.value && !userBtnRef.value.contains(event.target)) {
+  if (
+      menuOpen.value &&
+      dropdownRef.value &&
+      !dropdownRef.value.contains(event.target) &&
+      userBtnRef.value &&
+      !userBtnRef.value.contains(event.target)
+  ) {
     menuOpen.value = false
   }
   if (clickedMenu.value && dropdownRefNav.value && !dropdownRefNav.value.contains(event.target)) {
-    closeAllMenus();
+    closeAllMenus()
   }
 }
+
+watch(showAuth, (val) => {
+  document.body.style.overflow = val ? 'hidden' : ''
+})
+
+watch(showDevModal, (val) => {
+  document.body.style.overflow = val ? 'hidden' : ''
+})
+
+watch(isMobile, (isNowMobile) => {
+  if (!isNowMobile) closeAllMenus()
+})
+
+watch(isMobileMenuOpen, (newVal) => {
+  document.body.style.overflow = newVal ? 'hidden' : ''
+})
 
 onMounted(() => {
   document.addEventListener('mousedown', handleClickOutside)
 })
+
 onBeforeUnmount(() => {
   document.removeEventListener('mousedown', handleClickOutside)
-  document.body.style.overflow = '';
+  document.body.style.overflow = ''
 })
-watch(showAuth, (val) => {
-  document.body.style.overflow = val ? 'hidden' : ''
-})
-watch(showDevModal, (val) => {
-  document.body.style.overflow = val ? 'hidden' : ''
-})
-watch(isMobile, (isNowMobile) => {
-  if (!isNowMobile) closeAllMenus();
-});
-
-watch(isMobileMenuOpen, (newVal) => {
-  if (newVal) document.body.style.overflow = 'hidden';
-  else document.body.style.overflow = '';
-});
-
-
 </script>
-
 <style scoped>
 .header-user-wrapper {
   position: relative;
@@ -340,6 +459,18 @@ watch(isMobileMenuOpen, (newVal) => {
   box-shadow: 6px 0 0 var(--bg);
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo__img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  display: block;
+}
+
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -352,20 +483,6 @@ watch(isMobileMenuOpen, (newVal) => {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-}
-
-.logo-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 55px;
-  height: auto;
-  display: block;
-  transition: transform 0.2s ease;
-}
-
-.logo-img:hover {
-  transform: rotate(-8deg);
 }
 
 .header-nav__list {
@@ -382,7 +499,7 @@ watch(isMobileMenuOpen, (newVal) => {
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  font-size: 16px;
+  font-size: 15px;
   color: black;
   font-weight: 600;
   padding: 0.5rem 0.75rem;
@@ -394,13 +511,6 @@ watch(isMobileMenuOpen, (newVal) => {
   border: 2px solid black;
   box-shadow: 4px 4px 0 black;
   background: white;
-}
-
-.header-nav__link:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0 black;
-  background-color: #f1c40f;
-  color: #1e1e1e;
 }
 
 .header-nav__arrow {
@@ -449,10 +559,6 @@ watch(isMobileMenuOpen, (newVal) => {
   font-family: "Nunito", sans-serif;
 }
 
-.header-nav__submenu-link:hover {
-  background-color: #fef8e4;
-}
-
 .header-nav__submenu-sub {
   position: absolute;
   top: -0.5rem;
@@ -467,7 +573,15 @@ watch(isMobileMenuOpen, (newVal) => {
   z-index: 120;
 }
 
-.articlus__wrapper, .header-user {
+.is-rtl .header-nav__submenu-sub {
+  left: auto;
+  right: 100%;
+  margin-left: 0;
+  margin-right: 10px;
+  box-shadow: 0 4px 4px #1e1e1e;
+}
+
+.header-user {
   height: 45px;
   display: flex;
   align-items: center;
@@ -479,16 +593,6 @@ watch(isMobileMenuOpen, (newVal) => {
   cursor: pointer;
 }
 
-.articlus {
-  width: 28px;
-}
-
-.articlus__counter {
-  color: #1e1e1e;
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-
 .header-user {
   gap: 0.75rem;
   cursor: pointer;
@@ -498,8 +602,8 @@ watch(isMobileMenuOpen, (newVal) => {
 }
 
 .header-user__avatar {
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   border: 3px solid #1e1e1e;
 }
@@ -543,10 +647,6 @@ watch(isMobileMenuOpen, (newVal) => {
   transition: all 0.2s;
 }
 
-.header-user__dropdown-btn:hover {
-  background-color: #fef8e4;
-}
-
 .header-user__dropdown-icon {
   width: 36px;
   height: 36px;
@@ -558,7 +658,6 @@ watch(isMobileMenuOpen, (newVal) => {
   justify-content: center;
   height: 45px;
   font-family: "Nunito", sans-serif;
-  font-style: italic;
   font-weight: 600;
   padding: 0.8rem 1rem;
   font-size: 1rem;
@@ -571,11 +670,6 @@ watch(isMobileMenuOpen, (newVal) => {
   box-shadow: 4px 4px 0px #1e1e1e;
 }
 
-.btn-login:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0px #1e1e1e;
-}
-
 .burger-button {
   display: none;
 }
@@ -586,7 +680,18 @@ watch(isMobileMenuOpen, (newVal) => {
 
 @media (max-width: 1023px) {
   .header-container {
-    padding: 0.5rem 10px;
+    padding: 0.8rem 10px;
+  }
+
+  .mobile-nav-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .35);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s ease;
+    z-index: 100;
+    display: block;
   }
 
   .header.mobile-menu-active .mobile-nav-overlay {
@@ -598,12 +703,23 @@ watch(isMobileMenuOpen, (newVal) => {
     display: none;
   }
 
+
   .header-nav__link {
     color: black;
   }
 
-  .header__drop-text, .logo-img {
+  .header__drop-text {
     display: none;
+  }
+  .logo__img {
+    position: absolute;
+    left: 55px;
+  }
+
+  .is-rtl .logo__img {
+    position: absolute;
+    left: auto;
+    right: 55px;
   }
 
   .header-nav {
@@ -617,12 +733,23 @@ watch(isMobileMenuOpen, (newVal) => {
     background: var(--bg);
     z-index: 101;
     transform: translateX(-100%);
-    transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.2);
+    transition: transform .2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 5px 0 20px rgba(0, 0, 0, .2);
     overflow-y: auto;
   }
 
   .header-nav.is-open {
+    transform: translateX(0);
+    width: 50%;
+  }
+
+  .header-nav.is-rtl {
+    left: auto;
+    right: 0;
+    transform: translateX(100%);
+  }
+
+  .header-nav.is-rtl.is-open {
     transform: translateX(0);
   }
 
@@ -638,13 +765,13 @@ watch(isMobileMenuOpen, (newVal) => {
   }
 
   .header-nav .header-nav__link {
-    font-size: 1.5rem;
-    padding: 1rem;
+    font-size: 1rem;
     justify-content: space-between;
     border: 2px solid #1e1e1e;
     background-color: #fff;
     box-shadow: 3px 3px 0 #1e1e1e;
     margin-bottom: 0.5rem;
+    padding: 12px;
   }
 
   .header-nav .header-nav__link.is-active-parent {
@@ -665,9 +792,17 @@ watch(isMobileMenuOpen, (newVal) => {
     margin-bottom: 0.5rem;
   }
 
+  .header-nav.is-rtl .header-nav__submenu {
+    padding: 0.5rem 1.2rem 0.5rem 0;
+    border-left: none;
+    border-right: 3px solid var(--titleColor);
+    margin-left: 0;
+    margin-right: 0.5rem;
+  }
+
   .header-nav .header-nav__submenu-link {
-    font-size: 1.2rem;
-    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    padding: 8px;
     color: #1e1e1e;
     background-color: #fff;
     border: 2px solid #1e1e1e;
@@ -678,20 +813,23 @@ watch(isMobileMenuOpen, (newVal) => {
     justify-content: space-between;
   }
 
-  .header-nav .header-nav__submenu-link:hover {
-    background-color: #fde68a;
-  }
-
   .header-nav .header-nav__submenu-sub {
     position: static;
     box-shadow: none;
     border: none;
-    padding: 0.5rem 0 0.5rem 1rem;
+    padding: 5px;
     background: none;
     white-space: normal;
     border-left: 3px solid #cccccc;
     margin-left: 0.5rem;
     margin-bottom: 6px;
+  }
+
+  .header-nav.is-rtl .header-nav__submenu-sub {
+    border-left: none;
+    border-right: 3px solid #cccccc;
+    margin-left: 0;
+    margin-right: 0.5rem;
   }
 
   .header-nav .header-nav__submenu-sub .header-nav__submenu-link {
@@ -744,15 +882,27 @@ watch(isMobileMenuOpen, (newVal) => {
     .header-nav__link {
       color: #1e1e1e;
     }
-
-    .articlus__wrapper {
-      height: 45px;
-      box-shadow: 2px 2px 0 #1e1e1e;
+    .header-nav.is-open {
+      width: 80%;
     }
-
   }
 }
 
+@media (max-width: 768px) {
+  .header-nav {
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 500px) {
+  .header-nav {
+    max-width: 100%;
+  }
+
+  .header-nav.is-open {
+    width: 100%;
+  }
+}
 
 @media (max-width: 1200px) {
   .header-user__name,
@@ -765,17 +915,49 @@ watch(isMobileMenuOpen, (newVal) => {
   color: #e39910;
   font-family: "Nunito", sans-serif;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 0.9rem;
   font-style: italic;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   text-shadow: 2px 4px 0px white;
-  -webkit-text-stroke: 4px #e39910;
+  -webkit-text-stroke: 3px #e39910;
   transition: .5s;
+  text-transform: uppercase;
 }
 
-.logo__name:hover {
-  text-shadow: 2px 4px 2px white;
-  transition: .5s;
+@media (min-width: 1024px) {
+  .header-nav__submenu-link:hover {
+    background-color: #fef8e4;
+  }
+
+  .header-nav__link:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 black;
+    background-color: #f1c40f;
+    color: #1e1e1e;
+  }
+
+  .header-user__dropdown-btn:hover {
+    background-color: #fef8e4;
+  }
+
+  .header-nav .header-nav__submenu-link:hover {
+    background-color: #fde68a;
+  }
+
+  .btn-login:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #1e1e1e;
+  }
+
+  .logo__name:hover {
+    text-shadow: 2px 4px 2px white;
+    transition: .5s;
+  }
+
+  .btn-login:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #1e1e1e;
+  }
 }
 
 </style>

@@ -1,50 +1,68 @@
 export const dailyQuests = [
 	{
-		id: 1,
-		name: 'Выучи 10 слов во всех режимах: Практика артиклей',
+		id: 'learnWordsArticle',
+		name: 'daily.first',
 		currentValue: 0,
-		targetValue: 10
+		targetValue: 15
 	},
 	{
-		id: 2,
-		name: 'Получи 20 артиклюсов',
+		id: 'articles',
+		name: 'daily.second',
 		currentValue: 0,
 		targetValue: 20
 	},
 	{
-		id: 3,
-		name: 'Сделай стрик из 15 слов(легкий режим) марафон артиклей',
+		id: 'streakEasy',
+		name: 'daily.third',
+		currentValue: 0,
+		targetValue: 20
+	},
+	{
+		id: 'exp',
+		name: 'daily.fourth',
 		currentValue: 0,
 		targetValue: 15
 	},
 	{
-		id: 4,
-		name: 'Ответь без ошибок на 10 слов подряд (любой режим)',
+		id: 'guess',
+		name: 'daily.fifth',
 		currentValue: 0,
 		targetValue: 10
 	},
 	{
-		id: 5,
-		name: 'Потренируй 10 слов в режиме «Буквы»',
+		id: 'streakMedium',
+		name: 'daily.sixth',
 		currentValue: 0,
-		targetValue: 10
+		targetValue: 20
 	},
 	{
-		id: 6,
-		name: 'Потренируй 5 слов в режиме «Слово+артикль»',
-		currentValue: 0,
-		targetValue: 5
-	},
-	{
-		id: 7,
-		name: 'Прослушай 15 слов в режиме «Аудио»',
+		id: 'trainPlural',
+		name: 'daily.seventh',
 		currentValue: 0,
 		targetValue: 15
 	},
 	{
-		id: 8,
-		name: 'Сыграй 1 дуэль по артиклям',
+		id: 'learnWordsArticle',
+		name: 'daily.eighth',
 		currentValue: 0,
-		targetValue: 1
-	}
+		targetValue: 20
+	},
+	{
+		id: 'audioArticle',
+		name: 'daily.ninth',
+		currentValue: 0,
+		targetValue: 15
+	},
+	{
+		id: 'streakHard',
+		name: 'daily.tenth',
+		currentValue: 0,
+		targetValue: 15
+	},
+	{
+		id: 'exp',
+		name: 'daily.eleventh',
+		currentValue: 0,
+		targetValue: 10
+	},
 ]

@@ -1,52 +1,99 @@
 [
-  {
-    "question": "Die Tomate ist ___.",
-    "options": ["rot", "blau", "grün", "gelb"],
-    "answer": "rot"
-  },
-  {
-    "question": "Der Himmel ist ___.",
-    "options": ["schwarz", "blau", "orange", "braun"],
-    "answer": "blau"
-  },
-  {
-    "question": "Das Gras ist ___.",
-    "options": ["lila", "weiß", "grün", "rot"],
-    "answer": "grün"
-  },
-  {
-    "question": "Die Banane ist ___.",
-    "options": ["grau", "gelb", "rosa", "schwarz"],
-    "answer": "gelb"
-  },
-  {
-    "question": "Der Schnee ist ___.",
-    "options": ["weiß", "blau", "rot", "grün"],
-    "answer": "weiß"
-  },
-  {
-    "question": "Die Karotte ist ___.",
-    "options": ["orange", "lila", "grau", "weiß"],
-    "answer": "orange"
-  },
-  {
-    "question": "Die Kohle ist ___.",
-    "options": ["weiß", "schwarz", "gelb", "blau"],
-    "answer": "schwarz"
-  },
-  {
-    "question": "Der Baumstamm ist ___.",
-    "options": ["braun", "rosa", "lila", "grün"],
-    "answer": "braun"
-  },
-  {
-    "question": "Der Stein ist ___.",
-    "options": ["grau", "bunt", "orange", "rot"],
-    "answer": "grau"
-  },
-  {
-    "question": "Die Aubergine ist ___.",
-    "options": ["lila", "gelb", "weiß", "schwarz"],
-    "answer": "lila"
-  }
+  { "question": "Die Tomate ist ___.", "options": ["rot", "blau", "grün", "gelb"], "answer": "rot" },
+  { "question": "Der Himmel ist ___.", "options": ["schwarz", "blau", "orange", "braun"], "answer": "blau" },
+  { "question": "Das Gras ist ___.", "options": ["lila", "weiß", "grün", "rot"], "answer": "grün" },
+  { "question": "Die Banane ist ___.", "options": ["grau", "gelb", "rosa", "schwarz"], "answer": "gelb" },
+  { "question": "Der Schnee ist ___.", "options": ["weiß", "blau", "rot", "grün"], "answer": "weiß" },
+  { "question": "Die Karotte ist ___.", "options": ["orange", "lila", "grau", "weiß"], "answer": "orange" },
+  { "question": "Die Kohle ist ___.", "options": ["weiß", "schwarz", "gelb", "blau"], "answer": "schwarz" },
+  { "question": "Der Baumstamm ist ___.", "options": ["braun", "rosa", "lila", "grün"], "answer": "braun" },
+  { "question": "Der Stein ist ___.", "options": ["grau", "bunt", "orange", "rot"], "answer": "grau" },
+  { "question": "Die Aubergine ist ___.", "options": ["lila", "gelb", "weiß", "schwarz"], "answer": "lila" },
+
+  { "question": "Die Sonne ist ___.", "options": ["gelb", "blau", "grün", "schwarz"], "answer": "gelb" },
+  { "question": "Die Erdbeere ist ___.", "options": ["rot", "braun", "grau", "blau"], "answer": "rot" },
+  { "question": "Die Wolke ist ___.", "options": ["weiß", "rot", "grün", "braun"], "answer": "weiß" },
+  { "question": "Das Blut ist ___.", "options": ["rot", "gelb", "lila", "blau"], "answer": "rot" },
+  { "question": "Die Zitrone ist ___.", "options": ["gelb", "blau", "braun", "schwarz"], "answer": "gelb" },
+  { "question": "Die Orange ist ___.", "options": ["orange", "weiß", "grau", "blau"], "answer": "orange" },
+  { "question": "Das Meer ist ___.", "options": ["blau", "rot", "gelb", "grau"], "answer": "blau" },
+  { "question": "Die Gurke ist ___.", "options": ["grün", "braun", "rosa", "grau"], "answer": "grün" },
+  { "question": "Die Rose ist ___.", "options": ["rot", "blau", "grau", "schwarz"], "answer": "rot" },
+  { "question": "Die Milch ist ___.", "options": ["weiß", "braun", "gelb", "rosa"], "answer": "weiß" },
+
+  { "question": "Die Schokolade ist ___.", "options": ["braun", "blau", "rot", "weiß"], "answer": "braun" },
+  { "question": "Der Kürbis ist ___.", "options": ["orange", "blau", "grau", "rot"], "answer": "orange" },
+  { "question": "Das Salz ist ___.", "options": ["weiß", "schwarz", "braun", "gelb"], "answer": "weiß" },
+  { "question": "Die Himbeere ist ___.", "options": ["rot", "blau", "weiß", "grau"], "answer": "rot" },
+  { "question": "Die Kiwi innen ist ___.", "options": ["grün", "blau", "rot", "gelb"], "answer": "grün" },
+  { "question": "Der Lavendel ist ___.", "options": ["lila", "blau", "weiß", "braun"], "answer": "lila" },
+  { "question": "Die Pflaume ist ___.", "options": ["lila", "weiß", "gelb", "schwarz"], "answer": "lila" },
+  { "question": "Die Blätter im Herbst sind ___.", "options": ["gelb", "blau", "rosa", "grau"], "answer": "gelb" },
+  { "question": "Die Mandarine ist ___.", "options": ["orange", "grün", "blau", "braun"], "answer": "orange" },
+  { "question": "Der Elefant ist ___.", "options": ["grau", "gelb", "blau", "rosa"], "answer": "grau" },
+
+  { "question": "Die Melone innen ist ___.", "options": ["rot", "blau", "grau", "weiß"], "answer": "rot" },
+  { "question": "Die Paprika grün ist ___.", "options": ["grün", "blau", "rosa", "grau"], "answer": "grün" },
+  { "question": "Die Pfanne ist ___.", "options": ["schwarz", "gelb", "blau", "rosa"], "answer": "schwarz" },
+  { "question": "Die Biene ist ___.", "options": ["gelb", "blau", "grau", "weiß"], "answer": "gelb" },
+  { "question": "Das Gold ist ___.", "options": ["gelb", "blau", "grau", "rosa"], "answer": "gelb" },
+  { "question": "Das Silber ist ___.", "options": ["grau", "rot", "grün", "orange"], "answer": "grau" },
+  { "question": "Die Blaubeere ist ___.", "options": ["blau", "gelb", "weiß", "rosa"], "answer": "blau" },
+  { "question": "Die Kirsche ist ___.", "options": ["rot", "gelb", "weiß", "grau"], "answer": "rot" },
+  { "question": "Der Honig ist ___.", "options": ["gelb", "blau", "schwarz", "weiß"], "answer": "gelb" },
+  { "question": "Der Kaffee ist ___.", "options": ["braun", "rot", "grau", "blau"], "answer": "braun" },
+
+  { "question": "Der Tee ist ___.", "options": ["grün", "blau", "grau", "rosa"], "answer": "grün" },
+  { "question": "Der Pfeffer ist ___.", "options": ["schwarz", "gelb", "weiß", "blau"], "answer": "schwarz" },
+  { "question": "Der Reis ist ___.", "options": ["weiß", "schwarz", "grau", "rot"], "answer": "weiß" },
+  { "question": "Die Erdbeermarmelade ist ___.", "options": ["rot", "blau", "grau", "weiß"], "answer": "rot" },
+  { "question": "Das Leder ist ___.", "options": ["braun", "rosa", "grau", "blau"], "answer": "braun" },
+  { "question": "Die Tinte ist ___.", "options": ["blau", "gelb", "weiß", "grün"], "answer": "blau" },
+  { "question": "Die Kartoffel ist ___.", "options": ["braun", "blau", "rosa", "grau"], "answer": "braun" },
+  { "question": "Die Zwiebel ist ___.", "options": ["weiß", "blau", "grün", "grau"], "answer": "weiß" },
+  { "question": "Die Paprika gelb ist ___.", "options": ["gelb", "schwarz", "blau", "rosa"], "answer": "gelb" },
+  { "question": "Der Kürbis innen ist ___.", "options": ["orange", "weiß", "grau", "blau"], "answer": "orange" },
+
+  { "question": "Der Backstein ist ___.", "options": ["rot", "weiß", "gelb", "grau"], "answer": "rot" },
+  { "question": "Die Kreide ist ___.", "options": ["weiß", "blau", "grün", "rot"], "answer": "weiß" },
+  { "question": "Das Glas ist ___.", "options": ["klar", "blau", "rot", "gelb"], "answer": "klar" },
+  { "question": "Der Himmel bei Nacht ist ___.", "options": ["schwarz", "rosa", "gelb", "grün"], "answer": "schwarz" },
+  { "question": "Der Sand ist ___.", "options": ["gelb", "blau", "rosa", "schwarz"], "answer": "gelb" },
+  { "question": "Die Erde ist ___.", "options": ["braun", "blau", "weiß", "rosa"], "answer": "braun" },
+  { "question": "Das Feuer ist ___.", "options": ["rot", "blau", "grau", "weiß"], "answer": "rot" },
+  { "question": "Die Asche ist ___.", "options": ["grau", "gelb", "rosa", "blau"], "answer": "grau" },
+  { "question": "Das Kupfer ist ___.", "options": ["braun", "gelb", "grau", "weiß"], "answer": "braun" },
+  { "question": "Das Papier ist ___.", "options": ["weiß", "blau", "gelb", "schwarz"], "answer": "weiß" },
+  { "question": "Die Birne ist ___.", "options": ["grün", "blau", "schwarz", "rosa"], "answer": "grün" },
+  { "question": "Die Melone außen ist ___.", "options": ["grün", "gelb", "blau", "rot"], "answer": "grün" },
+  { "question": "Der Kürbis außen ist ___.", "options": ["orange", "blau", "weiß", "grau"], "answer": "orange" },
+  { "question": "Der Apfel innen ist ___.", "options": ["weiß", "blau", "rosa", "gelb"], "answer": "weiß" },
+  { "question": "Die Kirsche innen ist ___.", "options": ["rot", "blau", "weiß", "grau"], "answer": "rot" },
+  { "question": "Die Mandel ist ___.", "options": ["braun", "rosa", "blau", "weiß"], "answer": "braun" },
+  { "question": "Die Kokosnuss Schale ist ___.", "options": ["braun", "gelb", "grau", "blau"], "answer": "braun" },
+  { "question": "Das Kokosfleisch ist ___.", "options": ["weiß", "gelb", "rosa", "grau"], "answer": "weiß" },
+  { "question": "Die Paprika rot ist ___.", "options": ["rot", "gelb", "weiß", "grau"], "answer": "rot" },
+  { "question": "Die Traube grün ist ___.", "options": ["grün", "blau", "rot", "rosa"], "answer": "grün" },
+
+  { "question": "Die Traube dunkel ist ___.", "options": ["lila", "weiß", "blau", "grau"], "answer": "lila" },
+  { "question": "Die Linse ist ___.", "options": ["braun", "blau", "gelb", "rosa"], "answer": "braun" },
+  { "question": "Die Bohne ist ___.", "options": ["braun", "rot", "weiß", "blau"], "answer": "braun" },
+  { "question": "Die Erbse ist ___.", "options": ["grün", "blau", "weiß", "rosa"], "answer": "grün" },
+  { "question": "Der Spinat ist ___.", "options": ["grün", "gelb", "blau", "grau"], "answer": "grün" },
+  { "question": "Der Brokkoli ist ___.", "options": ["grün", "gelb", "weiß", "rosa"], "answer": "grün" },
+  { "question": "Der Blumenkohl ist ___.", "options": ["weiß", "blau", "gelb", "rosa"], "answer": "weiß" },
+  { "question": "Der Pfeil auf dem Verkehrsschild ist ___.", "options": ["blau", "grün", "rot", "gelb"], "answer": "blau" },
+  { "question": "Das Stoppschild ist ___.", "options": ["rot", "blau", "weiß", "grün"], "answer": "rot" },
+  { "question": "Der Rettungswagen ist ___.", "options": ["weiß", "schwarz", "gelb", "blau"], "answer": "weiß" },
+
+  { "question": "Die Zuckerstange ist ___.", "options": ["rot-weiß", "gelb", "blau", "grün"], "answer": "rot-weiß" },
+  { "question": "Das Schulheft ist ___.", "options": ["blau", "gelb", "rosa", "schwarz"], "answer": "blau" },
+  { "question": "Der Stuhl aus Holz ist ___.", "options": ["braun", "blau", "rosa", "gelb"], "answer": "braun" },
+  { "question": "Der Teller aus Porzellan ist ___.", "options": ["weiß", "blau", "rosa", "grau"], "answer": "weiß" },
+  { "question": "Die Kerze ist ___.", "options": ["weiß", "blau", "schwarz", "rot"], "answer": "weiß" },
+  { "question": "Der Apfelsaft ist ___.", "options": ["gelb", "blau", "rot", "rosa"], "answer": "gelb" },
+  { "question": "Der Tomatensaft ist ___.", "options": ["rot", "blau", "weiß", "gelb"], "answer": "rot" },
+  { "question": "Der Orangensaft ist ___.", "options": ["orange", "blau", "rosa", "weiß"], "answer": "orange" },
+  { "question": "Das Bier ist ___.", "options": ["gelb", "blau", "rot", "rosa"], "answer": "gelb" },
+  { "question": "Der Wein rot ist ___.", "options": ["rot", "gelb", "blau", "grau"], "answer": "rot" }
 ]
