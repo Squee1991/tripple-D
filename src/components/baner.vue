@@ -18,6 +18,7 @@
                     'fade-glow': fadingGlow === word.type}]"
                 >{{ word.text }}
                 </span>
+
           </div>
           <h1 class="banner__title" v-once>{{ t('banner.title') }}</h1>
           <button class="banner__button" @click="startLearning" v-once>{{ t('banner.btn') }}</button>
