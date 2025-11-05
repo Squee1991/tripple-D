@@ -14,4 +14,8 @@ import vScroll from '../src/components/v-scroll.vue'
 </script>
 
 <style scoped>
+  .layout {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
 </style>

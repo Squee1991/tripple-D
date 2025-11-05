@@ -1,4 +1,7 @@
 {
+  "practiceArticleBtn": {
+    "btn": "Artikl mashqlariga"
+  },
   "footer": {
     "copy": "Der Die Das. Barcha huquqlar himoyalangan.",
     "about": "Ilova haqida",
@@ -6,7 +9,7 @@
     "privacy": "Maxfiylik siyosati",
     "terms": "Foydalanish shartlari"
   },
-  "friendExam": {
+  "friendExamBtn": {
     "btn": "Do'stlarning imtihonlari"
   },
   "regions": {
@@ -67,7 +70,7 @@
     "profile": "Profil"
   },
   "metaAdjectiveBasic": {
-    "title": "German Corner — Sifatlar A1–A2: ranglar, his-tuyg‘ular, tashqi ko‘rinish, xarakter, o‘lcham",
+    "title": "Skillupgerman — Sifatlar A1–A2: ranglar, his-tuyg‘ular, tashqi ko‘rinish, xarakter, o‘lcham",
     "description": "Nemis tilidagi asosiy sifatlarni mavzular bo‘yicha o‘rganing: ranglar, his-tuyg‘ular va emotsiyalar, tashqi ko‘rinish, xarakter, o‘lcham va shakl. Tarjima va ovozli misollar + mashqlar."
   },
   "metaAdjectiveComparison": {
@@ -90,7 +93,7 @@
     "testsLevels": "Nemis tili testlari — darajalar"
   },
   "metaLocation": {
-    "title": "German Corner — Nemis tili o‘rganish uchun til yurtlari",
+    "title": "Skillupgerman — Nemis tili o‘rganish uchun til yurtlari",
     "description": "Til yurtlarini kashf eting va topshiriqlarni bajarib, bosqichlarni o‘tib nemis tilingizni rivojlantiring. So‘z boyligi va grammatikani sarguzasht shaklida o‘rganing, topshiriqlar va rivojlanish bilan — xuddi o‘yindek!"
   },
   "metaModalVerbs": {
@@ -131,7 +134,7 @@
   },
   "metaMainPage": {
     "title": "Nemis tilini o‘yin shaklida o‘rganing",
-    "description": "German Corner. O‘yin shaklidagi mashqlar: artikellar der, die, das, mavzuli darajalar, fe’llar, sifatlar, predloglar, topshiriqlar va yutuqlar. Nemis tilini qiziqarli o‘rganing!"
+    "description": "Skillupgerman o‘yin shaklidagi mashqlar: artikellar der, die, das, mavzuli darajalar, fe’llar, sifatlar, predloglar, topshiriqlar va yutuqlar. Nemis tilini qiziqarli o‘rganing!"
   },
   "metaVerbsTheory": {
     "title": "Nemis fe’llari nazariyasi misollar va test bilan",
@@ -159,10 +162,10 @@
     "featureTen": "Kelajakdagi funksiyalar"
   },
   "useHeadApp": {
-    "title": "German Corner — Nemis tilini o‘rganish oson va qiziqarli",
-    "content": "German Corner — nemis tilini o‘rganish uchun onlayn platforma: grammatika, artikllar, zamonlar, mashqlar va o‘yin shaklidagi ta’lim.",
+    "title": "Skillupgerman — Nemis tilini o‘rganish oson va qiziqarli",
+    "content": "Skillupgerman — nemis tilini o‘rganish uchun onlayn platforma: grammatika, artikllar, zamonlar, mashqlar va o‘yin shaklidagi ta’lim.",
     "contentTwo": "nemis tili, artikllar, grammatika, nemis tilini onlayn o‘rganish, A1, A2, B1",
-    "contentThree": "German Corner — Nemis tilini o‘rganish",
+    "contentThree": "Skillupgerman — Nemis tilini o‘rganish",
     "contentFour": "Mashqlar va o‘yinlar bilan nemis tilini qiziqarli va samarali o‘rganing!"
   },
   "achievementToast": {

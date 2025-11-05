@@ -8,6 +8,7 @@ import {
 	listAll,
 	deleteObject
 } from "firebase/storage"
+import { getApp } from "firebase/app";
 import {
 	getFirestore,
 	doc,
@@ -24,6 +25,7 @@ import {
 } from "firebase/firestore"
 import { getAuth, signInAnonymously } from "firebase/auth"
 import { updateDoc, arrayUnion, arrayRemove } from "firebase/firestore"
+
 function pruneUndefinedDeep(v) {
 	if (Array.isArray(v)) return v.map(pruneUndefinedDeep).filter(x => x !== undefined)
 	if (v && typeof v === "object") {
@@ -52,9 +54,11 @@ export const userExamStore = defineStore("exam", () => {
 	const speakingMedia = ref({})
 	const db = getFirestore()
 	const auth = getAuth()
-	const bucket = import.meta.env.MODE === "development" ? "tripple-d-dev.firebasestorage.app" : "tripple-d-90bd2.firebaseapp.com"
-	const storage = getStorage(undefined, `gs://${bucket}`)
-	const sref = (p) => storageRef(storage, p)
+	const storage = getStorage(getApp());
+	const sref = (p) => storageRef(storage, p);
+	// const bucket = import.meta.env.MODE === "development" ? "tripple-d-dev.firebasestorage.app" : "tripple-d-90bd2.firebaseapp.com"
+	// const storage = getStorage(undefined, `gs://${bucket}`)
+	// const sref = (p) => storageRef(storage, p)
 
 	const archiveAttempts = ref([])
 	const archiveLoading = ref(false)

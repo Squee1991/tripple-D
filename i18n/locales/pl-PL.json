@@ -1,4 +1,7 @@
 {
+  "practiceArticleBtn": {
+    "btn": "Do ćwiczeń z rodzajnikami"
+  },
   "footer": {
     "copy": "Der Die Das. Wszelkie prawa zastrzeżone.",
     "about": "O aplikacji",
@@ -6,7 +9,7 @@
     "privacy": "Prywatność",
     "terms": "Warunki korzystania"
   },
-  "friendExam": {
+  "friendExamBtn": {
     "btn": "Egzaminy przyjaciół"
   },
   "regions": {
@@ -67,7 +70,7 @@
     "profile": "Profil"
   },
   "metaAdjectiveBasic": {
-    "title": "German Corner — Przymiotniki A1–A2: kolory, uczucia, wygląd, charakter, rozmiar",
+    "title": "Skillupgerman — Przymiotniki A1–A2: kolory, uczucia, wygląd, charakter, rozmiar",
     "description": "Ucz się podstawowych przymiotników niemieckich według tematów: kolory, uczucia i emocje, wygląd, charakter, rozmiar i kształt. Przykłady z tłumaczeniem i nagraniem + ćwiczenia."
   },
   "metaAdjectiveComparison": {
@@ -90,7 +93,7 @@
     "testsLevels": "Testy z niemieckiego — poziomy"
   },
   "metaLocation": {
-    "title": "German Corner — Językowe krainy do nauki niemieckiego",
+    "title": "Skillupgerman — Językowe krainy do nauki niemieckiego",
     "description": "Odkrywaj językowe krainy i rozwijaj niemiecki, wykonując zadania i przechodząc poziomy. Ucz się słownictwa i gramatyki w formie przygody z questami i progresją jak w grze!"
   },
   "metaModalVerbs": {
@@ -131,7 +134,7 @@
   },
   "metaMainPage": {
     "title": "Ucz się niemieckiego w formie gry",
-    "description": "German Corner. Ćwiczenia w formie gry: rodzajniki der, die, das, poziomy tematyczne, czasowniki, przymiotniki, przyimki, questy i osiągnięcia. Ucz się niemieckiego z przyjemnością!"
+    "description": "Skillupgerman - Ćwiczenia w formie gry: rodzajniki der, die, das, poziomy tematyczne, czasowniki, przymiotniki, przyimki, questy i osiągnięcia. Ucz się niemieckiego z przyjemnością!"
   },
   "metaVerbsTheory": {
     "title": "Teoria czasowników niemieckich z przykładami i quizem",
@@ -159,10 +162,10 @@
     "featureTen": "Przyszłe funkcje"
   },
   "useHeadApp": {
-    "title": "German Corner — Ucz się niemieckiego łatwo i ciekawie w formie gry",
-    "content": "German Corner — platforma online do nauki języka niemieckiego: gramatyka, rodzajniki, czasy, ćwiczenia i nauka w formie gry.",
+    "title": "Skillupgerman — Ucz się niemieckiego łatwo i ciekawie w formie gry",
+    "content": "Skillupgerman — platforma online do nauki języka niemieckiego: gramatyka, rodzajniki, czasy, ćwiczenia i nauka w formie gry.",
     "contentTwo": "język niemiecki, rodzajniki, gramatyka, ucz się niemieckiego online, A1, A2, B1",
-    "contentThree": "German Corner — Nauka języka niemieckiego",
+    "contentThree": "Skillupgerman — Nauka języka niemieckiego",
     "contentFour": "Ucz się niemieckiego wesoło i skutecznie dzięki ćwiczeniom i grom!"
   },
   "achievementToast": {

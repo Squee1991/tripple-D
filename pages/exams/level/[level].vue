@@ -81,7 +81,9 @@
               <p v-if="item.taskText"><strong class="exam__label">Aufgabe:</strong> {{ item.taskText }}</p>
               <p v-if="item.question"><strong class="exam__label">Frage:</strong> {{ item.question }}</p>
               <div v-if="item.feedback" class="exam-result-item__feedback">
-                <p><strong class="exam__label">Die Antwort:</strong> {{ item.answer || 'Keine Antwort' }}</p>
+                <p v-if="item.type !== 'speaking-prompt'">
+                  <strong class="exam__label">Die Antwort:</strong> {{ item.answer || 'Keine Antwort' }}
+                </p>
                 <p><strong class="exam__label">Die Bewertung:</strong> {{ item.feedback.result }}</p>
                 <p><strong class="exam__label">Der Kommentar:</strong> {{ item.feedback.feedback }}</p>
                 <p v-if="item.feedback.correctedVersion">
@@ -191,7 +193,8 @@ const examResult = computed(() => {
       taskText: exercise.task?.instruction || exercise.task?.prompt,
       question: exercise.task?.question,
       answer: answer.answer,
-      feedback: answer.feedback
+      feedback: answer.feedback,
+      type: exercise.type,
     }
   }).filter(Boolean)
 
@@ -535,6 +538,10 @@ onMounted(() => {
   .exam__text-read {
     font-size: 1rem;
     font-weight: 600;
+  }
+  .exam-results-container {
+    display: flex;
+    flex-direction: column;
   }
 }
 </style>

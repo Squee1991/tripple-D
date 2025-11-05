@@ -80,7 +80,7 @@
           <div v-else class="empty">
             <h3 class="empty__title">{{ t('articlesStatistics.notTopics')}}</h3>
             <img class="empty__icon" :src="NodataIcon" alt="">
-            <button @click="articleSessionPath" class="article__btn-path">К практике артиклей</button>
+            <button @click="articleSessionPath" class="article__btn-path">{{ t('practiceArticleBtn.btn') }}</button>
           </div>
         </section>
         <section v-else-if="view==='thematic'" class="panel">

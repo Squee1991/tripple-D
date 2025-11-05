@@ -6,7 +6,7 @@
         :tips="currentTopicData?.tips"
     />
     <div class="sidebar">
-      <button @click="backToMenu" class="btn__back">{{ t('tenses.barBtn')}}</button>
+      <VBackBtn/>
       <h2 class="sidebar__title">{{ t('adjectiveDeclensionPage.sideBarTitle') }}</h2>
       <div class="sidebar__heading">{{ t('adjectiveDeclensionPage.sidebarUnderTitle') }}</div>
       <ul class="sidebar__list">
@@ -97,6 +97,7 @@ import TipIcon from '../../assets/animation/info.json';
 import {useRouter} from 'vue-router'
 import SoundBtn from '../../src/components/soundBtn'
 import { useHead, useSeoMeta, useRuntimeConfig } from '#imports'
+import VBackBtn from "../../src/components/V-back-btn.vue";
 const canonical = useCanonical()
 const {t} = useI18n()
 
@@ -408,6 +409,7 @@ watch(currentTopicData, initLottieIcon);
   color: white;
   font-size: 2.1rem;
   font-weight: bold;
+  text-shadow: 2px 2px 0px #000;
 }
 
 .content__body {
@@ -497,21 +499,25 @@ watch(currentTopicData, initLottieIcon);
 
 .practice-area__button {
   display: block;
-  text-decoration: none;
+  font-weight: 600;
+  min-width: 230px;
   background: #f1c40f;
   color: #1e1e1e;
-  border: 3px solid #1e1e1e;
+  border: 2px solid #1e1e1e;
   border-radius: 12px;
   padding: 12px 25px;
   font-size: 1.2rem;
-  font-weight: bold;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  box-shadow: 4px 4px 0px #1e1e1e;
+  box-shadow: 3px 3px 0px #1e1e1e;
 }
 
-.practice-area__button:hover {
-  background: #ffe04d;
+@media (min-width: 1024px) {
+  .practice-area__button:hover {
+    background: #e3c32b;
+    box-shadow: 1px 1px 0 #1e1e1e;
+    transform: translate(2px , 2px);
+  }
 }
 
 .practice-area__button:active {

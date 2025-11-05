@@ -1,4 +1,7 @@
 {
+  "practiceArticleBtn": {
+    "btn": "A la práctica de artículos"
+  },
   "footer": {
     "copy": "Der Die Das. Todos los derechos reservados.",
     "about": "Acerca de",
@@ -6,7 +9,7 @@
     "privacy": "Política de privacidad",
     "terms": "Términos de servicio"
   },
-  "friendExam": {
+  "friendExamBtn": {
     "btn": "Exámenes de amigos"
   },
   "regions": {
@@ -67,7 +70,7 @@
     "profile": "Perfil"
   },
   "metaAdjectiveBasic": {
-    "title": "German Corner — Adjetivos A1–A2: colores, sentimientos, apariencia, carácter, tamaño",
+    "title": "Skillupgerman — Adjetivos A1–A2: colores, sentimientos, apariencia, carácter, tamaño",
     "description": "Aprende adjetivos básicos en alemán por temas: colores, sentimientos y emociones, apariencia, carácter, tamaño y forma. Ejemplos con traducción y audio + ejercicios."
   },
   "metaAdjectiveComparison": {
@@ -90,7 +93,7 @@
     "testsLevels": "Tests de alemán — niveles"
   },
   "metaLocation": {
-    "title": "German Corner — Tierras lingüísticas para aprender alemán",
+    "title": "Skillupgerman — Tierras lingüísticas para aprender alemán",
     "description": "Explora las tierras lingüísticas y mejora tu alemán completando misiones y subiendo de nivel. Aprende vocabulario y gramática en formato de aventura con progresión tipo juego."
   },
   "metaModalVerbs": {
@@ -131,7 +134,7 @@
   },
   "metaMainPage": {
     "title": "Aprende alemán jugando",
-    "description": "German Corner. Entrenamientos lúdicos de artículos der, die, das, niveles temáticos, verbos, adjetivos, preposiciones, misiones y logros. ¡Aprende alemán con diversión!"
+    "description": "Skillupgerman - entrenamientos lúdicos de artículos der, die, das, niveles temáticos, verbos, adjetivos, preposiciones, misiones y logros. ¡Aprende alemán con diversión!"
   },
   "metaVerbsTheory": {
     "title": "Teoría de los verbos alemanes con ejemplos y quiz",
@@ -159,10 +162,10 @@
     "featureTen": "Funciones futuras"
   },
   "useHeadApp": {
-    "title": "German Corner — Aprende alemán fácilmente y de forma divertida",
-    "content": "German Corner es una plataforma en línea para aprender alemán: gramática, artículos, tiempos verbales, ejercicios y aprendizaje en formato de juego.",
+    "title": "Skillupgerman — Aprende alemán fácilmente y de forma divertida",
+    "content": "Skillupgerman es una plataforma en línea para aprender alemán: gramática, artículos, tiempos verbales, ejercicios y aprendizaje en formato de juego.",
     "contentTwo": "alemán, artículos, gramática, aprender alemán online, A1, A2, B1",
-    "contentThree": "German Corner — Aprendizaje del idioma alemán",
+    "contentThree": "Skillupgerman — Aprendizaje del idioma alemán",
     "contentFour": "¡Aprende alemán de manera divertida y eficaz con ejercicios y juegos!"
   },
   "achievementToast": {

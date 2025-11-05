@@ -31,7 +31,7 @@ useHead(() => ({
     { property: 'og:title', content: t('useHeadApp.contentThree') },
     { property: 'og:description', content: t('useHeadApp.contentFour') },
     { property: 'og:type', content: 'website' },
-    { property: 'og:image', content: '/images/seo-preview.png' },
+    { property: 'og:image', content: '/images/' },
     { name: 'google-site-verification', content: 'MLWdpLJXatGGAMkB8ks7yzFKK-K43' }
   ],
   link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }]

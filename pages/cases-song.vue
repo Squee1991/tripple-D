@@ -115,11 +115,16 @@
 </template>
 
 <script setup>
+import { useSeoMeta } from '#imports'
 import NoteIcon from '../assets/images/song-images/musical-notes.svg'
+
+useSeoMeta({
+  robots: 'noindex, nofollow'
+})
+
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Luckiest+Guy&display=swap');
 
 .page {
   background: #fff;

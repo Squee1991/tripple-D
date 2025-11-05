@@ -48,7 +48,7 @@ import {useQuestStore} from '../../store/questStore.js'
 import Modal from '../../src/components/modal.vue'
 import {useRouter} from 'vue-router'
 import DoneImg from '../../assets/images/done.svg'
-
+import VBackBtn from "../../src/components/V-back-btn.vue";
 const showModal = ref(false)
 const cooldownSeconds = ref(0)
 const router = useRouter()
@@ -164,7 +164,6 @@ onMounted(async () => {
   transition: transform 0.2s ease-out;
 }
 
-
 .theme-sticker-card::before {
   content: "";
   position: absolute;
@@ -180,8 +179,6 @@ onMounted(async () => {
 .theme-sticker-card:hover::before {
   border-width: 0 0 70px 70px;
 }
-
-
 
 .card-content {
   padding: 1.5rem;

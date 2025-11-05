@@ -25,11 +25,12 @@
             <h3 class="quest__title">{{ t(q.title) }}</h3>
             <p class="quest__description">{{ t(q.description) }}</p>
             <div class="quest-meta">
-                            <span v-if="!q._success" class="rewards-container">
-                                <span class="reward-item">
-                                    {{ q.rewards.points }}
-                                    <img src="assets/images/articlus.png" alt="Артиклюсы" class="icon-articlus">
-                                </span>
+              <span v-if="!q._success" class="rewards-container">
+                <span>{{ t('locationQuests.awards')}}</span>
+                <span class="reward-item">
+                  <span>{{ q.rewards.points }}</span>
+                  <img src="assets/images/articlus.png" alt="Articlus" class="icon-articlus">
+                </span>
                                 <span class="reward-item">
                                     {{ q.rewards.xp }} XP
                                 </span>

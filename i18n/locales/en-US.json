@@ -1,4 +1,7 @@
 {
+  "practiceArticleBtn": {
+    "btn": "To article practice"
+  },
   "footer": {
     "copy": "Der Die Das. All rights reserved.",
     "about": "About",
@@ -6,7 +9,7 @@
     "privacy": "Privacy Policy",
     "terms": "Terms of Service"
   },
-  "friendExam": {
+  "friendExamBtn": {
     "btn": "Friends' Exams"
   },
   "regions": {
@@ -67,7 +70,7 @@
     "profile": "Profile"
   },
   "metaAdjectiveBasic": {
-    "title": "German Corner — Adjectives A1–A2: colors, feelings, appearance, character, size",
+    "title": "Skillupgerman — Adjectives A1–A2: colors, feelings, appearance, character, size",
     "description": "Learn basic German adjectives by topics: colors, feelings and emotions, appearance, character, size and shape. Examples with translation and audio + trainers."
   },
   "metaAdjectiveComparison": {
@@ -90,7 +93,7 @@
     "testsLevels": "German tests — levels"
   },
   "metaLocation": {
-    "title": "German Corner — Language Lands for learning German",
+    "title": "Skillupgerman — Language Lands for learning German",
     "description": "Explore language lands and level up your German by completing tasks and passing levels. Learn vocabulary and grammar in adventure format with quests and progression, like in a game!"
   },
   "metaModalVerbs": {
@@ -131,7 +134,7 @@
   },
   "metaMainPage": {
     "title": "Learn German in game form",
-    "description": "German Corner. Game-like training of articles der, die, das, thematic levels, verbs, adjectives, prepositions, quests and achievements. Learn German with fun!"
+    "description": "Skillupgerman - game-like training of articles der, die, das, thematic levels, verbs, adjectives, prepositions, quests and achievements. Learn German with fun!"
   },
   "metaVerbsTheory": {
     "title": "Theory of German verbs with examples and quiz",
@@ -159,10 +162,10 @@
     "featureTen": "Upcoming features"
   },
   "useHeadApp": {
-    "title": "German Corner — Learn German easily and interestingly through games",
-    "content": "German Corner — an online platform for learning German: grammar, articles, tenses, exercises and game-based learning.",
+    "title": "Skillupgerman — Learn German easily and interestingly through games",
+    "content": "Skillupgerman — an online platform for learning German: grammar, articles, tenses, exercises and game-based learning.",
     "contentTwo": "German language, articles, grammar, learn German online, A1, A2, B1",
-    "contentThree": "German Corner — Learning German",
+    "contentThree": "Skillupgerman — Learning German",
     "contentFour": "Learn German in a fun and effective way with exercises and games!"
   },
   "achievementToast": {

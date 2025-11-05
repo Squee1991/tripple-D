@@ -7,7 +7,7 @@
         </div>
         <div class="cards__wrapper">
             <div class="form-block">
-                <h2 class="title">{{ editingCardId ? 'Редактирование' : t('choiceTheme.create') }}</h2>
+                <h2 class="title">{{ editingCardId ? 'Edit' : t('choiceTheme.create') }}</h2>
                 <form @submit.prevent="saveCard" class="form">
                     <div class="custom-topic-list">
                         <div class="custom-topic-label">{{ t('choiceTheme.theme')}}</div>
@@ -43,7 +43,7 @@
                         <button type="submit" class="btn btn-primary">{{ editingCardId ? 'Сохранить' :
                             t('choiceTheme.btn')}}
                         </button>
-                        <button v-if="editingCardId" type="button" @click="resetForm" class="btn btn-secondary">Отмена
+                        <button v-if="editingCardId" type="button" @click="resetForm" class="btn btn-secondary">cancel
                         </button>
                     </div>
                 </form>
@@ -63,17 +63,17 @@
                             <div class="card-face card-front" :class="getTopicColorClass(card.topic)">
                                 <div class="card-actions">
                                     <button @click.stop="initiateEdit(card)" class="action-btn edit-btn"
-                                            title="Редактировать">✏️
+                                            title="edit">✏️
                                     </button>
                                     <button @click.stop="initiateDelete(card)" class="action-btn delete-btn"
-                                            title="Удалить">🗑️
+                                            title="Delete">🗑️
                                     </button>
                                 </div>
                                 <div class="card-content">
                                     <div v-if="card.topic" class="card-topic">{{ t(themenMap[card.topic]) }}</div>
                                 </div>
                                 <div class="card-footer">
-                                    <div v-if="card.level" class="card-level">⚡️ Уровень {{ card.level }}</div>
+                                    <div v-if="card.level" class="card-level">⚡️ Level {{ card.level }}</div>
                                 </div>
                             </div>
                             <div class="card-face card-back">
@@ -85,17 +85,17 @@
                                             <input v-model="userAnswers[idx]" class="input guess-input" required
                                                    autocomplete="off" @click.stop/>
                                         </div>
-                                        <button type="submit" class="btn guess-btn" @click.stop>Проверить</button>
+                                        <button type="submit" class="btn guess-btn" @click.stop>Check</button>
                                     </form>
                                     <div v-else class="guess-result">
                                         <div v-for="(art, idx) in card.articles" :key="'result' + idx"
                                              class="guess-answer"
                                              :class="{ correct: guessResult[idx]?.correct, wrong: !guessResult[idx]?.correct }">
                                             <b>Пропуск {{ idx + 1 }}:</b>
-                                            <span v-if="guessResult[idx]?.correct"> Верно! ({{ art }})</span>
-                                            <span v-else> Ошибка! (Правильно: {{ card.articles[idx] }})</span>
+                                            <span v-if="guessResult[idx]?.correct"> Right! ({{ art }})</span>
+                                            <span v-else> Mistate! (Right {{ card.articles[idx] }})</span>
                                         </div>
-                                        <button @click.stop="unflipCard(true)" class="btn close-btn">Дальше</button>
+                                        <button @click.stop="unflipCard(true)" class="btn close-btn">further</button>
                                     </div>
                                 </div>
                             </div>

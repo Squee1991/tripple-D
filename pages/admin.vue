@@ -1,6 +1,6 @@
 <script setup>
 import {ref, onMounted} from 'vue'
-
+import { useSeoMeta } from '#imports'
 const checking = ref(true)
 const allowed = ref(false)
 const uid = ref('')
@@ -9,6 +9,9 @@ const loading = ref(false)
 const errorMsg = ref(null)
 const dataJson = ref(null)
 
+useSeoMeta({
+  robots: 'noindex, nofollow'
+})
 const USER_SUBCOLLECTIONS = [
   'daily',
   'localStatGame',

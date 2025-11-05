@@ -5,7 +5,8 @@ import {useRoute, useRouter} from 'vue-router';
 import {onMounted, onUnmounted, ref, watch, computed} from 'vue';
 import Modal from '../../src/components/modal';
 import {useI18n} from 'vue-i18n';
-
+import { useLocalePath } from '#imports'
+const localePath = useLocalePath()
 const {t} = useI18n();
 const route = useRoute();
 const router = useRouter();
@@ -77,7 +78,7 @@ function closeEndGameModal() {
 
 function LeaveSession() {
     gameStore.leaveSession();
-    router.push('/play');
+  router.push(localePath('/sentence-duel'))
 }
 
 onMounted(() => {
@@ -118,7 +119,7 @@ watch(() => gameStore.sessionData, (newSession, oldSession) => {
     if (oldSession && oldSession.players && Object.keys(oldSession.players).length === 2 && !newSession) {
         opponentLeft.value = true;
         setTimeout(() => {
-            router.push('/play');
+          router.push(localePath('/sentence-duel'))
         }, 3000);
     }
 }, {deep: true});

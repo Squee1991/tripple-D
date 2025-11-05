@@ -8,7 +8,7 @@
     <div class="layout">
       <div class="area__info">
         <div class="legend" aria-label="info">
-          <div class="legend__wrappper">
+          <div class="legend__wrapper">
             <div class="legend__title-wrap">
               <h2 class="legend__title">{{ t('calendarInfo.pointsTitle')}}</h2>
             </div>
@@ -72,7 +72,6 @@
 <script setup>
 import {computed, ref} from 'vue'
 import {useRouter} from 'vue-router'
-
 import HalloweenIcon from '../../assets/images/calendar-icons/halloweenIcon.svg'
 import ChristmasIcon from '../../assets/images/calendar-icons/christmas-wreath.svg'
 import FoolDay from '../../assets/images/calendar-icons/FoolDay.svg'
@@ -284,8 +283,8 @@ function humanizePeriod(start, end) {
   --cta: #ff6ea6;
 }
 
-.legend__wrappper {
-  padding: 15px;
+.legend__wrapper {
+  padding:  0 15px 15px 15px ;
 }
 
 .page {

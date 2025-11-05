@@ -10,8 +10,7 @@
       </div>
 
       <!-- Заголовок -->
-      <h1 class="title">Загружаем немецкий язык…</h1>
-
+      <h1 class="title">Lade die deutsche Sprache…</h1>
       <!-- Меняющаяся фраза (у каждой свой цвет) -->
       <p
           class="subtitle"

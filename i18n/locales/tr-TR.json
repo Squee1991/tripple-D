@@ -1,4 +1,7 @@
 {
+  "practiceArticleBtn": {
+    "btn": "Artikel alıştırmalarına"
+  },
   "footer": {
     "copy": "Der Die Das. Tüm hakları saklıdır.",
     "about": "Uygulama hakkında",
@@ -6,7 +9,7 @@
     "privacy": "Gizlilik Politikası",
     "terms": "Kullanım Şartları"
   },
-  "friendExam": {
+  "friendExamBtn": {
     "btn": "Arkadaşların Sınavları"
   },
   "regions": {
@@ -67,7 +70,7 @@
     "profile": "Profil"
   },
   "metaAdjectiveBasic": {
-    "title": "German Corner — Sıfatlar A1–A2: renkler, duygular, dış görünüş, karakter, boyut",
+    "title": "Skillupgerman — Sıfatlar A1–A2: renkler, duygular, dış görünüş, karakter, boyut",
     "description": "Almanca temel sıfatları konulara göre öğrenin: renkler, duygular ve hisler, dış görünüş, karakter, boyut ve şekil. Çeviri ve seslendirmeli örnekler + alıştırmalar."
   },
   "metaAdjectiveComparison": {
@@ -90,7 +93,7 @@
     "testsLevels": "Almanca testler — seviyeler"
   },
   "metaLocation": {
-    "title": "German Corner — Almanca öğrenmek için dil toprakları",
+    "title": "Skillupgerman — Almanca öğrenmek için dil toprakları",
     "description": "Dil topraklarını keşfedin ve görevleri tamamlayarak seviyeleri geçin, Almancanızı geliştirin. Kelime haznesi ve dilbilgisini görevler ve ilerleme ile macera formatında öğrenin, tıpkı bir oyunda olduğu gibi!"
   },
   "metaModalVerbs": {
@@ -131,7 +134,7 @@
   },
   "metaMainPage": {
     "title": "Almancayı oyun şeklinde öğren",
-    "description": "German Corner. Oyun tarzında pratik: artikeller der, die, das, tematik seviyeler, fiiller, sıfatlar, edatlar, görevler ve başarılar. Almanca öğrenmeyi eğlenceli hale getir!"
+    "description": "Skillupgerman  oyun tarzında pratik: artikeller der, die, das, tematik seviyeler, fiiller, sıfatlar, edatlar, görevler ve başarılar. Almanca öğrenmeyi eğlenceli hale getir!"
   },
   "metaVerbsTheory": {
     "title": "Almanca fiil teorisi örnekler ve quiz ile",
@@ -159,10 +162,10 @@
     "featureTen": "Gelecek özellikler"
   },
   "useHeadApp": {
-    "title": "German Corner — Almancayı oyunlarla kolay ve eğlenceli şekilde öğren",
-    "content": "German Corner — Almanca öğrenmek için çevrimiçi platform: dilbilgisi, artikeller, zamanlar, alıştırmalar ve oyun tabanlı öğrenme.",
+    "title": "Skillupgerman — Almancayı oyunlarla kolay ve eğlenceli şekilde öğren",
+    "content": "Skillupgerman — Almanca öğrenmek için çevrimiçi platform: dilbilgisi, artikeller, zamanlar, alıştırmalar ve oyun tabanlı öğrenme.",
     "contentTwo": "Almanca, artikeller, dilbilgisi, çevrimiçi Almanca öğren, A1, A2, B1",
-    "contentThree": "German Corner — Almanca öğrenme",
+    "contentThree": "Skillupgerman — Almanca öğrenme",
     "contentFour": "Almancayı egzersizler ve oyunlarla eğlenceli ve etkili bir şekilde öğren!"
   },
   "achievementToast": {

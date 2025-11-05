@@ -1,7 +1,7 @@
 <template>
   <div class="adjective-page" :class="{ 'content-is-active': isContentVisible }">
     <div class="sidebar">
-      <button @click="backToMenu" class="btn__back">{{ t('tenses.barBtn') }}</button>
+      <VBackBtn/>
       <h2 class="sidebar__title">{{ t('adjectiveBasicPageSideBar.title') }}</h2>
       <div class="sidebar__heading">{{ t('adjectiveBasicPageSideBar.theme') }}</div>
       <ul class="sidebar__list">
@@ -54,6 +54,7 @@ import {useRouter} from 'vue-router'
 import Lottie from 'lottie-web';
 import SoundBtn from '../../src/components/soundBtn.vue'
 import { useHead, useSeoMeta } from '#imports'
+import VBackBtn from "../../src/components/V-back-btn.vue";
 const { t } = useI18n();
 const canonical = useCanonical()
 const pageTitle = t('metaAdjectiveBasic.title')
@@ -337,10 +338,6 @@ onUnmounted(() => {
   box-shadow: 3px 3px 0px #000;
 }
 
-.sidebar__button:hover {
-  background: #e0e0e0;
-}
-
 .sidebar__button:active {
   transform: translate(3px, 3px);
   box-shadow: none;
@@ -469,18 +466,27 @@ onUnmounted(() => {
   text-decoration: none;
   background: #f1c40f;
   color: #484343;
+  min-width: 230px;
+  font-weight: 600;
   border: 2px solid #000;
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 12px 25px;
   font-size: 1.2rem;
-  font-weight: bold;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  box-shadow: 4px 4px 0px #000;
+  box-shadow: 3px 3px 0px #000;
 }
 
-.practice-area__button:hover {
-  background: #ffe04d;
+@media (min-width: 1024px) {
+  .sidebar__button:hover {
+    background: #a9a4a4;
+  }
+  .practice-area__button:hover {
+    background: #e8c629;
+    box-shadow: 1px 1px 0px #000;
+    transform: translate(2px , 2px);
+
+  }
 }
 
 .practice-area__button:active {

@@ -113,6 +113,8 @@ import {useSentencesStore} from '../store/sentencesStore.js'
 import {useDuelStore} from '../store/sentenceDuelStore.js'
 import {userAuthStore} from '../store/authStore.js'
 import {useRouter} from 'vue-router'
+import { useLocalePath } from '#imports'
+const localePath = useLocalePath()
 import {useI18n} from 'vue-i18n'
 import Modal from '../src/components/modal.vue'
 import TipsModal from '../src/components/V-tips.vue'
@@ -188,7 +190,7 @@ function cancelSearch() {
 }
 
 function goBack() {
-  router.push('/')
+  router.push(localePath('/'))
   gameStore.cancelSearch()
 }
 
@@ -205,7 +207,7 @@ async function handleFindGameClick(level) {
     if (!sentencesStore.db) {
       await sentencesStore.loadSentences()
     }
-    router.push({path: '/sentence-solo', query: {level}})
+    router.push(localePath({ path: '/sentence-solo', query: { level } }))
   }
 }
 
@@ -213,7 +215,7 @@ watch(() => gameStore.sessionData?.status, (newStatus) => {
   if (mode.value === 'online' && newStatus === 'starting') {
     setTimeout(() => {
       if (gameStore.gameId) {
-        router.push(`/game/${gameStore.gameId}`)
+        router.push(localePath(`/game/${gameStore.gameId}`))
       }
     }, 2000)
   }

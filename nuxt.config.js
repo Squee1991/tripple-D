@@ -1,6 +1,7 @@
 
 import { defineNuxtConfig } from 'nuxt/config'
 import { loadEnv } from 'vite'
+const events = ['halloween', 'joke', 'valentine', 'winter']
 const mode = process.env.NODE_ENV === 'production' ? 'production' : 'development'
 const env = loadEnv(mode, process.cwd(), '')
 const firebaseConfig = {
@@ -25,10 +26,9 @@ const siteUrl =
 	(process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000')
 
 export default defineNuxtConfig({
+	experimental: { payloadExtraction: false },
 	compatibilityDate: '2024-11-01',
 	devtools: { enabled: true },
-	ssr: false,
-
 	modules: [
 		'@nuxt/image',
 		'@pinia/nuxt',
@@ -62,7 +62,13 @@ export default defineNuxtConfig({
 			siteUrl,
 		},
 	},
-
+	app: {
+		head: {
+			link: [
+				{ rel: 'icon', type: 'image/png', href: '/favicon.png' }
+			]
+		}
+	},
 	sitemap: { siteUrl, autoLastmod: true },
 	robots: {
 		rules: process.env.VERCEL_ENV === 'production'
@@ -106,7 +112,7 @@ export default defineNuxtConfig({
 			useCookie: true,
 			cookieKey: 'i18n_redirected',
 			alwaysRedirect: false,
-			redirectOn: 'no prefix',
+			redirectOn: 'root',
 			fallbackLocale: 'en',
 		},
 		bundle: { optimizeTranslationDirective: false },
@@ -136,7 +142,29 @@ export default defineNuxtConfig({
 
 	nitro: {
 		preset: 'vercel',
-		prerender: { routes: ['/', '/en', '/ru', '/uk', '/pl', '/tr', '/uz', '/ar', '/es'] },
-		compressPublicAssets: true,
+		prerender: {
+			crawlLinks: true,
+			failOnError: false,
+			routes: [
+				...['pl','en','tr','es','ru','uk','uz','ar'].flatMap(loc =>
+					events.map(ev => `/${loc}/event-${ev}`)
+				)
+			]
+		},
+		compressPublicAssets: true
+	},
+	routeRules: {
+		'/': { prerender: true },
+		'/ru/**': { prerender: true },
+		'/en/**': { prerender: true },
+		'/uk/**': { prerender: true },
+		'/pl/**': { prerender: true },
+		'/tr/**': { prerender: true },
+		'/uz/**': { prerender: true },
+		'/ar/**': { prerender: true },
+		'/es/**': { prerender: true },
+		'/api/**': {
+			headers: { 'cache-control': 'public, s-maxage=300, stale-while-revalidate=600' }
+		}
 	},
 })

@@ -65,7 +65,7 @@
 <script setup>
 import {ref} from 'vue'
 import {useRouter} from 'vue-router'
-import {useHead} from '#imports'
+
 const { t } = useI18n()
 const router = useRouter()
 
@@ -136,36 +136,36 @@ const faqSections = ref([
       }
     ]
   },
-  {
-    title: t('subscribe.title'),
-    items: [
-      {
-        question: t('subscribe.questOne'),
-        steps: [
-          t('subscribe.questOneStepOne'),
-          t('subscribe.questOneStepTwo'),
-          t('subscribe.questOneStepThree'),
-          t('subscribe.questOneStepFour'),
-          t('subscribe.questOneStepFive'),
-          t('subscribe.questOneStepSix'),
-        ]
-      },
-      {
-        question: t('subscribe.questTwo'),
-        steps: [
-          t('subscribe.questTwoStepOne'),
-          t('subscribe.questTwoStepTwo'),
-          t('subscribe.questTwoStepThree'),
-          t('subscribe.questTwoStepFour'),
-        ],
-        note: t('subscribe.note'),
-      },
-      {
-        question: t('subscribe.questThree'),
-        answer: t('subscribe.answerThree'),
-      }
-    ]
-  }
+  // {
+  //   title: t('subscribe.title'),
+  //   items: [
+  //     {
+  //       question: t('subscribe.questOne'),
+  //       steps: [
+  //         t('subscribe.questOneStepOne'),
+  //         t('subscribe.questOneStepTwo'),
+  //         t('subscribe.questOneStepThree'),
+  //         t('subscribe.questOneStepFour'),
+  //         t('subscribe.questOneStepFive'),
+  //         t('subscribe.questOneStepSix'),
+  //       ]
+  //     },
+  //     {
+  //       question: t('subscribe.questTwo'),
+  //       steps: [
+  //         t('subscribe.questTwoStepOne'),
+  //         t('subscribe.questTwoStepTwo'),
+  //         t('subscribe.questTwoStepThree'),
+  //         t('subscribe.questTwoStepFour'),
+  //       ],
+  //       note: t('subscribe.note'),
+  //     },
+  //     {
+  //       question: t('subscribe.questThree'),
+  //       answer: t('subscribe.answerThree'),
+  //     }
+  //   ]
+  // }
 ])
 
 useHead({
