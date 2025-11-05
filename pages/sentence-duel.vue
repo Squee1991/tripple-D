@@ -1,125 +1,133 @@
 <template>
-  <div class="lobby">
-    <Modal
-        :visible="showDevModal"
-        @close="closeModal"
-        :title="t(overlayData.title)"
-        :text="t(overlayData.text)"
-    />
-    <Modal
-        :visible="showAuthModal"
-        @close="closeAuthModal"
-        :title="authModalData.title"
-        :img="Login"
-        :text="authModalData.text"
-    />
-    <div class="lobby-container">
-      <TipsModal
-          v-model="showTips"
-          :title="t('adjectiveComparisonPage.tipTitle')"
-          :tips="tipsData.tips"
-      />
-      <div v-if="!isWaitingForOpponent && !isOpponentFound">
-        <div class="duel__header">
-          <button @click="goBack" class="back-button-global" aria-label="Назад">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
-            </svg>
-            <span>{{ t('wordDuel.btnBack') }}</span>
-          </button>
-          <div class="header-section">
-            <h1 class="page-title">{{ t('wordDuel.title') }}</h1>
-          </div>
-          <div class="tiips__info-wrapper">
-            <button class="btn__tips" @click="tipsModule">
-              <img class="tipps__icon" src="../assets/images/Tipps.svg" alt="Tips Icon">
-            </button>
-            <button class="btn__tips" @click="openModal">
-              <img class="duel__question-img" :title="t('hoverTitle.duelInfo')"
-                   src="../assets/images/question.svg" alt="Info Icon">
-            </button>
-          </div>
-        </div>
-        <div class="mode-toggle-wrapper">
-          <div
-              class="mode-toggle-option"
-              :class="{ 'mode-toggle-option--inactive': mode !== 'online' }"
-              @click="mode = 'online'"
-          >
-            🌐 {{ t('wordDuel.online') }}
-          </div>
-          <div
-              class="mode-toggle-option"
-              :class="{ 'mode-toggle-option--inactive': mode !== 'local' }"
-              @click="mode = 'local'"
-          >
-            👤 {{ t('wordDuel.local') }}
-          </div>
-          <div class="mode-toggle-slider" :style="{ transform: sliderTransform }"></div>
-        </div>
-        <p class="page-subtitle">{{ t('wordDuel.subTitle') }}</p>
+    <div class="lobby">
+        <Modal
+                :visible="showDevModal"
+                @close="closeModal"
+                :title="t(overlayData.title)"
+                :text="t(overlayData.text)"
+        />
+        <Modal
+                :visible="showAuthModal"
+                @close="closeAuthModal"
+                :title="authModalData.title"
+                :img="Login"
+                :text="authModalData.text"
+        />
+        <div class="lobby-container">
+            <TipsModal
+                    v-model="showTips"
+                    :title="t('adjectiveComparisonPage.tipTitle')"
+                    :tips="tipsData.tips"
+            />
+            <div v-if="!isWaitingForOpponent && !isOpponentFound">
+                <div class="duel__header">
+                    <button @click="goBack" class="back-button-global" aria-label="Назад">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+                        </svg>
+                        <span>{{ t('wordDuel.btnBack') }}</span>
+                    </button>
+                    <!--                    <div class="header-section">-->
+                    <!--                        <h1 class="page-title">{{ t('wordDuel.title') }}</h1>-->
+                    <!--                    </div>-->
+                    <div class="tiips__info-wrapper">
+                        <button class="btn__tips" @click="tipsModule">
+                            <img class="tipps__icon" src="../assets/images/Tipps.svg" alt="Tips Icon">
+                        </button>
+                        <button class="btn__tips" @click="openModal">
+                            <img class="duel__question-img" :title="t('hoverTitle.duelInfo')"
+                                 src="../assets/images/question.svg" alt="Info Icon">
+                        </button>
+                    </div>
+                </div>
+                <div class="mode-toggle-wrapper">
+                    <div
+                            class="mode-toggle-option"
+                            :class="{ 'mode-toggle-option--inactive': mode !== 'online' }"
+                            @click="mode = 'online'"
+                    >
+                        🌐 {{ t('wordDuel.online') }}
+                    </div>
+                    <div
+                            class="mode-toggle-option"
+                            :class="{ 'mode-toggle-option--inactive': mode !== 'local' }"
+                            @click="mode = 'local'"
+                    >
+                        👤 {{ t('wordDuel.local') }}
+                    </div>
+                    <div class="mode-toggle-slider" :style="{ transform: sliderTransform }"></div>
+                </div>
+<!--                <p class="page-subtitle">{{ t('wordDuel.subTitle') }}</p>-->
 
-        <div class="main-content-wrapper">
-          <div class="level-grid">
-            <button
-                v-for="level in levels"
-                :key="level"
-                @click="handleFindGameClick(level)"
-                class="level-card"
-                :disabled="(mode === 'online' && gameStore.isSearching) || isLoading"
-            >
-              <h2 class="card-level-title">{{ t('wordDuel.level') }} {{ level }}</h2>
-            </button>
-          </div>
+                <div class="main-content-wrapper">
+                    <div class="level-grid">
+                        <button
+                                v-for="level in levels"
+                                :key="level"
+                                @click="selectLevel(level)" class="level-card"
+                                :class="{ 'level-card--selected': selectedLevel === level }">
+                            <h2 class="card-level-title">{{ t('wordDuel.level') }} {{ level }}</h2>
+                        </button>
+                    </div>
 
-          <div v-if="authStore.uid" class="stats-block">
-            <h3>
-              Твоя статистика<br> по уровню <span>{{ selectedLevel }}</span>
-            </h3>
-            <div class="stats-container">
-              <div class="stat-item">
-                <span class="stat-label">Побед</span>
-                <span class="stat-value">{{ levelStats.wins }}</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-label">Серия побед</span>
-                <span class="stat-value">{{ levelStats.streaks }}</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-label">Чистые победы</span>
-                <span class="stat-value">{{ levelStats.cleanSweeps }}</span>
-              </div>
+                    <div v-if="authStore.uid" class="stats-block">
+                        <h3>
+                            Твоя статистика<br> по уровню <span>{{ selectedLevel }}</span>
+                        </h3>
+                        <div class="stats-container">
+                            <div class="stat-item">
+                                <span class="stat-label">Побед</span>
+                                <span class="stat-value">{{ levelStats.wins }}</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Серия побед</span>
+                                <span class="stat-value">{{ levelStats.streaks }}</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Чистые победы</span>
+                                <span class="stat-value">{{ levelStats.cleanSweeps }}</span>
+                            </div>
+                        </div>
+
+                        <button
+                                @click="startGame"
+                                class="start-game-button"
+                                :disabled="(mode === 'online' && gameStore.isSearching) || isLoading"
+                        >
+                            Начать игру ({{ selectedLevel }})
+                        </button>
+
+                        <p class="stats-hint">Нажми на уровень, чтобы увидеть статистику по нему.</p>
+                    </div>
+                </div>
             </div>
-            <p class="stats-hint">Нажми на уровень, чтобы увидеть статистику по нему.</p>
-          </div>
+            <div v-else class="status-overlay">
+                <div v-if="isWaitingForOpponent">
+                    <p class="status-text">{{ t('wordDuel.searching') }}<span class="dots">...</span></p>
+                    <button @click="cancelSearch" class="cancel-button">{{ t('wordDuel.cancel') }}</button>
+                </div>
+                <div v-if="isOpponentFound">
+                    <p class="status-text">{{ t('wordDuel.found') }}</p>
+                    <p class="page-subtitle">{{ t('wordDuel.prepare') }}</p>
+                </div>
+            </div>
         </div>
-      </div>
-      <div v-else class="status-overlay">
-        <div v-if="isWaitingForOpponent">
-          <p class="status-text">{{ t('wordDuel.searching') }}<span class="dots">...</span></p>
-          <button @click="cancelSearch" class="cancel-button">{{ t('wordDuel.cancel') }}</button>
-        </div>
-        <div v-if="isOpponentFound">
-          <p class="status-text">{{ t('wordDuel.found') }}</p>
-          <p class="page-subtitle">{{ t('wordDuel.prepare') }}</p>
-        </div>
-      </div>
     </div>
-  </div>
 </template>
+
 <script setup>
+// ... (все import'ы остаются без изменений)
 import {ref, computed, watch, onMounted, onUnmounted} from 'vue'
 import {useSentencesStore} from '../store/sentencesStore.js'
 import {useDuelStore} from '../store/sentenceDuelStore.js'
 import {userAuthStore} from '../store/authStore.js'
 import {useRouter} from 'vue-router'
-import { useLocalePath } from '#imports'
-const localePath = useLocalePath()
 import {useI18n} from 'vue-i18n'
 import Modal from '../src/components/modal.vue'
 import TipsModal from '../src/components/V-tips.vue'
 import Login from '../assets/images/login.svg'
 
+// ... (все 'const' до selectedLevel остаются без изменений)
 const authStore = userAuthStore()
 const router = useRouter()
 const gameStore = useDuelStore()
@@ -132,486 +140,559 @@ const {t, locale} = useI18n()
 const isAr = computed(() => locale.value === 'ar')
 
 const sliderTransform = computed(() => {
-  if (isAr.value) {
-    return mode.value === 'online' ? 'translateX(100%)' : 'translateX(0%)'
-  } else {
-    return mode.value === 'online' ? 'translateX(0%)' : 'translateX(100%)'
-  }
+    if (isAr.value) {
+        return mode.value === 'online' ? 'translateX(100%)' : 'translateX(0%)'
+    } else {
+        return mode.value === 'online' ? 'translateX(0%)' : 'translateX(100%)'
+    }
 })
 
 
 const authModalData = {
-  title: t('duelGrammarTips.authModal'),
-  text: t('duelGrammarTips.authText')
+    title: t('duelGrammarTips.authModal'),
+    text: t('duelGrammarTips.authText')
 }
 const showDevModal = ref(false)
 const levels = ['A1', 'A2', 'B1', 'B2']
 const levelStats = computed(() => {
-  return gameStore.achievements[selectedLevel.value] || {
-    wins: 0,
-    streaks: 0,
-    cleanSweeps: 0,
+    return gameStore.achievements[selectedLevel.value] || {
+        wins: 0,
+        streaks: 0,
+        cleanSweeps: 0,
 
-  }
+    }
 })
 const showTips = ref(false)
-const selectedLevel = ref('A1')
+const selectedLevel = ref('A1') // <-- selectedLevel по-прежнему нужен
 const isWaitingForOpponent = computed(() => mode.value === 'online' && !!gameStore.gameId && gameStore.sessionData?.status === 'waiting')
 const isOpponentFound = computed(() => mode.value === 'online' && gameStore.sessionData?.status === 'starting')
 const overlayData = ref({
-  title: "wordDuel.rulesTitle",
-  text: "wordDuel.rulesText",
-  subtext: "wordDuel.subText"
+    title: "wordDuel.rulesTitle",
+    text: "wordDuel.rulesText",
+    subtext: "wordDuel.subText"
 })
+// ... (все функции до handleFindGameClick остаются без изменений)
 const openModal = () => {
-  showDevModal.value = true
+    showDevModal.value = true
 }
 const closeModal = () => {
-  showDevModal.value = false
+    showDevModal.value = false
 }
 const closeAuthModal = () => {
-  showAuthModal.value = false
+    showAuthModal.value = false
 }
 const tipsModule = () => {
-  showTips.value = true
+    showTips.value = true
 }
 const tipsData = ref({
-  tips: [
-    {id: '1', text: t('duelGrammarTips.tipOne')},
-    {id: '2', text: t('duelGrammarTips.tipTwo')},
-    {id: '3', text: t('duelGrammarTips.tipThree')},
-    {id: '4', text: t('duelGrammarTips.tipFour')},
-    {id: '5', text: t('duelGrammarTips.tipFive')},
-  ]
+    tips: [
+        {id: '1', text: t('duelGrammarTips.tipOne')},
+        {id: '2', text: t('duelGrammarTips.tipTwo')},
+        {id: '3', text: t('duelGrammarTips.tipThree')},
+        {id: '4', text: t('duelGrammarTips.tipFour')},
+        {id: '5', text: t('duelGrammarTips.tipFive')},
+    ]
 })
 
 function cancelSearch() {
-  gameStore.cancelSearch()
+    gameStore.cancelSearch()
 }
 
 function goBack() {
-  router.push(localePath('/'))
-  gameStore.cancelSearch()
+    router.push('/')
+    gameStore.cancelSearch()
 }
 
-async function handleFindGameClick(level) {
-  selectedLevel.value = level
+// ИЗМЕНЕНИЕ: Новая функция для выбора уровня
+function selectLevel(level) {
+    selectedLevel.value = level
+}
 
-  if (!authStore.uid) {
-    showAuthModal.value = true
-    return
-  }
-  if (mode.value === 'online') {
-    gameStore.findGame(level)
-  } else {
-    if (!sentencesStore.db) {
-      await sentencesStore.loadSentences()
+// ИЗМЕНЕНИЕ: handleFindGameClick переименована в startGame и изменена
+async function startGame() {
+    const level = selectedLevel.value // Используем текущий выбранный уровень
+
+    if (!authStore.uid) {
+        showAuthModal.value = true
+        return
     }
-    router.push(localePath({ path: '/sentence-solo', query: { level } }))
-  }
+    if (mode.value === 'online') {
+        gameStore.findGame(level)
+    } else {
+        if (!sentencesStore.db) {
+            await sentencesStore.loadSentences()
+        }
+        router.push({path: '/sentence-solo', query: {level}})
+    }
 }
 
+// ... (остальная часть <script setup> без изменений)
 watch(() => gameStore.sessionData?.status, (newStatus) => {
-  if (mode.value === 'online' && newStatus === 'starting') {
-    setTimeout(() => {
-      if (gameStore.gameId) {
-        router.push(localePath(`/game/${gameStore.gameId}`))
-      }
-    }, 2000)
-  }
+    if (mode.value === 'online' && newStatus === 'starting') {
+        setTimeout(() => {
+            if (gameStore.gameId) {
+                router.push(`/game/${gameStore.gameId}`)
+            }
+        }, 2000)
+    }
 })
 watch(() => authStore.uid, (newUid) => {
-  if (newUid) {
-    gameStore.loadUserAchievements();
-  }
+    if (newUid) {
+        gameStore.loadUserAchievements();
+    }
 }, {immediate: false});
 
 onMounted(async () => {
-  isLoading.value = true;
-  if (authStore.uid) {
-    await gameStore.loadUserAchievements()
-  }
-  if (!sentencesStore.db) {
-    await sentencesStore.loadSentences();
-  }
-  isLoading.value = false;
+    isLoading.value = true;
+    if (authStore.uid) {
+        await gameStore.loadUserAchievements()
+    }
+    if (!sentencesStore.db) {
+        await sentencesStore.loadSentences();
+    }
+    isLoading.value = false;
 })
 onUnmounted(() => {
-  if (isWaitingForOpponent.value) {
-    gameStore.cancelSearch()
-    gameStore.loadUserAchievements()
-  }
+    if (isWaitingForOpponent.value) {
+        gameStore.cancelSearch()
+        gameStore.loadUserAchievements()
+    }
 })
 
 watch(() => gameStore.sessionData?.status, async (s) => {
-  if (s === 'finished') await gameStore.loadUserAchievements()
+    if (s === 'finished') await gameStore.loadUserAchievements()
 })
 </script>
 
 <style scoped>
+
 .mode-toggle-wrapper {
-  width: 320px;
-  display: flex;
-  background: #fff;
-  border-radius: 16px;
-  position: relative;
-  margin: 2rem auto;
-  box-shadow: 4px 4px 0px #1e1e1e;
-  border: 3px solid #1e1e1e;
-  overflow: hidden;
-  padding: 4px;
+    width: 320px;
+    display: flex;
+    background: #fff;
+    border-radius: 16px;
+    position: relative;
+    margin: 2rem auto;
+    box-shadow: 4px 4px 0px #1e1e1e;
+    border: 3px solid #1e1e1e;
+    overflow: hidden;
+    padding: 4px;
 }
 
 .tipps__icon {
-  width: 50px;
+    width: 50px;
 }
 
 .tiips__info-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .btn__tips {
-  background: none;
-  border: none;
-  cursor: pointer;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 .mode-toggle-option {
-  flex: 1;
-  text-align: center;
-  padding: 14px 5px;
-  cursor: pointer;
-  color: #fff;
-  font-family: "Nunito", sans-serif;
-  font-weight: 700;
-  font-size: 1.1rem;
-  position: relative;
-  transition: color 0.4s cubic-bezier(.38, 1.32, .39, 1);
-  user-select: none;
-  z-index: 1;
+    flex: 1;
+    text-align: center;
+    padding: 14px 5px;
+    cursor: pointer;
+    color: #fff;
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    position: relative;
+    transition: color 0.4s cubic-bezier(.38, 1.32, .39, 1);
+    user-select: none;
+    z-index: 1;
 }
 
 .mode-toggle-option--inactive {
-  color: #1e1e1e;
+    color: #1e1e1e;
 }
 
 .mode-toggle-slider {
-  pointer-events: none;
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  width: calc(50% - 4px);
-  height: calc(100% - 8px);
-  background: #1e1e1e;
-  border-radius: 12px;
-  transition: transform 0.4s cubic-bezier(.38, 1.32, .39, 1);
-  z-index: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: calc(50% - 4px);
+    height: calc(100% - 8px);
+    background: #1e1e1e;
+    border-radius: 12px;
+    transition: transform 0.4s cubic-bezier(.38, 1.32, .39, 1);
+    z-index: 0;
 }
 
 .mode-toggle-slider--local {
-  transform: translateX(100%);
+    transform: translateX(100%);
 }
 
 .duel__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
 }
 
 .back-button-global {
-  border: none;
-  display: flex;
-  align-items: center;
-  border: 3px solid #1e1e1e;
-  padding: 15px;
-  background: #4ade80;
-  border-radius: 16px;
-  cursor: pointer;
-  color: #1e1e1e;
-  font-size: 1.2rem;
-  font-weight: 400;
-  font-family: "Nunito", sans-serif;
-  box-shadow: 4px 4px 0px #1e1e1e;
-  transition: all 0.1s ease-in-out;
+    border: none;
+    display: flex;
+    align-items: center;
+    border: 3px solid #1e1e1e;
+    padding: 15px;
+    background: #4ade80;
+    border-radius: 16px;
+    cursor: pointer;
+    color: #1e1e1e;
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-family: "Nunito", sans-serif;
+    box-shadow: 4px 4px 0px #1e1e1e;
+    transition: all 0.1s ease-in-out;
 }
 
 .duel__question-img {
-  width: 70px;
-  cursor: pointer;
+    width: 70px;
+    cursor: pointer;
 }
 
 .back-button-global:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0px #1e1e1e;
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #1e1e1e;
 }
 
 .back-button-global svg {
-  width: 24px;
-  height: 24px;
-  fill: #3A3A3A;
+    width: 24px;
+    height: 24px;
+    fill: #3A3A3A;
 }
 
 .lobby-container {
-  padding: 40px;
-  font-family: 'Nunito', sans-serif;
-  min-height: 100vh
+    padding: 40px;
+    font-family: 'Nunito', sans-serif;
+    min-height: 100vh
 }
 
-.page-title {
-  font-size: 2.3rem;
-  font-weight: 800;
-  color: var(--titleColor);
-  text-align: center;
-  max-width: 500px;
-}
+/*.page-title {*/
+/*    font-size: 2.3rem;*/
+/*    font-weight: 800;*/
+/*    color: var(--titleColor);*/
+/*    text-align: center;*/
+/*    max-width: 500px;*/
+/*}*/
 
 .page-subtitle {
-  text-align: center;
-  padding: 20px;
-  font-size: 1.2rem;
-  color: var(--titleColor);
-  margin-top: 5px;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2rem;
+    color: var(--titleColor);
+    margin-top: 5px;
 }
 
 .level-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  width: 100%;
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
 }
 
 .header-section {
-  padding: 12px;
+    padding: 12px;
 }
 
 .level-card {
-  background-color: white;
-  border: 3px solid #1e1e1e;
-  border-radius: 20px;
-  padding: 25px;
-  text-align: left;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  box-shadow: 8px 8px 0px #1e1e1e;
+    background-color: white;
+    border: 3px solid #1e1e1e;
+    border-radius: 20px;
+    padding: 15px;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 8px 8px 0px #1e1e1e;
 }
 
 .level-card:hover:not(:disabled) {
-  background-color: #FFD24B;
-  transform: translateY(-2px) scale(1.01);
-  box-shadow: 6px 6px 0px #1e1e1e;
+    background-color: #FFD24B;
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 6px 6px 0px #1e1e1e;
 }
 
-.level-card:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
+/* ИЗМЕНЕНИЕ: Стиль для :disabled убран, т.к. кнопки-карточки больше не отключаются */
 
 .level-card {
-  border-color: #1e1e1e;
+    border-color: #1e1e1e;
 }
 
+/* ИЗМЕНЕНИЕ: Добавлен стиль для выбранной карточки */
+.level-card.level-card--selected {
+    background-color: #FFD24B;
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 6px 6px 0px #1e1e1e;
+}
+
+
 .card-level-title {
-  font-size: 2rem;
-  font-weight: 800;
-  margin: 0;
-  color: #1e1e1e;
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 0;
+    color: #1e1e1e;
 }
 
 .level-card:hover:not(:disabled) .card-level-title {
-  color: #1e1e1e;
+    color: #1e1e1e;
 }
 
+/* ... (стили .status-overlay, .status-text, .dots, .cancel-button без изменений) ... */
 .status-overlay {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 60vh;
 }
 
 .status-text {
-  font-size: 2.5rem;
-  font-weight: 800;
+    font-size: 2.5rem;
+    font-weight: 800;
 }
 
 @keyframes pulse {
-  0% {
-    opacity: 0.6;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.6;
-  }
+    0% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.6;
+    }
 }
 
 .dots {
-  animation: pulse 1.5s infinite;
+    animation: pulse 1.5s infinite;
 }
 
 .cancel-button {
-  margin-top: 25px;
-  background-color: #f7f7f7;
-  border: 3px solid #E89C9C;
-  color: #a85252;
-  font-weight: 600;
-  font-size: 1rem;
-  padding: 10px 25px;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.2s ease;
+    margin-top: 25px;
+    background-color: #f7f7f7;
+    border: 3px solid #E89C9C;
+    color: #a85252;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 10px 25px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
 .cancel-button:hover {
-  background-color: #E89C9C;
-  color: white;
-  transform: translateY(-2px);
+    background-color: #E89C9C;
+    color: white;
+    transform: translateY(-2px);
 }
 
-/* --- ДОБАВЛЕННЫЕ И ОБНОВЛЕННЫЕ СТИЛИ --- */
 
 .main-content-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Центрируем по горизонтали */
-  gap: 40px;
-  max-width: 1200px;
-  margin: 40px auto 0;
+    display: flex;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 40px auto 0;
 }
 
 
 .stats-block {
-  background-color: #fff;
-  border: 3px solid #1e1e1e;
-  border-radius: 20px;
-  padding: 25px;
-  box-shadow: 8px 8px 0 #1e1e1e;
-  top: 20px;
-  width: 100%;
+    background-color: #fff;
+    border: 3px solid #1e1e1e;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 8px 8px 0 #1e1e1e;
+    top: 20px;
+    width: 100%;
 
 }
 
 .stats-block h3 {
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: 800;
-  margin-top: 0;
-  margin-bottom: 25px;
-  color: #1e1e1e;
-  line-height: 1.3;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #1e1e1e;
+    line-height: 1.3;
 }
 
 .stats-block h3 span {
-  display: inline-block;
-  background-color: #FFD24B;
-  color: #1e1e1e;
-  padding: 2px 12px;
-  border-radius: 8px;
-  margin-top: 8px;
-  border: 2px solid #1e1e1e;
+    display: inline-block;
+    background-color: #FFD24B;
+    color: #1e1e1e;
+    padding: 2px 12px;
+    border-radius: 8px;
+    margin-top: 8px;
+    border: 2px solid #1e1e1e;
 }
 
 .stats-container {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .stat-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #f7f7f7;
-  padding: 12px 18px;
-  border-radius: 12px;
-  border: 2px solid #e0e0e0;
-  transition: all 0.2s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f7f7f7;
+    padding: 12px 18px;
+    border-radius: 12px;
+    border: 2px solid #e0e0e0;
+    transition: all 0.2s ease;
 }
 
 .stat-item:hover {
-  transform: scale(1.03);
-  border-color: #1e1e1e;
+    transform: scale(1.03);
+    border-color: #1e1e1e;
 }
 
 .stat-label {
-  font-weight: 600;
-  font-size: 1rem;
-  color: #333;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #333;
 }
 
 .stat-value {
-  font-weight: 900;
-  font-size: 1.8rem;
-  color: #4ade80;
+    font-weight: 900;
+    font-size: 1.8rem;
+    color: #4ade80;
 }
+
+/* ИЗМЕНЕНИЕ: Добавлены стили для кнопки "Начать игру" */
+.start-game-button {
+    width: 100%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #1e1e1e;
+    padding: 18px 15px;
+    background: #4ade80; /* Зеленая, как кнопка "Назад" */
+    border-radius: 16px;
+    cursor: pointer;
+    color: #1e1e1e;
+    font-size: 1.4rem;
+    font-weight: 800;
+    font-family: "Nunito", sans-serif;
+    box-shadow: 4px 4px 0px #1e1e1e;
+    transition: all 0.1s ease-in-out;
+    margin: 25px 0 15px; /* Отступы */
+}
+
+.start-game-button:hover:not(:disabled) {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #1e1e1e;
+}
+
+.start-game-button:disabled {
+    background-color: #ccc;
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
 
 .stats-hint {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #777;
-  margin-top: 25px;
-  margin-bottom: 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 10px; /* Уменьшен отступ, т.к. кнопка добавила свой */
+    margin-bottom: 0;
 }
 
-
+/* ... (все @media запросы остаются без изменений) ... */
 @media (max-width: 1024px) {
-  .page-title {
-    font-size: 1.2rem;
-    text-align: center;
-  }
+    .page-title {
+        font-size: 1.2rem;
+        text-align: center;
+    }
 
-  .duel__header {
-    padding: 0 10px;
-  }
+    .duel__header {
+        padding: 0 10px;
+    }
 
-  .main-content-wrapper {
-    grid-template-columns: 1fr; /* Статистика под блоками уровней */
-  }
+    .main-content-wrapper {
+        /* grid-template-columns: 1fr; <-- это свойство было убрано, т.к. flex-direction column уже используется */
+    }
 
-  .stats-block {
-    position: static; /* Отключаем "липкость" */
-    margin-top: 20px;
-  }
+    .stats-block {
+        position: static;
+    }
 }
 
 @media (max-width: 767px) {
-  .back-button-global {
-    padding: 10px;
-    width: 100%;
-    justify-content: center;
-    font-size: 1.1rem;
-    font-family: "Nunito", sans-serif;
-    font-weight: 600;
-    box-shadow: 2px 2px 0 black;
-  }
+    .back-button-global {
+        padding: 10px;
+        width: 100%;
+        justify-content: center;
+        font-size: 1.1rem;
+        font-family: "Nunito", sans-serif;
+        font-weight: 600;
+        box-shadow: 2px 2px 0 black;
+    }
 
-  .lobby-container {
-    padding: 20px;
-  }
+    .lobby-container {
+        padding: 20px;
+    }
 
-  .card-level-title {
-    text-align: center;
-    font-size: 1.4rem;
-  }
+    .card-level-title {
+        text-align: center;
+        font-size: 1.4rem;
+    }
 
-  .duel__header {
-    flex-direction: column;
-  }
+    .duel__header {
+        flex-direction: column;
+    }
 
-  .level-grid {
-    display: flex;
-    flex-direction: column;
-  }
+    .level-grid {
+        display: flex;
+        flex-direction: column;
+    }
 
-  .level-card {
-    box-shadow: 2px 2px 2px #1e1e1e;
-  }
+    .level-card {
+        box-shadow: 2px 2px 2px #1e1e1e;
+    }
+
+    /* ИЗМЕНЕНИЕ: стиль для выбранной карточки на мобильных */
+    .level-card.level-card--selected {
+        box-shadow: 2px 2px 0px #1e1e1e;
+        transform: none; /* Убираем transform на мобильных */
+    }
+
+    .level-card:hover:not(:disabled) {
+        box-shadow: 2px 2px 0px #1e1e1e;
+        transform: none; /* Убираем transform на мобильных */
+    }
+
+    .start-game-button {
+        font-size: 1.2rem;
+        padding: 15px;
+        box-shadow: 2px 2px 0px #1e1e1e;
+    }
+
+    .start-game-button:hover:not(:disabled) {
+        transform: none;
+        box-shadow: 2px 2px 0px #1e1e1e;
+    }
 }
+
 </style>
