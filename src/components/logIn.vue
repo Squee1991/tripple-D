@@ -59,9 +59,9 @@
                     </div>
                 </form>
                 <div
-                        v-if="mode === 'login' && !authStore.treads"
-                        class="google__auth-wrapper"
-                        @click="handleGoogleLogin"
+                    v-if="mode === 'login' && !authStore.treads"
+                    class="google__auth-wrapper"
+                    @click="handleGoogleLogin"
                 >
                     <img class="google__icon" src="../../assets/images/search.svg" alt="google_icon">
                     <div class="google__auth">{{ t('auth.google') }}</div>
