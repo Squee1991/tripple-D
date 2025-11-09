@@ -1,75 +1,90 @@
 <template>
-  <div class="auth">
-    <div class="auth__inner">
-      <div class="auth__form">
-        <div class="auth__title">
-          <img
-              @click="mode = 'login'"
-              v-if="mode === 'reset'" class="auth__arrow" src="../../assets/images/arrowNav.svg" alt="arrow_nav">
-          <h1 class="login__title">
-            {{
-              mode === 'login' ? t('auth.auths') : mode === 'register' ? t('auth.regs') :
-                  t('auth.resetTitle')
-            }}
-          </h1>
-        </div>
-        <div v-if="mode === 'login' || mode === 'register'" class="auth__tabs">
-          <div
-              v-for="tab in tabs"
-              :key="tab.value"
-              class="auth__tab"
-              :class="{ 'auth__tab--active': mode === tab.value }"
-              @click="mode = tab.value"
-          >
-            {{ t(tab.label) }}
-          </div>
-          <div class="auth__toggle" :style="{ transform: toggleTransform }"></div>
-        </div>
-        <form class="auth-form">
-          <div class="auth__fields">
-            <div v-for="field in visibleFields" :key="field.id" class="auth__field">
-              <label class="auth__label">
-                <div class="auth__label-text">{{ t(field.label) }}</div>
-                <input
-                    class="auth__input"
-                    :type="field.type"
-                    :placeholder="t(field.placeholder)"
-                    v-model="field.value"
-                    :required="field.required"
-                    :autocomplete="field.autocomplete"
-                    :maxlength="field.maxlength || null"
-                />
-              </label>
-              <div v-if="field.error" class="auth__error">{{ t(field.error) }}</div>
-              <div v-if="resetSent" class="auth__success">{{ t('errors.resetSent') }}</div>
+    <div class="auth">
+        <div class="auth__inner">
+            <div class="auth__form">
+                <div class="auth__title">
+                    <img
+                            @click="mode = 'login'"
+                            v-if="mode === 'reset'" class="auth__arrow" src="../../assets/images/arrowNav.svg"
+                            alt="arrow_nav">
+                    <h1 class="login__title">
+                        {{
+                        mode === 'login' ? t('auth.auths') : mode === 'register' ? t('auth.regs') :
+                            t('auth.resetTitle')
+                        }}
+                    </h1>
+                </div>
+                <div v-if="mode === 'login' || mode === 'register'" class="auth__tabs">
+                    <div
+                            v-for="tab in tabs"
+                            :key="tab.value"
+                            class="auth__tab"
+                            :class="{ 'auth__tab--active': mode === tab.value }"
+                            @click="mode = tab.value"
+                    >
+                        {{ t(tab.label) }}
+                    </div>
+                    <div class="auth__toggle" :style="{ transform: toggleTransform }"></div>
+                </div>
+                <form class="auth-form">
+                    <div class="auth__fields">
+                        <div v-for="field in visibleFields" :key="field.id" class="auth__field">
+                            <label class="auth__label">
+                                <div class="auth__label-text">{{ t(field.label) }}</div>
+                                <input
+                                        class="auth__input"
+                                        :type="field.type"
+                                        :placeholder="t(field.placeholder)"
+                                        v-model="field.value"
+                                        :required="field.required"
+                                        :autocomplete="field.autocomplete"
+                                        :maxlength="field.maxlength || null"
+                                />
+                            </label>
+                            <div v-if="field.error" class="auth__error">{{ t(field.error) }}</div>
+                            <div v-if="resetSent" class="auth__success">{{ t('errors.resetSent') }}</div>
+                        </div>
+                        <div class="auth__actions">
+                            <button @click.prevent="handleSubmit" class="auth__submit">
+                                {{
+                                mode === 'login' ? t('auth.logIn') : mode === 'register' ? t('auth.regs') :
+                                    t('auth.resetBtn')
+                                }}
+                            </button>
+                        </div>
+                        <div v-if="mode === 'login'" class="auth__forgot" @click="mode = 'reset'">{{
+                            t('auth.forgot')
+                            }}
+                        </div>
+                    </div>
+                </form>
+                <div
+                        v-if="mode === 'login' && !authStore.treads"
+                        class="google__auth-wrapper"
+                        @click="handleGoogleLogin"
+                >
+                    <img class="google__icon" src="../../assets/images/search.svg" alt="google_icon">
+                    <div class="google__auth">{{ t('auth.google') }}</div>
+                </div>
+                <div
+                        v-else-if="mode === 'login' && authStore.treads"
+                        class="auth__warning"
+                >
+                    🔒 {{ t('auth.googleDisabledInThreads') }}
+                    <br/>
+                    <a href="https://tripple-d-90bd2.web.app" target="_blank" rel="noopener">
+                        {{ t('auth.openInBrowser') }}
+                    </a>
+                </div>
             </div>
-            <div class="auth__actions">
-              <button @click.prevent="handleSubmit" class="auth__submit">
-                {{
-                  mode === 'login' ? t('auth.logIn') : mode === 'register' ? t('auth.regs') :
-                      t('auth.resetBtn')
-                }}
-              </button>
+            <div class="close__btn-modal-wrapper">
+                <button class="close__modal" @click="emits('close-auth-form')">
+                    <div class="close__mob-auth-text">{{ t('hideAuthMobileBtn.text') }}</div>
+                    <img class="close__auth-icon" src="../../assets/images/arrowNav.svg" alt="hide_auth_icon">
+                </button>
             </div>
-            <div v-if="mode === 'login'" class="auth__forgot" @click="mode = 'reset'">{{
-                t('auth.forgot')
-              }}
-            </div>
-          </div>
-        </form>
-        <div v-if="mode === 'login'" class="google__auth-wrapper" @click="handleGoogleLogin">
-          <img class="google__icon" src="../../assets/images/search.svg" alt="google_icon">
-          <div class="google__auth">{{ t('auth.google') }}</div>
         </div>
-      </div>
-      <div class="close__btn-modal-wrapper">
-        <button class="close__modal" @click="emits('close-auth-form')">
-          <div class="close__mob-auth-text">{{ t('hideAuthMobileBtn.text')}}</div>
-          <img class="close__auth-icon" src="../../assets/images/arrowNav.svg" alt="hide_auth_icon">
-        </button>
-      </div>
     </div>
-  </div>
 </template>
 <script setup>
 import {ref, computed, watch , onUnmounted } from 'vue'
@@ -77,7 +92,8 @@ import {userAuthStore} from '../../store/authStore.js'
 import {useRouter} from 'vue-router'
 import {useI18n} from 'vue-i18n'
 import {mapErrors} from '../../utils/errorsHandler.js'
-const {t , locale} = useI18n()
+
+const {t, locale} = useI18n()
 const router = useRouter()
 const emits = defineEmits(['close-auth-form'])
 const authStore = userAuthStore()
@@ -86,11 +102,11 @@ const resetSent = ref(false)
 const isAuthed = computed(() => !!authStore.uid)
 
 const toggleTransform = computed(() => {
-  if (locale.value === 'ar') {
-    return mode.value === 'login' ? 'translateX(100%)' : 'translateX(0%)'
-  } else {
-    return mode.value === 'login' ? 'translateX(0%)' : 'translateX(100%)'
-  }
+    if (locale.value === 'ar') {
+        return mode.value === 'login' ? 'translateX(100%)' : 'translateX(0%)'
+    } else {
+        return mode.value === 'login' ? 'translateX(0%)' : 'translateX(100%)'
+    }
 })
 const fields = ref([
   {
@@ -166,22 +182,22 @@ const handleGoogleLogin = async () => {
 function validateFields(values) {
   fields.value.forEach(field => field.error = '')
 
-  if (mode.value === 'login' || mode.value === 'register') {
-    if (!values.email) fields.value.find(f => f.name === 'email').error = 'errors.errorEmail'
-    if (!values.password) fields.value.find(f => f.name === 'password').error = 'errors.errorPassword'
-    if (mode.value === 'register') {
-      if (!values.name) fields.value.find(f => f.name === 'name').error = 'errors.errorName'
-      if (values.password !== values.confirm) {
-        fields.value.find(f => f.name === 'confirm').error = 'errors.errorConfirm'
-      }
+    if (mode.value === 'login' || mode.value === 'register') {
+        if (!values.email) fields.value.find(f => f.name === 'email').error = 'errors.errorEmail'
+        if (!values.password) fields.value.find(f => f.name === 'password').error = 'errors.errorPassword'
+        if (mode.value === 'register') {
+            if (!values.name) fields.value.find(f => f.name === 'name').error = 'errors.errorName'
+            if (values.password !== values.confirm) {
+                fields.value.find(f => f.name === 'confirm').error = 'errors.errorConfirm'
+            }
+        }
     }
-  }
 
-  if (mode.value === 'reset') {
-    if (!values.email) fields.value.find(f => f.name === 'email').error = 'errors.errorEmail'
-  }
+    if (mode.value === 'reset') {
+        if (!values.email) fields.value.find(f => f.name === 'email').error = 'errors.errorEmail'
+    }
 
-  return fields.value.every(f => !f.error)
+    return fields.value.every(f => !f.error)
 }
 
 const handleSubmit = async () => {
@@ -237,6 +253,9 @@ watch(isAuthed, (v) => {
 
 onUnmounted(() => {
   document.body.style.overflow = ''
+})
+onMounted(() => {
+    authStore.detectThreads()
 })
 </script>
 
@@ -525,6 +544,22 @@ onUnmounted(() => {
 .auth__success {
   color: #4ade80
 }
+
+.auth__warning {
+    margin-top: 1.5rem;
+    text-align: center;
+    color: #d32f2f;
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.auth__warning a {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
 
 @media (max-width: 767px) {
   .close__btn-modal-wrapper {
