@@ -1,4 +1,14 @@
 {
+  "recipes": {
+    "start": "Comenzar tarea",
+    "training": "Ir al entrenamiento",
+    "did": "Ya completaste esta tarea. Cargando la siguiente...",
+    "timer": "La siguiente tarea estará disponible en",
+    "didAll": "Has completado todo en este tema",
+    "notFound": "no encontrado",
+    "error": "Ups, no puedo encontrar las recetas",
+    "repeat": "Intento por 10 Artiklus"
+  },
   "practiceArticleBtn": {
     "btn": "A la práctica de artículos"
   },

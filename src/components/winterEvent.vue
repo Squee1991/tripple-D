@@ -65,7 +65,7 @@ const quests = ref([
 
 const currentLevel = computed(() => {
   let lvl = 1
-  for (const r of ranks) if (reputationPoints.value >= r.need) lvl = r.level
+  for (const rank of ranks) if (reputationPoints.value >= rank.need) lvl = rank.level
   return lvl
 })
 const levelStart = computed(() => ranks[currentLevel.value - 1]?.need ?? 0)
@@ -94,9 +94,9 @@ function refreshProgressBadges() {
   try {
     const key = `event:${eventId.value}:progress`
     const saved = JSON.parse(localStorage.getItem(key) || '{}')
-    quests.value = quests.value.map(q => ({
-      ...q,
-      isDone: !!saved?.[`${q.id}:done`]
+    quests.value = quests.value.map(quest => ({
+      ...quest,
+      isDone: !!saved?.[`${quest.id}:done`]
     }))
   } catch {
 
@@ -132,8 +132,8 @@ function buyReward(level, rewardId) {
 function resetAll() {
   coins.value = 0
   reputationPoints.value = 0
-  quests.value.forEach(q => (q.isDone = false))
-  Object.values(shopByRank.value).forEach(list => list.forEach(r => (r.isOwned = false)))
+  quests.value.forEach(quest => (quest.isDone = false))
+  Object.values(shopByRank.value).forEach(list => list.forEach(item => (item.isOwned = false)))
   selectedLevel.value = 1
   try { localStorage.removeItem(`event:${eventId.value}:progress`) } catch {}
 }
@@ -195,11 +195,11 @@ function resetAll() {
                 <h2>Магазин по репутации</h2>
                 <div class="rank-switch">
                   <button
-                      v-for="r in ranks"
-                      :key="r.level"
-                      :class="['pill', { 'is-active': selectedLevel === r.level }]"
-                      @click="setSelectedLevel(r.level)"
-                  >{{ r.title }}
+                      v-for="rank in ranks"
+                      :key="rank.level"
+                      :class="['pill', { 'is-active': selectedLevel === rank.level }]"
+                      @click="setSelectedLevel(rank.level)"
+                  >{{ rank.title }}
                   </button>
                 </div>
               </div>
@@ -228,18 +228,18 @@ function resetAll() {
             <section v-if="activeTab === 'quests'">
               <div class="quests">
                 <div><h2 class="daily__title">Задания</h2></div>
-                <div v-for="q in quests" :key="q.id" class="quest achv-card">
-                  <div class="quest__icon">{{ q.icon }}</div>
+                <div v-for="quest in quests" :key="quest.id" class="quest achv-card">
+                  <div class="quest__icon">{{ quest.icon }}</div>
                   <div class="quest__body">
-                    <div class="quest__title clickable">{{ q.title }}
+                    <div class="quest__title clickable">{{ quest.title }}
                     </div>
                     <div class="quest__meta">
                       <div class="quest__inner">
-                        <span class="meta__pill">{{ q.rewardRep }} реп.</span>
-                        <span class="meta__pill">{{ q.rewardCoins }} {{ coinIcon }}</span>
+                        <span class="meta__pill">{{ quest.rewardRep }} реп.</span>
+                        <span class="meta__pill">{{ quest.rewardCoins }} {{ coinIcon }}</span>
                       </div>
-                      <button class="btn btn--candy" :disabled="q.isDone" @click="goToSession(q.id)">
-                        {{ q.isDone ? 'Выполнено' : 'Выполнить' }}
+                      <button class="btn btn--candy" :disabled="quest.isDone" @click="goToSession(quest.id)">
+                        {{ quest.isDone ? 'Выполнено' : 'Выполнить' }}
                       </button>
                     </div>
                   </div>

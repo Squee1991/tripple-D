@@ -32,8 +32,8 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 		if (stepIndex.value > 0) stepIndex.value--
 	}
 
-	const addScore = (n = 1) => {
-		score.value += n
+	const addScore = (number = 1) => {
+		score.value += number
 	}
 
 	const finishQuest = () => {

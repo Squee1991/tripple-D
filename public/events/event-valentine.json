@@ -1,11 +1,131 @@
 {
   "quests": [
     {
-      "id": "q1",
-      "title": "Valentine слово",
+      "id": "quest-1",
+      "title": "Valentinstag: Bild → Wort (mit Artikel)",
       "steps": [
-        { "type": "word", "props": { "word": "Liebe" } }
+        {
+          "type": "multiple-choice",
+          "id": "val-1",
+          "title": "Was siehst du?",
+          "image": "",
+          "options": ["die Rose", "das Geschenk", "der Kuss"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "val-2",
+          "title": "Was siehst du?",
+          "image": "",
+          "options": ["das Herz", "die Schokolade", "die Karte"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "val-3",
+          "title": "Was siehst du?",
+          "image": "",
+          "options": ["die Schokolade", "der Teddybär", "der Brief"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "val-4",
+          "title": "Was siehst du?",
+          "image": "",
+          "options": ["der Kuss", "der Ring", "die Blume"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "val-5",
+          "title": "Was siehst du?",
+          "image": "",
+          "options": ["die Karte", "die Liebe", "der Brief"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "val-6",
+          "title": "Was siehst du?",
+          "image": "",
+          "options": ["die Liebe", "das Herz", "der Teddybär"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "val-7",
+          "title": "Was siehst du?",
+          "image": "",
+          "options": ["der Ring", "der Kuss", "die Rose"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "val-8",
+          "title": "Was siehst du?",
+          "image": "",
+          "options": ["der Teddybär", "das Geschenk", "die Karte"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "val-9",
+          "title": "Was siehst du?",
+          "image": "",
+          "options": ["das Geschenk", "der Ring", "die Schokolade"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "val-10",
+          "title": "Was siehst du?",
+          "image": "",
+          "options": ["der Liebesbrief", "der Kuss", "die Blume"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "val-11",
+          "title": "Was siehst du?",
+          "image": "",
+          "options": ["die Blume", "die Rose", "die Liebe"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "val-12",
+          "title": "Was siehst du?",
+          "image": "",
+          "options": ["das Paar", "das Geschenk", "die Schokolade"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "val-13",
+          "title": "Was siehst du?",
+          "image": "",
+          "options": ["die Umarmung", "der Kuss", "das Herz"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "val-15",
+          "title": "Was siehst du?",
+          "image": "",
+          "options": ["die Praline", "die Schokolade", "das Geschenk"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "multiple-choice",
+          "id": "val-17",
+          "title": "Was siehst du?",
+          "image": "",
+          "options": ["die Valentinskarte", "die Blume", "das Geschenk"],
+          "correctOptionIndex": 0
+        },
       ]
     }
+
   ]
 }

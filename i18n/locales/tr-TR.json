@@ -1,4 +1,14 @@
 {
+  "recipes": {
+    "start": "Görevi başlat",
+    "training": "Eğitime geç",
+    "did": "Bu görevi zaten tamamladın. Sonraki yükleniyor...",
+    "timer": "Sonraki görev şu sürede mevcut olacak:",
+    "didAll": "Bu konudaki her şeyi tamamladın",
+    "notFound": "bulunamadı",
+    "error": "Ups, tarifleri bulamıyorum",
+    "repeat": "10 Artiklus karşılığında deneme"
+  },
   "practiceArticleBtn": {
     "btn": "Artikel alıştırmalarına"
   },

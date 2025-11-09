@@ -137,9 +137,9 @@ const difficultyClasses = computed(() =>
   width: 60px;
   height: 60px;
   background-color: #fff;
-  border: 3px solid #1e1e1e;
+  border: 2px solid #1e1e1e;
   border-radius: 50%;
-  box-shadow: 4px 4px 0 #1e1e1e;
+  box-shadow: 2px 2px 0 #1e1e1e;
   font-family: "Nunito", sans-serif;
   font-size: 2.5rem;
   color: #1e1e1e;
@@ -148,11 +148,6 @@ const difficultyClasses = computed(() =>
   justify-content: center;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
-}
-
-.back-button:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0 #1e1e1e;
 }
 
 .back-button:active {
@@ -164,12 +159,13 @@ const difficultyClasses = computed(() =>
   width: 100%;
   max-width: 600px;
   border: 3px solid #1e1e1e;
-  box-shadow: 8px 8px 0 #1e1e1e;
+  box-shadow: 4px 4px 0 #1e1e1e;
   border-radius: 24px;
-  padding: 2rem;
+  padding: 0 1.4rem;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  justify-content: center;
+  gap: 1rem;
   animation: fadeIn 0.5s ease-out;
 }
 
@@ -262,9 +258,15 @@ const difficultyClasses = computed(() =>
   color: #ffffff;
 }
 
-.difficulty-btn:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0 #1e1e1e;
+@media (min-width: 1024px) {
+  .back-button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 #1e1e1e;
+  }
+  .difficulty-btn:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 #1e1e1e;
+  }
 }
 
 .difficulty-btn.active {
@@ -310,17 +312,17 @@ const difficultyClasses = computed(() =>
 
 .start-button {
   font-family: "Nunito", sans-serif;
-  padding: 0.4rem 2.5rem;
+  padding: 0.8rem 2.5rem;
   font-size: 1.5rem;
   font-weight: 600;
   border-radius: 16px;
   cursor: pointer;
-  border: 3px solid #1e1e1e;
+  border: 2px solid #1e1e1e;
   transition: all 0.1s ease-in-out;
   background-color: #4ade80;
   color: #1e1e1e;
-  box-shadow: 4px 4px 0px #1e1e1e;
-  margin-top: 1rem;
+  box-shadow: 3px 3px 0px #1e1e1e;
+  margin-top: 5px;
 }
 
 .start-button:hover:not(:disabled) {
@@ -369,8 +371,8 @@ const difficultyClasses = computed(() =>
 
 @media (max-width: 640px) {
   .back-button {
-    top: 5px;
-    left: 5px;
+    top: 10px;
+    left: 10px;
     width: 40px;
     height: 40px;
     font-size: 2rem;
@@ -378,7 +380,6 @@ const difficultyClasses = computed(() =>
   }
 
   .prepare-container {
-    padding-top: 44px;
     height: 100vh;
     border-radius: 0;
     border: 0;

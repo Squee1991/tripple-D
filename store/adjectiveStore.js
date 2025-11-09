@@ -105,7 +105,7 @@ export const useQuizStore = defineStore('quiz', () => {
                 currentQuestionIndex: currentQuestionIndex.value,
                 updatedAt: serverTimestamp()
             })
-        } catch (e) {
+        } catch (error) {
             await setDoc(sessionRef(), {
                 currentQuestionIndex: currentQuestionIndex.value,
                 updatedAt: serverTimestamp()

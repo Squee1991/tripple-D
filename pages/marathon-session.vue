@@ -418,7 +418,7 @@ onMounted(() => {
   border: 3px solid #1e1e1e;
   border-radius: 24px;
   box-shadow: 8px 8px 0 #1e1e1e;
-  padding: 2.5rem;
+  padding: 1.8rem;
   max-width: 450px;
   width: 100%;
   text-align: center;
@@ -426,7 +426,7 @@ onMounted(() => {
 
 .game-over__title {
   font-family: "Nunito", sans-serif;
-  font-size: 3rem;
+  font-size: 2rem;
   color: #1e1e1e;
 }
 

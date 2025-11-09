@@ -1,4 +1,14 @@
 {
+  "recipes": {
+    "start": "Start the task",
+    "training": "To training",
+    "did": "You have already completed this task. Loading the next one...",
+    "timer": "The next task will be available in",
+    "didAll": "You have completed everything in this topic",
+    "notFound": "not found",
+    "error": "Oops, I can't find the recipes",
+    "repeat": "Attempt for 10 Artiklus"
+  },
   "practiceArticleBtn": {
     "btn": "To article practice"
   },

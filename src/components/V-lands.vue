@@ -60,7 +60,6 @@
 <script setup>
 import {ref, computed, onMounted, onBeforeUnmount, watch} from 'vue'
 import {useRouter} from 'vue-router'
-// 1. Убедитесь, что 'regions' импортируется здесь
 import {regions} from '@/utils/regions.js'
 
 const {t, locale} = useI18n()
@@ -68,19 +67,11 @@ const props = defineProps({currentLevel: {type: Number, default: 1}})
 
 const router = useRouter()
 
-// 2. НАЙТИ РЕГИОН ПО УМОЛЧАНИЮ СРАЗУ
-// Я предполагаю, что 'pathTo' для "Восточной равнины" это 'plain' (судя по CSS .theme--plain)
-// Если 'plain' не найдется, он возьмет первый регион из списка как запасной.
 const defaultRegion = regions.find(r => r.pathTo === 'plain') || regions[0] || null
-
-// 3. ИНИЦИАЛИЗИРОВАТЬ 'active' ЭТИМ ЗНАЧЕНИЕМ
-// Вместо ref(null), мы передаем найденный регион
 const active = ref(defaultRegion)
 
 const isPanelOpen = ref(false)
-const windowWidth = ref(1024) // Оставляем начальное значение
-
-// 4. ДОБАВЛЕНА НЕДОСТАЮЩАЯ ФУНКЦИЯ
+const windowWidth = ref(1024)
 function handleResize() {
   if (typeof window !== 'undefined') {
     windowWidth.value = window.innerWidth
@@ -88,11 +79,10 @@ function handleResize() {
 }
 
 onMounted(() => {
-  handleResize() // Вызываем, чтобы получить реальную ширину окна
+  handleResize()
   if (typeof window !== 'undefined') {
     window.addEventListener('resize', handleResize)
   }
-  // Логика для установки 'active' отсюда убрана, так как 'active' уже установлен
 })
 
 onBeforeUnmount(() => {
@@ -104,7 +94,6 @@ onBeforeUnmount(() => {
   }
 })
 
-// Блокируем прокрутку фона при открытии мобильной панели
 watch([isPanelOpen, windowWidth], ([newIsOpen, newWidth]) => {
   if (typeof document === 'undefined') return
 
@@ -570,7 +559,7 @@ function go(region) {
   }
 
   .region-card__title {
-    font-size: 0.75rem;
+    font-size: 0.83rem;
   }
 }
 

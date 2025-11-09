@@ -15,8 +15,5 @@
 </script>
 
 <style>
-.layout {
-  max-width: 1440px;
-  margin: 0 auto;
-}
+
 </style>

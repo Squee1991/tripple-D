@@ -1,4 +1,14 @@
 {
+  "recipes": {
+    "start": "Rozpocznij zadanie",
+    "training": "Do treningu",
+    "did": "Już ukończyłeś to zadanie. Ładuję następne...",
+    "timer": "Następne zadanie będzie dostępne za",
+    "didAll": "Ukończyłeś wszystko w tym temacie",
+    "notFound": "nie znaleziono",
+    "error": "Ups, nie mogę znaleźć przepisów",
+    "repeat": "Próba za 10 Artiklusów"
+  },
   "practiceArticleBtn": {
     "btn": "Do ćwiczeń z rodzajnikami"
   },

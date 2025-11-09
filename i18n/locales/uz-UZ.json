@@ -1,4 +1,14 @@
 {
+  "recipes": {
+    "start": "Vazifani boshlash",
+    "training": "Mashg‘ulotga o‘tish",
+    "did": "Bu vazifani allaqachon bajargansiz. Keyingisi yuklanmoqda...",
+    "timer": "Keyingi vazifa shundan keyin mavjud bo‘ladi:",
+    "didAll": "Bu mavzudagi barcha vazifalarni bajardingiz",
+    "notFound": "topilmadi",
+    "error": "Voy, retseptlarni topa olmayapman",
+    "repeat": "10 Artiklus evaziga urinish"
+  },
   "practiceArticleBtn": {
     "btn": "Artikl mashqlariga"
   },

@@ -51,7 +51,7 @@ import { useAchievementStore } from '../../store/achievementStore.js'
 const { t } = useI18n()
 const achievementStore = useAchievementStore()
 
-const overGroups = computed(() => achievementStore.groups.filter(g => g.category === 'akkusativ')
+const overGroups = computed(() => achievementStore.groups.filter(group => group.category === 'akkusativ')
 )
 
 const completedCount = group =>

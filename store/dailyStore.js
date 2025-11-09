@@ -45,21 +45,20 @@ export const dailyStore = defineStore('dailyStore', () => {
 
     function nextLocalMidnightMs(fromMs = Date.now()) {
         const d = new Date(fromMs)
-        d.setHours(24, 0, 0, 0) // 00:00 следующего дня (локально)
+        d.setHours(24, 0, 0, 0)
         return d.getTime()
     }
     function startOfTodayLocalMs(fromMs = Date.now()) {
         const d = new Date(fromMs)
-        d.setHours(0, 0, 0, 0) // 00:00 сегодня (локально)
+        d.setHours(0, 0, 0, 0)
         return d.getTime()
     }
-    // === ТАЙМЕР ДО ЛОКАЛЬНОЙ ПОЛУНОЧИ ===
     const msLeft = computed(() => {
         const now = nowMs.value || Date.now()
         const left = nextLocalMidnightMs(now) - now
         return Math.max(0, left)
     })
-    // === КЛЮЧ ЦИКЛА ПО ЛОКАЛЬНЫМ СУТКАМ ===
+
     const cycleKey = computed(() => {
         const startToday = startOfTodayLocalMs(nowMs.value || Date.now())
         return Math.floor(startToday / CYCLE_MS)
@@ -146,6 +145,10 @@ export const dailyStore = defineStore('dailyStore', () => {
     }
 
     async function pushCurrentCycleToCloud(payload, merge = false) {
+        if (uid() && !cloudReady.value) {
+            saveLocal(payload)
+            return
+        }
         if (!online()) { saveLocal(payload); return }
         const ref = userDocRef()
         if (!ref) { saveLocal(payload); return }
@@ -168,13 +171,31 @@ export const dailyStore = defineStore('dailyStore', () => {
         if (unsubRef.value || !uid()) return
         const ref = userDocRef()
         if (!ref) return
+
         unsubRef.value = onSnapshot(ref, (snap) => {
             cloudReady.value = true
             if (!snap.exists()) return
+
             const data = snap.data()
             if (!data) return
+
             const local = currentCycle.value
-            if (!local || data.cycleKey !== local.cycleKey || Number(data.lastUpdatedAtMs || 0) > Number(local.lastUpdatedAtMs || 0)) {
+
+            const cloudServerTs = typeof data.serverUpdatedAt?.toMillis === 'function'
+                ? data.serverUpdatedAt.toMillis()
+                : 0
+            const localTs = Number(local?.lastUpdatedAtMs || 0)
+
+            const cloudProgressScore = (data.quests || []).reduce((a, q) => a + (q.isCompleted ? 2 : 0) + Number(q.currentValue || 0), 0)
+            const localProgressScore = (local?.quests || []).reduce((a, q) => a + (q.isCompleted ? 2 : 0) + Number(q.currentValue || 0), 0)
+
+            const preferCloud =
+                !local ||
+                data.cycleKey !== local.cycleKey ||
+                cloudServerTs >= localTs ||                // серверное время важнее локального
+                cloudProgressScore > localProgressScore    // у облака реальный прогресс — берём его
+
+            if (preferCloud) {
                 currentCycle.value = data
                 counters.value = { ...(data.counters || counters.value) }
                 saveLocal(data)
@@ -183,6 +204,8 @@ export const dailyStore = defineStore('dailyStore', () => {
             cloudReady.value = false
         })
     }
+
+
     function detachCloudListener() {
         if (unsubRef.value) { unsubRef.value(); unsubRef.value = null }
         cloudReady.value = false
@@ -383,13 +406,11 @@ export const dailyStore = defineStore('dailyStore', () => {
             if (uid()) {
                 attachCloudListener()
                 ensureLocalCycle()
-                if (currentCycle.value) {
-                    pushCurrentCycleToCloud(currentCycle.value, true).catch(() => {})
-                }
             } else {
                 ensureLocalCycle()
             }
         })
+
     }
 
 

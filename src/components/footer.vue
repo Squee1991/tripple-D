@@ -1,7 +1,6 @@
 <template>
   <footer class="footer" role="contentinfo">
     <div class="footer__container">
-      <!-- Социальные сети -->
       <div class="footer__social">
         <div class="social__item" @click="toDiscord" role="button" aria-label="Discord" tabindex="0">
           <div class="icon">
@@ -19,7 +18,7 @@
           </div>
           <span>discord</span>
         </div>
-        <a href="https://t.me/" target="_blank" rel="noopener" class="social__item" aria-label="Telegram">
+        <a href="https://t.me/+9Iao2uveB0o5NDI0" target="_blank" rel="noopener" class="social__item" aria-label="Telegram">
           <div class="icon">
             <svg height="28" viewBox="0 0 176 176" width="28" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
               <g data-name="Layer 2">
