@@ -49,10 +49,6 @@
                 </div>
                 <div class="level-info">{{ t('cabinet.level') }} {{ learningStore.isLeveling }}</div>
               </div>
-              <!--            <button class="add__friend-wrapper" type="button" @click="openFriendSearchModal">-->
-              <!--              <img class="find__friend" src="../assets/images/magnifying-glass.svg" alt="">-->
-              <!--              <div class="find__text">Найти друзей</div>-->
-              <!--            </button>-->
             </div>
             <div class="award-strip">
               <div class="awards__get">
@@ -125,7 +121,10 @@
                       <template v-if="authStore.isPremium && !authStore.subscriptionCancelled">
                         <div class="premium__status-wrapper">
                           <p>📅 {{ t('cabinet.nextPayment') }} {{ formattedSubscriptionEndDate }}</p>
-                          <button class="btn btn-danger" @click.stop="openCancelModal">{{ t('cabinet.cancelBtn') }}</button>
+                          <button class="btn btn-danger" @click.stop="openCancelModal">{{
+                              t('cabinet.cancelBtn')
+                            }}
+                          </button>
                         </div>
                       </template>
                       <template v-else-if="authStore.isPremium && authStore.subscriptionCancelled">
@@ -138,17 +137,23 @@
                             v-for="settingsItem in settingsToggleItems"
                             :key="settingsItem.key"
                             class="row__el--wrapper"
+                            :class="{ 'locked-setting': settingsItem.key === 'snowFall' && !eventStore.isSnowPurchased }"
                         >
-                          <div class="toggle__wrapper">{{ settingsItem.label }}</div>
+                          <div class="toggle__wrapper">
+                            {{ settingsItem.label }}
+                            <span v-if="settingsItem.key === 'snowFall' && !eventStore.isSnowPurchased">🔒</span>
+                          </div>
                           <ClientOnly>
                             <ColorScheme v-if="settingsItem.wrap">
                               <VToggle
+                                  :key="settingsItem.key + toggleForceUpdateKey"
                                   :model-value="getSettingValue(settingsItem.key)"
                                   @change="value => onSettingChange(settingsItem.key, value)"
                               />
                             </ColorScheme>
                             <template v-else>
                               <VToggle
+                                  :key="settingsItem.key + toggleForceUpdateKey"
                                   :model-value="getSettingValue(settingsItem.key)"
                                   @change="value => onSettingChange(settingsItem.key, value)"
                               />
@@ -164,13 +169,20 @@
                 <button @click="openDeleteModal" class="btn btn-danger">{{ t('cabinet.deleteAcc') }}</button>
               </div>
             </div>
-            <div v-else-if="activeTabKey === 'friends'"><VFindFriends/></div>
-            <div v-else-if="activeTabKey === 'award'"><AwardsList :awards="awardList"/></div>
-            <div v-else-if="activeTabKey === 'archive'"><VExampResulut/></div>
+            <div v-else-if="activeTabKey === 'friends'">
+              <VFindFriends/>
+            </div>
+            <div v-else-if="activeTabKey === 'award'">
+              <AwardsList :awards="awardList"/>
+            </div>
+            <div v-else-if="activeTabKey === 'archive'">
+              <VExampResulut/>
+            </div>
           </div>
         </ClientOnly>
       </section>
     </div>
+
     <div v-if="isAvatarModalOpen" class="avatar-modal-overlay" @click.self="isAvatarModalOpen = false">
       <div class="avatar-modal-content">
         <h3>{{ t('cabinet.newAvatarTitle') }}</h3>
@@ -194,18 +206,19 @@
         </div>
       </div>
     </div>
+
     <div v-if="isPurchaseModalOpen" class="modal-overlay" @click.self="isPurchaseModalOpen = false">
       <div class="modal-card">
         <template v-if="purchaseState === 'success'">
-          <div class="modal-title">{{ t('cabinet.boughtAvatar')}}</div>
+          <div class="modal-title">{{ t('cabinet.boughtAvatar') }}</div>
           <div class="modal-actions">
-            <button class="btn btn-success" @click="closePurchaseOk">{{ t('cabinet.boughtBtn')}}</button>
+            <button class="btn btn-success" @click="closePurchaseOk">{{ t('cabinet.boughtBtn') }}</button>
           </div>
         </template>
         <template v-else-if="purchaseState === 'insufficient'">
-          <div class="modal-title">{{ t('cabinet.notEnoughtArticles')}}</div>
+          <div class="modal-title">{{ t('cabinet.notEnoughtArticles') }}</div>
           <div class="modal-actions">
-            <button class="btn" @click="closePurchaseOk">{{ t('cabinet.boughtBtn')}}</button>
+            <button class="btn" @click="closePurchaseOk">{{ t('cabinet.boughtBtn') }}</button>
           </div>
         </template>
         <template v-else>
@@ -218,6 +231,7 @@
         </template>
       </div>
     </div>
+
     <div v-if="isDeleteModalOpen" class="modal-overlay" @click.self="isDeleteModalOpen = false">
       <div class="modal-card">
         <div class="modal-title">{{ t('cabinet.deleteAccTitle') }}</div>
@@ -237,6 +251,21 @@
         </div>
       </div>
     </div>
+
+    <div v-if="isSnowWarningModalOpen" class="modal-overlay" @click.self="isSnowWarningModalOpen = false">
+      <div class="modal-card">
+        <div class="modal-title">❄️ Эффект недоступен</div>
+        <p class="modal-text">
+          Этот эффект можно разблокировать только в событии <b>«Шёпот зимы»</b>.
+          <br>
+          Приобретите его в магазине события за снежинки!
+        </p>
+        <div class="modal-actions">
+          <button class="btn" @click="isSnowWarningModalOpen = false">Закрыть</button>
+        </div>
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -257,6 +286,8 @@ import {mapErrors} from '../utils/errorsHandler.js'
 import {isSoundEnabled, setSoundEnabled, unlockAudioByUserGesture} from '../utils/soundManager.js'
 import {useUiSettingsStore} from '../store/uiSettingsStore.js'
 import {AWARDS} from '~/utils/awards'
+import {useFriendsStore} from '../../store/friendsStore.js'
+import {useEventSessionStore} from '../../store/eventsStore.js'
 
 import UserIcon from '../assets/images/hedgehog.svg'
 import FriendsIcon from '../assets/images/friend.svg'
@@ -268,7 +299,13 @@ import EditIcon from '../assets/accountToggleIcons/edit.svg'
 import UserAccIcon from '../assets/accountToggleIcons/user.svg'
 import SettingsIcon from '../assets/accountToggleIcons/settings.svg'
 import FaqIcon from '../assets/accountToggleIcons/faq.svg'
-import {useFriendsStore} from '../../store/friendsStore.js'
+
+definePageMeta({
+  robots: {
+    index: false,
+    follow: false
+  }
+})
 
 const {t, locale} = useI18n()
 const router = useRouter()
@@ -279,9 +316,12 @@ const achievementStore = useAchievementStore()
 const gameStore = useGameStore()
 const uiSettings = useUiSettingsStore()
 const friendsStore = useFriendsStore()
+const eventStore = useEventSessionStore()
 
 const activeTabKey = ref('info')
 const isFriendSearchModalOpen = ref(false)
+const isSnowWarningModalOpen = ref(false)
+const toggleForceUpdateKey = ref(0)
 
 const userNameSafe = computed(() =>
     authStore.initialized && authStore.name ? authStore.name : '—'
@@ -295,12 +335,11 @@ const TAB_ITEMS = [
   {key: 'info', label: t('cabinetSidebar.valueOne'), icon: UserIcon},
   {key: 'friends', label: t('cabinetSidebar.valueTwo'), icon: FriendsIcon},
   {key: 'award', label: t('cabinetSidebar.valueThree'), icon: AwardsIcon},
-  {key: 'archive', label: t('cabinetSidebar.valueFour'), icon: Folder },
+  {key: 'archive', label: t('cabinetSidebar.valueFour'), icon: Folder},
 ]
 
 const ACCORDIONS = ref([
   {key: 'personal', title: t('cabinetAccordion.personalData'), icon: UserAccIcon, isLink: false},
-  // {key: 'account', title: t('cabinetAccordion.account'), icon: EditIcon, isLink: false},
   {key: 'settings', title: t('cabinetAccordion.settings'), icon: SettingsIcon, isLink: false},
   {key: 'faq', title: t('cabinetAccordion.faq'), icon: FaqIcon, isLink: true},
 ])
@@ -315,6 +354,7 @@ const settingsToggleItems = [
   {key: 'sound', label: t('cabinetToggle.sound'), wrap: false},
   {key: 'dark', label: t('cabinetToggle.theme'), wrap: true},
   {key: 'ach', label: t('cabinetToggle.ach'), wrap: true},
+  {key: 'snowFall', label: 'Снегопад', wrap: true},
 ]
 
 const activeAccordion = ref(null)
@@ -355,14 +395,15 @@ const registrationDateText = computed(() => {
     date = new Date(registeredAt);
   }
   if (isNaN(date.getTime())) return '—';
-  return date.toLocaleDateString('ru-RU', { day: '2-digit', month: '2-digit', year: 'numeric' });
+  return date.toLocaleDateString('ru-RU', {day: '2-digit', month: '2-digit', year: 'numeric'});
 });
 
 const routeToPay = () => router.push('/pay')
 
 const shownAwardsSet = ref(loadShownAwards())
 const awardList = ref(
-    AWARDS.map(a => ({ ...a, locked: a.key === 'registerAchievement' ? false : !shownAwardsSet.value.has(a.key)
+    AWARDS.map(a => ({
+      ...a, locked: a.key === 'registerAchievement' ? false : !shownAwardsSet.value.has(a.key)
     }))
 )
 
@@ -376,19 +417,28 @@ watch(() => authStore.uid, () => {
 const getSettingValue = key => {
   if (key === 'sound') return soundEnabled.value
   if (key === 'dark') return darkMode.value
-  if (key === 'ach')  return uiSettings.achievementsNotifyEnabled
+  if (key === 'ach') return uiSettings.achievementsNotifyEnabled
+  if (key === 'snowFall') return eventStore.isSnowEnabled
 }
 
 const onSettingChange = (key, value) => {
   if (key === 'sound') return handleSoundToggle(value)
-  if (key === 'dark')  return handleThemeToggle(value)
-  if (key === 'ach')   return uiSettings.setAchievementsNotifyEnabled(value)
+  if (key === 'dark') return handleThemeToggle(value)
+  if (key === 'ach') return uiSettings.setAchievementsNotifyEnabled(value)
+  if (key === 'snowFall') {
+    if (!eventStore.isSnowPurchased) {
+      isSnowWarningModalOpen.value = true
+      toggleForceUpdateKey.value++
+      return
+    }
+    return eventStore.setSnowFallEnabled(value)
+  }
 }
 
 const formattedSubscriptionEndDate = computed(() => {
   if (!authStore.subscriptionEndsAt) return '-'
   const date = new Date(authStore.subscriptionEndsAt)
-  return date.toLocaleDateString(locale.value, { year: 'numeric', month: 'long', day: 'numeric' })
+  return date.toLocaleDateString(locale.value, {year: 'numeric', month: 'long', day: 'numeric'})
 })
 
 const awardsStorageKey = computed(() => `awards_shown_v1_${authStore.uid || 'anon'}`)
@@ -398,18 +448,26 @@ function loadShownAwards() {
     if (typeof window === 'undefined') return new Set()
     const raw = localStorage.getItem(awardsStorageKey.value)
     return new Set(raw ? JSON.parse(raw) : [])
-  } catch { return new Set() }
+  } catch {
+    return new Set()
+  }
 }
 
 function saveShownAwards(set) {
   try {
     if (typeof window === 'undefined') return
     localStorage.setItem(awardsStorageKey.value, JSON.stringify([...set]))
-  } catch {}
+  } catch {
+  }
 }
 
-function setActiveTab(key) { activeTabKey.value = key }
-function backToMain() { router.push('/') }
+function setActiveTab(key) {
+  activeTabKey.value = key
+}
+
+function backToMain() {
+  router.push('/')
+}
 
 function handleSoundToggle(value) {
   setSoundEnabled(value)
@@ -422,18 +480,27 @@ function handleThemeToggle(value) {
   darkMode.value = value
 }
 
-function openCancelModal() { isCancelModalOpen.value = true }
-function closeCancelModal() { isCancelModalOpen.value = false }
+const openCancelModal = () => {
+  isCancelModalOpen.value = true
+}
+
+const  closeCancelModal = () => {
+  isCancelModalOpen.value = false
+}
 
 async function cancelSubscription() {
   if (!authStore.uid) return
   try {
     const res = await $fetch('/api/stripe/cancel', {method: 'POST', body: {uid: authStore.uid}})
     if (!res.success) alert('Ошибка отмены подписки: ' + res.error)
-  } catch { alert('Error, try later') }
+  } catch {
+    alert('Error, try later')
+  }
 }
 
-function goToFaq() { router.push('/faq') }
+function goToFaq() {
+  router.push('/faq')
+}
 
 function openPurchaseModal(name) {
   purchaseAvatarName.value = name
@@ -441,7 +508,9 @@ function openPurchaseModal(name) {
   isPurchaseModalOpen.value = true
 }
 
-function selectAvatar(name) { selectedAvatarName.value = name }
+function selectAvatar(name) {
+  selectedAvatarName.value = name
+}
 
 async function confirmPurchase() {
   const status = await authStore.purchaseAvatar(purchaseAvatarName.value)
@@ -460,7 +529,8 @@ async function confirmAvatarChange() {
   try {
     await authStore.updateUserAvatar(selectedAvatarName.value)
     isAvatarModalOpen.value = false
-  } catch {}
+  } catch {
+  }
 }
 
 function openDeleteModal() {
@@ -491,6 +561,7 @@ const isGoogleUser = computed(() => authStore.isGoogleUser)
 onMounted(async () => {
   await learningStore.loadFromFirebase()
   soundEnabled.value = isSoundEnabled()
+  await eventStore.loadGlobalWinterSettings()
 })
 
 onMounted(() => {
@@ -528,8 +599,7 @@ watchEffect(() => {
 </script>
 
 <style scoped>
-
-.friends{
+.friends {
   color: var(--titleColor);
   font-size: 20px;
   font-weight: 600;
@@ -642,7 +712,7 @@ watchEffect(() => {
   font-size: 1.3rem;
   color: var(--titleColor);
   font-family: "Nunito", sans-serif;
-  padding: 12px 0 ;
+  padding: 12px 0;
   font-weight: 600;
 }
 
@@ -1126,6 +1196,16 @@ watchEffect(() => {
   margin-right: 10px;
 }
 
+.locked-setting {
+  opacity: 0.7;
+}
+
+.locked-setting .toggle__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 @media (max-width: 1023px) {
   .cabinet-wrapper {
     height: 100vh;
@@ -1229,10 +1309,12 @@ watchEffect(() => {
     transform: translate(1px, 1px);
     box-shadow: 2px 2px 0 #000;
   }
+
   .add__friend-wrapper:hover {
     transform: translate(2px, 2px);
     box-shadow: 2px 2px 0 #000;
   }
+
   .find__friends:hover {
     transform: translate(2px, 2px);
     box-shadow: 1px 1px 0 #000;

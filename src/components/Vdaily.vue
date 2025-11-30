@@ -104,7 +104,7 @@ onUnmounted(() => {
 .daily {
   width: 100%;
   flex-grow: 1;
-  border: 4px solid var(--border);
+  border: 3px solid var(--border);
   border-radius: 16px;
   padding: 16px;
   color: var(--titleColor);

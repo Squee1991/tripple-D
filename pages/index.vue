@@ -9,6 +9,8 @@ import FeedBack from '../src/components/feedBack.vue'
 import Footer from '../src/components/footer.vue'
 import VUid from '../src/components/V-uid.vue'
 import VEventAvailableModal from "../src/components/V-eventAvailableModal.vue";
+import VShowFall from "../src/components/V-showFall.vue";
+import { useEventSessionStore} from '../store/eventsStore.js'
 import { useHead, useSeoMeta } from '#imports'
 const { public: { siteUrl } } = useRuntimeConfig()
 const base = (siteUrl || '').replace(/\/$/, '')
@@ -46,7 +48,7 @@ useSeoMeta({
   ogImage: '/images/seo-main.png',
   robots: 'index, follow'
 })
-
+const eventStore = useEventSessionStore()
 const authStore = userAuthStore()
 const hydrated = ref(false)
 onMounted(() => {
@@ -56,6 +58,7 @@ onMounted(() => {
 
 <template>
   <VEventAvailableModal @close="false" v-if="authStore.initialized"/>
+  <VShowFall v-if="eventStore.isSnowEnabled"/>
   <div v-if="!hydrated || !authStore.initialized" class="loading"></div>
   <div v-else class="container">
     <Header/>

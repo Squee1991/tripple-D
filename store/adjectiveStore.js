@@ -19,7 +19,7 @@ export const useQuizStore = defineStore('quiz', () => {
         }
         return null
     })
-    const score = computed(() => Object.values(userAnswers.value).filter(a => a && a.isCorrect).length)
+    const score = computed(() => Object.values(userAnswers.value).filter(answer => answer && answer.isCorrect).length)
     const quizCompleted = computed(() => currentQuestions.value.length > 0 && currentQuestionIndex.value >= currentQuestions.value.length)
     const context = ref({ modeId: null, topicId: null, fileName: null, contentVersion: null, attemptId: null })
     const questionIdsOrder = ref([])
@@ -176,8 +176,8 @@ export const useQuizStore = defineStore('quiz', () => {
         })
     }
 
-    function getQuestionId(q) {
-        const base = q.question + '|' + q.options.join('||') + '|' + q.answer
+    function getQuestionId(quest) {
+        const base = quest.question + '|' + quest.options.join('||') + '|' + quest.answer
         let h = 0
         for (let i = 0; i < base.length; i++) h = (h * 31 + base.charCodeAt(i)) >>> 0
         return 'q' + h.toString(16)
@@ -203,11 +203,11 @@ export const useQuizStore = defineStore('quiz', () => {
             allQuestions.value = []
         }
         if (allQuestions.value && allQuestions.value.length > 0) {
-            const withIds = allQuestions.value.map(q => ({ ...q, id: getQuestionId(q) }))
+            const withIds = allQuestions.value.map(quest => ({ ...quest, id: getQuestionId(quest) }))
             const shuffled = [...withIds].sort(() => 0.5 - Math.random())
             const picked = shuffled.slice(0, 10)
             currentQuestions.value = picked
-            questionIdsOrder.value = picked.map(q => q.id)
+            questionIdsOrder.value = picked.map(quest => quest.id)
             await saveSessionStart()
         }
     }
@@ -247,45 +247,11 @@ export const useQuizStore = defineStore('quiz', () => {
         } catch {}
     }
 
-
     async function restoreOrStart({ modeId, topicId, fileName, contentVersion }) {
         setContext({ modeId, topicId, fileName, contentVersion })
         requireContext()
         await startNewQuiz({ modeId, topicId, fileName, contentVersion })
     }
-
-
-    // async function restoreOrStart({ modeId, topicId, fileName, contentVersion }) {
-    //     setContext({ modeId, topicId, fileName, contentVersion })
-    //     requireContext()
-    //     let snap = null
-    //     try {
-    //         const s = await getDoc(sessionRef())
-    //         snap = s.exists() ? s.data() : null
-    //     } catch {}
-    //     if (!snap || snap.fileName !== fileName || snap.contentVersion !== contentVersion || snap.completed) {
-    //         await startNewQuiz({ modeId, topicId, fileName, contentVersion })
-    //         return
-    //     }
-    //     try {
-    //         const res = await fetch(fileName)
-    //         allQuestions.value = await res.json()
-    //     } catch {
-    //         allQuestions.value = []
-    //     }
-    //     const idMap = new Map()
-    //     allQuestions.value.forEach(q => {
-    //         const id = getQuestionId(q)
-    //         idMap.set(id, { ...q, id })
-    //     })
-    //     currentQuestions.value = (snap.questionIdsOrder || []).map(id => idMap.get(id)).filter(Boolean)
-    //     questionIdsOrder.value  = snap.questionIdsOrder || []
-    //     currentQuestionIndex.value = snap.currentQuestionIndex || 0
-    //     selectedOption.value = snap.selectedOption || null
-    //     userAnswers.value = snap.userAnswersMap || {}
-    //     startedAt.value = snap.startedAt ? new Date(snap.startedAt).getTime() : Date.now()
-    //     feedback.value = null
-    // }
 
     function chooseOption(option) {
         if (feedback.value === null) selectedOption.value = option
@@ -302,8 +268,6 @@ export const useQuizStore = defineStore('quiz', () => {
         try { await saveAnswer(currentQuestionIndex.value, selectedOption.value, isCorrect) } catch {}
         try { await bumpAggOnAnswer(isCorrect) } catch {}
     }
-
-
 
     async function nextQuestion() {
         if (currentQuestionIndex.value < currentQuestions.value.length) {

@@ -1,7 +1,7 @@
 <template>
   <Teleport to="body">
     <div class="ach-toast-container" aria-live="polite" aria-atomic="true">
-      <transition name="ach-toast">
+      <transition name="ach-toast" @after-leave="checkFinished">
         <div
             v-if="ach.showPopup && ach.popupAchievement"
             class="ach-toast-card"
@@ -70,13 +70,20 @@
 <script setup>
 import {computed, ref, watch, onMounted, onBeforeUnmount} from 'vue'
 import {useAchievementStore} from '../../store/achievementStore.js'
-
+const emit = defineEmits(['toast-finished'])
 const {t} = useI18n()
 const ach = useAchievementStore()
 
 function isImageUrl(v) {
   if (typeof v !== 'string') return false
   return /^https?:\/\//i.test(v) && /\.(png|jpe?g|gif|svg|webp)(\?.*)?$/i.test(v)
+}
+
+function checkFinished() {
+  // Эмитим событие только если оба попапа скрыты
+  if (!ach.showPopup && !awardVisible.value) {
+    emit('toast-finished')
+  }
 }
 
 const achIcon = computed(() => {
@@ -86,7 +93,7 @@ const achIcon = computed(() => {
   return {type: 'text', text: raw}
 })
 
-const AUTO_CLOSE_MS = 2600
+const AUTO_CLOSE_MS = 2500
 let raf = null
 const remaining = ref(AUTO_CLOSE_MS)
 let lastTick = 0
@@ -143,7 +150,7 @@ function forceClose() {
 
 const awardVisible = ref(false)
 const awardTitle = ref('')
-const AWARD_AUTO_CLOSE_MS = 2600
+const AWARD_AUTO_CLOSE_MS = 2500
 const awardRemaining = ref(AWARD_AUTO_CLOSE_MS)
 let awardLastTick = 0
 let awardRAF = null
@@ -223,7 +230,7 @@ onBeforeUnmount(() => {
   top: 16px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 9999;
+  z-index: 2147483647 !important;
   display: flex;
   flex-direction: column;
   gap: 6px;

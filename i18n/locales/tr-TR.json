@@ -1,4 +1,52 @@
 {
+  "winterAchievements": {
+    "firstQuestName": "İlk ağaç yıldızı",
+    "firstQuestDescription": "Kış etkinliğindeki herhangi bir görevi tamamla ve ilk yıldızı yak.",
+    "santaLexiconName": "Noel Baba Sözlüğü",
+    "santaLexiconDescription": "Noel ve Yeni Yıl ile ilgili tüm kelimeleri öğren.",
+    "everyQuestName": "Kış fısıltısının bekçisi",
+    "everyQuestDescription": "“Kışın Fısıltısı” etkinliğinin tüm görevlerini tamamla ve gerçek bir tipinin nefesini hisset.",
+    "snowFallName": "Kar yağışı",
+    "snowFallDescription": "“Kışın Fısıltısı” etkinliği sırasında kar yağışı efektini satın al.",
+    "santaHatName": "Noel Baba Şapkası",
+    "santaHatDescription": "Etkinlik sırasında efsanevi Noel Baba Şapkasını satın al ve Noel ruhunu hisset.",
+    "christmasBallName": "Kar küresi",
+    "christmasBallDescription": "Bu büyülü kar küresini satın al ve kışın bir anını yakala.",
+    "christmasWreathName": "Noel çelengi",
+    "christmasWreathDescription": "Bayramın ve ev sıcaklığının sembolü olan geleneksel çelengi satın al.",
+    "winterHonorName": "Kış onuru",
+    "winterHonorDescription": "“Kışın Fısıltısı” etkinliğinde görevler yaparak kış onuru kazan.",
+    "metaChristmasName": "Noel ustası",
+    "metaChristmasDescription": "“Kışın Fısıltısı” etkinliğinin tüm başarılarını aç ve yılbaşı sezonunun efsanesi ol."
+  },
+  "stepHitSettings": {
+    "back": "Geri",
+    "further": "İleri",
+    "end": "Bitir",
+    "skip": "Atla"
+  },
+  "stepHitLabels": {
+    "learnTitle": "Öğrenme",
+    "learnDescription": "Dilbilgisi, ifadeler, artikeller, zamanlar ve pratik — Almanca’yı güvenle geliştirmek için.",
+    "duelTitle": "Oyunlar",
+    "duelDescription": "Düellolar, maratonlar, kelime tahmini modu, görev günlüğü ve oyun tarzında eğitim.",
+    "testTitle": "Testler",
+    "testDescription": "A1’den B2’ye kadar seviyeni test et: yazma, dinleme, konuşma ve anında değerlendirme.",
+    "eventTitle": "Etkinlikler",
+    "eventDescription": "Sezonluk görevler, kelime koleksiyonları ve ödüllü geçici meydan okumalar.",
+    "articleTitle": "Articlus",
+    "articleDescription": "Bu senin öğrenme para birimindir. Doğru cevaplar için Articlus kazan ve ek denemeler için kullan.",
+    "levelTitle": "Seviye",
+    "levelDescription": "Burada mevcut seviyen gösterilir. Öğren ve adım adım yüksel.",
+    "statsTitle": "İstatistik",
+    "statsDescription": "Genel öğrenme verileri: görevler, artikeller, temalar ve ilerleme.",
+    "achievementsTitle": "Başarılar",
+    "achievementsDescription": "Burada oyun ve görev başarıların toplanır.",
+    "rankedTitle": "Sıralama",
+    "rankedDescription": "Burada oyuncu sıralamasını görebilirsin: kim daha çok kelime bildi ve kim birinci.",
+    "calendarTitle": "Etkinlik takvimi",
+    "calendarDescription": "Etkinlikler tarihlere göre gösterilir. Ödülleri kaçırma!"
+  },
   "recipes": {
     "start": "Görevi başlat",
     "training": "Eğitime geç",
@@ -4346,7 +4394,7 @@
     "cowabungaText": "KOWABUNGA",
     "cowabungaDescription": "Salam mı yoksa pepperoni mi? Ninja Kaplumbağalar nasılsa yerdi. Artikel pratiğinde tüm modlarda “salam” kelimesini öğren.",
     "zooText": "Hayvanların Dostu",
-    "zooDescription": "Tüm canlıların gerçek dostu!",
+    "zooDescription": "Gerçek bir arkadaş kimseyi artikelsiz bırakmaz! “Hayvanlar” konusundaki tüm kelimeleri artikl pratiğinin tüm modlarında öğrenin.",
     "veganText": "Sebzelerin Koruyucusu",
     "veganDescription": "Hiçbir sebze artikelsiz kalmayacak! ‘Yemek’ konusundaki tüm sebze kelimelerini her artikel çalışma modunda öğrenin.",
     "firstStepLabel": "İlk Adım",
@@ -4379,7 +4427,9 @@
     "magisterText": "Artikel Pratiğinde tüm modlarda 100 kelime öğrenerek ustalık seviyesine ulaş",
     "mistakesLabel": "Hatalar Beni Durduramaz!",
     "mistakesText": "Her biri bilgiye atılan bir adım!",
-    "mistakesAward": "Ödül: Sabır Tılsımı"
+    "mistakesAward": "Ödül: Sabır Tılsımı",
+    "voiceActivatedText": "Ses erişimi",
+    "voiceActivatedLabel": "Önemli bildirimi okuyup kabul edin ve Sprechen modülünü etkinleştirin."
   },
   "guessCategory": {
     "guessLabel": "Kelimeyi tahmin et",

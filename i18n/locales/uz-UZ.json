@@ -1,4 +1,53 @@
 {
+  "winterAchievements": {
+    "firstQuestName": "Birinchi archa yulduzi",
+    "firstQuestDescription": "Qishki voqea doirasidagi istalgan vazifani bajaring va birinchi yulduzni yoqing.",
+    "santaLexiconName": "Santa lug‘ati",
+    "santaLexiconDescription": "Rojdestvo va Yangi yilga oid barcha so‘zlarni o‘zlashtiring.",
+    "everyQuestName": "Qish pichirining qo‘riqchisi",
+    "everyQuestDescription": "“Qish pichiri” voqeasining barcha vazifalarini bajaring va haqiqiy bo‘ron nafasini his qiling.",
+    "snowFallName": "Qor yog‘ishi",
+    "snowFallDescription": "“Qish pichiri” voqeasi davomida qor yog‘ishi effektini sotib oling.",
+    "santaHatName": "Santa shapkasi",
+    "santaHatDescription": "Tadbir davomida afsonaviy Santa shapkasi­ni sotib oling va Rojdestvo ruhini his eting.",
+    "christmasBallName": "Qor shari",
+    "christmasBallDescription": "Ushbu sehrli qor sharini xarid qilib, qish onini asrab qoling.",
+    "christmasWreathName": "Rojdestvo chambaragi",
+    "christmasWreathDescription": "Bayram va uy qulayligi ramzi bo‘lgan an’anaviy chambarakni sotib oling.",
+    "winterHonorName": "Qishiy sha’n",
+    "winterHonorDescription": "“Qish pichiri” voqeasidagi topshiriqlarni bajarib, qishiy sha’nni qo‘lga kiriting.",
+    "metaChristmasName": "Rojdestvo ustasi",
+    "metaChristmasDescription": "“Qish pichiri” voqeasining barcha yutuqlarini oching va bayram mavsumining afsonasiga aylaning."
+  },
+
+  "stepHitSettings": {
+    "back": "Orqaga",
+    "further": "Keyingi",
+    "end": "Tugatish",
+    "skip": "O‘tkazib yuborish"
+  },
+  "stepHitLabels": {
+    "learnTitle": "O‘qish",
+    "learnDescription": "Grammatika, iboralar, artikllar, zamonlar va mashqlar — nemis tilini ishonch bilan rivojlantirish uchun.",
+    "duelTitle": "O‘yinlar",
+    "duelDescription": "Duellar, marafonlar, so‘z topish rejimi, vazifalar jurnali va o‘yin ko‘rinishidagi mashqlar.",
+    "testTitle": "Testlar",
+    "testDescription": "A1 dan B2 gacha darajani tekshiring: grammatika, yozish, tinglash va gapirish.",
+    "eventTitle": "Tadbirlar",
+    "eventDescription": "Mavsumiy topshiriqlar va vaqtinchalik sinovlar mukofotlar bilan.",
+    "articleTitle": "Articlus",
+    "articleDescription": "Bu — o‘qish uchun ichki valyutangiz. To‘g‘ri javoblar uchun Articlus oling va qo‘shimcha urinishlarga sarflang.",
+    "levelTitle": "Daraja",
+    "levelDescription": "Bu yerda joriy darajangiz ko‘rsatiladi. O‘qing va bosqichma-bosqich ko‘tariling.",
+    "statsTitle": "Statistika",
+    "statsDescription": "Umumiy statistika: topshiriqlar, artikllar, mavzular va o‘yinlar.",
+    "achievementsTitle": "Yutuqlar",
+    "achievementsDescription": "Bu yerda o‘yinlar va topshiriqlar uchun yutuqlaringiz saqlanadi.",
+    "rankedTitle": "Reyting",
+    "rankedDescription": "Bu yerda kim ko‘p so‘z topgani va kim birinchi o‘rinda ekanini ko‘rasiz.",
+    "calendarTitle": "Tadbirlar taqvimi",
+    "calendarDescription": "Tadbirlar sanalar bo‘yicha ko‘rsatiladi. Mukofotlarni qo‘ldan boy bermang."
+  },
   "recipes": {
     "start": "Vazifani boshlash",
     "training": "Mashg‘ulotga o‘tish",
@@ -4346,7 +4395,7 @@
     "cowabungaText": "KOVABUNGA",
     "cowabungaDescription": "Salami yoki pepperoni? Ninja toshbaqalari baribir yeydi. “salami” so‘zini artikl mashqlarida barcha rejimlarda o‘rganing.",
     "zooText": "Hayvonlar do‘sti",
-    "zooDescription": "Barcha jonivorlarning chin do‘sti!",
+    "zooDescription": "Haqiqiy doʻst hech kimni artiklsiz qoldirmaydi! “Hayvonlar” mavzusidagi barcha soʻzlarni artikl mashqining barcha rejimlarida oʻrganing.",
     "veganText": "Sabzavot himoyachisi",
     "veganDescription": "Hech bir sabzavot artiklsiz qolmaydi! “Oziq-ovqat” mavzusidagi barcha sabzavot so‘zlarini barcha artikel mashq rejimlarida o‘rganing.",
     "firstStepLabel": "Birinchi qadam",
@@ -4379,7 +4428,9 @@
     "magisterText": "Artikl mashqlarida barcha rejimlarda 100 ta so‘z o‘rganib ustalik darajasiga erishing",
     "mistakesLabel": "Xatolar to‘siq emas!",
     "mistakesText": "Har bir xato — bilim sari qadam!",
-    "mistakesAward": "Mukofot: Sabr talismani"
+    "mistakesAward": "Mukofot: Sabr talismani",
+    "voiceActivatedText": "Ovozli kirish",
+    "voiceActivatedLabel": "Muhim bildirishnomani o‘qing va tasdiqlang hamda Sprechen modulini faollashtiring."
   },
   "guessCategory": {
     "guessLabel": "So‘zni topish",

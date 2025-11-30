@@ -81,13 +81,31 @@ export default defineNuxtConfig({
 			]
 		}
 	},
-	sitemap: { siteUrl, autoLastmod: true },
+	sitemap: {
+		siteUrl,
+		autoLastmod: true,
+		exclude: [
+			'/**/success',
+			'/**/battle',
+			'/**/cabinet',
+			'/**/calendar',
+			'/**/chat'
+		],
+	},
 	robots: {
 		rules: process.env.VERCEL_ENV === 'production'
-			? [{ userAgent: '*', allow: '/' }]
+			? [
+				{ userAgent: '*', allow: '/' },
+				{ userAgent: '*', disallow: '/*success' },
+				{ userAgent: '*', disallow: '/*battle' },
+				{ userAgent: '*', disallow: '/*cabinet' },
+				{ userAgent: '*', disallow: '/*calendar' },
+				{ userAgent: '*', disallow: '/*chat' }
+			]
 			: [{ userAgent: '*', disallow: '/' }],
 		sitemap: `${siteUrl}/sitemap.xml`,
 	},
+
 
 	css: [
 		'simplebar/dist/simplebar.min.css',
@@ -177,6 +195,12 @@ export default defineNuxtConfig({
 		'/es/**': { prerender: true },
 		'/api/**': {
 			headers: { 'cache-control': 'public, s-maxage=300, stale-while-revalidate=600' }
-		}
+		},
+
+		'/**/success': { headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
+		'/**/battle': { headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
+		'/**/cabinet': { headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
+		'/**/calendar': { headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
+		'/**/chat': { headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
 	},
 })

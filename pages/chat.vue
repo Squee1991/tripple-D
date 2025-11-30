@@ -1,6 +1,13 @@
 <script setup>
 import { ref } from 'vue'
 
+definePageMeta({
+  robots: {
+    index: false,
+    follow: false
+  }
+})
+
 const input = ref('')
 const messages = ref([])
 const err = ref('')

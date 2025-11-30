@@ -1,61 +1,77 @@
-	export const eventWinterAchievements = [
+export const eventWinterAchievements = [
 	{
 		title: '',
 		achievements: [
 			{
 				id: 'firstQuest',
-				name: 'Первая ёлочная звезда',
-				description: 'Выполните любой квест зимнего события и зажгите первую звезду',
+				name: 'winterAchievements.firstQuestName',
+				description: 'winterAchievements.firstQuestDescription',
 				currentProgress: 0,
 				targetProgress: 1,
 				icon: '🌟'
 			},
 			{
 				id: 'santaLexicon',
-				name: 'Словарь Санты',
-				description: 'Освой все слова, связанные с Рождеством и Новым годом',
+				name: 'winterAchievements.santaLexiconName',
+				description: 'winterAchievements.santaLexiconDescription',
 				currentProgress: 0,
 				targetProgress: 30,
 				icon: '📚'
 			},
 			{
 				id: 'everyQuest',
-				name: 'Хранитель шёпота зимы',
-				description: 'Пройдите все задания события «Шёпот зимы» и почувствуйте дыхание настоящей метели',
+				name: 'winterAchievements.everyQuestName',
+				description: 'winterAchievements.everyQuestDescription',
 				currentProgress: 0,
-				targetProgress: 34,
+				targetProgress: 20,
+				icon: '🏔️'
+			},
+			{
+				id: 'snowFall',
+				name: 'winterAchievements.snowFallName',
+				description: 'winterAchievements.snowFallDescription',
+				currentProgress: 0,
+				targetProgress: 1,
 				icon: '❄️'
 			},
 			{
-				id: 'runold',
-				name: 'Рунольд',
-				description: 'Купите аватар благородного оленя Рунольда во время события',
-				currentProgress: 0,
-				targetProgress: 1,
-				icon: '🦌'
-			},
-			{
 				id: 'santaHat',
-				name: ' Шапка Санты',
-				description: 'Купите легендарную Шапку Санты во время события и почувствуйте дух Рождества.',
+				name: 'winterAchievements.santaHatName',
+				description: 'winterAchievements.santaHatDescription',
 				currentProgress: 0,
 				targetProgress: 1,
 				icon: '🎅'
 			},
 			{
-				id: 'winterHonor',
-				name: 'Зимнее почтение',
-				description: 'Заслужите зимнее почтение, набив 300 репутации в сезонных квестах.',
+				id: 'christmasBall',
+				name: 'winterAchievements.christmasBallName',
+				description: 'winterAchievements.christmasBallDescription',
 				currentProgress: 0,
-				targetProgress: 300,
+				targetProgress: 1,
+				icon: '🔮'
+			},
+			{
+				id: 'christmasWreath',
+				name: 'winterAchievements.christmasWreathName',
+				description: 'winterAchievements.christmasWreathDescription',
+				currentProgress: 0,
+				targetProgress: 1,
+				icon: '🎀'
+			},
+			{
+				id: 'winterHonor',
+				name: 'winterAchievements.winterHonorName',
+				description: 'winterAchievements.winterHonorDescription',
+				currentProgress: 0,
+				targetProgress: 1000,
 				icon: '💠'
 			},
 			{
 				id: 'metaChristmas',
-				name: 'Рождественский мастер',
-				description: 'Откройте все достижения события «Шёпот зимы» и станьте легендой праздничного сезона.',
+				name: 'winterAchievements.metaChristmasName',
+				description: 'winterAchievements.metaChristmasDescription',
 				currentProgress: 0,
-				targetProgress: 6,
+				targetProgress: 8,
 				icon: '🎄'
 			}
 		]

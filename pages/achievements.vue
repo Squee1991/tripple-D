@@ -649,7 +649,7 @@ const handleCategoryClick = (category) => {
 }
 
 .category-item, .submenu-item {
-  padding: 1rem 1.25rem;
+  padding: 12px 1.25rem;
   margin-bottom: 10px;
   cursor: pointer;
   display: flex;

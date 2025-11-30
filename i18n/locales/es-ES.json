@@ -1,4 +1,52 @@
 {
+  "winterAchievements": {
+    "firstQuestName": "Primera estrella del árbol",
+    "firstQuestDescription": "Completa cualquier misión del evento de invierno y enciende la primera estrella.",
+    "santaLexiconName": "Léxico de Papá Noel",
+    "santaLexiconDescription": "Domina todas las palabras relacionadas con la Navidad y el Año Nuevo.",
+    "everyQuestName": "Guardián del susurro de invierno",
+    "everyQuestDescription": "Completa todas las misiones del evento «Susurro de invierno» y siente el aliento de una verdadera ventisca.",
+    "snowFallName": "Nevada",
+    "snowFallDescription": "Compra el efecto de nevada durante el evento «Susurro de invierno».",
+    "santaHatName": "Gorro de Papá Noel",
+    "santaHatDescription": "Compra el legendario gorro de Papá Noel durante el evento y siente el espíritu navideño.",
+    "christmasBallName": "Bola de nieve",
+    "christmasBallDescription": "Compra esta bola de nieve mágica para capturar un momento de invierno.",
+    "christmasWreathName": "Corona de Navidad",
+    "christmasWreathDescription": "Compra una corona tradicional, símbolo de las fiestas y del calor del hogar.",
+    "winterHonorName": "Honor de invierno",
+    "winterHonorDescription": "Gana honor de invierno completando misiones en el evento «Susurro de invierno».",
+    "metaChristmasName": "Maestro de la Navidad",
+    "metaChristmasDescription": "Desbloquea todos los logros del evento «Susurro de invierno» y conviértete en una leyenda de la temporada festiva."
+  },
+  "stepHitSettings": {
+    "back": "Atrás",
+    "further": "Siguiente",
+    "end": "Finalizar",
+    "skip": "Saltar"
+  },
+  "stepHitLabels": {
+    "learnTitle": "Aprendizaje",
+    "learnDescription": "Gramática, frases, artículos, tiempos y práctica — todo para mejorar tu alemán con confianza.",
+    "duelTitle": "Juegos",
+    "duelDescription": "Duelos, maratones, modo adivina la palabra, diario de tareas y práctica en formato de juego.",
+    "testTitle": "Pruebas",
+    "testDescription": "Comprueba tu nivel de A1 a B2: gramática, escritura, comprensión auditiva y expresión oral.",
+    "eventTitle": "Eventos",
+    "eventDescription": "Tareas de temporada, colecciones de palabras y desafíos temporales con recompensas.",
+    "articleTitle": "Articlus",
+    "articleDescription": "Tu moneda interna para aprender. Gana Articlus por respuestas correctas y úsalos para intentos extra.",
+    "levelTitle": "Nivel",
+    "levelDescription": "Aquí se muestra tu nivel actual. Aprende, completa tareas y sube de nivel paso a paso.",
+    "statsTitle": "Estadísticas",
+    "statsDescription": "Estadísticas generales de aprendizaje: tareas, artículos, tierras lingüísticas y temas.",
+    "achievementsTitle": "Logros",
+    "achievementsDescription": "Aquí se recogen tus logros por actividad y tareas.",
+    "rankedTitle": "Clasificación",
+    "rankedDescription": "Aquí puedes ver la clasificación de jugadores: quién acertó más palabras y quién va primero.",
+    "calendarTitle": "Calendario de eventos",
+    "calendarDescription": "Aquí se muestran los eventos por fecha para que no pierdas recompensas."
+  },
   "recipes": {
     "start": "Comenzar tarea",
     "training": "Ir al entrenamiento",
@@ -4346,7 +4394,7 @@
     "cowabungaText": "¡COWABUNGA!",
     "cowabungaDescription": "¿Salami o pepperoni? Las Tortugas Ninja se lo comerían igual. Aprende «salami» en todos los modos en la práctica de artículos",
     "zooText": "Amigo de los animales",
-    "zooDescription": "¡Un verdadero amigo de todas las criaturas!",
+    "zooDescription": "¡Un verdadero amigo no dejará a nadie sin artículo! Aprende todas las palabras del tema “Animales” en todos los modos de práctica de artículos.",
     "veganText": "Defensor de los vegetales",
     "veganDescription": "¡Ninguna verdura se quedará sin artículo! Aprende todas las palabras sobre verduras del tema «Comida» en todos los modos de práctica de artículos.",
     "firstStepLabel": "Primer paso",
@@ -4379,7 +4427,9 @@
     "magisterText": "Alcanza maestría aprendiendo 100 palabras en todos los modos en la Práctica de artículos",
     "mistakesLabel": "¡Los errores no me detienen!",
     "mistakesText": "¡Cada uno es un paso hacia el conocimiento!",
-    "mistakesAward": "Premio: Talismán de la paciencia"
+    "mistakesAward": "Premio: Talismán de la paciencia",
+    "voiceActivatedText": "Acceso de voz",
+    "voiceActivatedLabel": "Lee y acepta el aviso importante y activa el módulo Sprechen."
   },
   "guessCategory": {
     "guessLabel": "Adivinar la palabra",

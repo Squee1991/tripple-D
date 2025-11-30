@@ -12,7 +12,6 @@
           @close="showConsentModal = false"
       />
       <button type="button" class="back__btn" @click="routeToMain">{{t('examIndexPage.toMain')}}</button>
-
       <p class="exam__subtitle">
         {{t('examIndexPage.choice')}}
         <span class="exam__highlight">Lesen</span>,
@@ -328,6 +327,7 @@ onMounted(async () => {
   font-size: 1.3rem;
   border-radius: 15px;
   cursor: pointer;
+  font-weight: 600;
   box-shadow: 4px 4px 0 black;
 }
 

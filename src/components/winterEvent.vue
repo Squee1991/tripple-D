@@ -8,13 +8,26 @@ import { useEventSessionStore } from '../../store/eventsStore.js'
 import Hat from 'assets/images/event-rewards/winter-event/winter-rewards/santa-hat.svg'
 import ChristmasBall from 'assets/images/event-rewards/winter-event/winter-rewards/christmas-ball.svg'
 import ChristmasWreath from 'assets/images/event-rewards/winter-event/winter-rewards/christmas-wreath.svg'
-import SantaIcon from 'assets/images/event-rewards/winter-event/winter-rewards/Santa-icon.svg'
+import SantaIcon from 'assets/images/event-rewards/winter-event/winter-rewards/SnowEffect.svg'
 import DeepAvatar from 'assets/images/event-rewards/winter-event/winter-rewards/deerAvatar.png'
 import ElfIcon from 'assets/images/event-rewards/winter-event/winter-rewards/elf-icon.svg'
+
+const isEventOpen = computed(() => {
+  const event = eventStore.events.find(e => e.id === eventId.value)
+  if (!event) return false
+  const now = new Date().toLocaleDateString('fr-CA').slice(5)
+  const start = event.start.slice(0, 5)
+  const end = event.end.slice(0, 5)
+  if (start > end) {
+    return now >= start || now <= end
+  }
+  return now >= start && now <= end
+})
+
 const router = useRouter()
 const route = useRoute()
 const localePath = useLocalePath()
-const s = useEventSessionStore()
+const eventStore = useEventSessionStore()
 
 const eventId = computed(() => String(route.params.id || ''))
 
@@ -41,14 +54,14 @@ const ranks = [
 
 const quests = ref([
   { id: 'quest-1',  title: 'Рождественская викторина: основы',                           rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🎄' },
-  { id: 'quest-2',  title: 'Традиции и символы Рождества',                               rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🕯️' },
+  { id: 'quest-2',  title: 'Традиции и символы Рождества',                               rewardCoins: 300, rewardRep: 1000, isDone: false, icon: '🕯️' },
   { id: 'quest-3',  title: 'Праздничные персонажи: Николаус и другие',                    rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🎅' },
   { id: 'quest-4',  title: 'Адвент: венок, календарь, ожидание',                          rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🌟' },
   { id: 'quest-5',  title: 'Желания и подарки: кто, что и как',                           rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🎁' },
   { id: 'quest-6',  title: 'Рождество в Германии — чтение',                               rewardCoins: 5, rewardRep: 40, isDone: false, icon: '📖' },
   { id: 'quest-7',  title: 'Рождество и Новый год в Германии — чтение',                   rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🎆' },
   { id: 'quest-8',  title: 'Сильвестр призраков — новогодняя история',                    rewardCoins: 5, rewardRep: 40, isDone: false, icon: '👻' },
-  { id: 'quest-9',  title: 'Новый год в Заколдованном лесу — сказка',                      rewardCoins: 55, rewardRep: 40, isDone: false, icon: '✨' },
+  { id: 'quest-9',  title: 'Новый год в Заколдованном лесу — сказка',                      rewardCoins: 5, rewardRep: 40, isDone: false, icon: '✨' },
   { id: 'quest-10', title: 'Зимние каникулы и школа — чтение',                            rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🏫' },
   { id: 'quest-11', title: 'Рождественские пары: символ ↔ описание',                      rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🔗' },
   { id: 'quest-12', title: 'Новогодние пары: традиция ↔ значение',                        rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🎇' },
@@ -70,37 +83,58 @@ const currentLevel = computed(() => {
 })
 const levelStart = computed(() => ranks[currentLevel.value - 1]?.need ?? 0)
 const nextNeed   = computed(() => ranks[currentLevel.value]?.need ?? ranks.at(-1).need)
+
 const progressPct = computed(() => {
+  const maxRep = ranks[ranks.length - 1].need
+  if (reputationPoints.value >= maxRep) return 100
   const span = Math.max(nextNeed.value - levelStart.value, 1)
   const cur  = Math.min(Math.max(reputationPoints.value - levelStart.value, 0), span)
   return Math.round((cur / span) * 100)
 })
-const levelTotal   = computed(() => Math.max(nextNeed.value - levelStart.value, 1))
+const levelTotal = computed(() => Math.max(nextNeed.value - levelStart.value, 1))
 const levelCurrent = computed(() => Math.max(reputationPoints.value - levelStart.value, 0))
+
 const levelProgressText = computed(() => {
-  const isMax = currentLevel.value === ranks[ranks.length - 1].level
-  return isMax ? `${levelCurrent.value} / МАКС` : `${levelCurrent.value} / ${levelTotal.value}`
+  const maxRep = ranks[ranks.length - 1].need
+  if (reputationPoints.value >= maxRep) {
+    return `${maxRep} / ${maxRep}`
+  }
+  return `${levelCurrent.value} / ${levelTotal.value}`
 })
 
 function setSelectedLevel(lvl){ selectedLevel.value = lvl }
 
 async function goToSession(questId) {
-  s.start(eventId.value, String(questId))
+  await eventStore.start(eventId.value, String(questId))
   const to = localePath({ name: 'event-id-session', params: { id: route.params.id } })
   await router.push(to)
 }
 
-function refreshProgressBadges() {
-  try {
-    const key = `event:${eventId.value}:progress`
-    const saved = JSON.parse(localStorage.getItem(key) || '{}')
-    quests.value = quests.value.map(quest => ({
-      ...quest,
-      isDone: !!saved?.[`${quest.id}:done`]
-    }))
-  } catch {
-
+async function refreshProgressBadges() {
+  const progressData = await eventStore.loadEventProgress(eventId.value)
+  if (!progressData) {
+    return
   }
+
+  coins.value = progressData.coins || 0
+  reputationPoints.value = progressData.reputationPoints || 0
+  const questsProgress = progressData.quests || {}
+  quests.value = quests.value.map(quest => {
+    const progress = questsProgress[quest.id]
+    return {
+      ...quest,
+      isDone: progress ? progress.finished : false
+    }
+  })
+
+  const shopItems = progressData.shopItems || {}
+  Object.values(shopByRank.value).forEach(list => {
+    list.forEach(item => {
+      if (shopItems[item.id]) {
+        item.isOwned = true
+      }
+    })
+  })
 }
 
 onMounted(() => {
@@ -109,38 +143,42 @@ onMounted(() => {
 
 const shopByRank = ref({
   1: [
-    {id: 'r1', title: 'Санта-шапка', priceCoins: 25, isOwned: false, icon: Hat},
-    {id: 'r2', title: 'Снежный шар',  priceCoins: 25, isOwned: false, icon: ChristmasBall},
-    {id: 'r3', title: 'Рождественский венок',  priceCoins: 25, isOwned: false, icon: ChristmasWreath}
+    {id: 'santaHat', title: 'Санта-шапка', priceCoins: 20, isOwned: false, icon: Hat},
+    {id: 'christmasBall', title: 'Снежный шар',  priceCoins: 20, isOwned: false, icon: ChristmasBall},
+    {id: 'christmasWreath', title: 'Рождественский венок',  priceCoins: 20, isOwned: false, icon: ChristmasWreath}
   ],
   2: [
-    {id: 'r4', title: 'Аватар санты',  priceCoins: 50, isOwned: false, icon: SantaIcon},
-    {id: 'r5', title: 'Аватар Рунольда"', priceCoins: 50, isOwned: false, icon: DeepAvatar},
-    {id: 'r6', title: 'Иконка «Санта-шапка»', priceCoins: 50, isOwned: false, icon: ElfIcon}
+    {id: 'snowFall', title: 'Эффект снегопада',  priceCoins: 300, isOwned: false, icon: SantaIcon},
   ],
 })
 
-function buyReward(level, rewardId) {
+async function buyReward(level, rewardId) {
   if (currentLevel.value < level) return
   const item = shopByRank.value[level].find(i => i.id === rewardId)
   if (!item || item.isOwned) return
   if (coins.value < item.priceCoins) return
   coins.value -= item.priceCoins
   item.isOwned = true
+  await eventStore.saveMainProgress({
+    coins: coins.value,
+    shopItems: {
+      [item.id]: true
+    }
+  })
 }
 
-function resetAll() {
+async function resetAll() {
+  await eventStore.resetEventProgress(eventId.value)
   coins.value = 0
   reputationPoints.value = 0
   quests.value.forEach(quest => (quest.isDone = false))
   Object.values(shopByRank.value).forEach(list => list.forEach(item => (item.isOwned = false)))
   selectedLevel.value = 1
-  try { localStorage.removeItem(`event:${eventId.value}:progress`) } catch {}
 }
 </script>
 
 <template>
-  <div>
+  <div v-if="isEventOpen">
     <div class="season__bg">
       <div class="sidebar__decor">
         <img class="present --right" :src="Present" alt="Present icon">
@@ -238,8 +276,11 @@ function resetAll() {
                         <span class="meta__pill">{{ quest.rewardRep }} реп.</span>
                         <span class="meta__pill">{{ quest.rewardCoins }} {{ coinIcon }}</span>
                       </div>
-                      <button class="btn btn--candy" :disabled="quest.isDone" @click="goToSession(quest.id)">
-                        {{ quest.isDone ? 'Выполнено' : 'Выполнить' }}
+                      <button
+                          :class="['btn', 'btn--candy', { 'btn--repeat': quest.isDone }]"
+                          @click="goToSession(quest.id)"
+                      >
+                        {{ quest.isDone ? 'Повторить' : 'Выполнить' }}
                       </button>
                     </div>
                   </div>
@@ -249,6 +290,16 @@ function resetAll() {
           </main>
         </div>
       </div>
+    </div>
+  </div>
+  <div v-else class="event-closed">
+    <div class="svg-snow" aria-hidden="true">
+      <VShowFall/>
+    </div>
+    <div class="closed-content">
+      <h1>🔒 Событие недоступно</h1>
+      <p>Это событие еще не началось или уже завершилось.</p>
+      <button @click="pathToMain" class="btn btn--home">На главную</button>
     </div>
   </div>
 </template>
@@ -496,6 +547,7 @@ function resetAll() {
 
 .prize-card__icon {
   width: 110px;
+  height: 110px;
 }
 
 .prize-card__title {
@@ -595,6 +647,7 @@ function resetAll() {
   font-size: 18px;
   padding: 10px 25px;
   font-family: "Nunito", sans-serif;
+  transition: background-color 0.2s, box-shadow 0.2s;
 }
 
 .btn--candy:disabled {
@@ -603,6 +656,21 @@ function resetAll() {
   border-color: #2a3850;
   box-shadow: none;
   height: 44px;
+}
+
+.btn--repeat {
+  background: #4CAF50;
+  box-shadow: 0 5px #388E3C;
+}
+
+.btn--repeat:hover {
+  background: #66BB6A;
+  box-shadow: 0 5px #388E3C;
+}
+
+.btn--candy:not(.btn--repeat):hover {
+  background: #e7a336;
+  box-shadow: 0 5px #d79224;
 }
 
 .clickable {
@@ -617,6 +685,35 @@ function resetAll() {
 .clickable:focus {
   outline: 3px solid #9B8CFF;
   border-radius: 6px;
+}
+
+.event-closed {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1a2140;
+  color: white;
+  font-family: "Nunito", sans-serif;
+}
+
+.closed-content {
+  text-align: center;
+  padding: 40px;
+  border: 2px solid whitesmoke;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.closed-content h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.closed-content p {
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+  color: #c7d1e6;
 }
 
 @media (max-width: 767px) {

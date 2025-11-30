@@ -168,8 +168,8 @@ function go(region) {
   align-items: center;
   justify-content: center;
   width: 100%;
-  border: 1px solid var(--border);
-  box-shadow: 3px 3px 0 var(--border);
+  border: 2px solid var(--border);
+  box-shadow: 2px 2px 0 var(--border);
   border-radius: 15px;
   padding: 10px 10px;
   background: #f1c40f;

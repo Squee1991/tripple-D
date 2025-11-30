@@ -15,7 +15,7 @@
         @button="onDevModalButton"
     />
     <div class="header-container">
-      <NuxtLink to="/" class="logo" aria-label="German Corner — Home">
+      <NuxtLink @click="click" to="/" class="logo" aria-label="German Corner — Home">
         <span class="logo__name">skillup</span>
         <NuxtImg
             src="/images/logo/logotype.png"
@@ -30,7 +30,7 @@
       <nav ref="dropdownRefNav" class="header-nav" :class="{ 'is-open': isMobileMenuOpen, 'is-rtl': isAr }"
            aria-label="Main">
         <ul class="header-nav__list">
-          <li v-for="item in menuItems" :key="item.id" class="header-nav__item">
+          <li v-for="item in menuItems" :key="item.id" :id="item.id" class="header-nav__item">
             <NuxtLink v-if="item.url" :to="item.url" class="header-nav__link" @click="closeAllMenus">
               {{ t(item.valueKey) }}
             </NuxtLink>
@@ -122,10 +122,13 @@
 </template>
 
 <script setup>
+import {VOnboardingWrapper, VOnboardingStep, useVOnboarding} from 'v-onboarding'
+import 'v-onboarding/dist/style.css'
 import {ref, computed, watch, onMounted, onBeforeUnmount} from 'vue'
 import {useRouter} from 'vue-router'
 import {userAuthStore} from '../../store/authStore.js'
 import {useBreakPointsStore} from '../../store/breakPointsStore.js'
+import { useAchievementStore } from '../../store/achievementStore.js'
 
 import SignIn from '../components/logIn.vue'
 import LanguageSelector from '../components/langSwitcher.vue'
@@ -139,29 +142,28 @@ import Dev from '../../assets/images/dev.svg'
 import User from '../../assets/images/account.svg'
 import Logout from '../../assets/images/logout.svg'
 import PadLock from '../../assets/images/padlock.svg'
-
-
+import HD from '../../assets/images/HD.svg'
+const achievementStore = useAchievementStore()
 const router = useRouter()
 const {t, locale} = useI18n()
 const bp = useBreakPointsStore()
 const userAuth = userAuthStore()
-
+const click = () => {
+  achievementStore.triggerTaps()
+}
+const wrapperRef = ref(null)
 const showAuth = ref(false)
 const menuOpen = ref(false)
 const isMobileMenuOpen = ref(false)
-
 const clickedMenu = ref(null)
 const clickedSubChild = ref(null)
-
 const showDevModal = ref(false)
 const modalType = ref(null)
-
 const userBtnRef = ref(null)
 const dropdownRef = ref(null)
 const dropdownRefNav = ref(null)
 const isAr = computed(() => locale.value === 'ar')
 const isMobile = computed(() => bp.isMobile)
-
 const modalConfig = computed(() => {
   switch (modalType.value) {
     case 'dev':
@@ -184,6 +186,55 @@ const modalConfig = computed(() => {
       return {isEvent: false, title: '', text: '', button: null, img: Dev}
   }
 })
+
+const onboardingOptions = {
+  skippable: true,
+  labels: {
+    previousButton: 'Назад',
+    nextButton: 'Далее',
+    finishButton: 'Завершить',
+    skipButton: 'Пропустить'
+  }
+}
+const onboardingSteps = [
+  {
+    attachTo: {
+      element: '#learn',
+      padding: 31
+    },
+    content: {
+      title: "Обучение",
+      description: "Грамматика, фразы, артикли, времена и практика — всё, чтобы уверенно прокачать   немецкий.",
+      image: HD
+    }
+  },
+  {
+    attachTo: {element: '#duel'},
+    content: {
+      title: "Игры",
+      description: "Грамматика, фразы, артикли, времена и практика — всё, чтобы уверенно прокачать немецкий.",
+      image: HD
+    }
+  },
+  {
+    attachTo: {element: '#test'},
+    content: {
+      title: "Тесты",
+      description: "Проверь уровень от А1 до В2: говорение,  грамматика, письмо и понимание речи.",
+      image: HD
+    }
+  },
+  {
+    attachTo: {element: '#events'},
+    content: {
+      title: "Ивенты",
+      description: "Сезонные задания, коллекции слов, награды и ограниченные по времени челленджи.",
+      image: HD
+    }
+  }
+]
+
+const {start , finish} = useVOnboarding(wrapperRef)
 
 const menuItems = computed(() => {
   const items = [
@@ -262,7 +313,6 @@ const menuItems = computed(() => {
         ]),
     ...(userAuth.uid ? [{id: 'test', url: '/exams', valueKey: 'nav.tests'}] : []),
   ]
-
   if (userAuth.uid) {
     const allEvents = [
       {
@@ -271,8 +321,8 @@ const menuItems = computed(() => {
         url: '/event-winter',
         isEvent: true,
         eventKey: 'winter',
-        startDate: '24.12',
-        endDate: '01.02'
+        startDate: '24.12 00:00',
+        endDate: '01.02 23:59'
       },
       {
         id: 'valentine',
@@ -280,8 +330,8 @@ const menuItems = computed(() => {
         url: '/event-valentine',
         isEvent: true,
         eventKey: 'valentine',
-        startDate: '14.02',
-        endDate: '16.02'
+        startDate: '14.02 00:00',
+        endDate: '16.02 23:59'
       },
       {
         id: 'april',
@@ -289,8 +339,8 @@ const menuItems = computed(() => {
         url: '/event-joke',
         isEvent: true,
         eventKey: 'fools',
-        startDate: '01.04',
-        endDate: '01.04'
+        startDate: '01.04 00:00',
+        endDate: '01.04 23:59'
       },
       {
         id: 'halloween',
@@ -298,8 +348,8 @@ const menuItems = computed(() => {
         url: '/event-halloween',
         isEvent: true,
         eventKey: 'pumpkin',
-        startDate: '29.10',
-        endDate: '31.10'
+        startDate: '29.10 00:00',
+        endDate: '31.10 23:59'
       },
     ]
     const processedEvents = allEvents.map(event => ({
@@ -313,6 +363,34 @@ const menuItems = computed(() => {
   return items
 })
 
+const windowWidth = ref(0)
+const updateWidth = () => {
+  if (typeof window !== 'undefined') {
+    windowWidth.value = window.innerWidth
+  }
+}
+
+const showOnboarding = computed(() => {
+  return windowWidth.value >= 1023 && !!userAuth.uid
+})
+
+watch(showOnboarding, async (canShow) => {
+  if (canShow) {
+    await nextTick()
+    start()
+  } else {
+    finish()
+  }
+}, { immediate: true })
+
+onMounted(() => {
+  updateWidth()
+  window.addEventListener('resize', updateWidth)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', updateWidth)
+})
 const menuActions = ref([
   {id: 'cabinet', label: 'auth.cabinet', icon: User, action: () => goTo('cabinet')},
   {id: 'logout', label: 'auth.logOut', icon: Logout, action: () => userAuth.logOut()},
@@ -382,34 +460,29 @@ const handleSubmenuItemClick = (childItem) => {
 }
 
 const isEventActive = (startDateStr, endDateStr) => {
-  const today = new Date()
-  const currentYear = today.getFullYear()
-  today.setHours(0, 0, 0, 0)
+  const today = new Date();
+  const currentYear = today.getFullYear();
+  const parseEventDate = (dateStr) => {
+    const [datePart, timePart] = dateStr.split(' ');
+    const [day, month] = datePart.split('.').map(Number);
+    const [hours, minutes] = timePart.split(':').map(Number);
+    return new Date(currentYear, month - 1, day, hours, minutes);
+  };
 
-  const [startDay, startMonth] = startDateStr.split('.').map(Number)
-  const [endDay, endMonth] = endDateStr.split('.').map(Number)
-
-  let startDate = new Date(currentYear, startMonth - 1, startDay)
-  let endDate = new Date(currentYear, endMonth - 1, endDay)
-
+  let startDate = parseEventDate(startDateStr);
+  let endDate = parseEventDate(endDateStr);
   if (startDate > endDate) {
     if (today.getMonth() < startDate.getMonth()) {
-      startDate.setFullYear(currentYear - 1)
+      startDate.setFullYear(currentYear - 1);
     } else {
-      endDate.setFullYear(currentYear + 1)
+      endDate.setFullYear(currentYear + 1);
     }
   }
-  return today >= startDate && today <= endDate
+  return today >= startDate && today <= endDate;
 }
 
 const handleClickOutside = (event) => {
-  if (
-      menuOpen.value &&
-      dropdownRef.value &&
-      !dropdownRef.value.contains(event.target) &&
-      userBtnRef.value &&
-      !userBtnRef.value.contains(event.target)
-  ) {
+  if (menuOpen.value && dropdownRef.value && !dropdownRef.value.contains(event.target) && userBtnRef.value && !userBtnRef.value.contains(event.target)) {
     menuOpen.value = false
   }
   if (clickedMenu.value && dropdownRefNav.value && !dropdownRefNav.value.contains(event.target)) {
@@ -435,6 +508,7 @@ watch(isMobileMenuOpen, (newVal) => {
 
 onMounted(() => {
   document.addEventListener('mousedown', handleClickOutside)
+  start()
 })
 
 onBeforeUnmount(() => {
@@ -443,6 +517,74 @@ onBeforeUnmount(() => {
 })
 </script>
 <style scoped>
+
+.hd {
+  width: 80px;
+}
+
+.hd__content {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.close__hd {
+  position: absolute;
+  z-index: 99999999;
+  right: 10px;
+  top: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  width: 24px;
+  height: 24px;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  border: none;
+  cursor: pointer;
+}
+
+.hd__wrapper {
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  background: white;
+  max-width: 400px;
+  padding: 10px 10px 15px 10px;
+  box-shadow: 3px 3px 0 black;
+  border-radius: 10px;
+  font-family: "Nunito", sans-serif;
+}
+
+.hd__button {
+  width: 100%;
+  border-radius: 50px;
+  padding: 8px;
+  border: 1px solid #d5d4d4;
+  font-weight: 600;
+  background: none;
+}
+
+.hd__button.next {
+  background: #007bff;
+  color: white;
+}
+
+.onboarding-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.hd__title {
+  margin-bottom: 5px;
+}
+
+.hd__desc {
+  font-size: 14px;
+}
+
 .header-user-wrapper {
   position: relative;
 }
@@ -509,7 +651,7 @@ onBeforeUnmount(() => {
   cursor: pointer;
   user-select: none;
   border: 2px solid black;
-  box-shadow: 4px 4px 0 black;
+  box-shadow: 2px 2px 0 black;
   background: white;
 }
 
@@ -529,9 +671,9 @@ onBeforeUnmount(() => {
   left: 0;
   z-index: 110;
   background: #FFFFFF;
-  border: 3px solid #1e1e1e;
+  border: 2px solid #1e1e1e;
   border-radius: 16px;
-  box-shadow: 4px 4px 0px #1e1e1e;
+  box-shadow: 2px 2px 0px #1e1e1e;
   padding: 0.5rem;
   min-width: 240px;
 }
@@ -568,7 +710,7 @@ onBeforeUnmount(() => {
   background: #fff;
   border: 3px solid #1e1e1e;
   border-radius: 12px;
-  box-shadow: 4px 4px 0px #1e1e1e;
+  box-shadow: 2px 2px 0px #1e1e1e;
   white-space: nowrap;
   z-index: 120;
 }
@@ -588,8 +730,8 @@ onBeforeUnmount(() => {
   background: #fff;
   padding: 0.5rem 0.7rem;
   border-radius: 12px;
-  border: 3px solid #1e1e1e;
-  box-shadow: 4px 4px 0px #1e1e1e;
+  border: 2px solid #1e1e1e;
+  box-shadow: 2px 2px 0px #1e1e1e;
   cursor: pointer;
 }
 
@@ -619,14 +761,14 @@ onBeforeUnmount(() => {
 
 .header-user__dropdown {
   position: absolute;
-  top: calc(100% + 10px);
+  top: calc(100% + 5px);
   right: 0;
   z-index: 110;
   min-width: 100%;
   background: #FFFFFF;
-  border: 3px solid #1e1e1e;
+  border: 2px solid #1e1e1e;
   border-radius: 16px;
-  box-shadow: 4px 4px 0px #1e1e1e;
+  box-shadow: 2px 2px 0px #1e1e1e;
   overflow: hidden;
 }
 
@@ -711,6 +853,7 @@ onBeforeUnmount(() => {
   .header__drop-text {
     display: none;
   }
+
   .logo__img {
     position: absolute;
     left: 55px;
@@ -882,6 +1025,7 @@ onBeforeUnmount(() => {
     .header-nav__link {
       color: #1e1e1e;
     }
+
     .header-nav.is-open {
       width: 80%;
     }
@@ -919,7 +1063,7 @@ onBeforeUnmount(() => {
   font-style: italic;
   letter-spacing: 3px;
   text-shadow: 2px 4px 0px white;
-  -webkit-text-stroke: 3px #e39910;
+  -webkit-text-stroke: 2px #e39910;
   transition: .5s;
   text-transform: uppercase;
 }
@@ -931,7 +1075,7 @@ onBeforeUnmount(() => {
 
   .header-nav__link:hover {
     transform: translate(2px, 2px);
-    box-shadow: 2px 2px 0 black;
+    box-shadow: 0 0 0;
     background-color: #f1c40f;
     color: #1e1e1e;
   }

@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { ref, watch, watchEffect } from 'vue'
-import { getFirestore, doc, onSnapshot } from 'firebase/firestore'
+import { getFirestore, doc, getDoc, onSnapshot } from 'firebase/firestore'
 import { getAuth } from 'firebase/auth'
 // --- 1) Импорты групп достижений
 import { overAchievment } from '../src/achieveGroup/overAllAchieve/overallAchievements.js'
@@ -39,6 +39,8 @@ import { useGuessWordStore } from '../store/guesStore.js'
 import { achievementToAwardMap } from '../src/awards/awardsMap.js'
 import { guessAchievment } from '../src/achieveGroup/guessAchieve/guessAchievments.js'
 import { useQuizStore } from '../store/adjectiveStore.js'
+import { useEventSessionStore } from '../store/eventsStore.js'
+
 export const useAchievementStore = defineStore('achievementStore', () => {
 	// --- Группы
 	const rawGroups = [
@@ -96,10 +98,26 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 	const chainStore = userChainStore()
 	const quizStore = useQuizStore()
 	const duelStore = useDuelStore()
+	const eventStore = useEventSessionStore()
 	const isBooting = ref(true)
 	const suppressReplaysUntil = ref(0)
 	const bootUnlocked = []
 	const bootAwards = []
+	const isVisible = ref(false)
+	let tapsCount = 0
+
+	const triggerTaps = () => {
+		tapsCount++
+		if (tapsCount === 5) {
+			isVisible.value = true
+			tapsCount = 0
+		}
+		if (tapsCount > 5) {
+			tapsCount = 0;
+		}
+	}
+
+	let eventUnsubs = []
 	const dailyAggUnsub = ref(null)
 	const prevMap = new Map()
 	const required = ['article','letters','wordArticle','audio','plural']
@@ -110,7 +128,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 	const hasAllModes = (word) => required.every(m => word?.progress?.[m])
 	const awardsKey = () => `awards_shown_v1_${authStore?.uid}`
 	const completedKey = () => `achievements_completed_v1_${authStore?.uid}`
-	// --- LocalStorage helpers
 	function loadShown () {
 		if (!process.client) return new Set()
 		try {
@@ -361,20 +378,31 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		bootUnlocked.length = 0
 		bootAwards.length = 0
 	}
-	// --- 3) Реакция на смену пользователя (клиентом)
+
 	if (process.client) {
 		watch(() => authStore.uid, (uid) => {
 			isBooting.value = true
 			suppressReplaysUntil.value = Date.now() + 2000
 			shownSet = loadShown()
 			completedSet = loadCompleted()
-			resetAllProgress()
+			groups.value.forEach(g => {
+				g.achievements.forEach(a => {
+					if (completedSet.has(a.id)) {
+						a.currentProgress = a.targetProgress
+					} else {
+						a.currentProgress = 0
+					}
+				})
+			})
 			updateProgress('Collection', shownSet.size)
 			detachDailyAggListener()
+
 			if (!uid) {
 				isBooting.value = false
+				resetAllProgress()
 				return
 			}
+
 			attachDailyAggListener()
 			setTimeout(() => {
 				const isNewAccount = !completedSet.has('registerAchievement')
@@ -390,9 +418,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			}, 0)
 		}, { immediate: true })
 	}
-	// --- 4) Навешиваем отслеживание источников прогресса
 	function initializeProgressTracking () {
-		// a) Предлоги
 		const prepositionsSetup = {
 			dativ: 'dat',
 			akkusativ: 'akk',
@@ -409,7 +435,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			updateProgress(`${prefix}4`, perfectCnt)
 			const fastPerfectCnt = Number(agg?.fastPerfectSessionsCount || 0)
 			updateProgress(`${prefix}5`, fastPerfectCnt)
-			// ---- ВАЖНО: фикс проверки "мастера" ----
 			const allIds = getPrefixIds(prefix)
 			if (allIds.length >= 2) {
 				const lastId    = allIds[allIds.length - 1]
@@ -423,7 +448,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				})
 				updateProgress(lastId, allDone ? 1 : 0)
 			}
-			// ---- добавляем пересчёт мета-ачивки 0..4 ----
 			if (CASE_PREFIXES.includes(prefix)) {
 				recomputeAllCasesMeta()
 			}
@@ -449,7 +473,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				prepositionUnsubs.push(u1, u2)
 			})
 		}, { immediate: true })
-		// b) Прилагательные/Глаголы/и т.п. (общий сетап)
 		const adjectivesSetup = {
 			'adjective-basics_colors': 'col',
 			'adjective-basics_feelings': 'emo',
@@ -548,7 +571,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				{ immediate: true }
 			)
 		})
-		// e) слушание/мн.число/артикли/слова из букв
+
 		watch(() => langStore.words.filter(w => w.progress?.audio).length,
 			cnt => groups.value.filter(g => g.category === 'listen')
 				.forEach(g => g.achievements.forEach(a => updateProgress(a.id, cnt))),
@@ -565,6 +588,8 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				.forEach(g => g.achievements.forEach(a => updateProgress(a.id, cnt))),
 			{ immediate: true }
 		)
+
+
 
 		const derCount = () => langStore.words.filter(w => w.article === 'der' && w.progress?.article).length
 		const dieCount = () => langStore.words.filter(w => w.article === 'die' && w.progress?.article).length
@@ -723,6 +748,12 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			updateProgress('catDog', progress)
 		}, { immediate: true, deep: true })
 
+		watch(() => authStore.voiceConsentGiven, (isGiven) => {
+			if (isGiven) {
+				updateProgress('voiceActivated', 1)
+			}
+		}, { immediate: true })
+
 		watch(() => authStore.uid, async (uid) => {
 			if (!uid) return
 			try {
@@ -744,7 +775,79 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		setTimeout(() => {
 			finishBootAndReplay()
 		}, 0)
+
+		watch(() => authStore.uid, (uid) => {
+			eventUnsubs.forEach(unsub => { try { unsub && unsub() } catch {} })
+			eventUnsubs = []
+			if (!uid) return
+
+			const winterEventRef = doc(db, 'users', uid, 'eventSessions', 'winter')
+			getDoc(winterEventRef).then((snap) => {
+				if (!snap.exists()) return
+				const eventData = snap.data() || {}
+				const questsProgress = eventData.quests || {}
+				const shopItems = eventData.shopItems || {}
+				const wordScore = questsProgress['quest-21']?.score || 0
+				const completedQuestsCount = Object.values(questsProgress).filter(quest => quest.finished).length
+				const totalRep = eventData.reputationPoints || 0
+				updateProgress('firstQuest', completedQuestsCount > 0 ? 1 : 0)
+				updateProgress('santaLexicon', wordScore)
+				updateProgress('everyQuest', completedQuestsCount)
+				updateProgress('winterHonor', totalRep)
+				updateProgress('snowFall', shopItems['snowFall'] ? 1 : 0)
+				updateProgress('santaHat', shopItems['santaHat'] ? 1 : 0)
+				updateProgress('christmasBall', shopItems['christmasBall'] ? 1 : 0)
+				updateProgress('christmasWreath', shopItems['christmasWreath'] ? 1 : 0)
+				const isAchComplete = (id) => completedSet.has(id);
+				const metaChildrenIds = [
+					'firstQuest',
+					'santaLexicon',
+					'everyQuest',
+					'snowFall',
+					'santaHat',
+					'winterHonor',
+					'christmasBall',
+					'christmasWreath'
+				];
+				const completedMetaChildren = metaChildrenIds.filter(isAchComplete).length;
+				updateProgress('metaChristmas', completedMetaChildren);
+			}).catch(error => {
+
+			});
+			const unsubWinter = onSnapshot(winterEventRef, (snap) => {
+				const eventData = snap.data() || {}
+				const questsProgress = eventData.quests || {}
+				const shopItems = eventData.shopItems || {}
+				const wordQuestProgress = questsProgress['quest-21'] || {}
+				const wordScore = wordQuestProgress.score || 0
+				const completedQuestsCount = Object.values(questsProgress).filter(quest => quest.finished).length
+				const totalRep = eventData.reputationPoints || 0
+				updateProgress('firstQuest', completedQuestsCount > 0 ? 1 : 0)
+				updateProgress('santaLexicon', wordScore)
+				updateProgress('everyQuest', completedQuestsCount)
+				updateProgress('winterHonor', totalRep)
+				updateProgress('snowFall', shopItems['snowFall'] ? 1 : 0)
+				updateProgress('santaHat', shopItems['santaHat'] ? 1 : 0)
+				updateProgress('christmasBall', shopItems['christmasBall'] ? 1 : 0)
+				updateProgress('christmasWreath', shopItems['christmasWreath'] ? 1 : 0)
+				const isAchComplete = (id) => completedSet.has(id);
+				const metaChildrenIds = [
+					'firstQuest',
+					'santaLexicon',
+					'everyQuest',
+					'snowFall',
+					'santaHat',
+					'winterHonor',
+					'christmasBall',
+					'christmasWreath'
+				];
+				const completedMetaChildren = metaChildrenIds.filter(isAchComplete).length;
+				updateProgress('metaChristmas', completedMetaChildren);
+			})
+			eventUnsubs.push(unsubWinter)
+		}, { immediate: true })
 	}
+
 	watch(lastUnlockedAward, (award) => {
 		if (award) updateProgress('Collection', shownSet.size)
 	})
@@ -759,6 +862,9 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		closePopup,
 		initializeProgressTracking,
 		updateProgress,
-		findById
+		findById,
+		tapsCount,
+		triggerTaps,
+		isVisible
 	}
 })

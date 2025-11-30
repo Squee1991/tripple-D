@@ -1,13 +1,18 @@
 <template>
   <NuxtLayout>
     <NuxtPage/>
-    <AchievementToast/>
+    <AchievementToast @toast-finished="onToastFinished" />
+    <VStephint v-if="showStepHint" />
+<!--    <VLost/>-->
   </NuxtLayout>
 </template>
 
 <script setup>
+import VStephint from "./src/components/V-stephint.vue";
 import AchievementToast from './src/components/AchievementToast.vue'
+import VLost from './src/components/V-lost.vue'
 import {useRouter, useRoute} from 'vue-router'
+import { useAchievementStore } from './store/achievementStore.js'
 import {useCurrentUser} from "vuefire";
 import {userlangStore} from './store/learningStore.js'
 import {userAuthStore} from './store/authStore.js'
@@ -21,7 +26,6 @@ import {dailyStore} from './store/dailyStore'
 import {computed} from 'vue'
 import {useHead} from '#imports'
 const { locale, t } = useI18n()
-console.log('test')
 useHead(() => ({
   htmlAttrs: { lang: locale.value, dir: locale.value === 'ar' ? 'rtl' : "ltr" },
   title: () => t('useHeadApp.title'),
@@ -36,7 +40,8 @@ useHead(() => ({
   ],
   link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }]
 }))
-
+const achStore = useAchievementStore()
+const showStepHint = ref(false)
 const cardStore = useCardsStore()
 const statsStore = useLocalStatGameStore()
 const questStore = useQuestStore()
@@ -49,6 +54,15 @@ const sentencesStore = useSentencesStore();
 const langStore = userlangStore()
 const daily = dailyStore()
 
+const onToastFinished = () => {
+  if (authStore.uid) {
+    const key = `step_hint_seen_${authStore.uid}`
+    if (!localStorage.getItem(key)) {
+      showStepHint.value = true
+      localStorage.setItem(key, 'true')
+    }
+  }
+}
 
 onMounted(() => {
   watch(user, (user, prevUser) => {
@@ -66,6 +80,11 @@ onMounted(async () => {
   questStore.loadDailyProgress()
   cardStore.loadCreatedCount()
   statsStore.loadLocalStats()
+  setTimeout(() => {
+    if (!achStore.showPopup && !showStepHint.value) {
+      onToastFinished()
+    }
+  }, 2600)
 })
 
 

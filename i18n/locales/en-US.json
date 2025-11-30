@@ -1,4 +1,52 @@
 {
+  "winterAchievements": {
+    "firstQuestName": "First Tree Star",
+    "firstQuestDescription": "Complete any quest of the winter event and light the first star.",
+    "santaLexiconName": "Santa’s Lexicon",
+    "santaLexiconDescription": "Master all words related to Christmas and New Year.",
+    "everyQuestName": "Keeper of Winter’s Whisper",
+    "everyQuestDescription": "Complete all quests of the “Whisper of Winter” event and feel the breath of a real snowstorm.",
+    "snowFallName": "Snowfall",
+    "snowFallDescription": "Buy the snowfall effect during the “Whisper of Winter” event.",
+    "santaHatName": "Santa’s Hat",
+    "santaHatDescription": "Buy the legendary Santa’s Hat during the event and feel the spirit of Christmas.",
+    "christmasBallName": "Snow Globe",
+    "christmasBallDescription": "Buy this magical snow globe to capture a moment of winter.",
+    "christmasWreathName": "Christmas Wreath",
+    "christmasWreathDescription": "Buy a traditional wreath, a symbol of the holidays and home comfort.",
+    "winterHonorName": "Winter Honor",
+    "winterHonorDescription": "Earn winter honor by completing quests in the “Whisper of Winter” event.",
+    "metaChristmasName": "Christmas Master",
+    "metaChristmasDescription": "Unlock all achievements of the “Whisper of Winter” event and become a legend of the holiday season."
+  },
+  "stepHitSettings": {
+    "back": "Back",
+    "further": "Next",
+    "end": "Finish",
+    "skip": "Skip"
+  },
+  "stepHitLabels": {
+    "learnTitle": "Learning",
+    "learnDescription": "Grammar, phrases, articles, tenses and practice — everything to improve your German confidently.",
+    "duelTitle": "Games",
+    "duelDescription": "Duels, marathons, guess-the-word mode, task journal, and places to train in game format.",
+    "testTitle": "Tests",
+    "testDescription": "Check your level from A1 to B2: grammar, writing, listening, and speaking with instant feedback.",
+    "eventTitle": "Events",
+    "eventDescription": "Seasonal tasks, word collections and temporary challenges with rewards.",
+    "articleTitle": "Articlus",
+    "articleDescription": "This is your internal currency for learning. Earn Articlus for correct answers and spend them on extra attempts.",
+    "levelTitle": "Level",
+    "levelDescription": "This shows your current level. Study, complete tasks and raise your level step by step.",
+    "statsTitle": "Statistics",
+    "statsDescription": "Overall learning stats: tasks completed, articles, language lands, thematic topics.",
+    "achievementsTitle": "Achievements",
+    "achievementsDescription": "Here you collect your achievements for completing tasks and being active in games.",
+    "rankedTitle": "Ranked",
+    "rankedDescription": "Here you can see the ranking of players: who guessed more words, who has the best progress and who is first.",
+    "calendarTitle": "Event calendar",
+    "calendarDescription": "Events are displayed by dates. Follow events so you don’t miss the chance to complete and earn rewards."
+  },
   "recipes": {
     "start": "Start the task",
     "training": "To training",
@@ -4346,7 +4394,7 @@
     "cowabungaText": "COWABUNGA",
     "cowabungaDescription": "Salami or Pepperoni? The Ninja Turtles would eat it anyway. Learn “salami” in all modes in the articles practice.",
     "zooText": "Friend of Animals",
-    "zooDescription": "A true friend of all creatures!",
+    "zooDescription": "A true friend won't leave anyone without an article! Learn all the words in the “Animals” topic in all article practice modes.",
     "veganText": "Protector of Vegetables",
     "veganDescription": "No vegetable shall remain without an article! Learn all the vegetable words from the topic 'Food' in every article practice mode.",
     "firstStepLabel": "First Step",
@@ -4379,7 +4427,9 @@
     "magisterText": "Achieve mastery by learning 100 words in all modes in Article Practice",
     "mistakesLabel": "Mistakes Won’t Stop Me!",
     "mistakesText": "Each one is a step toward knowledge!",
-    "mistakesAward": "Reward: Talisman of Patience"
+    "mistakesAward": "Reward: Talisman of Patience",
+    "voiceActivatedText": "Voice Access",
+    "voiceActivatedLabel": "Read and accept the important notice and activate the Sprechen module."
   },
   "guessCategory": {
     "guessLabel": "Guess the word",

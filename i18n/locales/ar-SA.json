@@ -1,4 +1,52 @@
 {
+  "winterAchievements": {
+    "firstQuestName": "أول نجمة على الشجرة",
+    "firstQuestDescription": "أكمل أي مهمة من مهام حدث الشتاء وأشعل أول نجمة.",
+    "santaLexiconName": "معجم سانتا",
+    "santaLexiconDescription": "أتقن جميع الكلمات المتعلقة بعيد الميلاد ورأس السنة.",
+    "everyQuestName": "حارس همس الشتاء",
+    "everyQuestDescription": "أكمل جميع مهام حدث «همس الشتاء» واشعر بأنفاس عاصفة ثلجية حقيقية.",
+    "snowFallName": "تساقط الثلج",
+    "snowFallDescription": "اشترِ تأثير تساقط الثلج خلال حدث «همس الشتاء».",
+    "santaHatName": "قبعة سانتا",
+    "santaHatDescription": "اشترِ قبعة سانتا الأسطورية خلال الحدث واشعر بروح عيد الميلاد.",
+    "christmasBallName": "كرة ثلجية",
+    "christmasBallDescription": "اشترِ هذه الكرة الثلجية السحرية لالتقاط لحظة من الشتاء.",
+    "christmasWreathName": "إكليل الميلاد",
+    "christmasWreathDescription": "اشترِ الإكليل التقليدي، رمز العيد ودفء المنزل.",
+    "winterHonorName": "شرف الشتاء",
+    "winterHonorDescription": "اكسب شرف الشتاء من خلال إكمال المهام في حدث «همس الشتاء».",
+    "metaChristmasName": "سيد عيد الميلاد",
+    "metaChristmasDescription": "افتح جميع إنجازات حدث «همس الشتاء» وأصبح أسطورة موسم الأعياد."
+  },
+  "stepHitSettings": {
+    "back": "رجوع",
+    "further": "التالي",
+    "end": "إنهاء",
+    "skip": "تخطي"
+  },
+  "stepHitLabels": {
+    "learnTitle": "التعلم",
+    "learnDescription": "القواعد، العبارات، أدوات التعريف، الأزمنة والتدريب — كل ما تحتاجه لتطوير لغتك الألمانية بثقة.",
+    "duelTitle": "الألعاب",
+    "duelDescription": "مباريات، ماراثونات، نمط خمن الكلمة، سجل المهام والتدريب بأسلوب الألعاب.",
+    "testTitle": "الاختبارات",
+    "testDescription": "اختبر مستواك من A1 إلى B2: القواعد، الكتابة، الاستماع والتحدث مع التقييم الفوري.",
+    "eventTitle": "الفعاليات",
+    "eventDescription": "مهام موسمية وتحديات مؤقتة ومكافآت.",
+    "articleTitle": "Articlus",
+    "articleDescription": "هذه هي عملتك الداخلية للتعلم. اكسب Articlus بالإجابات الصحيحة واستخدمها لمحاولات إضافية.",
+    "levelTitle": "المستوى",
+    "levelDescription": "هنا يتم عرض مستواك الحالي. تعلم وتقدم خطوة بخطوة.",
+    "statsTitle": "الإحصائيات",
+    "statsDescription": "إحصائيات التعلم: المهام المنجزة، أدوات التعريف، والمستويات والموضوعات.",
+    "achievementsTitle": "الإنجازات",
+    "achievementsDescription": "هنا يتم جمع إنجازاتك في التعلم والألعاب.",
+    "rankedTitle": "التصنيف",
+    "rankedDescription": "هنا يمكنك رؤية ترتيب اللاعبين حسب التقدم والكلمات الصحيحة.",
+    "calendarTitle": "تقويم الفعاليات",
+    "calendarDescription": "الأحداث حسب التاريخ — لا تفوت فرصة الحصول على المكافآت."
+  },
   "recipes": {
     "start": "ابدأ المهمة",
     "training": "إلى التدريب",
@@ -4346,7 +4394,7 @@
     "cowabungaText": "كاوابونغا",
     "cowabungaDescription": "سلامي أم بيبروني؟ سلاحف النينجا ستأكله على أي حال. تعلّم كلمة «سلامي» في جميع الأوضاع ضمن تدريب أدوات التعريف.",
     "zooText": "صديق الحيوانات",
-    "zooDescription": "صديق حقيقي لجميع المخلوقات!",
+    "zooDescription": "الصديق الحقيقي لن يترك أحدًا بلا أداة تعريف! تعلّم جميع الكلمات في موضوع «الحيوانات» في جميع أوضاع ممارسة أدوات التعريف.",
     "veganText": "حامي الخضروات",
     "veganDescription": "لن تبقى أي خضار بلا أداة تعريف! تعلّم جميع كلمات الخضروات من موضوع «الطعام» في جميع أوضاع تدريب أدوات التعريف.",
     "firstStepLabel": "الخطوة الأولى",
@@ -4379,7 +4427,10 @@
     "magisterText": "بلغ مستوى الإتقان بتعلّم 100 كلمة في جميع الأوضاع في «تمرين أدوات التعريف».",
     "mistakesLabel": "الأخطاء لا تعيقني!",
     "mistakesText": "كل واحدة منها خطوة نحو المعرفة!",
-    "mistakesAward": "الجائزة: تعويذة الصبر"
+    "mistakesAward": "الجائزة: تعويذة الصبر",
+    "voiceActivatedText": "وصول الصوت",
+    "voiceActivatedLabel": "اقرأ واقبل الإشعار المهم وقم بتفعيل وحدة Sprechen.",
+
   },
   "guessCategory": {
     "guessLabel": "خمن الكلمة",

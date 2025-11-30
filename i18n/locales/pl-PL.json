@@ -1,4 +1,52 @@
 {
+  "winterAchievements": {
+    "firstQuestName": "Pierwsza gwiazda choinkowa",
+    "firstQuestDescription": "Wykonaj dowolne zadanie zimowego wydarzenia i zapal pierwszą gwiazdę.",
+    "santaLexiconName": "Słownik Świętego Mikołaja",
+    "santaLexiconDescription": "Opanuj wszystkie słowa związane ze Świętami Bożego Narodzenia i Nowym Rokiem.",
+    "everyQuestName": "Strażnik zimowego szeptu",
+    "everyQuestDescription": "Ukończ wszystkie zadania wydarzenia „Szept zimy” i poczuj oddech prawdziwej zamieci.",
+    "snowFallName": "Zamieć śnieżna",
+    "snowFallDescription": "Kup efekt padającego śniegu podczas wydarzenia „Szept zimy”.",
+    "santaHatName": "Czapka Mikołaja",
+    "santaHatDescription": "Kup legendarną Czapkę Świętego Mikołaja podczas wydarzenia i poczuj ducha świąt.",
+    "christmasBallName": "Śnieżna kula",
+    "christmasBallDescription": "Kup tę magiczną śnieżną kulę, aby zatrzymać zimową chwilę.",
+    "christmasWreathName": "Świąteczny wieniec",
+    "christmasWreathDescription": "Kup tradycyjny wieniec — symbol świąt i domowej atmosfery.",
+    "winterHonorName": "Zimowy honor",
+    "winterHonorDescription": "Zdobądź zimowy honor, wykonując zadania w wydarzeniu „Szept zimy”.",
+    "metaChristmasName": "Mistrz Świąt",
+    "metaChristmasDescription": "Odblokuj wszystkie osiągnięcia wydarzenia „Szept zimy” i zostań legendą świątecznego sezonu."
+  },
+  "stepHitSettings": {
+    "back": "Wstecz",
+    "further": "Dalej",
+    "end": "Zakończyć",
+    "skip": "Pomiń"
+  },
+  "stepHitLabels": {
+    "learnTitle": "Nauka",
+    "learnDescription": "Gramatyka, zwroty, rodzajniki, czasy i ćwiczenia — wszystko, aby pewnie rozwijać niemiecki.",
+    "duelTitle": "Gry",
+    "duelDescription": "Pojedynki, maratony, tryb zgadnij słowo, dziennik zadań i trening w formie gry.",
+    "testTitle": "Testy",
+    "testDescription": "Sprawdź swój poziom od A1 do B2: gramatyka, pisanie, słuchanie i mówienie z natychmiastową oceną.",
+    "eventTitle": "Wydarzenia",
+    "eventDescription": "Sezonowe zadania, kolekcje słów i czasowe wyzwania z nagrodami.",
+    "articleTitle": "Articlusy",
+    "articleDescription": "To wewnętrzna waluta za naukę. Zdobywaj Articlusy za poprawne odpowiedzi i wydawaj je na dodatkowe próby.",
+    "levelTitle": "Poziom",
+    "levelDescription": "Tu widzisz swój aktualny poziom. Ucz się, wykonuj zadania i podnoś poziom krok po kroku.",
+    "statsTitle": "Statystyki",
+    "statsDescription": "Ogólne statystyki nauki: wykonane zadania, rodzajniki, językowe krainy, tematy.",
+    "achievementsTitle": "Osiągnięcia",
+    "achievementsDescription": "Tutaj zbierasz osiągnięcia za zadania i aktywność w grach.",
+    "rankedTitle": "Ranking",
+    "rankedDescription": "Tutaj możesz zobaczyć ranking graczy: kto odgadł najwięcej słów, kto ma największy postęp i kto jest pierwszy.",
+    "calendarTitle": "Kalendarz wydarzeń",
+    "calendarDescription": "Zdarzenia według dat. Śledź wydarzenia, aby nie przegapić nagród."
+  },
   "recipes": {
     "start": "Rozpocznij zadanie",
     "training": "Do treningu",
@@ -4346,7 +4394,7 @@
     "cowabungaText": "KOWABUNGA",
     "cowabungaDescription": "Salami czy pepperoni? Wojownicze Żółwie Ninja i tak by zjadły. Naucz się słowa „salami” we wszystkich trybach w ćwiczeniach z rodzajnikami.",
     "zooText": "Przyjaciel zwierząt",
-    "zooDescription": "Prawdziwy przyjaciel wszystkich stworzeń!",
+    "zooDescription": "Prawdziwy przyjaciel nie zostawi nikogo bez rodzajnika! Naucz się wszystkich słów z tematu „Zwierzęta” we wszystkich trybach ćwiczenia rodzajników.",
     "veganText": "Obrońca warzyw",
     "veganDescription": "Żadne warzywo nie pozostanie bez rodzajnika! Naucz się wszystkich słów o warzywach z tematu „Jedzenie” we wszystkich trybach ćwiczeń rodzajników.",
     "firstStepLabel": "Pierwszy krok",
@@ -4379,7 +4427,9 @@
     "magisterText": "Osiągnij mistrzostwo, ucząc się 100 słów we wszystkich trybach w Ćwiczeniach z rodzajnikami",
     "mistakesLabel": "Błędy mnie nie zatrzymają!",
     "mistakesText": "Każdy z nich to krok do wiedzy!",
-    "mistakesAward": "Nagroda: Talisman cierpliwości"
+    "mistakesAward": "Nagroda: Talisman cierpliwości",
+    "voiceActivatedText": "Dostęp głosowy",
+    "voiceActivatedLabel": "Przeczytaj i zaakceptuj ważne powiadomienie oraz aktywuj moduł Sprechen."
   },
   "guessCategory": {
     "guessLabel": "Odgadnij słowo",

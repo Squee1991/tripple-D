@@ -831,7 +831,7 @@
         "type": "speechToText",
         "question": "eastPlainFifthQuests.questFour",
         "text": "Bezahlen Sie bar oder mit Karte?",
-        "answer": "Bezahlen Sie bargeld oder mit Karte?"
+        "answer": "Bezahlen Sie bar oder mit Karte?"
       },
       {
         "id": 5,

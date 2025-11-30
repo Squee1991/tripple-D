@@ -73,14 +73,14 @@ onBeforeUnmount(() => document.removeEventListener('mousedown', clickOutside))
   justify-content: space-around;
   gap: .5rem;
   background: #fff;
-  border: 3px solid #1e1e1e;
+  border: 2px solid #1e1e1e;
   border-radius: 12px;
   color: #1e1e1e;
   font-weight: 600;
   font-size: 15px;
   padding: 0.5rem 1rem;
   cursor: pointer;
-  box-shadow: 4px 4px 0 #1e1e1e;
+  box-shadow: 2px 2px 0 #1e1e1e;
   transition: all .1s ease-in-out;
   white-space: nowrap;
   width: 147px;

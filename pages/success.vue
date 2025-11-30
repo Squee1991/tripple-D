@@ -7,6 +7,14 @@
     const router = useRouter()
     const auth = userAuthStore()
     const sessionId = route.query.session_id
+
+    definePageMeta({
+      robots: {
+        index: false,
+        follow: false
+      }
+    })
+
     import { getAuth, onAuthStateChanged } from 'firebase/auth'
     onMounted(() => {
       if (sessionId) {

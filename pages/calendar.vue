@@ -77,6 +77,13 @@ import ChristmasIcon from '../../assets/images/calendar-icons/christmas-wreath.s
 import FoolDay from '../../assets/images/calendar-icons/FoolDay.svg'
 import Bees from '../../assets/images/calendar-icons/bees.svg'
 
+definePageMeta({
+  robots: {
+    index: false,
+    follow: false
+  }
+})
+
 const { t} = useI18n()
 const router = useRouter()
 const goBack = () => {

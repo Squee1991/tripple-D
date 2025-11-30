@@ -41,7 +41,7 @@ export const userAuthStore = defineStore('auth', () => {
     const ownedAvatars = ref(['1.png', '2.png']);
     const isPremium = ref(false)
     const achievements = ref(null);
-    const treads = ref(false)
+    const isWebView = ref(false)
 
     const initialized = ref(false)
     let initPromise = null
@@ -51,21 +51,18 @@ export const userAuthStore = defineStore('auth', () => {
         if (!fileName) return '';
         return `/images/avatars/${fileName}`;
     }
-    const detectThreads = () => {
-        if (typeof navigator === 'undefined') return false
-        const ua = navigator.userAgent.toLowerCase()
-        if (ua.includes('threads')) {
-            treads.value = true
-        } else {
-            treads.value = false
-        }
-        return treads.value
+    const detectWebView = () => {
+        const ua = navigator.userAgent || ''
+        const isIOSWebView = /iPhone|iPod|iPad/i.test(ua) && !/Safari/i.test(ua)
+        const isAndroidWebView = /wv/.test(ua)
+        isWebView.value = isIOSWebView || isAndroidWebView
     }
-    const normalizeDate = (v) => {
-        if (!v) return null;
-        if (typeof v?.toDate === 'function') return v.toDate().toISOString();
-        const d = new Date(v);
-        return isNaN(d.getTime()) ? null : d.toISOString();
+
+    const normalizeDate = (value) => {
+        if (!value) return null;
+        if (typeof value?.toDate === 'function') return value.toDate().toISOString();
+        const date = new Date(value);
+        return isNaN(date.getTime()) ? null : date.toISOString();
     };
 
     const avatarUrl = computed(() => {
@@ -378,8 +375,7 @@ export const userAuthStore = defineStore('auth', () => {
         purchaseAvatar,
         updateUserAvatar,
         getAvatarUrl,
-        treads,
-        detectThreads,
+        isWebView, detectWebView
 
     }
 })
