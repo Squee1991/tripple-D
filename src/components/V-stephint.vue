@@ -20,14 +20,14 @@
             </div>
           </div>
           <div class="onboarding-actions">
-            <button class="close__hd" @click="finish">X</button>
+            <button class="close__hd" @click="finishOnboarding">X</button>
             <button class="hd__button" v-if="!isFirst" @click="previous">
               {{ t('stepHitSettings.back')}}
             </button>
             <button class="hd__button next" v-if="!isLast" @click="next">
               {{ t('stepHitSettings.further')}}
             </button>
-            <button class="hd__button next" v-if="isLast" @click="finish">
+            <button class="hd__button next" v-if="isLast" @click="finishOnboarding">
               {{ t('stepHitSettings.end')}}
             </button>
           </div>
@@ -59,8 +59,19 @@ const updateWidth = () => {
 }
 
 const showOnboarding = computed(() => {
-  return windowWidth.value >= 1023 && !!userAuth.uid
+  const localFlag = userAuth.uid ? localStorage.getItem(`onboardingPassed_${userAuth.uid}`) === 'true' : false
+  return (
+      windowWidth.value >= 1023 &&
+      !!userAuth.uid &&
+      !userAuth.hasSeenOnboarding &&
+      !localFlag
+  )
 })
+
+const finishOnboarding = async () => {
+  await userAuth.setHasSeenOnboarding(true)
+  finish()
+}
 
 const onboardingOptions = {
   skippable: true,

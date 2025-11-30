@@ -89,7 +89,8 @@ export default defineNuxtConfig({
 			'/**/battle',
 			'/**/cabinet',
 			'/**/calendar',
-			'/**/chat'
+			'/**/chat',
+			'/**/statistics'
 		],
 	},
 	robots: {
@@ -100,7 +101,8 @@ export default defineNuxtConfig({
 				{ userAgent: '*', disallow: '/*battle' },
 				{ userAgent: '*', disallow: '/*cabinet' },
 				{ userAgent: '*', disallow: '/*calendar' },
-				{ userAgent: '*', disallow: '/*chat' }
+				{ userAgent: '*', disallow: '/*chat' },
+				{ userAgent: '*', disallow: '/*statistics' }
 			]
 			: [{ userAgent: '*', disallow: '/' }],
 		sitemap: `${siteUrl}/sitemap.xml`,
@@ -202,5 +204,6 @@ export default defineNuxtConfig({
 		'/**/cabinet': { headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
 		'/**/calendar': { headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
 		'/**/chat': { headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
+		'/**/statistics': { headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
 	},
 })

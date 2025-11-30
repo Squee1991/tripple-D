@@ -42,7 +42,7 @@ export const userAuthStore = defineStore('auth', () => {
     const isPremium = ref(false)
     const achievements = ref(null);
     const isWebView = ref(false)
-
+    const hasSeenOnboarding = ref(false)
     const initialized = ref(false)
     let initPromise = null
 
@@ -109,7 +109,7 @@ export const userAuthStore = defineStore('auth', () => {
         ownedAvatars.value = data.ownedAvatars || ['1.png', '2.png']
         achievements.value = data.achievements || null
         voiceConsentGiven.value = data.voiceConsentGiven === true
-
+        hasSeenOnboarding.value = data.hasSeenOnboarding === true
         if (data.isPremium && !data.gotPremiumBonus) grantPremiumBonusPoints()
     }
 
@@ -142,6 +142,7 @@ export const userAuthStore = defineStore('auth', () => {
                 avatar: '1.png',
                 gotPremiumBonus: false,
                 voiceConsentGiven: false,
+                hasSeenOnboarding: false,
                 ...createInitialAchievementsObject()
             })
         }
@@ -176,6 +177,7 @@ export const userAuthStore = defineStore('auth', () => {
             subscriptionEndsAt: null,
             gotPremiumBonus: false,
             voiceConsentGiven: false,
+            hasSeenOnboarding: false,
             ...createInitialAchievementsObject()
         })
 
@@ -190,6 +192,24 @@ export const userAuthStore = defineStore('auth', () => {
             providerId: user.providerData[0]?.providerId || '',
             ...data,
         })
+    }
+
+    const setHasSeenOnboarding = async (value = true) => {
+        const authInstance = getAuth()
+        const user = authInstance.currentUser
+        hasSeenOnboarding.value = !!value
+        if (uid.value) {
+            localStorage.setItem(`onboardingPassed_${uid.value}`, value ? 'true' : 'false')
+        }
+        if (!user) return
+        const userDocRef = doc(db, 'users', user.uid)
+        try {
+            await updateDoc(userDocRef, {
+                hasSeenOnboarding: !!value
+            })
+        } catch (e) {
+            console.error('Ошибка при обновлении hasSeenOnboarding:', e)
+        }
     }
 
     const loginUser = async ({email, password}) => {
@@ -375,7 +395,9 @@ export const userAuthStore = defineStore('auth', () => {
         purchaseAvatar,
         updateUserAvatar,
         getAvatarUrl,
-        isWebView, detectWebView
+        isWebView, detectWebView,
+        hasSeenOnboarding,         
+        setHasSeenOnboarding
 
     }
 })
