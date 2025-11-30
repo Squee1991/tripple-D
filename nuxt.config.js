@@ -71,6 +71,7 @@ export default defineNuxtConfig({
 				{ rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
 			],
 			meta: [
+				{ name: 'google-site-verification', content: 'fuhqY_1X1Tcpmx_Ab7ol3cx7dfwvZUNQg6t_sdGEezM' },
 				{ property: 'og:image', content: 'https://www.skillupgerman.com/android-chrome-512x512.png' },
 				{ property: 'og:image:type', content: 'image/png' },
 				{ property: 'og:image:width', content: '512' },
