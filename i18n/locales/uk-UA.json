@@ -3663,7 +3663,8 @@
   "cabinetToggle": {
     "sound": "Звукові сповіщення",
     "theme": "Темний режим",
-    "ach": "Сповіщення про досягнення"
+    "ach": "Сповіщення про досягнення",
+    "snowFall": "Снігопад"
   },
   "cabinet": {
     "important": "ВАЖЛИВО!!!",
@@ -3701,7 +3702,12 @@
     "deleteAccBtnReject": "Скасувати",
     "boughtAvatar": "Аватар придбано",
     "notEnoughtArticles": "Недостатньо артиклюсів",
-    "boughtBtn": "Ок"
+    "boughtBtn": "Ок",
+    "notAllow": "Ефект недоступний",
+    "modalNotAllowEffectFirst": "Цей ефект можна розблокувати лише на події",
+    "modalNotAllowEffectSecond": "«Шепіт зими»",
+    "modalNotAllowEffectThird": "Придбайте його в магазині події за сніжинки!",
+    "modalNotAllowEffectClose": "Закрити"
   },
   "articleOverlay": {
     "title": "Що таке артиклюс і за що його отримувати",

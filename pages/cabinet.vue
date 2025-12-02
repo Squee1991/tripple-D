@@ -182,7 +182,6 @@
         </ClientOnly>
       </section>
     </div>
-
     <div v-if="isAvatarModalOpen" class="avatar-modal-overlay" @click.self="isAvatarModalOpen = false">
       <div class="avatar-modal-content">
         <h3>{{ t('cabinet.newAvatarTitle') }}</h3>
@@ -206,7 +205,6 @@
         </div>
       </div>
     </div>
-
     <div v-if="isPurchaseModalOpen" class="modal-overlay" @click.self="isPurchaseModalOpen = false">
       <div class="modal-card">
         <template v-if="purchaseState === 'success'">
@@ -231,7 +229,6 @@
         </template>
       </div>
     </div>
-
     <div v-if="isDeleteModalOpen" class="modal-overlay" @click.self="isDeleteModalOpen = false">
       <div class="modal-card">
         <div class="modal-title">{{ t('cabinet.deleteAccTitle') }}</div>
@@ -251,17 +248,16 @@
         </div>
       </div>
     </div>
-
     <div v-if="isSnowWarningModalOpen" class="modal-overlay" @click.self="isSnowWarningModalOpen = false">
       <div class="modal-card">
-        <div class="modal-title">❄️ Эффект недоступен</div>
+        <div class="modal-title">❄️ {{ t('cabinet.notAllow')}}</div>
         <p class="modal-text">
-          Этот эффект можно разблокировать только в событии <b>«Шёпот зимы»</b>.
+          {{ t('cabinet.modalNotAllowEffectFirst')}} <b>{{ t('cabinet.modalNotAllowEffectSecond')}}</b>.
           <br>
-          Приобретите его в магазине события за снежинки!
+          {{ t('cabinet.modalNotAllowEffectThird')}}
         </p>
         <div class="modal-actions">
-          <button class="btn" @click="isSnowWarningModalOpen = false">Закрыть</button>
+          <button class="btn" @click="isSnowWarningModalOpen = false">{{ t('cabinet.modalNotAllowEffectClose')}}</button>
         </div>
       </div>
     </div>
@@ -354,7 +350,7 @@ const settingsToggleItems = [
   {key: 'sound', label: t('cabinetToggle.sound'), wrap: false},
   {key: 'dark', label: t('cabinetToggle.theme'), wrap: true},
   {key: 'ach', label: t('cabinetToggle.ach'), wrap: true},
-  {key: 'snowFall', label: 'Снегопад', wrap: true},
+  {key: 'snowFall', label: t('cabinetToggle.snowFall'), wrap: true},
 ]
 
 const activeAccordion = ref(null)

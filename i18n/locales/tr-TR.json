@@ -3663,7 +3663,8 @@
   "cabinetToggle": {
     "sound": "Sesli Bildirimler",
     "theme": "Karanlık Mod",
-    "ach": "Başarı Bildirimleri"
+    "ach": "Başarı Bildirimleri",
+    "snowFall": "Kar yağışı"
   },
   "cabinet": {
     "important": "ÖNEMLİ!!!",
@@ -3701,7 +3702,12 @@
     "deleteAccBtnReject": "İptal",
     "boughtAvatar": "Avatar satın alındı",
     "notEnoughtArticles": "Yeterli Artiklus yok",
-    "boughtBtn": "Tamam"
+    "boughtBtn": "Tamam",
+    "notAllow": "Efekt kullanılamıyor",
+    "modalNotAllowEffectFirst": "Bu efekt yalnızca etkinlikte açılabilir",
+    "modalNotAllowEffectSecond": "“Kışın Fısıltısı”",
+    "modalNotAllowEffectThird": "Etkinlik mağazasından kar tanesiyle satın alın!",
+    "modalNotAllowEffectClose": "Kapat"
   },
   "articleOverlay": {
     "title": "Artikleus nedir ve nasıl kazanılır?",

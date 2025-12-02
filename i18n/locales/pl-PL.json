@@ -3663,7 +3663,8 @@
   "cabinetToggle": {
     "sound": "Powiadomienia dźwiękowe",
     "theme": "Tryb ciemny",
-    "ach": "Powiadomienia o osiągnięciach"
+    "ach": "Powiadomienia o osiągnięciach",
+    "snowFall": "Opad śniegu"
   },
   "cabinet": {
     "important": "WAŻNE!!!",
@@ -3701,7 +3702,12 @@
     "deleteAccBtnReject": "Anuluj",
     "boughtAvatar": "Awatar kupiony",
     "notEnoughtArticles": "Za mało Artiklusów",
-    "boughtBtn": "Ok"
+    "boughtBtn": "Ok",
+    "notAllow": "Efekt niedostępny",
+    "modalNotAllowEffectFirst": "Ten efekt można odblokować tylko podczas wydarzenia",
+    "modalNotAllowEffectSecond": "„Szept zimy”",
+    "modalNotAllowEffectThird": "Kup go w sklepie wydarzenia za płatki śniegu!",
+    "modalNotAllowEffectClose": "Zamknij"
   },
   "articleOverlay": {
     "title": "Czym jest Artikleus i jak go zdobyć",

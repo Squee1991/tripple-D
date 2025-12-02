@@ -3663,7 +3663,8 @@
   "cabinetToggle": {
     "sound": "إشعارات صوتية",
     "theme": "الوضع الليلي",
-    "ach": "إشعار بالإنجازات"
+    "ach": "إشعار بالإنجازات",
+    "snowFall": "تساقط الثلوج"
   },
   "cabinet": {
     "important": "مهم!!!",
@@ -3701,7 +3702,12 @@
     "deleteAccBtnReject": "إلغاء",
     "boughtAvatar": "تم شراء الصورة الرمزية",
     "notEnoughtArticles": "لا توجد أرتيكلوس كافية",
-    "boughtBtn": "موافق"
+    "boughtBtn": "موافق",
+    "notAllow": "التأثير غير متاح",
+    "modalNotAllowEffectFirst": "يمكن فتح هذا التأثير فقط في الحدث",
+    "modalNotAllowEffectSecond": "«همسة الشتاء»",
+    "modalNotAllowEffectThird": "احصل عليه من متجر الحدث مقابل رقاقات الثلج!",
+    "modalNotAllowEffectClose": "إغلاق"
   },
   "articleOverlay": {
     "title": "ما هو الأرتيكلوس ولماذا يتم الحصول عليه",

@@ -3663,7 +3663,8 @@
   "cabinetToggle": {
     "sound": "Sound Notifications",
     "theme": "Dark Mode",
-    "ach": "Achievement Notifications"
+    "ach": "Achievement Notifications",
+    "snowFall": "Snowfall"
   },
   "cabinet": {
     "important": "IMPORTANT!!!",
@@ -3701,7 +3702,12 @@
     "deleteAccBtnReject": "Cancel",
     "boughtAvatar": "Avatar purchased",
     "notEnoughtArticles": "Not enough Artiklus",
-    "boughtBtn": "Ok"
+    "boughtBtn": "Ok",
+    "notAllow": "Effect unavailable",
+    "modalNotAllowEffectFirst": "This effect can only be unlocked in the event",
+    "modalNotAllowEffectSecond": "“Whisper of Winter”",
+    "modalNotAllowEffectThird": "Get it in the event shop for snowflakes!",
+    "modalNotAllowEffectClose": "Close"
   },
   "articleOverlay": {
     "title": "What is an Artikleus and how to earn it",

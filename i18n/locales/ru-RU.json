@@ -3666,7 +3666,8 @@
   "cabinetToggle": {
     "sound": "Звуковые уведомления",
     "theme": "Тёмный режим",
-    "ach": "Уведомление достижений"
+    "ach": "Уведомление достижений",
+    "snowFall": "Снегопад"
   },
   "cabinet": {
     "important": "ВАЖНО!!!",
@@ -3704,7 +3705,12 @@
     "deleteAccBtnReject": "Отмена",
     "boughtAvatar": "Аватар куплен",
     "notEnoughtArticles": "Недостаточно артиклюсов",
-    "boughtBtn": "Ок"
+    "notAllow": "Эффект недоступен",
+    "modalNotAllowEffectFirst": "Этот эффект можно разблокировать только в событии",
+    "modalNotAllowEffectSecond": "«Шёпот зимы»",
+    "modalNotAllowEffectThird": "Приобретите его в магазине события за снежинки!",
+    "modalNotAllowEffectClose": "Закрыть",
+
   },
   "articleOverlay": {
     "title": "Что такое артиклюс и за что его получать",

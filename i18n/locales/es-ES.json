@@ -3663,7 +3663,8 @@
   "cabinetToggle": {
     "sound": "Notificaciones de sonido",
     "theme": "Modo oscuro",
-    "ach": "Notificación de logros"
+    "ach": "Notificación de logros",
+    "snowFall": "Nevada"
   },
   "cabinet": {
     "important": "¡IMPORTANTE!",
@@ -3701,7 +3702,12 @@
     "deleteAccBtnReject": "Cancelar",
     "boughtAvatar": "Avatar comprado",
     "notEnoughtArticles": "No tienes suficientes Artículos",
-    "boughtBtn": "Ok"
+    "boughtBtn": "Ok",
+    "notAllow": "Efecto no disponible",
+    "modalNotAllowEffectFirst": "Este efecto solo se puede desbloquear en el evento",
+    "modalNotAllowEffectSecond": "«Susurro de Invierno»",
+    "modalNotAllowEffectThird": "¡Consíguelo en la tienda del evento por copos de nieve!",
+    "modalNotAllowEffectClose": "Cerrar"
   },
   "articleOverlay": {
     "title": "Qué es un Artículo y cómo conseguirlo",

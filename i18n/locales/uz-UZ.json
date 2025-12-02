@@ -3664,7 +3664,8 @@
   "cabinetToggle": {
     "sound": "Ovozli bildirishnomalar",
     "theme": "Qorong‘i rejim",
-    "ach": "Yutuqlar bildirishnomasi"
+    "ach": "Yutuqlar bildirishnomasi",
+    "snowFall": "Qor yog‘ishi"
   },
   "cabinet": {
     "important": "MUHIM!!!",
@@ -3702,7 +3703,12 @@
     "deleteAccBtnReject": "Bekor qilish",
     "boughtAvatar": "Avatar sotib olindi",
     "notEnoughtArticles": "Artiklyuslar yetarli emas",
-    "boughtBtn": "Ok"
+    "boughtBtn": "Ok",
+    "notAllow": "Effekt mavjud emas",
+    "modalNotAllowEffectFirst": "Bu effektni faqat voqea vaqtida ochish mumkin",
+    "modalNotAllowEffectSecond": "“Qishning shiviri”",
+    "modalNotAllowEffectThird": "Uni tadbir do‘konidan qor parchasi evaziga oling!",
+    "modalNotAllowEffectClose": "Yopish"
   },
   "articleOverlay": {
     "title": "Artiklyus nima va uni qanday olish mumkin",
