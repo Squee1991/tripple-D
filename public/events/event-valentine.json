@@ -8,124 +8,99 @@
           "type": "multiple-choice",
           "id": "val-1",
           "title": "Was siehst du?",
-          "image": "",
-          "options": ["die Rose", "das Geschenk", "der Kuss"],
+          "image": "/assets/images/event-rewards/valentine-event/valentine-words/Rose.svg",
+          "options": ["die Rose", "das Geschenk", "der Ballon"],
           "correctOptionIndex": 0
         },
         {
           "type": "multiple-choice",
           "id": "val-2",
           "title": "Was siehst du?",
-          "image": "",
-          "options": ["das Herz", "die Schokolade", "die Karte"],
+          "image": "/assets/images/event-rewards/valentine-event/valentine-words/herz.svg",
+          "options": ["das Herz", "die Schokolade", "die Rose"],
           "correctOptionIndex": 0
         },
         {
           "type": "multiple-choice",
           "id": "val-3",
           "title": "Was siehst du?",
-          "image": "",
-          "options": ["die Schokolade", "der Teddybär", "der Brief"],
+          "image": "/assets/images/event-rewards/valentine-event/valentine-words/chocolate.svg",
+          "options": ["die Schokolade", "die Praline", "der Liebesbrief"],
           "correctOptionIndex": 0
         },
         {
           "type": "multiple-choice",
           "id": "val-4",
           "title": "Was siehst du?",
-          "image": "",
-          "options": ["der Kuss", "der Ring", "die Blume"],
+          "image": "/assets/images/event-rewards/valentine-event/valentine-words/Ring.svg",
+          "options": ["der Ring", "das Herz", "der Teddybär"],
           "correctOptionIndex": 0
         },
         {
           "type": "multiple-choice",
           "id": "val-5",
           "title": "Was siehst du?",
-          "image": "",
-          "options": ["die Karte", "die Liebe", "der Brief"],
+          "image": "/assets/images/event-rewards/valentine-event/valentine-words/TeddyBear.svg",
+          "options": ["der Teddybär", "die Blume", "die Valentinskarte"],
           "correctOptionIndex": 0
         },
         {
           "type": "multiple-choice",
           "id": "val-6",
           "title": "Was siehst du?",
-          "image": "",
-          "options": ["die Liebe", "das Herz", "der Teddybär"],
+          "image": "/assets/images/event-rewards/valentine-event/valentine-words/gift.svg",
+          "options": ["das Geschenk", "der Ring", "der Liebesbrief"],
           "correctOptionIndex": 0
         },
         {
           "type": "multiple-choice",
           "id": "val-7",
           "title": "Was siehst du?",
-          "image": "",
-          "options": ["der Ring", "der Kuss", "die Rose"],
+          "image": "/assets/images/event-rewards/valentine-event/valentine-words/loveLetter.svg",
+          "options": ["der Liebesbrief", "die Valentinskarte", "die Blume"],
           "correctOptionIndex": 0
         },
         {
           "type": "multiple-choice",
           "id": "val-8",
           "title": "Was siehst du?",
-          "image": "",
-          "options": ["der Teddybär", "das Geschenk", "die Karte"],
+          "image": "/assets/images/event-rewards/valentine-event/valentine-words/flowers.svg",
+          "options": ["die Blume", "die Rose", "die Praline"],
           "correctOptionIndex": 0
         },
         {
           "type": "multiple-choice",
           "id": "val-9",
           "title": "Was siehst du?",
-          "image": "",
-          "options": ["das Geschenk", "der Ring", "die Schokolade"],
+          "image": "/assets/images/event-rewards/valentine-event/valentine-words/chocolateBox.svg",
+          "options": ["die Praline", "die Schokolade", "der Ring"],
           "correctOptionIndex": 0
         },
         {
           "type": "multiple-choice",
           "id": "val-10",
           "title": "Was siehst du?",
-          "image": "",
-          "options": ["der Liebesbrief", "der Kuss", "die Blume"],
+          "image": "/assets/images/event-rewards/valentine-event/valentine-words/ValentineCard.svg",
+          "options": ["die Valentinskarte", "das Geschenk", "der Ballon"],
           "correctOptionIndex": 0
         },
         {
           "type": "multiple-choice",
           "id": "val-11",
           "title": "Was siehst du?",
-          "image": "",
-          "options": ["die Blume", "die Rose", "die Liebe"],
+          "image": "/assets/images/event-rewards/valentine-event/valentine-words/ballon.svg",
+          "options": ["der Ballon", "der Teddybär", "das Herz"],
           "correctOptionIndex": 0
         },
         {
           "type": "multiple-choice",
           "id": "val-12",
           "title": "Was siehst du?",
-          "image": "",
-          "options": ["das Paar", "das Geschenk", "die Schokolade"],
+          "image": "/assets/images/event-rewards/valentine-event/valentine-words/ballon.svg",
+          "options": ["der Schmuck", "der Teddybär", "das Herz"],
           "correctOptionIndex": 0
-        },
-        {
-          "type": "multiple-choice",
-          "id": "val-13",
-          "title": "Was siehst du?",
-          "image": "",
-          "options": ["die Umarmung", "der Kuss", "das Herz"],
-          "correctOptionIndex": 0
-        },
-        {
-          "type": "multiple-choice",
-          "id": "val-15",
-          "title": "Was siehst du?",
-          "image": "",
-          "options": ["die Praline", "die Schokolade", "das Geschenk"],
-          "correctOptionIndex": 0
-        },
-        {
-          "type": "multiple-choice",
-          "id": "val-17",
-          "title": "Was siehst du?",
-          "image": "",
-          "options": ["die Valentinskarte", "die Blume", "das Geschenk"],
-          "correctOptionIndex": 0
-        },
+        }
       ]
     }
-
   ]
 }

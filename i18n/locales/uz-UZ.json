@@ -1397,7 +1397,10 @@
     "allCases": "Birlik jumboq",
     "fiveHearts": "Hayot qalqoni",
     "daily42": "Galaktik teleskop",
-    "iAmGroot": "Grootli guldon"
+    "iAmGroot": "Grootli guldon",
+    "santaHat": "Santa shapkasi",
+    "christmasBall": "Rojdestvo shar",
+    "christmasWreath": "Rojdestvo guli"
   },
   "eastPlainFirstQuests": {
     "title": "Birinchi uchrashuv",
@@ -4312,7 +4315,12 @@
     "adjectives": "Sifatlar",
     "adjectiveBasic": "Asoslar",
     "adjectiveDeclension": "Kelishiklar",
-    "adjectiveComparison": "Daraja taqqoslash"
+    "adjectiveComparison": "Daraja taqqoslash",
+    "events": "Tadbirlar",
+    "winterEvent": "Qishdan bir chimdim",
+    "valentineEvent": "Yuraklar festivali",
+    "foolDayEvent": "Kulgu paradi",
+    "halloweenEvent": "Qovoqlar bayrami"
   },
   "specialCategory": {
     "specialCollectionText": "To‘plovchi",

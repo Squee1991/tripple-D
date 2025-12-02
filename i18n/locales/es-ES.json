@@ -1396,7 +1396,10 @@
     "allCases": "Rompecabezas de la unidad",
     "fiveHearts": "Escudo de la vida",
     "daily42": "Telescopio galáctico",
-    "iAmGroot": "Maceta con Groot"
+    "iAmGroot": "Maceta con Groot",
+    "santaHat": "Gorro de Santa",
+    "christmasBall": "Bola de Navidad",
+    "christmasWreath": "Corona de Navidad"
   },
   "eastPlainFirstQuests": {
     "title": "Primer encuentro",
@@ -4311,7 +4314,12 @@
     "adjectives": "Adjetivos",
     "adjectiveBasic": "Fundamentos",
     "adjectiveDeclension": "Declinación",
-    "adjectiveComparison": "Grados de comparación"
+    "adjectiveComparison": "Grados de comparación",
+    "events": "Eventos",
+    "winterEvent": "Una pizca de invierno",
+    "valentineEvent": "Festival de los corazones",
+    "foolDayEvent": "Desfile de la risa",
+    "halloweenEvent": "Fiesta de las calabazas"
   },
   "specialCategory": {
     "specialCollectionText": "Coleccionista",

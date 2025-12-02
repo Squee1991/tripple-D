@@ -1396,7 +1396,10 @@
     "allСases": "Пазл єдності",
     "fiveHearts": "Щит життя",
     "daily42": "Галактичний телескоп",
-    "iAmGroot": "Горщик з Ґрутом"
+    "iAmGroot": "Горщик з Ґрутом",
+    "santaHat": "Шапка Санти",
+    "christmasBall": "Різдвяна кулька",
+    "christmasWreath": "Різдвяний вінок"
   },
   "eastPlainFirstQuests": {
     "title": "Перша зустріч",
@@ -4311,7 +4314,12 @@
     "adjectives": "Прикметники",
     "adjectiveBasic": "Основи",
     "adjectiveDeclension": "Відмінювання",
-    "adjectiveComparison": "Ступені порівняння"
+    "adjectiveComparison": "Ступені порівняння",
+    "events": "Події",
+    "winterEvent": "Щіпка зими",
+    "valentineEvent": "Фестиваль сердець",
+    "foolDayEvent": "Парад сміху",
+    "halloweenEvent": "Свято гарбузів"
   },
   "specialCategory": {
     "specialCollectionText": "Колекціонер",

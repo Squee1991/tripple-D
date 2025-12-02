@@ -38,9 +38,9 @@ export const AWARDS = [
 	{key: 'FiveHearts', title: 'awards.fiveHearts', icon: HeartAward},
 	{key: 'daily42', title: 'awards.daily42', icon: Telescope},
 	{key: 'iAmGroot', title: 'awards.iAmGroot', icon: Groot},
-	{key: 'santaHat' , title: 'Шапка санты', icon: SantaHat},
-	{key: 'christmasBall' , title: 'Рождественский шар', icon: ChristmasBall},
-	{key: 'christmasWreath' , title: 'Рождественский шар', icon: ChristmasWreath},
+	{key: 'santaHat' , title: 'awards.santaHat', icon: SantaHat},
+	{key: 'christmasBall' , title: 'awards.christmasBall', icon: ChristmasBall},
+	{key: 'christmasWreath' , title: 'awards.christmasWreath', icon: ChristmasWreath},
 ]
 
 export const awardsByKey = Object.fromEntries(AWARDS.map(a => [a.key, a]))

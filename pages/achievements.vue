@@ -526,14 +526,14 @@ const achievementCategories = computed(() => [
   },
   {
     id: 'events',
-    name: 'События',
+    name: 'categoryAchievments.events',
     icon: '🎊',
-    length: modeComputed.value.winter, // ✅
+    length: modeComputed.value.winter,
     submenu: [
-      { id: 'winter', name: 'Щёпот зимы', icon: '❄️', length: modeComputed.value.winter }, // ✅
-      { id: 'valentine', name: 'Фестиваль сердец', icon: '💖' },
-      { id: 'foolDay', name: 'Парад приколов', icon: '🎭' },
-      { id: 'halloween', name: 'Праздник тыкв', icon: '🎃' },
+      { id: 'winter', name: 'categoryAchievments.winterEvent', icon: '❄️', length: modeComputed.value.winter },
+      { id: 'valentine', name: 'categoryAchievments.valentineEvent', icon: '💖' },
+      { id: 'foolDay', name: 'categoryAchievments.foolDayEvent', icon: '🎭' },
+      { id: 'halloween', name: 'categoryAchievments.halloweenEvent', icon: '🎃' },
     ]
   }
 ]);

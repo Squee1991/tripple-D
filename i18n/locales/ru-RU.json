@@ -1399,7 +1399,10 @@
     "allCases": "Пазл Единения",
     "fiveHearts": "Щит жизни",
     "daily42": "Галактический телескоп",
-    "iAmGroot": "Горшочек с Грутом"
+    "iAmGroot": "Горшочек с Грутом",
+    "santaHat": "Шапка санты",
+    "christmasBall": "Рождественский шар",
+    "christmasWreath": "Рождественский венок"
   },
   "eastPlainFirstQuests": {
     "title": "Первая встреча",
@@ -4314,7 +4317,12 @@
     "adjectives": "Прилагательные",
     "adjectiveBasic": "Основы",
     "adjectiveDeclension": "Склонение",
-    "adjectiveComparison": "Степень Сравнения"
+    "adjectiveComparison": "Степень Сравнения",
+    "events": "События",
+    "winterEvent": "Щепот зимы",
+    "valentineEvent": "Фестиваль сердец",
+    "foolDayEvent": "Парад смеха",
+    "halloweenEvent": "Праздник тыкв"
   },
   "specialCategory": {
     "specialCollectionText": "Коллекционер",

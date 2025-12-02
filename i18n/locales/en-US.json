@@ -1396,7 +1396,10 @@
     "allCases": "Puzzle of Unity",
     "fiveHearts": "Shield of Life",
     "daily42": "Galactic Telescope",
-    "iAmGroot": "Pot with Groot"
+    "iAmGroot": "Pot with Groot",
+    "santaHat": "Santa hat",
+    "christmasBall": "Christmas ornament",
+    "christmasWreath": "Christmas wreath"
   },
   "eastPlainFirstQuests": {
     "title": "First Meeting",
@@ -4311,7 +4314,12 @@
     "adjectives": "Adjectives",
     "adjectiveBasic": "Basics",
     "adjectiveDeclension": "Declension",
-    "adjectiveComparison": "Comparison"
+    "adjectiveComparison": "Comparison",
+    "events": "Events",
+    "winterEvent": "A Pinch of Winter",
+    "valentineEvent": "Festival of Hearts",
+    "foolDayEvent": "Parade of Laughter",
+    "halloweenEvent": "Pumpkin Festival"
   },
   "specialCategory": {
     "specialCollectionText": "Collector",

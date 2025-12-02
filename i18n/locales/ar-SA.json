@@ -1396,7 +1396,10 @@
     "allCases": "بازل التوحيد",
     "fiveHearts": "درع الحياة",
     "daily42": "تلسكوب المجرة",
-    "iAmGroot": "وعاء غروت"
+    "iAmGroot": "وعاء غروت",
+    "santaHat": "قبعة سانتا",
+    "christmasBall": "كرة عيد الميلاد",
+    "christmasWreath": "إكليل عيد الميلاد"
   },
   "eastPlainFirstQuests": {
     "title": "أول لقاء",
@@ -4311,7 +4314,12 @@
     "adjectives": "الصفات",
     "adjectiveBasic": "الأساسيات",
     "adjectiveDeclension": "إعراب",
-    "adjectiveComparison": "المقارنة"
+    "adjectiveComparison": "المقارنة",
+    "events": "الأحداث",
+    "winterEvent": "رشة من الشتاء",
+    "valentineEvent": "مهرجان القلوب",
+    "foolDayEvent": "موكب الضحك",
+    "halloweenEvent": "عيد القرع"
   },
   "specialCategory": {
     "specialCollectionText": "الجامع",

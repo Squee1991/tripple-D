@@ -42,8 +42,10 @@
             <div v-if="showModesBlock" class="learning-modes-block">
               <button @click="clearSelectedTopic" class="close-modes-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                  <path fill="currentColor"
-                        d="m12 13.4l-4.9 4.9q-.275.275-.7.275t-.7-.275q-.275-.275-.275-.7t.275-.7l4.9-4.9l-4.9-4.9q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275L12 10.6l4.9-4.9q.275-.275.7-.275t.7.275q.275.275.275-.7t-.275.7L13.4 12l4.9 4.9q.275.275.275.7t-.275.7q-.275.275-.7.275t-.7-.275z"></path>
+                  <path
+                      fill="currentColor"
+                      d="m12 13.4l-4.9 4.9q-.275.275-.7.275t-.7-.275q-.275-.275-.275-.7t.275-.7l4.9-4.9l-4.9-4.9q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275L12 10.6l4.9-4.9q.275-.275.7-.275t.7.275q.275.275.275-.7t-.275.7L13.4 12l4.9 4.9q.275.275.275.7t-.275.7q-.275.275-.7.275t-.7-.275z"
+                  ></path>
                 </svg>
               </button>
               <div class="learning__modes-wrapper">
@@ -56,8 +58,9 @@
                   </div>
                 </div>
                 <div class="modes-list">
+                  <!-- ТУТ ГЛАВНОЕ ИЗМЕНЕНИЕ: availableModes вместо modes -->
                   <label
-                      v-for="mode in modes"
+                      v-for="mode in availableModes"
                       :key="mode.key"
                       class="checkbox-container"
                       :class="{ 'active-mode': selectedModes.includes(mode.key) }"
@@ -68,10 +71,10 @@
                         :value="mode.key"
                     />
                     <span class="checkmark">
-                                 <svg viewBox="0 0 24 24">
-                                    <polyline points="3 12 10 20 21 4"/>
-                                 </svg>
-                              </span>
+                      <svg viewBox="0 0 24 24">
+                        <polyline points="3 12 10 20 21 4"/>
+                      </svg>
+                    </span>
                     <span class="label-text">{{ t(mode.label) }}</span>
                   </label>
                 </div>
@@ -93,15 +96,16 @@
 
 <script setup>
 import VPreloader from "../../src/components/V-preloader.vue";
-import {ref, computed, onMounted, nextTick} from 'vue'
-import {useRouter} from 'vue-router'
-import {userlangStore} from '../../store/learningStore.js'
+import { ref, computed, onMounted, nextTick } from 'vue'
+import { useRouter } from 'vue-router'
+import { userlangStore } from '../../store/learningStore.js'
 import Lottie from 'lottie-web'
-import {nameMap} from '../../utils/nameMap.js'
-import {useHead, useSeoMeta} from '#imports'
+import { nameMap } from '../../utils/nameMap.js'
+import { useHead, useSeoMeta } from '#imports'
 import NotFound from '../../assets/animation/notFound.json'
-import {useCanonical} from '../../composables/useCanonical.js'
-const {t} = useI18n()
+import { useCanonical } from '../../composables/useCanonical.js'
+
+const { t } = useI18n()
 const showModesBlock = ref(false)
 const showNoTopicMessage = ref(true)
 const router = useRouter()
@@ -122,7 +126,7 @@ const pageDesc = t('metaArticle.description')
 useHead({
   title: pageTitle,
   link: [
-    {rel: 'canonical', href: canonical}
+    { rel: 'canonical', href: canonical }
   ]
 })
 
@@ -168,13 +172,45 @@ const prevPage = () => {
   if (page.value > 0) page.value--
 }
 
-const modes = [
-  {key: 'article', label: 'modes.article'},
-  {key: 'letters', label: 'modes.letters'},
-  {key: 'wordArticle', label: 'modes.articleWord'},
-  {key: 'plural', label: 'modes.plural'},
-  {key: 'audio', label: 'modes.audio'}
+/**
+ * Базовый список режимов (включая plural)
+ */
+const baseModes = [
+  { key: 'article',     label: 'modes.article' },
+  { key: 'letters',     label: 'modes.letters' },
+  { key: 'wordArticle', label: 'modes.articleWord' },
+  { key: 'plural',      label: 'modes.plural' },
+  { key: 'audio',       label: 'modes.audio' }
 ]
+
+/**
+ * Слова выбранной темы
+ */
+const topicWords = computed(() => {
+  const key = selectedTopic.value
+  if (!key) return []
+  return Array.isArray(themeList.value[key]) ? themeList.value[key] : []
+})
+
+/**
+ * Проверка, есть ли хоть одно слово с plural
+ */
+function hasAnyPlural(wordsArray) {
+  const list = Array.isArray(wordsArray) ? wordsArray : []
+  return list.some(w => w.plural && String(w.plural).trim() !== '')
+}
+
+const hasPluralForCurrentTopic = computed(() => hasAnyPlural(topicWords.value))
+
+/**
+ * Список режимов, доступных для текущей темы:
+ * если plural нигде нет — просто его убираем
+ */
+const availableModes = computed(() => {
+  return hasPluralForCurrentTopic.value
+      ? baseModes
+      : baseModes.filter(m => m.key !== 'plural')
+})
 
 const themeProgress = computed(() => {
   return Object.fromEntries(
@@ -183,7 +219,7 @@ const themeProgress = computed(() => {
         const learned = words.filter(word =>
             store.learnedWords.some(lw => lw.de === word.de && lw.topic === key)
         ).length
-        return [key, {learned, total}]
+        return [key, { learned, total }]
       })
   )
 })
@@ -198,24 +234,24 @@ const startLearning = async () => {
   if (!selectedModes.value.length || isLoading.value) return
   isLoading.value = true
   try {
-    const topicWords = (themeList.value[selectedTopic.value] || [])
+    const topicWordsLocal = (themeList.value[selectedTopic.value] || [])
         .filter(word => {
           const globalWord = store.words.find(
               w => w.de === word.de && w.topic === selectedTopic.value
           )
           return selectedModes.value.some(mode => !(globalWord?.progress?.[mode] === true))
         })
-        .map(w => ({...w, topic: selectedTopic.value}))
+        .map(w => ({ ...w, topic: selectedTopic.value }))
 
-    await store.addWordsToGlobal(topicWords)
-    await store.setSelectedWords(topicWords)
+    await store.addWordsToGlobal(topicWordsLocal)
+    await store.setSelectedWords(topicWordsLocal)
     await store.setSelectedTopics([selectedTopic.value])
     await store.saveToFirebase()
 
     await nextTick()
     const path = localePath({
       path: '/articles/articles-session',
-      query: {topic: selectedTopic.value, mode: selectedModes.value}
+      query: { topic: selectedTopic.value, mode: selectedModes.value }
     })
     await router.push(path)
   } catch (e) {
@@ -238,7 +274,6 @@ onMounted(() => {
     })
   }
 })
-
 </script>
 
 <style scoped>

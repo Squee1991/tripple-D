@@ -1396,7 +1396,10 @@
     "allCases": "Puzzle jedności",
     "fiveHearts": "Tarcza życia",
     "daily42": "Galaktyczny teleskop",
-    "iAmGroot": "Doniczka z Grootem"
+    "iAmGroot": "Doniczka z Grootem",
+    "santaHat": "Czapka Mikołaja",
+    "christmasBall": "Bombka choinkowa",
+    "christmasWreath": "Świąteczny wieniec"
   },
   "eastPlainFirstQuests": {
     "title": "Pierwsze spotkanie",
@@ -4311,7 +4314,12 @@
     "adjectives": "Przymiotniki",
     "adjectiveBasic": "Podstawy",
     "adjectiveDeclension": "Odmiana",
-    "adjectiveComparison": "Stopniowanie"
+    "adjectiveComparison": "Stopniowanie",
+    "events": "Wydarzenia",
+    "winterEvent": "Szczypta zimy",
+    "valentineEvent": "Festiwal serc",
+    "foolDayEvent": "Parada śmiechu",
+    "halloweenEvent": "Święto dyń"
   },
   "specialCategory": {
     "specialCollectionText": "Kolekcjoner",

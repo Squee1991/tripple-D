@@ -1,68 +1,112 @@
 <script setup>
-import {ref} from 'vue'
-import Snow from '../assets/images/mery-christmas/Snow.svg'
+import { computed } from 'vue'
+
+const props = defineProps({
+  image: {
+    type: String,
+    required: true
+  },
+  count: {
+    type: Number,
+    default: 50
+  }
+})
 
 function rand(min, max) {
   return Math.random() * (max - min) + min
 }
 
-const snowflakes = ref(
-    Array.from({length: 100}).map((_, i) => {
-      const size = Math.round(rand(12, 28))
-      const left = Math.round(rand(0, 100))
-      const fall = rand(14, 28)
-      const delay = -rand(0, fall)
-      const drift = Math.round(rand(6, 18))
-      const sway = rand(8, 16)
-      const spin = Math.random() < 0.45 ? rand(6, 14) : 0
-      const opac = rand(0.55, 0.95)
-      const far = i % 3 === 0
-      return {
-        id: i + 1,
-        size, left,
-        fall: far ? fall * 1.3 : fall,
-        delay,
-        drift: far ? Math.round(drift * 1.2) : drift,
-        sway,
-        spin,
-        opacity: far ? opac * 0.75 : opac,
-        depth: far ? 'back' : 'front'
-      }
-    })
-)
+const snowflakes = computed(() => {
+  // 1. Создаем массив
+  const items = Array.from({ length: props.count }).map((_, i) => {
+
+    // --- ШАГ 1: Позиция по горизонтали ---
+    const sectionWidth = 100 / props.count
+    // Снежинка строго в своей полосе
+    const left = (i * sectionWidth) + rand(0, sectionWidth * 0.5)
+
+    const size = Math.round(rand(25, 45))
+    const fallDuration = rand(15, 25) // Сколько секунд падает
+
+    // --- ШАГ 2: ГЛАВНОЕ ИСПРАВЛЕНИЕ (Разбиваем пары) ---
+    // Проблема: i=0 и i=1 стоят рядом и налезают друг на друга.
+    // Решение:
+    // Если i четное (0, 2, 4...) -> задержка маленькая (оно вверху)
+    // Если i нечетное (1, 3, 5...) -> задержка огромная (оно внизу)
+
+    const isEven = i % 2 === 0
+
+    // Делим время падения пополам.
+    // Одни начинают с 0..-10с, другие с -10..-20с
+    // Это разносит соседей на пол-экрана по высоте.
+    let delay
+    if (isEven) {
+      delay = -rand(0, fallDuration / 2)
+    } else {
+      delay = -rand(fallDuration / 2, fallDuration)
+    }
+
+    const drift = Math.round(rand(6, 18))
+    const sway = rand(8, 16)
+    // Разная фаза качания, чтобы не двигались синхронно
+    const swayDelay = -rand(0, sway)
+
+    const spin = Math.random() < 0.45 ? rand(6, 14) : 0
+    const opac = rand(0.55, 0.95)
+    const far = i % 3 === 0
+
+    return {
+      id: i + 1,
+      size,
+      left: left.toFixed(2),
+      fall: far ? fallDuration * 1.3 : fallDuration,
+      delay: delay.toFixed(2),
+      drift: far ? Math.round(drift * 1.2) : drift,
+      sway,
+      swayDelay: swayDelay.toFixed(2),
+      spin,
+      opacity: far ? opac * 0.75 : opac,
+      depth: far ? 'back' : 'front'
+    }
+  })
+
+  // Перемешиваем массив ПЕРЕД отдачей, чтобы Z-index (кто кого перекрывает) был случайным,
+  // но рассчитанные выше координаты left/delay уже зафиксировали их далеко друг от друга.
+  return items.sort(() => Math.random() - 0.5)
+})
 </script>
 
 <template>
-  <div class="svg-snow" aria-hidden="true">
-    <ClientOnly>
-      <div
-          v-for="f in snowflakes"
-          :key="f.id"
-          class="flake-wrap"
-          :class="'depth-' + f.depth"
-          :style="{
-        '--left': f.left + '%',
-        '--fall': f.fall + 's',
-        '--delay': f.delay + 's'
-      }"
-      >
-        <img
-            :src="Snow"
-            class="flake"
-            :class="{ 'spin': f.spin > 0 }"
+    <div class="svg-snow" aria-hidden="true">
+      <ClientOnly>
+        <div
+            v-for="f in snowflakes"
+            :key="f.id"
+            class="flake-wrap"
+            :class="'depth-' + f.depth"
             :style="{
-          '--size': f.size + 'px',
-          '--drift': f.drift + 'px',
-          '--sway': f.sway + 's',
-          '--spin': f.spin + 's',
-          '--swayDelay': (f.delay * 0.7) + 's',
-          opacity: f.opacity
-        }"
-            alt=""
-        />
-      </div>
-    </ClientOnly>
-  </div>
+              '--left': f.left + '%',
+              '--fall': f.fall + 's',
+              '--delay': f.delay + 's'
+            }"
+        >
+          <img
+              :src="props.image"
+              class="flake"
+              :class="{ 'spin': f.spin > 0 }"
+              :style="{
+                '--size': f.size + 'px',
+                '--drift': f.drift + 'px',
+                '--sway': f.sway + 's',
+                '--spin': f.spin + 's',
+                '--swayDelay': f.swayDelay + 's',
+                opacity: f.opacity
+              }"
+              alt=""
+          />
+        </div>
+      </ClientOnly>
+    </div>
 </template>
 
 <style scoped>
@@ -70,75 +114,57 @@ const snowflakes = ref(
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: 0;
+  z-index: -1;
+  overflow: hidden;
 }
 
 .flake-wrap {
-  position: fixed;
-  top: -12vh;
+  position: absolute;
+  top: -15vh;
   left: var(--left);
   will-change: transform;
   animation: fall var(--fall) linear infinite;
   animation-delay: var(--delay);
-  transform: translate3d(0, -12vh, 0);
 }
 
 .flake {
+  display: block;
   width: var(--size);
   height: var(--size);
-  opacity: .95;
+  /* Важно: contain, чтобы картинка не деформировалась */
+  object-fit: contain;
   will-change: transform;
-  animation: sway var(--sway) linear infinite;
+  /* alternate делает качание плавнее (туда-сюда) */
+  animation: sway var(--sway) ease-in-out infinite alternate;
   animation-delay: var(--swayDelay);
 }
 
 .flake.spin {
-  animation: sway var(--sway) linear infinite,
+  animation: sway var(--sway) ease-in-out infinite alternate,
   spin var(--spin) linear infinite;
   animation-delay: var(--swayDelay), 0s;
 }
 
 .depth-back {
-  opacity: .7
+  z-index: 1;
 }
 
 .depth-front {
-  opacity: 1
+  z-index: 2;
 }
 
 @keyframes fall {
-  from {
-    transform: translate3d(0, -12vh, 0);
-  }
-  to {
-    transform: translate3d(0, 110vh, 0);
-  }
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(0, 115vh, 0); }
 }
 
 @keyframes sway {
-  0% {
-    transform: translateX(0)
-  }
-  25% {
-    transform: translateX(var(--drift))
-  }
-  50% {
-    transform: translateX(calc(var(--drift) * -1))
-  }
-  75% {
-    transform: translateX(var(--drift))
-  }
-  100% {
-    transform: translateX(0)
-  }
+  from { transform: translateX(calc(var(--drift) * -1)); }
+  to { transform: translateX(var(--drift)); }
 }
 
 @keyframes spin {
-  from {
-    transform: rotate(0deg)
-  }
-  to {
-    transform: rotate(360deg)
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 </style>

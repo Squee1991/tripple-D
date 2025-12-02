@@ -1,0 +1,118 @@
+{
+  "id": "a1-1-ich-bin",
+  "title": "Ich bin и глагол sein",
+
+  "vocabulary": [
+    { "de": "müde", "translate": "уставший" },
+    { "de": "krank", "translate": "больной" },
+    { "de": "hungrig", "translate": "голодный" },
+    { "de": "glücklich", "translate": "счастливый" },
+    { "de": "traurig", "translate": "грустный" },
+    { "de": "Lehrer", "translate": "учитель" },
+    { "de": "Student", "translate": "студент" },
+    { "de": "Mann", "translate": "мужчина" },
+    { "de": "Frau", "translate": "женщина" },
+    { "de": "Kind", "translate": "ребёнок" },
+
+    { "de": "hier", "translate": "здесь" },
+    { "de": "da", "translate": "там" }
+  ],
+
+  "grammar": [
+    {
+      "title": "Личные местоимения",
+      "explanation": [
+        "Местоимения показывают, кто выполняет действие в предложении."
+      ],
+      "table": [
+        ["ich", "я"],
+        ["du", "ты"],
+        ["er", "он"],
+        ["sie", "она"],
+        ["es", "оно"],
+        ["wir", "мы"],
+        ["ihr", "вы (мн.ч.)"],
+        ["sie", "они"],
+        ["Sie", "Вы (вежливо)"]
+      ]
+    },
+    {
+      "title": "Глагол sein",
+      "explanation": [
+        "sein — это глагол «быть».",
+        "Используется для описания людей, профессий, состояний и местонахождения."
+      ],
+      "table": [
+        ["ich", "bin"],
+        ["du", "bist"],
+        ["er/sie/es", "ist"],
+        ["wir", "sind"],
+        ["ihr", "seid"],
+        ["sie/Sie", "sind"]
+      ]
+    },
+    {
+      "title": "Стуктура построения предложений",
+      "explanation": [
+        "Простое предложение в немецком строится по схеме",
+        "Местоимение >  глагол > остальная часть.",
+        "Глагол в большинство предложений стоит на 2-м месте."
+      ],
+      "examples": [
+        "Ich bin müde.",
+        "Du bist hier.",
+        "Das Kind ist krank."
+      ]
+    }
+  ],
+  "examples": [
+    { "de": "Ich bin müde.", "translate": "Я устал." },
+    { "de": "Du bist glücklich.", "translate": "Ты счастлив." },
+    { "de": "Er ist Lehrer.", "translate": "Он учитель." },
+    { "de": "Sie ist Studentin.", "translate": "Она студентка." },
+    { "de": "Wir sind Freunde.", "translate": "Мы друзья." },
+    { "de": "Das Kind ist krank.", "translate": "Ребёнок болен." },
+    { "de": "Der Mann ist hier.", "translate": "Мужчина здесь." },
+    { "de": "Die Frau ist traurig.", "translate": "Женщина грустная." },
+    { "de": "Ihr seid hungrig.", "translate": "Вы голодные." },
+    { "de": "Sie sind da.", "translate": "Они там." }
+  ],
+
+  "exercises": [
+    {
+      "type": "fill",
+      "task": "Вставь форму глагола sein",
+      "items": [
+        { "q": "Ich ___ müde.", "a": "bin" },
+        { "q": "Du ___ Lehrer.", "a": "bist" },
+        { "q": "Er ___ krank.", "a": "ist" },
+        { "q": "Wir ___ Freunde.", "a": "sind" },
+        { "q": "Ihr ___ hungrig.", "a": "seid" },
+        { "q": "Sie ___ hier.", "a": "sind" }
+      ]
+    },
+    {
+      "type": "match",
+      "task": "Соедини слово и перевод",
+      "items": [
+        { "de": "müde", "translate": "уставший" },
+        { "de": "glücklich", "translate": "счастливый" },
+        { "de": "traurig", "translate": "грустный" },
+        { "de": "Kind", "translate": "ребёнок" },
+        { "de": "Frau", "translate": "женщина" },
+        { "de": "Mann", "translate": "мужчина" }
+      ]
+    },
+    {
+      "type": "translate",
+      "task": "Переведи на немецкий",
+      "items": [
+        { "q": "Он врач.", "a": "Er ist Arzt." },
+        { "q": "Мы друзья.", "a": "Wir sind Freunde." },
+        { "q": "Она здесь.", "a": "Sie ist hier." },
+        { "q": "Ребёнок болен.", "a": "Das Kind ist krank." },
+        { "q": "Я счастлив.", "a": "Ich bin glücklich." }
+      ]
+    }
+  ]
+}

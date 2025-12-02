@@ -1396,7 +1396,10 @@
     "allCases": "Birlik Bulmacası",
     "fiveHearts": "Hayat Kalkanı",
     "daily42": "Galaktik Teleskop",
-    "iAmGroot": "Groot ile Saksı"
+    "iAmGroot": "Groot ile Saksı",
+    "santaHat": "Noel Baba şapkası",
+    "christmasBall": "Noel süs topu",
+    "christmasWreath": "Noel çelengi"
   },
   "eastPlainFirstQuests": {
     "title": "İlk Buluşma",
@@ -4311,7 +4314,12 @@
     "adjectives": "Sıfatlar",
     "adjectiveBasic": "Temeller",
     "adjectiveDeclension": "Çekim",
-    "adjectiveComparison": "Dereceleme"
+    "adjectiveComparison": "Dereceleme",
+    "events": "Etkinlikler",
+    "winterEvent": "Bir Tutam Kış",
+    "valentineEvent": "Kalpler Festivali",
+    "foolDayEvent": "Kahkaha Geçidi",
+    "halloweenEvent": "Kabak Bayramı"
   },
   "specialCategory": {
     "specialCollectionText": "Koleksiyoncu",

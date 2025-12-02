@@ -80,7 +80,6 @@ function isImageUrl(v) {
 }
 
 function checkFinished() {
-  // Эмитим событие только если оба попапа скрыты
   if (!ach.showPopup && !awardVisible.value) {
     emit('toast-finished')
   }

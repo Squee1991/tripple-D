@@ -5,7 +5,10 @@
       @click.self="handleCloseClick"
   >
     <div class="modal-content" role="dialog" aria-modal="true">
-      <VShowFall v-if="activeEvent.snow"/>
+      <VShowFall
+          v-if="activeEvent && activeEvent.effectImage"
+          :image="activeEvent.effectImage"
+      />
       <div class="modal-icon">
         <img class="modal__icon-item" :src="activeEvent.icon" :alt="`${activeEvent.title} icon`"/>
       </div>
@@ -25,11 +28,20 @@ import {ref, watch, computed, onMounted, onUnmounted} from "vue";
 import { userAuthStore } from '../../store/authStore.js'
 import VShowFall from "../components/V-showFall.vue";
 import Wreath from "../../assets/images/mery-christmas/santa-claus.svg";
-import Pumpkin from "../../assets/images/mery-christmas/pumkin.svg";
+import Pumpkin from "../../assets/images/mery-christmas/halloween.svg";
+import Valentine from "../../assets/images/mery-christmas/valentine.svg";
+import SnowFall from '../../assets/images/mery-christmas/Snow.svg'
+import HeartFall from '../../assets/images/mery-christmas/heartFall.svg'
+import PumpkinFall from '../../assets/images/mery-christmas/pumpkinFall.svg'
+import FoolIcon from '../../assets/images/mery-christmas/fooldayFall.svg'
+import FoolIFall from '../../assets/images/mery-christmas/foolFall.svg'
 const authStore = userAuthStore();
 const router = useRouter();
 const props = defineProps({
-  visible: { type: Boolean, default: true },
+  visible: {
+    type: Boolean,
+    default: true
+  },
   schedule: {
     type: Array,
     default: () => [
@@ -37,37 +49,37 @@ const props = defineProps({
         start: "10-28 00:00",
         end:   "10-31 23:59",
         title: "Праздник тыкв",
-        text: "Собирай конфеты и не бойся испытаний — новые награды уже ждут!",
+        text: "Собирай тыквы, выполняй задания и получай тематические награды!",
         icon: Pumpkin,
         route: "/event-halloween",
-        snow: false,
+        effectImage: PumpkinFall,
       },
       {
         start: "12-24 00:00",
         end:   "01-02 23:59",
         title: "Шепот зимы",
-        text: "Событие доступно! Успей принять участие и получить награды.",
+        text: "Собирай снежинки, открывай подарки и участвуй в зимнем событии!",
         icon: Wreath,
         route: "/event-winter",
-        snow: true,
+        effectImage: SnowFall,
       },
       {
         start: '02-14 00:00',
         end: '02-16 23:59',
         title: "Фестиваль сердец",
-        text: "Событие доступно! Успей принять участие и получить награды.",
-        icon: Wreath,
+        text: "Прими участие в романтичном событии и получи эксклюзивные награды!",
+        icon: Valentine,
         route: "/event-valentine",
-        snow: false,
+        effectImage: HeartFall,
       },
       {
         start: '04-01 00:00',
         end: '04-01 23:59',
         title: "Парад приколов",
-        text: "Событие доступно! Успей принять участие и получить награды.",
-        icon: Wreath,
+        text: "Веселись, собирай бонусы и участвуй в шуточных испытаниях!",
+        icon: FoolIcon,
         route: "/event-joke",
-        snow: false,
+        effectImage: FoolIFall,
       }
     ]
   },
@@ -201,7 +213,7 @@ watch(() => [props.visible, isModalOpen.value, activeEvent.value],
 
 .modal-content {
   position: relative;
-  background: #161616;
+  background: #2b2b2b;
   padding: 24px 20px;
   border-radius: 16px;
   max-width: 420px;
