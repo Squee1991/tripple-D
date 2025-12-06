@@ -1,10 +1,11 @@
 <template>
   <div
-      v-if="visible && isModalOpen && activeEvent &&  authStore.uid"
+      v-if="visible && isModalOpen && activeEvent && authStore.uid"
       class="modal-overlay"
       @click.self="handleCloseClick"
   >
     <div class="modal-content" role="dialog" aria-modal="true">
+      <img v-if="activeEvent.id === 'winter'" class="snow" :src="Showing" alt="">
       <VShowFall
           v-if="activeEvent && activeEvent.effectImage"
           :image="activeEvent.effectImage"
@@ -23,8 +24,9 @@
 </template>
 
 <script setup>
-import {useRouter} from "vue-router";
-import {ref, watch, computed, onMounted, onUnmounted} from "vue";
+
+import { useRouter } from "vue-router";
+import { ref, watch, computed, onMounted, onUnmounted } from "vue";
 import { userAuthStore } from '../../store/authStore.js'
 import VShowFall from "../components/V-showFall.vue";
 import Wreath from "../../assets/images/mery-christmas/santa-claus.svg";
@@ -35,8 +37,12 @@ import HeartFall from '../../assets/images/mery-christmas/heartFall.svg'
 import PumpkinFall from '../../assets/images/mery-christmas/pumpkinFall.svg'
 import FoolIcon from '../../assets/images/mery-christmas/fooldayFall.svg'
 import FoolIFall from '../../assets/images/mery-christmas/foolFall.svg'
+import Showing from '../../assets/images/shovel.svg'
+
+const { t } = useI18n()
 const authStore = userAuthStore();
 const router = useRouter();
+
 const props = defineProps({
   visible: {
     type: Boolean,
@@ -44,54 +50,60 @@ const props = defineProps({
   },
   schedule: {
     type: Array,
-    default: () => [
-      {
-        start: "10-28 00:00",
-        end:   "10-31 23:59",
-        title: "Праздник тыкв",
-        text: "Собирай тыквы, выполняй задания и получай тематические награды!",
-        icon: Pumpkin,
-        route: "/event-halloween",
-        effectImage: PumpkinFall,
-      },
-      {
-        start: "12-24 00:00",
-        end:   "01-02 23:59",
-        title: "Шепот зимы",
-        text: "Собирай снежинки, открывай подарки и участвуй в зимнем событии!",
-        icon: Wreath,
-        route: "/event-winter",
-        effectImage: SnowFall,
-      },
-      {
-        start: '02-14 00:00',
-        end: '02-16 23:59',
-        title: "Фестиваль сердец",
-        text: "Прими участие в романтичном событии и получи эксклюзивные награды!",
-        icon: Valentine,
-        route: "/event-valentine",
-        effectImage: HeartFall,
-      },
-      {
-        start: '04-01 00:00',
-        end: '04-01 23:59',
-        title: "Парад приколов",
-        text: "Веселись, собирай бонусы и участвуй в шуточных испытаниях!",
-        icon: FoolIcon,
-        route: "/event-joke",
-        effectImage: FoolIFall,
-      }
-    ]
+    default: null
   },
   tickMs: { type: Number, default: 1000 }
 });
 
 const emit = defineEmits(["close"]);
-
 const isModalOpen = ref(true);
 const currentTime = ref(new Date());
-
 const lastEventKey = ref(null);
+
+const defaultSchedule = computed(() => [
+  {
+    id: "halloween",
+    start: "10-28 00:00",
+    end: "10-31 23:59",
+    title: t('eventsModal.halloweenLabel'),
+    text: t('eventsModal.halloweenText'),
+    icon: Pumpkin,
+    route: "/event-halloween",
+    effectImage: PumpkinFall,
+  },
+  {
+    id: "winter",
+    start: "12-03 00:00",
+    end: "01-02 23:59",
+    title: t('eventsModal.winterLabel'),
+    text: t('eventsModal.winterText'),
+    icon: Wreath,
+    route: "/event-winter",
+    effectImage: SnowFall,
+  },
+  {
+    id: "valentine",
+    start: '02-14 00:00',
+    end: '02-16 23:59',
+    title: t('eventsModal.valentineLabel'),
+    text: t('eventsModal.valentineText'),
+    icon: Valentine,
+    route: "/event-valentine",
+    effectImage: HeartFall,
+  },
+  {
+    id: "joke",
+    start: '04-01 00:00',
+    end: '04-01 23:59',
+    title: t('eventsModal.jokeLabel'),
+    text: t('eventsModal.jokeText'),
+    icon: FoolIcon,
+    route: "/event-joke",
+    effectImage: FoolIFall,
+  }
+]);
+
+const effectiveSchedule = computed(() => props.schedule || defaultSchedule.value);
 
 function parseAnnualDate(str) {
   const [datePart, timePart] = str.split(" ");
@@ -106,22 +118,29 @@ function makeEventKey(entry) {
 }
 
 function getDismissed(key) {
-  try { return localStorage.getItem(`eventModal.dismissed.${key}`) === "1"; }
-  catch { return false; }
+  try {
+    return localStorage.getItem(`eventModal.dismissed.${key}`) === "1";
+  } catch {
+    return false;
+  }
 }
 
-function setDismissed(key, v=true) {
-  try { localStorage.setItem(`eventModal.dismissed.${key}`, v ? "1" : "0"); }
-  catch {  }
+function setDismissed(key, v = true) {
+  try {
+    localStorage.setItem(`eventModal.dismissed.${key}`, v ? "1" : "0");
+  } catch {}
 }
-
 
 const annualCandidatesSorted = computed(() => {
-  const list = (props.schedule || []).map(entry => {
+  const list = effectiveSchedule.value.map(entry => {
     const startDate = parseAnnualDate(entry.start);
-    const endDate = entry.end ? parseAnnualDate(entry.end)
-        : new Date(startDate.getTime() + 24 * 60 * 60 * 1000);
-    return { ...entry, startDate, endDate };
+    const endDate = entry.end ? parseAnnualDate(entry.end) :
+        new Date(startDate.getTime() + 24 * 60 * 60 * 1000);
+    return {
+      ...entry,
+      startDate,
+      endDate
+    };
   });
 
   for (const e of list) {
@@ -175,7 +194,6 @@ onUnmounted(() => {
   if (intervalId) clearInterval(intervalId);
 });
 
-
 watch(() => activeEvent.value,
     (val) => {
       const key = val ? makeEventKey(val) : null;
@@ -187,15 +205,17 @@ watch(() => activeEvent.value,
         lastEventKey.value = key;
         isModalOpen.value = !getDismissed(key);
       }
-    },
-    { immediate: true }
+    }, {
+      immediate: true
+    }
 );
 
 watch(() => [props.visible, isModalOpen.value, activeEvent.value],
     ([isVisible, open, evt]) => {
       document.body.style.overflow = (isVisible && open && !!evt) ? "hidden" : "";
-    },
-    { immediate: true }
+    }, {
+      immediate: true
+    }
 );
 </script>
 
@@ -216,11 +236,20 @@ watch(() => [props.visible, isModalOpen.value, activeEvent.value],
   background: #2b2b2b;
   padding: 24px 20px;
   border-radius: 16px;
-  max-width: 420px;
+  max-width: 400px;
   width: 90%;
   text-align: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25), inset 0 0 12px rgba(255, 255, 255, 0.6);
-  overflow: hidden;
+  z-index: 1111111;
+}
+
+.snow {
+  position: absolute;
+  top: -87%;
+  left: -6px;
+  width: 412px;
+  z-index: 0;
+  max-width: none;
 }
 
 .modal-icon {

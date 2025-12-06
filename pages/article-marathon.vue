@@ -161,7 +161,7 @@ const difficultyClasses = computed(() =>
   border: 3px solid #1e1e1e;
   box-shadow: 4px 4px 0 #1e1e1e;
   border-radius: 24px;
-  padding: 0 1.4rem;
+  padding: 0 15px 18px 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;

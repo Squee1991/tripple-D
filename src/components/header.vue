@@ -128,7 +128,7 @@ import {ref, computed, watch, onMounted, onBeforeUnmount} from 'vue'
 import {useRouter} from 'vue-router'
 import {userAuthStore} from '../../store/authStore.js'
 import {useBreakPointsStore} from '../../store/breakPointsStore.js'
-import { useAchievementStore } from '../../store/achievementStore.js'
+import { useEasterEggsStore } from '../../store/easterEggsStore.js'
 
 import SignIn from '../components/logIn.vue'
 import LanguageSelector from '../components/langSwitcher.vue'
@@ -143,13 +143,13 @@ import User from '../../assets/images/account.svg'
 import Logout from '../../assets/images/logout.svg'
 import PadLock from '../../assets/images/padlock.svg'
 import HD from '../../assets/images/HD.svg'
-const achievementStore = useAchievementStore()
+const easterEggsStore = useEasterEggsStore()
 const router = useRouter()
 const {t, locale} = useI18n()
 const bp = useBreakPointsStore()
 const userAuth = userAuthStore()
 const click = () => {
-  achievementStore.triggerTaps()
+  easterEggsStore.triggerTaps()
 }
 const wrapperRef = ref(null)
 const showAuth = ref(false)

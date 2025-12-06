@@ -1,4 +1,42 @@
 {
+  "eventsModal": {
+    "halloweenLabel": "مهرجان اليقطين",
+    "halloweenText": "اجمع القرع، وأكمل المهام واحصل على مكافآت خاصة!",
+    "winterLabel": "همس الشتاء",
+    "winterText": "شارك في حدث الشتاء! اجمع ندف الثلج، وافتح الهدايا.",
+    "valentineLabel": "مهرجان القلوب",
+    "valentineText": "شارك في الحدث الرومانسي واحصل على مكافآت حصرية!",
+    "jokeLabel": "موكب المقالب",
+    "jokeText": "استمتع، واجمع المكافآت وشارك في تحديات مضحكة!"
+  },
+  "winterEvent": {
+    "pathMain": "الرئيسية",
+    "event": "الفعالية",
+    "panel": "لوحة الفعالية",
+    "reputation": "السمعة",
+    "currency": "العملة",
+    "shop": "متجر السمعة",
+    "bought": "تم الشراء",
+    "notAllowed": "غير متاح",
+    "notEnough": "غير كافٍ",
+    "buy": "شراء",
+    "questions": "المهام",
+    "rep": "سمعة",
+    "repeat": "تكرار",
+    "execute": "تنفيذ",
+    "notAllowedTitle": "الفعالية غير متاحة",
+    "notAllowedText": "هذه الفعالية لم تبدأ بعد أو قد انتهت بالفعل.",
+    "eventShop": "متجر الفعالية",
+    "eventQuestions": "مهام الفعالية",
+    "firstReputation": "الثقة الثلجية",
+    "secondReputation": "التبجيل الشتوي"
+  },
+  "winterEventShopItems": {
+    "santaHat": "قبعة سانتا",
+    "christmasBall": "كرة ثلجية",
+    "christmasWreath": "إكليل الميلاد",
+    "snowFall": "تأثير تساقط الثلوج"
+  },
   "winterAchievements": {
     "firstQuestName": "أول نجمة على الشجرة",
     "firstQuestDescription": "أكمل أي مهمة من مهام حدث الشتاء وأشعل أول نجمة.",
@@ -4444,7 +4482,7 @@
     "mistakesAward": "الجائزة: تعويذة الصبر",
     "voiceActivatedText": "وصول الصوت",
     "voiceActivatedLabel": "اقرأ واقبل الإشعار المهم وقم بتفعيل وحدة Sprechen.",
-
+    "theLostDescription": "مدخل المخبأ مخفي أمام الجميع. انقر 5 مرات على شعار الموقع لبدء البروتوكول والحصول على الوصول من خلال الإجابة على الأسئلة"
   },
   "guessCategory": {
     "guessLabel": "خمن الكلمة",

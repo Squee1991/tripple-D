@@ -2,8 +2,8 @@
   <NuxtLayout>
     <NuxtPage/>
     <AchievementToast @toast-finished="onToastFinished" />
-    <VStephint v-if="showStepHint" />
-<!--    <VLost/>-->
+<!--    <VStephint v-if="showStepHint" @close="showStepHint = false"/>-->
+    <VLost/>
   </NuxtLayout>
 </template>
 
@@ -128,6 +128,16 @@ onUnmounted(() => {
 </script>
 
 <style>
+
+.v-onboarding,
+.v-onboarding__overlay {
+  pointer-events: none !important;
+}
+
+.v-onboarding__step {
+  pointer-events: auto !important;
+}
+
 * {
   padding: 0;
   margin: 0;

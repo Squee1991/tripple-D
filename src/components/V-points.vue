@@ -11,8 +11,7 @@
       <ul v-if="langStore" class="points-card__list">
         <li class="points-card__item">
           <div class="points-card__label">{{ t('accountPanel.articles') }}</div>
-          <button id="articlus" :title="hoverTitle.title" v-if="userAuth.uid" @click="openArticleModal"
-                  class="articlus__wrapper">
+          <button id="articlus" :title="hoverTitle.title" v-if="userAuth.uid" @click="openArticleModal" class="articlus__wrapper">
             <img class="articlus__icon" src="../../assets/images/articlus.png" alt="Articlus_icon">
             <span class="points-card__value">{{ langStore.points }}</span>
           </button>
@@ -54,6 +53,7 @@
   </div>
 </template>
 <script setup>
+import Snow from '../../assets/images/shovel.svg'
 import VTips from "~/src/components/V-tips.vue";
 import {userlangStore} from "~/store/learningStore.js";
 import {userAuthStore} from '../../store/authStore.js'
@@ -94,10 +94,6 @@ const sections = ref([
   {id: "ranked", icon: RankedIcon, alt: 'Ranked', title: t('accountPanel.ranked'), route: "/leaderboard"},
   {id: "calendar", icon: Calendar, alt: 'Ranked', title: t('accountPanel.eventCalendar'), route: "/calendar"},
 ])
-
-const pathTo = (route) => {
-  router.push(route)
-}
 
 const toPayment = () => {
   router.push('/pay')
@@ -143,7 +139,6 @@ onMounted(() => {
   box-shadow: 2px 2px 0 black;
   transition: .2s;
   background: white;
-  //border-bottom: 2px dashed var(--border);
 }
 
 .ranked__wrapper:last-child .ranked__inner {
@@ -153,13 +148,13 @@ onMounted(() => {
 @media (min-width: 1024px) {
   .ranked__inner:hover {
     box-shadow: 0 0 0;
-    transform: translate(2px , 2px);
+    transform: translate(1px , 1px);
     transition: .2s;
   }
 }
 
 .ranked__title {
-  color: var(--titleColor);
+  color: #1c1b1b;
   font-size: 21px;
   margin-left: 8px;
   font-weight: 600;
@@ -198,16 +193,17 @@ onMounted(() => {
 
 .articlus__wrapper {
   display: flex;
-  border: 2px solid black;
+  border: none;
+  outline: 2px solid black;
+  outline-offset: -3px;
   justify-content: center;
   align-items: center;
-
   border-radius: 10px;
   padding: 1px 0.7rem;
   height: 40px;
   background: white;
-  box-shadow: 3px 3px 0 black;
 }
+
 
 .articlus__icon {
   width: 30px;
@@ -232,7 +228,7 @@ onMounted(() => {
 
 .progress_exp-bar {
   width: 100%;
-  height: 20px;
+  height: 25px;
   background: #e8eae5;
   border-radius: 10px;
   position: relative;

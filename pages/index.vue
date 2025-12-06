@@ -1,6 +1,6 @@
 <script setup>
-import { ref, onMounted, watch} from 'vue'
-import { userAuthStore } from "~/store/authStore.js"
+import {ref, onMounted, watch} from 'vue'
+import {userAuthStore} from "~/store/authStore.js"
 import Header from '../src/components/header.vue'
 import Banner from '../src/components/baner.vue'
 import Description from '../src/components/DescriptionBlock.vue'
@@ -10,18 +10,20 @@ import Footer from '../src/components/footer.vue'
 import VUid from '../src/components/V-uid.vue'
 import VEventAvailableModal from "../src/components/V-eventAvailableModal.vue";
 import VShowFall from "../src/components/V-showFall.vue";
-import { useEventSessionStore} from '../store/eventsStore.js'
-import { useHead, useSeoMeta } from '#imports'
-const { public: { siteUrl } } = useRuntimeConfig()
+import Snow from "../assets/images/mery-christmas/Snow.svg";
+import {useEventSessionStore} from '../store/eventsStore.js'
+import {useHead, useSeoMeta} from '#imports'
+
+const {public: {siteUrl}} = useRuntimeConfig()
 const base = (siteUrl || '').replace(/\/$/, '')
-const { t } = useI18n()
+const {t} = useI18n()
 const canonical = useCanonical()
 const pageTitle = t('metaMainPage.title')
-const pageDesc  = t('metaMainPage.description')
+const pageDesc = t('metaMainPage.description')
 
 useHead({
   title: pageTitle,
-  link: [{ rel: 'canonical', href: canonical }],
+  link: [{rel: 'canonical', href: canonical}],
   script: [{
     type: 'application/ld+json',
     children: JSON.stringify({
@@ -58,7 +60,10 @@ onMounted(() => {
 
 <template>
   <VEventAvailableModal @close="false" v-if="authStore.initialized"/>
-  <VShowFall v-if="eventStore.isSnowEnabled"/>
+  <VShowFall
+      v-if="eventStore.isSnowEnabled"
+      :image="Snow"
+  />
   <div v-if="!hydrated || !authStore.initialized" class="loading"></div>
   <div v-else class="container">
     <Header/>
@@ -104,7 +109,7 @@ onMounted(() => {
   padding: 0 10px;
 }
 
-@media  (max-width: 767px) {
+@media (max-width: 767px) {
   .container {
     padding: 0;
   }

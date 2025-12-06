@@ -5,17 +5,18 @@ import { useLocalePath } from '#i18n'
 import { useEventSessionStore } from '../../../store/eventsStore.js'
 import SoundBtn from '~/src/components/soundBtn.vue'
 
-const svgFiles = import.meta.glob('@/assets/images/event-rewards/winter-event/winter-words/*.{svg,SVG}', {
+const allEventImages = import.meta.glob('@/assets/images/event-rewards/**/*.{svg,SVG}', {
   eager: true,
   query: '?url',
   import: 'default'
 });
 
-const getImageUrl = (filePath) => {
-  if (!filePath) return '';
-  const fileName = filePath.split('/').pop();
-  for (const fileKey in svgFiles) {
-    if (fileKey.endsWith(fileName)) return svgFiles[fileKey];
+const getImageUrl = (imagePathFromJson) => {
+  if (!imagePathFromJson) return '';
+  for (const filePath in allEventImages) {
+    if (filePath.endsWith(imagePathFromJson)) {
+      return allEventImages[filePath];
+    }
   }
   return '';
 };

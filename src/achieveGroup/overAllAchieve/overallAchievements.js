@@ -63,7 +63,7 @@ export const overAchievment = [
 			{
 				id: "the_hatch_quest",
 				name: "4 8 15 16 23 42",
-				description: "Вход в бункер скрыт у всех на виду. Постучи 5 раз по Логотипу сайта, чтобы инициировать протокол и получи доступ отвечая на вопросы",
+				description: "generalCategory.theLostDescription",
 				icon: "🏝️",
 				currentProgress: 0,
 				targetProgress: 1

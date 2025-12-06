@@ -1,4 +1,42 @@
 {
+  "eventsModal": {
+    "halloweenLabel": "Święto Dyń",
+    "halloweenText": "Zbieraj dynie, wykonuj zadania i zdobywaj tematyczne nagrody!",
+    "winterLabel": "Szept Zimy",
+    "winterText": "Weź udział w zimowym wydarzeniu! Zbieraj płatki śniegu, otwieraj prezenty.",
+    "valentineLabel": "Festiwal Serc",
+    "valentineText": "Weź udział w romantycznym wydarzeniu i zdobądź ekskluzywne nagrody!",
+    "jokeLabel": "Parada Żartów",
+    "jokeText": "Baw się dobrze, zbieraj bonusy i bierz udział w zabawnych wyzwaniach!"
+  },
+  "winterEvent": {
+    "pathMain": "Strona główna",
+    "event": "Wydarzenie",
+    "panel": "Panel wydarzenia",
+    "reputation": "Reputacja",
+    "currency": "Waluta",
+    "shop": "Sklep reputacji",
+    "bought": "Kupiono",
+    "notAllowed": "Niedostępne",
+    "notEnough": "Za mało",
+    "buy": "Kup",
+    "questions": "Zadania",
+    "rep": "rep.",
+    "repeat": "Powtórz",
+    "execute": "Wykonaj",
+    "notAllowedTitle": "Wydarzenie niedostępne",
+    "notAllowedText": "To wydarzenie jeszcze się nie rozpoczęło lub już się zakończyło.",
+    "eventShop": "Sklep wydarzenia",
+    "eventQuestions": "Zadania wydarzenia",
+    "firstReputation": "Śnieżne Zaufanie",
+    "secondReputation": "Zimowy Szacunek"
+  },
+  "winterEventShopItems": {
+    "santaHat": "Czapka Mikołaja",
+    "christmasBall": "Kula śnieżna",
+    "christmasWreath": "Wieniec świąteczny",
+    "snowFall": "Efekt śniegu"
+  },
   "winterAchievements": {
     "firstQuestName": "Pierwsza gwiazda choinkowa",
     "firstQuestDescription": "Wykonaj dowolne zadanie zimowego wydarzenia i zapal pierwszą gwiazdę.",
@@ -4443,7 +4481,8 @@
     "mistakesText": "Każdy z nich to krok do wiedzy!",
     "mistakesAward": "Nagroda: Talisman cierpliwości",
     "voiceActivatedText": "Dostęp głosowy",
-    "voiceActivatedLabel": "Przeczytaj i zaakceptuj ważne powiadomienie oraz aktywuj moduł Sprechen."
+    "voiceActivatedLabel": "Przeczytaj i zaakceptuj ważne powiadomienie oraz aktywuj moduł Sprechen.",
+    "theLostDescription": "Wejście do bunkra jest ukryte na widoku. Zapukaj 5 razy w logo strony, aby uruchomić protokół i uzyskać dostęp, odpowiadając na pytania"
   },
   "guessCategory": {
     "guessLabel": "Odgadnij słowo",

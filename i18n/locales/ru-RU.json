@@ -1,4 +1,42 @@
 {
+  "eventsModal": {
+    "halloweenLabel": "Праздник тыкв",
+    "halloweenText": "Собирай тыквы, выполняй задания и получай тематические награды!",
+    "winterLabel": "Шепот зимы",
+    "winterText": "Участвуй в зимнем событии! Собирай снежинки, открывай подарки",
+    "valentineLabel": "Фестиваль сердец",
+    "valentineText": "Прими участие в романтичном событии и получи эксклюзивные награды!",
+    "jokeLabel": "Парад приколов",
+    "jokeText": "Веселись, собирай бонусы и участвуй в шуточных испытаниях!"
+  },
+  "winterEvent": {
+    "pathMain": "На главную",
+    "event": "Событие",
+    "panel": "Панель ивента",
+    "reputation": "Репутация",
+    "currency": "Валюта",
+    "shop": "Магазин репутации",
+    "bought": "Куплено",
+    "notAllowed": "Недоступно",
+    "notEnough": "Не хватает",
+    "buy": "Купить",
+    "questions": "Задания",
+    "rep": "реп.",
+    "repeat": "Повторить",
+    "execute": "Выполнить",
+    "notAllowedTitle": "Событие недоступно",
+    "notAllowedText": "Это событие еще не началось или уже завершилось.",
+    "eventShop": "Магазин события",
+    "eventQuestions": "Задания события",
+    "firstReputation": "Снежное Доверие",
+    "secondReputation": "Зимнее Почтение"
+  },
+  "winterEventShopItems": {
+    "santaHat": "Санта-шапка",
+    "christmasBall": "Снежный шар",
+    "christmasWreath": "Рождественский венок",
+    "snowFall": "Эффект снегопада"
+  },
   "winterAchievements": {
     "firstQuestName": "Первая ёлочная звезда",
     "firstQuestDescription": "Выполните любой квест зимнего события и зажгите первую звезду",
@@ -3709,7 +3747,7 @@
     "modalNotAllowEffectFirst": "Этот эффект можно разблокировать только в событии",
     "modalNotAllowEffectSecond": "«Шёпот зимы»",
     "modalNotAllowEffectThird": "Приобретите его в магазине события за снежинки!",
-    "modalNotAllowEffectClose": "Закрыть",
+    "modalNotAllowEffectClose": "Закрыть"
 
   },
   "articleOverlay": {
@@ -4446,7 +4484,8 @@
     "mistakesText": "Каждая из них — это шаг к знанию!",
     "mistakesAward": "Награда: Талисман терпения",
     "voiceActivatedText": "Право голоса",
-    "voiceActivatedLabel": "Прочитать и принять важное уведомление и активировать модуль Sprechen."
+    "voiceActivatedLabel": "Прочитать и принять важное уведомление и активировать модуль Sprechen.",
+    "theLostDescription": "Вход в бункер скрыт у всех на виду. Постучи 5 раз по Логотипу сайта, чтобы инициировать протокол и получи доступ отвечая на вопросы"
   },
   "guessCategory": {
     "guessLabel": "Отгадать слово",

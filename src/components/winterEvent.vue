@@ -3,7 +3,6 @@ import {ref, computed, onMounted} from 'vue'
 import VShowFall from "./V-showFall.vue"
 import Present from '../assets/images/mery-christmas/Present.svg'
 import {useRouter, useRoute} from 'vue-router'
-import {useLocalePath} from '#i18n'
 import { useEventSessionStore } from '../../store/eventsStore.js'
 import Hat from 'assets/images/event-rewards/winter-event/winter-rewards/santa-hat.svg'
 import ChristmasBall from 'assets/images/event-rewards/winter-event/winter-rewards/christmas-ball.svg'
@@ -11,7 +10,8 @@ import ChristmasWreath from 'assets/images/event-rewards/winter-event/winter-rew
 import SantaIcon from 'assets/images/event-rewards/winter-event/winter-rewards/SnowEffect.svg'
 import DeepAvatar from 'assets/images/event-rewards/winter-event/winter-rewards/deerAvatar.png'
 import ElfIcon from 'assets/images/event-rewards/winter-event/winter-rewards/elf-icon.svg'
-
+import Snow from 'assets/images/mery-christmas/Snow.svg'
+const { t } = useI18n()
 const isEventOpen = computed(() => {
   const event = eventStore.events.find(e => e.id === eventId.value)
   if (!event) return false
@@ -35,46 +35,44 @@ const coins = ref(0)
 const coinIcon = '❄'
 const activeTab = ref('reputation')
 const nav = [
-  {id: 'reputation', label: 'Репутация', icon: '🏆'},
-  {id: 'quests',     label: 'Задания',   icon: '📜'}
+  {id: 'reputation', label: t('winterEvent.reputation'), icon: '🏆'},
+  {id: 'quests',     label: t('winterEvent.questions'),   icon: '📜'}
 ]
-
 const selectedLevel = ref(1)
-const computedPanelTitle = computed(() =>
-    activeTab.value === 'reputation' ? 'Магазин события' : 'Задания события'
-)
+
+const computedPanelTitle = computed(() => activeTab.value === 'reputation' ? t('winterEvent.eventShop') : t('winterEvent.eventQuestions'))
 
 const pathToMain = () => { router.push('/') }
 
 const reputationPoints = ref(0)
 const ranks = [
-  {level: 1, need: 0,   title: 'Снежное Доверие'},
-  {level: 2, need: 1000, title: 'Зимнее Почтение'},
+  {level: 1, need: 0,   title: t('winterEvent.firstReputation')},
+  {level: 2, need: 1000, title: t('winterEvent.secondReputation')},
 ]
 
 const quests = ref([
-  { id: 'quest-1',  title: 'Рождественская викторина: основы',                           rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🎄' },
-  { id: 'quest-2',  title: 'Традиции и символы Рождества',                               rewardCoins: 300, rewardRep: 1000, isDone: false, icon: '🕯️' },
-  { id: 'quest-3',  title: 'Праздничные персонажи: Николаус и другие',                    rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🎅' },
-  { id: 'quest-4',  title: 'Адвент: венок, календарь, ожидание',                          rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🌟' },
-  { id: 'quest-5',  title: 'Желания и подарки: кто, что и как',                           rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🎁' },
-  { id: 'quest-6',  title: 'Рождество в Германии — чтение',                               rewardCoins: 5, rewardRep: 40, isDone: false, icon: '📖' },
-  { id: 'quest-7',  title: 'Рождество и Новый год в Германии — чтение',                   rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🎆' },
-  { id: 'quest-8',  title: 'Сильвестр призраков — новогодняя история',                    rewardCoins: 5, rewardRep: 40, isDone: false, icon: '👻' },
-  { id: 'quest-9',  title: 'Новый год в Заколдованном лесу — сказка',                      rewardCoins: 5, rewardRep: 40, isDone: false, icon: '✨' },
-  { id: 'quest-10', title: 'Зимние каникулы и школа — чтение',                            rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🏫' },
-  { id: 'quest-11', title: 'Рождественские пары: символ ↔ описание',                      rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🔗' },
-  { id: 'quest-12', title: 'Новогодние пары: традиция ↔ значение',                        rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🎇' },
-  { id: 'quest-13', title: 'Зимние традиции мира: страна ↔ обычай',                       rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🌍' },
-  { id: 'quest-14', title: 'Европейские зимние праздники и поверья ',                     rewardCoins: 5, rewardRep: 40, isDone: false,  icon: '✏️' },
-  { id: 'quest-15', title: 'Зима в Германии: предметы и занятия',                         rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🧣' },
-  { id: 'quest-16', title: 'Зима и Новый год: вставь слово ',                              rewardCoins: 5, rewardRep: 40, isDone: false, icon: '✏️' },
-  { id: 'quest-17', title: 'Рождество: вставь слово',                                   rewardCoins: 5, rewardRep: 40, isDone: false, icon: '✏️' },
-  { id: 'quest-18', title: 'Подготовка к Новому году: вставь слово',                    rewardCoins: 5, rewardRep: 40, isDone: false, icon: '✏️' },
-  { id: 'quest-19', title: 'Новогодняя ночь: вставь слово',                               rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🌃' },
-  { id: 'quest-20', title: 'Как немцы празднуют Новый год: вставь слово',                rewardCoins: 5, rewardRep: 40, isDone: false, icon: '✏️' },
-  { id: 'quest-21', title: 'Список слов',                rewardCoins: 5, rewardRep: 40, isDone: false,  icon: '✏️' },
-])
+  { id: 'quest-1',  title: 'Викторина: Дух Рождества',          rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🎄' },
+  { id: 'quest-2',  title: 'Традиции и символы',                rewardCoins: 300, rewardRep: 1000, isDone: false, icon: '🕯️' },
+  { id: 'quest-3',  title: 'Николаус и персонажи',              rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🎅' },
+  { id: 'quest-4',  title: 'Магия Адвента',                     rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🌟' },
+  { id: 'quest-5',  title: 'Искусство дарить подарки',          rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🎁' },
+  { id: 'quest-6',  title: 'Чтение: Рождество в ФРГ',           rewardCoins: 5, rewardRep: 40, isDone: false, icon: '📖' },
+  { id: 'quest-7',  title: 'Чтение: Праздничные дни',           rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🇩🇪' },
+  { id: 'quest-8',  title: 'Легенда о Сильвестре',              rewardCoins: 5, rewardRep: 40, isDone: false, icon: '👻' },
+  { id: 'quest-9',  title: 'Сказка: Заколдованный лес',         rewardCoins: 5, rewardRep: 40, isDone: false, icon: '✨' },
+  { id: 'quest-10', title: 'Зимние каникулы',                   rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🏫' },
+  { id: 'quest-11', title: 'Найди пару: Символы',               rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🔗' },
+  { id: 'quest-12', title: 'Найди пару: Традиции',              rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🧩' },
+  { id: 'quest-13', title: 'Вокруг света: Обычаи',              rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🌍' },
+  { id: 'quest-14', title: 'Европа: Поверья и мифы',            rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🔮' },
+  { id: 'quest-15', title: 'Предметы и зимний досуг',           rewardCoins: 5, rewardRep: 40, isDone: false, icon: '⛸️' },
+  { id: 'quest-16', title: 'Лексика: Зима и НГ',                rewardCoins: 5, rewardRep: 40, isDone: false, icon: '❄️' },
+  { id: 'quest-17', title: 'Лексика: Рождество',                rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🔔' },
+  { id: 'quest-18', title: 'Лексика: Подготовка',               rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🎀' },
+  { id: 'quest-19', title: 'Лексика: Новогодняя ночь',          rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🎆' },
+  { id: 'quest-20', title: 'Лексика: Немецкий праздник',        rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🥨' },
+  { id: 'quest-21', title: 'Сокровищница слов',                 rewardCoins: 5, rewardRep: 40, isDone: false, icon: '💎' },
+]);
 
 const currentLevel = computed(() => {
   let lvl = 1
@@ -136,22 +134,20 @@ async function refreshProgressBadges() {
     })
   })
 }
-
 onMounted(() => {
   refreshProgressBadges()
 })
 
 const shopByRank = ref({
   1: [
-    {id: 'santaHat', title: 'Санта-шапка', priceCoins: 20, isOwned: false, icon: Hat},
-    {id: 'christmasBall', title: 'Снежный шар',  priceCoins: 20, isOwned: false, icon: ChristmasBall},
-    {id: 'christmasWreath', title: 'Рождественский венок',  priceCoins: 20, isOwned: false, icon: ChristmasWreath}
+    {id: 'santaHat', title:  t('winterEventShopItems.santaHat'), priceCoins: 20, isOwned: false, icon: Hat},
+    {id: 'christmasBall', title: t('winterEventShopItems.christmasBall'),  priceCoins: 20, isOwned: false, icon: ChristmasBall},
+    {id: 'christmasWreath', title: t('winterEventShopItems.christmasWreath'),  priceCoins: 20, isOwned: false, icon: ChristmasWreath}
   ],
   2: [
-    {id: 'snowFall', title: 'Эффект снегопада',  priceCoins: 300, isOwned: false, icon: SantaIcon},
+    {id: 'snowFall', title: t('winterEventShopItems.snowFall'),  priceCoins: 300, isOwned: false, icon: SantaIcon},
   ],
 })
-
 async function buyReward(level, rewardId) {
   if (currentLevel.value < level) return
   const item = shopByRank.value[level].find(i => i.id === rewardId)
@@ -167,50 +163,41 @@ async function buyReward(level, rewardId) {
   })
 }
 
-async function resetAll() {
-  await eventStore.resetEventProgress(eventId.value)
-  coins.value = 0
-  reputationPoints.value = 0
-  quests.value.forEach(quest => (quest.isDone = false))
-  Object.values(shopByRank.value).forEach(list => list.forEach(item => (item.isOwned = false)))
-  selectedLevel.value = 1
-}
 </script>
 
 <template>
-  <div v-if="isEventOpen">
+  <div v-if="!isEventOpen">
     <div class="season__bg">
       <div class="sidebar__decor">
         <img class="present --right" :src="Present" alt="Present icon">
       </div>
       <div class="svg-snow" aria-hidden="true">
-        <VShowFall/>
+        <VShowFall :image="Snow"/>
       </div>
       <div class="xmas-wrapper">
         <div class="achv-layout">
           <aside class="achv-sidebar achv-card">
-            <button @click="pathToMain" type="button" class="btn btn--home">На главную</button>
+            <button @click="pathToMain" type="button" class="btn btn--home">{{ t('winterEvent.pathMain')}}</button>
             <div class="hero achv-card --flat">
               <div class="hero__info">
-                <div class="hero__name">Событие</div>
+                <div class="hero__name">{{ t('winterEvent.event')}}</div>
               </div>
             </div>
             <div class="status achv-card --flat">
               <div class="status__row">
-                <div class="status__value">Панель ивента</div>
+                <div class="status__value">{{ t('winterEvent.panel')}}</div>
               </div>
               <div class="bar">
                 <div class="bar__fill" :style="{ width: progressPct + '%' }"></div>
               </div>
               <div class="status__row">
-                <div class="status__label">Репутация</div>
+                <div class="status__label">{{ t('winterEvent.reputation')}}</div>
                 <div class="status__value">{{ levelProgressText }}</div>
               </div>
               <div class="status__row">
-                <div class="status__label">Валюта</div>
+                <div class="status__label">{{ t('winterEvent.currency')}}</div>
                 <div class="status__value">{{ coins }} {{ coinIcon }}</div>
               </div>
-              <button class="btn btn--ghost" @click="resetAll">Сбросить (тест)</button>
             </div>
             <nav class="nav">
               <button
@@ -230,7 +217,7 @@ async function resetAll() {
             </div>
             <section v-if="activeTab === 'reputation'">
               <div class="section-head">
-                <h2>Магазин по репутации</h2>
+                <h2>{{ t('winterEvent.shop')}}</h2>
                 <div class="rank-switch">
                   <button
                       v-for="rank in ranks"
@@ -253,10 +240,10 @@ async function resetAll() {
                           :disabled="reward.isOwned || currentLevel < selectedLevel || coins < reward.priceCoins"
                           @click="buyReward(selectedLevel, reward.id)"
                       >
-                        <template v-if="reward.isOwned">Куплено</template>
-                        <template v-else-if="currentLevel < selectedLevel">Недоступно</template>
-                        <template v-else-if="coins < reward.priceCoins">Не хватает</template>
-                        <template v-else>Купить</template>
+                        <template v-if="reward.isOwned">{{ t('winterEvent.bought')}}</template>
+                        <template v-else-if="currentLevel < selectedLevel">{{ t('winterEvent.notAllowed')}}</template>
+                        <template v-else-if="coins < reward.priceCoins">{{ t('winterEvent.notEnough')}}</template>
+                        <template v-else>{{ t('winterEvent.buy')}}</template>
                       </button>
                     </div>
                   </div>
@@ -265,7 +252,7 @@ async function resetAll() {
             </section>
             <section v-if="activeTab === 'quests'">
               <div class="quests">
-                <div><h2 class="daily__title">Задания</h2></div>
+                <div><h2 class="daily__title">{{ t('winterEvent.questions')}}</h2></div>
                 <div v-for="quest in quests" :key="quest.id" class="quest achv-card">
                   <div class="quest__icon">{{ quest.icon }}</div>
                   <div class="quest__body">
@@ -273,14 +260,14 @@ async function resetAll() {
                     </div>
                     <div class="quest__meta">
                       <div class="quest__inner">
-                        <span class="meta__pill">{{ quest.rewardRep }} реп.</span>
+                        <span class="meta__pill">{{ quest.rewardRep }} {{ t('winterEvent.rep')}}</span>
                         <span class="meta__pill">{{ quest.rewardCoins }} {{ coinIcon }}</span>
                       </div>
                       <button
                           :class="['btn', 'btn--candy', { 'btn--repeat': quest.isDone }]"
                           @click="goToSession(quest.id)"
                       >
-                        {{ quest.isDone ? 'Повторить' : 'Выполнить' }}
+                        {{ quest.isDone ? t('winterEvent.repeat') : t('winterEvent.execute') }}
                       </button>
                     </div>
                   </div>
@@ -294,12 +281,12 @@ async function resetAll() {
   </div>
   <div v-else class="event-closed">
     <div class="svg-snow" aria-hidden="true">
-      <VShowFall/>
+      <VShowFall :image="Snow"/>
     </div>
     <div class="closed-content">
-      <h1>🔒 Событие недоступно</h1>
-      <p>Это событие еще не началось или уже завершилось.</p>
-      <button @click="pathToMain" class="btn btn--home">На главную</button>
+      <h1>🔒 {{ t('winterEvent.notAllowedTitle')}}</h1>
+      <p>{{ t('winterEvent.notAllowedText')}}</p>
+      <button @click="pathToMain" class="btn btn--home">{{ t('winterEvent.pathMain')}}</button>
     </div>
   </div>
 </template>

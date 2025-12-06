@@ -44,9 +44,9 @@ import {ref, computed, watch, onMounted, onBeforeUnmount, nextTick,} from 'vue'
 import { userAuthStore } from '@/store/authStore'
 import { useBreakPointsStore } from '@/store/breakPointsStore'
 import HD from '@/assets/images/HD.svg'
-
+const emit = defineEmits(['close'])
 const wrapperRef = ref(null)
-const { start, finish } = useVOnboarding(wrapperRef)
+const { start, finish, exit } = useVOnboarding(wrapperRef)
 const { t } = useI18n()
 const userAuth = userAuthStore()
 const bp = useBreakPointsStore()
@@ -71,12 +71,14 @@ const showOnboarding = computed(() => {
 const finishOnboarding = async () => {
   await userAuth.setHasSeenOnboarding(true)
   finish()
+  exit()
+  emit('close')
 }
 
 const onboardingOptions = {
   skippable: true,
   overlay: {
-    enabled: true,
+    enabled: false,
     padding: 0,
     borderRadius: 12,
   },
@@ -220,7 +222,7 @@ onBeforeUnmount(() => {
 })
 </script>
 
-<style scoped>
+<style>
 
 .hd {
   width: 80px;

@@ -309,7 +309,6 @@
 		{ "ru": "Тёмно-серый", "en": "Dark gray", "tr": "Koyu gri", "pl": "Ciemnoszary", "uk": "Темно-сірий", "es": "Gris oscuro", "uz": "To‘q kulrang", "ar": "رمادي داكن", "de": "Dunkelgrau", "article": "das" },
 		{ "ru": "Светло-серый", "en": "Light gray", "tr": "Açık gri", "pl": "Jasnoszary", "uk": "Світло-сірий", "es": "Gris claro", "uz": "Och kulrang", "ar": "رمادي فاتح", "de": "Hellgrau", "article": "das" }
 	],
-
 	"Nature": [
 		{ "ru": "Природа", "en": "Nature", "tr": "Doğa", "pl": "Natura", "uk": "Природа", "es": "Naturaleza", "uz": "Tabiat", "ar": "الطبيعة", "de": "Natur", "article": "die", "plural": "Naturen", "pluralArticle": "die" },
 		{ "ru": "Цветок", "en": "Flower", "tr": "Çiçek", "pl": "Kwiat", "uk": "Квітка", "es": "Flor", "uz": "Gul", "ar": "زهرة", "de": "Blume", "article": "die", "plural": "Blumen", "pluralArticle": "die" },

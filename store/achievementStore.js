@@ -26,6 +26,8 @@ import { modalVerbs } from '../src/achieveGroup/verbs/modalVerbs.js'
 import { typeVerbs } from '../src/achieveGroup/verbs/typeVerbs.js'
 import { sentenceAchievement } from '../src/achieveGroup/sentenceDuel/sentenceAchievementsА1.js'
 import { eventWinterAchievements } from '../src/achieveGroup/eventAchievement/winterAchievements.js'
+import { valentineAchievements } from '../src/achieveGroup/eventAchievement/valentineAchievements.js'
+
 // --- 2) Сторы-источники
 import { userChainStore } from '../store/chainStore.js'
 import { userAuthStore } from '../store/authStore.js'
@@ -40,10 +42,12 @@ import { achievementToAwardMap } from '../src/awards/awardsMap.js'
 import { guessAchievment } from '../src/achieveGroup/guessAchieve/guessAchievments.js'
 import { useQuizStore } from '../store/adjectiveStore.js'
 import { useEventSessionStore } from '../store/eventsStore.js'
+import { useEasterEggsStore } from '../store/easterEggsStore.js'
 
 export const useAchievementStore = defineStore('achievementStore', () => {
 	// --- Группы
 	const rawGroups = [
+		...valentineAchievements.map(g => ({category: 'valentine' , ...g})),
 		...eventWinterAchievements.map(g => ({category: 'winter' , ...g})),
 		...sentenceAchievement.map(g => ({ category: 'sentence', ...g })),
 		...typeVerbs.map(g => ({ category: 'typeVerbs', ...g })),
@@ -99,23 +103,11 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 	const quizStore = useQuizStore()
 	const duelStore = useDuelStore()
 	const eventStore = useEventSessionStore()
+	const eggStore = useEasterEggsStore()
 	const isBooting = ref(true)
 	const suppressReplaysUntil = ref(0)
 	const bootUnlocked = []
 	const bootAwards = []
-	const isVisible = ref(false)
-	let tapsCount = 0
-
-	const triggerTaps = () => {
-		tapsCount++
-		if (tapsCount === 5) {
-			isVisible.value = true
-			tapsCount = 0
-		}
-		if (tapsCount > 5) {
-			tapsCount = 0;
-		}
-	}
 
 	let eventUnsubs = []
 	const dailyAggUnsub = ref(null)
@@ -395,6 +387,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				})
 			})
 			updateProgress('Collection', shownSet.size)
+			eggStore.loadEggs()
 			detachDailyAggListener()
 
 			if (!uid) {
@@ -617,6 +610,12 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				.forEach(g => g.achievements.forEach(a => updateProgress(a.id, cnt))),
 			{ immediate: true }
 		)
+
+		watch(() => eggStore.answeredMap['lost_sequence'], (isUnlocked) => {
+			if (isUnlocked) {
+				updateProgress('the_hatch_quest', 1)
+			}
+		}, { immediate: true })
 		// цепочки квестов (карта)
 		if (process.client) {
 			chainStore.loadProgressFromFirebase?.().catch(() => {})
@@ -862,9 +861,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		closePopup,
 		initializeProgressTracking,
 		updateProgress,
-		findById,
-		tapsCount,
-		triggerTaps,
-		isVisible
+		findById
 	}
 })

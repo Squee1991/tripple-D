@@ -1,4 +1,42 @@
 {
+  "eventsModal": {
+    "halloweenLabel": "Balkabağı Festivali",
+    "halloweenText": "Balkabakları topla, görevleri tamamla ve temalı ödüller kazan!",
+    "winterLabel": "Kış Fısıltısı",
+    "winterText": "Kış etkinliğine katıl! Kar taneleri topla, hediyeleri aç.",
+    "valentineLabel": "Kalpler Festivali",
+    "valentineText": "Romantik etkinliğe katıl ve özel ödüller kazan!",
+    "jokeLabel": "Şaka Geçidi",
+    "jokeText": "Eğlen, bonusları topla ve şaka dolu meydan okumalara katıl!"
+  },
+  "winterEvent": {
+    "pathMain": "Ana Sayfa",
+    "event": "Etkinlik",
+    "panel": "Etkinlik Paneli",
+    "reputation": "İtibar",
+    "currency": "Para Birimi",
+    "shop": "İtibar Mağazası",
+    "bought": "Satın Alındı",
+    "notAllowed": "Mevcut Değil",
+    "notEnough": "Yetersiz",
+    "buy": "Satın Al",
+    "questions": "Görevler",
+    "rep": "itb.",
+    "repeat": "Tekrarla",
+    "execute": "Başlat",
+    "notAllowedTitle": "Etkinlik Mevcut Değil",
+    "notAllowedText": "Bu etkinlik henüz başlamadı veya sona erdi.",
+    "eventShop": "Etkinlik Mağazası",
+    "eventQuestions": "Etkinlik Görevleri",
+    "firstReputation": "Kar Güveni",
+    "secondReputation": "Kış Saygısı"
+  },
+  "winterEventShopItems": {
+    "santaHat": "Noel Baba Şapkası",
+    "christmasBall": "Kar Küresi",
+    "christmasWreath": "Noel Çelengi",
+    "snowFall": "Kar Yağışı Efekti"
+  },
   "winterAchievements": {
     "firstQuestName": "İlk ağaç yıldızı",
     "firstQuestDescription": "Kış etkinliğindeki herhangi bir görevi tamamla ve ilk yıldızı yak.",
@@ -4443,7 +4481,8 @@
     "mistakesText": "Her biri bilgiye atılan bir adım!",
     "mistakesAward": "Ödül: Sabır Tılsımı",
     "voiceActivatedText": "Ses erişimi",
-    "voiceActivatedLabel": "Önemli bildirimi okuyup kabul edin ve Sprechen modülünü etkinleştirin."
+    "voiceActivatedLabel": "Önemli bildirimi okuyup kabul edin ve Sprechen modülünü etkinleştirin.",
+    "theLostDescription": "Sığınağın girişi herkesin gözünün önünde gizlidir. Protokolü başlatmak için site logosuna 5 kez tıkla ve soruları cevaplayarak erişim elde et"
   },
   "guessCategory": {
     "guessLabel": "Kelimeyi tahmin et",

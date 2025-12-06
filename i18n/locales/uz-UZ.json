@@ -1,4 +1,42 @@
 {
+  "eventsModal": {
+    "halloweenLabel": "Qovoqlar bayrami",
+    "halloweenText": "Qovoqlarni yig‘ing, topshiriqlarni bajaring va mavzuga oid mukofotlarni oling!",
+    "winterLabel": "Qish shivirlashi",
+    "winterText": "Qishki tadbirda ishtirok eting! Qor parchalarini yig‘ing, sovg‘alarni oching.",
+    "valentineLabel": "Yuraklar festivali",
+    "valentineText": "Romantik tadbirda qatnashing va eksklyuziv mukofotlarni qo‘lga kiriting!",
+    "jokeLabel": "Hazillar paradi",
+    "jokeText": "Zavqlaning, bonuslarni yig‘ing va hazil-mutoyiba sinovlarida qatnashing!"
+  },
+  "winterEvent": {
+    "pathMain": "Bosh sahifa",
+    "event": "Tadbir",
+    "panel": "Tadbir paneli",
+    "reputation": "Obro‘",
+    "currency": "Valyuta",
+    "shop": "Obro‘ do‘koni",
+    "bought": "Sotib olindi",
+    "notAllowed": "Mavjud emas",
+    "notEnough": "Yetarli emas",
+    "buy": "Sotib olish",
+    "questions": "Topshiriqlar",
+    "rep": "obr.",
+    "repeat": "Takrorlash",
+    "execute": "Bajarish",
+    "notAllowedTitle": "Tadbir mavjud emas",
+    "notAllowedText": "Ushbu tadbir hali boshlanmagan yoki allaqachon tugagan.",
+    "eventShop": "Tadbir do‘koni",
+    "eventQuestions": "Tadbir topshiriqlari",
+    "firstReputation": "Qorli Ishonch",
+    "secondReputation": "Qishki Ehtirom"
+  },
+  "winterEventShopItems": {
+    "santaHat": "Santa qalpog‘i",
+    "christmasBall": "Qorli shar",
+    "christmasWreath": "Rojdestvo gulchambari",
+    "snowFall": "Qor yog‘ish effekti"
+  },
   "winterAchievements": {
     "firstQuestName": "Birinchi archa yulduzi",
     "firstQuestDescription": "Qishki voqea doirasidagi istalgan vazifani bajaring va birinchi yulduzni yoqing.",
@@ -4444,7 +4482,8 @@
     "mistakesText": "Har bir xato — bilim sari qadam!",
     "mistakesAward": "Mukofot: Sabr talismani",
     "voiceActivatedText": "Ovozli kirish",
-    "voiceActivatedLabel": "Muhim bildirishnomani o‘qing va tasdiqlang hamda Sprechen modulini faollashtiring."
+    "voiceActivatedLabel": "Muhim bildirishnomani o‘qing va tasdiqlang hamda Sprechen modulini faollashtiring.",
+    "theLostDescription": "Bunker kirishi hammaning ko‘z oldida yashirin. Sayt logotipiga 5 marta taqillatib protokolni ishga tushir va savollarga javob berib kirish huquqini ol"
   },
   "guessCategory": {
     "guessLabel": "So‘zni topish",

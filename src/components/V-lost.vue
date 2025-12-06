@@ -1,17 +1,20 @@
 <script setup>
-import {ref} from 'vue'
-import { useAchievementStore } from '../../store/achievementStore.js'
+import { ref } from 'vue'
+import { useEasterEggsStore } from '../../store/easterEggsStore.js'
+
+const EGG_ID = 'lost_sequence'
+
 const SECRET_CODE = '4815162342'
-const achievementStore = useAchievementStore()
+const easterEggsStore = useEasterEggsStore()
+
 const quests = [
-  {text: 'CHECK 1: DIE SUMME?', answer: '108'},
-  {text: 'CHECK 2: FLUG NUMMER?', answer: '815'},
-  {text: 'CHECK 3: JAHR?', answer: '2004'},
-  {text: 'CHECK 4: STATION?', answer: '3'},
-  {text: 'FINAL: LETZTE ZAHL?', answer: '42'}
+  { text: 'CHECK 1: DIE SUMME?', answer: '108' },
+  { text: 'CHECK 2: FLUG NUMMER?', answer: '815' },
+  { text: 'CHECK 3: JAHR?', answer: '2004' },
+  { text: 'CHECK 4: STATION?', answer: '3' },
+  { text: 'FINAL: LETZTE ZAHL?', answer: '42' }
 ]
 
-const isVisible = ref(true)
 const displayValue = ref('')
 const message = ref('SYSTEM LOCKED')
 const stage = ref('LOCKED')
@@ -21,12 +24,12 @@ const isError = ref(false)
 const buttons = ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'C', '0', 'OK']
 
 const open = () => {
-  isVisible.value = true
+  easterEggsStore.isVisible = true
   resetGame()
 }
 
 const close = () => {
-  achievementStore.isVisible = false
+  easterEggsStore.isVisible = false
 }
 
 const resetGame = () => {
@@ -105,16 +108,19 @@ const gameWin = () => {
   message.value = 'SYSTEM RESTORED'
   displayValue.value = 'NAMASTE'
 
+  // ВОТ ЗДЕСЬ ЗАПИСЫВАЕМ ПРОГРЕСС В FIREBASE
+  easterEggsStore.markAnswered(EGG_ID)
+
   setTimeout(() => {
     close()
   }, 2500)
 }
 
-defineExpose({open})
+defineExpose({ open })
 </script>
 
 <template>
-  <div v-if="achievementStore.isVisible"  class="overlay" @click.self="close">
+  <div v-if="easterEggsStore.isVisible" class="overlay" @click.self="close">
     <div class="toon-calculator">
       <div class="calc-top">
         <div class="lights">
@@ -146,7 +152,6 @@ defineExpose({open})
       </div>
       <div class="brand">THE ISLAND 4 8 15 16 23 42</div>
     </div>
-
   </div>
 </template>
 

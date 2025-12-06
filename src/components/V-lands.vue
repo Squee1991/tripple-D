@@ -266,10 +266,10 @@ function go(region) {
   font-family: "Nunito", sans-serif;
   font-weight: 600;
   font-size: 18px;
-  border: 2px solid white;
+  border: 1px solid white;
   border-radius: 12px;
   cursor: pointer;
-  box-shadow: 0 3px 0 #ead064;
+  box-shadow: 0 3px 0 #f1c40f;
   transition: transform .12s ease, box-shadow .12s ease;
   width: 100%;
 }
@@ -284,7 +284,6 @@ function go(region) {
   display: grid;
   gap: 16px;
   overflow-y: auto;
-  padding: 5px;
   min-width: 0;
   grid-template-columns: repeat(2, 2fr);
   scrollbar-width: none;
@@ -299,7 +298,7 @@ function go(region) {
   height: auto;
   border: 3px solid var(--border);
   border-radius: 15px;
-  box-shadow: 1px 1px 0 var(--border);
+  box-shadow: 0 0 0 var(--border);
   cursor: pointer;
   overflow: hidden;
   transition: transform .12s ease, box-shadow .12s ease, filter .12s ease;

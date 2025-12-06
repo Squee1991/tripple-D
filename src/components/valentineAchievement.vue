@@ -46,15 +46,12 @@
 
 <script setup>
 import { computed } from 'vue'
-import { useI18n } from 'vue-i18n'
 import { useAchievementStore } from '../../store/achievementStore.js'
 const { t } = useI18n()
 
 const achievementStore = useAchievementStore()
 
-const writeGroups = computed(() =>
-    achievementStore.groups.filter(group => group.category === 'winter'))
-
+const writeGroups = computed(() => achievementStore.groups.filter(group => group.category === 'valentine'))
 
 const getCompletedCount = group =>
     group.achievements.filter(a => a.currentProgress >= a.targetProgress).length
@@ -123,7 +120,7 @@ const getCompletedCount = group =>
   flex-shrink: 0;
   width: 70px;
   height: 70px;
-  background: #a855f7;
+  background: #fbc5f2;
   border-radius: 16px;
   border: 3px solid #1e1e1e;
   display: flex;
@@ -161,7 +158,7 @@ const getCompletedCount = group =>
 
 .progress-bar {
   height: 100%;
-  background: #a855f7;
+  background: #e988d9;
   border-radius: 0;
   transition: width 0.5s ease-in-out;
 }

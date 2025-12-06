@@ -17,28 +17,12 @@ function rand(min, max) {
 }
 
 const snowflakes = computed(() => {
-  // 1. Создаем массив
   const items = Array.from({ length: props.count }).map((_, i) => {
-
-    // --- ШАГ 1: Позиция по горизонтали ---
     const sectionWidth = 100 / props.count
-    // Снежинка строго в своей полосе
     const left = (i * sectionWidth) + rand(0, sectionWidth * 0.5)
-
-    const size = Math.round(rand(25, 45))
-    const fallDuration = rand(15, 25) // Сколько секунд падает
-
-    // --- ШАГ 2: ГЛАВНОЕ ИСПРАВЛЕНИЕ (Разбиваем пары) ---
-    // Проблема: i=0 и i=1 стоят рядом и налезают друг на друга.
-    // Решение:
-    // Если i четное (0, 2, 4...) -> задержка маленькая (оно вверху)
-    // Если i нечетное (1, 3, 5...) -> задержка огромная (оно внизу)
-
+    const size = Math.round(rand(18, 40))
+    const fallDuration = rand(15, 25)
     const isEven = i % 2 === 0
-
-    // Делим время падения пополам.
-    // Одни начинают с 0..-10с, другие с -10..-20с
-    // Это разносит соседей на пол-экрана по высоте.
     let delay
     if (isEven) {
       delay = -rand(0, fallDuration / 2)
@@ -48,7 +32,6 @@ const snowflakes = computed(() => {
 
     const drift = Math.round(rand(6, 18))
     const sway = rand(8, 16)
-    // Разная фаза качания, чтобы не двигались синхронно
     const swayDelay = -rand(0, sway)
 
     const spin = Math.random() < 0.45 ? rand(6, 14) : 0
@@ -70,8 +53,6 @@ const snowflakes = computed(() => {
     }
   })
 
-  // Перемешиваем массив ПЕРЕД отдачей, чтобы Z-index (кто кого перекрывает) был случайным,
-  // но рассчитанные выше координаты left/delay уже зафиксировали их далеко друг от друга.
   return items.sort(() => Math.random() - 0.5)
 })
 </script>
@@ -114,7 +95,7 @@ const snowflakes = computed(() => {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: -1;
+  z-index: 0;
   overflow: hidden;
 }
 

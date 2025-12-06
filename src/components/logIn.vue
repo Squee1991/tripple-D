@@ -1,5 +1,5 @@
 <template>
-  <div class="auth">
+  <div class="auth" :class="{ 'auth--rtl': locale === 'ar' }">
     <div class="auth__inner">
       <div class="auth__form">
         <div class="auth__title">
@@ -299,18 +299,18 @@ onMounted(() => {
   cursor: pointer;
   padding: 12px;
   border: 3px solid #1e1e1e;
-  box-shadow: 4px 4px 0px #1e1e1e;
+  box-shadow: 4px 4px 0 #1e1e1e;
   transition: all 0.1s ease-in-out;
 }
 
 .google__auth-wrapper:hover {
   transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0px #1e1e1e;
+  box-shadow: 2px 2px 0 #1e1e1e;
 }
 
 .google__auth-wrapper:active {
   transform: translate(4px, 4px);
-  box-shadow: 0px 0px 0px #1e1e1e;
+  box-shadow: 0 0 0 #1e1e1e;
 }
 
 .google__icon {
@@ -410,7 +410,7 @@ onMounted(() => {
   border-radius: 16px;
   position: relative;
   margin-bottom: 1.5rem;
-  box-shadow: 4px 4px 0px #1e1e1e;
+  box-shadow: 4px 4px 0 #1e1e1e;
   border: 3px solid #1e1e1e;
   overflow: hidden;
   padding: 4px;
@@ -423,7 +423,7 @@ onMounted(() => {
   cursor: pointer;
   color: #1e1e1e;
   font-family: "Nunito", sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1.2rem;
   position: relative;
   transition: color 0.23s;
@@ -485,13 +485,13 @@ onMounted(() => {
   color: #1e1e1e;
   font-family: 'Inter', sans-serif;
   font-weight: 700;
-  box-shadow: 2px 2px 0px #1e1e1e inset;
+  box-shadow: 2px 2px 0 #1e1e1e inset;
   transition: all 0.2s;
   outline: none;
 }
 
 .auth__input:focus {
-  box-shadow: 0 0 0px 3px #f1c40f, 2px 2px 0px #1e1e1e inset;
+  box-shadow: 0 0 0 3px #f1c40f, 2px 2px 0 #1e1e1e inset;
 }
 
 .auth__actions {
@@ -509,7 +509,7 @@ onMounted(() => {
   padding: 12px 0;
   border-radius: 18px;
   cursor: pointer;
-  box-shadow: 4px 4px 0px #1e1e1e;
+  box-shadow: 4px 4px 0 #1e1e1e;
   text-shadow: none;
   letter-spacing: 0;
   font-family: "Nunito", sans-serif;
@@ -518,7 +518,7 @@ onMounted(() => {
 
 .auth__submit:hover {
   transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0px #1e1e1e;
+  box-shadow: 2px 2px 0 #1e1e1e;
 }
 
 .auth__error,
@@ -578,6 +578,19 @@ onMounted(() => {
   .auth__tab {
     font-size: 1.1rem;
   }
+}
 
+.auth--rtl {
+  right: auto;
+  left: 0;
+  border-left: none;
+  border-right: 4px solid #1e1e1e;
+  box-shadow: 12px 0 44px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+  .auth--rtl {
+    border-right: none;
+  }
 }
 </style>

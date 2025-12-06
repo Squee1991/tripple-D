@@ -100,8 +100,10 @@ import TensesAchievements from "../src/components/tensesAchievements.vue";
 import ModalVerbs from "../src/components/modalVerbs.vue";
 import TypeVerbsAchievement from "../src/components/typeVerbsAchievement.vue";
 import WinterAchievement from '../src/components/winterAchievement.vue'
+import ValentineAchievement from '../src/components/valentineAchievement.vue'
 
 import { eventWinterAchievements } from '../src/achieveGroup/eventAchievement/winterAchievements.js'
+import { valentineAchievements } from '../src/achieveGroup/eventAchievement/valentineAchievements.js'
 import { tensesVerbs } from '../src/achieveGroup/verbs/tensesVerbs.js'
 import {modalVerbs} from "../src/achieveGroup/verbs/modalVerbs.js";
 import { typeVerbs} from "../src/achieveGroup/verbs/typeVerbs.js";
@@ -130,7 +132,6 @@ import AchIcon from '../assets/images/target.svg'
 import Quest from '../assets/images/question.svg'
 import {useRouter} from 'vue-router'
 import {useAchievementStore} from '../store/achievementStore.js'
-
 
 const scrollRef = ref(null)
 const {$SimpleBar} = useNuxtApp()
@@ -208,7 +209,8 @@ const contentMap = {
   tensesVerbs: TensesAchievements,
   modalVerbs: ModalVerbs,
   typeVerbs: TypeVerbsAchievement,
-  winter: WinterAchievement
+  winter: WinterAchievement,
+  valentine: ValentineAchievement
 };
 const currentContent = computed(() => contentMap[contentId.value]);
 const wrapperClass = computed(() => {
@@ -241,7 +243,8 @@ const allAchievementsData = {
   tensesVerbs: tensesVerbs,
   modalVerbs: modalVerbs,
   typeVerbs: typeVerbs,
-  winter: eventWinterAchievements
+  winter: eventWinterAchievements,
+  valentine: valentineAchievements
 };
 const countNestedAchievements = (dataArray) => {
   let count = 0;
@@ -331,6 +334,10 @@ const modeComputed = computed(() => {
   if (allAchievementsData.winter) {
     winter = countNestedAchievements(allAchievementsData.winter)
   }
+  let valentine = 0
+  if (allAchievementsData.valentine) {
+    valentine = countNestedAchievements(allAchievementsData.valentine)
+  }
   return {
     easy: easyCount,
     normal: normalCount,
@@ -344,7 +351,8 @@ const modeComputed = computed(() => {
     akkusativ: akkusativ,
     genitiv: genitiv,
     dativ: dativ,
-    eventsTotal: winter,
+    eventsTotal: winter + valentine,
+    valentine: valentine,
     tensesVerbs: tensesVerbs,
     modalVerbs: modalVerbs,
     typeVerbs: typeVerbs,
@@ -528,10 +536,10 @@ const achievementCategories = computed(() => [
     id: 'events',
     name: 'categoryAchievments.events',
     icon: '🎊',
-    length: modeComputed.value.winter,
+    length: modeComputed.value.eventsTotal,
     submenu: [
       { id: 'winter', name: 'categoryAchievments.winterEvent', icon: '❄️', length: modeComputed.value.winter },
-      { id: 'valentine', name: 'categoryAchievments.valentineEvent', icon: '💖' },
+      { id: 'valentine', name: 'categoryAchievments.valentineEvent', icon: '💖', length: modeComputed.value.valentine },
       { id: 'foolDay', name: 'categoryAchievments.foolDayEvent', icon: '🎭' },
       { id: 'halloween', name: 'categoryAchievments.halloweenEvent', icon: '🎃' },
     ]

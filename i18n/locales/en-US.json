@@ -1,4 +1,42 @@
 {
+  "eventsModal": {
+    "halloweenLabel": "Pumpkin Festival",
+    "halloweenText": "Collect pumpkins, complete quests, and get themed rewards!",
+    "winterLabel": "Whisper of Winter",
+    "winterText": "Join the winter event! Collect snowflakes, open gifts.",
+    "valentineLabel": "Festival of Hearts",
+    "valentineText": "Take part in the romantic event and get exclusive rewards!",
+    "jokeLabel": "Prank Parade",
+    "jokeText": "Have fun, collect bonuses, and join funny challenges!"
+  },
+  "winterEvent": {
+    "pathMain": "Home",
+    "event": "Event",
+    "panel": "Event Panel",
+    "reputation": "Reputation",
+    "currency": "Currency",
+    "shop": "Reputation Shop",
+    "bought": "Purchased",
+    "notAllowed": "Unavailable",
+    "notEnough": "Not enough",
+    "buy": "Buy",
+    "questions": "Quests",
+    "rep": "rep.",
+    "repeat": "Repeat",
+    "execute": "Start",
+    "notAllowedTitle": "Event Unavailable",
+    "notAllowedText": "This event has not started yet or has already ended.",
+    "eventShop": "Event Shop",
+    "eventQuestions": "Event Quests",
+    "firstReputation": "Snowy Trust",
+    "secondReputation": "Winter Respect"
+  },
+  "winterEventShopItems": {
+    "santaHat": "Santa Hat",
+    "christmasBall": "Snow Globe",
+    "christmasWreath": "Christmas Wreath",
+    "snowFall": "Snowfall Effect"
+  },
   "winterAchievements": {
     "firstQuestName": "First Tree Star",
     "firstQuestDescription": "Complete any quest of the winter event and light the first star.",
@@ -4443,7 +4481,8 @@
     "mistakesText": "Each one is a step toward knowledge!",
     "mistakesAward": "Reward: Talisman of Patience",
     "voiceActivatedText": "Voice Access",
-    "voiceActivatedLabel": "Read and accept the important notice and activate the Sprechen module."
+    "voiceActivatedLabel": "Read and accept the important notice and activate the Sprechen module.",
+    "theLostDescription": "Entrance to the bunker is hidden in plain sight. Knock 5 times on the website logo to initiate the protocol and gain access by answering the questions"
   },
   "guessCategory": {
     "guessLabel": "Guess the word",

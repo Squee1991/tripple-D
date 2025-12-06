@@ -1,4 +1,42 @@
 {
+  "eventsModal": {
+    "halloweenLabel": "Festival de Calabazas",
+    "halloweenText": "¡Recoge calabazas, completa misiones y obtén recompensas temáticas!",
+    "winterLabel": "Susurro del Invierno",
+    "winterText": "¡Participa en el evento de invierno! Recoge copos de nieve, abre regalos.",
+    "valentineLabel": "Festival de Corazones",
+    "valentineText": "¡Participa en el evento romántico y consigue recompensas exclusivas!",
+    "jokeLabel": "Desfile de Bromas",
+    "jokeText": "¡Diviértete, recoge bonificaciones y participa en desafíos cómicos!"
+  },
+  "winterEvent": {
+    "pathMain": "Inicio",
+    "event": "Evento",
+    "panel": "Panel del evento",
+    "reputation": "Reputación",
+    "currency": "Moneda",
+    "shop": "Tienda de reputación",
+    "bought": "Comprado",
+    "notAllowed": "No disponible",
+    "notEnough": "Insuficiente",
+    "buy": "Comprar",
+    "questions": "Misiones",
+    "rep": "rep.",
+    "repeat": "Repetir",
+    "execute": "Realizar",
+    "notAllowedTitle": "Evento no disponible",
+    "notAllowedText": "Este evento aún no ha comenzado o ya ha terminado.",
+    "eventShop": "Tienda del evento",
+    "eventQuestions": "Misiones del evento",
+    "firstReputation": "Confianza Nevada",
+    "secondReputation": "Respeto Invernal"
+  },
+  "winterEventShopItems": {
+    "santaHat": "Gorro de Santa",
+    "christmasBall": "Bola de nieve",
+    "christmasWreath": "Corona de Navidad",
+    "snowFall": "Efecto de nevada"
+  },
   "winterAchievements": {
     "firstQuestName": "Primera estrella del árbol",
     "firstQuestDescription": "Completa cualquier misión del evento de invierno y enciende la primera estrella.",
@@ -4443,7 +4481,8 @@
     "mistakesText": "¡Cada uno es un paso hacia el conocimiento!",
     "mistakesAward": "Premio: Talismán de la paciencia",
     "voiceActivatedText": "Acceso de voz",
-    "voiceActivatedLabel": "Lee y acepta el aviso importante y activa el módulo Sprechen."
+    "voiceActivatedLabel": "Lee y acepta el aviso importante y activa el módulo Sprechen.",
+    "theLostDescription": "La entrada del búnker está oculta a plena vista. Golpea 5 veces el logotipo del sitio para iniciar el protocolo y obtener acceso respondiendo las preguntas"
   },
   "guessCategory": {
     "guessLabel": "Adivinar la palabra",
