@@ -46,6 +46,14 @@ export const userAuthStore = defineStore('auth', () => {
     const initialized = ref(false)
     let initPromise = null
 
+    const isRegisteredSevenDaysAgo = computed(() => {
+        if (!registeredAt.value) return false;
+        const registrationDate = new Date(registeredAt.value).getTime();
+        const currentTime = Date.now();
+        const sevenDaysInMs = 7 * 24 * 60 * 60 * 1000;
+        return (currentTime - registrationDate) >= sevenDaysInMs;
+    });
+
     const isGoogleUser = computed(() => providerId.value === 'google.com');
     const getAvatarUrl = (fileName) => {
         if (!fileName) return '';
@@ -397,7 +405,7 @@ export const userAuthStore = defineStore('auth', () => {
         getAvatarUrl,
         isWebView, detectWebView,
         hasSeenOnboarding,         
-        setHasSeenOnboarding
-
+        setHasSeenOnboarding,
+        isRegisteredSevenDaysAgo
     }
 })

@@ -120,26 +120,30 @@ const isLoading = ref(false)
 const page = ref(0)
 const itemsPerPage = 9
 
-const pageTitle = t('metaArticle.title')
-const pageDesc = t('metaArticle.description')
-
-useHead({
-  title: pageTitle,
-  link: [
-    { rel: 'canonical', href: canonical }
-  ]
-})
-
 useSeoMeta({
-  title: pageTitle,
-  description: pageDesc,
-  ogTitle: pageTitle,
-  ogDescription: pageDesc,
-  ogType: 'website',
-  ogUrl: canonical,
-  ogImage: '/images/seo-articles.png',
-  robots: 'index, follow'
+  robots: 'noindex, nofollow'
 })
+
+// const pageTitle = t('metaArticle.title')
+// const pageDesc = t('metaArticle.description')
+//
+// useHead({
+//   title: pageTitle,
+//   link: [
+//     { rel: 'canonical', href: canonical }
+//   ]
+// })
+//
+// useSeoMeta({
+//   title: pageTitle,
+//   description: pageDesc,
+//   ogTitle: pageTitle,
+//   ogDescription: pageDesc,
+//   ogType: 'website',
+//   ogUrl: canonical,
+//   ogImage: '/images/seo-articles.png',
+//   robots: 'index, follow'
+// })
 
 const clearSelectedTopic = () => {
   showModesBlock.value = false

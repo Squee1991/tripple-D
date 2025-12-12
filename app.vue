@@ -2,13 +2,15 @@
   <NuxtLayout>
     <NuxtPage/>
     <AchievementToast @toast-finished="onToastFinished" />
-<!--    <VStephint v-if="showStepHint" @close="showStepHint = false"/>-->
+<!--    <VStepHint v-if="showStepHint" @close="showStepHint = false"/>-->
+<!--    <FeedBack/>-->
     <VLost/>
   </NuxtLayout>
 </template>
 
 <script setup>
-import VStephint from "./src/components/V-stephint.vue";
+import FeedBack from './src/components/V-feedback.vue'
+import VStepHint from "./src/components/V-stephint.vue";
 import AchievementToast from './src/components/AchievementToast.vue'
 import VLost from './src/components/V-lost.vue'
 import {useRouter, useRoute} from 'vue-router'
@@ -36,7 +38,7 @@ useHead(() => ({
     { property: 'og:description', content: t('useHeadApp.contentFour') },
     { property: 'og:type', content: 'website' },
     { property: 'og:image', content: '/images/' },
-    { name: 'google-site-verification', content: 'MLWdpLJXatGGAMkB8ks7yzFKK-K43' }
+    { name: 'google-site-verification', content: 'ZWWugYpS5LJWJG3qLMOgbVhKRPvOSta0G3TXE3HhSqI' }
   ],
   link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }]
 }))

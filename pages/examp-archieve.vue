@@ -3,6 +3,11 @@ import {onMounted, onUnmounted, computed} from 'vue'
 import {useRoute, useRouter} from 'vue-router'
 import {userExamStore} from '../store/examStore.js'
 import VPlayAudio from "../src/components/V-playAudio.vue";
+import {useSeoMeta} from "#imports";
+
+useSeoMeta({
+  robots: 'noindex, nofollow'
+})
 
 const { t } = useI18n();
 const route = useRoute()

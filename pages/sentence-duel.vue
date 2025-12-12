@@ -66,7 +66,8 @@
                 :key="level"
                 @click="selectLevel(level)" class="level-card"
                 :class="{ 'level-card--selected': selectedLevel === level }">
-              <h2 class="card-level-title">{{ t('wordDuel.level') }} {{ level }}</h2>
+              <h2 class="card-level-title">{{ level }}</h2>
+<!--              <h2 class="card-level-title">{{ t('wordDuel.level') }} {{ level }}</h2>-->
             </button>
           </div>
 
@@ -342,16 +343,16 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   border: none;
   display: flex;
   align-items: center;
-  border: 3px solid #1e1e1e;
+  border: 2px solid #1e1e1e;
   padding: 15px;
   background: #4ade80;
   border-radius: 16px;
   cursor: pointer;
-  color: #1e1e1e;
+  color: white;
   font-size: 1.2rem;
   font-weight: 400;
   font-family: "Nunito", sans-serif;
-  box-shadow: 4px 4px 0px #1e1e1e;
+  box-shadow: 2px 2px 0px #1e1e1e;
   transition: all 0.1s ease-in-out;
 }
 
@@ -368,7 +369,7 @@ watch(() => gameStore.sessionData?.status, async (s) => {
 .back-button-global svg {
   width: 24px;
   height: 24px;
-  fill: #3A3A3A;
+  fill: white;
 }
 
 .lobby-container {
@@ -394,12 +395,9 @@ watch(() => gameStore.sessionData?.status, async (s) => {
 }
 
 .level-grid {
-
-  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
-
 }
 
 .header-section {
@@ -433,8 +431,8 @@ watch(() => gameStore.sessionData?.status, async (s) => {
 .level-card.level-card--selected {
   background-color: #FFD24B;
   transform: translateY(-2px) scale(1.01);
-  box-shadow: 4px 4px 0px #1e1e1e;
-  min-width: 160px;
+  box-shadow: 2px 2px 0px #1e1e1e;
+  min-width: 120px;
 }
 
 .card-level-title {
@@ -499,7 +497,7 @@ watch(() => gameStore.sessionData?.status, async (s) => {
 
 .main-content-wrapper {
   display: flex;
-  gap: 40px;
+  gap: 20px;
   max-width: 1200px;
   margin: 40px auto 0;
 }

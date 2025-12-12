@@ -120,25 +120,30 @@ const tipRef = ref(null)
 let lottieInstance = null
 
 const canonical = useCanonical()
-const pageTitle = t('metaTenses.title')
-const pageDesc = t('metaTenses.description')
 
-useHead({
-  title: pageTitle,
-  link: [
-    { rel: 'canonical', href: canonical }
-  ]
-})
 useSeoMeta({
-  title: pageTitle,
-  description: pageDesc,
-  ogTitle: pageTitle,
-  ogDescription: pageDesc,
-  ogType: 'article',
-  ogUrl: canonical,
-  ogImage: '/images/seo-tenses.png',
-  robots: 'index, follow'
+  robots: 'noindex, nofollow'
 })
+
+// const pageTitle = t('metaTenses.title')
+// const pageDesc = t('metaTenses.description')
+//
+// useHead({
+//   title: pageTitle,
+//   link: [
+//     { rel: 'canonical', href: canonical }
+//   ]
+// })
+// useSeoMeta({
+//   title: pageTitle,
+//   description: pageDesc,
+//   ogTitle: pageTitle,
+//   ogDescription: pageDesc,
+//   ogType: 'article',
+//   ogUrl: canonical,
+//   ogImage: '/images/seo-tenses.png',
+//   robots: 'index, follow'
+// })
 
 const selectTopic = (id) => {
   topic.value = id

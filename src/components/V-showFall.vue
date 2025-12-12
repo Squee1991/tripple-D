@@ -8,7 +8,7 @@ const props = defineProps({
   },
   count: {
     type: Number,
-    default: 50
+    default: 75
   }
 })
 
@@ -20,7 +20,7 @@ const snowflakes = computed(() => {
   const items = Array.from({ length: props.count }).map((_, i) => {
     const sectionWidth = 100 / props.count
     const left = (i * sectionWidth) + rand(0, sectionWidth * 0.5)
-    const size = Math.round(rand(18, 40))
+    const size = Math.round(rand(10, 25))
     const fallDuration = rand(15, 25)
     const isEven = i % 2 === 0
     let delay
@@ -33,7 +33,6 @@ const snowflakes = computed(() => {
     const drift = Math.round(rand(6, 18))
     const sway = rand(8, 16)
     const swayDelay = -rand(0, sway)
-
     const spin = Math.random() < 0.45 ? rand(6, 14) : 0
     const opac = rand(0.55, 0.95)
     const far = i % 3 === 0

@@ -49,11 +49,17 @@ import Modal from '../../src/components/modal.vue'
 import {useRouter} from 'vue-router'
 import DoneImg from '../../assets/images/done.svg'
 import VBackBtn from "../../src/components/V-back-btn.vue";
+import {useSeoMeta} from "#imports";
 const showModal = ref(false)
 const cooldownSeconds = ref(0)
 const router = useRouter()
 const {t} = useI18n()
 const questStore = useQuestStore()
+
+useSeoMeta({
+  robots: 'noindex, nofollow'
+})
+
 const data = ref({
   title: "modal.achieveTitle",
   text: "modal.achieveText"

@@ -1062,7 +1062,7 @@ onBeforeUnmount(() => {
   font-size: 0.9rem;
   font-style: italic;
   letter-spacing: 3px;
-  text-shadow: 2px 4px 0px white;
+  text-shadow: 1px 2px 0px white;
   -webkit-text-stroke: 2px #e39910;
   transition: .5s;
   text-transform: uppercase;
@@ -1091,11 +1091,6 @@ onBeforeUnmount(() => {
   .btn-login:hover {
     transform: translate(2px, 2px);
     box-shadow: 2px 2px 0px #1e1e1e;
-  }
-
-  .logo__name:hover {
-    text-shadow: 2px 4px 2px white;
-    transition: .5s;
   }
 
   .btn-login:hover {

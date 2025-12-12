@@ -349,7 +349,7 @@ const settingsToggleItems = [
   {key: 'sound', label: t('cabinetToggle.sound'), wrap: false},
   {key: 'dark', label: t('cabinetToggle.theme'), wrap: true},
   {key: 'ach', label: t('cabinetToggle.ach'), wrap: true},
-  {key: 'snowFall', label: t('cabinetToggle.snowFall'), wrap: true},
+  // {key: 'snowFall', label: t('cabinetToggle.snowFall'), wrap: true},
 ]
 
 const activeAccordion = ref(null)
@@ -737,21 +737,15 @@ watchEffect(() => {
   border-radius: 16px;
   padding: 12px 14px;
   cursor: pointer;
-  border: 3px solid #000;
-  box-shadow: 4px 4px 0 #000;
-  transition: .15s;
-}
-
-.back-btn:hover {
-  transform: translate(2px, 2px);
+  border: 2px solid #000;
   box-shadow: 2px 2px 0 #000;
+  transition: .15s;
 }
 
 .back-btn img {
   width: 40px;
   height: 40px;
 }
-
 
 .back-label {
   display: inline;
@@ -783,7 +777,7 @@ watchEffect(() => {
   width: 100%;
   padding: 10px 12px;
   border: 2px solid #000;
-  border-radius: 16px;
+  border-radius: 12px;
   background: #f3f4f6;
   box-shadow: 2px 2px 0 #000;
   cursor: pointer;
@@ -793,13 +787,10 @@ watchEffect(() => {
   font-family: "Nunito", sans-serif;
 }
 
-.tab-vertical:hover {
-  transform: translate(1px, 1px);
-  box-shadow: 0px 0px 0 #000;
-}
 
 .tab-vertical.active {
-  background: #9ea9a2;;
+  background: #447ec1;
+  color: white;
 }
 
 .tab-icon {
@@ -1314,6 +1305,14 @@ watchEffect(() => {
     transform: translate(2px, 2px);
     box-shadow: 1px 1px 0 #000;
   }
+  .back-btn:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0 #000;
+  }
+  .tab-vertical:hover {
+    transform: translate(1px, 1px);
+    box-shadow: 0px 0px 0 #000;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1322,5 +1321,8 @@ watchEffect(() => {
     gap: 10px;
   }
 }
+
+
+
 
 </style>

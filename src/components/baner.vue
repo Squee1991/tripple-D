@@ -8,16 +8,18 @@
       <div class="banner__wrapper">
         <div class="banner__content">
           <div class="banner__orbit">
-                <span v-for="(word, index) in orbitWords"
-                      :key="index"
-                      class="banner__orbit-word"
-                      :class="[ word.class,  {
+            <div v-for="(word, index) in orbitWords"
+                 :key="index"
+                 class="banner__orbit-word"
+                 :class="[ word.class,  {
                     'glow-black': glowType === word.type && word.type === 'der',
                     'glow-red': glowType === word.type && word.type === 'die',
                     'glow-gold': glowType === word.type && word.type === 'das',
                     'fade-glow': fadingGlow === word.type}]"
-                >{{ word.text }}
-                </span>
+            >
+              <span>{{ word.text }}</span>
+              <img class="snow" :src="Snow" alt="">
+            </div>
           </div>
           <h1 class="banner__title" v-once>{{ t('banner.title') }}</h1>
           <button class="banner__button" @click="startLearning" v-once>{{ t('banner.btn') }}</button>
@@ -35,7 +37,7 @@ import SignIn from '../components/logIn.vue'
 import Overlay from '../components/Uioverlay.vue'
 import {gsap} from 'gsap'
 import {ScrollTrigger} from "gsap/ScrollTrigger";
-import SoundBtn from "../components/soundBtn.vue"
+import Snow from "../../assets/images/shovel.svg";
 
 const orbitWords = [
   {text: 'Der', type: 'der', class: 'banner__orbit-word--der'},
@@ -61,17 +63,6 @@ const openAuth = () => {
   showAuth.value = true
 }
 
-const triggerGlow = (type) => {
-  if (glowType.value || fadingGlow.value) return;
-  glowType.value = type;
-  setTimeout(() => {
-    fadingGlow.value = type;
-    glowType.value = null;
-    setTimeout(() => {
-      fadingGlow.value = null;
-    }, 1000);
-  }, 500);
-}
 
 const closeAuth = () => {
   showAuth.value = false
@@ -122,6 +113,8 @@ onMounted(() => {
   margin: 0 auto;
   justify-content: center;
   gap: 30px;
+  position: relative;
+  z-index: 1;
 }
 
 .banner__content {
@@ -136,6 +129,7 @@ onMounted(() => {
 }
 
 .banner__orbit-word {
+  position: relative;
   padding: 0.8rem 2rem;
   font-size: 1.8rem;
   font-weight: 400;
@@ -143,19 +137,15 @@ onMounted(() => {
   color: #1e1e1e;
   cursor: pointer;
   user-select: none;
-  border: 3px solid #1e1e1e;
-  box-shadow: 4px 4px 0px #1e1e1e;
   transition: all 0.1s ease-in-out;
 }
 
-.banner__orbit-word:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0px #1e1e1e;
-}
+.snow {
+  position: absolute;
+  top: -145%;
+  left: 0;
+  width: 100%;
 
-.banner__orbit-word:active {
-  transform: translate(4px, 4px);
-  box-shadow: 0px 0px 0px #1e1e1e;
 }
 
 .banner__orbit-word--der {
@@ -185,18 +175,22 @@ onMounted(() => {
   padding: 1rem 2.5rem;
   font-size: 1.5rem;
   font-weight: 600;
-  border-radius: 16px;
+  border-radius: 12px;
   cursor: pointer;
-  border: 3px solid #1e1e1e;
+  border: 2px solid #1e1e1e;
   transition: all 0.1s ease-in-out;
-  background-color: #4ade80;
-  color: #1e1e1e;
-  box-shadow: 4px 4px 0px #1e1e1e;
+  background-color: #6368bb;
+  color: #ffffff;
+  box-shadow: 2px 2px 0px #1e1e1e;
+
 }
 
-.banner__button:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0px #1e1e1e;
+@media (min-width: 1024px) {
+  .banner__button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0px #1e1e1e;
+  }
+
 }
 
 .banner__button:active {
@@ -251,9 +245,10 @@ onMounted(() => {
 }
 
 @media (max-width: 1023px) {
-  .banner__title{
+  .banner__title {
     font-size: 2rem;
   }
+
   .banner__mage-container {
     max-width: 350px;
   }
@@ -293,12 +288,11 @@ onMounted(() => {
   .banner__orbit-word {
     font-size: 1.5rem;
     padding: 0.6rem 1.5rem;
-    box-shadow: 2px 2px 0 #1e1e1e;
   }
 
   .banner__button {
     width: 80%;
-    border-radius: 20px;
+    border-radius: 12px;
     box-shadow: 2px 2px 0 #1e1e1e;
   }
 }

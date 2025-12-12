@@ -104,24 +104,28 @@ import VBackBtn from "../../src/components/V-back-btn.vue";
 
 const canonical = useCanonical()
 const {t} = useI18n()
-const baseTitle = t('adjectiveComparisonPage.title')
-const pageDesc = t('adjectiveComparisonPage.description')
-useHead({
-  title: baseTitle,
-  link: [
-    {rel: 'canonical', href: canonical}
-  ]
-})
+// const baseTitle = t('adjectiveComparisonPage.title')
+// const pageDesc = t('adjectiveComparisonPage.description')
+// useHead({
+//   title: baseTitle,
+//   link: [
+//     {rel: 'canonical', href: canonical}
+//   ]
+// })
+//
+// useSeoMeta({
+//   title: baseTitle,
+//   description: pageDesc,
+//   ogTitle: baseTitle,
+//   ogDescription: pageDesc,
+//   ogType: 'article',
+//   ogUrl: canonical,
+//   ogImage: '/images/seo-adj-comparison.png',
+//   robots: 'index, follow'
+// })
 
 useSeoMeta({
-  title: baseTitle,
-  description: pageDesc,
-  ogTitle: baseTitle,
-  ogDescription: pageDesc,
-  ogType: 'article',
-  ogUrl: canonical,
-  ogImage: '/images/seo-adj-comparison.png',
-  robots: 'index, follow'
+  robots: 'noindex, nofollow'
 })
 
 const router = useRouter();

@@ -513,7 +513,13 @@ onMounted(() => {
 
 @media (max-width: 768px) {
   .word-display h1 {
-    font-size: 2rem;
+    font-size: 2.1rem;
+  }
+  .article-btn {
+    padding: 12px;
+    width: 100px;
+    border: 2px solid black;
+    box-shadow: 2px 2px 0 black;
   }
 }
 

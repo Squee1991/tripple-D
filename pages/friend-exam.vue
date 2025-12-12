@@ -97,6 +97,11 @@
 import {onMounted, ref, computed} from 'vue'
 import {useRouter} from 'vue-router'
 import {userExamStore} from '../store/examStore.js'
+import {useSeoMeta} from "#imports";
+
+useSeoMeta({
+  robots: 'noindex, nofollow'
+})
 
 const examStore = userExamStore()
 const router = useRouter()

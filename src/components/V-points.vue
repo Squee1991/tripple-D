@@ -162,6 +162,7 @@ onMounted(() => {
 
 .points__title {
   color: var(--titleColor);
+  -webkit-text-stroke : 1px var(--titleColor);
 }
 
 .stat__icon {
@@ -193,9 +194,8 @@ onMounted(() => {
 
 .articlus__wrapper {
   display: flex;
-  border: none;
-  outline: 2px solid black;
-  outline-offset: -3px;
+  border:2px solid black;
+  box-shadow: 2px 2px 0 black;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
@@ -224,6 +224,8 @@ onMounted(() => {
   padding: 18px;
   width: 100%;
   margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
 }
 
 .progress_exp-bar {
@@ -243,11 +245,15 @@ onMounted(() => {
 
 .points-card__header {
   margin-bottom: 12px;
+  position: relative;
+  z-index: 1;
 }
 
 .points-card__list {
   margin-bottom: 10px;
   padding: 3px 0;
+  position: relative;
+  z-index: 1;
 }
 
 .points-card__item {

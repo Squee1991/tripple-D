@@ -120,7 +120,7 @@ const annualEvents = ref([
     alt: 'ChristmasIcon',
     title: t('eventsNavNames.winter'),
     typeId: 'winter',
-    start: '12-24 00:00',
+    start: '12-18 00:00',
     end: '01-02 23:59'
   },
   {

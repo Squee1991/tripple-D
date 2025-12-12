@@ -1,13 +1,15 @@
 :root {
-    --bg: #fef8e4;
-    --titleColor: #000000;
+    /*--bg: #fef8e4;*/
+    --bg: #a2ccd4;
+    --titleColor: #2c2b2b;
     --borderBottom: #000000;
     --navItems: #000000;
     --border: #000000;
 }
 
 .dark {
-    --bg: #2e2e33;
+    /*--bg: #2e2e33;*/
+    --bg: #0F172A;
     --titleColor:white;
     --borderBottom: white;
     --navItems: white;

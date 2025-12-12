@@ -90,6 +90,7 @@
 
 <script setup>
 import {ref, computed, onMounted} from 'vue';
+import {useSeoMeta} from "#imports";
 const allEntries = ref([]);
 const searchQuery = ref('');
 const loading = ref(true);
@@ -97,7 +98,9 @@ const error = ref(null);
 
 const isUsageOpen = ref(false);
 const currentItem = ref(null);
-
+useSeoMeta({
+  robots: 'noindex, nofollow'
+})
 function isObject(v) {
   return Object.prototype.toString.call(v) === '[object Object]';
 }

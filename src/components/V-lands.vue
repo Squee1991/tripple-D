@@ -172,14 +172,14 @@ function go(region) {
   box-shadow: 2px 2px 0 var(--border);
   border-radius: 15px;
   padding: 10px 10px;
-  background: #f1c40f;
+  background: #3c99d3;
   position: relative;
   overflow: hidden;
 }
 
 .map__title {
   font-size: 2.3rem;
-  color: #484343;
+  color: #f6f2f2;
   font-weight: 600;
   letter-spacing: .2px;
   font-family: "Nunito", sans-serif;
@@ -227,7 +227,6 @@ function go(region) {
   font-size: 1.6rem;
   margin: 0 0 8px;
   font-weight: 900;
-  font-style: italic;
   color: var(--titleColor);
 }
 
@@ -316,9 +315,11 @@ function go(region) {
   outline: 3px solid #fff;
 }
 
-.region-card:hover {
-  transform: translate(1px, 1px);
-  box-shadow: 0px 0px 0 var(--border);
+@media (min-width: 1024px) {
+  .region-card:hover {
+    transform: translate(1px, 1px);
+    box-shadow: 0px 0px 0 var(--border);
+  }
 }
 
 .region-card__art {
@@ -490,7 +491,6 @@ function go(region) {
 
   .map__title {
     font-size: 1.4rem;
-    color: black;
   }
 
   .map-left__close {

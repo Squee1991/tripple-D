@@ -108,24 +108,28 @@ const { t} = useI18n()
 const router = useRouter()
 const categoryId = 'prepositions'
 const canonical = useCanonical()
-const pageTitle = t('metaPrepositions.title')
-const pageDesc  = t('metaPrepositions.description')
-useHead({
-  title: pageTitle,
-  link: [
-    { rel: 'canonical', href: canonical }
-  ]
-})
 useSeoMeta({
-  title: pageTitle,
-  description: pageDesc,
-  ogTitle: pageTitle,
-  ogDescription: pageDesc,
-  ogType: 'article',
-  ogUrl: canonical,
-  ogImage: '/images/seo-prepositions-cases.png',
-  robots: 'index, follow'
+  robots: 'noindex, nofollow'
 })
+
+// const pageTitle = t('metaPrepositions.title')
+// const pageDesc  = t('metaPrepositions.description')
+// useHead({
+//   title: pageTitle,
+//   link: [
+//     { rel: 'canonical', href: canonical }
+//   ]
+// })
+// useSeoMeta({
+//   title: pageTitle,
+//   description: pageDesc,
+//   ogTitle: pageTitle,
+//   ogDescription: pageDesc,
+//   ogType: 'article',
+//   ogUrl: canonical,
+//   ogImage: '/images/seo-prepositions-cases.png',
+//   robots: 'index, follow'
+// })
 
 const topics = [
   {

@@ -57,26 +57,30 @@ import { useHead, useSeoMeta } from '#imports'
 import VBackBtn from "../../src/components/V-back-btn.vue";
 const { t } = useI18n();
 const canonical = useCanonical()
-const pageTitle = t('metaAdjectiveBasic.title')
-const pageDesc  = t('metaAdjectiveBasic.description')
-
-useHead({
-  title: pageTitle,
-  link: [
-    { rel: 'canonical', href: canonical }
-  ]
-})
 
 useSeoMeta({
-  title: pageTitle,
-  description: pageDesc,
-  ogTitle: pageTitle,
-  ogDescription: pageDesc,
-  ogType: 'website',
-  ogUrl: canonical,
-  ogImage: '/images/seo-adjective-basics.png',
-  robots: 'index, follow'
+  robots: 'noindex, nofollow'
 })
+// const pageTitle = t('metaAdjectiveBasic.title')
+// const pageDesc  = t('metaAdjectiveBasic.description')
+//
+// useHead({
+//   title: pageTitle,
+//   link: [
+//     { rel: 'canonical', href: canonical }
+//   ]
+// })
+//
+// useSeoMeta({
+//   title: pageTitle,
+//   description: pageDesc,
+//   ogTitle: pageTitle,
+//   ogDescription: pageDesc,
+//   ogType: 'website',
+//   ogUrl: canonical,
+//   ogImage: '/images/seo-adjective-basics.png',
+//   robots: 'index, follow'
+// })
 
 const topics = [
   {

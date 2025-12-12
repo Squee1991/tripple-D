@@ -56,6 +56,7 @@ import Speaker from '../assets/images/pay-images/speaker.svg'
 import Exams from '../assets/images/pay-images/test.svg'
 import Competitions from '../assets/images/pay-images/competition.svg'
 import Future from '../assets/images/pay-images/future.svg'
+import {useSeoMeta} from "#imports";
 const authStore = userAuthStore()
 const payButton = ref(null)
 const showStickyFooter = ref(false)
@@ -64,6 +65,10 @@ const { t } = useI18n()
 const backToMain = () => {
   router.push('/')
 }
+
+useSeoMeta({
+  robots: 'noindex, nofollow'
+})
 
 let observer
 const features = [

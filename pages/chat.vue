@@ -1,11 +1,9 @@
 <script setup>
 import { ref } from 'vue'
+import {useSeoMeta} from "#imports";
 
-definePageMeta({
-  robots: {
-    index: false,
-    follow: false
-  }
+useSeoMeta({
+  robots: 'noindex, nofollow'
 })
 
 const input = ref('')

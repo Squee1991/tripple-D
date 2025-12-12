@@ -60,10 +60,8 @@ onMounted(() => {
 
 <template>
   <VEventAvailableModal @close="false" v-if="authStore.initialized"/>
-  <VShowFall
-      v-if="eventStore.isSnowEnabled"
-      :image="Snow"
-  />
+  <VShowFall v-if="eventStore.isSnowEnabled" :image="Snow"/>
+  <VShowFall :image="Snow"/>
   <div v-if="!hydrated || !authStore.initialized" class="loading"></div>
   <div v-else class="container">
     <Header/>

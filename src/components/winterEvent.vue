@@ -166,7 +166,7 @@ async function buyReward(level, rewardId) {
 </script>
 
 <template>
-  <div v-if="!isEventOpen">
+  <div v-if="isEventOpen">
     <div class="season__bg">
       <div class="sidebar__decor">
         <img class="present --right" :src="Present" alt="Present icon">
