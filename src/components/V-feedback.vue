@@ -17,12 +17,10 @@
             </footer>
           </div>
         </div>
-
         <div v-else class="modal__inner">
           <div class="modal__title">
             <h2>Помоги нам улучшить сайт</h2>
           </div>
-
           <div class="modal__content">
             <header class="modal-header">
               <div class="progress-text">Вопрос {{ currentStepIndex + 1 }} из {{ visibleQuestions.length }}</div>
@@ -30,11 +28,9 @@
                 <div class="progress-fill" :style="{ width: progressPercent + '%' }"></div>
               </div>
             </header>
-
             <form class="form" @submit.prevent.stop @keydown.enter.prevent>
               <div class="question-block">
                 <p class="question-title">{{ currentQuestion.title }}</p>
-
                 <div v-if="currentQuestion.type === 'choices'" class="choices">
                   <button
                       v-for="option in currentQuestion.options"
@@ -48,7 +44,6 @@
                     {{ option.label || option }}
                   </button>
                 </div>
-
                 <div v-else-if="currentQuestion.type === 'rating'" class="rating">
                   <button
                       v-for="(icon, index) in ratingIcons"
@@ -65,7 +60,6 @@
                     />
                   </button>
                 </div>
-
                 <textarea
                     v-if="shouldShowCommentField"
                     v-model="answers[currentQuestion.commentKey]"
@@ -73,7 +67,6 @@
                     :rows="currentQuestion.rows || 2"
                     :placeholder="currentQuestion.placeholder"
                 ></textarea>
-
                 <p v-if="validationError" class="error-message">{{ validationError }}</p>
               </div>
               <footer class="footer">
