@@ -25,7 +25,7 @@
             loading="eager"
             fetchpriority="high"
         />
-        <span class="logo__name">german11</span>
+        <span class="logo__name">germann</span>
       </NuxtLink>
       <nav ref="dropdownRefNav" class="header-nav" :class="{ 'is-open': isMobileMenuOpen, 'is-rtl': isAr }"
            aria-label="Main">
