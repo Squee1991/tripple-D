@@ -68,13 +68,15 @@ const closeModal = () => {
 }
 
 .modal-title {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
+  font-weight: 600;
+  text-shadow: 1px 1px  #c7532a;
   color: #c7532a;
 }
 
 .modal-text {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   color: #444;
   margin-bottom: 1rem;
   line-height: 1.6;
@@ -111,7 +113,7 @@ const closeModal = () => {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 0.8rem;
   user-select: none;
   margin-top: 1.5rem;
   gap: 10px;

@@ -182,7 +182,7 @@
         "id": 14,
         "type": "speechToText",
         "question": "eastPlainFirstQuests.questFifteen",
-        "text": "Hallo! wie geht's? sehr gut, danke",
+        "text": "Hallo! wie geht's? sehr gut, danke ",
         "answer": "Hallo! wie geht's? sehr gut, danke"
       }
     ]
@@ -231,8 +231,8 @@
         "id": 3,
         "type": "speechToText",
         "question": "eastPlainSecondQuests.questFour",
-        "text": "Bis Morgen",
-        "answer": "Bis Morgen"
+        "text": "Bis morgen",
+        "answer": "Bis morgen"
       },
       {
         "id": 4,
@@ -363,8 +363,8 @@
         "id": 13,
         "type": "speechToText",
         "question": "eastPlainSecondQuests.questFifteen",
-        "text": "Guten Tag! Woher kommst du? ich komme aus Spanien und du? ich komme aus Deutschland",
-        "answer": "Guten Tag! Woher kommst du. ich komme aus Spanien und du? ich komme aus Deutschland"
+        "text": "Guten Tag! Woher kommst du? Ich komme aus Spanien, und du? Ich komme aus Deutschland.",
+        "answer": "Guten Tag! Woher kommst du? Ich komme aus Spanien, und du? Ich komme aus Deutschland."
       }
     ]
   },

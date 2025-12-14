@@ -1,5 +1,5 @@
 <template>
-  <main v-if="feedback" class="feedback-page">
+  <main v-show="feedback" class="feedback-page">
     <div class="overlay" @click.self="closeFeedback">
       <section class="modal" v-if="!feedbackSent">
         <div v-if="!surveyStarted" class="modal__inner">
@@ -9,7 +9,7 @@
           </div>
           <div class="modal__content">
             <div class="intro-block">
-              <p class="intro-text">Мы собираем честный фидбек, чтобы сделать обучение удобнее.</p>
+              <p class="intro-text">Hallo!Мы собираем фидбек, чтобы сделать обучение удобнее и лучше.</p>
               <p class="intro-subtext">Опрос займёт 30 секунд. Нам важно твоё мнение 💛</p>
             </div>
             <footer class="footer footer--center">
@@ -22,6 +22,7 @@
           <div class="modal__title">
             <h2>Помоги нам улучшить сайт</h2>
           </div>
+
           <div class="modal__content">
             <header class="modal-header">
               <div class="progress-text">Вопрос {{ currentStepIndex + 1 }} из {{ visibleQuestions.length }}</div>
@@ -30,7 +31,7 @@
               </div>
             </header>
 
-            <form class="form" @submit.prevent="handleNext">
+            <form class="form" @submit.prevent.stop @keydown.enter.prevent>
               <div class="question-block">
                 <p class="question-title">{{ currentQuestion.title }}</p>
 
@@ -41,7 +42,7 @@
                       type="button"
                       class="choice"
                       :class="{ 'choice--selected': isOptionSelected(option), 'choice--has-icon': option.icon }"
-                      @click="toggleOption(option)"
+                      @click.prevent.stop="toggleOption(option)"
                   >
                     <img v-if="option.icon" :src="option.icon" class="choice-icon" :alt="option.label"/>
                     {{ option.label || option }}
@@ -54,7 +55,7 @@
                       :key="index"
                       type="button"
                       class="rating-button"
-                      @click="answers[currentQuestion.dataKey] = index + 1"
+                      @click.prevent.stop="setRating(index + 1)"
                   >
                     <img
                         :src="icon"
@@ -75,17 +76,9 @@
 
                 <p v-if="validationError" class="error-message">{{ validationError }}</p>
               </div>
-
               <footer class="footer">
-                <button
-                    v-if="currentStepIndex > 0"
-                    type="button"
-                    class="button button--secondary"
-                    @click="currentStepIndex--"
-                >
-                  Назад
-                </button>
-                <button type="submit" class="button button--primary" :disabled="!!validationError || isSubmitting">
+                <button v-if="currentStepIndex > 0" type="button" class="button button--secondary" @click="prevStep">Назад</button>
+                <button type="button" class="button button--primary" :disabled="!!validationError || isSubmitting" @click="handleNext">
                   {{ isLastStep ? 'Отправить' : 'Далее' }}
                 </button>
               </footer>
@@ -93,7 +86,6 @@
           </div>
         </div>
       </section>
-
       <section class="modal modal--thanks" v-else>
         <h2 class="thanks-title">Спасибо за отзыв!</h2>
         <img class="send__email" :src="SendEmail" alt=""/>
@@ -203,14 +195,19 @@ const questions = [
   }
 ]
 
-const feedback = ref(true)
+const feedback = computed(() => authStore.shouldShowFeedbackSurvey)
 const surveyStarted = ref(false)
 const feedbackSent = ref(false)
 const isSubmitting = ref(false)
 const currentStepIndex = ref(0)
-const answers = reactive({})
 
-const visibleQuestions = computed(() => questions.filter(q => !q.showQuestionCondition || q.showQuestionCondition(answers)))
+const answers = reactive({})
+const flowAnswers = reactive({})
+
+const visibleQuestions = computed(() =>
+    questions.filter((q) => !q.showQuestionCondition || q.showQuestionCondition(flowAnswers))
+)
+
 const currentQuestion = computed(() => visibleQuestions.value[currentStepIndex.value] || {})
 const isLastStep = computed(() => currentStepIndex.value === visibleQuestions.value.length - 1)
 const progressPercent = computed(() => ((currentStepIndex.value + 1) / visibleQuestions.value.length) * 100)
@@ -224,18 +221,20 @@ const validationError = computed(() => {
   const q = currentQuestion.value
   const val = answers[q.dataKey]
   const comment = answers[q.commentKey]
-
   const isEmpty = Array.isArray(val) ? val.length === 0 : !val && val !== 0
   if (isEmpty) return q.errorMessage || 'Заполните это поле'
-
-  if (shouldShowCommentField.value && q.commentErrorMessage && (!comment || !comment.trim())) {
-    return q.commentErrorMessage
-  }
+  if (shouldShowCommentField.value && q.commentErrorMessage && (!comment || !comment.trim())) return q.commentErrorMessage
   return null
 })
 
-const startSurvey = () => surveyStarted.value = true
-const closeFeedback = () => feedback.value = false
+const startSurvey = () => {
+  surveyStarted.value = true
+  Object.assign(flowAnswers, {})
+}
+
+const closeFeedback = async () => {
+  await authStore.markFeedbackSurveyShown()
+}
 
 const isOptionSelected = (option) => {
   const val = typeof option === 'object' ? option.value : option
@@ -250,17 +249,70 @@ const toggleOption = (option) => {
   if (currentQuestion.value.selectMode === 'multi') {
     const list = answers[key] || []
     if (list.includes(val)) {
-      answers[key] = list.filter(i => i !== val)
+      answers[key] = list.filter((i) => i !== val)
     } else {
-      answers[key] = val === 'Меня всё устраивает' ? [val] : [...list.filter(i => i !== 'Меня всё устраивает'), val]
+      answers[key] = val === 'Меня всё устраивает' ? [val] : [...list.filter((i) => i !== 'Меня всё устраивает'), val]
     }
   } else {
     answers[key] = val
   }
 }
 
+const setRating = (value) => {
+  const key = currentQuestion.value.dataKey
+  if (key) answers[key] = value
+}
+
+const prevStep = () => {
+  if (currentStepIndex.value > 0) currentStepIndex.value--
+}
+
+const commitCurrentStepToFlow = () => {
+  const q = currentQuestion.value
+  if (!q?.dataKey) return
+
+  flowAnswers[q.dataKey] = Array.isArray(answers[q.dataKey]) ? [...answers[q.dataKey]] : answers[q.dataKey]
+
+  if (q.commentKey) {
+    flowAnswers[q.commentKey] = answers[q.commentKey]
+  }
+
+  if (q.dataKey === 'deviceType' && flowAnswers.deviceType !== 'Телефон') {
+    delete flowAnswers.phoneOS
+    delete flowAnswers.phoneModel
+    delete answers.phoneOS
+    delete answers.phoneModel
+  }
+
+  if (q.dataKey === 'hasNativeLanguage' && flowAnswers.hasNativeLanguage !== 'Нет') {
+    delete flowAnswers.missingLanguage
+    delete answers.missingLanguage
+  }
+
+  if (q.dataKey === 'selectedTasks') {
+    const selected = answers.selectedTasks
+    const hasComment = Array.isArray(selected) && selected.length > 0 && !selected.includes('Меня всё устраивает')
+    if (!hasComment) {
+      delete flowAnswers.taskComment
+      delete answers.taskComment
+    }
+  }
+
+  if (q.dataKey === 'interfaceIssues') {
+    const selected = answers.interfaceIssues
+    const hasComment = Array.isArray(selected) && selected.includes('да')
+    if (!hasComment) {
+      delete flowAnswers.interfaceIssuesComment
+      delete answers.interfaceIssuesComment
+    }
+  }
+}
+
 const handleNext = async () => {
   if (validationError.value || isSubmitting.value) return
+
+  commitCurrentStepToFlow()
+
   if (!isLastStep.value) {
     currentStepIndex.value++
     return
@@ -269,11 +321,12 @@ const handleNext = async () => {
   isSubmitting.value = true
   try {
     await addDoc(collection(db, 'feedbackSurvey'), {
-      userId: authStore.user?.uid || 'guest',
+      userId: authStore.uid || 'guest',
       createdAt: serverTimestamp(),
       answers: {...answers}
     })
     feedbackSent.value = true
+    await authStore.markFeedbackSurveyShown()
   } catch (e) {
     console.error(e)
   } finally {
@@ -288,8 +341,19 @@ const resetForm = () => {
     surveyStarted.value = false
     currentStepIndex.value = 0
     for (const key in answers) delete answers[key]
+    for (const key in flowAnswers) delete flowAnswers[key]
   }, 300)
 }
+
+onMounted(async () => {
+  await authStore.initAuth()
+  await authStore.checkFeedbackSurveyEligibility()
+})
+
+watch(() => authStore.uid, async (newUid) => {
+  if (!newUid) return
+  await authStore.checkFeedbackSurveyEligibility()
+})
 </script>
 
 <style scoped>
@@ -327,7 +391,7 @@ const resetForm = () => {
 
 .modal__title {
   width: 100%;
-  background: #c74c71;
+  background: #4c5cc7;
   padding: 10px;
   text-align: center;
   color: white;
@@ -382,7 +446,7 @@ const resetForm = () => {
 
 .progress-fill {
   height: 100%;
-  background: #c74c71;
+  background: #858cc1;
   transition: width 0.25s ease;
 }
 

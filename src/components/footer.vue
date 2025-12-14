@@ -18,7 +18,7 @@
           </div>
           <span>Discord</span>
         </div>
-        <a href="https://t.me/+9Iao2uveB0o5NDI0" target="_blank" rel="noopener" class="social__item" aria-label="Telegram">
+        <a href="https://t.me/skillupgerman1" target="_blank" rel="noopener" class="social__item" aria-label="Telegram">
           <div class="icon">
             <svg height="32" viewBox="0 0 176 176" width="32" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
               <g data-name="Layer 2">

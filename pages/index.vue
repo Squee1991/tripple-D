@@ -29,7 +29,7 @@ useHead({
     children: JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'WebSite',
-      name: 'German Corner',
+      name: 'skillupgerman',
       url: base + '/',
       potentialAction: {
         '@type': 'SearchAction',

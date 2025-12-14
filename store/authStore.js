@@ -44,15 +44,54 @@ export const userAuthStore = defineStore('auth', () => {
     const isWebView = ref(false)
     const hasSeenOnboarding = ref(false)
     const initialized = ref(false)
+    const shouldShowFeedbackSurvey = ref(false)
+
     let initPromise = null
 
-    const isRegisteredSevenDaysAgo = computed(() => {
-        if (!registeredAt.value) return false;
-        const registrationDate = new Date(registeredAt.value).getTime();
-        const currentTime = Date.now();
-        const sevenDaysInMs = 7 * 24 * 60 * 60 * 1000;
-        return (currentTime - registrationDate) >= sevenDaysInMs;
-    });
+    const checkFeedbackSurveyEligibility = async () => {
+        shouldShowFeedbackSurvey.value = false
+
+        const authUser = getAuth().currentUser
+        const currentUid = uid.value || authUser?.uid
+        if (!currentUid) return
+
+        const userDocRef = doc(db, 'users', currentUid)
+        const snap = await getDoc(userDocRef)
+        if (!snap.exists()) return
+
+        const data = snap.data() || {}
+
+        const shownAt =
+            data.feedbackSurveyShownAt && typeof data.feedbackSurveyShownAt.toDate === 'function'
+                ? data.feedbackSurveyShownAt.toDate()
+                : null
+
+        if (shownAt) return
+
+        const regDateFromAuth = authUser?.metadata?.creationTime ? new Date(authUser.metadata.creationTime) : null
+        const regDateFromDb =
+            data.registeredAt && typeof data.registeredAt.toDate === 'function' ? data.registeredAt.toDate() : null
+
+        const regDate = regDateFromDb || regDateFromAuth
+        if (!regDate) return
+
+        const threeDaysMs = 0
+        if (Date.now() - regDate.getTime() < threeDaysMs) return
+
+        shouldShowFeedbackSurvey.value = true
+    }
+
+
+    const markFeedbackSurveyShown = async () => {
+        const authUser = getAuth().currentUser
+        const currentUid = uid.value || authUser?.uid
+        if (!currentUid) return
+
+        const userDocRef = doc(db, 'users', currentUid)
+        await updateDoc(userDocRef, { feedbackSurveyShownAt: serverTimestamp() })
+        shouldShowFeedbackSurvey.value = false
+    }
+
 
     const isGoogleUser = computed(() => providerId.value === 'google.com');
     const getAvatarUrl = (fileName) => {
@@ -147,6 +186,7 @@ export const userAuthStore = defineStore('auth', () => {
                 name: user.displayName,
                 email: user.email,
                 registeredAt: serverTimestamp(),
+                feedbackSurveyShownAt: null,
                 avatar: '1.png',
                 gotPremiumBonus: false,
                 voiceConsentGiven: false,
@@ -164,6 +204,7 @@ export const userAuthStore = defineStore('auth', () => {
             providerId: user.providerData[0]?.providerId || '',
             ...userDataFromDb
         })
+        await checkFeedbackSurveyEligibility()
         console.log('✅ Logged into Firebase project:', auth.app.options.projectId)
     }
 
@@ -179,6 +220,7 @@ export const userAuthStore = defineStore('auth', () => {
             name: userData.name,
             email: userData.email,
             registeredAt: serverTimestamp(),
+            feedbackSurveyShownAt: null,
             avatar: '1.png',
             ownedAvatars: ['1.png', '2.png'],
             isPremium: false,
@@ -200,6 +242,7 @@ export const userAuthStore = defineStore('auth', () => {
             providerId: user.providerData[0]?.providerId || '',
             ...data,
         })
+        await checkFeedbackSurveyEligibility()
     }
 
     const setHasSeenOnboarding = async (value = true) => {
@@ -233,6 +276,7 @@ export const userAuthStore = defineStore('auth', () => {
             uid: userCredential.user.uid,
             ...userDataFromDb
         })
+        await checkFeedbackSurveyEligibility()
     }
 
     const resetPassword = async (email) => {
@@ -332,12 +376,17 @@ export const userAuthStore = defineStore('auth', () => {
                         ...userDataFromDb
                     })
                 }
+                await checkFeedbackSurveyEligibility()
             } else {
                 setUserData({});
             }
             initialized.value = true
         })
     }
+
+
+
+
     const initAuth = () => {
         if (initialized.value) return Promise.resolve()
         if (initPromise) return initPromise
@@ -362,6 +411,7 @@ export const userAuthStore = defineStore('auth', () => {
                         providerId: user.providerData[0]?.providerId || '',
                         ...userDataFromDb
                     })
+                    await checkFeedbackSurveyEligibility()
                 } else {
                     setUserData({});
                 }
@@ -406,6 +456,8 @@ export const userAuthStore = defineStore('auth', () => {
         isWebView, detectWebView,
         hasSeenOnboarding,         
         setHasSeenOnboarding,
-        isRegisteredSevenDaysAgo
+        shouldShowFeedbackSurvey,
+        checkFeedbackSurveyEligibility,
+        markFeedbackSurveyShown
     }
 })

@@ -51,6 +51,19 @@ export const userChainStore = defineStore('chain', () => {
 		)
 	})
 
+	function normalizeSpeechText(text) {
+		return String(text || '')
+			.toLowerCase()
+			.normalize('NFKD')
+			.replace(/[\u200B-\u200D\uFEFF]/g, '')
+			.replace(/[’‘ʼ´`"“”„]/g, '')
+			.replace(/[\u00A0\u202F]/g, ' ')
+			.replace(/[^0-9a-zäöüß\s]/gi, '')
+			.replace(/\s+/g, ' ')
+			.trim()
+	}
+
+
 	const isConfirmDisabled = computed(() => {
 		if (showResult.value) return true
 		if (!task.value) return true
@@ -290,12 +303,22 @@ export const userChainStore = defineStore('chain', () => {
 			case 'readAndAnswer':
 				isCorrect.value = selected.value === task.value.answer
 				break
-			case 'input':
-				isCorrect.value = userInput.value.trim().toLowerCase() === (task.value.correctAnswer || '').toLowerCase()
+			case 'input': {
+				const rawUser = userInput.value
+				const rawAns = task.value.correctAnswer || task.value.answer || ''
+				const user = normalizeSpeechText(rawUser)
+				const ans = normalizeSpeechText(rawAns)
+				isCorrect.value = user === ans
 				break
-			case 'speechToText':
-				isCorrect.value = userInput.value.trim().toLowerCase() === (task.value.answer || '').toLowerCase()
+			}
+			case 'speechToText': {
+				const rawUser = userInput.value
+				const rawAns = task.value.answer || task.value.correctAnswer || ''
+				const user = normalizeSpeechText(rawUser)
+				const ans = normalizeSpeechText(rawAns)
+				isCorrect.value = user === ans
 				break
+			}
 			case 'reorder':
 				isCorrect.value = JSON.stringify(reorderSelection.value) === JSON.stringify(task.value.correctOrder || [])
 				break
@@ -335,7 +358,6 @@ export const userChainStore = defineStore('chain', () => {
 			advancing.value = false
 			return
 		}
-
 		if (currentIndex.value + 1 >= requiredTasks.value) {
 			finished.value = true
 		} else {

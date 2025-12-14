@@ -104,7 +104,7 @@ export default defineNuxtConfig({
 				{ userAgent: '*', disallow: '/*statistics' }
 			]
 			: [{ userAgent: '*', disallow: '/' }],
-		sitemap: `${siteUrl}/sitemap.xml`,
+		// sitemap: `${siteUrl}/sitemap.xml`,
 	},
 
 
@@ -174,35 +174,48 @@ export default defineNuxtConfig({
 	nitro: {
 		preset: 'vercel',
 		prerender: {
-			crawlLinks: true,
+			crawlLinks: false,
+			routes: ['/'],
 			failOnError: false,
-			routes: [
-				...['pl','en','tr','es','ru','uk','uz','ar'].flatMap(loc =>
-					events.map(ev => `/${loc}/event-${ev}`)
-				)
-			]
 		},
 		compressPublicAssets: true
 	},
 	routeRules: {
 		'/': { prerender: true },
-		'/ru/**': { prerender: true },
-		'/en/**': { prerender: true },
-		'/uk/**': { prerender: true },
-		'/pl/**': { prerender: true },
-		'/tr/**': { prerender: true },
-		'/uz/**': { prerender: true },
-		'/ar/**': { prerender: true },
-		'/es/**': { prerender: true },
-		'/api/**': {
-			headers: { 'cache-control': 'public, s-maxage=300, stale-while-revalidate=600' }
-		},
-
-		'/**/success': { headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
-		'/**/battle': { headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
-		'/**/cabinet': { headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
-		'/**/calendar': { headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
-		'/**/chat': { headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
-		'/**/statistics': { headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
-	},
+		'/**': { ssr: false },
+	}
+	// nitro: {
+	// 	preset: 'vercel',
+	// 	prerender: {
+	// 		crawlLinks: true,
+	// 		failOnError: false,
+	// 		routes: [
+	// 			...['pl','en','tr','es','ru','uk','uz','ar'].flatMap(loc =>
+	// 				events.map(ev => `/${loc}/event-${ev}`)
+	// 			)
+	// 		]
+	// 	},
+	// 	compressPublicAssets: true
+	// },
+	// routeRules: {
+	// 	'/': { prerender: true },
+	// 	'/ru/**': { prerender: true },
+	// 	'/en/**': { prerender: true },
+	// 	'/uk/**': { prerender: true },
+	// 	'/pl/**': { prerender: true },
+	// 	'/tr/**': { prerender: true },
+	// 	'/uz/**': { prerender: true },
+	// 	'/ar/**': { prerender: true },
+	// 	'/es/**': { prerender: true },
+	// 	'/api/**': {
+	// 		headers: { 'cache-control': 'public, s-maxage=300, stale-while-revalidate=600' }
+	// 	},
+	//
+	// 	'/**/success': { headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
+	// 	'/**/battle': { headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
+	// 	'/**/cabinet': { headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
+	// 	'/**/calendar': { headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
+	// 	'/**/chat': { headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
+	// 	'/**/statistics': { headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
+	// },
 })

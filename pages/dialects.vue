@@ -98,9 +98,11 @@ const error = ref(null);
 
 const isUsageOpen = ref(false);
 const currentItem = ref(null);
+
 useSeoMeta({
   robots: 'noindex, nofollow'
 })
+
 function isObject(v) {
   return Object.prototype.toString.call(v) === '[object Object]';
 }

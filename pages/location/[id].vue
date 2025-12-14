@@ -60,21 +60,25 @@ const route = useRoute()
 const canonical = useCanonical()
 const {t, locale} = useI18n();
 
-const pageTitle = t('metaLocation.title')
-const pageDesc = t('metaLocation.description')
-useHead({
-  title: pageTitle,
-  link: [{rel: 'canonical', href: canonical}]
-})
+// const pageTitle = t('metaLocation.title')
+// const pageDesc = t('metaLocation.description')
+// useHead({
+//   title: pageTitle,
+//   link: [{rel: 'canonical', href: canonical}]
+// })
+// useSeoMeta({
+//   title: pageTitle,
+//   description: pageDesc,
+//   ogTitle: pageTitle,
+//   ogDescription: pageDesc,
+//   ogType: 'website',
+//   ogUrl: canonical,
+//   ogImage: '/images/seo-lands.png',
+//   robots: 'index, follow'
+// })
+
 useSeoMeta({
-  title: pageTitle,
-  description: pageDesc,
-  ogTitle: pageTitle,
-  ogDescription: pageDesc,
-  ogType: 'website',
-  ogUrl: canonical,
-  ogImage: '/images/seo-lands.png',
-  robots: 'index, follow'
+  robots: 'noindex, nofollow'
 })
 
 const router = useRouter();
