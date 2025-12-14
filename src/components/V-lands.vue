@@ -361,10 +361,8 @@ function go(region) {
   font-size: .82rem;
   font-weight: 900;
   color: #1d1d1d;
-  border: 2px solid var(--border);
   border-radius: 50%;
   background: linear-gradient(180deg, #fff, #eaeaea);
-  box-shadow: 1px 1px 0 var(--border);
   padding: 0;
 }
 

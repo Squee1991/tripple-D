@@ -498,8 +498,8 @@
         "id": 8,
         "type": "speechToText",
         "question": "eastPlainThirdQuests.questEight",
-        "text": "Hallo Thomas!Wohin gehst du? ich gehe in den Laden",
-        "answer": "Hallo Thomas!Wohin gehst du? ich gehe in den Laden"
+        "text": "Hallo Thomas! Wohin gehst du? ich gehe in den Laden",
+        "answer": "Hallo Thomas! Wohin gehst du? ich gehe in den Laden"
       },
       {
         "id": 9,

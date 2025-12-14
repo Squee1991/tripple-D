@@ -8,10 +8,16 @@ import Hat from 'assets/images/event-rewards/winter-event/winter-rewards/santa-h
 import ChristmasBall from 'assets/images/event-rewards/winter-event/winter-rewards/christmas-ball.svg'
 import ChristmasWreath from 'assets/images/event-rewards/winter-event/winter-rewards/christmas-wreath.svg'
 import SantaIcon from 'assets/images/event-rewards/winter-event/winter-rewards/SnowEffect.svg'
-import DeepAvatar from 'assets/images/event-rewards/winter-event/winter-rewards/deerAvatar.png'
-import ElfIcon from 'assets/images/event-rewards/winter-event/winter-rewards/elf-icon.svg'
 import Snow from 'assets/images/mery-christmas/Snow.svg'
+
 const { t } = useI18n()
+const router = useRouter()
+const route = useRoute()
+const localePath = useLocalePath()
+const eventStore = useEventSessionStore()
+
+const eventId = computed(() => String(route.params.id || ''))
+
 const isEventOpen = computed(() => {
   const event = eventStore.events.find(e => e.id === eventId.value)
   if (!event) return false
@@ -24,25 +30,34 @@ const isEventOpen = computed(() => {
   return now >= start && now <= end
 })
 
-const router = useRouter()
-const route = useRoute()
-const localePath = useLocalePath()
-const eventStore = useEventSessionStore()
-
-const eventId = computed(() => String(route.params.id || ''))
-
 const coins = ref(0)
 const coinIcon = '❄'
-const activeTab = ref('reputation')
+const activeTab = ref('quests')
+const isMobilePanelOpen = ref(false)
+
 const nav = [
-  {id: 'reputation', label: t('winterEvent.reputation'), icon: '🏆'},
-  {id: 'quests',     label: t('winterEvent.questions'),   icon: '📜'}
+  {id: 'quests',     label: t('winterEvent.questions'),   icon: '📜'},
+  {id: 'reputation', label: t('winterEvent.reputation'), icon: '🏆'}
 ]
 const selectedLevel = ref(1)
 
 const computedPanelTitle = computed(() => activeTab.value === 'reputation' ? t('winterEvent.eventShop') : t('winterEvent.eventQuestions'))
 
 const pathToMain = () => { router.push('/') }
+
+function selectTab(tabId) {
+  activeTab.value = tabId
+  isMobilePanelOpen.value = true
+}
+
+function closeMobilePanel() {
+  isMobilePanelOpen.value = false
+  setTimeout(() => {
+    if (window.innerWidth <= 767) {
+      activeTab.value = ''
+    }
+  }, 300)
+}
 
 const reputationPoints = ref(0)
 const ranks = [
@@ -51,27 +66,27 @@ const ranks = [
 ]
 
 const quests = ref([
-  { id: 'quest-1',  title: 'Викторина: Дух Рождества',          rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🎄' },
-  { id: 'quest-2',  title: 'Традиции и символы',                rewardCoins: 300, rewardRep: 1000, isDone: false, icon: '🕯️' },
-  { id: 'quest-3',  title: 'Николаус и персонажи',              rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🎅' },
-  { id: 'quest-4',  title: 'Магия Адвента',                     rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🌟' },
-  { id: 'quest-5',  title: 'Искусство дарить подарки',          rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🎁' },
-  { id: 'quest-6',  title: 'Чтение: Рождество в ФРГ',           rewardCoins: 5, rewardRep: 40, isDone: false, icon: '📖' },
-  { id: 'quest-7',  title: 'Чтение: Праздничные дни',           rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🇩🇪' },
-  { id: 'quest-8',  title: 'Легенда о Сильвестре',              rewardCoins: 5, rewardRep: 40, isDone: false, icon: '👻' },
-  { id: 'quest-9',  title: 'Сказка: Заколдованный лес',         rewardCoins: 5, rewardRep: 40, isDone: false, icon: '✨' },
-  { id: 'quest-10', title: 'Зимние каникулы',                   rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🏫' },
-  { id: 'quest-11', title: 'Найди пару: Символы',               rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🔗' },
-  { id: 'quest-12', title: 'Найди пару: Традиции',              rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🧩' },
-  { id: 'quest-13', title: 'Вокруг света: Обычаи',              rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🌍' },
-  { id: 'quest-14', title: 'Европа: Поверья и мифы',            rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🔮' },
-  { id: 'quest-15', title: 'Предметы и зимний досуг',           rewardCoins: 5, rewardRep: 40, isDone: false, icon: '⛸️' },
-  { id: 'quest-16', title: 'Лексика: Зима и НГ',                rewardCoins: 5, rewardRep: 40, isDone: false, icon: '❄️' },
-  { id: 'quest-17', title: 'Лексика: Рождество',                rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🔔' },
-  { id: 'quest-18', title: 'Лексика: Подготовка',               rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🎀' },
-  { id: 'quest-19', title: 'Лексика: Новогодняя ночь',          rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🎆' },
-  { id: 'quest-20', title: 'Лексика: Немецкий праздник',        rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🥨' },
-  { id: 'quest-21', title: 'Сокровищница слов',                 rewardCoins: 5, rewardRep: 40, isDone: false, icon: '💎' },
+  { id: 'quest-21', title: t('winterEventQuests.quest-21'), rewardCoins: 5, rewardRep: 40, isDone: false, icon: '💎' },
+  { id: 'quest-1',  title: t('winterEventQuests.quest-1'),  rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🎄' },
+  { id: 'quest-2',  title: t('winterEventQuests.quest-2'),  rewardCoins: 300, rewardRep: 1000, isDone: false, icon: '🕯️' },
+  { id: 'quest-3',  title: t('winterEventQuests.quest-3'),  rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🎅' },
+  { id: 'quest-4',  title: t('winterEventQuests.quest-4'),  rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🌟' },
+  { id: 'quest-5',  title: t('winterEventQuests.quest-5'),  rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🎁' },
+  { id: 'quest-6',  title: t('winterEventQuests.quest-6'),  rewardCoins: 5, rewardRep: 40, isDone: false, icon: '📖' },
+  { id: 'quest-7',  title: t('winterEventQuests.quest-7'),  rewardCoins: 5, rewardRep: 40, isDone: false, icon: '📅' },
+  { id: 'quest-8',  title: t('winterEventQuests.quest-8'),  rewardCoins: 5, rewardRep: 40, isDone: false, icon: '👻' },
+  { id: 'quest-9',  title: t('winterEventQuests.quest-9'),  rewardCoins: 5, rewardRep: 40, isDone: false, icon: '✨' },
+  { id: 'quest-10', title: t('winterEventQuests.quest-10'), rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🏫' },
+  { id: 'quest-11', title: t('winterEventQuests.quest-11'), rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🔗' },
+  { id: 'quest-12', title: t('winterEventQuests.quest-12'), rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🧩' },
+  { id: 'quest-13', title: t('winterEventQuests.quest-13'), rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🌍' },
+  { id: 'quest-14', title: t('winterEventQuests.quest-14'), rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🔮' },
+  { id: 'quest-15', title: t('winterEventQuests.quest-15'), rewardCoins: 5, rewardRep: 40, isDone: false, icon: '⛸️' },
+  { id: 'quest-16', title: t('winterEventQuests.quest-16'), rewardCoins: 5, rewardRep: 40, isDone: false, icon: '❄️' },
+  { id: 'quest-17', title: t('winterEventQuests.quest-17'), rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🔔' },
+  { id: 'quest-18', title: t('winterEventQuests.quest-18'), rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🎀' },
+  { id: 'quest-19', title: t('winterEventQuests.quest-19'), rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🎆' },
+  { id: 'quest-20', title: t('winterEventQuests.quest-20'), rewardCoins: 5, rewardRep: 40, isDone: false, icon: '🥨' },
 ]);
 
 const currentLevel = computed(() => {
@@ -136,6 +151,9 @@ async function refreshProgressBadges() {
 }
 onMounted(() => {
   refreshProgressBadges()
+  if (window.innerWidth <= 767) {
+    activeTab.value = ''
+  }
 })
 
 const shopByRank = ref({
@@ -204,16 +222,19 @@ async function buyReward(level, rewardId) {
                   v-for="item in nav"
                   :key="item.id"
                   :class="['nav__btn', { 'is-active': activeTab === item.id }]"
-                  @click="activeTab = item.id"
+                  @click="selectTab(item.id)"
               >
                 <span class="nav__icon">{{ item.icon }}</span>
                 <span>{{ item.label }}</span>
               </button>
             </nav>
           </aside>
-          <main class="achv-panel achv-card">
+          <main class="achv-panel achv-card" :class="{ 'is-mobile-visible': isMobilePanelOpen }">
             <div class="panel__title">
               <h1>{{ computedPanelTitle }}</h1>
+              <button class="mobile-back-btn" @click="closeMobilePanel">
+                <span>X</span>
+              </button>
             </div>
             <section v-if="activeTab === 'reputation'">
               <div class="section-head">
@@ -476,10 +497,11 @@ async function buyReward(level, rewardId) {
   border-radius: 15px;
   box-shadow: 0 5px 0 #4e754e;
   padding: 10px 15px;
+  position: relative;
 }
 
 .panel__title h1 {
-  font-size: 32px;
+  font-size: 29px;
   font-weight: 900;
   color: whitesmoke;
 }
@@ -521,6 +543,7 @@ async function buyReward(level, rewardId) {
 
 .cards {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px
 }
 
@@ -627,6 +650,7 @@ async function buyReward(level, rewardId) {
 }
 
 .btn--candy {
+  min-width: 130px;
   background: #F6A623;
   color: #fff;
   border: none;
@@ -650,28 +674,8 @@ async function buyReward(level, rewardId) {
   box-shadow: 0 5px #388E3C;
 }
 
-.btn--repeat:hover {
-  background: #66BB6A;
-  box-shadow: 0 5px #388E3C;
-}
-
-.btn--candy:not(.btn--repeat):hover {
-  background: #e7a336;
-  box-shadow: 0 5px #d79224;
-}
-
 .clickable {
   cursor: pointer;
-}
-
-.clickable:hover {
-  text-decoration: underline;
-  color: #3453a9;
-}
-
-.clickable:focus {
-  outline: 3px solid #9B8CFF;
-  border-radius: 6px;
 }
 
 .event-closed {
@@ -703,28 +707,84 @@ async function buyReward(level, rewardId) {
   color: #c7d1e6;
 }
 
+.mobile-back-btn {
+  display: none;
+}
+
 @media (max-width: 767px) {
   .achv-layout {
+    display: block;
     padding: 15px;
-    gap: 12px;
+    position: relative;
+  }
+
+  .achv-sidebar {
+    width: 100%;
+    min-width: 0;
+    margin-bottom: 20px;
+    z-index: 10;
+  }
+
+  .achv-panel {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: url('/images/backgoundSnow.webp') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+    border-radius: 0;
+    padding: 20px;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-left: none;
+  }
+
+  .achv-panel.is-mobile-visible {
+    transform: translateX(0);
+  }
+
+  .mobile-back-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: 2px solid #ffffff;
+    background:  #ee7430;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 12px;
+    padding: 8px 16px;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 20px;
+    cursor: pointer;
   }
 }
 
 @media (max-width: 1023px) {
   .quest {
     flex-direction: column;
+    align-items: center;
   }
   .quest__meta {
     flex-direction: column;
     align-items: stretch;
   }
   .quest__inner {
-    justify-content: start;
+    justify-content: center;
     margin-bottom: 10px;
   }
   .quest__title {
     font-size: 18px;
     margin-bottom: 15px;
+    text-align: center;
   }
   .panel__title {
     font-size: 26px;
@@ -744,6 +804,30 @@ async function buyReward(level, rewardId) {
 @media (min-width: 1024px) {
   .btn--home:hover {
     background: #e7a336;
+  }
+  .clickable:hover {
+    text-decoration: underline;
+    color: #3453a9;
+  }
+
+  .clickable:focus {
+    outline: 3px solid #9B8CFF;
+    border-radius: 6px;
+  }
+  .btn--repeat:hover {
+    background: #66BB6A;
+    box-shadow: 0 5px #388E3C;
+  }
+
+  .btn--candy:not(.btn--repeat):hover {
+    background: #e7a336;
+    box-shadow: 0 5px #d79224;
+  }
+}
+
+@media (max-width: 480px) {
+  .prize-card {
+    width: 100%;
   }
 }
 </style>
