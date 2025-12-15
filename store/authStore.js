@@ -12,7 +12,7 @@ import {
     sendPasswordResetEmail,
     sendEmailVerification,
     signInWithPopup,
-    reauthenticateWithPopup, GoogleAuthProvider
+    reauthenticateWithPopup, GoogleAuthProvider, fetchSignInMethodsForEmail
 } from 'firebase/auth';
 import {doc, setDoc, getDoc, getFirestore, updateDoc, deleteDoc, serverTimestamp, writeBatch} from 'firebase/firestore';
 import {userlangStore} from "./learningStore.js";
@@ -209,10 +209,21 @@ export const userAuthStore = defineStore('auth', () => {
     }
 
     const registerUser = async (userData) => {
-        const userCredential = await createUserWithEmailAndPassword(auth, userData.email, userData.password)
+        const authInstance = getAuth()
+        const methods = await fetchSignInMethodsForEmail(authInstance, userData.email)
+        if (methods.length > 0) {
+            throw { code: 'auth/email-already-in-use' }
+        }
+
+        const userCredential = await createUserWithEmailAndPassword(
+            authInstance,
+            userData.email,
+            userData.password
+        )
+
         const user = userCredential.user
 
-        await updateProfile(user, {displayName: userData.name})
+        await updateProfile(user, { displayName: userData.name })
         await sendEmailVerification(user)
 
         const userDocRef = doc(db, 'users', user.uid)
@@ -242,8 +253,10 @@ export const userAuthStore = defineStore('auth', () => {
             providerId: user.providerData[0]?.providerId || '',
             ...data,
         })
+
         await checkFeedbackSurveyEligibility()
     }
+
 
     const setHasSeenOnboarding = async (value = true) => {
         const authInstance = getAuth()

@@ -45,7 +45,7 @@
               <div v-if="resetSent" class="auth__success">{{ t('errors.resetSent') }}</div>
             </div>
             <div class="auth__actions">
-              <button @click.prevent="handleSubmit" class="auth__submit">
+              <button @click.prevent="handleSubmit" class="auth__submit" :disabled="submitLoading">
                 {{
                   mode === 'login' ? t('auth.logIn') : mode === 'register' ? t('auth.regs') :
                       t('auth.resetBtn')
@@ -88,6 +88,7 @@ const emits = defineEmits(['close-auth-form'])
 const authStore = userAuthStore()
 const mode = ref('login')
 const resetSent = ref(false)
+const submitLoading = ref(false)
 const isAuthed = computed(() => !!authStore.uid)
 
 const toggleTransform = computed(() => {
@@ -190,9 +191,12 @@ function validateFields(values) {
 }
 
 const handleSubmit = async () => {
-  const values = Object.fromEntries(fields.value.map(field => [field.name, field.value]))
-  if (!validateFields(values)) return
+  if (submitLoading.value) return
+  submitLoading.value = true
   try {
+    const values = Object.fromEntries(fields.value.map(field => [field.name, field.value]))
+    if (!validateFields(values)) return
+
     if (mode.value === 'reset') {
       await authStore.resetPassword(values.email)
       resetSent.value = true
@@ -202,30 +206,23 @@ const handleSubmit = async () => {
       }, 2500)
       return
     }
+
     if (mode.value === 'register') {
-      await authStore.registerUser({
-        name: values.name,
-        email: values.email,
-        password: values.password
-      })
+      await authStore.registerUser({ name: values.name, email: values.email, password: values.password })
       emits('close-auth-form')
-      fields.value.forEach(field => field.value = '')
+      fields.value.forEach(f => f.value = '')
       return
-      // router.push('/authUs     er')
-    } else {
-      await authStore.loginUser({
-        email: values.email,
-        password: values.password
-      })
-      emits('close-auth-form')
-      router.push('/')
     }
 
+    await authStore.loginUser({ email: values.email, password: values.password })
+    emits('close-auth-form')
+    router.push('/')
     fields.value.forEach(f => f.value = '')
   } catch (e) {
-    console.log(e)
     fields.value.forEach(f => f.error = '')
     mapErrors(fields.value, e.code)
+  } finally {
+    submitLoading.value = false
   }
 }
 
