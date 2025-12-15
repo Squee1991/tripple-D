@@ -803,13 +803,13 @@ onBeforeUnmount(() => {
   font-weight: 600;
   padding: 0.8rem 1rem;
   font-size: 1rem;
-  border-radius: 16px;
+  border-radius: 12px;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
   background-color: #f1c40f;
   color: #1e1e1e;
-  border: 3px solid #1e1e1e;
-  box-shadow: 4px 4px 0px #1e1e1e;
+  border: 2px solid #1e1e1e;
+  box-shadow: 2px 2px 0px #1e1e1e;
 }
 
 .burger-button {
@@ -1090,13 +1090,9 @@ onBeforeUnmount(() => {
 
   .btn-login:hover {
     transform: translate(2px, 2px);
-    box-shadow: 2px 2px 0px #1e1e1e;
+    box-shadow: 0 0 0 ;
   }
 
-  .btn-login:hover {
-    transform: translate(2px, 2px);
-    box-shadow: 2px 2px 0px #1e1e1e;
-  }
 }
 
 </style>
