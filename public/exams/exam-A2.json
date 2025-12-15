@@ -40,9 +40,10 @@
       "type": "multiple-choice",
       "task": {
         "text": "Peter schreibt: Ich habe meine Prüfung bestanden! Jetzt beginnt mein Praktikum.",
-        "question": "Peter hat die Prüfung nicht geschafft.",
-        "options": ["Richtig", "Falsch"],
-        "answer": "Falsch"
+        "question": "In welcher Situation ist Peter jetzt?",
+        "options": ["Er macht ein Praktikum", "Er bereitet sich auf die Prüfung vor", "Er sucht eine Arbeit"
+        ],
+        "answer": "Er macht ein Praktikum"
       }
     },
     {
@@ -50,13 +51,78 @@
       "title": "Lesen",
       "type": "multiple-choice",
       "task": {
-        "text": "Kursinformation: Deutschkurs B1 beginnt am 15. Oktober. Anmeldung bis 10. Oktober.",
-        "question": "Kann man sich am 12. Oktober noch anmelden?",
-        "options": ["Ja", "Nein"],
-        "answer": "Nein"
+        "text": "Kursinformation:\nDeutschkurs B1 beginnt am 15. Oktober. Anmeldung bis 10. Oktober.",
+        "question": "Was muss eine Person tun, wenn sie den Kurs besuchen möchte?",
+        "options": ["Sich bis zum 10. Oktober anmelden", "Sich am 15. Oktober anmelden", "Nach Kursbeginn anrufen"
+        ],
+        "answer": "Sich bis zum 10. Oktober anmelden"
       }
     },
-
+    {
+      "id": "lesen-6",
+      "title": "Lesen",
+      "type": "multiple-choice",
+      "task": {
+        "text": "E-Mail:\nDer Termin ist am Montag um 10 Uhr im Büro.",
+        "question": "Was stimmt?",
+        "options": ["Der Termin ist am Vormittag", "Der Termin ist am Nachmittag", "Der Termin ist am Abend"
+        ],
+        "answer": "Der Termin ist am Vormittag"
+      }
+    },
+    {
+      "id": "lesen-7",
+      "title": "Lesen",
+      "type": "multiple-choice",
+      "task": {
+        "text": "Nachricht:\nIch bin gestern zu Hause geblieben, weil ich krank war.",
+        "question": "Was stimmt?",
+        "options": ["Die Person war krank", "Die Person hatte Besuch", "Die Person war verreist"
+        ],
+        "answer": "Die Person war krank"
+      }
+    },
+    {
+      "id": "lesen-8",
+      "title": "Lesen",
+      "type": "multiple-choice",
+      "task": {
+        "text": "Paul schreibt:\nIch komme heute später, weil ich länger arbeiten muss.",
+        "question": "Was stimmt?",
+        "options": [
+          "Paul arbeitet heute länger",
+          "Paul hat heute frei",
+          "Paul arbeitet heute nicht"
+        ],
+        "answer": "Paul arbeitet heute länger"
+      }
+    },
+    {
+      "id": "lesen-9",
+      "title": "Lesen",
+      "type": "multiple-choice",
+      "task": {
+        "text": "Hinweis:\nAlle Teilnehmer müssen sich bis Freitag anmelden.",
+        "question": "Was ist wichtig?",
+        "options": [
+          "Man kann sich jederzeit anmelden",
+          "Die Anmeldung ist bis Freitag nötig",
+          "Die Anmeldung ist am Samstag"
+        ],
+        "answer": "Die Anmeldung ist bis Freitag nötig"
+      }
+    },
+    {
+      "id": "lesen-10",
+      "title": "Lesen",
+      "type": "multiple-choice",
+      "task": {
+        "text": "Anna schreibt:\nIch habe letzte Woche meine neue Wohnung gefunden.",
+        "question": "Wann hat Anna die Wohnung gefunden?",
+        "options": ["Diese Woche", "Letzte Woche", "Nächsten Monat"],
+        "answer": "Letzte Woche"
+      }
+    },
     {
       "id": "hoeren-1",
       "title": "Hören",
@@ -106,10 +172,89 @@
       "title": "Hören",
       "type": "audio-choice",
       "task": {
-        "text": "Der Zug nach München hat 30 Minuten Verspätung.",
-        "question": "Wann kommt der Zug?",
-        "options": ["Pünktlich", "Früher", "Später"],
-        "answer": "Später"
+        "text": "Bitte füllen Sie das Formular aus und unterschreiben Sie es.",
+        "question": "Was soll man machen?",
+        "options": [
+          "Das Formular ausfüllen und unterschreiben",
+          "Das Formular ausfüllen",
+          "Das Formular unterschreiben"
+        ],
+        "answer": "Das Formular ausfüllen und unterschreiben"
+      }
+    },
+    {
+      "id": "hoeren-6",
+      "title": "Hören",
+      "type": "audio-choice",
+      "task": {
+        "text": "Ich habe Kopfschmerzen und gehe heute nicht zur Arbeit.",
+        "question": "Wie geht es der Person?",
+        "options": [
+          "Sie fühlt sich nicht gut",
+          "Sie hat heute viel zu tun",
+          "Sie freut sich auf das Wochenende"
+        ],
+        "answer": "Sie fühlt sich nicht sehr gut"
+      }
+    },
+    {
+      "id": "hoeren-7",
+      "title": "Hören",
+      "type": "audio-choice",
+      "task": {
+        "text": "Ich stehe jeden Tag um sechs Uhr auf.",
+        "question": "Was passt dazu?",
+        "options": [
+          "Die Person hat einen frühen Tagesbeginn",
+          "Die Person arbeitet nur am Wochenende",
+          "Die Person schläft jeden Morgen lange"
+        ],
+        "answer": "Die Person hat einen frühen Tagesbeginn"
+      }
+    },
+    {
+      "id": "hoeren-8",
+      "title": "Hören",
+      "type": "audio-choice",
+      "task": {
+        "text": "Der Supermarkt schließt heute um achtzehn Uhr.",
+        "question": "Was kann man sagen?",
+        "options": [
+          "Der Supermarkt schließt am Abend",
+          "Der Supermarkt ist den ganzen Tag zu",
+          "Der Supermarkt öffnet morgen"
+        ],
+        "answer": "Der Supermarkt schließt am Abend"
+      }
+    },
+    {
+      "id": "hoeren-9",
+      "title": "Hören",
+      "type": "audio-choice",
+      "task": {
+        "text": "Heute arbeite ich länger als sonst. Deshalb kann ich am Abend nicht zum Sport gehen.",
+        "question": "Was kann man daraus schließen?",
+        "options": [
+          "Die Person hat heute keine Zeit für Sport",
+          "Die Person geht jeden Abend zum Sport",
+          "Die Person arbeitet nur am Abend"
+        ],
+        "answer": "Die Person hat heute keine Zeit für Sport"
+      }
+    },
+    {
+      "id": "hoeren-10",
+      "title": "Hören",
+      "type": "audio-choice",
+      "task": {
+        "text": "Der Bus fährt heute nicht, deshalb gehe ich zu Fuß zur Arbeit.",
+        "question": "Was bedeutet das für die Person?",
+        "options": [
+          "Sie geht heute zu Fuß zur Arbeit",
+          "Sie bleibt heute zu Hause",
+          "Sie fährt mit dem Auto"
+        ],
+        "answer": "Sie geht heute zu Fuß zur Arbeit"
       }
     },
     {

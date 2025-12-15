@@ -57,6 +57,61 @@
         }
       },
       {
+        "id": "lesen-6",
+        "title": "Lesen",
+        "type": "multiple-choice",
+        "task": {
+          "text": "Bäckerei Schmidt\nSonntag geschlossen",
+          "question": "Die Bäckerei ist am Sonntag offen.",
+          "options": ["Richtig", "Falsch"],
+          "answer": "Falsch"
+        }
+      },
+      {
+        "id": "lesen-7",
+        "title": "Lesen",
+        "type": "multiple-choice",
+        "task": {
+          "text": "Tom schreibt: Ich arbeite heute bis 18 Uhr.",
+          "question": "Tom arbeitet heute bis 18 Uhr.",
+          "options": ["Richtig", "Falsch"],
+          "answer": "Richtig"
+        }
+      },
+      {
+        "id": "lesen-8",
+        "title": "Lesen",
+        "type": "multiple-choice",
+        "task": {
+          "text": "Arztpraxis Dr. Weber\nMontag–Freitag 9–12 Uhr",
+          "question": "Am Samstag ist die Praxis geöffnet.",
+          "options": ["Richtig", "Falsch"],
+          "answer": "Falsch"
+        }
+      },
+      {
+        "id": "lesen-9",
+        "title": "Lesen",
+        "type": "multiple-choice",
+        "task": {
+          "text": "Heute Regen. Temperatur: 12 Grad.",
+          "question": "Heute ist das Wetter warm und sonnig.",
+          "options": ["Richtig", "Falsch"],
+          "answer": "Falsch"
+        }
+      },
+      {
+        "id": "lesen-10",
+        "title": "Lesen",
+        "type": "multiple-choice",
+        "task": {
+          "text": "Buslinie 5\nAbfahrt um 7:30 Uhr",
+          "question": "Der Bus fährt um halb acht.",
+          "options": ["Richtig", "Falsch"],
+          "answer": "Richtig"
+        }
+      },
+      {
         "id": "hoeren-1",
         "title": "Hören",
         "type": "audio-choice",
@@ -111,7 +166,61 @@
           "answer": "Schläft lange"
         }
       },
-
+      {
+        "id": "hoeren-6",
+        "title": "Hören",
+        "type": "audio-choice",
+        "task": {
+          "text": "Ich gehe heute einkaufen. Ich brauche Brot und Milch.",
+          "question": "Was braucht die Person?",
+          "options": ["Brot und Milch", "Kaffee und Kuchen", "Obst und Gemüse"],
+          "answer": "Brot und Milch"
+        }
+      },
+      {
+        "id": "hoeren-7",
+        "title": "Hören",
+        "type": "audio-choice",
+        "task": {
+          "text": "Der Termin ist morgen um neun Uhr.",
+          "question": "Wann ist der Termin?",
+          "options": ["Heute um 9 Uhr", "Morgen um 9 Uhr", "Morgen um 19 Uhr"],
+          "answer": "Morgen um 9 Uhr"
+        }
+      },
+      {
+        "id": "hoeren-8",
+        "title": "Hören",
+        "type": "audio-choice",
+        "task": {
+          "text": "Ich fahre mit dem Bus zur Arbeit.",
+          "question": "Wie fährt die Person zur Arbeit?",
+          "options": ["Mit dem Auto", "Mit dem Bus", "Zu Fuß"],
+          "answer": "Mit dem Bus"
+        }
+      },
+      {
+        "id": "hoeren-9",
+        "title": "Hören",
+        "type": "audio-choice",
+        "task": {
+          "text": "Heute Abend bleibe ich zu Hause und sehe fern.",
+          "question": "Was macht die Person heute Abend?",
+          "options": ["Sie geht ins Kino", "Sie arbeitet", "Sie bleibt zu Hause"],
+          "answer": "Sie bleibt zu Hause"
+        }
+      },
+      {
+        "id": "hoeren-10",
+        "title": "Hören",
+        "type": "audio-choice",
+        "task": {
+          "text": "Ich habe morgen frei. Ich habe keine Arbeit.",
+          "question": "Was ist morgen?",
+          "options": ["Ein Arbeitstag", "Ein freier Tag", "Ein Schultag"],
+          "answer": "Ein freier Tag"
+        }
+      },
       {
         "id": "schreiben-1",
         "title": "Schreiben",
