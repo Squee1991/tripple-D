@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="sidebar">
-      <button @click="backToMenu" class="btn__back">{{ t('trainerPage.toMain') }}</button>
+      <VBackBtn/>
       <h2 class="sidebar__title">{{ t('verbTypesPage.types') }}</h2>
       <div class="sidebar__heading">{{ t('verbTypesPage.category') }}</div>
       <ul class="sidebar__list">
@@ -89,6 +89,7 @@
 </template>
 <script setup>
 import {ref, computed, onMounted, onUnmounted, watch, nextTick} from 'vue';
+import VBackBtn from "../../src/components/V-back-btn.vue";
 import {useRouter} from 'vue-router';
 import Lottie from 'lottie-web';
 import TipIcon from '../../assets/animation/info.json';
@@ -591,6 +592,7 @@ watch(currentTopicData, initLottieIcon);
 
 .practice-area__button {
   display: block;
+  min-width: 230px;
   text-decoration: none;
   background: #f1c40f;
   color: #1e1e1e;
@@ -723,24 +725,6 @@ watch(currentTopicData, initLottieIcon);
   background: #f8f9fa;
   border-radius: 8px;
   border-left: 4px solid #60a5fa;
-}
-
-.btn__back {
-  display: block;
-  text-align: center;
-  width: 100%;
-  font-weight: 600;
-  padding: 0.8rem;
-  margin-bottom: 2rem;
-  font-size: 1.2rem;
-  border-radius: 12px;
-  cursor: pointer;
-  background-color: #f1c40f;
-  color: #1e1e1e;
-  text-decoration: none;
-  border: 3px solid #1e1e1e;
-  box-shadow: 4px 4px 0px #1e1e1e;
-  transition: background-color 0.2s;
 }
 
 .btn__close {

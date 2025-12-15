@@ -27,9 +27,9 @@
             </svg>
             <span>{{ t('wordDuel.btnBack') }}</span>
           </button>
-          <div class="header-section">
-            <h1 class="page-title">{{ t('wordDuel.title') }}</h1>
-          </div>
+          <!--                    <div class="header-section">-->
+          <!--                        <h1 class="page-title">{{ t('wordDuel.title') }}</h1>-->
+          <!--                    </div>-->
           <div class="tiips__info-wrapper">
             <button class="btn__tips" @click="tipsModule">
               <img class="tipps__icon" src="../assets/images/Tipps.svg" alt="Tips Icon">
@@ -57,18 +57,17 @@
           </div>
           <div class="mode-toggle-slider" :style="{ transform: sliderTransform }"></div>
         </div>
-        <p class="page-subtitle">{{ t('wordDuel.subTitle') }}</p>
+        <!--                <p class="page-subtitle">{{ t('wordDuel.subTitle') }}</p>-->
 
         <div class="main-content-wrapper">
           <div class="level-grid">
             <button
                 v-for="level in levels"
                 :key="level"
-                @click="handleFindGameClick(level)"
-                class="level-card"
-                :disabled="(mode === 'online' && gameStore.isSearching) || isLoading"
-            >
-              <h2 class="card-level-title">{{ t('wordDuel.level') }} {{ level }}</h2>
+                @click="selectLevel(level)" class="level-card"
+                :class="{ 'level-card--selected': selectedLevel === level }">
+              <h2 class="card-level-title">{{ level }}</h2>
+<!--              <h2 class="card-level-title">{{ t('wordDuel.level') }} {{ level }}</h2>-->
             </button>
           </div>
 
@@ -90,6 +89,15 @@
                 <span class="stat-value">{{ levelStats.cleanSweeps }}</span>
               </div>
             </div>
+
+            <button
+                @click="startGame"
+                class="start-game-button"
+                :disabled="(mode === 'online' && gameStore.isSearching) || isLoading"
+            >
+              Начать игру ({{ selectedLevel }})
+            </button>
+
             <p class="stats-hint">Нажми на уровень, чтобы увидеть статистику по нему.</p>
           </div>
         </div>
@@ -107,7 +115,9 @@
     </div>
   </div>
 </template>
+
 <script setup>
+
 import {ref, computed, watch, onMounted, onUnmounted} from 'vue'
 import {useSentencesStore} from '../store/sentencesStore.js'
 import {useDuelStore} from '../store/sentenceDuelStore.js'
@@ -161,6 +171,7 @@ const overlayData = ref({
   text: "wordDuel.rulesText",
   subtext: "wordDuel.subText"
 })
+
 const openModal = () => {
   showDevModal.value = true
 }
@@ -192,8 +203,13 @@ function goBack() {
   gameStore.cancelSearch()
 }
 
-async function handleFindGameClick(level) {
+function selectLevel(level) {
   selectedLevel.value = level
+}
+
+
+async function startGame() {
+  const level = selectedLevel.value
 
   if (!authStore.uid) {
     showAuthModal.value = true
@@ -247,6 +263,7 @@ watch(() => gameStore.sessionData?.status, async (s) => {
 </script>
 
 <style scoped>
+
 .mode-toggle-wrapper {
   width: 320px;
   display: flex;
@@ -317,22 +334,25 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   justify-content: space-between;
   align-items: center;
   padding: 0 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .back-button-global {
   border: none;
   display: flex;
   align-items: center;
-  border: 3px solid #1e1e1e;
+  border: 2px solid #1e1e1e;
   padding: 15px;
   background: #4ade80;
   border-radius: 16px;
   cursor: pointer;
-  color: #1e1e1e;
+  color: white;
   font-size: 1.2rem;
   font-weight: 400;
   font-family: "Nunito", sans-serif;
-  box-shadow: 4px 4px 0px #1e1e1e;
+  box-shadow: 2px 2px 0px #1e1e1e;
   transition: all 0.1s ease-in-out;
 }
 
@@ -349,7 +369,7 @@ watch(() => gameStore.sessionData?.status, async (s) => {
 .back-button-global svg {
   width: 24px;
   height: 24px;
-  fill: #3A3A3A;
+  fill: white;
 }
 
 .lobby-container {
@@ -358,13 +378,13 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   min-height: 100vh
 }
 
-.page-title {
-  font-size: 2.3rem;
-  font-weight: 800;
-  color: var(--titleColor);
-  text-align: center;
-  max-width: 500px;
-}
+/*.page-title {*/
+/*    font-size: 2.3rem;*/
+/*    font-weight: 800;*/
+/*    color: var(--titleColor);*/
+/*    text-align: center;*/
+/*    max-width: 500px;*/
+/*}*/
 
 .page-subtitle {
   text-align: center;
@@ -375,10 +395,9 @@ watch(() => gameStore.sessionData?.status, async (s) => {
 }
 
 .level-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .header-section {
@@ -389,7 +408,7 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   background-color: white;
   border: 3px solid #1e1e1e;
   border-radius: 20px;
-  padding: 25px;
+  padding: 15px;
   text-align: left;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
@@ -405,13 +424,15 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   box-shadow: 6px 6px 0px #1e1e1e;
 }
 
-.level-card:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
 .level-card {
   border-color: #1e1e1e;
+}
+
+.level-card.level-card--selected {
+  background-color: #FFD24B;
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 2px 2px 0px #1e1e1e;
+  min-width: 120px;
 }
 
 .card-level-title {
@@ -473,13 +494,10 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   transform: translateY(-2px);
 }
 
-/* --- ДОБАВЛЕННЫЕ И ОБНОВЛЕННЫЕ СТИЛИ --- */
 
 .main-content-wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center; /* Центрируем по горизонтали */
-  gap: 40px;
+  gap: 20px;
   max-width: 1200px;
   margin: 40px auto 0;
 }
@@ -489,8 +507,8 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   background-color: #fff;
   border: 3px solid #1e1e1e;
   border-radius: 20px;
-  padding: 25px;
-  box-shadow: 8px 8px 0 #1e1e1e;
+  padding: 10px;
+  box-shadow: 4px 4px 0 #1e1e1e;
   top: 20px;
   width: 100%;
 
@@ -550,15 +568,49 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   color: #4ade80;
 }
 
+/* ИЗМЕНЕНИЕ: Добавлены стили для кнопки "Начать игру" */
+.start-game-button {
+  width: 100%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #1e1e1e;
+  padding: 18px 15px;
+  background: #4ade80; /* Зеленая, как кнопка "Назад" */
+  border-radius: 16px;
+  cursor: pointer;
+  color: #1e1e1e;
+  font-size: 1.4rem;
+  font-weight: 800;
+  font-family: "Nunito", sans-serif;
+  box-shadow: 4px 4px 0px #1e1e1e;
+  transition: all 0.1s ease-in-out;
+  margin: 25px 0 15px; /* Отступы */
+}
+
+.start-game-button:hover:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #1e1e1e;
+}
+
+.start-game-button:disabled {
+  background-color: #ccc;
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+
 .stats-hint {
   text-align: center;
   font-size: 0.9rem;
   color: #777;
-  margin-top: 25px;
+  margin-top: 10px; /* Уменьшен отступ, т.к. кнопка добавила свой */
   margin-bottom: 0;
 }
 
-
+/* ... (все @media запросы остаются без изменений) ... */
 @media (max-width: 1024px) {
   .page-title {
     font-size: 1.2rem;
@@ -570,12 +622,11 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   }
 
   .main-content-wrapper {
-    grid-template-columns: 1fr; /* Статистика под блоками уровней */
+    /* grid-template-columns: 1fr; <-- это свойство было убрано, т.к. flex-direction column уже используется */
   }
 
   .stats-block {
-    position: static; /* Отключаем "липкость" */
-    margin-top: 20px;
+    position: static;
   }
 }
 
@@ -611,5 +662,27 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   .level-card {
     box-shadow: 2px 2px 2px #1e1e1e;
   }
+
+  .level-card.level-card--selected {
+    box-shadow: 2px 2px 0px #1e1e1e;
+    transform: none;
+  }
+
+  .level-card:hover:not(:disabled) {
+    box-shadow: 2px 2px 0px #1e1e1e;
+    transform: none;
+  }
+
+  .start-game-button {
+    font-size: 1.2rem;
+    padding: 15px;
+    box-shadow: 2px 2px 0px #1e1e1e;
+  }
+
+  .start-game-button:hover:not(:disabled) {
+    transform: none;
+    box-shadow: 2px 2px 0px #1e1e1e;
+  }
 }
+
 </style>

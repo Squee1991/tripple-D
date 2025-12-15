@@ -11,18 +11,15 @@
       <ul v-if="langStore" class="points-card__list">
         <li class="points-card__item">
           <div class="points-card__label">{{ t('accountPanel.articles') }}</div>
-          <button :title="hoverTitle.title" v-if="userAuth.uid" @click="openArticleModal" class="articlus__wrapper">
+          <button id="articlus" :title="hoverTitle.title" v-if="userAuth.uid" @click="openArticleModal" class="articlus__wrapper">
             <img class="articlus__icon" src="../../assets/images/articlus.png" alt="Articlus_icon">
             <span class="points-card__value">{{ langStore.points }}</span>
           </button>
         </li>
-
         <li class="points-card__item">
           <span class="points-card__label">{{ t('accountPanel.level') }}</span>
-          <span :title="hoverTitle.level" class="points-card__badge">{{ langStore.isLeveling }}</span>
+          <span id="level" :title="hoverTitle.level" class="points-card__badge">{{ langStore.isLeveling }}</span>
         </li>
-
-        <!-- прогресс тоже li -->
         <li class="points-card__item points-card__progress">
           <div class="progress_exp-bar">
             <div class="progress__bar" :style="{ width: `${(langStore.exp / 100) * 100}%` }"></div>
@@ -31,33 +28,32 @@
         </li>
       </ul>
       <ul v-if="langStore" class="points-card__list">
-        <li v-for="section in sections" :key="section.key" class="ranked__wrapper">
-          <div class="ranked__inner">
+        <li v-for="section in sections" :key="section.id" :id="section.id" class="ranked__wrapper">
+          <NuxtLink :to="section.route" class="ranked__inner">
             <div class="ranked__title-icon">
-              <img class="points-card__title-icon" :src="section.icon" :alt="`${section.key}_icon`" />
+              <img class="points-card__title-icon" :src="section.icon" :alt="`${section.key}_icon`"/>
               <div class="ranked__title">{{ section.title }}</div>
             </div>
-            <button @click="pathTo(section.route)" class="stats__btn">
-              <img class="stat__icon" src="../../assets/images/dailyIcons/arrow-to.svg" alt="Arrow_icon" />
-            </button>
-          </div>
+            <img class="stat__icon" src="../../assets/images/dailyIcons/arrow-to.svg" alt="Arrow_icon"/>
+          </NuxtLink>
         </li>
       </ul>
-<!--      <div v-if="userAuth.isPremium" class="sub-actions">-->
-<!--        <article class="super-card">-->
-<!--          <div>-->
-<!--            <span class="super-card__badge">{{ t('accountPanel.premium') }}</span>-->
-<!--          </div>-->
-<!--          <p class="sub__text">{{ t('accountPanel.premDescription') }}</p>-->
-<!--          <button @click="toPayment" class="super-card__cta">-->
-<!--            {{ t('accountPanel.try') }}-->
-<!--          </button>-->
-<!--        </article>-->
-<!--      </div>-->
+      <!--      <div v-if="userAuth.isPremium" class="sub-actions">-->
+      <!--        <article class="super-card">-->
+      <!--          <div>-->
+      <!--            <span class="super-card__badge">{{ t('accountPanel.premium') }}</span>-->
+      <!--          </div>-->
+      <!--          <p class="sub__text">{{ t('accountPanel.premDescription') }}</p>-->
+      <!--          <button @click="toPayment" class="super-card__cta">-->
+      <!--            {{ t('accountPanel.try') }}-->
+      <!--          </button>-->
+      <!--        </article>-->
+      <!--      </div>-->
     </section>
   </div>
 </template>
 <script setup>
+import Snow from '../../assets/images/shovel.svg'
 import VTips from "~/src/components/V-tips.vue";
 import {userlangStore} from "~/store/learningStore.js";
 import {userAuthStore} from '../../store/authStore.js'
@@ -87,15 +83,17 @@ const hoverTitle = {
   level: t('hoverTitle.level')
 }
 const sections = ref([
-  {key: "stats", icon: Graph, alt: 'Graph', title: t('accountPanel.stats'), route: "/statistics"},
-  {key: "achievement", icon: AchPanelIcon, alt: 'AchPanel', title: t('accountPanel.achievement'), route: "/achievements"},
-  {key: "ranked", icon: RankedIcon, alt: 'Ranked', title: t('accountPanel.ranked'), route: "/leaderboard"},
-  {key: "calendar", icon: Calendar, alt: 'Ranked', title: t('accountPanel.eventCalendar'), route: "/calendar" },
+  {id: "stats", icon: Graph, alt: 'Graph', title: t('accountPanel.stats'), route: "/statistics"},
+  {
+    id: "achievement",
+    icon: AchPanelIcon,
+    alt: 'AchPanel',
+    title: t('accountPanel.achievement'),
+    route: "/achievements"
+  },
+  {id: "ranked", icon: RankedIcon, alt: 'Ranked', title: t('accountPanel.ranked'), route: "/leaderboard"},
+  {id: "calendar", icon: Calendar, alt: 'Ranked', title: t('accountPanel.eventCalendar'), route: "/calendar"},
 ])
-
-const pathTo = (route) => {
-  router.push(route)
-}
 
 const toPayment = () => {
   router.push('/pay')
@@ -121,7 +119,7 @@ onMounted(() => {
 <style scoped>
 
 .points-card__title-icon {
-  width: 50px;
+  width: 45px;
 }
 
 .ranked__title-icon {
@@ -130,21 +128,33 @@ onMounted(() => {
 }
 
 .ranked__inner {
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
-  padding-bottom: 15px;
-  border-bottom: 2px dashed var(--border);
+  padding: 3px 5px;
+  box-shadow: 2px 2px 0 black;
+  transition: .2s;
+  background: white;
 }
 
 .ranked__wrapper:last-child .ranked__inner {
   margin-bottom: 0;
-  border-bottom: none;
+}
+
+@media (min-width: 1024px) {
+  .ranked__inner:hover {
+    box-shadow: 0 0 0;
+    transform: translate(1px , 1px);
+    transition: .2s;
+  }
 }
 
 .ranked__title {
-  color: var(--titleColor);
+  color: #1c1b1b;
   font-size: 21px;
   margin-left: 8px;
   font-weight: 600;
@@ -152,6 +162,7 @@ onMounted(() => {
 
 .points__title {
   color: var(--titleColor);
+  -webkit-text-stroke : 1px var(--titleColor);
 }
 
 .stat__icon {
@@ -183,16 +194,16 @@ onMounted(() => {
 
 .articlus__wrapper {
   display: flex;
-  border: 2px solid black;
+  border:2px solid black;
+  box-shadow: 2px 2px 0 black;
   justify-content: center;
   align-items: center;
-
   border-radius: 10px;
   padding: 1px 0.7rem;
   height: 40px;
   background: white;
-  box-shadow: 3px 3px 0 black;
 }
+
 
 .articlus__icon {
   width: 30px;
@@ -207,17 +218,19 @@ onMounted(() => {
 
 .points-card {
   color: #111;
-  border: 4px solid var(--border);
+  border: 3px solid var(--border);
   border-radius: 20px;
   box-shadow: 2px 2px 0 var(--border);
   padding: 18px;
   width: 100%;
   margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
 }
 
 .progress_exp-bar {
   width: 100%;
-  height: 20px;
+  height: 25px;
   background: #e8eae5;
   border-radius: 10px;
   position: relative;
@@ -232,10 +245,15 @@ onMounted(() => {
 
 .points-card__header {
   margin-bottom: 12px;
+  position: relative;
+  z-index: 1;
 }
 
 .points-card__list {
   margin-bottom: 10px;
+  padding: 3px 0;
+  position: relative;
+  z-index: 1;
 }
 
 .points-card__item {
@@ -308,9 +326,11 @@ onMounted(() => {
   .points-card {
     padding: 14px;
   }
+
   .points-card__value {
     font-size: 16px;
   }
+
   .ranked__title {
     font-size: 18px;
   }

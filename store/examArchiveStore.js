@@ -35,9 +35,9 @@ export const useExamArchiveStore = defineStore("examArchive", () => {
 				limit(max)
 			)
 			const snap = await getDocs(q)
-			attempts.value = snap.docs.map(d => ({ id: d.id, ...d.data() }))
-		} catch (e) {
-			attemptsError.value = e?.message || "Не удалось загрузить архив"
+			attempts.value = snap.docs.map(document => ({ id: document.id, ...document.data() }))
+		} catch (error) {
+			attemptsError.value = error?.message || "Не удалось загрузить архив"
 		} finally {
 			attemptsLoading.value = false
 		}
@@ -52,8 +52,8 @@ export const useExamArchiveStore = defineStore("examArchive", () => {
 			const snap = await getDoc(dref)
 			if (!snap.exists()) throw new Error("Документ не найден")
 			currentAttempt.value = { id: snap.id, ...snap.data() }
-		} catch (e) {
-			currentAttemptError.value = e?.message || "Не удалось загрузить результат"
+		} catch (error) {
+			currentAttemptError.value = error?.message || "Не удалось загрузить результат"
 		} finally {
 			currentAttemptLoading.value = false
 		}

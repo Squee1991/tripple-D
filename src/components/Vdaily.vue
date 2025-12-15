@@ -104,7 +104,7 @@ onUnmounted(() => {
 .daily {
   width: 100%;
   flex-grow: 1;
-  border: 4px solid var(--border);
+  border: 3px solid var(--border);
   border-radius: 16px;
   padding: 16px;
   color: var(--titleColor);
@@ -117,12 +117,15 @@ onUnmounted(() => {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 12px;
+  position: relative;
+  z-index: 1;
 }
 
 .qd__title {
   font-size: 22px;
   font-weight: 800;
   color: var(--titleColor);
+
 }
 
 .qd__right {
@@ -161,6 +164,8 @@ onUnmounted(() => {
   border-radius: 14px;
   padding: 0 10px;
   box-shadow: 4px 4px 0 #273041;
+  position: relative;
+  z-index: 1;
 }
 
 .qd__body {

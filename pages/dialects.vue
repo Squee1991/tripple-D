@@ -1,20 +1,14 @@
 <template>
   <div class="word-search-container">
     <h2>Словарь диалекта</h2>
-
     <div v-if="loading" class="status-message">
       <p>Загрузка словаря...</p>
     </div>
-
     <div v-else-if="error" class="status-message error">
       <p>Ошибка при загрузке данных: {{ error }}</p>
-      <p>Убедитесь, что файл (напр. `dictionary.json`) находится в `public/dialects/`.</p>
     </div>
-
     <div v-else-if="allEntries.length > 0" class="search-content">
-      <p>Введите букву (для поиска по началу слова) или слово (для поиска по вхождению) на <strong>Высоком Немецком
-        (DE)</strong>.</p>
-
+      <p>Введите букву (для поиска по началу слова) или слово (для поиска по слову) на <strong>Немецком языке</strong>.</p>
       <input
           v-model="searchQuery"
           type="text"
@@ -22,7 +16,6 @@
           class="search-input"
           @keydown.esc="closeUsage"
       />
-
       <div v-if="filteredResults.length > 0" class="results-container">
         <h3>Результаты ({{ filteredResults.length }}):</h3>
         <ul>
@@ -43,7 +36,6 @@
                 <img src="../assets/images/question.svg" alt="usage icon"/>
               </button>
             </div>
-
             <ul class="translations">
               <li v-if="item.at"><strong>AT (Австрия):</strong>{{ item.at }}</li>
               <li v-if="item.by"><strong>BY (Бавария):</strong> {{ item.by }}</li>
@@ -52,7 +44,6 @@
           </li>
         </ul>
       </div>
-
       <div v-else-if="searchQuery && filteredResults.length === 0" class="no-results">
         <p>По вашему запросу '{{ searchQuery }}' ничего не найдено.</p>
       </div>
@@ -85,12 +76,10 @@
               <strong>{{ key.toUpperCase() }}:</strong> {{ val }}
             </li>
           </ul>
-
           <p v-if="!currentItemUsage || (isObject(currentItemUsage) && Object.keys(currentItemUsage).length === 0)">
             Для этого слова пока нет дополнительного описания.
           </p>
         </div>
-
         <div class="modal-footer">
           <button class="btn" @click="closeUsage">Ок</button>
         </div>
@@ -101,6 +90,7 @@
 
 <script setup>
 import {ref, computed, onMounted} from 'vue';
+import {useSeoMeta} from "#imports";
 const allEntries = ref([]);
 const searchQuery = ref('');
 const loading = ref(true);
@@ -108,6 +98,10 @@ const error = ref(null);
 
 const isUsageOpen = ref(false);
 const currentItem = ref(null);
+
+useSeoMeta({
+  robots: 'noindex, nofollow'
+})
 
 function isObject(v) {
   return Object.prototype.toString.call(v) === '[object Object]';

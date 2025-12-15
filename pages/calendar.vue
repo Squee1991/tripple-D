@@ -8,17 +8,17 @@
     <div class="layout">
       <div class="area__info">
         <div class="legend" aria-label="info">
-          <div class="legend__wrappper">
+          <div class="legend__wrapper">
             <div class="legend__title-wrap">
               <h2 class="legend__title">{{ t('calendarInfo.pointsTitle')}}</h2>
             </div>
             <ul class="legend__list">
-              <li v-for="ev in legendList" :key="ev.id" class="legend__item">
-                <span class="legend__icon-wrap" :class="'legend__icon-wrap--' + ev.typeId">
-                   <img :src="ev.icon" :alt="ev.alt || ev.title" class="legend__icon"/>
+              <li v-for="event in legendList" :key="event.id" class="legend__item">
+                <span class="legend__icon-wrap" :class="'legend__icon-wrap--' + event.typeId">
+                   <img :src="event.icon" :alt="event.alt || event.title" class="legend__icon"/>
                     </span>
-                <div class="legend__meta"><strong class="legend__name">{{ ev.title }}</strong><small
-                    class="legend__period">{{ humanizePeriod(ev.start, ev.end) }}</small>
+                <div class="legend__meta"><strong class="legend__name">{{ event.title }}</strong><small
+                    class="legend__period">{{ humanizePeriod(event.start, event.end) }}</small>
                 </div>
               </li>
             </ul>
@@ -35,7 +35,7 @@
           <div class="calendar__weekdays">
             <div v-for="weekday in weekdayNames" :key="weekday" class="calendar__weekday">{{ weekday }}</div>
           </div>
-          <div class="calendar__grid" role="grid" aria-label="Календарная сетка">
+          <div class="calendar__grid" role="grid" aria-label="Calendar grid">
             <div
                 v-for="day in calendarDays"
                 :key="day.key"
@@ -72,16 +72,22 @@
 <script setup>
 import {computed, ref} from 'vue'
 import {useRouter} from 'vue-router'
-
 import HalloweenIcon from '../../assets/images/calendar-icons/halloweenIcon.svg'
 import ChristmasIcon from '../../assets/images/calendar-icons/christmas-wreath.svg'
 import FoolDay from '../../assets/images/calendar-icons/FoolDay.svg'
 import Bees from '../../assets/images/calendar-icons/bees.svg'
 
+definePageMeta({
+  robots: {
+    index: false,
+    follow: false
+  }
+})
+
 const { t} = useI18n()
 const router = useRouter()
 const goBack = () => {
-    router.push('/')
+  router.push('/')
 }
 const monthNames = [
   t('calendarMonths.january'),
@@ -114,7 +120,7 @@ const annualEvents = ref([
     alt: 'ChristmasIcon',
     title: t('eventsNavNames.winter'),
     typeId: 'winter',
-    start: '12-24 00:00',
+    start: '12-18 00:00',
     end: '01-02 23:59'
   },
   {
@@ -146,8 +152,8 @@ const annualEvents = ref([
   },
 ])
 
-const legendList = computed(() => annualEvents.value.map(e => ({
-  id: e.id, title: e.title, typeId: e.typeId, icon: e.icon, alt: e.alt, start: e.start, end: e.end
+const legendList = computed(() => annualEvents.value.map(event => ({
+  id: event.id, title: event.title, typeId: event.typeId, icon: event.icon, alt: event.alt, start: event.start, end: event.end
 })))
 
 const now = new Date()
@@ -170,111 +176,113 @@ function isSameYMD(left, right) {
 }
 
 function startOfDay(dateObj) {
-  const d = new Date(dateObj);
-  d.setHours(0, 0, 0, 0);
-  return d
+  const date = new Date(dateObj);
+  date.setHours(0, 0, 0, 0);
+  return date
 }
 
 function endOfDay(dateObj) {
-  const d = new Date(dateObj);
-  d.setHours(23, 59, 59, 999);
-  return d
+  const date = new Date(dateObj);
+  date.setHours(23, 59, 59, 999);
+  return date
 }
 
-function materializeAnnualEventForYear(eventItem, year) {
-  const startThisYear = parseAnnualToDate(eventItem.start, year)
-  const [startMonthStr] = eventItem.start.split(' ')
-  const [endMonthStr] = eventItem.end.split(' ')
-  const startMonth = parseInt(startMonthStr.split('-')[0], 10)
-  const endMonth = parseInt(endMonthStr.split('-')[0], 10)
-  let endYear = year
-  if (startMonth === 12 && endMonth === 1) endYear = year + 1
-  const endForYear = parseAnnualToDate(eventItem.end, endYear)
-  return {
-    id: eventItem.id,
-    title: eventItem.title,
-    typeId: eventItem.typeId,
-    icon: eventItem.icon || null,
-    alt: eventItem.alt || '',
-    startDate: startThisYear,
-    endDate: endForYear
-  }
-}
-
-function resolveEventBadgeForDay(dateObj) {
-  const year = dateObj.getFullYear()
-  const candidates = []
-  for (const eventItem of annualEvents.value) {
-    const cur = materializeAnnualEventForYear(eventItem, year)
-    candidates.push(cur)
-    const prev = materializeAnnualEventForYear(eventItem, year - 1)
-    if (prev.endDate.getFullYear() === year && prev.endDate.getMonth() === 0) {
-      candidates.push(prev)
+  function materializeAnnualEventForYear(eventItem, year) {
+    const startThisYear = parseAnnualToDate(eventItem.start, year)
+    const [startMonthStr] = eventItem.start.split(' ')
+    const [endMonthStr] = eventItem.end.split(' ')
+    const startMonth = parseInt(startMonthStr.split('-')[0], 10)
+    const endMonth = parseInt(endMonthStr.split('-')[0], 10)
+    let endYear = year
+    if (startMonth === 12 && endMonth === 1) endYear = year + 1
+    const endForYear = parseAnnualToDate(eventItem.end, endYear)
+    return {
+      id: eventItem.id,
+      title: eventItem.title,
+      typeId: eventItem.typeId,
+      icon: eventItem.icon || null,
+      alt: eventItem.alt || '',
+      startDate: startThisYear,
+      endDate: endForYear
     }
   }
-  const match = candidates.find(evt => dateObj >= startOfDay(evt.startDate) && dateObj <= endOfDay(evt.endDate))
-  if (!match) return null
-  const isStart = isSameYMD(dateObj, match.startDate)
-  const isEnd = isSameYMD(dateObj, match.endDate)
-  const label = (isStart || isEnd) ? match.title : match.title
-  return {
-    id: match.id,
-    title: match.title,
-    typeId: match.typeId,
-    label,
-    status: isStart ? 'start' : isEnd ? 'end' : 'inside',
-    icon: match.icon || null,
-    alt: match.alt || ''
+
+  function resolveEventBadgeForDay(dateObj) {
+    const year = dateObj.getFullYear()
+    const candidates = []
+    for (const eventItem of annualEvents.value) {
+      const cur = materializeAnnualEventForYear(eventItem, year)
+      candidates.push(cur)
+      const prev = materializeAnnualEventForYear(eventItem, year - 1)
+      if (prev.endDate.getFullYear() === year && prev.endDate.getMonth() === 0) {
+        candidates.push(prev)
+      }
+    }
+    const match = candidates.find(evt => dateObj >= startOfDay(evt.startDate) && dateObj <= endOfDay(evt.endDate))
+    if (!match) return null
+    const isStart = isSameYMD(dateObj, match.startDate)
+    const isEnd = isSameYMD(dateObj, match.endDate)
+    const label = (isStart || isEnd) ? match.title : match.title
+    return {
+      id: match.id,
+      title: match.title,
+      typeId: match.typeId,
+      label,
+      status: isStart ? 'start' : isEnd ? 'end' : 'inside',
+      icon: match.icon || null,
+      alt: match.alt || ''
+    }
   }
-}
 
-const calendarDays = computed(() => {
-  const firstOfMonth = createDate(currentYear.value, currentMonth.value, 1)
-  let weekdayIndex = firstOfMonth.getDay();
-  if (weekdayIndex === 0) weekdayIndex = 7
-  const daysFromPrev = weekdayIndex - 1
-  const startGridDate = createDate(currentYear.value, currentMonth.value, 1 - daysFromPrev)
+  const calendarDays = computed(() => {
+    const firstOfMonth = createDate(currentYear.value, currentMonth.value, 1)
+    let weekdayIndex = firstOfMonth.getDay();
+    if (weekdayIndex === 0) weekdayIndex = 7
+    const daysFromPrev = weekdayIndex - 1
+    const startGridDate = createDate(currentYear.value, currentMonth.value, 1 - daysFromPrev)
 
-  const days = []
-  for (let index = 0; index < 42; index += 1) {
-    const cellDate = createDate(startGridDate.getFullYear(), startGridDate.getMonth(), startGridDate.getDate() + index)
-    const isInCurrentMonth = cellDate.getMonth() === currentMonth.value && cellDate.getFullYear() === currentYear.value
-    const isToday = isSameYMD(cellDate, new Date())
-    const eventBadge = resolveEventBadgeForDay(cellDate)
-    days.push({key: cellDate.toISOString().slice(0, 10), dateObj: cellDate, isInCurrentMonth, isToday, eventBadge})
+    const days = []
+    for (let index = 0; index < 42; index += 1) {
+      const cellDate = createDate(startGridDate.getFullYear(), startGridDate.getMonth(), startGridDate.getDate() + index)
+      const isInCurrentMonth = cellDate.getMonth() === currentMonth.value && cellDate.getFullYear() === currentYear.value
+      const isToday = isSameYMD(cellDate, new Date())
+      const eventBadge = resolveEventBadgeForDay(cellDate)
+      days.push({key: cellDate.toISOString().slice(0, 10), dateObj: cellDate, isInCurrentMonth, isToday, eventBadge})
+    }
+    return days
+  })
+
+  function goToPreviousMonth() {
+    if (currentMonth.value === 0) {
+      currentMonth.value = 11;
+      currentYear.value -= 1
+    } else {
+      currentMonth.value -= 1
+    }
   }
-  return days
-})
 
-function goToPreviousMonth() {
-  if (currentMonth.value === 0) {
-    currentMonth.value = 11;
-    currentYear.value -= 1
-  } else {
-    currentMonth.value -= 1
+  function goToNextMonth() {
+    if (currentMonth.value === 11) {
+      currentMonth.value = 0;
+      currentYear.value += 1
+    } else {
+      currentMonth.value += 1
+    }
   }
-}
 
-function goToNextMonth() {
-  if (currentMonth.value === 11) {
-    currentMonth.value = 0;
-    currentYear.value += 1
-  } else {
-    currentMonth.value += 1
+  function dayAria(day) {
+    const d = day.dateObj
+    const base = `${d.getDate()} ${monthNames[d.getMonth()]} ${d.getFullYear()}`
+    return day.eventBadge ? `${base}. Событие: ${day.eventBadge.title}` : base
   }
-}
 
-function dayAria(day) {
-  const d = day.dateObj
-  const base = `${d.getDate()} ${monthNames[d.getMonth()]} ${d.getFullYear()}`
-  return day.eventBadge ? `${base}. Событие: ${day.eventBadge.title}` : base
-}
+  function humanizePeriod(start, end) {
+    const [sm, sd] = start.split(' ')[0].split('-')
+    const [em, ed] = end.split(' ')[0].split('-')
+    return `${sd}.${sm} — ${ed}.${em}`
+  }
 
-function humanizePeriod(start, end) {
-  const [sm, sd] = start.split(' ')[0].split('-')
-  const [em, ed] = end.split(' ')[0].split('-')
-  return `${sd}.${sm} — ${ed}.${em}`
-}
+
 </script>
 
 <style scoped>
@@ -284,8 +292,8 @@ function humanizePeriod(start, end) {
   --cta: #ff6ea6;
 }
 
-.legend__wrappper {
-  padding: 15px;
+.legend__wrapper {
+  padding:  0 15px 15px 15px ;
 }
 
 .page {

@@ -39,6 +39,7 @@
     "stripe": "18.3.0",
     "three": "0.176.0",
     "turn.js": "1.0.5",
+    "v-onboarding": "^2.9.0",
     "vue": "latest",
     "vue-router": "latest",
     "vuedraggable": "4.1.0",

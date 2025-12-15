@@ -1,5 +1,10 @@
 <script setup>
 import { ref } from 'vue'
+import {useSeoMeta} from "#imports";
+
+useSeoMeta({
+  robots: 'noindex, nofollow'
+})
 
 const input = ref('')
 const messages = ref([])

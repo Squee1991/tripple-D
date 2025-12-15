@@ -30,12 +30,10 @@
                     </div>
                     <div class="quest__lives" v-if="!previouslyCleared">
                         <div class="quest__hearts">
-      <span
-              v-for="life in questStore.maxLives"
-              :key="life"
-              class="quest__heart"
-              :class="{ 'quest__heart--lost': life > questStore.lives }"
-      >❤️</span>
+                          <span v-for="life in questStore.maxLives"
+                                :key="life" class="quest__heart"
+                                :class="{ 'quest__heart--lost': life > questStore.lives }"
+                          >❤️</span>
                         </div>
                     </div>
                 </div>
@@ -65,35 +63,62 @@
                                 </li>
                             </ul>
                         </template>
-                        <template v-else-if="questStore.task.type === 'input'">
-                            <input
-                                    type="text"
-                                    class="quest__input"
-                                    v-model="questStore.userInput"
-                                    :disabled="questStore.showResult"
-                                    @keyup.enter="handleClick"
-                                    placeholder="Введите ответ..."
-                            />
-                        </template>
-                        <template v-else-if="questStore.task.type === 'speechToText'">
-                            <div class="quest__speech">
-                                <SoundBtn :text="questStore.task.text"/>
-                                <input
-                                        type="text"
-                                        class="quest__input"
-                                        v-model="questStore.userInput"
-                                        :disabled="questStore.showResult"
-                                        @keyup.enter="handleClick"
-                                        placeholder="Напишите услышанное..."
-                                />
-                            </div>
-                        </template>
+                      <template v-else-if="questStore.task.type === 'input'">
+                        <div class="quest__speech">
+                          <input
+                              ref="inputRef"
+                              type="text"
+                              class="quest__input"
+                              v-model="questStore.userInput"
+                              :disabled="questStore.showResult"
+                              @keyup.enter="handleClick"
+                              placeholder="Введите ответ...(знаки препинания не обязательны)"
+                          />
+
+                          <div v-if="shouldShowGermanLetters" class="german__letters">
+                            <button
+                                v-for="(letter, index) in germanLetters"
+                                :key="index"
+                                type="button"
+                                class="german__letters-item"
+                                :disabled="questStore.showResult"
+                                @click="addGermanLetter(letter)"
+                            >
+                              {{ letter }}
+                            </button>
+                          </div>
+                        </div>
+                      </template>
+
+                      <template v-else-if="questStore.task.type === 'speechToText'">
+                        <div class="quest__speech">
+                          <SoundBtn :text="questStore.task.text"/>
+                          <input
+                              ref="speechInputRef"
+                              type="text"
+                              class="quest__input"
+                              v-model="questStore.userInput"
+                              :disabled="questStore.showResult"
+                              @keyup.enter="handleClick"
+                              placeholder="Напишите услышанное...(знаки препинания не обязательны)"
+                          />
+                          <div v-if="shouldShowGermanLetters" class="german__letters">
+                            <button
+                                v-for="(letter, index) in germanLetters"
+                                :key="index"
+                                type="button"
+                                class="german__letters-item"
+                                :disabled="questStore.showResult"
+                                @click="addGermanLetter(letter)"
+                            >
+                              {{ letter }}
+                            </button>
+                          </div>
+                        </div>
+                      </template>
                         <template v-else-if="questStore.task.type === 'reorder'">
                             <div class="quest__reorder">
-                                <div
-                                        class="quest__reorder-selection"
-                                        :class="{ 'quest__reorder-selection--empty': questStore.reorderSelection.length === 0 }"
-                                >
+                                <div class="quest__reorder-selection" :class="{ 'quest__reorder-selection--empty': questStore.reorderSelection.length === 0 }">
                                     <button
                                             v-for="(word, index) in questStore.reorderSelection"
                                             :key="`${word}-${index}`"
@@ -229,9 +254,44 @@ const wallet = computed(() => Number(langStore.points || 0))
 const canBuyLife = computed(() => wallet.value >= PRICE)
 const isSpeaking = ref(false)
 const learningLanguage = computed(() => langStore.learningLang)
-const TARGET_LANG_CODE = 'de' // Мы хотим озвучивать, только если это немецкий
+const TARGET_LANG_CODE = 'de'
+const speechInputRef = ref(null)
+const germanLetters = ['ä', 'ö', 'ü', 'Ä', 'Ö', 'Ü', 'ß'];
+const inputRef = ref(null)
 
-// Функция для озвучивания текста
+
+
+const shouldShowGermanLetters = computed(() => {
+  if (!questStore.task) return false
+  if (!['speechToText', 'input'].includes(questStore.task.type)) return false
+
+  const source = String(
+      questStore.task.answer ||
+      questStore.task.correctAnswer ||
+      questStore.task.text ||
+      ''
+  )
+  return /[äöüÄÖÜß]/.test(source)
+})
+
+function addGermanLetter(letter) {
+  if (questStore.showResult) return
+  const inputEl = questStore.task?.type === 'input' ? inputRef.value : speechInputRef.value
+  const current = String(questStore.userInput || '')
+  if (!inputEl) {
+    questStore.userInput = current + letter
+    return
+  }
+  const start = inputEl.selectionStart ?? current.length
+  const end = inputEl.selectionEnd ?? current.length
+  questStore.userInput = current.slice(0, start) + letter + current.slice(end)
+  nextTick(() => {
+    inputEl.focus()
+    const pos = start + 1
+    inputEl.setSelectionRange(pos, pos)
+  })
+}
+
 async function speakText(text) {
     if (isSpeaking.value || !text) return;
 
@@ -246,27 +306,19 @@ async function speakText(text) {
 }
 
 function handleWordBankClick(wordKey) {
-    // 1. Проверяем, что выбран язык обучения "Немецкий"
     if (learningLanguage.value === TARGET_LANG_CODE) {
-        const textToSpeakRaw = wordKey; // <-- Используем НЕОБРАБОТАННЫЙ ключ
+        const textToSpeakRaw = wordKey;
         if (textToSpeakRaw.length > 0) {
-            // Озвучиваем слово
             speakText(textToSpeakRaw);
         }
     }
-
-    // 2. Выполняем основное действие: перемещаем слово из банка в выбор
     questStore.handleReorderWord(wordKey, 'bank');
 }
 
-// ✅ НОВАЯ ФУНКЦИЯ: Обработчик клика по кнопке
 function handleOptionClick(opt) {
-    // 1. Выполняем первое действие: выбираем ответ
     questStore.choose(opt);
-
-    // 2. Проверяем, что выбран язык обучения "Немецкий"
     if (learningLanguage.value === TARGET_LANG_CODE) {
-        const textToSpeakRaw = opt; // <-- Используем НЕОБРАБОТАННЫЙ ключ
+        const textToSpeakRaw = opt;
         if (textToSpeakRaw.length > 2 && !textToSpeakRaw.includes('.')) {
             speakText(textToSpeakRaw);
         }
@@ -290,7 +342,6 @@ const highlightedQuestion = computed(() => {
             return t(questStore.task.question);
         }
     } catch (e) {
-        // // Если t() выбрасывает ошибку, возвращаем исходный текст
         // return questStore.task.question;
     }
 
@@ -741,7 +792,7 @@ watchEffect(() => {
     color: #1e1e1e;
     border: 3px solid #1e1e1e;
     border-radius: 16px;
-    box-shadow: 4px 4px 0 #1e1e1e;
+    box-shadow: 2px 2px 0 #1e1e1e;
     cursor: pointer;
     transition: all .1s ease-in-out;
 }
@@ -897,6 +948,30 @@ watchEffect(() => {
     backdrop-filter: blur(2px);
 }
 
+.german__letters {
+  display: flex;
+  gap: 5px;
+  margin: 8px 0;
+  justify-content: center;
+}
+
+.german__letters-item {
+  padding: 8px;
+  background: #84d3d0;
+  box-shadow: 2px 2px 0 black;
+  color: white;
+  border: 2px solid #757474;
+  font-size: 20px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  border-radius: 7px;
+}
+
+.german__letters-item:active {
+  box-shadow: 0 0 0 ;
+  transform: translate(1px , 1px);
+}
+
 .modal__window {
     position: relative;
     width: min(440px, 92%);
@@ -996,7 +1071,6 @@ watchEffect(() => {
         margin-top: 2.5rem;
     }
 
-    /* Сердечки — в правом верхнем углу */
     .quest__lives {
         order: 1;
         position: absolute;
@@ -1020,7 +1094,6 @@ watchEffect(() => {
         gap: 0.3rem;
     }
 
-    /* Немного расстояния между прогрессом и вопросом */
     .quest__section {
         margin-top: 1rem;
     }
@@ -1061,7 +1134,6 @@ watchEffect(() => {
         font-size: 15px;
         box-shadow: 3px 3px 0 black;
         border: 2px solid black;
-        width: 50%;
         padding: 5px;
     }
 

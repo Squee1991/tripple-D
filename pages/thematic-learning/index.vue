@@ -16,22 +16,26 @@ import Clock from '../../assets/images/clock.svg'
 import { useHead, useSeoMeta } from '#imports'
 const canonical = useCanonical()
 const {t} = useI18n()
-const pageTitle = t('metaThematic.title')
-const pageDesc  = t('metaThematic.description')
+// const pageTitle = t('metaThematic.title')
+// const pageDesc  = t('metaThematic.description')
+//
+// useHead({
+//   title: pageTitle,
+//   link: [{ rel: 'canonical', href: canonical }]
+// })
+// useSeoMeta({
+//   title: pageTitle,
+//   description: pageDesc,
+//   ogTitle: pageTitle,
+//   ogDescription: pageDesc,
+//   ogType: 'article',
+//   ogUrl: canonical,
+//   ogImage: '/images/seo-thematic-levels.png',
+//   robots: 'index, follow'
+// })
 
-useHead({
-  title: pageTitle,
-  link: [{ rel: 'canonical', href: canonical }]
-})
 useSeoMeta({
-  title: pageTitle,
-  description: pageDesc,
-  ogTitle: pageTitle,
-  ogDescription: pageDesc,
-  ogType: 'article',
-  ogUrl: canonical,
-  ogImage: '/images/seo-thematic-levels.png',
-  robots: 'index, follow'
+  robots: 'noindex, nofollow'
 })
 
 const router = useRouter()

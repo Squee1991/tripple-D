@@ -1,27 +1,26 @@
 <template>
   <footer class="footer" role="contentinfo">
     <div class="footer__container">
-      <!-- Социальные сети -->
       <div class="footer__social">
         <div class="social__item" @click="toDiscord" role="button" aria-label="Discord" tabindex="0">
           <div class="icon">
-            <svg enable-background="new 0 0 24 24" height="28" viewBox="0 0 24 24" width="28"
-                 xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-              <g fill="white">
+            <svg enable-background="new 0 0 24 24" height="32" viewBox="0 0 24 24" width="32"
+                 xmlns="http://www.w3.org/2000/svg" fill="black">
+              <g>
                 <path
                     d="m3.58 21.196h14.259l-.681-2.205c.101.088 5.842 5.009 5.842 5.009v-21.525c-.068-1.338-1.22-2.475-2.648-2.475l-16.767.003c-1.427 0-2.585 1.139-2.585 2.477v16.24c0 1.411 1.156 2.476 2.58 2.476zm10.548-15.513-.033.012.012-.012zm-7.631 1.269c1.833-1.334 3.532-1.27 3.532-1.27l.137.135c-2.243.535-3.26 1.537-3.26 1.537.104-.022 4.633-2.635 10.121.066 0 0-1.019-.937-3.124-1.537l.186-.183c.291.001 1.831.055 3.479 1.26 0 0 1.844 3.15 1.844 7.02-.061-.074-1.144 1.666-3.931 1.726 0 0-.472-.534-.808-1 1.63-.468 2.24-1.404 2.24-1.404-3.173 1.998-5.954 1.686-9.281.336-.031 0-.045-.014-.061-.03v-.006c-.016-.015-.03-.03-.061-.03h-.06c-.204-.134-.34-.2-.34-.2s.609.936 2.174 1.404c-.411.469-.818 1.002-.818 1.002-2.786-.066-3.802-1.806-3.802-1.806 0-3.876 1.833-7.02 1.833-7.02z"/>
                 <path
                     d="m14.308 12.771c.711 0 1.29-.6 1.29-1.34 0-.735-.576-1.335-1.29-1.335v.003c-.708 0-1.288.598-1.29 1.338 0 .734.579 1.334 1.29 1.334z"/>
                 <path
-                    d="m9.69 12.771c.711 0 1.29-.6 1.29-1.34 0-.735-.575-1.335-1.286-1.335l-.004.003c-.711 0-1.29.598-1.29 1.338 0 .734.579 1.334 1.29 1.334z"/>
+                    d="m9.69 12.771c.711 0 1.29-.6 1.29-1.34 0-.735-.575-1.335-1.286-1.335l-.004.003c-.711 0-1.29.598-1.29 1.338 0 .734.579 1.334 1.29 1.334z" fill=""/>
               </g>
             </svg>
           </div>
-          <span>discord</span>
+          <span>Discord</span>
         </div>
-        <a href="https://t.me/" target="_blank" rel="noopener" class="social__item" aria-label="Telegram">
+        <a href="https://t.me/skillupgerman1" target="_blank" rel="noopener" class="social__item" aria-label="Telegram">
           <div class="icon">
-            <svg height="28" viewBox="0 0 176 176" width="28" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+            <svg height="32" viewBox="0 0 176 176" width="32" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
               <g data-name="Layer 2">
                 <g id="telegram">
                   <path fill="white"
@@ -32,16 +31,26 @@
               </g>
             </svg>
           </div>
-          <span>telegram</span>
+          <span>Telegram</span>
         </a>
-        <a href="https://www.tiktok.com" target="_blank" rel="noopener" class="social__item" aria-label="TikTok">
+        <a href="https://www.tiktok.com/@skillupgerman6?_r=1&_t=ZN-91no3OWZ9U6" target="_blank" rel="noopener" class="social__item" aria-label="TikTok">
           <div class="icon">
-            <svg height="28" viewBox="0 0 256 256" width="28" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+            <svg height="32" viewBox="0 0 256 256" width="32" xmlns="http://www.w3.org/2000/svg" >
               <path fill="currentColor"
                   d="M180.3 72.4c-9.7-5.8-16.7-15.1-19.5-26.1v-3.6h-23.4v110.4c0 12.9-10.5 23.4-23.4 23.4S90.6 166 90.6 153.1s10.5-23.4 23.4-23.4c2.1 0 4.3.3 6.3.8V104c-2.1-.2-4.2-.3-6.3-.3-25.6 0-46.3 20.8-46.3 46.3S88.4 196.3 114 196.3s46.3-20.8 46.3-46.3v-54.9c8.9 6.5 19.5 10.7 30.9 11.8v-23.4c-4.1-.5-8.1-1.7-11.9-3.5z"/>
             </svg>
           </div>
-          <span>tiktok</span>
+          <span>TikTok</span>
+        </a>
+        <a href="https://www.instagram.com/skillupgerman?igsh=OWQxbmtvaHk3bTR1&utm_source=qr" target="_blank" rel="noopener" class="social__item" aria-label="TikTok">
+          <div class="icon">
+            <svg height="32" viewBox="0 0 512 512" width="32" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+              <path d="m301 256c0 24.851562-20.148438 45-45 45s-45-20.148438-45-45 20.148438-45 45-45 45 20.148438 45 45zm0 0"/>
+              <path d="m332 120h-152c-33.085938 0-60 26.914062-60 60v152c0 33.085938 26.914062 60 60 60h152c33.085938 0 60-26.914062 60-60v-152c0-33.085938-26.914062-60-60-60zm-76 211c-41.355469 0-75-33.644531-75-75s33.644531-75 75-75 75 33.644531 75 75-33.644531 75-75 75zm86-146c-8.285156 0-15-6.714844-15-15s6.714844-15 15-15 15 6.714844 15 15-6.714844 15-15 15zm0 0"/>
+              <path d="m377 0h-242c-74.4375 0-135 60.5625-135 135v242c0 74.4375 60.5625 135 135 135h242c74.4375 0 135-60.5625 135-135v-242c0-74.4375-60.5625-135-135-135zm45 332c0 49.625-40.375 90-90 90h-152c-49.625 0-90-40.375-90-90v-152c0-49.625 40.375-90 90-90h152c49.625 0 90 40.375 90 90zm0 0"/>
+            </svg>
+          </div>
+          <span>Instagram</span>
         </a>
       </div>
       <nav class="footer__nav" aria-label="Footer navigation">
@@ -142,7 +151,7 @@ const toDiscord = () => {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: black;
+  color: #0f7aaf;
 }
 
 svg {

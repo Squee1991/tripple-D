@@ -1,4 +1,126 @@
 {
+  "eventsModal": {
+    "halloweenLabel": "Festival de Calabazas",
+    "halloweenText": "¡Recoge calabazas, completa misiones y obtén recompensas temáticas!",
+    "winterLabel": "Susurro del Invierno",
+    "winterText": "¡Participa en el evento de invierno! Recoge copos de nieve, abre regalos.",
+    "valentineLabel": "Festival de Corazones",
+    "valentineText": "¡Participa en el evento romántico y consigue recompensas exclusivas!",
+    "jokeLabel": "Desfile de Bromas",
+    "jokeText": "¡Diviértete, recoge bonificaciones y participa en desafíos cómicos!"
+  },
+  "winterEventQuests": {
+    "quest-21": "Tesoro de palabras",
+    "quest-1": "Espíritu de la Navidad",
+    "quest-2": "Tradiciones y símbolos",
+    "quest-3": "San Nicolás y personajes",
+    "quest-4": "La magia del Adviento",
+    "quest-5": "El arte de regalar",
+    "quest-6": "Navidad",
+    "quest-7": "Días festivos",
+    "quest-8": "La leyenda de Silvestre",
+    "quest-9": "Bosque encantado",
+    "quest-10": "Vacaciones de invierno",
+    "quest-11": "Símbolos",
+    "quest-12": "Tradiciones",
+    "quest-13": "Costumbres",
+    "quest-14": "Creencias y mitos",
+    "quest-15": "Objetos y ocio invernal",
+    "quest-16": "Invierno y Año Nuevo",
+    "quest-17": "Navidad",
+    "quest-18": "Preparación",
+    "quest-19": "Nochevieja",
+    "quest-20": "Fiesta alemana"
+  },
+  "winterEvent": {
+    "pathMain": "Inicio",
+    "event": "Evento",
+    "panel": "Panel del evento",
+    "reputation": "Reputación",
+    "currency": "Moneda",
+    "shop": "Tienda de reputación",
+    "bought": "Comprado",
+    "notAllowed": "No disponible",
+    "notEnough": "Insuficiente",
+    "buy": "Comprar",
+    "questions": "Misiones",
+    "rep": "rep.",
+    "repeat": "Repetir",
+    "execute": "Realizar",
+    "notAllowedTitle": "Evento no disponible",
+    "notAllowedText": "Este evento aún no ha comenzado o ya ha terminado.",
+    "eventShop": "Tienda del evento",
+    "eventQuestions": "Misiones del evento",
+    "firstReputation": "Confianza Nevada",
+    "secondReputation": "Respeto Invernal"
+  },
+  "winterEventShopItems": {
+    "santaHat": "Gorro de Santa",
+    "christmasBall": "Bola de nieve",
+    "christmasWreath": "Corona de Navidad",
+    "snowFall": "Efecto de nevada"
+  },
+  "winterAchievements": {
+    "firstQuestName": "Primera estrella del árbol",
+    "firstQuestDescription": "Completa cualquier misión del evento de invierno y enciende la primera estrella.",
+    "santaLexiconName": "Léxico de Papá Noel",
+    "santaLexiconDescription": "Domina todas las palabras relacionadas con la Navidad y el Año Nuevo.",
+    "everyQuestName": "Guardián del susurro de invierno",
+    "everyQuestDescription": "Completa todas las misiones del evento «Susurro de invierno» y siente el aliento de una verdadera ventisca.",
+    "snowFallName": "Nevada",
+    "snowFallDescription": "Compra el efecto de nevada durante el evento «Susurro de invierno».",
+    "santaHatName": "Gorro de Papá Noel",
+    "santaHatDescription": "Compra el legendario gorro de Papá Noel durante el evento y siente el espíritu navideño.",
+    "christmasBallName": "Bola de nieve",
+    "christmasBallDescription": "Compra esta bola de nieve mágica para capturar un momento de invierno.",
+    "christmasWreathName": "Corona de Navidad",
+    "christmasWreathDescription": "Compra una corona tradicional, símbolo de las fiestas y del calor del hogar.",
+    "winterHonorName": "Honor de invierno",
+    "winterHonorDescription": "Gana honor de invierno completando misiones en el evento «Susurro de invierno».",
+    "metaChristmasName": "Maestro de la Navidad",
+    "metaChristmasDescription": "Desbloquea todos los logros del evento «Susurro de invierno» y conviértete en una leyenda de la temporada festiva."
+  },
+  "stepHitSettings": {
+    "back": "Atrás",
+    "further": "Siguiente",
+    "end": "Finalizar",
+    "skip": "Saltar"
+  },
+  "stepHitLabels": {
+    "learnTitle": "Aprendizaje",
+    "learnDescription": "Gramática, frases, artículos, tiempos y práctica — todo para mejorar tu alemán con confianza.",
+    "duelTitle": "Juegos",
+    "duelDescription": "Duelos, maratones, modo adivina la palabra, diario de tareas y práctica en formato de juego.",
+    "testTitle": "Pruebas",
+    "testDescription": "Comprueba tu nivel de A1 a B2: gramática, escritura, comprensión auditiva y expresión oral.",
+    "eventTitle": "Eventos",
+    "eventDescription": "Tareas de temporada, colecciones de palabras y desafíos temporales con recompensas.",
+    "articleTitle": "Articlus",
+    "articleDescription": "Tu moneda interna para aprender. Gana Articlus por respuestas correctas y úsalos para intentos extra.",
+    "levelTitle": "Nivel",
+    "levelDescription": "Aquí se muestra tu nivel actual. Aprende, completa tareas y sube de nivel paso a paso.",
+    "statsTitle": "Estadísticas",
+    "statsDescription": "Estadísticas generales de aprendizaje: tareas, artículos, tierras lingüísticas y temas.",
+    "achievementsTitle": "Logros",
+    "achievementsDescription": "Aquí se recogen tus logros por actividad y tareas.",
+    "rankedTitle": "Clasificación",
+    "rankedDescription": "Aquí puedes ver la clasificación de jugadores: quién acertó más palabras y quién va primero.",
+    "calendarTitle": "Calendario de eventos",
+    "calendarDescription": "Aquí se muestran los eventos por fecha para que no pierdas recompensas."
+  },
+  "recipes": {
+    "start": "Comenzar tarea",
+    "training": "Ir al entrenamiento",
+    "did": "Ya completaste esta tarea. Cargando la siguiente...",
+    "timer": "La siguiente tarea estará disponible en",
+    "didAll": "Has completado todo en este tema",
+    "notFound": "no encontrado",
+    "error": "Ups, no puedo encontrar las recetas",
+    "repeat": "Intento por 10 Artiklus"
+  },
+  "practiceArticleBtn": {
+    "btn": "A la práctica de artículos"
+  },
   "footer": {
     "copy": "Der Die Das. Todos los derechos reservados.",
     "about": "Acerca de",
@@ -6,7 +128,7 @@
     "privacy": "Política de privacidad",
     "terms": "Términos de servicio"
   },
-  "friendExam": {
+  "friendExamBtn": {
     "btn": "Exámenes de amigos"
   },
   "regions": {
@@ -67,7 +189,7 @@
     "profile": "Perfil"
   },
   "metaAdjectiveBasic": {
-    "title": "German Corner — Adjetivos A1–A2: colores, sentimientos, apariencia, carácter, tamaño",
+    "title": "Skillupgerman — Adjetivos A1–A2: colores, sentimientos, apariencia, carácter, tamaño",
     "description": "Aprende adjetivos básicos en alemán por temas: colores, sentimientos y emociones, apariencia, carácter, tamaño y forma. Ejemplos con traducción y audio + ejercicios."
   },
   "metaAdjectiveComparison": {
@@ -90,7 +212,7 @@
     "testsLevels": "Tests de alemán — niveles"
   },
   "metaLocation": {
-    "title": "German Corner — Tierras lingüísticas para aprender alemán",
+    "title": "Skillupgerman — Tierras lingüísticas para aprender alemán",
     "description": "Explora las tierras lingüísticas y mejora tu alemán completando misiones y subiendo de nivel. Aprende vocabulario y gramática en formato de aventura con progresión tipo juego."
   },
   "metaModalVerbs": {
@@ -131,7 +253,7 @@
   },
   "metaMainPage": {
     "title": "Aprende alemán jugando",
-    "description": "German Corner. Entrenamientos lúdicos de artículos der, die, das, niveles temáticos, verbos, adjetivos, preposiciones, misiones y logros. ¡Aprende alemán con diversión!"
+    "description": "Skillupgerman - entrenamientos lúdicos de artículos der, die, das, niveles temáticos, verbos, adjetivos, preposiciones, misiones y logros. ¡Aprende alemán con diversión!"
   },
   "metaVerbsTheory": {
     "title": "Teoría de los verbos alemanes con ejemplos y quiz",
@@ -159,10 +281,10 @@
     "featureTen": "Funciones futuras"
   },
   "useHeadApp": {
-    "title": "German Corner — Aprende alemán fácilmente y de forma divertida",
-    "content": "German Corner es una plataforma en línea para aprender alemán: gramática, artículos, tiempos verbales, ejercicios y aprendizaje en formato de juego.",
+    "title": "Skillupgerman — Aprende alemán fácilmente y de forma divertida",
+    "content": "Skillupgerman es una plataforma en línea para aprender alemán: gramática, artículos, tiempos verbales, ejercicios y aprendizaje en formato de juego.",
     "contentTwo": "alemán, artículos, gramática, aprender alemán online, A1, A2, B1",
-    "contentThree": "German Corner — Aprendizaje del idioma alemán",
+    "contentThree": "Skillupgerman — Aprendizaje del idioma alemán",
     "contentFour": "¡Aprende alemán de manera divertida y eficaz con ejercicios y juegos!"
   },
   "achievementToast": {
@@ -1335,7 +1457,10 @@
     "allCases": "Rompecabezas de la unidad",
     "fiveHearts": "Escudo de la vida",
     "daily42": "Telescopio galáctico",
-    "iAmGroot": "Maceta con Groot"
+    "iAmGroot": "Maceta con Groot",
+    "santaHat": "Gorro de Santa",
+    "christmasBall": "Bola de Navidad",
+    "christmasWreath": "Corona de Navidad"
   },
   "eastPlainFirstQuests": {
     "title": "Primer encuentro",
@@ -3599,7 +3724,8 @@
   "cabinetToggle": {
     "sound": "Notificaciones de sonido",
     "theme": "Modo oscuro",
-    "ach": "Notificación de logros"
+    "ach": "Notificación de logros",
+    "snowFall": "Nevada"
   },
   "cabinet": {
     "important": "¡IMPORTANTE!",
@@ -3637,7 +3763,12 @@
     "deleteAccBtnReject": "Cancelar",
     "boughtAvatar": "Avatar comprado",
     "notEnoughtArticles": "No tienes suficientes Artículos",
-    "boughtBtn": "Ok"
+    "boughtBtn": "Ok",
+    "notAllow": "Efecto no disponible",
+    "modalNotAllowEffectFirst": "Este efecto solo se puede desbloquear en el evento",
+    "modalNotAllowEffectSecond": "«Susurro de Invierno»",
+    "modalNotAllowEffectThird": "¡Consíguelo en la tienda del evento por copos de nieve!",
+    "modalNotAllowEffectClose": "Cerrar"
   },
   "articleOverlay": {
     "title": "Qué es un Artículo y cómo conseguirlo",
@@ -4250,7 +4381,12 @@
     "adjectives": "Adjetivos",
     "adjectiveBasic": "Fundamentos",
     "adjectiveDeclension": "Declinación",
-    "adjectiveComparison": "Grados de comparación"
+    "adjectiveComparison": "Grados de comparación",
+    "events": "Eventos",
+    "winterEvent": "Una pizca de invierno",
+    "valentineEvent": "Festival de los corazones",
+    "foolDayEvent": "Desfile de la risa",
+    "halloweenEvent": "Fiesta de las calabazas"
   },
   "specialCategory": {
     "specialCollectionText": "Coleccionista",
@@ -4333,7 +4469,7 @@
     "cowabungaText": "¡COWABUNGA!",
     "cowabungaDescription": "¿Salami o pepperoni? Las Tortugas Ninja se lo comerían igual. Aprende «salami» en todos los modos en la práctica de artículos",
     "zooText": "Amigo de los animales",
-    "zooDescription": "¡Un verdadero amigo de todas las criaturas!",
+    "zooDescription": "¡Un verdadero amigo no dejará a nadie sin artículo! Aprende todas las palabras del tema “Animales” en todos los modos de práctica de artículos.",
     "veganText": "Defensor de los vegetales",
     "veganDescription": "¡Ninguna verdura se quedará sin artículo! Aprende todas las palabras sobre verduras del tema «Comida» en todos los modos de práctica de artículos.",
     "firstStepLabel": "Primer paso",
@@ -4366,7 +4502,10 @@
     "magisterText": "Alcanza maestría aprendiendo 100 palabras en todos los modos en la Práctica de artículos",
     "mistakesLabel": "¡Los errores no me detienen!",
     "mistakesText": "¡Cada uno es un paso hacia el conocimiento!",
-    "mistakesAward": "Premio: Talismán de la paciencia"
+    "mistakesAward": "Premio: Talismán de la paciencia",
+    "voiceActivatedText": "Acceso de voz",
+    "voiceActivatedLabel": "Lee y acepta el aviso importante y activa el módulo Sprechen.",
+    "theLostDescription": "La entrada del búnker está oculta a plena vista. Golpea 5 veces el logotipo del sitio para iniciar el protocolo y obtener acceso respondiendo las preguntas"
   },
   "guessCategory": {
     "guessLabel": "Adivinar la palabra",
@@ -4779,7 +4918,7 @@
     "confirm": "repite la contraseña"
   },
   "banner": {
-    "title": "¡Aprende los artículos en alemán, mejora habilidades mágicas y vence en batallas de cartas!",
+    "title": "Practica alemán de forma lúdica cada día. Muchos temas y ejercicios de gramática para un progreso seguro.",
     "btn": "Empezar camino"
   },
   "features": {

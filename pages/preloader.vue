@@ -8,11 +8,7 @@
         <div class="umlaut umlaut-right">•</div>
         <div class="glyph">Ä</div>
       </div>
-
-      <!-- Заголовок -->
-      <h1 class="title">Загружаем немецкий язык…</h1>
-
-      <!-- Меняющаяся фраза (у каждой свой цвет) -->
+      <h1 class="title">Lade die deutsche Sprache…</h1>
       <p
           class="subtitle"
           :key="phraseIndex"
@@ -30,14 +26,13 @@
         </div>
       </div>
       <div class="percent">{{ progress }}%</div>
-
-      <!-- Случайная шпаргалка (одна на запуск) -->
       <p v-if="tip" class="tip">{{ tip.label }} — {{ tip.text }}</p>
     </div>
   </main>
 </template>
 
 <script setup>
+
 import {ref, computed, onMounted, onBeforeUnmount} from 'vue'
 const progress = ref(0)
 let progressTimer = null
@@ -68,7 +63,7 @@ function start() {
   progressTimer = setInterval(() => {
     progress.value = Math.min(100, progress.value + 1)
     if (progress.value >= 100) finish()
-  }, 40)
+  }, 35)
 
   phraseTimer = setInterval(() => {
     phraseIndex.value = (phraseIndex.value + 1) % phraseSet.length
@@ -78,7 +73,6 @@ function start() {
 function finish() {
   clearAll()
   progress.value = 100
-  // тут можно сделать редирект: useRouter().push('/')
 }
 
 function clearAll() {
@@ -95,6 +89,7 @@ onMounted(() => {
 })
 
 onBeforeUnmount(() => clearAll())
+
 </script>
 
 <style scoped>

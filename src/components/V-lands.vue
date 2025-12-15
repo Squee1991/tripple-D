@@ -60,7 +60,6 @@
 <script setup>
 import {ref, computed, onMounted, onBeforeUnmount, watch} from 'vue'
 import {useRouter} from 'vue-router'
-// 1. Убедитесь, что 'regions' импортируется здесь
 import {regions} from '@/utils/regions.js'
 
 const {t, locale} = useI18n()
@@ -68,19 +67,11 @@ const props = defineProps({currentLevel: {type: Number, default: 1}})
 
 const router = useRouter()
 
-// 2. НАЙТИ РЕГИОН ПО УМОЛЧАНИЮ СРАЗУ
-// Я предполагаю, что 'pathTo' для "Восточной равнины" это 'plain' (судя по CSS .theme--plain)
-// Если 'plain' не найдется, он возьмет первый регион из списка как запасной.
 const defaultRegion = regions.find(r => r.pathTo === 'plain') || regions[0] || null
-
-// 3. ИНИЦИАЛИЗИРОВАТЬ 'active' ЭТИМ ЗНАЧЕНИЕМ
-// Вместо ref(null), мы передаем найденный регион
 const active = ref(defaultRegion)
 
 const isPanelOpen = ref(false)
-const windowWidth = ref(1024) // Оставляем начальное значение
-
-// 4. ДОБАВЛЕНА НЕДОСТАЮЩАЯ ФУНКЦИЯ
+const windowWidth = ref(1024)
 function handleResize() {
   if (typeof window !== 'undefined') {
     windowWidth.value = window.innerWidth
@@ -88,11 +79,10 @@ function handleResize() {
 }
 
 onMounted(() => {
-  handleResize() // Вызываем, чтобы получить реальную ширину окна
+  handleResize()
   if (typeof window !== 'undefined') {
     window.addEventListener('resize', handleResize)
   }
-  // Логика для установки 'active' отсюда убрана, так как 'active' уже установлен
 })
 
 onBeforeUnmount(() => {
@@ -104,7 +94,6 @@ onBeforeUnmount(() => {
   }
 })
 
-// Блокируем прокрутку фона при открытии мобильной панели
 watch([isPanelOpen, windowWidth], ([newIsOpen, newWidth]) => {
   if (typeof document === 'undefined') return
 
@@ -179,18 +168,18 @@ function go(region) {
   align-items: center;
   justify-content: center;
   width: 100%;
-  border: 1px solid var(--border);
-  box-shadow: 3px 3px 0 var(--border);
+  border: 2px solid var(--border);
+  box-shadow: 2px 2px 0 var(--border);
   border-radius: 15px;
   padding: 10px 10px;
-  background: #f1c40f;
+  background: #3c99d3;
   position: relative;
   overflow: hidden;
 }
 
 .map__title {
   font-size: 2.3rem;
-  color: #484343;
+  color: #f6f2f2;
   font-weight: 600;
   letter-spacing: .2px;
   font-family: "Nunito", sans-serif;
@@ -238,7 +227,6 @@ function go(region) {
   font-size: 1.6rem;
   margin: 0 0 8px;
   font-weight: 900;
-  font-style: italic;
   color: var(--titleColor);
 }
 
@@ -277,10 +265,10 @@ function go(region) {
   font-family: "Nunito", sans-serif;
   font-weight: 600;
   font-size: 18px;
-  border: 2px solid white;
+  border: 1px solid white;
   border-radius: 12px;
   cursor: pointer;
-  box-shadow: 0 3px 0 #ead064;
+  box-shadow: 0 3px 0 #f1c40f;
   transition: transform .12s ease, box-shadow .12s ease;
   width: 100%;
 }
@@ -295,7 +283,6 @@ function go(region) {
   display: grid;
   gap: 16px;
   overflow-y: auto;
-  padding: 5px;
   min-width: 0;
   grid-template-columns: repeat(2, 2fr);
   scrollbar-width: none;
@@ -310,7 +297,7 @@ function go(region) {
   height: auto;
   border: 3px solid var(--border);
   border-radius: 15px;
-  box-shadow: 1px 1px 0 var(--border);
+  box-shadow: 0 0 0 var(--border);
   cursor: pointer;
   overflow: hidden;
   transition: transform .12s ease, box-shadow .12s ease, filter .12s ease;
@@ -328,9 +315,11 @@ function go(region) {
   outline: 3px solid #fff;
 }
 
-.region-card:hover {
-  transform: translate(1px, 1px);
-  box-shadow: 0px 0px 0 var(--border);
+@media (min-width: 1024px) {
+  .region-card:hover {
+    transform: translate(1px, 1px);
+    box-shadow: 0px 0px 0 var(--border);
+  }
 }
 
 .region-card__art {
@@ -372,10 +361,8 @@ function go(region) {
   font-size: .82rem;
   font-weight: 900;
   color: #1d1d1d;
-  border: 2px solid var(--border);
   border-radius: 50%;
   background: linear-gradient(180deg, #fff, #eaeaea);
-  box-shadow: 1px 1px 0 var(--border);
   padding: 0;
 }
 
@@ -502,7 +489,6 @@ function go(region) {
 
   .map__title {
     font-size: 1.4rem;
-    color: black;
   }
 
   .map-left__close {
@@ -570,7 +556,7 @@ function go(region) {
   }
 
   .region-card__title {
-    font-size: 0.75rem;
+    font-size: 0.83rem;
   }
 }
 

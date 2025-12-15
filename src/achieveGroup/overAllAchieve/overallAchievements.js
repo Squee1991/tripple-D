@@ -53,6 +53,22 @@ export const overAchievment = [
 				targetProgress: 1
 			},
 			{
+				id: "voiceActivated",
+				name: "generalCategory.voiceActivatedText",
+				description: "generalCategory.voiceActivatedLabel",
+				icon: "🎙️",
+				currentProgress: 0,
+				targetProgress: 1
+			},
+			{
+				id: "the_hatch_quest",
+				name: "4 8 15 16 23 42",
+				description: "generalCategory.theLostDescription",
+				icon: "🏝️",
+				currentProgress: 0,
+				targetProgress: 1
+			},
+			{
 				id: "SiteRegular",
 				name: "generalCategory.monthLabel",
 				description: "generalCategory.moonthText",

@@ -182,7 +182,7 @@
         "id": 14,
         "type": "speechToText",
         "question": "eastPlainFirstQuests.questFifteen",
-        "text": "Hallo! wie geht's? sehr gut, danke",
+        "text": "Hallo! wie geht's? sehr gut, danke ",
         "answer": "Hallo! wie geht's? sehr gut, danke"
       }
     ]
@@ -231,8 +231,8 @@
         "id": 3,
         "type": "speechToText",
         "question": "eastPlainSecondQuests.questFour",
-        "text": "Bis Morgen",
-        "answer": "Bis Morgen"
+        "text": "Bis morgen",
+        "answer": "Bis morgen"
       },
       {
         "id": 4,
@@ -363,8 +363,8 @@
         "id": 13,
         "type": "speechToText",
         "question": "eastPlainSecondQuests.questFifteen",
-        "text": "Guten Tag! Woher kommst du? ich komme aus Spanien und du? ich komme aus Deutschland",
-        "answer": "Guten Tag! Woher kommst du. ich komme aus Spanien und du? ich komme aus Deutschland"
+        "text": "Guten Tag! Woher kommst du? Ich komme aus Spanien, und du? Ich komme aus Deutschland.",
+        "answer": "Guten Tag! Woher kommst du? Ich komme aus Spanien, und du? Ich komme aus Deutschland."
       }
     ]
   },
@@ -498,8 +498,8 @@
         "id": 8,
         "type": "speechToText",
         "question": "eastPlainThirdQuests.questEight",
-        "text": "Hallo Thomas!Wohin gehst du? ich gehe in den Laden",
-        "answer": "Hallo Thomas!Wohin gehst du? ich gehe in den Laden"
+        "text": "Hallo Thomas! Wohin gehst du? ich gehe in den Laden",
+        "answer": "Hallo Thomas! Wohin gehst du? ich gehe in den Laden"
       },
       {
         "id": 9,
@@ -831,7 +831,7 @@
         "type": "speechToText",
         "question": "eastPlainFifthQuests.questFour",
         "text": "Bezahlen Sie bar oder mit Karte?",
-        "answer": "Bezahlen Sie bargeld oder mit Karte?"
+        "answer": "Bezahlen Sie bar oder mit Karte?"
       },
       {
         "id": 5,

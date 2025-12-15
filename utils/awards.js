@@ -16,6 +16,9 @@ import SwordAward from '~/assets/awards/SwordAwards.svg'
 import HeartAward from '~/assets/awards/heartAward.svg'
 import Telescope from '~/assets/awards/telescope.svg'
 import Groot from '~/assets/awards/Groot.svg'
+import SantaHat from '../assets/images/event-rewards/winter-event/winter-rewards/santa-hat.svg'
+import ChristmasBall from '../assets/images/event-rewards/winter-event/winter-rewards/christmas-ball.svg'
+import ChristmasWreath from '../assets/images/event-rewards/winter-event/winter-rewards/christmas-wreath.svg'
 export const AWARDS = [
 	{key: 'explorer', title: 'awards.explorer', icon: Globus},
 	{key: 'Articlus', title: 'awards.articlus', icon: WasteMoney},
@@ -35,6 +38,9 @@ export const AWARDS = [
 	{key: 'FiveHearts', title: 'awards.fiveHearts', icon: HeartAward},
 	{key: 'daily42', title: 'awards.daily42', icon: Telescope},
 	{key: 'iAmGroot', title: 'awards.iAmGroot', icon: Groot},
+	{key: 'santaHat' , title: 'awards.santaHat', icon: SantaHat},
+	{key: 'christmasBall' , title: 'awards.christmasBall', icon: ChristmasBall},
+	{key: 'christmasWreath' , title: 'awards.christmasWreath', icon: ChristmasWreath},
 ]
 
 export const awardsByKey = Object.fromEntries(AWARDS.map(a => [a.key, a]))

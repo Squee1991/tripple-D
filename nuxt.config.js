@@ -1,6 +1,7 @@
 
 import { defineNuxtConfig } from 'nuxt/config'
 import { loadEnv } from 'vite'
+const events = ['halloween', 'joke', 'valentine', 'winter']
 const mode = process.env.NODE_ENV === 'production' ? 'production' : 'development'
 const env = loadEnv(mode, process.cwd(), '')
 const firebaseConfig = {
@@ -25,10 +26,9 @@ const siteUrl =
 	(process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000')
 
 export default defineNuxtConfig({
+	experimental: { payloadExtraction: false },
 	compatibilityDate: '2024-11-01',
 	devtools: { enabled: true },
-	ssr: false,
-
 	modules: [
 		'@nuxt/image',
 		'@pinia/nuxt',
@@ -36,7 +36,6 @@ export default defineNuxtConfig({
 		'@nuxtjs/google-fonts',
 		'@nuxtjs/i18n',
 		'@nuxtjs/color-mode',
-		'@nuxtjs/sitemap',
 		'@nuxtjs/robots',
 	],
 
@@ -62,14 +61,52 @@ export default defineNuxtConfig({
 			siteUrl,
 		},
 	},
-
-	sitemap: { siteUrl, autoLastmod: true },
+	app: {
+		head: {
+			link: [
+				{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+				{ rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
+				{ rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+				{ rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+			],
+			meta: [
+				{ property: 'og:image', content: 'https://www.skillupgerman.com/android-chrome-512x512.png' },
+				{ property: 'og:image:type', content: 'image/png' },
+				{ property: 'og:image:width', content: '512' },
+				{ property: 'og:image:height', content: '512' },
+				{ name: 'twitter:card', content: 'summary_large_image' },
+				{ name: 'twitter:image', content: 'https://www.skillupgerman.com/android-chrome-512x512.png' },
+				{ name: 'robots', content: 'max-image-preview:large' }
+			]
+		}
+	},
+	// sitemap: {
+	// 	siteUrl,
+	// 	autoLastmod: true,
+	// 	exclude: [
+	// 		'/**/success',
+	// 		'/**/battle',
+	// 		'/**/cabinet',
+	// 		'/**/calendar',
+	// 		'/**/chat',
+	// 		'/**/statistics'
+	// 	],
+	// },
 	robots: {
 		rules: process.env.VERCEL_ENV === 'production'
-			? [{ userAgent: '*', allow: '/' }]
+			? [
+				{ userAgent: '*', allow: '/' },
+				{ userAgent: '*', disallow: '/*success' },
+				{ userAgent: '*', disallow: '/*battle' },
+				{ userAgent: '*', disallow: '/*cabinet' },
+				{ userAgent: '*', disallow: '/*calendar' },
+				{ userAgent: '*', disallow: '/*chat' },
+				{ userAgent: '*', disallow: '/*statistics' }
+			]
 			: [{ userAgent: '*', disallow: '/' }],
-		sitemap: `${siteUrl}/sitemap.xml`,
+		// sitemap: `${siteUrl}/sitemap.xml`,
 	},
+
 
 	css: [
 		'simplebar/dist/simplebar.min.css',
@@ -106,7 +143,7 @@ export default defineNuxtConfig({
 			useCookie: true,
 			cookieKey: 'i18n_redirected',
 			alwaysRedirect: false,
-			redirectOn: 'no prefix',
+			redirectOn: 'root',
 			fallbackLocale: 'en',
 		},
 		bundle: { optimizeTranslationDirective: false },
@@ -136,7 +173,49 @@ export default defineNuxtConfig({
 
 	nitro: {
 		preset: 'vercel',
-		prerender: { routes: ['/', '/en', '/ru', '/uk', '/pl', '/tr', '/uz', '/ar', '/es'] },
-		compressPublicAssets: true,
+		prerender: {
+			crawlLinks: false,
+			routes: ['/'],
+			failOnError: false,
+		},
+		compressPublicAssets: true
 	},
+	routeRules: {
+		'/': { prerender: true },
+		'/**': { ssr: false },
+	}
+	// nitro: {
+	// 	preset: 'vercel',
+	// 	prerender: {
+	// 		crawlLinks: true,
+	// 		failOnError: false,
+	// 		routes: [
+	// 			...['pl','en','tr','es','ru','uk','uz','ar'].flatMap(loc =>
+	// 				events.map(ev => `/${loc}/event-${ev}`)
+	// 			)
+	// 		]
+	// 	},
+	// 	compressPublicAssets: true
+	// },
+	// routeRules: {
+	// 	'/': { prerender: true },
+	// 	'/ru/**': { prerender: true },
+	// 	'/en/**': { prerender: true },
+	// 	'/uk/**': { prerender: true },
+	// 	'/pl/**': { prerender: true },
+	// 	'/tr/**': { prerender: true },
+	// 	'/uz/**': { prerender: true },
+	// 	'/ar/**': { prerender: true },
+	// 	'/es/**': { prerender: true },
+	// 	'/api/**': {
+	// 		headers: { 'cache-control': 'public, s-maxage=300, stale-while-revalidate=600' }
+	// 	},
+	//
+	// 	'/**/success': { headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
+	// 	'/**/battle': { headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
+	// 	'/**/cabinet': { headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
+	// 	'/**/calendar': { headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
+	// 	'/**/chat': { headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
+	// 	'/**/statistics': { headers: { 'X-Robots-Tag': 'noindex, nofollow' } },
+	// },
 })

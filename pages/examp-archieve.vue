@@ -3,6 +3,11 @@ import {onMounted, onUnmounted, computed} from 'vue'
 import {useRoute, useRouter} from 'vue-router'
 import {userExamStore} from '../store/examStore.js'
 import VPlayAudio from "../src/components/V-playAudio.vue";
+import {useSeoMeta} from "#imports";
+
+useSeoMeta({
+  robots: 'noindex, nofollow'
+})
 
 const { t } = useI18n();
 const route = useRoute()
@@ -19,6 +24,12 @@ function toDateFlexible(value) {
   } catch {
     return null
   }
+}
+
+function isSpeaking(item) {
+  return item?.type === 'speaking-prompt'
+      || item?.exercise?.type === 'speaking-prompt'
+      || item?.module === 'Sprechen';
 }
 
 const itemsByModule = computed(() => {
@@ -103,31 +114,30 @@ onUnmounted(() => {
       </div>
       <div v-for="(list, mod) in itemsByModule" :key="mod" class="arch__module">
         <h2 class="arch__mod-title">{{ mod }}</h2>
-        <div v-for="it in list" :key="it.id" class="arch__item">
+        <div v-for="item in list" :key="item.id" class="arch__item">
           <div class="arch__left">
             <div class="arch__score">
-              <div v-if="it.taskText"><b>Die Aufgabe:</b> {{ it.taskText }}</div>
-              <div class="arch__score-badge">{{ it.score }} / 10</div>
+              <div v-if="item.taskText"><b>Die Aufgabe:</b> {{ item.taskText }}</div>
+              <div class="arch__score-badge">{{ item.score }} / 10</div>
             </div>
-            <p v-if="it.question"><b>Die Frage:</b> {{ it.question }}</p>
-            <p class="arch__ans"><b>Die Antwort:</b> {{ it.answer || '—' }}</p>
-            <div v-if="audioFilesFor(it).length" class="arch__audio-list">
-              <div v-for="(audio, idx) in audioFilesFor(it)" :key="idx" class="arch__audio-item">
+            <p v-if="item.question"><b>Die Frage:</b> {{ item.question }}</p>
+            <p v-if="!isSpeaking(item)" class="arch__ans"><b>Die Antwort:</b> {{ item.answer || '—' }}</p>
+            <div v-if="audioFilesFor(item).length" class="arch__audio-list">
+              <div v-for="(audio, idx) in audioFilesFor(item)" :key="idx" class="arch__audio-item">
                 <div class="arch__audio-meta">
                   <VPlayAudio :src="audio.url" label="Воспроизвести" pauseLabel="Пауза" preload="metadata"/>
                   <div class="timer__inner">
                     <img class="timer" src="../assets/images/dailyIcons/timer.svg" alt="TimerIcon">
-                    <div class="timer__value" v-if="audio.durationSec">{{ audio.durationSec }}s</div>
+                    <div class="timer__value" v-if="audio.durationSec">{{ audio.durationSec }}</div>
                   </div>
-<!--                  <span v-if="audio.transcription"><b>Transkription:</b> {{ audio.transcription }}</span>-->
                 </div>
               </div>
             </div>
-            <div v-if="it.feedback" class="arch__fb">
-              <p v-if="it.feedback.result"><b>Die Bewertung:</b> {{ it.feedback.result }}</p>
-              <p v-if="it.feedback.feedback"><b>Der Kommentar:</b> {{ it.feedback.feedback }}</p>
-              <p v-if="it.feedback.correctedVersion" class="arch__pre">
-                <b>Die Korrektur:</b><br/>{{ it.feedback.correctedVersion }}</p>
+            <div v-if="item.feedback" class="arch__fb">
+              <p v-if="item.feedback.result"><b>Die Bewertung:</b> {{ item.feedback.result }}</p>
+              <p v-if="item.feedback.feedback"><b>Der Kommentar:</b> {{ item.feedback.feedback }}</p>
+              <p v-if="item.feedback.correctedVersion" class="arch__pre">
+                <b>Die Korrektur:</b><br/>{{ item.feedback.correctedVersion }}</p>
             </div>
           </div>
         </div>

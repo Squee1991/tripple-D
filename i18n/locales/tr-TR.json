@@ -1,4 +1,126 @@
 {
+  "eventsModal": {
+    "halloweenLabel": "Balkabağı Festivali",
+    "halloweenText": "Balkabakları topla, görevleri tamamla ve temalı ödüller kazan!",
+    "winterLabel": "Kış Fısıltısı",
+    "winterText": "Kış etkinliğine katıl! Kar taneleri topla, hediyeleri aç.",
+    "valentineLabel": "Kalpler Festivali",
+    "valentineText": "Romantik etkinliğe katıl ve özel ödüller kazan!",
+    "jokeLabel": "Şaka Geçidi",
+    "jokeText": "Eğlen, bonusları topla ve şaka dolu meydan okumalara katıl!"
+  },
+  "winterEventQuests": {
+    "quest-21": "Kelimeler Hazinesi",
+    "quest-1": "Noel Ruhu",
+    "quest-2": "Gelenekler ve Semboller",
+    "quest-3": "Nikolaus ve Karakterler",
+    "quest-4": "Advent'in Büyüsü",
+    "quest-5": "Hediye Verme Sanatı",
+    "quest-6": "Noel",
+    "quest-7": "Bayram Günleri",
+    "quest-8": "Silvester Efsanesi",
+    "quest-9": "Büyülü Orman",
+    "quest-10": "Kış Tatili",
+    "quest-11": "Semboller",
+    "quest-12": "Gelenekler",
+    "quest-13": "Adetler",
+    "quest-14": "İnanışlar ve Mitler",
+    "quest-15": "Eşyalar ve Kış Eğlencesi",
+    "quest-16": "Kış ve Yılbaşı",
+    "quest-17": "Noel",
+    "quest-18": "Hazırlık",
+    "quest-19": "Yılbaşı Gecesi",
+    "quest-20": "Alman Bayramı"
+  },
+  "winterEvent": {
+    "pathMain": "Ana Sayfa",
+    "event": "Etkinlik",
+    "panel": "Etkinlik Paneli",
+    "reputation": "İtibar",
+    "currency": "Para Birimi",
+    "shop": "İtibar Mağazası",
+    "bought": "Satın Alındı",
+    "notAllowed": "Mevcut Değil",
+    "notEnough": "Yetersiz",
+    "buy": "Satın Al",
+    "questions": "Görevler",
+    "rep": "itb.",
+    "repeat": "Tekrarla",
+    "execute": "Başlat",
+    "notAllowedTitle": "Etkinlik Mevcut Değil",
+    "notAllowedText": "Bu etkinlik henüz başlamadı veya sona erdi.",
+    "eventShop": "Etkinlik Mağazası",
+    "eventQuestions": "Etkinlik Görevleri",
+    "firstReputation": "Kar Güveni",
+    "secondReputation": "Kış Saygısı"
+  },
+  "winterEventShopItems": {
+    "santaHat": "Noel Baba Şapkası",
+    "christmasBall": "Kar Küresi",
+    "christmasWreath": "Noel Çelengi",
+    "snowFall": "Kar Yağışı Efekti"
+  },
+  "winterAchievements": {
+    "firstQuestName": "İlk ağaç yıldızı",
+    "firstQuestDescription": "Kış etkinliğindeki herhangi bir görevi tamamla ve ilk yıldızı yak.",
+    "santaLexiconName": "Noel Baba Sözlüğü",
+    "santaLexiconDescription": "Noel ve Yeni Yıl ile ilgili tüm kelimeleri öğren.",
+    "everyQuestName": "Kış fısıltısının bekçisi",
+    "everyQuestDescription": "“Kışın Fısıltısı” etkinliğinin tüm görevlerini tamamla ve gerçek bir tipinin nefesini hisset.",
+    "snowFallName": "Kar yağışı",
+    "snowFallDescription": "“Kışın Fısıltısı” etkinliği sırasında kar yağışı efektini satın al.",
+    "santaHatName": "Noel Baba Şapkası",
+    "santaHatDescription": "Etkinlik sırasında efsanevi Noel Baba Şapkasını satın al ve Noel ruhunu hisset.",
+    "christmasBallName": "Kar küresi",
+    "christmasBallDescription": "Bu büyülü kar küresini satın al ve kışın bir anını yakala.",
+    "christmasWreathName": "Noel çelengi",
+    "christmasWreathDescription": "Bayramın ve ev sıcaklığının sembolü olan geleneksel çelengi satın al.",
+    "winterHonorName": "Kış onuru",
+    "winterHonorDescription": "“Kışın Fısıltısı” etkinliğinde görevler yaparak kış onuru kazan.",
+    "metaChristmasName": "Noel ustası",
+    "metaChristmasDescription": "“Kışın Fısıltısı” etkinliğinin tüm başarılarını aç ve yılbaşı sezonunun efsanesi ol."
+  },
+  "stepHitSettings": {
+    "back": "Geri",
+    "further": "İleri",
+    "end": "Bitir",
+    "skip": "Atla"
+  },
+  "stepHitLabels": {
+    "learnTitle": "Öğrenme",
+    "learnDescription": "Dilbilgisi, ifadeler, artikeller, zamanlar ve pratik — Almanca’yı güvenle geliştirmek için.",
+    "duelTitle": "Oyunlar",
+    "duelDescription": "Düellolar, maratonlar, kelime tahmini modu, görev günlüğü ve oyun tarzında eğitim.",
+    "testTitle": "Testler",
+    "testDescription": "A1’den B2’ye kadar seviyeni test et: yazma, dinleme, konuşma ve anında değerlendirme.",
+    "eventTitle": "Etkinlikler",
+    "eventDescription": "Sezonluk görevler, kelime koleksiyonları ve ödüllü geçici meydan okumalar.",
+    "articleTitle": "Articlus",
+    "articleDescription": "Bu senin öğrenme para birimindir. Doğru cevaplar için Articlus kazan ve ek denemeler için kullan.",
+    "levelTitle": "Seviye",
+    "levelDescription": "Burada mevcut seviyen gösterilir. Öğren ve adım adım yüksel.",
+    "statsTitle": "İstatistik",
+    "statsDescription": "Genel öğrenme verileri: görevler, artikeller, temalar ve ilerleme.",
+    "achievementsTitle": "Başarılar",
+    "achievementsDescription": "Burada oyun ve görev başarıların toplanır.",
+    "rankedTitle": "Sıralama",
+    "rankedDescription": "Burada oyuncu sıralamasını görebilirsin: kim daha çok kelime bildi ve kim birinci.",
+    "calendarTitle": "Etkinlik takvimi",
+    "calendarDescription": "Etkinlikler tarihlere göre gösterilir. Ödülleri kaçırma!"
+  },
+  "recipes": {
+    "start": "Görevi başlat",
+    "training": "Eğitime geç",
+    "did": "Bu görevi zaten tamamladın. Sonraki yükleniyor...",
+    "timer": "Sonraki görev şu sürede mevcut olacak:",
+    "didAll": "Bu konudaki her şeyi tamamladın",
+    "notFound": "bulunamadı",
+    "error": "Ups, tarifleri bulamıyorum",
+    "repeat": "10 Artiklus karşılığında deneme"
+  },
+  "practiceArticleBtn": {
+    "btn": "Artikel alıştırmalarına"
+  },
   "footer": {
     "copy": "Der Die Das. Tüm hakları saklıdır.",
     "about": "Uygulama hakkında",
@@ -6,7 +128,7 @@
     "privacy": "Gizlilik Politikası",
     "terms": "Kullanım Şartları"
   },
-  "friendExam": {
+  "friendExamBtn": {
     "btn": "Arkadaşların Sınavları"
   },
   "regions": {
@@ -67,7 +189,7 @@
     "profile": "Profil"
   },
   "metaAdjectiveBasic": {
-    "title": "German Corner — Sıfatlar A1–A2: renkler, duygular, dış görünüş, karakter, boyut",
+    "title": "Skillupgerman — Sıfatlar A1–A2: renkler, duygular, dış görünüş, karakter, boyut",
     "description": "Almanca temel sıfatları konulara göre öğrenin: renkler, duygular ve hisler, dış görünüş, karakter, boyut ve şekil. Çeviri ve seslendirmeli örnekler + alıştırmalar."
   },
   "metaAdjectiveComparison": {
@@ -90,7 +212,7 @@
     "testsLevels": "Almanca testler — seviyeler"
   },
   "metaLocation": {
-    "title": "German Corner — Almanca öğrenmek için dil toprakları",
+    "title": "Skillupgerman — Almanca öğrenmek için dil toprakları",
     "description": "Dil topraklarını keşfedin ve görevleri tamamlayarak seviyeleri geçin, Almancanızı geliştirin. Kelime haznesi ve dilbilgisini görevler ve ilerleme ile macera formatında öğrenin, tıpkı bir oyunda olduğu gibi!"
   },
   "metaModalVerbs": {
@@ -131,7 +253,7 @@
   },
   "metaMainPage": {
     "title": "Almancayı oyun şeklinde öğren",
-    "description": "German Corner. Oyun tarzında pratik: artikeller der, die, das, tematik seviyeler, fiiller, sıfatlar, edatlar, görevler ve başarılar. Almanca öğrenmeyi eğlenceli hale getir!"
+    "description": "Skillupgerman  oyun tarzında pratik: artikeller der, die, das, tematik seviyeler, fiiller, sıfatlar, edatlar, görevler ve başarılar. Almanca öğrenmeyi eğlenceli hale getir!"
   },
   "metaVerbsTheory": {
     "title": "Almanca fiil teorisi örnekler ve quiz ile",
@@ -159,10 +281,10 @@
     "featureTen": "Gelecek özellikler"
   },
   "useHeadApp": {
-    "title": "German Corner — Almancayı oyunlarla kolay ve eğlenceli şekilde öğren",
-    "content": "German Corner — Almanca öğrenmek için çevrimiçi platform: dilbilgisi, artikeller, zamanlar, alıştırmalar ve oyun tabanlı öğrenme.",
+    "title": "Skillupgerman — Almancayı oyunlarla kolay ve eğlenceli şekilde öğren",
+    "content": "Skillupgerman — Almanca öğrenmek için çevrimiçi platform: dilbilgisi, artikeller, zamanlar, alıştırmalar ve oyun tabanlı öğrenme.",
     "contentTwo": "Almanca, artikeller, dilbilgisi, çevrimiçi Almanca öğren, A1, A2, B1",
-    "contentThree": "German Corner — Almanca öğrenme",
+    "contentThree": "Skillupgerman — Almanca öğrenme",
     "contentFour": "Almancayı egzersizler ve oyunlarla eğlenceli ve etkili bir şekilde öğren!"
   },
   "achievementToast": {
@@ -1335,7 +1457,10 @@
     "allCases": "Birlik Bulmacası",
     "fiveHearts": "Hayat Kalkanı",
     "daily42": "Galaktik Teleskop",
-    "iAmGroot": "Groot ile Saksı"
+    "iAmGroot": "Groot ile Saksı",
+    "santaHat": "Noel Baba şapkası",
+    "christmasBall": "Noel süs topu",
+    "christmasWreath": "Noel çelengi"
   },
   "eastPlainFirstQuests": {
     "title": "İlk Buluşma",
@@ -3599,7 +3724,8 @@
   "cabinetToggle": {
     "sound": "Sesli Bildirimler",
     "theme": "Karanlık Mod",
-    "ach": "Başarı Bildirimleri"
+    "ach": "Başarı Bildirimleri",
+    "snowFall": "Kar yağışı"
   },
   "cabinet": {
     "important": "ÖNEMLİ!!!",
@@ -3637,7 +3763,12 @@
     "deleteAccBtnReject": "İptal",
     "boughtAvatar": "Avatar satın alındı",
     "notEnoughtArticles": "Yeterli Artiklus yok",
-    "boughtBtn": "Tamam"
+    "boughtBtn": "Tamam",
+    "notAllow": "Efekt kullanılamıyor",
+    "modalNotAllowEffectFirst": "Bu efekt yalnızca etkinlikte açılabilir",
+    "modalNotAllowEffectSecond": "“Kışın Fısıltısı”",
+    "modalNotAllowEffectThird": "Etkinlik mağazasından kar tanesiyle satın alın!",
+    "modalNotAllowEffectClose": "Kapat"
   },
   "articleOverlay": {
     "title": "Artikleus nedir ve nasıl kazanılır?",
@@ -4250,7 +4381,12 @@
     "adjectives": "Sıfatlar",
     "adjectiveBasic": "Temeller",
     "adjectiveDeclension": "Çekim",
-    "adjectiveComparison": "Dereceleme"
+    "adjectiveComparison": "Dereceleme",
+    "events": "Etkinlikler",
+    "winterEvent": "Bir Tutam Kış",
+    "valentineEvent": "Kalpler Festivali",
+    "foolDayEvent": "Kahkaha Geçidi",
+    "halloweenEvent": "Kabak Bayramı"
   },
   "specialCategory": {
     "specialCollectionText": "Koleksiyoncu",
@@ -4333,7 +4469,7 @@
     "cowabungaText": "KOWABUNGA",
     "cowabungaDescription": "Salam mı yoksa pepperoni mi? Ninja Kaplumbağalar nasılsa yerdi. Artikel pratiğinde tüm modlarda “salam” kelimesini öğren.",
     "zooText": "Hayvanların Dostu",
-    "zooDescription": "Tüm canlıların gerçek dostu!",
+    "zooDescription": "Gerçek bir arkadaş kimseyi artikelsiz bırakmaz! “Hayvanlar” konusundaki tüm kelimeleri artikl pratiğinin tüm modlarında öğrenin.",
     "veganText": "Sebzelerin Koruyucusu",
     "veganDescription": "Hiçbir sebze artikelsiz kalmayacak! ‘Yemek’ konusundaki tüm sebze kelimelerini her artikel çalışma modunda öğrenin.",
     "firstStepLabel": "İlk Adım",
@@ -4366,7 +4502,10 @@
     "magisterText": "Artikel Pratiğinde tüm modlarda 100 kelime öğrenerek ustalık seviyesine ulaş",
     "mistakesLabel": "Hatalar Beni Durduramaz!",
     "mistakesText": "Her biri bilgiye atılan bir adım!",
-    "mistakesAward": "Ödül: Sabır Tılsımı"
+    "mistakesAward": "Ödül: Sabır Tılsımı",
+    "voiceActivatedText": "Ses erişimi",
+    "voiceActivatedLabel": "Önemli bildirimi okuyup kabul edin ve Sprechen modülünü etkinleştirin.",
+    "theLostDescription": "Sığınağın girişi herkesin gözünün önünde gizlidir. Protokolü başlatmak için site logosuna 5 kez tıkla ve soruları cevaplayarak erişim elde et"
   },
   "guessCategory": {
     "guessLabel": "Kelimeyi tahmin et",
@@ -4777,7 +4916,7 @@
     "confirm": "Şifrenizi onaylayın"
   },
   "banner": {
-    "title": "Almanca artikelleri öğrenin, sihirli beceriler geliştirin ve kart savaşlarında rakipleri yenin!",
+    "title": "Almancayı her gün oyunlaştırılmış bir şekilde pratiğe dök. Güvenli ilerleme için birçok konu ve gramer alıştırması.",
     "btn": "Yolculuğunuza başlayın"
   },
   "features": {

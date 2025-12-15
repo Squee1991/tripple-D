@@ -12,7 +12,6 @@
           @close="showConsentModal = false"
       />
       <button type="button" class="back__btn" @click="routeToMain">{{t('examIndexPage.toMain')}}</button>
-
       <p class="exam__subtitle">
         {{t('examIndexPage.choice')}}
         <span class="exam__highlight">Lesen</span>,
@@ -70,53 +69,58 @@ import {useRouter} from 'vue-router'
 import VConsentModal from "../../src/components/V-consentModal.vue";
 import {userAuthStore} from "../../store/authStore.js";
 import { useHead, useSeoMeta } from '#imports'
-const canonical = useCanonical()
+// const canonical = useCanonical()
 const { t } = useI18n()
-const pageTitle = t('metaTests.title')
-const pageDesc  = t('metaTests.description')
 
-useHead({
-  title: pageTitle,
-  link: [{ rel: 'canonical', href: canonical }],
-  script: [
-    {
-      type: 'application/ld+json',
-      children: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": t('metaTests.main'), "item": canonical.replace(/\/exams.*/,'/') },
-          { "@type": "ListItem", "position": 2, "name": t('metaTests.tests'), "item": canonical }
-        ]
-      })
-    },
-    {
-      type: 'application/ld+json',
-      children: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "ItemList",
-        "name": t('metaTests.testsLevels'),
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "url": canonical + 'level/a1', "name": "A1" },
-          { "@type": "ListItem", "position": 2, "url": canonical + 'level/a2', "name": "A2" },
-          { "@type": "ListItem", "position": 3, "url": canonical + 'level/b1', "name": "B1" },
-          { "@type": "ListItem", "position": 4, "url": canonical + 'level/b2', "name": "B2" }
-        ]
-      })
-    }
-  ]
-})
 useSeoMeta({
-  title: pageTitle,
-  description: pageDesc,
-  ogTitle: pageTitle,
-  ogDescription: pageDesc,
-  ogType: 'website',
-  ogUrl: canonical,
-  ogImage: '/images/seo-exams.png',
-  twitterCard: 'summary_large_image',
-  robots: 'index, follow'
+  robots: 'noindex, nofollow'
 })
+
+// const pageTitle = t('metaTests.title')
+// const pageDesc  = t('metaTests.description')
+//
+// useHead({
+//   title: pageTitle,
+//   link: [{ rel: 'canonical', href: canonical }],
+//   script: [
+//     {
+//       type: 'application/ld+json',
+//       children: JSON.stringify({
+//         "@context": "https://schema.org",
+//         "@type": "BreadcrumbList",
+//         "itemListElement": [
+//           { "@type": "ListItem", "position": 1, "name": t('metaTests.main'), "item": canonical.replace(/\/exams.*/,'/') },
+//           { "@type": "ListItem", "position": 2, "name": t('metaTests.tests'), "item": canonical }
+//         ]
+//       })
+//     },
+//     {
+//       type: 'application/ld+json',
+//       children: JSON.stringify({
+//         "@context": "https://schema.org",
+//         "@type": "ItemList",
+//         "name": t('metaTests.testsLevels'),
+//         "itemListElement": [
+//           { "@type": "ListItem", "position": 1, "url": canonical + 'level/a1', "name": "A1" },
+//           { "@type": "ListItem", "position": 2, "url": canonical + 'level/a2', "name": "A2" },
+//           { "@type": "ListItem", "position": 3, "url": canonical + 'level/b1', "name": "B1" },
+//           { "@type": "ListItem", "position": 4, "url": canonical + 'level/b2', "name": "B2" }
+//         ]
+//       })
+//     }
+//   ]
+// })
+// useSeoMeta({
+//   title: pageTitle,
+//   description: pageDesc,
+//   ogTitle: pageTitle,
+//   ogDescription: pageDesc,
+//   ogType: 'website',
+//   ogUrl: canonical,
+//   ogImage: '/images/seo-exams.png',
+//   twitterCard: 'summary_large_image',
+//   robots: 'index, follow'
+// })
 
 const authStore = userAuthStore()
 const showConsentModal = ref(false)
@@ -209,12 +213,11 @@ onMounted(async () => {
 <style scoped>
 .exam {
   padding: 1rem;
-  background-color: #fdf6e3;
+  background-color: var(--bg);
   font-family: "Nunito", sans-serif;
   min-height: 100vh;
   text-align: center;
 }
-
 
 .button__not-allowed {
   padding: 10px 15px;
@@ -328,6 +331,7 @@ onMounted(async () => {
   font-size: 1.3rem;
   border-radius: 15px;
   cursor: pointer;
+  font-weight: 600;
   box-shadow: 4px 4px 0 black;
 }
 

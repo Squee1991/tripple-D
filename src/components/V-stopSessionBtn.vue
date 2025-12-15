@@ -25,8 +25,8 @@ const path = () => {
   justify-content: center;
   pointer-events: all;
   position: absolute;
-  top: 5vh;
-  left:30px;
+  top: 10px;
+  left:12px;
   z-index: 20;
   background-color: #2E7D32;
   color: rgba(255, 255, 255, 0.9);

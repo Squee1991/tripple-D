@@ -55,7 +55,7 @@ const tips = [
   {label: 'Genitiv — SRSR', text: 'des / der / des / der — формула SRSR'},
   {label: 'Akk.-Pronomen', text: 'mich, dich, ihn, sie, es, uns, euch, sie'},
   {label: 'Dat.-Pronomen', text: 'mir, dir, ihm, ihr, ihm, uns, euch, ihnen'},
-  {label: 'Adj. (Nom. с der)', text: 'окончания прилаг.: -e / -e / -e / -en'}
+  {label: 'Adj. (Nom. с der)', text: 'ende.: -e / -e / -e / -en'}
 ]
 function start() {
   progressTimer = setInterval(() => {

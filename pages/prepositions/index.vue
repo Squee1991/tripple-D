@@ -17,7 +17,7 @@
         :tips="currentTopicData?.tips"
     />
     <div class="sidebar">
-      <button @click="backTo" class="btn__back">{{ t('prepositionsIndexPage.btnBack')}}</button>
+      <VBackBtn/>
       <h2 class="sidebar__title">{{ t('prepositionsIndexPage.prepositionsTitleNav')}}</h2>
       <div class="sidebar__heading">{{ t('prepositionsIndexPage.type')}}</div>
       <ul class="sidebar__list">
@@ -103,28 +103,33 @@ import SoundBtn from '../../src/components/soundBtn.vue'
 import Lottie from 'lottie-web'
 import TipIcon from '../../assets/animation/info.json'
 import VTips from '../../src/components/V-tips.vue'
+import VBackBtn from "../../src/components/V-back-btn.vue";
 const { t} = useI18n()
 const router = useRouter()
 const categoryId = 'prepositions'
 const canonical = useCanonical()
-const pageTitle = t('metaPrepositions.title')
-const pageDesc  = t('metaPrepositions.description')
-useHead({
-  title: pageTitle,
-  link: [
-    { rel: 'canonical', href: canonical }
-  ]
-})
 useSeoMeta({
-  title: pageTitle,
-  description: pageDesc,
-  ogTitle: pageTitle,
-  ogDescription: pageDesc,
-  ogType: 'article',
-  ogUrl: canonical,
-  ogImage: '/images/seo-prepositions-cases.png',
-  robots: 'index, follow'
+  robots: 'noindex, nofollow'
 })
+
+// const pageTitle = t('metaPrepositions.title')
+// const pageDesc  = t('metaPrepositions.description')
+// useHead({
+//   title: pageTitle,
+//   link: [
+//     { rel: 'canonical', href: canonical }
+//   ]
+// })
+// useSeoMeta({
+//   title: pageTitle,
+//   description: pageDesc,
+//   ogTitle: pageTitle,
+//   ogDescription: pageDesc,
+//   ogType: 'article',
+//   ogUrl: canonical,
+//   ogImage: '/images/seo-prepositions-cases.png',
+//   robots: 'index, follow'
+// })
 
 const topics = [
   {
@@ -324,25 +329,6 @@ watch(currentTopicData, () => {
   overflow-y: auto;
 }
 
-.btn__back {
-  font-weight: 600;
-  display: block;
-  text-align: center;
-  width: 100%;
-  font-family: "Nunito", sans-serif;
-  padding: 0.8rem;
-  margin-bottom: 2rem;
-  font-size: 1.2rem;
-  border-radius: 12px;
-  cursor: pointer;
-  background-color: #f1c40f;
-  color: #1e1e1e;
-  text-decoration: none;
-  border: 3px solid #1e1e1e;
-  box-shadow: 4px 4px 0px #1e1e1e;
-  transition: background-color 0.2s;
-}
-
 .sidebar__title {
   font-size: 1.5rem;
   font-weight: bold;
@@ -518,11 +504,15 @@ watch(currentTopicData, () => {
   font-weight: bold;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  box-shadow: 4px 4px 0px #1e1e1e;
+  box-shadow: 3px 3px 0px #1e1e1e;
 }
 
-.practice-area__button:hover {
-  background: #ffe04d;
+@media (min-width: 1024px) {
+  .practice-area__button:hover {
+    background: #ffe04d;
+    transform: translate(2px , 2px);
+    box-shadow: 1px 1px 0 #1e1e1e;
+  }
 }
 
 .practice-area__button:active {

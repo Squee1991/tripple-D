@@ -42,7 +42,8 @@ import VLands from "~/src/components/V-lands.vue";
 import Location from '../../assets/images/location.svg'
 import Daily from '../../assets/images/daily.svg'
 import Card from '../../assets/images/card.svg'
-const { t } = useI18n();
+
+const {t} = useI18n();
 const tabs = [
   {id: 'locations', icon: Location, alt: 'achIcon', label: t('tabsMobile.locations'), component: VLands},
   {id: 'daily', icon: Daily, alt: 'daily icon', label: t('tabsMobile.daily'), component: VDaily},
@@ -78,7 +79,6 @@ onBeforeUnmount(() => {
 })
 
 
-
 </script>
 
 <style scoped>
@@ -92,36 +92,36 @@ onBeforeUnmount(() => {
 }
 
 .uid__container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 100dvh;
-    min-height: 0;
-    align-items: stretch;
-    gap: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100dvh;
+  min-height: 0;
+  align-items: stretch;
+  gap: 10px;
 }
 
 .lands-container {
-    flex: 1;
-    min-width: 0;
-    display: flex;
+  flex: 1;
+  min-width: 0;
+  display: flex;
 }
 
 .lands-container > :deep(.map__wrapper) {
-    width: 100%;
-    flex: 1;
+  width: 100%;
+  flex: 1;
 }
 
 .stats__wrapper {
-    max-width: 400px;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 0 5px;
-    min-height: 0;
-    max-height: 100vh;
-    overflow: auto;
+  max-width: 400px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 5px;
+  min-height: 0;
+  max-height: 100vh;
+  overflow: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -131,26 +131,26 @@ onBeforeUnmount(() => {
 }
 
 .stats__wrapper > * {
-    flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .stats__wrapper::-webkit-scrollbar {
-    width: 6px;
+  width: 6px;
 }
 
 .stats__wrapper::-webkit-scrollbar-track {
-    background: transparent;
+  background: transparent;
 }
 
 .stats__wrapper::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
 }
 
 @media (max-width: 660px) {
-    .tab__label {
-        display: none;
-    }
+  .tab__label {
+    display: none;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -174,43 +174,44 @@ onBeforeUnmount(() => {
     display: none;
   }
 
-    .mobile-nav {
-        display: flex;
-        justify-content: space-between;
-        gap: 10px;
-        padding: 4px;
-    }
+  .mobile-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 4px;
+    z-index: 1;
+  }
 
-    .mobile-nav__btn {
-        border: none;
-        background: none;
-        font-weight: 600;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 30%;
-        font-size: 16px;
-        cursor: pointer;
-        transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.12s ease;
-    }
+  .mobile-nav__btn {
+    border: none;
+    background: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.12s ease;
+  }
 
-    .mobile-nav__btn:active {
-        transform: translateY(1px);
-    }
+  .mobile-nav__btn:active {
+    transform: translateY(1px);
+  }
 
-    .mobile-nav__btn--active {
-        background: #eeeaea;
-        border: 3px solid black;
-        box-shadow: 3px 3px 0 black;
-        border-radius: 10px;
-    }
+  .mobile-nav__btn--active {
+    background: #eeeaea;
+    border: 3px solid black;
+    box-shadow: 3px 3px 0 black;
+    border-radius: 10px;
+  }
 
-    .mobile-panel {
-        flex: 1;
-        min-height: 0;
-        display: flex;
-        overflow: hidden;
-    }
+  .mobile-panel {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    overflow: hidden;
+  }
 
   .mobile-content {
     flex: 1;
@@ -230,27 +231,27 @@ onBeforeUnmount(() => {
 
 
   .mobile-content > * {
-        flex: 1;
-        width: 100%;
-        display: block;
-    }
+    flex: 1;
+    width: 100%;
+    display: block;
+  }
 }
 
 .fade-slide-enter-from {
-    opacity: 0;
-    transform: translateY(6px);
+  opacity: 0;
+  transform: translateY(6px);
 }
 
 .fade-slide-enter-active {
-    transition: opacity 180ms ease, transform 180ms ease;
+  transition: opacity 180ms ease, transform 180ms ease;
 }
 
 .fade-slide-leave-to {
-    opacity: 0;
-    transform: translateY(-6px);
+  opacity: 0;
+  transform: translateY(-6px);
 }
 
 .fade-slide-leave-active {
-    transition: opacity 140ms ease, transform 140ms ease;
+  transition: opacity 140ms ease, transform 140ms ease;
 }
 </style>

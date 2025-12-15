@@ -120,25 +120,30 @@ const tipRef = ref(null)
 let lottieInstance = null
 
 const canonical = useCanonical()
-const pageTitle = t('metaTenses.title')
-const pageDesc = t('metaTenses.description')
 
-useHead({
-  title: pageTitle,
-  link: [
-    { rel: 'canonical', href: canonical }
-  ]
-})
 useSeoMeta({
-  title: pageTitle,
-  description: pageDesc,
-  ogTitle: pageTitle,
-  ogDescription: pageDesc,
-  ogType: 'article',
-  ogUrl: canonical,
-  ogImage: '/images/seo-tenses.png',
-  robots: 'index, follow'
+  robots: 'noindex, nofollow'
 })
+
+// const pageTitle = t('metaTenses.title')
+// const pageDesc = t('metaTenses.description')
+//
+// useHead({
+//   title: pageTitle,
+//   link: [
+//     { rel: 'canonical', href: canonical }
+//   ]
+// })
+// useSeoMeta({
+//   title: pageTitle,
+//   description: pageDesc,
+//   ogTitle: pageTitle,
+//   ogDescription: pageDesc,
+//   ogType: 'article',
+//   ogUrl: canonical,
+//   ogImage: '/images/seo-tenses.png',
+//   robots: 'index, follow'
+// })
 
 const selectTopic = (id) => {
   topic.value = id
@@ -601,8 +606,9 @@ watch(currentTopicData, initLottieIcon)
 }
 
 .practice-area__button {
+  min-width: 230px;
   display: block;
-  text-decoration: none;
+  font-weight: 600;
   background: #f1c40f;
   color: #1e1e1e;
   border: 3px solid #1e1e1e;
@@ -610,11 +616,12 @@ watch(currentTopicData, initLottieIcon)
   padding: 15px;
   font-size: 1.2rem;
   transition: all .1s ease-in-out;
-  box-shadow: 4px 4px 0 #1e1e1e;
+  box-shadow: 3px 3px 0 #1e1e1e;
 }
 
 .practice-area__button:hover {
   transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 #1e1e1e;
   background: #ffe04d
 }
 
@@ -738,6 +745,8 @@ watch(currentTopicData, initLottieIcon)
   display: block;
   text-align: center;
   width: 100%;
+  font-weight: 600;
+  font-family: "Nunito", sans-serif;
   padding: .8rem;
   margin-bottom: 2rem;
   font-size: 1.2rem;

@@ -1,4 +1,127 @@
 {
+  "eventsModal": {
+    "halloweenLabel": "Qovoqlar bayrami",
+    "halloweenText": "Qovoqlarni yig‘ing, topshiriqlarni bajaring va mavzuga oid mukofotlarni oling!",
+    "winterLabel": "Qish shivirlashi",
+    "winterText": "Qishki tadbirda ishtirok eting! Qor parchalarini yig‘ing, sovg‘alarni oching.",
+    "valentineLabel": "Yuraklar festivali",
+    "valentineText": "Romantik tadbirda qatnashing va eksklyuziv mukofotlarni qo‘lga kiriting!",
+    "jokeLabel": "Hazillar paradi",
+    "jokeText": "Zavqlaning, bonuslarni yig‘ing va hazil-mutoyiba sinovlarida qatnashing!"
+  },
+  "winterEventQuests": {
+    "quest-21": "So'zlar xazinasi",
+    "quest-1": "Rojdestvo ruhi",
+    "quest-2": "An'analar va ramzlar",
+    "quest-3": "Nikolaus va qahramonlar",
+    "quest-4": "Advent sehri",
+    "quest-5": "Sovg'a berish san'ati",
+    "quest-6": "Rojdestvo",
+    "quest-7": "Bayram kunlari",
+    "quest-8": "Silvester afsonasi",
+    "quest-9": "Sehrli o'rmon",
+    "quest-10": "Qishki ta'til",
+    "quest-11": "Ramzlar",
+    "quest-12": "An'analar",
+    "quest-13": "Urflar",
+    "quest-14": "Irrimlar va afsonalar",
+    "quest-15": "Buyumlar va qishki hordiq",
+    "quest-16": "Qish va Yangi yil",
+    "quest-17": "Rojdestvo",
+    "quest-18": "Tayyorgarlik",
+    "quest-19": "Yangi yil kechasi",
+    "quest-20": "Nemis bayrami"
+  },
+  "winterEvent": {
+    "pathMain": "Bosh sahifa",
+    "event": "Tadbir",
+    "panel": "Tadbir paneli",
+    "reputation": "Obro‘",
+    "currency": "Valyuta",
+    "shop": "Obro‘ do‘koni",
+    "bought": "Sotib olindi",
+    "notAllowed": "Mavjud emas",
+    "notEnough": "Yetarli emas",
+    "buy": "Sotib olish",
+    "questions": "Topshiriqlar",
+    "rep": "obr.",
+    "repeat": "Takrorlash",
+    "execute": "Bajarish",
+    "notAllowedTitle": "Tadbir mavjud emas",
+    "notAllowedText": "Ushbu tadbir hali boshlanmagan yoki allaqachon tugagan.",
+    "eventShop": "Tadbir do‘koni",
+    "eventQuestions": "Tadbir topshiriqlari",
+    "firstReputation": "Qorli Ishonch",
+    "secondReputation": "Qishki Ehtirom"
+  },
+  "winterEventShopItems": {
+    "santaHat": "Santa qalpog‘i",
+    "christmasBall": "Qorli shar",
+    "christmasWreath": "Rojdestvo gulchambari",
+    "snowFall": "Qor yog‘ish effekti"
+  },
+  "winterAchievements": {
+    "firstQuestName": "Birinchi archa yulduzi",
+    "firstQuestDescription": "Qishki voqea doirasidagi istalgan vazifani bajaring va birinchi yulduzni yoqing.",
+    "santaLexiconName": "Santa lug‘ati",
+    "santaLexiconDescription": "Rojdestvo va Yangi yilga oid barcha so‘zlarni o‘zlashtiring.",
+    "everyQuestName": "Qish pichirining qo‘riqchisi",
+    "everyQuestDescription": "“Qish pichiri” voqeasining barcha vazifalarini bajaring va haqiqiy bo‘ron nafasini his qiling.",
+    "snowFallName": "Qor yog‘ishi",
+    "snowFallDescription": "“Qish pichiri” voqeasi davomida qor yog‘ishi effektini sotib oling.",
+    "santaHatName": "Santa shapkasi",
+    "santaHatDescription": "Tadbir davomida afsonaviy Santa shapkasi­ni sotib oling va Rojdestvo ruhini his eting.",
+    "christmasBallName": "Qor shari",
+    "christmasBallDescription": "Ushbu sehrli qor sharini xarid qilib, qish onini asrab qoling.",
+    "christmasWreathName": "Rojdestvo chambaragi",
+    "christmasWreathDescription": "Bayram va uy qulayligi ramzi bo‘lgan an’anaviy chambarakni sotib oling.",
+    "winterHonorName": "Qishiy sha’n",
+    "winterHonorDescription": "“Qish pichiri” voqeasidagi topshiriqlarni bajarib, qishiy sha’nni qo‘lga kiriting.",
+    "metaChristmasName": "Rojdestvo ustasi",
+    "metaChristmasDescription": "“Qish pichiri” voqeasining barcha yutuqlarini oching va bayram mavsumining afsonasiga aylaning."
+  },
+
+  "stepHitSettings": {
+    "back": "Orqaga",
+    "further": "Keyingi",
+    "end": "Tugatish",
+    "skip": "O‘tkazib yuborish"
+  },
+  "stepHitLabels": {
+    "learnTitle": "O‘qish",
+    "learnDescription": "Grammatika, iboralar, artikllar, zamonlar va mashqlar — nemis tilini ishonch bilan rivojlantirish uchun.",
+    "duelTitle": "O‘yinlar",
+    "duelDescription": "Duellar, marafonlar, so‘z topish rejimi, vazifalar jurnali va o‘yin ko‘rinishidagi mashqlar.",
+    "testTitle": "Testlar",
+    "testDescription": "A1 dan B2 gacha darajani tekshiring: grammatika, yozish, tinglash va gapirish.",
+    "eventTitle": "Tadbirlar",
+    "eventDescription": "Mavsumiy topshiriqlar va vaqtinchalik sinovlar mukofotlar bilan.",
+    "articleTitle": "Articlus",
+    "articleDescription": "Bu — o‘qish uchun ichki valyutangiz. To‘g‘ri javoblar uchun Articlus oling va qo‘shimcha urinishlarga sarflang.",
+    "levelTitle": "Daraja",
+    "levelDescription": "Bu yerda joriy darajangiz ko‘rsatiladi. O‘qing va bosqichma-bosqich ko‘tariling.",
+    "statsTitle": "Statistika",
+    "statsDescription": "Umumiy statistika: topshiriqlar, artikllar, mavzular va o‘yinlar.",
+    "achievementsTitle": "Yutuqlar",
+    "achievementsDescription": "Bu yerda o‘yinlar va topshiriqlar uchun yutuqlaringiz saqlanadi.",
+    "rankedTitle": "Reyting",
+    "rankedDescription": "Bu yerda kim ko‘p so‘z topgani va kim birinchi o‘rinda ekanini ko‘rasiz.",
+    "calendarTitle": "Tadbirlar taqvimi",
+    "calendarDescription": "Tadbirlar sanalar bo‘yicha ko‘rsatiladi. Mukofotlarni qo‘ldan boy bermang."
+  },
+  "recipes": {
+    "start": "Vazifani boshlash",
+    "training": "Mashg‘ulotga o‘tish",
+    "did": "Bu vazifani allaqachon bajargansiz. Keyingisi yuklanmoqda...",
+    "timer": "Keyingi vazifa shundan keyin mavjud bo‘ladi:",
+    "didAll": "Bu mavzudagi barcha vazifalarni bajardingiz",
+    "notFound": "topilmadi",
+    "error": "Voy, retseptlarni topa olmayapman",
+    "repeat": "10 Artiklus evaziga urinish"
+  },
+  "practiceArticleBtn": {
+    "btn": "Artikl mashqlariga"
+  },
   "footer": {
     "copy": "Der Die Das. Barcha huquqlar himoyalangan.",
     "about": "Ilova haqida",
@@ -6,7 +129,7 @@
     "privacy": "Maxfiylik siyosati",
     "terms": "Foydalanish shartlari"
   },
-  "friendExam": {
+  "friendExamBtn": {
     "btn": "Do'stlarning imtihonlari"
   },
   "regions": {
@@ -67,7 +190,7 @@
     "profile": "Profil"
   },
   "metaAdjectiveBasic": {
-    "title": "German Corner — Sifatlar A1–A2: ranglar, his-tuyg‘ular, tashqi ko‘rinish, xarakter, o‘lcham",
+    "title": "Skillupgerman — Sifatlar A1–A2: ranglar, his-tuyg‘ular, tashqi ko‘rinish, xarakter, o‘lcham",
     "description": "Nemis tilidagi asosiy sifatlarni mavzular bo‘yicha o‘rganing: ranglar, his-tuyg‘ular va emotsiyalar, tashqi ko‘rinish, xarakter, o‘lcham va shakl. Tarjima va ovozli misollar + mashqlar."
   },
   "metaAdjectiveComparison": {
@@ -90,7 +213,7 @@
     "testsLevels": "Nemis tili testlari — darajalar"
   },
   "metaLocation": {
-    "title": "German Corner — Nemis tili o‘rganish uchun til yurtlari",
+    "title": "Skillupgerman — Nemis tili o‘rganish uchun til yurtlari",
     "description": "Til yurtlarini kashf eting va topshiriqlarni bajarib, bosqichlarni o‘tib nemis tilingizni rivojlantiring. So‘z boyligi va grammatikani sarguzasht shaklida o‘rganing, topshiriqlar va rivojlanish bilan — xuddi o‘yindek!"
   },
   "metaModalVerbs": {
@@ -131,7 +254,7 @@
   },
   "metaMainPage": {
     "title": "Nemis tilini o‘yin shaklida o‘rganing",
-    "description": "German Corner. O‘yin shaklidagi mashqlar: artikellar der, die, das, mavzuli darajalar, fe’llar, sifatlar, predloglar, topshiriqlar va yutuqlar. Nemis tilini qiziqarli o‘rganing!"
+    "description": "Skillupgerman o‘yin shaklidagi mashqlar: artikellar der, die, das, mavzuli darajalar, fe’llar, sifatlar, predloglar, topshiriqlar va yutuqlar. Nemis tilini qiziqarli o‘rganing!"
   },
   "metaVerbsTheory": {
     "title": "Nemis fe’llari nazariyasi misollar va test bilan",
@@ -159,10 +282,10 @@
     "featureTen": "Kelajakdagi funksiyalar"
   },
   "useHeadApp": {
-    "title": "German Corner — Nemis tilini o‘rganish oson va qiziqarli",
-    "content": "German Corner — nemis tilini o‘rganish uchun onlayn platforma: grammatika, artikllar, zamonlar, mashqlar va o‘yin shaklidagi ta’lim.",
+    "title": "Skillupgerman — Nemis tilini o‘rganish oson va qiziqarli",
+    "content": "Skillupgerman — nemis tilini o‘rganish uchun onlayn platforma: grammatika, artikllar, zamonlar, mashqlar va o‘yin shaklidagi ta’lim.",
     "contentTwo": "nemis tili, artikllar, grammatika, nemis tilini onlayn o‘rganish, A1, A2, B1",
-    "contentThree": "German Corner — Nemis tilini o‘rganish",
+    "contentThree": "Skillupgerman — Nemis tilini o‘rganish",
     "contentFour": "Mashqlar va o‘yinlar bilan nemis tilini qiziqarli va samarali o‘rganing!"
   },
   "achievementToast": {
@@ -1335,7 +1458,10 @@
     "allCases": "Birlik jumboq",
     "fiveHearts": "Hayot qalqoni",
     "daily42": "Galaktik teleskop",
-    "iAmGroot": "Grootli guldon"
+    "iAmGroot": "Grootli guldon",
+    "santaHat": "Santa shapkasi",
+    "christmasBall": "Rojdestvo shar",
+    "christmasWreath": "Rojdestvo guli"
   },
   "eastPlainFirstQuests": {
     "title": "Birinchi uchrashuv",
@@ -3599,7 +3725,8 @@
   "cabinetToggle": {
     "sound": "Ovozli bildirishnomalar",
     "theme": "Qorong‘i rejim",
-    "ach": "Yutuqlar bildirishnomasi"
+    "ach": "Yutuqlar bildirishnomasi",
+    "snowFall": "Qor yog‘ishi"
   },
   "cabinet": {
     "important": "MUHIM!!!",
@@ -3637,7 +3764,12 @@
     "deleteAccBtnReject": "Bekor qilish",
     "boughtAvatar": "Avatar sotib olindi",
     "notEnoughtArticles": "Artiklyuslar yetarli emas",
-    "boughtBtn": "Ok"
+    "boughtBtn": "Ok",
+    "notAllow": "Effekt mavjud emas",
+    "modalNotAllowEffectFirst": "Bu effektni faqat voqea vaqtida ochish mumkin",
+    "modalNotAllowEffectSecond": "“Qishning shiviri”",
+    "modalNotAllowEffectThird": "Uni tadbir do‘konidan qor parchasi evaziga oling!",
+    "modalNotAllowEffectClose": "Yopish"
   },
   "articleOverlay": {
     "title": "Artiklyus nima va uni qanday olish mumkin",
@@ -4250,7 +4382,12 @@
     "adjectives": "Sifatlar",
     "adjectiveBasic": "Asoslar",
     "adjectiveDeclension": "Kelishiklar",
-    "adjectiveComparison": "Daraja taqqoslash"
+    "adjectiveComparison": "Daraja taqqoslash",
+    "events": "Tadbirlar",
+    "winterEvent": "Qishdan bir chimdim",
+    "valentineEvent": "Yuraklar festivali",
+    "foolDayEvent": "Kulgu paradi",
+    "halloweenEvent": "Qovoqlar bayrami"
   },
   "specialCategory": {
     "specialCollectionText": "To‘plovchi",
@@ -4333,7 +4470,7 @@
     "cowabungaText": "KOVABUNGA",
     "cowabungaDescription": "Salami yoki pepperoni? Ninja toshbaqalari baribir yeydi. “salami” so‘zini artikl mashqlarida barcha rejimlarda o‘rganing.",
     "zooText": "Hayvonlar do‘sti",
-    "zooDescription": "Barcha jonivorlarning chin do‘sti!",
+    "zooDescription": "Haqiqiy doʻst hech kimni artiklsiz qoldirmaydi! “Hayvonlar” mavzusidagi barcha soʻzlarni artikl mashqining barcha rejimlarida oʻrganing.",
     "veganText": "Sabzavot himoyachisi",
     "veganDescription": "Hech bir sabzavot artiklsiz qolmaydi! “Oziq-ovqat” mavzusidagi barcha sabzavot so‘zlarini barcha artikel mashq rejimlarida o‘rganing.",
     "firstStepLabel": "Birinchi qadam",
@@ -4366,7 +4503,10 @@
     "magisterText": "Artikl mashqlarida barcha rejimlarda 100 ta so‘z o‘rganib ustalik darajasiga erishing",
     "mistakesLabel": "Xatolar to‘siq emas!",
     "mistakesText": "Har bir xato — bilim sari qadam!",
-    "mistakesAward": "Mukofot: Sabr talismani"
+    "mistakesAward": "Mukofot: Sabr talismani",
+    "voiceActivatedText": "Ovozli kirish",
+    "voiceActivatedLabel": "Muhim bildirishnomani o‘qing va tasdiqlang hamda Sprechen modulini faollashtiring.",
+    "theLostDescription": "Bunker kirishi hammaning ko‘z oldida yashirin. Sayt logotipiga 5 marta taqillatib protokolni ishga tushir va savollarga javob berib kirish huquqini ol"
   },
   "guessCategory": {
     "guessLabel": "So‘zni topish",
@@ -4779,7 +4919,7 @@
     "confirm": "Parolni takrorlang"
   },
   "banner": {
-    "title": "Nemis artikllarini o‘rganing, sehrli ko‘nikmalarni rivojlantiring va karta janglarida g‘alaba qozoning!",
+    "title": "Nemis tilini har kuni o‘yin tarzida mashq qiling. Ishonchli rivojlanish uchun ko‘plab mavzular va grammatika mashqlari.",
     "btn": "Yo‘lni boshlash"
   },
   "features": {

@@ -1,4 +1,126 @@
 {
+  "eventsModal": {
+    "halloweenLabel": "Pumpkin Festival",
+    "halloweenText": "Collect pumpkins, complete quests, and get themed rewards!",
+    "winterLabel": "Whisper of Winter",
+    "winterText": "Join the winter event! Collect snowflakes, open gifts.",
+    "valentineLabel": "Festival of Hearts",
+    "valentineText": "Take part in the romantic event and get exclusive rewards!",
+    "jokeLabel": "Prank Parade",
+    "jokeText": "Have fun, collect bonuses, and join funny challenges!"
+  },
+  "winterEventQuests": {
+    "quest-21": "Treasury of Words",
+    "quest-1": "Christmas Spirit",
+    "quest-2": "Traditions and Symbols",
+    "quest-3": "Nicholas and Characters",
+    "quest-4": "Magic of Advent",
+    "quest-5": "The Art of Gift Giving",
+    "quest-6": "Christmas",
+    "quest-7": "Festive Days",
+    "quest-8": "Legend of Silvester",
+    "quest-9": "Enchanted Forest",
+    "quest-10": "Winter Holidays",
+    "quest-11": "Symbols",
+    "quest-12": "Traditions",
+    "quest-13": "Customs",
+    "quest-14": "Beliefs and Myths",
+    "quest-15": "Items and Winter Leisure",
+    "quest-16": "Winter and New Year",
+    "quest-17": "Christmas",
+    "quest-18": "Preparation",
+    "quest-19": "New Year's Eve",
+    "quest-20": "German Holiday"
+  },
+  "winterEvent": {
+    "pathMain": "Home",
+    "event": "Event",
+    "panel": "Event Panel",
+    "reputation": "Reputation",
+    "currency": "Currency",
+    "shop": "Reputation Shop",
+    "bought": "Purchased",
+    "notAllowed": "Unavailable",
+    "notEnough": "Not enough",
+    "buy": "Buy",
+    "questions": "Quests",
+    "rep": "rep.",
+    "repeat": "Repeat",
+    "execute": "Start",
+    "notAllowedTitle": "Event Unavailable",
+    "notAllowedText": "This event has not started yet or has already ended.",
+    "eventShop": "Event Shop",
+    "eventQuestions": "Event Quests",
+    "firstReputation": "Snowy Trust",
+    "secondReputation": "Winter Respect"
+  },
+  "winterEventShopItems": {
+    "santaHat": "Santa Hat",
+    "christmasBall": "Snow Globe",
+    "christmasWreath": "Christmas Wreath",
+    "snowFall": "Snowfall Effect"
+  },
+  "winterAchievements": {
+    "firstQuestName": "First Tree Star",
+    "firstQuestDescription": "Complete any quest of the winter event and light the first star.",
+    "santaLexiconName": "Santa’s Lexicon",
+    "santaLexiconDescription": "Master all words related to Christmas and New Year.",
+    "everyQuestName": "Keeper of Winter’s Whisper",
+    "everyQuestDescription": "Complete all quests of the “Whisper of Winter” event and feel the breath of a real snowstorm.",
+    "snowFallName": "Snowfall",
+    "snowFallDescription": "Buy the snowfall effect during the “Whisper of Winter” event.",
+    "santaHatName": "Santa’s Hat",
+    "santaHatDescription": "Buy the legendary Santa’s Hat during the event and feel the spirit of Christmas.",
+    "christmasBallName": "Snow Globe",
+    "christmasBallDescription": "Buy this magical snow globe to capture a moment of winter.",
+    "christmasWreathName": "Christmas Wreath",
+    "christmasWreathDescription": "Buy a traditional wreath, a symbol of the holidays and home comfort.",
+    "winterHonorName": "Winter Honor",
+    "winterHonorDescription": "Earn winter honor by completing quests in the “Whisper of Winter” event.",
+    "metaChristmasName": "Christmas Master",
+    "metaChristmasDescription": "Unlock all achievements of the “Whisper of Winter” event and become a legend of the holiday season."
+  },
+  "stepHitSettings": {
+    "back": "Back",
+    "further": "Next",
+    "end": "Finish",
+    "skip": "Skip"
+  },
+  "stepHitLabels": {
+    "learnTitle": "Learning",
+    "learnDescription": "Grammar, phrases, articles, tenses and practice — everything to improve your German confidently.",
+    "duelTitle": "Games",
+    "duelDescription": "Duels, marathons, guess-the-word mode, task journal, and places to train in game format.",
+    "testTitle": "Tests",
+    "testDescription": "Check your level from A1 to B2: grammar, writing, listening, and speaking with instant feedback.",
+    "eventTitle": "Events",
+    "eventDescription": "Seasonal tasks, word collections and temporary challenges with rewards.",
+    "articleTitle": "Articlus",
+    "articleDescription": "This is your internal currency for learning. Earn Articlus for correct answers and spend them on extra attempts.",
+    "levelTitle": "Level",
+    "levelDescription": "This shows your current level. Study, complete tasks and raise your level step by step.",
+    "statsTitle": "Statistics",
+    "statsDescription": "Overall learning stats: tasks completed, articles, language lands, thematic topics.",
+    "achievementsTitle": "Achievements",
+    "achievementsDescription": "Here you collect your achievements for completing tasks and being active in games.",
+    "rankedTitle": "Ranked",
+    "rankedDescription": "Here you can see the ranking of players: who guessed more words, who has the best progress and who is first.",
+    "calendarTitle": "Event calendar",
+    "calendarDescription": "Events are displayed by dates. Follow events so you don’t miss the chance to complete and earn rewards."
+  },
+  "recipes": {
+    "start": "Start the task",
+    "training": "To training",
+    "did": "You have already completed this task. Loading the next one...",
+    "timer": "The next task will be available in",
+    "didAll": "You have completed everything in this topic",
+    "notFound": "not found",
+    "error": "Oops, I can't find the recipes",
+    "repeat": "Attempt for 10 Artiklus"
+  },
+  "practiceArticleBtn": {
+    "btn": "To article practice"
+  },
   "footer": {
     "copy": "Der Die Das. All rights reserved.",
     "about": "About",
@@ -6,7 +128,7 @@
     "privacy": "Privacy Policy",
     "terms": "Terms of Service"
   },
-  "friendExam": {
+  "friendExamBtn": {
     "btn": "Friends' Exams"
   },
   "regions": {
@@ -67,7 +189,7 @@
     "profile": "Profile"
   },
   "metaAdjectiveBasic": {
-    "title": "German Corner — Adjectives A1–A2: colors, feelings, appearance, character, size",
+    "title": "Skillupgerman — Adjectives A1–A2: colors, feelings, appearance, character, size",
     "description": "Learn basic German adjectives by topics: colors, feelings and emotions, appearance, character, size and shape. Examples with translation and audio + trainers."
   },
   "metaAdjectiveComparison": {
@@ -90,7 +212,7 @@
     "testsLevels": "German tests — levels"
   },
   "metaLocation": {
-    "title": "German Corner — Language Lands for learning German",
+    "title": "Skillupgerman — Language Lands for learning German",
     "description": "Explore language lands and level up your German by completing tasks and passing levels. Learn vocabulary and grammar in adventure format with quests and progression, like in a game!"
   },
   "metaModalVerbs": {
@@ -131,7 +253,7 @@
   },
   "metaMainPage": {
     "title": "Learn German in game form",
-    "description": "German Corner. Game-like training of articles der, die, das, thematic levels, verbs, adjectives, prepositions, quests and achievements. Learn German with fun!"
+    "description": "Skillupgerman - game-like training of articles der, die, das, thematic levels, verbs, adjectives, prepositions, quests and achievements. Learn German with fun!"
   },
   "metaVerbsTheory": {
     "title": "Theory of German verbs with examples and quiz",
@@ -159,10 +281,10 @@
     "featureTen": "Upcoming features"
   },
   "useHeadApp": {
-    "title": "German Corner — Learn German easily and interestingly through games",
-    "content": "German Corner — an online platform for learning German: grammar, articles, tenses, exercises and game-based learning.",
+    "title": "Skillupgerman — Learn German easily and interestingly through games",
+    "content": "Skillupgerman — an online platform for learning German: grammar, articles, tenses, exercises and game-based learning.",
     "contentTwo": "German language, articles, grammar, learn German online, A1, A2, B1",
-    "contentThree": "German Corner — Learning German",
+    "contentThree": "Skillupgerman — Learning German",
     "contentFour": "Learn German in a fun and effective way with exercises and games!"
   },
   "achievementToast": {
@@ -1335,7 +1457,10 @@
     "allCases": "Puzzle of Unity",
     "fiveHearts": "Shield of Life",
     "daily42": "Galactic Telescope",
-    "iAmGroot": "Pot with Groot"
+    "iAmGroot": "Pot with Groot",
+    "santaHat": "Santa hat",
+    "christmasBall": "Christmas ornament",
+    "christmasWreath": "Christmas wreath"
   },
   "eastPlainFirstQuests": {
     "title": "First Meeting",
@@ -3599,7 +3724,8 @@
   "cabinetToggle": {
     "sound": "Sound Notifications",
     "theme": "Dark Mode",
-    "ach": "Achievement Notifications"
+    "ach": "Achievement Notifications",
+    "snowFall": "Snowfall"
   },
   "cabinet": {
     "important": "IMPORTANT!!!",
@@ -3637,7 +3763,12 @@
     "deleteAccBtnReject": "Cancel",
     "boughtAvatar": "Avatar purchased",
     "notEnoughtArticles": "Not enough Artiklus",
-    "boughtBtn": "Ok"
+    "boughtBtn": "Ok",
+    "notAllow": "Effect unavailable",
+    "modalNotAllowEffectFirst": "This effect can only be unlocked in the event",
+    "modalNotAllowEffectSecond": "“Whisper of Winter”",
+    "modalNotAllowEffectThird": "Get it in the event shop for snowflakes!",
+    "modalNotAllowEffectClose": "Close"
   },
   "articleOverlay": {
     "title": "What is an Artikleus and how to earn it",
@@ -4250,7 +4381,12 @@
     "adjectives": "Adjectives",
     "adjectiveBasic": "Basics",
     "adjectiveDeclension": "Declension",
-    "adjectiveComparison": "Comparison"
+    "adjectiveComparison": "Comparison",
+    "events": "Events",
+    "winterEvent": "A Pinch of Winter",
+    "valentineEvent": "Festival of Hearts",
+    "foolDayEvent": "Parade of Laughter",
+    "halloweenEvent": "Pumpkin Festival"
   },
   "specialCategory": {
     "specialCollectionText": "Collector",
@@ -4333,7 +4469,7 @@
     "cowabungaText": "COWABUNGA",
     "cowabungaDescription": "Salami or Pepperoni? The Ninja Turtles would eat it anyway. Learn “salami” in all modes in the articles practice.",
     "zooText": "Friend of Animals",
-    "zooDescription": "A true friend of all creatures!",
+    "zooDescription": "A true friend won't leave anyone without an article! Learn all the words in the “Animals” topic in all article practice modes.",
     "veganText": "Protector of Vegetables",
     "veganDescription": "No vegetable shall remain without an article! Learn all the vegetable words from the topic 'Food' in every article practice mode.",
     "firstStepLabel": "First Step",
@@ -4366,7 +4502,10 @@
     "magisterText": "Achieve mastery by learning 100 words in all modes in Article Practice",
     "mistakesLabel": "Mistakes Won’t Stop Me!",
     "mistakesText": "Each one is a step toward knowledge!",
-    "mistakesAward": "Reward: Talisman of Patience"
+    "mistakesAward": "Reward: Talisman of Patience",
+    "voiceActivatedText": "Voice Access",
+    "voiceActivatedLabel": "Read and accept the important notice and activate the Sprechen module.",
+    "theLostDescription": "Entrance to the bunker is hidden in plain sight. Knock 5 times on the website logo to initiate the protocol and gain access by answering the questions"
   },
   "guessCategory": {
     "guessLabel": "Guess the word",
@@ -4779,7 +4918,7 @@
     "confirm": "Confirm your password"
   },
   "banner": {
-    "title": "Learn German articles, develop magical skills, and defeat opponents in card battles!",
+    "title": "Practice German in a playful way every day. Many topics and grammar exercises for confident progress.",
     "btn": "Start your journey"
   },
   "features": {

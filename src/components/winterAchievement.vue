@@ -48,17 +48,13 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useAchievementStore } from '../../store/achievementStore.js'
-import { eventWinterAchievements } from '../achieveGroup/eventAchievement/winterAchievements.js'
 const { t } = useI18n()
 
 const achievementStore = useAchievementStore()
 
-const targetTitles = eventWinterAchievements.map(g => g.title)
 const writeGroups = computed(() =>
-    achievementStore.groups.filter(g =>
-        targetTitles.includes(g.title)
-    )
-)
+    achievementStore.groups.filter(group => group.category === 'winter'))
+
 
 const getCompletedCount = group =>
     group.achievements.filter(a => a.currentProgress >= a.targetProgress).length

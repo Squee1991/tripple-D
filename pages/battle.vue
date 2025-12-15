@@ -46,6 +46,13 @@ import {getAuth} from 'firebase/auth'
 import {getFirestore, doc, onSnapshot, getDoc} from 'firebase/firestore'
 import Card from '../src/components/deck.vue'
 
+definePageMeta({
+  robots: {
+    index: false,
+    follow: false
+  }
+})
+
 const route = useRoute()
 const router = useRouter()
 const auth = getAuth()

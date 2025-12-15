@@ -25,11 +25,11 @@
 <script setup>
 import { ref } from "vue"
 import { useRouter } from "vue-router"
-const PROJECT = "Skill-up-german"
-const EMAIL = "lexingo@gmail.com"
+const PROJECT = "Skillupgerman"
+const EMAIL = "skillupgerman@gmail.com"
 const COUNTRY = "Poland"
 const router = useRouter()
-const lastUpdated = ref("05 сентября 2025 года")
+const lastUpdated = ref("01 october 2025")
 
 const path = () => {
   router.push('/')
@@ -39,8 +39,8 @@ const sections = ref([
   {
     heading: "1. General",
     paragraphs: [
-      `The website and related services of Skill-Up-German (collectively, the “Service”) are operated by the rights holder Skill-Up-German. Access to and use of the Service are governed by these Terms of Service (“Terms”). By accessing or using the Service, you confirm that you have read, understood, and agree to be bound by these Terms, as well as other documents referenced herein (including, without limitation, the Privacy Policy provided separately). If you do not agree with the Terms, you are not authorized to use the Service.`,
-      `Skill-Up-German develops products for learning the German language in a gamified form. We periodically update the Service by adding or modifying features, interfaces, and materials. We reserve the right to amend these Terms. We may notify users of material changes by publishing a new version, and the effective date will be indicated at the top of this document. Continued use of the Service after the effective date of the updated Terms constitutes your acceptance of them.`
+      `The website and related services of skillupGerman (collectively, the “Service”) are operated by the rights holder Skillupgerman. Access to and use of the Service are governed by these Terms of Service (“Terms”). By accessing or using the Service, you confirm that you have read, understood, and agree to be bound by these Terms, as well as other documents referenced herein (including, without limitation, the Privacy Policy provided separately). If you do not agree with the Terms, you are not authorized to use the Service.`,
+      `SkillupGerman develops products for learning the German language in a gamified form. We periodically update the Service by adding or modifying features, interfaces, and materials. We reserve the right to amend these Terms. We may notify users of material changes by publishing a new version, and the effective date will be indicated at the top of this document. Continued use of the Service after the effective date of the updated Terms constitutes your acceptance of them.`
     ]
   },
   {
@@ -60,13 +60,13 @@ const sections = ref([
     heading: "4. Registration and account security",
     paragraphs: [
       "To access certain features of the Service, you may need to register an account. You agree to provide accurate, current, and complete information during registration and to keep it up to date. You are responsible for maintaining the confidentiality of your login credentials and for all activities that occur under your account.",
-      `You agree to promptly notify Skill-Up-German of any unauthorized access to or use of your account. You can contact us at ${EMAIL}. Skill-Up-German reserves the right to suspend or terminate account access in case of Terms violations or for security reasons.`
+      `You agree to promptly notify Skillupgerman of any unauthorized access to or use of your account. You can contact us at ${EMAIL}. Skillupgerman reserves the right to suspend or terminate account access in case of Terms violations or for security reasons.`
     ]
   },
   {
     heading: "5. License and permitted use",
     paragraphs: [
-      `Subject to compliance with these Terms, Skill-Up-German grants you a limited, non-exclusive, non-transferable, and revocable license to access and use the Service solely for personal educational purposes. Any other use, including commercial use, requires prior written consent from Skill-Up-German.`,
+      `Subject to compliance with these Terms, Skillupgerman grants you a limited, non-exclusive, non-transferable, and revocable license to access and use the Service solely for personal educational purposes. Any other use, including commercial use, requires prior written consent from Skill-Up-German.`,
       "You agree not to interfere with the Service, bypass technical limitations, perform reverse engineering, distribute malicious code, or use the Service for illegal purposes or in violation of third-party rights. We reserve the right to implement and modify technical protection and access control measures."
     ]
   },
@@ -89,7 +89,7 @@ const sections = ref([
   {
     heading: "8. Intellectual property",
     paragraphs: [
-      `All rights to the Content of Skill-Up-German and the Service itself (including design, texts, exercises, images, audio, video, source code, and other elements) belong to Skill-Up-German or are used under a valid license. No rights are transferred to you except those expressly granted by these Terms.`,
+      `All rights to the Content of Skillupgerman and the Service itself (including design, texts, exercises, images, audio, video, source code, and other elements) belong to Skillupgerman or are used under a valid license. No rights are transferred to you except those expressly granted by these Terms.`,
       "You may not copy, modify, distribute, publicly display, publish, or otherwise use the Content beyond the scope of the granted license, except as expressly permitted by applicable law. By submitting feedback, ideas, or suggestions, you agree that we may use them without any obligation to compensate you."
     ]
   },
@@ -110,7 +110,7 @@ const sections = ref([
   {
     heading: "11. Availability and modifications of the Service",
     paragraphs: [
-      `Skill-Up-German may modify, suspend, or discontinue the Service (in whole or in part) at any time, including for technical maintenance, updates, or new releases. In certain cases, access to the Service may be restricted for security reasons or to comply with legal requirements.`
+      `Skillupgerman may modify, suspend, or discontinue the Service (in whole or in part) at any time, including for technical maintenance, updates, or new releases. In certain cases, access to the Service may be restricted for security reasons or to comply with legal requirements.`
     ]
   },
   {
@@ -123,7 +123,7 @@ const sections = ref([
     heading: "13. Limitation of liability",
     paragraphs: [
       "To the maximum extent permitted by law, we are not liable for any indirect, incidental, special, consequential, punitive damages, loss of profits, data, goodwill, or other intangible losses arising from or related to your use or inability to use the Service, even if we have been advised of the possibility of such damages.",
-      "In any event, the total liability of Skill-Up-German for any claims shall not exceed the amount actually paid by you for access to the Service during the twelve (12) months preceding the event giving rise to such liability, unless otherwise required by mandatory law."
+      "In any event, the total liability of Skillupgerman for any claims shall not exceed the amount actually paid by you for access to the Service during the twelve (12) months preceding the event giving rise to such liability, unless otherwise required by mandatory law."
     ]
   },
   {
@@ -141,14 +141,14 @@ const sections = ref([
   {
     heading: "16. Governing law and jurisdiction",
     paragraphs: [
-      `These Terms are governed by the laws of ${COUNTRY}, without regard to conflict of laws principles. Any disputes arising out of or in connection with these Terms shall be resolved by the competent courts at the place of registration of Skill-Up-German, unless mandatory law provides otherwise.`,
+      `These Terms are governed by the laws of ${COUNTRY}, without regard to conflict of laws principles. Any disputes arising out of or in connection with these Terms shall be resolved by the competent courts at the place of registration of Skillupgerman, unless mandatory law provides otherwise.`,
       "If any provision of these Terms is found invalid or unenforceable, it shall not affect the validity of the remaining provisions; such provision shall be modified to the minimum extent necessary to achieve the intent of the original text."
     ]
   },
   {
     heading: "17. Assignment, entire agreement, and headings",
     paragraphs: [
-      `Skill-Up-German may assign its rights and obligations under these Terms to third parties in accordance with the law; you may not transfer your rights without our prior written consent. These Terms, together with any referenced documents, constitute the entire agreement between you and Skill-Up-German regarding the subject matter and supersede all prior understandings or agreements.`,
+      `Skillupgerman may assign its rights and obligations under these Terms to third parties in accordance with the law; you may not transfer your rights without our prior written consent. These Terms, together with any referenced documents, constitute the entire agreement between you and Skillupgerman regarding the subject matter and supersede all prior understandings or agreements.`,
       "Section headings are provided for convenience only and do not affect interpretation. Our failure to enforce any right shall not be deemed a waiver of it."
     ]
   },
@@ -159,7 +159,6 @@ const sections = ref([
     ]
   }
 ])
-
 
 </script>
 

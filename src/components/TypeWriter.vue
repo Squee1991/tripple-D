@@ -9,11 +9,11 @@
 import { ref, watch, onMounted, onBeforeUnmount } from 'vue'
 
 const props = defineProps({
-    text: { type: String, default: '' },  // исходный текст
-    speed: { type: Number, default: 28 }, // мс между символами
-    startDelay: { type: Number, default: 120 }, // задержка перед стартом
-    cursor: { type: Boolean, default: true },   // мигающий курсор
-    smartPause: { type: Boolean, default: true } // подольше после . , ! ? :
+    text: { type: String, default: '' },
+    speed: { type: Number, default: 28 },
+    startDelay: { type: Number, default: 120 },
+    cursor: { type: Boolean, default: true },
+    smartPause: { type: Boolean, default: true }
 })
 
 const emit = defineEmits(['done'])

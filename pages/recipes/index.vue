@@ -48,12 +48,18 @@ import {useQuestStore} from '../../store/questStore.js'
 import Modal from '../../src/components/modal.vue'
 import {useRouter} from 'vue-router'
 import DoneImg from '../../assets/images/done.svg'
-
+import VBackBtn from "../../src/components/V-back-btn.vue";
+import {useSeoMeta} from "#imports";
 const showModal = ref(false)
 const cooldownSeconds = ref(0)
 const router = useRouter()
 const {t} = useI18n()
 const questStore = useQuestStore()
+
+useSeoMeta({
+  robots: 'noindex, nofollow'
+})
+
 const data = ref({
   title: "modal.achieveTitle",
   text: "modal.achieveText"
@@ -100,9 +106,6 @@ onMounted(async () => {
 }
 
 .back-button {
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
   padding: 0.75rem 1.5rem;
   font-size: 1.1rem;
   font-weight: 600;
@@ -117,19 +120,18 @@ onMounted(async () => {
 }
 
 .back-button:active {
-  transform: translate(4px, 4px);
   box-shadow: 0px 0px 0px #111827;
 }
 
 .page-header {
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 1.5rem;
   margin-top: 3rem;
 }
 
 .page-header h1 {
   padding: 15px 0;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 700;
   color: var(--titleColor);
   text-transform: uppercase;
@@ -138,7 +140,7 @@ onMounted(async () => {
 }
 
 .page-header p {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   color: var(--titleColor);
   margin-top: 0.5rem;
   font-weight: 500;
@@ -162,8 +164,8 @@ onMounted(async () => {
   position: relative;
   cursor: pointer;
   transition: transform 0.2s ease-out;
+  overflow: hidden;
 }
-
 
 .theme-sticker-card::before {
   content: "";
@@ -180,8 +182,6 @@ onMounted(async () => {
 .theme-sticker-card:hover::before {
   border-width: 0 0 70px 70px;
 }
-
-
 
 .card-content {
   padding: 1.5rem;
@@ -248,12 +248,14 @@ p {
 
 
 @media (min-width: 1024px) {
-  .back-button:hover {
-    transform: translate(2px, 2px);
-    box-shadow: 2px 2px 0px #111827;
-  }
   .theme-sticker-card:hover {
     transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 500px) {
+  .back-button {
+    width: 100%;
   }
 }
 

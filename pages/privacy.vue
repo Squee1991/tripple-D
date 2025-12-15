@@ -21,8 +21,8 @@
 import { ref } from "vue"
 import { useRouter } from "vue-router"
 const router = useRouter()
-const PROJECT = "skill-up-german"
-const EMAIL = "skill-up-german@gmail.com"
+const PROJECT = "skillupgerman"
+const EMAIL = "skillupgerman@gmail.com"
 const COUNTRY = "Poland"
 
 
@@ -34,7 +34,7 @@ const sections = ref([
   {
     heading: "1. Introduction",
     paragraphs: [
-      `This Privacy Policy describes how Skill-Up-German collects, uses, and protects users' personal data.`,
+      `This Privacy Policy describes how skillupgerman collects, uses, and protects users' personal data.`,
       `By using the Service, you agree to the terms of this Policy.`
     ]
   },

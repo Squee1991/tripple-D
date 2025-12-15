@@ -87,24 +87,28 @@ import {useHead, useSeoMeta, useRuntimeConfig} from '#imports'
 
 const {t} = useI18n()
 const canonical = useCanonical()
-const pageTitle = t('metaModalVerbs.title')
-const pageDesc = t('metaModalVerbs.description')
+// const pageTitle = t('metaModalVerbs.title')
+// const pageDesc = t('metaModalVerbs.description')
+//
+// useHead({
+//   title: pageTitle,
+//   link: [
+//     {rel: 'canonical', href: canonical}
+//   ]
+// })
+// useSeoMeta({
+//   title: pageTitle,
+//   description: pageDesc,
+//   ogTitle: pageTitle,
+//   ogDescription: pageDesc,
+//   ogType: 'article',
+//   ogUrl: canonical,
+//   ogImage: '/images/seo-modal-nebensatze.png',
+//   robots: 'index, follow'
+// })
 
-useHead({
-  title: pageTitle,
-  link: [
-    {rel: 'canonical', href: canonical}
-  ]
-})
 useSeoMeta({
-  title: pageTitle,
-  description: pageDesc,
-  ogTitle: pageTitle,
-  ogDescription: pageDesc,
-  ogType: 'article',
-  ogUrl: canonical,
-  ogImage: '/images/seo-modal-nebensatze.png',
-  robots: 'index, follow'
+  robots: 'noindex, nofollow'
 })
 
 const router = useRouter();
@@ -281,23 +285,6 @@ watch(selectedGroup, initLottieIcon);
   box-shadow: 6px 6px 0px #1e1e1e;
   flex-shrink: 0;
   overflow-y: auto;
-}
-
-.btn__back {
-  display: block;
-  text-align: center;
-  width: 100%;
-  padding: 0.8rem;
-  margin-bottom: 2rem;
-  font-size: 1.2rem;
-  border-radius: 12px;
-  cursor: pointer;
-  background-color: #f1c40f;
-  color: #1e1e1e;
-  text-decoration: none;
-  border: 3px solid #1e1e1e;
-  box-shadow: 4px 4px 0px #1e1e1e;
-  transition: background-color 0.2s;
 }
 
 .sidebar__title {
@@ -507,20 +494,23 @@ watch(selectedGroup, initLottieIcon);
 .practice-area__button {
   text-decoration: none;
   background: #f1c40f;
+  min-width: 230px;
   color: black;
   border: 3px solid #000;
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 15px 30px;
   font-size: 1.3rem;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  box-shadow: 4px 4px 0px #000;
+  box-shadow: 3px 3px 0px #000;
   text-align: center;
 }
 
 .practice-area__button:hover {
-  background: #218838;
+  background: #eac431;
+  box-shadow: 1px 1px 0 #000;
+  transform: translate(2px , 2px);
 }
 
 .practice-area__button:active {

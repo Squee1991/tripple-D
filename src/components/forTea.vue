@@ -6,7 +6,7 @@
 
 <script setup>
 	const openDonationLink = () => {
-		window.open('https://buymeacoffee.com/diederdas', '_blank')
+		window.open('https://buymeacoffee.com/skillupgerman', '_blank')
 	}
 </script>
 

@@ -175,6 +175,11 @@ const uiWord = computed(() => {
   )
 })
 
+function hasAnyPlural(wordsArray) {
+  const list = Array.isArray(wordsArray) ? wordsArray : []
+  return list.some(w => w.plural && String(w.plural).trim() !== '')
+}
+
 const goBack = () => {
   router.back()
 }
@@ -274,20 +279,19 @@ function nextStep() {
 
 function restartAll() {
   isReview.value = true
-  if (!Array.isArray(selectedModes.value) || selectedModes.value.length === 0 || selectedModes.value.every(m => !m)) {
-    selectedModes.value = ['article', 'letters', 'wordArticle', 'plural', 'audio']
+  const baseWords = Array.isArray(allWords.value) && allWords.value.length ? allWords.value : store.selectedWords
+  const canUsePlural = hasAnyPlural(baseWords)
+  if (!Array.isArray(selectedModes.value) ||
+      selectedModes.value.length === 0 ||
+      selectedModes.value.every(m => !m)) {
+
+    selectedModes.value = canUsePlural ? ['article', 'letters', 'wordArticle', 'plural', 'audio'] : ['article', 'letters', 'wordArticle', 'audio']
+
+  } else if (!canUsePlural) {
+    selectedModes.value = selectedModes.value.filter(m => m !== 'plural')
   }
-  let base = Array.isArray(allWords.value) ? allWords.value : []
-  if (!base.length) {
-    const topic = String(topicTitle.value || route.query.topic || '').trim()
-    const pool = Array.isArray(store.words) ? store.words : []
-    base = topic ? pool.filter(w => w.topic === topic) : pool.slice()
-  }
-  if (!base.length) {
-    finished.value = true
-    return
-  }
-  store.selectedWords = [...base]
+
+  store.selectedWords = [...baseWords]
   store.currentIndex = 0
   store.currentModeIndex = 0
   finished.value = false
@@ -297,8 +301,13 @@ function restartAll() {
   wrongWords.value = []
 }
 
+
 function repeatMistakes() {
   if (wrongWords.value.length === 0) return
+  const canUsePlural = hasAnyPlural(wrongWords.value)
+  if (!canUsePlural) {
+    selectedModes.value = selectedModes.value.filter(m => m !== 'plural')
+  }
   store.selectedWords = [...wrongWords.value]
   store.currentIndex = 0
   store.currentModeIndex = 0
@@ -309,6 +318,7 @@ function repeatMistakes() {
   wrongWords.value = []
 }
 
+
 onMounted(async () => {
   const captureOpts = { capture: true };
   const unlockOnce = () => {
@@ -316,35 +326,41 @@ onMounted(async () => {
     window.removeEventListener('pointerdown', unlockOnce, captureOpts);
     window.removeEventListener('keydown', unlockOnce, captureOpts);
   };
+
   window.addEventListener('pointerdown', unlockOnce, captureOpts);
   window.addEventListener('keydown', unlockOnce, captureOpts);
   await store.loadFromFirebase()
   store.syncSelectedWordsProgress()
   const mode = route.query.mode
   selectedModes.value = Array.isArray(mode) ? mode : [mode].filter(Boolean)
+  if (route.query.topic) topicTitle.value = route.query.topic
+  allWords.value = [...store.selectedWords]
+  const canUsePlural = hasAnyPlural(allWords.value)
   if (selectedModes.value.length === 0) {
-    selectedModes.value = ['article', 'letters', 'wordArticle', 'plural', 'audio']
+    selectedModes.value = canUsePlural
+        ? ['article', 'letters', 'wordArticle', 'plural', 'audio']
+        : ['article', 'letters', 'wordArticle', 'audio']
+  }
+  if (!canUsePlural) {
+    selectedModes.value = selectedModes.value.filter(m => m !== 'plural')
   }
   isReview.value = ['1','true','yes','repeat','review','practice']
       .includes(String(route.query.review || route.query.repeat || '').toLowerCase())
-
-  allWords.value = [...store.selectedWords]
   if (isReview.value) {
     store.selectedWords = [...allWords.value]
   } else {
-    sessionWords.value = store.selectedWords.filter(w => !selectedModes.value.every(m => w.progress?.[m] === true))
+    sessionWords.value = store.selectedWords.filter(w =>
+        !selectedModes.value.every(m => w.progress?.[m] === true)
+    )
     store.selectedWords = sessionWords.value.length ? [...sessionWords.value] : [...allWords.value]
-    if (sessionWords.value.length === 0) {
-      isReview.value = true
-    }
   }
 
   if (store.currentIndex >= store.selectedWords.length) store.currentIndex = 0
   if (store.currentModeIndex >= selectedModes.value.length) store.currentModeIndex = 0
-  if (route.query.topic) topicTitle.value = route.query.topic
 
   isReady.value = true
 })
+
 
 
 onBeforeUnmount(() => {

@@ -1,11 +1,12 @@
 <template>
-  <div class="auth">
+  <div class="auth" :class="{ 'auth--rtl': locale === 'ar' }">
     <div class="auth__inner">
       <div class="auth__form">
         <div class="auth__title">
           <img
               @click="mode = 'login'"
-              v-if="mode === 'reset'" class="auth__arrow" src="../../assets/images/arrowNav.svg" alt="arrow_nav">
+              v-if="mode === 'reset'" class="auth__arrow" src="../../assets/images/arrowNav.svg"
+              alt="arrow_nav">
           <h1 class="login__title">
             {{
               mode === 'login' ? t('auth.auths') : mode === 'register' ? t('auth.regs') :
@@ -44,7 +45,7 @@
               <div v-if="resetSent" class="auth__success">{{ t('errors.resetSent') }}</div>
             </div>
             <div class="auth__actions">
-              <button @click.prevent="handleSubmit" class="auth__submit">
+              <button @click.prevent="handleSubmit" class="auth__submit" :disabled="submitLoading">
                 {{
                   mode === 'login' ? t('auth.logIn') : mode === 'register' ? t('auth.regs') :
                       t('auth.resetBtn')
@@ -57,14 +58,17 @@
             </div>
           </div>
         </form>
-        <div v-if="mode === 'login'" class="google__auth-wrapper" @click="handleGoogleLogin">
+        <div v-if="mode === 'login' && !authStore.isWebView"
+             class="google__auth-wrapper"
+             @click="handleGoogleLogin"
+        >
           <img class="google__icon" src="../../assets/images/search.svg" alt="google_icon">
           <div class="google__auth">{{ t('auth.google') }}</div>
         </div>
       </div>
       <div class="close__btn-modal-wrapper">
         <button class="close__modal" @click="emits('close-auth-form')">
-          <div class="close__mob-auth-text">{{ t('hideAuthMobileBtn.text')}}</div>
+          <div class="close__mob-auth-text">{{ t('hideAuthMobileBtn.text') }}</div>
           <img class="close__auth-icon" src="../../assets/images/arrowNav.svg" alt="hide_auth_icon">
         </button>
       </div>
@@ -72,17 +76,19 @@
   </div>
 </template>
 <script setup>
-import {ref, computed, watch , onUnmounted } from 'vue'
+import {ref, computed, watch, onMounted, onUnmounted} from 'vue'
 import {userAuthStore} from '../../store/authStore.js'
 import {useRouter} from 'vue-router'
 import {useI18n} from 'vue-i18n'
 import {mapErrors} from '../../utils/errorsHandler.js'
-const {t , locale} = useI18n()
+
+const {t, locale} = useI18n()
 const router = useRouter()
 const emits = defineEmits(['close-auth-form'])
 const authStore = userAuthStore()
 const mode = ref('login')
 const resetSent = ref(false)
+const submitLoading = ref(false)
 const isAuthed = computed(() => !!authStore.uid)
 
 const toggleTransform = computed(() => {
@@ -185,9 +191,12 @@ function validateFields(values) {
 }
 
 const handleSubmit = async () => {
-  const values = Object.fromEntries(fields.value.map(field => [field.name, field.value]))
-  if (!validateFields(values)) return
+  if (submitLoading.value) return
+  submitLoading.value = true
   try {
+    const values = Object.fromEntries(fields.value.map(field => [field.name, field.value]))
+    if (!validateFields(values)) return
+
     if (mode.value === 'reset') {
       await authStore.resetPassword(values.email)
       resetSent.value = true
@@ -197,30 +206,23 @@ const handleSubmit = async () => {
       }, 2500)
       return
     }
+
     if (mode.value === 'register') {
-      await authStore.registerUser({
-        name: values.name,
-        email: values.email,
-        password: values.password
-      })
+      await authStore.registerUser({ name: values.name, email: values.email, password: values.password })
       emits('close-auth-form')
-      fields.value.forEach(field => field.value = '')
+      fields.value.forEach(f => f.value = '')
       return
-      // router.push('/authUs     er')
-    } else {
-      await authStore.loginUser({
-        email: values.email,
-        password: values.password
-      })
-      emits('close-auth-form')
-      router.push('/')
     }
 
+    await authStore.loginUser({ email: values.email, password: values.password })
+    emits('close-auth-form')
+    router.push('/')
     fields.value.forEach(f => f.value = '')
   } catch (e) {
-    console.log(e)
     fields.value.forEach(f => f.error = '')
     mapErrors(fields.value, e.code)
+  } finally {
+    submitLoading.value = false
   }
 }
 
@@ -237,6 +239,10 @@ watch(isAuthed, (v) => {
 
 onUnmounted(() => {
   document.body.style.overflow = ''
+})
+
+onMounted(() => {
+  authStore.detectWebView()
 })
 </script>
 
@@ -255,7 +261,7 @@ onUnmounted(() => {
   font-size: 18px;
 }
 
-.close__btn-modal-wrapper{
+.close__btn-modal-wrapper {
   display: flex;
   justify-content: center;
   margin-top: 40px;
@@ -290,18 +296,18 @@ onUnmounted(() => {
   cursor: pointer;
   padding: 12px;
   border: 3px solid #1e1e1e;
-  box-shadow: 4px 4px 0px #1e1e1e;
+  box-shadow: 4px 4px 0 #1e1e1e;
   transition: all 0.1s ease-in-out;
 }
 
 .google__auth-wrapper:hover {
   transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0px #1e1e1e;
+  box-shadow: 2px 2px 0 #1e1e1e;
 }
 
 .google__auth-wrapper:active {
   transform: translate(4px, 4px);
-  box-shadow: 0px 0px 0px #1e1e1e;
+  box-shadow: 0 0 0 #1e1e1e;
 }
 
 .google__icon {
@@ -401,7 +407,7 @@ onUnmounted(() => {
   border-radius: 16px;
   position: relative;
   margin-bottom: 1.5rem;
-  box-shadow: 4px 4px 0px #1e1e1e;
+  box-shadow: 4px 4px 0 #1e1e1e;
   border: 3px solid #1e1e1e;
   overflow: hidden;
   padding: 4px;
@@ -414,7 +420,7 @@ onUnmounted(() => {
   cursor: pointer;
   color: #1e1e1e;
   font-family: "Nunito", sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1.2rem;
   position: relative;
   transition: color 0.23s;
@@ -476,13 +482,13 @@ onUnmounted(() => {
   color: #1e1e1e;
   font-family: 'Inter', sans-serif;
   font-weight: 700;
-  box-shadow: 2px 2px 0px #1e1e1e inset;
+  box-shadow: 2px 2px 0 #1e1e1e inset;
   transition: all 0.2s;
   outline: none;
 }
 
 .auth__input:focus {
-  box-shadow: 0 0 0px 3px #f1c40f, 2px 2px 0px #1e1e1e inset;
+  box-shadow: 0 0 0 3px #f1c40f, 2px 2px 0 #1e1e1e inset;
 }
 
 .auth__actions {
@@ -500,7 +506,7 @@ onUnmounted(() => {
   padding: 12px 0;
   border-radius: 18px;
   cursor: pointer;
-  box-shadow: 4px 4px 0px #1e1e1e;
+  box-shadow: 4px 4px 0 #1e1e1e;
   text-shadow: none;
   letter-spacing: 0;
   font-family: "Nunito", sans-serif;
@@ -509,7 +515,7 @@ onUnmounted(() => {
 
 .auth__submit:hover {
   transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0px #1e1e1e;
+  box-shadow: 2px 2px 0 #1e1e1e;
 }
 
 .auth__error,
@@ -525,6 +531,22 @@ onUnmounted(() => {
 .auth__success {
   color: #4ade80
 }
+
+.auth__warning {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: #d32f2f;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.auth__warning a {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
 
 @media (max-width: 767px) {
   .close__btn-modal-wrapper {
@@ -553,6 +575,19 @@ onUnmounted(() => {
   .auth__tab {
     font-size: 1.1rem;
   }
+}
 
+.auth--rtl {
+  right: auto;
+  left: 0;
+  border-left: none;
+  border-right: 4px solid #1e1e1e;
+  box-shadow: 12px 0 44px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+  .auth--rtl {
+    border-right: none;
+  }
 }
 </style>

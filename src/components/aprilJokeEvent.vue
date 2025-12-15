@@ -79,11 +79,11 @@ function buyReward(level, rewardId) {
 }
 
 function completeQuest(id) {
-  const q = quests.value.find(x => x.id === id)
-  if (!q || q.isDone) return
-  q.isDone = true
-  coins.value += q.rewardCoins
-  reputationPoints.value += q.rewardRep
+  const quest = quests.value.find(quest => quest.id === id)
+  if (!quest || quest.isDone) return
+  quest.isDone = true
+  coins.value += quest.rewardCoins
+  reputationPoints.value += quest.rewardRep
 }
 
 function resetAll() {
@@ -145,11 +145,11 @@ function resetAll() {
                 <h2>Магазин по репутации</h2>
                 <div class="rank-switch">
                   <button
-                      v-for="r in ranks"
-                      :key="r.level"
-                      :class="['pill', { 'is-active': selectedLevel === r.level }]"
-                      @click="setSelectedLevel(r.level)"
-                  >{{ r.title }}
+                      v-for="rank in ranks"
+                      :key="rank.level"
+                      :class="['pill', { 'is-active': selectedLevel === rank.level }]"
+                      @click="setSelectedLevel(rank.level)"
+                  >{{ rank.title }}
                   </button>
                 </div>
               </div>
@@ -178,17 +178,17 @@ function resetAll() {
             <section v-if="activeTab === 'quests'">
               <div class="quests">
                 <div><h2 class="daily__title">Ежедневные задания</h2></div>
-                <div v-for="q in quests" :key="q.id" class="quest achv-card">
-                  <div class="quest__icon">{{ q.icon }}</div>
+                <div v-for="quest in quests" :key="quest.id" class="quest achv-card">
+                  <div class="quest__icon">{{ quest.icon }}</div>
                   <div class="quest__body">
-                    <div class="quest__title">{{ q.title }}</div>
+                    <div class="quest__title">{{ quest.title }}</div>
                     <div class="quest__meta">
                       <div class="quest__inner">
-                        <span class="meta__pill">{{ q.rewardRep }} реп.</span>
-                        <span class="meta__pill">{{ q.rewardCoins }} {{ coinIcon }}</span>
+                        <span class="meta__pill">{{ quest.rewardRep }} реп.</span>
+                        <span class="meta__pill">{{ quest.rewardCoins }} {{ coinIcon }}</span>
                       </div>
-                      <button class="btn btn--candy" :disabled="q.isDone" @click="completeQuest(q.id)">
-                        {{ q.isDone ? 'Выполнено' : 'Выполнить' }}
+                      <button class="btn btn--candy" :disabled="quest.isDone" @click="completeQuest(quest.id)">
+                        {{ quest.isDone ? 'Выполнено' : 'Выполнить' }}
                       </button>
                     </div>
                   </div>

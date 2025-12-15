@@ -25,11 +25,12 @@
             <h3 class="quest__title">{{ t(q.title) }}</h3>
             <p class="quest__description">{{ t(q.description) }}</p>
             <div class="quest-meta">
-                            <span v-if="!q._success" class="rewards-container">
-                                <span class="reward-item">
-                                    {{ q.rewards.points }}
-                                    <img src="assets/images/articlus.png" alt="Артиклюсы" class="icon-articlus">
-                                </span>
+              <span v-if="!q._success" class="rewards-container">
+                <span>{{ t('locationQuests.awards')}}</span>
+                <span class="reward-item">
+                  <span>{{ q.rewards.points }}</span>
+                  <img src="assets/images/articlus.png" alt="Articlus" class="icon-articlus">
+                </span>
                                 <span class="reward-item">
                                     {{ q.rewards.xp }} XP
                                 </span>
@@ -59,21 +60,25 @@ const route = useRoute()
 const canonical = useCanonical()
 const {t, locale} = useI18n();
 
-const pageTitle = t('metaLocation.title')
-const pageDesc = t('metaLocation.description')
-useHead({
-  title: pageTitle,
-  link: [{rel: 'canonical', href: canonical}]
-})
+// const pageTitle = t('metaLocation.title')
+// const pageDesc = t('metaLocation.description')
+// useHead({
+//   title: pageTitle,
+//   link: [{rel: 'canonical', href: canonical}]
+// })
+// useSeoMeta({
+//   title: pageTitle,
+//   description: pageDesc,
+//   ogTitle: pageTitle,
+//   ogDescription: pageDesc,
+//   ogType: 'website',
+//   ogUrl: canonical,
+//   ogImage: '/images/seo-lands.png',
+//   robots: 'index, follow'
+// })
+
 useSeoMeta({
-  title: pageTitle,
-  description: pageDesc,
-  ogTitle: pageTitle,
-  ogDescription: pageDesc,
-  ogType: 'website',
-  ogUrl: canonical,
-  ogImage: '/images/seo-lands.png',
-  robots: 'index, follow'
+  robots: 'noindex, nofollow'
 })
 
 const router = useRouter();

@@ -1,346 +1,352 @@
 <template>
-    <div class="comparison-page" :class="{ 'content-is-active': isContentVisible }">
-        <div v-if="showTips" class="tips__overlay" @click.self="showTips = false">
-            <div class="tips__content">
-                <button class="tips__close" @click="showTips = false">×</button>
-                <h2 class="tipps__title">{{ t('adjectiveComparisonPage.tipTitle')}}</h2>
-                <ul class="tips__list">
-                    <li v-for="tip in activeTipps" :key="tip.text" class="tips__item">
-                        <div class="tips__text">{{ tip.text }}</div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <VTips
-            v-model="showTips"
-            :title="t('adjectiveComparisonPage.tipTitle')"
-            :tips="currentTopicData?.tips"
-        />
-        <div class="sidebar">
-            <button @click="backTo" class="btn__back">{{ t('tenses.barBtn')}}</button>
-            <h2 class="sidebar__title">{{ t('adjectiveComparisonPage.sideBarTitle')}}</h2>
-            <div class="sidebar__heading">{{ t('adjectiveComparisonPage.sidebarUnderTitle')}}</div>
-            <ul class="sidebar__list">
-                <li
-                        v-for="item in topics"
-                        :key="item.id"
-                        :class="['sidebar__item', { 'sidebar__item--active': topic === item.id }]"
-                >
-                    <button class="sidebar__button" @click="selectTopic(item.id)">
-                        <span>{{ item.title }}</span>
-                    </button>
-                </li>
-            </ul>
-        </div>
-        <div class="content" v-if="currentTopicData">
-            <button v-if="isMobileLayout" class="btn__close" @click="closeContent">×</button>
-            <header class="content__header">
-                <h1 class="content__title">{{ currentTopicData.title }}</h1>
-            </header>
-            <div class="content__body">
-                <div class="content__main-column">
-                    <section class="info-section">
-                        <div class="info__wrapper">
-                            <h3 class="info-section__title">{{ t('adjectiveComparisonPage.ruleTitle')}}</h3>
-                            <button
-                                   :title="t('hoverTitle.tips')"
-                                    v-if="currentTopicData.tips"
-                                    class="info__icon-tips"
-                                    ref="tipRef"
-                                    @click="openTips(currentTopicData.tips)"
-                            ></button>
-                        </div>
-                        <p class="info-section__description">
-                            {{ currentTopicData.rule }}
-                        </p>
-                    </section>
-                    <section class="info-section">
-                        <h3 class="info-section__title">{{ t('adjectiveComparisonPage.examples')}}</h3>
-                        <div v-if="currentTopicData.examples">
-                            <div v-for="(example, index) in currentTopicData.examples" :key="index" class="example">
-                                <div class="example__line">
-                                    <p class="example__sentence" v-html="example.sentence"></p>
-                                    <SoundBtn :text="example.sentence"/>
-                                </div>
-                                <span class="example__translation">{{ example.translation }}</span>
-                            </div>
-                        </div>
-                        <div v-if="currentTopicData.specialCases">
-                            <div v-for="caseGroup in currentTopicData.specialCases" :key="caseGroup.title"
-                                 class="special-case-group">
-                                <h4 class="special-case-title">{{ caseGroup.title }}</h4>
-                                <div v-for="(example, index) in caseGroup.examples" :key="index" class="example">
-                                    <div class="example__line">
-                                        <p class="example__sentence" v-html="example.sentence"></p>
-                                        <SoundBtn :text="example.sentence"/>
-                                    </div>
-                                    <span class="example__translation">{{ example.translation }}</span>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-                <div class="practice-area">
-                    <h3 class="practice-area__title">{{ currentTopicData.practice.title }}</h3>
-                    <p class="practice-area__description">{{ currentTopicData.practice.description }}</p>
-                    <NuxtLink :to="`/${categoryId}/${currentTopicData.id}`" class="practice-area__button">
-                        {{ currentTopicData.practice.buttonText }}
-                    </NuxtLink>
-                </div>
-            </div>
-        </div>
+  <div class="comparison-page" :class="{ 'content-is-active': isContentVisible }">
+    <div v-if="showTips" class="tips__overlay" @click.self="showTips = false">
+      <div class="tips__content">
+        <button class="tips__close" @click="showTips = false">×</button>
+        <h2 class="tipps__title">{{ t('adjectiveComparisonPage.tipTitle') }}</h2>
+        <ul class="tips__list">
+          <li v-for="tip in activeTipps" :key="tip.text" class="tips__item">
+            <div class="tips__text">{{ tip.text }}</div>
+          </li>
+        </ul>
+      </div>
     </div>
+    <VTips
+        v-model="showTips"
+        :title="t('adjectiveComparisonPage.tipTitle')"
+        :tips="currentTopicData?.tips"
+    />
+    <div class="sidebar">
+      <VBackBtn/>
+      <h2 class="sidebar__title">{{ t('adjectiveComparisonPage.sideBarTitle') }}</h2>
+      <div class="sidebar__heading">{{ t('adjectiveComparisonPage.sidebarUnderTitle') }}</div>
+      <ul class="sidebar__list">
+        <li
+            v-for="item in topics"
+            :key="item.id"
+            :class="['sidebar__item', { 'sidebar__item--active': topic === item.id }]"
+        >
+          <button class="sidebar__button" @click="selectTopic(item.id)">
+            <span>{{ item.title }}</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div class="content" v-if="currentTopicData">
+      <button v-if="isMobileLayout" class="btn__close" @click="closeContent">×</button>
+      <header class="content__header">
+        <h1 class="content__title">{{ currentTopicData.title }}</h1>
+      </header>
+      <div class="content__body">
+        <div class="content__main-column">
+          <section class="info-section">
+            <div class="info__wrapper">
+              <h3 class="info-section__title">{{ t('adjectiveComparisonPage.ruleTitle') }}</h3>
+              <button
+                  :title="t('hoverTitle.tips')"
+                  v-if="currentTopicData.tips"
+                  class="info__icon-tips"
+                  ref="tipRef"
+                  @click="openTips(currentTopicData.tips)"
+              ></button>
+            </div>
+            <p class="info-section__description">
+              {{ currentTopicData.rule }}
+            </p>
+          </section>
+          <section class="info-section">
+            <h3 class="info-section__title">{{ t('adjectiveComparisonPage.examples') }}</h3>
+            <div v-if="currentTopicData.examples">
+              <div v-for="(example, index) in currentTopicData.examples" :key="index" class="example">
+                <div class="example__line">
+                  <p class="example__sentence" v-html="example.sentence"></p>
+                  <SoundBtn :text="example.sentence"/>
+                </div>
+                <span class="example__translation">{{ example.translation }}</span>
+              </div>
+            </div>
+            <div v-if="currentTopicData.specialCases">
+              <div v-for="caseGroup in currentTopicData.specialCases" :key="caseGroup.title"
+                   class="special-case-group">
+                <h4 class="special-case-title">{{ caseGroup.title }}</h4>
+                <div v-for="(example, index) in caseGroup.examples" :key="index" class="example">
+                  <div class="example__line">
+                    <p class="example__sentence" v-html="example.sentence"></p>
+                    <SoundBtn :text="example.sentence"/>
+                  </div>
+                  <span class="example__translation">{{ example.translation }}</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="practice-area">
+          <h3 class="practice-area__title">{{ currentTopicData.practice.title }}</h3>
+          <p class="practice-area__description">{{ currentTopicData.practice.description }}</p>
+          <NuxtLink :to="`/${categoryId}/${currentTopicData.id}`" class="practice-area__button">
+            {{ currentTopicData.practice.buttonText }}
+          </NuxtLink>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup>
-    import {ref, computed, onMounted, onUnmounted, watch, nextTick} from 'vue';
-    import {useRouter} from 'vue-router';
-    import SoundBtn from '../../src/components/soundBtn.vue'
-    import Lottie from 'lottie-web';
-    import TipIcon from '../../assets/animation/info.json';
-    import VTips from '../../src/components/V-tips.vue';
-    import { useHead, useSeoMeta } from '#imports'
-    const canonical = useCanonical()
-    const {t} = useI18n()
-    const baseTitle = t('adjectiveComparisonPage.title')
-    const pageDesc  = t('adjectiveComparisonPage.description')
-    useHead({
-      title: baseTitle,
-      link: [
-        { rel: 'canonical', href: canonical }
-      ]
-    })
+import {ref, computed, onMounted, onUnmounted, watch, nextTick} from 'vue';
+import {useRouter} from 'vue-router';
+import SoundBtn from '../../src/components/soundBtn.vue'
+import Lottie from 'lottie-web';
+import TipIcon from '../../assets/animation/info.json';
+import VTips from '../../src/components/V-tips.vue';
+import {useHead, useSeoMeta} from '#imports'
+import VBackBtn from "../../src/components/V-back-btn.vue";
 
-    useSeoMeta({
-      title: baseTitle,
-      description: pageDesc,
-      ogTitle: baseTitle,
-      ogDescription: pageDesc,
-      ogType: 'article',
-      ogUrl: canonical,
-      ogImage: '/images/seo-adj-comparison.png',
-      robots: 'index, follow'
-    })
+const canonical = useCanonical()
+const {t} = useI18n()
+// const baseTitle = t('adjectiveComparisonPage.title')
+// const pageDesc = t('adjectiveComparisonPage.description')
+// useHead({
+//   title: baseTitle,
+//   link: [
+//     {rel: 'canonical', href: canonical}
+//   ]
+// })
+//
+// useSeoMeta({
+//   title: baseTitle,
+//   description: pageDesc,
+//   ogTitle: baseTitle,
+//   ogDescription: pageDesc,
+//   ogType: 'article',
+//   ogUrl: canonical,
+//   ogImage: '/images/seo-adj-comparison.png',
+//   robots: 'index, follow'
+// })
 
-    const router = useRouter();
-    const categoryId = 'adjective-comparison';
-    const topics = [
-        {
-            id: 'regular-forms',
-            title: t('adjectiveComparisonPage.sideBarFirst'),
-            rule: t('adjectiveComparisonContentSide.ruleOne'),
-            tips: [
-                {text: t('adjectiveComparisonContentSide.firstThemeTipOne')},
-                {text: t('adjectiveComparisonContentSide.firstThemeTipTwo')},
-                {text: t('adjectiveComparisonContentSide.firstThemeTipThree')},
-                {text: t('adjectiveComparisonContentSide.firstThemeTipFour')}
-            ],
-            examples: [
-                {
-                    sentence: 'schnell → <b>schneller</b> → <b>am schnellsten</b>',
-                    translation: t('adjectiveComparisonContentSide.FirstThemeTranslateOne')
-                },
-                {
-                    sentence: 'langsam → <b>langsamer</b> → <b>am langsamsten</b>',
-                    translation: t('adjectiveComparisonContentSide.FirstThemeTranslateTwo')
-                },
-                {
-                    sentence: 'billig → <b>billiger</b> → <b>am billigsten</b>',
-                    translation: t('adjectiveComparisonContentSide.FirstThemeTranslateThree')
-                }
-            ],
-            practice: {
-                title: t('adjectiveComparisonContentSide.practiceFirstTitle'),
-                description: t('adjectiveComparisonContentSide.practiceFirstDescription'),
-                buttonText: t('adjectiveComparisonContentSide.practiceFirstButtonText'),
-            }
-        },
-        {
-            id: 'umlaut-forms',
-            title: t('adjectiveComparisonPage.sideBarSecond'),
-            rule: t('adjectiveComparisonContentSide.ruleTwo'),
-            tips: [
-                {text: t('adjectiveComparisonContentSide.secondThemeTipOne')},
-                {text: t('adjectiveComparisonContentSide.secondThemeTipTwo')},
-                {text: t('adjectiveComparisonContentSide.secondThemeTipThree')},
-                {text: t('adjectiveComparisonContentSide.secondThemeTipFour')}
-            ],
-            examples: [
-                {
-                    sentence: 'alt → <b>älter</b> → <b>am ältesten</b>',
-                    translation: t('adjectiveComparisonContentSide.secondThemeTranslateOne')
-                },
-                {
-                    sentence: 'groß → <b>größer</b> → <b>am größten</b>',
-                    translation: t('adjectiveComparisonContentSide.secondThemeTranslateTwo')
-                },
-                {
-                    sentence: 'jung → <b>jünger</b> → <b>am jüngsten</b>',
-                    translation: t('adjectiveComparisonContentSide.secondThemeTranslateThree')
-                },
-                {
-                    sentence: 'kalt → <b>kälter</b> → <b>am kältesten</b>',
-                    translation: t('adjectiveComparisonContentSide.secondThemeTranslateFour')
-                }
-            ],
-            practice: {
-                title: t('adjectiveComparisonContentSide.practiceSecondTitle'),
-                description: t('adjectiveComparisonContentSide.practiceSecondDescription'),
-                buttonText: t('adjectiveComparisonContentSide.practiceSecondButtonText'),
-            }
-        },
-        {
-            id: 'irregular-forms',
-            title: t('adjectiveComparisonPage.sideBarThird'),
-            rule: t('adjectiveComparisonContentSide.ruleThree'),
-            tips: [
-                {text: t('adjectiveComparisonContentSide.thirdThemeTipOne')},
-                {text: t('adjectiveComparisonContentSide.thirdThemeTipTwo')},
-                {text: t('adjectiveComparisonContentSide.thirdThemeTipThree')}
-            ],
-            specialCases: [
-                {
-                    title: t('adjectiveComparisonContentSide.themeThreeTitleFirstExample'),
-                    examples: [
-                        {
-                            sentence: 'gut → <b>besser</b> → <b>am besten</b>',
-                            translation: t('adjectiveComparisonContentSide.thirdThemeFirstBlockTranslateOne')
-                        },
-                        {
-                            sentence: 'viel → <b>mehr</b> → <b>am meisten</b>',
-                            translation: t('adjectiveComparisonContentSide.thirdThemeFirstBlockTranslateOne')
-                        },
-                        {
-                            sentence: 'gern → <b>lieber</b> → <b>am liebsten</b>',
-                            translation: t('adjectiveComparisonContentSide.thirdThemeFirstBlockTranslateOne')
-                        },
-                        {
-                            sentence: 'bald → <b>eher</b> → <b>am ehesten</b>',
-                            translation: t('adjectiveComparisonContentSide.thirdThemeFirstBlockTranslateOne')
-                        }
-                    ]
-                },
-                {
-                    title: t('adjectiveComparisonContentSide.themeThreeTitleSecondExample'),
-                    examples: [
-                        {
-                            sentence: 'hoch → <b>höher</b> → <b>am höchsten</b>',
-                            translation: t('adjectiveComparisonContentSide.thirdThemeSecondBlockTranslateOne')
-                        },
-                        {
-                            sentence: 'nah → <b>näher</b> → <b>am nächsten</b>',
-                            translation: t('adjectiveComparisonContentSide.thirdThemeSecondTranslateTwo')
-                        }
-                    ]
-                },
-                {
-                    title: t('adjectiveComparisonContentSide.themeThreeTitleThirdExample'),
-                    examples: [
-                        {
-                            sentence: 'teuer → <b>teurer</b> → <b>am teuersten</b>',
-                            translation: t('adjectiveComparisonContentSide.thirdThemeThirdBlockTranslateOne')
-                        },
-                        {
-                            sentence: 'dunkel → <b>dunkler</b> → <b>am dunkelsten</b>',
-                            translation: t('adjectiveComparisonContentSide.thirdThemeThirdTranslateTwo')
-                        }
-                    ]
-                },
-                {
-                    title: t('adjectiveComparisonContentSide.themeThreeTitleFourthExample'),
-                    examples: [
-                        {
-                            sentence: 'breit → breit<b>er</b> → <b>am breitesten</b>',
-                            translation: t('adjectiveComparisonContentSide.thirdThemeFourthBlockTranslateOne')
-                        },
-                        {
-                            sentence: 'heiß → heiß<b>er</b> → <b>am heißesten</b>',
-                            translation: t('adjectiveComparisonContentSide.thirdThemeFourthTranslateTwo')
-                        }
-                    ]
-                }
-            ],
-            practice: {
-                title: t('adjectiveComparisonContentSide.practiceThirdTitle'),
-                description: t('adjectiveComparisonContentSide.practiceThirdDescription'),
-                buttonText: t('adjectiveComparisonContentSide.practiceThirdButtonText'),
-            }
-        }
-    ];
-    const backTo = () => {
-        router.push('/');
-    };
-    const topic = ref('regular-forms');
-    const currentTopicData = computed(() => topics.find(t => t.id === topic.value));
-    const showTips = ref(false);
-    const activeTipps = ref([]);
-    const tipRef = ref(null);
-    let lottieInstance = null;
-    let animationInterval = null;
+useSeoMeta({
+  robots: 'noindex, nofollow'
+})
 
-    const isContentVisible = ref(false);
-    const isMobileLayout = ref(false);
+const router = useRouter();
+const categoryId = 'adjective-comparison';
+const topics = [
+  {
+    id: 'regular-forms',
+    title: t('adjectiveComparisonPage.sideBarFirst'),
+    rule: t('adjectiveComparisonContentSide.ruleOne'),
+    tips: [
+      {text: t('adjectiveComparisonContentSide.firstThemeTipOne')},
+      {text: t('adjectiveComparisonContentSide.firstThemeTipTwo')},
+      {text: t('adjectiveComparisonContentSide.firstThemeTipThree')},
+      {text: t('adjectiveComparisonContentSide.firstThemeTipFour')}
+    ],
+    examples: [
+      {
+        sentence: 'schnell → <b>schneller</b> → <b>am schnellsten</b>',
+        translation: t('adjectiveComparisonContentSide.FirstThemeTranslateOne')
+      },
+      {
+        sentence: 'langsam → <b>langsamer</b> → <b>am langsamsten</b>',
+        translation: t('adjectiveComparisonContentSide.FirstThemeTranslateTwo')
+      },
+      {
+        sentence: 'billig → <b>billiger</b> → <b>am billigsten</b>',
+        translation: t('adjectiveComparisonContentSide.FirstThemeTranslateThree')
+      }
+    ],
+    practice: {
+      title: t('adjectiveComparisonContentSide.practiceFirstTitle'),
+      description: t('adjectiveComparisonContentSide.practiceFirstDescription'),
+      buttonText: t('adjectiveComparisonContentSide.practiceFirstButtonText'),
+    }
+  },
+  {
+    id: 'umlaut-forms',
+    title: t('adjectiveComparisonPage.sideBarSecond'),
+    rule: t('adjectiveComparisonContentSide.ruleTwo'),
+    tips: [
+      {text: t('adjectiveComparisonContentSide.secondThemeTipOne')},
+      {text: t('adjectiveComparisonContentSide.secondThemeTipTwo')},
+      {text: t('adjectiveComparisonContentSide.secondThemeTipThree')},
+      {text: t('adjectiveComparisonContentSide.secondThemeTipFour')}
+    ],
+    examples: [
+      {
+        sentence: 'alt → <b>älter</b> → <b>am ältesten</b>',
+        translation: t('adjectiveComparisonContentSide.secondThemeTranslateOne')
+      },
+      {
+        sentence: 'groß → <b>größer</b> → <b>am größten</b>',
+        translation: t('adjectiveComparisonContentSide.secondThemeTranslateTwo')
+      },
+      {
+        sentence: 'jung → <b>jünger</b> → <b>am jüngsten</b>',
+        translation: t('adjectiveComparisonContentSide.secondThemeTranslateThree')
+      },
+      {
+        sentence: 'kalt → <b>kälter</b> → <b>am kältesten</b>',
+        translation: t('adjectiveComparisonContentSide.secondThemeTranslateFour')
+      }
+    ],
+    practice: {
+      title: t('adjectiveComparisonContentSide.practiceSecondTitle'),
+      description: t('adjectiveComparisonContentSide.practiceSecondDescription'),
+      buttonText: t('adjectiveComparisonContentSide.practiceSecondButtonText'),
+    }
+  },
+  {
+    id: 'irregular-forms',
+    title: t('adjectiveComparisonPage.sideBarThird'),
+    rule: t('adjectiveComparisonContentSide.ruleThree'),
+    tips: [
+      {text: t('adjectiveComparisonContentSide.thirdThemeTipOne')},
+      {text: t('adjectiveComparisonContentSide.thirdThemeTipTwo')},
+      {text: t('adjectiveComparisonContentSide.thirdThemeTipThree')}
+    ],
+    specialCases: [
+      {
+        title: t('adjectiveComparisonContentSide.themeThreeTitleFirstExample'),
+        examples: [
+          {
+            sentence: 'gut → <b>besser</b> → <b>am besten</b>',
+            translation: t('adjectiveComparisonContentSide.thirdThemeFirstBlockTranslateOne')
+          },
+          {
+            sentence: 'viel → <b>mehr</b> → <b>am meisten</b>',
+            translation: t('adjectiveComparisonContentSide.thirdThemeFirstBlockTranslateOne')
+          },
+          {
+            sentence: 'gern → <b>lieber</b> → <b>am liebsten</b>',
+            translation: t('adjectiveComparisonContentSide.thirdThemeFirstBlockTranslateOne')
+          },
+          {
+            sentence: 'bald → <b>eher</b> → <b>am ehesten</b>',
+            translation: t('adjectiveComparisonContentSide.thirdThemeFirstBlockTranslateOne')
+          }
+        ]
+      },
+      {
+        title: t('adjectiveComparisonContentSide.themeThreeTitleSecondExample'),
+        examples: [
+          {
+            sentence: 'hoch → <b>höher</b> → <b>am höchsten</b>',
+            translation: t('adjectiveComparisonContentSide.thirdThemeSecondBlockTranslateOne')
+          },
+          {
+            sentence: 'nah → <b>näher</b> → <b>am nächsten</b>',
+            translation: t('adjectiveComparisonContentSide.thirdThemeSecondTranslateTwo')
+          }
+        ]
+      },
+      {
+        title: t('adjectiveComparisonContentSide.themeThreeTitleThirdExample'),
+        examples: [
+          {
+            sentence: 'teuer → <b>teurer</b> → <b>am teuersten</b>',
+            translation: t('adjectiveComparisonContentSide.thirdThemeThirdBlockTranslateOne')
+          },
+          {
+            sentence: 'dunkel → <b>dunkler</b> → <b>am dunkelsten</b>',
+            translation: t('adjectiveComparisonContentSide.thirdThemeThirdTranslateTwo')
+          }
+        ]
+      },
+      {
+        title: t('adjectiveComparisonContentSide.themeThreeTitleFourthExample'),
+        examples: [
+          {
+            sentence: 'breit → breit<b>er</b> → <b>am breitesten</b>',
+            translation: t('adjectiveComparisonContentSide.thirdThemeFourthBlockTranslateOne')
+          },
+          {
+            sentence: 'heiß → heiß<b>er</b> → <b>am heißesten</b>',
+            translation: t('adjectiveComparisonContentSide.thirdThemeFourthTranslateTwo')
+          }
+        ]
+      }
+    ],
+    practice: {
+      title: t('adjectiveComparisonContentSide.practiceThirdTitle'),
+      description: t('adjectiveComparisonContentSide.practiceThirdDescription'),
+      buttonText: t('adjectiveComparisonContentSide.practiceThirdButtonText'),
+    }
+  }
+];
+const backTo = () => {
+  router.push('/');
+};
+const topic = ref('regular-forms');
+const currentTopicData = computed(() => topics.find(t => t.id === topic.value));
+const showTips = ref(false);
+const activeTipps = ref([]);
+const tipRef = ref(null);
+let lottieInstance = null;
+let animationInterval = null;
 
-    const checkScreenSize = () => {
-        isMobileLayout.value = window.innerWidth <= 767;
-        if (!isMobileLayout.value) {
-            isContentVisible.value = false;
-        }
-    };
+const isContentVisible = ref(false);
+const isMobileLayout = ref(false);
 
-    const closeContent = () => {
-        isContentVisible.value = false;
-    };
+const checkScreenSize = () => {
+  isMobileLayout.value = window.innerWidth <= 767;
+  if (!isMobileLayout.value) {
+    isContentVisible.value = false;
+  }
+};
 
-    const selectTopic = (id) => {
-        topic.value = id;
-        if (isMobileLayout.value) {
-            isContentVisible.value = true;
-        }
-    };
+const closeContent = () => {
+  isContentVisible.value = false;
+};
 
-    const openTips = (tipps) => {
-        activeTipps.value = tipps;
-        showTips.value = true;
-    };
+const selectTopic = (id) => {
+  topic.value = id;
+  if (isMobileLayout.value) {
+    isContentVisible.value = true;
+  }
+};
 
-    const initLottieIcon = async () => {
-        await nextTick();
-        if (animationInterval) clearInterval(animationInterval);
-        if (lottieInstance) lottieInstance.destroy();
+const openTips = (tipps) => {
+  activeTipps.value = tipps;
+  showTips.value = true;
+};
 
-        if (tipRef.value) {
-            lottieInstance = Lottie.loadAnimation({
-                container: tipRef.value,
-                renderer: 'svg',
-                loop: false,
-                autoplay: true,
-                animationData: TipIcon,
-            });
-            animationInterval = setInterval(() => {
-                if (lottieInstance) {
-                    lottieInstance.stop();
-                    lottieInstance.play();
-                }
-            }, 10000);
-        }
-    };
+const initLottieIcon = async () => {
+  await nextTick();
+  if (animationInterval) clearInterval(animationInterval);
+  if (lottieInstance) lottieInstance.destroy();
 
-    onMounted(() => {
-        checkScreenSize();
-        window.addEventListener('resize', checkScreenSize);
-        initLottieIcon();
+  if (tipRef.value) {
+    lottieInstance = Lottie.loadAnimation({
+      container: tipRef.value,
+      renderer: 'svg',
+      loop: false,
+      autoplay: true,
+      animationData: TipIcon,
     });
+    animationInterval = setInterval(() => {
+      if (lottieInstance) {
+        lottieInstance.stop();
+        lottieInstance.play();
+      }
+    }, 10000);
+  }
+};
 
-    onUnmounted(() => {
-        window.removeEventListener('resize', checkScreenSize);
-        if (animationInterval) clearInterval(animationInterval);
-        if (lottieInstance) lottieInstance.destroy();
-    });
+onMounted(() => {
+  checkScreenSize();
+  window.addEventListener('resize', checkScreenSize);
+  initLottieIcon();
+});
 
-    watch(currentTopicData, () => {
-        initLottieIcon();
-    });
+onUnmounted(() => {
+  window.removeEventListener('resize', checkScreenSize);
+  if (animationInterval) clearInterval(animationInterval);
+  if (lottieInstance) lottieInstance.destroy();
+});
+
+watch(currentTopicData, () => {
+  initLottieIcon();
+});
 
 </script>
 
@@ -364,24 +370,6 @@
   box-shadow: 6px 6px 0px #1e1e1e;
   flex-shrink: 0;
   overflow-y: auto;
-}
-
-.btn__back {
-  display: block;
-  text-align: center;
-  width: 100%;
-  font-family: "Nunito", sans-serif;
-  padding: 0.8rem;
-  margin-bottom: 2rem;
-  font-size: 1.2rem;
-  border-radius: 12px;
-  cursor: pointer;
-  background-color: #f1c40f;
-  color: #1e1e1e;
-  text-decoration: none;
-  border: 3px solid #1e1e1e;
-  box-shadow: 4px 4px 0px #1e1e1e;
-  transition: background-color 0.2s;
 }
 
 .sidebar__title {
@@ -416,10 +404,6 @@
   font-size: 1rem;
   transition: all 0.2s ease-in-out;
   box-shadow: 3px 3px 0px #1e1e1e;
-}
-
-.sidebar__button:hover {
-  background: #e0e0e0;
 }
 
 .sidebar__button:active {
@@ -457,7 +441,7 @@
   color: white;
   font-size: 2.1rem;
   font-weight: bold;
-  text-shadow: none;
+  text-shadow: 2px 2px 0px #000;
 }
 
 .content__body {
@@ -550,18 +534,15 @@
   text-decoration: none;
   background: #f1c40f;
   color: #1e1e1e;
+  min-width: 230px;
   border: 3px solid #1e1e1e;
   border-radius: 12px;
   padding: 12px 25px;
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  box-shadow: 4px 4px 0px #1e1e1e;
-}
-
-.practice-area__button:hover {
-  background: #ffe04d;
+  box-shadow: 3px 3px 0px #1e1e1e;
 }
 
 .practice-area__button:active {
@@ -748,4 +729,17 @@
     display: flex;
   }
 }
+
+@media (min-width: 1024px) {
+  .sidebar__button:hover {
+    background: #e0e0e0;
+  }
+
+  .practice-area__button:hover {
+    background: #ffe04d;
+    box-shadow: 1px 1px 0 #1e1e1e;
+    transform: translate(2px, 2px);
+  }
+}
+
 </style>

@@ -34,7 +34,6 @@ export function useVoiceRecorder({ onResult, lang = 'de' } = {}) {
 				console.error('Whisper error:', e)
 				transcription.value = ''
 			} finally {
-				// освободим микрофон
 				stream?.getTracks()?.forEach(t => t.stop())
 				stream = null
 			}
