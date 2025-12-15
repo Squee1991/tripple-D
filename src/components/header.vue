@@ -809,7 +809,7 @@ onBeforeUnmount(() => {
   background-color: #f1c40f;
   color: #1e1e1e;
   border: 2px solid #1e1e1e;
-  box-shadow: 2px 2px 0px #1e1e1e;
+  box-shadow: 2px 2px 0 #1e1e1e;
 }
 
 .burger-button {
