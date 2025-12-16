@@ -321,7 +321,7 @@ const menuItems = computed(() => {
         url: '/event-winter',
         isEvent: true,
         eventKey: 'winter',
-        startDate: '24.12 00:00',
+        startDate: '15.12 00:00',
         endDate: '01.02 23:59'
       },
       {
