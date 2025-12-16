@@ -14,7 +14,7 @@ import Snow from 'assets/images/mery-christmas/Snow.svg'
 const { t } = useI18n()
 const isEventOpen = computed(() => {
   const event = eventStore.events.find(e => e.id === eventId.value)
-  if (!event) return false
+  // if (!event) return false
   const now = new Date().toLocaleDateString('fr-CA').slice(5)
   const start = event.start.slice(0, 5)
   const end = event.end.slice(0, 5)

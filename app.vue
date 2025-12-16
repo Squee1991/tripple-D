@@ -2,13 +2,13 @@
   <NuxtLayout>
     <NuxtPage/>
     <AchievementToast @toast-finished="onToastFinished" />
-<!--    <VStephint v-if="showStepHint" @close="showStepHint = false"/>-->
+
     <VLost/>
   </NuxtLayout>
 </template>
 
 <script setup>
-import VStephint from "./src/components/V-stephint.vue";
+
 import AchievementToast from './src/components/AchievementToast.vue'
 import VLost from './src/components/V-lost.vue'
 import {useRouter, useRoute} from 'vue-router'
