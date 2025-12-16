@@ -10,27 +10,36 @@
 </template>
 
 <script setup>
-import {ref, defineProps} from 'vue'
-import {getSpeechAudio} from '../../utils/googleTTS.js'
+import { ref, defineProps, onBeforeUnmount } from 'vue'
+import { getSpeechAudio, stopSpeech } from '../../utils/googleTTS.js'
 import DefaultSoundIcon from '../../assets/images/SoundIcon.svg'
-const {t} = useI18n()
+
+const { t } = useI18n()
 const isSpeaking = ref(false)
 
 const props = defineProps({
-  text: {type: String, required: true},
-  lang: {type: String, default: 'de-DE'},
-  icon: {type: String, default: DefaultSoundIcon}
+  text: { type: String, required: true },
+  lang: { type: String, default: 'de-DE' },
+  icon: { type: String, default: DefaultSoundIcon }
 })
 
 async function speak(htmlText) {
   if (isSpeaking.value) return
-  const plainText = htmlText.replace(/<[^>]*>/g, ' ').replace(/→/g, ', ').trim()
+
+  const plainText = htmlText
+      .replace(/<[^>]*>/g, ' ')
+      .replace(/→/g, ', ')
+      .trim()
+
   isSpeaking.value = true
   await getSpeechAudio(plainText, props.lang)
-  setTimeout(() => {
-    isSpeaking.value = false
-  }, 2000)
+  isSpeaking.value = false
 }
+
+onBeforeUnmount(() => {
+  stopSpeech()
+})
+
 </script>
 
 <style scoped>

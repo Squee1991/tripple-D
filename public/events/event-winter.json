@@ -3,8 +3,8 @@
     {
       "id": "quest-1",
       "title": "Рождественская викторина",
-        "rewardCoins": 360,
-        "rewardRep": 1000,
+        "rewardCoins": 10,
+        "rewardRep": 25,
       "steps": [
         {
           "type": "multiple-choice",
@@ -116,7 +116,7 @@
       "id": "quest-2",
       "title": "Традиции и обычаи ",
       "rewardCoins": 10,
-      "rewardRep": 40,
+      "rewardRep": 25,
       "steps": [
         {
           "type": "multiple-choice",
@@ -228,7 +228,7 @@
       "id": "quest-3",
       "title": "Праздничные герои",
       "rewardCoins": 10,
-      "rewardRep": 40,
+      "rewardRep": 50,
       "steps": [
         {
           "type": "multiple-choice",
@@ -340,7 +340,7 @@
       "id": "quest-4",
       "title": "Адвент и ожидание",
       "rewardCoins": 10,
-      "rewardRep": 40,
+      "rewardRep": 50,
       "steps": [
         {
           "type": "multiple-choice",
@@ -374,12 +374,12 @@
           "title": "Смысл венка",
           "question": "Was symbolisiert der Adventskranz?",
           "options": [
-            "das Warten auf Weihnachten",
             "den Sommeranfang",
             "den Weihnachtsmann",
-            "den Frühling"
+            "den Frühling",
+            "das Warten auf Weihnachten"
           ],
-          "correctOptionIndex": 0
+          "correctOptionIndex": 3
         },
         {
           "type": "multiple-choice",
@@ -387,12 +387,12 @@
           "title": "Поцелуй под омелой",
           "question": "Was macht man traditionell unter einem Mistelzweig?",
           "options": [
-            "Man küsst sich",
             "Man tanzt",
             "Man schenkt Geld",
+            "Man küsst sich",
             "Man isst Plätzchen"
           ],
-          "correctOptionIndex": 0
+          "correctOptionIndex": 2
         },
         {
           "type": "multiple-choice",
@@ -400,12 +400,12 @@
           "title": "Сладкий штоллен",
           "question": "Wie heißt das Gebäck, das man zu Weihnachten oft mit Puderzucker bestreut?",
           "options": [
-            "Stollen",
             "Brezel",
+            "Stollen",
             "Käsekuchen",
             "Croissant"
           ],
-          "correctOptionIndex": 0
+          "correctOptionIndex": 1
         },
         {
           "type": "multiple-choice",
@@ -426,12 +426,12 @@
           "title": "Традиция под омелой",
           "question": "Was macht man traditionell unter einem Mistelzweig?",
           "options": [
-            "Man küsst sich",
             "Man tanzt",
+            "Man küsst sich",
             "Man schenkt Geld",
             "Man isst Plätzchen"
           ],
-          "correctOptionIndex": 0
+          "correctOptionIndex": 1
         },
         {
           "type": "multiple-choice",
@@ -439,12 +439,12 @@
           "title": "Праздничная выпечка",
           "question": "Wie heißt das Gebäck, das man zu Weihnachten oft mit Puderzucker bestreut?",
           "options": [
-            "Stollen",
             "Brezel",
             "Käsekuchen",
+            "Stollen",
             "Croissant"
           ],
-          "correctOptionIndex": 0
+          "correctOptionIndex": 2
         }
       ]
     },
@@ -452,7 +452,7 @@
       "id": "quest-5",
       "title": "Желания и подарки",
       "rewardCoins": 10,
-      "rewardRep": 40,
+      "rewardRep": 50,
       "steps": [
         {
           "type": "multiple-choice",
@@ -565,7 +565,7 @@
       "id": "quest-6",
       "title": "Weihnachten in Deutschland",
       "rewardCoins": 10,
-      "rewardRep": 40,
+      "rewardRep": 50,
       "steps": [
         {
           "type": "reading",
@@ -705,7 +705,7 @@
       "id": "quest-7",
       "title": "Weihnachten und Neujahr in Deutschland",
       "rewardCoins": 10,
-      "rewardRep": 40,
+      "rewardRep": 50,
       "steps": [
         {
           "type": "reading",
@@ -845,7 +845,7 @@
       "id": "quest-8",
       "title": "Silvester der Geister",
       "rewardCoins": 10,
-      "rewardRep": 40,
+      "rewardRep": 50,
       "steps": [
         {
           "type": "reading",
@@ -985,7 +985,7 @@
       "id": "quest-9",
       "title": "Neujahr im Zauberwald",
       "rewardCoins": 10,
-      "rewardRep": 40,
+      "rewardRep": 50,
       "steps": [
         {
           "type": "reading",
@@ -1130,7 +1130,7 @@
       "id": "quest-10",
       "title": "Winterferien und Schulanfang",
       "rewardCoins": 10,
-      "rewardRep": 40,
+      "rewardRep": 50,
       "steps": [
         {
           "type": "reading",
@@ -1271,7 +1271,7 @@
       "id": "quest-11",
       "title": "Соедини рождественские пары",
       "rewardCoins": 10,
-      "rewardRep": 40,
+      "rewardRep": 50,
       "steps": [
         {
           "type": "matching",
@@ -1334,22 +1334,22 @@
         {
           "type": "matching",
           "id": "match-3",
-          "instruction": "Соедини немецкое слово и его русский перевод",
+          "instruction": "Соедини немецкое слово и его перевод",
           "pairsLeft": [
             { "id": "l1", "text": "Kerze" },
             { "id": "l2", "text": "Schnee" },
             { "id": "l3", "text": "Stern" },
             { "id": "l4", "text": "Geschenk" },
-            { "id": "l5", "text": "Tanne" },
+            { "id": "l5", "text": "Weihnachtsbaum" },
             { "id": "l6", "text": "Glocke" }
           ],
           "pairsRight": [
-            { "id": "r1", "text": "Ёлка" },
-            { "id": "r2", "text": "Свеча" },
-            { "id": "r3", "text": "Снег" },
-            { "id": "r4", "text": "Подарок" },
-            { "id": "r5", "text": "Колокол" },
-            { "id": "r6", "text": "Звезда" }
+            { "id": "r1", "text": "winterQuestEleven.firTree" },
+            { "id": "r2", "text": "winterQuestEleven.candle" },
+            { "id": "r3", "text": "winterQuestEleven.snow" },
+            { "id": "r4", "text": "winterQuestEleven.gift" },
+            { "id": "r5", "text": "winterQuestEleven.bell" },
+            { "id": "r6", "text": "winterQuestEleven.star" }
           ],
           "correctPairs": [
             ["l1", "r2"],
@@ -1395,7 +1395,7 @@
       "id": "quest-12",
       "title": "Соедини новогодние пары",
       "rewardCoins": 10,
-      "rewardRep": 40,
+      "rewardRep": 50,
       "steps": [
         {
           "type": "matching",
@@ -1468,12 +1468,12 @@
             { "id": "l6", "text": "Brandenburger Tor" }
           ],
           "pairsRight": [
-            { "id": "r1", "text": "полночь" },
-            { "id": "r2", "text": "обещание, цель" },
-            { "id": "r3", "text": "Бранденбургские ворота" },
-            { "id": "r4", "text": "фейерверк" },
-            { "id": "r5", "text": "ракета салюта" },
-            { "id": "r6", "text": "шампанское" }
+            { "id": "r1", "text": "winterQuestTwelve.midnight" },
+            { "id": "r2", "text": "winterQuestTwelve.resolution" },
+            { "id": "r3", "text": "winterQuestTwelve.brandenburgGate" },
+            { "id": "r4", "text": "winterQuestTwelve.fireworks" },
+            { "id": "r5", "text": "winterQuestTwelve.fireworkRocket" },
+            { "id": "r6", "text": "winterQuestTwelve.champagne" }
           ],
           "correctPairs": [
             ["l1", "r4"],
@@ -1519,7 +1519,7 @@
       "id": "quest-13",
       "title": "Соедини зимние традиции разных стран",
       "rewardCoins": 10,
-      "rewardRep": 40,
+      "rewardRep": 50,
       "steps": [
         {
           "type": "matching",
@@ -1555,7 +1555,7 @@
           "id": "match-2",
           "instruction": "Соедини предмет и его значение",
           "pairsLeft": [
-            { "id": "l1", "text": "rote Unterwäsche" },
+            { "id": "l1", "text": "Feuerwerk" },
             { "id": "l2", "text": "Trauben" },
             { "id": "l3", "text": "Bleifigur" },
             { "id": "l4", "text": "Sektglas" },
@@ -1563,7 +1563,7 @@
             { "id": "l6", "text": "Kuhglocke" }
           ],
           "pairsRight": [
-            { "id": "r1", "text": "Symbol für Glück und Liebe" },
+            { "id": "r1", "text": "wird in der Silvesternacht gezündet" },
             { "id": "r2", "text": "Bringt Glück, wenn man sie um Mitternacht isst" },
             { "id": "r3", "text": "zeigt Zukunftsformen beim Schmelzen" },
             { "id": "r4", "text": "wird zum Anstoßen in der Silvesternacht benutzt" },
@@ -1586,26 +1586,26 @@
           "pairsLeft": [
             { "id": "l1", "text": "Feuerwerk" },
             { "id": "l2", "text": "Traube" },
-            { "id": "l3", "text": "Unterwäsche" },
+            { "id": "l3", "text": "Neujahrsvorsatz" },
             { "id": "l4", "text": "Geschirr" },
             { "id": "l5", "text": "Glocke" },
-            { "id": "l6", "text": "Vorsatz" }
+            { "id": "l6", "text": "Sektglas" }
           ],
           "pairsRight": [
-            { "id": "r1", "text": "фейерверк" },
-            { "id": "r2", "text": "виноград" },
-            { "id": "r3", "text": "нижнее бельё" },
-            { "id": "r4", "text": "посудa" },
-            { "id": "r5", "text": "колокол" },
-            { "id": "r6", "text": "новогоднее обещание" }
+            { "id": "r1", "text": "winterQuestThirteen.dishes" },
+            { "id": "r2", "text": "winterQuestThirteen.fireworks" },
+            { "id": "r3", "text": "winterQuestThirteen.champagneGlass" },
+            { "id": "r4", "text": "winterQuestThirteen.newYearResolution" },
+            { "id": "r5", "text": "winterQuestThirteen.grape" },
+            { "id": "r6", "text": "winterQuestThirteen.bell" }
           ],
           "correctPairs": [
-            ["l1", "r1"],
-            ["l2", "r2"],
-            ["l3", "r3"],
-            ["l4", "r4"],
-            ["l5", "r5"],
-            ["l6", "r6"]
+            ["l1", "r2"],
+            ["l2", "r5"],
+            ["l3", "r4"],
+            ["l4", "r1"],
+            ["l5", "r6"],
+            ["l6", "r3"]
           ]
         },
         {
@@ -1643,7 +1643,7 @@
       "id": "quest-14",
       "title": "Соедини зимние праздники и поверья Европы",
       "rewardCoins": 10,
-      "rewardRep": 40,
+      "rewardRep": 50,
       "steps": [
         {
           "type": "matching",
@@ -1677,29 +1677,29 @@
         {
           "type": "matching",
           "id": "match-2",
-          "instruction": "Соедини поверие и значение",
+          "instruction": "Соедини традицию и значение",
           "pairsLeft": [
             { "id": "l1", "text": "Mistelzweig" },
-            { "id": "l2", "text": "Schornsteinfeger berühren" },
+            { "id": "l2", "text": "Schornsteinfeger" },
             { "id": "l3", "text": "Linsen essen" },
-            { "id": "l4", "text": "Eimer Wasser vor die Tür stellen" },
+            { "id": "l4", "text": "Wasser vor die Tür" },
             { "id": "l5", "text": "Erste Person am Neujahrstag" },
-            { "id": "l6", "text": "Tiere sprechen in der Nacht" }
+            { "id": "l6", "text": "Sprechende Tiere" }
           ],
           "pairsRight": [
-            { "id": "r1", "text": "Bringt Glück, wenn man darunter küsst" },
-            { "id": "r2", "text": "Soll Reichtum im neuen Jahr bringen" },
-            { "id": "r3", "text": "Bringt Glück, wenn es ein Mann mit dunklen Haaren ist" },
-            { "id": "r4", "text": "Bedeutet Reinigung und frischen Anfang" },
-            { "id": "r5", "text": "Ein altes englisches Silvester-Ritual" },
-            { "id": "r6", "text": "Ein alter Glaube aus Osteuropa" }
+            { "id": "r1", "text": "Glück durch Küssen" },
+            { "id": "r2", "text": "bringt Glück" },
+            { "id": "r3", "text": "steht für Geld" },
+            { "id": "r4", "text": "neuer Anfang" },
+            { "id": "r5", "text": "bringt Glück für das Jahr" },
+            { "id": "r6", "text": "alte Wintergeschichte" }
           ],
           "correctPairs": [
             ["l1", "r1"],
-            ["l2", "r5"],
-            ["l3", "r2"],
+            ["l2", "r2"],
+            ["l3", "r3"],
             ["l4", "r4"],
-            ["l5", "r3"],
+            ["l5", "r5"],
             ["l6", "r6"]
           ]
         },
@@ -1716,12 +1716,12 @@
             { "id": "l6", "text": "Reichtum" }
           ],
           "pairsRight": [
-            { "id": "r1", "text": "омела" },
-            { "id": "r2", "text": "Крампус (рождественское чудовище)" },
-            { "id": "r3", "text": "ведьма" },
-            { "id": "r4", "text": "чечевица" },
-            { "id": "r5", "text": "счастье" },
-            { "id": "r6", "text": "богатство" }
+            { "id": "r1", "text": "winterQuestFourteen.mistletoe" },
+            { "id": "r2", "text": "winterQuestFourteen.krampus" },
+            { "id": "r3", "text": "winterQuestFourteen.witch" },
+            { "id": "r4", "text": "winterQuestFourteen.lentils" },
+            { "id": "r5", "text": "winterQuestFourteen.luck" },
+            { "id": "r6", "text": "winterQuestFourteen.wealth" }
           ],
           "correctPairs": [
             ["l1", "r1"],
@@ -1767,7 +1767,7 @@
       "id": "quest-15",
       "title": "Соедини зимние пары — Зима в Германии",
       "rewardCoins": 10,
-      "rewardRep": 40,
+      "rewardRep": 50,
       "steps": [
         {
           "type": "matching",
@@ -1840,12 +1840,12 @@
             { "id": "l6", "text": "Fensterbrett" }
           ],
           "pairsRight": [
-            { "id": "r1", "text": "снег" },
-            { "id": "r2", "text": "холод" },
-            { "id": "r3", "text": "шапка" },
-            { "id": "r4", "text": "перчатки" },
-            { "id": "r5", "text": "печь" },
-            { "id": "r6", "text": "подоконник" }
+            { "id": "r1", "text": "winterQuestFifteen.snow" },
+            { "id": "r2", "text": "winterQuestFifteen.cold" },
+            { "id": "r3", "text": "winterQuestFifteen.hat" },
+            { "id": "r4", "text": "winterQuestFifteen.gloves" },
+            { "id": "r5", "text": "winterQuestFifteen.stove" },
+            { "id": "r6", "text": "winterQuestFifteen.windowsill" }
           ],
           "correctPairs": [
             ["l1", "r1"],
@@ -1892,7 +1892,7 @@
       "id": "quest-16",
       "title": "Выбери правильное слово — Зима и Новый год",
       "rewardCoins": 10,
-      "rewardRep": 40,
+      "rewardRep": 50,
       "steps": [
         {
           "type": "choose-word",
@@ -1956,7 +1956,7 @@
       "id": "quest-17",
       "title": "Выбери правильное слово",
       "rewardCoins": 10,
-      "rewardRep": 40,
+      "rewardRep": 50,
       "steps": [
         {
           "type": "choose-word",
@@ -2020,7 +2020,7 @@
       "id": "quest-18",
       "title": "Выбери правильное слово — Подготовка к Новому году",
       "rewardCoins": 10,
-      "rewardRep": 40,
+      "rewardRep": 50,
       "steps": [
         {
           "type": "choose-word",
@@ -2084,7 +2084,7 @@
       "id": "quest-19",
       "title": "Выбери правильное слово — Новогодняя ночь",
       "rewardCoins": 10,
-      "rewardRep": 40,
+      "rewardRep": 50,
       "steps": [
         {
           "type": "choose-word",
@@ -2148,7 +2148,7 @@
       "id": "quest-20",
       "title": "Выбери правильное слово — Как немцы празднуют Новый год",
       "rewardCoins": 10,
-      "rewardRep": 40,
+      "rewardRep": 50,
       "steps": [
         {
           "type": "choose-word",
@@ -2226,7 +2226,7 @@
       "id": "quest-21",
       "title": "Weihnachten: Bild → Wort (mit Artikel)",
       "rewardCoins": 10,
-      "rewardRep": 40,
+      "rewardRep": 50,
       "steps": [
         {
           "type": "multiple-choice",

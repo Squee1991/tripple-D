@@ -73,32 +73,30 @@
 
           <div v-if="authStore.uid" class="stats-block">
             <h3>
-              Твоя статистика<br> по уровню <span>{{ selectedLevel }}</span>
+              {{ t('sentenceDuels.stats')}}<br> {{ t('sentenceDuels.statsPartTwo')}} <span>{{ selectedLevel }}</span>
             </h3>
             <div class="stats-container">
               <div class="stat-item">
-                <span class="stat-label">Побед</span>
+                <span class="stat-label">{{ t('sentenceDuels.victories')}}</span>
                 <span class="stat-value">{{ levelStats.wins }}</span>
               </div>
               <div class="stat-item">
-                <span class="stat-label">Серия побед</span>
+                <span class="stat-label">{{ t('sentenceDuels.streak')}}</span>
                 <span class="stat-value">{{ levelStats.streaks }}</span>
               </div>
               <div class="stat-item">
-                <span class="stat-label">Чистые победы</span>
+                <span class="stat-label">{{ t('sentenceDuels.clearWins')}}</span>
                 <span class="stat-value">{{ levelStats.cleanSweeps }}</span>
               </div>
             </div>
-
             <button
                 @click="startGame"
                 class="start-game-button"
                 :disabled="(mode === 'online' && gameStore.isSearching) || isLoading"
             >
-              Начать игру ({{ selectedLevel }})
+              {{ t('sentenceDuels.start')}} ({{ selectedLevel }})
             </button>
-
-            <p class="stats-hint">Нажми на уровень, чтобы увидеть статистику по нему.</p>
+            <p class="stats-hint">{{ t('sentenceDuels.info')}}</p>
           </div>
         </div>
       </div>
@@ -123,7 +121,6 @@ import {useSentencesStore} from '../store/sentencesStore.js'
 import {useDuelStore} from '../store/sentenceDuelStore.js'
 import {userAuthStore} from '../store/authStore.js'
 import {useRouter} from 'vue-router'
-import {useI18n} from 'vue-i18n'
 import Modal from '../src/components/modal.vue'
 import TipsModal from '../src/components/V-tips.vue'
 import Login from '../assets/images/login.svg'
@@ -271,7 +268,7 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   border-radius: 16px;
   position: relative;
   margin: 2rem auto;
-  box-shadow: 4px 4px 0px #1e1e1e;
+  box-shadow: 2px 2px 0px #1e1e1e;
   border: 3px solid #1e1e1e;
   overflow: hidden;
   padding: 4px;
@@ -296,7 +293,7 @@ watch(() => gameStore.sessionData?.status, async (s) => {
 .mode-toggle-option {
   flex: 1;
   text-align: center;
-  padding: 14px 5px;
+  padding: 10px 5px;
   cursor: pointer;
   color: #fff;
   font-family: "Nunito", sans-serif;
@@ -336,11 +333,10 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   padding: 0 40px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0;
+  gap: 15px;
 }
 
 .back-button-global {
-  border: none;
   display: flex;
   align-items: center;
   border: 2px solid #1e1e1e;
@@ -348,7 +344,7 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   background: #4ade80;
   border-radius: 16px;
   cursor: pointer;
-  color: white;
+  color: #282626;
   font-size: 1.2rem;
   font-weight: 400;
   font-family: "Nunito", sans-serif;
@@ -363,7 +359,7 @@ watch(() => gameStore.sessionData?.status, async (s) => {
 
 .back-button-global:hover {
   transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0px #1e1e1e;
+  box-shadow: 0px 0px 0px #1e1e1e;
 }
 
 .back-button-global svg {
@@ -406,7 +402,7 @@ watch(() => gameStore.sessionData?.status, async (s) => {
 
 .level-card {
   background-color: white;
-  border: 3px solid #1e1e1e;
+  border: 2px solid #1e1e1e;
   border-radius: 20px;
   padding: 15px;
   text-align: left;
@@ -415,13 +411,13 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  box-shadow: 8px 8px 0px #1e1e1e;
+  box-shadow: 2px 2px 0px #1e1e1e;
 }
 
 .level-card:hover:not(:disabled) {
   background-color: #FFD24B;
-  transform: translateY(-2px) scale(1.01);
-  box-shadow: 6px 6px 0px #1e1e1e;
+  transform: translate(2px , 2px);
+  box-shadow: 0px 0px 0 #1e1e1e;
 }
 
 .level-card {
@@ -494,14 +490,12 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   transform: translateY(-2px);
 }
 
-
 .main-content-wrapper {
   display: flex;
   gap: 20px;
   max-width: 1200px;
   margin: 40px auto 0;
 }
-
 
 .stats-block {
   background-color: #fff;
@@ -511,7 +505,6 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   box-shadow: 4px 4px 0 #1e1e1e;
   top: 20px;
   width: 100%;
-
 }
 
 .stats-block h3 {
@@ -552,7 +545,7 @@ watch(() => gameStore.sessionData?.status, async (s) => {
 }
 
 .stat-item:hover {
-  transform: scale(1.03);
+  transform: scale(1.01);
   border-color: #1e1e1e;
 }
 
@@ -568,17 +561,15 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   color: #4ade80;
 }
 
-/* ИЗМЕНЕНИЕ: Добавлены стили для кнопки "Начать игру" */
 .start-game-button {
   width: 100%;
-  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 3px solid #1e1e1e;
-  padding: 18px 15px;
-  background: #4ade80; /* Зеленая, как кнопка "Назад" */
-  border-radius: 16px;
+  padding: 10px 15px;
+  background: #4ade80;
+  border-radius: 12px;
   cursor: pointer;
   color: #1e1e1e;
   font-size: 1.4rem;
@@ -586,7 +577,7 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   font-family: "Nunito", sans-serif;
   box-shadow: 4px 4px 0px #1e1e1e;
   transition: all 0.1s ease-in-out;
-  margin: 25px 0 15px; /* Отступы */
+  margin:15px 0 0 0 ;
 }
 
 .start-game-button:hover:not(:disabled) {
@@ -601,16 +592,14 @@ watch(() => gameStore.sessionData?.status, async (s) => {
   opacity: 0.7;
 }
 
-
 .stats-hint {
   text-align: center;
   font-size: 0.9rem;
   color: #777;
-  margin-top: 10px; /* Уменьшен отступ, т.к. кнопка добавила свой */
+  margin-top: 10px;
   margin-bottom: 0;
 }
 
-/* ... (все @media запросы остаются без изменений) ... */
 @media (max-width: 1024px) {
   .page-title {
     font-size: 1.2rem;
@@ -619,10 +608,6 @@ watch(() => gameStore.sessionData?.status, async (s) => {
 
   .duel__header {
     padding: 0 10px;
-  }
-
-  .main-content-wrapper {
-    /* grid-template-columns: 1fr; <-- это свойство было убрано, т.к. flex-direction column уже используется */
   }
 
   .stats-block {
@@ -641,6 +626,10 @@ watch(() => gameStore.sessionData?.status, async (s) => {
     box-shadow: 2px 2px 0 black;
   }
 
+  .level-card.level-card--selected {
+    min-width: 100px;
+  }
+
   .lobby-container {
     padding: 20px;
   }
@@ -652,6 +641,7 @@ watch(() => gameStore.sessionData?.status, async (s) => {
 
   .duel__header {
     flex-direction: column;
+    max-width: 400px;
   }
 
   .level-grid {
@@ -675,7 +665,7 @@ watch(() => gameStore.sessionData?.status, async (s) => {
 
   .start-game-button {
     font-size: 1.2rem;
-    padding: 15px;
+    padding: 10px;
     box-shadow: 2px 2px 0px #1e1e1e;
   }
 

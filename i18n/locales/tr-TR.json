@@ -9,6 +9,79 @@
     "jokeLabel": "Şaka Geçidi",
     "jokeText": "Eğlen, bonusları topla ve şaka dolu meydan okumalara katıl!"
   },
+  "sentenceDuels": {
+    "stats": "İstatistiklerin",
+    "statsPartTwo": "seviyeye göre",
+    "victories": "Galibiyetler",
+    "streak": "Galibiyet serisi",
+    "clearWins": "Net galibiyetler",
+    "start": "Oyunu başlat",
+    "info": "İstatistiklerini görmek için bir seviyeye tıkla."
+  },
+  "eventSessionPage": {
+    "loading": "Yükleniyor…",
+    "perfect": "Mükemmel!",
+    "right": "Tüm",
+    "questions": "soruları doğru cevapladınız.",
+    "getReward": "Ödülü al",
+    "almost": "Neredeyse oldu",
+    "noMistake": "Ödül almak için hatasız bitirmelisiniz.",
+    "again": "Tekrar dene",
+    "leave": "Çık",
+    "notFound": "Görev bulunamadı",
+    "back": "Geri",
+    "quest": "Soru",
+    "listen": "Metni dinleyin ve soruları cevaplayın",
+    "check": "Kontrol et",
+    "correct": "Doğru!",
+    "mistakes": "Hatalar var.",
+    "further": "Devam",
+    "fillAnswer": "Cevabı yaz",
+    "answerHighlighted": "Yanlış! Doğru cevap vurgulandı.",
+    "excellentAnswers": "Harika, her şey doğru!",
+    "rightAnswer": "Hata! Doğru cevap:",
+    "connectPaar": "Eşleştir"
+  },
+  "winterQuestEleven": {
+    "firTree": "Yılbaşı ağacı",
+    "candle": "Mum",
+    "snow": "Kar",
+    "gift": "Hediye",
+    "bell": "Çan",
+    "star": "Yıldız"
+  },
+  "winterQuestTwelve": {
+    "midnight": "Gece yarısı",
+    "resolution": "Söz, hedef",
+    "brandenburgGate": "Brandenburg Kapısı",
+    "fireworks": "Havai fişek",
+    "fireworkRocket": "Havai fişek roketi",
+    "champagne": "Şampanya"
+  },
+  "winterQuestThirteen": {
+    "dishes": "Tabaklar",
+    "fireworks": "Havai fişek",
+    "champagneGlass": "Şampanya kadehi",
+    "newYearResolution": "Yeni yıl kararı",
+    "grape": "Üzüm",
+    "bell": "Çan"
+  },
+  "winterQuestFourteen": {
+    "mistletoe": "Ökse otu",
+    "krampus": "Krampus (kötü Noel Baba)",
+    "witch": "Cadı",
+    "lentils": "Mercimek",
+    "luck": "Şans",
+    "wealth": "Zenginlik"
+  },
+  "winterQuestFifteen": {
+    "snow": "Kar",
+    "cold": "Soğuk",
+    "hat": "Şapka",
+    "gloves": "Eldiven",
+    "stove": "Soba",
+    "windowsill": "Pencere pervazı"
+  },
   "winterEventQuests": {
     "quest-21": "Kelimeler Hazinesi",
     "quest-1": "Noel Ruhu",
@@ -52,7 +125,9 @@
     "eventShop": "Etkinlik Mağazası",
     "eventQuestions": "Etkinlik Görevleri",
     "firstReputation": "Kar Güveni",
-    "secondReputation": "Kış Saygısı"
+    "secondReputation": "Kış Saygısı",
+    "needForReward": "Satın almak için gereken:",
+    "and": "ve"
   },
   "winterEventShopItems": {
     "santaHat": "Noel Baba Şapkası",
@@ -4761,7 +4836,7 @@
     "clear": "Temizle",
     "leave": "Rakibiniz oturumu terk etti",
     "leaveText": "Eşleştirme sayfasına yönlendirileceksiniz!",
-    "leaveBtn": "Oturumu terk et",
+    "leaveBtn": "Ayrıl",
     "victory": "Zafer",
     "victoryText": "Daha hızlı ve zekiydiniz! Harika iş çıkardınız!",
     "loss": "Mağlubiyet",
