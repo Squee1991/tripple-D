@@ -9,6 +9,79 @@
     "jokeLabel": "موكب المقالب",
     "jokeText": "استمتع، واجمع المكافآت وشارك في تحديات مضحكة!"
   },
+  "sentenceDuels": {
+    "stats": "إحصائياتك",
+    "statsPartTwo": "حسب المستوى",
+    "victories": "الانتصارات",
+    "streak": "سلسلة الانتصارات",
+    "clearWins": "انتصارات نظيفة",
+    "start": "ابدأ اللعبة",
+    "info": "اضغط على المستوى لعرض إحصائياته."
+  },
+  "eventSessionPage": {
+    "loading": "جارٍ التحميل…",
+    "perfect": "ممتاز!",
+    "right": "لقد أجبت بشكل صحيح على جميع",
+    "questions": "الأسئلة.",
+    "getReward": "احصل على المكافأة",
+    "almost": "كاد أن ينجح",
+    "noMistake": "للحصول على المكافأة، يجب الإكمال دون أخطاء.",
+    "again": "حاول مرة أخرى",
+    "leave": "خروج",
+    "notFound": "المهمة غير موجودة",
+    "back": "رجوع",
+    "quest": "سؤال",
+    "listen": "استمع إلى النص وأجب عن الأسئلة",
+    "check": "تحقق",
+    "correct": "صحيح!",
+    "mistakes": "هناك أخطاء.",
+    "further": "التالي",
+    "fillAnswer": "اكتب الإجابة",
+    "answerHighlighted": "خطأ! الإجابة الصحيحة مميزة.",
+    "excellentAnswers": "رائع، كل شيء صحيح!",
+    "rightAnswer": "خطأ! الإجابة الصحيحة:",
+    "connectPaar": "اربط الأزواج"
+  },
+  "winterQuestEleven": {
+    "firTree": "شجرة عيد الميلاد",
+    "candle": "شمعة",
+    "snow": "ثلج",
+    "gift": "هدية",
+    "bell": "جرس",
+    "star": "نجمة"
+  },
+  "winterQuestTwelve": {
+    "midnight": "منتصف الليل",
+    "resolution": "وعد، هدف",
+    "brandenburgGate": "بوابة براندنبورغ",
+    "fireworks": "ألعاب نارية",
+    "fireworkRocket": "صاروخ ألعاب نارية",
+    "champagne": "شمبانيا"
+  },
+  "winterQuestThirteen": {
+    "dishes": "أواني",
+    "fireworks": "ألعاب نارية",
+    "champagneGlass": "كأس شمبانيا",
+    "newYearResolution": "قرار السنة الجديدة",
+    "grape": "عنب",
+    "bell": "جرس"
+  },
+  "winterQuestFourteen": {
+    "mistletoe": "الهدال",
+    "krampus": "كرامبوس (سانتا شرير)",
+    "witch": "ساحرة",
+    "lentils": "عدس",
+    "luck": "حظ",
+    "wealth": "ثروة"
+  },
+  "winterQuestFifteen": {
+    "snow": "ثلج",
+    "cold": "برد",
+    "hat": "قبعة",
+    "gloves": "قفازات",
+    "stove": "موقد",
+    "windowsill": "حافة النافذة"
+  },
   "winterEventQuests": {
     "quest-21": "خزانة الكلمات",
     "quest-1": "روح عيد الميلاد",
@@ -4761,7 +4834,7 @@
     "clear": "مسح",
     "leave": "خصمك غادر الجلسة",
     "leaveText": "سيتم إعادتك إلى صفحة البحث!",
-    "leaveBtn": "مغادرة الجلسة",
+    "leaveBtn": "مغادرة",
     "victory": "انتصار",
     "victoryText": "كنت أسرع وأكثر ذكاءً! عمل رائع!",
     "loss": "خسارة",

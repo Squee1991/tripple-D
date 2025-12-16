@@ -16,8 +16,8 @@
       <h2 class="modal-title">{{ activeEvent.title }}</h2>
       <p class="modal-text">{{ activeEvent.text }}</p>
       <div class="modal-actions">
-        <button type="button" class="btn-start" @click="handleBeginClick">Начать</button>
-        <button type="button" class="btn-start --close" @click="handleCloseClick">Закрыть</button>
+        <button type="button" class="btn-start" @click="handleBeginClick">{{ t('locationQuests.start')}}</button>
+        <button type="button" class="btn-start --close" @click="handleCloseClick">{{ t('shareModal.close')}}</button>
       </div>
     </div>
   </div>
@@ -73,7 +73,7 @@ const defaultSchedule = computed(() => [
   },
   {
     id: "winter",
-    start: "12-18 00:00",
+    start: "12-15 00:00",
     end: "01-02 23:59",
     title: t('eventsModal.winterLabel'),
     text: t('eventsModal.winterText'),

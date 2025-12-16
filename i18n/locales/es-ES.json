@@ -9,6 +9,79 @@
     "jokeLabel": "Desfile de Bromas",
     "jokeText": "¡Diviértete, recoge bonificaciones y participa en desafíos cómicos!"
   },
+  "sentenceDuels": {
+    "stats": "Tus estadísticas",
+    "statsPartTwo": "por nivel",
+    "victories": "Victorias",
+    "streak": "Racha de victorias",
+    "clearWins": "Victorias limpias",
+    "start": "Iniciar juego",
+    "info": "Haz clic en un nivel para ver sus estadísticas."
+  },
+  "eventSessionPage": {
+    "loading": "Cargando…",
+    "perfect": "¡Perfecto!",
+    "right": "Has respondido correctamente a todas las",
+    "questions": "preguntas.",
+    "getReward": "Recoger recompensa",
+    "almost": "Casi lo logras",
+    "noMistake": "Para obtener la recompensa, debes terminar sin errores.",
+    "again": "Intentar de nuevo",
+    "leave": "Salir",
+    "notFound": "Misión no encontrada",
+    "back": "Atrás",
+    "quest": "Pregunta",
+    "listen": "Escucha el texto y responde a las preguntas",
+    "check": "Comprobar",
+    "correct": "¡Correcto!",
+    "mistakes": "Hay errores.",
+    "further": "Siguiente",
+    "fillAnswer": "Escribe la respuesta",
+    "answerHighlighted": "¡Incorrecto! La respuesta correcta está resaltada.",
+    "excellentAnswers": "¡Excelente, todo correcto!",
+    "rightAnswer": "Error. Respuesta correcta:",
+    "connectPaar": "Conecta los pares"
+  },
+  "winterQuestEleven": {
+    "firTree": "Árbol de Navidad",
+    "candle": "Vela",
+    "snow": "Nieve",
+    "gift": "Regalo",
+    "bell": "Campana",
+    "star": "Estrella"
+  },
+  "winterQuestTwelve": {
+    "midnight": "Medianoche",
+    "resolution": "Propósito, meta",
+    "brandenburgGate": "Puerta de Brandeburgo",
+    "fireworks": "Fuegos artificiales",
+    "fireworkRocket": "Cohete de fuegos artificiales",
+    "champagne": "Champán"
+  },
+  "winterQuestThirteen": {
+    "dishes": "Platos",
+    "fireworks": "Fuegos artificiales",
+    "champagneGlass": "Copa de champán",
+    "newYearResolution": "Propósito de Año Nuevo",
+    "grape": "Uva",
+    "bell": "Campana"
+  },
+  "winterQuestFourteen": {
+    "mistletoe": "Muérdago",
+    "krampus": "Krampus (Santa malvado)",
+    "witch": "Bruja",
+    "lentils": "Lentejas",
+    "luck": "Suerte",
+    "wealth": "Riqueza"
+  },
+  "winterQuestFifteen": {
+    "snow": "Nieve",
+    "cold": "Frío",
+    "hat": "Gorro",
+    "gloves": "Guantes",
+    "stove": "Estufa",
+    "windowsill": "Alféizar"
+  },
   "winterEventQuests": {
     "quest-21": "Tesoro de palabras",
     "quest-1": "Espíritu de la Navidad",
@@ -52,7 +125,9 @@
     "eventShop": "Tienda del evento",
     "eventQuestions": "Misiones del evento",
     "firstReputation": "Confianza Nevada",
-    "secondReputation": "Respeto Invernal"
+    "secondReputation": "Respeto Invernal",
+    "needForReward": "Para comprar necesitas:",
+    "and": "y"
   },
   "winterEventShopItems": {
     "santaHat": "Gorro de Santa",
@@ -4761,7 +4836,7 @@
     "clear": "Limpiar",
     "leave": "Tu oponente abandonó la sesión",
     "leaveText": "¡Serás redirigido a la página de búsqueda!",
-    "leaveBtn": "Abandonar la sesión",
+    "leaveBtn": "Salir",
     "victory": "Victoria",
     "victoryText": "¡Fuiste más rápido y perspicaz! ¡Excelente trabajo!",
     "loss": "Derrota",
