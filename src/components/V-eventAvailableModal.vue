@@ -73,7 +73,7 @@ const defaultSchedule = computed(() => [
   },
   {
     id: "winter",
-    start: "12-15 00:00",
+    start: "12-14 00:00",
     end: "01-02 23:59",
     title: t('eventsModal.winterLabel'),
     text: t('eventsModal.winterText'),
