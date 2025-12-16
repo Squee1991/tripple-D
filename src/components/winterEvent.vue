@@ -30,7 +30,7 @@ const selectedLevel = ref(1)
 const eventId = computed(() => String(route.params.id || ''))
 const isEventOpen = computed(() => {
   const event = eventStore.events.find(e => e.id === eventId.value)
-  if (!event) return false
+  // if (!event) return false
   const now = new Date().toLocaleDateString('fr-CA').slice(5)
   const start = event.start.slice(0, 5)
   const end = event.end.slice(0, 5)
