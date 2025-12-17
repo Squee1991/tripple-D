@@ -118,17 +118,18 @@ function makeEventKey(entry) {
 }
 
 function getDismissed(key) {
-  try {
-    return localStorage.getItem(`eventModal.dismissed.${key}`) === "1";
-  } catch {
-    return false;
-  }
+  return false
+  // try {
+  //   return localStorage.getItem(`eventModal.dismissed.${key}`) === "1";
+  // } catch {
+  //   return false;
+  // }
 }
 
 function setDismissed(key, v = true) {
-  try {
-    localStorage.setItem(`eventModal.dismissed.${key}`, v ? "1" : "0");
-  } catch {}
+  // try {
+  //   localStorage.setItem(`eventModal.dismissed.${key}`, v ? "1" : "0");
+  // } catch {}
 }
 
 const annualCandidatesSorted = computed(() => {

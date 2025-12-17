@@ -17,7 +17,7 @@ import {
     runTransaction,
     deleteDoc,
     increment,
-    Timestamp // Убедитесь, что Timestamp импортирован
+    Timestamp
 } from 'firebase/firestore';
 import {userAuthStore} from './authStore.js';
 import {useSentencesStore} from './sentencesStore.js';
@@ -58,14 +58,11 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
     }
 
     async function updateUserStats(userId, level, isWin, isCleanSweep, isFlawless) {
-
         console.log('--- [STATS UPDATE] Вызов функции с данными:', { userId, level, isWin });
-
         if (!userId || !level || userId !== authStore.uid) return;
         const userDocRef = doc(db, 'users', userId);
         const updates = {};
         const prefix = `achievements.${level.toUpperCase()}`;
-
         if (isWin) {
             updates[`${prefix}.wins`]        = increment(1);
             updates[`${prefix}.streaks`]     = increment(1);
@@ -74,7 +71,6 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
         } else {
             updates[`${prefix}.streaks`] = 0;
         }
-
         try {
             await updateDoc(userDocRef, updates);
             await loadUserAchievements();
@@ -97,11 +93,7 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
 
         const shuffled = allSentencesForLevel.sort(() => 0.5 - Math.random());
         const selectedSentences = shuffled.slice(0, 11);
-
-        // --- ИЗМЕНЕНИЕ 1 ---
-        // Устанавливаем "срок годности" сессии на 2 часа вперед для авто-очистки (TTL)
-        const expireAt = Timestamp.fromMillis(Date.now() + 60 * 1000); // 1 минута
-
+        const expireAt = Timestamp.fromMillis(Date.now() + 60 * 1000);
         const sessionsRef = collection(db, 'gameSessions');
         const newSession = {
             hostId: hostId,
@@ -109,7 +101,7 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
             level: level,
             status: 'waiting',
             createdAt: serverTimestamp(),
-            expireAt: expireAt, // Добавляем поле в документ
+            expireAt: expireAt,
             players: {[hostId]: {score: 0, name: authStore.name, hasMadeError: false}},
             rounds: selectedSentences.map(s => ({sentenceId: s.id, winner: null})),
             currentRoundIndex: 0,
@@ -204,11 +196,9 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
             const data = { id: docSnap.id, ...docSnap.data() };
             sessionData.value = data; // Сначала обновляем данные
             const newStatus = data.status;
-
             // --- ИЗМЕНЕНИЕ 2 ---
             // Когда игра впервые перешла в статус 'finished'
             if (newStatus === 'finished' && prevStatus !== 'finished') {
-
                 // 1. Каждый игрок обновляет СВОЮ статистику
                 if (!didFinalizeMyStats.value) {
                     const hostId  = data.hostId;
@@ -228,7 +218,6 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
                     updateUserStats(myUid, data.level, iWon, isCleanSweep, isFlawless)
                         .finally(() => { didFinalizeMyStats.value = true; });
                 }
-
                 // 2. Только ХОСТ планирует удаление сессии
                 if (data.hostId === authStore.uid) {
                     console.log(`Я хост, удаляю сессию ${data.id} через 10 секунд...`);
@@ -245,7 +234,6 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
             }
         });
     }
-
 
     const cancelSearch = async () => {
         if (gameId.value && sessionData.value?.status === 'waiting') {
