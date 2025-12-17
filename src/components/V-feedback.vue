@@ -290,7 +290,6 @@ const commitCurrentStepToFlow = () => {
       delete answers.taskComment
     }
   }
-
   if (q.dataKey === 'interfaceIssues') {
     const selected = answers.interfaceIssues
     const hasComment = Array.isArray(selected) && selected.includes('да')
