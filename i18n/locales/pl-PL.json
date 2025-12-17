@@ -9,6 +9,79 @@
     "jokeLabel": "Parada Żartów",
     "jokeText": "Baw się dobrze, zbieraj bonusy i bierz udział w zabawnych wyzwaniach!"
   },
+  "sentenceDuels": {
+    "stats": "Twoje statystyki",
+    "statsPartTwo": "według poziomu",
+    "victories": "Zwycięstwa",
+    "streak": "Seria zwycięstw",
+    "clearWins": "Czyste zwycięstwa",
+    "start": "Rozpocznij grę",
+    "info": "Kliknij poziom, aby zobaczyć jego statystyki."
+  },
+  "eventSessionPage": {
+    "loading": "Ładowanie…",
+    "perfect": "Idealnie!",
+    "right": "Odpowiedziałeś poprawnie na wszystkie",
+    "questions": "pytania.",
+    "getReward": "Odbierz nagrodę",
+    "almost": "Prawie się udało",
+    "noMistake": "Aby otrzymać nagrodę, musisz przejść bez błędów.",
+    "again": "Spróbuj ponownie",
+    "leave": "Wyjdź",
+    "notFound": "Nie znaleziono questu",
+    "back": "Wstecz",
+    "quest": "Pytanie",
+    "listen": "Wysłuchaj tekstu i odpowiedz na pytania",
+    "check": "Sprawdź",
+    "correct": "Poprawnie!",
+    "mistakes": "Są błędy.",
+    "further": "Dalej",
+    "fillAnswer": "Wpisz odpowiedź",
+    "answerHighlighted": "Błędnie! Poprawna odpowiedź jest zaznaczona.",
+    "excellentAnswers": "Świetnie, wszystko poprawnie!",
+    "rightAnswer": "Błąd! Poprawna odpowiedź:",
+    "connectPaar": "Połącz pary"
+  },
+  "winterQuestEleven": {
+    "firTree": "Choinka",
+    "candle": "Świeca",
+    "snow": "Śnieg",
+    "gift": "Prezent",
+    "bell": "Dzwon",
+    "star": "Gwiazda"
+  },
+  "winterQuestTwelve": {
+    "midnight": "Północ",
+    "resolution": "Postanowienie, cel",
+    "brandenburgGate": "Brama Brandenburska",
+    "fireworks": "Fajerwerki",
+    "fireworkRocket": "Rakieta fajerwerków",
+    "champagne": "Szampan"
+  },
+  "winterQuestThirteen": {
+    "dishes": "Naczynia",
+    "fireworks": "Fajerwerki",
+    "champagneGlass": "Kieliszek do szampana",
+    "newYearResolution": "Postanowienie noworoczne",
+    "grape": "Winogrono",
+    "bell": "Dzwon"
+  },
+  "winterQuestFourteen": {
+    "mistletoe": "Jemioła",
+    "krampus": "Krampus (zły Mikołaj)",
+    "witch": "Wiedźma",
+    "lentils": "Soczewica",
+    "luck": "Szczęście",
+    "wealth": "Bogactwo"
+  },
+  "winterQuestFifteen": {
+    "snow": "Śnieg",
+    "cold": "Zimno",
+    "hat": "Czapka",
+    "gloves": "Rękawiczki",
+    "stove": "Piec",
+    "windowsill": "Parapet"
+  },
   "winterEventQuests": {
     "quest-21": "Skarbiec słów",
     "quest-1": "Duch Świąt",
@@ -52,7 +125,9 @@
     "eventShop": "Sklep wydarzenia",
     "eventQuestions": "Zadania wydarzenia",
     "firstReputation": "Śnieżne Zaufanie",
-    "secondReputation": "Zimowy Szacunek"
+    "secondReputation": "Zimowy Szacunek",
+    "needForReward": "Do zakupu potrzebujesz:",
+    "and": "i"
   },
   "winterEventShopItems": {
     "santaHat": "Czapka Mikołaja",
@@ -4760,7 +4835,7 @@
     "clear": "Wyczyść",
     "leave": "Twój przeciwnik opuścił sesję",
     "leaveText": "Zostaniesz przekierowany do strony wyszukiwania!",
-    "leaveBtn": "Opuść sesję",
+    "leaveBtn": "Opuść",
     "victory": "Zwycięstwo",
     "victoryText": "Byłeś szybszy i bystrzejszy! Świetna robota!",
     "loss": "Porażka",

@@ -9,6 +9,79 @@
     "jokeLabel": "Парад приколов",
     "jokeText": "Веселись, собирай бонусы и участвуй в шуточных испытаниях!"
   },
+  "sentenceDuels": {
+    "stats": "Твоя статистика",
+    "statsPartTwo": "по уровню",
+    "victories": "Побед",
+    "streak": "Серия побед",
+    "clearWins": "Чистые победы",
+    "start": "Начать игру",
+    "info": "Нажми на уровень, чтобы увидеть статистику по нему."
+  },
+  "eventSessionPage": {
+    "loading": "Загрузка…",
+    "perfect": ">Идеально!",
+    "right": "Вы ответили верно на все",
+    "questions": "вопросов.",
+    "getReward": "Забрать награду",
+    "almost": "Почти получилось",
+    "noMistake": "Чтобы получить награду, нужно пройти без ошибок.",
+    "again": "Попробовать снова",
+    "leave": "Выйти",
+    "notFound": "Квест не найден",
+    "back": "Назад",
+    "quest": "Вопрос",
+    "listen": "Прослушайте текст и ответьте на вопросы",
+    "check": "Проверить",
+    "correct": "Верно!",
+    "mistakes": "Есть ошибки.",
+    "further": "Далее",
+    "fillAnswer": "Впиши ответ",
+    "answerHighlighted": "Неверно! Правильный ответ выделен.",
+    "excellentAnswers": "Отлично, всё верно!",
+    "rightAnswer": "Ошибка! Правильный ответ:",
+    "connectPaar": "Соедини пары"
+  },
+  "winterQuestEleven": {
+    "firTree": "Ёлка",
+    "candle": "Свеча",
+    "snow": "Снег",
+    "gift": "Подарок",
+    "bell": "Колокол",
+    "star": "Звезда"
+  },
+  "winterQuestTwelve": {
+    "midnight": "полночь",
+    "resolution": "обещание, цель",
+    "brandenburgGate": "Бранденбургские ворота",
+    "fireworks": "фейерверк",
+    "fireworkRocket": "ракета салюта",
+    "champagne": "шампанское"
+  },
+  "winterQuestThirteen": {
+    "dishes": "посуда",
+    "fireworks": "фейерверк",
+    "champagneGlass": "бокал для шампанского",
+    "newYearResolution": "новогоднее обещание",
+    "grape": "виноград",
+    "bell": "колокол"
+  },
+  "winterQuestFourteen": {
+    "mistletoe": "омела",
+    "krampus": "Крампус (злой санта)",
+    "witch": "ведьма",
+    "lentils": "чечевица",
+    "luck": "счастье",
+    "wealth": "богатство"
+  },
+  "winterQuestFifteen": {
+    "snow": "снег",
+    "cold": "холод",
+    "hat": "шапка",
+    "gloves": "перчатки",
+    "stove": "печь",
+    "windowsill": "подоконник"
+  },
   "winterEventQuests": {
     "quest-21": "Сокровищница слов",
     "quest-1": "Дух Рождества",
@@ -52,7 +125,9 @@
     "eventShop": "Магазин события",
     "eventQuestions": "Задания события",
     "firstReputation": "Снежное Доверие",
-    "secondReputation": "Зимнее Почтение"
+    "secondReputation": "Зимнее Почтение",
+    "needForReward": "Для покупки нужно:",
+    "and": "и"
   },
   "winterEventShopItems": {
     "santaHat": "Санта-шапка",
@@ -119,7 +194,7 @@
     "repeat": "Попытка за 10 артиклюсов"
   },
   "sentenceDuel": {
-    "title": 'Твоя статистика'
+    "title": "Твоя статистика"
   },
   "practiceArticleBtn": {
     "btn": "К практике артиклей"
@@ -132,7 +207,7 @@
     "terms": "Условия"
   },
   "friendExamBtn": {
-    "btn": 'Экзамены друзей'
+    "btn": "Экзамены друзей"
   },
   "regions": {
     "descriptionEastPlain": "Просторные земли, где каждый начинает своё путешествие. Здесь ты освоишь основы языка и получишь первые задания. Именно отсюда начинаются великие приключения.",
@@ -4764,7 +4839,7 @@
     "clear": "Очистить",
     "leave": "Ваш оппонент покинул сессию",
     "leaveText": "Вы будете перенаправлены на страницу поиска!",
-    "leaveBtn": "Покинуть сессию",
+    "leaveBtn": "Покинуть",
     "victory": "Победа",
     "victoryText": "Вы оказались быстрее и сообразительнее! Отличная работа!",
     "loss": "Поражение",

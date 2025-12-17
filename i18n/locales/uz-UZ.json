@@ -9,6 +9,79 @@
     "jokeLabel": "Hazillar paradi",
     "jokeText": "Zavqlaning, bonuslarni yig‘ing va hazil-mutoyiba sinovlarida qatnashing!"
   },
+  "sentenceDuels": {
+    "stats": "Sening statistikalaring",
+    "statsPartTwo": "daraja bo‘yicha",
+    "victories": "G‘alabalar",
+    "streak": "G‘alabalar seriyasi",
+    "clearWins": "Toza g‘alabalar",
+    "start": "O‘yinni boshlash",
+    "info": "Statistikani ko‘rish uchun darajani bosing."
+  },
+  "eventSessionPage": {
+    "loading": "Yuklanmoqda…",
+    "perfect": "Mukammal!",
+    "right": "Siz barcha",
+    "questions": "savollarga to‘g‘ri javob berdingiz.",
+    "getReward": "Mukofotni olish",
+    "almost": "Sal qoldi",
+    "noMistake": "Mukofot olish uchun xatolarsiz yakunlang.",
+    "again": "Qayta urinish",
+    "leave": "Chiqish",
+    "notFound": "Kvest topilmadi",
+    "back": "Orqaga",
+    "quest": "Savol",
+    "listen": "Matnni tinglang va savollarga javob bering",
+    "check": "Tekshirish",
+    "correct": "To‘g‘ri!",
+    "mistakes": "Xatolar bor.",
+    "further": "Keyingi",
+    "fillAnswer": "Javobni kiriting",
+    "answerHighlighted": "Noto‘g‘ri! To‘g‘ri javob ajratilgan.",
+    "excellentAnswers": "A’lo, hammasi to‘g‘ri!",
+    "rightAnswer": "Xato! To‘g‘ri javob:",
+    "connectPaar": "Juftlarni ulang"
+  },
+  "winterQuestEleven": {
+    "firTree": "Yangi yil archasi",
+    "candle": "Sham",
+    "snow": "Qor",
+    "gift": "Sovgʻa",
+    "bell": "Qo‘ng‘iroq",
+    "star": "Yulduz"
+  },
+  "winterQuestTwelve": {
+    "midnight": "Yarim tun",
+    "resolution": "Va’da, maqsad",
+    "brandenburgGate": "Brandenburg darvozasi",
+    "fireworks": "Feyerverk",
+    "fireworkRocket": "Feyerverk raketasi",
+    "champagne": "Shampan"
+  },
+  "winterQuestThirteen": {
+    "dishes": "Idishlar",
+    "fireworks": "Feyerverk",
+    "champagneGlass": "Shampan qadahi",
+    "newYearResolution": "Yangi yil va’dasi",
+    "grape": "Uzum",
+    "bell": "Qo‘ng‘iroq"
+  },
+  "winterQuestFourteen": {
+    "mistletoe": "O‘ksegi",
+    "krampus": "Krampus (yovuz Santa)",
+    "witch": "Jodugar",
+    "lentils": "Yasmiq",
+    "luck": "Omad",
+    "wealth": "Boylik"
+  },
+  "winterQuestFifteen": {
+    "snow": "Qor",
+    "cold": "Sovuq",
+    "hat": "Shapka",
+    "gloves": "Qo‘lqop",
+    "stove": "Pech",
+    "windowsill": "Deraza tokchasi"
+  },
   "winterEventQuests": {
     "quest-21": "So'zlar xazinasi",
     "quest-1": "Rojdestvo ruhi",
@@ -52,7 +125,9 @@
     "eventShop": "Tadbir do‘koni",
     "eventQuestions": "Tadbir topshiriqlari",
     "firstReputation": "Qorli Ishonch",
-    "secondReputation": "Qishki Ehtirom"
+    "secondReputation": "Qishki Ehtirom",
+    "needForReward": "للشراء تحتاج إلى:",
+    "and": "و"
   },
   "winterEventShopItems": {
     "santaHat": "Santa qalpog‘i",
@@ -4762,7 +4837,7 @@
     "clear": "Tozalash",
     "leave": "Raqibingiz sessiyani tark etdi",
     "leaveText": "Siz qidiruv sahifasiga yo‘naltirilasiz!",
-    "leaveBtn": "Sessiyani tark etish",
+    "leaveBtn": "Chiqish",
     "victory": "G‘alaba",
     "victoryText": "Siz tezroq va ziyrakroq bo‘ldingiz! Zo‘r ish!",
     "loss": "Mag‘lubiyat",

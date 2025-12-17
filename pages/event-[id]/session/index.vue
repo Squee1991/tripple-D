@@ -1,25 +1,25 @@
 <script setup>
-import { ref, computed, onMounted, watch } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
-import { useLocalePath } from '#i18n'
-import { useEventSessionStore } from '../../../store/eventsStore.js'
+import {ref, computed, onMounted, watch} from 'vue'
+import {useRoute, useRouter} from 'vue-router'
+import {useLocalePath} from '#i18n'
+import {useEventSessionStore} from '../../../store/eventsStore.js'
 import SoundBtn from '~/src/components/soundBtn.vue'
-
+const { t} = useI18n()
 const allEventImages = import.meta.glob('@/assets/images/event-rewards/**/*.{svg,SVG}', {
   eager: true,
   query: '?url',
   import: 'default'
-});
+})
 
 const getImageUrl = (imagePathFromJson) => {
-  if (!imagePathFromJson) return '';
+  if (!imagePathFromJson) return ''
   for (const filePath in allEventImages) {
     if (filePath.endsWith(imagePathFromJson)) {
-      return allEventImages[filePath];
+      return allEventImages[filePath]
     }
   }
-  return '';
-};
+  return ''
+}
 
 const route = useRoute()
 const router = useRouter()
@@ -27,26 +27,37 @@ const localePath = useLocalePath()
 const eventStore = useEventSessionStore()
 
 const eventId = computed(() => String(route.params.id || ''))
-const eventData = ref({ quests: [] })
+const eventData = ref({quests: []})
 const isLoading = ref(true)
 const isFinished = ref(false)
+
 const currentQuest = computed(() => {
-  if (!eventStore.questId) return null;
-  return eventData.value.quests.find(quest => quest.id === eventStore.questId) || null;
+  if (!eventStore.questId) return null
+  return eventData.value.quests.find(quest => quest.id === eventStore.questId) || null
 })
 
 const totalSteps = computed(() => currentQuest.value?.steps?.length || 0)
 const currentStep = computed(() => currentQuest.value?.steps?.[eventStore.stepIndex] || null)
-const isPerfectRun = computed(() => eventStore.score === totalSteps.value)
+
+const totalPossibleScore = computed(() => {
+  const steps = currentQuest.value?.steps || []
+  return steps.reduce((sum, step) => {
+    if (step.type === 'reading') return sum + (step.questions?.length || 0)
+    if (step.type === 'matching') return sum + (step.correctPairs?.length || 0)
+    return sum + 1
+  }, 0)
+})
+
+const isPerfectRun = computed(() => eventStore.score === totalPossibleScore.value)
 
 async function loadEventJson() {
   isLoading.value = true
   try {
     const jsonResponse = await $fetch(`/events/event-${eventId.value}.json`)
-    eventData.value = (jsonResponse && Array.isArray(jsonResponse.quests)) ? jsonResponse : { quests: [] }
+    eventData.value = (jsonResponse && Array.isArray(jsonResponse.quests)) ? jsonResponse : {quests: []}
   } catch (error) {
-    console.error("Failed to load event data", error)
-    eventData.value = { quests: [] }
+    console.error('Failed to load event data', error)
+    eventData.value = {quests: []}
   } finally {
     isLoading.value = false
   }
@@ -56,12 +67,14 @@ onMounted(async () => {
   if (!eventStore.eventId || eventStore.eventId !== eventId.value) {
     const restorationSuccess = await eventStore.restoreIfPossible(eventId.value)
     if (!restorationSuccess) {
-      return router.replace({ name: 'event-id', params: { id: eventId.value } })
+      return router.replace({name: 'event-id', params: {id: eventId.value}})
     }
   }
+
   await loadEventJson()
+
   if (!currentQuest.value) {
-    router.replace({ name: 'event-id', params: { id: eventId.value } })
+    router.replace({name: 'event-id', params: {id: eventId.value}})
   }
 })
 
@@ -80,8 +93,13 @@ watch(currentStep, () => {
   selectedOptionIndex.value = null
   userTextInput.value = ''
   checkStatus.value = null
-  matchingState.value = { leftItemId: null, rightItemId: null, chosenPairs: [] }
+  matchingState.value = {leftItemId: null, rightItemId: null, chosenPairs: []}
   wrongPairIndices.value = new Set()
+  if (currentStep.value?.type === 'reading' && Array.isArray(currentStep.value.questions)) {
+    currentStep.value.questions.forEach(q => {
+      q.userAnswer = null
+    })
+  }
 })
 
 async function retryQuest() {
@@ -100,8 +118,9 @@ function goToNextStep() {
 
 function finishQuest() {
   const isReplay = eventStore.finished
-  eventStore.finishQuest();
+  eventStore.finishQuest()
   isFinished.value = true
+
   if (!isReplay && currentQuest.value && isPerfectRun.value) {
     const rewards = {
       coins: currentQuest.value.rewardCoins || 0,
@@ -112,7 +131,7 @@ function finishQuest() {
 }
 
 function goBackHome() {
-  router.push(localePath({ name: 'event-id', params: { id: eventId.value } }))
+  router.push(localePath({name: 'event-id', params: {id: eventId.value}}))
 }
 
 const filledSentenceHtml = computed(() => {
@@ -140,7 +159,7 @@ function confirmSingleChoice() {
 
   if (selectedOptionIndex.value === currentStep.value.correctOptionIndex) {
     checkStatus.value = 'correct'
-    eventStore.addScore(1);
+    eventStore.addScore(1)
   } else {
     checkStatus.value = 'wrong'
   }
@@ -154,6 +173,7 @@ function confirmTextInput() {
 
   const correctAnswer = (currentStep.value.answerText || '').trim().toLowerCase()
   const userAnswer = (userTextInput.value || '').trim().toLowerCase()
+
   if (correctAnswer === '__ANY_NON_EMPTY__') {
     if (userAnswer.length > 0) {
       checkStatus.value = 'correct'
@@ -174,10 +194,16 @@ function confirmTextInput() {
 
 function selectReadingOption(questionIndex, optionIndex) {
   if (checkStatus.value !== null) return
-  if (currentStep.value.questions[questionIndex]) {
+  if (currentStep.value?.questions?.[questionIndex]) {
     currentStep.value.questions[questionIndex].userAnswer = optionIndex
   }
 }
+
+const isReadingReady = computed(() => {
+  if (currentStep.value?.type !== 'reading') return true
+  const questions = currentStep.value.questions || []
+  return questions.length > 0 && questions.every(q => q.userAnswer !== null && q.userAnswer !== undefined)
+})
 
 function checkReadingAnswers() {
   if (checkStatus.value !== null) {
@@ -185,21 +211,17 @@ function checkReadingAnswers() {
     return
   }
 
-  if (!currentStep.value.questions) {
+  const questions = currentStep.value?.questions || []
+  if (!questions.length) {
     goToNextStep()
     return
   }
 
-  let isAllCorrect = true
-  for (const questionItem of currentStep.value.questions) {
-    if (questionItem.userAnswer !== questionItem.correctOptionIndex) {
-      isAllCorrect = false
-    }
-  }
-
+  if (!questions.every(q => q.userAnswer !== null && q.userAnswer !== undefined)) return
+  const isAllCorrect = questions.every(q => q.userAnswer === q.correctOptionIndex)
   if (isAllCorrect) {
     checkStatus.value = 'correct'
-    eventStore.addScore(currentStep.value.questions.length);
+    eventStore.addScore(questions.length)
   } else {
     checkStatus.value = 'wrong'
   }
@@ -207,7 +229,6 @@ function checkReadingAnswers() {
 
 const usedLeftIds = computed(() => new Set(matchingState.value.chosenPairs.map(([leftId]) => leftId)))
 const usedRightIds = computed(() => new Set(matchingState.value.chosenPairs.map(([, rightId]) => rightId)))
-
 const availableLeftItems = computed(() => {
   return (currentStep.value?.pairsLeft || []).filter(item => !usedLeftIds.value.has(item.id))
 })
@@ -218,31 +239,29 @@ const availableRightItems = computed(() => {
 
 function pickLeftItem(id) {
   if (checkStatus.value !== null) return
-  matchingState.value.leftItemId = id;
+  matchingState.value.leftItemId = id
   if (matchingState.value.rightItemId) tryCommitPair()
 }
 
 function pickRightItem(id) {
   if (checkStatus.value !== null) return
-  matchingState.value.rightItemId = id;
+  matchingState.value.rightItemId = id
   if (matchingState.value.leftItemId) tryCommitPair()
 }
 
 function tryCommitPair() {
-  const { leftItemId, rightItemId } = matchingState.value;
-  if (!leftItemId || !rightItemId) return;
+  const {leftItemId, rightItemId} = matchingState.value
+  if (!leftItemId || !rightItemId) return
 
-  matchingState.value.chosenPairs.push([leftItemId, rightItemId]);
-
-  // Сброс выбора
-  matchingState.value.leftItemId = null;
+  matchingState.value.chosenPairs.push([leftItemId, rightItemId])
+  matchingState.value.leftItemId = null
   matchingState.value.rightItemId = null
 }
 
 function undoPair(index) {
   if (checkStatus.value !== null) return
-  matchingState.value.chosenPairs.splice(index, 1);
-  wrongPairIndices.value.delete(index);
+  matchingState.value.chosenPairs.splice(index, 1)
+  wrongPairIndices.value.delete(index)
 }
 
 function checkMatchingAnswers() {
@@ -252,7 +271,8 @@ function checkMatchingAnswers() {
   }
 
   wrongPairIndices.value = new Set()
-  const correctPairsSet = new Set((currentStep.value.correctPairs || []).map(([left, right]) => `${left}|${right}`))
+  const correctPairs = currentStep.value?.correctPairs || []
+  const correctPairsSet = new Set(correctPairs.map(([left, right]) => `${left}|${right}`))
 
   matchingState.value.chosenPairs.forEach(([leftId, rightId], index) => {
     if (!correctPairsSet.has(`${leftId}|${rightId}`)) {
@@ -260,12 +280,12 @@ function checkMatchingAnswers() {
     }
   })
 
-  const isCountCorrect = matchingState.value.chosenPairs.length === (currentStep.value.correctPairs || []).length
+  const isCountCorrect = matchingState.value.chosenPairs.length === correctPairs.length
   const hasNoErrors = wrongPairIndices.value.size === 0
 
   if (isCountCorrect && hasNoErrors) {
     checkStatus.value = 'correct'
-    eventStore.addScore((currentStep.value.correctPairs || []).length);
+    eventStore.addScore(correctPairs.length)
   } else {
     checkStatus.value = 'wrong'
   }
@@ -275,63 +295,57 @@ function checkMatchingAnswers() {
 <template>
   <div class="lesson">
     <div class="lesson__container">
-
       <header class="topbar">
         <button class="topbar__back" @click="goBackHome">🏠</button>
-        <div class="topbar__score" v-if="!isFinished">Очки: {{ eventStore.score }}</div>
+        <div class="topbar__score" v-if="!isFinished"> {{ eventStore.score }}</div>
       </header>
-
       <div v-if="isLoading" class="lesson__state">
         <div class="loader"></div>
-        <div>Загрузка…</div>
+        <div> {{ t('eventSessionPage.loading')}}</div>
       </div>
-
       <div v-else-if="isFinished" class="result-wrapper">
         <div v-if="isPerfectRun" class="result card success-card">
           <div class="result__icon">🎉</div>
-          <h2 class="result__title">Идеально!</h2>
-          <p class="result__text">Вы ответили верно на все {{ totalSteps }} вопросов.</p>
-          <div class="rewards" v-if="currentQuest.rewardCoins">
+          <h2 class="result__title">{{ t('eventSessionPage.perfect')}}</h2>
+          <p class="result__text">{{ t('eventSessionPage.right')}} {{ totalPossibleScore }} {{ t('eventSessionPage.questions')}}</p>
+          <div class="rewards" v-if="currentQuest?.rewardCoins">
             <span>+{{ currentQuest.rewardCoins }} ❄</span>
             <span>+{{ currentQuest.rewardRep }} 🏆</span>
           </div>
-          <button class="btn btn--primary" @click="goBackHome">Забрать награду</button>
+          <button class="btn btn--primary" @click="goBackHome">{{ t('eventSessionPage.getReward')}}</button>
         </div>
-
         <div v-else class="result card fail-card">
           <div class="result__icon">😕</div>
-          <h2 class="result__title">Почти получилось</h2>
-          <p class="result__subtext">Чтобы получить награду, нужно пройти без ошибок.</p>
-
+          <h2 class="result__title">{{ t('eventSessionPage.almost')}}</h2>
+          <p class="result__subtext">{{ t('eventSessionPage.noMistake')}}</p>
           <div class="result__actions">
-            <button class="btn btn--primary" @click="retryQuest">Попробовать снова</button>
-            <button class="btn btn--ghost" @click="goBackHome">Выйти</button>
+            <button class="btn btn--primary" @click="retryQuest">{{ t('eventSessionPage.again')}}</button>
+            <button class="btn btn--ghost" @click="goBackHome">{{ t('eventSessionPage.leave')}}</button>
           </div>
         </div>
       </div>
-
       <div v-else-if="!currentQuest" class="lesson__state">
-        Квест не найден
-        <button class="btn btn--ghost" @click="goBackHome">Назад</button>
+        <span>{{ t('eventSessionPage.notFound')}}</span>
+        <button class="btn btn--ghost" @click="goBackHome">{{ t('eventSessionPage.back')}}</button>
       </div>
-
       <div v-else class="lesson__card">
-
         <div class="progress">
-          <div class="progress__text">Вопрос {{ eventStore.stepIndex + 1 }} / {{ totalSteps }}</div>
+          <div class="progress__text">{{ t('eventSessionPage.quest')}} {{ eventStore.stepIndex + 1 }} / {{ totalSteps }}</div>
           <div class="progress__bar">
-            <div class="progress__fill"
-                 :style="{ width: (totalSteps ? (eventStore.stepIndex / totalSteps * 100) : 0) + '%' }"></div>
+            <div
+                class="progress__fill"
+                :style="{ width: (totalSteps ? ((eventStore.stepIndex + 1) / totalSteps * 100) : 0) + '%' }"
+            ></div>
           </div>
         </div>
-
-        <section v-if="currentStep.type === 'reading'" class="section card">
+        <section v-if="currentStep?.type === 'reading'" class="section card">
           <div class="paper">
             <SoundBtn :text="currentStep.text"/>
-            <h3 class="section__title">Прослушайте текст и ответьте на вопросы</h3>
+            <h3 class="section__title">{{ t('eventSessionPage.listen')}}</h3>
           </div>
           <div v-if="currentStep.questions && currentStep.questions.length" class="reading">
-            <div v-for="(questionItem, questionIndex) in currentStep.questions" :key="questionIndex" class="reading__item">
+            <div v-for="(questionItem, questionIndex) in currentStep.questions" :key="questionIndex"
+                 class="reading__item">
               <p class="question">{{ questionIndex + 1 }}. {{ questionItem.question }}</p>
               <div class="choices">
                 <button
@@ -339,10 +353,12 @@ function checkMatchingAnswers() {
                     :key="optionIndex"
                     class="option"
                     :class="{
-                      'chosen': questionItem.userAnswer === optionIndex && checkStatus === null,
-                      'correct': (checkStatus !== null && questionItem.userAnswer === optionIndex && optionIndex === questionItem.correctOptionIndex) || (checkStatus === 'wrong' && optionIndex === questionItem.correctOptionIndex),
-                      'wrong': (checkStatus !== null && questionItem.userAnswer === optionIndex && optionIndex !== questionItem.correctOptionIndex)
-                    }"
+                    'chosen': questionItem.userAnswer === optionIndex && checkStatus === null,
+                    'correct':
+                      (checkStatus !== null && questionItem.userAnswer === optionIndex && optionIndex === questionItem.correctOptionIndex) ||
+                      (checkStatus === 'wrong' && optionIndex === questionItem.correctOptionIndex),
+                    'wrong': (checkStatus !== null && questionItem.userAnswer === optionIndex && optionIndex !== questionItem.correctOptionIndex)
+                  }"
                     @click="selectReadingOption(questionIndex, optionIndex)"
                 >
                   <span class="option__text">{{ optionText }}</span>
@@ -350,52 +366,48 @@ function checkMatchingAnswers() {
               </div>
             </div>
             <div class="actions">
-              <button class="btn btn--primary" @click="checkReadingAnswers">
-                {{ checkStatus === null ? 'Проверить' : 'Далее' }}
+              <button class="btn btn--primary"
+                      @click="checkReadingAnswers"
+                      :disabled="checkStatus === null && !isReadingReady"
+              >
+                {{ checkStatus === null ? t('eventSessionPage.check') : t('eventSessionPage.further') }}
               </button>
             </div>
-            <div v-if="checkStatus === 'correct'" class="hint hint--success">Верно!</div>
-            <div v-if="checkStatus === 'wrong'" class="hint hint--error">Есть ошибки.</div>
+            <div v-if="checkStatus === 'correct'" class="hint hint--success">{{ t('eventSessionPage.correct')}}</div>
+            <div v-if="checkStatus === 'wrong'" class="hint hint--error">{{ t('eventSessionPage.mistakes')}}</div>
           </div>
           <div v-else class="actions">
-            <button class="btn btn--primary" @click="goToNextStep">Далее</button>
+            <button class="btn btn--primary" @click="goToNextStep">{{ t('eventSessionPage.further')}}</button>
           </div>
         </section>
-
-        <section v-else-if="currentStep.type === 'mcq' || currentStep.type === 'multiple-choice'" class="section card">
+        <section v-else-if="currentStep?.type === 'mcq' || currentStep?.type === 'multiple-choice'" class="section card">
           <p v-if="currentStep.question" class="question">{{ currentStep.question }}</p>
-
-          <img class="question-image"
-               v-if="currentStep.image"
-               :src="getImageUrl(currentStep.image)"
-               alt="Task image">
-
+          <img class="question-image" v-if="currentStep.image" :src="getImageUrl(currentStep.image)" alt="Task image"/>
           <div class="choices">
             <button
                 v-for="(optionText, optionIndex) in currentStep.options"
                 :key="optionIndex"
                 class="option"
                 :class="{
-                  'chosen': selectedOptionIndex === optionIndex && checkStatus === null,
-                  'correct': (checkStatus === 'correct' && selectedOptionIndex === optionIndex) || (checkStatus === 'wrong' && optionIndex === currentStep.correctOptionIndex),
-                  'wrong': checkStatus === 'wrong' && selectedOptionIndex === optionIndex && selectedOptionIndex !== currentStep.correctOptionIndex
-                }"
+                'chosen': selectedOptionIndex === optionIndex && checkStatus === null,
+                'correct': (checkStatus === 'correct' && selectedOptionIndex === optionIndex) || (checkStatus === 'wrong' && optionIndex === currentStep.correctOptionIndex),
+                'wrong': checkStatus === 'wrong' && selectedOptionIndex === optionIndex && selectedOptionIndex !== currentStep.correctOptionIndex
+              }"
                 @click="selectOption(optionIndex)"
             >
               <span class="option__text">{{ optionText }}</span>
             </button>
           </div>
-
           <div class="actions">
-            <button class="btn btn--primary" @click="confirmSingleChoice" :disabled="selectedOptionIndex === null && checkStatus === null">
-              {{ checkStatus === null ? 'Проверить' : 'Далее' }}
+            <button class="btn btn--primary" @click="confirmSingleChoice"
+                    :disabled="selectedOptionIndex === null && checkStatus === null">
+              {{ checkStatus === null ? t('eventSessionPage.check') : t('eventSessionPage.further') }}
             </button>
           </div>
-          <div v-if="checkStatus === 'correct'" class="hint hint--success">Верно!</div>
-          <div v-if="checkStatus === 'wrong'" class="hint hint--error">Неверно! Правильный ответ выделен.</div>
+          <div v-if="checkStatus === 'correct'" class="hint hint--success">{{ t('eventSessionPage.correct')}}</div>
+          <div v-if="checkStatus === 'wrong'" class="hint hint--error">{{ t('eventSessionPage.answerHighlighted')}}</div>
         </section>
-
-        <section v-else-if="currentStep.type === 'choose-word'" class="section card">
+        <section v-else-if="currentStep?.type === 'choose-word'" class="section card">
           <p class="question" v-html="filledSentenceHtml"></p>
           <div class="choices">
             <button
@@ -403,91 +415,99 @@ function checkMatchingAnswers() {
                 :key="optionIndex"
                 class="option"
                 :class="{
-                  'chosen': selectedOptionIndex === optionIndex && checkStatus === null,
-                  'correct': (checkStatus === 'correct' && selectedOptionIndex === optionIndex) || (checkStatus === 'wrong' && optionIndex === currentStep.correctOptionIndex),
-                  'wrong': checkStatus === 'wrong' && selectedOptionIndex === optionIndex && selectedOptionIndex !== currentStep.correctOptionIndex
-                }"
+                'chosen': selectedOptionIndex === optionIndex && checkStatus === null,
+                'correct': (checkStatus === 'correct' && selectedOptionIndex === optionIndex) || (checkStatus === 'wrong' && optionIndex === currentStep.correctOptionIndex),
+                'wrong': checkStatus === 'wrong' && selectedOptionIndex === optionIndex && selectedOptionIndex !== currentStep.correctOptionIndex
+              }"
                 @click="selectOption(optionIndex)"
             >
               <span class="option__text">{{ optionText }}</span>
             </button>
           </div>
           <div class="actions">
-            <button class="btn btn--primary" @click="confirmSingleChoice" :disabled="selectedOptionIndex === null && checkStatus === null">
+            <button class="btn btn--primary" @click="confirmSingleChoice"
+                    :disabled="selectedOptionIndex === null && checkStatus === null">
               {{ checkStatus === null ? 'Проверить' : 'Далее' }}
             </button>
           </div>
-          <div v-if="checkStatus === 'correct'" class="hint hint--success">Верно!</div>
-          <div v-if="checkStatus === 'wrong'" class="hint hint--error">Неверно! Правильный ответ выделен.</div>
+          <div v-if="checkStatus === 'correct'" class="hint hint--success">{{ t('eventSessionPage.correct')}}</div>
+          <div v-if="checkStatus === 'wrong'" class="hint hint--error">{{ t('eventSessionPage.answerHighlighted')}}</div>
         </section>
-
-        <section v-else-if="currentStep.type === 'fill'" class="section card">
-          <h3 class="section__title">Впиши ответ</h3>
+        <section v-else-if="currentStep?.type === 'fill'" class="section card">
+          <h3 class="section__title">{{ t('eventSessionPage.fillAnswer')}}</h3>
           <p class="question">{{ currentStep.prompt }}</p>
           <div class="field">
-            <input v-model="userTextInput" class="field__input" placeholder="Ваш ответ" @keyup.enter="confirmTextInput" :disabled="checkStatus !== null"/>
+            <input
+                v-model="userTextInput"
+                class="field__input"
+                placeholder="Ваш ответ"
+                @keyup.enter="confirmTextInput"
+                :disabled="checkStatus !== null"
+            />
             <button class="btn" @click="confirmTextInput">
-              {{ checkStatus === null ? 'Проверить' : 'Далее' }}
+              {{ checkStatus === null ? t('eventSessionPage.check') : t('eventSessionPage.further') }}
             </button>
           </div>
-          <div v-if="checkStatus === 'correct'" class="hint hint--success">Верно!</div>
-          <div v-if="checkStatus === 'wrong'" class="hint hint--error">Ошибка! Правильный ответ: <b>{{ currentStep.answerText }}</b></div>
+          <div v-if="checkStatus === 'correct'" class="hint hint--success">{{ t('eventSessionPage.correct')}}</div>
+          <div v-if="checkStatus === 'wrong'" class="hint hint--error">{{ t('eventSessionPage.rightAnswer')}}
+            <b>{{ currentStep.answerText }}</b></div>
         </section>
-
-        <section v-else-if="currentStep.type === 'matching'" class="section card">
-          <h3 class="section__title">{{ currentStep.instruction || 'Соедини пары' }}</h3>
+        <section v-else-if="currentStep?.type === 'matching'" class="section card">
+          <h3 class="section__title">{{ currentStep.instruction || t('eventSessionPage.connectPaar') }}</h3>
           <div class="match">
             <div class="match__cols">
               <div class="match__col">
-                <button v-for="leftItem in availableLeftItems"
-                        :key="leftItem.id"
-                        class="option"
-                        :class="{ chosen: matchingState.leftItemId === leftItem.id }"
-                        @click="pickLeftItem(leftItem.id)">
+                <button
+                    v-for="leftItem in availableLeftItems"
+                    :key="leftItem.id"
+                    class="option"
+                    :class="{ chosen: matchingState.leftItemId === leftItem.id }"
+                    @click="pickLeftItem(leftItem.id)"
+                >
                   {{ leftItem.text }}
                 </button>
               </div>
               <div class="match__col">
-                <button v-for="rightItem in availableRightItems"
-                        :key="rightItem.id"
-                        class="option"
-                        :class="{ chosen: matchingState.rightItemId === rightItem.id }"
-                        @click="pickRightItem(rightItem.id)">
-                  {{ rightItem.text }}
+                <button
+                    v-for="rightItem in availableRightItems"
+                    :key="rightItem.id"
+                    class="option"
+                    :class="{ chosen: matchingState.rightItemId === rightItem.id }"
+                    @click="pickRightItem(rightItem.id)"
+                >
+                  {{ t(rightItem.text) }}
                 </button>
               </div>
             </div>
-
             <div class="pairs">
               <div
                   v-for="(pairArray, pairIndex) in matchingState.chosenPairs"
                   :key="pairIndex"
                   class="pair-chip"
                   :class="{
-                    wrong: checkStatus === 'wrong' && wrongPairIndices.has(pairIndex),
-                    correct: (checkStatus === 'correct') || (checkStatus === 'wrong' && !wrongPairIndices.has(pairIndex))
-                  }"
+                  wrong: checkStatus === 'wrong' && wrongPairIndices.has(pairIndex),
+                  correct: (checkStatus === 'correct') || (checkStatus === 'wrong' && !wrongPairIndices.has(pairIndex))
+                }"
                   @click="undoPair(pairIndex)"
               >
                 {{ (currentStep.pairsLeft.find(item => item.id === pairArray[0])?.text) || pairArray[0] }} —
-                {{ (currentStep.pairsRight.find(item => item.id === pairArray[1])?.text) || pairArray[1] }} ✕
+                {{ t((currentStep.pairsRight.find(item => item.id === pairArray[1])?.text)) || pairArray[1] }} ✕
               </div>
             </div>
-
             <div class="actions">
               <button class="btn btn--primary" @click="checkMatchingAnswers">
-                {{ checkStatus === null ? 'Проверить' : 'Далее' }}
+                {{ checkStatus === null ? t('eventSessionPage.check') : t('eventSessionPage.further') }}
               </button>
             </div>
-            <div v-if="checkStatus === 'correct'" class="hint hint--success">Отлично, всё верно!</div>
-            <div v-if="checkStatus === 'wrong'" class="hint hint--error">Есть ошибки.</div>
+            <div v-if="checkStatus === 'correct'" class="hint hint--success">{{ t('eventSessionPage.excellentAnswers')}}</div>
+            <div v-if="checkStatus === 'wrong'" class="hint hint--error">{{ t('eventSessionPage.mistakes')}}</div>
           </div>
         </section>
-
         <section v-else class="section card">
-          Неизвестный тип: <code>{{ currentStep.type }}</code>
-          <button class="btn btn--ghost" @click="goToNextStep">Пропустить</button>
+          Error <code>{{ currentStep?.type }}</code>
+          <button class="btn btn--ghost" @click="goToNextStep">skip</button>
         </section>
+
       </div>
     </div>
   </div>
@@ -592,6 +612,7 @@ function checkMatchingAnswers() {
 }
 
 .topbar__score {
+  opacity: 0;
   background: #ffefc2;
   border-radius: 14px;
   padding: 6px 12px;
@@ -763,7 +784,7 @@ function checkMatchingAnswers() {
 }
 
 .hint--success {
-  color: #0f6a36;
+  color: #0f6a36
 }
 
 .btn {
@@ -869,8 +890,6 @@ function checkMatchingAnswers() {
   transition: transform .08s, box-shadow .08s, background .2s
 }
 
-
-
 .pair-chip:active {
   transform: translateY(0);
   box-shadow: 0 4px 10px rgba(26, 41, 66, .18)
@@ -897,37 +916,44 @@ function checkMatchingAnswers() {
 
 @media (max-width: 540px) {
   .choices {
-    width: 100%;
+    width: 100%
   }
+
   .option {
     width: 100%;
-    max-width: 330px;
+    max-width: 330px
   }
+
   .question {
     font-size: 17px;
-    text-align: center;
+    text-align: center
   }
-  .section__title{
-    font-size: 19px;
+
+  .section__title {
+    font-size: 19px
   }
+
   .lesson {
-    padding: 0;
+    padding: 0
   }
+
   .lesson__container {
-    padding: 5px;
+    padding: 5px
   }
+
   .topbar {
-    padding: 5px 10px;
+    padding: 5px 10px
   }
 }
 
 @media (max-width: 767px) {
-  .choices{
-    justify-content: center;
+  .choices {
+    justify-content: center
   }
+
   .option {
     min-height: 66px;
-    font-size: 14px;
+    font-size: 14px
   }
 }
 
@@ -940,5 +966,4 @@ function checkMatchingAnswers() {
     transform: translateY(-1px) rotate(.2deg)
   }
 }
-
 </style>

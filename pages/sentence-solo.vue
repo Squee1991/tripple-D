@@ -250,7 +250,7 @@ onMounted(async () => {
   border-radius: 24px;
   padding: 2rem 3rem;
   border: 3px solid #1e1e1e;
-  box-shadow: 8px 8px 0 #1e1e1e;
+  box-shadow: 4px 4px 0 #1e1e1e;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -284,8 +284,8 @@ onMounted(async () => {
   font-size: 1.3rem;
   font-weight: 700;
   border-radius: 12px;
-  border: 3px solid #1e1e1e;
-  box-shadow: 4px 4px 0 #1e1e1e;
+  border: 2px solid #1e1e1e;
+  box-shadow: 2px 2px 0 #1e1e1e;
   background-color: #fff;
   cursor: pointer;
   transition: all .1s ease-in-out;
@@ -293,7 +293,7 @@ onMounted(async () => {
 
 .word-button:hover:not(:disabled) {
   transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0 #1e1e1e;
+  box-shadow: 0  0 0 #1e1e1e;
   background-color: #FFD24B;
 }
 
@@ -437,6 +437,7 @@ onMounted(async () => {
 @media (max-width: 767px) {
   .answer-section {
     flex-direction: column;
+    align-items: center;
     width: 100%;
     border: none;
   }
@@ -450,6 +451,9 @@ onMounted(async () => {
   .word-button {
     padding: 10px;
     font-size: 1rem;
+  }
+  .btn-clear {
+    max-width: 200px;
   }
 
 }

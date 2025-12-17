@@ -9,6 +9,79 @@
     "jokeLabel": "Парад жартів",
     "jokeText": "Розважайся, збирай бонуси та бери участь у жартівливих випробуваннях!"
   },
+  "sentenceDuels": {
+    "stats": "Твоя статистика",
+    "statsPartTwo": "за рівнем",
+    "victories": "Перемоги",
+    "streak": "Серія перемог",
+    "clearWins": "Чисті перемоги",
+    "start": "Почати гру",
+    "info": "Натисни на рівень, щоб побачити статистику по ньому."
+  },
+  "eventSessionPage": {
+    "loading": "Завантаження…",
+    "perfect": "Ідеально!",
+    "right": "Ви відповіли правильно на всі",
+    "questions": "запитання.",
+    "getReward": "Забрати нагороду",
+    "almost": "Майже вийшло",
+    "noMistake": "Щоб отримати нагороду, потрібно пройти без помилок.",
+    "again": "Спробувати ще раз",
+    "leave": "Вийти",
+    "notFound": "Квест не знайдено",
+    "back": "Назад",
+    "quest": "Запитання",
+    "listen": "Прослухайте текст і дайте відповіді на запитання",
+    "check": "Перевірити",
+    "correct": "Правильно!",
+    "mistakes": "Є помилки.",
+    "further": "Далі",
+    "fillAnswer": "Впишіть відповідь",
+    "answerHighlighted": "Неправильно! Правильну відповідь виділено.",
+    "excellentAnswers": "Чудово, усе правильно!",
+    "rightAnswer": "Помилка! Правильна відповідь:",
+    "connectPaar": "З’єднай пари"
+  },
+  "winterQuestEleven": {
+    "firTree": "Ялинка",
+    "candle": "Свічка",
+    "snow": "Сніг",
+    "gift": "Подарунок",
+    "bell": "Дзвін",
+    "star": "Зірка"
+  },
+  "winterQuestTwelve": {
+    "midnight": "північ",
+    "resolution": "обіцянка, мета",
+    "brandenburgGate": "Бранденбурзькі ворота",
+    "fireworks": "феєрверк",
+    "fireworkRocket": "салютна ракета",
+    "champagne": "шампанське"
+  },
+  "winterQuestThirteen": {
+    "dishes": "посуд",
+    "fireworks": "феєрверк",
+    "champagneGlass": "келих для шампанського",
+    "newYearResolution": "новорічна обіцянка",
+    "grape": "виноград",
+    "bell": "дзвін"
+  },
+  "winterQuestFourteen": {
+    "mistletoe": "омела",
+    "krampus": "Крампус (злий Санта)",
+    "witch": "відьма",
+    "lentils": "сочевиця",
+    "luck": "щастя",
+    "wealth": "багатство"
+  },
+  "winterQuestFifteen": {
+    "snow": "сніг",
+    "cold": "холод",
+    "hat": "шапка",
+    "gloves": "рукавиці",
+    "stove": "піч",
+    "windowsill": "підвіконня"
+  },
   "winterEventQuests": {
     "quest-21": "Скарбниця слів",
     "quest-1": "Дух Різдва",
@@ -52,7 +125,9 @@
     "eventShop": "Магазин події",
     "eventQuestions": "Завдання події",
     "firstReputation": "Снігова Довіра",
-    "secondReputation": "Зимова Шана"
+    "secondReputation": "Зимова Шана",
+    "needForReward": "Для покупки потрібно:",
+    "and": "і"
   },
   "winterEventShopItems": {
     "santaHat": "Шапка Санти",
@@ -4761,7 +4836,7 @@
     "clear": "Очистити",
     "leave": "Ваш суперник покинув сесію",
     "leaveText": "Вас буде перенаправлено на сторінку пошуку!",
-    "leaveBtn": "Покинути сесію",
+    "leaveBtn": "Вийти",
     "victory": "Перемога",
     "victoryText": "Ви були швидшими та розумнішими! Чудова робота!",
     "loss": "Поразка",

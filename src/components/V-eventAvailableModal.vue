@@ -16,8 +16,8 @@
       <h2 class="modal-title">{{ activeEvent.title }}</h2>
       <p class="modal-text">{{ activeEvent.text }}</p>
       <div class="modal-actions">
-        <button type="button" class="btn-start" @click="handleBeginClick">Начать</button>
-        <button type="button" class="btn-start --close" @click="handleCloseClick">Закрыть</button>
+        <button type="button" class="btn-start" @click="handleBeginClick">{{ t('locationQuests.start')}}</button>
+        <button type="button" class="btn-start --close" @click="handleCloseClick">{{ t('shareModal.close')}}</button>
       </div>
     </div>
   </div>
@@ -118,17 +118,18 @@ function makeEventKey(entry) {
 }
 
 function getDismissed(key) {
-  try {
-    return localStorage.getItem(`eventModal.dismissed.${key}`) === "1";
-  } catch {
-    return false;
-  }
+
+  // try {
+  //   return localStorage.getItem(`eventModal.dismissed.${key}`) === "1";
+  // } catch {
+  //   return false;
+  // }
 }
 
 function setDismissed(key, v = true) {
-  try {
-    localStorage.setItem(`eventModal.dismissed.${key}`, v ? "1" : "0");
-  } catch {}
+  // try {
+  //   localStorage.setItem(`eventModal.dismissed.${key}`, v ? "1" : "0");
+  // } catch {}
 }
 
 const annualCandidatesSorted = computed(() => {

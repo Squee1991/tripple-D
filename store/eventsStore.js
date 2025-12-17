@@ -17,7 +17,7 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 	const shopItems = ref({})
 
 	const events = ref([
-		{id: 'winter', start: '12-18 00:00', end: '01-02 23:59'},
+		{id: 'winter', start: '12-17 00:00', end: '01-02 23:59'},
 		{id: 'valentine', start: '02-14 00:00', end: '02-16 23:59'},
 		{id: 'april', start: '04-01 00:00', end: '04-01 23:59'},
 		{id: 'pumpkin', start: '10-28 00:00', end: '10-31 23:59'},

@@ -9,6 +9,79 @@
     "jokeLabel": "Prank Parade",
     "jokeText": "Have fun, collect bonuses, and join funny challenges!"
   },
+  "sentenceDuels": {
+    "stats": "Your statistics",
+    "statsPartTwo": "by level",
+    "victories": "Victories",
+    "streak": "Win streak",
+    "clearWins": "Clean wins",
+    "start": "Start game",
+    "info": "Click on a level to see its statistics."
+  },
+  "eventSessionPage": {
+    "loading": "Loading…",
+    "perfect": "Perfect!",
+    "right": "You answered all",
+    "questions": "questions correctly.",
+    "getReward": "Get reward",
+    "almost": "Almost there",
+    "noMistake": "To get the reward, you need to finish without mistakes.",
+    "again": "Try again",
+    "leave": "Leave",
+    "notFound": "Quest not found",
+    "back": "Back",
+    "quest": "Question",
+    "listen": "Listen to the text and answer the questions",
+    "check": "Check",
+    "correct": "Correct!",
+    "mistakes": "There are mistakes.",
+    "further": "Next",
+    "fillAnswer": "Enter the answer",
+    "answerHighlighted": "Wrong! The correct answer is highlighted.",
+    "excellentAnswers": "Excellent, everything is correct!",
+    "rightAnswer": "Error! Correct answer:",
+    "connectPaar": "Match the pairs"
+  },
+  "winterQuestEleven": {
+    "firTree": "Christmas tree",
+    "candle": "Candle",
+    "snow": "Snow",
+    "gift": "Gift",
+    "bell": "Bell",
+    "star": "Star"
+  },
+  "winterQuestTwelve": {
+    "midnight": "Midnight",
+    "resolution": "Resolution, goal",
+    "brandenburgGate": "Brandenburg Gate",
+    "fireworks": "Fireworks",
+    "fireworkRocket": "Firework rocket",
+    "champagne": "Champagne"
+  },
+  "winterQuestThirteen": {
+    "dishes": "Dishes",
+    "fireworks": "Fireworks",
+    "champagneGlass": "Champagne glass",
+    "newYearResolution": "New Year’s resolution",
+    "grape": "Grape",
+    "bell": "Bell"
+  },
+  "winterQuestFourteen": {
+    "mistletoe": "Mistletoe",
+    "krampus": "Krampus (evil Santa)",
+    "witch": "Witch",
+    "lentils": "Lentils",
+    "luck": "Luck",
+    "wealth": "Wealth"
+  },
+  "winterQuestFifteen": {
+    "snow": "Snow",
+    "cold": "Cold",
+    "hat": "Hat",
+    "gloves": "Gloves",
+    "stove": "Stove",
+    "windowsill": "Windowsill"
+  },
   "winterEventQuests": {
     "quest-21": "Treasury of Words",
     "quest-1": "Christmas Spirit",
@@ -52,7 +125,10 @@
     "eventShop": "Event Shop",
     "eventQuestions": "Event Quests",
     "firstReputation": "Snowy Trust",
-    "secondReputation": "Winter Respect"
+    "secondReputation": "Winter Respect",
+    "needForReward": "To buy, you need:",
+    "and": "and"
+
   },
   "winterEventShopItems": {
     "santaHat": "Santa Hat",
@@ -4761,7 +4837,7 @@
     "clear": "Clear",
     "leave": "Your opponent has left the session",
     "leaveText": "You will be redirected to the matchmaking page!",
-    "leaveBtn": "Leave session",
+    "leaveBtn": "Leave",
     "victory": "Victory",
     "victoryText": "You were faster and smarter! Great job!",
     "loss": "Defeat",
