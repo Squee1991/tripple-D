@@ -118,11 +118,10 @@ function makeEventKey(entry) {
 }
 
 function getDismissed(key) {
-  return false
   // try {
   //   return localStorage.getItem(`eventModal.dismissed.${key}`) === "1";
   // } catch {
-  //   return false;
+    return false;
   // }
 }
 
