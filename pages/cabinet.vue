@@ -349,7 +349,7 @@ const settingsToggleItems = [
   {key: 'sound', label: t('cabinetToggle.sound'), wrap: false},
   {key: 'dark', label: t('cabinetToggle.theme'), wrap: true},
   {key: 'ach', label: t('cabinetToggle.ach'), wrap: true},
-  // {key: 'snowFall', label: t('cabinetToggle.snowFall'), wrap: true},
+  {key: 'snowFall', label: t('cabinetToggle.snowFall'), wrap: true},
 ]
 
 const activeAccordion = ref(null)
