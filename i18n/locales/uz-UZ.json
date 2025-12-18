@@ -9,6 +9,38 @@
     "jokeLabel": "Hazillar paradi",
     "jokeText": "Zavqlaning, bonuslarni yig‘ing va hazil-mutoyiba sinovlarida qatnashing!"
   },
+  "questCompletedModals": {
+    "correct": "To‘g‘ri",
+    "correctAnswer": "To‘g‘ri javob:",
+    "further": "Keyingi",
+    "check": "Tekshirish",
+    "completed": "Kvest bajarildi",
+    "notCompleted": "Kvest bajarilmadi",
+    "reward": "Siz mukofot oldingiz.",
+    "back": "Mavzularga qaytish",
+    "lives": "Jonlar tugadi",
+    "count": "Siz to‘g‘ri javob berdingiz",
+    "again": "Yana bir bor",
+    "buyLive": "Davom etish uchun qo‘shimcha jon sotib oling.",
+    "prise": "Narx",
+    "priseValue": "10 Articlus",
+    "balance": "Sizda:",
+    "points": "Articluslar",
+    "buy": "10 ga jon sotib olish",
+    "notEnough": "Yetarli emas",
+    "questNotCompleted": "Siz kvestni yakunlamadingiz",
+    "warning": "Agar hozir chiqsangiz, progress saqlanmaydi.",
+    "leave": "Chiqish",
+    "continue": "Davom etish"
+  },
+  "modalLocations": {
+    "title": "Sonlar haqida maslahat",
+    "text": "Bu topshiriqda sonlar va vaqt ishlatiladi. Raqamlar yoki so‘zlar bilan yozish mumkin",
+    "examples": "Misollar",
+    "or": "yoki",
+    "notShow": "Qayta ko‘rsatilmasin",
+    "btnAccept": "Tushundim"
+  },
   "sentenceDuels": {
     "stats": "Sening statistikalaring",
     "statsPartTwo": "daraja bo‘yicha",

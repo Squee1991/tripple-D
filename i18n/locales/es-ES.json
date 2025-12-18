@@ -9,6 +9,38 @@
     "jokeLabel": "Desfile de Bromas",
     "jokeText": "¡Diviértete, recoge bonificaciones y participa en desafíos cómicos!"
   },
+  "questCompletedModals": {
+    "correct": "Correcto",
+    "correctAnswer": "Respuesta correcta:",
+    "further": "Siguiente",
+    "check": "Comprobar",
+    "completed": "Misión completada",
+    "notCompleted": "Misión no completada",
+    "reward": "Has recibido una recompensa.",
+    "back": "Volver a los temas",
+    "lives": "Sin vidas",
+    "count": "Has respondido correctamente",
+    "again": "Otra vez",
+    "buyLive": "Compra una vida extra para continuar.",
+    "prise": "Precio",
+    "priseValue": "10 Articlusos",
+    "balance": "Tienes:",
+    "points": "Articlusos",
+    "buy": "Comprar una vida por 10",
+    "notEnough": "No es suficiente",
+    "questNotCompleted": "No has completado la misión",
+    "warning": "Si sales ahora, el progreso no se guardará.",
+    "leave": "Salir",
+    "continue": "Continuar"
+  },
+  "modalLocations": {
+    "title": "Pista sobre los números",
+    "text": "En este ejercicio se usan números y tiempo. Puedes escribirlos con cifras o con palabras",
+    "examples": "Ejemplos",
+    "or": "o",
+    "notShow": "No volver a mostrar",
+    "btnAccept": "Entendido"
+  },
   "sentenceDuels": {
     "stats": "Tus estadísticas",
     "statsPartTwo": "por nivel",

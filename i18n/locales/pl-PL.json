@@ -9,6 +9,38 @@
     "jokeLabel": "Parada Żartów",
     "jokeText": "Baw się dobrze, zbieraj bonusy i bierz udział w zabawnych wyzwaniach!"
   },
+  "questCompletedModals": {
+    "correct": "Poprawnie",
+    "correctAnswer": "Poprawna odpowiedź:",
+    "further": "Dalej",
+    "check": "Sprawdź",
+    "completed": "Zadanie ukończone",
+    "notCompleted": "Zadanie nieukończone",
+    "reward": "Otrzymałeś nagrodę.",
+    "back": "Wróć do tematów",
+    "lives": "Brak żyć",
+    "count": "Odpowiedziałeś poprawnie",
+    "again": "Jeszcze raz",
+    "buyLive": "Kup dodatkowe życie, aby kontynuować.",
+    "prise": "Cena",
+    "priseValue": "10 Artykluzów",
+    "balance": "Masz:",
+    "points": "Artykluzy",
+    "buy": "Kup życie za 10",
+    "notEnough": "Za mało",
+    "questNotCompleted": "Nie ukończyłeś zadania",
+    "warning": "Jeśli wyjdziesz teraz, postęp nie zostanie zapisany.",
+    "leave": "Wyjdź",
+    "continue": "Kontynuuj"
+  },
+  "modalLocations": {
+    "title": "Wskazówka dotycząca liczb",
+    "text": "W tym zadaniu używane są liczby i czas. Możesz pisać je cyframi lub słownie",
+    "examples": "Przykłady",
+    "or": "lub",
+    "notShow": "Nie pokazuj ponownie",
+    "btnAccept": "Rozumiem"
+  },
   "sentenceDuels": {
     "stats": "Twoje statystyki",
     "statsPartTwo": "według poziomu",

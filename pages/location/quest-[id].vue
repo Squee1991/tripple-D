@@ -3,13 +3,13 @@
         <div class="quest">
             <button class="quest__back-btn" @click="openLeave('back')">×</button>
             <div v-if="questStore.finished && questStore.success" class="quest__stamp quest__stamp--ok">ПРОЙДЕНО</div>
-            <div v-if="questStore.loading" class="quest__panel quest__panel--loading">Загрузка квеста...</div>
+            <div v-if="questStore.loading" class="quest__panel quest__panel--loading"></div>
             <div v-else-if="questStore.error" class="quest__panel quest__panel--error">
-                Ошибка: {{ questStore.error }}
-                <div class="quest__tiny">questId: {{ questId }} | region: {{ regionKey || '—' }}</div>
-                <button class="btn" @click="goThemes">Назад к темам</button>
+                 <div>Error</div>
+                <button class="btn" @click="goThemes">back</button>
             </div>
             <div v-else-if="questStore.task" class="quest__card">
+              <VHelpModal :open="showHint" @close="showHint=false" />
                 <div class="quest__top">
                     <div class="quest__stat">
                         <div class="quest__stat-value">
@@ -17,8 +17,7 @@
                         </div>
                         <div class="quest__progress-line">
                             <template v-for="(step, i) in progressSteps" :key="i">
-                                <div
-                                        class="quest__dot"
+                                <div class="quest__dot"
                                         :class="{
             'quest__dot--done': step === 'done',
             'quest__dot--wrong': step === 'wrong',
@@ -151,9 +150,9 @@
                     <div v-if="questStore.showResult" :class="statusClassComputed" class="quest__feedback">
                         <img class="quest__feedback-icon" :src="questStore.isCorrect ? RightIcon : WrongIcon" alt="">
                         <div class="quest__feedback-text">
-                            <div v-if="questStore.isCorrect">Правильно</div>
+                            <div v-if="questStore.isCorrect">{{ t('questCompletedModals.correct')}}</div>
                             <div class="quest__correct-answer-block" v-else>
-                                <div> Правильный ответ:</div>
+                                <div>{{ t('questCompletedModals.correctAnswer')}}</div>
                                 <div> {{ t(questStore.correctAnswer) }}</div>
                             </div>
                         </div>
@@ -162,25 +161,25 @@
                 <div class="quest__controls">
                     <button class="btn" :disabled="!questStore.showResult && questStore.isConfirmDisabled"
                             @click="handleClick">
-                        {{ questStore.showResult ? 'Далее' : 'Проверить' }}
+                        {{ questStore.showResult ? t('questCompletedModals.further') : t('questCompletedModals.check') }}
                     </button>
                 </div>
             </div>
             <div v-else-if="questStore.finished && questStore.success && questStore.justAwarded"
                  class="quest-complete quest-complete--solo">
-                <div class="quest-complete__title">Квест пройден</div>
-                <div class="quest-complete__subtitle">Вы получили награду.</div>
+                <div class="quest-complete__title">{{ t('questCompletedModals.completed')}}</div>
+                <div class="quest-complete__subtitle">{{ t('questCompletedModals.reward')}}</div>
                 <div class="quest-complete__actions quest-complete__actions--one">
-                    <button class="btn btn--primary" @click="goThemes">Назад к темам</button>
+                    <button class="btn btn--primary" @click="goThemes">{{ t('questCompletedModals.back')}}</button>
                 </div>
             </div>
             <div v-else class="modal">
                 <div class="modal__overlay"></div>
                 <div class="modal__window">
-                    <div class="modal__title">{{ questStore.success ? 'Квест завершён' : 'Квест не пройден' }}</div>
+                    <div class="modal__title">{{ questStore.success ? 'Квест пройден' : 'Квест не пройден' }}</div>
                     <div class="modal__actions">
-                        <button class="btn" @click="restart">Ещё раз</button>
-                        <button class="btn btn--primary" @click="goThemes">Назад к темам</button>
+                        <button class="btn" @click="restart">{{ t('questCompletedModals.again')}}</button>
+                        <button class="btn btn--primary" @click="goThemes">{{ t('questCompletedModals.back')}}</button>
                     </div>
                 </div>
             </div>
@@ -188,37 +187,37 @@
         <div v-if="forceRevive || showRevive" class="modal">
             <div class="modal__overlay"></div>
             <div class="modal__window">
-                <div class="modal__title">Жизни закончились</div>
+                <div class="modal__title">{{ t('questCompletedModals.lives')}}</div>
                 <div class="modal__text">
-                    Вы ответили верно {{ questStore.correctCount }} из {{ questStore.requiredTasks }}.<br/>
-                    Купите дополнительную жизнь, чтобы продолжить.
+                  {{ t('questCompletedModals.count')}} {{ questStore.correctCount }} / {{ questStore.requiredTasks }}.<br/>
+                  {{ t('questCompletedModals.buyLive')}}
                 </div>
                 <div class="wallet">
                     <div class="wallet__row">
-                        <div class="wallet__label">Цена:</div>
-                        <div class="wallet__value">10 Артиклюсов</div>
+                        <div class="wallet__label">{{ t('questCompletedModals.prise')}}</div>
+                        <div class="wallet__value">{{ t('questCompletedModals.priseValue')}}</div>
                     </div>
                     <div class="wallet__row">
-                        <div class="wallet__label">У вас:</div>
-                        <div class="wallet__value">{{ wallet }} Артиклюсов</div>
+                        <div class="wallet__label">{{ t('questCompletedModals.balance')}}</div>
+                        <div class="wallet__value">{{ wallet }} {{ t('questCompletedModals.points')}}</div>
                     </div>
                 </div>
                 <div class="modal__actions">
                     <button class="btn" :disabled="!canBuyLife" @click="purchaseLife">
-                        {{ canBuyLife ? 'Купить жизнь за 10' : 'Недостаточно' }}
+                        {{ canBuyLife ? t('questCompletedModals.buy') : t('questCompletedModals.notEnough') }}
                     </button>
-                    <button class="btn btn--primary" @click="goThemes">Назад к темам</button>
+                    <button class="btn btn--primary" @click="goThemes">{{ t('questCompletedModals.back')}}</button>
                 </div>
             </div>
         </div>
         <div v-if="showLeaveModal" class="modal">
             <div class="modal__overlay"></div>
             <div class="modal__window">
-                <div class="modal__title">Вы не завершили квест</div>
-                <div class="modal__text">Если вы покинете сейчас, прогресс не будет сохранён.</div>
+                <div class="modal__title">{{ t('questCompletedModals.questNotCompleted')}}</div>
+                <div class="modal__text">{{ t('questCompletedModals.warning')}}</div>
                 <div class="modal__actions">
-                    <button class="btn btn--danger" @click="confirmLeave">Покинуть</button>
-                    <button class="btn btn--primary" @click="stayHere">Продолжить</button>
+                    <button class="btn btn--danger" @click="confirmLeave">{{ t('questCompletedModals.leave')}}</button>
+                    <button class="btn btn--primary" @click="stayHere">{{ t('questCompletedModals.continue')}}</button>
                 </div>
             </div>
         </div>
@@ -236,7 +235,7 @@ import {playCorrect, playWrong, unlockAudioByUserGesture} from '../../utils/soun
 import RightIcon from '../../assets/images/location-icons/accept.svg'
 import WrongIcon from '../../assets/images/location-icons/cancel.svg'
 import {useSeoMeta} from '#imports'
-
+import VHelpModal from "../../src/components/V-help-modal.vue";
 useSeoMeta({robots: 'noindex, nofollow'})
 
 const PRICE = 10
@@ -258,8 +257,8 @@ const TARGET_LANG_CODE = 'de'
 const speechInputRef = ref(null)
 const germanLetters = ['ä', 'ö', 'ü', 'Ä', 'Ö', 'Ü', 'ß'];
 const inputRef = ref(null)
-
-
+const showHint = ref(false)
+const NUMBERS_HINT_KEY = 'hide_numbers_hint_modal'
 
 const shouldShowGermanLetters = computed(() => {
   if (!questStore.task) return false
@@ -350,10 +349,13 @@ const highlightedQuestion = computed(() => {
 })
 
 function goThemes() {
-    if (regionKey.value) {
-        router.push(`/location/${regionKey.value}`)
-    }
-    // else router.push('/location')
+  if (window.history.length > 1) {
+    router.back()
+  } else if (regionKey.value) {
+    router.push(`/location/${regionKey.value}`)
+  } else {
+    // router.push('/location')
+  }
 }
 
 function restart() {
@@ -472,13 +474,30 @@ function beforeUnloadHandler(e) {
     e.preventDefault()
 }
 
-onMounted(async () => {
-    await questStore.loadProgressFromFirebase?.()
-    await questStore.loadQuest(questId.value, regionKey.value)
-    await nextTick()
-    forceRevive.value = showRevive.value
-    window.addEventListener('beforeunload', beforeUnloadHandler)
-})
+watch([questId, regionKey], () => {
+      questStore.loading = true
+      questStore.error = ''
+      questStore.quest = null
+      questStore.finished = false
+      questStore.showResult = false
+      questStore.selected = ''
+      questStore.userInput = ''
+      questStore.reorderSelection = []
+      questStore.reorderBank = []
+      showHint.value = false
+      ;(async () => {
+        await questStore.loadProgressFromFirebase?.()
+        await questStore.loadQuest(questId.value, regionKey.value)
+        const hasAccept = questStore.quest?.tasks?.some(t => t.accept?.length)
+        if (hasAccept && localStorage.getItem(NUMBERS_HINT_KEY) !== 'true') {
+          showHint.value = true
+        }
+        await nextTick()
+        forceRevive.value = showRevive.value
+      })()
+    },
+    { immediate: true, flush: 'sync' }
+)
 
 onBeforeUnmount(() => {
     window.removeEventListener('beforeunload', beforeUnloadHandler)
@@ -501,14 +520,7 @@ watchEffect(() => {
 }
 
 .quest__panel {
-    margin: 0 auto;
-    width: 50%;
-    text-align: center;
-    padding: 18px 20px;
-    border-radius: 16px;
-    border: 3px solid #1e1e1e;
-    background: #fff;
-    box-shadow: 4px 4px 0 #1e1e1e;
+
 }
 
 .quest__panel--error {
@@ -1157,7 +1169,7 @@ watchEffect(() => {
     width: 18px;
     height: 18px;
     border-radius: 50%;
-    background: #ccc;
+    background: white;
     transition: all 0.3s ease;
 }
 
@@ -1172,6 +1184,5 @@ watchEffect(() => {
 .quest__dot--wrong {
     background: #d9534f;
 }
-
 
 </style>

@@ -9,6 +9,39 @@
     "jokeLabel": "Prank Parade",
     "jokeText": "Have fun, collect bonuses, and join funny challenges!"
   },
+  "questCompletedModals": {
+    "correct": "Correct",
+    "correctAnswer": "Correct answer:",
+    "further": "Next",
+    "check": "Check",
+    "completed": "Quest completed",
+    "notCompleted": "Quest not completed",
+    "reward": "You have received a reward.",
+    "back": "Back to topics",
+    "lives": "No lives left",
+    "count": "You answered correctly",
+    "again": "Try again",
+    "buyLive": "Buy an extra life to continue.",
+    "prise": "Price",
+    "priseValue": "10 Articluses",
+    "balance": "You have:",
+    "points": "Articluses",
+    "buy": "Buy a life for 10",
+    "notEnough": "Not enough",
+    "questNotCompleted": "You have not completed the quest",
+    "warning": "If you leave now, your progress will not be saved.",
+    "leave": "Leave",
+    "continue": "Continue"
+  },
+
+  "modalLocations": {
+    "title": "Hint about numbers",
+    "text": "This task uses numbers and time. You can write them as digits or words",
+    "examples": "Examples",
+    "or": "or",
+    "notShow": "Do not show again",
+    "btnAccept": "Got it"
+  },
   "sentenceDuels": {
     "stats": "Your statistics",
     "statsPartTwo": "by level",
