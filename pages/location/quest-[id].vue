@@ -520,14 +520,7 @@ watchEffect(() => {
 }
 
 .quest__panel {
-    margin: 0 auto;
-    width: 50%;
-    text-align: center;
-    padding: 18px 20px;
-    border-radius: 16px;
-    border: 3px solid #1e1e1e;
-    background: #fff;
-    box-shadow: 4px 4px 0 #1e1e1e;
+
 }
 
 .quest__panel--error {
