@@ -592,6 +592,12 @@
       }
     ]
   },
+
+
+
+
+
+
   {
     "questId": "menschen-a1-shopping2",
     "title": "eastPlainFourthQuests.title",
@@ -723,17 +729,17 @@
         "type": "reorder",
         "question": "eastPlainFourthQuests.questEleven",
         "words": [
-          "bargeld",
+          "hier",
+          "bezahlen",
+          "bitte",
+          "Karte",
           "mit",
-          "der",
-          "der Schein",
-          "schlange",
-          "Preis",
-          "bezahlen"
+          "der"
         ],
         "correctOrder": [
           "mit",
-          "bargeld",
+          "der",
+          "Karte",
           "bezahlen"
         ]
       },
