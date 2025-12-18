@@ -312,12 +312,18 @@ export const userChainStore = defineStore('chain', () => {
 				break
 			}
 			case 'speechToText': {
-				const rawUser = userInput.value
-				const rawAns = task.value.answer || task.value.correctAnswer || ''
-				const user = normalizeSpeechText(rawUser)
-				const ans = normalizeSpeechText(rawAns)
-				isCorrect.value = user === ans
-				break
+				const userRawInput = userInput.value;
+				const normalizedUserInput = normalizeSpeechText(userRawInput);
+				const acceptedAnswers = Array.isArray(task.value.accept) && task.value.accept.length > 0
+					? task.value.accept
+					: [task.value.answer || task.value.correctAnswer || ''];
+				const isUserAnswerCorrect = acceptedAnswers.some((acceptedAnswer) => {
+					const normalizedAcceptedAnswer = normalizeSpeechText(acceptedAnswer);
+					return normalizedAcceptedAnswer === normalizedUserInput;
+				});
+
+				isCorrect.value = isUserAnswerCorrect;
+				break;
 			}
 			case 'reorder':
 				isCorrect.value = JSON.stringify(reorderSelection.value) === JSON.stringify(task.value.correctOrder || [])

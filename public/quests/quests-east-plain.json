@@ -890,9 +890,9 @@
         "text": "Im Supermarkt kaufe ich Brot, Käse und zwei Flaschen Wasser.",
         "question": "eastPlainFifthQuests.questEight",
         "options": [
-          "das Fleisch",
+          "das Brot, der Käse und der Käse ",
           "das Brot, der Käse und das Wasser",
-          "die Milch"
+          "die Milch , das Wasser und der Käse"
         ],
         "answer": "das Brot, der Käse und das Wasser"
       },
@@ -936,7 +936,7 @@
         "id": 12,
         "type": "input",
         "question": "eastPlainFifthQuests.questTwelve",
-        "correctAnswer": "gern"
+        "correctAnswer": "wie"
       },
       {
         "id": 13,
@@ -1521,14 +1521,22 @@
         "type": "speechToText",
         "question": "eastPlainNinthQuests.questTwo",
         "text": "Ich gehe um 21 Uhr schlafen",
-        "answer": "Ich gehe um 22 Uhr schlafen"
+        "answer": "Ich gehe um 21 Uhr schlafen",
+        "accept": [
+          "Ich gehe um 21 Uhr schlafen",
+          "Ich gehe um einundzwanzig Uhr schlafen"
+        ]
       },
       {
         "id": 3,
         "type": "speechToText",
         "question": "eastPlainNinthQuests.questTree",
         "text": "Ich gehe zur Arbeit um 8 Uhr",
-        "answer": "Ich gehe zur Arbeit um 8 Uhr"
+        "answer": "Ich gehe zur Arbeit um 8 Uhr",
+        "accept": [
+          "Ich gehe zur Arbeit um 8 Uhr",
+          "Ich gehe zur Arbeit um acht Uhr"
+        ]
       },
       {
         "id": 4,
