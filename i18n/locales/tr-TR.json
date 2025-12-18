@@ -9,6 +9,38 @@
     "jokeLabel": "Şaka Geçidi",
     "jokeText": "Eğlen, bonusları topla ve şaka dolu meydan okumalara katıl!"
   },
+  "questCompletedModals": {
+    "correct": "Doğru",
+    "correctAnswer": "Doğru cevap:",
+    "further": "İleri",
+    "check": "Kontrol et",
+    "completed": "Görev tamamlandı",
+    "notCompleted": "Görev tamamlanmadı",
+    "reward": "Bir ödül kazandınız.",
+    "back": "Konulara geri dön",
+    "lives": "Canlar bitti",
+    "count": "Doğru cevapladınız",
+    "again": "Tekrar",
+    "buyLive": "Devam etmek için ekstra bir can satın alın.",
+    "prise": "Fiyat",
+    "priseValue": "10 Articlus",
+    "balance": "Sahipsiniz:",
+    "points": "Articlus",
+    "buy": "10 karşılığında can satın al",
+    "notEnough": "Yetersiz",
+    "questNotCompleted": "Görevi tamamlamadınız",
+    "warning": "Şimdi çıkarsanız ilerleme kaydedilmeyecek.",
+    "leave": "Çık",
+    "continue": "Devam et"
+  },
+  "modalLocations": {
+    "title": "Sayılar hakkında ipucu",
+    "text": "Bu görevde sayılar ve zaman kullanılır. Rakamlarla veya kelimelerle yazabilirsiniz",
+    "examples": "Örnekler",
+    "or": "veya",
+    "notShow": "Bir daha gösterme",
+    "btnAccept": "Anladım"
+  },
   "sentenceDuels": {
     "stats": "İstatistiklerin",
     "statsPartTwo": "seviyeye göre",

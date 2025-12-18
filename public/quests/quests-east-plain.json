@@ -592,12 +592,6 @@
       }
     ]
   },
-
-
-
-
-
-
   {
     "questId": "menschen-a1-shopping2",
     "title": "eastPlainFourthQuests.title",
@@ -1583,22 +1577,8 @@
         "id": 7,
         "type": "reorder",
         "question": "eastPlainNinthQuests.questSeven",
-        "words": [
-          "auf",
-          "Ich",
-          "stehe",
-          "um",
-          "7",
-          "Uhr"
-        ],
-        "correctOrder": [
-          "Ich",
-          "stehe",
-          "um",
-          "7",
-          "Uhr",
-          "auf"
-        ]
+        "words": ["auf", "Ich", "stehe", "um", "7", "Uhr"],
+        "correctOrder": ["Ich", "stehe", "um", "7", "Uhr", "auf"]
       },
       {
         "id": 8,
@@ -1617,7 +1597,11 @@
         "type": "speechToText",
         "question": "eastPlainNinthQuests.questNine",
         "text": "Ich frühstücke um halb acht",
-        "answer": "Ich frühstücke um halb acht"
+        "answer": "Ich frühstücke um halb acht",
+        "accept": [
+          "Ich frühstücke um halb acht",
+          "Ich frühstücke um 7:30"
+        ]
       },
       {
         "id": 10,

@@ -63,6 +63,10 @@ export const userChainStore = defineStore('chain', () => {
 			.trim()
 	}
 
+	const questHasAccept = computed(() => {
+		const tasks = quest.value?.tasks || []
+		return tasks.some((taskItem) => Array.isArray(taskItem.accept) && taskItem.accept.length > 0)
+	})
 
 	const isConfirmDisabled = computed(() => {
 		if (showResult.value) return true
@@ -236,7 +240,7 @@ export const userChainStore = defineStore('chain', () => {
 		loading.value = true
 		error.value = ''
 		quest.value = null
-		restart()
+		resetViewState()
 		currentQuestId.value = String(questId || '')
 		currentRegionKey.value = String(regionKey || '')
 		justAwarded.value = false
@@ -380,14 +384,28 @@ export const userChainStore = defineStore('chain', () => {
 		finished.value = false
 		showResult.value = false
 		isCorrect.value = false
-		quest.value = null
 		sessionStarted.value = false
 		answers.value = []
 		resetInputs()
-		if (lives.value < maxLives && !lastLifeAtMs.value) {
-			lastLifeAtMs.value = Date.now()
-		}
+		if (lives.value < maxLives && !lastLifeAtMs.value) lastLifeAtMs.value = Date.now()
 	}
+
+	function resetViewState() {
+		loading.value = true
+		error.value = ''
+		justAwarded.value = false
+		quest.value = null
+		currentIndex.value = 0
+		correctCount.value = 0
+		answeredCount.value = 0
+		finished.value = false
+		showResult.value = false
+		isCorrect.value = false
+		answers.value = []
+		sessionStarted.value = false
+		resetInputs()
+	}
+
 	watch(finished, async (v) => {
 		if (v) {
 			try {
@@ -437,7 +455,7 @@ export const userChainStore = defineStore('chain', () => {
 		questProgress,
 		sessionStarted,
 		justAwarded,
-
+		questHasAccept,
 		confirming,
 		advancing,
 		lifeSpentThisStep,
