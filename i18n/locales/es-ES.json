@@ -9,6 +9,9 @@
     "jokeLabel": "Desfile de Bromas",
     "jokeText": "¡Diviértete, recoge bonificaciones y participa en desafíos cómicos!"
   },
+  "locationsPlaceholder": {
+    "inputType": "Escribe lo que escuchas… (la puntuación no es obligatoria)"
+  },
   "questCompletedModals": {
     "correct": "Correcto",
     "correctAnswer": "Respuesta correcta:",

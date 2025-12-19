@@ -1,6 +1,6 @@
 [
   {
-    "questId": "menschen-a1-greetings",
+    "questId": "one",
     "title": "eastPlainFirstQuests.title",
     "progress": "0/14",
     "description": "eastPlainFirstQuests.description",
@@ -184,11 +184,18 @@
         "question": "eastPlainFirstQuests.questFifteen",
         "text": "Hallo! wie geht's? sehr gut, danke ",
         "answer": "Hallo! wie geht's? sehr gut, danke"
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "eastPlainFirstQuests.questFifteen",
+        "text": "Hallo! wie geht's? sehr gut, danke ",
+        "answer": "Hallo! wie geht's? sehr gut, danke"
       }
     ]
   },
   {
-    "questId": "menschen-a1-greetings2",
+    "questId": "two",
     "title": "eastPlainSecondQuests.title",
     "progress": "0/13",
     "description": "eastPlainSecondQuests.description",
@@ -369,7 +376,7 @@
     ]
   },
   {
-    "questId": "menschen-a1-shopping",
+    "questId": "three",
     "title": "eastPlainThirdQuests.title",
     "progress": "0/15",
     "description": "eastPlainThirdQuests.description",
@@ -593,7 +600,7 @@
     ]
   },
   {
-    "questId": "menschen-a1-shopping2",
+    "questId": "four",
     "title": "eastPlainFourthQuests.title",
     "progress": "0/15",
     "description": "eastPlainFourthQuests.description",
@@ -773,7 +780,7 @@
     ]
   },
   {
-    "questId": "menschen-a1-essen",
+    "questId": "five",
     "title": "eastPlainFifthQuests.title",
     "progress": "0/15",
     "description": "eastPlainFifthQuests.description",
@@ -978,7 +985,7 @@
     ]
   },
   {
-    "questId": "menschen-a1-beruf",
+    "questId": "six",
     "title": "eastPlainSixthQuests.title",
     "progress": "0/15",
     "description": "eastPlainSixthQuests.description",
@@ -1145,7 +1152,7 @@
     ]
   },
   {
-    "questId": "menschen-a1-zahlen",
+    "questId": "seven",
     "title": "eastPlainSeventhQuests.title",
     "progress": "0/14",
     "description": "eastPlainSeventhQuests.description",
@@ -1320,7 +1327,7 @@
     ]
   },
   {
-    "questId": "menschen-a1-familie",
+    "questId": "eight",
     "title": "eastPlainEighthQuests.title",
     "progress": "0/13",
     "description": "eastPlainEighthQuests.description",
@@ -1485,7 +1492,7 @@
     ]
   },
   {
-    "questId": "menschen-a1-tagesablauf",
+    "questId": "nine",
     "title": "eastPlainNinthQuests.title",
     "progress": "0/15",
     "description": "eastPlainNinthQuests.description",
@@ -1688,7 +1695,7 @@
     ]
   },
   {
-    "questId": "menschen-a1-wohnort",
+    "questId": "ten",
     "title": "eastPlainTenthQuests.title",
     "progress": "0/12",
     "description": "eastPlainTenthQuests.description",

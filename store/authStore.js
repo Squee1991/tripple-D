@@ -69,15 +69,11 @@ export const userAuthStore = defineStore('auth', () => {
         if (shownAt) return
 
         const regDateFromAuth = authUser?.metadata?.creationTime ? new Date(authUser.metadata.creationTime) : null
-        const regDateFromDb =
-            data.registeredAt && typeof data.registeredAt.toDate === 'function' ? data.registeredAt.toDate() : null
-
+        const regDateFromDb = data.registeredAt && typeof data.registeredAt.toDate === 'function' ? data.registeredAt.toDate() : null
         const regDate = regDateFromDb || regDateFromAuth
         if (!regDate) return
-
         const threeDaysMs = 0
         if (Date.now() - regDate.getTime() < threeDaysMs) return
-
         shouldShowFeedbackSurvey.value = true
     }
 
@@ -86,12 +82,10 @@ export const userAuthStore = defineStore('auth', () => {
         const authUser = getAuth().currentUser
         const currentUid = uid.value || authUser?.uid
         if (!currentUid) return
-
         const userDocRef = doc(db, 'users', currentUid)
         await updateDoc(userDocRef, { feedbackSurveyShownAt: serverTimestamp() })
         shouldShowFeedbackSurvey.value = false
     }
-
 
     const isGoogleUser = computed(() => providerId.value === 'google.com');
     const getAvatarUrl = (fileName) => {

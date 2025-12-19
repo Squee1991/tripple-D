@@ -124,9 +124,10 @@ const questsView = computed(() =>
     })
 );
 
-function startQuest(q) {
-  if (!q?.questId) return;
-  router.push({path: `/location/quest-${q.questId}`, query: {region: regionKey.value}});
+function startQuest(quest) {
+  if (!quest?.questId) return;
+  router.push({path: `/location/quest-${quest.questId}`});
+  // router.push({path: `/location/quest-${quest.questId}`, query: {region: regionKey.value}});
 }
 
 function goHome() {
