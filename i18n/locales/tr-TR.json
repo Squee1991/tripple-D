@@ -9,6 +9,9 @@
     "jokeLabel": "Şaka Geçidi",
     "jokeText": "Eğlen, bonusları topla ve şaka dolu meydan okumalara katıl!"
   },
+  "locationsPlaceholder": {
+    "inputType": "Duyduğunu yaz… (noktalama işaretleri zorunlu değildir)"
+  },
   "questCompletedModals": {
     "correct": "Doğru",
     "correctAnswer": "Doğru cevap:",

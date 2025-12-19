@@ -9,6 +9,9 @@
     "jokeLabel": "Prank Parade",
     "jokeText": "Have fun, collect bonuses, and join funny challenges!"
   },
+  "locationsPlaceholder": {
+    "inputType": "Write what you hear… (punctuation is not required)"
+  },
   "questCompletedModals": {
     "correct": "Correct",
     "correctAnswer": "Correct answer:",

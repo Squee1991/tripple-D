@@ -9,6 +9,9 @@
     "jokeLabel": "Parada Żartów",
     "jokeText": "Baw się dobrze, zbieraj bonusy i bierz udział w zabawnych wyzwaniach!"
   },
+  "locationsPlaceholder": {
+    "inputType": "Napisz to, co słyszysz… (znaki interpunkcyjne nie są wymagane)"
+  },
   "questCompletedModals": {
     "correct": "Poprawnie",
     "correctAnswer": "Poprawna odpowiedź:",

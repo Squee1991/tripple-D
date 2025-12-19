@@ -9,6 +9,9 @@
     "jokeLabel": "Hazillar paradi",
     "jokeText": "Zavqlaning, bonuslarni yig‘ing va hazil-mutoyiba sinovlarida qatnashing!"
   },
+  "locationsPlaceholder": {
+    "inputType": "Eshitganingizni yozing… (tinish belgilari majburiy emas)"
+  },
   "questCompletedModals": {
     "correct": "To‘g‘ri",
     "correctAnswer": "To‘g‘ri javob:",

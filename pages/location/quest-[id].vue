@@ -71,7 +71,7 @@
                               v-model="questStore.userInput"
                               :disabled="questStore.showResult"
                               @keyup.enter="handleClick"
-                              placeholder="Введите ответ...(знаки препинания не обязательны)"
+                              :placeholder="inputPlaceholders.inputType"
                           />
 
                           <div v-if="shouldShowGermanLetters" class="german__letters">
@@ -99,7 +99,7 @@
                               v-model="questStore.userInput"
                               :disabled="questStore.showResult"
                               @keyup.enter="handleClick"
-                              placeholder="Напишите услышанное...(знаки препинания не обязательны)"
+                              :placeholder="inputPlaceholders.inputType"
                           />
                           <div v-if="shouldShowGermanLetters" class="german__letters">
                             <button
@@ -259,6 +259,10 @@ const germanLetters = ['ä', 'ö', 'ü', 'Ä', 'Ö', 'Ü', 'ß'];
 const inputRef = ref(null)
 const showHint = ref(false)
 const NUMBERS_HINT_KEY = 'hide_numbers_hint_modal'
+
+const inputPlaceholders = {
+  inputType: t('locationsPlaceholder.inputType'),
+}
 
 const shouldShowGermanLetters = computed(() => {
   if (!questStore.task) return false
@@ -537,7 +541,6 @@ watchEffect(() => {
     display: flex;
     flex-direction: column;
     align-items: start;
-
 }
 
 .quest__back-btn {
@@ -590,7 +593,7 @@ watchEffect(() => {
     padding-top: .25rem;
     margin-bottom: .75rem;
     background: rgba(255, 255, 255, 0.7);
-    border-radius: 99px; /* Делаем его овальным */
+    border-radius: 99px;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
     backdrop-filter: blur(4px);
     border: 1px solid rgba(255, 255, 255, 0.18);

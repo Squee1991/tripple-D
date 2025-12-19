@@ -9,6 +9,9 @@
     "jokeLabel": "موكب المقالب",
     "jokeText": "استمتع، واجمع المكافآت وشارك في تحديات مضحكة!"
   },
+  "locationsPlaceholder": {
+    "inputType": "اكتب ما تسمعه… (علامات الترقيم غير إلزامية)"
+  },
   "questCompletedModals": {
     "correct": "صحيح",
     "correctAnswer": "الإجابة الصحيحة:",

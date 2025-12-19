@@ -9,6 +9,9 @@
     "jokeLabel": "Парад приколов",
     "jokeText": "Веселись, собирай бонусы и участвуй в шуточных испытаниях!"
   },
+  "locationsPlaceholder": {
+    "inputType": "Напишите услышанное...(знаки препинания не обязательны)"
+  },
   "questCompletedModals": {
     "correct": "Правильно",
     "correctAnswer": "Правильный ответ:",

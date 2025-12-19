@@ -61,13 +61,13 @@
 import {ref, computed, onMounted, onBeforeUnmount, watch} from 'vue'
 import {useRouter} from 'vue-router'
 import {regions} from '@/utils/regions.js'
-
+import { userlangStore } from '../../store/learningStore.js'
 const {t, locale} = useI18n()
 const props = defineProps({currentLevel: {type: Number, default: 1}})
-
+const langStore = userlangStore()
 const router = useRouter()
 
-const defaultRegion = regions.find(r => r.pathTo === 'plain') || regions[0] || null
+const defaultRegion = regions.find(r => r.pathTo === 'east-plain') || regions[0] || null
 const active = ref(defaultRegion)
 
 const isPanelOpen = ref(false)
@@ -105,7 +105,7 @@ watch([isPanelOpen, windowWidth], ([newIsOpen, newWidth]) => {
 })
 
 const clampedLevel = computed(() =>
-    Math.min(Math.max(props.currentLevel, 1), 20)
+    Math.min(Math.max(langStore.isLeveling, 0), 20)
 )
 
 const isUnlocked = computed(() =>
