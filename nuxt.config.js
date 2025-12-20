@@ -107,7 +107,6 @@ export default defineNuxtConfig({
 		// sitemap: `${siteUrl}/sitemap.xml`,
 	},
 
-
 	css: [
 		'simplebar/dist/simplebar.min.css',
 		'~/assets/styles/simplebar.css',

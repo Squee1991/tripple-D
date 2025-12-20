@@ -1,0 +1,28 @@
+[
+  {
+    "questId": "first",
+    "title": "",
+    "progress": "0/15",
+    "description": "",
+    "conditions": {
+      "goal": "",
+      "minCorrect": 15,
+      "requiredTasks": 15
+     },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Как сказать: Работать",
+        "options": [
+          "arbeiten", "machen"
+        ],
+        "answer": "arbeiten"
+      }
+    ]
+  }
+]
