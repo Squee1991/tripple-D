@@ -45,11 +45,8 @@
           <div class="region-card__footer">
             <span class="region-card__title">{{ t(region.name) }}</span>
             <div class="region-card-badge-wrapper">
-                            <span v-if="clampedLevel < region.level" class="region-card__badge">
-             {{ region.level }}
-            </span>
+              <span v-if="clampedLevel < region.level" class="region-card__badge">{{ region.level }}</span>
             </div>
-
           </div>
         </div>
       </div>
@@ -78,32 +75,6 @@ function handleResize() {
   }
 }
 
-onMounted(() => {
-  handleResize()
-  if (typeof window !== 'undefined') {
-    window.addEventListener('resize', handleResize)
-  }
-})
-
-onBeforeUnmount(() => {
-  if (typeof window !== 'undefined') {
-    window.removeEventListener('resize', handleResize)
-  }
-  if (typeof document !== 'undefined') {
-    document.body.style.overflow = ''
-  }
-})
-
-watch([isPanelOpen, windowWidth], ([newIsOpen, newWidth]) => {
-  if (typeof document === 'undefined') return
-
-  if (newIsOpen && newWidth <= 767) {
-    document.body.style.overflow = 'hidden'
-  } else {
-    document.body.style.overflow = ''
-  }
-})
-
 const clampedLevel = computed(() =>
     Math.min(Math.max(langStore.isLeveling, 0), 20)
 )
@@ -128,8 +99,34 @@ function go(region) {
     router.push(`/location/${region.pathTo}`)
   }
 }
-</script>
 
+watch([isPanelOpen, windowWidth], ([newIsOpen, newWidth]) => {
+  if (typeof document === 'undefined') return
+
+  if (newIsOpen && newWidth <= 767) {
+    document.body.style.overflow = 'hidden'
+  } else {
+    document.body.style.overflow = ''
+  }
+
+})
+
+onMounted(() => {
+  handleResize()
+  if (typeof window !== 'undefined') {
+    window.addEventListener('resize', handleResize)
+  }
+})
+
+onBeforeUnmount(() => {
+  if (typeof window !== 'undefined') {
+    window.removeEventListener('resize', handleResize)
+  }
+  if (typeof document !== 'undefined') {
+    document.body.style.overflow = ''
+  }
+})
+</script>
 
 <style>
 
@@ -327,7 +324,6 @@ function go(region) {
   width: 100%;
   height: 100%;
 }
-
 
 .region-card__footer {
   position: absolute;

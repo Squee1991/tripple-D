@@ -183,7 +183,6 @@ function handleCloseClick() {
 let intervalId;
 
 onMounted(() => {
-  if (props.visible && isModalOpen.value) document.body.style.overflow = "hidden";
   intervalId = setInterval(() => {
     currentTime.value = new Date();
   }, props.tickMs);
@@ -210,12 +209,11 @@ watch(() => activeEvent.value,
     }
 );
 
-watch(() => [props.visible, isModalOpen.value, activeEvent.value],
-    ([isVisible, open, evt]) => {
-      document.body.style.overflow = (isVisible && open && !!evt) ? "hidden" : "";
-    }, {
-      immediate: true
-    }
+watch(() => [props.visible, isModalOpen.value, activeEvent.value, authStore.uid],
+    ([isVisible, open, evt, uid]) => {
+      document.body.style.overflow = (isVisible && open && !!evt && !!uid) ? "hidden" : "";
+    },
+    { immediate: true }
 );
 </script>
 

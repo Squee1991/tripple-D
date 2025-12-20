@@ -94,6 +94,13 @@ onUnmounted(() => {
   daily.stop()
 })
 
+onMounted(() => {
+  console.log('html overflow:', getComputedStyle(document.documentElement).overflow)
+  console.log('body overflow:', getComputedStyle(document.body).overflow)
+  console.log('body position:', getComputedStyle(document.body).position)
+  console.log('touch-action:', getComputedStyle(document.body).touchAction)
+})
+
 // onMounted(() => {
 // 	if (process.client) {
 // 		// 1. Отключение правой кнопки мыши
