@@ -270,6 +270,8 @@ export const userChainStore = defineStore('chain', () => {
 				}
 			}
 			if (!quest.value) throw new Error('Квест не найден')
+			await loadProgressFromFirebase()
+			await migrateByAliases(quest.value)
 			const changed = applyLifeRegenIfNeeded()
 			if (changed) await saveLivesToRoot()
 
@@ -390,6 +392,50 @@ export const userChainStore = defineStore('chain', () => {
 		if (lives.value < maxLives && !lastLifeAtMs.value) lastLifeAtMs.value = Date.now()
 	}
 
+	async function migrateByAliases(quest) {
+		if (!quest?.questId || !Array.isArray(quest.aliases) || !quest.aliases.length) return
+		const newId = String(quest.questId)
+		if (questProgress.value?.[newId]) return
+		const userRef = await getUserRef()
+		if (!userRef) return
+		await runTransaction(db, async (tx) => {
+			const snap = await tx.get(userRef)
+			if (!snap.exists()) return
+			const data = snap.data() || {}
+			const qp = { ...(data.questProgress || {}) }
+			if (qp[newId]) return
+			const found = quest.aliases
+				.map(id => qp[id])
+				.filter(Boolean)
+				.sort((a, b) => {
+					const as = a.success ? 1 : 0
+					const bs = b.success ? 1 : 0
+					if (as !== bs) return bs - as
+					return (b.updatedAtMs || 0) - (a.updatedAtMs || 0)
+				})[0]
+
+			if (!found) return
+			qp[newId] = found
+			quest.aliases.forEach(id => delete qp[id])
+			tx.set(userRef, { questProgress: qp }, { merge: true })
+		})
+		const local = quest.aliases
+			.map(id => questProgress.value[id])
+			.filter(Boolean)
+			.sort((a, b) => {
+				const as = a.success ? 1 : 0
+				const bs = b.success ? 1 : 0
+				if (as !== bs) return bs - as
+				return (b.updatedAtMs || 0) - (a.updatedAtMs || 0)
+			})[0]
+		if (local) {
+			questProgress.value[newId] = local
+			quest.aliases.forEach(id => delete questProgress.value[id])
+		}
+	}
+
+
+
 	function resetViewState() {
 		loading.value = true
 		error.value = ''
@@ -468,7 +514,7 @@ export const userChainStore = defineStore('chain', () => {
 		confirm,
 		restart,
 		nextTask,
-
+		migrateByAliases,
 		applyLifeRegenIfNeeded,
 		saveLivesToRoot
 	}

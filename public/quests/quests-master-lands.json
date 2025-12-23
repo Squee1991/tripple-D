@@ -1,14 +1,14 @@
 [
   {
-    "questId": "first",
-    "title": "",
+    "questId": "jobUniversal1",
+    "title": "Работа: базовые слова",
     "progress": "0/15",
-    "description": "",
+    "description": "Базовые слова и простые фразы для повседневной рабочей речи.",
     "conditions": {
-      "goal": "",
+      "goal": "Понимать и использовать базовые рабочие фразы",
       "minCorrect": 15,
       "requiredTasks": 15
-     },
+    },
     "rewards": {
       "points": 20,
       "xp": 20
@@ -17,11 +17,2506 @@
       {
         "id": 1,
         "type": "select",
-        "question": "Как сказать: Работать",
-        "options": [
-          "arbeiten", "machen"
-        ],
+        "question": "Как сказать: работать",
+        "options": ["arbeiten", "machen", "gehen"],
         "answer": "arbeiten"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Ich arbeite",
+        "answer": "Ich arbeite"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "Как сказать: Профессия",
+        "options": ["der Beruf", "die Arbeit", "das Büro"],
+        "answer": "der Beruf"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "Соберите предложение",
+        "words": ["ich", "arbeite", "heute"],
+        "correctOrder": ["ich", "arbeite", "heute"]
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Как сказать: Компания",
+        "options": ["die Firma", "die Schule", "das Krankenhaus"],
+        "answer": "die Firma"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Соберите предложение",
+        "words": ["lange", "arbeite", "heute", "ich"],
+        "correctOrder": ["ich", "arbeite", "heute", "lange"]
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "Впишите пропуск(Работать): Ich ___ heute.",
+        "correctAnswer": "arbeite"
+      },
+
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Ich arbeite bei einer Firma",
+        "answer": "Ich arbeite bei einer Firma"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "Как сказать: Я ищу работу",
+        "options": ["Ich suche Arbeit", "Ich finde Arbeit", "Ich arbeite suchen"],
+        "answer": "Ich suche Arbeit"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "Впишите пропуск(suchen): Ich ___ Arbeit.",
+        "correctAnswer": "suche"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите предложение",
+        "words": ["Zeit", "ich", "keine", "habe"],
+        "correctOrder": ["ich", "habe", "keine", "Zeit"]
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "Как сказать: Сегодня",
+        "options": ["heute", "morgen", "gestern"],
+        "answer": "heute"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "Соберите предложение",
+        "words": ["ich", "kann", "heute", "nicht", "arbeiten"],
+        "correctOrder": ["nicht" ,"arbeiten", "heute" ,"ich", "kann"]
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Ich habe heute keine Zeit",
+        "answer": "Ich habe heute keine Zeit"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Ich arbeite heute bei einer Firma",
+        "answer": "Ich arbeite heute bei einer Firma"
+      }
+    ]
+  },
+
+
+  {
+    "questId": "jobUniversal2",
+    "title": "Место работы: Дома и в Офисе",
+    "progress": "0/15",
+    "description": "Фразы о месте работы: офис и дом.",
+    "conditions": {
+      "goal": "Выучить слова и фразы про место работы",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Как сказать: Офис",
+        "options": [
+          "das Büro",
+          "das Haus",
+          "die Arbeit"
+        ],
+        "answer": "das Büro"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Ich arbeite im Büro",
+        "answer": "Ich arbeite im Büro",
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "Как сказать: дома",
+        "options": [
+          "zu Hause",
+          "im Büro",
+          "in der Firma"
+        ],
+        "answer": "zu Hause"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "Соберите предложение: Я работаю дома",
+        "words": [
+          "arbeite",
+          "ich",
+          "zu",
+          "Hause"
+        ],
+        "correctOrder": [
+          "ich",
+          "arbeite",
+          "zu",
+          "Hause"
+        ]
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Как сказать: Я работаю дома",
+        "options": [
+          "Ich arbeite zu Hause",
+          "Ich zu Hause arbeite",
+          "Ich arbeite Hause"
+        ],
+        "answer": "Ich arbeite zu Hause"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "Впишите пропуск: Ich arbeite ___ Hause",
+        "correctAnswer": "zu"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Соберите фразу",
+        "words": [
+          "im",
+          "Büro",
+          "arbeite",
+          "ich",
+          "zu"
+        ],
+        "correctOrder": [
+          "ich",
+          "arbeite",
+          "im",
+          "Büro"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Ich arbeite nicht zu Hause",
+        "answer": "Ich arbeite nicht zu Hause"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "Как сказать: Я работаю не в офисе",
+        "options": [
+          "Ich arbeite nicht im Büro",
+          "Ich nicht arbeite Büro",
+          "Ich arbeite Büro nicht"
+        ],
+        "answer": "Ich arbeite nicht im Büro"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "Впишите слово: Ich arbeite ___ Büro.",
+        "correctAnswer": "im"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите предложение",
+        "words": [
+          "arbeite",
+          "ich",
+          "heute",
+          "im",
+          "Büro",
+          "zu"
+        ],
+        "correctOrder": [
+          "ich",
+          "arbeite",
+          "heute",
+          "im",
+          "Büro"
+        ]
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "Как сказать: сегодня",
+        "options": [
+          "heute",
+          "morgen",
+          "gestern"
+        ],
+        "answer": "heute"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "Соберите предложение: Сегодня я работаю дома",
+        "words": [
+          "arbeite",
+          "ich",
+          "heute",
+          "zu",
+          "Hause",
+          "aber"
+        ],
+        "correctOrder": [
+          "heute",
+          "arbeite",
+          "ich",
+          "zu",
+          "Hause"
+        ]
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Heute arbeite ich zu Hause",
+        "answer": "Heute arbeite ich zu Hause"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Heute arbeite ich im Büro und morgen zu Hause",
+        "answer": "Heute arbeite ich im Büro und morgen zu Hause"
+      }
+    ]
+  },
+  {
+    "questId": "jobUniversal3",
+    "title": "Коллеги и команда",
+    "progress": "0/15",
+    "description": "Учимся говорить о коллегах и команде.",
+    "conditions": {
+      "goal": "Выучить слова и фразы про коллег",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Как сказать: коллега (м.)",
+        "options": [
+          "der Kollege",
+          "der Kunde",
+          "der Chef"
+        ],
+        "answer": "der Kollege"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Das ist mein Kollege",
+        "answer": "Das ist mein Kollege"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "Как сказать: коллега (ж.)",
+        "options": [
+          "die Kollegin",
+          "die Chefin",
+          "die Kundin"
+        ],
+        "answer": "die Kollegin"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "Соберите предложение",
+        "words": ["Kollegin", "meine", "ist", "das"],
+        "correctOrder": ["das", "ist", "meine", "Kollegin"]
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Как сказать: команда",
+        "options": [
+          "das Team",
+          "das Büro",
+          "der Beruf"
+        ],
+        "answer": "das Team"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "Выберите правильный вариант",
+        "options": [
+          "Ich arbeite im Team",
+          "Ich arbeite bei Team",
+          "Ich arbeite in Team"
+        ],
+        "answer": "Ich arbeite im Team"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Соберите фразу",
+        "words": [
+          "ich",
+          "im",
+          "arbeite",
+          "Team"
+        ],
+        "correctOrder": [
+          "ich",
+          "arbeite",
+          "im",
+          "Team"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Ich arbeite im Team",
+        "answer": "Ich arbeite im Team"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "Как сказать: Коллега помогает мне",
+        "options": [
+          "Der Kollege hilft mir",
+          "Der Kollege helfen mir",
+          "Der hilft Kollege mir"
+        ],
+        "answer": "Der Kollege hilft mir"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Выберите правильный вариант",
+        "options": [
+          "Meine Kollegin hilft heute",
+          "Meine Kollegin helfen heute",
+          "Meine hilft Kollegin heute"
+        ],
+        "answer": "Meine Kollegin hilft heute"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите предложение",
+        "words": [
+          "heute",
+          "mir",
+          "hilft",
+          "meine",
+          "Kollegin"
+        ],
+        "correctOrder": [
+          "meine",
+          "Kollegin",
+          "hilft",
+          "mir",
+          "heute"
+        ]
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "Как сказать: начальник (м.)",
+        "options": [
+          "der Chef",
+          "der Kunde",
+          "der Kollege"
+        ],
+        "answer": "der Chef"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "Соберите предложение: Начальник здесь",
+        "words": [
+          "Chef",
+          "der",
+          "ist",
+          "hier",
+          "nicht"
+        ],
+        "correctOrder": [
+          "der",
+          "Chef",
+          "ist",
+          "hier"
+        ]
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Der Chef ist heute nicht da",
+        "answer": "Der Chef ist heute nicht da"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Ich arbeite im Team und meine Kollegin hilft mir",
+        "answer": "Ich arbeite im Team und meine Kollegin hilft mir"
+      }
+    ]
+  },
+
+  {
+    "questId": "jobUniversal4",
+    "title": "Рабочее время и график",
+    "progress": "0/15",
+    "description": "Фразы о времени, сменах и расписании.",
+    "conditions": {
+      "goal": "Выучить слова и фразы про рабочее время",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Как сказать: время",
+        "options": [
+          "die Zeit",
+          "die Arbeit",
+          "der Beruf"
+        ],
+        "answer": "die Zeit"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Ich habe keine Zeit",
+        "answer": "Ich habe keine Zeit"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "Как сказать: начало",
+        "options": [
+          "der Anfang",
+          "das Ende",
+          "die Pause"
+        ],
+        "answer": "der Anfang"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "Соберите предложение",
+        "words": ["beginne", "ich", "um", "acht"],
+        "correctOrder": ["ich", "beginne", "um", "acht"]
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Как сказать: перерыв",
+        "options": [
+          "die Pause",
+          "die Zeit",
+          "die Arbeit"
+        ],
+        "answer": "die Pause"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Соберите фразу",
+        "words": ["mache", "eine", "Pause", "ich"],
+        "correctOrder": ["ich", "mache", "eine", "Pause"]
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Ich beginne um acht Uhr",
+        "answer": "Ich beginne um acht Uhr",
+        "accept": [
+          "Ich beginne um acht Uhr",
+          "Ich beginne um 8 Uhr"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Ich mache eine Pause",
+        "answer": "Ich mache eine Pause"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "Как сказать: Я начинаю в 8",
+        "options": [
+          "Ich beginne um acht",
+          "Ich um acht beginne",
+          "Ich beginne acht"
+        ],
+        "answer": "Ich beginne um acht"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "Впишите слово: Ich beginne ___ acht.",
+        "correctAnswer": "um"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите предложение",
+        "words": [
+          "ende",
+          "ich",
+          "um",
+          "sechzehn",
+          "Pause"
+        ],
+        "correctOrder": [
+          "ich",
+          "ende",
+          "um",
+          "sechzehn"
+        ]
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "Как сказать: заканчивать (рабочий день)",
+        "options": [
+          "enden",
+          "beginnen",
+          "arbeiten"
+        ],
+        "answer": "enden"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "Соберите предложение: Я заканчиваю в 16",
+        "words": [
+          "ende",
+          "ich",
+          "um",
+          "sechzehn",
+          "heute"
+        ],
+        "correctOrder": [
+          "ich",
+          "ende",
+          "um",
+          "sechzehn"
+        ]
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Ich beginne um acht und ende um sechzehn",
+        "answer": "Ich beginne um acht und ende um sechzehn",
+        "accept": [
+          "Ich beginne um acht und ende um sechzehn",
+          "Ich beginne um 8 und ende um 16"
+        ]
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Ich mache eine Pause und arbeite dann weiter",
+        "answer": "Ich mache eine Pause und arbeite dann weiter"
+      }
+    ]
+  },
+  {
+    "questId": "jobUniversal5",
+    "title": "Обязанности и задачи",
+    "progress": "0/15",
+    "description": "Учим слова: задача, делать, помогать, объяснять.",
+    "conditions": {
+      "goal": "Выучить базовые слова про обязанности",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Как сказать: задача",
+        "options": [
+          "die Aufgabe",
+          "die Pause",
+          "die Zeit"
+        ],
+        "answer": "die Aufgabe"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Das ist meine Aufgabe",
+        "answer": "Das ist meine Aufgabe"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "Как сказать: делать",
+        "options": [
+          "machen",
+          "arbeiten",
+          "suchen"
+        ],
+        "answer": "machen"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "Соберите предложение",
+        "words": [
+          "mache",
+          "ich",
+          "Aufgabe",
+          "meine"
+        ],
+        "correctOrder": [
+          "ich",
+          "mache",
+          "meine",
+          "Aufgabe"
+        ]
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Как сказать: помогать",
+        "options": [
+          "helfen",
+          "gehen",
+          "enden"
+        ],
+        "answer": "helfen"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "Впишите правильно(helfen): Ich ___ dir.",
+        "correctAnswer": "helfe"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Соберите фразу",
+        "words": [
+          "kann",
+          "ich",
+          "dir",
+          "helfen",
+          "Aufgabe"
+        ],
+        "correctOrder": [
+          "ich",
+          "kann",
+          "dir",
+          "helfen"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Ich kann dir helfen",
+        "answer": "Ich kann dir helfen"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "Как сказать: Я делаю это сейчас",
+        "options": [
+          "Ich mache das jetzt",
+          "Ich jetzt mache das",
+          "Ich mache jetzt das"
+        ],
+        "answer": "Ich mache das jetzt"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "Впишите слово(сейчас): Ich mache das ___.",
+        "correctAnswer": "jetzt"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите предложение",
+        "words": [
+          "habe",
+          "ich",
+          "eine",
+          "Aufgabe",
+          "heute"
+        ],
+        "correctOrder": [
+          "ich",
+          "habe",
+          "heute",
+          "eine",
+          "Aufgabe"
+        ]
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "Как сказать: объяснять",
+        "options": [
+          "erklären",
+          "arbeiten",
+          "suchen"
+        ],
+        "answer": "erklären"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "Соберите предложение: Можете объяснить?",
+        "words": [
+          "können",
+          "Sie",
+          "das",
+          "bitte",
+          "erklären"
+        ],
+        "correctOrder": [
+          "können",
+          "Sie",
+          "das",
+          "bitte",
+          "erklären"
+        ]
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Können Sie das bitte erklären",
+        "answer": "Können Sie das bitte erklären"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Ich habe heute eine Aufgabe und ich mache das jetzt",
+        "answer": "Ich habe heute eine Aufgabe und ich mache das jetzt"
+      }
+    ]
+  },
+  {
+    "questId": "jobUniversal6",
+    "title": "Инструменты и документы",
+    "progress": "0/15",
+    "description": "Базовые слова: компьютер, телефон, документ, письмо.",
+    "conditions": {
+      "goal": "Выучить слова и фразы про инструменты и документы",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Как сказать: компьютер",
+        "options": [
+          "der Computer",
+          "der Drucker",
+          "das Papier"
+        ],
+        "answer": "der Computer"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Ich arbeite am Computer",
+        "answer": "Ich arbeite am Computer"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "Как сказать: телефон",
+        "options": [
+          "das Telefon",
+          "der Termin",
+          "die Firma"
+        ],
+        "answer": "das Telefon"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "Соберите предложение",
+        "words": [
+          "habe",
+          "ich",
+          "ein",
+          "Telefon",
+          "Zeit"
+        ],
+        "correctOrder": [
+          "ich",
+          "habe",
+          "ein",
+          "Telefon"
+        ]
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Как сказать: документ",
+        "options": [
+          "das Dokument",
+          "das Team",
+          "die Pause"
+        ],
+        "answer": "das Dokument"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "Впишите слово: das ___",
+        "correctAnswer": "Dokument"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Соберите фразу",
+        "words": [
+          "habe",
+          "ich",
+          "ein",
+          "Dokument",
+          "hier"
+        ],
+        "correctOrder": [
+          "ich",
+          "habe",
+          "ein",
+          "Dokument"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Ich habe ein Dokument",
+        "answer": "Ich habe ein Dokument"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "Как сказать: письмо (email)",
+        "options": [
+          "die E-Mail",
+          "die Aufgabe",
+          "der Beruf"
+        ],
+        "answer": "die E-Mail"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "Впишите слово: Ich schreibe eine ___ .",
+        "correctAnswer": "E-Mail"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите предложение",
+        "words": [
+          "schreibe",
+          "ich",
+          "eine",
+          "E-Mail",
+          "heute"
+        ],
+        "correctOrder": [
+          "ich",
+          "schreibe",
+          "heute",
+          "eine",
+          "E-Mail"
+        ]
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "Как сказать: принтер",
+        "options": [
+          "der Drucker",
+          "der Computer",
+          "die Zeit"
+        ],
+        "answer": "der Drucker"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "Соберите предложение: Принтер не работает",
+        "words": [
+          "Drucker",
+          "der",
+          "funktioniert",
+          "nicht",
+          "heute"
+        ],
+        "correctOrder": [
+          "der",
+          "Drucker",
+          "funktioniert",
+          "nicht"
+        ]
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Der Drucker funktioniert nicht",
+        "answer": "Der Drucker funktioniert nicht"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Ich arbeite am Computer und schreibe eine E-Mail",
+        "answer": "Ich arbeite am Computer und schreibe eine E-Mail"
+      }
+    ]
+  },
+  {
+    "questId": "jobUniversal7",
+    "title": "Встречи и договорённости",
+    "progress": "0/15",
+    "description": "Фразы про встречи, время и договорённости.",
+    "conditions": {
+      "goal": "Выучить слова и фразы про встречи",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Как сказать: встреча",
+        "options": [
+          "das Meeting",
+          "die Pause",
+          "das Team"
+        ],
+        "answer": "das Meeting"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Wir haben ein Meeting",
+        "answer": "Wir haben ein Meeting"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "Как сказать: термин/встреча по времени",
+        "options": [
+          "der Termin",
+          "der Beruf",
+          "das Büro"
+        ],
+        "answer": "der Termin"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "Соберите предложение",
+        "words": [
+          "habe",
+          "ich",
+          "einen",
+          "Termin",
+          "heute"
+        ],
+        "correctOrder": [
+          "ich",
+          "habe",
+          "heute",
+          "einen",
+          "Termin"
+        ]
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Как сказать: завтра",
+        "options": [
+          "morgen",
+          "heute",
+          "gestern"
+        ],
+        "answer": "morgen"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "Впишите слово: Wir sehen uns ___.",
+        "correctAnswer": "morgen"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Соберите фразу",
+        "words": [
+          "um",
+          "zehn",
+          "Meeting",
+          "ist",
+          "das"
+        ],
+        "correctOrder": [
+          "das",
+          "Meeting",
+          "ist",
+          "um",
+          "zehn"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Das Meeting ist um zehn",
+        "answer": "Das Meeting ist um zehn"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "Как сказать: У меня нет времени",
+        "options": [
+          "Ich habe keine Zeit",
+          "Ich habe Zeit nicht",
+          "Ich keine Zeit habe"
+        ],
+        "answer": "Ich habe keine Zeit"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "Впишите слово: Ich habe ___ Zeit.",
+        "correctAnswer": "keine"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите предложение",
+        "words": [
+          "können",
+          "wir",
+          "das",
+          "morgen",
+          "machen"
+        ],
+        "correctOrder": [
+          "können",
+          "wir",
+          "das",
+          "morgen",
+          "machen"
+        ]
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "Как сказать: переносить (встречу)",
+        "options": [
+          "verschieben",
+          "beginnen",
+          "helfen"
+        ],
+        "answer": "verschieben"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "Соберите предложение: Можем перенести встречу?",
+        "words": [
+          "können",
+          "wir",
+          "das",
+          "Meeting",
+          "verschieben"
+        ],
+        "correctOrder": [
+          "können",
+          "wir",
+          "das",
+          "Meeting",
+          "verschieben"
+        ]
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Können wir das Meeting verschieben",
+        "answer": "Können wir das Meeting verschieben"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Ich habe heute einen Termin und morgen ein Meeting",
+        "answer": "Ich habe heute einen Termin und morgen ein Meeting"
+      }
+    ]
+  },
+  {
+    "questId": "jobUniversal8",
+    "title": "Клиенты и общение",
+    "progress": "0/15",
+    "description": "Фразы для общения с клиентами и людьми.",
+    "conditions": {
+      "goal": "Выучить слова и фразы для общения",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Как сказать: клиент (м.)",
+        "options": [
+          "der Kunde",
+          "der Kollege",
+          "der Chef"
+        ],
+        "answer": "der Kunde"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Der Kunde wartet",
+        "answer": "Der Kunde wartet"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "Как сказать: клиентка",
+        "options": [
+          "die Kundin",
+          "die Kollegin",
+          "die Chefin"
+        ],
+        "answer": "die Kundin"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "Соберите предложение",
+        "words": [
+          "ist",
+          "die",
+          "Kundin",
+          "hier",
+          "heute"
+        ],
+        "correctOrder": [
+          "die",
+          "Kundin",
+          "ist",
+          "heute",
+          "hier"
+        ]
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Как сказать: говорить",
+        "options": [
+          "sprechen",
+          "machen",
+          "enden"
+        ],
+        "answer": "sprechen"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "Впишите слово: Ich ___ mit dem Kunden.",
+        "correctAnswer": "spreche"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Соберите фразу",
+        "words": [
+          "kann",
+          "ich",
+          "Ihnen",
+          "helfen",
+          "bitte"
+        ],
+        "correctOrder": [
+          "kann",
+          "ich",
+          "Ihnen",
+          "helfen"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Kann ich Ihnen helfen",
+        "answer": "Kann ich Ihnen helfen"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "Как сказать: Подождите, пожалуйста",
+        "options": [
+          "Warten Sie bitte",
+          "Bitte warten Sie",
+          "Sie warten bitte"
+        ],
+        "answer": "Warten Sie bitte"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "Впишите слово: Warten Sie ___ .",
+        "correctAnswer": "bitte"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите предложение",
+        "words": [
+          "ich",
+          "komme",
+          "gleich",
+          "zurück",
+          "bitte"
+        ],
+        "correctOrder": [
+          "ich",
+          "komme",
+          "gleich",
+          "zurück"
+        ]
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "Как сказать: снова/обратно",
+        "options": [
+          "zurück",
+          "heute",
+          "morgen"
+        ],
+        "answer": "zurück"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "Соберите предложение: Я сейчас вернусь",
+        "words": [
+          "komme",
+          "ich",
+          "gleich",
+          "zurück",
+          "Kunde"
+        ],
+        "correctOrder": [
+          "ich",
+          "komme",
+          "gleich",
+          "zurück"
+        ]
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Ich komme gleich zurück",
+        "answer": "Ich komme gleich zurück"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Der Kunde wartet und ich komme gleich zurück",
+        "answer": "Der Kunde wartet und ich komme gleich zurück"
+      }
+    ]
+  },
+  {
+    "questId": "jobUniversal9",
+    "title": "Проблемы и решения на работе",
+    "progress": "0/15",
+    "description": "Фразы: проблема, нужно, можно, не работает.",
+    "conditions": {
+      "goal": "Выучить базовые фразы для проблем на работе",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Как сказать: проблема",
+        "options": [
+          "das Problem",
+          "das Team",
+          "das Meeting"
+        ],
+        "answer": "das Problem"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Ich habe ein Problem",
+        "answer": "Ich habe ein Problem"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "Как сказать: не работает",
+        "options": [
+          "funktioniert nicht",
+          "arbeitet nicht",
+          "macht nicht"
+        ],
+        "answer": "funktioniert nicht"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "Соберите предложение",
+        "words": [
+          "Computer",
+          "der",
+          "funktioniert",
+          "nicht",
+          "heute"
+        ],
+        "correctOrder": [
+          "der",
+          "Computer",
+          "funktioniert",
+          "nicht"
+        ]
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Как сказать: нужно",
+        "options": [
+          "müssen",
+          "können",
+          "wollen"
+        ],
+        "answer": "müssen"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "Впишите слово: Ich ___ jetzt arbeiten.",
+        "correctAnswer": "muss"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Соберите фразу",
+        "words": [
+          "kann",
+          "ich",
+          "das",
+          "später",
+          "machen"
+        ],
+        "correctOrder": [
+          "ich",
+          "kann",
+          "das",
+          "später",
+          "machen"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Ich kann das später machen",
+        "answer": "Ich kann das später machen"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "Как сказать: Я не могу сейчас",
+        "options": [
+          "Ich kann jetzt nicht",
+          "Ich nicht kann jetzt",
+          "Ich kann nicht jetzt"
+        ],
+        "answer": "Ich kann jetzt nicht"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "Впишите слово: Ich kann ___ nicht.",
+        "correctAnswer": "jetzt"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите предложение",
+        "words": [
+          "können",
+          "Sie",
+          "mir",
+          "bitte",
+          "helfen"
+        ],
+        "correctOrder": [
+          "können",
+          "Sie",
+          "mir",
+          "bitte",
+          "helfen"
+        ]
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "Как сказать: срочно",
+        "options": [
+          "dringend",
+          "langsam",
+          "frei"
+        ],
+        "answer": "dringend"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "Соберите предложение: Это срочно",
+        "words": [
+          "das",
+          "ist",
+          "dringend",
+          "heute",
+          "Problem"
+        ],
+        "correctOrder": [
+          "das",
+          "ist",
+          "dringend"
+        ]
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Das ist dringend",
+        "answer": "Das ist dringend"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Ich habe ein Problem und der Computer funktioniert nicht",
+        "answer": "Ich habe ein Problem und der Computer funktioniert nicht"
+      }
+    ]
+  },
+  {
+    "questId": "jobUniversal10",
+    "title": "Вежливые фразы на работе",
+    "progress": "0/15",
+    "description": "Самые нужные вежливые фразы для работы.",
+    "conditions": {
+      "goal": "Выучить вежливые фразы на работе",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Как сказать: пожалуйста",
+        "options": [
+          "bitte",
+          "danke",
+          "hallo"
+        ],
+        "answer": "bitte"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Danke schön",
+        "answer": "Danke schön"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "Как сказать: спасибо",
+        "options": [
+          "danke",
+          "bitte",
+          "tschüss"
+        ],
+        "answer": "danke"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "Соберите фразу",
+        "words": [
+          "Vielen",
+          "Dank",
+          "bitte",
+          "Team"
+        ],
+        "correctOrder": [
+          "Vielen",
+          "Dank"
+        ]
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Как сказать: извините",
+        "options": [
+          "Entschuldigung",
+          "Guten Morgen",
+          "Bitte"
+        ],
+        "answer": "Entschuldigung"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "Впишите слово: ___, ich habe eine Frage.",
+        "correctAnswer": "Entschuldigung"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Соберите предложение",
+        "words": [
+          "können",
+          "Sie",
+          "bitte",
+          "helfen",
+          "mir"
+        ],
+        "correctOrder": [
+          "können",
+          "Sie",
+          "mir",
+          "bitte",
+          "helfen"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Können Sie mir bitte helfen",
+        "answer": "Können Sie mir bitte helfen"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "Как сказать: Я не понимаю",
+        "options": [
+          "Ich verstehe nicht",
+          "Ich nicht verstehe",
+          "Ich verstehe kein"
+        ],
+        "answer": "Ich verstehe nicht"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "Впишите слово: Ich ___ nicht.",
+        "correctAnswer": "verstehe"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите фразу",
+        "words": [
+          "noch",
+          "einmal",
+          "bitte",
+          "können",
+          "Sie"
+        ],
+        "correctOrder": [
+          "noch",
+          "einmal",
+          "bitte"
+        ]
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "Как сказать: повторите, пожалуйста",
+        "options": [
+          "Noch einmal, bitte",
+          "Bitte einmal noch",
+          "Einmal bitte noch"
+        ],
+        "answer": "Noch einmal, bitte"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "Соберите предложение: Можете повторить?",
+        "words": [
+          "können",
+          "Sie",
+          "das",
+          "bitte",
+          "wiederholen"
+        ],
+        "correctOrder": [
+          "können",
+          "Sie",
+          "das",
+          "bitte",
+          "wiederholen"
+        ]
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Können Sie das bitte wiederholen",
+        "answer": "Können Sie das bitte wiederholen"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Entschuldigung, ich verstehe nicht. Noch einmal, bitte",
+        "answer": "Entschuldigung, ich verstehe nicht. Noch einmal, bitte"
+      }
+    ]
+  },
+  {
+    "questId": "jobUniversal11",
+    "title": "Рабочий день: действия и рутина",
+    "progress": "0/15",
+    "description": "Фразы о том, что мы делаем в течение рабочего дня.",
+    "conditions": {
+      "goal": "Выучить слова и фразы про рабочий день",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Как сказать: приходить",
+        "options": [
+          "kommen",
+          "gehen",
+          "machen"
+        ],
+        "answer": "kommen"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Ich komme um acht",
+        "answer": "Ich komme um acht"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "Как сказать: уходить",
+        "options": [
+          "gehen",
+          "kommen",
+          "arbeiten"
+        ],
+        "answer": "gehen"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "Соберите предложение",
+        "words": [
+          "gehe",
+          "ich",
+          "nach",
+          "Hause",
+          "Büro"
+        ],
+        "correctOrder": [
+          "ich",
+          "gehe",
+          "nach",
+          "Hause"
+        ]
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Как сказать: начинать (рабочий день)",
+        "options": [
+          "beginnen",
+          "enden",
+          "warten"
+        ],
+        "answer": "beginnen"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "Впишите слово: Ich ___ um neun.",
+        "correctAnswer": "beginne"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Соберите фразу",
+        "words": [
+          "mache",
+          "ich",
+          "eine",
+          "Pause",
+          "Termin"
+        ],
+        "correctOrder": [
+          "ich",
+          "mache",
+          "eine",
+          "Pause"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Ich mache eine Pause",
+        "answer": "Ich mache eine Pause"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "Как сказать: Я проверяю E-Mail",
+        "options": [
+          "Ich prüfe E-Mails",
+          "Ich mache E-Mail",
+          "Ich arbeite E-Mail"
+        ],
+        "answer": "Ich prüfe E-Mails"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "Впишите слово: Ich ___ E-Mails.",
+        "correctAnswer": "prüfe"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите предложение",
+        "words": [
+          "schreibe",
+          "ich",
+          "eine",
+          "E-Mail",
+          "heute"
+        ],
+        "correctOrder": [
+          "ich",
+          "schreibe",
+          "heute",
+          "eine",
+          "E-Mail"
+        ]
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "Как сказать: обед",
+        "options": [
+          "das Mittagessen",
+          "das Meeting",
+          "die Aufgabe"
+        ],
+        "answer": "das Mittagessen"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "Соберите предложение: Я ем обед",
+        "words": [
+          "esse",
+          "ich",
+          "Mittagessen",
+          "im",
+          "Büro",
+          "nicht"
+        ],
+        "correctOrder": [
+          "ich",
+          "esse",
+          "Mittagessen"
+        ]
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Ich esse Mittagessen",
+        "answer": "Ich esse Mittagessen"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Ich komme um acht, beginne um neun und gehe nach Hause",
+        "answer": "Ich komme um acht, beginne um neun und gehe nach Hause"
+      }
+    ]
+  },
+  {
+    "questId": "jobUniversal12",
+    "title": "Звонки и сообщения на работе",
+    "progress": "0/15",
+    "description": "Базовые фразы для телефонных звонков и сообщений.",
+    "conditions": {
+      "goal": "Выучить слова и фразы про звонки и сообщения",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Как сказать: звонить",
+        "options": [
+          "anrufen",
+          "schreiben",
+          "arbeiten"
+        ],
+        "answer": "anrufen"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Ich rufe dich an",
+        "answer": "Ich rufe dich an"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "Как сказать: телефонный звонок",
+        "options": [
+          "der Anruf",
+          "das Meeting",
+          "die Pause"
+        ],
+        "answer": "der Anruf"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "Соберите фразу",
+        "words": [
+          "ein",
+          "Anruf",
+          "ist",
+          "da",
+          "Team"
+        ],
+        "correctOrder": [
+          "ein",
+          "Anruf",
+          "ist",
+          "da"
+        ]
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Как сказать: сообщение",
+        "options": [
+          "die Nachricht",
+          "die Aufgabe",
+          "die Firma"
+        ],
+        "answer": "die Nachricht"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "Впишите слово: Ich schreibe eine ___ .",
+        "correctAnswer": "Nachricht"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Соберите предложение",
+        "words": [
+          "kann",
+          "ich",
+          "Sie",
+          "später",
+          "anrufen"
+        ],
+        "correctOrder": [
+          "kann",
+          "ich",
+          "Sie",
+          "später",
+          "anrufen"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Kann ich Sie später anrufen",
+        "answer": "Kann ich Sie später anrufen"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "Как сказать: Я сейчас не могу говорить",
+        "options": [
+          "Ich kann jetzt nicht sprechen",
+          "Ich jetzt nicht kann sprechen",
+          "Ich kann nicht jetzt sprechen"
+        ],
+        "answer": "Ich kann jetzt nicht sprechen"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "Впишите слово: Ich kann ___ nicht sprechen.",
+        "correctAnswer": "jetzt"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите предложение",
+        "words": [
+          "bitte",
+          "lassen",
+          "Sie",
+          "eine",
+          "Nachricht",
+          "da"
+        ],
+        "correctOrder": [
+          "bitte",
+          "lassen",
+          "Sie",
+          "eine",
+          "Nachricht",
+          "da"
+        ]
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "Как сказать: повторите, пожалуйста",
+        "options": [
+          "Noch einmal, bitte",
+          "Warten Sie bitte",
+          "Danke schön"
+        ],
+        "answer": "Noch einmal, bitte"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "Соберите предложение: Повторите, пожалуйста",
+        "words": [
+          "noch",
+          "einmal",
+          "bitte",
+          "können",
+          "Sie"
+        ],
+        "correctOrder": [
+          "noch",
+          "einmal",
+          "bitte"
+        ]
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Bitte lassen Sie eine Nachricht da",
+        "answer": "Bitte lassen Sie eine Nachricht da"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Ich kann jetzt nicht sprechen. Ich rufe Sie später an",
+        "answer": "Ich kann jetzt nicht sprechen. Ich rufe Sie später an"
+      }
+    ]
+  },
+  {
+    "questId": "jobUniversal13",
+    "title": "Зарплата и договор",
+    "progress": "0/15",
+    "description": "Базовые слова про зарплату и договор без сложной лексики.",
+    "conditions": {
+      "goal": "Выучить простые слова и фразы про зарплату и договор",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Как сказать: зарплата",
+        "options": [
+          "das Gehalt",
+          "die Zeit",
+          "die Firma"
+        ],
+        "answer": "das Gehalt"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Ich bekomme Gehalt",
+        "answer": "Ich bekomme Gehalt"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "Как сказать: деньги",
+        "options": [
+          "das Geld",
+          "das Team",
+          "das Büro"
+        ],
+        "answer": "das Geld"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "Соберите предложение",
+        "words": [
+          "bekomme",
+          "ich",
+          "Geld",
+          "heute",
+          "nicht"
+        ],
+        "correctOrder": [
+          "ich",
+          "bekomme",
+          "Geld"
+        ]
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Как сказать: договор",
+        "options": [
+          "der Vertrag",
+          "der Termin",
+          "der Beruf"
+        ],
+        "answer": "der Vertrag"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "Впишите слово: der ___",
+        "correctAnswer": "Vertrag"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Соберите фразу",
+        "words": [
+          "habe",
+          "ich",
+          "einen",
+          "Vertrag",
+          "hier"
+        ],
+        "correctOrder": [
+          "ich",
+          "habe",
+          "einen",
+          "Vertrag"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Ich habe einen Vertrag",
+        "answer": "Ich habe einen Vertrag"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "Как сказать: Я подписываю договор",
+        "options": [
+          "Ich unterschreibe den Vertrag",
+          "Ich schreibe den Vertrag",
+          "Ich mache den Vertrag"
+        ],
+        "answer": "Ich unterschreibe den Vertrag"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "Впишите слово: Ich ___ den Vertrag.",
+        "correctAnswer": "unterschreibe"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите предложение",
+        "words": [
+          "wann",
+          "bekomme",
+          "ich",
+          "mein",
+          "Gehalt"
+        ],
+        "correctOrder": [
+          "wann",
+          "bekomme",
+          "ich",
+          "mein",
+          "Gehalt"
+        ]
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "Как сказать: получать",
+        "options": [
+          "bekommen",
+          "beginnen",
+          "helfen"
+        ],
+        "answer": "bekommen"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "Соберите предложение: Я получаю зарплату",
+        "words": [
+          "bekomme",
+          "ich",
+          "mein",
+          "Gehalt",
+          "heute"
+        ],
+        "correctOrder": [
+          "ich",
+          "bekomme",
+          "mein",
+          "Gehalt"
+        ]
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Wann bekomme ich mein Gehalt",
+        "answer": "Wann bekomme ich mein Gehalt"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Ich unterschreibe den Vertrag und bekomme Gehalt",
+        "answer": "Ich unterschreibe den Vertrag und bekomme Gehalt"
+      }
+    ]
+  },
+  {
+    "questId": "jobUniversal14",
+    "title": "Отсутствие: отпуск и больничный",
+    "progress": "0/15",
+    "description": "Полезные фразы: отпуск, выходной, болен, сегодня не могу прийти (A2 max).",
+    "conditions": {
+      "goal": "Выучить фразы про отсутствие на работе",
+      "minCorrect": 15,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Как сказать: отпуск",
+        "options": [
+          "der Urlaub",
+          "der Vertrag",
+          "das Gehalt"
+        ],
+        "answer": "der Urlaub"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Ich habe Urlaub",
+        "answer": "Ich habe Urlaub"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "Как сказать: выходной (свободный)",
+        "options": [
+          "frei",
+          "dringend",
+          "neu"
+        ],
+        "answer": "frei"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "Соберите предложение",
+        "words": [
+          "bin",
+          "ich",
+          "heute",
+          "frei",
+          "Büro"
+        ],
+        "correctOrder": [
+          "ich",
+          "bin",
+          "heute",
+          "frei"
+        ]
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Как сказать: больной",
+        "options": [
+          "krank",
+          "müde",
+          "wichtig"
+        ],
+        "answer": "krank"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "Впишите слово: Ich bin ___ .",
+        "correctAnswer": "krank"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Соберите фразу",
+        "words": [
+          "kann",
+          "ich",
+          "heute",
+          "nicht",
+          "kommen"
+        ],
+        "correctOrder": [
+          "ich",
+          "kann",
+          "heute",
+          "nicht",
+          "kommen"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Ich kann heute nicht kommen",
+        "answer": "Ich kann heute nicht kommen"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "Как сказать: Мне нужен выходной",
+        "options": [
+          "Ich brauche einen freien Tag",
+          "Ich brauche frei Tag",
+          "Ich habe freien Tag brauchen"
+        ],
+        "answer": "Ich brauche einen freien Tag"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "Впишите слово: Ich ___ einen freien Tag.",
+        "correctAnswer": "brauche"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите предложение",
+        "words": [
+          "ich",
+          "bin",
+          "krank",
+          "und",
+          "bleibe",
+          "zu",
+          "Hause"
+        ],
+        "correctOrder": [
+          "ich",
+          "bin",
+          "krank",
+          "und",
+          "bleibe",
+          "zu",
+          "Hause"
+        ]
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "Как сказать: оставаться",
+        "options": [
+          "bleiben",
+          "gehen",
+          "machen"
+        ],
+        "answer": "bleiben"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "Соберите предложение: Я в отпуске",
+        "words": [
+          "bin",
+          "ich",
+          "im",
+          "Urlaub",
+          "heute"
+        ],
+        "correctOrder": [
+          "ich",
+          "bin",
+          "im",
+          "Urlaub"
+        ]
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Ich bin krank und bleibe zu Hause",
+        "answer": "Ich bin krank und bleibe zu Hause"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Ich habe Urlaub und bin heute frei",
+        "answer": "Ich habe Urlaub und bin heute frei"
       }
     ]
   }
