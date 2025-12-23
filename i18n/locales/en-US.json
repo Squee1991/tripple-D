@@ -3911,14 +3911,15 @@
     "further": "Next"
   },
   "idiomFirstCategory": {
-    "title": "Everyday Expressions",
+    "title": "Everyday expressions",
     "firstMeaning": "I don't understand anything",
     "secondMeaning": "I don't care",
-    "thirdMeaning": "Everything is fine / okay",
-    "fourthMeaning": "Hit the nail on the head",
-    "fifthMeaning": "Get up on the wrong side of the bed",
-    "SixthMeaning": "Hit the nail on the head"
+    "thirdMeaning": "Not notice anything",
+    "fourthMeaning": "Everything is fine / everything is OK",
+    "fifthMeaning": "Hit the nail on the head",
+    "SixthMeaning": "Get up on the wrong side of the bed"
   },
+
   "idiomSecondCategory": {
     "title": "Work and Study",
     "firstMeaning": "Work strictly by the book (no initiative)",

@@ -1,6 +1,7 @@
 [
   {
     "questId": "one",
+    "aliases": ["menschen-a1-greetings"],
     "title": "eastPlainFirstQuests.title",
     "progress": "0/14",
     "description": "eastPlainFirstQuests.description",
@@ -196,6 +197,7 @@
   },
   {
     "questId": "two",
+    "aliases": ["menschen-a1-greetings2"],
     "title": "eastPlainSecondQuests.title",
     "progress": "0/13",
     "description": "eastPlainSecondQuests.description",
@@ -377,6 +379,7 @@
   },
   {
     "questId": "three",
+    "aliases": ["menschen-a1-shopping"],
     "title": "eastPlainThirdQuests.title",
     "progress": "0/15",
     "description": "eastPlainThirdQuests.description",
@@ -601,6 +604,7 @@
   },
   {
     "questId": "four",
+    "aliases": ["menschen-a1-shopping2"],
     "title": "eastPlainFourthQuests.title",
     "progress": "0/15",
     "description": "eastPlainFourthQuests.description",
@@ -781,6 +785,7 @@
   },
   {
     "questId": "five",
+    "aliases": ["menschen-a1-essen"],
     "title": "eastPlainFifthQuests.title",
     "progress": "0/15",
     "description": "eastPlainFifthQuests.description",
@@ -986,6 +991,7 @@
   },
   {
     "questId": "six",
+    "aliases": ["menschen-a1-beruf"],
     "title": "eastPlainSixthQuests.title",
     "progress": "0/15",
     "description": "eastPlainSixthQuests.description",
@@ -1151,8 +1157,10 @@
       }
     ]
   },
+
   {
     "questId": "seven",
+    "aliases": ["menschen-a1-zahlen"],
     "title": "eastPlainSeventhQuests.title",
     "progress": "0/14",
     "description": "eastPlainSeventhQuests.description",
@@ -1328,6 +1336,7 @@
   },
   {
     "questId": "eight",
+    "aliases": ["menschen-a1-familie"],
     "title": "eastPlainEighthQuests.title",
     "progress": "0/13",
     "description": "eastPlainEighthQuests.description",
@@ -1493,6 +1502,7 @@
   },
   {
     "questId": "nine",
+    "aliases": ["menschen-a1-tagesablauf"],
     "title": "eastPlainNinthQuests.title",
     "progress": "0/15",
     "description": "eastPlainNinthQuests.description",
@@ -1696,6 +1706,7 @@
   },
   {
     "questId": "ten",
+    "aliases": ["menschen-a1-wohnort"],
     "title": "eastPlainTenthQuests.title",
     "progress": "0/12",
     "description": "eastPlainTenthQuests.description",

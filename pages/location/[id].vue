@@ -93,7 +93,7 @@ const loading = ref(false);
 const error = ref("");
 
 async function loadQuests() {
-  loading.value = true;
+  loading.value = true;questsView
   error.value = "";
   quests.value = [];
   try {
@@ -108,21 +108,20 @@ async function loadQuests() {
   }
 }
 
-onMounted(() => {
-  chainStore.loadProgressFromFirebase();
-});
-watch(regionKey, loadQuests, {immediate: true});
-
 const questsView = computed(() =>
     quests.value.map(q => {
-      const p = chainStore.questProgress?.[q.questId] || {};
+      const direct = chainStore.questProgress?.[q.questId]
+      const aliases = Array.isArray(q.aliases) ? q.aliases : []
+      const aliasKey = !direct ? aliases.find(id => chainStore.questProgress?.[id]) : null
+      const p = direct || (aliasKey ? chainStore.questProgress[aliasKey] : {})
+
       return {
         ...q,
         _success: !!p.success,
         _completed: !!p.completed
       }
     })
-);
+)
 
 function startQuest(quest) {
   if (!quest?.questId) return;
@@ -130,9 +129,15 @@ function startQuest(quest) {
   // router.push({path: `/location/quest-${quest.questId}`, query: {region: regionKey.value}});
 }
 
+watch(regionKey, loadQuests, {immediate: true});
+
 function goHome() {
   router.push({path: "/"});
 }
+
+onMounted(async () => {
+  await chainStore.loadProgressFromFirebase();
+});
 </script>
 
 <style scoped>
