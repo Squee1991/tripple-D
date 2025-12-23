@@ -79,7 +79,6 @@ onMounted(() => {
 
 onMounted(async () => {
   await learningStore.loadFromFirebase()
-  chainStore.loadProgressFromFirebase();
   sentencesStore.loadSentences()
   questStore.loadDailyProgress()
   cardStore.loadCreatedCount()
