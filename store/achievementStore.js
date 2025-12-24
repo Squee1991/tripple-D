@@ -145,6 +145,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 
 	let shownSet = loadShown()
 	let completedSet = loadCompleted()
+	const winterRank1BoughtCount = ref(0)
 	// --- Utils
 	function findById (id) {
 		for (const g of groups.value) {
@@ -228,7 +229,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 						groupTitle: ach.groupTitle || null,
 						ts: Date.now()
 					}
-
 					// --- и сразу показать награду за регистрацию ---
 					if (mapVal && !shownSet.has(mapVal)) {
 						shownSet.add(mapVal)
@@ -786,6 +786,10 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				const eventData = snap.data() || {}
 				const questsProgress = eventData.quests || {}
 				const shopItems = eventData.shopItems || {}
+				const rank1Ids = ['santaHat', 'christmasBall', 'christmasWreath']
+				const boughtRank1Count = rank1Ids.reduce((acc, id) => acc + (shopItems[id] ? 1 : 0), 0)
+				winterRank1BoughtCount.value = boughtRank1Count
+				updateProgress('Collection', shownSet.size + winterRank1BoughtCount.value)
 				const wordScore = questsProgress['quest-21']?.score || 0
 				const completedQuestsCount = Object.values(questsProgress).filter(quest => quest.finished).length
 				const totalRep = eventData.reputationPoints || 0
@@ -817,6 +821,10 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				const eventData = snap.data() || {}
 				const questsProgress = eventData.quests || {}
 				const shopItems = eventData.shopItems || {}
+				const rank1Ids = ['santaHat', 'christmasBall', 'christmasWreath']
+				const boughtRank1Count = rank1Ids.reduce((acc, id) => acc + (shopItems[id] ? 1 : 0), 0)
+				winterRank1BoughtCount.value = boughtRank1Count
+				updateProgress('Collection', shownSet.size + winterRank1BoughtCount.value)
 				const wordQuestProgress = questsProgress['quest-21'] || {}
 				const wordScore = wordQuestProgress.score || 0
 				const completedQuestsCount = Object.values(questsProgress).filter(quest => quest.finished).length
@@ -848,7 +856,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 	}
 
 	watch(lastUnlockedAward, (award) => {
-		if (award) updateProgress('Collection', shownSet.size)
+		if (award) updateProgress('Collection', shownSet.size + winterRank1BoughtCount.value)
 	})
 	if (process.client) initializeProgressTracking()
 
