@@ -132,6 +132,7 @@ import AchIcon from '../assets/images/target.svg'
 import Quest from '../assets/images/question.svg'
 import {useRouter} from 'vue-router'
 import {useAchievementStore} from '../store/achievementStore.js'
+import {useSeoMeta} from "#imports";
 
 const scrollRef = ref(null)
 const {$SimpleBar} = useNuxtApp()
@@ -143,6 +144,9 @@ const achInfo = ref(false)
 const achStore = useAchievementStore()
 const isContentOpen = ref(false)
 
+useSeoMeta({
+  robots: 'noindex, nofollow'
+})
 const backToMainPage = () => {
   router.push('/')
 }
