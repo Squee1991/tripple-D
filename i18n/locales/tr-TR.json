@@ -247,7 +247,8 @@
     "descriptionWindValley": "Ezelî fırtınaların ve değişken havanın diyarı. Rüzgârın darbeleri sınavlar getirir, ama onlarla birlikte yeni bilgiler de. Burada dil öğreniminde gerçek meydan okumalar seni bekliyor.",
     "descriptionLakeRuins": "Sis eski yapıların etrafını sarar, göl suları geçmişin sırlarını saklar. Bu topraklarda unutulmuş bilgiler gizlidir ve onlar dil öğreniminde derine inmeni sağlayacak.",
     "descriptionNorthCliffs": "Denizin üzerinde yükselen yüksek kayalıklar, soğuk rüzgârlar her yolcunun dayanıklılığını sınar. Seni dikkat gerektiren görevler bekliyor.",
-    "descriptionStormCoast": "Gürültü ve şimşeklerin hüküm sürdüğü vahşi sahil toprakları. Yalnızca cesur kahramanlar buraya adım atmaya cüret eder. Burada bilgilerin gücünün gerçek sınavı seni bekliyor."
+    "descriptionStormCoast": "Gürültü ve şimşeklerin hüküm sürdüğü vahşi sahil toprakları. Yalnızca cesur kahramanlar buraya adım atmaya cüret eder. Burada bilgilerin gücünün gerçek sınavı seni bekliyor.",
+    "descriptionMasterLands": "Her emeğin değerli olduğu ustalar ve zanaatkarlar diyarı. Burada meslekler, iş ve günlük sorumluluklar hakkında nasıl konuşulacağını öğreneceksiniz."
   },
   "calendarInfo": {
     "eventsTitle": "Etkinlik Takvimi",
@@ -1273,7 +1274,8 @@
     "wind-valley": "Rüzgar Vadisi",
     "lake-ruins": "Göl Harabeleri",
     "north-cliffs": "Kuzey Kayalıkları",
-    "storm-coast": "Fırtına Kıyısı"
+    "storm-coast": "Fırtına Kıyısı",
+    "master-lands": "Ustalar Diyarı"
   },
   "examPage": {
     "examHint": "Otomatik konuşma tanıma sistemi kullanıyoruz. Mikrofonun yanında net konuşun."
@@ -1705,7 +1707,7 @@
     "questFive": "Cevabı seç: Saat 10",
     "questSix": "Peynir ne kadar?",
     "questSeven": "Cümle kur",
-    "questEight": "Peynir ne kadar?",
+    "questEight": "Ekmek ne kadar?",
     "questNine": "Dinle ve yaz:",
     "questTen": "'3 Mayıs' Almanca nasıl söylenir?",
     "questElevenFirstOption": "3 Mayıs",

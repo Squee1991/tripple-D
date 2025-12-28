@@ -249,7 +249,8 @@
     "descriptionWindValley": "The land of eternal storms and changeable weather. Gusts of wind bring trials, but along with them new knowledge. Here you face true challenges on the path of language learning.",
     "descriptionLakeRuins": "Mist envelops ancient structures, and the waters of the lakes hold secrets of the past. In these lands lie forgotten knowledge that will help you delve deeper into language learning.",
     "descriptionNorthCliffs": "Tall cliffs rise above the sea, and cold winds test the endurance of every traveler. Tasks requiring attentiveness await you.",
-    "descriptionStormCoast": "Wild coastal lands where thunder and lightning rage. Only brave heroes dare to set foot here. Here you face a true test of the power of your knowledge."
+    "descriptionStormCoast": "Wild coastal lands where thunder and lightning rage. Only brave heroes dare to set foot here. Here you face a true test of the power of your knowledge.",
+    "descriptionMasterLands": "Lands of masters and craftsmen, where every labor matters. Here you will learn how to talk about professions, work, and daily duties."
   },
   "calendarInfo": {
     "eventsTitle": "Event Calendar",
@@ -1275,7 +1276,8 @@
     "wind-valley": "Valley of Winds",
     "lake-ruins": "Lake Ruins",
     "north-cliffs": "Northern Cliffs",
-    "storm-coast": "Storm Coast"
+    "storm-coast": "Storm Coast",
+    "master-lands": "Master Lands"
   },
   "examPage": {
     "examHint": "We use an automatic speech recognition system. Speak clearly near the microphone."
@@ -1707,7 +1709,7 @@
     "questFive": "Choose the answer: It’s 10 o’clock",
     "questSix": "How much is the cheese?",
     "questSeven": "Build the sentence",
-    "questEight": "How much is the cheese?",
+    "questEight": "How much does the bread cost?",
     "questNine": "Listen and write:",
     "questTen": "How to say '3rd of May' in German?",
     "questElevenFirstOption": "3rd of May",

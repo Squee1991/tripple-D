@@ -248,7 +248,8 @@
     "descriptionWindValley": "Doimiy bo‘ronlar va o‘zgaruvchan ob-havo yurti. Shamol zarbalari sinovlarni olib keladi, biroq ular bilan birga yangi bilimlar ham. Bu yerda til o‘rganish yo‘lida haqiqiy chaqiriqlar seni kutmoqda.",
     "descriptionLakeRuins": "Tuman qadimiy inshootlarni o‘rab olgan, ko‘l suvlari esa o'tmishning sirlarini saqlaydi. Bu yerda unutulgan bilimlar yashiringan bo‘lib, ular til o‘rganishni chuqurroq qilishga yordam beradi.",
     "descriptionNorthCliffs": "Dengiz ustida ulkan qoyaliklar ko‘tarilgan, sovuq shamollar har bir sayohatchining chidamliligini sinaydi. Senga diqqat talab qiladigan topshiriqlar tayyor.",
-    "descriptionStormCoast": "Momaqaldiroq va chaqmoqlar g‘aroyibligida qo‘zg‘algan yovvoyi sohil yerlar. Faqat jasur qahramonlar bu yerga odim qo‘yishga jur’at etadi. Bu yerda bilim kuchingning haqiqiy sinovi seni kutmoqda."
+    "descriptionStormCoast": "Momaqaldiroq va chaqmoqlar g‘aroyibligida qo‘zg‘algan yovvoyi sohil yerlar. Faqat jasur qahramonlar bu yerga odim qo‘yishga jur’at etadi. Bu yerda bilim kuchingning haqiqiy sinovi seni kutmoqda.",
+    "descriptionMasterLands": "Har bir mehnat qadrli bo'lgan ustalar va hunarmandlar yurti. Bu yerda siz kasblar, ish va kundalik vazifalar haqida gapirishni o'rganasiz."
   },
   "calendarInfo": {
     "eventsTitle": "Voqealar taqvimi",
@@ -1274,7 +1275,8 @@
     "wind-valley": "Shamol vodiysi",
     "lake-ruins": "Ko‘l xarobalari",
     "north-cliffs": "Shimoliy qoyalar",
-    "storm-coast": "Bo‘ronli sohil"
+    "storm-coast": "Bo‘ronli sohil",
+    "master-lands": "Ustalar yurti"
   },
   "examPage": {
     "examHint": "Biz avtomatik nutqni aniqlash tizimidan foydalanamiz. Mikrofon yonida aniq gapiring."
@@ -1706,7 +1708,7 @@
     "questFive": "Javob variantini tanlang: Hozir soat 10",
     "questSix": "Pishloq qancha turadi?",
     "questSeven": "Gapni yig‘ing",
-    "questEight": "Pishloq qancha turadi?",
+    "questEight": "Non qancha turadi?",
     "questNine": "Tinglang va yozing:",
     "questTen": "'3 may'ni nemis tilida qanday to‘g‘ri aytish kerak?",
     "questElevenFirstOption": "3 may",
