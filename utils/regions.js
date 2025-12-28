@@ -64,9 +64,9 @@ export const regions = [
 	// 	id: "master-lands",
 	// 	pathTo: "master-lands",
 	// 	theme: "master",
-	// 	name: "Край мастеров",
+	// 	name: "locationNames.master-lands",
 	// 	level: 13,
-	// 	desc: "Земли мастеров и ремесленников, где каждый труд имеет значение. Здесь ты узнаешь, как говорить о профессиях, работе и повседневных обязанностях.",
+	// 	desc: "regions.descriptionMasterLands",
 	// 	icon: MasterLands
 	// }
 ];

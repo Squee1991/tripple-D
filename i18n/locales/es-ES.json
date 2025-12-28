@@ -247,7 +247,8 @@
     "descriptionWindValley": "La tierra de tormentas eternas y clima cambiante. Ráfagas de viento traen pruebas, pero junto con ellas nuevos conocimientos. Aquí te esperan verdaderos desafíos en el camino del aprendizaje del idioma.",
     "descriptionLakeRuins": "La niebla envuelve construcciones antiguas, y las aguas de los lagos guardan los secretos del pasado. En estas tierras se ocultan conocimientos olvidados que te ayudarán a profundizar en el aprendizaje del idioma.",
     "descriptionNorthCliffs": "Altos acantilados se elevan sobre el mar, y los vientos fríos ponen a prueba la resistencia de cada viajero. Te esperan misiones que requieren atención.",
-    "descriptionStormCoast": "Tierras costeras salvajes donde rugen los truenos y relámpagos. Sólo los héroes valientes se atreven a pisar aquí. Aquí te espera una verdadera prueba del poder de tu conocimiento."
+    "descriptionStormCoast": "Tierras costeras salvajes donde rugen los truenos y relámpagos. Sólo los héroes valientes se atreven a pisar aquí. Aquí te espera una verdadera prueba del poder de tu conocimiento.",
+    "descriptionMasterLands": "Tierras de maestros y artesanos, donde cada trabajo importa. Aquí aprenderás a hablar sobre profesiones, trabajo y deberes diarios.","master-lands": "Tierra de Maestros"
   },
   "calendarInfo": {
     "eventsTitle": "Calendario de eventos",
@@ -1273,7 +1274,8 @@
     "wind-valley": "Valle de los Vientos",
     "lake-ruins": "Ruinas del Lago",
     "north-cliffs": "Acantilados del Norte",
-    "storm-coast": "Costa de la Tormenta"
+    "storm-coast": "Costa de la Tormenta",
+    "master-lands": "Tierra de Maestros"
   },
   "examPage": {
     "examHint": "Usamos un sistema automático de reconocimiento de voz. Habla claramente cerca del micrófono."
@@ -1705,7 +1707,7 @@
     "questFive": "Elige la opción: Ahora son las 10",
     "questSix": "¿Cuánto cuesta el queso?",
     "questSeven": "Forma la oración",
-    "questEight": "¿Cuánto cuesta el queso?",
+    "questEight": "¿Cuánto cuesta el pan?",
     "questNine": "Escucha y escribe:",
     "questTen": "¿Cómo se dice correctamente '3 de mayo' en alemán?",
     "questElevenFirstOption": "3 de mayo",

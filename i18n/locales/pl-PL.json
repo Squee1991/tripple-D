@@ -247,7 +247,8 @@
     "descriptionWindValley": "Ziemia wiecznych burz i zmiennej pogody. Podmuchy wiatru przynoszą próby, ale wraz z nimi także nową wiedzę. Tutaj czekają prawdziwe wyzwania na drodze nauki języka.",
     "descriptionLakeRuins": "Mgła otula starożytne budowle, a wody jezior strzegą tajemnic przeszłości. W tych ziemiach ukryte są zapomniane wiedzy, które pomogą ci zagłębić się w naukę języka.",
     "descriptionNorthCliffs": "Wysokie klify wznoszą się nad morzem, a zimne wiatry wystawiają na próbę wytrwałość każdego podróżnika. Czekają na ciebie zadania wymagające uwagi.",
-    "descriptionStormCoast": "Dzikie przybrzeżne ziemie, gdzie szaleją grzmoty i błyskawice. Tylko odważni bohaterowie decydują się tu wejść. Czeka cię tu prawdziwy test siły wiedzy."
+    "descriptionStormCoast": "Dzikie przybrzeżne ziemie, gdzie szaleją grzmoty i błyskawice. Tylko odważni bohaterowie decydują się tu wejść. Czeka cię tu prawdziwy test siły wiedzy.",
+    "descriptionMasterLands": "Krainy mistrzów i rzemieślników, gdzie każda praca ma znaczenie. Tutaj dowiesz się, jak rozmawiać o zawodach, pracy i codziennych obowiązkach."
   },
   "calendarInfo": {
     "eventsTitle": "Kalendarz wydarzeń",
@@ -1273,7 +1274,8 @@
     "wind-valley": "Dolina wiatrów",
     "lake-ruins": "Ruiny jeziora",
     "north-cliffs": "Północne klify",
-    "storm-coast": "Burzowe wybrzeże"
+    "storm-coast": "Burzowe wybrzeże",
+    "master-lands": "Kraina Mistrzów"
   },
   "examPage": {
     "examHint": "Używamy automatycznego systemu rozpoznawania mowy. Mów wyraźnie blisko mikrofonu."
@@ -1705,7 +1707,7 @@
     "questFive": "Wybierz odpowiedź: Jest godzina 10",
     "questSix": "Ile kosztuje ser?",
     "questSeven": "Ułóż zdanie",
-    "questEight": "Ile kosztuje ser?",
+    "questEight": "Ile kosztuje chleb?",
     "questNine": "Posłuchaj i napisz:",
     "questTen": "Jak powiedzieć po niemiecku '3 maja'?",
     "questElevenFirstOption": "3 maja",

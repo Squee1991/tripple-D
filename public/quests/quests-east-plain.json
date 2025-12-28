@@ -1196,7 +1196,11 @@
         "type": "speechToText",
         "question": "eastPlainSeventhQuests.questTree",
         "text": "achtundvierzig",
-        "answer": "achtundvierzig"
+        "answer": "achtundvierzig",
+        "accept": [
+          "achtundvierzig",
+          "48"
+        ]
       },
 
       {
@@ -1256,8 +1260,8 @@
         "id": 8,
         "type": "speechToText",
         "question": "eastPlainSeventhQuests.questNine",
-        "text": "Wie viel kostet eine Flasche Wasser? Eine Flasche Wasser koster zwei euro",
-        "answer": "Wie viel kostet eine Flasche Wasser? Eine Flasche Wasser koster zwei euro"
+        "text": "Wie viel kostet eine Flasche Wasser? Eine Flasche Wasser kostet zwei Euro",
+        "answer": "Wie viel kostet eine Flasche Wasser? Eine Flasche Wasser kostet zwei Euro"
       },
       {
         "id": 9,
