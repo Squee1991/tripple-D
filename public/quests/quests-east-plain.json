@@ -7,7 +7,7 @@
     "description": "eastPlainFirstQuests.description",
     "conditions": {
       "goal": "eastPlainFirstQuests.goal",
-      "minCorrect": 14,
+      "minCorrect": 12,
       "requiredTasks": 14
     },
     "rewards": {
@@ -112,12 +112,10 @@
         "question": "eastPlainFirstQuests.questTen",
         "words": [
           "Hallo",
-          "Guten Tag",
-          "Tschüss",
           "danke",
           "wie geht's",
           "gut",
-          "Guten Abend"
+          "sehr"
         ],
         "correctOrder": [
           "Hallo",
@@ -185,13 +183,6 @@
         "question": "eastPlainFirstQuests.questFifteen",
         "text": "Hallo! wie geht's? sehr gut, danke ",
         "answer": "Hallo! wie geht's? sehr gut, danke"
-      },
-      {
-        "id": 14,
-        "type": "speechToText",
-        "question": "eastPlainFirstQuests.questFifteen",
-        "text": "Hallo! wie geht's? sehr gut, danke ",
-        "answer": "Hallo! wie geht's? sehr gut, danke"
       }
     ]
   },
@@ -203,7 +194,7 @@
     "description": "eastPlainSecondQuests.description",
     "conditions": {
       "goal": "Lerne, über Herkunft und Sprache zu sprechen und höflich Fragen zu stellen",
-      "minCorrect": 13,
+      "minCorrect": 11,
       "requiredTasks": 13
     },
     "rewards": {
@@ -253,10 +244,9 @@
           "und",
           "Thomas",
           "Hallo",
-          "Guten Tag",
           "danke",
           "gut",
-          "seht gut",
+          "sehr gut",
           "Bis Morgen",
           "wie gehts's"
         ],
@@ -385,7 +375,7 @@
     "description": "eastPlainThirdQuests.description",
     "conditions": {
       "goal": "eastPlainThirdQuests.goal",
-      "minCorrect": 15,
+      "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {
@@ -610,7 +600,7 @@
     "description": "eastPlainFourthQuests.description",
     "conditions": {
       "goal": "eastPlainFourthQuests.goal",
-      "minCorrect": 15,
+      "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {
@@ -791,7 +781,7 @@
     "description": "eastPlainFifthQuests.description",
     "conditions": {
       "goal": "eastPlainFifthQuests.goal",
-      "minCorrect": 15,
+      "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {
@@ -997,7 +987,7 @@
     "description": "eastPlainSixthQuests.description",
     "conditions": {
       "goal": "eastPlainSixthQuests.goal",
-      "minCorrect": 15,
+      "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1157,7 +1147,6 @@
       }
     ]
   },
-
   {
     "questId": "seven",
     "aliases": ["menschen-a1-zahlen"],
@@ -1166,7 +1155,7 @@
     "description": "eastPlainSeventhQuests.description",
     "conditions": {
       "goal": "eastPlainSeventhQuests.goal",
-      "minCorrect": 14,
+      "minCorrect": 12,
       "requiredTasks": 14
     },
     "rewards": {
@@ -1346,7 +1335,7 @@
     "description": "eastPlainEighthQuests.description",
     "conditions": {
       "goal": "eastPlainEighthQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 11,
       "requiredTasks": 13
     },
     "rewards": {
@@ -1512,7 +1501,7 @@
     "description": "eastPlainNinthQuests.description",
     "conditions": {
       "goal": "eastPlainNinthQuests.goal",
-      "minCorrect": 15,
+      "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1716,7 +1705,7 @@
     "description": "eastPlainTenthQuests.description",
     "conditions": {
       "goal": "eastPlainTenthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 10,
       "requiredTasks": 12
     },
     "rewards": {

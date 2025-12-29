@@ -34,7 +34,8 @@
     "questNotCompleted": "Nie ukończyłeś zadania",
     "warning": "Jeśli wyjdziesz teraz, postęp nie zostanie zapisany.",
     "leave": "Wyjdź",
-    "continue": "Kontynuuj"
+    "continue": "Kontynuuj",
+    "completedWithMistakes": "Zadanie ukończone, ale są błędy"
   },
   "modalLocations": {
     "title": "Wskazówka dotycząca liczb",
@@ -683,7 +684,9 @@
     "start": "Rozpocznij",
     "notFound": "Nie znaleziono questów",
     "loading": "Ładowanie questów...",
-    "error": "Nie udało się załadować questów"
+    "error": "Nie udało się załadować questów",
+    "mistakes": "BŁĘDY",
+    "repeatMistakes": "Powtórz błędy"
   },
   "adjectiveDeclinationArticle": {
     "title": "Po rodzajniku określonym",

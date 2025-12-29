@@ -34,7 +34,8 @@
     "questNotCompleted": "Siz kvestni yakunlamadingiz",
     "warning": "Agar hozir chiqsangiz, progress saqlanmaydi.",
     "leave": "Chiqish",
-    "continue": "Davom etish"
+    "continue": "Davom etish",
+    "completedWithMistakes": "Kvest yakunlandi, lekin xatolar bor"
   },
   "modalLocations": {
     "title": "Sonlar haqida maslahat",
@@ -684,7 +685,9 @@
     "start": "Boshlash",
     "notFound": "Kvestlar topilmadi",
     "loading": "Kvestlar yuklanmoqda...",
-    "error": "Kvestlarni yuklab bo‘lmadi"
+    "error": "Kvestlarni yuklab bo‘lmadi",
+    "mistakes": "XATOLAR",
+    "repeatMistakes": "Xatolarni takrorlash"
   },
   "adjectiveDeclinationArticle": {
     "title": "Aniq artikldan keyin",

@@ -1210,7 +1210,6 @@
       }
     ]
   },
-
   {
     "questId": "jobUniversal11",
     "title": "masterLandsElevenQuests.title",
@@ -1331,6 +1330,7 @@
       }
     ]
   },
+
   {
     "questId": "jobUniversal12",
     "title": "Размеры и счёт",

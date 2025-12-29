@@ -2,43 +2,52 @@
   <div class="location-page">
     <div class="location__wrapper">
       <header class="location-header" :class="{ 'rtl-locale': locale === 'ar' }">
-        <button class="close-btn" @click="goHome" aria-label="to main">×</button>
-        <h1 class="region__title-name">{{ t(region?.name) }}</h1>
+        <button class="close-btn" @click="goToHomePage" aria-label="to main">×</button>
+        <h1 class="region__title-name">{{ t(currentRegion?.name) }}</h1>
       </header>
-      <div v-if="loading" class="loading">{{ t('locationQuests.loading') }}</div>
+      <div v-if="isLoading" class="loading">{{ t('locationQuests.loading') }}</div>
       <div v-else class="quests">
-        <div v-if="error" class="error">
+        <div v-if="errorMessage" class="error">
           {{ t('locationQuests.error') }}<br/>
           <div class="tiny">
-            URL: {{ url }}<br/>
-            {{ error }}
+            URL: {{ questsUrl }}<br/>
+            {{ errorMessage }}
           </div>
         </div>
-        <ul v-else-if="questsView.length" class="quest-list">
+        <ul v-else-if="processedQuests.length" class="quest-list">
           <li
-              v-for="q in questsView"
-              :key="q.questId"
+              v-for="quest in processedQuests"
+              :key="quest.questId"
               class="quest-card"
-              :class="{ completed: q._success }"
+              :class="{ completed: quest.isSuccess }"
           >
-            <div v-if="q._success" class="stamp">{{ t('locationQuests.done') }}</div>
-            <h3 class="quest__title">{{ t(q.title) }}</h3>
-            <p class="quest__description">{{ t(q.description) }}</p>
+            <div v-if="quest.isSuccess && !quest.hasMistakes" class="stamp">{{ t('locationQuests.done') }}</div>
+            <div v-else-if="quest.isSuccess && quest.hasMistakes" class="stamp stamp--mistakes">{{ t('locationQuests.mistakes') }}</div>
+            <h3 class="quest__title">{{ t(quest.title) }}</h3>
+            <p class="quest__description">{{ t(quest.description) }}</p>
             <div class="quest-meta">
-              <span v-if="!q._success" class="rewards-container">
-                <span>{{ t('locationQuests.awards')}}</span>
+              <span v-if="!quest.isSuccess" class="rewards-container">
+                <span>{{ t('locationQuests.awards') }}</span>
                 <span class="reward-item">
-                  <span>{{ q.rewards.points }}</span>
+                  <span>{{ quest.rewards.points }}</span>
                   <img src="assets/images/articlus.png" alt="Articlus" class="icon-articlus">
                 </span>
-                                <span class="reward-item">
-                                    {{ q.rewards.xp }} XP
-                                </span>
-                            </span>
+                <span class="reward-item">{{ quest.rewards.xp }} XP</span>
+              </span>
               <span v-else>{{ t('locationQuests.gotAward') }}</span>
             </div>
-            <button class="btn" @click="startQuest(q)">
-              {{ q._success ? t('locationQuests.repeat') : t('locationQuests.start') }}
+            <button class="btn" @click="handleStartQuest(quest)">
+              <template v-if="quest.isSuccess">
+                <template v-if="quest.hasMistakes">
+                  {{ t('locationQuests.repeatMistakes') }}
+                </template>
+                <template v-else>
+                  {{ t('locationQuests.repeat') }}
+                </template>
+              </template>
+              <template v-else>
+                {{ t('locationQuests.start') }}
+              </template>
             </button>
           </li>
         </ul>
@@ -49,91 +58,88 @@
 </template>
 
 <script setup>
-import {ref, computed, watch, onMounted} from "vue";
-import {useRoute, useRouter} from "vue-router";
-import {regions} from "~/utils/regions.js";
-import {userChainStore} from "~/store/chainStore.js";
-import {useHead, useSeoMeta, useRuntimeConfig} from '#imports'
-import {useCanonical} from "../../composables/useCanonical.js";
-
-const route = useRoute()
-const canonical = useCanonical()
-const {t, locale} = useI18n();
-
-// const pageTitle = t('metaLocation.title')
-// const pageDesc = t('metaLocation.description')
-// useHead({
-//   title: pageTitle,
-//   link: [{rel: 'canonical', href: canonical}]
-// })
-// useSeoMeta({
-//   title: pageTitle,
-//   description: pageDesc,
-//   ogTitle: pageTitle,
-//   ogDescription: pageDesc,
-//   ogType: 'website',
-//   ogUrl: canonical,
-//   ogImage: '/images/seo-lands.png',
-//   robots: 'index, follow'
-// })
+import { ref, computed, watch, onMounted } from "vue";
+import { useRoute, useRouter } from "vue-router";
+import { regions } from "~/utils/regions.js";
+import { userChainStore } from "~/store/chainStore.js";
+import { useSeoMeta } from '#imports';
+import { useCanonical } from "../../composables/useCanonical.js";
+const route = useRoute();
+const router = useRouter();
+const canonical = useCanonical();
+const { t, locale } = useI18n();
+const chainStore = userChainStore();
+const questList = ref([]);
+const isLoading = ref(false);
+const errorMessage = ref("");
 
 useSeoMeta({
   robots: 'noindex, nofollow'
-})
+});
 
-const router = useRouter();
-const chainStore = userChainStore();
+const currentRegionKey = computed(() => {
+  return String(route.query.region || route.params.id || "");
+});
 
-const regionKey = computed(() => String(route.query.region || route.params.id || ""));
-const region = computed(() => regions.find(r => r.pathTo === regionKey.value));
-const url = computed(() => `/quests/quests-${regionKey.value}.json`);
+const currentRegion = computed(() => {
+  return regions.find((regionItem) => regionItem.pathTo === currentRegionKey.value);
+});
 
-const quests = ref([]);
-const loading = ref(false);
-const error = ref("");
+const questsUrl = computed(() => {return `/quests/quests-${currentRegionKey.value}.json`;});
 
-async function loadQuests() {
-  loading.value = true;questsView
-  error.value = "";
-  quests.value = [];
+async function fetchQuests() {
+  isLoading.value = true;
+  errorMessage.value = "";
+  questList.value = [];
+
   try {
-    const res = await fetch(url.value);
-    if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
-    const data = await res.json();
-    quests.value = Array.isArray(data) ? data : data.quests || [data];
+    const response = await fetch(questsUrl.value);
+    if (!response.ok) {
+      throw new Error(`${response.status} ${response.statusText}`);
+    }
+    const data = await response.json();
+    questList.value = Array.isArray(data) ? data : (data.quests || [data]);
   } catch (err) {
-    error.value = err.message;
+    errorMessage.value = err.message;
   } finally {
-    loading.value = false;
+    isLoading.value = false;
   }
 }
 
-const questsView = computed(() =>
-    quests.value.map(q => {
-      const direct = chainStore.questProgress?.[q.questId]
-      const aliases = Array.isArray(q.aliases) ? q.aliases : []
-      const aliasKey = !direct ? aliases.find(id => chainStore.questProgress?.[id]) : null
-      const p = direct || (aliasKey ? chainStore.questProgress[aliasKey] : {})
-
-      return {
-        ...q,
-        _success: !!p.success,
-        _completed: !!p.completed
+const processedQuests = computed(() => {
+  return questList.value.map((quest) => {
+    let userProgress = chainStore.questProgress?.[quest.questId];
+    if (!userProgress && Array.isArray(quest.aliases)) {
+      const foundAliasId = quest.aliases.find((aliasId) => chainStore.questProgress?.[aliasId]);
+      if (foundAliasId) {
+        userProgress = chainStore.questProgress[foundAliasId];
       }
-    })
-)
+    }
+    const safeProgress = userProgress || {};
+    const hasSavedMistakes = !!(
+        safeProgress.success &&
+        safeProgress.wrongIndices &&
+        safeProgress.wrongIndices.length > 0
+    );
+    return {
+      ...quest,
+      isSuccess: !!safeProgress.success,
+      isCompleted: !!safeProgress.completed,
+      hasMistakes: hasSavedMistakes
+    };
+  });
+});
 
-function startQuest(quest) {
+function handleStartQuest(quest) {
   if (!quest?.questId) return;
-  router.push({path: `/location/quest-${quest.questId}`});
-  // router.push({path: `/location/quest-${quest.questId}`, query: {region: regionKey.value}});
+  router.push({ path: `/location/quest-${quest.questId}` });
 }
 
-watch(regionKey, loadQuests, {immediate: true});
-
-function goHome() {
-  router.push({path: "/"});
+function goToHomePage() {
+  router.push({ path: "/" });
 }
+
+watch(currentRegionKey, fetchQuests, { immediate: true });
 
 onMounted(async () => {
   await chainStore.loadProgressFromFirebase();
@@ -328,6 +334,10 @@ onMounted(async () => {
   letter-spacing: .04em;
   box-shadow: 4px 4px 0 #2b2b2b;
   z-index: 3;
+}
+
+.stamp--mistakes {
+  background: linear-gradient(180deg, #ff82a9 0%, #e6517d 100%);
 }
 
 .quest__title {

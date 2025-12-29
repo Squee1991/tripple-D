@@ -34,7 +34,8 @@
     "questNotCompleted": "No has completado la misión",
     "warning": "Si sales ahora, el progreso no se guardará.",
     "leave": "Salir",
-    "continue": "Continuar"
+    "continue": "Continuar",
+    "completedWithMistakes": "Misión completada, pero hay errores"
   },
   "modalLocations": {
     "title": "Pista sobre los números",
@@ -683,7 +684,9 @@
     "start": "Comenzar",
     "notFound": "No se encontraron misiones",
     "loading": "Cargando misiones...",
-    "error": "No se pudieron cargar las misiones"
+    "error": "No se pudieron cargar las misiones",
+    "mistakes": "ERRORES",
+    "repeatMistakes": "Repetir errores"
   },
   "adjectiveDeclinationArticle": {
     "title": "Después del artículo definido",
