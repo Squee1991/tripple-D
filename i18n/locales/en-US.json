@@ -34,9 +34,9 @@
     "questNotCompleted": "You have not completed the quest",
     "warning": "If you leave now, your progress will not be saved.",
     "leave": "Leave",
-    "continue": "Continue"
+    "continue": "Continue",
+    "completedWithMistakes": "Quest completed, but there are mistakes"
   },
-
   "modalLocations": {
     "title": "Hint about numbers",
     "text": "This task uses numbers and time. You can write them as digits or words",
@@ -685,7 +685,9 @@
     "start": "Start",
     "notFound": "No quests found",
     "loading": "Loading quests...",
-    "error": "Failed to load quests"
+    "error": "Failed to load quests",
+    "mistakes": "MISTAKES",
+    "repeatMistakes": "Repeat mistakes"
   },
   "adjectiveDeclinationArticle": {
     "title": "After the definite article",

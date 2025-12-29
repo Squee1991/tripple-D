@@ -34,7 +34,8 @@
     "questNotCompleted": "لم تُكمل المهمة",
     "warning": "إذا غادرت الآن، فلن يتم حفظ التقدم.",
     "leave": "مغادرة",
-    "continue": "متابعة"
+    "continue": "متابعة",
+    "completedWithMistakes": "تم إكمال المهمة، ولكن توجد أخطاء"
   },
   "modalLocations": {
     "title": "تلميح حول الأرقام",
@@ -681,7 +682,9 @@
     "start": "ابدأ",
     "notFound": "لم يتم العثور على مهام",
     "loading": "جارٍ تحميل المهام...",
-    "error": "فشل تحميل المهام"
+    "error": "فشل تحميل المهام",
+    "mistakes": "الأخطاء",
+    "repeatMistakes": "تكرار الأخطاء"
   },
   "adjectiveDeclinationArticle": {
     "title": "بعد أداة التعريف المحددة",

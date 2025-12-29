@@ -34,7 +34,8 @@
     "questNotCompleted": "Görevi tamamlamadınız",
     "warning": "Şimdi çıkarsanız ilerleme kaydedilmeyecek.",
     "leave": "Çık",
-    "continue": "Devam et"
+    "continue": "Devam et",
+    "completedWithMistakes": "Görev tamamlandı ancak hatalar var"
   },
   "modalLocations": {
     "title": "Sayılar hakkında ipucu",
@@ -683,7 +684,9 @@
     "start": "Başla",
     "notFound": "Görev bulunamadı",
     "loading": "Görevler yükleniyor...",
-    "error": "Görevler yüklenemedi"
+    "error": "Görevler yüklenemedi",
+    "mistakes": "HATALAR",
+    "repeatMistakes": "Hataları tekrarla"
   },
   "adjectiveDeclinationArticle": {
     "title": "Belirli artikellerden sonra",
