@@ -36,7 +36,11 @@
               </span>
               <span v-else>{{ t('locationQuests.gotAward') }}</span>
             </div>
-            <button class="btn" @click="handleStartQuest(quest)">
+            <button
+                class="btn"
+                :style="quest.btnStyle"
+                @click="handleStartQuest(quest)"
+            >
               <template v-if="quest.isSuccess">
                 <template v-if="quest.hasMistakes">
                   {{ t('locationQuests.repeatMistakes') }}
@@ -64,6 +68,7 @@ import { regions } from "~/utils/regions.js";
 import { userChainStore } from "~/store/chainStore.js";
 import { useSeoMeta } from '#imports';
 import { useCanonical } from "../../composables/useCanonical.js";
+
 const route = useRoute();
 const router = useRouter();
 const canonical = useCanonical();
@@ -91,7 +96,6 @@ async function fetchQuests() {
   isLoading.value = true;
   errorMessage.value = "";
   questList.value = [];
-
   try {
     const response = await fetch(questsUrl.value);
     if (!response.ok) {
@@ -116,16 +120,33 @@ const processedQuests = computed(() => {
       }
     }
     const safeProgress = userProgress || {};
-    const hasSavedMistakes = !!(
+    const hasMistakes = !!(
         safeProgress.success &&
         safeProgress.wrongIndices &&
         safeProgress.wrongIndices.length > 0
     );
+    const isSuccess = !!safeProgress.success;
+    let btnStyle = {};
+    if (isSuccess) {
+      if (hasMistakes) {
+        btnStyle = {
+          background: 'linear-gradient(180deg, #ff82a9 0%, #e6517d 100%)',
+          color: '#fff'
+        };
+      } else {
+        btnStyle = {
+          background: 'linear-gradient(180deg, #6a74a5 0%, #5d7fc1 100%)',
+          color: '#fff'
+        };
+      }
+    }
+
     return {
       ...quest,
-      isSuccess: !!safeProgress.success,
+      isSuccess,
       isCompleted: !!safeProgress.completed,
-      hasMistakes: hasSavedMistakes
+      hasMistakes,
+      btnStyle
     };
   });
 });
@@ -325,7 +346,7 @@ onMounted(async () => {
   right: -20px;
   transform: rotate(9deg);
   font-size: 14px;
-  background: linear-gradient(180deg, #6a74a5 0%, #5d7fc1 100% 100%);
+  background: linear-gradient(180deg, #6a74a5 0%, #5d7fc1 100%);
   color: white;
   border: 3px solid #111;
   border-radius: 12px;
@@ -456,46 +477,16 @@ onMounted(async () => {
   }
 }
 
-.quest-card:nth-child(1) {
-  animation-delay: .02s;
-}
-
-.quest-card:nth-child(2) {
-  animation-delay: .06s;
-}
-
-.quest-card:nth-child(3) {
-  animation-delay: .10s;
-}
-
-.quest-card:nth-child(4) {
-  animation-delay: .14s;
-}
-
-.quest-card:nth-child(5) {
-  animation-delay: .18s;
-}
-
-.quest-card:nth-child(6) {
-  animation-delay: .22s;
-}
-
-.quest-card:nth-child(7) {
-  animation-delay: .26s;
-}
-
-.quest-card:nth-child(8) {
-  animation-delay: .30s;
-}
-
-.quest-card:nth-child(9) {
-  animation-delay: .34s;
-}
-
-.quest-card:nth-child(10) {
-  animation-delay: .38s;
-}
-
+.quest-card:nth-child(1) { animation-delay: .02s; }
+.quest-card:nth-child(2) { animation-delay: .06s; }
+.quest-card:nth-child(3) { animation-delay: .10s; }
+.quest-card:nth-child(4) { animation-delay: .14s; }
+.quest-card:nth-child(5) { animation-delay: .18s; }
+.quest-card:nth-child(6) { animation-delay: .22s; }
+.quest-card:nth-child(7) { animation-delay: .26s; }
+.quest-card:nth-child(8) { animation-delay: .30s; }
+.quest-card:nth-child(9) { animation-delay: .34s; }
+.quest-card:nth-child(10) { animation-delay: .38s; }
 
 @media (max-width: 767px) {
   .close-btn {
@@ -504,28 +495,19 @@ onMounted(async () => {
     font-size: 26px;
     top: 10px;
   }
-
   .location-header {
     padding: 14px;
   }
-
   .region__title-name {
     font-size: 24px;
   }
-
   .quest-list {
     grid-template-columns:1fr;
     gap: 16px;
   }
-
   .quest-card {
     box-shadow: 4px 4px 0 black;
   }
-
-  .location-header:after {
-    transform: scale(.9) rotate(8deg);
-  }
-
   .icon-articlus {
     width: 22px;
     height: 20px;
@@ -537,12 +519,10 @@ onMounted(async () => {
     transform: translate(2px, 2px);
     box-shadow: 2px 2px 0 #2b2b2b;
   }
-
   .btn:hover {
     transform: translate(2px, 2px);
     box-shadow: 2px 2px 0 #2b2b2b;
   }
-
   .close-btn:hover {
     transform: translate(2px, 2px);
     box-shadow: 2px 2px 0 #2b2b2b;
@@ -553,14 +533,12 @@ onMounted(async () => {
   .location-page {
     padding: 12px;
   }
-
   .location-header {
     padding: 10px 14px;
     gap: 15px;
     margin-bottom: 12px;
     border-radius: 16px;
   }
-
   .close-btn {
     width: 40px;
     height: 40px;
@@ -568,20 +546,17 @@ onMounted(async () => {
     border-radius: 12px;
     box-shadow: 3px 3px 0 #2b2b2b;
   }
-
   .region__title-name {
     font-size: 22px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
-
   .quest-list {
     grid-template-columns: 1fr;
     gap: 14px;
     margin-top: 8px;
   }
-
   .quest-card {
     min-height: auto;
     padding: 14px;
@@ -589,12 +564,10 @@ onMounted(async () => {
     border-radius: 16px;
     box-shadow: 3px 3px 0 #2b2b2b;
   }
-
   .quest-card::before {
     inset: 6px;
     outline: 8px solid #fff;
   }
-
   .quest-card::after {
     top: -8px;
     left: -8px;
@@ -604,22 +577,18 @@ onMounted(async () => {
     border: 2px solid #111;
     box-shadow: 4px 4px 0 #2b2b2b;
   }
-
   .quest__title {
     font-size: 18px;
     padding: 6px;
   }
-
   .quest__description {
     font-size: 14px;
   }
-
   .quest-meta .rewards-container {
     font-size: 13px;
     padding: 4px 8px;
     box-shadow: 3px 3px 0 #2b2b2b;
   }
-
   .btn {
     height: 40px;
     margin-top: 8px;
@@ -627,7 +596,6 @@ onMounted(async () => {
     border-radius: 12px;
     box-shadow: 3px 3px 0 #2b2b2b;
   }
-
   .stamp {
     top: -4px;
     right: -10px;
@@ -635,10 +603,6 @@ onMounted(async () => {
     font-size: 12px;
     padding: 6px 10px;
     box-shadow: 3px 3px 0 #2b2b2b;
-  }
-
-  .location-header::after {
-    content: none;
   }
 }
 
@@ -664,7 +628,6 @@ onMounted(async () => {
     animation: bob 2.2s ease-in-out infinite;
     z-index: 2;
   }
-
   .location-header.rtl-locale::after {
     right: auto;
     left: 0;
