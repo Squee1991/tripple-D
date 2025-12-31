@@ -8,11 +8,7 @@
       <div v-if="isLoading" class="loading">{{ t('locationQuests.loading') }}</div>
       <div v-else class="quests">
         <div v-if="errorMessage" class="error">
-          {{ t('locationQuests.error') }}<br/>
-          <div class="tiny">
-            URL: {{ questsUrl }}<br/>
-            {{ errorMessage }}
-          </div>
+          {{ t('locationQuests.error') }}
         </div>
         <ul v-else-if="processedQuests.length" class="quest-list">
           <li
@@ -515,10 +511,7 @@ onMounted(async () => {
 }
 
 @media (min-width: 1024px) {
-  .quest-card:hover {
-    transform: translate(2px, 2px);
-    box-shadow: 2px 2px 0 #2b2b2b;
-  }
+
   .btn:hover {
     transform: translate(2px, 2px);
     box-shadow: 2px 2px 0 #2b2b2b;
