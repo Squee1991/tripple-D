@@ -1,12 +1,12 @@
 [
   {
-    "questId": "jobUniversal1",
+    "questId": "job-one",
     "title": "masterLandsFirstQuest.title",
     "progress": "0/15",
     "description": "masterLandsFirstQuest.description",
     "conditions": {
       "goal": "Понимать и использовать базовые рабочие фразы",
-      "minCorrect": 15,
+      "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {
@@ -114,19 +114,19 @@
         "id": 15,
         "type": "speechToText",
         "question": "masterLandsFirstQuest.questFifteen",
-        "text": "Ich arbeite heute bei einer Firma",
-        "answer": "Ich arbeite heute bei einer Firma"
+        "text": "Ich arbeite bei einer Firma",
+        "answer": "Ich arbeite bei einer Firma"
       }
     ]
   },
   {
-    "questId": "jobUniversal2",
+    "questId": "job-two",
     "title": "masterLandsSecondQuest.title",
     "progress": "0/15",
     "description": "masterLandsSecondQuest.description",
     "conditions": {
       "goal": "Выучить слова и фразы про место работы",
-      "minCorrect": 15,
+      "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {
@@ -240,13 +240,13 @@
     ]
   },
   {
-    "questId": "jobUniversal3",
+    "questId": "job-three",
     "title": "masterLandsThirdQuests.title",
     "progress": "0/15",
     "description": "masterLandsThirdQuests.description",
     "conditions": {
       "goal": "Выучить слова и фразы про коллег",
-      "minCorrect": 15,
+      "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {
@@ -362,13 +362,13 @@
     ]
   },
   {
-    "questId": "jobUniversal4",
+    "questId": "job-four",
     "title": "masterLandsFourthQuests.title",
     "progress": "0/15",
     "description": "masterLandsFourthQuests.description",
     "conditions": {
       "goal": "Выучить фразы про рабочее время и перерывы",
-      "minCorrect": 15,
+      "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {
@@ -486,13 +486,13 @@
     ]
   },
   {
-    "questId": "jobUniversal5",
+    "questId": "job-five",
     "title": "masterLandsFifthQuests.title",
     "progress": "0/15",
     "description": "masterLandsFifthQuests.description",
     "conditions": {
       "goal": "Выучить живые фразы для работы с задачами",
-      "minCorrect": 15,
+      "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {
@@ -606,13 +606,13 @@
     ]
   },
   {
-    "questId": "jobUniversal6",
+    "questId": "job-six",
     "title": "masterLandsSixthQuests.title",
     "progress": "0/15",
     "description": "masterLandsSixthQuests.description",
     "conditions": {
       "goal": "Выучить базу по инструментам и технике безопасности",
-      "minCorrect": 15,
+      "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {
@@ -728,13 +728,13 @@
     ]
   },
   {
-    "questId": "jobUniversal7",
+    "questId": "job-seven",
     "title": "masterLandsSixthQuests.title",
     "progress": "0/15",
     "description": "masterLandsSixthQuests.description",
     "conditions": {
       "goal": "Выучить слова про время, опоздания и ожидание",
-      "minCorrect": 15,
+      "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {
@@ -852,13 +852,13 @@
     ]
   },
   {
-    "questId": "jobUniversal8",
+    "questId": "job-eight",
     "title": "masterLandsEightQuests.title",
     "progress": "0/15",
     "description": "masterLandsEightQuests.description",
     "conditions": {
       "goal": "Выучить базу по погрузке и весу",
-      "minCorrect": 15,
+      "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {
@@ -971,13 +971,13 @@
     ]
   },
   {
-    "questId": "jobUniversal9",
+    "questId": "job-nine",
     "title": "masterLandsNineQuests.title",
     "progress": "0/15",
     "description": "masterLandsNineQuests.description",
     "conditions": {
       "goal": "Выучить жизненно важные фразы про деньги и быт на работе",
-      "minCorrect": 15,
+      "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1091,13 +1091,13 @@
     ]
   },
   {
-    "questId": "jobUniversal10",
+    "questId": "job-ten",
     "title": "masterLandsTenQuests.title",
     "progress": "0/15",
     "description": "masterLandsTenQuests.description",
     "conditions": {
       "goal": "Выучить названия инструментов и команды на объекте",
-      "minCorrect": 15,
+      "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1211,13 +1211,13 @@
     ]
   },
   {
-    "questId": "jobUniversal11",
+    "questId": "job-eleven",
     "title": "masterLandsElevenQuests.title",
     "progress": "0/15",
     "description": "masterLandsElevenQuests.description",
     "conditions": {
       "goal": "Выучить глаголы действия и команды на объекте",
-      "minCorrect": 15,
+      "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1330,15 +1330,14 @@
       }
     ]
   },
-
   {
-    "questId": "jobUniversal12",
-    "title": "Размеры и счёт",
+    "questId": "job-twelve",
+    "title": "masterLandsTwelveQuests.title",
     "progress": "0/15",
-    "description": "Метры, штуки, мешки и порядок выполнения задач (сначала/потом).",
+    "description": "masterLandsTwelveQuests.description",
     "conditions": {
       "goal": "Выучить замеры и последовательность действий",
-      "minCorrect": 15,
+      "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1349,116 +1348,129 @@
       {
         "id": 1,
         "type": "select",
-        "question": "Как сказать: Штука (единица)",
+        "question": "masterLandsTwelveQuests.questOne",
         "options": ["das Stück", "der Meter", "das Kilo"],
         "answer": "das Stück"
       },
       {
         "id": 2,
         "type": "speechToText",
-        "question": "Впишите услышанное: Мне нужно десять штук",
+        "question": "masterLandsTwelveQuests.questTwo",
         "text": "Ich brauche zehn Stück",
         "answer": "Ich brauche zehn Stück"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Как сказать: Метр",
+        "question": "masterLandsTwelveQuests.questThree",
         "options": ["der Sack", "der Meter", "das Stück"],
         "answer": "der Meter"
       },
       {
         "id": 4,
         "type": "reorder",
-        "question": "Соберите: Это длиной три метра",
+        "question": "masterLandsTwelveQuests.questFour",
         "words": ["lang", "Meter", "drei", "Das", "ist"],
         "correctOrder": ["Das", "ist", "drei", "Meter", "lang"]
       },
       {
         "id": 5,
         "type": "select",
-        "question": "Как сказать: Мешок",
-        "options": ["der Sack", "die Kiste", "das Rohr"],
-        "answer": "der Sack"
+        "question": "masterLandsTwelveQuests.questFive",
+        "options": ["die Menge", "die Arbeit", "die Zeit"],
+        "answer": "die Menge"
       },
       {
         "id": 6,
-        "type": "input",
-        "question": "Вставьте слово (мешок): Der ___ ist schwer.",
-        "correctAnswer": "Sack"
+        "type": "speechToText",
+        "question": "masterLandsTwelveQuests.questSix",
+        "text": "Die Menge ist falsch",
+        "answer": "Die Menge ist falsch"
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Соберите предложение",
+        "question": "masterLandsTwelveQuests.questSeven",
         "words": ["Säcke", "Bring", "zwei", "noch"],
         "correctOrder": ["Bring", "noch", "zwei", "Säcke"]
       },
       {
         "id": 8,
         "type": "speechToText",
-        "question": "Впишите услышанное",
-        "text": "Das ist zu wenig",
-        "answer": "Das ist zu wenig"
+        "question": "masterLandsTwelveQuests.questEight",
+        "text": "Welche Menge? Die Menge ist Zwei",
+        "answer": "Welche Menge? Die Menge ist Zwei",
+        "accept": [
+          "Welche Menge? Die Menge ist Zwei",
+          "Welche Menge? Die Menge ist 2"
+        ]
       },
       {
         "id": 9,
         "type": "select",
-        "question": "Как сказать: Сначала",
+        "question": "masterLandsTwelveQuests.questNine",
         "options": ["zuerst", "dann", "später"],
         "answer": "zuerst"
       },
       {
         "id": 10,
         "type": "input",
-        "question": "Вставьте слово (сначала): ___ machen wir das.",
+        "question": "masterLandsTwelveQuests.questTen",
         "correctAnswer": "Zuerst"
       },
       {
         "id": 11,
-        "type": "reorder",
-        "question": "Соберите: Потом мы это принесем",
-        "words": ["wir", "das", "bringen", "Dann"],
-        "correctOrder": ["Dann", "bringen", "wir", "das"]
+        "type": "speechToText",
+        "question": "masterLandsTwelveQuests.questEleven",
+        "text": "Die Menge ist genau zehn Stück",
+        "answer": "Die Menge ist genau zehn Stück",
+        "accept": [
+          "Die Menge ist genau zehn Stück",
+          "Die Menge ist genau 10 Stück"
+        ]
       },
       {
         "id": 12,
         "type": "select",
-        "question": "Как сказать: Половина",
+        "question": "masterLandsTwelveQuests.questTwelve",
         "options": ["die Hälfte", "alles", "nichts"],
         "answer": "die Hälfte"
       },
       {
         "id": 13,
         "type": "reorder",
-        "question": "Соберите предложение",
-        "words": ["Hälfte", "die", "nur", "Wir", "brauchen"],
+        "question": "masterLandsTwelveQuests.questThirteen",
+        "words": ["Hälfte", "die", "nur", "Wir", "brauchen", "der"],
         "correctOrder": ["Wir", "brauchen", "nur", "die", "Hälfte"]
       },
       {
         "id": 14,
         "type": "speechToText",
-        "question": "Впишите услышанное",
+        "question": "masterLandsTwelveQuests.questFourteen",
         "text": "Wie lang ist das Kabel",
         "answer": "Wie lang ist das Kabel"
       },
       {
         "id": 15,
         "type": "speechToText",
-        "question": "Впишите услышанное",
-        "text": "Zuerst zählen dann bringen",
-        "answer": "Zuerst zählen dann bringen"
+        "question": "masterLandsTwelveQuests.questFifteen",
+        "text": "Dieses Kabel ist 2 Meter lang",
+        "answer": "Dieses Kabel ist 2 Meter lang",
+        "accept": [
+          "Dieses Kabel ist 2 Meter lang",
+          "Dieses Kabel ist Zwei Meter lang"
+        ]
       }
     ]
   },
   {
-    "questId": "jobUniversal13",
-    "title": "Зарплата и договор",
+    "questId": "job-thirteen",
+    "title": "masterLandsThirteenQuests.title",
     "progress": "0/15",
-    "description": "Базовые слова про зарплату и договор без сложной лексики.",
+    "description": "masterLandsThirteenQuests.description",
     "conditions": {
       "goal": "Выучить простые слова и фразы про зарплату и договор",
-      "minCorrect": 15,
+      "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1469,7 +1481,7 @@
       {
         "id": 1,
         "type": "select",
-        "question": "Как сказать: Зарплата",
+        "question": "masterLandsThirteenQuests.questOne",
         "options": [
           "das Gehalt",
           "die Zeit",
@@ -1480,85 +1492,56 @@
       {
         "id": 2,
         "type": "speechToText",
-        "question": "Впишите услышанное",
+        "question": "masterLandsThirteenQuests.questTwo",
         "text": "Ich bekomme Gehalt",
         "answer": "Ich bekomme Gehalt"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Как сказать: Деньги",
-        "options": [
-          "das Geld",
-          "das Team",
-          "das Büro"
-        ],
+        "question": "masterLandsThirteenQuests.questThree",
+        "options": ["das Geld", "das Team", "das Büro"],
         "answer": "das Geld"
       },
       {
         "id": 4,
         "type": "reorder",
-        "question": "Соберите предложение",
-        "words": [
-          "bekomme",
-          "ich",
-          "Geld",
-          "heute",
-          "nicht"
-        ],
-        "correctOrder": [
-          "ich",
-          "bekomme",
-          "Geld"
-        ]
+        "question": "masterLandsThirteenQuests.questFour",
+        "words": ["bekomme", "ich", "Geld" , "bekommen"],
+        "correctOrder": ["ich", "bekomme", "Geld"]
       },
       {
         "id": 5,
         "type": "select",
-        "question": "Как сказать: Договор",
-        "options": [
-          "der Vertrag",
-          "der Termin",
-          "der Beruf"
-        ],
+        "question": "masterLandsThirteenQuests.questFive",
+        "options": ["der Vertrag", "der Termin", "der Beruf"],
         "answer": "der Vertrag"
       },
       {
         "id": 6,
         "type": "speechToText",
-        "question": "Впишите услышанное",
+        "question": "masterLandsThirteenQuests.questSix",
         "text": "der Vertrag",
         "answer": "der Vertrag"
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Соберите фразу",
-        "words": [
-          "habe",
-          "ich",
-          "einen",
-          "Vertrag",
-          "hier"
-        ],
-        "correctOrder": [
-          "ich",
-          "habe",
-          "einen",
-          "Vertrag"
-        ]
+        "question": "masterLandsThirteenQuests.questSeven",
+        "words": ["habe", "ich", "einen", "Vertrag", "mache", "eine"],
+        "correctOrder": ["ich", "habe", "einen", "Vertrag"]
       },
       {
         "id": 8,
         "type": "speechToText",
-        "question": "Впишите услышанное",
+        "question": "masterLandsThirteenQuests.questEight",
         "text": "Ich habe einen Vertrag",
         "answer": "Ich habe einen Vertrag"
       },
       {
         "id": 9,
         "type": "select",
-        "question": "Как сказать: Я подписываю договор",
+        "question": "masterLandsThirteenQuests.questNine",
         "options": [
           "Ich unterschreibe den Vertrag",
           "Ich schreibe den Vertrag",
@@ -1569,81 +1552,58 @@
       {
         "id": 10,
         "type": "input",
-        "question": "Впишите слово: Ich ___ den Vertrag.",
+        "question": "masterLandsThirteenQuests.questTen",
         "correctAnswer": "unterschreibe"
       },
       {
         "id": 11,
-        "type": "select",
-        "question": "Как сказать: Получать",
-        "options": [
-          "bekommen",
-          "beginnen",
-          "helfen"
-        ],
-        "answer": "bekommen"
+        "type": "speechToText",
+        "question": "masterLandsThirteenQuests.questEleven",
+        "text": "Wo muss ich unterschreiben",
+        "answer": "Wo muss ich unterschreiben"
       },
       {
         "id": 12,
-        "type": "reorder",
-        "question": "Соберите предложение",
-        "words": [
-          "wann",
-          "bekomme",
-          "ich",
-          "mein",
-          "Gehalt"
-        ],
-        "correctOrder": [
-          "wann",
-          "bekomme",
-          "ich",
-          "mein",
-          "Gehalt"
-        ]
+        "type": "select",
+        "question": "masterLandsThirteenQuests.questTwelve",
+        "options": ["die Steuern", "die Gebühren", "die Preise"],
+        "answer": "die Steuern"
       },
       {
         "id": 13,
         "type": "reorder",
-        "question": "Соберите предложение: Я получаю зарплату",
-        "words": [
-          "bekomme",
-          "ich",
-          "mein",
-          "Gehalt",
-          "heute"
-        ],
-        "correctOrder": [
-          "ich",
-          "bekomme",
-          "mein",
-          "Gehalt"
-        ]
+        "question": "masterLandsThirteenQuests.questThirteen",
+        "words": ["ich", "zahle", "Steuern", "in", "Deutschland", "mache", "im"],
+        "correctOrder": ["ich", "zahle", "Steuern", "in", "Deutschland"]
       },
       {
         "id": 14,
-        "type": "speechToText",
-        "question": "Впишите услышанное",
-        "text": "Wann bekomme ich mein Gehalt",
-        "answer": "Wann bekomme ich mein Gehalt"
+        "type": "select",
+        "question": "masterLandsThirteenQuests.questFourteen",
+        "options": ["die Steuerklasse", "die Steuernummer", "die Krankenkasse"],
+        "answer": "die Steuerklasse"
       },
       {
         "id": 15,
         "type": "speechToText",
-        "question": "Впишите услышанное",
-        "text": "Wo muss ich unterschreiben",
-        "answer": "Wo muss ich unterschreiben"
+        "question": "masterLandsThirteenQuests.questFifteen",
+        "text": "Ich habe Steuerklasse zwei",
+        "answer": "Ich habe Steuerklasse zwei",
+        "accept": [
+          "Ich habe Steuerklasse zwei",
+          "Ich habe Steuerklasse 2"
+        ]
       }
     ]
   },
   {
-    "questId": "jobUniversal14",
-    "title": "Отсутствие: отпуск и больничный",
+    "questId": "job-fourteen",
+    "title": "masterLandsFourteenQuests.title",
     "progress": "0/15",
-    "description": "Полезные фразы: отпуск, выходной, болен, сегодня не могу прийти (A2 max).",
+    "description": "masterLandsFourteenQuests.description",
     "conditions": {
-      "goal": "Выучить фразы про отсутствие на работе",
-      "minCorrect": 15,
+      "goal": "Научиться оформлять больничный на немецком",
+      "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1654,126 +1614,131 @@
       {
         "id": 1,
         "type": "select",
-        "question": "Как сказать: Отпуск",
+        "question": "masterLandsFourteenQuests.questOne",
         "options": [
-          "der Urlaub",
-          "der Vertrag",
-          "das Gehalt"
+          "die Krankschreibung",
+          "die Einladung",
+          "die Rechnung"
         ],
-        "answer": "der Urlaub"
+        "answer": "die Krankschreibung"
       },
       {
         "id": 2,
         "type": "speechToText",
-        "question": "Впишите услышанное",
-        "text": "Ich habe Urlaub",
-        "answer": "Ich habe Urlaub"
+        "question": "masterLandsFourteenQuests.questTwo",
+        "text": "Ich bin krank",
+        "answer": "Ich bin krank"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Как сказать: выходной(свободный)",
+        "question": "masterLandsFourteenQuests.questThree",
         "options": [
-          "frei",
-          "dringend",
-          "neu"
+          "sich krankmelden",
+          "sich freuen",
+          "sich waschen"
         ],
-        "answer": "frei"
+        "answer": "sich krankmelden"
       },
       {
         "id": 4,
         "type": "reorder",
-        "question": "Соберите предложение",
-        "words": ["bin", "ich", "heute", "frei", "Büro"],
-        "correctOrder": ["ich", "bin", "heute", "frei"]
+        "question": "masterLandsFourteenQuests.questFour",
+        "words": ["muss", "ich", "zum", "Arzt", "gehen", "bin"],
+        "correctOrder": ["ich", "muss", "zum", "Arzt", "gehen"]
       },
       {
         "id": 5,
-        "type": "select",
-        "question": "Как сказать: больной",
-        "options": [
-          "krank",
-          "müde",
-          "wichtig"
-        ],
-        "answer": "krank"
+        "type": "reorder",
+        "question": "masterLandsFourteenQuests.questFive",
+        "words": ["ich", "melde", "mich", "heute", "krank", "du", "ist"],
+        "correctOrder": ["ich", "melde", "mich", "heute", "krank"]
       },
       {
         "id": 6,
-        "type": "input",
-        "question": "Впишите слово(больной) Ich bin ___ .",
-        "correctAnswer": "krank"
+        "type": "select",
+        "question": "masterLandsFourteenQuests.questSix",
+        "options": [
+          "Ich kann nicht arbeiten",
+          "Ich will nicht arbeiten",
+          "Ich muss nicht arbeiten"
+        ],
+        "answer": "Ich kann nicht arbeiten"
       },
       {
         "id": 7,
-        "type": "reorder",
-        "question": "Соберите фразу",
-        "words": ["kann", "ich", "heute", "nicht", "kommen"],
-        "correctOrder": ["ich", "kann", "heute", "nicht", "kommen"]
+        "type": "speechToText",
+        "question": "masterLandsFourteenQuests.questSeven",
+        "text": "Ich kann nicht arbeiten, weil ich krank bin",
+        "answer": "Ich kann nicht arbeiten, weil ich krank bin"
       },
       {
         "id": 8,
-        "type": "speechToText",
-        "question": "Впишите услышанное",
-        "text": "Ich kann heute nicht kommen",
-        "answer": "Ich kann heute nicht kommen"
+        "type": "reorder",
+        "question": "masterLandsFourteenQuests.questEight",
+        "words": ["hier", "ist", "meine", "Krankschreibung", "das", "sind"],
+        "correctOrder": ["hier", "ist", "meine", "Krankschreibung"]
       },
       {
         "id": 9,
-        "type": "select",
-        "question": "Как сказать: Мне нужен выходной",
-        "options": [
-          "Ich brauche einen freien Tag",
-          "Ich brauche frei Tag",
-          "Ich habe freien Tag brauchen"
-        ],
-        "answer": "Ich brauche einen freien Tag"
+        "type": "speechToText",
+        "question": "masterLandsFourteenQuests.questNine",
+        "text": "Ich bin bis Montag krankgeschrieben",
+        "answer": "Ich bin bis Montag krankgeschrieben"
       },
       {
         "id": 10,
-        "type": "input",
-        "question": "Впишите слово: Ich ___ einen freien Tag.",
-        "correctAnswer": "brauche"
+        "type": "reorder",
+        "question": "masterLandsFourteenQuests.questTen",
+        "words": ["wie", "lange", "sind", "Sie", "krankgeschrieben", "heute", "du"],
+        "correctOrder": ["wie", "lange", "sind", "Sie", "krankgeschrieben"]
       },
       {
         "id": 11,
         "type": "select",
-        "question": "Как сказать: Оставаться",
+        "question": "masterLandsFourteenQuests.questEleven",
         "options": [
-          "bleiben",
-          "gehen",
-          "machen"
+          "die Krankenkasse",
+          "die Sparkasse",
+          "die Apotheke"
         ],
-        "answer": "bleiben"
+        "answer": "die Krankenkasse"
       },
       {
         "id": 12,
-        "type": "reorder",
-        "question": "Соберите предложение",
-        "words": ["ich", "bin", "krank", "und", "bleibe", "zu", "Hause"],
-        "correctOrder": ["ich", "bin", "krank", "und", "bleibe", "zu", "Hause"]
+        "type": "select",
+        "question": "masterLandsFourteenQuests.questTwelve",
+        "options": [
+          "Ich muss den Arbeitgeber informieren",
+          "Ich muss den Arbeitgeber anrufen",
+          "Ich muss den Arbeitgeber suchen"
+        ],
+        "answer": "Ich muss den Arbeitgeber informieren"
       },
-
       {
         "id": 13,
         "type": "reorder",
-        "question": "Соберите предложение: Я в отпуске",
-        "words": ["bin", "ich", "im", "Urlaub", "heute"],
-        "correctOrder": ["ich", "bin", "im", "Urlaub"]
+        "question": "masterLandsFourteenQuests.questThirteen",
+        "words": ["ich", "bin", "drei", "Tage", "krankgeschrieben", "habe"],
+        "correctOrder": ["ich", "bin", "drei", "Tage", "krankgeschrieben"]
       },
       {
         "id": 14,
         "type": "speechToText",
-        "question": "Впишите услышанное",
-        "text": "Ich bin krank und bleibe zu Hause",
-        "answer": "Ich bin krank und bleibe zu Hause"
+        "question": "masterLandsFourteenQuests.questFourteen",
+        "text": "Morgen bin ich wieder auf der Arbeit",
+        "answer": "Morgen bin ich wieder auf der Arbeit"
       },
       {
         "id": 15,
         "type": "speechToText",
-        "question": "Впишите услышанное",
-        "text": "Ich habe Urlaub",
-        "answer": "Ich habe Urlaub"
+        "question": "masterLandsFourteenQuests.questFifteen",
+        "text": "Ich bin zwei Wochen krankgeschrieben",
+        "answer": "Ich bin zwei Wochen krankgeschrieben",
+        "accept": [
+          "Ich bin zwei Wochen krankgeschrieben",
+          "Ich bin 2 Wochen krankgeschrieben"
+        ]
       }
     ]
   }

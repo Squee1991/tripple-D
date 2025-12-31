@@ -65,7 +65,7 @@ export const regions = [
 	// 	pathTo: "master-lands",
 	// 	theme: "master",
 	// 	name: "locationNames.master-lands",
-	// 	level: 13,
+	// 	level: 1,
 	// 	desc: "regions.descriptionMasterLands",
 	// 	icon: MasterLands
 	// }
