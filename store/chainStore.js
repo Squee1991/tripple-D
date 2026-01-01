@@ -4,7 +4,7 @@ import { regions } from '~/utils/regions.js'
 import { doc, getDoc, getFirestore, runTransaction, increment, setDoc } from 'firebase/firestore'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 
-const REGEN_INTERVAL_MS = 40 * 1000
+const REGEN_INTERVAL_MS = 60 * 1000
 const MAX_LIVES = 5
 
 export const userChainStore = defineStore('chain', () => {
@@ -598,6 +598,8 @@ export const userChainStore = defineStore('chain', () => {
 
 		lives,
 		maxLives,
+		lastLifeAtMs,
+		REGEN_INTERVAL_MS,
 
 		questProgress,
 		sessionStarted,

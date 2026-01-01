@@ -210,13 +210,13 @@
         <template v-if="purchaseState === 'success'">
           <div class="modal-title">{{ t('cabinet.boughtAvatar') }}</div>
           <div class="modal-actions">
-            <button class="btn btn-success" @click="closePurchaseOk">{{ t('cabinet.boughtBtn') }}</button>
+            <button class="btn btn-success" @click="closePurchaseOk">{{ t('shareModal.close') }}</button>
           </div>
         </template>
         <template v-else-if="purchaseState === 'insufficient'">
           <div class="modal-title">{{ t('cabinet.notEnoughtArticles') }}</div>
           <div class="modal-actions">
-            <button class="btn" @click="closePurchaseOk">{{ t('cabinet.boughtBtn') }}</button>
+            <button class="btn" @click="closePurchaseOk">{{ t('shareModal.close') }}</button>
           </div>
         </template>
         <template v-else>

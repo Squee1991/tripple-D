@@ -2,7 +2,7 @@
   <div>
     <div class="quest">
       <button class="quest__back-btn" @click="openLeave('back')">×</button>
-      <div v-if="questStore.finished && questStore.success && !questStore.hasMistakes" class="quest__stamp quest__stamp--ok">ПРОЙДЕНО</div>
+      <div v-if="questStore.finished && questStore.success && !questStore.hasMistakes" class="quest__stamp quest__stamp--ok">{{ t('locationQuests.done')}}</div>
       <div v-if="questStore.loading" class="quest__panel quest__panel--loading"></div>
       <div v-else-if="questStore.error" class="quest__panel quest__panel--error">
         <div>Error</div>
@@ -29,7 +29,22 @@
           </div>
           <div class="quest__lives" v-if="!previouslyCleared">
             <div class="quest__hearts">
-              <span v-for="life in questStore.maxLives" :key="life" class="quest__heart" :class="{ 'quest__heart--lost': life > questStore.lives }">❤️</span>
+              <div
+                  v-for="(n, i) in questStore.maxLives"
+                  :key="i"
+                  class="quest__heart-wrapper"
+              >
+                <svg class="quest__heart-svg" viewBox="0 0 32 29.6">
+                  <path class="heart-bg" d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+                    c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
+                  <path
+                      class="heart-fill"
+                      :style="getHeartFillStyle(i)"
+                      d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+                    c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
         </div>
@@ -268,6 +283,45 @@ const inputRef = ref(null)
 const showHint = ref(false)
 const NUMBERS_HINT_KEY = 'hide_numbers_hint_modal'
 
+const now = ref(Date.now())
+let rafId = null
+
+function updateTimer() {
+  now.value = Date.now()
+  rafId = requestAnimationFrame(updateTimer)
+}
+
+onMounted(() => {
+  updateTimer()
+})
+
+onBeforeUnmount(() => {
+  if (rafId) cancelAnimationFrame(rafId)
+})
+
+function getHeartFillStyle(i) {
+  if (i < questStore.lives) {
+    return { clipPath: 'inset(0% 0 0 0)', transition: 'clip-path 0.3s ease-in-out' }
+  }
+
+  if (i === questStore.lives && questStore.lives < questStore.maxLives && questStore.lastLifeAtMs > 0) {
+
+    // ИСПРАВЛЕНО: Теперь время берется ТОЛЬКО из Store. Никаких хардкод цифр.
+    const regenMs = questStore.REGEN_INTERVAL_MS
+
+    const elapsed = Math.max(0, now.value - questStore.lastLifeAtMs)
+    const progress = Math.min(100, (elapsed / regenMs) * 100)
+    const insetVal = 100 - progress
+
+    return {
+      clipPath: `inset(${insetVal}% 0 0 0)`,
+      transition: 'none'
+    }
+  }
+
+  return { clipPath: 'inset(100% 0 0 0)', transition: 'clip-path 0.3s ease-in-out' }
+}
+
 const inputPlaceholders = {
   inputType: t('locationsPlaceholder.inputType'),
 }
@@ -310,7 +364,7 @@ async function speakText(text) {
   try {
     await getSpeechAudio(text.trim());
   } catch (error) {
-    console.error('Ошибка при озвучивании:', error);
+    console.error(error);
   } finally {
     isSpeaking.value = false;
   }
@@ -364,7 +418,6 @@ function goThemes() {
     router.back()
   } else if (regionKey.value) {
     router.push(`/location/${regionKey.value}`)
-  } else {
   }
 }
 
@@ -509,6 +562,7 @@ watch([questId, regionKey], () => {
 
 onBeforeUnmount(() => {
   window.removeEventListener('beforeunload', beforeUnloadHandler)
+  if (rafId) cancelAnimationFrame(rafId)
 })
 
 watchEffect(() => {
@@ -525,10 +579,6 @@ watchEffect(() => {
   display: flex;
   flex-direction: column;
   padding: 10px 1.5rem;
-}
-
-.quest__panel {
-
 }
 
 .quest__panel--error {
@@ -623,27 +673,9 @@ watchEffect(() => {
   justify-content: center;
   width: 4.5rem;
   height: 2.5rem;
-  /*border: 2px solid #ff82a9;*/
   border-radius: 50%;
   background: whitesmoke;
 }
-
-
-@keyframes pulse-ring {
-  0% {
-    transform: scale(1);
-    opacity: 0.8;
-  }
-  50% {
-    transform: scale(1.1);
-    opacity: 0.4;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 0.8;
-  }
-}
-
 
 .quest__lives {
   padding: .5rem 1rem;
@@ -652,20 +684,30 @@ watchEffect(() => {
 
 .quest__hearts {
   display: flex;
-  gap: .5rem;
-  font-size: 1.6rem;
-  line-height: 1;
-  margin-top: 2px;
+  gap: 8px;
+  align-items: center;
 }
 
-.quest__heart {
-  transition: transform .2s ease, filter .2s ease, opacity .2s ease;
+.quest__heart-wrapper {
+  position: relative;
+  width: 30px;
+  height: 30px;
 }
 
-.quest__heart--lost {
-  transform: scale(.85);
-  filter: grayscale(1);
-  opacity: .55;
+.quest__heart-svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 2px 1px rgba(0,0,0,0.1));
+}
+
+.heart-bg {
+  fill: #e2e2e2;
+  stroke: #ccc;
+  stroke-width: 1px;
+}
+
+.heart-fill {
+  fill: #ff4d4d;
 }
 
 .quest__section {
@@ -816,25 +858,6 @@ watchEffect(() => {
   gap: 10px;
 }
 
-.quest__tts {
-  width: min(860px, 96%);
-  margin: 0 auto;
-  background: #fff;
-  border: 3px solid #1e1e1e;
-  border-radius: 16px;
-  box-shadow: 4px 4px 0 #1e1e1e;
-  padding: 16px;
-}
-
-.quest__tts-text {
-  font-size: 22px;
-  margin: 0 0 6px;
-}
-
-.quest__tts-hint {
-  opacity: .85;
-}
-
 .quest__feedback {
   position: absolute;
   left: 0;
@@ -923,10 +946,6 @@ watchEffect(() => {
   width: 90%;
   text-align: center;
   margin: 0 auto;
-}
-
-.quest-complete--solo .quest-complete__actions--one {
-  justify-content: center;
 }
 
 .btn {
@@ -1045,15 +1064,10 @@ watchEffect(() => {
     left: 1rem;
     top: 1rem;
   }
-
   .quest__top {
     flex-direction: column;
     align-items: center;
     gap: .75rem;
-  }
-
-  .quest__lives {
-    margin-left: 0;
   }
 }
 
@@ -1063,13 +1077,7 @@ watchEffect(() => {
     height: 2.3rem;
     font-size: 1rem;
     border: none;
-
   }
-
-  .quest__stat-value::after {
-    box-shadow: 0 0 10px rgba(255, 160, 190, 0.8);
-  }
-
   .quest__top {
     position: relative;
     display: flex;
@@ -1080,7 +1088,6 @@ watchEffect(() => {
     box-shadow: none;
     border: none;
   }
-
   .quest__stat {
     order: 2;
     text-align: center;
@@ -1089,11 +1096,9 @@ watchEffect(() => {
     padding: .3rem .7rem;
     margin-top: 2.5rem;
   }
-
   .quest__word-btn {
     font-size: 14px;
   }
-
   .quest__lives {
     order: 1;
     position: absolute;
@@ -1103,34 +1108,15 @@ watchEffect(() => {
     left: 50%;
     transform: translateX(-50%);
   }
-
-  .quest__hearts {
-    font-size: 1.6rem;
-    display: flex;
-    gap: .3rem;
+  .quest__heart-wrapper {
+    width: 28px;
+    height: 28px;
   }
-
-  .quest__top {
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    gap: 0.3rem;
-  }
-
-  .quest__section {
-    margin-top: 1rem;
-  }
-
   .quest__question {
     font-size: 1.2rem;
     border-bottom: 2px solid #9dceff;
     border-radius: 15px;
   }
-
-  .quest__feedback-text {
-    font-size: 1.4rem;
-  }
-
   .quest__back-btn {
     font-size: 30px;
     top: 10px;
@@ -1140,18 +1126,6 @@ watchEffect(() => {
     box-shadow: none;
     color: var(--titleColor);
   }
-
-  .quest__feedback {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    margin: 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    padding: 30px 15px;
-  }
-
   .quest__option-btn {
     height: 47px;
     font-size: 15px;
@@ -1159,7 +1133,6 @@ watchEffect(() => {
     border: 2px solid black;
     padding: 5px;
   }
-
   .btn {
     height: 52px;
     padding: 0 28px;
@@ -1195,5 +1168,4 @@ watchEffect(() => {
 .quest__dot--wrong {
   background: #d9534f;
 }
-
 </style>

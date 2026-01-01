@@ -7,9 +7,7 @@
       </header>
       <div v-if="isLoading" class="loading">{{ t('locationQuests.loading') }}</div>
       <div v-else class="quests">
-        <div v-if="errorMessage" class="error">
-          {{ t('locationQuests.error') }}
-        </div>
+        <div v-if="errorMessage" class="error">{{ t('locationQuests.error') }}</div>
         <ul v-else-if="processedQuests.length" class="quest-list">
           <li
               v-for="quest in processedQuests"
