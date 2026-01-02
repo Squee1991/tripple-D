@@ -20,7 +20,7 @@ export const regions = [
 		pathTo: "stone-reach",
 		theme: "stone",
 		name: "locationNames.stone-reach",
-		level: 3,
+		level: 1,
 		desc: "regions.descriptionStoneReach",
 		icon: StoneReach
 	},
@@ -29,7 +29,7 @@ export const regions = [
 		pathTo: "wind-valley",
 		theme: "winds",
 		name: "locationNames.wind-valley",
-		level: 5,
+		level: 1,
 		desc: "regions.descriptionWindValley",
 		icon: WindValley
 	},
@@ -38,7 +38,7 @@ export const regions = [
 		pathTo: "lake-ruins",
 		theme: "ruins",
 		name: "locationNames.lake-ruins",
-		level: 7,
+		level: 1,
 		desc: "regions.descriptionLakeRuins",
 		icon: LakeRuins
 	},
@@ -47,7 +47,7 @@ export const regions = [
 		pathTo: "north-cliffs",
 		theme: "north",
 		name: "locationNames.north-cliffs",
-		level: 9,
+		level: 1,
 		desc: "regions.descriptionNorthCliffs",
 		icon: NorthCliffs
 	},
@@ -56,17 +56,17 @@ export const regions = [
 		pathTo: "storm-coast",
 		theme: "storm",
 		name: "locationNames.storm-coast",
-		level: 11,
+		level: 1,
 		desc: "regions.descriptionStormCoast",
 		icon: StormCoast
 	},
-	// {
-	// 	id: "master-lands",
-	// 	pathTo: "master-lands",
-	// 	theme: "master",
-	// 	name: "locationNames.master-lands",
-	// 	level: 1,
-	// 	desc: "regions.descriptionMasterLands",
-	// 	icon: MasterLands
-	// }
+	{
+		id: "master-lands",
+		pathTo: "master-lands",
+		theme: "master",
+		name: "locationNames.master-lands",
+		level: 1,
+		desc: "regions.descriptionMasterLands",
+		icon: MasterLands
+	}
 ];

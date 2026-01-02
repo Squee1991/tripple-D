@@ -50,14 +50,14 @@ export const wordAchievementsGroup = [
 				currentProgress: 0,
 				targetProgress: 10
 			},
-			// {
-			// 	id: 'master-lands',
-			// 	name: 'locationAchievementsCategory.seventhName',
-			// 	description: 'locationAchievementsCategory.seventhDescription',
-			// 	icon: '🛠️',
-			// 	currentProgress: 14,
-			// 	targetProgress: 14
-			// },
+			{
+				id: 'master-lands',
+				name: 'locationAchievementsCategory.seventhName',
+				description: 'locationAchievementsCategory.seventhDescription',
+				icon: '🛠️',
+				currentProgress: 14,
+				targetProgress: 14
+			},
 			{
 				id: 'FiveHearts',
 				name: 'locationAchievementsCategory.fiveHearthName',
