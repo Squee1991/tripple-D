@@ -5,62 +5,128 @@
                 <div class="form__animation-wrapper">
                     <div ref="msgAnimationWrapper" class="form__animation"></div>
                 </div>
-                <div class="form__content">
+                <form
+                        ref="formRef"
+                        class="form__content"
+                        @submit.prevent="sendMessage"
+                >
                     <div class="form__header">
                         <p class="form__label">{{ t(data.label) }}</p>
                         <h2 class="form__title">{{ t(data.title) }}</h2>
                     </div>
                     <div class="form__field">
-                        <label class="form__field-label" for="user_email">{{ t(data.placeholder.email) }}</label>
-                        <input id="user_email" class="input" v-model="userEmail" type="email" name="user_email"
-                               :placeholder="t(data.placeholder.email)"/>
-                        <span class="error__message" v-if="errors.name">{{ errors.name }}</span>
+                        <input
+                                class="input"
+                                type="email"
+                                v-model="userEmail"
+                                :placeholder="t(data.placeholder.email)"
+                        />
+                        <span class="error__message" v-if="errors.email">{{ errors.email }}</span>
                     </div>
                     <div class="form__field">
-                        <label class="form__field-label" for="user_message">{{ t(data.placeholder.message) }}</label>
-                        <textarea id="user_message" v-model="userMessage" class="area" cols="30" rows="5" name="message"
-                                  :placeholder="t(data.placeholder.message)"></textarea>
-                        <span class="error__message" v-if="errors.message">{{ errors.message }}</span>
+                        <textarea
+                                class="area"
+                                v-model="userMessage"
+                                :placeholder="t(data.placeholder.message)"
+                        ></textarea>
+                        <span class="error__message" v-if="errors.message">{{ errors.message }}  </span>
                     </div>
-                    <button type="submit" class="btn--submit" @click="sendMessage">{{ t(data.btn.text) }}</button>
-                </div>
+                    <div class="form__field">
+                        <input
+                                class="custom-input"
+                                id="file"
+                                type="file"
+                                accept="image/png,image/jpeg"
+                                @change="onFileChange"
+                        />
+                        <label for="file" class="custom-btn">
+                            <span class="paper_clip">📎</span>
+                            <span> Прикрепить файл</span>
+
+                        </label>
+                        <span class="error__message" v-if="errors.file">{{ errors.file }}</span>
+                        <div class="btn-screenshot" v-for="(item, index) in images" :key="index">
+                            <div class="file-info">
+                                <span class="file-icon">📄</span>
+                                <span class="file-name">screenshot-{{ index + 1 }}</span>
+                            </div>
+                            <button type="button" class="delete-image" @click="removeImage(index)">
+                                <img src="../../assets/images/garbage.svg" alt="garbage">
+                            </button>
+                        </div>
+
+                    </div>
+                    <button
+                            type="submit"
+                            class="btn--submit"
+                            :disabled="isSending"
+                    >
+                        {{ isSending ? t('sending') : t(data.btn.text) }}
+                    </button>
+                </form>
+
             </div>
         </div>
     </section>
 </template>
 
 <script setup>
-import MessageAnimation from '../../assets/animation/sendMessage.json'
-import {ref, onMounted} from 'vue';
-import Lottie from 'lottie-web';
-import emailjs from 'emailjs-com';
-import {gsap} from "gsap";
-import {ScrollTrigger} from "gsap/ScrollTrigger";
-import {userAuthStore} from "~/store/authStore.js";
+import {ref, onMounted, onUnmounted, computed} from 'vue'
+import {useI18n} from 'vue-i18n'
+import emailjs from 'emailjs-com'
+import Lottie from 'lottie-web'
+import MessageAnimation from '@/assets/animation/sendMessage.json'
+import {gsap} from 'gsap'
+import {ScrollTrigger} from 'gsap/ScrollTrigger'
+import {userAuthStore} from '~/store/authStore.js'
 
-gsap.registerPlugin(ScrollTrigger);
-const authStore = userAuthStore()
-const contactSection = ref(null);
-const msgAnimationWrapper = ref(null);
+import {
+    getStorage,
+    ref as storageRef,
+    uploadBytes,
+    getDownloadURL
+} from 'firebase/storage'
+
+gsap.registerPlugin(ScrollTrigger)
+
 const {t} = useI18n()
-const contactFormRef = ref(null);
+const authStore = userAuthStore()
 
-const data = ref({
+/* refs */
+const contactSection = ref(null)
+const contactFormRef = ref(null)
+const msgAnimationWrapper = ref(null)
+const formRef = ref(null)
+
+/* form data */
+const userEmail = ref(authStore.email || '')
+const userMessage = ref('')
+const images = ref([])
+const isSending = ref(false)
+
+/* errors */
+const errors = ref({
+    email: '',
+    message: '',
+    file: ''
+})
+
+/* constants */
+const MAX_FILE_SIZE = 2 * 1024 * 1024 // 2MB
+
+const data = {
     label: 'feedBack.label',
     title: 'feedBack.title',
-    btn: {
-        text: 'feedBack.btn',
-    },
+    btn: {text: 'feedBack.btn'},
     placeholder: {
         email: 'feedBack.emailPlaceholder',
         message: 'feedBack.messagePlaceholder'
     }
-});
+}
 
-const errors = ref({email: '', message: ''})
-const userEmail = ref(authStore.email);
-const userMessage = ref('');
 
+
+/* lifecycle */
 onMounted(() => {
     if (msgAnimationWrapper.value) {
         Lottie.loadAnimation({
@@ -69,62 +135,116 @@ onMounted(() => {
             loop: false,
             animationData: MessageAnimation,
             name: 'feedbackAnimation'
-        });
+        })
     }
 
     if (contactFormRef.value) {
         gsap.from(contactFormRef.value, {
             scrollTrigger: {
                 trigger: contactFormRef.value,
-                start: "top 80%",
-                toggleActions: "play none none none",
+                start: 'top 80%'
             },
             y: 100,
             opacity: 0,
             duration: 0.8,
-            ease: "power3.out",
+            ease: 'power3.out'
+        })
+    }
+})
+
+onUnmounted(() => {
+    ScrollTrigger.killAll()
+})
+
+
+const onFileChange = (e) => {
+    const files = e.target.files;
+    if (!files || files.length === 0) return;
+
+    for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        if (file.size > MAX_FILE_SIZE) {
+            errors.value.file = t('errors.fileTooLarge');
+            continue;
+        }
+
+        images.value.push({
+            file: file,
+            url: URL.createObjectURL(file)
         });
     }
-});
+    e.target.value = "";
+};
+const removeImage = (index) => {
+    URL.revokeObjectURL(images.value[index].url)
+    images.value.splice(index, 1)
+}
+
+
+const uploadScreenshot = async (file) => {
+    const storage = getStorage()
+    const fileRef = storageRef(
+        storage,
+        `feedback/${Date.now()}-${file.name}`
+    )
+
+    await uploadBytes(fileRef, file)
+    return await getDownloadURL(fileRef)
+}
 
 const sendMessage = async () => {
-    errors.value = {name: '', message: ''};
+    errors.value = {email: '', message: '', file: ''}
+
     if (!userEmail.value.trim()) {
-        errors.value.name = t('errors.errorEmail');
-    }
-    if (!userMessage.value.trim()) {
-        errors.value.message = t('errors.enterMsg');
-    }
-    if (errors.value.email || errors.value.message) {
-        return;
+        errors.value.email = t('errors.errorEmail')
+        return
     }
 
+    if (!userMessage.value.trim()) {
+        errors.value.message = t('errors.enterMsg')
+        return
+    }
+
+    isSending.value = true;
     try {
+        let screenshotUrl = '-';
+
+        // Берем только ПЕРВОЕ изображение из массива для отправки (так как EmailJS ждет одну ссылку)
+        if (images.value.length > 0) {
+            screenshotUrl = await uploadScreenshot(images.value[0].file);
+        }
+
         await emailjs.send(
-            "service_1ciacg7",
-            "template_nh1qmx9",
+            'service_1ciacg7',
+            'template_nh1qmx9',
             {
                 user_email: userEmail.value,
                 message: userMessage.value,
-                name: userEmail.value
+                screenshot: screenshotUrl // Передаем URL, а не массив
             },
-            "rh5IqXjASdtNeHdyG"
+            'rh5IqXjASdtNeHdyG'
         );
-        Lottie.play('feedbackAnimation');
-        resetFields();
-    } catch (error) {
-        console.error(error);
-    }
-};
-const resetFields = () => {
-    userEmail.value = '';
-    userMessage.value = '';
-    errors.value = {name: '', message: ''};
-};
 
+        Lottie.play('feedbackAnimation');
+
+        // Сброс формы
+        userMessage.value = '';
+        images.value.forEach(img => URL.revokeObjectURL(img.url)); // Чистим память
+        images.value = []; // Сбрасываем в пустой массив
+        if (formRef.value) formRef.value.reset();
+
+    } catch (error) {
+        console.error("Error sending:", error);
+        errors.value.message = t('errors.sendFailed');
+    } finally {
+        isSending.value = false;
+    }
+}
 </script>
 
 <style scoped>
+
+
 
 .contact__wrapper {
     width: 100%;
@@ -249,6 +369,7 @@ const resetFields = () => {
     background-color: #4ade80;
     color: #1e1e1e;
     box-shadow: 4px 4px 0px #1e1e1e;
+    margin-top: 20px;
 }
 
 .btn--submit:hover {
@@ -305,5 +426,56 @@ const resetFields = () => {
     .btn--submit {
         font-size: 1rem;
     }
+}
+
+.custom-input {
+    display: none;
+}
+
+.custom-btn {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+
+
+}
+.file-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f0f0f0;
+    padding: 6px 12px;
+
+
+}
+.file-name {
+    font-weight: 700;
+    color: #1e1e1e;
+    font-size: 0.9rem;
+}
+
+.btn-screenshot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+    background: #ffffff;
+    padding: 4px;
+    border: 2px solid #1e1e1e;
+    border-radius: 8px;
+}
+
+.paper_clip {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.delete-image {
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    background: none;
+    width: 30px;
+    height: 30px;
 }
 </style>
