@@ -5315,7 +5315,8 @@
     "btn": "отправить сообщение",
     "namePlaceholder": "Введите имя",
     "messagePlaceholder": "Введите ваше сообщение",
-    "emailPlaceholder": "Введите ваш email"
+    "emailPlaceholder": "Введите ваш email",
+    "screenShot": "Прикрепить файл"
   },
   "errors": {
     "errorEmail": "Введите email",

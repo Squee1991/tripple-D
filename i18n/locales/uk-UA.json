@@ -5329,9 +5329,9 @@
     "btn": "Надіслати повідомлення",
     "namePlaceholder": "Введіть ім’я",
     "messagePlaceholder": "Введіть ваше повідомлення",
-    "emailPlaceholder": "Введіть вашу електронну пошту"
+    "emailPlaceholder": "Введіть вашу електронну пошту",
+    "screenShot": "Прикріпити файл"
   },
-
   "errors": {
     "errorEmail": "Введіть email",
     "errorPassword": "Введіть пароль",

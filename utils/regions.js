@@ -5,6 +5,7 @@ import LakeRuins from 'assets/images/locations-images/lake-ruins.png'
 import StormCoast from 'assets/images/locations-images/storm-coast.png'
 import StoneReach from 'assets/images/locations-images/stone-reach.png'
 import MasterLands from 'assets/images/locations-images/master-lands.png'
+import WildLand from 'assets/images/locations-images/wild-land.png'
 export const regions = [
 	{
 		id: "east-plain",
@@ -60,13 +61,22 @@ export const regions = [
 		desc: "regions.descriptionStormCoast",
 		icon: StormCoast
 	},
+	{
+		id: "master-lands",
+		pathTo: "master-lands",
+		theme: "master",
+		name: "locationNames.master-lands",
+		level: 13,
+		desc: "regions.descriptionMasterLands",
+		icon: MasterLands
+	},
 	// {
-	// 	id: "master-lands",
-	// 	pathTo: "master-lands",
-	// 	theme: "master",
-	// 	name: "locationNames.master-lands",
-	// 	level: 1,
-	// 	desc: "regions.descriptionMasterLands",
-	// 	icon: MasterLands
+	// 	id: "wild-lands",
+	// 	pathTo: "wild-lands",
+	// 	theme: "wild",
+	// 	name: "Дикие земли",
+	// 	level: 0,
+	// 	desc: "Жизнь природы полна удивительных открытий. Здесь ты узнаешь, как называть лесных обитателей, описывать их действия и составлять предложения о мире животных.",
+	// 	icon: WildLand
 	// }
 ];

@@ -5314,7 +5314,8 @@
     "btn": "Xabar yuborish",
     "namePlaceholder": "Ismingizni kiriting",
     "messagePlaceholder": "Xabaringizni kiriting",
-    "emailPlaceholder": "Email manzilingizni kiriting"
+    "emailPlaceholder": "Email manzilingizni kiriting",
+    "screenShot": "Faylni biriktirish"
   },
   "errors": {
     "errorEmail": "Email kiriting",

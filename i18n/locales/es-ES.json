@@ -5313,7 +5313,8 @@
     "btn": "Enviar mensaje",
     "namePlaceholder": "Introduce tu nombre",
     "messagePlaceholder": "Introduce tu mensaje",
-    "emailPlaceholder": "Introduce tu correo electrónico"
+    "emailPlaceholder": "Introduce tu correo electrónico",
+    "screenShot": "Adjuntar archivo"
   },
   "errors": {
     "errorEmail": "Introduce email",

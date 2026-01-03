@@ -5327,7 +5327,8 @@
     "btn": "Mesaj gönder",
     "namePlaceholder": "Adınızı girin",
     "messagePlaceholder": "Mesajınızı girin",
-    "emailPlaceholder": "E-posta adresinizi girin"
+    "emailPlaceholder": "E-posta adresinizi girin",
+    "screenShot": "Dosya ekle"
   },
   "errors": {
     "errorEmail": "E-posta girin",
