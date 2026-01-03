@@ -3,7 +3,7 @@
     <NuxtPage/>
     <AchievementToast @toast-finished="onToastFinished" />
 <!--    <VStepHint v-if="showStepHint" @close="showStepHint = false"/>-->
-      <FeedBack/>
+<!--      <FeedBack/>-->
     <VLost/>
   </NuxtLayout>
 </template>

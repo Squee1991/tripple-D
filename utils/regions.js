@@ -5,6 +5,7 @@ import LakeRuins from 'assets/images/locations-images/lake-ruins.png'
 import StormCoast from 'assets/images/locations-images/storm-coast.png'
 import StoneReach from 'assets/images/locations-images/stone-reach.png'
 import MasterLands from 'assets/images/locations-images/master-lands.png'
+import WildLand from 'assets/images/locations-images/wild-land.png'
 export const regions = [
 	{
 		id: "east-plain",
@@ -20,7 +21,7 @@ export const regions = [
 		pathTo: "stone-reach",
 		theme: "stone",
 		name: "locationNames.stone-reach",
-		level: 1,
+		level: 3,
 		desc: "regions.descriptionStoneReach",
 		icon: StoneReach
 	},
@@ -29,7 +30,7 @@ export const regions = [
 		pathTo: "wind-valley",
 		theme: "winds",
 		name: "locationNames.wind-valley",
-		level: 1,
+		level: 5,
 		desc: "regions.descriptionWindValley",
 		icon: WindValley
 	},
@@ -38,7 +39,7 @@ export const regions = [
 		pathTo: "lake-ruins",
 		theme: "ruins",
 		name: "locationNames.lake-ruins",
-		level: 1,
+		level: 7,
 		desc: "regions.descriptionLakeRuins",
 		icon: LakeRuins
 	},
@@ -47,7 +48,7 @@ export const regions = [
 		pathTo: "north-cliffs",
 		theme: "north",
 		name: "locationNames.north-cliffs",
-		level: 1,
+		level: 9,
 		desc: "regions.descriptionNorthCliffs",
 		icon: NorthCliffs
 	},
@@ -56,7 +57,7 @@ export const regions = [
 		pathTo: "storm-coast",
 		theme: "storm",
 		name: "locationNames.storm-coast",
-		level: 1,
+		level: 11,
 		desc: "regions.descriptionStormCoast",
 		icon: StormCoast
 	},
@@ -65,8 +66,17 @@ export const regions = [
 		pathTo: "master-lands",
 		theme: "master",
 		name: "locationNames.master-lands",
-		level: 1,
+		level: 13,
 		desc: "regions.descriptionMasterLands",
 		icon: MasterLands
-	}
+	},
+	// {
+	// 	id: "wild-lands",
+	// 	pathTo: "wild-lands",
+	// 	theme: "wild",
+	// 	name: "Дикие земли",
+	// 	level: 0,
+	// 	desc: "Жизнь природы полна удивительных открытий. Здесь ты узнаешь, как называть лесных обитателей, описывать их действия и составлять предложения о мире животных.",
+	// 	icon: WildLand
+	// }
 ];

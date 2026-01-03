@@ -73,7 +73,7 @@ export const wordAchievementsGroup = [
 				description: 'locationAchievementsCategory.allLocationsDescription',
 				icon: '🌍',
 				currentProgress: 0,
-				targetProgress: 6,
+				targetProgress: 7,
 				awards: 'locationAchievementsCategory.allLocationsAwards'
 			}
 		]

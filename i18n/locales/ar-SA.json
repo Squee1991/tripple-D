@@ -5311,7 +5311,8 @@
     "btn": "إرسال الرسالة",
     "namePlaceholder": "أدخل اسمك",
     "messagePlaceholder": "أدخل رسالتك",
-    "emailPlaceholder": "أدخل بريدك الإلكتروني"
+    "emailPlaceholder": "أدخل بريدك الإلكتروني",
+    "screenShot": "إرفاق ملف"
   },
   "errors": {
     "errorEmail": "أدخل البريد الإلكتروني",

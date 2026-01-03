@@ -5328,7 +5328,8 @@
     "btn": "Wyślij wiadomość",
     "namePlaceholder": "Wpisz swoje imię",
     "messagePlaceholder": "Wpisz swoją wiadomość",
-    "emailPlaceholder": "Wpisz swój e-mail"
+    "emailPlaceholder": "Wpisz swój e-mail",
+    "screenShot": "Załącz plik"
   },
 
   "errors": {

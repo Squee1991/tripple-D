@@ -1,0 +1,481 @@
+[
+  {
+    "questId": "wild-lands-env-1",
+    "aliases": ["natur-a1-env-start"],
+    "title": "Дикие земли: Окружение",
+    "progress": "0/15",
+    "description": "Первые шаги в диких землях. Здесь ты выучишь четыре главных слова лесного пейзажа и научишься строить из них первые фразы.",
+    "conditions": {
+      "goal": "Освой слова: Природа, Лес, Дерево и Река через разные упражнения",
+      "minCorrect": 13,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 25,
+      "xp": 25
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Как по-немецки: Природа",
+        "options": ["Der Wald", "Die Natur", "Der Baum"],
+        "answer": "Die Natur"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "Произнеси: Die Natur",
+        "text": "Die Natur",
+        "answer": "Die Natur"
+      },
+      {
+        "id": 3,
+        "type": "reorder",
+        "question": "Собери предложение: Природа красивая",
+        "words": ["ist", "Die Natur", "schön"],
+        "correctOrder": ["Die Natur", "ist", "schön"]
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "Как по-немецки: Лес",
+        "options": ["Der Fluss", "Der Wald", "Der Baum"],
+        "answer": "Der Wald"
+      },
+      {
+        "id": 5,
+        "type": "speechToText",
+        "question": "Произнеси: Der Wald",
+        "text": "Der Wald",
+        "answer": "Der Wald"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Собери предложение: Лес большой",
+        "words": ["ist", "groß", "Der Wald"],
+        "correctOrder": ["Der Wald", "ist", "groß"]
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "Как по-немецки: Лес красивый",
+        "options": ["Der Wald ist schön", "Die Natur ist groß", "Der Baum"],
+        "answer": "Der Wald ist schön"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "Как по-немецки: Дерево",
+        "options": ["Der Wald", "Der Fluss", "Der Baum"],
+        "answer": "Der Baum"
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "Произнеси: Der Baum",
+        "text": "Der Baum",
+        "answer": "Der Baum"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "Собери предложение: Дерево здесь",
+        "words": ["ist", "Der Baum", "hier"],
+        "correctOrder": ["Der Baum", "ist", "hier"]
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "Как по-немецки: Дерево большое",
+        "options": ["Der Baum ist groß", "Der Wald ist schön", "Der Fluss"],
+        "answer": "Der Baum ist groß"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "Как по-немецки: Река",
+        "options": ["Der Fluss", "Der Wald", "Die Natur"],
+        "answer": "Der Fluss"
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "Произнеси: Der Fluss",
+        "text": "Der Fluss",
+        "answer": "Der Fluss"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "Собери предложение: Река очень красивая",
+        "words": ["ist", "Der Fluss", "sehr", "schön"],
+        "correctOrder": ["Der Fluss", "ist", "sehr", "schön"]
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "Собери предложение: Природа здесь очень красивая",
+        "words": ["ist", "Die Natur", "hier", "sehr", "schön"],
+        "correctOrder": ["Die Natur", "hier", "ist", "sehr", "schön"]
+      }
+    ]
+  },
+  {
+    "questId": "wild-lands-animals-1",
+    "aliases": ["natur-a1-animals-start"],
+    "title": "Дикие земли: Животные",
+    "progress": "0/15",
+    "description": "Лес оживает. Теперь ты встретишь его обитателей и научишься описывать их местонахождение, используя знакомые места по принципу наслоения.",
+    "conditions": {
+      "goal": "Освой названия животных и объедини их с локациями (Лес, Река, Дерево)",
+      "minCorrect": 13,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 30,
+      "xp": 30
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Как по-немецки: Волк",
+        "options": ["Der Wolf", "Der Bär", "Der Fuchs"],
+        "answer": "Der Wolf"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Der Wolf",
+        "answer": "Der Wolf"
+      },
+      {
+        "id": 3,
+        "type": "reorder",
+        "question": "Ком: Волк в лесу",
+        "words": ["ist", "im Wald", "Der Wolf"],
+        "correctOrder": ["Der Wolf", "ist", "im Wald"]
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "Как по-немецки: Медведь",
+        "options": ["Der Wolf", "Der Bär", "Der Baum"],
+        "answer": "Der Bär"
+      },
+      {
+        "id": 5,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Der Bär",
+        "answer": "Der Bär"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Ком растет: Медведь у реки",
+        "words": ["am Fluss", "ist", "Der Bär"],
+        "correctOrder": ["Der Bär", "ist", "am Fluss"]
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Наслоение: Медведь большой, он у реки",
+        "words": ["Der Bär", "ist", "groß,", "er ist", "am Fluss"],
+        "correctOrder": ["Der Bär", "ist", "groß,", "er ist", "am Fluss"]
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "Как по-немецки: Лиса",
+        "options": ["Der Fuchs", "Der Wolf", "Die Natur"],
+        "answer": "Der Fuchs"
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Der Fuchs",
+        "answer": "Der Fuchs"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "Ком: Лиса здесь, у дерева",
+        "words": ["hier,", "am Baum", "Der Fuchs", "ist"],
+        "correctOrder": ["Der Fuchs", "ist", "hier,", "am Baum"]
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "Связка: Здесь лиса и здесь река",
+        "options": ["Hier ist der Fuchs und hier ist der Fluss", "Der Wolf ist im Wald", "Die Natur"],
+        "answer": "Hier ist der Fuchs und hier ist der Fluss"
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Der Wolf ist im Wald",
+        "answer": "Der Wolf ist im Wald"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "Сложный ком: Медведь у реки, а волк в лесу",
+        "words": ["Der Bär", "ist", "am Fluss", "und", "der Wolf", "ist", "im Wald"],
+        "correctOrder": ["Der Bär", "ist", "am Fluss", "und", "der Wolf", "ist", "im Wald"]
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "Начинаем итог: Природа красивая, здесь лес",
+        "words": ["Die Natur", "ist", "schön,", "hier ist", "der Wald"],
+        "correctOrder": ["Die Natur", "ist", "schön,", "hier ist", "der Wald"]
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Die Natur ist schön, hier ist der Wald, der Fluss und der Fuchs",
+        "answer": "Die Natur ist schön, hier ist der Wald, der Fluss und der Fuchs"
+      }
+    ]
+  },
+  {
+    "questId": "wild-lands-nature-2",
+    "aliases": ["natur-a1-env-hills"],
+    "title": "Дикие земли: Высоты",
+    "progress": "0/15",
+    "description": "Мы поднимаемся выше. Солнце светит над горами, а в лесу всё так же бродят звери. Учимся связывать пейзаж воедино.",
+    "conditions": {
+      "goal": "Выучи 'Гора' и 'Солнце' и заставь их работать в нормальных фразах",
+      "minCorrect": 13,
+      "requiredTasks": 15
+    },
+    "rewards": { "points": 35, "xp": 35 },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Как по-немецки: Гора",
+        "options": ["Der Berg", "Der Wald", "Die Sonne"],
+        "answer": "Der Berg"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Der Berg",
+        "answer": "Der Berg"
+      },
+      {
+        "id": 3,
+        "type": "reorder",
+        "question": "Ком: Гора большая",
+        "words": ["ist", "groß", "Der Berg"],
+        "correctOrder": ["Der Berg", "ist", "groß"]
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "Как по-немецки: Солнце",
+        "options": ["Die Natur", "Die Sonne", "Der Fluss"],
+        "answer": "Die Sonne"
+      },
+      {
+        "id": 5,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Die Sonne",
+        "answer": "Die Sonne"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Соберите фразу: Солнце светит",
+        "words": ["scheint", "Die Sonne"],
+        "correctOrder": ["Die Sonne", "scheint"]
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Die Sonne scheint und ist schön",
+        "answer": "Die Sonne scheint und ist schön"
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Die Sonne scheint",
+        "answer": "Die Sonne scheint"
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Der Bär ist am Berg",
+        "answer": "Der Bär ist am Berg"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Связка: Волк в лесу и солнце светит",
+        "options": ["Der Wolf im Wald und die Sonne scheint", "Der Fuchs am Baum", "Die Natur"],
+        "answer": "Der Wolf im Wald und die Sonne scheint"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Предфинал: Природа красивая, солнце светит",
+        "words": ["Die Natur", "ist schön,", "die Sonne", "scheint"],
+        "correctOrder": ["Die Natur", "ist schön,", "die Sonne", "scheint"]
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Die Natur ist schön: der Berg ist groß und die Sonne scheint",
+        "answer": "Die Natur ist schön: der Berg ist groß und die Sonne scheint"
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Die Natur ist schön. Am Berg scheint die Sonne",
+        "answer": "Die Natur ist schön: am Berg scheint die Sonne"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Die Natur ist schön: am Berg scheint die Sonne, der Wolf ist im Wald und der Bär ist am Fluss",
+        "answer": "Die Natur ist schön: am Berg scheint die Sonne, der Wolf ist im Wald und der Bär ist am Fluss"
+      }
+    ]
+  },
+  {
+    "questId": "wild-lands-nature-3",
+    "aliases": ["natur-a1-env-lake"],
+    "title": "Дикие земли: Озеро",
+    "progress": "0/15",
+    "description": "Мы выходим к большой воде. Учимся описывать озеро и воду, связывая их с лесом, горами и животными по принципу наслоения.",
+    "conditions": {
+      "goal": "Выучи 'Озеро' и 'Вода', и впиши их в лесной пейзаж",
+      "minCorrect": 13,
+      "requiredTasks": 15
+    },
+    "rewards": { "points": 20, "xp": 20 },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Как по-немецки: Озеро",
+        "options": ["Der See", "Der Fluss", "Der Wald"],
+        "answer": "Der See"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Der See",
+        "answer": "Der See"
+      },
+      {
+        "id": 3,
+        "type": "reorder",
+        "question": "Собери предложение: Озеро очень большое",
+        "words": ["Der See", "ist", "sehr", "groß"],
+        "correctOrder": ["Der See", "ist", "sehr", "groß"]
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "Как по-немецки: Вода",
+        "options": ["Das Wasser", "Die Natur", "Der Berg"],
+        "answer": "Das Wasser"
+      },
+      {
+        "id": 5,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Das Wasser",
+        "answer": "Das Wasser"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Собери предложение: Вода в озере красивая",
+        "words": ["Das Wasser", "im See", "ist", "schön"],
+        "correctOrder": ["Das Wasser", "im See", "ist", "schön"]
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Der See am Berg ist groß",
+        "answer": "Der See am Berg ist groß"
+      },
+      {
+        "id": 8,
+        "type": "reorder",
+        "question": "Собери предложение: Солнце светит на воду",
+        "words": ["Die Sonne", "scheint", "am Wasser"],
+        "correctOrder": ["Die Sonne", "scheint", "am Wasser"]
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "Как по-немецки: Медведь у озера",
+        "options": ["Der Bär am See", "Der Wolf am Berg", "Der Baum"],
+        "answer": "Der Bär am See"
+      },
+      {
+        "id": 10,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Das Wasser im Fluss ist schön",
+        "answer": "Das Wasser im Fluss ist schön"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Собери предложение: Гора большая и озеро красивое",
+        "words": ["Der Berg", "ist groß", "und", "der See", "ist schön"],
+        "correctOrder": ["Der Berg", "ist groß", "und", "der See", "ist schön"]
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "Как по-немецки: Лиса у воды",
+        "options": ["Der Fuchs am Wasser", "Der Wolf im Wald", "Der Bär"],
+        "answer": "Der Fuchs am Wasser"
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Die Sonne scheint и das Wasser ist schön",
+        "answer": "Die Sonne scheint und das Wasser ist schön"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "Собери предложение: Медведь у озера, а волк в лесу",
+        "words": ["Der Bär", "ist am See", "und", "der Wolf", "ist im Wald"],
+        "correctOrder": ["Der Bär", "ist am See", "und", "der Wolf", "ist im Wald"]
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Die Natur ist schön: die Sonne scheint, der See ist groß и das Wasser ist schön",
+        "answer": "Die Natur ist schön: die Sonne scheint, der See ist groß und das Wasser ist schön"
+      }
+    ]
+  }
+]

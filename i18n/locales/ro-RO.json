@@ -5315,7 +5315,8 @@
     "btn": "trimite mesajul",
     "namePlaceholder": "Introdu numele",
     "messagePlaceholder": "Introdu mesajul tău",
-    "emailPlaceholder": "Introdu e-mailul tău"
+    "emailPlaceholder": "Introdu e-mailul tău",
+    "screenShot": "Atașează fișier"
   },
   "errors": {
     "errorEmail": "Introdu e-mailul",
