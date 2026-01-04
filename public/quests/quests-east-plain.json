@@ -1250,7 +1250,11 @@
         "type": "speechToText",
         "question": "eastPlainSeventhQuests.questNine",
         "text": "Wie viel kostet eine Flasche Wasser? Eine Flasche Wasser kostet zwei Euro",
-        "answer": "Wie viel kostet eine Flasche Wasser? Eine Flasche Wasser kostet zwei Euro"
+        "answer": "Wie viel kostet eine Flasche Wasser? Eine Flasche Wasser kostet zwei Euro",
+        "accept": [
+          "Wie viel kostet eine Flasche Wasser? Eine Flasche Wasser kostet zwei Euro",
+          "Wie viel kostet eine Flasche Wasser? Eine Flasche Wasser kostet 2 Euro"
+        ]
       },
       {
         "id": 9,
@@ -1323,7 +1327,11 @@
         "type": "speechToText",
         "question": "eastPlainSeventhQuests.questFifteen",
         "text": "Das Ticket kostet zehn Euro.",
-        "answer": "Das Ticket kostet zehn Euro."
+        "answer": "Das Ticket kostet zehn Euro.",
+        "accept": [
+          "Das Ticket kostet zehn Euro.",
+          "Das Ticket kostet 10 Euro."
+        ]
       }
     ]
   },
