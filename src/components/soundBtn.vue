@@ -24,8 +24,8 @@ const props = defineProps({
 })
 
 async function speak(htmlText) {
+  if (!htmlText) return
   if (isSpeaking.value) return
-
   const plainText = htmlText
       .replace(/<[^>]*>/g, ' ')
       .replace(/→/g, ', ')

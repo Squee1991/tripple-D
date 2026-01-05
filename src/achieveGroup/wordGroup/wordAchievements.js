@@ -55,7 +55,7 @@ export const wordAchievementsGroup = [
 				name: 'locationAchievementsCategory.seventhName',
 				description: 'locationAchievementsCategory.seventhDescription',
 				icon: '🛠️',
-				currentProgress: 14,
+				currentProgress: 0,
 				targetProgress: 14
 			},
 			{
