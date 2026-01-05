@@ -1,6 +1,9 @@
 <script setup>
-import { ref, computed } from 'vue'
+import {ref, computed} from 'vue'
+import {useSeoMeta} from "#imports";
+import SoundBtn from '../src/components/soundBtn.vue'
 
+import Women from 'assets/images/speak-themen/people/Gemini_Generated_Image_mk095imk095imk09 (2).png'
 import taskImage from 'assets/images/speak-themen/animals/panda.png'
 import taskImage0 from 'assets/images/speak-themen/animals/dog.png'
 import taskImage1 from 'assets/images/speak-themen/animals/dog-hiding.png'
@@ -9,20 +12,20 @@ import taskImage3 from 'assets/images/speak-themen/animals/Fox-read-book.png'
 import taskImage4 from 'assets/images/speak-themen/home/stay-home.png'
 import taskImage5 from 'assets/images/speak-themen/winter/snowman.png'
 import taskImage6 from 'assets/images/speak-themen/winter/skiing.png'
-import {useSeoMeta} from "#imports";
 
 useSeoMeta({
   robots: 'noindex, nofollow'
 })
+
 const tasks = [
-  { id: 1, image: taskImage6 },
-  { id: 2, image: taskImage4 },
-  { id: 3, image: taskImage5 },
-  { id: 4, image: taskImage2 },
-  { id: 5, image: taskImage3 },
-  { id: 6, image: taskImage1 },
-  { id: 7, image: taskImage },
-  { id: 8, image: taskImage0 },
+  {id: 1, image: Women},
+  {id: 2, image: taskImage4},
+  {id: 3, image: taskImage5},
+  {id: 4, image: taskImage2},
+  {id: 5, image: taskImage3},
+  {id: 6, image: taskImage1},
+  {id: 7, image: taskImage},
+  {id: 8, image: taskImage0},
 ]
 
 const currentTaskIndex = ref(0)
@@ -57,22 +60,36 @@ async function sendMessage() {
   if (!input.value.trim()) return
   isLoading.value = true
   err.value = ''
-  messages.value.push({ role: 'user', content: input.value })
+  messages.value.push({role: 'user', content: input.value})
+
   const userText = input.value
   input.value = ''
+
   try {
     const base64Image = await assetToBase64(currentImage.value)
     const res = await $fetch('/api/groq-vision', {
       method: 'POST',
-      body: { message: userText, image: base64Image }
+      body: {message: userText, image: base64Image}
     })
-    if (res.text) {
-      messages.value.push({ role: 'assistant', content: res.text })
+    if (res.data) {
+      messages.value.push({
+        role: 'assistant',
+        isStructured: true,
+        icon: res.data.icon || '',
+        feedback: res.data.feedback || '',
+        german_sentence: res.data.german_sentence || res.data.germanSentence || ''
+      })
+      isAnswered.value = true
+
+    } else if (res.text) {
+      messages.value.push({
+        role: 'assistant',
+        content: res.text,
+        isStructured: false
+      })
       isAnswered.value = true
     } else if (res.error) {
       err.value = "Ошибка: " + res.error
-    } else {
-      err.value = "Странный ответ..."
     }
 
   } catch (e) {
@@ -100,9 +117,7 @@ function restart() {
 
 <template>
   <div class="trainer-container">
-
     <div class="card">
-
       <div v-if="isFinished" class="finish-screen">
         <div class="icon">🎉</div>
         <h2>Отличная работа!</h2>
@@ -111,29 +126,45 @@ function restart() {
       </div>
 
       <div v-else class="content-wrapper">
-
         <div class="header">
           <span class="badge">Aufgabe {{ currentTaskIndex + 1 }} / {{ tasks.length }}</span>
         </div>
-
         <div class="image-wrapper">
           <div class="image-frame">
-            <img :src="currentImage" alt="Task Image" />
+            <img :src="currentImage" alt="Task Image"/>
           </div>
         </div>
-
         <div class="chat-area">
           <div v-if="messages.length === 0" class="placeholder">
             Was siehst du auf dem Bild?
           </div>
-
           <div class="messages-list">
             <div v-for="(m, i) in messages" :key="i" :class="['message', m.role]">
-              <div class="bubble">
-                {{ m.content }}
-              </div>
-            </div>
+              <template v-if="m.isStructured">
+                <div class="msg-sound">
+                  <SoundBtn :text="m.german_sentence || ''"/>
+                </div>
 
+                <div class="bubble assistant-bubble">
+                  <div class="feedback-part">
+                    <span class="status-icon">{{ m.icon }}</span>
+                    {{ m.feedback }}
+                  </div>
+                  <div class="msg-divider"></div>
+                  <div class="german-part">
+                    {{ m.german_sentence }}
+                  </div>
+                </div>
+              </template>
+              <template v-else>
+                <div v-if="m.role === 'assistant'" class="msg-sound">
+                  <SoundBtn :text="m.content || ''"/>
+                </div>
+                <div class="bubble">
+                  {{ m.content }}
+                </div>
+              </template>
+            </div>
             <div v-if="isLoading" class="message assistant">
               <div class="bubble loading">
                 <span></span><span></span><span></span>
@@ -141,11 +172,8 @@ function restart() {
             </div>
           </div>
         </div>
-
         <div v-if="err" class="error-banner">{{ err }}</div>
-
         <div class="controls">
-
           <template v-if="!isAnswered">
             <input
                 v-model="input"
@@ -154,17 +182,13 @@ function restart() {
                 :disabled="isLoading"
                 class="main-input"
             />
-            <button @click="sendMessage" :disabled="isLoading" class="btn-send">
-              ➤
-            </button>
+            <button @click="sendMessage" :disabled="isLoading" class="btn-send">➤</button>
           </template>
-
           <template v-else>
             <button class="btn-next" @click="nextTask">
               Дальше / Weiter ➡️
             </button>
           </template>
-
         </div>
       </div>
     </div>
@@ -172,7 +196,6 @@ function restart() {
 </template>
 
 <style scoped>
-/* Фон и контейнер */
 .trainer-container {
   display: flex;
   justify-content: center;
@@ -194,21 +217,32 @@ function restart() {
   flex-direction: column;
 }
 
-/* Финал */
 .finish-screen {
   padding: 60px 20px;
   text-align: center;
 }
-.finish-screen .icon { font-size: 60px; margin-bottom: 20px; }
-.finish-screen h2 { margin: 0 0 10px; color: #333; }
-.finish-screen p { color: #666; margin-bottom: 30px; }
 
-/* Шапка */
+.finish-screen .icon {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.finish-screen h2 {
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.finish-screen p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
 .header {
   padding: 20px 20px 10px;
   display: flex;
   justify-content: center;
 }
+
 .badge {
   background: #eef2ff;
   color: #4f46e5;
@@ -219,27 +253,28 @@ function restart() {
   letter-spacing: 0.5px;
 }
 
-/* Картинка */
 .image-wrapper {
   padding: 10px 20px;
   display: flex;
   justify-content: center;
 }
+
 .image-frame {
   width: 100%;
-  height: 220px;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 5px solid #aaaaff;
+  border-radius: 20px;
 }
+
 .image-frame img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
 }
 
-/* Чат */
 .chat-area {
   flex: 1;
   min-height: 200px;
@@ -249,6 +284,7 @@ function restart() {
   background: #fff;
   position: relative;
 }
+
 .placeholder {
   text-align: center;
   color: #ccc;
@@ -266,8 +302,14 @@ function restart() {
   display: flex;
   width: 100%;
 }
-.message.user { justify-content: flex-end; }
-.message.assistant { justify-content: flex-start; }
+
+.message.user {
+  justify-content: flex-end;
+}
+
+.message.assistant {
+  justify-content: flex-start;
+}
 
 .bubble {
   max-width: 85%;
@@ -280,28 +322,86 @@ function restart() {
 }
 
 .user .bubble {
-  background: #007bff; /* Синий мессенджер */
+  background: #007bff;
   color: white;
   border-bottom-right-radius: 4px;
 }
 
 .assistant .bubble {
-  background: #f1f3f4; /* Серый ответ */
+  background: #f1f3f4;
   color: #1f1f1f;
   border-bottom-left-radius: 4px;
 }
 
-/* Загрузка (точки) */
-.loading { display: flex; gap: 4px; padding: 16px 20px !important; }
+.msg-sound {
+  margin-right: 8px;
+  align-self: flex-end;
+  margin-bottom: 10px;
+  flex-shrink: 0;
+}
+
+.assistant-bubble {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 200px;
+}
+
+.feedback-part {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.4;
+}
+
+.status-icon {
+  font-size: 16px;
+  margin-right: 4px;
+}
+
+.msg-divider {
+  height: 1px;
+  background-color: #d1d5db;
+  width: 100%;
+  margin: 4px 0;
+}
+
+.german-part {
+  font-weight: 600;
+  color: #000;
+  font-size: 16px;
+}
+
+.loading {
+  display: flex;
+  gap: 4px;
+  padding: 16px 20px !important;
+}
+
 .loading span {
-  width: 6px; height: 6px; background: #999; border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  background: #999;
+  border-radius: 50%;
   animation: blink 1.4s infinite both;
 }
-.loading span:nth-child(2) { animation-delay: 0.2s; }
-.loading span:nth-child(3) { animation-delay: 0.4s; }
-@keyframes blink { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
 
-/* Ошибки */
+.loading span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
 .error-banner {
   background: #fee2e2;
   color: #ef4444;
@@ -312,7 +412,6 @@ function restart() {
   border-radius: 8px;
 }
 
-/* Управление */
 .controls {
   padding: 20px;
   background: white;
@@ -330,6 +429,7 @@ function restart() {
   outline: none;
   transition: border-color 0.2s;
 }
+
 .main-input:focus {
   border-color: #007bff;
 }
@@ -347,13 +447,19 @@ function restart() {
   align-items: center;
   justify-content: center;
 }
-.btn-send:hover { background: #0056b3; }
-.btn-send:disabled { background: #ccc; }
+
+.btn-send:hover {
+  background: #0056b3;
+}
+
+.btn-send:disabled {
+  background: #ccc;
+}
 
 .btn-next, .btn-restart {
   width: 100%;
   padding: 14px;
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%); /* Красивый зеленый градиент */
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
   color: white;
   border: none;
   border-radius: 12px;
@@ -363,11 +469,18 @@ function restart() {
   transition: transform 0.1s;
   box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
 }
+
 .btn-next:hover, .btn-restart:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 15px rgba(16, 185, 129, 0.4);
 }
-.btn-next:active { transform: translateY(0); }
-.btn-restart { background: #4f46e5; box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3); }
 
+.btn-next:active {
+  transform: translateY(0);
+}
+
+.btn-restart {
+  background: #4f46e5;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
 </style>
