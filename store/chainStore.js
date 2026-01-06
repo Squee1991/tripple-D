@@ -233,7 +233,7 @@ export const userChainStore = defineStore('chain', () => {
 			const qp = data.questProgress || {}
 			const prev = qp[currentQuestId.value] || {}
 			const isSuccessNow = success.value
-			if (prev.success && (!prev.wrongIndices || prev.wrongIndices.length === 0) && (prev.correctCount === prev.requiredTasks) && !isRetryMode.value) {
+			if (prev.success && (!prev.wrongIndices || prev.wrongIndices.length === 0) && !isRetryMode.value) {
 				questProgress.value = { ...questProgress.value, [currentQuestId.value]: prev }
 				return
 			}
