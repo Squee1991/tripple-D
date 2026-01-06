@@ -70,7 +70,7 @@ export const regions = [
 		desc: "regions.descriptionMasterLands",
 		icon: MasterLands
 	},
-	git // {
+	// {
 	// 	id: "wild-lands",
 	// 	pathTo: "wild-lands",
 	// 	theme: "wild",
