@@ -477,5 +477,566 @@
         "answer": "Die Natur ist schön: die Sonne scheint, der See ist groß und das Wasser ist schön"
       }
     ]
+  },
+  {
+    "questId": "wild-lands-weather-1",
+    "aliases": ["natur-a1-env-weather"],
+    "title": "Дикие земли: Стихия",
+    "progress": "0/15",
+    "description": "Погода меняется. Небо затягивают облака, поднимается ветер и начинается дождь. Научись описывать и понимать, что происходит вокруг.",
+    "conditions": {
+      "goal": "Освой слова: Ветер, Дождь, Облако и научись понимать тексты о погоде",
+      "minCorrect": 13,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 40,
+      "xp": 40
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Как сказать: Ветер",
+        "options": ["Der Wind", "Das Wasser", "Der Wald"],
+        "answer": "Der Wind"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "Произнеси: Der Wind",
+        "text": "Der Wind",
+        "answer": "Der Wind"
+      },
+      {
+        "id": 3,
+        "type": "reorder",
+        "question": "Собери фразу: Ветер холодный",
+        "words": ["ist", "kalt", "Der Wind"],
+        "correctOrder": ["Der Wind", "ist", "kalt"]
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "Как по-немецки: Дождь",
+        "options": ["Der Regen", "Der Berg", "Die Sonne"],
+        "answer": "Der Regen"
+      },
+      {
+        "id": 5,
+        "type": "readAndAnswer",
+        "text": "Im Wald ist der Wind stark und es regnet.",
+        "question": "",
+        "options": [
+          "В лесу сильный ветер и идет дождь",
+          "В лесу идет дождь, но ветра нет",
+          "Ветер сильный, но в лесу сухо"
+        ],
+        "answer": "В лесу сильный ветер и идет дождь"
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Es regnet sehr stark",
+        "answer": "Es regnet sehr stark"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "Как по-немецки: Облако",
+        "options": ["Die Wolke", "Der Wolf", "Der Wald"],
+        "answer": "Die Wolke"
+      },
+      {
+        "id": 8,
+        "type": "reorder",
+        "question": "Собери фразу: Облако большое и серое",
+        "words": ["ist", "Die Wolke", "und", "groß", "ist", "grau"],
+        "correctOrder": ["Die Wolke", "ist", "groß", "und", "grau"]
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Die Sonne scheint nicht. Die Wolke ist am Berg.",
+        "question": "Где находится облако?",
+        "options": [
+          "У горы (Am Berg)",
+          "В озере (Im See)",
+          "В лесу (Im Wald)"
+        ],
+        "answer": "У горы (Am Berg)"
+      },
+      {
+        "id": 10,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Der Wind ist stark und die Wolke ist grau",
+        "answer": "Der Wind ist stark und die Wolke ist grau"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Собери предложение: В лесу идет дождь, но в горах светит солнце",
+        "words": ["Im Wald", "regnet es,", "aber", "in den Bergen", "scheint die Sonne"],
+        "correctOrder": ["Im Wald", "regnet es,", "aber", "in den Bergen", "scheint die Sonne"]
+      },
+      {
+        "id": 12,
+        "type": "readAndAnswer",
+        "text": "Es ist grau hier. Es regnet und der Wind ist kalt.",
+        "question": "",
+        "options": [
+          "Здесь серо, идет дождь и ветер холодный",
+          "Здесь серо, но дождя нет, только ветер",
+          "Идет дождь, но ветер теплый и приятный"
+        ],
+        "answer": "Здесь серо, идет дождь и ветер холодный"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "Как правильно сказать: У реки ветрено",
+        "options": [
+          "Am Fluss ist es windig",
+          "Der Wind ist am Fluss",
+          "Der Fluss ist Wind"
+        ],
+        "answer": "Am Fluss ist es windig"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "Соберите предложение: Природа красивая, но ветер холодный",
+        "words": ["kalt", "ist", "Die Natur", "aber", "ist", "schön,", "der Wind"],
+        "correctOrder": ["Die Natur", "ist", "schön,", "aber", "der Wind",  "ist", "kalt",]
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Es regnet den ganzen Tag und es ist sehr windig. Das Wetter ist schlecht.",
+        "answer": "Es regnet den ganzen Tag und es ist sehr windig. Das Wetter ist schlecht."
+      }
+    ]
+  },
+  {
+    "questId": "wild-lands-winter-1",
+    "aliases": ["natur-a1-env-winter"],
+    "title": "Дикие земли: Зима",
+    "progress": "0/15",
+    "description": "Лес укрывает тишина. Пришла зима. Всё вокруг меняет цвет, вода превращается в лёд, а с неба падает снег.",
+    "conditions": {
+      "goal": "Освой слова: Зима, Снег, Лёд, Белый и конструкцию 'Es schneit'",
+      "minCorrect": 13,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 45,
+      "xp": 45
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Как сказать: Зима",
+        "options": ["Der Winter", "Der Wind", "Der Wald"],
+        "answer": "Der Winter"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "Произнеси услышанное",
+        "text": "Der Winter ist kalt",
+        "answer": "Der Winter ist kalt"
+      },
+      {
+        "id": 3,
+        "type": "reorder",
+        "question": "Собери фразу",
+        "words": ["ist", "kalt", "Der Winter"],
+        "correctOrder": ["Der Winter", "ist", "kalt"]
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "Как сказать: Снег",
+        "options": ["Der Schnee", "Der See", "Die Sonne"],
+        "answer": "Der Schnee"
+      },
+      {
+        "id": 5,
+        "type": "readAndAnswer",
+        "text": "Es ist Winter. Es ist kalt und es schneit.",
+        "question": "",
+        "options": [
+          "Сейчас зима, холодно и идет снег",
+          "Сейчас зима, но тепло и солнечно",
+          "Сейчас зима, холодно и нет снега"
+        ],
+        "answer": "Сейчас зима, холодно и идет снег"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Собери фразу: Снег повсюду",
+        "words": ["ist", "hier", "überall", "Der Schnee"],
+        "correctOrder": ["Der Schnee", "ist", "überall"]
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "Как по-немецки: Лёд",
+        "options": ["Das Eis", "Der Schnee", "Das Wasser"],
+        "answer": "Das Eis"
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Hier ist nur Schnee und Eis",
+        "answer": "Hier ist nur Schnee und Eis"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Das Wasser im See ist gefroren.",
+        "question": "",
+        "options": [
+          "Вода в озере замерзла",
+          "Вода в озере теплая",
+          "Озеро глубокое и замерзло"
+        ],
+        "answer": "Вода в озере замерзла"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "Собери: Зимой лес белый",
+        "words": ["Im Winter", "weiß", "ist", "der Wald"],
+        "correctOrder": ["Im Winter", "ist", "der Wald", "weiß"]
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "Как сказать: Идет снег",
+        "options": ["Es schneit", "Der Schnee ist da", "Schnee kommt"],
+        "answer": "Es schneit"
+      },
+      {
+        "id": 12,
+        "type": "readAndAnswer",
+        "text": "Der Bär schläft. Er mag den Winter nicht.",
+        "question": "",
+        "options": [
+          "Медведь спит, он не любит зиму",
+          "Медведь гуляет по лесу и радуется зиме",
+          "Медведь ищет еду в реке"
+        ],
+        "answer": "Медведь спит, он не любит зиму"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "Сложное: Гора белая, потому что идет снег",
+        "words": ["ist weiß,", "Der Berg", "weil", "es schneit"],
+        "correctOrder": ["Der Berg", "ist weiß,", "weil", "es schneit"]
+      },
+      {
+        "id": 14,
+        "type": "readAndAnswer",
+        "text": "Im Wald und auf dem Berg liegt Schnee.",
+        "question": "",
+        "options": [
+          "Снег повсюду: в лесу, у реки и на горе",
+          "Снег только на горе, в лесу чисто",
+          "Снега нет, только лёд на реке"
+        ],
+        "answer": "Снег повсюду: в лесу, у реки и на горе"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Es ist Winter, es ist kalt und der Schnee ist weiß",
+        "answer": "Es ist Winter, es ist kalt und der Schnee ist weiß"
+      }
+    ]
+  },
+  {
+    "questId": "wild-lands-night-life",
+    "aliases": ["natur-a1-animals-night"],
+    "title": "Дикие земли: Ночная жизнь",
+    "progress": "0/15",
+    "description": "Солнце село, но лес не пустой. Узнай, кто ложится спать, а у кого большие глаза и кто выходит на охоту в темноте.",
+    "conditions": {
+      "goal": "Освой слова: Сова, Глаза, Спать и опиши ночную жизнь леса",
+      "minCorrect": 13,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 50,
+      "xp": 50
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Как по-немецки: Ночь",
+        "options": ["Die Nacht", "Der Nebel", "Die Natur"],
+        "answer": "Die Nacht"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "Произнеси: Die Nacht",
+        "text": "Die Nacht",
+        "answer": "Die Nacht"
+      },
+      {
+        "id": 3,
+        "type": "reorder",
+        "question": "Собери фразу: В лесу темно",
+        "words": ["ist", "es dunkel", "Im Wald"],
+        "correctOrder": ["Im Wald", "ist", "es dunkel"]
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "Действие: Спать",
+        "options": ["Schlafen", "Gehen", "Sehen"],
+        "answer": "Schlafen"
+      },
+      {
+        "id": 5,
+        "type": "readAndAnswer",
+        "text": "Es ist Nacht. Der Bär schläft im Wald.",
+        "question": "",
+        "options": [
+          "Сейчас ночь, медведь спит в лесу",
+          "Медведь гуляет по лесу днем",
+          "Медведь ищет еду у реки"
+        ],
+        "answer": "Сейчас ночь, медведь спит в лесу"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Собери фразу: Птицы спят",
+        "words": ["Die Vögel", "schlafen"],
+        "correctOrder": ["Die Vögel", "schlafen"]
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "Новый житель: Сова",
+        "options": ["Die Eule", "Der Wolf", "Der Fisch"],
+        "answer": "Die Eule"
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Die Eule",
+        "answer": "Die Eule"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Alle schlafen, aber die Eule schläft nicht.",
+        "question": "",
+        "options": [
+          "Все спят, но сова не спит",
+          "Сова спит вместе со всеми",
+          "В лесу никто не спит"
+        ],
+        "answer": "Все спят, но сова не спит"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Часть тела: Глаза",
+        "options": ["Die Augen", "Der Baum", "Der Kopf"],
+        "answer": "Die Augen"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Собери: У совы большие глаза",
+        "words": ["Die Eule", "hat", "große Augen"],
+        "correctOrder": ["Die Eule", "hat", "große Augen"]
+      },
+      {
+        "id": 12,
+        "type": "readAndAnswer",
+        "text": "Die Eule sieht alles. Ihre Augen sind groß und gelb.",
+        "question": "",
+        "options": [
+          "Сова всё видит, у неё большие желтые глаза",
+          "Сова ничего не видит в темноте",
+          "У совы маленькие черные глаза"
+        ],
+        "answer": "Сова всё видит, у неё большие желтые глаза"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "Действие: Сова сидит на дереве",
+        "words": ["Die Eule", "sitzt", "auf dem Baum"],
+        "correctOrder": ["Die Eule", "sitzt", "auf dem Baum"]
+      },
+      {
+        "id": 14,
+        "type": "readAndAnswer",
+        "text": "Der Wolf schläft auch nicht",
+        "question": "",
+        "options": [
+          "Волк тоже здесь, он не спит и он быстрый",
+          "Волк спит под деревом",
+          "Волк медленно идет к реке"
+        ],
+        "answer": "Волк тоже здесь, он не спит и он быстрый"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Im Wald ist es dunkel, aber die Eule und der Wolf schlafen nicht",
+        "answer": "Im Wald ist es dunkel, aber die Eule und der Wolf schlafen nicht"
+      }
+    ]
+  },
+  {
+    "questId": "wild-lands-nature-walk",
+    "aliases": ["natur-a1-fox-walk"],
+    "title": "Дикие земли: Лиса в лесу",
+    "progress": "0/15",
+    "description": "Следуй за лисой. Она проведет тебя через лес к быстрой реке, покажет высокие деревья и серые камни. Учись описывать путь.",
+    "conditions": {
+      "goal": "Освой слова: Лиса, Дерево, Камень, Река и опиши прогулку по лесу",
+      "minCorrect": 13,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 50,
+      "xp": 50
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "Как сказать: Лиса",
+        "options": ["Der Fuchs", "Der Fisch", "Der Fluss"],
+        "answer": "Der Fuchs"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "Произнеси: Der Fuchs",
+        "text": "Der Fuchs",
+        "answer": "Der Fuchs"
+      },
+      {
+        "id": 3,
+        "type": "reorder",
+        "question": "Собери фразу: Лиса рыжая",
+        "words": ["rot", "Der Fuchs", "ist"],
+        "correctOrder": ["Der Fuchs", "ist", "rot"]
+      },
+      {
+        "id": 4,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Der Fuchs läuft im Wald",
+        "answer": "Der Fuchs läuft im Wald"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Как сказать: Дерево",
+        "options": ["Der Baum", "Der Berg", "Das Boot"],
+        "answer": "Der Baum"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Собери фразу: Дерево высокое",
+        "words": ["ist", "hoch", "Der Baum"],
+        "correctOrder": ["Der Baum", "ist", "hoch"]
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "Как сказать: Камень",
+        "options": ["Der Stein", "Der Stern", "Die Sonne"],
+        "answer": "Der Stein"
+      },
+      {
+        "id": 8,
+        "type": "reorder",
+        "question": "Собери фразу: Камень серый",
+        "words": ["ist", "grau", "Der Stein"],
+        "correctOrder": ["Der Stein", "ist", "grau"]
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Der Fuchs steht am Baum",
+        "question": "",
+        "options": [
+          "Лиса стоит у дерева",
+          "Лиса спит под камнем",
+          "Деревья шумят от ветра"
+        ],
+        "answer": "Лиса стоит у дерева"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Как сказать: Река",
+        "options": ["Der Fluss", "Das Feuer", "Der Fuß"],
+        "answer": "Der Fluss"
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Der Fluss ist schnell",
+        "answer": "Der Fluss ist schnell"
+      },
+      {
+        "id": 12,
+        "type": "readAndAnswer",
+        "text": "Das Wasser fließt schnell",
+        "question": "",
+        "options": [
+          "Вода течет быстро",
+          "Река пересохла",
+          "Вода течет не быстро"
+        ],
+        "answer": "Вода течет быстро"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "Собери: Лиса сидит у воды",
+        "words": ["am Wasser", "sitzt", "Der Fuchs"],
+        "correctOrder": ["Der Fuchs", "sitzt", "am Wasser"]
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "Соберите предложение: Лес зеленый, а река синяя",
+        "words": ["Der Wald", "ist grün", "und", "der Fluss", "ist blau"],
+        "correctOrder": ["Der Wald", "ist grün", "und", "der Fluss", "ist blau"]
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Впишите услышанное",
+        "text": "Der Fuchs läuft im Wald über die Steine",
+        "answer": "Der Fuchs läuft im Wald über die Steine"
+      }
+    ]
   }
 ]
