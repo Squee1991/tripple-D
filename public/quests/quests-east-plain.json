@@ -1687,7 +1687,7 @@
       {
         "id": 14,
         "type": "readAndAnswer",
-        "text": "Maria frühstückt um 7 Uhr und fährt um Acht Uhr zur Arbeit.",
+        "text": "Maria frühstückt um 7 Uhr und fährt um acht Uhr zur Arbeit.",
         "question": "eastPlainNinthQuests.questFourteen",
         "options": [
           "eastPlainNinthQuests.questFourteenFirstOption",
