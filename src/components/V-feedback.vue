@@ -70,8 +70,11 @@
                 <p v-if="validationError" class="error-message">{{ validationError }}</p>
               </div>
               <footer class="footer">
-                <button v-if="currentStepIndex > 0" type="button" class="button button--secondary" @click="prevStep">Назад</button>
-                <button type="button" class="button button--primary" :disabled="!!validationError || isSubmitting" @click="handleNext">
+                <button v-if="currentStepIndex > 0" type="button" class="button button--secondary" @click="prevStep">
+                  Назад
+                </button>
+                <button type="button" class="button button--primary" :disabled="!!validationError || isSubmitting"
+                        @click="handleNext">
                   {{ isLastStep ? 'Отправить' : 'Далее' }}
                 </button>
               </footer>
@@ -123,26 +126,35 @@ const questions = [
   },
   {
     type: 'choices',
-    title: 'Если телефон — какая у тебя система?',
-    dataKey: 'phoneOS',
+    title: 'Какая часть приложения тебе нравится больше всего?',
+    dataKey: 'favoriteFeature',
     selectMode: 'single',
-    options: ['Android', 'iPhone (iOS)'],
-    commentKey: 'phoneModel',
-    placeholder: 'Модель (например: iPhone 13)',
-    showQuestionCondition: (data) => data.deviceType === 'Телефон',
-    errorMessage: 'Выберите операционную систему'
+    options: ['Игры', 'Прогресс и достижения', 'Языковые земли', 'Тесты'],
+    commentKey: 'featureComment',
+    placeholder: 'Напиши, почему именно эта часть нравится',
+    errorMessage: 'Выберите одну опцию'
   },
   {
     type: 'choices',
-    title: 'Есть ли твой родной язык в нашем курсе?',
-    dataKey: 'hasNativeLanguage',
+    title: 'Понравился ли тебе рождественское событие(Шепот зимы)',
+    dataKey: 'christmasEventFeedback',
     selectMode: 'single',
-    options: ['Да', 'Нет'],
-    commentKey: 'missingLanguage',
-    placeholder: 'Напиши, какой язык нужно добавить',
-    errorMessage: 'Выберите Да или Нет',
-    showCommentCondition: (answer) => answer === 'Нет',
-    commentErrorMessage: 'Укажите язык, которого не хватает'
+    options: ['Да', 'Нет', 'Не участвовал'],
+    commentKey: 'christmasEventComment',
+    placeholder: 'Поделись впечатлениями или напиши, что можно улучшить',
+    errorMessage: 'Выберите одну опцию',
+    showCommentCondition: (answer) => answer !== 'Не участвовал'
+  },
+  {
+    type: 'choices',
+    title: 'С какими трудностями ты чаще всего сталкиваешься?',
+    dataKey: 'mainFrustration',
+    selectMode: 'multi',
+    options: ['Понимание материалов', 'Сложные задания', 'Навигация в приложении', 'Недостаток времени'],
+    commentKey: 'frustrationComment',
+    placeholder: 'Можно пояснить подробнее',
+    errorMessage: 'Выберите хотя бы одну',
+    showCommentCondition: (answer) => Array.isArray(answer) && answer.length > 0
   },
   {
     type: 'rating',
@@ -168,7 +180,7 @@ const questions = [
     type: 'choices',
     title: 'Возникали ли у тебя ошибки или баги?',
     dataKey: 'interfaceIssues',
-    selectMode: 'multi',
+    selectMode: 'single',
     options: ['да', 'нет'],
     commentKey: 'interfaceIssuesComment',
     placeholder: 'Если да, то какие...',
@@ -176,6 +188,23 @@ const questions = [
     errorMessage: 'Ответьте, были ли ошибки',
     showCommentCondition: (answer) => Array.isArray(answer) && answer.includes('да'),
     commentErrorMessage: 'Опишите ошибку, пожалуйста'
+  },
+  {
+    type: 'choices',
+    title: 'Как ты узнал(а) о нашем веб-приложении?',
+    dataKey: 'acquisitionChannel',
+    selectMode: 'single',
+    options: [
+      'Рекомендация друга',
+      'Реклама в соцсетях',
+      'Поиск в Google',
+      'Другое'
+    ],
+    commentKey: 'acquisitionChannelDetails',
+    placeholder: 'Напиши, откуда именно ты о нас узнал(а)',
+    errorMessage: 'Пожалуйста, выберите вариант',
+    showCommentCondition: (answer) => answer === 'Другое',
+    commentErrorMessage: 'Пожалуйста, уточните источник'
   },
   {
     type: 'rating',
@@ -319,7 +348,9 @@ const handleNext = async () => {
       answers: {...answers}
     })
     feedbackSent.value = true
-    await authStore.markFeedbackSurveyShown()
+    setTimeout(() => {
+      resetForm()
+    }, 2000)
   } catch (e) {
     console.error(e)
   } finally {
