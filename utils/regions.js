@@ -74,9 +74,9 @@ export const regions = [
 	// 	id: "wild-lands",
 	// 	pathTo: "wild-lands",
 	// 	theme: "wild",
-	// 	name: "Дикие земли",
+	// 	name: "locationNames.wild-lands",
 	// 	level: 0,
-	// 	desc: "Жизнь природы полна удивительных открытий. Здесь ты узнаешь, как называть лесных обитателей, описывать их действия и составлять предложения о мире животных.",
+	// 	desc: "regions.descriptionWildLands",
 	// 	icon: WildLand
 	// }
 ];

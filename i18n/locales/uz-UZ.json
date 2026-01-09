@@ -250,7 +250,8 @@
     "descriptionLakeRuins": "Tuman qadimiy inshootlarni o‘rab olgan, ko‘l suvlari esa o'tmishning sirlarini saqlaydi. Bu yerda unutulgan bilimlar yashiringan bo‘lib, ular til o‘rganishni chuqurroq qilishga yordam beradi.",
     "descriptionNorthCliffs": "Dengiz ustida ulkan qoyaliklar ko‘tarilgan, sovuq shamollar har bir sayohatchining chidamliligini sinaydi. Senga diqqat talab qiladigan topshiriqlar tayyor.",
     "descriptionStormCoast": "Momaqaldiroq va chaqmoqlar g‘aroyibligida qo‘zg‘algan yovvoyi sohil yerlar. Faqat jasur qahramonlar bu yerga odim qo‘yishga jur’at etadi. Bu yerda bilim kuchingning haqiqiy sinovi seni kutmoqda.",
-    "descriptionMasterLands": "Har bir mehnat qadrli bo'lgan ustalar va hunarmandlar yurti. Bu yerda siz kasblar, ish va kundalik vazifalar haqida gapirishni o'rganasiz."
+    "descriptionMasterLands": "Har bir mehnat qadrli bo'lgan ustalar va hunarmandlar yurti. Bu yerda siz kasblar, ish va kundalik vazifalar haqida gapirishni o'rganasiz.",
+    "descriptionWildLands": "Tabiat hayoti ajoyib kashfiyotlarga boy. Bu yerda siz o'rmon aholisi va tabiat hodisalarini nomlashni, ularning harakatlarini tasvirlashni va tabiat haqida gaplar tuzishni o'rganasiz."
   },
   "calendarInfo": {
     "eventsTitle": "Voqealar taqvimi",
@@ -1279,7 +1280,8 @@
     "lake-ruins": "Ko‘l xarobalari",
     "north-cliffs": "Shimoliy qoyalar",
     "storm-coast": "Bo‘ronli sohil",
-    "master-lands": "Ustalar yurti"
+    "master-lands": "Ustalar yurti",
+    "wild-lands": "Yovvoyi erlar"
   },
   "examPage": {
     "examHint": "Biz avtomatik nutqni aniqlash tizimidan foydalanamiz. Mikrofon yonida aniq gapiring."
@@ -1549,6 +1551,8 @@
     "sixthDescription": "Bo‘ronli sohilda barcha topshiriqlarni xatosiz yakunlang",
     "seventhName": "Ustalar o'lkasi",
     "seventhDescription": "Ustalar o'lkasidagi barcha vazifalarni xatosiz bajaring",
+    "eightName": "Yovvoyi erlar",
+    "eightDescription": "Yovvoyi erlardagi barcha topshiriqlarni xatosiz bajaring",
     "fiveHearthName": "Besh yurak posboni",
     "fiveHearthDescription": "5 hayot bilan yigirma topshiriqni bajaring",
     "fiveHearthAwards": "Mukofot: Hayot qalqoni",

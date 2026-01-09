@@ -249,7 +249,8 @@
     "descriptionLakeRuins": "Sis eski yapıların etrafını sarar, göl suları geçmişin sırlarını saklar. Bu topraklarda unutulmuş bilgiler gizlidir ve onlar dil öğreniminde derine inmeni sağlayacak.",
     "descriptionNorthCliffs": "Denizin üzerinde yükselen yüksek kayalıklar, soğuk rüzgârlar her yolcunun dayanıklılığını sınar. Seni dikkat gerektiren görevler bekliyor.",
     "descriptionStormCoast": "Gürültü ve şimşeklerin hüküm sürdüğü vahşi sahil toprakları. Yalnızca cesur kahramanlar buraya adım atmaya cüret eder. Burada bilgilerin gücünün gerçek sınavı seni bekliyor.",
-    "descriptionMasterLands": "Her emeğin değerli olduğu ustalar ve zanaatkarlar diyarı. Burada meslekler, iş ve günlük sorumluluklar hakkında nasıl konuşulacağını öğreneceksiniz."
+    "descriptionMasterLands": "Her emeğin değerli olduğu ustalar ve zanaatkarlar diyarı. Burada meslekler, iş ve günlük sorumluluklar hakkında nasıl konuşulacağını öğreneceksiniz.",
+    "descriptionWildLands": "Doğa hayatı şaşırtıcı keşiflerle doludur. Burada orman sakinlerini ve elementleri nasıl adlandıracağınızı, eylemlerini nasıl tanımlayacağınızı ve doğa hakkında nasıl cümleler kuracağınızı öğreneceksiniz."
   },
   "calendarInfo": {
     "eventsTitle": "Etkinlik Takvimi",
@@ -1278,7 +1279,8 @@
     "lake-ruins": "Göl Harabeleri",
     "north-cliffs": "Kuzey Kayalıkları",
     "storm-coast": "Fırtına Kıyısı",
-    "master-lands": "Ustalar Diyarı"
+    "master-lands": "Ustalar Diyarı",
+    "wild-lands": "Vahşi topraklar"
   },
   "examPage": {
     "examHint": "Otomatik konuşma tanıma sistemi kullanıyoruz. Mikrofonun yanında net konuşun."

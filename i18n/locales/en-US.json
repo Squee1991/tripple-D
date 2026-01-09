@@ -250,7 +250,8 @@
     "descriptionLakeRuins": "Mist envelops ancient structures, and the waters of the lakes hold secrets of the past. In these lands lie forgotten knowledge that will help you delve deeper into language learning.",
     "descriptionNorthCliffs": "Tall cliffs rise above the sea, and cold winds test the endurance of every traveler. Tasks requiring attentiveness await you.",
     "descriptionStormCoast": "Wild coastal lands where thunder and lightning rage. Only brave heroes dare to set foot here. Here you face a true test of the power of your knowledge.",
-    "descriptionMasterLands": "Lands of masters and craftsmen, where every labor matters. Here you will learn how to talk about professions, work, and daily duties."
+    "descriptionMasterLands": "Lands of masters and craftsmen, where every labor matters. Here you will learn how to talk about professions, work, and daily duties.",
+    "descriptionWildLands": "Nature is full of amazing discoveries. Here you will learn how to name forest inhabitants and elements, describe their actions, and form sentences about the natural world."
   },
   "calendarInfo": {
     "eventsTitle": "Event Calendar",
@@ -1279,7 +1280,8 @@
     "lake-ruins": "Lake Ruins",
     "north-cliffs": "Northern Cliffs",
     "storm-coast": "Storm Coast",
-    "master-lands": "Master Lands"
+    "master-lands": "Master Lands",
+    "wild-lands": "Wild Lands"
   },
   "examPage": {
     "examHint": "We use an automatic speech recognition system. Speak clearly near the microphone."
@@ -1549,6 +1551,8 @@
     "sixthDescription": "Complete all quests without mistakes on the Stormy Shore",
     "seventhName": "Land of Masters",
     "seventhDescription": "Complete all quests without mistakes in the Land of Masters",
+    "eightName": "Wild Lands",
+    "eightDescription": "Complete all quests without mistakes in the Wild Lands",
     "fiveHearthName": "Keeper of Five Hearts",
     "fiveHearthDescription": "Complete twenty quests while having 5 lives",
     "fiveHearthAwards": "Reward: Shield of Life",

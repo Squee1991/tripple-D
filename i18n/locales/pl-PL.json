@@ -249,7 +249,8 @@
     "descriptionLakeRuins": "Mgła otula starożytne budowle, a wody jezior strzegą tajemnic przeszłości. W tych ziemiach ukryte są zapomniane wiedzy, które pomogą ci zagłębić się w naukę języka.",
     "descriptionNorthCliffs": "Wysokie klify wznoszą się nad morzem, a zimne wiatry wystawiają na próbę wytrwałość każdego podróżnika. Czekają na ciebie zadania wymagające uwagi.",
     "descriptionStormCoast": "Dzikie przybrzeżne ziemie, gdzie szaleją grzmoty i błyskawice. Tylko odważni bohaterowie decydują się tu wejść. Czeka cię tu prawdziwy test siły wiedzy.",
-    "descriptionMasterLands": "Krainy mistrzów i rzemieślników, gdzie każda praca ma znaczenie. Tutaj dowiesz się, jak rozmawiać o zawodach, pracy i codziennych obowiązkach."
+    "descriptionMasterLands": "Krainy mistrzów i rzemieślników, gdzie każda praca ma znaczenie. Tutaj dowiesz się, jak rozmawiać o zawodach, pracy i codziennych obowiązkach.",
+    "descriptionWildLands": "Życie natury jest pełne niesamowitych odkryć. Tutaj dowiesz się, jak nazywać leśnych mieszkańców i żywioły, opisywać ich działania oraz układać zdania o przyrodzie."
   },
   "calendarInfo": {
     "eventsTitle": "Kalendarz wydarzeń",
@@ -1278,7 +1279,8 @@
     "lake-ruins": "Ruiny jeziora",
     "north-cliffs": "Północne klify",
     "storm-coast": "Burzowe wybrzeże",
-    "master-lands": "Kraina Mistrzów"
+    "master-lands": "Kraina Mistrzów",
+    "wild-lands": "Dzikie krainy"
   },
   "examPage": {
     "examHint": "Używamy automatycznego systemu rozpoznawania mowy. Mów wyraźnie blisko mikrofonu."
@@ -1548,6 +1550,8 @@
     "sixthDescription": "Ukończ wszystkie zadania bez błędów na Sztormowym Wybrzeżu",
     "seventhName": "Kraina Mistrzów",
     "seventhDescription": "Ukończ wszystkie zadania bezbłędnie w Krainie Mistrzów",
+    "eightName": "Dzikie krainy",
+    "eightDescription": "Ukończ wszystkie zadania bez błędów w Dzikich krainach",
     "fiveHearthName": "Strażnik Pięciu Serc",
     "fiveHearthDescription": "Ukończ dwadzieścia zadań mając 5 żyć",
     "fiveHearthAwards": "Nagroda: Tarcza życia",

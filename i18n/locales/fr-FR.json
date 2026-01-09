@@ -252,7 +252,8 @@
     "descriptionLakeRuins": "La brume enveloppe des structures anciennes, et les eaux des lacs gardent les secrets du passé. Des savoirs oubliés s'y cachent pour approfondir ton apprentissage.",
     "descriptionNorthCliffs": "De hautes falaises surplombent la mer, et les vents froids testent la résilience de chaque voyageur. Des missions exigeantes t'y attendent.",
     "descriptionStormCoast": "Terres côtières sauvages où grondent le tonnerre et la foudre. Seuls les plus braves osent s'y aventurer. C'est un véritable test de force pour tes connaissances.",
-    "descriptionMasterLands": "Terres des maîtres et artisans, où chaque effort compte. Ici, tu apprendras à parler des professions, du travail et des responsabilités quotidiennes."
+    "descriptionMasterLands": "Terres des maîtres et artisans, où chaque effort compte. Ici, tu apprendras à parler des professions, du travail et des responsabilités quotidiennes.",
+    "descriptionWildLands": "La vie de la nature est pleine de découvertes étonnantes. Ici, tu apprendras à nommer les habitants de la forêt et les éléments, à décrire leurs actions et à construire des phrases sur la nature."
   },
   "calendarInfo": {
     "eventsTitle": "Calendrier des événements",
@@ -1281,7 +1282,8 @@
     "lake-ruins": "Ruines des Lacs",
     "north-cliffs": "Falaises du Nord",
     "storm-coast": "Côte des Tempêtes",
-    "master-lands": "Terres des Maîtres"
+    "master-lands": "Terres des Maîtres",
+    "wild-lands": "Terres sauvages"
   },
   "examPage": {
     "examHint": "Nous utilisons un système de reconnaissance vocale. Parle distinctement près du micro."
@@ -1551,6 +1553,8 @@
     "sixthDescription": "Termine toutes les quêtes sans erreur sur la Côte des Tempêtes",
     "seventhName": "Terres des Maîtres",
     "seventhDescription": "Termine toutes les quêtes sans erreur dans les Terres des Maîtres",
+    "eightName": "Terres sauvages",
+    "eightDescription": "Terminez toutes les quêtes sans erreur dans les Terres Sauvages",
     "fiveHearthName": "Gardien des cinq cœurs",
     "fiveHearthDescription": "Réalise vingt missions en gardant 5 vies",
     "fiveHearthAwards": "Récompense : Bouclier de vie",

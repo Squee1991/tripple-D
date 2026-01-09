@@ -252,7 +252,8 @@
     "descriptionLakeRuins": "Ceața învăluie construcțiile antice, iar apele lacurilor păstrează secretele trecutului. În aceste pământuri sunt ascunse cunoștințe uitate care te vor ajuta să aprofundezi studiul limbii.",
     "descriptionNorthCliffs": "Stânci înalte se ridică deasupra mării, iar vânturile reci testează rezistența fiecărui călător. Te așteaptă sarcini care necesită atenție sporită.",
     "descriptionStormCoast": "Ținuturi de coastă sălbatice, unde domină tunetele și fulgerele. Doar eroii curajoși îndrăznesc să calce aici. Te așteaptă un adevărat test al puterii cunoștințelor tale.",
-    "descriptionMasterLands": "Pământurile meșterilor și artizanilor, unde fiecare muncă contează. Aici vei învăța cum să vorbești despre profesii, muncă și responsabilitățile de zi cu zi."
+    "descriptionMasterLands": "Pământurile meșterilor și artizanilor, unde fiecare muncă contează. Aici vei învăța cum să vorbești despre profesii, muncă și responsabilitățile de zi cu zi.",
+    "descriptionWildLands": "Viața naturii este plină de descoperiri uimitoare. Aici vei învăța cum să numești locuitorii pădurii și elementele naturii, să le descrii acțiunile și să formezi propoziții despre lumea naturală."
   },
   "calendarInfo": {
     "eventsTitle": "Calendarul evenimentelor",
@@ -1281,7 +1282,8 @@
     "lake-ruins": "Ruinele Lacului",
     "north-cliffs": "Stâncile de Nord",
     "storm-coast": "Coasta Furtunii",
-    "master-lands": "Tărâmul Meșterilor"
+    "master-lands": "Tărâmul Meșterilor",
+    "wild-lands": "Ținuturi sălbatice"
   },
   "examPage": {
     "examHint": "Folosim un sistem automat de recunoaștere a vorbirii. Vorbiți clar lângă microfon."
@@ -1551,6 +1553,8 @@
     "sixthDescription": "Finalizează toate misiunile fără greșeli în Coasta Furtunii",
     "seventhName": "Tărâmul Meșterilor",
     "seventhDescription": "Finalizează toate misiunile fără greșeli în Tărâmul Meșterilor",
+    "eightName": "Ținuturi sălbatice",
+    "eightDescription": "Finalizează toate misiunile fără greșeli în Ținuturile Sălbatice",
     "fiveHearthName": "Păstrătorul celor cinci inimi",
     "fiveHearthDescription": "Finalizează douăzeci de sarcini având 5 vieți",
     "fiveHearthAwards": "Recompensă: Scutul Vieții",
