@@ -14,7 +14,7 @@ export const wordAchievementsGroup = [
 				id: 'stone-reach',
 				name: 'locationAchievementsCategory.secondName',
 				description: 'locationAchievementsCategory.secondDescription',
-				icon: '🏞️️',
+				icon: '🗻',
 				currentProgress: 0,
 				targetProgress: 10
 			},
@@ -51,6 +51,22 @@ export const wordAchievementsGroup = [
 				targetProgress: 10
 			},
 			{
+				id: 'master-lands',
+				name: 'locationAchievementsCategory.seventhName',
+				description: 'locationAchievementsCategory.seventhDescription',
+				icon: '🛠️',
+				currentProgress: 0,
+				targetProgress: 14
+			},
+			{
+				id: 'wild-lands',
+				name: 'locationAchievementsCategory.eightName',
+				description: 'locationAchievementsCategory.eightDescription',
+				icon: '🏞️',
+				currentProgress: 0,
+				targetProgress: 15
+			},
+			{
 				id: 'FiveHearts',
 				name: 'locationAchievementsCategory.fiveHearthName',
 				description: 'locationAchievementsCategory.fiveHearthDescription',
@@ -65,7 +81,7 @@ export const wordAchievementsGroup = [
 				description: 'locationAchievementsCategory.allLocationsDescription',
 				icon: '🌍',
 				currentProgress: 0,
-				targetProgress: 6,
+				targetProgress: 8,
 				awards: 'locationAchievementsCategory.allLocationsAwards'
 			}
 		]

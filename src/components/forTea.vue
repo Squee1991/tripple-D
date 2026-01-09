@@ -1,6 +1,6 @@
 <template>
-	<div class="coffe-container">
-		<img class="coffe" @click="openDonationLink" src="../../assets/images/cupheart.svg" alt="">
+	<div class="coffee-container">
+		<img class="coffee" @click="openDonationLink" src="../../assets/images/cupheart.svg" alt="">
 	</div>
 </template>
 
@@ -12,12 +12,12 @@
 
 <style scoped>
 
-	.coffe {
+	.coffee {
 		width: 55px;
 		cursor: pointer;
 	}
 
-	.coffe-container {
+	.coffee-container {
 		flex-direction: column;
 		bottom: 10px;
 		right: 5px;

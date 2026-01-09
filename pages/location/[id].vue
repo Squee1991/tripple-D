@@ -2,43 +2,50 @@
   <div class="location-page">
     <div class="location__wrapper">
       <header class="location-header" :class="{ 'rtl-locale': locale === 'ar' }">
-        <button class="close-btn" @click="goHome" aria-label="to main">×</button>
-        <h1 class="region__title-name">{{ t(region?.name) }}</h1>
+        <button class="close-btn" @click="goToHomePage" aria-label="to main">×</button>
+        <h1 class="region__title-name">{{ t(currentRegion?.name) }}</h1>
       </header>
-      <div v-if="loading" class="loading">{{ t('locationQuests.loading') }}</div>
+      <div v-if="isLoading" class="loading">{{ t('locationQuests.loading') }}</div>
       <div v-else class="quests">
-        <div v-if="error" class="error">
-          {{ t('locationQuests.error') }}<br/>
-          <div class="tiny">
-            URL: {{ url }}<br/>
-            {{ error }}
-          </div>
-        </div>
-        <ul v-else-if="questsView.length" class="quest-list">
+        <div v-if="errorMessage" class="error">{{ t('locationQuests.error') }}</div>
+        <ul v-else-if="processedQuests.length" class="quest-list">
           <li
-              v-for="q in questsView"
-              :key="q.questId"
+              v-for="quest in processedQuests"
+              :key="quest.questId"
               class="quest-card"
-              :class="{ completed: q._success }"
+              :class="{ completed: quest.isSuccess }"
           >
-            <div v-if="q._success" class="stamp">{{ t('locationQuests.done') }}</div>
-            <h3 class="quest__title">{{ t(q.title) }}</h3>
-            <p class="quest__description">{{ t(q.description) }}</p>
+            <div v-if="quest.isSuccess && !quest.hasMistakes" class="stamp">{{ t('locationQuests.done') }}</div>
+            <div v-else-if="quest.isSuccess && quest.hasMistakes" class="stamp stamp--mistakes">{{ t('locationQuests.mistakes') }}</div>
+            <h3 class="quest__title">{{ t(quest.title) }}</h3>
+            <p class="quest__description">{{ t(quest.description) }}</p>
             <div class="quest-meta">
-              <span v-if="!q._success" class="rewards-container">
-                <span>{{ t('locationQuests.awards')}}</span>
+              <span v-if="!quest.isSuccess" class="rewards-container">
+                <span>{{ t('locationQuests.awards') }}</span>
                 <span class="reward-item">
-                  <span>{{ q.rewards.points }}</span>
+                  <span>{{ quest.rewards.points }}</span>
                   <img src="assets/images/articlus.png" alt="Articlus" class="icon-articlus">
                 </span>
-                                <span class="reward-item">
-                                    {{ q.rewards.xp }} XP
-                                </span>
-                            </span>
+                <span class="reward-item">{{ quest.rewards.xp }} XP</span>
+              </span>
               <span v-else>{{ t('locationQuests.gotAward') }}</span>
             </div>
-            <button class="btn" @click="startQuest(q)">
-              {{ q._success ? t('locationQuests.repeat') : t('locationQuests.start') }}
+            <button
+                class="btn"
+                :style="quest.btnStyle"
+                @click="handleStartQuest(quest)"
+            >
+              <template v-if="quest.isSuccess">
+                <template v-if="quest.hasMistakes">
+                  {{ t('locationQuests.repeatMistakes') }}
+                </template>
+                <template v-else>
+                  {{ t('locationQuests.repeat') }}
+                </template>
+              </template>
+              <template v-else>
+                {{ t('locationQuests.start') }}
+              </template>
             </button>
           </li>
         </ul>
@@ -49,89 +56,145 @@
 </template>
 
 <script setup>
-import {ref, computed, watch, onMounted} from "vue";
-import {useRoute, useRouter} from "vue-router";
-import {regions} from "~/utils/regions.js";
-import {userChainStore} from "~/store/chainStore.js";
-import {useHead, useSeoMeta, useRuntimeConfig} from '#imports'
-import {useCanonical} from "../../composables/useCanonical.js";
+import { ref, computed, watch, onMounted } from "vue";
+import { useRoute, useRouter } from "vue-router";
+import { regions } from "~/utils/regions.js";
+import { userChainStore } from "~/store/chainStore.js";
+import { useSeoMeta } from '#imports';
+import { useCanonical } from "../../composables/useCanonical.js";
 
-const route = useRoute()
-const canonical = useCanonical()
-const {t, locale} = useI18n();
-
-// const pageTitle = t('metaLocation.title')
-// const pageDesc = t('metaLocation.description')
-// useHead({
-//   title: pageTitle,
-//   link: [{rel: 'canonical', href: canonical}]
-// })
-// useSeoMeta({
-//   title: pageTitle,
-//   description: pageDesc,
-//   ogTitle: pageTitle,
-//   ogDescription: pageDesc,
-//   ogType: 'website',
-//   ogUrl: canonical,
-//   ogImage: '/images/seo-lands.png',
-//   robots: 'index, follow'
-// })
+const route = useRoute();
+const router = useRouter();
+const canonical = useCanonical();
+const { t, locale } = useI18n();
+const chainStore = userChainStore();
+const questList = ref([]);
+const isLoading = ref(false);
+const errorMessage = ref("");
 
 useSeoMeta({
   robots: 'noindex, nofollow'
-})
+});
 
-const router = useRouter();
-const chainStore = userChainStore();
+const currentRegionKey = computed(() => {
+  return String(route.query.region || route.params.id || "");
+});
 
-const regionKey = computed(() => String(route.query.region || route.params.id || ""));
-const region = computed(() => regions.find(r => r.pathTo === regionKey.value));
-const url = computed(() => `/quests/quests-${regionKey.value}.json`);
+const currentRegion = computed(() => {
+  return regions.find((regionItem) => regionItem.pathTo === currentRegionKey.value);
+});
 
-const quests = ref([]);
-const loading = ref(false);
-const error = ref("");
+const questsUrl = computed(() => {return `/quests/quests-${currentRegionKey.value}.json`;});
 
-async function loadQuests() {
-  loading.value = true;
-  error.value = "";
-  quests.value = [];
+async function fetchQuests() {
+  isLoading.value = true;
+  errorMessage.value = "";
+  questList.value = [];
   try {
-    const res = await fetch(url.value);
-    if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
-    const data = await res.json();
-    quests.value = Array.isArray(data) ? data : data.quests || [data];
+    const response = await fetch(questsUrl.value);
+    if (!response.ok) {
+      throw new Error(`${response.status} ${response.statusText}`);
+    }
+    const data = await response.json();
+    questList.value = Array.isArray(data) ? data : (data.quests || [data]);
   } catch (err) {
-    error.value = err.message;
+    errorMessage.value = err.message;
   } finally {
-    loading.value = false;
+    isLoading.value = false;
   }
 }
-
-onMounted(() => {
-  chainStore.loadProgressFromFirebase();
-});
-watch(regionKey, loadQuests, {immediate: true});
-
-const questsView = computed(() =>
-    quests.value.map(q => {
-      const p = chainStore.questProgress?.[q.questId] || {};
-      return {
-        ...q,
-        _success: !!p.success,
-        _completed: !!p.completed
+const processedQuests = computed(() => {
+  return questList.value.map((quest) => {
+    let userProgress = chainStore.questProgress?.[quest.questId];
+    if (!userProgress && Array.isArray(quest.aliases)) {
+      const foundAliasId = quest.aliases.find((aliasId) => chainStore.questProgress?.[aliasId]);
+      if (foundAliasId) {
+        userProgress = chainStore.questProgress[foundAliasId];
       }
-    })
-);
+    }
+    const safeProgress = userProgress || {};
+    const hasMistakes = !!(
+        safeProgress.success && ((safeProgress.wrongIndices && safeProgress.wrongIndices.length > 0) || (safeProgress.correctCount < safeProgress.requiredTasks))
+    );
+    const isSuccess = !!safeProgress.success;
+    let btnStyle = {};
+    if (isSuccess) {
+      if (hasMistakes) {
+        btnStyle = {
+          background: 'linear-gradient(180deg, #ff82a9 0%, #e6517d 100%)',
+          color: '#fff'
+        };
+      } else {
+        btnStyle = {
+          background: 'linear-gradient(180deg, #6a74a5 0%, #5d7fc1 100%)',
+          color: '#fff'
+        };
+      }
+    }
+    return {
+      ...quest,
+      isSuccess,
+      isCompleted: !!safeProgress.completed,
+      hasMistakes,
+      btnStyle
+    };
+  });
+});
+// const processedQuests = computed(() => {
+//   return questList.value.map((quest) => {
+//     let userProgress = chainStore.questProgress?.[quest.questId];
+//     if (!userProgress && Array.isArray(quest.aliases)) {
+//       const foundAliasId = quest.aliases.find((aliasId) => chainStore.questProgress?.[aliasId]);
+//       if (foundAliasId) {
+//         userProgress = chainStore.questProgress[foundAliasId];
+//       }
+//     }
+//     const safeProgress = userProgress || {};
+//     const hasMistakes = !!(
+//         safeProgress.success &&
+//         safeProgress.wrongIndices &&
+//         safeProgress.wrongIndices.length > 0
+//     );
+//     const isSuccess = !!safeProgress.success;
+//     let btnStyle = {};
+//     if (isSuccess) {
+//       if (hasMistakes) {
+//         btnStyle = {
+//           background: 'linear-gradient(180deg, #ff82a9 0%, #e6517d 100%)',
+//           color: '#fff'
+//         };
+//       } else {
+//         btnStyle = {
+//           background: 'linear-gradient(180deg, #6a74a5 0%, #5d7fc1 100%)',
+//           color: '#fff'
+//         };
+//       }
+//     }
+//
+//     return {
+//       ...quest,
+//       isSuccess,
+//       isCompleted: !!safeProgress.completed,
+//       hasMistakes,
+//       btnStyle
+//     };
+//   });
+// });
 
-function startQuest(q) {
-  if (!q?.questId) return;
-  router.push({path: `/location/quest-${q.questId}`, query: {region: regionKey.value}});
+function handleStartQuest(quest) {
+  if (!quest?.questId) return;
+  router.push({ path: `/location/quest-${quest.questId}` });
 }
 
-function goHome() {
-  router.push({path: "/"});
+function goToHomePage() {
+  router.push({ path: "/" });
 }
+
+watch(currentRegionKey, fetchQuests, { immediate: true });
+
+onMounted(async () => {
+  await chainStore.loadProgressFromFirebase();
+});
 </script>
 
 <style scoped>
@@ -313,7 +376,7 @@ function goHome() {
   right: -20px;
   transform: rotate(9deg);
   font-size: 14px;
-  background: linear-gradient(180deg, #6a74a5 0%, #5d7fc1 100% 100%);
+  background: linear-gradient(180deg, #6a74a5 0%, #5d7fc1 100%);
   color: white;
   border: 3px solid #111;
   border-radius: 12px;
@@ -322,6 +385,10 @@ function goHome() {
   letter-spacing: .04em;
   box-shadow: 4px 4px 0 #2b2b2b;
   z-index: 3;
+}
+
+.stamp--mistakes {
+  background: linear-gradient(180deg, #ff82a9 0%, #e6517d 100%);
 }
 
 .quest__title {
@@ -440,46 +507,16 @@ function goHome() {
   }
 }
 
-.quest-card:nth-child(1) {
-  animation-delay: .02s;
-}
-
-.quest-card:nth-child(2) {
-  animation-delay: .06s;
-}
-
-.quest-card:nth-child(3) {
-  animation-delay: .10s;
-}
-
-.quest-card:nth-child(4) {
-  animation-delay: .14s;
-}
-
-.quest-card:nth-child(5) {
-  animation-delay: .18s;
-}
-
-.quest-card:nth-child(6) {
-  animation-delay: .22s;
-}
-
-.quest-card:nth-child(7) {
-  animation-delay: .26s;
-}
-
-.quest-card:nth-child(8) {
-  animation-delay: .30s;
-}
-
-.quest-card:nth-child(9) {
-  animation-delay: .34s;
-}
-
-.quest-card:nth-child(10) {
-  animation-delay: .38s;
-}
-
+.quest-card:nth-child(1) { animation-delay: .02s; }
+.quest-card:nth-child(2) { animation-delay: .06s; }
+.quest-card:nth-child(3) { animation-delay: .10s; }
+.quest-card:nth-child(4) { animation-delay: .14s; }
+.quest-card:nth-child(5) { animation-delay: .18s; }
+.quest-card:nth-child(6) { animation-delay: .22s; }
+.quest-card:nth-child(7) { animation-delay: .26s; }
+.quest-card:nth-child(8) { animation-delay: .30s; }
+.quest-card:nth-child(9) { animation-delay: .34s; }
+.quest-card:nth-child(10) { animation-delay: .38s; }
 
 @media (max-width: 767px) {
   .close-btn {
@@ -488,28 +525,19 @@ function goHome() {
     font-size: 26px;
     top: 10px;
   }
-
   .location-header {
     padding: 14px;
   }
-
   .region__title-name {
     font-size: 24px;
   }
-
   .quest-list {
     grid-template-columns:1fr;
     gap: 16px;
   }
-
   .quest-card {
     box-shadow: 4px 4px 0 black;
   }
-
-  .location-header:after {
-    transform: scale(.9) rotate(8deg);
-  }
-
   .icon-articlus {
     width: 22px;
     height: 20px;
@@ -517,16 +545,11 @@ function goHome() {
 }
 
 @media (min-width: 1024px) {
-  .quest-card:hover {
-    transform: translate(2px, 2px);
-    box-shadow: 2px 2px 0 #2b2b2b;
-  }
 
   .btn:hover {
     transform: translate(2px, 2px);
     box-shadow: 2px 2px 0 #2b2b2b;
   }
-
   .close-btn:hover {
     transform: translate(2px, 2px);
     box-shadow: 2px 2px 0 #2b2b2b;
@@ -537,14 +560,12 @@ function goHome() {
   .location-page {
     padding: 12px;
   }
-
   .location-header {
     padding: 10px 14px;
     gap: 15px;
     margin-bottom: 12px;
     border-radius: 16px;
   }
-
   .close-btn {
     width: 40px;
     height: 40px;
@@ -552,20 +573,17 @@ function goHome() {
     border-radius: 12px;
     box-shadow: 3px 3px 0 #2b2b2b;
   }
-
   .region__title-name {
     font-size: 22px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
-
   .quest-list {
     grid-template-columns: 1fr;
     gap: 14px;
     margin-top: 8px;
   }
-
   .quest-card {
     min-height: auto;
     padding: 14px;
@@ -573,12 +591,10 @@ function goHome() {
     border-radius: 16px;
     box-shadow: 3px 3px 0 #2b2b2b;
   }
-
   .quest-card::before {
     inset: 6px;
     outline: 8px solid #fff;
   }
-
   .quest-card::after {
     top: -8px;
     left: -8px;
@@ -588,22 +604,18 @@ function goHome() {
     border: 2px solid #111;
     box-shadow: 4px 4px 0 #2b2b2b;
   }
-
   .quest__title {
     font-size: 18px;
     padding: 6px;
   }
-
   .quest__description {
     font-size: 14px;
   }
-
   .quest-meta .rewards-container {
     font-size: 13px;
     padding: 4px 8px;
     box-shadow: 3px 3px 0 #2b2b2b;
   }
-
   .btn {
     height: 40px;
     margin-top: 8px;
@@ -611,7 +623,6 @@ function goHome() {
     border-radius: 12px;
     box-shadow: 3px 3px 0 #2b2b2b;
   }
-
   .stamp {
     top: -4px;
     right: -10px;
@@ -619,10 +630,6 @@ function goHome() {
     font-size: 12px;
     padding: 6px 10px;
     box-shadow: 3px 3px 0 #2b2b2b;
-  }
-
-  .location-header::after {
-    content: none;
   }
 }
 
@@ -648,7 +655,6 @@ function goHome() {
     animation: bob 2.2s ease-in-out infinite;
     z-index: 2;
   }
-
   .location-header.rtl-locale::after {
     right: auto;
     left: 0;

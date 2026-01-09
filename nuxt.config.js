@@ -107,7 +107,6 @@ export default defineNuxtConfig({
 		// sitemap: `${siteUrl}/sitemap.xml`,
 	},
 
-
 	css: [
 		'simplebar/dist/simplebar.min.css',
 		'~/assets/styles/simplebar.css',
@@ -130,10 +129,13 @@ export default defineNuxtConfig({
 		langDir: 'locales',
 		defaultLocale: 'en',
 		locales: [
-			{ code: 'pl', iso: 'pl-PL', name: 'Polski', file: 'pl-PL.json' },
 			{ code: 'en', iso: 'en-US', name: 'English', file: 'en-US.json' },
+			{ code: 'pl', iso: 'pl-PL', name: 'Polski', file: 'pl-PL.json' },
+			{ code: 'hi', iso: 'hi-IN', name: 'हिन्दी', file: 'hi-IN.json' },
 			{ code: 'tr', iso: 'tr-TR', name: 'Türkçe', file: 'tr-TR.json' },
+			{ code: 'ro', iso: 'ro-RO', name: 'Română', file: 'ro-RO.json' },
 			{ code: 'es', iso: 'es-ES', name: 'Español', file: 'es-ES.json' },
+			{ code: 'fr', iso: 'fr-FR', name: 'Français', file: 'fr-FR.json' },
 			{ code: 'ru', iso: 'ru-RU', name: 'Русский', file: 'ru-RU.json' },
 			{ code: 'uk', iso: 'uk-UA', name: 'Українська', file: 'uk-UA.json' },
 			{ code: 'uz', iso: 'uz-UZ', name: 'Oʻzbekcha', file: 'uz-UZ.json' },

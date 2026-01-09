@@ -1,12 +1,13 @@
 [
   {
-    "questId": "menschen-a1-greetings",
+    "questId": "one",
+    "aliases": ["menschen-a1-greetings"],
     "title": "eastPlainFirstQuests.title",
     "progress": "0/14",
     "description": "eastPlainFirstQuests.description",
     "conditions": {
       "goal": "eastPlainFirstQuests.goal",
-      "minCorrect": 14,
+      "minCorrect": 12,
       "requiredTasks": 14
     },
     "rewards": {
@@ -111,12 +112,10 @@
         "question": "eastPlainFirstQuests.questTen",
         "words": [
           "Hallo",
-          "Guten Tag",
-          "Tschüss",
           "danke",
           "wie geht's",
           "gut",
-          "Guten Abend"
+          "sehr"
         ],
         "correctOrder": [
           "Hallo",
@@ -188,13 +187,14 @@
     ]
   },
   {
-    "questId": "menschen-a1-greetings2",
+    "questId": "two",
+    "aliases": ["menschen-a1-greetings2"],
     "title": "eastPlainSecondQuests.title",
     "progress": "0/13",
     "description": "eastPlainSecondQuests.description",
     "conditions": {
       "goal": "Lerne, über Herkunft und Sprache zu sprechen und höflich Fragen zu stellen",
-      "minCorrect": 13,
+      "minCorrect": 11,
       "requiredTasks": 13
     },
     "rewards": {
@@ -244,10 +244,9 @@
           "und",
           "Thomas",
           "Hallo",
-          "Guten Tag",
           "danke",
           "gut",
-          "seht gut",
+          "sehr gut",
           "Bis Morgen",
           "wie gehts's"
         ],
@@ -369,13 +368,14 @@
     ]
   },
   {
-    "questId": "menschen-a1-shopping",
+    "questId": "three",
+    "aliases": ["menschen-a1-shopping"],
     "title": "eastPlainThirdQuests.title",
     "progress": "0/15",
     "description": "eastPlainThirdQuests.description",
     "conditions": {
       "goal": "eastPlainThirdQuests.goal",
-      "minCorrect": 15,
+      "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {
@@ -593,13 +593,14 @@
     ]
   },
   {
-    "questId": "menschen-a1-shopping2",
+    "questId": "four",
+    "aliases": ["menschen-a1-shopping2"],
     "title": "eastPlainFourthQuests.title",
     "progress": "0/15",
     "description": "eastPlainFourthQuests.description",
     "conditions": {
       "goal": "eastPlainFourthQuests.goal",
-      "minCorrect": 15,
+      "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {
@@ -723,17 +724,17 @@
         "type": "reorder",
         "question": "eastPlainFourthQuests.questEleven",
         "words": [
-          "bargeld",
+          "hier",
+          "bezahlen",
+          "bitte",
+          "Karte",
           "mit",
-          "der",
-          "der Schein",
-          "schlange",
-          "Preis",
-          "bezahlen"
+          "der"
         ],
         "correctOrder": [
           "mit",
-          "bargeld",
+          "der",
+          "Karte",
           "bezahlen"
         ]
       },
@@ -773,13 +774,14 @@
     ]
   },
   {
-    "questId": "menschen-a1-essen",
+    "questId": "five",
+    "aliases": ["menschen-a1-essen"],
     "title": "eastPlainFifthQuests.title",
     "progress": "0/15",
     "description": "eastPlainFifthQuests.description",
     "conditions": {
       "goal": "eastPlainFifthQuests.goal",
-      "minCorrect": 15,
+      "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {
@@ -884,9 +886,9 @@
         "text": "Im Supermarkt kaufe ich Brot, Käse und zwei Flaschen Wasser.",
         "question": "eastPlainFifthQuests.questEight",
         "options": [
-          "das Fleisch",
+          "das Brot, der Käse und der Käse ",
           "das Brot, der Käse und das Wasser",
-          "die Milch"
+          "die Milch , das Wasser und der Käse"
         ],
         "answer": "das Brot, der Käse und das Wasser"
       },
@@ -930,7 +932,7 @@
         "id": 12,
         "type": "input",
         "question": "eastPlainFifthQuests.questTwelve",
-        "correctAnswer": "gern"
+        "correctAnswer": "wie"
       },
       {
         "id": 13,
@@ -978,13 +980,14 @@
     ]
   },
   {
-    "questId": "menschen-a1-beruf",
+    "questId": "six",
+    "aliases": ["menschen-a1-beruf"],
     "title": "eastPlainSixthQuests.title",
     "progress": "0/15",
     "description": "eastPlainSixthQuests.description",
     "conditions": {
       "goal": "eastPlainSixthQuests.goal",
-      "minCorrect": 15,
+      "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1145,13 +1148,14 @@
     ]
   },
   {
-    "questId": "menschen-a1-zahlen",
+    "questId": "seven",
+    "aliases": ["menschen-a1-zahlen"],
     "title": "eastPlainSeventhQuests.title",
     "progress": "0/14",
     "description": "eastPlainSeventhQuests.description",
     "conditions": {
       "goal": "eastPlainSeventhQuests.goal",
-      "minCorrect": 14,
+      "minCorrect": 12,
       "requiredTasks": 14
     },
     "rewards": {
@@ -1181,7 +1185,11 @@
         "type": "speechToText",
         "question": "eastPlainSeventhQuests.questTree",
         "text": "achtundvierzig",
-        "answer": "achtundvierzig"
+        "answer": "achtundvierzig",
+        "accept": [
+          "achtundvierzig",
+          "48"
+        ]
       },
 
       {
@@ -1241,8 +1249,12 @@
         "id": 8,
         "type": "speechToText",
         "question": "eastPlainSeventhQuests.questNine",
-        "text": "Wie viel kostet eine Flasche Wasser? Eine Flasche Wasser koster zwei euro",
-        "answer": "Wie viel kostet eine Flasche Wasser? Eine Flasche Wasser koster zwei euro"
+        "text": "Wie viel kostet eine Flasche Wasser? Eine Flasche Wasser kostet zwei Euro",
+        "answer": "Wie viel kostet eine Flasche Wasser? Eine Flasche Wasser kostet zwei Euro",
+        "accept": [
+          "Wie viel kostet eine Flasche Wasser? Eine Flasche Wasser kostet zwei Euro",
+          "Wie viel kostet eine Flasche Wasser? Eine Flasche Wasser kostet 2 Euro"
+        ]
       },
       {
         "id": 9,
@@ -1315,18 +1327,23 @@
         "type": "speechToText",
         "question": "eastPlainSeventhQuests.questFifteen",
         "text": "Das Ticket kostet zehn Euro.",
-        "answer": "Das Ticket kostet zehn Euro."
+        "answer": "Das Ticket kostet zehn Euro.",
+        "accept": [
+          "Das Ticket kostet zehn Euro.",
+          "Das Ticket kostet 10 Euro."
+        ]
       }
     ]
   },
   {
-    "questId": "menschen-a1-familie",
+    "questId": "eight",
+    "aliases": ["menschen-a1-familie"],
     "title": "eastPlainEighthQuests.title",
     "progress": "0/13",
     "description": "eastPlainEighthQuests.description",
     "conditions": {
       "goal": "eastPlainEighthQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 11,
       "requiredTasks": 13
     },
     "rewards": {
@@ -1485,13 +1502,14 @@
     ]
   },
   {
-    "questId": "menschen-a1-tagesablauf",
+    "questId": "nine",
+    "aliases": ["menschen-a1-tagesablauf"],
     "title": "eastPlainNinthQuests.title",
     "progress": "0/15",
     "description": "eastPlainNinthQuests.description",
     "conditions": {
       "goal": "eastPlainNinthQuests.goal",
-      "minCorrect": 15,
+      "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1515,14 +1533,22 @@
         "type": "speechToText",
         "question": "eastPlainNinthQuests.questTwo",
         "text": "Ich gehe um 21 Uhr schlafen",
-        "answer": "Ich gehe um 22 Uhr schlafen"
+        "answer": "Ich gehe um 21 Uhr schlafen",
+        "accept": [
+          "Ich gehe um 21 Uhr schlafen",
+          "Ich gehe um einundzwanzig Uhr schlafen"
+        ]
       },
       {
         "id": 3,
         "type": "speechToText",
         "question": "eastPlainNinthQuests.questTree",
         "text": "Ich gehe zur Arbeit um 8 Uhr",
-        "answer": "Ich gehe zur Arbeit um 8 Uhr"
+        "answer": "Ich gehe zur Arbeit um 8 Uhr",
+        "accept": [
+          "Ich gehe zur Arbeit um 8 Uhr",
+          "Ich gehe zur Arbeit um acht Uhr"
+        ]
       },
       {
         "id": 4,
@@ -1569,22 +1595,8 @@
         "id": 7,
         "type": "reorder",
         "question": "eastPlainNinthQuests.questSeven",
-        "words": [
-          "auf",
-          "Ich",
-          "stehe",
-          "um",
-          "7",
-          "Uhr"
-        ],
-        "correctOrder": [
-          "Ich",
-          "stehe",
-          "um",
-          "7",
-          "Uhr",
-          "auf"
-        ]
+        "words": ["auf", "Ich", "stehe", "um", "7", "Uhr"],
+        "correctOrder": ["Ich", "stehe", "um", "7", "Uhr", "auf"]
       },
       {
         "id": 8,
@@ -1603,7 +1615,11 @@
         "type": "speechToText",
         "question": "eastPlainNinthQuests.questNine",
         "text": "Ich frühstücke um halb acht",
-        "answer": "Ich frühstücke um halb acht"
+        "answer": "Ich frühstücke um halb acht",
+        "accept": [
+          "Ich frühstücke um halb acht",
+          "Ich frühstücke um 7:30"
+        ]
       },
       {
         "id": 10,
@@ -1671,7 +1687,7 @@
       {
         "id": 14,
         "type": "readAndAnswer",
-        "text": "Maria frühstückt um 7 Uhr und fährt um Acht Uhr zur Arbeit.",
+        "text": "Maria frühstückt um 7 Uhr und fährt um acht Uhr zur Arbeit.",
         "question": "eastPlainNinthQuests.questFourteen",
         "options": [
           "eastPlainNinthQuests.questFourteenFirstOption",
@@ -1690,13 +1706,14 @@
     ]
   },
   {
-    "questId": "menschen-a1-wohnort",
+    "questId": "ten",
+    "aliases": ["menschen-a1-wohnort"],
     "title": "eastPlainTenthQuests.title",
     "progress": "0/12",
     "description": "eastPlainTenthQuests.description",
     "conditions": {
       "goal": "eastPlainTenthQuests.goal",
-      "minCorrect": 12,
+      "minCorrect": 10,
       "requiredTasks": 12
     },
     "rewards": {

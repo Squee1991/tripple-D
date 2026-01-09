@@ -4,7 +4,7 @@ import { regions } from '~/utils/regions.js'
 import { doc, getDoc, getFirestore, runTransaction, increment, setDoc } from 'firebase/firestore'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 
-const REGEN_INTERVAL_MS = 10 * 1000
+const REGEN_INTERVAL_MS = 60 * 1000
 const MAX_LIVES = 5
 
 export const userChainStore = defineStore('chain', () => {
@@ -12,19 +12,15 @@ export const userChainStore = defineStore('chain', () => {
 	const quest = ref(null)
 	const loading = ref(true)
 	const error = ref('')
-	const currentIndex = ref(0)
-	const correctCount = ref(0)
-	const answeredCount = ref(0)
 	const finished = ref(false)
 	const showResult = ref(false)
 	const isCorrect = ref(false)
-	const answers = ref([])
 	const selected = ref('')
 	const userInput = ref('')
 	const reorderSelection = ref([])
 	const reorderBank = ref([])
+	const lives = ref(MAX_LIVES)
 	const maxLives = MAX_LIVES
-	const lives = ref(maxLives)
 	const lastLifeAtMs = ref(0)
 	const confirming = ref(false)
 	const advancing = ref(false)
@@ -34,13 +30,52 @@ export const userChainStore = defineStore('chain', () => {
 	const questProgress = ref({})
 	const sessionStarted = ref(false)
 	const justAwarded = ref(false)
+	const activeQueue = ref([])
+	const internalIndex = ref(0)
+	const taskResults = ref({})
+	const isRetryMode = ref(false)
+
 	let lifeTickerId = null
-	const requiredTasks = computed(() => quest.value?.conditions?.requiredTasks ?? quest.value?.tasks?.length ?? 0)
-	const minCorrect = computed(() => quest.value?.conditions?.minCorrect ?? requiredTasks.value)
-	const task = computed(() => (finished.value ? null : (quest.value?.tasks?.[currentIndex.value] ?? null)))
-	const success = computed(() => correctCount.value >= minCorrect.value)
+
+	const totalQuestTasks = computed(() => quest.value?.conditions?.requiredTasks ?? quest.value?.tasks?.length ?? 0)
+	const minCorrect = computed(() => quest.value?.conditions?.minCorrect ?? totalQuestTasks.value)
+	const currentTaskIndex = computed(() => {
+		if (activeQueue.value.length === 0) return -1
+		return activeQueue.value[internalIndex.value]
+	})
+
+	const task = computed(() => {
+		if (finished.value || !quest.value?.tasks) return null
+		const index = currentTaskIndex.value
+		return index > -1 ? quest.value.tasks[index] : null
+	})
+
+	const requiredTasks = computed(() => activeQueue.value.length)
+	const currentIndex = computed(() => internalIndex.value)
+	const correctCount = computed(() => {
+		return Object.values(taskResults.value).filter(Boolean).length
+	})
+	const hasMistakes = computed(() => {
+		return correctCount.value < totalQuestTasks.value
+	})
+
+	const success = computed(() => {
+		return correctCount.value >= minCorrect.value
+	})
+
 	const progressEntry = computed(() => questProgress.value[currentQuestId.value] || null)
-	const rewardClaimed = computed(() => !!progressEntry.value?.rewardClaimed)
+
+	const answers = computed(() => {
+		const result = []
+		for (let i = 0; i < requiredTasks.value; i++) {
+			const originalIndex = activeQueue.value[i]
+			if (taskResults.value[originalIndex] !== undefined) {
+				result.push({ correct: taskResults.value[originalIndex] })
+			}
+		}
+		return result
+	})
+
 	const correctAnswer = computed(() => {
 		if (!task.value) return ''
 		return (
@@ -51,18 +86,10 @@ export const userChainStore = defineStore('chain', () => {
 		)
 	})
 
-	function normalizeSpeechText(text) {
-		return String(text || '')
-			.toLowerCase()
-			.normalize('NFKD')
-			.replace(/[\u200B-\u200D\uFEFF]/g, '')
-			.replace(/[’‘ʼ´`"“”„]/g, '')
-			.replace(/[\u00A0\u202F]/g, ' ')
-			.replace(/[^0-9a-zäöüß\s]/gi, '')
-			.replace(/\s+/g, ' ')
-			.trim()
-	}
-
+	const questHasAccept = computed(() => {
+		const tasks = quest.value?.tasks || []
+		return tasks.some((taskItem) => Array.isArray(taskItem.accept) && taskItem.accept.length > 0)
+	})
 
 	const isConfirmDisabled = computed(() => {
 		if (showResult.value) return true
@@ -83,6 +110,18 @@ export const userChainStore = defineStore('chain', () => {
 		}
 	})
 
+	function normalizeSpeechText(text) {
+		return String(text || '')
+			.toLowerCase()
+			.normalize('NFKD')
+			.replace(/[\u200B-\u200D\uFEFF]/g, '')
+			.replace(/[’‘ʼ´`"“”„]/g, '')
+			.replace(/[\u00A0\u202F]/g, ' ')
+			.replace(/[^0-9a-zäöüß\s]/gi, '')
+			.replace(/\s+/g, ' ')
+			.trim()
+	}
+
 	function resetInputs() {
 		selected.value = ''
 		userInput.value = ''
@@ -95,9 +134,9 @@ export const userChainStore = defineStore('chain', () => {
 		const auth = getAuth()
 		if (auth.currentUser) return Promise.resolve(auth.currentUser)
 		return new Promise(resolve => {
-			const unsub = onAuthStateChanged(auth, u => {
+			const unsub = onAuthStateChanged(auth, user => {
 				unsub()
-				resolve(u || null)
+				resolve(user || null)
 			})
 		})
 	}
@@ -161,10 +200,10 @@ export const userChainStore = defineStore('chain', () => {
 			const data = snap.data() || {}
 			questProgress.value = data.questProgress || {}
 
-			const l = typeof data.lives === 'number' ? data.lives : maxLives
-			const ts = typeof data.lastLifeAtMs === 'number' ? data.lastLifeAtMs : 0
-			lives.value = Math.max(0, Math.min(maxLives, l))
-			lastLifeAtMs.value = ts || (lives.value < maxLives ? Date.now() : 0)
+			const loadedLives = typeof data.lives === 'number' ? data.lives : maxLives
+			const timestamp = typeof data.lastLifeAtMs === 'number' ? data.lastLifeAtMs : 0
+			lives.value = Math.max(0, Math.min(maxLives, loadedLives))
+			lastLifeAtMs.value = timestamp || (lives.value < maxLives ? Date.now() : 0)
 		} else {
 			lives.value = maxLives
 			lastLifeAtMs.value = 0
@@ -178,35 +217,38 @@ export const userChainStore = defineStore('chain', () => {
 
 	async function saveFinalProgress() {
 		if (!currentQuestId.value) return
-		if (!sessionStarted.value) return
+		if (!sessionStarted.value && !isRetryMode.value) return
 		const userRef = await getUserRef()
 		if (!userRef) return
-
+		const currentWrongIndices = []
+		for (let i = 0; i < totalQuestTasks.value; i++) {
+			if (taskResults.value[i] === false) {
+				currentWrongIndices.push(i)
+			} else if (taskResults.value[i] === undefined) {
+			}
+		}
 		await runTransaction(db, async (tx) => {
 			const snap = await tx.get(userRef)
 			const data = snap.exists() ? (snap.data() || {}) : {}
 			const qp = data.questProgress || {}
 			const prev = qp[currentQuestId.value] || {}
-			if (prev.success) {
+			const isSuccessNow = success.value
+			if (prev.success && (!prev.wrongIndices || prev.wrongIndices.length === 0) && (prev.correctCount === prev.requiredTasks) && !isRetryMode.value) {
 				questProgress.value = { ...questProgress.value, [currentQuestId.value]: prev }
 				return
 			}
+			const finalCorrectCount = currentWrongIndices.length === 0 ? totalQuestTasks.value : correctCount.value
 
-			const answered = Math.min(answeredCount.value, requiredTasks.value)
-			const percent = requiredTasks.value
-				? Math.max(0, Math.min(100, Math.round((correctCount.value / requiredTasks.value) * 100)))
+			const percent = totalQuestTasks.value
+				? Math.max(0, Math.min(100, Math.round((finalCorrectCount / totalQuestTasks.value) * 100)))
 				: 0
-
-			// const answered = Math.min(answeredCount.value, requiredTasks.value)
-			// const percent = requiredTasks.value
-			// 	? Math.max(0, Math.min(100, Math.round((answered / requiredTasks.value) * 100)))
-			// 	: 0
 
 			let reward = !!prev.rewardClaimed
 			let timesCompleted = Number(prev.timesCompleted || 0)
-			if (success.value) timesCompleted += 1
+			const isFirstSuccess = isSuccessNow && !prev.success
+			if (isFirstSuccess) timesCompleted += 1
 			let awardedNow = false
-			if (success.value && !reward) {
+			if (isSuccessNow && !reward) {
 				tx.set(userRef, { points: increment(20), exp: increment(20) }, { merge: true })
 				reward = true
 				awardedNow = true
@@ -215,15 +257,16 @@ export const userChainStore = defineStore('chain', () => {
 			const p = {
 				region: currentRegionKey.value || null,
 				progressPercent: percent,
-				correctCount: correctCount.value,
-				requiredTasks: requiredTasks.value,
-				answeredCount: answered,
+				correctCount: finalCorrectCount,
+				requiredTasks: totalQuestTasks.value,
+				answeredCount: totalQuestTasks.value,
 				completed: true,
-				success: success.value,
+				success: isSuccessNow,
 				rewardClaimed: reward,
 				timesCompleted,
 				livesAtFinish: lives.value,
-				updatedAtMs: Date.now()
+				updatedAtMs: Date.now(),
+				wrongIndices: currentWrongIndices
 			}
 
 			tx.set(userRef, { questProgress: { [currentQuestId.value]: p } }, { merge: true })
@@ -236,7 +279,7 @@ export const userChainStore = defineStore('chain', () => {
 		loading.value = true
 		error.value = ''
 		quest.value = null
-		restart()
+		resetViewState()
 		currentQuestId.value = String(questId || '')
 		currentRegionKey.value = String(regionKey || '')
 		justAwarded.value = false
@@ -266,6 +309,24 @@ export const userChainStore = defineStore('chain', () => {
 				}
 			}
 			if (!quest.value) throw new Error('Квест не найден')
+
+			await loadProgressFromFirebase()
+			await migrateByAliases(quest.value)
+			const savedProgress = questProgress.value[currentQuestId.value]
+			if (savedProgress && savedProgress.success && savedProgress.wrongIndices && savedProgress.wrongIndices.length > 0) {
+				startRetryMistakes(savedProgress.wrongIndices)
+				const total = totalQuestTasks.value
+				for (let i = 0; i < total; i++) {
+					if (!savedProgress.wrongIndices.includes(i)) {
+						taskResults.value[i] = true
+					} else {
+						taskResults.value[i] = false
+					}
+				}
+			} else {
+				initializeTaskQueue(quest.value.tasks.length)
+			}
+
 			const changed = applyLifeRegenIfNeeded()
 			if (changed) await saveLivesToRoot()
 
@@ -275,6 +336,13 @@ export const userChainStore = defineStore('chain', () => {
 		} finally {
 			loading.value = false
 		}
+	}
+
+	function initializeTaskQueue(length) {
+		activeQueue.value = Array.from({ length }, (_, i) => i)
+		taskResults.value = {}
+		internalIndex.value = 0
+		isRetryMode.value = false
 	}
 
 	function choose(opt) {
@@ -298,6 +366,7 @@ export const userChainStore = defineStore('chain', () => {
 		if (isConfirmDisabled.value || !task.value) return
 		confirming.value = true
 		sessionStarted.value = true
+
 		switch (task.value.type) {
 			case 'select':
 			case 'readAndAnswer':
@@ -312,12 +381,18 @@ export const userChainStore = defineStore('chain', () => {
 				break
 			}
 			case 'speechToText': {
-				const rawUser = userInput.value
-				const rawAns = task.value.answer || task.value.correctAnswer || ''
-				const user = normalizeSpeechText(rawUser)
-				const ans = normalizeSpeechText(rawAns)
-				isCorrect.value = user === ans
-				break
+				const userRawInput = userInput.value;
+				const normalizedUserInput = normalizeSpeechText(userRawInput);
+				const acceptedAnswers = Array.isArray(task.value.accept) && task.value.accept.length > 0
+					? task.value.accept
+					: [task.value.answer || task.value.correctAnswer || ''];
+				const isUserAnswerCorrect = acceptedAnswers.some((acceptedAnswer) => {
+					const normalizedAcceptedAnswer = normalizeSpeechText(acceptedAnswer);
+					return normalizedAcceptedAnswer === normalizedUserInput;
+				});
+
+				isCorrect.value = isUserAnswerCorrect;
+				break;
 			}
 			case 'reorder':
 				isCorrect.value = JSON.stringify(reorderSelection.value) === JSON.stringify(task.value.correctOrder || [])
@@ -328,13 +403,14 @@ export const userChainStore = defineStore('chain', () => {
 			default:
 				isCorrect.value = false
 		}
+
+		const originalIndex = currentTaskIndex.value
+		taskResults.value[originalIndex] = isCorrect.value
+
 		showResult.value = true
 
 		try {
-			answeredCount.value = Math.min(answeredCount.value + 1, requiredTasks.value)
-			if (isCorrect.value) {
-				correctCount.value += 1
-			} else if (!skipLives && !lifeSpentThisStep.value) {
+			if (!isCorrect.value && !skipLives && !lifeSpentThisStep.value) {
 				const before = lives.value
 				lives.value = Math.max(0, lives.value - 1)
 				lifeSpentThisStep.value = true
@@ -353,35 +429,130 @@ export const userChainStore = defineStore('chain', () => {
 		if (advancing.value) return
 		advancing.value = true
 		showResult.value = false
+
 		if (!skipLives && lives.value <= 0) {
 			finished.value = true
 			advancing.value = false
 			return
 		}
-		if (currentIndex.value + 1 >= requiredTasks.value) {
+
+		if (internalIndex.value + 1 >= activeQueue.value.length) {
 			finished.value = true
 		} else {
-			currentIndex.value += 1
+			internalIndex.value += 1
 		}
+
 		resetInputs()
 		advancing.value = false
 	}
 
-	function restart() {
-		currentIndex.value = 0
-		correctCount.value = 0
-		answeredCount.value = 0
+	function startRetryMistakes(indices = null) {
+		let mistakeIndices = indices
+
+		if (!mistakeIndices) {
+			mistakeIndices = []
+			for (const [key, val] of Object.entries(taskResults.value)) {
+				if (val === false) mistakeIndices.push(Number(key))
+			}
+		}
+
+		if (mistakeIndices.length === 0) return
+
+		activeQueue.value = mistakeIndices.sort((a, b) => a - b)
+		internalIndex.value = 0
+		finished.value = false
+		showResult.value = false
+		isRetryMode.value = true
+		resetInputs()
+	}
+
+	function restart(fullyCleared = false) {
+		const p = questProgress.value[currentQuestId.value]
+		const hasSavedMistakes = p && p.success && p.wrongIndices && p.wrongIndices.length > 0
+		const hasCurrentMistakes = hasMistakes.value && success.value
+		if (hasSavedMistakes || hasCurrentMistakes) {
+			let indices = []
+			if (hasCurrentMistakes) {
+				for (const [key, val] of Object.entries(taskResults.value)) {
+					if (val === false) indices.push(Number(key))
+				}
+			} else {
+				indices = p.wrongIndices
+			}
+			if (indices.length > 0) {
+				startRetryMistakes(indices)
+				return
+			}
+		}
+
+		initializeTaskQueue(totalQuestTasks.value)
 		finished.value = false
 		showResult.value = false
 		isCorrect.value = false
-		quest.value = null
 		sessionStarted.value = false
-		answers.value = []
+		isRetryMode.value = false
 		resetInputs()
-		if (lives.value < maxLives && !lastLifeAtMs.value) {
-			lastLifeAtMs.value = Date.now()
+		if (lives.value < maxLives && !lastLifeAtMs.value) lastLifeAtMs.value = Date.now()
+	}
+
+	async function migrateByAliases(questData) {
+		if (!questData?.questId || !Array.isArray(questData.aliases) || !questData.aliases.length) return
+		const newId = String(questData.questId)
+		if (questProgress.value?.[newId]) return
+		const userRef = await getUserRef()
+		if (!userRef) return
+		await runTransaction(db, async (tx) => {
+			const snap = await tx.get(userRef)
+			if (!snap.exists()) return
+			const data = snap.data() || {}
+			const qp = { ...(data.questProgress || {}) }
+			if (qp[newId]) return
+			const found = questData.aliases
+				.map(id => qp[id])
+				.filter(Boolean)
+				.sort((a, b) => {
+					const as = a.success ? 1 : 0
+					const bs = b.success ? 1 : 0
+					if (as !== bs) return bs - as
+					return (b.updatedAtMs || 0) - (a.updatedAtMs || 0)
+				})[0]
+
+			if (!found) return
+			qp[newId] = found
+			questData.aliases.forEach(id => delete qp[id])
+			tx.set(userRef, { questProgress: qp }, { merge: true })
+		})
+		const local = questData.aliases
+			.map(id => questProgress.value[id])
+			.filter(Boolean)
+			.sort((a, b) => {
+				const as = a.success ? 1 : 0
+				const bs = b.success ? 1 : 0
+				if (as !== bs) return bs - as
+				return (b.updatedAtMs || 0) - (a.updatedAtMs || 0)
+			})[0]
+		if (local) {
+			questProgress.value[newId] = local
+			questData.aliases.forEach(id => delete questProgress.value[id])
 		}
 	}
+
+	function resetViewState() {
+		loading.value = true
+		error.value = ''
+		justAwarded.value = false
+		quest.value = null
+		internalIndex.value = 0
+		finished.value = false
+		showResult.value = false
+		isCorrect.value = false
+		taskResults.value = {}
+		activeQueue.value = []
+		isRetryMode.value = false
+		sessionStarted.value = false
+		resetInputs()
+	}
+
 	watch(finished, async (v) => {
 		if (v) {
 			try {
@@ -408,7 +579,6 @@ export const userChainStore = defineStore('chain', () => {
 		error,
 		currentIndex,
 		correctCount,
-		answeredCount,
 		finished,
 		showResult,
 		answers,
@@ -422,16 +592,19 @@ export const userChainStore = defineStore('chain', () => {
 		minCorrect,
 		task,
 		success,
+		hasMistakes,
 		correctAnswer,
 		isConfirmDisabled,
 
 		lives,
 		maxLives,
+		lastLifeAtMs,
+		REGEN_INTERVAL_MS,
 
 		questProgress,
 		sessionStarted,
 		justAwarded,
-
+		questHasAccept,
 		confirming,
 		advancing,
 		lifeSpentThisStep,
@@ -444,7 +617,8 @@ export const userChainStore = defineStore('chain', () => {
 		confirm,
 		restart,
 		nextTask,
-
+		startRetryMistakes,
+		migrateByAliases,
 		applyLifeRegenIfNeeded,
 		saveLivesToRoot
 	}

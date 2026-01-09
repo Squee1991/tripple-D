@@ -522,9 +522,9 @@ onMounted(() => {
 .auth__success {
   color: #d32f2f;
   text-align: center;
-  font-family: 'Inter', sans-serif;
-  font-weight: 700;
-  font-size: 12px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+  font-size: 13px;
   padding-top: 2px;
 }
 

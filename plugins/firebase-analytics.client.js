@@ -18,10 +18,37 @@ export default defineNuxtPlugin(async (nuxtApp) => {
 		document.body.addEventListener('click', (event) => {
 			const bannerBtn = event.target.closest('.banner__button')
 			const loginBtn = event.target.closest('.btn-login')
+			const coffeeBtn = event.target.closest('.coffee')
+			const regionsBtn = event.target.closest('.map-btn')
+			const testBtn = event.target.closest('#test')
+			const achievementBtn = event.target.closest('#achievement')
+			const calendarBtn = event.target.closest('#calendar')
+			const gameNavBtn = event.target.closest('#duel')
+			const learnNavBtn = event.target.closest('#learn')
+			if (learnNavBtn) {
+				logEvent(analytics , 'learnNav__button_click')
+			}
+			if (gameNavBtn) {
+				logEvent(analytics , 'gameNav__button_click')
+			}
+			if (calendarBtn) {
+				logEvent(analytics , 'calendar__button_click')
+			}
+			if (achievementBtn) {
+				logEvent(analytics , 'achievement__button_click')
+			}
+			if (regionsBtn) {
+				logEvent(analytics, 'regions__button_click')
+			}
+			if (coffeeBtn) {
+				logEvent(analytics, 'coffee__button_click')
+			}
+			if (testBtn) {
+				logEvent(analytics, 'tests__button_click')
+			}
 			if (bannerBtn) {
 				logEvent(analytics, 'banner_button_click')
 			}
-
 			if (loginBtn) {
 				logEvent(analytics, 'login_button_click')
 			}
