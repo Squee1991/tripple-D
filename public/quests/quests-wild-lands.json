@@ -1,10 +1,10 @@
 [
   {
-    "questId": "wild-lands-env-1",
+    "questId": "env",
     "aliases": ["natur-a1-env-start"],
-    "title": "Дикие земли: Окружение",
+    "title": "wildLandsFirstQuest.title",
     "progress": "0/15",
-    "description": "Первые шаги в диких землях. Здесь ты выучишь четыре главных слова лесного пейзажа и научишься строить из них первые фразы.",
+    "description": "wildLandsFirstQuest.description",
     "conditions": {
       "goal": "Освой слова: Природа, Лес, Дерево и Река через разные упражнения",
       "minCorrect": 13,
@@ -18,116 +18,116 @@
       {
         "id": 1,
         "type": "select",
-        "question": "Как по-немецки: Природа",
+        "question": "wildLandsFirstQuest.questOne",
         "options": ["Der Wald", "Die Natur", "Der Baum"],
         "answer": "Die Natur"
       },
       {
         "id": 2,
         "type": "speechToText",
-        "question": "Произнеси: Die Natur",
+        "question": "wildLandsFirstQuest.questTwo",
         "text": "Die Natur",
         "answer": "Die Natur"
       },
       {
         "id": 3,
         "type": "reorder",
-        "question": "Собери предложение: Природа красивая",
+        "question": "wildLandsFirstQuest.questThree",
         "words": ["ist", "Die Natur", "schön"],
         "correctOrder": ["Die Natur", "ist", "schön"]
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Как по-немецки: Лес",
+        "question": "wildLandsFirstQuest.questFour",
         "options": ["Der Fluss", "Der Wald", "Der Baum"],
         "answer": "Der Wald"
       },
       {
         "id": 5,
         "type": "speechToText",
-        "question": "Произнеси: Der Wald",
+        "question": "wildLandsFirstQuest.questFive",
         "text": "Der Wald",
         "answer": "Der Wald"
       },
       {
         "id": 6,
         "type": "reorder",
-        "question": "Собери предложение: Лес большой",
-        "words": ["ist", "groß", "Der Wald"],
-        "correctOrder": ["Der Wald", "ist", "groß"]
+        "question": "wildLandsFirstQuest.questSix",
+        "words": ["ist", "und" , "schön", "groß", "Der Wald"],
+        "correctOrder": ["Der Wald", "ist", "groß" , "und" , "schön"]
       },
       {
         "id": 7,
-        "type": "select",
-        "question": "Как по-немецки: Лес красивый",
-        "options": ["Der Wald ist schön", "Die Natur ist groß", "Der Baum"],
-        "answer": "Der Wald ist schön"
+        "type": "speechToText",
+        "question": "wildLandsFirstQuest.questSeven",
+        "text": "Dieser Wald ist sehr alt",
+        "answer": "Dieser Wald ist sehr alt"
       },
       {
         "id": 8,
         "type": "select",
-        "question": "Как по-немецки: Дерево",
+        "question": "wildLandsFirstQuest.questEight",
         "options": ["Der Wald", "Der Fluss", "Der Baum"],
         "answer": "Der Baum"
       },
       {
         "id": 9,
         "type": "speechToText",
-        "question": "Произнеси: Der Baum",
+        "question": "wildLandsFirstQuest.questNine",
         "text": "Der Baum",
         "answer": "Der Baum"
       },
       {
         "id": 10,
         "type": "reorder",
-        "question": "Собери предложение: Дерево здесь",
-        "words": ["ist", "Der Baum", "hier"],
-        "correctOrder": ["Der Baum", "ist", "hier"]
+        "question": "wildLandsFirstQuest.questTen",
+        "words": ["Dieser", "Baum", "ist", "sehr", "alt"],
+        "correctOrder": ["Dieser", "Baum", "ist", "sehr", "alt"]
       },
       {
         "id": 11,
         "type": "select",
-        "question": "Как по-немецки: Дерево большое",
+        "question": "wildLandsFirstQuest.questEleven",
         "options": ["Der Baum ist groß", "Der Wald ist schön", "Der Fluss"],
         "answer": "Der Baum ist groß"
       },
       {
         "id": 12,
         "type": "select",
-        "question": "Как по-немецки: Река",
+        "question": "wildLandsFirstQuest.questTwelve",
         "options": ["Der Fluss", "Der Wald", "Die Natur"],
         "answer": "Der Fluss"
       },
       {
         "id": 13,
         "type": "speechToText",
-        "question": "Произнеси: Der Fluss",
+        "question": "wildLandsFirstQuest.questThirteen",
         "text": "Der Fluss",
         "answer": "Der Fluss"
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "Собери предложение: Река очень красивая",
+        "question": "wildLandsFirstQuest.questFourteen",
         "words": ["ist", "Der Fluss", "sehr", "schön"],
         "correctOrder": ["Der Fluss", "ist", "sehr", "schön"]
       },
       {
         "id": 15,
         "type": "reorder",
-        "question": "Собери предложение: Природа здесь очень красивая",
+        "question": "wildLandsFirstQuest.questFifteen",
         "words": ["ist", "Die Natur", "hier", "sehr", "schön"],
-        "correctOrder": ["Die Natur", "hier", "ist", "sehr", "schön"]
+        "correctOrder": ["Die Natur", "ist", "hier", "sehr", "schön"]
       }
     ]
   },
   {
-    "questId": "wild-lands-animals-1",
+    "questId": "animals",
     "aliases": ["natur-a1-animals-start"],
-    "title": "Дикие земли: Животные",
+    "title": "wildLandsSecondQuest.title",
     "progress": "0/15",
-    "description": "Лес оживает. Теперь ты встретишь его обитателей и научишься описывать их местонахождение, используя знакомые места по принципу наслоения.",
+    "description": "wildLandsSecondQuest.description",
     "conditions": {
       "goal": "Освой названия животных и объедини их с локациями (Лес, Река, Дерево)",
       "minCorrect": 13,
@@ -141,229 +141,244 @@
       {
         "id": 1,
         "type": "select",
-        "question": "Как по-немецки: Волк",
+        "question": "wildLandsSecondQuest.questOne",
         "options": ["Der Wolf", "Der Bär", "Der Fuchs"],
         "answer": "Der Wolf"
       },
       {
         "id": 2,
         "type": "speechToText",
-        "question": "Впишите услышанное",
+        "question": "wildLandsSecondQuest.questTwo",
         "text": "Der Wolf",
         "answer": "Der Wolf"
       },
       {
         "id": 3,
         "type": "reorder",
-        "question": "Ком: Волк в лесу",
+        "question": "wildLandsSecondQuest.questThree",
         "words": ["ist", "im Wald", "Der Wolf"],
         "correctOrder": ["Der Wolf", "ist", "im Wald"]
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Как по-немецки: Медведь",
+        "question": "wildLandsSecondQuest.questFour",
         "options": ["Der Wolf", "Der Bär", "Der Baum"],
         "answer": "Der Bär"
       },
       {
         "id": 5,
         "type": "speechToText",
-        "question": "Впишите услышанное",
+        "question": "wildLandsSecondQuest.questFive",
         "text": "Der Bär",
         "answer": "Der Bär"
       },
       {
         "id": 6,
         "type": "reorder",
-        "question": "Ком растет: Медведь у реки",
+        "question": "wildLandsSecondQuest.questSix",
         "words": ["am Fluss", "ist", "Der Bär"],
         "correctOrder": ["Der Bär", "ist", "am Fluss"]
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Наслоение: Медведь большой, он у реки",
-        "words": ["Der Bär", "ist", "groß,", "er ist", "am Fluss"],
-        "correctOrder": ["Der Bär", "ist", "groß,", "er ist", "am Fluss"]
+        "question": "wildLandsSecondQuest.questSeven",
+        "words": ["In", "den", "Bergen", "lebt", "ein", "wilder", "Bär"],
+        "correctOrder": ["In", "den", "Bergen", "lebt", "ein", "wilder", "Bär"]
       },
       {
         "id": 8,
         "type": "select",
-        "question": "Как по-немецки: Лиса",
+        "question": "wildLandsSecondQuest.questEight",
         "options": ["Der Fuchs", "Der Wolf", "Die Natur"],
         "answer": "Der Fuchs"
       },
       {
         "id": 9,
         "type": "speechToText",
-        "question": "Впишите услышанное",
-        "text": "Der Fuchs",
-        "answer": "Der Fuchs"
+        "question": "wildLandsSecondQuest.questNine",
+        "text": "Der Fuchs im Wald",
+        "answer": "Der Fuchs im Wald"
       },
       {
         "id": 10,
         "type": "reorder",
-        "question": "Ком: Лиса здесь, у дерева",
-        "words": ["hier,", "am Baum", "Der Fuchs", "ist"],
-        "correctOrder": ["Der Fuchs", "ist", "hier,", "am Baum"]
+        "question": "wildLandsSecondQuest.questTen",
+        "words": ["sitzt", "Der", "Fuchs", "Baum", "am"],
+        "correctOrder": ["Der", "Fuchs", "sitzt", "am", "Baum"]
       },
       {
         "id": 11,
         "type": "select",
-        "question": "Связка: Здесь лиса и здесь река",
-        "options": ["Hier ist der Fuchs und hier ist der Fluss", "Der Wolf ist im Wald", "Die Natur"],
-        "answer": "Hier ist der Fuchs und hier ist der Fluss"
+        "question": "wildLandsSecondQuest.questEleven",
+        "options": [
+          "Der Fuchs lebt im Wald",
+          "Ein Vogel fliegt zum Fluss",
+          "Die Sonne scheint hell"
+        ],
+        "answer": "Der Fuchs lebt im Wald"
       },
       {
         "id": 12,
         "type": "speechToText",
-        "question": "Впишите услышанное",
+        "question": "wildLandsSecondQuest.questTwelve",
         "text": "Der Wolf ist im Wald",
         "answer": "Der Wolf ist im Wald"
       },
       {
         "id": 13,
         "type": "reorder",
-        "question": "Сложный ком: Медведь у реки, а волк в лесу",
-        "words": ["Der Bär", "ist", "am Fluss", "und", "der Wolf", "ist", "im Wald"],
-        "correctOrder": ["Der Bär", "ist", "am Fluss", "und", "der Wolf", "ist", "im Wald"]
+        "question": "wildLandsSecondQuest.questThirteen",
+        "words": ["Der Fuchs", "läuft", "zum", "Fluss"],
+        "correctOrder": ["Der Fuchs", "läuft", "zum", "Fluss"]
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "Начинаем итог: Природа красивая, здесь лес",
-        "words": ["Die Natur", "ist", "schön,", "hier ist", "der Wald"],
-        "correctOrder": ["Die Natur", "ist", "schön,", "hier ist", "der Wald"]
+        "question": "wildLandsSecondQuest.questFourteen",
+        "words": ["Der Fuchs", "trinkt", "Wasser", "aus", "dem", "Fluss"],
+        "correctOrder": ["Der Fuchs", "trinkt", "Wasser", "aus", "dem", "Fluss"]
       },
       {
         "id": 15,
         "type": "speechToText",
-        "question": "Впишите услышанное",
-        "text": "Die Natur ist schön, hier ist der Wald, der Fluss und der Fuchs",
-        "answer": "Die Natur ist schön, hier ist der Wald, der Fluss und der Fuchs"
+        "question": "wildLandsSecondQuest.questFifteen",
+        "text": "Der Wald ist heute wirklich schön",
+        "answer": "Der Wald ist heute wirklich schön"
       }
     ]
   },
   {
-    "questId": "wild-lands-nature-2",
+    "questId": "nature",
     "aliases": ["natur-a1-env-hills"],
-    "title": "Дикие земли: Высоты",
+    "title": "wildLandsThirdQuest.title",
     "progress": "0/15",
-    "description": "Мы поднимаемся выше. Солнце светит над горами, а в лесу всё так же бродят звери. Учимся связывать пейзаж воедино.",
+    "description": "wildLandsThirdQuest.description",
     "conditions": {
       "goal": "Выучи 'Гора' и 'Солнце' и заставь их работать в нормальных фразах",
       "minCorrect": 13,
       "requiredTasks": 15
     },
-    "rewards": { "points": 35, "xp": 35 },
+    "rewards": { "points": 20, "xp": 20 },
     "tasks": [
       {
         "id": 1,
         "type": "select",
-        "question": "Как по-немецки: Гора",
+        "question": "wildLandsThirdQuest.questOne",
         "options": ["Der Berg", "Der Wald", "Die Sonne"],
         "answer": "Der Berg"
       },
       {
         "id": 2,
         "type": "speechToText",
-        "question": "Впишите услышанное",
+        "question": "wildLandsThirdQuest.questTwo",
         "text": "Der Berg",
         "answer": "Der Berg"
       },
       {
         "id": 3,
         "type": "reorder",
-        "question": "Ком: Гора большая",
+        "question": "wildLandsThirdQuest.questThree",
         "words": ["ist", "groß", "Der Berg"],
         "correctOrder": ["Der Berg", "ist", "groß"]
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Как по-немецки: Солнце",
+        "question": "wildLandsThirdQuest.questFour",
         "options": ["Die Natur", "Die Sonne", "Der Fluss"],
         "answer": "Die Sonne"
       },
       {
         "id": 5,
         "type": "speechToText",
-        "question": "Впишите услышанное",
+        "question": "wildLandsThirdQuest.questFive",
         "text": "Die Sonne",
         "answer": "Die Sonne"
       },
       {
         "id": 6,
         "type": "reorder",
-        "question": "Соберите фразу: Солнце светит",
+        "question": "wildLandsThirdQuest.questSix",
         "words": ["scheint", "Die Sonne"],
         "correctOrder": ["Die Sonne", "scheint"]
       },
       {
         "id": 7,
         "type": "speechToText",
-        "question": "Впишите услышанное",
+        "question": "wildLandsThirdQuest.questSeven",
         "text": "Die Sonne scheint und ist schön",
         "answer": "Die Sonne scheint und ist schön"
       },
       {
         "id": 8,
         "type": "speechToText",
-        "question": "Впишите услышанное",
+        "question": "wildLandsThirdQuest.questEight",
         "text": "Die Sonne scheint",
         "answer": "Die Sonne scheint"
       },
       {
         "id": 9,
         "type": "speechToText",
-        "question": "Впишите услышанное",
-        "text": "Der Bär ist am Berg",
-        "answer": "Der Bär ist am Berg"
+        "question": "wildLandsThirdQuest.questNine",
+        "text": "Der Bär ist im Wald",
+        "answer": "Der Bär ist im Wald"
       },
       {
         "id": 10,
         "type": "select",
-        "question": "Связка: Волк в лесу и солнце светит",
-        "options": ["Der Wolf im Wald und die Sonne scheint", "Der Fuchs am Baum", "Die Natur"],
-        "answer": "Der Wolf im Wald und die Sonne scheint"
+        "question": "wildLandsThirdQuest.questTen",
+        "options": [
+          "Da ist ein Wolf!",
+          "Der Bär ist da",
+          "Das ist ein Wolf"
+        ],
+        "answer": "Da ist ein Wolf!"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Предфинал: Природа красивая, солнце светит",
+        "question": "wildLandsThirdQuest.questEleven",
         "words": ["Die Natur", "ist schön,", "die Sonne", "scheint"],
         "correctOrder": ["Die Natur", "ist schön,", "die Sonne", "scheint"]
       },
       {
         "id": 12,
         "type": "speechToText",
-        "question": "Впишите услышанное",
-        "text": "Die Natur ist schön: der Berg ist groß und die Sonne scheint",
-        "answer": "Die Natur ist schön: der Berg ist groß und die Sonne scheint"
+        "question": "wildLandsThirdQuest.questTwelve",
+        "text": "Der Berg ist groß und die Sonne scheint",
+        "answer": "Der Berg ist groß und die Sonne scheint"
       },
       {
         "id": 13,
         "type": "speechToText",
-        "question": "Впишите услышанное",
-        "text": "Die Natur ist schön. Am Berg scheint die Sonne",
-        "answer": "Die Natur ist schön: am Berg scheint die Sonne"
+        "question": "wildLandsThirdQuest.questThirteen",
+        "text": "Der Berg ist wirklich hoch",
+        "answer": "Der Berg ist wirklich hoch"
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "wildLandsThirdQuest.questFourteen",
+        "text": "Das Wasser im Fluss ist sehr klar",
+        "answer": "Das Wasser im Fluss ist sehr klar"
       },
       {
         "id": 15,
         "type": "speechToText",
-        "question": "Впишите услышанное",
-        "text": "Die Natur ist schön: am Berg scheint die Sonne, der Wolf ist im Wald und der Bär ist am Fluss",
-        "answer": "Die Natur ist schön: am Berg scheint die Sonne, der Wolf ist im Wald und der Bär ist am Fluss"
+        "question": "wildLandsThirdQuest.questFifteen",
+        "text": "Die Luft im Wald ist so frisch",
+        "answer": "Die Luft im Wald ist so frisch"
       }
     ]
   },
   {
-    "questId": "wild-lands-nature-3",
+    "questId": "fauna",
     "aliases": ["natur-a1-env-lake"],
-    "title": "Дикие земли: Озеро",
+    "title": "wildLandsFourthQuest.title",
     "progress": "0/15",
-    "description": "Мы выходим к большой воде. Учимся описывать озеро и воду, связывая их с лесом, горами и животными по принципу наслоения.",
+    "description": "wildLandsFourthQuest.description",
     "conditions": {
       "goal": "Выучи 'Озеро' и 'Вода', и впиши их в лесной пейзаж",
       "minCorrect": 13,
@@ -374,116 +389,116 @@
       {
         "id": 1,
         "type": "select",
-        "question": "Как по-немецки: Озеро",
+        "question": "wildLandsFourthQuest.questOne",
         "options": ["Der See", "Der Fluss", "Der Wald"],
         "answer": "Der See"
       },
       {
         "id": 2,
         "type": "speechToText",
-        "question": "Впишите услышанное",
+        "question": "wildLandsFourthQuest.questTwo",
         "text": "Der See",
         "answer": "Der See"
       },
       {
         "id": 3,
         "type": "reorder",
-        "question": "Собери предложение: Озеро очень большое",
+        "question": "wildLandsFourthQuest.questThree",
         "words": ["Der See", "ist", "sehr", "groß"],
         "correctOrder": ["Der See", "ist", "sehr", "groß"]
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Как по-немецки: Вода",
+        "question": "wildLandsFourthQuest.questFour",
         "options": ["Das Wasser", "Die Natur", "Der Berg"],
         "answer": "Das Wasser"
       },
       {
         "id": 5,
         "type": "speechToText",
-        "question": "Впишите услышанное",
+        "question": "wildLandsFourthQuest.questFive",
         "text": "Das Wasser",
         "answer": "Das Wasser"
       },
       {
         "id": 6,
         "type": "reorder",
-        "question": "Собери предложение: Вода в озере красивая",
+        "question": "wildLandsFourthQuest.questSix",
         "words": ["Das Wasser", "im See", "ist", "schön"],
-        "correctOrder": ["Das Wasser", "im See", "ist", "schön"]
+        "correctOrder": ["Das Wasser", "im See", "ist", "kalt"]
       },
       {
         "id": 7,
         "type": "speechToText",
-        "question": "Впишите услышанное",
+        "question": "wildLandsFourthQuest.questSeven",
         "text": "Der See am Berg ist groß",
         "answer": "Der See am Berg ist groß"
       },
       {
         "id": 8,
         "type": "reorder",
-        "question": "Собери предложение: Солнце светит на воду",
-        "words": ["Die Sonne", "scheint", "am Wasser"],
-        "correctOrder": ["Die Sonne", "scheint", "am Wasser"]
+        "question": "wildLandsFourthQuest.questEight",
+        "words": ["Der See", "ist", "sehr", "tief"],
+        "correctOrder": ["Der See", "ist", "sehr", "tief"]
       },
       {
         "id": 9,
         "type": "select",
-        "question": "Как по-немецки: Медведь у озера",
-        "options": ["Der Bär am See", "Der Wolf am Berg", "Der Baum"],
-        "answer": "Der Bär am See"
+        "question": "wildLandsFourthQuest.questNine",
+        "options": ["Der Bär steht am See", "Der Bär ist am Berg", "Der Wolf läuft"],
+        "answer": "Der Bär steht am See"
       },
       {
         "id": 10,
         "type": "speechToText",
-        "question": "Впишите услышанное",
-        "text": "Das Wasser im Fluss ist schön",
-        "answer": "Das Wasser im Fluss ist schön"
+        "question": "wildLandsFourthQuest.questTen",
+        "text": "Das Wasser im See ist warm",
+        "answer": "Das Wasser im See ist warm"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Собери предложение: Гора большая и озеро красивое",
-        "words": ["Der Berg", "ist groß", "und", "der See", "ist schön"],
-        "correctOrder": ["Der Berg", "ist groß", "und", "der See", "ist schön"]
+        "question": "wildLandsFourthQuest.questEleven",
+        "words": ["ist", "Berg", "groß", "Der", "und", "schön", "der", "See", "ist"],
+        "correctOrder": ["Der", "Berg", "ist", "groß", "und", "der", "See", "ist", "schön"]
       },
       {
         "id": 12,
         "type": "select",
-        "question": "Как по-немецки: Лиса у воды",
-        "options": ["Der Fuchs am Wasser", "Der Wolf im Wald", "Der Bär"],
+        "question": "wildLandsFourthQuest.questTwelve",
+        "options": ["Der Fuchs am Wasser", "Der Wolf im Wald", "Der Fuchs in Wasser"],
         "answer": "Der Fuchs am Wasser"
       },
       {
         "id": 13,
         "type": "speechToText",
-        "question": "Впишите услышанное",
+        "question": "wildLandsFourthQuest.questThirteen",
         "text": "Die Sonne scheint и das Wasser ist schön",
         "answer": "Die Sonne scheint und das Wasser ist schön"
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "Собери предложение: Медведь у озера, а волк в лесу",
-        "words": ["Der Bär", "ist am See", "und", "der Wolf", "ist im Wald"],
-        "correctOrder": ["Der Bär", "ist am See", "und", "der Wolf", "ist im Wald"]
+        "question": "wildLandsFourthQuest.questFourteen",
+        "words": ["See", "ist", "Das", "in", "klar", "dem", "Wasser"],
+        "correctOrder": ["Das", "Wasser", "ist", "in", "dem", "See", "klar"]
       },
       {
         "id": 15,
         "type": "speechToText",
-        "question": "Впишите услышанное",
+        "question": "wildLandsFourthQuest.questFifteen",
         "text": "Die Natur ist schön: die Sonne scheint, der See ist groß и das Wasser ist schön",
         "answer": "Die Natur ist schön: die Sonne scheint, der See ist groß und das Wasser ist schön"
       }
     ]
   },
   {
-    "questId": "wild-lands-weather-1",
+    "questId": "weather",
     "aliases": ["natur-a1-env-weather"],
-    "title": "Дикие земли: Стихия",
+    "title": "wildLandsFifthQuest.title",
     "progress": "0/15",
-    "description": "Погода меняется. Небо затягивают облака, поднимается ветер и начинается дождь. Научись описывать и понимать, что происходит вокруг.",
+    "description": "wildLandsFifthQuest.description",
     "conditions": {
       "goal": "Освой слова: Ветер, Дождь, Облако и научись понимать тексты о погоде",
       "minCorrect": 13,
@@ -497,28 +512,28 @@
       {
         "id": 1,
         "type": "select",
-        "question": "Как сказать: Ветер",
+        "question": "wildLandsFifthQuest.questOne",
         "options": ["Der Wind", "Das Wasser", "Der Wald"],
         "answer": "Der Wind"
       },
       {
         "id": 2,
         "type": "speechToText",
-        "question": "Произнеси: Der Wind",
+        "question": "wildLandsFifthQuest.questTwo",
         "text": "Der Wind",
         "answer": "Der Wind"
       },
       {
         "id": 3,
         "type": "reorder",
-        "question": "Собери фразу: Ветер холодный",
+        "question": "wildLandsFifthQuest.questThree",
         "words": ["ist", "kalt", "Der Wind"],
         "correctOrder": ["Der Wind", "ist", "kalt"]
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Как по-немецки: Дождь",
+        "question": "wildLandsFifthQuest.questFour",
         "options": ["Der Regen", "Der Berg", "Die Sonne"],
         "answer": "Der Regen"
       },
@@ -526,32 +541,32 @@
         "id": 5,
         "type": "readAndAnswer",
         "text": "Im Wald ist der Wind stark und es regnet.",
-        "question": "",
+        "question": "wildLandsFifthQuest.questFive",
         "options": [
-          "В лесу сильный ветер и идет дождь",
-          "В лесу идет дождь, но ветра нет",
-          "Ветер сильный, но в лесу сухо"
+          "Im Wald",
+          "Am Berg",
+          "Am See"
         ],
-        "answer": "В лесу сильный ветер и идет дождь"
+        "answer": "Im Wald"
       },
       {
         "id": 6,
         "type": "speechToText",
-        "question": "Впишите услышанное",
+        "question": "wildLandsFifthQuest.questSix",
         "text": "Es regnet sehr stark",
         "answer": "Es regnet sehr stark"
       },
       {
         "id": 7,
         "type": "select",
-        "question": "Как по-немецки: Облако",
+        "question": "wildLandsFifthQuest.questSeven",
         "options": ["Die Wolke", "Der Wolf", "Der Wald"],
         "answer": "Die Wolke"
       },
       {
         "id": 8,
         "type": "reorder",
-        "question": "Собери фразу: Облако большое и серое",
+        "question": "wildLandsFifthQuest.questEight",
         "words": ["ist", "Die Wolke", "und", "groß", "ist", "grau"],
         "correctOrder": ["Die Wolke", "ist", "groß", "und", "grau"]
       },
@@ -559,44 +574,44 @@
         "id": 9,
         "type": "readAndAnswer",
         "text": "Die Sonne scheint nicht. Die Wolke ist am Berg.",
-        "question": "Где находится облако?",
+        "question": "wildLandsFifthQuest.questNine",
         "options": [
-          "У горы (Am Berg)",
-          "В озере (Im See)",
-          "В лесу (Im Wald)"
+          "Die Wolke ist am Berg",
+          "Die Sonne ist am Berg",
+          "Die Wolke ist am See"
         ],
-        "answer": "У горы (Am Berg)"
+        "answer": "Die Wolke ist am Berg"
       },
       {
         "id": 10,
         "type": "speechToText",
-        "question": "Впишите услышанное",
+        "question": "wildLandsFifthQuest.questTen",
         "text": "Der Wind ist stark und die Wolke ist grau",
         "answer": "Der Wind ist stark und die Wolke ist grau"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Собери предложение: В лесу идет дождь, но в горах светит солнце",
-        "words": ["Im Wald", "regnet es,", "aber", "in den Bergen", "scheint die Sonne"],
-        "correctOrder": ["Im Wald", "regnet es,", "aber", "in den Bergen", "scheint die Sonne"]
+        "question": "wildLandsFifthQuest.questTwelve",
+        "words": ["Sonne", "In", "regnet", "Wald", "dem", "die", "Bergen", "aber", "es", "in", "scheint", "den"],
+        "correctOrder": ["In", "dem", "Wald", "regnet", "es", "aber", "in", "den", "Bergen", "scheint", "die", "Sonne"]
       },
       {
         "id": 12,
         "type": "readAndAnswer",
         "text": "Es ist grau hier. Es regnet und der Wind ist kalt.",
-        "question": "",
+        "question": "wildLandsFifthQuest.questTwelve",
         "options": [
-          "Здесь серо, идет дождь и ветер холодный",
-          "Здесь серо, но дождя нет, только ветер",
-          "Идет дождь, но ветер теплый и приятный"
+          "nicht Warm",
+          "sehr Warm",
+          "sehr schnell"
         ],
-        "answer": "Здесь серо, идет дождь и ветер холодный"
+        "answer": "Kalt"
       },
       {
         "id": 13,
         "type": "select",
-        "question": "Как правильно сказать: У реки ветрено",
+        "question": "wildLandsFifthQuest.questThirteen",
         "options": [
           "Am Fluss ist es windig",
           "Der Wind ist am Fluss",
@@ -607,60 +622,60 @@
       {
         "id": 14,
         "type": "reorder",
-        "question": "Соберите предложение: Природа красивая, но ветер холодный",
+        "question": "wildLandsFifthQuest.questFourteen",
         "words": ["kalt", "ist", "Die Natur", "aber", "ist", "schön,", "der Wind"],
-        "correctOrder": ["Die Natur", "ist", "schön,", "aber", "der Wind",  "ist", "kalt",]
+        "correctOrder": ["Die Natur", "ist", "schön,", "aber", "der Wind",  "ist", "kalt"]
       },
       {
         "id": 15,
         "type": "speechToText",
-        "question": "Впишите услышанное",
-        "text": "Es regnet den ganzen Tag und es ist sehr windig. Das Wetter ist schlecht.",
-        "answer": "Es regnet den ganzen Tag und es ist sehr windig. Das Wetter ist schlecht."
+        "question": "wildLandsFifthQuest.questFifteen",
+        "text": "Das Wetter ist schlecht. Es regnet den ganzen Tag und es ist sehr windig. Das Wetter ist schlecht.",
+        "answer": "Das Wetter ist schlecht. Es regnet den ganzen Tag und es ist sehr windig."
       }
     ]
   },
   {
-    "questId": "wild-lands-winter-1",
+    "questId": "winter",
     "aliases": ["natur-a1-env-winter"],
-    "title": "Дикие земли: Зима",
+    "title": "Зима пришла",
     "progress": "0/15",
-    "description": "Лес укрывает тишина. Пришла зима. Всё вокруг меняет цвет, вода превращается в лёд, а с неба падает снег.",
+    "description": "Пришла зима. Всё вокруг меняет цвет, вода превращается в лёд, и падает снег.",
     "conditions": {
       "goal": "Освой слова: Зима, Снег, Лёд, Белый и конструкцию 'Es schneit'",
       "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 45,
-      "xp": 45
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
         "id": 1,
         "type": "select",
-        "question": "Как сказать: Зима",
+        "question": "wildLandsSixthQuest.questOne",
         "options": ["Der Winter", "Der Wind", "Der Wald"],
         "answer": "Der Winter"
       },
       {
         "id": 2,
         "type": "speechToText",
-        "question": "Произнеси услышанное",
+        "question": "wildLandsSixthQuest.questTwo",
         "text": "Der Winter ist kalt",
         "answer": "Der Winter ist kalt"
       },
       {
         "id": 3,
         "type": "reorder",
-        "question": "Собери фразу",
+        "question": "wildLandsSixthQuest.questThree",
         "words": ["ist", "kalt", "Der Winter"],
         "correctOrder": ["Der Winter", "ist", "kalt"]
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Как сказать: Снег",
+        "question": "wildLandsSixthQuest.questFour",
         "options": ["Der Schnee", "Der See", "Die Sonne"],
         "answer": "Der Schnee"
       },
@@ -668,58 +683,58 @@
         "id": 5,
         "type": "readAndAnswer",
         "text": "Es ist Winter. Es ist kalt und es schneit.",
-        "question": "",
+        "question": "wildLandsSixthQuest.questFive",
         "options": [
-          "Сейчас зима, холодно и идет снег",
-          "Сейчас зима, но тепло и солнечно",
-          "Сейчас зима, холодно и нет снега"
+          "Kalt und Schnee",
+          "Kalt und Eis",
+          "Kalt und Wind"
         ],
-        "answer": "Сейчас зима, холодно и идет снег"
+        "answer": "Kalt und Schnee"
       },
       {
         "id": 6,
         "type": "reorder",
-        "question": "Собери фразу: Снег повсюду",
+        "question": "wildLandsSixthQuest.questSix",
         "words": ["ist", "hier", "überall", "Der Schnee"],
         "correctOrder": ["Der Schnee", "ist", "überall"]
       },
       {
         "id": 7,
         "type": "select",
-        "question": "Как по-немецки: Лёд",
+        "question": "wildLandsSixthQuest.questSeven",
         "options": ["Das Eis", "Der Schnee", "Das Wasser"],
         "answer": "Das Eis"
       },
       {
         "id": 8,
         "type": "speechToText",
-        "question": "Впишите услышанное",
-        "text": "Hier ist nur Schnee und Eis",
-        "answer": "Hier ist nur Schnee und Eis"
+        "question": "wildLandsSixthQuest.questEight",
+        "text": "Draußen ist Schnee und Eis",
+        "answer": "Draußen ist Schnee und Eis"
       },
       {
         "id": 9,
         "type": "readAndAnswer",
         "text": "Das Wasser im See ist gefroren.",
-        "question": "",
+        "question": "wildLandsSixthQuest.questNine",
         "options": [
-          "Вода в озере замерзла",
-          "Вода в озере теплая",
-          "Озеро глубокое и замерзло"
+          "Wald ist gefroren",
+          "Wasser ist gefroren",
+          "Berg ist gefroren"
         ],
-        "answer": "Вода в озере замерзла"
+        "answer": "See ist gefroren"
       },
       {
         "id": 10,
         "type": "reorder",
-        "question": "Собери: Зимой лес белый",
-        "words": ["Im Winter", "weiß", "ist", "der Wald"],
-        "correctOrder": ["Im Winter", "ist", "der Wald", "weiß"]
+        "question": "wildLandsSixthQuest.questTen",
+        "words": ["Wald", "ist", "dem", "weiß", "In", "Winter", "der"],
+        "correctOrder": ["In", "dem", "Winter", "ist", "der", "Wald", "weiß"]
       },
       {
         "id": 11,
         "type": "select",
-        "question": "Как сказать: Идет снег",
+        "question": "wildLandsSixthQuest.questEleven",
         "options": ["Es schneit", "Der Schnee ist da", "Schnee kommt"],
         "answer": "Es schneit"
       },
@@ -727,18 +742,18 @@
         "id": 12,
         "type": "readAndAnswer",
         "text": "Der Bär schläft. Er mag den Winter nicht.",
-        "question": "",
+        "question": "wildLandsSixthQuest.questTwelve",
         "options": [
-          "Медведь спит, он не любит зиму",
-          "Медведь гуляет по лесу и радуется зиме",
-          "Медведь ищет еду в реке"
+          "Er mag den Winter nicht",
+          "Er mag den Wald nicht",
+          "Er mag den Wind nicht"
         ],
-        "answer": "Медведь спит, он не любит зиму"
+        "answer": "Er mag den Winter nicht"
       },
       {
         "id": 13,
         "type": "reorder",
-        "question": "Сложное: Гора белая, потому что идет снег",
+        "question": "wildLandsSixthQuest.questThirteen",
         "words": ["ist weiß,", "Der Berg", "weil", "es schneit"],
         "correctOrder": ["Der Berg", "ist weiß,", "weil", "es schneit"]
       },
@@ -746,261 +761,245 @@
         "id": 14,
         "type": "readAndAnswer",
         "text": "Im Wald und auf dem Berg liegt Schnee.",
-        "question": "",
+        "question": "wildLandsSixthQuest.questFourteen",
         "options": [
-          "Снег повсюду: в лесу, у реки и на горе",
-          "Снег только на горе, в лесу чисто",
-          "Снега нет, только лёд на реке"
+          "Im Wald und auf dem Berg",
+          "Im Wald und auf dem See",
+          "Im Wald und auf dem Weg"
         ],
-        "answer": "Снег повсюду: в лесу, у реки и на горе"
+        "answer": "Im Wald und auf dem Berg"
       },
       {
         "id": 15,
         "type": "speechToText",
-        "question": "Впишите услышанное",
-        "text": "Es ist Winter, es ist kalt und der Schnee ist weiß",
-        "answer": "Es ist Winter, es ist kalt und der Schnee ist weiß"
+        "question": "wildLandsSixthQuest.questFifteen",
+        "text": "Es ist Winter und draußen sind es minus zehn Grad",
+        "answer": "Es ist Winter und draußen sind es minus zehn Grad",
+        "accept": [
+          "Es ist Winter und draußen sind es minus zehn Grad",
+          "Es ist Winter und draußen sind es minus 10 Grad"
+        ]
       }
     ]
   },
   {
-    "questId": "wild-lands-night-life",
-    "aliases": ["natur-a1-animals-night"],
-    "title": "Дикие земли: Ночная жизнь",
+    "questId": "night-sky",
+    "aliases": ["natur-a1-night-sky"],
+    "title": "wildLandsSeventhQuest.title",
     "progress": "0/15",
-    "description": "Солнце село, но лес не пустой. Узнай, кто ложится спать, а у кого большие глаза и кто выходит на охоту в темноте.",
+    "description": "wildLandsSeventhQuest.description",
     "conditions": {
-      "goal": "Освой слова: Сова, Глаза, Спать и опиши ночную жизнь леса",
+      "goal": "Освой слова: Луна, Звезда, Свет, Небо, Темнота",
       "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 50,
-      "xp": 50
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
         "id": 1,
         "type": "select",
-        "question": "Как по-немецки: Ночь",
-        "options": ["Die Nacht", "Der Nebel", "Die Natur"],
+        "question": "wildLandsSeventhQuest.questOne",
+        "options": ["Die Nacht", "Der Nebel", "Der Norden"],
         "answer": "Die Nacht"
       },
       {
         "id": 2,
         "type": "speechToText",
-        "question": "Произнеси: Die Nacht",
+        "question": "wildLandsSeventhQuest.questTwo",
         "text": "Die Nacht",
         "answer": "Die Nacht"
       },
       {
         "id": 3,
         "type": "reorder",
-        "question": "Собери фразу: В лесу темно",
-        "words": ["ist", "es dunkel", "Im Wald"],
-        "correctOrder": ["Im Wald", "ist", "es dunkel"]
+        "question": "wildLandsSeventhQuest.questThree",
+        "words": ["und", "kalt" ,"ist", "dunkel", "Die Nacht"],
+        "correctOrder": ["Die Nacht", "ist", "dunkel", "und", "kalt"]
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Действие: Спать",
-        "options": ["Schlafen", "Gehen", "Sehen"],
-        "answer": "Schlafen"
+        "question": "wildLandsSeventhQuest.questFour",
+        "options": ["Der Mond", "Der Morgen", "Das Meer"],
+        "answer": "Der Mond"
       },
       {
         "id": 5,
-        "type": "readAndAnswer",
-        "text": "Es ist Nacht. Der Bär schläft im Wald.",
-        "question": "",
-        "options": [
-          "Сейчас ночь, медведь спит в лесу",
-          "Медведь гуляет по лесу днем",
-          "Медведь ищет еду у реки"
-        ],
-        "answer": "Сейчас ночь, медведь спит в лесу"
+        "type": "speechToText",
+        "question": "wildLandsSeventhQuest.questEight",
+        "text": "Die Sterne sind hell",
+        "answer": "Die Sterne sind hell"
       },
       {
         "id": 6,
         "type": "reorder",
-        "question": "Собери фразу: Птицы спят",
-        "words": ["Die Vögel", "schlafen"],
-        "correctOrder": ["Die Vögel", "schlafen"]
+        "question": "wildLandsSeventhQuest.questSix",
+        "words": ["ist", "Der Mond", "kalt", "und", "weiß"],
+        "correctOrder": ["Der Mond", "ist", "kalt", "und", "weiß"]
       },
       {
         "id": 7,
         "type": "select",
-        "question": "Новый житель: Сова",
-        "options": ["Die Eule", "Der Wolf", "Der Fisch"],
-        "answer": "Die Eule"
+        "question": "wildLandsSeventhQuest.questSeven",
+        "options": ["Der Stern", "Der Stein", "Die Stadt"],
+        "answer": "Der Stern"
       },
       {
         "id": 8,
         "type": "speechToText",
-        "question": "Впишите услышанное",
-        "text": "Die Eule",
-        "answer": "Die Eule"
+        "question": "wildLandsSeventhQuest.questEight",
+        "text": "Die Sterne sind hell",
+        "answer": "Die Sterne sind hell"
       },
       {
         "id": 9,
-        "type": "readAndAnswer",
-        "text": "Alle schlafen, aber die Eule schläft nicht.",
-        "question": "",
-        "options": [
-          "Все спят, но сова не спит",
-          "Сова спит вместе со всеми",
-          "В лесу никто не спит"
-        ],
-        "answer": "Все спят, но сова не спит"
+        "type": "select",
+        "question": "wildLandsSeventhQuest.questNine",
+        "options": ["Der Himmel", "Die Hölle", "Das Haus"],
+        "answer": "Der Himmel"
       },
       {
-        "id": 10,
-        "type": "select",
-        "question": "Часть тела: Глаза",
-        "options": ["Die Augen", "Der Baum", "Der Kopf"],
-        "answer": "Die Augen"
+        "id": 8,
+        "type": "speechToText",
+        "question": "wildLandsSeventhQuest.questTen",
+        "text": " Der Himmel ist schwarz. Die Sterne sind hell",
+        "answer": " Der Himmel ist schwarz. Die Sterne sind hell"
       },
       {
         "id": 11,
-        "type": "reorder",
-        "question": "Собери: У совы большие глаза",
-        "words": ["Die Eule", "hat", "große Augen"],
-        "correctOrder": ["Die Eule", "hat", "große Augen"]
+        "type": "select",
+        "question": "wildLandsSeventhQuest.questEleven",
+        "options": ["Das Licht", "Die Luft", "Das Land"],
+        "answer": "Das Licht"
       },
       {
         "id": 12,
         "type": "readAndAnswer",
-        "text": "Die Eule sieht alles. Ihre Augen sind groß und gelb.",
-        "question": "",
+        "text": "Im Wald ist kein Licht. Es ist absolut dunkel.",
+        "question": "wildLandsSeventhQuest.questTwelve",
         "options": [
-          "Сова всё видит, у неё большие желтые глаза",
-          "Сова ничего не видит в темноте",
-          "У совы маленькие черные глаза"
+          "Man sieht dort nichts",
+          "Alles ist sehr hell",
+          "Die Sonne nicht scheint"
         ],
-        "answer": "Сова всё видит, у неё большие желтые глаза"
+        "answer": "Man sieht dort nichts"
       },
       {
         "id": 13,
         "type": "reorder",
-        "question": "Действие: Сова сидит на дереве",
-        "words": ["Die Eule", "sitzt", "auf dem Baum"],
-        "correctOrder": ["Die Eule", "sitzt", "auf dem Baum"]
+        "question": "Собери предложение: Луна на небе",
+        "words": ["Der","ist", "auf", "Mond", "Himmel", "am"],
+        "correctOrder": ["Der ","Mond", "ist", "am", "Himmel"]
       },
       {
         "id": 14,
-        "type": "readAndAnswer",
-        "text": "Der Wolf schläft auch nicht",
-        "question": "",
-        "options": [
-          "Волк тоже здесь, он не спит и он быстрый",
-          "Волк спит под деревом",
-          "Волк медленно идет к реке"
-        ],
-        "answer": "Волк тоже здесь, он не спит и он быстрый"
+        "type": "speechToText",
+        "question": "wildLandsSeventhQuest.questFourteen",
+        "text": "Die Nacht ist schwarz und der Mond ist hell",
+        "answer": "Die Nacht ist schwarz und der Mond ist hell"
       },
       {
         "id": 15,
         "type": "speechToText",
-        "question": "Впишите услышанное",
-        "text": "Im Wald ist es dunkel, aber die Eule und der Wolf schlafen nicht",
-        "answer": "Im Wald ist es dunkel, aber die Eule und der Wolf schlafen nicht"
+        "question": "wildLandsSeventhQuest.questFifteen",
+        "text": "Der Himmel ist klar und voller Sterne",
+        "answer": "Der Himmel ist klar und voller Sterne"
       }
     ]
   },
   {
-    "questId": "wild-lands-nature-walk",
+    "questId": "nature-walk",
     "aliases": ["natur-a1-fox-walk"],
-    "title": "Дикие земли: Лиса в лесу",
+    "title": "wildLandsEightQuest.title",
     "progress": "0/15",
-    "description": "Следуй за лисой. Она проведет тебя через лес к быстрой реке, покажет высокие деревья и серые камни. Учись описывать путь.",
+    "description": "wildLandsEightQuest.description",
     "conditions": {
       "goal": "Освой слова: Лиса, Дерево, Камень, Река и опиши прогулку по лесу",
       "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 50,
-      "xp": 50
+      "points": 20,
+      "xp": 20
     },
     "tasks": [
       {
         "id": 1,
         "type": "select",
-        "question": "Как сказать: Лиса",
+        "question": "wildLandsEightQuest.questOne",
         "options": ["Der Fuchs", "Der Fisch", "Der Fluss"],
         "answer": "Der Fuchs"
       },
       {
         "id": 2,
         "type": "speechToText",
-        "question": "Произнеси: Der Fuchs",
+        "question": "wildLandsEightQuest.questTwo",
         "text": "Der Fuchs",
         "answer": "Der Fuchs"
       },
       {
         "id": 3,
         "type": "reorder",
-        "question": "Собери фразу: Лиса рыжая",
+        "question": "wildLandsEightQuest.questThree",
         "words": ["rot", "Der Fuchs", "ist"],
         "correctOrder": ["Der Fuchs", "ist", "rot"]
       },
       {
         "id": 4,
         "type": "speechToText",
-        "question": "Впишите услышанное",
+        "question": "wildLandsEightQuest.questFour",
         "text": "Der Fuchs läuft im Wald",
         "answer": "Der Fuchs läuft im Wald"
       },
       {
         "id": 5,
         "type": "select",
-        "question": "Как сказать: Дерево",
+        "question": "wildLandsEightQuest.questFive",
         "options": ["Der Baum", "Der Berg", "Das Boot"],
         "answer": "Der Baum"
       },
       {
         "id": 6,
         "type": "reorder",
-        "question": "Собери фразу: Дерево высокое",
+        "question": "wildLandsEightQuest.questSix",
         "words": ["ist", "hoch", "Der Baum"],
         "correctOrder": ["Der Baum", "ist", "hoch"]
       },
       {
         "id": 7,
         "type": "select",
-        "question": "Как сказать: Камень",
+        "question": "wildLandsEightQuest.questSeven",
         "options": ["Der Stein", "Der Stern", "Die Sonne"],
         "answer": "Der Stein"
       },
       {
         "id": 8,
         "type": "reorder",
-        "question": "Собери фразу: Камень серый",
+        "question": "wildLandsEightQuest.questEight",
         "words": ["ist", "grau", "Der Stein"],
         "correctOrder": ["Der Stein", "ist", "grau"]
       },
       {
         "id": 9,
-        "type": "readAndAnswer",
-        "text": "Der Fuchs steht am Baum",
-        "question": "",
-        "options": [
-          "Лиса стоит у дерева",
-          "Лиса спит под камнем",
-          "Деревья шумят от ветра"
-        ],
-        "answer": "Лиса стоит у дерева"
+        "type": "speechToText",
+        "question": "wildLandsEightQuest.questNine",
+        "text": "Der Fuchs steht unter dem Baum",
+        "answer": "Der Fuchs steht unter dem Baum"
       },
       {
         "id": 10,
         "type": "select",
-        "question": "Как сказать: Река",
+        "question": "wildLandsEightQuest.questTen",
         "options": ["Der Fluss", "Das Feuer", "Der Fuß"],
         "answer": "Der Fluss"
       },
       {
         "id": 11,
         "type": "speechToText",
-        "question": "Впишите услышанное",
+        "question": "wildLandsEightQuest.questEleven",
         "text": "Der Fluss ist schnell",
         "answer": "Der Fluss ist schnell"
       },
@@ -1008,34 +1007,951 @@
         "id": 12,
         "type": "readAndAnswer",
         "text": "Das Wasser fließt schnell",
-        "question": "",
+        "question": "wildLandsEightQuest.questTwelve",
         "options": [
-          "Вода течет быстро",
-          "Река пересохла",
-          "Вода течет не быстро"
+          "Es ist nicht langsam",
+          "Alles ist völlig trocken",
+          "Es bewegt sich nicht"
         ],
-        "answer": "Вода течет быстро"
+        "answer": "Es ist nicht langsam"
       },
       {
         "id": 13,
         "type": "reorder",
-        "question": "Собери: Лиса сидит у воды",
+        "question": "wildLandsEightQuest.questThirteen",
         "words": ["am Wasser", "sitzt", "Der Fuchs"],
         "correctOrder": ["Der Fuchs", "sitzt", "am Wasser"]
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "Соберите предложение: Лес зеленый, а река синяя",
-        "words": ["Der Wald", "ist grün", "und", "der Fluss", "ist blau"],
-        "correctOrder": ["Der Wald", "ist grün", "und", "der Fluss", "ist blau"]
+        "question": "wildLandsEightQuest.questFourteen",
+        "words": ["ist", "Fluss", "blau", "grün", "der", "und", "Wald", "ist", "Der"],
+        "correctOrder": ["Der", "Wald", "ist", "grün", "und", "der", "Fluss", "ist", "blau"]
       },
       {
         "id": 15,
         "type": "speechToText",
-        "question": "Впишите услышанное",
+        "question": "wildLandsEightQuest.questFifteen",
         "text": "Der Fuchs läuft im Wald über die Steine",
         "answer": "Der Fuchs läuft im Wald über die Steine"
+      }
+    ]
+  },
+  {
+    "questId": "mountains",
+    "aliases": ["natur-a1-mountains"],
+    "title": "Горы",
+    "progress": "0/15",
+    "description": "Лес и скалы. Здесь высоко и тихо. Учись описывать горный ландшафт.",
+    "conditions": {
+      "goal": "Освой слова: Гора, Долина, Скала, Высокий, Глубокий",
+      "minCorrect": 13,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "wildLandsNinthQuest.questOne",
+        "options": ["Der Berg", "Das Bett", "Die Burg"],
+        "answer": "Der Berg"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "wildLandsNinthQuest.questTwo",
+        "text": "Der Berg ist hoch",
+        "answer": "Der Berg ist hoch"
+      },
+      {
+        "id": 3,
+        "type": "reorder",
+        "question": "wildLandsNinthQuest.questThree",
+        "words": ["ist", "hoch", "Der Berg"],
+        "correctOrder": ["Der Berg", "ist", "hoch"]
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "wildLandsNinthQuest.questFour",
+        "options": ["Das Tal", "Der Tag", "Das Tier"],
+        "answer": "Das Tal"
+      },
+      {
+        "id": 5,
+        "type": "readAndAnswer",
+        "text": "Oben ist der Berg, unten ist das Tal.",
+        "question": "wildLandsNinthQuest.questFive",
+        "options": ["Es geht hoch und tief", "Alles ist ganz flach", "Dort gibt es Sand"],
+        "answer": "Es geht hoch und tief"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "wildLandsNinthQuest.questSix",
+        "words": ["grün", "Das Tal", "ist"],
+        "correctOrder": ["Das Tal", "ist", "grün"]
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "wildLandsNinthQuest.questSeven",
+        "words": ["hoch", "Die", "sind", "Bäume"],
+        "correctOrder": ["Die", "Bäume", "sind", "hoch"]
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "wildLandsNinthQuest.questEight",
+        "options": ["Tief", "Teuer", "Trocken"],
+        "answer": "Tief"
+      },
+      {
+        "id": 9,
+        "type": "readAndAnswer",
+        "text": "Der See im Tal ist tief.",
+        "question": "wildLandsNinthQuest.questNine",
+        "options": [
+          "Der See ist nicht flach",
+          "Der See ist flach",
+          "Dort ist alles trocken"
+        ],
+        "answer": "Der See ist nicht flach"
+      },
+      {
+        "id": 10,
+        "type": "speechToText",
+        "question": "wildLandsNinthQuest.questTen",
+        "text": "Das Wasser ist tief",
+        "answer": "Das Wasser ist tief"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "wildLandsNinthQuest.questEleven",
+        "options": ["Der Fels", "Das Feld", "Der Fluss"],
+        "answer": "Der Fels"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "wildLandsNinthQuest.questTwelve",
+        "words": ["grau", "Die Felsen", "sind"],
+        "correctOrder": ["Die Felsen", "sind", "grau"]
+      },
+      {
+        "id": 13,
+        "type": "readAndAnswer",
+        "text": "Im Tal ist ein großer Fels.",
+        "question": "wildLandsNinthQuest.questThirteen",
+        "options": ["Er ist nicht klein", "Ein sehr kleiner Stein", "Es ist dort weich"],
+        "answer": "Er ist nicht klein"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "wildLandsNinthQuest.questFourteen",
+        "words": ["grau", "Der", "ist", "hoch", "und", "Berg"],
+        "correctOrder": ["Der", "Berg", "ist", "grau", "und", "hoch"]
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "wildLandsNinthQuest.questFifteen",
+        "text": "Die Berge sind hoch und das Tal ist grün",
+        "answer": "Die Berge sind hoch und das Tal ist grün"
+      }
+    ]
+  },
+  {
+    "questId": "fog",
+    "aliases": ["natur-a1-fog-grass"],
+    "title": "wildLandsTenthQuest.title",
+    "progress": "0/15",
+    "description": "wildLandsTenthQuest.description",
+    "conditions": {
+      "goal": "Освой слова: Туман, Трава, Воздух, Тихий",
+      "minCorrect": 13,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "wildLandsTenthQuest.questOne",
+        "options": ["Der Nebel", "Die Nacht", "Die Nase"],
+        "answer": "Der Nebel"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "wildLandsTenthQuest.questTwo",
+        "text": "Der Nebel ist weiß",
+        "answer": "Der Nebel ist weiß"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "wildLandsTenthQuest.questThree",
+        "options": ["Das Gras", "Das Glas", "Das Grau"],
+        "answer": "Das Gras"
+      },
+      {
+        "id": 4,
+        "type": "readAndAnswer",
+        "text": "Das Gras ist grün und nass.",
+        "question": "wildLandsTenthQuest.questFour",
+        "options": [
+          "Es ist nicht trocken",
+          "Alles ist völlig trocken",
+          "Es ist jetzt gelb"
+        ],
+        "answer": "Es ist nicht trocken"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "wildLandsTenthQuest.questFive",
+        "words": ["Im Wald", "ist", "Gras"],
+        "correctOrder": ["Im Wald", "ist", "Gras"]
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "wildLandsTenthQuest.questSix",
+        "options": ["Die Luft", "Das Licht", "Die Lust"],
+        "answer": "Die Luft"
+      },
+      {
+        "id": 7,
+        "type": "readAndAnswer",
+        "text": "Die Luft im Wald ist frisch.",
+        "question": "wildLandsTenthQuest.questSeven",
+        "options": [
+          "Sie ist dort gesund",
+          "Sie ist sehr schlecht",
+          "Alles ist dort schmutzig"
+        ],
+        "answer": "Sie ist dort gesund"
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "wildLandsTenthQuest.questEight",
+        "text": "Die Luft ist kalt",
+        "answer": "Die Luft ist kalt"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "wildLandsTenthQuest.questNine",
+        "options": ["Still", "Stark", "Stein"],
+        "answer": "Still"
+      },
+      {
+        "id": 10,
+        "type": "readAndAnswer",
+        "text": "Kein Wind. Es ist still.",
+        "question": "wildLandsTenthQuest.questTen",
+        "options": [
+          "Man hört nichts",
+          "Sehr viel Lärm",
+          "Ein starker Sturm"
+        ],
+        "answer": "Man hört nichts"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "wildLandsTenthQuest.questEleven",
+        "words": ["still", "Die", "Wald", "ist", "Der", "laut"],
+        "correctOrder": ["Der", "Wald", "ist", "still"]
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "wildLandsTenthQuest.questTwelve",
+        "words": ["ist", "Wald", "Der", "im", "Nebel", "am"],
+        "correctOrder": ["Der", "Nebel", "ist", "im", "Wald"]
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "wildLandsTenthQuest.questThirteen",
+        "text": "Der Wald ist still und das Gras ist grün",
+        "answer": "Der Wald ist still und das Gras ist grün"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "wildLandsTenthQuest.questFourteen",
+        "words": ["frisch", "Die", "ist", "und", "der", "Nebel", "Luft", "hier", "ist", "kalt", "Wasser"],
+        "correctOrder": ["Die", "Luft", "ist", "frisch", "und", "der", "Nebel", "ist", "hier"]
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "wildLandsTenthQuest.questFifteen",
+        "text": "Der Nebel liegt auf dem Gras",
+        "answer": "Der Nebel liegt auf dem Gras"
+      }
+    ]
+  },
+  {
+    "questId": "morning",
+    "aliases": ["natur-a1-morning"],
+    "title": "wildLandsElevenQuest.title",
+    "progress": "0/15",
+    "description": "wildLandsElevenQuest.description",
+    "conditions": {
+      "goal": "Освой слова: Утро, Птица, Лист, Цветок",
+      "minCorrect": 13,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "wildLandsElevenQuest.questOne",
+        "options": ["Der Morgen", "Der Mond", "Das Meer"],
+        "answer": "Der Morgen"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "wildLandsElevenQuest.questTwo",
+        "text": "Am Morgen liegt Nebel im Wald",
+        "answer": "Am Morgen liegt Nebel im Wald"
+      },
+      {
+        "id": 3,
+        "type": "reorder",
+        "question": "wildLandsElevenQuest.questThree",
+        "words": ["ist", "still", "Der", "Morgen", "im", "Wald", "laut", "Abend"],
+        "correctOrder": ["Der", "Morgen", "im", "Wald", "ist", "still"]
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "wildLandsElevenQuest.questFour",
+        "options": ["Der Vogel", "Der Wolf", "Der Wind"],
+        "answer": "Der Vogel"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "wildLandsElevenQuest.questFive",
+        "words": ["Stein", "am", "sitzt", "Vogel", "Der", "im"],
+        "correctOrder": ["Der", "Vogel", "sitzt", "am", "Stein"]
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "wildLandsElevenQuest.questSix",
+        "options": ["Das Blatt", "Der Baum", "Das Gras"],
+        "answer": "Das Blatt"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "wildLandsElevenQuest.questSeven",
+        "words": ["im", "Fluss", "Das", "Blatt", "ist", "Der", "Baum", "Stein"],
+        "correctOrder": ["Das", "Blatt", "ist", "im", "Fluss"]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "wildLandsElevenQuest.questEight",
+        "text": "Das Blatt ist nass vom Nebel",
+        "answer": "Das Blatt ist nass vom Nebel"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "wildLandsElevenQuest.questNine",
+        "options": ["Die Blume", "Der Baum", "Die Wolke"],
+        "answer": "Die Blume"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "wildLandsElevenQuest.questTen",
+        "words": ["Blume", "wächst", "Tal", "im", "Die", "Der", "Berg"],
+        "correctOrder": ["Die", "Blume", "wächst", "im", "Tal"]
+      },
+      {
+        "id": 11,
+        "type": "readAndAnswer",
+        "text": "Die Sonne scheint auf die Blume und der Schnee schmilzt.",
+        "question": "wildLandsElevenQuest.questEleven",
+        "options": [
+          "Sie bekommt Licht",
+          "Sie ist dunkel",
+          "Sie hat Eis"
+        ],
+        "answer": "Sie bekommt Licht"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "wildLandsElevenQuest.questTwelve",
+        "words": ["Morgen", "singt", "Der", "Vogel", "am", "singen"],
+        "correctOrder": ["Der", "Vogel", "singt", "am", "Morgen"]
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "wildLandsElevenQuest.questThirteen",
+        "words": ["ist", "im", "Gras", "Die", "Blume", "Der", "Nebel", "am"],
+        "correctOrder": ["Die", "Blume", "ist", "im", "Gras"]
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "wildLandsElevenQuest.questThirteen",
+        "text": "Im Wald singt der Vogel und das Blatt ist grün",
+        "answer": "Im Wald singt der Vogel und das Blatt ist grün"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "wildLandsElevenQuest.questFifteen",
+        "text": "Der Vogel sitzt im Baum und singt",
+        "answer": "Der Vogel sitzt im Baum und singt"
+      }
+    ]
+  },
+  {
+    "questId": "sea",
+    "aliases": ["natur-a1-sea"],
+    "title": "wildLandsTwelveQuest.title",
+    "progress": "0/15",
+    "description": "wildLandsTwelveQuest.description",
+    "conditions": {
+      "goal": "Освой слова: Море, Пляж, Песок, Волна",
+      "minCorrect": 13,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "wildLandsTwelveQuest.questOne",
+        "options": ["Das Meer", "Der Mond", "Die Mauer"],
+        "answer": "Das Meer"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "wildLandsTwelveQuest.questTwo",
+        "text": "Das Meer ist groß und blau",
+        "answer": "Das Meer ist groß und blau"
+      },
+      {
+        "id": 3,
+        "type": "reorder",
+        "question": "wildLandsTwelveQuest.questThree",
+        "words": ["ist", "windig", "Am", "Meer", "es", "im"],
+        "correctOrder": ["Am", "Meer", "ist", "es", "windig"]
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "wildLandsTwelveQuest.questFour",
+        "options": ["Der Strand", "Der Stein", "Die Straße"],
+        "answer": "Der Strand"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "wildLandsTwelveQuest.questFive",
+        "words": ["Hier", "ist", "der", "Strand", "Wald", "Meer"],
+        "correctOrder": ["Hier", "ist", "der", "Strand"]
+      },
+      {
+        "id": 6,
+        "type": "readAndAnswer",
+        "text": "Keine Bäume hier. Nur Wasser und Strand.",
+        "question": "wildLandsTwelveQuest.questSix",
+        "options": ["Ich bin am Meer", "Ich bin im Wald", "Ich bin in Bergen"],
+        "answer": "Ich bin am Meer"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "wildLandsTwelveQuest.questSeven",
+        "options": ["Der Sand", "Die Sonne", "Der See"],
+        "answer": "Der Sand"
+      },
+      {
+        "id": 8,
+        "type": "reorder",
+        "question": "wildLandsTwelveQuest.questEight",
+        "words": ["Sand", "ist", "warm", "Der", "nass"],
+        "correctOrder": ["Der", "Sand", "ist", "warm"]
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "wildLandsTwelveQuest.questNine",
+        "text": "Der Sand ist heiß",
+        "answer": "Der Sand ist heiß"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "wildLandsTwelveQuest.questTen",
+        "options": ["Die Welle", "Der Wind", "Die Wolle"],
+        "answer": "Die Welle"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "wildLandsTwelveQuest.questEleven",
+        "words": ["Welle", "ist", "hoch", "Die", "tief"],
+        "correctOrder": ["Die", "Welle", "ist", "hoch"]
+      },
+      {
+        "id": 12,
+        "type": "readAndAnswer",
+        "text": "Der Wind ist stark. Die Welle kommt.",
+        "question": "wildLandsTwelveQuest.questTwelve",
+        "options": [
+          "Das Wetter ist stürmisch",
+          "Das Wasser ist ganz ruhig",
+          "Die Sonne scheint hell"
+        ],
+        "answer": "Das Wetter ist stürmisch"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "wildLandsTwelveQuest.questThirteen",
+        "words": ["Das", "Wasser", "ist", "am", "kalt"],
+        "correctOrder": ["Das", "Wasser", "ist", "kalt"]
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "wildLandsTwelveQuest.questFourteen",
+        "words": ["Meer", "ist", "laut", "Das", "leise", "still"],
+        "correctOrder": ["Das", "Meer", "ist", "laut"]
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "wildLandsTwelveQuest.questFifteen",
+        "text": "Der Wind ist stark und das Meer ist laut",
+        "answer": "Der Wind ist stark und das Meer ist laut"
+      }
+    ]
+  },
+  {
+    "questId": "storm",
+    "aliases": ["natur-a1-storm"],
+    "title": "Гроза, непогода",
+    "progress": "0/15",
+    "description": "Небо темнеет. Ветер срывает листья. Начинается буря. Ты слышишь гром и видишь вспышки в небе.",
+    "conditions": {
+      "goal": "Освой слова: Гроза, Молния, Гром, Черный",
+      "minCorrect": 13,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "wildLandsThirteenQuest.questOne",
+        "options": ["Das Gewitter", "Das Gras", "Das Wasser"],
+        "answer": "Das Gewitter"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "wildLandsThirteenQuest.questTwo",
+        "text": "Das Gewitter kommt",
+        "answer": "Das Gewitter kommt"
+      },
+      {
+        "id": 3,
+        "type": "reorder",
+        "question": "wildLandsThirteenQuest.questThree",
+        "words": ["ist", "schwarz", "Der", "Himmel", "blau", "weiß"],
+        "correctOrder": ["Der", "Himmel", "ist", "schwarz"]
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "wildLandsThirteenQuest.questFour",
+        "options": ["Der Blitz", "Die Blume", "Der Baum"],
+        "answer": "Der Blitz"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "wildLandsThirteenQuest.questFive",
+        "words": ["Blitz", "ist", "sehr", "hell", "Der", "dunkel"],
+        "correctOrder": ["Der", "Blitz", "ist", "sehr", "hell"]
+      },
+      {
+        "id": 6,
+        "type": "readAndAnswer",
+        "text": "Der Blitz trifft den Baum. Der Baum brennt.",
+        "question": "wildLandsThirteenQuest.questSix",
+        "options": [
+          "Der Baum brennt",
+          "Der Baum ist nass",
+          "Die Sonne scheint"
+        ],
+        "answer": "Der Baum brennt"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "wildLandsThirteenQuest.questSeven",
+        "options": ["Der Donner", "Der Dank", "Das Dorf"],
+        "answer": "Der Donner"
+      },
+      {
+        "id": 8,
+        "type": "reorder",
+        "question": "wildLandsThirteenQuest.questEight",
+        "words": ["Donner", "ist", "laut", "Der", "leise", "still"],
+        "correctOrder": ["Der", "Donner", "ist", "laut"]
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "wildLandsThirteenQuest.questNine",
+        "text": "Erst der Blitz, dann der Donner",
+        "answer": "Erst der Blitz, dann der Donner"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "wildLandsThirteenQuest.questTen",
+        "options": ["Schwarz", "Weiß", "Schön"],
+        "answer": "Schwarz"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "wildLandsThirteenQuest.questEleven",
+        "words": ["Wolken", "sind", "schwarz", "Die", "und", "es", "regnet"],
+        "correctOrder": ["Die", "Wolken", "sind", "schwarz", "und", "es", "regnet"]
+      },
+      {
+        "id": 12,
+        "type": "readAndAnswer",
+        "text": "Der Donner ist sehr laut. Man hört keine Tiere im Wald.",
+        "question": "wildLandsThirteenQuest.questThirteen",
+        "options": [
+          "Nein, es ist still",
+          "Ja, sie singen laut",
+          "Der Wolf singt"
+        ],
+        "answer": "Nein, es ist still"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "wildLandsThirteenQuest.questFourteen",
+        "words": ["Wind", "ist", "stark,", "der", "Regen", "ist", "kalt", "Der"],
+        "correctOrder": ["Der", "Wind", "ist", "stark,", "der", "Regen", "ist", "kalt"]
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "Произнеси: Draußen ist ein Gewitter",
+        "text": "Draußen ist ein Gewitter",
+        "answer": "Draußen ist ein Gewitter"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "wildLandsThirteenQuest.",
+        "text": "Der Blitz ist hell und der Donner ist laut",
+        "answer": "Der Blitz ist hell und der Donner ist laut"
+      }
+    ]
+  },
+  {
+    "questId": "meadow",
+    "aliases": ["natur-a1-meadow"],
+    "title": "wildLandsFourteenQuest.title",
+    "progress": "0/15",
+    "description": "wildLandsFourteenQuest.description",
+    "conditions": {
+      "goal": "Освой слова: Луг, Бабочка, Летать, Пестрый",
+      "minCorrect": 13,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "wildLandsFourteenQuest.questOne",
+        "options": ["Die Wiese", "Der Wald", "Die Wolke"],
+        "answer": "Die Wiese"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "wildLandsFourteenQuest.questTwo",
+        "text": "Die Wiese ist grün",
+        "answer": "Die Wiese ist grün"
+      },
+      {
+        "id": 3,
+        "type": "reorder",
+        "question": "wildLandsFourteenQuest.questThree",
+        "words": ["wächst", "auf", "der", "Wiese", "Die", "Blume", "ist"],
+        "correctOrder": ["Die", "Blume", "wächst", "auf", "der", "Wiese"]
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "wildLandsFourteenQuest.questFour",
+        "options": ["Der Schmetterling", "Der Schnee", "Die Sonne"],
+        "answer": "Der Schmetterling"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "wildLandsFourteenQuest.questFive",
+        "words": ["Schmetterling", "ist", "schön", "Der", "Das", "Vogel"],
+        "correctOrder": ["Der", "Schmetterling", "ist", "schön"]
+      },
+      {
+        "id": 6,
+        "type": "readAndAnswer",
+        "text": "Auf der Wiese sind viele Blumen und Schmetterlinge.",
+        "question": "wildLandsFourteenQuest.questSix",
+        "options": [
+          "Insekten und bunte Pflanzen",
+          "Nur Steine und Sand",
+          "Viele Autos und Straßen"
+        ],
+        "answer": "Insekten und bunte Pflanzen"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "wildLandsFourteenQuest.questSeven",
+        "options": ["Fliegen", "Fallen", "Fließen"],
+        "answer": "Fliegen"
+      },
+      {
+        "id": 8,
+        "type": "reorder",
+        "question": "wildLandsFourteenQuest.questEight",
+        "words": ["Vogel", "fliegt", "in", "den", "Wald", "Der", "liegt"],
+        "correctOrder": ["Der", "Vogel", "fliegt", "in", "den", "Wald"]
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "wildLandsFourteenQuest.questNine",
+        "text": "Der Schmetterling fliegt",
+        "answer": "Der Schmetterling fliegt"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "wildLandsFourteenQuest.questTen",
+        "options": ["Bunt", "Blau", "Braun"],
+        "answer": "Bunt"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "wildLandsFourteenQuest.questEleven",
+        "words": ["Blumen", "sind", "bunt", "Die", "Der", "grün"],
+        "correctOrder": ["Die", "Blumen", "sind", "bunt"]
+      },
+      {
+        "id": 12,
+        "type": "readAndAnswer",
+        "text": "Der Schmetterling ist rot, gelb und blau.",
+        "question": "wildLandsFourteenQuest.questTwelve",
+        "options": [
+          "Sie ist bunt",
+          "Sie ist schwarz",
+          "Sie ist weiß"
+        ],
+        "answer": "Sie ist bunt"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "wildLandsFourteenQuest.questThirteen",
+        "words": ["Sonne", "scheint", "auf", "die", "Wiese", "Die", "Der"],
+        "correctOrder": ["Die", "Sonne", "scheint", "auf", "die", "Wiese"]
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "wildLandsFourteenQuest.questFourteen",
+        "text": "Hier ist es schön und bunt",
+        "answer": "Hier ist es schön und bunt"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "wildLandsFourteenQuest.questFifteen",
+        "text": "Der Schmetterling fliegt über die Wiese",
+        "answer": "Der Schmetterling fliegt über die Wiese"
+      }
+    ]
+  },
+  {
+    "questId": "nature-final",
+    "aliases": [""],
+    "title": "wildLandsFifteenQuest.title",
+    "progress": "0/15",
+    "description": "wildLandsFifteenQuest.description",
+    "conditions": {
+      "goal": "Сдай финальный экзамен: объедини животных, локации и погоду",
+      "minCorrect": 13,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 50,
+      "xp": 50
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "wildLandsFifteenQuest.questOne",
+        "options": ["Die Natur", "Die Nacht", "Der Nebel"],
+        "answer": "Die Natur"
+      },
+      {
+        "id": 2,
+        "type": "reorder",
+        "question": "wildLandsFifteenQuest.questTwo",
+        "words": ["Sonne", "scheint", "auf", "den", "Berg", "Die"],
+        "correctOrder": ["Die", "Sonne", "scheint", "auf", "den", "Berg"]
+      },
+      {
+        "id": 3,
+        "type": "readAndAnswer",
+        "text": "Der Wolf steht im Schnee",
+        "question": "wildLandsFifteenQuest.questThree",
+        "options": ["Im Schnee", "Im Wasser", "Auf dem Baum"],
+        "answer": "Im Schnee"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "wildLandsFifteenQuest.questFour",
+        "words": ["Fluss", "fließt", "in", "das", "Meer", "Der"],
+        "correctOrder": ["Der", "Fluss", "fließt", "in", "das", "Meer"]
+      },
+      {
+        "id": 17,
+        "type": "reorder",
+        "question": "wildLandsFifteenQuest.questFive",
+        "words": ["Luft", "ist", "die", "dem", "frisch", "Gewitter", "Nach"],
+        "correctOrder": ["Nach", "dem", "Gewitter", "ist", "die", "Luft", "frisch"]
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "wildLandsFifteenQuest.questSix",
+        "text": "Ein Vogel singt auf einem Baum",
+        "answer": "Ein Vogel singt auf einem Baum"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "wildLandsFifteenQuest.questSeven",
+        "words": ["Fuchs", "schläft", "im", "Gras", "Der"],
+        "correctOrder": ["Der", "Fuchs", "schläft", "im", "Gras"]
+      },
+      {
+        "id": 8,
+        "type": "readAndAnswer",
+        "text": "Es regnet stark. Das Wasser im Fluss ist hoch und schnell.",
+        "question": "wildLandsFifteenQuest.questEight",
+        "options": ["Hoch und schnell", "Hoch und ruhig", "Trocken und leer"],
+        "answer": "Hoch und schnell"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "wildLandsFifteenQuest.questNine",
+        "words": ["Nacht", "ist", "es", "in", "den", "Bergen", "kalt", "am", "In", "der"],
+        "correctOrder": ["In", "der", "Nacht", "ist", "es", "in", "den", "Bergen", "kalt"]
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "wildLandsFifteenQuest.questTen",
+        "options": ["Blumen wachsen im Gras", "Blumen liegen im Gras", "Blumen wachsen in Gras"],
+        "answer": "Blumen wachsen im Gras"
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "wildLandsFifteenQuest.questEleven",
+        "text": "Das Wetter ist kalt und windig",
+        "answer": "Das Wetter ist kalt und windig"
+      },
+      {
+        "id": 12,
+        "type": "readAndAnswer",
+        "text": "Der Bär schläft in der Höhle. Draußen ist Sturm.",
+        "question": "wildLandsFifteenQuest.questTwelve",
+        "options": ["In der Höhle", "Auf dem Berg", "Im Fluss"],
+        "answer": "In der Höhle"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "wildLandsFifteenQuest.questThirteen",
+        "words": ["kalt", "ist", "Wasser", "aber", "Der", "warm", "das", "ist", "Wind"],
+        "correctOrder": ["Der", "Wind", "ist", "warm", "aber", "das", "Wasser", "ist", "kalt"]
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "wildLandsFifteenQuest.questFourteen",
+        "text": "Der Wald ist grün und schön",
+        "answer": "Der Wald ist grün und schön"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "wildLandsFifteenQuest.questFifteen",
+        "text": "Im Wald singen Vögel, die Sonne scheint und das Wetter ist gut",
+        "answer": "Im Wald singen Vögel, die Sonne scheint und das Wetter ist gut"
       }
     ]
   }

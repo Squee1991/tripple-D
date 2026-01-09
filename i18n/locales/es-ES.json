@@ -249,7 +249,8 @@
     "descriptionLakeRuins": "La niebla envuelve construcciones antiguas, y las aguas de los lagos guardan los secretos del pasado. En estas tierras se ocultan conocimientos olvidados que te ayudarán a profundizar en el aprendizaje del idioma.",
     "descriptionNorthCliffs": "Altos acantilados se elevan sobre el mar, y los vientos fríos ponen a prueba la resistencia de cada viajero. Te esperan misiones que requieren atención.",
     "descriptionStormCoast": "Tierras costeras salvajes donde rugen los truenos y relámpagos. Sólo los héroes valientes se atreven a pisar aquí. Aquí te espera una verdadera prueba del poder de tu conocimiento.",
-    "descriptionMasterLands": "Tierras de maestros y artesanos, donde cada trabajo importa. Aquí aprenderás a hablar sobre profesiones, trabajo y deberes diarios.","master-lands": "Tierra de Maestros"
+    "descriptionMasterLands": "Tierras de maestros y artesanos, donde cada trabajo importa. Aquí aprenderás a hablar sobre profesiones, trabajo y deberes diarios.",
+    "descriptionWildLands": "La vida en la naturaleza está llena de descubrimientos sorprendentes. Aquí aprenderás a nombrar a los habitantes del bosque y los elementos, describir sus acciones y formar frases sobre el mundo natural.",
   },
   "calendarInfo": {
     "eventsTitle": "Calendario de eventos",
@@ -1278,7 +1279,8 @@
     "lake-ruins": "Ruinas del Lago",
     "north-cliffs": "Acantilados del Norte",
     "storm-coast": "Costa de la Tormenta",
-    "master-lands": "Tierra de Maestros"
+    "master-lands": "Tierra de Maestros",
+    "wild-lands": "Tierras salvajes"
   },
   "examPage": {
     "examHint": "Usamos un sistema automático de reconocimiento de voz. Habla claramente cerca del micrófono."
@@ -1548,6 +1550,8 @@
     "sixthDescription": "Completa todas las misiones sin errores en la Costa de la Tormenta",
     "seventhName": "Tierra de Maestros",
     "seventhDescription": "Completa todas las misiones sin errores en la Tierra de Maestros",
+    "eightName": "Tierras salvajes",
+    "eightDescription": "Completa todas las misiones sin errores en las Tierras Salvajes",
     "fiveHearthName": "Guardián de los Cinco Corazones",
     "fiveHearthDescription": "Completa veinte tareas teniendo 5 vidas",
     "fiveHearthAwards": "Recompensa: Escudo de la Vida",
