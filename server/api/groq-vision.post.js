@@ -100,7 +100,7 @@ export default defineEventHandler(async (event) => {
             }
             return { error: "Пустой ответ", debug: json }
         } catch (e) {
-            return { error: `Ошибка парсинга ответа API: ${rawText}` }
+            return { error: `Ошибка ответа API: ${rawText}` }
         }
     } catch (err) {
         return { error: `CRASH: ${err.message}` }

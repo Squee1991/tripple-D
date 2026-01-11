@@ -5,10 +5,12 @@
 <!--    <VStepHint v-if="showStepHint" @close="showStepHint = false"/>-->
 <!--      <FeedBack/>-->
     <VLost/>
+    <VRankOverlay/>
   </NuxtLayout>
 </template>
 
 <script setup>
+import VRankOverlay from "./src/components/V-rank-overlay.vue";
 import FeedBack from './src/components/V-feedback.vue'
 import VStepHint from "./src/components/V-stephint.vue";
 import AchievementToast from './src/components/AchievementToast.vue'
@@ -150,4 +152,5 @@ onUnmounted(() => {
 html {
   font-size: 16px;
 }
+
 </style>

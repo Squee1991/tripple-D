@@ -109,7 +109,14 @@ export const userlangStore = defineStore('learning', () => {
             if (!findByKey(words.value, newWord.de, newWord.topic)) {
                 words.value.push({
                     ...newWord,
-                    progress: { article: null, letters: null, wordArticle: null, audio: null, plural: null }
+                    progress: {
+                        wordTranslate: null,
+                        article: null,
+                        letters: null,
+                        wordArticle: null,
+                        audio: null,
+                        plural: null
+                    }
                 })
                 added = true
             }
@@ -122,6 +129,7 @@ export const userlangStore = defineStore('learning', () => {
         selectedWords.value = wordsList.map(word => ({
             ...word,
             progress: {
+                wordTranslate: null,
                 article: null,
                 letters: null,
                 wordArticle: null,
@@ -151,7 +159,7 @@ export const userlangStore = defineStore('learning', () => {
     }
 
     const markAsLearned = async (word) => {
-        const required = ['article','letters','wordArticle','audio','plural']
+        const required = ['wordTranslate', 'article','letters','wordArticle','audio','plural']
         const p = word.progress || {}
         if (!required.every(m => p[m] === true)) return
 

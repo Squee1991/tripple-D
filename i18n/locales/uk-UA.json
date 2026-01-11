@@ -3542,7 +3542,7 @@
     "questOneFirstOption": "Дерево",
     "questOneSecondOption": "Квітка",
     "questOneThirdOption": "Лопата",
-    "questTwo": "Склади: ein großer Baum",
+    "questTwo": "Збери: Велике дерево",
     "questThird": "Що означає: zwei Bäume",
     "questThirdFirstOption": "2 дерева",
     "questThirdSecondOption": "2 квітки",
@@ -5748,7 +5748,8 @@
     "letters": "Скласти слово з літер",
     "articleWord": "Вставити слово та артикль",
     "plural": "Форма множини",
-    "audio": "Аудіювання"
+    "audio": "Аудіювання",
+    "wordTranslate": "Слово-переклад"
   },
   "sessionPage": {
     "choice": "Метод",

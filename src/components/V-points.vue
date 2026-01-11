@@ -17,6 +17,13 @@
           </button>
         </li>
         <li class="points-card__item">
+          <div class="points-card__label">{{ t('Звание') }}</div>
+          <button id="articlus" :title="hoverTitle.title" v-if="userAuth.uid" @click="openArticleModal" class="articlus__wrapper">
+            <span class="star">📓</span>
+            <span class="points-card__value">0</span>
+          </button>
+        </li>
+        <li class="points-card__item">
           <span class="points-card__label">{{ t('accountPanel.level') }}</span>
           <span id="level" :title="hoverTitle.level" class="points-card__badge">{{ langStore.isLeveling }}</span>
         </li>
@@ -127,6 +134,9 @@ onMounted(() => {
   align-items: center;
 }
 
+.star{
+  font-size: 30px;
+}
 .ranked__inner {
   width: 100%;
   border: 2px solid black;
@@ -155,7 +165,7 @@ onMounted(() => {
 
 .ranked__title {
   color: #1c1b1b;
-  font-size: 21px;
+  font-size: 18px;
   margin-left: 8px;
   font-weight: 600;
 }

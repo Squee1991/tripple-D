@@ -58,7 +58,6 @@
                   </div>
                 </div>
                 <div class="modes-list">
-                  <!-- ТУТ ГЛАВНОЕ ИЗМЕНЕНИЕ: availableModes вместо modes -->
                   <label
                       v-for="mode in availableModes"
                       :key="mode.key"
@@ -124,27 +123,6 @@ useSeoMeta({
   robots: 'noindex, nofollow'
 })
 
-// const pageTitle = t('metaArticle.title')
-// const pageDesc = t('metaArticle.description')
-//
-// useHead({
-//   title: pageTitle,
-//   link: [
-//     { rel: 'canonical', href: canonical }
-//   ]
-// })
-//
-// useSeoMeta({
-//   title: pageTitle,
-//   description: pageDesc,
-//   ogTitle: pageTitle,
-//   ogDescription: pageDesc,
-//   ogType: 'website',
-//   ogUrl: canonical,
-//   ogImage: '/images/seo-articles.png',
-//   robots: 'index, follow'
-// })
-
 const clearSelectedTopic = () => {
   showModesBlock.value = false
   setTimeout(() => {
@@ -176,10 +154,8 @@ const prevPage = () => {
   if (page.value > 0) page.value--
 }
 
-/**
- * Базовый список режимов (включая plural)
- */
 const baseModes = [
+  { key: 'wordTranslate',     label: 'modes.wordTranslate' },
   { key: 'article',     label: 'modes.article' },
   { key: 'letters',     label: 'modes.letters' },
   { key: 'wordArticle', label: 'modes.articleWord' },
@@ -187,18 +163,12 @@ const baseModes = [
   { key: 'audio',       label: 'modes.audio' }
 ]
 
-/**
- * Слова выбранной темы
- */
 const topicWords = computed(() => {
   const key = selectedTopic.value
   if (!key) return []
   return Array.isArray(themeList.value[key]) ? themeList.value[key] : []
 })
 
-/**
- * Проверка, есть ли хоть одно слово с plural
- */
 function hasAnyPlural(wordsArray) {
   const list = Array.isArray(wordsArray) ? wordsArray : []
   return list.some(w => w.plural && String(w.plural).trim() !== '')
@@ -206,10 +176,7 @@ function hasAnyPlural(wordsArray) {
 
 const hasPluralForCurrentTopic = computed(() => hasAnyPlural(topicWords.value))
 
-/**
- * Список режимов, доступных для текущей темы:
- * если plural нигде нет — просто его убираем
- */
+
 const availableModes = computed(() => {
   return hasPluralForCurrentTopic.value
       ? baseModes

@@ -3542,7 +3542,7 @@
     "questOneFirstOption": "पेड़",
     "questOneSecondOption": "फूल",
     "questOneThirdOption": "फावड़ा",
-    "questTwo": "बनाएँ: एक बड़ा पेड़ (ein großer Baum)",
+    "questTwo": "बनाएँ: बड़ा पेड़",
     "questThird": "zwei Bäume का अर्थ क्या है?",
     "questThirdFirstOption": "2 पेड़",
     "questThirdSecondOption": "2 फूल",
@@ -5731,7 +5731,8 @@
     "letters": "अक्षरों से शब्द बनाएं",
     "articleWord": "शब्द और आर्टिकल लिखें",
     "plural": "बहुवचन रूप",
-    "audio": "सुनना (Listening)"
+    "audio": "सुनना (Listening)",
+    "wordTranslate": "शब्द-अनुवाद"
   },
   "sessionPage": {
     "choice": "तरीका",

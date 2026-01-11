@@ -3542,7 +3542,7 @@
     "questOneFirstOption": "Drzewo",
     "questOneSecondOption": "Kwiat",
     "questOneThirdOption": "Łopata",
-    "questTwo": "Ułóż: ein großer Baum",
+    "questTwo": "Ułóż: Duże drzewo",
     "questThird": "Co znaczy: zwei Bäume",
     "questThirdFirstOption": "2 drzewa",
     "questThirdSecondOption": "2 kwiaty",
@@ -5749,7 +5749,8 @@
     "letters": "Ułóż słowo z liter",
     "articleWord": "Wstaw słowo i rodzajnik",
     "plural": "Liczba mnoga",
-    "audio": "Słuchanie"
+    "audio": "Słuchanie",
+    "wordTranslate": "Słowo-tłumaczenie"
   },
   "sessionPage": {
     "choice": "Metoda",
