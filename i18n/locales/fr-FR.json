@@ -3542,7 +3542,7 @@
     "questOneFirstOption": "L'arbre",
     "questOneSecondOption": "La fleur",
     "questOneThirdOption": "La pelle",
-    "questTwo": "Assemblez : un grand arbre",
+    "questTwo": "Formez : Grand arbre",
     "questThird": "Que signifie : zwei Bäume",
     "questThirdFirstOption": "2 arbres",
     "questThirdSecondOption": "2 fleurs",
@@ -5730,7 +5730,8 @@
     "letters": "Assembler le mot",
     "articleWord": "Mot + Article",
     "plural": "Forme du pluriel",
-    "audio": "Compréhension orale"
+    "audio": "Compréhension orale",
+    "wordTranslate": "Mot-traduction"
   },
   "sessionPage": {
     "choice": "Méthode",

@@ -70,13 +70,13 @@ export const regions = [
 		desc: "regions.descriptionMasterLands",
 		icon: MasterLands
 	},
-	{
-		id: "wild-lands",
-		pathTo: "wild-lands",
-		theme: "wild",
-		name: "locationNames.wild-lands",
-		level: 0,
-		desc: "regions.descriptionWildLands",
-		icon: WildLand
-	}
+	// {
+	// 	id: "wild-lands",
+	// 	pathTo: "wild-lands",
+	// 	theme: "wild",
+	// 	name: "locationNames.wild-lands",
+	// 	level: 0,
+	// 	desc: "regions.descriptionWildLands",
+	// 	icon: WildLand
+	// }
 ];

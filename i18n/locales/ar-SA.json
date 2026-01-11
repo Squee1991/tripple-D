@@ -3542,7 +3542,7 @@
     "questOneFirstOption": "شجرة",
     "questOneSecondOption": "زهرة",
     "questOneThirdOption": "مجرفة",
-    "questTwo": "كوّن: ein großer Baum",
+    "questTwo": "رتب: شجرة كبيرة",
     "questThird": "ماذا يعني: zwei Bäume",
     "questThirdFirstOption": "شجرتان",
     "questThirdSecondOption": "زهرتان",
@@ -5731,7 +5731,8 @@
     "letters": "كوّن الكلمة من الحروف",
     "articleWord": "اكتب الكلمة مع أداة التعريف",
     "plural": "صيغة الجمع",
-    "audio": "استماع"
+    "audio": "استماع",
+    "wordTranslate": "كلمة-ترجمة"
   },
   "sessionPage": {
     "choice": "الطريقة",

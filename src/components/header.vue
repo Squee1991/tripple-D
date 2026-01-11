@@ -15,6 +15,7 @@
         @button="onDevModalButton"
     />
     <div class="header-container">
+<!--      <button @click="rankStore.addHat">Награда</button>-->
       <NuxtLink @click="click" to="/" class="logo" aria-label="German Corner — Home">
         <span class="logo__name">skillup</span>
         <NuxtImg
@@ -129,7 +130,8 @@ import {useRouter} from 'vue-router'
 import {userAuthStore} from '../../store/authStore.js'
 import {useBreakPointsStore} from '../../store/breakPointsStore.js'
 import { useEasterEggsStore } from '../../store/easterEggsStore.js'
-
+import { useRankUserStore} from "../../store/rankStore.js";
+const rankStore = useRankUserStore()
 import SignIn from '../components/logIn.vue'
 import LanguageSelector from '../components/langSwitcher.vue'
 import ForTea from '../components/forTea.vue'

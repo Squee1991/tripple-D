@@ -3542,7 +3542,7 @@
     "questOneFirstOption": "Copacul / Pomul",
     "questOneSecondOption": "Floarea",
     "questOneThirdOption": "Lopata",
-    "questTwo": "Assemblează: ein großer Baum",
+    "questTwo": "Asamblează: Copac mare",
     "questThird": "Ce înseamnă: zwei Bäume",
     "questThirdFirstOption": "2 copaci",
     "questThirdSecondOption": "2 flori",
@@ -5731,7 +5731,8 @@
     "letters": "Asamblează cuvântul din litere",
     "articleWord": "Introdu cuvântul și articolul",
     "plural": "Forma de plural",
-    "audio": "Auditție"
+    "audio": "Auditție",
+    "wordTranslate": "Cuvânt-traducere"
   },
   "sessionPage": {
     "choice": "Metodă",

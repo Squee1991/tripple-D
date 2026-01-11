@@ -3542,7 +3542,7 @@
     "questOneFirstOption": "Ağaç",
     "questOneSecondOption": "Çiçek",
     "questOneThirdOption": "Kürek",
-    "questTwo": "Kur: ein großer Baum",
+    "questTwo": "Birleştir: Büyük ağaç",
     "questThird": "‘zwei Bäume’ ne demek?",
     "questThirdFirstOption": "2 ağaç",
     "questThirdSecondOption": "2 çiçek",
@@ -5746,7 +5746,8 @@
     "letters": "Kelimeyi Heceleyin",
     "articleWord": "Kelimeyi ve Artikeli Girin",
     "plural": "Çoğul Form",
-    "audio": "Dinlediğini Anlama"
+    "audio": "Dinlediğini Anlama",
+    "wordTranslate": "Kelime-çeviri"
   },
   "sessionPage": {
     "choice": "Yöntem",

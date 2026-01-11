@@ -3542,7 +3542,7 @@
     "questOneFirstOption": "Árbol",
     "questOneSecondOption": "Flor",
     "questOneThirdOption": "Pala",
-    "questTwo": "Forma: ein großer Baum",
+    "questTwo": "Forma: Árbol grande",
     "questThird": "¿Qué significa: zwei Bäume?",
     "questThirdFirstOption": "2 árboles",
     "questThirdSecondOption": "2 flores",
@@ -5731,7 +5731,8 @@
     "letters": "Formar la palabra letra por letra",
     "articleWord": "Escribir palabra y artículo",
     "plural": "Forma plural",
-    "audio": "Escucha y escribe"
+    "audio": "Escucha y escribe",
+    "wordTranslate": "Palabra-traducción"
   },
   "sessionPage": {
     "choice": "Modo",

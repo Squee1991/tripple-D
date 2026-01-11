@@ -3542,7 +3542,7 @@
     "questOneFirstOption": "Tree",
     "questOneSecondOption": "Flower",
     "questOneThirdOption": "Shovel",
-    "questTwo": "Build: ein großer Baum",
+    "questTwo": "Build: Big tree",
     "questThird": "What does: zwei Bäume mean?",
     "questThirdFirstOption": "2 trees",
     "questThirdSecondOption": "2 flowers",
@@ -5733,7 +5733,8 @@
     "letters": "Spell the Word",
     "articleWord": "Insert the Word and Article",
     "plural": "Plural Form",
-    "audio": "Listening Comprehension"
+    "audio": "Listening Comprehension",
+    "wordTranslate": "Word-Translation"
   },
   "sessionPage": {
     "choice": "Method",

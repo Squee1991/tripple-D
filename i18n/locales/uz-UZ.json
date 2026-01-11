@@ -3542,7 +3542,7 @@
     "questOneFirstOption": "Daraxt",
     "questOneSecondOption": "Gul",
     "questOneThirdOption": "Belkurak",
-    "questTwo": "Tuzing: ein großer Baum",
+    "questTwo": "Yig'ing: Katta daraxt",
     "questThird": "Nimani anglatadi: zwei Bäume",
     "questThirdFirstOption": "2 ta daraxt",
     "questThirdSecondOption": "2 ta gul",
@@ -5731,7 +5731,8 @@
     "letters": "So‘zni harflardan yig‘ing",
     "articleWord": "So‘z va artiklni yozing",
     "plural": "Ko‘plik shaklini yozing",
-    "audio": "Eshitish mashqi"
+    "audio": "Eshitish mashqi",
+    "wordTranslate": "So'z-tarjima"
   },
   "sessionPage": {
     "choice": "Usul",
