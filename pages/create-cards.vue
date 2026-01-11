@@ -110,7 +110,6 @@
 <script setup>
     import {ref, watch, computed, onMounted} from 'vue';
     import {useCardsStore} from '../store/cardsStore.js';
-
     const editingCardId = ref(null);
     const defaultFormState = {title: '', topic: '', level: '', sentence: '', translation: ''};
     const form = ref({...defaultFormState});

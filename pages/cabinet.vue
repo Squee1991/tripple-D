@@ -573,6 +573,7 @@ watch(() => authStore.uid, () => {
 })
 
 const processed = new Set(shownAwardsSet.value)
+
 watchEffect(() => {
   const groups = achievementStore.groups || []
   for (const group of groups) {
@@ -898,19 +899,19 @@ watchEffect(() => {
   color: var(--titleColor);
 }
 
-.award-strip {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-left: auto;
-}
-
 .award-strip-item {
   width: 70px;
   height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.award-strip {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-left: auto;
 }
 
 .award-strip-icon {

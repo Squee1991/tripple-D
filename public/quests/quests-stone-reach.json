@@ -1672,9 +1672,10 @@
         "type": "reorder",
         "question": "questsStoneReachTenthQuests.questTwo",
         "words": [
-          "ein",
           "großer",
-          "Baum"
+          "ein",
+          "Baum",
+          "eine"
         ],
         "correctOrder": [
           "ein",

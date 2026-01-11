@@ -3542,7 +3542,7 @@
     "questOneFirstOption": "Дерево",
     "questOneSecondOption": "Цветок",
     "questOneThirdOption": "Лопата",
-    "questTwo": "Собери: ein großer Baum",
+    "questTwo": "Собери: Большое дерево",
     "questThird": "Что значит: zwei Bäume",
     "questThirdFirstOption": "2 дерева",
     "questThirdSecondOption": "2 цветка",
@@ -4438,6 +4438,7 @@
     "deleteAccBtnReject": "Отмена",
     "boughtAvatar": "Аватар куплен",
     "notEnoughtArticles": "Недостаточно артиклюсов",
+    "boughtBtn": "Ок",
     "notAllow": "Эффект недоступен",
     "modalNotAllowEffectFirst": "Этот эффект можно разблокировать только в событии",
     "modalNotAllowEffectSecond": "«Шёпот зимы»",
@@ -5730,7 +5731,8 @@
     "letters": "Собрать слово по буквам",
     "articleWord": "Вписать слово и артикль",
     "plural": "Форма множественного числа",
-    "audio": "Аудирование"
+    "audio": "Аудирование",
+    "wordTranslate": "Слово-перевод"
   },
   "sessionPage": {
     "choice": "Способ",
