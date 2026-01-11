@@ -16,13 +16,13 @@
             <span class="points-card__value">{{ langStore.points }}</span>
           </button>
         </li>
-        <li class="points-card__item">
-          <div class="points-card__label">{{ t('Звание') }}</div>
-          <button id="articlus" :title="hoverTitle.title" v-if="userAuth.uid" @click="openArticleModal" class="articlus__wrapper">
-            <span class="star">📓</span>
-            <span class="points-card__value">0</span>
-          </button>
-        </li>
+<!--        <li class="points-card__item">-->
+<!--          <div class="points-card__label">{{ t('Звание') }}</div>-->
+<!--          <button id="articlus" :title="hoverTitle.title" v-if="userAuth.uid" @click="openArticleModal" class="articlus__wrapper">-->
+<!--            <span class="star">📓</span>-->
+<!--            <span class="points-card__value">0</span>-->
+<!--          </button>-->
+<!--        </li>-->
         <li class="points-card__item">
           <span class="points-card__label">{{ t('accountPanel.level') }}</span>
           <span id="level" :title="hoverTitle.level" class="points-card__badge">{{ langStore.isLeveling }}</span>
