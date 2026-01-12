@@ -1,22 +1,30 @@
 <template>
   <div class="cabinet-wrapper">
+    <!-- Cancel modal -->
     <div v-if="isCancelModalOpen" class="modal-overlay" @click.self="closeCancelModal">
       <div class="modal-card">
         <div class="modal-title">{{ t('cabinet.cancelPremium') }}</div>
         <p class="modal-text">{{ t('cabinet.cancelPremiumText') }}</p>
         <div class="modal-actions">
-          <button class="btn btn-danger" @click="cancelSubscription">{{ t('cabinet.accept') }}</button>
-          <button class="btn" @click="closeCancelModal">{{ t('cabinet.reject') }}</button>
+          <button class="btn btn-danger" @click="cancelSubscription" type="button">
+            {{ t('cabinet.accept') }}
+          </button>
+          <button class="btn" @click="closeCancelModal" type="button">
+            {{ t('cabinet.reject') }}
+          </button>
         </div>
       </div>
     </div>
+
     <div class="layout">
       <aside class="sidebar-panel">
-        <button class="back-btn" @click="backToMain" aria-label="На главную">
+        <button class="back-btn" @click="backToMain" aria-label="На главную" type="button">
           <img class="back__btn-icon" :src="Home" alt=""/>
           <span class="back-label">{{ t('cabinet.main') }}</span>
         </button>
+
         <div class="sidebar-title">{{ t('cabinet.category') }}</div>
+
         <nav class="tabs-vertical">
           <button
               v-for="tabItem in TAB_ITEMS"
@@ -24,157 +32,125 @@
               class="tab-vertical"
               :class="{ active: activeTabKey === tabItem.key }"
               @click="setActiveTab(tabItem.key)"
+              type="button"
           >
             <img class="tab-icon" :src="tabItem.icon" alt=""/>
             <span class="tab-label">{{ tabItem.label }}</span>
           </button>
         </nav>
       </aside>
+
       <section class="content-panel">
         <ClientOnly>
-          <div v-if="activeTabKey === 'info'" class="header-surface">
-            <div class="user-block">
-              <div class="avatar-container">
-                <img v-if="authStore.avatarUrl" :src="authStore.avatarUrl" alt="Аватар" class="avatar-current"/>
-                <div v-else class="avatar-placeholder"></div>
-                <button @click="isAvatarModalOpen = true" class="change-avatar-btn" title="Сменить аватар">
-                  <img src="../assets/images/add.svg" alt="Сменить"/>
-                </button>
-              </div>
-              <div class="user-info">
-                <div class="user-name">{{ userNameSafe }}</div>
-                <div class="exp-bar">
-                  <div class="exp-fill" :style="{ width: `${(learningStore.exp / 100) * 100}%` }"></div>
-                  <span class="exp-text">{{ learningStore.exp }} / 100 XP</span>
-                </div>
-                <div class="level-info">{{ t('cabinet.level') }} {{ learningStore.isLeveling }}</div>
-              </div>
-            </div>
-            <div class="award-strip">
-              <div class="awards__get">
-                <div class="awards__title">{{ t('cabinet.awards') }}</div>
-                <div class="awards__items">
-                  <div
-                      v-for="awardItem in unlockedAwardList"
-                      :key="awardItem.key"
-                      class="award-strip-item"
-                      :title="t(awardItem.title)"
-                  >
-                    <img class="award-strip-icon" :src="awardItem.icon" :alt="awardItem.title"/>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
           <div class="content-body">
-            <div v-if="activeTabKey === 'info'" class="tab-content">
-              <div
-                  v-for="acc in ACCORDIONS"
-                  :key="acc.key"
-                  class="accordion"
-                  :class="{ open: activeAccordion === acc.key }"
-                  @click="onAccordionClick(acc)"
-              >
-                <div class="accordion__head">
-                  <div class="accordion__content-left">
-                    <img class="accordion__icon" :src="acc.icon" alt="">
-                    <div class="accordion__title">{{ acc.title }}</div>
+
+            <div v-if="activeTabKey === 'info'" class="header-surface">
+
+              <div class="setting-arrow-title" :class="{ open: isSettingsOpen }">
+                <button class="gear-btn" @click="toggleSettings" type="button">
+                  <img :src="arrowIcon" alt=""/>
+                </button>
+                <div v-if="isSettingsOpen" class="setting-title">Настройки</div>
+              </div>
+
+              <div v-if="isSettingsOpen" class="settings-wrapper">
+                <VSettings
+                    :userIcon="UserAccIcon"
+                    :settingsIcon="OptionIcon"
+                    :faqIcon="FaqIcon"
+                    :activeTabKey="activeTabKey"
+                    :awards="awardList"
+                    @back="isSettingsOpen = false"
+                    @open="handleSettingsAction"
+                />
+              </div>
+
+              <div v-else>
+                <div class="user-block">
+                  <div class="avatar-container">
+                    <img
+                        v-if="authStore.avatarUrl"
+                        :src="authStore.avatarUrl"
+                        alt="Аватар"
+                        class="avatar-current"
+                    />
+                    <div v-else class="avatar-placeholder"></div>
+
+                    <button
+                        @click="isAvatarModalOpen = true"
+                        class="change-avatar-btn"
+                        title="Сменить аватар"
+                        type="button"
+                    >
+                      <img src="../assets/images/add.svg" alt="Сменить"/>
+                    </button>
                   </div>
-                  <img
-                      v-if="!acc.isLink"
-                      class="accordion__arrow"
-                      :class="{ rotated: activeAccordion === acc.key }"
-                      src="../assets/images/arrowNav.svg"
-                      alt=""
-                  />
+
+                  <div class="user-info">
+                    <div class="user-name">{{ userNameSafe }}</div>
+
+                    <div class="exp-bar">
+                      <div class="exp-fill" :style="{ width: `${expFillWidth}%` }"></div>
+                      <span class="exp-text">{{ learningStore.exp }} / 100 XP</span>
+                    </div>
+
+                    <div class="level-info">{{ t('cabinet.level') }} {{ learningStore.isLeveling }}</div>
+                  </div>
                 </div>
-                <transition name="fade">
-                  <div
-                      v-show="activeAccordion === acc.key && !acc.isLink"
-                      class="accordion__body"
-                      @click.stop
+
+                <div class="account-tabs">
+                  <button
+                      v-for="tab in ACCOUNT_TABS"
+                      :key="tab.key"
+                      class="account-tab"
+                      :class="{ active: accountTab === tab.key }"
+                      @click="accountTab = tab.key"
+                      type="button"
                   >
-                    <template v-if="acc.key === 'personal'">
-                      <div v-for="infoRow in accountInfoRows" :key="infoRow.label" class="card-row">
-                        <span class="card-row__label">{{ infoRow.label }}</span>
-                        <span class="card-row__value">{{ infoRow.value }}</span>
-                      </div>
-                    </template>
-                    <template v-else-if="acc.key === 'account'">
-                      <div class="subscription-status-row">
-                        <div class="subscription-label">{{ t('cabinet.status') }}</div>
-                        <div class="subscription-status">
-                          <template v-if="authStore.isPremium && !authStore.subscriptionCancelled">
-                            <p class="active">✅ {{ t('cabinet.active') }}</p>
-                          </template>
-                          <template v-else-if="authStore.isPremium && authStore.subscriptionCancelled">
-                            <p class="cancelled">⚠️{{ t('cabinet.canceled') }}</p>
-                          </template>
-                          <template v-else>
-                            <p>🔓 {{ t('cabinet.withoutPremium') }}</p>
-                            <div class="premium__btn-wrapper">
-                              <button @click="routeToPay" class="premium__btn">{{ t('cabinet.buyPremium') }}</button>
-                            </div>
-                          </template>
-                        </div>
-                      </div>
-                      <template v-if="authStore.isPremium && !authStore.subscriptionCancelled">
-                        <div class="premium__status-wrapper">
-                          <p>📅 {{ t('cabinet.nextPayment') }} {{ formattedSubscriptionEndDate }}</p>
-                          <button class="btn btn-danger" @click.stop="openCancelModal">{{
-                              t('cabinet.cancelBtn')
-                            }}
-                          </button>
-                        </div>
-                      </template>
-                      <template v-else-if="authStore.isPremium && authStore.subscriptionCancelled">
-                        <p class="access__text">📅 {{ t('cabinet.access') }} {{ formattedSubscriptionEndDate }}</p>
-                      </template>
-                    </template>
-                    <template v-else-if="acc.key === 'settings'">
-                      <div class="settings__elements">
-                        <div
-                            v-for="settingsItem in settingsToggleItems"
-                            :key="settingsItem.key"
-                            class="row__el--wrapper"
-                            :class="{ 'locked-setting': settingsItem.key === 'snowFall' && !eventStore.isSnowPurchased }"
-                        >
-                          <div class="toggle__wrapper">
-                            {{ settingsItem.label }}
-                            <span v-if="settingsItem.key === 'snowFall' && !eventStore.isSnowPurchased">🔒</span>
-                          </div>
-                          <ClientOnly>
-                            <ColorScheme v-if="settingsItem.wrap">
-                              <VToggle
-                                  :key="settingsItem.key + toggleForceUpdateKey"
-                                  :model-value="getSettingValue(settingsItem.key)"
-                                  @change="value => onSettingChange(settingsItem.key, value)"
-                              />
-                            </ColorScheme>
-                            <template v-else>
-                              <VToggle
-                                  :key="settingsItem.key + toggleForceUpdateKey"
-                                  :model-value="getSettingValue(settingsItem.key)"
-                                  @change="value => onSettingChange(settingsItem.key, value)"
-                              />
-                            </template>
-                          </ClientOnly>
-                        </div>
-                      </div>
-                    </template>
+                    <img :class="iconDisplayComputed" class="tab-icon --horizontal" :src="tab.icon" :alt="tab.alt">
+                    <span class="tab__text">
+                      {{ tab.label }}
+                    </span>
+                  </button>
+                </div>
+
+                <div class="account-tab-body">
+                  <div v-if="accountTab === 'common'" class="tab-surface">
+                    <div>123</div>
                   </div>
-                </transition>
+
+                  <div v-if="accountTab === 'friends'" class="tab-surface">
+                    <VFindFriends/>
+                  </div>
+
+
+                  <div v-else-if="accountTab === 'awards'" class="tab-surface">
+                    <AwardsList :awards="awardList"/>
+                  </div>
+
+
+                  <div v-else-if="accountTab === 'rank'" class="rank-placeholder">
+                    <!--                    <div class="award-strip">-->
+                    <!--                      <div class="awards__get">-->
+                    <!--                        <div class="awards__title">{{ t('cabinet.awards') }}</div>-->
+                    <!--                        <div class="awards__items">-->
+                    <!--                          <div-->
+                    <!--                              v-for="awardItem in unlockedAwardList"-->
+                    <!--                              :key="awardItem.key"-->
+                    <!--                              class="award-strip-item"-->
+                    <!--                              :title="t(awardItem.title)"-->
+                    <!--                          >-->
+                    <!--                            <img class="award-strip-icon" :src="awardItem.icon" :alt="awardItem.title"/>-->
+                    <!--                          </div>-->
+                    <!--                        </div>-->
+                    <!--                      </div>-->
+                    <!--                    </div>-->
+                  </div>
+
+                </div>
               </div>
-              <div class="footer-actions">
-                <button @click="openDeleteModal" class="btn btn-danger">{{ t('cabinet.deleteAcc') }}</button>
-              </div>
             </div>
-            <div v-else-if="activeTabKey === 'friends'">
-              <VFindFriends/>
-            </div>
-            <div v-else-if="activeTabKey === 'award'">
-              <AwardsList :awards="awardList"/>
-            </div>
+
             <div v-else-if="activeTabKey === 'archive'">
               <VExampResulut/>
             </div>
@@ -182,6 +158,8 @@
         </ClientOnly>
       </section>
     </div>
+
+    <!-- Avatar modal -->
     <div v-if="isAvatarModalOpen" class="avatar-modal-overlay" @click.self="isAvatarModalOpen = false">
       <div class="avatar-modal-content">
         <h3>{{ t('cabinet.newAvatarTitle') }}</h3>
@@ -198,66 +176,101 @@
           </div>
         </div>
         <div class="modal-actions">
-          <button @click="isAvatarModalOpen = false" class="btn">{{ t('cabinet.avatarCancel') }}</button>
-          <button @click="confirmAvatarChange" :disabled="!selectedAvatarName" class="btn btn-success">
+          <button @click="isAvatarModalOpen = false" class="btn" type="button">
+            {{ t('cabinet.avatarCancel') }}
+          </button>
+          <button
+              @click="confirmAvatarChange"
+              :disabled="!selectedAvatarName"
+              class="btn btn-success"
+              type="button"
+          >
             {{ t('cabinet.avatarSave') }}
           </button>
         </div>
       </div>
     </div>
+
     <div v-if="isPurchaseModalOpen" class="modal-overlay" @click.self="isPurchaseModalOpen = false">
       <div class="modal-card">
         <template v-if="purchaseState === 'success'">
           <div class="modal-title">{{ t('cabinet.boughtAvatar') }}</div>
           <div class="modal-actions">
-            <button class="btn btn-success" @click="closePurchaseOk">{{ t('cabinet.boughtBtn') }}</button>
+            <button class="btn btn-success" @click="closePurchaseOk" type="button">
+              {{ t('cabinet.boughtBtn') }}
+            </button>
           </div>
         </template>
+
         <template v-else-if="purchaseState === 'insufficient'">
           <div class="modal-title">{{ t('cabinet.notEnoughtArticles') }}</div>
           <div class="modal-actions">
-            <button class="btn" @click="closePurchaseOk">{{ t('cabinet.boughtBtn') }}</button>
+            <button class="btn" @click="closePurchaseOk" type="button">
+              {{ t('cabinet.boughtBtn') }}
+            </button>
           </div>
         </template>
+
         <template v-else>
           <div class="modal-title">{{ t('cabinet.buyAvatar') }}</div>
-          <p class="modal-text">{{ t('cabinet.costs') }} <b>{{ t('cabinet.price') }}</b></p>
+          <p class="modal-text">
+            {{ t('cabinet.costs') }} <b>{{ t('cabinet.price') }}</b>
+          </p>
           <div class="modal-actions">
-            <button class="btn btn-success" @click="confirmPurchase">{{ t('cabinet.buyAvatarBtn') }}</button>
-            <button class="btn" @click="isPurchaseModalOpen = false">{{ t('cabinet.notBuyAvatarBtn') }}</button>
+            <button class="btn btn-success" @click="confirmPurchase" type="button">
+              {{ t('cabinet.buyAvatarBtn') }}
+            </button>
+            <button class="btn" @click="isPurchaseModalOpen = false" type="button">
+              {{ t('cabinet.notBuyAvatarBtn') }}
+            </button>
           </div>
         </template>
       </div>
     </div>
+
+    <!-- Delete modal -->
     <div v-if="isDeleteModalOpen" class="modal-overlay" @click.self="isDeleteModalOpen = false">
       <div class="modal-card">
         <div class="modal-title">{{ t('cabinet.deleteAccTitle') }}</div>
+
         <p v-if="authStore.isPremium" class="modal-text">
           <span class="warn">{{ t('cabinet.important') }}</span>
           <span> {{ t('cabinet.importantText') }}</span>
         </p>
+
         <p v-if="!isGoogleUser" class="modal-text">{{ t('cabinet.checkPassword') }}</p>
+
         <div v-if="!isGoogleUser" class="label">
           <input class="input" v-model="deletePasswordField.value" type="password"/>
           <p v-if="deletePasswordField.error" class="delete-error">{{ t(deletePasswordField.error) }}</p>
         </div>
+
         <p v-else class="modal-text">{{ t('cabinet.checkGoogle') }}</p>
+
         <div class="modal-actions">
-          <button class="btn btn-danger" @click="confirmDeleteAccount">{{ t('cabinet.deleteAccBtnAccept') }}</button>
-          <button class="btn" @click="isDeleteModalOpen = false">{{ t('cabinet.deleteAccBtnReject') }}</button>
+          <button class="btn btn-danger" @click="confirmDeleteAccount" type="button">
+            {{ t('cabinet.deleteAccBtnAccept') }}
+          </button>
+          <button class="btn" @click="isDeleteModalOpen = false" type="button">
+            {{ t('cabinet.deleteAccBtnReject') }}
+          </button>
         </div>
       </div>
     </div>
+
+    <!-- Snow warning modal -->
     <div v-if="isSnowWarningModalOpen" class="modal-overlay" @click.self="isSnowWarningModalOpen = false">
       <div class="modal-card">
-        <div class="modal-title">❄️ {{ t('cabinet.notAllow')}}</div>
+        <div class="modal-title">❄️ {{ t('cabinet.notAllow') }}</div>
         <p class="modal-text">
-          {{ t('cabinet.modalNotAllowEffectFirst')}} <b>{{ t('cabinet.modalNotAllowEffectSecond')}}</b>.
-          <br>
-          {{ t('cabinet.modalNotAllowEffectThird')}}
+          {{ t('cabinet.modalNotAllowEffectFirst') }} <b>{{ t('cabinet.modalNotAllowEffectSecond') }}</b>.
+          <br/>
+          {{ t('cabinet.modalNotAllowEffectThird') }}
         </p>
         <div class="modal-actions">
-          <button class="btn" @click="isSnowWarningModalOpen = false">{{ t('cabinet.modalNotAllowEffectClose')}}</button>
+          <button class="btn" @click="isSnowWarningModalOpen = false" type="button">
+            {{ t('cabinet.modalNotAllowEffectClose') }}
+          </button>
         </div>
       </div>
     </div>
@@ -268,175 +281,150 @@
 import {ref, computed, onMounted, watch, watchEffect} from 'vue'
 import {useRouter} from 'vue-router'
 import {useI18n} from 'vue-i18n'
-import Progress from '../src/components/progress.vue'
+
 import AwardsList from '../src/components/AwardsList.vue'
-import VExampResulut from "../src/components/V-exampResulut.vue";
-import VToggle from '../src/components/V-toggle.vue'
+import VExampResulut from '../src/components/V-exampResulut.vue'
 import VFindFriends from '../src/components/V-findFriends.vue'
+
 import {userAuthStore} from '../store/authStore.js'
 import {userlangStore} from '../store/learningStore.js'
 import {useAchievementStore} from '../store/achievementStore.js'
 import {useGameStore} from '../store/marafonStore.js'
 import {mapErrors} from '../utils/errorsHandler.js'
-import {isSoundEnabled, setSoundEnabled, unlockAudioByUserGesture} from '../utils/soundManager.js'
-import {useUiSettingsStore} from '../store/uiSettingsStore.js'
 import {AWARDS} from '~/utils/awards'
 import {useFriendsStore} from '../../store/friendsStore.js'
 import {useEventSessionStore} from '../../store/eventsStore.js'
 
 import UserIcon from '../assets/images/hedgehog.svg'
-import FriendsIcon from '../assets/images/friend.svg'
-import AwardsIcon from '../assets/images/rewards.svg'
 import Home from '../assets/images/home.svg'
 import Folder from '../assets/images/folder.svg'
-import Find from '../assets/images/magnifying-glass.svg'
-import EditIcon from '../assets/accountToggleIcons/edit.svg'
+
 import UserAccIcon from '../assets/accountToggleIcons/user.svg'
 import SettingsIcon from '../assets/accountToggleIcons/settings.svg'
 import FaqIcon from '../assets/accountToggleIcons/faq.svg'
+import OptionIcon from '../assets/accountToggleIcons/option.svg'
+
+import Friends from '../assets/images/friend.svg'
+import Rewards from '../assets/images/rewards.svg'
+import IdCard from '../assets/images/monitor.svg'
+
+import VSettings from '../src/V-settings.vue'
+import ArrowBackIcon from '../assets/images/arrow.svg'
 
 definePageMeta({
-  robots: {
-    index: false,
-    follow: false
-  }
+  robots: {index: false, follow: false}
 })
 
-const {t, locale} = useI18n()
+const {t} = useI18n()
 const router = useRouter()
-const purchaseState = ref('default')
+
 const authStore = userAuthStore()
 const learningStore = userlangStore()
 const achievementStore = useAchievementStore()
 const gameStore = useGameStore()
-const uiSettings = useUiSettingsStore()
 const friendsStore = useFriendsStore()
 const eventStore = useEventSessionStore()
+const unlockedAwardList = computed(() => awardList.value.filter(a => !a.locked))
 
-const activeTabKey = ref('info')
-const isFriendSearchModalOpen = ref(false)
+const activeTabKey = ref('common')
+const isSettingsOpen = ref(false)
+
+
+const accountTab = ref('rank')
+const ACCOUNT_TABS = computed(() => [
+  {key: 'common', label: 'Общие', icon: IdCard, alt: 'IdCard'},
+  {key: 'awards', label: t('cabinetSidebar.valueThree') || 'Награды', icon: Rewards, alt: 'award'},
+  {key: 'rank', label: 'Звание', icon: IdCard, alt: 'rank'},
+  {key: 'friends', label: t('cabinetSidebar.valueTwo') || 'Друзья', icon: Friends, alt: 'friends'}
+])
+
 const isSnowWarningModalOpen = ref(false)
-const toggleForceUpdateKey = ref(0)
+const isCancelModalOpen = ref(false)
 
-const userNameSafe = computed(() =>
-    authStore.initialized && authStore.name ? authStore.name : '—'
-);
-
-function openFriendSearchModal() {
-  isFriendSearchModalOpen.value = true
-}
-
-const TAB_ITEMS = [
-  {key: 'info', label: t('cabinetSidebar.valueOne'), icon: UserIcon},
-  {key: 'friends', label: t('cabinetSidebar.valueTwo'), icon: FriendsIcon},
-  {key: 'award', label: t('cabinetSidebar.valueThree'), icon: AwardsIcon},
-  {key: 'archive', label: t('cabinetSidebar.valueFour'), icon: Folder},
-]
-
-const ACCORDIONS = ref([
-  {key: 'personal', title: t('cabinetAccordion.personalData'), icon: UserAccIcon, isLink: false},
-  {key: 'settings', title: t('cabinetAccordion.settings'), icon: SettingsIcon, isLink: false},
-  {key: 'faq', title: t('cabinetAccordion.faq'), icon: FaqIcon, isLink: true},
-])
-
-const accountInfoRows = computed(() => [
-  {label: t('cabinetInfoRows.name'), value: authStore.name},
-  {label: t('cabinetInfoRows.email'), value: authStore.email},
-  {label: t('cabinetInfoRows.registerDate'), value: registrationDateText.value || '—'}
-])
-
-const settingsToggleItems = [
-  {key: 'sound', label: t('cabinetToggle.sound'), wrap: false},
-  {key: 'dark', label: t('cabinetToggle.theme'), wrap: true},
-  {key: 'ach', label: t('cabinetToggle.ach'), wrap: true},
-  // {key: 'snowFall', label: t('cabinetToggle.snowFall'), wrap: true},
-]
-
-const activeAccordion = ref(null)
-
-function toggleAccordion(key) {
-  activeAccordion.value = activeAccordion.value === key ? null : key
-}
-
-function onAccordionClick(acc) {
-  if (acc.isLink) {
-    goToFaq()
-    return
-  }
-  toggleAccordion(acc.key)
-}
-
+const purchaseState = ref('default')
 const isAvatarModalOpen = ref(false)
 const selectedAvatarName = ref(null)
 const isPurchaseModalOpen = ref(false)
 const purchaseAvatarName = ref(null)
+const iconDisplay = ref(true)
 
 const isDeleteModalOpen = ref(false)
 const deletePasswordField = ref({value: '', error: ''})
 
-const isCancelModalOpen = ref(false)
-
-const soundEnabled = ref(false)
-const colorMode = useColorMode()
-const darkMode = ref(colorMode.preference === 'dark')
-
-const registrationDateText = computed(() => {
-  const registeredAt = authStore.registeredAt;
-  if (!registeredAt) return '—';
-  let date;
-  if (typeof registeredAt.toDate === 'function') {
-    date = registeredAt.toDate();
-  } else {
-    date = new Date(registeredAt);
-  }
-  if (isNaN(date.getTime())) return '—';
-  return date.toLocaleDateString('ru-RU', {day: '2-digit', month: '2-digit', year: 'numeric'});
-});
-
-const routeToPay = () => router.push('/pay')
-
-const shownAwardsSet = ref(loadShownAwards())
-const awardList = ref(
-    AWARDS.map(a => ({
-      ...a, locked: a.key === 'registerAchievement' ? false : !shownAwardsSet.value.has(a.key)
-    }))
+const userNameSafe = computed(() =>
+    authStore.initialized && authStore.name ? authStore.name : '—'
 )
 
-const unlockedAwardList = computed(() => awardList.value.filter(a => !a.locked))
+const expFillWidth = computed(() => {
+  const v = Number(learningStore.exp || 0)
+  if (!Number.isFinite(v)) return 0
+  return Math.max(0, Math.min(100, v))
+})
+
+const iconDisplayComputed = computed(() => {
+  return {
+    "iconHide": iconDisplay.value
+  }
+})
+
+const TAB_ITEMS = [
+  {key: 'info', label: t('cabinetSidebar.valueOne'), icon: UserIcon},
+  {key: 'archive', label: t('cabinetSidebar.valueFour'), icon: Folder}
+]
+
+function toggleSettings() {
+  isSettingsOpen.value = !isSettingsOpen.value
+}
+
+function setActiveTab(key) {
+  activeTabKey.value = key
+}
+
+watch(activeTabKey, () => {
+  isSettingsOpen.value = false
+})
+
+function handleSettingsAction(action) {
+  if (action === 'cancelPremium') {
+    openCancelModal()
+    return
+  }
+  if (action === 'deleteAccount') {
+    openDeleteModal()
+    return
+  }
+  if (action === 'snowWarning') {
+    isSnowWarningModalOpen.value = true
+    return
+  }
+  if (action === 'faq') {
+    goToFaq()
+    return
+  }
+}
+
+function backToMain() {
+  router.push('/')
+}
+
+const shownAwardsSet = ref(loadShownAwards())
+const awardsStorageKey = computed(() => `awards_shown_v1_${authStore.uid || 'anon'}`)
+
+const awardList = ref(
+    AWARDS.map(a => ({
+      ...a,
+      locked: a.key === 'registerAchievement' ? false : !shownAwardsSet.value.has(a.key)
+    }))
+)
 
 watch(() => authStore.uid, () => {
   shownAwardsSet.value = loadShownAwards()
   awardList.value = AWARDS.map(a => ({...a, locked: !shownAwardsSet.value.has(a.key)}))
 })
 
-const getSettingValue = key => {
-  if (key === 'sound') return soundEnabled.value
-  if (key === 'dark') return darkMode.value
-  if (key === 'ach') return uiSettings.achievementsNotifyEnabled
-  if (key === 'snowFall') return eventStore.isSnowEnabled
-}
-
-const onSettingChange = (key, value) => {
-  if (key === 'sound') return handleSoundToggle(value)
-  if (key === 'dark') return handleThemeToggle(value)
-  if (key === 'ach') return uiSettings.setAchievementsNotifyEnabled(value)
-  if (key === 'snowFall') {
-    if (!eventStore.isSnowPurchased) {
-      isSnowWarningModalOpen.value = true
-      toggleForceUpdateKey.value++
-      return
-    }
-    return eventStore.setSnowFallEnabled(value)
-  }
-}
-
-const formattedSubscriptionEndDate = computed(() => {
-  if (!authStore.subscriptionEndsAt) return '-'
-  const date = new Date(authStore.subscriptionEndsAt)
-  return date.toLocaleDateString(locale.value, {year: 'numeric', month: 'long', day: 'numeric'})
+const arrowIcon = computed(() => {
+  return isSettingsOpen.value ? ArrowBackIcon : SettingsIcon
 })
-
-const awardsStorageKey = computed(() => `awards_shown_v1_${authStore.uid || 'anon'}`)
 
 function loadShownAwards() {
   try {
@@ -453,124 +441,9 @@ function saveShownAwards(set) {
     if (typeof window === 'undefined') return
     localStorage.setItem(awardsStorageKey.value, JSON.stringify([...set]))
   } catch {
+    // ignore
   }
 }
-
-function setActiveTab(key) {
-  activeTabKey.value = key
-}
-
-function backToMain() {
-  router.push('/')
-}
-
-function handleSoundToggle(value) {
-  setSoundEnabled(value)
-  soundEnabled.value = value
-  if (value) unlockAudioByUserGesture()
-}
-
-function handleThemeToggle(value) {
-  colorMode.preference = value ? 'dark' : 'light'
-  darkMode.value = value
-}
-
-const openCancelModal = () => {
-  isCancelModalOpen.value = true
-}
-
-const  closeCancelModal = () => {
-  isCancelModalOpen.value = false
-}
-
-async function cancelSubscription() {
-  if (!authStore.uid) return
-  try {
-    const res = await $fetch('/api/stripe/cancel', {method: 'POST', body: {uid: authStore.uid}})
-    if (!res.success) alert('Ошибка отмены подписки: ' + res.error)
-  } catch {
-    alert('Error, try later')
-  }
-}
-
-function goToFaq() {
-  router.push('/faq')
-}
-
-function openPurchaseModal(name) {
-  purchaseAvatarName.value = name
-  purchaseState.value = 'default'
-  isPurchaseModalOpen.value = true
-}
-
-function selectAvatar(name) {
-  selectedAvatarName.value = name
-}
-
-async function confirmPurchase() {
-  const status = await authStore.purchaseAvatar(purchaseAvatarName.value)
-  if (status === 'success' || status === 'owned') {
-    selectedAvatarName.value = purchaseAvatarName.value
-    purchaseState.value = 'success'
-
-  } else if (status === 'insufficient') {
-    purchaseState.value = 'insufficient'
-    isPurchaseModalOpen.value = true
-  }
-}
-
-async function confirmAvatarChange() {
-  if (!selectedAvatarName.value) return
-  try {
-    await authStore.updateUserAvatar(selectedAvatarName.value)
-    isAvatarModalOpen.value = false
-  } catch {
-  }
-}
-
-function openDeleteModal() {
-  isDeleteModalOpen.value = true
-  deletePasswordField.value = {name: 'deletePassword', value: '', error: ''}
-}
-
-async function confirmDeleteAccount() {
-  deletePasswordField.value.error = ''
-  try {
-    await authStore.deleteAccount(deletePasswordField.value.value)
-    router.push('/')
-  } catch (err) {
-    if (!deletePasswordField.value.name) deletePasswordField.value.name = 'deletePassword'
-    mapErrors([deletePasswordField.value], err?.code || 'auth/unknown')
-  }
-}
-
-function closePurchaseOk() {
-  isPurchaseModalOpen.value = false
-  isAvatarModalOpen.value = false
-  purchaseState.value = 'default'
-  authStore.clearNotEnoughArticle?.()
-}
-
-const isGoogleUser = computed(() => authStore.isGoogleUser)
-
-onMounted(async () => {
-  await learningStore.loadFromFirebase()
-  soundEnabled.value = isSoundEnabled()
-  await eventStore.loadGlobalWinterSettings()
-})
-
-onMounted(() => {
-  friendsStore.loadFriends()
-})
-
-watch(isAvatarModalOpen, opened => {
-  if (opened) selectedAvatarName.value = authStore.avatar
-})
-
-watch(() => authStore.uid, () => {
-  shownAwardsSet.value = loadShownAwards()
-  awardList.value = AWARDS.map(a => ({...a, locked: !shownAwardsSet.value.has(a.key)}))
-})
 
 const processed = new Set(shownAwardsSet.value)
 watchEffect(() => {
@@ -591,97 +464,105 @@ watchEffect(() => {
     }
   }
 })
+
+function openCancelModal() {
+  isCancelModalOpen.value = true
+}
+
+function closeCancelModal() {
+  isCancelModalOpen.value = false
+}
+
+async function cancelSubscription() {
+  if (!authStore.uid) return
+  try {
+    const res = await $fetch('/api/stripe/cancel', {method: 'POST', body: {uid: authStore.uid}})
+    if (!res.success) alert('Ошибка отмены подписки: ' + res.error)
+  } catch {
+    alert('Error, try later')
+  }
+}
+
+/** ===== FAQ ===== */
+function goToFaq() {
+  router.push('/faq')
+}
+
+/** ===== Avatars ===== */
+function openPurchaseModal(name) {
+  purchaseAvatarName.value = name
+  purchaseState.value = 'default'
+  isPurchaseModalOpen.value = true
+}
+
+function selectAvatar(name) {
+  selectedAvatarName.value = name
+}
+
+async function confirmPurchase() {
+  const status = await authStore.purchaseAvatar(purchaseAvatarName.value)
+  if (status === 'success' || status === 'owned') {
+    selectedAvatarName.value = purchaseAvatarName.value
+    purchaseState.value = 'success'
+  } else if (status === 'insufficient') {
+    purchaseState.value = 'insufficient'
+    isPurchaseModalOpen.value = true
+  }
+}
+
+async function confirmAvatarChange() {
+  if (!selectedAvatarName.value) return
+  try {
+    await authStore.updateUserAvatar(selectedAvatarName.value)
+    isAvatarModalOpen.value = false
+  } catch {
+    // ignore
+  }
+}
+
+function closePurchaseOk() {
+  isPurchaseModalOpen.value = false
+  isAvatarModalOpen.value = false
+  purchaseState.value = 'default'
+  authStore.clearNotEnoughArticle?.()
+}
+
+watch(isAvatarModalOpen, opened => {
+  if (opened) selectedAvatarName.value = authStore.avatar
+})
+
+/** ===== Delete account ===== */
+const isGoogleUser = computed(() => authStore.isGoogleUser)
+
+function openDeleteModal() {
+  isDeleteModalOpen.value = true
+  deletePasswordField.value = {name: 'deletePassword', value: '', error: ''}
+}
+
+async function confirmDeleteAccount() {
+  deletePasswordField.value.error = ''
+  try {
+    await authStore.deleteAccount(deletePasswordField.value.value)
+    router.push('/')
+  } catch (err) {
+    if (!deletePasswordField.value.name) deletePasswordField.value.name = 'deletePassword'
+    mapErrors([deletePasswordField.value], err?.code || 'auth/unknown')
+  }
+}
+
+onMounted(async () => {
+  await learningStore.loadFromFirebase()
+  await eventStore.loadGlobalWinterSettings()
+  friendsStore.loadFriends()
+})
 </script>
 
 <style scoped>
-.friends {
-  color: var(--titleColor);
-  font-size: 20px;
-  font-weight: 600;
-
-}
-
-.find__friends {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  font-weight: 600;
-  font-family: "Nunito", sans-serif;
-  font-size: 1rem;
-  padding: 5px;
-  border: 3px solid black;
-  box-shadow: 3px 3px 0 black;
-  border-radius: 15px;
-}
-
-.find__icon {
-  width: 32px;
-  margin-right: 10px;
-}
-
 .cabinet-wrapper {
   height: 100vh;
   font-family: "Nunito", sans-serif;
   padding: 20px;
   overflow: hidden;
-}
-
-.modal-card--friends {
-  max-width: 720px;
-  width: 95%;
-}
-
-.premium__btn {
-  padding: 8px 10px;
-  border: 2px solid black;
-  background: #345fd0;
-  width: 100%;
-  border-radius: 15px;
-  box-shadow: 2px 2px 0 black;
-  color: white;
-  font-weight: 600;
-  font-family: "Nunito", sans-serif;
-  cursor: pointer;
-}
-
-.back__btn-icon {
-  width: 35px;
-  height: 35px;
-}
-
-.add__friend-wrapper {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  background: none;
-  padding: 5px 10px;
-  border: 3px solid black;
-  border-radius: 16px;
-  background: white;
-  box-shadow: 4px 4px 0 black;
-  margin-left: auto;
-}
-
-.find__friend {
-  width: 40px;
-  margin-right: 10px;
-}
-
-.find__text {
-  color: black;
-  font-size: 18px;
-  font-family: "Nunito", sans-serif;
-  font-weight: 600;
-}
-
-.premium__btn-wrapper {
-  margin-top: 10px;
-}
-
-.premium__status-wrapper {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 8px;
 }
 
 .layout {
@@ -690,25 +571,6 @@ watchEffect(() => {
   width: 100%;
   position: relative;
   gap: 20px;
-}
-
-.awards__items {
-  display: flex;
-}
-
-.accordion__content-left {
-  display: flex;
-  align-items: center;
-}
-
-.awards__title {
-  text-align: center;
-  width: 100%;
-  font-size: 1.3rem;
-  color: var(--titleColor);
-  font-family: "Nunito", sans-serif;
-  padding: 12px 0;
-  font-weight: 600;
 }
 
 .sidebar-panel {
@@ -742,9 +604,9 @@ watchEffect(() => {
   transition: .15s;
 }
 
-.back-btn img {
-  width: 40px;
-  height: 40px;
+.back__btn-icon {
+  width: 35px;
+  height: 35px;
 }
 
 .back-label {
@@ -757,10 +619,6 @@ watchEffect(() => {
   text-align: center;
   margin-top: 4px;
   color: var(--titleColor);
-}
-
-.find__friends {
-  margin-bottom: 10px;
 }
 
 .tabs-vertical {
@@ -787,7 +645,6 @@ watchEffect(() => {
   font-family: "Nunito", sans-serif;
 }
 
-
 .tab-vertical.active {
   background: #447ec1;
   color: white;
@@ -797,8 +654,11 @@ watchEffect(() => {
   width: 30px;
 }
 
+.tab-icon.--horizontal {
+  width: 43px;
+}
+
 .content-panel {
-  padding: 14px;
   border-radius: 28px;
   border: 3px solid #000;
   box-shadow: 5px 5px 0 #000;
@@ -807,24 +667,74 @@ watchEffect(() => {
   flex-direction: column;
   min-width: 0;
   height: 100%;
-  overflow-y: auto;
+  overflow: hidden;
+}
+
+.content-body {
+  flex: 1;
 }
 
 .header-surface {
+  position: relative;
   border-radius: 20px;
   padding: 14px 16px;
-  gap: 16px;
   background: transparent;
+  padding-top: 20px;
 }
 
+.setting-arrow-title {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 25px;
+  right: 12px;
+  gap: 12px;
+  z-index: 10;
+}
+
+.setting-arrow-title.open {
+  left: 12px;
+  right: auto;
+}
+
+.gear-btn {
+  width: 44px;
+  height: 44px;
+  border: 2px solid #000;
+  border-radius: 14px;
+  background: #f3f4f6;
+  box-shadow: 2px 2px 0 #000;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: .15s;
+  flex: 0 0 auto;
+}
+
+.gear-btn img {
+  width: 26px;
+  height: 26px;
+}
+
+.setting-title {
+  font-weight: 600;
+  font-size: 30px;
+  color: var(--titleColor);
+}
+
+.settings-wrapper {
+  margin-top: 6px;
+}
+
+/* Profile block */
 .user-block {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   border-bottom: 3px solid var(--titleColor);
   border-radius: 15px;
-  padding-bottom: 10px;
+  padding-bottom: 12px;
 }
 
 .avatar-container {
@@ -832,7 +742,8 @@ watchEffect(() => {
   width: 84px;
 }
 
-.avatar-current, .avatar-placeholder {
+.avatar-current,
+.avatar-placeholder {
   width: 84px;
   height: 84px;
   border-radius: 50%;
@@ -853,6 +764,14 @@ watchEffect(() => {
   display: grid;
   place-items: center;
   cursor: pointer;
+  background: #fff;
+  box-shadow: 2px 2px 0 #000;
+  transition: .12s;
+}
+
+.change-avatar-btn:active {
+  transform: translate(1px, 1px);
+  box-shadow: 0 0 0 #000;
 }
 
 .user-info {
@@ -862,13 +781,13 @@ watchEffect(() => {
 }
 
 .user-name {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   font-weight: 900;
   color: var(--titleColor);
 }
 
 .exp-bar {
-  width: 200px;
+  width: 220px;
   height: 26px;
   background: #e5e7eb;
   border-radius: 14px;
@@ -898,147 +817,72 @@ watchEffect(() => {
   color: var(--titleColor);
 }
 
-.award-strip {
+.account-tabs {
   display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-left: auto;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+
 }
 
-.award-strip-item {
-  width: 70px;
-  height: 70px;
+
+.account-tab {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.award-strip-icon {
-  width: 100%;
-  display: block;
-  filter: drop-shadow(4px 4px 0 #000);
-}
-
-.content-body {
-  flex: 1;
-}
-
-.card-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid gray;
-  padding: 10px 8px;
-  margin-bottom: 10px;
-}
-
-.card-row__label {
+  flex: 0 0 auto;
+  padding: 4px 14px;
+  border: none;
+  border-radius: 14px;
+  color: var(--titleColor);
   font-weight: 900;
-}
-
-.label {
-  height: 74px;
-}
-
-.card-row__value {
-  font-weight: 700;
-}
-
-.accordion {
-  background: #fff7dd;
-  border: 3px solid #000;
-  border-radius: 16px;
-  box-shadow: 4px 4px 0 #000;
-  padding: 12px 16px;
-  margin-top: 14px;
   cursor: pointer;
-  max-height: 60px;
-  overflow: hidden;
-  transition: max-height .3s ease;
-}
-
-.accordion.open {
-  max-height: 350px;
-}
-
-.accordion__head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.accordion__title {
-  font-weight: 900;
+  width: 25%;
+  background: none;
   font-size: 1.2rem;
 }
 
-.accordion__arrow {
-  width: 24px;
-  transition: transform .25s;
+.account-tab.active {
+  background: #eeeaea;
+  border: 3px solid black;
+  box-shadow: 3px 3px 0 black;
+  border-radius: 10px;
+  color: black;
 }
 
-.accordion__arrow.rotated {
-  transform: rotate(180deg);
+.account-tab:active {
+  transform: translate(1px, 1px);
+  box-shadow: 0 0 0 #000;
 }
 
-.accordion__body {
-  padding-top: 10px;
+.account-tab-body {
+  margin-top: 4px;
+}
+
+/* Content surfaces */
+.tab-surface {
+
+
+}
+
+/* Rank placeholder */
+.rank-placeholder {
+  padding: 16px;
+  text-align: center;
+}
+
+.rank-title {
+  font-weight: 900;
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+}
+
+.rank-text {
   font-weight: 700;
+  opacity: .85;
 }
 
-.subscription-status-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 10px;
-  padding: 10px 8px;
-}
-
-.subscription-label {
-  font-weight: 800;
-  color: #6b7280;
-}
-
-.subscription-status .active {
-  color: #f97316;
-  font-weight: 900;
-}
-
-.subscription-status .cancelled {
-  color: #ff9800;
-  font-weight: 900;
-}
-
-.btn {
-  border: 3px solid #000;
-  border-radius: 16px;
-  padding: 10px 16px;
-  font-weight: 800;
-  background: #f3f4f6;
-  box-shadow: 2px 2px 0 #000;
-  cursor: pointer;
-}
-
-.btn-success {
-  background: #4ade80;
-}
-
-.btn-danger {
-  background: #f44336;
-  color: #fff;
-}
-
-.footer-actions {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 14px;
-}
-
-.access__text {
-  text-align: end;
-  margin-top: 10px;
-}
-
+/* Modals */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -1096,6 +940,26 @@ watchEffect(() => {
   justify-content: center;
 }
 
+.btn {
+  border: 3px solid #000;
+  border-radius: 16px;
+  padding: 10px 16px;
+  font-weight: 800;
+  background: #f3f4f6;
+  box-shadow: 2px 2px 0 #000;
+  cursor: pointer;
+}
+
+.btn-success {
+  background: #4ade80;
+}
+
+.btn-danger {
+  background: #f44336;
+  color: #fff;
+}
+
+/* Avatar modal */
 .avatar-modal-overlay {
   position: fixed;
   inset: 0;
@@ -1163,35 +1027,44 @@ watchEffect(() => {
   font-weight: 900;
 }
 
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .25s ease;
+.award-strip-icon {
+  width: 100%;
+  display: block;
+  filter: drop-shadow(4px 4px 0 #000);
 }
 
-.fade-enter-from, .fade-leave-to {
-  opacity: 0;
-}
-
-.row__el--wrapper {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 8px;
-}
-
-.accordion__icon {
-  width: 28px;
-  margin-right: 10px;
-}
-
-.locked-setting {
-  opacity: 0.7;
-}
-
-.locked-setting .toggle__wrapper {
+.award-strip-item {
+  width: 70px;
+  height: 70px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
 }
 
+.tab__text {
+  margin-left: 8px;
+  font-size: 1.4rem;
+}
+
+/* Hover effects desktop */
+@media (min-width: 1024px) {
+  .back-btn:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 0 0 0 #000;
+  }
+
+  .tab-vertical:hover {
+    transform: translate(1px, 1px);
+    box-shadow: 0 0 0 #000;
+  }
+
+  .gear-btn:hover {
+    transform: translate(1px, 1px);
+    box-shadow: 0 0 0 #000;
+  }
+}
+
+/* Mobile layout */
 @media (max-width: 1023px) {
   .cabinet-wrapper {
     height: 100vh;
@@ -1262,67 +1135,43 @@ watchEffect(() => {
     display: none;
   }
 
-  .back-btn img {
-    width: 34px;
-    height: 34px;
-  }
-
-  .accordion {
-    box-shadow: 2px 2px 0 black;
-  }
-
   .content-panel {
     padding: 10px 5px 95px 5px;
     border: none;
     box-shadow: none;
-    border-radius: 0px;
+    border-radius: 0;
   }
 
-  .content-body {
-    padding: 5px;
+  .header-surface {
+    padding: 10px 10px;
+    padding-top: 70px;
+  }
+
+  .exp-bar {
+    width: 190px;
+  }
+
+}
+
+@media ( max-width: 767px) {
+  .tab-icon.iconHide {
+    display: none;
   }
 }
+
 
 @media (max-width: 420px) {
   .tab-icon {
     width: 32px;
     height: 32px;
   }
-}
 
-@media (min-width: 1024px) {
-  .premium__btn:hover {
-    transform: translate(1px, 1px);
-    box-shadow: 2px 2px 0 #000;
+  .setting-title {
+    font-size: 24px;
   }
 
-  .add__friend-wrapper:hover {
-    transform: translate(2px, 2px);
-    box-shadow: 2px 2px 0 #000;
-  }
-
-  .find__friends:hover {
-    transform: translate(2px, 2px);
-    box-shadow: 1px 1px 0 #000;
-  }
-  .back-btn:hover {
-    transform: translate(2px, 2px);
-    box-shadow: 0px 0px 0 #000;
-  }
-  .tab-vertical:hover {
-    transform: translate(1px, 1px);
-    box-shadow: 0px 0px 0 #000;
+  .exp-bar {
+    width: 170px;
   }
 }
-
-@media (max-width: 767px) {
-  .premium__status-wrapper {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-
-
-
-
 </style>

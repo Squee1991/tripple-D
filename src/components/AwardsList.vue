@@ -1,31 +1,33 @@
 <template>
   <div class="awards__section">
-      <VModal
-          :visible="showModal"
-          :title="modalData.title"
-          :img="modalData.icon"
-          :text="modalData.text"
-          @close="closeAward"
-      />
-    <div class="awards__header">
-      <h1 class="awards__title">{{ t('awards.title') }}</h1>
-      <button @click="questionModal" class="awards__info-btn">
-        <img class="awards__question-icon" :src="Question" alt="quest_icon">
-      </button>
-    </div>
-    <div class="items-grid">
-      <div
-          v-for="award in awards"
-          class="shop-item"
-          :class="{ locked: award.locked }"
-      >
-        <div class="image-wrapper">
-          <img :class="{ locked: award.locked }" :src="award.icon" alt="award" class="item-img"/>
-          <div v-if="award.locked" class="locked-overlay">
-            <img class="lock" src="../../assets/images/padlock.svg" alt="lock icon">
+    <VModal
+        :visible="showModal"
+        :title="modalData.title"
+        :img="modalData.icon"
+        :text="modalData.text"
+        @close="closeAward"
+    />
+    <!--    <div class="awards__header">-->
+    <!--      <h1 class="awards__title">{{ t('awards.title') }}</h1>-->
+    <!--      <button @click="questionModal" class="awards__info-btn">-->
+    <!--        <img class="awards__question-icon" :src="Question" alt="quest_icon">-->
+    <!--      </button>-->
+    <!--    </div>-->
+    <div class="awards__list-scroll">
+      <div class="items-grid">
+        <div
+            v-for="award in sortedAwards"
+            class="shop-item"
+            :class="{ locked: award.locked }"
+        >
+          <div class="image-wrapper">
+            <img :class="{ locked: award.locked }" :src="award.icon" alt="award" class="item-img"/>
+            <div v-if="award.locked" class="locked-overlay">
+              <img class="lock" src="../../assets/images/padlock.svg" alt="lock icon">
+            </div>
           </div>
+          <p class="item-name">{{ t(award.title) }}</p>
         </div>
-        <p class="item-name">{{ t(award.title) }}</p>
       </div>
     </div>
   </div>
@@ -43,6 +45,11 @@ const props = defineProps({
     type: Array,
     required: true,
   },
+})
+
+const sortedAwards = computed(() => {
+  // сначала полученные (locked=false), потом закрытые (locked=true)
+  return [...props.awards].sort((a, b) => Number(a.locked) - Number(b.locked))
 })
 
 const modalData = ref({
@@ -73,17 +80,17 @@ function closeAward() {
 
 .items-grid {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  border-top: 3px solid  #1a1d2b;
+  padding-bottom: 10px;
+  border-radius: 15px;
 }
 
 .shop-item {
-  background-color: #ffffff;
-  border: 3px solid #1e1e1e;
-  border-radius: 16px;
   padding: 1rem;
   text-align: center;
-  box-shadow: 4px 4px 0 #1e1e1e;
+
   display: flex;
   width: 180px;
   flex-direction: column;
@@ -93,15 +100,11 @@ function closeAward() {
 }
 
 .awards__title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   font-family: "Nunito", sans-serif;
 }
 
-.awards__question-icon {
-  min-width: 60px;
-  width: 100%;
-}
 
 .awards__header {
   display: flex;
@@ -110,15 +113,11 @@ function closeAward() {
   margin-bottom: 15px;
   background: #4ade80;
   border: 2px solid black;
-  padding: 10px 20px;
+  padding: 0 20px;
   border-radius: 16px;
   box-shadow: 5px 5px 0 black;
 }
 
-.shop-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 2px 2px 0 #1e1e1e;
-}
 
 .item-img.locked {
   opacity: 0.5;
@@ -132,7 +131,7 @@ function closeAward() {
 
 .image-wrapper {
   position: relative;
-  width: 100px;
+  width: 70px;
   margin-bottom: 10px;
 }
 
@@ -140,8 +139,6 @@ function closeAward() {
   position: absolute;
   top: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 50%;
   padding: 4px 8px;
   font-size: 1rem;
   font-weight: bold;
@@ -154,6 +151,7 @@ function closeAward() {
 }
 
 .item-name {
+  color: var(--titleColor);
   font-weight: bold;
   font-size: 1.1rem;
   margin-bottom: 0.25rem;
@@ -211,6 +209,26 @@ button:disabled {
   box-shadow: none;
 }
 
+.awards__list-scroll {
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.awards__list-scroll::-webkit-scrollbar {
+  width: 10px;
+}
+
+.awards__list-scroll::-webkit-scrollbar-thumb {
+  background: #1e1e1e;
+  border-radius: 10px;
+  border: 2px solid #fff;
+}
+
+.awards__list-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 @keyframes zoomIn {
   from {
     transform: scale(0.8);
@@ -223,20 +241,15 @@ button:disabled {
 }
 
 @media (max-width: 767px) {
-  .shop-item {
-    width: 80%;
-    margin: 0 auto;
-    box-shadow: 2px 2px 0 black;
-  }
+
   .items-grid {
     width: 100%;
   }
+
   .awards__title {
     font-size: 1.7rem;
   }
-  .awards__header {
-    padding: 5px;
-  }
+
 }
 
 .awards__info-btn {
@@ -246,8 +259,14 @@ button:disabled {
   align-items: center;
   border: none;
   padding: 10px;
-  width: 60px;
+  width: 70px;
   height: 60px;
   box-shadow: none;
+}
+
+@media (min-width: 1024px ) {
+  .shop-item:hover {
+    transform: translateY(-1px);
+  }
 }
 </style>
