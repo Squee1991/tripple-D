@@ -439,8 +439,8 @@
         "id": 8,
         "type": "reorder",
         "question": "wildLandsFourthQuest.questEight",
-        "words": ["See","Der", "tief", "ist", "sehr", "Das"],
-        "correctOrder": ["Der ","See", "ist", "sehr", "tief"]
+        "words": ["See", "Der", "tief", "ist", "sehr", "Das"],
+        "correctOrder": ["Der","See", "ist", "sehr", "tief"]
       },
       {
         "id": 9,
@@ -592,7 +592,7 @@
       {
         "id": 11,
         "type": "reorder",
-        "question": "wildLandsFifthQuest.questTwelve",
+        "question": "wildLandsFifthQuest.questEleven",
         "words": ["Sonne", "In", "regnet", "Wald", "dem", "die", "Bergen", "aber", "es", "in", "scheint", "den"],
         "correctOrder": ["In", "dem", "Wald", "regnet", "es", "aber", "in", "den", "Bergen", "scheint", "die", "Sonne"]
       },
@@ -606,7 +606,7 @@
           "sehr Warm",
           "sehr schnell"
         ],
-        "answer": "Kalt"
+        "answer": "nicht Warm"
       },
       {
         "id": 13,
@@ -630,7 +630,7 @@
         "id": 15,
         "type": "speechToText",
         "question": "wildLandsFifthQuest.questFifteen",
-        "text": "Das Wetter ist schlecht. Es regnet den ganzen Tag und es ist sehr windig. Das Wetter ist schlecht.",
+        "text": "Das Wetter ist schlecht. Es regnet den ganzen Tag und es ist sehr windig.",
         "answer": "Das Wetter ist schlecht. Es regnet den ganzen Tag und es ist sehr windig."
       }
     ]
