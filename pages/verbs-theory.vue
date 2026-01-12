@@ -84,27 +84,31 @@ import Chat from '../assets/images/chat.svg'
 const canonical = useCanonical();
 const { t } = useI18n()
 
-const route = useRoute()
-const pageTitle = t('metaVerbsTheory.title')
-const pageDesc  = t('metaVerbsTheory.description')
-
 useSeoMeta({
-  title: pageTitle,
-  description: pageDesc,
-  ogTitle: pageTitle,
-  ogDescription: pageDesc,
-  ogType: 'article',
-  ogUrl:  canonical,
-  ogImage: '/images/seo-verbs.png',
-  robots: 'index, follow'
+  robots: 'noindex, nofollow'
 })
 
-useHead({
-  title: pageTitle,
-  link: [
-    { rel: 'canonical', href:canonical }
-  ]
-})
+const route = useRoute()
+// const pageTitle = t('metaVerbsTheory.title')
+// const pageDesc  = t('metaVerbsTheory.description')
+//
+// useSeoMeta({
+//   title: pageTitle,
+//   description: pageDesc,
+//   ogTitle: pageTitle,
+//   ogDescription: pageDesc,
+//   ogType: 'article',
+//   ogUrl:  canonical,
+//   ogImage: '/images/seo-verbs.png',
+//   robots: 'index, follow'
+// })
+//
+// useHead({
+//   title: pageTitle,
+//   link: [
+//     { rel: 'canonical', href:canonical }
+//   ]
+// })
 
 const contentSections = ref([
   {

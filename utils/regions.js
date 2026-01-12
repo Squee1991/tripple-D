@@ -4,6 +4,8 @@ import NorthCliffs from 'assets/images/locations-images/north-cliffs.png'
 import LakeRuins from 'assets/images/locations-images/lake-ruins.png'
 import StormCoast from 'assets/images/locations-images/storm-coast.png'
 import StoneReach from 'assets/images/locations-images/stone-reach.png'
+import MasterLands from 'assets/images/locations-images/master-lands.png'
+import WildLand from 'assets/images/locations-images/wild-land.png'
 export const regions = [
 	{
 		id: "east-plain",
@@ -58,5 +60,23 @@ export const regions = [
 		level: 11,
 		desc: "regions.descriptionStormCoast",
 		icon: StormCoast
+	},
+	{
+		id: "master-lands",
+		pathTo: "master-lands",
+		theme: "master",
+		name: "locationNames.master-lands",
+		level: 13,
+		desc: "regions.descriptionMasterLands",
+		icon: MasterLands
+	},
+	{
+		id: "wild-lands",
+		pathTo: "wild-lands",
+		theme: "wild",
+		name: "locationNames.wild-lands",
+		level: 0,
+		desc: "regions.descriptionWildLands",
+		icon: WildLand
 	}
 ];

@@ -107,7 +107,6 @@ async function pay() {
     alert('Сначала войди в аккаунт')
     return
   }
-
   const priceId = 'price_1RqDZU0mqXJB1TZDSVvs8yyQ'
   const response = await $fetch('/api/stripe/checkout', {
     method: 'POST',

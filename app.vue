@@ -3,12 +3,14 @@
     <NuxtPage/>
     <AchievementToast @toast-finished="onToastFinished" />
 <!--    <VStepHint v-if="showStepHint" @close="showStepHint = false"/>-->
-      <FeedBack/>
+<!--      <FeedBack/>-->
     <VLost/>
+    <VRankOverlay/>
   </NuxtLayout>
 </template>
 
 <script setup>
+import VRankOverlay from "./src/components/V-rank-overlay.vue";
 import FeedBack from './src/components/V-feedback.vue'
 import VStepHint from "./src/components/V-stephint.vue";
 import AchievementToast from './src/components/AchievementToast.vue'
@@ -23,6 +25,7 @@ import {useTrainerStore} from './store/themenProgressStore.js'
 import {useQuestStore} from './store/questStore.js'
 import {useCardsStore} from './store/cardsStore.js'
 import {useLocalStatGameStore} from './store/localSentenceStore.js'
+import { userChainStore } from './store/chainStore.js'
 import {onMounted} from "vue";
 import {dailyStore} from './store/dailyStore'
 import {computed} from 'vue'
@@ -89,7 +92,6 @@ onMounted(async () => {
   }, 2600)
 })
 
-
 onUnmounted(() => {
   daily.stop()
 })
@@ -150,4 +152,5 @@ onUnmounted(() => {
 html {
   font-size: 16px;
 }
+
 </style>

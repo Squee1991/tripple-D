@@ -75,22 +75,6 @@
 import { useHead, useSeoMeta} from '#imports'
 const {t} = useI18n();
 const canonical = useCanonical()
-// const pageTitle = t('metaArticles.title')
-// const pageDesc  = t('metaArticles.description')
-// useHead({
-//   title: pageTitle,
-//   link: [{ rel: 'canonical', href: canonical }]
-// })
-// useSeoMeta({
-//   title: pageTitle,
-//   description: pageDesc,
-//   ogTitle: pageTitle,
-//   ogDescription: pageDesc,
-//   ogType: 'article',
-//   ogUrl: canonical,
-//   ogImage: '/images/seo-articles.png',
-//   robots: 'index, follow'
-// })
 
 useSeoMeta({
   robots: 'noindex, nofollow'

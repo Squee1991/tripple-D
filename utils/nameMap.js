@@ -31,6 +31,7 @@ export const nameMap = {
 }
 
 export  const nameMode = {
+    wordTranslate: 'modes.wordTranslate',
     article: 'modes.article',
     letters: 'modes.letters',
     wordArticle: 'modes.articleWord',

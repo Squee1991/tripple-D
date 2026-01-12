@@ -33,7 +33,7 @@
           </div>
           <span>Telegram</span>
         </a>
-        <a href="https://www.tiktok.com/@skillupgerman6?_r=1&_t=ZN-91no3OWZ9U6" target="_blank" rel="noopener" class="social__item" aria-label="TikTok">
+        <a href="https://www.tiktok.com/@skillupgerman.com?_r=1&_t=ZN-92sFFUciU8k" target="_blank" rel="noopener" class="social__item" aria-label="TikTok">
           <div class="icon">
             <svg height="32" viewBox="0 0 256 256" width="32" xmlns="http://www.w3.org/2000/svg" >
               <path fill="currentColor"

@@ -1,0 +1,1745 @@
+[
+  {
+    "questId": "job-one",
+    "title": "masterLandsFirstQuest.title",
+    "progress": "0/15",
+    "description": "masterLandsFirstQuest.description",
+    "conditions": {
+      "goal": "Понимать и использовать базовые рабочие фразы",
+      "minCorrect": 13,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "masterLandsFirstQuest.questOne",
+        "options": ["arbeiten", "machen", "gehen"],
+        "answer": "arbeiten"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "masterLandsFirstQuest.questTwo",
+        "text": "Ich arbeite",
+        "answer": "Ich arbeite"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "masterLandsFirstQuest.questThree",
+        "options": ["der Beruf", "die Arbeit", "das Büro"],
+        "answer": "der Beruf"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "masterLandsFirstQuest.questFour",
+        "words": ["ich", "arbeite", "heute", "bin"],
+        "correctOrder": ["ich", "arbeite", "heute"]
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "masterLandsFirstQuest.questFive",
+        "options": ["die Firma", "die Schule", "das Krankenhaus"],
+        "answer": "die Firma"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "masterLandsFirstQuest.questSix",
+        "words": ["lange", "arbeite", "bis", "heute", "Uhr", "ich", "18"],
+        "correctOrder": ["ich", "arbeite", "heute", "bis" , "18" , "Uhr"]
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "masterLandsFirstQuest.questSeven",
+        "correctAnswer": "arbeite"
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "masterLandsFirstQuest.questEight",
+        "text": "Ich arbeite bei einer Firma",
+        "answer": "Ich arbeite bei einer Firma"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "masterLandsFirstQuest.questNine",
+        "options": ["Ich suche Arbeit", "Ich finde Arbeit", "Ich arbeite suchen"],
+        "answer": "Ich suche Arbeit"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "masterLandsFirstQuest.questTen",
+        "correctAnswer": "suche"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "masterLandsFirstQuest.questEleven",
+        "words": ["Zeit", "ich", "keine", "habe", "kein"],
+        "correctOrder": ["ich", "habe", "keine", "Zeit"]
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "masterLandsFirstQuest.questTwelve",
+        "options": ["heute", "morgen", "gestern"],
+        "answer": "heute"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "masterLandsFirstQuest.questThirteen",
+        "words": ["nicht" ,"arbeiten", "muss", "habe", "heute" ,"ich", "kann"],
+        "correctOrder": ["ich", "kann", "heute", "nicht", "arbeiten"]
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "masterLandsFirstQuest.questFourteen",
+        "text": "Ich habe heute keine Zeit",
+        "answer": "Ich habe heute keine Zeit"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "masterLandsFirstQuest.questFifteen",
+        "text": "Ich arbeite bei einer Firma",
+        "answer": "Ich arbeite bei einer Firma"
+      }
+    ]
+  },
+  {
+    "questId": "job-two",
+    "title": "masterLandsSecondQuest.title",
+    "progress": "0/15",
+    "description": "masterLandsSecondQuest.description",
+    "conditions": {
+      "goal": "Выучить слова и фразы про место работы",
+      "minCorrect": 13,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "masterLandsSecondQuest.questOne",
+        "options": ["das Büro", "das Haus", "die Arbeit"],
+        "answer": "das Büro"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "masterLandsSecondQuest.questTwo",
+        "text": "Ich arbeite im Büro",
+        "answer": "Ich arbeite im Büro"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "masterLandsSecondQuest.questThree",
+        "options": ["zu Hause", "im Büro", "in der Firma"],
+        "answer": "zu Hause"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "masterLandsSecondQuest.questFour",
+        "words": ["arbeite", "ich", "zu", "Hause", "bin"],
+        "correctOrder": ["ich", "arbeite", "zu", "Hause"]
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "masterLandsSecondQuest.questFive",
+        "options": ["Wo arbeitest du?", "Was arbeitest du?", "Wie arbeitest du?"],
+        "answer": "Wo arbeitest du?"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "masterLandsSecondQuest.questSix",
+        "correctAnswer": "zu"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "masterLandsSecondQuest.questSeven",
+        "words": ["im", "Büro", "arbeite", "ich", "zu"],
+        "correctOrder": ["ich", "arbeite", "im", "Büro"]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "masterLandsSecondQuest.questEight",
+        "text": "Arbeitest du im Büro?",
+        "answer": "Arbeitest du im Büro?"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "masterLandsSecondQuest.questNine",
+        "options": ["Ich arbeite nicht im Büro", "Ich nicht arbeite Büro", "Ich arbeite Büro nicht"],
+        "answer": "Ich arbeite nicht im Büro"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "masterLandsSecondQuest.questTen",
+        "correctAnswer": "im"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "masterLandsSecondQuest.questEleven",
+        "words": ["ins", "Büro", "gehe", "ich", "zu"],
+        "correctOrder": ["ich", "gehe", "ins", "Büro"]
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "masterLandsSecondQuest.questTwelve",
+        "options": ["heute", "morgen", "gestern"],
+        "answer": "heute"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "masterLandsSecondQuest.questThirteen",
+        "words": ["arbeite", "ich", "heute", "zu", "Hause", "aber" , "ins", "bin"],
+        "correctOrder": ["heute", "arbeite", "ich", "zu", "Hause"]
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "masterLandsSecondQuest.questFourteen",
+        "text": "Heute arbeite ich zu Hause",
+        "answer": "Heute arbeite ich zu Hause"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "masterLandsSecondQuest.questFifteen",
+        "words": ["morgen", "arbeite", "ich", "im", "Büro", "zu" , "ins"],
+        "correctOrder": ["morgen", "arbeite", "ich", "im", "Büro"]
+      }
+    ]
+  },
+  {
+    "questId": "job-three",
+    "title": "masterLandsThirdQuests.title",
+    "progress": "0/15",
+    "description": "masterLandsThirdQuests.description",
+    "conditions": {
+      "goal": "Выучить слова и фразы про коллег",
+      "minCorrect": 13,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "masterLandsThirdQuests.questOne",
+        "options": ["der Kollege", "der Kunde", "der Chef"],
+        "answer": "der Kollege"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "masterLandsThirdQuests.questTwo",
+        "text": "Das ist mein Kollege",
+        "answer": "Das ist mein Kollege"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "masterLandsThirdQuests.questThree",
+        "options": ["die Kollegin", "die Chefin", "die Kundin"],
+        "answer": "die Kollegin"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "masterLandsThirdQuests.questFour",
+        "words": ["Kollegin", "meine", "gerade", "ist", "beschäftigt", "mein"],
+        "correctOrder": ["meine", "Kollegin", "ist", "gerade", "beschäftigt"]
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "masterLandsThirdQuests.questFive",
+        "options": ["das Team", "das Büro", "der Beruf"],
+        "answer": "das Team"
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "masterLandsThirdQuests.questSix",
+        "options": ["Ich arbeite im Team", "Ich arbeite bei Team", "Ich arbeite in Team"],
+        "answer": "Ich arbeite im Team"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "masterLandsThirdQuests.questSeven",
+        "words": ["zusammen", "arbeiten", "wir", "sind"],
+        "correctOrder": ["wir", "arbeiten", "zusammen"]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "masterLandsThirdQuests.questEight",
+        "text": "Ich arbeite im Team",
+        "answer": "Ich arbeite im Team"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "masterLandsThirdQuests.questNine",
+        "options": ["Der Kollege hilft mir", "Der Kollege helfen mir", "Der hilft Kollege mir"],
+        "answer": "Der Kollege hilft mir"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "masterLandsThirdQuests.quesTen",
+        "options": ["Ich arbeite allein", "Wir arbeiten zusammen", "Ich arbeite im Team"],
+        "answer": "Ich arbeite allein"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "masterLandsThirdQuests.quesEleven",
+        "words": ["heute", "mir", "hilft", "meine", "Kollegin", "mich"],
+        "correctOrder": ["meine", "Kollegin", "hilft", "mir", "heute"]
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "masterLandsThirdQuests.quesTwelve",
+        "options": ["der Chef", "der Kunde", "der Kollege"],
+        "answer": "der Chef"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "masterLandsThirdQuests.quesThirteen",
+        "words": ["Chef", "Der", "ist", "hier"],
+        "correctOrder": ["Der", "Chef", "ist", "hier"]
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "masterLandsThirdQuests.quesFourteen",
+        "text": "Der Chef ist heute nicht da",
+        "answer": "Der Chef ist heute nicht da"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "masterLandsThirdQuests.quesFifteen",
+        "text": "Ich arbeite im Büro, aber mein Team ist zu Hause",
+        "answer": "Ich arbeite im Büro, aber mein Team ist zu Hause"
+      }
+    ]
+  },
+  {
+    "questId": "job-four",
+    "title": "masterLandsFourthQuests.title",
+    "progress": "0/15",
+    "description": "masterLandsFourthQuests.description",
+    "conditions": {
+      "goal": "Выучить фразы про рабочее время и перерывы",
+      "minCorrect": 13,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "masterLandsFourthQuests.questOne",
+        "options": ["die Zeit", "die Arbeit", "der Beruf"],
+        "answer": "die Zeit"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "masterLandsFourthQuests.questTwo",
+        "text": "Ich habe keine Zeit",
+        "answer": "Ich habe keine Zeit"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "masterLandsFourthQuests.questThree",
+        "options": ["beginnen", "machen", "enden"],
+        "answer": "beginnen"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "masterLandsFourthQuests.questFour",
+        "words": ["Uhr", "8", "um", "Arbeit", "meine", "beginne", "ich", "in"],
+        "correctOrder": ["ich", "beginne", "meine", "Arbeit", "um", "8", "Uhr"]
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "masterLandsFourthQuests.questFive",
+        "options": ["die Pause", "die Zeit", "der Feierabend"],
+        "answer": "die Pause"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "masterLandsFourthQuests.questSix",
+        "words": ["Pause", "eine", "mache", "ich", "ein"],
+        "correctOrder": ["ich", "mache", "eine", "Pause"]
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "masterLandsFourthQuests.questSeven",
+        "text": "Ich beginne um acht Uhr",
+        "answer": "Ich beginne um acht Uhr",
+        "accept": [
+          "Ich beginne um 8 Uhr",
+          "Ich beginne um 8 Uhr"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "masterLandsFourthQuests.questEight",
+        "text": "Ich mache jetzt eine Pause",
+        "answer": "Ich mache jetzt eine Pause"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "masterLandsFourthQuests.questNine",
+        "options": ["Ich beginne um acht", "Ich beginne in acht", "Ich beginne acht"],
+        "answer": "Ich beginne um acht"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "masterLandsFourthQuests.questTen",
+        "correctAnswer": "um"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "masterLandsFourthQuests.questEleven",
+        "options": ["Feierabend machen", "Arbeit enden", "Pause machen"],
+        "answer": "Feierabend machen"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "masterLandsFourthQuests.questTwelve",
+        "correctAnswer": "Feierabend"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "masterLandsFourthQuests.questThirteen",
+        "words": ["Feierabend", "im", "ich", "mache", "um", "sechzehn", "Uhr", "heute", "in"],
+        "correctOrder": ["ich", "mache", "heute", "um", "sechzehn", "Uhr", "Feierabend"]
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "masterLandsFourthQuests.questFourteen",
+        "text": "Wann machst du Feierabend",
+        "answer": "Wann machst du Feierabend"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "masterLandsFourthQuests.questFifteen",
+        "text": "Ich mache eine Pause und arbeite dann weiter",
+        "answer": "Ich mache eine Pause und arbeite dann weiter"
+      }
+    ]
+  },
+  {
+    "questId": "job-five",
+    "title": "masterLandsFifthQuests.title",
+    "progress": "0/15",
+    "description": "masterLandsFifthQuests.description",
+    "conditions": {
+      "goal": "Выучить живые фразы для работы с задачами",
+      "minCorrect": 13,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "masterLandsFifthQuests.questOne",
+        "options": ["die Aufgabe", "die Pause", "die Zeit"],
+        "answer": "die Aufgabe"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "masterLandsFifthQuests.questTwo",
+        "text": "Das ist meine Aufgabe",
+        "answer": "Das ist meine Aufgabe"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "masterLandsFifthQuests.questThree",
+        "options": ["zeigen", "sagen", "hören"],
+        "answer": "zeigen"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "masterLandsFifthQuests.questFour",
+        "words": [ "Sie", "können", "mir", "das", "zeigen"],
+        "correctOrder": ["können", "Sie", "mir", "das", "zeigen"]
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "masterLandsFifthQuests.questFive",
+        "options": ["helfen", "gehen", "melden"],
+        "answer": "helfen"
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "masterLandsFifthQuests.questSix",
+        "correctAnswer": "ich helfe dir"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "masterLandsFifthQuests.questSeven",
+        "words": ["kann", "ich", "helfen", "Ihnen"],
+        "correctOrder": ["ich", "kann", "Ihnen", "helfen"]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "masterLandsFifthQuests.questEight",
+        "text": "Helfen Sie mir bitte",
+        "answer": "Helfen Sie mir bitte"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "masterLandsFifthQuests.questNine",
+        "options": ["dringend", "langsam", "fertig"],
+        "answer": "dringend"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "masterLandsFifthQuests.questTen",
+        "words": [ "Aufgabe","diese",  "dringend", "ist"],
+        "correctOrder": ["Diese", "Aufgabe", "ist", "dringend"]
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "masterLandsFifthQuests.questEleven",
+        "options": ["fertig", "frei", "neu"],
+        "answer": "fertig"
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "masterLandsFifthQuests.questTwelve",
+        "correctAnswer": "fertig"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "masterLandsFifthQuests.questThirteen",
+        "options": ["erklären", "arbeiten", "sagen"],
+        "answer": "erklären"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "masterLandsFifthQuests.questFourteen",
+        "words": ["Sie", "können", "erklären", "das"],
+        "correctOrder": ["können", "Sie", "das", "erklären"]
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "masterLandsFifthQuests.questFifteen",
+        "text": "Ich verstehe diese Aufgabe nicht",
+        "answer": "Ich verstehe diese Aufgabe nicht"
+      }
+    ]
+  },
+  {
+    "questId": "job-six",
+    "title": "masterLandsSixthQuests.title",
+    "progress": "0/15",
+    "description": "masterLandsSixthQuests.description",
+    "conditions": {
+      "goal": "Выучить базу по инструментам и технике безопасности",
+      "minCorrect": 13,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "masterLandsSixthQuests.questOne",
+        "options": ["das Werkzeug", "die Pause", "das Büro"],
+        "answer": "das Werkzeug"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "masterLandsSixthQuests.questTwo",
+        "text": "Ich brauche das Werkzeug",
+        "answer": "Ich brauche das Werkzeug"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "masterLandsSixthQuests.questThree",
+        "options": ["der Gabelstapler", "der Bericht", "die Firma"],
+        "answer": "der Gabelstapler"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "masterLandsSixthQuests.questFour",
+        "options": ["der Hubwagen", "der Tisch", "die Tasche"],
+        "answer": "der Hubwagen"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "masterLandsSixthQuests.questFive",
+        "options": ["die Schutzkleidung", "der Anzug", "die Jacke"],
+        "answer": "die Schutzkleidung"
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "masterLandsSixthQuests.questSix",
+        "text": "Wo ist der Hubwagen",
+        "answer": "Wo ist der Hubwagen"
+      },
+      {
+        "id": 7,
+        "type": "select",
+        "question": "masterLandsSixthQuests.questSeven",
+        "options": ["das Lager", "das Haus", "der Platz"],
+        "answer": "das Lager"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "masterLandsSixthQuests.questEight",
+        "options": ["die Palette", "die Zeit", "die Firma"],
+        "answer": "die Palette"
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "masterLandsSixthQuests.questNine",
+        "text": "Wo ist die Palette",
+        "answer": "Wo ist die Palette"
+      },
+      {
+        "id": 10,
+        "type": "speechToText",
+        "question": "masterLandsSixthQuests.questTen",
+        "text": "Die Palette ist schwer",
+        "answer": "Die Palette ist schwer"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "masterLandsSixthQuests.questEleven",
+        "options": ["die Ware", "der Sack", "die Tasche"],
+        "answer": "die Ware"
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "masterLandsSixthQuests.questTwelve",
+        "text": "Wo ist die Ware",
+        "answer": "Wo ist die Ware"
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "masterLandsSixthQuests.questThirteen",
+        "text": "Der Gabelstapler ist kaputt",
+        "answer": "Der Gabelstapler ist kaputt"
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "\"masterLandsSixthQuests.questFourteen",
+        "text": "Vorsicht, der Gabelstapler kommt",
+        "answer": "Vorsicht, der Gabelstapler kommt"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "\"masterLandsSixthQuests.questFifteen",
+        "text": "Der Hubwagen ist kaputt",
+        "answer": "Der Hubwagen ist kaputt"
+      }
+    ]
+  },
+  {
+    "questId": "job-seven",
+    "title": "masterLandsSixthQuests.title",
+    "progress": "0/15",
+    "description": "masterLandsSixthQuests.description",
+    "conditions": {
+      "goal": "Выучить слова про время, опоздания и ожидание",
+      "minCorrect": 13,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "masterLandsSixthQuests.questOne",
+        "options": ["der Termin", "die Pause", "das Lager"],
+        "answer": "der Termin"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "masterLandsSixthQuests.questTwo",
+        "text": "Ich habe heute einen Termin",
+        "answer": "Ich habe heute einen Termin"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "masterLandsSeventhQuests.questThree",
+        "options": ["pünktlich", "fertig", "krank"],
+        "answer": "pünktlich"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "masterLandsSeventhQuests.questFour",
+        "words": ["immer", "pünktlich", "Ich", "komme"],
+        "correctOrder": ["Ich", "komme", "immer", "pünktlich", "manchmal"]
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "masterLandsSeventhQuests.questFive",
+        "options": ["morgen", "heute", "gestern"],
+        "answer": "morgen"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "masterLandsSeventhQuests.questSix",
+        "correctAnswer": "morgen"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "masterLandsSeventhQuests.questSeven",
+        "words": ["LKW", "der", "wann", "kommt"],
+        "correctOrder": ["wann", "kommt", "der", "LKW", "die"]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "masterLandsSeventhQuests.questEight",
+        "text": "Der LKW kommt um zehn",
+        "answer": "Der LKW kommt um zehn",
+        "accept": [
+          "Der LKW kommt um zehn",
+          "Der LKW kommt um 10"
+        ]
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "masterLandsSeventhQuests.questNine",
+        "options": ["zu spät", "zu früh", "sofort"],
+        "answer": "zu spät"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "masterLandsSeventhQuests.questTen",
+        "correctAnswer": "spät"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "masterLandsSeventhQuests.questEleven",
+        "words": ["Minuten", "spät", "ich", "zehn", "komme", "zu"],
+        "correctOrder": ["ich", "komme", "zehn", "Minuten", "zu", "spät"]
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "masterLandsSeventhQuests.questTwelve",
+        "options": ["warten", "suchen", "bringen"],
+        "answer": "warten"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "masterLandsSeventhQuests.questThirteen",
+        "words": ["hier", "Sie", "bitte", "Warten"],
+        "correctOrder": ["Warten", "Sie", "bitte", "hier"]
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "masterLandsSeventhQuests.questFourteen",
+        "text": "Können wir den Termin verschieben",
+        "answer": "Können wir den Termin verschieben"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "masterLandsSeventhQuests.questFifteen",
+        "text": "ich bin pünktlich",
+        "answer": "ich bin pünktlich"
+      }
+    ]
+  },
+  {
+    "questId": "job-eight",
+    "title": "masterLandsEightQuests.title",
+    "progress": "0/15",
+    "description": "masterLandsEightQuests.description",
+    "conditions": {
+      "goal": "Выучить базу по погрузке и весу",
+      "minCorrect": 13,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "masterLandsEightQuests.questOne",
+        "options": ["laden", "laufen", "lesen"],
+        "answer": "laden"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "masterLandsEightQuests.questTwo",
+        "text": "Wir laden den LKW",
+        "answer": "Wir laden den LKW"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "masterLandsEightQuests.questThree",
+        "options": ["abladen", "anrufen", "aufstehen"],
+        "answer": "abladen"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "masterLandsEightQuests.questFour",
+        "words": ["soll", "Wo", "abladen", "ich"],
+        "correctOrder": ["Wo", "soll", "ich", "abladen"]
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "masterLandsEightQuests.questFive",
+        "options": ["schwer", "leicht", "klein"],
+        "answer": "schwer"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "masterLandsEightQuests.questSix",
+        "correctAnswer": "schwer"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "masterLandsEightQuests.questSeven",
+        "words": ["zu", "Vorsicht", "schwer", "ist", "einfach", "das"],
+        "correctOrder": ["Vorsicht", "das", "ist", "zu", "schwer"]
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "masterLandsEightQuests.questEight",
+        "options": ["voll", "leer", "neu"],
+        "answer": "voll"
+      },
+      {
+        "id": 9,
+        "type": "input",
+        "question": "masterLandsEightQuests.questNine",
+        "correctAnswer": "voll"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "masterLandsEightQuests.questTen",
+        "options": ["heben", "helfen", "holen"],
+        "answer": "heben"
+      },
+      {
+        "id": 11,
+        "type": "input",
+        "question": "masterLandsEightQuests.questEleven",
+        "correctAnswer": "heben"
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "masterLandsEightQuests.questTwelve",
+        "text": "Helfen Sie mir bitte beim Heben",
+        "answer": "Helfen Sie mir bitte beim Heben"
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "masterLandsEightQuests.questThirteen",
+        "text": "Wir sind fertig mit dem Abladen",
+        "answer": "Wir sind fertig mit dem Abladen"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "masterLandsEightQuests.questFourteen",
+        "options": ["leer", "voll", "leicht"],
+        "answer": "leer"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "masterLandsEightQuests.questFifteen",
+        "words": ["ist", "Paket", "leer", "Dieses" , "dieser"],
+        "correctOrder": ["Dieses", "Paket", "ist", "leer"]
+      }
+    ]
+  },
+  {
+    "questId": "job-nine",
+    "title": "masterLandsNineQuests.title",
+    "progress": "0/15",
+    "description": "masterLandsNineQuests.description",
+    "conditions": {
+      "goal": "Выучить жизненно важные фразы про деньги и быт на работе",
+      "minCorrect": 13,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "masterLandsNineQuests.questOne",
+        "options": ["das Geld", "die Arbeit", "der Termin"],
+        "answer": "das Geld"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "masterLandsNineQuests.questTwo",
+        "text": "Wann kommt das Geld",
+        "answer": "Wann kommt das Geld"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "masterLandsNineQuests.questThree",
+        "options": ["der Feierabend", "die Aufgabe", "das Werkzeug"],
+        "answer": "der Feierabend"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "masterLandsNineQuests.questFour",
+        "words": ["Feierabend", "jetzt", "habe", "Ich"],
+        "correctOrder": ["Ich", "habe", "jetzt", "Feierabend"]
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "masterLandsNineQuests.questFive",
+        "options": ["krank", "müde", "fertig"],
+        "answer": "krank"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "masterLandsNineQuests.questSix",
+        "correctAnswer": "krank"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "masterLandsNineQuests.questSeven",
+        "words": ["zum", "muss", "Ich", "Arzt"],
+        "correctOrder": ["Ich", "muss", "zum", "Arzt"]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "masterLandsNineQuests.questEight",
+        "text": "Ich gehe nach Hause",
+        "answer": "Ich gehe nach Hause"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "masterLandsNineQuests.questNine",
+        "options": ["das Wochenende", "die Woche", "Feierabend"],
+        "answer": "das Wochenende"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "masterLandsNineQuests.questTen",
+        "correctAnswer": "Wochenende"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "masterLandsNineQuests.questEleven",
+        "options": ["der Urlaub", "die Arbeit", "das Geld"],
+        "answer": "der Urlaub"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "masterLandsNineQuests.questTwelve",
+        "words": ["Urlaub", "brauche", "Ich"],
+        "correctOrder": ["Ich", "brauche", "Urlaub"]
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "masterLandsNineQuests.questThirteen",
+        "words": ["das", "Geld", "ich", "heute", "Bekomme"],
+        "correctOrder": ["Bekomme", "ich", "heute", "das", "Geld"]
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "masterLandsNineQuests.questFourteen",
+        "text": "Wann ist Feierabend",
+        "answer": "Wann ist Feierabend"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "masterLandsNineQuests.questFifteen",
+        "text": "Ich brauche heute frei",
+        "answer": "Ich brauche heute frei"
+      }
+    ]
+  },
+  {
+    "questId": "job-ten",
+    "title": "masterLandsTenQuests.title",
+    "progress": "0/15",
+    "description": "masterLandsTenQuests.description",
+    "conditions": {
+      "goal": "Выучить названия инструментов и команды на объекте",
+      "minCorrect": 13,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "masterLandsTenQuests.questOne",
+        "options": ["der Hammer", "die Schaufel", "die Leiter"],
+        "answer": "der Hammer"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "masterLandsTenQuests.questTwo",
+        "text": "Ich brauche einen Hammer",
+        "answer": "Ich brauche einen Hammer"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "masterLandsTenQuests.questThree",
+        "options": ["der Schraubenzieher", "der Eimer", "der Besen"],
+        "answer": "der Schraubenzieher"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "masterLandsTenQuests.questFour",
+        "words": ["der", "Wo", "Schraubenzieher", "ist"],
+        "correctOrder": ["Wo", "ist", "der", "Schraubenzieher"]
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "masterLandsTenQuests.questFive",
+        "options": ["die Leiter", "die Weste", "der Helm"],
+        "answer": "die Leiter"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "masterLandsTenQuests.questSix",
+        "correctAnswer": "Leiter"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "masterLandsTenQuests.questSeven",
+        "words": ["hierher", "Leiter", "die", "Bring" , "der"],
+        "correctOrder": ["Bring", "die", "Leiter", "hierher"]
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "masterLandsTenQuests.questEight",
+        "options": ["die Leiter", "die Weste", "die Bohrmaschine"],
+        "answer": "die Bohrmaschine"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "masterLandsTenQuests.questNine",
+        "options": ["die Schaufel", "der Besen", "der Eimer"],
+        "answer": "die Schaufel"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "masterLandsTenQuests.questTen",
+        "correctAnswer": "Schaufel"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "masterLandsTenQuests.questEleven",
+        "options": ["sauber machen", "kaputt machen", "Pause machen"],
+        "answer": "sauber machen"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "masterLandsTenQuests.questTwelve",
+        "words": ["sauber", "müssen", "hier", "machen", "Wir"],
+        "correctOrder": ["Wir", "müssen", "hier", "sauber", "machen"]
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "masterLandsTenQuests.questThirteen",
+        "text": "Der Arbeitsplatz muss sauber sein",
+        "answer": "Der Arbeitsplatz muss sauber sein"
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "masterLandsTenQuests.questFourteen",
+        "text": "Arbeitsplatz aufräumen",
+        "answer": "Arbeitsplatz aufräumen"
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "masterLandsTenQuests.questFifteen",
+        "text": "Arbeitsplatz sauber machen",
+        "answer": "Arbeitsplatz sauber machen"
+      }
+    ]
+  },
+  {
+    "questId": "job-eleven",
+    "title": "masterLandsElevenQuests.title",
+    "progress": "0/15",
+    "description": "masterLandsElevenQuests.description",
+    "conditions": {
+      "goal": "Выучить глаголы действия и команды на объекте",
+      "minCorrect": 13,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "masterLandsElevenQuests.questOne",
+        "options": ["Langsam", "Schnell", "Später"],
+        "answer": "Schnell"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "masterLandsElevenQuests.questTwo",
+        "text": "Mach das schneller",
+        "answer": "Mach das schneller"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "masterLandsElevenQuests.questThree",
+        "options": ["tragen", "schlafen", "suchen"],
+        "answer": "tragen"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "masterLandsElevenQuests.questFour",
+        "words": ["tragen", "Hilf", "das", "mir"],
+        "correctOrder": ["Hilf", "mir", "das", "tragen"]
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "masterLandsElevenQuests.questFive",
+        "options": ["finden", "suchen", "bringen"],
+        "answer": "suchen"
+      },
+      {
+        "id": 6,
+        "type": "input",
+        "question": "masterLandsElevenQuests.questSix",
+        "correctAnswer": "suche"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "masterLandsElevenQuests.questSeven",
+        "words": ["nicht", "Ich", "finden", "kann", "das"],
+        "correctOrder": ["Ich", "kann", "das", "nicht", "finden"]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "masterLandsElevenQuests.questEight",
+        "text": "Bring mir das bitte",
+        "answer": "Bring mir das bitte"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "masterLandsElevenQuests.questNine",
+        "options": ["Vorsicht", "gefährlich", "Egal"],
+        "answer": "gefährlich"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "masterLandsElevenQuests.questTen",
+        "correctAnswer": "gefährlich"
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "masterLandsElevenQuests.questEleven",
+        "text": "Achtung",
+        "answer": "Achtung"
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "masterLandsElevenQuests.questTwelve",
+        "text": "Nicht anfassen",
+        "answer": "Nicht anfassen"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "masterLandsElevenQuests.questThirteen",
+        "options": ["die Gefahr", "die Hilfe", "die Pause"],
+        "answer": "die Gefahr"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "masterLandsElevenQuests.questFourteen",
+        "words": ["ist","Lebensgefahr", "Hier"],
+        "correctOrder": ["Hier", "ist", "Lebensgefahr"]
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "masterLandsElevenQuests.questFifteen",
+        "options": ["die Sicherheit", "die Arbeit", "die Pause"],
+        "answer": "die Sicherheit"
+      }
+    ]
+  },
+  {
+    "questId": "job-twelve",
+    "title": "masterLandsTwelveQuests.title",
+    "progress": "0/15",
+    "description": "masterLandsTwelveQuests.description",
+    "conditions": {
+      "goal": "Выучить замеры и последовательность действий",
+      "minCorrect": 13,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "masterLandsTwelveQuests.questOne",
+        "options": ["das Stück", "der Meter", "das Kilo"],
+        "answer": "das Stück"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "masterLandsTwelveQuests.questTwo",
+        "text": "Ich brauche zehn Stück",
+        "answer": "Ich brauche zehn Stück"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "masterLandsTwelveQuests.questThree",
+        "options": ["der Sack", "der Meter", "das Stück"],
+        "answer": "der Meter"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "masterLandsTwelveQuests.questFour",
+        "words": ["lang", "Meter", "drei", "Das", "ist"],
+        "correctOrder": ["Das", "ist", "drei", "Meter", "lang"]
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "masterLandsTwelveQuests.questFive",
+        "options": ["die Menge", "die Arbeit", "die Zeit"],
+        "answer": "die Menge"
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "masterLandsTwelveQuests.questSix",
+        "text": "Die Menge ist falsch",
+        "answer": "Die Menge ist falsch"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "masterLandsTwelveQuests.questSeven",
+        "words": ["Säcke", "Bring", "zwei", "noch"],
+        "correctOrder": ["Bring", "noch", "zwei", "Säcke"]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "masterLandsTwelveQuests.questEight",
+        "text": "Welche Menge? Die Menge ist Zwei",
+        "answer": "Welche Menge? Die Menge ist Zwei",
+        "accept": [
+          "Welche Menge? Die Menge ist Zwei",
+          "Welche Menge? Die Menge ist 2"
+        ]
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "masterLandsTwelveQuests.questNine",
+        "options": ["zuerst", "dann", "später"],
+        "answer": "zuerst"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "masterLandsTwelveQuests.questTen",
+        "correctAnswer": "Zuerst"
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "masterLandsTwelveQuests.questEleven",
+        "text": "Die Menge ist genau zehn Stück",
+        "answer": "Die Menge ist genau zehn Stück",
+        "accept": [
+          "Die Menge ist genau zehn Stück",
+          "Die Menge ist genau 10 Stück"
+        ]
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "masterLandsTwelveQuests.questTwelve",
+        "options": ["die Hälfte", "alles", "nichts"],
+        "answer": "die Hälfte"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "masterLandsTwelveQuests.questThirteen",
+        "words": ["Hälfte", "die", "nur", "Wir", "brauchen", "der"],
+        "correctOrder": ["Wir", "brauchen", "nur", "die", "Hälfte"]
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "masterLandsTwelveQuests.questFourteen",
+        "text": "Wie lang ist das Kabel",
+        "answer": "Wie lang ist das Kabel"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "masterLandsTwelveQuests.questFifteen",
+        "text": "Dieses Kabel ist 2 Meter lang",
+        "answer": "Dieses Kabel ist 2 Meter lang",
+        "accept": [
+          "Dieses Kabel ist 2 Meter lang",
+          "Dieses Kabel ist Zwei Meter lang"
+        ]
+      }
+    ]
+  },
+  {
+    "questId": "job-thirteen",
+    "title": "masterLandsThirteenQuests.title",
+    "progress": "0/15",
+    "description": "masterLandsThirteenQuests.description",
+    "conditions": {
+      "goal": "Выучить простые слова и фразы про зарплату и договор",
+      "minCorrect": 13,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "masterLandsThirteenQuests.questOne",
+        "options": [
+          "das Gehalt",
+          "die Zeit",
+          "die Firma"
+        ],
+        "answer": "das Gehalt"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "masterLandsThirteenQuests.questTwo",
+        "text": "Ich bekomme Gehalt",
+        "answer": "Ich bekomme Gehalt"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "masterLandsThirteenQuests.questThree",
+        "options": ["das Geld", "das Team", "das Büro"],
+        "answer": "das Geld"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "masterLandsThirteenQuests.questFour",
+        "words": ["bekomme", "ich", "Geld" , "bekommen"],
+        "correctOrder": ["ich", "bekomme", "Geld"]
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "masterLandsThirteenQuests.questFive",
+        "options": ["der Vertrag", "der Termin", "der Beruf"],
+        "answer": "der Vertrag"
+      },
+      {
+        "id": 6,
+        "type": "speechToText",
+        "question": "masterLandsThirteenQuests.questSix",
+        "text": "der Vertrag",
+        "answer": "der Vertrag"
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "masterLandsThirteenQuests.questSeven",
+        "words": ["habe", "ich", "einen", "Vertrag", "mache", "eine"],
+        "correctOrder": ["ich", "habe", "einen", "Vertrag"]
+      },
+      {
+        "id": 8,
+        "type": "speechToText",
+        "question": "masterLandsThirteenQuests.questEight",
+        "text": "Ich habe einen Vertrag",
+        "answer": "Ich habe einen Vertrag"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "masterLandsThirteenQuests.questNine",
+        "options": [
+          "Ich unterschreibe den Vertrag",
+          "Ich schreibe den Vertrag",
+          "Ich mache den Vertrag"
+        ],
+        "answer": "Ich unterschreibe den Vertrag"
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "masterLandsThirteenQuests.questTen",
+        "correctAnswer": "unterschreibe"
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "masterLandsThirteenQuests.questEleven",
+        "text": "Wo muss ich unterschreiben",
+        "answer": "Wo muss ich unterschreiben"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "masterLandsThirteenQuests.questTwelve",
+        "options": ["die Steuern", "die Gebühren", "die Preise"],
+        "answer": "die Steuern"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "masterLandsThirteenQuests.questThirteen",
+        "words": ["ich", "zahle", "Steuern", "in", "Deutschland", "mache", "im"],
+        "correctOrder": ["ich", "zahle", "Steuern", "in", "Deutschland"]
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "masterLandsThirteenQuests.questFourteen",
+        "options": ["die Steuerklasse", "die Steuernummer", "die Krankenkasse"],
+        "answer": "die Steuerklasse"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "masterLandsThirteenQuests.questFifteen",
+        "text": "Ich habe Steuerklasse zwei",
+        "answer": "Ich habe Steuerklasse zwei",
+        "accept": [
+          "Ich habe Steuerklasse zwei",
+          "Ich habe Steuerklasse 2"
+        ]
+      }
+    ]
+  },
+  {
+    "questId": "job-fourteen",
+    "title": "masterLandsFourteenQuests.title",
+    "progress": "0/15",
+    "description": "masterLandsFourteenQuests.description",
+    "conditions": {
+      "goal": "Научиться оформлять больничный на немецком",
+      "minCorrect": 13,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "select",
+        "question": "masterLandsFourteenQuests.questOne",
+        "options": [
+          "die Krankschreibung",
+          "die Einladung",
+          "die Rechnung"
+        ],
+        "answer": "die Krankschreibung"
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "masterLandsFourteenQuests.questTwo",
+        "text": "Ich bin krank",
+        "answer": "Ich bin krank"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "masterLandsFourteenQuests.questThree",
+        "options": [
+          "sich krankmelden",
+          "sich freuen",
+          "sich waschen"
+        ],
+        "answer": "sich krankmelden"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "masterLandsFourteenQuests.questFour",
+        "words": ["muss", "ich", "zum", "Arzt", "gehen", "bin"],
+        "correctOrder": ["ich", "muss", "zum", "Arzt", "gehen"]
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "masterLandsFourteenQuests.questFive",
+        "words": ["ich", "melde", "mich", "heute", "krank", "du", "ist"],
+        "correctOrder": ["ich", "melde", "mich", "heute", "krank"]
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "masterLandsFourteenQuests.questSix",
+        "options": [
+          "Ich kann nicht arbeiten",
+          "Ich will nicht arbeiten",
+          "Ich muss nicht arbeiten"
+        ],
+        "answer": "Ich kann nicht arbeiten"
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "masterLandsFourteenQuests.questSeven",
+        "text": "Ich kann nicht arbeiten, weil ich krank bin",
+        "answer": "Ich kann nicht arbeiten, weil ich krank bin"
+      },
+      {
+        "id": 8,
+        "type": "reorder",
+        "question": "masterLandsFourteenQuests.questEight",
+        "words": ["hier", "ist", "meine", "Krankschreibung", "das", "sind"],
+        "correctOrder": ["hier", "ist", "meine", "Krankschreibung"]
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "masterLandsFourteenQuests.questNine",
+        "text": "Ich bin bis Montag krankgeschrieben",
+        "answer": "Ich bin bis Montag krankgeschrieben"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "masterLandsFourteenQuests.questTen",
+        "words": ["wie", "lange", "sind", "Sie", "krankgeschrieben", "heute", "du"],
+        "correctOrder": ["wie", "lange", "sind", "Sie", "krankgeschrieben"]
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "masterLandsFourteenQuests.questEleven",
+        "options": [
+          "die Krankenkasse",
+          "die Sparkasse",
+          "die Apotheke"
+        ],
+        "answer": "die Krankenkasse"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "masterLandsFourteenQuests.questTwelve",
+        "options": [
+          "Ich muss den Arbeitgeber informieren",
+          "Ich muss den Arbeitgeber anrufen",
+          "Ich muss den Arbeitgeber suchen"
+        ],
+        "answer": "Ich muss den Arbeitgeber informieren"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "masterLandsFourteenQuests.questThirteen",
+        "words": ["ich", "bin", "drei", "Tage", "krankgeschrieben", "habe"],
+        "correctOrder": ["ich", "bin", "drei", "Tage", "krankgeschrieben"]
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "masterLandsFourteenQuests.questFourteen",
+        "text": "Morgen bin ich wieder auf der Arbeit",
+        "answer": "Morgen bin ich wieder auf der Arbeit"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "masterLandsFourteenQuests.questFifteen",
+        "text": "Ich bin zwei Wochen krankgeschrieben",
+        "answer": "Ich bin zwei Wochen krankgeschrieben",
+        "accept": [
+          "Ich bin zwei Wochen krankgeschrieben",
+          "Ich bin 2 Wochen krankgeschrieben"
+        ]
+      }
+    ]
+  }
+]

@@ -6,7 +6,7 @@
     "description": "questsNorthCliffsFirstQuests.description",
     "conditions": {
       "goal": "Rezeption, reservieren, Einzel-/Doppelzimmer, für zwei Nächte, Check-in/Check-out, Ausweis, Frühstück, pro Nacht",
-      "minCorrect": 15,
+      "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {
@@ -203,7 +203,7 @@
     "description": "questsNorthCliffsSecondQuests.description",
     "conditions": {
       "goal": "Frühstück/WLAN/Aufzug, Preis pro Nacht, Ich bezahle mit Karte/Bar, Rechnung",
-      "minCorrect": 15,
+      "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {
@@ -391,7 +391,7 @@
     "description": "questsNorthCliffsThirdQuests.description",
     "conditions": {
       "goal": "questsNorthCliffsThirdQuests.goal",
-      "minCorrect": 15,
+      "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {
@@ -581,7 +581,7 @@
     "description": "questsNorthCliffsFourthQuests.description",
     "conditions": {
       "goal": "Wo?/Wann?, Frühstückszeiten, Aufzug/Treppe, Parkplatz, WLAN-Passwort, kostenlos/geöffnet",
-      "minCorrect": 15,
+      "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {
@@ -779,7 +779,7 @@
     "description": "questsNorthCliffsFifthQuests.description",
     "conditions": {
       "goal": "questsNorthCliffsFifthQuests.goal",
-      "minCorrect": 15,
+      "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {
@@ -965,7 +965,7 @@
     "description": "questsNorthCliffsSixthQuests.description",
     "conditions": {
       "goal": "questsNorthCliffsSixthQuests.goal",
-      "minCorrect": 15,
+      "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1168,7 +1168,7 @@
     "description": "questsNorthCliffsSeventhQuests.description",
     "conditions": {
       "goal": "questsNorthCliffsSeventhQuests.goal",
-      "minCorrect": 15,
+      "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1367,7 +1367,7 @@
     "description": "questsNorthCliffsEighthQuests.description",
     "conditions": {
       "goal": "questsNorthCliffsEighthQuests.goal",
-      "minCorrect": 15,
+      "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1565,7 +1565,7 @@
     "description": "questsNorthCliffsNinthQuests.description",
     "conditions": {
       "goal": "questsNorthCliffsNinthQuests.goal",
-      "minCorrect": 15,
+      "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1773,7 +1773,7 @@
     "description": "questsNorthCliffsTenthQuests.description",
     "conditions": {
       "goal": "questsNorthCliffsTenthQuests.goal",
-      "minCorrect": 15,
+      "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1958,14 +1958,14 @@
       }
     ]
   },
-    {
+  {
     "questId": "reise-mix-11",
     "title": "questsNorthCliffsEleventhQuests.title",
     "progress": "0/15",
     "description": "questsNorthCliffsEleventhQuests.description",
     "conditions": {
       "goal": "questsNorthCliffsEleventhQuests.goal",
-      "minCorrect": 15,
+      "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {
@@ -2152,7 +2152,7 @@
     "description": "questsNorthCliffsTwelfthQuests.description",
     "conditions": {
       "goal": "questsNorthCliffsTwelfthQuests.goal",
-      "minCorrect": 15,
+      "minCorrect": 13,
       "requiredTasks": 15
     },
     "rewards": {

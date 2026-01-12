@@ -2,8 +2,7 @@
   <div class="session-page">
     <button @click="goBack" class="exit-sign">
       <svg class="exit-sign-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path fill="currentColor"
-              d="m12 12.7l-3.2 3.2q-.275.275-.7.275t-.7-.275q-.275-.275-.275-.7t.275-.7l3.2-3.2l-3.2-3.2q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275l3.2 3.2l3.2-3.2q.275-.275.7-.275t.7.275q.275.275.275.7t-.275.7L13.4 12l3.2 3.2q.275.275.275.7t-.275.7q-.275.275-.7.275t-.7-.275zM12 22q-2.075 0-3.9-.788t-3.175-2.137q-1.35-1.35-2.137-3.175T2 12q0-2.075.788-3.9t2.137-3.175q1.35-1.35 3.175-2.138T12 2q2.075 0 3.9.788t3.175 2.138q1.35 1.35 2.137 3.175T22 12q0 2.075-.788 3.9t-2.137 3.175q-1.35 1.35-3.175 2.137T12 22m0-2q3.35 0 5.675-2.325T20 12q0-3.35-2.325-5.675T12 4Q8.65 4 6.325 6.325T4 12q0 3.35 2.325 5.675T12 20"></path>
+        <path fill="currentColor" d="m12 12.7l-3.2 3.2q-.275.275-.7.275t-.7-.275q-.275-.275-.275-.7t.275-.7l3.2-3.2l-3.2-3.2q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275l3.2 3.2l3.2-3.2q.275-.275.7-.275t.7.275q.275.275.275.7t-.275.7L13.4 12l3.2 3.2q.275.275.275.7t-.275.7q-.275.275-.7.275t-.7-.275zM12 22q-2.075 0-3.9-.788t-3.175-2.137q-1.35-1.35-2.137-3.175T2 12q0-2.075.788-3.9t2.137-3.175q1.35-1.35 3.175-2.138T12 2q2.075 0 3.9.788t3.175 2.138q1.35 1.35 2.137 3.175T22 12q0 2.075-.788 3.9t-2.137 3.175q-1.35 1.35-3.175 2.137T12 22m0-2q3.35 0 5.675-2.325T20 12q0-3.35-2.325-5.675T12 4Q8.65 4 6.325 6.325T4 12q0 3.35 2.325 5.675T12 20"></path>
       </svg>
       <span class="exit-sign-text">{{ t('trainerPage.exit') }}</span>
     </button>
@@ -16,15 +15,21 @@
           </div>
           <div class="progress-line">
             <span>{{ store.currentIndex + 1 }} / {{ totalWords }}</span>
-            <span>{{ t('sessionPage.choice') }}: <b>{{ t(modeLabel(currentMode)) }}</b> ({{
-                currentModeIndex + 1
-              }}/{{ selectedModes.length }})</span>
+            <span>{{ t('sessionPage.choice') }}: <b>{{ t(modeLabel(currentMode)) }}</b> ({{ currentModeIndex + 1 }}/{{ selectedModes.length }})</span>
           </div>
           <div class="word-block">
             <div v-if="currentMode === 'audio'" class="word-question">
               <span>{{ t('sessionLabels.word') }}: {{ currentWord?.[currentLang] }}</span>
             </div>
             <div class="mode-exercise">
+              <div v-if="currentMode === 'wordTranslate'" class="word-info-display">
+                <div class="wordTranslate">
+                  <SoundBtn :text="`${currentWord.article} ${currentWord.de}`"/>
+                  <div class="german-word">{{ currentWord.article }} {{ currentWord.de }}</div>
+                </div>
+                <div class="word-divider">—</div>
+                <div class="translation-word">{{ currentWord[currentLangKey] }}</div>
+              </div>
               <div v-if="currentMode === 'article'">
                 <p>{{ t('sessionLabels.articleFor') }} <b>{{ currentWord.de }}</b>:</p>
                 <input v-model="userInput" maxlength="3" class="trainer-app__input"/>
@@ -32,25 +37,16 @@
               <div v-if="currentMode === 'letters'">
                 <p>{{ t('sessionLabels.lettersFor') }} <b>{{ currentWord.article }}</b></p>
                 <div class="letters">
-                  <button
-                      v-for="(letter, i) in shuffledLetters"
-                      :key="i"
-                      :disabled="usedLetters[i]"
-                      @click="addLetter(letter, i)"
-                  >
+                  <button v-for="(letter, i) in shuffledLetters" :key="i" :disabled="usedLetters[i]" @click="addLetter(letter, i)">
                     {{ letter === ' ' ? '␣' : letter }}
                   </button>
                 </div>
-                <button
-                    v-if="userInput"
-                    class="letters-clear"
-                    @click="clearLetters"
-                    type="button"
-                >
+                <button v-if="userInput" class="letters-clear" @click="clearLetters" type="button">
                   {{ t('wordDuelSession.clear') || 'clear' }}
                 </button>
                 <input v-model="userInput" class="trainer-app__input" readonly/>
               </div>
+
               <div v-if="currentMode === 'wordArticle'">
                 <p><b>{{ t('sessionLabels.word')}} : {{ uiWord }}</b></p>
                 <input v-model="userInput" class="trainer-app__input"/>
@@ -68,18 +64,21 @@
                 <input v-model="userInput" class="trainer-app__input"/>
               </div>
             </div>
-            <div v-if="currentMode === 'plural' || currentMode === 'wordArticle'" class="german__letters">
-              <button @click="addGErmanLetters(letter)" class="german__letters-item" v-for="(letter, index) in germanLetters" :key="index">
-                {{ letter}}
+            <div v-if="shouldShowGermanLetters && (currentMode === 'plural' || currentMode === 'wordArticle' || currentMode === 'letters' || currentMode === 'audio')" class="german__letters">
+              <button
+                  @click="addGErmanLetters(letter)"
+                  class="german__letters-item"
+                  v-for="(letter, index) in germanLetters"
+                  :key="index"
+              >
+                {{ letter }}
               </button>
             </div>
             <div v-if="result" class="answer-result" :class="result">
               <span v-if="result === 'correct'">✔ </span>
               <span v-if="result === 'wrong'">✖ </span>
               <span v-if="currentMode === 'article'">{{ t('result.correctAnswer') }}: {{ currentWord.article }}</span>
-              <span v-if="currentMode === 'letters' || currentMode === 'audio'">{{ t('result.correctAnswer') }}: {{
-                  currentWord.de
-                }}</span>
+              <span v-if="currentMode === 'letters' || currentMode === 'audio'">{{ t('result.correctAnswer') }}: {{ currentWord.de }}</span>
               <span v-if="currentMode === 'wordArticle'">{{ t('result.correct') }}: {{currentWord.article}} {{ currentWord.de }} </span>
               <span v-if="currentMode === 'plural'">{{ t('result.correct') }}: {{ currentWord.plural }}</span>
             </div>
@@ -87,17 +86,16 @@
           <button
               class="btn"
               @click="!result ? checkAnswer() : nextStep()"
-              :disabled="!result && (isChecking || !userInput)"
+              :disabled="!result && (isChecking || (currentMode !== 'wordTranslate' && !userInput))"
           >
-            {{ !result ? t('sessionPage.btnCheck') : t('sessionPage.continue') }}
+            {{ currentMode === 'wordTranslate' ? t('trainerPage.further') : (!result ? t('sessionPage.btnCheck') : t('sessionPage.continue')) }}
           </button>
         </div>
         <div v-else class="finish-block">
           <h2 class="finish-block__title">{{ t('sessionLabels.end')}}</h2>
           <div class="finish-block__actions">
             <button class="btn" @click="restartAll">{{ t('sessionLabels.again')}}</button>
-            <button v-if="wrongWords.length" class="btn btn--secondary" :disabled="wrongWords.length === 0"
-                    @click="repeatMistakes">
+            <button v-if="wrongWords.length" class="btn btn--secondary" :disabled="wrongWords.length === 0" @click="repeatMistakes">
               {{ t('sessionLabels.mistakes')}} ({{ wrongWords.length }})
             </button>
             <router-link class="btn btn--secondary" to="/articles">{{ t('sessionLabels.back')}}</router-link>
@@ -111,44 +109,48 @@
     </div>
   </div>
 </template>
+
 <script setup>
-import {ref, computed, onMounted} from 'vue'
-import {useRoute, useRouter} from 'vue-router'
-import {userlangStore} from '../../store/learningStore.js'
-import {getSpeechAudio} from '../../utils/googleTTS.js'
-import {nameMap, nameMode} from '../../utils/nameMap.js'
+import { ref, computed, onMounted, onBeforeUnmount, watch } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import { userlangStore } from '../../store/learningStore.js'
+import { getSpeechAudio } from '../../utils/googleTTS.js'
+import { nameMap, nameMode } from '../../utils/nameMap.js'
 import { playWrong, playCorrect, unlockAudioByUserGesture } from '../../utils/soundManager.js'
 import { useSeoMeta } from '#imports'
+import SoundBtn from "~/src/components/soundBtn.vue";
+useSeoMeta({ robots: 'noindex, nofollow' })
 
-useSeoMeta({
-  robots: 'noindex, nofollow'
-})
-
-const {t, locale} = useI18n()
-const wrongWords = ref([])
-const allWords = ref([])
-const isReview = ref(false)
-
+const { t, locale } = useI18n()
 const store = userlangStore()
 const route = useRoute()
 const router = useRouter()
+
+const wrongWords = ref([])
+const allWords = ref([])
+const isReview = ref(false)
 const isReady = ref(false)
 const selectedModes = ref([])
-const sessionWords = ref([])
 const finished = ref(false)
 const userInput = ref('')
 const result = ref('')
 const topicTitle = ref('')
 const usedLetters = ref([])
 const isChecking = ref(false)
+const isSpeaking = ref(false)
+const germanLetters = ['ä', 'ö', 'ü', 'Ä', 'Ö', 'Ü', 'ß']
+
+const shouldShowGermanLetters = computed(() => {
+  if (!currentWord.value) return false;
+  const textToCheck = currentMode.value === 'plural' ? (currentWord.value.plural || '') : (currentWord.value.de || '');
+  return germanLetters.some(letter => textToCheck.includes(letter));
+});
 const currentModeIndex = computed(() => store.currentModeIndex)
 const currentMode = computed(() => selectedModes.value[currentModeIndex.value])
 const currentWord = computed(() => store.selectedWords[store.currentIndex])
 const totalWords = computed(() => store.selectedWords.length)
-const currentLang = computed(() => locale.value);
+const currentLang = computed(() => locale.value)
 const translatedTopic = computed(() => t(nameMap[topicTitle.value]))
-const isSpeaking = ref(false)
-const germanLetters = ['ä', 'ö', 'ü', 'Ä', 'Ö', 'Ü', 'ß'];
 
 const localeToKeyMap = {
   ru: 'ru', 'ru-RU': 'ru',
@@ -159,7 +161,10 @@ const localeToKeyMap = {
   es: 'es', 'es-ES': 'es',
   ar: 'ar', 'ar-AR': 'ar',
   uz: 'uz', 'uz-UZ': 'uz',
-  de: 'de', 'de-DE': 'de', 'de-AT': 'de', 'de-CH': 'de'
+  de: 'de',
+  hi: 'hi',
+  fr: 'fr',
+  ro: 'ro'
 }
 
 const currentLangKey = computed(() => {
@@ -169,24 +174,15 @@ const currentLangKey = computed(() => {
 
 const uiWord = computed(() => {
   const w = currentWord.value || {}
-  return (
-      w[currentLangKey.value] ??
-      w.en ?? w.ru ?? w.uk ?? w.tr ?? w.pl ?? w.de ?? ''
-  )
+  return w[currentLangKey.value] ?? w.en ?? w.ru ?? w.de ?? ''
 })
 
 function hasAnyPlural(wordsArray) {
-  const list = Array.isArray(wordsArray) ? wordsArray : []
-  return list.some(w => w.plural && String(w.plural).trim() !== '')
+  return (Array.isArray(wordsArray) ? wordsArray : []).some(w => w.plural && String(w.plural).trim() !== '')
 }
 
-const goBack = () => {
-  router.back()
-}
-
-function modeLabel(mode) {
-  return nameMode[mode] || mode
-}
+const goBack = () => router.back()
+const modeLabel = (mode) => nameMode[mode] || mode
 
 const shuffledLetters = computed(() => {
   if (!currentWord.value) return []
@@ -199,19 +195,14 @@ function addLetter(letter, idx) {
   usedLetters.value[idx] = true
 }
 
-const addGErmanLetters = (letter)  => {
-  userInput.value += letter
-}
+const addGErmanLetters = (letter) => userInput.value += letter
 
 function speak(text) {
   if (isSpeaking.value) return
   isSpeaking.value = true
-  getSpeechAudio(text,)
-  setTimeout(() => {
-    isSpeaking.value = false
-  }, 3000)
+  getSpeechAudio(text)
+  setTimeout(() => isSpeaking.value = false, 3000)
 }
-
 
 function clearLetters() {
   userInput.value = ''
@@ -226,6 +217,19 @@ async function checkAnswer() {
   if (!currentWord.value || isChecking.value) return;
   isChecking.value = true;
 
+  // Если режим "слово-перевод" — сохраняем и мгновенно идем дальше
+  if (currentMode.value === 'wordTranslate') {
+    if (!isReview.value) {
+      await store.markProgress(currentWord.value, currentMode.value, true);
+      await store.markAsLearned(currentWord.value);
+    }
+    playCorrect();
+    isChecking.value = false;
+    nextStep(); // Сразу переходим к следующему слову
+    return;
+  }
+
+  // Для остальных режимов логика остается прежней
   let correct = '';
   switch (currentMode.value) {
     case 'article':     correct = currentWord.value.article; break;
@@ -240,26 +244,19 @@ async function checkAnswer() {
   ok ? playCorrect() : playWrong();
 
   if (!isReview.value) {
-    // обычный режим — сохраняем
     await store.markProgress(currentWord.value, currentMode.value, ok);
     if (ok) {
-      await store.markAsLearned(currentWord.value, selectedModes.value);
+      await store.markAsLearned(currentWord.value);
     } else {
       if (!wrongWords.value.find(w => w.de === currentWord.value.de)) {
         wrongWords.value.push(currentWord.value);
       }
       await store.addWrongAnswers(currentWord.value);
     }
-  } else {
-    // повтор — ничего не сохраняем; локально собираем ошибки, если нужно
-    if (!ok && !wrongWords.value.find(w => w.de === currentWord.value.de)) {
-      wrongWords.value.push(currentWord.value);
-    }
   }
 
   isChecking.value = false;
 }
-
 
 function nextStep() {
   if (currentModeIndex.value < selectedModes.value.length - 1) {
@@ -271,112 +268,60 @@ function nextStep() {
   userInput.value = ''
   usedLetters.value = []
   result.value = ''
-
-  if (store.currentIndex >= store.selectedWords.length) {
-    finished.value = true
-  }
+  if (store.currentIndex >= store.selectedWords.length) finished.value = true
 }
 
 function restartAll() {
   isReview.value = true
-  const baseWords = Array.isArray(allWords.value) && allWords.value.length ? allWords.value : store.selectedWords
-  const canUsePlural = hasAnyPlural(baseWords)
-  if (!Array.isArray(selectedModes.value) ||
-      selectedModes.value.length === 0 ||
-      selectedModes.value.every(m => !m)) {
-
-    selectedModes.value = canUsePlural ? ['article', 'letters', 'wordArticle', 'plural', 'audio'] : ['article', 'letters', 'wordArticle', 'audio']
-
-  } else if (!canUsePlural) {
-    selectedModes.value = selectedModes.value.filter(m => m !== 'plural')
-  }
-
-  store.selectedWords = [...baseWords]
   store.currentIndex = 0
   store.currentModeIndex = 0
   finished.value = false
   userInput.value = ''
-  usedLetters.value = []
   result.value = ''
   wrongWords.value = []
 }
 
-
 function repeatMistakes() {
   if (wrongWords.value.length === 0) return
-  const canUsePlural = hasAnyPlural(wrongWords.value)
-  if (!canUsePlural) {
-    selectedModes.value = selectedModes.value.filter(m => m !== 'plural')
-  }
   store.selectedWords = [...wrongWords.value]
   store.currentIndex = 0
   store.currentModeIndex = 0
   finished.value = false
   userInput.value = ''
-  usedLetters.value = []
   result.value = ''
   wrongWords.value = []
 }
 
-
 onMounted(async () => {
-  const captureOpts = { capture: true };
   const unlockOnce = () => {
-    unlockAudioByUserGesture();
-    window.removeEventListener('pointerdown', unlockOnce, captureOpts);
-    window.removeEventListener('keydown', unlockOnce, captureOpts);
-  };
+    unlockAudioByUserGesture()
+    window.removeEventListener('pointerdown', unlockOnce, { capture: true })
+    window.removeEventListener('keydown', unlockOnce, { capture: true })
+  }
+  window.addEventListener('pointerdown', unlockOnce, { capture: true })
+  window.addEventListener('keydown', unlockOnce, { capture: true })
 
-  window.addEventListener('pointerdown', unlockOnce, captureOpts);
-  window.addEventListener('keydown', unlockOnce, captureOpts);
   await store.loadFromFirebase()
   store.syncSelectedWordsProgress()
+
   const mode = route.query.mode
   selectedModes.value = Array.isArray(mode) ? mode : [mode].filter(Boolean)
   if (route.query.topic) topicTitle.value = route.query.topic
-  allWords.value = [...store.selectedWords]
-  const canUsePlural = hasAnyPlural(allWords.value)
-  if (selectedModes.value.length === 0) {
-    selectedModes.value = canUsePlural
-        ? ['article', 'letters', 'wordArticle', 'plural', 'audio']
-        : ['article', 'letters', 'wordArticle', 'audio']
-  }
-  if (!canUsePlural) {
-    selectedModes.value = selectedModes.value.filter(m => m !== 'plural')
-  }
-  isReview.value = ['1','true','yes','repeat','review','practice']
-      .includes(String(route.query.review || route.query.repeat || '').toLowerCase())
-  if (isReview.value) {
-    store.selectedWords = [...allWords.value]
-  } else {
-    sessionWords.value = store.selectedWords.filter(w =>
-        !selectedModes.value.every(m => w.progress?.[m] === true)
-    )
-    store.selectedWords = sessionWords.value.length ? [...sessionWords.value] : [...allWords.value]
-  }
 
-  if (store.currentIndex >= store.selectedWords.length) store.currentIndex = 0
-  if (store.currentModeIndex >= selectedModes.value.length) store.currentModeIndex = 0
+  allWords.value = [...store.selectedWords]
+  isReview.value = ['1','true','repeat','review'].includes(String(route.query.review || '').toLowerCase())
 
   isReady.value = true
 })
-
-
 
 onBeforeUnmount(() => {
   window.removeEventListener('pointerdown', unlockAudioByUserGesture, { capture: true })
   window.removeEventListener('keydown', unlockAudioByUserGesture, { capture: true })
 })
 
-
 watch(userInput, (newVal, oldVal) => {
-  if (currentMode.value !== 'letters') return
-  const removed = oldVal.length - newVal.length
-  if (removed > 0) {
-    usedLetters.value = []
-  }
+  if (currentMode.value === 'letters' && newVal.length < oldVal.length) usedLetters.value = []
 })
-
 </script>
 
 <style scoped>
@@ -393,6 +338,31 @@ watch(userInput, (newVal, oldVal) => {
   position: relative;
 }
 
+.word-info-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.german-word {
+  font-size: 2rem;
+  color: #f1c40f;
+  font-weight: 700;
+}
+
+.word-divider {
+  font-size: 1.5rem;
+  color: #bdc3c7;
+  margin: 10px 0;
+}
+
+.translation-word {
+  font-size: 2rem;
+  color: #fff;
+}
 
 .exit-sign {
   display: flex;
@@ -729,6 +699,20 @@ watch(userInput, (newVal, oldVal) => {
   font-family: "Nunito", sans-serif;
   font-weight: 600;
   border-radius: 7px;
+}
+
+.wordTranslate {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.word-display-mode {
+  font-size: 2.2rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-family: "Nunito", sans-serif;
 }
 
 @media (max-width: 768px) {

@@ -1,0 +1,332 @@
+[
+  {
+    "id": 1,
+    "category": "Transport",
+    "title": "ICE Ausfall",
+    "situation": "Твой ICE отменили. Нужно спросить про автобус (Ersatzverkehr).",
+    "options": [
+      {"text": "Wo hält der Ersatzverkehr?", "isCorrect": true, "points": 10},
+      {"text": "Entschuldigen Sie, wo ist mein Zug?", "isCorrect": false, "points": 0},
+      {"text": "Ich brauche ein Taxi!", "isCorrect": false, "points": 0}
+    ]
+  },
+  {
+    "id": 2,
+    "category": "Transport",
+    "title": "Fahrkartenkontrolle",
+    "situation": "Ты забыл прокомпостировать билет. Контролер перед тобой.",
+    "options": [
+      {"text": "Ich habe vergessen, zu entwerten. Entschuldigung!", "isCorrect": true, "points": 10},
+      {"text": "Hier ist mein Ticket.", "isCorrect": false, "points": 0},
+      {"text": "Ich verstehe nicht.", "isCorrect": false, "points": 0}
+    ]
+  },
+  {
+    "id": 3,
+    "category": "Transport",
+    "title": "Radweg-Alarm",
+    "situation": "Ты зашел на велодорожку. Тебе звонят в звонок!",
+    "options": [
+      {"text": "Entschuldigung, mein Fehler!", "isCorrect": true, "points": 5},
+      {"text": "Was ist das?", "isCorrect": false, "points": 0},
+      {"text": "Geh weg!", "isCorrect": false, "points": -5}
+    ]
+  },
+  {
+    "id": 4,
+    "category": "Transport",
+    "title": "Ruhebereich",
+    "situation": "В зоне тишины кто-то громко орет по телефону.",
+    "options": [
+      {"text": "Könnten Sie bitte leiser sein? Das ist ein Ruhebereich.", "isCorrect": true, "points": 10},
+      {"text": "Ruhe bitte!", "isCorrect": false, "points": 0},
+      {"text": "Halt den Mund!", "isCorrect": false, "points": -10}
+    ]
+  },
+  {
+    "id": 5,
+    "category": "Transport",
+    "title": "Kleingeld gesucht",
+    "situation": "Автомат не берет 50€. Нужно разменять деньги.",
+    "options": [
+      {"text": "Könnten Sie mir bitte 50 Euro wechseln?", "isCorrect": true, "points": 10},
+      {"text": "Haben Sie Geld?", "isCorrect": false, "points": 0},
+      {"text": "Geben Sie mir Münzen.", "isCorrect": false, "points": 0}
+    ]
+  },
+  {
+    "id": 6,
+    "category": "Supermarkt",
+    "title": "Kassen-Stress",
+    "situation": "Кассир работает очень быстро. Тебе нужен только чек.",
+    "options": [
+      {"text": "Nur den Beleg, bitte. Keine Sticker.", "isCorrect": true, "points": 10},
+      {"text": "Ich brauche Papier.", "isCorrect": false, "points": 0},
+      {"text": "Stopp!", "isCorrect": false, "points": -5}
+    ]
+  },
+  {
+    "id": 7,
+    "category": "Supermarkt",
+    "title": "Pfandautomat",
+    "situation": "Автомат для бутылок завис. Нужно позвать персонал.",
+    "options": [
+      {"text": "Der Automat ist voll. Können Sie helfen?", "isCorrect": true, "points": 10},
+      {"text": "Maschine kaputt.", "isCorrect": false, "points": 0},
+      {"text": "Geben Sie mir mein Geld.", "isCorrect": false, "points": 0}
+    ]
+  },
+  {
+    "id": 8,
+    "category": "Supermarkt",
+    "title": "Bäckerei",
+    "situation": "Заказ: 3 брецеля и 2 булочки.",
+    "options": [
+      {"text": "Drei Brezeln und zwei Brötchen, bitte.", "isCorrect": true, "points": 10},
+      {"text": "Drei Brot und zwei Brot.", "isCorrect": false, "points": 0},
+      {"text": "Das da und das da.", "isCorrect": false, "points": 0}
+    ]
+  },
+  {
+    "id": 9,
+    "category": "Supermarkt",
+    "title": "Wursttheke",
+    "situation": "Нужно 200г ветчины тонкими ломтиками.",
+    "options": [
+      {"text": "200 Gramm Schinken, bitte dünne Scheiben.", "isCorrect": true, "points": 10},
+      {"text": "Schinken, viel.", "isCorrect": false, "points": 0},
+      {"text": "Geben Sie mir Fleisch.", "isCorrect": false, "points": 0}
+    ]
+  },
+  {
+    "id": 10,
+    "category": "Supermarkt",
+    "title": "Flohmarkt",
+    "situation": "Торгуешься на барахолке.",
+    "options": [
+      {"text": "Was ist Ihr letzter Preis?", "isCorrect": true, "points": 10},
+      {"text": "Das ist zu teuer.", "isCorrect": false, "points": 5},
+      {"text": "Ich gebe dir 1 Euro.", "isCorrect": false, "points": 0}
+    ]
+  },
+  {
+    "id": 11,
+    "category": "Bürokratie",
+    "title": "Termin-Check",
+    "situation": "В Bürgeramt говорят, что тебя нет в списке.",
+    "options": [
+      {"text": "Ich habe hier meine Bestätigung.", "isCorrect": true, "points": 15},
+      {"text": "Ich habe einen Termin!", "isCorrect": false, "points": 5},
+      {"text": "Das ist unmöglich.", "isCorrect": false, "points": 0}
+    ]
+  },
+  {
+    "id": 12,
+    "category": "Bürokratie",
+    "title": "Paket beim Nachbarn",
+    "situation": "Забираешь посылку у соседа.",
+    "options": [
+      {"text": "Hallo, Sie haben ein Paket für mich?", "isCorrect": true, "points": 10},
+      {"text": "Geben Sie mir mein Paket.", "isCorrect": false, "points": 0},
+      {"text": "Wo ist meine Box?", "isCorrect": false, "points": 0}
+    ]
+  },
+  {
+    "id": 13,
+    "category": "Bürokratie",
+    "title": "Kein Internet",
+    "situation": "Звонишь провайдеру. Интернета нет.",
+    "options": [
+      {"text": "Mein Router leuchtet rot. Ich habe kein Internet.", "isCorrect": true, "points": 15},
+      {"text": "Internet geht nicht.", "isCorrect": false, "points": 5},
+      {"text": "Vodafone ist schlecht.", "isCorrect": false, "points": 0}
+    ]
+  },
+  {
+    "id": 14,
+    "category": "Bürokratie",
+    "title": "Karte sperren",
+    "situation": "Потерял банковскую карту.",
+    "options": [
+      {"text": "Ich möchte meine Karte sperren lassen.", "isCorrect": true, "points": 15},
+      {"text": "Karte weg, Hilfe!", "isCorrect": false, "points": 5},
+      {"text": "Geld ist weg.", "isCorrect": false, "points": 0}
+    ]
+  },
+  {
+    "id": 15,
+    "category": "Bürokratie",
+    "title": "Müll-Streit",
+    "situation": "Сосед ворчит, что ты перепутал баки для мусора.",
+    "options": [
+      {"text": "Tut mir leid, ich lerne die Trennung noch.", "isCorrect": true, "points": 10},
+      {"text": "Das ist mir egal.", "isCorrect": false, "points": -10},
+      {"text": "Welcher Müll?", "isCorrect": false, "points": 0}
+    ]
+  },
+  {
+    "id": 16,
+    "category": "Restaurant",
+    "title": "Döner-Bestellung",
+    "situation": "Заказ: дёнер без лука, с острым соусом.",
+    "options": [
+      {"text": "Döner mit allem, ohne Zwiebeln, mit scharf.", "isCorrect": true, "points": 10},
+      {"text": "Döner Fleisch Brot.", "isCorrect": false, "points": 0},
+      {"text": "Ein Kebab bitte.", "isCorrect": false, "points": 5}
+    ]
+  },
+  {
+    "id": 17,
+    "category": "Restaurant",
+    "title": "Zahlen bitte",
+    "situation": "Просишь счет, платите раздельно.",
+    "options": [
+      {"text": "Zahlen bitte, getrennt.", "isCorrect": true, "points": 10},
+      {"text": "Rechnung zusammen.", "isCorrect": false, "points": 5},
+      {"text": "Geld geben.", "isCorrect": false, "points": 0}
+    ]
+  },
+  {
+    "id": 18,
+    "category": "Restaurant",
+    "title": "Biergarten-Platz",
+    "situation": "Хочешь подсесть за общий стол.",
+    "options": [
+      {"text": "Entschuldigung, ist hier noch frei?", "isCorrect": true, "points": 10},
+      {"text": "Darf ich hier sitzen?", "isCorrect": false, "points": 5},
+      {"text": "Ich sitze hier.", "isCorrect": false, "points": 0}
+    ]
+  },
+  {
+    "id": 19,
+    "category": "Restaurant",
+    "title": "Reservierung",
+    "situation": "Бронируешь стол на четверых.",
+    "options": [
+      {"text": "Einen Tisch für vier Personen für Samstagabend.", "isCorrect": true, "points": 15},
+      {"text": "Vier Leute, Samstag.", "isCorrect": false, "points": 5},
+      {"text": "Wir kommen am Samstag.", "isCorrect": false, "points": 0}
+    ]
+  },
+  {
+    "id": 20,
+    "category": "Restaurant",
+    "title": "Allergie-Abfrage",
+    "situation": "Спрашиваешь про орехи.",
+    "options": [
+      {"text": "Sind Nüsse in diesem Gericht?", "isCorrect": true, "points": 15},
+      {"text": "Ich mag keine Nüsse.", "isCorrect": false, "points": 5},
+      {"text": "Ist das gesund?", "isCorrect": false, "points": 0}
+    ]
+  },
+  {
+    "id": 21,
+    "category": "Alltag",
+    "title": "Ruhezeit-Bohren",
+    "situation": "Ты сверлишь в воскресенье, сосед стучит.",
+    "options": [
+      {"text": "Entschuldigung, ich höre sofort auf.", "isCorrect": true, "points": 10},
+      {"text": "Nur noch eine Minute.", "isCorrect": false, "points": 0},
+      {"text": "Ich muss das machen!", "isCorrect": false, "points": -10}
+    ]
+  },
+  {
+    "id": 22,
+    "category": "Alltag",
+    "title": "Waschküche",
+    "situation": "Твои вещи выкинули из машинки.",
+    "options": [
+      {"text": "Warum haben Sie meine Wäsche rausgenommen?", "isCorrect": true, "points": 15},
+      {"text": "Das ist meine Maschine!", "isCorrect": false, "points": 5},
+      {"text": "Was machst du?", "isCorrect": false, "points": 0}
+    ]
+  },
+  {
+    "id": 23,
+    "category": "Alltag",
+    "title": "Balkon-Grill",
+    "situation": "Дым от соседа летит к тебе.",
+    "options": [
+      {"text": "Könnten Sie bitte woanders grillen? Der Rauch stört.", "isCorrect": true, "points": 15},
+      {"text": "Kein Feuer bitte!", "isCorrect": false, "points": 5},
+      {"text": "Löschen Sie das!", "isCorrect": false, "points": -5}
+    ]
+  },
+  {
+    "id": 24,
+    "category": "Alltag",
+    "title": "Aufzug-Smalltalk",
+    "situation": "Мини-диалог в лифте про погоду.",
+    "options": [
+      {"text": "Schönes Wetter heute, oder?", "isCorrect": true, "points": 5},
+      {"text": "Hallo.", "isCorrect": false, "points": 2},
+      {"text": "Wie viel Uhr ist es?", "isCorrect": false, "points": 0}
+    ]
+  },
+  {
+    "id": 25,
+    "category": "Alltag",
+    "title": "Ausgesperrt",
+    "situation": "Дверь захлопнулась, ключи внутри.",
+    "options": [
+      {"text": "Ich habe mich ausgesperrt. Können Sie helfen?", "isCorrect": true, "points": 15},
+      {"text": "Schlüssel weg, Hilfe!", "isCorrect": false, "points": 5},
+      {"text": "Tür kaputt.", "isCorrect": false, "points": 0}
+    ]
+  },
+  {
+    "id": 26,
+    "category": "Notfall",
+    "title": "Apotheke",
+    "situation": "Нужно лекарство от простуды без рецепта.",
+    "options": [
+      {"text": "Ich brauche etwas gegen Erkältung ohne Rezept.", "isCorrect": true, "points": 15},
+      {"text": "Medizin bitte.", "isCorrect": false, "points": 5},
+      {"text": "Haben Sie Tabletten?", "isCorrect": false, "points": 5}
+    ]
+  },
+  {
+    "id": 27,
+    "category": "Notfall",
+    "title": "Beim Arzt",
+    "situation": "Объясняешь, что болит.",
+    "options": [
+      {"text": "Ich habe seit drei Tagen Schmerzen hier.", "isCorrect": true, "points": 15},
+      {"text": "Es tut weh.", "isCorrect": false, "points": 5},
+      {"text": "Doktor, helfen!", "isCorrect": false, "points": 5}
+    ]
+  },
+  {
+    "id": 28,
+    "category": "Notfall",
+    "title": "Krankmeldung",
+    "situation": "Звонишь на работу отпроситься.",
+    "options": [
+      {"text": "Ich bin krank und schicke heute die AU.", "isCorrect": true, "points": 15},
+      {"text": "Ich komme heute nicht.", "isCorrect": false, "points": 5},
+      {"text": "Ich schlafe.", "isCorrect": false, "points": 0}
+    ]
+  },
+  {
+    "id": 29,
+    "category": "Notfall",
+    "title": "Pannenhilfe",
+    "situation": "Машина заглохла на автобане.",
+    "options": [
+      {"text": "Mein Auto hat eine Panne. Ich bin auf der A7.", "isCorrect": true, "points": 15},
+      {"text": "Auto kaputt, Straße 7.", "isCorrect": false, "points": 5},
+      {"text": "Helfen Sie mir.", "isCorrect": false, "points": 0}
+    ]
+  },
+  {
+    "id": 30,
+    "category": "Notfall",
+    "title": "Fundbüro",
+    "situation": "Ищешь забытую сумку.",
+    "options": [
+      {"text": "Ich habe meine Tasche in der U-Bahn vergessen.", "isCorrect": true, "points": 15},
+      {"text": "Wo ist mein Rucksack?", "isCorrect": false, "points": 5},
+      {"text": "Tasche weg.", "isCorrect": false, "points": 0}
+    ]
+  }
+]

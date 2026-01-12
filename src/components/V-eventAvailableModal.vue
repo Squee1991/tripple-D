@@ -114,7 +114,7 @@ function parseAnnualDate(str) {
 }
 
 function makeEventKey(entry) {
-  return `${entry.title}|${entry.start}|${entry.end ?? ""}|${entry.startDate.getFullYear()}`;
+  return `${entry.id}|${entry.start}|${entry.end ?? ""}|${entry.startDate.getFullYear()}`;
 }
 
 function getDismissed(key) {
@@ -183,7 +183,6 @@ function handleCloseClick() {
 let intervalId;
 
 onMounted(() => {
-  if (props.visible && isModalOpen.value) document.body.style.overflow = "hidden";
   intervalId = setInterval(() => {
     currentTime.value = new Date();
   }, props.tickMs);
@@ -210,12 +209,11 @@ watch(() => activeEvent.value,
     }
 );
 
-watch(() => [props.visible, isModalOpen.value, activeEvent.value],
-    ([isVisible, open, evt]) => {
-      document.body.style.overflow = (isVisible && open && !!evt) ? "hidden" : "";
-    }, {
-      immediate: true
-    }
+watch(() => [props.visible, isModalOpen.value, activeEvent.value, authStore.uid],
+    ([isVisible, open, evt, uid]) => {
+      document.body.style.overflow = (isVisible && open && !!evt && !!uid) ? "hidden" : "";
+    },
+    { immediate: true }
 );
 </script>
 
@@ -236,7 +234,7 @@ watch(() => [props.visible, isModalOpen.value, activeEvent.value],
   background: #2b2b2b;
   padding: 24px 20px;
   border-radius: 16px;
-  max-width: 400px;
+  max-width: 360px;
   width: 90%;
   text-align: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25), inset 0 0 12px rgba(255, 255, 255, 0.6);
@@ -245,9 +243,9 @@ watch(() => [props.visible, isModalOpen.value, activeEvent.value],
 
 .snow {
   position: absolute;
-  top: -87%;
+  top: -74%;
   left: -6px;
-  width: 412px;
+  width: 372px;
   z-index: 0;
   max-width: none;
 }

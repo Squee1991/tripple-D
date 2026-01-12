@@ -104,16 +104,32 @@ onBeforeUnmount(() => document.removeEventListener('mousedown', clickOutside))
 
 .dropdown {
   width: 100%;
-  overflow: hidden;
+  overflow-y: auto;
+  max-height: 280px;
   position: absolute;
   left: 0;
   top: calc(100% + 5px);
   background: #fff;
   border: 3px solid #1e1e1e;
   border-radius: 12px;
-  box-shadow: 4px 4px 0 #1e1e1e;
+  box-shadow: 3px 3px 0 #1e1e1e;
   z-index: 10;
   padding: .5rem;
+  scrollbar-width: thin;
+  scrollbar-color: #1e1e1e transparent;
+}
+
+.dropdown::-webkit-scrollbar {
+  width: 2px;
+}
+
+.dropdown::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dropdown::-webkit-scrollbar-thumb {
+  background-color: #1e1e1e;
+  border-radius: 20px;
 }
 
 .dropdown.upwards {
