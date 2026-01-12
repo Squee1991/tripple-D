@@ -93,23 +93,8 @@ const route = useRoute()
 const canonical = useCanonical()
 const { t } = useI18n()
 
-const pageTitle = t('metaPrepositionsTheory.title')
-const pageDesc  = t('metaPrepositionsTheory.description')
-
-useHead({
-  title: pageTitle,
-  link: [{ rel: 'canonical', href: canonical }]
-})
-
 useSeoMeta({
-  title: pageTitle,
-  description: pageDesc,
-  ogTitle: pageTitle,
-  ogDescription: pageDesc,
-  ogType: 'article',
-  ogUrl: canonical,
-  ogImage: '/images/seo-prepositions-cases.png',
-  robots: 'index, follow'
+  robots: 'noindex, nofollow'
 })
 
 const pageSections = ref([

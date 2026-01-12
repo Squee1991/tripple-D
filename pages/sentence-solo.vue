@@ -3,6 +3,11 @@ import {ref, computed, onMounted} from 'vue'
 import {useRouter, useRoute} from 'vue-router'
 import {useDuelStore} from '../store/sentenceDuelStore.js'
 import {useLocalStatGameStore} from '../store/localSentenceStore.js'
+import {useSeoMeta} from "#imports";
+
+useSeoMeta({
+  robots: 'noindex, nofollow'
+})
 
 const {t} = useI18n()
 const router = useRouter()

@@ -44,7 +44,6 @@ export const AWARDS = [
 ]
 
 export const awardsByKey = Object.fromEntries(AWARDS.map(a => [a.key, a]))
-
 export function getAwardByKey(key) {
 	return awardsByKey[key] || null
 }

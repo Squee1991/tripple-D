@@ -349,26 +349,6 @@ const quizFinished = ref(false)
 const quizFeedback = ref('')
 const route = useRoute()
 const runtime = useRuntimeConfig().public
-// const pageTitle = t('metaAdjectiveTheory.title')
-// const pageDesc  = t('metaAdjectiveTheory.description')
-//
-// useHead({
-//   title: pageTitle,
-//   link: [
-//     { rel: 'canonical', href: `${runtime.siteUrl}${route.fullPath}` }
-//   ]
-// })
-//
-// useSeoMeta({
-//   title: pageTitle,
-//   description: pageDesc,
-//   ogTitle: pageTitle,
-//   ogDescription: pageDesc,
-//   ogType: 'article',
-//   ogUrl: `${runtime.siteUrl}${route.fullPath}`,
-//   ogImage: '/images/seo-adjectives.png',
-//   robots: 'index, follow'
-// })
 
 useSeoMeta({
   robots: 'noindex, nofollow'
