@@ -301,8 +301,8 @@
         "id": 6,
         "type": "reorder",
         "question": "wildLandsThirdQuest.questSix",
-        "words": ["scheint", "Die Sonne"],
-        "correctOrder": ["Die Sonne", "scheint"]
+        "words": ["scheint", "Die", "Sonne", "Das"],
+        "correctOrder": ["Die", "Sonne", "scheint"]
       },
       {
         "id": 7,
@@ -330,18 +330,18 @@
         "type": "select",
         "question": "wildLandsThirdQuest.questTen",
         "options": [
-          "Da ist ein Wolf!",
+          "Da ist ein Wolf",
           "Der Bär ist da",
           "Das ist ein Wolf"
         ],
-        "answer": "Da ist ein Wolf!"
+        "answer": "Da ist ein Wolf"
       },
       {
         "id": 11,
         "type": "reorder",
         "question": "wildLandsThirdQuest.questEleven",
-        "words": ["Die Natur", "ist schön,", "die Sonne", "scheint"],
-        "correctOrder": ["Die Natur", "ist schön,", "die Sonne", "scheint"]
+        "words": ["Natur", "Die", "schön,", "ist","Sonne", "die ", "scheint"],
+        "correctOrder": ["Die", "Natur", "ist ", "schön,", "die", "Sonne", "scheint"]
       },
       {
         "id": 12,
@@ -404,8 +404,8 @@
         "id": 3,
         "type": "reorder",
         "question": "wildLandsFourthQuest.questThree",
-        "words": ["Der See", "ist", "sehr", "groß"],
-        "correctOrder": ["Der See", "ist", "sehr", "groß"]
+        "words": ["See", "Der", "ist", "sehr", "groß", "Das"],
+        "correctOrder": ["Der","See", "ist", "sehr", "groß"]
       },
       {
         "id": 4,
@@ -425,8 +425,8 @@
         "id": 6,
         "type": "reorder",
         "question": "wildLandsFourthQuest.questSix",
-        "words": ["Das Wasser", "im See", "ist", "schön"],
-        "correctOrder": ["Das Wasser", "im See", "ist", "kalt"]
+        "words": ["Wasser", "Das", "See", "ist", "im", "kalt", "in"],
+        "correctOrder": ["Das", "Wasser", "im", "See", "ist", "kalt"]
       },
       {
         "id": 7,
@@ -439,8 +439,8 @@
         "id": 8,
         "type": "reorder",
         "question": "wildLandsFourthQuest.questEight",
-        "words": ["Der See", "ist", "sehr", "tief"],
-        "correctOrder": ["Der See", "ist", "sehr", "tief"]
+        "words": ["See","Der", "tief", "ist", "sehr", "Das"],
+        "correctOrder": ["Der ","See", "ist", "sehr", "tief"]
       },
       {
         "id": 9,
@@ -474,8 +474,8 @@
         "id": 13,
         "type": "speechToText",
         "question": "wildLandsFourthQuest.questThirteen",
-        "text": "Die Sonne scheint и das Wasser ist schön",
-        "answer": "Die Sonne scheint und das Wasser ist schön"
+        "text": "Die Sonne scheint und das Wasser ist warm",
+        "answer": "Die Sonne scheint und das Wasser ist warm"
       },
       {
         "id": 14,
@@ -488,8 +488,8 @@
         "id": 15,
         "type": "speechToText",
         "question": "wildLandsFourthQuest.questFifteen",
-        "text": "Die Natur ist schön: die Sonne scheint, der See ist groß и das Wasser ist schön",
-        "answer": "Die Natur ist schön: die Sonne scheint, der See ist groß und das Wasser ist schön"
+        "text": "Die Natur ist schön. Die Sonne scheint, der See ist groß und das Wasser ist warm",
+        "answer": "Die Natur ist schön: Die Sonne scheint, der See ist groß und das Wasser ist warm"
       }
     ]
   },
@@ -638,9 +638,9 @@
   {
     "questId": "winter",
     "aliases": ["natur-a1-env-winter"],
-    "title": "Зима пришла",
+    "title": "wildLandsSixthQuest.title",
     "progress": "0/15",
-    "description": "Пришла зима. Всё вокруг меняет цвет, вода превращается в лёд, и падает снег.",
+    "description": "wildLandsSixthQuest.description",
     "conditions": {
       "goal": "Освой слова: Зима, Снег, Лёд, Белый и конструкцию 'Es schneit'",
       "minCorrect": 13,
