@@ -112,6 +112,7 @@ import {ref, watch, onUnmounted} from 'vue'
 import {useGuessWordStore} from '../store/guesStore.js'
 import {useRouter} from 'vue-router'
 import { nameMap } from '../utils/nameMap.js'
+import {useSeoMeta} from "#imports";
 const {t} = useI18n()
 const router = useRouter()
 const store = useGuessWordStore()
@@ -122,6 +123,11 @@ const isStarted = ref(false)
 const showArticleModal = ref(false)
 const showLoseModal = ref(false)
 const now = ref(Date.now())
+
+useSeoMeta({
+  robots: 'noindex, nofollow'
+})
+
 let intervalId = null
 const timePassed = computed(() => {
   if (!store.timeStarted) return 0
