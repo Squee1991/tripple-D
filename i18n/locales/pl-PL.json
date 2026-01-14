@@ -1,4 +1,13 @@
 {
+  "categories": {
+    "beginner": "Ziemie startowe",
+    "intermediate": "Szlaki przygód",
+    "advanced": "Szczyt mistrzostwa"
+  },
+  "regionsModal": {
+    "title": "Wkrótce!",
+    "text": "Wkrótce czekają na Ciebie ćwiczenia na wyższym poziomie z różnych tematów gramatycznych!"
+  },
   "eventsModal": {
     "halloweenLabel": "Święto Dyń",
     "halloweenText": "Zbieraj dynie, wykonuj zadania i zdobywaj tematyczne nagrody!",
@@ -1764,7 +1773,7 @@
     "questTwo": "Posłuchaj i napisz zdanie",
     "questThree": "Jak powiedzieć: Trawa",
     "questFour": "Wybierz odpowiedni wariant",
-    "questFive": "Ułóż zdanie: Trawa w lesie",
+    "questFive": "Ułóż zdanie: Rano mgła leży w lesie",
     "questSix": "Jak powiedzieć: Powietrze",
     "questSeven": "Który opis pasuje?",
     "questEight": "Posłuchaj i napisz zdanie",

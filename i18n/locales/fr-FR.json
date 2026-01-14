@@ -1,4 +1,13 @@
 {
+  "categories": {
+    "beginner": "Terres de départ",
+    "intermediate": "Sentiers d'aventure",
+    "advanced": "Sommet de la maîtrise"
+  },
+  "regionsModal": {
+    "title": "Bientôt !",
+    "text": "Bientôt, des exercices de niveau supérieur sur divers thèmes grammaticaux vous attendent !"
+  },
   "eventsModal": {
     "halloweenLabel": "Fête des Citrouilles",
     "halloweenText": "Récolte des citrouilles, accomplis des quêtes et gagne des récompenses thématiques !",
@@ -1764,7 +1773,7 @@
     "questTwo": "Écoutez et écrivez la phrase",
     "questThree": "Comment dit-on : Herbe ?",
     "questFour": "Choisissez l'option appropriée",
-    "questFive": "Formez la phrase : De l'herbe dans la forêt",
+    "questFive": "Formez la phrase : Le matin le brouillard repose dans la forêt",
     "questSix": "Comment dit-on : Air ?",
     "questSeven": "Quelle description convient ?",
     "questEight": "Écoutez et écrivez la phrase",

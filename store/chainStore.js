@@ -285,7 +285,10 @@ export const userChainStore = defineStore('chain', () => {
 		justAwarded.value = false
 
 		try {
-			const allRegionKeys = regions.map(r => r.pathTo)
+			// ИСПРАВЛЕНИЕ: Превращаем объект категорий в плоский массив
+			const flatRegions = Object.values(regions).flat()
+			const allRegionKeys = flatRegions.map(r => r.pathTo)
+
 			const tryLoadFrom = async (region) => {
 				const res = await fetch(`/quests/quests-${region}.json`)
 				if (!res.ok) return null

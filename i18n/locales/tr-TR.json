@@ -1,4 +1,13 @@
 {
+  "categories": {
+    "beginner": "Başlangıç Toprakları",
+    "intermediate": "Macera Yolları",
+    "advanced": "Ustalık Zirvesi"
+  },
+  "regionsModal": {
+    "title": "Yakında!",
+    "text": "Yakında çeşitli gramer konularında daha yüksek seviyeli egzersizler sizi bekliyor olacak!"
+  },
   "eventsModal": {
     "halloweenLabel": "Balkabağı Festivali",
     "halloweenText": "Balkabakları topla, görevleri tamamla ve temalı ödüller kazan!",

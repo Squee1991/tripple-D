@@ -1,4 +1,13 @@
 {
+  "categories": {
+    "beginner": "Starting Lands",
+    "intermediate": "Adventure Trails",
+    "advanced": "Mastery Peak"
+  },
+  "regionsModal": {
+    "title": "Coming Soon!",
+    "text": "Higher level exercises on various grammar topics are coming soon!"
+  },
   "eventsModal": {
     "halloweenLabel": "Pumpkin Festival",
     "halloweenText": "Collect pumpkins, complete quests, and get themed rewards!",
@@ -1764,7 +1773,7 @@
     "questTwo": "Listen and write the sentence",
     "questThree": "How to say: Grass",
     "questFour": "Choose the suitable option",
-    "questFive": "Assemble the sentence: Grass in the forest",
+    "questFive": "Build the sentence: In the morning fog lies in the forest",
     "questSix": "How to say: Air",
     "questSeven": "Which description fits?",
     "questEight": "Listen and write the sentence",
