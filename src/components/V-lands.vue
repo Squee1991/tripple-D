@@ -89,7 +89,6 @@ import {ref, computed, onMounted, onBeforeUnmount, watch} from 'vue'
 import {useRouter} from 'vue-router'
 import {regions} from '@/utils/regions.js'
 import {userlangStore} from '../../store/learningStore.js'
-
 const {t, locale} = useI18n()
 const langStore = userlangStore()
 const router = useRouter()
