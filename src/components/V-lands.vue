@@ -479,6 +479,7 @@ onBeforeUnmount(() => {
     position: relative;
     display: block;
     overflow-y: auto;
+    height: auto;
   }
 
   .map-right {
@@ -624,7 +625,7 @@ onBeforeUnmount(() => {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding: 10px;
+  padding: 0 5px;
 }
 
 .arrow-btn {
@@ -685,7 +686,7 @@ onBeforeUnmount(() => {
 .empty-title {
   font-size: 1.5rem;
   font-weight: 900;
-  color: #333;
+  color: var(--titleColor);
   margin-bottom: 10px;
   text-transform: uppercase;
 }
