@@ -1,4 +1,13 @@
 {
+  "categories": {
+    "beginner": "Boshlang'ich yerlar",
+    "intermediate": "Sarguzasht yo'llari",
+    "advanced": "Mahorat cho'qqisi"
+  },
+  "regionsModal": {
+    "title": "Tez orada!",
+    "text": "Tez orada sizni turli grammatik mavzularda yuqori darajadagi mashqlar kutmoqda!"
+  },
   "eventsModal": {
     "halloweenLabel": "Qovoqlar bayrami",
     "halloweenText": "Qovoqlarni yig‘ing, topshiriqlarni bajaring va mavzuga oid mukofotlarni oling!",
@@ -1764,7 +1773,7 @@
     "questTwo": "Gapni tinglang va yozing",
     "questThree": "Qanday aytiladi: O't",
     "questFour": "Mos variantni tanlang",
-    "questFive": "Gapni yig'ing: O'rmondagi o't",
+    "questFive": "Gapni tuzing: Ertalab o‘rmonda tuman yotadi",
     "questSix": "Qanday aytiladi: Havo",
     "questSeven": "Qaysi tavsif mos keladi?",
     "questEight": "Gapni tinglang va yozing",

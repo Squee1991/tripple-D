@@ -89,7 +89,7 @@ onMounted(() => {
 .stat {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 5px;
   height: 100%;
   flex-direction: column;
 }

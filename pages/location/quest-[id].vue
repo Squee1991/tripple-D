@@ -5,7 +5,7 @@
       <div v-if="questStore.finished && questStore.success && !questStore.hasMistakes" class="quest__stamp quest__stamp--ok">{{ t('locationQuests.done')}}</div>
       <div v-if="questStore.loading" class="quest__panel quest__panel--loading"></div>
       <div v-else-if="questStore.error" class="quest__panel quest__panel--error">
-        <div>Error</div>
+        <div>Error: {{ questStore.error }}</div>
         <button class="btn" @click="goThemes">back</button>
       </div>
       <div v-else-if="questStore.task" class="quest__card">
@@ -250,15 +250,16 @@
 <script setup>
 import {computed, onMounted, ref, watch, watchEffect, nextTick, onBeforeUnmount} from 'vue'
 import {useRoute, useRouter, onBeforeRouteLeave} from 'vue-router'
-import {userChainStore} from '../../store/chainStore.js'
-import {userlangStore} from '../../store/learningStore.js'
+import {userChainStore} from '~/store/chainStore.js'
+import {userlangStore} from '~/store/learningStore.js'
 import {useI18n} from 'vue-i18n'
-import SoundBtn from '../../src/components/soundBtn.vue'
-import {playCorrect, playWrong, unlockAudioByUserGesture} from '../../utils/soundManager.js'
-import RightIcon from '../../assets/images/location-icons/accept.svg'
-import WrongIcon from '../../assets/images/location-icons/cancel.svg'
+import SoundBtn from '~/src/components/soundBtn.vue'
+import {playCorrect, playWrong, unlockAudioByUserGesture} from '~/utils/soundManager.js'
+import RightIcon from '~/assets/images/location-icons/accept.svg'
+import WrongIcon from '~/assets/images/location-icons/cancel.svg'
 import {useSeoMeta} from '#imports'
-import VHelpModal from "../../src/components/V-help-modal.vue";
+import VHelpModal from "~/src/components/V-help-modal.vue";
+
 useSeoMeta({robots: 'noindex, nofollow'})
 
 const PRICE = 10
@@ -268,7 +269,12 @@ const router = useRouter()
 const questStore = userChainStore()
 const langStore = userlangStore()
 const forceRevive = ref(false)
-const questId = computed(() => String(route.params.id || route.params.questId || ''))
+
+const questId = computed(() => {
+  const rawId = String(route.params.id || route.params.questId || '')
+  return rawId.replace('quest-', '')
+})
+
 const regionKey = computed(() => String(route.query.region || ''))
 const progressEntry = computed(() => questStore.questProgress?.[questId.value] || null)
 const previouslyCleared = computed(() => !!(progressEntry.value?.success || progressEntry.value?.rewardClaimed))
@@ -303,22 +309,16 @@ function getHeartFillStyle(i) {
   if (i < questStore.lives) {
     return { clipPath: 'inset(0% 0 0 0)', transition: 'clip-path 0.3s ease-in-out' }
   }
-
   if (i === questStore.lives && questStore.lives < questStore.maxLives && questStore.lastLifeAtMs > 0) {
-
-    // ИСПРАВЛЕНО: Теперь время берется ТОЛЬКО из Store. Никаких хардкод цифр.
     const regenMs = questStore.REGEN_INTERVAL_MS
-
     const elapsed = Math.max(0, now.value - questStore.lastLifeAtMs)
     const progress = Math.min(100, (elapsed / regenMs) * 100)
     const insetVal = 100 - progress
-
     return {
       clipPath: `inset(${insetVal}% 0 0 0)`,
       transition: 'none'
     }
   }
-
   return { clipPath: 'inset(100% 0 0 0)', transition: 'clip-path 0.3s ease-in-out' }
 }
 
@@ -583,6 +583,9 @@ watchEffect(() => {
 
 .quest__panel--error {
   background: #ffd5d2;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
 }
 
 .quest__tiny {
@@ -837,7 +840,7 @@ watchEffect(() => {
 .quest__reorder-selection {
   width: min(860px, 96%);
   padding: 5px 10px;
-  min-height: 60px;
+  min-height: 69px;
   background: #fff;
   border: 3px solid #1e1e1e;
   border-radius: 16px;

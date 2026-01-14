@@ -3,7 +3,11 @@ import {ref, onMounted, computed} from 'vue'
 import {useRouter} from 'vue-router'
 import {useGameStore} from '../store/marafonStore.js'
 import {userAuthStore} from '../store/authStore.js'
-import {useI18n} from 'vue-i18n'
+import {useSeoMeta} from "#imports";
+
+useSeoMeta({
+  robots: 'noindex, nofollow'
+})
 
 const {t} = useI18n()
 const gameStore = useGameStore()

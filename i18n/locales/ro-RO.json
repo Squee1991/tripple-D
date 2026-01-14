@@ -1,4 +1,13 @@
 {
+  "categories": {
+    "beginner": "Ținuturile de început",
+    "intermediate": "Traseele aventurii",
+    "advanced": "Vârful măiestriei"
+  },
+  "regionsModal": {
+    "title": "În curând!",
+    "text": "În curând vă așteaptă exerciții de nivel superior pe diverse teme gramaticale!"
+  },
   "eventsModal": {
     "halloweenLabel": "Sărbătoarea Dovlecilor",
     "halloweenText": "Adună dovleci, finalizează misiuni și primește recompense tematice!",
@@ -1764,7 +1773,7 @@
     "questTwo": "Ascultați și scrieți propoziția",
     "questThree": "Cum se spune: Iarbă",
     "questFour": "Alegeți varianta potrivită",
-    "questFive": "Asamblează propoziția: Iarba în pădure",
+    "questFive": "Construiți propoziția: Dimineața ceața stă în pădure",
     "questSix": "Cum se spune: Aer",
     "questSeven": "Ce descriere se potrivește?",
     "questEight": "Ascultați și scrieți propoziția",

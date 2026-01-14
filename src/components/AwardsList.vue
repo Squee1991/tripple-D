@@ -44,7 +44,8 @@ const props = defineProps({
     required: true,
   },
 })
-
+const totalAwards = computed(() => props.awards.length)
+const unlockedAwards = computed(() => props.awards.filter(a => !a.locked).length)
 const modalData = ref({
   title: t('awardModal.title'),
   icon: AwardIconModal,

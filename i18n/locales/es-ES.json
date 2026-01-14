@@ -1,4 +1,13 @@
 {
+  "categories": {
+    "beginner": "Tierras de inicio",
+    "intermediate": "Rutas de aventura",
+    "advanced": "Pico de maestría"
+  },
+  "regionsModal": {
+    "title": "¡Próximamente!",
+    "text": "¡Pronto te esperan ejercicios de nivel superior sobre diversos temas gramaticales!"
+  },
   "eventsModal": {
     "halloweenLabel": "Festival de Calabazas",
     "halloweenText": "¡Recoge calabazas, completa misiones y obtén recompensas temáticas!",
@@ -1764,7 +1773,7 @@
     "questTwo": "Escucha y escribe la oración",
     "questThree": "¿Cómo se dice: Hierba?",
     "questFour": "Elige la opción adecuada",
-    "questFive": "Forma la frase: Hierba en el bosque",
+    "questFive": "Forma la oración: Por la mañana la niebla yace en el bosque",
     "questSix": "¿Cómo se dice: Aire?",
     "questSeven": "¿Qué descripción es adecuada?",
     "questEight": "Escucha y escribe la oración",

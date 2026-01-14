@@ -23,10 +23,9 @@
 </template>
 
 <script setup>
-import {useRankUserStore} from '../store/rankStore.js'
+import {useRankUserStore} from '../../store/rankStore.js'
 import {useSeoMeta} from "#imports";
 const store = useRankUserStore()
-
 useSeoMeta({
   robots: 'noindex, nofollow'
 })
