@@ -14,25 +14,17 @@
       <ul v-if="langStore" class="points-card__list">
         <li class="points-card__item">
           <div class="points-card__label">{{ t('accountPanel.rank') }}</div>
-          <div v-if="userAuth.uid" class="rank-display">
-            <div class="rank-display__stars">
-              <span v-for="n in currentRank.stars" :key="n" class="rank-star">★</span>
-            </div>
-            <div class="rank-display__content">
-              <img v-if="currentRank.icon" :src="currentRank.icon" class="rank-display__icon" alt="Rank Icon">
-              <span v-else class="rank-display__placeholder">🎓</span>
-              <div class="rank-display__info">
-                <span class="rank-display__title">{{ currentRank.title }}</span>
-              </div>
-            </div>
+          <div id="articlus" :title="hoverTitle.title" v-if="userAuth.uid" class="articlus__wrapper">
+            <img class="articlus__icon" src="../../assets/images/graduate-hat.svg" alt="Articlus_icon">
+            <span class="points-card__value"> {{ userAuth.totalHats}}</span>
           </div>
         </li>
         <li class="points-card__item">
           <div class="points-card__label">{{ t('accountPanel.articles') }}</div>
-          <button id="articlus" :title="hoverTitle.title" v-if="userAuth.uid" class="articlus__wrapper">
+          <div id="articlus" :title="hoverTitle.title" v-if="userAuth.uid" class="articlus__wrapper">
             <img class="articlus__icon" src="../../assets/images/articlus.png" alt="Articlus_icon">
             <span class="points-card__value">{{ langStore.points }}</span>
-          </button>
+          </div>
         </li>
         <li class="points-card__item">
           <span class="points-card__label">{{ t('accountPanel.level') }}</span>
@@ -254,6 +246,7 @@ onMounted(() => {
 
 .articlus__wrapper {
   display: flex;
+  width: 78px;
   border:2px solid black;
   box-shadow: 2px 2px 0 black;
   justify-content: center;
@@ -266,8 +259,8 @@ onMounted(() => {
 
 
 .articlus__icon {
-  width: 30px;
-  height: 27px;
+  width: 35px;
+  height: 31px;
 }
 
 .points {
@@ -382,8 +375,8 @@ onMounted(() => {
   align-items: center;
   justify-content: space-between;
   padding: 4px;
-  margin-top: 5px;
-  border-top: 3px dashed var(--border);
+  margin-top: 8px;
+
 }
 
 .points-card__item + .points-card__item {

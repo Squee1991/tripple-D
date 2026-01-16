@@ -4,7 +4,6 @@
       <div class="league-line">
         <span class="league-title">{{ rank.title }}</span>
       </div>
-
       <div class="grid">
         <div
             v-for="(lvl, idx) in rank.levels"
@@ -22,7 +21,6 @@
                 :class="{ 'star-active': authStore.totalHats >= lvl.hats }"
             >★</span>
           </div>
-
           <div class="card-inner">
             <div class="card-icon">
               <img
@@ -31,13 +29,8 @@
                   :class="{ 'icon-grayscale': authStore.totalHats < lvl.hats }"
               />
             </div>
-
             <div class="card-label">Ранг {{ idx + 1 }}</div>
-
-            <div class="card-cost">
-              🎓 {{ lvl.hats }}
-            </div>
-
+            <div class="card-cost">🎓 {{ lvl.hats }}</div>
             <div v-if="lvl.bonus" class="card-bonus">
               🎁 {{ lvl.bonus }}
             </div>
