@@ -594,17 +594,20 @@
     "answerThree": "Obecnie zwrot za niewykorzystane dni nie jest dostępny."
   },
   "daily": {
-    "first": "Naucz się 20 słów we wszystkich trybach: Ćwiczenie rodzajników",
-    "second": "Zdobądź 20 Artiklusów w Ćwiczeniu rodzajników",
-    "third": "Zrób serię 20 słów (łatwy tryb) maraton rodzajników",
-    "fourth": "Zdobądź 15 punktów doświadczenia w Ćwiczeniu rodzajników",
-    "fifth": "Odgadnij 10 słów w trybie: 'Zgadnij słowo'",
-    "sixth": "Zrób serię 20 słów (średni tryb) maraton rodzajników",
-    "seventh": "Naucz się 15 słów w liczbie mnogiej w Ćwiczeniu rodzajników",
-    "eighth": "Naucz się 20 słów we wszystkich trybach: Ćwiczenie rodzajników",
-    "ninth": "Naucz się 15 słów w trybie audio: Ćwiczenie rodzajników",
-    "tenth": "Zrób serię 15 słów (trudny tryb) maraton rodzajników",
-    "eleventh": "Zdobądź 10 punktów doświadczenia w Ćwiczeniu rodzajników"
+    "first": "Naucz się 10 słów we wszystkich trybach: Praktyka rodzajników",
+    "second": "Zdobądź 10 Artykluzów w praktyce rodzajników",
+    "third": "Zrób serię (streak) 10 słów (tryb łatwy) w maratonie rodzajników",
+    "fourth": "Zdobądź 15 punktów doświadczenia w Praktyce rodzajników",
+    "fifth": "Odgadnij 10 słów w trybie „Zgadnij słowo”",
+    "sixth": "Zrób serię (streak) 10 słów (tryb średni) w maratonie rodzajników",
+    "seventh": "Naucz się 10 słów w liczbie mnogiej w trybie: Praktyka rodzajników",
+    "eighth": "Naucz się 10 słów we wszystkich trybach: Praktyka rodzajników",
+    "ninth": "Naucz się 10 słów w trybie audio: Praktyka rodzajników",
+    "tenth": "Zrób serię (streak) 10 słów (tryb trudny) w maratonie rodzajników",
+    "eleventh": "Zdobądź 10 punktów doświadczenia w Praktyce rodzajników",
+    "twelve": "Ukończ jeden moduł na poziomach tematycznych",
+    "thirteenth": "Ukończ zadanie w Krainach Językowych",
+    "fourteenth": "Odgadnij 5 słów w trybie „Zgadnij słowo”"
   },
   "preloader": {
     "value": "Zostaniesz przekierowany na stronę główną...",
@@ -1260,6 +1263,7 @@
     "level": "Poziom"
   },
   "accountPanel": {
+    "rank": "Ranga",
     "title": "Panel uczestnika",
     "ranked": "Ranking",
     "articles": "Artiklusy",
@@ -4454,11 +4458,17 @@
     "modalNotAllowEffectThird": "Kup go w sklepie wydarzenia za płatki śniegu!",
     "modalNotAllowEffectClose": "Zamknij"
   },
-  "articleOverlay": {
-    "title": "Czym jest Artikleus i jak go zdobyć",
-    "first": "Artikleus to wewnętrzna waluta",
-    "second": "Zdobywany za zadanie „Praktyka rodzajników”",
-    "third": "Można go wydać w wewnętrznym sklepie"
+  "pavelOverlay": {
+    "newbie": "Nowicjusz",
+    "rankTitle": "Rangi",
+    "rankLabelOne": "- Rangi przyznawane są za zadania codzienne.",
+    "rankLabelTwo": "- Nagrody za rangi można sprawdzić w panelu użytkownika w sekcji „Rangi”.",
+    "articleTitle": "Artyklus",
+    "articleLabelOne": "- Zdobywany za zadania: Praktyka rodzajników, krainy językowe oraz zadania w sekcji „Nauka”.",
+    "articleLabelTwo": "- Wydawany na powtórne próby w krainach językowych oraz w sklepie w panelu użytkownika.",
+    "levelTitle": "Poziom",
+    "levelLabelOne": "- Poziom rośnie wraz z wykonywaniem zadań.",
+    "levelLabelTwo": "- Wyższy poziom odblokowuje zadania w krainach językowych."
   },
   "idioms": {
     "title": "Idiomy i frazeologizmy",

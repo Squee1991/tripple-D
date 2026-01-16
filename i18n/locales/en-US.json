@@ -594,17 +594,20 @@
     "answerThree": "Currently refunds for unused days are not available."
   },
   "daily": {
-    "first": "Learn 20 words in all modes: Article Practice",
-    "second": "Get 20 Artiklus in Article Practice",
-    "third": "Make a streak of 20 words (easy mode) article marathon",
-    "fourth": "Get 15 experience points in Article Practice",
-    "fifth": "Guess 10 words in the mode: 'Guess the Word'",
-    "sixth": "Make a streak of 20 words (medium mode) article marathon",
-    "seventh": "Learn 15 plural words in Article Practice",
-    "eighth": "Learn 20 words in all modes: Article Practice",
-    "ninth": "Learn 15 words in audio mode: Article Practice",
-    "tenth": "Make a streak of 15 words (hard mode) article marathon",
-    "eleventh": "Get 10 experience points in Article Practice"
+    "first": "Learn 10 words in all modes: Article Practice",
+    "second": "Earn 10 Articluses in Article Practice",
+    "third": "Get a streak of 10 words (easy mode) in Article Marathon",
+    "fourth": "Earn 15 XP in Article Practice",
+    "fifth": "Guess 10 words in 'Guess the Word' mode",
+    "sixth": "Get a streak of 10 words (medium mode) in Article Marathon",
+    "seventh": "Learn 10 plural words in mode: Article Practice",
+    "eighth": "Learn 10 words in all modes: Article Practice",
+    "ninth": "Learn 10 words in audio mode: Article Practice",
+    "tenth": "Get a streak of 10 words (hard mode) in Article Marathon",
+    "eleventh": "Earn 10 XP in Article Practice",
+    "twelve": "Complete one module in thematic levels",
+    "thirteenth": "Complete a quest in Language Lands",
+    "fourteenth": "Guess 5 words in 'Guess the Word' mode"
   },
   "preloader": {
     "value": "You will be redirected to the main page...",
@@ -1260,6 +1263,7 @@
     "level": "Level"
   },
   "accountPanel": {
+    "rank": "Rank",
     "title": "Member Panel",
     "ranked": "Ranking",
     "articles": "Articluses",
@@ -4454,11 +4458,17 @@
     "modalNotAllowEffectThird": "Get it in the event shop for snowflakes!",
     "modalNotAllowEffectClose": "Close"
   },
-  "articleOverlay": {
-    "title": "What is an Artikleus and how to earn it",
-    "first": "Artikleus is an in-game currency",
-    "second": "Earned by completing the 'Article Practice' task",
-    "third": "Can be spent in the internal shop"
+  "pavelOverlay": {
+    "newbie": "Newbie",
+    "rankTitle": "Ranks",
+    "rankLabelOne": "- Ranks are earned by completing daily tasks.",
+    "rankLabelTwo": "- Rank rewards can be viewed in your profile under the 'Ranks' section.",
+    "articleTitle": "Articlus",
+    "articleLabelOne": "- Earned through tasks: Article Practice, Language Lands, and tasks in the 'Learning' section.",
+    "articleLabelTwo": "- Spent on retries in Language Lands and in the shop within your profile.",
+    "levelTitle": "Level",
+    "levelLabelOne": "- Your level increases by completing tasks.",
+    "levelLabelTwo": "- Increasing your level unlocks new quests in Language Lands."
   },
   "idioms": {
     "title": "Idioms and Phrases",

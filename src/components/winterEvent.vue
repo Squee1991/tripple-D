@@ -4,13 +4,13 @@ import { useRouter, useRoute } from 'vue-router'
 import VShowFall from "./V-showFall.vue"
 import Present from '../assets/images/mery-christmas/Present.svg'
 import Snow from 'assets/images/mery-christmas/Snow.svg'
-
 import { useEventSessionStore } from '../../store/eventsStore.js'
-
+useSeoMeta({robots: 'noindex, nofollow'})
 import Hat from 'assets/images/event-rewards/winter-event/winter-rewards/santa-hat.svg'
 import ChristmasBall from 'assets/images/event-rewards/winter-event/winter-rewards/christmas-ball.svg'
 import ChristmasWreath from 'assets/images/event-rewards/winter-event/winter-rewards/christmas-wreath.svg'
 import SantaIcon from 'assets/images/event-rewards/winter-event/winter-rewards/SnowEffect.svg'
+import {useSeoMeta} from "#imports";
 
 const { t } = useI18n()
 const localePath = useLocalePath()
@@ -30,7 +30,6 @@ const selectedLevel = ref(1)
 const eventId = computed(() => String(route.params.id || ''))
 const isEventOpen = computed(() => {
   const event = eventStore.events.find(e => e.id === eventId.value)
-  // if (!event) return false
   const now = new Date().toLocaleDateString('fr-CA').slice(5)
   const start = event.start.slice(0, 5)
   const end = event.end.slice(0, 5)
@@ -246,7 +245,6 @@ onMounted(() => {
               </div>
               <div class="status__row --rep">
                 <div class="status__label">{{ t('winterEvent.reputation') }}</div>
-                <!-- <div class="status__value">{{ levelProgressText }}</div> -->
               </div>
               <div class="bar">
                 <span class="bar__text">{{ levelProgressText }}</span>

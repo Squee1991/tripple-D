@@ -172,7 +172,7 @@ const dotStyle = (particleIndex) => {
   gap: 10px;
   font-size: 50px;
   color: #ffd700;
-  height: 60px;
+  height: 30px;
 }
 
 .star-already-there {

@@ -3,7 +3,7 @@ import { defineStore } from 'pinia'
 import { regions } from '~/utils/regions.js'
 import { doc, getDoc, getFirestore, runTransaction, increment, setDoc } from 'firebase/firestore'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
-
+import {dailyStore } from './dailyStore.js'
 const REGEN_INTERVAL_MS = 60 * 1000
 const MAX_LIVES = 5
 
@@ -34,7 +34,7 @@ export const userChainStore = defineStore('chain', () => {
 	const internalIndex = ref(0)
 	const taskResults = ref({})
 	const isRetryMode = ref(false)
-
+    const daily = dailyStore()
 	let lifeTickerId = null
 
 	const totalQuestTasks = computed(() => quest.value?.conditions?.requiredTasks ?? quest.value?.tasks?.length ?? 0)
@@ -220,6 +220,12 @@ export const userChainStore = defineStore('chain', () => {
 		if (!sessionStarted.value && !isRetryMode.value) return
 		const userRef = await getUserRef()
 		if (!userRef) return
+		if (success.value) {
+			daily.addLandQuestion(1)
+			if (!hasMistakes.value && !isRetryMode.value) {
+				daily.addPerfectQuest(1)
+			}
+		}
 		const currentWrongIndices = []
 		for (let i = 0; i < totalQuestTasks.value; i++) {
 			if (taskResults.value[i] === false) {

@@ -15,7 +15,7 @@
         @button="onDevModalButton"
     />
     <div class="header-container">
-<!--      <button @click="rankStore.addHat">Награда</button>-->
+
       <NuxtLink @click="click" to="/" class="logo" aria-label="German Corner — Home">
         <span class="logo__name">skillup</span>
         <NuxtImg

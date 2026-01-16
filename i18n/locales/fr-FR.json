@@ -594,17 +594,20 @@
     "answerThree": "Non, le remboursement des jours restants n'est pas prévu pour le moment."
   },
   "daily": {
-    "first": "Apprends 20 mots dans tous les modes : Pratique des articles",
-    "second": "Gagne 20 Articlyus en pratique des articles",
-    "third": "Fais une série de 20 mots (mode facile) au marathon d'articles",
+    "first": "Apprends 10 mots dans tous les modes : Pratique des articles",
+    "second": "Gagne 10 Articluses en pratique des articles",
+    "third": "Fais une série de 10 mots (mode facile) au Marathon des articles",
     "fourth": "Gagne 15 points d'expérience en Pratique des articles",
-    "fifth": "Devine 10 mots dans le mode : « Devine le mot »",
-    "sixth": "Fais une série de 20 mots (mode moyen) au marathon d'articles",
-    "seventh": "Apprends 15 mots au pluriel dans le mode : Pratique des articles",
-    "eighth": "Apprends 20 mots dans tous les modes : Pratique des articles",
-    "ninth": "Apprends 15 mots en mode audio : Pratique des articles",
-    "tenth": "Fais une série de 15 mots (mode difficile) au marathon d'articles",
-    "eleventh": "Gagne 10 points d'expérience en Pratique des articles"
+    "fifth": "Devine 10 mots en mode « Devine le mot »",
+    "sixth": "Fais une série de 10 mots (mode moyen) au Marathon des articles",
+    "seventh": "Apprends 10 mots au pluriel en mode : Pratique des articles",
+    "eighth": "Apprends 10 mots dans tous les modes : Pratique des articles",
+    "ninth": "Apprends 10 mots en mode audio : Pratique des articles",
+    "tenth": "Fais une série de 10 mots (mode difficile) au Marathon des articles",
+    "eleventh": "Gagne 10 points d'expérience en Pratique des articles",
+    "twelve": "Termine un module dans les niveaux thématiques",
+    "thirteenth": "Termine une quête dans les Terres de Langues",
+    "fourteenth": "Devine 5 mots en mode « Devine le mot »"
   },
   "preloader": {
     "value": "Vous allez être redirigé vers l'accueil...",
@@ -1260,6 +1263,7 @@
     "level": "Niveau"
   },
   "accountPanel": {
+    "rank": "Rang",
     "title": "Panneau du membre",
     "ranked": "Classement",
     "articles": "Articlyus",
@@ -4453,11 +4457,17 @@
     "modalNotAllowEffectThird": "Achetez-le dans la boutique de l'événement avec des flocons !",
     "modalNotAllowEffectClose": "Fermer"
   },
-  "articleOverlay": {
-    "title": "Qu'est-ce qu'un Articlus et comment en obtenir",
-    "first": "L'Articlus est la monnaie interne du site",
-    "second": "Il s'obtient via l'exercice 'Pratique des articles'",
-    "third": "Il peut être dépensé dans la boutique interne"
+  "pavelOverlay": {
+    "newbie": "Novice",
+    "rankTitle": "Rangs",
+    "rankLabelOne": "- Les rangs sont attribués pour les tâches quotidiennes.",
+    "rankLabelTwo": "- Les récompenses de rang peuvent être consultées dans votre profil dans la section « Rangs ».",
+    "articleTitle": "Articlus",
+    "articleLabelOne": "- S'obtient via les tâches : Pratique des articles, terres de langues et tâches de la section « Apprentissage ».",
+    "articleLabelTwo": "- Se dépense pour des tentatives supplémentaires dans les terres de langues et dans la boutique du profil.",
+    "levelTitle": "Niveau",
+    "levelLabelOne": "- Le niveau augmente en accomplissant des tâches.",
+    "levelLabelTwo": "- Monter de niveau débloque des quêtes dans les terres de langues."
   },
   "idioms": {
     "title": "Idiomes et expressions",

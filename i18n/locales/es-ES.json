@@ -594,17 +594,20 @@
     "answerThree": "Por el momento, no se ofrece reembolso por los días restantes."
   },
   "daily": {
-    "first": "Aprende 20 palabras en todos los modos: Práctica de artículos",
-    "second": "Gana 20 Articlus en la práctica de artículos",
-    "third": "Haz una racha de 20 palabras (modo fácil) — maratón de artículos",
-    "fourth": "Obtén 15 puntos de experiencia en la práctica de artículos",
+    "first": "Aprende 10 palabras en todos los modos: Práctica de artículos",
+    "second": "Gana 10 Articluses en la práctica de artículos",
+    "third": "Logra una racha de 10 palabras (modo fácil) en el Maratón de artículos",
+    "fourth": "Gana 15 puntos de experiencia en la Práctica de artículos",
     "fifth": "Adivina 10 palabras en el modo 'Adivina la palabra'",
-    "sixth": "Haz una racha de 20 palabras (modo medio) — maratón de artículos",
-    "seventh": "Aprende 15 palabras en plural en la práctica de artículos",
-    "eighth": "Aprende 20 palabras en todos los modos: Práctica de artículos",
-    "ninth": "Aprende 15 palabras en modo audio: Práctica de artículos",
-    "tenth": "Haz una racha de 15 palabras (modo difícil) — maratón de artículos",
-    "eleventh": "Obtén 10 puntos de experiencia en la práctica de artículos"
+    "sixth": "Logra una racha de 10 palabras (modo medio) en el Maratón de artículos",
+    "seventh": "Aprende 10 palabras en plural en el modo: Práctica de artículos",
+    "eighth": "Aprende 10 palabras en todos los modos: Práctica de artículos",
+    "ninth": "Aprende 10 palabras en modo audio: Práctica de artículos",
+    "tenth": "Logra una racha de 10 palabras (modo difícil) en el Maratón de artículos",
+    "eleventh": "Gana 10 puntos de experiencia en la Práctica de artículos",
+    "twelve": "Completa un módulo en los niveles temáticos",
+    "thirteenth": "Completa una misión en las Tierras de Idiomas",
+    "fourteenth": "Adivina 5 palabras en el modo 'Adivina la palabra'"
   },
   "preloader": {
     "value": "Serás redirigido a la página principal...",
@@ -1260,6 +1263,7 @@
     "level": "Nivel"
   },
   "accountPanel": {
+    "rank": "Rango",
     "title": "Panel del participante",
     "ranked": "Clasificación",
     "articles": "Artículus",
@@ -4454,11 +4458,17 @@
     "modalNotAllowEffectThird": "¡Consíguelo en la tienda del evento por copos de nieve!",
     "modalNotAllowEffectClose": "Cerrar"
   },
-  "articleOverlay": {
-    "title": "Qué es un Artículo y cómo conseguirlo",
-    "first": "El Artículo es la moneda interna del juego",
-    "second": "Se gana completando la tarea 'Práctica de artículos'",
-    "third": "Puedes gastarlo en la tienda interna"
+  "pavelOverlay": {
+    "newbie": "Novato",
+    "rankTitle": "Rangos",
+    "rankLabelOne": "- Los rangos se otorgan por completar tareas diarias.",
+    "rankLabelTwo": "- Las recompensas por rango se pueden ver en tu perfil en la sección 'Rangos'.",
+    "articleTitle": "Articlus",
+    "articleLabelOne": "- Se obtiene por tareas: Práctica de artículos, Tierras de idiomas y tareas en la sección 'Aprendizaje'.",
+    "articleLabelTwo": "- Se gastan en reintentos en las Tierras de idiomas y en la tienda de tu perfil.",
+    "levelTitle": "Nivel",
+    "levelLabelOne": "- El nivel aumenta al completar tareas.",
+    "levelLabelTwo": "- Al subir de nivel se desbloquean misiones en las Tierras de idiomas."
   },
   "idioms": {
     "title": "Modismos y expresiones idiomáticas",
