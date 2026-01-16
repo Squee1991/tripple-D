@@ -7,12 +7,19 @@
         :text="modalData.text"
         @close="closeAward"
     />
-    <!--    <div class="awards__header">-->
-    <!--      <h1 class="awards__title">{{ t('awards.title') }}</h1>-->
-    <!--      <button @click="questionModal" class="awards__info-btn">-->
-    <!--        <img class="awards__question-icon" :src="Question" alt="quest_icon">-->
-    <!--      </button>-->
-    <!--    </div>-->
+
+    <div class="awards__header">
+      <h1 class="awards__title">{{ t('Награды') }}</h1>
+      <button @click="questionModal" class="awards__info-btn">
+        <!--            <img class="awards__question-icon" :src="Question" alt="quest_icon">-->
+        <div class="awards__counter cartoon-board">
+          <span class="cartoon-board__value">{{ awardsTotalLocked }}</span>
+          <span class="cartoon-board__sep">/</span>
+          <span class="cartoon-board__total">{{ awardsTotal }}</span>
+        </div>
+
+      </button>
+    </div>
     <div class="awards__list-scroll">
       <div class="items-grid">
         <div
@@ -46,7 +53,8 @@ const props = defineProps({
     required: true,
   },
 })
-
+const awardsTotal = computed(() => props.awards.length)
+const awardsTotalLocked = computed(() => props.awards.filter(award => !award.locked).length)
 const sortedAwards = computed(() => {
   // сначала полученные (locked=false), потом закрытые (locked=true)
   return [...props.awards].sort((a, b) => Number(a.locked) - Number(b.locked))
@@ -82,7 +90,7 @@ function closeAward() {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  border-top: 3px solid  #1a1d2b;
+  border-top: 3px solid #1a1d2b;
   padding-bottom: 10px;
   border-radius: 15px;
 }
@@ -111,11 +119,9 @@ function closeAward() {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 15px;
-  background: #4ade80;
-  border: 2px solid black;
   padding: 0 20px;
   border-radius: 16px;
-  box-shadow: 5px 5px 0 black;
+
 }
 
 
@@ -227,6 +233,112 @@ button:disabled {
 
 .awards__list-scroll::-webkit-scrollbar-track {
   background: transparent;
+}
+
+/* --- CARTOON SCOREBOARD (под твой стиль) --- */
+.awards__counter.cartoon-board {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  height: 36px;
+  padding: 0 12px;
+  min-width: 82px;
+
+  border-radius: 14px;
+  border: 2px solid #000;
+  background: #ffffff;
+
+  /* твой “комикс”-шадоу */
+  box-shadow: 4px 4px 0 #000;
+
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+  font-size: 1.05rem;
+  line-height: 1;
+
+  user-select: none;
+  overflow: hidden;
+}
+
+/* блик сверху */
+.awards__counter.cartoon-board::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 8px;
+  right: 8px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.85);
+  filter: blur(0.2px);
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+/* “лампочки/точки” как у мультяшного табло */
+.awards__counter.cartoon-board::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(26, 29, 43, 0.12) 1.4px, transparent 1.6px);
+  background-size: 10px 10px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* значение “получено” — зелёное и самое заметное */
+.cartoon-board__value {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  padding: 0 8px;
+  border-radius: 10px;
+  color: #0b0b0b;
+}
+
+/* разделитель */
+.cartoon-board__sep {
+  position: relative;
+  z-index: 1;
+  opacity: 0.65;
+  transform: translateY(-1px);
+}
+
+/* total — спокойнее */
+.cartoon-board__total {
+  position: relative;
+  z-index: 1;
+  opacity: 0.9;
+}
+
+/* интерактив */
+.awards__info-btn:hover .awards__counter.cartoon-board {
+  transform: translateY(-1px);
+}
+
+.awards__info-btn:active .awards__counter.cartoon-board {
+  transform: translateY(0px);
+  box-shadow: 3px 3px 0 #000;
+}
+
+/* мобилка */
+@media (max-width: 767px) {
+  .awards__counter.cartoon-board {
+    height: 34px;
+    min-width: 76px;
+    font-size: 1rem;
+  }
+
+  .cartoon-board__value {
+    height: 23px;
+    padding: 0 7px;
+  }
 }
 
 @keyframes zoomIn {

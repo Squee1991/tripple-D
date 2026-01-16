@@ -34,7 +34,7 @@
               @click="setActiveTab(tabItem.key)"
               type="button"
           >
-            <img class="tab-icon" :src="tabItem.icon" alt=""/>
+            <img class="tab-icon" :src="tabItem.icon" :alt="tabItem.alt"/>
             <span class="tab-label">{{ tabItem.label }}</span>
           </button>
         </nav>
@@ -45,14 +45,6 @@
           <div class="content-body">
 
             <div v-if="activeTabKey === 'info'" class="header-surface">
-
-              <div class="setting-arrow-title" :class="{ open: isSettingsOpen }">
-                <button class="gear-btn" @click="toggleSettings" type="button">
-                  <img :src="arrowIcon" alt=""/>
-                </button>
-                <div v-if="isSettingsOpen" class="setting-title">Настройки</div>
-              </div>
-
               <div v-if="isSettingsOpen" class="settings-wrapper">
                 <VSettings
                     :userIcon="UserAccIcon"
@@ -109,14 +101,15 @@
                   >
                     <img :class="iconDisplayComputed" class="tab-icon --horizontal" :src="tab.icon" :alt="tab.alt">
                     <span class="tab__text">
-                      {{ tab.label }}
-                    </span>
+                                  {{ tab.label }}
+                                </span>
                   </button>
                 </div>
 
                 <div class="account-tab-body">
                   <div v-if="accountTab === 'common'" class="tab-surface">
-                    <div>123</div>
+                    <PersonalInfoRows/>
+                    <AccountManagement @open="handleSettingsAction" />
                   </div>
 
                   <div v-if="accountTab === 'friends'" class="tab-surface">
@@ -130,21 +123,7 @@
 
 
                   <div v-else-if="accountTab === 'rank'" class="rank-placeholder">
-                    <!--                    <div class="award-strip">-->
-                    <!--                      <div class="awards__get">-->
-                    <!--                        <div class="awards__title">{{ t('cabinet.awards') }}</div>-->
-                    <!--                        <div class="awards__items">-->
-                    <!--                          <div-->
-                    <!--                              v-for="awardItem in unlockedAwardList"-->
-                    <!--                              :key="awardItem.key"-->
-                    <!--                              class="award-strip-item"-->
-                    <!--                              :title="t(awardItem.title)"-->
-                    <!--                          >-->
-                    <!--                            <img class="award-strip-icon" :src="awardItem.icon" :alt="awardItem.title"/>-->
-                    <!--                          </div>-->
-                    <!--                        </div>-->
-                    <!--                      </div>-->
-                    <!--                    </div>-->
+                    <VRank/>
                   </div>
 
                 </div>
@@ -154,6 +133,11 @@
             <div v-else-if="activeTabKey === 'archive'">
               <VExampResulut/>
             </div>
+
+            <div v-else-if="activeTabKey === 'settings'">
+              <VSettings/>
+            </div>
+
           </div>
         </ClientOnly>
       </section>
@@ -285,6 +269,9 @@ import {useI18n} from 'vue-i18n'
 import AwardsList from '../src/components/AwardsList.vue'
 import VExampResulut from '../src/components/V-exampResulut.vue'
 import VFindFriends from '../src/components/V-findFriends.vue'
+import VRank from '../src/components/V-rank.vue'
+import PersonalInfoRows from '../src/components/PersonalInfoRows.vue'
+import AccountManagement from "../src/components/AccountManagement.vue";
 
 import {userAuthStore} from '../store/authStore.js'
 import {userlangStore} from '../store/learningStore.js'
@@ -300,16 +287,20 @@ import Home from '../assets/images/home.svg'
 import Folder from '../assets/images/folder.svg'
 
 import UserAccIcon from '../assets/accountToggleIcons/user.svg'
-import SettingsIcon from '../assets/accountToggleIcons/settings.svg'
+import SettingsIcon from '../assets/images/settings.svg'
 import FaqIcon from '../assets/accountToggleIcons/faq.svg'
 import OptionIcon from '../assets/accountToggleIcons/option.svg'
 
 import Friends from '../assets/images/friend.svg'
 import Rewards from '../assets/images/rewards.svg'
 import IdCard from '../assets/images/monitor.svg'
+import ShoppingCart from '../assets/images/shopping-cart.svg'
 
 import VSettings from '../src/V-settings.vue'
 import ArrowBackIcon from '../assets/images/arrow.svg'
+import RankAward from '../assets/images/rankaward.svg'
+import AccountIcon from '../assets/images/account.png'
+
 
 definePageMeta({
   robots: {index: false, follow: false}
@@ -326,15 +317,15 @@ const friendsStore = useFriendsStore()
 const eventStore = useEventSessionStore()
 const unlockedAwardList = computed(() => awardList.value.filter(a => !a.locked))
 
-const activeTabKey = ref('common')
+const activeTabKey = ref('info')
 const isSettingsOpen = ref(false)
 
 
-const accountTab = ref('rank')
+const accountTab = ref('common')
 const ACCOUNT_TABS = computed(() => [
   {key: 'common', label: 'Общие', icon: IdCard, alt: 'IdCard'},
   {key: 'awards', label: t('cabinetSidebar.valueThree') || 'Награды', icon: Rewards, alt: 'award'},
-  {key: 'rank', label: 'Звание', icon: IdCard, alt: 'rank'},
+  {key: 'rank', label: 'Звание', icon: RankAward, alt: 'rank'},
   {key: 'friends', label: t('cabinetSidebar.valueTwo') || 'Друзья', icon: Friends, alt: 'friends'}
 ])
 
@@ -368,8 +359,10 @@ const iconDisplayComputed = computed(() => {
 })
 
 const TAB_ITEMS = [
-  {key: 'info', label: t('cabinetSidebar.valueOne'), icon: UserIcon},
-  {key: 'archive', label: t('cabinetSidebar.valueFour'), icon: Folder}
+  {key: 'info', label: t('cabinetSidebar.valueOne'), alt: 'infoIcon', icon: AccountIcon},
+  {key: 'archive', label: t('cabinetSidebar.valueFour'), alt: 'archiveIcon', icon: Folder},
+  {key: 'shop', label: t('Магазин'), alt: 'shopIcon', icon: ShoppingCart},
+  {key: 'settings', label: t('Настройки'), alt: 'settingsIcon', icon: SettingsIcon}
 ]
 
 function toggleSettings() {
@@ -655,7 +648,7 @@ onMounted(async () => {
 }
 
 .tab-icon.--horizontal {
-  width: 43px;
+  width: 35px;
 }
 
 .content-panel {
@@ -837,9 +830,9 @@ onMounted(async () => {
   color: var(--titleColor);
   font-weight: 900;
   cursor: pointer;
-  width: 25%;
+  width: 24%;
   background: none;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .account-tab.active {
@@ -865,9 +858,8 @@ onMounted(async () => {
 
 }
 
-/* Rank placeholder */
 .rank-placeholder {
-  padding: 16px;
+
   text-align: center;
 }
 
@@ -1043,7 +1035,7 @@ onMounted(async () => {
 
 .tab__text {
   margin-left: 8px;
-  font-size: 1.4rem;
+  font-size: .9rem;
 }
 
 /* Hover effects desktop */

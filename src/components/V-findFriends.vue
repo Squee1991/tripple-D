@@ -234,12 +234,12 @@ const toListFriends = () => {
 }
 
 .add__friends-icon {
-  width: 45px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
 }
 
 .add__friends {
-  width: 70px;
+  width: 50px;
   padding: 5px 10px;
   border: 2px solid var(--border);
   background: whitesmoke;

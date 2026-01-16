@@ -11,7 +11,7 @@
             <span v-for="n in (idx + 1)" :key="n">★</span>
           </div>
           <div class="card-inner">
-            <div class="card-icon">{{ rank.icon }}</div>
+            <img class="card-icon" :src="rank.icon" alt="">
             <div class="card-label">Ранг {{ idx + 1 }}</div>
             <div class="card-cost">🎓 {{ lvl.hats }}</div>
             <div v-if="lvl.bonus" class="card-cost">🎓 {{ lvl.bonus }}</div>
@@ -25,6 +25,7 @@
 <script setup>
 import {useRankUserStore} from '../../store/rankStore.js'
 import {useSeoMeta} from "#imports";
+
 const store = useRankUserStore()
 useSeoMeta({
   robots: 'noindex, nofollow'
@@ -34,10 +35,11 @@ useSeoMeta({
 
 <style scoped>
 
-.card-inner{
+.card-inner {
   display: flex;
   flex-direction: column;
 }
+
 .ranks-wrapper {
   padding: 40px 20px;
   max-width: 1100px;
