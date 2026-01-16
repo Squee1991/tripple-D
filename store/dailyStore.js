@@ -336,7 +336,7 @@ export const dailyStore = defineStore('dailyStore', () => {
     function addAudioArticle(n = 1) { counters.value.audioArticle += n; scheduleDailySync() }
     function addLandQuestion(n = 1) { counters.value.landQuestion += n; scheduleDailySync() }
     function addPerfectQuest(n = 1) { counters.value.perfectQuestCnt += n; scheduleDailySync() }
-    function addGuessWord(n = 1) { counters.value.guessWordCnt += nscheduleDailySync()}
+    function addGuessWord(n = 1) { counters.value.guessWordCnt += n; scheduleDailySync()}
     function addThematicLearning(n = 1) {counters.value.thematicLearningCnt += n;scheduleDailySync();}
     function noteEasyStreak(streak) {
         if (streak > counters.value.easyStreakBest) {
