@@ -1385,8 +1385,8 @@
         "id": 14,
         "type": "speechToText",
         "question": "questsWindValleySevenQuests.questFourteen",
-        "text": "Das Hotel ist gegenüber dem Museum.",
-        "answer": "Das Museum ist gegenüber dem Hotel"
+        "text": "Das Museum ist gegenüber dem Hotel.",
+        "answer": "Das Museum ist gegenüber dem Hotel."
       },
       {
         "id": 15,
@@ -2225,7 +2225,7 @@
           "questsStoneReachEleventhQuests.questFifteenSecondOption",
           "questsStoneReachEleventhQuests.questFifteenThirdOption"
         ],
-        "answer": "questsStoneReachEleventhQuests.questFifteenSecondOption"
+        "answer": "questsStoneReachEleventhQuests.questFifteenFirstOption"
       }
     ]
   },

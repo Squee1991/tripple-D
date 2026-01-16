@@ -81,7 +81,8 @@ const currentRegionKey = computed(() => {
 });
 
 const currentRegion = computed(() => {
-  return regions.find((regionItem) => regionItem.pathTo === currentRegionKey.value);
+  const allRegionsList = Object.values(regions).flat();
+  return allRegionsList.find((r) => r.pathTo === currentRegionKey.value);
 });
 
 const questsUrl = computed(() => {return `/quests/quests-${currentRegionKey.value}.json`;});
@@ -140,50 +141,13 @@ const processedQuests = computed(() => {
     };
   });
 });
-// const processedQuests = computed(() => {
-//   return questList.value.map((quest) => {
-//     let userProgress = chainStore.questProgress?.[quest.questId];
-//     if (!userProgress && Array.isArray(quest.aliases)) {
-//       const foundAliasId = quest.aliases.find((aliasId) => chainStore.questProgress?.[aliasId]);
-//       if (foundAliasId) {
-//         userProgress = chainStore.questProgress[foundAliasId];
-//       }
-//     }
-//     const safeProgress = userProgress || {};
-//     const hasMistakes = !!(
-//         safeProgress.success &&
-//         safeProgress.wrongIndices &&
-//         safeProgress.wrongIndices.length > 0
-//     );
-//     const isSuccess = !!safeProgress.success;
-//     let btnStyle = {};
-//     if (isSuccess) {
-//       if (hasMistakes) {
-//         btnStyle = {
-//           background: 'linear-gradient(180deg, #ff82a9 0%, #e6517d 100%)',
-//           color: '#fff'
-//         };
-//       } else {
-//         btnStyle = {
-//           background: 'linear-gradient(180deg, #6a74a5 0%, #5d7fc1 100%)',
-//           color: '#fff'
-//         };
-//       }
-//     }
-//
-//     return {
-//       ...quest,
-//       isSuccess,
-//       isCompleted: !!safeProgress.completed,
-//       hasMistakes,
-//       btnStyle
-//     };
-//   });
-// });
 
 function handleStartQuest(quest) {
   if (!quest?.questId) return;
-  router.push({ path: `/location/quest-${quest.questId}` });
+  router.push({
+    path: `/location/quest-${quest.questId}`,
+    query: { region: currentRegionKey.value }
+  });
 }
 
 function goToHomePage() {

@@ -1,4 +1,13 @@
 {
+  "categories": {
+    "beginner": "Ținuturile de început",
+    "intermediate": "Traseele aventurii",
+    "advanced": "Vârful măiestriei"
+  },
+  "regionsModal": {
+    "title": "În curând!",
+    "text": "În curând vă așteaptă exerciții de nivel superior pe diverse teme gramaticale!"
+  },
   "eventsModal": {
     "halloweenLabel": "Sărbătoarea Dovlecilor",
     "halloweenText": "Adună dovleci, finalizează misiuni și primește recompense tematice!",
@@ -585,17 +594,20 @@
     "answerThree": "În prezent, nu este prevăzută rambursarea pentru zilele rămase."
   },
   "daily": {
-    "first": "Învață 20 de cuvinte în toate modurile: Practica articolelor",
-    "second": "Obține 20 de articluși în practica articolelor",
-    "third": "Fă un streak de 20 de cuvinte (mod ușor) la maratonul articolelor",
+    "first": "Învață 10 cuvinte în toate modurile: Practica articolelor",
+    "second": "Obține 10 articluși în practica articolelor",
+    "third": "Fă un streak de 10 cuvinte (mod ușor) în maratonul articolelor",
     "fourth": "Obține 15 puncte de experiență în Practica articolelor",
-    "fifth": "Ghicește 10 cuvinte în modul: „Ghicește cuvântul”",
-    "sixth": "Fă un streak de 20 de cuvinte (mod mediu) la maratonul articolelor",
-    "seventh": "Învață 15 cuvinte la plural în modul: Practica articolelor",
-    "eighth": "Învață 20 de cuvinte în toate modurile: Practica articolelor",
-    "ninth": "Învață 15 cuvinte în modul audio: Practica articolelor",
-    "tenth": "Fă un streak de 15 cuvinte (mod dificil) la maratonul articolelor",
-    "eleventh": "Obține 10 puncte de experiență în Practica articolelor"
+    "fifth": "Ghicește 10 cuvinte în modul „Ghicește cuvântul”",
+    "sixth": "Fă un streak de 10 cuvinte (mod mediu) în maratonul articolelor",
+    "seventh": "Învață 10 cuvinte la plural în modul: Practica articolelor",
+    "eighth": "Învață 10 cuvinte în toate modurile: Practica articolelor",
+    "ninth": "Învață 10 cuvinte în modul audio: Practica articolelor",
+    "tenth": "Fă un streak de 10 cuvinte (mod dificil) în maratonul articolelor",
+    "eleventh": "Obține 10 puncte de experiență în Practica articolelor",
+    "twelve": "Finalizează un modul în nivelurile tematice",
+    "thirteenth": "Finalizează o sarcină în Tărâmurile Limbilor",
+    "fourteenth": "Ghicește 5 cuvinte în modul „Ghicește cuvântul”"
   },
   "preloader": {
     "value": "Vei fi redirecționat către pagina principală...",
@@ -1251,6 +1263,7 @@
     "level": "Nivel"
   },
   "accountPanel": {
+    "rank": "Rang",
     "title": "Panoul participantului",
     "ranked": "Clasament",
     "articles": "Articluși",
@@ -1764,7 +1777,7 @@
     "questTwo": "Ascultați și scrieți propoziția",
     "questThree": "Cum se spune: Iarbă",
     "questFour": "Alegeți varianta potrivită",
-    "questFive": "Asamblează propoziția: Iarba în pădure",
+    "questFive": "Construiți propoziția: Dimineața ceața stă în pădure",
     "questSix": "Cum se spune: Aer",
     "questSeven": "Ce descriere se potrivește?",
     "questEight": "Ascultați și scrieți propoziția",
@@ -4445,11 +4458,17 @@
     "modalNotAllowEffectThird": "Achiziționează-l din magazinul evenimentului folosind fulgi de zăpadă!",
     "modalNotAllowEffectClose": "Închide"
   },
-  "articleOverlay": {
-    "title": "Ce este un Articluș și cum îl poți obține",
-    "first": "Articlușul este moneda internă a aplicației",
-    "second": "Se obține prin sarcina „Practica articolelor”",
-    "third": "Poate fi cheltuit în magazinul intern"
+  "pavelOverlay": {
+    "newbie": "Începător",
+    "rankTitle": "Ranguri",
+    "rankLabelOne": "- Rangurile se acordă pentru sarcinile zilnice.",
+    "rankLabelTwo": "- Recompensele pentru ranguri pot fi vizualizate în profil la secțiunea „Ranguri”.",
+    "articleTitle": "Articluși",
+    "articleLabelOne": "- Se obține prin sarcini: Practica articolelor, tărâmurile limbilor și sarcini din secțiunea „Învățare”.",
+    "articleLabelTwo": "- Se consumă pentru reîncercări în tărâmurile limbilor și în magazinul din profil.",
+    "levelTitle": "Nivel",
+    "levelLabelOne": "- Nivelul crește prin îndeplinirea sarcinilor.",
+    "levelLabelTwo": "- Odată cu creșterea nivelului, se deblochează sarcini în tărâmurile limbilor."
   },
   "idioms": {
     "title": "Idiomuri și expresii frazeologice",

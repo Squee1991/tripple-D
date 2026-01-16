@@ -25,12 +25,12 @@ export default defineEventHandler(async (event) => {
         const subscription = await stripe.subscriptions.retrieve(subscriptionId)
         const subscriptionEndsAt = subscription.current_period_end * 1000
 
-        await db.collection('users').doc(uid).set({
-            isPremium: true,
-            subscriptionId,
-            subscriptionEndsAt,
-            subscriptionCancelled: false,
-        }, { merge: true })
+		await db.collection('users').doc(uid).set({
+			isPremium: true,
+			subscriptionId,
+			subscriptionEndsAt,
+			subscriptionCancelled: false,
+		}, { merge: true })
 
         return { success: true }
     } catch (err) {
@@ -72,6 +72,7 @@ export default defineEventHandler(async (event) => {
 //             subscriptionId,
 //             subscriptionEndsAt,
 //             subscriptionCancelled: false,
+// 			updatedAt: new Date().toISOString()
 //         })
 //         return { success: true }
 //

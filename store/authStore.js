@@ -16,7 +16,6 @@ import {
 } from 'firebase/auth';
 import {doc, setDoc, getDoc, getFirestore, updateDoc, deleteDoc, serverTimestamp, writeBatch} from 'firebase/firestore';
 import {userlangStore} from "./learningStore.js";
-
 let authStateUnsubscribe = null;
 
 export const userAuthStore = defineStore('auth', () => {
@@ -45,7 +44,7 @@ export const userAuthStore = defineStore('auth', () => {
     const hasSeenOnboarding = ref(false)
     const initialized = ref(false)
     const shouldShowFeedbackSurvey = ref(false)
-
+    const totalHats = ref(0)
     let initPromise = null
 
     const checkFeedbackSurveyEligibility = async () => {
@@ -151,6 +150,7 @@ export const userAuthStore = defineStore('auth', () => {
         achievements.value = data.achievements || null
         voiceConsentGiven.value = data.voiceConsentGiven === true
         hasSeenOnboarding.value = data.hasSeenOnboarding === true
+        totalHats.value = data.totalHats || 0
         if (data.isPremium && !data.gotPremiumBonus) grantPremiumBonusPoints()
     }
 
@@ -188,6 +188,7 @@ export const userAuthStore = defineStore('auth', () => {
                 gotPremiumBonus: false,
                 voiceConsentGiven: false,
                 hasSeenOnboarding: false,
+                totalHats: 0,
                 ...createInitialAchievementsObject()
             })
         }
@@ -236,6 +237,7 @@ export const userAuthStore = defineStore('auth', () => {
             gotPremiumBonus: false,
             voiceConsentGiven: false,
             hasSeenOnboarding: false,
+            totalHats: 0,
             ...createInitialAchievementsObject()
         })
 
@@ -271,6 +273,17 @@ export const userAuthStore = defineStore('auth', () => {
         } catch (e) {
             console.error('Ошибка при обновлении hasSeenOnboarding:', e)
         }
+    }
+
+    const incrementHats =  async () =>{
+        const authUser = getAuth().currentUser
+        if (!authUser) return
+        totalHats.value++
+        const userDocRef = doc(db, 'users', authUser.uid)
+        await updateDoc(userDocRef, {
+            totalHats: totalHats.value
+        })
+
     }
 
     const loginUser = async ({email, password}) => {
@@ -449,9 +462,11 @@ export const userAuthStore = defineStore('auth', () => {
         isGoogleUser,
         notEnoughArticle,
         voiceConsentGiven,
+        totalHats,
         setVoiceConsent,
         clearNotEnoughArticle,
         achievements,
+        incrementHats,
         initAuth,
         fetchuser,
         registerUser,

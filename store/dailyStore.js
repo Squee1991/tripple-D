@@ -1,10 +1,10 @@
 import { defineStore } from 'pinia'
 import { ref, computed, watch } from 'vue'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
-import {
-    getFirestore, doc, setDoc, onSnapshot, serverTimestamp, increment,
-} from 'firebase/firestore'
+import { getFirestore, doc, setDoc, onSnapshot, serverTimestamp, increment } from 'firebase/firestore'
 import { dailyQuests } from '../utils/dailyQuests.js'
+import { userAuthStore } from './authStore.js'
+import { useRankUserStore } from './rankStore.js'
 
 export const dailyStore = defineStore('dailyStore', () => {
     const CYCLE_MS = 24 * 60 * 60 * 1000
@@ -40,7 +40,11 @@ export const dailyStore = defineStore('dailyStore', () => {
         duels: 0,
         marathonMediumBest: 0,
         hardStreakBest: 0,
-        audioArticle: 0
+        audioArticle: 0,
+        landQuestion: 0,
+        perfectQuestCnt: 0,
+        guessWordCnt: 0,
+        thematicLearningCnt: 0
     })
 
     function nextLocalMidnightMs(fromMs = Date.now()) {
@@ -107,7 +111,11 @@ export const dailyStore = defineStore('dailyStore', () => {
             duels: 0,
             marathonMediumBest: 0,
             hardStreakBest: 0,
-            audioArticle: 0
+            audioArticle: 0,
+            landQuestion: 0,
+            perfectQuestCnt: 0,
+            guessWordCnt: 0,
+            thematicLearningCnt: 0
         }
         const slice = wrapSlice(dailyQuests, offset.value, QUESTS_PER_CYCLE).map(sanitizeQuest)
         const start = Date.now()
@@ -118,6 +126,7 @@ export const dailyStore = defineStore('dailyStore', () => {
             quests: slice,
             counters: { ...counters.value },
             completedCount: 0,
+            hatClaimed: false,
             createdAtMs: start,
             expiresAtMs: expiresAt,
             lastUpdatedAtMs: start,
@@ -125,7 +134,6 @@ export const dailyStore = defineStore('dailyStore', () => {
             owner: uid() || 'anon',
         }
     }
-
 
     function loadLocal() {
         if (!isClient) return null
@@ -159,6 +167,7 @@ export const dailyStore = defineStore('dailyStore', () => {
         }, { merge })
         saveLocal(payload)
     }
+
     async function incrementAgg(count) {
         if (!count || !online() || !aggDocRef()) return
         await setDoc(aggDocRef(), {
@@ -180,20 +189,13 @@ export const dailyStore = defineStore('dailyStore', () => {
             if (!data) return
 
             const local = currentCycle.value
-
-            const cloudServerTs = typeof data.serverUpdatedAt?.toMillis === 'function'
-                ? data.serverUpdatedAt.toMillis()
-                : 0
+            const cloudServerTs = typeof data.serverUpdatedAt?.toMillis === 'function' ? data.serverUpdatedAt.toMillis() : 0
             const localTs = Number(local?.lastUpdatedAtMs || 0)
 
             const cloudProgressScore = (data.quests || []).reduce((a, q) => a + (q.isCompleted ? 2 : 0) + Number(q.currentValue || 0), 0)
             const localProgressScore = (local?.quests || []).reduce((a, q) => a + (q.isCompleted ? 2 : 0) + Number(q.currentValue || 0), 0)
 
-            const preferCloud =
-                !local ||
-                data.cycleKey !== local.cycleKey ||
-                cloudServerTs >= localTs ||                // серверное время важнее локального
-                cloudProgressScore > localProgressScore    // у облака реальный прогресс — берём его
+            const preferCloud = !local || data.cycleKey !== local.cycleKey || cloudServerTs >= localTs || cloudProgressScore > localProgressScore
 
             if (preferCloud) {
                 currentCycle.value = data
@@ -205,7 +207,6 @@ export const dailyStore = defineStore('dailyStore', () => {
         })
     }
 
-
     function detachCloudListener() {
         if (unsubRef.value) { unsubRef.value(); unsubRef.value = null }
         cloudReady.value = false
@@ -216,7 +217,6 @@ export const dailyStore = defineStore('dailyStore', () => {
         const exist = loadLocal()
         const now = Date.now()
 
-        // если локальный объект не наш — создаём новый цикл для текущего uid/anon
         if (exist && exist.owner && exist.owner !== (uid() || 'anon')) {
             const fresh = buildNewCyclePayload(key)
             currentCycle.value = fresh
@@ -252,6 +252,10 @@ export const dailyStore = defineStore('dailyStore', () => {
             case 'trainPlural':             return c.pluralCnt
             case 'streakHard':              return c.hardStreakBest
             case 'audioArticle':            return c.audioArticle
+            case 'landQuestion':            return c.landQuestion
+            case 'perfectQuest':            return c.perfectQuestCnt
+            case 'guessWord':               return c.guessWordCnt
+            case 'thematicLearning':        return c.thematicLearningCnt
             default:                        return 0
         }
     }
@@ -273,13 +277,25 @@ export const dailyStore = defineStore('dailyStore', () => {
             return { ...q, currentValue: val, isCompleted: now }
         })
 
-        if (!changed && newlyCompleted === 0) return
+        const totalDone = nextQuests.filter(q => q.isCompleted).length
+        let hatAwardedNow = false
+
+        if (totalDone >= QUESTS_PER_CYCLE && !local.hatClaimed) {
+            const aStore = userAuthStore()
+            const rStore = useRankUserStore()
+            await aStore.incrementHats()
+            rStore.checkRewardUI()
+            hatAwardedNow = true
+        }
+
+        if (!changed && newlyCompleted === 0 && !hatAwardedNow) return
 
         const updated = {
             ...local,
             quests: nextQuests,
             counters: { ...counters.value },
-            completedCount: nextQuests.reduce((a, x) => a + (x.isCompleted ? 1 : 0), 0),
+            completedCount: totalDone,
+            hatClaimed: hatAwardedNow ? true : (local.hatClaimed || false),
             lastUpdatedAtMs: Date.now(),
             updatedBy: uid() || 'local',
         }
@@ -297,14 +313,12 @@ export const dailyStore = defineStore('dailyStore', () => {
             ensureLocalCycle()
             const local = currentCycle.value
             if (!local) return
-            // если истёк срок (локальная полночь) или сменился ключ дня — старт нового цикла
             if (Date.now() >= Number(local.expiresAtMs || 0) || local.cycleKey !== cycleKey.value) {
                 const fresh = buildNewCyclePayload(cycleKey.value)
                 currentCycle.value = fresh
                 await pushCurrentCycleToCloud(fresh, false)
                 return
             }
-
             await recomputeAndPersist()
         } finally {
             syncing.value = false
@@ -320,6 +334,10 @@ export const dailyStore = defineStore('dailyStore', () => {
     function addDuels(n = 1) { counters.value.duels += n; scheduleDailySync() }
     function addPlural(n = 1) { counters.value.pluralCnt += n; scheduleDailySync() }
     function addAudioArticle(n = 1) { counters.value.audioArticle += n; scheduleDailySync() }
+    function addLandQuestion(n = 1) { counters.value.landQuestion += n; scheduleDailySync() }
+    function addPerfectQuest(n = 1) { counters.value.perfectQuestCnt += n; scheduleDailySync() }
+    function addGuessWord(n = 1) { counters.value.guessWordCnt += nscheduleDailySync()}
+    function addThematicLearning(n = 1) {counters.value.thematicLearningCnt += n;scheduleDailySync();}
     function noteEasyStreak(streak) {
         if (streak > counters.value.easyStreakBest) {
             counters.value.easyStreakBest = streak
@@ -410,9 +428,7 @@ export const dailyStore = defineStore('dailyStore', () => {
                 ensureLocalCycle()
             }
         })
-
     }
-
 
     watch(cycleKey, () => { ensureLocalCycle() })
 
@@ -429,6 +445,7 @@ export const dailyStore = defineStore('dailyStore', () => {
         updateProgressFromCounters,
         markQuestCompleted,
         addLearned, addExp, addPoints, addWrong, addGuessed, addWordArticle, addDuels, noteHardStreak, addAudioArticle,
-        noteEasyStreak, noteMarathonMediumStreak, addPlural
+        noteEasyStreak, noteMarathonMediumStreak, addPlural,
+        addLandQuestion, addPerfectQuest, addGuessWord, addThematicLearning
     }
 })

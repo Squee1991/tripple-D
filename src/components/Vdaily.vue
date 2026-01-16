@@ -9,7 +9,7 @@
         </div>
       </header>
       <ul class="qd__list">
-        <li class="qd__item" v-for="quest in todayQuests" :key="quest.id">
+        <li class="qd__item" v-for="(quest, index) in todayQuests" :key="index">
           <div class="qd__body">
             <h4 class="qd__name">{{ t(quest.title) }}</h4>
             <div class="qd__barwrap">
