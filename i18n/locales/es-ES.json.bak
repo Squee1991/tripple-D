@@ -1043,9 +1043,6 @@
     "circle": "Gráfico circular",
     "notTopics": "No hay temas iniciados",
     "summary": "Resumen",
-    "yourRecording": "Your recording",
-    "audioNotAvailable": "Audio not available",
-    "playRecording": "Play recording"
     "quests": "Misiones",
     "finished": "Completado",
     "rightAnswers": "Correctas:"
@@ -5244,8 +5241,5 @@
     "yourAnswers": "Tus respuestas",
     "opponentAnswers": "Respuestas del oponente",
     "summary": "Resumen"
-    "yourRecording": "Your recording",
-    "audioNotAvailable": "Audio not available",
-    "playRecording": "Play recording"
   }
 }

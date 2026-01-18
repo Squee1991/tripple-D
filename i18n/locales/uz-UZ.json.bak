@@ -1044,9 +1044,6 @@
     "circle": "Doira diagramma",
     "notTopics": "Boshlangan mavzular yo‘q",
     "summary": "Umumiy ma’lumot",
-    "yourRecording": "Your recording",
-    "audioNotAvailable": "Audio not available",
-    "playRecording": "Play recording"
     "quests": "Qvestlar",
     "finished": "Yakunlangan",
     "rightAnswers": "To‘g‘ri javoblar:"
@@ -5245,8 +5242,5 @@
     "yourAnswers": "Sizning javoblaringiz",
     "opponentAnswers": "Raqibning javoblari",
     "summary": "Xulosa"
-    "yourRecording": "Your recording",
-    "audioNotAvailable": "Audio not available",
-    "playRecording": "Play recording"
   }
 }

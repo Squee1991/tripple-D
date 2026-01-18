@@ -1043,9 +1043,6 @@
     "circle": "Кругова діаграма",
     "notTopics": "Немає початих тем",
     "summary": "Зведення",
-    "yourRecording": "Your recording",
-    "audioNotAvailable": "Audio not available",
-    "playRecording": "Play recording"
     "quests": "Квести",
     "finished": "Завершено",
     "rightAnswers": "Вірних:"
@@ -5262,8 +5259,5 @@
     "yourAnswers": "Ваші відповіді",
     "opponentAnswers": "Відповіді суперника",
     "summary": "Підсумки"
-    "yourRecording": "Your recording",
-    "audioNotAvailable": "Audio not available",
-    "playRecording": "Play recording"
   }
 }

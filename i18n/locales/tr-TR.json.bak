@@ -1043,9 +1043,6 @@
     "circle": "Pasta grafik",
     "notTopics": "Başlatılmış konu yok",
     "summary": "Özet",
-    "yourRecording": "Your recording",
-    "audioNotAvailable": "Audio not available",
-    "playRecording": "Play recording"
     "quests": "Görevler",
     "finished": "Tamamlandı",
     "rightAnswers": "Doğru:"
@@ -5259,8 +5256,5 @@
     "yourAnswers": "Cevaplarınız",
     "opponentAnswers": "Rakibin Cevapları",
     "summary": "Özet"
-    "yourRecording": "Your recording",
-    "audioNotAvailable": "Audio not available",
-    "playRecording": "Play recording"
   }
 }

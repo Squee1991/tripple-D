@@ -1041,9 +1041,6 @@
     "circle": "مخطط دائري",
     "notTopics": "لا توجد مواضيع بدأت",
     "summary": "ملخص",
-    "yourRecording": "Your recording",
-    "audioNotAvailable": "Audio not available",
-    "playRecording": "Play recording"
     "quests": "مهام",
     "finished": "منجز",
     "rightAnswers": "صحيحة:"
@@ -5242,8 +5239,5 @@
     "yourAnswers": "إجاباتك",
     "opponentAnswers": "إجابات المنافس",
     "summary": "ملخص"
-    "yourRecording": "Your recording",
-    "audioNotAvailable": "Audio not available",
-    "playRecording": "Play recording"
   }
 }

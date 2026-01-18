@@ -1,0 +1,413 @@
+{
+  "topic": "family",
+  "levels": {
+    "A1": [
+      {
+        "id": "fam-a1-001",
+        "question": "Wie heißt deine Mutter?",
+        "expectedLevel": "A1"
+      },
+      {
+        "id": "fam-a1-002",
+        "question": "Hast du Geschwister?",
+        "expectedLevel": "A1"
+      },
+      {
+        "id": "fam-a1-003",
+        "question": "Wie alt ist dein Vater?",
+        "expectedLevel": "A1"
+      },
+      {
+        "id": "fam-a1-004",
+        "question": "Wo wohnt deine Familie?",
+        "expectedLevel": "A1"
+      },
+      {
+        "id": "fam-a1-005",
+        "question": "Hast du einen Bruder?",
+        "expectedLevel": "A1"
+      },
+      {
+        "id": "fam-a1-006",
+        "question": "Hast du eine Schwester?",
+        "expectedLevel": "A1"
+      },
+      {
+        "id": "fam-a1-007",
+        "question": "Wie heißt dein Vater?",
+        "expectedLevel": "A1"
+      },
+      {
+        "id": "fam-a1-008",
+        "question": "Wie alt bist du?",
+        "expectedLevel": "A1"
+      },
+      {
+        "id": "fam-a1-009",
+        "question": "Hast du Kinder?",
+        "expectedLevel": "A1"
+      },
+      {
+        "id": "fam-a1-010",
+        "question": "Wer ist das? (Zeige auf ein Familienmitglied)",
+        "expectedLevel": "A1"
+      },
+      {
+        "id": "fam-a1-011",
+        "question": "Bist du verheiratet?",
+        "expectedLevel": "A1"
+      },
+      {
+        "id": "fam-a1-012",
+        "question": "Lebst du mit deiner Familie?",
+        "expectedLevel": "A1"
+      },
+      {
+        "id": "fam-a1-013",
+        "question": "Hast du Großeltern?",
+        "expectedLevel": "A1"
+      },
+      {
+        "id": "fam-a1-014",
+        "question": "Wie viele Personen sind in deiner Familie?",
+        "expectedLevel": "A1"
+      },
+      {
+        "id": "fam-a1-015",
+        "question": "Liebst du deine Familie?",
+        "expectedLevel": "A1"
+      },
+      {
+        "id": "fam-a1-016",
+        "question": "Was macht dein Vater?",
+        "expectedLevel": "A1"
+      },
+      {
+        "id": "fam-a1-017",
+        "question": "Was macht deine Mutter?",
+        "expectedLevel": "A1"
+      },
+      {
+        "id": "fam-a1-018",
+        "question": "Hast du Haustiere?",
+        "expectedLevel": "A1"
+      },
+      {
+        "id": "fam-a1-019",
+        "question": "Wie groß ist deine Familie?",
+        "expectedLevel": "A1"
+      },
+      {
+        "id": "fam-a1-020",
+        "question": "Wohnst du alleine oder mit Familie?",
+        "expectedLevel": "A1"
+      }
+    ],
+    "A2": [
+      {
+        "id": "fam-a2-001",
+        "question": "Was macht deine Familie am Wochenende?",
+        "expectedLevel": "A2"
+      },
+      {
+        "id": "fam-a2-002",
+        "question": "Wie oft siehst du deine Großeltern?",
+        "expectedLevel": "A2"
+      },
+      {
+        "id": "fam-a2-003",
+        "question": "Beschreibe deine Mutter in drei Wörtern.",
+        "expectedLevel": "A2"
+      },
+      {
+        "id": "fam-a2-004",
+        "question": "Was machst du gerne mit deiner Familie?",
+        "expectedLevel": "A2"
+      },
+      {
+        "id": "fam-a2-005",
+        "question": "Wer ist dein Lieblingsfamilienmitglied und warum?",
+        "expectedLevel": "A2"
+      },
+      {
+        "id": "fam-a2-006",
+        "question": "Feiert deine Familie gemeinsam Feiertage?",
+        "expectedLevel": "A2"
+      },
+      {
+        "id": "fam-a2-007",
+        "question": "Hast du eine große oder kleine Familie?",
+        "expectedLevel": "A2"
+      },
+      {
+        "id": "fam-a2-008",
+        "question": "Was sind die Hobbys deiner Eltern?",
+        "expectedLevel": "A2"
+      },
+      {
+        "id": "fam-a2-009",
+        "question": "Wo leben deine Verwandten?",
+        "expectedLevel": "A2"
+      },
+      {
+        "id": "fam-a2-010",
+        "question": "Triffst du deine Familie oft?",
+        "expectedLevel": "A2"
+      },
+      {
+        "id": "fam-a2-011",
+        "question": "Welche Traditionen hat deine Familie?",
+        "expectedLevel": "A2"
+      },
+      {
+        "id": "fam-a2-012",
+        "question": "Wie war deine Kindheit mit deiner Familie?",
+        "expectedLevel": "A2"
+      },
+      {
+        "id": "fam-a2-013",
+        "question": "Hilfst du deinen Eltern im Haushalt?",
+        "expectedLevel": "A2"
+      },
+      {
+        "id": "fam-a2-014",
+        "question": "Was kochst du gerne für deine Familie?",
+        "expectedLevel": "A2"
+      },
+      {
+        "id": "fam-a2-015",
+        "question": "Hast du Geschwister? Beschreibe sie.",
+        "expectedLevel": "A2"
+      },
+      {
+        "id": "fam-a2-016",
+        "question": "Was ist das Beste an deiner Familie?",
+        "expectedLevel": "A2"
+      },
+      {
+        "id": "fam-a2-017",
+        "question": "Machst du Urlaub mit deiner Familie?",
+        "expectedLevel": "A2"
+      },
+      {
+        "id": "fam-a2-018",
+        "question": "Welche Sprachen spricht deine Familie?",
+        "expectedLevel": "A2"
+      },
+      {
+        "id": "fam-a2-019",
+        "question": "Gibt es in deiner Familie besondere Talente?",
+        "expectedLevel": "A2"
+      },
+      {
+        "id": "fam-a2-020",
+        "question": "Was isst deine Familie gerne zusammen?",
+        "expectedLevel": "A2"
+      }
+    ],
+    "B1": [
+      {
+        "id": "fam-b1-001",
+        "question": "Beschreibe deine Beziehung zu deinen Eltern.",
+        "expectedLevel": "B1"
+      },
+      {
+        "id": "fam-b1-002",
+        "question": "Welche Rolle spielt Familie in deinem Leben?",
+        "expectedLevel": "B1"
+      },
+      {
+        "id": "fam-b1-003",
+        "question": "Wie hat dich deine Familie geprägt?",
+        "expectedLevel": "B1"
+      },
+      {
+        "id": "fam-b1-004",
+        "question": "Was hast du von deinen Eltern gelernt?",
+        "expectedLevel": "B1"
+      },
+      {
+        "id": "fam-b1-005",
+        "question": "Wie löst deine Familie Konflikte?",
+        "expectedLevel": "B1"
+      },
+      {
+        "id": "fam-b1-006",
+        "question": "Welche Werte sind deiner Familie wichtig?",
+        "expectedLevel": "B1"
+      },
+      {
+        "id": "fam-b1-007",
+        "question": "Wie unterscheidet sich deine Generation von der deiner Eltern?",
+        "expectedLevel": "B1"
+      },
+      {
+        "id": "fam-b1-008",
+        "question": "Möchtest du später eine eigene Familie gründen? Warum?",
+        "expectedLevel": "B1"
+      },
+      {
+        "id": "fam-b1-009",
+        "question": "Was würdest du in deiner Erziehung anders machen als deine Eltern?",
+        "expectedLevel": "B1"
+      },
+      {
+        "id": "fam-b1-010",
+        "question": "Wie wichtig ist es, in der Nähe der Familie zu wohnen?",
+        "expectedLevel": "B1"
+      },
+      {
+        "id": "fam-b1-011",
+        "question": "Erzähle von einer wichtigen Familientradition.",
+        "expectedLevel": "B1"
+      },
+      {
+        "id": "fam-b1-012",
+        "question": "Wie unterstützt deine Familie dich bei Entscheidungen?",
+        "expectedLevel": "B1"
+      },
+      {
+        "id": "fam-b1-013",
+        "question": "Was bedeutet für dich eine harmonische Familie?",
+        "expectedLevel": "B1"
+      },
+      {
+        "id": "fam-b1-014",
+        "question": "Wie balancierst du Familie und Karriere?",
+        "expectedLevel": "B1"
+      },
+      {
+        "id": "fam-b1-015",
+        "question": "Welchen Einfluss haben Geschwister auf deine Entwicklung?",
+        "expectedLevel": "B1"
+      },
+      {
+        "id": "fam-b1-016",
+        "question": "Wie gehst du mit familiären Erwartungen um?",
+        "expectedLevel": "B1"
+      },
+      {
+        "id": "fam-b1-017",
+        "question": "Was ist die größte Herausforderung in deiner Familie?",
+        "expectedLevel": "B1"
+      },
+      {
+        "id": "fam-b1-018",
+        "question": "Wie bleibst du mit deiner Familie in Kontakt?",
+        "expectedLevel": "B1"
+      },
+      {
+        "id": "fam-b1-019",
+        "question": "Beschreibe ein unvergessliches Familienerlebnis.",
+        "expectedLevel": "B1"
+      },
+      {
+        "id": "fam-b1-020",
+        "question": "Wie hat sich deine Familie im Laufe der Jahre verändert?",
+        "expectedLevel": "B1"
+      }
+    ],
+    "B2": [
+      {
+        "id": "fam-b2-001",
+        "question": "Wie hat sich das Konzept von Familie in der Gesellschaft verändert?",
+        "expectedLevel": "B2"
+      },
+      {
+        "id": "fam-b2-002",
+        "question": "Diskutiere die Vor- und Nachteile von Großfamilien.",
+        "expectedLevel": "B2"
+      },
+      {
+        "id": "fam-b2-003",
+        "question": "Welche Herausforderungen haben moderne Familien?",
+        "expectedLevel": "B2"
+      },
+      {
+        "id": "fam-b2-004",
+        "question": "Inwiefern beeinflusst Kultur die Familienstruktur?",
+        "expectedLevel": "B2"
+      },
+      {
+        "id": "fam-b2-005",
+        "question": "Sollten Großeltern eine aktive Rolle in der Erziehung spielen?",
+        "expectedLevel": "B2"
+      },
+      {
+        "id": "fam-b2-006",
+        "question": "Wie wirkt sich Technologie auf familiäre Beziehungen aus?",
+        "expectedLevel": "B2"
+      },
+      {
+        "id": "fam-b2-007",
+        "question": "Was sind die wichtigsten Faktoren für eine gesunde Familie?",
+        "expectedLevel": "B2"
+      },
+      {
+        "id": "fam-b2-008",
+        "question": "Vergleiche traditionelle und moderne Familienmodelle.",
+        "expectedLevel": "B2"
+      },
+      {
+        "id": "fam-b2-009",
+        "question": "Welche Rolle sollte der Staat bei der Unterstützung von Familien spielen?",
+        "expectedLevel": "B2"
+      },
+      {
+        "id": "fam-b2-010",
+        "question": "Wie beeinflussen wirtschaftliche Faktoren Familien heute?",
+        "expectedLevel": "B2"
+      },
+      {
+        "id": "fam-b2-011",
+        "question": "Analysiere die Work-Life-Balance in modernen Familien.",
+        "expectedLevel": "B2"
+      },
+      {
+        "id": "fam-b2-012",
+        "question": "Welche Auswirkungen hat Migration auf Familienstrukturen?",
+        "expectedLevel": "B2"
+      },
+      {
+        "id": "fam-b2-013",
+        "question": "Diskutiere die Bedeutung von Familienwerten in der heutigen Gesellschaft.",
+        "expectedLevel": "B2"
+      },
+      {
+        "id": "fam-b2-014",
+        "question": "Wie können Familien mit intergenerationellen Konflikten umgehen?",
+        "expectedLevel": "B2"
+      },
+      {
+        "id": "fam-b2-015",
+        "question": "Welche Verantwortung haben Kinder gegenüber alternden Eltern?",
+        "expectedLevel": "B2"
+      },
+      {
+        "id": "fam-b2-016",
+        "question": "Erörtere die Rolle der Familie in der psychischen Gesundheit.",
+        "expectedLevel": "B2"
+      },
+      {
+        "id": "fam-b2-017",
+        "question": "Wie beeinflussen Medien die Wahrnehmung von Familie?",
+        "expectedLevel": "B2"
+      },
+      {
+        "id": "fam-b2-018",
+        "question": "Was sind die langfristigen Effekte von Scheidung auf Kinder?",
+        "expectedLevel": "B2"
+      },
+      {
+        "id": "fam-b2-019",
+        "question": "Sollte die Gesellschaft alternative Familienformen mehr akzeptieren?",
+        "expectedLevel": "B2"
+      },
+      {
+        "id": "fam-b2-020",
+        "question": "Wie wird sich die Familie in den nächsten 50 Jahren entwickeln?",
+        "expectedLevel": "B2"
+      }
+    ]
+  }
+}

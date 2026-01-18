@@ -300,6 +300,7 @@ const menuItems = computed(() => {
             children: [
               {id: 'duel-pvp', valueKey: 'sub.pvp', action: openDevModal},
               {id: 'wordDuel', url: '/sentence-duel', valueKey: 'sub.wordDuel'},
+              {id: 'speakingPractice', url: '/speaking-practice', valueKey: 'speakingGame.title'},
               {id: 'quests', url: '/recipes', valueKey: 'sub.quests'},
               {id: 'duel-guess', url: '/guess-word', valueKey: 'sub.guess'},
               {id: 'articlemarathon', url: '/article-marathon', valueKey: 'sub.marathon'},
