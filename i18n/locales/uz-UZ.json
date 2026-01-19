@@ -4460,9 +4460,9 @@
   },
   "pavelOverlay": {
     "newbie": "Yangi",
-    "rankTitle": "Unvonlar",
-    "rankLabelOne": "- Unvonlar kundalik topshiriqlar uchun beriladi.",
-    "rankLabelTwo": "- Unvon mukofotlarini shaxsiy kabinetning «Unvonlar» bo'limida ko'rish mumkin.",
+    "rankTitle": "Konferatlar",
+    "rankLabelOne": "- Konferatlar kundalik topshiriqlarni bajarganlik uchun beriladi.",
+    "rankLabelTwo": "- Barcha kundalik topshiriqlarni bajarib, kuniga bitta olishingiz mumkin. Konferatlar uchun mukofotlarni shaxsiy kabinetning «Unvon» bo'limida ko'rish mumkin.",
     "articleTitle": "Artiklyus",
     "articleLabelOne": "- Topshiriqlar orqali olinadi: Artikllar amaliyoti, til diyarlari va «O'rganish» bo'limidagi vazifalar.",
     "articleLabelTwo": "- Til diyarlarida qayta urinishlar va shaxsiy kabinetdagi do'kon uchun sarflanadi.",

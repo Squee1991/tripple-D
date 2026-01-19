@@ -126,7 +126,6 @@
                 </div>
                 <div class="quest__meta">
                   <span>{{ t('articlesStatistics.rightAnswers')}} {{ q.correctCount }}/{{ q.requiredTasks }}</span>
-<!--                  <span v-if="q.updatedAtMs">• {{ formatDate(q.updatedAtMs) }}1</span>-->
                 </div>
               </li>
             </ul>
@@ -139,7 +138,6 @@
 
 <script setup>
 import {ref, computed, watchEffect, onMounted, onBeforeUnmount} from 'vue'
-import {useI18n} from 'vue-i18n'
 import {nameMap, nameMode} from '../utils/nameMap.js'
 import {userlangStore} from '../store/learningStore.js'
 import {userChainStore} from '../store/chainStore.js'
@@ -214,7 +212,11 @@ const colorMap = {article: '#60a5fa', letters: '#f59e0b', wordArticle: '#a78bfa'
 const modeColor = computed(() => colorMap[selectedMode.value])
 
 const selectedRegionKey = ref('')
-const regionKeys = computed(() => regions.map(r => String(r.pathTo)))
+
+const allRegions = computed(() => {
+  return Object.values(regions).flat()
+})
+const regionKeys = computed(() => allRegions.value.map(r => String(r.pathTo)))
 watchEffect(() => {
   if (!selectedRegionKey.value && regionKeys.value.length) selectedRegionKey.value = regionKeys.value[0]
 })
@@ -231,7 +233,9 @@ function nextRegion() {
   selectedRegionKey.value = regionKeys.value[(i + 1) % regionKeys.value.length]
 }
 
-const currentRegion = computed(() => regions.find(r => String(r.pathTo) === String(selectedRegionKey.value)) || null)
+const currentRegion = computed(() =>
+    allRegions.value.find(r => String(r.pathTo) === String(selectedRegionKey.value)) || null
+)
 const currentRegionTitle = computed(() => currentRegion.value?.title || currentRegion.value?.name || `regions.${currentRegion.value?.pathTo}` || '')
 
 const questsByRegion = ref({})

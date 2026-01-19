@@ -144,12 +144,12 @@ onUnmounted(() => {
   border: 3px solid #2b3240;
   box-shadow: 2px 2px 0 #000;
   color: #fff;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
 }
 
 .qd__list {
-  gap: 15px;
+  gap: 10px;
   display: flex;
   flex-direction: column;
 }
@@ -160,10 +160,10 @@ onUnmounted(() => {
   gap: 12px;
   align-items: center;
   background: #fff;
-  border: 3px solid #273041;
+  border: 2px solid #273041;
   border-radius: 14px;
   padding: 0 10px;
-  box-shadow: 4px 4px 0 #273041;
+  box-shadow: 2px 2px 0 #273041;
   position: relative;
   z-index: 1;
 }

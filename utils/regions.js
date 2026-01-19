@@ -6,6 +6,7 @@ import StormCoast from 'assets/images/locations-images/storm-coast.png'
 import StoneReach from 'assets/images/locations-images/stone-reach.png'
 import MasterLands from 'assets/images/locations-images/master-lands.png'
 import WildLand from 'assets/images/locations-images/wild-land.png'
+import Future from 'assets/images/locations-images/Future.png'
 
 export const regions = {
 		beginner: [
@@ -83,6 +84,14 @@ export const regions = {
 			}
 		],
 		intermediate: [
-
+			{
+				id: "plural-land",
+				pathTo: "plural-land",
+				theme: "plural",
+				name: "Перевал Грядущего",
+				level: 0,
+				desc: "На этом крутом склоне туман прошлого окончательно рассеивается, открывая вид на далекий горизонт. Здесь путник учится не просто смотреть под ноги, а заглядывать в завтрашний день",
+				icon: Future
+			}
 		]
 	};

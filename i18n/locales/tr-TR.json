@@ -4460,9 +4460,9 @@
   },
   "pavelOverlay": {
     "newbie": "Çaylak",
-    "rankTitle": "Rütbeler",
-    "rankLabelOne": "- Rütbeler günlük görevler için verilir.",
-    "rankLabelTwo": "- Rütbe ödülleri profilinizdeki 'Rütbeler' bölümünde görülebilir.",
+    "rankTitle": "Konferatlar",
+    "rankLabelOne": "- Konferatlar günlük görevleri tamamladığınızda verilir.",
+    "rankLabelTwo": "- Tüm günlük görevleri tamamlayarak günde bir tane alabilirsiniz. Konferat ödülleri profilinizdeki 'Rütbe' bölümünde görülebilir.",
     "articleTitle": "Artikluso",
     "articleLabelOne": "- Görevlerle kazanılır: Artikel Pratiği, dil diyarları ve 'Öğrenme' bölümündeki görevler.",
     "articleLabelTwo": "- Dil diyarlarındaki tekrar denemeleri için ve profildeki mağazada harcanır.",

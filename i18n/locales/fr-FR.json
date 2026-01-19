@@ -4459,9 +4459,9 @@
   },
   "pavelOverlay": {
     "newbie": "Novice",
-    "rankTitle": "Rangs",
-    "rankLabelOne": "- Les rangs sont attribués pour les tâches quotidiennes.",
-    "rankLabelTwo": "- Les récompenses de rang peuvent être consultées dans votre profil dans la section « Rangs ».",
+    "rankTitle": "Conférats",
+    "rankLabelOne": "- Les Conférats sont attribués pour l'accomplissement des tâches quotidiennes.",
+    "rankLabelTwo": "- Vous pouvez en obtenir un par jour en terminant toutes les tâches quotidiennes. Les récompenses pour les Conférats peuvent être consultées dans votre profil dans la section « Rang ».",
     "articleTitle": "Articlus",
     "articleLabelOne": "- S'obtient via les tâches : Pratique des articles, terres de langues et tâches de la section « Apprentissage ».",
     "articleLabelTwo": "- Se dépense pour des tentatives supplémentaires dans les terres de langues et dans la boutique du profil.",
