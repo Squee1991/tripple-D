@@ -5462,6 +5462,27 @@
     "lossText": "هذه المرة كان الخصم أقوى. لا تقلق، حاول مرة أخرى!",
     "end": "مبروك! التمرين انتهى"
   },
+  "describePicture": {
+    "title": "Describe the Picture",
+    "description": "Look at the picture and describe what you see in German. AI will check your answer and give feedback.",
+    "startBtn": "Start Game",
+    "task": "Task",
+    "finishTitle": "Great job!",
+    "finishText": "All tasks completed.",
+    "restartBtn": "Start again",
+    "placeholder": "What do you see in the picture?",
+    "suggestedAnswer": "Suggested improved answer",
+    "keyCorrections": "Key corrections",
+    "inputPlaceholder": "Write your answer in German...",
+    "nextBtn": "Next",
+    "rulesTitle": "Game Rules",
+    "rulesText": "Describe the picture you see in German. The AI will analyze your description and provide feedback, corrections, and an improved version of your answer."
+  },
+  "describePictureTips": {
+    "tipOne": "Start with simple sentences describing what you see",
+    "tipTwo": "Use vocabulary you know - it is okay to make mistakes",
+    "tipThree": "Try to describe colors, positions, and actions"
+  },
   "nav": {
     "training": "التعلم",
     "gameMode": "الألعاب",
@@ -5492,6 +5513,7 @@
     "themen": "المستويات الموضوعية",
     "idioms": "التعابير الاصطلاحية",
     "wordDuel": "مبارزة العبارات",
+    "describePicture": "Describe Picture",
     "quests": "سجل المهام",
     "languagesLands": "أراضي اللغات"
   },
