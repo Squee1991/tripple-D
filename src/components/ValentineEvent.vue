@@ -2,9 +2,13 @@
 import {ref, computed, onMounted} from 'vue'
 import {useRouter, useRoute} from 'vue-router'
 import { useEventSessionStore } from '../../store/eventsStore.js'
+useSeoMeta({
+  robots: 'noindex, nofollow'
+})
 import HeartFall from "assets/images/mery-christmas/heartFall.svg";
 import VShowFall from "~/src/components/V-showFall.vue";
 import TeddyGift from 'assets/images/event-rewards/valentine-event/valentine-rewards/teddy-bear.svg'
+import {useSeoMeta} from "#imports";
 const isEventOpen = computed(() => {
   const event = eventStore.events.find(e => e.id === eventId.value)
   if (!event) return false

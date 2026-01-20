@@ -1,28 +1,31 @@
 <template>
   <div class="points">
-    <VTips :title="articleData.title"
-           :tips="articleData.tips"
-           v-model="isArticleOpen"
+    <VTips
+        :tips="infoData"
+        v-model="isArticleOpen"
     />
     <section class="points-card" aria-label="Поинты и уровень">
       <header class="points-card__header">
         <h2 class="points__title">{{ t('accountPanel.title') }}</h2>
+        <button class="points__info" @click="isArticleOpen = true">
+          <img class="points__info-icon" src="../../assets/images/question.svg" alt="">
+        </button>
       </header>
       <ul v-if="langStore" class="points-card__list">
+<!--        <li class="points-card__item">-->
+<!--          <div class="points-card__label">{{ t('accountPanel.rank') }}</div>-->
+<!--          <div id="articlus" :title="hoverTitle.title" v-if="userAuth.uid" class="articlus__wrapper">-->
+<!--            <img class="articlus__icon" src="../../assets/images/graduate-hat.svg" alt="Articlus_icon">-->
+<!--            <span class="points-card__value"> {{ userAuth.totalHats}}</span>-->
+<!--          </div>-->
+<!--        </li>-->
         <li class="points-card__item">
           <div class="points-card__label">{{ t('accountPanel.articles') }}</div>
-          <button id="articlus" :title="hoverTitle.title" v-if="userAuth.uid" @click="openArticleModal" class="articlus__wrapper">
+          <div id="articlus" :title="hoverTitle.title" v-if="userAuth.uid" class="articlus__wrapper">
             <img class="articlus__icon" src="../../assets/images/articlus.png" alt="Articlus_icon">
             <span class="points-card__value">{{ langStore.points }}</span>
-          </button>
+          </div>
         </li>
-<!--        <li class="points-card__item">-->
-<!--          <div class="points-card__label">{{ t('Звание') }}</div>-->
-<!--          <button id="articlus" :title="hoverTitle.title" v-if="userAuth.uid" @click="openArticleModal" class="articlus__wrapper">-->
-<!--            <span class="star">📓</span>-->
-<!--            <span class="points-card__value">0</span>-->
-<!--          </button>-->
-<!--        </li>-->
         <li class="points-card__item">
           <span class="points-card__label">{{ t('accountPanel.level') }}</span>
           <span id="level" :title="hoverTitle.level" class="points-card__badge">{{ langStore.isLeveling }}</span>
@@ -71,7 +74,8 @@ import Graph from '../../assets/images/graph.svg'
 import AchPanelIcon from '../../assets/images/AchPanelIcon.svg'
 import RankedIcon from '../../assets/images/RankedIcon.svg'
 import Calendar from '../../assets/images/calendar (2).svg'
-
+import { useRankUserStore } from '../../store/rankStore.js'
+const rankStore = useRankUserStore()
 const {t} = useI18n()
 const langStore = userlangStore()
 const userAuth = userAuthStore()
@@ -85,19 +89,58 @@ const handleLeveling = () => {
     langStore.exp -= LEVEL_UP_XP
   }
 }
+
+// const currentRank = computed(() => {
+//   const hats = userAuth.totalHats
+//   let result = {
+//     title: t('pavelOverlay.newbie'),
+//     icon: null,
+//     stars: 0
+//   }
+//   rankStore.ranksData.forEach((league) => {
+//     league.levels.forEach((level, index) => {
+//       if (hats >= level.hats) {
+//         result = {
+//           title: league.title,
+//           icon: league.icons ? league.icons[index].icon : league.icon,
+//           stars: index + 1
+//         }
+//       }
+//     })
+//   })
+//   return result
+// })
+
 const hoverTitle = {
   title: t('hoverTitle.articles'),
   level: t('hoverTitle.level')
 }
+const infoData = ref([
+  // {id: "rank",
+  //   title: t('pavelOverlay.rankTitle'),
+  //   tips:[
+  //     {label: t('pavelOverlay.rankLabelOne')},
+  //     {label: t('pavelOverlay.rankLabelTwo')}
+  //   ]
+  // },
+  {id: "article",
+    title: t('pavelOverlay.articleTitle'),
+    tips:[
+      {label: t('pavelOverlay.articleLabelOne')},
+      {label: t('pavelOverlay.articleLabelTwo')}
+    ]
+  },
+  {id: "level",
+    title: t('pavelOverlay.levelTitle'),
+    tips:[
+      {label: t('pavelOverlay.levelLabelOne')},
+      {label: t('pavelOverlay.levelLabelTwo')}
+    ]
+  }
+])
 const sections = ref([
   {id: "stats", icon: Graph, alt: 'Graph', title: t('accountPanel.stats'), route: "/statistics"},
-  {
-    id: "achievement",
-    icon: AchPanelIcon,
-    alt: 'AchPanel',
-    title: t('accountPanel.achievement'),
-    route: "/achievements"
-  },
+  {id: "achievement", icon: AchPanelIcon, alt: 'AchPanel', title: t('accountPanel.achievement'), route: "/achievements"},
   {id: "ranked", icon: RankedIcon, alt: 'Ranked', title: t('accountPanel.ranked'), route: "/leaderboard"},
   {id: "calendar", icon: Calendar, alt: 'Ranked', title: t('accountPanel.eventCalendar'), route: "/calendar"},
 ])
@@ -106,15 +149,6 @@ const toPayment = () => {
   router.push('/pay')
 }
 
-const openArticleModal = () => isArticleOpen.value = true
-const articleData = ref({
-  title: t('articleOverlay.title'),
-  tips: [
-    {id: 1, text: t('articleOverlay.first')},
-    {id: 2, text: t('articleOverlay.second')},
-    {id: 3, text: t('articleOverlay.third')},
-  ]
-})
 watch(() => langStore.exp, (newVal) => {
   handleLeveling()
 })
@@ -127,6 +161,15 @@ onMounted(() => {
 
 .points-card__title-icon {
   width: 45px;
+}
+
+.points__info {
+  border: none;
+  background: none;
+}
+
+.points__info-icon {
+  width: 50px;
 }
 
 .ranked__title-icon {
@@ -145,7 +188,7 @@ onMounted(() => {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
-  padding: 3px 5px;
+  padding: 1px 5px;
   box-shadow: 2px 2px 0 black;
   transition: .2s;
   background: white;
@@ -172,7 +215,6 @@ onMounted(() => {
 
 .points__title {
   color: var(--titleColor);
-  -webkit-text-stroke : 1px var(--titleColor);
 }
 
 .stat__icon {
@@ -204,6 +246,7 @@ onMounted(() => {
 
 .articlus__wrapper {
   display: flex;
+  width: 78px;
   border:2px solid black;
   box-shadow: 2px 2px 0 black;
   justify-content: center;
@@ -214,10 +257,9 @@ onMounted(() => {
   background: white;
 }
 
-
 .articlus__icon {
-  width: 30px;
-  height: 27px;
+  width: 35px;
+  height: 31px;
 }
 
 .points {
@@ -231,7 +273,7 @@ onMounted(() => {
   border: 3px solid var(--border);
   border-radius: 20px;
   box-shadow: 2px 2px 0 var(--border);
-  padding: 18px;
+  padding: 10px 15px;
   width: 100%;
   margin-bottom: 15px;
   position: relative;
@@ -240,7 +282,7 @@ onMounted(() => {
 
 .progress_exp-bar {
   width: 100%;
-  height: 25px;
+  height: 23px;
   background: #e8eae5;
   border-radius: 10px;
   position: relative;
@@ -254,14 +296,75 @@ onMounted(() => {
 }
 
 .points-card__header {
-  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
   z-index: 1;
 }
 
+.rank-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rank-display__stars {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+  height: 16px;
+}
+
+.rank-star {
+  color: #ffcc00;
+  font-size: 20px;
+  text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+}
+
+.rank-display__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rank-display__icon {
+  width: 51px;
+  height: 51px;
+  object-fit: contain;
+}
+
+.rank-display__placeholder {
+  font-size: 24px;
+}
+
+.rank-display__info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.rank-display__title {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.rank-display__hats {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111;
+}
+
+.points-card__item:nth-child(2) {
+  border-top: 3px dashed var(--border);
+}
+
 .points-card__list {
-  margin-bottom: 10px;
-  padding: 3px 0;
+  margin-bottom: 2px;
+  padding: 1px 0;
   position: relative;
   z-index: 1;
 }
@@ -270,9 +373,9 @@ onMounted(() => {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 4px;
-  margin-top: 15px;
-  border-top: 3px dashed var(--border);
+  padding: 4px;
+  margin-top: 8px;
+
 }
 
 .points-card__item + .points-card__item {

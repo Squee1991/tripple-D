@@ -12,7 +12,7 @@ import {
     orderBy,
 } from 'firebase/firestore'
 import { userAuthStore } from './authStore.js'
-import { dailyStore } from './store/dailyStore.js'
+import { dailyStore } from './dailyStore.js'
 
 async function getUser() {
     const auth = getAuth()
@@ -281,6 +281,8 @@ export const useGuessWordStore = defineStore('guessWord', () => {
             if (attempts.value === 15 && !guessedPerfectWords.value.includes(word)) guessedPerfectWords.value.push(word)
             if (attempts.value === 1 && !guessedOnLastTryWords.value.includes(word)) guessedOnLastTryWords.value.push(word)
         }
+        daily.addGuessWord(1)
+
         try { daily.addGuessed(1) } catch {}
         await saveGuessProgress()
         if (authStore.name) await saveToLeaderboard(authStore.name, guessedWords.value.length)

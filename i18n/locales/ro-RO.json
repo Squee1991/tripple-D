@@ -594,17 +594,20 @@
     "answerThree": "În prezent, nu este prevăzută rambursarea pentru zilele rămase."
   },
   "daily": {
-    "first": "Învață 20 de cuvinte în toate modurile: Practica articolelor",
-    "second": "Obține 20 de articluși în practica articolelor",
-    "third": "Fă un streak de 20 de cuvinte (mod ușor) la maratonul articolelor",
+    "first": "Învață 10 cuvinte în toate modurile: Practica articolelor",
+    "second": "Obține 10 articluși în practica articolelor",
+    "third": "Fă un streak de 10 cuvinte (mod ușor) în maratonul articolelor",
     "fourth": "Obține 15 puncte de experiență în Practica articolelor",
-    "fifth": "Ghicește 10 cuvinte în modul: „Ghicește cuvântul”",
-    "sixth": "Fă un streak de 20 de cuvinte (mod mediu) la maratonul articolelor",
-    "seventh": "Învață 15 cuvinte la plural în modul: Practica articolelor",
-    "eighth": "Învață 20 de cuvinte în toate modurile: Practica articolelor",
-    "ninth": "Învață 15 cuvinte în modul audio: Practica articolelor",
-    "tenth": "Fă un streak de 15 cuvinte (mod dificil) la maratonul articolelor",
-    "eleventh": "Obține 10 puncte de experiență în Practica articolelor"
+    "fifth": "Ghicește 10 cuvinte în modul „Ghicește cuvântul”",
+    "sixth": "Fă un streak de 10 cuvinte (mod mediu) în maratonul articolelor",
+    "seventh": "Învață 10 cuvinte la plural în modul: Practica articolelor",
+    "eighth": "Învață 10 cuvinte în toate modurile: Practica articolelor",
+    "ninth": "Învață 10 cuvinte în modul audio: Practica articolelor",
+    "tenth": "Fă un streak de 10 cuvinte (mod dificil) în maratonul articolelor",
+    "eleventh": "Obține 10 puncte de experiență în Practica articolelor",
+    "twelve": "Finalizează un modul în nivelurile tematice",
+    "thirteenth": "Finalizează o sarcină în Tărâmurile Limbilor",
+    "fourteenth": "Ghicește 5 cuvinte în modul „Ghicește cuvântul”"
   },
   "preloader": {
     "value": "Vei fi redirecționat către pagina principală...",
@@ -1260,6 +1263,7 @@
     "level": "Nivel"
   },
   "accountPanel": {
+    "rank": "Rang",
     "title": "Panoul participantului",
     "ranked": "Clasament",
     "articles": "Articluși",
@@ -4454,11 +4458,17 @@
     "modalNotAllowEffectThird": "Achiziționează-l din magazinul evenimentului folosind fulgi de zăpadă!",
     "modalNotAllowEffectClose": "Închide"
   },
-  "articleOverlay": {
-    "title": "Ce este un Articluș și cum îl poți obține",
-    "first": "Articlușul este moneda internă a aplicației",
-    "second": "Se obține prin sarcina „Practica articolelor”",
-    "third": "Poate fi cheltuit în magazinul intern"
+  "pavelOverlay": {
+    "newbie": "Începător",
+    "rankTitle": "Conferați",
+    "rankLabelOne": "- Conferații se acordă pentru îndeplinirea sarcinilor zilnice.",
+    "rankLabelTwo": "- Poți obține unul pe zi completând toate sarcinile zilnice. Recompensele pentru Conferați pot fi vizualizate în profil la secțiunea „Rang”.",
+    "articleTitle": "Articluși",
+    "articleLabelOne": "- Se obține prin sarcini: Practica articolelor, tărâmurile limbilor și sarcini din secțiunea „Învățare”.",
+    "articleLabelTwo": "- Se consumă pentru reîncercări în tărâmurile limbilor și în magazinul din profil.",
+    "levelTitle": "Nivel",
+    "levelLabelOne": "- Nivelul crește prin îndeplinirea sarcinilor.",
+    "levelLabelTwo": "- Odată cu creșterea nivelului, se deblochează sarcini în tărâmurile limbilor."
   },
   "idioms": {
     "title": "Idiomuri și expresii frazeologice",
@@ -5452,6 +5462,27 @@
     "lossText": "De data aceasta adversarul a fost mai puternic. Nu te descuraja, mai încearcă o dată!",
     "end": "Felicitări! Exercițiul a fost finalizat"
   },
+  "describePicture": {
+    "title": "Describe the Picture",
+    "description": "Look at the picture and describe what you see in German. AI will check your answer and give feedback.",
+    "startBtn": "Start Game",
+    "task": "Task",
+    "finishTitle": "Great job!",
+    "finishText": "All tasks completed.",
+    "restartBtn": "Start again",
+    "placeholder": "What do you see in the picture?",
+    "suggestedAnswer": "Suggested improved answer",
+    "keyCorrections": "Key corrections",
+    "inputPlaceholder": "Write your answer in German...",
+    "nextBtn": "Next",
+    "rulesTitle": "Game Rules",
+    "rulesText": "Describe the picture you see in German. The AI will analyze your description and provide feedback, corrections, and an improved version of your answer."
+  },
+  "describePictureTips": {
+    "tipOne": "Start with simple sentences describing what you see",
+    "tipTwo": "Use vocabulary you know - it is okay to make mistakes",
+    "tipThree": "Try to describe colors, positions, and actions"
+  },
   "nav": {
     "training": "Învățare",
     "gameMode": "Jocuri",
@@ -5482,6 +5513,7 @@
     "themen": "Niveluri tematice",
     "idioms": "Expresii fixe",
     "wordDuel": "Duelul frazelor",
+    "describePicture": "Describe Picture",
     "quests": "Jurnalul de Sarcini",
     "languagesLands": "Ținuturi lingvistice"
   },
@@ -5630,7 +5662,10 @@
     "userExists": "Un utilizator cu acest e-mail este deja înregistrat",
     "invalidEmail": "Format e-mail invalid",
     "invalidCredential": "Parolă nepermisă sau incorectă",
-    "tooManyRequests": "Prea multe încercări. Încearcă mai târziu"
+    "tooManyRequests": "Prea multe încercări. Încearcă mai târziu",
+    "weakPassword": "Parola trebuie să aibă cel puțin 6 caractere",
+    "userDisabled": "Contul dumneavoastră a fost blocat",
+    "networkRequestFailed": "Problemă de conexiune! Verificați conexiunea la internet"
   },
   "about": {
     "title": "E plictisitor să înveți germana și articolele substantivelor?",

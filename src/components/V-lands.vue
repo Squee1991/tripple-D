@@ -28,7 +28,6 @@
           {{ t('locationsMenu.choose') }}
         </button>
       </div>
-
       <div class="map-right-container">
         <div class="map-pagination-arrows">
           <button
@@ -45,7 +44,6 @@
               @click="nextCategory"
           >›</button>
         </div>
-
         <div class="map-right">
           <template v-if="filteredRegions.length > 0">
             <div
@@ -89,7 +87,6 @@ import {ref, computed, onMounted, onBeforeUnmount, watch} from 'vue'
 import {useRouter} from 'vue-router'
 import {regions} from '@/utils/regions.js'
 import {userlangStore} from '../../store/learningStore.js'
-
 const {t, locale} = useI18n()
 const langStore = userlangStore()
 const router = useRouter()
@@ -655,11 +652,18 @@ onBeforeUnmount(() => {
 }
 
 .current-category-name {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 900;
   color: #333;
-  text-transform: uppercase;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 0 black;
+  border: 2px solid black;
+  border-radius: 8px;
+  flex: 1;
+  background: white;
+  height: 40px;
 }
 
 .map-empty-placeholder {
@@ -668,8 +672,6 @@ onBeforeUnmount(() => {
   align-items: center;
   justify-content: center;
   padding: 15px;
-  background: rgba(255, 255, 255, 0.4);
-  border-radius: 15px;
   margin-top: 10px;
 }
 

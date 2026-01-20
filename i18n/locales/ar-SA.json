@@ -594,17 +594,20 @@
     "answerThree": "حاليًا لا يوجد استرجاع للأيام المتبقية."
   },
   "daily": {
-    "first": "احفظ 20 كلمة في جميع الأوضاع: تمارين أدوات التعريف",
-    "second": "احصل على 20 عملة أرتيكلوس في تمارين أدوات التعريف",
-    "third": "حقق سلسلة من 20 كلمة (الوضع السهل) في ماراثون أدوات التعريف",
-    "fourth": "احصل على 15 نقطة خبرة في تمارين أدوات التعريف",
-    "fifth": "خمن 10 كلمات في وضع: «خمن الكلمة»",
-    "sixth": "حقق سلسلة من 20 كلمة (الوضع المتوسط) في ماراثون أدوات التعريف",
-    "seventh": "احفظ 15 كلمة في صيغة الجمع في وضع: تمارين أدوات التعريف",
-    "eighth": "احفظ 20 كلمة في جميع الأوضاع: تمارين أدوات التعريف",
-    "ninth": "احفظ 15 كلمة في الوضع الصوتي: تمارين أدوات التعريف",
-    "tenth": "حقق سلسلة من 15 كلمة (الوضع الصعب) في ماراثون أدوات التعريف",
-    "eleventh": "احصل على 10 نقاط خبرة في تمارين أدوات التعريف"
+    "first": "تعلم 10 كلمات في جميع الأوضاع: ممارسة الأدوات",
+    "second": "احصل على 10 'أرتيكلوس' في ممارسة الأدوات",
+    "third": "حقق سلسلة من 10 كلمات (الوضع السهل) في ماراثون الأدوات",
+    "fourth": "احصل على 15 نقطة خبرة في ممارسة الأدوات",
+    "fifth": "خمن 10 كلمات في وضع «خمن الكلمة»",
+    "sixth": "حقق سلسلة من 10 كلمات (الوضع المتوسط) في ماراثون الأدوات",
+    "seventh": "تعلم 10 كلمات في صيغة الجمع في وضع: ممارسة الأدوات",
+    "eighth": "تعلم 10 كلمات في جميع الأوضاع: ممارسة الأدوات",
+    "ninth": "تعلم 10 كلمات في الوضع الصوتي: ممارسة الأدوات",
+    "tenth": "حقق سلسلة من 10 كلمات (الوضع الصعب) في ماراثون الأدوات",
+    "eleventh": "احصل على 10 نقاط خبرة في ممارسة الأدوات",
+    "twelve": "أكمل وحدة واحدة في المستويات الموضوعية",
+    "thirteenth": "أكمل مهمة في أراضي اللغات",
+    "fourteenth": "خمن 5 كلمات في وضع «خمن الكلمة»"
   },
   "preloader": {
     "value": "سيتم تحويلك إلى الصفحة الرئيسية...",
@@ -1260,6 +1263,7 @@
     "level": "المستوى"
   },
   "accountPanel": {
+    "rank": "رتبة",
     "title": "لوحة العضو",
     "ranked": "التصنيف",
     "articles": "المقالات",
@@ -4454,11 +4458,17 @@
     "modalNotAllowEffectThird": "احصل عليه من متجر الحدث مقابل رقاقات الثلج!",
     "modalNotAllowEffectClose": "إغلاق"
   },
-  "articleOverlay": {
-    "title": "ما هو الأرتيكلوس ولماذا يتم الحصول عليه",
-    "first": "الأرتيكلوس - عملة داخلية",
-    "second": "يتم الحصول عليه من مهمة 'ممارسة أدوات التعريف'",
-    "third": "يمكن إنفاقه في المتجر الداخلي"
+  "pavelOverlay": {
+    "newbie": "مبتدئ",
+    "rankTitle": "كونفيرات",
+    "rankLabelOne": "- تُمنح الـ 'كونفيرات' مقابل إكمال المهام اليومية.",
+    "rankLabelTwo": "- يمكنك الحصول على واحدة يومياً عند إكمال جميع المهام اليومية. يمكن عرض مكافآت الـ 'كونفيرات' في ملفك الشخصي في قسم «الرتبة».",
+    "articleTitle": "أرتيكلوس",
+    "articleLabelOne": "- يتم الحصول عليها من المهام: ممارسة الأدوات، أراضي اللغات، ومهام قسم «التعلم».",
+    "articleLabelTwo": "- تُنفق على محاولات إعادة المهام في أراضي اللغات وفي المتجر داخل الملف الشخصي.",
+    "levelTitle": "المستوى",
+    "levelLabelOne": "- يرتفع المستوى عند إكمال المهام.",
+    "levelLabelTwo": "- مع رفع المستوى، تفتح مهام جديدة في أراضي اللغات."
   },
   "idioms": {
     "title": "التعابير الاصطلاحية والأمثال",
@@ -5452,6 +5462,27 @@
     "lossText": "هذه المرة كان الخصم أقوى. لا تقلق، حاول مرة أخرى!",
     "end": "مبروك! التمرين انتهى"
   },
+  "describePicture": {
+    "title": "Describe the Picture",
+    "description": "Look at the picture and describe what you see in German. AI will check your answer and give feedback.",
+    "startBtn": "Start Game",
+    "task": "Task",
+    "finishTitle": "Great job!",
+    "finishText": "All tasks completed.",
+    "restartBtn": "Start again",
+    "placeholder": "What do you see in the picture?",
+    "suggestedAnswer": "Suggested improved answer",
+    "keyCorrections": "Key corrections",
+    "inputPlaceholder": "Write your answer in German...",
+    "nextBtn": "Next",
+    "rulesTitle": "Game Rules",
+    "rulesText": "Describe the picture you see in German. The AI will analyze your description and provide feedback, corrections, and an improved version of your answer."
+  },
+  "describePictureTips": {
+    "tipOne": "Start with simple sentences describing what you see",
+    "tipTwo": "Use vocabulary you know - it is okay to make mistakes",
+    "tipThree": "Try to describe colors, positions, and actions"
+  },
   "nav": {
     "training": "التعلم",
     "gameMode": "الألعاب",
@@ -5482,6 +5513,7 @@
     "themen": "المستويات الموضوعية",
     "idioms": "التعابير الاصطلاحية",
     "wordDuel": "مبارزة العبارات",
+    "describePicture": "Describe Picture",
     "quests": "سجل المهام",
     "languagesLands": "أراضي اللغات"
   },
@@ -5630,7 +5662,10 @@
     "userExists": "المستخدم بهذا البريد الإلكتروني مسجل بالفعل",
     "invalidEmail": "صيغة البريد الإلكتروني غير صحيحة",
     "invalidCredential": "كلمة المرور غير صالحة أو خاطئة",
-    "tooManyRequests": "عدد كبير من المحاولات. حاول لاحقاً"
+    "tooManyRequests": "عدد كبير من المحاولات. حاول لاحقاً",
+    "weakPassword": "يجب أن تتكون كلمة المرور من 6 أحرف على الأقل",
+    "userDisabled": "تم حظر حسابك",
+    "networkRequestFailed": "مشكلة في الاتصال! تحقق من الإنترنت"
   },
   "about": {
     "title": "هل تعلم الألمانية والمقالات ممل؟",

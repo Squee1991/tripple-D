@@ -8,13 +8,14 @@ import {
 	serverTimestamp
 } from 'firebase/firestore'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
-
+import { dailyStore } from './dailyStore.js'
 export const useTrainerStore = defineStore('thematic', () => {
+	const daily = dailyStore()
 	const topic = ref('')
 	const jsonData = ref(null)
-	const selectedLevel = ref(null)       // { level, modules: [...] }
-	const selectedModule = ref(null)      // { id, ... }
-	const completedModules = ref([])      // [{ level, id }, ...]
+	const selectedLevel = ref(null)
+	const selectedModule = ref(null)
+	const completedModules = ref([])
 
 	const db = getFirestore()
 	const progressDocRef = (uid, topicKey) =>
@@ -23,6 +24,7 @@ export const useTrainerStore = defineStore('thematic', () => {
 	const addCompletedModule = (level, id) => {
 		if (!completedModules.value.some(m => m.level === level && m.id === id)) {
 			completedModules.value.push({ level, id })
+			daily.addThematicLearning(1)
 			saveProgress()
 		}
 	}
@@ -67,10 +69,7 @@ export const useTrainerStore = defineStore('thematic', () => {
 			completedModules.value = []
 			return
 		}
-
 		const t = snap.data()
-
-		// Поддержка старого формата: [1,2,3] → [{level:1,id:1},...]
 		if (Array.isArray(t.completedModules) && typeof t.completedModules[0] === 'number') {
 			completedModules.value = t.completedModules.map(id => ({ level: 1, id }))
 		} else if (Array.isArray(t.completedModules)) {
@@ -78,7 +77,6 @@ export const useTrainerStore = defineStore('thematic', () => {
 		} else {
 			completedModules.value = []
 		}
-
 		if (t.level && t.module) {
 			await setThemeAndModule(topic.value, t.level, t.module)
 		}
@@ -86,10 +84,8 @@ export const useTrainerStore = defineStore('thematic', () => {
 
 	const setThemeAndModule = async (topicName, level, moduleId) => {
 		topic.value = topicName
-
 		const res = await fetch(`/${topicName}.json`)
 		jsonData.value = await res.json()
-
 		selectedLevel.value = jsonData.value.levels.find(l => l.level === Number(level)) ?? null
 		selectedModule.value = selectedLevel.value
 			? selectedLevel.value.modules.find(m => m.id === Number(moduleId)) ?? null

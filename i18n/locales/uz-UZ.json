@@ -594,17 +594,20 @@
     "answerThree": "Hozircha qolgan kunlar uchun pul qaytarish nazarda tutilmagan."
   },
   "daily": {
-    "first": "Barcha rejimlarda 20 ta so‘zni yodlang: Artikl mashqlari",
-    "second": "Artikl mashqlarida 20 ta artiklyus oling",
-    "third": "20 ta so‘zdan iborat ketma-ketlik (oson rejim) — Artikllar marafoni",
-    "fourth": "Artikl mashqlarida 15 tajriba ballini oling",
-    "fifth": "«So‘zni top» rejimida 10 ta so‘zni toping",
-    "sixth": "20 ta so‘zdan iborat ketma-ketlik (o‘rta rejim) — Artikllar marafoni",
-    "seventh": "Artikl mashqlarida 15 ta ko‘plik so‘zlarini yodlang",
-    "eighth": "Barcha rejimlarda 20 ta so‘zni yodlang: Artikl mashqlari",
-    "ninth": "Artikl mashqlarida audio rejimda 15 ta so‘zni yodlang",
-    "tenth": "15 ta so‘zdan iborat ketma-ketlik (qiyin rejim) — Artikllar marafoni",
-    "eleventh": "Artikl mashqlarida 10 tajriba ballini oling"
+    "first": "Barcha rejimlarda 10 ta so'z o'rgan: Artikllar amaliyoti",
+    "second": "Artikllar amaliyotida 10 ta artiklyus ol",
+    "third": "Artikllar marafonida 10 ta so'zli strik qil (oson rejim)",
+    "fourth": "Artikllar amaliyotida 15 tajriba ochkosini to'pla",
+    "fifth": "«So'zni top» rejimida 10 ta so'zni top",
+    "sixth": "Artikllar marafonida 10 ta so'zli strik qil (o'rta rejim)",
+    "seventh": "Artikllar amaliyoti rejimida 10 ta ko'plikdagi so'zni o'rgan",
+    "eighth": "Barcha rejimlarda 10 ta so'z o'rgan: Artikllar amaliyoti",
+    "ninth": "Audio rejimida 10 ta so'z o'rgan: Artikllar amaliyoti",
+    "tenth": "Artikllar marafonida 10 ta so'zli strik qil (qiyin rejim)",
+    "eleventh": "Artikllar amaliyotida 10 tajriba ochkosini to'pla",
+    "twelve": "Mavzuli darajalarda bitta modulni yakunla",
+    "thirteenth": "Til diyarlarida bitta topshiriqni bajar",
+    "fourteenth": "«So'zni top» rejimida 5 ta so'zni top"
   },
   "preloader": {
     "value": "Siz asosiy sahifaga yo‘naltirilasiz...",
@@ -1260,6 +1263,7 @@
     "level": "Daraja"
   },
   "accountPanel": {
+    "rank": "Unvon",
     "title": "Ishtirokchi paneli",
     "ranked": "Reyting",
     "articles": "Artiklyuslar",
@@ -4454,11 +4458,17 @@
     "modalNotAllowEffectThird": "Uni tadbir do‘konidan qor parchasi evaziga oling!",
     "modalNotAllowEffectClose": "Yopish"
   },
-  "articleOverlay": {
-    "title": "Artiklyus nima va uni qanday olish mumkin",
-    "first": "Artiklyus — bu ichki valyuta",
-    "second": "“Artikl amaliyoti” topshirig‘idan olinadi",
-    "third": "Ichki do‘konda sarflash mumkin"
+  "pavelOverlay": {
+    "newbie": "Yangi",
+    "rankTitle": "Konferatlar",
+    "rankLabelOne": "- Konferatlar kundalik topshiriqlarni bajarganlik uchun beriladi.",
+    "rankLabelTwo": "- Barcha kundalik topshiriqlarni bajarib, kuniga bitta olishingiz mumkin. Konferatlar uchun mukofotlarni shaxsiy kabinetning «Unvon» bo'limida ko'rish mumkin.",
+    "articleTitle": "Artiklyus",
+    "articleLabelOne": "- Topshiriqlar orqali olinadi: Artikllar amaliyoti, til diyarlari va «O'rganish» bo'limidagi vazifalar.",
+    "articleLabelTwo": "- Til diyarlarida qayta urinishlar va shaxsiy kabinetdagi do'kon uchun sarflanadi.",
+    "levelTitle": "Daraja",
+    "levelLabelOne": "- Topshiriqlarni bajarish orqali daraja oshadi.",
+    "levelLabelTwo": "- Daraja oshishi bilan til diyarlaridagi topshiriqlar ochiladi."
   },
   "idioms": {
     "title": "Frazeologizmlar va idiomalar",
@@ -5452,6 +5462,27 @@
     "lossText": "Bu safar raqib kuchliroq bo‘ldi. Xafa bo‘lmang, yana urinib ko‘ring!",
     "end": "Tabriklaymiz! Mashq tugallandi"
   },
+  "describePicture": {
+    "title": "Describe the Picture",
+    "description": "Look at the picture and describe what you see in German. AI will check your answer and give feedback.",
+    "startBtn": "Start Game",
+    "task": "Task",
+    "finishTitle": "Great job!",
+    "finishText": "All tasks completed.",
+    "restartBtn": "Start again",
+    "placeholder": "What do you see in the picture?",
+    "suggestedAnswer": "Suggested improved answer",
+    "keyCorrections": "Key corrections",
+    "inputPlaceholder": "Write your answer in German...",
+    "nextBtn": "Next",
+    "rulesTitle": "Game Rules",
+    "rulesText": "Describe the picture you see in German. The AI will analyze your description and provide feedback, corrections, and an improved version of your answer."
+  },
+  "describePictureTips": {
+    "tipOne": "Start with simple sentences describing what you see",
+    "tipTwo": "Use vocabulary you know - it is okay to make mistakes",
+    "tipThree": "Try to describe colors, positions, and actions"
+  },
   "nav": {
     "training": "O‘qish",
     "gameMode": "O‘yinlar",
@@ -5481,7 +5512,8 @@
     "card": "Kartalar yaratish",
     "themen": "Mavzuli darajalar",
     "idioms": "Frazeologizmlar",
-    "wordDuel": "So‘zlar dueli",
+    "wordDuel": "So'zlar dueli",
+    "describePicture": "Describe Picture",
     "quests": "Kvest jurnali",
     "languagesLands": "Til diyorlari"
   },
@@ -5630,7 +5662,10 @@
     "userExists": "Bu email bilan foydalanuvchi allaqachon ro‘yxatdan o‘tgan",
     "invalidEmail": "Email formati noto‘g‘ri",
     "invalidCredential": "Noto‘g‘ri yoki haqiqiy bo‘lmagan parol",
-    "tooManyRequests": "Juda ko‘p urinishlar. Keyinroq urinib ko‘ring"
+    "tooManyRequests": "Juda ko‘p urinishlar. Keyinroq urinib ko‘ring",
+    "weakPassword": "Parol kamida 6 ta belgidan iborat bo'lishi kerak",
+    "userDisabled": "Hisobingiz bloklangan",
+    "networkRequestFailed": "Ulanishda muammo! Internetni tekshiring"
   },
   "about": {
     "title": "Nemis tili va ot artikllarini o‘rganish zerikarlimi?",

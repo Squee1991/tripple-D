@@ -594,17 +594,20 @@
     "answerThree": "Non, le remboursement des jours restants n'est pas prévu pour le moment."
   },
   "daily": {
-    "first": "Apprends 20 mots dans tous les modes : Pratique des articles",
-    "second": "Gagne 20 Articlyus en pratique des articles",
-    "third": "Fais une série de 20 mots (mode facile) au marathon d'articles",
+    "first": "Apprends 10 mots dans tous les modes : Pratique des articles",
+    "second": "Gagne 10 Articluses en pratique des articles",
+    "third": "Fais une série de 10 mots (mode facile) au Marathon des articles",
     "fourth": "Gagne 15 points d'expérience en Pratique des articles",
-    "fifth": "Devine 10 mots dans le mode : « Devine le mot »",
-    "sixth": "Fais une série de 20 mots (mode moyen) au marathon d'articles",
-    "seventh": "Apprends 15 mots au pluriel dans le mode : Pratique des articles",
-    "eighth": "Apprends 20 mots dans tous les modes : Pratique des articles",
-    "ninth": "Apprends 15 mots en mode audio : Pratique des articles",
-    "tenth": "Fais une série de 15 mots (mode difficile) au marathon d'articles",
-    "eleventh": "Gagne 10 points d'expérience en Pratique des articles"
+    "fifth": "Devine 10 mots en mode « Devine le mot »",
+    "sixth": "Fais une série de 10 mots (mode moyen) au Marathon des articles",
+    "seventh": "Apprends 10 mots au pluriel en mode : Pratique des articles",
+    "eighth": "Apprends 10 mots dans tous les modes : Pratique des articles",
+    "ninth": "Apprends 10 mots en mode audio : Pratique des articles",
+    "tenth": "Fais une série de 10 mots (mode difficile) au Marathon des articles",
+    "eleventh": "Gagne 10 points d'expérience en Pratique des articles",
+    "twelve": "Termine un module dans les niveaux thématiques",
+    "thirteenth": "Termine une quête dans les Terres de Langues",
+    "fourteenth": "Devine 5 mots en mode « Devine le mot »"
   },
   "preloader": {
     "value": "Vous allez être redirigé vers l'accueil...",
@@ -1260,6 +1263,7 @@
     "level": "Niveau"
   },
   "accountPanel": {
+    "rank": "Rang",
     "title": "Panneau du membre",
     "ranked": "Classement",
     "articles": "Articlyus",
@@ -4453,11 +4457,17 @@
     "modalNotAllowEffectThird": "Achetez-le dans la boutique de l'événement avec des flocons !",
     "modalNotAllowEffectClose": "Fermer"
   },
-  "articleOverlay": {
-    "title": "Qu'est-ce qu'un Articlus et comment en obtenir",
-    "first": "L'Articlus est la monnaie interne du site",
-    "second": "Il s'obtient via l'exercice 'Pratique des articles'",
-    "third": "Il peut être dépensé dans la boutique interne"
+  "pavelOverlay": {
+    "newbie": "Novice",
+    "rankTitle": "Conférats",
+    "rankLabelOne": "- Les Conférats sont attribués pour l'accomplissement des tâches quotidiennes.",
+    "rankLabelTwo": "- Vous pouvez en obtenir un par jour en terminant toutes les tâches quotidiennes. Les récompenses pour les Conférats peuvent être consultées dans votre profil dans la section « Rang ».",
+    "articleTitle": "Articlus",
+    "articleLabelOne": "- S'obtient via les tâches : Pratique des articles, terres de langues et tâches de la section « Apprentissage ».",
+    "articleLabelTwo": "- Se dépense pour des tentatives supplémentaires dans les terres de langues et dans la boutique du profil.",
+    "levelTitle": "Niveau",
+    "levelLabelOne": "- Le niveau augmente en accomplissant des tâches.",
+    "levelLabelTwo": "- Monter de niveau débloque des quêtes dans les terres de langues."
   },
   "idioms": {
     "title": "Idiomes et expressions",
@@ -5451,6 +5461,27 @@
     "lossText": "Cette fois, l'adversaire était plus fort. Ne vous découragez pas, réessayez !",
     "end": "Félicitations ! Exercice terminé"
   },
+  "describePicture": {
+    "title": "Describe the Picture",
+    "description": "Look at the picture and describe what you see in German. AI will check your answer and give feedback.",
+    "startBtn": "Start Game",
+    "task": "Task",
+    "finishTitle": "Great job!",
+    "finishText": "All tasks completed.",
+    "restartBtn": "Start again",
+    "placeholder": "What do you see in the picture?",
+    "suggestedAnswer": "Suggested improved answer",
+    "keyCorrections": "Key corrections",
+    "inputPlaceholder": "Write your answer in German...",
+    "nextBtn": "Next",
+    "rulesTitle": "Game Rules",
+    "rulesText": "Describe the picture you see in German. The AI will analyze your description and provide feedback, corrections, and an improved version of your answer."
+  },
+  "describePictureTips": {
+    "tipOne": "Start with simple sentences describing what you see",
+    "tipTwo": "Use vocabulary you know - it is okay to make mistakes",
+    "tipThree": "Try to describe colors, positions, and actions"
+  },
   "nav": {
     "training": "Apprentissage",
     "gameMode": "Jeux",
@@ -5481,6 +5512,7 @@
     "themen": "Niveaux thématiques",
     "idioms": "Expressions",
     "wordDuel": "Duel de phrases",
+    "describePicture": "Describe Picture",
     "quests": "Journal de Quêtes",
     "languagesLands": "Terres de Langues"
   },
@@ -5629,7 +5661,10 @@
     "userExists": "Un utilisateur avec cet e-mail est déjà inscrit",
     "invalidEmail": "Format d'e-mail invalide",
     "invalidCredential": "Mot de passe invalide ou incorrect",
-    "tooManyRequests": "Trop de tentatives. Veuillez réessayer plus tard"
+    "tooManyRequests": "Trop de tentatives. Veuillez réessayer plus tard",
+    "weakPassword": "Le mot de passe doit contenir au moins 6 caractères",
+    "userDisabled": "Votre compte a été bloqué",
+    "networkRequestFailed": "Problème de connexion ! Vérifiez votre connexion internet"
   },
   "about": {
     "title": "Apprendre l'allemand et ses articles vous ennuie ?",
