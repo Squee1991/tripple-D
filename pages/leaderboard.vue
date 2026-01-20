@@ -54,7 +54,7 @@ const paginatedData = computed(() => {
 })
 
 const backToMainPage = () => {
-  router.back()
+  router.push('/')
 }
 
 const isInGuessLeaderboard = computed(() =>
@@ -460,7 +460,6 @@ onMounted(async () => {
   width: 100%;
 }
 
-/* Новые вспомогательные классы для фиксации пагинации снизу */
 .blackboard {
   height: 100%;
   display: flex;
@@ -471,7 +470,7 @@ onMounted(async () => {
   flex: 1;
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* Важно, чтобы контент не вылезал за пределы до пагинации */
+  overflow: hidden;
 }
 
 .discipline-container, .leaderboard-wrapper {
@@ -509,26 +508,13 @@ onMounted(async () => {
   overflow-y: auto;
 }
 
-.leaderboard__items-container > li:nth-child(1) .leaderboard-item {
-  background: #fff9c4;
-}
-
-.leaderboard__items-container > li:nth-child(2) .leaderboard-item {
-  background: #c8e6c9;
-}
-
-.leaderboard__items-container > li:nth-child(3) .leaderboard-item {
-  background: #ffccbc;
-}
-
-/* СТИЛИ ПАГИНАЦИИ */
 .pagination {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
   padding: 20px 0 10px 0;
-  margin-top: auto; /* Прижимает к низу */
+  margin-top: auto;
   border-top: 2px dashed rgba(255, 255, 255, 0.3);
   z-index: 10;
 }
