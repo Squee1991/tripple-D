@@ -7,7 +7,7 @@
     "description": "wildLandsFirstQuest.description",
     "conditions": {
       "goal": "Освой слова: Природа, Лес, Дерево и Река через разные упражнения",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -130,7 +130,7 @@
     "description": "wildLandsSecondQuest.description",
     "conditions": {
       "goal": "Освой названия животных и объедини их с локациями (Лес, Река, Дерево)",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -257,7 +257,7 @@
     "description": "wildLandsThirdQuest.description",
     "conditions": {
       "goal": "Выучи 'Гора' и 'Солнце' и заставь их работать в нормальных фразах",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": { "points": 20, "xp": 20 },
@@ -381,7 +381,7 @@
     "description": "wildLandsFourthQuest.description",
     "conditions": {
       "goal": "Выучи 'Озеро' и 'Вода', и впиши их в лесной пейзаж",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": { "points": 20, "xp": 20 },
@@ -501,7 +501,7 @@
     "description": "wildLandsFifthQuest.description",
     "conditions": {
       "goal": "Освой слова: Ветер, Дождь, Облако и научись понимать тексты о погоде",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -643,7 +643,7 @@
     "description": "wildLandsSixthQuest.description",
     "conditions": {
       "goal": "Освой слова: Зима, Снег, Лёд, Белый и конструкцию 'Es schneit'",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -790,7 +790,7 @@
     "description": "wildLandsSeventhQuest.description",
     "conditions": {
       "goal": "Освой слова: Луна, Звезда, Свет, Небо, Темнота",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -918,7 +918,7 @@
     "description": "wildLandsEightQuest.description",
     "conditions": {
       "goal": "Освой слова: Лиса, Дерево, Камень, Река и опиши прогулку по лесу",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1046,7 +1046,7 @@
     "description": "Лес и скалы. Здесь высоко и тихо. Учись описывать горный ландшафт.",
     "conditions": {
       "goal": "Освой слова: Гора, Долина, Скала, Высокий, Глубокий",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1176,7 +1176,7 @@
     "description": "wildLandsTenthQuest.description",
     "conditions": {
       "goal": "Освой слова: Туман, Трава, Воздух, Тихий",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1314,7 +1314,7 @@
     "description": "wildLandsElevenQuest.description",
     "conditions": {
       "goal": "Освой слова: Утро, Птица, Лист, Цветок",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1442,7 +1442,7 @@
     "description": "wildLandsTwelveQuest.description",
     "conditions": {
       "goal": "Освой слова: Море, Пляж, Песок, Волна",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1571,7 +1571,7 @@
     "description": "Небо темнеет. Ветер срывает листья. Начинается буря. Ты слышишь гром и видишь вспышки в небе.",
     "conditions": {
       "goal": "Освой слова: Гроза, Молния, Гром, Черный",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1704,7 +1704,7 @@
     "description": "wildLandsFourteenQuest.description",
     "conditions": {
       "goal": "Освой слова: Луг, Бабочка, Летать, Пестрый",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1837,7 +1837,7 @@
     "description": "wildLandsFifteenQuest.description",
     "conditions": {
       "goal": "Сдай финальный экзамен: объедини животных, локации и погоду",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {

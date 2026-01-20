@@ -291,10 +291,8 @@ export const userChainStore = defineStore('chain', () => {
 		justAwarded.value = false
 
 		try {
-			// ИСПРАВЛЕНИЕ: Превращаем объект категорий в плоский массив
 			const flatRegions = Object.values(regions).flat()
 			const allRegionKeys = flatRegions.map(r => r.pathTo)
-
 			const tryLoadFrom = async (region) => {
 				const res = await fetch(`/quests/quests-${region}.json`)
 				if (!res.ok) return null
@@ -335,10 +333,8 @@ export const userChainStore = defineStore('chain', () => {
 			} else {
 				initializeTaskQueue(quest.value.tasks.length)
 			}
-
 			const changed = applyLifeRegenIfNeeded()
 			if (changed) await saveLivesToRoot()
-
 			startLifeTicker()
 		} catch (e) {
 			error.value = e.message || String(e)
@@ -375,7 +371,6 @@ export const userChainStore = defineStore('chain', () => {
 		if (isConfirmDisabled.value || !task.value) return
 		confirming.value = true
 		sessionStarted.value = true
-
 		switch (task.value.type) {
 			case 'select':
 			case 'readAndAnswer':
@@ -415,9 +410,7 @@ export const userChainStore = defineStore('chain', () => {
 
 		const originalIndex = currentTaskIndex.value
 		taskResults.value[originalIndex] = isCorrect.value
-
 		showResult.value = true
-
 		try {
 			if (!isCorrect.value && !skipLives && !lifeSpentThisStep.value) {
 				const before = lives.value
@@ -438,26 +431,22 @@ export const userChainStore = defineStore('chain', () => {
 		if (advancing.value) return
 		advancing.value = true
 		showResult.value = false
-
 		if (!skipLives && lives.value <= 0) {
 			finished.value = true
 			advancing.value = false
 			return
 		}
-
 		if (internalIndex.value + 1 >= activeQueue.value.length) {
 			finished.value = true
 		} else {
 			internalIndex.value += 1
 		}
-
 		resetInputs()
 		advancing.value = false
 	}
 
 	function startRetryMistakes(indices = null) {
 		let mistakeIndices = indices
-
 		if (!mistakeIndices) {
 			mistakeIndices = []
 			for (const [key, val] of Object.entries(taskResults.value)) {
@@ -466,7 +455,6 @@ export const userChainStore = defineStore('chain', () => {
 		}
 
 		if (mistakeIndices.length === 0) return
-
 		activeQueue.value = mistakeIndices.sort((a, b) => a - b)
 		internalIndex.value = 0
 		finished.value = false
@@ -525,7 +513,6 @@ export const userChainStore = defineStore('chain', () => {
 					if (as !== bs) return bs - as
 					return (b.updatedAtMs || 0) - (a.updatedAtMs || 0)
 				})[0]
-
 			if (!found) return
 			qp[newId] = found
 			questData.aliases.forEach(id => delete qp[id])

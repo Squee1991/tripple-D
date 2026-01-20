@@ -6,7 +6,7 @@
     "description": "masterLandsFirstQuest.description",
     "conditions": {
       "goal": "Понимать и использовать базовые рабочие фразы",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -126,7 +126,7 @@
     "description": "masterLandsSecondQuest.description",
     "conditions": {
       "goal": "Выучить слова и фразы про место работы",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -368,7 +368,7 @@
     "description": "masterLandsFourthQuests.description",
     "conditions": {
       "goal": "Выучить фразы про рабочее время и перерывы",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -612,7 +612,7 @@
     "description": "masterLandsSixthQuests.description",
     "conditions": {
       "goal": "Выучить базу по инструментам и технике безопасности",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -858,7 +858,7 @@
     "description": "masterLandsEightQuests.description",
     "conditions": {
       "goal": "Выучить базу по погрузке и весу",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1097,7 +1097,7 @@
     "description": "masterLandsTenQuests.description",
     "conditions": {
       "goal": "Выучить названия инструментов и команды на объекте",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1337,7 +1337,7 @@
     "description": "masterLandsTwelveQuests.description",
     "conditions": {
       "goal": "Выучить замеры и последовательность действий",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1603,7 +1603,7 @@
     "description": "masterLandsFourteenQuests.description",
     "conditions": {
       "goal": "Научиться оформлять больничный на немецком",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {

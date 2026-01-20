@@ -1,7 +1,7 @@
 <template>
   <Overlay :visible="showAuth" @close="closeAuth"/>
   <transition name="slide">
-    <SignIn v-if="showAuth" @success="closeAuth"/>
+    <SignIn v-if="showAuth" @close-auth-form="closeAuth"/>
   </transition>
   <div class="banner">
     <section ref="bannerRef" class="banner__section">
@@ -18,7 +18,7 @@
                     'fade-glow': fadingGlow === word.type}]"
             >
               <span>{{ word.text }}</span>
-              <img class="snow" :src="Snow" alt="">
+<!--              <img class="snow" :src="Snow" alt="">-->
             </div>
           </div>
           <h1 class="banner__title" v-once>{{ t('banner.title') }}</h1>
@@ -138,6 +138,8 @@ onMounted(() => {
   cursor: pointer;
   user-select: none;
   transition: all 0.1s ease-in-out;
+  box-shadow: 2px 2px 0 black;
+  border: 2px solid #1e1e1e;
 }
 
 .snow {

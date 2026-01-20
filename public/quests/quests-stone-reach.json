@@ -6,7 +6,7 @@
     "description": "questsStoneReachFirstQuests.description",
     "conditions": {
       "goal": "questsStoneReachFirstQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -202,7 +202,7 @@
     "description": "questsStoneReachSecondQuests.description",
     "conditions": {
       "goal": "questsStoneReachSecondQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -372,7 +372,7 @@
     "description": "questsStoneReachThirdQuests.description",
     "conditions": {
       "goal": "questsStoneReachThirdQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -554,7 +554,7 @@
     "description": "questsStoneReachFourthQuests.description",
     "conditions": {
       "goal": "questsStoneReachFourthQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -732,7 +732,7 @@
     "description": "questsStoneReachFifthQuests.description",
     "conditions": {
       "goal": "questsStoneReachFifthQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -914,7 +914,7 @@
     "description": "questsStoneReachSixthQuests.description",
     "conditions": {
       "goal": "questsStoneReachSixthQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1098,7 +1098,7 @@
     "description": "questsStoneReachSeventhQuests.description",
     "conditions": {
       "goal": "questsStoneReachSeventhQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1282,7 +1282,7 @@
     "description": "questsStoneReachEighthQuests.description",
     "conditions": {
       "goal": "questsStoneReachEighthQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1466,7 +1466,7 @@
     "description": "questsStoneReachNinthQuests.description",
     "conditions": {
       "goal": "questsStoneReachNinthQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1648,7 +1648,7 @@
     "description": "questsStoneReachTenthQuests.description",
     "conditions": {
       "goal": "questsStoneReachTenthQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
