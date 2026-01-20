@@ -6,7 +6,7 @@
     "description": "questsWindValleyFirstQuests.description",
     "conditions": {
       "goal": "questsWindValleyFirstQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -208,7 +208,7 @@
     "description": "questsWindValleySecondQuests.description",
     "conditions": {
       "goal": "questsWindValleySecondQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -410,7 +410,7 @@
     "description": "questsWindValleyThirdQuests.description",
     "conditions": {
       "goal": "questsWindValleyThirdQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -612,7 +612,7 @@
     "description": "questsWindValleyFourthQuests.description",
     "conditions": {
       "goal": "questsWindValleyFourthQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -814,7 +814,7 @@
     "description": "questsWindValleyFifthQuests.description",
     "conditions": {
       "goal": "questsWindValleyFifthQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1008,7 +1008,7 @@
     "description": "questsWindValleySixQuests.description",
     "conditions": {
       "goal": "questsWindValleySixQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1212,7 +1212,7 @@
     "description": "questsWindValleySevenQuests.description",
     "conditions": {
       "goal": "questsWindValleySevenQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1408,7 +1408,7 @@
     "description": "questsWindValleyEighthQuests.description",
     "conditions": {
       "goal": "questsWindValleyEighthQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1626,7 +1626,7 @@
     "description": "questsWindValleyNinthQuests.description",
     "conditions": {
       "goal": "questsWindValleyNinthQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1830,7 +1830,7 @@
     "description": "questsWindValleyTenthQuests.description",
     "conditions": {
       "goal": "questsWindValleyTenthQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -2034,7 +2034,7 @@
     "description": "questsStoneReachEleventhQuests.description",
     "conditions": {
       "goal": "questsStoneReachEleventhQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -2236,7 +2236,7 @@
     "description": "questsStoneReachTwelfthQuests.description",
     "conditions": {
       "goal": "questsStoneReachTwelfthQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -2438,7 +2438,7 @@
     "description": "questsStoneReachThirteenthQuests.description",
     "conditions": {
       "goal": "questsStoneReachThirteenthQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {

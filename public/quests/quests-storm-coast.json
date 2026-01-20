@@ -6,7 +6,7 @@
     "description": "questsStormCoastsFirstQuests.description",
     "conditions": {
       "goal": "questsStormCoastsFirstQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -218,7 +218,7 @@
     "description": "questsStormCoastsSecondQuests.description",
     "conditions": {
       "goal": "questsStormCoastsSecondQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -421,7 +421,7 @@
     "description": "questsStormCoastsThirdQuests.description",
     "conditions": {
       "goal": "questsStormCoastsThirdQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -625,7 +625,7 @@
     "description": "questsStormCoastsFourQuests.description",
     "conditions": {
       "goal": "questsStormCoastsFourQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -845,7 +845,7 @@
     "description": "questsStormCoastsFifthQuests.description",
     "conditions": {
       "goal": "questsStormCoastsFifthQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1042,7 +1042,7 @@
     "description": "questsStormCoastsSixQuests.description",
     "conditions": {
       "goal": "questsStormCoastsSixQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1265,7 +1265,7 @@
     "description": "questsStormCoastsSevenQuests.description",
     "conditions": {
       "goal": "questsStormCoastsSevenQuests.goal",
-      "minCorrect": 14,
+      "minCorrect": 13,
       "requiredTasks": 16
     },
     "rewards": {
@@ -1498,7 +1498,7 @@
     "description": "questsStormCoastsEighthQuests.description",
     "conditions": {
       "goal": "questsStormCoastsEighthQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1722,7 +1722,7 @@
     "description": "questsStormCoastsNinthQuests.description",
     "conditions": {
       "goal": "questsStormCoastsNinthQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1948,7 +1948,7 @@
     "description": "questsStormCoastsTenthQuests.description",
     "conditions": {
       "goal": "questsStormCoastsTenthQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {

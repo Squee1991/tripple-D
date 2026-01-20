@@ -673,6 +673,7 @@ onBeforeUnmount(() => {
   justify-content: center;
   padding: 15px;
   margin-top: 10px;
+  color: var(--titleColor);
 }
 
 .empty-content {

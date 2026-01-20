@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 import { ref, computed, watch } from 'vue'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
-import { getFirestore, doc, setDoc, onSnapshot, serverTimestamp, increment } from 'firebase/firestore'
+import { getFirestore, doc, setDoc, onSnapshot, serverTimestamp, increment, getDoc } from 'firebase/firestore'
 import { dailyQuests } from '../utils/dailyQuests.js'
 import { userAuthStore } from './authStore.js'
 import { useRankUserStore } from './rankStore.js'
@@ -10,7 +10,7 @@ export const dailyStore = defineStore('dailyStore', () => {
     const CYCLE_MS = 24 * 60 * 60 * 1000
     const QUESTS_PER_CYCLE = 3
     const SYNC_MS = 30 * 1000
-    const LOCAL_KEY_BASE = 'daily_cycle_v2'
+    const LOCAL_KEY_BASE = 'daily_cycle_v3'
     const localKey = () => `${LOCAL_KEY_BASE}_${uid() || 'anon'}`
 
     const isClient = typeof window !== 'undefined'
@@ -261,11 +261,33 @@ export const dailyStore = defineStore('dailyStore', () => {
     }
 
     async function recomputeAndPersist() {
+        if (online() && uid()) {
+            try {
+                const ref = userDocRef()
+                if (ref) {
+                    const snap = await getDoc(ref)
+                    if (snap.exists()) {
+                        const cloudData = snap.data()
+                        if (cloudData.cycleKey === cycleKey.value) {
+                            currentCycle.value = cloudData
+                            for (const key in counters.value) {
+                                const cloudVal = cloudData.counters?.[key] || 0
+                                const localVal = counters.value[key]
+                                counters.value[key] = Math.max(cloudVal, localVal)
+                            }
+                        }
+                    }
+                }
+            } catch (e) {
+                console.error("Cloud fetch error:", e)
+            }
+        }
+        if (!currentCycle.value) ensureLocalCycle()
+
         const local = currentCycle.value
         if (!local) return
         let newlyCompleted = 0
         let changed = false
-
         const nextQuests = (local.quests || []).map(q => {
             const target = Math.max(1, toNum(q.targetValue, 1))
             const rawVal = valueForQuestByCounters(q.id)
@@ -276,10 +298,8 @@ export const dailyStore = defineStore('dailyStore', () => {
             if (now && !was) newlyCompleted++
             return { ...q, currentValue: val, isCompleted: now }
         })
-
         const totalDone = nextQuests.filter(q => q.isCompleted).length
         let hatAwardedNow = false
-
         if (totalDone >= QUESTS_PER_CYCLE && !local.hatClaimed) {
             const aStore = userAuthStore()
             const rStore = useRankUserStore()
@@ -287,9 +307,7 @@ export const dailyStore = defineStore('dailyStore', () => {
             rStore.checkRewardUI()
             hatAwardedNow = true
         }
-
         if (!changed && newlyCompleted === 0 && !hatAwardedNow) return
-
         const updated = {
             ...local,
             quests: nextQuests,

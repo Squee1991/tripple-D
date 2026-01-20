@@ -965,7 +965,7 @@
     "description": "questsNorthCliffsSixthQuests.description",
     "conditions": {
       "goal": "questsNorthCliffsSixthQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1168,7 +1168,7 @@
     "description": "questsNorthCliffsSeventhQuests.description",
     "conditions": {
       "goal": "questsNorthCliffsSeventhQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1367,7 +1367,7 @@
     "description": "questsNorthCliffsEighthQuests.description",
     "conditions": {
       "goal": "questsNorthCliffsEighthQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1565,7 +1565,7 @@
     "description": "questsNorthCliffsNinthQuests.description",
     "conditions": {
       "goal": "questsNorthCliffsNinthQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1773,7 +1773,7 @@
     "description": "questsNorthCliffsTenthQuests.description",
     "conditions": {
       "goal": "questsNorthCliffsTenthQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -1965,7 +1965,7 @@
     "description": "questsNorthCliffsEleventhQuests.description",
     "conditions": {
       "goal": "questsNorthCliffsEleventhQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
@@ -2152,7 +2152,7 @@
     "description": "questsNorthCliffsTwelfthQuests.description",
     "conditions": {
       "goal": "questsNorthCliffsTwelfthQuests.goal",
-      "minCorrect": 13,
+      "minCorrect": 12,
       "requiredTasks": 15
     },
     "rewards": {
