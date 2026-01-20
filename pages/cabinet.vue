@@ -708,7 +708,6 @@ watchEffect(() => {
 }
 
 .awards__title {
-  text-align: center;
   width: 100%;
   font-size: 1.3rem;
   color: var(--titleColor);
@@ -913,9 +912,6 @@ watchEffect(() => {
 }
 
 .award-strip {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
   margin-left: auto;
   overflow: hidden;
 }
