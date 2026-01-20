@@ -735,9 +735,6 @@ onMounted(() => {
 
 .mobile-back-btn { display: none; }
 
-/* ---------------------------
-   MODAL
----------------------------- */
 .req-modal {
   position: fixed;
   inset: 0;
@@ -791,9 +788,6 @@ onMounted(() => {
 
 .req-modal__btn { width: 100%; }
 
-/* ---------------------------
-   MOBILE
----------------------------- */
 @media (max-width: 767px) {
   .achv-layout {
     display: block;

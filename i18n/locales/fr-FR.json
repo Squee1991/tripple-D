@@ -5661,7 +5661,10 @@
     "userExists": "Un utilisateur avec cet e-mail est déjà inscrit",
     "invalidEmail": "Format d'e-mail invalide",
     "invalidCredential": "Mot de passe invalide ou incorrect",
-    "tooManyRequests": "Trop de tentatives. Veuillez réessayer plus tard"
+    "tooManyRequests": "Trop de tentatives. Veuillez réessayer plus tard",
+    "weakPassword": "Le mot de passe doit contenir au moins 6 caractères",
+    "userDisabled": "Votre compte a été bloqué",
+    "networkRequestFailed": "Problème de connexion ! Vérifiez votre connexion internet"
   },
   "about": {
     "title": "Apprendre l'allemand et ses articles vous ennuie ?",

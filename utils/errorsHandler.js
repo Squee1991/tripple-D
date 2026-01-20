@@ -7,7 +7,11 @@ export const errorValueMap = {
 	'auth/invalid-credential': { field: 'password', error: 'errors.invalidCredential' },
 	'auth/missing-password': { field: 'password', error: 'errors.errorPassword' },
 	'auth/too-many-requests': { field: 'password', error: 'errors.tooManyRequests' },
-	'auth/missing-email': { field: 'password', error: 'errors.missingEmail' },
+	'auth/missing-email': { field: 'email', error: 'errors.missingEmail' },
+	'auth/weak-password': { field: 'password', error: 'errors.weakPassword' },
+	'auth/user-disabled': { field: 'email', error: 'errors.userDisabled' },
+	'auth/network-request-failed': { field: 'email', error: 'errors.networkRequestFailed' },
+
 	default: { field: 'password', error: 'errors.generalError' }
 }
 

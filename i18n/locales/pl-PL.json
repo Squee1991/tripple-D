@@ -5678,7 +5678,10 @@
     "userExists": "Użytkownik z tym adresem email już istnieje",
     "invalidEmail": "Nieprawidłowy format email",
     "invalidCredential": "Nieprawidłowe lub błędne hasło",
-    "tooManyRequests": "Zbyt wiele prób. Spróbuj później"
+    "tooManyRequests": "Zbyt wiele prób. Spróbuj później",
+    "weakPassword": "Hasło musi mieć co najmniej 6 znaków",
+    "userDisabled": "Twoje konto zostało zablokowane",
+    "networkRequestFailed": "Błąd połączenia! Sprawdź internet"
   },
 
   "about": {

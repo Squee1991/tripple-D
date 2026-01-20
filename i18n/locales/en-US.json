@@ -5663,7 +5663,10 @@
     "userExists": "A user with this email already exists",
     "invalidEmail": "Invalid email format",
     "invalidCredential": "Invalid or incorrect password",
-    "tooManyRequests": "Too many attempts. Try again later"
+    "tooManyRequests": "Too many attempts. Try again later",
+    "weakPassword": "Password must be at least 6 characters",
+    "userDisabled": "Your account has been disabled",
+    "networkRequestFailed": "Connection error! Check your internet"
   },
   "about": {
     "title": "Bored of learning German and noun articles?",

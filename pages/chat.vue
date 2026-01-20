@@ -6,7 +6,7 @@ import SoundBtn from '../src/components/soundBtn.vue'
 import Modal from '../src/components/modal.vue'
 import TipsModal from '../src/components/V-tips.vue'
 
-import Women from 'assets/images/speak-themen/people/Gemini_Generated_Image_mk095imk095imk09 (2).png'
+import KindOnSki from 'assets/images/speak-themen/people/kind on ski.png'
 import taskImage from 'assets/images/speak-themen/animals/panda.png'
 import taskImage0 from 'assets/images/speak-themen/animals/dog.png'
 import taskImage1 from 'assets/images/speak-themen/animals/dog-hiding.png'
@@ -85,78 +85,78 @@ function hasReferenceForLevel(task, level) {
 }
 
 const tasks = [
-  // {
-  //   id: 1,
-  //   image: Women,
-  //   descriptions: {
-  //     A1: "Eine Frau mit langen Haaren sitzt und lächelt. Sie trägt elegante Kleidung und sieht freundlich aus.",
-  //     A2: "Eine Frau mit langen Haaren sitzt und lächelt. Sie trägt elegante Kleidung und wirkt sehr freundlich.",
-  //     B1: "Eine Frau mit langen Haaren sitzt und lächelt freundlich. Sie trägt elegante Kleidung und macht einen sympathischen Eindruck."
-  //   }
-  // },
-  // {
-  //   id: 2,
-  //   image: taskImage4,
-  //   descriptions: {
-  //     A1: "Ein gemütliches Zuhause mit einer Person, die drinnen bleibt. Es gibt Möbel und eine warme Atmosphäre.",
-  //     A2: "Ein gemütliches Zuhause. Eine Person bleibt drinnen. Man sieht Möbel und eine warme, ruhige Atmosphäre.",
-  //     B1: "Ein gemütliches Zuhause, in dem eine Person drinnen bleibt. Möbel und die warme Atmosphäre schaffen ein behagliches Gefühl."
-  //   }
-  // },
+  {
+    id: 1,
+    image: KindOnSki,
+    descriptions: {
+      A1: "Ein Junge fährt Ski. Er trägt eine blaue Jacke und einen blauen Helm.",
+      A2: "Das Kind fährt Ski im Schnee. Es trägt warme Kleidung und einen Helm",
+      B1: "Ein lächelnder Junge gleitet auf blauen Skiern einen Hügel hinunter. Er ist mit einem Helm und einer Skibrille und trägt warme Winterkleidung"
+    }
+  },
+  {
+    id: 2,
+    image: taskImage4,
+    descriptions: {
+      A1: "Ein Mann sitzt auf einem Sessel. Er arbeitet mit einem Laptop. Ein Hund schläft auf dem Boden",
+      A2: "Ein Mann sitzt in einem gelben Sessel und benutzt einen Laptop. Er trägt ein lila Hemd. Eine Pflanze steht im Topf und ein Hund schläft auf dem Teppich.",
+      B1: "Man sieht einen Mann, der gemütlich in einem Sessel sitzt und seinem Laptop arbeitet. In seinem Zimmer steht eine große Pflanze und ein Hund schläft auf dem grünen Teppich"
+    }
+  },
   {
     id: 3,
     image: snowManImage,
     descriptions: {
-      A1: "Auf dem Bild ist ein Schneemann. Er ist weiß. Er hat eine Nase. Er trägt eine Mütze und einen Schal. Der Schneemann lächelt.",
+      A1: "Auf dem Bild ist ein Schneemann. Er hat eine Nase. Er trägt eine Mütze und einen Schal. Der Schneemann lächelt.",
       A2: "Auf dem Bild sieht man einen Schneemann. Der Schneemann ist weiß und rund. Er hat eine orange Nase und schwarze Augen. Er trägt eine blaue und orange Mütze und einen rosa Schal. Der Schneemann hat auch zwei Arme aus Zweigen. Er sieht freundlich aus.",
       B1: "Auf dem Bild ist ein Schneemann zu sehen. Er besteht aus zwei großen Schneekugeln und ist ganz weiß. Der Schneemann hat eine orange Karottennase, schwarze Augen und ein freundliches Lächeln. Er trägt eine bunte Mütze in Blau und Orange sowie einen rosa Schal. Seine Arme sind aus Zweigen gemacht, und auf seinem Körper sind violette Knöpfe. Der Schneemann wirkt fröhlich und winterlich."
     }
   },
-  // {
-  //   id: 4,
-  //   image: taskImage2,
-  //   descriptions: {
-  //     A1: "Eine niedliche Katze sitzt oder liegt. Sie hat weiches Fell und schaut aufmerksam.",
-  //     A2: "Eine niedliche Katze sitzt oder liegt ruhig. Ihr Fell ist weich, und sie schaut aufmerksam.",
-  //     B1: "Eine niedliche Katze sitzt oder liegt entspannt. Sie hat weiches Fell und beobachtet aufmerksam ihre Umgebung."
-  //   }
-  // },
-  // {
-  //   id: 5,
-  //   image: taskImage3,
-  //   descriptions: {
-  //     A1: "Ein Fuchs liest ein Buch. Er sieht klug und konzentriert aus. Das Bild ist fantasievoll.",
-  //     A2: "Ein Fuchs liest ein Buch und wirkt klug und konzentriert. Das Bild ist fantasievoll.",
-  //     B1: "Ein Fuchs sitzt da und liest ein Buch. Er wirkt klug und konzentriert, das Bild hat eine fantasievolle Stimmung."
-  //   }
-  // },
-  // {
-  //   id: 6,
-  //   image: taskImage1,
-  //   descriptions: {
-  //     A1: "Ein Hund versteckt sich oder schaut schüchtern hervor. Er sieht verspielt oder ängstlich aus.",
-  //     A2: "Ein Hund versteckt sich ein wenig oder schaut schüchtern hervor. Er wirkt verspielt oder etwas ängstlich.",
-  //     B1: "Ein Hund versteckt sich teilweise und schaut schüchtern hervor. Er wirkt verspielt, vielleicht aber auch etwas ängstlich."
-  //   }
-  // },
-  // {
-  //   id: 7,
-  //   image: taskImage,
-  //   descriptions: {
-  //     A1: "Ein Pandabär mit schwarzweißem Fell. Er ist süß und frisst möglicherweise Bambus.",
-  //     A2: "Ein süßer Pandabär mit schwarzweißem Fell. Vielleicht frisst er Bambus.",
-  //     B1: "Ein Pandabär mit typisch schwarzweißem Fell. Er wirkt niedlich und könnte Bambus fressen."
-  //   }
-  // },
-  // {
-  //   id: 8,
-  //   image: taskImage0,
-  //   descriptions: {
-  //     A1: "Ein freundlicher Hund schaut in die Kamera. Er hat ein fröhliches Gesicht und weiches Fell.",
-  //     A2: "Ein freundlicher Hund blickt in die Kamera. Sein Gesicht wirkt fröhlich, sein Fell ist weich.",
-  //     B1: "Ein freundlicher Hund schaut direkt in die Kamera. Er hat ein fröhliches Gesicht und ein weiches, gepflegtes Fell."
-  //   }
-  // },
+  {
+    id: 4,
+    image: taskImage2,
+    descriptions: {
+      A1: "Eine niedliche Katze sitzt oder liegt. Sie hat weiches Fell und schaut aufmerksam.",
+      A2: "Eine niedliche Katze sitzt oder liegt ruhig. Ihr Fell ist weich, und sie schaut aufmerksam.",
+      B1: "Eine niedliche Katze sitzt oder liegt entspannt. Sie hat weiches Fell und beobachtet aufmerksam ihre Umgebung."
+    }
+  },
+  {
+    id: 5,
+    image: taskImage3,
+    descriptions: {
+      A1: "Ein Fuchs liest ein Buch. Er sieht klug und konzentriert aus. Das Bild ist fantasievoll.",
+      A2: "Ein Fuchs liest ein Buch und wirkt klug und konzentriert. Das Bild ist fantasievoll.",
+      B1: "Ein Fuchs sitzt da und liest ein Buch. Er wirkt klug und konzentriert, das Bild hat eine fantasievolle Stimmung."
+    }
+  },
+  {
+    id: 6,
+    image: taskImage1,
+    descriptions: {
+      A1: "Ein Hund versteckt sich oder schaut schüchtern hervor. Er sieht verspielt oder ängstlich aus.",
+      A2: "Ein Hund versteckt sich ein wenig oder schaut schüchtern hervor. Er wirkt verspielt oder etwas ängstlich.",
+      B1: "Ein Hund versteckt sich teilweise und schaut schüchtern hervor. Er wirkt verspielt, vielleicht aber auch etwas ängstlich."
+    }
+  },
+  {
+    id: 7,
+    image: taskImage,
+    descriptions: {
+      A1: "Ein Pandabär mit schwarzweißem Fell. Er ist süß und frisst möglicherweise Bambus.",
+      A2: "Ein süßer Pandabär mit schwarzweißem Fell. Vielleicht frisst er Bambus.",
+      B1: "Ein Pandabär mit typisch schwarzweißem Fell. Er wirkt niedlich und könnte Bambus fressen."
+    }
+  },
+  {
+    id: 8,
+    image: taskImage0,
+    descriptions: {
+      A1: "Ein freundlicher Hund schaut in die Kamera. Er hat ein fröhliches Gesicht und weiches Fell.",
+      A2: "Ein freundlicher Hund blickt in die Kamera. Sein Gesicht wirkt fröhlich, sein Fell ist weich.",
+      B1: "Ein freundlicher Hund schaut direkt in die Kamera. Er hat ein fröhliches Gesicht und ein weiches, gepflegtes Fell."
+    }
+  },
 ]
 
 const levels = ['A1', 'A2', 'B1']
@@ -276,7 +276,6 @@ function restart() {
           :title="t('adjectiveComparisonPage.tipTitle')"
           :tips="tipsData.tips"
       />
-      <!-- Level Selection Screen -->
       <div v-if="!selectedLevel">
         <div class="duel__header">
           <button @click="goBack" class="back-button-global" aria-label="Back">
@@ -286,9 +285,9 @@ function restart() {
             <span>{{ t('wordDuel.btnBack') }}</span>
           </button>
           <div class="tiips__info-wrapper">
-            <button class="btn__tips" @click="tipsModule">
-              <img class="tipps__icon" src="../assets/images/Tipps.svg" alt="Tips Icon">
-            </button>
+<!--            <button class="btn__tips" @click="tipsModule">-->
+<!--              <img class="tipps__icon" src="../assets/images/Tipps.svg" alt="Tips Icon">-->
+<!--            </button>-->
             <button class="btn__tips" @click="openModal">
               <img class="duel__question-img" :title="t('hoverTitle.duelInfo')"
                    src="../assets/images/question.svg" alt="Info Icon">
@@ -386,7 +385,7 @@ function restart() {
                       <p class="suggested-text">{{ m.suggestedAnswer }}</p>
                       <SoundBtn :text="m.suggestedAnswer"/>
                     </div>
-                    <div class="corrections-section">
+                    <div v-if="m.keyCorrections && m.keyCorrections.length > 0" class="corrections-section">
                       <h4>{{ t('describePicture.keyCorrections') }}:</h4>
                       <ol>
                         <li v-for="(correction, idx) in m.keyCorrections" :key="idx">
@@ -437,7 +436,7 @@ function restart() {
 </template>
 
 <style scoped>
-/* Lobby styles - matching sentence-duel */
+
 .mode-toggle-wrapper {
   width: 320px;
   display: flex;

@@ -209,18 +209,14 @@ export const userAuthStore = defineStore('auth', () => {
         if (methods.length > 0) {
             throw { code: 'auth/email-already-in-use' }
         }
-
         const userCredential = await createUserWithEmailAndPassword(
             authInstance,
             userData.email,
             userData.password
         )
-
         const user = userCredential.user
-
         await updateProfile(user, { displayName: userData.name })
         await sendEmailVerification(user)
-
         const userDocRef = doc(db, 'users', user.uid)
         await setDoc(userDocRef, {
             name: userData.name,
@@ -403,9 +399,6 @@ export const userAuthStore = defineStore('auth', () => {
             initialized.value = true
         })
     }
-
-
-
 
     const initAuth = () => {
         if (initialized.value) return Promise.resolve()

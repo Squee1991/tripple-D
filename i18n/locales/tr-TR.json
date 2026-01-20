@@ -5676,7 +5676,10 @@
     "userExists": "Bu e-posta ile zaten bir kullanıcı kayıtlı",
     "invalidEmail": "Geçersiz e-posta formatı",
     "invalidCredential": "Geçersiz veya yanlış şifre",
-    "tooManyRequests": "Çok fazla deneme yapıldı. Lütfen daha sonra tekrar deneyin"
+    "tooManyRequests": "Çok fazla deneme yapıldı. Lütfen daha sonra tekrar deneyin",
+    "weakPassword": "Şifre en az 6 karakter olmalıdır",
+    "userDisabled": "Hesabınız engellendi",
+    "networkRequestFailed": "Bağlantı hatası! İnternetinizi kontrol edin"
   },
   "about": {
     "title": "Almanca ve isim artikelleri öğrenmekten sıkıldınız mı?",

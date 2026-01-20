@@ -5662,7 +5662,10 @@
     "userExists": "Ya existe un usuario con ese email",
     "invalidEmail": "Formato de email no válido",
     "invalidCredential": "Contraseña no válida o incorrecta",
-    "tooManyRequests": "Demasiados intentos. Intenta más tarde"
+    "tooManyRequests": "Demasiados intentos. Intenta más tarde",
+    "weakPassword": "La contraseña debe tener al menos 6 caracteres",
+    "userDisabled": "Su cuenta ha sido bloqueada",
+    "networkRequestFailed": "¡Error de conexión! Compruebe su internet"
   },
   "about": {
     "title": "¿Aburrido de estudiar alemán y los artículos?",

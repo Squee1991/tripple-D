@@ -5662,7 +5662,10 @@
     "userExists": "Bu email bilan foydalanuvchi allaqachon ro‘yxatdan o‘tgan",
     "invalidEmail": "Email formati noto‘g‘ri",
     "invalidCredential": "Noto‘g‘ri yoki haqiqiy bo‘lmagan parol",
-    "tooManyRequests": "Juda ko‘p urinishlar. Keyinroq urinib ko‘ring"
+    "tooManyRequests": "Juda ko‘p urinishlar. Keyinroq urinib ko‘ring",
+    "weakPassword": "Parol kamida 6 ta belgidan iborat bo'lishi kerak",
+    "userDisabled": "Hisobingiz bloklangan",
+    "networkRequestFailed": "Ulanishda muammo! Internetni tekshiring"
   },
   "about": {
     "title": "Nemis tili va ot artikllarini o‘rganish zerikarlimi?",

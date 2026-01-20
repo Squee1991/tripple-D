@@ -40,7 +40,7 @@ ALWAYS respond strictly in JSON with the following shape:
 {
   "score": <1-10>,
   "feedback": "<Feedback in the user's language>",
-  "suggestedAnswer": "<Improved German sentence>",
+  "suggestedAnswer": "<Improved German sentence>",  
   "keyCorrections": ["<Point 1>", "<Point 2>", "<Point 3>"]
 }`
 

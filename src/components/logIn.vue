@@ -31,15 +31,26 @@
             <div v-for="field in visibleFields" :key="field.id" class="auth__field">
               <label class="auth__label">
                 <div class="auth__label-text">{{ t(field.label) }}</div>
-                <input
-                    class="auth__input"
-                    :type="field.type"
-                    :placeholder="t(field.placeholder)"
-                    v-model="field.value"
-                    :required="field.required"
-                    :autocomplete="field.autocomplete"
-                    :maxlength="field.maxlength || null"
-                />
+                <div class="auth__input-container">
+                  <input
+                      :class="{ 'auth__input--password': field.name === 'password' || field.name === 'confirm' }"
+                      class="auth__input"
+                      :type="field.type"
+                      :placeholder="t(field.placeholder)"
+                      v-model="field.value"
+                      :required="field.required"
+                      :autocomplete="field.autocomplete"
+                      :maxlength="field.maxlength || null"
+                  />
+                  <div
+                      v-if="field.name === 'password' || field.name === 'confirm'"
+                      class="auth__eye"
+                      @click="toggleVisibility(field)"
+                  >
+                    <img v-if="field.type === 'password'" :src="View" alt="View">
+                    <img  v-else :src="Hide" alt="Hide">
+                  </div>
+                </div>
               </label>
               <div v-if="field.error" class="auth__error">{{ t(field.error) }}</div>
               <div v-if="resetSent" class="auth__success">{{ t('errors.resetSent') }}</div>
@@ -81,7 +92,8 @@ import {userAuthStore} from '../../store/authStore.js'
 import {useRouter} from 'vue-router'
 import {useI18n} from 'vue-i18n'
 import {mapErrors} from '../../utils/errorsHandler.js'
-
+import View from '../../assets/images/loginEyes/view.svg'
+import Hide from '../../assets/images/loginEyes/hide.svg'
 const {t, locale} = useI18n()
 const router = useRouter()
 const emits = defineEmits(['close-auth-form'])
@@ -145,6 +157,11 @@ const fields = ref([
     autocomplete: "new-password",
   },
 ])
+
+const toggleVisibility = (field) => {
+  field.type = field.type === 'password' ? 'text' : 'password'
+}
+
 const tabs = [
   {value: 'login', label: 'auth.logIn'},
   {value: 'register', label: 'auth.regs'}
@@ -482,13 +499,14 @@ onMounted(() => {
   color: #1e1e1e;
   font-family: 'Inter', sans-serif;
   font-weight: 700;
-  box-shadow: 2px 2px 0 #1e1e1e inset;
+  box-shadow: 2px 2px 0 #1e1e1e;
   transition: all 0.2s;
   outline: none;
 }
 
 .auth__input:focus {
-  box-shadow: 0 0 0 3px #f1c40f, 2px 2px 0 #1e1e1e inset;
+  border: 3px solid #f1c40f;
+  box-shadow: none;
 }
 
 .auth__actions {
@@ -583,6 +601,50 @@ onMounted(() => {
   border-left: none;
   border-right: 4px solid #1e1e1e;
   box-shadow: 12px 0 44px rgba(0, 0, 0, 0.1);
+}
+
+.auth__input-container {
+  position: relative;
+  width: 100%;
+}
+
+.auth__input--password {
+  padding-right: 50px !important;
+}
+
+.auth__eye {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 1.2rem;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s;
+  z-index: 5;
+}
+
+.auth__eye:hover {
+  opacity: 0.7;
+}
+
+.auth--rtl .auth__eye {
+  right: auto;
+  left: 15px;
+}
+
+.auth--rtl .auth__input--password {
+  padding-right: 20px !important;
+  padding-left: 50px !important;
+}
+
+.auth__eye img {
+  width: 20px;
+  height: 20px;
+  display: block;
 }
 
 @media (max-width: 600px) {

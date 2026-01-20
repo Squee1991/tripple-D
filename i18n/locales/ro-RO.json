@@ -5662,7 +5662,10 @@
     "userExists": "Un utilizator cu acest e-mail este deja înregistrat",
     "invalidEmail": "Format e-mail invalid",
     "invalidCredential": "Parolă nepermisă sau incorectă",
-    "tooManyRequests": "Prea multe încercări. Încearcă mai târziu"
+    "tooManyRequests": "Prea multe încercări. Încearcă mai târziu",
+    "weakPassword": "Parola trebuie să aibă cel puțin 6 caractere",
+    "userDisabled": "Contul dumneavoastră a fost blocat",
+    "networkRequestFailed": "Problemă de conexiune! Verificați conexiunea la internet"
   },
   "about": {
     "title": "E plictisitor să înveți germana și articolele substantivelor?",
