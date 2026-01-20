@@ -695,6 +695,11 @@ watchEffect(() => {
 
 .awards__items {
   display: flex;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
 }
 
 .accordion__content-left {
@@ -787,7 +792,6 @@ watchEffect(() => {
   font-size: 1.05rem;
   font-family: "Nunito", sans-serif;
 }
-
 
 .tab-vertical.active {
   background: #447ec1;
@@ -905,6 +909,7 @@ watchEffect(() => {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .award-strip {
@@ -912,6 +917,7 @@ watchEffect(() => {
   gap: 8px;
   flex-wrap: wrap;
   margin-left: auto;
+  overflow: hidden;
 }
 
 .award-strip-icon {

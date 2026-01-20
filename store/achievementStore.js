@@ -684,10 +684,12 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		watch(() => gameStore.onTheEdgeProgress, v => updateProgress('Impuls', v), { immediate: true })
 		watch(() => authStore.registeredAt, date => {
 			if (!date) return
-			const days = Math.max(0, Math.floor((Date.now() - new Date(date).getTime()) / 86400000))
+			const regTime = new Date(date).getTime()
+			if (isNaN(regTime) || regTime < 1672531200000) return
+			const days = Math.max(0, Math.floor((Date.now() - regTime) / 86400000))
 			updateProgress('OneYearVeteran', Math.min(days, 365))
 		}, { immediate: true })
-		// дуэль предложений
+
 		watch(duelStore.achievements, (duelStats) => {
 				const stats = duelStats || {}
 				if (Object.keys(stats).length === 0) return
