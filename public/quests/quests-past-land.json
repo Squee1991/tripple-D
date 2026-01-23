@@ -1,0 +1,145 @@
+[
+    {
+      "questId": "perfekt_introduction_basics",
+      "aliases": ["perfekt-simple-start"],
+      "title": "Основы Perfekt",
+      "progress": "0/15",
+      "description": "Что ты сделал? Знакомимся с прошедшим временем: 'Я купил', 'Мы сделали'.",
+      "conditions": {
+        "goal": "Запомните структуру Perfekt.",
+        "minCorrect": 12,
+        "requiredTasks": 15
+      },
+      "rewards": {
+        "points": 25,
+        "xp": 25
+      },
+      "tasks": [
+        {
+          "id": 1,
+          "type": "reorder",
+          "question": "Соберите: Я играл в футбол.",
+          "words": ["gespielt", "Fußball", "habe", "Ich"],
+          "correctOrder": ["Ich", "habe", "Fußball", "gespielt"]
+        },
+        {
+          "id": 2,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Du hast Musik gehört",
+            "Du habe Musik gehört",
+            "Du hat Musik gehört"
+          ],
+          "answer": "Du hast Musik gehört"
+        },
+        {
+          "id": 3,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Wir haben gelernt",
+          "answer": "Wir haben gelernt",
+        },
+        {
+          "id": 4,
+          "type": "reorder",
+          "question": "Соберите: Он купил хлеб.",
+          "words": ["gekauft", "Brot", "hat", "Er"],
+          "correctOrder": ["Er", "hat", "Brot", "gekauft"]
+        },
+        {
+          "id": 5,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Wir haben Pizza gegessen",
+            "Wir hast Pizza gegessen",
+            "Wir hat Pizza gegessen"
+          ],
+          "answer": "Wir haben Pizza gegessen"
+        },
+        {
+          "id": 6,
+          "type": "reorder",
+          "question": "Соберите: Я это сделал.",
+          "words": ["gemacht", "das", "habe", "Ich"],
+          "correctOrder": ["Ich", "habe", "das", "gemacht"]
+        },
+        {
+          "id": 7,
+          "type": "speechToText",
+          "question": "Произнесите фразу:",
+          "text": "Sie haben getanzt",
+          "answer": "Sie haben getanzt"
+        },
+        {
+          "id": 8,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Ihr habt alles gesehen",
+            "Ihr hast alles gesehen",
+            "Ihr haben alles gesehen"
+          ],
+          "answer": "Ihr habt alles gesehen"
+        },
+        {
+          "id": 9,
+          "type": "reorder",
+          "question": "Соберите вопрос: Ты спал?",
+          "words": ["geschlafen", "du", "Hast"],
+          "correctOrder": ["Hast", "du", "geschlafen"]
+        },
+        {
+          "id": 10,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Ich habe gelacht",
+          "answer": "Ich habe gelacht"
+        },
+        {
+          "id": 11,
+          "type": "reorder",
+          "question": "Соберите: Мы жили в Берлине.",
+          "words": ["gewohnt", "Berlin", "in", "Wir", "haben"],
+          "correctOrder": ["Wir", "haben", "in", "Berlin", "gewohnt"]
+        },
+        {
+          "id": 12,
+          "type": "select",
+          "question": "Выберите правильный вариант (движение -> sein)",
+          "options": [
+            "Ich bin nach Hause gegangen",
+            "Ich habe nach Hause gegangen",
+            "Ich ist nach Hause gegangen"
+          ],
+          "answer": "Ich bin nach Hause gegangen"
+        },
+        {
+          "id": 13,
+          "type": "speechToText",
+          "question": "Произнесите:",
+          "text": "Er hat nichts gesagt",
+          "answer": "Er hat nichts gesagt"
+        },
+        {
+          "id": 14,
+          "type": "reorder",
+          "question": "Соберите: Она сегодня работала.",
+          "words": ["gearbeitet", "heute", "Sie", "hat"],
+          "correctOrder": ["Sie", "hat", "heute", "gearbeitet"]
+        },
+        {
+          "id": 15,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Die Kinder haben gespielt",
+            "Die Kinder hat gespielt",
+            "Die Kinder hast gespielt"
+          ],
+          "answer": "Die Kinder haben gespielt"
+        }
+      ]
+    }
+  ]
