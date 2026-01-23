@@ -4460,13 +4460,13 @@
   },
   "pavelOverlay": {
     "newbie": "नौसिखिया",
-    "rankTitle": "पद (Ranks)",
-    "rankLabelOne": "- दैनिक कार्यों को पूरा करने पर पद दिए जाते हैं।",
-    "rankLabelTwo": "- पद पुरस्कारों को व्यक्तिगत प्रोफ़ाइल के 'पद' अनुभाग में देखा जा सकता है।",
-    "articleTitle": "आर्टिक्लस (Articlus)",
+    "rankTitle": "कॉन्फेराट्स",
+    "rankLabelOne": "- दैनिक कार्यों को पूरा करने पर कॉन्फेраट्स दिए जाते हैं।",
+    "rankLabelTwo": "- सभी दैनिक कार्यों को पूरा करके आप दिन में एक प्राप्त कर सकते हैं। कॉन्फेраट्स के पुरस्कारों को प्रोफ़ाइल के 'पद' अनुभाग में देखा जा सकता है।",
+    "articleTitle": "आर्टिक्लस",
     "articleLabelOne": "- कार्यों से प्राप्त होता है: आर्टिकल प्रैक्टिस, भाषा भूमि और 'सीखना' अनुभाग के कार्य।",
     "articleLabelTwo": "- इसे भाषा भूमि में दोबारा प्रयास करने और प्रोफ़ाइल के स्टोर में खर्च किया जाता है।",
-    "levelTitle": "स्तर (Level)",
+    "levelTitle": "स्तर",
     "levelLabelOne": "- कार्यों को पूरा करने से आपका स्तर बढ़ता है।",
     "levelLabelTwo": "- स्तर बढ़ने के साथ भाषा भूमि में नए कार्य खुलते हैं।"
   },
@@ -5462,6 +5462,27 @@
     "lossText": "इस बार प्रतिद्वंद्वी अधिक शक्तिशाली था। निराश न हों, फिर से प्रयास करें!",
     "end": "बधाई हो! अभ्यास पूरा हुआ"
   },
+  "describePicture": {
+    "title": "Describe the Picture",
+    "description": "Look at the picture and describe what you see in German. AI will check your answer and give feedback.",
+    "startBtn": "Start Game",
+    "task": "Task",
+    "finishTitle": "Great job!",
+    "finishText": "All tasks completed.",
+    "restartBtn": "Start again",
+    "placeholder": "What do you see in the picture?",
+    "suggestedAnswer": "Suggested improved answer",
+    "keyCorrections": "Key corrections",
+    "inputPlaceholder": "Write your answer in German...",
+    "nextBtn": "Next",
+    "rulesTitle": "Game Rules",
+    "rulesText": "Describe the picture you see in German. The AI will analyze your description and provide feedback, corrections, and an improved version of your answer."
+  },
+  "describePictureTips": {
+    "tipOne": "Start with simple sentences describing what you see",
+    "tipTwo": "Use vocabulary you know - it is okay to make mistakes",
+    "tipThree": "Try to describe colors, positions, and actions"
+  },
   "nav": {
     "training": "प्रशिक्षण",
     "gameMode": "खेल",
@@ -5492,6 +5513,7 @@
     "themen": "विषयगत स्तर",
     "idioms": "मुहावरे",
     "wordDuel": "वाक्य द्वंद्व",
+    "describePicture": "Describe Picture",
     "quests": "कार्य लॉग",
     "languagesLands": "भाषाई भूमि"
   },
@@ -5640,7 +5662,10 @@
     "userExists": "इस ईमेल के साथ उपयोगकर्ता पहले से पंजीकृत है",
     "invalidEmail": "ईमेल का प्रारूप गलत है",
     "invalidCredential": "अमान्य या गलत पासवर्ड",
-    "tooManyRequests": "बहुत सारे प्रयास। कृपया बाद में कोशिश करें"
+    "tooManyRequests": "बहुत सारे प्रयास। कृपया बाद में कोशिश करें",
+    "weakPassword": "पासवर्ड कम से कम 6 अक्षरों का होना चाहिए",
+    "userDisabled": "आपका खाता ब्लॉक कर दिया गया है",
+    "networkRequestFailed": "कनेक्शन में समस्या! अपना इंटरनेट जांचें"
   },
   "about": {
     "title": "जर्मन और संज्ञा के आर्टिकल सीखना उबाऊ लगता है?",

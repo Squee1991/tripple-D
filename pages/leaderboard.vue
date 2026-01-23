@@ -4,6 +4,7 @@ import {userAuthStore} from '../store/authStore.js'
 import {useGuessWordStore} from '../store/guesStore.js'
 import {useGameStore} from '../store/marafonStore.js'
 import {useRouter} from 'vue-router'
+import {useI18n} from 'vue-i18n'
 import LeaderboardItem from '../src/components/LeaderboardItem.vue'
 import ModalOverlay from '../src/components/modalOverlay.vue'
 import CloseIcon from '../assets/images/close.svg'
@@ -13,6 +14,7 @@ const router = useRouter()
 const authStore = userAuthStore()
 const guessStore = useGuessWordStore()
 const gameStore = useGameStore()
+
 const activeDiscipline = ref('guess')
 const guessRating = ref([])
 const isGuessLoading = ref(true)
@@ -20,6 +22,9 @@ const marathonRating = ref([])
 const isMarathonLoading = ref(true)
 const isModal = ref(false)
 const activeMarathonDifficulty = ref(1)
+
+const itemsPerPage = 20
+const currentPage = ref(1)
 
 const disciplines = ref([
   {id: 'guess', label: 'ranked.guessTab'},
@@ -37,8 +42,19 @@ const difficultyLabels = {
   3: 'ranked.hard'
 }
 
+const totalPages = computed(() => {
+  const currentList = activeDiscipline.value === 'guess' ? guessRating.value : marathonRating.value
+  return Math.ceil(currentList.length / itemsPerPage) || 1
+})
+
+const paginatedData = computed(() => {
+  const currentList = activeDiscipline.value === 'guess' ? guessRating.value : marathonRating.value
+  const start = (currentPage.value - 1) * itemsPerPage
+  return currentList.slice(start, start + itemsPerPage)
+})
+
 const backToMainPage = () => {
-  router.back()
+  router.push('/')
 }
 
 const isInGuessLeaderboard = computed(() =>
@@ -79,6 +95,18 @@ async function addToLeaderboard() {
   await guessStore.saveToLeaderboard(authStore.name, guessStore.guessedWords.length)
   guessRating.value = await guessStore.loadLeaderboard()
 }
+
+const nextPage = () => {
+  if (currentPage.value < totalPages.value) currentPage.value++
+}
+
+const prevPage = () => {
+  if (currentPage.value > 1) currentPage.value--
+}
+
+watch([activeDiscipline, activeMarathonDifficulty], () => {
+  currentPage.value = 1
+})
 
 watch(activeMarathonDifficulty, () => {
   if (activeDiscipline.value === 'marathon') {
@@ -176,47 +204,56 @@ onMounted(async () => {
     <div class="ranked-leaderboard-blackboard">
       <div class="blackboard-frame">
         <div class="blackboard">
-          <div v-if="activeDiscipline === 'guess'">
-            <div v-if="isGuessLoading" class="blackboard__message">{{ t('ranked.loading') }}</div>
-            <div v-else-if="guessRating.length">
-              <h2 class="blackboard__title">{{ t('ranked.guesTabelelable') }}</h2>
-              <ul class="leaderboard__items-container" data-simplebar>
-                <li v-for="(r, index) in guessRating" :key="r.name">
-                  <LeaderboardItem
-                      :player="r"
-                      :rank="index + 1"
-                      :is-current-user="authStore.name && r.name && r.name.trim().toLowerCase() === authStore.name.trim().toLowerCase()"
-                      score-field="guessed" score-unit=""
-                  />
-                </li>
-              </ul>
+          <div class="blackboard__content">
+            <div v-if="activeDiscipline === 'guess'" class="discipline-container">
+              <div v-if="isGuessLoading" class="blackboard__message">{{ t('ranked.loading') }}</div>
+              <div v-else-if="guessRating.length" class="leaderboard-wrapper">
+                <h2 class="blackboard__title">{{ t('ranked.guesTabelelable') }}</h2>
+                <ul class="leaderboard__items-container">
+                  <li v-for="(r, index) in paginatedData" :key="r.name">
+                    <LeaderboardItem
+                        :player="r"
+                        :rank="((currentPage - 1) * itemsPerPage) + index + 1"
+                        :is-current-user="authStore.name && r.name && r.name.trim().toLowerCase() === authStore.name.trim().toLowerCase()"
+                        score-field="guessed" score-unit=""
+                    />
+                  </li>
+                </ul>
+              </div>
+              <div v-else class="blackboard__message">
+                <div class="black__board-title">{{ t('ranked.notData') }}</div>
+                <img src="../assets/images/leadership.svg" alt="">
+              </div>
             </div>
-            <div v-else class="blackboard__message">
-              <div class="black__board-title">{{ t('ranked.notData') }}</div>
-              <img src="../assets/images/leadership.svg" alt="">
+
+            <div v-if="activeDiscipline === 'marathon'" class="discipline-container">
+              <div v-if="isMarathonLoading" class="blackboard__message">{{ t('ranked.loading') }}</div>
+              <div v-else-if="marathonRating.length" class="leaderboard-wrapper">
+                <h2 class="blackboard__title">{{ t('ranked.guesMarathonlable') }}: {{
+                    t(difficultyLabels[activeMarathonDifficulty])
+                  }}</h2>
+                <ul class="leaderboard__items-container">
+                  <li v-for="(player, index) in paginatedData" :key="player.id">
+                    <LeaderboardItem
+                        :player="player"
+                        :rank="((currentPage - 1) * itemsPerPage) + index + 1"
+                        :is-current-user="authStore.name && player.name && player.name.trim().toLowerCase() === authStore.name.trim().toLowerCase()"
+                        score-field="streak" score-unit=""
+                    />
+                  </li>
+                </ul>
+              </div>
+              <div v-else class="blackboard__message">
+                <div class="black__board-title">{{ t('ranked.emptydifficult') }}</div>
+                <img class="leaderboard__icon" src="../assets/images/leadership.svg" alt="leadership">
+              </div>
             </div>
           </div>
-          <div v-if="activeDiscipline === 'marathon'">
-            <div v-if="isMarathonLoading" class="blackboard__message">{{ t('ranked.loading') }}</div>
-            <div v-else-if="marathonRating.length">
-              <h2 class="blackboard__title">{{ t('ranked.guesMarathonlable') }}: {{
-                  t(difficultyLabels[activeMarathonDifficulty])
-                }}</h2>
-              <ul class="leaderboard__items-container" data-simplebar>
-                <li v-for="(player, index) in marathonRating" :key="player.id">
-                  <LeaderboardItem
-                      :player="player"
-                      :rank="index + 1"
-                      :is-current-user="authStore.name && player.name && player.name.trim().toLowerCase() === authStore.name.trim().toLowerCase()"
-                      score-field="streak" score-unit=""
-                  />
-                </li>
-              </ul>
-            </div>
-            <div v-else class="blackboard__message">
-              <div class="black__board-title">{{ t('ranked.emptydifficult') }}</div>
-              <img class="leaderboard__icon" src="../assets/images/leadership.svg" alt="leadership">
-            </div>
+
+          <div class="pagination" v-if="(activeDiscipline === 'guess' && guessRating.length) || (activeDiscipline === 'marathon' && marathonRating.length)">
+            <button class="pagination__btn" :disabled="currentPage === 1" @click="prevPage">←</button>
+            <span class="pagination__info">{{ currentPage }} / {{ totalPages }}</span>
+            <button class="pagination__btn" :disabled="currentPage === totalPages" @click="nextPage">→</button>
           </div>
         </div>
       </div>
@@ -225,7 +262,6 @@ onMounted(async () => {
 </template>
 
 <style scoped>
-
 .ranked-layout {
   display: flex;
   gap: 2rem;
@@ -288,7 +324,6 @@ onMounted(async () => {
   transform: translateY(5px);
   box-shadow: 0 0px 0 0 #4a3f73;
 }
-
 
 .control-card {
   background: rgba(255, 255, 255, 0.8);
@@ -425,6 +460,25 @@ onMounted(async () => {
   width: 100%;
 }
 
+.blackboard {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.blackboard__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.discipline-container, .leaderboard-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .blackboard__title {
   font-weight: 800;
   color: #ffffff;
@@ -450,22 +504,61 @@ onMounted(async () => {
   list-style: none;
   margin: 0;
   padding: 0;
-  height: 100%;
+  flex: 1;
   overflow-y: auto;
 }
 
-.leaderboard__items-container > li:nth-child(1) .leaderboard-item {
-  background: #fff9c4;
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0 10px 0;
+  margin-top: auto;
+  border-top: 2px dashed rgba(255, 255, 255, 0.3);
+  z-index: 10;
 }
 
-.leaderboard__items-container > li:nth-child(2) .leaderboard-item {
-  background: #c8e6c9;
+.pagination__info {
+  color: white;
+  font-weight: 800;
+  font-size: 1.2rem;
+  min-width: 80px;
+  text-align: center;
 }
 
-.leaderboard__items-container > li:nth-child(3) .leaderboard-item {
-  background: #ffccbc;
+.pagination__btn {
+  background: #ffffff;
+  border: 3px solid #4a3f73;
+  color: #4a3f73;
+  border-radius: 12px;
+  width: 45px;
+  height: 45px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 0 0 #4a3f73;
+  transition: all 0.1s;
 }
 
+.pagination__btn:hover:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 0 #4a3f73;
+}
+
+.pagination__btn:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow: 0 0px 0 0 #4a3f73;
+}
+
+.pagination__btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  filter: grayscale(1);
+}
 
 ::-webkit-scrollbar {
   width: 16px;
@@ -505,6 +598,9 @@ onMounted(async () => {
 @media (max-width: 767px) {
   .ranked-leaderboard-blackboard {
     padding: 10px;
+  }
+  .pagination {
+    gap: 10px;
   }
 }
 </style>

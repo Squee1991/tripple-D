@@ -4460,9 +4460,9 @@
   },
   "pavelOverlay": {
     "newbie": "Novato",
-    "rankTitle": "Rangos",
-    "rankLabelOne": "- Los rangos se otorgan por completar tareas diarias.",
-    "rankLabelTwo": "- Las recompensas por rango se pueden ver en tu perfil en la sección 'Rangos'.",
+    "rankTitle": "Conferats",
+    "rankLabelOne": "- Los Conferats se otorgan por completar tareas diarias.",
+    "rankLabelTwo": "- Puedes obtener uno al día completando todas las tareas diarias. Las recompensas por Conferats se pueden ver en tu perfil en la sección 'Rango'.",
     "articleTitle": "Articlus",
     "articleLabelOne": "- Se obtiene por tareas: Práctica de artículos, Tierras de idiomas y tareas en la sección 'Aprendizaje'.",
     "articleLabelTwo": "- Se gastan en reintentos en las Tierras de idiomas y en la tienda de tu perfil.",
@@ -5462,6 +5462,27 @@
     "lossText": "Esta vez el rival fue más fuerte. No te desanimes, ¡inténtalo de nuevo!",
     "end": "¡Felicidades! El ejercicio ha terminado"
   },
+  "describePicture": {
+    "title": "Describe the Picture",
+    "description": "Look at the picture and describe what you see in German. AI will check your answer and give feedback.",
+    "startBtn": "Start Game",
+    "task": "Task",
+    "finishTitle": "Great job!",
+    "finishText": "All tasks completed.",
+    "restartBtn": "Start again",
+    "placeholder": "What do you see in the picture?",
+    "suggestedAnswer": "Suggested improved answer",
+    "keyCorrections": "Key corrections",
+    "inputPlaceholder": "Write your answer in German...",
+    "nextBtn": "Next",
+    "rulesTitle": "Game Rules",
+    "rulesText": "Describe the picture you see in German. The AI will analyze your description and provide feedback, corrections, and an improved version of your answer."
+  },
+  "describePictureTips": {
+    "tipOne": "Start with simple sentences describing what you see",
+    "tipTwo": "Use vocabulary you know - it is okay to make mistakes",
+    "tipThree": "Try to describe colors, positions, and actions"
+  },
   "nav": {
     "training": "Aprendizaje",
     "gameMode": "Juegos",
@@ -5492,6 +5513,7 @@
     "themen": "Niveles temáticos",
     "idioms": "Fraseologismos",
     "wordDuel": "Duelo de frases",
+    "describePicture": "Describe Picture",
     "quests": "Diario de misiones",
     "languagesLands": "Tierras lingüísticas"
   },
@@ -5640,7 +5662,10 @@
     "userExists": "Ya existe un usuario con ese email",
     "invalidEmail": "Formato de email no válido",
     "invalidCredential": "Contraseña no válida o incorrecta",
-    "tooManyRequests": "Demasiados intentos. Intenta más tarde"
+    "tooManyRequests": "Demasiados intentos. Intenta más tarde",
+    "weakPassword": "La contraseña debe tener al menos 6 caracteres",
+    "userDisabled": "Su cuenta ha sido bloqueada",
+    "networkRequestFailed": "¡Error de conexión! Compruebe su internet"
   },
   "about": {
     "title": "¿Aburrido de estudiar alemán y los artículos?",

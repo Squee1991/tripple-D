@@ -12,13 +12,13 @@
         </button>
       </header>
       <ul v-if="langStore" class="points-card__list">
-        <li class="points-card__item">
-          <div class="points-card__label">{{ t('accountPanel.rank') }}</div>
-          <div id="articlus" :title="hoverTitle.title" v-if="userAuth.uid" class="articlus__wrapper">
-            <img class="articlus__icon" src="../../assets/images/graduate-hat.svg" alt="Articlus_icon">
-            <span class="points-card__value"> {{ userAuth.totalHats}}</span>
-          </div>
-        </li>
+<!--        <li class="points-card__item">-->
+<!--          <div class="points-card__label">{{ t('accountPanel.rank') }}</div>-->
+<!--          <div id="articlus" :title="hoverTitle.title" v-if="userAuth.uid" class="articlus__wrapper">-->
+<!--            <img class="articlus__icon" src="../../assets/images/graduate-hat.svg" alt="Articlus_icon">-->
+<!--            <span class="points-card__value"> {{ userAuth.totalHats}}</span>-->
+<!--          </div>-->
+<!--        </li>-->
         <li class="points-card__item">
           <div class="points-card__label">{{ t('accountPanel.articles') }}</div>
           <div id="articlus" :title="hoverTitle.title" v-if="userAuth.uid" class="articlus__wrapper">
@@ -90,39 +90,39 @@ const handleLeveling = () => {
   }
 }
 
-const currentRank = computed(() => {
-  const hats = userAuth.totalHats
-  let result = {
-    title: t('pavelOverlay.newbie'),
-    icon: null,
-    stars: 0
-  }
-  rankStore.ranksData.forEach((league) => {
-    league.levels.forEach((level, index) => {
-      if (hats >= level.hats) {
-        result = {
-          title: league.title,
-          icon: league.icons ? league.icons[index].icon : league.icon,
-          stars: index + 1
-        }
-      }
-    })
-  })
-  return result
-})
+// const currentRank = computed(() => {
+//   const hats = userAuth.totalHats
+//   let result = {
+//     title: t('pavelOverlay.newbie'),
+//     icon: null,
+//     stars: 0
+//   }
+//   rankStore.ranksData.forEach((league) => {
+//     league.levels.forEach((level, index) => {
+//       if (hats >= level.hats) {
+//         result = {
+//           title: league.title,
+//           icon: league.icons ? league.icons[index].icon : league.icon,
+//           stars: index + 1
+//         }
+//       }
+//     })
+//   })
+//   return result
+// })
 
 const hoverTitle = {
   title: t('hoverTitle.articles'),
   level: t('hoverTitle.level')
 }
 const infoData = ref([
-  {id: "rank",
-    title: t('pavelOverlay.rankTitle'),
-    tips:[
-      {label: t('pavelOverlay.rankLabelOne')},
-      {label: t('pavelOverlay.rankLabelTwo')}
-    ]
-  },
+  // {id: "rank",
+  //   title: t('pavelOverlay.rankTitle'),
+  //   tips:[
+  //     {label: t('pavelOverlay.rankLabelOne')},
+  //     {label: t('pavelOverlay.rankLabelTwo')}
+  //   ]
+  // },
   {id: "article",
     title: t('pavelOverlay.articleTitle'),
     tips:[
@@ -256,7 +256,6 @@ onMounted(() => {
   height: 40px;
   background: white;
 }
-
 
 .articlus__icon {
   width: 35px;

@@ -87,7 +87,6 @@ import {ref, computed, onMounted, onBeforeUnmount, watch} from 'vue'
 import {useRouter} from 'vue-router'
 import {regions} from '@/utils/regions.js'
 import {userlangStore} from '../../store/learningStore.js'
-
 const {t, locale} = useI18n()
 const langStore = userlangStore()
 const router = useRouter()
@@ -673,9 +672,8 @@ onBeforeUnmount(() => {
   align-items: center;
   justify-content: center;
   padding: 15px;
-  background: rgba(255, 255, 255, 0.4);
-  border-radius: 15px;
   margin-top: 10px;
+  color: var(--titleColor);
 }
 
 .empty-content {

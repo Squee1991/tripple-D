@@ -1,83 +1,37 @@
 import Stripe from 'stripe'
-import { defineEventHandler, readBody, createError } from 'h3'
-import { db } from '../utils/firebase-admin.js'
+import { readBody, defineEventHandler } from 'h3'
 
 export default defineEventHandler(async (event) => {
-    try {
-        const { stripeSecret } = useRuntimeConfig()
-        if (!stripeSecret) throw createError({ statusCode: 500, statusMessage: 'Stripe key missing' })
-        const stripe = new Stripe(stripeSecret, { apiVersion: '2024-06-20' })
-
-        const { sessionId } = await readBody(event)
-        if (!sessionId) return { success: false, error: 'Missing sessionId' }
-
-        const session = await stripe.checkout.sessions.retrieve(sessionId)
-        if (session.payment_status !== 'paid') {
-            return { success: false, error: 'Payment not completed' }
-        }
-
-        const uid = session.metadata?.firebaseUID
-        if (!uid) throw new Error('No firebaseUID in session.metadata')
-
-        const subscriptionId = session.subscription
-        if (!subscriptionId) throw new Error('No subscriptionId in session')
-
-        const subscription = await stripe.subscriptions.retrieve(subscriptionId)
-        const subscriptionEndsAt = subscription.current_period_end * 1000
-
-		await db.collection('users').doc(uid).set({
-			isPremium: true,
-			subscriptionId,
-			subscriptionEndsAt,
-			subscriptionCancelled: false,
-		}, { merge: true })
-
-        return { success: true }
-    } catch (err) {
-        console.error('[stripe/confirm] ERROR:', err)
-        throw createError({ statusCode: 500, statusMessage: err.message })
-    }
+	const config = useRuntimeConfig()
+	const stripeKey = config.stripeSecret || process.env.STRIPE_SECRET_KEY
+	if (!stripeKey) return { success: false, error: 'No Stripe Key' }
+	const stripe = new Stripe(stripeKey, { apiVersion: '2024-06-20' })
+	const body = await readBody(event)
+	const { sessionId } = body
+	if (!sessionId) return { success: false, error: 'No session_id' }
+	try {
+		const session = await stripe.checkout.sessions.retrieve(sessionId)
+		if (session.payment_status === 'paid') {
+			let subscriptionEndsAt = null
+			if (session.subscription) {
+				const date = new Date()
+				date.setDate(date.getDate() + 30)
+				subscriptionEndsAt = date.toISOString()
+			}
+			return {
+				success: true,
+				data: {
+					isPremium: true,
+					subscriptionId: session.subscription || null,
+					subscriptionEndsAt: subscriptionEndsAt,
+					updatedAt: new Date().toISOString()
+				}
+			}
+		} else {
+			return { success: false, error: 'Not paid' }
+		}
+	} catch (e) {
+		console.error('Stripe Error:', e)
+		return { success: false, error: e.message }
+	}
 })
-
-
-
-// import { createError, defineEventHandler } from 'h3'
-// import Stripe from 'stripe'
-// import { readBody } from 'h3'
-// import { db } from '../utils/firebase-admin.js'
-//
-// export default defineEventHandler(async (event) => {
-//     try {
-//         const { sessionId } = await readBody(event)
-//         if (!sessionId) {
-//             return { success: false, error: 'Missing sessionId' }
-//         }
-//         const secretKey = process.env.STRIPE_SECRET_KEY
-//         const stripe = new Stripe(secretKey, { apiVersion: '2024-04-10' })
-//         const session = await stripe.checkout.sessions.retrieve(sessionId)
-//         if (session.payment_status !== 'paid') {
-//             return {
-//                 success: false,
-//                 error: 'Payment not completed'
-//             }
-//         }
-//         const uid = session.metadata?.firebaseUID
-//         if (!uid) throw new Error('No firebaseUID in session.metadata')
-//         const subscriptionId = session.subscription
-//         if (!subscriptionId) throw new Error('No subscriptionId in session')
-//         const subscription = await stripe.subscriptions.retrieve(subscriptionId)
-//         const subscriptionEndsAt = subscription.current_period_end * 1000
-//         await db.collection('users').doc(uid).update({
-//             isPremium: true,
-//             subscriptionId,
-//             subscriptionEndsAt,
-//             subscriptionCancelled: false,
-// 			updatedAt: new Date().toISOString()
-//         })
-//         return { success: true }
-//
-//     } catch (err) {
-//         console.error('[stripe/confirm] ERROR:', err)
-//         throw createError({ statusCode: 500, statusMessage: err.message })
-//     }
-// })

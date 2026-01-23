@@ -6,75 +6,61 @@ export default defineEventHandler(async (event) => {
         const key = String(config.groqApiKey || '').trim()
         if (!key) return { error: "Нет API ключа." }
         const body = await readBody(event)
-        const { message, image } = body || {}
-        if (!image) return { error: "Картинка не пришла." }
-        const modelId = 'meta-llama/llama-4-scout-17b-16e-instruct'
-        const systemPrompt = `
-Твоя роль: Внимательный учитель немецкого языка.
-ТВОЯ ЗАДАЧА: Оценить описание картинки учеником. 
+        const { referenceDescription, userLevel, userMessage, userLocale } = body || {}
 
-ТЫ ДОЛЖЕН ОТВЕТИТЬ ТОЛЬКО В ФОРМАТЕ JSON. 
-Структура JSON:
+        if (!referenceDescription || !userLevel || !userMessage) {
+            return { error: "Отсутствуют необходимые параметры." }
+        }
+
+        const modelId = 'llama-3.3-70b-versatile'
+        const feedbackLang = String(userLocale || 'ru').trim()
+        const systemPrompt = `You are a German teacher assistant that evaluates picture descriptions.
+
+You receive:
+- A reference description of the picture (level-appropriate)
+- The user's German level (A1–B1)
+- The user's answer
+
+Your task:
+1) Score the user's answer from 1 to 10 based on:
+   - Alignment with the picture content (use the reference description as ground truth)
+   - Grammatical correctness
+   - Vocabulary appropriate for the given level
+   - Sentence structure and clarity of expression
+
+2) Provide constructive feedback in the user's language (locale: ${feedbackLang}). Respond ONLY in that language in the feedback (except for German examples).
+
+3) Suggest an improved version of the user's answer, tailored to the user's level. The suggested version MUST be in German.
+
+4) List 2–3 specific points for improvement.
+
+IMPORTANT: Never mention or quote the reference description explicitly.
+
+ALWAYS respond strictly in JSON with the following shape:
 {
-  "status": "correct" | "warning" | "incorrect",
-  "icon": "✅" | "⚠️" | "❌" | "⛔",
-  "feedback": "Комментарий на русском",
-  "german_sentence": "Идеальное предложение на немецком"
-}
+  "score": <1-10>,
+  "feedback": "<Feedback in the user's language>",
+  "suggestedAnswer": "<Improved German sentence>",  
+  "keyCorrections": ["<Point 1>", "<Point 2>", "<Point 3>"]
+}`
 
-АЛГОРИТМ ПРОВЕРКИ (Иди строго по шагам!):
-
-1. ПРОВЕРКА НА МУСОР / ЧУЖОЙ ЯЗЫК / Цифры / Различные иероглифы / Просто цифры
-   Если ввод: "1", "123", "!@#$%^&*()_+|\?.<,", "...", "фыва", "Привет" (русский), "Hello".
-   -> Icon: "⛔"
-   -> Feedback: "Пожалуйста, опиши картинку словами."
-   -> German_sentence: "[Полное предложение]"
-
-2. ПРОВЕРКА НА КРАТКОСТЬ (1-2 слова)
-   Если ввод типа "Mann", "Hund", "Schnee" (верно, но мало).
-   -> Icon: "⚠️"
-   -> Feedback: "Верно, это [объект]. Но давай составим полное предложение: Кто + Что делает или если кто на чем сидит"
-   -> German_sentence: "[Полное предложение]"
-
-3. ПРОВЕРКА СЮЖЕТА (ГЛАВНЫЙ СМЫСЛ)
-   Если предложение полное, но не про то (на фото лыжник, пишут про пловца).
-   -> Icon: "❌"
-   -> Feedback: "Неверно. На фото [кто на самом деле], а не [кто в ответе]."
-
-4. ПРОВЕРКА ДЕТАЛЕЙ (ЕСЛИ УЧЕНИК ИХ УКАЗАЛ)
-   Если ученик описывает цвета, одежду, фон, эмоции (например: "красная шапка", "грустный кот"):
-   - Сравни это с картинкой.
-   - Если деталь ВЕРНАЯ: Обязательно похвали! (Feedback: "Отлично! Ты верно подметил красную шапку/синее небо.")
-   - Если деталь НЕВЕРНАЯ (пишет "зеленая куртка", а она синяя): 
-     -> Icon: "⚠️"
-     -> Feedback: "Сюжет верный, но ошибка в деталях: куртка на самом деле синяя, а не зеленая."
-
-5. ПРОВЕРКА ГРАММАТИКИ
-   - Ошибки (артикли, окончания, порядок слов) -> Icon: "⚠️" -> Feedback: "Смысл верный, но поправь грамматику: [ошибка]."
-   - Идеально -> Icon: "✅" -> Feedback: "Отличная работа! Всё написано верно."
-
-ПРИМЕРЫ:
-
-[Ввод: "Ein Mann."] -> {"status":"warning", "icon":"⚠️", "feedback":"Это мужчина, верно. Но что он делает?", "german_sentence":"Ein Mann liest ein Buch."}
-[Ввод: "Der Mann in der roten Jacke fährt Ski." (На фото куртка СИНЯЯ)] -> 
-{"status":"warning", "icon":"⚠️", "feedback":"Ты правильно понял сюжет, но куртка у него синяя (blaue Jacke), а не красная.", "german_sentence":"Der Mann in der blauen Jacke fährt Ski."}
-[Ввод: "Ein Mann mit schwarzem Hut liest." (На фото есть черная шляпа)] -> 
-{"status":"correct", "icon":"✅", "feedback":"Супер! Ты даже заметил черную шляпу. Всё верно.", "german_sentence":"Ein Mann mit schwarzem Hut liest."}
-`.trim()
         const payload = {
             model: modelId,
             messages: [
                 { role: 'system', content: systemPrompt },
                 {
                     role: 'user',
-                    content: [
-                        { type: 'text', text: message || 'Was ist das?' },
-                        { type: 'image_url', image_url: { url: image } }
-                    ]
+                    content: `Niveau des Benutzers: ${userLevel}
+
+Referenzbeschreibung des Bildes:
+${referenceDescription}
+
+Antwort des Benutzers:
+${userMessage}`
                 }
             ],
             temperature: 0,
-            max_tokens: 450,
+            max_tokens: 600,
             response_format: { type: "json_object" }
         }
         const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {

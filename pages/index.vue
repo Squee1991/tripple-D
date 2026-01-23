@@ -2,7 +2,7 @@
 import {ref, onMounted, watch} from 'vue'
 import {userAuthStore} from "~/store/authStore.js"
 import Header from '../src/components/header.vue'
-import Banner from '../src/components/baner.vue'
+import Banner from '../src/components/banner.vue'
 import Description from '../src/components/DescriptionBlock.vue'
 import About from '../src/components/about.vue'
 import FeedBack from '../src/components/feedBack.vue'
@@ -61,7 +61,7 @@ onMounted(() => {
 <template>
   <VEventAvailableModal @close="false" v-if="authStore.initialized"/>
   <VShowFall v-if="eventStore.isSnowEnabled" :image="Snow"/>
-  <VShowFall :image="Snow"/>
+<!--  <VShowFall :image="Snow"/>-->
   <div v-if="!hydrated || !authStore.initialized" class="loading"></div>
   <div v-else class="container">
     <Header/>

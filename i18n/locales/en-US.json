@@ -4460,11 +4460,11 @@
   },
   "pavelOverlay": {
     "newbie": "Newbie",
-    "rankTitle": "Ranks",
-    "rankLabelOne": "- Ranks are earned by completing daily tasks.",
-    "rankLabelTwo": "- Rank rewards can be viewed in your profile under the 'Ranks' section.",
+    "rankTitle": "Conferats",
+    "rankLabelOne": "- Conferats are awarded for completing daily tasks.",
+    "rankLabelTwo": "- You can earn one per day by completing all daily tasks. Rewards for Conferats can be viewed in your profile under the 'Rank' section.",
     "articleTitle": "Articlus",
-    "articleLabelOne": "- Earned through tasks: Article Practice, Language Lands, and tasks in the 'Learning' section.",
+    "articleLabelOne": "- Earned through tasks: Article Practice, Language Lands, and 'Learning' section assignments.",
     "articleLabelTwo": "- Spent on retries in Language Lands and in the shop within your profile.",
     "levelTitle": "Level",
     "levelLabelOne": "- Your level increases by completing tasks.",
@@ -5462,6 +5462,27 @@
     "lossText": "This time your opponent was stronger. Don't worry, try again!",
     "end": "Congratulations! Exercise completed"
   },
+  "describePicture": {
+    "title": "Describe the Picture",
+    "description": "Look at the picture and describe what you see in German. AI will check your answer and give feedback.",
+    "startBtn": "Start Game",
+    "task": "Task",
+    "finishTitle": "Great job!",
+    "finishText": "All tasks completed.",
+    "restartBtn": "Start again",
+    "placeholder": "What do you see in the picture?",
+    "suggestedAnswer": "Suggested improved answer",
+    "keyCorrections": "Key corrections",
+    "inputPlaceholder": "Write your answer in German...",
+    "nextBtn": "Next",
+    "rulesTitle": "Game Rules",
+    "rulesText": "Describe the picture you see in German. The AI will analyze your description and provide feedback, corrections, and an improved version of your answer."
+  },
+  "describePictureTips": {
+    "tipOne": "Start with simple sentences describing what you see",
+    "tipTwo": "Use vocabulary you know - it is okay to make mistakes",
+    "tipThree": "Try to describe colors, positions, and actions"
+  },
   "nav": {
     "training": "Training",
     "gameMode": "Games",
@@ -5492,6 +5513,7 @@
     "themen": "Thematic Levels",
     "idioms": "Idioms",
     "wordDuel": "Phrase Duel",
+    "describePicture": "Describe Picture",
     "quests": "Quest Journal",
     "languagesLands": "Language Lands"
   },
@@ -5641,7 +5663,10 @@
     "userExists": "A user with this email already exists",
     "invalidEmail": "Invalid email format",
     "invalidCredential": "Invalid or incorrect password",
-    "tooManyRequests": "Too many attempts. Try again later"
+    "tooManyRequests": "Too many attempts. Try again later",
+    "weakPassword": "Password must be at least 6 characters",
+    "userDisabled": "Your account has been disabled",
+    "networkRequestFailed": "Connection error! Check your internet"
   },
   "about": {
     "title": "Bored of learning German and noun articles?",

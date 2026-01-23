@@ -74,17 +74,13 @@ export const userAuthStore = defineStore('auth', () => {
 
     const checkFeedbackSurveyEligibility = async () => {
         shouldShowFeedbackSurvey.value = false
-
         const authUser = getAuth().currentUser
         const currentUid = uid.value || authUser?.uid
         if (!currentUid) return
-
         const userDocRef = doc(db, 'users', currentUid)
         const snap = await getDoc(userDocRef)
         if (!snap.exists()) return
-
         const data = snap.data() || {}
-
         const shownAt =
             data.feedbackSurveyShownAt && typeof data.feedbackSurveyShownAt.toDate === 'function'
                 ? data.feedbackSurveyShownAt.toDate()
@@ -247,6 +243,7 @@ export const userAuthStore = defineStore('auth', () => {
                 gotPremiumBonus: false,
                 voiceConsentGiven: false,
                 hasSeenOnboarding: false,
+                isPremium: false,
                 totalHats: 0,
                 sale_5:false,
                 sale_10:false,
@@ -275,18 +272,16 @@ export const userAuthStore = defineStore('auth', () => {
         if (methods.length > 0) {
             throw {code: 'auth/email-already-in-use'}
         }
-
         const userCredential = await createUserWithEmailAndPassword(
             authInstance,
             userData.email,
             userData.password
         )
-
         const user = userCredential.user
+        await updateProfile(user, { displayName: userData.name })
 
         await updateProfile(user, {displayName: userData.name})
         await sendEmailVerification(user)
-
         const userDocRef = doc(db, 'users', user.uid)
         await setDoc(userDocRef, {
             name: userData.name,
@@ -509,7 +504,50 @@ export const userAuthStore = defineStore('auth', () => {
         return initPromise
     }
 
+    const refreshUser = async () => {
+        const auth = getAuth()
+        const user = auth.currentUser
+        if (!user) return
+        const userDocRef = doc(db, 'users', user.uid)
+        try {
+            const snap = await getDoc(userDocRef)
+            if (snap.exists()) {
+                const data = snap.data()
+                setUserData({
+                    name: data.name,
+                    email: user.email,
+                    registeredAt: user.metadata.creationTime,
+                    uid: user.uid,
+                    providerId: user.providerData[0]?.providerId || '',
+                    ...data
+                })
+            }
+        } catch (e) {
+        }
+    }
+
+    const activatePremium = async (premiumData) => {
+        const auth = getAuth()
+        const user = auth.currentUser
+        if (!user) return
+        const userDocRef = doc(db, 'users', user.uid)
+        try {
+            await setDoc(userDocRef, {
+                ...premiumData,
+                isPremium: true
+            }, { merge: true })
+            isPremium.value = true
+            subscriptionEndsAt.value = premiumData.subscriptionEndsAt
+            console.log(' Премиум успешно активирован и записан')
+        } catch (e) {
+            console.error('Ошибка записи в Базе данных:', e)
+            throw e
+        }
+    }
+
     return {
+        refreshUser,
+        activatePremium,
         name,
         email,
         registeredAt,

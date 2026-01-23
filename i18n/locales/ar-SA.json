@@ -4460,9 +4460,9 @@
   },
   "pavelOverlay": {
     "newbie": "مبتدئ",
-    "rankTitle": "الرتب",
-    "rankLabelOne": "- تُمنح الرتب مقابل المهام اليومية.",
-    "rankLabelTwo": "- يمكن عرض مكافآت الرتب في الملف الشخصي في قسم «الرتب».",
+    "rankTitle": "كونفيرات",
+    "rankLabelOne": "- تُمنح الـ 'كونفيرات' مقابل إكمال المهام اليومية.",
+    "rankLabelTwo": "- يمكنك الحصول على واحدة يومياً عند إكمال جميع المهام اليومية. يمكن عرض مكافآت الـ 'كونفيرات' في ملفك الشخصي في قسم «الرتبة».",
     "articleTitle": "أرتيكلوس",
     "articleLabelOne": "- يتم الحصول عليها من المهام: ممارسة الأدوات، أراضي اللغات، ومهام قسم «التعلم».",
     "articleLabelTwo": "- تُنفق على محاولات إعادة المهام في أراضي اللغات وفي المتجر داخل الملف الشخصي.",
@@ -5462,6 +5462,27 @@
     "lossText": "هذه المرة كان الخصم أقوى. لا تقلق، حاول مرة أخرى!",
     "end": "مبروك! التمرين انتهى"
   },
+  "describePicture": {
+    "title": "Describe the Picture",
+    "description": "Look at the picture and describe what you see in German. AI will check your answer and give feedback.",
+    "startBtn": "Start Game",
+    "task": "Task",
+    "finishTitle": "Great job!",
+    "finishText": "All tasks completed.",
+    "restartBtn": "Start again",
+    "placeholder": "What do you see in the picture?",
+    "suggestedAnswer": "Suggested improved answer",
+    "keyCorrections": "Key corrections",
+    "inputPlaceholder": "Write your answer in German...",
+    "nextBtn": "Next",
+    "rulesTitle": "Game Rules",
+    "rulesText": "Describe the picture you see in German. The AI will analyze your description and provide feedback, corrections, and an improved version of your answer."
+  },
+  "describePictureTips": {
+    "tipOne": "Start with simple sentences describing what you see",
+    "tipTwo": "Use vocabulary you know - it is okay to make mistakes",
+    "tipThree": "Try to describe colors, positions, and actions"
+  },
   "nav": {
     "training": "التعلم",
     "gameMode": "الألعاب",
@@ -5492,6 +5513,7 @@
     "themen": "المستويات الموضوعية",
     "idioms": "التعابير الاصطلاحية",
     "wordDuel": "مبارزة العبارات",
+    "describePicture": "Describe Picture",
     "quests": "سجل المهام",
     "languagesLands": "أراضي اللغات"
   },
@@ -5640,7 +5662,10 @@
     "userExists": "المستخدم بهذا البريد الإلكتروني مسجل بالفعل",
     "invalidEmail": "صيغة البريد الإلكتروني غير صحيحة",
     "invalidCredential": "كلمة المرور غير صالحة أو خاطئة",
-    "tooManyRequests": "عدد كبير من المحاولات. حاول لاحقاً"
+    "tooManyRequests": "عدد كبير من المحاولات. حاول لاحقاً",
+    "weakPassword": "يجب أن تتكون كلمة المرور من 6 أحرف على الأقل",
+    "userDisabled": "تم حظر حسابك",
+    "networkRequestFailed": "مشكلة في الاتصال! تحقق من الإنترنت"
   },
   "about": {
     "title": "هل تعلم الألمانية والمقالات ممل؟",

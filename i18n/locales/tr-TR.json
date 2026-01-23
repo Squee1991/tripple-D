@@ -4460,9 +4460,9 @@
   },
   "pavelOverlay": {
     "newbie": "Çaylak",
-    "rankTitle": "Rütbeler",
-    "rankLabelOne": "- Rütbeler günlük görevler için verilir.",
-    "rankLabelTwo": "- Rütbe ödülleri profilinizdeki 'Rütbeler' bölümünde görülebilir.",
+    "rankTitle": "Konferatlar",
+    "rankLabelOne": "- Konferatlar günlük görevleri tamamladığınızda verilir.",
+    "rankLabelTwo": "- Tüm günlük görevleri tamamlayarak günde bir tane alabilirsiniz. Konferat ödülleri profilinizdeki 'Rütbe' bölümünde görülebilir.",
     "articleTitle": "Artikluso",
     "articleLabelOne": "- Görevlerle kazanılır: Artikel Pratiği, dil diyarları ve 'Öğrenme' bölümündeki görevler.",
     "articleLabelTwo": "- Dil diyarlarındaki tekrar denemeleri için ve profildeki mağazada harcanır.",
@@ -5462,6 +5462,27 @@
     "lossText": "Bu sefer rakibiniz daha güçlüydü. Üzülmeyin, tekrar deneyin!",
     "end": "Tebrikler! Alıştırma tamamlandı"
   },
+  "describePicture": {
+    "title": "Describe the Picture",
+    "description": "Look at the picture and describe what you see in German. AI will check your answer and give feedback.",
+    "startBtn": "Start Game",
+    "task": "Task",
+    "finishTitle": "Great job!",
+    "finishText": "All tasks completed.",
+    "restartBtn": "Start again",
+    "placeholder": "What do you see in the picture?",
+    "suggestedAnswer": "Suggested improved answer",
+    "keyCorrections": "Key corrections",
+    "inputPlaceholder": "Write your answer in German...",
+    "nextBtn": "Next",
+    "rulesTitle": "Game Rules",
+    "rulesText": "Describe the picture you see in German. The AI will analyze your description and provide feedback, corrections, and an improved version of your answer."
+  },
+  "describePictureTips": {
+    "tipOne": "Start with simple sentences describing what you see",
+    "tipTwo": "Use vocabulary you know - it is okay to make mistakes",
+    "tipThree": "Try to describe colors, positions, and actions"
+  },
   "nav": {
     "training": "Eğitim",
     "gameMode": "Oyunlar",
@@ -5492,6 +5513,7 @@
     "themen": "Tematik Seviyeler",
     "idioms": "Deyimler",
     "wordDuel": "İfade Düellosu",
+    "describePicture": "Describe Picture",
     "quests": "Görev Günlüğü",
     "languagesLands": "Dil Diyarları"
   },
@@ -5654,7 +5676,10 @@
     "userExists": "Bu e-posta ile zaten bir kullanıcı kayıtlı",
     "invalidEmail": "Geçersiz e-posta formatı",
     "invalidCredential": "Geçersiz veya yanlış şifre",
-    "tooManyRequests": "Çok fazla deneme yapıldı. Lütfen daha sonra tekrar deneyin"
+    "tooManyRequests": "Çok fazla deneme yapıldı. Lütfen daha sonra tekrar deneyin",
+    "weakPassword": "Şifre en az 6 karakter olmalıdır",
+    "userDisabled": "Hesabınız engellendi",
+    "networkRequestFailed": "Bağlantı hatası! İnternetinizi kontrol edin"
   },
   "about": {
     "title": "Almanca ve isim artikelleri öğrenmekten sıkıldınız mı?",
