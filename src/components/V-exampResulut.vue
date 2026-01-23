@@ -141,6 +141,7 @@ onMounted(() => {
 
 .friend__exam {
   display: flex;
+  justify-content: center;
   box-shadow: 3px 3px 0 black;
   border: 2px solid black;
   font-family: "Nunito", sans-serif;
@@ -150,7 +151,7 @@ onMounted(() => {
   border-radius: 15px;
   padding: 10px;
   font-weight: 600;
-  margin-top: 40px;
+  margin: 40px auto 0;
   max-width: 200px;
   text-align: center;
   width: 100%;
@@ -197,6 +198,7 @@ onMounted(() => {
   font-size: 1.6rem;
   margin-bottom: 12px;
   color: var(--titleColor, #111);
+  padding: 10px;
 }
 
 .ec__btn {

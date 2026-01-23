@@ -90,15 +90,23 @@
       </div>
     </div>
 
-    <div class="accordion" @click="emit('open', 'faq')">
-      <div class="accordion__head">
-        <div class="accordion__content-left">
-          <img class="accordion__icon" :src="faqIcon" alt="">
-          <div class="accordion__title">{{ $t('cabinetAccordion.faq') }}</div>
-        </div>
+    <div class="service__items">
+      <div>
+        <div class="accordion__title">{{ $t('cabinetAccordion.faq') }}</div>
       </div>
+      <div class="service__items">
+        <ul class="service__items-elements" v-for="item in servicePaths" :key="item.id">
+          <li class="service__items-list">
+            <NuxtLink class="service__items-link" :to="item.path">
+              {{ item.label }}
+            </NuxtLink>
+          </li>
+        </ul>
+      </div>
+
     </div>
   </div>
+
 </template>
 
 <script setup>
@@ -106,15 +114,15 @@ import {ref, computed, onMounted} from 'vue'
 import {useRouter} from 'vue-router'
 import {useI18n} from 'vue-i18n'
 import VToggle from '~/src/components/V-toggle.vue'
-import {userAuthStore} from '../store/authStore.js'
-import {useUiSettingsStore} from '../store/uiSettingsStore.js'
-import {useEventSessionStore} from '../store/eventsStore.js'
-import {isSoundEnabled, setSoundEnabled, unlockAudioByUserGesture} from '../utils/soundManager.js'
+import {userAuthStore} from '../../store/authStore.js'
+import {useUiSettingsStore} from '../../store/uiSettingsStore.js'
+import {useEventSessionStore} from '../../store/eventsStore.js'
+import {isSoundEnabled, setSoundEnabled, unlockAudioByUserGesture} from '../../utils/soundManager.js'
 
 const props = defineProps({
-  userIcon: {type: String, required: true},
-  settingsIcon: {type: String, required: true},
-  faqIcon: {type: String, required: true},
+  userIcon: {type: String},
+  settingsIcon: {type: String},
+  faqIcon: {type: String},
   activeTabKey: {type: String, default: 'info'},
   awards: {type: Array, default: () => []}
 })
@@ -132,6 +140,25 @@ const toggleForceUpdateKey = ref(0)
 const colorMode = useColorMode()
 const darkMode = ref(colorMode.preference === 'dark')
 const soundEnabled = ref(false)
+const servicePaths = ref(
+    [
+      {
+        id: 'Privacy',
+        label: 'Police privacy',
+        path: '/privacy',
+      },
+      {
+        id: 'FAQ',
+        label: 'FAQ',
+        path: '/faq',
+      },
+      {
+        id: 'terms',
+        label: 'Terms',
+        path: '/terms',
+      }
+    ]
+)
 
 /** Блок: Уведомления */
 const notificationsToggleItems = computed(() => ([
@@ -247,6 +274,31 @@ onMounted(() => {
 
 .settings-block .accordion__body .row__el--wrapper {
   margin-left: 30px;
+  margin-top: 10px;
+}
+
+.service__items {
+  padding: 12px 16px;
+}
+
+.service__items-elements {
+
+  padding: 10px;
+}
+
+.service__items {
+  margin-top: 10px;
+}
+
+.service__items-link {
+  color: var(--titleColor);
+  font-weight: 900;
+  padding: 10px 0;
+}
+
+.service__items-list {
+  border-bottom: 1px solid var(--titleColor);
+  padding-bottom: 5px;
 }
 
 @media (min-width: 1024px) {

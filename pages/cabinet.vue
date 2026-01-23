@@ -109,7 +109,7 @@
                 <div class="account-tab-body">
                   <div v-if="accountTab === 'common'" class="tab-surface">
                     <PersonalInfoRows/>
-                    <AccountManagement @open="handleSettingsAction" />
+                    <AccountManagement @open="handleSettingsAction"/>
                   </div>
 
                   <div v-if="accountTab === 'friends'" class="tab-surface">
@@ -129,15 +129,9 @@
                 </div>
               </div>
             </div>
-
-            <div v-else-if="activeTabKey === 'archive'">
-              <VExampResulut/>
+            <div v-else>
+              <component :is="components"/>
             </div>
-
-            <div v-else-if="activeTabKey === 'settings'">
-              <VSettings/>
-            </div>
-
           </div>
         </ClientOnly>
       </section>
@@ -272,6 +266,7 @@ import VFindFriends from '../src/components/V-findFriends.vue'
 import VRank from '../src/components/V-rank.vue'
 import PersonalInfoRows from '../src/components/PersonalInfoRows.vue'
 import AccountManagement from "../src/components/AccountManagement.vue";
+import Shop from '../src/components/V-shop.vue'
 
 import {userAuthStore} from '../store/authStore.js'
 import {userlangStore} from '../store/learningStore.js'
@@ -296,7 +291,7 @@ import Rewards from '../assets/images/rewards.svg'
 import IdCard from '../assets/images/monitor.svg'
 import ShoppingCart from '../assets/images/shopping-cart.svg'
 
-import VSettings from '../src/V-settings.vue'
+import VSettings from '../src/components/V-settings.vue'
 import ArrowBackIcon from '../assets/images/arrow.svg'
 import RankAward from '../assets/images/rankaward.svg'
 import AccountIcon from '../assets/images/account.png'
@@ -364,6 +359,15 @@ const TAB_ITEMS = [
   {key: 'shop', label: t('Магазин'), alt: 'shopIcon', icon: ShoppingCart},
   {key: 'settings', label: t('Настройки'), alt: 'settingsIcon', icon: SettingsIcon}
 ]
+const tabs = {
+  archive: VExampResulut,
+  settings: VSettings,
+  shop: Shop,
+}
+
+const components = computed(() => {
+  return tabs[activeTabKey.value] || null
+})
 
 function toggleSettings() {
   isSettingsOpen.value = !isSettingsOpen.value
@@ -672,7 +676,6 @@ onMounted(async () => {
   border-radius: 20px;
   padding: 14px 16px;
   background: transparent;
-  padding-top: 20px;
 }
 
 .setting-arrow-title {
@@ -850,17 +853,14 @@ onMounted(async () => {
 
 .account-tab-body {
   margin-top: 4px;
+  overflow-y: auto;
+  max-height: calc(100vh - 160px);
 }
 
 /* Content surfaces */
 .tab-surface {
 
 
-}
-
-.rank-placeholder {
-
-  text-align: center;
 }
 
 .rank-title {
@@ -1132,11 +1132,6 @@ onMounted(async () => {
     border: none;
     box-shadow: none;
     border-radius: 0;
-  }
-
-  .header-surface {
-    padding: 10px 10px;
-    padding-top: 70px;
   }
 
   .exp-bar {

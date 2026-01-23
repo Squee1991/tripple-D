@@ -147,6 +147,7 @@ function openDeleteModal() {
 .status-pill.is-free {
   border-color: rgba(148, 163, 184, 0.35);
   background: rgba(148, 163, 184, 0.10);
+  color: var(--titleColor);
 
 }
 
@@ -155,7 +156,7 @@ function openDeleteModal() {
   border-radius: 14px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   background: rgba(59, 130, 246, 0.18);
-  color: rgba(255, 255, 255, 0.92);
+  color: var(--titleColor);
   font-weight: 800;
   cursor: pointer;
   box-shadow: none;
@@ -191,7 +192,6 @@ function openDeleteModal() {
   color: rgba(255, 255, 255, 0.78);
 }
 
-/* кнопки (если нет глобальных) */
 .btn {
   border-radius: 16px;
   padding: 10px 16px;
@@ -221,9 +221,11 @@ function openDeleteModal() {
 
 .w-full {
   padding: 8px 14px;
+  color: var(--titleColor);
 }
+.status-pill.is-free{
 
-/* адаптив */
+}
 @media (max-width: 1023px) {
   .subscription-status-row {
     flex-direction: column;
