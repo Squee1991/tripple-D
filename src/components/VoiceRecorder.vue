@@ -6,14 +6,15 @@
         :disabled="isRecording || isBusy"
         @click="startRecording"
     >
-      🎙️ Aufnahme starten
+      <img class="record__icon-recorder" :src="Recorder" alt="Recorder">
+<!--      🎙️ Aufnahme starten-->
     </button>
     <div v-if="isRecording" class="recording-status">
       <button class="stop-btn" :disabled="isBusy" @click="stopRecording">
-        ⏹️ Aufnahme stoppen
+        ⏹️
       </button>
       <div class="voice-indicator">
-        <span class="record-dot"/> Aufnahme läuft...
+        <span class="record-dot"/>
       </div>
     </div>
     <div v-if="isBusy && !isRecording" class="processing-text">Отправка…</div>
@@ -30,7 +31,7 @@
 
 <script setup>
 import {ref} from 'vue'
-
+import  Recorder from '../../assets/images/microphone.svg'
 const emit = defineEmits(['start', 'stop', 'audio', 'result', 'submit'])
 const props = defineProps({
   languageCode: {type: String, default: 'de-DE'},
@@ -166,23 +167,32 @@ const stripDataUrlPrefix = (dataUrl) => {
   flex-direction: column;
   gap: 1rem;
   align-items: flex-start;
-  margin-top: 1rem;
 }
+
+.record__icon-recorder {
+  width: 35px;
+}
+
 .record-btn,
 .stop-btn,
 .send-btn {
-  padding: 0.6rem 1.2rem;
+  padding: 5px;
   font-size: 1rem;
   border-radius: 6px;
   cursor: pointer;
   border: none;
   transition: background-color 0.2s ease, transform 0.1s ease;
   font-weight: 800;
-  box-shadow: 2px 2px 0 #000;
 }
 .record-btn {
   background-color: #3498db;
   color: #fff;
+  border-radius: 30%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .record-btn:hover {
   background-color: #2980b9;
@@ -191,6 +201,8 @@ const stripDataUrlPrefix = (dataUrl) => {
 .stop-btn {
   background-color: #e67e22;
   color: #fff;
+  width: 48px;
+  height: 48px;
 }
 .stop-btn:hover {
   background-color: #d35400;
