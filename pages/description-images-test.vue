@@ -443,12 +443,12 @@ async function sendMessage(voiceText = null) {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #edf2f7;
 }
 
 .header-title {
   font-size: 1.6rem;
   font-weight: 700;
+  color: var(--titleColor);
 }
 
 .view-topics {
@@ -688,7 +688,8 @@ async function sendMessage(voiceText = null) {
 
 .intro-block {
   margin-bottom: 10px;
-
+  text-align: center;
+  color: var(--titleColor);
 }
 
 .suggestion-header {
@@ -749,7 +750,6 @@ async function sendMessage(voiceText = null) {
 }
 
 .input-dock {
-  border-top: 1px solid #edf2f7;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -780,10 +780,11 @@ async function sendMessage(voiceText = null) {
 .empty-state {
   text-align: center;
   font-weight: 600;
+  color: var(--titleColor);
 }
 
 .btn-primary-action {
-  background: #111827;
+  background: #3365d0;
   color: #fff;
   padding: 16px 30px;
   border-radius: 16px;
