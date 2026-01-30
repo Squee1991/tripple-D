@@ -16,7 +16,6 @@ export default defineEventHandler(async (event) => {
         const modelId = 'meta-llama/llama-4-scout-17b-16e-instruct'
         const feedbackLang = String(userLocale || 'ru').split('-')[0].trim()
         const systemPrompt = `You are a supportive German language tutor evaluating an image description exercise.
-
 INPUTS:
 1. **The Image:** You have access to the visual image. Look at it carefully.
 2. **Target Level:** ${userLevel} (A1, A2, or B1).
