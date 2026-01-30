@@ -1,7 +1,12 @@
 <template>
   <section class="shop">
     <header class="shop__header">
-      <h2 class="shop__title">Магазин</h2>
+      <div class="shop__title-container">
+        <h2 class="shop__title">Магазин предметов</h2>
+      </div>
+      <p class="shop__subtitle">
+        Обменивай накопленные Артиклюсы на полезные бонусы и постоянные скидки для своего обучения.
+      </p>
     </header>
 
     <div class="shop__content">
@@ -9,41 +14,39 @@
         <article
             v-for="card in shopCards"
             :key="card.id"
-            class="shop__card"
+            class="shop-card"
+            :class="{
+              'shop-card--owned': card.btnText === 'Куплено',
+              'shop-card--locked': card.disabled && card.btnText !== 'Куплено'
+            }"
         >
-          <div class="shop-card__name">{{ card.title }}</div>
+          <div class="shop-card__preview">
+            <img :src="card.icon" :alt="card.alt" class="shop-card__img"/>
+            <div v-if="card.btnText === 'Куплено'" class="shop-card__status-badge">Куплено</div>
+          </div>
 
-          <div class="shop-card__content">
-            <div class="shop-card__img-wrap">
-              <img :src="card.icon" :alt="card.alt" class="shop-card__img"/>
-            </div>
-            <div class="shop__card-description">
-              {{ card.description }}
-            </div>
+          <div class="shop-card__info">
+            <h3 class="shop-card__name">{{ card.title }}</h3>
+            <p class="shop-card__desc">{{ card.description }}</p>
 
-            <div class="shop-card__bottom">
-              <div class="shop-card__info">
-                <img
-                    v-if="card.currency === 'articlus'"
-                    :src="Articlus"
-                    alt="articlus"
-                    class="shop-card__price-icon"
-                />
-                <span class="shop-card__price-value">{{ card.price }}</span>
-              </div>
-              <button
-                  class="shop-card__buy"
-                  :class="{ 'shop-card__buy--disabled': card.disabled }"
-                  :disabled="card.disabled"
-                  @click="onCardAction(card)"
-              >
-                <span>{{ card.btnText }}</span>
-
-              </button>
+            <div v-if="card.requiredHats && card.btnText !== 'Куплено'" class="shop-card__requirements">
+              <span class="shop-req-badge">Ранг {{ card.requiredHats }}</span>
             </div>
           </div>
 
-
+          <footer class="shop-card__footer">
+            <button
+                class="shop-card__action-btn"
+                :disabled="card.disabled"
+                @click="onCardAction(card)"
+            >
+              <div class="btn-content" v-if="card.btnText === 'Купить'">
+                <img :src="Articlus" class="btn-price-icon"/>
+                <span>{{ card.price }}</span>
+              </div>
+              <span v-else>{{ card.btnText === 'Полное' ? 'Максимум' : card.btnText }}</span>
+            </button>
+          </footer>
         </article>
       </div>
     </div>
@@ -57,7 +60,7 @@ import {userChainStore} from '~/store/chainStore.js'
 import {userAuthStore} from '~/store/authStore.js'
 import Heart from '../../assets/images/life.svg'
 import Articlus from '../../assets/images/articlus.png'
-import Sale from '../../assets/images/sale.svg'
+import Sale from '../../assets/images/save5.svg'
 import Sale10 from '../../assets/images/rocket_10.svg'
 import Sale15 from '../../assets/images/hot-air-ballon15.svg'
 import GraduateHat from '../../assets/images/graduate-hat.svg'
@@ -82,7 +85,7 @@ const shopCards = computed(() => [
   {
     id: "lives",
     title: "Жизни",
-    description: "Покупка жизни ,поможет вам продолжить обучение даже если они закончились",
+    description: "Тут можно пополнить запас жизней(Максимально 5)",
     icon: Heart,
     alt: "Heart",
     price: PRICE_PER_HEART,
@@ -93,7 +96,7 @@ const shopCards = computed(() => [
   {
     id: "sale_5",
     title: "Скидка 5%",
-    description: "Для покупки необходимо звание, не ниже Студент Ранг 3",
+    description: "Требования:",
     icon: Sale,
     alt: "Sale_5",
     price: DISCOUNT_PRICE_ARTICLUS_5, // ✅ цена в артиклюсах
@@ -109,7 +112,7 @@ const shopCards = computed(() => [
   {
     id: "sale_10",
     title: "Скидка 10%",
-    description: "Для покупки необходимо звание, не ниже Исследователь Ранг 3",
+    description: "Требования:",
     icon: Sale10,
     alt: "Sale_10",
     price: DISCOUNT_PRICE_ARTICLUS_10,
@@ -125,7 +128,7 @@ const shopCards = computed(() => [
   {
     id: "sale_15",
     title: "Скидка 15%",
-    description: "Для покупки необходимо звание, не ниже Магистр Ранг 3",
+    description: "Требования:",
     icon: Sale15,
     alt: "Sale_15",
     price: DISCOUNT_PRICE_ARTICLUS_15,
@@ -173,136 +176,200 @@ const buyItem = async (cardId, amount) => {
 </script>
 
 <style scoped>
-.shop__header {
-  padding: 12px 14px;
+
+.shop {
+  background-color: #0b0e14;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.shop__title-container {
+  background: #50a2d8;
+  border-radius: 12px;
+  padding: 15px 20px; /* Немного увеличили padding по бокам */
+  margin-bottom: 30px;
+  text-align: center;
+  box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .shop__title {
+  color: white;
   margin: 0;
-  padding: 10px;
-  background:green;
-  border-radius: 10px;
-  box-shadow: 0 2px yellow;
-  font-weight: 900;
-  font-size: 22px;
-  letter-spacing: 0.2px;
-  color: var(--titleColor);
+  font-size: 24px;
+  text-transform: none;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.shop__content {
-  padding: 0 14px 14px;
+.shop__subtitle {
+  text-align: center;
+  margin: 0 auto 10px;
+  padding: 12px 14px;
+  color: var(--titleColor);
+  font-size: 14px;
+  backdrop-filter: blur(8px);
+}
+
+.shop__subtitle::after {
+  content: '';
+  display: inline-block;
+  width: 90%;
+  height: 2px;
+  background: #50a2d8
+
+}
+
+@media (min-width: 768px) {
+  .shop__subtitle {
+    font-size: 15px;
+  }
 }
 
 .shop__cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
 }
 
-.shop__card {
-  max-width: 220px;
-  min-height: 230px;
+.shop-card {
+  background: #1c222d;
+  border: 2px solid #363d4a;
+  border-radius: 16px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  background: #fff;
-  margin-right: 20px;
-  border-radius: 14px;
-  border: 2px solid #000;
-  box-shadow: 3px 3px 0 #000;
-  transition: transform 0.12s ease, box-shadow 0.12s ease;
-  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.shop-card:hover {
+  border-color: #50a2d8;
+}
+
+.shop-card__preview {
+  padding: 15px;
+  background: #2a313e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-bottom: 2px solid #363d4a;
+}
+
+.shop-card__img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.shop-card__status-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #4caf50;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.shop-card__info {
+  padding: 15px;
+  flex-grow: 1;
+  text-align: left;
 }
 
 .shop-card__name {
   color: white;
-  font-size: 18px;
-  font-weight: 600;
-  font-family: "Nunito", sans-serif;
-  margin-bottom: 10px;
-  text-align: center;
-  background: #415de4;
-  padding: 5px;
+  margin: 0 0 8px 0;
+  font-size: 16px;
 }
 
-.shop-card__img-wrap {
-  width: 96px;
-  height: 96px;
-  margin: 0 auto 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.shop-card__desc {
+  color: #a0a6b1;
+  font-size: 13px;
+  line-height: 1.4;
+  margin: 0;
 }
 
-.shop-card__img {
-  width: 70px;
-  height: 70px;
-  object-fit: contain;
+/* Требования */
+.shop-card__requirements {
+  margin-top: 10px;
 }
 
-.shop-card__bottom {
-  margin-top: auto;
-  display: flex;
-  justify-content: center;
-  gap: 5px;
+.shop-req-badge {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffd04b;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  border: 1px solid rgba(255, 208, 75, 0.3);
 }
 
+.shop-card__footer {
+  padding: 15px;
+}
 
-.shop-card__buy {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5px 12px;
+.shop-card__action-btn {
   width: 100%;
-  line-height: 1;
-  white-space: nowrap;
-  border-radius: 9px;
-  border: 2px solid #e69848;
-  box-shadow: 0 4px 0 #b8631c;
-  background: linear-gradient(to bottom, #e69848 0%, #b8631c 100%);
-  color: white;
-  font-weight: 900;
+  padding: 3px;
+  border: none;
+  border-radius: 12px;
+  background: #f1c40f;
+  color: var(--titleColor);
+  font-weight: 800;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #c29d0b;
+  transition: all 0.1s;
 }
 
-.shop-card__buy--disabled,
-.shop-card__buy:disabled {
+.shop-card__action-btn:active {
+  box-shadow: 0 0 0 #c29d0b;
+  transform: translateY(4px);
+}
+
+.shop-card__action-btn:disabled {
+  background: #363d4a;
+  color: var(--titleColor);
+  box-shadow: 0 4px 0 #252a33;
   cursor: not-allowed;
-  filter: grayscale(0.1);
 }
 
-
-.shop-card__price-icon {
-  width: 22px;
-  height: 22px;
-}
-
-.shop__card-description {
-  text-align: center;
-  font-size: 14px;
-  height: 60px;
-  margin-bottom: 20px;
-}
-
-.shop-card__info {
+.btn-content {
   display: flex;
-  position: relative;
-  justify-content: end;
-  width: 70px;
-  padding: 2px 8px;
-  border-radius: 10px;
-  background: #9B8CFF;
-  border: 2px solid #9B8CFF;
-  box-shadow: 0px 4px #4837bc;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
-.shop-card__price-icon {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
+.btn-price-icon {
+  width: 23px;
+  height: 23px;
 }
 
-.shop-card__content {
-  padding: 0 10px 15px 10px;
+.shop-card--owned {
+  border-color: #4caf50;
+}
+
+.shop-card--owned .shop-card__action-btn {
+  background: #4caf50;
+  color: white;
+  box-shadow: 0 4px 0 #2e7d32;
+}
+
+@media (min-width: 1024px) {
+  .shop-card:hover {
+    border-color: #50a2d8;
+  }
 }
 </style>
+
+
+
+

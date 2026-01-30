@@ -15,7 +15,6 @@
         </div>
       </div>
     </div>
-
     <div class="layout">
       <aside class="sidebar-panel">
         <button class="back-btn" @click="backToMain" aria-label="На главную" type="button">
@@ -471,12 +470,27 @@ function closeCancelModal() {
 }
 
 async function cancelSubscription() {
-  if (!authStore.uid) return
+  if (!authStore.uid || !authStore.email) {
+    alert('Ошибка: Нет email или uid')
+    return
+  }
   try {
-    const res = await $fetch('/api/stripe/cancel', {method: 'POST', body: {uid: authStore.uid}})
-    if (!res.success) alert('Ошибка отмены подписки: ' + res.error)
-  } catch {
-    alert('Error, try later')
+    const res = await $fetch('/api/stripe/cancel', {
+      method: 'POST',
+      body: {
+        uid: authStore.uid,
+        email: authStore.email
+      }
+    })
+    if (res.success) {
+      authStore.subscriptionCancelled = true
+      isCancelModalOpen.value = false
+      alert('Успешно! Автопродление отключено.')
+    } else {
+    }
+  } catch (e) {
+    console.error(e)
+    alert('Ошибка сети')
   }
 }
 
@@ -548,6 +562,7 @@ async function confirmDeleteAccount() {
 }
 
 onMounted(async () => {
+  await authStore.markCancelledInDb()
   await learningStore.loadFromFirebase()
   await eventStore.loadGlobalWinterSettings()
   friendsStore.loadFriends()
