@@ -163,9 +163,9 @@ export const userAuthStore = defineStore('auth', () => {
         registeredAt.value = normalizeDate(data.registeredAt)
         uid.value = data.uid || null
         avatar.value = data.avatar || null
-        isPremium.value = data.isPremium || false
+        isPremium.value = data.isPremium === true
         subscriptionEndsAt.value = data.subscriptionEndsAt || null
-        subscriptionCancelled.value = data.subscriptionCancelled || false
+        subscriptionCancelled.value = isPremium.value && data.subscriptionCancelled === true
         providerId.value = data.providerId || ''
         ownedAvatars.value = data.ownedAvatars || ['1.png', '2.png']
         achievements.value = data.achievements || null
@@ -263,6 +263,7 @@ export const userAuthStore = defineStore('auth', () => {
     }
 
     const registerUser = async (userData) => {
+
         const authInstance = getAuth()
         const methods = await fetchSignInMethodsForEmail(authInstance, userData.email)
         if (methods.length > 0) {
@@ -523,39 +524,21 @@ export const userAuthStore = defineStore('auth', () => {
         const user = auth.currentUser
         if (!user) return
         const userDocRef = doc(db, 'users', user.uid)
-        try {
-            await setDoc(userDocRef, {
-                ...premiumData,
-                isPremium: true
-            }, {merge: true})
-            isPremium.value = true
-            subscriptionEndsAt.value = premiumData.subscriptionEndsAt
-            console.log(' Премиум успешно активирован и записан')
-        } catch (e) {
-            console.error('Ошибка записи в Базе данных:', e)
-            throw e
-        }
 
+        await setDoc(userDocRef, {
+            ...premiumData,
+            isPremium: true,
+            subscriptionCancelled: false,     // ✅ ВАЖНО
+        }, {merge: true})
+
+        isPremium.value = true
+        subscriptionEndsAt.value = premiumData.subscriptionEndsAt
+        subscriptionCancelled.value = false // ✅ ВАЖНО
     }
-    const markCancelledInDb = async () => {
-        const auth = getAuth()
-        const user = auth.currentUser
 
-        // 1. Обновляем локально, чтобы юзер сразу увидел
+    const markCancelledInDb = () => {
+        if (!isPremium.value) return
         subscriptionCancelled.value = true
-
-        if (!user) return
-
-        // 2. ЖЕЛЕЗОБЕТОННО ПИШЕМ В БАЗУ
-        const userDocRef = doc(db, 'users', user.uid)
-        try {
-            await updateDoc(userDocRef, {
-                subscriptionCancelled: true
-            })
-            console.log('💾 Статус отмены сохранен в базу навсегда')
-        } catch (e) {
-            console.error('Ошибка записи в базу:', e)
-        }
     }
 
     return {
