@@ -21,6 +21,7 @@ let authStateUnsubscribe = null;
 
 export const userAuthStore = defineStore('auth', () => {
     const auth = useFirebaseAuth()
+    const langStore = userlangStore();
     const LEADERBOARD_COLLECTION = 'marathon_leaderboard';
     const LEADERBOARD_GUESS = 'leaderboard_guess'
     const DAILY__COLLECTION = 'daily';
@@ -149,7 +150,6 @@ export const userAuthStore = defineStore('auth', () => {
         const snap = await getDoc(userDocRef);
         const alreadyGranted = snap.exists() && snap.data().gotPremiumBonus === true;
         if (alreadyGranted) return;
-        const langStore = userlangStore();
         langStore.points += 50;
         langStore.totalEarnedPoints += 50;
         langStore.gotPremiumBonus = true;
@@ -172,6 +172,9 @@ export const userAuthStore = defineStore('auth', () => {
         voiceConsentGiven.value = data.voiceConsentGiven === true
         hasSeenOnboarding.value = data.hasSeenOnboarding === true
         totalHats.value = data.totalHats || 0
+        if (data.points !== undefined) langStore.points = data.points;
+        if (data.exp !== undefined) langStore.exp = data.exp;
+        if (data.totalEarnedPoints !== undefined) langStore.totalEarnedPoints = data.totalEarnedPoints;
         premiumDiscount.value = {
             sale_5: data.sale_5 || false,
             sale_10: data.sale_10 || false,
@@ -183,25 +186,19 @@ export const userAuthStore = defineStore('auth', () => {
     const purchase = async (cost, discountId) => {
         const user = getAuth().currentUser
         if (!user) return {success: false, reason: 'no-user'}
-
         const allowed = ['sale_5', 'sale_10', 'sale_15']
         if (!allowed.includes(discountId)) return {success: false, reason: 'invalid-item'}
-
         if (totalHats.value < cost) return {success: false, reason: 'insufficient'}
         if (premiumDiscount.value[discountId] === true) return {success: false, reason: 'already-owned'}
-
         try {
             const newTotal = totalHats.value - cost
             const userRef = doc(db, 'users', user.uid)
-
             await updateDoc(userRef, {
                 totalHats: newTotal,
                 [discountId]: true,
             })
-
             totalHats.value = newTotal
             premiumDiscount.value[discountId] = true
-
             return {success: true}
         } catch (error) {
             console.error('purchase error', error)
@@ -244,10 +241,10 @@ export const userAuthStore = defineStore('auth', () => {
                 hasSeenOnboarding: false,
                 isPremium: false,
                 totalHats: 0,
+                points: 0,
                 sale_5: false,
                 sale_10: false,
                 sale_15: false,
-
                 ...createInitialAchievementsObject()
             })
         }
@@ -278,8 +275,6 @@ export const userAuthStore = defineStore('auth', () => {
         )
         const user = userCredential.user
         await updateProfile(user, {displayName: userData.name})
-
-        await updateProfile(user, {displayName: userData.name})
         await sendEmailVerification(user)
         const userDocRef = doc(db, 'users', user.uid)
         await setDoc(userDocRef, {
@@ -295,12 +290,12 @@ export const userAuthStore = defineStore('auth', () => {
             voiceConsentGiven: false,
             hasSeenOnboarding: false,
             totalHats: 0,
+            points: 0,
             sale_5: false,
             sale_10: false,
             sale_15: false,
             ...createInitialAchievementsObject()
         })
-
         const finalDoc = await getDoc(userDocRef)
         const data = finalDoc.data() || {}
 
@@ -315,7 +310,6 @@ export const userAuthStore = defineStore('auth', () => {
 
         await checkFeedbackSurveyEligibility()
     }
-
 
     const setHasSeenOnboarding = async (value = true) => {
         const authInstance = getAuth()
@@ -409,7 +403,6 @@ export const userAuthStore = defineStore('auth', () => {
     };
 
     const purchaseAvatar = async (fileName) => {
-        const langStore = userlangStore()
         notEnoughArticle.value = false
         if (ownedAvatars.value.includes(fileName)) return 'owned'
         if (langStore.points < 50) {

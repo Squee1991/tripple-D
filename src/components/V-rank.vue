@@ -122,6 +122,22 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 
 .ranks-wrapper {
   margin: 0 auto;
+  overflow-y: auto;
+  max-height: calc(100vh - 250px);
+}
+
+.ranks-wrapper::-webkit-scrollbar {
+  width: 10px;
+}
+
+.ranks-wrapper::-webkit-scrollbar-thumb {
+  background: var(--titleColor);
+  border-radius: 10px;
+  border: 2px solid #fff;
+}
+
+.ranks-wrapper::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 .rank-league {
@@ -210,7 +226,7 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
   display: flex;
   align-items: center;
   padding: 0 10px;
-  margin-bottom: 28px;
+  margin-bottom: 15px;
 }
 
 .hats-badge {
@@ -314,7 +330,6 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
   }
 
   .card {
-    flex: 0 0 auto;
     width: 220px;
     scroll-snap-align: start;
   }

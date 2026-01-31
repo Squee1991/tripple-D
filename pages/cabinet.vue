@@ -21,9 +21,7 @@
           <img class="back__btn-icon" :src="Home" alt=""/>
           <span class="back-label">{{ t('cabinet.main') }}</span>
         </button>
-
         <div class="sidebar-title">{{ t('cabinet.category') }}</div>
-
         <nav class="tabs-vertical">
           <button
               v-for="tabItem in TAB_ITEMS"
@@ -88,7 +86,6 @@
                     <div class="level-info">{{ t('cabinet.level') }} {{ learningStore.isLeveling }}</div>
                   </div>
                 </div>
-
                 <div class="account-tabs">
                   <button
                       v-for="tab in ACCOUNT_TABS"
@@ -99,43 +96,36 @@
                       type="button"
                   >
                     <img :class="iconDisplayComputed" class="tab-icon --horizontal" :src="tab.icon" :alt="tab.alt">
-                    <span class="tab__text">
-                                  {{ tab.label }}
-                                </span>
+                    <span class="tab__text">{{ tab.label }}</span>
                   </button>
                 </div>
-
                 <div class="account-tab-body">
                   <div v-if="accountTab === 'common'" class="tab-surface">
                     <PersonalInfoRows/>
                     <AccountManagement @open="handleSettingsAction"/>
                   </div>
-
                   <div v-if="accountTab === 'friends'" class="tab-surface">
                     <VFindFriends/>
                   </div>
-
-
                   <div v-else-if="accountTab === 'awards'" class="tab-surface">
                     <AwardsList :awards="awardList"/>
                   </div>
-
-
                   <div v-else-if="accountTab === 'rank'" class="rank-placeholder">
                     <VRank/>
                   </div>
-
                 </div>
               </div>
             </div>
             <div v-else>
-              <component :is="components"/>
+              <component
+                  :is="components"
+                  @open="handleSettingsAction"
+              />
             </div>
           </div>
         </ClientOnly>
       </section>
     </div>
-
     <!-- Avatar modal -->
     <div v-if="isAvatarModalOpen" class="avatar-modal-overlay" @click.self="isAvatarModalOpen = false">
       <div class="avatar-modal-content">
@@ -167,7 +157,6 @@
         </div>
       </div>
     </div>
-
     <div v-if="isPurchaseModalOpen" class="modal-overlay" @click.self="isPurchaseModalOpen = false">
       <div class="modal-card">
         <template v-if="purchaseState === 'success'">
@@ -178,7 +167,6 @@
             </button>
           </div>
         </template>
-
         <template v-else-if="purchaseState === 'insufficient'">
           <div class="modal-title">{{ t('cabinet.notEnoughtArticles') }}</div>
           <div class="modal-actions">
@@ -187,7 +175,6 @@
             </button>
           </div>
         </template>
-
         <template v-else>
           <div class="modal-title">{{ t('cabinet.buyAvatar') }}</div>
           <p class="modal-text">
@@ -204,26 +191,19 @@
         </template>
       </div>
     </div>
-
-    <!-- Delete modal -->
     <div v-if="isDeleteModalOpen" class="modal-overlay" @click.self="isDeleteModalOpen = false">
       <div class="modal-card">
         <div class="modal-title">{{ t('cabinet.deleteAccTitle') }}</div>
-
         <p v-if="authStore.isPremium" class="modal-text">
           <span class="warn">{{ t('cabinet.important') }}</span>
           <span> {{ t('cabinet.importantText') }}</span>
         </p>
-
         <p v-if="!isGoogleUser" class="modal-text">{{ t('cabinet.checkPassword') }}</p>
-
         <div v-if="!isGoogleUser" class="label">
           <input class="input" v-model="deletePasswordField.value" type="password"/>
           <p v-if="deletePasswordField.error" class="delete-error">{{ t(deletePasswordField.error) }}</p>
         </div>
-
         <p v-else class="modal-text">{{ t('cabinet.checkGoogle') }}</p>
-
         <div class="modal-actions">
           <button class="btn btn-danger" @click="confirmDeleteAccount" type="button">
             {{ t('cabinet.deleteAccBtnAccept') }}
@@ -234,7 +214,6 @@
         </div>
       </div>
     </div>
-
     <!-- Snow warning modal -->
     <div v-if="isSnowWarningModalOpen" class="modal-overlay" @click.self="isSnowWarningModalOpen = false">
       <div class="modal-card">
@@ -577,6 +556,7 @@ onMounted(async () => {
   overflow: hidden;
 }
 
+
 .layout {
   display: flex;
   height: 100%;
@@ -737,7 +717,6 @@ onMounted(async () => {
   margin-top: 6px;
 }
 
-/* Profile block */
 .user-block {
   display: flex;
   align-items: center;
@@ -832,10 +811,7 @@ onMounted(async () => {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
-
-
 }
-
 
 .account-tab {
   display: flex;
@@ -855,9 +831,9 @@ onMounted(async () => {
 
 .account-tab.active {
   background: #eeeaea;
-  border: 3px solid black;
-  box-shadow: 3px 3px 0 black;
-  border-radius: 10px;
+  border: 2px solid black;
+  box-shadow: 2px 2px 0 black;
+  border-radius: 8px;
   color: black;
 }
 
@@ -868,14 +844,23 @@ onMounted(async () => {
 
 .account-tab-body {
   margin-top: 4px;
-  overflow-y: auto;
   max-height: calc(100vh - 160px);
+  overflow-y: auto;
+  padding-right: 3px;
 }
 
-/* Content surfaces */
-.tab-surface {
+.account-tab-body::-webkit-scrollbar {
+  width: 10px;
+}
 
+.account-tab-body::-webkit-scrollbar-thumb {
+  background: var(--titleColor);
+  border-radius: 15px;
+  border: 2px solid #fff;
+}
 
+.account-tab-body::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 .rank-title {
@@ -889,7 +874,6 @@ onMounted(async () => {
   opacity: .85;
 }
 
-/* Modals */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -902,24 +886,24 @@ onMounted(async () => {
 
 .modal-card {
   background: #fef8e4;
-  border: 3px solid #000;
+  border: 2px solid #000;
   border-radius: 20px;
   padding: 2rem;
   width: 90%;
   max-width: 440px;
-  box-shadow: 6px 6px 0 #000;
+  box-shadow: 3px 3px 0 #000;
   text-align: center;
 }
 
 .modal-title {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 900;
   font-style: italic;
   margin-bottom: 1rem;
 }
 
 .modal-text {
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -966,7 +950,6 @@ onMounted(async () => {
   color: #fff;
 }
 
-/* Avatar modal */
 .avatar-modal-overlay {
   position: fixed;
   inset: 0;
@@ -1053,7 +1036,7 @@ onMounted(async () => {
   font-size: .9rem;
 }
 
-/* Hover effects desktop */
+
 @media (min-width: 1024px) {
   .back-btn:hover {
     transform: translate(2px, 2px);
@@ -1071,7 +1054,6 @@ onMounted(async () => {
   }
 }
 
-/* Mobile layout */
 @media (max-width: 1023px) {
   .cabinet-wrapper {
     height: 100vh;
@@ -1123,8 +1105,8 @@ onMounted(async () => {
   }
 
   .tab-icon {
-    width: 28px;
-    height: 28px;
+    width: 35px;
+    height: 35px;
   }
 
   .back-btn {
@@ -1164,8 +1146,8 @@ onMounted(async () => {
 
 @media (max-width: 420px) {
   .tab-icon {
-    width: 32px;
-    height: 32px;
+    width: 35px;
+    height: 35px;
   }
 
   .setting-title {

@@ -12,13 +12,13 @@
         </button>
       </header>
       <ul v-if="langStore" class="points-card__list">
-<!--        <li class="points-card__item">-->
-<!--          <div class="points-card__label">{{ t('accountPanel.rank') }}</div>-->
-<!--          <div id="articlus" :title="hoverTitle.title" v-if="userAuth.uid" class="articlus__wrapper">-->
-<!--            <img class="articlus__icon" src="../../assets/images/graduate-hat.svg" alt="Articlus_icon">-->
-<!--            <span class="points-card__value"> {{ userAuth.totalHats}}</span>-->
-<!--          </div>-->
-<!--        </li>-->
+        <li class="points-card__item">
+          <div class="points-card__label">{{ t('accountPanel.rank') }}</div>
+          <div id="articlus" :title="hoverTitle.title" v-if="userAuth.uid" class="articlus__wrapper">
+            <img class="articlus__icon" src="../../assets/images/graduate-hat.svg" alt="Articlus_icon">
+            <span class="points-card__value"> {{ userAuth.totalHats}}</span>
+          </div>
+        </li>
         <li class="points-card__item">
           <div class="points-card__label">{{ t('accountPanel.articles') }}</div>
           <div id="articlus" :title="hoverTitle.title" v-if="userAuth.uid" class="articlus__wrapper">
@@ -116,13 +116,13 @@ const hoverTitle = {
   level: t('hoverTitle.level')
 }
 const infoData = ref([
-  // {id: "rank",
-  //   title: t('pavelOverlay.rankTitle'),
-  //   tips:[
-  //     {label: t('pavelOverlay.rankLabelOne')},
-  //     {label: t('pavelOverlay.rankLabelTwo')}
-  //   ]
-  // },
+  {id: "rank",
+    title: t('pavelOverlay.rankTitle'),
+    tips:[
+      {label: t('pavelOverlay.rankLabelOne')},
+      {label: t('pavelOverlay.rankLabelTwo')}
+    ]
+  },
   {id: "article",
     title: t('pavelOverlay.articleTitle'),
     tips:[

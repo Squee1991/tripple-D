@@ -1,6 +1,5 @@
 <template>
   <div v-if="activeTabKey === 'info'" class="tab-content">
-
     <div class="accordion open settings-static settings-block" @click.stop>
       <div class="accordion__head">
         <div class="accordion__content-left">
@@ -8,7 +7,6 @@
           <div class="accordion__title">Уведомления</div>
         </div>
       </div>
-
       <div class="accordion__body" @click.stop>
         <div class="settings__elements">
           <div
@@ -19,7 +17,6 @@
             <div class="toggle__wrapper">
               {{ settingsItem.label }}
             </div>
-
             <ClientOnly>
               <template v-if="settingsItem.wrap">
                 <ColorScheme>
@@ -30,7 +27,6 @@
                   />
                 </ColorScheme>
               </template>
-
               <template v-else>
                 <VToggle
                     :key="settingsItem.key + toggleForceUpdateKey"
@@ -43,8 +39,6 @@
         </div>
       </div>
     </div>
-
-
     <div class="accordion open settings-static settings-block" @click.stop>
       <div class="accordion__head">
         <div class="accordion__content-left">
@@ -52,7 +46,6 @@
           <div class="accordion__title">Темы</div>
         </div>
       </div>
-
       <div class="accordion__body" @click.stop>
         <div class="settings__elements">
           <div
@@ -65,7 +58,6 @@
               {{ settingsItem.label }}
               <span v-if="settingsItem.key === 'snowFall' && !eventStore.isSnowPurchased">🔒</span>
             </div>
-
             <ClientOnly>
               <template v-if="settingsItem.wrap">
                 <ColorScheme>
@@ -76,7 +68,6 @@
                   />
                 </ColorScheme>
               </template>
-
               <template v-else>
                 <VToggle
                     :key="settingsItem.key + toggleForceUpdateKey"
@@ -89,10 +80,9 @@
         </div>
       </div>
     </div>
-
     <div class="service__items">
       <div>
-        <div class="accordion__title">{{ $t('cabinetAccordion.faq') }}</div>
+        <div class="accordion__title">{{ t('cabinetAccordion.faq')}}</div>
       </div>
       <div class="service__items">
         <ul class="service__items-elements" v-for="item in servicePaths" :key="item.id">
@@ -103,7 +93,6 @@
           </li>
         </ul>
       </div>
-
     </div>
   </div>
 
@@ -112,7 +101,6 @@
 <script setup>
 import {ref, computed, onMounted} from 'vue'
 import {useRouter} from 'vue-router'
-import {useI18n} from 'vue-i18n'
 import VToggle from '~/src/components/V-toggle.vue'
 import {userAuthStore} from '../../store/authStore.js'
 import {useUiSettingsStore} from '../../store/uiSettingsStore.js'
@@ -160,13 +148,12 @@ const servicePaths = ref(
     ]
 )
 
-/** Блок: Уведомления */
 const notificationsToggleItems = computed(() => ([
   {key: 'sound', label: t('cabinetToggle.sound'), wrap: false},
   {key: 'ach', label: t('cabinetToggle.ach'), wrap: false},
 ]))
 
-/** Блок: Темы */
+
 const themesToggleItems = computed(() => ([
   {key: 'dark', label: t('cabinetToggle.theme'), wrap: true},
   {key: 'snowFall', label: t('cabinetToggle.snowFall'), wrap: true},
@@ -273,17 +260,12 @@ onMounted(() => {
 }
 
 .settings-block .accordion__body .row__el--wrapper {
-  margin-left: 30px;
+  margin-left: 10px;
   margin-top: 10px;
 }
 
 .service__items {
   padding: 12px 16px;
-}
-
-.service__items-elements {
-
-  padding: 10px;
 }
 
 .service__items {
@@ -294,6 +276,7 @@ onMounted(() => {
   color: var(--titleColor);
   font-weight: 900;
   padding: 10px 0;
+  display: flex;
 }
 
 .service__items-list {
@@ -301,10 +284,4 @@ onMounted(() => {
   padding-bottom: 5px;
 }
 
-@media (min-width: 1024px) {
-  .accordion:hover {
-    transform: translate(1px, 1px);
-
-  }
-}
 </style>
