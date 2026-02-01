@@ -5,25 +5,28 @@
         <button @click="pathFunction(btn.path)" class="back__btn"> {{ btn.text }}</button>
       </div>
     </div>
-    <FeedBack/>
+    <ClientOnly>
+       <FeedBack/>
+    </ClientOnly>
   </div>
 </template>
 
 <script setup>
 
 import FeedBack from "~/src/components/feedBack.vue";
-import { useRouter } from "vue-router";
+import {useRouter} from "vue-router";
+
 const router = useRouter();
-const { t } = useI18n();
+const {t} = useI18n();
 const data = ref([
-  {id: 1, text: t('faq.btnBack') , path: '/'},
-  {id: 2, text: t('cabinetAccordion.faq') , path: '/faq'},
+  {id: 1, text: t('faq.btnBack'), path: '/'},
+  {id: 2, text: t('cabinetAccordion.faq'), path: '/faq'},
 ])
 
 const pathFunction = (pathValue) => {
-   if (pathValue) {
-     router.push(pathValue);
-   }
+  if (pathValue) {
+    router.push(pathValue);
+  }
 }
 
 </script>
@@ -69,12 +72,13 @@ const pathFunction = (pathValue) => {
   }
 }
 
-@media (max-width: 480px){
+@media (max-width: 480px) {
   .btns__wrapper {
     flex-direction: column;
     justify-content: space-between;
     padding: 0 15px;
   }
+
   .back__btn {
     width: 100%;
   }

@@ -11,8 +11,8 @@
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -142,8 +142,8 @@
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 25,
-      "xp": 25
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -252,6 +252,1789 @@
         "question": "Соберите прогноз: Роботы будут делать всё.",
         "words": ["alles", "Roboter", "Die", "machen", "werden"],
         "correctOrder": ["Die", "Roboter", "werden", "alles", "machen"]
+      }
+    ]
+  },
+  {
+      "questId": "future_plans_plural",
+      "aliases": ["futur-group-plans"],
+      "title": "Общие планы",
+      "progress": "0/15",
+      "description": "Планируем вместе. Отработка форм 'wir', 'ihr', 'sie' в будущем времени.",
+      "conditions": {
+        "goal": "Научитесь говорить о совместных действиях в будущем.",
+        "minCorrect": 12,
+        "requiredTasks": 15
+      },
+      "rewards": {
+        "points": 10,
+        "xp": 10
+      },
+      "tasks": [
+        {
+          "id": 1,
+          "type": "select",
+          "question": "Wann ... ihr nach Berlin fahren?",
+          "options": ["werdet", "werden", "wird"],
+          "answer": "werdet"
+        },
+        {
+          "id": 2,
+          "type": "reorder",
+          "question": "Соберите: Мы купим билеты завтра.",
+          "words": ["kaufen", "Wir", "werde", "Tickets", "morgen", "die", "werden"],
+          "correctOrder": ["Wir", "werden", "morgen", "die", "Tickets", "kaufen"]
+        },
+        {
+          "id": 4,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Die Kollegen werden uns informieren",
+          "answer": "Die Kollegen werden uns informieren"
+        },
+        {
+          "id": 4,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Wir werden zusammen arbeiten",
+          "answer": "Wir werden zusammen arbeiten"
+        },
+        {
+          "id": 5,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Sie werden das Projekt beenden",
+            "Sie werdet das Projekt beenden",
+            "Sie wird das Projekt beenden"
+          ],
+          "answer": "Sie werden das Projekt beenden"
+        },
+        {
+          "id": 6,
+          "type": "select",
+          "question": "Выберите правильный вариант:",
+          "options": [
+            "Ihr werdet diese Prüfung sicher bestehen",
+            "Ihr diese Prüfung sicher bestehen werdet",
+            "Ihr werde bestehen diese Prüfung sicher"
+          ],
+          "answer": "Ihr werdet diese Prüfung sicher bestehen"
+        },
+        {
+          "id": 7,
+          "type": "reorder",
+          "question": "Соберите: Вы скоро получите ответ.",
+          "words": ["bekommen", "wird", "Antwort", "bald", "die", "werdet", "Ihr"],
+          "correctOrder": ["Ihr", "werdet", "bald", "die", "Antwort", "bekommen"]
+        },
+        {
+          "id": 8,
+          "type": "reorder",
+          "question": "Соберите: Гости придут позже.",
+          "words": ["kommen", "werdet", "Gäste", "später", "werden", "Die"],
+          "correctOrder": ["Die", "Gäste", "werden", "später", "kommen"]
+        },
+        {
+          "id": 9,
+          "type": "select",
+          "question": "... ihr uns helfen?",
+          "options": ["Werdet", "Werden", "Wirst"],
+          "answer": "Werdet"
+        },
+        {
+          "id": 10,
+          "type": "speechToText",
+          "question": "Произнесите фразу:",
+          "text": "Ihr werdet viel Spaß haben",
+          "answer": "Ihr werdet viel Spaß haben"
+        },
+        {
+          "id": 11,
+          "type": "reorder",
+          "question": "Соберите: Мы не будем долго ждать.",
+          "words": ["warten", "nicht", "lange", "Wir", "werden"],
+          "correctOrder": ["Wir", "werden", "nicht", "lange", "warten"]
+        },
+        {
+          "id": 12,
+          "type": "speechToText",
+          "question": "Впишите услышанное",
+          "text": "Wo werden Sie wohnen",
+          "answer": "Wo werden Sie wohnen"
+        },
+        {
+          "id": 13,
+          "type": "speechToText",
+          "question": "Произнесите предложение:",
+          "text": "Meine Freunde werden mich besuchen",
+          "answer": "Meine Freunde werden mich besuchen"
+        },
+        {
+          "id": 14,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Die Preise werden steigen",
+          "answer": "Die Preise werden steigen"
+        },
+        {
+          "id": 15,
+          "type": "select",
+          "question": "Выберите правильный вариант:",
+          "options": [
+            "Ihr werdet viel Geld für das Auto bezahlen",
+            "Ihr werdet bezahlen viel Geld für das Auto",
+            "Ihr viel Geld für das Auto bezahlen werdet"
+          ],
+          "answer": "Ihr werdet viel Geld für das Auto bezahlen"
+        }
+      ]
+    },
+  {
+    "questId": "future_party_planning",
+    "aliases": ["futur-party-time"],
+    "title": "Устраиваем вечеринку",
+    "progress": "0/15",
+    "description": "Планируем праздник! Используем Futur I для обсуждения гостей, еды и развлечений.",
+    "conditions": {
+      "goal": "Научитесь договариваться о встрече и распределять задачи.",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "Соберите предложение: Мы устроим большую вечеринку в субботу.",
+        "words": ["machen", "Party", "große", "werdet", "Samstag", "Wir", "in", "werden", "eine", "am"],
+        "correctOrder": ["Wir", "werden", "am", "Samstag", "eine", "große", "Party", "machen"]
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "Произнесите фразу:",
+        "text": "Ihr werdet alle Freunde einladen",
+        "answer": "Ihr werdet alle Freunde einladen"
+      },
+      {
+        "id": 3,
+        "type": "reorder",
+        "question": "Соберите: Гости принесут подарки.",
+        "words": ["mitbringen", "Geschenke", "Gäste", "Die", "werden"],
+        "correctOrder": ["Die", "Gäste", "werden", "Geschenke", "mitbringen"]
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "Соберите: Мы испечем вкусный торт.",
+        "words": ["wird","backen", "ein", "Kuchen", "Wir", "leackeren", "einen", "werden"],
+        "correctOrder": ["Wir", "werden", "einen", "leckeren", "Kuchen", "backen"]
+      },
+      {
+        "id": 5,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Die Nachbarn werden sich nicht beschweren",
+        "answer": "Die Nachbarn werden sich nicht beschweren"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Соберите вопрос",
+        "words": ["kommen", "ihr", "Wann", "werdet"],
+        "correctOrder": ["Wann", "werdet", "ihr", "kommen"]
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "Произнесите:",
+        "text": "Wir werden die ganze Nacht tanzen",
+        "answer": "Wir werden die ganze Nacht tanzen"
+      },
+      {
+        "id": 8,
+        "type": "reorder",
+        "question": "Соберите: Мои родители не будут дома.",
+        "words": ["Hause", "Eltern", "nicht", "zu", "sein", "Meine", "werden"],
+        "correctOrder": ["Meine", "Eltern", "werden", "nicht", "zu", "Hause", "sein"]
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "Соберите: Вы будете пить сок или колу?",
+        "words": ["oder", "Saft", "trinken", "Cola", "Ihr", "werdet"],
+        "correctOrder": ["Ihr", "werdet", "Saft", "oder", "Cola", "trinken"]
+      },
+      {
+        "id": 10,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Die Kinder werden im Garten spielen",
+        "answer": "Die Kinder werden im Garten spielen"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите: Мы украсим комнату воздушными шарами.",
+        "words": ["schmücken", "Zimmer", "Luftballons", "Wir", "das", "mit", "werden"],
+        "correctOrder": ["Wir", "werden", "das", "Zimmer", "mit", "Luftballons", "schmücken"]
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "Произнесите:",
+        "text": "Ihr werdet viel Spaß haben",
+        "answer": "Ihr werdet viel Spaß haben"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "Соберите: Они (друзья) останутся до завтра.",
+        "words": ["bis", "bleiben", "morgen", "Sie", "werden"],
+        "correctOrder": ["Sie", "werden", "bis", "morgen", "bleiben"]
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Wir werden viele Fotos machen",
+        "answer": "Wir werden viele Fotos machen"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "Соберите: Мы будем вместе слушать музыку.",
+        "words": ["hören", "zusammen", "Wir", "Musik", "werden"],
+        "correctOrder": ["Wir", "werden", "zusammen", "Musik", "hören"]
+      }
+    ]
+  },
+  {
+    "questId": "future_sports_competition",
+    "aliases": ["futur-sport-active"],
+    "title": "Спорт и Победы",
+    "progress": "0/15",
+    "description": "Болеем за наших! Используем Futur I для прогнозов матчей, тренировок и спортивных достижений.",
+    "conditions": {
+      "goal": "Научитесь говорить о спортивных планах и результатах в будущем.",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "Соберите: Мы обязательно выиграем эту игру.",
+        "words": ["gewinnen", "Spiel", "dieses", "Wir", "werden", "unbedingt"],
+        "correctOrder": ["Wir", "werden", "dieses", "Spiel", "unbedingt", "gewinnen"]
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "Произнесите фразу:",
+        "text": "Ihr werdet sehr schnell laufen",
+        "answer": "Ihr werdet sehr schnell laufen"
+      },
+      {
+        "id": 3,
+        "type": "reorder",
+        "question": "Соберите: Команда будет хорошо играть",
+        "words": ["spielen", "gut", "Mannschaft", "Die", "wird", "morgen"],
+        "correctOrder": ["Die", "Mannschaft", "wird", "gut", "spielen"]
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "Соберите: Они будут тренироваться каждый день.",
+        "words": ["Tag", "trainieren", "jeden", "Sie", "werden"],
+        "correctOrder": ["Sie", "werden", "jeden", "Tag", "trainieren"]
+      },
+      {
+        "id": 5,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Wir werden ins Stadion gehen",
+        "answer": "Wir werden ins Stadion gehen"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Соберите вопрос",
+        "words": ["gehen", "Fußball", "zum", "Werdet", "ihr"],
+        "correctOrder": ["Werdet", "ihr", "zum", "Fußball", "gehen"]
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "Произнесите:",
+        "text": "Der Trainer wird uns helfen",
+        "answer": "Der Trainer wird uns helfen"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "Выберите правильный вариант",
+        "options": [
+          "Wir werden sehen",
+          "Wir sehen werden",
+          "Wir wird sehen"
+        ],
+        "answer": "Wir werden sehen"
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Das Spiel wird sehr spannend sein",
+        "answer": "Das Spiel wird sehr spannend sein"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "Соберите: Зрители будут громко кричать.",
+        "words": ["Zuschauer", "laut", "Die", "werden", "schreien", "werden"],
+        "correctOrder": ["Die", "Zuschauer", "werden", "laut", "schreien"]
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите: Вы будете уставшими после матча.",
+        "words": ["sein", "müde", "Spiel", "nach", "dem", "Ihr", "werdet", "wird"],
+        "correctOrder": ["Ihr", "werdet", "nach", "dem", "Spiel", "müde", "sein"]
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "Произнесите:",
+        "text": "Sie werden ein Tor schießen",
+        "answer": "Sie werden ein Tor schießen"
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "Соберите: Кто получит золотую медаль?",
+        "words": ["bekommen", "Medaille", "Wer", "wird", "goldene", "die"],
+        "correctOrder": ["Wer", "wird", "die", "goldene", "Medaille", "bekommen"]
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Wir werden den ersten Platz machen",
+        "answer": "Wir werden den ersten Platz machen"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "Соберите: Мы будем заниматься спортом.",
+        "words": ["wird", "machen", "Sport", "Wir", "werden"],
+        "correctOrder": ["Wir", "werden", "Sport", "machen"]
+      }
+    ]
+  },
+  {
+    "questId": "future_weekend_plans",
+    "aliases": ["futur-leisure"],
+    "title": "Планы на выходные",
+    "progress": "0/15",
+    "description": "Как мы проведем субботу и воскресенье? Отработка Futur I на теме отдыха и домашних дел.",
+    "conditions": {
+      "goal": "Научитесь рассказывать о своих планах на отдых.",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "Соберите: В субботу я буду долго спать.",
+        "words": ["werden", "schlafen", "werde", "lange", "Samstag", "Ich", "am"],
+        "correctOrder": ["Ich", "werde", "am", "Samstag", "lange", "schlafen"]
+      },
+      {
+        "id": 2,
+        "type": "speechToText",
+        "question": "Произнесите фразу:",
+        "text": "Wir werden zusammen frühstücken",
+        "answer": "Wir werden zusammen frühstücken"
+      },
+      {
+        "id": 3,
+        "type": "reorder",
+        "question": "Соберите: Мой брат пойдет в кино.",
+        "words": ["gehen", "Kino", "Bruder", "ins", "Mein", "wird"],
+        "correctOrder": ["Mein", "Bruder", "wird", "ins", "Kino", "gehen"]
+      },
+      {
+        "id": 4,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Ich werde am Nachmittag einkaufen gehen",
+        "answer": "Ich werde am Nachmittag einkaufen gehen"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "Соберите: Мы пойдем гулять в парк.",
+        "words": ["gehen", "Park", "spazieren", "im", "Wir", "werden"],
+        "correctOrder": ["Wir", "werden", "im", "Park", "spazieren", "gehen"]
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Соберите вопрос: Что вы (группа) будете делать в воскресенье?",
+        "words": ["machen", "Sonntag", "ihr", "am", "Was", "werdet"],
+        "correctOrder": ["Was", "werdet", "ihr", "am", "Sonntag", "machen"]
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "Произнесите:",
+        "text": "Das Wetter wird schön sein",
+        "answer": "Das Wetter wird schön sein"
+      },
+      {
+        "id": 8,
+        "type": "reorder",
+        "question": "Соберите: Вечером мы посмотрим фильм.",
+        "words": ["schauen", "Abend", "Film", "Wir", "werden", "einen", "am"],
+        "correctOrder": ["Wir", "werden", "am", "Abend", "einen", "Film", "schauen"]
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Meine Freunde werden mich besuchen",
+        "answer": "Meine Freunde werden mich besuchen"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "Соберите: Я не буду работать в эти выходные.",
+        "words": ["arbeiten", "Wochenende", "diesem", "nicht", "Ich", "werde", "an"],
+        "correctOrder": ["Ich", "werde", "an", "diesem", "Wochenende", "nicht", "arbeiten"]
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите: Мы будем готовить пиццу.",
+        "words": ["kochen", "Pizza", "Wir", "werden", "zusammen"],
+        "correctOrder": ["Wir", "werden", "zusammen", "Pizza", "kochen"]
+      },
+      {
+        "id": 12,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Wir werden um zehn Uhr frühstücken",
+        "answer": "Wir werden um zehn Uhr frühstücken",
+        "accept": [
+          "Wir werden um zehn Uhr frühstücken",
+          "Wir werden um 10 Uhr frühstücken"
+        ]
+      },
+      {
+        "id": 13,
+        "type": "reorder",
+        "question": "Соберите: Фильм будет длиться два часа.",
+        "words": ["dauern", "Film", "Stunden", "wird", "Der", "zwei"],
+        "correctOrder": ["Der", "Film", "wird", "zwei", "Stunden", "dauern"]
+      },
+      {
+        "id": 14,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Wir werden viel Zeit haben",
+        "answer": "Wir werden viel Zeit haben"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "Соберите: Это будут отличные выходные.",
+        "words": ["sein", "tolles", "Das", "Wochenende", "ein", "wird"],
+        "correctOrder": ["Das", "wird", "ein", "tolles", "Wochenende", "sein"]
+      }
+    ]
+  },
+  {
+      "questId": "future_moving_house",
+      "aliases": ["futur-umzug-new-home"],
+      "title": "Переезд",
+      "progress": "0/15",
+      "description": "Планируем переезд. Коробки, мебель и новая квартира. Используем Futur I.",
+      "conditions": {
+        "goal": "Отработайте лексику переезда и грамматику будущего времени.",
+        "minCorrect": 12,
+        "requiredTasks": 15
+      },
+      "rewards": {
+        "points": 10,
+        "xp": 10
+      },
+      "tasks": [
+        {
+          "id": 1,
+          "type": "reorder",
+          "question": "Соберите: Я перееду на следующей неделе.",
+          "words": ["Woche", "umziehen", "nächste", "werde", "Ich"],
+          "correctOrder": ["Ich", "werde", "nächste", "Woche", "umziehen"]
+        },
+        {
+          "id": 2,
+          "type": "reorder",
+          "question": "Соберите: Нам понадобится много коробок.",
+          "words": ["brauchen", "werdet", "Wir", "Kartons", "viele", "werden"],
+          "correctOrder": ["Wir", "werden", "viele", "Kartons", "brauchen"]
+        },
+        {
+          "id": 3,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Der LKW wird pünktlich kommen",
+          "answer": "Der LKW wird pünktlich kommen"
+        },
+        {
+          "id": 4,
+          "type": "reorder",
+          "question": "Соберите: Друзья помогут нам нести вещи.",
+          "words": ["helfen", "Freunde", "tragen", "uns", "beim", "Die", "werden"],
+          "correctOrder": ["Die", "Freunde", "werden", "uns", "beim", "tragen", "helfen"]
+        },
+        {
+          "id": 5,
+          "type": "reorder",
+          "question": "Соберите вопрос: Кто поведет машину?",
+          "words": ["werdet", "fahren", "wird", "Wer", "Auto", "das"],
+          "correctOrder": ["Wer", "wird", "das", "Auto", "fahren"]
+        },
+        {
+          "id": 6,
+          "type": "reorder",
+          "question": "Соберите: Мы покрасим стены в белый цвет.",
+          "words": ["streichen", "Wände", "weiß", "Wir", "die", "werden"],
+          "correctOrder": ["Wir", "werden", "die", "Wände", "weiß", "streichen"]
+        },
+        {
+          "id": 7,
+          "type": "speechToText",
+          "question": "Произнесите фразу:",
+          "text": "Ich werde meine alten Möbel verkaufen",
+          "answer": "Ich werde meine alten Möbel verkaufen"
+        },
+        {
+          "id": 8,
+          "type": "reorder",
+          "question": "Соберите вопрос: Когда ты получишь ключ?",
+          "words": ["Schlüssel", "du", "Wann", "bekommen", "wirst", "den"],
+          "correctOrder": ["Wann", "wirst", "du", "den", "Schlüssel", "bekommen"]
+        },
+        {
+          "id": 9,
+          "type": "reorder",
+          "question": "Соберите: Новая квартира будет очень красивой.",
+          "words": ["sein", "Wohnung", "schön", "sehr", "wird", "Die", "neue"],
+          "correctOrder": ["Die", "neue", "Wohnung", "wird", "sehr", "schön", "sein"]
+        },
+        {
+          "id": 10,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Wir werden den Mietvertrag unterschreiben",
+          "answer": "Wir werden den Mietvertrag unterschreiben"
+        },
+        {
+          "id": 11,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Ihr werdet viel Platz haben",
+            "Ihr werden viel Platz haben",
+            "Ihr wird viel Platz haben"
+          ],
+          "answer": "Ihr werdet viel Platz haben"
+        },
+        {
+          "id": 12,
+          "type": "reorder",
+          "question": "Соберите: Я распакую все вещи завтра.",
+          "words": ["werden","auspacken", "Sachen", "alle", "werde", "Ich", "morgen"],
+          "correctOrder": ["Ich", "werde", "morgen", "alle", "Sachen", "auspacken"]
+        },
+        {
+          "id": 13,
+          "type": "reorder",
+          "question": "Соберите: Мы соберем мебель.",
+          "words": ["wird", "aufbauen", "Möbel", "Wir", "die", "werden"],
+          "correctOrder": ["Wir", "werden", "die", "Möbel", "aufbauen"]
+        },
+        {
+          "id": 14,
+          "type": "speechToText",
+          "question": "Произнесите:",
+          "text": "Das wird viel Arbeit sein",
+          "answer": "Das wird viel Arbeit sein"
+        },
+        {
+          "id": 15,
+          "type": "reorder",
+          "question": "Соберите: Мы повесим лампы.",
+          "words": ["aufhängen", "Lampen", "Wir", "die", "werden"],
+          "correctOrder": ["Wir", "werden", "die", "Lampen", "aufhängen"]
+        }
+      ]
+    },
+  {
+      "questId": "future_weather_forecast",
+      "aliases": ["futur-weather-prediction"],
+      "title": "Прогноз погоды",
+      "progress": "0/15",
+      "description": "Будет дождь или солнце? Учимся строить прогнозы погоды, используя Futur I.",
+      "conditions": {
+        "goal": "Научитесь описывать погоду в будущем времени.",
+        "minCorrect": 12,
+        "requiredTasks": 15
+      },
+      "rewards": {
+        "points": 10,
+        "xp": 10
+      },
+      "tasks": [
+        {
+          "id": 1,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Es wird morgen regnen",
+            "Es werden morgen regnen",
+            "Es werdet morgen regnen"
+          ],
+          "answer": "Es wird morgen regnen"
+        },
+        {
+          "id": 2,
+          "type": "reorder",
+          "question": "Соберите: Солнце будет светить.",
+          "words": ["scheinen", "Sonne", "wird", "Die"],
+          "correctOrder": ["Die", "Sonne", "wird", "scheinen"]
+        },
+        {
+          "id": 3,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Das Wetter wird schön sein",
+          "answer": "Das Wetter wird schön sein"
+        },
+        {
+          "id": 4,
+          "type": "reorder",
+          "question": "Соберите: Зимой будет идти снег.",
+          "words": ["werdet ", "schneien", "in", "Winter", "es", "wird", "Im"],
+          "correctOrder": ["Im", "Winter", "wird", "es", "schneien"]
+        },
+        {
+          "id": 5,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Die Temperaturen werden steigen",
+            "Die Temperaturen wird steigen",
+            "Die Temperaturen werdet steigen"
+          ],
+          "answer": "Die Temperaturen werden steigen"
+        },
+        {
+          "id": 6,
+          "type": "reorder",
+          "question": "Соберите: Завтра будет ветрено.",
+          "words": ["werde", "sein", "morgen", "windig", "Es", "wird"],
+          "correctOrder": ["Es", "wird", "morgen", "windig", "sein"]
+        },
+        {
+          "id": 7,
+          "type": "speechToText",
+          "question": "Произнесите фразу:",
+          "text": "Es wird bald dunkel",
+          "answer": "Es wird bald dunkel"
+        },
+        {
+          "id": 8,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Der Himmel wird blau sein",
+            "Der Himmel werden blau sein",
+            "Der Himmel werdet blau sein"
+          ],
+          "answer": "Der Himmel wird blau sein"
+        },
+        {
+          "id": 9,
+          "type": "reorder",
+          "question": "Соберите: Нам понадобится зонт.",
+          "words": ["brauchen", "einen", "Regenschirm", "Wir", "werden"],
+          "correctOrder": ["Wir", "werden", "einen", "Regenschirm", "brauchen"]
+        },
+        {
+          "id": 10,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Der Sommer wird heiß sein",
+          "answer": "Der Sommer wird heiß sein"
+        },
+        {
+          "id": 11,
+          "type": "reorder",
+          "question": "Соберите: Ветер будет сильным.",
+          "words": ["sein", "stark", "Wind", "wird", "Der"],
+          "correctOrder": ["Der", "Wind", "wird", "stark", "sein"]
+        },
+        {
+          "id": 12,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Das Gewitter wird bald kommen",
+            "Das Gewitter werden bald kommen",
+            "Das Gewitter werdet bald kommen"
+          ],
+          "answer": "Das Gewitter wird bald kommen"
+        },
+        {
+          "id": 13,
+          "type": "speechToText",
+          "question": "Произнесите:",
+          "text": "Es wird kalt werden",
+          "answer": "Es wird kalt werden"
+        },
+        {
+          "id": 14,
+          "type": "reorder",
+          "question": "Соберите вопрос: Погода улучшится?",
+          "words": ["besser", "Wetter", "Das", "wird", "werden"],
+          "correctOrder": ["Das", "Wetter", "wird", "besser", "werden"]
+        },
+        {
+          "id": 15,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Die Tage werden wieder länger werden",
+            "Die Tage wird wieder länger werden",
+            "Die Tage werdet wieder länger werden"
+          ],
+          "answer": "Die Tage werden wieder länger werden"
+        }
+      ]
+    },
+  {
+      "questId": "future_health_doctor",
+      "aliases": ["futur-health-recovery"],
+      "title": "Здоровье",
+      "progress": "0/15",
+      "description": "Поход к врачу и лечение. Говорим о выздоровлении, используя Futur I.",
+      "conditions": {
+        "goal": "Отработайте Futur I в контексте медицины.",
+        "minCorrect": 12,
+        "requiredTasks": 15
+      },
+      "rewards": {
+        "points": 10,
+        "xp": 10
+      },
+      "tasks": [
+        {
+          "id": 1,
+          "type": "reorder",
+          "question": "Соберите: Я пойду к врачу.",
+          "words": ["gehen", "Arzt", "zum", "werde", "Ich"],
+          "correctOrder": ["Ich", "werde", "zum", "Arzt", "gehen"]
+        },
+        {
+          "id": 2,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Der Arzt wird mich untersuchen",
+            "Der Arzt werden mich untersuchen",
+            "Der Arzt werdet mich untersuchen"
+          ],
+          "answer": "Der Arzt wird mich untersuchen"
+        },
+        {
+          "id": 3,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Ich werde im Bett bleiben",
+          "answer": "Ich werde im Bett bleiben"
+        },
+        {
+          "id": 4,
+          "type": "reorder",
+          "question": "Соберите: Ты скоро будешь здоров.",
+          "words": ["sein", "gesund", "bald", "Du", "wirst"],
+          "correctOrder": ["Du", "wirst", "bald", "gesund", "sein"]
+        },
+        {
+          "id": 5,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Wir werden die Medizin nehmen",
+            "Wir wird die Medizin nehmen",
+            "Wir werdet die Medizin nehmen"
+          ],
+          "answer": "Wir werden die Medizin nehmen"
+        },
+        {
+          "id": 6,
+          "type": "reorder",
+          "question": "Соберите: Лекарство поможет.",
+          "words": ["helfen", "Medizin", "wird", "Die"],
+          "correctOrder": ["Die", "Medizin", "wird", "helfen"]
+        },
+        {
+          "id": 7,
+          "type": "speechToText",
+          "question": "Произнесите фразу:",
+          "text": "Du wirst dich besser fühlen",
+          "answer": "Du wirst dich besser fühlen"
+        },
+        {
+          "id": 8,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Ich werde gesund essen",
+            "Ich wird gesund essen",
+            "Ich werden gesund essen"
+          ],
+          "answer": "Ich werde gesund essen"
+        },
+        {
+          "id": 9,
+          "type": "reorder",
+          "question": "Соберите: Она будет пить много чая.",
+          "words": ["trinken", "Tee", "Sie", "viel", "wird"],
+          "correctOrder": ["Sie", "wird", "viel", "Tee", "trinken"]
+        },
+        {
+          "id": 10,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Der Schmerz wird weggehen",
+          "answer": "Der Schmerz wird weggehen"
+        },
+        {
+          "id": 11,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Ihr werdet mehr Sport machen",
+            "Ihr werden mehr Sport machen",
+            "Ihr wird mehr Sport machen"
+          ],
+          "answer": "Ihr werdet mehr Sport machen"
+        },
+        {
+          "id": 12,
+          "type": "reorder",
+          "question": "Соберите: Мы запишемся на прием (сделаем термин).",
+          "words": ["machen", "Termin", "Wir", "einen", "werden"],
+          "correctOrder": ["Wir", "werden", "einen", "Termin", "machen"]
+        },
+        {
+          "id": 13,
+          "type": "speechToText",
+          "question": "Произнесите:",
+          "text": "Ich werde Fieber messen",
+          "answer": "Ich werde Fieber messen"
+        },
+        {
+          "id": 14,
+          "type": "reorder",
+          "question": "Соберите: Боль прекратится (боли пройдут).",
+          "words": ["aufhören", "Schmerzen", "Die", "werden"],
+          "correctOrder": ["Die", "Schmerzen", "werden", "aufhören"]
+        },
+        {
+          "id": 15,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Er wird viel schlafen",
+            "Er werden viel schlafen",
+            "Er werdet viel schlafen"
+          ],
+          "answer": "Er wird viel schlafen"
+        }
+      ]
+    },
+  {
+      "questId": "future_shopping_fashion",
+      "aliases": ["futur-shopping-buy"],
+      "title": "Шопинг",
+      "progress": "0/15",
+      "description": "Идем за покупками. Одежда, продукты и цены. Используем Futur I.",
+      "conditions": {
+        "goal": "Научитесь говорить о будущих покупках.",
+        "minCorrect": 12,
+        "requiredTasks": 15
+      },
+      "rewards": {
+        "points": 10,
+        "xp": 10
+      },
+      "tasks": [
+        {
+          "id": 1,
+          "type": "reorder",
+          "question": "Соберите: Я куплю новое платье.",
+          "words": ["kaufen", "Kleid", "neues", "werde", "Ich", "ein"],
+          "correctOrder": ["Ich", "werde", "ein", "neues", "Kleid", "kaufen"]
+        },
+        {
+          "id": 2,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Die Schuhe werden viel kosten",
+            "Die Schuhe wird viel kosten",
+            "Die Schuhe werdet viel kosten"
+          ],
+          "answer": "Die Schuhe werden viel kosten"
+        },
+        {
+          "id": 3,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Wir werden in den Supermarkt gehen",
+          "answer": "Wir werden in den Supermarkt gehen"
+        },
+        {
+          "id": 4,
+          "type": "reorder",
+          "question": "Соберите: Рубашка тебе подойдет.",
+          "words": ["passen", "Hemd", "dir", "Das", "wird"],
+          "correctOrder": ["Das", "Hemd", "wird", "dir", "passen"]
+        },
+        {
+          "id": 5,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Ich werde mit Karte bezahlen",
+            "Ich wird mit Karte bezahlen",
+            "Ich werden mit Karte bezahlen"
+          ],
+          "answer": "Ich werde mit Karte bezahlen"
+        },
+        {
+          "id": 6,
+          "type": "reorder",
+          "question": "Соберите: Он примерит брюки.",
+          "words": ["anprobieren", "Hose", "Er", "die", "wird"],
+          "correctOrder": ["Er", "wird", "die", "Hose", "anprobieren"]
+        },
+        {
+          "id": 7,
+          "type": "speechToText",
+          "question": "Произнесите фразу:",
+          "text": "Ich werde das rote T-Shirt nehmen",
+          "answer": "Ich werde das rote T-Shirt nehmen"
+        },
+        {
+          "id": 8,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Wir werden viel Geld ausgeben",
+            "Wir wird viel Geld ausgeben",
+            "Wir werdet viel Geld ausgeben"
+          ],
+          "answer": "Wir werden viel Geld ausgeben"
+        },
+        {
+          "id": 9,
+          "type": "reorder",
+          "question": "Соберите: Магазин скоро закроется.",
+          "words": ["schließen", "Laden", "bald", "Der", "wird"],
+          "correctOrder": ["Der", "Laden", "wird", "bald", "schließen"]
+        },
+        {
+          "id": 10,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Du wirst toll aussehen",
+          "answer": "Du wirst toll aussehen"
+        },
+        {
+          "id": 11,
+          "type": "reorder",
+          "question": "Соберите: Кто понесет сумки?",
+          "words": ["tragen", "Taschen", "Wer", "die", "wird"],
+          "correctOrder": ["Wer", "wird", "die", "Taschen", "tragen"]
+        },
+        {
+          "id": 12,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Ihr werdet ein Geschenk finden",
+            "Ihr werden ein Geschenk finden",
+            "Ihr wird ein Geschenk finden"
+          ],
+          "answer": "Ihr werdet ein Geschenk finden"
+        },
+        {
+          "id": 13,
+          "type": "reorder",
+          "question": "Соберите: Это будет дешево.",
+          "words": ["sein", "billig", "Das", "wird"],
+          "correctOrder": ["Das", "wird", "billig", "sein"]
+        },
+        {
+          "id": 14,
+          "type": "speechToText",
+          "question": "Произнесите:",
+          "text": "Ich werde online bestellen",
+          "answer": "Ich werde online bestellen"
+        },
+        {
+          "id": 15,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Der Preis wird steigen",
+            "Der Preis werden steigen",
+            "Der Preis werdet steigen"
+          ],
+          "answer": "Der Preis wird steigen"
+        }
+      ]
+    },
+  {
+      "questId": "future_restaurant_dining",
+      "aliases": ["futur-eating-out"],
+      "title": "В ресторане",
+      "progress": "0/15",
+      "description": "Идем ужинать! Заказ столика, выбор блюд и оплата счета. Используем Futur I.",
+      "conditions": {
+        "goal": "Научитесь делать заказ и говорить о еде в будущем.",
+        "minCorrect": 12,
+        "requiredTasks": 15
+      },
+      "rewards": {
+        "points": 10,
+        "xp": 10
+      },
+      "tasks": [
+        {
+          "id": 1,
+          "type": "reorder",
+          "question": "Соберите: Мы зарезервируем столик.",
+          "words": ["reservieren", "Tisch", "einen", "Wir", "werden"],
+          "correctOrder": ["Wir", "werden", "einen", "Tisch", "reservieren"]
+        },
+        {
+          "id": 2,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Der Kellner wird die Karte bringen",
+            "Der Kellner werden die Karte bringen",
+            "Der Kellner werdet die Karte bringen"
+          ],
+          "answer": "Der Kellner wird die Karte bringen"
+        },
+        {
+          "id": 3,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Ich werde Pizza bestellen",
+          "answer": "Ich werde Pizza bestellen"
+        },
+        {
+          "id": 4,
+          "type": "reorder",
+          "question": "Соберите: Ты будешь есть рыбу?",
+          "words": ["essen", "Fisch", "du", "Wirst"],
+          "correctOrder": ["Wirst", "du", "Fisch", "essen"]
+        },
+        {
+          "id": 5,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Das Essen wird lecker sein",
+            "Das Essen werden lecker sein",
+            "Das Essen werdet lecker sein"
+          ],
+          "answer": "Das Essen wird lecker sein"
+        },
+        {
+          "id": 6,
+          "type": "reorder",
+          "question": "Соберите: Мы оставим чаевые.",
+          "words": ["geben", "Trinkgeld", "Wir", "werden"],
+          "correctOrder": ["Wir", "werden", "Trinkgeld", "geben"]
+        },
+        {
+          "id": 7,
+          "type": "speechToText",
+          "question": "Произнесите фразу:",
+          "text": "Wir werden zusammen essen",
+          "answer": "Wir werden zusammen essen"
+        },
+        {
+          "id": 8,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Ihr werdet satt werden",
+            "Ihr werden satt werden",
+            "Ihr wird satt werden"
+          ],
+          "answer": "Ihr werdet satt werden"
+        },
+        {
+          "id": 9,
+          "type": "reorder",
+          "question": "Соберите: Он оплатит счет.",
+          "words": ["bezahlen", "Rechnung", "die", "Er", "wird"],
+          "correctOrder": ["Er", "wird", "die", "Rechnung", "bezahlen"]
+        },
+        {
+          "id": 10,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Der Wein wird gut schmecken",
+          "answer": "Der Wein wird gut schmecken"
+        },
+        {
+          "id": 11,
+          "type": "reorder",
+          "question": "Соберите: Она будет пить воду.",
+          "words": ["trinken", "Wasser", "Sie", "wird"],
+          "correctOrder": ["Sie", "wird", "Wasser", "trinken"]
+        },
+        {
+          "id": 12,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Wir werden lange warten",
+            "Wir wird lange warten",
+            "Wir werdet lange warten"
+          ],
+          "answer": "Wir werden lange warten"
+        },
+        {
+          "id": 13,
+          "type": "speechToText",
+          "question": "Произнесите:",
+          "text": "Das Restaurant wird voll sein",
+          "answer": "Das Restaurant wird voll sein"
+        },
+        {
+          "id": 14,
+          "type": "reorder",
+          "question": "Соберите: Кто будет платить?",
+          "words": ["bezahlen", "Wer", "wird"],
+          "correctOrder": ["Wer", "wird", "bezahlen"]
+        },
+        {
+          "id": 15,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Ich werde den Nachtisch nehmen",
+            "Ich wird den Nachtisch nehmen",
+            "Ich werden den Nachtisch nehmen"
+          ],
+          "answer": "Ich werde den Nachtisch nehmen"
+        }
+      ]
+    },
+  {
+      "questId": "future_cinema_movies",
+      "aliases": ["futur-movies-entertainment"],
+      "title": "Кино",
+      "progress": "0/15",
+      "description": "Пойдем в кино? Выбираем фильм, покупаем билеты и попкорн. Используем Futur I.",
+      "conditions": {
+        "goal": "Научитесь обсуждать планы на кино и фильмы.",
+        "minCorrect": 12,
+        "requiredTasks": 15
+      },
+      "rewards": {
+        "points": 10,
+        "xp": 10
+      },
+      "tasks": [
+        {
+          "id": 1,
+          "type": "reorder",
+          "question": "Соберите: Мы пойдем в кино.",
+          "words": ["gehen", "Kino", "ins", "Wir", "werden"],
+          "correctOrder": ["Wir", "werden", "ins", "Kino", "gehen"]
+        },
+        {
+          "id": 2,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Der Film wird spannend sein",
+            "Der Film werden spannend sein",
+            "Der Film werdet spannend sein"
+          ],
+          "answer": "Der Film wird spannend sein"
+        },
+        {
+          "id": 3,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Ich werde Popcorn kaufen",
+          "answer": "Ich werde Popcorn kaufen"
+        },
+        {
+          "id": 4,
+          "type": "reorder",
+          "question": "Соберите: Фильм скоро начнется.",
+          "words": ["anfangen", "Film", "bald", "Der", "wird"],
+          "correctOrder": ["Der", "Film", "wird", "bald", "anfangen"]
+        },
+        {
+          "id": 5,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Ihr werdet viel lachen",
+            "Ihr werden viel lachen",
+            "Ihr wird viel lachen"
+          ],
+          "answer": "Ihr werdet viel lachen"
+        },
+        {
+          "id": 6,
+          "type": "reorder",
+          "question": "Соберите: Кто купит билеты?",
+          "words": ["kaufen", "Tickets", "die", "Wer", "wird"],
+          "correctOrder": ["Wer", "wird", "die", "Tickets", "kaufen"]
+        },
+        {
+          "id": 7,
+          "type": "speechToText",
+          "question": "Произнесите фразу:",
+          "text": "Wir werden gute Plätze haben",
+          "answer": "Wir werden gute Plätze haben"
+        },
+        {
+          "id": 8,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Du wirst den Film mögen",
+            "Du wird den Film mögen",
+            "Du werden den Film mögen"
+          ],
+          "answer": "Du wirst den Film mögen"
+        },
+        {
+          "id": 9,
+          "type": "reorder",
+          "question": "Соберите: Я буду смотреть комедию.",
+          "words": ["schauen", "Komödie", "eine", "werde", "Ich"],
+          "correctOrder": ["Ich", "werde", "eine", "Komödie", "schauen"]
+        },
+        {
+          "id": 10,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Das Kino wird voll sein",
+          "answer": "Das Kino wird voll sein"
+        },
+        {
+          "id": 11,
+          "type": "reorder",
+          "question": "Соберите: Мы будем сидеть спереди.",
+          "words": ["sitzen", "vorne", "Wir", "werden"],
+          "correctOrder": ["Wir", "werden", "vorne", "sitzen"]
+        },
+        {
+          "id": 12,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Es wird dunkel werden",
+            "Es werden dunkel werden",
+            "Es werdet dunkel werden"
+          ],
+          "answer": "Es wird dunkel werden"
+        },
+        {
+          "id": 13,
+          "type": "speechToText",
+          "question": "Произнесите:",
+          "text": "Der Schauspieler wird gut spielen",
+          "answer": "Der Schauspieler wird gut spielen"
+        },
+        {
+          "id": 14,
+          "type": "reorder",
+          "question": "Соберите: Фильм будет длиться долго.",
+          "words": ["dauern", "lange", "Film", "Der", "wird"],
+          "correctOrder": ["Der", "Film", "wird", "lange", "dauern"]
+        },
+        {
+          "id": 15,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Sie werden leise sein",
+            "Sie wird leise sein",
+            "Sie werdet leise sein"
+          ],
+          "answer": "Sie werden leise sein"
+        }
+      ]
+    },
+  {
+      "questId": "future_animals_pets",
+      "aliases": ["futur-pets-zoo"],
+      "title": "Животные",
+      "progress": "0/15",
+      "description": "Заведем собаку или кошку? Говорим о питомцах и животных в Futur I.",
+      "conditions": {
+        "goal": "Научитесь говорить о животных в будущем времени.",
+        "minCorrect": 12,
+        "requiredTasks": 15
+      },
+      "rewards": {
+        "points": 10,
+        "xp": 10
+      },
+      "tasks": [
+        {
+          "id": 1,
+          "type": "reorder",
+          "question": "Соберите: Я куплю собаку.",
+          "words": ["kaufen", "Hund", "einen", "werde", "Ich"],
+          "correctOrder": ["Ich", "werde", "einen", "Hund", "kaufen"]
+        },
+        {
+          "id": 2,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Die Katze wird schlafen",
+            "Die Katze werden schlafen",
+            "Die Katze werdet schlafen"
+          ],
+          "answer": "Die Katze wird schlafen"
+        },
+        {
+          "id": 3,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Wir werden in den Zoo gehen",
+          "answer": "Wir werden in den Zoo gehen"
+        },
+        {
+          "id": 4,
+          "type": "reorder",
+          "question": "Соберите: Птица будет петь.",
+          "words": ["singen", "Vogel", "Der", "wird"],
+          "correctOrder": ["Der", "Vogel", "wird", "singen"]
+        },
+        {
+          "id": 5,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Der Hund wird bellen",
+            "Der Hund werden bellen",
+            "Der Hund werdet bellen"
+          ],
+          "answer": "Der Hund wird bellen"
+        },
+        {
+          "id": 6,
+          "type": "reorder",
+          "question": "Соберите: Мы покормим животных.",
+          "words": ["füttern", "Tiere", "die", "Wir", "werden"],
+          "correctOrder": ["Wir", "werden", "die", "Tiere", "füttern"]
+        },
+        {
+          "id": 7,
+          "type": "speechToText",
+          "question": "Произнесите фразу:",
+          "text": "Das Pferd wird rennen",
+          "answer": "Das Pferd wird rennen"
+        },
+        {
+          "id": 8,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Du wirst mit dem Hund spielen",
+            "Du wird mit dem Hund spielen",
+            "Du werden mit dem Hund spielen"
+          ],
+          "answer": "Du wirst mit dem Hund spielen"
+        },
+        {
+          "id": 9,
+          "type": "reorder",
+          "question": "Соберите: Кто погуляет с собакой?",
+          "words": ["gehen", "spazieren", "Hund", "dem", "mit", "Wer", "wird"],
+          "correctOrder": ["Wer", "wird", "mit", "dem", "Hund", "spazieren", "gehen"]
+        },
+        {
+          "id": 10,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Er wird einen Hamster haben",
+          "answer": "Er wird einen Hamster haben"
+        },
+        {
+          "id": 11,
+          "type": "reorder",
+          "question": "Соберите: Лев будет опасным.",
+          "words": ["sein", "gefährlich", "Löwe", "Der", "wird"],
+          "correctOrder": ["Der", "Löwe", "wird", "gefährlich", "sein"]
+        },
+        {
+          "id": 12,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Ihr werdet Tiere lieben",
+            "Ihr werden Tiere lieben",
+            "Ihr wird Tiere lieben"
+          ],
+          "answer": "Ihr werdet Tiere lieben"
+        },
+        {
+          "id": 13,
+          "type": "speechToText",
+          "question": "Произнесите:",
+          "text": "Die Maus wird Käse fressen",
+          "answer": "Die Maus wird Käse fressen"
+        },
+        {
+          "id": 14,
+          "type": "reorder",
+          "question": "Соберите: Рыба будет плавать.",
+          "words": ["schwimmen", "Fisch", "Der", "wird"],
+          "correctOrder": ["Der", "Fisch", "wird", "schwimmen"]
+        },
+        {
+          "id": 15,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Sie werden den Hund rufen",
+            "Sie wird den Hund rufen",
+            "Sie werdet den Hund rufen"
+          ],
+          "answer": "Sie werden den Hund rufen"
+        }
+      ]
+    },
+  {
+      "questId": "future_environment_nature",
+      "aliases": ["futur-ecology-protection"],
+      "title": "Экология",
+      "progress": "0/15",
+      "description": "Спасаем планету. Говорим об экологии и защите природы, используя более сложные конструкции Futur I.",
+      "conditions": {
+        "goal": "Освойте лексику экологии в будущем времени.",
+        "minCorrect": 12,
+        "requiredTasks": 15
+      },
+      "rewards": {
+        "points": 35,
+        "xp": 35
+      },
+      "tasks": [
+        {
+          "id": 1,
+          "type": "reorder",
+          "question": "Соберите: Мы будем лучше защищать нашу природу.",
+          "words": ["schützen", "Natur", "unsere", "besser", "Wir", "werden"],
+          "correctOrder": ["Wir", "werden", "unsere", "Natur", "besser", "schützen"]
+        },
+        {
+          "id": 2,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Das Klima wird sich schnell ändern",
+            "Das Klima werden sich schnell ändern",
+            "Das Klima werdet sich schnell ändern"
+          ],
+          "answer": "Das Klima wird sich schnell ändern"
+        },
+        {
+          "id": 3,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Wir werden weniger Plastik benutzen",
+          "answer": "Wir werden weniger Plastik benutzen"
+        },
+        {
+          "id": 4,
+          "type": "reorder",
+          "question": "Соберите: Люди будут использовать солнечную энергию.",
+          "words": ["nutzen", "Energie", "solare", "Menschen", "Die", "werden"],
+          "correctOrder": ["Die", "Menschen", "werden", "solare", "Energie", "nutzen"]
+        },
+        {
+          "id": 5,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Die Luft wird in der Stadt sauberer sein",
+            "Die Luft werden in der Stadt sauberer sein",
+            "Die Luft werdet in der Stadt sauberer sein"
+          ],
+          "answer": "Die Luft wird in der Stadt sauberer sein"
+        },
+        {
+          "id": 6,
+          "type": "reorder",
+          "question": "Соберите: Я буду всегда разделять мусор.",
+          "words": ["trennen", "Müll", "immer", "den", "werde", "Ich"],
+          "correctOrder": ["Ich", "werde", "den", "Müll", "immer", "trennen"]
+        },
+        {
+          "id": 7,
+          "type": "speechToText",
+          "question": "Произнесите фразу:",
+          "text": "Wir werden den Wald retten",
+          "answer": "Wir werden den Wald retten"
+        },
+        {
+          "id": 8,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Ihr werdet umweltfreundlich leben",
+            "Ihr werden umweltfreundlich leben",
+            "Ihr wird umweltfreundlich leben"
+          ],
+          "answer": "Ihr werdet umweltfreundlich leben"
+        },
+        {
+          "id": 9,
+          "type": "reorder",
+          "question": "Соберите: Электромобили станут очень популярными.",
+          "words": ["werden", "populär", "sehr", "Elektroautos", "werden"],
+          "correctOrder": ["Elektroautos", "werden", "sehr", "populär", "werden"]
+        },
+        {
+          "id": 10,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Das Wasser wird sauber bleiben",
+          "answer": "Das Wasser wird sauber bleiben"
+        },
+        {
+          "id": 11,
+          "type": "reorder",
+          "question": "Соберите: Кто будет заботиться о планете?",
+          "words": ["kümmern", "Planeten", "den", "um", "Wer", "wird", "sich"],
+          "correctOrder": ["Wer", "wird", "sich", "um", "den", "Planeten", "kümmern"]
+        },
+        {
+          "id": 12,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Sie werden Bäume pflanzen",
+            "Sie wird Bäume pflanzen",
+            "Sie werdet Bäume pflanzen"
+          ],
+          "answer": "Sie werden Bäume pflanzen"
+        },
+        {
+          "id": 13,
+          "type": "speechToText",
+          "question": "Произнесите:",
+          "text": "Die Erde wird wärmer werden",
+          "answer": "Die Erde wird wärmer werden"
+        },
+        {
+          "id": 14,
+          "type": "reorder",
+          "question": "Соберите: Мы не будем загрязнять море.",
+          "words": ["verschmutzen", "Meer", "das", "nicht", "Wir", "werden"],
+          "correctOrder": ["Wir", "werden", "das", "Meer", "nicht", "verschmutzen"]
+        },
+        {
+          "id": 15,
+          "type": "select",
+          "question": "Выберите правильный вариант",
+          "options": [
+            "Das Eis wird im Sommer schmelzen",
+            "Das Eis werden im Sommer schmelzen",
+            "Das Eis werdet im Sommer schmelzen"
+          ],
+          "answer": "Das Eis wird im Sommer schmelzen"
+        }
+      ]
+    },
+  {
+    "questId": "future_holidays_traditions",
+    "aliases": ["futur-festivals-celebration"],
+    "title": "Праздники",
+    "progress": "0/15",
+    "description": "Рождество и Новый год. Говорим о планах на праздники в Futur I.",
+    "conditions": {
+      "goal": "Научитесь рассказывать о праздниках.",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 35,
+      "xp": 35
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "Соберите: Мы будем праздновать.",
+        "words": ["feiern", "Wir", "werden"],
+        "correctOrder": ["Wir", "werden", "feiern"]
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "Выберите правильный вариант",
+        "options": [
+          "Das Fest wird beginnen",
+          "Das Fest werden beginnen",
+          "Das Fest werdet beginnen"
+        ],
+        "answer": "Das Fest wird beginnen"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Ich werde Kuchen backen",
+        "answer": "Ich werde Kuchen backen"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "Соберите: Кто спрячет яйца?",
+        "words": ["verstecken", "Eier", "Wer", "wird", "die"],
+        "correctOrder": ["Wer", "wird", "die", "Eier", "verstecken"]
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Выберите правильный вариант",
+        "options": [
+          "Ihr werdet Geschenke bekommen",
+          "Ihr werden Geschenke bekommen",
+          "Ihr wird Geschenke bekommen"
+        ],
+        "answer": "Ihr werdet Geschenke bekommen"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Соберите: Год скоро начнется.",
+        "words": ["beginnen", "Jahr", "Das", "wird", "bald"],
+        "correctOrder": ["Das", "Jahr", "wird", "bald", "beginnen"]
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "Произнесите фразу:",
+        "text": "Wir werden den Baum schmücken",
+        "answer": "Wir werden den Baum schmücken"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "Выберите правильный вариант",
+        "options": [
+          "Die Stimmung wird gut sein",
+          "Die Stimmung werden gut sein",
+          "Die Stimmung werdet gut sein"
+        ],
+        "answer": "Die Stimmung wird gut sein"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "Соберите: Она пригласит друзей.",
+        "words": ["einladen", "Freunde", "Sie", "wird"],
+        "correctOrder": ["Sie", "wird", "Freunde", "einladen"]
+      },
+      {
+        "id": 10,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Es wird eine Tradition sein",
+        "answer": "Es wird eine Tradition sein"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите: Ты пошлешь карту?",
+        "words": ["schicken", "Karte", "eine", "Wirst", "du"],
+        "correctOrder": ["Wirst", "du", "eine", "Karte", "schicken"]
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "Выберите правильный вариант",
+        "options": [
+          "Die Gäste werden kommen",
+          "Die Gäste wird kommen",
+          "Die Gäste werdet kommen"
+        ],
+        "answer": "Die Gäste werden kommen"
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "Произнесите:",
+        "text": "Ich werde mir etwas wünschen",
+        "answer": "Ich werde mir etwas wünschen"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "Соберите: Мы не забудем праздник.",
+        "words": ["vergessen", "Fest", "das", "nicht", "Wir", "werden"],
+        "correctOrder": ["Wir", "werden", "das", "Fest", "nicht", "vergessen"]
+      },
+      {
+        "id": 15,
+        "type": "select",
+        "question": "Выберите правильный вариант",
+        "options": [
+          "Er wird eine Rede halten",
+          "Er werden eine Rede halten",
+          "Er werdet eine Rede halten"
+        ],
+        "answer": "Er wird eine Rede halten"
       }
     ]
   }

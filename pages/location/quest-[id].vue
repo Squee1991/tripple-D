@@ -663,7 +663,7 @@ watchEffect(() => {
   align-items: center;
   padding: .4rem 1rem;
   min-width: 120px;
-  gap: 17px;
+  gap: 10px;
 }
 
 .quest__stat-value {
@@ -714,7 +714,7 @@ watchEffect(() => {
 }
 
 .quest__section {
-  margin-top: 24px;
+  margin-top: 10px;
   min-height: 250px;
 }
 
@@ -1074,7 +1074,7 @@ watchEffect(() => {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .quest__stat-value {
     width: 4.3rem;
     height: 2.3rem;
@@ -1141,6 +1141,21 @@ watchEffect(() => {
     padding: 0 28px;
     font-size: 20px;
     max-width: 100%;
+  }
+  .quest__feedback.is-red {
+    font-size: 1.5rem;
+  }
+  .quest__feedback {
+    padding: 19px 8px;
+  }
+}
+
+@media (max-width: 479px) {
+  .quest__feedback.is-red {
+    font-size: 1.3rem;
+  }
+  .quest__feedback-icon {
+    width: 40px;
   }
 }
 

@@ -7,6 +7,7 @@ import StoneReach from 'assets/images/locations-images/stone-reach.png'
 import MasterLands from 'assets/images/locations-images/master-lands.png'
 import WildLand from 'assets/images/locations-images/wild-land.png'
 import Future from 'assets/images/locations-images/Future.png'
+import Past from 'assets/images/locations-images/Past.png'
 
 export const regions = {
 		beginner: [
@@ -88,10 +89,19 @@ export const regions = {
 			// 	id: "plural-land",
 			// 	pathTo: "plural-land",
 			// 	theme: "plural",
-			// 	name: "Перевал Грядущего",
+			// 	name: "Перевал грядущего",
 			// 	level: 0,
-			// 	desc: "На этом крутом склоне туман прошлого окончательно рассеивается, открывая вид на далекий горизонт. Здесь путник учится не просто смотреть под ноги, а заглядывать в завтрашний день",
+			// 	desc: "На этом крутом склоне туман прошлого окончательно рассеивается, открывая вид на далекий горизонт. Здесь путник учится не просто смотреть под ноги, а заглядывать в завтрашний и прошедший день",
 			// 	icon: Future
+			// },
+			// {
+			// 	id: "past-land",
+			// 	pathTo: "past-land",
+			// 	theme: "past",
+			// 	name: "Руины былого",
+			// 	level: 0,
+			// 	desc: "Среди древних камней и песков времени хранятся истории о том, что уже свершилось. Здесь путник учится оглядываться назад и описывать события минувших дней, осваивая Прошедшее время.",
+			// 	icon: Past
 			// }
 		]
 	};

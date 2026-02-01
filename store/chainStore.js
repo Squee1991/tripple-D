@@ -4,7 +4,7 @@ import { regions } from '~/utils/regions.js'
 import { doc, getDoc, getFirestore, runTransaction, increment, setDoc } from 'firebase/firestore'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 import {dailyStore } from './dailyStore.js'
-const REGEN_INTERVAL_MS = 60 * 1000
+const REGEN_INTERVAL_MS = 5 * 60 * 1000
 const MAX_LIVES = 5
 
 export const userChainStore = defineStore('chain', () => {
