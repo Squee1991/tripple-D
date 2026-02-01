@@ -76,52 +76,6 @@ useSeoMeta({
   robots: 'noindex, nofollow'
 })
 
-// const pageTitle = t('metaTests.title')
-// const pageDesc  = t('metaTests.description')
-//
-// useHead({
-//   title: pageTitle,
-//   link: [{ rel: 'canonical', href: canonical }],
-//   script: [
-//     {
-//       type: 'application/ld+json',
-//       children: JSON.stringify({
-//         "@context": "https://schema.org",
-//         "@type": "BreadcrumbList",
-//         "itemListElement": [
-//           { "@type": "ListItem", "position": 1, "name": t('metaTests.main'), "item": canonical.replace(/\/exams.*/,'/') },
-//           { "@type": "ListItem", "position": 2, "name": t('metaTests.tests'), "item": canonical }
-//         ]
-//       })
-//     },
-//     {
-//       type: 'application/ld+json',
-//       children: JSON.stringify({
-//         "@context": "https://schema.org",
-//         "@type": "ItemList",
-//         "name": t('metaTests.testsLevels'),
-//         "itemListElement": [
-//           { "@type": "ListItem", "position": 1, "url": canonical + 'level/a1', "name": "A1" },
-//           { "@type": "ListItem", "position": 2, "url": canonical + 'level/a2', "name": "A2" },
-//           { "@type": "ListItem", "position": 3, "url": canonical + 'level/b1', "name": "B1" },
-//           { "@type": "ListItem", "position": 4, "url": canonical + 'level/b2', "name": "B2" }
-//         ]
-//       })
-//     }
-//   ]
-// })
-// useSeoMeta({
-//   title: pageTitle,
-//   description: pageDesc,
-//   ogTitle: pageTitle,
-//   ogDescription: pageDesc,
-//   ogType: 'website',
-//   ogUrl: canonical,
-//   ogImage: '/images/seo-exams.png',
-//   twitterCard: 'summary_large_image',
-//   robots: 'index, follow'
-// })
-
 const authStore = userAuthStore()
 const showConsentModal = ref(false)
 const consentGiven = ref(false)
@@ -266,7 +220,7 @@ onMounted(async () => {
 .exam__subtitle {
   margin-top: 15px;
   font-size: 1.3rem;
-  color: #444;
+  color: var(--titleColor);
   margin-bottom: 2rem;
 }
 
@@ -325,6 +279,7 @@ onMounted(async () => {
 }
 
 .back__btn {
+  color: #1f1f1f;
   min-width: 300px;
   background: #4ade80;
   padding: 10px 20px;
