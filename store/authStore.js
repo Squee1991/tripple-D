@@ -263,7 +263,6 @@ export const userAuthStore = defineStore('auth', () => {
     }
 
     const registerUser = async (userData) => {
-
         const authInstance = getAuth()
         const methods = await fetchSignInMethodsForEmail(authInstance, userData.email)
         if (methods.length > 0) {
@@ -308,7 +307,6 @@ export const userAuthStore = defineStore('auth', () => {
             providerId: user.providerData[0]?.providerId || '',
             ...data,
         })
-
         await checkFeedbackSurveyEligibility()
     }
 
@@ -338,7 +336,6 @@ export const userAuthStore = defineStore('auth', () => {
         await updateDoc(userDocRef, {
             totalHats: totalHats.value
         })
-
     }
 
     const loginUser = async ({email, password}) => {
@@ -519,21 +516,10 @@ export const userAuthStore = defineStore('auth', () => {
         }
     }
 
-    const activatePremium = async (premiumData) => {
-        const auth = getAuth()
-        const user = auth.currentUser
-        if (!user) return
-        const userDocRef = doc(db, 'users', user.uid)
-
-        await setDoc(userDocRef, {
-            ...premiumData,
-            isPremium: true,
-            subscriptionCancelled: false,     // ✅ ВАЖНО
-        }, {merge: true})
-
+    const activatePremium = (premiumData) => {
         isPremium.value = true
         subscriptionEndsAt.value = premiumData.subscriptionEndsAt
-        subscriptionCancelled.value = false // ✅ ВАЖНО
+        subscriptionCancelled.value = false
     }
 
     const markCancelledInDb = () => {
