@@ -21,9 +21,7 @@
           <img class="back__btn-icon" :src="Home" alt=""/>
           <span class="back-label">{{ t('cabinet.main') }}</span>
         </button>
-
         <div class="sidebar-title">{{ t('cabinet.category') }}</div>
-
         <nav class="tabs-vertical">
           <button
               v-for="tabItem in TAB_ITEMS"
@@ -38,11 +36,9 @@
           </button>
         </nav>
       </aside>
-
       <section class="content-panel">
         <ClientOnly>
           <div class="content-body">
-
             <div v-if="activeTabKey === 'info'" class="header-surface">
               <div v-if="isSettingsOpen" class="settings-wrapper">
                 <VSettings
@@ -55,7 +51,6 @@
                     @open="handleSettingsAction"
                 />
               </div>
-
               <div v-else>
                 <div class="user-block">
                   <div class="avatar-container">
@@ -66,7 +61,6 @@
                         class="avatar-current"
                     />
                     <div v-else class="avatar-placeholder"></div>
-
                     <button
                         @click="isAvatarModalOpen = true"
                         class="change-avatar-btn"
@@ -76,19 +70,15 @@
                       <img src="../assets/images/add.svg" alt="Сменить"/>
                     </button>
                   </div>
-
                   <div class="user-info">
                     <div class="user-name">{{ userNameSafe }}</div>
-
                     <div class="exp-bar">
                       <div class="exp-fill" :style="{ width: `${expFillWidth}%` }"></div>
                       <span class="exp-text">{{ learningStore.exp }} / 100 XP</span>
                     </div>
-
                     <div class="level-info">{{ t('cabinet.level') }} {{ learningStore.isLeveling }}</div>
                   </div>
                 </div>
-
                 <div class="account-tabs">
                   <button
                       v-for="tab in ACCOUNT_TABS"
@@ -99,43 +89,38 @@
                       type="button"
                   >
                     <img :class="iconDisplayComputed" class="tab-icon --horizontal" :src="tab.icon" :alt="tab.alt">
-                    <span class="tab__text">
-                                  {{ tab.label }}
-                                </span>
+                    <span class="tab__text">{{ tab.label }}</span>
                   </button>
                 </div>
-
                 <div class="account-tab-body">
                   <div v-if="accountTab === 'common'" class="tab-surface">
                     <PersonalInfoRows/>
                     <AccountManagement @open="handleSettingsAction"/>
                   </div>
-
                   <div v-if="accountTab === 'friends'" class="tab-surface">
                     <VFindFriends/>
                   </div>
-
-
                   <div v-else-if="accountTab === 'awards'" class="tab-surface">
                     <AwardsList :awards="awardList"/>
                   </div>
-
-
                   <div v-else-if="accountTab === 'rank'" class="rank-placeholder">
                     <VRank/>
                   </div>
-
                 </div>
               </div>
             </div>
             <div v-else>
-              <component :is="components"/>
+              <component
+                  :is="components"
+                  :settingsIcon="OptionIcon"
+                  @open="handleSettingsAction"
+                  @back="activeTabKey = 'info'"
+              />
             </div>
           </div>
         </ClientOnly>
       </section>
     </div>
-
     <!-- Avatar modal -->
     <div v-if="isAvatarModalOpen" class="avatar-modal-overlay" @click.self="isAvatarModalOpen = false">
       <div class="avatar-modal-content">
@@ -167,7 +152,6 @@
         </div>
       </div>
     </div>
-
     <div v-if="isPurchaseModalOpen" class="modal-overlay" @click.self="isPurchaseModalOpen = false">
       <div class="modal-card">
         <template v-if="purchaseState === 'success'">
@@ -178,7 +162,6 @@
             </button>
           </div>
         </template>
-
         <template v-else-if="purchaseState === 'insufficient'">
           <div class="modal-title">{{ t('cabinet.notEnoughtArticles') }}</div>
           <div class="modal-actions">
@@ -187,7 +170,6 @@
             </button>
           </div>
         </template>
-
         <template v-else>
           <div class="modal-title">{{ t('cabinet.buyAvatar') }}</div>
           <p class="modal-text">
@@ -204,26 +186,20 @@
         </template>
       </div>
     </div>
-
     <!-- Delete modal -->
     <div v-if="isDeleteModalOpen" class="modal-overlay" @click.self="isDeleteModalOpen = false">
       <div class="modal-card">
         <div class="modal-title">{{ t('cabinet.deleteAccTitle') }}</div>
-
         <p v-if="authStore.isPremium" class="modal-text">
           <span class="warn">{{ t('cabinet.important') }}</span>
           <span> {{ t('cabinet.importantText') }}</span>
         </p>
-
         <p v-if="!isGoogleUser" class="modal-text">{{ t('cabinet.checkPassword') }}</p>
-
         <div v-if="!isGoogleUser" class="label">
           <input class="input" v-model="deletePasswordField.value" type="password"/>
           <p v-if="deletePasswordField.error" class="delete-error">{{ t(deletePasswordField.error) }}</p>
         </div>
-
         <p v-else class="modal-text">{{ t('cabinet.checkGoogle') }}</p>
-
         <div class="modal-actions">
           <button class="btn btn-danger" @click="confirmDeleteAccount" type="button">
             {{ t('cabinet.deleteAccBtnAccept') }}
@@ -234,7 +210,6 @@
         </div>
       </div>
     </div>
-
     <!-- Snow warning modal -->
     <div v-if="isSnowWarningModalOpen" class="modal-overlay" @click.self="isSnowWarningModalOpen = false">
       <div class="modal-card">

@@ -9,12 +9,10 @@
         <template v-if="authStore.isPremium && !authStore.subscriptionCancelled">
           <span class="status-pill is-active">✅ {{ t('cabinet.active') }}</span>
         </template>
-
         <!-- Premium отменён, но доступ ещё есть -->
         <template v-else-if="authStore.isPremium && authStore.subscriptionCancelled">
           <span class="status-pill is-cancelled">⚠️ {{ t('cabinet.canceled') }}</span>
         </template>
-
         <!-- Без премиума -->
         <template v-else>
           <div class="status-inline">
@@ -26,7 +24,6 @@
         </template>
       </div>
     </div>
-
     <!-- Детали/управление только если Premium -->
     <template v-if="authStore.isPremium && !authStore.subscriptionCancelled">
       <div class="premium__status-wrapper">
@@ -102,7 +99,7 @@ function openDeleteModal() {
 .subscription-label {
   font-weight: 800;
   opacity: 0.85;
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--titleColor);
   white-space: nowrap;
 }
 
@@ -141,7 +138,7 @@ function openDeleteModal() {
 
 .status-pill.is-cancelled {
   border-color: rgba(245, 158, 11, 0.35);
-  background: rgba(245, 158, 11, 0.12);
+  background: rgba(194, 144, 55, 0.97);
 }
 
 .status-pill.is-free {
@@ -189,7 +186,7 @@ function openDeleteModal() {
   margin-top: 10px;
   padding: 0 6px;
   font-weight: 800;
-  color: rgba(255, 255, 255, 0.78);
+  color: var(--titleColor);
 }
 
 .btn {
