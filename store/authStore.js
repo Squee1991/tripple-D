@@ -16,6 +16,7 @@ import {
 } from 'firebase/auth';
 import {doc, setDoc, getDoc, getFirestore, updateDoc, deleteDoc, serverTimestamp, writeBatch} from 'firebase/firestore';
 import {userlangStore} from "./learningStore.js";
+
 let authStateUnsubscribe = null;
 
 export const userAuthStore = defineStore('auth', () => {
@@ -45,6 +46,30 @@ export const userAuthStore = defineStore('auth', () => {
     const initialized = ref(false)
     const shouldShowFeedbackSurvey = ref(false)
     const totalHats = ref(0)
+    const premiumDiscount = ref({
+        sale_5: false,
+        sale_10: false,
+        sale_15: false
+    })
+
+    const activateDiscount = async (discountId) => {
+        const user = getAuth().currentUser
+        if (!user) return {success: false, reason: 'no-user'}
+
+        const allowed = ['sale_5', 'sale_10', 'sale_15']
+        if (!allowed.includes(discountId)) return {success: false, reason: 'invalid-item'}
+
+        if (premiumDiscount.value[discountId] === true) {
+            return {success: false, reason: 'already-owned'}
+        }
+
+        const userRef = doc(db, 'users', user.uid)
+        await updateDoc(userRef, {[discountId]: true})
+
+        premiumDiscount.value[discountId] = true
+        return {success: true}
+    }
+
     let initPromise = null
 
     const checkFeedbackSurveyEligibility = async () => {
@@ -78,7 +103,7 @@ export const userAuthStore = defineStore('auth', () => {
         const currentUid = uid.value || authUser?.uid
         if (!currentUid) return
         const userDocRef = doc(db, 'users', currentUid)
-        await updateDoc(userDocRef, { feedbackSurveyShownAt: serverTimestamp() })
+        await updateDoc(userDocRef, {feedbackSurveyShownAt: serverTimestamp()})
         shouldShowFeedbackSurvey.value = false
     }
 
@@ -147,7 +172,41 @@ export const userAuthStore = defineStore('auth', () => {
         voiceConsentGiven.value = data.voiceConsentGiven === true
         hasSeenOnboarding.value = data.hasSeenOnboarding === true
         totalHats.value = data.totalHats || 0
+        premiumDiscount.value = {
+            sale_5: data.sale_5 || false,
+            sale_10: data.sale_10 || false,
+            sale_15: data.sale_15 || false
+        }
         if (data.isPremium && !data.gotPremiumBonus) grantPremiumBonusPoints()
+    }
+
+    const purchase = async (cost, discountId) => {
+        const user = getAuth().currentUser
+        if (!user) return {success: false, reason: 'no-user'}
+
+        const allowed = ['sale_5', 'sale_10', 'sale_15']
+        if (!allowed.includes(discountId)) return {success: false, reason: 'invalid-item'}
+
+        if (totalHats.value < cost) return {success: false, reason: 'insufficient'}
+        if (premiumDiscount.value[discountId] === true) return {success: false, reason: 'already-owned'}
+
+        try {
+            const newTotal = totalHats.value - cost
+            const userRef = doc(db, 'users', user.uid)
+
+            await updateDoc(userRef, {
+                totalHats: newTotal,
+                [discountId]: true,
+            })
+
+            totalHats.value = newTotal
+            premiumDiscount.value[discountId] = true
+
+            return {success: true}
+        } catch (error) {
+            console.error('purchase error', error)
+            return {success: false, reason: 'error'}
+        }
     }
 
     const updateUserAvatar = async (newAvatarFilename) => {
@@ -178,11 +237,17 @@ export const userAuthStore = defineStore('auth', () => {
                 registeredAt: serverTimestamp(),
                 feedbackSurveyShownAt: null,
                 avatar: '1.png',
+                subscriptionEndsAt: null,
+                subscriptionCancelled: false,
                 gotPremiumBonus: false,
                 voiceConsentGiven: false,
                 hasSeenOnboarding: false,
                 isPremium: false,
                 totalHats: 0,
+                sale_5: false,
+                sale_10: false,
+                sale_15: false,
+
                 ...createInitialAchievementsObject()
             })
         }
@@ -204,7 +269,7 @@ export const userAuthStore = defineStore('auth', () => {
         const authInstance = getAuth()
         const methods = await fetchSignInMethodsForEmail(authInstance, userData.email)
         if (methods.length > 0) {
-            throw { code: 'auth/email-already-in-use' }
+            throw {code: 'auth/email-already-in-use'}
         }
         const userCredential = await createUserWithEmailAndPassword(
             authInstance,
@@ -212,7 +277,9 @@ export const userAuthStore = defineStore('auth', () => {
             userData.password
         )
         const user = userCredential.user
-        await updateProfile(user, { displayName: userData.name })
+        await updateProfile(user, {displayName: userData.name})
+
+        await updateProfile(user, {displayName: userData.name})
         await sendEmailVerification(user)
         const userDocRef = doc(db, 'users', user.uid)
         await setDoc(userDocRef, {
@@ -228,6 +295,9 @@ export const userAuthStore = defineStore('auth', () => {
             voiceConsentGiven: false,
             hasSeenOnboarding: false,
             totalHats: 0,
+            sale_5: false,
+            sale_10: false,
+            sale_15: false,
             ...createInitialAchievementsObject()
         })
 
@@ -265,7 +335,7 @@ export const userAuthStore = defineStore('auth', () => {
         }
     }
 
-    const incrementHats =  async () =>{
+    const incrementHats = async () => {
         const authUser = getAuth().currentUser
         if (!authUser) return
         totalHats.value++
@@ -397,6 +467,7 @@ export const userAuthStore = defineStore('auth', () => {
         })
     }
 
+
     const initAuth = () => {
         if (initialized.value) return Promise.resolve()
         if (initPromise) return initPromise
@@ -463,13 +534,34 @@ export const userAuthStore = defineStore('auth', () => {
             await setDoc(userDocRef, {
                 ...premiumData,
                 isPremium: true
-            }, { merge: true })
+            }, {merge: true})
             isPremium.value = true
             subscriptionEndsAt.value = premiumData.subscriptionEndsAt
             console.log(' Премиум успешно активирован и записан')
         } catch (e) {
             console.error('Ошибка записи в Базе данных:', e)
             throw e
+        }
+
+    }
+    const markCancelledInDb = async () => {
+        const auth = getAuth()
+        const user = auth.currentUser
+
+        // 1. Обновляем локально, чтобы юзер сразу увидел
+        subscriptionCancelled.value = true
+
+        if (!user) return
+
+        // 2. ЖЕЛЕЗОБЕТОННО ПИШЕМ В БАЗУ
+        const userDocRef = doc(db, 'users', user.uid)
+        try {
+            await updateDoc(userDocRef, {
+                subscriptionCancelled: true
+            })
+            console.log('💾 Статус отмены сохранен в базу навсегда')
+        } catch (e) {
+            console.error('Ошибка записи в базу:', e)
         }
     }
 
@@ -509,10 +601,14 @@ export const userAuthStore = defineStore('auth', () => {
         updateUserAvatar,
         getAvatarUrl,
         isWebView, detectWebView,
-        hasSeenOnboarding,         
+        hasSeenOnboarding,
         setHasSeenOnboarding,
         shouldShowFeedbackSurvey,
         checkFeedbackSurveyEligibility,
-        markFeedbackSurveyShown
+        markFeedbackSurveyShown,
+        premiumDiscount,
+        purchase,
+        activateDiscount,
+        markCancelledInDb
     }
 })

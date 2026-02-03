@@ -1,67 +1,81 @@
-// import { defineEventHandler, readBody, createError } from 'h3'
-// import Stripe from 'stripe'
-// import { db } from '../utils/firebase-admin.js'
-// export default defineEventHandler(async (event) => {
-// 	try {
-// 		const { uid } = await readBody(event)
-// 		if (!uid) {
-// 			throw createError({ statusCode: 400, statusMessage: 'Missing UID' })
-// 		}
-// 		const { stripeSecret } = useRuntimeConfig()
-// 		if (!stripeSecret) {
-// 			throw createError({ statusCode: 500, statusMessage: 'Stripe key missing' })
-// 		}
-// 		const stripe = new Stripe(stripeSecret, { apiVersion: '2024-06-20' })
-//
-// 		const userRef = db.collection('users').doc(uid)
-// 		const userDoc = await userRef.get()
-// 		const userData = userDoc.data()
-//
-// 		if (!userData || !userData.subscriptionId) {
-// 			throw createError({ statusCode: 404, statusMessage: 'Subscription not found' })
-// 		}
-//
-// 		await stripe.subscriptions.update(userData.subscriptionId, {
-// 			cancel_at_period_end: true,
-// 		})
-//
-// 		await userRef.update({
-// 			subscriptionCancelled: true
-//
-// 		})
-//
-// 		console.log(`[cancel] Subscription ${userData.subscriptionId} scheduled to cancel at period end`)
-// 		return { success: true, message: 'Subscription will be canceled at period end' }
-// 	} catch (err) {
-// 		console.error('[cancel] ERROR:', err)
-// 		throw createError({ statusCode: 500, statusMessage: err.message })
-// 	}
-// })
-
-import { defineEventHandler, readBody, createError } from 'h3'
+import { defineEventHandler, readBody } from 'h3'
 import Stripe from 'stripe'
+// Импорт базы оставим только чтобы галочку поставить в конце
 import { db } from '../utils/firebase-admin.js'
+
 export default defineEventHandler(async (event) => {
-	try {
-		const { uid } = await readBody(event)
-		if (!uid) throw createError({ statusCode: 400, message: 'Missing UID' })
-		const { stripeSecret } = useRuntimeConfig()
-		const key = stripeSecret || process.env.STRIPE_SECRET_KEY
-		const stripe = new Stripe(key, { apiVersion: '2024-06-20' })
-		const userRef = db.collection('users').doc(uid)
-		const userDoc = await userRef.get()
-		const userData = userDoc.data()
-		if (!userData || !userData.subscriptionId) {
-			return { success: false, error: 'Subscription ID not found' }
-		}
-		await stripe.subscriptions.update(userData.subscriptionId, {
-			cancel_at_period_end: true,
-		})
-		await userRef.update({
-			subscriptionCancelled: true
-		})
-		return { success: true }
-	} catch (err) {
-		throw createError({ statusCode: 500, message: err.message })
-	}
+    try {
+        // 1. Принимаем Email с фронтенда
+        const { email, uid } = await readBody(event)
+
+        if (!email) {
+            return { success: false, error: 'Email обязателен для поиска в Stripe' }
+        }
+
+
+        const { stripeSecret } = useRuntimeConfig()
+        const key = stripeSecret || process.env.STRIPE_SECRET_KEY
+        const stripe = new Stripe(key, { apiVersion: '2024-06-20' })
+
+        // 2. Спрашиваем у Stripe: "Дай мне клиента с таким Email"
+        const customers = await stripe.customers.list({
+            email: email,
+            limit: 1
+        })
+
+        if (customers.data.length === 0) {
+            console.error('[Cancel] Клиент с таким email не найден в Stripe')
+            return { success: false, error: 'В Stripe нет такого email' }
+        }
+
+        const customerId = customers.data[0].id
+
+
+        // 3. Ищем у него АКТИВНУЮ подписку
+        const subscriptions = await stripe.subscriptions.list({
+            customer: customerId,
+            status: 'active',
+            limit: 1
+        })
+
+        // Если активных нет, проверим триал (trialing)
+        let subId = null
+        if (subscriptions.data.length > 0) {
+            subId = subscriptions.data[0].id
+        } else {
+            const trialSubs = await stripe.subscriptions.list({
+                customer: customerId,
+                status: 'trialing',
+                limit: 1
+            })
+            if (trialSubs.data.length > 0) subId = trialSubs.data[0].id
+        }
+
+        if (!subId) {
+            console.log('[Cancel] Активных подписок нет. Видимо, уже отменена.')
+            // Можно вернуть успех, так как цель достигнута (подписки нет)
+            return { success: true, message: 'No active subscription found' }
+        }
+
+
+        // 4. ОТМЕНЯЕМ (Netflix-style)
+        await stripe.subscriptions.update(subId, {
+            cancel_at_period_end: true,
+        })
+
+        // 5. Пытаемся отметить в базе (если UID есть), но если упадет - пофиг, главное Stripe
+        if (uid) {
+            try {
+                await db.collection('users').doc(uid).update({ subscriptionCancelled: true })
+            } catch (e) {
+                console.error('[Cancel] Ошибка записи в базу (не критично):', e.message)
+            }
+        }
+
+        return { success: true }
+
+    } catch (err) {
+        console.error('[Cancel] CRITICAL ERROR:', err)
+        return { success: false, error: err.message }
+    }
 })
