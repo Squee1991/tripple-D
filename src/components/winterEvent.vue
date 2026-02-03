@@ -38,13 +38,13 @@ const isEventOpen = computed(() => {
 })
 
 const nav = computed(() => ([
-  { id: 'quests', label: t('winterEvent.questions'), icon: '📜' },
-  { id: 'reputation', label: t('winterEvent.eventShop'), icon: '🏆' }
+  { id: 'quests', label: t('eventPanel.questions'), icon: '📜' },
+  { id: 'reputation', label: t('eventPanel.eventShop'), icon: '🏆' }
 ]))
 const computedPanelTitle = computed(() => {
   return activeTab.value === 'reputation'
-      ? t('winterEvent.eventShop')
-      : t('winterEvent.eventQuestions')
+      ? t('eventPanel.eventShop')
+      : t('eventPanel.eventQuestions')
 })
 const pathToMain = () => {
   router.push('/')
@@ -63,8 +63,8 @@ function closeMobilePanel() {
 }
 
 const ranks = computed(() => ([
-  { level: 1, need: 0, title: t('winterEvent.firstReputation') },
-  { level: 2, need: 1000, title: t('winterEvent.secondReputation') }
+  { level: 1, need: 0, title: t('eventPanel.firstReputationWinter') },
+  { level: 2, need: 1000, title: t('eventPanel.secondReputationWinter') }
 ]))
 
 const currentLevel = computed(() => {
@@ -133,12 +133,12 @@ async function goToSession(questId) {
 
 const shopByRank = ref({
   1: [
-    { id: 'santaHat', title: t('winterEventShopItems.santaHat'), priceCoins: 30, isOwned: false, icon: Hat },
-    { id: 'christmasBall', title: t('winterEventShopItems.christmasBall'), priceCoins: 30, isOwned: false, icon: ChristmasBall },
-    { id: 'christmasWreath', title: t('winterEventShopItems.christmasWreath'), priceCoins: 30, isOwned: false, icon: ChristmasWreath }
+    { id: 'santaHat', title: t('eventsShopItems.santaHat'), priceCoins: 30, isOwned: false, icon: Hat },
+    { id: 'christmasBall', title: t('eventsShopItems.christmasBall'), priceCoins: 30, isOwned: false, icon: ChristmasBall },
+    { id: 'christmasWreath', title: t('eventsShopItems.christmasWreath'), priceCoins: 30, isOwned: false, icon: ChristmasWreath }
   ],
   2: [
-    { id: 'snowFall', title: t('winterEventShopItems.snowFall'), priceCoins: 120, isOwned: false, icon: SantaIcon }
+    { id: 'snowFall', title: t('eventsShopItems.snowFall'), priceCoins: 120, isOwned: false, icon: SantaIcon }
   ]
 })
 
@@ -172,9 +172,9 @@ async function buyReward(level, rewardId) {
 function openRequirementsModal(level, item) {
   reqModalTitle.value = item.title
   if (isSnowItem(item)) {
-    reqModalText.value = `${t('winterEvent.needForReward')} ${item.priceCoins} ${coinIcon}  ${t('winterEvent.and')} 1000 ${t('winterEvent.reputation')}`
+    reqModalText.value = `${t('eventPanel.needForReward')} ${item.priceCoins} ${coinIcon}  ${t('eventPanel.and')} 1000 ${t('eventPanel.reputation')}`
   } else {
-    reqModalText.value = `${t('winterEvent.needForReward')} ${item.priceCoins} ${coinIcon}`
+    reqModalText.value = `${t('eventPanel.needForReward')} ${item.priceCoins} ${coinIcon}`
   }
   isReqModalOpen.value = true
 }
@@ -232,26 +232,26 @@ onMounted(() => {
         <div class="achv-layout">
           <aside class="achv-sidebar achv-card">
             <button @click="pathToMain" type="button" class="btn btn--home">
-              {{ t('winterEvent.pathMain') }}
+              {{ t('eventPanel.pathMain') }}
             </button>
             <div class="hero achv-card --flat">
               <div class="hero__info">
-                <div class="hero__name">{{ t('winterEvent.event') }}</div>
+                <div class="hero__name">{{ t('eventPanel.event') }}</div>
               </div>
             </div>
             <div class="status achv-card --flat">
               <div class="status__row">
-                <div class="status__value">{{ t('winterEvent.panel') }}</div>
+                <div class="status__value">{{ t('eventPanel.panel') }}</div>
               </div>
               <div class="status__row --rep">
-                <div class="status__label">{{ t('winterEvent.reputation') }}</div>
+                <div class="status__label">{{ t('eventPanel.reputation') }}</div>
               </div>
               <div class="bar">
                 <span class="bar__text">{{ levelProgressText }}</span>
                 <div class="bar__fill" :style="{ width: progressPct + '%' }"></div>
               </div>
               <div class="status__row">
-                <div class="status__label">{{ t('winterEvent.currency') }}</div>
+                <div class="status__label">{{ t('eventPanel.currency') }}</div>
                 <div class="status__value">{{ coins }} {{ coinIcon }}</div>
               </div>
             </div>
@@ -304,8 +304,8 @@ onMounted(() => {
                           :disabled="reward.isOwned"
                           @click="onRewardClick(selectedLevel, reward)"
                       >
-                        <template v-if="reward.isOwned">{{ t('winterEvent.bought') }}</template>
-                        <template v-else>{{ t('winterEvent.buy') }}</template>
+                        <template v-if="reward.isOwned">{{ t('eventPanel.bought') }}</template>
+                        <template v-else>{{ t('eventPanel.buy') }}</template>
                       </button>
                     </div>
                   </div>
@@ -315,7 +315,7 @@ onMounted(() => {
             <section v-if="activeTab === 'quests'">
               <div class="quests">
                 <div>
-                  <h2 class="daily__title">{{ t('winterEvent.questions') }}</h2>
+                  <h2 class="daily__title">{{ t('eventPanel.questions') }}</h2>
                 </div>
                 <div v-for="quest in quests" :key="quest.id" class="quest achv-card">
                   <div class="quest__icon">{{ quest.icon }}</div>
@@ -323,14 +323,14 @@ onMounted(() => {
                     <div class="quest__title clickable">{{ quest.title }}</div>
                     <div class="quest__meta">
                       <div class="quest__inner">
-                        <span class="meta__pill">{{ quest.rewardRep }} {{ t('winterEvent.rep') }}</span>
+                        <span class="meta__pill">{{ quest.rewardRep }} {{ t('eventPanel.rep') }}</span>
                         <span class="meta__pill">{{ quest.rewardCoins }} {{ coinIcon }}</span>
                       </div>
                       <button
                           :class="['btn', 'btn--candy', { 'btn--repeat': quest.isDone }]"
                           @click="goToSession(quest.id)"
                       >
-                        {{ quest.isDone ? t('winterEvent.repeat') : t('winterEvent.execute') }}
+                        {{ quest.isDone ? t('eventPanel.repeat') : t('eventPanel.execute') }}
                       </button>
                     </div>
                   </div>
@@ -359,9 +359,9 @@ onMounted(() => {
       <VShowFall :image="Snow" />
     </div>
     <div class="closed-content">
-      <h1>🔒 {{ t('winterEvent.notAllowedTitle') }}</h1>
-      <p>{{ t('winterEvent.notAllowedText') }}</p>
-      <button @click="pathToMain" class="btn btn--home">{{ t('winterEvent.pathMain') }}</button>
+      <h1>🔒 {{ t('eventPanel.notAllowedTitle') }}</h1>
+      <p>{{ t('eventPanel.notAllowedText') }}</p>
+      <button @click="pathToMain" class="btn btn--home">{{ t('eventPanel.pathMain') }}</button>
     </div>
   </div>
 </template>

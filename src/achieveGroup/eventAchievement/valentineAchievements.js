@@ -4,51 +4,67 @@ export const valentineAchievements = [
 		achievements: [
 			{
 				id: 'firstValentineQuest',
-				name: 'Первое сердечко',
-				description: 'Выполните любой квест события «Фестиваль сердец» и получите своё первое сердечко',
+				name: 'valentineAchievements.firstValentineQuestLabel',
+				description: 'valentineAchievements.firstValentineQuesDescription',
 				currentProgress: 0,
 				targetProgress: 1,
 				icon: '💖'
 			},
 			{
 				id: 'valentineWords',
-				name: 'Лингвист сердец',
-				description: 'Выучите все 12 праздничных слов события ко Дню святого Валентина и станьте хранителем сердец',
+				name: 'valentineAchievements.valentineWordsLabel',
+				description: 'valentineAchievements.valentineWordsDescription',
 				currentProgress: 0,
-				targetProgress: 12,
-				icon: '💘'
+				targetProgress: 14,
+				icon: '💌'
 			},
 			{
 				id: 'valentineAllQuests',
-				name: 'Повелитель Валентина',
-				description: 'Завершите все 6 квестов события ко Дню святого Валентина и докажите свою преданность.',
+				name: 'valentineAchievements.valentineAllQuestsLabel',
+				description: 'valentineAchievements.valentineAllQuestsDescription',
 				currentProgress: 0,
 				targetProgress: 6,
-				icon: '💝'
+				icon: '📜'
 			},
 			{
 				id: 'valentineBear',
-				name: 'Плюшевый защитник сердца',
-				description: 'Приобретите плюшевого медведя на фестивале сердцец и подарите миру немного тепла.',
+				name: 'valentineAchievements.valentineBearLabel',
+				description: 'valentineAchievements.valentineBearDescription',
 				currentProgress: 0,
 				targetProgress: 1,
 				icon: '🧸'
 			},
 			{
-				id: 'loveLetter',
-				name: 'Сердечное послание',
-				description: 'Купите сердечное послание чтобы раскрыть тайное послание, оставленное только для истинных.',
+				id: 'cupidArrow',
+				name: 'valentineAchievements.cupidArrowLabel',
+				description: 'valentineAchievements.cupidArrowDescription',
 				currentProgress: 0,
 				targetProgress: 1,
-				icon: '💌',
+				icon: '🏹'
 			},
 			{
-				id: 'valentineAllQuests',
-				name: 'Легенда фестиваля сердец',
-				description: 'Завершите все 6 квестов события «Фестиваль сердец» и докажите свою преданность силе любви.',
+				id: 'valentineTheme',
+				name: 'valentineAchievements.valentineThemeLabel',
+				description: 'valentineAchievements.valentineThemeDescription',
 				currentProgress: 0,
-				targetProgress: 6,
-				icon: '💞'
+				targetProgress: 1,
+				icon: '🎨'
+			},
+			{
+				id: 'ValentineReputation',
+				name: 'valentineAchievements.valentineReputationLabel',
+				description: 'valentineAchievements.valentineReputationDescription',
+				currentProgress: 0,
+				targetProgress: 300,
+				icon: '🌟'
+			},
+			{
+				id: 'valentineAllAchievements',
+				name: 'valentineAchievements.valentineAllAchievementsLabel',
+				description: 'valentineAchievements.valentineAllAchievementsDescription',
+				currentProgress: 0,
+				targetProgress: 7,
+				icon: '🏆'
 			}
 		]
 	}

@@ -716,7 +716,7 @@ function checkMatchingAnswers() {
   flex-wrap: wrap;
   gap: 10px;
   align-items: center;
-  margin-bottom: 15px;
+  margin: 10px 0 15px 0;
 }
 
 .option {

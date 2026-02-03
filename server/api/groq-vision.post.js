@@ -3,66 +3,86 @@ import { readBody } from 'h3'
 export default defineEventHandler(async (event) => {
     try {
         const config = useRuntimeConfig(event)
-        const key = String(config.groqApiKey || '').trim()
-        if (!key) return { error: "Нет API ключа." }
+        const key = String(config.groqApiKey || process.env.GROQ_API_KEY || '').trim()
+        if (!key) return { error: "Нет API ключа (backend)." }
         const body = await readBody(event)
-        const { referenceDescription, userLevel, userMessage, userLocale } = body || {}
-
-        if (!referenceDescription || !userLevel || !userMessage) {
-            return { error: "Отсутствуют необходимые параметры." }
+        const { userLevel, userMessage, userLocale, imageUrl } = body || {}
+        if (!userLevel || !userMessage) {
+            return { error: "Отсутствуют обязательные параметры (уровень или ответ)." }
         }
+        if (!imageUrl) {
+            return { error: "ОШИБКА: Фронтенд не прислал поле 'imageUrl'!" }
+        }
+        const modelId = 'meta-llama/llama-4-scout-17b-16e-instruct'
+        const feedbackLang = String(userLocale || 'ru').split('-')[0].trim()
+        const systemPrompt = `You are a supportive German language tutor evaluating an image description exercise.
+INPUTS:
+1. **The Image:** You have access to the visual image. Look at it carefully.
+2. **Target Level:** ${userLevel} (A1, A2, or B1).
+3. **User Answer:** "${userMessage}"
+CRITICAL EVALUATION RULES (STRICTLY FOLLOW THESE):
+1. **Visual Fact Checking:** Look at the image directly.
+   - The User Answer must be visually correct based on what YOU see in the image.
+   - **Synonyms:** Accept valid synonyms (e.g., "Computer" = "Laptop", "Junge" = "Mann").
+   - **Details:** If the user notices a small detail (color, background object) that is visible -> IT IS CORRECT.
+2. **Flexibility:** The user DOES NOT need to guess specific words. If the sentence makes sense and describes the image correctly, it is VALID.
+3. **Level Up Rule:** If a user writes a sentence that is MORE complex than the Target Level (e.g., B1 grammar for an A1 task), DO NOT PENALIZE. Give a perfect score (10). Only penalize if the grammar is broken.
+4. **Detail Expectations:**
+   - **Level A1:** Be lenient. Accept simple Subject + Verb + Object. Missing background details are OKAY.
+   - **Level A2:** Expect slightly more detail (adjectives, simple connectors like "und", "aber").
+   - **Level B1:** Be strict about details and complexity (Nebensätze).
+5. **No Philosophy:** Be direct. Focus on Grammar, Vocabulary, and Visual Facts.
+YOUR TASK: GENERATE JSON RESPONSE.
+1. **Score (1-10):**
+   - 1-4: Major grammatical errors or factually wrong (describing something NOT in the image).
+   - 5-7: Grammatically correct but too simple for the requested level.
+   - 8-10: Grammatically correct AND matches the image. (Perfect grammar + Correct Fact = 10).
 
-        const modelId = 'llama-3.3-70b-versatile'
-        const feedbackLang = String(userLocale || 'ru').trim()
-        const systemPrompt = `You are a German teacher assistant that evaluates picture descriptions.
+2. **Feedback (Strictly in language code: ${feedbackLang}):**
+   - **IMPORTANT:** Write as a **NATIVE SPEAKER** of language "${feedbackLang}". Use natural, flowing language. Avoid awkward literal translations.
+   - Confirm if the sentence is grammatically correct.
+   - Praise the user if they noticed good visual details.
+   - Be concise.
+3. **Suggested Answer:**
+   - Create a NATURAL German sentence based on the IMAGE, adapted to ${userLevel}.
+   - **A1:** Short, simple (Subj + Verb + Obj).
+   - **A2:** Connected with "und", "aber". Use adjectives.
+   - **B1:** Use complex structure (relative clauses, "weil", "während").
+4. **Key Corrections:**
+   - List ONLY grammar fixes. If the user's sentence was correct, leave this empty or say "No corrections needed".
 
-You receive:
-- A reference description of the picture (level-appropriate)
-- The user's German level (A1–B1)
-- The user's answer
-
-Your task:
-1) Score the user's answer from 1 to 10 based on:
-   - Alignment with the picture content (use the reference description as ground truth)
-   - Grammatical correctness
-   - Vocabulary appropriate for the given level
-   - Sentence structure and clarity of expression
-
-2) Provide constructive feedback in the user's language (locale: ${feedbackLang}). Respond ONLY in that language in the feedback (except for German examples).
-
-3) Suggest an improved version of the user's answer, tailored to the user's level. The suggested version MUST be in German.
-
-4) List 2–3 specific points for improvement.
-
-IMPORTANT: Never mention or quote the reference description explicitly.
-
-ALWAYS respond strictly in JSON with the following shape:
+OUTPUT JSON FORMAT:
 {
-  "score": <1-10>,
-  "feedback": "<Feedback in the user's language>",
-  "suggestedAnswer": "<Improved German sentence>",  
-  "keyCorrections": ["<Point 1>", "<Point 2>", "<Point 3>"]
+  "score": 0,
+  "feedback": "Write here in ${feedbackLang} (Native style)...",
+  "suggestedAnswer": "German sentence matching level ${userLevel}...",
+  "keyCorrections": ["correction 1"]
 }`
-
         const payload = {
             model: modelId,
             messages: [
                 { role: 'system', content: systemPrompt },
                 {
                     role: 'user',
-                    content: `Niveau des Benutzers: ${userLevel}
-
-Referenzbeschreibung des Bildes:
-${referenceDescription}
-
-Antwort des Benutzers:
-${userMessage}`
+                    content: [
+                        {
+                            type: "text",
+                            text: `Evaluate this German answer for level ${userLevel}: "${userMessage}"`
+                        },
+                        {
+                            type: "image_url",
+                            image_url: {
+                                url: imageUrl
+                            }
+                        }
+                    ]
                 }
             ],
-            temperature: 0,
+            temperature: 0.2,
             max_tokens: 600,
             response_format: { type: "json_object" }
         }
+
         const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
             method: 'POST',
             headers: {
@@ -71,17 +91,23 @@ ${userMessage}`
             },
             body: JSON.stringify(payload)
         })
+
         const rawText = await response.text()
+
         try {
             const json = JSON.parse(rawText)
             if (json.error) return { error: `GROQ ERROR: ${json.error.message}` }
+
             const contentString = json.choices?.[0]?.message?.content
+
             if (contentString) {
                 try {
-                    const parsedData = JSON.parse(contentString);
+                    const cleanJson = contentString.replace(/```json|```/g, '').trim();
+                    const parsedData = JSON.parse(cleanJson);
                     return { data: parsedData }
                 } catch (e) {
-                    return { text: contentString }
+                    console.error("JSON Parse Error:", e);
+                    return { text: contentString, isStructured: false }
                 }
             }
             return { error: "Пустой ответ", debug: json }

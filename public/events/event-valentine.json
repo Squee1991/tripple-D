@@ -3,6 +3,8 @@
     {
       "id": "quest-1",
       "title": "Valentinstag: Bild → Wort (mit Artikel)",
+      "rewardCoins": 15,
+      "rewardRep": 50,
       "steps": [
         {
           "type": "multiple-choice",
@@ -17,8 +19,8 @@
           "id": "val-2",
           "title": "Was siehst du?",
           "image": "/assets/images/event-rewards/valentine-event/valentine-words/herz.svg",
-          "options": ["das Herz", "die Schokolade", "die Rose"],
-          "correctOptionIndex": 0
+          "options": ["die Schokolade", "das Herz", "die Rose"],
+          "correctOptionIndex": 1
         },
         {
           "type": "multiple-choice",
@@ -41,8 +43,8 @@
           "id": "val-5",
           "title": "Was siehst du?",
           "image": "/assets/images/event-rewards/valentine-event/valentine-words/TeddyBear.svg",
-          "options": ["der Teddybär", "die Blume", "die Valentinskarte"],
-          "correctOptionIndex": 0
+          "options": ["die Blume", "die Valentinskarte", "der Teddybär"],
+          "correctOptionIndex": 2
         },
         {
           "type": "multiple-choice",
@@ -65,8 +67,8 @@
           "id": "val-8",
           "title": "Was siehst du?",
           "image": "/assets/images/event-rewards/valentine-event/valentine-words/flowers.svg",
-          "options": ["die Blume", "die Rose", "die Praline"],
-          "correctOptionIndex": 0
+          "options": ["die Rose", "die Blume", "die Praline"],
+          "correctOptionIndex": 1
         },
         {
           "type": "multiple-choice",
@@ -89,66 +91,82 @@
           "id": "val-11",
           "title": "Was siehst du?",
           "image": "/assets/images/event-rewards/valentine-event/valentine-words/ballon.svg",
-          "options": ["der Ballon", "der Teddybär", "das Herz"],
+          "options": ["der Teddybär", "der Ballon", "das Herz"],
+          "correctOptionIndex": 1
+        },
+        {
+          "type": "multiple-choice",
+          "id": "val-11",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/valentine-event/valentine-words/strawberry.svg",
+          "options": ["die Erdbeere", "der Teddybär", "die Blume"],
           "correctOptionIndex": 0
         },
         {
           "type": "multiple-choice",
-          "id": "val-12",
+          "id": "val-11",
           "title": "Was siehst du?",
-          "image": "/assets/images/event-rewards/valentine-event/valentine-words/ballon.svg",
-          "options": ["der Schmuck", "der Teddybär", "das Herz"],
-          "correctOptionIndex": 0
+          "image": "/assets/images/event-rewards/valentine-event/valentine-words/weddingCake.svg",
+          "options": ["die Erdbeere", "das Herz", "die Torte"],
+          "correctOptionIndex": 2
+        },
+        {
+          "type": "multiple-choice",
+          "id": "val-11",
+          "title": "Was siehst du?",
+          "image": "/assets/images/event-rewards/valentine-event/valentine-words/cupid.svg",
+          "options": ["die Erdbeere", "der Amor", "das Herz"],
+          "correctOptionIndex": 1
         }
       ]
     },
     {
       "id": "quest-2",
       "title": "Выбери правильное слово — День святого Валентина",
-      "rewardCoins": 10,
-      "rewardRep": 40,
+      "rewardCoins": 15,
+      "rewardRep": 50,
       "steps": [
         {
           "type": "choose-word",
           "id": "cw-1",
           "sentence": "Am Valentinstag schenken viele Menschen ihren Partnern rote ___.",
-          "options": ["Rosen", "Bücher", "Kerzen", "Schuhe"],
-          "correctOptionIndex": 0
+          "options": ["Bücher", "Rosen", "Kerzen", "Schuhe"],
+          "correctOptionIndex": 1
         },
         {
           "type": "choose-word",
           "id": "cw-2",
           "sentence": "Viele Paare gehen am Abend zusammen ___.",
-          "options": ["essen", "arbeiten", "lernen", "laufen"],
-          "correctOptionIndex": 0
+          "options": ["arbeiten", "lernen", "essen", "laufen"],
+          "correctOptionIndex": 2
         },
         {
           "type": "choose-word",
           "id": "cw-3",
           "sentence": "Man schreibt kleine Karten mit lieben ___.",
-          "options": ["Worten", "Regeln", "Rechnungen", "Notizen"],
-          "correctOptionIndex": 0
+          "options": ["Regeln", "Rechnungen", "Notizen", "Worten"],
+          "correctOptionIndex": 3
         },
         {
           "type": "choose-word",
           "id": "cw-4",
           "sentence": "Viele schenken auch eine Schachtel ___.",
-          "options": ["Schokolade", "Geld", "Werkzeug", "Seife"],
-          "correctOptionIndex": 0
+          "options": ["Werkzeug", "Schokolade", "Geld", "Seife"],
+          "correctOptionIndex": 1
         },
         {
           "type": "choose-word",
           "id": "cw-5",
           "sentence": "In manchen Städten hängen Paare Liebesschlösser an die ___.",
-          "options": ["Brücke", "Tür", "Lampe", "Straße"],
-          "correctOptionIndex": 0
+          "options": ["Tür", "Lampe", "Brücke", "Straße"],
+          "correctOptionIndex": 2
         },
         {
           "type": "choose-word",
           "id": "cw-6",
           "sentence": "Am Abend sieht man oft romantische ___.",
-          "options": ["Kerzen", "Autos", "Taschen", "Bücher"],
-          "correctOptionIndex": 0
+          "options": ["Autos", "Taschen", "Bücher", "Kerzen"],
+          "correctOptionIndex": 3
         },
         {
           "type": "choose-word",
@@ -161,80 +179,80 @@
           "type": "choose-word",
           "id": "cw-8",
           "sentence": "Manche schicken ihren Freunden kleine ___.",
-          "options": ["Geschenke", "Briefe", "Masken", "Karten"],
-          "correctOptionIndex": 0
+          "options": ["Briefe", "Geschenke", "Masken", "Karten"],
+          "correctOptionIndex": 1
         }
       ]
     },
     {
       "id": "quest-3",
       "title": "Выбери правильное слово — Романтическое свидание",
-      "rewardCoins": 10,
-      "rewardRep": 40,
+      "rewardCoins": 15,
+      "rewardRep": 50,
       "steps": [
         {
           "type": "choose-word",
           "id": "cw-1",
           "sentence": "Viele Paare reservieren am Valentinstag einen Tisch im ___.",
-          "options": ["Restaurant", "Krankenhaus", "Kino", "Büro"],
-          "correctOptionIndex": 0
+          "options": ["Krankenhaus", "Restaurant", "Kino", "Büro"],
+          "correctOptionIndex": 1
         },
         {
           "type": "choose-word",
           "id": "cw-2",
           "sentence": "Zum Abendessen zünden sie oft ___.",
-          "options": ["Kerzen", "Lampen", "Computer", "Feuerwerk"],
-          "correctOptionIndex": 0
+          "options": ["Lampen", "Computer", "Kerzen", "Feuerwerk"],
+          "correctOptionIndex": 2
         },
         {
           "type": "choose-word",
           "id": "cw-3",
           "sentence": "Viele bestellen ein romantisches ___.",
-          "options": ["Dessert", "Heft", "Spiel", "Werkzeug"],
-          "correctOptionIndex": 0
+          "options": ["Heft", "Spiel", "Dessert", "Werkzeug"],
+          "correctOptionIndex": 2
         },
         {
           "type": "choose-word",
           "id": "cw-4",
           "sentence": "Nach dem Essen gehen die Paare oft im Park ___.",
-          "options": ["spazieren", "arbeiten", "tanzen", "rennen"],
-          "correctOptionIndex": 0
+          "options": ["arbeiten", "rennen", "spazieren", "tanzen"],
+          "correctOptionIndex": 2
         },
         {
           "type": "choose-word",
           "id": "cw-5",
           "sentence": "Manchmal bringt einer der Partner eine kleine ___.",
-          "options": ["Überraschung", "Rechnung", "Aufgabe", "Frage"],
-          "correctOptionIndex": 0
+          "options": ["Rechnung", "Überraschung", "Frage", "Aufgabe"],
+          "correctOptionIndex": 1
         },
         {
           "type": "choose-word",
           "id": "cw-6",
           "sentence": "Am Himmel sieht man manchmal ein kleines ___.",
-          "options": ["Herz", "Rad", "Auto", "Telefon"],
-          "correctOptionIndex": 0
+          "options": ["Rad", "Herz", "Auto", "Telefon"],
+          "correctOptionIndex": 1
         },
         {
           "type": "choose-word",
           "id": "cw-7",
           "sentence": "Viele Paare machen am Ende des Abends ein ___.",
-          "options": ["Selfie", "Protokoll", "Rezept", "Poster"],
-          "correctOptionIndex": 0
+          "options": ["Protokoll", "Rezept", "Selfie", "Poster"],
+          "correctOptionIndex": 2
         },
         {
           "type": "choose-word",
           "id": "cw-8",
           "sentence": "Der Tag endet oft mit einer lieben ___.",
-          "options": ["Umarmung", "Pause", "Reise", "Diskussion"],
-          "correctOptionIndex": 0
+          "options": ["Pause", "Umarmung", "Reise", "Diskussion"],
+          "correctOptionIndex": 1
         }
       ]
     },
     {
       "id": "quest-4",
       "title": "Выбери правильное слово — Gefühle und Pläne am Valentinstag",
-      "rewardCoins": 10,
-      "rewardRep": 40,
+      "rewardCoins": 15,
+      "rewardRep": 50,
       "steps": [
         {
           "type": "choose-word",
@@ -297,8 +315,8 @@
     {
       "id": "quest-5",
       "title": "Valentinstag in Deutschland",
-      "rewardCoins": 10,
-      "rewardRep": 40,
+      "rewardCoins": 15,
+      "rewardRep": 50,
       "steps": [
         {
           "type": "reading",
@@ -437,8 +455,8 @@
     {
       "id": "quest-6",
       "title": "Соедини пары — День святого Валентина",
-      "rewardCoins": 10,
-      "rewardRep": 40,
+      "rewardCoins": 15,
+      "rewardRep": 50,
       "steps": [
         {
           "type": "matching",
