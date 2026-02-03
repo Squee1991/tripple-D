@@ -1075,6 +1075,9 @@ watchEffect(() => {
 }
 
 @media (max-width: 768px) {
+  .quest__feedback.is-red{
+    font-size: 1.5rem;
+  }
   .quest__stat-value {
     width: 4.3rem;
     height: 2.3rem;
