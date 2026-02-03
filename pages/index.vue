@@ -11,6 +11,7 @@ import VUid from '../src/components/V-uid.vue'
 import VEventAvailableModal from "../src/components/V-eventAvailableModal.vue";
 import VShowFall from "../src/components/V-showFall.vue";
 import Snow from "../assets/images/mery-christmas/Snow.svg";
+import HeartFall from "assets/images/mery-christmas/heartFall.svg";
 import {useEventSessionStore} from '../store/eventsStore.js'
 import {useHead, useSeoMeta} from '#imports'
 
@@ -61,7 +62,7 @@ onMounted(() => {
 <template>
   <VEventAvailableModal @close="false" v-if="authStore.initialized"/>
   <VShowFall v-if="eventStore.isSnowEnabled" :image="Snow"/>
-<!--  <VShowFall :image="Snow"/>-->
+<!--  <VShowFall :image="HeartFall"/>-->
   <div v-if="!hydrated || !authStore.initialized" class="loading"></div>
   <div v-else class="container">
     <Header/>

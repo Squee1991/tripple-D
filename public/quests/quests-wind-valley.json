@@ -1031,20 +1031,8 @@
         "id": 2,
         "type": "reorder",
         "question": "questsWindValleySixQuests.questTwo",
-        "words": [
-          "die",
-          "und",
-          "Straße",
-          "Park",
-          "der"
-        ],
-        "correctOrder": [
-          "die",
-          "Straße",
-          "und",
-          "der",
-          "Park"
-        ]
+        "words": ["das", "ist", "lang", "der", "und", "Park", "die", "schön", "Straße", "ist"],
+        "correctOrder": ["die", "Straße", "ist", "lang", "und", "der", "Park", "ist", "schön"]
       },
       {
         "id": 3,
@@ -1068,20 +1056,8 @@
         "id": 5,
         "type": "reorder",
         "question": "questsWindValleySixQuests.questFive",
-        "words": [
-          "der",
-          "Bahnhof",
-          "und",
-          "die",
-          "U-Bahn"
-        ],
-        "correctOrder": [
-          "der",
-          "Bahnhof",
-          "und",
-          "die",
-          "U-Bahn"
-        ]
+        "words": ["die", "U-Bahn", "und", "hier", "der", "sind", "Bahnhof"],
+        "correctOrder": ["der", "Bahnhof", "und", "die", "U-Bahn", "sind", "hier"]
       },
       {
         "id": 6,
@@ -1105,20 +1081,8 @@
         "id": 8,
         "type": "reorder",
         "question": "questsWindValleySixQuests.questEight",
-        "words": [
-          "Bäckerei",
-          "die",
-          "und",
-          "Apotheke",
-          "die"
-        ],
-        "correctOrder": [
-          "die",
-          "Bäckerei",
-          "und",
-          "die",
-          "Apotheke"
-        ]
+        "words": ["die", "und", "geöffnet", "Apotheke", "die", "Bäckerei", "sind"],
+        "correctOrder": ["die", "Bäckerei", "und", "die", "Apotheke", "sind", "geöffnet"]
       },
       {
         "id": 9,
@@ -1142,20 +1106,8 @@
         "id": 11,
         "type": "reorder",
         "question": "questsWindValleySixQuests.questEleven",
-        "words": [
-          "das",
-          "Café",
-          "und",
-          "das",
-          "Museum"
-        ],
-        "correctOrder": [
-          "das",
-          "Café",
-          "und",
-          "das",
-          "Museum"
-        ]
+        "words": ["Museum", "Café", "dort", "das", "hier", "und", "ist", "das", "ist"],
+        "correctOrder": ["hier", "ist", "das", "Café", "und", "dort", "ist", "das", "Museum"]
       },
       {
         "id": 12,
@@ -1192,16 +1144,8 @@
         "id": 15,
         "type": "reorder",
         "question": "questsWindValleySixQuests.questFifteen",
-        "words": [
-          "neues",
-          "ein",
-          "Ticket"
-        ],
-        "correctOrder": [
-          "ein",
-          "neues",
-          "Ticket"
-        ]
+        "words": ["neues", "Ticket", "kaufe", "ein", "ich"],
+        "correctOrder": ["ich", "kaufe", "ein", "neues", "Ticket"]
       }
     ]
   },
