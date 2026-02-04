@@ -731,6 +731,7 @@ export const topics = [
 		]
 
 	},
+
 	// {
 	// 	id: 'animals',
 	// 	label: 'Животные и природа',

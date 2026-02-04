@@ -1,21 +1,14 @@
 <template>
   <div class="account-tab-body">
-    <!-- Строка статуса подписки (всегда показываем) -->
     <div class="subscription-status-row">
       <div class="subscription-label">{{ t('cabinet.status') }}</div>
-
       <div class="subscription-status">
-        <!-- Premium активен -->
         <template v-if="authStore.isPremium && !authStore.subscriptionCancelled">
           <span class="status-pill is-active">✅ {{ t('cabinet.active') }}</span>
         </template>
-
-        <!-- Premium отменён, но доступ ещё есть -->
         <template v-else-if="authStore.isPremium && authStore.subscriptionCancelled">
           <span class="status-pill is-cancelled">⚠️ {{ t('cabinet.canceled') }}</span>
         </template>
-
-        <!-- Без премиума -->
         <template v-else>
           <div class="status-inline">
             <span class="status-pill is-free">🔓 {{ t('cabinet.withoutPremium') }}</span>
@@ -26,8 +19,6 @@
         </template>
       </div>
     </div>
-
-    <!-- Детали/управление только если Premium -->
     <template v-if="authStore.isPremium && !authStore.subscriptionCancelled">
       <div class="premium__status-wrapper">
         <p class="subtext">
@@ -38,14 +29,11 @@
         </button>
       </div>
     </template>
-
     <template v-else-if="authStore.isPremium && authStore.subscriptionCancelled">
       <p class="access__text">
         📅 {{ t('cabinet.access') }} {{ formattedSubscriptionEndDate }}
       </p>
     </template>
-
-    <!-- Удаление аккаунта -->
     <div class="account-actions">
       <button @click.stop="openDeleteModal" class="btn btn-danger w-full">
         {{ t('cabinet.deleteAcc') }}
@@ -102,7 +90,7 @@ function openDeleteModal() {
 .subscription-label {
   font-weight: 800;
   opacity: 0.85;
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--titleColor);
   white-space: nowrap;
 }
 
