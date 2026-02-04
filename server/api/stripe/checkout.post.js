@@ -12,19 +12,13 @@ const COUPON_MAP = {
 }
 
 export default defineEventHandler(async (event) => {
-    // --- ИНИЦИАЛИЗАЦИЯ FIREBASE (ТОЧНО ТАКАЯ ЖЕ, КАК В VERIFY) ---
     if (getApps().length === 0) {
         try {
-            // 1. Сначала пробуем найти dev-ключ
             let serviceAccountPath = path.resolve(process.cwd(), 'service-account-dev.json')
-
-            // 2. Если dev-файла нет, ищем обычный
             if (!fs.existsSync(serviceAccountPath)) {
                 serviceAccountPath = path.resolve(process.cwd(), 'service-account.json')
             }
-
             console.log(`📂 [Checkout] Загружаем ключи из: ${path.basename(serviceAccountPath)}`)
-
             if (fs.existsSync(serviceAccountPath)) {
                 const serviceAccount = JSON.parse(fs.readFileSync(serviceAccountPath, 'utf-8'))
                 initializeApp({
@@ -38,29 +32,20 @@ export default defineEventHandler(async (event) => {
             console.error('Ошибка инициализации Firebase:', e)
         }
     }
-    // -----------------------------------------------------------
-
     const config = useRuntimeConfig()
     const siteUrl = config.public?.siteUrl || 'http://localhost:3000'
     const stripeSecret = config.stripeSecret || process.env.STRIPE_SECRET_KEY
-
     if (!stripeSecret) {
         setResponseStatus(event, 500)
         return { error: 'Server Auth Error: No Stripe Key' }
     }
-
     const stripe = new Stripe(stripeSecret, { apiVersion: '2024-06-20' })
     const body = await readBody(event) || {}
     let { priceId, userId, email, couponId } = body
-
     if (userId) userId = userId.trim()
     if (couponId) couponId = couponId.trim()
-
     try {
         const db = getFirestore()
-
-        // Читаем данные пользователя, чтобы проверить купоны
-        // Вот здесь раньше падала ошибка 16 UNAUTHENTICATED
         const userDocRef = db.collection('users').doc(userId || 'unknown')
         const userDoc = await userDocRef.get()
 
@@ -75,14 +60,18 @@ export default defineEventHandler(async (event) => {
             line_items: [{ price: priceId, quantity: 1 }],
             success_url: `${siteUrl}/success?session_id={CHECKOUT_SESSION_ID}`,
             cancel_url: `${siteUrl}/cancel`,
-            metadata: { firebaseUID: userId },
+            metadata: {
+                firebaseUID: userId,
+                discountId: couponId || null
+            },
         }
-
         // Логика купонов
         if (couponId && userData && userData[couponId] === true) {
-            const realStripeCouponId = COUPON_MAP[couponId] || couponId
-            sessionOptions.discounts = [{ coupon: realStripeCouponId }]
-            console.log(`🎉 Скидка применена: ${realStripeCouponId}`)
+            const realStripeCouponId = COUPON_MAP[couponId]
+            if (realStripeCouponId) {
+                sessionOptions.discounts = [{ coupon: realStripeCouponId }]
+                console.log(`🎉 Скидка применена: ${realStripeCouponId}`)
+            }
         } else {
             sessionOptions.allow_promotion_codes = true
         }
