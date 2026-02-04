@@ -485,6 +485,7 @@ async function cancelSubscription() {
     if (res.success) {
       authStore.subscriptionCancelled = true
       isCancelModalOpen.value = false
+      await authStore.markCancelledInDb()
       alert('Успешно! Автопродление отключено.')
     } else {
     }
@@ -562,7 +563,7 @@ async function confirmDeleteAccount() {
 }
 
 onMounted(async () => {
-  await authStore.markCancelledInDb()
+  await authStore.refreshUser()
   await learningStore.loadFromFirebase()
   await eventStore.loadGlobalWinterSettings()
   friendsStore.loadFriends()

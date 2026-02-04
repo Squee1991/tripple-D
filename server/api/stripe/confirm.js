@@ -4,25 +4,37 @@ import { readBody, defineEventHandler } from 'h3'
 export default defineEventHandler(async (event) => {
 	const config = useRuntimeConfig()
 	const stripeKey = config.stripeSecret || process.env.STRIPE_SECRET_KEY
+
 	if (!stripeKey) return { success: false, error: 'No Stripe Key' }
+
 	const stripe = new Stripe(stripeKey, { apiVersion: '2024-06-20' })
 	const body = await readBody(event)
 	const { sessionId } = body
+
 	if (!sessionId) return { success: false, error: 'No session_id' }
+
 	try {
-		const session = await stripe.checkout.sessions.retrieve(sessionId)
+		const session = await stripe.checkout.sessions.retrieve(sessionId, {
+			expand: ['subscription']
+		})
+
 		if (session.payment_status === 'paid') {
 			let subscriptionEndsAt = null
-			if (session.subscription) {
-				const date = new Date()
-				date.setDate(date.getDate() + 30)
-				subscriptionEndsAt = date.toISOString()
+			let status = 'active'
+			let subId = null
+
+			if (session.subscription && typeof session.subscription === 'object') {
+				subscriptionEndsAt = new Date(session.subscription.current_period_end * 1000).toISOString()
+				status = session.subscription.status
+				subId = session.subscription.id
 			}
+
 			return {
 				success: true,
 				data: {
 					isPremium: true,
-					subscriptionId: session.subscription || null,
+					status: status,
+					subscriptionId: subId,
 					subscriptionEndsAt: subscriptionEndsAt,
 					updatedAt: new Date().toISOString()
 				}
