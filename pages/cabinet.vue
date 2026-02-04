@@ -110,12 +110,7 @@
               </div>
             </div>
             <div v-else>
-              <component
-                  :is="components"
-                  :settingsIcon="OptionIcon"
-                  @open="handleSettingsAction"
-                  @back="activeTabKey = 'info'"
-              />
+              <component :is="components"/>
             </div>
           </div>
         </ClientOnly>
@@ -206,22 +201,6 @@
           </button>
           <button class="btn" @click="isDeleteModalOpen = false" type="button">
             {{ t('cabinet.deleteAccBtnReject') }}
-          </button>
-        </div>
-      </div>
-    </div>
-    <!-- Snow warning modal -->
-    <div v-if="isSnowWarningModalOpen" class="modal-overlay" @click.self="isSnowWarningModalOpen = false">
-      <div class="modal-card">
-        <div class="modal-title">❄️ {{ t('cabinet.notAllow') }}</div>
-        <p class="modal-text">
-          {{ t('cabinet.modalNotAllowEffectFirst') }} <b>{{ t('cabinet.modalNotAllowEffectSecond') }}</b>.
-          <br/>
-          {{ t('cabinet.modalNotAllowEffectThird') }}
-        </p>
-        <div class="modal-actions">
-          <button class="btn" @click="isSnowWarningModalOpen = false" type="button">
-            {{ t('cabinet.modalNotAllowEffectClose') }}
           </button>
         </div>
       </div>
@@ -393,10 +372,6 @@ watch(() => authStore.uid, () => {
   awardList.value = AWARDS.map(a => ({...a, locked: !shownAwardsSet.value.has(a.key)}))
 })
 
-const arrowIcon = computed(() => {
-  return isSettingsOpen.value ? ArrowBackIcon : SettingsIcon
-})
-
 function loadShownAwards() {
   try {
     if (typeof window === 'undefined') return new Set()
@@ -412,7 +387,6 @@ function saveShownAwards(set) {
     if (typeof window === 'undefined') return
     localStorage.setItem(awardsStorageKey.value, JSON.stringify([...set]))
   } catch {
-    // ignore
   }
 }
 
@@ -469,12 +443,10 @@ async function cancelSubscription() {
   }
 }
 
-/** ===== FAQ ===== */
 function goToFaq() {
   router.push('/faq')
 }
 
-/** ===== Avatars ===== */
 function openPurchaseModal(name) {
   purchaseAvatarName.value = name
   purchaseState.value = 'default'
@@ -502,7 +474,6 @@ async function confirmAvatarChange() {
     await authStore.updateUserAvatar(selectedAvatarName.value)
     isAvatarModalOpen.value = false
   } catch {
-    // ignore
   }
 }
 
@@ -517,7 +488,6 @@ watch(isAvatarModalOpen, opened => {
   if (opened) selectedAvatarName.value = authStore.avatar
 })
 
-/** ===== Delete account ===== */
 const isGoogleUser = computed(() => authStore.isGoogleUser)
 
 function openDeleteModal() {
@@ -697,6 +667,26 @@ onMounted(async () => {
   flex: 0 0 auto;
 }
 
+
+.rank-placeholder {
+  overflow-y: auto;
+  max-height: calc(100vh - 230px);
+}
+
+.rank-placeholder::-webkit-scrollbar {
+  width: 10px;
+}
+
+.rank-placeholder::-webkit-scrollbar-thumb {
+  background: #1e1e1e;
+  border-radius: 10px;
+  border: 2px solid #fff;
+}
+
+.rank-placeholder::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 .gear-btn img {
   width: 26px;
   height: 26px;
@@ -712,7 +702,6 @@ onMounted(async () => {
   margin-top: 6px;
 }
 
-/* Profile block */
 .user-block {
   display: flex;
   align-items: center;
@@ -807,17 +796,14 @@ onMounted(async () => {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
-
-
 }
-
 
 .account-tab {
   display: flex;
   align-items: center;
   justify-content: center;
   flex: 0 0 auto;
-  padding: 4px 14px;
+  padding: 5px 14px;
   border: none;
   border-radius: 14px;
   color: var(--titleColor);
@@ -830,8 +816,8 @@ onMounted(async () => {
 
 .account-tab.active {
   background: #eeeaea;
-  border: 3px solid black;
-  box-shadow: 3px 3px 0 black;
+  border: 2px solid black;
+  box-shadow: 2px 2px 0 black;
   border-radius: 10px;
   color: black;
 }
@@ -839,18 +825,6 @@ onMounted(async () => {
 .account-tab:active {
   transform: translate(1px, 1px);
   box-shadow: 0 0 0 #000;
-}
-
-.account-tab-body {
-  margin-top: 4px;
-  overflow-y: auto;
-  max-height: calc(100vh - 160px);
-}
-
-/* Content surfaces */
-.tab-surface {
-
-
 }
 
 .rank-title {
@@ -940,7 +914,6 @@ onMounted(async () => {
   background: #f44336;
   color: #fff;
 }
-
 /* Avatar modal */
 .avatar-modal-overlay {
   position: fixed;
@@ -1027,25 +1000,21 @@ onMounted(async () => {
   margin-left: 8px;
   font-size: .9rem;
 }
-
 /* Hover effects desktop */
 @media (min-width: 1024px) {
   .back-btn:hover {
     transform: translate(2px, 2px);
     box-shadow: 0 0 0 #000;
   }
-
   .tab-vertical:hover {
     transform: translate(1px, 1px);
     box-shadow: 0 0 0 #000;
   }
-
   .gear-btn:hover {
     transform: translate(1px, 1px);
     box-shadow: 0 0 0 #000;
   }
 }
-
 /* Mobile layout */
 @media (max-width: 1023px) {
   .cabinet-wrapper {
@@ -1053,7 +1022,6 @@ onMounted(async () => {
     overflow: hidden;
     padding: 0;
   }
-
   .sidebar-panel {
     position: fixed;
     left: 50%;
@@ -1123,11 +1091,9 @@ onMounted(async () => {
     box-shadow: none;
     border-radius: 0;
   }
-
   .exp-bar {
     width: 190px;
   }
-
 }
 
 @media ( max-width: 767px) {
@@ -1136,17 +1102,14 @@ onMounted(async () => {
   }
 }
 
-
 @media (max-width: 420px) {
   .tab-icon {
     width: 32px;
     height: 32px;
   }
-
   .setting-title {
     font-size: 24px;
   }
-
   .exp-bar {
     width: 170px;
   }

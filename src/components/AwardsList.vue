@@ -98,7 +98,6 @@ function closeAward() {
 .shop-item {
   padding: 1rem;
   text-align: center;
-
   display: flex;
   width: 180px;
   flex-direction: column;
@@ -108,11 +107,11 @@ function closeAward() {
 }
 
 .awards__title {
+  color: var(--titleColor);
   font-size: 1.5rem;
   font-weight: 600;
   font-family: "Nunito", sans-serif;
 }
-
 
 .awards__header {
   display: flex;
@@ -121,9 +120,7 @@ function closeAward() {
   margin-bottom: 15px;
   padding: 0 20px;
   border-radius: 16px;
-
 }
-
 
 .item-img.locked {
   opacity: 0.5;
@@ -153,13 +150,13 @@ function closeAward() {
 
 .item-img {
   object-fit: contain;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.1rem;
 }
 
 .item-name {
   color: var(--titleColor);
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: 0.25rem;
 }
 
@@ -216,7 +213,7 @@ button:disabled {
 }
 
 .awards__list-scroll {
-  max-height: calc(100vh - 200px);
+  max-height: calc(100vh - 310px);
   overflow-y: auto;
   padding-right: 6px;
 }
@@ -235,25 +232,19 @@ button:disabled {
   background: transparent;
 }
 
-/* --- CARTOON SCOREBOARD (под твой стиль) --- */
 .awards__counter.cartoon-board {
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
-
   height: 36px;
   padding: 0 12px;
   min-width: 82px;
-
   border-radius: 14px;
   border: 2px solid #000;
   background: #ffffff;
-
-  /* твой “комикс”-шадоу */
   box-shadow: 4px 4px 0 #000;
-
   font-family: "Nunito", sans-serif;
   font-weight: 900;
   font-size: 1.05rem;
@@ -263,7 +254,6 @@ button:disabled {
   overflow: hidden;
 }
 
-/* блик сверху */
 .awards__counter.cartoon-board::before {
   content: "";
   position: absolute;
@@ -278,7 +268,6 @@ button:disabled {
   opacity: 0.8;
 }
 
-/* “лампочки/точки” как у мультяшного табло */
 .awards__counter.cartoon-board::after {
   content: "";
   position: absolute;
@@ -289,7 +278,6 @@ button:disabled {
   pointer-events: none;
 }
 
-/* значение “получено” — зелёное и самое заметное */
 .cartoon-board__value {
   position: relative;
   z-index: 1;
@@ -302,7 +290,6 @@ button:disabled {
   color: #0b0b0b;
 }
 
-/* разделитель */
 .cartoon-board__sep {
   position: relative;
   z-index: 1;
@@ -310,16 +297,10 @@ button:disabled {
   transform: translateY(-1px);
 }
 
-/* total — спокойнее */
 .cartoon-board__total {
   position: relative;
   z-index: 1;
   opacity: 0.9;
-}
-
-/* интерактив */
-.awards__info-btn:hover .awards__counter.cartoon-board {
-  transform: translateY(-1px);
 }
 
 .awards__info-btn:active .awards__counter.cartoon-board {
@@ -327,14 +308,12 @@ button:disabled {
   box-shadow: 3px 3px 0 #000;
 }
 
-/* мобилка */
 @media (max-width: 767px) {
   .awards__counter.cartoon-board {
     height: 34px;
     min-width: 76px;
     font-size: 1rem;
   }
-
   .cartoon-board__value {
     height: 23px;
     padding: 0 7px;
@@ -353,15 +332,18 @@ button:disabled {
 }
 
 @media (max-width: 767px) {
-
   .items-grid {
     width: 100%;
   }
-
   .awards__title {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
-
+  .shop-item {
+    width: 160px;
+  }
+  .item-name {
+    font-size: .9rem;
+  }
 }
 
 .awards__info-btn {

@@ -178,17 +178,35 @@ const buyItem = async (cardId, amount) => {
 <style scoped>
 
 .shop {
-  background-color: #0b0e14;
   min-height: 100vh;
-  padding: 20px;
-  font-family: 'Inter', sans-serif;
+  padding: 10px;
+  font-family: "Nunito", sans-serif;
+}
+
+.shop__content {
+  overflow-y: auto;
+  max-height: calc(100vh - 265px);
+}
+
+.shop__content::-webkit-scrollbar {
+  width: 10px;
+}
+
+.shop__content::-webkit-scrollbar-thumb {
+  background: #1e1e1e;
+  border-radius: 10px;
+  border: 2px solid #fff;
+}
+
+.shop__content::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 .shop__title-container {
   background: #50a2d8;
   border-radius: 12px;
-  padding: 15px 20px; /* Немного увеличили padding по бокам */
-  margin-bottom: 30px;
+  padding: 15px 20px;
+  margin-bottom: 10px;
   text-align: center;
   box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.2);
   display: flex;
@@ -207,7 +225,7 @@ const buyItem = async (cardId, amount) => {
 
 .shop__subtitle {
   text-align: center;
-  margin: 0 auto 10px;
+  margin: 0 auto 0;
   padding: 12px 14px;
   color: var(--titleColor);
   font-size: 14px;

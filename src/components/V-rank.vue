@@ -18,7 +18,7 @@
 
       <div class="hats-right">
         <div class="hats-text">
-          Конфератки — это ваш путь к вершине!Накапливайте их, выполняйте все три задания дня. Повышайте свой ранг и забирайте крутые бонусы!
+          Конфератки — это ваш путь к вершине! Накапливайте их, выполняйте все три задания дня. Повышайте свой ранг и покупайте разблокированные бонусы!
         </div>
       </div>
     </div>
@@ -54,9 +54,7 @@
             </div>
             <div class="card-label">Ранг {{ idx + 1 }}</div>
             <div class="card-cost">🎓 {{ lvl.hats }}</div>
-            <div v-if="lvl.bonus" class="card-bonus">
-              🎁 {{ lvl.bonus }}
-            </div>
+            <div v-if="lvl.bonus" class="card-bonus">{{ lvl.bonus }}</div>
           </div>
         </div>
       </div>
@@ -149,8 +147,7 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 }
 
 .card {
-  padding: 20px;
-  border-radius: 25px;
+  padding: 10px;
   text-align: center;
 }
 
@@ -166,7 +163,6 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 
 .card-stars {
   color: #e0e0e0;
-  margin-bottom: 10px;
   font-size: 20px;
 }
 
@@ -175,8 +171,8 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 }
 
 .card-icon img {
-  width: 80px;
-  height: 80px;
+  width: 76px;
+  height: 76px;
   object-fit: contain;
   transition: filter 0.3s ease;
 }
@@ -193,15 +189,15 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 .card-cost {
   display: inline-block;
   background: #f1f3f5;
-  padding: 5px 15px;
-  border-radius: 15px;
+  padding: 5px;
+  border-radius: 10px;
   font-weight: 800;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .card-bonus {
   margin-top: 8px;
-  font-size: 0.9em;
+  font-size: 0.8em;
   color: #2f9e44;
   font-weight: 700;
 }
@@ -314,7 +310,6 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
   }
 
   .card {
-    flex: 0 0 auto;
     width: 220px;
     scroll-snap-align: start;
   }

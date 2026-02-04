@@ -25,7 +25,7 @@
 
 .dark {
     --footerBg: #0f7aaf;
-    --labelTextColor: #333;
+    --labelTextColor: white;
     --labelBg:#3c99d3;
     --navBg: #0F172A;
     --bg: #0F172A;

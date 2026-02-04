@@ -46,8 +46,8 @@ const close = () => emit('update:modelValue', false)
   padding: 2.5rem 2rem 2rem;
   border-radius: 16px;
   border: 3px solid #1e1e1e;
-  box-shadow: 4px 4px 0 #1e1e1e;
-  width: 95%;
+  box-shadow: 3px 3px 0 #1e1e1e;
+  width: 90%;
   max-width: 500px;
   max-height: 85vh;
   overflow-y: auto;
@@ -55,8 +55,8 @@ const close = () => emit('update:modelValue', false)
 
 .tips__close {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 12px;
+  right: 12px;
   background: #f97028;
   color: #fff;
   border: 2px solid #1e1e1e;

@@ -27,10 +27,11 @@
           </label>
         </div>
         <div class="modal-actions">
-          <button class="btn-done" @click="isThemeModalOpen = false">Готово</button>
+          <button class="btn btn-success" @click="isThemeModalOpen = false">Закрыть</button>
         </div>
       </div>
     </div>
+
     <div
         v-for="group in SETTINGS_GROUPS"
         :key="group.id"
@@ -42,7 +43,6 @@
           <div class="accordion__title">{{ group.title }}</div>
         </div>
       </div>
-
       <div class="accordion__body" @click.stop>
         <div class="settings__elements">
           <div
@@ -55,13 +55,11 @@
               {{ item.label }}
               <span v-if="item.key === 'snowFall' && !eventStore.isSnowPurchased">🔒</span>
             </div>
-
             <template v-if="item.type === 'button'">
               <button class="theme-select-btn" @click="isThemeModalOpen = true">
                 {{ currentThemeName }}
               </button>
             </template>
-
             <template v-else>
               <VToggle
                   :key="item.key + toggleForceUpdateKey"
@@ -82,46 +80,62 @@
         </li>
       </ul>
     </div>
+    <div v-if="isLockedModalOpen" class="modal-overlay locked-priority" @click.self="isLockedModalOpen = false">
+      <div class="modal-card">
+        <div class="modal-title">{{ lockedModalContent.title }}</div>
+        <p class="modal-text" v-html="lockedModalContent.text"></p>
+        <div class="modal-actions">
+          <button class="btn" @click="isLockedModalOpen = false" type="button">
+            {{ t('cabinet.modalNotAllowEffectClose') }}
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
-import {ref, computed, onMounted} from 'vue'
-import {useI18n} from 'vue-i18n'
+import { ref, computed, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
 import VToggle from '~/src/components/V-toggle.vue'
-import {useUiSettingsStore} from '../../store/uiSettingsStore.js'
-import {useEventSessionStore} from '../../store/eventsStore.js'
-import {isSoundEnabled, setSoundEnabled, unlockAudioByUserGesture} from '../../utils/soundManager.js'
+import { useUiSettingsStore } from '../../store/uiSettingsStore.js'
+import { useEventSessionStore } from '../../store/eventsStore.js'
+import { isSoundEnabled, setSoundEnabled, unlockAudioByUserGesture } from '../../utils/soundManager.js'
 
 const props = defineProps({
   settingsIcon: String,
-  activeTabKey: {type: String, default: 'info'}
+  activeTabKey: { type: String, default: 'info' }
 })
 
 const emit = defineEmits(['open'])
-const {t} = useI18n()
+const { t } = useI18n()
 const uiSettings = useUiSettingsStore()
 const eventStore = useEventSessionStore()
 const colorMode = useColorMode()
+
 const isThemeModalOpen = ref(false)
+const isLockedModalOpen = ref(false)
+const lockedModalContent = ref({ title: '', text: '' })
 const toggleForceUpdateKey = ref(0)
 const soundEnabled = ref(false)
-const THEMES = {light: 'Светлая', dark: 'Темная', pink: 'Романтическая'}
+
+const THEMES = { light: 'Светлая', dark: 'Темная', pink: 'Романтичная' }
+
 const SETTINGS_GROUPS = computed(() => [
   {
     id: 'notifications',
     title: 'Уведомления',
     items: [
-      {key: 'sound', label: t('cabinetToggle.sound'), type: 'toggle'},
-      {key: 'ach', label: t('cabinetToggle.ach'), type: 'toggle'}
+      { key: 'sound', label: t('cabinetToggle.sound'), type: 'toggle' },
+      { key: 'ach', label: t('cabinetToggle.ach'), type: 'toggle' }
     ]
   },
   {
     id: 'appearance',
     title: 'Оформление',
     items: [
-      {key: 'theme', label: 'Тема', type: 'button'},
-      {key: 'snowFall', label: t('cabinetToggle.snowFall'), type: 'toggle'}
+      { key: 'theme', label: 'Тема', type: 'button' },
+      { key: 'snowFall', label: t('cabinetToggle.snowFall'), type: 'toggle' }
     ]
   }
 ])
@@ -129,18 +143,34 @@ const SETTINGS_GROUPS = computed(() => [
 const isValentineThemeUnlocked = computed(() => !!eventStore.shopItems?.['theme'])
 const currentThemeName = computed(() => THEMES[colorMode.preference] || THEMES.light)
 
+const showRestriction = (type) => {
+  if (type === 'theme') {
+    isThemeModalOpen.value = false
+    lockedModalContent.value = {
+      title: `💖 ${t('cabinet.notAllow')}`,
+      text: `Эту тему можно разблокировать только в событии <b>"Фестиваль сердец"</b>. <br/> Приобретите её в магазине событий!`
+    }
+  } else if (type === 'snow') {
+    lockedModalContent.value = {
+      title: `❄️ ${t('cabinet.notAllow')}`,
+      text: `${t('cabinet.modalNotAllowEffectFirst')} <b>${t('cabinet.modalNotAllowEffectSecond')}</b>. <br/> ${t('cabinet.modalNotAllowEffectThird')}`
+    }
+  }
+  isLockedModalOpen.value = true
+}
+
 const handleThemeSelection = (key) => {
   if (key === 'pink' && !isValentineThemeUnlocked.value) {
-    emit('open', 'snowWarning')
+    showRestriction('theme')
     return
   }
   colorMode.preference = key
 }
 
 const servicePaths = [
-  {id: 'Privacy', label: 'Police privacy', path: '/privacy'},
-  {id: 'FAQ', label: 'FAQ', path: '/faq'},
-  {id: 'terms', label: 'Terms', path: '/terms'}
+  { id: 'Privacy', label: 'Police privacy', path: '/privacy' },
+  { id: 'FAQ', label: 'FAQ', path: '/faq' },
+  { id: 'terms', label: 'Terms', path: '/terms' }
 ]
 
 const getSettingValue = (key) => {
@@ -160,7 +190,7 @@ const onSettingChange = (key, value) => {
   if (key === 'ach') return uiSettings.setAchievementsNotifyEnabled(value)
   if (key === 'snowFall') {
     if (!eventStore.isSnowPurchased) {
-      emit('open', 'snowWarning')
+      showRestriction('snow')
       toggleForceUpdateKey.value++
       return
     }
@@ -175,7 +205,6 @@ onMounted(async () => {
 </script>
 
 <style scoped>
-
 .accordion {
   padding: 12px 16px;
   margin-top: 14px;
@@ -189,17 +218,6 @@ onMounted(async () => {
   max-height: 500px;
 }
 
-.accordion__head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.accordion__icon {
-  width: 28px;
-  margin-right: 10px;
-}
-
 .accordion__title {
   font-weight: 900;
   font-size: 1.2rem;
@@ -208,7 +226,6 @@ onMounted(async () => {
 
 .accordion__body {
   padding-top: 10px;
-  font-weight: 700;
 }
 
 .row__el--wrapper {
@@ -216,7 +233,11 @@ onMounted(async () => {
   justify-content: space-between;
   align-items: center;
   padding: 10px 8px;
-  gap: 10px;
+}
+
+.service__items-elements {
+  margin-left: 10px;
+  padding: 10px 0;
 }
 
 .toggle__wrapper {
@@ -229,124 +250,129 @@ onMounted(async () => {
 
 .locked-setting, .theme-option.locked {
   opacity: 0.5;
-  cursor: pointer;
-}
-
-.settings-block .accordion__body .row__el--wrapper {
-  margin-top: 10px;
 }
 
 .theme-select-btn {
   background: #f3f4f6;
   border: 2px solid #000;
   border-radius: 9px;
-  padding: 8px 4px;
+  padding: 8px 12px;
   font-family: "Nunito", sans-serif;
   font-weight: 800;
   cursor: pointer;
-  font-size: 12px;
   box-shadow: 2px 2px 0 #000;
   transition: 0.1s;
-  min-width: 100px;
 }
 
 .theme-select-btn:active {
-  transform: translate(2px, 2px);
+  transform: translate(1px, 1px);
   box-shadow: 0 0 0 #000;
 }
 
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;
   justify-content: center;
+  background: rgba(0, 0, 0, .5);
   z-index: 2000;
 }
 
+.locked-priority {
+  z-index: 3000 !important;
+  background: rgba(0, 0, 0, .7);
+}
+
 .modal-card {
-  background: #fff;
+  background: #fef8e4;
   border: 3px solid #000;
-  border-radius: 26px;
-  padding: 24px;
+  border-radius: 20px;
+  padding: 2rem;
   width: 90%;
-  max-width: 380px;
+  max-width: 400px;
   box-shadow: 3px 3px 0 #000;
+  text-align: center;
 }
 
 .modal-title {
+  font-size: 1.8rem;
   font-weight: 900;
-  font-size: 1.6rem;
-  text-align: center;
-  margin-bottom: 24px;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.modal-text {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.btn {
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 10px 24px;
+  font-weight: 800;
+  background: #f3f4f6;
+  box-shadow: 2px 2px 0 #000;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 #000;
+}
+
+.btn-success {
+  background: #4ade80;
+  width: 100%;
 }
 
 .theme-grid {
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  margin-bottom: 10px;
+  gap: 12px;
+  margin-bottom: 20px;
 }
 
 .theme-option {
   display: flex;
   align-items: center;
   gap: 16px;
-  padding: 14px;
-  border: 3px solid #000;
-  border-radius: 18px;
+  padding: 12px;
+  border: 2px solid #000;
+  border-radius: 16px;
   cursor: pointer;
   font-weight: 800;
-  transition: 0.15s;
+  background: #fff;
 }
 
 .theme-option.active {
   background: #ffd54f;
-  transform: translate(-2px, -2px);
-  box-shadow: 4px 4px 0 #000;
+  box-shadow: 2px 2px 0 #000;
 }
 
 .theme-preview {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   border: 2px solid #000;
 }
 
-.theme-preview.light {
-  background: #fff;
-}
-
-.theme-preview.dark {
-  background: #222;
-}
-
-.theme-preview.pink {
-  background: #ff85a1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.btn-done {
-  background: #4ade80;
-  border: 3px solid #000;
-  border-radius: 14px;
-  padding: 12px 30px;
-  font-weight: 900;
-  cursor: pointer;
-  box-shadow: 3px 3px 0 #000;
-  width: 100%;
-}
+.theme-preview.light { background: #fff; }
+.theme-preview.dark { background: #222; }
+.theme-preview.pink { background: #ff85a1; display: flex; align-items: center; justify-content: center; }
 
 .service__items {
   padding: 12px 16px;
   margin-top: 10px;
-}
-
-.service__items-elements {
-  padding: 10px;
 }
 
 .service__items-link {
@@ -358,6 +384,6 @@ onMounted(async () => {
 
 .service__items-list {
   border-bottom: 1px solid var(--titleColor);
-  padding-bottom: 5px;
+  padding: 5px 0;
 }
 </style>
