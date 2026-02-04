@@ -247,7 +247,6 @@ export const userAuthStore = defineStore('auth', () => {
                 sale_5: false,
                 sale_10: false,
                 sale_15: false,
-
                 ...createInitialAchievementsObject()
             })
         }
@@ -533,10 +532,12 @@ export const userAuthStore = defineStore('auth', () => {
         try {
             await setDoc(userDocRef, {
                 ...premiumData,
-                isPremium: true
+                isPremium: true,
+                subscriptionCancelled: false
             }, {merge: true})
             isPremium.value = true
             subscriptionEndsAt.value = premiumData.subscriptionEndsAt
+            subscriptionCancelled.value = false
             console.log(' Премиум успешно активирован и записан')
         } catch (e) {
             console.error('Ошибка записи в Базе данных:', e)
@@ -547,13 +548,8 @@ export const userAuthStore = defineStore('auth', () => {
     const markCancelledInDb = async () => {
         const auth = getAuth()
         const user = auth.currentUser
-
-        // 1. Обновляем локально, чтобы юзер сразу увидел
         subscriptionCancelled.value = true
-
         if (!user) return
-
-        // 2. ЖЕЛЕЗОБЕТОННО ПИШЕМ В БАЗУ
         const userDocRef = doc(db, 'users', user.uid)
         try {
             await updateDoc(userDocRef, {
