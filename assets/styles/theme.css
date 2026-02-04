@@ -16,6 +16,15 @@
     --border: #e8e2e2;
 }
 
+
+.pink {
+    --bg: #F9EEDD;
+    --navBg: #D16B7B;
+    --labelBg:#F2C7D1;
+    --border: #E6AAB4;
+    --labelTextColor:#8B454E;
+}
+
 html, body {
     background: var(--bg);
 }

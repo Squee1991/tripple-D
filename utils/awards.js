@@ -19,6 +19,8 @@ import Groot from '~/assets/awards/Groot.svg'
 import SantaHat from '../assets/images/event-rewards/winter-event/winter-rewards/santa-hat.svg'
 import ChristmasBall from '../assets/images/event-rewards/winter-event/winter-rewards/christmas-ball.svg'
 import ChristmasWreath from '../assets/images/event-rewards/winter-event/winter-rewards/christmas-wreath.svg'
+import TeddyGift from '../assets/images/event-rewards/valentine-event/valentine-rewards/teddy-bear.svg'
+import CupidArrow from '../assets/images/event-rewards/valentine-event/valentine-rewards/cupidonArrow.svg'
 export const AWARDS = [
 	{key: 'explorer', title: 'awards.explorer', icon: Globus},
 	{key: 'Articlus', title: 'awards.articlus', icon: WasteMoney},
@@ -41,6 +43,8 @@ export const AWARDS = [
 	{key: 'santaHat' , title: 'awards.santaHat', icon: SantaHat},
 	{key: 'christmasBall' , title: 'awards.christmasBall', icon: ChristmasBall},
 	{key: 'christmasWreath' , title: 'awards.christmasWreath', icon: ChristmasWreath},
+	{key: 'valentineBear' , title: 'Плюшевый мишка', icon: TeddyGift},
+	{key: 'cupidArrow' , title: 'Лук купидона', icon: CupidArrow},
 ]
 
 export const awardsByKey = Object.fromEntries(AWARDS.map(a => [a.key, a]))

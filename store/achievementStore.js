@@ -146,6 +146,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 	let shownSet = loadShown()
 	let completedSet = loadCompleted()
 	const winterRank1BoughtCount = ref(0)
+	const valentineRank1BoughtCount = ref(0)
 	// --- Utils
 	function findById (id) {
 		for (const g of groups.value) {
@@ -854,11 +855,47 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				updateProgress('metaChristmas', completedMetaChildren);
 			})
 			eventUnsubs.push(unsubWinter)
+
+			const valentineEventRef = doc(db, 'users', uid, 'eventSessions', 'valentine')
+			const handleValentineUpdate = (snap) => {
+				if (!snap.exists()) return
+				const eventData = snap.data() || {}
+				const questsProgress = eventData.quests || {}
+				const shopItems = eventData.shopItems || {}
+				const wordScore = questsProgress['quest-1']?.score || 0
+				updateProgress('valentineWords', wordScore)
+				const completedQuestsCount = Object.values(questsProgress).filter(q => q.finished).length
+				updateProgress('firstValentineQuest', completedQuestsCount > 0 ? 1 : 0)
+				updateProgress('valentineAllQuests', completedQuestsCount)
+				updateProgress('valentineBear', shopItems['teddy'] ? 1 : 0)
+				updateProgress('cupidArrow', shopItems['arrow'] ? 1 : 0)
+				updateProgress('valentineTheme', shopItems['theme'] ? 1 : 0)
+				const totalRep = eventData.reputationPoints || 0
+				updateProgress('ValentineReputation', totalRep)
+				const metaChildrenIds = [
+					'firstValentineQuest',
+					'valentineWords',
+					'valentineAllQuests',
+					'valentineBear',
+					'cupidArrow',
+					'valentineTheme',
+					'ValentineReputation'
+				];
+				const completedMetaChildren = metaChildrenIds.filter(id => completedSet.has(id)).length;
+				updateProgress('valentineAllAchievements', completedMetaChildren);
+				const rank1Ids = ['teddy', 'cupidArrow']
+				const boughtCount = rank1Ids.reduce((acc, id) => acc + (shopItems[id] ? 1 : 0), 0)
+				valentineRank1BoughtCount.value = boughtCount
+				updateProgress('Collection', shownSet.size + winterRank1BoughtCount.value + valentineRank1BoughtCount.value)
+			}
+			getDoc(valentineEventRef).then(handleValentineUpdate).catch(() => {})
+			const unsubValentine = onSnapshot(valentineEventRef, handleValentineUpdate)
+			eventUnsubs.push(unsubValentine)
 		}, { immediate: true })
 	}
 
 	watch(lastUnlockedAward, (award) => {
-		if (award) updateProgress('Collection', shownSet.size + winterRank1BoughtCount.value)
+		if (award) updateProgress('Collection', shownSet.size + winterRank1BoughtCount.value + valentineRank1BoughtCount.value)
 	})
 	if (process.client) initializeProgressTracking()
 
