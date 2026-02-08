@@ -1,5 +1,9 @@
 :root {
     --bg: #fef8e4;
+    --navBg: #fef8e4;
+    --labelBg:#3c99d3;
+    --footerBg: #0f7aaf;
+    --labelTextColor:#333;
     /*--bg: #a2ccd4;*/
     --titleColor: #2c2b2b;
     --borderBottom: #000000;
@@ -20,7 +24,10 @@
 }
 
 .dark {
-    /*--bg: #2e2e33;*/
+    --footerBg: #0f7aaf;
+    --labelTextColor: white;
+    --labelBg:#3c99d3;
+    --navBg: #0F172A;
     --bg: #0F172A;
     --titleColor: white;
     --borderBottom: white;
@@ -40,6 +47,7 @@
 
 
 .pink {
+    --footerBg: #D16B7B;
     --bg: #F9EEDD;
     --navBg: #D16B7B;
     --labelBg:#F2C7D1;

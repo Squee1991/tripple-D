@@ -214,7 +214,7 @@ onMounted(() => {
 }
 
 .points__title {
-  color: var(--titleColor);
+  color: var(--labelTextColor);
 }
 
 .stat__icon {
@@ -385,7 +385,7 @@ onMounted(() => {
 .points-card__label {
   font-size: 19px;
   font-weight: 600;
-  color: var(--titleColor);
+  color: var(--labelTextColor);
   font-family: "Nunito", sans-serif;
 }
 

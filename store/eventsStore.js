@@ -54,6 +54,11 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 		return !!(items['snowFall'] || items['snowfall'])
 	})
 
+	const isValentineThemePurchased = computed(() => {
+		const items = shopItems.value || {}
+		return !!items['theme']
+	})
+
 	const loadGlobalWinterSettings = async () => {
 		const ref = getWinterDocRef()
 		if (!ref) return
@@ -282,7 +287,7 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 
 	return {
 		eventId, questId, stepIndex, score, finished, isLoading,
-		isSnowEnabled, shopItems, events,
+		isSnowEnabled, shopItems, events, isValentineThemePurchased,
 		isSnowPurchased, loadGlobalWinterSettings, setSnowFallEnabled,
 		start, restoreIfPossible, next, prev, addScore, finishQuest,
 		resetAllForEvent, loadEventProgress, saveMainProgress,

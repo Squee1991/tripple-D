@@ -599,7 +599,7 @@ onBeforeUnmount(() => {
   position: sticky;
   top: 0;
   z-index: 3;
-  background-color: var(--bg);
+  background-color: var(--navBg);
   border-bottom: 4px solid var(--borderBottom);
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;

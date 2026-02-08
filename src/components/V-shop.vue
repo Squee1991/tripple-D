@@ -8,6 +8,7 @@
         Обменивай накопленные Артиклюсы на полезные бонусы и постоянные скидки для своего обучения.
       </p>
     </header>
+
     <div class="shop__content">
       <div class="shop__cards">
         <article
@@ -64,6 +65,7 @@ import Sale10 from '../../assets/images/rocket_10.svg'
 import Sale15 from '../../assets/images/hot-air-ballon15.svg'
 import GraduateHat from '../../assets/images/graduate-hat.svg'
 
+
 const questStore = userChainStore()
 const langStore = userlangStore()
 const authStore = userAuthStore()
@@ -97,9 +99,9 @@ const shopCards = computed(() => [
     description: "Требования:",
     icon: Sale,
     alt: "Sale_5",
-    price: DISCOUNT_PRICE_ARTICLUS_5,
+    price: DISCOUNT_PRICE_ARTICLUS_5, // ✅ цена в артиклюсах
     currency: "articlus",
-    requiredHats: DISCOUNT_REQ_HATS_5,
+    requiredHats: DISCOUNT_REQ_HATS_5, // ✅ условие по конфеткам
     btnText: authStore.premiumDiscount?.sale_5 ? 'Куплено' : 'Купить',
     btnIcon: GraduateHat,
     disabled:
@@ -163,7 +165,6 @@ const onCardAction = async (card) => {
     await authStore.activateDiscount(card.id)
   }
 }
-
 const buyItem = async (cardId, amount) => {
   const card = shopCards.find(item => item.id === cardId)
   if (!card) return
@@ -179,13 +180,33 @@ const buyItem = async (cardId, amount) => {
 .shop {
   min-height: 100vh;
   padding: 10px;
+  font-family: "Nunito", sans-serif;
+}
+
+.shop__content {
+  overflow-y: auto;
+  max-height: calc(100vh - 265px);
+}
+
+.shop__content::-webkit-scrollbar {
+  width: 10px;
+}
+
+.shop__content::-webkit-scrollbar-thumb {
+  background: #1e1e1e;
+  border-radius: 10px;
+  border: 2px solid #fff;
+}
+
+.shop__content::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 .shop__title-container {
   background: #50a2d8;
   border-radius: 12px;
-  padding: 15px 10px;
-  margin-bottom: 15px;
+  padding: 15px 20px;
+  margin-bottom: 10px;
   text-align: center;
   box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.2);
   display: flex;
@@ -204,8 +225,8 @@ const buyItem = async (cardId, amount) => {
 
 .shop__subtitle {
   text-align: center;
-  margin: 0 auto 5px;
-  padding: 5px;
+  margin: 0 auto 0;
+  padding: 12px 14px;
   color: var(--titleColor);
   font-size: 14px;
   backdrop-filter: blur(8px);
@@ -217,35 +238,19 @@ const buyItem = async (cardId, amount) => {
   width: 90%;
   height: 2px;
   background: #50a2d8
+
 }
 
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   .shop__subtitle {
     font-size: 15px;
-    padding: 0 5px;
   }
 }
 
 .shop__cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
-  gap: 10px;
-  overflow-y: auto;
-  max-height: calc(100vh - 250px);
-}
-
-.shop__cards::-webkit-scrollbar {
-  width: 10px;
-}
-
-.shop__cards::-webkit-scrollbar-thumb {
-  background: var(--titleColor);
-  border-radius: 5px;
-  border: 2px solid #fff;
-}
-
-.shop__cards::-webkit-scrollbar-track {
-  background: transparent;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
 }
 
 .shop-card {
@@ -310,6 +315,7 @@ const buyItem = async (cardId, amount) => {
   margin: 0;
 }
 
+/* Требования */
 .shop-card__requirements {
   margin-top: 10px;
 }
@@ -378,15 +384,6 @@ const buyItem = async (cardId, amount) => {
 @media (min-width: 1024px) {
   .shop-card:hover {
     border-color: #50a2d8;
-  }
-}
-
-@media (max-width: 1023px) {
-  .shop__title-container {
-    padding: 10px;
-  }
-  .shop__title {
-    font-size: 22px;
   }
 }
 </style>
