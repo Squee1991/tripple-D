@@ -8,7 +8,7 @@
       <div class="group-header">
         <h2 class="group-title">{{ t(group.title) }}</h2>
         <span :class="[ 'group-stats', { 'all-completed': completedCount(group) === group.achievements.length }]"
-        >
+         >
           {{ completedCount(group) }} / {{ group.achievements.length }}
         </span>
       </div>

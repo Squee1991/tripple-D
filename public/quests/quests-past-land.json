@@ -1,145 +1,1869 @@
 [
-    {
-      "questId": "perfekt_introduction_basics",
-      "aliases": ["perfekt-simple-start"],
-      "title": "Основы Perfekt",
+  {
+    "questId": "perfekt_introduction_basics",
+    "aliases": [
+      "perfekt-simple-start"
+    ],
+    "title": "Основы Perfekt",
+    "progress": "0/15",
+    "description": "Что ты сделал? Знакомимся с прошедшим временем: 'Я купил', 'Мы сделали'.",
+    "conditions": {
+      "goal": "Запомните структуру Perfekt.",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 25,
+      "xp": 25
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "Соберите: Я играл в футбол.",
+        "words": [
+          "gespielt",
+          "Fußball",
+          "habe",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "Fußball",
+          "gespielt"
+        ]
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "Выберите правильный вариант: Я слушал музыку",
+        "options": [
+          "ich habe Musik gehört",
+          "Wir haben Musik gehört",
+          "Du hast Musik gehört"
+        ],
+        "answer": "Du hast Musik gehört"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Wir haben Deutsch gelernt",
+        "answer": "Wir haben Deutsch gelernt"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "Соберите: Он купил хлеб.",
+        "words": [
+          "gekauft",
+          "Brot",
+          "hat",
+          "Er"
+        ],
+        "correctOrder": [
+          "Er",
+          "hat",
+          "Brot",
+          "gekauft"
+        ]
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Выберите правильный вариант",
+        "options": [
+          "Wir haben Pizza gegessen",
+          "Wir hast Pizza gegessen",
+          "Wir hat Pizza gegessen"
+        ],
+        "answer": "Wir haben Pizza gegessen"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Соберите: Я это сделал.",
+        "words": [
+          "gemacht",
+          "das",
+          "habe",
+          "Ich"
+        ],
+        "correctOrder": [
+          "Ich",
+          "habe",
+          "das",
+          "gemacht"
+        ]
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "Произнесите фразу:",
+        "text": "Sie haben getanzt",
+        "answer": "Sie haben getanzt"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "Выберите правильный вариант",
+        "options": [
+          "Ihr habt alles gesehen",
+          "Ihr hast alles gesehen",
+          "Ihr haben alles gesehen"
+        ],
+        "answer": "Ihr habt alles gesehen"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "Соберите вопрос: Ты спал?",
+        "words": [
+          "geschlafen",
+          "du",
+          "Hast"
+        ],
+        "correctOrder": [
+          "Hast",
+          "du",
+          "geschlafen"
+        ]
+      },
+      {
+        "id": 10,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Ich habe gelacht",
+        "answer": "Ich habe gelacht"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите: Мы жили в Берлине.",
+        "words": [
+          "gewohnt",
+          "Berlin",
+          "in",
+          "Wir",
+          "haben"
+        ],
+        "correctOrder": [
+          "Wir",
+          "haben",
+          "in",
+          "Berlin",
+          "gewohnt"
+        ]
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "Выберите правильный вариант (движение -> sein)",
+        "options": [
+          "Ich bin nach Hause gegangen",
+          "Ich habe nach Hause gegangen",
+          "Ich ist nach Hause gegangen"
+        ],
+        "answer": "Ich bin nach Hause gegangen"
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "Произнесите:",
+        "text": "Er hat nichts gesagt",
+        "answer": "Er hat nichts gesagt"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "Соберите: Она сегодня работала.",
+        "words": [
+          "gearbeitet",
+          "heute",
+          "Sie",
+          "hat"
+        ],
+        "correctOrder": [
+          "Sie",
+          "hat",
+          "heute",
+          "gearbeitet"
+        ]
+      },
+      {
+        "id": 15,
+        "type": "select",
+        "question": "Выберите правильный вариант",
+        "options": [
+          "Die Kinder haben gespielt",
+          "Die Kinder hat gespielt",
+          "Die Kinder hast gespielt"
+        ],
+        "answer": "Die Kinder haben gespielt"
+      }
+    ]
+  },
+  {
+    "questId": "perfekt_movement_sein",
+    "aliases": [
+      "perfekt-go-run-fly"
+    ],
+    "title": "Perfekt: В движении",
+    "progress": "0/15",
+    "description": "Когда мы перемещаемся или меняем состояние, 'haben' уходит в строну. Его заменяет глагол 'sein'!",
+    "conditions": {
+      "goal": "Научиться использовать sein в прошедшем времени.",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 30,
+      "xp": 30
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "Соберите: Я пошел в кино.",
+        "words": [
+          "gegangen",
+          "habe",
+          "ins",
+          "bin",
+          "Ich",
+          "Kino"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bin",
+          "ins",
+          "Kino",
+          "gegangen"
+        ]
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "Выберите: Мы приехали в Берлин.",
+        "options": [
+          "Wir haben in Berlin gekommen",
+          "Wir sind in Berlin gekommen",
+          "Wir sind in Berlin kommen"
+        ],
+        "answer": "Wir sind in Berlin gekommen"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Напишите услышанное:",
+        "text": "Er ist nach Hause gelaufen",
+        "answer": "Er ist nach Hause gelaufen"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "Соберите: Они поехали на море.",
+        "words": [
+          "ans",
+          "Sie",
+          "Meer",
+          "sind",
+          "gefahren",
+          "haben"
+        ],
+        "correctOrder": [
+          "Sie",
+          "sind",
+          "ans",
+          "Meer",
+          "gefahren"
+        ]
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Выберите правильный вариант",
+        "options": [
+          "Ich bin um 7 Uhr aufgestanden",
+          "Ich habe um 7 Uhr aufgestanden",
+          "Ich bin um 7 Uhr aufstehen"
+        ],
+        "answer": "Ich bin um 7 Uhr aufgestanden"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Соберите: Дети быстро выросли.",
+        "words": [
+          "sind",
+          "schnell",
+          "Die Kinder",
+          "gewachsen"
+        ],
+        "correctOrder": [
+          "Die Kinder",
+          "sind",
+          "schnell",
+          "gewachsen"
+        ]
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "Произнесите фразу:",
+        "text": "Ich bin zwei Stunden später gekommen",
+        "answer": "Ich bin zwei Stunden später gekommen",
+        "accept": [
+          "Ich bin zwei Stunden später gekommen",
+          "Ich bin 2 Stunden später gekommen"
+        ]
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "Выберите правильный вариант:",
+        "options": [
+          "Ihr seid schnell gefahren",
+          "Ihr sind schnell gefahren",
+          "Ihr habt schnell gefahren"
+        ],
+        "answer": "Ihr seid schnell gefahren"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "Соберите: Она уехала в Мюнхен.",
+        "words": [
+          "ist",
+          "Sie",
+          "nach",
+          "München",
+          "gefahren"
+        ],
+        "correctOrder": [
+          "Sie",
+          "ist",
+          "nach",
+          "München",
+          "gefahren"
+        ]
+      },
+      {
+        "id": 10,
+        "type": "speechToText",
+        "question": "Напишите услышанное:",
+        "text": "Was ist passiert?",
+        "answer": "Was ist passiert?"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите фразу: Я заснул",
+        "words": [
+          "bin",
+          "Ich",
+          "eingeschlafen",
+          "habe"
+        ],
+        "correctOrder": [
+          "Ich",
+          "bin",
+          "eingeschlafen"
+        ]
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "Выберите правильный вариант",
+        "options": [
+          "Wir sind im See geschwommen",
+          "Wir haben im See geschwommen",
+          "Wir sind im See schwimmen"
+        ],
+        "answer": "Wir sind im See geschwommen"
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Bist du schon angekommen?",
+        "answer": "Bist du schon angekommen?"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "Соберите: Все пошли домой.",
+        "words": [
+          "nach",
+          "Alle",
+          "sind",
+          "Hause",
+          "gegangen",
+          "haben",
+          "zu"
+        ],
+        "correctOrder": [
+          "Alle",
+          "sind",
+          "nach",
+          "Hause",
+          "gegangen"
+        ]
+      },
+      {
+        "id": 15,
+        "type": "select",
+        "question": "Выберите правильный вариант: Он пришел поздно.",
+        "options": [
+          "Er ist spät gekommen",
+          "Er hat spät gekommen",
+          "Er ist spät kommen"
+        ],
+        "answer": "Er ist spät gekommen"
+      }
+    ]
+  },
+  {
+      "questId": "perfekt_daily_routine",
+      "aliases": ["perfekt-my-day"],
+      "title": "Мой день: Что я сегодня делал?",
       "progress": "0/15",
-      "description": "Что ты сделал? Знакомимся с прошедшим временем: 'Я купил', 'Мы сделали'.",
+      "description": "От утреннего кофе до вечернего сериала. Практикуем Perfekt на реальных делах.",
       "conditions": {
-        "goal": "Запомните структуру Perfekt.",
+        "goal": "Научиться описывать свой день в прошедшем времени.",
         "minCorrect": 12,
         "requiredTasks": 15
       },
       "rewards": {
-        "points": 25,
-        "xp": 25
+        "points": 50,
+        "xp": 50
       },
       "tasks": [
         {
           "id": 1,
           "type": "reorder",
-          "question": "Соберите: Я играл в футбол.",
-          "words": ["gespielt", "Fußball", "habe", "Ich"],
-          "correctOrder": ["Ich", "habe", "Fußball", "gespielt"]
+          "question": "Соберите предложение: Я рано проснулся.",
+          "words": ["aufgewacht", "früh", "Ich", "bin"],
+          "correctOrder": ["Ich", "bin", "früh", "aufgewacht"]
         },
         {
           "id": 2,
           "type": "select",
-          "question": "Выберите правильный вариант",
+          "question": "Выберите: Я выпил кофе.",
           "options": [
-            "Du hast Musik gehört",
-            "Du habe Musik gehört",
-            "Du hat Musik gehört"
+            "Ich habe einen Kaffee getrunken",
+            "Ich bin einen Kaffee getrunken",
+            "Ich habe einen Kaffee trinken"
           ],
-          "answer": "Du hast Musik gehört"
+          "answer": "Ich habe einen Kaffee getrunken"
         },
         {
           "id": 3,
           "type": "speechToText",
-          "question": "Напишите услышанное",
-          "text": "Wir haben gelernt",
-          "answer": "Wir haben gelernt",
+          "question": "Напишите услышанное: Я позавтракал",
+          "text": "Ich habe gefrühstückt",
+          "answer": "Ich habe gefrühstückt"
         },
         {
           "id": 4,
           "type": "reorder",
-          "question": "Соберите: Он купил хлеб.",
-          "words": ["gekauft", "Brot", "hat", "Er"],
-          "correctOrder": ["Er", "hat", "Brot", "gekauft"]
+          "question": "Соберите: Он пошел на работу.",
+          "words": ["gegangen", "zur", "Er", "Arbeit", "ist"],
+          "correctOrder": ["Er", "ist", "zur", "Arbeit", "gegangen"]
         },
         {
           "id": 5,
           "type": "select",
-          "question": "Выберите правильный вариант",
+          "question": "Выберите верный ответ: Я много работал.",
           "options": [
-            "Wir haben Pizza gegessen",
-            "Wir hast Pizza gegessen",
-            "Wir hat Pizza gegessen"
+            "Ich habe viel gearbeitet",
+            "Ich bin viel gearbeitet",
+            "Ich habe viel gearbeiten"
           ],
-          "answer": "Wir haben Pizza gegessen"
+          "answer": "Ich habe viel gearbeitet"
         },
         {
           "id": 6,
           "type": "reorder",
-          "question": "Соберите: Я это сделал.",
-          "words": ["gemacht", "das", "habe", "Ich"],
-          "correctOrder": ["Ich", "habe", "das", "gemacht"]
+          "question": "Соберите предложение: Мы пообедали",
+          "words": ["zu", "Wir", "Mittag", "gegessen", "haben"],
+          "correctOrder": ["Wir", "haben", "zu", "Mittag", "gegessen"]
         },
         {
           "id": 7,
           "type": "speechToText",
-          "question": "Произнесите фразу:",
-          "text": "Sie haben getanzt",
-          "answer": "Sie haben getanzt"
+          "question": "Впишите услышанное",
+          "text": "Ich habe einen Freund getroffen",
+          "answer": "Ich habe einen Freund getroffen"
         },
         {
           "id": 8,
           "type": "select",
-          "question": "Выберите правильный вариант",
+          "question": "Выберите верный ответ: Ты купил продукты?",
           "options": [
-            "Ihr habt alles gesehen",
-            "Ihr hast alles gesehen",
-            "Ihr haben alles gesehen"
+            "Hast du Lebensmittel eingekauft?",
+            "Bist du Lebensmittel eingekauft?",
+            "Hast du Lebensmittel geinkauft?"
           ],
-          "answer": "Ihr habt alles gesehen"
+          "answer": "Hast du Lebensmittel eingekauft?"
         },
         {
           "id": 9,
           "type": "reorder",
-          "question": "Соберите вопрос: Ты спал?",
-          "words": ["geschlafen", "du", "Hast"],
-          "correctOrder": ["Hast", "du", "geschlafen"]
+          "question": "Соберите предложение: Она приготовила ужин.",
+          "words": ["gekocht", "Abendessen", "hat", "Sie", "das"],
+          "correctOrder": ["Sie", "hat", "das", "Abendessen", "gekocht"]
         },
         {
           "id": 10,
           "type": "speechToText",
           "question": "Напишите услышанное",
-          "text": "Ich habe gelacht",
-          "answer": "Ich habe gelacht"
+          "text": "Ich bin eine Stunden zu spät gekommen.",
+          "answer": "Ich bin eine Stunden zu spät gekommen.",
+          "accept": [
+            "Ich bin eine Stunde zu spät gekommen.",
+            "Ich bin 1 Stunde zu spät gekommen."
+          ]
         },
         {
           "id": 11,
           "type": "reorder",
-          "question": "Соберите: Мы жили в Берлине.",
-          "words": ["gewohnt", "Berlin", "in", "Wir", "haben"],
-          "correctOrder": ["Wir", "haben", "in", "Berlin", "gewohnt"]
+          "question": "Соберите предложение: Мы посмотрели фильм.",
+          "words": ["einen", "Film", "haben", "Wir", "gesehen"],
+          "correctOrder": ["Wir", "haben", "einen", "Film", "gesehen"]
         },
         {
           "id": 12,
           "type": "select",
-          "question": "Выберите правильный вариант (движение -> sein)",
+          "question": "Выберите верный ответ: Я быстро заснул.",
           "options": [
-            "Ich bin nach Hause gegangen",
-            "Ich habe nach Hause gegangen",
-            "Ich ist nach Hause gegangen"
+            "Ich bin schnell eingeschlafen",
+            "Ich habe schnell eingeschlafen",
+            "Ich bin schnell geschlafen"
           ],
-          "answer": "Ich bin nach Hause gegangen"
+          "answer": "Ich bin schnell eingeschlafen"
         },
         {
           "id": 13,
           "type": "speechToText",
-          "question": "Произнесите:",
-          "text": "Er hat nichts gesagt",
-          "answer": "Er hat nichts gesagt"
+          "question": "Впишите услышанное",
+          "text": "Was hast du heute gemacht?",
+          "answer": "Was hast du heute gemacht?"
         },
         {
           "id": 14,
           "type": "reorder",
-          "question": "Соберите: Она сегодня работала.",
-          "words": ["gearbeitet", "heute", "Sie", "hat"],
-          "correctOrder": ["Sie", "hat", "heute", "gearbeitet"]
+          "question": "Соберите: Я весь день учил немецкий",
+          "words": ["Deutsch", "gelernt", "habe", "Ich", "ganzen Tag", "lernen", "den"],
+          "correctOrder": ["Ich", "habe", "den", "ganzen Tag", "Deutsch", "gelernt"]
         },
         {
           "id": 15,
           "type": "select",
-          "question": "Выберите правильный вариант",
+          "question": "Выберите: Я пошел спать в 11 часов.",
           "options": [
-            "Die Kinder haben gespielt",
-            "Die Kinder hat gespielt",
-            "Die Kinder hast gespielt"
+            "Ich bin um 23 Uhr schlafen gegangen",
+            "Ich habe um 23 Uhr schlafen gegangen",
+            "Ich bin um 23 Uhr schlafen gehen"
           ],
-          "answer": "Die Kinder haben gespielt"
+          "answer": "Ich bin um 23 Uhr schlafen gegangen"
+        }
+      ]
+    },
+  {
+    "questId": "perfekt_inseparable_prefixes",
+    "aliases": ["perfekt-no-ge"],
+    "title": "Неотделяемые приставки",
+    "progress": "0/15",
+    "description": "Приставки be-, ver-, er- и другие убирают приставку ge-. Запомни: никакого 'ge-ge'!",
+    "conditions": {
+      "goal": "Научиться не ставить ge- там, где это запрещено.",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 45,
+      "xp": 45
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "Соберите: Я посетил бабушку.",
+        "words": ["besucht", "meine", "Oma", "habe", "Ich"],
+        "correctOrder": ["Ich", "habe", "meine", "Oma", "besucht"]
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "Выберите правильные ответ: Ты все понял?",
+        "options": [
+          "Hast du alles verstanden?",
+          "Hast du alles geverstanden?",
+          "Hast du alles versteht?"
+        ],
+        "answer": "Hast du alles verstanden?"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Напишите услышанное: Он забыл ключи",
+        "text": "Er hat die Schlüssel vergessen",
+        "answer": "Er hat die Schlüssel vergessen"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "Соберите: Мы потеряли деньги.",
+        "words": ["verloren", "Geld", "haben", "Wir", "das", "sind"],
+        "correctOrder": ["Wir", "haben", "das", "Geld", "verloren"]
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Выберите: Она рассказала историю.",
+        "options": [
+          "Sie hat eine Geschichte erzählt",
+          "Sie hat eine Geschichte geerzählt",
+          "Sie hat eine Geschichte erzähltet"
+        ],
+        "answer": "Sie hat eine Geschichte erzählt"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Соберите: Это принадлежало мне.",
+        "words": ["gehört", "mir", "hat", "Das"],
+        "correctOrder": ["Das", "hat", "mir", "gehört"]
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "Произнесите: Вы получили письмо?",
+        "text": "Haben Sie den Brief bekommen?",
+        "answer": "Haben Sie den Brief bekommen?"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "Выберите верный вариант: Я все объяснил.",
+        "options": [
+          "Ich habe alles erklärt",
+          "Ich habe alles erklären",
+          "Ich bin alles erklärt"
+        ],
+        "answer": "Ich habe alles erklärt"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "Соберите: Он продал машину.",
+        "words": ["verkauft", "das", "hat", "Er", "Auto"],
+        "correctOrder": ["Er", "hat", "das", "Auto", "verkauft"]
+      },
+      {
+        "id": 10,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Wir haben das erlebt",
+        "answer": "Wir haben das erlebt"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите предложение: Ты это обещал.",
+        "words": ["das", "versprochen", "hast", "Du"],
+        "correctOrder": ["Du", "hast", "das", "versprochen"]
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "Выберите верный вариант: Она заказала пиццу.",
+        "options": [
+          "Sie hat Pizza bestellt",
+          "Sie hat Pizza gebestellt",
+          "Sie hat Pizza bestelltet"
+        ],
+        "answer": "Sie hat Pizza bestellt"
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "Произнесите: Что случилось?",
+        "text": "Was ist geschehen?",
+        "answer": "Was ist geschehen?"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "Соберите: Я узнал друга.",
+        "words": ["erkannt", "den", "habe", "Ich", "Freund"],
+        "correctOrder": ["Ich", "habe", "den", "Freund", "erkannt"]
+      },
+      {
+        "id": 15,
+        "type": "select",
+        "question": "Выберите: Мы опоздали (пропустили время).",
+        "options": [
+          "Wir haben uns verspätet",
+          "Wir sind uns verspätet",
+          "Wir haben uns geverspätet"
+        ],
+        "answer": "Wir haben uns verspätet"
+      }
+    ]
+  },
+  {
+      "questId": "perfekt_food_restaurant",
+      "aliases": ["perfekt-dinner"],
+      "title": "Ресторан: Что мы съели?",
+      "progress": "0/15",
+      "description": "Заказываем еду, оплачиваем счет и делимся впечатлениями о вкусном ужине в Perfekt.",
+      "conditions": {
+        "goal": "Научиться использовать Perfekt в контексте еды и ресторанов.",
+        "minCorrect": 12,
+        "requiredTasks": 15
+      },
+      "rewards": {
+        "points": 55,
+        "xp": 55
+      },
+      "tasks": [
+        {
+          "id": 1,
+          "type": "reorder",
+          "question": "Соберите предложение: Мы заказали пиццу.",
+          "words": ["bestellt", "eine", "Wir", "Pizza", "haben"],
+          "correctOrder": ["Wir", "haben", "eine", "Pizza", "bestellt"]
+        },
+        {
+          "id": 2,
+          "type": "select",
+          "question": "Выберите верный ответ: Тебе понравилась еда?",
+          "options": [
+            "Hat dir das Essen geschmeckt?",
+            "Ist dir das Essen geschmeckt?",
+            "Hat dir das Essen geschmecken?"
+          ],
+          "answer": "Hat dir das Essen geschmeckt?"
+        },
+        {
+          "id": 3,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Ich habe ein Glas Wasser getrunken",
+          "answer": "Ich habe ein Glas Wasser getrunken",
+          "accept": [
+            "Ich habe ein Glas Wasser getrunken",
+            "Ich habe 1 Glas Wasser getrunken"
+          ]
+        },
+        {
+          "id": 4,
+          "type": "reorder",
+          "question": "Соберите вопрос: Вы уже поели?",
+          "words": ["schon", "gegessen", "Habt", "ihr", "sind"],
+          "correctOrder": ["Habt", "ihr", "schon", "gegessen"]
+        },
+        {
+          "id": 5,
+          "type": "select",
+          "question": "Выберите верный ответ: Он забронировал столик.",
+          "options": [
+            "Er hat einen Tisch reserviert",
+            "Er hat einen Tisch reservieren",
+            "Er ist einen Tisch reserviert"
+          ],
+          "answer": "Er hat einen Tisch reserviert"
+        },
+        {
+          "id": 6,
+          "type": "reorder",
+          "question": "Соберите: Я взял салат.",
+          "words": ["Salat", "einen", "genommen", "Ich", "habe"],
+          "correctOrder": ["Ich", "habe", "einen", "Salat", "genommen"]
+        },
+        {
+          "id": 7,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Wir haben bar bezahlt",
+          "answer": "Wir haben bar bezahlt"
+        },
+        {
+          "id": 8,
+          "type": "select",
+          "question": "Выберите верный ответ: Она приготовила суп.",
+          "options": [
+            "Sie hat eine Suppe gekocht",
+            "Sie ist eine Suppe gekocht",
+            "Sie hat eine Suppe gekochen"
+          ],
+          "answer": "Sie hat eine Suppe gekocht"
+        },
+        {
+          "id": 9,
+          "type": "reorder",
+          "question": "Соберите предложение: Мы пошли в ресторан.",
+          "words": ["gegangen", "ins", "Wir", "sind", "Restaurant", "zu"],
+          "correctOrder": ["Wir", "sind", "ins", "Restaurant", "gegangen"]
+        },
+        {
+          "id": 10,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Wir haben eine Pizza gegessen",
+          "answer": "Wir haben eine Pizza gegessen"
+        },
+        {
+          "id": 11,
+          "type": "reorder",
+          "question": "Соберите предложение: Он принес счет.",
+          "words": ["Rechnung", "gebracht", "hat", "Er", "die"],
+          "correctOrder": ["Er", "hat", "die", "Rechnung", "gebracht"]
+        },
+        {
+          "id": 12,
+          "type": "select",
+          "question": "Выберите: Я забыл кошелек.",
+          "options": [
+            "Ich habe mein Portemonnaie vergessen",
+            "Ich habe mein Portemonnaie gevergessen",
+            "Ich bin mein Portemonnaie vergessen"
+          ],
+          "answer": "Ich habe mein Portemonnaie vergessen"
+        },
+        {
+          "id": 13,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Das Mittagessen hat 40 Euro gekostet",
+          "answer": "Das Mittagessen hat 40 Euro gekostet",
+          "accept": [
+            "Das Mittagessen hat 40 Euro gekostet",
+            "Das Mittagessen hat vierzig Euro gekostet"
+          ]
+        },
+        {
+          "id": 14,
+          "type": "reorder",
+          "question": "Соберите вопрос: Ты пригласил друзей?",
+          "words": ["bist","eingeladen", "Freunde", "hast", "du"],
+          "correctOrder": ["Hast", "du", "Freunde", "eingeladen"]
+        },
+        {
+          "id": 15,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Wir haben das Restaurant im Internet gefunden",
+          "answer": "Wir haben das Restaurant im Internet gefunden"
+        }
+      ]
+    },
+  {
+      "questId": "perfekt_travel_vacation",
+      "aliases": ["perfekt-travel"],
+      "title": "Путешествие: От чемодана до пляжа",
+      "progress": "0/15",
+      "description": "Собираем вещи, летим на море и гуляем по горам. Всё — в прошедшем времени!",
+      "conditions": {
+        "goal": "Закрепить Perfekt в контексте поездок и отдыха.",
+        "minCorrect": 12,
+        "requiredTasks": 15
+      },
+      "rewards": {
+        "points": 60,
+        "xp": 60
+      },
+      "tasks": [
+        {
+          "id": 1,
+          "type": "reorder",
+          "question": "Соберите: Я собрал чемодан.",
+          "words": ["gepackt", "Koffer", "den", "habe", "Ich"],
+          "correctOrder": ["Ich", "habe", "den", "Koffer", "gepackт"]
+        },
+        {
+          "id": 2,
+          "type": "select",
+          "question": "Выберите: Мы купили билеты онлайн.",
+          "options": [
+            "Wir haben die Tickets online gekauft",
+            "Wir sind die Tickets online gekauft",
+            "Wir haben die Tickets online gekaufen"
+          ],
+          "answer": "Wir haben die Tickets online gekauft"
+        },
+        {
+          "id": 3,
+          "type": "speechToText",
+          "question": "Напишите услышанное: Мы поехали в аэропорт",
+          "text": "Wir sind zum Flughafen gefahren",
+          "answer": "Wir sind zum Flughafen gefahren"
+        },
+        {
+          "id": 4,
+          "type": "reorder",
+          "question": "Соберите: Самолёт вылетел вовремя.",
+          "words": ["pünktlich", "ist", "abgeflogen", "Das Flugzeug"],
+          "correctOrder": ["Das Flugzeug", "ist", "pünktlich", "abgeflogen"]
+        },
+        {
+          "id": 5,
+          "type": "select",
+          "question": "Выберите: Перелет длился три часа.",
+          "options": [
+            "Der Flug hat drei Stunden gedauert",
+            "Der Flug ist drei Stunden gedauert",
+            "Der Flug hat drei Stunden dauern"
+          ],
+          "answer": "Der Flug hat drei Stunden gedauert"
+        },
+        {
+          "id": 6,
+          "type": "reorder",
+          "question": "Соберите предложение: Я забронировал отель.",
+          "words": ["Hotel", "das", "habe", "Ich", "gebucht"],
+          "correctOrder": ["Ich", "habe", "das", "Hotel", "gebucht"]
+        },
+        {
+          "id": 7,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Wir sind im Hotel angekommen",
+          "answer": "Wir sind im Hotel angekommen"
+        },
+        {
+          "id": 8,
+          "type": "select",
+          "question": "Выберите: Вы много плавали?",
+          "options": [
+            "Seid ihr viel geschwommen?",
+            "Habt ihr viel geschwommen?",
+            "Seid ihr viel schwimmen?"
+          ],
+          "answer": "Seid ihr viel geschwommen?"
+        },
+        {
+          "id": 9,
+          "type": "reorder",
+          "question": "Соберите предложение: Он сделал много фотографий.",
+          "words": ["viele", "Fotos", "hat", "Er", "gemacht"],
+          "correctOrder": ["Er", "hat", "viele", "Fotos", "gemacht"]
+        },
+        {
+          "id": 10,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Wir haben ein Auto gemietet",
+          "answer": "Wir haben ein Auto gemietet"
+        },
+        {
+          "id": 11,
+          "type": "reorder",
+          "question": "Соберите: Я гулял в горах.",
+          "words": ["Bergen", "den", "in", "gewandert", "bin", "Ich"],
+          "correctOrder": ["Ich", "bin", "in", "den", "Bergen", "gewandert"]
+        },
+        {
+          "id": 12,
+          "type": "select",
+          "question": "Выберите: Она загорала на пляже.",
+          "options": [
+            "Sie hat am Strand gesonnt",
+            "Sie ist am Strand gesonnt",
+            "Sie hat am Strand gesonnen"
+          ],
+          "answer": "Sie hat am Strand gesonnt"
+        },
+        {
+          "id": 13,
+          "type": "speechToText",
+          "question": "Произнесите: Я купил сувениры",
+          "text": "Ich habe Souvenirs gekauft",
+          "answer": "Ich habe Souvenirs gekauft"
+        },
+        {
+          "id": 14,
+          "type": "reorder",
+          "question": "Соберите: Нам очень понравился отпуск.",
+          "words": ["hat", "Spaß", "gemacht", "Der Urlaub", "viel"],
+          "correctOrder": ["Der Urlaub", "hat", "viel", "Spaß", "gemacht"]
+        },
+        {
+          "id": 15,
+          "type": "select",
+          "question": "Выберите: Ты хорошо отдохнул?",
+          "options": [
+            "Hast du dich gut erholt?",
+            "Bist du dich gut erholt?",
+            "Hast du dich gut geerholt?"
+          ],
+          "answer": "Hast du dich gut erholt?"
+        }
+      ]
+    },
+  {
+      "questId": "perfekt_work_office",
+      "aliases": ["perfekt-job"],
+      "title": "Офис: От мейла до дедлайна",
+      "progress": "0/15",
+      "description": "Звоним клиентам, пишем отчеты и спорим с боссом. Всё в прошедшем времени!",
+      "conditions": {
+        "goal": "Отработать Perfekt в рабочей и профессиональной среде.",
+        "minCorrect": 12,
+        "requiredTasks": 15
+      },
+      "rewards": {
+        "points": 65,
+        "xp": 65
+      },
+      "tasks": [
+        {
+          "id": 1,
+          "type": "reorder",
+          "question": "Соберите: Я написал имейл.",
+          "words": ["geschrieben", "E-Mail", "eine", "habe", "Ich"],
+          "correctOrder": ["Ich", "habe", "eine", "E-Mail", "geschrieben"]
+        },
+        {
+          "id": 2,
+          "type": "select",
+          "question": "Выберите верный ответ: Он позвонил шефу.",
+          "options": [
+            "Er hat den Chef angerufen",
+            "Er ist den Chef angerufen",
+            "Er hat den Chef geanrufen"
+          ],
+          "answer": "Er hat den Chef angerufen"
+        },
+        {
+          "id": 3,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Wir haben viel gearbeitet",
+          "answer": "Wir haben viel gearbeitet"
+        },
+        {
+          "id": 4,
+          "type": "reorder",
+          "question": "Соберите: Ты нашел документ?",
+          "words": ["das", "Dokument", "hast", "gefunden", "du"],
+          "correctOrder": ["Hast", "du", "das", "Dokument", "gefunden"]
+        },
+        {
+          "id": 5,
+          "type": "select",
+          "question": "Выберите: Рабочий день начался в 8:00.",
+          "options": [
+            "Der Arbeitstag hat um 8 Uhr angefangen",
+            "Der Arbeitstag ist um 8 Uhr angefangen",
+            "Der Arbeitstag hat um 8 Uhr geanfangen"
+          ],
+          "answer": "Der Arbeitstag hat um 8 Uhr angefangen"
+        },
+        {
+          "id": 6,
+          "type": "reorder",
+          "question": "Соберите предложение: Он распечатал документ.",
+          "words": ["ausgedruckt", "Dokument", "das", "hat", "Er"],
+          "correctOrder": ["Er", "hat", "das", "Dokument", "ausgedruckt"]
+        },
+        {
+          "id": 7,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Ich habe das Passwort vergessen",
+          "answer": "Ich habe das Passwort vergessen"
+        },
+        {
+          "id": 8,
+          "type": "select",
+          "question": "Выберите верный ответ: Он выключил компьютер.",
+          "options": [
+            "Er hat den Computer ausgemacht",
+            "Er ist den Computer ausgemacht",
+            "Er hat den Computer geausmacht"
+          ],
+          "answer": "Er hat den Computer ausgemacht"
+        },
+        {
+          "id": 9,
+          "type": "reorder",
+          "question": "Соберите предложение: Мы сделали паузу.",
+          "words": ["Pause", "eine", "gemacht", "Wir", "haben"],
+          "correctOrder": ["Wir", "haben", "eine", "Pause", "gemacht"]
+        },
+        {
+          "id": 10,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Er hat den Plan erklärt",
+          "answer": "Er hat den Plan erklärt"
+        },
+        {
+          "id": 11,
+          "type": "reorder",
+          "question": "Соберите предложение: Я этого не понял.",
+          "words": ["verstanden", "nicht", "das", "habe", "Ich"],
+          "correctOrder": ["Ich", "habе", "das", "nicht", "verstanden"]
+        },
+        {
+          "id": 12,
+          "type": "select",
+          "question": "Выберите верный ответ: Они поговорили друг с другом.",
+          "options": [
+            "Sie haben miteinander gesprochen",
+            "Sie sind miteinander gesprochen",
+            "Sie haben miteinander gesprechen"
+          ],
+          "answer": "Sie haben miteinander gesprochen"
+        },
+        {
+          "id": 13,
+          "type": "speechToText",
+          "question": "Произнесите: Я подготовил презентацию",
+          "text": "Ich habe die Präsentation vorbereitet",
+          "answer": "Ich habe die Präsentation vorbereitet"
+        },
+        {
+          "id": 14,
+          "type": "reorder",
+          "question": "Соберите: Когда ты закончил проект?",
+          "words": ["beendet", "wann", "das", "hast", "Projekt", "du", "?"],
+          "correctOrder": ["Wann", "hast", "du", "das", "Projekt", "beendet", "?"]
+        },
+        {
+          "id": 15,
+          "type": "select",
+          "question": "Выберите: Всё сработало (функционировало) хорошо.",
+          "options": [
+            "Alles hat gut funktioniert",
+            "Alles ist gut funktioniert",
+            "Alles hat gut gefunktioniert"
+          ],
+          "answer": "Alles hat gut funktioniert"
+        }
+      ]
+    },
+  {
+      "questId": "perfekt_learning_german",
+      "aliases": ["perfekt-student"],
+      "title": "Учеба: Как я учил немецкий",
+      "progress": "0/15",
+      "description": "Учили слова, читали тексты и сдавали тесты. Весь путь студента в прошедшем времени!",
+      "conditions": {
+        "goal": "Закрепить Perfekt с глаголами обучения и общения.",
+        "minCorrect": 12,
+        "requiredTasks": 15
+      },
+      "rewards": {
+        "points": 85,
+        "xp": 85
+      },
+      "tasks": [
+        {
+          "id": 1,
+          "type": "reorder",
+          "question": "Соберите предложение: Я выучил много слов.",
+          "words": ["gelernt", "Wörter", "viele", "habe", "Ich"],
+          "correctOrder": ["Ich", "habe", "viele", "Wörter", "gelernt"]
+        },
+        {
+          "id": 2,
+          "type": "select",
+          "question": "Выберите верный ответ: Ты понял правило?",
+          "options": [
+            "Hast du die Regel verstanden?",
+            "Hast du die Regel geverstanden?",
+            "Bist du die Regel verstanden?"
+          ],
+          "answer": "Hast du die Regel verstanden?"
+        },
+        {
+          "id": 3,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Ich habe das Buch gelesen",
+          "answer": "Ich habe das Buch gelesen"
+        },
+        {
+          "id": 4,
+          "type": "reorder",
+          "question": "Соберите предложение: Мы много говорили по-немецки.",
+          "words": ["Deutsch", "gesprochen", "viel", "haben", "Wir", "sind"],
+          "correctOrder": ["Wir", "haben", "viel", "Deutsch", "gesprochen"]
+        },
+        {
+          "id": 5,
+          "type": "select",
+          "question": "Выберите верный ответ: Курс начался в понедельник.",
+          "options": [
+            "Der Kurs hat am Montag angefangen",
+            "Der Kurs ist am Montag angefangen",
+            "Der Kurs hat am Montag geanfangen"
+          ],
+          "answer": "Der Kurs hat am Montag angefangen"
+        },
+        {
+          "id": 6,
+          "type": "reorder",
+          "question": "Соберите предложение: Он записал это слово.",
+          "words": ["aufgeschrieben", "Wort", "das", "hat", "Er"],
+          "correctOrder": ["Er", "hat", "das", "Wort", "aufgeschrieben"]
+        },
+        {
+          "id": 7,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Sie hat den Satz wiederholt",
+          "answer": "Sie hat den Satz wiederholt"
+        },
+        {
+          "id": 8,
+          "type": "select",
+          "question": "Выберите: Ты забыл грамматику?",
+          "options": [
+            "Hast du die Grammatik vergessen?",
+            "Bist du die Grammatik vergessen?",
+            "Hast du die Grammatik gevergessen?"
+          ],
+          "answer": "Hast du die Grammatik vergessen?"
+        },
+        {
+          "id": 9,
+          "type": "reorder",
+          "question": "Соберите упражнение: Я спросил учителя.",
+          "words": ["Lehrer", "den", "gefragt", "habe", "Ich"],
+          "correctOrder": ["Ich", "habe", "den", "Lehrer", "gefragt"]
+        },
+        {
+          "id": 10,
+          "type": "speechToText",
+          "question": "Напишите услышанное: Мы сделали упражнение",
+          "text": "Wir haben die Übung gemacht",
+          "answer": "Wir haben die Übung gemacht"
+        },
+        {
+          "id": 11,
+          "type": "reorder",
+          "question": "Соберите предложение: Ты исправил ошибку.",
+          "words": ["Fehler", "den", "korrigiert", "hast", "Du"],
+          "correctOrder": ["Du", "hast", "den", "Fehler", "korrigiert"]
+        },
+        {
+          "id": 12,
+          "type": "select",
+          "question": "Выберите верный ответ: Я посмотрел слово в словаре.",
+          "options": [
+            "Ich habe das Wort nachgeschlagen",
+            "Ich habe das Wort nachgeschlagt",
+            "Ich bin das Wort nachgeschlagen"
+          ],
+          "answer": "Ich habe das Wort nachgeschlagen"
+        },
+        {
+          "id": 13,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Er hat eine Antwort gegeben",
+          "answer": "Er hat eine Antwort gegeben"
+        },
+        {
+          "id": 14,
+          "type": "reorder",
+          "question": "Соберите предложение: Мы перевели текст.",
+          "words": ["Text", "den", "übersetzt", "haben", "Wir"],
+          "correctOrder": ["Wir", "haben", "den", "Text", "übersetzt"]
+        },
+        {
+          "id": 15,
+          "type": "select",
+          "question": "Выберите верный ответ: Я сдал экзамен(тест).",
+          "options": [
+            "Ich habe den Test bestanden",
+            "Ich bin den Test bestanden",
+            "Ich habe den Test gebestanden"
+          ],
+          "answer": "Ich habe den Test bestanden"
+        }
+      ]
+    },
+  {
+      "questId": "perfekt_party_friends",
+      "aliases": ["perfekt-social"],
+      "title": "Вечеринка: Танцы, музыка, драйв",
+      "progress": "0/15",
+      "description": "Празднуем, знакомимся и вызываем такси. Весь вечер в формате Perfekt!",
+      "conditions": {
+        "goal": "Отработать Perfekt в контексте отдыха с друзьями.",
+        "minCorrect": 12,
+        "requiredTasks": 15
+      },
+      "rewards": {
+        "points": 90,
+        "xp": 90
+      },
+      "tasks": [
+        {
+          "id": 1,
+          "type": "reorder",
+          "question": "Соберите предложение: Я отпраздновал день рождения.",
+          "words": ["gefeiert", "Geburtstag", "meinen", "habe", "Ich"],
+          "correctOrder": ["Ich", "habe", "meinen", "Geburtstag", "gefeiert"]
+        },
+        {
+          "id": 2,
+          "type": "select",
+          "question": "Выберите верный ответ: Ты пригласил своих друзей?",
+          "options": [
+            "Hast du deine Freunde eingeladen?",
+            "Bist du deine Freunde eingeladen?",
+            "Hast du deine Freunde ge-einladen?"
+          ],
+          "answer": "Hast du deine Freunde eingeladen?"
+        },
+        {
+          "id": 3,
+          "type": "speechToText",
+          "question": "Напишите услышанное: Мы принесли пиво",
+          "text": "Wir haben Bier mitgebracht",
+          "answer": "Wir haben Bier mitgebracht"
+        },
+        {
+          "id": 4,
+          "type": "reorder",
+          "question": "Соберите предложение: Я танцевал всю ночь.",
+          "words": ["Nacht", "ganze", "die", "getanzt", "habe", "Ich"],
+          "correctOrder": ["Ich", "habe", "die", "ganze", "Nacht", "getanzt"]
+        },
+        {
+          "id": 5,
+          "type": "select",
+          "question": "Выберите верный овтет: Ты познакомился с новыми людьми?",
+          "options": [
+            "Hast du neue Leute kennengelernt?",
+            "Bist du neue Leute kennengelernt?",
+            "Hast du neue Leute gekennenlernt?"
+          ],
+          "answer": "Hast du neue Leute kennengelernt?"
+        },
+        {
+          "id": 6,
+          "type": "reorder",
+          "question": "Соберите предложение: Мы много смеялись.",
+          "words": ["gelacht", "Wir", "viel", "haben"],
+          "correctOrder": ["Wir", "haben", "viel", "gelacht"]
+        },
+        {
+          "id": 7,
+          "type": "speechToText",
+          "question": "напишите услышанное",
+          "text": "Wir haben viel Spaß gehabt",
+          "answer": "Wir haben viel Spaß gehabt"
+        },
+        {
+          "id": 8,
+          "type": "select",
+          "question": "Выберите верный ответ: Я вызвал такси.",
+          "options": [
+            "Ich habe ein Taxi gerufen",
+            "Ich bin ein Taxi gerufen",
+            "Ich habe ein Taxi geruft"
+          ],
+          "answer": "Ich habe ein Taxi gerufen"
+        },
+        {
+          "id": 9,
+          "type": "reorder",
+          "question": "Соберите предложение: Она пришла в полночь.",
+          "words": ["Mitternacht", "um", "gekommen", "ist", "Sie"],
+          "correctOrder": ["Sie", "ist", "um", "Mitternacht", "gekommen"]
+        },
+        {
+          "id": 10,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Wir haben drei Stunden geredet",
+          "answer": "Wir haben  drei Stunden geredet",
+          "accept": [
+            "Wir haben drei Stunden geredet",
+            "Wir haben 3 Stunden geredet"
+          ]
+        },
+        {
+          "id": 11,
+          "type": "reorder",
+          "question": "Соберите вопрос: Вы остались до конца?",
+          "words": ["bis", "geblieben", "ihr", "Seid", "Ende", "zum", "sind"],
+          "correctOrder": ["Seid", "ihr", "bis", "zum", "Ende", "geblieben"]
+        },
+        {
+          "id": 12,
+          "type": "select",
+          "question": "Выберите верный ответ: Я потерял свой телефон.",
+          "options": [
+            "Ich habe mein Handy verloren",
+            "Ich bin mein Handy verloren",
+            "Ich habe mein Handy verliert"
+          ],
+          "answer": "Ich habe mein Handy verloren"
+        },
+        {
+          "id": 13,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Ich habe einen alten Freund getroffen",
+          "answer": "Ich habe einen alten Freund getroffen"
+        },
+        {
+          "id": 14,
+          "type": "reorder",
+          "question": "Соберите предложение: Я поехал домой на автобусе.",
+          "words": ["Bus", "dem", "mit", "nach Hause", "gefahren", "bin", "Ich"],
+          "correctOrder": ["Ich", "bin", "mit", "dem", "Bus", "nach Hause", "gefahren"]
+        },
+        {
+          "id": 15,
+          "type": "select",
+          "question": "Выберите верный ответ: Вечеринка закончилась поздно.",
+          "options": [
+            "Die Party hat spät aufgehört",
+            "Die Party ist spät aufgehört",
+            "Die Party hat spät geaufhört"
+          ],
+          "answer": "Die Party hat spät aufgehört"
+        }
+      ]
+    },
+  {
+      "questId": "perfekt_city_transport",
+      "aliases": ["perfekt-city"],
+      "title": "Город: Где мой автобус?",
+      "progress": "0/15",
+      "description": "Покупаем билеты, меняем поезда и ищем дорогу к Ратуше. Всё в прошедшем времени!",
+      "conditions": {
+        "goal": "Закрепить Perfekt в контексте передвижения по городу.",
+        "minCorrect": 12,
+        "requiredTasks": 15
+      },
+      "rewards": {
+        "points": 100,
+        "xp": 100
+      },
+      "tasks": [
+        {
+          "id": 1,
+          "type": "reorder",
+          "question": "Соберите: Я опоздал на автобус (пропустил его).",
+          "words": ["verpasst", "Bus", "den", "habe", "Ich"],
+          "correctOrder": ["Ich", "habe", "den", "Bus", "verpasst"]
+        },
+        {
+          "id": 2,
+          "type": "select",
+          "question": "Выберите: Мы вышли на вокзале.",
+          "options": [
+            "Wir sind am Bahnhof ausgestiegen",
+            "Wir haben am Bahnhof ausgestiegen",
+            "Wir sind am Bahnhof aussteigen"
+          ],
+          "answer": "Wir sind am Bahnhof ausgestiegen"
+        },
+        {
+          "id": 3,
+          "type": "speechToText",
+          "question": "Напишите услышанное: Я купил билет",
+          "text": "Ich habe eine Fahrkarte gekauft",
+          "answer": "Ich habe eine Fahrkarte gekauft"
+        },
+        {
+          "id": 4,
+          "type": "reorder",
+          "question": "Соберите: Поезд приехал поздно.",
+          "words": ["spät", "ist", "angekommen", "Der Zug"],
+          "correctOrder": ["Der Zug", "ist", "spät", "angekommen"]
+        },
+        {
+          "id": 5,
+          "type": "select",
+          "question": "Выберите: Ты нашел музей?",
+          "options": [
+            "Hast du das Museum gefunden?",
+            "Bist du das Museum gefunden?",
+            "Hast du das Museum gefinden?"
+          ],
+          "answer": "Hast du das Museum gefunden?"
+        },
+        {
+          "id": 6,
+          "type": "reorder",
+          "question": "Соберите: Я пересел на метро.",
+          "words": ["U-Bahn", "die", "in", "bin", "Ich", "umgestiegen"],
+          "correctOrder": ["Ich", "bin", "in", "die", "U-Bahn", "umgestiegen"]
+        },
+        {
+          "id": 7,
+          "type": "speechToText",
+          "question": "Произнесите: Мы прошли через парк",
+          "text": "Wir sind durch den Park gelaufen",
+          "answer": "Wir sind durch den Park gelaufen"
+        },
+        {
+          "id": 8,
+          "type": "select",
+          "question": "Выберите: Он поехал в центр.",
+          "options": [
+            "Er ist ins Zentrum gefahren",
+            "Er hat ins Zentrum gefahren",
+            "Er ist ins Zentrum gefahrt"
+          ],
+          "answer": "Er ist ins Zentrum gefahren"
+        },
+        {
+          "id": 9,
+          "type": "reorder",
+          "question": "Соберите: Я забыл свой билет.",
+          "words": ["vergessen", "Ticket", "mein", "habe", "Ich"],
+          "correctOrder": ["Ich", "habe", "mein", "Ticket", "vergessen"]
+        },
+        {
+          "id": 10,
+          "type": "speechToText",
+          "question": "Напишите услышанное: Такси стоило 20 евро",
+          "text": "Das Taxi hat 20 Euro gekostet",
+          "answer": "Das Taxi hat 20 Euro gekostet"
+        },
+        {
+          "id": 11,
+          "type": "reorder",
+          "question": "Соберите: Мы долго искали дорогу.",
+          "words": ["Weg", "den", "haben", "Wir", "lange", "gesucht"],
+          "correctOrder": ["Wir", "haben", "lange", "den", "Weg", "gesucht"]
+        },
+        {
+          "id": 12,
+          "type": "select",
+          "question": "Выберите: Я припарковал машину.",
+          "options": [
+            "Ich habe das Auto geparkt",
+            "Ich bin das Auto geparkt",
+            "Ich habe das Auto geparken"
+          ],
+          "answer": "Ich habe das Auto geparkt"
+        },
+        {
+          "id": 13,
+          "type": "speechToText",
+          "question": "Произнесите: Ты видел собор?",
+          "text": "Hast du den Dom gesehen?",
+          "answer": "Hast du den Dom gesehen?"
+        },
+        {
+          "id": 14,
+          "type": "reorder",
+          "question": "Соберите: Я заблудился в городе.",
+          "words": ["verirrt", "Stadt", "der", "in", "mich", "habe", "Ich"],
+          "correctOrder": ["Ich", "habe", "mich", "in", "der", "Stadt", "verirrt"]
+        },
+        {
+          "id": 15,
+          "type": "select",
+          "question": "Выберите: Мы стояли на остановке.",
+          "options": [
+            "Wir haben an der Haltestelle gestanden",
+            "Wir sind an der Haltestelle gestanden",
+            "Wir haben an der Haltestelle gestanden sein"
+          ],
+          "answer": "Wir haben an der Haltestelle gestanden"
+        }
+      ]
+    },
+  {
+      "questId": "perfekt_family_visit",
+      "aliases": ["perfekt-family"],
+      "title": "Семья: Родня и гости",
+      "progress": "0/15",
+      "description": "Навещаем родителей, дарим подарки и болтаем о жизни. Всё в прошедшем времени!",
+      "conditions": {
+        "goal": "Отработать Perfekt на тему семейных отношений и встреч.",
+        "minCorrect": 12,
+        "requiredTasks": 15
+      },
+      "rewards": {
+        "points": 120,
+        "xp": 120
+      },
+      "tasks": [
+        {
+          "id": 1,
+          "type": "reorder",
+          "question": "Соберите: Я навестил своих родителей.",
+          "words": ["besucht", "meine", "Eltern", "habe", "Ich"],
+          "correctOrder": ["Ich", "habe", "meine", "Eltern", "besucht"]
+        },
+        {
+          "id": 2,
+          "type": "select",
+          "question": "Выберите: Мы посмотрели старые фотографии.",
+          "options": [
+            "Wir haben alte Fotos gesehen",
+            "Wir sind alte Fotos gesehen",
+            "Wir haben alte Fotos geseht"
+          ],
+          "answer": "Wir haben alte Fotos gesehen"
+        },
+        {
+          "id": 3,
+          "type": "speechToText",
+          "question": "Напишите услышанное: Я принес цветы",
+          "text": "Ich habe Blumen mitgebracht",
+          "answer": "Ich habe Blumen mitgebracht"
+        },
+        {
+          "id": 4,
+          "type": "reorder",
+          "question": "Соберите: Он подарил мне книгу.",
+          "words": ["Buch", "ein", "mir", "hat", "Er", "geschenkt"],
+          "correctOrder": ["Er", "hat", "mir", "ein", "Buch", "geschenkt"]
+        },
+        {
+          "id": 5,
+          "type": "select",
+          "question": "Выберите: Мы долго разговаривали.",
+          "options": [
+            "Wir haben lange gesprochen",
+            "Wir sind lange gesprochen",
+            "Wir haben lange gesprechen"
+          ],
+          "answer": "Wir haben lange gesprochen"
+        },
+        {
+          "id": 6,
+          "type": "reorder",
+          "question": "Соберите: Ты помог брату?",
+          "words": ["Bruder", "dem", "geholfen", "hast", "Du", "?"],
+          "correctOrder": ["Hast", "du", "dem", "Bruder", "geholfen", "?"]
+        },
+        {
+          "id": 7,
+          "type": "speechToText",
+          "question": "Произнесите: Она рассказала историю",
+          "text": "Sie hat eine Geschichte erzählt",
+          "answer": "Sie hat eine Geschichte erzählt"
+        },
+        {
+          "id": 8,
+          "type": "select",
+          "question": "Выберите: Мы пошли гулять.",
+          "options": [
+            "Wir sind spazieren gegangen",
+            "Wir haben spazieren gegangen",
+            "Wir sind spazieren gehen"
+          ],
+          "answer": "Wir sind spazieren gegangen"
+        },
+        {
+          "id": 9,
+          "type": "reorder",
+          "question": "Соберите: Я получил письмо.",
+          "words": ["Brief", "einen", "bekommen", "habe", "Ich"],
+          "correctOrder": ["Ich", "habe", "einen", "Brief", "bekommen"]
+        },
+        {
+          "id": 10,
+          "type": "speechToText",
+          "question": "Напишите услышанное: Мой друг зашел в гости",
+          "text": "Mein Freund ist vorbeigekommen",
+          "answer": "Mein Freund ist vorbeigekommen"
+        },
+        {
+          "id": 11,
+          "type": "reorder",
+          "question": "Соберите: Я позвонил дедушке.",
+          "words": ["Opa", "meinen", "angerufen", "habe", "Ich"],
+          "correctOrder": ["Ich", "habe", "meinen", "Opa", "angerufen"]
+        },
+        {
+          "id": 12,
+          "type": "select",
+          "question": "Выберите: Нам всё понравилось.",
+          "options": [
+            "Es hat uns alles gefallen",
+            "Es ist uns alles gefallen",
+            "Es hat uns alles gefallt"
+          ],
+          "answer": "Es hat uns alles gefallen"
+        },
+        {
+          "id": 13,
+          "type": "speechToText",
+          "question": "Произнесите: Я поблагодарил его",
+          "text": "Ich habe mich bedankt",
+          "answer": "Ich habe mich bedankt"
+        },
+        {
+          "id": 14,
+          "type": "reorder",
+          "question": "Соберите: Мы встретили тетю.",
+          "words": ["Tante", "die", "getroffen", "haben", "Wir"],
+          "correctOrder": ["Wir", "haben", "die", "Tante", "getroffen"]
+        },
+        {
+          "id": 15,
+          "type": "select",
+          "question": "Выберите: Он остался дома.",
+          "options": [
+            "Er ist zu Hause geblieben",
+            "Er hat zu Hause geblieben",
+            "Er ist zu Hause bleiben"
+          ],
+          "answer": "Er ist zu Hause geblieben"
+        }
+      ]
+    },
+  {
+      "questId": "perfekt_weekend_joy",
+      "aliases": ["perfekt-relax"],
+      "title": "Выходные: Время для себя",
+      "progress": "0/15",
+      "description": "Гуляем, читаем, занимаемся спортом и наслаждаемся жизнью. Никаких проблем, только Perfekt!",
+      "conditions": {
+        "goal": "Закрепить Perfekt на позитивных и повседневных глаголах.",
+        "minCorrect": 12,
+        "requiredTasks": 15
+      },
+      "rewards": {
+        "points": 150,
+        "xp": 150
+      },
+      "tasks": [
+        {
+          "id": 1,
+          "type": "reorder",
+          "question": "Соберите предложение: Я посмотрел отличный фильм.",
+          "words": ["einen", "tollen", "Film", "habe", "Ich", "gesehen"],
+          "correctOrder": ["Ich", "habе", "einen", "tollen", "Film", "gesehen"]
+        },
+        {
+          "id": 2,
+          "type": "select",
+          "question": "Выберите верный ответ: Мы пошли в парк.",
+          "options": [
+            "Wir sind in den Park gegangen",
+            "Wir haben in den Park gegangen",
+            "Wir sind in den Park gehen"
+          ],
+          "answer": "Wir sind in den Park gegangen"
+        },
+        {
+          "id": 3,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Ich habe ein interessantes Buch gelesen",
+          "answer": "Ich habe ein interessantes Buch gelesen"
+        },
+        {
+          "id": 4,
+          "type": "reorder",
+          "question": "Соберите предложение: Он играл на гитаре.",
+          "words": ["Gitarre", "gespielt", "hat", "Er"],
+          "correctOrder": ["Er", "hat", "Gitarre", "gespielt"]
+        },
+        {
+          "id": 5,
+          "type": "select",
+          "question": "Выберите верный ответ: Ты слушал музыку?",
+          "options": [
+            "Hast du Musik gehört?",
+            "Bist du Musik gehört?",
+            "Hast du Musik gehort?"
+          ],
+          "answer": "Hast du Musik gehört?"
+        },
+        {
+          "id": 6,
+          "type": "reorder",
+          "question": "Соберите предложение: Она приготовила вкусный ужин.",
+          "words": ["leckeres", "haben", "Wir", "gekocht", "Abendessen", "ein", "hat"],
+          "correctOrder": ["Wir", "haben", "ein", "leckeres", "Abendessen", "gekocht"]
+        },
+        {
+          "id": 7,
+          "type": "speechToText",
+          "question": "Произнесите: Мы встретили друзей",
+          "text": "Wir haben Freunde getroffen",
+          "answer": "Wir haben Freunde getroffen"
+        },
+        {
+          "id": 8,
+          "type": "select",
+          "question": "Выберите: Я сделал много фотографий.",
+          "options": [
+            "Ich habe viele Fotos gemacht",
+            "Ich bin viele Fotos gemacht",
+            "Ich habe viele Fotos gemachen"
+          ],
+          "answer": "Ich habe viele Fotos gemacht"
+        },
+        {
+          "id": 9,
+          "type": "reorder",
+          "question": "Соберите: Мы катались на велосипеде.",
+          "words": ["Rad", "sind", "gefahren", "Wir"],
+          "correctOrder": ["Wir", "sind", "Rad", "gefahren"]
+        },
+        {
+          "id": 10,
+          "type": "speechToText",
+          "question": "Напишите услышанное: Я хорошо выспался",
+          "text": "Ich habe gut geschlafen",
+          "answer": "Ich habe gut geschlafen"
+        },
+        {
+          "id": 11,
+          "type": "reorder",
+          "question": "Соберите: Мы посетили музей.",
+          "words": ["Museum", "ein", "besucht", "haben", "Wir"],
+          "correctOrder": ["Wir", "haben", "ein", "Museum", "besucht"]
+        },
+        {
+          "id": 12,
+          "type": "select",
+          "question": "Выберите: Ты нарисовал картину?",
+          "options": [
+            "Hast du ein Bild gemalt?",
+            "Bist du ein Bild gemalt?",
+            "Hast du ein Bild gemalen?"
+          ],
+          "answer": "Hast du ein Bild gemalt?"
+        },
+        {
+          "id": 13,
+          "type": "speechToText",
+          "question": "Произнесите: Я гулял в лесу",
+          "text": "Ich bin im Wald spazieren gegangen",
+          "answer": "Ich bin im Wald spazieren gegangen"
+        },
+        {
+          "id": 14,
+          "type": "reorder",
+          "question": "Соберите: Он спел песню.",
+          "words": ["Lied", "ein", "gesungen", "hat", "Er"],
+          "correctOrder": ["Er", "hat", "ein", "Lied", "gesungen"]
+        },
+        {
+          "id": 15,
+          "type": "select",
+          "question": "Выберите: Я занимался спортом.",
+          "options": [
+            "Ich habe Sport gemacht",
+            "Ich bin Sport gemacht",
+            "Ich habe Sport gemachen"
+          ],
+          "answer": "Ich habe Sport gemacht"
         }
       ]
     }
-  ]
+]
