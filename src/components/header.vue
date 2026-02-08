@@ -6,12 +6,13 @@
       <SignIn v-if="showAuth" @close-auth-form="closeAuth"/>
     </transition>
     <ModalDev
+        v-if="modalConfig"
         :visible="showDevModal"
-        @close="closeDevModal"
-        :title="modalConfig.title"
+        :title="modalConfig.title || ''"
         :img="modalConfig.img"
-        :text="modalConfig.text"
+        :text="modalConfig.text || ''"
         :button="modalConfig.isEvent ? modalConfig.button : null"
+        @close="closeDevModal"
         @button="onDevModalButton"
     />
     <div class="header-container">
@@ -174,7 +175,7 @@ const modalConfig = computed(() => {
         title: t('inDevelopment.title'),
         text: t('inDevelopment.sub'),
         button: null,
-        img: Dev,
+        img: Dev
       }
     case 'eventLocked':
       return {
@@ -182,7 +183,7 @@ const modalConfig = computed(() => {
         title: t('eventLocked.title'),
         text: t('eventLocked.text'),
         button: {label: t('eventLocked.btn'), to: '/calendar'},
-        img: PadLock,
+        img: PadLock
       }
     default:
       return {isEvent: false, title: '', text: '', button: null, img: Dev}
