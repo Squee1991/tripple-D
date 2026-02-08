@@ -1,0 +1,431 @@
+[
+  {
+      "questId": "valley_dativ_pronouns",
+      "aliases": ["dativ-pronouns"],
+      "title": "Долина действий: Мне, тебе, ему",
+      "progress": "0/15",
+      "description": "Отрабатываем Dativ с личными местоимениями. Кому мы помогаем и кому дарим подарки?",
+      "conditions": {
+        "goal": "Закрепить местоимения mir, dir, ihm, ihr, uns, euch, ihnen.",
+        "minCorrect": 12,
+        "requiredTasks": 15
+      },
+      "rewards": {
+        "points": 30,
+        "xp": 30
+      },
+      "tasks": [
+        {
+          "id": 1,
+          "type": "reorder",
+          "question": "Соберите предложение: Я помогаю тебе.",
+          "words": ["dir", "helfe", "Ich", "dich"],
+          "correctOrder": ["Ich", "helfe", "dir"]
+        },
+        {
+          "id": 2,
+          "type": "select",
+          "question": "Выберите: Ты можешь мне помочь?",
+          "options": [
+            "Kannst du mir helfen?",
+            "Kannst du mich helfen?",
+            "Kannst du mein helfen?"
+          ],
+          "answer": "Kannst du mir helfen?"
+        },
+        {
+          "id": 3,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Ich glaube dir",
+          "answer": "Ich glaube dir"
+        },
+        {
+          "id": 4,
+          "type": "reorder",
+          "question": "Соберите предложение: Мы благодарим вас",
+          "words": ["euch", "danken", "Wir", "ihr"],
+          "correctOrder": ["Wir", "danken", "euch"]
+        },
+        {
+          "id": 5,
+          "type": "select",
+          "question": "Выберите верный ответ: Это принадлежит ему",
+          "options": [
+            "Das gehört ihm",
+            "Das gehört ihn",
+            "Das gehört er"
+          ],
+          "answer": "Das gehört ihm"
+        },
+        {
+          "id": 6,
+          "type": "reorder",
+          "question": "Соберите: Она дарит мне книгу.",
+          "words": ["mir", "Buch", "ein", "schenkt", "Sie"],
+          "correctOrder": ["Sie", "schenkt", "mir", "ein", "Buch"]
+        },
+        {
+          "id": 7,
+          "type": "speechToText",
+          "question": "Произнесите: Как у тебя дела? (Как тебе идет?)",
+          "text": "Wie geht es dir?",
+          "answer": "Wie geht es dir?"
+        },
+        {
+          "id": 8,
+          "type": "select",
+          "question": "Выберите: Я отвечаю ей (ihr).",
+          "options": [
+            "Ich antworte ihr",
+            "Ich antworte sie",
+            "Ich antworte ihrs"
+          ],
+          "answer": "Ich antworte ihr"
+        },
+        {
+          "id": 9,
+          "type": "reorder",
+          "question": "Соберите: Ты должен нам помочь.",
+          "words": ["helfen", "uns", "musst", "Du"],
+          "correctOrder": ["Du", "musst", "uns", "helfen"]
+        },
+        {
+          "id": 10,
+          "type": "speechToText",
+          "question": "Напишите услышанное: Это мне нравится",
+          "text": "Das gefällt mir",
+          "answer": "Das gefällt mir"
+        },
+        {
+          "id": 11,
+          "type": "reorder",
+          "question": "Соберите: Я покупаю тебе кофе.",
+          "words": ["dir", "Kaffee", "einen", "kaufe", "Ich"],
+          "correctOrder": ["Ich", "kaufe", "dir", "einen", "Kaffee"]
+        },
+        {
+          "id": 12,
+          "type": "select",
+          "question": "Выберите: Вы (вежливо) можете им (ihnen) помочь?",
+          "options": [
+            "Können Sie ihnen helfen?",
+            "Können Sie sie helfen?",
+            "Können Sie ihr helfen?"
+          ],
+          "answer": "Können Sie ihnen helfen?"
+        },
+        {
+          "id": 13,
+          "type": "speechToText",
+          "question": "Произнесите: Он дает мне этот ключ",
+          "text": "Er gibt mir diesen Schlüssel",
+          "answer": "Er gibt mir diesen Schlüssel"
+        },
+        {
+          "id": 14,
+          "type": "reorder",
+          "question": "Соберите: Я хочу принести вам (euch) чай.",
+          "words": ["bringen", "Tee", "einen", "euch", "will", "Ich"],
+          "correctOrder": ["Ich", "will", "euch", "einen", "Tee", "bringen"]
+        },
+        {
+          "id": 15,
+          "type": "select",
+          "question": "Выберите: Тебе следует (ты должен) ей ответить.",
+          "options": [
+            "Du sollst ihr antworten",
+            "Du sollst sie antworten",
+            "Du sollst ihm antworten"
+          ],
+          "answer": "Du sollst ihr antworten"
+        }
+      ]
+    },
+  {
+      "questId": "valley_dativ_prepositions",
+      "aliases": ["dativ-prep"],
+      "title": "Долина действий: С кем и Куда?",
+      "progress": "0/15",
+      "description": "Используем предлоги Dativ, чтобы описать свои передвижения и планы.",
+      "conditions": {
+        "goal": "Отработать предлоги mit, nach, zu, von, aus, bei, seit.",
+        "minCorrect": 12,
+        "requiredTasks": 15
+      },
+      "rewards": {
+        "points": 35,
+        "xp": 35
+      },
+      "tasks": [
+        {
+          "id": 1,
+          "type": "reorder",
+          "question": "Соберите: Я иду с другом (der Freund).",
+          "words": ["mit", "dem", "Freund", "gehe", "Ich"],
+          "correctOrder": ["Ich", "gehe", "mit", "dem", "Freund"]
+        },
+        {
+          "id": 2,
+          "type": "select",
+          "question": "Выберите: Я иду к врачу (der Arzt).",
+          "options": [
+            "Ich gehe zum Arzt",
+            "Ich gehe zu den Arzt",
+            "Ich gehe zur Arzt"
+          ],
+          "answer": "Ich gehe zum Arzt"
+        },
+        {
+          "id": 3,
+          "type": "speechToText",
+          "question": "Напишите услышанное: Я прихожу с работы (die Arbeit)",
+          "text": "Ich komme von der Arbeit",
+          "answer": "Ich komme von der Arbeit"
+        },
+        {
+          "id": 4,
+          "type": "reorder",
+          "question": "Соберите: Он живет у родителей (die Eltern).",
+          "words": ["Eltern", "den", "bei", "wohnt", "Er"],
+          "correctOrder": ["Er", "wohnt", "bei", "den", "Eltern"]
+        },
+        {
+          "id": 5,
+          "type": "select",
+          "question": "Выберите: После курса (der Kurs) мы идем домой.",
+          "options": [
+            "Nach dem Kurs gehen wir nach Hause",
+            "Nach den Kurs gehen wir nach Hause",
+            "Nach der Kurs gehen wir nach Hause"
+          ],
+          "answer": "Nach dem Kurs gehen wir nach Hause"
+        },
+        {
+          "id": 6,
+          "type": "reorder",
+          "question": "Соберите: Я еду на вокзал (der Bahnhof).",
+          "words": ["Bahnhof", "zum", "fahre", "Ich"],
+          "correctOrder": ["Ich", "fahre", "zum", "Bahnhof"]
+        },
+        {
+          "id": 7,
+          "type": "speechToText",
+          "question": "Произнесите: Она учится уже месяц (seit einem Monat)",
+          "text": "Sie lernt seit einem Monat",
+          "answer": "Sie lernt seit einem Monat"
+        },
+        {
+          "id": 8,
+          "type": "select",
+          "question": "Выберите: Из дома (das Haus).",
+          "options": [
+            "Aus dem Haus",
+            "Aus den Haus",
+            "Aus der Haus"
+          ],
+          "answer": "Aus dem Haus"
+        },
+        {
+          "id": 9,
+          "type": "reorder",
+          "question": "Соберите: Я у подруги (die Freundin).",
+          "words": ["einer", "Freundin", "bei", "bin", "Ich"],
+          "correctOrder": ["Ich", "bin", "bei", "einer", "Freundin"]
+        },
+        {
+          "id": 10,
+          "type": "speechToText",
+          "question": "Напишите услышанное: Я иду в супермаркет (zu + dem)",
+          "text": "Ich gehe zum Supermarkt",
+          "answer": "Ich gehe zum Supermarkt"
+        },
+        {
+          "id": 11,
+          "type": "reorder",
+          "question": "Соберите: Мы идем из города (die Stadt).",
+          "words": ["Stadt", "der", "aus", "kommen", "Wir"],
+          "correctOrder": ["Wir", "kommen", "aus", "der", "Stadt"]
+        },
+        {
+          "id": 12,
+          "type": "select",
+          "question": "Выберите: С моим братом (der Bruder).",
+          "options": [
+            "Mit meinem Bruder",
+            "Mit meinen Bruder",
+            "Mit mein Bruder"
+          ],
+          "answer": "Mit meinem Bruder"
+        },
+        {
+          "id": 13,
+          "type": "speechToText",
+          "question": "Произнесите: Я говорю с шефом",
+          "text": "Ich spreche mit dem Chef",
+          "answer": "Ich spreche mit dem Chef"
+        },
+        {
+          "id": 14,
+          "type": "reorder",
+          "question": "Соберите: Он идет в библиотеку (zu + die).",
+          "words": ["Bibliothek", "zur", "geht", "Er"],
+          "correctOrder": ["Er", "geht", "zur", "Bibliothek"]
+        },
+        {
+          "id": 15,
+          "type": "select",
+          "question": "Выберите: С одной недели (уже неделю / seit).",
+          "options": [
+            "Seit einer Woche",
+            "Seit eine Woche",
+            "Seit einen Woche"
+          ],
+          "answer": "Seit einer Woche"
+        }
+      ]
+    },
+  {
+      "questId": "valley_akk_prepositions",
+      "aliases": ["akk-prep"],
+      "title": "Долина действий: Для и Сквозь",
+      "progress": "0/15",
+      "description": "Отрабатываем предлоги für, ohne, durch, gegen, um. Только прямой объект, только Akkusativ.",
+      "conditions": {
+        "goal": "Закрепить использование Akkusativ после специфических предлогов.",
+        "minCorrect": 12,
+        "requiredTasks": 15
+      },
+      "rewards": {
+        "points": 40,
+        "xp": 40
+      },
+      "tasks": [
+        {
+          "id": 1,
+          "type": "reorder",
+          "question": "Соберите: Это для тебя.",
+          "words": ["für", "Das", "dich", "ist", "dir"],
+          "correctOrder": ["Das", "ist", "für", "dich"]
+        },
+        {
+          "id": 2,
+          "type": "select",
+          "question": "Выберите: Кофе без сахара",
+          "options": [
+            "Kaffee ohne den Zucker",
+            "Kaffee ohne dem Zucker",
+            "Kaffee ohne der Zucker"
+          ],
+          "answer": "Kaffee ohne den Zucker"
+        },
+        {
+          "id": 3,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Wir gehen durch den Park",
+          "answer": "Wir gehen durch den Park"
+        },
+        {
+          "id": 4,
+          "type": "reorder",
+          "question": "Соберите: Подарок для отца",
+          "words": ["Vater", "den", "Geschenk", "для", "für", "Das", "dem"],
+          "correctOrder": ["Das", "Geschenk", "für", "den", "Vater"]
+        },
+        {
+          "id": 5,
+          "type": "select",
+          "question": "Выберите: Против моего брата (der Bruder).",
+          "options": [
+            "Gegen meinen Bruder",
+            "Gegen meinem Bruder",
+            "Gegen meiner Bruder"
+          ],
+          "answer": "Gegen meinen Bruder"
+        },
+        {
+          "id": 6,
+          "type": "reorder",
+          "question": "Соберите: Я иду без ключа",
+          "words": ["ohne", "Schlüssel", "den", "gehe", "Ich"],
+          "correctOrder": ["Ich", "gehe", "ohne", "den", "Schlüssel"]
+        },
+        {
+          "id": 7,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Das ist für meine Mutter",
+          "answer": "Das ist für meine Mutter"
+        },
+        {
+          "id": 8,
+          "type": "select",
+          "question": "Выберите: Вокруг сада (der Garten).",
+          "options": [
+            "Um den Garten",
+            "Um dem Garten",
+            "Um der Garten"
+          ],
+          "answer": "Um den Garten"
+        },
+        {
+          "id": 9,
+          "type": "reorder",
+          "question": "Соберите предложение: Он едет через город",
+          "words": ["Stadt", "die", "durch", "fährt", "Er"],
+          "correctOrder": ["Er", "fährt", "durch", "die", "Stadt"]
+        },
+        {
+          "id": 10,
+          "type": "speechToText",
+          "question": "Напишите услышанное",
+          "text": "Wir gehen um den See",
+          "answer": "Wir gehen um den See"
+        },
+        {
+          "id": 11,
+          "type": "reorder",
+          "question": "Соберите: Я покупаю это для своего сына",
+          "words": ["meinen", "Sohn", "для", "für", "das", "kaufe", "Ich"],
+          "correctOrder": ["Ich", "kaufe", "das", "für", "meinen", "Sohn"]
+        },
+        {
+          "id": 12,
+          "type": "select",
+          "question": "Выберите: Около (против) вечера / К вечеру (der Abend).",
+          "options": [
+            "Gegen den Abend",
+            "Gegen dem Abend",
+            "Gegen der Abend"
+          ],
+          "answer": "Gegen den Abend"
+        },
+        {
+          "id": 13,
+          "type": "speechToText",
+          "question": "Произнесите: Без тебя я не пойду",
+          "text": "Ohne dich gehe ich nicht",
+          "answer": "Ohne dich gehe ich nicht"
+        },
+        {
+          "id": 14,
+          "type": "reorder",
+          "question": "Соберите: Цветы для тебя",
+          "words": ["Blumen", "für", "euch", "Die", "dir"],
+          "correctOrder": ["Die", "Blumen", "für", "dich"]
+        },
+        {
+          "id": 15,
+          "type": "select",
+          "question": "Выберите: Мы идем через лес",
+          "options": [
+            "Wir gehen durch den Wald",
+            "Wir gehen durch dem Wald",
+            "Wir gehen durch der Wald"
+          ],
+          "answer": "Wir gehen durch den Wald"
+        }
+      ]
+    }
+]

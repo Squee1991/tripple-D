@@ -1,8 +1,21 @@
-import KindOnSki from "assets/images/speak-themen/people/kind on ski.jpg";
-import KindeRandSnowMan from "assets/images/speak-themen/people/KinderandSnowMan.jpg";
-import KindImSchnee from "assets/images/speak-themen/people/KindimSchnee.jpg";
-import Hockey from "assets/images/speak-themen/people/Hockey.jpg";
-import WomenInCaffe from "assets/images/speak-themen/people/WomenInCafe.jpg";
+import KindOnSki from "assets/images/speak-themen/winter/kind on ski.jpg";
+import KindeRandSnowMan from "assets/images/speak-themen/winter/KinderandSnowMan.jpg";
+import KindImSnow from "assets/images/speak-themen/winter/KindimSchnee.jpg";
+import Hockey from "assets/images/speak-themen/winter/Hockey.jpg";
+import WomenInCaffe from "assets/images/speak-themen/winter/WomenInCafe.jpg";
+import Fishing from "assets/images/speak-themen/winter/fishing.jpg";
+import AutoWindow from 'assets/images/speak-themen/winter/AutoWindow.jpg'
+import SnowBall from 'assets/images/speak-themen/winter/SnowBall.jpg'
+import BonFire from 'assets/images/speak-themen/winter/Bonfire.jpg'
+import Tree from 'assets/images/speak-themen/winter/Tree.jpg'
+import Snow from 'assets/images/speak-themen/winter/Snow.jpg'
+import Sled from 'assets/images/speak-themen/winter/sled.jpg'
+import Ski from 'assets/images/speak-themen/winter/Ski.jpg'
+import Igloo from 'assets/images/speak-themen/winter/Iglu.jpg'
+import Birds from 'assets/images/speak-themen/winter/Birds.jpg'
+import Market from 'assets/images/speak-themen/winter/Market.jpg'
+
+
 import Cat from "assets/images/speak-themen/animals/cat.png";
 import Fox from "assets/images/speak-themen/animals/Fox-read-book.png";
 import DogHiding from "assets/images/speak-themen/animals/dog-hiding.png";
@@ -83,6 +96,14 @@ import WashCar from 'assets/images/speak-themen/home and life/wash_car.jpg'
 import Mow_lawn from 'assets/images/speak-themen/home and life/mow_lawn.jpg'
 import FeedDog from 'assets/images/speak-themen/home and life/feed the dog.jpg'
 
+import Drawing from 'assets/images/speak-themen/school/drawing.jpg'
+import Music from 'assets/images/speak-themen/school/music.jpg'
+import SchoolBreak from 'assets/images/speak-themen/school/school-break.jpg'
+import StartSchool from 'assets/images/speak-themen/school/start school.jpg'
+import Library from 'assets/images/speak-themen/school/library.jpg'
+import Gym from 'assets/images/speak-themen/school/gym.jpg'
+import DivingRoom from 'assets/images/speak-themen/school/dining room.jpg'
+import RobotClub from 'assets/images/speak-themen/school/robotics club.jpg'
 
 export const topics = [
 	{
@@ -112,11 +133,11 @@ export const topics = [
 			},
 			{
 				id: 3,
-				image: KindImSchnee,
+				image: KindImSnow,
 				descriptions: {
 					A1: "Ein Junge liegt im Schnee und macht einen Schneeengel. Er trägt einen roten Schneeanzug und eine Mütze",
-					A2: "Ein fröhlicher Junge liegt auf dem Rücken im Schnee. Er trägt einen warmen roten Schneeanzug und Handschuhe. Er bewegt seine Arme und Beine und macht einen Schneeengel.",
-					B1: "Auf dem Bild liegt ein lachender Junge im Schnee und formt einen Schneeengel. Er ist warm angezogen und trägt einen roten Schneeanzug sowie eine gestreifte Mütze mit Bommel. Man sieht deutlich die Spuren seiner Bewegungen im frischen Schnee."
+					A2: "Ein Junge liegt auf dem Rücken im Schnee. Er trägt einen roten Schneeanzug und Handschuhe. Er bewegt seine Arme und Beine und macht einen Schneeengel.",
+					B1: "Auf dem Bild liegt ein lachender Junge im Schnee und formt einen Schneeengel. Er trägt einen roten Schneeanzug sowie eine gestreifte Mütze mit Bommel."
 				}
 			},
 			{
@@ -137,6 +158,96 @@ export const topics = [
 					B1: "Eine Frau genießt eine heiße Tasse Kaffee in einem Café und schaut auf die verschneite Straße hinaus."
 				}
 			},
+			{
+				id: 6,
+				image: Fishing,
+				descriptions: {
+					A1: "Es ist Winter.Der Mann angelt. Er sitzt auf einem Stuhl.",
+					A2: "Ein Mann sitzt auf einem Stuhl und angelt im Eis. Er trägt eine warme Mütze und hat einen Tee dabei.",
+					B1: "Auf dem Bild sieht man einen Mann beim Eisangeln. Er sitzt draußen in der Natur и wartet geduldig auf einen Fisch."
+				}
+			},
+			{
+				id: 7,
+				image: AutoWindow,
+				descriptions: {
+					A1: "Ein Mann macht das Eis von dem Autofenster weg.",
+					A2: "Ein Mann kratzt im Winter das Eis von der Autoscheibe.",
+					B1: "Ein Mann befreit die Frontscheibe seines Autos mit einem roten Eiskratzer von Eis."
+				}
+			},
+			{
+				id: 8,
+				image: SnowBall,
+				descriptions: {
+					A1: "Die Kinder spielen mit Schnee.",
+					A2: "Die Kinder werfen Schneebälle und bauen eine Mauer.",
+					B1: "Man sieht Kinder, die im Schnee spielen und eine Schneeballschlacht machen."
+				}
+			},
+			{
+				id: 9,
+				image: BonFire,
+				descriptions: {
+					A1: "Die Leute stehen am Feuer im Schnee.",
+					A2: "Drei Personen wärmen ihre Hände an einem Lagerfeuer im Winter.",
+					B1: "Man sieht drei Leute, die sich im Schnee an einem Feuer vor einer Holzhütte aufwärmen."
+				}
+			},
+			{
+				id: 10,
+				image: Market,
+				descriptions: {
+					A1: "Auf dem Markt kaufen die Leute viele Tannenbäume.",
+					A2: "Ein Junge trägt einen Tannenbaum und im Hintergrund stehen viele kleine Häuser.",
+					B1: "Auf dem beleuchteten Weihnachtsmarkt suchen die Menschen Tannenbäume aus и besuchen die festlichen Verkaufsstände."
+				}
+			},
+			{
+				id: 11,
+				image: Snow,
+				descriptions: {
+					A1: "Ein Mann macht im Winter den Schnee vor dem Haus weg.",
+					A2: "Ein Mann trägt eine warme Mütze und schippt den Schnee auf dem Gehweg.",
+					B1: "Mit einer großen Schaufel räumt der Mann den frisch gefallenen Schnee weg, damit der Weg zum Haus wieder frei ist."
+				}
+			},
+			{
+				id: 12,
+				image: Sled,
+				descriptions: {
+					A1: "Ein Mann zieht ein Kind auf einem Schlitten.",
+					A2: "Der Vater zieht seinen kleinen Sohn auf einem Schlitten durch den Park.",
+					B1: "Bei sonnigem Wetter zieht ein Mann ein Kind auf einem Schlitten über den verschneiten Weg."
+				}
+			},
+			{
+				id: 13,
+				image: Ski,
+				descriptions: {
+					A1: "Die Frau läuft Ski im Winter",
+					A2: "Eine Frau fährt Ski auf einem Weg im Wald.",
+					B1: "Das Bild zeigt eine Frau beim Skilanglauf in einer verschneiten Winterlandschaft."
+				}
+			},
+			{
+				id: 14,
+				image: Igloo,
+				descriptions: {
+					A1: "Zwei Jungen bauen ein Iglu im Schnee.",
+					A2: "Die Kinder bauen ein Haus aus Eis и benutzen eine Schaufel.",
+					B1: "Zwei Jungen bauen gemeinsam ein großes Iglu aus Schneeblöcken in einer Winterlandschaft."
+				}
+			},
+			{
+				id: 15,
+				image: Birds,
+				descriptions: {
+					A1: "Der Mann gibt den Vögeln Essen mit der Hand.",
+					A2: "Die Vögel sitzen auf dem Vogelhaus und der Mann füttert sie aus der Hand.",
+					B1: "Ein Mann füttert Vögel direkt aus seiner Hand, während andere Vögel auf dem Futterhaus sitzen."
+				}
+			}
 		]
 	},
 	{
@@ -729,9 +840,88 @@ export const topics = [
 				}
 			},
 		]
-
 	},
-
+	{
+		id: 'school',
+		label: "Школа",
+		icon: "🏡",
+		gradient: 'linear-gradient(135deg, #FFF3E0 0%, #FFB74D 100%)',
+		textColor: '#E55559',
+		tasks: [
+			{
+				id: 1,
+				images: Drawing,
+				descriptions: {
+					A1: "Die Kinder sind in der Schule. Sie sitzen am Tisch. Alle Kinder zeichnen.",
+					A2: "Vier Kinder sind im Klassenzimmer. Sie sitzen an einem Tisch und zeichnen gemeinsam mit bunten Stiften.",
+					B1: "Auf dem Bild sieht man vier Kinder, die zusammen an einem Tisch malen. Sie konzentrieren sich auf ihre Zeichnungen und benutzen bunte Stifte."
+				}
+			},
+			{
+				id: 2,
+				images: Music,
+				descriptions: {
+					A1: "Die Lehrerin spielt Gitarre. Die Kinder hören Musik. Sie sind in der Schule.",
+					A2: "Eine Lehrerin spielt Gitarre und singt im Klassenzimmer. Drei Kinder sitzen am Tisch und hören zu.",
+					B1: "Das Bild zeigt Kinder im Musikunterricht. Die Lehrerin spielt Gitarre und singt vielleicht ein Lied, während die Schüler ihr aufmerksam zuhören."
+				}
+			},
+			{
+				id: 3,
+				images: SchoolBreak,
+				descriptions: {
+					A1: "Das sind Schüler im Flur. Sie stehen an den blauen Schränken. Ein Junge hat ein Buch.",
+					A2: "Im Schulflur stehen zwei Kinder vor ihren Schließfächern. Sie tragen Rucksäcke und bereiten sich auf die nächste Stunde vor.",
+					B1: "Das Bild zeigt eine Szene in der Pause. Ein Junge holt gerade ein Buch aus seinem Spind, während ein anderer Schüler mit seinem Rucksack durch den Korridor läuft."
+				}
+			},
+			{
+				id: 4,
+				images: StartSchool,
+				descriptions: {
+					A1: "Die Lehrerin steht an der Tür. Die Kinder gehen in die Schule. Sie haben Rucksäcke.",
+					A2: "Die Lehrerin begrüßt die Kinder am Schuleingang. Die Schüler gehen mit ihren Rucksäcken in das Gebäude.",
+					B1: "Auf dem Bild sieht man eine Lehrerin, die an der Tür steht und die Kinder begrüßt. Die Schüler gehen nacheinander in die Schule, um mit dem Unterricht zu beginnen."
+				}
+			},
+			{
+				id: 5,
+				images: Library,
+				descriptions: {
+					A1: "Das ist eine Bibliothek. Eine Frau gibt ein Buch. Die Kinder sitzen und lesen.",
+					A2: "In der Bibliothek gibt die Lehrerin einem Jungen ein Buch. Drei Kinder sitzen an den Tischen und lesen.",
+					B1: "Das Bild zeigt eine Bibliothek. Eine Lehrerin gibt einem Schüler ein Buch, während im Hintergrund andere Kinder konzentriert lesen."
+				}
+			},
+			{
+				id: 6,
+				images: Gym,
+				descriptions: {
+					A1: "Das ist die Turnhalle. Der Lehrer macht Sport. Die Kinder haben Bälle und Seile.",
+					A2: "Im Sportunterricht machen die Kinder Übungen mit dem Lehrer. Einige haben Basketbälle und andere haben Springseile.",
+					B1: "Das Bild zeigt eine Sportstunde in der Schule. Der Lehrer zeigt eine Übung, während die Schüler mit ihren Sportsachen bereitstehen."
+				}
+			},
+			{
+				id: 7,
+				images: DivingRoom,
+				descriptions: {
+					A1: "Das ist die Schulkantine. Die Frau gibt Essen. Die Kinder bekommen das Essen.",
+					A2: "In der Schulkantine stehen die Kinder an. Eine Frau gibt einem Jungen einen Teller mit Essen",
+					B1: "Auf dem Bild sieht man eine Schulkantine, in der die Schüler gerade ihr Mittagessen bekommen. Eine Frau reicht einem Jungen ein Tablett, während die anderen Kinder warten."
+				}
+			},
+			{
+				id: 8,
+				images: RobotClub,
+				descriptions: {
+					A1: "Das ist ein Robotik-Club. Die Kinder bauen einen Roboter.",
+					A2: "Vier Kinder sitzen am Tisch und schauen einen kleinen Roboter an. Auf dem Tisch liegen viele Werkzeuge.",
+					B1: "Auf dem Bild sieht man Schüler, die gemeinsam an einem Roboter arbeiten. Sie benutzen verschiedene Werkzeuge, um ihr Projekt fertig zu machen."
+				}
+			}
+		]
+	}
 	// {
 	// 	id: 'animals',
 	// 	label: 'Животные и природа',
