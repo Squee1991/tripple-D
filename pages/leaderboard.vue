@@ -23,7 +23,7 @@ const isMarathonLoading = ref(true)
 const isModal = ref(false)
 const activeMarathonDifficulty = ref(1)
 
-const itemsPerPage = 20
+const itemsPerPage = 10
 const currentPage = ref(1)
 
 const disciplines = ref([

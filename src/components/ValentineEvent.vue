@@ -8,7 +8,10 @@ useSeoMeta({
 import HeartFall from "assets/images/mery-christmas/heartFall.svg";
 import VShowFall from "~/src/components/V-showFall.vue";
 import TeddyGift from 'assets/images/event-rewards/valentine-event/valentine-rewards/teddy-bear.svg'
+import CupidArrow from 'assets/images/event-rewards/valentine-event/valentine-rewards/cupidonArrow.svg'
+import Theme from 'assets/images/event-rewards/valentine-event/valentine-rewards/hot-air-balloon.svg'
 import {useSeoMeta} from "#imports";
+const { t } = useI18n()
 const isEventOpen = computed(() => {
   const event = eventStore.events.find(e => e.id === eventId.value)
   if (!event) return false
@@ -31,28 +34,24 @@ const coins = ref(0)
 const coinIcon = '💘'
 const activeTab = ref('reputation')
 const nav = [
-  {id: 'reputation', label: 'Репутация', icon: '🏆'},
-  {id: 'quests', label: 'Задания', icon: '📜'},
+  {id: 'quests', label: t('eventPanel.eventQuestions'), icon: '📜'},
+  {id: 'reputation', label: t('eventPanel.eventShop'), icon: '🏆'}
 ]
 const selectedLevel = ref(1)
-
-const computedPanelTitle = computed(() => activeTab.value === 'reputation' ? 'Магазин ивента' : 'Ежедневные задания')
-
+const computedPanelTitle = computed(() => activeTab.value === 'reputation' ? t('eventPanel.eventShop') : t('eventPanel.eventQuestions'))
 const pathToMain = () => router.push('/')
-
 const reputationPoints = ref(0)
 const ranks = [
-  {level: 1, need: 0, title: 'Симпатия'},
-  {level: 2, need: 300, title: 'Амур'},
+  {level: 1, need: 0, title: t('eventPanel.firstReputationValentine')},
+  {level: 2, need: 300, title: t('eventPanel.secondReputationValentine')},
 ]
-
 const quests = ref([
-  {id: 'quest-1', title: 'Список слов', rewardCoins: 20, rewardRep: 20, isDone: false, icon: '📘'},
-  {id: 'quest-2', title: 'Выбери верное слово', rewardCoins: 20, rewardRep: 20, isDone: false, icon: '📘'},
-  {id: 'quest-3', title: 'Романтические свидания', rewardCoins: 20, rewardRep: 20, isDone: false, icon: '📘'},
-  {id: 'quest-4', title: 'Прослушай', rewardCoins: 20, rewardRep: 20, isDone: false, icon: '📘'},
-  {id: 'quest-5', title: 'Соедини слова', rewardCoins: 20, rewardRep: 20, isDone: false, icon: '📘'},
-  {id: 'quest-6', title: 'Выбери вариант ответа', rewardCoins: 20, rewardRep: 20, isDone: false, icon: '📘'}
+  {id: 'quest-1', title: t('valentineEventQuests.quest-1'), rewardCoins: 15, rewardRep: 50, isDone: false, icon: '📜'},
+  {id: 'quest-2', title: t('valentineEventQuests.quest-2'), rewardCoins: 15, rewardRep: 50, isDone: false, icon: '🏹'},
+  {id: 'quest-3', title: t('valentineEventQuests.quest-3'), rewardCoins: 15, rewardRep: 50, isDone: false, icon: '🌹'},
+  {id: 'quest-4', title: t('valentineEventQuests.quest-4'), rewardCoins: 15, rewardRep: 50, isDone: false, icon: '🎧'},
+  {id: 'quest-5', title: t('valentineEventQuests.quest-5'), rewardCoins: 15, rewardRep: 50, isDone: false, icon: '💞'},
+  {id: 'quest-6', title: t('valentineEventQuests.quest-6'), rewardCoins: 15, rewardRep: 50, isDone: false, icon: '💌'}
 ])
 
 const currentLevel = computed(() => {
@@ -124,11 +123,11 @@ onMounted(() => {
 
 const shopByRank = ref({
   1: [
-    {id: 'r1', title: 'Плюшевый мишка', priceCoins: 25, isOwned: false, icon: TeddyGift},
-    {id: 'r2', title: 'Мини-рамка «Розы»', priceCoins: 40, isOwned: false, icon: '🌹'},
+    {id: 'teddy', title: t('eventsShopItems.teddy'), priceCoins: 20, isOwned: false, icon: TeddyGift},
+    {id: 'arrow', title: t('eventsShopItems.arrow'), priceCoins: 20, isOwned: false, icon: CupidArrow},
   ],
   2: [
-    {id: 'r3', title: 'Тема «Pink Light»', priceCoins: 90, isOwned: false, icon: '✨'},
+    {id: 'theme', title: t('eventsShopItems.theme'), priceCoins: 50, isOwned: false, icon: Theme},
   ],
 })
 
@@ -147,14 +146,6 @@ async function buyReward(level, rewardId) {
   })
 }
 
-async function resetAll() {
-  await eventStore.resetEventProgress(eventId.value)
-  coins.value = 0
-  reputationPoints.value = 0
-  quests.value.forEach(quest => (quest.isDone = false))
-  Object.values(shopByRank.value).forEach(list => list.forEach(item => (item.isOwned = false)))
-  selectedLevel.value = 1
-}
 </script>
 
 <template>
@@ -166,28 +157,27 @@ async function resetAll() {
       <div class="wrapper">
         <div class="achv-layout">
           <aside class="achv-sidebar achv-card">
-            <button @click="pathToMain" type="button" class="btn btn--home">На главную</button>
+            <button @click="pathToMain" type="button" class="btn btn--home">{{ t('eventPanel.pathMain')}}</button>
             <div class="hero achv-card --flat">
               <div class="hero__info">
-                <div class="hero__name">День Купидона</div>
+                <div class="hero__name">{{ t('eventPanel.event')}}</div>
               </div>
             </div>
             <div class="status achv-card --flat">
               <div class="status__row">
-                <div class="status__value">Панель ивента</div>
+                <div class="status__value">{{ t('eventPanel.panel')}}</div>
               </div>
               <div class="bar">
                 <div class="bar__fill" :style="{ width: progressPct + '%' }"/>
               </div>
               <div class="status__row">
-                <div class="status__label">Репутация</div>
+                <div class="status__label">{{ t('eventPanel.reputation')}}</div>
                 <div class="status__value">{{ levelProgressText }}</div>
               </div>
               <div class="status__row">
-                <div class="status__label">Валюта</div>
+                <div class="status__label">{{ t('eventPanel.currency')}}</div>
                 <div class="status__value">{{ coins }} {{ coinIcon }}</div>
               </div>
-              <button class="btn btn--ghost" @click="resetAll">Сбросить (тест)</button>
             </div>
             <nav class="nav">
               <button
@@ -207,7 +197,7 @@ async function resetAll() {
             </div>
             <section v-if="activeTab === 'reputation'">
               <div class="section-head">
-                <h2>Магазин по репутации</h2>
+                <h2>{{ t('eventPanel.shop')}}</h2>
                 <div class="rank-switch">
                   <button
                       v-for="r in ranks"
@@ -231,10 +221,10 @@ async function resetAll() {
                           :disabled="reward.isOwned || currentLevel < selectedLevel || coins < reward.priceCoins"
                           @click="buyReward(selectedLevel, reward.id)"
                       >
-                        <template v-if="reward.isOwned">Куплено</template>
-                        <template v-else-if="currentLevel < selectedLevel">Недоступно</template>
-                        <template v-else-if="coins < reward.priceCoins">Не хватает</template>
-                        <template v-else>Купить</template>
+                        <template v-if="reward.isOwned">{{ t('eventPanel.bought')}}</template>
+                        <template v-else-if="currentLevel < selectedLevel">{{ t('eventPanel.notAllowed')}}</template>
+                        <template v-else-if="coins < reward.priceCoins">{{ t('eventPanel.notEnough')}}</template>
+                        <template v-else>{{ t('eventPanel.buy')}}</template>
                       </button>
                     </div>
                   </div>
@@ -256,7 +246,7 @@ async function resetAll() {
                       <button class="btn btn--candy"
                               :class="{ 'btn--repeat': quest.isDone }"
                               @click="goToSession(quest.id)">
-                        {{ quest.isDone ? 'Выполнено' : 'Выполнить' }}
+                        {{ quest.isDone ? t('eventPanel.repeat') : t('eventPanel.execute') }}
                       </button>
                     </div>
                   </div>
@@ -273,9 +263,9 @@ async function resetAll() {
       <VShowFall :image="HeartFall"/>
     </div>
     <div class="closed-content">
-      <h1>🔒 Событие недоступно</h1>
-      <p>Это событие еще не началось или уже завершилось.</p>
-      <button @click="pathToMain" class="btn btn--home">На главную</button>
+      <h1>🔒 {{ t('eventPanel.notAllowedTitle') }}</h1>
+      <p>{{ t('eventPanel.notAllowedText') }}</p>
+      <button @click="pathToMain" class="btn btn--home">{{ t('eventPanel.pathMain') }}</button>
     </div>
   </div>
 </template>
@@ -649,7 +639,6 @@ async function resetAll() {
   color: #b94d6e;
 }
 
-/* --- Closed State --- */
 .event-closed {
   height: 100vh;
   display: flex;
@@ -686,7 +675,6 @@ async function resetAll() {
   z-index: 0
 }
 
-/* --- Media Queries (Синхронизировано с Winter) --- */
 @media (max-width: 767px) {
   .achv-layout {
     padding: 15px;

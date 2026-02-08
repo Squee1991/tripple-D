@@ -1,4 +1,22 @@
 {
+  "valentineAchievements": {
+    "firstValentineQuestLabel": "Первое свидание",
+    "firstValentineQuesDescription": "Сделайте первый шаг! Выполните любое задание события «Фестиваль сердец» и получите первую награду.",
+    "valentineWordsLabel": "Язык любви",
+    "valentineWordsDescription": "Изучите все  праздничные слова, чтобы выражать свои чувства так же свободно, как сам Купидон.",
+    "valentineAllQuestsLabel": "Повелитель сердец",
+    "valentineAllQuestsDescription": "Проявите настойчивость и завершите все 6 заданий события, доказав искренность своих намерений.",
+    "valentineBearLabel": "Мягкий друг",
+    "valentineBearDescription": "Приобретите плюшевого медведя в магазине события, чтобы добавить немного уюта и тепла в этот праздник.",
+    "cupidArrowLabel": "Меткий выстрел",
+    "cupidArrowDescription": "Вооружитесь Луком Купидона! Купите этот предмет, чтобы попадать точно в цель на каждом свидании.",
+    "valentineThemeLabel": "В цветах романтики",
+    "valentineThemeDescription": "Преобразите интерфейс приложения! Установите праздничную тему, чтобы полностью погрузиться в атмосферу любви.",
+    "valentineReputationLabel": "Любимец Купидона",
+    "valentineReputationDescription": "Заслужите всеобщее признание! Наберите 300 очков репутации, выполняя задания события.",
+    "valentineAllAchievementsLabel": "Легенда фестиваля",
+    "valentineAllAchievementsDescription": "Легенда фестиваля"
+  },
   "categories": {
     "beginner": "Стартовые земли",
     "intermediate": "Тропы приключений",
@@ -150,7 +168,15 @@
     "quest-19": "Новогодняя ночь",
     "quest-20": "Немецкий праздник"
   },
-  "winterEvent": {
+  "valentineEventQuests": {
+    "quest-1": "Список слов",
+    "quest-2": "Выбери верное слово",
+    "quest-3": "Романтические свидания",
+    "quest-4": "Прослушай",
+    "quest-5": "Соедини слова",
+    "quest-6": "Выбери вариант ответа"
+  },
+  "eventPanel": {
     "pathMain": "На главную",
     "event": "Событие",
     "panel": "Панель ивента",
@@ -169,16 +195,21 @@
     "notAllowedText": "Это событие еще не началось или уже завершилось.",
     "eventShop": "Магазин события",
     "eventQuestions": "Задания события",
-    "firstReputation": "Снежное Доверие",
-    "secondReputation": "Зимнее Почтение",
+    "firstReputationWinter": "Снежное Доверие",
+    "secondReputationWinter": "Зимнее Почтение",
+    "firstReputationValentine": "Романтик",
+    "secondReputationValentine": "Сердцеед",
     "needForReward": "Для покупки нужно:",
     "and": "и"
   },
-  "winterEventShopItems": {
+  "eventsShopItems": {
     "santaHat": "Санта-шапка",
     "christmasBall": "Снежный шар",
     "christmasWreath": "Рождественский венок",
-    "snowFall": "Эффект снегопада"
+    "snowFall": "Эффект снегопада",
+    "teddy": "Плюшевый мишка",
+    "arrow": "Лук купидона",
+    "theme": "Романтичная тема"
   },
   "winterAchievements": {
     "firstQuestName": "Первая ёлочная звезда",
@@ -1597,7 +1628,9 @@
     "iAmGroot": "Горшочек с Грутом",
     "santaHat": "Шапка санты",
     "christmasBall": "Рождественский шар",
-    "christmasWreath": "Рождественский венок"
+    "christmasWreath": "Рождественский венок",
+    "valentineBear": "Плюшевый мишка",
+    "cupidArrow": "Лук купидона"
   },
   "wildLandsFirstQuest": {
     "title": "Окружение",
@@ -3974,14 +4007,14 @@
     "questFourFirstOption": "Мост",
     "questFourSecondOption": "Улица",
     "questFourThirdOption": "Парк",
-    "questFive": "Собери фразу",
-    "questSix": "Прослушай и напиши",
+    "questFive": "Собери фразу: Это улица",
+    "questSix": "Прослушай и напиши услышанное",
     "questSeven": "Собери фразу",
-    "questEight": "Прослушай и напиши",
+    "questEight": "Прослушай и напиши услышанное",
     "questNine": "Собери фразу",
-    "questTen": "Прослушай и напиши",
+    "questTen": "Прослушай и напиши услышанное",
     "questEleven": "Собери фразу",
-    "questTwelve": "Прослушай и напиши",
+    "questTwelve": "Прослушай и напиши услышанное",
     "questThirteen": "Собери фразу",
     "questFourteen": "Собери фразу",
     "questFifteen": "Собери фразу"
@@ -4122,25 +4155,25 @@
     "questOneFirstOption": "Перекрёсток",
     "questOneSecondOption": "Остановка",
     "questOneThirdOption": "Банк",
-    "questTwo": "Собери фразу",
+    "questTwo": "Собери фразу: Улица длинная, а парк красивый",
     "questThree": "Прослушай и напиши",
     "questFour": "Что значит: der Bahnhof",
     "questFourFirstOption": "Вокзал",
     "questFourSecondOption": "Музей",
     "questFourThirdOption": "Отель",
-    "questFive": "Собери фразу",
+    "questFive": "Собери фразу: Вокзал и метро здесь",
     "questSix": "Прослушай и напиши",
     "questSeven": "Что значит: die Apotheke",
     "questSevenFirstOption": "Аптека",
     "questSevenSecondOption": "Пекарня",
     "questSevenThirdOption": "Почта",
-    "questEight": "Собери фразу",
+    "questEight": "Собери фразу: Булочная и аптека открыты",
     "questNine": "Прослушай и напиши",
     "questTen": "Что значит: das Restaurant",
     "questTenFirstOption": "Ресторан",
     "questTenSecondOption": "Супермаркет",
     "questTenThirdOption": "Кафе",
-    "questEleven": "Собери фразу",
+    "questEleven": "Собери фразу: Здесь кафе, а там музей",
     "questTwelve": "Прослушай и напиши",
     "questThirteen": "Собери фразу",
     "questFourteen": "Прослушай и напиши",

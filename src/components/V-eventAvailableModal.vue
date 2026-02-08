@@ -83,7 +83,7 @@ const defaultSchedule = computed(() => [
   },
   {
     id: "valentine",
-    start: '02-14 00:00',
+    start: '02-12 00:00',
     end: '02-16 23:59',
     title: t('eventsModal.valentineLabel'),
     text: t('eventsModal.valentineText'),

@@ -1,4 +1,22 @@
 {
+  "valentineAchievements": {
+    "firstValentineQuestLabel": "Pierwsza randka",
+    "firstValentineQuesDescription": "Zrób pierwszy krok! Wykonaj dowolne zadanie w wydarzeniu „Festiwal Serc” i odbierz pierwszą nagrodę.",
+    "valentineWordsLabel": "Język miłości",
+    "valentineWordsDescription": "Naucz się wszystkich świątecznych słów, aby wyrażać swoje uczucia tak swobodnie jak sam Kupidyn.",
+    "valentineAllQuestsLabel": "Władca Serc",
+    "valentineAllQuestsDescription": "Wykazać się wytrwałością i ukończ wszystkie 6 zadań wydarzenia, udowadniając szczerość swoich intencji.",
+    "valentineBearLabel": "Miękki przyjaciel",
+    "valentineBearDescription": "Kup pluszowego misia w sklepie wydarzenia, aby dodać trochę przytulności i ciepła w to święto.",
+    "cupidArrowLabel": "Czysty strzał",
+    "cupidArrowDescription": "Uzbrój się w Łuk Kupidyna! Kup ten przedmiot, aby trafić w dziesiątkę na każdej randce.",
+    "valentineThemeLabel": "W barwach romansu",
+    "valentineThemeDescription": "Zmień interfejs aplikacji! Zainstaluj świąteczny motyw, aby całkowicie zanurzyć się w atmosferze miłości.",
+    "valentineReputationLabel": "Ulubieniec Kupidyna",
+    "valentineReputationDescription": "Zdobądź powszechne uznanie! Zbierz 300 punktów reputacji, wykonując zadania wydarzenia.",
+    "valentineAllAchievementsLabel": "Legenda Festiwalu",
+    "valentineAllAchievementsDescription": "Legenda Festiwalu"
+  },
   "categories": {
     "beginner": "Ziemie startowe",
     "intermediate": "Szlaki przygód",
@@ -150,8 +168,16 @@
     "quest-19": "Noc Sylwestrowa",
     "quest-20": "Niemieckie święto"
   },
-  "winterEvent": {
-    "pathMain": "Strona główna",
+  "valentineEventQuests": {
+    "quest-1": "Lista słów",
+    "quest-2": "Wybierz poprawne słowo",
+    "quest-3": "Romantyczne randki",
+    "quest-4": "Posłuchaj",
+    "quest-5": "Połącz słowa",
+    "quest-6": "Wybierz odpowiedź"
+  },
+  "eventPanel": {
+    "pathMain": "Główna",
     "event": "Wydarzenie",
     "panel": "Panel wydarzenia",
     "reputation": "Reputacja",
@@ -169,16 +195,21 @@
     "notAllowedText": "To wydarzenie jeszcze się nie rozpoczęło lub już się zakończyło.",
     "eventShop": "Sklep wydarzenia",
     "eventQuestions": "Zadania wydarzenia",
-    "firstReputation": "Śnieżne Zaufanie",
-    "secondReputation": "Zimowy Szacunek",
-    "needForReward": "Do zakupu potrzebujesz:",
+    "firstReputationWinter": "Śnieżne Zaufanie",
+    "secondReputationWinter": "Zimowy Szacunek",
+    "firstReputationValentine": "Romantyk",
+    "secondReputationValentine": "Pożeracz Serc",
+    "needForReward": "Do zakupu potrzeba:",
     "and": "i"
   },
-  "winterEventShopItems": {
+  "eventsShopItems": {
     "santaHat": "Czapka Mikołaja",
-    "christmasBall": "Kula śnieżna",
-    "christmasWreath": "Wieniec świąteczny",
-    "snowFall": "Efekt śniegu"
+    "christmasBall": "Śnieżna kula",
+    "christmasWreath": "Wieniec bożonarodzeniowy",
+    "snowFall": "Efekt opadów śniegu",
+    "teddy": "Pluszowy miś",
+    "arrow": "Łuk Kupidyna",
+    "theme": "Romantyczny motyw"
   },
   "winterAchievements": {
     "firstQuestName": "Pierwsza gwiazda choinkowa",
@@ -1597,7 +1628,9 @@
     "iAmGroot": "Doniczka z Grootem",
     "santaHat": "Czapka Mikołaja",
     "christmasBall": "Bombka choinkowa",
-    "christmasWreath": "Świąteczny wieniec"
+    "christmasWreath": "Świąteczny wieniec",
+    "valentineBear": "Pluszowy miś",
+    "cupidArrow": "Łuk Kupidyna"
   },
   "wildLandsFirstQuest": {
     "title": "Otoczenie",
@@ -4122,25 +4155,25 @@
     "questOneFirstOption": "Skrzyżowanie",
     "questOneSecondOption": "Przystanek",
     "questOneThirdOption": "Bank",
-    "questTwo": "Ułóż frazę",
+    "questTwo": "Ułóż frazę: Ulica jest długa, a park jest piękny",
     "questThree": "Posłuchaj i zapisz",
     "questFour": "Co znaczy: der Bahnhof",
     "questFourFirstOption": "Dworzec",
     "questFourSecondOption": "Muzeum",
     "questFourThirdOption": "Hotel",
-    "questFive": "Ułóż frazę",
+    "questFive": "Ułóż frazę: Dworzec i metro są tutaj",
     "questSix": "Posłuchaj i zapisz",
     "questSeven": "Co znaczy: die Apotheke",
     "questSevenFirstOption": "Apteka",
     "questSevenSecondOption": "Piekarnia",
     "questSevenThirdOption": "Poczta",
-    "questEight": "Ułóż frazę",
+    "questEight": "Ułóż frazę: Piekarnia i apteka są otwarte",
     "questNine": "Posłuchaj i zapisz",
     "questTen": "Co znaczy: das Restaurant",
     "questTenFirstOption": "Restauracja",
     "questTenSecondOption": "Supermarket",
     "questTenThirdOption": "Kawiarnia",
-    "questEleven": "Ułóż frazę",
+    "questEleven": "Assemble the phrase: The cafe is here, and the museum is there",
     "questTwelve": "Posłuchaj i zapisz",
     "questThirteen": "Ułóż frazę",
     "questFourteen": "Posłuchaj i zapisz",
