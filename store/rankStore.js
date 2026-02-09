@@ -1,6 +1,5 @@
 import {defineStore} from 'pinia'
 import {ref} from 'vue'
-import RankIcon from '../assets/images/rank-icons/trophy (4).svg'
 
 import LevelOneSilver from 'assets/images/rank-icons/level-1/silber.png'
 import LevelOneGold from 'assets/images/rank-icons/level-1/gold.png'

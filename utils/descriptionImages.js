@@ -96,6 +96,12 @@ import WashCar from 'assets/images/speak-themen/home and life/wash_car.jpg'
 import Mow_lawn from 'assets/images/speak-themen/home and life/mow_lawn.jpg'
 import FeedDog from 'assets/images/speak-themen/home and life/feed the dog.jpg'
 
+import WeatherSnow from 'assets/images/speak-themen/weather/WeatherSnow.jpg'
+import WeatherFogInMountains from 'assets/images/speak-themen/weather/WeatherFogInMountains.jpg'
+import WeatherTornado from 'assets/images/speak-themen/weather/WeatherTornado.jpg'
+import WeatherClearDay from 'assets/images/speak-themen/weather/WeatherClearDay.jpg'
+
+
 import Drawing from 'assets/images/speak-themen/school/drawing.jpg'
 import Music from 'assets/images/speak-themen/school/music.jpg'
 import SchoolBreak from 'assets/images/speak-themen/school/school-break.jpg'
@@ -918,6 +924,51 @@ export const topics = [
 					A1: "Das ist ein Robotik-Club. Die Kinder bauen einen Roboter.",
 					A2: "Vier Kinder sitzen am Tisch und schauen einen kleinen Roboter an. Auf dem Tisch liegen viele Werkzeuge.",
 					B1: "Auf dem Bild sieht man Schüler, die gemeinsam an einem Roboter arbeiten. Sie benutzen verschiedene Werkzeuge, um ihr Projekt fertig zu machen."
+				}
+			}
+		]
+	},
+	{
+		id: 'weather',
+		label: "Погода",
+		icon: "🏡",
+		gradient: 'linear-gradient(135deg, #FFF3E0 0%, #FFB74D 100%)',
+		textColor: '#E55559',
+		tasks: [
+			{
+				id: 1,
+				images: WeatherSnow,
+				descriptions: {
+					A1: '',
+					A2: '',
+					B1: ''
+				}
+			},
+			{
+				id: 2,
+				images: WeatherFogInMountains,
+				descriptions: {
+					A1: '',
+					A2: '',
+					B1: ''
+				}
+			},
+			{
+				id: 3,
+				images: WeatherTornado,
+				descriptions: {
+					A1: '',
+					A2: '',
+					B1: ''
+				}
+			},
+			{
+				id: 4,
+				images: WeatherClearDay,
+				descriptions: {
+					A1: '',
+					A2: '',
+					B1: ''
 				}
 			}
 		]
