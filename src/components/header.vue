@@ -174,7 +174,7 @@ const modalConfig = computed(() => {
         title: t('inDevelopment.title'),
         text: t('inDevelopment.sub'),
         button: null,
-        img: Dev,
+        img: Dev
       }
     case 'eventLocked':
       return {
@@ -182,7 +182,7 @@ const modalConfig = computed(() => {
         title: t('eventLocked.title'),
         text: t('eventLocked.text'),
         button: {label: t('eventLocked.btn'), to: '/calendar'},
-        img: PadLock,
+        img: PadLock
       }
     default:
       return {isEvent: false, title: '', text: '', button: null, img: Dev}
@@ -252,8 +252,8 @@ const menuItems = computed(() => {
                 subChildren: [
                   {id: 'learn-tips', url: '/article-basic', valueKey: 'underSub.prev'},
                   {id: 'learn-rules', url: '/article-theory', valueKey: 'underSub.rules'},
-                  {id: 'learn-selectedTopics', url: '/articles', valueKey: 'underSub.artRules'},
-                ],
+                  {id: 'learn-selectedTopics', url: '/articles', valueKey: 'underSub.artRules'}
+                ]
               },
               {
                 id: 'verbs',
@@ -262,7 +262,7 @@ const menuItems = computed(() => {
                   {id: 'verb-theory', url: '/verbs-theory', valueKey: 'underSub.verbsTheory'},
                   {id: 'tenses', url: '/tenses', valueKey: 'underSub.verbFirst'},
                   {id: 'modalVerbs', url: '/modal-verbs', valueKey: 'underSub.verbSecond'},
-                  {id: 'verb-types', url: '/verb-types', valueKey: 'underSub.verbTypes'},
+                  {id: 'verb-types', url: '/verb-types', valueKey: 'underSub.verbTypes'}
                 ],
               },
               {
@@ -270,7 +270,7 @@ const menuItems = computed(() => {
                 valueKey: 'sub.prepositions',
                 subChildren: [
                   {id: 'prepositions-theory', url: '/prepositions-theory', valueKey: 'underSub.rules'},
-                  {id: 'prepositions-practice', url: '/prepositions', valueKey: 'underSub.prepositions'},
+                  {id: 'prepositions-practice', url: '/prepositions', valueKey: 'underSub.prepositions'}
                 ],
               },
               {
@@ -288,14 +288,14 @@ const menuItems = computed(() => {
                     valueKey: 'underSub.adjectivesBasic'
                   },
                   {id: 'declination', url: '/adjective-declension', valueKey: 'underSub.declination'},
-                  {id: 'comparison', url: '/adjective-comparison', valueKey: 'underSub.comparison'},
+                  {id: 'comparison', url: '/adjective-comparison', valueKey: 'underSub.comparison'}
                 ],
               },
               // {id: 'description', url: '/description-images-test' , valueKey: 'Описание картинок'},
               {id: 'themen', url: '/thematic-learning', valueKey: 'sub.themen'},
               {id: 'cards', url: '/create-cards', valueKey: 'sub.card'},
-              {id: 'idioms', url: '/idioms', valueKey: 'sub.idioms'},
-            ],
+              {id: 'idioms', url: '/idioms', valueKey: 'sub.idioms'}
+            ]
           },
           {
             id: 'duel',
@@ -306,14 +306,14 @@ const menuItems = computed(() => {
               // {id: 'describePicture', url: '/chat', valueKey: 'sub.describePicture'},
               {id: 'quests', url: '/recipes', valueKey: 'sub.quests'},
               {id: 'duel-guess', url: '/guess-word', valueKey: 'sub.guess'},
-              {id: 'articlemarathon', url: '/article-marathon', valueKey: 'sub.marathon'},
-            ],
+              {id: 'articlemarathon', url: '/article-marathon', valueKey: 'sub.marathon'}
+            ]
           },
         ]
         : [
           {id: 'about', valueKey: 'nav.about', url: '/info-about'},
           {id: 'contact', valueKey: 'nav.contact', url: '/support-request'},
-          {id: 'faq', valueKey: 'nav.quest', url: '/faq'},
+          {id: 'faq', valueKey: 'nav.quest', url: '/faq'}
         ]),
     ...(userAuth.uid ? [{id: 'test', url: '/exams', valueKey: 'nav.tests'}] : []),
   ]

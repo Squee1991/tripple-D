@@ -66,9 +66,9 @@ export const useRankUserStore = defineStore('rankUserStore', () => {
 			levels: [{hats: 90}, {hats: 110}, {hats: 130, bonus: 'Скидка 10%'}]},
 		{title: 'ДОКТОР',
 			icons: [
-				{icon: LevelFourSilver,},
-				{icon: LevelFourBronze,},
-				{icon: LevelFourGold}
+				{icon: LevelThreeSilver,},
+				{icon: LevelThreeBronze,},
+				{icon: LevelThreeGold}
 			],
 			levels: [{hats: 160}, {hats: 185}, {hats: 210, bonus: 'Скидка 15%'}]},
 		{title: 'ПРОФЕССОР',
