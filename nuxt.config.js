@@ -1,7 +1,7 @@
 
 import { defineNuxtConfig } from 'nuxt/config'
 import { loadEnv } from 'vite'
-const events = ['halloween', 'joke', 'valentine', 'winter']
+
 const mode = process.env.NODE_ENV === 'production' ? 'production' : 'development'
 const env = loadEnv(mode, process.cwd(), '')
 const firebaseConfig = {
