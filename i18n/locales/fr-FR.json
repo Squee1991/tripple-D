@@ -1,4 +1,20 @@
 {
+  "themeModal": {
+    "title": "Choisissez l'apparence",
+    "close": "Fermer",
+    "light": "Claire",
+    "dark": "Sombre",
+    "pink": "Romantique"
+  },
+  "pinkThemeModal": {
+    "partOne": "Ce thème ne peut être débloqué que lors de l'événement",
+    "partTwo": "Festival des Cœurs",
+    "partThree": "Achetez-le dans la boutique de l'événement !"
+  },
+  "settingsGroup": {
+    "notifications": "Notifications",
+    "appearance": "Apparence"
+  },
   "valentineAchievements": {
     "firstValentineQuestLabel": "Premier rendez-vous",
     "firstValentineQuesDescription": "Faites le premier pas ! Terminez n'importe quelle quête de l'événement « Festival des Cœurs » et recevez votre première récompense.",
@@ -4421,15 +4437,32 @@
     "questFifteenSecondOption": "La tour est à côté de l'hôtel",
     "questFifteenThirdOption": "La tour est derrière l'hôtel"
   },
+  "shop": {
+    "title": "Boutique d'objets",
+    "subText": "Échangez vos Articluses accumulés contre des bonus utiles et des réductions permanentes pour vos études.",
+    "bought": "Acheté"
+  },
+  "cardsShop": {
+    "livesTitle": "Vies",
+    "livesDescription": "Ici, vous pouvez recharger vos vies (Maximum 5)",
+    "full": "Plein",
+    "buy": "Acheter"
+  },
   "awardsSection": {
     "congratulations": "Félicitations ! Vous possédez déjà cette récompense !",
     "close": "Fermer"
   },
+  "cabinetNav": {
+    "common": "Général",
+    "awards": "Récompenses",
+    "rank": "Rang",
+    "exam": "Amis"
+  },
   "cabinetSidebar": {
     "valueOne": "Paramètres du compte",
-    "valueTwo": "Amis",
-    "valueThree": "Récompenses",
-    "valueFour": "Archive des examens"
+    "valueTwo": "Archives des examens",
+    "valueThree": "Boutique",
+    "valueFour": "Paramètres"
   },
   "cabinetAccordion": {
     "personalData": "Données personnelles",
@@ -4446,7 +4479,8 @@
     "sound": "Notifications sonores",
     "theme": "Mode sombre",
     "ach": "Notifications de succès",
-    "snowFall": "Chute de neige"
+    "snowFall": "Chute de neige",
+    "themeBtn": "Thème"
   },
   "cabinet": {
     "important": "IMPORTANT !!!",

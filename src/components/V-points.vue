@@ -182,14 +182,14 @@ onMounted(() => {
 }
 .ranked__inner {
   width: 100%;
-  border: 2px solid black;
+  border: 2px solid var(--border);
   border-radius: 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
   padding: 1px 5px;
-  box-shadow: 2px 2px 0 black;
+  box-shadow: 2px 2px 0  var(--border);
   transition: .2s;
   background: white;
 }
@@ -207,14 +207,14 @@ onMounted(() => {
 }
 
 .ranked__title {
-  color: #1c1b1b;
+  color: var(--labelTextColor);
   font-size: 18px;
   margin-left: 8px;
   font-weight: 600;
 }
 
 .points__title {
-  color: var(--titleColor);
+  color: var(--panelTextColor);
 }
 
 .stat__icon {
@@ -247,8 +247,8 @@ onMounted(() => {
 .articlus__wrapper {
   display: flex;
   width: 78px;
-  border:2px solid black;
-  box-shadow: 2px 2px 0 black;
+  border:2px solid var(--border);
+  box-shadow: 2px 2px 0 var(--border);
   justify-content: center;
   align-items: center;
   border-radius: 10px;
@@ -385,7 +385,7 @@ onMounted(() => {
 .points-card__label {
   font-size: 19px;
   font-weight: 600;
-  color: var(--titleColor);
+  color: var(--panelTextColor);
   font-family: "Nunito", sans-serif;
 }
 
@@ -403,8 +403,8 @@ onMounted(() => {
   font-size: 18px;
   font-weight: 600;
   background: #fff;
-  border: 2px solid #111;
-  box-shadow: 2px 2px 0 black;
+  border: 2px solid var(--border);
+  box-shadow: 2px 2px 0 var(--border);
   border-radius: 10px;
   font-family: "Nunito", sans-serif;
   padding: 4px 10px;

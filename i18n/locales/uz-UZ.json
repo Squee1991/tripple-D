@@ -1,4 +1,20 @@
 {
+  "themeModal": {
+    "title": "Ko'rinishni tanlang",
+    "close": "Yopish",
+    "light": "Yorug'",
+    "dark": "To'q",
+    "pink": "Romantik"
+  },
+  "pinkThemeModal": {
+    "partOne": "Ushbu mavzuni faqat",
+    "partTwo": "Qalblar festivali",
+    "partThree": "tadbirida ochish mumkin. Uni tadbir do'konidan sotib oling!"
+  },
+  "settingsGroup": {
+    "notifications": "Bildirishnomalar",
+    "appearance": "Ko'rinish"
+  },
   "valentineAchievements": {
     "firstValentineQuestLabel": "Birinchi uchrashuv",
     "firstValentineQuesDescription": "Birinchi qadamni tashlang! «Qalblar festivali» tadbirining istalgan vazifasini bajaring va birinchi mukofotni oling.",
@@ -4421,15 +4437,32 @@
     "questFifteenSecondOption": "Minora mehmonxona yonida",
     "questFifteenThirdOption": "Minora mehmonxona orqasida"
   },
+  "shop": {
+    "title": "Buyumlar do'koni",
+    "subText": "To'plangan Artiklislarni o'qishingiz uchun foydali bonuslar va doimiy chegirmalarga almashtiring.",
+    "bought": "Sotib olindi"
+  },
+  "cardsShop": {
+    "livesTitle": "Jonlar",
+    "livesDescription": "Bu yerda jonlar zaxirasini to'ldirishingiz mumkin (Maksimal 5)",
+    "full": "To'liq",
+    "buy": "Sotib olish"
+  },
   "awardsSection": {
     "congratulations": "Tabriklaymiz! Bu mukofot sizda allaqachon bor!",
     "close": "Yopish"
   },
+  "cabinetNav": {
+    "common": "Umumiy",
+    "awards": "Mukofotlar",
+    "rank": "Unvon",
+    "exam": "Do'stlar"
+  },
   "cabinetSidebar": {
-    "valueOne": "Hisob sozlamalari",
-    "valueTwo": "Do‘stlar",
-    "valueThree": "Mukofotlar",
-    "valueFour": "Imtihon arxivi"
+    "valueOne": "Hisob parametrlari",
+    "valueTwo": "Imtihonlar arxivi",
+    "valueThree": "Do'kon",
+    "valueFour": "Sozlamalar"
   },
   "cabinetAccordion": {
     "personalData": "Shaxsiy ma’lumotlar",
@@ -4444,9 +4477,10 @@
   },
   "cabinetToggle": {
     "sound": "Ovozli bildirishnomalar",
-    "theme": "Qorong‘i rejim",
+    "theme": "Tungi rejim",
     "ach": "Yutuqlar bildirishnomasi",
-    "snowFall": "Qor yog‘ishi"
+    "snowFall": "Qor yog'ishi",
+    "themeBtn": "Mavzu"
   },
   "cabinet": {
     "important": "MUHIM!!!",

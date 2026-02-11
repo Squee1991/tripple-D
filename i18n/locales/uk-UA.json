@@ -1,4 +1,20 @@
 {
+  "themeModal": {
+    "title": "Оберіть оформлення",
+    "close": "Закрити",
+    "light": "Світла",
+    "dark": "Темна",
+    "pink": "Романтична"
+  },
+  "pinkThemeModal": {
+    "partOne": "Цю тему можна розблокувати лише в події",
+    "partTwo": "Фестиваль сердець",
+    "partThree": "Придбайте її в магазині подій!"
+  },
+  "settingsGroup": {
+    "notifications": "Сповіщення",
+    "appearance": "Оформлення"
+  },
   "valentineAchievements": {
     "firstValentineQuestLabel": "Перше побачення",
     "firstValentineQuesDescription": "Зробіть перший крок! Виконайте будь-яке завдання події «Фестиваль сердець» і отримайте першу нагороду.",
@@ -4419,15 +4435,32 @@
     "questFifteenSecondOption": "Вежа поруч із готелем",
     "questFifteenThirdOption": "Вежа за готелем"
   },
+  "shop": {
+    "title": "Магазин предметів",
+    "subText": "Обмінюй накопичені Артиклюси на корисні бонуси та постійні знижки для свого навчання.",
+    "bought": "Куплено"
+  },
+  "cardsShop": {
+    "livesTitle": "Життя",
+    "livesDescription": "Тут можна поповнити запас життів (Максимально 5)",
+    "full": "Повне",
+    "buy": "Купити"
+  },
   "awardsSection": {
     "congratulations": "Вітаємо! Ця нагорода вже у вас!",
     "close": "Закрити"
   },
+  "cabinetNav": {
+    "common": "Загальні",
+    "awards": "Нагороди",
+    "rank": "Звання",
+    "exam": "Друзі"
+  },
   "cabinetSidebar": {
-    "valueOne": "Параметри акаунта",
-    "valueTwo": "Друзі",
-    "valueThree": "Нагороди",
-    "valueFour": "Архів іспитів"
+    "valueOne": "Параметри аккаунта",
+    "valueTwo": "Архів іспитів",
+    "valueThree": "Магазин",
+    "valueFour": "Налаштування"
   },
   "cabinetAccordion": {
     "personalData": "Персональні дані",
@@ -4444,7 +4477,8 @@
     "sound": "Звукові сповіщення",
     "theme": "Темний режим",
     "ach": "Сповіщення про досягнення",
-    "snowFall": "Снігопад"
+    "snowFall": "Снігопад",
+    "themeBtn": "Тема"
   },
   "cabinet": {
     "important": "ВАЖЛИВО!!!",

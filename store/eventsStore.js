@@ -15,6 +15,8 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 	const isLoading = ref(false)
 	const isSnowEnabled = ref(false)
 	const shopItems = ref({})
+	const solvedSteps = ref([])
+	const isReplayMode = ref(false)
 
 	const events = ref([
 		{id: 'winter', start: '12-17 00:00', end: '01-02 23:59'},
@@ -54,6 +56,11 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 		return !!(items['snowFall'] || items['snowfall'])
 	})
 
+	const isValentineThemePurchased = computed(() => {
+		const items = shopItems.value || {}
+		return !!items['theme']
+	})
+
 	const loadGlobalWinterSettings = async () => {
 		const ref = getWinterDocRef()
 		if (!ref) return
@@ -62,9 +69,7 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 			if (snap.exists()) {
 				const data = snap.data()
 				shopItems.value = data.shopItems || {}
-
 				const hasBought = shopItems.value['snowFall'] || shopItems.value['snowfall']
-
 				if (hasBought) {
 					isSnowEnabled.value = (data.isSnowEnabled === true)
 				} else {
@@ -79,9 +84,7 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 
 	const setSnowFallEnabled = async (value) => {
 		if (value === true && !isSnowPurchased.value) return
-
 		isSnowEnabled.value = value
-
 		const ref = getWinterDocRef()
 		if (!ref) return
 		try {
@@ -99,7 +102,6 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 			if (docSnap.exists()) {
 				const data = docSnap.data()
 				shopItems.value = data.shopItems || {}
-
 				if (id === 'winter') {
 					const hasBought = shopItems.value['snowFall'] || shopItems.value['snowfall']
 					if (hasBought) {
@@ -119,11 +121,9 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 	const saveMainProgress = async (dataToSave) => {
 		const eventDocRef = getEventProgressDocRef()
 		if (!eventDocRef) return
-
 		if (dataToSave.shopItems) {
 			shopItems.value = {...shopItems.value, ...dataToSave.shopItems}
 		}
-
 		try {
 			await setDoc(eventDocRef, dataToSave, {merge: true})
 		} catch (error) {
@@ -134,6 +134,12 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 		isLoading.value = true
 		eventId.value = String(id || '')
 		questId.value = String(qid || '')
+		stepIndex.value = 0
+		score.value = 0
+		solvedSteps.value = []
+		finished.value = false
+		isReplayMode.value = false
+
 		try {
 			uidOrThrow()
 		} catch (error) {
@@ -144,21 +150,17 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 		if (eventDocRef) {
 			try {
 				const docSnap = await getDoc(eventDocRef)
-				let isAlreadyFinished = false
 				if (docSnap.exists()) {
-					const questProgress = docSnap.data().quests?.[questId.value]
-					if (questProgress && questProgress.finished) isAlreadyFinished = true
+					const questData = docSnap.data().quests?.[questId.value]
+					if (questData && questData.finished) {
+						isReplayMode.value = true
+					}
 				}
-				if (isAlreadyFinished) {
-					stepIndex.value = 0;
-					score.value = 0;
-					finished.value = true
-				} else {
-					stepIndex.value = 0;
-					score.value = 0;
-					finished.value = false
+
+
+				if (!isReplayMode.value) {
+					await setDoc(eventDocRef, {lastActiveQuestId: questId.value}, {merge: true})
 				}
-				await setDoc(eventDocRef, {lastActiveQuestId: questId.value}, {merge: true})
 			} catch (error) {
 			}
 		}
@@ -191,21 +193,34 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 				isLoading.value = false;
 				return false
 			}
-			questId.value = lastQuestId;
+
 			const questProgress = eventData.quests?.[lastQuestId]
-			if (questProgress && !questProgress.finished) {
-				stepIndex.value = questProgress.stepIndex || 0;
+			if (questProgress && questProgress.finished) {
+
+				isReplayMode.value = true
+			} else {
+				isReplayMode.value = false
+			}
+
+			questId.value = lastQuestId;
+
+			if (questProgress) {
+				solvedSteps.value = Array.isArray(questProgress.solvedSteps) ? questProgress.solvedSteps : []
 				score.value = questProgress.score || 0;
-				finished.value = false
-			} else if (questProgress && questProgress.finished) {
-				stepIndex.value = 0;
-				score.value = 0;
-				finished.value = true
+				finished.value = !!questProgress.finished
+
+				if (!questProgress.finished) {
+					stepIndex.value = questProgress.stepIndex || 0;
+				} else {
+					stepIndex.value = 0;
+				}
 			} else {
 				stepIndex.value = 0;
 				score.value = 0;
+				solvedSteps.value = []
 				finished.value = false
 			}
+
 			isLoading.value = false;
 			return true
 		} catch (error) {
@@ -215,15 +230,35 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 	}
 
 	const saveCurrentQuestProgress = async () => {
-		if (finished.value) return
+		if (isReplayMode.value) return
 		const eventDocRef = getEventProgressDocRef()
 		if (!eventDocRef || !questId.value) return
 		try {
 			await setDoc(eventDocRef, {
-				quests: {[questId.value]: {stepIndex: stepIndex.value, score: score.value, finished: false}}
+				quests: {
+					[questId.value]: {
+						stepIndex: stepIndex.value,
+						score: score.value,
+						solvedSteps: solvedSteps.value,
+						finished: false
+					}
+				}
 			}, {merge: true})
 		} catch (error) {
 		}
+	}
+
+	const markStepAsSolved = async (index) => {
+		if (!solvedSteps.value.includes(index)) {
+			solvedSteps.value.push(index)
+			solvedSteps.value.sort((a, b) => a - b)
+			await saveCurrentQuestProgress()
+		}
+	}
+
+	const setStepIndex = (index) => {
+		stepIndex.value = index
+		saveCurrentQuestProgress()
 	}
 
 	const next = (totalSteps) => {
@@ -244,13 +279,22 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 	}
 
 	const awardQuestCompletion = async (questId, rewardData) => {
+		if (isReplayMode.value) return
+
 		const eventDocRef = getEventProgressDocRef()
 		if (!eventDocRef) return
 		try {
 			await setDoc(eventDocRef, {
 				coins: increment(rewardData.coins || 0),
 				reputationPoints: increment(rewardData.rep || 0),
-				quests: {[questId]: {finished: true, score: score.value, stepIndex: stepIndex.value}}
+				quests: {
+					[questId]: {
+						finished: true,
+						score: score.value,
+						stepIndex: 0,
+						solvedSteps: solvedSteps.value
+					}
+				}
 			}, {merge: true})
 		} catch (error) {
 		}
@@ -261,7 +305,9 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 		questId.value = '';
 		stepIndex.value = 0;
 		score.value = 0;
-		finished.value = false
+		solvedSteps.value = [];
+		finished.value = false;
+		isReplayMode.value = false;
 	}
 
 	const resetEventProgress = async (id) => {
@@ -282,10 +328,11 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 
 	return {
 		eventId, questId, stepIndex, score, finished, isLoading,
-		isSnowEnabled, shopItems, events,
+		isSnowEnabled, shopItems, events, isValentineThemePurchased,
+		solvedSteps, isReplayMode,
 		isSnowPurchased, loadGlobalWinterSettings, setSnowFallEnabled,
 		start, restoreIfPossible, next, prev, addScore, finishQuest,
 		resetAllForEvent, loadEventProgress, saveMainProgress,
-		resetEventProgress, awardQuestCompletion
+		resetEventProgress, awardQuestCompletion, markStepAsSolved, setStepIndex
 	}
 })
