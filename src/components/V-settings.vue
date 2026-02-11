@@ -2,7 +2,7 @@
   <div v-if="activeTabKey === 'info'" class="tab-content">
     <div v-if="isThemeModalOpen" class="modal-overlay" @click.self="isThemeModalOpen = false">
       <div class="modal-card">
-        <div class="modal-title">Выберите оформление</div>
+        <div class="modal-title">{{ t('themeModal.title')}}</div>
         <div class="theme-grid">
           <label
               v-for="(label, key) in THEMES"
@@ -27,11 +27,10 @@
           </label>
         </div>
         <div class="modal-actions">
-          <button class="btn btn-success" @click="isThemeModalOpen = false">Закрыть</button>
+          <button class="btn btn-success" @click="isThemeModalOpen = false">{{ t('themeModal.close')}}</button>
         </div>
       </div>
     </div>
-
     <div
         v-for="group in SETTINGS_GROUPS"
         :key="group.id"
@@ -71,9 +70,8 @@
         </div>
       </div>
     </div>
-
     <div class="service__items">
-      <div class="accordion__title">{{ $t('cabinetAccordion.faq') }}</div>
+      <div class="accordion__title">{{ t('cabinetAccordion.faq') }}</div>
       <ul class="service__items-elements">
         <li v-for="item in servicePaths" :key="item.id" class="service__items-list">
           <NuxtLink class="service__items-link" :to="item.path">{{ item.label }}</NuxtLink>
@@ -101,7 +99,6 @@ import VToggle from '~/src/components/V-toggle.vue'
 import { useUiSettingsStore } from '../../store/uiSettingsStore.js'
 import { useEventSessionStore } from '../../store/eventsStore.js'
 import { isSoundEnabled, setSoundEnabled, unlockAudioByUserGesture } from '../../utils/soundManager.js'
-
 const props = defineProps({
   settingsIcon: String,
   activeTabKey: { type: String, default: 'info' }
@@ -119,12 +116,12 @@ const lockedModalContent = ref({ title: '', text: '' })
 const toggleForceUpdateKey = ref(0)
 const soundEnabled = ref(false)
 
-const THEMES = { light: 'Светлая', dark: 'Темная', pink: 'Романтичная' }
+const THEMES = { light: t('themeModal.light'), dark: t('themeModal.dark'), pink: t('themeModal.pink') }
 
 const SETTINGS_GROUPS = computed(() => [
   {
     id: 'notifications',
-    title: 'Уведомления',
+    title: t('settingsGroup.notifications'),
     items: [
       { key: 'sound', label: t('cabinetToggle.sound'), type: 'toggle' },
       { key: 'ach', label: t('cabinetToggle.ach'), type: 'toggle' }
@@ -132,9 +129,9 @@ const SETTINGS_GROUPS = computed(() => [
   },
   {
     id: 'appearance',
-    title: 'Оформление',
+    title: t('settingsGroup.appearance'),
     items: [
-      { key: 'theme', label: 'Тема', type: 'button' },
+      { key: 'theme', label: t('cabinetToggle.themeBtn'), type: 'button' },
       { key: 'snowFall', label: t('cabinetToggle.snowFall'), type: 'toggle' }
     ]
   }
@@ -148,7 +145,7 @@ const showRestriction = (type) => {
     isThemeModalOpen.value = false
     lockedModalContent.value = {
       title: `💖 ${t('cabinet.notAllow')}`,
-      text: `Эту тему можно разблокировать только в событии <b>"Фестиваль сердец"</b>. <br/> Приобретите её в магазине событий!`
+      text: `${t('pinkThemeModal.partOne')}} <b>${t('pinkThemeModal.partTwo')}}</b>. <br/>${t('pinkThemeModal.partThree')}}`
     }
   } else if (type === 'snow') {
     lockedModalContent.value = {

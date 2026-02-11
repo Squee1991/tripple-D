@@ -7,9 +7,8 @@
         :text="modalData.text"
         @close="closeAward"
     />
-
     <div class="awards__header">
-      <h1 class="awards__title">{{ t('Награды') }}</h1>
+      <h1 class="awards__title">{{ t('awardModal.title') }}</h1>
       <button @click="questionModal" class="awards__info-btn">
         <!--            <img class="awards__question-icon" :src="Question" alt="quest_icon">-->
         <div class="awards__counter cartoon-board">
@@ -17,7 +16,6 @@
           <span class="cartoon-board__sep">/</span>
           <span class="cartoon-board__total">{{ awardsTotal }}</span>
         </div>
-
       </button>
     </div>
     <div class="awards__list-scroll">
@@ -56,7 +54,6 @@ const props = defineProps({
 const awardsTotal = computed(() => props.awards.length)
 const awardsTotalLocked = computed(() => props.awards.filter(award => !award.locked).length)
 const sortedAwards = computed(() => {
-  // сначала полученные (locked=false), потом закрытые (locked=true)
   return [...props.awards].sort((a, b) => Number(a.locked) - Number(b.locked))
 })
 

@@ -1,4 +1,20 @@
 {
+  "themeModal": {
+    "title": "Alege aspectul",
+    "close": "Închide",
+    "light": "Luminos",
+    "dark": "Întunecat",
+    "pink": "Romantic"
+  },
+  "pinkThemeModal": {
+    "partOne": "Această temă poate fi deblocată doar în cadrul evenimentului",
+    "partTwo": "Festivalul Inimilor",
+    "partThree": "Cumpără-o din magazinul evenimentului!"
+  },
+  "settingsGroup": {
+    "notifications": "Notificări",
+    "appearance": "Aspect"
+  },
   "valentineAchievements": {
     "firstValentineQuestLabel": "Prima întâlnire",
     "firstValentineQuesDescription": "Fă primul pas! Finalizează orice misiune din evenimentul „Festivalul Inimilor” și primește prima recompensă.",
@@ -4421,15 +4437,32 @@
     "questFifteenSecondOption": "Turnul este lângă hotel",
     "questFifteenThirdOption": "Turnul este în spatele hotelului"
   },
+  "shop": {
+    "title": "Magazin de obiecte",
+    "subText": "Schimbă Articlus-ii acumulați pe bonusuri utile și reduceri permanente pentru studiile tale.",
+    "bought": "Cumpărat"
+  },
+  "cardsShop": {
+    "livesTitle": "Vieți",
+    "livesDescription": "Aici poți reface rezerva de vieți (Maxim 5)",
+    "full": "Plin",
+    "buy": "Cumpără"
+  },
   "awardsSection": {
     "congratulations": "Felicitări! Această recompensă este deja a ta!",
     "close": "Închide"
   },
+  "cabinetNav": {
+    "common": "General",
+    "awards": "Premii",
+    "rank": "Rang",
+    "exam": "Prieteni"
+  },
   "cabinetSidebar": {
     "valueOne": "Parametrii contului",
-    "valueTwo": "Prieteni",
-    "valueThree": "Recompense",
-    "valueFour": "Arhiva examenelor"
+    "valueTwo": "Arhiva examenelor",
+    "valueThree": "Magazin",
+    "valueFour": "Setări"
   },
   "cabinetAccordion": {
     "personalData": "Date personale",
@@ -4446,7 +4479,8 @@
     "sound": "Notificări sonore",
     "theme": "Mod întunecat",
     "ach": "Notificări realizări",
-    "snowFall": "Ninsoare"
+    "snowFall": "Ninsoare",
+    "themeBtn": "Temă"
   },
   "cabinet": {
     "important": "IMPORTANT!!!",

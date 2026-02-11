@@ -1,4 +1,20 @@
 {
+  "themeModal": {
+    "title": "Selecciona el diseño",
+    "close": "Cerrar",
+    "light": "Claro",
+    "dark": "Oscuro",
+    "pink": "Romántico"
+  },
+  "pinkThemeModal": {
+    "partOne": "Este tema solo se puede desbloquear en el evento",
+    "partTwo": "Festival de Corazones",
+    "partThree": "¡Cómpralo en la tienda del evento!"
+  },
+  "settingsGroup": {
+    "notifications": "Notificaciones",
+    "appearance": "Apariencia"
+  },
   "valentineAchievements": {
     "firstValentineQuestLabel": "Primera cita",
     "firstValentineQuesDescription": "¡Da el primer paso! Completa cualquier tarea del evento «Festival de Corazones» и recibe tu primera recompensa.",
@@ -4421,15 +4437,32 @@
     "questFifteenSecondOption": "La torre está al lado del hotel",
     "questFifteenThirdOption": "La torre está detrás del hotel"
   },
+  "shop": {
+    "title": "Tienda de objetos",
+    "subText": "Canjea tus Articluses acumulados por bonos útiles y descuentos permanentes para tu aprendizaje.",
+    "bought": "Comprado"
+  },
+  "cardsShop": {
+    "livesTitle": "Vidas",
+    "livesDescription": "Aquí puedes recargar tus vidas (Máximo 5)",
+    "full": "Lleno",
+    "buy": "Comprar"
+  },
   "awardsSection": {
     "congratulations": "¡Felicidades! ¡Ya tienes esta recompensa!",
     "close": "Cerrar"
   },
+  "cabinetNav": {
+    "common": "General",
+    "awards": "Premios",
+    "rank": "Rango",
+    "exam": "Amigos"
+  },
   "cabinetSidebar": {
-    "valueOne": "Configuración de la cuenta",
-    "valueTwo": "Amigos",
-    "valueThree": "Recompensas",
-    "valueFour": "Archivo de exámenes"
+    "valueOne": "Parámetros de la cuenta",
+    "valueTwo": "Archivo de exámenes",
+    "valueThree": "Tienda",
+    "valueFour": "Ajustes"
   },
   "cabinetAccordion": {
     "personalData": "Datos personales",
@@ -4446,7 +4479,8 @@
     "sound": "Notificaciones de sonido",
     "theme": "Modo oscuro",
     "ach": "Notificación de logros",
-    "snowFall": "Nevada"
+    "snowFall": "Nevada",
+    "themeBtn": "Tema"
   },
   "cabinet": {
     "important": "¡IMPORTANTE!",

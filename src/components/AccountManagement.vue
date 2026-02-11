@@ -1,48 +1,44 @@
 <template>
   <div class="account-tab-body">
-    <!-- Строка статуса подписки (всегда показываем) -->
-    <div class="subscription-status-row">
-      <div class="subscription-label">{{ t('cabinet.status') }}</div>
+<!--    <div class="subscription-status-row">-->
+<!--      <div class="subscription-label">{{ t('cabinet.status') }}</div>-->
 
-      <div class="subscription-status">
-        <!-- Premium активен -->
-        <template v-if="authStore.isPremium && !authStore.subscriptionCancelled">
-          <span class="status-pill is-active">✅ {{ t('cabinet.active') }}</span>
-        </template>
-        <!-- Premium отменён, но доступ ещё есть -->
-        <template v-else-if="authStore.isPremium && authStore.subscriptionCancelled">
-          <span class="status-pill is-cancelled">⚠️ {{ t('cabinet.canceled') }}</span>
-        </template>
-        <!-- Без премиума -->
-        <template v-else>
-          <div class="status-inline">
-            <span class="status-pill is-free">🔓 {{ t('cabinet.withoutPremium') }}</span>
-            <button @click="routeToPay" class="premium__btn">
-              {{ t('cabinet.buyPremium') }}
-            </button>
-          </div>
-        </template>
-      </div>
-    </div>
-    <!-- Детали/управление только если Premium -->
-    <template v-if="authStore.isPremium && !authStore.subscriptionCancelled">
-      <div class="premium__status-wrapper">
-        <p class="subtext">
-          📅 {{ t('cabinet.nextPayment') }} {{ formattedSubscriptionEndDate }}
-        </p>
-        <button class="btn btn-outline-danger" @click.stop="openCancelModal">
-          {{ t('cabinet.cancelBtn') }}
-        </button>
-      </div>
-    </template>
+<!--      <div class="subscription-status">-->
+<!--        &lt;!&ndash; Premium активен &ndash;&gt;-->
+<!--        <template v-if="authStore.isPremium && !authStore.subscriptionCancelled">-->
+<!--          <span class="status-pill is-active">✅ {{ t('cabinet.active') }}</span>-->
+<!--        </template>-->
+<!--        &lt;!&ndash; Premium отменён, но доступ ещё есть &ndash;&gt;-->
+<!--        <template v-else-if="authStore.isPremium && authStore.subscriptionCancelled">-->
+<!--          <span class="status-pill is-cancelled">⚠️ {{ t('cabinet.canceled') }}</span>-->
+<!--        </template>-->
+<!--        &lt;!&ndash; Без премиума &ndash;&gt;-->
+<!--        <template v-else>-->
+<!--          <div class="status-inline">-->
+<!--            <span class="status-pill is-free">🔓 {{ t('cabinet.withoutPremium') }}</span>-->
+<!--            <button @click="routeToPay" class="premium__btn">-->
+<!--              {{ t('cabinet.buyPremium') }}-->
+<!--            </button>-->
+<!--          </div>-->
+<!--        </template>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <template v-if="authStore.isPremium && !authStore.subscriptionCancelled">-->
+<!--      <div class="premium__status-wrapper">-->
+<!--        <p class="subtext">-->
+<!--          📅 {{ t('cabinet.nextPayment') }} {{ formattedSubscriptionEndDate }}-->
+<!--        </p>-->
+<!--        <button class="btn btn-outline-danger" @click.stop="openCancelModal">-->
+<!--          {{ t('cabinet.cancelBtn') }}-->
+<!--        </button>-->
+<!--      </div>-->
+<!--    </template>-->
+<!--    <template v-else-if="authStore.isPremium && authStore.subscriptionCancelled">-->
+<!--      <p class="access__text">-->
+<!--        📅 {{ t('cabinet.access') }} {{ formattedSubscriptionEndDate }}-->
+<!--      </p>-->
+<!--    </template>-->
 
-    <template v-else-if="authStore.isPremium && authStore.subscriptionCancelled">
-      <p class="access__text">
-        📅 {{ t('cabinet.access') }} {{ formattedSubscriptionEndDate }}
-      </p>
-    </template>
-
-    <!-- Удаление аккаунта -->
     <div class="account-actions">
       <button @click.stop="openDeleteModal" class="btn btn-danger w-full">
         {{ t('cabinet.deleteAcc') }}

@@ -268,13 +268,12 @@ const unlockedAwardList = computed(() => awardList.value.filter(a => !a.locked))
 const activeTabKey = ref('info')
 const isSettingsOpen = ref(false)
 
-
 const accountTab = ref('common')
 const ACCOUNT_TABS = computed(() => [
-  {key: 'common', label: 'Общие', icon: IdCard, alt: 'IdCard'},
-  {key: 'awards', label: t('cabinetSidebar.valueThree') || 'Награды', icon: Rewards, alt: 'award'},
-  {key: 'rank', label: 'Звание', icon: RankAward, alt: 'rank'},
-  {key: 'friends', label: t('cabinetSidebar.valueTwo') || 'Друзья', icon: Friends, alt: 'friends'}
+  {key: 'common', label: t('cabinetNav.common'), icon: IdCard, alt: 'IdCard'},
+  {key: 'awards', label: t('cabinetNav.awards'), icon: Rewards, alt: 'award'},
+  {key: 'rank', label: t('cabinetNav.rank'), icon: RankAward, alt: 'rank'},
+  {key: 'friends', label: t('cabinetNav.exam'), icon: Friends, alt: 'friends'}
 ])
 
 const isSnowWarningModalOpen = ref(false)
@@ -308,9 +307,9 @@ const iconDisplayComputed = computed(() => {
 
 const TAB_ITEMS = [
   {key: 'info', label: t('cabinetSidebar.valueOne'), alt: 'infoIcon', icon: AccountIcon},
-  {key: 'archive', label: t('cabinetSidebar.valueFour'), alt: 'archiveIcon', icon: Folder},
-  {key: 'shop', label: t('Магазин'), alt: 'shopIcon', icon: ShoppingCart},
-  {key: 'settings', label: t('Настройки'), alt: 'settingsIcon', icon: SettingsIcon}
+  {key: 'archive', label: t('cabinetSidebar.valueTwo'), alt: 'archiveIcon', icon: Folder},
+  {key: 'shop', label: t('cabinetSidebar.valueThree'), alt: 'shopIcon', icon: ShoppingCart},
+  {key: 'settings', label: t('cabinetSidebar.valueFour'), alt: 'settingsIcon', icon: SettingsIcon}
 ]
 const tabs = {
   archive: VExampResulut,
