@@ -2,15 +2,13 @@
   <div v-if="modelValue" class="tips__overlay" @click.self="close">
     <div class="tips__content">
       <button class="tips__close" @click="close">×</button>
+      <h2 v-if="title" class="tips__main-title">{{ title }}</h2>
       <div class="tips__container">
-        <div v-for="group in tips" :key="group.id" class="tips__group">
-          <h3 v-if="group.title" class="tips__category-header">{{ group.title }}</h3>
-          <ul class="tips__list">
-            <li v-for="(item, index) in group.tips" :key="index" class="tips__item">
-              <div class="tips__text" v-html="item.label || item.text"></div>
-            </li>
-          </ul>
-        </div>
+        <ul class="tips__list">
+          <li v-for="(item, index) in tips" :key="index" class="tips__item">
+            <div class="tips__text" v-html="item.text || item.label"></div>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -19,7 +17,8 @@
 <script setup>
 const props = defineProps({
   modelValue: Boolean,
-  tips: { type: Array, required: true }
+  tips: { type: Array, required: true },
+  title: { type: String, default: '' }
 })
 
 const emit = defineEmits(['update:modelValue'])
@@ -46,7 +45,7 @@ const close = () => emit('update:modelValue', false)
   padding: 2.5rem 2rem 2rem;
   border-radius: 16px;
   border: 3px solid #1e1e1e;
-  box-shadow: 3px 3px 0 #1e1e1e;
+  box-shadow: 8px 8px 0 #1e1e1e; /* Сделали тень как в дизайне */
   width: 90%;
   max-width: 500px;
   max-height: 85vh;
@@ -74,39 +73,48 @@ const close = () => emit('update:modelValue', false)
   padding-bottom: 4px;
 }
 
-.tips__category-header {
-  font-size: 1.2rem;
+/* Стили для заголовка */
+.tips__main-title {
+  font-size: 1.5rem;
   font-weight: 900;
-  color: #444;
-  margin: 1rem 0 0.5rem 0;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border-left: 4px solid #f97028;
-  padding-left: 10px;
+  color: #333;
+  margin: 0 0 1.5rem 0;
+  text-align: center;
   font-family: "Nunito", sans-serif;
 }
 
-.tips__group:first-child .tips__category-header {
-  margin-top: 0;
+.tips__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
+.tips__item {
+  margin-bottom: 1rem;
+}
+
+/* Красивые стили для текста подсказки (как в вашем ручном примере) */
 .tips__text {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 400;
   font-family: "Nunito", sans-serif;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 5px solid #60a5fa; /* Синяя полоска слева */
+  line-height: 1.5;
 }
 
 @media (max-width: 767px) {
   .tips__content {
-    padding: 1.2rem 1.2rem;
-    box-shadow: 2px 2px 0 #1e1e1e;
+    padding: 1.5rem 1rem;
+    box-shadow: 4px 4px 0 #1e1e1e;
   }
   .tips__text {
-    font-size: .8rem;
-  }
-  .tips__category-header{
     font-size: 1rem;
-    font-weight: 900;
+  }
+  .tips__main-title {
+    font-size: 1.2rem;
   }
 }
 </style>

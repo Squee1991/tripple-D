@@ -1,16 +1,16 @@
 <template>
   <div class="comparison-page" :class="{ 'content-is-active': isContentVisible }">
-    <div v-if="showTips" class="tips__overlay" @click.self="showTips = false">
-      <div class="tips__content">
-        <button class="tips__close" @click="showTips = false">×</button>
-        <h2 class="tipps__title">{{ t('adjectiveComparisonPage.tipTitle') }}</h2>
-        <ul class="tips__list">
-          <li v-for="tip in activeTipps" :key="tip.text" class="tips__item">
-            <div class="tips__text">{{ tip.text }}</div>
-          </li>
-        </ul>
-      </div>
-    </div>
+<!--    <div v-if="showTips" class="tips__overlay" @click.self="showTips = false">-->
+<!--      <div class="tips__content">-->
+<!--        <button class="tips__close" @click="showTips = false">×</button>-->
+<!--        <h2 class="tipps__title">{{ t('adjectiveComparisonPage.tipTitle') }}</h2>-->
+<!--        <ul class="tips__list">-->
+<!--          <li v-for="tip in activeTipps" :key="tip.text" class="tips__item">-->
+<!--            <div class="tips__text">{{ tip.text }}</div>-->
+<!--          </li>-->
+<!--        </ul>-->
+<!--      </div>-->
+<!--    </div>-->
     <VTips
         v-model="showTips"
         :title="t('adjectiveComparisonPage.tipTitle')"
@@ -571,6 +571,7 @@ watch(currentTopicData, () => {
 
 .info__icon-tips {
   width: 60px;
+  height: 60px;
   cursor: pointer;
   background: none;
   border: none;
