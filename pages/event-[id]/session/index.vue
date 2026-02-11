@@ -39,6 +39,11 @@ const currentQuest = computed(() => {
 const totalSteps = computed(() => currentQuest.value?.steps?.length || 0)
 const currentStep = computed(() => currentQuest.value?.steps?.[eventStore.stepIndex] || null)
 
+const isQuestFullyCompleted = computed(() => {
+  const solved = eventStore.solvedSteps || []
+  return solved.length >= totalSteps.value
+})
+
 const totalPossibleScore = computed(() => {
   const steps = currentQuest.value?.steps || []
   return steps.reduce((sum, step) => {
@@ -47,8 +52,6 @@ const totalPossibleScore = computed(() => {
     return sum + 1
   }, 0)
 })
-
-const isPerfectRun = computed(() => eventStore.score === totalPossibleScore.value)
 
 async function loadEventJson() {
   isLoading.value = true
@@ -75,6 +78,16 @@ onMounted(async () => {
 
   if (!currentQuest.value) {
     router.replace({name: 'event-id', params: {id: eventId.value}})
+  } else {
+    if (eventStore.finished) {
+      isFinished.value = true
+    }
+
+    const solved = eventStore.solvedSteps || []
+    // Если это не финиш (или это реплей, где мы сбросили финиш), ищем нерешенные
+    if (!isFinished.value && solved.includes(eventStore.stepIndex)) {
+      jumpToNextUnsolvedStep()
+    }
   }
 })
 
@@ -102,26 +115,46 @@ watch(currentStep, () => {
   }
 })
 
+function jumpToNextUnsolvedStep() {
+  const solved = eventStore.solvedSteps || []
+  for (let i = 0; i < totalSteps.value; i++) {
+    if (!solved.includes(i)) {
+      eventStore.setStepIndex(i)
+      return
+    }
+  }
+  finishQuest()
+}
+
 async function retryQuest() {
   isFinished.value = false
   checkStatus.value = null
+  // start сам определит isReplayMode = true, так как в базе квест завершен
   await eventStore.start(eventId.value, currentQuest.value.id)
+  jumpToNextUnsolvedStep()
 }
 
 function goToNextStep() {
-  if (eventStore.stepIndex + 1 < totalSteps.value) {
-    eventStore.next(totalSteps.value)
+  let nextIndex = eventStore.stepIndex + 1
+  const solved = eventStore.solvedSteps || []
+
+  while (nextIndex < totalSteps.value && solved.includes(nextIndex)) {
+    nextIndex++
+  }
+
+  if (nextIndex < totalSteps.value) {
+    eventStore.setStepIndex(nextIndex)
   } else {
     finishQuest()
   }
 }
 
 function finishQuest() {
-  const isReplay = eventStore.finished
   eventStore.finishQuest()
   isFinished.value = true
 
-  if (!isReplay && currentQuest.value && isPerfectRun.value) {
+  // Выдаем награду ТОЛЬКО если это не режим повтора
+  if (!eventStore.isReplayMode && currentQuest.value && isQuestFullyCompleted.value) {
     const rewards = {
       coins: currentQuest.value.rewardCoins || 0,
       rep: currentQuest.value.rewardRep || 0
@@ -160,6 +193,7 @@ function confirmSingleChoice() {
   if (selectedOptionIndex.value === currentStep.value.correctOptionIndex) {
     checkStatus.value = 'correct'
     eventStore.addScore(1)
+    if (eventStore.markStepAsSolved) eventStore.markStepAsSolved(eventStore.stepIndex)
   } else {
     checkStatus.value = 'wrong'
   }
@@ -174,19 +208,14 @@ function confirmTextInput() {
   const correctAnswer = (currentStep.value.answerText || '').trim().toLowerCase()
   const userAnswer = (userTextInput.value || '').trim().toLowerCase()
 
-  if (correctAnswer === '__ANY_NON_EMPTY__') {
-    if (userAnswer.length > 0) {
-      checkStatus.value = 'correct'
-      eventStore.addScore(1)
-    } else {
-      checkStatus.value = 'wrong'
-    }
-    return
-  }
+  const isCorrect = correctAnswer === '__ANY_NON_EMPTY__'
+      ? userAnswer.length > 0
+      : userAnswer === correctAnswer
 
-  if (userAnswer === correctAnswer) {
+  if (isCorrect) {
     checkStatus.value = 'correct'
     eventStore.addScore(1)
+    if (eventStore.markStepAsSolved) eventStore.markStepAsSolved(eventStore.stepIndex)
   } else {
     checkStatus.value = 'wrong'
   }
@@ -222,6 +251,7 @@ function checkReadingAnswers() {
   if (isAllCorrect) {
     checkStatus.value = 'correct'
     eventStore.addScore(questions.length)
+    if (eventStore.markStepAsSolved) eventStore.markStepAsSolved(eventStore.stepIndex)
   } else {
     checkStatus.value = 'wrong'
   }
@@ -286,6 +316,7 @@ function checkMatchingAnswers() {
   if (isCountCorrect && hasNoErrors) {
     checkStatus.value = 'correct'
     eventStore.addScore(correctPairs.length)
+    if (eventStore.markStepAsSolved) eventStore.markStepAsSolved(eventStore.stepIndex)
   } else {
     checkStatus.value = 'wrong'
   }
@@ -303,17 +334,24 @@ function checkMatchingAnswers() {
         <div class="loader"></div>
         <div> {{ t('eventSessionPage.loading')}}</div>
       </div>
+
       <div v-else-if="isFinished" class="result-wrapper">
-        <div v-if="isPerfectRun" class="result card success-card">
+
+        <div v-if="isQuestFullyCompleted" class="result card success-card">
           <div class="result__icon">🎉</div>
           <h2 class="result__title">{{ t('eventSessionPage.perfect')}}</h2>
           <p class="result__text">{{ t('eventSessionPage.right')}} {{ totalPossibleScore }} {{ t('eventSessionPage.questions')}}</p>
-          <div class="rewards" v-if="currentQuest?.rewardCoins">
-            <span>+{{ currentQuest.rewardCoins }} ❄</span>
+
+          <div class="rewards" v-if="currentQuest?.rewardCoins && !eventStore.isReplayMode">
+            <span>+{{ currentQuest.rewardCoins }} 💘</span>
             <span>+{{ currentQuest.rewardRep }} 🏆</span>
           </div>
-          <button class="btn btn--primary" @click="goBackHome">{{ t('eventSessionPage.getReward')}}</button>
+
+          <button class="btn btn--primary" @click="goBackHome">
+            {{ !eventStore.isReplayMode ? t('eventSessionPage.getReward') : t('eventSessionPage.leave') }}
+          </button>
         </div>
+
         <div v-else class="result card fail-card">
           <div class="result__icon">😕</div>
           <h2 class="result__title">{{ t('eventSessionPage.almost')}}</h2>
@@ -323,7 +361,9 @@ function checkMatchingAnswers() {
             <button class="btn btn--ghost" @click="goBackHome">{{ t('eventSessionPage.leave')}}</button>
           </div>
         </div>
+
       </div>
+
       <div v-else-if="!currentQuest" class="lesson__state">
         <span>{{ t('eventSessionPage.notFound')}}</span>
         <button class="btn btn--ghost" @click="goBackHome">{{ t('eventSessionPage.back')}}</button>
@@ -520,14 +560,8 @@ function checkMatchingAnswers() {
   padding: 20px 0;
 }
 
-.success-card {
-  border: 3px solid #a2dfb6;
-  background: #e9f8ee;
-}
-
 .fail-card {
   border: 3px solid #f3b5b5;
-  background: #fdecec;
 }
 
 .result {

@@ -1,31 +1,38 @@
 <template>
   <div class="awards__section">
-      <VModal
-          :visible="showModal"
-          :title="modalData.title"
-          :img="modalData.icon"
-          :text="modalData.text"
-          @close="closeAward"
-      />
+    <VModal
+        :visible="showModal"
+        :title="modalData.title"
+        :img="modalData.icon"
+        :text="modalData.text"
+        @close="closeAward"
+    />
     <div class="awards__header">
-      <h1 class="awards__title">{{ t('awards.title') }}</h1>
+      <h1 class="awards__title">{{ t('awardModal.title') }}</h1>
       <button @click="questionModal" class="awards__info-btn">
-        <img class="awards__question-icon" :src="Question" alt="quest_icon">
+        <!--            <img class="awards__question-icon" :src="Question" alt="quest_icon">-->
+        <div class="awards__counter cartoon-board">
+          <span class="cartoon-board__value">{{ awardsTotalLocked }}</span>
+          <span class="cartoon-board__sep">/</span>
+          <span class="cartoon-board__total">{{ awardsTotal }}</span>
+        </div>
       </button>
     </div>
-    <div class="items-grid">
-      <div
-          v-for="award in awards"
-          class="shop-item"
-          :class="{ locked: award.locked }"
-      >
-        <div class="image-wrapper">
-          <img :class="{ locked: award.locked }" :src="award.icon" alt="award" class="item-img"/>
-          <div v-if="award.locked" class="locked-overlay">
-            <img class="lock" src="../../assets/images/padlock.svg" alt="lock icon">
+    <div class="awards__list-scroll">
+      <div class="items-grid">
+        <div
+            v-for="award in sortedAwards"
+            class="shop-item"
+            :class="{ locked: award.locked }"
+        >
+          <div class="image-wrapper">
+            <img :class="{ locked: award.locked }" :src="award.icon" alt="award" class="item-img"/>
+            <div v-if="award.locked" class="locked-overlay">
+              <img class="lock" src="../../assets/images/padlock.svg" alt="lock icon">
+            </div>
           </div>
+          <p class="item-name">{{ t(award.title) }}</p>
         </div>
-        <p class="item-name">{{ t(award.title) }}</p>
       </div>
     </div>
   </div>
@@ -44,8 +51,12 @@ const props = defineProps({
     required: true,
   },
 })
-const totalAwards = computed(() => props.awards.length)
-const unlockedAwards = computed(() => props.awards.filter(a => !a.locked).length)
+const awardsTotal = computed(() => props.awards.length)
+const awardsTotalLocked = computed(() => props.awards.filter(award => !award.locked).length)
+const sortedAwards = computed(() => {
+  return [...props.awards].sort((a, b) => Number(a.locked) - Number(b.locked))
+})
+
 const modalData = ref({
   title: t('awardModal.title'),
   icon: AwardIconModal,
@@ -74,17 +85,16 @@ function closeAward() {
 
 .items-grid {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  border-top: 3px solid #1a1d2b;
+  padding-bottom: 10px;
+  border-radius: 15px;
 }
 
 .shop-item {
-  background-color: #ffffff;
-  border: 3px solid #1e1e1e;
-  border-radius: 16px;
   padding: 1rem;
   text-align: center;
-  box-shadow: 4px 4px 0 #1e1e1e;
   display: flex;
   width: 180px;
   flex-direction: column;
@@ -94,14 +104,10 @@ function closeAward() {
 }
 
 .awards__title {
-  font-size: 2rem;
+  color: var(--titleColor);
+  font-size: 1.5rem;
   font-weight: 600;
   font-family: "Nunito", sans-serif;
-}
-
-.awards__question-icon {
-  min-width: 60px;
-  width: 100%;
 }
 
 .awards__header {
@@ -109,16 +115,8 @@ function closeAward() {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 15px;
-  background: #4ade80;
-  border: 2px solid black;
-  padding: 10px 20px;
+  padding: 0 20px;
   border-radius: 16px;
-  box-shadow: 5px 5px 0 black;
-}
-
-.shop-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 2px 2px 0 #1e1e1e;
 }
 
 .item-img.locked {
@@ -133,7 +131,7 @@ function closeAward() {
 
 .image-wrapper {
   position: relative;
-  width: 100px;
+  width: 70px;
   margin-bottom: 10px;
 }
 
@@ -141,8 +139,6 @@ function closeAward() {
   position: absolute;
   top: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 50%;
   padding: 4px 8px;
   font-size: 1rem;
   font-weight: bold;
@@ -151,12 +147,13 @@ function closeAward() {
 
 .item-img {
   object-fit: contain;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.1rem;
 }
 
 .item-name {
+  color: var(--titleColor);
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: 0.25rem;
 }
 
@@ -212,6 +209,114 @@ button:disabled {
   box-shadow: none;
 }
 
+.awards__list-scroll {
+  max-height: calc(100vh - 310px);
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.awards__list-scroll::-webkit-scrollbar {
+  width: 10px;
+}
+
+.awards__list-scroll::-webkit-scrollbar-thumb {
+  background: #1e1e1e;
+  border-radius: 10px;
+  border: 2px solid #fff;
+}
+
+.awards__list-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.awards__counter.cartoon-board {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 36px;
+  padding: 0 12px;
+  min-width: 82px;
+  border-radius: 14px;
+  border: 2px solid #000;
+  background: #ffffff;
+  box-shadow: 4px 4px 0 #000;
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+  font-size: 1.05rem;
+  line-height: 1;
+
+  user-select: none;
+  overflow: hidden;
+}
+
+.awards__counter.cartoon-board::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 8px;
+  right: 8px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.85);
+  filter: blur(0.2px);
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.awards__counter.cartoon-board::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(26, 29, 43, 0.12) 1.4px, transparent 1.6px);
+  background-size: 10px 10px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.cartoon-board__value {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  padding: 0 8px;
+  border-radius: 10px;
+  color: #0b0b0b;
+}
+
+.cartoon-board__sep {
+  position: relative;
+  z-index: 1;
+  opacity: 0.65;
+  transform: translateY(-1px);
+}
+
+.cartoon-board__total {
+  position: relative;
+  z-index: 1;
+  opacity: 0.9;
+}
+
+.awards__info-btn:active .awards__counter.cartoon-board {
+  transform: translateY(0px);
+  box-shadow: 3px 3px 0 #000;
+}
+
+@media (max-width: 767px) {
+  .awards__counter.cartoon-board {
+    height: 34px;
+    min-width: 76px;
+    font-size: 1rem;
+  }
+  .cartoon-board__value {
+    height: 23px;
+    padding: 0 7px;
+  }
+}
+
 @keyframes zoomIn {
   from {
     transform: scale(0.8);
@@ -224,19 +329,17 @@ button:disabled {
 }
 
 @media (max-width: 767px) {
-  .shop-item {
-    width: 80%;
-    margin: 0 auto;
-    box-shadow: 2px 2px 0 black;
-  }
   .items-grid {
     width: 100%;
   }
   .awards__title {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
-  .awards__header {
-    padding: 5px;
+  .shop-item {
+    width: 160px;
+  }
+  .item-name {
+    font-size: .9rem;
   }
 }
 
@@ -247,8 +350,14 @@ button:disabled {
   align-items: center;
   border: none;
   padding: 10px;
-  width: 60px;
+  width: 70px;
   height: 60px;
   box-shadow: none;
+}
+
+@media (min-width: 1024px ) {
+  .shop-item:hover {
+    transform: translateY(-1px);
+  }
 }
 </style>
