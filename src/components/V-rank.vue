@@ -1,6 +1,6 @@
 <template>
   <div class="empty-content">
-    <div class="empty-icon">🛍️</div>
+    <div class="empty-icon">🔰</div>
     <h3 class="empty-title">{{ t('regionsModal.title')}}</h3>
   </div>
 <!--  <div class="ranks-wrapper">-->
