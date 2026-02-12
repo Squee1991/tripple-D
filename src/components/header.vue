@@ -334,7 +334,7 @@ const menuItems = computed(() => {
         url: '/event-valentine',
         isEvent: true,
         eventKey: 'valentine',
-        startDate: '14.02 00:00',
+        startDate: '11.02 00:00',
         endDate: '16.02 23:59'
       },
       {
