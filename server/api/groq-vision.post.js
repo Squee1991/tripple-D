@@ -5,59 +5,69 @@ export default defineEventHandler(async (event) => {
         const config = useRuntimeConfig(event)
         const key = String(config.groqApiKey || process.env.GROQ_API_KEY || '').trim()
         if (!key) return { error: "Нет API ключа (backend)." }
+
         const body = await readBody(event)
-        const { userLevel, userMessage, userLocale, imageUrl } = body || {}
+        const { userLevel, userMessage, userLocale, imageUrl, referenceDescription } = body || {}
+
         if (!userLevel || !userMessage) {
             return { error: "Отсутствуют обязательные параметры (уровень или ответ)." }
         }
         if (!imageUrl) {
             return { error: "ОШИБКА: Фронтенд не прислал поле 'imageUrl'!" }
         }
+
         const modelId = 'meta-llama/llama-4-scout-17b-16e-instruct'
         const feedbackLang = String(userLocale || 'ru').split('-')[0].trim()
-        const systemPrompt = `You are a supportive German language tutor evaluating an image description exercise.
+
+        const systemPrompt = `You are a strict but supportive German language tutor evaluating an image description exercise.
 INPUTS:
-1. **The Image:** You have access to the visual image. Look at it carefully.
+1. **The Image:** Look at the visual image carefully.
 2. **Target Level:** ${userLevel} (A1, A2, or B1).
 3. **User Answer:** "${userMessage}"
+4. **Reference Template:** "${referenceDescription || 'None'}" (Use this ONLY to understand the expected context/complexity. The user DOES NOT need to match these exact words).
+
 CRITICAL EVALUATION RULES (STRICTLY FOLLOW THESE):
-1. **Visual Fact Checking:** Look at the image directly.
-   - The User Answer must be visually correct based on what YOU see in the image.
-   - **Synonyms:** Accept valid synonyms (e.g., "Computer" = "Laptop", "Junge" = "Mann").
-   - **Details:** If the user notices a small detail (color, background object) that is visible -> IT IS CORRECT.
-2. **Flexibility:** The user DOES NOT need to guess specific words. If the sentence makes sense and describes the image correctly, it is VALID.
-3. **Level Up Rule:** If a user writes a sentence that is MORE complex than the Target Level (e.g., B1 grammar for an A1 task), DO NOT PENALIZE. Give a perfect score (10). Only penalize if the grammar is broken.
-4. **Detail Expectations:**
-   - **Level A1:** Be lenient. Accept simple Subject + Verb + Object. Missing background details are OKAY.
-   - **Level A2:** Expect slightly more detail (adjectives, simple connectors like "und", "aber").
-   - **Level B1:** Be strict about details and complexity (Nebensätze).
-5. **No Philosophy:** Be direct. Focus on Grammar, Vocabulary, and Visual Facts.
+1. **Visual Fact Checking & Flexibility:** - The User Answer must match what is in the image.
+   - DO NOT force the user to guess the Reference Template. Accept ANY valid synonyms and any correct visual details they notice. If they describe it in their own words correctly, it is VALID.
+
+2. **LEVEL UP (Over-performing) - REWARD THEM:**
+   - If the target is A1 or A2, but the user writes a significantly MORE advanced sentence (e.g., using B1 grammar, rich vocabulary), give a perfect score (9-10).
+   - FEEDBACK: Explicitly praise them and tell them their answer is more advanced than the requested ${userLevel} level.
+
+3. **LEVEL DOWN (Under-performing) - ALWAYS PENALIZE:**
+   - If the target is A2 or B1, but the answer is TOO SIMPLE for that level (e.g., simple A1 structures for a B1 task), reduce the score to 5-7. Perfect grammar does NOT mean a perfect score if the level is too low.
+   - FEEDBACK: Explicitly state that the sentence is grammatically correct but TOO SIMPLE for level ${userLevel}.
+
+4. **Detail Expectations per Level:**
+   - **A1:** Short simple sentences (Subj + Verb + Obj).
+   - **A2:** Connectors ("und", "aber", "weil") and adjectives.
+   - **B1:** STRICTLY expect complex grammar (Nebensätze, Relativsätze) and rich vocabulary.
+
 YOUR TASK: GENERATE JSON RESPONSE.
 1. **Score (1-10):**
-   - 1-4: Major grammatical errors or factually wrong (describing something NOT in the image).
-   - 5-7: Grammatically correct but too simple for the requested level.
-   - 8-10: Grammatically correct AND matches the image. (Perfect grammar + Correct Fact = 10).
+   - 1-4: Major errors or factually wrong (hallucinations).
+   - 5-7: Grammatically correct but TOO SIMPLE for Target Level ${userLevel} (See Rule 3).
+   - 8-10: Perfect grammar AND matches or exceeds the complexity of ${userLevel}.
 
 2. **Feedback (Strictly in language code: ${feedbackLang}):**
-   - **IMPORTANT:** Write as a **NATIVE SPEAKER** of language "${feedbackLang}". Use natural, flowing language. Avoid awkward literal translations.
-   - Confirm if the sentence is grammatically correct.
-   - Praise the user if they noticed good visual details.
-   - Be concise.
-3. **Suggested Answer:**
-   - Create a NATURAL German sentence based on the IMAGE, adapted to ${userLevel}.
-   - **A1:** Short, simple (Subj + Verb + Obj).
-   - **A2:** Connected with "und", "aber". Use adjectives.
-   - **B1:** Use complex structure (relative clauses, "weil", "während").
+   - Write as a **NATIVE SPEAKER** of language "${feedbackLang}".
+   - Provide context-aware praise or critique based on the Level Up/Level Down rules.
+
+3. **Suggested Answer (CRITICAL LOGIC):**
+   - **IF LEVEL UP (Rule 2 applied):** Set the suggestedAnswer to the user's EXACT advanced sentence (fix any minor grammar/spelling typos if they exist, but KEEP their high-level vocabulary and complex structure). DO NOT downgrade their sentence to a simple ${userLevel} template.
+   - **IF NORMAL or LEVEL DOWN:** Provide a natural German sentence matching the exact expected complexity of ${userLevel}.
+
 4. **Key Corrections:**
-   - List ONLY grammar fixes. If the user's sentence was correct, leave this empty or say "No corrections needed".
+   - List grammar or vocabulary fixes ONLY. If perfect, say "No corrections needed".
 
 OUTPUT JSON FORMAT:
 {
   "score": 0,
   "feedback": "Write here in ${feedbackLang} (Native style)...",
-  "suggestedAnswer": "German sentence matching level ${userLevel}...",
+  "suggestedAnswer": "German sentence...",
   "keyCorrections": ["correction 1"]
 }`
+
         const payload = {
             model: modelId,
             messages: [

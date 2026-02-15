@@ -117,7 +117,7 @@ export const topics = [
 				id: 1,
 				image: KindOnSki,
 				descriptions: {
-					A1: "Ein Junge fährt Ski. Er trägt eine blaue Jacke und einen blauen Helm.",
+					A1: "Ein Junge fährt Ski. Er hat eine blaue Jacke und einen Helm.",
 					A2: "Das Kind fährt Ski im Schnee. Es trägt warme Kleidung und einen Helm",
 					B1: "Ein lächelnder Junge gleitet auf blauen Skiern einen Hügel hinunter. Er ist mit einem Helm und einer Skibrille und trägt warme Winterkleidung"
 				}
@@ -135,8 +135,8 @@ export const topics = [
 				id: 3,
 				image: KindImSnow,
 				descriptions: {
-					A1: "Ein Junge liegt im Schnee und macht einen Schneeengel. Er trägt einen roten Schneeanzug und eine Mütze",
-					A2: "Ein Junge liegt auf dem Rücken im Schnee. Er trägt einen roten Schneeanzug und Handschuhe. Er bewegt seine Arme und Beine und macht einen Schneeengel.",
+					A1: "Ein Junge liegt im Schnee und macht einen Schneeengel.",
+					A2: "Ein Junge liegt auf dem Rücken im Schnee. Er trägt einen roten Schneeanzug und Handschuhe.",
 					B1: "Auf dem Bild liegt ein lachender Junge im Schnee und formt einen Schneeengel. Er trägt einen roten Schneeanzug sowie eine gestreifte Mütze mit Bommel."
 				}
 			},
@@ -921,7 +921,7 @@ export const topics = [
 				}
 			}
 		]
-	}
+	},
 	// {
 	// 	id: 'animals',
 	// 	label: 'Животные и природа',
