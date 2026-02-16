@@ -225,7 +225,7 @@ import { defineNuxtConfig } from 'nuxt/config'
 import { loadEnv } from 'vite'
 import path from 'path'
 import fs from 'fs'
-const mode = process.env.NODE_ENV === 'production' ? 'production' : 'development'
+const mode =  process.env.NODE_ENV === 'production' ? 'production' : 'development'
 const env = loadEnv(mode, process.cwd(), '')
 const serviceAccountFile = process.env.GOOGLE_APPLICATION_CREDENTIALS || 'service-account-dev.json'
 const serviceAccountPath = path.resolve(process.cwd(), serviceAccountFile)
