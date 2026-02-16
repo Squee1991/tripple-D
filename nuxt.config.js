@@ -273,9 +273,9 @@ export default defineNuxtConfig({
         registerType: 'autoUpdate',
 
         manifest: {
-            name: 'German Articles Magic',
-            short_name: 'Articles',
-            description: 'Тренажёр немецких артиклей',
+            name: 'skillupgerman',
+            short_name: 'skillupgerman',
+            description: 'Учить немецкий легко',
             theme_color: '#0b1020',
             background_color: '#0b1020',
             display: 'standalone',
