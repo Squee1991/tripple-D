@@ -1,5 +1,10 @@
 :root {
     --bg: #fef8e4;
+    --navBg: #fef8e4;
+    --labelBg:#3c99d3;
+    --footerBg: #0f7aaf;
+    --labelTextColor:#333;
+    --panelTextColor: #333;
     /*--bg: #a2ccd4;*/
     --titleColor: #2c2b2b;
     --borderBottom: #000000;
@@ -17,15 +22,27 @@
     linear-gradient(180deg,
             rgba(52, 60, 45, .84),
             rgba(22, 26, 18, .88));
+    --regionBtnColor: #ffffff;
+    --regionBtnBg: #3c99d3;
+    --menuHoverEl: #fde68a;
+    --timerbg: #42ab1a;
 }
 
 .dark {
-    /*--bg: #2e2e33;*/
+    --panelTextColor: #ffffff;
+    --menuHoverEl: #fde68a;
+    --regionBtnColor: #ffffff;
+    --regionBtnBg: #3c99d3;
+    --footerBg: #0f7aaf;
+    --labelTextColor:#333;
+    --labelBg:#3c99d3;
+    --navBg: #0F172A;
     --bg: #0F172A;
     --titleColor: white;
     --borderBottom: white;
     --navItems: white;
     --border: #e8e2e2;
+    --timerbg: #42ab1a;
     --shopCardBg: radial-gradient(150% 120% at 50% -15%,
     rgba(255, 255, 255, .10),
     rgba(255, 255, 255, .03) 42%,
@@ -40,11 +57,17 @@
 
 
 .pink {
+    --timerbg: #ab1a1a;
+    --menuHoverEl:  #e09eb5;
+    --regionBtnColor: #ffffff;
+    --regionBtnBg: #e09eb5;
+    --footerBg: #D16B7B;
     --bg: #F9EEDD;
     --navBg: #D16B7B;
     --labelBg:#F2C7D1;
     --border: #E6AAB4;
     --labelTextColor:#8B454E;
+    --panelTextColor: #8B454E;
 }
 
 html, body {

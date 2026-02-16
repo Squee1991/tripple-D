@@ -1,4 +1,20 @@
 {
+  "themeModal": {
+    "title": "Select Appearance",
+    "close": "Close",
+    "light": "Light",
+    "dark": "Dark",
+    "pink": "Romantic"
+  },
+  "pinkThemeModal": {
+    "partOne": "This theme can only be unlocked during the",
+    "partTwo": "Festival of Hearts",
+    "partThree": "event. Purchase it in the event shop!"
+  },
+  "settingsGroup": {
+    "notifications": "Notifications",
+    "appearance": "Appearance"
+  },
   "valentineAchievements": {
     "firstValentineQuestLabel": "First Date",
     "firstValentineQuesDescription": "Take the first step! Complete any quest in the 'Festival of Hearts' event and get your first reward.",
@@ -1582,7 +1598,7 @@
     "nextQuest": "Next question"
   },
   "locationAchievementsCategory": {
-    "title": "Eastern Plain",
+    "title": "Language Lands",
     "firstName": "Eastern Plain",
     "firstDescription": "Complete all quests without mistakes in the Eastern Plain",
     "secondName": "Stone Frontier",
@@ -4167,7 +4183,7 @@
     "questSevenFirstOption": "Pharmacy",
     "questSevenSecondOption": "Bakery",
     "questSevenThirdOption": "Post office",
-    "questEight": "Assemble the phrase: The bakery is here, and the pharmacy is there",
+    "questEight": "Assemble the phrase: The bakery and the pharmacy are open",
     "questNine": "Listen and write",
     "questTen": "What does: das Restaurant mean?",
     "questTenFirstOption": "Restaurant",
@@ -4421,15 +4437,32 @@
     "questFifteenSecondOption": "The tower is next to the hotel",
     "questFifteenThirdOption": "The tower is behind the hotel"
   },
+  "shop": {
+    "title": "Item Shop",
+    "subText": "Exchange your accumulated Articluses for useful bonuses and permanent discounts for your studies.",
+    "bought": "Bought"
+  },
+  "cardsShop": {
+    "livesTitle": "Lives",
+    "livesDescription": "Here you can refill your lives (Maximum 5)",
+    "full": "Full",
+    "buy": "Buy"
+  },
   "awardsSection": {
     "congratulations": "Congratulations! You already have this award!",
     "close": "Close"
   },
+  "cabinetNav": {
+    "common": "General",
+    "awards": "Awards",
+    "rank": "Rank",
+    "exam": "Friends"
+  },
   "cabinetSidebar": {
-    "valueOne": "Account settings",
-    "valueTwo": "Friends",
-    "valueThree": "Rewards",
-    "valueFour": "Exam archive"
+    "valueOne": "Account Parameters",
+    "valueTwo": "Exam Archive",
+    "valueThree": "Shop",
+    "valueFour": "Settings"
   },
   "cabinetAccordion": {
     "personalData": "Personal Data",
@@ -4446,7 +4479,8 @@
     "sound": "Sound Notifications",
     "theme": "Dark Mode",
     "ach": "Achievement Notifications",
-    "snowFall": "Snowfall"
+    "snowFall": "Snowfall",
+    "themeBtn": "Theme"
   },
   "cabinet": {
     "important": "IMPORTANT!!!",

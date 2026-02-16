@@ -1,25 +1,23 @@
 <template>
-  <div v-if="modelValue" class="tips__overlay" @click.self="close">
-    <div class="tips__content">
-      <button class="tips__close" @click="close">×</button>
-      <div class="tips__container">
-        <div v-for="group in tips" :key="group.id" class="tips__group">
-          <h3 v-if="group.title" class="tips__category-header">{{ group.title }}</h3>
-          <ul class="tips__list">
-            <li v-for="(item, index) in group.tips" :key="index" class="tips__item">
-              <div class="tips__text" v-html="item.label || item.text"></div>
-            </li>
-          </ul>
-        </div>
-      </div>
+  <div v-if="modelValue" class="tips__overlay" @click.self="close"> <div class="tips__content">
+    <button class="tips__close" @click="close">×</button>
+    <h2 v-if="title" class="tips__main-title">{{ title }}</h2>
+    <div class="tips__container">
+      <ul class="tips__list">
+        <li v-for="(item, index) in tips" :key="index" class="tips__item">
+          <div :class="['tips__text', item.isTitle ? 'tips__text--header' : 'tips__text--body']" v-html="item.text || item.label"></div>
+        </li>
+      </ul>
     </div>
+  </div>
   </div>
 </template>
 
 <script setup>
 const props = defineProps({
   modelValue: Boolean,
-  tips: { type: Array, required: true }
+  tips: { type: Array, required: true },
+  title: { type: String, default: '' }
 })
 
 const emit = defineEmits(['update:modelValue'])
@@ -46,8 +44,8 @@ const close = () => emit('update:modelValue', false)
   padding: 2.5rem 2rem 2rem;
   border-radius: 16px;
   border: 3px solid #1e1e1e;
-  box-shadow: 4px 4px 0 #1e1e1e;
-  width: 95%;
+  box-shadow: 3px 3px 0 #1e1e1e;
+  width: 90%;
   max-width: 500px;
   max-height: 85vh;
   overflow-y: auto;
@@ -55,8 +53,8 @@ const close = () => emit('update:modelValue', false)
 
 .tips__close {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 12px;
+  right: 12px;
   background: #f97028;
   color: #fff;
   border: 2px solid #1e1e1e;
@@ -74,39 +72,58 @@ const close = () => emit('update:modelValue', false)
   padding-bottom: 4px;
 }
 
-.tips__category-header {
-  font-size: 1.2rem;
+.tips__main-title {
+  font-size: 1.7rem;
   font-weight: 900;
-  color: #444;
-  margin: 1rem 0 0.5rem 0;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border-left: 4px solid #f97028;
-  padding-left: 10px;
+  color: #333;
+  margin: 0 0 1.5rem 0;
+  text-align: center;
   font-family: "Nunito", sans-serif;
 }
 
-.tips__group:first-child .tips__category-header {
-  margin-top: 0;
+.tips__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tips__item {
+  margin-bottom: 0.5rem;
 }
 
 .tips__text {
-  font-size: 1rem;
-  font-weight: 400;
   font-family: "Nunito", sans-serif;
+  line-height: 1.5;
+  border-radius: 8px;
+}
+
+.tips__text--header {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #2c3e50;
+  margin-top: 15px;
+}
+
+.tips__text--body {
+  border-left: 5px solid #519cd1;
+  font-size: .9rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  color: #555;
+  margin-left: 5px;
 }
 
 @media (max-width: 767px) {
   .tips__content {
-    padding: 1.2rem 1.2rem;
-    box-shadow: 2px 2px 0 #1e1e1e;
+    padding: 1.5rem 1rem;
+    box-shadow: 4px 4px 0 #1e1e1e;
   }
   .tips__text {
-    font-size: .8rem;
+    font-size: .9rem;
   }
-  .tips__category-header{
-    font-size: 1rem;
-    font-weight: 900;
+  .tips__main-title {
+    font-size: 1.2rem;
   }
 }
 </style>

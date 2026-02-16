@@ -9,7 +9,7 @@
           @change="onChange"
       />
       <label for="menuBurger" class="menu-label">
-        <div class="menu-bar" :data-text="menuText"></div>
+        <div :data-text="menuText" class="menu-bar"></div>
       </label>
     </div>
   </div>
@@ -17,20 +17,20 @@
 
 <script setup>
 import {computed} from 'vue'
-const { locale } = useI18n( )
 
+const {locale} = useI18n();
 const positionClass = computed(() => {
   return locale.value === 'ar' ? {right: '10px'} : {left: '10px'}
 })
 
 const menuText = computed(() => {
-  return (locale.value === 'ru' || locale.value === 'uk') ? 'МЕНЮ' : 'MENU'
+  return (locale.value === 'ru' || locale.value === 'uk') ? "МЕНЮ" : "MENU"
 })
+
 
 const props = defineProps({
   modelValue: Boolean
 })
-
 const emit = defineEmits(['update:modelValue'])
 const onChange = (event) => {
   emit('update:modelValue', event.target.checked)
@@ -41,6 +41,7 @@ const onChange = (event) => {
 .menu-btn-container {
   position: absolute;
   top: 50%;
+
   width: 39px;
   transform: translateY(-50%);
 }
@@ -96,7 +97,7 @@ const onChange = (event) => {
   right: 0;
   left: 0;
   color: var(--titleColor);
-  font-size: 11px;
+  font-size: 10px;
   font-weight: bold;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
   text-align: center;

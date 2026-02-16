@@ -213,14 +213,14 @@ onBeforeUnmount(() => {
   box-shadow: 2px 2px 0 var(--border);
   border-radius: 15px;
   padding: 10px 10px;
-  background: #3c99d3;
+  background: var(--labelBg);
   position: relative;
   overflow: hidden;
 }
 
 .map__title {
   font-size: 2.3rem;
-  color: #f6f2f2;
+  color: var(--regionBtnColor);
   font-weight: 600;
   letter-spacing: .2px;
   font-family: "Nunito", sans-serif;
@@ -301,15 +301,15 @@ onBeforeUnmount(() => {
 
 .map-btn {
   padding: 12px 18px;
-  background: #f1c40f;
-  color: black;
+  background: var(--regionBtnBg);
+  color: var(--regionBtnColor);
   font-family: "Nunito", sans-serif;
   font-weight: 600;
   font-size: 18px;
   border: 1px solid white;
   border-radius: 12px;
   cursor: pointer;
-  box-shadow: 0 3px 0 #f1c40f;
+  box-shadow: 0 3px 0 var(--regionBtnBg);
   transition: transform .12s ease, box-shadow .12s ease;
   width: 100%;
 }
@@ -654,12 +654,12 @@ onBeforeUnmount(() => {
 .current-category-name {
   font-size: 1.1rem;
   font-weight: 900;
-  color: #333;
+  color: var(--labelTextColor);
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 2px 2px 0 black;
-  border: 2px solid black;
+  box-shadow: 3px 3px 0 var(--border);
+  border: var(--border);
   border-radius: 8px;
   flex: 1;
   background: white;

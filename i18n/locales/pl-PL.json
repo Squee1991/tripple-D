@@ -1,4 +1,20 @@
 {
+  "themeModal": {
+    "title": "Wybierz wygląd",
+    "close": "Zamknij",
+    "light": "Jasny",
+    "dark": "Ciemny",
+    "pink": "Romantyczny"
+  },
+  "pinkThemeModal": {
+    "partOne": "Ten motyw można odblokować tylko podczas wydarzenia",
+    "partTwo": "Festiwal Serc",
+    "partThree": "Kup go w sklepie wydarzenia!"
+  },
+  "settingsGroup": {
+    "notifications": "Powiadomienia",
+    "appearance": "Wygląd"
+  },
   "valentineAchievements": {
     "firstValentineQuestLabel": "Pierwsza randka",
     "firstValentineQuesDescription": "Zrób pierwszy krok! Wykonaj dowolne zadanie w wydarzeniu „Festiwal Serc” i odbierz pierwszą nagrodę.",
@@ -1582,7 +1598,7 @@
     "nextQuest": "Następne pytanie"
   },
   "locationAchievementsCategory": {
-    "title": "Wschodnia Równina",
+    "title": "Krainy Językowe",
     "firstName": "Wschodnia równina",
     "firstDescription": "Ukończ wszystkie zadania bez błędów na Wschodniej Równinie",
     "secondName": "Kamienna Granica",
@@ -4167,7 +4183,7 @@
     "questSevenFirstOption": "Apteka",
     "questSevenSecondOption": "Piekarnia",
     "questSevenThirdOption": "Poczta",
-    "questEight": "Ułóż frazę: Piekarnia jest tutaj, a apteka jest tam",
+    "questEight": "Ułóż frazę: Piekarnia i apteka są otwarte",
     "questNine": "Posłuchaj i zapisz",
     "questTen": "Co znaczy: das Restaurant",
     "questTenFirstOption": "Restauracja",
@@ -4421,15 +4437,32 @@
     "questFifteenSecondOption": "Wieża jest obok hotelu",
     "questFifteenThirdOption": "Wieża jest za hotelem"
   },
+  "shop": {
+    "title": "Sklep z przedmiotami",
+    "subText": "Wymieniaj zgromadzone Articlusy na przydatne bonusy i stałe zniżki na naukę.",
+    "bought": "Kupiono"
+  },
+  "cardsShop": {
+    "livesTitle": "Życia",
+    "livesDescription": "Tutaj możesz uzupełnić zapas żyć (Maksymalnie 5)",
+    "full": "Pełne",
+    "buy": "Kup"
+  },
   "awardsSection": {
     "congratulations": "Gratulacje! Masz już tę nagrodę!",
     "close": "Zamknij"
   },
+  "cabinetNav": {
+    "common": "Ogólne",
+    "awards": "Nagrody",
+    "rank": "Ranga",
+    "exam": "Znajomi"
+  },
   "cabinetSidebar": {
-    "valueOne": "Ustawienia konta",
-    "valueTwo": "Przyjaciele",
-    "valueThree": "Nagrody",
-    "valueFour": "Archiwum egzaminów"
+    "valueOne": "Parametry konta",
+    "valueTwo": "Archiwum egzaminów",
+    "valueThree": "Sklep",
+    "valueFour": "Ustawienia"
   },
   "cabinetAccordion": {
     "personalData": "Dane osobowe",
@@ -4446,7 +4479,8 @@
     "sound": "Powiadomienia dźwiękowe",
     "theme": "Tryb ciemny",
     "ach": "Powiadomienia o osiągnięciach",
-    "snowFall": "Opad śniegu"
+    "snowFall": "Opady śniegu",
+    "themeBtn": "Motyw"
   },
   "cabinet": {
     "important": "WAŻNE!!!",

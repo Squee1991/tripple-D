@@ -250,70 +250,6 @@
     },
     {
       "id": "quest-4",
-      "title": "Выбери правильное слово — Gefühle und Pläne am Valentinstag",
-      "rewardCoins": 15,
-      "rewardRep": 50,
-      "steps": [
-        {
-          "type": "choose-word",
-          "id": "cw-1",
-          "sentence": "Viele Menschen fühlen sich am Valentinstag sehr ___.",
-          "options": ["glücklich", "hungrig", "müde", "krank"],
-          "correctOptionIndex": 0
-        },
-        {
-          "type": "choose-word",
-          "id": "cw-2",
-          "sentence": "Manche planen den Tag schon viele Tage im ___.",
-          "options": ["Voraus", "Winter", "Sommer", "Abend"],
-          "correctOptionIndex": 0
-        },
-        {
-          "type": "choose-word",
-          "id": "cw-3",
-          "sentence": "Viele schreiben ihrem Partner eine nette ___.",
-          "options": ["Nachricht", "Karte", "Rechnung", "Liste"],
-          "correctOptionIndex": 0
-        },
-        {
-          "type": "choose-word",
-          "id": "cw-4",
-          "sentence": "Am Nachmittag treffen sich manche im ___.",
-          "options": ["Café", "Büro", "Supermarkt", "Bahnhof"],
-          "correctOptionIndex": 0
-        },
-        {
-          "type": "choose-word",
-          "id": "cw-5",
-          "sentence": "Wenn jemand keine Zeit hat, machen sie einen Termin an einem anderen ___.",
-          "options": ["Tag", "Ort", "Tisch", "Brief"],
-          "correctOptionIndex": 0
-        },
-        {
-          "type": "choose-word",
-          "id": "cw-6",
-          "sentence": "Viele hören zusammen ihre Lieblings___.",
-          "options": ["musik", "Übung", "Aufgabe", "Sprache"],
-          "correctOptionIndex": 0
-        },
-        {
-          "type": "choose-word",
-          "id": "cw-7",
-          "sentence": "Manche schreiben am Ende des Tages in ihr ___.",
-          "options": ["Tagebuch", "Konto", "Heft", "Ticket"],
-          "correctOptionIndex": 0
-        },
-        {
-          "type": "choose-word",
-          "id": "cw-8",
-          "sentence": "Für viele ist der Valentinstag ein besonderer ___.",
-          "options": ["Tag", "Stuhl", "Brief", "Bus"],
-          "correctOptionIndex": 0
-        }
-      ]
-    },
-    {
-      "id": "quest-5",
       "title": "Valentinstag in Deutschland",
       "rewardCoins": 15,
       "rewardRep": 50,
@@ -453,7 +389,7 @@
       ]
     },
     {
-      "id": "quest-6",
+      "id": "quest-5",
       "title": "Соедини пары — День святого Валентина",
       "rewardCoins": 15,
       "rewardRep": 50,
@@ -487,7 +423,6 @@
             ["l6", "r6"]
           ]
         },
-
         {
           "type": "matching",
           "id": "match-2",
@@ -545,6 +480,70 @@
             ["l5", "r4"],
             ["l6", "r6"]
           ]
+        }
+      ]
+    },
+    {
+      "id": "quest-6",
+      "title": "Выбери правильное слово — Gefühle und Pläne am Valentinstag",
+      "rewardCoins": 15,
+      "rewardRep": 50,
+      "steps": [
+        {
+          "type": "choose-word",
+          "id": "cw-1",
+          "sentence": "Menschen sind am Valentinstag sehr ___.",
+          "options": ["glücklich", "hungrig", "müde", "krank"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-2",
+          "sentence": "Manche planen den Tag schon ___.",
+          "options": ["früher", "im Winter", "im Sommer", "am Abend"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-3",
+          "sentence": "Viele schreiben ihrem Partner eine nette ___.",
+          "options": ["Nachricht", "Rechnung", "Liste", "Übung"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-4",
+          "sentence": "Am Nachmittag treffen sich manche im ___.",
+          "options": ["Café", "Büro", "Supermarkt", "Bahnhof"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-5",
+          "sentence": "Wenn jemand keine Zeit hat, machen sie einen Termin an einem anderen ___.",
+          "options": ["Tag", "Ort", "Tisch", "Brief"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-6",
+          "sentence": "Manchmal hören die Leute zusammen ihre Lieblings___.",
+          "options": ["Musik", "Übung", "Aufgabe", "Sprache"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-7",
+          "sentence": "Manche machen am Abend ein ___.",
+          "options": ["Foto", "Konto", "Ticket", "Auto"],
+          "correctOptionIndex": 0
+        },
+        {
+          "type": "choose-word",
+          "id": "cw-8",
+          "sentence": "Der Valentinstag ist für Paare sehr ___.",
+          "options": ["wichtig", "kalt", "schnell", "schwer"],
+          "correctOptionIndex": 0
         }
       ]
     }
