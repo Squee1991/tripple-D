@@ -66,6 +66,12 @@ export const dailyQuests = [
 		targetValue: 5
 	},
 	{
+		id: 'thematicLearning',
+		name: 'daily.twelve',
+		currentValue: 0,
+		targetValue: 1
+	},
+	{
 		id: 'trainPlural',
 		name: 'daily.seventh',
 		currentValue: 0,
