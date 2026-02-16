@@ -49,6 +49,7 @@ export default defineNuxtConfig({
 		stripeSecret: process.env.STRIPE_SECRET_KEY || env.STRIPE_SECRET_KEY,
 		stripeWebhookSecret: process.env.STRIPE_WEBHOOK_SECRET || env.STRIPE_WEBHOOK_SECRET,
 		groqApiKey: process.env.GROQ_API_KEY || env.GROQ_API_KEY,
+		dailyApiKey: process.env.DAILY_API_KEY || env.DAILY_API_KEY,
 		ADMIN_UID1: process.env.ADMIN_UID1 || env.ADMIN_UID1,
 		ADMIN_UID2: process.env.ADMIN_UID2 || env.ADMIN_UID2,
 		public: {

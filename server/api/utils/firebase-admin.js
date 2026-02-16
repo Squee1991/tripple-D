@@ -3,8 +3,12 @@ import { getFirestore } from 'firebase-admin/firestore'
 import fs from 'fs'
 import path from 'path'
 
+const defaultSA = process.env.NODE_ENV === 'production'
+    ? 'service-account.json'
+    : 'service-account-dev.json'
+
 const saPath = path.resolve(process.cwd(),
-    process.env.GOOGLE_APPLICATION_CREDENTIALS || 'service-account.json'
+    process.env.GOOGLE_APPLICATION_CREDENTIALS || defaultSA
 )
 
 if (!fs.existsSync(saPath)) {

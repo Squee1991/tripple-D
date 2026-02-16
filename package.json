@@ -14,6 +14,7 @@
     "admin:remove": "node admin/setAdmin.js remove"
   },
   "dependencies": {
+    "@daily-co/daily-js": "^0.87.0",
     "@firebase/app-types": "0.9.3",
     "@nuxt/image": "1.11.0",
     "@nuxtjs/color-mode": "3.5.2",

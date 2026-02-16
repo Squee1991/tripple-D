@@ -316,6 +316,7 @@ const menuItems = computed(() => {
           {id: 'faq', valueKey: 'nav.quest', url: '/faq'}
         ]),
     ...(userAuth.uid ? [{id: 'test', url: '/exams', valueKey: 'nav.tests'}] : []),
+    ...(userAuth.uid ? [{id: 'speaking', url: '/speaking-rooms', valueKey: 'nav.speakingRooms'}] : []),
   ]
   if (userAuth.uid) {
     const allEvents = [
