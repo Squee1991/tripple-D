@@ -244,6 +244,15 @@ const firebaseConfig = {
 	appId: process.env.FIREBASE_APP_ID || env.FIREBASE_APP_ID,
 }
 
+const adminJson = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON
+let admin
+try {
+	admin = adminJson ? { serviceAccount: JSON.parse(adminJson) } : undefined
+} catch {
+	admin = undefined
+}
+
+
 const siteUrl = process.env.NUXT_SITE_URL || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000')
 export default defineNuxtConfig({
 	experimental: { payloadExtraction: false },
@@ -257,7 +266,38 @@ export default defineNuxtConfig({
 		'@nuxtjs/i18n',
 		'@nuxtjs/color-mode',
 		'@nuxtjs/robots',
+        '@vite-pwa/nuxt',
 	],
+
+    pwa: {
+        registerType: 'autoUpdate',
+
+        manifest: {
+            name: 'German Articles Magic',
+            short_name: 'Articles',
+            description: 'Тренажёр немецких артиклей',
+            theme_color: '#0b1020',
+            background_color: '#0b1020',
+            display: 'standalone',
+            start_url: '/',
+            scope: '/',
+            icons: [
+                { src: '/pwa-192x192.png', sizes: '192x192', type: 'image/png' },
+                { src: '/pwa-512x512.png', sizes: '512x512', type: 'image/png' },
+                { src: '/pwa-512x512.png', sizes: '512x512', type: 'image/png', purpose: 'any maskable' }
+            ]
+        },
+
+        workbox: {
+            navigateFallback: '/',
+            globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,woff2}'],
+        },
+
+        devOptions: {
+            enabled: true, // чтобы тестить локально
+            type: 'module',
+        }
+    },
 	vuefire: {
 		config: firebaseConfig,
 		auth: true,
@@ -288,6 +328,7 @@ export default defineNuxtConfig({
 				{ rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
 				{ rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
 				{ rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+				{ rel: 'manifest', href: '/manifest.webmanifest' }
 			],
 			meta: [
 				{ property: 'og:image', content: 'https://www.skillupgerman.com/android-chrome-512x512.png' },

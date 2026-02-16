@@ -529,29 +529,48 @@ export const userAuthStore = defineStore('auth', () => {
         }
     }
 
-    const activatePremium = async (premiumData,usedDiscountId = null) => {
+    const activatePremium = async (premiumData) => {
         const auth = getAuth()
         const user = auth.currentUser
         if (!user) return
+
+        // 1. Получаем ID скидки с бэкенда
+        const usedDiscountId = premiumData.discountUsed
+
         const userDocRef = doc(db, 'users', user.uid)
         try {
-            await setDoc(userDocRef, {
+            // 2. Формируем данные
+            const dataToSave = {
                 ...premiumData,
                 isPremium: true,
-                subscriptionCancelled:false
-            }, {merge: true})
+                subscriptionCancelled: false,
+                updatedAt: new Date().toISOString()
+            }
+
+            // 3. Если была скидка, ставим её в false в базе
+            if (usedDiscountId && ['sale_5', 'sale_10', 'sale_15'].includes(usedDiscountId)) {
+                dataToSave[usedDiscountId] = false
+                console.log( "Купон сброшен в базе")
+            }
+
+            // 4. Пишем в Firebase
+            await setDoc(userDocRef, dataToSave, { merge: true })
+
+            // 5. Обновляем локальные данные
             isPremium.value = true
             subscriptionEndsAt.value = premiumData.subscriptionEndsAt
             subscriptionCancelled.value = false
-            if (usedDiscountId) {
-                await consumeDiscount(usedDiscountId)
+
+            // 6. Обновляем переменную со скидками в интерфейсе
+            if (premiumDiscount.value && usedDiscountId) {
+                premiumDiscount.value[usedDiscountId] = false
             }
-            console.log(' Премиум успешно активирован и записан')
+
+            console.log('✅ Премиум успешно активирован и записан')
         } catch (e) {
             console.error('Ошибка записи в Базе данных:', e)
             throw e
         }
-
     }
     const consumeDiscount = async (discountId) => {
         const user = getAuth().currentUser

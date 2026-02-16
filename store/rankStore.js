@@ -8,7 +8,8 @@ import Bronze from '../assets/images/rank-icons/bronze.png'
 import levelTwoSilver from '../assets/images/rank-icons/levelTwoSilver.png'
 import levelTwoBronze from '../assets/images/rank-icons/levelTwoBronze.png'
 import levelTwoGold from '../assets/images/rank-icons/levelTwogold.png'
-import {userAuthStore} from "./store/authStore.js";
+import { userAuthStore } from "~/store/authStore.js";
+
 
 export const useRankUserStore = defineStore('rankUserStore', () => {
     const authStore = userAuthStore()
