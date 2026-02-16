@@ -49,6 +49,9 @@
           </div>
         </div>
         <div class="quest__section">
+          <div v-if="hasTip" class="quest__tip-container">
+            <button class="quest__tip-btn" @click="showTipModal = true">💡</button>
+          </div>
           <div class="quest__question">
             <template v-if="questStore.task.type === 'input' && questStore.showResult">
               <span v-html="highlightedQuestion"></span>
@@ -244,6 +247,18 @@
         </div>
       </div>
     </div>
+    <div v-if="showTipModal" class="modal">
+      <div class="modal__overlay" @click="showTipModal = false"></div>
+      <div class="modal__window">
+        <div class="modal__title">💡</div>
+        <div class="modal__text quest__tip-text">
+          {{ currentTip }}
+        </div>
+        <div class="modal__actions">
+          <button class="btn btn--primary" @click="showTipModal = false">Понятно</button>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -269,10 +284,22 @@ const router = useRouter()
 const questStore = userChainStore()
 const langStore = userlangStore()
 const forceRevive = ref(false)
-
+const showTipModal = ref(false)
 const questId = computed(() => {
   const rawId = String(route.params.id || route.params.questId || '')
   return rawId.replace('quest-', '')
+})
+
+const hasTip = computed(() => {
+  return !!(questStore.task && questStore.task.tip)
+})
+
+const currentTip = computed(() => {
+  return questStore.task?.tip || ''
+})
+
+watch(() => questStore.currentIndex, () => {
+  showTipModal.value = false
 })
 
 const regionKey = computed(() => String(route.query.region || ''))
@@ -538,7 +565,7 @@ function beforeUnloadHandler(e) {
 watch([questId, regionKey], () => {
       questStore.loading = true
       questStore.error = ''
-      questStore.quest = null
+      questStore.quest = nullw
       questStore.finished = false
       questStore.showResult = false
       questStore.selected = ''
@@ -649,11 +676,7 @@ watchEffect(() => {
   gap: 1rem;
   padding-top: .25rem;
   margin-bottom: .75rem;
-  background: rgba(255, 255, 255, 0.7);
   border-radius: 99px;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
-  backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .quest__stat {
@@ -1191,5 +1214,47 @@ watchEffect(() => {
     transform: translate(2px, 2px);
     box-shadow: 2px 2px 0 #1e1e1e;
   }
+}
+
+/* --- СТИЛИ ДЛЯ ПОДСКАЗОК --- */
+.quest__tip-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.quest__tip-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  color: #1e1e1e;
+  background: #fffbe9;
+  border: 2px solid #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 3px 3px 0 #1e1e1e;
+  cursor: pointer;
+  transition: all .1s ease-in-out;
+}
+
+.quest__tip-btn:hover {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0 #1e1e1e;
+}
+
+.quest__tip-btn:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0 0 0 #1e1e1e;
+}
+
+.quest__tip-text {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  padding: 15px 5px;
+  color: #333;
 }
 </style>
