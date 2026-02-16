@@ -1,21 +1,21 @@
 <template>
   <div class="comparison-page" :class="{ 'content-is-active': isContentVisible }">
-    <div v-if="showTips" class="tips__overlay" @click.self="showTips = false">
-      <div class="tips__content">
-        <button class="tips__close" @click="showTips = false">×</button>
-        <h2 class="tipps__title">{{ t('prepositionsIndexPage.tipsTitle')}}</h2>
-        <ul class="tips__list">
-          <li v-for="tip in activeTipps" :key="tip.text" class="tips__item">
-            <div class="tips__text">{{ tip.text }}</div>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <VTips
-        v-model="showTips"
-        :title="t('prepositionsIndexPage.tipsTitle')"
-        :tips="currentTopicData?.tips"
-    />
+<!--    <div v-if="showTips" class="tips__overlay" @click.self="showTips = false">-->
+<!--      <div class="tips__content">-->
+<!--        <button class="tips__close" @click="showTips = false">×</button>-->
+<!--        <h2 class="tipps__title">{{ t('prepositionsIndexPage.tipsTitle')}}</h2>-->
+<!--        <ul class="tips__list">-->
+<!--          <li v-for="tip in activeTipps" :key="tip.text" class="tips__item">-->
+<!--            <div class="tips__text">{{ tip.text }}</div>-->
+<!--          </li>-->
+<!--        </ul>-->
+<!--      </div>-->
+<!--    </div>-->
+        <VTips
+            v-model="showTips"
+            :title="t('prepositionsIndexPage.tipsTitle')"
+            :tips="currentTopicData?.tips"
+        />
     <div class="sidebar">
       <VBackBtn/>
       <h2 class="sidebar__title">{{ t('prepositionsIndexPage.prepositionsTitleNav')}}</h2>
@@ -111,25 +111,6 @@ const canonical = useCanonical()
 useSeoMeta({
   robots: 'noindex, nofollow'
 })
-
-// const pageTitle = t('metaPrepositions.title')
-// const pageDesc  = t('metaPrepositions.description')
-// useHead({
-//   title: pageTitle,
-//   link: [
-//     { rel: 'canonical', href: canonical }
-//   ]
-// })
-// useSeoMeta({
-//   title: pageTitle,
-//   description: pageDesc,
-//   ogTitle: pageTitle,
-//   ogDescription: pageDesc,
-//   ogType: 'article',
-//   ogUrl: canonical,
-//   ogImage: '/images/seo-prepositions-cases.png',
-//   robots: 'index, follow'
-// })
 
 const topics = [
   {
@@ -565,7 +546,7 @@ watch(currentTopicData, () => {
   padding: 2rem;
   border-radius: 16px;
   border: 3px solid #1e1e1e;
-  box-shadow: 8px 8px 0 #1e1e1e;
+  box-shadow: 4px 4px 0 #1e1e1e;
   width: 90%;
   max-width: 500px;
 }

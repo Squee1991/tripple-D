@@ -1,4 +1,20 @@
 {
+  "themeModal": {
+    "title": "Выберите оформление",
+    "close": "Закрыть",
+    "light": "Светлая",
+    "dark": "Темная",
+    "pink": "Романтичная"
+  },
+  "pinkThemeModal": {
+    "partOne": "Эту тему можно разблокировать только в событии",
+    "partTwo": "Фестиваль сердец",
+    "partThree": "Приобретите её в магазине событий!"
+  },
+  "settingsGroup": {
+    "notifications": "Уведомления",
+    "appearance": "Оформление"
+  },
   "valentineAchievements": {
     "firstValentineQuestLabel": "Первое свидание",
     "firstValentineQuesDescription": "Сделайте первый шаг! Выполните любое задание события «Фестиваль сердец» и получите первую награду.",
@@ -83,7 +99,7 @@
   },
   "eventSessionPage": {
     "loading": "Загрузка…",
-    "perfect": ">Идеально!",
+    "perfect": "Идеально",
     "right": "Вы ответили верно на все",
     "questions": "вопросов.",
     "getReward": "Забрать награду",
@@ -1582,7 +1598,7 @@
     "nextQuest": "Следующий вопрос"
   },
   "locationAchievementsCategory": {
-    "title": "Восточная Равнина",
+    "title": "Языковые земли",
     "firstName": "Восточная равнина",
     "firstDescription": "Выполните все квесты без ошибок в Восточной равнине",
     "secondName": "Каменный предел",
@@ -4167,7 +4183,7 @@
     "questSevenFirstOption": "Аптека",
     "questSevenSecondOption": "Пекарня",
     "questSevenThirdOption": "Почта",
-    "questEight": "Собери фразу: Пекарня здесь, а аптека там",
+    "questEight": "Собери фразу: Булочная и аптека открыты",
     "questNine": "Прослушай и напиши",
     "questTen": "Что значит: das Restaurant",
     "questTenFirstOption": "Ресторан",
@@ -4421,15 +4437,32 @@
     "questFifteenSecondOption": "Башня рядом с отелем",
     "questFifteenThirdOption": "Башня за отелем"
   },
+  "shop": {
+    "title": "Магазин предметов",
+    "subText": "Обменивай накопленные Артиклюсы на полезные бонусы и постоянные скидки для своего обучения.",
+    "bought": "Куплено"
+  },
+  "cardsShop": {
+    "livesTitle": "Жизни",
+    "livesDescription": "Тут можно пополнить запас жизней(Максимально 5)",
+    "full": "Полное",
+    "buy": "Купить"
+  },
   "awardsSection": {
     "congratulations": "Поздравляем! Эта награда уже у вас!",
     "close": "Закрыть"
   },
+  "cabinetNav": {
+    "common": "Общие",
+    "awards": "Награды",
+    "rank": "Звание",
+    "exam": "Друзья"
+  },
   "cabinetSidebar": {
     "valueOne": "Параметры аккаунта",
-    "valueTwo": "Друзья",
-    "valueThree": "Награды",
-    "valueFour": "Архив экзаменов"
+    "valueTwo": "Архив экзаменов",
+    "valueThree": "Магазин",
+    "valueFour": "Настройки"
   },
   "cabinetAccordion": {
     "personalData": "Персональные данные",
@@ -4446,7 +4479,8 @@
     "sound": "Звуковые уведомления",
     "theme": "Тёмный режим",
     "ach": "Уведомление достижений",
-    "snowFall": "Снегопад"
+    "snowFall": "Снегопад",
+    "themeBtn": "Тема"
   },
   "cabinet": {
     "important": "ВАЖНО!!!",

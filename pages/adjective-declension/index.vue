@@ -105,26 +105,6 @@ useSeoMeta({
   robots: 'noindex, nofollow'
 })
 
-// const baseTitle = t('metaAdjectiveDeclension.title')
-// const pageDesc  = t('metaAdjectiveDeclension.description')
-//
-// useHead({
-//   title: baseTitle,
-//   link: [
-//     { rel: 'canonical', href: canonical }
-//   ]
-// })
-//
-// useSeoMeta({
-//   title: baseTitle,
-//   description: pageDesc,
-//   ogTitle: baseTitle,
-//   ogDescription: pageDesc,
-//   ogType: 'article',
-//   ogUrl: canonical,
-//   ogImage: '/images/seo-adj-declension.png',
-//   robots: 'index, follow'
-// })
 const router = useRouter()
 const categoryId = 'adjective-declension';
 const topic = ref('definite-article');
@@ -145,10 +125,10 @@ const topics = [
     title: t('adjectiveDeclensionPage.sidebarFirst'),
     rule: t('adjectiveContentSide.ruleFirst'),
     tips: [
-      {text: t('adjectiveContentSide.firstThemeTipOne')},
-      {text: t('adjectiveContentSide.firstThemeTipTwo')},
-      {text: t('adjectiveContentSide.firstThemeTipThree')},
-      {text: t('adjectiveContentSide.firstThemeTipFour')}
+      {label: t('adjectiveContentSide.firstThemeTipOne')},
+      {label: t('adjectiveContentSide.firstThemeTipTwo')},
+      {label: t('adjectiveContentSide.firstThemeTipThree')},
+      {label: t('adjectiveContentSide.firstThemeTipFour')}
     ],
     tableData: [
       {case: 'Nominativ', m: '-e', f: '-e', n: '-e', pl: '-en'},
@@ -179,10 +159,10 @@ const topics = [
     title: t('adjectiveDeclensionPage.sidebarSecond'),
     rule: t('adjectiveContentSide.ruleSecond'),
     tips: [
-      {text: t('adjectiveContentSide.secondThemeTipOne')},
-      {text: t('adjectiveContentSide.secondThemeTipTwo')},
-      {text: t('adjectiveContentSide.secondThemeTipThree')},
-      {text: t('adjectiveContentSide.secondThemeTipFour')}
+      {label: t('adjectiveContentSide.secondThemeTipOne')},
+      {label: t('adjectiveContentSide.secondThemeTipTwo')},
+      {label: t('adjectiveContentSide.secondThemeTipThree')},
+      {label: t('adjectiveContentSide.secondThemeTipFour')}
     ],
     tableData: [
       {case: 'Nominativ', m: '-er', f: '-e', n: '-es', pl: '-en'},
@@ -213,11 +193,11 @@ const topics = [
     title: t('adjectiveDeclensionPage.sidebarThird'),
     rule: t('adjectiveContentSide.ruleThird'),
     tips: [
-      {text: t('adjectiveContentSide.thirdThemeTipOne')},
-      {text: t('adjectiveContentSide.thirdThemeTipTwo')},
-      {text: t('adjectiveContentSide.thirdThemeTipThree')},
-      {text: t('adjectiveContentSide.thirdThemeTipFour')},
-      {text: t('adjectiveContentSide.thirdThemeTipFifth')}
+      {label: t('adjectiveContentSide.thirdThemeTipOne')},
+      {label: t('adjectiveContentSide.thirdThemeTipTwo')},
+      {label: t('adjectiveContentSide.thirdThemeTipThree')},
+      {label: t('adjectiveContentSide.thirdThemeTipFour')},
+      {label: t('adjectiveContentSide.thirdThemeTipFifth')}
     ],
     tableData: [
       {case: 'Nominativ', m: '-er', f: '-e', n: '-es', pl: '-e'},

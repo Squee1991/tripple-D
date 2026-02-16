@@ -1,4 +1,20 @@
 {
+  "themeModal": {
+    "title": "اختر المظهر",
+    "close": "إغلاق",
+    "light": "فاتح",
+    "dark": "داكن",
+    "pink": "رومانسي"
+  },
+  "pinkThemeModal": {
+    "partOne": "يمكن فتح هذا المظهر فقط خلال حدث",
+    "partTwo": "مهرجان القلوب",
+    "partThree": "اشترِه من متجر الأحداث!"
+  },
+  "settingsGroup": {
+    "notifications": "التنبيهات",
+    "appearance": "المظهر"
+  },
   "valentineAchievements": {
     "firstValentineQuestLabel": "الموعد الأول",
     "firstValentineQuesDescription": "اتخذ الخطوة الأولى! أكمل أي مهمة في حدث «مهرجان القلوب» واحصل على مكافأتك الأولى.",
@@ -1582,7 +1598,7 @@
     "nextQuest": "السؤال التالي"
   },
   "locationAchievementsCategory": {
-    "title": "السهل الشرقي",
+    "title": "أراضي اللغات",
     "firstName": "السهل الشرقي",
     "firstDescription": "أكمل جميع المهام بدون أخطاء في السهل الشرقي",
     "secondName": "الحدود الحجرية",
@@ -4167,7 +4183,7 @@
     "questSevenFirstOption": "صيدلية",
     "questSevenSecondOption": "مخبز",
     "questSevenThirdOption": "بريد",
-    "questEight": "رتب الجملة: المخبز هنا والصيدلية هناك",
+    "questEight": "رتب الجملة: المخبز والصيدلية مفتوحان",
     "questNine": "استمع واكتب",
     "questTen": "ماذا يعني: das Restaurant",
     "questTenFirstOption": "مطعم",
@@ -4421,15 +4437,32 @@
     "questFifteenSecondOption": "البرج بجانب الفندق",
     "questFifteenThirdOption": "البرج خلف الفندق"
   },
+  "shop": {
+    "title": "متجر العناصر",
+    "subText": "استبدل نقاط (Articluses) المتراكمة بمكافآت مفيدة وخصومات دائمة لتعليمك.",
+    "bought": "تم الشراء"
+  },
+  "cardsShop": {
+    "livesTitle": "الأرواح",
+    "livesDescription": "هنا يمكنك إعادة تعبئة الأرواح (الحد الأقصى 5)",
+    "full": "كامل",
+    "buy": "شراء"
+  },
   "awardsSection": {
     "congratulations": "مبروك! هذه الجائزة لديك بالفعل!",
     "close": "إغلاق"
   },
+  "cabinetNav": {
+    "common": "عام",
+    "awards": "الجوائز",
+    "rank": "الرتبة",
+    "exam": "الأصدقاء"
+  },
   "cabinetSidebar": {
-    "valueOne": "إعدادات الحساب",
-    "valueTwo": "الأصدقاء",
-    "valueThree": "الجوائز",
-    "valueFour": "أرشيف الامتحانات"
+    "valueOne": "بارامترات الحساب",
+    "valueTwo": "أرشيف الامتحانات",
+    "valueThree": "المتجر",
+    "valueFour": "الإعدادات"
   },
   "cabinetAccordion": {
     "personalData": "البيانات الشخصية",
@@ -4443,10 +4476,11 @@
     "registerDate": "تاريخ التسجيل"
   },
   "cabinetToggle": {
-    "sound": "إشعارات صوتية",
-    "theme": "الوضع الليلي",
-    "ach": "إشعار بالإنجازات",
-    "snowFall": "تساقط الثلوج"
+    "sound": "تنبيهات صوتية",
+    "theme": "الوضع الداكن",
+    "ach": "تنبيهات الإنجازات",
+    "snowFall": "تساقط الثلوج",
+    "themeBtn": "المظهر"
   },
   "cabinet": {
     "important": "مهم!!!",

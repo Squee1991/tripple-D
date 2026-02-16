@@ -174,7 +174,7 @@ const modalConfig = computed(() => {
         title: t('inDevelopment.title'),
         text: t('inDevelopment.sub'),
         button: null,
-        img: Dev,
+        img: Dev
       }
     case 'eventLocked':
       return {
@@ -182,7 +182,7 @@ const modalConfig = computed(() => {
         title: t('eventLocked.title'),
         text: t('eventLocked.text'),
         button: {label: t('eventLocked.btn'), to: '/calendar'},
-        img: PadLock,
+        img: PadLock
       }
     default:
       return {isEvent: false, title: '', text: '', button: null, img: Dev}
@@ -252,8 +252,8 @@ const menuItems = computed(() => {
                 subChildren: [
                   {id: 'learn-tips', url: '/article-basic', valueKey: 'underSub.prev'},
                   {id: 'learn-rules', url: '/article-theory', valueKey: 'underSub.rules'},
-                  {id: 'learn-selectedTopics', url: '/articles', valueKey: 'underSub.artRules'},
-                ],
+                  {id: 'learn-selectedTopics', url: '/articles', valueKey: 'underSub.artRules'}
+                ]
               },
               {
                 id: 'verbs',
@@ -262,7 +262,7 @@ const menuItems = computed(() => {
                   {id: 'verb-theory', url: '/verbs-theory', valueKey: 'underSub.verbsTheory'},
                   {id: 'tenses', url: '/tenses', valueKey: 'underSub.verbFirst'},
                   {id: 'modalVerbs', url: '/modal-verbs', valueKey: 'underSub.verbSecond'},
-                  {id: 'verb-types', url: '/verb-types', valueKey: 'underSub.verbTypes'},
+                  {id: 'verb-types', url: '/verb-types', valueKey: 'underSub.verbTypes'}
                 ],
               },
               {
@@ -270,7 +270,7 @@ const menuItems = computed(() => {
                 valueKey: 'sub.prepositions',
                 subChildren: [
                   {id: 'prepositions-theory', url: '/prepositions-theory', valueKey: 'underSub.rules'},
-                  {id: 'prepositions-practice', url: '/prepositions', valueKey: 'underSub.prepositions'},
+                  {id: 'prepositions-practice', url: '/prepositions', valueKey: 'underSub.prepositions'}
                 ],
               },
               {
@@ -288,14 +288,14 @@ const menuItems = computed(() => {
                     valueKey: 'underSub.adjectivesBasic'
                   },
                   {id: 'declination', url: '/adjective-declension', valueKey: 'underSub.declination'},
-                  {id: 'comparison', url: '/adjective-comparison', valueKey: 'underSub.comparison'},
+                  {id: 'comparison', url: '/adjective-comparison', valueKey: 'underSub.comparison'}
                 ],
               },
-              {id: 'description', url: '/description-images-test' , valueKey: 'Описание картинок'},
+              {id: 'description', url: '/description-images' , valueKey: 'Описание картинок'},
               {id: 'themen', url: '/thematic-learning', valueKey: 'sub.themen'},
               {id: 'cards', url: '/create-cards', valueKey: 'sub.card'},
-              {id: 'idioms', url: '/idioms', valueKey: 'sub.idioms'},
-            ],
+              {id: 'idioms', url: '/idioms', valueKey: 'sub.idioms'}
+            ]
           },
           {
             id: 'duel',
@@ -306,14 +306,14 @@ const menuItems = computed(() => {
               // {id: 'describePicture', url: '/chat', valueKey: 'sub.describePicture'},
               {id: 'quests', url: '/recipes', valueKey: 'sub.quests'},
               {id: 'duel-guess', url: '/guess-word', valueKey: 'sub.guess'},
-              {id: 'articlemarathon', url: '/article-marathon', valueKey: 'sub.marathon'},
-            ],
+              {id: 'articlemarathon', url: '/article-marathon', valueKey: 'sub.marathon'}
+            ]
           },
         ]
         : [
           {id: 'about', valueKey: 'nav.about', url: '/info-about'},
           {id: 'contact', valueKey: 'nav.contact', url: '/support-request'},
-          {id: 'faq', valueKey: 'nav.quest', url: '/faq'},
+          {id: 'faq', valueKey: 'nav.quest', url: '/faq'}
         ]),
     ...(userAuth.uid ? [{id: 'test', url: '/exams', valueKey: 'nav.tests'}] : []),
   ]
@@ -334,7 +334,7 @@ const menuItems = computed(() => {
         url: '/event-valentine',
         isEvent: true,
         eventKey: 'valentine',
-        startDate: '14.02 00:00',
+        startDate: '12.02 00:00',
         endDate: '16.02 23:59'
       },
       {
@@ -598,7 +598,7 @@ onBeforeUnmount(() => {
   position: sticky;
   top: 0;
   z-index: 3;
-  background-color: var(--bg);
+  background-color: var(--navBg);
   border-bottom: 4px solid var(--borderBottom);
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -654,8 +654,8 @@ onBeforeUnmount(() => {
   transition: all 0.2s;
   cursor: pointer;
   user-select: none;
-  border: 2px solid black;
-  box-shadow: 2px 2px 0 black;
+  border: 2px solid var(--border);
+  box-shadow: 2px 2px 0 var(--border);
   background: white;
 }
 
@@ -675,9 +675,9 @@ onBeforeUnmount(() => {
   left: 0;
   z-index: 110;
   background: #FFFFFF;
-  border: 2px solid #1e1e1e;
+  border: 2px solid var(--border);
   border-radius: 16px;
-  box-shadow: 2px 2px 0px #1e1e1e;
+  box-shadow: 2px 2px 0px var(--border);
   padding: 0.5rem;
   min-width: 240px;
 }
@@ -712,9 +712,9 @@ onBeforeUnmount(() => {
   margin-left: 10px;
   padding: 0.5rem;
   background: #fff;
-  border: 3px solid #1e1e1e;
+  border: 3px solid var(--border);
   border-radius: 12px;
-  box-shadow: 2px 2px 0px #1e1e1e;
+  box-shadow: 2px 2px 0px var(--border);
   white-space: nowrap;
   z-index: 120;
 }
@@ -724,7 +724,7 @@ onBeforeUnmount(() => {
   right: 100%;
   margin-left: 0;
   margin-right: 10px;
-  box-shadow: 0 4px 4px #1e1e1e;
+  box-shadow: 0 4px 4px var(--border);
 }
 
 .header-user {
@@ -734,8 +734,8 @@ onBeforeUnmount(() => {
   background: #fff;
   padding: 0.5rem 0.7rem;
   border-radius: 12px;
-  border: 2px solid #1e1e1e;
-  box-shadow: 2px 2px 0px #1e1e1e;
+  border: 2px solid var(--border);
+  box-shadow: 2px 2px 0px var(--border);
   cursor: pointer;
 }
 
@@ -770,9 +770,9 @@ onBeforeUnmount(() => {
   z-index: 110;
   min-width: 100%;
   background: #FFFFFF;
-  border: 2px solid #1e1e1e;
+  border: 2px solid var(--border);
   border-radius: 16px;
-  box-shadow: 2px 2px 0px #1e1e1e;
+  box-shadow: 2px 2px 0px var(--border);
   overflow: hidden;
 }
 
@@ -922,7 +922,7 @@ onBeforeUnmount(() => {
   }
 
   .header-nav .header-nav__link.is-active-parent {
-    background-color: #f1c40f;
+    background-color: var(--regionBtnBg);
     transform: translate(3px, 3px);
     box-shadow: none;
   }
@@ -952,8 +952,8 @@ onBeforeUnmount(() => {
     padding: 8px;
     color: #1e1e1e;
     background-color: #fff;
-    border: 2px solid #1e1e1e;
-    box-shadow: 2px 2px 0 #1e1e1e;
+    border: 2px solid var(--border);
+    box-shadow: 2px 2px 0 var(--border);
     border-radius: 12px;
     margin-bottom: 0.5rem;
     display: flex;
@@ -964,7 +964,7 @@ onBeforeUnmount(() => {
     position: static;
     box-shadow: none;
     border: none;
-    padding: 5px;
+    padding: 5px 0 5px 5px;;
     background: none;
     white-space: normal;
     border-left: 3px solid #cccccc;
@@ -1080,16 +1080,18 @@ onBeforeUnmount(() => {
   .header-nav__link:hover {
     transform: translate(2px, 2px);
     box-shadow: 0 0 0;
-    background-color: #f1c40f;
-    color: #1e1e1e;
+    background-color: var(--regionBtnBg);
+    color: var(--regionBtnColor);
   }
 
   .header-user__dropdown-btn:hover {
-    background-color: #fef8e4;
+    background-color: var(--regionBtnBg);
+    color: var(--regionBtnColor);
   }
 
   .header-nav .header-nav__submenu-link:hover {
-    background-color: #fde68a;
+    background-color: var(--regionBtnBg);
+    color: var(--regionBtnColor);
   }
 
   .btn-login:hover {

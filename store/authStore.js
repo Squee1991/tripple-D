@@ -17,7 +17,6 @@ import {
 import {doc, setDoc, getDoc, getFirestore, updateDoc, deleteDoc, serverTimestamp, writeBatch} from 'firebase/firestore';
 import {userlangStore} from "./learningStore.js";
 
-
 let authStateUnsubscribe = null;
 
 export const userAuthStore = defineStore('auth', () => {
@@ -248,7 +247,6 @@ export const userAuthStore = defineStore('auth', () => {
                 sale_5: false,
                 sale_10: false,
                 sale_15: false,
-
                 ...createInitialAchievementsObject()
             })
         }
@@ -296,9 +294,6 @@ export const userAuthStore = defineStore('auth', () => {
             voiceConsentGiven: false,
             hasSeenOnboarding: false,
             totalHats: 0,
-            points:0,
-            exp:0,
-            isLeveling:0,
             sale_5: false,
             sale_10: false,
             sale_15: false,
@@ -533,75 +528,28 @@ export const userAuthStore = defineStore('auth', () => {
         const auth = getAuth()
         const user = auth.currentUser
         if (!user) return
-
-        // 1. Получаем ID скидки с бэкенда
-        const usedDiscountId = premiumData.discountUsed
-
         const userDocRef = doc(db, 'users', user.uid)
         try {
-            // 2. Формируем данные
-            const dataToSave = {
+            await setDoc(userDocRef, {
                 ...premiumData,
                 isPremium: true,
-                subscriptionCancelled: false,
-                updatedAt: new Date().toISOString()
-            }
-
-            // 3. Если была скидка, ставим её в false в базе
-            if (usedDiscountId && ['sale_5', 'sale_10', 'sale_15'].includes(usedDiscountId)) {
-                dataToSave[usedDiscountId] = false
-                console.log( "Купон сброшен в базе")
-            }
-
-            // 4. Пишем в Firebase
-            await setDoc(userDocRef, dataToSave, { merge: true })
-
-            // 5. Обновляем локальные данные
+                subscriptionCancelled: false
+            }, {merge: true})
             isPremium.value = true
             subscriptionEndsAt.value = premiumData.subscriptionEndsAt
             subscriptionCancelled.value = false
-
-            // 6. Обновляем переменную со скидками в интерфейсе
-            if (premiumDiscount.value && usedDiscountId) {
-                premiumDiscount.value[usedDiscountId] = false
-            }
-
-            console.log('✅ Премиум успешно активирован и записан')
+            console.log(' Премиум успешно активирован и записан')
         } catch (e) {
             console.error('Ошибка записи в Базе данных:', e)
             throw e
         }
+
     }
-    const consumeDiscount = async (discountId) => {
-        const user = getAuth().currentUser
-        if (!user) return { success: false, reason: 'no-user' }
-
-        const allowed = ['sale_5', 'sale_10', 'sale_15']
-        if (!allowed.includes(discountId)) return { success: false, reason: 'invalid-item' }
-
-        // если скидки нет — нечего сжигать
-        if (premiumDiscount.value[discountId] !== true) {
-            return { success: false, reason: 'not-owned' }
-        }
-
-        const userRef = doc(db, 'users', user.uid)
-
-        await updateDoc(userRef, { [discountId]: false })
-
-        premiumDiscount.value[discountId] = false
-        return { success: true }
-    }
-
     const markCancelledInDb = async () => {
         const auth = getAuth()
         const user = auth.currentUser
-
-        // 1. Обновляем локально, чтобы юзер сразу увидел
         subscriptionCancelled.value = true
-
         if (!user) return
-
-        // 2. ЖЕЛЕЗОБЕТОННО ПИШЕМ В БАЗУ
         const userDocRef = doc(db, 'users', user.uid)
         try {
             await updateDoc(userDocRef, {
@@ -657,7 +605,6 @@ export const userAuthStore = defineStore('auth', () => {
         premiumDiscount,
         purchase,
         activateDiscount,
-        markCancelledInDb,
-        consumeDiscount
+        markCancelledInDb
     }
 })

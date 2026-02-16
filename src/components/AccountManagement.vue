@@ -1,39 +1,44 @@
 <template>
   <div class="account-tab-body">
-    <div class="subscription-status-row">
-      <div class="subscription-label">{{ t('cabinet.status') }}</div>
-      <div class="subscription-status">
-        <template v-if="authStore.isPremium && !authStore.subscriptionCancelled">
-          <span class="status-pill is-active">✅ {{ t('cabinet.active') }}</span>
-        </template>
-        <template v-else-if="authStore.isPremium && authStore.subscriptionCancelled">
-          <span class="status-pill is-cancelled">⚠️ {{ t('cabinet.canceled') }}</span>
-        </template>
-        <template v-else>
-          <div class="status-inline">
-            <span class="status-pill is-free">🔓 {{ t('cabinet.withoutPremium') }}</span>
-            <button @click="routeToPay" class="premium__btn">
-              {{ t('cabinet.buyPremium') }}
-            </button>
-          </div>
-        </template>
-      </div>
-    </div>
-    <template v-if="authStore.isPremium && !authStore.subscriptionCancelled">
-      <div class="premium__status-wrapper">
-        <p class="subtext">
-          📅 {{ t('cabinet.nextPayment') }} {{ formattedSubscriptionEndDate }}
-        </p>
-        <button class="btn btn-outline-danger" @click.stop="openCancelModal">
-          {{ t('cabinet.cancelBtn') }}
-        </button>
-      </div>
-    </template>
-    <template v-else-if="authStore.isPremium && authStore.subscriptionCancelled">
-      <p class="access__text">
-        📅 {{ t('cabinet.access') }} {{ formattedSubscriptionEndDate }}
-      </p>
-    </template>
+<!--    <div class="subscription-status-row">-->
+<!--      <div class="subscription-label">{{ t('cabinet.status') }}</div>-->
+
+<!--      <div class="subscription-status">-->
+<!--        &lt;!&ndash; Premium активен &ndash;&gt;-->
+<!--        <template v-if="authStore.isPremium && !authStore.subscriptionCancelled">-->
+<!--          <span class="status-pill is-active">✅ {{ t('cabinet.active') }}</span>-->
+<!--        </template>-->
+<!--        &lt;!&ndash; Premium отменён, но доступ ещё есть &ndash;&gt;-->
+<!--        <template v-else-if="authStore.isPremium && authStore.subscriptionCancelled">-->
+<!--          <span class="status-pill is-cancelled">⚠️ {{ t('cabinet.canceled') }}</span>-->
+<!--        </template>-->
+<!--        &lt;!&ndash; Без премиума &ndash;&gt;-->
+<!--        <template v-else>-->
+<!--          <div class="status-inline">-->
+<!--            <span class="status-pill is-free">🔓 {{ t('cabinet.withoutPremium') }}</span>-->
+<!--            <button @click="routeToPay" class="premium__btn">-->
+<!--              {{ t('cabinet.buyPremium') }}-->
+<!--            </button>-->
+<!--          </div>-->
+<!--        </template>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <template v-if="authStore.isPremium && !authStore.subscriptionCancelled">-->
+<!--      <div class="premium__status-wrapper">-->
+<!--        <p class="subtext">-->
+<!--          📅 {{ t('cabinet.nextPayment') }} {{ formattedSubscriptionEndDate }}-->
+<!--        </p>-->
+<!--        <button class="btn btn-outline-danger" @click.stop="openCancelModal">-->
+<!--          {{ t('cabinet.cancelBtn') }}-->
+<!--        </button>-->
+<!--      </div>-->
+<!--    </template>-->
+<!--    <template v-else-if="authStore.isPremium && authStore.subscriptionCancelled">-->
+<!--      <p class="access__text">-->
+<!--        📅 {{ t('cabinet.access') }} {{ formattedSubscriptionEndDate }}-->
+<!--      </p>-->
+<!--    </template>-->
+
     <div class="account-actions">
       <button @click.stop="openDeleteModal" class="btn btn-danger w-full">
         {{ t('cabinet.deleteAcc') }}
@@ -129,7 +134,7 @@ function openDeleteModal() {
 
 .status-pill.is-cancelled {
   border-color: rgba(245, 158, 11, 0.35);
-  background: rgba(245, 158, 11, 0.12);
+  background: rgba(194, 144, 55, 0.97);
 }
 
 .status-pill.is-free {
@@ -177,7 +182,7 @@ function openDeleteModal() {
   margin-top: 10px;
   padding: 0 6px;
   font-weight: 800;
-  color: rgba(255, 255, 255, 0.78);
+  color: var(--titleColor);
 }
 
 .btn {

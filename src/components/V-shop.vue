@@ -2,11 +2,9 @@
   <section class="shop">
     <header class="shop__header">
       <div class="shop__title-container">
-        <h2 class="shop__title">Магазин предметов</h2>
+        <h2 class="shop__title">{{ t('shop.title')}}</h2>
       </div>
-      <p class="shop__subtitle">
-        Обменивай накопленные Артиклюсы на полезные бонусы и постоянные скидки для своего обучения.
-      </p>
+      <p class="shop__subtitle">{{ t('shop.subText')}}</p>
     </header>
     <div class="shop__content">
       <div class="shop__cards">
@@ -27,7 +25,6 @@
           <div class="shop-card__info">
             <h3 class="shop-card__name">{{ card.title }}</h3>
             <p class="shop-card__desc">{{ card.description }}</p>
-
             <div v-if="card.requiredHats && card.btnText !== 'Куплено'" class="shop-card__requirements">
               <span class="shop-req-badge">Ранг {{ card.requiredHats }}</span>
             </div>
@@ -63,7 +60,7 @@ import Sale from '../../assets/images/save5.svg'
 import Sale10 from '../../assets/images/rocket_10.svg'
 import Sale15 from '../../assets/images/hot-air-ballon15.svg'
 import GraduateHat from '../../assets/images/graduate-hat.svg'
-
+const { t } = useI18n()
 const questStore = userChainStore()
 const langStore = userlangStore()
 const authStore = userAuthStore()
@@ -82,63 +79,63 @@ const isMaxHearts = computed(() => Number(questStore.lives) >= Number(questStore
 const shopCards = computed(() => [
   {
     id: "lives",
-    title: "Жизни",
-    description: "Тут можно пополнить запас жизней(Максимально 5)",
+    title: t('cardsShop.livesTitle'),
+    description: t('cardsShop.livesDescription'),
     icon: Heart,
     alt: "Heart",
     price: PRICE_PER_HEART,
     currency: "articlus",
-    btnText: isMaxHearts.value ? 'Полное' : 'Купить',
+    btnText: isMaxHearts.value ? t('cardsShop.full') : t('cardsShop.buy'),
     disabled: isMaxHearts.value,
   },
-  {
-    id: "sale_5",
-    title: "Скидка 5%",
-    description: "Требования:",
-    icon: Sale,
-    alt: "Sale_5",
-    price: DISCOUNT_PRICE_ARTICLUS_5,
-    currency: "articlus",
-    requiredHats: DISCOUNT_REQ_HATS_5,
-    btnText: authStore.premiumDiscount?.sale_5 ? 'Куплено' : 'Купить',
-    btnIcon: GraduateHat,
-    disabled:
-        authStore.premiumDiscount?.sale_5 === true ||
-        authStore.totalHats < DISCOUNT_REQ_HATS_5 ||
-        langStore.points < DISCOUNT_PRICE_ARTICLUS_5,
-  },
-  {
-    id: "sale_10",
-    title: "Скидка 10%",
-    description: "Требования:",
-    icon: Sale10,
-    alt: "Sale_10",
-    price: DISCOUNT_PRICE_ARTICLUS_10,
-    currency: "articlus",
-    requiredHats: DISCOUNT_REQ_HATS_10,
-    btnText: authStore.premiumDiscount?.sale_10 ? 'Куплено' : 'Купить',
-    btnIcon: GraduateHat,
-    disabled:
-        authStore.premiumDiscount?.sale_10 === true ||
-        authStore.totalHats < DISCOUNT_REQ_HATS_10 ||
-        langStore.points < DISCOUNT_PRICE_ARTICLUS_10,
-  },
-  {
-    id: "sale_15",
-    title: "Скидка 15%",
-    description: "Требования:",
-    icon: Sale15,
-    alt: "Sale_15",
-    price: DISCOUNT_PRICE_ARTICLUS_15,
-    currency: "articlus",
-    requiredHats: DISCOUNT_REQ_HATS_15,
-    btnText: authStore.premiumDiscount?.sale_15 ? 'Куплено' : 'Купить',
-    btnIcon: GraduateHat,
-    disabled:
-        authStore.premiumDiscount?.sale_15 === true ||
-        authStore.totalHats < DISCOUNT_REQ_HATS_15 ||
-        langStore.points < DISCOUNT_PRICE_ARTICLUS_15,
-  },
+  // {
+  //   id: "sale_5",
+  //   title: "Скидка 5%",
+  //   description: "Требования:",
+  //   icon: Sale,
+  //   alt: "Sale_5",
+  //   price: DISCOUNT_PRICE_ARTICLUS_5,
+  //   currency: "articlus",
+  //   requiredHats: DISCOUNT_REQ_HATS_5,
+  //   btnText: authStore.premiumDiscount?.sale_5 ? 'Куплено' : 'Купить',
+  //   btnIcon: GraduateHat,
+  //   disabled:
+  //       authStore.premiumDiscount?.sale_5 === true ||
+  //       authStore.totalHats < DISCOUNT_REQ_HATS_5 ||
+  //       langStore.points < DISCOUNT_PRICE_ARTICLUS_5,
+  // },
+  // {
+  //   id: "sale_10",
+  //   title: "Скидка 10%",
+  //   description: "Требования:",
+  //   icon: Sale10,
+  //   alt: "Sale_10",
+  //   price: DISCOUNT_PRICE_ARTICLUS_10,
+  //   currency: "articlus",
+  //   requiredHats: DISCOUNT_REQ_HATS_10,
+  //   btnText: authStore.premiumDiscount?.sale_10 ? 'Куплено' : 'Купить',
+  //   btnIcon: GraduateHat,
+  //   disabled:
+  //       authStore.premiumDiscount?.sale_10 === true ||
+  //       authStore.totalHats < DISCOUNT_REQ_HATS_10 ||
+  //       langStore.points < DISCOUNT_PRICE_ARTICLUS_10,
+  // },
+  // {
+  //   id: "sale_15",
+  //   title: "Скидка 15%",
+  //   description: "Требования:",
+  //   icon: Sale15,
+  //   alt: "Sale_15",
+  //   price: DISCOUNT_PRICE_ARTICLUS_15,
+  //   currency: "articlus",
+  //   requiredHats: DISCOUNT_REQ_HATS_15,
+  //   btnText: authStore.premiumDiscount?.sale_15 ? 'Куплено' : 'Купить',
+  //   btnIcon: GraduateHat,
+  //   disabled:
+  //       authStore.premiumDiscount?.sale_15 === true ||
+  //       authStore.totalHats < DISCOUNT_REQ_HATS_15 ||
+  //       langStore.points < DISCOUNT_PRICE_ARTICLUS_15,
+  // },
 ])
 
 
@@ -163,7 +160,6 @@ const onCardAction = async (card) => {
     await authStore.activateDiscount(card.id)
   }
 }
-
 const buyItem = async (cardId, amount) => {
   const card = shopCards.find(item => item.id === cardId)
   if (!card) return
@@ -179,13 +175,33 @@ const buyItem = async (cardId, amount) => {
 .shop {
   min-height: 100vh;
   padding: 10px;
+  font-family: "Nunito", sans-serif;
+}
+
+.shop__content {
+  overflow-y: auto;
+  max-height: calc(100vh - 265px);
+}
+
+.shop__content::-webkit-scrollbar {
+  width: 10px;
+}
+
+.shop__content::-webkit-scrollbar-thumb {
+  background: #1e1e1e;
+  border-radius: 10px;
+  border: 2px solid #fff;
+}
+
+.shop__content::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 .shop__title-container {
   background: #50a2d8;
   border-radius: 12px;
-  padding: 15px 10px;
-  margin-bottom: 15px;
+  padding: 15px 20px;
+  margin-bottom: 10px;
   text-align: center;
   box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.2);
   display: flex;
@@ -204,8 +220,8 @@ const buyItem = async (cardId, amount) => {
 
 .shop__subtitle {
   text-align: center;
-  margin: 0 auto 5px;
-  padding: 5px;
+  margin: 0 auto 0;
+  padding: 12px 14px;
   color: var(--titleColor);
   font-size: 14px;
   backdrop-filter: blur(8px);
@@ -217,35 +233,19 @@ const buyItem = async (cardId, amount) => {
   width: 90%;
   height: 2px;
   background: #50a2d8
+
 }
 
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   .shop__subtitle {
     font-size: 15px;
-    padding: 0 5px;
   }
 }
 
 .shop__cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
-  gap: 10px;
-  overflow-y: auto;
-  max-height: calc(100vh - 250px);
-}
-
-.shop__cards::-webkit-scrollbar {
-  width: 10px;
-}
-
-.shop__cards::-webkit-scrollbar-thumb {
-  background: var(--titleColor);
-  border-radius: 5px;
-  border: 2px solid #fff;
-}
-
-.shop__cards::-webkit-scrollbar-track {
-  background: transparent;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
 }
 
 .shop-card {
@@ -310,6 +310,7 @@ const buyItem = async (cardId, amount) => {
   margin: 0;
 }
 
+/* Требования */
 .shop-card__requirements {
   margin-top: 10px;
 }
@@ -378,15 +379,6 @@ const buyItem = async (cardId, amount) => {
 @media (min-width: 1024px) {
   .shop-card:hover {
     border-color: #50a2d8;
-  }
-}
-
-@media (max-width: 1023px) {
-  .shop__title-container {
-    padding: 10px;
-  }
-  .shop__title {
-    font-size: 22px;
   }
 }
 </style>

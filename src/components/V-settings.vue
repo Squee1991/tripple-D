@@ -1,200 +1,203 @@
 <template>
   <div v-if="activeTabKey === 'info'" class="tab-content">
-    <div class="accordion open settings-static settings-block" @click.stop>
-      <div class="accordion__head">
-        <div class="accordion__content-left">
-          <img class="accordion__icon" :src="settingsIcon" alt="">
-          <div class="accordion__title">Уведомления</div>
-        </div>
-      </div>
-      <div class="accordion__body" @click.stop>
-        <div class="settings__elements">
-          <div
-              v-for="settingsItem in notificationsToggleItems"
-              :key="settingsItem.key"
-              class="row__el--wrapper"
+    <div v-if="isThemeModalOpen" class="modal-overlay" @click.self="isThemeModalOpen = false">
+      <div class="modal-card">
+        <div class="modal-title">{{ t('themeModal.title')}}</div>
+        <div class="theme-grid">
+          <label
+              v-for="(label, key) in THEMES"
+              :key="key"
+              class="theme-option"
+              :class="{
+                active: colorMode.preference === key,
+                locked: key === 'pink' && !isValentineThemeUnlocked
+              }"
+              @click.prevent="handleThemeSelection(key)"
           >
-            <div class="toggle__wrapper">
-              {{ settingsItem.label }}
+            <input
+                type="radio"
+                name="theme"
+                :value="key"
+                :checked="colorMode.preference === key"
+            >
+            <div class="theme-preview" :class="key">
+              <span v-if="key === 'pink' && !isValentineThemeUnlocked">🔒</span>
             </div>
-            <ClientOnly>
-              <template v-if="settingsItem.wrap">
-                <ColorScheme>
-                  <VToggle
-                      :key="settingsItem.key + toggleForceUpdateKey"
-                      :model-value="getSettingValue(settingsItem.key)"
-                      @change="value => onSettingChange(settingsItem.key, value)"
-                  />
-                </ColorScheme>
-              </template>
-              <template v-else>
-                <VToggle
-                    :key="settingsItem.key + toggleForceUpdateKey"
-                    :model-value="getSettingValue(settingsItem.key)"
-                    @change="value => onSettingChange(settingsItem.key, value)"
-                />
-              </template>
-            </ClientOnly>
-          </div>
+            <span>{{ label }}</span>
+          </label>
+        </div>
+        <div class="modal-actions">
+          <button class="btn btn-success" @click="isThemeModalOpen = false">{{ t('themeModal.close')}}</button>
         </div>
       </div>
     </div>
-    <div class="accordion open settings-static settings-block" @click.stop>
+    <div
+        v-for="group in SETTINGS_GROUPS"
+        :key="group.id"
+        class="accordion open settings-static settings-block"
+        @click.stop
+    >
       <div class="accordion__head">
         <div class="accordion__content-left">
-          <img class="accordion__icon" :src="settingsIcon" alt="">
-          <div class="accordion__title">Темы</div>
+          <div class="accordion__title">{{ group.title }}</div>
         </div>
       </div>
       <div class="accordion__body" @click.stop>
         <div class="settings__elements">
           <div
-              v-for="settingsItem in themesToggleItems"
-              :key="settingsItem.key"
+              v-for="item in group.items"
+              :key="item.key"
               class="row__el--wrapper"
-              :class="{ 'locked-setting': settingsItem.key === 'snowFall' && !eventStore.isSnowPurchased }"
+              :class="{ 'locked-setting': item.key === 'snowFall' && !eventStore.isSnowPurchased }"
           >
             <div class="toggle__wrapper">
-              {{ settingsItem.label }}
-              <span v-if="settingsItem.key === 'snowFall' && !eventStore.isSnowPurchased">🔒</span>
+              {{ item.label }}
+              <span v-if="item.key === 'snowFall' && !eventStore.isSnowPurchased">🔒</span>
             </div>
-            <ClientOnly>
-              <template v-if="settingsItem.wrap">
-                <ColorScheme>
-                  <VToggle
-                      :key="settingsItem.key + toggleForceUpdateKey"
-                      :model-value="getSettingValue(settingsItem.key)"
-                      @change="value => onSettingChange(settingsItem.key, value)"
-                  />
-                </ColorScheme>
-              </template>
-              <template v-else>
-                <VToggle
-                    :key="settingsItem.key + toggleForceUpdateKey"
-                    :model-value="getSettingValue(settingsItem.key)"
-                    @change="value => onSettingChange(settingsItem.key, value)"
-                />
-              </template>
-            </ClientOnly>
+            <template v-if="item.type === 'button'">
+              <button class="theme-select-btn" @click="isThemeModalOpen = true">
+                {{ currentThemeName }}
+              </button>
+            </template>
+            <template v-else>
+              <VToggle
+                  :key="item.key + toggleForceUpdateKey"
+                  :model-value="getSettingValue(item.key)"
+                  @change="value => onSettingChange(item.key, value)"
+              />
+            </template>
           </div>
         </div>
       </div>
     </div>
     <div class="service__items">
-      <div>
-        <div class="accordion__title">{{ t('cabinetAccordion.faq')}}</div>
-      </div>
-      <div class="service__items">
-        <ul class="service__items-elements" v-for="item in servicePaths" :key="item.id">
-          <li class="service__items-list">
-            <NuxtLink class="service__items-link" :to="item.path">
-              {{ item.label }}
-            </NuxtLink>
-          </li>
-        </ul>
+      <div class="accordion__title">{{ t('cabinetAccordion.faq') }}</div>
+      <ul class="service__items-elements">
+        <li v-for="item in servicePaths" :key="item.id" class="service__items-list">
+          <NuxtLink class="service__items-link" :to="item.path">{{ item.label }}</NuxtLink>
+        </li>
+      </ul>
+    </div>
+    <div v-if="isLockedModalOpen" class="modal-overlay locked-priority" @click.self="isLockedModalOpen = false">
+      <div class="modal-card">
+        <div class="modal-title">{{ lockedModalContent.title }}</div>
+        <p class="modal-text" v-html="lockedModalContent.text"></p>
+        <div class="modal-actions">
+          <button class="btn" @click="isLockedModalOpen = false" type="button">
+            {{ t('cabinet.modalNotAllowEffectClose') }}
+          </button>
+        </div>
       </div>
     </div>
   </div>
-
 </template>
 
 <script setup>
-import {ref, computed, onMounted} from 'vue'
-import {useRouter} from 'vue-router'
+import { ref, computed, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
 import VToggle from '~/src/components/V-toggle.vue'
-import {userAuthStore} from '../../store/authStore.js'
-import {useUiSettingsStore} from '../../store/uiSettingsStore.js'
-import {useEventSessionStore} from '../../store/eventsStore.js'
-import {isSoundEnabled, setSoundEnabled, unlockAudioByUserGesture} from '../../utils/soundManager.js'
-
+import { useUiSettingsStore } from '../../store/uiSettingsStore.js'
+import { useEventSessionStore } from '../../store/eventsStore.js'
+import { isSoundEnabled, setSoundEnabled, unlockAudioByUserGesture } from '../../utils/soundManager.js'
 const props = defineProps({
-  userIcon: {type: String},
-  settingsIcon: {type: String},
-  faqIcon: {type: String},
-  activeTabKey: {type: String, default: 'info'},
-  awards: {type: Array, default: () => []}
+  settingsIcon: String,
+  activeTabKey: { type: String, default: 'info' }
 })
 
-const emit = defineEmits(['back', 'open'])
-
-const {t} = useI18n()
-const router = useRouter()
-const authStore = userAuthStore()
+const emit = defineEmits(['open'])
+const { t } = useI18n()
 const uiSettings = useUiSettingsStore()
 const eventStore = useEventSessionStore()
-
-const toggleForceUpdateKey = ref(0)
-
 const colorMode = useColorMode()
-const darkMode = ref(colorMode.preference === 'dark')
+
+const isThemeModalOpen = ref(false)
+const isLockedModalOpen = ref(false)
+const lockedModalContent = ref({ title: '', text: '' })
+const toggleForceUpdateKey = ref(0)
 const soundEnabled = ref(false)
-const servicePaths = ref(
-    [
-      {
-        id: 'Privacy',
-        label: 'Police privacy',
-        path: '/privacy',
-      },
-      {
-        id: 'FAQ',
-        label: 'FAQ',
-        path: '/faq',
-      },
-      {
-        id: 'terms',
-        label: 'Terms',
-        path: '/terms',
-      }
+
+const THEMES = { light: t('themeModal.light'), dark: t('themeModal.dark'), pink: t('themeModal.pink') }
+
+const SETTINGS_GROUPS = computed(() => [
+  {
+    id: 'notifications',
+    title: t('settingsGroup.notifications'),
+    items: [
+      { key: 'sound', label: t('cabinetToggle.sound'), type: 'toggle' },
+      { key: 'ach', label: t('cabinetToggle.ach'), type: 'toggle' }
     ]
-)
+  },
+  {
+    id: 'appearance',
+    title: t('settingsGroup.appearance'),
+    items: [
+      { key: 'theme', label: t('cabinetToggle.themeBtn'), type: 'button' },
+      { key: 'snowFall', label: t('cabinetToggle.snowFall'), type: 'toggle' }
+    ]
+  }
+])
 
-const notificationsToggleItems = computed(() => ([
-  {key: 'sound', label: t('cabinetToggle.sound'), wrap: false},
-  {key: 'ach', label: t('cabinetToggle.ach'), wrap: false},
-]))
+const isValentineThemeUnlocked = computed(() => !!eventStore.shopItems?.['theme'])
+const currentThemeName = computed(() => THEMES[colorMode.preference] || THEMES.light)
 
+const showRestriction = (type) => {
+  if (type === 'theme') {
+    isThemeModalOpen.value = false
+    lockedModalContent.value = {
+      title: `💖 ${t('cabinet.notAllow')}`,
+      text: `${t('pinkThemeModal.partOne')}} <b>${t('pinkThemeModal.partTwo')}}</b>. <br/>${t('pinkThemeModal.partThree')}}`
+    }
+  } else if (type === 'snow') {
+    lockedModalContent.value = {
+      title: `❄️ ${t('cabinet.notAllow')}`,
+      text: `${t('cabinet.modalNotAllowEffectFirst')} <b>${t('cabinet.modalNotAllowEffectSecond')}</b>. <br/> ${t('cabinet.modalNotAllowEffectThird')}`
+    }
+  }
+  isLockedModalOpen.value = true
+}
 
-const themesToggleItems = computed(() => ([
-  {key: 'dark', label: t('cabinetToggle.theme'), wrap: true},
-  {key: 'snowFall', label: t('cabinetToggle.snowFall'), wrap: true},
-]))
+const handleThemeSelection = (key) => {
+  if (key === 'pink' && !isValentineThemeUnlocked.value) {
+    showRestriction('theme')
+    return
+  }
+  colorMode.preference = key
+}
+
+const servicePaths = [
+  { id: 'Privacy', label: 'Police privacy', path: '/privacy' },
+  { id: 'FAQ', label: 'FAQ', path: '/faq' },
+  { id: 'terms', label: 'Terms', path: '/terms' }
+]
 
 const getSettingValue = (key) => {
   if (key === 'sound') return soundEnabled.value
-  if (key === 'dark') return darkMode.value
   if (key === 'ach') return uiSettings.achievementsNotifyEnabled
   if (key === 'snowFall') return eventStore.isSnowEnabled
   return false
 }
 
-function handleSoundToggle(value) {
-  setSoundEnabled(value)
-  soundEnabled.value = value
-  if (value) unlockAudioByUserGesture()
-}
-
-function handleThemeToggle(value) {
-  colorMode.preference = value ? 'dark' : 'light'
-  darkMode.value = value
-}
-
 const onSettingChange = (key, value) => {
-  if (key === 'sound') return handleSoundToggle(value)
-  if (key === 'dark') return handleThemeToggle(value)
+  if (key === 'sound') {
+    setSoundEnabled(value)
+    soundEnabled.value = value
+    if (value) unlockAudioByUserGesture()
+    return
+  }
   if (key === 'ach') return uiSettings.setAchievementsNotifyEnabled(value)
-
   if (key === 'snowFall') {
     if (!eventStore.isSnowPurchased) {
-      emit('open', 'snowWarning')
+      showRestriction('snow')
       toggleForceUpdateKey.value++
       return
     }
-    return eventStore.setSnowFallEnabled(value)
+    eventStore.setSnowFallEnabled(value)
   }
 }
 
-onMounted(() => {
+onMounted(async () => {
   soundEnabled.value = isSoundEnabled()
+  await eventStore.loadEventProgress('valentine')
 })
 </script>
 
@@ -209,19 +212,7 @@ onMounted(() => {
 }
 
 .accordion.open {
-  max-height: 350px;
-}
-
-.accordion__head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0;
-}
-
-.accordion__icon {
-  width: 28px;
-  margin-right: 10px;
+  max-height: 500px;
 }
 
 .accordion__title {
@@ -232,11 +223,6 @@ onMounted(() => {
 
 .accordion__body {
   padding-top: 10px;
-  font-weight: 700;
-}
-
-.settings__elements {
-  margin-top: 10px;
 }
 
 .row__el--wrapper {
@@ -244,7 +230,11 @@ onMounted(() => {
   justify-content: space-between;
   align-items: center;
   padding: 10px 8px;
-  gap: 10px;
+}
+
+.service__items-elements {
+  margin-left: 10px;
+  padding: 10px 0;
 }
 
 .toggle__wrapper {
@@ -255,20 +245,130 @@ onMounted(() => {
   gap: 8px;
 }
 
-.locked-setting {
-  opacity: 0.7;
+.locked-setting, .theme-option.locked {
+  opacity: 0.5;
 }
 
-.settings-block .accordion__body .row__el--wrapper {
-  margin-left: 10px;
-  margin-top: 10px;
+.theme-select-btn {
+  background: #f3f4f6;
+  border: 2px solid #000;
+  border-radius: 9px;
+  padding: 8px 12px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 #000;
+  transition: 0.1s;
 }
+
+.theme-select-btn:active {
+  transform: translate(1px, 1px);
+  box-shadow: 0 0 0 #000;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, .5);
+  z-index: 2000;
+}
+
+.locked-priority {
+  z-index: 3000 !important;
+  background: rgba(0, 0, 0, .7);
+}
+
+.modal-card {
+  background: #fef8e4;
+  border: 3px solid #000;
+  border-radius: 20px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 3px 3px 0 #000;
+  text-align: center;
+}
+
+.modal-title {
+  font-size: 1.8rem;
+  font-weight: 900;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.modal-text {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.btn {
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 10px 24px;
+  font-weight: 800;
+  background: #f3f4f6;
+  box-shadow: 2px 2px 0 #000;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 #000;
+}
+
+.btn-success {
+  background: #4ade80;
+  width: 100%;
+}
+
+.theme-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.theme-option {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px;
+  border: 2px solid #000;
+  border-radius: 16px;
+  cursor: pointer;
+  font-weight: 800;
+  background: #fff;
+}
+
+.theme-option.active {
+  background: #ffd54f;
+  box-shadow: 2px 2px 0 #000;
+}
+
+.theme-preview {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid #000;
+}
+
+.theme-preview.light { background: #fff; }
+.theme-preview.dark { background: #222; }
+.theme-preview.pink { background: #ff85a1; display: flex; align-items: center; justify-content: center; }
 
 .service__items {
   padding: 12px 16px;
-}
-
-.service__items {
   margin-top: 10px;
 }
 
@@ -276,12 +376,11 @@ onMounted(() => {
   color: var(--titleColor);
   font-weight: 900;
   padding: 10px 0;
-  display: flex;
+  display: block;
 }
 
 .service__items-list {
   border-bottom: 1px solid var(--titleColor);
-  padding-bottom: 5px;
+  padding: 5px 0;
 }
-
 </style>

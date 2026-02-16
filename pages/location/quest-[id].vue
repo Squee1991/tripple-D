@@ -1147,12 +1147,6 @@ watchEffect(() => {
   .quest__feedback {
     padding: 19px 8px;
   }
-  .quest__reorder-selection {
-    max-height: 59px;
-  }
-  .quest__question {
-
-  }
 }
 
 @media (max-width: 479px) {

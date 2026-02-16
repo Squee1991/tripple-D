@@ -97,7 +97,7 @@ const toDiscord = () => {
 .footer {
   position: relative;
   width: 100%;
-  background: #0f7aaf;
+  background: var(--footerBg);
   color: #2e1b08;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
