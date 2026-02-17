@@ -60,7 +60,14 @@ export default defineNuxtConfig({
 
 		workbox: {
 			navigateFallback: '/',
-			globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,woff2}'],
+			globPatterns: ['**/*.{js,css,ico,png,svg,webp,woff2}'],
+			runtimeCaching: [
+				{
+					urlPattern: ({ request }) => request.mode === 'navigate',
+					handler: 'NetworkFirst',
+					options: { cacheName: 'pages-cache' },
+				},
+			],
 		},
 
 		devOptions: {
@@ -214,8 +221,14 @@ export default defineNuxtConfig({
 		compressPublicAssets: true
 	},
 	routeRules: {
-		'/': {prerender: true},
-		'/**': {ssr: false},
+		'/': {
+			prerender: true,
+			headers: { 'Cache-Control': 'no-cache, no-store, must-revalidate' }
+		},
+		'/**': {
+			ssr: false,
+			headers: { 'Cache-Control': 'no-cache, no-store, must-revalidate' }
+		},
 	},
 
 })
