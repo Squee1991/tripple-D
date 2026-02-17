@@ -565,7 +565,7 @@ function beforeUnloadHandler(e) {
 watch([questId, regionKey], () => {
       questStore.loading = true
       questStore.error = ''
-      questStore.quest = nullw
+      questStore.quest = null
       questStore.finished = false
       questStore.showResult = false
       questStore.selected = ''
