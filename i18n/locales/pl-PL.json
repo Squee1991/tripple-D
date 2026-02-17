@@ -1,4 +1,21 @@
 {
+  "pwa": {
+    "title": "Zainstaluj Skillupgerman",
+    "sub": "Dodaj aplikację do ekranu głównego, aby mieć szybki i wygodny dostęp!",
+    "btn": "Rozumiem, dzięki!"
+  },
+  "pwaInstructions": {
+    "IosTitle": "Dla iPhone'a (w Safari):",
+    "iosTipOne": "1. Naciśnij „Udostępnij” (kwadrat ze strzałką w górę na dole ekranu).",
+    "iosTipTwo": "2. Wybierz „Do ekranu początkowego” (ikona z plusem).",
+    "iosTipThree": "3. Naciśnij „Dodaj” w prawym górnym rogu.",
+    "androidTitle": "Dla Androida (w Chrome):",
+    "androidTipOne": "1. Otwórz stronę i naciśnij menu (trzy kropki w prawym górnym rogu).",
+    "androidTipTwo": "2. Wybierz „Zainstaluj aplikację” lub „Dodaj do ekranu głównego”.",
+    "androidTipThree": "3. Potwierdź, naciskając „Zainstaluj” w wyskakującym oknie.",
+    "pcTitle": "Dla komputera:",
+    "pcTipOne": "1. Kliknij ikonę pobierania po prawej stronie paska adresu."
+  },
   "themeModal": {
     "title": "Wybierz wygląd",
     "close": "Zamknij",

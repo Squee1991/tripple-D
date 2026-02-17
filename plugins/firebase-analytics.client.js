@@ -15,6 +15,19 @@ export default defineNuxtPlugin(async (nuxtApp) => {
 		})
 	})
 	if (process.client) {
+		window.addEventListener('appinstalled', () => {
+			if (!localStorage.getItem('pwa_tracked')) {
+				logEvent(analytics, 'pwa_installed', { os: 'android_or_pc' })
+				localStorage.setItem('pwa_tracked', 'true')
+			}
+		})
+
+		const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true
+		if (isStandalone && !localStorage.getItem('pwa_tracked')) {
+			logEvent(analytics, 'pwa_installed', { os: 'ios_or_other' })
+			localStorage.setItem('pwa_tracked', 'true')
+		}
+
 		document.body.addEventListener('click', (event) => {
 			const bannerBtn = event.target.closest('.banner__button')
 			const loginBtn = event.target.closest('.btn-login')

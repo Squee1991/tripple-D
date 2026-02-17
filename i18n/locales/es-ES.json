@@ -1,4 +1,21 @@
 {
+  "pwa": {
+    "title": "Instala Skillupgerman",
+    "sub": "¡Añade la aplicación a tu pantalla de inicio para un acceso rápido!",
+    "btn": "¡Entendido, gracias!"
+  },
+  "pwaInstructions": {
+    "IosTitle": "Para iPhone (en Safari):",
+    "iosTipOne": "1. Pulsa 'Compartir' (el cuadrado con la flecha hacia arriba abajo).",
+    "iosTipTwo": "2. Elige 'Añadir a la pantalla de inicio' (el icono del plus).",
+    "iosTipThree": "3. Pulsa 'Añadir' en la esquina superior derecha.",
+    "androidTitle": "Para Android (en Chrome):",
+    "androidTipOne": "1. Abre el sitio y pulsa el menú (tres puntos arriba a la derecha).",
+    "androidTipTwo": "2. Elige 'Instalar aplicación' o 'Añadir a la pantalla de inicio'.",
+    "androidTipThree": "3. Confirma pulsando 'Instalar' en la ventana emergente.",
+    "pcTitle": "Para ordenador:",
+    "pcTipOne": "1. Haz clic en el icono de descarga a la derecha de la barra de direcciones."
+  },
   "themeModal": {
     "title": "Selecciona el diseño",
     "close": "Cerrar",
