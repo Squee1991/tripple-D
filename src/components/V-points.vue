@@ -1,7 +1,7 @@
 <template>
   <div class="points">
     <VTips
-        :tips="infoData"
+        :tips="flattenedTips"
         v-model="isArticleOpen"
     />
     <section class="points-card" aria-label="Поинты и уровень">
@@ -89,6 +89,18 @@ const handleLeveling = () => {
     langStore.exp -= LEVEL_UP_XP
   }
 }
+
+const flattenedTips = computed(() => {
+  const result = [];
+
+  infoData.value.forEach(section => {
+    result.push({ label: section.title, isTitle: true });
+    section.tips.forEach(tip => {
+      result.push({ label: tip.label, isTitle: false });
+    });
+  });
+  return result;
+});
 
 // const currentRank = computed(() => {
 //   const hats = userAuth.totalHats
