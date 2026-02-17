@@ -301,6 +301,7 @@ const menuItems = computed(() => {
             id: 'duel',
             valueKey: 'nav.gameMode',
             children: [
+              {id: 'fight', url: '/test-fight', valueKey: 'Артиклевый бой'},
               {id: 'duel-pvp', valueKey: 'sub.pvp', action: openDevModal},
               {id: 'wordDuel', url: '/sentence-duel', valueKey: 'sub.wordDuel'},
               // {id: 'describePicture', url: '/chat', valueKey: 'sub.describePicture'},
