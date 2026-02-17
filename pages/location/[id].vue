@@ -266,7 +266,7 @@ onMounted(async () => {
   padding: 18px 16px 16px;
   box-shadow: 4px 4px 0 #2b2b2b;
   transform: translateY(0) rotate(-.1deg);
-  will-change: transform, opacity;
+  transition: all .1s ease-in-out;
   opacity: 0;
   animation: pop .45s cubic-bezier(.2, .8, .25, 1) forwards;
 }
