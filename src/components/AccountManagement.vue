@@ -34,6 +34,7 @@
 <!--        📅 {{ t('cabinet.access') }} {{ formattedSubscriptionEndDate }}-->
 <!--      </p>-->
 <!--    </template>-->
+    <VInstallPwa/>
     <div class="account-actions">
       <button @click.stop="openDeleteModal" class="btn btn-danger w-full">
         {{ t('cabinet.deleteAcc') }}
@@ -47,7 +48,7 @@ import {computed} from 'vue'
 import {useRouter} from 'vue-router'
 import {useI18n} from 'vue-i18n'
 import {userAuthStore} from '../../store/authStore.js'
-
+import VInstallPwa from "./V-install-pwa.vue";
 const emit = defineEmits(['open'])
 
 const {t, locale} = useI18n()

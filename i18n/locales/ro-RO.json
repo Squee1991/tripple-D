@@ -1,4 +1,21 @@
 {
+  "pwa": {
+    "title": "Instalează Skillupgerman",
+    "sub": "Adaugă aplicația pe ecranul principal pentru acces rapid și confort!",
+    "btn": "Am înțeles, mulțumesc!"
+  },
+  "pwaInstructions": {
+    "IosTitle": "Pentru iPhone (în Safari):",
+    "iosTipOne": "1. Apasă „Partajare” (pătratul cu săgeata în sus de jos).",
+    "iosTipTwo": "2. Alege „Adăugare la ecranul principal” (pictograma plus).",
+    "iosTipThree": "3. Apasă „Adăugare” în colțul din dreapta sus.",
+    "androidTitle": "Pentru Android (în Chrome):",
+    "androidTipOne": "1. Deschide site-ul și apasă meniul (trei puncte dreapta sus).",
+    "androidTipTwo": "2. Alege „Instalare aplicație” sau „Adăugare pe ecranul principal”.",
+    "androidTipThree": "3. Confirmă apăsând „Instalare” în fereastra pop-up.",
+    "pcTitle": "Pentru calculator:",
+    "pcTipOne": "1. Click pe pictograma de descărcare din partea dreaptă a barei de adrese."
+  },
   "themeModal": {
     "title": "Alege aspectul",
     "close": "Închide",
