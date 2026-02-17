@@ -8,7 +8,6 @@ export default defineEventHandler(async (event) => {
 
         const body = await readBody(event)
         const { userLevel, userMessage, userLocale, imageUrl, referenceDescription } = body || {}
-
         if (!userLevel || !userMessage) {
             return { error: "Отсутствуют обязательные параметры (уровень или ответ)." }
         }

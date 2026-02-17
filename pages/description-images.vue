@@ -451,9 +451,11 @@ async function sendMessage(voiceText = null) {
   font-weight: 700;
   color: var(--titleColor);
 }
+
 .level-header {
   color: var(--titleColor);
 }
+
 .view-topics {
   padding: 20px 10px;
   overflow-y: auto;

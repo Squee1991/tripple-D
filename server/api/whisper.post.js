@@ -4,25 +4,20 @@ export default defineEventHandler(async (event) => {
 	try {
 		const config = useRuntimeConfig(event)
 		const rawKey = config.groqApiKey || process.env.GROQ_API_KEY || ''
-
 		if (!rawKey) {
 			console.error("❌ WHISPER: Нет API ключа!")
 			setResponseStatus(event, 500)
 			return { error: 'Server Error: GROQ_API_KEY missing' }
 		}
-
 		const body = await readBody(event)
 		const { audioContent, lang } = body || {}
-
 		if (!audioContent) {
 			setResponseStatus(event, 400)
 			return { error: 'No audio content' }
 		}
-
 		const base64Str = audioContent.includes('base64,')
 			? audioContent.split('base64,')[1]
 			: audioContent
-
 		const buffer = Buffer.from(base64Str, 'base64')
 		const formData = new FormData()
 		const blob = new Blob([buffer], { type: 'audio/webm' })
@@ -36,7 +31,6 @@ export default defineEventHandler(async (event) => {
 			headers: { Authorization: `Bearer ${rawKey}` },
 			body: formData
 		})
-
 		if (!response.ok) {
 			const errText = await response.text()
 			console.error(`❌ Groq API Error: ${errText}`)
