@@ -1,4 +1,21 @@
 {
+  "pwa": {
+    "title": "Skillupgerman इंस्टॉल करें",
+    "sub": "त्वरित पहुंच के लिए ऐप को अपनी होम स्क्रीन पर जोड़ें!",
+    "btn": "समझ गया, धन्यवाद!"
+  },
+  "pwaInstructions": {
+    "IosTitle": "iPhone के लिए (Safari में):",
+    "iosTipOne": "1. 'Share' पर टैप करें (नीचे तीर वाला वर्गाकार आइकन)।",
+    "iosTipTwo": "2. 'Add to Home Screen' चुनें (प्लस आइकन)।",
+    "iosTipThree": "3. ऊपरी दाएं कोने में 'Add' पर टैप करें।",
+    "androidTitle": "Android के लिए (Chrome में):",
+    "androidTipOne": "1. साइट खोलें और मेनू (ऊपर दाईं ओर तीन बिंदु) पर टैप करें।",
+    "androidTipTwo": "2. 'Install app' या 'Add to Home screen' चुनें।",
+    "androidTipThree": "3. पॉप-अप में 'Install' पर टैप करके पुष्टि करें।",
+    "pcTitle": "कंप्यूटर के लिए:",
+    "pcTipOne": "1. एड्रेस बार के दाईं ओर डाउनलोड आइकन पर क्लिक करें।"
+  },
   "themeModal": {
     "title": "डिज़ाइन चुनें",
     "close": "बंद करें",
