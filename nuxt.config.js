@@ -57,31 +57,27 @@ export default defineNuxtConfig({
 				{ src: '/pwa-512x512.png', sizes: '512x512', type: 'image/png', purpose: 'any maskable' }
 			]
 		},
-
 		workbox: {
 			navigateFallback: '/',
 			globPatterns: ['**/*.{js,css,ico,png,svg,webp,woff2}'],
-			runtimeCaching: [
-				{
-					urlPattern: ({ request }) => request.mode === 'navigate',
-					handler: 'NetworkFirst',
-					options: { cacheName: 'pages-cache' },
-				},
-			],
+			// runtimeCaching: [
+			// 	{
+			// 		urlPattern: ({ request }) => request.mode === 'navigate',
+			// 		handler: 'NetworkFirst',
+			// 		options: { cacheName: 'pages-cache' },
+			// 	},
+			// ],
 		},
-
 		devOptions: {
 			enabled: true,
 			type: 'module',
 		}
 	},
-
 	vuefire: {
 		config: firebaseConfig,
 		auth: true,
 		...(admin ? {admin} : {}),
 	},
-
 	runtimeConfig: {
 		stripeSecret: process.env.STRIPE_SECRET_KEY || env.STRIPE_SECRET_KEY,
 		stripeWebhookSecret: process.env.STRIPE_WEBHOOK_SECRET || env.STRIPE_WEBHOOK_SECRET,
@@ -223,11 +219,11 @@ export default defineNuxtConfig({
 	routeRules: {
 		'/': {
 			prerender: true,
-			headers: { 'Cache-Control': 'no-cache, no-store, must-revalidate' }
+			// headers: { 'Cache-Control': 'no-cache, no-store, must-revalidate' }
 		},
 		'/**': {
 			ssr: false,
-			headers: { 'Cache-Control': 'no-cache, no-store, must-revalidate' }
+			// headers: { 'Cache-Control': 'no-cache, no-store, must-revalidate' }
 		},
 	},
 
