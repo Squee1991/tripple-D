@@ -16,7 +16,7 @@ onMounted(() => {
   if (!localStorage.getItem('pwa_instruction_seen')) {
     setTimeout(() => {
       isVisible.value = true
-    }, 4400)
+    }, 5200)
   }
 })
 
