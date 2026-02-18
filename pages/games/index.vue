@@ -74,7 +74,7 @@ const handleExit = () => {
 <style scoped>
 .menu-battlefield {
   height: 100vh;
-  background-image: url("../../assets/images/fightIcons/GameBG.jpg");
+  background-image: url("../../assets/images/fightIcons/gameBG.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -85,7 +85,7 @@ const handleExit = () => {
   font-family: 'Segoe UI Black', sans-serif;
 }
 
-/* --- ЦЕНТРАЛЬНОЕ МЕНЮ (БЕЗ СТОЛБА) --- */
+
 .wood-menu-wrapper.central-menu {
   position: absolute;
   left: 50%;
@@ -109,7 +109,6 @@ const handleExit = () => {
   transform: scale(1.08) rotate(0deg) !important;
 }
 
-/* Рандомные наклоны для "мультяшности" */
 .s1 {
   transform: rotate(-3deg);
 }
@@ -209,15 +208,6 @@ const handleExit = () => {
   left: 5%;
   width: 380px;
 }
-
-.tank-shadow {
-  width: 80%;
-  height: 20px;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 50%;
-  filter: blur(10px);
-}
-
 
 .fade-signs-enter-from {
   transform: translate(-50%, 30px);

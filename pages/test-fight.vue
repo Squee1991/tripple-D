@@ -73,7 +73,7 @@
             <span class="fs-val">{{ score }}</span>
           </div>
           <button class="restart-btn" @click="startGame">ERNEUT VERSUCHEN</button>
-          <router-link to="/" class="home-btn">Вернуться на главную</router-link>
+          <router-link to="/games" class="home-btn">Вернуться на главную</router-link>
         </div>
       </div>
     </div>
