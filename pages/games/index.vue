@@ -41,7 +41,6 @@ const isGatesActive = ref(false)
 const isTransitioning = ref(false)
 
 const toggleScreen = (target) => {
-  // 1. Если идем в АНГАР или выходим из него — используем СТАВНИ
   if (target === 'shop' || (target === 'menu' && showShop.value)) {
     isGatesActive.value = true
     isTransitioning.value = true
