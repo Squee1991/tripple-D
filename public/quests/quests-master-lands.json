@@ -539,7 +539,8 @@
         "id": 6,
         "type": "speechToText",
         "question": "masterLandsFifthQuests.questSix",
-        "correctAnswer": "ich helfe dir"
+        "text": "ich helfe dir",
+        "answer": "ich helfe dir"
       },
       {
         "id": 7,
@@ -566,7 +567,7 @@
         "id": 10,
         "type": "reorder",
         "question": "masterLandsFifthQuests.questTen",
-        "words": [ "Aufgabe","diese",  "dringend", "ist"],
+        "words": [ "Aufgabe","Diese",  "dringend", "ist", "dieser"],
         "correctOrder": ["Diese", "Aufgabe", "ist", "dringend"]
       },
       {
