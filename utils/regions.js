@@ -70,7 +70,7 @@ export const regions = {
 				pathTo: "master-lands",
 				theme: "master",
 				name: "locationNames.master-lands",
-				level: 0,
+				level: 13,
 				desc: "regions.descriptionMasterLands",
 				icon: MasterLands
 			},
