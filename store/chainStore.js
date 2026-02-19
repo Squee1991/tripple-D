@@ -221,8 +221,10 @@ export const userChainStore = defineStore('chain', () => {
 		const userRef = await getUserRef()
 		if (!userRef) return
 		if (success.value) {
-			daily.addLandQuestion(1)
-			if (!hasMistakes.value && !isRetryMode.value) {
+			if (!isRetryMode.value) {
+				daily.addLandQuestion(1)
+			}
+			if (!hasMistakes.value) {
 				daily.addPerfectQuest(1)
 			}
 		}
