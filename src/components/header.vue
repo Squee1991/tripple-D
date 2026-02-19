@@ -310,7 +310,7 @@ const menuItems = computed(() => {
             ]
           },
         ]
-        : [
+        :[
           {id: 'about', valueKey: 'nav.about', url: '/info-about'},
           {id: 'contact', valueKey: 'nav.contact', url: '/support-request'},
           {id: 'faq', valueKey: 'nav.quest', url: '/faq'}
