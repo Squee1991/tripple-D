@@ -1,50 +1,57 @@
 <template>
   <div class="hangar-fullscreen">
+    <div class="space-background"></div>
+
     <div class="top-hud">
-      <button class="back-wood-btn" @click="$emit('close')">
-        <span>НАЗАД</span>
+      <button class="back-cyber-btn" @click="$emit('close')">
+        <span>ВЫЙТИ</span>
       </button>
-      <div class="header-plank balance-display">
-        <span>💰 {{ balance }}</span>
+      <div class="cyber-plank balance-display">
+        <span class="credits-val">{{ balance }} 💎</span>
       </div>
     </div>
-    <div class="tank-showroom">
-      <button class="arrow-btn left" @click="prevTank">◀</button>
-      <div class="tank-stage-container">
-        <div class="tank__inner">
-          <Transition name="tank-pop" mode="out-in">
-            <div :key="currentIdx" class="tank-active-zone">
-              <img :src="tankList[currentIdx].img" class="tank-main-img" alt="Tank"/>
-              <div class="tank-shadow"></div>
+
+    <div class="ship-showroom">
+      <button class="nav-btn left" @click="prevTank">◀</button>
+
+      <div class="ship-stage-container">
+        <div class="ship__inner">
+          <Transition name="ship-pop" mode="out-in">
+            <div :key="currentIdx" class="ship-active-zone">
+              <img :src="tankList[currentIdx].img" class="ship-main-img" alt="Spaceship"/>
+              <div class="holo-platform"></div>
             </div>
           </Transition>
-          <div class="stats-side-plank">
+
+          <div class="stats-cyber-panel">
             <div class="stat-row">
-              <span class="label">KRAFT (МОЩЬ):</span>
+              <span class="label">POWER</span>
               <div class="bar-bg">
-                <div class="bar-fill" :style="{width: tankList[currentIdx].power + '%'}"></div>
+                <div class="bar-fill neon-orange" :style="{width: tankList[currentIdx].power + '%'}"></div>
               </div>
             </div>
             <div class="stat-row">
-              <span class="label">SPEED (СКОРОСТЬ):</span>
+              <span class="label">WARP</span>
               <div class="bar-bg">
-                <div class="bar-fill blue" :style="{width: tankList[currentIdx].speed + '%'}"></div>
+                <div class="bar-fill neon-cyan" :style="{width: tankList[currentIdx].speed + '%'}"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <button class="arrow-btn right" @click="nextTank">▶</button>
+
+      <button class="nav-btn right" @click="nextTank">▶</button>
     </div>
+
     <div class="bottom-card-wrapper">
-      <div class="info-plank">
-        <h2 class="tank-german-name">{{ tankList[currentIdx].name }}</h2>
+      <div class="info-terminal">
+        <h2 class="ship-name-display">{{ tankList[currentIdx].name }}</h2>
         <div class="action-btn-container">
-          <button v-if="!tankList[currentIdx].owned" class="action-btn buy" @click="buyTank">
-            КУПИТЬ ЗА {{ tankList[currentIdx].price }}
+          <button v-if="!tankList[currentIdx].owned" class="cyber-action buy" @click="buyTank">
+            BUY: {{ tankList[currentIdx].price }}
           </button>
-          <button v-else class="action-btn select" :class="{ active: isSelected }" @click="selectTank">
-            {{ isSelected ? 'ВЫБРАН (AKTIV)' : 'ВЫБРАТЬ' }}
+          <button v-else class="cyber-action select" :class="{ active: isSelected }" @click="selectTank">
+            {{ isSelected ? 'ACTIVE' : 'SELECT' }}
           </button>
         </div>
       </div>
@@ -54,12 +61,7 @@
 
 <script setup>
 import {ref, computed, onMounted} from 'vue'
-
-import t1 from '../../assets/images/fightIcons/tank (1).svg'
-import t2 from '../../assets/images/fightIcons/tank (2).svg'
-import t3 from '../../assets/images/fightIcons/tank (3).svg'
-import t4 from '../../assets/images/fightIcons/tank (4).svg'
-import t5 from '../../assets/images/fightIcons/tank (5).svg'
+import Spaceship from '@/assets/images/spaceship.svg'
 
 const emit = defineEmits(['close'])
 
@@ -68,11 +70,11 @@ const currentIdx = ref(0)
 const selectedTankId = ref(1)
 
 const tankList = ref([
-  {id: 1, name: 'DER BLITZ 1', img: t1, price: 0, owned: true, power: 30, speed: 90},
-  {id: 2, name: 'DIE KRAFT 2', img: t2, price: 600, owned: false, power: 55, speed: 70},
-  {id: 3, name: 'DAS FEUER 3', img: t3, price: 1500, owned: false, power: 75, speed: 50},
-  {id: 4, name: 'DER STURM 4', img: t4, price: 3000, owned: false, power: 85, speed: 40},
-  {id: 5, name: 'DIE FESTUNG 5', img: t5, price: 6000, owned: false, power: 100, speed: 20},
+  {id: 1, name: 'FALKE-01', img: Spaceship, price: 0, owned: true, power: 30, speed: 95},
+  {id: 2, name: 'NOVA-02', img: Spaceship, price: 600, owned: false, power: 55, speed: 75},
+  {id: 3, name: 'STERN-03', img: Spaceship, price: 1500, owned: false, power: 80, speed: 50},
+  {id: 4, name: 'KOMET-04', img: Spaceship, price: 3000, owned: false, power: 90, speed: 35},
+  {id: 5, name: 'VOID-X', img: Spaceship, price: 6000, owned: false, power: 100, speed: 15},
 ])
 
 const isSelected = computed(() => selectedTankId.value === tankList.value[currentIdx.value].id)
@@ -81,10 +83,10 @@ const nextTank = () => currentIdx.value = (currentIdx.value + 1) % tankList.valu
 const prevTank = () => currentIdx.value = (currentIdx.value - 1 + tankList.value.length) % tankList.value.length
 
 const buyTank = () => {
-  const tank = tankList.value[currentIdx.value]
-  if (balance.value >= tank.price) {
-    balance.value -= tank.price
-    tank.owned = true
+  const ship = tankList.value[currentIdx.value]
+  if (balance.value >= ship.price) {
+    balance.value -= ship.price
+    ship.owned = true
     saveData()
   }
 }
@@ -107,225 +109,257 @@ onMounted(() => {
 </script>
 
 <style scoped>
-
 .hangar-fullscreen {
   position: fixed;
   inset: 0;
   width: 100vw;
   height: 100vh;
   z-index: 2000;
-  background: #3a3838;
-  background-size: cover;
-  background-position: center;
+  background: #02050a;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 30px;
+  padding: 20px;
   box-sizing: border-box;
-  font-family: 'Segoe UI Black', sans-serif;
+  font-family: 'Consolas', monospace;
+  overflow: hidden;
 }
 
-.tank__inner {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+.space-background {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, #0a192f 0%, #02050a 100%);
+  z-index: -1;
 }
 
+/* HUD ВЕРХ */
 .top-hud {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 20px;
 }
 
-.header-plank {
-  background: rgba(93, 64, 55, 0.85);
-  border: 4px solid #3e2723;
-  padding: 10px 40px;
-  color: #fff;
-  clip-path: polygon(0% 15%, 100% 0%, 95% 100%, 5% 85%);
+.cyber-plank {
+  background: rgba(0, 210, 255, 0.05);
+  border: 1px solid rgba(0, 210, 255, 0.5);
+  padding: 8px 20px;
+  backdrop-filter: blur(10px);
+  clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
 }
 
-.main-title h1 {
-  margin: 0;
-  font-size: 1.8rem;
-  text-shadow: 2px 2px #000;
-  letter-spacing: 2px;
+.credits-val {
+  color: #00d2ff;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
-.balance-display {
-  color: #f1c40f;
-  font-size: 1.6rem;
-  font-weight: 900;
-}
-
-.back-wood-btn {
-  background: rgba(183, 28, 28, 0.85);
-  border: 3px solid #5d0000;
-  padding: 15px 25px;
-  color: white;
-  font-weight: 900;
+.back-cyber-btn {
+  background: transparent;
+  border: 1px solid #ff4b2b;
+  padding: 8px 20px;
+  color: #ff4b2b;
   cursor: pointer;
-  clip-path: polygon(10% 0%, 100% 10%, 90% 100%, 0% 90%);
-  transition: 0.2s;
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 100%, 10px 100%);
+  transition: 0.3s;
+  font-size: 20px;
 }
 
-.back-wood-btn:hover {
-  transform: scale(1.1);
-  filter: brightness(1.2);
+.back-cyber-btn:hover {
+  background: #ff4b2b;
+  color: #fff;
+  box-shadow: 0 0 15px #ff4b2b;
 }
 
-.tank-showroom {
+.ship-showroom {
   display: flex;
   align-items: center;
   justify-content: center;
   flex: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+  gap: 35px;
 }
 
-.tank-active-zone {
+.ship-active-zone {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.tank-main-img {
-  width: 260px;
-  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.5));
+.ship-main-img {
+  width: 220px; /* Уменьшил корабль */
+  filter: drop-shadow(0 0 20px rgba(0, 210, 255, 0.5));
+  animation: hover 4s ease-in-out infinite;
 }
 
-.tank-shadow {
-  width: 200px;
-  height: 30px;
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 50%;
-  filter: blur(12px);
-  margin-top: -20px;
+@keyframes hover {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(2deg);
+  }
 }
 
-.arrow-btn {
-  width: 80px;
-  height: 80px;
-  background: rgba(121, 85, 72, 0.9);
-  border: 5px solid #3e2723;
-  border-radius: 50%;
-  color: white;
-  font-size: 2.5rem;
+.holo-platform {
+  width: 180px;
+  height: 10px;
+  background: radial-gradient(ellipse at center, #00d2ff 0%, transparent 70%);
+  opacity: 0.5;
+  margin-top: 15px;
+  box-shadow: 0 5px 20px #00d2ff;
+}
+
+.nav-btn {
+  width: 45px;
+  height: 45px;
+  background: rgba(0, 210, 255, 0.1);
+  border: 1px solid #00d2ff;
+  color: #00d2ff;
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
-.arrow-btn:hover {
-  background: #f39c12;
-  transform: scale(1.1);
+.nav-btn:hover {
+  background: #00d2ff;
+  color: #000;
 }
 
-
-.stats-side-plank {
-  background: rgba(93, 64, 55, 0.85);
-  padding: 10px 20px;
-  border: 4px solid #3e2723;
-  border-radius: 20px;
-  width: 200px;
-  clip-path: polygon(0% 0%, 100% 5%, 95% 95%, 5% 100%);
-}
-
-.stat-row {
-  margin-bottom: 20px;
+/* ПАНЕЛЬ СТАТОВ */
+.stats-cyber-panel {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 15px;
+  border: 1px solid rgba(0, 210, 255, 0.3);
+  width: 180px;
+  margin-top: 20px;
+  border-radius: 4px;
 }
 
 .label {
-  display: block;
-  color: #fff;
-  font-size: 0.8rem;
+  color: #00d2ff;
+  font-size: 0.65rem;
   margin-bottom: 5px;
+  display: block;
+  letter-spacing: 1px;
 }
 
 .bar-bg {
   width: 100%;
-  height: 12px;
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-  overflow: hidden;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 10px;
 }
 
 .bar-fill {
   height: 100%;
-  background: #e74c3c;
-  border-radius: 10px;
-  transition: width 0.5s ease-out;
+  transition: width 0.8s ease;
 }
 
-.bar-fill.blue {
-  background: #3498db;
+.neon-orange {
+  background: #ff9800;
+  box-shadow: 0 0 10px #ff9800;
 }
 
+.neon-cyan {
+  background: #00d2ff;
+  box-shadow: 0 0 10px #00d2ff;
+}
 
 .bottom-card-wrapper {
   display: flex;
   justify-content: center;
-  padding-bottom: 20px;
+  margin-top: 20px;
 }
 
-.info-plank {
-  background: rgba(121, 85, 72, 0.9);
-  border: 6px solid #3e2723;
-  padding: 30px 30px;
+.info-terminal {
+  background: rgba(10, 25, 47, 0.9);
+  border: 1px solid #00d2ff;
+  padding: 20px;
   text-align: center;
-  clip-path: polygon(2% 10%, 98% 0%, 100% 90%, 0% 100%);
-  min-width: 400px;
+  width: 100%;
+  max-width: 400px;
+  clip-path: polygon(0 10px, 10px 0, calc(100% - 10px) 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 0 calc(100% - 10px));
 }
 
-.tank-german-name {
+.ship-name-display {
   color: #fff;
-  font-size: 2rem;
-  margin: 0 0 20px;
-  text-shadow: 3px 3px 0 #000;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px #00d2ff;
 }
 
-.action-btn {
-  padding: 15px 60px;
-  font-size: 1.2rem;
-  font-weight: 900;
-  border-radius: 15px;
-  border: none;
+.cyber-action {
+  width: 100%;
+  padding: 12px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  background: transparent;
   cursor: pointer;
-  color: #fff;
-  transition: 0.1s;
+  transition: 0.3s;
+  border: 1px solid currentColor;
 }
 
 .buy {
+  color: #ff9800;
+}
+
+.buy:hover {
   background: #ff9800;
-  box-shadow: 0 6px 0 #e65100;
+  color: #000;
 }
 
 .select {
-  background: #2196f3;
-  box-shadow: 0 6px 0 #0d47a1;
+  color: #00d2ff;
+}
+
+.select:hover {
+  background: #00d2ff;
+  color: #000;
 }
 
 .select.active {
-  background: #4caf50;
-  box-shadow: 0 6px 0 #1b5e20;
+  background: #00ff9d;
+  color: #000;
+  border-color: #00ff9d;
   pointer-events: none;
 }
 
-.action-btn:active {
-  transform: translateY(5px);
-  box-shadow: none;
+@media (max-width: 600px) {
+  .ship-main-img {
+    width: 160px;
+  }
+
+  .nav-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .ship-name-display {
+    font-size: 1.1rem;
+  }
+
+  .cyber-plank {
+    padding: 5px 15px;
+  }
+
+  .credits-val {
+    font-size: 1rem;
+  }
 }
 
-/* АНИМАЦИИ */
-.tank-pop-enter-active, .tank-pop-leave-active {
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+.ship-pop-enter-active, .ship-pop-leave-active {
+  transition: all 0.3s ease;
 }
 
-.tank-pop-enter-from {
+.ship-pop-enter-from {
   opacity: 0;
-  transform: scale(0.5) rotate(10deg);
+  transform: scale(0.9) translateX(30px);
 }
 
-.tank-pop-leave-to {
+.ship-pop-leave-to {
   opacity: 0;
-  transform: scale(0.5) rotate(-10deg);
+  transform: scale(0.9) translateX(-30px);
 }
 </style>

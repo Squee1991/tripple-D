@@ -1,92 +1,65 @@
 <template>
   <div class="game-universe">
     <div class="sky" ref="skyRef">
-      <div class="cloud c1">☁️</div>
-      <div class="cloud c2">☁️</div>
-      <div class="cloud c3">☁️</div>
-      <div class="cloud c4">☁️</div>
-      <div class="cloud c5">☁️</div>
-      <div class="cloud c6">☁️</div>
-      <div class="cloud c7">☁️</div>
-      <div class="cloud c8">☁️</div>
+      <div class="star-layer"></div>
 
       <div class="score-board">
-        <span class="score-label">PUNKTE</span>
+        <span class="score-label">ОЧКИ</span>
         <span class="score-divider"></span>
         <span class="score-value">{{ score }}</span>
       </div>
-
       <div v-if="!isGameOver" class="game-area">
         <div
-            v-if="currentWord"
+            v-if="currentWord && !showGroundExplosion"
             ref="mobRef"
             :key="gameKey"
             class="mob"
-            :class="{ 'is-wrong': isWrongState, 'hidden': showGroundExplosion }"
-            :style="{ animationDuration: currentSpeed + 's' }"
+            :style="mobStyles"
             @animationend="triggerBomb"
+            @transitionend="handleTransitionEnd"
         >
           <div class="mob-inner">
-            <span v-if="isWrongState" class="mob-emoji">🤬</span>
-            <span v-else>
-              <img class="parachute" :src="Parachute" alt="Parachute">
+            <span v-if="isWrongState">
+              <img class="meteor__fire" :src="MeteorInFire" alt="FIRE">
             </span>
-            <div class="mob-bubble">
+            <span v-else>
+              <img class="parachute" :src="Meteor" alt="Meteor">
+            </span>
+
+            <div class="mob-bubble" v-if="!isWrongState">
               {{ currentWord.text }}
             </div>
           </div>
         </div>
 
-        <img
+        <div
             v-if="isMissileFlying"
-            :src="Rocket"
-            class="missile"
+            class="laser-beam"
             :style="missileStyles"
-        />
+        ></div>
 
-        <div
-            v-if="showSuccessExplosion"
-            class="explosion small-boom"
-            :style="{ top: explosionPos.top + 'px', left: explosionPos.left + 'px' }"
-        >
-          💥
-        </div>
-
-        <div
-            v-if="showWrongExplosion"
-            class="explosion wrong-boom"
-            :style="{ top: wrongExplosionPos.top + 'px', left: wrongExplosionPos.left + 'px' }"
-        >
-          🗯️💨
-        </div>
+        <div v-if="showSuccessExplosion" class="vfx" :style="vfxPos">💥</div>
       </div>
 
       <div v-if="showGroundExplosion" class="ground-impact-explosion">
         <div class="big-boom-emoji">💥</div>
-        <div class="boom-text">KABOOM!</div>
       </div>
 
       <div v-if="isGameOver" class="game-over-overlay">
         <div class="game-over-card">
-          <div class="skull-icon">☠️</div>
-          <h2>KAPUTT!</h2>
-          <p>Твоя оборона была прорвана!</p>
+          <p class="death-sub">Твой звездолет уничтожен!</p>
           <div class="final-score-wrap">
-            <span class="fs-label">Счёт:</span>
+            <span class="fs-label">SCORE:</span>
             <span class="fs-val">{{ score }}</span>
           </div>
-          <button class="restart-btn" @click="startGame">ERNEUT VERSUCHEN</button>
-          <router-link to="/games" class="home-btn">Вернуться на главную</router-link>
+          <button class="restart-btn" @click="startGame">Начать заново</button>
+          <router-link to="/games" class="home-btn">Покинуть миссию</router-link>
         </div>
       </div>
-    </div>
-
-    <div class="ground">
-      <div class="grass-edge"></div>
       <div class="cannon-station">
         <div class="main-cannon" :class="{ 'recoiling': isMissileFlying, 'shaking': showGroundExplosion }">
           <div class="cannon-barrel" v-if="!showGroundExplosion">
-            <img class="tank" :src="Tank" alt="Panzer">
+            <img class="tank" :src="Spaceship" alt="Ship">
           </div>
         </div>
         <div class="ammo-selector">
@@ -94,9 +67,8 @@
               v-for="art in ['der', 'die', 'das']"
               :key="art"
               class="ammo-btn"
-              :class="art"
               @click="shoot(art)"
-              :disabled="isMissileFlying || showGroundExplosion"
+              :disabled="isMissileFlying || showGroundExplosion || isWrongState"
           >
             {{ art.toUpperCase() }}
           </button>
@@ -107,578 +79,336 @@
 </template>
 
 <script setup>
-import {ref, onMounted, computed} from 'vue'
-import Rocket from '@/assets/images/missile.svg'
-import Tank from '@/assets/images/Tank.svg'
-import Parachute from '../assets/images/fightIcons/parachute.svg'
+import {ref, onMounted, computed, nextTick} from 'vue'
+import Spaceship from '@/assets/images/spaceship.svg'
+import Meteor from '../assets/images/meteor.svg'
+import MeteorInFire from '../assets/images/meteorinFire.svg'
+
 const words = [
-  {text: 'Apfel', art: 'der'}, {text: 'Tisch', art: 'der'}, {text: 'Hund', art: 'der'}, {
-    text: 'Garten',
-    art: 'der'
-  }, {text: 'Stuhl', art: 'der'},
-  {text: 'Sonne', art: 'die'}, {text: 'Tür', art: 'die'}, {text: 'Katze', art: 'die'}, {
-    text: 'Lampe',
-    art: 'die'
-  }, {text: 'Milch', art: 'die'},
-  {text: 'Auto', art: 'das'}, {text: 'Kind', art: 'das'}, {text: 'Haus', art: 'das'}, {
-    text: 'Buch',
-    art: 'das'
-  }, {text: 'Wasser', art: 'das'},
-  {text: 'Brot', art: 'das'}, {text: 'Fenster', art: 'das'}, {text: 'Blume', art: 'die'}, {
-    text: 'Tasche',
-    art: 'die'
-  }, {text: 'Tisch', art: 'der'}
+  {text: 'Baum', art: 'der'}, {text: 'Garten', art: 'der'}, {text: 'Computer', art: 'der'},
+  {text: 'Käse', art: 'der'}, {text: 'Mantel', art: 'der'}, {text: 'Berg', art: 'der'},
+  {text: 'Brief', art: 'der'}, {text: 'Schlüssel', art: 'der'}, {text: 'Vogel', art: 'der'},
+  {text: 'Löffel', art: 'der'},
+  {text: 'Blume', art: 'die'}, {text: 'Tasche', art: 'die'}, {text: 'Lampe', art: 'die'},
+  {text: 'Milch', art: 'die'}, {text: 'Stadt', art: 'die'}, {text: 'Kamera', art: 'die'},
+  {text: 'Brille', art: 'die'}, {text: 'Gabel', art: 'die'}, {text: 'Wohnung', art: 'die'},
+  {text: 'Straße', art: 'die'},
+  {text: 'Buch', art: 'das'}, {text: 'Fenster', art: 'das'}, {text: 'Brot', art: 'das'},
+  {text: 'Wasser', art: 'das'}, {text: 'Fahrrad', art: 'das'}, {text: 'Handy', art: 'das'},
+  {text: 'Bett', art: 'das'}, {text: 'Messer', art: 'das'}, {text: 'Bild', art: 'das'},
+  {text: 'Zimmer', art: 'das'}
 ]
 
-const score = ref(0)
-const isGameOver = ref(false)
-const currentWord = ref(null)
-const isWrongState = ref(false)
-const showSuccessExplosion = ref(false)
-const showWrongExplosion = ref(false)
-const showGroundExplosion = ref(false)
+const score = ref(0);
+const isGameOver = ref(false);
+const currentWord = ref(null);
+const isWrongState = ref(false);
+const showSuccessExplosion = ref(false);
+const showGroundExplosion = ref(false);
+const currentSpeed = ref(10);
+const gameKey = ref(0);
+const isMissileFlying = ref(false);
+const missilePos = ref({top: 0, left: 0, angle: 0});
+const vfxPos = ref({top: '0px', left: '0px'});
+const mobRef = ref(null);
+const skyRef = ref(null);
+const attackStyle = ref({});
 
-const currentSpeed = ref(6)
-const gameKey = ref(0)
-const isMissileFlying = ref(false)
-const missilePos = ref({top: 0, left: 0, angle: 0})
-
-const mobRef = ref(null)
-const skyRef = ref(null)
-const explosionPos = ref({top: 0, left: 0})
-const wrongExplosionPos = ref({top: 0, left: 0})
+const mobStyles = computed(() => {
+  if (isWrongState.value) return attackStyle.value;
+  return {animationDuration: currentSpeed.value + 's'};
+});
 
 const missileStyles = computed(() => ({
   top: missilePos.value.top + 'px',
   left: missilePos.value.left + 'px',
-  transform: `translate(-50%, -50%) rotate(${missilePos.value.angle + 45}deg)`
-}))
+  transform: `translate(-50%, -50%) rotate(${missilePos.value.angle + 90}deg)`,
+  opacity: isMissileFlying.value ? 1 : 0
+}));
 
 const startGame = () => {
-  score.value = 0
-  isGameOver.value = false
-  showGroundExplosion.value = false
-  currentSpeed.value = 6
-  spawnWord()
-}
+  score.value = 0;
+  isGameOver.value = false;
+  showGroundExplosion.value = false;
+  isWrongState.value = false;
+  currentSpeed.value = 10;
+  attackStyle.value = {};
+  spawnWord();
+};
 
 const spawnWord = () => {
-  isWrongState.value = false
-  showSuccessExplosion.value = false
-  showWrongExplosion.value = false
-  isMissileFlying.value = false
-  const randomIndex = Math.floor(Math.random() * words.length)
-  currentWord.value = words[randomIndex]
-  gameKey.value++
-}
+  isWrongState.value = false;
+  showSuccessExplosion.value = false;
+  isMissileFlying.value = false;
+  attackStyle.value = {};
+  const randomIndex = Math.floor(Math.random() * words.length);
+  currentWord.value = words[randomIndex];
+  gameKey.value++;
+};
 
-const shoot = (answer) => {
-  if (isGameOver.value || isMissileFlying.value || !mobRef.value || showGroundExplosion.value) return
+const shoot = async (answer) => {
+  if (isGameOver.value || isMissileFlying.value || !mobRef.value || showGroundExplosion.value) return;
+  const mobRect = mobRef.value.getBoundingClientRect();
+  const skyRect = skyRef.value.getBoundingClientRect();
+  const startX = skyRect.width / 2;
+  const startY = skyRect.height - 130;
+  const targetX = mobRect.left - skyRect.left + (mobRect.width / 2);
+  const targetY = mobRect.top - skyRect.top + (mobRect.height / 2);
+  const angle = Math.atan2(targetY - startY, targetX - startX) * 180 / Math.PI;
+  missilePos.value = {top: startY, left: startX, angle: angle};
+  isMissileFlying.value = true;
 
-  const mobRect = mobRef.value.getBoundingClientRect()
-  const skyRect = skyRef.value.getBoundingClientRect()
-
-  const startX = skyRect.width / 2
-  const startY = skyRect.height - 40
-
-  const targetX = mobRect.left - skyRect.left + (mobRect.width / 2)
-  const targetY = mobRect.top - skyRect.top + (mobRect.height / 2)
-
-  const angle = Math.atan2(targetY - startY, targetX - startX) * 180 / Math.PI
-
-  missilePos.value = {top: startY, left: startX, angle: angle}
-  isMissileFlying.value = true
-
+  await nextTick();
   setTimeout(() => {
-    missilePos.value = {top: targetY, left: targetX, angle: angle}
+    missilePos.value = {top: targetY, left: targetX, angle: angle};
     setTimeout(() => {
       checkHit(answer, targetX, targetY)
-    }, 250)
-  }, 10)
-}
+    }, 160);
+  }, 20);
+};
 
-const checkHit = (answer, x, y) => {
-  isMissileFlying.value = false
-
+const checkHit = async (answer, x, y) => {
+  isMissileFlying.value = false;
+  vfxPos.value = {top: y + 'px', left: x + 'px'};
   if (answer === currentWord.value.art) {
-    explosionPos.value = {top: y, left: x}
-    score.value += 10
-    showSuccessExplosion.value = true
-    if (currentSpeed.value > 2) currentSpeed.value -= 0.15
-    setTimeout(spawnWord, 400)
+    score.value += 10;
+    showSuccessExplosion.value = true;
+    if (currentSpeed.value > 2.5) currentSpeed.value -= 0.15;
+    setTimeout(spawnWord, 400);
   } else {
-    wrongExplosionPos.value = {top: y, left: x}
-    showWrongExplosion.value = true
-
-    if (!isWrongState.value) {
-      isWrongState.value = true
-      currentSpeed.value = currentSpeed.value / 3
-    }
+    const currentTop = mobRef.value.offsetTop;
+    attackStyle.value = {top: currentTop + 'px', animation: 'none'};
+    isWrongState.value = true;
+    await nextTick();
     setTimeout(() => {
-      showWrongExplosion.value = false
-    }, 400)
+      attackStyle.value = {
+        top: 'calc(100% - 210px)',
+        transition: 'top 1.5s linear',
+        animation: 'none'
+      };
+    }, 50);
   }
-}
+};
+
+const handleTransitionEnd = () => {
+  if (isWrongState.value) triggerBomb();
+};
 
 const triggerBomb = () => {
-  if (showSuccessExplosion.value) return
-  showGroundExplosion.value = true
+  if (showSuccessExplosion.value) return;
+  showGroundExplosion.value = true;
   setTimeout(() => {
     isGameOver.value = true
-  }, 1000)
-}
+  }, 900);
+};
 
-onMounted(startGame)
+onMounted(startGame);
 </script>
 
 <style scoped>
 .game-universe {
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background: linear-gradient(180deg, #4facfe 0%, #00f2fe 100%);
+  background: #010409;
   overflow: hidden;
-  font-family: 'Arial Rounded MT Bold', 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Arial Rounded MT Bold', sans-serif;
   user-select: none;
 }
 
+.sky {
+  height: 100%;
+  position: relative;
+}
 
-.cloud {
+.star-layer {
   position: absolute;
-  font-size: 3rem;
-  opacity: 0.6;
-  filter: blur(2px);
-  animation: cloudFloat linear infinite;
-  z-index: 1;
+  width: 100%;
+  height: 200%;
+  top: -100%;
+  background-image: radial-gradient(1px 1px at 20px 30px, #fff, rgba(0, 0, 0, 0)), radial-gradient(2px 2px at 50px 80px, #eee, rgba(0, 0, 0, 0));
+  background-size: 250px 250px;
+  animation: starsScroll 12s linear infinite;
+  opacity: 0.5;
 }
 
-.parachute {
-  width: 100px;
-}
-
-.c1 {
-  top: 5%;
-  left: -10%;
-  animation-duration: 30s;
-  font-size: 4rem;
-}
-
-.c2 {
-  top: 15%;
-  left: -20%;
-  animation-duration: 45s;
-  animation-delay: -5s;
-}
-
-.c3 {
-  top: 10%;
-  left: 110%;
-  animation-duration: 35s;
-  animation-direction: reverse;
-  font-size: 3.5rem;
-}
-
-.c4 {
-  top: 25%;
-  left: 30%;
-  animation-duration: 55s;
-  opacity: 0.4;
-}
-
-.c5 {
-  top: 8%;
-  left: 70%;
-  animation-duration: 40s;
-  animation-delay: -10s;
-}
-
-.c6 {
-  top: 20%;
-  left: 90%;
-  animation-duration: 28s;
-  font-size: 2.5rem;
-}
-
-.c7 {
-  top: 30%;
-  left: 10%;
-  animation-duration: 50s;
-  opacity: 0.3;
-}
-
-.c8 {
-  top: 12%;
-  left: 50%;
-  animation-duration: 33s;
-  animation-delay: -15s;
-}
-
-@keyframes cloudFloat {
+@keyframes starsScroll {
   from {
-    transform: translateX(0);
+    transform: translateY(0);
   }
   to {
-    transform: translateX(120vw);
+    transform: translateY(50%);
   }
-}
-
-.sky {
-  flex-grow: 1;
-  position: relative;
 }
 
 .score-board {
   position: absolute;
   top: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  padding: 8px 30px;
-  border-radius: 50px;
-  border: 2px solid rgba(255, 255, 255, 0.4);
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  z-index: 10;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
-
-.score-label {
-  color: #fff;
-  font-size: 0.9rem;
-  letter-spacing: 2px;
-  font-weight: bold;
-}
-
-.score-divider {
-  width: 2px;
-  height: 20px;
-  background: rgba(255, 255, 255, 0.3);
+  left: 1%;
+  color: #00d2ff;
+  z-index: 100;
 }
 
 .score-value {
-  font-size: 2rem;
-  font-weight: 900;
-  color: #ffeb3b;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-left: 10px;
+  color: #fff;
 }
 
 .mob {
   position: absolute;
-  width: 180px;
+  width: 100px;
   left: 50%;
   transform: translateX(-50%);
   animation: fall linear forwards;
   z-index: 50;
 }
 
-.mob.hidden {
-  opacity: 0;
+.meteor__fire {
+  width: 140px;
+  transform: rotate(-45deg);
+  filter: drop-shadow(0 0 25px #ff4b2b);
+}
+
+.parachute {
+  width: 90px;
+  filter: drop-shadow(0 0 15px #00d2ff);
+}
+
+.mob-bubble {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 5px 15px;
+  border: 2px solid #00d2ff;
+  text-align: center;
 }
 
 .mob-inner {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
 }
 
-.mob-emoji {
-  font-size: 3.5rem;
-  margin-bottom: -10px;
-  z-index: 2;
-  filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.2));
-}
-
-.mob-bubble {
-  background: #fff;
-  color: #2c3e50;
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-size: 1.2rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  border: 4px solid #2c3e50;
-  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1), inset 0 -4px 0 rgba(0, 0, 0, 0.05);
-  position: relative;
-}
-
-.is-wrong .mob-bubble {
-  background: #ff5252;
-  color: #fff;
-  border-color: #fff;
-  box-shadow: 0 10px 0 #b71c1c;
-  animation: shake 0.2s infinite;
-}
-
-@keyframes shake {
-  0%, 100% {
-    transform: rotate(-2deg);
-  }
-  50% {
-    transform: rotate(2deg);
-  }
-}
-
-.missile {
+/* ЛАЗЕР (ФИКС) */
+.laser-beam {
   position: absolute;
-  width: 60px;
-  z-index: 15;
-  transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  filter: drop-shadow(0 0 10px rgba(255, 235, 59, 0.6));
+  width: 4px;
+  height: 100px;
+  background: #00f2fe;
+  box-shadow: 0 0 25px #00f2fe, 0 0 10px #fff;
+  border-radius: 10px;
+  z-index: 9999;
+  transition: top 0.15s linear, left 0.15s linear;
+  pointer-events: none;
 }
 
-.main-cannon {
+
+.cannon-station {
   position: absolute;
-  bottom: 125px;
+  bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 5;
-  transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000;
+  gap: 14px;
 }
 
 .tank {
-  width: 140px;
-  height: auto;
-  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.3));
-}
-
-.recoiling {
-  transform: translateX(-50%) translateY(15px) scale(0.95);
-}
-
-.shaking {
-  animation: shake-hard 0.2s infinite;
-}
-
-@keyframes shake-hard {
-  0% {
-    transform: translateX(-50%) translate(0, 0);
-  }
-  25% {
-    transform: translateX(-50%) translate(5px, 5px);
-  }
-  75% {
-    transform: translateX(-50%) translate(-5px, -5px);
-  }
-}
-
-.ground {
-  height: 200px;
-  background: linear-gradient(180deg, #2ecc71 0%, #27ae60 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.grass-edge {
-  position: absolute;
-  top: -15px;
-  width: 100%;
-  height: 20px;
-  background-image: radial-gradient(circle at 50% 100%, #2ecc71 50%, transparent 55%);
-  background-size: 40px 20px;
-}
-
-.ammo-selector {
-  display: flex;
-  gap: 25px;
-  z-index: 20;
-  padding-top: 20px;
+  width: 110px;
 }
 
 .ammo-btn {
-  width: 90px;
-  height: 60px;
-  border-radius: 15px;
-  border: none;
-  font-size: 1.2rem;
-  font-weight: 900;
-  color: white;
+  width: 80px;
+  height: 50px;
+  border: 1px solid #00d2ff;
+  background: rgba(0, 210, 255, 0.1);
+  color: #00d2ff;
+  font-weight: bold;
   cursor: pointer;
-  transition: all 0.1s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
+  margin: 0 10px;
 }
 
-.der {
-  background: #3498db;
-  box-shadow: 0 8px 0 #2980b9;
+.ammo-btn:hover:not(:disabled) {
+  background: #00d2ff;
+  color: #000;
+  box-shadow: 0 0 15px #00d2ff;
 }
 
-.die {
-  background: #e74c3c;
-  box-shadow: 0 8px 0 #c0392b;
-}
-
-.das {
-  background: #546e7a;
-  box-shadow: 0 8px 0 #37474f;
-}
-
-.ammo-btn:active:not(:disabled) {
-  transform: translateY(4px);
-  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
-}
-
-.ammo-btn:disabled {
-  opacity: 0.6;
-  filter: grayscale(0.5);
-  cursor: not-allowed;
-}
-
-.explosion {
-  position: absolute;
-  font-size: 7rem;
-  transform: translate(-50%, -50%);
-  z-index: 30;
-}
-
-.small-boom {
-  animation: pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-}
-
-.wrong-boom {
-  animation: pop-wrong 0.4s ease-out forwards;
-  filter: grayscale(1) brightness(1.5);
-}
-
+/* ВЗРЫВ */
 .ground-impact-explosion {
   position: absolute;
-  bottom: 0;
+  bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 100;
+  z-index: 2000;
   text-align: center;
 }
 
 .big-boom-emoji {
   font-size: 10rem;
-  animation: pop-big 0.8s ease-out forwards;
-}
-
-.boom-text {
-  font-size: 3rem;
-  color: #ffeb3b;
-  font-weight: 900;
-  text-shadow: 0 0 20px #f44336;
-  animation: pop-text 0.8s ease-out forwards;
-  margin-top: -40px;
-}
-
-@keyframes pop {
-  0% {
-    transform: translate(-50%, -50%) scale(0.5);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(2.5);
-    opacity: 0;
-  }
-}
-
-@keyframes pop-wrong {
-  0% {
-    transform: translate(-50%, -50%) scale(0.5);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(1.8);
-    opacity: 0;
-  }
-}
-
-@keyframes pop-big {
-  0% {
-    transform: scale(0);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(2);
-    opacity: 0;
-  }
-}
-
-@keyframes pop-text {
-  0% {
-    transform: translateY(20px) scale(0);
-    opacity: 0;
-  }
-  50% {
-    transform: translateY(-20px) scale(1.2);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-50px) scale(1);
-    opacity: 0;
-  }
 }
 
 @keyframes fall {
-  0% {
+  from {
     top: -150px;
   }
-  100% {
-    top: 100%;
+  to {
+    top: calc(100% - 170px);
   }
 }
 
+/* МОДАЛКА */
 .game-over-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(15, 23, 42, 0.9);
-  backdrop-filter: blur(8px);
+  background: rgba(0, 5, 15, 0.95);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 200;
-  animation: fade-in 0.5s ease-out;
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  z-index: 5000;
+  backdrop-filter: blur(10px);
 }
 
 .game-over-card {
-  background: white;
+  background: #050b14;
   padding: 40px;
-  border-radius: 40px;
+  border: 2px solid #ff4b2b;
   text-align: center;
-  border: 6px solid #f44336;
-  max-width: 350px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  min-width: 320px;
+}
+
+.death-title {
+  font-size: 3rem;
+  color: #ff4b2b;
+  margin: 10px 0;
 }
 
 .fs-val {
-  font-size: 4rem;
-  font-weight: 900;
-  color: #3498db;
+  font-size: 3rem;
+  color: #00d2ff;
+  display: block;
 }
 
 .restart-btn {
-  background: #ff9800;
-  color: white;
-  border: none;
-  padding: 18px 40px;
-  border-radius: 20px;
-  font-size: 1.3rem;
-  font-weight: 900;
-  cursor: pointer;
+  display: block;
   width: 100%;
-  box-shadow: 0 6px 0 #e65100;
-  transition: 0.1s;
+  padding: 15px;
+  background: #ff4b2b;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
   margin-bottom: 10px;
+}
+
+.home-btn {
+  display: block;
+  color: #aaa;
+  text-decoration: none;
+  font-size: 0.9rem;
 }
 </style>
