@@ -788,8 +788,8 @@
         "id": 7,
         "type": "reorder",
         "question": "masterLandsSeventhQuests.questSeven",
-        "words": ["LKW", "der", "wann", "kommt"],
-        "correctOrder": ["wann", "kommt", "der", "LKW", "die"]
+        "words": ["LKW", "der", "wann", "kommt","die"],
+        "correctOrder": ["wann", "kommt", "der", "LKW"]
       },
       {
         "id": 8,
@@ -805,7 +805,7 @@
       {
         "id": 9,
         "type": "select",
-        "question": "masterLandsSeventhQuestsmasterLandsSeventhQuests.questNine",
+        "question": "masterLandsSeventhQuests.questNine",
         "options": ["zu spät", "zu früh", "sofort"],
         "answer": "zu spät"
       },
