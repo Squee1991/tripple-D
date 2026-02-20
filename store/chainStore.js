@@ -322,7 +322,7 @@ export const userChainStore = defineStore('chain', () => {
 			await loadProgressFromFirebase()
 			await migrateByAliases(quest.value)
 			const savedProgress = questProgress.value[currentQuestId.value]
-			if (savedProgress && savedProgress.success && savedProgress.wrongIndices && savedProgress.wrongIndices.length > 0) {
+			if (savedProgress && savedProgress.wrongIndices && savedProgress.wrongIndices.length > 0) {
 				startRetryMistakes(savedProgress.wrongIndices)
 				const total = totalQuestTasks.value
 				for (let i = 0; i < total; i++) {
@@ -467,8 +467,8 @@ export const userChainStore = defineStore('chain', () => {
 
 	function restart(fullyCleared = false) {
 		const p = questProgress.value[currentQuestId.value]
-		const hasSavedMistakes = p && p.success && p.wrongIndices && p.wrongIndices.length > 0
-		const hasCurrentMistakes = hasMistakes.value && success.value
+		const hasSavedMistakes = p && p.wrongIndices && p.wrongIndices.length > 0
+		const hasCurrentMistakes = hasMistakes.value
 		if (hasSavedMistakes || hasCurrentMistakes) {
 			let indices = []
 			if (hasCurrentMistakes) {
