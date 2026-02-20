@@ -4,6 +4,8 @@ import { regions } from '~/utils/regions.js'
 import { doc, getDoc, getFirestore, runTransaction, increment, setDoc } from 'firebase/firestore'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 import {dailyStore } from './dailyStore.js'
+import { userlangStore } from './learningStore.js'
+
 const REGEN_INTERVAL_MS = 5 * 60 * 1000
 const MAX_LIVES = 5
 
@@ -35,6 +37,7 @@ export const userChainStore = defineStore('chain', () => {
 	const taskResults = ref({})
 	const isRetryMode = ref(false)
     const daily = dailyStore()
+	const langStore = userlangStore()
 	let lifeTickerId = null
 
 	const totalQuestTasks = computed(() => quest.value?.conditions?.requiredTasks ?? quest.value?.tasks?.length ?? 0)
@@ -257,9 +260,23 @@ export const userChainStore = defineStore('chain', () => {
 			if (isFirstSuccess) timesCompleted += 1
 			let awardedNow = false
 			if (isSuccessNow && !reward) {
-				tx.set(userRef, { points: increment(20), exp: increment(20) }, { merge: true })
-				reward = true
-				awardedNow = true
+				let currentExp = Number(data.exp || 0);
+				let currentLevel = Number(data.isLeveling || 0);
+				currentExp += 20;
+				if (currentExp >= 100) {
+					currentLevel += 1;
+					currentExp -= 100;
+				}
+				tx.set(userRef, {
+					points: increment(20),
+					exp: currentExp,
+					isLeveling: currentLevel
+				}, { merge: true });
+				reward = true;
+				awardedNow = true;
+				langStore.points = Number(langStore.points || 0) + 20;
+				langStore.exp = currentExp;
+				langStore.isLeveling = currentLevel;
 			}
 
 			const p = {

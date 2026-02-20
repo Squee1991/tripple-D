@@ -68,71 +68,71 @@
         {
           "id": 7,
           "type": "speechToText",
-          "question": "Произнесите: Как у тебя дела? (Как тебе идет?)",
+          "question": "Произнесите услышанное",
           "text": "Wie geht es dir?",
           "answer": "Wie geht es dir?"
         },
         {
           "id": 8,
           "type": "select",
-          "question": "Выберите: Я отвечаю ей (ihr).",
+          "question": "Выберите: Я отвечаю ей",
           "options": [
             "Ich antworte ihr",
             "Ich antworte sie",
-            "Ich antworte ihrs"
+            "Ich antworte ihre"
           ],
           "answer": "Ich antworte ihr"
         },
         {
           "id": 9,
           "type": "reorder",
-          "question": "Соберите: Ты должен нам помочь.",
+          "question": "Соберите предложение: Ты должен нам помочь.",
           "words": ["helfen", "uns", "musst", "Du"],
           "correctOrder": ["Du", "musst", "uns", "helfen"]
         },
         {
           "id": 10,
           "type": "speechToText",
-          "question": "Напишите услышанное: Это мне нравится",
+          "question": "Напишите услышанное",
           "text": "Das gefällt mir",
           "answer": "Das gefällt mir"
         },
         {
           "id": 11,
           "type": "reorder",
-          "question": "Соберите: Я покупаю тебе кофе.",
+          "question": "Соберите предложение: Я покупаю тебе кофе.",
           "words": ["dir", "Kaffee", "einen", "kaufe", "Ich"],
           "correctOrder": ["Ich", "kaufe", "dir", "einen", "Kaffee"]
         },
         {
           "id": 12,
           "type": "select",
-          "question": "Выберите: Вы (вежливо) можете им (ihnen) помочь?",
+          "question": "Как вежливо спросить: Вы можете им помочь?",
           "options": [
-            "Können Sie ihnen helfen?",
+            "Können Sie ihnen bitte helfen?",
             "Können Sie sie helfen?",
-            "Können Sie ihr helfen?"
+            "Können Sie ihr bitte helfen?"
           ],
-          "answer": "Können Sie ihnen helfen?"
+          "answer": "Können Sie ihnen bitte helfen?"
         },
         {
           "id": 13,
           "type": "speechToText",
-          "question": "Произнесите: Он дает мне этот ключ",
+          "question": "Напишите услышанное",
           "text": "Er gibt mir diesen Schlüssel",
           "answer": "Er gibt mir diesen Schlüssel"
         },
         {
           "id": 14,
           "type": "reorder",
-          "question": "Соберите: Я хочу принести вам (euch) чай.",
+          "question": "Соберите предложение: Я хочу принести вам чай.",
           "words": ["bringen", "Tee", "einen", "euch", "will", "Ich"],
           "correctOrder": ["Ich", "will", "euch", "einen", "Tee", "bringen"]
         },
         {
           "id": 15,
           "type": "select",
-          "question": "Выберите: Тебе следует (ты должен) ей ответить.",
+          "question": "Выберите верный ответ: Тебе следует ей ответить.",
           "options": [
             "Du sollst ihr antworten",
             "Du sollst sie antworten",
@@ -161,14 +161,14 @@
         {
           "id": 1,
           "type": "reorder",
-          "question": "Соберите: Я иду с другом (der Freund).",
+          "question": "Соберите предложение: Я иду с другом.",
           "words": ["mit", "dem", "Freund", "gehe", "Ich"],
           "correctOrder": ["Ich", "gehe", "mit", "dem", "Freund"]
         },
         {
           "id": 2,
           "type": "select",
-          "question": "Выберите: Я иду к врачу (der Arzt).",
+          "question": "Выберите верный ответ: Я иду к врачу",
           "options": [
             "Ich gehe zum Arzt",
             "Ich gehe zu den Arzt",
@@ -179,21 +179,21 @@
         {
           "id": 3,
           "type": "speechToText",
-          "question": "Напишите услышанное: Я прихожу с работы (die Arbeit)",
+          "question": "Напишите услышанное",
           "text": "Ich komme von der Arbeit",
           "answer": "Ich komme von der Arbeit"
         },
         {
           "id": 4,
           "type": "reorder",
-          "question": "Соберите: Он живет у родителей (die Eltern).",
+          "question": "Соберите предложение: Он живет у родителей.",
           "words": ["Eltern", "den", "bei", "wohnt", "Er"],
           "correctOrder": ["Er", "wohnt", "bei", "den", "Eltern"]
         },
         {
           "id": 5,
           "type": "select",
-          "question": "Выберите: После курса (der Kurs) мы идем домой.",
+          "question": "Выберите верный ответ: После курса мы идем домой.",
           "options": [
             "Nach dem Kurs gehen wir nach Hause",
             "Nach den Kurs gehen wir nach Hause",
@@ -204,21 +204,21 @@
         {
           "id": 6,
           "type": "reorder",
-          "question": "Соберите: Я еду на вокзал (der Bahnhof).",
-          "words": ["Bahnhof", "zum", "fahre", "Ich"],
+          "question": "Соберите предложение: Я еду на вокзал.",
+          "words": ["Bahnhof", "zum", "fahre", "Ich", "zu"],
           "correctOrder": ["Ich", "fahre", "zum", "Bahnhof"]
         },
         {
           "id": 7,
           "type": "speechToText",
-          "question": "Произнесите: Она учится уже месяц (seit einem Monat)",
+          "question": "Напишите услышанное",
           "text": "Sie lernt seit einem Monat",
           "answer": "Sie lernt seit einem Monat"
         },
         {
           "id": 8,
           "type": "select",
-          "question": "Выберите: Из дома (das Haus).",
+          "question": "Выберите: Из дома.",
           "options": [
             "Aus dem Haus",
             "Aus den Haus",
@@ -229,28 +229,28 @@
         {
           "id": 9,
           "type": "reorder",
-          "question": "Соберите: Я у подруги (die Freundin).",
+          "question": "Соберите предложение: Я у подруги.",
           "words": ["einer", "Freundin", "bei", "bin", "Ich"],
           "correctOrder": ["Ich", "bin", "bei", "einer", "Freundin"]
         },
         {
           "id": 10,
           "type": "speechToText",
-          "question": "Напишите услышанное: Я иду в супермаркет (zu + dem)",
+          "question": "Напишите услышанное",
           "text": "Ich gehe zum Supermarkt",
           "answer": "Ich gehe zum Supermarkt"
         },
         {
           "id": 11,
           "type": "reorder",
-          "question": "Соберите: Мы идем из города (die Stadt).",
+          "question": "Соберите: Мы идем из города.",
           "words": ["Stadt", "der", "aus", "kommen", "Wir"],
           "correctOrder": ["Wir", "kommen", "aus", "der", "Stadt"]
         },
         {
           "id": 12,
           "type": "select",
-          "question": "Выберите: С моим братом (der Bruder).",
+          "question": "Выберите верный ответ: С моим братом.",
           "options": [
             "Mit meinem Bruder",
             "Mit meinen Bruder",
@@ -261,21 +261,21 @@
         {
           "id": 13,
           "type": "speechToText",
-          "question": "Произнесите: Я говорю с шефом",
+          "question": "Напишите услышанное",
           "text": "Ich spreche mit dem Chef",
           "answer": "Ich spreche mit dem Chef"
         },
         {
           "id": 14,
           "type": "reorder",
-          "question": "Соберите: Он идет в библиотеку (zu + die).",
+          "question": "Соберите предложение: Он идет в библиотеку.",
           "words": ["Bibliothek", "zur", "geht", "Er"],
           "correctOrder": ["Er", "geht", "zur", "Bibliothek"]
         },
         {
           "id": 15,
           "type": "select",
-          "question": "Выберите: С одной недели (уже неделю / seit).",
+          "question": "Выберите верный ответ: С одной недели.",
           "options": [
             "Seit einer Woche",
             "Seit eine Woche",
@@ -304,14 +304,14 @@
         {
           "id": 1,
           "type": "reorder",
-          "question": "Соберите: Это для тебя.",
+          "question": "Соберите предложение: Это для тебя.",
           "words": ["für", "Das", "dich", "ist", "dir"],
           "correctOrder": ["Das", "ist", "für", "dich"]
         },
         {
           "id": 2,
           "type": "select",
-          "question": "Выберите: Кофе без сахара",
+          "question": "Выберите верный ответ: Кофе без сахара",
           "options": [
             "Kaffee ohne den Zucker",
             "Kaffee ohne dem Zucker",
@@ -347,7 +347,7 @@
         {
           "id": 6,
           "type": "reorder",
-          "question": "Соберите: Я иду без ключа",
+          "question": "Соберите предложение: Я иду без ключа",
           "words": ["ohne", "Schlüssel", "den", "gehe", "Ich"],
           "correctOrder": ["Ich", "gehe", "ohne", "den", "Schlüssel"]
         },
@@ -361,7 +361,7 @@
         {
           "id": 8,
           "type": "select",
-          "question": "Как сказать: Мы идем вокруг сада?",
+          "question": "Выберите верный ответ: Мы идем вокруг сада?",
           "options": [
             "Wir gehen um den Garten",
             "Wir gehen um dem Garten",
@@ -393,7 +393,7 @@
         {
           "id": 12,
           "type": "select",
-          "question": "Как сказать: Плыть против течения?",
+          "question": "Выберите верный ответ: Плыть против течения?",
           "options": [
             "Gegen den Strom schwimmen",
             "Gegen dem Strom schwimmen",
@@ -404,7 +404,7 @@
         {
           "id": 13,
           "type": "speechToText",
-          "question": "Произнесите услышанное",
+          "question": "Напишите услышанное",
           "text": "Ohne dich gehe ich nicht",
           "answer": "Ohne dich gehe ich nicht"
         },
@@ -447,7 +447,7 @@
       {
         "id": 1,
         "type": "select",
-        "question": "Выберите верный ответ: Я ставлю вазу на стол(Куда?)",
+        "question": "Выберите верный ответ: Я ставлю вазу на стол",
         "options": [
           "Ich stelle die Vase auf den Tisch",
           "Ich stelle die Vase auf dem Tisch",
@@ -598,7 +598,7 @@
       {
         "id": 1,
         "type": "select",
-        "question": "Выберите (Я дарю маме цветы):",
+        "question": "Выберите верный ответ: Я дарю маме цветы",
         "options": [
           "Ich schenke meiner Mutter Blumen",
           "Ich schenke meine Mutter Blumen",
@@ -609,14 +609,14 @@
       {
         "id": 2,
         "type": "reorder",
-        "question": "Соберите предложение: Он дает ребенку  яблоко.",
+        "question": "Соберите предложение: Он дает ребенку яблоко.",
         "words": ["Kind", "dem", "Apfel", "den", "gibt", "Er"],
         "correctOrder": ["Er", "gibt", "dem", "Kind", "den", "Apfel"]
       },
       {
         "id": 3,
         "type": "speechToText",
-        "question": "Напишите услышанное: Я показываю тебе город.",
+        "question": "Напишите услышанное",
         "text": "Ich zeige dir die Stadt",
         "answer": "Ich zeige dir die Stadt"
       },
@@ -684,7 +684,7 @@
       {
         "id": 11,
         "type": "reorder",
-        "question": "Соберите: Отец покупает ребенку мороженое.",
+        "question": "Соберите преддложение: Отец покупает ребенку мороженое.",
         "words": ["Eis", "ein", "Kind", "dem", "kauft", "Der Vater"],
         "correctOrder": ["Der Vater", "kauft", "dem", "Kind", "ein", "Eis"]
       },
@@ -812,7 +812,7 @@
         "id": 11,
         "type": "reorder",
         "question": "Соберите предложение: Я хочу поздравить брата.",
-        "words": ["gratulieren", "Bruder", "meinem", "will", "Ich"],
+        "words": ["gratulieren", "Bruder", "meinem", "will", "Ich", "meinen"],
         "correctOrder": ["Ich", "will", "meinem", "Bruder", "gratulieren"],
         "tip": "Gratulieren + Dativ: поздравляем 'кому-то'"
       },
@@ -837,7 +837,7 @@
         "question": "Соберите предложение: Он внимательно слушает учителя.",
         "words": ["Lehrer", "seinem", "zu", "hört", "Er", "aufmerksam"],
         "correctOrder": ["Er", "hört", "seinem", "Lehrer", "aufmerksam", "zu"],
-        "tip": "Zuhören + Dativ: приставка 'zu' в конец"
+        "tip": "Zuhören + Dativ: приставка отделяемая"
 
       },
       {
@@ -866,7 +866,7 @@
       {
         "id": 1,
         "type": "select",
-        "question": "Выберите: Я звоню отцу",
+        "question": "Выберите верный ответ: Я звоню отцу",
         "options": ["Ich rufe den Vater an", "Ich rufe dem Vater an", "Ich rufe der Vater an"],
         "answer": "Ich rufe den Vater an",
         "tip": "Anrufen требует Akkusativ, а не Dativ"
@@ -874,7 +874,7 @@
       {
         "id": 2,
         "type": "reorder",
-        "question": "Соберите: Мы посещаем нашу бабушку.",
+        "question": "Соберите предложение: Мы посещаем нашу бабушку.",
         "words": ["besuchen", "Oma", "unsere", "Wir"],
         "correctOrder": ["Wir", "besuchen", "unsere", "Oma"],
         "tip": "Besuchen — это всегда Akkusativ"
@@ -920,7 +920,7 @@
       {
         "id": 8,
         "type": "reorder",
-        "question": "Соберите: Я внимательно тебя слушаю.",
+        "question": "Соберите предложение: Я внимательно тебя слушаю.",
         "words": ["dir", "zu", "höre", "Ich", "aufmerksam", "dich"],
         "correctOrder": ["Ich", "höre", "dir", "aufmerksam", "zu"],
         "tip": "Zuhören (слушать кого-то) — это Dativ"
@@ -939,7 +939,7 @@
         "question": "Напишите услышанное",
         "text": "Ich verzeihe dir",
         "answer": "Ich verzeihe dir",
-        "tip": "Verzeihen (прощать) — это Dativ"
+        "tip": "Verzeihen(прощать) — это Dativ"
       },
       {
         "id": 11,
@@ -947,12 +947,12 @@
         "question": "Соберите предложение: Я мешаю тебе?",
         "words": ["dich", "ich", "Störe", "dir"],
         "correctOrder": ["Störe", "ich", "dich"],
-        "tip": "Stören (мешать) — это Akkusativ(Кого?)"
+        "tip": "Stören(мешать) — это Akkusativ(Кого?)"
       },
       {
         "id": 12,
         "type": "select",
-        "question": "Выберите: Ты знаешь этого человека?",
+        "question": "Выберите верный ответ: Ты знаешь этого человека?",
         "options": ["Kennst du diesen Mann", "Kennst du diesem Mann", "Kennst du dieser Mann"],
         "answer": "Kennst du diesen Mann",
         "tip": "Kennen (знать кого-то) — это Akkusativ"
@@ -986,7 +986,7 @@
   {
     "questId": "valley_fixed_prepositions",
     "aliases": ["verb-prep-combos"],
-    "title": "Долина действий: Глаголы и их спутники",
+    "title": "Глаголы и их спутники",
     "description": "Ждем, думаем и мечтаем. Учимся использовать глаголы с их обязательными предлогами и правильным падежом.",
     "progress": "0/15",
     "conditions": {
@@ -999,7 +999,7 @@
       {
         "id": 1,
         "type": "select",
-        "question": "Выберите: Я жду тебя",
+        "question": "Выберите верный ответ: Я жду тебя",
         "options": ["Ich warte auf dich", "Ich warte auf dir", "Ich warte dich"],
         "answer": "Ich warte auf dich",
         "tip": "Warten всегда требует auf + Akkusativ"
@@ -1007,7 +1007,7 @@
       {
         "id": 2,
         "type": "reorder",
-        "question": "Соберите: Я думаю о тебе.",
+        "question": "Соберите предложение: Я думаю о тебе.",
         "words": ["an", "dich", "denke", "Ich"],
         "correctOrder": ["Ich", "denke", "an", "dich"],
         "tip": "Denken требует предлог an + Akkusativ"
@@ -1031,7 +1031,7 @@
       {
         "id": 5,
         "type": "reorder",
-        "question": "Соберите: Я радуюсь подарку (уже получил).",
+        "question": "Соберите предложение: Я радуюсь подарку (уже получил).",
         "words": ["mich", "Geschenk", "das", "über", "freue", "Ich"],
         "correctOrder": ["Ich", "freue", "mich", "über", "das", "Geschenk"],
         "tip": "Sich freuen über — радоваться тому, что уже есть (Akkusativ)"
@@ -1121,7 +1121,7 @@
   {
     "questId": "valley_pronominal_adverbs_pro",
     "aliases": ["da-wo-compounds-2"],
-    "title": "Долина действий: Мастера замены",
+    "title": "Мастера замены",
     "description": "Продолжаем учиться заменять целые фразы короткими словами. Отрабатываем связки daran, wonach, wovor и другие.",
     "progress": "0/15",
     "conditions": {
@@ -1134,15 +1134,15 @@
       {
         "id": 1,
         "type": "select",
-        "question": "Выберите: О чем ты спрашиваешь? (О предмете)",
+        "question": "Выберите: О чем ты спрашиваешь?",
         "options": ["Wonach fragst du", "Nach was fragst du", "Woran fragst du"],
         "answer": "Wonach fragst du",
-        "tip": "Fragen nach требует вопрос Wonach (о чем?)"
+        "tip": "Fragen nach требует вопрос (о чем?)"
       },
       {
         "id": 2,
         "type": "reorder",
-        "question": "Соберите: Я злюсь из-за этого.",
+        "question": "Соберите предложение: Я злюсь из-за этого.",
         "words": ["darüber", "mich", "ärgere", "Ich"],
         "correctOrder": ["Ich", "ärgere", "mich", "darüber"],
         "tip": "Sich ärgern über -> ответ Darüber (из-за этого)"
@@ -1150,7 +1150,7 @@
       {
         "id": 3,
         "type": "speechToText",
-        "question": "Напишите услышанное: О чем вы говорите?",
+        "question": "Напишите услышанное",
         "text": "Worüber sprecht ihr",
         "answer": "Worüber sprecht ihr",
         "tip": "Sprechen über -> вопрос Worüber (о чем?)"
@@ -1158,31 +1158,34 @@
       {
         "id": 4,
         "type": "select",
-        "question": "Выберите: Я к этому привык (Sich gewöhnen an...)",
-        "options": ["Ich habe mich daran gewöhnt", "Ich habe mich на это gewöhnt", "Ich habe mich даран gewöhnt"],
+        "question": "Выберите верный ответ: Я к этому привык",
+        "options": [
+          "Ich habe mich daran gewöhnt",
+          "Ich habe mich auf das gewöhnt",
+          "Ich habe mich an es gewöhnt"
+        ],
         "answer": "Ich habe mich daran gewöhnt",
         "tip": "Gewöhnen an -> ответ Daran (к этому)"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Соберите: Это к этому подходит (Das passt ...).",
+        "question": "Соберите: Это к этому подходит.",
         "words": ["dazu", "passt", "Das"],
-        "correctOrder": ["Das", "passt", "dazu"],
-        "tip": "Passen zu -> ответ Dazu (к этому)"
+        "correctOrder": ["Das", "passt", "dazu"]
       },
       {
         "id": 6,
         "type": "select",
-        "question": "Выберите: Чего тебе хочется? (На что у тебя Lust?)",
+        "question": "Выберите: Чего тебе хочется?",
         "options": ["Worauf hast du Lust", "Wofür hast du Lust", "Auf was hast du Lust"],
         "answer": "Worauf hast du Lust",
-        "tip": "Lust haben auf -> вопрос Worauf (на что?)"
+        "tip": "Lust haben требует auf"
       },
       {
         "id": 7,
         "type": "speechToText",
-        "question": "Напишите услышанное: Я этим доволен",
+        "question": "Напишите услышанное",
         "text": "Ich bin damit zufrieden",
         "answer": "Ich bin damit zufrieden",
         "tip": "Zufrieden mit -> ответ Damit (этим/доволен этим)"
@@ -1190,15 +1193,15 @@
       {
         "id": 8,
         "type": "select",
-        "question": "Выберите: Чего ты боишься? (Wovor...)",
+        "question": "Выберите: Чего ты боишься?",
         "options": ["Wovor hast du Angst", "Vor was hast du Angst", "Wovon hast du Angst"],
         "answer": "Wovor hast du Angst",
-        "tip": "Angst haben vor -> вопрос Wovor (чего/перед чем?)"
+        "tip": "Angst haben vor  вопрос Wo + vor"
       },
       {
         "id": 9,
         "type": "reorder",
-        "question": "Соберите: Он просит об этом (Bitten um...).",
+        "question": "Соберите предложение: Он просит об этом.",
         "words": ["darum", "bittet", "Er"],
         "correctOrder": ["Er", "bittet", "darum"],
         "tip": "Bitten um -> ответ Darum (об этом)"
@@ -1206,15 +1209,15 @@
       {
         "id": 10,
         "type": "select",
-        "question": "Выберите: С чего ты начинаешь?",
+        "question": "Выберите верный ответ: С чего ты начинаешь?",
         "options": ["Womit fängst du an", "Wovon fängst du an", "Mit was fängst du an"],
         "answer": "Womit fängst du an",
-        "tip": "Anfangen mit -> вопрос Womit (с чего?)"
+        "tip": "Anfangen mit -> вопрос(с чего?)"
       },
       {
         "id": 11,
         "type": "speechToText",
-        "question": "Напишите услышанное: Я на это надеюсь",
+        "question": "Напишите услышанное",
         "text": "Ich hoffe darauf",
         "answer": "Ich hoffe darauf",
         "tip": "Hoffen auf -> ответ Darauf (на это)"
@@ -1222,7 +1225,7 @@
       {
         "id": 12,
         "type": "reorder",
-        "question": "Соберите: Мы над этим работаем (Arbeiten an...).",
+        "question": "Соберите верный ответ: Мы над этим работаем.",
         "words": ["daran", "arbeiten", "Wir"],
         "correctOrder": ["Wir", "arbeiten", "daran"],
         "tip": "Arbeiten an -> ответ Daran (над этим)"
@@ -1230,7 +1233,7 @@
       {
         "id": 13,
         "type": "select",
-        "question": "Выберите: Я приглашаю тебя на это (к этому)",
+        "question": "Выберите верный ответ: Я приглашаю тебя на это",
         "options": ["Ich lade dich dazu ein", "Ich lade dich dafür ein", "Ich lade dich к этому ein"],
         "answer": "Ich lade dich dazu ein",
         "tip": "Einladen zu -> ответ Dazu (на это/к этому)"
@@ -1238,25 +1241,28 @@
       {
         "id": 14,
         "type": "speechToText",
-        "question": "Напишите услышанное: Чего ты ждешь (чему радуешься заранее)?",
+        "question": "Напишите услышанное",
         "text": "Worauf freust du dich",
-        "answer": "Worauf freust du dich",
-        "tip": "Sich freuen auf -> вопрос Worauf (чего именно?)"
+        "answer": "Worauf freust du dich"
       },
       {
-        "id": 15,
+        "id": 14,
         "type": "select",
-        "question": "Выберите: Я за этим присматриваю (Aufpassen auf...)",
-        "options": ["Ich passe darauf auf", "Ich passe daran auf", "Ich passe за этим auf"],
+        "question": "Выберите верный ответ: Я за этим присмотрю?",
+        "options": [
+          "Ich passe darauf auf",
+          "Ich passe daran auf",
+          "Ich passe dafür auf"
+        ],
         "answer": "Ich passe darauf auf",
-        "tip": "Aufpassen auf -> ответ Darauf (за этим/на это)"
+        "tip": "Глагол 'aufpassen' требует предлога 'auf'"
       }
     ]
   },
   {
     "questId": "valley_pronominal_adverbs_expert_v2",
     "aliases": ["da-wo-compounds-3"],
-    "title": "Долина действий: Гроссмейстер замены",
+    "title": "Гроссмейстер замены",
     "description": "Финальный grind по местоименным наречиям. Только чистый немецкий в вариантах.",
     "progress": "0/15",
     "conditions": {
@@ -1391,8 +1397,8 @@
   {
     "questId": "valley_action_lands_final_exam",
     "aliases": ["summary-mega-mix"],
-    "title": "Долина действий: Финальный Микс",
-    "description": "Итоговое испытание. Здесь собраны все главные ловушки: от падежей и предлогов до сложных замен предметов.",
+    "title": "Финальный Микс",
+    "description": "Итоговое испытание. Здесь собраны все главные ловушки: от падежей и предлогов до  замен предметов.",
     "progress": "0/15",
     "conditions": {
       "goal": "Вспомнить всё и доказать, что база падежей и глаголов освоена на 100%.",
@@ -1451,7 +1457,7 @@
       {
         "id": 7,
         "type": "speechToText",
-        "question": "Напишите услышанное: Я вижу мальчика",
+        "question": "Напишите услышанное",
         "text": "Ich sehe den Jungen",
         "answer": "Ich sehe den Jungen",
         "tip": "N-склонение: Junge получает -n во всех падежах кроме Nominativ"
@@ -1459,7 +1465,7 @@
       {
         "id": 8,
         "type": "reorder",
-        "question": "Соберите: Я чищу себе зубы.",
+        "question": "Соберите предложение: Я чищу себе зубы.",
         "words": ["Zähne", "die", "mir", "putze", "mich", "Ich"],
         "correctOrder": ["Ich", "putze", "mir", "die", "Zähne"],
         "tip": "Когда действие на часть тела — используй Dativ"
@@ -1467,7 +1473,7 @@
       {
         "id": 9,
         "type": "select",
-        "question": "Выберите: Я жду автобус",
+        "question": "Выберите верный ответ: Я жду автобус",
         "options": ["Ich warte auf den Bus", "Ich warte auf dem Bus", "Ich warte на Bus"],
         "answer": "Ich warte auf den Bus",
         "tip": "Warten auf требует Akkusativ"
@@ -1475,7 +1481,7 @@
       {
         "id": 10,
         "type": "speechToText",
-        "question": "Напишите услышанное: О чем ты думаешь?",
+        "question": "Напишите услышанное",
         "text": "Woran denkst du",
         "answer": "Woran denkst du",
         "tip": "Вопрос к предмету с предлогом an: это Woran(Wo + r + an)"
@@ -1483,7 +1489,7 @@
       {
         "id": 11,
         "type": "reorder",
-        "question": "Соберите: Я с этим согласен.",
+        "question": "Соберите предложение: Я с этим согласен.",
         "words": ["bin", "Ich", "damit", "einverstanden", "mit"],
         "correctOrder": ["Ich", "bin", "damit", "einverstanden"],
         "tip": "Mit + das превращается в Damit"
@@ -1491,7 +1497,7 @@
       {
         "id": 12,
         "type": "select",
-        "question": "Выберите: Официант приносит гостю суп",
+        "question": "Выберите верный ответ: Официант приносит гостю суп",
         "options": ["Er bringt dem Gast die Suppe", "Er bringt den Gast die Suppe", "Er bringt dem Gast der Suppe"],
         "answer": "Er bringt dem Gast die Suppe",
         "tip": "Кому(Dat) + что (Akk)"
@@ -1499,7 +1505,7 @@
       {
         "id": 13,
         "type": "speechToText",
-        "question": "Напишите услышанное: Я злюсь на это",
+        "question": "Напишите услышанное",
         "text": "Ich ärgere mich darüber",
         "answer": "Ich ärgere mich darüber",
         "tip": "Sich ärgern über + das = darüber"
@@ -1507,7 +1513,7 @@
       {
         "id": 14,
         "type": "reorder",
-        "question": "Соберите: Я благодарю коллегу.",
+        "question": "Соберите предложение: Я благодарю коллегу.",
         "words": ["Kollegen", "dem", "danke", "Ich"],
         "correctOrder": ["Ich", "danke", "dem", "Kollegen"],
         "tip": "Danken (Dativ + N-склонение(добавляем -n)"
@@ -1515,7 +1521,7 @@
       {
         "id": 15,
         "type": "select",
-        "question": "Выберите: С кем ты разговариваешь?",
+        "question": "Выберите верный ответ: С кем ты разговариваешь?",
         "options": ["Mit wem sprichst du", "Womit sprichst du", "Mit wen sprichst du"],
         "answer": "Mit wem sprichst du",
         "tip": "Для людей используем предлог + вопрос (Mit wem?)"
