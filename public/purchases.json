@@ -95,7 +95,7 @@
 						{ "question": "Sie trägt ___ Einkaufstasche.", "word": "Einkaufstasche", "answer": "eine" },
 						{ "question": "Ich schreibe ___ Einkaufszettel.", "word": "Einkaufszettel", "answer": "den" },
 						{ "question": "Wir gehen in ___ Bäckerei.", "word": "Bäckerei", "answer": "die" },
-						{ "question": "Er kauft ___ frisches Gemüse.", "word": "Gemüse", "answer": "das" },
+						{ "question": "Er kauft ___ frische Gemüse.", "word": "Gemüse", "answer": "das" },
 						{ "question": "Ich danke ___ Metzger.", "word": "Metzger", "answer": "dem" },
 						{ "question": "Sie stellt ___ Flasche in den Korb.", "word": "Flasche", "answer": "die" }
 					]
@@ -134,8 +134,8 @@
 					"id": 4,
 					"tasks": [
 						{ "question": "Sie geht in ___ richtige Abteilung.", "word": "Abteilung", "answer": "die" },
-						{ "question": "Ich spreche mit ___ Kunde.", "word": "Kunde", "answer": "dem" },
-						{ "question": "Er öffnet ___ Packung Chips.", "word": "Packung", "answer": "die" },
+						{ "question": "Ich spreche mit ___ Kunden.", "word": "Kunde", "answer": "dem" },
+						{ "question": "Er öffнет ___ Packung Chips.", "word": "Packung", "answer": "die" },
 						{ "question": "Wir vergleichen ___ Preis.", "word": "Preis", "answer": "den" },
 						{ "question": "Sie bekommt ___ Rabatt.", "word": "Rabatt", "answer": "einen" },
 						{ "question": "Wir suchen ___ Ausgang.", "word": "Ausgang", "answer": "den" },
@@ -156,8 +156,8 @@
 						{ "question": "Wir bestellen in ___ Online-Shop.", "word": "Online-Shop", "answer": "dem" },
 						{ "question": "Ich warte auf ___ Lieferung.", "word": "Lieferung", "answer": "die" },
 						{ "question": "Er öffnet ___ Paket.", "word": "Paket", "answer": "das" },
-						{ "question": "Der Verkäufer bedient ___ Kunde.", "word": "Kunde", "answer": "den" },
-						{ "question": "Ich danke für ___ Barzahlung.", "word": "Barzahlung", "answer": "die" }
+						{ "question": "Der Verkäufer bedient ___ Kunden.", "word": "Kunde", "answer": "den" },
+						{ "question": "Ich danke für ___ Barzahlung.", "word": "Barzahlung", "die": "die" }
 					]
 				}
 			]

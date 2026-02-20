@@ -26,7 +26,7 @@
 						{ "question": "___ Strand ist sonnig.", "word": "Strand", "answer": "der" },
 						{ "question": "___ Berg ist hoch.", "word": "Berg", "answer": "der" },
 						{ "question": "___ Meer ist blau.", "word": "Meer", "answer": "das" },
-						{ "question": "___ Land ist fremd.", "word": "Land", "answer": "das" },
+						{ "question": "___ Land ist fremд.", "word": "Land", "answer": "das" },
 						{ "question": "___ Insel ist klein.", "word": "Insel", "answer": "die" },
 						{ "question": "___ Wald ist dicht.", "word": "Wald", "answer": "der" },
 						{ "question": "___ Fluss ist breit.", "word": "Fluss", "answer": "der" },
@@ -104,7 +104,7 @@
 					"id": 2,
 					"tasks": [
 						{ "question": "Wir liegen am ___ Strand.", "word": "Strand", "answer": "dem" },
-						{ "question": "Er wandert auf ___ Berg.", "word": "Berg", "answer": "dem" },
+						{ "question": "Er wandert auf ___ Berg.", "word": "Berg", "answer": "den" },
 						{ "question": "Sie schwimmt im ___ Meer.", "word": "Meer", "answer": "dem" },
 						{ "question": "Ich reise in ___ Land.", "word": "Land", "answer": "ein fremdes" },
 						{ "question": "Wir besuchen ___ Insel.", "word": "Insel", "answer": "eine" },
@@ -127,7 +127,7 @@
 						{ "question": "Die Familie reist mit ___ Schiff.", "word": "Schiff", "answer": "einem" },
 						{ "question": "Ich miete ___ Auto für eine Woche.", "word": "Auto", "answer": "ein" },
 						{ "question": "Der Zug fährt von ___ Bahnsteig ab.", "word": "Bahnsteig", "answer": "dem" },
-						{ "question": "Er wartet an ___ Haltestelle.", "word": "Haltestelle", "answer": "der" }
+						{ "question": "Er wartет an ___ Haltestelle.", "word": "Haltestelle", "answer": "der" }
 					]
 				},
 				{
