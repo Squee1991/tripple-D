@@ -290,7 +290,7 @@ const menuItems = computed(() => {
                   {id: 'comparison', url: '/adjective-comparison', valueKey: 'underSub.comparison'}
                 ],
               },
-              // {id: 'description', url: '/description-images' , valueKey: 'Описание картинок'},
+              {id: 'description', url: '/description-images' , valueKey: 'Описание картинок'},
               {id: 'themen', url: '/thematic-learning', valueKey: 'sub.themen'},
               {id: 'cards', url: '/create-cards', valueKey: 'sub.card'},
               {id: 'idioms', url: '/idioms', valueKey: 'sub.idioms'}
@@ -300,6 +300,7 @@ const menuItems = computed(() => {
             id: 'duel',
             valueKey: 'nav.gameMode',
             children: [
+              {id: 'fight', url: '/games', valueKey: 'Галактика артиклей'},
               {id: 'duel-pvp', valueKey: 'sub.pvp', action: openDevModal},
               {id: 'wordDuel', url: '/sentence-duel', valueKey: 'sub.wordDuel'},
               {id: 'quests', url: '/recipes', valueKey: 'sub.quests'},
