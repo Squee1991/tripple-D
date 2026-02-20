@@ -107,7 +107,7 @@
 						{ "question": "Er erinnert sich an ___ letztes Jahr.", "word": "Jahr", "answer": "das" },
 						{ "question": "Sie wartet ___ ganze Stunde.", "word": "Stunde", "answer": "eine" },
 						{ "question": "Ich wünsche dir ___ schönen Abend.", "word": "Abend", "answer": "einen" },
-						{ "question": "Er kommt am ___ nächsten Morgen.", "word": "Morgen", "answer": "dem" },
+						{ "question": "Er kommt an ___ nächsten Morgen.", "word": "Morgen", "answer": "dem" },
 						{ "question": "Ich arbeite oft in ___ Nacht.", "word": "Nacht", "answer": "der" },
 						{ "question": "Um ___ Mitternacht schlafen alle.", "word": "Mitternacht", "answer": "die" },
 						{ "question": "Ich nutze ___ Vormittag zum Lernen.", "word": "Vormittag", "answer": "den" },
