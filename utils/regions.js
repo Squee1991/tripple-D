@@ -8,6 +8,7 @@ import MasterLands from 'assets/images/locations-images/master-lands.png'
 import WildLand from 'assets/images/locations-images/wild-land.png'
 import Future from 'assets/images/locations-images/Future.png'
 import Past from 'assets/images/locations-images/Past.png'
+import Action from 'assets/images/locations-images/Action.jpg'
 
 export const regions = {
 		beginner: [
@@ -25,7 +26,7 @@ export const regions = {
 				pathTo: "stone-reach",
 				theme: "stone",
 				name: "locationNames.stone-reach",
-				level: 3,
+				level: 0,
 				desc: "regions.descriptionStoneReach",
 				icon: StoneReach
 			},
@@ -34,7 +35,7 @@ export const regions = {
 				pathTo: "wind-valley",
 				theme: "winds",
 				name: "locationNames.wind-valley",
-				level: 5,
+				level: 0,
 				desc: "regions.descriptionWindValley",
 				icon: WindValley
 			},
@@ -43,7 +44,7 @@ export const regions = {
 				pathTo: "lake-ruins",
 				theme: "ruins",
 				name: "locationNames.lake-ruins",
-				level: 7,
+				level: 0,
 				desc: "regions.descriptionLakeRuins",
 				icon: LakeRuins
 			},
@@ -52,7 +53,7 @@ export const regions = {
 				pathTo: "north-cliffs",
 				theme: "north",
 				name: "locationNames.north-cliffs",
-				level: 9,
+				level: 0,
 				desc: "regions.descriptionNorthCliffs",
 				icon: NorthCliffs
 			},
@@ -61,7 +62,7 @@ export const regions = {
 				pathTo: "storm-coast",
 				theme: "storm",
 				name: "locationNames.storm-coast",
-				level: 11,
+				level: 0,
 				desc: "regions.descriptionStormCoast",
 				icon: StormCoast
 			},
@@ -70,7 +71,7 @@ export const regions = {
 				pathTo: "master-lands",
 				theme: "master",
 				name: "locationNames.master-lands",
-				level: 13,
+				level: 0,
 				desc: "regions.descriptionMasterLands",
 				icon: MasterLands
 			},
@@ -79,38 +80,38 @@ export const regions = {
 				pathTo: "wild-lands",
 				theme: "wild",
 				name: "locationNames.wild-lands",
-				level: 15,
+				level: 0,
 				desc: "regions.descriptionWildLands",
 				icon: WildLand
 			}
 		],
 		intermediate: [
-			// {
-			// 	id: "plural-land",
-			// 	pathTo: "plural-land",
-			// 	theme: "plural",
-			// 	name: "Перевал грядущего",
-			// 	level: 0,
-			// 	desc: "На этом крутом склоне туман прошлого окончательно рассеивается, открывая вид на далекий горизонт. Здесь путник учится не просто смотреть под ноги, а заглядывать в завтрашний и прошедший день",
-			// 	icon: Future
-			// },
-			// {
-			// 	id: "past-land",
-			// 	pathTo: "past-land",
-			// 	theme: "past",
-			// 	name: "Руины былого",
-			// 	level: 0,
-			// 	desc: "Среди древних камней и песков времени хранятся истории о том, что уже свершилось. Здесь путник учится оглядываться назад и описывать события минувших дней, осваивая Прошедшее время.",
-			// 	icon: Past
-			// },
-			// {
-			// 	id: "action-valley",
-			// 	pathTo: "action-valley",
-			// 	theme: "action",
-			// 	name: "Долина действий",
-			// 	level: 0,
-			// 	desc: "Здесь время больше не стоит на месте, а туман прошлого рассеивается. В этой долине путник учится управлять своей волей и ставить четкие цели, осваивая модальные глаголы и искусство взаимодействия с миром через падежи.",
-			// 	icon: Past
-			// }
+			{
+				id: "plural-land",
+				pathTo: "plural-land",
+				theme: "plural",
+				name: "Перевал грядущего",
+				level: 0,
+				desc: "На этом крутом склоне туман прошлого окончательно рассеивается, открывая вид на далекий горизонт. Здесь путник учится не просто смотреть под ноги, а заглядывать в завтрашний и прошедший день",
+				icon: Future
+			},
+			{
+				id: "past-land",
+				pathTo: "past-land",
+				theme: "past",
+				name: "Руины былого",
+				level: 0,
+				desc: "Среди древних камней и песков времени хранятся истории о том, что уже свершилось. Здесь путник учится оглядываться назад и описывать события минувших дней, осваивая Прошедшее время.",
+				icon: Past
+			},
+			{
+				id: "action-valley",
+				pathTo: "action-valley",
+				theme: "action",
+				name: "Долина действий",
+				level: 0,
+				desc: "Здесь время больше не стоит на месте, а туман прошлого рассеивается. В этой долине путник учится ставить цели, осваивая модальные глаголы и искусство взаимодействия через падежи.",
+				icon: Action
+			}
 		]
 	};
