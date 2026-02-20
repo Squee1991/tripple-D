@@ -197,6 +197,7 @@ const onboardingOptions = {
     skipButton: 'Пропустить'
   }
 }
+
 const onboardingSteps = [
   {
     attachTo: {
