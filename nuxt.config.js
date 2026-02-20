@@ -60,13 +60,13 @@ export default defineNuxtConfig({
 		workbox: {
 			navigateFallback: '/',
 			globPatterns: ['**/*.{js,css,ico,png,svg,webp,woff2}'],
-			// runtimeCaching: [
-			// 	{
-			// 		urlPattern: ({ request }) => request.mode === 'navigate',
-			// 		handler: 'NetworkFirst',
-			// 		options: { cacheName: 'pages-cache' },
-			// 	},
-			// ],
+			runtimeCaching: [
+				{
+					urlPattern: ({ request }) => request.mode === 'navigate',
+					handler: 'NetworkFirst',
+					options: { cacheName: 'pages-cache' },
+				},
+			],
 		},
 		devOptions: {
 			enabled: true,
@@ -219,11 +219,11 @@ export default defineNuxtConfig({
 	routeRules: {
 		'/': {
 			prerender: true,
-			// headers: { 'Cache-Control': 'no-cache, no-store, must-revalidate' }
+			headers: { 'Cache-Control': 'no-cache, no-store, must-revalidate' }
 		},
 		'/**': {
 			ssr: false,
-			// headers: { 'Cache-Control': 'no-cache, no-store, must-revalidate' }
+			headers: { 'Cache-Control': 'no-cache, no-store, must-revalidate' }
 		},
 	},
 
