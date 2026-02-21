@@ -15,7 +15,6 @@
         @button="onDevModalButton"
     />
     <div class="header-container">
-
       <NuxtLink @click="click" to="/" class="logo" aria-label="German Corner — Home">
         <span class="logo__name">skillup</span>
         <NuxtImg
@@ -291,7 +290,7 @@ const menuItems = computed(() => {
                   {id: 'comparison', url: '/adjective-comparison', valueKey: 'underSub.comparison'}
                 ],
               },
-              // {id: 'description', url: '/description-images-test' , valueKey: 'Описание картинок'},
+              {id: 'description', url: '/description-images' , valueKey: 'Описание картинок'},
               {id: 'themen', url: '/thematic-learning', valueKey: 'sub.themen'},
               {id: 'cards', url: '/create-cards', valueKey: 'sub.card'},
               {id: 'idioms', url: '/idioms', valueKey: 'sub.idioms'}
@@ -301,16 +300,16 @@ const menuItems = computed(() => {
             id: 'duel',
             valueKey: 'nav.gameMode',
             children: [
+              {id: 'fight', url: '/games', valueKey: 'Галактика артиклей'},
               {id: 'duel-pvp', valueKey: 'sub.pvp', action: openDevModal},
               {id: 'wordDuel', url: '/sentence-duel', valueKey: 'sub.wordDuel'},
-              // {id: 'describePicture', url: '/chat', valueKey: 'sub.describePicture'},
               {id: 'quests', url: '/recipes', valueKey: 'sub.quests'},
               {id: 'duel-guess', url: '/guess-word', valueKey: 'sub.guess'},
               {id: 'articlemarathon', url: '/article-marathon', valueKey: 'sub.marathon'}
             ]
           },
         ]
-        : [
+        :[
           {id: 'about', valueKey: 'nav.about', url: '/info-about'},
           {id: 'contact', valueKey: 'nav.contact', url: '/support-request'},
           {id: 'faq', valueKey: 'nav.quest', url: '/faq'}
@@ -334,7 +333,7 @@ const menuItems = computed(() => {
         url: '/event-valentine',
         isEvent: true,
         eventKey: 'valentine',
-        startDate: '11.02 00:00',
+        startDate: '12.02 00:00',
         endDate: '16.02 23:59'
       },
       {

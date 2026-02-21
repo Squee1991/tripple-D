@@ -1,7 +1,7 @@
 <template>
   <div class="points">
     <VTips
-        :tips="infoData"
+        :tips="flattenedTips"
         v-model="isArticleOpen"
     />
     <section class="points-card" aria-label="Поинты и уровень">
@@ -82,13 +82,26 @@ const userAuth = userAuthStore()
 const router = useRouter()
 const friendsStore = useFriendsStore()
 const isArticleOpen = ref(false)
-const handleLeveling = () => {
-  const LEVEL_UP_XP = 100
-  if (langStore.exp >= LEVEL_UP_XP) {
-    langStore.isLeveling++
-    langStore.exp -= LEVEL_UP_XP
-  }
-}
+
+// const handleLeveling = () => {
+//   const LEVEL_UP_XP = 100
+//   if (langStore.exp >= LEVEL_UP_XP) {
+//     langStore.isLeveling++
+//     langStore.exp -= LEVEL_UP_XP
+//   }
+// }
+
+const flattenedTips = computed(() => {
+  const result = [];
+
+  infoData.value.forEach(section => {
+    result.push({ label: section.title, isTitle: true });
+    section.tips.forEach(tip => {
+      result.push({ label: tip.label, isTitle: false });
+    });
+  });
+  return result;
+});
 
 // const currentRank = computed(() => {
 //   const hats = userAuth.totalHats
@@ -149,9 +162,9 @@ const toPayment = () => {
   router.push('/pay')
 }
 
-watch(() => langStore.exp, (newVal) => {
-  handleLeveling()
-})
+// watch(() => langStore.exp, (newVal) => {
+//   handleLeveling()
+// })
 onMounted(() => {
   friendsStore.loadFriends()
 })

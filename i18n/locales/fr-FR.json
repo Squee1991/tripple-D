@@ -1,4 +1,21 @@
 {
+  "pwa": {
+    "title": "Installer Skillupgerman",
+    "sub": "Ajoutez l'application à votre écran d'accueil pour un accès rapide !",
+    "btn": "C'est compris, merci !"
+  },
+  "pwaInstructions": {
+    "IosTitle": "Pour iPhone (dans Safari) :",
+    "iosTipOne": "1. Appuyez sur « Partager » (le carré avec une flèche vers le haut).",
+    "iosTipTwo": "2. Choisissez « Sur l'écran d'accueil » (l'icône plus).",
+    "iosTipThree": "3. Appuyez sur « Ajouter » en haut à droite.",
+    "androidTitle": "Pour Android (dans Chrome) :",
+    "androidTipOne": "1. Ouvrez le site et appuyez sur le menu (trois points en haut à droite).",
+    "androidTipTwo": "2. Choisissez « Installer l'application » ou « Ajouter à l'écran d'accueil ».",
+    "androidTipThree": "3. Confirmez en appuyant sur « Installer ».",
+    "pcTitle": "Pour ordinateur :",
+    "pcTipOne": "1. Cliquez sur l'icône de téléchargement à droite de la barre d'adresse."
+  },
   "themeModal": {
     "title": "Choisissez l'apparence",
     "close": "Fermer",
@@ -2017,7 +2034,7 @@
     "questThree": "Comment dit-on : Montrer",
     "questFour": "Composez la phrase interrogative",
     "questFive": "Comment dit-on : Aider",
-    "questSix": "Comment dit-on : Aider",
+    "questSix": "Écoutez et écrivez la phrase",
     "questSeven": "Composez : Je peux vous aider",
     "questEight": "Écoutez et écrivez la phrase",
     "questNine": "Comment dit-on : Urgent",

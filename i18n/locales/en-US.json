@@ -1,4 +1,21 @@
 {
+  "pwa": {
+    "title": "Install Skillupgerman",
+    "sub": "Add the app to your home screen for quick access and convenience!",
+    "btn": "Got it, thanks!"
+  },
+  "pwaInstructions": {
+    "IosTitle": "For iPhone (in Safari):",
+    "iosTipOne": "1. Tap 'Share' (the square with an upward arrow at the bottom).",
+    "iosTipTwo": "2. Select 'Add to Home Screen' (the plus icon).",
+    "iosTipThree": "3. Tap 'Add' in the top right corner.",
+    "androidTitle": "For Android (in Chrome):",
+    "androidTipOne": "1. Open the site and tap the menu (three dots in the top right).",
+    "androidTipTwo": "2. Select 'Install app' or 'Add to Home screen'.",
+    "androidTipThree": "3. Confirm by tapping 'Install' in the pop-up.",
+    "pcTitle": "For Computer:",
+    "pcTipOne": "1. Click the download icon on the right side of the address bar."
+  },
   "themeModal": {
     "title": "Select Appearance",
     "close": "Close",
@@ -2017,7 +2034,7 @@
     "questThree": "How to say: To show",
     "questFour": "Assemble the interrogative sentence",
     "questFive": "How to say: To help",
-    "questSix": "How to say: To help",
+    "questSix": "Listen and write the sentence",
     "questSeven": "Assemble: I can help you",
     "questEight": "Listen and write the sentence",
     "questNine": "How to say: Urgent",
