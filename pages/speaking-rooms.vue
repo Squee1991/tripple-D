@@ -13,22 +13,18 @@
           <span>{{ t('speakingRooms.back') }}</span>
         </button>
       </div>
-
       <div class="speaking-rooms__top">
         <h1 class="speaking-rooms__title">{{ t('speakingRooms.title') }}</h1>
         <button class="speaking-rooms__create-btn" @click="showCreateModal = true">
           {{ t('speakingRooms.createRoom') }}
         </button>
       </div>
-
       <div v-if="store.isLoadingRooms && store.rooms.length === 0" class="speaking-rooms__loading">
         <div class="skeleton-card" v-for="i in 4" :key="i"></div>
       </div>
-
       <div v-else-if="store.rooms.length === 0" class="speaking-rooms__empty">
         <p class="speaking-rooms__empty-text">{{ t('speakingRooms.noRooms') }}</p>
       </div>
-
       <div v-else class="speaking-rooms__grid">
         <RoomCard
             v-for="room in store.rooms"
@@ -37,7 +33,6 @@
             @join="handleJoin"
         />
       </div>
-
       <div v-if="store.hasMoreRooms && store.rooms.length > 0" class="speaking-rooms__load-more">
         <button
             class="load-more-btn"
