@@ -3,23 +3,29 @@ import { getFirestore } from 'firebase-admin/firestore'
 import fs from 'fs'
 import path from 'path'
 
-const defaultSA = process.env.NODE_ENV === 'production'
-    ? 'service-account.json'
-    : 'service-account-dev.json'
+let serviceAccount
 
-const saPath = path.resolve(process.cwd(),
-    process.env.GOOGLE_APPLICATION_CREDENTIALS || defaultSA
-)
+if (process.env.FIREBASE_SERVICE_ACCOUNT) {
+    serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT)
+    console.log(`🔥 Firebase mode: ${process.env.FIREBASE_PROJECT_ID}`)
+    console.log(`🗝️ Using service account from env variable`)
+} else {
+    const defaultSA = process.env.NODE_ENV === 'production'
+        ? 'service-account.json'
+        : 'service-account-dev.json'
 
-if (!fs.existsSync(saPath)) {
-    console.error(`❌ Service account file not found: ${saPath}`)
-    process.exit(1)
+    const saPath = path.resolve(process.cwd(),
+        process.env.GOOGLE_APPLICATION_CREDENTIALS || defaultSA
+    )
+
+    if (!fs.existsSync(saPath)) {
+        throw new Error(`Service account not found: ${saPath}. Set FIREBASE_SERVICE_ACCOUNT env variable or provide the file.`)
+    }
+
+    serviceAccount = JSON.parse(fs.readFileSync(saPath, 'utf8'))
+    console.log(`🔥 Firebase mode: ${process.env.FIREBASE_PROJECT_ID}`)
+    console.log(`🗝️ Using service account: ${saPath}`)
 }
-
-console.log(`🔥 Firebase mode: ${process.env.FIREBASE_PROJECT_ID}`)
-console.log(`🗝️ Using service account: ${saPath}`)
-
-const serviceAccount = JSON.parse(fs.readFileSync(saPath, 'utf8'))
 
 if (!getApps().length) {
     initializeApp({ credential: cert(serviceAccount) })

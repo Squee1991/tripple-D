@@ -1,13 +1,10 @@
 import { db } from '../utils/firebase-admin.js'
 import { verifyFirebaseToken } from '../utils/verify-firebase-token.js'
-import { readFileSync } from 'fs'
-import { join } from 'path'
-
 let questionBanks = null
-function loadQuestionBanks() {
+async function loadQuestionBanks() {
 	if (!questionBanks) {
-		const filePath = join(process.cwd(), 'public', 'speaking-questions', 'questions.json')
-		questionBanks = JSON.parse(readFileSync(filePath, 'utf-8'))
+		const storage = useStorage('assets:server')
+		questionBanks = await storage.getItem('speaking-questions/questions.json')
 	}
 	return questionBanks
 }
@@ -37,7 +34,7 @@ export default defineEventHandler(async (event) => {
 		const topic = roomData.topic || 'general'
 		const cefrLevel = roomData.cefrLevel || 'B1'
 
-		const banks = loadQuestionBanks()
+		const banks = await loadQuestionBanks()
 		const bankId = `${topic}-${cefrLevel}`
 		const fallbackBankId = `general-${cefrLevel}`
 		const bank = banks[bankId] || banks[fallbackBankId]
