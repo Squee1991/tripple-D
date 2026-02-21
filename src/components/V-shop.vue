@@ -88,54 +88,54 @@ const shopCards = computed(() => [
     btnText: isMaxHearts.value ? t('cardsShop.full') : t('cardsShop.buy'),
     disabled: isMaxHearts.value,
   },
-  // {
-  //   id: "sale_5",
-  //   title: "Скидка 5%",
-  //   description: "Требования:",
-  //   icon: Sale,
-  //   alt: "Sale_5",
-  //   price: DISCOUNT_PRICE_ARTICLUS_5,
-  //   currency: "articlus",
-  //   requiredHats: DISCOUNT_REQ_HATS_5,
-  //   btnText: authStore.premiumDiscount?.sale_5 ? 'Куплено' : 'Купить',
-  //   btnIcon: GraduateHat,
-  //   disabled:
-  //       authStore.premiumDiscount?.sale_5 === true ||
-  //       authStore.totalHats < DISCOUNT_REQ_HATS_5 ||
-  //       langStore.points < DISCOUNT_PRICE_ARTICLUS_5,
-  // },
-  // {
-  //   id: "sale_10",
-  //   title: "Скидка 10%",
-  //   description: "Требования:",
-  //   icon: Sale10,
-  //   alt: "Sale_10",
-  //   price: DISCOUNT_PRICE_ARTICLUS_10,
-  //   currency: "articlus",
-  //   requiredHats: DISCOUNT_REQ_HATS_10,
-  //   btnText: authStore.premiumDiscount?.sale_10 ? 'Куплено' : 'Купить',
-  //   btnIcon: GraduateHat,
-  //   disabled:
-  //       authStore.premiumDiscount?.sale_10 === true ||
-  //       authStore.totalHats < DISCOUNT_REQ_HATS_10 ||
-  //       langStore.points < DISCOUNT_PRICE_ARTICLUS_10,
-  // },
-  // {
-  //   id: "sale_15",
-  //   title: "Скидка 15%",
-  //   description: "Требования:",
-  //   icon: Sale15,
-  //   alt: "Sale_15",
-  //   price: DISCOUNT_PRICE_ARTICLUS_15,
-  //   currency: "articlus",
-  //   requiredHats: DISCOUNT_REQ_HATS_15,
-  //   btnText: authStore.premiumDiscount?.sale_15 ? 'Куплено' : 'Купить',
-  //   btnIcon: GraduateHat,
-  //   disabled:
-  //       authStore.premiumDiscount?.sale_15 === true ||
-  //       authStore.totalHats < DISCOUNT_REQ_HATS_15 ||
-  //       langStore.points < DISCOUNT_PRICE_ARTICLUS_15,
-  // },
+  {
+    id: "sale_5",
+    title: "Скидка 5%",
+    description: "Требования:",
+    icon: Sale,
+    alt: "Sale_5",
+    price: DISCOUNT_PRICE_ARTICLUS_5,
+    currency: "articlus",
+    requiredHats: DISCOUNT_REQ_HATS_5,
+    btnText: authStore.premiumDiscount?.sale_5 ? 'Куплено' : 'Купить',
+    btnIcon: GraduateHat,
+    disabled:
+        authStore.premiumDiscount?.sale_5 === true ||
+        authStore.totalHats < DISCOUNT_REQ_HATS_5 ||
+        langStore.points < DISCOUNT_PRICE_ARTICLUS_5,
+  },
+  {
+    id: "sale_10",
+    title: "Скидка 10%",
+    description: "Требования:",
+    icon: Sale10,
+    alt: "Sale_10",
+    price: DISCOUNT_PRICE_ARTICLUS_10,
+    currency: "articlus",
+    requiredHats: DISCOUNT_REQ_HATS_10,
+    btnText: authStore.premiumDiscount?.sale_10 ? 'Куплено' : 'Купить',
+    btnIcon: GraduateHat,
+    disabled:
+        authStore.premiumDiscount?.sale_10 === true ||
+        authStore.totalHats < DISCOUNT_REQ_HATS_10 ||
+        langStore.points < DISCOUNT_PRICE_ARTICLUS_10,
+  },
+  {
+    id: "sale_15",
+    title: "Скидка 15%",
+    description: "Требования:",
+    icon: Sale15,
+    alt: "Sale_15",
+    price: DISCOUNT_PRICE_ARTICLUS_15,
+    currency: "articlus",
+    requiredHats: DISCOUNT_REQ_HATS_15,
+    btnText: authStore.premiumDiscount?.sale_15 ? 'Куплено' : 'Купить',
+    btnIcon: GraduateHat,
+    disabled:
+        authStore.premiumDiscount?.sale_15 === true ||
+        authStore.totalHats < DISCOUNT_REQ_HATS_15 ||
+        langStore.points < DISCOUNT_PRICE_ARTICLUS_15,
+  },
 ])
 
 
