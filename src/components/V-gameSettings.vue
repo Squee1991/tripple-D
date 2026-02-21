@@ -77,6 +77,7 @@ const saveSettings = () => {
   backdrop-filter: blur(10px);
 }
 
+
 .cyber-panel {
   background: rgba(10, 25, 47, 0.95);
   border: 2px solid #00d2ff;
