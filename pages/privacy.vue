@@ -34,7 +34,7 @@ const sections = ref([
   {
     heading: "1. Introduction",
     paragraphs: [
-      `This Privacy Policy describes how skillupgerman collects, uses, and protects users' personal data.`,
+      `This Privacy Policy describes how skillupgerman ("we", "Service") collects, uses, and protects users' personal data. The data controller is the administrator of skillupgerman, located in ${COUNTRY}.`,
       `By using the Service, you agree to the terms of this Policy.`
     ]
   },
@@ -96,7 +96,7 @@ const sections = ref([
   {
     heading: "8. International data transfer",
     paragraphs: [
-      "Since we use international services (e.g., Firebase, Stripe, RevenueCat), your data may be transferred outside your country of residence.",
+      "Since we use international services (e.g., Firebase, Stripe), your data may be transferred outside your country of residence.",
       "We take measures to protect your data in accordance with applicable laws, including GDPR/RODO within the EU."
     ]
   },

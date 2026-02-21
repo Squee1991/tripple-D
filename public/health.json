@@ -1,6 +1,6 @@
 {
 	"id": "health",
-	"title": "health",
+	"title": "Gesundheit",
 	"levels": [
 		{
 			"level": 1,
@@ -89,7 +89,7 @@
 					"id": 1,
 					"tasks": [
 						{"question": "Ich besuche ___ Arzt.", "word": "Arzt", "answer": "den"},
-						{"question": "Er ruft ___ Patient auf.", "word": "Patient", "answer": "den"},
+						{"question": "Er ruft ___ Patienten auf.", "word": "Patient", "answer": "den"},
 						{"question": "Sie nimmt ___ Tablette.", "word": "Tablette", "answer": "die"},
 						{"question": "Wir senken ___ Fieber.", "word": "Fieber", "answer": "das"},
 						{"question": "Die Ärztin gibt ___ Patientin eine Spritze.", "word": "Patientin", "answer": "der"},
@@ -110,7 +110,7 @@
 						{"question": "Der Patient beschreibt ___ Schmerz.", "word": "Schmerz", "answer": "den"},
 						{"question": "Der Arzt hört sich ___ Husten an.", "word": "Husten", "answer": "den"},
 						{"question": "Gegen ___ Schnupfen hilft Tee.", "word": "Schnupfen", "answer": "den"},
-						{"question": "Ich nehme ___ Medikament nach dem Essen.", "word": "das", "answer": "das"},
+						{"question": "Ich nehme ___ Medikament nach dem Essen.", "word": "Medikament", "answer": "das"},
 						{"question": "Er gibt dem Kind ___ Tropfen.", "word": "Tropfen", "answer": "die"},
 						{"question": "Die Krankenschwester reinigt ___ Wunde.", "word": "Wunde", "answer": "die"}
 					]
@@ -151,7 +151,7 @@
 						{"question": "Ich komme aus ___ Krankenhaus.", "word": "Krankenhaus", "answer": "dem"},
 						{"question": "Die Operation dauert ___ Stunde.", "word": "Stunde", "answer": "eine"},
 						{"question": "Wir besprechen ___ Diagnose.", "word": "Diagnose", "answer": "die"},
-						{"question": "Er bekommt ___ Untersuchung.", "word": "Untersuchung", "answer": "eine"},
+						{"question": "Er bekommt ___ Untersuchung.", "word": "Untersuchung", "eine": "одна"},
 						{"question": "Die Ärztin misst ___ Blutdruck.", "word": "Blutdruck", "answer": "den"},
 						{"question": "Ich spreche mit ___ Chefarzt.", "word": "Chefarzt", "answer": "dem"},
 						{"question": "Der Patient liegt auf ___ Station 3.", "word": "Station", "answer": "der"},
@@ -206,7 +206,7 @@
 						{"question": "Die Klinik, in ___ er liegt, ist spezialisiert.", "word": "Klinik", "answer": "der"},
 						{"question": "Die Versicherung, bei ___ er versichert ist, zahlt die Kosten.", "word": "Versicherung", "answer": "der"},
 						{"question": "Die Behandlung, nach ___ er sich besser fühlte, war teuer.", "word": "Behandlung", "answer": "der"},
-						{"question": "Ein Notfall ist ein Grund, ___entwegen man die 112 wählt.", "word": "Grund", "answer": "deswegen"},
+						{"question": "Ein Notfall ist ein Grund, ___entwegen man die 112 wählt.", "word": "Grund", "answer": "dess"},
 						{"question": "Die Heilung, auf ___ alle hoffen, macht Fortschritte.", "word": "Heilung", "answer": "die"}
 					]
 				},
@@ -214,7 +214,7 @@
 					"id": 4,
 					"tasks": [
 						{"question": "Die Schmerzen ___ Bauches waren unerträglich.", "word": "Bauch", "answer": "des"},
-						{"question": "Die Verletzung ___ Kopfes war zum Glück nicht schlimm.", "word": "Kopf", "answer": "des"},
+						{"question": "Die Verletzung ___ Kopfes war zum Glück nicht schlimм.", "word": "Kopf", "answer": "des"},
 						{"question": "Die Rötung ___ Halses deutet auf eine Entzündung hin.", "word": "Hals", "answer": "des"},
 						{"question": "Die Farbe ___ Auges hat sich verändert.", "word": "Auge", "answer": "des"},
 						{"question": "Die Heilung ___ Beines dauert mehrere Wochen.", "word": "Bein", "answer": "des"},

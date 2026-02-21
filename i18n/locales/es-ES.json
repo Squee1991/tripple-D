@@ -1,4 +1,37 @@
 {
+  "pwa": {
+    "title": "Instala Skillupgerman",
+    "sub": "¡Añade la aplicación a tu pantalla de inicio para un acceso rápido!",
+    "btn": "¡Entendido, gracias!"
+  },
+  "pwaInstructions": {
+    "IosTitle": "Para iPhone (en Safari):",
+    "iosTipOne": "1. Pulsa 'Compartir' (el cuadrado con la flecha hacia arriba abajo).",
+    "iosTipTwo": "2. Elige 'Añadir a la pantalla de inicio' (el icono del plus).",
+    "iosTipThree": "3. Pulsa 'Añadir' en la esquina superior derecha.",
+    "androidTitle": "Para Android (en Chrome):",
+    "androidTipOne": "1. Abre el sitio y pulsa el menú (tres puntos arriba a la derecha).",
+    "androidTipTwo": "2. Elige 'Instalar aplicación' o 'Añadir a la pantalla de inicio'.",
+    "androidTipThree": "3. Confirma pulsando 'Instalar' en la ventana emergente.",
+    "pcTitle": "Para ordenador:",
+    "pcTipOne": "1. Haz clic en el icono de descarga a la derecha de la barra de direcciones."
+  },
+  "themeModal": {
+    "title": "Selecciona el diseño",
+    "close": "Cerrar",
+    "light": "Claro",
+    "dark": "Oscuro",
+    "pink": "Romántico"
+  },
+  "pinkThemeModal": {
+    "partOne": "Este tema solo se puede desbloquear en el evento",
+    "partTwo": "Festival de Corazones",
+    "partThree": "¡Cómpralo en la tienda del evento!"
+  },
+  "settingsGroup": {
+    "notifications": "Notificaciones",
+    "appearance": "Apariencia"
+  },
   "valentineAchievements": {
     "firstValentineQuestLabel": "Primera cita",
     "firstValentineQuesDescription": "¡Da el primer paso! Completa cualquier tarea del evento «Festival de Corazones» и recibe tu primera recompensa.",
@@ -293,7 +326,7 @@
     "descriptionNorthCliffs": "Altos acantilados se elevan sobre el mar, y los vientos fríos ponen a prueba la resistencia de cada viajero. Te esperan misiones que requieren atención.",
     "descriptionStormCoast": "Tierras costeras salvajes donde rugen los truenos y relámpagos. Sólo los héroes valientes se atreven a pisar aquí. Aquí te espera una verdadera prueba del poder de tu conocimiento.",
     "descriptionMasterLands": "Tierras de maestros y artesanos, donde cada trabajo importa. Aquí aprenderás a hablar sobre profesiones, trabajo y deberes diarios.",
-    "descriptionWildLands": "La vida en la naturaleza está llena de descubrimientos sorprendentes. Aquí aprenderás a nombrar a los habitantes del bosque y los elementos, describir sus acciones y formar frases sobre el mundo natural.",
+    "descriptionWildLands": "La vida en la naturaleza está llena de descubrimientos sorprendentes. Aquí aprenderás a nombrar a los habitantes del bosque y los elementos, describir sus acciones y formar frases sobre el mundo natural."
   },
   "calendarInfo": {
     "eventsTitle": "Calendario de eventos",
@@ -2001,7 +2034,7 @@
     "questThree": "Cómo se dice: Mostrar",
     "questFour": "Forma la frase interrogativa",
     "questFive": "Cómo se dice: Ayudar",
-    "questSix": "Cómo se dice: Ayudar",
+    "questSix": "Escucha y escribe la frase",
     "questSeven": "Forma: Puedo ayudarle",
     "questEight": "Escucha y escribe la frase",
     "questNine": "Cómo se dice: Urgente",
@@ -4421,15 +4454,32 @@
     "questFifteenSecondOption": "La torre está al lado del hotel",
     "questFifteenThirdOption": "La torre está detrás del hotel"
   },
+  "shop": {
+    "title": "Tienda de objetos",
+    "subText": "Canjea tus Articluses acumulados por bonos útiles y descuentos permanentes para tu aprendizaje.",
+    "bought": "Comprado"
+  },
+  "cardsShop": {
+    "livesTitle": "Vidas",
+    "livesDescription": "Aquí puedes recargar tus vidas (Máximo 5)",
+    "full": "Lleno",
+    "buy": "Comprar"
+  },
   "awardsSection": {
     "congratulations": "¡Felicidades! ¡Ya tienes esta recompensa!",
     "close": "Cerrar"
   },
+  "cabinetNav": {
+    "common": "General",
+    "awards": "Premios",
+    "rank": "Rango",
+    "exam": "Amigos"
+  },
   "cabinetSidebar": {
-    "valueOne": "Configuración de la cuenta",
-    "valueTwo": "Amigos",
-    "valueThree": "Recompensas",
-    "valueFour": "Archivo de exámenes"
+    "valueOne": "Parámetros de la cuenta",
+    "valueTwo": "Archivo de exámenes",
+    "valueThree": "Tienda",
+    "valueFour": "Ajustes"
   },
   "cabinetAccordion": {
     "personalData": "Datos personales",
@@ -4446,7 +4496,8 @@
     "sound": "Notificaciones de sonido",
     "theme": "Modo oscuro",
     "ach": "Notificación de logros",
-    "snowFall": "Nevada"
+    "snowFall": "Nevada",
+    "themeBtn": "Tema"
   },
   "cabinet": {
     "important": "¡IMPORTANTE!",
@@ -5525,7 +5576,8 @@
     "about": "Sobre la app",
     "contact": "Contacto",
     "quest": "Preguntas y respuestas",
-    "events": "Eventos"
+    "events": "Eventos",
+    "speakingRooms": "Hablar"
   },
   "formLabel": {
     "name": "Nombre",
@@ -5859,5 +5911,65 @@
     "placeholder": "Introduce una frase o palabra en alemán con artículo",
     "translate": "Traducción (opcional)",
     "btn": "Crear"
+  },
+  "speakingRooms": {
+    "title": "Salas de Conversación",
+    "createRoom": "Crear Sala",
+    "joinRoom": "Unirse",
+    "leaveRoom": "Salir de la Sala",
+    "closeRoom": "Cerrar Sala",
+    "back": "Atrás",
+    "topic": "Tema",
+    "topicPlaceholder": "ej. Describe tu rutina diaria",
+    "cefrLevel": "Nivel",
+    "maxParticipants": "Máx. Participantes",
+    "visibility": "Visibilidad",
+    "public": "Pública",
+    "private": "Privada",
+    "create": "Crear",
+    "creating": "Creando...",
+    "waiting": "Esperando",
+    "active": "Activa",
+    "allLevels": "Todos",
+    "noRooms": "No hay salas disponibles. ¡Crea la primera!",
+    "createFirst": "Crear la Primera Sala",
+    "loading": "Cargando...",
+    "loadMore": "Cargar más",
+    "prejoinTitle": "¿Listo para unirte?",
+    "cameraOff": "Cámara apagada",
+    "audioOnly": "Solo audio",
+    "microphone": "Micrófono",
+    "camera": "Cámara",
+    "micOn": "Micro encendido",
+    "micOff": "Micro apagado",
+    "camOn": "Cámara encendida",
+    "camOff": "Cámara apagada",
+    "joinCall": "Unirse a la llamada",
+    "joining": "Uniéndose...",
+    "leave": "Salir",
+    "screenShare": "Compartir pantalla",
+    "participants": "Participantes",
+    "currentQuestion": "Pregunta actual",
+    "noQuestions": "Sin preguntas",
+    "nextQuestion": "Siguiente pregunta",
+    "previousQuestions": "Preguntas anteriores",
+    "roomClosed": "Sala cerrada",
+    "roomClosedText": "Esta sala fue cerrada por el moderador.",
+    "backToRooms": "Volver a las salas",
+    "loadQuestions": "Cargar preguntas",
+    "topics": {
+      "general": "General",
+      "family": "Familia",
+      "daily-life": "Vida cotidiana",
+      "food": "Comida y bebidas",
+      "travel": "Viajes",
+      "hobbies": "Pasatiempos",
+      "health": "Salud",
+      "work": "Trabajo y carrera",
+      "education": "Educación",
+      "technology": "Tecnología",
+      "culture": "Cultura y sociedad",
+      "environment": "Medio ambiente"
+    }
   }
 }

@@ -1,4 +1,37 @@
 {
+  "pwa": {
+    "title": "Skillupgerman-ni o'rnating",
+    "sub": "Tezkor kirish uchun ilovani asosiy ekranga qo'shing!",
+    "btn": "Tushunarlu, rahmat!"
+  },
+  "pwaInstructions": {
+    "IosTitle": "iPhone uchun (Safari-da):",
+    "iosTipOne": "1. 'Ulashish' tugmasini bosing (pastdagi yuqoriga yo'naltirilgan kvadrat).",
+    "iosTipTwo": "2. 'Asosiy ekranga qo'shish'ni tanlang (plyus belgisi).",
+    "iosTipThree": "3. Yuqori o'ng burchakdagi 'Qo'shish' tugmasini bosing.",
+    "androidTitle": "Android uchun (Chrome-da):",
+    "androidTipOne": "1. Saytni oching va menyuni bosing (yuqori o'ngdagi uchta nuqta).",
+    "androidTipTwo": "2. 'Ilovani o'rnatish' yoki 'Asosiy ekranga qo'shish'ni tanlang.",
+    "androidTipThree": "3. Qalqib chiquvchi oynada 'O'rnatish' tugmasini bosing.",
+    "pcTitle": "Kompyuter uchun:",
+    "pcTipOne": "1. Manzil satrining o'ng tomonidagi yuklab olish belgisini bosing."
+  },
+  "themeModal": {
+    "title": "Ko'rinishni tanlang",
+    "close": "Yopish",
+    "light": "Yorug'",
+    "dark": "To'q",
+    "pink": "Romantik"
+  },
+  "pinkThemeModal": {
+    "partOne": "Ushbu mavzuni faqat",
+    "partTwo": "Qalblar festivali",
+    "partThree": "tadbirida ochish mumkin. Uni tadbir do'konidan sotib oling!"
+  },
+  "settingsGroup": {
+    "notifications": "Bildirishnomalar",
+    "appearance": "Ko'rinish"
+  },
   "valentineAchievements": {
     "firstValentineQuestLabel": "Birinchi uchrashuv",
     "firstValentineQuesDescription": "Birinchi qadamni tashlang! «Qalblar festivali» tadbirining istalgan vazifasini bajaring va birinchi mukofotni oling.",
@@ -2001,7 +2034,7 @@
     "questThree": "Qanday aytiladi: Ko'rsatmoq",
     "questFour": "So'roq gapni tuzing",
     "questFive": "Qanday aytiladi: Yordam bermoq",
-    "questSix": "Qanday aytiladi: Yordam bermoq",
+    "questSix": "Tinglang va gapni yozing",
     "questSeven": "Tuzing: Men Sizga yordam bera olaman",
     "questEight": "Tinglang va gapni yozing",
     "questNine": "Qanday aytiladi: Shoshilinch",
@@ -4421,15 +4454,32 @@
     "questFifteenSecondOption": "Minora mehmonxona yonida",
     "questFifteenThirdOption": "Minora mehmonxona orqasida"
   },
+  "shop": {
+    "title": "Buyumlar do'koni",
+    "subText": "To'plangan Artiklislarni o'qishingiz uchun foydali bonuslar va doimiy chegirmalarga almashtiring.",
+    "bought": "Sotib olindi"
+  },
+  "cardsShop": {
+    "livesTitle": "Jonlar",
+    "livesDescription": "Bu yerda jonlar zaxirasini to'ldirishingiz mumkin (Maksimal 5)",
+    "full": "To'liq",
+    "buy": "Sotib olish"
+  },
   "awardsSection": {
     "congratulations": "Tabriklaymiz! Bu mukofot sizda allaqachon bor!",
     "close": "Yopish"
   },
+  "cabinetNav": {
+    "common": "Umumiy",
+    "awards": "Mukofotlar",
+    "rank": "Unvon",
+    "exam": "Do'stlar"
+  },
   "cabinetSidebar": {
-    "valueOne": "Hisob sozlamalari",
-    "valueTwo": "Do‘stlar",
-    "valueThree": "Mukofotlar",
-    "valueFour": "Imtihon arxivi"
+    "valueOne": "Hisob parametrlari",
+    "valueTwo": "Imtihonlar arxivi",
+    "valueThree": "Do'kon",
+    "valueFour": "Sozlamalar"
   },
   "cabinetAccordion": {
     "personalData": "Shaxsiy ma’lumotlar",
@@ -4444,9 +4494,10 @@
   },
   "cabinetToggle": {
     "sound": "Ovozli bildirishnomalar",
-    "theme": "Qorong‘i rejim",
+    "theme": "Tungi rejim",
     "ach": "Yutuqlar bildirishnomasi",
-    "snowFall": "Qor yog‘ishi"
+    "snowFall": "Qor yog'ishi",
+    "themeBtn": "Mavzu"
   },
   "cabinet": {
     "important": "MUHIM!!!",
@@ -5525,7 +5576,8 @@
     "about": "Ilova haqida",
     "contact": "Aloqa",
     "quest": "Savol/javob",
-    "events": "Voqealar"
+    "events": "Voqealar",
+    "speakingRooms": "Gapirish"
   },
   "formLabel": {
     "name": "Ism",
@@ -5859,5 +5911,65 @@
     "placeholder": "Nemischa jumla yoki artiklli so‘z yozing",
     "translate": "Tarjima (majburiy emas)",
     "btn": "Yaratish"
+  },
+  "speakingRooms": {
+    "title": "Suhbat xonalari",
+    "createRoom": "Xona yaratish",
+    "joinRoom": "Qo'shilish",
+    "leaveRoom": "Xonani tark etish",
+    "closeRoom": "Xonani yopish",
+    "back": "Orqaga",
+    "topic": "Mavzu",
+    "topicPlaceholder": "masalan, Kunlik tartibingizni tasvirlab bering",
+    "cefrLevel": "Daraja",
+    "maxParticipants": "Maksimal ishtirokchilar",
+    "visibility": "Ko'rinish",
+    "public": "Ommaviy",
+    "private": "Maxfiy",
+    "create": "Yaratish",
+    "creating": "Yaratilmoqda...",
+    "waiting": "Kutilmoqda",
+    "active": "Faol",
+    "allLevels": "Barchasi",
+    "noRooms": "Xonalar mavjud emas. Birinchisini yarating!",
+    "createFirst": "Birinchi xonani yarating",
+    "loading": "Yuklanmoqda...",
+    "loadMore": "Ko'proq yuklash",
+    "prejoinTitle": "Qo'shilishga tayyormisiz?",
+    "cameraOff": "Kamera o'chirilgan",
+    "audioOnly": "Faqat audio",
+    "microphone": "Mikrofon",
+    "camera": "Kamera",
+    "micOn": "Mikrofon yoniq",
+    "micOff": "Mikrofon o'chiq",
+    "camOn": "Kamera yoniq",
+    "camOff": "Kamera o'chiq",
+    "joinCall": "Qo'ng'iroqqa qo'shilish",
+    "joining": "Qo'shilmoqda...",
+    "leave": "Chiqish",
+    "screenShare": "Ekranni ulashish",
+    "participants": "Ishtirokchilar",
+    "currentQuestion": "Joriy savol",
+    "noQuestions": "Savollar yo'q",
+    "nextQuestion": "Keyingi savol",
+    "previousQuestions": "Oldingi savollar",
+    "roomClosed": "Xona yopildi",
+    "roomClosedText": "Bu xona boshqaruvchi tomonidan yopildi.",
+    "backToRooms": "Xonalarga qaytish",
+    "loadQuestions": "Savollarni yuklash",
+    "topics": {
+      "general": "Umumiy",
+      "family": "Oila",
+      "daily-life": "Kundalik hayot",
+      "food": "Ovqat va ichimliklar",
+      "travel": "Sayohat",
+      "hobbies": "Sevimli mashg'ulotlar",
+      "health": "Salomatlik",
+      "work": "Ish va martaba",
+      "education": "Ta'lim",
+      "technology": "Texnologiya",
+      "culture": "Madaniyat va jamiyat",
+      "environment": "Atrof-muhit"
+    }
   }
 }

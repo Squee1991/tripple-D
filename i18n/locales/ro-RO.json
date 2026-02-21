@@ -1,4 +1,37 @@
 {
+  "pwa": {
+    "title": "Instalează Skillupgerman",
+    "sub": "Adaugă aplicația pe ecranul principal pentru acces rapid și confort!",
+    "btn": "Am înțeles, mulțumesc!"
+  },
+  "pwaInstructions": {
+    "IosTitle": "Pentru iPhone (în Safari):",
+    "iosTipOne": "1. Apasă „Partajare” (pătratul cu săgeata în sus de jos).",
+    "iosTipTwo": "2. Alege „Adăugare la ecranul principal” (pictograma plus).",
+    "iosTipThree": "3. Apasă „Adăugare” în colțul din dreapta sus.",
+    "androidTitle": "Pentru Android (în Chrome):",
+    "androidTipOne": "1. Deschide site-ul și apasă meniul (trei puncte dreapta sus).",
+    "androidTipTwo": "2. Alege „Instalare aplicație” sau „Adăugare pe ecranul principal”.",
+    "androidTipThree": "3. Confirmă apăsând „Instalare” în fereastra pop-up.",
+    "pcTitle": "Pentru calculator:",
+    "pcTipOne": "1. Click pe pictograma de descărcare din partea dreaptă a barei de adrese."
+  },
+  "themeModal": {
+    "title": "Alege aspectul",
+    "close": "Închide",
+    "light": "Luminos",
+    "dark": "Întunecat",
+    "pink": "Romantic"
+  },
+  "pinkThemeModal": {
+    "partOne": "Această temă poate fi deblocată doar în cadrul evenimentului",
+    "partTwo": "Festivalul Inimilor",
+    "partThree": "Cumpără-o din magazinul evenimentului!"
+  },
+  "settingsGroup": {
+    "notifications": "Notificări",
+    "appearance": "Aspect"
+  },
   "valentineAchievements": {
     "firstValentineQuestLabel": "Prima întâlnire",
     "firstValentineQuesDescription": "Fă primul pas! Finalizează orice misiune din evenimentul „Festivalul Inimilor” și primește prima recompensă.",
@@ -2001,7 +2034,7 @@
     "questThree": "Cum se spune: A arăta",
     "questFour": "Assemblează propoziția interogativă",
     "questFive": "Cum se spune: A ajuta",
-    "questSix": "Cum se spune: A ajuta",
+    "questSix": "Ascultă și scrie propoziția",
     "questSeven": "Assemblează: Vă pot ajuta",
     "questEight": "Ascultă și scrie propoziția",
     "questNine": "Cum se spune: Urgent",
@@ -4421,15 +4454,32 @@
     "questFifteenSecondOption": "Turnul este lângă hotel",
     "questFifteenThirdOption": "Turnul este în spatele hotelului"
   },
+  "shop": {
+    "title": "Magazin de obiecte",
+    "subText": "Schimbă Articlus-ii acumulați pe bonusuri utile și reduceri permanente pentru studiile tale.",
+    "bought": "Cumpărat"
+  },
+  "cardsShop": {
+    "livesTitle": "Vieți",
+    "livesDescription": "Aici poți reface rezerva de vieți (Maxim 5)",
+    "full": "Plin",
+    "buy": "Cumpără"
+  },
   "awardsSection": {
     "congratulations": "Felicitări! Această recompensă este deja a ta!",
     "close": "Închide"
   },
+  "cabinetNav": {
+    "common": "General",
+    "awards": "Premii",
+    "rank": "Rang",
+    "exam": "Prieteni"
+  },
   "cabinetSidebar": {
     "valueOne": "Parametrii contului",
-    "valueTwo": "Prieteni",
-    "valueThree": "Recompense",
-    "valueFour": "Arhiva examenelor"
+    "valueTwo": "Arhiva examenelor",
+    "valueThree": "Magazin",
+    "valueFour": "Setări"
   },
   "cabinetAccordion": {
     "personalData": "Date personale",
@@ -4446,7 +4496,8 @@
     "sound": "Notificări sonore",
     "theme": "Mod întunecat",
     "ach": "Notificări realizări",
-    "snowFall": "Ninsoare"
+    "snowFall": "Ninsoare",
+    "themeBtn": "Temă"
   },
   "cabinet": {
     "important": "IMPORTANT!!!",
@@ -5525,7 +5576,8 @@
     "about": "Despre aplicație",
     "contact": "Contact",
     "quest": "Întrebări și răspunsuri",
-    "events": "Evenimente"
+    "events": "Evenimente",
+    "speakingRooms": "Vorbire"
   },
   "formLabel": {
     "name": "Nume",
@@ -5859,5 +5911,65 @@
     "placeholder": "Introdu o propoziție în germană sau un cuvânt cu articole",
     "translate": "Traducere (opțional)",
     "btn": "Creează"
+  },
+  "speakingRooms": {
+    "title": "Camere de Conversație",
+    "createRoom": "Creează Cameră",
+    "joinRoom": "Alătură-te",
+    "leaveRoom": "Părăsește Camera",
+    "closeRoom": "Închide Camera",
+    "back": "Înapoi",
+    "topic": "Subiect",
+    "topicPlaceholder": "ex. Descrieți rutina zilnică",
+    "cefrLevel": "Nivel",
+    "maxParticipants": "Max. Participanți",
+    "visibility": "Vizibilitate",
+    "public": "Publică",
+    "private": "Privată",
+    "create": "Creează",
+    "creating": "Se creează...",
+    "waiting": "Se așteaptă",
+    "active": "Activă",
+    "allLevels": "Toate",
+    "noRooms": "Nu sunt camere disponibile. Creează prima!",
+    "createFirst": "Creează Prima Cameră",
+    "loading": "Se încarcă...",
+    "loadMore": "Mai multe",
+    "prejoinTitle": "Pregătit să te alături?",
+    "cameraOff": "Camera oprită",
+    "audioOnly": "Doar audio",
+    "microphone": "Microfon",
+    "camera": "Cameră",
+    "micOn": "Microfon pornit",
+    "micOff": "Microfon oprit",
+    "camOn": "Cameră pornită",
+    "camOff": "Cameră oprită",
+    "joinCall": "Intră în apel",
+    "joining": "Se conectează...",
+    "leave": "Ieși",
+    "screenShare": "Partajare ecran",
+    "participants": "Participanți",
+    "currentQuestion": "Întrebarea curentă",
+    "noQuestions": "Nu sunt întrebări",
+    "nextQuestion": "Următoarea întrebare",
+    "previousQuestions": "Întrebări anterioare",
+    "roomClosed": "Cameră închisă",
+    "roomClosedText": "Această cameră a fost închisă de moderator.",
+    "backToRooms": "Înapoi la camere",
+    "loadQuestions": "Încarcă întrebările",
+    "topics": {
+      "general": "General",
+      "family": "Familie",
+      "daily-life": "Viața de zi cu zi",
+      "food": "Mâncare și băuturi",
+      "travel": "Călătorii",
+      "hobbies": "Hobby-uri",
+      "health": "Sănătate",
+      "work": "Muncă și carieră",
+      "education": "Educație",
+      "technology": "Tehnologie",
+      "culture": "Cultură și societate",
+      "environment": "Mediu"
+    }
   }
 }

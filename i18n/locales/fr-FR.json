@@ -1,4 +1,37 @@
 {
+  "pwa": {
+    "title": "Installer Skillupgerman",
+    "sub": "Ajoutez l'application à votre écran d'accueil pour un accès rapide !",
+    "btn": "C'est compris, merci !"
+  },
+  "pwaInstructions": {
+    "IosTitle": "Pour iPhone (dans Safari) :",
+    "iosTipOne": "1. Appuyez sur « Partager » (le carré avec une flèche vers le haut).",
+    "iosTipTwo": "2. Choisissez « Sur l'écran d'accueil » (l'icône plus).",
+    "iosTipThree": "3. Appuyez sur « Ajouter » en haut à droite.",
+    "androidTitle": "Pour Android (dans Chrome) :",
+    "androidTipOne": "1. Ouvrez le site et appuyez sur le menu (trois points en haut à droite).",
+    "androidTipTwo": "2. Choisissez « Installer l'application » ou « Ajouter à l'écran d'accueil ».",
+    "androidTipThree": "3. Confirmez en appuyant sur « Installer ».",
+    "pcTitle": "Pour ordinateur :",
+    "pcTipOne": "1. Cliquez sur l'icône de téléchargement à droite de la barre d'adresse."
+  },
+  "themeModal": {
+    "title": "Choisissez l'apparence",
+    "close": "Fermer",
+    "light": "Claire",
+    "dark": "Sombre",
+    "pink": "Romantique"
+  },
+  "pinkThemeModal": {
+    "partOne": "Ce thème ne peut être débloqué que lors de l'événement",
+    "partTwo": "Festival des Cœurs",
+    "partThree": "Achetez-le dans la boutique de l'événement !"
+  },
+  "settingsGroup": {
+    "notifications": "Notifications",
+    "appearance": "Apparence"
+  },
   "valentineAchievements": {
     "firstValentineQuestLabel": "Premier rendez-vous",
     "firstValentineQuesDescription": "Faites le premier pas ! Terminez n'importe quelle quête de l'événement « Festival des Cœurs » et recevez votre première récompense.",
@@ -2001,7 +2034,7 @@
     "questThree": "Comment dit-on : Montrer",
     "questFour": "Composez la phrase interrogative",
     "questFive": "Comment dit-on : Aider",
-    "questSix": "Comment dit-on : Aider",
+    "questSix": "Écoutez et écrivez la phrase",
     "questSeven": "Composez : Je peux vous aider",
     "questEight": "Écoutez et écrivez la phrase",
     "questNine": "Comment dit-on : Urgent",
@@ -4421,15 +4454,32 @@
     "questFifteenSecondOption": "La tour est à côté de l'hôtel",
     "questFifteenThirdOption": "La tour est derrière l'hôtel"
   },
+  "shop": {
+    "title": "Boutique d'objets",
+    "subText": "Échangez vos Articluses accumulés contre des bonus utiles et des réductions permanentes pour vos études.",
+    "bought": "Acheté"
+  },
+  "cardsShop": {
+    "livesTitle": "Vies",
+    "livesDescription": "Ici, vous pouvez recharger vos vies (Maximum 5)",
+    "full": "Plein",
+    "buy": "Acheter"
+  },
   "awardsSection": {
     "congratulations": "Félicitations ! Vous possédez déjà cette récompense !",
     "close": "Fermer"
   },
+  "cabinetNav": {
+    "common": "Général",
+    "awards": "Récompenses",
+    "rank": "Rang",
+    "exam": "Amis"
+  },
   "cabinetSidebar": {
     "valueOne": "Paramètres du compte",
-    "valueTwo": "Amis",
-    "valueThree": "Récompenses",
-    "valueFour": "Archive des examens"
+    "valueTwo": "Archives des examens",
+    "valueThree": "Boutique",
+    "valueFour": "Paramètres"
   },
   "cabinetAccordion": {
     "personalData": "Données personnelles",
@@ -4446,7 +4496,8 @@
     "sound": "Notifications sonores",
     "theme": "Mode sombre",
     "ach": "Notifications de succès",
-    "snowFall": "Chute de neige"
+    "snowFall": "Chute de neige",
+    "themeBtn": "Thème"
   },
   "cabinet": {
     "important": "IMPORTANT !!!",
@@ -5524,7 +5575,8 @@
     "about": "À propos",
     "contact": "Contact",
     "quest": "FAQ",
-    "events": "Événements"
+    "events": "Événements",
+    "speakingRooms": "Expression orale"
   },
   "formLabel": {
     "name": "Nom",
@@ -5858,5 +5910,65 @@
     "placeholder": "Entrez une phrase ou un mot avec articles",
     "translate": "Traduction (optionnel)",
     "btn": "Créer"
+  },
+  "speakingRooms": {
+    "title": "Salons de Conversation",
+    "createRoom": "Créer un salon",
+    "joinRoom": "Rejoindre",
+    "leaveRoom": "Quitter le salon",
+    "closeRoom": "Fermer le salon",
+    "back": "Retour",
+    "topic": "Sujet",
+    "topicPlaceholder": "ex. Décrivez votre routine quotidienne",
+    "cefrLevel": "Niveau",
+    "maxParticipants": "Max. Participants",
+    "visibility": "Visibilité",
+    "public": "Public",
+    "private": "Privé",
+    "create": "Créer",
+    "creating": "Création...",
+    "waiting": "En attente",
+    "active": "Actif",
+    "allLevels": "Tous",
+    "noRooms": "Aucun salon disponible. Créez le premier !",
+    "createFirst": "Créer le Premier Salon",
+    "loading": "Chargement...",
+    "loadMore": "Charger plus",
+    "prejoinTitle": "Prêt à rejoindre ?",
+    "cameraOff": "Caméra éteinte",
+    "audioOnly": "Audio uniquement",
+    "microphone": "Microphone",
+    "camera": "Caméra",
+    "micOn": "Micro activé",
+    "micOff": "Micro désactivé",
+    "camOn": "Caméra activée",
+    "camOff": "Caméra désactivée",
+    "joinCall": "Rejoindre l'appel",
+    "joining": "Connexion...",
+    "leave": "Quitter",
+    "screenShare": "Partage d'écran",
+    "participants": "Participants",
+    "currentQuestion": "Question actuelle",
+    "noQuestions": "Pas de questions",
+    "nextQuestion": "Question suivante",
+    "previousQuestions": "Questions précédentes",
+    "roomClosed": "Salon fermé",
+    "roomClosedText": "Ce salon a été fermé par le modérateur.",
+    "backToRooms": "Retour aux salons",
+    "loadQuestions": "Charger les questions",
+    "topics": {
+      "general": "Général",
+      "family": "Famille",
+      "daily-life": "Vie quotidienne",
+      "food": "Nourriture et boissons",
+      "travel": "Voyages",
+      "hobbies": "Loisirs",
+      "health": "Santé",
+      "work": "Travail et carrière",
+      "education": "Éducation",
+      "technology": "Technologie",
+      "culture": "Culture et société",
+      "environment": "Environnement"
+    }
   }
 }

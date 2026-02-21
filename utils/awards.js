@@ -43,8 +43,8 @@ export const AWARDS = [
 	{key: 'santaHat' , title: 'awards.santaHat', icon: SantaHat},
 	{key: 'christmasBall' , title: 'awards.christmasBall', icon: ChristmasBall},
 	{key: 'christmasWreath' , title: 'awards.christmasWreath', icon: ChristmasWreath},
-	{key: 'valentineBear' , title: 'Плюшевый мишка', icon: TeddyGift},
-	{key: 'cupidArrow' , title: 'Лук купидона', icon: CupidArrow},
+	{key: 'valentineBear' , title: 'awards.valentineBear', icon: TeddyGift},
+	{key: 'cupidArrow' , title: 'awards.cupidArrow', icon: CupidArrow},
 ]
 
 export const awardsByKey = Object.fromEntries(AWARDS.map(a => [a.key, a]))

@@ -113,6 +113,28 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
         return newSessionRef.id;
     }
 
+    async function markSessionAborted(reason) {
+        if (!gameId.value || !authStore.uid) return;
+
+        const sessionRef = doc(db, 'gameSessions', gameId.value);
+
+        await runTransaction(db, async (t) => {
+            const snap = await t.get(sessionRef);
+            if (!snap.exists()) return;
+
+            const data = snap.data();
+            if (data.status === 'finished' || data.status === 'aborted') return;
+
+            t.update(sessionRef, {
+                status: 'aborted',
+                abortedBy: authStore.uid,
+                abortReason: reason,          // 'host_left' или 'guest_left'
+                abortedAt: serverTimestamp(),
+            });
+        });
+    }
+
+
     async function findGame(level) {
         if (isSearching.value) return;
         const myUserId = authStore.uid;
@@ -196,10 +218,9 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
             const data = { id: docSnap.id, ...docSnap.data() };
             sessionData.value = data; // Сначала обновляем данные
             const newStatus = data.status;
-            // --- ИЗМЕНЕНИЕ 2 ---
-            // Когда игра впервые перешла в статус 'finished'
+
             if (newStatus === 'finished' && prevStatus !== 'finished') {
-                // 1. Каждый игрок обновляет СВОЮ статистику
+
                 if (!didFinalizeMyStats.value) {
                     const hostId  = data.hostId;
                     const guestId = data.guestId;
@@ -232,6 +253,18 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
                     }, 10000); // 10 секунд
                 }
             }
+            if (newStatus === 'aborted' && prevStatus !== 'aborted') {
+                console.log(`Сессия ${data.id} aborted. Удаляю через 15 секунд....`);
+
+                setTimeout(async () => {
+                    try {
+                        await deleteDoc(doc(db, 'gameSessions', data.id));
+                        console.log(`Сессия ${data.id} удалена после aborted.`);
+                    } catch (e) {
+                        console.log("Не удалось удалить aborted-сессию (возможно, нет прав).", e);
+                    }
+                }, 15000);
+            }
         });
     }
 
@@ -248,25 +281,24 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
     }
 
     async function leaveSession() {
+        try {
+            if (gameId.value && sessionData.value?.status !== 'finished') {
+                const isHost = sessionData.value.hostId === authStore.uid;
+                await markSessionAborted(isHost ? 'host_left' : 'guest_left');
+            }
+        } catch (e) {
+            console.error('leaveSession abort error:', e);
+        }
+
         if (unsubscribeFromSession) unsubscribeFromSession();
         unsubscribeFromSession = null;
-        if (gameId.value) {
-            // При выходе из сессии также пытаемся её удалить, если мы хост
-            // Это поможет, если второй игрок уже отключился
-            if (sessionData.value && sessionData.value.hostId === authStore.uid) {
-                try {
-                    const sessionRef = doc(db, 'gameSessions', gameId.value);
-                    await deleteDoc(sessionRef);
-                } catch (e) {
-                    console.error("Ошибка при удалении сессии при выходе:", e);
-                }
-            }
-        }
+
         gameId.value = null;
         sessionData.value = null;
         isSearching.value = false;
         error.value = null;
     }
+
 
     async function prepareCurrentRound() {
         if (!gameId.value) {

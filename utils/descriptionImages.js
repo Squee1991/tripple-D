@@ -23,6 +23,7 @@ import Panda from "assets/images/speak-themen/animals/panda.png";
 import Dog from "assets/images/speak-themen/animals/dog.png";
 import Cow from "assets/images/speak-themen/animals/cow.png";
 import Giraffe from "assets/images/speak-themen/animals/giraffe.png";
+import Beaver from "assets/images/speak-themen/animals/beaver.png";
 import Tiger from "assets/images/speak-themen/animals/Tiger.png";
 import HumanJobLaptop from "assets/images/speak-themen/home/stay-home.png";
 import Stretching from "assets/images/speak-themen/home/stretching.png";
@@ -95,18 +96,6 @@ import WashCar from 'assets/images/speak-themen/home and life/wash_car.jpg'
 import Mow_lawn from 'assets/images/speak-themen/home and life/mow_lawn.jpg'
 import FeedDog from 'assets/images/speak-themen/home and life/feed the dog.jpg'
 
-import WeatherSnow from 'assets/images/speak-themen/weather/WeatherSnow.jpg'
-import WeatherFogInMountains from 'assets/images/speak-themen/weather/WeatherFogInMountains.jpg'
-import WeatherTornado from 'assets/images/speak-themen/weather/WeatherTornado.jpg'
-import WeatherClearDay from 'assets/images/speak-themen/weather/WeatherClearDay.jpg'
-import WeatherRain from 'assets/images/speak-themen/weather/WeatherRain.jpg'
-import WeatherStrongRain from 'assets/images/speak-themen/weather/WeatherStrongRain.jpg'
-import WeatherWind from 'assets/images/speak-themen/weather/WeatherStrongRain.jpg'
-import WeatherSandStorm from 'assets/images/speak-themen/weather/WeatherSandStorm.jpg'
-import WeatherHail from 'assets/images/speak-themen/weather/WeatherHail.jpg'
-import WeatherRainbowAfterRain from 'assets/images/speak-themen/weather/WeatherHail.jpg'
-
-
 import Drawing from 'assets/images/speak-themen/school/drawing.jpg'
 import Music from 'assets/images/speak-themen/school/music.jpg'
 import SchoolBreak from 'assets/images/speak-themen/school/school-break.jpg'
@@ -128,7 +117,7 @@ export const topics = [
 				id: 1,
 				image: KindOnSki,
 				descriptions: {
-					A1: "Ein Junge fährt Ski.",
+					A1: "Ein Junge fährt Ski. Er hat eine blaue Jacke und einen Helm.",
 					A2: "Das Kind fährt Ski im Schnee. Es trägt warme Kleidung und einen Helm",
 					B1: "Ein lächelnder Junge gleitet auf blauen Skiern einen Hügel hinunter. Er ist mit einem Helm und einer Skibrille und trägt warme Winterkleidung"
 				}
@@ -146,8 +135,8 @@ export const topics = [
 				id: 3,
 				image: KindImSnow,
 				descriptions: {
-					A1: "Ein Junge liegt im Schnee und macht einen Schneeengel. Er trägt einen roten Schneeanzug und eine Mütze",
-					A2: "Ein Junge liegt auf dem Rücken im Schnee. Er trägt einen roten Schneeanzug und Handschuhe. Er bewegt seine Arme und Beine und macht einen Schneeengel.",
+					A1: "Ein Junge liegt im Schnee und macht einen Schneeengel.",
+					A2: "Ein Junge liegt auf dem Rücken im Schnee. Er trägt einen roten Schneeanzug und Handschuhe.",
 					B1: "Auf dem Bild liegt ein lachender Junge im Schnee und formt einen Schneeengel. Er trägt einen roten Schneeanzug sowie eine gestreifte Mütze mit Bommel."
 				}
 			},
@@ -431,7 +420,7 @@ export const topics = [
 				image: Barista,
 				descriptions: {
 					A1: "Die Frau ist in einem Café. Sie macht Kaffee.",
-					A2: "Eine junge Frau arbeitet im Café. Sie ist Barista und macht einen Kaffee.",
+					A2: "Eine junge Frau arbeitet im Café. Sie ist Barista und macht einen Kaffee mit der großen Maschine.",
 					B1: "Die freundliche Barista in der roten Schürze steht hinter der Theke und bereitet mit der professionellen Espressomaschine einen frischen Kaffee zu."
 				}
 			},
@@ -933,105 +922,7 @@ export const topics = [
 			}
 		]
 	},
-	{
-		id: 'weather',
-		label: "Погода",
-		icon: "🏡",
-		gradient: 'linear-gradient(135deg, #FFF3E0 0%, #FFB74D 100%)',
-		textColor: '#E55559',
-		tasks: [
-			{
-				id: 1,
-				images: WeatherSnow,
-				descriptions: {
-					A1: '',
-					A2: '',
-					B1: ''
-				}
-			},
-			{
-				id: 2,
-				images: WeatherFogInMountains,
-				descriptions: {
-					A1: '',
-					A2: '',
-					B1: ''
-				}
-			},
-			{
-				id: 3,
-				images: WeatherStrongRain,
-				descriptions: {
-					A1: '',
-					A2: '',
-					B1: ''
-				}
-			},
-			{
-				id: 4,
-				images: WeatherTornado,
-				descriptions: {
-					A1: '',
-					A2: '',
-					B1: ''
-				}
-			},
-			{
-				id: 5,
-				images: WeatherClearDay,
-				descriptions: {
-					A1: '',
-					A2: '',
-					B1: ''
-				}
-			},
-			{
-				id: 6,
-				images: WeatherRain,
-				descriptions: {
-					A1: '',
-					A2: '',
-					B1: ''
-				}
-			},
-			{
-				id: 7,
-				images: WeatherWind,
-				descriptions: {
-					A1: '',
-					A2: '',
-					B1: ''
-				}
-			},
-			{
-				id: 8,
-				images: WeatherSandStorm,
-				descriptions: {
-					A1: '',
-					A2: '',
-					B1: ''
-				}
-			},
-			{
-				id: 9,
-				images: WeatherHail,
-				descriptions: {
-					A1: '',
-					A2: '',
-					B1: ''
-				}
-			},
-			{
-				id: 10,
-				images: WeatherRainbowAfterRain,
-				descriptions: {
-					A1: '',
-					A2: '',
-					B1: ''
-				}
-			}
-		]
-	}
+
 	// {
 	// 	id: 'animals',
 	// 	label: 'Животные и природа',
@@ -1100,6 +991,15 @@ export const topics = [
 	// 				A1: "Die Giraffe schläft.",
 	// 				A2: "Die Giraffe liegt im Gras. Sie ist gelb und hat braune Flecken.",
 	// 				B1: "Eine Giraffe liegt entspannt auf der Wiese. Sie hat die Augen zu und ruht sich aus."
+	// 			}
+	// 		},
+	// 		{
+	// 			id: 8,
+	// 			image: Beaver,
+	// 			descriptions: {
+	// 				A1: "Der Biber schwimmt.",
+	// 				A2: "Der Biber schwimmt im Wasser ",
+	// 				B1: "Ein Biber liegt entspannt auf dem Rücken im Wasser. Er lächelt und sieht fröhlich aus."
 	// 			}
 	// 		},
 	// 		{
@@ -1176,6 +1076,4 @@ export const topics = [
 	// 		}
 	// 	]
 	// }
-
-
 ]

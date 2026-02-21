@@ -1,4 +1,37 @@
 {
+  "pwa": {
+    "title": "Install Skillupgerman",
+    "sub": "Add the app to your home screen for quick access and convenience!",
+    "btn": "Got it, thanks!"
+  },
+  "pwaInstructions": {
+    "IosTitle": "For iPhone (in Safari):",
+    "iosTipOne": "1. Tap 'Share' (the square with an upward arrow at the bottom).",
+    "iosTipTwo": "2. Select 'Add to Home Screen' (the plus icon).",
+    "iosTipThree": "3. Tap 'Add' in the top right corner.",
+    "androidTitle": "For Android (in Chrome):",
+    "androidTipOne": "1. Open the site and tap the menu (three dots in the top right).",
+    "androidTipTwo": "2. Select 'Install app' or 'Add to Home screen'.",
+    "androidTipThree": "3. Confirm by tapping 'Install' in the pop-up.",
+    "pcTitle": "For Computer:",
+    "pcTipOne": "1. Click the download icon on the right side of the address bar."
+  },
+  "themeModal": {
+    "title": "Select Appearance",
+    "close": "Close",
+    "light": "Light",
+    "dark": "Dark",
+    "pink": "Romantic"
+  },
+  "pinkThemeModal": {
+    "partOne": "This theme can only be unlocked during the",
+    "partTwo": "Festival of Hearts",
+    "partThree": "event. Purchase it in the event shop!"
+  },
+  "settingsGroup": {
+    "notifications": "Notifications",
+    "appearance": "Appearance"
+  },
   "valentineAchievements": {
     "firstValentineQuestLabel": "First Date",
     "firstValentineQuesDescription": "Take the first step! Complete any quest in the 'Festival of Hearts' event and get your first reward.",
@@ -2001,7 +2034,7 @@
     "questThree": "How to say: To show",
     "questFour": "Assemble the interrogative sentence",
     "questFive": "How to say: To help",
-    "questSix": "How to say: To help",
+    "questSix": "Listen and write the sentence",
     "questSeven": "Assemble: I can help you",
     "questEight": "Listen and write the sentence",
     "questNine": "How to say: Urgent",
@@ -4421,15 +4454,32 @@
     "questFifteenSecondOption": "The tower is next to the hotel",
     "questFifteenThirdOption": "The tower is behind the hotel"
   },
+  "shop": {
+    "title": "Item Shop",
+    "subText": "Exchange your accumulated Articluses for useful bonuses and permanent discounts for your studies.",
+    "bought": "Bought"
+  },
+  "cardsShop": {
+    "livesTitle": "Lives",
+    "livesDescription": "Here you can refill your lives (Maximum 5)",
+    "full": "Full",
+    "buy": "Buy"
+  },
   "awardsSection": {
     "congratulations": "Congratulations! You already have this award!",
     "close": "Close"
   },
+  "cabinetNav": {
+    "common": "General",
+    "awards": "Awards",
+    "rank": "Rank",
+    "exam": "Friends"
+  },
   "cabinetSidebar": {
-    "valueOne": "Account settings",
-    "valueTwo": "Friends",
-    "valueThree": "Rewards",
-    "valueFour": "Exam archive"
+    "valueOne": "Account Parameters",
+    "valueTwo": "Exam Archive",
+    "valueThree": "Shop",
+    "valueFour": "Settings"
   },
   "cabinetAccordion": {
     "personalData": "Personal Data",
@@ -4446,7 +4496,8 @@
     "sound": "Sound Notifications",
     "theme": "Dark Mode",
     "ach": "Achievement Notifications",
-    "snowFall": "Snowfall"
+    "snowFall": "Snowfall",
+    "themeBtn": "Theme"
   },
   "cabinet": {
     "important": "IMPORTANT!!!",
@@ -5525,7 +5576,8 @@
     "about": "About",
     "contact": "Contact",
     "quest": "Q&A",
-    "events": "Events"
+    "events": "Events",
+    "speakingRooms": "Speaking"
   },
   "formLabel": {
     "name": "Name",
@@ -5861,5 +5913,65 @@
     "placeholder": "Enter a German sentence or word with articles",
     "translate": "translation(optional)",
     "btn": "Create"
+  },
+  "speakingRooms": {
+    "title": "Speaking Rooms",
+    "createRoom": "Create Room",
+    "joinRoom": "Join Room",
+    "leaveRoom": "Leave Room",
+    "closeRoom": "Close Room",
+    "back": "Back",
+    "topic": "Topic",
+    "topicPlaceholder": "e.g. Describe your daily routine",
+    "cefrLevel": "Level",
+    "maxParticipants": "Max Participants",
+    "visibility": "Visibility",
+    "public": "Public",
+    "private": "Private",
+    "create": "Create",
+    "creating": "Creating...",
+    "waiting": "Waiting",
+    "active": "Active",
+    "allLevels": "All",
+    "noRooms": "No rooms available. Create one!",
+    "createFirst": "Create the First Room",
+    "loading": "Loading...",
+    "loadMore": "Load More",
+    "prejoinTitle": "Ready to Join?",
+    "cameraOff": "Camera is off",
+    "audioOnly": "Audio only",
+    "microphone": "Microphone",
+    "camera": "Camera",
+    "micOn": "Mic On",
+    "micOff": "Mic Off",
+    "camOn": "Cam On",
+    "camOff": "Cam Off",
+    "joinCall": "Join Call",
+    "joining": "Joining...",
+    "leave": "Leave",
+    "screenShare": "Screen Share",
+    "participants": "Participants",
+    "currentQuestion": "Current Question",
+    "noQuestions": "No questions available",
+    "nextQuestion": "Next Question",
+    "previousQuestions": "Previous Questions",
+    "roomClosed": "Room Closed",
+    "roomClosedText": "This room has been closed by the host.",
+    "backToRooms": "Back to Rooms",
+    "loadQuestions": "Load Questions",
+    "topics": {
+      "general": "General",
+      "family": "Family",
+      "daily-life": "Daily Life",
+      "food": "Food & Drinks",
+      "travel": "Travel",
+      "hobbies": "Hobbies",
+      "health": "Health",
+      "work": "Work & Career",
+      "education": "Education",
+      "technology": "Technology",
+      "culture": "Culture & Society",
+      "environment": "Environment"
+    }
   }
 }
