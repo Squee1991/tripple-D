@@ -1,37 +1,47 @@
 <template>
   <div class="menu-starfield">
-    <div class="stars-container">
-      <div class="stars-layer dust"></div>
-      <div class="stars-layer mid"></div>
-      <div class="stars-layer chaotic"></div>
+    <div class="space-environment">
+      <div class="nebula-cloud blue"></div>
+      <div class="nebula-cloud purple"></div>
+
+      <div v-for="n in 15" :key="n" class="floating-toon-star" :style="getRandomPos(n)">
+        {{ n % 2 === 0 ? '⭐' : '✨' }}
+      </div>
     </div>
 
-    <Transition name="cyber-fade">
-      <div class="cyber-menu-wrapper" v-if="!showShop && !showSettings && !isTransitioning">
-        <div class="glitch-title" data-text="STAR_COMMAND">ГАЛАКТИКА АРТИКЛЕЙ</div>
+    <div class="open-menu-layout" v-if="!showShop && !showSettings && !showGalaxySelector && !isTransitioning">
 
-        <div class="menu-controls">
-          <div class="menu-item">
-            <button class="cyber-btn btn-play" @click="$router.push('/test-fight')">
-              <span class="btn-glitch"></span>НАЧАТЬ ИГРУ
-            </button>
-          </div>
-          <div class="menu-item">
-            <button class="cyber-btn btn-shop" @click="toggleScreen('shop')">АНГАР ФЛОТА</button>
-          </div>
-          <div class="menu-item">
-            <button class="cyber-btn btn-settings" @click="toggleScreen('settings')">НАСТРОЙКИ</button>
-          </div>
-          <div class="menu-item">
-            <button class="cyber-btn btn-exit" @click="handleExit">Покинуть галактику</button>
-          </div>
+      <div class="title-section">
+        <h1 class="main-title-toon">
+          <span class="word-1">ГАЛАКТИКА</span>
+          <span class="word-2">АРТИКЛЕЙ</span>
+        </h1>
+      </div>
+
+      <div class="controls-section">
+        <button class="menu-btn-toon play" @click="toggleScreen('galaxies')">
+          <span class="icon">🚀</span> В БОЙ!
+        </button>
+
+        <div class="secondary-btns">
+          <button class="menu-btn-toon hangar" @click="toggleScreen('shop')">АНГАР</button>
+          <button class="menu-btn-toon settings" @click="toggleScreen('settings')">HUD</button>
+          <button class="menu-btn-toon exit" @click="handleExit">ВЫХОД</button>
         </div>
       </div>
-    </Transition>
+
+    </div>
+
     <div class="sub-screen-container">
+      <VGalaxySelector
+          v-if="showGalaxySelector"
+          @back="toggleScreen('menu')"
+          @select="startMission"
+      />
       <VGameSettings v-if="showSettings" @close="toggleScreen('menu')"/>
       <VGameHangar v-if="showShop" @close="toggleScreen('menu')"/>
     </div>
+
     <Transition name="warp-flash">
       <div class="warp-overlay" v-if="isTransitioning"></div>
     </Transition>
@@ -39,201 +49,175 @@
 </template>
 
 <script setup>
-import {ref} from 'vue'
+import { ref } from 'vue'
+import { useRouter } from "vue-router"
+
 import VGameSettings from '../../src/components/V-gameSettings.vue'
 import VGameHangar from '../../src/components/V-gameHangar.vue'
-import { useRouter} from "vue-router";
-const router = useRouter();
+import VGalaxySelector from '../../src/components/V-galaxySelector.vue'
+
+const router = useRouter()
 
 const showSettings = ref(false)
 const showShop = ref(false)
+const showGalaxySelector = ref(false)
 const isTransitioning = ref(false)
 
-const toggleScreen = (target) => {
+const getRandomPos = (n) => ({
+  top: Math.random() * 100 + '%',
+  left: Math.random() * 100 + '%',
+  animationDelay: n * 0.4 + 's',
+  fontSize: (Math.random() * 1 + 1) + 'rem'
+})
 
-  if (target === 'shop' || (target === 'menu' && showShop.value)) {
+const toggleScreen = (target) => {
+  const heavy = ['shop', 'galaxies'].includes(target) || (target === 'menu' && (showShop.value || showGalaxySelector.value))
+  if (heavy) {
     isTransitioning.value = true
     setTimeout(() => {
-      showSettings.value = false
-      showShop.value = (target === 'shop')
-
-      setTimeout(() => {
-        isTransitioning.value = false
-      }, 300)
+      resetScreens()
+      if (target === 'shop') showShop.value = true
+      if (target === 'galaxies') showGalaxySelector.value = true
+      setTimeout(() => isTransitioning.value = false, 300)
     }, 400)
   } else if (target === 'settings') {
-    showSettings.value = true
-    showShop.value = false
+    resetScreens(); showSettings.value = true
   } else {
-    showSettings.value = false
-    showShop.value = false
+    resetScreens()
   }
 }
 
-const handleExit = () => {
-  router.push('/')
+const resetScreens = () => {
+  showSettings.value = false; showShop.value = false; showGalaxySelector.value = false
 }
+
+const startMission = (galaxyId) => {
+  router.push({ path: '/test-fight', query: { sector: galaxyId } })
+}
+
+const handleExit = () => router.push('/')
 </script>
 
 <style scoped>
 .menu-starfield {
   height: 100vh;
-  background: radial-gradient(circle at center, #0a1122 0%, #010409 100%);
+  background: #0a0a20;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   position: relative;
-  font-family: 'Consolas', monospace;
+  font-family: 'Arial Rounded MT Bold', sans-serif;
 }
 
-/* ЗВЕЗДНЫЙ ФОН (КОПИЯ ИЗ ИГРЫ ДЛЯ ЕДИНОГО СТИЛЯ) */
-.stars-container {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
+/* ФОНОВЫЕ ТУМАННОСТИ */
+.space-environment { position: absolute; inset: 0; z-index: 0; }
+.nebula-cloud {
+  position: absolute; width: 600px; height: 600px; border-radius: 50%; filter: blur(100px); opacity: 0.3;
 }
+.nebula-cloud.blue { background: #00d2ff; top: -10%; left: -10%; }
+.nebula-cloud.purple { background: #ff00ff; bottom: -10%; right: -10%; }
 
-.stars-layer {
+.floating-toon-star {
   position: absolute;
-  inset: -100%;
-  background-repeat: repeat;
+  animation: floatStars 5s infinite ease-in-out;
   pointer-events: none;
 }
 
-.dust {
-  background-image: radial-gradient(1px 1px at 50px 80px, #fff, transparent);
-  background-size: 300px 300px;
-  animation: spaceVertical 20s linear infinite;
-  opacity: 0.2;
+@keyframes floatStars {
+  0%, 100% { transform: translateY(0) scale(1); opacity: 0.4; }
+  50% { transform: translateY(-20px) scale(1.2); opacity: 0.8; }
 }
 
-.mid {
-  background-image: radial-gradient(2px 2px at 100px 150px, #00d2ff, transparent);
-  background-size: 400px 400px;
-  animation: spaceVertical 10s linear infinite;
-  opacity: 0.4;
-}
-
-.chaotic {
-  background-image: radial-gradient(2px 2px at 200px 300px, #fff, transparent);
-  background-size: 500px 500px;
-  animation: chaoticRotation 15s ease-in-out infinite;
-  opacity: 0.3;
-}
-
-@keyframes spaceVertical {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(50%);
-  }
-}
-
-@keyframes chaoticRotation {
-  0% {
-    transform: rotate(0deg) scale(1);
-  }
-  50% {
-    transform: rotate(2deg) scale(1.1);
-  }
-  100% {
-    transform: rotate(0deg) scale(1);
-  }
-}
-
-.cyber-menu-wrapper {
+/* ВЕРСТКА БЕЗ РАМКИ */
+.open-menu-layout {
   position: relative;
   z-index: 10;
-  text-align: center;
-  background: rgba(10, 25, 47, 0.4);
-  padding: 60px;
-  border: 1px solid rgba(0, 210, 255, 0.2);
-  backdrop-filter: blur(10px);
-  clip-path: polygon(0 15%, 5% 0, 95% 0, 100% 15%, 100% 85%, 95% 100%, 5% 100%, 0 85%);
-}
-
-.glitch-title {
-  color: #fff;
-  font-size: 1.6rem;
-  font-weight: 900;
-  letter-spacing: 10px;
-  margin-bottom: 50px;
-  text-shadow: 0 0 20px #00d2ff;
-}
-
-.menu-controls {
   display: flex;
   flex-direction: column;
-  gap: 25px;
   align-items: center;
+  gap: 60px;
 }
 
-.cyber-btn {
-  width: 320px;
-  padding: 15px 10px;
-  background: transparent;
-  border: 1px solid #00d2ff;
-  color: #00d2ff;
-  font-size: 1rem;
-  font-weight: bold;
-  letter-spacing: 3px;
+/* ЗАГОЛОВОК */
+.main-title-toon {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  line-height: 0.9;
+  transform: rotate(-3deg);
+}
+.word-1 {
+  color: #fff;
+  font-size: 3rem;
+  -webkit-text-stroke: 2px #000;
+  text-shadow: 4px 4px 0 #3a7bd5;
+}
+.word-2 {
+  color: #ffeb3b;
+  font-size: 5rem;
+  -webkit-text-stroke: 3px #000;
+  text-shadow: 6px 6px 0 #e67e22;
+}
+
+/* КНОПКИ */
+.controls-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.menu-btn-toon {
+  border: 4px solid #000;
+  border-radius: 20px;
+  font-weight: 900;
+  color: #fff;
   cursor: pointer;
-  position: relative;
-  transition: 0.3s;
-  clip-path: polygon(0 0, 95% 0, 100% 30%, 100% 100%, 5% 100%, 0 70%);
+  transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 6px 0 #000;
+  text-transform: uppercase;
 }
 
-.cyber-btn:hover {
-  background: rgba(0, 210, 255, 0.1);
-  box-shadow: 0 0 20px rgba(0, 210, 255, 0.4);
-  transform: translateX(5px);
+.menu-btn-toon.play {
+  padding: 20px 60px;
+  font-size: 2rem;
+  background: #4caf50;
+  box-shadow: 0 10px 0 #1b5e20, 0 15px 30px rgba(0,0,0,0.4);
+  animation: pulsePlay 2s infinite;
 }
 
-.btn-play {
-  border-color: #00ff9d;
-  color: #00ff9d;
+.secondary-btns {
+  display: flex;
+  gap: 15px;
 }
 
-.btn-play:hover {
-  background: rgba(0, 255, 157, 0.1);
-  box-shadow: 0 0 25px rgba(0, 255, 157, 0.4);
+.secondary-btns .menu-btn-toon {
+  padding: 12px 25px;
+  font-size: 1rem;
 }
 
-.btn-exit {
-  border-color: #ff4b2b;
-  color: #ff4b2b;
+.hangar { background: #ff9800; box-shadow: 0 6px 0 #e65100; }
+.settings { background: #2196f3; box-shadow: 0 6px 0 #0d47a1; }
+.exit { background: #f44336; box-shadow: 0 6px 0 #8e0000; }
+
+/* ЭФФЕКТЫ */
+.menu-btn-toon:hover {
+  transform: scale(1.1) rotate(2deg);
 }
 
-.btn-exit:hover {
-  background: rgba(255, 75, 43, 0.1);
-  box-shadow: 0 0 20px rgba(255, 75, 43, 0.4);
+.menu-btn-toon:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #000;
 }
 
-.warp-overlay {
-  position: fixed;
-  inset: 0;
-  background: #fff;
-  z-index: 5000;
+@keyframes pulsePlay {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
 }
 
-.warp-flash-enter-active, .warp-flash-leave-active {
-  transition: opacity 0.3s;
-}
-
-.warp-flash-enter-from, .warp-flash-leave-to {
-  opacity: 0;
-}
-
-/* АНИМАЦИИ ПОЯВЛЕНИЯ */
-.cyber-fade-enter-active {
-  transition: all 0.5s ease-out;
-}
-
-.cyber-fade-enter-from {
-  opacity: 0;
-  transform: scale(0.9);
-  filter: blur(10px);
-}
+/* ВАРП-ВСПЫШКА */
+.warp-overlay { position: fixed; inset: 0; background: #fff; z-index: 5000; }
+.warp-flash-enter-active, .warp-flash-leave-active { transition: opacity 0.3s; }
+.warp-flash-enter-from, .warp-flash-leave-to { opacity: 0; }
 </style>
