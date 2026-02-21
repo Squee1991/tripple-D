@@ -22,14 +22,29 @@
           <span>{{ feature.free ? '✔️' : '—' }}</span>
           <span>{{ feature.premium ? '✔️' : '—' }}</span>
         </div>
-
+        <div v-if="myAvailableCoupons.length > 0" class="discounts-container">
+          <p class="discounts-title">Твои скидочные купоны</p>
+          <div class="coupons-list">
+            <button
+                v-for="coupon in myAvailableCoupons"
+                :key="coupon.id"
+                class="coupon-selector-btn"
+                :class="{ 'is-active': selectedDiscountId === coupon.id }"
+                @click="selectDiscount(coupon.id)"
+            >
+              {{ coupon.label }}
+            </button>
+          </div>
+        </div>
         <button
             v-if="!authStore.isPremium"
             class="pay-btn"
             ref="payButton"
             @click="pay"
         >
-          {{ t('payPage.getPremiumBtn')}}
+          {{ t('payPage.getPremiumBtn') }} —
+          <span v-if="selectedDiscountId" class="old-price-inline">{{ BASE_PRICE }} €</span>
+          {{ finalPrice }} €
         </button>
       </div>
     </div>
@@ -64,6 +79,36 @@ const router = useRouter()
 const { t } = useI18n()
 const backToMain = () => {
   router.push('/')
+}
+const BASE_PRICE = 6.99
+
+const finalPrice = computed(() => {
+  if (!selectedDiscountId.value) return BASE_PRICE.toFixed(2)
+  const activeCoupon = myAvailableCoupons.value.find(c => c.id === selectedDiscountId.value)
+  const percent = activeCoupon ? activeCoupon.percent : 0
+  const discounted = BASE_PRICE - (BASE_PRICE * (percent / 100))
+  return discounted.toFixed(2)
+})
+
+const selectedDiscountId = ref(null)
+
+const myAvailableCoupons = computed(() => {
+  const list = []
+  const hasAnyDiscount = authStore.premiumDiscount.sale_5 ||
+      authStore.premiumDiscount.sale_10 ||
+      authStore.premiumDiscount.sale_15
+  if (hasAnyDiscount) {
+    list.push({ id: null, percent: 0, label: 'Стандарт' })
+  }
+  if (authStore.premiumDiscount.sale_5) list.push({ id: 'sale_5', percent: 5, label: 'Скидка 5%' })
+  if (authStore.premiumDiscount.sale_10) list.push({ id: 'sale_10', percent: 10, label: 'Скидка 10%' })
+  if (authStore.premiumDiscount.sale_15) list.push({ id: 'sale_15', percent: 15, label: 'Скидка 15%' })
+
+  return list
+})
+
+const selectDiscount = (id) => {
+  selectedDiscountId.value = (selectedDiscountId.value === id) ? null : id
 }
 
 useSeoMeta({
@@ -102,22 +147,38 @@ onUnmounted(() => {
 })
 
 async function pay() {
-  console.log('STRIPE_SECRET_KEY:', process.env.STRIPE_SECRET_KEY)
   if (!authStore.uid || !authStore.email) {
-    alert('Сначала войди в аккаунт')
+    alert('Пожалуйста, войдите в аккаунт')
     return
   }
-  const priceId = 'price_1RqDZU0mqXJB1TZDSVvs8yyQ'
-  const response = await $fetch('/api/stripe/checkout', {
-    method: 'POST',
-    body: {
-      userId: authStore.uid,
-      email: authStore.email,
-      priceId,
-    },
+  const priceId = 'price_1SvfFw0mqXJB1TZDYZ8qmtKf'
+  console.log('🚀 Начинаем оплату...', {
+    priceId,
+    coupon: selectedDiscountId.value
   })
-  const stripe = await getStripe()
-  await stripe.redirectToCheckout({ sessionId: response.sessionId })
+  try {
+    const response = await $fetch('/api/stripe/checkout', {
+      method: 'POST',
+      body: {
+        userId: authStore.uid,
+        email: authStore.email,
+        priceId,
+        couponId: selectedDiscountId.value
+      },
+    })
+    if (response.error) {
+      console.error('Ошибка сервера:', response.error)
+      alert('Ошибка при создании оплаты: ' + response.error)
+      return
+    }
+    if (response.sessionId) {
+      const stripe = await getStripe()
+      await stripe.redirectToCheckout({ sessionId: response.sessionId })
+    }
+  } catch (err) {
+    console.error('Ошибка сети или кода:', err)
+    alert('Произошла ошибка соединения. Проверьте консоль.')
+  }
 }
 </script>
 
@@ -134,6 +195,29 @@ async function pay() {
   min-height: 100vh;
 }
 
+.old-price-inline {
+  position: relative;
+  display: inline-block;
+  opacity: 0.7;
+  margin-right: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.old-price-inline::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -5%;
+  width: 110%;
+  height: 3px;
+  background-color: #ff3333;
+  transform: translateY(-50%) rotate(-15deg);
+  border-radius: 2px;
+  box-shadow: 0 0 5px rgba(255, 51, 51, 0.5);
+  pointer-events: none;
+}
+
 .back__btn {
   border: none;
   background: none;
@@ -143,6 +227,26 @@ async function pay() {
 
 .btn__icon {
   width: 40px;
+}
+
+.discounts-container {
+  margin: 20px 0;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+}
+.coupon-selector-btn {
+  background: #333;
+  color: #fff;
+  border: 2px solid transparent;
+  padding: 8px 15px;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.coupon-selector-btn.is-active {
+  border-color: #00e676;
+  background: rgba(0, 230, 118, 0.2);
 }
 
 .compare__label {
@@ -209,9 +313,10 @@ async function pay() {
 }
 
 .pay-btn {
+  min-width: 390px;
   margin-top: 30px;
-  background: #00e676;
-  color: #000;
+  background: #3889a6;
+  color: white;
   font-size: 1.2rem;
   font-weight: bold;
   padding: 14px 28px;

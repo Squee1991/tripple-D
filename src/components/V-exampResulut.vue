@@ -198,7 +198,7 @@ onMounted(() => {
   font-size: 1.6rem;
   margin-bottom: 12px;
   color: var(--titleColor, #111);
-  padding: 10px;
+  padding: 25px;
 }
 
 .ec__btn {

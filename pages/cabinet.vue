@@ -1,6 +1,5 @@
 <template>
   <div class="cabinet-wrapper">
-    <!-- Cancel modal -->
     <div v-if="isCancelModalOpen" class="modal-overlay" @click.self="closeCancelModal">
       <div class="modal-card">
         <div class="modal-title">{{ t('cabinet.cancelPremium') }}</div>

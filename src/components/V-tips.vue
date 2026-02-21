@@ -1,16 +1,15 @@
 <template>
-  <div v-if="modelValue" class="tips__overlay" @click.self="close">
-    <div class="tips__content">
-      <button class="tips__close" @click="close">×</button>
-      <h2 v-if="title" class="tips__main-title">{{ title }}</h2>
-      <div class="tips__container">
-        <ul class="tips__list">
-          <li v-for="(item, index) in tips" :key="index" class="tips__item">
-            <div class="tips__text" v-html="item.text || item.label"></div>
-          </li>
-        </ul>
-      </div>
+  <div v-if="modelValue" class="tips__overlay" @click.self="close"> <div class="tips__content">
+    <button class="tips__close" @click="close">×</button>
+    <h2 v-if="title" class="tips__main-title">{{ title }}</h2>
+    <div class="tips__container">
+      <ul class="tips__list">
+        <li v-for="(item, index) in tips" :key="index" class="tips__item">
+          <div :class="['tips__text', item.isTitle ? 'tips__text--header' : 'tips__text--body']" v-html="item.text || item.label"></div>
+        </li>
+      </ul>
     </div>
+  </div>
   </div>
 </template>
 
@@ -45,7 +44,7 @@ const close = () => emit('update:modelValue', false)
   padding: 2.5rem 2rem 2rem;
   border-radius: 16px;
   border: 3px solid #1e1e1e;
-  box-shadow: 8px 8px 0 #1e1e1e; /* Сделали тень как в дизайне */
+  box-shadow: 3px 3px 0 #1e1e1e;
   width: 90%;
   max-width: 500px;
   max-height: 85vh;
@@ -73,9 +72,8 @@ const close = () => emit('update:modelValue', false)
   padding-bottom: 4px;
 }
 
-/* Стили для заголовка */
 .tips__main-title {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 900;
   color: #333;
   margin: 0 0 1.5rem 0;
@@ -90,19 +88,30 @@ const close = () => emit('update:modelValue', false)
 }
 
 .tips__item {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
-/* Красивые стили для текста подсказки (как в вашем ручном примере) */
 .tips__text {
-  font-size: 1.1rem;
-  font-weight: 400;
   font-family: "Nunito", sans-serif;
-  padding: 1rem;
-  background: #f8f9fa;
-  border-radius: 8px;
-  border-left: 5px solid #60a5fa; /* Синяя полоска слева */
   line-height: 1.5;
+  border-radius: 8px;
+}
+
+.tips__text--header {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #2c3e50;
+  margin-top: 15px;
+}
+
+.tips__text--body {
+  border-left: 5px solid #519cd1;
+  font-size: .9rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  color: #555;
+  margin-left: 5px;
 }
 
 @media (max-width: 767px) {
@@ -111,7 +120,7 @@ const close = () => emit('update:modelValue', false)
     box-shadow: 4px 4px 0 #1e1e1e;
   }
   .tips__text {
-    font-size: 1rem;
+    font-size: .9rem;
   }
   .tips__main-title {
     font-size: 1.2rem;

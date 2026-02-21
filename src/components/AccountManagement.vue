@@ -2,17 +2,13 @@
   <div class="account-tab-body">
 <!--    <div class="subscription-status-row">-->
 <!--      <div class="subscription-label">{{ t('cabinet.status') }}</div>-->
-
 <!--      <div class="subscription-status">-->
-<!--        &lt;!&ndash; Premium активен &ndash;&gt;-->
 <!--        <template v-if="authStore.isPremium && !authStore.subscriptionCancelled">-->
 <!--          <span class="status-pill is-active">✅ {{ t('cabinet.active') }}</span>-->
 <!--        </template>-->
-<!--        &lt;!&ndash; Premium отменён, но доступ ещё есть &ndash;&gt;-->
 <!--        <template v-else-if="authStore.isPremium && authStore.subscriptionCancelled">-->
 <!--          <span class="status-pill is-cancelled">⚠️ {{ t('cabinet.canceled') }}</span>-->
 <!--        </template>-->
-<!--        &lt;!&ndash; Без премиума &ndash;&gt;-->
 <!--        <template v-else>-->
 <!--          <div class="status-inline">-->
 <!--            <span class="status-pill is-free">🔓 {{ t('cabinet.withoutPremium') }}</span>-->
@@ -38,7 +34,7 @@
 <!--        📅 {{ t('cabinet.access') }} {{ formattedSubscriptionEndDate }}-->
 <!--      </p>-->
 <!--    </template>-->
-
+    <VInstallPwa/>
     <div class="account-actions">
       <button @click.stop="openDeleteModal" class="btn btn-danger w-full">
         {{ t('cabinet.deleteAcc') }}
@@ -52,7 +48,7 @@ import {computed} from 'vue'
 import {useRouter} from 'vue-router'
 import {useI18n} from 'vue-i18n'
 import {userAuthStore} from '../../store/authStore.js'
-
+import VInstallPwa from "./V-install-pwa.vue";
 const emit = defineEmits(['open'])
 
 const {t, locale} = useI18n()
@@ -134,7 +130,7 @@ function openDeleteModal() {
 
 .status-pill.is-cancelled {
   border-color: rgba(245, 158, 11, 0.35);
-  background: rgba(194, 144, 55, 0.97);
+  background: rgba(245, 158, 11, 0.12);
 }
 
 .status-pill.is-free {
@@ -182,7 +178,7 @@ function openDeleteModal() {
   margin-top: 10px;
   padding: 0 6px;
   font-weight: 800;
-  color: var(--titleColor);
+  color: rgba(255, 255, 255, 0.78);
 }
 
 .btn {

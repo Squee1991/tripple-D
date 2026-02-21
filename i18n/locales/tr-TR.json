@@ -1,4 +1,21 @@
 {
+  "pwa": {
+    "title": "Skillupgerman'ı Yükleyin",
+    "sub": "Hızlı erişim ve kolaylık için uygulamayı ana ekrana ekleyin!",
+    "btn": "Anladım, teşekkürler!"
+  },
+  "pwaInstructions": {
+    "IosTitle": "iPhone için (Safari'de):",
+    "iosTipOne": "1. 'Paylaş' simgesine dokunun (ekranın altındaki yukarı oklu kare).",
+    "iosTipTwo": "2. 'Ana Ekrana Ekle'yi seçin (artı simgesi).",
+    "iosTipThree": "3. Sağ üst köşedeki 'Ekle'ye dokunun.",
+    "androidTitle": "Android için (Chrome'da):",
+    "androidTipOne": "1. Siteyi açın ve menüye dokunun (sağ üstteki üç nokta).",
+    "androidTipTwo": "2. 'Uygulamayı yükle' veya 'Ana ekrana ekle'yi seçin.",
+    "androidTipThree": "3. Açılır pencerede 'Yükle'ye dokunarak onaylayın.",
+    "pcTitle": "Bilgisayar için:",
+    "pcTipOne": "1. Adres çubuğunun sağ tarafındaki indirme simgesine tıklayın."
+  },
   "themeModal": {
     "title": "Görünümü Seç",
     "close": "Kapat",
@@ -2017,7 +2034,7 @@
     "questThree": "Nasıl söylenir: Göstermek",
     "questFour": "Soru cümlesini kurun",
     "questFive": "Nasıl söylenir: Yardım etmek",
-    "questSix": "Nasıl söylenir: Yardım etmek",
+    "questSix": "Dinleyin ve cümleyi yazın",
     "questSeven": "Kurun: Size yardım edebilirim",
     "questEight": "Dinleyin ve cümleyi yazın",
     "questNine": "Nasıl söylenir: Acil",

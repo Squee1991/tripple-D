@@ -246,33 +246,8 @@ button:disabled {
   font-weight: 900;
   font-size: 1.05rem;
   line-height: 1;
-
   user-select: none;
   overflow: hidden;
-}
-
-.awards__counter.cartoon-board::before {
-  content: "";
-  position: absolute;
-  top: 4px;
-  left: 8px;
-  right: 8px;
-  height: 10px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.85);
-  filter: blur(0.2px);
-  pointer-events: none;
-  opacity: 0.8;
-}
-
-.awards__counter.cartoon-board::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(rgba(26, 29, 43, 0.12) 1.4px, transparent 1.6px);
-  background-size: 10px 10px;
-  opacity: 0.6;
-  pointer-events: none;
 }
 
 .cartoon-board__value {
