@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Generates public/speaking-questions/questions.json
+ * Generates server/assets/speaking-questions/questions.json
  * with 60 question banks (12 topics × 5 CEFR levels).
  *
  * Run: node scripts/generate-speaking-questions.js
@@ -12,7 +12,7 @@ import { fileURLToPath } from 'url'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
 const existing = JSON.parse(
-  readFileSync(join(__dirname, '..', 'public', 'speaking-questions', 'questions.json'), 'utf-8')
+  readFileSync(join(__dirname, '..', 'server', 'assets', 'speaking-questions', 'questions.json'), 'utf-8')
 )
 
 const topicQuestions = {
@@ -997,7 +997,7 @@ for (const topic of topics) {
   }
 }
 
-const outPath = join(__dirname, '..', 'public', 'speaking-questions', 'questions.json')
+const outPath = join(__dirname, '..', 'server', 'assets', 'speaking-questions', 'questions.json')
 writeFileSync(outPath, JSON.stringify(result, null, 2) + '\n')
 
 const bankCount = Object.keys(result).length
