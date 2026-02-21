@@ -815,6 +815,43 @@ watch(currentTopicData, initLottieIcon)
     gap: 0
   }
 
+  .tips__text {
+    font-size: .9rem;
+  }
+  .tips__item {
+    margin-bottom: .6rem
+  }
+
+  .tipps__title {
+    font-size: 1.3rem;
+    margin-bottom: 4px;
+  }
+
+  .tips__content {
+    overflow-y: auto;
+    max-height: 600px;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+  }
+
+  .tips__content::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .tips__content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  .tips__content::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+
+  .tips__content::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
   .sidebar {
     width: 100%;
     height: 100%;

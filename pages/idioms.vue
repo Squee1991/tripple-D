@@ -77,26 +77,30 @@ import { useHead, useSeoMeta } from '#imports'
 const { t } = useI18n()
 const route = useRoute()
 const canonical = useCanonical()
-const pageTitle = t('metaIdioms.title')
-const pageDesc  = t('metaIdioms.description')
-
-useHead({
-  title: pageTitle,
-  link: [
-    { rel: 'canonical', href: canonical }
-  ]
-})
 
 useSeoMeta({
-  title: pageTitle,
-  description: pageDesc,
-  ogTitle: pageTitle,
-  ogDescription: pageDesc,
-  ogType: 'article',
-  ogUrl: canonical,
-  ogImage: '/images/seo-idioms.png',
-  robots: 'index, follow'
+  robots: 'noindex, nofollow'
 })
+// const pageTitle = t('metaIdioms.title')
+// const pageDesc  = t('metaIdioms.description')
+//
+// useHead({
+//   title: pageTitle,
+//   link: [
+//     { rel: 'canonical', href: canonical }
+//   ]
+// })
+//
+// useSeoMeta({
+//   title: pageTitle,
+//   description: pageDesc,
+//   ogTitle: pageTitle,
+//   ogDescription: pageDesc,
+//   ogType: 'article',
+//   ogUrl: canonical,
+//   ogImage: '/images/seo-idioms.png',
+//   robots: 'index, follow'
+// })
 
 const idiomGroups = ref([
   {

@@ -229,7 +229,6 @@ onBeforeUnmount(() => {
     display: none;
   }
 
-
   .mobile-content > * {
     flex: 1;
     width: 100%;

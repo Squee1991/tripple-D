@@ -18,6 +18,7 @@ const showCountdown = ref(true);
 const countdown = ref(3);
 const showEndGameModal = ref(false);
 const opponentLeft = ref(false);
+let countdownInterval = null;
 
 const opponent = computed(() => {
     if (!gameStore.sessionData?.players) return null;
@@ -82,23 +83,32 @@ function LeaveSession() {
 }
 
 onMounted(() => {
-    const sessionId = route.params.id;
-    if (sessionId) gameStore.listenToSession(sessionId);
-    const interval = setInterval(() => {
-        countdown.value--;
-        if (countdown.value === 0) {
-            clearInterval(interval);
-            setTimeout(() => {
-                showCountdown.value = false;
-            }, 500);
-        }
-    }, 1000);
+  const sessionId = route.params.id;
+  if (sessionId) gameStore.listenToSession(sessionId);
+
+  countdownInterval = setInterval(() => {
+    countdown.value--;
+
+    if (countdown.value <= 0) {
+      clearInterval(countdownInterval);
+      countdownInterval = null;
+
+      setTimeout(() => {
+        showCountdown.value = false;
+      }, 500);
+    }
+  }, 1000);
 });
 
 onUnmounted(() => {
-    if (gameStore.sessionData?.status !== 'finished') {
-        gameStore.leaveSession();
-    }
+  if (countdownInterval) {
+    clearInterval(countdownInterval);
+    countdownInterval = null;
+  }
+
+  if (gameStore.sessionData?.status !== 'finished') {
+    gameStore.leaveSession();
+  }
 });
 
 function addWordToAnswer(word) {
@@ -115,14 +125,17 @@ function removeWordFromAnswer(index) {
     currentAnswer.value = words.join(' ');
 }
 
-watch(() => gameStore.sessionData, (newSession, oldSession) => {
-    if (oldSession && oldSession.players && Object.keys(oldSession.players).length === 2 && !newSession) {
-        opponentLeft.value = true;
-        setTimeout(() => {
-          router.push(localePath('/sentence-duel'))
-        }, 3000);
+watch(() => gameStore.sessionData?.status, (newStatus) => {
+  if (newStatus === 'aborted') {
+    const abortedBy = gameStore.sessionData?.abortedBy;
+    if (abortedBy && abortedBy !== authStore.uid) {
+      opponentLeft.value = true;
+      setTimeout(() => {
+        router.push(localePath('/sentence-duel'));
+      }, 3000);
     }
-}, {deep: true});
+  }
+});
 
 watch(() => gameStore.sessionData?.status, (newStatus, oldStatus) => {
     if (!gameStore.sessionData) return;
@@ -258,7 +271,6 @@ watch(currentAnswer, (newText) => {
 </template>
 
 <style scoped>
-/* Секция стилей ниже содержит изменения */
 .countdown-overlay {
     position: fixed;
     top: 0;
@@ -347,7 +359,6 @@ watch(currentAnswer, (newText) => {
     border-radius: 15px;
     border: 3px solid #1e1e1e;
     z-index: 10;
-    /* CHANGE: Added fixed width and box-sizing */
     width: 230px;
     box-sizing: border-box;
 }
@@ -372,7 +383,6 @@ watch(currentAnswer, (newText) => {
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #1e1e1e;
-    /* CHANGE: Prevent avatar from shrinking */
     flex-shrink: 0;
 }
 
@@ -383,15 +393,13 @@ watch(currentAnswer, (newText) => {
 .player-text-info {
     display: flex;
     flex-direction: column;
-    /* CHANGE: Allow text block to use remaining space */
     flex: 1;
-    min-width: 0; /* Important for ellipsis to work in flexbox */
+    min-width: 0;
 }
 
 .player-name {
     font-size: 1.2rem;
     font-weight: 700;
-    /* CHANGE: Added text overflow handling */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -511,7 +519,7 @@ watch(currentAnswer, (newText) => {
     .player-display {
         gap: 8px;
         padding: 8px;
-        width: 180px; /* Adjusted width for smaller screens */
+        width: 180px;
     }
 
     .opponent-display, .local-player-display {

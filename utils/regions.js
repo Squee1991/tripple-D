@@ -8,6 +8,7 @@ import MasterLands from 'assets/images/locations-images/master-lands.png'
 import WildLand from 'assets/images/locations-images/wild-land.png'
 import Future from 'assets/images/locations-images/Future.png'
 import Past from 'assets/images/locations-images/Past.png'
+import Action from 'assets/images/locations-images/Action.jpg'
 
 export const regions = {
 		beginner: [
@@ -109,8 +110,8 @@ export const regions = {
 				theme: "action",
 				name: "Долина действий",
 				level: 0,
-				desc: "Здесь время больше не стоит на месте, а туман прошлого рассеивается. В этой долине путник учится управлять своей волей и ставить четкие цели, осваивая модальные глаголы и искусство взаимодействия с миром через падежи.",
-				icon: Past
+				desc: "Здесь время больше не стоит на месте, а туман прошлого рассеивается. В этой долине путник учится ставить цели, осваивая модальные глаголы и искусство взаимодействия через падежи.",
+				icon: Action
 			}
 		]
 	};

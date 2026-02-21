@@ -38,7 +38,6 @@ onBeforeUnmount(() => document.removeEventListener('mousedown', clickOutside))
         <img src="../../assets/images/arrowDown.svg" alt="arrow_down" class="arrow" :class="{ open: dropdownOpen }"/>
       </div>
     </button>
-
     <div v-if="dropdownOpen"
          class="dropdown"
          :class="{ upwards: openUpwards }"
@@ -73,14 +72,14 @@ onBeforeUnmount(() => document.removeEventListener('mousedown', clickOutside))
   justify-content: space-around;
   gap: .5rem;
   background: #fff;
-  border: 2px solid #1e1e1e;
+  border: 2px solid var(--border);
   border-radius: 12px;
   color: #1e1e1e;
   font-weight: 600;
   font-size: 15px;
   padding: 0.5rem 1rem;
   cursor: pointer;
-  box-shadow: 2px 2px 0 #1e1e1e;
+  box-shadow: 2px 2px 0 var(--border);
   transition: all .1s ease-in-out;
   white-space: nowrap;
   width: 147px;
@@ -110,13 +109,13 @@ onBeforeUnmount(() => document.removeEventListener('mousedown', clickOutside))
   left: 0;
   top: calc(100% + 5px);
   background: #fff;
-  border: 3px solid #1e1e1e;
+  border: 2px solid var(--border);
   border-radius: 12px;
-  box-shadow: 3px 3px 0 #1e1e1e;
+  box-shadow: 2px 2px 0 var(--border);
   z-index: 10;
   padding: .5rem;
   scrollbar-width: thin;
-  scrollbar-color: #1e1e1e transparent;
+  scrollbar-color: #b6acac transparent;
 }
 
 .dropdown::-webkit-scrollbar {
@@ -149,7 +148,8 @@ onBeforeUnmount(() => document.removeEventListener('mousedown', clickOutside))
 }
 
 .dropdown__item.active {
-  background: #f1c40f;
+  background: var(--regionBtnBg);
+  color: var(--regionBtnColor);
 }
 
 .language__label {

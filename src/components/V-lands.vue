@@ -220,7 +220,7 @@ onBeforeUnmount(() => {
 
 .map__title {
   font-size: 2.3rem;
-  color: var(--labelTextColor);
+  color: var(--regionBtnColor);
   font-weight: 600;
   letter-spacing: .2px;
   font-family: "Nunito", sans-serif;
@@ -301,15 +301,15 @@ onBeforeUnmount(() => {
 
 .map-btn {
   padding: 12px 18px;
-  background: #f1c40f;
-  color: black;
+  background: var(--regionBtnBg);
+  color: var(--regionBtnColor);
   font-family: "Nunito", sans-serif;
   font-weight: 600;
   font-size: 18px;
   border: 1px solid white;
   border-radius: 12px;
   cursor: pointer;
-  box-shadow: 0 3px 0 #f1c40f;
+  box-shadow: 0 3px 0 var(--regionBtnBg);
   transition: transform .12s ease, box-shadow .12s ease;
   width: 100%;
 }

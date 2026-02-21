@@ -1,50 +1,68 @@
 <script setup>
 import {ref, computed, onMounted} from 'vue'
 import {useRouter, useRoute} from 'vue-router'
-import { useEventSessionStore } from '../../store/eventsStore.js'
-useSeoMeta({
-  robots: 'noindex, nofollow'
-})
+import {useEventSessionStore} from '../../store/eventsStore.js'
 import HeartFall from "assets/images/mery-christmas/heartFall.svg";
 import VShowFall from "~/src/components/V-showFall.vue";
 import TeddyGift from 'assets/images/event-rewards/valentine-event/valentine-rewards/teddy-bear.svg'
 import CupidArrow from 'assets/images/event-rewards/valentine-event/valentine-rewards/cupidonArrow.svg'
 import Theme from 'assets/images/event-rewards/valentine-event/valentine-rewards/hot-air-balloon.svg'
-import {useSeoMeta} from "#imports";
-const { t } = useI18n()
+import {useSeoMeta, useI18n, useLocalePath} from "#imports";
+
+useSeoMeta({
+  robots: 'noindex, nofollow'
+})
+
+const {t} = useI18n()
+const eventStore = useEventSessionStore()
+const router = useRouter()
+const route = useRoute()
+const localePath = useLocalePath()
+
+const eventId = computed(() => String(route.params.id || ''))
 const isEventOpen = computed(() => {
   const event = eventStore.events.find(e => e.id === eventId.value)
   if (!event) return false
   const now = new Date().toLocaleDateString('fr-CA').slice(5)
   const start = event.start.slice(0, 5)
   const end = event.end.slice(0, 5)
-  if (start > end) {
-    return now >= start || now <= end
-  }
+  if (start > end) return now >= start || now <= end
   return now >= start && now <= end
 })
-
-const eventStore = useEventSessionStore()
-const router = useRouter()
-const route = useRoute()
-const eventId = computed(() => String(route.params.id || ''))
-const localePath = useLocalePath()
 
 const coins = ref(0)
 const coinIcon = '💘'
 const activeTab = ref('reputation')
+const isMobilePanelOpen = ref(false)
+const reputationPoints = ref(0)
+const selectedLevel = ref(1)
+
 const nav = [
   {id: 'quests', label: t('eventPanel.eventQuestions'), icon: '📜'},
   {id: 'reputation', label: t('eventPanel.eventShop'), icon: '🏆'}
 ]
-const selectedLevel = ref(1)
+
 const computedPanelTitle = computed(() => activeTab.value === 'reputation' ? t('eventPanel.eventShop') : t('eventPanel.eventQuestions'))
+
 const pathToMain = () => router.push('/')
-const reputationPoints = ref(0)
+
+function selectTab(tabId) {
+  activeTab.value = tabId
+  isMobilePanelOpen.value = true
+}
+
+function closeMobilePanel() {
+  isMobilePanelOpen.value = false
+  setTimeout(() => {
+    if (window.innerWidth <= 767) activeTab.value = ''
+  }, 300)
+}
+
 const ranks = [
   {level: 1, need: 0, title: t('eventPanel.firstReputationValentine')},
   {level: 2, need: 300, title: t('eventPanel.secondReputationValentine')},
 ]
+
 const quests = ref([
   {id: 'quest-1', title: t('valentineEventQuests.quest-1'), rewardCoins: 15, rewardRep: 50, isDone: false, icon: '📜'},
   {id: 'quest-2', title: t('valentineEventQuests.quest-2'), rewardCoins: 15, rewardRep: 50, isDone: false, icon: '🏹'},
@@ -60,13 +78,13 @@ const currentLevel = computed(() => {
   return lvl
 })
 const levelStart = computed(() => ranks[currentLevel.value - 1]?.need ?? 0)
-const nextNeed   = computed(() => ranks[currentLevel.value]?.need ?? ranks.at(-1).need)
+const nextNeed = computed(() => ranks[currentLevel.value]?.need ?? ranks.at(-1).need)
 
 const progressPct = computed(() => {
   const maxRep = ranks[ranks.length - 1].need
   if (reputationPoints.value >= maxRep) return 100
   const span = Math.max(nextNeed.value - levelStart.value, 1)
-  const cur  = Math.min(Math.max(reputationPoints.value - levelStart.value, 0), span)
+  const cur = Math.min(Math.max(reputationPoints.value - levelStart.value, 0), span)
   return Math.round((cur / span) * 100)
 })
 const levelTotal = computed(() => Math.max(nextNeed.value - levelStart.value, 1))
@@ -74,9 +92,7 @@ const levelCurrent = computed(() => Math.max(reputationPoints.value - levelStart
 
 const levelProgressText = computed(() => {
   const maxRep = ranks[ranks.length - 1].need
-  if (reputationPoints.value >= maxRep) {
-    return `${maxRep} / ${maxRep}`
-  }
+  if (reputationPoints.value >= maxRep) return `${maxRep} / ${maxRep}`
   return `${levelCurrent.value} / ${levelTotal.value}`
 })
 
@@ -86,15 +102,13 @@ const setSelectedLevel = (lvl) => {
 
 async function goToSession(questId) {
   await eventStore.start(eventId.value, String(questId))
-  const to = localePath({ name: 'event-id-session', params: { id: route.params.id } })
+  const to = localePath({name: 'event-id-session', params: {id: route.params.id}})
   await router.push(to)
 }
 
 async function refreshProgressBadges() {
   const progressData = await eventStore.loadEventProgress(eventId.value)
-  if (!progressData) {
-    return
-  }
+  if (!progressData) return
 
   coins.value = progressData.coins || 0
   reputationPoints.value = progressData.reputationPoints || 0
@@ -110,15 +124,14 @@ async function refreshProgressBadges() {
   const shopItems = progressData.shopItems || {}
   Object.values(shopByRank.value).forEach(list => {
     list.forEach(item => {
-      if (shopItems[item.id]) {
-        item.isOwned = true
-      }
+      if (shopItems[item.id]) item.isOwned = true
     })
   })
 }
 
 onMounted(() => {
   refreshProgressBadges()
+  if (window.innerWidth <= 767) activeTab.value = ''
 })
 
 const shopByRank = ref({
@@ -140,16 +153,13 @@ async function buyReward(level, rewardId) {
   item.isOwned = true
   await eventStore.saveMainProgress({
     coins: coins.value,
-    shopItems: {
-      [item.id]: true
-    }
+    shopItems: {[item.id]: true}
   })
 }
-
 </script>
 
 <template>
-  <div v-if="!isEventOpen">
+  <div v-if="isEventOpen">
     <div class="valentine-bg">
       <div class="svg-snow" aria-hidden="true">
         <VShowFall :image="HeartFall"/>
@@ -157,25 +167,25 @@ async function buyReward(level, rewardId) {
       <div class="wrapper">
         <div class="achv-layout">
           <aside class="achv-sidebar achv-card">
-            <button @click="pathToMain" type="button" class="btn btn--home">{{ t('eventPanel.pathMain')}}</button>
+            <button @click="pathToMain" type="button" class="btn btn--home">{{ t('eventPanel.pathMain') }}</button>
             <div class="hero achv-card --flat">
               <div class="hero__info">
-                <div class="hero__name">{{ t('eventPanel.event')}}</div>
+                <div class="hero__name">{{ t('eventPanel.event') }}</div>
               </div>
             </div>
             <div class="status achv-card --flat">
               <div class="status__row">
-                <div class="status__value">{{ t('eventPanel.panel')}}</div>
+                <div class="status__value">{{ t('eventPanel.panel') }}</div>
               </div>
               <div class="bar">
                 <div class="bar__fill" :style="{ width: progressPct + '%' }"/>
               </div>
               <div class="status__row">
-                <div class="status__label">{{ t('eventPanel.reputation')}}</div>
+                <div class="status__label">{{ t('eventPanel.reputation') }}</div>
                 <div class="status__value">{{ levelProgressText }}</div>
               </div>
               <div class="status__row">
-                <div class="status__label">{{ t('eventPanel.currency')}}</div>
+                <div class="status__label">{{ t('eventPanel.currency') }}</div>
                 <div class="status__value">{{ coins }} {{ coinIcon }}</div>
               </div>
             </div>
@@ -184,20 +194,23 @@ async function buyReward(level, rewardId) {
                   v-for="item in nav"
                   :key="item.id"
                   :class="['nav__btn', { 'is-active': activeTab === item.id }]"
-                  @click="activeTab = item.id"
+                  @click="selectTab(item.id)"
               >
                 <span class="nav__icon">{{ item.icon }}</span>
                 <span>{{ item.label }}</span>
               </button>
             </nav>
           </aside>
-          <main class="achv-panel achv-card">
+          <main class="achv-panel achv-card" :class="{ 'is-mobile-visible': isMobilePanelOpen }">
             <div class="panel__title">
               <h1>{{ computedPanelTitle }}</h1>
+              <button class="mobile-back-btn" @click="closeMobilePanel">
+                <span>✕</span>
+              </button>
             </div>
             <section v-if="activeTab === 'reputation'">
               <div class="section-head">
-                <h2>{{ t('eventPanel.shop')}}</h2>
+                <h2>{{ t('eventPanel.shop') }}</h2>
                 <div class="rank-switch">
                   <button
                       v-for="r in ranks"
@@ -209,10 +222,9 @@ async function buyReward(level, rewardId) {
                 </div>
               </div>
               <div class="cards">
-                <div v-for="reward in shopByRank[selectedLevel]" :key="reward.id"
-                     class="prize-card achv-card">
+                <div v-for="reward in shopByRank[selectedLevel]" :key="reward.id" class="prize-card achv-card">
                   <div class="prize-card__title">{{ reward.title }}</div>
-                  <img  class="prize-card__icon" :src="reward.icon" alt="prize icon">
+                  <img class="prize-card__icon" :src="reward.icon" alt="prize icon">
                   <div class="prize-card__body">
                     <div class="prize-card__foot">
                       <span class="price">{{ reward.priceCoins }} {{ coinIcon }}</span>
@@ -221,26 +233,26 @@ async function buyReward(level, rewardId) {
                           :disabled="reward.isOwned || currentLevel < selectedLevel || coins < reward.priceCoins"
                           @click="buyReward(selectedLevel, reward.id)"
                       >
-                        <template v-if="reward.isOwned">{{ t('eventPanel.bought')}}</template>
-                        <template v-else-if="currentLevel < selectedLevel">{{ t('eventPanel.notAllowed')}}</template>
-                        <template v-else-if="coins < reward.priceCoins">{{ t('eventPanel.notEnough')}}</template>
-                        <template v-else>{{ t('eventPanel.buy')}}</template>
+                        <template v-if="reward.isOwned">{{ t('eventPanel.bought') }}</template>
+                        <template v-else-if="currentLevel < selectedLevel">{{ t('eventPanel.notAllowed') }}</template>
+                        <template v-else-if="coins < reward.priceCoins">{{ t('eventPanel.notEnough') }}</template>
+                        <template v-else>{{ t('eventPanel.buy') }}</template>
                       </button>
                     </div>
                   </div>
                 </div>
               </div>
             </section>
-            <section v-else>
+            <section v-else-if="activeTab === 'quests'">
               <div class="quests">
-                <div><h2 class="daily__title">Ежедневные задания</h2></div>
+                <div><h2 class="daily__title">{{ t('eventPanel.questions') }}</h2></div>
                 <div v-for="quest in quests" :key="quest.id" class="quest achv-card">
                   <div class="quest__icon">{{ quest.icon }}</div>
                   <div class="quest__body">
                     <div class="quest__title clickable">{{ quest.title }}</div>
                     <div class="quest__meta">
                       <div class="quest__inner">
-                        <span class="meta__pill">{{ quest.rewardRep }} реп.</span>
+                        <span class="meta__pill">{{ quest.rewardRep }} {{ t('eventPanel.rep') }}</span>
                         <span class="meta__pill">{{ quest.rewardCoins }} {{ coinIcon }}</span>
                       </div>
                       <button class="btn btn--candy"
@@ -271,13 +283,9 @@ async function buyReward(level, rewardId) {
 </template>
 
 <style scoped>
-
 .valentine-bg {
   font-family: "Nunito", sans-serif;
   min-height: 100vh;
-  background: radial-gradient(1200px 600px at 20% -10%, #ffd1dc 0%, transparent 60%),
-  radial-gradient(1200px 600px at 120% 110%, #ffe3ea 0%, transparent 60%),
-  #ffe9ef;
   background: url("/images/ValentineBackground.webp") no-repeat center center;
   background-size: cover;
   overflow: hidden;
@@ -313,7 +321,7 @@ async function buyReward(level, rewardId) {
 }
 
 .achv-panel {
-  background: rgb(255 255 255 / 35%);
+  background: rgba(255, 255, 255, 0.25);
   flex-grow: 1;
   overflow: hidden;
   display: flex;
@@ -395,7 +403,7 @@ async function buyReward(level, rewardId) {
 
 .bar__fill {
   height: 100%;
-  background: linear-gradient(90deg, #ff4d88, #ffc0cb);
+  background: linear-gradient(90deg, #ff4d88, #8f3142);
   box-shadow: 0 0 10px #ff4d8880;
 }
 
@@ -428,12 +436,15 @@ async function buyReward(level, rewardId) {
 }
 
 .panel__title {
-  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 25px;
-  background: #EC4899;
+  background: #ec48999e;
   border-radius: 15px;
   box-shadow: 0 5px 0 #d5557e;
   padding: 10px 15px;
+  position: relative;
 }
 
 .panel__title h1 {
@@ -474,7 +485,7 @@ async function buyReward(level, rewardId) {
 
 .pill.is-active {
   background: #ff9db8;
-  color: #6b1030;
+  color: white;
 }
 
 .cards {
@@ -491,13 +502,8 @@ async function buyReward(level, rewardId) {
 }
 
 .prize-card__icon {
-  font-size: 80px;
-  line-height: 110px;
   width: 110px;
   height: 110px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .prize-card__title {
@@ -506,10 +512,6 @@ async function buyReward(level, rewardId) {
   margin-bottom: 8px;
   color: #6b1030;
   text-align: center;
-}
-
-.prize-card__body {
-  width: 100%;
 }
 
 .prize-card__foot {
@@ -528,7 +530,6 @@ async function buyReward(level, rewardId) {
   align-items: center;
   border-radius: 10px;
   padding: 5px 8px;
-
 }
 
 .daily__title {
@@ -587,19 +588,11 @@ async function buyReward(level, rewardId) {
   font-weight: 600;
 }
 
-/* --- Buttons --- */
 .btn {
   border-radius: 12px;
   padding: 14px;
   font-weight: 600;
   cursor: pointer;
-}
-
-.btn--ghost {
-  background: #6b1030;
-  color: #ffe9ef;
-  border: 2px solid #8e1a44;
-  display: none;
 }
 
 .btn--candy {
@@ -625,18 +618,8 @@ async function buyReward(level, rewardId) {
   box-shadow: 0 5px #388E3C;
 }
 
-.btn--repeat:hover {
-  background: #66BB6A;
-  box-shadow: 0 5px #388E3C;
-}
-
 .clickable {
   cursor: pointer;
-}
-
-.clickable:hover {
-  text-decoration: underline;
-  color: #b94d6e;
 }
 
 .event-closed {
@@ -657,17 +640,6 @@ async function buyReward(level, rewardId) {
   background: rgba(255, 255, 255, 0.1);
 }
 
-.closed-content h1 {
-  margin-bottom: 20px;
-  font-size: 2rem;
-}
-
-.closed-content p {
-  margin-bottom: 30px;
-  font-size: 1.2rem;
-  color: #ffd1dc;
-}
-
 .svg-snow {
   position: fixed;
   inset: 0;
@@ -675,40 +647,98 @@ async function buyReward(level, rewardId) {
   z-index: 0
 }
 
+.mobile-back-btn {
+  display: none;
+}
+
 @media (max-width: 767px) {
   .achv-layout {
+    display: block;
     padding: 15px;
-    gap: 12px;
+    position: relative;
+  }
+
+  .achv-sidebar {
+    width: 100%;
+    min-width: 0;
+    margin-bottom: 20px;
+    z-index: 10;
+  }
+
+  .achv-panel {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: url("/images/ValentineBackground.webp") no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+    border-radius: 0;
+    padding: 20px;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-left: none;
+  }
+
+  .achv-panel.is-mobile-visible {
+    transform: translateX(0);
+  }
+
+  .mobile-back-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: 2px solid #ffffff;
+    background: #e05c84;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
   }
 }
 
 @media (max-width: 1023px) {
   .quest {
     flex-direction: column;
+    align-items: center;
   }
+
   .quest__meta {
     flex-direction: column;
     align-items: stretch;
   }
+
   .quest__inner {
-    justify-content: start;
+    justify-content: center;
     margin-bottom: 10px;
   }
+
   .quest__title {
     font-size: 18px;
     margin-bottom: 15px;
+    text-align: center;
   }
-  .panel__title {
-    font-size: 26px;
-  }
+
   .cards {
     flex-wrap: wrap;
+    justify-content: center;
   }
+
   .pill {
     text-align: center;
     width: 100%;
   }
+
   .rank-switch {
+    width: 100%;
+  }
+
+  .prize-card {
     width: 100%;
   }
 }
@@ -716,6 +746,11 @@ async function buyReward(level, rewardId) {
 @media (min-width: 1024px) {
   .btn--home:hover {
     background: #d5557e;
+  }
+
+  .clickable:hover {
+    text-decoration: underline;
+    color: #b94d6e;
   }
 }
 </style>

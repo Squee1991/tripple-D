@@ -124,8 +124,7 @@ onUnmounted(() => {
 .qd__title {
   font-size: 22px;
   font-weight: 800;
-  color: var(--titleColor);
-
+  color: var(--panelTextColor);
 }
 
 .qd__right {
@@ -140,7 +139,7 @@ onUnmounted(() => {
   font-variant-numeric: tabular-nums;
   padding: 3px 8px;
   border-radius: 8px;
-  background: #42ab1a;
+  background: var(--timerbg);
   border: 3px solid #2b3240;
   box-shadow: 2px 2px 0 #000;
   color: #fff;
@@ -160,10 +159,10 @@ onUnmounted(() => {
   gap: 12px;
   align-items: center;
   background: #fff;
-  border: 2px solid #273041;
+  border: 2px solid var(--border);
   border-radius: 14px;
   padding: 0 10px;
-  box-shadow: 2px 2px 0 #273041;
+  box-shadow: 2px 2px 0 var(--border);
   position: relative;
   z-index: 1;
 }
@@ -178,7 +177,7 @@ onUnmounted(() => {
   font-size: 13px;
   font-weight: 700;
   line-height: 1.25;
-  color: #000;
+  color: var(--labelTextColor);
   margin-bottom: 10px;
 }
 

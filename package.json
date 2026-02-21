@@ -14,6 +14,7 @@
     "admin:remove": "node admin/setAdmin.js remove"
   },
   "dependencies": {
+    "@daily-co/daily-js": "^0.87.0",
     "@firebase/app-types": "0.9.3",
     "@nuxt/image": "1.11.0",
     "@nuxtjs/color-mode": "3.5.2",
@@ -30,7 +31,6 @@
     "flipbook-vue": "1.0.0-beta.4",
     "gsap": "3.13.0",
     "lottie-web": "5.13.0",
-    "nuxt": "3.15.0",
     "nuxt-vuefire": "1.0.5",
     "phaser": "3.90.0",
     "simplebar": "6.3.1",
@@ -41,15 +41,16 @@
     "turn.js": "1.0.5",
     "v-onboarding": "^2.9.0",
     "vue": "latest",
-    "vue-router": "latest",
     "vuedraggable": "4.1.0",
     "vuefire": "3.2.1"
   },
   "devDependencies": {
     "@nuxtjs/google-fonts": "3.2.0",
+    "@vite-pwa/nuxt": " 1.1.1",
     "concurrently": "9.1.2",
-    "cross-env": "^10.1.0",
+    "cross-env": "10.1.0",
     "emailjs-com": "3.2.0",
-    "pinia": "3.0.1"
+    "nuxt": "3.15.0",
+    "pinia": "3.0.4"
   }
 }

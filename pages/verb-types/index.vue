@@ -43,7 +43,6 @@
             </div>
             <p class="info-section__description">{{ currentTopicData.contentBlocks[0].content }}</p>
           </section>
-
           <div v-for="(block, index) in currentTopicData.contentBlocks.slice(1)" :key="index">
             <section v-if="block.type === 'table'" class="info-section">
               <h3 class="info-section__title">{{ block.title }}</h3>
@@ -97,21 +96,25 @@ import SoundBtn from '../../src/components/soundBtn';
 import { useHead, useSeoMeta } from '#imports'
 const canonical = useCanonical()
 const {t} = useI18n()
-const pageTitle = t('metaVerbTypes.title')
-const pageDesc  = t('metaVerbTypes.description')
-useHead({
-  title: pageTitle,
-  link: [{ rel: 'canonical', href: canonical }]
-})
+// const pageTitle = t('metaVerbTypes.title')
+// const pageDesc  = t('metaVerbTypes.description')
+// useHead({
+//   title: pageTitle,
+//   link: [{ rel: 'canonical', href: canonical }]
+// })
+// useSeoMeta({
+//   title: pageTitle,
+//   description: pageDesc,
+//   ogTitle: pageTitle,
+//   ogDescription: pageDesc,
+//   ogType: 'article',
+//   ogUrl: canonical,
+//   ogImage: '/images/seo-verb-types.png',
+//   robots: 'index, follow'
+// })
+
 useSeoMeta({
-  title: pageTitle,
-  description: pageDesc,
-  ogTitle: pageTitle,
-  ogDescription: pageDesc,
-  ogType: 'article',
-  ogUrl: canonical,
-  ogImage: '/images/seo-verb-types.png',
-  robots: 'index, follow'
+  robots: 'noindex, nofollow'
 })
 
 const router = useRouter();

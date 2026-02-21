@@ -1,4 +1,37 @@
 {
+  "pwa": {
+    "title": "Skillupgerman इंस्टॉल करें",
+    "sub": "त्वरित पहुंच के लिए ऐप को अपनी होम स्क्रीन पर जोड़ें!",
+    "btn": "समझ गया, धन्यवाद!"
+  },
+  "pwaInstructions": {
+    "IosTitle": "iPhone के लिए (Safari में):",
+    "iosTipOne": "1. 'Share' पर टैप करें (नीचे तीर वाला वर्गाकार आइकन)।",
+    "iosTipTwo": "2. 'Add to Home Screen' चुनें (प्लस आइकन)।",
+    "iosTipThree": "3. ऊपरी दाएं कोने में 'Add' पर टैप करें।",
+    "androidTitle": "Android के लिए (Chrome में):",
+    "androidTipOne": "1. साइट खोलें और मेनू (ऊपर दाईं ओर तीन बिंदु) पर टैप करें।",
+    "androidTipTwo": "2. 'Install app' या 'Add to Home screen' चुनें।",
+    "androidTipThree": "3. पॉप-अप में 'Install' पर टैप करके पुष्टि करें।",
+    "pcTitle": "कंप्यूटर के लिए:",
+    "pcTipOne": "1. एड्रेस बार के दाईं ओर डाउनलोड आइकन पर क्लिक करें।"
+  },
+  "themeModal": {
+    "title": "डिज़ाइन चुनें",
+    "close": "बंद करें",
+    "light": "हल्का",
+    "dark": "गहरा",
+    "pink": "रोमांटिक"
+  },
+  "pinkThemeModal": {
+    "partOne": "इस थीम को केवल",
+    "partTwo": "दिलों का उत्सव",
+    "partThree": "ईवेंट में अनलॉक किया जा सकता है। इसे ईवेंट स्टोर से खरीदें!"
+  },
+  "settingsGroup": {
+    "notifications": "सूचनाएं",
+    "appearance": "रूप-रंग"
+  },
   "valentineAchievements": {
     "firstValentineQuestLabel": "पहली डेट",
     "firstValentineQuesDescription": "पहला कदम उठाएं! 'दिलों का उत्सव' ईवेंट का कोई भी कार्य पूरा करें और अपना पहला इनाम पाएं।",
@@ -2001,7 +2034,7 @@
     "questThree": "कैसे कहें: दिखाना (To show)",
     "questFour": "एक प्रश्नवाचक वाक्य बनाएं",
     "questFive": "कैसे कहें: मदद करना (To help)",
-    "questSix": "कैसे कहें: मदद करना",
+    "questSix": "सुनें और वाक्य लिखें",
     "questSeven": "वाक्य बनाएं: मैं आपकी मदद कर सकता हूँ",
     "questEight": "सुनें और वाक्य लिखें",
     "questNine": "कैसे कहें: तत्काल (Urgent)",
@@ -4421,15 +4454,32 @@
     "questFifteenSecondOption": "मीनार होटल के बगल में है",
     "questFifteenThirdOption": "मीनार होटल के पीछे है"
   },
+  "shop": {
+    "title": "वस्तु की दुकान",
+    "subText": "अपने संचित आर्टिक्लस (Articluses) को उपयोगी बोनस और अपनी पढ़ाई के लिए स्थायी छूट के लिए बदलें।",
+    "bought": "खरीदा गया"
+  },
+  "cardsShop": {
+    "livesTitle": "जीवन",
+    "livesDescription": "यहाँ आप अपना जीवन फिर से भर सकते हैं (अधिकतम 5)",
+    "full": "पूर्ण",
+    "buy": "खरीदें"
+  },
   "awardsSection": {
     "congratulations": "बधाई हो! यह पुरस्कार पहले से ही आपके पास है!",
     "close": "बंद करें"
   },
+  "cabinetNav": {
+    "common": "सामान्य",
+    "awards": "पुरस्कार",
+    "rank": "रैंक",
+    "exam": "मित्र"
+  },
   "cabinetSidebar": {
-    "valueOne": "खाता सेटिंग्स",
-    "valueTwo": "मित्र",
-    "valueThree": "पुरस्कार",
-    "valueFour": "परीक्षा संग्रह"
+    "valueOne": "खाता पैरामीटर",
+    "valueTwo": "परीक्षा पुरालेख",
+    "valueThree": "दुकान",
+    "valueFour": "सेटिंग्स"
   },
   "cabinetAccordion": {
     "personalData": "व्यक्तिगत डेटा",
@@ -4446,7 +4496,8 @@
     "sound": "ध्वनि सूचनाएं",
     "theme": "डार्क मोड",
     "ach": "उपलब्धि सूचना",
-    "snowFall": "हिमपात (Snowfall)"
+    "snowFall": "हिमपात",
+    "themeBtn": "थीम"
   },
   "cabinet": {
     "important": "महत्वपूर्ण!!!",
@@ -5525,7 +5576,8 @@
     "about": "ऐप के बारे में",
     "contact": "संपर्क",
     "quest": "प्रश्न/उत्तर",
-    "events": "ईवेंट्स"
+    "events": "ईवेंट्स",
+    "speakingRooms": "बोलना"
   },
   "formLabel": {
     "name": "नाम",
@@ -5859,5 +5911,65 @@
     "placeholder": "जर्मन वाक्य या आर्टिकल के साथ शब्द लिखें",
     "translate": "अनुवाद (अनिवार्य नहीं)",
     "btn": "बनाएं"
+  },
+  "speakingRooms": {
+    "title": "बातचीत के कमरे",
+    "createRoom": "कमरा बनाएं",
+    "joinRoom": "शामिल हों",
+    "leaveRoom": "कमरा छोड़ें",
+    "closeRoom": "कमरा बंद करें",
+    "back": "वापस",
+    "topic": "विषय",
+    "topicPlaceholder": "उदा. अपनी दैनिक दिनचर्या का वर्णन करें",
+    "cefrLevel": "स्तर",
+    "maxParticipants": "अधिकतम प्रतिभागी",
+    "visibility": "दृश्यता",
+    "public": "सार्वजनिक",
+    "private": "निजी",
+    "create": "बनाएं",
+    "creating": "बना रहे हैं...",
+    "waiting": "प्रतीक्षा",
+    "active": "सक्रिय",
+    "allLevels": "सभी",
+    "noRooms": "कोई कमरा उपलब्ध नहीं। पहला बनाएं!",
+    "createFirst": "पहला कमरा बनाएं",
+    "loading": "लोड हो रहा है...",
+    "loadMore": "और लोड करें",
+    "prejoinTitle": "शामिल होने के लिए तैयार?",
+    "cameraOff": "कैमरा बंद है",
+    "audioOnly": "केवल ऑडियो",
+    "microphone": "माइक्रोफ़ोन",
+    "camera": "कैमरा",
+    "micOn": "माइक चालू",
+    "micOff": "माइक बंद",
+    "camOn": "कैमरा चालू",
+    "camOff": "कैमरा बंद",
+    "joinCall": "कॉल में शामिल हों",
+    "joining": "शामिल हो रहे हैं...",
+    "leave": "छोड़ें",
+    "screenShare": "स्क्रीन शेयर",
+    "participants": "प्रतिभागी",
+    "currentQuestion": "वर्तमान प्रश्न",
+    "noQuestions": "कोई प्रश्न नहीं",
+    "nextQuestion": "अगला प्रश्न",
+    "previousQuestions": "पिछले प्रश्न",
+    "roomClosed": "कमरा बंद",
+    "roomClosedText": "यह कमरा होस्ट द्वारा बंद कर दिया गया।",
+    "backToRooms": "कमरों पर वापस",
+    "loadQuestions": "प्रश्न लोड करें",
+    "topics": {
+      "general": "सामान्य",
+      "family": "परिवार",
+      "daily-life": "दैनिक जीवन",
+      "food": "खाना और पेय",
+      "travel": "यात्रा",
+      "hobbies": "शौक",
+      "health": "स्वास्थ्य",
+      "work": "काम और करियर",
+      "education": "शिक्षा",
+      "technology": "प्रौद्योगिकी",
+      "culture": "संस्कृति और समाज",
+      "environment": "पर्यावरण"
+    }
   }
 }

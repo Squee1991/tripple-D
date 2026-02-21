@@ -1,4 +1,37 @@
 {
+  "pwa": {
+    "title": "Skillupgerman'ı Yükleyin",
+    "sub": "Hızlı erişim ve kolaylık için uygulamayı ana ekrana ekleyin!",
+    "btn": "Anladım, teşekkürler!"
+  },
+  "pwaInstructions": {
+    "IosTitle": "iPhone için (Safari'de):",
+    "iosTipOne": "1. 'Paylaş' simgesine dokunun (ekranın altındaki yukarı oklu kare).",
+    "iosTipTwo": "2. 'Ana Ekrana Ekle'yi seçin (artı simgesi).",
+    "iosTipThree": "3. Sağ üst köşedeki 'Ekle'ye dokunun.",
+    "androidTitle": "Android için (Chrome'da):",
+    "androidTipOne": "1. Siteyi açın ve menüye dokunun (sağ üstteki üç nokta).",
+    "androidTipTwo": "2. 'Uygulamayı yükle' veya 'Ana ekrana ekle'yi seçin.",
+    "androidTipThree": "3. Açılır pencerede 'Yükle'ye dokunarak onaylayın.",
+    "pcTitle": "Bilgisayar için:",
+    "pcTipOne": "1. Adres çubuğunun sağ tarafındaki indirme simgesine tıklayın."
+  },
+  "themeModal": {
+    "title": "Görünümü Seç",
+    "close": "Kapat",
+    "light": "Açık",
+    "dark": "Koyu",
+    "pink": "Romantik"
+  },
+  "pinkThemeModal": {
+    "partOne": "Bu temanın kilidi sadece",
+    "partTwo": "Kalpler Festivali",
+    "partThree": "etkinliğinde açılabilir. Etkinlik mağazasından satın alın!"
+  },
+  "settingsGroup": {
+    "notifications": "Bildirimler",
+    "appearance": "Görünüm"
+  },
   "valentineAchievements": {
     "firstValentineQuestLabel": "İlk Randevu",
     "firstValentineQuesDescription": "İlk adımı atın! 'Kalpler Festivali' etkinliğindeki herhangi bir görevi tamamlayın ve ilk ödülünüzü alın.",
@@ -2001,7 +2034,7 @@
     "questThree": "Nasıl söylenir: Göstermek",
     "questFour": "Soru cümlesini kurun",
     "questFive": "Nasıl söylenir: Yardım etmek",
-    "questSix": "Nasıl söylenir: Yardım etmek",
+    "questSix": "Dinleyin ve cümleyi yazın",
     "questSeven": "Kurun: Size yardım edebilirim",
     "questEight": "Dinleyin ve cümleyi yazın",
     "questNine": "Nasıl söylenir: Acil",
@@ -4421,15 +4454,32 @@
     "questFifteenSecondOption": "Kule otelin yanında",
     "questFifteenThirdOption": "Kule otelin arkasında"
   },
+  "shop": {
+    "title": "Eşya Mağazası",
+    "subText": "Biriktirdiğiniz Articlusları eğitiminiz için faydalı bonuslar ve kalıcı indirimlerle takas edin.",
+    "bought": "Satın Alındı"
+  },
+  "cardsShop": {
+    "livesTitle": "Canlar",
+    "livesDescription": "Buradan canlarını yenileyebilirsin (Maksimum 5)",
+    "full": "Tam",
+    "buy": "Satın Al"
+  },
   "awardsSection": {
     "congratulations": "Tebrikler! Bu ödül zaten sizde!",
     "close": "Kapat"
   },
+  "cabinetNav": {
+    "common": "Genel",
+    "awards": "Ödüller",
+    "rank": "Rütbe",
+    "exam": "Arkadaşlar"
+  },
   "cabinetSidebar": {
-    "valueOne": "Hesap ayarları",
-    "valueTwo": "Arkadaşlar",
-    "valueThree": "Ödüller",
-    "valueFour": "Sınav arşivi"
+    "valueOne": "Hesap Parametreleri",
+    "valueTwo": "Sınav Arşivi",
+    "valueThree": "Mağaza",
+    "valueFour": "Ayarlar"
   },
   "cabinetAccordion": {
     "personalData": "Kişisel Veriler",
@@ -4445,8 +4495,9 @@
   "cabinetToggle": {
     "sound": "Sesli Bildirimler",
     "theme": "Karanlık Mod",
-    "ach": "Başarı Bildirimleri",
-    "snowFall": "Kar yağışı"
+    "ach": "Başarım Bildirimleri",
+    "snowFall": "Kar Yağışı",
+    "themeBtn": "Tema"
   },
   "cabinet": {
     "important": "ÖNEMLİ!!!",
@@ -5525,7 +5576,8 @@
     "about": "Uygulama Hakkında",
     "contact": "İletişim",
     "quest": "Soru/Cevap",
-    "events": "Etkinlikler"
+    "events": "Etkinlikler",
+    "speakingRooms": "Konuşma"
   },
   "formLabel": {
     "name": "İsim",
@@ -5874,5 +5926,65 @@
     "placeholder": "Artikellerle Almanca bir cümle veya kelime girin",
     "translate": "çeviri(isteğe bağlı)",
     "btn": "Oluştur"
+  },
+  "speakingRooms": {
+    "title": "Konuşma Odaları",
+    "createRoom": "Oda Oluştur",
+    "joinRoom": "Katıl",
+    "leaveRoom": "Odadan Ayrıl",
+    "closeRoom": "Odayı Kapat",
+    "back": "Geri",
+    "topic": "Konu",
+    "topicPlaceholder": "örn. Günlük rutininizi anlatın",
+    "cefrLevel": "Seviye",
+    "maxParticipants": "Maks. Katılımcı",
+    "visibility": "Görünürlük",
+    "public": "Herkese Açık",
+    "private": "Özel",
+    "create": "Oluştur",
+    "creating": "Oluşturuluyor...",
+    "waiting": "Bekleniyor",
+    "active": "Aktif",
+    "allLevels": "Tümü",
+    "noRooms": "Oda bulunamadı. İlk odayı oluşturun!",
+    "createFirst": "İlk Odayı Oluştur",
+    "loading": "Yükleniyor...",
+    "loadMore": "Daha Fazla",
+    "prejoinTitle": "Katılmaya Hazır mısınız?",
+    "cameraOff": "Kamera kapalı",
+    "audioOnly": "Yalnızca ses",
+    "microphone": "Mikrofon",
+    "camera": "Kamera",
+    "micOn": "Mikrofon Açık",
+    "micOff": "Mikrofon Kapalı",
+    "camOn": "Kamera Açık",
+    "camOff": "Kamera Kapalı",
+    "joinCall": "Aramaya Katıl",
+    "joining": "Katılınıyor...",
+    "leave": "Ayrıl",
+    "screenShare": "Ekran Paylaşımı",
+    "participants": "Katılımcılar",
+    "currentQuestion": "Mevcut Soru",
+    "noQuestions": "Soru bulunamadı",
+    "nextQuestion": "Sonraki Soru",
+    "previousQuestions": "Önceki Sorular",
+    "roomClosed": "Oda Kapatıldı",
+    "roomClosedText": "Bu oda moderatör tarafından kapatıldı.",
+    "backToRooms": "Odalara Dön",
+    "loadQuestions": "Soruları Yükle",
+    "topics": {
+      "general": "Genel",
+      "family": "Aile",
+      "daily-life": "Günlük Yaşam",
+      "food": "Yiyecek ve İçecek",
+      "travel": "Seyahat",
+      "hobbies": "Hobiler",
+      "health": "Sağlık",
+      "work": "İş ve Kariyer",
+      "education": "Eğitim",
+      "technology": "Teknoloji",
+      "culture": "Kültür ve Toplum",
+      "environment": "Çevre"
+    }
   }
 }

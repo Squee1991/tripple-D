@@ -1,7 +1,7 @@
 <template>
   <div class="points">
     <VTips
-        :tips="infoData"
+        :tips="flattenedTips"
         v-model="isArticleOpen"
     />
     <section class="points-card" aria-label="Поинты и уровень">
@@ -12,13 +12,13 @@
         </button>
       </header>
       <ul v-if="langStore" class="points-card__list">
-        <li class="points-card__item">
-          <div class="points-card__label">{{ t('accountPanel.rank') }}</div>
-          <div id="articlus" :title="hoverTitle.title" v-if="userAuth.uid" class="articlus__wrapper">
-            <img class="articlus__icon" src="../../assets/images/graduate-hat.svg" alt="Articlus_icon">
-            <span class="points-card__value"> {{ userAuth.totalHats}}</span>
-          </div>
-        </li>
+<!--        <li class="points-card__item">-->
+<!--          <div class="points-card__label">{{ t('accountPanel.rank') }}</div>-->
+<!--          <div id="articlus" :title="hoverTitle.title" v-if="userAuth.uid" class="articlus__wrapper">-->
+<!--            <img class="articlus__icon" src="../../assets/images/graduate-hat.svg" alt="Articlus_icon">-->
+<!--            <span class="points-card__value"> {{ userAuth.totalHats}}</span>-->
+<!--          </div>-->
+<!--        </li>-->
         <li class="points-card__item">
           <div class="points-card__label">{{ t('accountPanel.articles') }}</div>
           <div id="articlus" :title="hoverTitle.title" v-if="userAuth.uid" class="articlus__wrapper">
@@ -82,13 +82,26 @@ const userAuth = userAuthStore()
 const router = useRouter()
 const friendsStore = useFriendsStore()
 const isArticleOpen = ref(false)
-const handleLeveling = () => {
-  const LEVEL_UP_XP = 100
-  if (langStore.exp >= LEVEL_UP_XP) {
-    langStore.isLeveling++
-    langStore.exp -= LEVEL_UP_XP
-  }
-}
+
+// const handleLeveling = () => {
+//   const LEVEL_UP_XP = 100
+//   if (langStore.exp >= LEVEL_UP_XP) {
+//     langStore.isLeveling++
+//     langStore.exp -= LEVEL_UP_XP
+//   }
+// }
+
+const flattenedTips = computed(() => {
+  const result = [];
+
+  infoData.value.forEach(section => {
+    result.push({ label: section.title, isTitle: true });
+    section.tips.forEach(tip => {
+      result.push({ label: tip.label, isTitle: false });
+    });
+  });
+  return result;
+});
 
 // const currentRank = computed(() => {
 //   const hats = userAuth.totalHats
@@ -116,13 +129,13 @@ const hoverTitle = {
   level: t('hoverTitle.level')
 }
 const infoData = ref([
-  {id: "rank",
-    title: t('pavelOverlay.rankTitle'),
-    tips:[
-      {label: t('pavelOverlay.rankLabelOne')},
-      {label: t('pavelOverlay.rankLabelTwo')}
-    ]
-  },
+  // {id: "rank",
+  //   title: t('pavelOverlay.rankTitle'),
+  //   tips:[
+  //     {label: t('pavelOverlay.rankLabelOne')},
+  //     {label: t('pavelOverlay.rankLabelTwo')}
+  //   ]
+  // },
   {id: "article",
     title: t('pavelOverlay.articleTitle'),
     tips:[
@@ -149,9 +162,9 @@ const toPayment = () => {
   router.push('/pay')
 }
 
-watch(() => langStore.exp, (newVal) => {
-  handleLeveling()
-})
+// watch(() => langStore.exp, (newVal) => {
+//   handleLeveling()
+// })
 onMounted(() => {
   friendsStore.loadFriends()
 })
@@ -182,14 +195,14 @@ onMounted(() => {
 }
 .ranked__inner {
   width: 100%;
-  border: 2px solid black;
+  border: 2px solid var(--border);
   border-radius: 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
   padding: 1px 5px;
-  box-shadow: 2px 2px 0 black;
+  box-shadow: 2px 2px 0  var(--border);
   transition: .2s;
   background: white;
 }
@@ -207,14 +220,14 @@ onMounted(() => {
 }
 
 .ranked__title {
-  color: #1c1b1b;
+  color: var(--labelTextColor);
   font-size: 18px;
   margin-left: 8px;
   font-weight: 600;
 }
 
 .points__title {
-  color: var(--labelTextColor);
+  color: var(--panelTextColor);
 }
 
 .stat__icon {
@@ -247,8 +260,8 @@ onMounted(() => {
 .articlus__wrapper {
   display: flex;
   width: 78px;
-  border:2px solid black;
-  box-shadow: 2px 2px 0 black;
+  border:2px solid var(--border);
+  box-shadow: 2px 2px 0 var(--border);
   justify-content: center;
   align-items: center;
   border-radius: 10px;
@@ -385,7 +398,7 @@ onMounted(() => {
 .points-card__label {
   font-size: 19px;
   font-weight: 600;
-  color: var(--labelTextColor);
+  color: var(--panelTextColor);
   font-family: "Nunito", sans-serif;
 }
 
@@ -403,8 +416,8 @@ onMounted(() => {
   font-size: 18px;
   font-weight: 600;
   background: #fff;
-  border: 2px solid #111;
-  box-shadow: 2px 2px 0 black;
+  border: 2px solid var(--border);
+  box-shadow: 2px 2px 0 var(--border);
   border-radius: 10px;
   font-family: "Nunito", sans-serif;
   padding: 4px 10px;
