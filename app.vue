@@ -5,7 +5,7 @@
 <!--    <VStepHint v-if="showStepHint" @close="showStepHint = false"/>-->
 <!--      <FeedBack/>-->
     <VLost/>
-  <!--  <VRankOverlay/>-->
+    <VRankOverlay/>
     <VInstallPwa/>
   </NuxtLayout>
 </template>

@@ -118,7 +118,7 @@ function openDeleteModal() {
   line-height: 1;
   border: 1px solid rgba(255, 255, 255, 0.16);
   background: rgba(255, 255, 255, 0.06);
-  color: rgba(255, 255, 255, 0.92);
+  color: rgba(42, 41, 41, 0.92);
   backdrop-filter: blur(6px);
 }
 
@@ -170,14 +170,14 @@ function openDeleteModal() {
 .subtext {
   margin: 0;
   font-weight: 800;
-  color: rgba(255, 255, 255, 0.78);
+  color: var(--titleColor);
 }
 
 .access__text {
   margin-top: 10px;
   padding: 0 6px;
   font-weight: 800;
-  color: rgba(255, 255, 255, 0.78);
+  color: var(--titleColor);
 }
 
 .btn {
@@ -187,7 +187,7 @@ function openDeleteModal() {
   cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.16);
   background: rgba(255, 255, 255, 0.06);
-  color: rgba(255, 255, 255, 0.92);
+  color: var(--titleColor);
 }
 
 .btn-outline-danger {
