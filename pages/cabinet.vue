@@ -541,7 +541,6 @@ async function confirmDeleteAccount() {
 }
 
 onMounted(async () => {
-  await authStore.markCancelledInDb()
   await learningStore.loadFromFirebase()
   await eventStore.loadGlobalWinterSettings()
   friendsStore.loadFriends()

@@ -12,13 +12,13 @@
         </button>
       </header>
       <ul v-if="langStore" class="points-card__list">
-<!--        <li class="points-card__item">-->
-<!--          <div class="points-card__label">{{ t('accountPanel.rank') }}</div>-->
-<!--          <div id="articlus" :title="hoverTitle.title" v-if="userAuth.uid" class="articlus__wrapper">-->
-<!--            <img class="articlus__icon" src="../../assets/images/graduate-hat.svg" alt="Articlus_icon">-->
-<!--            <span class="points-card__value"> {{ userAuth.totalHats}}</span>-->
-<!--          </div>-->
-<!--        </li>-->
+        <li class="points-card__item">
+          <div class="points-card__label">{{ t('accountPanel.rank') }}</div>
+          <div id="articlus" :title="hoverTitle.title" v-if="userAuth.uid" class="articlus__wrapper">
+            <img class="articlus__icon" src="../../assets/images/graduate-hat.svg" alt="Articlus_icon">
+            <span class="points-card__value"> {{ userAuth.totalHats}}</span>
+          </div>
+        </li>
         <li class="points-card__item">
           <div class="points-card__label">{{ t('accountPanel.articles') }}</div>
           <div id="articlus" :title="hoverTitle.title" v-if="userAuth.uid" class="articlus__wrapper">
