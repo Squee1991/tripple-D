@@ -29,7 +29,7 @@ if (!getApps().length) {
 
 const db = getFirestore()
 
-const questionsPath = path.join(projectRoot, 'public/speaking-questions/questions.json')
+const questionsPath = path.join(projectRoot, 'server/assets/speaking-questions/questions.json')
 const questionBanks = JSON.parse(fs.readFileSync(questionsPath, 'utf8'))
 
 async function seed() {

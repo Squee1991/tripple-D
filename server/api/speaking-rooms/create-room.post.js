@@ -2,19 +2,16 @@ import { db } from '../utils/firebase-admin.js'
 import { verifyFirebaseToken } from '../utils/verify-firebase-token.js'
 import { createDailyRoom } from '../utils/daily-api.js'
 import { FieldValue } from 'firebase-admin/firestore'
-import { readFileSync } from 'fs'
-import { join } from 'path'
-
 const ALLOWED_TOPICS = [
 	'general', 'family', 'daily-life', 'food', 'travel', 'hobbies',
 	'health', 'work', 'education', 'technology', 'culture', 'environment'
 ]
 
 let questionBanks = null
-function loadQuestionBanks() {
+async function loadQuestionBanks() {
 	if (!questionBanks) {
-		const filePath = join(process.cwd(), 'public', 'speaking-questions', 'questions.json')
-		questionBanks = JSON.parse(readFileSync(filePath, 'utf-8'))
+		const storage = useStorage('assets:server')
+		questionBanks = await storage.getItem('speaking-questions/questions.json')
 	}
 	return questionBanks
 }
@@ -46,7 +43,7 @@ export default defineEventHandler(async (event) => {
 			expSeconds: 14400
 		})
 
-		const banks = loadQuestionBanks()
+		const banks = await loadQuestionBanks()
 		const bankId = `${validTopic}-${cefrLevel}`
 		const fallbackBankId = `general-${cefrLevel}`
 		const bank = banks[bankId] || banks[fallbackBankId]
