@@ -74,7 +74,7 @@
 						{ "question": "___ Labor ist neu.", "word": "Labor", "answer": "das" },
 						{ "question": "___ Experiment ist interessant.", "word": "Experiment", "answer": "das" },
 						{ "question": "___ Projektor ist an.", "word": "Projektor", "answer": "der" },
-						{ "question": "___ Leinwand ist weiß.", "word": "Leinwand", "answer": "die" },
+						{ "question": "___ Leinwand ist weiß.", "word": "Leinand", "answer": "die" },
 						{ "question": "___ Mikroskop ist stark.", "word": "Mikroskop", "answer": "das" },
 						{ "question": "___ Fach ist mein Lieblingsfach.", "word": "Fach", "answer": "das" },
 						{ "question": "___ Wissen ist Macht.", "word": "Wissen", "answer": "das" }
@@ -157,7 +157,7 @@
 						{ "question": "Das Bild erscheint auf ___ Leinwand.", "word": "Leinwand", "answer": "der" },
 						{ "question": "Ich schaue durch ___ Mikroskop.", "word": "Mikroskop", "answer": "das" },
 						{ "question": "Ich habe ___ Lieblingsfach.", "word": "Fach", "answer": "ein" },
-						{ "question": "Er teilt sein ___ Wissen mit uns.", "word": "Wissen", "answer": "" }
+						{ "question": "Er vertieft ___ Wissen.", "word": "Wissen", "answer": "das" }
 					]
 				}
 			]

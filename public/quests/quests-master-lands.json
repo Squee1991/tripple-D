@@ -539,7 +539,8 @@
         "id": 6,
         "type": "speechToText",
         "question": "masterLandsFifthQuests.questSix",
-        "correctAnswer": "ich helfe dir"
+        "text": "ich helfe dir",
+        "answer": "ich helfe dir"
       },
       {
         "id": 7,
@@ -566,7 +567,7 @@
         "id": 10,
         "type": "reorder",
         "question": "masterLandsFifthQuests.questTen",
-        "words": [ "Aufgabe","diese",  "dringend", "ist"],
+        "words": [ "Aufgabe","Diese",  "dringend", "ist", "dieser"],
         "correctOrder": ["Diese", "Aufgabe", "ist", "dringend"]
       },
       {
@@ -729,9 +730,9 @@
   },
   {
     "questId": "job-seven",
-    "title": "masterLandsSixthQuests.title",
+    "title": "masterLandsSeventhQuests.title",
     "progress": "0/15",
-    "description": "masterLandsSixthQuests.description",
+    "description": "masterLandsSeventhQuests.description",
     "conditions": {
       "goal": "Выучить слова про время, опоздания и ожидание",
       "minCorrect": 13,
@@ -745,14 +746,14 @@
       {
         "id": 1,
         "type": "select",
-        "question": "masterLandsSixthQuests.questOne",
+        "question": "masterLandsSeventhQuests.questOne",
         "options": ["der Termin", "die Pause", "das Lager"],
         "answer": "der Termin"
       },
       {
         "id": 2,
         "type": "speechToText",
-        "question": "masterLandsSixthQuests.questTwo",
+        "question": "masterLandsSeventhQuests.questTwo",
         "text": "Ich habe heute einen Termin",
         "answer": "Ich habe heute einen Termin"
       },
@@ -767,8 +768,8 @@
         "id": 4,
         "type": "reorder",
         "question": "masterLandsSeventhQuests.questFour",
-        "words": ["immer", "pünktlich", "Ich", "komme"],
-        "correctOrder": ["Ich", "komme", "immer", "pünktlich", "manchmal"]
+        "words": ["immer", "pünktlich", "Ich", "komme", "manchmal"],
+        "correctOrder": ["Ich", "komme", "immer", "pünktlich"]
       },
       {
         "id": 5,
@@ -787,8 +788,8 @@
         "id": 7,
         "type": "reorder",
         "question": "masterLandsSeventhQuests.questSeven",
-        "words": ["LKW", "der", "wann", "kommt"],
-        "correctOrder": ["wann", "kommt", "der", "LKW", "die"]
+        "words": ["LKW", "der", "wann", "kommt","die"],
+        "correctOrder": ["wann", "kommt", "der", "LKW"]
       },
       {
         "id": 8,

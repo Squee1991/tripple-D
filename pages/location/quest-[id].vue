@@ -267,7 +267,6 @@ import {computed, onMounted, ref, watch, watchEffect, nextTick, onBeforeUnmount}
 import {useRoute, useRouter, onBeforeRouteLeave} from 'vue-router'
 import {userChainStore} from '~/store/chainStore.js'
 import {userlangStore} from '~/store/learningStore.js'
-import {useI18n} from 'vue-i18n'
 import SoundBtn from '~/src/components/soundBtn.vue'
 import {playCorrect, playWrong, unlockAudioByUserGesture} from '~/utils/soundManager.js'
 import RightIcon from '~/assets/images/location-icons/accept.svg'
