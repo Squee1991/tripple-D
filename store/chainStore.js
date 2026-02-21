@@ -4,6 +4,8 @@ import { regions } from '~/utils/regions.js'
 import { doc, getDoc, getFirestore, runTransaction, increment, setDoc } from 'firebase/firestore'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 import {dailyStore } from './dailyStore.js'
+import { userlangStore } from './learningStore.js'
+
 const REGEN_INTERVAL_MS = 5 * 60 * 1000
 const MAX_LIVES = 5
 
@@ -35,6 +37,7 @@ export const userChainStore = defineStore('chain', () => {
 	const taskResults = ref({})
 	const isRetryMode = ref(false)
     const daily = dailyStore()
+	const langStore = userlangStore()
 	let lifeTickerId = null
 
 	const totalQuestTasks = computed(() => quest.value?.conditions?.requiredTasks ?? quest.value?.tasks?.length ?? 0)
@@ -221,8 +224,10 @@ export const userChainStore = defineStore('chain', () => {
 		const userRef = await getUserRef()
 		if (!userRef) return
 		if (success.value) {
-			daily.addLandQuestion(1)
-			if (!hasMistakes.value && !isRetryMode.value) {
+			if (!isRetryMode.value) {
+				daily.addLandQuestion(1)
+			}
+			if (!hasMistakes.value) {
 				daily.addPerfectQuest(1)
 			}
 		}
@@ -255,9 +260,23 @@ export const userChainStore = defineStore('chain', () => {
 			if (isFirstSuccess) timesCompleted += 1
 			let awardedNow = false
 			if (isSuccessNow && !reward) {
-				tx.set(userRef, { points: increment(20), exp: increment(20) }, { merge: true })
-				reward = true
-				awardedNow = true
+				let currentExp = Number(data.exp || 0);
+				let currentLevel = Number(data.isLeveling || 0);
+				currentExp += 20;
+				if (currentExp >= 100) {
+					currentLevel += 1;
+					currentExp -= 100;
+				}
+				tx.set(userRef, {
+					points: increment(20),
+					exp: currentExp,
+					isLeveling: currentLevel
+				}, { merge: true });
+				reward = true;
+				awardedNow = true;
+				langStore.points = Number(langStore.points || 0) + 20;
+				langStore.exp = currentExp;
+				langStore.isLeveling = currentLevel;
 			}
 
 			const p = {
@@ -320,7 +339,7 @@ export const userChainStore = defineStore('chain', () => {
 			await loadProgressFromFirebase()
 			await migrateByAliases(quest.value)
 			const savedProgress = questProgress.value[currentQuestId.value]
-			if (savedProgress && savedProgress.success && savedProgress.wrongIndices && savedProgress.wrongIndices.length > 0) {
+			if (savedProgress && savedProgress.wrongIndices && savedProgress.wrongIndices.length > 0) {
 				startRetryMistakes(savedProgress.wrongIndices)
 				const total = totalQuestTasks.value
 				for (let i = 0; i < total; i++) {
@@ -465,8 +484,8 @@ export const userChainStore = defineStore('chain', () => {
 
 	function restart(fullyCleared = false) {
 		const p = questProgress.value[currentQuestId.value]
-		const hasSavedMistakes = p && p.success && p.wrongIndices && p.wrongIndices.length > 0
-		const hasCurrentMistakes = hasMistakes.value && success.value
+		const hasSavedMistakes = p && p.wrongIndices && p.wrongIndices.length > 0
+		const hasCurrentMistakes = hasMistakes.value
 		if (hasSavedMistakes || hasCurrentMistakes) {
 			let indices = []
 			if (hasCurrentMistakes) {
