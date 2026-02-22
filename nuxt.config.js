@@ -1,7 +1,6 @@
 import {defineNuxtConfig} from 'nuxt/config'
 import {loadEnv} from 'vite'
 
-const events = ['halloween', 'joke', 'valentine', 'winter']
 const mode = process.env.NODE_ENV === 'production' ? 'production' : 'development'
 const env = loadEnv(mode, process.cwd(), '')
 const firebaseConfig = {
@@ -223,8 +222,19 @@ export default defineNuxtConfig({
 		},
 		'/**': {
 			ssr: false,
-			headers: { 'Cache-Control': 'no-cache, no-store, must-revalidate' }
 		},
+		'/home': { redirect: { to: '/', statusCode: 301 } },
+		'/about': { redirect: { to: '/', statusCode: 301 } },
+		'/contact': { redirect: { to: '/', statusCode: 301 } },
+		'/admin/**': { status: 404 },
+		'/wp-login.php': { status: 404 },
+		'/_nuxt/**': { headers: { 'Cache-Control': 'public, max-age=31536000, immutable' } },
+		'/sounds/**': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
+		'/images/**': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
+		'/**/*.json': { headers: { 'Cache-Control': 'public, max-age=3600, must-revalidate' } },
+		'/*.png': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
+		'/*.ico': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
+		'/*.webmanifest': { headers: { 'Cache-Control': 'public, max-age=86400' } }
 	},
 
 })
