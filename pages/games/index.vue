@@ -8,7 +8,6 @@
         {{ n % 2 === 0 ? '⭐' : '✨' }}
       </div>
     </div>
-
     <div class="open-menu-layout" v-if="!showShop && !showSettings && !showGalaxySelector && !isTransitioning">
 
       <div class="title-section">
@@ -17,7 +16,6 @@
           <span class="word-2">АРТИКЛЕЙ</span>
         </h1>
       </div>
-
       <div class="controls-section">
         <button class="menu-btn-toon play" @click="toggleScreen('galaxies')">
           <span class="icon">🚀</span> В БОЙ!
@@ -31,7 +29,6 @@
       </div>
 
     </div>
-
     <div class="sub-screen-container">
       <VGalaxySelector
           v-if="showGalaxySelector"
@@ -51,12 +48,15 @@
 <script setup>
 import { ref } from 'vue'
 import { useRouter } from "vue-router"
+import { useGalaxyStore } from '../../store/galaxyStore.js'
 
 import VGameSettings from '../../src/components/V-gameSettings.vue'
 import VGameHangar from '../../src/components/V-gameHangar.vue'
 import VGalaxySelector from '../../src/components/V-galaxySelector.vue'
 
 const router = useRouter()
+const store = useGalaxyStore()
+const { locale } = useI18n()
 
 const showSettings = ref(false)
 const showShop = ref(false)
@@ -70,9 +70,12 @@ const getRandomPos = (n) => ({
   fontSize: (Math.random() * 1 + 1) + 'rem'
 })
 
+const handleExit = () => router.push(`/${locale.value}`)
 const toggleScreen = (target) => {
-  const heavy = ['shop', 'galaxies'].includes(target) || (target === 'menu' && (showShop.value || showGalaxySelector.value))
-  if (heavy) {
+  const needsWarp = ['shop', 'galaxies'].includes(target) ||
+      (target === 'menu' && (showShop.value || showGalaxySelector.value))
+
+  if (needsWarp) {
     isTransitioning.value = true
     setTimeout(() => {
       resetScreens()
@@ -80,22 +83,25 @@ const toggleScreen = (target) => {
       if (target === 'galaxies') showGalaxySelector.value = true
       setTimeout(() => isTransitioning.value = false, 300)
     }, 400)
-  } else if (target === 'settings') {
-    resetScreens(); showSettings.value = true
   } else {
     resetScreens()
+    if (target === 'settings') showSettings.value = true
   }
 }
 
 const resetScreens = () => {
-  showSettings.value = false; showShop.value = false; showGalaxySelector.value = false
+  showSettings.value = false
+  showShop.value = false
+  showGalaxySelector.value = false
 }
 
-const startMission = (galaxyId) => {
-  router.push({ path: '/test-fight', query: { sector: galaxyId } })
+const startMission = (sectorId) => {
+  router.push({
+    name: `games-id___${locale.value}`,
+    params: { id: sectorId }
+  })
 }
 
-const handleExit = () => router.push('/')
 </script>
 
 <style scoped>
@@ -110,13 +116,33 @@ const handleExit = () => router.push('/')
   font-family: 'Arial Rounded MT Bold', sans-serif;
 }
 
-/* ФОНОВЫЕ ТУМАННОСТИ */
-.space-environment { position: absolute; inset: 0; z-index: 0; }
-.nebula-cloud {
-  position: absolute; width: 600px; height: 600px; border-radius: 50%; filter: blur(100px); opacity: 0.3;
+
+.space-environment {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
 }
-.nebula-cloud.blue { background: #00d2ff; top: -10%; left: -10%; }
-.nebula-cloud.purple { background: #ff00ff; bottom: -10%; right: -10%; }
+
+.nebula-cloud {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.3;
+}
+
+.nebula-cloud.blue {
+  background: #00d2ff;
+  top: -10%;
+  left: -10%;
+}
+
+.nebula-cloud.purple {
+  background: #ff00ff;
+  bottom: -10%;
+  right: -10%;
+}
 
 .floating-toon-star {
   position: absolute;
@@ -125,8 +151,14 @@ const handleExit = () => router.push('/')
 }
 
 @keyframes floatStars {
-  0%, 100% { transform: translateY(0) scale(1); opacity: 0.4; }
-  50% { transform: translateY(-20px) scale(1.2); opacity: 0.8; }
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.2);
+    opacity: 0.8;
+  }
 }
 
 /* ВЕРСТКА БЕЗ РАМКИ */
@@ -147,12 +179,14 @@ const handleExit = () => router.push('/')
   line-height: 0.9;
   transform: rotate(-3deg);
 }
+
 .word-1 {
   color: #fff;
   font-size: 3rem;
   -webkit-text-stroke: 2px #000;
   text-shadow: 4px 4px 0 #3a7bd5;
 }
+
 .word-2 {
   color: #ffeb3b;
   font-size: 5rem;
@@ -183,7 +217,7 @@ const handleExit = () => router.push('/')
   padding: 20px 60px;
   font-size: 2rem;
   background: #4caf50;
-  box-shadow: 0 10px 0 #1b5e20, 0 15px 30px rgba(0,0,0,0.4);
+  box-shadow: 0 10px 0 #1b5e20, 0 15px 30px rgba(0, 0, 0, 0.4);
   animation: pulsePlay 2s infinite;
 }
 
@@ -197,9 +231,20 @@ const handleExit = () => router.push('/')
   font-size: 1rem;
 }
 
-.hangar { background: #ff9800; box-shadow: 0 6px 0 #e65100; }
-.settings { background: #2196f3; box-shadow: 0 6px 0 #0d47a1; }
-.exit { background: #f44336; box-shadow: 0 6px 0 #8e0000; }
+.hangar {
+  background: #ff9800;
+  box-shadow: 0 6px 0 #e65100;
+}
+
+.settings {
+  background: #2196f3;
+  box-shadow: 0 6px 0 #0d47a1;
+}
+
+.exit {
+  background: #f44336;
+  box-shadow: 0 6px 0 #8e0000;
+}
 
 /* ЭФФЕКТЫ */
 .menu-btn-toon:hover {
@@ -212,12 +257,27 @@ const handleExit = () => router.push('/')
 }
 
 @keyframes pulsePlay {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
 }
 
 /* ВАРП-ВСПЫШКА */
-.warp-overlay { position: fixed; inset: 0; background: #fff; z-index: 5000; }
-.warp-flash-enter-active, .warp-flash-leave-active { transition: opacity 0.3s; }
-.warp-flash-enter-from, .warp-flash-leave-to { opacity: 0; }
+.warp-overlay {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  z-index: 5000;
+}
+
+.warp-flash-enter-active, .warp-flash-leave-active {
+  transition: opacity 0.3s;
+}
+
+.warp-flash-enter-from, .warp-flash-leave-to {
+  opacity: 0;
+}
 </style>
