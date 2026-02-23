@@ -220,11 +220,9 @@ export default defineNuxtConfig({
 	routeRules: {
 		'/': {
 			prerender: true,
-			headers: { 'Cache-Control': 'no-cache, no-store, must-revalidate' }
 		},
 		'/**': {
 			ssr: false,
-			headers: { 'Cache-Control': 'no-cache, no-store, must-revalidate' }
 		},
 	},
 
