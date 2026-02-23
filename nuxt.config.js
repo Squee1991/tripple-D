@@ -218,7 +218,6 @@ export default defineNuxtConfig({
 	routeRules: {
 		'/': {
 			prerender: true,
-			// headers: { 'Cache-Control': 'no-cache, no-store, must-revalidate' }
 		},
 		'/**': {
 			ssr: false,
@@ -236,7 +235,6 @@ export default defineNuxtConfig({
 		'/*.ico': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
 		'/*.webmanifest': { headers: { 'Cache-Control': 'public, max-age=86400' } }
 	},
-
 })
 // import { defineNuxtConfig } from 'nuxt/config'
 // import { loadEnv } from 'vite'
