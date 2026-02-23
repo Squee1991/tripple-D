@@ -228,6 +228,7 @@ export default defineNuxtConfig({
 		'/contact': { redirect: { to: '/', statusCode: 301 } },
 		'/admin/**': { status: 404 },
 		'/wp-login.php': { status: 404 },
+		'/sw.js': { headers: { 'Cache-Control': 'public, max-age=7200, must-revalidate' } },
 		'/_nuxt/**': { headers: { 'Cache-Control': 'public, max-age=31536000, immutable' } },
 		'/sounds/**': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
 		'/images/**': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
