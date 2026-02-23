@@ -229,6 +229,7 @@ export default defineNuxtConfig({
 		'/wp-login.php': { status: 404 },
 		'/_nuxt/**': { headers: { 'Cache-Control': 'public, max-age=31536000, immutable' } },
 		'/sounds/**': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
+		'/sw.js': { headers: { 'Cache-Control': 'public, max-age=7200, must-revalidate' } },
 		'/images/**': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
 		'/**/*.json': { headers: { 'Cache-Control': 'public, max-age=3600, must-revalidate' } },
 		'/*.png': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
