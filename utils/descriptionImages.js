@@ -7,7 +7,6 @@ import Fishing from "assets/images/speak-themen/winter/fishing.jpg";
 import AutoWindow from 'assets/images/speak-themen/winter/AutoWindow.jpg'
 import SnowBall from 'assets/images/speak-themen/winter/SnowBall.jpg'
 import BonFire from 'assets/images/speak-themen/winter/Bonfire.jpg'
-import Tree from 'assets/images/speak-themen/winter/Tree.jpg'
 import Snow from 'assets/images/speak-themen/winter/Snow.jpg'
 import Sled from 'assets/images/speak-themen/winter/sled.jpg'
 import Ski from 'assets/images/speak-themen/winter/Ski.jpg'
@@ -15,21 +14,40 @@ import Igloo from 'assets/images/speak-themen/winter/Iglu.jpg'
 import Birds from 'assets/images/speak-themen/winter/Birds.jpg'
 import Market from 'assets/images/speak-themen/winter/Market.jpg'
 
+import Bear from 'assets/images/speak-themen/animals/bear.png'
+import Bird from 'assets/images/speak-themen/animals/bird.png'
+import Cat from 'assets/images/speak-themen/animals/CatInBox.png'
+import Chicken from 'assets/images/speak-themen/animals/chicken.png'
+import Tiger from 'assets/images/speak-themen/animals/Tiger.png'
+import RabbitWithCarotte from 'assets/images/speak-themen/animals/RabbitWithCarote.png'
+import Pig from 'assets/images/speak-themen/animals/pig.png'
+import Panda from 'assets/images/speak-themen/animals/panda.png'
+import Mouse from 'assets/images/speak-themen/animals/mouse.png'
+import Lion from 'assets/images/speak-themen/animals/lion.png'
+import Horse from 'assets/images/speak-themen/animals/horse.png'
+import Giraffe from 'assets/images/speak-themen/animals/giraffe.png'
+import Fox from 'assets/images/speak-themen/animals/Fox.png'
+import Elephant from 'assets/images/speak-themen/animals/elephant.png'
+import DucksFamily from 'assets/images/speak-themen/animals/ducks.png'
+import Dog from 'assets/images/speak-themen/animals/ducks.png'
+import Cow from 'assets/images/speak-themen/animals/cow.png'
 
-import Cat from "assets/images/speak-themen/animals/cat.png";
-import Fox from "assets/images/speak-themen/animals/Fox-read-book.png";
-import DogHiding from "assets/images/speak-themen/animals/dog-hiding.png";
-import Panda from "assets/images/speak-themen/animals/panda.png";
-import Dog from "assets/images/speak-themen/animals/dog.png";
-import Cow from "assets/images/speak-themen/animals/cow.png";
-import Giraffe from "assets/images/speak-themen/animals/giraffe.png";
-import Beaver from "assets/images/speak-themen/animals/beaver.png";
-import Tiger from "assets/images/speak-themen/animals/Tiger.png";
-import HumanJobLaptop from "assets/images/speak-themen/home/stay-home.png";
-import Stretching from "assets/images/speak-themen/home/stretching.png";
-import VaccumCleaner from "assets/images/speak-themen/home/vaccum-cleaner.png";
-import Tennis from "assets/images/speak-themen/home/tennis.png";
-import Soccer from "assets/images/speak-themen/home/soccer-game.png";
+
+import ClearDay from 'assets/images/speak-themen/weather/WeatherClearDay.jpg'
+import WeatherRainbowAfterRain from 'assets/images/speak-themen/weather/WeatherRainbowAfterRain.jpg'
+import WeatherWind from 'assets/images/speak-themen/weather/WeatherWind.jpg'
+import WeatherTornado from 'assets/images/speak-themen/weather/WeatherTornado.jpg'
+import WeatherSnow from 'assets/images/speak-themen/weather/WeatherSnow.jpg'
+import WeatherRainStrong from 'assets/images/speak-themen/weather/WeatherStrongRain.jpg'
+import WeatherSandStorm from 'assets/images/speak-themen/weather/WeatherSandStorm.jpg'
+import WeatherRain from 'assets/images/speak-themen/weather/WeatherRain.jpg'
+import WeatherHail from 'assets/images/speak-themen/weather/WeatherHail.jpg'
+import WeatherFogInMountains from 'assets/images/speak-themen/weather/WeatherFogInMountains.jpg'
+
+
+import Stretching from "assets/images/speak-themen/sport-action/stretching.png";
+import Tennis from "assets/images/speak-themen/sport-action/tennis.png";
+import Soccer from "assets/images/speak-themen/sport-action/soccer-game.png";
 import Dance from "assets/images/speak-themen/home/dance.png";
 
 import TaxiDriverPassenger from "assets/images/speak-themen/transport/TaxiDriverPassenger.jpg";
@@ -126,7 +144,7 @@ export const topics = [
 				id: 2,
 				image: KindeRandSnowMan,
 				descriptions: {
-					A1: "Es ist Winter. Kinder spielen im Schnee",
+					A1: "Es ist Winter. Kinder spielen im Schnee.Die Kinder haben warme Kleidung",
 					A2: "Auf dem Bild spielen viele Kinder draußen im Schnee. Ein Junge mit einer lila Jacke und orangen Mütze rollt einen sehr großen Schneeball",
 					B1: "Es ist ein fröhlicher Wintertag. Im Vordergrund rollt ein Junge in warmer Winterkleidung lachend eine riesige Schneekugel vor sich her. Rechts daneben vervollständigt ein anderes Kind einen Schneemann, indem es ihm eine Karottennase aufsetzt."
 				}
@@ -844,7 +862,7 @@ export const topics = [
 	{
 		id: 'school',
 		label: "Школа",
-		icon: "🏡",
+		icon: "🎓",
 		gradient: 'linear-gradient(135deg, #FFF3E0 0%, #FFB74D 100%)',
 		textColor: '#E55559',
 		tasks: [
@@ -922,158 +940,312 @@ export const topics = [
 			}
 		]
 	},
+	{
+		id: 'sport',
+		label: 'Спорт и активность',
+		icon: '🏋️‍♂️',
+		gradient: 'linear-gradient(135deg, #FFF3E0 0%, #FFB74D 100%)',
+		textColor: '#E65100',
+		tasks: [
+			{
+				id: 1,
+				image: Stretching,
+				descriptions: {
+					A1: "Eine Frau macht Yoga auf einer gelben Matte. Sie trägt ein rotes T-Shirt und eine schwarze Hose",
+					A2: "Auf dem Bild macht eine Frau Yoga auf einer gelben Matte; sie trägt ein rotes Oberteil und eine schwarze Leggings.",
+					B1: "Die Abbildung zeigt eine Frau in einer Yoga-Pose auf einer gelben Matte, wobei sie ein rotes Top und eine schwarze Sporthose trägt und die Augen geschlossen hat."
+				}
+			},
+			{
+				id: 2,
+				image: Tennis,
+				descriptions: {
+					A1: "Ich sehe ein Junge und er spielt Tennis.",
+					A2: "Ein Junge spielt Tennis. Er trägt ein rotes T-Shirt und ein rotes Stirnband. Er schaut auf den Ball.",
+					B1: "Ein Junge spielt Tennis. Er hält einen türkisen Schläger in der Hand und wartet auf den Ball. Er trägt sportliche rote Kleidung."
+				}
+			},
+			{
+				id: 3,
+				image: Soccer,
+				descriptions: {
+					A1: "Der Junge spielt Fußball",
+					A2: "Ein Junge kickt einen Fußball. Er trägt ein rotes Trikot und rote Schuhe.",
+					B1: "Ein Fußballspieler in roter Sportkleidung schießt den Ball mit voller Kraft. Er sieht sehr dynamisch aus."
+				}
+			},
+			{
+				id: 4,
+				image: Dance,
+				descriptions: {
+					A1: "Das Mädchen tanzt.",
+					A2: "Ein Mädchen tanzt. Sie trägt ein gelbes Kleid und lacht.",
+					B1: "Ein fröhliches Mädchen tanzt zur Musik. Sie trägt ein gelbes Kleidung."
+				}
+			}
+		]
+	},
+	{
+		id: 'animals',
+		label: 'Животные',
+		icon: '🦊',
+		gradient: 'linear-gradient(135deg, #F1F8E9 0%, #AED581 100%)',
+		textColor: '#33691E',
+		tasks: [
+			{
+				id: 1,
+				image: Bear,
+				descriptions: {
+					A1: "Das ist ein Bär. Der Bär ist groß und braun. Das Wasser ist blau. Der Bär hat zwei kleine Ohren und eine schwarze Nase.",
+					A2: "Das ist ein großer brauner Bär. Er steht im blauen Wasser, vielleicht in einem Fluss oder einem See. Der Bär schaut nach rechts und hat ein kleines Lächeln im Gesicht. Er sieht ruhig und friedlich aus.",
+					B1: "Auf der Abbildung sieht man einen großen Braunbären, der mitten im blauen Wasser steht, während er mit einem leichten Lächeln nach rechts blickt."
+				}
+			},
+			{
+				id: 2,
+				image: Bird,
+				descriptions: {
+					A1: "Das ist ein Vogel. Der Vogel ist weiß, grau und schwarz. Er fliegt. Die Augen sind groß und rund ",
+					A2: "Auf diesem Bild sieht man einen Vogel. Er fliegt am Himmel. Der Vogel ist weiß und hat schwarze Enden an seinen Flügeln und seinem Schwanz",
+					B1: "Man erkennt einen weißen Vogel im Flug, dessen Flügelspitzen und Schwanzfedern schwarz gefärbt sind, während er seine großen Flügel weit ausstreckt."
+				}
+			},
+			{
+				id: 3,
+				image: Cat,
+				descriptions: {
+					A1: "Das ist eine Katze. Die Katze ist orange und gelb. Die Katze ist in einem Karton",
+					A2: "Hier sieht man eine süße Katze. Die Katze ist orange und hat dunklere Streifen. Sie sitzt in einem braunen Karton",
+					B1: "Es wird eine orange gestreifte Katze dargestellt, die in einem braunen Karton sitzt und den Betrachter aufmerksam aus der Kiste heraus ansieht."
+				}
+			},
+			{
+				id: 4,
+				image: Chicken,
+				descriptions: {
+					A1: "Das ist ein Huhn. Das Huhn ist weiß und lila. Das Huhn hat zwei Beine. Es steht im Gras.",
+					A2: "Auf dem Bild sieht man ein Huhn. Das Huhn ist weiß und hat einen roten Kamm auf dem Kopf. Es steht zwischen kleinen Steinen und grünem Gras",
+					B1: "Ein weißes Huhn mit einem roten Kamm steht auf einer Wiese, wobei man im Vordergrund sowohl grünes Gras als auch einige kleine graue Steine sieht."
+				}
+			},
+			{
+				id: 5,
+				image: Tiger,
+				descriptions: {
+					A1: "Das ist ein Tiger. Er ist orange, gelb und schwarz. Er steht auf der Wiese",
+					A2: "Hier sieht man ein Tiger. Der Tiger ist gelb mit schwarzen Streifen. Hinter dem Tiger gibt es langes grünes Gras. Der Tiger schaut direkt nach vorne",
+					B1: "Auf dem Bild ist ein Tiger mit orange-schwarzem Fell zu sehen, der im hohen Gras steht und seinen Blick direkt nach vorne richtet."
+				}
+			},
+			{
+				id: 6,
+				image: RabbitWithCarotte,
+				descriptions: {
+					A1: "Das ist ein Hase. Der Hase ist rosa und hellila. Er hat zwei lange Ohren. Der Hase trägt ein T-Shirt. Der Hase hat die Karotte",
+					A2: "Das ein kleines, lilafarbenes Kaninchen. Es trägt ein blaues T-Shirt. Es ist mit der  Karotte in den Armen. Die Karotte ist fast so groß wie das Kaninchen selbst",
+					B1: "Ein rosa Kaninchen in einem blauen T-Shirt hält eine sehr große Karotte im Arm, die fast die gleiche Größe wie das Tier selbst hat."
+				}
+			},
+			{
+				id: 7,
+				image: Pig,
+				descriptions: {
+					A1: "Das ist ein Schwein. Das Schwein ist rosa. Die Ohren sind groß und rosa. Es steht auf dem Gras.",
+					A2: "Das Schwein ist rosa und hat einen runden Körper. Das Schwein steht auf einer Wiese, denn man sieht unten ein bisschen grünes Gras. Es sieht sehr freundlich aus.",
+					B1: "Man sieht ein rosa Schwein mit einem runden Körper, das auf einer grünen Wiese steht und den Betrachter freundlich anblickt."
+				}
+			},
+			{
+				id: 8,
+				image: Panda,
+				descriptions: {
+					A1: "Das ist ein Panda. Der Panda ist schwarz und weiß. Der Panda sitzt. Er hat ein Buch. Der Panda liest gern.",
+					A2: "Auf diesem Bild sieht man einen sehr süßen Panda. Der Panda sitzt und hat ein gelbes Buch in seinen Pfoten. Seine Augen sind groß und dunkel",
+					B1: "Ein sitzender Panda hält ein offenes, gelbes Buch in seinen Pfoten, während er sich mit seinen großen dunklen Augen auf das Lesen konzentriert."
+				}
+			},
+			{
+				id: 9,
+				image: Mouse,
+				descriptions: {
+					A1: "Das ist eine Maus. Die Maus ist grau und rosa. Sie hat sehr große Ohren. Die Maus hat einen Käse und isst gern. Sie ist froh.",
+					A2: "Auf dem Bild sieht man eine Maus. Die Maus hat sehr große, rosa Ohren. Sie hat auch lange Barthaare und einen dünnen Schwanz. Sie hält ein großes Stück gelben Käse mit beiden Pfoten. Die Maus hat die Augen geschlossen, weil der Käse sehr gut schmeckt.",
+					B1: "Eine kleine graue Maus mit großen rosa Ohren hält ein Stück Käse fest und hält die Augen geschlossen, während sie davon frisst."
+				}
+			},
+			{
+				id: 10,
+				image: Lion,
+				descriptions: {
+					A1: "Das ist ein Löwe. Der Löwe ist braun und beige. Der Löwe sitzt und ist sehr nett. Er hat rote Zunge und sieht sehr glücklich aus.",
+					A2: "Auf dem Bild sieht man einen Löwen. Er sitzt ganz ruhig, hat eine rote Zunge und die Augen geschlossen. Sein Schwanz ist dünn und hat am Ende auch braune Haare. Er ist überhaupt nicht gefährlich, sondern sehr freundlich.",
+					B1: "Das Bild zeigt einen sitzenden Löwen mit geschlossenen Augen, der seine rote Zunge herausstreckt und einen sehr ruhigen Eindruck macht."
+				}
+			},
+			{
+				id: 11,
+				image: Horse,
+				descriptions: {
+					A1: "Das ist ein Pferd. Das Pferd ist braun und hat schwarze Haare. Das Pferд hat große, weiße Zähne und vier Beine. Es lacht und sieht sehr lustig aus. Die Augen sind groß und rund.",
+					A2: "Auf diesem Bild sieht man ein braunes Pferd. Es lacht viel denn man sieht seine großen weißen Zähne. Das Pferd hat eine schwarze Mähne und einen kleinen schwarzen Schwanz. Seine Augen sind groß und weit offen.",
+					B1: "Ein braunes Pferd mit schwarzer Mähne ist beim Lachen dargestellt, wobei man seine großen weißen Zähne und die weit geöffneten Augen sieht."
+				}
+			},
+			{
+				id: 12,
+				image: Giraffe,
+				descriptions: {
+					A1: "Das ist eine Giraffe. Die Giraffe ist gelb und braun. Sie hat einen sehr langen Hals. Die Giraffe liegt auf dem Gras. Die Giraffe schließt die Augen.",
+					A2: "Hier sieht man eine Giraffe, die auf einer grünen Wiese liegt. Die Giraffe ist gelb mit braunen Flecken. Sie hat einen sehr langen Hals und kleine Hörner auf dem Kopf. Ihre Augen sind geschlossen, vielleicht ist sie eingeschlafen. m Hintergrund sieht man ein bisschen grünes Gras.",
+					B1: "Man sieht eine Giraffe mit braunen Flecken, die mit geschlossenen Augen auf der Wiese liegt, während ihr langer Hals entspannt am Boden ruht."
+				}
+			},
+			{
+				id: 13,
+				image: Fox,
+				descriptions: {
+					A1: "Das ist ein Fuchs. Der Fuchs ist orange und weiß und hat zwei Ohren. Er trägt eine Brille. Die Brille ist blau und rund. Der Fuchs liest ein Buch. Das Buch ist weiß und groß.",
+					A2: "Auf diesem Bild sieht man einen Fuchs mit einer großen blauen Brille. Er liest ein weißes Buch und ist aufmerksam. Er hat große Ohren und kleine dunkle Augen hinter der Brille.",
+					B1: "Ein orangefarbener Fuchs trägt eine auffällige blaue Brille und hält ein großes weißes Buch in den Pfoten, in dem er aufmerksam liest."
+				}
+			},
+			{
+				id: 14,
+				image: Elephant,
+				descriptions: {
+					A1: "Das ist ein Elefant. Der Elefant ist grau. Er hat zwei sehr große Ohren. Der Elefant ist sehr groß. Er sieht sehr lieb aus.",
+					A2: "Das ist ein großer, grauer Elefant der rosa Wangen hat. Seine Augen sind geschlossen. Der Elefant hat zwei weiße Stoßzähne und einen langen Rüssel.",
+					B1: "Abgebildet ist ein großer grauer Elefant mit zwei weißen Stoßzähnen, der die Augen geschlossen hat und einen langen Rüssel besitzt."
+				}
+			},
+			{
+				id: 15,
+				image: DucksFamily,
+				descriptions: {
+					A1: "Das ist eine Ente mit Küken. Die Enten sind braun. Mutters Hals ist grün. Drei Küken sind auch braun und orange. Die Familie geht auf dem Gras.  Das Gras ist grün.",
+					A2: "Hier gibt es eine Entenmutter mit ihren drei kleinen Entlein. Die Mutter ist braun und hat einen grünen Kopf. Alle Enten haben orangefarbene Schnäbel und Füße. Sie laufen zusammen auf einer grünen Wiese. Im Hintergrund sieht man einen braunen Holzzaun.",
+					B1: "Eine Entenfamilie läuft über eine grüne Wiese, wobei die Mutter einen grünen Kopf hat und drei kleine braune Küken ihr folgen."
+				}
+			},
+			{
+				id: 16,
+				image: Dog,
+				descriptions: {
+					A1: "Das ist ein Hund. Der Hund ist weiß und schwarz. Sein Ohr ist schwarz und weiß. Seine Nase ist schwarz und der Mund ist rot. Der Hund steht auf dem Gras. Das Gras ist grün.",
+					A2: "Auf diesem Bild sieht man einen Hund. Er ist weiß mit schwarzen Flecken. Der Hund steht auf einer grünen Wiese. Er sieht sehr fröhlich aus, denn er hat den Mund offen и streckt seine rote Zunge heraus. Er hat ein schwarzes Ohr und ein weißes Ohr.",
+					B1: "Ein weißer Hund mit schwarzen Flecken steht auf einer Wiese und streckt seine Zunge heraus, während er direkt in die Kamera schaut."
+				}
+			},
+			{
+				id: 17,
+				image: Cow,
+				descriptions: {
+					A1: "Das ist eine Kuh. Die Kuh ist weiß und hat braun. Die Kuh frisst Gras. Das Gras ist grün. Sie steht auf einer Wiese.",
+					A2: "Das ist eine Kuh. Sie ist weiß mit großen braunen Flecken. Die Kuh trägt eine gelbe Glocke an einem roten Halsband. Sie frisst gerade grünes Gras. Sie hat kleine Hörner und einen schwarzen Schwanz.",
+					B1: "Eine gefleckte Kuh steht auf einer Wiese und frisst Gras, während sie eine gelbe Glocke an einem roten Band um den Hals trägt."
+				}
+			},
+		]
+	},
+	{
+		id: 'weather',
+		label: 'Погода',
+		icon: '🌦️',
+		gradient: 'linear-gradient(135deg, #F1F8E9 0%, #AED581 100%)',
+		textColor: '#33691E',
+		tasks: [
+			{
+				id: 1,
+				image: ClearDay,
+				descriptions: {
+					A1: 'Das ist eine Landschaft. Die Sonne scheint und der Himmel ist blau. Hier sind viele Wolken. In der Mitte steht ein Baum. Das Gras ist grün. Das sind viele bunte Blumen: gelb, blau und rosa.',
+					A2: 'Auf dem Bild sieht man eine Natur an einem sonnigen Tag. Rechts befindet sich ein kleiner Teich mit blauem Wasser. Ein Baum steht direkt hinter dem Teich. Im Hintergrund kann man  Hügel und  Felder unter einem hellen Himmel sehen.',
+					B1: 'Das Bild zeigt eine grüne Wiese mit einem Teich und einem Baum in der Mitte, während im Hintergrund Hügel unter einem leicht bewölkten Himmel zu sehen sind.',
 
-	// {
-	// 	id: 'animals',
-	// 	label: 'Животные и природа',
-	// 	icon: '🦊',
-	// 	gradient: 'linear-gradient(135deg, #F1F8E9 0%, #AED581 100%)',
-	// 	textColor: '#33691E',
-	// 	tasks: [
-	// 		{
-	// 			id: 1,
-	// 			image: Cat,
-	// 			descriptions: {
-	// 				A1: "Eine orange Katze sitzt und lächelt.",
-	// 				A2: "Die Katze ist orange und sie hat die Augen zu.",
-	// 				B1: "Die orange Katze sitzt. Sie ist dick, hat Streifen und sieht freundlich aus."
-	// 			}
-	// 		},
-	// 		{
-	// 			id: 2,
-	// 			image: Fox,
-	// 			descriptions: {
-	// 				A1: "Ein Fuchs liest ein Buch",
-	// 				A2: "Ein Fuchs liest ein Buch und sieht konzentriert aus.",
-	// 				B1: "Ein Fuchs sitzt da und liest ein Buch. Er wirkt klug und konzentriert."
-	// 			}
-	// 		},
-	// 		{
-	// 			id: 3,
-	// 			image: DogHiding,
-	// 			descriptions: {
-	// 				A1: "Ein Hund sitzt in einer Kiste",
-	// 				A2: "Der Hund sitzt in einem Karton. Er hat große Augen.",
-	// 				B1: "Ein kleiner Hund mit großen Augen schaut aus einem blauen Karton heraus."
-	// 			}
-	// 		},
-	// 		{
-	// 			id: 4,
-	// 			image: Panda,
-	// 			descriptions: {
-	// 				A1: "Das ist ein Panda. Er sitzt und liest ein Buch",
-	// 				A2: "Ein süßer Panda sitzt auf dem Boden. Er hält ein gelbes Buch und liest.",
-	// 				B1: "Ein kleiner Pandabär sitzt, und liest konzentriert in einem großen, gelben Buch."
-	// 			}
-	// 		},
-	// 		{
-	// 			id: 5,
-	// 			image: Dog,
-	// 			descriptions: {
-	// 				A1: "Ein Hund sitzt. Er ist braun und weiß.",
-	// 				A2: "Ein süßer Hund sitzt. Er hat braun-weißes Fell und zeigt seine Zunge.",
-	// 				B1: "Ein fröhlicher Hund sitzt entspannt da und schaut freundlich zur Seite. Er hat weiches, zweifarbiges Fell und streckt leicht die Zunge heraus."
-	// 			}
-	// 		},
-	// 		{
-	// 			id: 6,
-	// 			image: Cow,
-	// 			descriptions: {
-	// 				A1: "Eine Kuh steht in dem Gras und isst.",
-	// 				A2: "Eine Kuh steht auf der Wiese und frisst.",
-	// 				B1: "Eine Kuh steht auf einer grünen Wiese und kaut Gras. Sie trägt eine Glocke um den Hals."
-	// 			}
-	// 		},
-	// 		{
-	// 			id: 7,
-	// 			image: Giraffe,
-	// 			descriptions: {
-	// 				A1: "Die Giraffe schläft.",
-	// 				A2: "Die Giraffe liegt im Gras. Sie ist gelb und hat braune Flecken.",
-	// 				B1: "Eine Giraffe liegt entspannt auf der Wiese. Sie hat die Augen zu und ruht sich aus."
-	// 			}
-	// 		},
-	// 		{
-	// 			id: 8,
-	// 			image: Beaver,
-	// 			descriptions: {
-	// 				A1: "Der Biber schwimmt.",
-	// 				A2: "Der Biber schwimmt im Wasser ",
-	// 				B1: "Ein Biber liegt entspannt auf dem Rücken im Wasser. Er lächelt und sieht fröhlich aus."
-	// 			}
-	// 		},
-	// 		{
-	// 			id: 9,
-	// 			image: Tiger,
-	// 			descriptions: {
-	// 				A1: "Der Tiger steht.",
-	// 				A2: "Ein Tiger steht im Gras. Er ist orange und hat schwarze Streifen.",
-	// 				B1: "Ein Tiger steht vor hohem Gras. Er hat oranges Fell und schwarze Streifen."
-	// 			}
-	// 		},
-	// 	]
-	// },
-	// {
-	// 	id: 'home',
-	// 	label: 'Спорт и активность',
-	// 	icon: '🏠',
-	// 	gradient: 'linear-gradient(135deg, #FFF3E0 0%, #FFB74D 100%)',
-	// 	textColor: '#E65100',
-	// 	tasks: [
-	// 		{
-	// 			id: 1,
-	// 			image: HumanJobLaptop,
-	// 			descriptions: {
-	// 				A1: "Der Mann sitzt auf einem Sessel und arbeitet mit einem Laptop.",
-	// 				A2: "Ein Mann sitzt in einem gelben Sessel und arbeitet am Laptop. Neben ihm steht eine Pflanze und schläft ein Hund",
-	// 				B1: "Man sieht einen Mann, der in einem gelben Sessel sitzt und an seinem Laptop arbeitet. Neben dem Sessel steht eine große Zimmerpflanze und auf dem Teppich schläft ein Hund."
-	// 			}
-	// 		},
-	// 		{
-	// 			id: 2,
-	// 			image: Stretching,
-	// 			descriptions: {
-	// 				A1: "Ein Mädchen oder eine Frau macht Yoga oder Sport",
-	// 				A2: "Sie macht Yoga auf einer gelben Matte. Sie ist glücklich.",
-	// 				B1: "Das Mädchen macht Gymnastik. Sie streckt das Bein und hat die Augen zu."
-	// 			}
-	// 		},
-	// 		{
-	// 			id: 3,
-	// 			image: VaccumCleaner,
-	// 			descriptions: {
-	// 				A1: "Ein Mann saugt Staub.",
-	// 				A2: "Ein Mann mit einem roten Bart putzt. Er hat einen Staubsauger",
-	// 				B1: "Der Mann saugt Staub. Er trägt ein gelbes T-Shirt mit einer Wolke und eine grüne Hose."
-	// 			}
-	// 		},
-	// 		{
-	// 			id: 4,
-	// 			image: Tennis,
-	// 			descriptions: {
-	// 				A1: "Ich sehe ein Junge und er spielt Tennis.",
-	// 				A2: "Ein Junge spielt Tennis. Er trägt ein rotes T-Shirt und ein rotes Stirnband. Er schaut auf den Ball.",
-	// 				B1: "Ein Junge spielt Tennis. Er hält einen türkisen Schläger in der Hand und wartet auf den Ball. Er trägt sportliche rote Kleidung."
-	// 			}
-	// 		},
-	// 		{
-	// 			id: 5,
-	// 			image: Soccer,
-	// 			descriptions: {
-	// 				A1: "Der Junge spielt Fußball",
-	// 				A2: "Ein Junge kickt einen Fußball. Er trägt ein rotes Trikot und rote Schuhe.",
-	// 				B1: "Ein Fußballspieler in roter Sportkleidung schießt den Ball mit voller Kraft. Er sieht sehr dynamisch aus."
-	// 			}
-	// 		},
-	// 		{
-	// 			id: 5,
-	// 			image: Dance,
-	// 			descriptions: {
-	// 				A1: "Das Mädchen tanzt.",
-	// 				A2: "Ein Mädchen tanzt. Sie trägt ein gelbes Kleid und lacht.",
-	// 				B1: "Ein fröhliches Mädchen tanzt zur Musik. Sie trägt ein gelbes Kleidung."
-	// 			}
-	// 		}
-	// 	]
-	// }
+				}
+			},
+			{
+				id: 2,
+				image: WeatherRainbowAfterRain,
+				descriptions: {
+					A1: 'Das ist eine Landschaft. Die Sonne scheint und es ist warm. Der Himmel ist hellblau mit ein paar Wolken. Das Gras ist grün und sind viele bunte Blumen. Rechts ist einen See.',
+					A2: 'Auf dem Bild sieht man einen Sommertag in der Natur. Im Vordergrund wachsen viele gelbe, rosa und blaue Blumen. Auf dem Weg sind Pfützen mit Wasser. Im Hintergrund sieht man Berge und einen Regenbogen unter dem blauen Himmel.',
+					B1: 'Obwohl es zuvor geregnet hat, erscheint nun ein bunter Regenbogen über den Bergen, während auf dem Weg im Vordergrund noch nasse Pfützen liegen.',
+
+				}
+			},
+			{
+				id: 3,
+				image: WeatherWind,
+				descriptions: {
+					A1: 'Das Wetter ist sehr windig. Hier ist einen Baum auf der rechten Seite.In der Mitte ist ein Weg.Der Himmel ist grau und es ist sehr kalt.',
+					A2: 'Auf dem Bild ist eine Hügellandschaft bei extrem starkem Wind zu sehen. Ein Baum biegt sich stark nach links, weil der Sturm so kräftig ist. Im Hintergrund sieht man graue Berge.',
+					B1: 'Man sieht eine Landschaft, in der sich ein Baum wegen des starken Windes nach links biegt, während ein schmaler Weg durch das Tal führt.',
+				}
+			},
+			{
+				id: 4,
+				image: WeatherTornado,
+				descriptions: {
+					A1: 'Das ist ein Tornado. Das Wetter ist schlecht. Der Himmel ist dunkelgrau. Ich sehe helle Blitze. Der Wind ist very stark.',
+					A2: 'Auf dem Bild sieht man ein gefährlicher Tornado. Der Wind ist so stark, dass er die Bäume biegt. Überall ist Staub und der Himmel ist schwarz. Im Hintergrund sieht man graue Berge.',
+					B1: 'In der Mitte des Bildes ist ein massiver Tornado dargestellt, der Staub aufwirbelt, während am dunklen Himmel helle Blitze zu erkennen sind.',
+				}
+			},
+			{
+				id: 5,
+				image: WeatherSnow,
+				descriptions: {
+					A1: 'Das ist eine Winterlandschaft mit viel Schnee, Tannenbäumen, einem Fluss und einer Brücke.',
+					A2: 'Überall liegt weißer Schnee, ein ruhiger Fluss fließt unter der Brücke und man sieht Spuren im Vordergrund',
+					B1: 'Das Bild zeigt eine verschneite Landschaft mit einer Holzbrücke über einen Fluss, wobei im Vordergrund deutliche Spuren im tiefen Schnee sichtbar sind.',
+				}
+			},
+			{
+				id: 6,
+				image: WeatherRainStrong,
+				descriptions: {
+					A1: 'Das Wetter ist sehr schlecht.Es ist ein Gewitter. Es regnet sehr viel. Die Straße ist sehr nass. Alles ist dunkel und grau.',
+					A2: 'Auf dem Bild sieht man ein heftiges Unwetter mit Blitzen, während ein LKW durch das viele Wasser auf der dunklen Straße fährt. Im Hintergrund sieht man dunkle Berge oder Hügel',
+					B1: 'Ein LKW fährt bei starkem Regen auf einer nassen Fahrbahn, während im Hintergrund ein Gewitter mit Blitzen über der dunklen Landschaft niedergeht.',
+				}
+			},
+			{
+				id: 7,
+				image: WeatherRain,
+				descriptions: {
+					A1: 'Das ist ein Wald mit einer Brücke und es regnet sehr viel.',
+					A2: 'Auf dem Bild sieht man einen grünen Wald mit einem Fluss und einer Holzbrücke bei starkem Regen.',
+					B1: 'In einem Wald führt eine rustikale Brücke über einen Bach, wobei die gesamte Umgebung wegen des starken Regens sehr feucht und grau wirkt.',
+				}
+			},
+			{
+				id: 8,
+				image: WeatherHail,
+				descriptions: {
+					A1: 'Das ist ein Gewitter mit viel Hagel und Eis auf dem Boden.',
+					A2: 'Auf dem Bild sieht man starken Hagel und viele kleine Eisstücke liegen wie weißer Schnee auf dem Weg.',
+					B1: 'Nach einem Unwetter ist der Boden komplett mit Hagelkörnern bedeckt, sodass der Weg fast so weiß aussieht wie bei einer Schneedecke.',
+				}
+			},
+			{
+				id: 9,
+				image: WeatherSandStorm,
+				descriptions: {
+					A1: 'Das ist eine Wüste. Alles ist braun und gelb. Das ist einen großen Sandsturm.',
+					A2: 'Auf dem Bild sieht man einen riesigen, braunen Sandsturm, der über die trockene Wüstenlandschaft zieht und den Himmel bedeckt.',
+					B1: 'Man sieht einen gewaltigen Sandsturm, der sich als braune Wand über die Wüste schiebt und die Sicht auf den Horizont komplett verhindert.',
+				}
+			},
+			{
+				id: 10,
+				image: WeatherFogInMountains,
+				descriptions: {
+					A1: 'Das Wetter ist schlecht. Das sind hohe Berge mit viel Nebel und alles ist grau und dunkel.',
+					A2: 'Auf dem Bild sieht man eine graue Berglandschaft mit viel Nebel über den Bäumen und einen kleinen Fluss im Tal.',
+					B1: 'In dieser Berglandschaft hängt dichter Nebel zwischen den bewaldeten Hügeln, während im Tal ein kleiner Fluss unter einem grauen Himmel fließt.',
+				}
+			}
+		]
+	}
 ]
