@@ -619,9 +619,7 @@ async function sendMessage(voiceText = null) {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fff;
   border-radius: 10px;
-  border: 1px solid #edf2f7;
   overflow: hidden;
 }
 

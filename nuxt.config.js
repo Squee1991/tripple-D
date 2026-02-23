@@ -218,7 +218,6 @@ export default defineNuxtConfig({
 	routeRules: {
 		'/': {
 			prerender: true,
-			// headers: { 'Cache-Control': 'no-cache, no-store, must-revalidate' }
 		},
 		'/**': {
 			ssr: false,
@@ -230,13 +229,13 @@ export default defineNuxtConfig({
 		'/wp-login.php': { status: 404 },
 		'/_nuxt/**': { headers: { 'Cache-Control': 'public, max-age=31536000, immutable' } },
 		'/sounds/**': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
+		'/sw.js': { headers: { 'Cache-Control': 'public, max-age=7200, must-revalidate' } },
 		'/images/**': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
 		'/**/*.json': { headers: { 'Cache-Control': 'public, max-age=3600, must-revalidate' } },
 		'/*.png': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
 		'/*.ico': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
 		'/*.webmanifest': { headers: { 'Cache-Control': 'public, max-age=86400' } }
 	},
-
 })
 // import { defineNuxtConfig } from 'nuxt/config'
 // import { loadEnv } from 'vite'
