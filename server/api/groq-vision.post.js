@@ -15,9 +15,23 @@ export default defineEventHandler(async (event) => {
             return { error: "ОШИБКА: Фронтенд не прислал поле 'imageUrl'!" }
         }
 
+        let finalImageUrl = imageUrl;
+        if (imageUrl.startsWith('http')) {
+            try {
+                const imgResponse = await fetch(imageUrl);
+                if (!imgResponse.ok) throw new Error(`Failed to fetch image: ${imgResponse.status}`);
+
+                const buffer = await imgResponse.arrayBuffer();
+                const base64 = Buffer.from(buffer).toString('base64');
+                const contentType = imgResponse.headers.get('content-type') || 'image/png';
+                finalImageUrl = `data:${contentType};base64,${base64}`;
+            } catch (e) {
+                console.error("Base64 Conversion Error:", e.message);
+            }
+        }
+
         const modelId = 'meta-llama/llama-4-scout-17b-16e-instruct'
         const feedbackLang = String(userLocale || 'ru').split('-')[0].trim()
-
         const systemPrompt = `You are a strict but supportive German language tutor evaluating an image description exercise.
 INPUTS:
 1. **The Image:** Look at the visual image carefully.
@@ -81,7 +95,7 @@ OUTPUT JSON FORMAT:
                         {
                             type: "image_url",
                             image_url: {
-                                url: imageUrl
+                                url: finalImageUrl
                             }
                         }
                     ]
@@ -100,6 +114,14 @@ OUTPUT JSON FORMAT:
             },
             body: JSON.stringify(payload)
         })
+
+        if (response.status === 429) {
+            return { error: "Запрос перегружен (лимит запросов). Попробуйте через минуту." }
+        }
+
+        if (response.status === 500) {
+            return { error: "Языковая модель столкнулась внутренней ошибкой. Возможно, модель временно недоступна." }
+        }
 
         const rawText = await response.text()
 
