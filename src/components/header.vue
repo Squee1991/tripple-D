@@ -6,12 +6,13 @@
       <SignIn v-if="showAuth" @close-auth-form="closeAuth"/>
     </transition>
     <ModalDev
+        v-if="modalConfig"
         :visible="showDevModal"
-        @close="closeDevModal"
-        :title="modalConfig.title"
+        :title="modalConfig.title || ''"
         :img="modalConfig.img"
-        :text="modalConfig.text"
+        :text="modalConfig.text || ''"
         :button="modalConfig.isEvent ? modalConfig.button : null"
+        @close="closeDevModal"
         @button="onDevModalButton"
     />
     <div class="header-container">

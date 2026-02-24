@@ -21,6 +21,7 @@ let authStateUnsubscribe = null;
 
 export const userAuthStore = defineStore('auth', () => {
     const auth = useFirebaseAuth()
+    const langStore = userlangStore();
     const LEADERBOARD_COLLECTION = 'marathon_leaderboard';
     const LEADERBOARD_GUESS = 'leaderboard_guess'
     const DAILY__COLLECTION = 'daily';
@@ -46,7 +47,6 @@ export const userAuthStore = defineStore('auth', () => {
     const initialized = ref(false)
     const shouldShowFeedbackSurvey = ref(false)
     const totalHats = ref(0)
-    const langStore = userlangStore()
     const premiumDiscount = ref({
         sale_5: false,
         sale_10: false,
@@ -163,15 +163,18 @@ export const userAuthStore = defineStore('auth', () => {
         registeredAt.value = normalizeDate(data.registeredAt)
         uid.value = data.uid || null
         avatar.value = data.avatar || null
-        isPremium.value = data.isPremium || false
+        isPremium.value = data.isPremium === true
         subscriptionEndsAt.value = data.subscriptionEndsAt || null
-        subscriptionCancelled.value = data.subscriptionCancelled || false
+        subscriptionCancelled.value = isPremium.value && data.subscriptionCancelled === true
         providerId.value = data.providerId || ''
         ownedAvatars.value = data.ownedAvatars || ['1.png', '2.png']
         achievements.value = data.achievements || null
         voiceConsentGiven.value = data.voiceConsentGiven === true
         hasSeenOnboarding.value = data.hasSeenOnboarding === true
         totalHats.value = data.totalHats || 0
+        if (data.points !== undefined) langStore.points = data.points;
+        if (data.exp !== undefined) langStore.exp = data.exp;
+        if (data.totalEarnedPoints !== undefined) langStore.totalEarnedPoints = data.totalEarnedPoints;
         premiumDiscount.value = {
             sale_5: data.sale_5 || false,
             sale_10: data.sale_10 || false,
@@ -183,25 +186,19 @@ export const userAuthStore = defineStore('auth', () => {
     const purchase = async (cost, discountId) => {
         const user = getAuth().currentUser
         if (!user) return {success: false, reason: 'no-user'}
-
         const allowed = ['sale_5', 'sale_10', 'sale_15']
         if (!allowed.includes(discountId)) return {success: false, reason: 'invalid-item'}
-
         if (totalHats.value < cost) return {success: false, reason: 'insufficient'}
         if (premiumDiscount.value[discountId] === true) return {success: false, reason: 'already-owned'}
-
         try {
             const newTotal = totalHats.value - cost
             const userRef = doc(db, 'users', user.uid)
-
             await updateDoc(userRef, {
                 totalHats: newTotal,
                 [discountId]: true,
             })
-
             totalHats.value = newTotal
             premiumDiscount.value[discountId] = true
-
             return {success: true}
         } catch (error) {
             console.error('purchase error', error)
@@ -244,10 +241,10 @@ export const userAuthStore = defineStore('auth', () => {
                 hasSeenOnboarding: false,
                 isPremium: false,
                 totalHats: 0,
+                points: 0,
                 sale_5: false,
                 sale_10: false,
                 sale_15: false,
-
                 ...createInitialAchievementsObject()
             })
         }
@@ -278,8 +275,6 @@ export const userAuthStore = defineStore('auth', () => {
         )
         const user = userCredential.user
         await updateProfile(user, {displayName: userData.name})
-
-        await updateProfile(user, {displayName: userData.name})
         await sendEmailVerification(user)
         const userDocRef = doc(db, 'users', user.uid)
         await setDoc(userDocRef, {
@@ -295,15 +290,12 @@ export const userAuthStore = defineStore('auth', () => {
             voiceConsentGiven: false,
             hasSeenOnboarding: false,
             totalHats: 0,
-            points:0,
-            exp:0,
-            isLeveling:0,
+            points: 0,
             sale_5: false,
             sale_10: false,
             sale_15: false,
             ...createInitialAchievementsObject()
         })
-
         const finalDoc = await getDoc(userDocRef)
         const data = finalDoc.data() || {}
 
@@ -315,10 +307,8 @@ export const userAuthStore = defineStore('auth', () => {
             providerId: user.providerData[0]?.providerId || '',
             ...data,
         })
-
         await checkFeedbackSurveyEligibility()
     }
-
 
     const setHasSeenOnboarding = async (value = true) => {
         const authInstance = getAuth()
@@ -346,7 +336,6 @@ export const userAuthStore = defineStore('auth', () => {
         await updateDoc(userDocRef, {
             totalHats: totalHats.value
         })
-
     }
 
     const loginUser = async ({email, password}) => {
@@ -435,11 +424,6 @@ export const userAuthStore = defineStore('auth', () => {
         const auth = getAuth()
         await signOut(auth)
         setUserData({});
-        langStore.points = 0;
-        langStore.exp = 0;
-        langStore.isLeveling = 0;
-        langStore.totalEarnedPoints = 0;
-        langStore.articlesSpentForAchievement = 0;
         if (authStateUnsubscribe) {
             authStateUnsubscribe();
             authStateUnsubscribe = null;
@@ -473,6 +457,7 @@ export const userAuthStore = defineStore('auth', () => {
             initialized.value = true
         })
     }
+
 
     const initAuth = () => {
         if (initialized.value) return Promise.resolve()
@@ -531,75 +516,15 @@ export const userAuthStore = defineStore('auth', () => {
         }
     }
 
-    const activatePremium = async (premiumData) => {
-        const auth = getAuth()
-        const user = auth.currentUser
-        if (!user) return
-        // 1. Получаем ID скидки с бэкенда
-        const usedDiscountId = premiumData.discountUsed
-        const userDocRef = doc(db, 'users', user.uid)
-        try {
-            // 2. Формируем данные
-            const dataToSave = {
-                ...premiumData,
-                isPremium: true,
-                subscriptionCancelled: false,
-                updatedAt: new Date().toISOString()
-            }
-            // 3. Если была скидка, ставим её в false в базе
-            if (usedDiscountId && ['sale_5', 'sale_10', 'sale_15'].includes(usedDiscountId)) {
-                dataToSave[usedDiscountId] = false
-                console.log( "Купон сброшен в базе")
-            }
-            // 4. Пишем в Firebase
-            await setDoc(userDocRef, dataToSave, { merge: true })
-
-            // 5. Обновляем локальные данные
-            isPremium.value = true
-            subscriptionEndsAt.value = premiumData.subscriptionEndsAt
-            subscriptionCancelled.value = false
-            // 6. Обновляем переменную со скидками в интерфейсе
-            if (premiumDiscount.value && usedDiscountId) {
-                premiumDiscount.value[usedDiscountId] = false
-            }
-            console.log('✅ Премиум успешно активирован и записан')
-        } catch (e) {
-            console.error('Ошибка записи в Базе данных:', e)
-            throw e
-        }
-    }
-    const consumeDiscount = async (discountId) => {
-        const user = getAuth().currentUser
-        if (!user) return { success: false, reason: 'no-user' }
-
-        const allowed = ['sale_5', 'sale_10', 'sale_15']
-        if (!allowed.includes(discountId)) return { success: false, reason: 'invalid-item' }
-        // если скидки нет — нечего сжигать
-        if (premiumDiscount.value[discountId] !== true) {
-            return { success: false, reason: 'not-owned' }
-        }
-        const userRef = doc(db, 'users', user.uid)
-        await updateDoc(userRef, { [discountId]: false })
-        premiumDiscount.value[discountId] = false
-        return { success: true }
+    const activatePremium = (premiumData) => {
+        isPremium.value = true
+        subscriptionEndsAt.value = premiumData.subscriptionEndsAt
+        subscriptionCancelled.value = false
     }
 
-    const markCancelledInDb = async () => {
-        const auth = getAuth()
-        const user = auth.currentUser
-        // 1. Обновляем локально, чтобы юзер сразу увидел
+    const markCancelledInDb = () => {
+        if (!isPremium.value) return
         subscriptionCancelled.value = true
-        if (!user) return
-        // 2. ЖЕЛЕЗОБЕТОННО ПИШЕМ В БАЗУ
-        const userDocRef = doc(db, 'users', user.uid)
-        try {
-            await updateDoc(userDocRef, {
-                subscriptionCancelled: true
-            })
-            console.log('💾 Статус отмены сохранен в базу навсегда')
-        } catch (e) {
-            console.error('Ошибка записи в базу:', e)
-        }
     }
 
     return {
@@ -646,7 +571,6 @@ export const userAuthStore = defineStore('auth', () => {
         premiumDiscount,
         purchase,
         activateDiscount,
-        markCancelledInDb,
-        consumeDiscount
+        markCancelledInDb
     }
 })
