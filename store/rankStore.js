@@ -40,7 +40,7 @@ export const useRankUserStore = defineStore('rankUserStore', () => {
 				{icon: LevelOneBronze,},
 				{icon: LevelOneGold}
 			],
-			levels: [{hats: 1}, {hats: 7}, {hats: 14, bonus: 'Скидка 5%'}
+			levels: [{hats: 1, bonus: '10 Артиклюсов'}, {hats: 7, bonus: '10 Артиклюсов'}, {hats: 14, bonus: '10 Артиклюсов'}
 			]
 		},
 		{
@@ -51,7 +51,7 @@ export const useRankUserStore = defineStore('rankUserStore', () => {
 				{icon: levelTwoGold}
 			]
 			, levels:
-				[{hats: 25}, {hats: 40}, {hats: 55, bonus: 'Скидка 10%'}]
+				[{hats: 25 , bonus: '10 Артиклюсов'}, {hats: 40, bonus: '10 Артиклюсов'}, {hats: 55, bonus: 'Скидка 5%'}]
 		},
 		{title: 'МАГИСТР',
 			icons: [
@@ -59,28 +59,28 @@ export const useRankUserStore = defineStore('rankUserStore', () => {
 				{icon: LevelThreeBronze,},
 				{icon: LevelThreeGold}
 			],
-			levels: [{hats: 70}, {hats: 85}, {hats: 100, bonus: 'Скидка 10%'}]},
+			levels: [{hats: 70, bonus: '10 Артиклюсов'}, {hats: 85, bonus: '10 Артиклюсов'}, {hats: 100, bonus: 'Скидка 10%'}]},
 		{title: 'ДОКТОР',
 			icons: [
 				{icon: LevelFourSilver,},
 				{icon: LevelFourBronze,},
 				{icon: LevelFourGold}
 			],
-			levels: [{hats: 120}, {hats: 135}, {hats: 150, bonus: 'Скидка 15%'}]},
+			levels: [{hats: 120, bonus: '10 Артиклюсов'}, {hats: 135, bonus: '10 Артиклюсов'}, {hats: 150, bonus: 'Скидка 15%'}]},
 		{title: 'ПРОФЕССОР',
 			icons: [
 				{icon: LevelFiveSilver,},
 				{icon: LevelFiveBronze,},
 				{icon: LevelFiveGold}
 			],
-			levels: [{hats: 170}, {hats: 190}, {hats: 210, bonus: 'Скидка 20%'}]},
+			levels: [{hats: 170, bonus: '10 Артиклюсов'}, {hats: 190, bonus: '10 Артиклюсов'}, {hats: 210, bonus: '10 Артиклюсов'}]},
 		{title: 'ДЕКАН',
 			icons: [
 				{icon: LevelSixSilver,},
 				{icon: LevelSixBronze,},
 				{icon: LevelSixGold}
 			],
-			levels: [{hats: 230}, {hats: 250}, {hats: 270, bonus: 'Месяц премиум'}]},
+			levels: [{hats: 230, bonus: '10 Артиклюсов'}, {hats: 250, bonus: '10 Артиклюсов'}, {hats: 270,  bonus: 'Скидка 15%'}]},
 		{title: 'РЕКТОР',
 			icons: [
 				{icon: LevelSevenSilver,},
