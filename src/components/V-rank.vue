@@ -167,8 +167,9 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 }
 
 .card {
-  padding: 10px;
+  padding: 3px;
   text-align: center;
+  position: relative;
 }
 
 .card.is-locked {
@@ -184,6 +185,10 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 .card-stars {
   color: #e0e0e0;
   font-size: 20px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
 }
 
 .star-active {
@@ -191,10 +196,15 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 }
 
 .card-icon img {
-  width: 76px;
-  height: 76px;
+
   object-fit: contain;
   transition: filter 0.3s ease;
+}
+
+.card-icon {
+  padding-top:10px;
+  width: 85px;
+  height: 85px;
 }
 
 .icon-grayscale {
@@ -340,6 +350,8 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 
   .grid {
     scrollbar-width: none;
+    display: flex;
+    justify-content: center;
   }
 
   .hats-badge,
