@@ -7,8 +7,9 @@
         :text="modalData.text"
         @close="closeAward"
     />
+
     <div class="awards__header">
-      <h1 class="awards__title">{{ t('awardModal.title') }}</h1>
+      <h1 class="awards__title">{{ t('Награды') }}</h1>
       <button @click="questionModal" class="awards__info-btn">
         <!--            <img class="awards__question-icon" :src="Question" alt="quest_icon">-->
         <div class="awards__counter cartoon-board">
@@ -16,6 +17,7 @@
           <span class="cartoon-board__sep">/</span>
           <span class="cartoon-board__total">{{ awardsTotal }}</span>
         </div>
+
       </button>
     </div>
     <div class="awards__list-scroll">
@@ -54,6 +56,7 @@ const props = defineProps({
 const awardsTotal = computed(() => props.awards.length)
 const awardsTotalLocked = computed(() => props.awards.filter(award => !award.locked).length)
 const sortedAwards = computed(() => {
+  // сначала полученные (locked=false), потом закрытые (locked=true)
   return [...props.awards].sort((a, b) => Number(a.locked) - Number(b.locked))
 })
 
@@ -95,6 +98,7 @@ function closeAward() {
 .shop-item {
   padding: 1rem;
   text-align: center;
+
   display: flex;
   width: 180px;
   flex-direction: column;
@@ -104,10 +108,10 @@ function closeAward() {
 }
 
 .awards__title {
-  color: var(--titleColor);
   font-size: 1.5rem;
   font-weight: 600;
   font-family: "Nunito", sans-serif;
+  color: var(--titleColor);
 }
 
 .awards__header {
@@ -117,6 +121,7 @@ function closeAward() {
   margin-bottom: 15px;
   padding: 0 20px;
   border-radius: 16px;
+
 }
 
 .item-img.locked {
@@ -147,13 +152,13 @@ function closeAward() {
 
 .item-img {
   object-fit: contain;
-  margin-bottom: 0.1rem;
+  margin-bottom: 0.5rem;
 }
 
 .item-name {
   color: var(--titleColor);
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin-bottom: 0.25rem;
 }
 
@@ -210,7 +215,7 @@ button:disabled {
 }
 
 .awards__list-scroll {
-  max-height: calc(100vh - 310px);
+  max-height: calc(100vh - 300px);
   overflow-y: auto;
   padding-right: 6px;
 }
@@ -235,9 +240,11 @@ button:disabled {
   align-items: center;
   justify-content: center;
   gap: 6px;
+
   height: 36px;
   padding: 0 12px;
   min-width: 82px;
+
   border-radius: 14px;
   border: 2px solid #000;
   background: #ffffff;
@@ -248,6 +255,30 @@ button:disabled {
   line-height: 1;
   user-select: none;
   overflow: hidden;
+}
+
+.awards__counter.cartoon-board::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 8px;
+  right: 8px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.85);
+  filter: blur(0.2px);
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.awards__counter.cartoon-board::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(26, 29, 43, 0.12) 1.4px, transparent 1.6px);
+  background-size: 10px 10px;
+  opacity: 0.6;
+  pointer-events: none;
 }
 
 .cartoon-board__value {
@@ -286,6 +317,7 @@ button:disabled {
     min-width: 76px;
     font-size: 1rem;
   }
+
   .cartoon-board__value {
     height: 23px;
     padding: 0 7px;
@@ -307,14 +339,9 @@ button:disabled {
   .items-grid {
     width: 100%;
   }
+
   .awards__title {
-    font-size: 1.5rem;
-  }
-  .shop-item {
-    width: 160px;
-  }
-  .item-name {
-    font-size: .9rem;
+    font-size: 1.7rem;
   }
 }
 
