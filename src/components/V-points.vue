@@ -129,13 +129,13 @@ const hoverTitle = {
   level: t('hoverTitle.level')
 }
 const infoData = ref([
-  // {id: "rank",
-  //   title: t('pavelOverlay.rankTitle'),
-  //   tips:[
-  //     {label: t('pavelOverlay.rankLabelOne')},
-  //     {label: t('pavelOverlay.rankLabelTwo')}
-  //   ]
-  // },
+  {id: "rank",
+    title: t('pavelOverlay.rankTitle'),
+    tips:[
+      {label: t('pavelOverlay.rankLabelOne')},
+      {label: t('pavelOverlay.rankLabelTwo')}
+    ]
+  },
   {id: "article",
     title: t('pavelOverlay.articleTitle'),
     tips:[
