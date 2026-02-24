@@ -15,7 +15,6 @@ import LevelThreeBronze from 'assets/images/rank-icons/level-3/SilverPank.png'
 import LevelThreeGold from 'assets/images/rank-icons/level-3/SilverPank.png'
 
 
-
 import LevelFiveSilver from 'assets/images/rank-icons/level-5/Level4Silver.png'
 import LevelFiveBronze from 'assets/images/rank-icons/level-5/Level4Bronze.png'
 import LevelFiveGold from 'assets/images/rank-icons/level-5/Level4Gold.png'
