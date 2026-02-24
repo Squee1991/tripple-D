@@ -254,7 +254,7 @@ export const useDuelStore = defineStore('gameDuelStore', () => {
                 }
             }
             if (newStatus === 'aborted' && prevStatus !== 'aborted') {
-                console.log(`Сессия ${data.id} aborted. Удаляю через 15 секунд...`);
+                console.log(`Сессия ${data.id} aborted. Удаляю через 15 секунд....`);
 
                 setTimeout(async () => {
                     try {
