@@ -1,0 +1,4862 @@
+{
+  "general-A1": {
+    "cefrLevel": "A1",
+    "category": "general",
+    "questions": [
+      {
+        "id": "a1-01",
+        "text": "Wie heißen Sie? Woher kommen Sie?",
+        "category": "greetings"
+      },
+      {
+        "id": "a1-02",
+        "text": "Was machen Sie beruflich?",
+        "category": "greetings"
+      },
+      {
+        "id": "a1-03",
+        "text": "Haben Sie Geschwister? Erzählen Sie von Ihrer Familie.",
+        "category": "family"
+      },
+      {
+        "id": "a1-04",
+        "text": "Wie alt sind Ihre Eltern? Was machen sie?",
+        "category": "family"
+      },
+      {
+        "id": "a1-05",
+        "text": "Wann stehen Sie normalerweise auf?",
+        "category": "daily-routine"
+      },
+      {
+        "id": "a1-06",
+        "text": "Was machen Sie am Morgen?",
+        "category": "daily-routine"
+      },
+      {
+        "id": "a1-07",
+        "text": "Was essen Sie gern zum Frühstück?",
+        "category": "food"
+      },
+      {
+        "id": "a1-08",
+        "text": "Was ist Ihr Lieblingsessen?",
+        "category": "food"
+      },
+      {
+        "id": "a1-09",
+        "text": "Trinken Sie lieber Tee oder Kaffee?",
+        "category": "food"
+      },
+      {
+        "id": "a1-10",
+        "text": "Wie ist das Wetter heute?",
+        "category": "weather"
+      },
+      {
+        "id": "a1-11",
+        "text": "Welche Jahreszeit mögen Sie am liebsten? Warum?",
+        "category": "weather"
+      },
+      {
+        "id": "a1-12",
+        "text": "Wo wohnen Sie? Beschreiben Sie Ihre Wohnung.",
+        "category": "daily-routine"
+      },
+      {
+        "id": "a1-13",
+        "text": "Was machen Sie am Wochenende?",
+        "category": "daily-routine"
+      },
+      {
+        "id": "a1-14",
+        "text": "Welche Sprachen sprechen Sie?",
+        "category": "greetings"
+      },
+      {
+        "id": "a1-15",
+        "text": "Haben Sie ein Haustier? Möchten Sie eins?",
+        "category": "family"
+      }
+    ]
+  },
+  "general-A2": {
+    "cefrLevel": "A2",
+    "category": "general",
+    "questions": [
+      {
+        "id": "a2-01",
+        "text": "Was sind Ihre Hobbys? Wie oft machen Sie das?",
+        "category": "hobbies"
+      },
+      {
+        "id": "a2-02",
+        "text": "Treiben Sie Sport? Welchen Sport mögen Sie?",
+        "category": "hobbies"
+      },
+      {
+        "id": "a2-03",
+        "text": "Wohin sind Sie zuletzt gereist? Erzählen Sie davon.",
+        "category": "travel"
+      },
+      {
+        "id": "a2-04",
+        "text": "Welches Land möchten Sie besuchen? Warum?",
+        "category": "travel"
+      },
+      {
+        "id": "a2-05",
+        "text": "Wo kaufen Sie normalerweise ein? Im Supermarkt oder online?",
+        "category": "shopping"
+      },
+      {
+        "id": "a2-06",
+        "text": "Was haben Sie zuletzt gekauft?",
+        "category": "shopping"
+      },
+      {
+        "id": "a2-07",
+        "text": "Beschreiben Sie Ihr Zimmer. Was steht dort?",
+        "category": "housing"
+      },
+      {
+        "id": "a2-08",
+        "text": "Wohnen Sie lieber in der Stadt oder auf dem Land? Warum?",
+        "category": "housing"
+      },
+      {
+        "id": "a2-09",
+        "text": "Wie kommen Sie zur Arbeit oder zur Schule?",
+        "category": "travel"
+      },
+      {
+        "id": "a2-10",
+        "text": "Was machen Sie, wenn Sie krank sind?",
+        "category": "health"
+      },
+      {
+        "id": "a2-11",
+        "text": "Gehen Sie oft zum Arzt? Warum oder warum nicht?",
+        "category": "health"
+      },
+      {
+        "id": "a2-12",
+        "text": "Kochen Sie gern? Was kochen Sie am liebsten?",
+        "category": "hobbies"
+      },
+      {
+        "id": "a2-13",
+        "text": "Welche Musik hören Sie gern?",
+        "category": "hobbies"
+      },
+      {
+        "id": "a2-14",
+        "text": "Erzählen Sie von Ihrem besten Freund oder Ihrer besten Freundin.",
+        "category": "hobbies"
+      },
+      {
+        "id": "a2-15",
+        "text": "Feiern Sie gern Geburtstag? Wie feiern Sie?",
+        "category": "hobbies"
+      }
+    ]
+  },
+  "general-B1": {
+    "cefrLevel": "B1",
+    "category": "general",
+    "questions": [
+      {
+        "id": "b1-01",
+        "text": "Was gefällt Ihnen an Ihrem Beruf? Was würden Sie ändern?",
+        "category": "work"
+      },
+      {
+        "id": "b1-02",
+        "text": "Welchen Beruf hatten Sie als Kind als Traumjob?",
+        "category": "work"
+      },
+      {
+        "id": "b1-03",
+        "text": "Welche Ausbildung oder welches Studium haben Sie gemacht?",
+        "category": "education"
+      },
+      {
+        "id": "b1-04",
+        "text": "Finden Sie, dass Schulnoten wichtig sind? Warum?",
+        "category": "education"
+      },
+      {
+        "id": "b1-05",
+        "text": "Wie informieren Sie sich über Nachrichten?",
+        "category": "media"
+      },
+      {
+        "id": "b1-06",
+        "text": "Verbringen Sie viel Zeit in sozialen Medien? Was denken Sie darüber?",
+        "category": "media"
+      },
+      {
+        "id": "b1-07",
+        "text": "Was können wir für die Umwelt tun?",
+        "category": "environment"
+      },
+      {
+        "id": "b1-08",
+        "text": "Trennen Sie Ihren Müll? Finden Sie Recycling wichtig?",
+        "category": "environment"
+      },
+      {
+        "id": "b1-09",
+        "text": "Welche deutschen Traditionen kennen Sie?",
+        "category": "culture"
+      },
+      {
+        "id": "b1-10",
+        "text": "Gibt es kulturelle Unterschiede zwischen Ihrem Land und Deutschland?",
+        "category": "culture"
+      },
+      {
+        "id": "b1-11",
+        "text": "Was war das beste Buch, das Sie gelesen haben? Worum geht es?",
+        "category": "media"
+      },
+      {
+        "id": "b1-12",
+        "text": "Sollte man im Ausland studieren? Was sind die Vorteile?",
+        "category": "education"
+      },
+      {
+        "id": "b1-13",
+        "text": "Wie wichtig ist Sport für die Gesundheit?",
+        "category": "environment"
+      },
+      {
+        "id": "b1-14",
+        "text": "Erzählen Sie von einem unvergesslichen Erlebnis.",
+        "category": "culture"
+      },
+      {
+        "id": "b1-15",
+        "text": "Welche Rolle spielt Technologie in Ihrem Alltag?",
+        "category": "media"
+      }
+    ]
+  },
+  "general-B2": {
+    "cefrLevel": "B2",
+    "category": "general",
+    "questions": [
+      {
+        "id": "b2-01",
+        "text": "Welche Rolle sollte die Regierung bei der Bekämpfung des Klimawandels spielen?",
+        "category": "politics"
+      },
+      {
+        "id": "b2-02",
+        "text": "Sollte das Wahlrecht ab 16 Jahren gelten? Begründen Sie Ihre Meinung.",
+        "category": "politics"
+      },
+      {
+        "id": "b2-03",
+        "text": "Wie hat sich das Zusammenleben in der Gesellschaft in den letzten Jahren verändert?",
+        "category": "society"
+      },
+      {
+        "id": "b2-04",
+        "text": "Was bedeutet Integration für Sie? Wie kann sie gelingen?",
+        "category": "society"
+      },
+      {
+        "id": "b2-05",
+        "text": "Wird künstliche Intelligenz die Arbeitswelt revolutionieren? Inwiefern?",
+        "category": "technology"
+      },
+      {
+        "id": "b2-06",
+        "text": "Sollten persönliche Daten im Internet stärker geschützt werden?",
+        "category": "technology"
+      },
+      {
+        "id": "b2-07",
+        "text": "Ist Homeoffice die Zukunft der Arbeit? Was sind Vor- und Nachteile?",
+        "category": "work"
+      },
+      {
+        "id": "b2-08",
+        "text": "Wie beeinflusst Werbung unser Kaufverhalten?",
+        "category": "society"
+      },
+      {
+        "id": "b2-09",
+        "text": "Was verstehen Sie unter einem guten Bildungssystem?",
+        "category": "education"
+      },
+      {
+        "id": "b2-10",
+        "text": "Sollte Organspende Pflicht sein? Diskutieren Sie Pro und Contra.",
+        "category": "society"
+      },
+      {
+        "id": "b2-11",
+        "text": "Welche Verantwortung haben Unternehmen gegenüber der Umwelt?",
+        "category": "politics"
+      },
+      {
+        "id": "b2-12",
+        "text": "Wie wichtig ist ehrenamtliches Engagement für die Gesellschaft?",
+        "category": "society"
+      },
+      {
+        "id": "b2-13",
+        "text": "Welche Auswirkungen hat die Globalisierung auf lokale Kulturen?",
+        "category": "society"
+      },
+      {
+        "id": "b2-14",
+        "text": "Ist ein bedingungsloses Grundeinkommen realistisch?",
+        "category": "politics"
+      },
+      {
+        "id": "b2-15",
+        "text": "Wie sollte man mit Fake News umgehen?",
+        "category": "technology"
+      }
+    ]
+  },
+  "general-C1": {
+    "cefrLevel": "C1",
+    "category": "general",
+    "questions": [
+      {
+        "id": "c1-01",
+        "text": "Inwiefern beeinflusst die Sprache unser Denken und unsere Wahrnehmung der Welt?",
+        "category": "debate"
+      },
+      {
+        "id": "c1-02",
+        "text": "Kann man in einer zunehmend digitalisierten Welt noch von Privatsphäre sprechen?",
+        "category": "debate"
+      },
+      {
+        "id": "c1-03",
+        "text": "Sollte Kunst staatlich gefördert werden, auch wenn sie provokativ ist?",
+        "category": "opinion"
+      },
+      {
+        "id": "c1-04",
+        "text": "Wie lässt sich das Spannungsfeld zwischen individueller Freiheit und kollektiver Verantwortung lösen?",
+        "category": "opinion"
+      },
+      {
+        "id": "c1-05",
+        "text": "Wenn Sie die Macht hätten, ein Gesetz weltweit einzuführen — welches wäre es und warum?",
+        "category": "hypothetical"
+      },
+      {
+        "id": "c1-06",
+        "text": "Stellen Sie sich vor, Geld spielte keine Rolle. Wie würden Sie Ihr Leben gestalten?",
+        "category": "hypothetical"
+      },
+      {
+        "id": "c1-07",
+        "text": "Welche ethischen Grenzen sollte die Genforschung nicht überschreiten?",
+        "category": "debate"
+      },
+      {
+        "id": "c1-08",
+        "text": "Ist der Kapitalismus das beste Wirtschaftssystem, das wir kennen? Argumentieren Sie.",
+        "category": "debate"
+      },
+      {
+        "id": "c1-09",
+        "text": "Wie definieren Sie Erfolg? Hat sich Ihre Definition im Laufe der Zeit verändert?",
+        "category": "opinion"
+      },
+      {
+        "id": "c1-10",
+        "text": "Werden traditionelle Medien in Zukunft überflüssig? Was spricht dafür, was dagegen?",
+        "category": "debate"
+      },
+      {
+        "id": "c1-11",
+        "text": "Welche Verantwortung tragen Wissenschaftler für die Folgen ihrer Forschung?",
+        "category": "debate"
+      },
+      {
+        "id": "c1-12",
+        "text": "Kann echte Chancengleichheit in einer Gesellschaft jemals erreicht werden?",
+        "category": "opinion"
+      },
+      {
+        "id": "c1-13",
+        "text": "Wenn Sie in die Vergangenheit reisen könnten, welches historische Ereignis würden Sie ändern?",
+        "category": "hypothetical"
+      },
+      {
+        "id": "c1-14",
+        "text": "Wie verändert die Mehrsprachigkeit die eigene Identität?",
+        "category": "opinion"
+      },
+      {
+        "id": "c1-15",
+        "text": "Sollten Algorithmen über Menschen urteilen dürfen — z.B. bei Kreditvergabe oder Strafmaß?",
+        "category": "debate"
+      }
+    ]
+  },
+  "family-A1": {
+    "cefrLevel": "A1",
+    "category": "family",
+    "questions": [
+      {
+        "id": "family-a1-01",
+        "text": "Haben Sie Geschwister?",
+        "category": "family"
+      },
+      {
+        "id": "family-a1-02",
+        "text": "Wie heißt Ihre Mutter?",
+        "category": "family"
+      },
+      {
+        "id": "family-a1-03",
+        "text": "Wie heißt Ihr Vater?",
+        "category": "family"
+      },
+      {
+        "id": "family-a1-04",
+        "text": "Wie alt sind Sie?",
+        "category": "family"
+      },
+      {
+        "id": "family-a1-05",
+        "text": "Wo wohnt Ihre Familie?",
+        "category": "family"
+      },
+      {
+        "id": "family-a1-06",
+        "text": "Haben Sie Kinder?",
+        "category": "family"
+      },
+      {
+        "id": "family-a1-07",
+        "text": "Wie viele Personen sind in Ihrer Familie?",
+        "category": "family"
+      },
+      {
+        "id": "family-a1-08",
+        "text": "Haben Sie Großeltern?",
+        "category": "family"
+      },
+      {
+        "id": "family-a1-09",
+        "text": "Was macht Ihre Mutter beruflich?",
+        "category": "family"
+      },
+      {
+        "id": "family-a1-10",
+        "text": "Was macht Ihr Vater beruflich?",
+        "category": "family"
+      },
+      {
+        "id": "family-a1-11",
+        "text": "Haben Sie einen Bruder oder eine Schwester?",
+        "category": "family"
+      },
+      {
+        "id": "family-a1-12",
+        "text": "Wie alt ist Ihr Bruder oder Ihre Schwester?",
+        "category": "family"
+      },
+      {
+        "id": "family-a1-13",
+        "text": "Haben Sie Onkel und Tanten?",
+        "category": "family"
+      },
+      {
+        "id": "family-a1-14",
+        "text": "Haben Sie Cousins oder Cousinen?",
+        "category": "family"
+      },
+      {
+        "id": "family-a1-15",
+        "text": "Wohnen Sie bei Ihren Eltern?",
+        "category": "family"
+      }
+    ]
+  },
+  "family-A2": {
+    "cefrLevel": "A2",
+    "category": "family",
+    "questions": [
+      {
+        "id": "family-a2-01",
+        "text": "Erzählen Sie von Ihrer Familie.",
+        "category": "family"
+      },
+      {
+        "id": "family-a2-02",
+        "text": "Was machen Sie am Wochenende mit Ihrer Familie?",
+        "category": "family"
+      },
+      {
+        "id": "family-a2-03",
+        "text": "Wie feiern Sie Weihnachten mit Ihrer Familie?",
+        "category": "family"
+      },
+      {
+        "id": "family-a2-04",
+        "text": "Haben Sie Haustiere in Ihrer Familie?",
+        "category": "family"
+      },
+      {
+        "id": "family-a2-05",
+        "text": "Wie oft besuchen Sie Ihre Großeltern?",
+        "category": "family"
+      },
+      {
+        "id": "family-a2-06",
+        "text": "Was kochen Sie zusammen mit Ihrer Familie?",
+        "category": "family"
+      },
+      {
+        "id": "family-a2-07",
+        "text": "Wer ist die älteste Person in Ihrer Familie?",
+        "category": "family"
+      },
+      {
+        "id": "family-a2-08",
+        "text": "Was machen Ihre Geschwister beruflich?",
+        "category": "family"
+      },
+      {
+        "id": "family-a2-09",
+        "text": "Wo haben Sie als Kind gewohnt?",
+        "category": "family"
+      },
+      {
+        "id": "family-a2-10",
+        "text": "Haben Sie eine große oder kleine Familie?",
+        "category": "family"
+      },
+      {
+        "id": "family-a2-11",
+        "text": "Was machen Sie gern mit Ihren Eltern?",
+        "category": "family"
+      },
+      {
+        "id": "family-a2-12",
+        "text": "Wie feiern Sie Geburtstage in Ihrer Familie?",
+        "category": "family"
+      },
+      {
+        "id": "family-a2-13",
+        "text": "Haben Sie Familienfotos? Beschreiben Sie eins.",
+        "category": "family"
+      },
+      {
+        "id": "family-a2-14",
+        "text": "Wer kocht in Ihrer Familie?",
+        "category": "family"
+      },
+      {
+        "id": "family-a2-15",
+        "text": "Was ist Ihre schönste Kindheitserinnerung?",
+        "category": "family"
+      }
+    ]
+  },
+  "family-B1": {
+    "cefrLevel": "B1",
+    "category": "family",
+    "questions": [
+      {
+        "id": "family-b1-01",
+        "text": "Welche Rolle spielen Großeltern in Ihrer Familie?",
+        "category": "family"
+      },
+      {
+        "id": "family-b1-02",
+        "text": "Wie hat sich das Familienleben in den letzten Jahren verändert?",
+        "category": "family"
+      },
+      {
+        "id": "family-b1-03",
+        "text": "Was bedeutet Familie für Sie?",
+        "category": "family"
+      },
+      {
+        "id": "family-b1-04",
+        "text": "Sollten Kinder bei den Großeltern aufwachsen? Warum oder warum nicht?",
+        "category": "family"
+      },
+      {
+        "id": "family-b1-05",
+        "text": "Wie lösen Sie Konflikte in Ihrer Familie?",
+        "category": "family"
+      },
+      {
+        "id": "family-b1-06",
+        "text": "Was sind die Vorteile einer großen Familie?",
+        "category": "family"
+      },
+      {
+        "id": "family-b1-07",
+        "text": "Wie wichtig ist gemeinsames Essen in Ihrer Familie?",
+        "category": "family"
+      },
+      {
+        "id": "family-b1-08",
+        "text": "Wie halten Sie den Kontakt zu Verwandten, die weit weg wohnen?",
+        "category": "family"
+      },
+      {
+        "id": "family-b1-09",
+        "text": "Welche Familientraditionen haben Sie?",
+        "category": "family"
+      },
+      {
+        "id": "family-b1-10",
+        "text": "Wie teilen Sie die Hausarbeit in Ihrer Familie auf?",
+        "category": "family"
+      },
+      {
+        "id": "family-b1-11",
+        "text": "Was haben Sie von Ihren Eltern gelernt?",
+        "category": "family"
+      },
+      {
+        "id": "family-b1-12",
+        "text": "Wie hat die Technologie das Familienleben verändert?",
+        "category": "family"
+      },
+      {
+        "id": "family-b1-13",
+        "text": "Finden Sie, dass Eltern streng sein sollten?",
+        "category": "family"
+      },
+      {
+        "id": "family-b1-14",
+        "text": "Was ist der wichtigste Wert in Ihrer Familie?",
+        "category": "family"
+      },
+      {
+        "id": "family-b1-15",
+        "text": "Wie verbringen Sie Ihren Urlaub mit der Familie?",
+        "category": "family"
+      }
+    ]
+  },
+  "family-B2": {
+    "cefrLevel": "B2",
+    "category": "family",
+    "questions": [
+      {
+        "id": "family-b2-01",
+        "text": "Wie hat sich das traditionelle Familienbild in der modernen Gesellschaft verändert?",
+        "category": "family"
+      },
+      {
+        "id": "family-b2-02",
+        "text": "Sollte der Staat Familien finanziell stärker unterstützen?",
+        "category": "family"
+      },
+      {
+        "id": "family-b2-03",
+        "text": "Welche Auswirkungen hat die Berufstätigkeit beider Eltern auf die Kindererziehung?",
+        "category": "family"
+      },
+      {
+        "id": "family-b2-04",
+        "text": "Wie beeinflusst die Digitalisierung die Kommunikation innerhalb der Familie?",
+        "category": "family"
+      },
+      {
+        "id": "family-b2-05",
+        "text": "Was halten Sie von Patchwork-Familien?",
+        "category": "family"
+      },
+      {
+        "id": "family-b2-06",
+        "text": "Sollten erwachsene Kinder ihre Eltern im Alter pflegen?",
+        "category": "family"
+      },
+      {
+        "id": "family-b2-07",
+        "text": "Wie wichtig ist die Vereinbarkeit von Familie und Beruf?",
+        "category": "family"
+      },
+      {
+        "id": "family-b2-08",
+        "text": "Welche Rolle spielen kulturelle Unterschiede in binationalen Familien?",
+        "category": "family"
+      },
+      {
+        "id": "family-b2-09",
+        "text": "Diskutieren Sie die Vor- und Nachteile von Einzelkindern.",
+        "category": "family"
+      },
+      {
+        "id": "family-b2-10",
+        "text": "Wie wirkt sich die Work-Life-Balance auf das Familienleben aus?",
+        "category": "family"
+      },
+      {
+        "id": "family-b2-11",
+        "text": "Sollte Elternzeit für beide Elternteile verpflichtend sein?",
+        "category": "family"
+      },
+      {
+        "id": "family-b2-12",
+        "text": "Wie hat die Pandemie das Familienleben verändert?",
+        "category": "family"
+      },
+      {
+        "id": "family-b2-13",
+        "text": "Welche Bedeutung haben Familienrituale für den Zusammenhalt?",
+        "category": "family"
+      },
+      {
+        "id": "family-b2-14",
+        "text": "Wie gehen Familien mit dem Generationenkonflikt um?",
+        "category": "family"
+      },
+      {
+        "id": "family-b2-15",
+        "text": "Ist die Kernfamilie noch das ideale Modell?",
+        "category": "family"
+      }
+    ]
+  },
+  "family-C1": {
+    "cefrLevel": "C1",
+    "category": "family",
+    "questions": [
+      {
+        "id": "family-c1-01",
+        "text": "Inwiefern spiegelt die Familienstruktur gesellschaftliche Machtverhältnisse wider?",
+        "category": "family"
+      },
+      {
+        "id": "family-c1-02",
+        "text": "Lässt sich argumentieren, dass die Institution Familie zunehmend an Bedeutung verliert?",
+        "category": "family"
+      },
+      {
+        "id": "family-c1-03",
+        "text": "Wie beeinflusst der demografische Wandel die Familienplanung und Familienpolitik?",
+        "category": "family"
+      },
+      {
+        "id": "family-c1-04",
+        "text": "Welche ethischen Fragen wirft die moderne Reproduktionsmedizin für Familien auf?",
+        "category": "family"
+      },
+      {
+        "id": "family-c1-05",
+        "text": "Kann man in einer individualisierten Gesellschaft noch von traditionellen Familienwerten sprechen?",
+        "category": "family"
+      },
+      {
+        "id": "family-c1-06",
+        "text": "Wie verändert die Globalisierung die Familienstrukturen weltweit?",
+        "category": "family"
+      },
+      {
+        "id": "family-c1-07",
+        "text": "Sollte der Staat das Recht haben, in die Erziehung einzugreifen?",
+        "category": "family"
+      },
+      {
+        "id": "family-c1-08",
+        "text": "Inwiefern prägen familiäre Erfahrungen unsere Persönlichkeit und unser Weltbild?",
+        "category": "family"
+      },
+      {
+        "id": "family-c1-09",
+        "text": "Welche Rolle spielt die Familie bei der sozialen Mobilität?",
+        "category": "family"
+      },
+      {
+        "id": "family-c1-10",
+        "text": "Wie lässt sich das Spannungsfeld zwischen individueller Selbstverwirklichung und familiärer Verantwortung lösen?",
+        "category": "family"
+      },
+      {
+        "id": "family-c1-11",
+        "text": "Diskutieren Sie die These: Die Familie ist die kleinste Einheit der Gesellschaft.",
+        "category": "family"
+      },
+      {
+        "id": "family-c1-12",
+        "text": "Welchen Einfluss haben ökonomische Faktoren auf familiäre Entscheidungen?",
+        "category": "family"
+      },
+      {
+        "id": "family-c1-13",
+        "text": "Wie verändert Künstliche Intelligenz die Art, wie Familien kommunizieren?",
+        "category": "family"
+      },
+      {
+        "id": "family-c1-14",
+        "text": "Ist das Konzept der Großfamilie ein Auslaufmodell oder erlebt es eine Renaissance?",
+        "category": "family"
+      },
+      {
+        "id": "family-c1-15",
+        "text": "Welche gesellschaftlichen Konsequenzen hat die steigende Zahl kinderloser Paare?",
+        "category": "family"
+      }
+    ]
+  },
+  "daily-life-A1": {
+    "cefrLevel": "A1",
+    "category": "daily-life",
+    "questions": [
+      {
+        "id": "daily-life-a1-01",
+        "text": "Wann stehen Sie auf?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-a1-02",
+        "text": "Was essen Sie zum Frühstück?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-a1-03",
+        "text": "Wie kommen Sie zur Arbeit?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-a1-04",
+        "text": "Was machen Sie am Nachmittag?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-a1-05",
+        "text": "Wann gehen Sie schlafen?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-a1-06",
+        "text": "Was machen Sie am Abend?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-a1-07",
+        "text": "Gehen Sie oft einkaufen?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-a1-08",
+        "text": "Was machen Sie nach der Arbeit?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-a1-09",
+        "text": "Wie oft putzen Sie Ihre Wohnung?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-a1-10",
+        "text": "Kochen Sie jeden Tag?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-a1-11",
+        "text": "Sehen Sie gern fern?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-a1-12",
+        "text": "Lesen Sie Zeitung?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-a1-13",
+        "text": "Was machen Sie am Morgen zuerst?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-a1-14",
+        "text": "Frühstücken Sie zu Hause oder unterwegs?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-a1-15",
+        "text": "Wie lange dauert Ihr Arbeitsweg?",
+        "category": "daily-life"
+      }
+    ]
+  },
+  "daily-life-A2": {
+    "cefrLevel": "A2",
+    "category": "daily-life",
+    "questions": [
+      {
+        "id": "daily-life-a2-01",
+        "text": "Beschreiben Sie einen typischen Tag bei Ihnen.",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-a2-02",
+        "text": "Was haben Sie gestern gemacht?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-a2-03",
+        "text": "Wie sieht Ihr Wochenende normalerweise aus?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-a2-04",
+        "text": "Was machen Sie in Ihrer Mittagspause?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-a2-05",
+        "text": "Wie organisieren Sie Ihren Tag?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-a2-06",
+        "text": "Was machen Sie, wenn Sie frei haben?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-a2-07",
+        "text": "Gehen Sie lieber morgens oder abends einkaufen?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-a2-08",
+        "text": "Was kochen Sie am häufigsten?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-a2-09",
+        "text": "Wie verbringen Sie den Sonntagmorgen?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-a2-10",
+        "text": "Machen Sie Sport am Morgen oder am Abend?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-a2-11",
+        "text": "Wie oft treffen Sie sich mit Freunden?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-a2-12",
+        "text": "Was ist Ihre Lieblingsaktivität am Abend?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-a2-13",
+        "text": "Fahren Sie mit dem Bus oder dem Auto zur Arbeit?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-a2-14",
+        "text": "Was machen Sie normalerweise nach dem Abendessen?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-a2-15",
+        "text": "Wie war Ihr letztes Wochenende?",
+        "category": "daily-life"
+      }
+    ]
+  },
+  "daily-life-B1": {
+    "cefrLevel": "B1",
+    "category": "daily-life",
+    "questions": [
+      {
+        "id": "daily-life-b1-01",
+        "text": "Wie hat sich Ihr Tagesablauf in den letzten Jahren verändert?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-b1-02",
+        "text": "Was würden Sie an Ihrem Alltag ändern, wenn Sie könnten?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-b1-03",
+        "text": "Finden Sie Routine gut oder schlecht? Warum?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-b1-04",
+        "text": "Wie schaffen Sie es, Arbeit und Freizeit in Balance zu halten?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-b1-05",
+        "text": "Was stresst Sie im Alltag am meisten?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-b1-06",
+        "text": "Wie organisieren Sie Ihre Zeit effektiv?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-b1-07",
+        "text": "Was machen Sie, um sich nach einem langen Tag zu entspannen?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-b1-08",
+        "text": "Wie unterscheidet sich Ihr Alltag von dem Ihrer Großeltern?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-b1-09",
+        "text": "Welche Gewohnheiten möchten Sie ändern?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-b1-10",
+        "text": "Wie beeinflusst das Wetter Ihren Alltag?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-b1-11",
+        "text": "Was ist für Sie ein perfekter freier Tag?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-b1-12",
+        "text": "Wie planen Sie Ihre Woche?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-b1-13",
+        "text": "Haben Sie Morgenrituale? Welche?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-b1-14",
+        "text": "Was machen Sie, wenn Sie einen schlechten Tag haben?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-b1-15",
+        "text": "Wie wichtig ist Schlaf für Ihren Alltag?",
+        "category": "daily-life"
+      }
+    ]
+  },
+  "daily-life-B2": {
+    "cefrLevel": "B2",
+    "category": "daily-life",
+    "questions": [
+      {
+        "id": "daily-life-b2-01",
+        "text": "Wie beeinflusst die Digitalisierung unseren Alltag?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-b2-02",
+        "text": "Diskutieren Sie die Vor- und Nachteile eines strukturierten Tagesablaufs.",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-b2-03",
+        "text": "Welche Auswirkungen hat die Urbanisierung auf das tägliche Leben?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-b2-04",
+        "text": "Wie hat sich der Alltag durch die Möglichkeit des Homeoffice verändert?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-b2-05",
+        "text": "Welche Rolle spielt Minimalismus im modernen Alltag?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-b2-06",
+        "text": "Wie beeinflusst der Konsumismus unseren Tagesablauf?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-b2-07",
+        "text": "Was bedeutet Lebensqualität im Alltag für Sie?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-b2-08",
+        "text": "Wie wirken sich soziale Medien auf unsere täglichen Gewohnheiten aus?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-b2-09",
+        "text": "Sollte die Vier-Tage-Woche zum Standard werden?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-b2-10",
+        "text": "Welche Bedeutung hat Selbstfürsorge im hektischen Alltag?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-b2-11",
+        "text": "Wie unterscheidet sich der Alltag in verschiedenen Kulturen?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-b2-12",
+        "text": "Welche Auswirkungen hat der Klimawandel auf unseren Alltag?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-b2-13",
+        "text": "Wie hat die Pandemie unsere Alltagsroutinen dauerhaft verändert?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-b2-14",
+        "text": "Ist Multitasking im Alltag effektiv oder kontraproduktiv?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-b2-15",
+        "text": "Welche Rolle spielen Gewohnheiten für unsere psychische Gesundheit?",
+        "category": "daily-life"
+      }
+    ]
+  },
+  "daily-life-C1": {
+    "cefrLevel": "C1",
+    "category": "daily-life",
+    "questions": [
+      {
+        "id": "daily-life-c1-01",
+        "text": "Inwiefern bestimmen gesellschaftliche Normen unseren Tagesablauf?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-c1-02",
+        "text": "Lässt sich argumentieren, dass der moderne Alltag uns mehr entfremdet als verbindet?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-c1-03",
+        "text": "Wie verändert die zunehmende Automatisierung den Alltag der Menschen?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-c1-04",
+        "text": "Welche philosophischen Konzepte stecken hinter dem Streben nach dem perfekten Tag?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-c1-05",
+        "text": "Kann man in einer Leistungsgesellschaft einen bewussten Alltag führen?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-c1-06",
+        "text": "Wie beeinflusst die Architektur unserer Städte das tägliche Zusammenleben?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-c1-07",
+        "text": "Inwiefern ist unser Alltag ein Produkt kultureller Prägung?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-c1-08",
+        "text": "Welche Rolle spielt die Entschleunigung als Gegenbewegung zum modernen Lebenstempo?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-c1-09",
+        "text": "Wie verändert die künstliche Intelligenz unsere alltäglichen Entscheidungsprozesse?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-c1-10",
+        "text": "Lässt sich der Alltag als Spiegel gesellschaftlicher Ungleichheiten betrachten?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-c1-11",
+        "text": "Stellen Sie sich vor, alle Routineaufgaben würden von Maschinen erledigt. Wie würde sich das auf den Menschen auswirken?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-c1-12",
+        "text": "Inwiefern hat die Globalisierung zu einer Vereinheitlichung des Alltags geführt?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-c1-13",
+        "text": "Wie verändert sich das Zeitempfinden im digitalen Zeitalter?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-c1-14",
+        "text": "Welche ethischen Implikationen hat die Optimierung des Alltags durch Technologie?",
+        "category": "daily-life"
+      },
+      {
+        "id": "daily-life-c1-15",
+        "text": "Diskutieren Sie die These: Langeweile ist ein notwendiger Bestandteil eines erfüllten Alltags.",
+        "category": "daily-life"
+      }
+    ]
+  },
+  "food-A1": {
+    "cefrLevel": "A1",
+    "category": "food",
+    "questions": [
+      {
+        "id": "food-a1-01",
+        "text": "Was essen Sie gern?",
+        "category": "food"
+      },
+      {
+        "id": "food-a1-02",
+        "text": "Was trinken Sie am liebsten?",
+        "category": "food"
+      },
+      {
+        "id": "food-a1-03",
+        "text": "Was essen Sie zum Frühstück?",
+        "category": "food"
+      },
+      {
+        "id": "food-a1-04",
+        "text": "Was essen Sie zu Mittag?",
+        "category": "food"
+      },
+      {
+        "id": "food-a1-05",
+        "text": "Was essen Sie zum Abendessen?",
+        "category": "food"
+      },
+      {
+        "id": "food-a1-06",
+        "text": "Mögen Sie Obst?",
+        "category": "food"
+      },
+      {
+        "id": "food-a1-07",
+        "text": "Mögen Sie Gemüse?",
+        "category": "food"
+      },
+      {
+        "id": "food-a1-08",
+        "text": "Trinken Sie Kaffee oder Tee?",
+        "category": "food"
+      },
+      {
+        "id": "food-a1-09",
+        "text": "Essen Sie gern Fleisch?",
+        "category": "food"
+      },
+      {
+        "id": "food-a1-10",
+        "text": "Was ist Ihr Lieblingsessen?",
+        "category": "food"
+      },
+      {
+        "id": "food-a1-11",
+        "text": "Essen Sie gern Süßigkeiten?",
+        "category": "food"
+      },
+      {
+        "id": "food-a1-12",
+        "text": "Kochen Sie gern?",
+        "category": "food"
+      },
+      {
+        "id": "food-a1-13",
+        "text": "Essen Sie gern im Restaurant?",
+        "category": "food"
+      },
+      {
+        "id": "food-a1-14",
+        "text": "Trinken Sie gern Saft?",
+        "category": "food"
+      },
+      {
+        "id": "food-a1-15",
+        "text": "Mögen Sie Brot?",
+        "category": "food"
+      }
+    ]
+  },
+  "food-A2": {
+    "cefrLevel": "A2",
+    "category": "food",
+    "questions": [
+      {
+        "id": "food-a2-01",
+        "text": "Was kochen Sie am liebsten?",
+        "category": "food"
+      },
+      {
+        "id": "food-a2-02",
+        "text": "Welches Restaurant gefällt Ihnen am besten?",
+        "category": "food"
+      },
+      {
+        "id": "food-a2-03",
+        "text": "Was haben Sie gestern gegessen?",
+        "category": "food"
+      },
+      {
+        "id": "food-a2-04",
+        "text": "Können Sie ein deutsches Gericht beschreiben?",
+        "category": "food"
+      },
+      {
+        "id": "food-a2-05",
+        "text": "Gehen Sie lieber in ein Restaurant oder kochen Sie zu Hause?",
+        "category": "food"
+      },
+      {
+        "id": "food-a2-06",
+        "text": "Was essen Sie, wenn Sie keine Zeit zum Kochen haben?",
+        "category": "food"
+      },
+      {
+        "id": "food-a2-07",
+        "text": "Welches Essen aus Ihrem Land mögen Sie am liebsten?",
+        "category": "food"
+      },
+      {
+        "id": "food-a2-08",
+        "text": "Wie oft gehen Sie einkaufen?",
+        "category": "food"
+      },
+      {
+        "id": "food-a2-09",
+        "text": "Was kaufen Sie im Supermarkt?",
+        "category": "food"
+      },
+      {
+        "id": "food-a2-10",
+        "text": "Essen Sie gesund? Was essen Sie?",
+        "category": "food"
+      },
+      {
+        "id": "food-a2-11",
+        "text": "Mögen Sie scharfes Essen?",
+        "category": "food"
+      },
+      {
+        "id": "food-a2-12",
+        "text": "Welches Obst mögen Sie am liebsten?",
+        "category": "food"
+      },
+      {
+        "id": "food-a2-13",
+        "text": "Wie oft essen Sie Fast Food?",
+        "category": "food"
+      },
+      {
+        "id": "food-a2-14",
+        "text": "Was trinken Sie zum Essen?",
+        "category": "food"
+      },
+      {
+        "id": "food-a2-15",
+        "text": "Haben Sie schon einmal ein neues Rezept ausprobiert?",
+        "category": "food"
+      }
+    ]
+  },
+  "food-B1": {
+    "cefrLevel": "B1",
+    "category": "food",
+    "questions": [
+      {
+        "id": "food-b1-01",
+        "text": "Wie wichtig ist gesunde Ernährung für Sie?",
+        "category": "food"
+      },
+      {
+        "id": "food-b1-02",
+        "text": "Was denken Sie über vegetarische oder vegane Ernährung?",
+        "category": "food"
+      },
+      {
+        "id": "food-b1-03",
+        "text": "Wie hat sich Ihre Ernährung in den letzten Jahren verändert?",
+        "category": "food"
+      },
+      {
+        "id": "food-b1-04",
+        "text": "Was halten Sie von Fast Food?",
+        "category": "food"
+      },
+      {
+        "id": "food-b1-05",
+        "text": "Finden Sie, dass Essen in Restaurants zu teuer ist?",
+        "category": "food"
+      },
+      {
+        "id": "food-b1-06",
+        "text": "Welche Rolle spielt Essen in Ihrer Kultur?",
+        "category": "food"
+      },
+      {
+        "id": "food-b1-07",
+        "text": "Wie können wir Lebensmittelverschwendung reduzieren?",
+        "category": "food"
+      },
+      {
+        "id": "food-b1-08",
+        "text": "Kochen Sie nach Rezepten oder improvisieren Sie?",
+        "category": "food"
+      },
+      {
+        "id": "food-b1-09",
+        "text": "Was denken Sie über Bio-Lebensmittel?",
+        "category": "food"
+      },
+      {
+        "id": "food-b1-10",
+        "text": "Wie unterscheidet sich die deutsche Küche von der Küche Ihres Landes?",
+        "category": "food"
+      },
+      {
+        "id": "food-b1-11",
+        "text": "Sollten Kinder lernen zu kochen? Warum?",
+        "category": "food"
+      },
+      {
+        "id": "food-b1-12",
+        "text": "Was halten Sie von Lieferdiensten für Essen?",
+        "category": "food"
+      },
+      {
+        "id": "food-b1-13",
+        "text": "Wie beeinflusst Werbung unsere Essgewohnheiten?",
+        "category": "food"
+      },
+      {
+        "id": "food-b1-14",
+        "text": "Was essen Sie, wenn Sie krank sind?",
+        "category": "food"
+      },
+      {
+        "id": "food-b1-15",
+        "text": "Haben Sie Lebensmittelallergien oder -unverträglichkeiten?",
+        "category": "food"
+      }
+    ]
+  },
+  "food-B2": {
+    "cefrLevel": "B2",
+    "category": "food",
+    "questions": [
+      {
+        "id": "food-b2-01",
+        "text": "Welche Auswirkungen hat die Lebensmittelindustrie auf die Umwelt?",
+        "category": "food"
+      },
+      {
+        "id": "food-b2-02",
+        "text": "Sollte die Regierung den Konsum von ungesunden Lebensmitteln regulieren?",
+        "category": "food"
+      },
+      {
+        "id": "food-b2-03",
+        "text": "Wie beeinflusst die Globalisierung unsere Esskultur?",
+        "category": "food"
+      },
+      {
+        "id": "food-b2-04",
+        "text": "Diskutieren Sie die ethischen Aspekte der Massentierhaltung.",
+        "category": "food"
+      },
+      {
+        "id": "food-b2-05",
+        "text": "Welche Rolle spielt die Ernährung bei der Prävention von Krankheiten?",
+        "category": "food"
+      },
+      {
+        "id": "food-b2-06",
+        "text": "Ist Bio-Essen wirklich gesünder oder nur ein Marketingtrend?",
+        "category": "food"
+      },
+      {
+        "id": "food-b2-07",
+        "text": "Wie verändert die Digitalisierung die Lebensmittelbranche?",
+        "category": "food"
+      },
+      {
+        "id": "food-b2-08",
+        "text": "Sollten Schulen für eine gesunde Ernährung der Schüler verantwortlich sein?",
+        "category": "food"
+      },
+      {
+        "id": "food-b2-09",
+        "text": "Wie beeinflusst die soziale Ungleichheit den Zugang zu gesunder Ernährung?",
+        "category": "food"
+      },
+      {
+        "id": "food-b2-10",
+        "text": "Was halten Sie von gentechnisch veränderten Lebensmitteln?",
+        "category": "food"
+      },
+      {
+        "id": "food-b2-11",
+        "text": "Welche kulturelle Bedeutung hat gemeinsames Essen?",
+        "category": "food"
+      },
+      {
+        "id": "food-b2-12",
+        "text": "Wie nachhaltig ist unser Lebensmittelkonsum?",
+        "category": "food"
+      },
+      {
+        "id": "food-b2-13",
+        "text": "Sollte es eine Steuer auf Zucker geben?",
+        "category": "food"
+      },
+      {
+        "id": "food-b2-14",
+        "text": "Wie beeinflusst die Lebensmittelwerbung Kinder?",
+        "category": "food"
+      },
+      {
+        "id": "food-b2-15",
+        "text": "Welche Trends in der Ernährung finden Sie sinnvoll?",
+        "category": "food"
+      }
+    ]
+  },
+  "food-C1": {
+    "cefrLevel": "C1",
+    "category": "food",
+    "questions": [
+      {
+        "id": "food-c1-01",
+        "text": "Inwiefern ist Ernährung ein politisches Thema?",
+        "category": "food"
+      },
+      {
+        "id": "food-c1-02",
+        "text": "Lässt sich argumentieren, dass unsere Esskultur ein Spiegel gesellschaftlicher Werte ist?",
+        "category": "food"
+      },
+      {
+        "id": "food-c1-03",
+        "text": "Welche ethischen Dilemmata entstehen durch die globale Lebensmittelversorgung?",
+        "category": "food"
+      },
+      {
+        "id": "food-c1-04",
+        "text": "Wie verändert die synthetische Biologie die Zukunft der Ernährung?",
+        "category": "food"
+      },
+      {
+        "id": "food-c1-05",
+        "text": "Kann die Menschheit ohne Massentierhaltung ernährt werden?",
+        "category": "food"
+      },
+      {
+        "id": "food-c1-06",
+        "text": "Welche Rolle spielt die Ernährungsindustrie bei der Entstehung von Zivilisationskrankheiten?",
+        "category": "food"
+      },
+      {
+        "id": "food-c1-07",
+        "text": "Inwiefern beeinflusst die kulinarische Identität die nationale Identität?",
+        "category": "food"
+      },
+      {
+        "id": "food-c1-08",
+        "text": "Diskutieren Sie die These: Essen ist die intimste Form des Konsums.",
+        "category": "food"
+      },
+      {
+        "id": "food-c1-09",
+        "text": "Wie verändert das Konzept der personalisierten Ernährung unsere Beziehung zum Essen?",
+        "category": "food"
+      },
+      {
+        "id": "food-c1-10",
+        "text": "Welche gesellschaftlichen Konsequenzen hätte ein vollständiger Verzicht auf tierische Produkte?",
+        "category": "food"
+      },
+      {
+        "id": "food-c1-11",
+        "text": "Inwiefern ist die Lebensmittelverschwendung ein Symptom einer Überflussgesellschaft?",
+        "category": "food"
+      },
+      {
+        "id": "food-c1-12",
+        "text": "Wie beeinflusst die Nahrungsmittelspekulation die globale Ernährungssicherheit?",
+        "category": "food"
+      },
+      {
+        "id": "food-c1-13",
+        "text": "Stellen Sie sich vor, Essen könnte durch Pillen ersetzt werden. Welche Folgen hätte das?",
+        "category": "food"
+      },
+      {
+        "id": "food-c1-14",
+        "text": "Welche Verantwortung tragen Konsumenten gegenüber den Produzenten ihrer Nahrung?",
+        "category": "food"
+      },
+      {
+        "id": "food-c1-15",
+        "text": "Wie lässt sich das Recht auf Nahrung in einer ungleichen Welt gewährleisten?",
+        "category": "food"
+      }
+    ]
+  },
+  "travel-A1": {
+    "cefrLevel": "A1",
+    "category": "travel",
+    "questions": [
+      {
+        "id": "travel-a1-01",
+        "text": "Reisen Sie gern?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-a1-02",
+        "text": "Wohin möchten Sie reisen?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-a1-03",
+        "text": "Waren Sie schon einmal im Ausland?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-a1-04",
+        "text": "Fahren Sie lieber mit dem Zug oder dem Flugzeug?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-a1-05",
+        "text": "Wo machen Sie Urlaub?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-a1-06",
+        "text": "Mögen Sie den Strand oder die Berge?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-a1-07",
+        "text": "Waren Sie schon einmal in Deutschland?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-a1-08",
+        "text": "Was nehmen Sie mit auf die Reise?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-a1-09",
+        "text": "Wie lange dauert Ihr Urlaub?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-a1-10",
+        "text": "Reisen Sie allein oder mit Freunden?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-a1-11",
+        "text": "Sprechen Sie andere Sprachen?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-a1-12",
+        "text": "Was machen Sie im Urlaub?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-a1-13",
+        "text": "Haben Sie einen Reisepass?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-a1-14",
+        "text": "Fahren Sie gern mit dem Auto?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-a1-15",
+        "text": "Wo waren Sie letztes Jahr im Urlaub?",
+        "category": "travel"
+      }
+    ]
+  },
+  "travel-A2": {
+    "cefrLevel": "A2",
+    "category": "travel",
+    "questions": [
+      {
+        "id": "travel-a2-01",
+        "text": "Erzählen Sie von Ihrer letzten Reise.",
+        "category": "travel"
+      },
+      {
+        "id": "travel-a2-02",
+        "text": "Welches Land möchten Sie besuchen und warum?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-a2-03",
+        "text": "Was machen Sie normalerweise im Urlaub?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-a2-04",
+        "text": "Übernachten Sie lieber in einem Hotel oder in einer Ferienwohnung?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-a2-05",
+        "text": "Wie planen Sie Ihre Reisen?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-a2-06",
+        "text": "Was war das schönste Land, das Sie besucht haben?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-a2-07",
+        "text": "Buchen Sie Reisen online oder im Reisebüro?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-a2-08",
+        "text": "Was packen Sie in Ihren Koffer?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-a2-09",
+        "text": "Haben Sie schon einmal eine Stadtführung gemacht?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-a2-10",
+        "text": "Welche Sehenswürdigkeiten möchten Sie sehen?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-a2-11",
+        "text": "Wie kommen Sie zum Flughafen?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-a2-12",
+        "text": "Essen Sie gern die lokale Küche im Urlaub?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-a2-13",
+        "text": "Was machen Sie, wenn es im Urlaub regnet?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-a2-14",
+        "text": "Machen Sie gern Fotos im Urlaub?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-a2-15",
+        "text": "Was war Ihr schönstes Reiseerlebnis?",
+        "category": "travel"
+      }
+    ]
+  },
+  "travel-B1": {
+    "cefrLevel": "B1",
+    "category": "travel",
+    "questions": [
+      {
+        "id": "travel-b1-01",
+        "text": "Wie hat sich das Reisen in den letzten Jahren verändert?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-b1-02",
+        "text": "Was denken Sie über nachhaltiges Reisen?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-b1-03",
+        "text": "Bevorzugen Sie Pauschalreisen oder individuelle Reisen?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-b1-04",
+        "text": "Welche Vorteile hat das Reisen für die persönliche Entwicklung?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-b1-05",
+        "text": "Was sind die Nachteile des Massentourismus?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-b1-06",
+        "text": "Wie bereiten Sie sich auf eine Reise in ein fremdes Land vor?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-b1-07",
+        "text": "Welche kulturellen Unterschiede haben Sie auf Reisen erlebt?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-b1-08",
+        "text": "Ist Couchsurfing eine gute Alternative zu Hotels?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-b1-09",
+        "text": "Was denken Sie über Kreuzfahrten?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-b1-10",
+        "text": "Wie wichtig ist es, die Landessprache zu sprechen?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-b1-11",
+        "text": "Sollte man im Urlaub arbeiten oder komplett abschalten?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-b1-12",
+        "text": "Welche Reise hat Sie am meisten beeindruckt?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-b1-13",
+        "text": "Wie gehen Sie mit Problemen auf Reisen um?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-b1-14",
+        "text": "Was halten Sie von Backpacking?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-b1-15",
+        "text": "Reisen bildet – stimmen Sie zu?",
+        "category": "travel"
+      }
+    ]
+  },
+  "travel-B2": {
+    "cefrLevel": "B2",
+    "category": "travel",
+    "questions": [
+      {
+        "id": "travel-b2-01",
+        "text": "Welche Auswirkungen hat der Tourismus auf die lokale Bevölkerung und Wirtschaft?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-b2-02",
+        "text": "Sollte Flugreisen stärker besteuert werden, um die Umwelt zu schützen?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-b2-03",
+        "text": "Wie verändert die Technologie die Art, wie wir reisen?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-b2-04",
+        "text": "Diskutieren Sie die Vor- und Nachteile des Overtourism.",
+        "category": "travel"
+      },
+      {
+        "id": "travel-b2-05",
+        "text": "Welche Verantwortung haben Reisende gegenüber den besuchten Ländern?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-b2-06",
+        "text": "Wie beeinflusst der Klimawandel die Tourismusindustrie?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-b2-07",
+        "text": "Ist der Weltraumtourismus ethisch vertretbar?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-b2-08",
+        "text": "Wie hat die Pandemie die Reisebranche verändert?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-b2-09",
+        "text": "Sollte es Beschränkungen für den Tourismus an bestimmten Orten geben?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-b2-10",
+        "text": "Welche kulturellen Missverständnisse können auf Reisen entstehen?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-b2-11",
+        "text": "Wie nachhaltig sind alternative Reiseformen wie Ökotourismus?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-b2-12",
+        "text": "Verändert Reisen wirklich unseren Blick auf die Welt?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-b2-13",
+        "text": "Welche Rolle spielen Bewertungsplattformen bei der Reiseplanung?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-b2-14",
+        "text": "Wie beeinflusst Instagram den modernen Tourismus?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-b2-15",
+        "text": "Sollten historische Stätten stärker vor Touristen geschützt werden?",
+        "category": "travel"
+      }
+    ]
+  },
+  "travel-C1": {
+    "cefrLevel": "C1",
+    "category": "travel",
+    "questions": [
+      {
+        "id": "travel-c1-01",
+        "text": "Inwiefern ist Tourismus eine Form des kulturellen Imperialismus?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-c1-02",
+        "text": "Lässt sich argumentieren, dass das Reisen in einer globalisierten Welt an Bedeutung verliert?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-c1-03",
+        "text": "Wie verändert der Klimaaktivismus unser Verhältnis zum Reisen?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-c1-04",
+        "text": "Welche philosophischen Dimensionen hat das Konzept des Reisens?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-c1-05",
+        "text": "Kann Tourismus zur Völkerverständigung beitragen oder verstärkt er Stereotypen?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-c1-06",
+        "text": "Wie beeinflusst der digitale Nomadismus die Grenzen zwischen Arbeit und Reisen?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-c1-07",
+        "text": "Inwiefern ist die Sehnsucht nach der Ferne ein kulturelles Konstrukt?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-c1-08",
+        "text": "Diskutieren Sie die These: Wahres Reisen ist nur noch in der Fantasie möglich.",
+        "category": "travel"
+      },
+      {
+        "id": "travel-c1-09",
+        "text": "Welche geopolitischen Faktoren beeinflussen die globale Reisefreiheit?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-c1-10",
+        "text": "Wie verändert Virtual Reality die Zukunft des Tourismus?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-c1-11",
+        "text": "Stellen Sie sich vor, Teleportation wäre möglich. Wie würde sich das auf das Reisen auswirken?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-c1-12",
+        "text": "Welche ethischen Fragen wirft der Armuts-Tourismus auf?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-c1-13",
+        "text": "Inwiefern hat das Reisen die Literatur und Kunst beeinflusst?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-c1-14",
+        "text": "Wie verändert sich das Konzept von Heimat in einer Welt zunehmender Mobilität?",
+        "category": "travel"
+      },
+      {
+        "id": "travel-c1-15",
+        "text": "Ist die Kommerzialisierung des Reisens unvermeidlich?",
+        "category": "travel"
+      }
+    ]
+  },
+  "hobbies-A1": {
+    "cefrLevel": "A1",
+    "category": "hobbies",
+    "questions": [
+      {
+        "id": "hobbies-a1-01",
+        "text": "Was machen Sie in Ihrer Freizeit?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-a1-02",
+        "text": "Spielen Sie ein Musikinstrument?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-a1-03",
+        "text": "Treiben Sie Sport?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-a1-04",
+        "text": "Lesen Sie gern Bücher?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-a1-05",
+        "text": "Sehen Sie gern Filme?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-a1-06",
+        "text": "Spielen Sie gern Computerspiele?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-a1-07",
+        "text": "Malen oder zeichnen Sie gern?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-a1-08",
+        "text": "Gehen Sie gern spazieren?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-a1-09",
+        "text": "Hören Sie gern Musik?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-a1-10",
+        "text": "Tanzen Sie gern?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-a1-11",
+        "text": "Fotografieren Sie gern?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-a1-12",
+        "text": "Schwimmen Sie gern?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-a1-13",
+        "text": "Fahren Sie gern Fahrrad?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-a1-14",
+        "text": "Spielen Sie gern Fußball?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-a1-15",
+        "text": "Was machen Sie am Wochenende?",
+        "category": "hobbies"
+      }
+    ]
+  },
+  "hobbies-A2": {
+    "cefrLevel": "A2",
+    "category": "hobbies",
+    "questions": [
+      {
+        "id": "hobbies-a2-01",
+        "text": "Welche Hobbys hatten Sie als Kind?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-a2-02",
+        "text": "Wie oft machen Sie Sport?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-a2-03",
+        "text": "Haben Sie ein neues Hobby angefangen? Erzählen Sie davon.",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-a2-04",
+        "text": "Welchen Film haben Sie zuletzt gesehen?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-a2-05",
+        "text": "Welches Buch lesen Sie gerade?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-a2-06",
+        "text": "Machen Sie Hobbys allein oder mit Freunden?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-a2-07",
+        "text": "Wie viel Zeit verbringen Sie mit Ihren Hobbys?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-a2-08",
+        "text": "Was ist Ihr Lieblingssport?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-a2-09",
+        "text": "Haben Sie schon einmal an einem Wettbewerb teilgenommen?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-a2-10",
+        "text": "Welche Musik hören Sie am liebsten?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-a2-11",
+        "text": "Sammeln Sie etwas? Was?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-a2-12",
+        "text": "Spielen Sie ein Brettspiel gern? Welches?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-a2-13",
+        "text": "Gehen Sie gern ins Kino oder schauen Sie Filme zu Hause?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-a2-14",
+        "text": "Welche Serien schauen Sie gern?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-a2-15",
+        "text": "Was möchten Sie gern lernen?",
+        "category": "hobbies"
+      }
+    ]
+  },
+  "hobbies-B1": {
+    "cefrLevel": "B1",
+    "category": "hobbies",
+    "questions": [
+      {
+        "id": "hobbies-b1-01",
+        "text": "Wie wichtig sind Hobbys für die Gesundheit?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-b1-02",
+        "text": "Haben Sie schon einmal ein Hobby aufgegeben? Warum?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-b1-03",
+        "text": "Welche Hobbys sind in Ihrem Land beliebt?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-b1-04",
+        "text": "Finden Sie, dass Erwachsene mehr Zeit für Hobbys brauchen?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-b1-05",
+        "text": "Wie hat sich Ihre Freizeitgestaltung verändert?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-b1-06",
+        "text": "Was denken Sie über extreme Sportarten?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-b1-07",
+        "text": "Können Hobbys auch zum Beruf werden?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-b1-08",
+        "text": "Wie beeinflussen Hobbys unsere Persönlichkeit?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-b1-09",
+        "text": "Was sind die Vorteile von kreativen Hobbys?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-b1-10",
+        "text": "Sollten Kinder ein Musikinstrument lernen?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-b1-11",
+        "text": "Wie hat das Internet die Freizeitgestaltung verändert?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-b1-12",
+        "text": "Was machen Sie, wenn Sie sich langweilen?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-b1-13",
+        "text": "Verbringen Menschen zu viel Zeit mit dem Handy statt mit Hobbys?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-b1-14",
+        "text": "Welches Hobby würden Sie gern ausprobieren?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-b1-15",
+        "text": "Wie finden Sie neue Hobbys?",
+        "category": "hobbies"
+      }
+    ]
+  },
+  "hobbies-B2": {
+    "cefrLevel": "B2",
+    "category": "hobbies",
+    "questions": [
+      {
+        "id": "hobbies-b2-01",
+        "text": "Wie beeinflusst die Kommerzialisierung von Hobbys die Freizeitgestaltung?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-b2-02",
+        "text": "Diskutieren Sie die Rolle von Hobbys für die psychische Gesundheit.",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-b2-03",
+        "text": "Welche gesellschaftliche Bedeutung haben Vereine und Hobbygruppen?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-b2-04",
+        "text": "Wie hat die Digitalisierung traditionelle Hobbys verändert?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-b2-05",
+        "text": "Sollte der Staat die Freizeitgestaltung seiner Bürger fördern?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-b2-06",
+        "text": "Welche Auswirkungen hat der Leistungsdruck auf die Freizeitgestaltung?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-b2-07",
+        "text": "Wie unterscheidet sich die Freizeitkultur in verschiedenen Ländern?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-b2-08",
+        "text": "Diskutieren Sie den Trend zur „Selbstoptimierung“ auch in der Freizeit.",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-b2-09",
+        "text": "Welche Rolle spielen Hobbys bei der Integration in eine neue Gesellschaft?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-b2-10",
+        "text": "Ist E-Sport ein richtiger Sport?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-b2-11",
+        "text": "Wie verändert sich die Bedeutung von Freizeit im Laufe des Lebens?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-b2-12",
+        "text": "Welche Hobbys werden in Zukunft an Bedeutung gewinnen?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-b2-13",
+        "text": "Wie beeinflusst die finanzielle Situation die Wahl der Hobbys?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-b2-14",
+        "text": "Sollten Schulen mehr Wert auf kreative Aktivitäten legen?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-b2-15",
+        "text": "Wie verändert die Urbanisierung die Möglichkeiten der Freizeitgestaltung?",
+        "category": "hobbies"
+      }
+    ]
+  },
+  "hobbies-C1": {
+    "cefrLevel": "C1",
+    "category": "hobbies",
+    "questions": [
+      {
+        "id": "hobbies-c1-01",
+        "text": "Inwiefern spiegeln Hobbys die Werte einer Gesellschaft wider?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-c1-02",
+        "text": "Lässt sich argumentieren, dass die Grenze zwischen Hobby und Arbeit zunehmend verschwimmt?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-c1-03",
+        "text": "Wie beeinflusst der Kapitalismus die Art, wie wir unsere Freizeit gestalten?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-c1-04",
+        "text": "Welche Rolle spielt Muße in einer leistungsorientierten Gesellschaft?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-c1-05",
+        "text": "Kann man Kreativität als Hobby oder als Notwendigkeit betrachten?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-c1-06",
+        "text": "Wie verändert die Gamifizierung des Alltags unser Verständnis von Freizeit?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-c1-07",
+        "text": "Inwiefern ist die Wahl eines Hobbys ein Ausdruck sozialer Zugehörigkeit?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-c1-08",
+        "text": "Diskutieren Sie die These: In der modernen Welt gibt es keine echte Freizeit mehr.",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-c1-09",
+        "text": "Wie beeinflusst die Aufmerksamkeitsökonomie unsere Fähigkeit, uns einem Hobby zu widmen?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-c1-10",
+        "text": "Welche gesellschaftlichen Implikationen hat die zunehmende Professionalisierung von Amateuraktivitäten?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-c1-11",
+        "text": "Stellen Sie sich eine Gesellschaft vor, in der Arbeit optional ist. Wie würden Menschen ihre Zeit verbringen?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-c1-12",
+        "text": "Inwiefern hat die Pandemie unser Verständnis von Freizeit und Hobbys nachhaltig verändert?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-c1-13",
+        "text": "Welche Rolle spielen Hobbys bei der Identitätsbildung?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-c1-14",
+        "text": "Kann Langeweile als Katalysator für Kreativität und neue Hobbys dienen?",
+        "category": "hobbies"
+      },
+      {
+        "id": "hobbies-c1-15",
+        "text": "Wie verändert die virtuelle Realität die Zukunft der Freizeitgestaltung?",
+        "category": "hobbies"
+      }
+    ]
+  },
+  "health-A1": {
+    "cefrLevel": "A1",
+    "category": "health",
+    "questions": [
+      {
+        "id": "health-a1-01",
+        "text": "Wie geht es Ihnen heute?",
+        "category": "health"
+      },
+      {
+        "id": "health-a1-02",
+        "text": "Treiben Sie Sport?",
+        "category": "health"
+      },
+      {
+        "id": "health-a1-03",
+        "text": "Wie oft gehen Sie zum Arzt?",
+        "category": "health"
+      },
+      {
+        "id": "health-a1-04",
+        "text": "Was essen Sie, um gesund zu bleiben?",
+        "category": "health"
+      },
+      {
+        "id": "health-a1-05",
+        "text": "Trinken Sie viel Wasser?",
+        "category": "health"
+      },
+      {
+        "id": "health-a1-06",
+        "text": "Schlafen Sie gut?",
+        "category": "health"
+      },
+      {
+        "id": "health-a1-07",
+        "text": "Wie viele Stunden schlafen Sie?",
+        "category": "health"
+      },
+      {
+        "id": "health-a1-08",
+        "text": "Waren Sie schon einmal im Krankenhaus?",
+        "category": "health"
+      },
+      {
+        "id": "health-a1-09",
+        "text": "Sind Sie oft krank?",
+        "category": "health"
+      },
+      {
+        "id": "health-a1-10",
+        "text": "Was machen Sie, wenn Sie Kopfschmerzen haben?",
+        "category": "health"
+      },
+      {
+        "id": "health-a1-11",
+        "text": "Waschen Sie oft Ihre Hände?",
+        "category": "health"
+      },
+      {
+        "id": "health-a1-12",
+        "text": "Rauchen Sie?",
+        "category": "health"
+      },
+      {
+        "id": "health-a1-13",
+        "text": "Gehen Sie gern spazieren?",
+        "category": "health"
+      },
+      {
+        "id": "health-a1-14",
+        "text": "Haben Sie Allergien?",
+        "category": "health"
+      },
+      {
+        "id": "health-a1-15",
+        "text": "Nehmen Sie Medikamente?",
+        "category": "health"
+      }
+    ]
+  },
+  "health-A2": {
+    "cefrLevel": "A2",
+    "category": "health",
+    "questions": [
+      {
+        "id": "health-a2-01",
+        "text": "Was machen Sie, um gesund zu bleiben?",
+        "category": "health"
+      },
+      {
+        "id": "health-a2-02",
+        "text": "Erzählen Sie von Ihrem letzten Arztbesuch.",
+        "category": "health"
+      },
+      {
+        "id": "health-a2-03",
+        "text": "Welchen Sport machen Sie und wie oft?",
+        "category": "health"
+      },
+      {
+        "id": "health-a2-04",
+        "text": "Achten Sie auf Ihre Ernährung?",
+        "category": "health"
+      },
+      {
+        "id": "health-a2-05",
+        "text": "Waren Sie schon einmal beim Zahnarzt? Erzählen Sie davon.",
+        "category": "health"
+      },
+      {
+        "id": "health-a2-06",
+        "text": "Was machen Sie, wenn Sie erkältet sind?",
+        "category": "health"
+      },
+      {
+        "id": "health-a2-07",
+        "text": "Wie bleiben Sie im Winter gesund?",
+        "category": "health"
+      },
+      {
+        "id": "health-a2-08",
+        "text": "Haben Sie schon einmal eine Diät gemacht?",
+        "category": "health"
+      },
+      {
+        "id": "health-a2-09",
+        "text": "Wie entspannen Sie sich nach einem stressigen Tag?",
+        "category": "health"
+      },
+      {
+        "id": "health-a2-10",
+        "text": "Gehen Sie regelmäßig zur Vorsorgeuntersuchung?",
+        "category": "health"
+      },
+      {
+        "id": "health-a2-11",
+        "text": "Trinken Sie Alkohol? Wie oft?",
+        "category": "health"
+      },
+      {
+        "id": "health-a2-12",
+        "text": "Was essen Sie, wenn Sie krank sind?",
+        "category": "health"
+      },
+      {
+        "id": "health-a2-13",
+        "text": "Machen Sie Yoga oder Meditation?",
+        "category": "health"
+      },
+      {
+        "id": "health-a2-14",
+        "text": "Wie wichtig ist Bewegung für Sie?",
+        "category": "health"
+      },
+      {
+        "id": "health-a2-15",
+        "text": "Was tun Sie gegen Stress?",
+        "category": "health"
+      }
+    ]
+  },
+  "health-B1": {
+    "cefrLevel": "B1",
+    "category": "health",
+    "questions": [
+      {
+        "id": "health-b1-01",
+        "text": "Wie wichtig ist psychische Gesundheit für Sie?",
+        "category": "health"
+      },
+      {
+        "id": "health-b1-02",
+        "text": "Was denken Sie über alternative Medizin?",
+        "category": "health"
+      },
+      {
+        "id": "health-b1-03",
+        "text": "Sollte Sport in der Schule Pflicht sein?",
+        "category": "health"
+      },
+      {
+        "id": "health-b1-04",
+        "text": "Wie hat sich das Gesundheitsbewusstsein in den letzten Jahren verändert?",
+        "category": "health"
+      },
+      {
+        "id": "health-b1-05",
+        "text": "Was halten Sie von Fitness-Apps und Gesundheitstrackern?",
+        "category": "health"
+      },
+      {
+        "id": "health-b1-06",
+        "text": "Wie können wir Stress im Alltag besser bewältigen?",
+        "category": "health"
+      },
+      {
+        "id": "health-b1-07",
+        "text": "Finden Sie, dass das Gesundheitssystem in Ihrem Land gut funktioniert?",
+        "category": "health"
+      },
+      {
+        "id": "health-b1-08",
+        "text": "Wie wichtig ist die Prävention von Krankheiten?",
+        "category": "health"
+      },
+      {
+        "id": "health-b1-09",
+        "text": "Was denken Sie über Selbstmedikation?",
+        "category": "health"
+      },
+      {
+        "id": "health-b1-10",
+        "text": "Sollte gesundes Essen günstiger sein als Fast Food?",
+        "category": "health"
+      },
+      {
+        "id": "health-b1-11",
+        "text": "Wie beeinflusst der Beruf unsere Gesundheit?",
+        "category": "health"
+      },
+      {
+        "id": "health-b1-12",
+        "text": "Was halten Sie von Impfungen?",
+        "category": "health"
+      },
+      {
+        "id": "health-b1-13",
+        "text": "Wie wichtig ist Work-Life-Balance für die Gesundheit?",
+        "category": "health"
+      },
+      {
+        "id": "health-b1-14",
+        "text": "Sollte der Staat mehr für die Gesundheit der Bürger tun?",
+        "category": "health"
+      },
+      {
+        "id": "health-b1-15",
+        "text": "Was machen Sie, um Ihre mentale Gesundheit zu pflegen?",
+        "category": "health"
+      }
+    ]
+  },
+  "health-B2": {
+    "cefrLevel": "B2",
+    "category": "health",
+    "questions": [
+      {
+        "id": "health-b2-01",
+        "text": "Welche Auswirkungen hat die Digitalisierung auf die Gesundheitsversorgung?",
+        "category": "health"
+      },
+      {
+        "id": "health-b2-02",
+        "text": "Sollte Gesundheitsvorsorge vom Staat oder von Privatversicherungen finanziert werden?",
+        "category": "health"
+      },
+      {
+        "id": "health-b2-03",
+        "text": "Wie beeinflusst die soziale Ungleichheit den Zugang zur Gesundheitsversorgung?",
+        "category": "health"
+      },
+      {
+        "id": "health-b2-04",
+        "text": "Diskutieren Sie die ethischen Aspekte der Organtransplantation.",
+        "category": "health"
+      },
+      {
+        "id": "health-b2-05",
+        "text": "Welche Rolle spielt die Pharmaindustrie im Gesundheitswesen?",
+        "category": "health"
+      },
+      {
+        "id": "health-b2-06",
+        "text": "Wie verändert die Telemedizin die Arzt-Patienten-Beziehung?",
+        "category": "health"
+      },
+      {
+        "id": "health-b2-07",
+        "text": "Sollte es eine Pflicht zur Gesundheitsvorsorge geben?",
+        "category": "health"
+      },
+      {
+        "id": "health-b2-08",
+        "text": "Wie beeinflusst der Klimawandel die globale Gesundheit?",
+        "category": "health"
+      },
+      {
+        "id": "health-b2-09",
+        "text": "Welche ethischen Fragen wirft die Gendiagnostik auf?",
+        "category": "health"
+      },
+      {
+        "id": "health-b2-10",
+        "text": "Wie kann die Gesellschaft besser mit psychischen Erkrankungen umgehen?",
+        "category": "health"
+      },
+      {
+        "id": "health-b2-11",
+        "text": "Welche Auswirkungen hat die alternde Bevölkerung auf das Gesundheitssystem?",
+        "category": "health"
+      },
+      {
+        "id": "health-b2-12",
+        "text": "Sollte Sterbehilfe legalisiert werden?",
+        "category": "health"
+      },
+      {
+        "id": "health-b2-13",
+        "text": "Wie beeinflusst der Arbeitsmarkt die psychische Gesundheit?",
+        "category": "health"
+      },
+      {
+        "id": "health-b2-14",
+        "text": "Welche Rolle spielt Prävention im modernen Gesundheitswesen?",
+        "category": "health"
+      },
+      {
+        "id": "health-b2-15",
+        "text": "Wie nachhaltig ist unser Gesundheitssystem?",
+        "category": "health"
+      }
+    ]
+  },
+  "health-C1": {
+    "cefrLevel": "C1",
+    "category": "health",
+    "questions": [
+      {
+        "id": "health-c1-01",
+        "text": "Inwiefern ist Gesundheit ein Privileg und nicht nur ein Grundrecht?",
+        "category": "health"
+      },
+      {
+        "id": "health-c1-02",
+        "text": "Lässt sich argumentieren, dass die moderne Gesellschaft krank macht?",
+        "category": "health"
+      },
+      {
+        "id": "health-c1-03",
+        "text": "Welche ethischen Grenzen sollte die medizinische Forschung nicht überschreiten?",
+        "category": "health"
+      },
+      {
+        "id": "health-c1-04",
+        "text": "Wie verändert die Künstliche Intelligenz die Diagnostik und Therapie?",
+        "category": "health"
+      },
+      {
+        "id": "health-c1-05",
+        "text": "Kann man Gesundheit als Ware in einem marktwirtschaftlichen System betrachten?",
+        "category": "health"
+      },
+      {
+        "id": "health-c1-06",
+        "text": "Welche gesellschaftlichen Folgen hat die Medikalisierung alltäglicher Probleme?",
+        "category": "health"
+      },
+      {
+        "id": "health-c1-07",
+        "text": "Inwiefern beeinflusst die Pharmaindustrie die Definition von Krankheit?",
+        "category": "health"
+      },
+      {
+        "id": "health-c1-08",
+        "text": "Diskutieren Sie die These: Prävention ist wichtiger als Behandlung.",
+        "category": "health"
+      },
+      {
+        "id": "health-c1-09",
+        "text": "Wie verändert die personalisierte Medizin unser Verständnis von Gesundheit?",
+        "category": "health"
+      },
+      {
+        "id": "health-c1-10",
+        "text": "Welche Rolle spielt die Epigenetik für unser Verständnis von Gesundheit und Krankheit?",
+        "category": "health"
+      },
+      {
+        "id": "health-c1-11",
+        "text": "Stellen Sie sich vor, alle Krankheiten wären heilbar. Welche gesellschaftlichen Folgen hätte das?",
+        "category": "health"
+      },
+      {
+        "id": "health-c1-12",
+        "text": "Inwiefern ist die mentale Gesundheit ein Tabuthema und wie kann sich das ändern?",
+        "category": "health"
+      },
+      {
+        "id": "health-c1-13",
+        "text": "Welche Verantwortung tragen Individuen für ihre eigene Gesundheit?",
+        "category": "health"
+      },
+      {
+        "id": "health-c1-14",
+        "text": "Wie beeinflusst die globale Ungleichheit den Zugang zu medizinischer Versorgung?",
+        "category": "health"
+      },
+      {
+        "id": "health-c1-15",
+        "text": "Sollten Gesundheitsdaten zum Wohle der Allgemeinheit geteilt werden dürfen?",
+        "category": "health"
+      }
+    ]
+  },
+  "work-A1": {
+    "cefrLevel": "A1",
+    "category": "work",
+    "questions": [
+      {
+        "id": "work-a1-01",
+        "text": "Was sind Sie von Beruf?",
+        "category": "work"
+      },
+      {
+        "id": "work-a1-02",
+        "text": "Wo arbeiten Sie?",
+        "category": "work"
+      },
+      {
+        "id": "work-a1-03",
+        "text": "Arbeiten Sie gern?",
+        "category": "work"
+      },
+      {
+        "id": "work-a1-04",
+        "text": "Wann beginnt Ihre Arbeit?",
+        "category": "work"
+      },
+      {
+        "id": "work-a1-05",
+        "text": "Wann ist Ihre Arbeit fertig?",
+        "category": "work"
+      },
+      {
+        "id": "work-a1-06",
+        "text": "Arbeiten Sie am Computer?",
+        "category": "work"
+      },
+      {
+        "id": "work-a1-07",
+        "text": "Haben Sie Kollegen?",
+        "category": "work"
+      },
+      {
+        "id": "work-a1-08",
+        "text": "Was machen Sie bei der Arbeit?",
+        "category": "work"
+      },
+      {
+        "id": "work-a1-09",
+        "text": "Arbeiten Sie am Wochenende?",
+        "category": "work"
+      },
+      {
+        "id": "work-a1-10",
+        "text": "Wie kommen Sie zur Arbeit?",
+        "category": "work"
+      },
+      {
+        "id": "work-a1-11",
+        "text": "Verdienen Sie gut?",
+        "category": "work"
+      },
+      {
+        "id": "work-a1-12",
+        "text": "Haben Sie einen Chef?",
+        "category": "work"
+      },
+      {
+        "id": "work-a1-13",
+        "text": "Arbeiten Sie im Büro?",
+        "category": "work"
+      },
+      {
+        "id": "work-a1-14",
+        "text": "Wie lange arbeiten Sie schon dort?",
+        "category": "work"
+      },
+      {
+        "id": "work-a1-15",
+        "text": "Welchen Beruf möchten Sie machen?",
+        "category": "work"
+      }
+    ]
+  },
+  "work-A2": {
+    "cefrLevel": "A2",
+    "category": "work",
+    "questions": [
+      {
+        "id": "work-a2-01",
+        "text": "Erzählen Sie von Ihrem Beruf.",
+        "category": "work"
+      },
+      {
+        "id": "work-a2-02",
+        "text": "Was gefällt Ihnen an Ihrer Arbeit?",
+        "category": "work"
+      },
+      {
+        "id": "work-a2-03",
+        "text": "Was gefällt Ihnen nicht an Ihrer Arbeit?",
+        "category": "work"
+      },
+      {
+        "id": "work-a2-04",
+        "text": "Haben Sie schon verschiedene Jobs gehabt?",
+        "category": "work"
+      },
+      {
+        "id": "work-a2-05",
+        "text": "Wie haben Sie Ihren Job gefunden?",
+        "category": "work"
+      },
+      {
+        "id": "work-a2-06",
+        "text": "Arbeiten Sie lieber allein oder im Team?",
+        "category": "work"
+      },
+      {
+        "id": "work-a2-07",
+        "text": "Wie ist Ihr Chef?",
+        "category": "work"
+      },
+      {
+        "id": "work-a2-08",
+        "text": "Was machen Sie in der Mittagspause?",
+        "category": "work"
+      },
+      {
+        "id": "work-a2-09",
+        "text": "Möchten Sie den Beruf wechseln?",
+        "category": "work"
+      },
+      {
+        "id": "work-a2-10",
+        "text": "Haben Sie Urlaub? Wie viele Tage?",
+        "category": "work"
+      },
+      {
+        "id": "work-a2-11",
+        "text": "Was war Ihr erster Job?",
+        "category": "work"
+      },
+      {
+        "id": "work-a2-12",
+        "text": "Arbeiten Sie manchmal von zu Hause?",
+        "category": "work"
+      },
+      {
+        "id": "work-a2-13",
+        "text": "Tragen Sie eine Uniform bei der Arbeit?",
+        "category": "work"
+      },
+      {
+        "id": "work-a2-14",
+        "text": "Wie ist die Atmosphäre an Ihrem Arbeitsplatz?",
+        "category": "work"
+      },
+      {
+        "id": "work-a2-15",
+        "text": "Was haben Sie studiert oder gelernt?",
+        "category": "work"
+      }
+    ]
+  },
+  "work-B1": {
+    "cefrLevel": "B1",
+    "category": "work",
+    "questions": [
+      {
+        "id": "work-b1-01",
+        "text": "Was ist Ihr Traumberuf und warum?",
+        "category": "work"
+      },
+      {
+        "id": "work-b1-02",
+        "text": "Wie wichtig ist Ihnen die Work-Life-Balance?",
+        "category": "work"
+      },
+      {
+        "id": "work-b1-03",
+        "text": "Welche Fähigkeiten braucht man in Ihrem Beruf?",
+        "category": "work"
+      },
+      {
+        "id": "work-b1-04",
+        "text": "Was denken Sie über Homeoffice?",
+        "category": "work"
+      },
+      {
+        "id": "work-b1-05",
+        "text": "Sollte man den Beruf nach Interesse oder Gehalt wählen?",
+        "category": "work"
+      },
+      {
+        "id": "work-b1-06",
+        "text": "Wie bereitet man sich am besten auf ein Vorstellungsgespräch vor?",
+        "category": "work"
+      },
+      {
+        "id": "work-b1-07",
+        "text": "Wie hat die Technologie Ihren Beruf verändert?",
+        "category": "work"
+      },
+      {
+        "id": "work-b1-08",
+        "text": "Was halten Sie von Überstunden?",
+        "category": "work"
+      },
+      {
+        "id": "work-b1-09",
+        "text": "Welche Vorteile hat Teamarbeit?",
+        "category": "work"
+      },
+      {
+        "id": "work-b1-10",
+        "text": "Wie gehen Sie mit Stress bei der Arbeit um?",
+        "category": "work"
+      },
+      {
+        "id": "work-b1-11",
+        "text": "Sollte das Rentenalter erhöht werden?",
+        "category": "work"
+      },
+      {
+        "id": "work-b1-12",
+        "text": "Was motiviert Sie bei der Arbeit?",
+        "category": "work"
+      },
+      {
+        "id": "work-b1-13",
+        "text": "Wie wichtig ist Weiterbildung im Beruf?",
+        "category": "work"
+      },
+      {
+        "id": "work-b1-14",
+        "text": "Finden Sie, dass Frauen und Männer gleich bezahlt werden sollten?",
+        "category": "work"
+      },
+      {
+        "id": "work-b1-15",
+        "text": "Was würden Sie an Ihrem Arbeitsplatz verbessern?",
+        "category": "work"
+      }
+    ]
+  },
+  "work-B2": {
+    "cefrLevel": "B2",
+    "category": "work",
+    "questions": [
+      {
+        "id": "work-b2-01",
+        "text": "Wie verändert die Digitalisierung die Arbeitswelt?",
+        "category": "work"
+      },
+      {
+        "id": "work-b2-02",
+        "text": "Welche Auswirkungen hat die Automatisierung auf den Arbeitsmarkt?",
+        "category": "work"
+      },
+      {
+        "id": "work-b2-03",
+        "text": "Diskutieren Sie die Vor- und Nachteile der Gig-Economy.",
+        "category": "work"
+      },
+      {
+        "id": "work-b2-04",
+        "text": "Sollte die Vier-Tage-Woche gesetzlich eingeführt werden?",
+        "category": "work"
+      },
+      {
+        "id": "work-b2-05",
+        "text": "Wie beeinflusst die Globalisierung den lokalen Arbeitsmarkt?",
+        "category": "work"
+      },
+      {
+        "id": "work-b2-06",
+        "text": "Welche Rolle spielt emotionale Intelligenz im Berufsleben?",
+        "category": "work"
+      },
+      {
+        "id": "work-b2-07",
+        "text": "Wie kann man Burnout vorbeugen?",
+        "category": "work"
+      },
+      {
+        "id": "work-b2-08",
+        "text": "Sollte ein bedingungsloses Grundeinkommen die Arbeitswelt verändern?",
+        "category": "work"
+      },
+      {
+        "id": "work-b2-09",
+        "text": "Wie wichtig ist Diversität am Arbeitsplatz?",
+        "category": "work"
+      },
+      {
+        "id": "work-b2-10",
+        "text": "Welche Berufe werden in Zukunft verschwinden?",
+        "category": "work"
+      },
+      {
+        "id": "work-b2-11",
+        "text": "Wie beeinflusst Künstliche Intelligenz die Personalauswahl?",
+        "category": "work"
+      },
+      {
+        "id": "work-b2-12",
+        "text": "Sollten Unternehmen mehr soziale Verantwortung übernehmen?",
+        "category": "work"
+      },
+      {
+        "id": "work-b2-13",
+        "text": "Wie verändert Remote-Arbeit die Unternehmenskultur?",
+        "category": "work"
+      },
+      {
+        "id": "work-b2-14",
+        "text": "Welche Auswirkungen hat der Fachkräftemangel auf die Wirtschaft?",
+        "category": "work"
+      },
+      {
+        "id": "work-b2-15",
+        "text": "Wie wichtig ist Networking für die Karriere?",
+        "category": "work"
+      }
+    ]
+  },
+  "work-C1": {
+    "cefrLevel": "C1",
+    "category": "work",
+    "questions": [
+      {
+        "id": "work-c1-01",
+        "text": "Inwiefern definiert Arbeit unsere Identität in der modernen Gesellschaft?",
+        "category": "work"
+      },
+      {
+        "id": "work-c1-02",
+        "text": "Lässt sich argumentieren, dass das Konzept der Lohnarbeit überholt ist?",
+        "category": "work"
+      },
+      {
+        "id": "work-c1-03",
+        "text": "Welche gesellschaftlichen Konsequenzen hat die zunehmende Prekarisierung der Arbeit?",
+        "category": "work"
+      },
+      {
+        "id": "work-c1-04",
+        "text": "Wie verändert die Plattformökonomie die traditionellen Arbeitsverhältnisse?",
+        "category": "work"
+      },
+      {
+        "id": "work-c1-05",
+        "text": "Kann Arbeit in einer vollautomatisierten Welt noch sinnstiftend sein?",
+        "category": "work"
+      },
+      {
+        "id": "work-c1-06",
+        "text": "Welche ethischen Fragen wirft die Überwachung am Arbeitsplatz auf?",
+        "category": "work"
+      },
+      {
+        "id": "work-c1-07",
+        "text": "Inwiefern perpetuieren Arbeitsstrukturen gesellschaftliche Ungleichheiten?",
+        "category": "work"
+      },
+      {
+        "id": "work-c1-08",
+        "text": "Diskutieren Sie die These: Die Zukunft gehört den Generalisten, nicht den Spezialisten.",
+        "category": "work"
+      },
+      {
+        "id": "work-c1-09",
+        "text": "Wie verändert die demografische Entwicklung die Anforderungen an den Arbeitsmarkt?",
+        "category": "work"
+      },
+      {
+        "id": "work-c1-10",
+        "text": "Welche Rolle spielt lebenslanges Lernen in einer sich schnell verändernden Arbeitswelt?",
+        "category": "work"
+      },
+      {
+        "id": "work-c1-11",
+        "text": "Stellen Sie sich vor, Roboter könnten alle Arbeiten übernehmen. Wie würde die Gesellschaft funktionieren?",
+        "category": "work"
+      },
+      {
+        "id": "work-c1-12",
+        "text": "Inwiefern beeinflusst die kulturelle Prägung unsere Einstellung zur Arbeit?",
+        "category": "work"
+      },
+      {
+        "id": "work-c1-13",
+        "text": "Welche Auswirkungen hat die Entgrenzung der Arbeit auf das Privatleben?",
+        "category": "work"
+      },
+      {
+        "id": "work-c1-14",
+        "text": "Wie lässt sich Arbeit gerechter verteilen?",
+        "category": "work"
+      },
+      {
+        "id": "work-c1-15",
+        "text": "Sollte der Wert der Arbeit neu definiert werden?",
+        "category": "work"
+      }
+    ]
+  },
+  "education-A1": {
+    "cefrLevel": "A1",
+    "category": "education",
+    "questions": [
+      {
+        "id": "education-a1-01",
+        "text": "Gehen Sie zur Schule oder zur Universität?",
+        "category": "education"
+      },
+      {
+        "id": "education-a1-02",
+        "text": "Welche Fächer mögen Sie?",
+        "category": "education"
+      },
+      {
+        "id": "education-a1-03",
+        "text": "Lernen Sie Deutsch? Seit wann?",
+        "category": "education"
+      },
+      {
+        "id": "education-a1-04",
+        "text": "Haben Sie einen Lieblingslehrer?",
+        "category": "education"
+      },
+      {
+        "id": "education-a1-05",
+        "text": "Wie viele Stunden lernen Sie pro Tag?",
+        "category": "education"
+      },
+      {
+        "id": "education-a1-06",
+        "text": "Machen Sie Hausaufgaben?",
+        "category": "education"
+      },
+      {
+        "id": "education-a1-07",
+        "text": "Lesen Sie gern Bücher?",
+        "category": "education"
+      },
+      {
+        "id": "education-a1-08",
+        "text": "Lernen Sie gern Sprachen?",
+        "category": "education"
+      },
+      {
+        "id": "education-a1-09",
+        "text": "Wie lernen Sie am besten?",
+        "category": "education"
+      },
+      {
+        "id": "education-a1-10",
+        "text": "Haben Sie einen Schulabschluss?",
+        "category": "education"
+      },
+      {
+        "id": "education-a1-11",
+        "text": "Was möchten Sie studieren?",
+        "category": "education"
+      },
+      {
+        "id": "education-a1-12",
+        "text": "Gehen Sie in einen Sprachkurs?",
+        "category": "education"
+      },
+      {
+        "id": "education-a1-13",
+        "text": "Benutzen Sie Apps zum Lernen?",
+        "category": "education"
+      },
+      {
+        "id": "education-a1-14",
+        "text": "Lernen Sie lieber allein oder in einer Gruppe?",
+        "category": "education"
+      },
+      {
+        "id": "education-a1-15",
+        "text": "Wie oft haben Sie Deutschunterricht?",
+        "category": "education"
+      }
+    ]
+  },
+  "education-A2": {
+    "cefrLevel": "A2",
+    "category": "education",
+    "questions": [
+      {
+        "id": "education-a2-01",
+        "text": "Erzählen Sie von Ihrer Schulzeit.",
+        "category": "education"
+      },
+      {
+        "id": "education-a2-02",
+        "text": "Welches Fach war Ihr Lieblingsfach in der Schule?",
+        "category": "education"
+      },
+      {
+        "id": "education-a2-03",
+        "text": "Haben Sie eine Ausbildung oder ein Studium gemacht?",
+        "category": "education"
+      },
+      {
+        "id": "education-a2-04",
+        "text": "Wie lernen Sie neue Wörter auf Deutsch?",
+        "category": "education"
+      },
+      {
+        "id": "education-a2-05",
+        "text": "Was war der schwierigste Test, den Sie geschrieben haben?",
+        "category": "education"
+      },
+      {
+        "id": "education-a2-06",
+        "text": "Wie war Ihre Schule? Beschreiben Sie sie.",
+        "category": "education"
+      },
+      {
+        "id": "education-a2-07",
+        "text": "Haben Sie gute Noten gehabt?",
+        "category": "education"
+      },
+      {
+        "id": "education-a2-08",
+        "text": "Was haben Sie nach der Schule gemacht?",
+        "category": "education"
+      },
+      {
+        "id": "education-a2-09",
+        "text": "Wie wichtig ist Bildung in Ihrem Land?",
+        "category": "education"
+      },
+      {
+        "id": "education-a2-10",
+        "text": "Nutzen Sie das Internet zum Lernen? Wie?",
+        "category": "education"
+      },
+      {
+        "id": "education-a2-11",
+        "text": "Haben Sie schon einmal einen Online-Kurs gemacht?",
+        "category": "education"
+      },
+      {
+        "id": "education-a2-12",
+        "text": "Was würden Sie gern noch lernen?",
+        "category": "education"
+      },
+      {
+        "id": "education-a2-13",
+        "text": "Wie viele Sprachen sprechen Sie?",
+        "category": "education"
+      },
+      {
+        "id": "education-a2-14",
+        "text": "Hatten Sie einen Lieblingslehrer? Warum?",
+        "category": "education"
+      },
+      {
+        "id": "education-a2-15",
+        "text": "Wie unterscheidet sich die Schule in Deutschland von der in Ihrem Land?",
+        "category": "education"
+      }
+    ]
+  },
+  "education-B1": {
+    "cefrLevel": "B1",
+    "category": "education",
+    "questions": [
+      {
+        "id": "education-b1-01",
+        "text": "Sollte Bildung kostenlos sein? Warum oder warum nicht?",
+        "category": "education"
+      },
+      {
+        "id": "education-b1-02",
+        "text": "Wie hat die Technologie das Lernen verändert?",
+        "category": "education"
+      },
+      {
+        "id": "education-b1-03",
+        "text": "Was sind die Vorteile und Nachteile von Online-Unterricht?",
+        "category": "education"
+      },
+      {
+        "id": "education-b1-04",
+        "text": "Finden Sie Noten wichtig? Warum?",
+        "category": "education"
+      },
+      {
+        "id": "education-b1-05",
+        "text": "Sollten Fremdsprachen Pflicht in der Schule sein?",
+        "category": "education"
+      },
+      {
+        "id": "education-b1-06",
+        "text": "Wie können wir das Bildungssystem verbessern?",
+        "category": "education"
+      },
+      {
+        "id": "education-b1-07",
+        "text": "Was ist wichtiger: praktische Erfahrung oder theoretisches Wissen?",
+        "category": "education"
+      },
+      {
+        "id": "education-b1-08",
+        "text": "Wie motiviert man Kinder zum Lernen?",
+        "category": "education"
+      },
+      {
+        "id": "education-b1-09",
+        "text": "Sollten alle Kinder Programmieren lernen?",
+        "category": "education"
+      },
+      {
+        "id": "education-b1-10",
+        "text": "Was halten Sie von Privatschulen?",
+        "category": "education"
+      },
+      {
+        "id": "education-b1-11",
+        "text": "Wie wichtig ist Weiterbildung im Berufsleben?",
+        "category": "education"
+      },
+      {
+        "id": "education-b1-12",
+        "text": "Sollten Hausaufgaben abgeschafft werden?",
+        "category": "education"
+      },
+      {
+        "id": "education-b1-13",
+        "text": "Wie können Erwachsene am besten eine neue Sprache lernen?",
+        "category": "education"
+      },
+      {
+        "id": "education-b1-14",
+        "text": "Was sind die Vorteile eines Auslandsstudiums?",
+        "category": "education"
+      },
+      {
+        "id": "education-b1-15",
+        "text": "Wie wichtig ist lebenslanges Lernen?",
+        "category": "education"
+      }
+    ]
+  },
+  "education-B2": {
+    "cefrLevel": "B2",
+    "category": "education",
+    "questions": [
+      {
+        "id": "education-b2-01",
+        "text": "Wie beeinflusst die soziale Herkunft den Bildungserfolg?",
+        "category": "education"
+      },
+      {
+        "id": "education-b2-02",
+        "text": "Sollte das Bildungssystem stärker auf die Bedürfnisse des Arbeitsmarktes ausgerichtet werden?",
+        "category": "education"
+      },
+      {
+        "id": "education-b2-03",
+        "text": "Welche Rolle spielt Künstliche Intelligenz in der Bildung der Zukunft?",
+        "category": "education"
+      },
+      {
+        "id": "education-b2-04",
+        "text": "Diskutieren Sie die Vor- und Nachteile des dreigliedrigen Schulsystems.",
+        "category": "education"
+      },
+      {
+        "id": "education-b2-05",
+        "text": "Wie kann Chancengleichheit in der Bildung erreicht werden?",
+        "category": "education"
+      },
+      {
+        "id": "education-b2-06",
+        "text": "Welche Auswirkungen hat die Digitalisierung auf traditionelle Lernmethoden?",
+        "category": "education"
+      },
+      {
+        "id": "education-b2-07",
+        "text": "Sollte politische Bildung einen höheren Stellenwert in Schulen haben?",
+        "category": "education"
+      },
+      {
+        "id": "education-b2-08",
+        "text": "Wie verändert die Globalisierung die Anforderungen an Bildung?",
+        "category": "education"
+      },
+      {
+        "id": "education-b2-09",
+        "text": "Ist ein Hochschulstudium noch der beste Weg zum beruflichen Erfolg?",
+        "category": "education"
+      },
+      {
+        "id": "education-b2-10",
+        "text": "Welche Rolle spielen alternative Bildungskonzepte wie Montessori oder Waldorf?",
+        "category": "education"
+      },
+      {
+        "id": "education-b2-11",
+        "text": "Wie können wir die MINT-Fächer attraktiver für Mädchen gestalten?",
+        "category": "education"
+      },
+      {
+        "id": "education-b2-12",
+        "text": "Sollte Finanzkompetenz als Schulfach eingeführt werden?",
+        "category": "education"
+      },
+      {
+        "id": "education-b2-13",
+        "text": "Wie beeinflusst die Klassengesellschaft den Zugang zu Bildung?",
+        "category": "education"
+      },
+      {
+        "id": "education-b2-14",
+        "text": "Welche Bedeutung hat die emotionale Bildung in Schulen?",
+        "category": "education"
+      },
+      {
+        "id": "education-b2-15",
+        "text": "Wie sollte die Lehrerausbildung modernisiert werden?",
+        "category": "education"
+      }
+    ]
+  },
+  "education-C1": {
+    "cefrLevel": "C1",
+    "category": "education",
+    "questions": [
+      {
+        "id": "education-c1-01",
+        "text": "Inwiefern reproduziert das Bildungssystem gesellschaftliche Ungleichheiten?",
+        "category": "education"
+      },
+      {
+        "id": "education-c1-02",
+        "text": "Lässt sich argumentieren, dass das traditionelle Bildungssystem überholt ist?",
+        "category": "education"
+      },
+      {
+        "id": "education-c1-03",
+        "text": "Welche Auswirkungen hat die Ökonomisierung der Bildung auf die Gesellschaft?",
+        "category": "education"
+      },
+      {
+        "id": "education-c1-04",
+        "text": "Wie verändert die Neurowissenschaft unser Verständnis von Lernen?",
+        "category": "education"
+      },
+      {
+        "id": "education-c1-05",
+        "text": "Kann Bildung wirklich zu sozialer Mobilität beitragen oder ist das eine Illusion?",
+        "category": "education"
+      },
+      {
+        "id": "education-c1-06",
+        "text": "Welche Rolle spielt Bildung bei der Bekämpfung von Populismus und Extremismus?",
+        "category": "education"
+      },
+      {
+        "id": "education-c1-07",
+        "text": "Inwiefern beeinflusst die kulturelle Prägung unsere Vorstellung von Bildung?",
+        "category": "education"
+      },
+      {
+        "id": "education-c1-08",
+        "text": "Diskutieren Sie die These: Kreativität lässt sich nicht lehren.",
+        "category": "education"
+      },
+      {
+        "id": "education-c1-09",
+        "text": "Wie verändert die zunehmende Spezialisierung die akademische Landschaft?",
+        "category": "education"
+      },
+      {
+        "id": "education-c1-10",
+        "text": "Welche ethischen Implikationen hat die Vermessung von Bildung durch standardisierte Tests?",
+        "category": "education"
+      },
+      {
+        "id": "education-c1-11",
+        "text": "Stellen Sie sich ein Bildungssystem der Zukunft vor. Wie würde es aussehen?",
+        "category": "education"
+      },
+      {
+        "id": "education-c1-12",
+        "text": "Inwiefern ist die Universität ein Ort der freien Meinungsbildung oder der Indoktrination?",
+        "category": "education"
+      },
+      {
+        "id": "education-c1-13",
+        "text": "Welche Verantwortung tragen Bildungsinstitutionen gegenüber der Gesellschaft?",
+        "category": "education"
+      },
+      {
+        "id": "education-c1-14",
+        "text": "Wie lässt sich der Wert von Bildung messen, wenn er nicht rein ökonomisch ist?",
+        "category": "education"
+      },
+      {
+        "id": "education-c1-15",
+        "text": "Sollte Bildung auf Wissen oder auf Kompetenzen ausgerichtet sein?",
+        "category": "education"
+      }
+    ]
+  },
+  "technology-A1": {
+    "cefrLevel": "A1",
+    "category": "technology",
+    "questions": [
+      {
+        "id": "technology-a1-01",
+        "text": "Haben Sie ein Handy?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-a1-02",
+        "text": "Benutzen Sie einen Computer?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-a1-03",
+        "text": "Was machen Sie im Internet?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-a1-04",
+        "text": "Haben Sie ein Tablet?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-a1-05",
+        "text": "Schreiben Sie E-Mails?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-a1-06",
+        "text": "Benutzen Sie soziale Medien?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-a1-07",
+        "text": "Welche Apps benutzen Sie?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-a1-08",
+        "text": "Spielen Sie Videospiele?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-a1-09",
+        "text": "Haben Sie einen Fernseher?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-a1-10",
+        "text": "Können Sie mit dem Computer arbeiten?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-a1-11",
+        "text": "Wie oft benutzen Sie Ihr Handy?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-a1-12",
+        "text": "Schauen Sie Videos im Internet?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-a1-13",
+        "text": "Kaufen Sie online ein?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-a1-14",
+        "text": "Machen Sie Fotos mit Ihrem Handy?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-a1-15",
+        "text": "Haben Sie WLAN zu Hause?",
+        "category": "technology"
+      }
+    ]
+  },
+  "technology-A2": {
+    "cefrLevel": "A2",
+    "category": "technology",
+    "questions": [
+      {
+        "id": "technology-a2-01",
+        "text": "Welche Technologie benutzen Sie jeden Tag?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-a2-02",
+        "text": "Wie hat das Internet Ihr Leben verändert?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-a2-03",
+        "text": "Welche sozialen Medien benutzen Sie und warum?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-a2-04",
+        "text": "Was machen Sie, wenn Ihr Computer nicht funktioniert?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-a2-05",
+        "text": "Kaufen Sie gern neue Technologie?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-a2-06",
+        "text": "Wie oft bekommen Sie ein neues Handy?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-a2-07",
+        "text": "Benutzen Sie Navigations-Apps?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-a2-08",
+        "text": "Was ist Ihre Lieblings-App?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-a2-09",
+        "text": "Können Sie ohne Internet leben?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-a2-10",
+        "text": "Wie lernen Sie, neue Technologie zu benutzen?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-a2-11",
+        "text": "Haben Sie schon einmal etwas online bestellt?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-a2-12",
+        "text": "Benutzen Sie einen Sprachassistenten?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-a2-13",
+        "text": "Wie viel Zeit verbringen Sie am Handy?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-a2-14",
+        "text": "Was finden Sie an Technologie gut?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-a2-15",
+        "text": "Was finden Sie an Technologie schlecht?",
+        "category": "technology"
+      }
+    ]
+  },
+  "technology-B1": {
+    "cefrLevel": "B1",
+    "category": "technology",
+    "questions": [
+      {
+        "id": "technology-b1-01",
+        "text": "Wie hat die Technologie unser Leben verändert?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-b1-02",
+        "text": "Was denken Sie über Künstliche Intelligenz?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-b1-03",
+        "text": "Sollten Kinder Zugang zu Smartphones haben?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-b1-04",
+        "text": "Wie beeinflusst Technologie die Kommunikation?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-b1-05",
+        "text": "Was sind die Gefahren von sozialen Medien?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-b1-06",
+        "text": "Wie schützen Sie Ihre Daten im Internet?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-b1-07",
+        "text": "Was denken Sie über Roboter im Alltag?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-b1-08",
+        "text": "Wie hat die Technologie die Arbeit verändert?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-b1-09",
+        "text": "Sollte es Regeln für soziale Medien geben?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-b1-10",
+        "text": "Was halten Sie von selbstfahrenden Autos?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-b1-11",
+        "text": "Wie können ältere Menschen von Technologie profitieren?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-b1-12",
+        "text": "Was denken Sie über Online-Shopping?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-b1-13",
+        "text": "Wie beeinflusst Technologie die Bildung?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-b1-14",
+        "text": "Welche Technologie wünschen Sie sich für die Zukunft?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-b1-15",
+        "text": "Haben Sie Angst vor Cyberkriminalität?",
+        "category": "technology"
+      }
+    ]
+  },
+  "technology-B2": {
+    "cefrLevel": "B2",
+    "category": "technology",
+    "questions": [
+      {
+        "id": "technology-b2-01",
+        "text": "Welche ethischen Fragen wirft die Künstliche Intelligenz auf?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-b2-02",
+        "text": "Wie verändert die Blockchain-Technologie die Finanzwelt?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-b2-03",
+        "text": "Sollten Tech-Konzerne stärker reguliert werden?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-b2-04",
+        "text": "Welche Auswirkungen hat die Automatisierung auf den Arbeitsmarkt?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-b2-05",
+        "text": "Wie beeinflusst die Technologie unsere Privatsphäre?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-b2-06",
+        "text": "Diskutieren Sie die Vor- und Nachteile des Internet der Dinge.",
+        "category": "technology"
+      },
+      {
+        "id": "technology-b2-07",
+        "text": "Welche Rolle spielt Technologie bei der Lösung des Klimawandels?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-b2-08",
+        "text": "Wie verändert 5G unseren Alltag?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-b2-09",
+        "text": "Sollten Algorithmen transparent gemacht werden?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-b2-10",
+        "text": "Welche gesellschaftlichen Risiken birgt die Gesichtserkennung?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-b2-11",
+        "text": "Wie beeinflusst die Technologie die demokratische Teilhabe?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-b2-12",
+        "text": "Welche Auswirkungen hat die digitale Kluft auf die Gesellschaft?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-b2-13",
+        "text": "Wie können wir Kinder vor den Gefahren des Internets schützen?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-b2-14",
+        "text": "Welche Zukunft hat das Metaversum?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-b2-15",
+        "text": "Wie nachhaltig ist die Technologiebranche?",
+        "category": "technology"
+      }
+    ]
+  },
+  "technology-C1": {
+    "cefrLevel": "C1",
+    "category": "technology",
+    "questions": [
+      {
+        "id": "technology-c1-01",
+        "text": "Inwiefern verändert die Technologie unser Menschenbild?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-c1-02",
+        "text": "Lässt sich argumentieren, dass Technologie mehr Probleme schafft als löst?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-c1-03",
+        "text": "Welche philosophischen Fragen wirft die Entwicklung von Künstlicher Intelligenz auf?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-c1-04",
+        "text": "Wie beeinflusst die Algorithmenökonomie unsere Entscheidungsfreiheit?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-c1-05",
+        "text": "Kann Technologie zur Demokratisierung oder zur Unterdrückung eingesetzt werden?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-c1-06",
+        "text": "Welche Verantwortung tragen Tech-Unternehmen für gesellschaftliche Entwicklungen?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-c1-07",
+        "text": "Inwiefern verändert die Digitalisierung unsere kognitive Fähigkeit?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-c1-08",
+        "text": "Diskutieren Sie die These: Technologischer Fortschritt ist nicht aufzuhalten.",
+        "category": "technology"
+      },
+      {
+        "id": "technology-c1-09",
+        "text": "Wie verändert die Quantencomputing-Technologie unser Verständnis der Welt?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-c1-10",
+        "text": "Welche ethischen Grenzen sollte die Mensch-Maschine-Verschmelzung nicht überschreiten?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-c1-11",
+        "text": "Stellen Sie sich vor, KI hätte ein Bewusstsein. Welche Rechte sollte sie haben?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-c1-12",
+        "text": "Inwiefern hat die Technologie die Grenzen zwischen öffentlich und privat verwischt?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-c1-13",
+        "text": "Welche geopolitischen Auswirkungen hat der technologische Wettbewerb zwischen Staaten?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-c1-14",
+        "text": "Wie verändert die Technologie unser Zeitempfinden?",
+        "category": "technology"
+      },
+      {
+        "id": "technology-c1-15",
+        "text": "Sollte es ein Recht auf ein technologiefreies Leben geben?",
+        "category": "technology"
+      }
+    ]
+  },
+  "culture-A1": {
+    "cefrLevel": "A1",
+    "category": "culture",
+    "questions": [
+      {
+        "id": "culture-a1-01",
+        "text": "Welche Feste feiern Sie?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-a1-02",
+        "text": "Hören Sie gern Musik?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-a1-03",
+        "text": "Gehen Sie ins Kino?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-a1-04",
+        "text": "Kennen Sie deutsche Musik?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-a1-05",
+        "text": "Was ist Ihr Lieblingsfest?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-a1-06",
+        "text": "Lesen Sie gern Bücher?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-a1-07",
+        "text": "Gehen Sie ins Museum?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-a1-08",
+        "text": "Welche Filme mögen Sie?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-a1-09",
+        "text": "Kennen Sie deutsche Feste?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-a1-10",
+        "text": "Tanzen Sie gern?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-a1-11",
+        "text": "Was ist typisch für Ihr Land?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-a1-12",
+        "text": "Welche Feiertage gibt es in Ihrem Land?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-a1-13",
+        "text": "Tragen Sie traditionelle Kleidung?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-a1-14",
+        "text": "Kennen Sie deutsche Gerichte?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-a1-15",
+        "text": "Was ist Ihre Lieblingsmusik?",
+        "category": "culture"
+      }
+    ]
+  },
+  "culture-A2": {
+    "cefrLevel": "A2",
+    "category": "culture",
+    "questions": [
+      {
+        "id": "culture-a2-01",
+        "text": "Welche kulturellen Unterschiede zwischen Ihrem Land und Deutschland kennen Sie?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-a2-02",
+        "text": "Erzählen Sie von einem Fest in Ihrem Land.",
+        "category": "culture"
+      },
+      {
+        "id": "culture-a2-03",
+        "text": "Welche deutschen Traditionen finden Sie interessant?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-a2-04",
+        "text": "Gehen Sie gern in Konzerte oder ins Theater?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-a2-05",
+        "text": "Welche Bücher haben Sie zuletzt gelesen?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-a2-06",
+        "text": "Kennen Sie deutsche Filme? Welche?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-a2-07",
+        "text": "Wie feiern Sie Neujahr?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-a2-08",
+        "text": "Was ist das wichtigste Fest in Ihrem Land?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-a2-09",
+        "text": "Haben Sie schon einmal ein deutsches Gericht gekocht?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-a2-10",
+        "text": "Welche Museen haben Sie besucht?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-a2-11",
+        "text": "Was gefällt Ihnen an der deutschen Kultur?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-a2-12",
+        "text": "Gibt es in Ihrem Land ein Karneval oder ähnliches Fest?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-a2-13",
+        "text": "Welche Sportarten sind in Ihrem Land beliebt?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-a2-14",
+        "text": "Kennen Sie deutsche Künstler?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-a2-15",
+        "text": "Was ist der wichtigste Feiertag in Ihrem Land?",
+        "category": "culture"
+      }
+    ]
+  },
+  "culture-B1": {
+    "cefrLevel": "B1",
+    "category": "culture",
+    "questions": [
+      {
+        "id": "culture-b1-01",
+        "text": "Welche Rolle spielt Kultur im Zusammenleben der Menschen?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-b1-02",
+        "text": "Wie hat die Globalisierung die Kultur Ihres Landes beeinflusst?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-b1-03",
+        "text": "Was bedeutet kulturelle Identität für Sie?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-b1-04",
+        "text": "Sollten Schulen mehr Wert auf kulturelle Bildung legen?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-b1-05",
+        "text": "Wie können kulturelle Missverständnisse vermieden werden?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-b1-06",
+        "text": "Was denken Sie über die Bewahrung von Traditionen?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-b1-07",
+        "text": "Wie beeinflusst die Popkultur unsere Gesellschaft?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-b1-08",
+        "text": "Was halten Sie von kulturellem Austausch?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-b1-09",
+        "text": "Wie hat das Internet die Kultur verändert?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-b1-10",
+        "text": "Welche kulturellen Gemeinsamkeiten gibt es zwischen verschiedenen Ländern?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-b1-11",
+        "text": "Sollte der Staat die Kunst und Kultur fördern?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-b1-12",
+        "text": "Wie wichtig sind Museen in der modernen Gesellschaft?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-b1-13",
+        "text": "Was denken Sie über kulturelle Aneignung?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-b1-14",
+        "text": "Wie beeinflusst die Sprache die Kultur?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-b1-15",
+        "text": "Welche Bräuche finden Sie besonders interessant?",
+        "category": "culture"
+      }
+    ]
+  },
+  "culture-B2": {
+    "cefrLevel": "B2",
+    "category": "culture",
+    "questions": [
+      {
+        "id": "culture-b2-01",
+        "text": "Wie beeinflusst die Globalisierung die kulturelle Vielfalt?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-b2-02",
+        "text": "Diskutieren Sie die Rolle der Kunst als Spiegel der Gesellschaft.",
+        "category": "culture"
+      },
+      {
+        "id": "culture-b2-03",
+        "text": "Welche Auswirkungen hat die Digitalisierung auf die Kulturproduktion?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-b2-04",
+        "text": "Sollte kulturelles Erbe stärker geschützt werden?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-b2-05",
+        "text": "Wie verändert die Migration die kulturelle Landschaft Europas?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-b2-06",
+        "text": "Welche Rolle spielen Medien bei der Verbreitung von Kultur?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-b2-07",
+        "text": "Ist kulturelle Aneignung immer problematisch?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-b2-08",
+        "text": "Wie kann Kultur zum interkulturellen Dialog beitragen?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-b2-09",
+        "text": "Welche Bedeutung hat die Hochkultur gegenüber der Populärkultur?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-b2-10",
+        "text": "Wie beeinflusst die Kulturindustrie den künstlerischen Ausdruck?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-b2-11",
+        "text": "Sollte der Zugang zu Kultur ein Grundrecht sein?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-b2-12",
+        "text": "Wie verändert sich die Museumskultur im digitalen Zeitalter?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-b2-13",
+        "text": "Welche Rolle spielt Sprache bei der Bewahrung kultureller Identität?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-b2-14",
+        "text": "Wie beeinflusst der Tourismus die lokale Kultur?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-b2-15",
+        "text": "Diskutieren Sie die Bedeutung von Subkulturen für die Gesellschaft.",
+        "category": "culture"
+      }
+    ]
+  },
+  "culture-C1": {
+    "cefrLevel": "C1",
+    "category": "culture",
+    "questions": [
+      {
+        "id": "culture-c1-01",
+        "text": "Inwiefern ist Kultur ein Instrument der Macht und Kontrolle?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-c1-02",
+        "text": "Lässt sich argumentieren, dass die Kulturindustrie zur Homogenisierung der Welt beiträgt?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-c1-03",
+        "text": "Wie beeinflusst die postkoloniale Perspektive unser Verständnis von Kultur?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-c1-04",
+        "text": "Welche Rolle spielt die Kulturpolitik bei der Formung nationaler Identität?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-c1-05",
+        "text": "Kann Kunst in einer kommerzialisierten Welt noch subversiv sein?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-c1-06",
+        "text": "Wie verändert die Digitalisierung die Grenzen zwischen Hoch- und Populärkultur?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-c1-07",
+        "text": "Inwiefern ist die kulturelle Identität ein soziales Konstrukt?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-c1-08",
+        "text": "Diskutieren Sie die These: Kultur ist der beste Botschafter zwischen Nationen.",
+        "category": "culture"
+      },
+      {
+        "id": "culture-c1-09",
+        "text": "Welche Auswirkungen hat die Cancel Culture auf die Meinungsfreiheit?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-c1-10",
+        "text": "Wie beeinflusst die künstlerische Freiheit die politische Debatte?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-c1-11",
+        "text": "Stellen Sie sich eine Welt ohne kulturelle Grenzen vor. Wäre das wünschenswert?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-c1-12",
+        "text": "Inwiefern kann Literatur als Spiegel und Kritik der Gesellschaft dienen?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-c1-13",
+        "text": "Welche ethischen Fragen wirft die Restitution von Kulturgütern auf?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-c1-14",
+        "text": "Wie verändert die Globalisierung den Begriff der Heimat?",
+        "category": "culture"
+      },
+      {
+        "id": "culture-c1-15",
+        "text": "Sollte der Staat in die kulturelle Bildung investieren, auch wenn der ökonomische Nutzen unklar ist?",
+        "category": "culture"
+      }
+    ]
+  },
+  "environment-A1": {
+    "cefrLevel": "A1",
+    "category": "environment",
+    "questions": [
+      {
+        "id": "environment-a1-01",
+        "text": "Wie ist das Wetter heute?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-a1-02",
+        "text": "Mögen Sie die Natur?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-a1-03",
+        "text": "Gehen Sie gern in den Park?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-a1-04",
+        "text": "Trennen Sie den Müll?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-a1-05",
+        "text": "Haben Sie einen Garten?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-a1-06",
+        "text": "Welche Tiere mögen Sie?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-a1-07",
+        "text": "Fahren Sie Fahrrad?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-a1-08",
+        "text": "Mögen Sie den Wald?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-a1-09",
+        "text": "Trinken Sie Leitungswasser?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-a1-10",
+        "text": "Wie ist das Wetter in Ihrem Land?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-a1-11",
+        "text": "Welche Jahreszeit mögen Sie?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-a1-12",
+        "text": "Gibt es Berge in Ihrem Land?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-a1-13",
+        "text": "Gibt es einen Fluss in Ihrer Stadt?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-a1-14",
+        "text": "Sparen Sie Wasser?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-a1-15",
+        "text": "Benutzen Sie eine Plastiktüte beim Einkaufen?",
+        "category": "environment"
+      }
+    ]
+  },
+  "environment-A2": {
+    "cefrLevel": "A2",
+    "category": "environment",
+    "questions": [
+      {
+        "id": "environment-a2-01",
+        "text": "Was machen Sie für die Umwelt?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-a2-02",
+        "text": "Recyceln Sie? Was recyceln Sie?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-a2-03",
+        "text": "Wie ist die Natur in Ihrem Land?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-a2-04",
+        "text": "Fahren Sie mit dem Auto oder mit öffentlichen Verkehrsmitteln?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-a2-05",
+        "text": "Was gefällt Ihnen an der Natur?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-a2-06",
+        "text": "Haben Sie schon einmal einen Nationalpark besucht?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-a2-07",
+        "text": "Kaufen Sie Bio-Produkte?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-a2-08",
+        "text": "Wie sparen Sie Energie zu Hause?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-a2-09",
+        "text": "Was machen Sie am liebsten in der Natur?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-a2-10",
+        "text": "Gibt es Umweltprobleme in Ihrer Stadt?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-a2-11",
+        "text": "Benutzen Sie Stofftaschen oder Plastiktüten?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-a2-12",
+        "text": "Wie ist das Klima in Ihrem Land?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-a2-13",
+        "text": "Pflanzen Sie Bäume oder Blumen?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-a2-14",
+        "text": "Wie oft sind Sie in der Natur?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-a2-15",
+        "text": "Was wissen Sie über den Klimawandel?",
+        "category": "environment"
+      }
+    ]
+  },
+  "environment-B1": {
+    "cefrLevel": "B1",
+    "category": "environment",
+    "questions": [
+      {
+        "id": "environment-b1-01",
+        "text": "Was können wir gegen den Klimawandel tun?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-b1-02",
+        "text": "Wie wichtig ist Recycling für die Umwelt?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-b1-03",
+        "text": "Sollten wir weniger Fleisch essen, um die Umwelt zu schützen?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-b1-04",
+        "text": "Wie beeinflusst der Verkehr die Umwelt?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-b1-05",
+        "text": "Was denken Sie über erneuerbare Energien?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-b1-06",
+        "text": "Wie können Städte umweltfreundlicher werden?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-b1-07",
+        "text": "Was halten Sie von Elektroautos?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-b1-08",
+        "text": "Wie beeinflusst die Umweltverschmutzung unsere Gesundheit?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-b1-09",
+        "text": "Sollte Plastik verboten werden?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-b1-10",
+        "text": "Was können Schulen tun, um Umweltbewusstsein zu fördern?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-b1-11",
+        "text": "Wie wichtig ist Naturschutz?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-b1-12",
+        "text": "Was denken Sie über Fridays for Future?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-b1-13",
+        "text": "Wie beeinflusst unser Konsumverhalten die Umwelt?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-b1-14",
+        "text": "Sollten Unternehmen für Umweltschäden bestraft werden?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-b1-15",
+        "text": "Was kann jeder Einzelne für die Umwelt tun?",
+        "category": "environment"
+      }
+    ]
+  },
+  "environment-B2": {
+    "cefrLevel": "B2",
+    "category": "environment",
+    "questions": [
+      {
+        "id": "environment-b2-01",
+        "text": "Welche Auswirkungen hat der Klimawandel auf die Biodiversität?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-b2-02",
+        "text": "Sollte es eine CO2-Steuer geben?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-b2-03",
+        "text": "Wie kann die Wirtschaft nachhaltiger gestaltet werden?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-b2-04",
+        "text": "Diskutieren Sie die Vor- und Nachteile der Kernenergie.",
+        "category": "environment"
+      },
+      {
+        "id": "environment-b2-05",
+        "text": "Welche Rolle spielen internationale Abkommen beim Umweltschutz?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-b2-06",
+        "text": "Wie beeinflusst die Landwirtschaft die Umwelt?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-b2-07",
+        "text": "Sollte der individuelle CO2-Fußabdruck begrenzt werden?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-b2-08",
+        "text": "Wie verändert der Klimawandel die Migration?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-b2-09",
+        "text": "Welche Verantwortung haben Industrieländer gegenüber Entwicklungsländern?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-b2-10",
+        "text": "Wie nachhaltig sind erneuerbare Energien wirklich?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-b2-11",
+        "text": "Welche Rolle spielen Städte bei der Bekämpfung des Klimawandels?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-b2-12",
+        "text": "Ist nachhaltiger Konsum in einer Konsumgesellschaft möglich?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-b2-13",
+        "text": "Wie beeinflusst die Fast Fashion die Umwelt?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-b2-14",
+        "text": "Sollten Flüge innerhalb Europas verboten werden?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-b2-15",
+        "text": "Welche technologischen Lösungen gibt es für den Klimawandel?",
+        "category": "environment"
+      }
+    ]
+  },
+  "environment-C1": {
+    "cefrLevel": "C1",
+    "category": "environment",
+    "questions": [
+      {
+        "id": "environment-c1-01",
+        "text": "Inwiefern ist der Klimawandel eine Frage der sozialen Gerechtigkeit?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-c1-02",
+        "text": "Lässt sich argumentieren, dass Wirtschaftswachstum und Umweltschutz vereinbar sind?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-c1-03",
+        "text": "Welche ethischen Implikationen hat der Umgang mit natürlichen Ressourcen?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-c1-04",
+        "text": "Wie beeinflusst die Umweltkrise unser Verhältnis zur Natur?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-c1-05",
+        "text": "Kann Technologie allein die Umweltprobleme lösen oder brauchen wir einen Systemwandel?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-c1-06",
+        "text": "Welche Verantwortung tragen heutige Generationen gegenüber zukünftigen?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-c1-07",
+        "text": "Inwiefern ist die Umweltbewegung eine politische Kraft?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-c1-08",
+        "text": "Diskutieren Sie die These: Der Kapitalismus ist die Hauptursache der Umweltzerstörung.",
+        "category": "environment"
+      },
+      {
+        "id": "environment-c1-09",
+        "text": "Wie verändert die Klimakrise geopolitische Machtverhältnisse?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-c1-10",
+        "text": "Welche Rolle spielen indigene Völker beim Schutz der Biodiversität?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-c1-11",
+        "text": "Stellen Sie sich vor, alle fossilen Brennstoffe wären morgen aufgebraucht. Was würde passieren?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-c1-12",
+        "text": "Inwiefern beeinflusst die Medienberichterstattung unser Umweltbewusstsein?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-c1-13",
+        "text": "Welche Paradoxien gibt es im Bereich des nachhaltigen Konsums?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-c1-14",
+        "text": "Sollten Ökosysteme eigene Rechte bekommen?",
+        "category": "environment"
+      },
+      {
+        "id": "environment-c1-15",
+        "text": "Wie verändert die Klimaforschung unser Verständnis von menschlichem Handeln?",
+        "category": "environment"
+      }
+    ]
+  }
+}
