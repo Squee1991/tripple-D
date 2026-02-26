@@ -139,12 +139,14 @@ export default defineNuxtConfig({
 			: [{userAgent: '*', disallow: '/'}],
 		// sitemap: `${siteUrl}/sitemap.xml`,
 	},
+
 	css: [
 		'simplebar/dist/simplebar.min.css',
 		'~/assets/styles/simplebar.css',
 		'~/assets/styles/reset.css',
 		'~/assets/styles/theme.css',
 	],
+
 	colorMode: {
 		preference: 'system',
 		fallback: 'light',
@@ -153,6 +155,7 @@ export default defineNuxtConfig({
 		storage: 'localStorage',
 		storageKey: 'nuxt-color-mode',
 	},
+
 	i18n: {
 		strategy: 'prefix',
 		lazy: true,
@@ -180,10 +183,13 @@ export default defineNuxtConfig({
 		},
 		bundle: {optimizeTranslationDirective: false},
 	},
+
 	plugins: ['~/plugins/simplebar.client.js'],
+
 	googleFonts: {
 		families: {'Uncial Antiqua': true, Kurale: true, Fredoka: true, Nunito: true},
 	},
+
 	vite: {
 		build: {
 			minify: 'terser',
@@ -199,6 +205,7 @@ export default defineNuxtConfig({
 			},
 		},
 	},
+
 	nitro: {
 		preset: 'vercel',
 		prerender: {
@@ -231,7 +238,6 @@ export default defineNuxtConfig({
 		'/*.webmanifest': { headers: { 'Cache-Control': 'public, max-age=86400' } }
 	},
 })
-
 // import { defineNuxtConfig } from 'nuxt/config'
 // import { loadEnv } from 'vite'
 // import path from 'path'
