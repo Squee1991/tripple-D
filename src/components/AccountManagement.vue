@@ -34,7 +34,7 @@
 <!--        📅 {{ t('cabinet.access') }} {{ formattedSubscriptionEndDate }}-->
 <!--      </p>-->
 <!--    </template>-->
-<!--    <div class="account-actions">-->
+    <div class="account-actions">
       <button @click.stop="openDeleteModal" class="btn btn-danger w-full">
         {{ t('cabinet.deleteAcc') }}
       </button>
