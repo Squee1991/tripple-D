@@ -20,12 +20,14 @@ import {userlangStore} from "./learningStore.js";
 let authStateUnsubscribe = null;
 
 export const userAuthStore = defineStore('auth', () => {
-    const auth = useFirebaseAuth()
+    const auth = getAuth() // Исправлено: useFirebaseAuth -> getAuth (стандартный импорт)
     const langStore = userlangStore();
     const LEADERBOARD_COLLECTION = 'marathon_leaderboard';
     const LEADERBOARD_GUESS = 'leaderboard_guess'
     const DAILY__COLLECTION = 'daily';
     const LOCAL_STAT_COLLECTION = 'localStatGame';
+
+    // State
     const voiceConsentGiven = ref(false)
     const name = ref(null)
     const email = ref(null)
@@ -47,11 +49,60 @@ export const userAuthStore = defineStore('auth', () => {
     const initialized = ref(false)
     const shouldShowFeedbackSurvey = ref(false)
     const totalHats = ref(0)
+    const freezeEndsAt = ref(null)
+    const IMMUNITY_RANK_HATS = 365
+
     const premiumDiscount = ref({
         sale_5: false,
         sale_10: false,
         sale_15: false
     })
+
+    const toMillis = (val) => {
+        if (!val) return null
+        if (typeof val === 'number') return val
+        if (typeof val?.toMillis === 'function') return val.toMillis()
+        if (val instanceof Date) return val.getTime()
+        const parsed = Date.parse(val)
+        return isNaN(parsed) ? null : parsed
+    }
+
+    const modifyHats = async (amount) => {
+        const authUser = getAuth().currentUser
+        if (!authUser) return
+        if (amount < 0) {
+            if (totalHats.value >= IMMUNITY_RANK_HATS) return
+            if (totalHats.value <= 0) return
+        }
+        let newTotal = totalHats.value + amount
+        if (newTotal < 0) newTotal = 0
+        totalHats.value = newTotal
+        const userDocRef = doc(db, 'users', authUser.uid)
+        try {
+            await updateDoc(userDocRef, {
+                totalHats: newTotal
+            })
+        } catch (e) {
+            console.error('Ошибка обновления шляп:', e)
+        }
+    }
+
+    const cancelFreeze = async () => {
+        if (!freezeEndsAt.value) return
+        console.log('Пользователь вернулся! Снимаем заморозку')
+        const authUser = getAuth().currentUser
+        freezeEndsAt.value = null
+        if (authUser) {
+            const userDocRef = doc(db, 'users', authUser.uid)
+            try {
+                await updateDoc(userDocRef, {
+                    freezeEndsAt: null
+                })
+            } catch (e) {
+                console.error('Ошибка при отмене заморозки:', e)
+            }
+        }
+    }
 
     const activateDiscount = async (discountId) => {
         const user = getAuth().currentUser
@@ -97,7 +148,6 @@ export const userAuthStore = defineStore('auth', () => {
         if (Date.now() - regDate.getTime() < threeDaysMs) return
         shouldShowFeedbackSurvey.value = true
     }
-
 
     const markFeedbackSurveyShown = async () => {
         const authUser = getAuth().currentUser
@@ -172,6 +222,10 @@ export const userAuthStore = defineStore('auth', () => {
         voiceConsentGiven.value = data.voiceConsentGiven === true
         hasSeenOnboarding.value = data.hasSeenOnboarding === true
         totalHats.value = data.totalHats || 0
+
+        // ВАЖНОЕ ИСПРАВЛЕНИЕ: приводим к числу, чтобы работала математика дат
+        freezeEndsAt.value = toMillis(data.freezeEndsAt)
+
         if (data.points !== undefined) langStore.points = data.points;
         if (data.exp !== undefined) langStore.exp = data.exp;
         if (data.totalEarnedPoints !== undefined) langStore.totalEarnedPoints = data.totalEarnedPoints;
@@ -186,8 +240,14 @@ export const userAuthStore = defineStore('auth', () => {
     const purchase = async (cost, discountId) => {
         const user = getAuth().currentUser
         if (!user) return {success: false, reason: 'no-user'}
+
+        // Проверка была слишком строгой, если вы захотите расширить этот метод
+        // Но сейчас скидки покупаются через activateDiscount, а заморозка через activateFreeze
+        // Этот метод оставим для совместимости, но учтите, что он работает со ШЛЯПАМИ (totalHats)
+
         const allowed = ['sale_5', 'sale_10', 'sale_15']
         if (!allowed.includes(discountId)) return {success: false, reason: 'invalid-item'}
+
         if (totalHats.value < cost) return {success: false, reason: 'insufficient'}
         if (premiumDiscount.value[discountId] === true) return {success: false, reason: 'already-owned'}
         try {
@@ -219,6 +279,34 @@ export const userAuthStore = defineStore('auth', () => {
             throw error;
         }
     };
+
+    const isFreezeActive = computed(() => {
+        if (!freezeEndsAt.value) return false
+        // Теперь здесь сравниваются два числа, это работает корректно
+        return Date.now() < freezeEndsAt.value
+    })
+
+    const activateFreeze = async (days) => {
+        const authUser = getAuth().currentUser
+        if (!authUser) return
+
+        const msToAdd = days * 24 * 60 * 60 * 1000
+        let newDate
+
+        // Если freezeEndsAt уже число (благодаря toMillis), математика сработает
+        if (isFreezeActive.value && typeof freezeEndsAt.value === 'number') {
+            newDate = freezeEndsAt.value + msToAdd
+        } else {
+            newDate = Date.now() + msToAdd
+        }
+
+        freezeEndsAt.value = newDate
+
+        const userDocRef = doc(db, 'users', authUser.uid)
+        await updateDoc(userDocRef, {
+            freezeEndsAt: newDate
+        })
+    }
 
     const loginWithGoogle = async () => {
         const provider = new GoogleAuthProvider()
@@ -571,6 +659,11 @@ export const userAuthStore = defineStore('auth', () => {
         premiumDiscount,
         purchase,
         activateDiscount,
-        markCancelledInDb
+        markCancelledInDb,
+        modifyHats,
+        freezeEndsAt,
+        isFreezeActive,
+        activateFreeze,
+        cancelFreeze,
     }
 })

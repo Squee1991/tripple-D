@@ -96,6 +96,12 @@ export const dailyQuests = [
 		targetValue: 10
 	},
 	{
+		id: 'perfectQuest',
+		name: 'daily.thirteenth',
+		currentValue: 0,
+		targetValue: 1
+	},
+	{
 		id: 'guessWord',
 		name: 'daily.fourteenth',
 		currentValue: 0,

@@ -41,7 +41,7 @@ const close = () => emit('update:modelValue', false)
 .tips__content {
   position: relative;
   background: white;
-  padding: 2.5rem 2rem 2rem;
+  padding: 1.4rem 1.4rem 1.4rem;
   border-radius: 16px;
   border: 3px solid #1e1e1e;
   box-shadow: 3px 3px 0 #1e1e1e;
@@ -101,14 +101,15 @@ const close = () => emit('update:modelValue', false)
   font-size: 1.5rem;
   font-weight: 800;
   color: #2c3e50;
-  margin-top: 15px;
+  margin: 5px 0 0 5px;
+
 }
 
 .tips__text--body {
   border-left: 5px solid #519cd1;
   font-size: .9rem;
   font-weight: 500;
-  padding: 0.5rem 1rem;
+  padding: 0.2rem 1rem;
   background: transparent;
   color: #555;
   margin-left: 5px;

@@ -4454,16 +4454,63 @@
     "questFifteenSecondOption": "Turnul este lângă hotel",
     "questFifteenThirdOption": "Turnul este în spatele hotelului"
   },
+  "pointsTimeOverlay": {
+    "text": "Tocile tale sunt protejate împotriva expirării.",
+    "activeTill": "Activ până la:",
+    "warning": "Atenție:",
+    "warningText": "La finalizarea oricărei sarcini, înghețarea este resetată, iar timpul rămas este pierdut."
+  },
   "shop": {
     "title": "Magazin de obiecte",
-    "subText": "Schimbă Articlus-ii acumulați pe bonusuri utile și reduceri permanente pentru studiile tale.",
+    "subText": "Schimbă Articlus-ii acumulați pentru bonusuri utile și reduceri permanente pentru studiile tale.",
     "bought": "Cumpărat"
   },
+  "cardLives": {
+    "title": "Vieți",
+    "description": "Aici poți reface rezerva de vieți (Maxim 5)"
+  },
+  "cardTime": {
+    "title": "Oprirea timpului",
+    "description": "Protejează tocile tale de penalizări"
+  },
+  "cardSales": {
+    "title5": "Reducere 5%",
+    "title10": "Reducere 10%",
+    "title15": "Reducere 15%"
+  },
   "cardsShop": {
-    "livesTitle": "Vieți",
-    "livesDescription": "Aici poți reface rezerva de vieți (Maxim 5)",
     "full": "Plin",
-    "buy": "Cumpără"
+    "buy": "Cumpără",
+    "active": "Activ",
+    "till": "Valabil până la:",
+    "required": "Necesar:",
+    "ready": "Gata!",
+    "extend": "Prelungește",
+    "buyLives": "Cumpără vieți",
+    "stopTime": "Oprirea timpului",
+    "have": "Ai",
+    "from": "din",
+    "lives": "vieți.",
+    "toPayment": "De plată:",
+    "notEnough": "Articlus-i insuficienți",
+    "selectDaysPeriod": "Alege numărul de zile. În această perioadă, tocile tale nu vor fi pierdute.",
+    "maximum": "Maxim",
+    "cancel": "Anulează",
+    "accessibly": "Am înțeles"
+  },
+  "shopDaysRaw": {
+    "dayFirst": "zi",
+    "daySecond": "zile",
+    "dayThird": "zile",
+    "lifeFirst": "viață",
+    "lifeSecond": "vieți",
+    "lifeThird": "vieți"
+  },
+  "cardsShopModal": {
+    "modal-desc-first": "Oprirea timpului a fost activată.",
+    "modal-desc-Second": "Statutul și perioada de valabilitate pot fi văzute în",
+    "modal-desc-Third": "Panoul participantului",
+    "modal-desc-Four": ", apăsând pe pictograma scutului."
   },
   "awardsSection": {
     "congratulations": "Felicitări! Această recompensă este deja a ta!",
@@ -4544,15 +4591,16 @@
   },
   "pavelOverlay": {
     "newbie": "Începător",
-    "rankTitle": "Conferați",
-    "rankLabelOne": "- Conferații se acordă pentru îndeplinirea sarcinilor zilnice.",
-    "rankLabelTwo": "- Poți obține unul pe zi completând toate sarcinile zilnice. Recompensele pentru Conferați pot fi vizualizate în profil la secțiunea „Rang”.",
-    "articleTitle": "Articluși",
-    "articleLabelOne": "- Se obține prin sarcini: Practica articolelor, tărâmurile limbilor și sarcini din secțiunea „Învățare”.",
-    "articleLabelTwo": "- Se consumă pentru reîncercări în tărâmurile limbilor și în magazinul din profil.",
+    "rankTitle": "Toci",
+    "rankLabelOne": "- Tocile sunt acordate pentru îndeplinirea sarcinilor zilnice.",
+    "rankLabelTwo": "- Poți obține 3 pe zi dacă le faci pe toate. Recompensele pot fi văzute la secțiunea „Rang” din profil.",
+    "rankLabelThree": "- Se scad 3 toci pentru omiterea sarcinilor. Fă cel puțin una pentru a evita penalizarea.",
+    "articleTitle": "Articlus",
+    "articleLabelOne": "- Se obțin la: Practica articolelor, Ținuturile Limbii și sarcinile de la „Învățare”.",
+    "articleLabelTwo": "- Se consumă pe reîncercări în Ținuturile Limbii și în magazinul din profil.",
     "levelTitle": "Nivel",
-    "levelLabelOne": "- Nivelul crește prin îndeplinirea sarcinilor.",
-    "levelLabelTwo": "- Odată cu creșterea nivelului, se deblochează sarcini în tărâmurile limbilor."
+    "levelLabelOne": "- Nivelul crește pe măsură ce finalizezi sarcini.",
+    "levelLabelTwo": "- Nivelurile mai mari deblochează sarcini în Ținuturile Limbii."
   },
   "idioms": {
     "title": "Idiomuri și expresii frazeologice",
@@ -5738,6 +5786,7 @@
     "errorEmail": "Introdu e-mailul",
     "errorPassword": "Introdu parola",
     "errorName": "Introdu numele",
+    "enterMsg": "Introdu mesajul tău",
     "errorConfirm": "Parolele nu coincid",
     "resetSent": "E-mailul de recuperare a fost trimis",
     "emailNotVerified": "Confirmă e-mailul înainte de autentificare.",
