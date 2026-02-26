@@ -232,7 +232,7 @@ export default defineNuxtConfig({
 		'/sounds/**': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
 		'/sw.js': { headers: { 'Cache-Control': 'public, max-age=7200, must-revalidate' } },
 		'/images/**': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
-		'/**/*.json': { headers: { 'Cache-Control': 'public, max-age=3600, must-revalidate' } },
+		// '/**/*.json': { headers: { 'Cache-Control': 'public, max-age=3600, must-revalidate' } },
 		'/*.png': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
 		'/*.ico': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
 		'/*.webmanifest': { headers: { 'Cache-Control': 'public, max-age=86400' } }

@@ -34,65 +34,77 @@ export const useRankUserStore = defineStore('rankUserStore', () => {
    const authStore = userAuthStore()
 	const ranksData = [
 		{
-			title: 'СТУДЕНТ',
+			title: 'Новичок',
 			icons: [
 				{icon: LevelOneSilver,},
 				{icon: LevelOneBronze,},
 				{icon: LevelOneGold}
 			],
-			levels: [{hats: 1, bonus: '10 Артиклюсов'}, {hats: 7, bonus: '10 Артиклюсов'}, {hats: 14, bonus: '10 Артиклюсов'}
+			levels: [{hats: 6, bonus: '5 Артиклюсов'}, {hats: 21, bonus: '5 Артиклюсов'}, {hats: 42, bonus: '5 Артиклюсов'}
 			]
 		},
 		{
-			title: 'ИССЛЕДОВАТЕЛЬ',
+			title: 'Шустрик',
 			icons: [
 				{icon: levelTwoSilver,},
 				{icon: levelTwoBronze,},
 				{icon: levelTwoGold}
 			]
 			, levels:
-				[{hats: 25 , bonus: '10 Артиклюсов'}, {hats: 40, bonus: '10 Артиклюсов'}, {hats: 55, bonus: 'Скидка 5%'}]
+				[{hats: 60 , bonus: '5 Артиклюсов'}, {hats: 70, bonus: '10 Артиклюсов'}, {hats: 90, bonus: 'Скидка 5%'}]
 		},
-		{title: 'МАГИСТР',
+		{title: 'Скаут',
 			icons: [
 				{icon: LevelThreeSilver,},
 				{icon: LevelThreeBronze,},
 				{icon: LevelThreeGold}
 			],
-			levels: [{hats: 70, bonus: '10 Артиклюсов'}, {hats: 85, bonus: '10 Артиклюсов'}, {hats: 100, bonus: 'Скидка 10%'}]},
-		{title: 'ДОКТОР',
+			levels: [{hats: 110, bonus: '10 Артиклюсов'}, {hats: 130, bonus: '10 Артиклюсов'}, {hats: 150, bonus: '10 Артиклюсов'}]},
+		{title: 'Панк-ёж',
 			icons: [
 				{icon: LevelFourSilver,},
 				{icon: LevelFourBronze,},
 				{icon: LevelFourGold}
 			],
-			levels: [{hats: 120, bonus: '10 Артиклюсов'}, {hats: 135, bonus: '10 Артиклюсов'}, {hats: 150, bonus: 'Скидка 15%'}]},
-		{title: 'ПРОФЕССОР',
+			levels: [{hats: 170, bonus: '10 Артиклюсов'}, {hats: 190, bonus: '15 Артиклюсов'}, {hats: 210, bonus: 'Скидка 10%'}]},
+		{title: 'Капитан',
 			icons: [
 				{icon: LevelFiveSilver,},
 				{icon: LevelFiveBronze,},
 				{icon: LevelFiveGold}
 			],
-			levels: [{hats: 170, bonus: '10 Артиклюсов'}, {hats: 190, bonus: '10 Артиклюсов'}, {hats: 210, bonus: '10 Артиклюсов'}]},
-		{title: 'ДЕКАН',
+			levels: [{hats: 230, bonus: '10 Артиклюсов'}, {hats: 270, bonus: '15 Артиклюсов'}, {hats: 300, bonus: '15 Артиклюсов'}]},
+		{title: 'Страж',
 			icons: [
 				{icon: LevelSixSilver,},
 				{icon: LevelSixBronze,},
 				{icon: LevelSixGold}
 			],
-			levels: [{hats: 230, bonus: '10 Артиклюсов'}, {hats: 250, bonus: '10 Артиклюсов'}, {hats: 270,  bonus: 'Скидка 15%'}]},
-		{title: 'РЕКТОР',
+			levels: [{hats: 330, bonus: '15 Артиклюсов'}, {hats: 360, bonus: '20 Артиклюсов'}, {hats: 400,  bonus: 'Скидка 15%'}]},
+		{title: 'Легенда',
 			icons: [
 				{icon: LevelSevenSilver,},
 				{icon: LevelSevenBronze,},
 				{icon: LevelSevenGold}
 			],
-			levels: [{hats: 300}, {hats: 330}, {hats: 365, bonus: ''}]}
+			levels: [{hats: 420, bonus: '20 Артиклюсов'}, {hats: 450, bonus: '20 Артиклюсов'}, {hats: 500, bonus: ''}]}
 	]
 	const totalHats = ref(0)
 	const isOverlayVisible = ref(false)
 	const isStarReady = ref(false)
 	const currentReward = ref({icon: '', title: '', levelIndex: 0})
+
+	const getRankTitleByHats = (hatsNeeded) => {
+		for (const group of ranksData) {
+			for (const level of group.levels) {
+				if (level.hats === hatsNeeded) {
+					return group.title
+				}
+			}
+		}
+		return 'РАНГ'
+	}
+
 	const checkRewardUI = () => {
 		const currentHats = authStore.totalHats
 		ranksData.forEach((rankGroup) => {
@@ -118,6 +130,7 @@ export const useRankUserStore = defineStore('rankUserStore', () => {
 		isOverlayVisible,
 		isStarReady,
 		currentReward,
-		checkRewardUI
+		checkRewardUI,
+		getRankTitleByHats
 	}
 })
