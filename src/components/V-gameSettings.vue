@@ -1,42 +1,43 @@
 <template>
-  <div class="settings-overlay" @click.self="$emit('close')">
-    <div class="cyber-panel settings-box">
-      <div class="hud-corners">
-        <span></span><span></span><span></span><span></span>
-      </div>
+  <div class="settings-overlay-toon" @click.self="$emit('close')">
+    <div class="toon-settings-card">
+      <button class="close-toon-btn" @click="$emit('back')">✖</button>
 
-      <div class="scan-line"></div>
-
-      <h2 class="settings-title">SYSTEM_CALIBRATION</h2>
+      <h2 class="toon-settings-title">НАСТРОЙКИ</h2>
 
       <div class="settings-content">
-        <div class="setting-item">
-          <label><span class="tech-icon">📡</span> AUDIO_OUTPUT</label>
-          <div class="range-container">
-            <input type="range" v-model="settings.volume" min="0" max="100" class="cyber-slider"/>
-            <div class="value-display">{{ settings.volume }}%</div>
+        <div class="setting-item-toon">
+          <label>ГРОМКОСТЬ</label>
+          <div class="range-wrapper">
+            <input
+                type="range"
+                v-model="settings.volume"
+                min="0" max="100"
+                class="toon-range"
+            />
+            <div class="range-val-bubble">{{ settings.volume }}</div>
           </div>
         </div>
 
-        <div class="setting-item">
-          <label><span class="tech-icon">⚠️</span> THREAT_LEVEL</label>
-          <div class="difficulty-group">
+        <div class="setting-item-toon">
+          <label>УРОВЕНЬ УГРОЗЫ</label>
+          <div class="diff-selector">
             <button
                 v-for="level in ['EASY', 'NORM', 'HARD']"
                 :key="level"
-                :class="['diff-btn', level.toLowerCase(), { active: settings.difficulty === level }]"
+                :class="['toon-diff-btn', level.toLowerCase(), { active: settings.difficulty === level }]"
                 @click="settings.difficulty = level"
             >
-              <span v-if="level === 'EASY'">RECRUIT</span>
-              <span v-if="level === 'NORM'">PILOT</span>
-              <span v-if="level === 'HARD'">ACE</span>
+              <span v-if="level === 'EASY'">РЕКРУТ</span>
+              <span v-if="level === 'NORM'">ПИЛОТ</span>
+              <span v-if="level === 'HARD'">АС</span>
             </button>
           </div>
         </div>
       </div>
 
-      <button class="confirm-btn" @click="saveSettings">
-        APPLY_CHANGES
+      <button class="toon-save-btn" @click="saveSettings">
+        ГОТОВО!
       </button>
     </div>
   </div>
@@ -45,7 +46,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 
-const emit = defineEmits(['close'])
+const emit = defineEmits(['close', 'back'])
 
 const settings = ref({
   volume: 70,
@@ -66,135 +67,139 @@ const saveSettings = () => {
 </script>
 
 <style scoped>
-.settings-overlay {
+.settings-overlay-toon {
   position: fixed;
   inset: 0;
-  background: rgba(5, 11, 20, 0.85);
+  background: rgba(18, 18, 43, 0.85);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 5000;
-  backdrop-filter: blur(10px);
+  z-index: 6000;
+  backdrop-filter: blur(8px);
+  font-family: 'Arial Rounded MT Bold', 'Helvetica', sans-serif;
 }
 
-.cyber-panel {
-  background: rgba(10, 25, 47, 0.95);
-  border: 2px solid #00d2ff;
+.toon-settings-card {
+  background: #fff;
+  border: 8px solid #000;
+  border-radius: 40px;
   padding: 40px;
   position: relative;
   width: 90%;
-  max-width: 450px;
-  box-shadow: 0 0 30px rgba(0, 210, 255, 0.3), inset 0 0 15px rgba(0, 210, 255, 0.1);
-  overflow: hidden;
+  max-width: 420px;
+  box-shadow: 15px 15px 0px #ffeb3b; /* Сочная желтая тень */
+  animation: pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* Эффект бегущей линии сканера */
-.scan-line {
+@keyframes pop {
+  0% { transform: scale(0.5) rotate(5deg); opacity: 0; }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+.close-toon-btn {
   position: absolute;
-  top: 0; left: 0; width: 100%; height: 2px;
-  background: rgba(0, 210, 255, 0.5);
-  box-shadow: 0 0 10px #00d2ff;
-  animation: scan 3s linear infinite;
-  pointer-events: none;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  font-weight: 900;
+  cursor: pointer;
+  color: #000;
 }
 
-@keyframes scan {
-  0% { top: 0; }
-  100% { top: 100%; }
-}
-
-.settings-title {
-  color: #00d2ff;
-  font-size: 1.8rem;
+.toon-settings-title {
+  color: #000;
+  font-size: 2.2rem;
   margin-top: 0;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   text-align: center;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  text-shadow: 0 0 10px #00d2ff;
+  -webkit-text-stroke: 1px #000;
 }
 
-.setting-item { margin-bottom: 40px; }
-.setting-item label {
+.setting-item-toon { margin-bottom: 35px; }
+.setting-item-toon label {
   display: block;
-  color: #00d2ff;
-  font-size: 0.9rem;
+  color: #000;
+  font-weight: 900;
+  font-size: 1.1rem;
   margin-bottom: 15px;
-  letter-spacing: 2px;
-  opacity: 0.8;
+  text-transform: uppercase;
 }
 
-.tech-icon { margin-right: 8px; }
-
-/* КАСТОМНЫЙ СЛАЙДЕР */
-.range-container { display: flex; align-items: center; gap: 20px; }
-.cyber-slider {
+/* СЛАЙДЕР */
+.range-wrapper { display: flex; align-items: center; gap: 15px; }
+.toon-range {
   -webkit-appearance: none;
-  width: 100%; height: 6px;
-  background: #0a192f;
-  border: 1px solid #00d2ff;
+  width: 100%;
+  height: 16px;
+  background: #000;
+  border-radius: 10px;
   outline: none;
 }
-.cyber-slider::-webkit-slider-thumb {
+.toon-range::-webkit-slider-thumb {
   -webkit-appearance: none;
-  width: 18px; height: 18px;
-  background: #00d2ff;
-  box-shadow: 0 0 10px #00d2ff;
+  width: 32px;
+  height: 32px;
+  background: #ffeb3b;
+  border: 4px solid #000;
+  border-radius: 50%;
   cursor: pointer;
-  border-radius: 2px;
+  box-shadow: 0 4px 0 #000;
 }
 
-.value-display {
-  color: #fff;
-  font-weight: bold;
-  min-width: 45px;
-  text-shadow: 0 0 5px #00d2ff;
+.range-val-bubble {
+  background: #00d2ff;
+  border: 3px solid #000;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-weight: 900;
+  color: #000;
 }
 
 /* КНОПКИ СЛОЖНОСТИ */
-.difficulty-group { display: flex; gap: 10px; }
-.diff-btn {
-  flex: 1; padding: 12px;
-  border: 1px solid #00d2ff;
-  background: transparent;
-  color: #00d2ff;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
+.diff-selector { display: flex; gap: 10px; }
+.toon-diff-btn {
+  flex: 1;
+  padding: 12px 5px;
+  border: 4px solid #000;
+  border-radius: 15px;
+  background: #eee;
+  color: #000;
+  font-weight: 900;
   font-size: 0.8rem;
-}
-.diff-btn:hover { background: rgba(0, 210, 255, 0.1); }
-.diff-btn.active {
-  background: #00d2ff;
-  color: #000;
-  box-shadow: 0 0 15px #00d2ff;
-}
-
-/* КНОПКА ГОТОВО */
-.confirm-btn {
-  width: 100%; padding: 18px;
-  background: transparent;
-  border: 2px solid #00d2ff;
-  color: #00d2ff;
-  font-size: 1.2rem;
-  font-weight: bold;
   cursor: pointer;
-  letter-spacing: 5px;
-  transition: 0.3s;
-}
-.confirm-btn:hover {
-  background: #00d2ff;
-  color: #000;
-  box-shadow: 0 0 20px #00d2ff;
+  transition: 0.2s;
+  box-shadow: 0 4px 0 #000;
 }
 
-/* УГЛОВЫЕ МАРКЕРЫ HUD */
-.hud-corners span {
-  position: absolute; width: 15px; height: 15px;
-  border: 2px solid #00d2ff;
+.toon-diff-btn.easy.active { background: #4caf50; color: #fff; }
+.toon-diff-btn.norm.active { background: #ffeb3b; color: #000; }
+.toon-diff-btn.hard.active { background: #ff5252; color: #fff; }
+
+.toon-diff-btn.active {
+  transform: translateY(4px);
+  box-shadow: 0 0px 0 #000;
 }
-.hud-corners span:nth-child(1) { top: 10px; left: 10px; border-right: none; border-bottom: none; }
-.hud-corners span:nth-child(2) { top: 10px; right: 10px; border-left: none; border-bottom: none; }
-.hud-corners span:nth-child(3) { bottom: 10px; left: 10px; border-right: none; border-top: none; }
-.hud-corners span:nth-child(4) { bottom: 10px; right: 10px; border-left: none; border-top: none; }
+
+/* КНОПКА СОХРАНИТЬ */
+.toon-save-btn {
+  width: 100%;
+  padding: 15px;
+  background: #00ff9d;
+  border: 4px solid #000;
+  border-radius: 20px;
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 8px 0 #000;
+  margin-top: 10px;
+  transition: 0.1s;
+}
+
+.toon-save-btn:active {
+  transform: translateY(6px);
+  box-shadow: 0 2px 0 #000;
+}
 </style>

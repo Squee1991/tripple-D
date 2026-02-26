@@ -517,6 +517,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		}, { immediate: true })
 		const baseTrackers = [
 			{ id: 'registerAchievement', source: () => authStore.uid, compute: (u) => (u ? 1 : 0) },
+			{id: 'firstAcademicCap', source: () => authStore.totalHats, compute: (v) => v || 0},
 			{ id: 'daily', source: () => questStore.dailyQuestCount, compute: (v) => v || 0 },
 			{ id: 'levelUpExp', source: () => langStore.exp, compute: (v) => v || 0 },
 			{ id: 'grandmaster_sentences', source: () => statsStore.constructedSentences, compute: (v) => v || 0 },

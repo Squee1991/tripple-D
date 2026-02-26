@@ -4454,16 +4454,63 @@
     "questFifteenSecondOption": "Kule otelin yanında",
     "questFifteenThirdOption": "Kule otelin arkasında"
   },
+  "pointsTimeOverlay": {
+    "text": "Mezuniyet kepleriniz silinmeye karşı koruma altında.",
+    "activeTill": "Şu tarihe kadar aktif:",
+    "warning": "Uyarı:",
+    "warningText": "Herhangi bir görev tamamlandığında dondurma sıfırlanır ve kalan süre silinir."
+  },
   "shop": {
     "title": "Eşya Mağazası",
-    "subText": "Biriktirdiğiniz Articlusları eğitiminiz için faydalı bonuslar ve kalıcı indirimlerle takas edin.",
+    "subText": "Biriktirdiğiniz Articlus'ları eğitiminiz için faydalı bonuslar ve kalıcı indirimlerle takas edin.",
     "bought": "Satın Alındı"
   },
+  "cardLives": {
+    "title": "Canlar",
+    "description": "Buradan canlarını yenileyebilirsin (Maksimum 5)"
+  },
+  "cardTime": {
+    "title": "Zamanı Durdurma",
+    "description": "Keplerinizi cezalara karşı korur"
+  },
+  "cardSales": {
+    "title5": "%5 İndirim",
+    "title10": "%10 İndirim",
+    "title15": "%15 İndirim"
+  },
   "cardsShop": {
-    "livesTitle": "Canlar",
-    "livesDescription": "Buradan canlarını yenileyebilirsin (Maksimum 5)",
     "full": "Tam",
-    "buy": "Satın Al"
+    "buy": "Satın Al",
+    "active": "Aktif",
+    "till": "Şu tarihe kadar geçerli:",
+    "required": "Gereken:",
+    "ready": "Hazır!",
+    "extend": "Uzat",
+    "buyLives": "Can satın al",
+    "stopTime": "Zamanı Durdurma",
+    "have": "Sende",
+    "from": "/",
+    "lives": "can var.",
+    "toPayment": "Ödenecek:",
+    "notEnough": "Yetersiz Articlus",
+    "selectDaysPeriod": "Gün sayısını seçin. Bu süre zarfında kepleriniz silinmeyecektir.",
+    "maximum": "Maksimum",
+    "cancel": "İptal",
+    "accessibly": "Anlaşıldı"
+  },
+  "shopDaysRaw": {
+    "dayFirst": "gün",
+    "daySecond": "gün",
+    "dayThird": "gün",
+    "lifeFirst": "can",
+    "lifeSecond": "can",
+    "lifeThird": "can"
+  },
+  "cardsShopModal": {
+    "modal-desc-first": "Zamanı durdurma etkinleştirildi.",
+    "modal-desc-Second": "Durum ve geçerlilik süresini",
+    "modal-desc-Third": "Katılımcı Paneli",
+    "modal-desc-Four": "içinde kalkan simgesine tıklayarak görebilirsiniz."
   },
   "awardsSection": {
     "congratulations": "Tebrikler! Bu ödül zaten sizde!",
@@ -4544,15 +4591,16 @@
   },
   "pavelOverlay": {
     "newbie": "Çaylak",
-    "rankTitle": "Konferatlar",
-    "rankLabelOne": "- Konferatlar günlük görevleri tamamladığınızda verilir.",
-    "rankLabelTwo": "- Tüm günlük görevleri tamamlayarak günde bir tane alabilirsiniz. Konferat ödülleri profilinizdeki 'Rütbe' bölümünde görülebilir.",
-    "articleTitle": "Artikluso",
-    "articleLabelOne": "- Görevlerle kazanılır: Artikel Pratiği, dil diyarları ve 'Öğrenme' bölümündeki görevler.",
-    "articleLabelTwo": "- Dil diyarlarındaki tekrar denemeleri için ve profildeki mağazada harcanır.",
+    "rankTitle": "Mezuniyet Kepleri",
+    "rankLabelOne": "- Mezuniyet Kepleri günlük görevleri tamamladıkça verilir.",
+    "rankLabelTwo": "- Tüm günlük görevleri yaparak günde 3 adet alabilirsin. Ödülleri profilindeki 'Rütbe' bölümünden görebilirsin.",
+    "rankLabelThree": "- Günlük görevleri kaçırırsan 3 kep düşülür. Cezadan kaçınmak için en az bir görev yap.",
+    "articleTitle": "Articlus",
+    "articleLabelOne": "- Makale Pratiği, Dil Diyarları ve 'Eğitim' bölümündeki görevlerden kazanılır.",
+    "articleLabelTwo": "- Dil Diyarlarındaki tekrar denemeleri ve profildeki mağazada harcanır.",
     "levelTitle": "Seviye",
-    "levelLabelOne": "- Görevleri tamamladıkça seviyeniz artar.",
-    "levelLabelTwo": "- Seviye arttıkça dil diyarlarındaki görevler açılır."
+    "levelLabelOne": "- Görevleri tamamladıkça seviyen artar.",
+    "levelLabelTwo": "- Seviyen arttıkça Dil Diyarlarındaki yeni görevler açılır."
   },
   "idioms": {
     "title": "Deyimler ve Kalıplaşmış İfadeler",
@@ -5576,7 +5624,8 @@
     "about": "Uygulama Hakkında",
     "contact": "İletişim",
     "quest": "Soru/Cevap",
-    "events": "Etkinlikler"
+    "events": "Etkinlikler",
+    "speakingRooms": "Konuşma"
   },
   "formLabel": {
     "name": "İsim",
@@ -5606,6 +5655,7 @@
     "rules": "Kurallar",
     "artRules": "Alıştırma",
     "prepositions": "Edat alıştırmaları",
+    "adjectiveTheory": "Teori ve Kurallar",
     "adjectivesBasic": "Temeller",
     "declination": "Çekim",
     "comparison": "Karşılaştırma Dereceleri",
@@ -5722,22 +5772,6 @@
   "features": {
     "title": "İçinde ne var?"
   },
-  "cardWords": {
-    "title": "900+ kelime",
-    "sub": "Kullanışlı bir sistemde 900'den fazla kelime ve artikel öğrenin."
-  },
-  "cardMethod": {
-    "title": "5 öğrenme yöntemi",
-    "sub": "Tarzınızı seçin: görsel, işitsel, kinestetik — veya bunları birleştirin."
-  },
-  "gameCard": {
-    "title": "Oyun unsurları",
-    "sub": "Puan kazanın, seviye atlayın ve ilerlemenizi artırmak için oyunlaştırmayı kullanın."
-  },
-  "achievCard": {
-    "title": "Başarı sistemi",
-    "sub": "İlerleyin, ödüller kazanın ve öğrendikçe yeni özelliklerin kilidini açın."
-  },
   "feedBack": {
     "label": "Geri Bildirim",
     "title": "Öneriniz mi var? Bu formu doldurun, size mutlaka geri döneceğiz.",
@@ -5751,6 +5785,7 @@
     "errorEmail": "E-posta girin",
     "errorPassword": "Şifre girin",
     "errorName": "İsim girin",
+    "enterMsg": "Mesajınızı girin",
     "errorConfirm": "Şifreler eşleşmiyor",
     "resetSent": "E-posta gönderildi",
     "emailNotVerified": "Giriş yapmadan önce e-postanızı doğrulayın.",
@@ -5925,5 +5960,65 @@
     "placeholder": "Artikellerle Almanca bir cümle veya kelime girin",
     "translate": "çeviri(isteğe bağlı)",
     "btn": "Oluştur"
+  },
+  "speakingRooms": {
+    "title": "Konuşma Odaları",
+    "createRoom": "Oda Oluştur",
+    "joinRoom": "Katıl",
+    "leaveRoom": "Odadan Ayrıl",
+    "closeRoom": "Odayı Kapat",
+    "back": "Geri",
+    "topic": "Konu",
+    "topicPlaceholder": "örn. Günlük rutininizi anlatın",
+    "cefrLevel": "Seviye",
+    "maxParticipants": "Maks. Katılımcı",
+    "visibility": "Görünürlük",
+    "public": "Herkese Açık",
+    "private": "Özel",
+    "create": "Oluştur",
+    "creating": "Oluşturuluyor...",
+    "waiting": "Bekleniyor",
+    "active": "Aktif",
+    "allLevels": "Tümü",
+    "noRooms": "Oda bulunamadı. İlk odayı oluşturun!",
+    "createFirst": "İlk Odayı Oluştur",
+    "loading": "Yükleniyor...",
+    "loadMore": "Daha Fazla",
+    "prejoinTitle": "Katılmaya Hazır mısınız?",
+    "cameraOff": "Kamera kapalı",
+    "audioOnly": "Yalnızca ses",
+    "microphone": "Mikrofon",
+    "camera": "Kamera",
+    "micOn": "Mikrofon Açık",
+    "micOff": "Mikrofon Kapalı",
+    "camOn": "Kamera Açık",
+    "camOff": "Kamera Kapalı",
+    "joinCall": "Aramaya Katıl",
+    "joining": "Katılınıyor...",
+    "leave": "Ayrıl",
+    "screenShare": "Ekran Paylaşımı",
+    "participants": "Katılımcılar",
+    "currentQuestion": "Mevcut Soru",
+    "noQuestions": "Soru bulunamadı",
+    "nextQuestion": "Sonraki Soru",
+    "previousQuestions": "Önceki Sorular",
+    "roomClosed": "Oda Kapatıldı",
+    "roomClosedText": "Bu oda moderatör tarafından kapatıldı.",
+    "backToRooms": "Odalara Dön",
+    "loadQuestions": "Soruları Yükle",
+    "topics": {
+      "general": "Genel",
+      "family": "Aile",
+      "daily-life": "Günlük Yaşam",
+      "food": "Yiyecek ve İçecek",
+      "travel": "Seyahat",
+      "hobbies": "Hobiler",
+      "health": "Sağlık",
+      "work": "İş ve Kariyer",
+      "education": "Eğitim",
+      "technology": "Teknoloji",
+      "culture": "Kültür ve Toplum",
+      "environment": "Çevre"
+    }
   }
 }

@@ -1,57 +1,59 @@
 <template>
-  <div class="hangar-fullscreen">
-    <div class="space-background"></div>
+  <div class="hangar-fullscreen-toon">
+    <div class="toon-space-bg">
+      <div class="toon-stars"></div>
+    </div>
 
     <div class="top-hud">
-      <button class="back-cyber-btn" @click="$emit('close')">
+      <button class="back-cyber-btn toon-style" @click="$emit('close')">
         <span>ВЫЙТИ</span>
       </button>
-      <div class="cyber-plank balance-display">
+      <div class="cyber-plank toon-style balance-display">
         <span class="credits-val">{{ balance }} 💎</span>
       </div>
     </div>
 
     <div class="ship-showroom">
-      <button class="nav-btn left" @click="prevTank">◀</button>
+      <button class="nav-btn toon-arrow left" @click="prevTank">◀</button>
 
       <div class="ship-stage-container">
         <div class="ship__inner">
           <Transition name="ship-pop" mode="out-in">
             <div :key="currentIdx" class="ship-active-zone">
-              <img :src="tankList[currentIdx].img" class="ship-main-img" alt="Spaceship"/>
-              <div class="holo-platform"></div>
+              <img :src="tankList[currentIdx].img" class="ship-main-img toon-ship" alt="Spaceship"/>
+              <div class="holo-platform toon-platform"></div>
             </div>
           </Transition>
 
-          <div class="stats-cyber-panel">
+          <div class="stats-cyber-panel toon-panel">
             <div class="stat-row">
-              <span class="label">POWER</span>
-              <div class="bar-bg">
-                <div class="bar-fill neon-orange" :style="{width: tankList[currentIdx].power + '%'}"></div>
+              <span class="label toon-label">POWER</span>
+              <div class="bar-bg toon-bar-bg">
+                <div class="bar-fill toon-orange" :style="{width: tankList[currentIdx].power + '%'}"></div>
               </div>
             </div>
             <div class="stat-row">
-              <span class="label">WARP</span>
-              <div class="bar-bg">
-                <div class="bar-fill neon-cyan" :style="{width: tankList[currentIdx].speed + '%'}"></div>
+              <span class="label toon-label">WARP</span>
+              <div class="bar-bg toon-bar-bg">
+                <div class="bar-fill toon-cyan" :style="{width: tankList[currentIdx].speed + '%'}"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <button class="nav-btn right" @click="nextTank">▶</button>
+      <button class="nav-btn toon-arrow right" @click="nextTank">▶</button>
     </div>
 
     <div class="bottom-card-wrapper">
-      <div class="info-terminal">
-        <h2 class="ship-name-display">{{ tankList[currentIdx].name }}</h2>
+      <div class="info-terminal toon-terminal">
+        <h2 class="ship-name-display toon-title">{{ tankList[currentIdx].name }}</h2>
         <div class="action-btn-container">
-          <button v-if="!tankList[currentIdx].owned" class="cyber-action buy" @click="buyTank">
-            BUY: {{ tankList[currentIdx].price }}
+          <button v-if="!tankList[currentIdx].owned" class="cyber-action buy toon-buy" @click="buyTank">
+            КУПИТЬ: {{ tankList[currentIdx].price }}
           </button>
-          <button v-else class="cyber-action select" :class="{ active: isSelected }" @click="selectTank">
-            {{ isSelected ? 'ACTIVE' : 'SELECT' }}
+          <button v-else class="cyber-action select toon-select" :class="{ active: isSelected }" @click="selectTank">
+            {{ isSelected ? 'ГОТОВ!' : 'ВЫБРАТЬ' }}
           </button>
         </div>
       </div>
@@ -62,6 +64,10 @@
 <script setup>
 import {ref, computed, onMounted} from 'vue'
 import Spaceship from '@/assets/images/spaceship.svg'
+import Spaceship2 from '@/assets/images/spaceship-2.svg'
+import Spaceship3 from '@/assets/images/spaceship-3.svg'
+import Spaceship4 from '@/assets/images/spaceship-4.svg'
+import Spaceship5 from '@/assets/images/spaceship-5.svg'
 
 const emit = defineEmits(['close'])
 
@@ -71,10 +77,10 @@ const selectedTankId = ref(1)
 
 const tankList = ref([
   {id: 1, name: 'FALKE-01', img: Spaceship, price: 0, owned: true, power: 30, speed: 95},
-  {id: 2, name: 'NOVA-02', img: Spaceship, price: 600, owned: false, power: 55, speed: 75},
-  {id: 3, name: 'STERN-03', img: Spaceship, price: 1500, owned: false, power: 80, speed: 50},
-  {id: 4, name: 'KOMET-04', img: Spaceship, price: 3000, owned: false, power: 90, speed: 35},
-  {id: 5, name: 'VOID-X', img: Spaceship, price: 6000, owned: false, power: 100, speed: 15},
+  {id: 2, name: 'NOVA-02', img: Spaceship2, price: 600, owned: false, power: 55, speed: 75},
+  {id: 3, name: 'STERN-03', img: Spaceship3, price: 1500, owned: false, power: 80, speed: 50},
+  {id: 4, name: 'KOMET-04', img: Spaceship4, price: 3000, owned: false, power: 90, speed: 35},
+  {id: 5, name: 'VOID-X', img: Spaceship5, price: 6000, owned: false, power: 100, speed: 15},
 ])
 
 const isSelected = computed(() => selectedTankId.value === tankList.value[currentIdx.value].id)
@@ -109,29 +115,41 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.hangar-fullscreen {
+/* --- ОСНОВНОЙ КОНТЕЙНЕР --- */
+.hangar-fullscreen-toon {
   position: fixed;
   inset: 0;
   width: 100vw;
   height: 100vh;
   z-index: 2000;
-  background: #02050a;
+  background: #2c3e50; /* Более яркий темный фон */
   display: flex;
   flex-direction: column;
   padding: 20px;
   box-sizing: border-box;
-  font-family: 'Consolas', monospace;
+  /* Используем более округлый, мультяшный шрифт, если есть, иначе стандартный жирный */
+  font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
+  font-weight: bold;
   overflow: hidden;
 }
 
-.space-background {
+/* --- МУЛЬТЯШНЫЙ ФОН --- */
+.toon-space-bg {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at center, #0a192f 0%, #02050a 100%);
+  background: radial-gradient(circle at center, #34495e 0%, #2c3e50 100%);
   z-index: -1;
 }
 
-/* HUD ВЕРХ */
+.toon-stars {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(white 2px, transparent 2px), radial-gradient(white 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: 0 0, 25px 25px;
+  opacity: 0.3;
+}
+
+/* --- HUD ВЕРХ (Те же формы, новый стиль) --- */
 .top-hud {
   display: flex;
   justify-content: space-between;
@@ -139,37 +157,46 @@ onMounted(() => {
   margin-bottom: 20px;
 }
 
-.cyber-plank {
-  background: rgba(0, 210, 255, 0.05);
-  border: 1px solid rgba(0, 210, 255, 0.5);
+/* Общий стиль для мультяшных элементов с clip-path */
+.toon-style {
+  background: #fff;
+  border: 4px solid #000 !important; /* Жирная обводка */
+  color: #000;
+  box-shadow: 4px 4px 0px #000; /* Жесткая тень */
+  text-shadow: none;
+  font-weight: 900;
+}
+
+.back-cyber-btn.toon-style {
   padding: 8px 20px;
-  backdrop-filter: blur(10px);
+  cursor: pointer;
+  /* Оставляем твой clip-path */
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 100%, 10px 100%);
+  transition: 0.1s;
+  font-size: 20px;
+  background: #ff5252; /* Красная кнопка выхода */
+  color: #fff;
+}
+
+.back-cyber-btn.toon-style:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #000;
+}
+
+.cyber-plank.toon-style {
+  padding: 8px 30px;
+  background: #f1c40f; /* Желтая плашка баланса */
+  /* Оставляем твой clip-path */
   clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
 }
 
 .credits-val {
-  color: #00d2ff;
-  font-size: 1.2rem;
-  font-weight: bold;
+  color: #000;
+  font-size: 1.4rem;
+  font-weight: 900;
 }
 
-.back-cyber-btn {
-  background: transparent;
-  border: 1px solid #ff4b2b;
-  padding: 8px 20px;
-  color: #ff4b2b;
-  cursor: pointer;
-  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 100%, 10px 100%);
-  transition: 0.3s;
-  font-size: 20px;
-}
-
-.back-cyber-btn:hover {
-  background: #ff4b2b;
-  color: #fff;
-  box-shadow: 0 0 15px #ff4b2b;
-}
-
+/* --- ШОУРУМ --- */
 .ship-showroom {
   display: flex;
   align-items: center;
@@ -187,179 +214,145 @@ onMounted(() => {
   align-items: center;
 }
 
-.ship-main-img {
-  width: 220px; /* Уменьшил корабль */
-  filter: drop-shadow(0 0 20px rgba(0, 210, 255, 0.5));
+/* Мультяшный корабль */
+.ship-main-img.toon-ship {
+  width: 220px;
+  /* Жесткая черная тень вместо свечения */
+  filter: drop-shadow(5px 5px 0px rgba(0,0,0,0.5));
   animation: hover 4s ease-in-out infinite;
 }
 
 @keyframes hover {
-  0%, 100% {
-    transform: translateY(0) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-10px) rotate(2deg);
-  }
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(2deg); }
 }
 
-.holo-platform {
+/* Мультяшная платформа */
+.holo-platform.toon-platform {
   width: 180px;
-  height: 10px;
-  background: radial-gradient(ellipse at center, #00d2ff 0%, transparent 70%);
-  opacity: 0.5;
+  height: 20px;
+  background: #3498db;
+  border: 3px solid #000;
+  border-radius: 50%;
+  opacity: 1; /* Не прозрачная */
   margin-top: 15px;
-  box-shadow: 0 5px 20px #00d2ff;
+  box-shadow: 0 5px 0px #000; /* Жесткая тень */
 }
 
-.nav-btn {
-  width: 45px;
-  height: 45px;
-  background: rgba(0, 210, 255, 0.1);
-  border: 1px solid #00d2ff;
-  color: #00d2ff;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.nav-btn:hover {
-  background: #00d2ff;
+/* Мультяшные стрелки */
+.nav-btn.toon-arrow {
+  width: 50px; height: 50px;
+  background: #fff;
+  border: 4px solid #000;
   color: #000;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.1s;
+  box-shadow: 4px 4px 0 #000;
+  border-radius: 10px; /* Чуть скруглил, но можно оставить квадратными */
 }
 
-/* ПАНЕЛЬ СТАТОВ */
-.stats-cyber-panel {
-  background: rgba(0, 0, 0, 0.4);
+.nav-btn.toon-arrow:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #000;
+  background: #f1c40f;
+}
+
+/* --- ПАНЕЛЬ СТАТОВ (Мультяшная) --- */
+.stats-cyber-panel.toon-panel {
+  background: #fff;
   padding: 15px;
-  border: 1px solid rgba(0, 210, 255, 0.3);
+  border: 4px solid #000;
   width: 180px;
   margin-top: 20px;
-  border-radius: 4px;
+  border-radius: 15px;
+  box-shadow: 6px 6px 0 #000;
 }
 
-.label {
-  color: #00d2ff;
-  font-size: 0.65rem;
+.label.toon-label {
+  color: #000;
+  font-size: 0.8rem;
+  font-weight: 900;
   margin-bottom: 5px;
   display: block;
-  letter-spacing: 1px;
 }
 
-.bar-bg {
-  width: 100%;
-  height: 4px;
-  background: rgba(255, 255, 255, 0.1);
+.bar-bg.toon-bar-bg {
+  width: 100%; height: 12px;
+  background: #bdc3c7;
+  border: 3px solid #000;
+  border-radius: 6px;
   margin-bottom: 10px;
+  overflow: hidden;
 }
 
-.bar-fill {
-  height: 100%;
-  transition: width 0.8s ease;
-}
+.bar-fill.toon-orange { background: #e67e22; }
+.bar-fill.toon-cyan { background: #3498db; }
 
-.neon-orange {
-  background: #ff9800;
-  box-shadow: 0 0 10px #ff9800;
-}
+/* --- НИЖНИЙ ТЕРМИНАЛ (Те же формы, новый стиль) --- */
+.bottom-card-wrapper { display: flex; justify-content: center; margin-top: 20px; }
 
-.neon-cyan {
-  background: #00d2ff;
-  box-shadow: 0 0 10px #00d2ff;
-}
-
-.bottom-card-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.info-terminal {
-  background: rgba(10, 25, 47, 0.9);
-  border: 1px solid #00d2ff;
-  padding: 20px;
+.info-terminal.toon-terminal {
+  background: #fff;
+  border: 5px solid #000; /* Жирная рамка */
+  padding: 25px;
   text-align: center;
   width: 100%;
   max-width: 400px;
+  /* Оставляем твой сложный clip-path */
   clip-path: polygon(0 10px, 10px 0, calc(100% - 10px) 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 0 calc(100% - 10px));
+  box-shadow: 8px 8px 0px rgba(0,0,0,0.3); /* Тень для объема */
+  color: #000;
 }
 
-.ship-name-display {
-  color: #fff;
-  font-size: 1.4rem;
+.ship-name-display.toon-title {
+  color: #000;
+  font-size: 1.6rem;
+  font-weight: 900;
   margin-bottom: 15px;
-  text-shadow: 0 0 10px #00d2ff;
+  text-shadow: none;
+  text-transform: uppercase;
 }
 
+/* КНОПКИ ДЕЙСТВИЙ */
 .cyber-action {
-  width: 100%;
-  padding: 12px;
-  font-size: 0.9rem;
-  font-weight: bold;
-  background: transparent;
+  width: 100%; padding: 15px;
+  font-size: 1.1rem; font-weight: 900;
+  background: #fff;
   cursor: pointer;
-  transition: 0.3s;
-  border: 1px solid currentColor;
-}
-
-.buy {
-  color: #ff9800;
-}
-
-.buy:hover {
-  background: #ff9800;
+  transition: 0.1s;
+  border: 4px solid #000 !important; /* Принудительно жирная рамка */
+  box-shadow: 4px 4px 0 #000;
   color: #000;
+  margin-top: 10px;
 }
 
-.select {
-  color: #00d2ff;
+.cyber-action:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #000;
 }
 
-.select:hover {
-  background: #00d2ff;
-  color: #000;
-}
+.buy.toon-buy { background: #f1c40f; } /* Желтая кнопка купить */
+.select.toon-select { background: #3498db; color: #fff;} /* Синяя кнопка выбрать */
 
 .select.active {
-  background: #00ff9d;
-  color: #000;
-  border-color: #00ff9d;
+  background: #2ecc71; /* Зеленая активная */
+  color: #fff;
+  box-shadow: none;
+  transform: translate(4px, 4px);
   pointer-events: none;
 }
 
+/* АДАПТИВ */
 @media (max-width: 600px) {
-  .ship-main-img {
-    width: 160px;
-  }
-
-  .nav-btn {
-    width: 40px;
-    height: 40px;
-  }
-
-
-  .ship-name-display {
-    font-size: 1.1rem;
-  }
-
-  .cyber-plank {
-    padding: 5px 15px;
-  }
-
-  .credits-val {
-    font-size: 1rem;
-  }
+  .ship-main-img.toon-ship { width: 160px; }
+  .nav-btn.toon-arrow { width: 45px; height: 45px; }
+  .ship-name-display.toon-title { font-size: 1.3rem; }
+  .credits-val { font-size: 1.1rem; }
 }
 
-.ship-pop-enter-active, .ship-pop-leave-active {
-  transition: all 0.3s ease;
-}
-
-.ship-pop-enter-from {
-  opacity: 0;
-  transform: scale(0.9) translateX(30px);
-}
-
-.ship-pop-leave-to {
-  opacity: 0;
-  transform: scale(0.9) translateX(-30px);
-}
+/* Твоя анимация (оставил без изменений) */
+.ship-pop-enter-active, .ship-pop-leave-active { transition: all 0.3s ease; }
+.ship-pop-enter-from { opacity: 0; transform: scale(0.9) translateX(30px); }
+.ship-pop-leave-to { opacity: 0; transform: scale(0.9) translateX(-30px); }
 </style>

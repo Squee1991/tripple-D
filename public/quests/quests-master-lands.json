@@ -1358,7 +1358,11 @@
         "type": "speechToText",
         "question": "masterLandsTwelveQuests.questTwo",
         "text": "Ich brauche zehn Stück",
-        "answer": "Ich brauche zehn Stück"
+        "answer": "Ich brauche zehn Stück",
+        "accept": [
+          "Ich brauche zehn Stück",
+          "Ich brauche 10 Stück"
+        ]
       },
       {
         "id": 3,

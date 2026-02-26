@@ -4454,16 +4454,63 @@
     "questFifteenSecondOption": "Wieża jest obok hotelu",
     "questFifteenThirdOption": "Wieża jest za hotelem"
   },
+  "pointsTimeOverlay": {
+    "text": "Twoje birety są chronione przed utratą.",
+    "activeTill": "Aktywne do:",
+    "warning": "Uwaga:",
+    "warningText": "Po wykonaniu dowolnego zadania zamrożenie zostaje zresetowane, a pozostały czas przepada."
+  },
   "shop": {
     "title": "Sklep z przedmiotami",
     "subText": "Wymieniaj zgromadzone Articlusy na przydatne bonusy i stałe zniżki na naukę.",
     "bought": "Kupiono"
   },
+  "cardLives": {
+    "title": "Życia",
+    "description": "Tutaj możesz uzupełnić zapas żyć (Maksymalnie 5)"
+  },
+  "cardTime": {
+    "title": "Zatrzymanie czasu",
+    "description": "Chroni Twoje birety przed karami"
+  },
+  "cardSales": {
+    "title5": "Zniżka 5%",
+    "title10": "Zniżka 10%",
+    "title15": "Zniżka 15%"
+  },
   "cardsShop": {
-    "livesTitle": "Życia",
-    "livesDescription": "Tutaj możesz uzupełnić zapas żyć (Maksymalnie 5)",
     "full": "Pełne",
-    "buy": "Kup"
+    "buy": "Kup",
+    "active": "Aktywne",
+    "till": "Obowiązuje do:",
+    "required": "Wymagane:",
+    "ready": "Gotowe!",
+    "extend": "Przedłuż",
+    "buyLives": "Kup życia",
+    "stopTime": "Zatrzymanie czasu",
+    "have": "Masz",
+    "from": "z",
+    "lives": "żyć.",
+    "toPayment": "Do zapłaty:",
+    "notEnough": "Niewystarczająca ilość Articlusów",
+    "selectDaysPeriod": "Wybierz liczbę dni. W tym okresie Twoje birety nie przepadną.",
+    "maximum": "Maksimum",
+    "cancel": "Anuluj",
+    "accessibly": "Rozumiem"
+  },
+  "shopDaysRaw": {
+    "dayFirst": "dzień",
+    "daySecond": "dni",
+    "dayThird": "dni",
+    "lifeFirst": "życie",
+    "lifeSecond": "życia",
+    "lifeThird": "żyć"
+  },
+  "cardsShopModal": {
+    "modal-desc-first": "Zatrzymanie czasu zostało aktywowane.",
+    "modal-desc-Second": "Status i datę ważności można sprawdzić w",
+    "modal-desc-Third": "Panelu uczestnika",
+    "modal-desc-Four": ", klikając ikonę tarczy."
   },
   "awardsSection": {
     "congratulations": "Gratulacje! Masz już tę nagrodę!",
@@ -4544,15 +4591,16 @@
   },
   "pavelOverlay": {
     "newbie": "Nowicjusz",
-    "rankTitle": "Konferatki",
-    "rankLabelOne": "- Konferatki są przyznawane za wykonywanie zadań codziennych.",
-    "rankLabelTwo": "- Można zdobyć jedną dziennie, wykonując wszystkie codzienne zadania. Nagrody za Konferatki można sprawdzić w panelu użytkownika w sekcji „Ranga”.",
-    "articleTitle": "Artyklus",
-    "articleLabelOne": "- Zdobywany za zadania: Praktyka rodzajników, krainy językowe oraz zadania w sekcji „Nauka”.",
-    "articleLabelTwo": "- Wydawany na powtórne próby w krainach językowych oraz w sklepie w panelu użytkownika.",
+    "rankTitle": "Birety",
+    "rankLabelOne": "- Birety są przyznawane za wykonywanie codziennych zadań.",
+    "rankLabelTwo": "- Możesz zdobyć 3 dziennie, wykonując wszystkie codzienne zadania. Nagrody można sprawdzić w sekcji „Ranga” w profilu.",
+    "rankLabelThree": "- Za pominięcie codziennych zadań odejmowane są 3 birety. Wykonaj przynajmniej jedno, aby uniknąć kary.",
+    "articleTitle": "Articlus",
+    "articleLabelOne": "- Zdobywane za zadania: Praktyka rodzajników, Krainy Językowe oraz zadania w sekcji „Nauka”.",
+    "articleLabelTwo": "- Wydawane na powtórne próby w Krainach Językowych oraz w sklepie w profilu.",
     "levelTitle": "Poziom",
-    "levelLabelOne": "- Poziom rośnie wraz z wykonywaniem zadań.",
-    "levelLabelTwo": "- Wyższy poziom odblokowuje zadania w krainach językowych."
+    "levelLabelOne": "- Poziom wzrasta wraz z wykonywaniem zadań.",
+    "levelLabelTwo": "- Wyższy poziom odblokowuje zadania w Krainach Językowych."
   },
   "idioms": {
     "title": "Idiomy i frazeologizmy",
@@ -5575,7 +5623,8 @@
     "about": "O aplikacji",
     "contact": "Kontakt",
     "quest": "Pytania i odpowiedzi",
-    "events": "Wydarzenia"
+    "events": "Wydarzenia",
+    "speakingRooms": "Mówienie"
   },
   "formLabel": {
     "name": "Imię",
@@ -5723,22 +5772,6 @@
   "features": {
     "title": "Co znajdziesz w środku?"
   },
-  "cardWords": {
-    "title": "900+ słów",
-    "sub": "Naucz się ponad 900 słów i rodzajników w wygodnym systemie."
-  },
-  "cardMethod": {
-    "title": "5 metod nauki",
-    "sub": "Wybierz swój styl: wizualny, słuchowy, kinestetyczny — lub je łącz."
-  },
-  "gameCard": {
-    "title": "Elementy grywalizacji",
-    "sub": "Zdobywaj punkty, awansuj na wyższe poziomy i wykorzystuj grywalizację, aby przyspieszyć postępy."
-  },
-  "achievCard": {
-    "title": "System osiągnięć",
-    "sub": "Rozwijaj się, zdobywaj nagrody i odblokowuj nowe możliwości podczas nauki."
-  },
   "feedBack": {
     "label": "Opinie",
     "title": "Masz jakieś sugestie? Wypełnij ten formularz, a na pewno się z Tobą skontaktujemy.",
@@ -5748,11 +5781,11 @@
     "emailPlaceholder": "Wpisz swój e-mail",
     "screenShot": "Załącz plik"
   },
-
   "errors": {
     "errorEmail": "Wprowadź email",
     "errorPassword": "Wprowadź hasło",
     "errorName": "Wprowadź imię",
+    "enterMsg": "Wpisz swoją wiadomość",
     "errorConfirm": "Hasła się nie zgadzają",
     "resetSent": "Wiadomość została wysłana na email",
     "emailNotVerified": "Potwierdź adres email przed zalogowaniem.",
@@ -5767,7 +5800,6 @@
     "userDisabled": "Twoje konto zostało zablokowane",
     "networkRequestFailed": "Błąd połączenia! Sprawdź internet"
   },
-
   "about": {
     "title": "Nudzi Cię nauka niemieckiego i rodzajników rzeczowników?",
     "lead": "Masz dość zakuwania fiszek, przepisywania list słówek i ciągłego zapominania rodzajników?",
@@ -5928,6 +5960,65 @@
     "placeholder": "Wpisz niemieckie zdanie lub słowo z rodzajnikami",
     "translate": "Tłumaczenie (opcjonalnie)",
     "btn": "Utwórz"
+  },
+  "speakingRooms": {
+    "title": "Pokoje do rozmów",
+    "createRoom": "Utwórz pokój",
+    "joinRoom": "Dołącz",
+    "leaveRoom": "Opuść pokój",
+    "closeRoom": "Zamknij pokój",
+    "back": "Wstecz",
+    "topic": "Temat",
+    "topicPlaceholder": "np. Opisz swój dzień",
+    "cefrLevel": "Poziom",
+    "maxParticipants": "Maks. uczestników",
+    "visibility": "Widoczność",
+    "public": "Publiczny",
+    "private": "Prywatny",
+    "create": "Utwórz",
+    "creating": "Tworzenie...",
+    "waiting": "Oczekiwanie",
+    "active": "Aktywny",
+    "allLevels": "Wszystkie",
+    "noRooms": "Brak dostępnych pokoi. Utwórz pierwszy!",
+    "createFirst": "Utwórz pierwszy pokój",
+    "loading": "Ładowanie...",
+    "loadMore": "Załaduj więcej",
+    "prejoinTitle": "Gotowy do dołączenia?",
+    "cameraOff": "Kamera wyłączona",
+    "audioOnly": "Tylko audio",
+    "microphone": "Mikrofon",
+    "camera": "Kamera",
+    "micOn": "Mikrofon wł.",
+    "micOff": "Mikrofon wył.",
+    "camOn": "Kamera wł.",
+    "camOff": "Kamera wył.",
+    "joinCall": "Dołącz do rozmowy",
+    "joining": "Dołączanie...",
+    "leave": "Wyjdź",
+    "screenShare": "Udostępnij ekran",
+    "participants": "Uczestnicy",
+    "currentQuestion": "Aktualne pytanie",
+    "noQuestions": "Brak pytań",
+    "nextQuestion": "Następne pytanie",
+    "previousQuestions": "Poprzednie pytania",
+    "roomClosed": "Pokój zamknięty",
+    "roomClosedText": "Ten pokój został zamknięty przez prowadzącego.",
+    "backToRooms": "Powrót do pokoi",
+    "loadQuestions": "Załaduj pytania",
+    "topics": {
+      "general": "Temat ogólny",
+      "family": "Rodzina",
+      "daily-life": "Życie codzienne",
+      "food": "Jedzenie i napoje",
+      "travel": "Podróże",
+      "hobbies": "Hobby",
+      "health": "Zdrowie",
+      "work": "Praca i kariera",
+      "education": "Edukacja",
+      "technology": "Technologia",
+      "culture": "Kultura i społeczeństwo",
+      "environment": "Środowisko"
+    }
   }
 }
-
