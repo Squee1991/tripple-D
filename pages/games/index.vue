@@ -182,14 +182,14 @@ const startMission = (sectorId) => {
 
 .word-1 {
   color: #fff;
-  font-size: 3rem;
+  font-size: 2.4rem;
   -webkit-text-stroke: 2px #000;
   text-shadow: 4px 4px 0 #3a7bd5;
 }
 
 .word-2 {
   color: #ffeb3b;
-  font-size: 5rem;
+  font-size: 3.5rem;
   -webkit-text-stroke: 3px #000;
   text-shadow: 6px 6px 0 #e67e22;
 }
