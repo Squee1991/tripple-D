@@ -1,0 +1,1897 @@
+[
+  {
+  "questId": "valley_nebensatz_word_order",
+  "aliases": ["sub-clauses-order"],
+  "title": "Глагол в конце!",
+  "progress": "0/15",
+  "description": "Отрабатываем порядок слов в придаточных предложениях. Главное правило: глагол уходит в самый конец.",
+  "conditions": {
+    "goal": "Научиться ставить глагол на последнее место после союзов weil, dass, wenn и других.",
+    "minCorrect": 12,
+    "requiredTasks": 15
+  },
+  "rewards": {
+    "points": 30,
+    "xp": 30
+  },
+  "tasks": [
+    {
+      "id": 1,
+      "type": "reorder",
+      "question": "Соберите предложение: Я учусь, потому что это важно.",
+      "words": ["ist", "wichtig", "es", "weil", "lerne", "Ich"],
+      "correctOrder": ["Ich", "lerne", "weil", "es", "wichtig", "ist"],
+      "tip": "В придаточном предложении после союза(weil) глагол всегда стоит на последнем месте."
+    },
+    {
+      "id": 2,
+      "type": "select",
+      "question": "Выберите верный ответ: Он говорит, что он придет.",
+      "options": [
+        "Er sagt, dass er kommt",
+        "Er sagt, dass kommt er",
+        "Er sagt, dass er ist kommt"
+      ],
+      "answer": "Er sagt, dass er kommt",
+      "tip": "Союз 'dass' отправляет спрягаемый глагол в самый конец фразы."
+    },
+    {
+      "id": 3,
+      "type": "speechToText",
+      "question": "Напишите услышанное",
+      "text": "Ich komme, wenn ich Zeit habe",
+      "answer": "Ich komme, wenn ich Zeit habe",
+      "tip": "Wenn (если/когда) — это союз придаточного предложения, глагол 'habe' стоит в конце."
+    },
+    {
+      "id": 4,
+      "type": "reorder",
+      "question": "Соберите предложение: Мы идем домой, когда фильм заканчивается.",
+      "words": ["endet", "Film", "der", "wenn", "Hause", "nach", "gehen", "Wir"],
+      "correctOrder": ["Wir", "gehen", "nach", "Hause", "wenn", "der", "Film", "endet"],
+      "tip": "Глагол 'endet' замыкает предложение."
+    },
+    {
+      "id": 5,
+      "type": "select",
+      "question": "Выберите верный ответ: Я не знаю, придет ли он сегодня.",
+      "options": [
+        "Ich weiß nicht, ob er heute kommt",
+        "Ich weiß nicht, ob kommt er heute",
+        "Ich weiß nicht, ob er heute kommen"
+      ],
+      "answer": "Ich weiß nicht, ob er heute kommt",
+      "tip": "Союз 'ob' (ли) работает так же: глагол уходит в конец."
+    },
+    {
+      "id": 6,
+      "type": "reorder",
+      "question": "Соберите предложение: Она работает, хотя она больна.",
+      "words": ["ist", "krank", "sie", "obwohl", "arbeitet", "Sie"],
+      "correctOrder": ["Sie", "arbeitet", "obwohl", "sie", "krank", "ist"],
+      "tip": "Obwohl (хотя) — типичный союз для Nebensatz."
+    },
+    {
+      "id": 7,
+      "type": "speechToText",
+      "question": "Напишите услышанное",
+      "text": "Ich weiß, dass du Recht hast",
+      "answer": "Ich weiß, dass du Recht hast"
+    },
+    {
+      "id": 8,
+      "type": "select",
+      "question": "Выберите верный ответ: Я устал, потому что я рано встаю.",
+      "options": [
+        "Ich bin müde, weil ich früh aufstehe",
+        "Ich bin müде, weil ich stehe früh auf",
+        "Ich bin müде, weil aufstehe ich früh"
+      ],
+      "answer": "Ich bin müde, weil ich früh aufstehe",
+      "tip": "У отделяемых глаголов в конце придаточного предложения приставка НЕ отделяется."
+    },
+    {
+      "id": 9,
+      "type": "reorder",
+      "question": "Соберите предложение: Я думаю, что ты прав.",
+      "words": ["hast", "Recht", "du", "dass", "glaube", "Ich"],
+      "correctOrder": ["Ich", "glaube", "dass", "du", "Recht", "hast"]
+    },
+    {
+      "id": 10,
+      "type": "speechToText",
+      "question": "Напишите услышанное",
+      "text": "Er fragt, wo du wohnst",
+      "answer": "Er fragt, wo du wohnst",
+      "tip": "Вопросительные слова (wo, wann, wie) в середине предложения тоже требуют глагол в конце."
+    },
+    {
+      "id": 11,
+      "type": "select",
+      "question": "Выберите верный ответ: Мы знаем, что мы должны помогать.",
+      "options": [
+        "Wir wissen, dass wir helfen müssen",
+        "Wir wissen, dass wir müssen helfen",
+        "Wir wissen, dass müssen wir helfen"
+      ],
+      "answer": "Wir wissen, dass wir helfen müssen",
+      "tip": "Если есть модальный глагол, то именно он (müssen) стоит на последнем месте."
+    },
+    {
+      "id": 12,
+      "type": "reorder",
+      "question": "Соберите предложение: Я позвоню тебе, как только приеду.",
+      "words": ["ankomme", "ich", "sobald", "dich", "rufe", "Ich", "an"],
+      "correctOrder": ["Ich", "rufe", "dich", "an", "sobald", "ich", "ankomme"],
+      "tip": "В главной части приставка 'an' отделилась, а в придаточной 'ankomme' осталась целой в конце."
+    },
+    {
+      "id": 13,
+      "type": "speechToText",
+      "question": "Напишите услышанное",
+      "text": "Er lernt viel, damit er die Prüfung besteht",
+      "answer": "Er lernt viel, damit er die Prüfung besteht",
+      "tip": "Damit (чтобы) — союз придаточного предложения."
+    },
+    {
+      "id": 14,
+      "type": "select",
+      "question": "Выберите: Так как уже поздно, я иду спать.",
+      "options": [
+        "Da es schon spät ist, gehe ich schlafen",
+        "Da es ist schon spät, gehe ich schlafen",
+        "Da es schon spät ist, ich gehe schlafen"
+      ],
+      "answer": "Da es schon spät ist, gehe ich schlafen",
+      "tip": "Если придаточное стоит первым, глагол в нем всё равно в конце, а главное предложение начинается сразу с глагола (gehe)."
+    },
+    {
+      "id": 15,
+      "type": "reorder",
+      "question": "Соберите предложение: Он спросил, где ты купил эту книгу.",
+      "words": ["hast", "gekauft", "Buch", "dieses", "du", "wo", "gefragt", "hat", "Er"],
+      "correctOrder": ["Er", "hat", "gefragt", "wo", "du", "dieses", "Buch", "gekauft", "hast"],
+      "tip": "В прошедшем времени (Perfekt) вспомогательный глагол (hast) стоит последним, после причастия."
+    }
+  ]
+},
+  {
+    "questId": "valley_nebensatz_minimal",
+    "aliases": ["sub-clauses-short"],
+    "title": "Мини-фразы",
+    "progress": "0/15",
+    "description": "Короткие фразы и предложения для отработки придаточных предложениях.",
+    "conditions": {
+      "goal": "Закрепить позицию глагола в придаточных предложениях на простых примерах.",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "Соберите предложение: Я знаю, что ты здесь.",
+        "words": ["bist", "hier", "du", "dass", "weiß", "Ich"],
+        "correctOrder": ["Ich", "weiß", "dass", "du", "hier", "bist"],
+        "tip": "после союза 'dass' спрягаемый глагол идет в конец."
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "Выберите верный ответ: Он ест, потому что он голоден.",
+        "options": [
+          "Er isst, weil er Hunger hat",
+          "Er isst, weil er hat Hunger",
+          "Er isst, weil Hunger er hat"
+        ],
+        "answer": "Er isst, weil er Hunger hat",
+        "tip": "После 'weil' спрягаемый глагол всегда стоит в самом конце предложения."
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Er weiß, dass ich komme",
+        "answer": "Er weiß, dass ich komme"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "Соберите предложение: Я спрошу, придет ли он.",
+        "words": ["kommt", "er", "ob", "frage", "Ich"],
+        "correctOrder": ["Ich", "frage", "ob", "er", "kommt"],
+        "tip": "Союз 'ob'(ли) требует глагол на последнем месте."
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Выберите верный ответ: Я не знаю, где мой телефон.",
+        "options": [
+          "Ich weiß nicht, wo mein Handy ist",
+          "Ich weiß nicht, wo ist mein Handy",
+          "Ich weiß nicht, wo mein Handy ist"
+        ],
+        "answer": "Ich weiß nicht, wo mein Handy ist",
+        "tip": "В косвенном вопросепосле 'wo' глагол 'ist' обязан стоять в самом конце."
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Соберите предложение: Мы остаемся дома, если идет дождь.",
+        "words": ["regnet", "es", "wenn", "Hause", "zu", "bleiben", "Wir"],
+        "correctOrder": ["Wir", "bleiben", "zu", "Hause", "wenn", "es", "regnet"],
+        "tip": "После союза 'wenn' спрягаемый глагол всегда стоит конце предложения."
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Ich arbeite, obwohl es spät ist",
+        "answer": "Ich arbeite, obwohl es spät ist",
+        "tip": "После союза 'obwohl'(хотя) спрягаемый глагол обязан стоять в самом конце."
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "Выберите верный ответ: Я вижу, что ты читаешь.",
+        "options": [
+          "Ich sehe, dass du liest",
+          "Ich sehe, dass liest du",
+          "Ich sehe, du liest dass"
+        ],
+        "answer": "Ich sehe, что ты читаешь",
+        "tip": "Типичный порядок: Союз -> Подлежащее -> Глагол."
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "Соберите предложение: Мы ждем, пока он позвонит.",
+        "words": ["anruft", "er", "bis", "warten", "Wir"],
+        "correctOrder": ["Wir", "warten", "bis", "er", "anruft"],
+        "tip": "У глагола 'anrufen' приставка не отделяется, так как он стоит в конце придаточного."
+      },
+      {
+        "id": 10,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Ich bin glücklich, weil ich dich liebe",
+        "answer": "Ich bin glücklich, weil ich dich liebe",
+        "tip": "В придаточном предложении после союза 'weil' спрягаемый глагол всегда стоит в самом конце."
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "Выберите верный ответ: Я знаю, где ты живешь.",
+        "options": [
+          "Ich weiß, wo du wohnst",
+          "Ich weiß, wo wohnst du",
+          "Ich weiß, du wohnst wo"
+        ],
+        "answer": "Ich weiß, wo du wohnst",
+        "tip": "Вопросительное слово 'wo' в середине предложения работает как союз и ставит глагол в конец."
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "Соберите предложение: Я рад, что ты можешь прийти.",
+        "words": ["kannst", "kommen", "du", "dass", "froh", "bin", "Ich"],
+        "correctOrder": ["Ich", "bin", "froh", "dass", "du", "kommen", "kannst"],
+        "tip": "В связке из двух глаголов спрягаемый (модальный) всегда ставится после инфинитива в самый конец."
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Es ist wichtig, dass du das machst",
+        "answer": "Es ist wichtig, dass du das machst",
+        "tip": "В придаточном предложении после союза 'dass' спрягаемый глагол всегда стоит на последнем месте."
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "Выберите верный ответ: Он молчит, так как он устал.",
+        "options": [
+          "Er schweigt, da er müde ist",
+          "Er schweigt, da ist er müde",
+          "Er schweigt, da er ist müde"
+        ],
+        "answer": "Er schweigt, da er müде ist",
+        "tip": "Союз 'da' (так как) — глагол в конце"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "Соберите предложение: Я не знаю, когда он придет.",
+        "words": ["kommt", "er", "wann", "nicht", "weiß", "Ich"],
+        "correctOrder": ["Ich", "weiß", "nicht", "wann", "er", "kommt"],
+        "tip": "Снова правило: подлежащее (er) после союза, глагол в конце"
+      }
+    ]
+  },
+  {
+    "questId": "valley_nebensatz_extended",
+    "aliases": ["sub-clauses-extended"],
+    "title": "Nebensatz: Уровень выше",
+    "progress": "0/15",
+    "description": "Закрепляем придаточные предложения. Теперь фразы стали длиннее, но правило не изменилось: глагол в самый конец.",
+    "conditions": {
+      "goal": "Отработать порядок слов в более сложных предложениях с обстоятельствами и модальными глаголами.",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 35,
+      "xp": 35
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "Соберите предложение: Я не могу прийти, так как мне нужно работать.",
+        "words": ["muss", "arbeiten", "ich", "weil", "kommen", "nicht", "kann", "Ich"],
+        "correctOrder": ["Ich", "kann", "nicht", "kommen", "weil", "ich", "arbeiten", "muss"],
+        "tip": "В придаточном предложении с модальным глаголом именно спрягаемый глагол стоит последним."
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "Выберите верный ответ: Я не уверен, придет ли он сегодня на вечеринку.",
+        "options": [
+          "Ich bin nicht sicher, ob er heute zur Party kommt",
+          "Ich bin nicht sicher, ob kommt er heute zur Party",
+          "Ich bin nicht sicher, ob er kommt heute zur Party"
+        ],
+        "answer": "Ich bin nicht sicher, ob er heute zur Party kommt",
+        "tip": "В придаточном предложении после союза 'ob' (ли) спрягаемый глагол в самом конце."
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Es ist schade, dass wir morgen nicht kommen können",
+        "answer": "Es ist schade, dass wir morgen nicht kommen können",
+        "tip": "Связка из двух глаголов в конце: смысловой, затем модальный."
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "Соберите предложение: Я спрашиваю себя, почему он продал свою новую машину.",
+        "words": ["hat", "verkauft", "Auto", "neues", "sein", "er", "warum", "mich", "frage", "Ich"],
+        "correctOrder": ["Ich", "frage", "mich", "warum", "er", "sein", "neues", "Auto", "verkauft", "hat"],
+        "tip": "В прошедшем времени(Perfekt) глагол 'hat' уходит за причастие в самый финал."
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Выберите верный ответ: Скажи мне, где ты купил это пальто.",
+        "options": [
+          "Sag mir bitte, wo du diesen Mantel gekauft hast",
+          "Sag mir bitte, wo hast du diesen Mantel gekauft",
+          "Sag mir bitte, wo du hast diesen Mantel gekauft"
+        ],
+        "answer": "Sag mir bitte, wo du diesen Mantel gekauft hast",
+        "tip": "В придаточном предложении(косвенном вопросе) вспомогательный глагол обязан стоять в самом конце."
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Соберите предложение: Он устал, хотя долго спал.",
+        "words": ["hat", "geschlafen", "lange", "er", "obwohl", ",", "müde", "ist", "Er"],
+        "correctOrder": ["Er", "ist", "müde", ",", "obwohl", "er", "lange", "geschlafen", "hat"],
+        "tip": "В прошедшем времени (Perfekt) вспомогательный глагол должен стоять в самом конце, после причастия."
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Ich bin sicher, dass wir die Prüfung bestehen",
+        "answer": "Ich bin sicher, dass wir die Prüfung bestehen",
+        "tip": "Спрягаемый глагол стоит в конце"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "Выберите верный вариант: Ты знаешь, сколько стоят эти коричневые туфли?",
+        "options": [
+          "Weißt du, wie viel diese Schuhe kosten?",
+          "Weißt du, wie viel kosten diese  Schuhe?",
+          "Weißt du, wie viel diese Schuhe sind kosten?"
+        ],
+        "answer": "Weißt du, wie viel diese Schuhe kosten?",
+        "tip": "Вопросительное слово 'wie viel' требует глагол в конце фразы."
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "Соберите предложение: Я позвоню тебе, как только закончу с едой.",
+        "words": ["bin", "fertig", "Essen", "dem", "mit", "ich", "sobald", "an", "dich", "rufe", "Ich"],
+        "correctOrder": ["Ich", "rufe", "dich", "an", "sobald", "ich", "mit", "dem", "Essen", "fertig", "bin"],
+        "tip": "После 'sobald' (как только) спрягаемый глагол в финал."
+      },
+      {
+        "id": 10,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Er lernt viel, damit er in Berlin studieren kann",
+        "answer": "Er lernt viel, damit er in Berlin studieren kann",
+        "tip": "Модальный глагол стоит на самом последнем месте."
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "Выберите верный ответ: Ты знаешь, когда начинается фильм?",
+        "options": [
+          "Weißt du, wann der Film beginnt?",
+          "Weißt du, wann beginnt der Film?",
+          "Weißt du, wann der Film сегодня beginnt?"
+        ],
+        "answer": "Weißt du, wann der Film beginnt?",
+        "tip": "Вопросительное слово 'wann' в середине предложения превращает его в придаточное и отправляет глагол конец."
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "Соберите предложение: Ты знаешь, почему она сегодня не пришла в школу?",
+        "words": ["ist", "gekommen", "hast", "Schule", "zur", "nicht", "heute", "sie", "warum", "du", "Weißt"],
+        "correctOrder": ["Weißt", "du", "warum", "sie", "heute", "nicht", "zur", "Schule", "gekommen", "ist"],
+        "tip": "В Perfekt вспомогательный глагол стоит после причастия."
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Ich hoffe, dass wir uns morgen sehen",
+        "answer": "Ich hoffe, dass wir uns morgen sehen",
+        "tip": "Союз 'dass' заставляет глагол стоять на самом последнем месте, даже после слов, обозначающих время(morgen)."
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "Выберите верный ответ: Скажи мне, когда ты придешь домой.",
+        "options": [
+          "Sag mir, wann du nach Hause kommst",
+          "Sag mir, wann kommst du nach Hause",
+          "Sag mir, wann du kommst nach Hause"
+        ],
+        "answer": "Sag mir, wann du nach Hause kommst",
+        "tip": "Вопросительное слово 'wann' в середине предложения работает как союз и требует глагол на последнем месте."
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "Соберите предложение: Мы рады, что ты учишь немецкий на skillupgerman.",
+        "words": ["lernst", "skillupgerman", "", "auf", "Deutsch", "du", "dass", "froh", "sind", "Wir"],
+        "correctOrder": ["Wir", "sind", "froh", "dass", "du", "Deutsch", "auf", "skillupgerman", "lernst"],
+        "tip": "Даже если в предложении появляется название сайта или другие дополнения, союз 'dass' всё равно выбивает спрягаемый глагол в самый финал."
+      }
+    ]
+  },
+  {
+    "questId": "valley_es_gibt_basics",
+    "aliases": ["es-gibt-intro"],
+    "title": "Магия 'Es gibt'",
+    "progress": "0/15",
+    "description": "Отрабатываем устойчивое выражение 'es gibt' (имеется/есть) эта связка никогда не меняетсяа всё, а что идет следом, всегда ставится в Akkusativ.",
+    "conditions": {
+      "goal": "Отработать Akkusativ после 'es gibt' и закрепить неизменность формы 'gibt'.",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "Соберите предложение: Здесь есть парк.",
+        "words": ["einen", "Park", "hier", "gibt", "Es"],
+        "correctOrder": ["Es", "gibt", "hier", "einen", "Park"],
+        "tip": "Конструкция 'es gibt' всегда требует Akkusativ. Мужской род: ein -> einen."
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "Выберите верный вариант: В городе есть музей.",
+        "options": [
+          "Es gibt ein Museum in der Stadt",
+          "Es gibt einen Museum in der Stadt",
+          "Es geben ein Museum in der Stadt"
+        ],
+        "answer": "Es gibt ein Museum in der Stadt",
+        "tip": "Museum — среднего рода (das), в Akkusativ артикль не меняется."
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Gibt es hier Internet?",
+        "answer": "Gibt es hier Internet?",
+        "tip": "В вопросе глагол 'Gibt' выходит на первое место."
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "Соберите предложение: Здесь нет проблем.",
+        "words": ["Probleme", "keine", "gibt", "Es"],
+        "correctOrder": ["Es", "gibt", "keine", "Probleme"],
+        "tip": "Даже если предметов много(Probleme), глагол 'gibt' остается в единственном числе."
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Выберите верный ответ: Сегодня есть пицца.",
+        "options": [
+          "Heute gibt es Pizza",
+          "Heute es gibt Pizza",
+          "Heute geben es Pizza"
+        ],
+        "answer": "Heute gibt es Pizza",
+        "tip": "Если предложение начинается не с 'Es', то глагол всё равно остается на 2-м месте, а 'es' уходит на 3-е."
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Соберите предложение: Тут есть ресторан?",
+        "words": ["Restaurant", "ein", "hier", "es", "Gibt"],
+        "correctOrder": ["Gibt", "es", "hier", "ein", "Restaurant"],
+        "tip": "Для вопроса ставим 'Gibt' на первое место."
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Es gibt einen Fehler",
+        "answer": "Es gibt einen Fehler",
+        "tip": "Fehler(ошибка) — мужской род, поэтому в Akkusativ используем 'einen'."
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "Выберите верный вариант: В холодильнике есть молоко.",
+        "options": [
+          "Es gibt Milch im Kühlschrank",
+          "Es gibt einen Milch im Kühlschrank",
+          "Es geben Milch im Kühlschrank"
+        ],
+        "answer": "Es gibt Milch im Kühlschrank",
+        "tip": "Глагол 'gibt' никогда не превращается в 'geben', даже если мы говорим о чем-то абстрактном или неисчисляемом."
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "Соберите предложение: На завтрак есть кофе.",
+        "words": ["Kaffee", "Frühstück", "zum", "es", "gibt", "Es"],
+        "correctOrder": ["Es", "gibt", "zum", "Frühstück", "Kaffee"],
+        "tip": "Akkusativ для мужского рода (der Kaffee) в данном случае без артикля, но глагол на месте."
+      },
+      {
+        "id": 10,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Was gibt es heute?",
+        "answer": "Was gibt es heute?",
+        "tip": "Стандартный вопрос 'Что сегодня (на обед/в меню/происходит)?'"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "Выберите верный вариант: В лесу много деревьев.",
+        "options": [
+          "Es gibt viele Bäume im Wald",
+          "Es geben viele Bäume im Wald",
+          "Es gibt vielen Bäume im Wald"
+        ],
+        "answer": "Es gibt viele Bäume im Wald",
+        "tip": "Множественное число не влияет на глагол: es gibt."
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "Соберите предложение: Ещё есть время.",
+        "words": ["Zeit", "noch", "es", "gibt", "Es"],
+        "correctOrder": ["Es", "gibt", "noch", "Zeit"],
+        "tip": "Используем 'Es gibt', когда говорим, что что-то в принципе существует или имеется в наличии."
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Es gibt nichts",
+        "answer": "Es gibt nichts",
+        "tip": "Фраза 'Ничего нет / Ничего не имеется'."
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "Выберите верный ответ: Есть ли здесь супермаркет?",
+        "options": [
+          "Gibt es hier einen Supermarkt?",
+          "Gibt es hier ein Supermarkt?",
+          "Es gibt hier einen Supermarkt?"
+        ],
+        "answer": "Gibt es hier einen Supermarkt?",
+        "tip": "Не забывай про Akkusativ для мужского рода."
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "Соберите предложение: В нашей школе много учеников.",
+        "words": ["Schüler", "viele", "Schule", "unserer", "in", "es", "gibt", "Es"],
+        "correctOrder": ["Es", "gibt", "in", "unserer", "Schule", "viele", "Schüler"],
+        "tip": "(plural), но глагол gibt строго в единственном числе."
+      }
+    ]
+  },
+  {
+    "questId": "valley_es_gibt_advanced",
+    "aliases": ["es-gibt-pro"],
+    "title": "Продолжение Es gibt",
+    "progress": "0/15",
+    "description": "Отрабатываем конструкцию 'es gibt'. Запомни: эта связка никогда не меняется, а всё, что идет следом, всегда ставится в Akkusativ.",
+    "conditions": {
+      "goal": "Довести до автоматизма использование Akkusativ после 'es gibt'.",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 30,
+      "xp": 30
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "Соберите предложение: Есть ли здесь выход?",
+        "words": ["Gibt", "es", "hier", "einen", "Ausgang"],
+        "correctOrder": ["Gibt", "es", "hier", "einen", "Ausgang"],
+        "tip": "В вопросе порядок меняется местами. Помни про Akkusativ для мужского рода"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "Выберите верный вариант: Здесь нет входа.",
+        "options": [
+          "Es gibt hier keinen Eingang",
+          "Es gibt здесь нет Eingang",
+          "Es gibt hier keine Eingang"
+        ],
+        "answer": "Es gibt hier keinen Eingang",
+        "tip": "Помним про Akkusativ."
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Was gibt es Neues?",
+        "answer": "Was gibt es Neues?",
+        "tip": "Фраза 'Что новенького?'"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "Соберите предложение: Здесь есть ошибка.",
+        "words": ["Es", "gibt", "hier", "einen", "Fehler"],
+        "correctOrder": ["Es", "gibt", "hier", "einen", "Fehler"],
+        "tip": "Мужской род (Fehler) в Akkusativ получает артикль 'einen'."
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Выберите верный ответ: Где здесь есть туалет?",
+        "options": [
+          "Wo gibt es hier eine Toilette?",
+          "Wo es gibt здесь eine Toilette?",
+          "Wo есть здесь eine Toilette?"
+        ],
+        "answer": "Wo gibt es hier eine Toilette?",
+        "tip": "После вопросительного слова 'Wo' глагол 'gibt' идет на второе место."
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Соберите предложение: Есть веская причина.",
+        "words": ["Es", "gibt", "einen", "Grund"],
+        "correctOrder": ["Es", "gibt", "einen", "Grund"],
+        "tip": "Grund — мужской род. В Akkusativ артикль меняется на 'einen'."
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Gibt es еще Fragen?",
+        "answer": "Gibt es еще Fragen?",
+        "tip": "В вопросе 'Gibt' стоит перед 'es'. Глагол не меняется, даже если вопросов много."
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "Выберите верный вариант: Сегодня нет занятий.",
+        "options": [
+          "Heute gibt es keinen Unterricht",
+          "Heute есть нет Unterricht",
+          "Heute gibt es keine Unterricht"
+        ],
+        "answer": "Heute gibt es keinen Unterricht",
+        "tip": "Unterricht — мужской род. В Akkusativ используем отрицание 'keinen'."
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "Соберите предложение: На сегодня больше ничего нет.",
+        "words": ["Es", "gibt", "heute", "mehr", "nichts"],
+        "correctOrder": ["Es", "gibt", "heute", "mehr", "nichts"],
+        "tip": "Отрицание 'nichts' (ничего) не склоняется и просто ставится после глагола."
+      },
+      {
+        "id": 10,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Es gibt eine Lösung",
+        "answer": "Es gibt eine Lösung",
+        "tip": "Lösung (решение) — женский род, артикль 'eine' не меняется."
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "Выберите верный ответ: Есть ли здесь поблизости аптека?",
+        "options": [
+          "Gibt es eine Apotheке in der Nähe?",
+          "Gibt es ein Apotheке вблизи?",
+          "Es gibt eine Apotheке in der Nähe?"
+        ],
+        "answer": "Gibt es eine Apotheke in der Nähe?",
+        "tip": "Для вопроса ставим глагол 'Gibt' на первое место."
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "Соберите предложение: Для этого нет надежды.",
+        "words": ["Es", "gibt", "dafür", "keine", "Hoffnung"],
+        "correctOrder": ["Es", "gibt", "dafür", "keine", "Hoffnung"],
+        "tip": "После 'es gibt' всегда идёт Akkusativ. У женского рода (Hoffnung) форма 'keine' совпадает с Nominativ, поэтому окончание не меняется"
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Es gibt viel zu tun",
+        "answer": "Es gibt viel zu tun",
+        "tip": "Устойчивое выражение: 'Есть много дел'."
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "Выберите верный вариант: В этой сумке есть письмо.",
+        "options": [
+          "In dieser Tasche gibt es einen Brief",
+          "In dieser Tasche es gibt einen Brief",
+          "In dieser Tasche gibt es ein Brief"
+        ],
+        "answer": "In dieser Tasche gibt es einen Brief",
+        "tip": "В конструкции 'es gibt' всегда требует Akkusativ, поэтому артикль меняется в соответствии с падежом."
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "Соберите предложение: Есть еще один шанс.",
+        "words": ["Es", "gibt", "noch", "eine", "Chance"],
+        "correctOrder": ["Es", "gibt", "noch", "eine", "Chance"],
+        "tip": "Chance — женский род. 'Es gibt' всегда требует Akkusativ."
+      }
+    ]
+  },
+  {
+    "questId": "reflexivpronomen_clean",
+    "aliases": ["reflexiv-base"],
+    "title": "возвратные местоимения",
+    "progress": "0/15",
+    "description": "Разделяем Akkusativ и Dativ. Если действие направлено на объект (волосы, зубы, руки), используем форму Dativ.",
+    "conditions": {
+      "goal": "Разобраться в разнице между Akkusativ и Dativ в возвратных глаголах.",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 30,
+      "xp": 30
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "Соберите предложение: Я моюсь.",
+        "words": ["Ich", "mir", "wasche", "mich"],
+        "correctOrder": ["Ich", "wasche", "mich"],
+        "tip": "Здесь нет объекта, действие просто на себя. Используем Akkusativ."
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "Выберите верный вариант: Ты причёсываешь волосы.",
+        "options": [
+          "Du kämmst dir die Haare",
+          "Du kämmst dich die Haare",
+          "Du kämmst sich die Haare"
+        ],
+        "answer": "Du kämmst dir die Haare",
+        "tip": "Есть объект, поэтому возвратное местоимение ставится в Dativ."
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Er rasiert sich",
+        "answer": "Er rasiert sich",
+        "tip": "В 3-м лице форма sich всегда одинакова для обоих падежей."
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "Соберите предложение: Мы чистим зубы.",
+        "words": ["Wir", "putzen", "uns", "die", "Zähne"],
+        "correctOrder": ["Wir", "putzen", "uns", "die", "Zähne"],
+        "tip": "Тут объект. Для 'wir' форма совпадает в обоих падежах."
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Выберите верный вариант: Вы (мн.ч.) торопитесь.",
+        "options": [
+          "Ihr beeilt euch",
+          "Ihr beeilt uns",
+          "Ihr beeilt sich"
+        ],
+        "answer": "Ihr beeilt euch",
+        "tip": "Глагол 'beeilen - торопиться' - требует Akkusativ."
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Соберите предложение: Я мою руки.",
+        "words": ["Ich", "wasche", "mir", "die", "Hände", "mich"],
+        "correctOrder": ["Ich", "wasche", "mir", "die", "Hände"],
+        "tip": "Есть объект, значит это Dativ."
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Setzen Sie sich",
+        "answer": "Setzen Sie sich",
+        "tip": "Присаживайтесь. Вежливая форма Sie требует sich."
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "Выберите верный вариант: Я заказываю себе пиццу.",
+        "options": [
+          "Ich bestelle mir eine Pizza",
+          "Ich bestelle mich eine Pizza",
+          "Ich bestelle sich eine Pizza"
+        ],
+        "answer": "Ich bestelle mir eine Pizza",
+        "tip": "Пицца — прямой объект. Используем Dativ"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "Соберите предложение: Ты одеваешься.",
+        "words": ["Du", "ziehst", "dich", "an"],
+        "correctOrder": ["Du", "ziehst", "dich", "an"],
+        "tip": "Объекта нет, действие на себя. Akkusativ"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Выберите верный вариант: Ты надеваешь куртку.",
+        "options": [
+          "Du ziehst dir die Jacke an",
+          "Du ziehst dich die Jacke an",
+          "Du ziehst dir die Jacke"
+        ],
+        "answer": "Du ziehst dir die Jacke an",
+        "tip": "Тут есть объект. Значит это Dativ."
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Wir treffen uns heute",
+        "answer": "Wir treffen uns heute",
+        "tip": "Мы встречаемся. Для wir форма не меняется в обоих падежах."
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "Соберите предложение: Я это себе запомню.",
+        "words": ["Ich", "merke", "mir", "das"],
+        "correctOrder": ["Ich", "merke", "mir", "das"],
+        "tip": "В этом случае ( sich merken - запоминать ) всегда требует Dativ"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "Выберите верный вариант: Она наносит макияж.",
+        "options": [
+          "Sie schminkt sich",
+          "Sie schminkt mich",
+          "Sie schminkt dich"
+        ],
+        "answer": "Sie schminkt sich",
+        "tip": "Общее действие - Akkusativ. форма sich."
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "Соберите предложение: Вы смотрите видео (мн.ч.).",
+        "words": ["Ihr", "schaut", "euch", "ein", "Video", "an"],
+        "correctOrder": ["Ihr", "schaut", "euch", "ein", "Video", "an"],
+        "tip": "Смотреть что-то - sich anschauen: требует Dativ."
+      },
+      {
+        "id": 15,
+        "type": "select",
+        "question": "Выберите верный вариант: Ребенок поранился.",
+        "options": [
+          "Das Kind hat sich verletzt",
+          "Das Kind hat mich verletzt",
+          "Das Kind hat dich verletzt"
+        ],
+        "answer": "Das Kind hat sich verletzt",
+        "tip": "Поранился(кого? себя). Akkusativ для среднего рода"
+      }
+    ]
+  },
+  {
+    "questId": "german_hardcore_mix_v2",
+    "title": "Сложная практика: всё сразу",
+    "description": "Хардкор-режим: в каждом предложении нужно следить и за порядком слов в придаточном, и за падежами после 'es gibt', и за возвратными местоимениями.",
+    "conditions": {
+      "goal": "Закрепить все сложные темы в перемешанном режиме.",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "Соберите: Я знаю, что здесь есть ошибка.",
+        "words": ["hier", "weiß", "Fehler", "Ich", "dass", "es", "gibt", "einen", "ein", "mich"],
+        "correctOrder": ["Ich", "weiß", "dass", "es", "hier", "einen", "Fehler", "gibt"],
+        "tip": "dass кидает глагол в конец, а 'es gibt' требует Akkusativ (einen Fehler)."
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "Выберите: Он говорит, что сейчас моется.",
+        "options": [
+          "Er sagt, dass er sich jetzt wäscht",
+          "Er sagt, dass er wäscht sich jetzt",
+          "Er sagt, dass er mich jetzt wäscht"
+        ],
+        "answer": "Er sagt, dass er sich jetzt wäscht",
+        "tip": "В придаточном предложении возвратное 'sich' стоит сразу после подлежащего."
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Schade, dass es hier keinen Ausgang gibt",
+        "answer": "Schade, dass es hier keinen Ausgang gibt",
+        "tip": "Ausgang — мужской род. После 'es gibt' в придаточном Akkusativ."
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "Соберите: Я вижу, что ты причёсываешься.",
+        "words": ["dir", "du", "kämmst", "sehe", "dass", "die", "Ich", "Haare", "es", "dich"],
+        "correctOrder": ["Ich", "sehe", "dass", "du", "dir", "die", "Haare", "kämmst"],
+        "tip": "Есть объект, значит используем Dativ. Глагол уходит в конец."
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Выберите: Я тороплюсь, потому что времени мало.",
+        "options": [
+          "Ich beeile mich, weil es wenig Zeit gibt",
+          "Ich beeile mich, weil есть мало Zeit",
+          "Ich beeile mir, weil es wenig Zeit gibt"
+        ],
+        "answer": "Ich beeile mich, weil es wenig Zeit gibt",
+        "tip": "Глагол 'beeilen' требует Akkusativ. В конце — конструкция 'es gibt'."
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Соберите: Я запомню, что здесь есть ошибка.",
+        "words": ["dass", "Fehler", "Ich", "mir", "gibt", "merke", "es", "einen", "hier", "ein", "mich"],
+        "correctOrder": ["Ich", "merke", "mir", "dass", "es", "hier", "einen", "Fehler", "gibt"],
+        "tip": "Sich merken — это Dativ. В придаточном 'es gibt' требует Akkusativ."
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Er fragt, ob es hier einen Supermarkt gibt",
+        "answer": "Er fragt, ob es hier einen Supermarkt gibt",
+        "tip": "Косвенный вопрос с 'ob'. + Akkusativ"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "Выберите: Мы радуемся, что есть решение.",
+        "options": [
+          "Wir freuen uns, dass es eine Lösung gibt",
+          "Wir freuen sich, dass es eine Lösung gibt",
+          "Wir freuen uns, dass es gibt eine Lösung"
+        ],
+        "answer": "Wir freuen uns, dass es eine Lösung gibt",
+        "tip": "Порядок слов: глагол в конце."
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Sie sagt, dass sie sich jetzt schminkt",
+        "answer": "Sie sagt, dass sie sich jetzt schminkt",
+        "tip": "Возвратный глагол в придаточном: 'sich' перед глаголом."
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "Соберите: Я закажу себе пиццу, если есть скидка.",
+        "words": ["bestelle", "eine", "wenn", "Rabatt", "mir", "Pizza", "Ich", "es", "gibt", "einen", "einem", "mich"],
+        "correctOrder": ["Ich", "bestelle", "mir", "eine", "Pizza", "wenn", "es", "einen", "Rabatt", "gibt"],
+        "tip": "Заказывать себе — Dativ. После 'wenn' глагол в самом конце."
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Выберите: Ты видишь, что здесь есть проблема.",
+        "options": [
+          "Du siehst, dass es hier ein Problem gibt",
+          "Du siehst, что здесь есть ein Problem",
+          "Du siehst, dass es здесь einen Problem gibt"
+        ],
+        "answer": "Du siehst, dass es hier ein Problem gibt",
+        "tip": "Порядок слов придаточный."
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "Соберите: Важно, чтобы здесь был вход.",
+        "words": ["Eingang", "dass", "Es", "ist", "wichtig", "hier", "einen", "es", "gibt", "sich", "ein"],
+        "correctOrder": ["Es", "ist", "wichtig", "dass", "es", "hier", "einen", "Eingang", "gibt"],
+        "tip": "В придаточном после(dass) глагол  уходит на последнее место."
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "Выберите: Я радуюсь, потому что есть скидка.",
+        "options": [
+          "Ich freue mich, weil es einen Rabatt gibt",
+          "Ich freue mich, weil es gibt einen Rabatt",
+          "Ich freue mich, weil es ein Rabatt gibt"
+        ],
+        "answer": "Ich freue mich, weil es einen Rabatt gibt",
+        "tip": "Радоваться — sich freuen Akkusativ. После 'es gibt' глагол уходит в конец."
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "Соберите: Я сниму себе квартиру, если там есть балкон.",
+        "words": ["Wohnung", "miete", "mir", "Balkon", "wenn", "es", "Ich", "einen", "gibt", "eine", "mich", "ein"],
+        "correctOrder": ["Ich", "miete", "mir", "eine", "Wohnung", "wenn", "es", "einen", "Balkon", "gibt"],
+        "tip": "Есть обьект это Dativ(mir). После 'es gibt' получает Akkusativ. Глагол в конце из-за 'wenn'."
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Er glaubt, dass es hier keine Hoffnung gibt",
+        "answer": "Er glaubt, dass es hier keine Hoffnung gibt",
+        "tip": "Придаточное - глагол в конце."
+      }
+    ]
+  },
+  {
+    "questId": "travel_grammar_hardcore",
+    "aliases": ["travel-mix-pro"],
+    "title": "Путешествия",
+    "progress": "0/15",
+    "description": "Отрабатываем всё сразу на тему отпуска: придаточные предложения, 'es gibt' и возвратные глаголы в контексте поездок.",
+    "conditions": {
+      "goal": "Закрепить порядок слов и падежи на примере темы путешествий.",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "Соберите: Я знаю, что здесь есть пляж.",
+        "words": ["Strand", "weiß", "dass", "einen", "es", "Ich", "hier", "gibt", "ein", "mich"],
+        "correctOrder": ["Ich", "weiß", "dass", "es", "hier", "einen", "Strand", "gibt"],
+        "tip": "После 'es gibt' нужен Akkusativ."
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "Выберите: Он говорит, что сейчас отдыхает.",
+        "options": [
+          "Er sagt, dass er sich jetzt ausruht",
+          "Er sagt, dass er ausruht sich jetzt",
+          "Er sagt, dass er mich jetzt ausruht"
+        ],
+        "answer": "Er sagt, dass er sich jetzt ausruht",
+        "tip": "Sich ausruhen — возвратный глагол. В придаточном 'sich' идет сразу за подлежащим."
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Schade, dass es hier kein Hotel gibt",
+        "answer": "Schade, dass es hier kein Hotel gibt",
+        "tip": "В придаточном 'gibt' стоит в самом конце."
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "Соберите: Он заказывает себе такси, так как здесь нет метро.",
+        "words": ["Taxi", "bestellt", "da", "U-Bahn", "keine", "gibt", "er", "sich", "es", "hier", "mich", "ein"],
+        "correctOrder": ["Er", "bestellt", "sich", "ein", "Taxi", "da", "es", "hier", "keine", "U-Bahn", "gibt"],
+        "tip": "Заказывать себе  это Dativ. После союза 'da'(так как) глагол уходит в самый конец."
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Выберите: Мы радуемся, потому что есть скидка на тур.",
+        "options": [
+          "Wir freuen uns, weil es einen Rabatt gibt",
+          "Wir freuen uns, weil es gibt einen Rabatt",
+          "Wir freuen sich, weil es einen Rabatt gibt"
+        ],
+        "answer": "Wir freuen uns, weil es einen Rabatt gibt",
+        "tip": "После 'weil' глагол уходит в конец."
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Соберите: Я запомню, что здесь есть вокзал.",
+        "words": ["merke", "mir", "dass", "Bahnhof", "gibt", "hier", "Ich", "es", "einen", "ein", "mich"],
+        "correctOrder": ["Ich", "merke", "mir", "dass", "es", "hier", "einen", "Bahnhof", "gibt"],
+        "tip": "Sich merken — Dativ. Неопределенный артикль в Akkusativ"
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Er fragt, ob es hier einen Flughafen gibt",
+        "answer": "Er fragt, ob es hier einen Flughafen gibt",
+        "tip": "Аэропорт (Flughafen) — мужской род. Падеж после 'es gibt' — Akkusativ."
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "Выберите: Злюсь, что нет места.",
+        "options": [
+          "Ich ärgere mich, dass es keinen Platz gibt",
+          "Ich ärgere mich, dass es gibt keinen Platz",
+          "Ich ärgere mich, dass es kein Platz gibt"
+        ],
+        "answer": "Ich ärgere mich, dass es keinen Platz gibt",
+        "tip": "После 'es gibt' требует Akkusativ, а глагол уходит в самый конец."
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "Соберите: Я бронирую себе комнату, если есть свободное место.",
+        "words": ["reserviere", "mir", "Zimmer", "wenn", "Platz", "Ich", "ein", "es", "einen", "gibt", "mich", "frei"],
+        "correctOrder": ["Ich", "reserviere", "mir", "ein", "Zimmer", "wenn", "es", "einen", "Platz", "gibt"],
+        "tip": "Бронировать себе — Dativ. + неопределенный артикль в Akkusativ"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Выберите: Ты видишь, что здесь есть кафе.",
+        "options": [
+          "Du siehst, dass es hier ein Café gibt",
+          "Du siehst, dass es здесь einen Café gibt",
+          "Du siehst, что здесь есть ein Café"
+        ],
+        "answer": "Du siehst, dass es hier ein Café gibt",
+        "tip": "Café — средний род. После 'dass' глагол в самом конце."
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Sie sagt, dass sie sich auf den Urlaub freut",
+        "answer": "Sie sagt, dass sie sich auf den Urlaub freut",
+        "tip": "Радоваться чему-то(в будущем) — sich auf etwas freuen."
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "Соберите: Важно, чтобы здесь был бассейн.",
+        "words": ["ist", "wichtig", "dass", "Pool", "gibt", "es", "hier", "einen", "Es", "ein", "sich"],
+        "correctOrder": ["Es", "ist", "wichtig", "dass", "es", "hier", "einen", "Pool", "gibt"],
+        "tip": "Глагол 'gibt' на последнем месте. + неопределеннный аритикль в Akkusativ."
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "Выберите: Рад, что есть экскурсия.",
+        "options": [
+          "Ich freue mich, dass es einen Ausflug gibt",
+          "Ich freue mich, dass es gibt einen Ausflug",
+          "Ich freue mich, что есть einen Ausflug"
+        ],
+        "answer": "Ich freue mich, dass es einen Ausflug gibt",
+        "tip": "Радоваться — 'sich freuen' Неопределенный артикль в Akkusativ'. В придаточном глагол уходит в самый конец."
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "Соберите: Ты берешь себе машину, если здесь есть прокат.",
+        "words": ["nimmst", "dir", "Auto", "wenn", "Verleih", "Du", "ein", "es", "einen", "gibt", "dich", "mit"],
+        "correctOrder": ["Du", "nimmst", "dir", "ein", "Auto", "wenn", "es", "einen", "Verleih", "gibt"],
+        "tip": "Есть обьект - Dativ"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Er glaubt, dass es hier keine Probleme gibt",
+        "answer": "Er glaubt, dass es hier keine Probleme gibt",
+        "tip": "Проблемы(мн.ч.). Глагол не изменяется"
+      }
+    ]
+  },
+  {
+    "questId": "job_career_hardcore",
+    "aliases": ["work-mix-pro"],
+    "title": "Работа: Грамматический замес",
+    "progress": "0/15",
+    "description": "Собеседования, дедлайны и поиск работы. Отрабатываем порядок слов и возвратные местоимения.",
+    "conditions": {
+      "goal": "Закрепить темы на контексте карьеры и офиса.",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "Соберите: Я подамся (на вакансию), если есть работа.",
+        "words": ["bewerbe", "mich", "wenn", "Job", "gibt", "Ich", "es", "einen", "ein", "mir"],
+        "correctOrder": ["Ich", "bewerbe", "mich", "wenn", "es", "einen", "Job", "gibt"],
+        "tip": "Sich bewerben — подавать заявку. После 'wenn' глагол уходит в конец."
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "Выберите: Он говорит, что сейчас представляется.",
+        "options": [
+          "Er sagt, dass er sich jetzt vorstellt",
+          "Er sagt, dass er vorstellt sich jetzt",
+          "Er sagt, dass er mich jetzt vorstellt"
+        ],
+        "answer": "Er sagt, dass er sich jetzt vorstellt",
+        "tip": "Sich vorstellen — представляться. В придаточном 'sich' стоит сразу после подлежащего."
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Schade, dass es hier keinen Kaffee gibt",
+        "answer": "Schade, dass es hier keinen Kaffee gibt",
+        "tip": "Kaffee — мужской род. В придаточном 'gibt' закрывает предложение."
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "Соберите: Я запомню, что есть встреча.",
+        "words": ["merke", "mir", "dass", "Termin", "gibt", "Ich", "es", "einen", "ein", "mich"],
+        "correctOrder": ["Ich", "merke", "mir", "dass", "es", "einen", "Termin", "gibt"],
+        "tip": "Sich merken — запоминать (Dativ). В придаточном 'es gibt' требует Akkusativ."
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Выберите: Я рад, потому что есть бонус.",
+        "options": [
+          "Ich freue mich, weil es einen Bonus gibt",
+          "Ich freue mich, weil es gibt einen Bonus",
+          "Ich freue mich, weil es ein Bonus gibt"
+        ],
+        "answer": "Ich freue mich, weil es einen Bonus gibt",
+        "tip": "Bonus — мужской род. После 'weil' глагол 'gibt' уходит в самый конец."
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Соберите: Я ищу себе работу, если есть место.",
+        "words": ["suche", "mir", "Job", "einen", "wenn", "Stelle", "es", "gibt", "eine", "Ich", "mich"],
+        "correctOrder": ["Ich", "suche", "mir", "einen", "Job", "wenn", "es", "eine", "Stelle", "gibt"],
+        "tip": "Искать себе — Dativ (mir). Место/вакансия (Stelle) — женский род."
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Er fragt, ob es hier einen Chef gibt",
+        "answer": "Er fragt, ob es hier einen Chef gibt",
+        "tip": "Chef — мужской род. После 'ob' глагол в конце."
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "Выберите: Мы злимся, что работы нет.",
+        "options": [
+          "Wir ärgern uns, dass es keine Arbeit gibt",
+          "Wir ärgern uns, dass es gibt keine Arbeit",
+          "Wir ärgern sich, dass es keine Arbeit gibt"
+        ],
+        "answer": "Wir ärgern uns, dass es keine Arbeit gibt",
+        "tip": "Злиться — sich ärgern. В придаточном глагол на последнем месте."
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "Соберите: Я куплю себе ноутбук, если есть скидка.",
+        "words": ["kaufe", "Laptop", "если", "Rabatt", "mir", "Ich", "einen", "es", "gibt", "wenn", "mich"],
+        "correctOrder": ["Ich", "kaufe", "mir", "einen", "Laptop", "wenn", "es", "einen", "Rabatt", "gibt"],
+        "tip": "Покупать себе — Dativ. Скидка (Rabatt) — мужской род."
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Выберите: Ты видишь, что есть проблема.",
+        "options": [
+          "Du siehst, dass es ein Problem gibt",
+          "Du siehst, что здесь есть ein Problem",
+          "Du siehst, dass es einen Problem gibt"
+        ],
+        "answer": "Du siehst, dass es ein Problem gibt",
+        "tip": "Problem — средний род. После 'dass' глагол в конце."
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Sie sagt, dass sie sich jetzt vorbereitet",
+        "answer": "Sie sagt, dass sie sich jetzt vorbereitet",
+        "tip": "Готовиться — sich vorbereiten. 'Sich' стоит после подлежащего."
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "Соберите: Важно, чтобы был план.",
+        "words": ["ist", "wichtig", "dass", "Plan", "gibt", "es", "einen", "Es", "ein", "sich"],
+        "correctOrder": ["Es", "ist", "wichtig", "dass", "es", "einen", "Plan", "gibt"],
+        "tip": "План (Plan) — мужской род. Глагол 'gibt' на последнем месте."
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "Выберите: Я тороплюсь, потому что есть дедлайн.",
+        "options": [
+          "Ich beeile mich, weil es einen Termin gibt",
+          "Ich beeile mich, потому что есть Termin",
+          "Ich beeile mir, weil es einen Termin gibt"
+        ],
+        "answer": "Ich beeile mich, weil es einen Termin gibt",
+        "tip": "Торопиться — sich beeilen (Akkusativ — mich). Срок/встреча (Termin) — мужской род."
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "Соберите: Я возьму эту работу, если есть контракт.",
+        "words": ["nehme", "Job", "den", "если", "Vertrag", "mir", "es", "Ich", "einen", "gibt", "wenn", "mich"],
+        "correctOrder": ["Ich", "nehme", "mir", "den", "Job", "wenn", "es", "einen", "Vertrag", "gibt"],
+        "tip": "Брать себе — Dativ. Контракт (Vertrag) — мужской род."
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Er glaubt, dass es kein Geld gibt",
+        "answer": "Er glaubt, dass es kein Geld gibt",
+        "tip": "Geld — средний род. В придаточном глагол 'gibt' в конце."
+      }
+    ]
+  },
+  {
+    "questId": "work_simple_life",
+    "aliases": ["work-basic-vibe"],
+    "title": "Работа: Просто и понятно",
+    "progress": "0/15",
+    "description": "Отрабатываем порядок слов и возвратные глаголы на простых темах: болезни, перерывы, опоздания и деньги.",
+    "conditions": {
+      "goal": "Отработать грамматику на самых простых примерах.",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "Соберите: Я сегодня не работаю, потому что я болен.",
+        "words": ["bin", "Ich", "heute", "nicht", "weil", "ich", "krank", "arbeite"],
+        "correctOrder": ["Ich", "arbeite", "heute", "nicht", "weil", "ich", "krank", "bin"],
+        "tip": "Союз 'weil' отправляет глагол в конец предложения."
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "Выберите: Он говорит, что опаздывает.",
+        "options": [
+          "Er sagt, dass er sich verspätet",
+          "Er sagt, dass er verspätet sich",
+          "Er sagt, что er sich verspätet"
+        ],
+        "answer": "Er sagt, dass er sich verspätet",
+        "tip": "Опаздывать — 'sich verspäten'. В придаточном глагол уходит в конец."
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Schade, dass es keine Arbeit gibt",
+        "answer": "Schade, dass es keine Arbeit gibt",
+        "tip": "После 'es gibt' стоит Akkusativ "
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "Соберите: Я радуюсь, что у меня выходной.",
+        "words": ["freue", "mich", "dass", "frei", "habe", "Ich", "heute", "mir"],
+        "correctOrder": ["Ich", "freue", "mich", "dass", "ich", "heute", "frei", "habe"],
+        "tip": "Радоваться — 'sich freuen' (Akkusativ). Глагол  стоит в конце после 'dass'."
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Выберите: Я тороплюсь, потому что есть дела.",
+        "options": [
+          "Ich beeile mich, weil es Aufgaben gibt",
+          "Ich beeile mich, weil es gibt Aufgaben",
+          "Ich beeile mir, weil es Aufgaben gibt"
+        ],
+        "answer": "Ich beeile mich, weil es Aufgaben gibt",
+        "tip": "Торопиться — 'sich beeilen' . В придаточном глагол в конце."
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Соберите предложение: Я запомню, что завтра есть встреча.",
+        "words": ["merke", "mir", "dass", "morgen", "Termin", "es", "gibt", "Ich", "einen", "mich"],
+        "correctOrder": ["Ich", "merke", "mir", "dass", "es", "morgen", "einen", "Termin", "gibt"],
+        "tip": "Запоминать — 'sich (Dativ) merken'. Встреча (Termin) — мужской род (einen)."
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Er fragt, ob es einen Chef gibt",
+        "answer": "Er fragt, ob es einen Chef gibt",
+        "tip": "После 'es gibt' используем Akkusativ"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "Выберите: Мы злимся, потому что нет перерыва.",
+        "options": [
+          "Wir ärgern uns, weil es keine Pause gibt",
+          "Wir ärgern uns, weil es gibt keine Pause",
+          "Wir ärgern sich, weil es keine Pause gibt"
+        ],
+        "answer": "Wir ärgern uns, weil es keine Pause gibt",
+        "tip": "Злиться — 'sich ärgern'. Неопределенный артикль в Akk"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "Соберите: Я куплю это, если есть деньги.",
+        "words": ["kaufe", "mir", "das", "wenn", "Geld", "gibt", "Ich", "es", "mich"],
+        "correctOrder": ["Ich", "kaufe", "mir", "das", "wenn", "es", "Geld", "gibt"],
+        "tip": "Покупать себе — Dativ. Глагол 'gibt' уходит в конец."
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Выберите верный ответ: Ты видишь, что есть проблема.",
+        "options": [
+          "Du siehst, dass es ein Problem gibt",
+          "Du siehst, dass es gibt ein Problem",
+          "Du siehst, dass es einen Problem gibt"
+        ],
+        "answer": "Du siehst, dass es ein Problem gibt",
+        "tip": "Проблема (Problem) — средний род (ein). 'Gibt' в конце."
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Sie sagt, dass sie sich jetzt wäscht",
+        "answer": "Sie sagt, dass sie sich jetzt wäscht",
+        "tip": "Умываться/мыться — 'sich waschen'. В придаточном глагол в конце."
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "Соберите: Важно, чтобы была работа.",
+        "words": ["ist", "wichtig", "dass", "Arbeit", "gibt", "es", "Es", "sich"],
+        "correctOrder": ["Es", "ist", "wichtig", "dass", "es", "Arbeit", "gibt"],
+        "tip": "В придаточном (dass) глагол 'gibt' стоит на последнем месте."
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "Выберите: Я тороплюсь, потому что времени мало.",
+        "options": [
+          "Ich beeile mich, weil es wenig Zeit gibt",
+          "Ich beeile mich, weil es gibt wenig Zeit",
+          "Ich beeile mir, weil es wenig Zeit gibt"
+        ],
+        "answer": "Ich beeile mich, weil es wenig Zeit gibt",
+        "tip": "Beeilen — 'mich'. Глагол в конце."
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "Соберите: Я возьму это, если есть чек.",
+        "words": ["nehme", "mir", "das", "Quittung", "eine", "если", "es", "gibt", "Ich", "wenn"],
+        "correctOrder": ["Ich", "nehme", "mir", "das", "wenn", "es", "eine", "Quittung", "gibt"],
+        "tip": "Брать — Dativ."
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Напишите услышанное",
+        "text": "Er glaubt, dass es keinen Stress gibt",
+        "answer": "Er glaubt, dass es keinen Stress gibt",
+        "tip": "Стресс (Stress) — мужской род. После 'es gibt' — 'keinen'."
+      }
+    ]
+  },
+  {
+    "questId": "grammar_fresh_mix",
+    "aliases": ["new-real-life-drill"],
+    "title": "Грамматика: Новый уровень",
+    "progress": "0/15",
+    "description": "Отрабатываем порядок слов, возвратные глаголы и es gibt в разных бытовых ситуациях: еда, отдых, покупки и планы.",
+    "conditions": {
+      "goal": "Закрепить темы на свежих примерах без повторов.",
+      "minCorrect": 13,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 50,
+      "xp": 50
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "Соберите: Закажу себе пиццу, так как нет пасты.",
+        "words": ["bestelle", "mir", "Pizza", "eine", "weil", "Pasta", "keine", "gibt", "es", "Ich"],
+        "correctOrder": ["Ich", "bestelle", "mir", "eine", "Pizza", "weil", "es", "keine", "Pasta", "gibt"],
+        "tip": "Sich (Dativ). Глагол в конце после 'weil'."
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "Выберите: Он спрашивает, есть ли здесь вход.",
+        "options": [
+          "Er fragt, ob es hier einen Eingang gibt",
+          "Er fragt, ob es gibt hier einen Eingang",
+          "Er fragt, ob es здесь ein Eingang gibt"
+        ],
+        "answer": "Er fragt, ob es hier einen Eingang gibt",
+        "tip": "Akkusativ. Глагол в конце после 'ob'."
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Напишите: Я отдыхаю, когда есть время.",
+        "text": "Ich ruhe mich aus, wenn es Zeit gibt",
+        "answer": "Ich ruhe mich aus, wenn es Zeit gibt",
+        "tip": "Sich (Akk). Глагол 'gibt' закрывает фразу."
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "Соберите: Она говорит, что сейчас красится.",
+        "words": ["sagt", "dass", "sie", "sich", "jetzt", "schminkt", "Sie", "mich"],
+        "correctOrder": ["Sie", "sagt", "dass", "sie", "sich", "jetzt", "schminkt"],
+        "tip": "Sich (Akk). Глагол в конце после 'dass'."
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Выберите: Куплю себе куртку, если есть скидка.",
+        "options": [
+          "Ich kaufe mir eine Jacke, wenn es einen Rabatt gibt",
+          "Ich kaufe mich eine Jacke, wenn es einen Rabatt gibt",
+          "Ich kaufe mir eine Jacke, если есть Rabatt"
+        ],
+        "answer": "Ich kaufe mir eine Jacke, wenn es einen Rabatt gibt",
+        "tip": "Sich (Dativ). Глагол в конце после 'wenn'."
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Соберите: Жаль, что нет полотенца.",
+        "words": ["Schade", "dass", "es", "Handtuch", "kein", "gibt", "ein"],
+        "correctOrder": ["Schade", "dass", "es", "kein", "Handtuch", "gibt"],
+        "tip": "Akkusativ. Глагол 'gibt' в конце."
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "Напишите: Я тороплюсь, потому что есть дела.",
+        "text": "Ich beeile mich, weil es Aufgaben gibt",
+        "answer": "Ich beeile mich, weil es Aufgaben gibt",
+        "tip": "Sich (Akk). Глагол в конце после 'weil'."
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "Выберите: Мы злимся, что нет солнца.",
+        "options": [
+          "Wir ärgern uns, dass es keine Sonne gibt",
+          "Wir ärgern uns, что нет Sonne",
+          "Wir ärgern sich, dass es keine Sonne gibt"
+        ],
+        "answer": "Wir ärgern uns, dass es keine Sonne gibt",
+        "tip": "Sich (Akk). Глагол 'gibt' в конце."
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "Соберите: Гляну машину, если есть ключ.",
+        "words": ["schaue", "mir", "Auto", "das", "an", "wenn", "Schlüssel", "es", "einen", "gibt", "Ich"],
+        "correctOrder": ["Ich", "schaue", "mir", "das", "Auto", "an", "wenn", "es", "einen", "Schlüssel", "gibt"],
+        "tip": "Sich (Dativ). Глагол в конце после 'wenn'."
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Выберите: Ты видишь, что есть пиво.",
+        "options": [
+          "Du siehst, dass es Bier gibt",
+          "Du siehst, dass es gibt Bier",
+          "Du siehst, dass es einen Bier gibt"
+        ],
+        "answer": "Du siehst, dass es Bier gibt",
+        "tip": "Akkusativ. Глагол в конце после 'dass'."
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "Напишите: Он говорит, что сейчас бреется.",
+        "text": "Er sagt, dass er sich jetzt rasiert",
+        "answer": "Er sagt, dass er sich jetzt rasiert",
+        "tip": "Sich (Akk). Глагол 'rasiert' в конце."
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "Соберите: Важно, чтобы был тренер.",
+        "words": ["ist", "wichtig", "dass", "Trainer", "einen", "es", "gibt", "Es"],
+        "correctOrder": ["Es", "ist", "wichtig", "dass", "es", "einen", "Trainer", "gibt"],
+        "tip": "Akkusativ (м.р.). Глагол в конце."
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "Выберите: Тороплюсь, потому что есть запись (приём).",
+        "options": [
+          "Ich beeile mich, weil es einen Termin gibt",
+          "Ich beeile mich, потому что есть Termin",
+          "Ich beeile mir, weil es einen Termin gibt"
+        ],
+        "answer": "Ich beeile mich, weil es einen Termin gibt",
+        "tip": "Sich (Akk). Глагол в конце."
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "Соберите: Возьму себе кофе, если есть молоко.",
+        "words": ["nehme", "mir", "Kaffee", "einen", "wenn", "Milch", "es", "gibt", "Ich"],
+        "correctOrder": ["Ich", "nehme", "mir", "einen", "Kaffee", "wenn", "es", "Milch", "gibt"],
+        "tip": "Sich (Dativ). Глагол в конце."
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Напишите: Он верит, что теста нет.",
+        "text": "Er glaubt, dass es keinen Test gibt",
+        "answer": "Er glaubt, dass es keinen Test gibt",
+        "tip": "Akkusativ. Глагол 'gibt' в конце."
+      }
+    ]
+  },
+  {
+    "questId": "home_life_mix",
+    "aliases": ["daily-grammar-v1"],
+    "title": "Дом и отдых: Грамматика",
+    "progress": "0/15",
+    "description": "Отрабатываем порядок слов, возвратные глаголы и es gibt в бытовых ситуациях: квартира, друзья, хобби и отдых.",
+    "conditions": {
+      "goal": "Закрепить правила на теме повседневной жизни.",
+      "minCorrect": 13,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 40,
+      "xp": 40
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "Соберите: Иду на встречу, так как там вечеринка.",
+        "words": ["treffe", "mich", "mit", "Leuten", "weil", "Party", "eine", "gibt", "es", "Ich"],
+        "correctOrder": ["Ich", "treffe", "mich", "mit", "Leuten", "weil", "es", "eine", "Party", "gibt"],
+        "tip": "Sich (Akk). Глагол в конце после 'weil'."
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "Выберите: Он говорит, что смотрит фильм.",
+        "options": [
+          "Er sagt, dass er sich einen Film ansieht",
+          "Er sagt, dass er ansieht sich einen Film",
+          "Er sagt, dass er mich einen Film ansieht"
+        ],
+        "answer": "Er sagt, dass er sich einen Film ansieht",
+        "tip": "Sich (Dat). Глагол в конце после 'dass'."
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Напишите: Жаль, что вина нет.",
+        "text": "Schade, dass es keinen Wein gibt",
+        "answer": "Schade, dass es keinen Wein gibt",
+        "tip": "Akkusativ. Глагол 'gibt' в конце."
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "Соберите: Я обдумаю это, если будет шанс.",
+        "words": ["überlege", "mir", "das", "wenn", "Chance", "es", "eine", "gibt", "Ich", "mich"],
+        "correctOrder": ["Ich", "überlege", "mir", "das", "wenn", "es", "eine", "Chance", "gibt"],
+        "tip": "Sich (Dat). Глагол в конце после 'wenn'."
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "Выберите: Я одеваюсь, потому что будет свидание.",
+        "options": [
+          "Ich ziehe mich an, weil es ein Date gibt",
+          "Ich ziehe mich an, потому что есть Date",
+          "Ich ziehe mir an, weil es ein Date gibt"
+        ],
+        "answer": "Ich ziehe mich an, weil es ein Date gibt",
+        "tip": "Sich (Akk). Глагол в конце после 'weil'."
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "Соберите: Жаль, что здесь нет собаки.",
+        "words": ["Schade", "dass", "es", "hier", "Hund", "keinen", "gibt", "один"],
+        "correctOrder": ["Schade", "dass", "es", "hier", "keinen", "Hund", "gibt"],
+        "tip": "Akkusativ. Глагол 'gibt' в конце."
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "Напишите: Она спрашивает, есть ли балкон.",
+        "text": "Sie fragt, ob es einen Balkon gibt",
+        "answer": "Sie fragt, ob es einen Balkon gibt",
+        "tip": "Akkusativ. Глагол 'gibt' в конце после 'ob'."
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "Выберите: Мы отдыхаем, потому что стресса нет.",
+        "options": [
+          "Wir ruhen uns aus, weil es keinen Stress gibt",
+          "Wir ruhen sich aus, weil es keinen Stress gibt",
+          "Wir ruhen uns aus, потому что нет Stress"
+        ],
+        "answer": "Wir ruhen uns aus, weil es keinen Stress gibt",
+        "tip": "Sich (Akk). Глагол 'gibt' в конце."
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "Соберите: Гляну квартиру, если есть ключ.",
+        "words": ["schaue", "mir", "Wohnung", "die", "an", "wenn", "Schlüssel", "es", "einen", "gibt", "Ich"],
+        "correctOrder": ["Ich", "schaue", "mir", "die", "Wohnung", "an", "wenn", "es", "einen", "Schlüssel", "gibt"],
+        "tip": "Sich (Dat). Глагол в конце после 'wenn'."
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "Выберите: Ты видишь, что там ошибка.",
+        "options": [
+          "Du siehst, dass es einen Fehler gibt",
+          "Du siehst, что там есть ошибка",
+          "Du siehst, что там einen Fehler gibt"
+        ],
+        "answer": "Du siehst, dass es einen Fehler gibt",
+        "tip": "Akkusativ. Глагол в конце."
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "Напишите: Он говорит, что сейчас моется.",
+        "text": "Er sagt, dass er sich jetzt wäscht",
+        "answer": "Er sagt, dass er sich jetzt wäscht",
+        "tip": "Sich (Akk). Глагол в конце."
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "Соберите: Важно, чтобы был сад.",
+        "words": ["ist", "wichtig", "dass", "Garten", "einen", "es", "gibt", "Es", "ein"],
+        "correctOrder": ["Es", "ist", "wichtig", "dass", "es", "einen", "Garten", "gibt"],
+        "tip": "Akkusativ. Глагол в конце."
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "Выберите: Мою руки, потому что есть мыло.",
+        "options": [
+          "Ich wasche mir die Hände, weil es Seife gibt",
+          "Ich wasche mich die Hände, weil es Seife gibt",
+          "Ich wasche mir die Hände, потому что есть Seife"
+        ],
+        "answer": "Ich wasche mir die Hände, weil es Seife gibt",
+        "tip": "Sich (Dat). Глагол в конце после 'weil'."
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "Соберите: Возьму комнату, если есть кровать.",
+        "words": ["nehme", "mir", "Zimmer", "das", "wenn", "Bett", "ein", "es", "gibt", "Ich"],
+        "correctOrder": ["Ich", "nehme", "mir", "das", "Zimmer", "wenn", "es", "ein", "Bett", "gibt"],
+        "tip": "Sich (Dat). Глагол в конце."
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "Напишите: Он думает, что проблем нет.",
+        "text": "Er glaubt, dass es kein Problem gibt",
+        "answer": "Er glaubt, dass es kein Problem gibt",
+        "tip": "Akkusativ. Глагол в конце."
+      }
+    ]
+  }
+]
