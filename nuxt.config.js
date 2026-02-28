@@ -57,8 +57,8 @@ export default defineNuxtConfig({
 		},
 		workbox: {
 			navigateFallback: '/',
-			globPatterns: ['**/*.{js,css,ico,png,svg,webp,woff2}'],
-			globIgnores: ['quests/*.json'],
+			globPatterns: ['_nuxt/*.{js,css}', 'favicon.ico', 'pwa-*.png'],
+			globIgnores: ['quests/*.json', 'images/**/*', 'assets/**/*', 'levels/**/*'],
 			runtimeCaching: [
 				{
 					urlPattern: ({ request }) => request.mode === 'navigate',
@@ -66,15 +66,33 @@ export default defineNuxtConfig({
 					options: { cacheName: 'pages-cache' },
 				},
 				{
+					urlPattern: ({ request }) => request.destination === 'image',
+					handler: 'StaleWhileRevalidate',
+					options: {
+						cacheName: 'images-cache',
+						expiration: {
+							maxEntries: 100,
+							maxAgeSeconds: 60 * 60 * 24 * 7,
+						},
+					},
+				},
+				{
 					urlPattern: ({ url }) => url.pathname.startsWith('/quests/'),
 					handler: 'StaleWhileRevalidate',
 					options: {
 						cacheName: 'quests-json-cache',
-						expiration: { maxEntries: 50, maxAgeSeconds: 86400 }
+						expiration: {
+							maxEntries: 50,
+							maxAgeSeconds: 60 * 60 * 24
+						},
 					},
 				},
 			],
 		},
+		devOptions: {
+			enabled: true,
+			type: 'module',
+		}
 	},
 	vuefire: {
 		config: firebaseConfig,
