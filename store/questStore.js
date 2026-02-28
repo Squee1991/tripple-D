@@ -32,38 +32,52 @@ export const useQuestStore = defineStore('quest', () => {
         { title: 'questThemeList.SecondTitle', description: 'questThemeList.SecondDescription' },
         { title: 'questThemeList.ThirdTitle',  description: 'questThemeList.ThirdDescription'  }
     ]
-
     async function loadThemesAndRecipes() {
-        if (!isClient) return
+        if (!isClient || themes.value.length > 0) return
         try {
             const response = await fetch('/quest-themen/themen.json')
             const data = await response.json()
-            const allRecipes = []
-
-            for (const item of data) {
-                try {
-                    const res = await fetch(`/quest-themen/recipes-${item.id}.json`)
-                    const json = await res.json()
-                    allRecipes.push(...json)
-                } catch {
-                    console.warn(`Не удалось загрузить рецепты для темы "${item.id}"`)
-                }
-            }
-            themes.value = data.map((item, index) => {
-                const availableIds = allRecipes
-                    .filter(r => r.theme === item.id && r.title)
-                    .map(r => r.id)
-                return {
-                    ...item,
-                    title: themenMap[index]?.title || '',
-                    description: themenMap[index]?.description || '',
-                    availableIds
-                }
-            })
+            themes.value = data.map((item, index) => ({
+                ...item,
+                title: themenMap[index]?.title || '',
+                description: themenMap[index]?.description || '',
+                availableIds: item.recipeIds || []
+            }))
         } catch (err) {
             console.error('Ошибка загрузки тем:', err)
         }
     }
+    // async function loadThemesAndRecipes() {
+    //     if (!isClient) return
+    //     try {
+    //         const response = await fetch('/quest-themen/themen.json')
+    //         const data = await response.json()
+    //         const allRecipes = []
+    //
+    //         for (const item of data) {
+    //             try {
+    //                 const res = await fetch(`/quest-themen/recipes-${item.id}.json`)
+    //                 const json = await res.json()
+    //                 allRecipes.push(...json)
+    //             } catch {
+    //                 console.warn(`Не удалось загрузить рецепты для темы "${item.id}"`)
+    //             }
+    //         }
+    //         themes.value = data.map((item, index) => {
+    //             const availableIds = allRecipes
+    //                 .filter(r => r.theme === item.id && r.title)
+    //                 .map(r => r.id)
+    //             return {
+    //                 ...item,
+    //                 title: themenMap[index]?.title || '',
+    //                 description: themenMap[index]?.description || '',
+    //                 availableIds
+    //             }
+    //         })
+    //     } catch (err) {
+    //         console.error('Ошибка загрузки тем:', err)
+    //     }
+    // }
 
     async function loadDailyProgress() {
         if (!await initFirebase()) return
@@ -192,14 +206,21 @@ export const useQuestStore = defineStore('quest', () => {
         const user = auth.currentUser
         if (!user) return null
 
-        const { doc, getDoc } = fb
+        const { getDocs, collection } = fb
         const todayKey = getLocalDateKey()
 
+        // Получаем ВСЕ пройденные рецепты пользователя ОДНИМ запросом
+        const snap = await getDocs(collection(db, 'users', user.uid, 'questProgress'))
+        const completedMap = {}
+        snap.forEach(doc => {
+            completedMap[doc.id] = doc.data()
+        })
+
+        // Теперь проверяем в памяти (это бесплатно)
         for (const id of theme.availableIds) {
-            const ref = doc(db, 'users', user.uid, 'questProgress', id)
-            const snap = await getDoc(ref)
-            if (!snap.exists()) return id
-            const lastKey = getLocalDateKey(new Date(snap.data().completedAt))
+            const data = completedMap[id]
+            if (!data) return id
+            const lastKey = getLocalDateKey(new Date(data.completedAt))
             if (lastKey !== todayKey) return id
         }
         return null
