@@ -26,6 +26,17 @@ const siteUrl =
 
 export default defineNuxtConfig({
 	experimental: {payloadExtraction: false},
+	defaults: {
+		nuxtLink: {
+			prefetch: false,
+			noPrefetch: true
+		}
+	},
+	router: {
+		options: {
+			prefetchLinks: false
+		}
+	},
 	compatibilityDate: '2024-11-01',
 	devtools: {enabled: true},
 	modules: [
@@ -97,6 +108,9 @@ export default defineNuxtConfig({
 	vuefire: {
 		config: firebaseConfig,
 		auth: true,
+		firestore: {
+			experimentalForceLongPolling: true,
+		},
 		...(admin ? {admin} : {}),
 	},
 	runtimeConfig: {
