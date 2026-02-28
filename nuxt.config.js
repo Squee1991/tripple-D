@@ -40,7 +40,6 @@ export default defineNuxtConfig({
 	],
 	pwa: {
 		registerType: 'autoUpdate',
-
 		manifest: {
 			name: 'Skillupgerman',
 			short_name: 'Skillupgerman',
@@ -59,18 +58,23 @@ export default defineNuxtConfig({
 		workbox: {
 			navigateFallback: '/',
 			globPatterns: ['**/*.{js,css,ico,png,svg,webp,woff2}'],
+			globIgnores: ['quests/*.json'],
 			runtimeCaching: [
 				{
 					urlPattern: ({ request }) => request.mode === 'navigate',
 					handler: 'NetworkFirst',
 					options: { cacheName: 'pages-cache' },
 				},
+				{
+					urlPattern: ({ url }) => url.pathname.startsWith('/quests/'),
+					handler: 'StaleWhileRevalidate',
+					options: {
+						cacheName: 'quests-json-cache',
+						expiration: { maxEntries: 50, maxAgeSeconds: 86400 }
+					},
+				},
 			],
 		},
-		devOptions: {
-			enabled: true,
-			type: 'module',
-		}
 	},
 	vuefire: {
 		config: firebaseConfig,
@@ -221,18 +225,21 @@ export default defineNuxtConfig({
 		},
 		'/**': {
 			ssr: false,
-			headers: { 'Cache-Control': 'no-cache, no-store, must-revalidate' }
+			headers: { 'Cache-Control': 'public, max-age=0, must-revalidate' }
+		},
+		'/quests/**': {
+			headers: { 'Cache-Control': 'public, max-age=3600, s-maxage=86400' }
 		},
 		'/home': { redirect: { to: '/', statusCode: 301 } },
 		'/about': { redirect: { to: '/', statusCode: 301 } },
 		'/contact': { redirect: { to: '/', statusCode: 301 } },
 		'/admin/**': { status: 404 },
 		'/wp-login.php': { status: 404 },
+		// ОСТАВЛЯЕМ: Кэширование ассетов (уже настроено хорошо)
 		'/_nuxt/**': { headers: { 'Cache-Control': 'public, max-age=31536000, immutable' } },
 		'/sounds/**': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
 		'/sw.js': { headers: { 'Cache-Control': 'public, max-age=7200, must-revalidate' } },
 		'/images/**': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
-		// '/**/*.json': { headers: { 'Cache-Control': 'public, max-age=3600, must-revalidate' } },
 		'/*.png': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
 		'/*.ico': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
 		'/*.webmanifest': { headers: { 'Cache-Control': 'public, max-age=86400' } }
