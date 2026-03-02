@@ -4454,16 +4454,63 @@
     "questFifteenSecondOption": "Minora mehmonxona yonida",
     "questFifteenThirdOption": "Minora mehmonxona orqasida"
   },
+  "pointsTimeOverlay": {
+    "text": "Akademik qalpoqlaringiz yo'qolishdan himoyalangan.",
+    "activeTill": "Gacha faol:",
+    "warning": "Diqqat:",
+    "warningText": "Istalgan vazifa bajarilganda, muzlatish bekor qilinadi va qolgan vaqt kuyib ketadi."
+  },
   "shop": {
     "title": "Buyumlar do'koni",
-    "subText": "To'plangan Artiklislarni o'qishingiz uchun foydali bonuslar va doimiy chegirmalarga almashtiring.",
+    "subText": "To'plangan Articluslarni o'qishingiz uchun foydali bonuslar va doimiy chegirmalarga almashtiring.",
     "bought": "Sotib olindi"
   },
+  "cardLives": {
+    "title": "Jonlar",
+    "description": "Bu yerda jonlar zaxirasini to'ldirishingiz mumkin (Maksimal 5)"
+  },
+  "cardTime": {
+    "title": "Vaqtni to'xtatish",
+    "description": "Qalpoqlaringizni jarimalardan himoya qiladi"
+  },
+  "cardSales": {
+    "title5": "5% Chegirma",
+    "title10": "10% Chegirma",
+    "title15": "15% Chegirma"
+  },
   "cardsShop": {
-    "livesTitle": "Jonlar",
-    "livesDescription": "Bu yerda jonlar zaxirasini to'ldirishingiz mumkin (Maksimal 5)",
     "full": "To'liq",
-    "buy": "Sotib olish"
+    "buy": "Sotib olish",
+    "active": "Faol",
+    "till": "Gacha amal qiladi:",
+    "required": "Kerak:",
+    "ready": "Tayyor!",
+    "extend": "Uaytirish",
+    "buyLives": "Jon sotib olish",
+    "stopTime": "Vaqtni to'xtatish",
+    "have": "Sizda",
+    "from": "dan",
+    "lives": "jon bor.",
+    "toPayment": "To'lov uchun:",
+    "notEnough": "Articluslar yetarli emas",
+    "selectDaysPeriod": "Kunlar sonini tanlang. Bu davrda qalpoqlaringiz yo'qolmaydi.",
+    "maximum": "Maksimum",
+    "cancel": "Bekor qilish",
+    "accessibly": "Tushunarli"
+  },
+  "shopDaysRaw": {
+    "dayFirst": "kun",
+    "daySecond": "kun",
+    "dayThird": "kun",
+    "lifeFirst": "jon",
+    "lifeSecond": "jon",
+    "lifeThird": "jon"
+  },
+  "cardsShopModal": {
+    "modal-desc-first": "Vaqtni to'xtatish faollashtirildi.",
+    "modal-desc-Second": "Holat va amal qilish muddatini",
+    "modal-desc-Third": "Ishtirokchi panelida",
+    "modal-desc-Four": "qalqon belgisini bosish orqali ko'rishingiz mumkin."
   },
   "awardsSection": {
     "congratulations": "Tabriklaymiz! Bu mukofot sizda allaqachon bor!",
@@ -4543,16 +4590,17 @@
     "modalNotAllowEffectClose": "Yopish"
   },
   "pavelOverlay": {
-    "newbie": "Yangi",
-    "rankTitle": "Konferatlar",
-    "rankLabelOne": "- Konferatlar kundalik topshiriqlarni bajarganlik uchun beriladi.",
-    "rankLabelTwo": "- Barcha kundalik topshiriqlarni bajarib, kuniga bitta olishingiz mumkin. Konferatlar uchun mukofotlarni shaxsiy kabinetning «Unvon» bo'limida ko'rish mumkin.",
-    "articleTitle": "Artiklyus",
-    "articleLabelOne": "- Topshiriqlar orqali olinadi: Artikllar amaliyoti, til diyarlari va «O'rganish» bo'limidagi vazifalar.",
-    "articleLabelTwo": "- Til diyarlarida qayta urinishlar va shaxsiy kabinetdagi do'kon uchun sarflanadi.",
+    "newbie": "Yangi o'yinchi",
+    "rankTitle": "Akademik qalpoqlar",
+    "rankLabelOne": "- Akademik qalpoqlar kundalik vazifalarni bajarganlik uchun beriladi.",
+    "rankLabelTwo": "- Kuniga 3 ta olish mumkin. Mukofotlarni profilning 'Unvon' bo'limida ko'rish mumkin.",
+    "rankLabelThree": "- Vazifalar o'tkazib yuborilsa, 3 ta qalpoq olib tashlanadi. Kamida bittasini bajar va jarima bo'lmaydi.",
+    "articleTitle": "Artiklus",
+    "articleLabelOne": "- Artikllar amaliyoti, Til o'lkalari va o'qish vazifalari uchun beriladi.",
+    "articleLabelTwo": "- Til o'lkalarida qayta urinishlar va do'kon uchun sarflanadi.",
     "levelTitle": "Daraja",
-    "levelLabelOne": "- Topshiriqlarni bajarish orqali daraja oshadi.",
-    "levelLabelTwo": "- Daraja oshishi bilan til diyarlaridagi topshiriqlar ochiladi."
+    "levelLabelOne": "- Vazifalarni bajargan sari daraja ko'tariladi.",
+    "levelLabelTwo": "- Daraja ko'tarilishi bilan Til o'lkalaridagi yangi vazifalar ochiladi."
   },
   "idioms": {
     "title": "Frazeologizmlar va idiomalar",
@@ -5738,6 +5786,7 @@
     "errorEmail": "Email kiriting",
     "errorPassword": "Parol kiriting",
     "errorName": "Ism kiriting",
+    "enterMsg": "Xabaringizni kiriting",
     "errorConfirm": "Parollar mos emas",
     "resetSent": "Xat emailingizga yuborildi",
     "emailNotVerified": "Kirishdan oldin emailingizni tasdiqlang.",

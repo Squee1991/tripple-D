@@ -301,41 +301,25 @@ export const userChainStore = defineStore('chain', () => {
 	}
 
 	async function loadQuest(questId, regionKey) {
+		if (!questId || !regionKey) {
+			console.warn('loadQuest: questId или regionKey отсутствуют');
+			return;
+		}
 		loading.value = true
 		error.value = ''
 		quest.value = null
 		resetViewState()
-		currentQuestId.value = String(questId || '')
-		currentRegionKey.value = String(regionKey || '')
+		currentQuestId.value = String(questId)
+		currentRegionKey.value = String(regionKey)
 		justAwarded.value = false
-
 		try {
-			const flatRegions = Object.values(regions).flat()
-			const allRegionKeys = flatRegions.map(r => r.pathTo)
-			const tryLoadFrom = async (region) => {
-				const res = await fetch(`/quests/quests-${region}.json`)
-				if (!res.ok) return null
-				const list = await res.json()
-				const arr = Array.isArray(list) ? list : [list]
-				return arr.find(q => String(q.questId) === String(questId)) || null
-			}
-
-			if (regionKey) {
-				const q = await tryLoadFrom(regionKey)
-				if (q) quest.value = q
-			}
-			if (!quest.value) {
-				for (const key of allRegionKeys) {
-					const q = await tryLoadFrom(key)
-					if (q) {
-						quest.value = q
-						currentRegionKey.value = key
-						break
-					}
-				}
-			}
-			if (!quest.value) throw new Error('Квест не найден')
-
+			const res = await fetch(`/quests/quests-${regionKey}.json`)
+			if (!res.ok) throw new Error(`Файл региона ${regionKey} не найден`)
+			const data = await res.json()
+			const arr = Array.isArray(data) ? data : (data.quests || [data])
+			const found = arr.find(q => String(q.questId) === String(questId))
+			if (!found) throw new Error('Квест не найден в этом файле')
+			quest.value = found
 			await loadProgressFromFirebase()
 			await migrateByAliases(quest.value)
 			const savedProgress = questProgress.value[currentQuestId.value]
@@ -343,20 +327,16 @@ export const userChainStore = defineStore('chain', () => {
 				startRetryMistakes(savedProgress.wrongIndices)
 				const total = totalQuestTasks.value
 				for (let i = 0; i < total; i++) {
-					if (!savedProgress.wrongIndices.includes(i)) {
-						taskResults.value[i] = true
-					} else {
-						taskResults.value[i] = false
-					}
+					taskResults.value[i] = !savedProgress.wrongIndices.includes(i)
 				}
 			} else {
 				initializeTaskQueue(quest.value.tasks.length)
 			}
-			const changed = applyLifeRegenIfNeeded()
-			if (changed) await saveLivesToRoot()
+			if (applyLifeRegenIfNeeded()) await saveLivesToRoot()
 			startLifeTicker()
 		} catch (e) {
 			error.value = e.message || String(e)
+			console.error('Ошибка загрузки квеста:', e)
 		} finally {
 			loading.value = false
 		}

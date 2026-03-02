@@ -5,7 +5,7 @@
 <!--    <VStepHint v-if="showStepHint" @close="showStepHint = false"/>-->
 <!--      <FeedBack/>-->
     <VLost/>
-    <VRankOverlay/>
+<!--    <VRankOverlay/>-->
     <VInstallPwa/>
   </NuxtLayout>
 </template>
@@ -83,10 +83,12 @@ onMounted(() => {
 
 onMounted(async () => {
   await learningStore.loadFromFirebase()
-  sentencesStore.loadSentences()
-  questStore.loadDailyProgress()
-  cardStore.loadCreatedCount()
-  statsStore.loadLocalStats()
+  // sentencesStore.loadSentences()
+  if (authStore.uid) {
+    questStore.loadDailyProgress()
+    cardStore.loadCreatedCount()
+    statsStore.loadLocalStats()
+  }
   setTimeout(() => {
     if (!achStore.showPopup && !showStepHint.value) {
       onToastFinished()

@@ -4454,16 +4454,63 @@
     "questFifteenSecondOption": "The tower is next to the hotel",
     "questFifteenThirdOption": "The tower is behind the hotel"
   },
+  "pointsTimeOverlay": {
+    "text": "Your mortarboards are protected from expiring.",
+    "activeTill": "Active until:",
+    "warning": "Warning:",
+    "warningText": "When any task is completed, the freeze is reset and the remaining time is lost."
+  },
   "shop": {
     "title": "Item Shop",
-    "subText": "Exchange your accumulated Articluses for useful bonuses and permanent discounts for your studies.",
+    "subText": "Exchange accumulated Articluses for useful bonuses and permanent discounts for your studies.",
     "bought": "Bought"
   },
+  "cardLives": {
+    "title": "Lives",
+    "description": "Here you can refill your lives (Maximum 5)"
+  },
+  "cardTime": {
+    "title": "Time Stop",
+    "description": "Protects your mortarboards from penalties"
+  },
+  "cardSales": {
+    "title5": "5% Discount",
+    "title10": "10% Discount",
+    "title15": "15% Discount"
+  },
   "cardsShop": {
-    "livesTitle": "Lives",
-    "livesDescription": "Here you can refill your lives (Maximum 5)",
     "full": "Full",
-    "buy": "Buy"
+    "buy": "Buy",
+    "active": "Active",
+    "till": "Valid until:",
+    "required": "Required:",
+    "ready": "Ready!",
+    "extend": "Extend",
+    "buyLives": "Buy Lives",
+    "stopTime": "Time Stop",
+    "have": "You have",
+    "from": "out of",
+    "lives": "lives.",
+    "toPayment": "To pay:",
+    "notEnough": "Not enough Articluses",
+    "selectDaysPeriod": "Select the number of days. During this period, your mortarboards will not expire.",
+    "maximum": "Maximum",
+    "cancel": "Cancel",
+    "accessibly": "Got it"
+  },
+  "shopDaysRaw": {
+    "dayFirst": "day",
+    "daySecond": "days",
+    "dayThird": "days",
+    "lifeFirst": "life",
+    "lifeSecond": "lives",
+    "lifeThird": "lives"
+  },
+  "cardsShopModal": {
+    "modal-desc-first": "Time stop activated.",
+    "modal-desc-Second": "Status and expiration date can be seen in the",
+    "modal-desc-Third": "Participant Panel",
+    "modal-desc-Four": "by clicking on the shield icon."
   },
   "awardsSection": {
     "congratulations": "Congratulations! You already have this award!",
@@ -4544,15 +4591,16 @@
   },
   "pavelOverlay": {
     "newbie": "Newbie",
-    "rankTitle": "Conferats",
-    "rankLabelOne": "- Conferats are awarded for completing daily tasks.",
-    "rankLabelTwo": "- You can earn one per day by completing all daily tasks. Rewards for Conferats can be viewed in your profile under the 'Rank' section.",
+    "rankTitle": "Mortarboards",
+    "rankLabelOne": "- Mortarboards are awarded for completing daily tasks.",
+    "rankLabelTwo": "- You can get 3 per day by completing all daily tasks. Rewards can be viewed in the 'Rank' section of your profile.",
+    "rankLabelThree": "- 3 Mortarboards are deducted for missing daily tasks. Complete at least one to avoid the penalty.",
     "articleTitle": "Articlus",
-    "articleLabelOne": "- Earned through tasks: Article Practice, Language Lands, and 'Learning' section assignments.",
-    "articleLabelTwo": "- Spent on retries in Language Lands and in the shop within your profile.",
+    "articleLabelOne": "- Earned for tasks: Article Practice, Language Lands, and tasks in the 'Learning' section.",
+    "articleLabelTwo": "- Spent on retries in Language Lands and in the shop in your profile.",
     "levelTitle": "Level",
-    "levelLabelOne": "- Your level increases by completing tasks.",
-    "levelLabelTwo": "- Increasing your level unlocks new quests in Language Lands."
+    "levelLabelOne": "- Your level increases as you complete tasks.",
+    "levelLabelTwo": "- Higher levels unlock more tasks in Language Lands."
   },
   "idioms": {
     "title": "Idioms and Phrases",
@@ -5808,7 +5856,6 @@
     "is": "Neuter:",
     "isExample": " — (a, some) book",
     "important": "Note: In the plural, the indefinite article is not used!",
-    "importantExample": " — I see books."
   },
   "exampleTabele": {
     "label": "Article table by gender",

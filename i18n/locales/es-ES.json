@@ -4454,16 +4454,63 @@
     "questFifteenSecondOption": "La torre está al lado del hotel",
     "questFifteenThirdOption": "La torre está detrás del hotel"
   },
+  "pointsTimeOverlay": {
+    "text": "Tus birretes están protegidos contra el vencimiento.",
+    "activeTill": "Activo hasta:",
+    "warning": "Atención:",
+    "warningText": "Al completar cualquier tarea, la congelación se reinicia y el tiempo restante se pierde."
+  },
   "shop": {
     "title": "Tienda de objetos",
     "subText": "Canjea tus Articluses acumulados por bonos útiles y descuentos permanentes para tu aprendizaje.",
     "bought": "Comprado"
   },
+  "cardLives": {
+    "title": "Vidas",
+    "description": "Aquí puedes recargar tus vidas (Máximo 5)"
+  },
+  "cardTime": {
+    "title": "Parada del tiempo",
+    "description": "Protege tus birretes de penalizaciones"
+  },
+  "cardSales": {
+    "title5": "Descuento 5%",
+    "title10": "Descuento 10%",
+    "title15": "Descuento 15%"
+  },
   "cardsShop": {
-    "livesTitle": "Vidas",
-    "livesDescription": "Aquí puedes recargar tus vidas (Máximo 5)",
     "full": "Lleno",
-    "buy": "Comprar"
+    "buy": "Comprar",
+    "active": "Activo",
+    "till": "Válido hasta:",
+    "required": "Requerido:",
+    "ready": "¡Listo!",
+    "extend": "Extender",
+    "buyLives": "Comprar vidas",
+    "stopTime": "Parada del tiempo",
+    "have": "Tienes",
+    "from": "de",
+    "lives": "vidas.",
+    "toPayment": "A pagar:",
+    "notEnough": "Articluses insuficientes",
+    "selectDaysPeriod": "Elige el número de días. Durante este periodo, tus birretes no se perderán.",
+    "maximum": "Máximo",
+    "cancel": "Cancelar",
+    "accessibly": "Entendido"
+  },
+  "shopDaysRaw": {
+    "dayFirst": "día",
+    "daySecond": "días",
+    "dayThird": "días",
+    "lifeFirst": "vida",
+    "lifeSecond": "vidas",
+    "lifeThird": "vidas"
+  },
+  "cardsShopModal": {
+    "modal-desc-first": "Parada del tiempo activada.",
+    "modal-desc-Second": "El estado y la duración se pueden ver en el",
+    "modal-desc-Third": "Panel del participante",
+    "modal-desc-Four": ", haciendo clic en el icono del escudo."
   },
   "awardsSection": {
     "congratulations": "¡Felicidades! ¡Ya tienes esta recompensa!",
@@ -4544,15 +4591,16 @@
   },
   "pavelOverlay": {
     "newbie": "Novato",
-    "rankTitle": "Conferats",
-    "rankLabelOne": "- Los Conferats se otorgan por completar tareas diarias.",
-    "rankLabelTwo": "- Puedes obtener uno al día completando todas las tareas diarias. Las recompensas por Conferats se pueden ver en tu perfil en la sección 'Rango'.",
+    "rankTitle": "Birretes",
+    "rankLabelOne": "- Los birretes se otorgan por completar tareas diarias.",
+    "rankLabelTwo": "- Puedes obtener 3 al día completando todas las tareas. Las recompensas están en la sección 'Rango' de tu perfil.",
+    "rankLabelThree": "- Se restan 3 birretes por saltarse las tareas diarias. Haz al menos una para evitar la penalización.",
     "articleTitle": "Articlus",
-    "articleLabelOne": "- Se obtiene por tareas: Práctica de artículos, Tierras de idiomas y tareas en la sección 'Aprendizaje'.",
-    "articleLabelTwo": "- Se gastan en reintentos en las Tierras de idiomas y en la tienda de tu perfil.",
+    "articleLabelOne": "- Se obtienen en: Práctica de artículos, Tierras de Lenguas y tareas de 'Aprendizaje'.",
+    "articleLabelTwo": "- Se gastan en reintentos en Tierras de Lenguas y en la tienda de tu perfil.",
     "levelTitle": "Nivel",
     "levelLabelOne": "- El nivel aumenta al completar tareas.",
-    "levelLabelTwo": "- Al subir de nivel se desbloquean misiones en las Tierras de idiomas."
+    "levelLabelTwo": "- Al subir de nivel se desbloquean tareas en Tierras de Lenguas."
   },
   "idioms": {
     "title": "Modismos y expresiones idiomáticas",
@@ -5738,6 +5786,7 @@
     "errorEmail": "Introduce email",
     "errorPassword": "Introduce contraseña",
     "errorName": "Introduce nombre",
+    "enterMsg": "Escribe tu mensaje",
     "errorConfirm": "Las contraseñas no coinciden",
     "resetSent": "Se envió un correo al email",
     "emailNotVerified": "Verifica tu email antes de iniciar sesión.",

@@ -340,8 +340,8 @@
         "id": 11,
         "type": "reorder",
         "question": "wildLandsThirdQuest.questEleven",
-        "words": ["Natur", "Die", "schön,", "ist","Sonne", "die ", "scheint"],
-        "correctOrder": ["Die", "Natur", "ist ", "schön,", "die", "Sonne", "scheint"]
+        "words": ["Natur", "Die", "schön", "ist", "Sonne", "die", "scheint"],
+        "correctOrder": ["Die", "Natur", "ist", "schön", "die", "Sonne", "scheint"]
       },
       {
         "id": 12,
@@ -696,7 +696,7 @@
         "type": "reorder",
         "question": "wildLandsSixthQuest.questSix",
         "words": ["ist", "hier", "überall", "Der", "Schnee"],
-        "correctOrder": ["Der ","Schnee", "ist", "überall"]
+        "correctOrder": ["Der", "Schnee", "ist", "überall"]
       },
       {
         "id": 7,

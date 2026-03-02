@@ -1,5 +1,6 @@
 <template>
   <div class="cabinet-wrapper">
+    <!-- Cancel modal -->
     <div v-if="isCancelModalOpen" class="modal-overlay" @click.self="closeCancelModal">
       <div class="modal-card">
         <div class="modal-title">{{ t('cabinet.cancelPremium') }}</div>
@@ -35,9 +36,11 @@
           </button>
         </nav>
       </aside>
+
       <section class="content-panel">
         <ClientOnly>
           <div class="content-body">
+
             <div v-if="activeTabKey === 'info'" class="header-surface">
               <div v-if="isSettingsOpen" class="settings-wrapper">
                 <VSettings
@@ -50,6 +53,7 @@
                     @open="handleSettingsAction"
                 />
               </div>
+
               <div v-else>
                 <div class="user-block">
                   <div class="avatar-container">
@@ -60,6 +64,7 @@
                         class="avatar-current"
                     />
                     <div v-else class="avatar-placeholder"></div>
+
                     <button
                         @click="isAvatarModalOpen = true"
                         class="change-avatar-btn"
@@ -69,12 +74,15 @@
                       <img src="../assets/images/add.svg" alt="Сменить"/>
                     </button>
                   </div>
+
                   <div class="user-info">
                     <div class="user-name">{{ userNameSafe }}</div>
+
                     <div class="exp-bar">
                       <div class="exp-fill" :style="{ width: `${expFillWidth}%` }"></div>
                       <span class="exp-text">{{ learningStore.exp }} / 100 XP</span>
                     </div>
+
                     <div class="level-info">{{ t('cabinet.level') }} {{ learningStore.isLeveling }}</div>
                   </div>
                 </div>
@@ -109,7 +117,10 @@
               </div>
             </div>
             <div v-else>
-              <component :is="components"/>
+              <component
+                  :is="components"
+                  @open="handleSettingsAction"
+              />
             </div>
           </div>
         </ClientOnly>
@@ -180,7 +191,6 @@
         </template>
       </div>
     </div>
-    <!-- Delete modal -->
     <div v-if="isDeleteModalOpen" class="modal-overlay" @click.self="isDeleteModalOpen = false">
       <div class="modal-card">
         <div class="modal-title">{{ t('cabinet.deleteAccTitle') }}</div>
@@ -200,6 +210,22 @@
           </button>
           <button class="btn" @click="isDeleteModalOpen = false" type="button">
             {{ t('cabinet.deleteAccBtnReject') }}
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Snow warning modal -->
+    <div v-if="isSnowWarningModalOpen" class="modal-overlay" @click.self="isSnowWarningModalOpen = false">
+      <div class="modal-card">
+        <div class="modal-title">❄️ {{ t('cabinet.notAllow') }}</div>
+        <p class="modal-text">
+          {{ t('cabinet.modalNotAllowEffectFirst') }} <b>{{ t('cabinet.modalNotAllowEffectSecond') }}</b>.
+          <br/>
+          {{ t('cabinet.modalNotAllowEffectThird') }}
+        </p>
+        <div class="modal-actions">
+          <button class="btn" @click="isSnowWarningModalOpen = false" type="button">
+            {{ t('cabinet.modalNotAllowEffectClose') }}
           </button>
         </div>
       </div>
@@ -267,6 +293,7 @@ const unlockedAwardList = computed(() => awardList.value.filter(a => !a.locked))
 const activeTabKey = ref('info')
 const isSettingsOpen = ref(false)
 
+
 const accountTab = ref('common')
 const ACCOUNT_TABS = computed(() => [
   {key: 'common', label: t('cabinetNav.common'), icon: IdCard, alt: 'IdCard'},
@@ -310,6 +337,7 @@ const TAB_ITEMS = [
   {key: 'shop', label: t('cabinetSidebar.valueThree'), alt: 'shopIcon', icon: ShoppingCart},
   {key: 'settings', label: t('cabinetSidebar.valueFour'), alt: 'settingsIcon', icon: SettingsIcon}
 ]
+
 const tabs = {
   archive: VExampResulut,
   settings: VSettings,
@@ -370,6 +398,10 @@ watch(() => authStore.uid, () => {
   awardList.value = AWARDS.map(a => ({...a, locked: !shownAwardsSet.value.has(a.key)}))
 })
 
+const arrowIcon = computed(() => {
+  return isSettingsOpen.value ? ArrowBackIcon : SettingsIcon
+})
+
 function loadShownAwards() {
   try {
     if (typeof window === 'undefined') return new Set()
@@ -385,6 +417,7 @@ function saveShownAwards(set) {
     if (typeof window === 'undefined') return
     localStorage.setItem(awardsStorageKey.value, JSON.stringify([...set]))
   } catch {
+    // ignore
   }
 }
 
@@ -441,10 +474,12 @@ async function cancelSubscription() {
   }
 }
 
+/** ===== FAQ ===== */
 function goToFaq() {
   router.push('/faq')
 }
 
+/** ===== Avatars ===== */
 function openPurchaseModal(name) {
   purchaseAvatarName.value = name
   purchaseState.value = 'default'
@@ -472,6 +507,7 @@ async function confirmAvatarChange() {
     await authStore.updateUserAvatar(selectedAvatarName.value)
     isAvatarModalOpen.value = false
   } catch {
+    // ignore
   }
 }
 
@@ -486,6 +522,7 @@ watch(isAvatarModalOpen, opened => {
   if (opened) selectedAvatarName.value = authStore.avatar
 })
 
+/** ===== Delete account ===== */
 const isGoogleUser = computed(() => authStore.isGoogleUser)
 
 function openDeleteModal() {
@@ -505,7 +542,6 @@ async function confirmDeleteAccount() {
 }
 
 onMounted(async () => {
-  await authStore.markCancelledInDb()
   await learningStore.loadFromFirebase()
   await eventStore.loadGlobalWinterSettings()
   friendsStore.loadFriends()
@@ -519,6 +555,7 @@ onMounted(async () => {
   padding: 20px;
   overflow: hidden;
 }
+
 
 .layout {
   display: flex;
@@ -665,26 +702,6 @@ onMounted(async () => {
   flex: 0 0 auto;
 }
 
-
-.rank-placeholder {
-  overflow-y: auto;
-  max-height: calc(100vh - 230px);
-}
-
-.rank-placeholder::-webkit-scrollbar {
-  width: 10px;
-}
-
-.rank-placeholder::-webkit-scrollbar-thumb {
-  background: #1e1e1e;
-  border-radius: 10px;
-  border: 2px solid #fff;
-}
-
-.rank-placeholder::-webkit-scrollbar-track {
-  background: transparent;
-}
-
 .gear-btn img {
   width: 26px;
   height: 26px;
@@ -801,7 +818,7 @@ onMounted(async () => {
   align-items: center;
   justify-content: center;
   flex: 0 0 auto;
-  padding: 5px 14px;
+  padding: 4px 14px;
   border: none;
   border-radius: 14px;
   color: var(--titleColor);
@@ -816,13 +833,34 @@ onMounted(async () => {
   background: #eeeaea;
   border: 2px solid black;
   box-shadow: 2px 2px 0 black;
-  border-radius: 10px;
+  border-radius: 8px;
   color: black;
 }
 
 .account-tab:active {
   transform: translate(1px, 1px);
   box-shadow: 0 0 0 #000;
+}
+
+.account-tab-body {
+  margin-top: 4px;
+  max-height: calc(100vh - 160px);
+  overflow-y: auto;
+  padding-right: 3px;
+}
+
+.account-tab-body::-webkit-scrollbar {
+  width: 10px;
+}
+
+.account-tab-body::-webkit-scrollbar-thumb {
+  background: var(--titleColor);
+  border-radius: 15px;
+  border: 2px solid #fff;
+}
+
+.account-tab-body::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 .rank-title {
@@ -836,7 +874,6 @@ onMounted(async () => {
   opacity: .85;
 }
 
-/* Modals */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -849,24 +886,24 @@ onMounted(async () => {
 
 .modal-card {
   background: #fef8e4;
-  border: 3px solid #000;
+  border: 2px solid #000;
   border-radius: 20px;
   padding: 2rem;
   width: 90%;
   max-width: 440px;
-  box-shadow: 6px 6px 0 #000;
+  box-shadow: 3px 3px 0 #000;
   text-align: center;
 }
 
 .modal-title {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 900;
   font-style: italic;
   margin-bottom: 1rem;
 }
 
 .modal-text {
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -912,7 +949,7 @@ onMounted(async () => {
   background: #f44336;
   color: #fff;
 }
-/* Avatar modal */
+
 .avatar-modal-overlay {
   position: fixed;
   inset: 0;
@@ -998,28 +1035,32 @@ onMounted(async () => {
   margin-left: 8px;
   font-size: .9rem;
 }
-/* Hover effects desktop */
+
+
 @media (min-width: 1024px) {
   .back-btn:hover {
     transform: translate(2px, 2px);
     box-shadow: 0 0 0 #000;
   }
+
   .tab-vertical:hover {
     transform: translate(1px, 1px);
     box-shadow: 0 0 0 #000;
   }
+
   .gear-btn:hover {
     transform: translate(1px, 1px);
     box-shadow: 0 0 0 #000;
   }
 }
-/* Mobile layout */
+
 @media (max-width: 1023px) {
   .cabinet-wrapper {
     height: 100vh;
     overflow: hidden;
     padding: 0;
   }
+
   .sidebar-panel {
     position: fixed;
     left: 50%;
@@ -1064,8 +1105,8 @@ onMounted(async () => {
   }
 
   .tab-icon {
-    width: 28px;
-    height: 28px;
+    width: 35px;
+    height: 35px;
   }
 
   .back-btn {
@@ -1089,9 +1130,11 @@ onMounted(async () => {
     box-shadow: none;
     border-radius: 0;
   }
+
   .exp-bar {
     width: 190px;
   }
+
 }
 
 @media ( max-width: 767px) {
@@ -1100,14 +1143,17 @@ onMounted(async () => {
   }
 }
 
+
 @media (max-width: 420px) {
   .tab-icon {
-    width: 32px;
-    height: 32px;
+    width: 35px;
+    height: 35px;
   }
+
   .setting-title {
     font-size: 24px;
   }
+
   .exp-bar {
     width: 170px;
   }

@@ -4454,16 +4454,63 @@
     "questFifteenSecondOption": "La tour est à côté de l'hôtel",
     "questFifteenThirdOption": "La tour est derrière l'hôtel"
   },
+  "pointsTimeOverlay": {
+    "text": "Vos toques sont protégées contre l'expiration.",
+    "activeTill": "Actif jusqu'au :",
+    "warning": "Attention :",
+    "warningText": "Lors de l'achèvement de n'importe quelle tâche, le gel est réinitialisé et le temps restant est perdu."
+  },
   "shop": {
     "title": "Boutique d'objets",
-    "subText": "Échangez vos Articluses accumulés contre des bonus utiles et des réductions permanentes pour vos études.",
+    "subText": "Échangez vos Articluses accumulés contre des bonus utiles et des réductions permanentes.",
     "bought": "Acheté"
   },
+  "cardLives": {
+    "title": "Vies",
+    "description": "Ici, vous pouvez recharger vos vies (Maximum 5)"
+  },
+  "cardTime": {
+    "title": "Arrêt du temps",
+    "description": "Protège vos toques des pénalités"
+  },
+  "cardSales": {
+    "title5": "Remise 5%",
+    "title10": "Remise 10%",
+    "title15": "Remise 15%"
+  },
   "cardsShop": {
-    "livesTitle": "Vies",
-    "livesDescription": "Ici, vous pouvez recharger vos vies (Maximum 5)",
     "full": "Plein",
-    "buy": "Acheter"
+    "buy": "Acheter",
+    "active": "Actif",
+    "till": "Valable jusqu'au :",
+    "required": "Requis :",
+    "ready": "Prêt !",
+    "extend": "Prolonger",
+    "buyLives": "Acheter des vies",
+    "stopTime": "Arrêt du temps",
+    "have": "Vous avez",
+    "from": "sur",
+    "lives": "vies.",
+    "toPayment": "À payer :",
+    "notEnough": "Pas assez d'Articluses",
+    "selectDaysPeriod": "Choisissez le nombre de jours. Pendant cette période, vos toques ne seront pas perdues.",
+    "maximum": "Maximum",
+    "cancel": "Annuler",
+    "accessibly": "C'est compris"
+  },
+  "shopDaysRaw": {
+    "dayFirst": "jour",
+    "daySecond": "jours",
+    "dayThird": "jours",
+    "lifeFirst": "vie",
+    "lifeSecond": "vies",
+    "lifeThird": "vies"
+  },
+  "cardsShopModal": {
+    "modal-desc-first": "Arrêt du temps activé.",
+    "modal-desc-Second": "Le statut et la durée peuvent être consultés dans le",
+    "modal-desc-Third": "Panneau du participant",
+    "modal-desc-Four": "en cliquant sur l'icône du bouclier."
   },
   "awardsSection": {
     "congratulations": "Félicitations ! Vous possédez déjà cette récompense !",
@@ -4535,6 +4582,7 @@
     "deleteAccBtnReject": "Annuler",
     "boughtAvatar": "Avatar acheté",
     "notEnoughtArticles": "Pas assez d'Articlus",
+    "boughtBtn": "Ok",
     "notAllow": "Effet non disponible",
     "modalNotAllowEffectFirst": "Cet effet ne peut être débloqué que lors de l'événement",
     "modalNotAllowEffectSecond": "« Murmure de l'Hiver »",
@@ -4543,15 +4591,16 @@
   },
   "pavelOverlay": {
     "newbie": "Novice",
-    "rankTitle": "Conférats",
-    "rankLabelOne": "- Les Conférats sont attribués pour l'accomplissement des tâches quotidiennes.",
-    "rankLabelTwo": "- Vous pouvez en obtenir un par jour en terminant toutes les tâches quotidiennes. Les récompenses pour les Conférats peuvent être consultées dans votre profil dans la section « Rang ».",
+    "rankTitle": "Toques",
+    "rankLabelOne": "- Les toques sont attribuées pour l'accomplissement des tâches quotidiennes.",
+    "rankLabelTwo": "- Tu peux en obtenir 3 par jour en finissant tout. Voir les récompenses dans la section 'Rang' du profil.",
+    "rankLabelThree": "- 3 toques sont déduites si tu manques les tâches. Fais-en au moins une pour éviter la pénalité.",
     "articleTitle": "Articlus",
-    "articleLabelOne": "- S'obtient via les tâches : Pratique des articles, terres de langues et tâches de la section « Apprentissage ».",
-    "articleLabelTwo": "- Se dépense pour des tentatives supplémentaires dans les terres de langues et dans la boutique du profil.",
+    "articleLabelOne": "- Obtenu via : Pratique des articles, Terres de Langues et quêtes de 'Formation'.",
+    "articleLabelTwo": "- Utilisé pour les essais dans les Terres de Langues et dans la boutique du profil.",
     "levelTitle": "Niveau",
     "levelLabelOne": "- Le niveau augmente en accomplissant des tâches.",
-    "levelLabelTwo": "- Monter de niveau débloque des quêtes dans les terres de langues."
+    "levelLabelTwo": "- Les niveaux supérieurs débloquent des tâches dans les Terres de Langues."
   },
   "idioms": {
     "title": "Idiomes et expressions",
@@ -5737,6 +5786,7 @@
     "errorEmail": "Veuillez entrer un e-mail",
     "errorPassword": "Veuillez entrer un mot de passe",
     "errorName": "Veuillez entrer un nom",
+    "enterMsg": "Entrez votre message",
     "errorConfirm": "Les mots de passe ne correspondent pas",
     "resetSent": "E-mail de réinitialisation envoyé",
     "emailNotVerified": "Veuillez vérifier votre e-mail avant de vous connecter.",
