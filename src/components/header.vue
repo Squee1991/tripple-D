@@ -260,6 +260,7 @@ const menuItems = computed(() => {
                 valueKey: 'sub.verbs',
                 subChildren: [
                   {id: 'verb-theory', url: '/verbs-theory', valueKey: 'underSub.verbsTheory'},
+                  // {id: 'verbs', url: '/verb-forms', valueKey: 'Формы глаголов'},
                   {id: 'tenses', url: '/tenses', valueKey: 'underSub.verbFirst'},
                   {id: 'modalVerbs', url: '/modal-verbs', valueKey: 'underSub.verbSecond'},
                   {id: 'verb-types', url: '/verb-types', valueKey: 'underSub.verbTypes'}
@@ -291,6 +292,7 @@ const menuItems = computed(() => {
                   {id: 'comparison', url: '/adjective-comparison', valueKey: 'underSub.comparison'}
                 ],
               },
+
               // {id: 'description', url: '/description-images' , valueKey: 'Описание картинок'},
               {id: 'themen', url: '/thematic-learning', valueKey: 'sub.themen'},
               {id: 'cards', url: '/create-cards', valueKey: 'sub.card'},

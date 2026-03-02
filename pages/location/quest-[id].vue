@@ -252,7 +252,7 @@
       <div class="modal__window">
         <div class="modal__title">💡</div>
         <div class="modal__text quest__tip-text">
-          {{ currentTip }}
+          {{ t(currentTip) }}
         </div>
         <div class="modal__actions">
           <button class="btn btn--primary" @click="showTipModal = false">Понятно</button>
