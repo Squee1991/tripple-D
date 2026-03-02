@@ -696,7 +696,7 @@
         "type": "reorder",
         "question": "wildLandsSixthQuest.questSix",
         "words": ["ist", "hier", "überall", "Der", "Schnee"],
-        "correctOrder": ["Der ","Schnee", "ist", "überall"]
+        "correctOrder": ["Der", "Schnee", "ist", "überall"]
       },
       {
         "id": 7,

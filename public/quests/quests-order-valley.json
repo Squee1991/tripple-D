@@ -1791,7 +1791,7 @@
       {
         "id": 5,
         "type": "select",
-        "question": "Выберите: Я одеваюсь, потому что будет свидание.",
+        "question": "Выберите: Я одеваю белую рубашку, потому что иду свидание.",
         "options": [
           "Ich ziehe mich an, weil es ein Date gibt",
           "Ich ziehe mich an, потому что есть Date",
