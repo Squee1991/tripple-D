@@ -1,0 +1,1222 @@
+{
+  "weak": [
+    {
+      "id": 1, "infinitive": "abholen", "translation": "забирать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "hole ab", "du": "holst ab", "er_sie_es": "holt ab", "wir": "holen ab", "ihr": "holt ab", "sie_Sie": "holen ab" },
+      "conjugation_past": { "ich": "holte ab", "du": "holtest ab", "er_sie_es": "holte ab", "wir": "holten ab", "ihr": "holtet ab", "sie_Sie": "holten ab" },
+      "conjugation_perf": { "ich": "habe abgeholt", "du": "hast abgeholt", "er_sie_es": "hat abgeholt", "wir": "haben abgeholt", "ihr": "habt abgeholt", "sie_Sie": "haben abgeholt" }
+    },
+    {
+      "id": 2, "infinitive": "antworten", "translation": "отвечать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "antworte", "du": "antwortest", "er_sie_es": "antwortet", "wir": "antworten", "ihr": "antwortet", "sie_Sie": "antworten" },
+      "conjugation_past": { "ich": "antwortete", "du": "antwortetest", "er_sie_es": "antwortete", "wir": "antworteten", "ihr": "antwortetet", "sie_Sie": "antworteten" },
+      "conjugation_perf": { "ich": "habe geantwortet", "du": "hast geantwortet", "er_sie_es": "hat geantwortet", "wir": "haben geantwortet", "ihr": "habt geantwortet", "sie_Sie": "haben geantwortet" }
+    },
+    {
+      "id": 3, "infinitive": "arbeiten", "translation": "работать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "arbeite", "du": "arbeitest", "er_sie_es": "arbeitet", "wir": "arbeiten", "ihr": "arbeitet", "sie_Sie": "arbeiten" },
+      "conjugation_past": { "ich": "arbeitete", "du": "arbeitetest", "er_sie_es": "arbeitete", "wir": "arbeiteten", "ihr": "arbeitetet", "sie_Sie": "arbeiteten" },
+      "conjugation_perf": { "ich": "habe gearbeitet", "du": "hast gearbeitet", "er_sie_es": "hat gearbeitet", "wir": "haben gearbeitet", "ihr": "habt gearbeitet", "sie_Sie": "haben gearbeitet" }
+    },
+    {
+      "id": 4, "infinitive": "aufhören", "translation": "прекращать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "höre auf", "du": "hörst auf", "er_sie_es": "hört auf", "wir": "hören auf", "ihr": "hört auf", "sie_Sie": "hören auf" },
+      "conjugation_past": { "ich": "hörte auf", "du": "hörtest auf", "er_sie_es": "hörte auf", "wir": "hörten auf", "ihr": "hörtet auf", "sie_Sie": "hörten auf" },
+      "conjugation_perf": { "ich": "habe aufgehört", "du": "hast aufgehört", "er_sie_es": "hat aufgehört", "wir": "haben aufgehört", "ihr": "habt aufgehört", "sie_Sie": "haben aufgehört" }
+    },
+    {
+      "id": 5, "infinitive": "baden", "translation": "купаться", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "bade", "du": "badest", "er_sie_es": "badet", "wir": "baden", "ihr": "badet", "sie_Sie": "baden" },
+      "conjugation_past": { "ich": "badete", "du": "badetest", "er_sie_es": "badete", "wir": "badeten", "ihr": "badetet", "sie_Sie": "badeten" },
+      "conjugation_perf": { "ich": "habe gebadet", "du": "hast gebadet", "er_sie_es": "hat gebadet", "wir": "haben gebadet", "ihr": "habt gebadet", "sie_Sie": "haben gebadet" }
+    },
+    {
+      "id": 6, "infinitive": "bauen", "translation": "строить", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "baue", "du": "baust", "er_sie_es": "baut", "wir": "bauen", "ihr": "baut", "sie_Sie": "bauen" },
+      "conjugation_past": { "ich": "baute", "du": "bautest", "er_sie_es": "baute", "wir": "bauten", "ihr": "bautet", "sie_Sie": " bauten" },
+      "conjugation_perf": { "ich": "habe gebaut", "du": "hast gebaut", "er_sie_es": "hat gebaut", "wir": "haben gebaut", "ihr": "habt gebaut", "sie_Sie": "haben gebaut" }
+    },
+    {
+      "id": 7, "infinitive": "beantworten", "translation": "отвечать (на вопрос)", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "beantworte", "du": "beantwortest", "er_sie_es": "beantwortet", "wir": "beantworten", "ihr": "beantwortet", "sie_Sie": "beantworten" },
+      "conjugation_past": { "ich": "beantwortete", "du": "beantwortetest", "er_sie_es": "beantwortete", "wir": "beantworteten", "ihr": "beantwortetet", "sie_Sie": "beantworteten" },
+      "conjugation_perf": { "ich": "habe beantwortet", "du": "hast beantwortet", "er_sie_es": "hat beantwortet", "wir": "haben beantwortet", "ihr": "habt beantwortet", "sie_Sie": "haben beantwortet" }
+    },
+    {
+      "id": 8, "infinitive": "bedeuten", "translation": "означать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "bedeute", "du": "bedeutest", "er_sie_es": "bedeutet", "wir": "bedeuten", "ihr": "bedeutet", "sie_Sie": "bedeuten" },
+      "conjugation_past": { "ich": "bedeutete", "du": "bedeutetest", "er_sie_es": "bedeutete", "wir": "bedeuteten", "ihr": "bedeutetet", "sie_Sie": "bedeuteten" },
+      "conjugation_perf": { "ich": "habe bedeutet", "du": "hast bedeutet", "er_sie_es": "hat bedeutet", "wir": "haben bedeutet", "ihr": "habt bedeutet", "sie_Sie": "haben bedeutet" }
+    },
+    {
+      "id": 9, "infinitive": "beeilen (sich)", "translation": "торопиться", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "beeile mich", "du": "beeilst dich", "er_sie_es": "beeilt sich", "wir": "beeilen uns", "ihr": "beeilt euch", "sie_Sie": "beeilen sich" },
+      "conjugation_past": { "ich": "beeilte mich", "du": "beeiltest dich", "er_sie_es": "beeilte sich", "wir": "beeilten uns", "ihr": "beeiltet euch", "sie_Sie": "beeilten sich" },
+      "conjugation_perf": { "ich": "habe mich beeilt", "du": "hast dich beeilt", "er_sie_es": "hat sich beeilt", "wir": "haben uns beeilt", "ihr": "habt euch beeilt", "sie_Sie": "haben sich beeilt" }
+    },
+    {
+      "id": 10, "infinitive": "begründen", "translation": "обосновывать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "begründe", "du": "begründest", "er_sie_es": "begründet", "wir": "begründen", "ihr": "begründet", "sie_Sie": "begründen" },
+      "conjugation_past": { "ich": "begründete", "du": "begründetest", "er_sie_es": "begründete", "wir": "begründeten", "ihr": "begründetet", "sie_Sie": "begründeten" },
+      "conjugation_perf": { "ich": "habe begründet", "du": "hast begründet", "er_sie_es": "hat begründet", "wir": "haben begründet", "ihr": "habt begründet", "sie_Sie": "haben begründet" }
+    },
+    {
+      "id": 11, "infinitive": "bellen", "translation": "лаять", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "belle", "du": "bellst", "er_sie_es": "bellt", "wir": "bellen", "ihr": "bellt", "sie_Sie": "bellen" },
+      "conjugation_past": { "ich": "bellte", "du": "belltest", "er_sie_es": "bellte", "wir": "bellten", "ihr": "belltet", "sie_Sie": "bellten" },
+      "conjugation_perf": { "ich": "habe gebellt", "du": "hast gebellt", "er_sie_es": "hat gebellt", "wir": "haben gebellt", "ihr": "habt gebellt", "sie_Sie": "haben gebellt" }
+    },
+    {
+      "id": 12, "infinitive": "benutzen", "translation": "использовать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "benutze", "du": "benutzt", "er_sie_es": "benutzt", "wir": "benutzen", "ihr": "benutzt", "sie_Sie": "benutzen" },
+      "conjugation_past": { "ich": "benutzte", "du": "benutztest", "er_sie_es": "benutzte", "wir": "benutzten", "ihr": "benutztet", "sie_Sie": "benutzten" },
+      "conjugation_perf": { "ich": "habe benutzt", "du": "hast benutzt", "er_sie_es": "hat benutzt", "wir": "haben benutzt", "ihr": "habt benutzt", "sie_Sie": "haben benutzt" }
+    },
+    {
+      "id": 13, "infinitive": "berichten", "translation": "сообщать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "berichte", "du": "berichtest", "er_sie_es": "berichtet", "wir": "berichten", "ihr": "berichtet", "sie_Sie": "berichten" },
+      "conjugation_past": { "ich": "berichtete", "du": "berichtetest", "er_sie_es": "berichtete", "wir": "berichteten", "ihr": "berichtetet", "sie_Sie": "berichteten" },
+      "conjugation_perf": { "ich": "habe berichtet", "du": "hast berichtet", "er_sie_es": "hat berichtet", "wir": "haben berichtet", "ihr": "habt berichtet", "sie_Sie": "haben berichtet" }
+    },
+    {
+      "id": 14, "infinitive": "bestellen", "translation": "заказывать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "bestelle", "du": "bestellst", "er_sie_es": "bestellt", "wir": "bestellen", "ihr": "bestellt", "sie_Sie": "bestellen" },
+      "conjugation_past": { "ich": "bestellte", "du": "bestelltest", "er_sie_es": "bestellte", "wir": "bestellten", "ihr": "bestelltet", "sie_Sie": "bestellten" },
+      "conjugation_perf": { "ich": "habe bestellt", "du": "hast bestellt", "er_sie_es": "hat bestellt", "wir": "haben bestellt", "ihr": "habt bestellt", "sie_Sie": "haben bestellt" }
+    },
+    {
+      "id": 15, "infinitive": "besuchen", "translation": "посещать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "besuche", "du": "besuchst", "er_sie_es": "besucht", "wir": "besuchen", "ihr": "besucht", "sie_Sie": "besuchen" },
+      "conjugation_past": { "ich": "besuchte", "du": "besuchtest", "er_sie_es": "besuchte", "wir": "besuchten", "ihr": "besuchtet", "sie_Sie": "besuchten" },
+      "conjugation_perf": { "ich": "habe besucht", "du": "hast besucht", "er_sie_es": "hat besucht", "wir": "haben besucht", "ihr": "habt besucht", "sie_Sie": "haben besucht" }
+    },
+    {
+      "id": 16, "infinitive": "beten", "translation": "молиться", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "bete", "du": "betest", "er_sie_es": "betet", "wir": "beten", "ihr": "betet", "sie_Sie": "beten" },
+      "conjugation_past": { "ich": "betete", "du": "betetest", "er_sie_es": "betete", "wir": "beteten", "ihr": "betetet", "sie_Sie": "beteten" },
+      "conjugation_perf": { "ich": "habe gebetet", "du": "hast gebetet", "er_sie_es": "hat gebetet", "wir": "haben gebetet", "ihr": "habt gebetet", "sie_Sie": "haben gebetet" }
+    },
+    {
+      "id": 17, "infinitive": "bewegen", "translation": "двигать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "bewege", "du": "bewegst", "er_sie_es": "bewegt", "wir": "bewegen", "ihr": "bewegt", "sie_Sie": "bewegen" },
+      "conjugation_past": { "ich": "bewegte", "du": "bewegtest", "er_sie_es": "bewegte", "wir": "bewegten", "ihr": "bewegtet", "sie_Sie": "bewegten" },
+      "conjugation_perf": { "ich": "habe bewegt", "du": "hast bewegt", "er_sie_es": "hat bewegt", "wir": "haben bewegt", "ihr": "habt bewegt", "sie_Sie": "haben bewegt" }
+    },
+    {
+      "id": 18, "infinitive": "bezahlen", "translation": "оплачивать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "bezahle", "du": "bezahlst", "er_sie_es": "bezahlt", "wir": "bezahlen", "ihr": "bezahlt", "sie_Sie": "bezahlen" },
+      "conjugation_past": { "ich": "bezahlte", "du": "bezahltest", "er_sie_es": "bezahlte", "wir": "bezahlten", "ihr": "bezahltet", "sie_Sie": "bezahlten" },
+      "conjugation_perf": { "ich": "habe bezahlt", "du": "hast bezahlt", "er_sie_es": "hat bezahlt", "wir": "haben bezahlt", "ihr": "habt bezahlt", "sie_Sie": "haben bezahlt" }
+    },
+    {
+      "id": 19, "infinitive": "blicken", "translation": "глядеть", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "blicke", "du": "blickst", "er_sie_es": "blickt", "wir": "blicken", "ihr": "blickt", "sie_Sie": "blicken" },
+      "conjugation_past": { "ich": "blickte", "du": "blicktest", "er_sie_es": "blickte", "wir": "blickten", "ihr": "blicktet", "sie_Sie": "blickten" },
+      "conjugation_perf": { "ich": "habe geblickt", "du": "hast geblickt", "er_sie_es": "hat geblickt", "wir": "haben geblickt", "ihr": "habt geblickt", "sie_Sie": "haben geblickt" }
+    },
+    {
+      "id": 20, "infinitive": "brauchen", "translation": "нуждаться", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "brauche", "du": "brauchst", "er_sie_es": "braucht", "wir": "brauchen", "ihr": "braucht", "sie_Sie": "brauchen" },
+      "conjugation_past": { "ich": "brauchte", "du": "brauchtest", "er_sie_es": "brauchte", "wir": "brauchten", "ihr": "brauchtet", "sie_Sie": "brauchten" },
+      "conjugation_perf": { "ich": "habe gebraucht", "du": "hast gebraucht", "er_sie_es": "hat gebraucht", "wir": "haben gebraucht", "ihr": "habt gebraucht", "sie_Sie": "haben gebraucht" }
+    },
+    {
+      "id": 21, "infinitive": "buchen", "translation": "бронировать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "buche", "du": "buchst", "er_sie_es": "bucht", "wir": "buchen", "ihr": "bucht", "sie_Sie": "buchen" },
+      "conjugation_past": { "ich": "buchte", "du": "buchtest", "er_sie_es": "buchte", "wir": "buchten", "ihr": "buchtet", "sie_Sie": "buchten" },
+      "conjugation_perf": { "ich": "habe gebucht", "du": "hast gebucht", "er_sie_es": "hat gebucht", "wir": "haben gebucht", "ihr": "habt gebucht", "sie_Sie": "haben gebucht" }
+    },
+    {
+      "id": 22, "infinitive": "buchstabieren", "translation": "называть по буквам", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "buchstabiere", "du": "buchstabierst", "er_sie_es": "buchstabiert", "wir": "buchstabieren", "ihr": "buchstabiert", "sie_Sie": "buchstabieren" },
+      "conjugation_past": { "ich": "buchstabierte", "du": "buchstabiertest", "er_sie_es": "buchstabierte", "wir": "buchstabierten", "ihr": "buchstabiertet", "sie_Sie": "buchstabierten" },
+      "conjugation_perf": { "ich": "habe buchstabiert", "du": "hast buchstabiert", "er_sie_es": "hat buchstabiert", "wir": "haben buchstabiert", "ihr": "habt buchstabiert", "sie_Sie": "haben buchstabiert" }
+    },
+    {
+      "id": 23, "infinitive": "danken", "translation": "благодарить", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "danke", "du": "dankst", "er_sie_es": "dankt", "wir": "danken", "ihr": "dankt", "sie_Sie": "danken" },
+      "conjugation_past": { "ich": "dankte", "du": "danktest", "er_sie_es": "dankte", "wir": "dankten", "ihr": "danktet", "sie_Sie": "dankten" },
+      "conjugation_perf": { "ich": "habe gedankt", "du": "hast gedankt", "er_sie_es": "hat gedankt", "wir": "haben gedankt", "ihr": "habt gedankt", "sie_Sie": "haben gedankt" }
+    },
+    {
+      "id": 24, "infinitive": "dauern", "translation": "длиться", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "dauere", "du": "dauerst", "er_sie_es": "dauert", "wir": "dauern", "ihr": "dauert", "sie_Sie": "dauern" },
+      "conjugation_past": { "ich": "dauerte", "du": "dauertest", "er_sie_es": "dauerte", "wir": "dauerten", "ihr": "dauertet", "sie_Sie": "dauerten" },
+      "conjugation_perf": { "ich": "habe gedauert", "du": "hast gedauert", "er_sie_es": "hat gedauert", "wir": "haben gedauert", "ihr": "habt gedauert", "sie_Sie": "haben gedauert" }
+    },
+    {
+      "id": 25, "infinitive": "diskutieren", "translation": "дискутировать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "diskutiere", "du": "diskutierst", "er_sie_es": "diskutiert", "wir": "diskutieren", "ihr": "diskutiert", "sie_Sie": "diskutieren" },
+      "conjugation_past": { "ich": "diskutierte", "du": "diskutiertest", "er_sie_es": "diskutierte", "wir": "diskutierten", "ihr": "diskutiertet", "sie_Sie": "diskutierten" },
+      "conjugation_perf": { "ich": "habe diskutiert", "du": "hast diskutiert", "er_sie_es": "hat diskutiert", "wir": "haben diskutiert", "ihr": "habt diskutiert", "sie_Sie": "haben diskutiert" }
+    },
+    {
+      "id": 26, "infinitive": "drucken", "translation": "печатать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "drucke", "du": "druckst", "er_sie_es": "druckt", "wir": "drucken", "ihr": "druckt", "sie_Sie": "drucken" },
+      "conjugation_past": { "ich": "druckte", "du": "drucktest", "er_sie_es": "druckte", "wir": "druckten", "ihr": "drucktet", "sie_Sie": "druckten" },
+      "conjugation_perf": { "ich": "habe gedruckt", "du": "hast gedruckt", "er_sie_es": "hat gedruckt", "wir": "haben gedruckt", "ihr": "habt gedruckt", "sie_Sie": "haben gedruckt" }
+    },
+    {
+      "id": 27, "infinitive": "drücken", "translation": "нажимать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "drücke", "du": "drückst", "er_sie_es": "drückt", "wir": "drücken", "ihr": "drückt", "sie_Sie": "drücken" },
+      "conjugation_past": { "ich": "drückte", "du": "drücktest", "er_sie_es": "drückte", "wir": "drückten", "ihr": "drücktet", "sie_Sie": "drückten" },
+      "conjugation_perf": { "ich": "habe gedrückt", "du": "hast gedrückt", "er_sie_es": "hat gedrückt", "wir": "haben gedrückt", "ihr": "habt gedrückt", "sie_Sie": "haben gedrückt" }
+    },
+    {
+      "id": 28, "infinitive": "duschen", "translation": "принимать душ", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "dusche", "du": "duschst", "er_sie_es": "duscht", "wir": "duschen", "ihr": "duscht", "sie_Sie": "duschen" },
+      "conjugation_past": { "ich": "duschte", "du": "duschtest", "er_sie_es": "duschte", "wir": "duschten", "ihr": "duschtet", "sie_Sie": "duschten" },
+      "conjugation_perf": { "ich": "habe geduscht", "du": "hast geduscht", "er_sie_es": "hat geduscht", "wir": "haben geduscht", "ihr": "habt geduscht", "sie_Sie": "haben geduscht" }
+    },
+    {
+      "id": 29, "infinitive": "entschuldigen", "translation": "извинять", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "entschuldige", "du": "entschuldigst", "er_sie_es": "entschuldigt", "wir": "entschuldigen", "ihr": "entschuldigt", "sie_Sie": "entschuldigen" },
+      "conjugation_past": { "ich": "entschuldigte", "du": "entschuldigtest", "er_sie_es": "entschuldigte", "wir": "entschuldigten", "ihr": "entschuldigtet", "sie_Sie": "entschuldigten" },
+      "conjugation_perf": { "ich": "habe entschuldigt", "du": "hast entschuldigt", "er_sie_es": "hat entschuldigt", "wir": "haben entschuldigt", "ihr": "habt entschuldigt", "sie_Sie": "haben entschuldigt" }
+    },
+    {
+      "id": 30, "infinitive": "erinnern (sich)", "translation": "помнить", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "erinnere mich", "du": "erinnerst dich", "er_sie_es": "erinnert sich", "wir": "erinnern uns", "ihr": "erinnert euch", "sie_Sie": "erinnern sich" },
+      "conjugation_past": { "ich": "erinnerte mich", "du": "erinnertest dich", "er_sie_es": "erinnerte sich", "wir": "erinnern uns", "ihr": "erinnertet euch", "sie_Sie": "erinnern sich" },
+      "conjugation_perf": { "ich": "habe mich erinnert", "du": "hast dich erinnert", "er_sie_es": "hat sich erinnert", "wir": "haben uns erinnert", "ihr": "habt euch erinnert", "sie_Sie": "haben sich erinnert" }
+    },
+    {
+      "id": 31, "infinitive": "erklären", "translation": "объяснять", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "erkläre", "du": "erklärst", "er_sie_es": "erklärt", "wir": "erklären", "ihr": "erklärt", "sie_Sie": "erklären" },
+      "conjugation_past": { "ich": "erklärte", "du": "erklärtest", "er_sie_es": "erklärte", "wir": "erklärten", "ihr": "erklärtet", "sie_Sie": "erklärten" },
+      "conjugation_perf": { "ich": "habe erklärt", "du": "hast erklärt", "er_sie_es": "hat erklärt", "wir": "haben erklärt", "ihr": "habt erklärt", "sie_Sie": "haben erklärt" }
+    },
+    {
+      "id": 32, "infinitive": "erlauben", "translation": "разрешать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "erlaube", "du": "erlaubst", "er_sie_es": "erlaubt", "wir": "erlauben", "ihr": "erlaubt", "sie_Sie": "erlauben" },
+      "conjugation_past": { "ich": "erlaubte", "du": "erlaubtest", "er_sie_es": "erlaubte", "wir": "erlaubten", "ihr": "erlaubtet", "sie_Sie": "erlaubten" },
+      "conjugation_perf": { "ich": "habe erlaubt", "du": "hast erlaubt", "er_sie_es": "hat erlaubt", "wir": "haben erlaubt", "ihr": "habt erlaubt", "sie_Sie": "haben erlaubt" }
+    },
+    {
+      "id": 33, "infinitive": "erleben", "translation": "переживать (событие)", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "erlebe", "du": "erlebst", "er_sie_es": "erlebt", "wir": "erleben", "ihr": "erlebt", "sie_Sie": "erleben" },
+      "conjugation_past": { "ich": "erlebte", "du": "erlebtest", "er_sie_es": "erlebte", "wir": "erlebten", "ihr": "erlebtet", "sie_Sie": "erlebten" },
+      "conjugation_perf": { "ich": "habe erlebt", "du": "hast erlebt", "er_sie_es": "hat erlebt", "wir": "haben erlebt", "ihr": "habt erlebt", "sie_Sie": "haben erlebt" }
+    },
+    {
+      "id": 34, "infinitive": "erzählen", "translation": "рассказывать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "erzähle", "du": "erzählst", "er_sie_es": "erzählt", "wir": "erzählen", "ihr": "erzählt", "sie_Sie": "erzählen" },
+      "conjugation_past": { "ich": "erzählte", "du": "erzähltest", "er_sie_es": "erzählte", "wir": "erzählten", "ihr": "erzähltet", "sie_Sie": "erzählten" },
+      "conjugation_perf": { "ich": "habe erzählt", "du": "hast erzählt", "er_sie_es": "hat erzählt", "wir": "haben erzählt", "ihr": "habt erzählt", "sie_Sie": "haben erzählt" }
+    },
+    {
+      "id": 35, "infinitive": "fehlen", "translation": "отсутствовать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "fehle", "du": "fehlst", "er_sie_es": "fehlt", "wir": "fehlen", "ihr": "fehlt", "sie_Sie": "fehlen" },
+      "conjugation_past": { "ich": "fehlte", "du": "fehltest", "er_sie_es": "fehlte", "wir": "fehlten", "ihr": "fehltet", "sie_Sie": "fehlten" },
+      "conjugation_perf": { "ich": "habe gefehlt", "du": "hast gefehlt", "er_sie_es": "hat gefehlt", "wir": "haben gefehlt", "ihr": "habt gefehlt", "sie_Sie": "haben gefehlt" }
+    },
+    {
+      "id": 36, "infinitive": "feiern", "translation": "праздновать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "feiere", "du": "feierst", "er_sie_es": "feiert", "wir": "feiern", "ihr": "feiert", "sie_Sie": "feiern" },
+      "conjugation_past": { "ich": "feierte", "du": "feiertest", "er_sie_es": "feierte", "wir": "feierten", "ihr": "feiertet", "sie_Sie": "feierten" },
+      "conjugation_perf": { "ich": "habe gefeiert", "du": "hast gefeiert", "er_sie_es": "hat gefeiert", "wir": "haben gefeiert", "ihr": "habt gefeiert", "sie_Sie": "haben gefeiert" }
+    },
+    {
+      "id": 37, "infinitive": "fotografieren", "translation": "фотографировать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "fotografiere", "du": "fotografierst", "er_sie_es": "fotografiert", "wir": "fotografieren", "ihr": "fotografiert", "sie_Sie": "fotografieren" },
+      "conjugation_past": { "ich": "fotografierte", "du": "fotografiertest", "er_sie_es": "fotografierte", "wir": "fotografierten", "ihr": "fotografiertet", "sie_Sie": "fotografierten" },
+      "conjugation_perf": { "ich": "habe fotografiert", "du": "hast fotografiert", "er_sie_es": "hat fotografiert", "wir": "haben fotografiert", "ihr": "habt fotografiert", "sie_Sie": "haben fotografiert" }
+    },
+    {
+      "id": 38, "infinitive": "fragen", "translation": "спрашивать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "frage", "du": "fragst", "er_sie_es": "fragt", "wir": "fragen", "ihr": "fragt", "sie_Sie": "fragen" },
+      "conjugation_past": { "ich": "fragte", "du": "fragtest", "er_sie_es": "fragte", "wir": "fragten", "ihr": "fragtet", "sie_Sie": "fragten" },
+      "conjugation_perf": { "ich": "habe gefragt", "du": "hast gefragt", "er_sie_es": "hat gefragt", "wir": "haben gefragt", "ihr": "habt gefragt", "sie_Sie": "haben gefragt" }
+    },
+    {
+      "id": 39, "infinitive": "freuen (sich)", "translation": "радоваться", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "freue mich", "du": "freust dich", "er_sie_es": "freut sich", "wir": "freuen uns", "ihr": "freut euch", "sie_Sie": "freuen sich" },
+      "conjugation_past": { "ich": "freute mich", "du": "freutest dich", "er_sie_es": "freute sich", "wir": "freuten uns", "ihr": "freutet euch", "sie_Sie": "freuten sich" },
+      "conjugation_perf": { "ich": "habe mich gefreut", "du": "hast dich gefreut", "er_sie_es": "hat sich gefreut", "wir": "haben uns gefreut", "ihr": "habt euch gefreut", "sie_Sie": "haben sich gefreut" }
+    },
+    {
+      "id": 40, "infinitive": "frühstücken", "translation": "завтракать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "frühstücke", "du": "frühstückst", "er_sie_es": "frühstückt", "wir": "frühstücken", "ihr": "frühstückt", "sie_Sie": "frühstücken" },
+      "conjugation_past": { "ich": "frühstückte", "du": "frühstücktest", "er_sie_es": "frühstückte", "wir": "frühstückten", "ihr": "frühstücktet", "sie_Sie": "frühstückten" },
+      "conjugation_perf": { "ich": "habe gefrühstückt", "du": "hast gefrühstückt", "er_sie_es": "hat gefrühstückt", "wir": "haben gefrühstückt", "ihr": "habt gefrühstückt", "sie_Sie": "haben gefrühstückt" }
+    },
+    {
+      "id": 41, "infinitive": "fühlen", "translation": "чувствовать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "fühle", "du": "fühlst", "er_sie_es": "fühlt", "wir": "fühlen", "ihr": "fühlt", "sie_Sie": "fühlen" },
+      "conjugation_past": { "ich": "fühlte", "du": "fühltest", "er_sie_es": "fühlte", "wir": "fühlten", "ihr": "fühltet", "sie_Sie": "fühlten" },
+      "conjugation_perf": { "ich": "habe gefühlt", "du": "hast gefühlt", "er_sie_es": "hat gefühlt", "wir": "haben gefühlt", "ihr": "habt gefühlt", "sie_Sie": "haben gefühlt" }
+    },
+    {
+      "id": 42, "infinitive": "gebrauchen", "translation": "употреблять", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "gebrauche", "du": "gebrauchst", "er_sie_es": "gebraucht", "wir": "gebrauchen", "ihr": "gebraucht", "sie_Sie": "gebrauchen" },
+      "conjugation_past": { "ich": "gebrauchte", "du": "gebrauchtest", "er_sie_es": "gebrauchte", "wir": "gebrauchten", "ihr": "gebrauchtet", "sie_Sie": "gebrauchten" },
+      "conjugation_perf": { "ich": "habe gebraucht", "du": "hast gebraucht", "er_sie_es": "hat gebraucht", "wir": "haben gebraucht", "ihr": "habt gebraucht", "sie_Sie": "haben gebraucht" }
+    },
+    {
+      "id": 43, "infinitive": "gehören", "translation": "принадлежать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "gehöre", "du": "gehörst", "er_sie_es": "gehört", "wir": "gehören", "ihr": "gehört", "sie_Sie": "gehören" },
+      "conjugation_past": { "ich": "gehörte", "du": "gehörtest", "er_sie_es": "gehörte", "wir": "gehörten", "ihr": "gehörtet", "sie_Sie": "gehörten" },
+      "conjugation_perf": { "ich": "habe gehört", "du": "hast gehört", "er_sie_es": "hat gehört", "wir": "haben gehört", "ihr": "habt gehört", "sie_Sie": "haben gehört" }
+    },
+    {
+      "id": 44, "infinitive": "glauben", "translation": "верить", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "glaube", "du": "glaubst", "er_sie_es": "glaubt", "wir": "glauben", "ihr": "glaubt", "sie_Sie": "glauben" },
+      "conjugation_past": { "ich": "glaubte", "du": "glaubtest", "er_sie_es": "glaubte", "wir": "glaubten", "ihr": "glaubtet", "sie_Sie": "glaubten" },
+      "conjugation_perf": { "ich": "habe geglaubt", "du": "hast geglaubt", "er_sie_es": "hat geglaubt", "wir": "haben geglaubt", "ihr": "habt geglaubt", "sie_Sie": "haben geglaubt" }
+    },
+    {
+      "id": 45, "infinitive": "grillen", "translation": "жарить на гриле", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "grille", "du": "grillst", "er_sie_es": "grillt", "wir": "grillen", "ihr": "grillt", "sie_Sie": "grillen" },
+      "conjugation_past": { "ich": "grillte", "du": "grilltest", "er_sie_es": "grillte", "wir": "grillten", "ihr": "grilltet", "sie_Sie": "grillten" },
+      "conjugation_perf": { "ich": "habe gegrillt", "du": "hast gegrillt", "er_sie_es": "hat gegrillt", "wir": "haben gegrillt", "ihr": "habt gegrillt", "sie_Sie": "haben gegrillt" }
+    },
+    {
+      "id": 46, "infinitive": "grüßen", "translation": "приветствовать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "grüße", "du": "grüßt", "er_sie_es": "grüßt", "wir": "grüßen", "ihr": "grüßt", "sie_Sie": "grüßen" },
+      "conjugation_past": { "ich": "grüßte", "du": "grüßtest", "er_sie_es": "grüßte", "wir": "grüßten", "ihr": "grüßtet", "sie_Sie": "grüßten" },
+      "conjugation_perf": { "ich": "habe gegrüßt", "du": "hast gegrüßt", "er_sie_es": "hat gegrüßt", "wir": "haben gegrüßt", "ihr": "habt gegrüßt", "sie_Sie": "haben gegrüßt" }
+    },
+    {
+      "id": 47, "infinitive": "handeln", "translation": "действовать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "handele", "du": "handelst", "er_sie_es": "handelt", "wir": "handeln", "ihr": "handelt", "sie_Sie": "handeln" },
+      "conjugation_past": { "ich": "handelte", "du": "handeltest", "er_sie_es": "handelte", "wir": "handelten", "ihr": "handeltet", "sie_Sie": "handelten" },
+      "conjugation_perf": { "ich": "habe gehandelt", "du": "hast gehandelt", "er_sie_es": "hat gehandelt", "wir": "haben gehandelt", "ihr": "habt gehandelt", "sie_Sie": "haben gehandelt" }
+    },
+    {
+      "id": 48, "infinitive": "hassen", "translation": "ненавидеть", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "hasse", "du": "hasst", "er_sie_es": "hasst", "wir": "hassen", "ihr": "hasst", "sie_Sie": "hassen" },
+      "conjugation_past": { "ich": "hasste", "du": "hasstest", "er_sie_es": "hasste", "wir": "hassten", "ihr": "hasstet", "sie_Sie": "hassten" },
+      "conjugation_perf": { "ich": "habe gehasst", "du": "hast gehasst", "er_sie_es": "hat gehasst", "wir": "haben gehasst", "ihr": "habt gehasst", "sie_Sie": "haben gehasst" }
+    },
+    {
+      "id": 49, "infinitive": "heiraten", "translation": "жениться", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "heirate", "du": "heiratest", "er_sie_es": "heiratet", "wir": "heiraten", "ihr": "heiratet", "sie_Sie": "heiraten" },
+      "conjugation_past": { "ich": "heiratete", "du": "heiratetest", "er_sie_es": "heiratete", "wir": "heirateten", "ihr": "heiratetet", "sie_Sie": "heirateten" },
+      "conjugation_perf": { "ich": "habe geheiratet", "du": "hast geheiratet", "er_sie_es": "hat geheiratet", "wir": "haben geheiratet", "ihr": "habt geheiratet", "sie_Sie": "haben geheiratet" }
+    },
+    {
+      "id": 50, "infinitive": "hoffen", "translation": "надеяться", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "hoffe", "du": "hoffst", "er_sie_es": "hofft", "wir": "hoffen", "ihr": "hofft", "sie_Sie": "hoffen" },
+      "conjugation_past": { "ich": "hoffte", "du": "hofftest", "er_sie_es": "hoffte", "wir": "hofften", "ihr": "hofftet", "sie_Sie": "hofften" },
+      "conjugation_perf": { "ich": "habe gehofft", "du": "hast gehofft", "er_sie_es": "hat gehofft", "wir": "haben gehofft", "ihr": "habt gehofft", "sie_Sie": "haben gehofft" }
+    },
+    {
+      "id": 51, "infinitive": "hören", "translation": "слышать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "höre", "du": "hörst", "er_sie_es": "hört", "wir": "hören", "ihr": "hört", "sie_Sie": "hören" },
+      "conjugation_past": { "ich": "hörte", "du": "hörtest", "er_sie_es": "hörte", "wir": "hörten", "ihr": "hörtet", "sie_Sie": "hörten" },
+      "conjugation_perf": { "ich": "habe gehört", "du": "hast gehört", "er_sie_es": "hat gehört", "wir": "haben gehört", "ihr": "habt gehört", "sie_Sie": "haben gehört" }
+    },
+    {
+      "id": 52, "infinitive": "interessieren", "translation": "интересовать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "interessiere", "du": "interessierst", "er_sie_es": "interessiert", "wir": "interessieren", "ihr": "interessiert", "sie_Sie": "interessieren" },
+      "conjugation_past": { "ich": "interessierte", "du": "interessiertest", "er_sie_es": "interessierte", "wir": "interessierten", "ihr": "interessiertet", "sie_Sie": "interessierten" },
+      "conjugation_perf": { "ich": "habe interessiert", "du": "hast interessiert", "er_sie_es": "hat interessiert", "wir": "haben interessiert", "ihr": "habt interessiert", "sie_Sie": "haben interessiert" }
+    },
+    {
+      "id": 53, "infinitive": "kaufen", "translation": "покупать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "kaufe", "du": "kaufst", "er_sie_es": "kauft", "wir": "kaufen", "ihr": "kauft", "sie_Sie": "kaufen" },
+      "conjugation_past": { "ich": "kaufte", "du": "kauftest", "er_sie_es": "kaufte", "wir": "kauften", "ihr": "kauftet", "sie_Sie": "kauften" },
+      "conjugation_perf": { "ich": "habe gekauft", "du": "hast gekauft", "er_sie_es": "hat gekauft", "wir": "haben gekauft", "ihr": "habt gekauft", "sie_Sie": "haben gekauft" }
+    },
+    {
+      "id": 54, "infinitive": "klingeln", "translation": "звенеть", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "klingele", "du": "klingelst", "er_sie_es": "klingelt", "wir": "klingeln", "ihr": "klingelt", "sie_Sie": "klingeln" },
+      "conjugation_past": { "ich": "klingelte", "du": "klingeltest", "er_sie_es": "klingelte", "wir": "klingelten", "ihr": "klingeltet", "sie_Sie": "klingelten" },
+      "conjugation_perf": { "ich": "habe geklingelt", "du": "hast geklingelt", "er_sie_es": "hat geklingelt", "wir": "haben geklingelt", "ihr": "habt geklingelt", "sie_Sie": "haben geklingelt" }
+    },
+    {
+      "id": 55, "infinitive": "kochen", "translation": "готовить", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "koche", "du": "kochst", "er_sie_es": "kocht", "wir": "kochen", "ihr": "kocht", "sie_Sie": "kochen" },
+      "conjugation_past": { "ich": "kochte", "du": "kochtest", "er_sie_es": "kochte", "wir": "kochten", "ihr": "kochtet", "sie_Sie": "kochten" },
+      "conjugation_perf": { "ich": "habe gekocht", "du": "hast gekocht", "er_sie_es": "hat gekocht", "wir": "haben gekocht", "ihr": "habt gekocht", "sie_Sie": "haben gekocht" }
+    },
+    {
+      "id": 56, "infinitive": "korrigieren", "translation": "исправлять", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "korrigiere", "du": "korrigierst", "er_sie_es": "korrigiert", "wir": "korrigieren", "ihr": "korrigiert", "sie_Sie": "korrigieren" },
+      "conjugation_past": { "ich": "korrigierte", "du": "korrigiertest", "er_sie_es": "korrigierte", "wir": "korrigierten", "ihr": "korrigiertet", "sie_Sie": "korrigierten" },
+      "conjugation_perf": { "ich": "habe korrigiert", "du": "hast korrigiert", "er_sie_es": "hat korrigiert", "wir": "haben korrigiert", "ihr": "habt korrigiert", "sie_Sie": "haben korrigiert" }
+    },
+    {
+      "id": 57, "infinitive": "kosten", "translation": "стоить", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "koste", "du": "kostest", "er_sie_es": "kostet", "wir": "kosten", "ihr": "kostet", "sie_Sie": "kosten" },
+      "conjugation_past": { "ich": "kostete", "du": "kostetest", "er_sie_es": "kostete", "wir": "kosteten", "ihr": "kostetet", "sie_Sie": "kosteten" },
+      "conjugation_perf": { "ich": "habe gekostet", "du": "hast gekostet", "er_sie_es": "hat gekostet", "wir": "haben gekostet", "ihr": "habt gekostet", "sie_Sie": "haben gekostet" }
+    },
+    {
+      "id": 58, "infinitive": "kritisieren", "translation": "критиковать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "kritisiere", "du": "kritisierst", "er_sie_es": "kritisiert", "wir": "kritisieren", "ihr": "kritisiert", "sie_Sie": "kritisieren" },
+      "conjugation_past": { "ich": "kritisierte", "du": "kritisiertest", "er_sie_es": "kritisierte", "wir": "kritisierten", "ihr": "kritisiertet", "sie_Sie": "kritisierten" },
+      "conjugation_perf": { "ich": "habe kritisiert", "du": "hast kritisiert", "er_sie_es": "hat kritisiert", "wir": "haben kritisiert", "ihr": "habt kritisiert", "sie_Sie": "haben kritisiert" }
+    },
+    {
+      "id": 59, "infinitive": "küssen", "translation": "целовать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "küsse", "du": "küsst", "er_sie_es": "küsst", "wir": "küssen", "ihr": "küsst", "sie_Sie": "küssen" },
+      "conjugation_past": { "ich": "küsste", "du": "küsstest", "er_sie_es": "küsste", "wir": "küssten", "ihr": "küsstet", "sie_Sie": "küssten" },
+      "conjugation_perf": { "ich": "habe geküsst", "du": "hast geküsst", "er_sie_es": "hat geküsst", "wir": "haben geküsst", "ihr": "habt geküsst", "sie_Sie": "haben geküsst" }
+    },
+    {
+      "id": 60, "infinitive": "lachen", "translation": "смеяться", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "lache", "du": "lachst", "er_sie_es": "lacht", "wir": "lachen", "ihr": "lacht", "sie_Sie": "lachen" },
+      "conjugation_past": { "ich": "lachte", "du": "lachtest", "er_sie_es": "lachte", "wir": "lachten", "ihr": "lachtet", "sie_Sie": "lachten" },
+      "conjugation_perf": { "ich": "habe gelacht", "du": "hast gelacht", "er_sie_es": "hat gelacht", "wir": "haben gelacht", "ihr": "habt gelacht", "sie_Sie": "haben gelacht" }
+    },
+    {
+      "id": 61, "infinitive": "leben", "translation": "жить", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "lebe", "du": "lebst", "er_sie_es": "lebt", "wir": "leben", "ihr": "lebt", "sie_Sie": "leben" },
+      "conjugation_past": { "ich": "lebte", "du": "lebtest", "er_sie_es": "lebte", "wir": "lebten", "ihr": "lebtet", "sie_Sie": "lebten" },
+      "conjugation_perf": { "ich": "habe gelebt", "du": "hast gelebt", "er_sie_es": "hat gelebt", "wir": "haben gelebt", "ihr": "habt gelebt", "sie_Sie": "haben gelebt" }
+    },
+    {
+      "id": 62, "infinitive": "lernen", "translation": "учиться", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "lerne", "du": "lernst", "er_sie_es": "lernt", "wir": "lernen", "ihr": "lernt", "sie_Sie": "lernen" },
+      "conjugation_past": { "ich": "lernte", "du": "lerntest", "er_sie_es": "lernte", "wir": "lernten", "ihr": "lerntet", "sie_Sie": "lernten" },
+      "conjugation_perf": { "ich": "habe gelernt", "du": "hast gelernt", "er_sie_es": "hat gelernt", "wir": "haben gelernt", "ihr": "habt gelernt", "sie_Sie": "haben gelernt" }
+    },
+    {
+      "id": 63, "infinitive": "lieben", "translation": "любить", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "liebe", "du": "liebst", "er_sie_es": "liebt", "wir": "lieben", "ihr": "liebt", "sie_Sie": "lieben" },
+      "conjugation_past": { "ich": "liebte", "du": "liebtest", "er_sie_es": "liebte", "wir": "liebten", "ihr": "liebtet", "sie_Sie": "liebten" },
+      "conjugation_perf": { "ich": "habe geliebt", "du": "hast geliebt", "er_sie_es": "hat geliebt", "wir": "haben geliebt", "ihr": "habt geliebt", "sie_Sie": "haben geliebt" }
+    },
+    {
+      "id": 64, "infinitive": "lösen", "translation": "решать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "löse", "du": "löst", "er_sie_es": "löst", "wir": "lösen", "ihr": "löst", "sie_Sie": "lösen" },
+      "conjugation_past": { "ich": "löste", "du": "löstest", "er_sie_es": "löste", "wir": "lösten", "ihr": "löstet", "sie_Sie": "lösten" },
+      "conjugation_perf": { "ich": "habe gelöst", "du": "hast gelöst", "er_sie_es": "hat gelöst", "wir": "haben gelöst", "ihr": "habt gelöst", "sie_Sie": "haben gelöst" }
+    },
+    {
+      "id": 65, "infinitive": "machen", "translation": "делать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "mache", "du": "machst", "er_sie_es": "macht", "wir": "machen", "ihr": "macht", "sie_Sie": "machen" },
+      "conjugation_past": { "ich": "machte", "du": "machtest", "er_sie_es": "machte", "wir": "machten", "ihr": "machtet", "sie_Sie": "machten" },
+      "conjugation_perf": { "ich": "habe gemacht", "du": "hast gemacht", "er_sie_es": "hat gemacht", "wir": "haben gemacht", "ihr": "habt gemacht", "sie_Sie": "haben gemacht" }
+    },
+    {
+      "id": 66, "infinitive": "meinen", "translation": "считать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "meine", "du": "meinst", "er_sie_es": "meint", "wir": "meinen", "ihr": "meint", "sie_Sie": "meinen" },
+      "conjugation_past": { "ich": "meinte", "du": "meintest", "er_sie_es": "meinte", "wir": "meinten", "ihr": "meintet", "sie_Sie": "meinten" },
+      "conjugation_perf": { "ich": "habe gemeint", "du": "hast gemeint", "er_sie_es": "hat gemeint", "wir": "haben gemeint", "ihr": "habt gemeint", "sie_Sie": "haben gemeint" }
+    },
+    {
+      "id": 67, "infinitive": "mieten", "translation": "арендовать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "miete", "du": "mietest", "er_sie_es": "mietet", "wir": "mieten", "ihr": "mietet", "sie_Sie": "mieten" },
+      "conjugation_past": { "ich": "mietete", "du": "mietetest", "er_sie_es": "mietet", "wir": "mieteten", "ihr": "mietetet", "sie_Sie": "mieteten" },
+      "conjugation_perf": { "ich": "habe gemietet", "du": "hast gemietet", "er_sie_es": "hat gemietet", "wir": "haben gemietet", "ihr": "habt gemietet", "sie_Sie": "haben gemietet" }
+    },
+    {
+      "id": 68, "infinitive": "öffnen", "translation": "открывать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "öffne", "du": "öffnest", "er_sie_es": "öffnet", "wir": "öffnen", "ihr": "öffnet", "sie_Sie": "öffnen" },
+      "conjugation_past": { "ich": "öffnete", "du": "öffnetest", "er_sie_es": "öffnete", "wir": "öffneten", "ihr": "öffnetet", "sie_Sie": "öffneten" },
+      "conjugation_perf": { "ich": "habe geöffnet", "du": "hast geöffnet", "er_sie_es": "hat geöffnet", "wir": "haben geöffnet", "ihr": "habt geöffnet", "sie_Sie": "haben geöffnet" }
+    },
+    {
+      "id": 69, "infinitive": "packen", "translation": "упаковывать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "packe", "du": "packst", "er_sie_es": "packt", "wir": "packen", "ihr": "packt", "sie_Sie": "packen" },
+      "conjugation_past": { "ich": "packte", "du": "packtest", "er_sie_es": "packte", "wir": "packten", "ihr": "packtet", "sie_Sie": "packten" },
+      "conjugation_perf": { "ich": "habe gepackt", "du": "hast gepackt", "er_sie_es": "hat gepackt", "wir": "haben gepackt", "ihr": "habt gepackt", "sie_Sie": "haben gepackt" }
+    },
+    {
+      "id": 70, "infinitive": "passen", "translation": "подходить", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "passe", "du": "passt", "er_sie_es": "passt", "wir": "passen", "ihr": "passt", "sie_Sie": "passen" },
+      "conjugation_past": { "ich": "passte", "du": "passtest", "er_sie_es": "passte", "wir": "passten", "ihr": "passtet", "sie_Sie": "passten" },
+      "conjugation_perf": { "ich": "habe gepasst", "du": "hast gepasst", "er_sie_es": "hat gepasst", "wir": "haben gepasst", "ihr": "habt gepasst", "sie_Sie": "haben gepasst" }
+    },
+    {
+      "id": 71, "infinitive": "planen", "translation": "планировать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "plane", "du": "planst", "er_sie_es": "plant", "wir": "planen", "ihr": "plant", "sie_Sie": "planen" },
+      "conjugation_past": { "ich": "plante", "du": "plantest", "er_sie_es": "plante", "wir": "planten", "ihr": "plantet", "sie_Sie": "planten" },
+      "conjugation_perf": { "ich": "habe geplant", "du": "hast geplant", "er_sie_es": "hat geplant", "wir": "haben geplant", "ihr": "habt geplant", "sie_Sie": "haben geplant" }
+    },
+    {
+      "id": 72, "infinitive": "probieren", "translation": "пробовать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "probiere", "du": "probierst", "er_sie_es": "probiert", "wir": "probieren", "ihr": "probiert", "sie_Sie": "probieren" },
+      "conjugation_past": { "ich": "probierte", "du": "probiertest", "er_sie_es": "probierte", "wir": "probierten", "ihr": "probiertet", "sie_Sie": "probierten" },
+      "conjugation_perf": { "ich": "habe probiert", "du": "hast probiert", "er_sie_es": "hat probiert", "wir": "haben probiert", "ihr": "habt probiert", "sie_Sie": "haben probiert" }
+    },
+    {
+      "id": 73, "infinitive": "putzen", "translation": "чистить", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "putze", "du": "putzt", "er_sie_es": "putzt", "wir": "putzen", "ihr": "putzt", "sie_Sie": "putzen" },
+      "conjugation_past": { "ich": "putzte", "du": "putztest", "er_sie_es": "putzte", "wir": "putzten", "ihr": "putztet", "sie_Sie": "putzten" },
+      "conjugation_perf": { "ich": "habe geputzt", "du": "hast geputzt", "er_sie_es": "hat geputzt", "wir": "haben geputzt", "ihr": "habt geputzt", "sie_Sie": "haben geputzt" }
+    },
+    {
+      "id": 74, "infinitive": "rauchen", "translation": "курить", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "rauche", "du": "rauchst", "er_sie_es": "raucht", "wir": "rauchen", "ihr": "raucht", "sie_Sie": "rauchen" },
+      "conjugation_past": { "ich": "rauchte", "du": "rauchtest", "er_sie_es": "rauchte", "wir": "rauchten", "ihr": "rauchtet", "sie_Sie": "rauchten" },
+      "conjugation_perf": { "ich": "habe geraucht", "du": "hast geraucht", "er_sie_es": "hat geraucht", "wir": "haben geraucht", "ihr": "habt geraucht", "sie_Sie": "haben geraucht" }
+    },
+    {
+      "id": 75, "infinitive": "rechnen", "translation": "считать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "rechne", "du": "rechnest", "er_sie_es": "rechnet", "wir": "rechnen", "ihr": "rechnet", "sie_Sie": "rechnen" },
+      "conjugation_past": { "ich": "rechnete", "du": "rechnetest", "er_sie_es": "rechnete", "wir": "rechneten", "ihr": "rechnetet", "sie_Sie": "rechneten" },
+      "conjugation_perf": { "ich": "habe gerechnet", "du": "hast gerechnet", "er_sie_es": "hat gerechnet", "wir": "haben gerechnet", "ihr": "habt gerechnet", "sie_Sie": "haben gerechnet" }
+    },
+    {
+      "id": 76, "infinitive": "reden", "translation": "разговаривать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "rede", "du": "redest", "er_sie_es": "redet", "wir": "reden", "ihr": "redet", "sie_Sie": "reden" },
+      "conjugation_past": { "ich": "redete", "du": "redetest", "er_sie_es": "redete", "wir": "redeten", "ihr": "redetet", "sie_Sie": "redeten" },
+      "conjugation_perf": { "ich": "habe geredet", "du": "hast geredet", "er_sie_es": "hat geredet", "wir": "haben geredet", "ihr": "habt geredet", "sie_Sie": "haben geredet" }
+    },
+    {
+      "id": 77, "infinitive": "reisen", "translation": "путешествовать", "type": "weak", "hilfsverb": "sein",
+      "conjugation_pres": { "ich": "reise", "du": "reist", "er_sie_es": "reist", "wir": "reisen", "ihr": "reist", "sie_Sie": "reisen" },
+      "conjugation_past": { "ich": "reiste", "du": "reistest", "er_sie_es": "reiste", "wir": "reisten", "ihr": "reistet", "sie_Sie": "reisten" },
+      "conjugation_perf": { "ich": "bin gereist", "du": "bist gereist", "er_sie_es": "ist gereist", "wir": "sind gereist", "ihr": "seid gereist", "sie_Sie": "sind gereist" }
+    },
+    {
+      "id": 78, "infinitive": "sagen", "translation": "сказать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "sage", "du": "sagst", "er_sie_es": "sagt", "wir": "sagen", "ihr": "sagt", "sie_Sie": "sagen" },
+      "conjugation_past": { "ich": "sagte", "du": "sagtest", "er_sie_es": "sagte", "wir": "sagten", "ihr": "sagtet", "sie_Sie": "sagten" },
+      "conjugation_perf": { "ich": "habe gesagt", "du": "hast gesagt", "er_sie_es": "hat gesagt", "wir": "haben gesagt", "ihr": "habt gesagt", "sie_Sie": "haben gesagt" }
+    },
+    {
+      "id": 79, "infinitive": "sammeln", "translation": "собирать", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "sammele", "du": "sammelst", "er_sie_es": "sammelt", "wir": "sammeln", "ihr": "sammelt", "sie_Sie": "sammeln" },
+      "conjugation_past": { "ich": "sammelte", "du": "sammeltest", "er_sie_es": "sammelte", "wir": "sammelten", "ihr": "sammeltet", "sie_Sie": "sammelten" },
+      "conjugation_perf": { "ich": "habe gesammelt", "du": "hast gesammelt", "er_sie_es": "hat gesammelt", "wir": "haben gesammelt", "ihr": "habt gesammelt", "sie_Sie": "haben gesammelt" }
+    },
+    {
+      "id": 80, "infinitive": "schauen", "translation": "смотреть", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "schaue", "du": "schaust", "er_sie_es": "schaut", "wir": "schauen", "ihr": "schaut", "sie_Sie": "schauen" },
+      "conjugation_past": { "ich": "schaute", "du": "schautest", "er_sie_es": "schaute", "wir": "schauten", "ihr": "schautet", "sie_Sie": "schauten" },
+      "conjugation_perf": { "ich": "habe geschaut", "du": "hast geschaut", "er_sie_es": "hat geschaut", "wir": "haben geschaut", "ihr": "habt geschaut", "sie_Sie": "haben geschaut" }
+    },
+    {
+      "id": 81, "infinitive": "schenken", "translation": "дарить", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "schenke", "du": "schenkst", "er_sie_es": "schenkt", "wir": "schenken", "ihr": "schenkt", "sie_Sie": "schenken" },
+      "conjugation_past": { "ich": "schenkte", "du": "schenktest", "er_sie_es": "schenkte", "wir": "schenkten", "ihr": "schenktet", "sie_Sie": "schenkten" },
+      "conjugation_perf": { "ich": "habe geschenkt", "du": "hast geschenkt", "er_sie_es": "hat geschenkt", "wir": "haben geschenkt", "ihr": "habt geschenkt", "sie_Sie": "haben geschenkt" }
+    },
+    {
+      "id": 82, "infinitive": "schmecken", "translation": "быть вкусным", "type": "weak", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "schmecke", "du": "schmeckst", "er_sie_es": "schmeckt", "wir": "schmecken", "ihr": "schmeckt", "sie_Sie": "schmecken" },
+      "conjugation_past": { "ich": "schmeckte", "du": "schmecktest", "er_sie_es": "schmeckte", "wir": "schmeckten", "ihr": "schmecktet", "sie_Sie": "schmeckten" },
+      "conjugation_perf": { "ich": "habe geschmeckt", "du": "hast geschmeckt", "er_sie_es": "hat geschmeckt", "wir": "haben geschmeckt", "ihr": "habt geschmeckt", "sie_Sie": "haben geschmeckt" }
+    }
+  ],
+  "strong": [
+    {
+      "id": 83, "infinitive": "abbiegen", "translation": "поворачивать", "type": "strong", "hilfsverb": "sein",
+      "conjugation_pres": { "ich": "biege ab", "du": "biegst ab", "er_sie_es": "biegt ab", "wir": "biegen ab", "ihr": "biegt ab", "sie_Sie": "biegen ab" },
+      "conjugation_past": { "ich": "bog ab", "du": "bogst ab", "er_sie_es": "bog ab", "wir": "bogen ab", "ihr": "bogt ab", "sie_Sie": "bogen ab" },
+      "conjugation_perf": { "ich": "bin abgebogen", "du": "bist abgebogen", "er_sie_es": "ist abgebogen", "wir": "sind abgebogen", "ihr": "seid abgebogen", "sie_Sie": "sind abgebogen" }
+    },
+    {
+      "id": 84, "infinitive": "anfangen", "translation": "начинать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "fange an", "du": "fängst an", "er_sie_es": "fängt an", "wir": "fangen an", "ihr": "fangt an", "sie_Sie": "fangen an" },
+      "conjugation_past": { "ich": "fing an", "du": "fingst an", "er_sie_es": "fing an", "wir": "fingen an", "ihr": "fingt an", "sie_Sie": "fingen an" },
+      "conjugation_perf": { "ich": "habe angefangen", "du": "hast angefangen", "er_sie_es": "hat angefangen", "wir": "haben angefangen", "ihr": "habt angefangen", "sie_Sie": "haben angefangen" }
+    },
+    {
+      "id": 85, "infinitive": "ankommen", "translation": "прибывать", "type": "strong", "hilfsverb": "sein",
+      "conjugation_pres": { "ich": "komme an", "du": "kommst an", "er_sie_es": "kommt an", "wir": "kommen an", "ihr": "kommt an", "sie_Sie": "kommen an" },
+      "conjugation_past": { "ich": "kam an", "du": "kamst an", "er_sie_es": "kam an", "wir": "kamen an", "ihr": "kamt an", "sie_Sie": "kamen an" },
+      "conjugation_perf": { "ich": "bin angekommen", "du": "bist angekommen", "er_sie_es": "ist angekommen", "wir": "sind angekommen", "ihr": "seid angekommen", "sie_Sie": "sind angekommen" }
+    },
+    {
+      "id": 86, "infinitive": "anrufen", "translation": "звонить", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "rufe an", "du": "rufst an", "er_sie_es": "ruft an", "wir": "rufen an", "ihr": "ruft an", "sie_Sie": "rufen an" },
+      "conjugation_past": { "ich": "rief an", "du": "riefst an", "er_sie_es": "rief an", "wir": "riefen an", "ihr": "rieft an", "sie_Sie": "riefen an" },
+      "conjugation_perf": { "ich": "habe angerufen", "du": "hast angerufen", "er_sie_es": "hat angerufen", "wir": "haben angerufen", "ihr": "habt angerufen", "sie_Sie": "haben angerufen" }
+    },
+    {
+      "id": 87, "infinitive": "anziehen", "translation": "одевать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "ziehe an", "du": "ziehst an", "er_sie_es": "zieht an", "wir": "ziehen an", "ihr": "zieht an", "sie_Sie": "ziehen an" },
+      "conjugation_past": { "ich": "zog an", "du": "zogst an", "er_sie_es": "zog an", "wir": "zogen an", "ihr": "zogt an", "sie_Sie": "zogen an" },
+      "conjugation_perf": { "ich": "habe angezogen", "du": "hast angezogen", "er_sie_es": "hat angezogen", "wir": "haben angezogen", "ihr": "habt angezogen", "sie_Sie": "haben angezogen" }
+    },
+    {
+      "id": 88, "infinitive": "aussehen", "translation": "выглядеть", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "sehe aus", "du": "siehst aus", "er_sie_es": "sieht aus", "wir": "sehen aus", "ihr": "seht aus", "sie_Sie": "sehen aus" },
+      "conjugation_past": { "ich": "sah aus", "du": "sahst aus", "er_sie_es": "sah aus", "wir": "sahen aus", "ihr": "saht aus", "sie_Sie": "sahen aus" },
+      "conjugation_perf": { "ich": "habe ausgesehen", "du": "hast ausgesehen", "er_sie_es": "hat ausgesehen", "wir": "haben ausgesehen", "ihr": "habt ausgesehen", "sie_Sie": "haben ausgesehen" }
+    },
+    {
+      "id": 89, "infinitive": "aufstehen", "translation": "вставать", "type": "strong", "hilfsverb": "sein",
+      "conjugation_pres": { "ich": "stehe auf", "du": "stehst auf", "er_sie_es": "steht auf", "wir": "stehen auf", "ihr": "steht auf", "sie_Sie": "stehen auf" },
+      "conjugation_past": { "ich": "stand auf", "du": "standst auf", "er_sie_es": "stand auf", "wir": "standen auf", "ihr": "standet auf", "sie_Sie": "standen auf" },
+      "conjugation_perf": { "ich": "bin aufgestanden", "du": "bist aufgestanden", "er_sie_es": "ist aufgestanden", "wir": "sind aufgestanden", "ihr": "seid aufgestanden", "sie_Sie": "sind aufgestanden" }
+    },
+    {
+      "id": 90, "infinitive": "backen", "translation": "печь", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "backe", "du": "bäckst", "er_sie_es": "bäckt", "wir": "backen", "ihr": "backt", "sie_Sie": "backen" },
+      "conjugation_past": { "ich": "buk", "du": "bukst", "er_sie_es": "buk", "wir": "buken", "ihr": "bukt", "sie_Sie": "buken" },
+      "conjugation_perf": { "ich": "habe gebacken", "du": "hast gebacken", "er_sie_es": "hat gebacken", "wir": "haben gebacken", "ihr": "habt gebacken", "sie_Sie": "haben gebacken" }
+    },
+    {
+      "id": 91, "infinitive": "befehlen", "translation": "приказывать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "befehle", "du": "befiehlst", "er_sie_es": "befiehlt", "wir": "befehlen", "ihr": "befehlt", "sie_Sie": "befehlen" },
+      "conjugation_past": { "ich": "befahl", "du": "befahlst", "er_sie_es": "befahl", "wir": "befahlen", "ihr": "befahlt", "sie_Sie": "befahlen" },
+      "conjugation_perf": { "ich": "habe befohlen", "du": "hast befohlen", "er_sie_es": "hat befohlen", "wir": "haben befohlen", "ihr": "habt befohlen", "sie_Sie": "haben befohlen" }
+    },
+    {
+      "id": 92, "infinitive": "beginnen", "translation": "начинать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "beginne", "du": "beginnst", "er_sie_es": "beginnt", "wir": "beginnen", "ihr": "beginnt", "sie_Sie": "beginnen" },
+      "conjugation_past": { "ich": "begann", "du": "begannst", "er_sie_es": "begann", "wir": "begannen", "ihr": "begannt", "sie_Sie": "begannen" },
+      "conjugation_perf": { "ich": "habe begonnen", "du": "hast begonnen", "er_sie_es": "hat begonnen", "wir": "haben begonnen", "ihr": "habt begonnen", "sie_Sie": "haben begonnen" }
+    },
+    {
+      "id": 93, "infinitive": "behalten", "translation": "сохранять", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "behalte", "du": "behältst", "er_sie_es": "behält", "wir": "behalten", "ihr": "behaltet", "sie_Sie": "behalten" },
+      "conjugation_past": { "ich": "behielt", "du": "behieltst", "er_sie_es": "behielt", "wir": "behielten", "ihr": "behieltet", "sie_Sie": "behielten" },
+      "conjugation_perf": { "ich": "habe behalten", "du": "hast behalten", "er_sie_es": "hat behalten", "wir": "haben behalten", "ihr": "habt behalten", "sie_Sie": "haben behalten" }
+    },
+    {
+      "id": 94, "infinitive": "beißen", "translation": "кусать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "beiße", "du": "beißt", "er_sie_es": "beißt", "wir": "beißen", "ihr": "beißt", "sie_Sie": "beißen" },
+      "conjugation_past": { "ich": "biss", "du": "bissest", "er_sie_es": "biss", "wir": "bissen", "ihr": "bisset", "sie_Sie": "bissen" },
+      "conjugation_perf": { "ich": "habe gebissen", "du": "hast gebissen", "er_sie_es": "hat gebissen", "wir": "haben gebissen", "ihr": "habt gebissen", "sie_Sie": "haben gebissen" }
+    },
+    {
+      "id": 95, "infinitive": "bekommen", "translation": "получать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "bekomme", "du": "bekommst", "er_sie_es": "bekommt", "wir": "bekommen", "ihr": "bekommt", "sie_Sie": "bekommen" },
+      "conjugation_past": { "ich": "bekam", "du": "bekamst", "er_sie_es": "bekam", "wir": "bekamen", "ihr": "bekamt", "sie_Sie": "bekamen" },
+      "conjugation_perf": { "ich": "habe bekommen", "du": "hast bekommen", "er_sie_es": "hat bekommen", "wir": "haben bekommen", "ihr": "habt bekommen", "sie_Sie": "haben bekommen" }
+    },
+    {
+      "id": 96, "infinitive": "beraten", "translation": "советовать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "berate", "du": "berätst", "er_sie_es": "berät", "wir": "beraten", "ihr": "beratet", "sie_Sie": "beraten" },
+      "conjugation_past": { "ich": "beriet", "du": "berietst", "er_sie_es": "beriet", "wir": "berieten", "ihr": "berietet", "sie_Sie": "berieten" },
+      "conjugation_perf": { "ich": "habe beraten", "du": "hast beraten", "er_sie_es": "hat beraten", "wir": "haben beraten", "ihr": "habt beraten", "sie_Sie": "haben beraten" }
+    },
+    {
+      "id": 97, "infinitive": "beschreiben", "translation": "описывать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "beschreibe", "du": "beschreibst", "er_sie_es": "beschreibt", "wir": "beschreiben", "ihr": "beschreibt", "sie_Sie": "beschreiben" },
+      "conjugation_past": { "ich": "beschrieb", "du": "beschriebst", "er_sie_es": "beschrieb", "wir": "beschrieben", "ihr": "beschriebt", "sie_Sie": "beschrieben" },
+      "conjugation_perf": { "ich": "habe beschrieben", "du": "hast beschrieben", "er_sie_es": "hat beschrieben", "wir": "haben beschrieben", "ihr": "habt beschrieben", "sie_Sie": "haben beschrieben" }
+    },
+    {
+      "id": 98, "infinitive": "betrügen", "translation": "обманывать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "betrüge", "du": "betrügst", "er_sie_es": "betrügt", "wir": "betrügen", "ihr": "betrügt", "sie_Sie": "betrügen" },
+      "conjugation_past": { "ich": "betrog", "du": "betrogst", "er_sie_es": "betrog", "wir": "betrogen", "ihr": "betrogt", "sie_Sie": "betrogen" },
+      "conjugation_perf": { "ich": "habe betrogen", "du": "hast betrogen", "er_sie_es": "hat betrogen", "wir": "haben betrogen", "ihr": "habt betrogen", "sie_Sie": "haben betrogen" }
+    },
+    {
+      "id": 99, "infinitive": "beweisen", "translation": "доказывать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "beweise", "du": "beweist", "er_sie_es": "beweist", "wir": "beweisen", "ihr": "beweist", "sie_Sie": "beweisen" },
+      "conjugation_past": { "ich": "bewies", "du": "bewiesest", "er_sie_es": "bewies", "wir": "bewiesen", "ihr": "bewieset", "sie_Sie": "bewiesen" },
+      "conjugation_perf": { "ich": "habe bewiesen", "du": "hast bewiesen", "er_sie_es": "hat bewiesen", "wir": "haben bewiesen", "ihr": "habt bewiesen", "sie_Sie": "haben bewiesen" }
+    },
+    {
+      "id": 100, "infinitive": "bewerben (sich)", "translation": "подавать заявку", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "bewerbe mich", "du": "bewirbst dich", "er_sie_es": "bewirbt sich", "wir": "bewerben uns", "ihr": "bewerbt euch", "sie_Sie": "bewerben sich" },
+      "conjugation_past": { "ich": "bewarb mich", "du": "bewarbst dich", "er_sie_es": "bewarb sich", "wir": "bewarben uns", "ihr": "bewarbt euch", "sie_Sie": "bewarben sich" },
+      "conjugation_perf": { "ich": "habe mich beworben", "du": "hast dich beworben", "er_sie_es": "hat sich beworben", "wir": "haben uns beworben", "ihr": "habt euch beworben", "sie_Sie": "haben sich beworben" }
+    },
+    {
+      "id": 101, "infinitive": "biegen", "translation": "гнуть", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "biege", "du": "biegst", "er_sie_es": "biegt", "wir": "biegen", "ihr": "biegt", "sie_Sie": "biegen" },
+      "conjugation_past": { "ich": "bog", "du": "bogst", "er_sie_es": "bog", "wir": "bogen", "ihr": "bogt", "sie_Sie": "bogen" },
+      "conjugation_perf": { "ich": "habe gebogen", "du": "hast gebogen", "er_sie_es": "hat gebogen", "wir": "haben gebogen", "ihr": "habt gebogen", "sie_Sie": "haben gebogen" }
+    },
+    {
+      "id": 102, "infinitive": "bieten", "translation": "предлагать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "biete", "du": "bietest", "er_sie_es": "bietet", "wir": "bieten", "ihr": "bietet", "sie_Sie": "bieten" },
+      "conjugation_past": { "ich": "bot", "du": "botst", "er_sie_es": "bot", "wir": "boten", "ihr": "botet", "sie_Sie": "boten" },
+      "conjugation_perf": { "ich": "habe geboten", "du": "hast geboten", "er_sie_es": "hat geboten", "wir": "haben geboten", "ihr": "habt geboten", "sie_Sie": "haben geboten" }
+    },
+    {
+      "id": 103, "infinitive": "binden", "translation": "завязывать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "binde", "du": "bindest", "er_sie_es": "bindet", "wir": "binden", "ihr": "bindet", "sie_Sie": "binden" },
+      "conjugation_past": { "ich": "band", "du": "bandst", "er_sie_es": "band", "wir": "banden", "ihr": "bandet", "sie_Sie": "banden" },
+      "conjugation_perf": { "ich": "habe gebunden", "du": "hast gebunden", "er_sie_es": "hat gebunden", "wir": "haben gebunden", "ihr": "habt gebunden", "sie_Sie": "haben gebunden" }
+    },
+    {
+      "id": 104, "infinitive": "bitten", "translation": "просить", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "bitte", "du": "bittest", "er_sie_es": "bittet", "wir": "bitten", "ihr": "bittet", "sie_Sie": "bitten" },
+      "conjugation_past": { "ich": "bat", "du": "batst", "er_sie_es": "bat", "wir": "baten", "ihr": "batet", "sie_Sie": "baten" },
+      "conjugation_perf": { "ich": "habe gebeten", "du": "hast gebeten", "er_sie_es": "hat gebeten", "wir": "haben gebeten", "ihr": "habt gebeten", "sie_Sie": "haben gebeten" }
+    },
+    {
+      "id": 105, "infinitive": "blasen", "translation": "дуть", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "blase", "du": "bläst", "er_sie_es": "bläst", "wir": "blasen", "ihr": "blast", "sie_Sie": "blasen" },
+      "conjugation_past": { "ich": "blies", "du": "bliesest", "er_sie_es": "blies", "wir": "bliesen", "ihr": "blieset", "sie_Sie": "bliesen" },
+      "conjugation_perf": { "ich": "habe geblasen", "du": "hast geblasen", "er_sie_es": "hat geblasen", "wir": "haben geblasen", "ihr": "habt geblasen", "sie_Sie": "haben geblasen" }
+    },
+    {
+      "id": 106, "infinitive": "bleiben", "translation": "оставаться", "type": "strong", "hilfsverb": "sein",
+      "conjugation_pres": { "ich": "bleibe", "du": "bleibst", "er_sie_es": "bleibt", "wir": "bleiben", "ihr": "bleibt", "sie_Sie": "bleiben" },
+      "conjugation_past": { "ich": "blieb", "du": "bliebst", "er_sie_es": "blieb", "wir": "blieben", "ihr": "bliebt", "sie_Sie": "blieben" },
+      "conjugation_perf": { "ich": "bin geblieben", "du": "bist geblieben", "er_sie_es": "ist geblieben", "wir": "sind geblieben", "ihr": "seid geblieben", "sie_Sie": "sind geblieben" }
+    },
+    {
+      "id": 107, "infinitive": "braten", "translation": "жарить", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "brate", "du": "brätst", "er_sie_es": "brät", "wir": "braten", "ihr": "bratet", "sie_Sie": "braten" },
+      "conjugation_past": { "ich": "briet", "du": "brietst", "er_sie_es": "briet", "wir": "brieten", "ihr": "brietet", "sie_Sie": "brieten" },
+      "conjugation_perf": { "ich": "habe gebraten", "du": "hast gebraten", "er_sie_es": "hat gebraten", "wir": "haben gebraten", "ihr": "habt gebraten", "sie_Sie": "haben gebraten" }
+    },
+    {
+      "id": 108, "infinitive": "brechen", "translation": "ломать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "breche", "du": "brichst", "er_sie_es": "bricht", "wir": "brechen", "ihr": "brecht", "sie_Sie": "brechen" },
+      "conjugation_past": { "ich": "brach", "du": "brachst", "er_sie_es": "brach", "wir": "brachen", "ihr": "bracht", "sie_Sie": "brachen" },
+      "conjugation_perf": { "ich": "habe gebrochen", "du": "hast gebrochen", "er_sie_es": "hat gebрочен", "wir": "haben gebrochen", "ihr": "habt gebrochen", "sie_Sie": "haben gebrochen" }
+    },
+    {
+      "id": 109, "infinitive": "empfehlen", "translation": "рекомендовать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "empfehle", "du": "empfiehlst", "er_sie_es": "empfiehlt", "wir": "empfehlen", "ihr": "empfehlt", "sie_Sie": "empfehlen" },
+      "conjugation_past": { "ich": "empfahl", "du": "empfahlst", "er_sie_es": "empfahl", "wir": "empfahlen", "ihr": "empfahlt", "sie_Sie": "empfahlen" },
+      "conjugation_perf": { "ich": "habe empfohlen", "du": "hast empfohlen", "er_sie_es": "hat empfohlen", "wir": "haben empfohlen", "ihr": "habt empfohlen", "sie_Sie": "haben empfohlen" }
+    },
+    {
+      "id": 110, "infinitive": "empfangen", "translation": "принимать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "empfange", "du": "empfängst", "er_sie_es": "empfängt", "wir": "empfangen", "ihr": "empfangt", "sie_Sie": "empfangen" },
+      "conjugation_past": { "ich": "empfing", "du": "empfingst", "er_sie_es": "empfing", "wir": "empfingen", "ihr": "empfingt", "sie_Sie": "empfingen" },
+      "conjugation_perf": { "ich": "habe empfangen", "du": "hast empfangen", "er_sie_es": "hat empfangen", "wir": "haben empfangen", "ihr": "habt empfangen", "sie_Sie": "haben empfangen" }
+    },
+    {
+      "id": 111, "infinitive": "empfinden", "translation": "ощущать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "empfinde", "du": "empfindest", "er_sie_es": "empfindet", "wir": "empfinden", "ihr": "empfindet", "sie_Sie": "empfinden" },
+      "conjugation_past": { "ich": "empfand", "du": "empfandst", "er_sie_es": "empfand", "wir": "empfanden", "ihr": "empfandet", "sie_Sie": "empfanden" },
+      "conjugation_perf": { "ich": "habe empfunden", "du": "hast empfunden", "er_sie_es": "hat empfunden", "wir": "haben empfunden", "ihr": "habt empfunden", "sie_Sie": "haben empfunden" }
+    },
+    {
+      "id": 112, "infinitive": "entscheiden", "translation": "решать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "entscheide", "du": "entscheidest", "er_sie_es": "entscheidet", "wir": "entscheiden", "ihr": "entscheidet", "sie_Sie": "entscheiden" },
+      "conjugation_past": { "ich": "entschied", "du": "entschiedst", "er_sie_es": "entschied", "wir": "entschieden", "ihr": "entschiedet", "sie_Sie": "entschieden" },
+      "conjugation_perf": { "ich": "habe entschieden", "du": "hast entschieden", "er_sie_es": "hat entschieden", "wir": "haben entschieden", "ihr": "habt entschieden", "sie_Sie": "haben entschieden" }
+    },
+    {
+      "id": 113, "infinitive": "erschrecken", "translation": "испугаться", "type": "strong", "hilfsverb": "sein",
+      "conjugation_pres": { "ich": "erschrecke", "du": "erschrickst", "er_sie_es": "erschrickt", "wir": "erschrecken", "ihr": "erschreckt", "sie_Sie": "erschrecken" },
+      "conjugation_past": { "ich": "erschrak", "du": "erschrakst", "er_sie_es": "erschrak", "wir": "erschraken", "ihr": "erschrakt", "sie_Sie": "erschraken" },
+      "conjugation_perf": { "ich": "bin erschrocken", "du": "bist erschrocken", "er_sie_es": "ist erschrocken", "wir": "sind erschrocken", "ihr": "seid erschrocken", "sie_Sie": "sind erschrocken" }
+    },
+    {
+      "id": 114, "infinitive": "essen", "translation": "есть", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "esse", "du": "isst", "er_sie_es": "isst", "wir": "essen", "ihr": "esst", "sie_Sie": "essen" },
+      "conjugation_past": { "ich": "aß", "du": "aßest", "er_sie_es": "aß", "wir": "aßen", "ihr": "aßet", "sie_Sie": "aßen" },
+      "conjugation_perf": { "ich": "habe gegessen", "du": "hast gegessen", "er_sie_es": "hat gegessen", "wir": "haben gegessen", "ihr": "habt gegessen", "sie_Sie": "haben gegessen" }
+    },
+    {
+      "id": 115, "infinitive": "fahren", "translation": "ехать", "type": "strong", "hilfsverb": "sein",
+      "conjugation_pres": { "ich": "fahre", "du": "fährst", "er_sie_es": "fährt", "wir": "fahren", "ihr": "fahrt", "sie_Sie": "fahren" },
+      "conjugation_past": { "ich": "fuhr", "du": "fuhrst", "er_sie_es": "fuhr", "wir": "fuhren", "ihr": "fuhrt", "sie_Sie": "fuhren" },
+      "conjugation_perf": { "ich": "bin gefahren", "du": "bist gefahren", "er_sie_es": "ist gefahren", "wir": "sind gefahren", "ihr": "seid gefahren", "sie_Sie": "sind gefahren" }
+    },
+    {
+      "id": 116, "infinitive": "fallen", "translation": "падать", "type": "strong", "hilfsverb": "sein",
+      "conjugation_pres": { "ich": "falle", "du": "fällst", "er_sie_es": "fällt", "wir": "fallen", "ihr": "fallt", "sie_Sie": "fallen" },
+      "conjugation_past": { "ich": "fiel", "du": "fielst", "er_sie_es": "fiel", "wir": "fielen", "ihr": "fielt", "sie_Sie": "fielen" },
+      "conjugation_perf": { "ich": "bin gefallen", "du": "bist gefallen", "er_sie_es": "ist gefallen", "wir": "sind gefallen", "ihr": "seid gefallen", "sie_Sie": "sind gefallen" }
+    },
+    {
+      "id": 117, "infinitive": "fangen", "translation": "ловить", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "fange", "du": "fängst", "er_sie_es": "fängt", "wir": "fangen", "ihr": "fangt", "sie_Sie": "fangen" },
+      "conjugation_past": { "ich": "fing", "du": "fingst", "er_sie_es": "fing", "wir": "fingen", "ihr": "fingt", "sie_Sie": "fingen" },
+      "conjugation_perf": { "ich": "habe gefangen", "du": "hast gefangen", "er_sie_es": "hat gefangen", "wir": "haben gefangen", "ihr": "habt gefangen", "sie_Sie": "haben gefangen" }
+    },
+    {
+      "id": 118, "infinitive": "fernsehen", "translation": "смотреть ТВ", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "sehe fern", "du": "siehst fern", "er_sie_es": "sieht fern", "wir": "sehen fern", "ihr": "seht fern", "sie_Sie": "sehen fern" },
+      "conjugation_past": { "ich": "sah fern", "du": "sahst fern", "er_sie_es": "sah fern", "wir": "sahen fern", "ihr": "saht fern", "sie_Sie": "sahen fern" },
+      "conjugation_perf": { "ich": "habe ferngesehen", "du": "hast ferngesehen", "er_sie_es": "hat ferngesehen", "wir": "haben ferngesehen", "ihr": "habt ferngesehen", "sie_Sie": "haben ferngesehen" }
+    },
+    {
+      "id": 119, "infinitive": "finden", "translation": "находить", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "finde", "du": "findest", "er_sie_es": "findet", "wir": "finden", "ihr": "findet", "sie_Sie": "finden" },
+      "conjugation_past": { "ich": "fand", "du": "fandst", "er_sie_es": "fand", "wir": "fanden", "ihr": "fandet", "sie_Sie": "fanden" },
+      "conjugation_perf": { "ich": "habe gefunden", "du": "hast gefunden", "er_sie_es": "hat gefunden", "wir": "haben gefunden", "ihr": "habt gefunden", "sie_Sie": "haben gefunden" }
+    },
+    {
+      "id": 120, "infinitive": "fliegen", "translation": "летать", "type": "strong", "hilfsverb": "sein",
+      "conjugation_pres": { "ich": "fliege", "du": "fliegst", "er_sie_es": "fliegt", "wir": "fliegen", "ihr": "fliegt", "sie_Sie": "fliegen" },
+      "conjugation_past": { "ich": "flog", "du": "flogst", "er_sie_es": "flog", "wir": "flogen", "ihr": "flogt", "sie_Sie": "flogen" },
+      "conjugation_perf": { "ich": "bin geflogen", "du": "bist geflogen", "er_sie_es": "ist geflogen", "wir": "sind geflogen", "ihr": "seid geflogen", "sie_Sie": "sind geflogen" }
+    },
+    {
+      "id": 121, "infinitive": "fliehen", "translation": "убегать", "type": "strong", "hilfsverb": "sein",
+      "conjugation_pres": { "ich": "fliehe", "du": "fliehst", "er_sie_es": "flieht", "wir": "fliehen", "ihr": "flieht", "sie_Sie": "fliehen" },
+      "conjugation_past": { "ich": "floh", "du": "flohst", "er_sie_es": "floh", "wir": "flohen", "ihr": "floht", "sie_Sie": "flohen" },
+      "conjugation_perf": { "ich": "bin geflohen", "du": "bist geflohen", "er_sie_es": "ist geflohen", "wir": "sind geflohen", "ihr": "seid geflohen", "sie_Sie": "sind geflohen" }
+    },
+    {
+      "id": 122, "infinitive": "fließen", "translation": "течь", "type": "strong", "hilfsverb": "sein",
+      "conjugation_pres": { "ich": "fließe", "du": "fließt", "er_sie_es": "fließt", "wir": "fließen", "ihr": "fließt", "sie_Sie": "fließen" },
+      "conjugation_past": { "ich": "floss", "du": "flossest", "er_sie_es": "floss", "wir": "flossen", "ihr": "flosset", "sie_Sie": "flossen" },
+      "conjugation_perf": { "ich": "ist geflossen", "du": "bist geflossen", "er_sie_es": "ist geflossen", "wir": "sind geflossen", "ihr": "seid geflossen", "sie_Sie": "sind geflossen" }
+    },
+    {
+      "id": 123, "infinitive": "fressen", "translation": "жрать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "fresse", "du": "frisst", "er_sie_es": "frisst", "wir": "fressen", "ihr": "fresst", "sie_Sie": "fressen" },
+      "conjugation_past": { "ich": "fraß", "du": "fraßest", "er_sie_es": "fraß", "wir": "fraßen", "ihr": "fraßet", "sie_Sie": "fraßen" },
+      "conjugation_perf": { "ich": "habe gefressen", "du": "hast gefressen", "er_sie_es": "hat gefressen", "wir": "haben gefressen", "ihr": "habt gefressen", "sie_Sie": "haben gefressen" }
+    },
+    {
+      "id": 124, "infinitive": "frieren", "translation": "мерзнуть", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "friere", "du": "frierst", "er_sie_es": "friert", "wir": "frieren", "ihr": "friert", "sie_Sie": "frieren" },
+      "conjugation_past": { "ich": "fror", "du": "frorst", "er_sie_es": "fror", "wir": "froren", "ihr": "frort", "sie_Sie": "froren" },
+      "conjugation_perf": { "ich": "habe gefroren", "du": "hast gefroren", "er_sie_es": "hat gefroren", "wir": "haben gefroren", "ihr": "habt gefroren", "sie_Sie": "haben gefroren" }
+    },
+    {
+      "id": 125, "infinitive": "geben", "translation": "давать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "gebe", "du": "gibst", "er_sie_es": "gibt", "wir": "geben", "ihr": "gebt", "sie_Sie": "geben" },
+      "conjugation_past": { "ich": "gab", "du": "gabst", "er_sie_es": "gab", "wir": "gaben", "ihr": "gabt", "sie_Sie": "gaben" },
+      "conjugation_perf": { "ich": "habe gegeben", "du": "hast gegeben", "er_sie_es": "hat gegeben", "wir": "haben gegeben", "ihr": "habt gegeben", "sie_Sie": "haben gegeben" }
+    },
+    {
+      "id": 126, "infinitive": "gedeihen", "translation": "процветать", "type": "strong", "hilfsverb": "sein",
+      "conjugation_pres": { "ich": "gedeihe", "du": "gedeihst", "er_sie_es": "gedeiht", "wir": "gedeihen", "ihr": "gedeiht", "sie_Sie": "gedeihen" },
+      "conjugation_past": { "ich": "gedieh", "du": "gediehst", "er_sie_es": "gedieh", "wir": "gediehen", "ihr": "gedieht", "sie_Sie": "gediehen" },
+      "conjugation_perf": { "ich": "bin gediehen", "du": "bist gediehen", "er_sie_es": "ist gediehen", "wir": "sind gediehen", "ihr": "seid gediehen", "sie_Sie": "sind gediehen" }
+    },
+    {
+      "id": 127, "infinitive": "gefallen", "translation": "нравиться", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "gefalle", "du": "gefällst", "er_sie_es": "gefällt", "wir": "gefallen", "ihr": "gefallt", "sie_Sie": "gefallen" },
+      "conjugation_past": { "ich": "gefiel", "du": "gefielst", "er_sie_es": "gefiel", "wir": "gefielen", "ihr": "gefielt", "sie_Sie": "gefielen" },
+      "conjugation_perf": { "ich": "habe gefallen", "du": "hast gefallen", "er_sie_es": "hat gefallen", "wir": "haben gefallen", "ihr": "habt gefallen", "sie_Sie": "haben gefallen" }
+    },
+    {
+      "id": 128, "infinitive": "gehen", "translation": "идти", "type": "strong", "hilfsverb": "sein",
+      "conjugation_pres": { "ich": "gehe", "du": "gehst", "er_sie_es": "geht", "wir": "gehen", "ihr": "geht", "sie_Sie": "gehen" },
+      "conjugation_past": { "ich": "ging", "du": "gingst", "er_sie_es": "ging", "wir": "gingen", "ihr": "gingt", "sie_Sie": "gingen" },
+      "conjugation_perf": { "ich": "bin gegangen", "du": "bist gegangen", "er_sie_es": "ist gegangen", "wir": "sind gegangen", "ihr": "seid gegangen", "sie_Sie": "sind gegangen" }
+    },
+    {
+      "id": 129, "infinitive": "gelingen", "translation": "удаваться", "type": "strong", "hilfsverb": "sein",
+      "conjugation_pres": { "ich": "gelinge", "du": "gelingst", "er_sie_es": "gelingt", "wir": "gelingen", "ihr": "gelingt", "sie_Sie": "gelingen" },
+      "conjugation_past": { "ich": "gelang", "du": "gelangst", "er_sie_es": "gelang", "wir": "gelangen", "ihr": "gelangt", "sie_Sie": "gelangen" },
+      "conjugation_perf": { "ich": "bin gelungen", "du": "bist gelungen", "er_sie_es": "ist gelungen", "wir": "sind gelungen", "ihr": "seid gelungen", "sie_Sie": "sind gelungen" }
+    },
+    {
+      "id": 130, "infinitive": "gelten", "translation": "быть действительным", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "gelte", "du": "giltst", "er_sie_es": "gilt", "wir": "gelten", "ihr": "geltet", "sie_Sie": "gelten" },
+      "conjugation_past": { "ich": "galt", "du": "galtst", "er_sie_es": "galt", "wir": "galten", "ihr": "galtet", "sie_Sie": "galten" },
+      "conjugation_perf": { "ich": "habe gegolten", "du": "hast gegolten", "er_sie_es": "hat gegolten", "wir": "haben gegolten", "ihr": "habt gegolten", "sie_Sie": "haben gegolten" }
+    },
+    {
+      "id": 131, "infinitive": "genießen", "translation": "наслаждаться", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "genieße", "du": "genießt", "er_sie_es": "genießt", "wir": "genießen", "ihr": "genießt", "sie_Sie": "genießen" },
+      "conjugation_past": { "ich": "genoss", "du": "genossest", "er_sie_es": "genoss", "wir": "genossen", "ihr": "genosset", "sie_Sie": "genossen" },
+      "conjugation_perf": { "ich": "habe genossen", "du": "hast genossen", "er_sie_es": "hat genossen", "wir": "haben genossen", "ihr": "habt genossen", "sie_Sie": "haben genossen" }
+    },
+    {
+      "id": 132, "infinitive": "geraten", "translation": "попасть (в ситуацию)", "type": "strong", "hilfsverb": "sein",
+      "conjugation_pres": { "ich": "gerate", "du": "gerätst", "er_sie_es": "gerät", "wir": "geraten", "ihr": "geratet", "sie_Sie": "geraten" },
+      "conjugation_past": { "ich": "geriet", "du": "gerietst", "er_sie_es": "geriet", "wir": "gerieten", "ihr": "gerietet", "sie_Sie": "gerieten" },
+      "conjugation_perf": { "ich": "bin geraten", "du": "bist geraten", "er_sie_es": "ist geraten", "wir": "sind geraten", "ihr": "seid geraten", "sie_Sie": "sind geraten" }
+    },
+    {
+      "id": 133, "infinitive": "geschehen", "translation": "случаться", "type": "strong", "hilfsverb": "sein",
+      "conjugation_pres": { "ich": "geschehe", "du": "geschiehst", "er_sie_es": "geschieht", "wir": "geschehen", "ihr": "gescheht", "sie_Sie": "geschehen" },
+      "conjugation_past": { "ich": "geschah", "du": "geschahst", "er_sie_es": "geschah", "wir": "geschahst", "ihr": "geschahst", "sie_Sie": "geschahst" },
+      "conjugation_perf": { "ich": "ist geschehen", "du": "ist geschehen", "er_sie_es": "ist geschehen", "wir": "sind geschehen", "ihr": "ist geschehen", "sie_Sie": "sind geschehen" }
+    },
+    {
+      "id": 134, "infinitive": "gewinnen", "translation": "выигрывать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "gewinne", "du": "gewinnst", "er_sie_es": "gewinnt", "wir": "gewinnen", "ihr": "gewinnt", "sie_Sie": "gewinnen" },
+      "conjugation_past": { "ich": "gewann", "du": "gewannst", "er_sie_es": "gewann", "wir": "gewannen", "ihr": "gewannt", "sie_Sie": "gewannen" },
+      "conjugation_perf": { "ich": "habe gewonnen", "du": "hast gewonnen", "er_sie_es": "hat gewonnen", "wir": "haben gewonnen", "ihr": "habt gewonnen", "sie_Sie": "haben gewonnen" }
+    },
+    {
+      "id": 135, "infinitive": "gießen", "translation": "лить", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "gieße", "du": "gießt", "er_sie_es": "gießt", "wir": "gießen", "ihr": "gießt", "sie_Sie": "gießen" },
+      "conjugation_past": { "ich": "goss", "du": "gossest", "er_sie_es": "goss", "wir": "gossen", "ihr": "gosset", "sie_Sie": "gossen" },
+      "conjugation_perf": { "ich": "habe gegossen", "du": "hast gegossen", "er_sie_es": "hat gegossen", "wir": "haben gegossen", "ihr": "habt gegossen", "sie_Sie": "haben gegossen" }
+    },
+    {
+      "id": 136, "infinitive": "gleichen", "translation": "быть похожим", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "gleiche", "du": "gleichst", "er_sie_es": "gleicht", "wir": "gleichen", "ihr": "gleicht", "sie_Sie": "gleichen" },
+      "conjugation_past": { "ich": "glich", "du": "glichst", "er_sie_es": "glich", "wir": "glichen", "ihr": "glicht", "sie_Sie": "glichen" },
+      "conjugation_perf": { "ich": "habe geglichen", "du": "hast geglichen", "er_sie_es": "hat geglichen", "wir": "haben geglichen", "ihr": "habt geglichen", "sie_Sie": "haben geglichen" }
+    },
+    {
+      "id": 137, "infinitive": "gleiten", "translation": "скользить", "type": "strong", "hilfsverb": "sein",
+      "conjugation_pres": { "ich": "gleite", "du": "gleitest", "er_sie_es": "gleitet", "wir": "gleiten", "ihr": "gleitet", "sie_Sie": "gleiten" },
+      "conjugation_past": { "ich": "glitt", "du": "glittst", "er_sie_es": "glitt", "wir": "glitten", "ihr": "glittet", "sie_Sie": "glitten" },
+      "conjugation_perf": { "ich": "bin geglitten", "du": "bist geglitten", "er_sie_es": "ist geglitten", "wir": "sind geglitten", "ihr": "seid geglitten", "sie_Sie": "sind geglitten" }
+    },
+    {
+      "id": 138, "infinitive": "graben", "translation": "копать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "grabe", "du": "gräbst", "er_sie_es": "gräbt", "wir": "graben", "ihr": "grabt", "sie_Sie": "graben" },
+      "conjugation_past": { "ich": "grub", "du": "grubst", "er_sie_es": "grub", "wir": "gruben", "ihr": "grubt", "sie_Sie": "gruben" },
+      "conjugation_perf": { "ich": "habe gegraben", "du": "hast gegraben", "er_sie_es": "hat gegraben", "wir": "haben gegraben", "ihr": "habt gegraben", "sie_Sie": "haben gegraben" }
+    },
+    {
+      "id": 139, "infinitive": "greifen", "translation": "хватать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "greife", "du": "greifst", "er_sie_es": "greift", "wir": "greifen", "ihr": "greift", "sie_Sie": "greifen" },
+      "conjugation_past": { "ich": "griff", "du": "griffst", "er_sie_es": "griff", "wir": "griffen", "ihr": "grifft", "sie_Sie": "griffen" },
+      "conjugation_perf": { "ich": "habe gegriffen", "du": "hast gegriffen", "er_sie_es": "hat gegriffen", "wir": "haben gegriffen", "ihr": "habt gegriffen", "sie_Sie": "haben gegriffen" }
+    },
+    {
+      "id": 140, "infinitive": "halten", "translation": "держать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "halte", "du": "hältst", "er_sie_es": "hält", "wir": "halten", "ihr": "haltet", "sie_Sie": "halten" },
+      "conjugation_past": { "ich": "hielt", "du": "hieltst", "er_sie_es": "hielt", "wir": "hielten", "ihr": "hieltet", "sie_Sie": "hielten" },
+      "conjugation_perf": { "ich": "habe gehalten", "du": "hast gehalten", "er_sie_es": "hat gehalten", "wir": "haben gehalten", "ihr": "habt gehalten", "sie_Sie": "haben gehalten" }
+    },
+    {
+      "id": 141, "infinitive": "hängen", "translation": "висеть", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "hänge", "du": "hängst", "er_sie_es": "hängt", "wir": "hängen", "ihr": "hängt", "sie_Sie": "hängen" },
+      "conjugation_past": { "ich": "hing", "du": "hingst", "er_sie_es": "hing", "wir": "hingen", "ihr": "hingt", "sie_Sie": "hingen" },
+      "conjugation_perf": { "ich": "habe gehangen", "du": "hast gehangen", "er_sie_es": "hat gehangen", "wir": "haben gehangen", "ihr": "habt gehangen", "sie_Sie": "haben gehangen" }
+    },
+    {
+      "id": 142, "infinitive": "heben", "translation": "поднимать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "hebe", "du": "hebst", "er_sie_es": "hebt", "wir": "heben", "ihr": "hebt", "sie_Sie": "heben" },
+      "conjugation_past": { "ich": "hob", "du": "hobst", "er_sie_es": "hob", "wir": "hoben", "ihr": "hobt", "sie_Sie": "hoben" },
+      "conjugation_perf": { "ich": "habe gehoben", "du": "hast gehoben", "er_sie_es": "hat gehoben", "wir": "haben gehoben", "ihr": "habt gehoben", "sie_Sie": "haben gehoben" }
+    },
+    {
+      "id": 143, "infinitive": "heißen", "translation": "называться", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "heiße", "du": "heißt", "er_sie_es": "heißt", "wir": "heißen", "ihr": "heißt", "sie_Sie": "heißen" },
+      "conjugation_past": { "ich": "hieß", "du": "hießest", "er_sie_es": "hieß", "wir": "hießen", "ihr": "hießet", "sie_Sie": "hießen" },
+      "conjugation_perf": { "ich": "habe geheißen", "du": "hast geheißen", "er_sie_es": "hat geheißen", "wir": "haben geheißen", "ihr": "habt geheißen", "sie_Sie": "haben geheißen" }
+    },
+    {
+      "id": 144, "infinitive": "helfen", "translation": "помогать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "helfe", "du": "hilfst", "er_sie_es": "hilft", "wir": "helfen", "ihr": "helft", "sie_Sie": "helfen" },
+      "conjugation_past": { "ich": "half", "du": "halfst", "er_sie_es": "half", "wir": "halfen", "ihr": "halft", "sie_Sie": "halfen" },
+      "conjugation_perf": { "ich": "habe geholfen", "du": "hast geholfen", "er_sie_es": "hat geholfen", "wir": "haben geholfen", "ihr": "habt geholfen", "sie_Sie": "haben geholfen" }
+    },
+    {
+      "id": 145, "infinitive": "klingen", "translation": "звучать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "klinge", "du": "klingst", "er_sie_es": "klingt", "wir": "klingen", "ihr": "klingt", "sie_Sie": "klingen" },
+      "conjugation_past": { "ich": "klang", "du": "klangst", "er_sie_es": "klang", "wir": "klangen", "ihr": "klangt", "sie_Sie": "klangen" },
+      "conjugation_perf": { "ich": "habe geklungen", "du": "hast geklungen", "er_sie_es": "hat geklungen", "wir": "haben geklungen", "ihr": "habt geklungen", "sie_Sie": "haben geklungen" }
+    },
+    {
+      "id": 146, "infinitive": "kommen", "translation": "приходить", "type": "strong", "hilfsverb": "sein",
+      "conjugation_pres": { "ich": "komme", "du": "kommst", "er_sie_es": "kommt", "wir": "kommen", "ihr": "kommt", "sie_Sie": "kommen" },
+      "conjugation_past": { "ich": "kam", "du": "kamst", "er_sie_es": "kam", "wir": "kamen", "ihr": "kamt", "sie_Sie": "kamen" },
+      "conjugation_perf": { "ich": "bin gekommen", "du": "bist gekommen", "er_sie_es": "ist gekommen", "wir": "sind gekommen", "ihr": "seid gekommen", "sie_Sie": "sind gekommen" }
+    },
+    {
+      "id": 147, "infinitive": "kriechen", "translation": "ползать", "type": "strong", "hilfsverb": "sein",
+      "conjugation_pres": { "ich": "krieche", "du": "kriechst", "er_sie_es": "kriecht", "wir": "kriechen", "ihr": "kriecht", "sie_Sie": "kriechen" },
+      "conjugation_past": { "ich": "kroch", "du": "krochst", "er_sie_es": "kroch", "wir": "krochen", "ihr": "krocht", "sie_Sie": "krochen" },
+      "conjugation_perf": { "ich": "bin gekrochen", "du": "bist gekrochen", "er_sie_es": "ist gekrochen", "wir": "sind gekрочен", "ihr": "seid gekрочен", "sie_Sie": "sind gekрочен" }
+    },
+    {
+      "id": 148, "infinitive": "laden", "translation": "грузить", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "lade", "du": "lädst", "er_sie_es": "lädt", "wir": "laden", "ihr": "ladet", "sie_Sie": "laden" },
+      "conjugation_past": { "ich": "lud", "du": "ludst", "er_sie_es": "lud", "wir": "luden", "ihr": "ludet", "sie_Sie": "luden" },
+      "conjugation_perf": { "ich": "habe geladen", "du": "hast geladen", "er_sie_es": "hat geladen", "wir": "haben geladen", "ihr": "habt geladen", "sie_Sie": "haben geladen" }
+    },
+    {
+      "id": 149, "infinitive": "lassen", "translation": "оставлять", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "lasse", "du": "lässt", "er_sie_es": "lässt", "wir": "lassen", "ihr": "lasst", "sie_Sie": "lassen" },
+      "conjugation_past": { "ich": "ließ", "du": "ließest", "er_sie_es": "ließ", "wir": "ließen", "ihr": "ließet", "sie_Sie": "ließen" },
+      "conjugation_perf": { "ich": "habe gelassen", "du": "hast gelassen", "er_sie_es": "hat gelassen", "wir": "haben gelassen", "ihr": "habt gelassen", "sie_Sie": "haben gelassen" }
+    },
+    {
+      "id": 150, "infinitive": "laufen", "translation": "бежать", "type": "strong", "hilfsverb": "sein",
+      "conjugation_pres": { "ich": "laufe", "du": "läufst", "er_sie_es": "läuft", "wir": "laufen", "ihr": "lauft", "sie_Sie": "laufen" },
+      "conjugation_past": { "ich": "lief", "du": "liefst", "er_sie_es": "lief", "wir": "liefen", "ihr": "lieft", "sie_Sie": "liefen" },
+      "conjugation_perf": { "ich": "bin gelaufen", "du": "bist gelaufen", "er_sie_es": "ist gelaufen", "wir": "sind gelaufen", "ihr": "seid gelaufen", "sie_Sie": "sind gelaufen" }
+    },
+    {
+      "id": 151, "infinitive": "leiden", "translation": "страдать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "leide", "du": "leidest", "er_sie_es": "leidet", "wir": "leiden", "ihr": "leidet", "sie_Sie": "leiden" },
+      "conjugation_past": { "ich": "litt", "du": "littst", "er_sie_es": "litt", "wir": "litten", "ihr": "littet", "sie_Sie": "litten" },
+      "conjugation_perf": { "ich": "habe gelitten", "du": "hast gelitten", "er_sie_es": "hat gelitten", "wir": "haben gelitten", "ihr": "habt gelitten", "sie_Sie": "haben gelitten" }
+    },
+    {
+      "id": 152, "infinitive": "leihen", "translation": "одалживать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "leihe", "du": "leihst", "er_sie_es": "leiht", "wir": "leihen", "ihr": "leiht", "sie_Sie": "leihen" },
+      "conjugation_past": { "ich": "lieh", "du": "liehst", "er_sie_es": "lieh", "wir": "liehen", "ihr": "lieht", "sie_Sie": "liehen" },
+      "conjugation_perf": { "ich": "habe geliehen", "du": "hast geliehen", "er_sie_es": "hat geliehen", "wir": "haben geliehen", "ihr": "habt geliehen", "sie_Sie": "haben geliehen" }
+    },
+    {
+      "id": 153, "infinitive": "lesen", "translation": "читать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "lese", "du": "liest", "er_sie_es": "liest", "wir": "lesen", "ihr": "lest", "sie_Sie": "lesen" },
+      "conjugation_past": { "ich": "las", "du": "lasest", "er_sie_es": "las", "wir": "lasen", "ihr": "laset", "sie_Sie": "lasen" },
+      "conjugation_perf": { "ich": "habe gelesen", "du": "hast gelesen", "er_sie_es": "hat gelesen", "wir": "haben gelesen", "ihr": "habt gelesen", "sie_Sie": "haben gelesen" }
+    },
+    {
+      "id": 154, "infinitive": "liegen", "translation": "лежать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "liege", "du": "liegst", "er_sie_es": "liegt", "wir": "liegen", "ihr": "liegt", "sie_Sie": "liegen" },
+      "conjugation_past": { "ich": "lag", "du": "lagst", "er_sie_es": "lag", "wir": "lagen", "ihr": "lagt", "sie_Sie": "lagen" },
+      "conjugation_perf": { "ich": "habe gelegen", "du": "hast gelegen", "er_sie_es": "hat gelegen", "wir": "haben gelegen", "ihr": "habt gelegen", "sie_Sie": "haben gelegen" }
+    },
+    {
+      "id": 155, "infinitive": "lügen", "translation": "лгать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "lüge", "du": "lügst", "er_sie_es": "lügt", "wir": "lügen", "ihr": "lügt", "sie_Sie": "lügen" },
+      "conjugation_past": { "ich": "log", "du": "logst", "er_sie_es": "log", "wir": "logen", "ihr": "logt", "sie_Sie": "logen" },
+      "conjugation_perf": { "ich": "habe gelogen", "du": "hast gelogen", "er_sie_es": "hat gelogen", "wir": "haben gelogen", "ihr": "habt gelogen", "sie_Sie": "haben gelogen" }
+    },
+    {
+      "id": 156, "infinitive": "meiden", "translation": "избегать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "meide", "du": "meidest", "er_sie_es": "meidet", "wir": "meiden", "ihr": "meidet", "sie_Sie": "meiden" },
+      "conjugation_past": { "ich": "mied", "du": "miedst", "er_sie_es": "mied", "wir": "mieden", "ihr": "miedet", "sie_Sie": "mieden" },
+      "conjugation_perf": { "ich": "habe gemieden", "du": "hast gemieden", "er_sie_es": "hat gemieden", "wir": "haben gemieden", "ihr": "habt gemieden", "sie_Sie": "haben gemieden" }
+    },
+    {
+      "id": 157, "infinitive": "messen", "translation": "мерить", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "messe", "du": "misst", "er_sie_es": "misst", "wir": "messen", "ihr": "messt", "sie_Sie": "messen" },
+      "conjugation_past": { "ich": "maß", "du": "maßest", "er_sie_es": "maß", "wir": "maßen", "ihr": "maßet", "sie_Sie": "maßen" },
+      "conjugation_perf": { "ich": "habe gemessen", "du": "hast gemessen", "er_sie_es": "hat gemessen", "wir": "haben gemessen", "ihr": "habt gemessen", "sie_Sie": "haben gemessen" }
+    },
+    {
+      "id": 158, "infinitive": "nehmen", "translation": "брать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "nehme", "du": "nimmst", "er_sie_es": "nimmt", "wir": "nehmen", "ihr": "nehmt", "sie_Sie": "nehmen" },
+      "conjugation_past": { "ich": "nahm", "du": "nahmst", "er_sie_es": "nahm", "wir": "nahmen", "ihr": "nahmt", "sie_Sie": "nahmen" },
+      "conjugation_perf": { "ich": "habe genommen", "du": "hast genommen", "er_sie_es": "hat genommen", "wir": "haben genommen", "ihr": "habt genommen", "sie_Sie": "haben genommen" }
+    },
+    {
+      "id": 159, "infinitive": "pfeifen", "translation": "свистеть", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "pfeife", "du": "pfeifst", "er_sie_es": "pfeift", "wir": "pfeifen", "ihr": "pfeift", "sie_Sie": "pfeifen" },
+      "conjugation_past": { "ich": "pfiff", "du": "pfiffst", "er_sie_es": "pfiff", "wir": "pfiffen", "ihr": "pfifft", "sie_Sie": "pfiffen" },
+      "conjugation_perf": { "ich": "habe gepfiffen", "du": "hast gepfiffen", "er_sie_es": "hat gepfiffen", "wir": "haben gepfiffen", "ihr": "habt gepfiffen", "sie_Sie": "haben gepfiffen" }
+    },
+    {
+      "id": 160, "infinitive": "preisen", "translation": "хвалить", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "preise", "du": "preist", "er_sie_es": "preist", "wir": "preisen", "ihr": "preist", "sie_Sie": "preisen" },
+      "conjugation_past": { "ich": "pries", "du": "priesest", "er_sie_es": "pries", "wir": "priesen", "ihr": "prieset", "sie_Sie": "priesen" },
+      "conjugation_perf": { "ich": "habe gepriesen", "du": "hast gepriesen", "er_sie_es": "hat gepriesen", "wir": "haben gepriesen", "ihr": "habt gepriesen", "sie_Sie": "haben gepriesen" }
+    },
+    {
+      "id": 161, "infinitive": "raten", "translation": "советовать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "rate", "du": "rätst", "er_sie_es": "rät", "wir": "raten", "ihr": "ratet", "sie_Sie": "raten" },
+      "conjugation_past": { "ich": "riet", "du": "rietst", "er_sie_es": "riet", "wir": "rieten", "ihr": "rietet", "sie_Sie": "rieten" },
+      "conjugation_perf": { "ich": "habe geraten", "du": "hast geraten", "er_sie_es": "hat geraten", "wir": "haben geraten", "ihr": "habt geraten", "sie_Sie": "haben geraten" }
+    },
+    {
+      "id": 162, "infinitive": "reiben", "translation": "тереть", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "reibe", "du": "reibst", "er_sie_es": "reibt", "wir": "reiben", "ihr": "reibt", "sie_Sie": "reiben" },
+      "conjugation_past": { "ich": "rieb", "du": "riebst", "er_sie_es": "rieb", "wir": "rieben", "ihr": "riebt", "sie_Sie": "rieben" },
+      "conjugation_perf": { "ich": "habe gerieben", "du": "hast gerieben", "er_sie_es": "hat gerieben", "wir": "haben gerieben", "ihr": "habt gerieben", "sie_Sie": "haben gerieben" }
+    },
+    {
+      "id": 163, "infinitive": "reißen", "translation": "рвать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "reiße", "du": "reißt", "er_sie_es": "reißt", "wir": "reißen", "ihr": "reißt", "sie_Sie": "reißen" },
+      "conjugation_past": { "ich": "riss", "du": "rissest", "er_sie_es": "riss", "wir": "rissen", "ihr": "risset", "sie_Sie": "rissen" },
+      "conjugation_perf": { "ich": "habe gerissen", "du": "hast gerissen", "er_sie_es": "hat gerissen", "wir": "haben gerissen", "ihr": "habt gerissen", "sie_Sie": "haben gerissen" }
+    },
+    {
+      "id": 164, "infinitive": "reiten", "translation": "ездить верхом", "type": "strong", "hilfsverb": "sein",
+      "conjugation_pres": { "ich": "reite", "du": "reitest", "er_sie_es": "reitet", "wir": "reiten", "ihr": "reitet", "sie_Sie": "reiten" },
+      "conjugation_past": { "ich": "ritt", "du": "rittst", "er_sie_es": "ritt", "wir": "ritten", "ihr": "rittet", "sie_Sie": "ritten" },
+      "conjugation_perf": { "ich": "bin geritten", "du": "bist geritten", "er_sie_es": "ist geritten", "wir": "sind geritten", "ihr": "seid geritten", "sie_Sie": "sind geritten" }
+    },
+    {
+      "id": 165, "infinitive": "riechen", "translation": "пахнуть", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "rieche", "du": "riechst", "er_sie_es": "riecht", "wir": "riechen", "ihr": "riecht", "sie_Sie": "riechen" },
+      "conjugation_past": { "ich": "roch", "du": "rochst", "er_sie_es": "roch", "wir": "rochen", "ihr": "rocht", "sie_Sie": "rochen" },
+      "conjugation_perf": { "ich": "habe gerochen", "du": "hast gerochen", "er_sie_es": "hat gerochen", "wir": "haben gerochen", "ihr": "habt gerochen", "sie_Sie": "haben gerochen" }
+    },
+    {
+      "id": 166, "infinitive": "ringen", "translation": "бороться", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "ringe", "du": "ringst", "er_sie_es": "ringt", "wir": "ringen", "ihr": "ringt", "sie_Sie": "ringen" },
+      "conjugation_past": { "ich": "rang", "du": "rangst", "er_sie_es": "rang", "wir": "rangen", "ihr": "rangt", "sie_Sie": "rangen" },
+      "conjugation_perf": { "ich": "habe gerungen", "du": "hast gerungen", "er_sie_es": "hat gerungen", "wir": "haben gerungen", "ihr": "habt gerungen", "sie_Sie": "haben gerungen" }
+    },
+    {
+      "id": 167, "infinitive": "rinnen", "translation": "течь", "type": "strong", "hilfsverb": "sein",
+      "conjugation_pres": { "ich": "rinne", "du": "rinnst", "er_sie_es": "rinnt", "wir": "rinnen", "ihr": "rinnt", "sie_Sie": "rinnen" },
+      "conjugation_past": { "ich": "rann", "du": "rannst", "er_sie_es": "rann", "wir": "rannen", "ihr": "rannt", "sie_Sie": "rannen" },
+      "conjugation_perf": { "ich": "bin geronnen", "du": "bist geronnen", "er_sie_es": "ist geronnen", "wir": "sind geronnen", "ihr": "seid geronnen", "sie_Sie": "sind geronnen" }
+    },
+    {
+      "id": 168, "infinitive": "rufen", "translation": "звать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "rufe", "du": "rufst", "er_sie_es": "ruft", "wir": "rufen", "ihr": "ruft", "sie_Sie": "rufen" },
+      "conjugation_past": { "ich": "rief", "du": "riefst", "er_sie_es": "rief", "wir": "riefen", "ihr": "rieft", "sie_Sie": "riefen" },
+      "conjugation_perf": { "ich": "habe gerufen", "du": "hast gerufen", "er_sie_es": "hat gerufen", "wir": "haben gerufen", "ihr": "habt gerufen", "sie_Sie": "haben gerufen" }
+    },
+    {
+      "id": 169, "infinitive": "saufen", "translation": "пить (о жив.)", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "saufe", "du": "säufst", "er_sie_es": "säuft", "wir": "saufen", "ihr": "sauft", "sie_Sie": "saufen" },
+      "conjugation_past": { "ich": "soff", "du": "soffst", "er_sie_es": "soff", "wir": "soffen", "ihr": "sofft", "sie_Sie": "soffen" },
+      "conjugation_perf": { "ich": "habe gesoffen", "du": "hast gesoffen", "er_sie_es": "hat gesoffen", "wir": "haben gesoffen", "ihr": "habt gesoffen", "sie_Sie": "haben gesoffen" }
+    },
+    {
+      "id": 170, "infinitive": "schaffen", "translation": "создавать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "schaffe", "du": "schaffst", "er_sie_es": "schafft", "wir": "schaffen", "ihr": "schafft", "sie_Sie": "schaffen" },
+      "conjugation_past": { "ich": "schuf", "du": "schufst", "er_sie_es": "schuf", "wir": "schufen", "ihr": "schuft", "sie_Sie": "schufen" },
+      "conjugation_perf": { "ich": "habe geschaffen", "du": "hast geschaffen", "er_sie_es": "hat geschaffen", "wir": "haben geschaffen", "ihr": "habt geschaffen", "sie_Sie": "haben geschaffen" }
+    },
+    {
+      "id": 171, "infinitive": "scheiden", "translation": "разводить", "type": "strong", "hilfsverb": "sein",
+      "conjugation_pres": { "ich": "scheide", "du": "scheidest", "er_sie_es": "scheidet", "wir": "scheiden", "ihr": "scheidet", "sie_Sie": "scheiden" },
+      "conjugation_past": { "ich": "schied", "du": "schiedst", "er_sie_es": "schied", "wir": "schieden", "ihr": "schiedet", "sie_Sie": "schieden" },
+      "conjugation_perf": { "ich": "bin geschieden", "du": "bist geschieden", "er_sie_es": "ist geschieden", "wir": "sind geschieden", "ihr": "seid geschieden", "sie_Sie": "sind geschieden" }
+    },
+    {
+      "id": 172, "infinitive": "scheinen", "translation": "светить", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "scheine", "du": "scheinst", "er_sie_es": "scheint", "wir": "scheinen", "ihr": "scheint", "sie_Sie": "scheinen" },
+      "conjugation_past": { "ich": "schien", "du": "schienst", "er_sie_es": "schien", "wir": "schienen", "ihr": "schient", "sie_Sie": "schienen" },
+      "conjugation_perf": { "ich": "habe geschienen", "du": "hast geschienen", "er_sie_es": "hat geschienen", "wir": "haben geschienen", "ihr": "habt geschienen", "sie_Sie": "haben geschienen" }
+    },
+    {
+      "id": 173, "infinitive": "schieben", "translation": "толкать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "schiebe", "du": "schiebst", "er_sie_es": "schiebt", "wir": "schieben", "ihr": "schiebt", "sie_Sie": "schieben" },
+      "conjugation_past": { "ich": "schob", "du": "schobst", "er_sie_es": "schob", "wir": "schoben", "ihr": "schobt", "sie_Sie": "schoben" },
+      "conjugation_perf": { "ich": "habe geschoben", "du": "hast geschoben", "er_sie_es": "hat geschoben", "wir": "haben geschoben", "ihr": "habt geschoben", "sie_Sie": "haben geschoben" }
+    },
+    {
+      "id": 174, "infinitive": "schießen", "translation": "стрелять", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "schieße", "du": "schießt", "er_sie_es": "schießt", "wir": "schießen", "ihr": "schießt", "sie_Sie": "schießen" },
+      "conjugation_past": { "ich": "schoss", "du": "schossest", "er_sie_es": "schoss", "wir": "schossen", "ihr": "schosset", "sie_Sie": "schossen" },
+      "conjugation_perf": { "ich": "habe geschossen", "du": "hast geschossen", "er_sie_es": "hat geschossen", "wir": "haben geschossen", "ihr": "habt geschossen", "sie_Sie": "haben geschossen" }
+    },
+    {
+      "id": 175, "infinitive": "schlafen", "translation": "спать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "schlafe", "du": "schläfst", "er_sie_es": "schläft", "wir": "schlafen", "ihr": "schlaft", "sie_Sie": "schlafen" },
+      "conjugation_past": { "ich": "schlief", "du": "schliefst", "er_sie_es": "schlief", "wir": "schliefen", "ihr": "schlieft", "sie_Sie": "schliefen" },
+      "conjugation_perf": { "ich": "habe geschlafen", "du": "hast geschlafen", "er_sie_es": "hat geschlafen", "wir": "haben geschlafen", "ihr": "habt geschlafen", "sie_Sie": "haben geschlafen" }
+    },
+    {
+      "id": 176, "infinitive": "schlagen", "translation": "бить", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "schlage", "du": "schlägst", "er_sie_es": "schlägt", "wir": "schlagen", "ihr": "schlagt", "sie_Sie": "schlagen" },
+      "conjugation_past": { "ich": "schlug", "du": "schlugst", "er_sie_es": "schlug", "wir": "schlugen", "ihr": "schlugt", "sie_Sie": "schlugen" },
+      "conjugation_perf": { "ich": "habe geschlagen", "du": "hast geschlagen", "er_sie_es": "hat geschlagen", "wir": "haben geschlagen", "ihr": "habt geschlagen", "sie_Sie": "haben geschlagen" }
+    },
+    {
+      "id": 177, "infinitive": "schließen", "translation": "закрывать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "schließe", "du": "schließt", "er_sie_es": "schließt", "wir": "schließen", "ihr": "schließt", "sie_Sie": "schließen" },
+      "conjugation_past": { "ich": "schloss", "du": "schlossest", "er_sie_es": "schloss", "wir": "schlossen", "ihr": "schosset", "sie_Sie": "schlossen" },
+      "conjugation_perf": { "ich": "habe geschlossen", "du": "hast geschlossen", "er_sie_es": "hat geschlossen", "wir": "haben geschlossen", "ihr": "habt geschlossen", "sie_Sie": "haben geschlossen" }
+    },
+    {
+      "id": 178, "infinitive": "schmelzen", "translation": "таять", "type": "strong", "hilfsverb": "sein",
+      "conjugation_pres": { "ich": "schmelze", "du": "schmilzt", "er_sie_es": "schmilzt", "wir": "schmelzen", "ihr": "schmelzt", "sie_Sie": "schmelzen" },
+      "conjugation_past": { "ich": "schmolz", "du": "schmolzest", "er_sie_es": "schmolz", "wir": "schmolzen", "ihr": "schmolzet", "sie_Sie": "schmolzen" },
+      "conjugation_perf": { "ich": "bin geschmolzen", "du": "bist geschmolzen", "er_sie_es": "ist geschmolzen", "wir": "sind geschmolzen", "ihr": "seid geschmolzen", "sie_Sie": "sind geschmolzen" }
+    },
+    {
+      "id": 179, "infinitive": "schneiden", "translation": "резать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "schneide", "du": "schneidest", "er_sie_es": "schneidet", "wir": "schneiden", "ihr": "schneidet", "sie_Sie": "schneiden" },
+      "conjugation_past": { "ich": "schnitt", "du": "schnittest", "er_sie_es": "schnitt", "wir": "schnitten", "ihr": "schnittet", "sie_Sie": "schnitten" },
+      "conjugation_perf": { "ich": "habe geschnitten", "du": "hast geschnitten", "er_sie_es": "hat geschnitten", "wir": "haben geschnitten", "ihr": "habt geschnitten", "sie_Sie": "haben geschnitten" }
+    },
+    {
+      "id": 180, "infinitive": "schreiben", "translation": "писать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "schreibe", "du": "schreibst", "er_sie_es": "schreibt", "wir": "schreiben", "ihr": "schreibt", "sie_Sie": "schreiben" },
+      "conjugation_past": { "ich": "schrieb", "du": "schriebst", "er_sie_es": "schrieb", "wir": "schrieben", "ihr": "schriebt", "sie_Sie": "schrieben" },
+      "conjugation_perf": { "ich": "habe geschrieben", "du": "hast geschrieben", "er_sie_es": "hat geschrieben", "wir": "haben geschrieben", "ihr": "habt geschrieben", "sie_Sie": "haben geschrieben" }
+    },
+    {
+      "id": 181, "infinitive": "schreien", "translation": "кричать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "schreie", "du": "schreist", "er_sie_es": "schreit", "wir": "schreien", "ihr": "schreit", "sie_Sie": "schreien" },
+      "conjugation_past": { "ich": "schrie", "du": "schriest", "er_sie_es": "schrie", "wir": "schrien", "ihr": "schriet", "sie_Sie": "schrien" },
+      "conjugation_perf": { "ich": "habe geschrien", "du": "hast geschrien", "er_sie_es": "hat geschrien", "wir": "haben geschrien", "ihr": "habt geschrien", "sie_Sie": "haben geschrien" }
+    },
+    {
+      "id": 182, "infinitive": "schwimmen", "translation": "плавать", "type": "strong", "hilfsverb": "sein",
+      "conjugation_pres": { "ich": "schwimme", "du": "schwimmst", "er_sie_es": "schwimmt", "wir": "schwimmen", "ihr": "schwimmt", "sie_Sie": "schwimmen" },
+      "conjugation_past": { "ich": "schwamm", "du": "schwammst", "er_sie_es": "schwamm", "wir": "schwammen", "ihr": "schwimmt", "sie_Sie": "schwammen" },
+      "conjugation_perf": { "ich": "bin geschwommen", "du": "bist geschwommen", "er_sie_es": "ist geschwommen", "wir": "sind geschwommen", "ihr": "seid geschwommen", "sie_Sie": "sind geschwommen" }
+    },
+    {
+      "id": 183, "infinitive": "sehen", "translation": "видеть", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "sehe", "du": "siehst", "er_sie_es": "sieht", "wir": "sehen", "ihr": "seht", "sie_Sie": "sehen" },
+      "conjugation_past": { "ich": "sah", "du": "sahst", "er_sie_es": "sah", "wir": "sahen", "ihr": "saht", "sie_Sie": "sahen" },
+      "conjugation_perf": { "ich": "habe gesehen", "du": "hast gesehen", "er_sie_es": "hat gesehen", "wir": "haben gesehen", "ihr": "habt gesehen", "sie_Sie": "haben gesehen" }
+    },
+    {
+      "id": 184, "infinitive": "singen", "translation": "петь", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "singe", "du": "singst", "er_sie_es": "singt", "wir": "singen", "ihr": "singt", "sie_Sie": "singen" },
+      "conjugation_past": { "ich": "sang", "du": "sangst", "er_sie_es": "sang", "wir": "sangen", "ihr": "sangt", "sie_Sie": "sangen" },
+      "conjugation_perf": { "ich": "habe gesungen", "du": "hast gesungen", "er_sie_es": "hat gesungen", "wir": "haben gesungen", "ihr": "habt gesungen", "sie_Sie": "haben gesungen" }
+    },
+    {
+      "id": 185, "infinitive": "sitzen", "translation": "сидеть", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "sitze", "du": "sitzt", "er_sie_es": "sitzt", "wir": "sitzen", "ihr": "sitzt", "sie_Sie": "sitzen" },
+      "conjugation_past": { "ich": "saß", "du": "saßest", "er_sie_es": "saß", "wir": "saßen", "ihr": "saßet", "sie_Sie": "saßen" },
+      "conjugation_perf": { "ich": "habe gesessen", "du": "hast gesessen", "er_sie_es": "hat gesessen", "wir": "haben gesessen", "ihr": "habt gesessen", "sie_Sie": "haben gesessen" }
+    },
+    {
+      "id": 186, "infinitive": "sein", "translation": "быть", "type": "strong", "hilfsverb": "sein",
+      "conjugation_pres": { "ich": "bin", "du": "bist", "er_sie_es": "ist", "wir": "sind", "ihr": "seid", "sie_Sie": "sind" },
+      "conjugation_past": { "ich": "war", "du": "warst", "er_sie_es": "war", "wir": "waren", "ihr": "wart", "sie_Sie": "waren" },
+      "conjugation_perf": { "ich": "bin gewesen", "du": "bist gewesen", "er_sie_es": "ist gewesen", "wir": "sind gewesen", "ihr": "seid gewesen", "sie_Sie": "sind gewesen" }
+    },
+    {
+      "id": 187, "infinitive": "tun", "translation": "делать", "type": "strong", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "tue", "du": "tust", "er_sie_es": "tut", "wir": "tun", "ihr": "tut", "sie_Sie": "tun" },
+      "conjugation_past": { "ich": "tat", "du": "tatst", "er_sie_es": "tat", "wir": "taten", "ihr": "tatet", "sie_Sie": "taten" },
+      "conjugation_perf": { "ich": "habe getan", "du": "hast getan", "er_sie_es": "hat getan", "wir": "haben getan", "ihr": "habt getan", "sie_Sie": "haben getan" }
+    }
+  ],
+  "mixed": [
+    {
+      "id": 188, "infinitive": "brennen", "translation": "гореть", "type": "mixed", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "brenne", "du": "brennst", "er_sie_es": "brennt", "wir": "brennen", "ihr": "brennt", "sie_Sie": "brennen" },
+      "conjugation_past": { "ich": "brannte", "du": "branntest", "er_sie_es": "brannte", "wir": "brannten", "ihr": "branntet", "sie_Sie": "brannten" },
+      "conjugation_perf": { "ich": "habe gebrannt", "du": "hast gebrannt", "er_sie_es": "hat gebrannt", "wir": "haben gebrannt", "ihr": "habt gebrannt", "sie_Sie": "haben gebrannt" }
+    },
+    {
+      "id": 189, "infinitive": "bringen", "translation": "приносить", "type": "mixed", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "bringe", "du": "bringst", "er_sie_es": "bringt", "wir": "bringen", "ihr": "bringt", "sie_Sie": "bringen" },
+      "conjugation_past": { "ich": "brachte", "du": "brachtest", "er_sie_es": "brachte", "wir": "brachten", "ihr": "brachtet", "sie_Sie": "brachten" },
+      "conjugation_perf": { "ich": "habe gebracht", "du": "hast gebracht", "er_sie_es": "hat gebracht", "wir": "haben gebracht", "ihr": "habt gebracht", "sie_Sie": "haben gebracht" }
+    },
+    {
+      "id": 190, "infinitive": "denken", "translation": "думать", "type": "mixed", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "denke", "du": "denkst", "er_sie_es": "denkt", "wir": "denken", "ihr": "denkt", "sie_Sie": "denken" },
+      "conjugation_past": { "ich": "dachte", "du": "dachtest", "er_sie_es": "dachte", "wir": "dachten", "ihr": "dachtet", "sie_Sie": "dachten" },
+      "conjugation_perf": { "ich": "habe gedacht", "du": "hast gedacht", "er_sie_es": "hat gedacht", "wir": "haben gedacht", "ihr": "habt gedacht", "sie_Sie": "haben gedacht" }
+    },
+    {
+      "id": 191, "infinitive": "erkennen", "translation": "узнавать", "type": "mixed", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "erkenne", "du": "erkennst", "er_sie_es": "erkennt", "wir": "erkennen", "ihr": "erkennt", "sie_Sie": "erkennen" },
+      "conjugation_past": { "ich": "erkannte", "du": "erkanntest", "er_sie_es": "erkannte", "wir": "erkannten", "ihr": "erkanntet", "sie_Sie": "erkannten" },
+      "conjugation_perf": { "ich": "habe erkannt", "du": "hast erkannt", "er_sie_es": "hat erkannt", "wir": "haben erkannt", "ihr": "habt erkannt", "sie_Sie": "haben erkannt" }
+    },
+    {
+      "id": 192, "infinitive": "kennen", "translation": "знать (быть знаком)", "type": "mixed", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "kenne", "du": "kennst", "er_sie_es": "kennt", "wir": "kennen", "ihr": "kennt", "sie_Sie": "kennen" },
+      "conjugation_past": { "ich": "kannte", "du": "kanntest", "er_sie_es": "kannte", "wir": "kannten", "ihr": "kanntet", "sie_Sie": "kannten" },
+      "conjugation_perf": { "ich": "habe gekannt", "du": "hast gekannt", "er_sie_es": "hat gekannt", "wir": "haben gekannt", "ihr": "habt gekannt", "sie_Sie": "haben gekannt" }
+    },
+    {
+      "id": 193, "infinitive": "mitbringen", "translation": "приносить с собой", "type": "mixed", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "bringe mit", "du": "bringst mit", "er_sie_es": "bringt mit", "wir": "bringen mit", "ihr": "bringt mit", "sie_Sie": "bringen mit" },
+      "conjugation_past": { "ich": "brachte mit", "du": "brachtest mit", "er_sie_es": "brachte mit", "wir": "brachten mit", "ihr": "brachtet mit", "sie_Sie": "brachten mit" },
+      "conjugation_perf": { "ich": "habe mitgebracht", "du": "hast mitgebracht", "er_sie_es": "hat mitgebracht", "wir": "haben mitgebracht", "ihr": "habt mitgebracht", "sie_Sie": "haben mitgebracht" }
+    },
+    {
+      "id": 194, "infinitive": "nennen", "translation": "называть", "type": "mixed", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "nenne", "du": "nennst", "er_sie_es": "nennt", "wir": "nennen", "ihr": "nennt", "sie_Sie": "nennen" },
+      "conjugation_past": { "ich": "nannte", "du": "nanntest", "er_sie_es": "nannte", "wir": "nannten", "ihr": "nanntet", "sie_Sie": "nannten" },
+      "conjugation_perf": { "ich": "habe genannt", "du": "hast genannt", "er_sie_es": "hat genannt", "wir": "haben genannt", "ihr": "habt genannt", "sie_Sie": "haben genannt" }
+    },
+    {
+      "id": 195, "infinitive": "rennen", "translation": "бежать/мчаться", "type": "mixed", "hilfsverb": "sein",
+      "conjugation_pres": { "ich": "renne", "du": "rennst", "er_sie_es": "rennt", "wir": "rennen", "ihr": "rennt", "sie_Sie": "rennen" },
+      "conjugation_past": { "ich": "rannte", "du": "ranntest", "er_sie_es": "rannte", "wir": "rannten", "ihr": "ranntet", "sie_Sie": "rannten" },
+      "conjugation_perf": { "ich": "bin gerannt", "du": "bist gerannt", "er_sie_es": "ist gerannt", "wir": "sind gerannt", "ihr": "seid gerannt", "sie_Sie": "sind gerannt" }
+    },
+    {
+      "id": 196, "infinitive": "wissen", "translation": "знать (факт)", "type": "mixed", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "weiß", "du": "weißt", "er_sie_es": "weiß", "wir": "wissen", "ihr": "wisst", "sie_Sie": "wissen" },
+      "conjugation_past": { "ich": "wusste", "du": "wusstest", "er_sie_es": "wusste", "wir": "wussten", "ihr": "wusstet", "sie_Sie": "wussten" },
+      "conjugation_perf": { "ich": "habe gewusst", "du": "hast gewusst", "er_sie_es": "hat gewusst", "wir": "haben gewusst", "ihr": "habt gewusst", "sie_Sie": "haben gewusst" }
+    }
+  ],
+  "modal": [
+    {
+      "id": 197, "infinitive": "dürfen", "translation": "мочь (иметь разрешение)", "type": "modal", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "darf", "du": "darfst", "er_sie_es": "darf", "wir": "dürfen", "ihr": "dürft", "sie_Sie": "dürfen" },
+      "conjugation_past": { "ich": "durfte", "du": "durftest", "er_sie_es": "durfte", "wir": "durften", "ihr": "durftet", "sie_Sie": "durften" },
+      "conjugation_perf": { "ich": "habe gedurft", "du": "hast gedurft", "er_sie_es": "hat gedurft", "wir": "haben gedurft", "ihr": "habt gedurft", "sie_Sie": "haben gedurft" }
+    },
+    {
+      "id": 198, "infinitive": "können", "translation": "мочь (уметь)", "type": "modal", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "kann", "du": "kannst", "er_sie_es": "kann", "wir": "können", "ihr": "könnt", "sie_Sie": "können" },
+      "conjugation_past": { "ich": "konnte", "du": "konntest", "er_sie_es": "konnte", "wir": "konnten", "ihr": "konntet", "sie_Sie": "konnten" },
+      "conjugation_perf": { "ich": "habe gekonnt", "du": "hast gekonnt", "er_sie_es": "hat gekonnt", "wir": "haben gekonnt", "ihr": "habt gekonnt", "sie_Sie": "haben gekonnt" }
+    },
+    {
+      "id": 199, "infinitive": "mögen", "translation": "нравиться", "type": "modal", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "mag", "du": "magst", "er_sie_es": "mag", "wir": "mögen", "ihr": "mögt", "sie_Sie": "mögen" },
+      "conjugation_past": { "ich": "mochte", "du": "mochtest", "er_sie_es": "mochte", "wir": "mochten", "ihr": "mochtet", "sie_Sie": "mochten" },
+      "conjugation_perf": { "ich": "habe gemocht", "du": "hast gemocht", "er_sie_es": "hat gemocht", "wir": "haben gemocht", "ihr": "habt gemocht", "sie_Sie": "haben gemocht" }
+    },
+    {
+      "id": 200, "infinitive": "müssen", "translation": "быть должным", "type": "modal", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "muss", "du": "musst", "er_sie_es": "muss", "wir": "müssen", "ihr": "müsst", "sie_Sie": "müssen" },
+      "conjugation_past": { "ich": "musste", "du": "musstest", "er_sie_es": "musste", "wir": "mussten", "ihr": "musstet", "sie_Sie": "mussten" },
+      "conjugation_perf": { "ich": "habe gemusst", "du": "hast gemusst", "er_sie_es": "hat gemusst", "wir": "haben gemusst", "ihr": "habt gemusst", "sie_Sie": "haben gemusst" }
+    },
+    {
+      "id": 201, "infinitive": "sollen", "translation": "следовать (быть должным)", "type": "modal", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "soll", "du": "sollst", "er_sie_es": "soll", "wir": "sollen", "ihr": "sollt", "sie_Sie": "sollen" },
+      "conjugation_past": { "ich": "sollte", "du": "solltest", "er_sie_es": "sollte", "wir": "sollten", "ihr": "solltet", "sie_Sie": "sollten" },
+      "conjugation_perf": { "ich": "habe gesollt", "du": "hast gesollt", "er_sie_es": "hat gesollt", "wir": "haben gesollt", "ihr": "habt gesollt", "sie_Sie": "haben gesollt" }
+    },
+    {
+      "id": 202, "infinitive": "wollen", "translation": "хотеть", "type": "modal", "hilfsverb": "haben",
+      "conjugation_pres": { "ich": "will", "du": "willst", "er_sie_es": "will", "wir": "wollen", "ihr": "wollt", "sie_Sie": "wollen" },
+      "conjugation_past": { "ich": "wollte", "du": "wolltest", "er_sie_es": "wollte", "wir": "wollten", "ihr": "wolltet", "sie_Sie": "wollten" },
+      "conjugation_perf": { "ich": "habe gewollt", "du": "hast gewollt", "er_sie_es": "hat gewollt", "wir": "haben gewollt", "ihr": "habt gewollt", "sie_Sie": "haben gewollt" }
+    }
+  ]
+}

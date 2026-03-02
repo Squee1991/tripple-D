@@ -9,24 +9,20 @@
 <!--        <div class="hats-badge" aria-hidden="true">-->
 <!--          <img :src="currentRankIcon" :alt="currentRankTitle"/>-->
 <!--        </div>-->
-
 <!--        <div class="hats-meta">-->
 <!--          <div class="hats-rank">{{ currentRankTitle }}</div>-->
-
 <!--          <div class="hats-hatsline">-->
 <!--            <img class="hat-img" :src="EducationHut" alt="Конфератки"/>-->
 <!--            <span class="hat-value">{{ authStore.totalHats }}</span>-->
 <!--          </div>-->
 <!--        </div>-->
 <!--      </div>-->
-
 <!--      <div class="hats-right">-->
 <!--        <div class="hats-text">-->
 <!--          Конфератки — это ваш путь к вершине! Накапливайте их, выполняйте все три задания дня. Повышайте свой ранг и покупайте разблокированные бонусы!-->
 <!--        </div>-->
 <!--      </div>-->
 <!--    </div>-->
-
 <!--    <div v-for="rank in store.ranksData" :key="rank.title" class="rank-league">-->
 <!--      <div class="league-line">-->
 <!--        <span class="league-title">{{ rank.title }}</span>-->
@@ -143,13 +139,13 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 }
 
 .rank-league {
-  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .league-line {
-  border-bottom: 1px solid #eee;
-  margin-bottom: 5px;
-  padding-bottom: 10px;
+  border-top: 1px solid #eee;
+  margin-top: 5px;
+  padding-top: 10px;
   text-align: center;
 }
 
@@ -158,17 +154,33 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
   color: #666;
   text-transform: uppercase;
   letter-spacing: 2px;
+  -webkit-text-stroke: 1px #666;
+  padding-bottom: 5px;
+  position: relative;
+}
+
+.league-title:after {
+  content: "";
+  width: 50px;
+  height: 1px;
+  background: #000;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
+  padding-top: 13px;
 }
 
 .card {
-  padding: 10px;
+  padding: 3px;
   text-align: center;
+  position: relative;
 }
 
 .card.is-locked {
@@ -183,7 +195,11 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 
 .card-stars {
   color: #e0e0e0;
-  font-size: 20px;
+  font-size: 21px;
+  position: absolute;
+  left: 50%;
+  top: -3px;
+  transform: translateX(-50%);
 }
 
 .star-active {
@@ -191,10 +207,14 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 }
 
 .card-icon img {
-  width: 76px;
-  height: 76px;
   object-fit: contain;
   transition: filter 0.3s ease;
+}
+
+.card-icon {
+  padding-top: 10px;
+  width: 85px;
+  height: 85px;
 }
 
 .icon-grayscale {
@@ -324,7 +344,6 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
     gap: 16px;
     overflow-x: auto;
     overflow-y: hidden;
-    padding: 0 10px 10px;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
   }
@@ -340,6 +359,8 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 
   .grid {
     scrollbar-width: none;
+    display: flex;
+    justify-content: center;
   }
 
   .hats-badge,

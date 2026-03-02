@@ -160,7 +160,6 @@ const startMission = (sectorId) => {
     opacity: 0.8;
   }
 }
-
 /* ВЕРСТКА БЕЗ РАМКИ */
 .open-menu-layout {
   position: relative;
@@ -193,7 +192,6 @@ const startMission = (sectorId) => {
   -webkit-text-stroke: 3px #000;
   text-shadow: 6px 6px 0 #e67e22;
 }
-
 /* КНОПКИ */
 .controls-section {
   display: flex;

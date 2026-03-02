@@ -80,7 +80,7 @@ export const regions = {
 				pathTo: "wild-lands",
 				theme: "wild",
 				name: "locationNames.wild-lands",
-				level: 15,
+				level: 0,
 				desc: "regions.descriptionWildLands",
 				icon: WildLand
 			}
@@ -111,6 +111,15 @@ export const regions = {
 				name: "Долина действий",
 				level: 0,
 				desc: "Здесь время больше не стоит на месте, а туман прошлого рассеивается. В этой долине путник учится ставить цели, осваивая модальные глаголы и искусство взаимодействия через падежи.",
+				icon: Action
+			},
+			{
+				id: "order-valley",
+				pathTo: "order-valley",
+				theme: "order",
+				name: "Земли порядка",
+				level: 0,
+				desc: "Здесь путник учится строить правильные предложения. В этой долине осваивают порядок слов в простых и сложных фразах, учатся сообщать о наличии вещей и использовать возвратные местоимения.",
 				icon: Action
 			}
 		]

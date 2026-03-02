@@ -26,6 +26,17 @@ const siteUrl =
 
 export default defineNuxtConfig({
 	experimental: {payloadExtraction: false},
+	defaults: {
+		nuxtLink: {
+			prefetch: false,
+			noPrefetch: true
+		}
+	},
+	router: {
+		options: {
+			prefetchLinks: false
+		}
+	},
 	compatibilityDate: '2024-11-01',
 	devtools: {enabled: true},
 	modules: [
@@ -40,7 +51,6 @@ export default defineNuxtConfig({
 	],
 	pwa: {
 		registerType: 'autoUpdate',
-
 		manifest: {
 			name: 'Skillupgerman',
 			short_name: 'Skillupgerman',
@@ -58,12 +68,35 @@ export default defineNuxtConfig({
 		},
 		workbox: {
 			navigateFallback: '/',
-			globPatterns: ['**/*.{js,css,ico,png,svg,webp,woff2}'],
+			globPatterns: ['_nuxt/*.{js,css}', 'favicon.ico', 'pwa-*.png'],
+			globIgnores: ['quests/*.json', 'images/**/*', 'assets/**/*', 'levels/**/*'],
 			runtimeCaching: [
 				{
 					urlPattern: ({ request }) => request.mode === 'navigate',
 					handler: 'NetworkFirst',
 					options: { cacheName: 'pages-cache' },
+				},
+				{
+					urlPattern: ({ request }) => request.destination === 'image',
+					handler: 'StaleWhileRevalidate',
+					options: {
+						cacheName: 'images-cache',
+						expiration: {
+							maxEntries: 100,
+							maxAgeSeconds: 60 * 60 * 24 * 7,
+						},
+					},
+				},
+				{
+					urlPattern: ({ url }) => url.pathname.startsWith('/quests/'),
+					handler: 'StaleWhileRevalidate',
+					options: {
+						cacheName: 'quests-json-cache',
+						expiration: {
+							maxEntries: 50,
+							maxAgeSeconds: 60 * 60 * 24
+						},
+					},
 				},
 			],
 		},
@@ -75,6 +108,9 @@ export default defineNuxtConfig({
 	vuefire: {
 		config: firebaseConfig,
 		auth: true,
+		firestore: {
+			experimentalForceLongPolling: true,
+		},
 		...(admin ? {admin} : {}),
 	},
 	runtimeConfig: {
@@ -221,7 +257,7 @@ export default defineNuxtConfig({
 		},
 		'/**': {
 			ssr: false,
-			headers: { 'Cache-Control': 'no-cache, no-store, must-revalidate' }
+			headers: { 'Cache-Control': 'public, max-age=0, must-revalidate' }
 		},
 		'/home': { redirect: { to: '/', statusCode: 301 } },
 		'/about': { redirect: { to: '/', statusCode: 301 } },
@@ -231,8 +267,8 @@ export default defineNuxtConfig({
 		'/sw.js': { headers: { 'Cache-Control': 'public, max-age=7200, must-revalidate' } },
 		'/_nuxt/**': { headers: { 'Cache-Control': 'public, max-age=31536000, immutable' } },
 		'/sounds/**': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
+		'/sw.js': { headers: { 'Cache-Control': 'public, max-age=7200, must-revalidate' } },
 		'/images/**': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
-		'/**/*.json': { headers: { 'Cache-Control': 'public, max-age=3600, must-revalidate' } },
 		'/*.png': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
 		'/*.ico': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
 		'/*.webmanifest': { headers: { 'Cache-Control': 'public, max-age=86400' } }
