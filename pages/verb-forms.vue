@@ -85,6 +85,11 @@
 <script setup>
 import SoundBtn from "../src/components/soundBtn.vue";
 import {ref, computed, watch, onMounted, onUnmounted} from 'vue'
+import {useSeoMeta} from "#imports";
+
+useSeoMeta({
+  robots: 'noindex, nofollow'
+})
 
 const {data: rawData} = await useFetch('/verbs.json')
 const searchQuery = ref('')
