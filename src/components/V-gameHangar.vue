@@ -1,26 +1,40 @@
+<script setup>
+import { ref, computed } from 'vue'
+import { useGalaxyStore } from '../../store/galaxyStore.js'
+
+const emit = defineEmits(['close'])
+const store = useGalaxyStore()
+const currentIdx = ref(0)
+const currentTank = computed(() => store.tankList[currentIdx.value])
+const isSelected = computed(() => store.selectedTankId === currentTank.value.id)
+const isOwned = computed(() => store.ownedTanks.includes(currentTank.value.id))
+const nextTank = () => currentIdx.value = (currentIdx.value + 1) % store.tankList.length
+const prevTank = () => currentIdx.value = (currentIdx.value - 1 + store.tankList.length) % store.tankList.length
+const handleBuy = () => {
+  store.buyShip(currentTank.value)
+}
+
+const handleSelect = () => {
+  store.selectShip(currentTank.value.id)
+}
+</script>
+
 <template>
   <div class="hangar-fullscreen-toon">
-    <div class="toon-space-bg">
-      <div class="toon-stars"></div>
-    </div>
-
+    <div class="toon-space-bg"><div class="toon-stars"></div></div>
     <div class="top-hud">
-      <button class="back-cyber-btn toon-style" @click="$emit('close')">
-        <span>ВЫЙТИ</span>
-      </button>
+      <button class="back-cyber-btn toon-style" @click="$emit('close')"><span>ВЫЙТИ</span></button>
       <div class="cyber-plank toon-style balance-display">
-        <span class="credits-val">{{ balance }} 💎</span>
+        <span class="credits-val">{{ store.balance }} 💎</span>
       </div>
     </div>
-
     <div class="ship-showroom">
       <button class="nav-btn toon-arrow left" @click="prevTank">◀</button>
-
       <div class="ship-stage-container">
         <div class="ship__inner">
           <Transition name="ship-pop" mode="out-in">
             <div :key="currentIdx" class="ship-active-zone">
-              <img :src="tankList[currentIdx].img" class="ship-main-img toon-ship" alt="Spaceship"/>
+              <img :src="currentTank.img" class="ship-main-img toon-ship" :alt="currentTank.name"/>
               <div class="holo-platform toon-platform"></div>
             </div>
           </Transition>
@@ -29,30 +43,29 @@
             <div class="stat-row">
               <span class="label toon-label">POWER</span>
               <div class="bar-bg toon-bar-bg">
-                <div class="bar-fill toon-orange" :style="{width: tankList[currentIdx].power + '%'}"></div>
+                <div class="bar-fill toon-orange" :style="{width: currentTank.power + '%'}"></div>
               </div>
             </div>
             <div class="stat-row">
               <span class="label toon-label">WARP</span>
               <div class="bar-bg toon-bar-bg">
-                <div class="bar-fill toon-cyan" :style="{width: tankList[currentIdx].speed + '%'}"></div>
+                <div class="bar-fill toon-cyan" :style="{width: currentTank.speed + '%'}"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
       <button class="nav-btn toon-arrow right" @click="nextTank">▶</button>
     </div>
 
     <div class="bottom-card-wrapper">
       <div class="info-terminal toon-terminal">
-        <h2 class="ship-name-display toon-title">{{ tankList[currentIdx].name }}</h2>
+        <h2 class="ship-name-display toon-title">{{ currentTank.name }}</h2>
         <div class="action-btn-container">
-          <button v-if="!tankList[currentIdx].owned" class="cyber-action buy toon-buy" @click="buyTank">
-            КУПИТЬ: {{ tankList[currentIdx].price }}
+          <button v-if="!isOwned" class="cyber-action buy toon-buy" @click="handleBuy">
+            КУПИТЬ: {{ currentTank.price }}
           </button>
-          <button v-else class="cyber-action select toon-select" :class="{ active: isSelected }" @click="selectTank">
+          <button v-else class="cyber-action select toon-select" :class="{ active: isSelected }" @click="handleSelect">
             {{ isSelected ? 'ГОТОВ!' : 'ВЫБРАТЬ' }}
           </button>
         </div>
@@ -60,59 +73,6 @@
     </div>
   </div>
 </template>
-
-<script setup>
-import {ref, computed, onMounted} from 'vue'
-import Spaceship from '@/assets/images/spaceship.svg'
-import Spaceship2 from '@/assets/images/spaceship-2.svg'
-import Spaceship3 from '@/assets/images/spaceship-3.svg'
-import Spaceship4 from '@/assets/images/spaceship-4.svg'
-import Spaceship5 from '@/assets/images/spaceship-5.svg'
-
-const emit = defineEmits(['close'])
-
-const balance = ref(3500)
-const currentIdx = ref(0)
-const selectedTankId = ref(1)
-
-const tankList = ref([
-  {id: 1, name: 'FALKE-01', img: Spaceship, price: 0, owned: true, power: 30, speed: 95},
-  {id: 2, name: 'NOVA-02', img: Spaceship2, price: 600, owned: false, power: 55, speed: 75},
-  {id: 3, name: 'STERN-03', img: Spaceship3, price: 1500, owned: false, power: 80, speed: 50},
-  {id: 4, name: 'KOMET-04', img: Spaceship4, price: 3000, owned: false, power: 90, speed: 35},
-  {id: 5, name: 'VOID-X', img: Spaceship5, price: 6000, owned: false, power: 100, speed: 15},
-])
-
-const isSelected = computed(() => selectedTankId.value === tankList.value[currentIdx.value].id)
-
-const nextTank = () => currentIdx.value = (currentIdx.value + 1) % tankList.value.length
-const prevTank = () => currentIdx.value = (currentIdx.value - 1 + tankList.value.length) % tankList.value.length
-
-const buyTank = () => {
-  const ship = tankList.value[currentIdx.value]
-  if (balance.value >= ship.price) {
-    balance.value -= ship.price
-    ship.owned = true
-    saveData()
-  }
-}
-
-const selectTank = () => {
-  selectedTankId.value = tankList.value[currentIdx.value].id
-  localStorage.setItem('selectedTank', selectedTankId.value)
-}
-
-const saveData = () => {
-  const owned = tankList.value.filter(t => t.owned).map(t => t.id)
-  localStorage.setItem('ownedTanks', JSON.stringify(owned))
-}
-
-onMounted(() => {
-  const savedOwned = JSON.parse(localStorage.getItem('ownedTanks') || '[1]')
-  tankList.value.forEach(t => t.owned = savedOwned.includes(t.id))
-  selectedTankId.value = Number(localStorage.getItem('selectedTank')) || 1
-})
-</script>
 
 <style scoped>
 /* --- ОСНОВНОЙ КОНТЕЙНЕР --- */
