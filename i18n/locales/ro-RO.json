@@ -6020,5 +6020,15 @@
       "culture": "Cultură și societate",
       "environment": "Mediu"
     }
+  },
+  "verbFormPage": {
+    "title": "Verbe germane",
+    "found": "Găsite:",
+    "typeTitle": "Toate tipurile",
+    "weak": "Slabe",
+    "strong": "Tari",
+    "mixed": "Mixte",
+    "modal": "Modale",
+    "placeHolder": "Caută verb..."
   }
 }

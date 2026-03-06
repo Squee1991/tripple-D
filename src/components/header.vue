@@ -260,7 +260,7 @@ const menuItems = computed(() => {
                 valueKey: 'sub.verbs',
                 subChildren: [
                   {id: 'verb-theory', url: '/verbs-theory', valueKey: 'underSub.verbsTheory'},
-                  // {id: 'verbs', url: '/verb-forms', valueKey: 'Формы глаголов'},
+                  {id: 'verbs', url: '/verb-forms', valueKey: 'Формы глаголов'},
                   {id: 'tenses', url: '/tenses', valueKey: 'underSub.verbFirst'},
                   {id: 'modalVerbs', url: '/modal-verbs', valueKey: 'underSub.verbSecond'},
                   {id: 'verb-types', url: '/verb-types', valueKey: 'underSub.verbTypes'}

@@ -1137,7 +1137,7 @@ watchEffect(() => {
     height: 28px;
   }
   .quest__question {
-    font-size: 1rem;
+    font-size: 1.1rem;
     border-bottom: 2px solid #9dceff;
     border-radius: 15px;
   }
@@ -1215,7 +1215,6 @@ watchEffect(() => {
   }
 }
 
-/* --- СТИЛИ ДЛЯ ПОДСКАЗОК --- */
 .quest__tip-container {
   display: flex;
   justify-content: center;
