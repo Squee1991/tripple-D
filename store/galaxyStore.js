@@ -22,10 +22,10 @@ export const useGalaxyStore = defineStore('galaxy', () => {
 	const currentQuestions = computed(() => currentGalaxy.value?.questions || [])
 	const speedMultiplier = computed(() => {
 		let extra = 0
-		if (score.value >= 10) extra += 0.1
-		if (score.value >= 20) extra += 0.2
-		if (score.value >= 30) extra += 0.4
-		if (score.value >= 40) extra += 0.6
+		if (score.value >= 10) extra += 0.2
+		if (score.value >= 20) extra += 0.4
+		if (score.value >= 30) extra += 0.7
+		if (score.value >= 40) extra += 1
 		return extra
 	})
 
