@@ -1003,7 +1003,7 @@ import { useEventSessionStore } from '../store/eventsStore.js'
 import { useEasterEggsStore } from '../store/easterEggsStore.js'
 
 export const useAchievementStore = defineStore('achievementStore', () => {
-	// --- Группы ---
+
 	const rawGroups = [
 		...valentineAchievements.map(g => ({category: 'valentine' , ...g})),
 		...eventWinterAchievements.map(g => ({category: 'winter' , ...g})),
@@ -1043,7 +1043,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		}))
 	)
 
-	// --- Служебные ссылки/хранилища ---
 	const lastUnlockedAward = ref(null)
 	const lastUnlockedAchievement = ref(null)
 	const popupQueue = ref([])
@@ -1106,7 +1105,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 	const winterRank1BoughtCount = ref(0)
 	const valentineRank1BoughtCount = ref(0)
 
-	// --- Utils ---
 	function findById(id) {
 		for (const g of groups.value) {
 			const ach = g.achievements.find(a => a.id === id)
@@ -1362,8 +1360,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 
 			Object.entries(prepositionsSetup).forEach(([caseName, prefix]) => {
 				const docId = `prepositions_${caseName}`
-				// OPTIMIZATION: Removed redundant listening to quizSessions, agg contains what's needed for achievements usually.
-				// If you specifically need quizSessions, you can add it back, but it halves reads to just listen to Topics.
 				const aggRef = doc(db, 'users', uid, 'quizTopics', docId)
 				prepositionUnsubs.push(onSnapshot(aggRef, s => applyPrepositionSnapshots(prefix, s.data() || {})))
 			})
@@ -1420,7 +1416,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			watch(source, raw => updateProgress(id, compute(raw)), { immediate: true })
 		})
 
-		// Марафон
 		;[ { category: 'easy', idx: 1 }, { category: 'normal', idx: 2 }, { category: 'hard', idx: 3 } ].forEach(({ category, idx }) => {
 			watch(() => gameStore.totalCorrectAnswers?.[idx] || 0,
 				v => groups.value.filter(g => g.category === category).forEach(g => g.achievements.filter(a => a.type === 'total').forEach(a => updateProgress(a.id, v))),
@@ -1431,10 +1426,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				{ immediate: true }
 			)
 		})
-
-		// ==========================================
-		// OPTIMIZATION: ONE SINGLE LOOP FOR WORDS
-		// ==========================================
 		watch(() => langStore.words, (words = []) => {
 			let listenCnt = 0, pluralCnt = 0, lettersCnt = 0;
 			let derCnt = 0, dieCnt = 0, dasCnt = 0, wordArticleCnt = 0;
@@ -1447,18 +1438,15 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				const w = words[i];
 				const p = w.progress || {};
 				const allModes = hasAllModes(w);
-
 				if (p.audio) listenCnt++;
 				if (p.plural) pluralCnt++;
 				if (p.letters) lettersCnt++;
 				if (p.wordArticle || p.wordPlusArticle) wordArticleCnt++;
-
 				if (p.article) {
 					if (w.article === 'der') derCnt++;
 					else if (w.article === 'die') dieCnt++;
 					else if (w.article === 'das') dasCnt++;
 				}
-
 				if (w.topic === 'Food' && VEGETABLES_DE.has(w.de)) {
 					hasVegan = true;
 					if (!allModes) isVegan = false;
@@ -1472,7 +1460,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				if (w.de === 'Hund' && allModes) hundDone = true;
 				if (w.de === 'Baum' && allModes) grootTopics.add(w.topic ?? '__no_topic__');
 			}
-
 			groups.value.forEach(g => {
 				if (g.category === 'listen') g.achievements.forEach(a => updateProgress(a.id, listenCnt));
 				if (g.category === 'plural') g.achievements.forEach(a => updateProgress(a.id, pluralCnt));
@@ -1494,14 +1481,11 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			updateProgress('iAmGroot', grootTopics.size);
 
 		}, { immediate: true, deep: true })
-		// ==========================================
 
 		watch(() => eggStore.answeredMap['lost_sequence'], isUnlocked => {
 			if (isUnlocked) updateProgress('the_hatch_quest', 1)
 		}, { immediate: true })
-
 		if (process.client) chainStore.loadProgressFromFirebase?.().catch(() => {})
-
 		watch(() => chainStore.questProgress, (qpRaw) => {
 			const qp = qpRaw || {}
 			const entries = Object.values(qp).filter(Boolean)
@@ -1567,9 +1551,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		updateProgress('Collection', shownSet.size)
 		setTimeout(() => finishBootAndReplay(), 0)
 
-		// ==========================================
-		// OPTIMIZATION: EVENTS (Only onSnapshot, removed getDoc double reads)
-		// ==========================================
 		watch(() => authStore.uid, (uid) => {
 			eventUnsubs.forEach(unsub => { try { unsub && unsub() } catch {} })
 			eventUnsubs = []

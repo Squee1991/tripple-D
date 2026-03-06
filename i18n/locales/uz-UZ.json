@@ -6020,5 +6020,15 @@
       "culture": "Madaniyat va jamiyat",
       "environment": "Atrof-muhit"
     }
+  },
+  "verbFormPage": {
+    "title": "Nemis fe'llari",
+    "found": "Topildi:",
+    "typeTitle": "Barcha turlar",
+    "weak": "Zaif",
+    "strong": "Kuchli",
+    "mixed": "Aralash",
+    "modal": "Modal",
+    "placeHolder": "Fe'lni topish..."
   }
 }

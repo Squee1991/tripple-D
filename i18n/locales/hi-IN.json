@@ -6020,5 +6020,15 @@
       "culture": "संस्कृति और समाज",
       "environment": "पर्यावरण"
     }
+  },
+  "verbFormPage": {
+    "title": "जर्मन क्रियाएँ",
+    "found": "मिला:",
+    "typeTitle": "सभी प्रकार",
+    "weak": "कमजोर",
+    "strong": "मजबूत",
+    "mixed": "मिश्रित",
+    "modal": "मोडल",
+    "placeHolder": "क्रिया खोजें..."
   }
 }

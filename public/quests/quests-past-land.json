@@ -1,162 +1,162 @@
 [
   {
-  "questId": "perfekt_introduction_basics",
-  "aliases": [
-    "perfekt-simple-start"
-  ],
-  "title": "oderValleyQuestOne.title",
-  "description": "oderValleyQuestOne.description",
-  "conditions": {
-    "goal": "oderValleyQuestOne.goal",
-    "minCorrect": 12,
-    "requiredTasks": 15
-  },
-  "rewards": {
-    "points": 10,
-    "xp": 10
-  },
-  "tasks": [
-    {
-      "id": 1,
-      "type": "reorder",
-      "question": "oderValleyQuestOne.questOne",
-      "words": ["gespielt", "Fußball", "habe", "Ich"],
-      "correctOrder": ["Ich", "habe", "Fußball", "gespielt"]
+    "questId": "perfekt_introduction_basics",
+    "aliases": [
+      "perfekt-simple-start"
+    ],
+    "title": "pastValleyQuestOne.title",
+    "description": "pastValleyQuestOne.description",
+    "conditions": {
+      "goal": "pastValleyQuestOne.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
     },
-    {
-      "id": 2,
-      "type": "select",
-      "question": "oderValleyQuestOne.questTwo",
-      "options": [
-        "Du hast Musik gehören",
-        "Wir haben Musik gehört",
-        "Du hast Musik gehört"
-      ],
-      "answer": "Du hast Musik gehört"
+    "rewards": {
+      "points": 10,
+      "xp": 10
     },
-    {
-      "id": 3,
-      "type": "speechToText",
-      "question": "oderValleyQuestOne.questThree",
-      "text": "Wir haben Deutsch gelernt",
-      "answer": "Wir haben Deutsch gelernt"
-    },
-    {
-      "id": 4,
-      "type": "reorder",
-      "question": "oderValleyQuestOne.questFour",
-      "words": ["gekauft", "ist", "Brot", "hat", "Er"],
-      "correctOrder": ["Er", "hat", "Brot", "gekauft"]
-    },
-    {
-      "id": 5,
-      "type": "select",
-      "question": "oderValleyQuestOne.questFive",
-      "options": [
-        "Wir haben Pizza gegessen",
-        "Wir haben Pizza gegesst",
-        "Wir haben Pizza essen"
-      ],
-      "answer": "Wir haben Pizza gegessen"
-    },
-    {
-      "id": 6,
-      "type": "reorder",
-      "question": "oderValleyQuestOne.questSix",
-      "words": ["sehr", "gemacht", "das", "habe", "Ich", "schnell"],
-      "correctOrder": ["Ich", "habe", "das", "sehr", "schnell", "gemacht"]
-    },
-    {
-      "id": 7,
-      "type": "speechToText",
-      "question": "oderValleyQuestOne.questSeven",
-      "text": "Sie haben getanzt",
-      "answer": "Sie haben getanzt"
-    },
-    {
-      "id": 8,
-      "type": "select",
-      "question": "oderValleyQuestOne.questEight",
-      "options": [
-        "Ihr habt alles gesehen",
-        "Ihr hast alles gesehen",
-        "Ihr haben alles gesehen"
-      ],
-      "answer": "Ihr habt alles gesehen",
-      "tip": "oderValleyQuestOne.questEightTip"
-    },
-    {
-      "id": 9,
-      "type": "reorder",
-      "question": "oderValleyQuestOne.questNine",
-      "words": ["geschlafen", "du", "Hast"],
-      "correctOrder": ["Hast", "du", "geschlafen"],
-      "tip": "oderValleyQuestOne.questNineTip"
-    },
-    {
-      "id": 10,
-      "type": "speechToText",
-      "question": "oderValleyQuestOne.questTen",
-      "text": "Ich habe gelacht",
-      "answer": "Ich habe gelacht"
-    },
-    {
-      "id": 11,
-      "type": "reorder",
-      "question": "oderValleyQuestOne.questEleven",
-      "words": ["gewohnt", "Berlin", "in", "Wir", "haben"],
-      "correctOrder": ["Wir", "haben", "in", "Berlin", "gewohnt"],
-      "tip": "oderValleyQuestOne.questElevenTip"
-    },
-    {
-      "id": 12,
-      "type": "select",
-      "question": "oderValleyQuestOne.questTwelve",
-      "options": [
-        "Ich bin nach Hause gegangen",
-        "Ich habe nach Hause gegangen",
-        "Ich ist nach Hause gegangen"
-      ],
-      "answer": "Ich bin nach Hause gegangen"
-    },
-    {
-      "id": 13,
-      "type": "speechToText",
-      "question": "oderValleyQuestOne.questThirteen",
-      "text": "Er hat gar nichts gesagt",
-      "answer": "Er hat gar nichts gesagt"
-    },
-    {
-      "id": 14,
-      "type": "reorder",
-      "question": "oderValleyQuestOne.questFourteen",
-      "words": ["gearbeitet", "heute", "Sie", "hat"],
-      "correctOrder": ["Sie", "hat", "heute", "gearbeitet"],
-      "tip": "oderValleyQuestOne.questFourteenTip"
-    },
-    {
-      "id": 15,
-      "type": "select",
-      "question": "oderValleyQuestOne.questFifteen",
-      "options": [
-        "Die Kinder haben gespielt",
-        "Die Kinder hat gespielt",
-        "Die Kinder hast gespielt"
-      ],
-      "answer": "Die Kinder haben gespielt"
-    }
-  ]
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "pastValleyQuestOne.questOne",
+        "words": ["gespielt", "Fußball", "habe", "Ich"],
+        "correctOrder": ["Ich", "habe", "Fußball", "gespielt"]
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "pastValleyQuestOne.questTwo",
+        "options": [
+          "Du hast Musik gehören",
+          "Wir haben Musik gehört",
+          "Du hast Musik gehört"
+        ],
+        "answer": "Du hast Musik gehört"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "pastValleyQuestOne.questThree",
+        "text": "Wir haben Deutsch gelernt",
+        "answer": "Wir haben Deutsch gelernt"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "pastValleyQuestOne.questFour",
+        "words": ["gekauft", "ist", "Brot", "hat", "Er"],
+        "correctOrder": ["Er", "hat", "Brot", "gekauft"]
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "pastValleyQuestOne.questFive",
+        "options": [
+          "Wir haben Pizza gegessen",
+          "Wir haben Pizza gegesst",
+          "Wir haben Pizza essen"
+        ],
+        "answer": "Wir haben Pizza gegessen"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "pastValleyQuestOne.questSix",
+        "words": ["sehr", "gemacht", "das", "habe", "Ich", "schnell"],
+        "correctOrder": ["Ich", "habe", "das", "sehr", "schnell", "gemacht"]
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "pastValleyQuestOne.questSeven",
+        "text": "Sie haben getanzt",
+        "answer": "Sie haben getanzt"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "pastValleyQuestOne.questEight",
+        "options": [
+          "Ihr habt alles gesehen",
+          "Ihr hast alles gesehen",
+          "Ihr haben alles gesehen"
+        ],
+        "answer": "Ihr habt alles gesehen",
+        "tip": "pastValleyQuestOne.questEightTip"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "pastValleyQuestOne.questNine",
+        "words": ["geschlafen", "du", "Hast"],
+        "correctOrder": ["Hast", "du", "geschlafen"],
+        "tip": "pastValleyQuestOne.questNineTip"
+      },
+      {
+        "id": 10,
+        "type": "speechToText",
+        "question": "pastValleyQuestOne.questTen",
+        "text": "Ich habe gelacht",
+        "answer": "Ich habe gelacht"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "pastValleyQuestOne.questEleven",
+        "words": ["gewohnt", "Berlin", "in", "Wir", "haben"],
+        "correctOrder": ["Wir", "haben", "in", "Berlin", "gewohnt"],
+        "tip": "pastValleyQuestOne.questElevenTip"
+      },
+      {
+        "id": 12,
+        "type": "select",
+        "question": "pastValleyQuestOne.questTwelve",
+        "options": [
+          "Ich bin nach Hause gegangen",
+          "Ich habe nach Hause gegangen",
+          "Ich ist nach Hause gegangen"
+        ],
+        "answer": "Ich bin nach Hause gegangen"
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "pastValleyQuestOne.questThirteen",
+        "text": "Er hat gar nichts gesagt",
+        "answer": "Er hat gar nichts gesagt"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "pastValleyQuestOne.questFourteen",
+        "words": ["gearbeitet", "heute", "Sie", "hat"],
+        "correctOrder": ["Sie", "hat", "heute", "gearbeitet"],
+        "tip": "pastValleyQuestOne.questFourteenTip"
+      },
+      {
+        "id": 15,
+        "type": "select",
+        "question": "pastValleyQuestOne.questFifteen",
+        "options": [
+          "Die Kinder haben gespielt",
+          "Die Kinder hat gespielt",
+          "Die Kinder hast gespielt"
+        ],
+        "answer": "Die Kinder haben gespielt"
+      }
+    ]
   },
   {
     "questId": "perfekt_movement_sein",
     "aliases": [
       "perfekt-go-run-fly"
     ],
-    "title": "oderValleyQuestTwo.title",
+    "title": "pastValleyQuestTwo.title",
     "progress": "0/15",
-    "description": "oderValleyQuestTwo.description",
+    "description": "pastValleyQuestTwo.description",
     "conditions": {
-      "goal": "oderValleyQuestTwo.goal",
+      "goal": "pastValleyQuestTwo.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
@@ -168,62 +168,62 @@
       {
         "id": 1,
         "type": "reorder",
-        "question": "oderValleyQuestTwo.questOne",
+        "question": "pastValleyQuestTwo.questOne",
         "words": ["gegangen", "habe", "ins", "bin", "Ich", "Kino"],
         "correctOrder": ["Ich", "bin", "ins", "Kino", "gegangen"]
       },
       {
         "id": 2,
         "type": "select",
-        "question": "oderValleyQuestTwo.questTwo",
+        "question": "pastValleyQuestTwo.questTwo",
         "options": [
           "Wir haben in Berlin gekommen",
           "Wir sind in Berlin gekommen",
           "Wir sind in Berlin angekommen"
         ],
         "answer": "Wir sind in Berlin angekommen",
-        "tip": "oderValleyQuestTwo.questTwoTip"
+        "tip": "pastValleyQuestTwo.questTwoTip"
       },
       {
         "id": 3,
         "type": "speechToText",
-        "question": "oderValleyQuestTwo.questThree",
+        "question": "pastValleyQuestTwo.questThree",
         "text": "Er ist nach Hause gelaufen",
         "answer": "Er ist nach Hause gelaufen"
       },
       {
         "id": 4,
         "type": "reorder",
-        "question": "oderValleyQuestTwo.questFour",
+        "question": "pastValleyQuestTwo.questFour",
         "words": ["ans", "Sie", "Meer", "sind", "gefahren", "haben"],
         "correctOrder": ["Sie", "sind", "ans", "Meer", "gefahren"],
-        "tip": "oderValleyQuestTwo.questFourTip"
+        "tip": "pastValleyQuestTwo.questFourTip"
       },
       {
         "id": 5,
         "type": "select",
-        "question": "oderValleyQuestTwo.questFive",
+        "question": "pastValleyQuestTwo.questFive",
         "options": [
           "Ich bin um 7 Uhr aufgestanden",
           "Ich habe um 7 Uhr aufgestanden",
           "Ich bin um 7 Uhr aufstehen"
         ],
         "answer": "Ich bin um 7 Uhr aufgestanden",
-        "tip": "oderValleyQuestTwo.questFiveTip"
+        "tip": "pastValleyQuestTwo.questFiveTip"
       },
       {
         "id": 6,
         "type": "reorder",
-        "question": "oderValleyQuestTwo.questSix",
+        "question": "pastValleyQuestTwo.questSix",
         "words": ["sind", "schnell", "Die Kinder", "gewachsen", "haben"],
         "correctOrder": ["Die Kinder", "sind", "schnell", "gewachsen"]
       },
       {
         "id": 7,
         "type": "speechToText",
-        "question": "oderValleyQuestTwo.questSeven",
-        "text": "Ich bin zwei Stunden позже gekommen",
-        "answer": "Ich bin zwei Stunden позже gekommen",
+        "question": "pastValleyQuestTwo.questSeven",
+        "text": "Ich bin zwei Stunden später gekommen",
+        "answer": "Ich bin zwei Stunden später gekommen",
         "accept": [
           "Ich bin zwei Stunden später gekommen",
           "Ich bin 2 Stunden später gekommen"
@@ -232,7 +232,7 @@
       {
         "id": 8,
         "type": "select",
-        "question": "oderValleyQuestTwo.questEight",
+        "question": "pastValleyQuestTwo.questEight",
         "options": [
           "Ihr seid schnell gefahren",
           "Ihr sind schnell gefahren",
@@ -243,76 +243,76 @@
       {
         "id": 9,
         "type": "reorder",
-        "question": "oderValleyQuestTwo.questNine",
+        "question": "pastValleyQuestTwo.questNine",
         "words": ["ist", "Sie", "nach", "München", "gefahren"],
         "correctOrder": ["Sie", "ist", "nach", "München", "gefahren"],
-        "tip": "oderValleyQuestTwo.questNineTip"
+        "tip": "pastValleyQuestTwo.questNineTip"
       },
       {
         "id": 10,
         "type": "speechToText",
-        "question": "oderValleyQuestTwo.questTen",
+        "question": "pastValleyQuestTwo.questTen",
         "text": "Was ist passiert?",
         "answer": "Was ist passiert?"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "oderValleyQuestTwo.questEleven",
+        "question": "pastValleyQuestTwo.questEleven",
         "words": ["bin", "Ich", "eingeschlafen", "habe"],
         "correctOrder": ["Ich", "bin", "eingeschlafen"],
-        "tip": "oderValleyQuestTwo.questElevenTip"
+        "tip": "pastValleyQuestTwo.questElevenTip"
       },
       {
         "id": 12,
         "type": "select",
-        "question": "oderValleyQuestTwo.questTwelve",
+        "question": "pastValleyQuestTwo.questTwelve",
         "options": [
           "Wir sind im See geschwommen",
           "Wir haben im See geschwommen",
           "Wir sind im See geschwimmen"
         ],
         "answer": "Wir sind im See geschwommen",
-        "tip": "oderValleyQuestTwo.questTwelveTip"
+        "tip": "pastValleyQuestTwo.questTwelveTip"
       },
       {
         "id": 13,
         "type": "speechToText",
-        "question": "oderValleyQuestTwo.questThirteen",
+        "question": "pastValleyQuestTwo.questThirteen",
         "text": "Bist du schon angekommen?",
         "answer": "Bist du schon angekommen?",
-        "tip": "oderValleyQuestTwo.questThirteenTip"
+        "tip": "pastValleyQuestTwo.questThirteenTip"
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "oderValleyQuestTwo.questFourteen",
+        "question": "pastValleyQuestTwo.questFourteen",
         "words": ["nach", "Alle", "sind", "Hause", "gegangen", "haben", "zu"],
         "correctOrder": ["Alle", "sind", "nach", "Hause", "gegangen"],
-        "tip": "oderValleyQuestTwo.questFourteenTip"
+        "tip": "pastValleyQuestTwo.questFourteenTip"
       },
       {
         "id": 15,
         "type": "select",
-        "question": "oderValleyQuestTwo.questFifteen",
+        "question": "pastValleyQuestTwo.questFifteen",
         "options": [
           "Er ist spät gekommen",
           "Er hat spät gekommen",
           "Er ist spät kommen"
         ],
         "answer": "Er ist spät gekommen",
-        "tip": "oderValleyQuestTwo.questFifteenTip"
+        "tip": "pastValleyQuestTwo.questFifteenTip"
       }
     ]
   },
   {
     "questId": "perfekt_daily_routine",
     "aliases": ["perfekt-my-day"],
-    "title": "oderValleyQuestThree.title",
+    "title": "pastValleyQuestThree.title",
     "progress": "0/15",
-    "description": "oderValleyQuestThree.description",
+    "description": "pastValleyQuestThree.description",
     "conditions": {
-      "goal": "oderValleyQuestThree.goal",
+      "goal": "pastValleyQuestThree.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
@@ -324,42 +324,42 @@
       {
         "id": 1,
         "type": "reorder",
-        "question": "oderValleyQuestThree.questOne",
+        "question": "pastValleyQuestThree.questOne",
         "words": ["habe", "aufgewacht", "früh", "Ich", "bin"],
         "correctOrder": ["Ich", "bin", "früh", "aufgewacht"],
-        "tip": "oderValleyQuestThree.questOneTip"
+        "tip": "pastValleyQuestThree.questOneTip"
       },
       {
         "id": 2,
         "type": "select",
-        "question": "oderValleyQuestThree.questTwo",
+        "question": "pastValleyQuestThree.questTwo",
         "options": [
           "Ich habe einen Kaffee getrunken",
           "Ich bin einen Kaffee getrunken",
           "Ich habe einen Kaffee trinken"
         ],
         "answer": "Ich habe einen Kaffee getrunken",
-        "tip": "oderValleyQuestThree.questTwoTip"
+        "tip": "pastValleyQuestThree.questTwoTip"
       },
       {
         "id": 3,
         "type": "speechToText",
-        "question": "oderValleyQuestThree.questThree",
+        "question": "pastValleyQuestThree.questThree",
         "text": "Ich habe gefrühstückt",
         "answer": "Ich habe gefrühstückt"
       },
       {
         "id": 4,
         "type": "reorder",
-        "question": "oderValleyQuestThree.questFour",
+        "question": "pastValleyQuestThree.questFour",
         "words": ["hat", "gegangen", "zur", "Er", "Arbeit", "ist"],
         "correctOrder": ["Er", "ist", "zur", "Arbeit", "gegangen"],
-        "tip": "oderValleyQuestThree.questFourTip"
+        "tip": "pastValleyQuestThree.questFourTip"
       },
       {
         "id": 5,
         "type": "select",
-        "question": "oderValleyQuestThree.questFive",
+        "question": "pastValleyQuestThree.questFive",
         "options": [
           "Ich habe viel gearbeitet",
           "Ich bin viel gearbeitet",
@@ -370,22 +370,22 @@
       {
         "id": 6,
         "type": "reorder",
-        "question": "oderValleyQuestThree.questSix",
+        "question": "pastValleyQuestThree.questSix",
         "words": ["zu", "Wir", "Mittag", "gegessen", "haben", "sind"],
         "correctOrder": ["Wir", "haben", "zu", "Mittag", "gegessen"],
-        "tip": "oderValleyQuestThree.questSixTip"
+        "tip": "pastValleyQuestThree.questSixTip"
       },
       {
         "id": 7,
         "type": "speechToText",
-        "question": "oderValleyQuestThree.questSeven",
+        "question": "pastValleyQuestThree.questSeven",
         "text": "Ich habe einen Freund getroffen",
         "answer": "Ich habe einen Freund getroffen"
       },
       {
         "id": 8,
         "type": "select",
-        "question": "oderValleyQuestThree.questEight",
+        "question": "pastValleyQuestThree.questEight",
         "options": [
           "Hast du Lebensmittel eingekauft?",
           "Bist du Lebensmittel eingekauft?",
@@ -396,77 +396,77 @@
       {
         "id": 9,
         "type": "reorder",
-        "question": "oderValleyQuestThree.questNine",
+        "question": "pastValleyQuestThree.questNine",
         "words": ["ist", "gekocht", "Abendessen", "hat", "Sie", "das"],
         "correctOrder": ["Sie", "hat", "das", "Abendessen", "gekocht"]
       },
       {
         "id": 10,
         "type": "speechToText",
-        "question": "oderValleyQuestThree.questTen",
-        "text": "Ich bin eine Stunden zu spät gekommen.",
-        "answer": "Ich bin eine Stunden zu spät gekommen.",
+        "question": "pastValleyQuestThree.questTen",
+        "text": "Ich bin eine Stunde zu spät gekommen",
+        "answer": "Ich bin eine Stunde zu spät gekommen",
         "accept": [
-          "Ich bin eine Stunde zu spät gekommen.",
-          "Ich bin 1 Stunde zu spät gekommen."
+          "Ich bin eine Stunde zu spät gekommen",
+          "Ich bin 1 Stunde zu spät gekommen"
         ]
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "oderValleyQuestThree.questEleven",
+        "question": "pastValleyQuestThree.questEleven",
         "words": ["sind", "einen", "Film", "haben", "Wir", "gesehen"],
         "correctOrder": ["Wir", "haben", "einen", "Film", "gesehen"],
-        "tip": "oderValleyQuestThree.questElevenTip"
+        "tip": "pastValleyQuestThree.questElevenTip"
       },
       {
         "id": 12,
         "type": "select",
-        "question": "oderValleyQuestThree.questTwelve",
+        "question": "pastValleyQuestThree.questTwelve",
         "options": [
-          "Ich bin быстро заснул",
-          "Ich habe быстро заснул",
-          "Ich bin быстро заснул"
+          "Ich bin schnell eingeschlafen",
+          "Ich habe schnell eingeschlafen",
+          "Ich bin schnell einschlafen"
         ],
         "answer": "Ich bin schnell eingeschlafen",
-        "tip": "oderValleyQuestThree.questTwelveTip"
+        "tip": "pastValleyQuestThree.questTwelveTip"
       },
       {
         "id": 13,
         "type": "speechToText",
-        "question": "oderValleyQuestThree.questThirteen",
+        "question": "pastValleyQuestThree.questThirteen",
         "text": "Was hast du heute gemacht?",
-        "answer": "Was hast du сегодня gemacht?"
+        "answer": "Was hast du heute gemacht?"
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "oderValleyQuestThree.questFourteen",
-        "words": ["Deutsch", "gelernt", "habe", "Ich", "ganzen Tag", "lernen", "den"],
-        "correctOrder": ["Ich", "habe", "den", "ganzen Tag", "Deutsch", "gelernt"]
+        "question": "pastValleyQuestThree.questFourteen",
+        "words": ["Deutsch", "gelernt", "habe", "Ich", "ganzen", "Tag", "lernen", "den"],
+        "correctOrder": ["Ich", "habe", "den", "ganzen", "Tag", "Deutsch", "gelernt"]
       },
       {
         "id": 15,
         "type": "select",
-        "question": "oderValleyQuestThree.questFifteen",
+        "question": "pastValleyQuestThree.questFifteen",
         "options": [
           "Ich bin um 23 Uhr schlafen gegangen",
           "Ich habe um 23 Uhr schlafen gegangen",
           "Ich bin um 23 Uhr schlafen gehen"
         ],
         "answer": "Ich bin um 23 Uhr schlafen gegangen",
-        "tip": "oderValleyQuestThree.questFifteenTip"
+        "tip": "pastValleyQuestThree.questFifteenTip"
       }
     ]
   },
   {
     "questId": "perfekt_inseparable_prefixes",
     "aliases": ["perfekt-no-ge"],
-    "title": "oderValleyQuestFour.title",
+    "title": "pastValleyQuestFour.title",
     "progress": "0/15",
-    "description": "oderValleyQuestFour.description",
+    "description": "pastValleyQuestFour.description",
     "conditions": {
-      "goal": "oderValleyQuestFour.goal",
+      "goal": "pastValleyQuestFour.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
@@ -478,146 +478,146 @@
       {
         "id": 1,
         "type": "reorder",
-        "question": "oderValleyQuestFour.questOne",
+        "question": "pastValleyQuestFour.questOne",
         "words": ["besucht", "meine", "Oma", "habe", "Ich"],
         "correctOrder": ["Ich", "habe", "meine", "Oma", "besucht"]
       },
       {
         "id": 2,
         "type": "select",
-        "question": "oderValleyQuestFour.questTwo",
+        "question": "pastValleyQuestFour.questTwo",
         "options": [
-          "Hast du alles verstanden?",
+          "Hast du alles verstehen?",
           "Hast du alles verstanden?",
           "Hast du alles versteht?"
         ],
         "answer": "Hast du alles verstanden?",
-        "tip": "oderValleyQuestFour.questTwoTip"
+        "tip": "pastValleyQuestFour.questTwoTip"
       },
       {
         "id": 3,
         "type": "speechToText",
-        "question": "oderValleyQuestFour.questThree",
+        "question": "pastValleyQuestFour.questThree",
         "text": "Er hat die Schlüssel vergessen",
         "answer": "Er hat die Schlüssel vergessen"
       },
       {
         "id": 4,
         "type": "reorder",
-        "question": "oderValleyQuestFour.questFour",
+        "question": "pastValleyQuestFour.questFour",
         "words": ["verloren", "Geld", "haben", "Wir", "das", "sind"],
         "correctOrder": ["Wir", "haben", "das", "Geld", "verloren"]
       },
       {
         "id": 5,
         "type": "select",
-        "question": "oderValleyQuestFour.questFive",
+        "question": "pastValleyQuestFour.questFive",
         "options": [
           "Sie hat eine Geschichte erzählt",
           "Sie hat eine Geschichte geerzählt",
           "Sie hat eine Geschichte erzähltet"
         ],
         "answer": "Sie hat eine Geschichte erzählt",
-        "tip": "oderValleyQuestFour.questFiveTip"
+        "tip": "pastValleyQuestFour.questFiveTip"
       },
       {
         "id": 6,
         "type": "reorder",
-        "question": "oderValleyQuestFour.questSix",
+        "question": "pastValleyQuestFour.questSix",
         "words": ["gehört", "mir", "hat", "Das"],
         "correctOrder": ["Das", "hat", "mir", "gehört"]
       },
       {
         "id": 7,
         "type": "speechToText",
-        "question": "oderValleyQuestFour.questSeven",
+        "question": "pastValleyQuestFour.questSeven",
         "text": "Haben Sie den Brief bekommen?",
         "answer": "Haben Sie den Brief bekommen?"
       },
       {
         "id": 8,
         "type": "select",
-        "question": "oderValleyQuestFour.questEight",
+        "question": "pastValleyQuestFour.questEight",
         "options": [
           "Ich habe alles erklärt",
           "Ich habe alles erklären",
           "Ich bin alles erklärt"
         ],
         "answer": "Ich habe alles erklärt",
-        "tip": "oderValleyQuestFour.questEightTip"
+        "tip": "pastValleyQuestFour.questEightTip"
       },
       {
         "id": 9,
         "type": "reorder",
-        "question": "oderValleyQuestFour.questNine",
+        "question": "pastValleyQuestFour.questNine",
         "words": ["verkauft", "das", "hat", "Er", "Auto"],
         "correctOrder": ["Er", "hat", "das", "Auto", "verkauft"],
-        "tip": "oderValleyQuestFour.questNineTip"
+        "tip": "pastValleyQuestFour.questNineTip"
       },
       {
         "id": 10,
         "type": "speechToText",
-        "question": "oderValleyQuestFour.questTen",
+        "question": "pastValleyQuestFour.questTen",
         "text": "Wir haben das erlebt",
         "answer": "Wir haben das erlebt"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "oderValleyQuestFour.questEleven",
+        "question": "pastValleyQuestFour.questEleven",
         "words": ["das", "versprochen", "hast", "Du"],
         "correctOrder": ["Du", "hast", "das", "versprochen"]
       },
       {
         "id": 12,
         "type": "select",
-        "question": "oderValleyQuestFour.questTwelve",
+        "question": "pastValleyQuestFour.questTwelve",
         "options": [
           "Sie hat Pizza bestellt",
           "Sie hat Pizza gebestellt",
           "Sie hat Pizza bestellen"
         ],
         "answer": "Sie hat Pizza bestellt",
-        "tip": "oderValleyQuestFour.questTwelveTip"
+        "tip": "pastValleyQuestFour.questTwelveTip"
       },
       {
         "id": 13,
         "type": "speechToText",
-        "question": "oderValleyQuestFour.questThirteen",
+        "question": "pastValleyQuestFour.questThirteen",
         "text": "Was ist passiert?",
         "answer": "Was ist passiert?",
-        "tip": "oderValleyQuestFour.questThirteenTip"
+        "tip": "pastValleyQuestFour.questThirteenTip"
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "oderValleyQuestFour.questFourteen",
+        "question": "pastValleyQuestFour.questFourteen",
         "words": ["erkannt", "den", "habe", "Ich", "Freund"],
         "correctOrder": ["Ich", "habe", "den", "Freund", "erkannt"],
-        "tip": "oderValleyQuestFour.questFourteenTip"
+        "tip": "pastValleyQuestFour.questFourteenTip"
       },
       {
         "id": 15,
         "type": "select",
-        "question": "oderValleyQuestFour.questFifteen",
+        "question": "pastValleyQuestFour.questFifteen",
         "options": [
           "Wir haben uns verspätet",
           "Wir sind uns verspätet",
           "Wir haben uns geverspätet"
         ],
         "answer": "Wir haben uns verspätet",
-        "tip": "oderValleyQuestFour.questFifteenTip"
+        "tip": "pastValleyQuestFour.questFifteenTip"
       }
     ]
   },
   {
     "questId": "perfekt_food_restaurant",
     "aliases": ["perfekt-dinner"],
-    "title": "oderValleyQuestFive.title",
+    "title": "pastValleyQuestFive.title",
     "progress": "0/15",
-    "description": "oderValleyQuestFive.description",
+    "description": "pastValleyQuestFive.description",
     "conditions": {
-      "goal": "oderValleyQuestFive.goal",
+      "goal": "pastValleyQuestFive.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
@@ -629,73 +629,73 @@
       {
         "id": 1,
         "type": "reorder",
-        "question": "oderValleyQuestFive.questOne",
+        "question": "pastValleyQuestFive.questOne",
         "words": ["bestellt", "eine", "Wir", "Pizza", "haben", "bestellen"],
         "correctOrder": ["Wir", "haben", "eine", "Pizza", "bestellt"],
-        "tip": "oderValleyQuestFive.questOneTip"
+        "tip": "pastValleyQuestFive.questOneTip"
       },
       {
         "id": 2,
         "type": "select",
-        "question": "oderValleyQuestFive.questTwo",
+        "question": "pastValleyQuestFive.questTwo",
         "options": [
           "Hat dir das Essen geschmeckt?",
           "Ist dir das Essen geschmeckt?",
           "Hat dir das Essen geschmecken?"
         ],
         "answer": "Hat dir das Essen geschmeckt?",
-        "tip": "oderValleyQuestFive.questTwoTip"
+        "tip": "pastValleyQuestFive.questTwoTip"
       },
       {
         "id": 3,
         "type": "speechToText",
-        "question": "oderValleyQuestFive.questThree",
+        "question": "pastValleyQuestFive.questThree",
         "text": "Ich habe ein Glas Wasser getrunken",
         "answer": "Ich habe ein Glas Wasser getrunken",
         "accept": [
           "Ich habe ein Glas Wasser getrunken",
           "Ich habe 1 Glas Wasser getrunken"
         ],
-        "tip": "oderValleyQuestFive.questThreeTip"
+        "tip": "pastValleyQuestFive.questThreeTip"
       },
       {
         "id": 4,
         "type": "reorder",
-        "question": "oderValleyQuestFive.questFour",
+        "question": "pastValleyQuestFive.questFour",
         "words": ["schon", "gegessen", "Habt", "ihr", "sind"],
         "correctOrder": ["Habt", "ihr", "schon", "gegessen"]
       },
       {
         "id": 5,
         "type": "select",
-        "question": "oderValleyQuestFive.questFive",
+        "question": "pastValleyQuestFive.questFive",
         "options": [
           "Er hat einen Tisch reserviert",
           "Er hat einen Tisch reservieren",
           "Er ist einen Tisch reserviert"
         ],
         "answer": "Er hat einen Tisch reserviert",
-        "tip": "oderValleyQuestFive.questFiveTip"
+        "tip": "pastValleyQuestFive.questFiveTip"
       },
       {
         "id": 6,
         "type": "reorder",
-        "question": "oderValleyQuestFive.questSix",
+        "question": "pastValleyQuestFive.questSix",
         "words": ["Salat", "einen", "genommen", "Ich", "habe"],
         "correctOrder": ["Ich", "habe", "einen", "Salat", "genommen"],
-        "tip": "oderValleyQuestFive.questSixTip"
+        "tip": "pastValleyQuestFive.questSixTip"
       },
       {
         "id": 7,
         "type": "speechToText",
-        "question": "oderValleyQuestFive.questSeven",
-        "text": "Wir have bar bezahlt",
+        "question": "pastValleyQuestFive.questSeven",
+        "text": "Wir haben bar bezahlt",
         "answer": "Wir haben bar bezahlt"
       },
       {
         "id": 8,
         "type": "select",
-        "question": "oderValleyQuestFive.questEight",
+        "question": "pastValleyQuestFive.questEight",
         "options": [
           "Sie hat eine Suppe gekocht",
           "Sie ist eine Suppe gekocht",
@@ -706,43 +706,43 @@
       {
         "id": 9,
         "type": "reorder",
-        "question": "oderValleyQuestFive.questNine",
+        "question": "pastValleyQuestFive.questNine",
         "words": ["gegangen", "ins", "Wir", "sind", "Restaurant", "zu"],
         "correctOrder": ["Wir", "sind", "ins", "Restaurant", "gegangen"],
-        "tip": "oderValleyQuestFive.questNineTip"
+        "tip": "pastValleyQuestFive.questNineTip"
       },
       {
         "id": 10,
         "type": "speechToText",
-        "question": "oderValleyQuestFive.questTen",
+        "question": "pastValleyQuestFive.questTen",
         "text": "Wir haben eine Pizza gegessen",
         "answer": "Wir haben eine Pizza gegessen",
-        "tip": "oderValleyQuestFive.questTenTip"
+        "tip": "pastValleyQuestFive.questTenTip"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "oderValleyQuestFive.questEleven",
+        "question": "pastValleyQuestFive.questEleven",
         "words": ["Rechnung", "gebracht", "hat", "Er", "die"],
         "correctOrder": ["Er", "hat", "die", "Rechnung", "gebracht"],
-        "tip": "oderValleyQuestFive.questElevenTip"
+        "tip": "pastValleyQuestFive.questElevenTip"
       },
       {
         "id": 12,
         "type": "select",
-        "question": "oderValleyQuestFive.questTwelve",
+        "question": "pastValleyQuestFive.questTwelve",
         "options": [
           "Ich habe mein Portemonnaie vergessen",
           "Ich habe mein Portemonnaie gevergessen",
           "Ich bin mein Portemonnaie vergessen"
         ],
         "answer": "Ich habe mein Portemonnaie vergessen",
-        "tip": "oderValleyQuestFive.questTwelveTip"
+        "tip": "pastValleyQuestFive.questTwelveTip"
       },
       {
         "id": 13,
         "type": "speechToText",
-        "question": "oderValleyQuestFive.questThirteen",
+        "question": "pastValleyQuestFive.questThirteen",
         "text": "Das Mittagessen hat 40 Euro gekostet",
         "answer": "Das Mittagessen hat 40 Euro gekostet",
         "accept": [
@@ -753,29 +753,29 @@
       {
         "id": 14,
         "type": "reorder",
-        "question": "oderValleyQuestFive.questFourteen",
-        "words": ["bist","eingeladen", "Freunde", "hast", "du"],
+        "question": "pastValleyQuestFive.questFourteen",
+        "words": ["bist", "eingeladen", "Freunde", "Hast", "du"],
         "correctOrder": ["Hast", "du", "Freunde", "eingeladen"],
-        "tip": "oderValleyQuestFive.questFourteenTip"
+        "tip": "pastValleyQuestFive.questFourteenTip"
       },
       {
         "id": 15,
         "type": "speechToText",
-        "question": "oderValleyQuestFive.questFifteen",
+        "question": "pastValleyQuestFive.questFifteen",
         "text": "Wir haben das Restaurant im Internet gefunden",
         "answer": "Wir haben das Restaurant im Internet gefunden",
-        "tip": "oderValleyQuestFive.questFifteenTip"
+        "tip": "pastValleyQuestFive.questFifteenTip"
       }
     ]
   },
   {
     "questId": "perfekt_travel_vacation",
     "aliases": ["perfekt-travel"],
-    "title": "oderValleyQuestSix.title",
+    "title": "pastValleyQuestSix.title",
     "progress": "0/15",
-    "description": "oderValleyQuestSix.description",
+    "description": "pastValleyQuestSix.description",
     "conditions": {
-      "goal": "oderValleyQuestSix.goal",
+      "goal": "pastValleyQuestSix.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
@@ -787,14 +787,14 @@
       {
         "id": 1,
         "type": "reorder",
-        "question": "oderValleyQuestSix.questOne",
+        "question": "pastValleyQuestSix.questOne",
         "words": ["gepackt", "Koffer", "den", "habe", "Ich"],
         "correctOrder": ["Ich", "habe", "den", "Koffer", "gepackt"]
       },
       {
         "id": 2,
         "type": "select",
-        "question": "oderValleyQuestSix.questTwo",
+        "question": "pastValleyQuestSix.questTwo",
         "options": [
           "Wir haben die Tickets online gekauft",
           "Wir sind die Tickets online gekauft",
@@ -805,127 +805,127 @@
       {
         "id": 3,
         "type": "speechToText",
-        "question": "oderValleyQuestSix.questThree",
+        "question": "pastValleyQuestSix.questThree",
         "text": "Wir sind zum Flughafen gefahren",
         "answer": "Wir sind zum Flughafen gefahren",
-        "tip": "oderValleyQuestSix.questThreeTip"
+        "tip": "pastValleyQuestSix.questThreeTip"
       },
       {
         "id": 4,
         "type": "reorder",
-        "question": "oderValleyQuestSix.questFour",
-        "words": ["pünktlich", "ist", "abgeflogen", "Das Flugzeug", ""],
+        "question": "pastValleyQuestSix.questFour",
+        "words": ["pünktlich", "ist", "abgeflogen", "Das Flugzeug"],
         "correctOrder": ["Das Flugzeug", "ist", "pünktlich", "abgeflogen"],
-        "tip": "oderValleyQuestSix.questFourTip"
+        "tip": "pastValleyQuestSix.questFourTip"
       },
       {
         "id": 5,
         "type": "select",
-        "question": "oderValleyQuestSix.questFive",
+        "question": "pastValleyQuestSix.questFive",
         "options": [
           "Der Flug hat drei Stunden gedauert",
-          "Der Flug ist три Stunden gedauert",
-          "Der Flug hat три Stunden dauern"
+          "Der Flug ist drei Stunden gedauert",
+          "Der Flug hat drei Stunden dauern"
         ],
         "answer": "Der Flug hat drei Stunden gedauert",
-        "tip": "oderValleyQuestSix.questFiveTip"
+        "tip": "pastValleyQuestSix.questFiveTip"
       },
       {
         "id": 6,
         "type": "reorder",
-        "question": "oderValleyQuestSix.questSix",
+        "question": "pastValleyQuestSix.questSix",
         "words": ["Hotel", "das", "habe", "Ich", "gebucht"],
         "correctOrder": ["Ich", "habe", "das", "Hotel", "gebucht"]
       },
       {
         "id": 7,
         "type": "speechToText",
-        "question": "oderValleyQuestSix.questSeven",
+        "question": "pastValleyQuestSix.questSeven",
         "text": "Wir sind im Hotel angekommen",
         "answer": "Wir sind im Hotel angekommen",
-        "tip": "oderValleyQuestSix.questSevenTip"
+        "tip": "pastValleyQuestSix.questSevenTip"
       },
       {
         "id": 8,
         "type": "select",
-        "question": "oderValleyQuestSix.questEight",
+        "question": "pastValleyQuestSix.questEight",
         "options": [
           "Seid ihr viel geschwommen?",
           "Habt ihr viel geschwommen?",
           "Seid ihr viel schwimmen?"
         ],
         "answer": "Seid ihr viel geschwommen?",
-        "tip": "oderValleyQuestSix.questEightTip"
+        "tip": "pastValleyQuestSix.questEightTip"
       },
       {
         "id": 9,
         "type": "reorder",
-        "question": "oderValleyQuestSix.questNine",
+        "question": "pastValleyQuestSix.questNine",
         "words": ["viele", "Fotos", "hat", "Er", "gemacht"],
         "correctOrder": ["Er", "hat", "viele", "Fotos", "gemacht"]
       },
       {
         "id": 10,
         "type": "speechToText",
-        "question": "oderValleyQuestSix.questTen",
+        "question": "pastValleyQuestSix.questTen",
         "text": "Wir haben ein Auto gemietet",
         "answer": "Wir haben ein Auto gemietet"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "oderValleyQuestSix.questEleven",
+        "question": "pastValleyQuestSix.questEleven",
         "words": ["die", "Bergen", "den", "in", "gewandert", "bin", "Ich"],
         "correctOrder": ["Ich", "bin", "in", "den", "Bergen", "gewandert"]
       },
       {
         "id": 12,
         "type": "select",
-        "question": "oderValleyQuestSix.questTwelve",
+        "question": "pastValleyQuestSix.questTwelve",
         "options": [
-          "Sie hat am Strand gesonnt",
-          "Sie ist am Strand gesonnt",
-          "Sie hat am Strand gesonnen"
+          "Sie ist sich am Strand gesonnt",
+          "Sie hat sich am Strand gesonnt",
+          "Sie hat sich am Strand gesonnen"
         ],
-        "answer": "Sie hat am Strand gesonnt",
-        "tip": "oderValleyQuestSix.questTwelveTip"
+        "answer": "Sie hat sich am Strand gesonnt",
+        "tip": "pastValleyQuestSix.questTwelveTip"
       },
       {
         "id": 13,
         "type": "speechToText",
-        "question": "oderValleyQuestSix.questThirteen",
+        "question": "pastValleyQuestSix.questThirteen",
         "text": "Ich habe Souvenirs gekauft",
         "answer": "Ich habe Souvenirs gekauft"
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "oderValleyQuestSix.questFourteen",
+        "question": "pastValleyQuestSix.questFourteen",
         "words": ["hat", "Spaß", "gemacht", "Der Urlaub", "viel"],
         "correctOrder": ["Der Urlaub", "hat", "viel", "Spaß", "gemacht"]
       },
       {
         "id": 15,
         "type": "select",
-        "question": "oderValleyQuestSix.questFifteen",
+        "question": "pastValleyQuestSix.questFifteen",
         "options": [
           "Hast du dich gut erholt?",
           "Bist du dich gut erholt?",
           "Hast du dich gut geerholt?"
         ],
         "answer": "Hast du dich gut erholt?",
-        "tip": "oderValleyQuestSix.questFifteenTip"
+        "tip": "pastValleyQuestSix.questFifteenTip"
       }
     ]
   },
   {
     "questId": "perfekt_work_office",
     "aliases": ["perfekt-job"],
-    "title": "oderValleyQuestSeven.title",
+    "title": "pastValleyQuestSeven.title",
     "progress": "0/15",
-    "description": "oderValleyQuestSeven.description",
+    "description": "pastValleyQuestSeven.description",
     "conditions": {
-      "goal": "oderValleyQuestSeven.goal",
+      "goal": "pastValleyQuestSeven.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
@@ -937,15 +937,15 @@
       {
         "id": 1,
         "type": "reorder",
-        "question": "oderValleyQuestSeven.questOne",
+        "question": "pastValleyQuestSeven.questOne",
         "words": ["geschrieben", "E-Mail", "eine", "habe", "Ich"],
         "correctOrder": ["Ich", "habe", "eine", "E-Mail", "geschrieben"],
-        "tip": "oderValleyQuestSeven.questOneTip"
+        "tip": "pastValleyQuestSeven.questOneTip"
       },
       {
         "id": 2,
         "type": "select",
-        "question": "oderValleyQuestSeven.questTwo",
+        "question": "pastValleyQuestSeven.questTwo",
         "options": [
           "Er hat den Chef angerufen",
           "Er ist den Chef angerufen",
@@ -956,22 +956,22 @@
       {
         "id": 3,
         "type": "speechToText",
-        "question": "oderValleyQuestSeven.questThree",
+        "question": "pastValleyQuestSeven.questThree",
         "text": "Wir haben viel gearbeitet",
         "answer": "Wir haben viel gearbeitet"
       },
       {
         "id": 4,
         "type": "reorder",
-        "question": "oderValleyQuestSeven.questFour",
-        "words": ["das", "Dokument", "hast", "gefunden", "du"],
+        "question": "pastValleyQuestSeven.questFour",
+        "words": ["das", "Dokument", "Hast", "gefunden", "du"],
         "correctOrder": ["Hast", "du", "das", "Dokument", "gefunden"],
-        "tip": "oderValleyQuestSeven.questFourTip"
+        "tip": "pastValleyQuestSeven.questFourTip"
       },
       {
         "id": 5,
         "type": "select",
-        "question": "oderValleyQuestSeven.questFive",
+        "question": "pastValleyQuestSeven.questFive",
         "options": [
           "Der Arbeitstag hat um 8 Uhr angefangen",
           "Der Arbeitstag ist um 8 Uhr angefangen",
@@ -982,22 +982,22 @@
       {
         "id": 6,
         "type": "reorder",
-        "question": "oderValleyQuestSeven.questSix",
+        "question": "pastValleyQuestSeven.questSix",
         "words": ["ausgedruckt", "Dokument", "das", "hat", "Er"],
         "correctOrder": ["Er", "hat", "das", "Dokument", "ausgedruckt"],
-        "tip": "oderValleyQuestSeven.questSixTip"
+        "tip": "pastValleyQuestSeven.questSixTip"
       },
       {
         "id": 7,
         "type": "speechToText",
-        "question": "oderValleyQuestSeven.questSeven",
+        "question": "pastValleyQuestSeven.questSeven",
         "text": "Ich habe das Passwort vergessen",
         "answer": "Ich habe das Passwort vergessen"
       },
       {
         "id": 8,
         "type": "select",
-        "question": "oderValleyQuestSeven.questEight",
+        "question": "pastValleyQuestSeven.questEight",
         "options": [
           "Er hat den Computer ausgemacht",
           "Er ist den Computer ausgemacht",
@@ -1008,75 +1008,75 @@
       {
         "id": 9,
         "type": "reorder",
-        "question": "oderValleyQuestSeven.questNine",
+        "question": "pastValleyQuestSeven.questNine",
         "words": ["Pause", "eine", "gemacht", "Wir", "haben"],
         "correctOrder": ["Wir", "haben", "eine", "Pause", "gemacht"]
       },
       {
         "id": 10,
         "type": "speechToText",
-        "question": "oderValleyQuestSeven.questTen",
+        "question": "pastValleyQuestSeven.questTen",
         "text": "Er hat den Plan erklärt",
         "answer": "Er hat den Plan erklärt",
-        "tip": "oderValleyQuestSeven.questTenTip"
+        "tip": "pastValleyQuestSeven.questTenTip"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "oderValleyQuestSeven.questEleven",
+        "question": "pastValleyQuestSeven.questEleven",
         "words": ["verstanden", "nicht", "das", "habe", "Ich"],
-        "correctOrder": ["Ich", "habе", "das", "nicht", "verstanden"],
-        "tip": "oderValleyQuestSeven.questElevenTip"
+        "correctOrder": ["Ich", "habe", "das", "nicht", "verstanden"],
+        "tip": "pastValleyQuestSeven.questElevenTip"
       },
       {
         "id": 12,
         "type": "select",
-        "question": "oderValleyQuestSeven.questTwelve",
+        "question": "pastValleyQuestSeven.questTwelve",
         "options": [
           "Sie haben miteinander gesprochen",
           "Sie sind miteinander gesprochen",
           "Sie haben miteinander gesprechen"
         ],
         "answer": "Sie haben miteinander gesprochen",
-        "tip": "oderValleyQuestSeven.questTwelveTip"
+        "tip": "pastValleyQuestSeven.questTwelveTip"
       },
       {
         "id": 13,
         "type": "speechToText",
-        "question": "oderValleyQuestSeven.questThirteen",
+        "question": "pastValleyQuestSeven.questThirteen",
         "text": "Ich habe die Präsentation vorbereitet",
         "answer": "Ich habe die Präsentation vorbereitet",
-        "tip": "oderValleyQuestSeven.questThirteenTip"
+        "tip": "pastValleyQuestSeven.questThirteenTip"
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "oderValleyQuestSeven.questFourteen",
-        "words": ["beendet", "wann", "das", "hast", "Projekt", "du"],
+        "question": "pastValleyQuestSeven.questFourteen",
+        "words": ["beendet", "Wann", "das", "hast", "Projekt", "du"],
         "correctOrder": ["Wann", "hast", "du", "das", "Projekt", "beendet"]
       },
       {
         "id": 15,
         "type": "select",
-        "question": "oderValleyQuestSeven.questFifteen",
+        "question": "pastValleyQuestSeven.questFifteen",
         "options": [
           "Alles hat gut funktioniert",
           "Alles ist gut funktioniert",
           "Alles hat gut funktionieren"
         ],
         "answer": "Alles hat gut funktioniert",
-        "tip": "oderValleyQuestSeven.questFifteenTip"
+        "tip": "pastValleyQuestSeven.questFifteenTip"
       }
     ]
   },
   {
     "questId": "perfekt_learning_german",
     "aliases": ["perfekt-student"],
-    "title": "oderValleyQuestEight.title",
+    "title": "pastValleyQuestEight.title",
     "progress": "0/15",
-    "description": "oderValleyQuestEight.description",
+    "description": "pastValleyQuestEight.description",
     "conditions": {
-      "goal": "oderValleyQuestEight.goal",
+      "goal": "pastValleyQuestEight.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
@@ -1088,41 +1088,41 @@
       {
         "id": 1,
         "type": "reorder",
-        "question": "oderValleyQuestEight.questOne",
+        "question": "pastValleyQuestEight.questOne",
         "words": ["gelernt", "Wörter", "viele", "habe", "Ich"],
         "correctOrder": ["Ich", "habe", "viele", "Wörter", "gelernt"]
       },
       {
         "id": 2,
         "type": "select",
-        "question": "oderValleyQuestEight.questTwo",
+        "question": "pastValleyQuestEight.questTwo",
         "options": [
           "Hast du die Regel verstanden?",
           "Hast du die Regel geverstanden?",
           "Bist du die Regel verstanden?"
         ],
         "answer": "Hast du die Regel verstanden?",
-        "tip": "oderValleyQuestEight.questTwoTip"
+        "tip": "pastValleyQuestEight.questTwoTip"
       },
       {
         "id": 3,
         "type": "speechToText",
-        "question": "oderValleyQuestEight.questThree",
+        "question": "pastValleyQuestEight.questThree",
         "text": "Ich habe das Buch gelesen",
         "answer": "Ich habe das Buch gelesen"
       },
       {
         "id": 4,
         "type": "reorder",
-        "question": "oderValleyQuestEight.questFour",
+        "question": "pastValleyQuestEight.questFour",
         "words": ["Deutsch", "gesprochen", "viel", "haben", "Wir", "sind"],
         "correctOrder": ["Wir", "haben", "viel", "Deutsch", "gesprochen"],
-        "tip": "oderValleyQuestEight.questFourTip"
+        "tip": "pastValleyQuestEight.questFourTip"
       },
       {
         "id": 5,
         "type": "select",
-        "question": "oderValleyQuestEight.questFive",
+        "question": "pastValleyQuestEight.questFive",
         "options": [
           "Der Kurs hat am Montag angefangen",
           "Der Kurs ist am Montag angefangen",
@@ -1133,103 +1133,103 @@
       {
         "id": 6,
         "type": "reorder",
-        "question": "oderValleyQuestEight.questSix",
+        "question": "pastValleyQuestEight.questSix",
         "words": ["aufgeschrieben", "Wort", "das", "hat", "Er", "den"],
         "correctOrder": ["Er", "hat", "das", "Wort", "aufgeschrieben"],
-        "tip": "oderValleyQuestEight.questSixTip"
+        "tip": "pastValleyQuestEight.questSixTip"
       },
       {
         "id": 7,
         "type": "speechToText",
-        "question": "oderValleyQuestEight.questSeven",
+        "question": "pastValleyQuestEight.questSeven",
         "text": "Sie hat den Satz wiederholt",
         "answer": "Sie hat den Satz wiederholt",
-        "tip": "oderValleyQuestEight.questSevenTip"
+        "tip": "pastValleyQuestEight.questSevenTip"
       },
       {
         "id": 8,
         "type": "select",
-        "question": "oderValleyQuestEight.questEight",
+        "question": "pastValleyQuestEight.questEight",
         "options": [
           "Hast du die Grammatik vergessen?",
           "Bist du die Grammatik vergessen?",
           "Hast du die Grammatik gevergessen?"
         ],
         "answer": "Hast du die Grammatik vergessen?",
-        "tip": "oderValleyQuestEight.questEightTip"
+        "tip": "pastValleyQuestEight.questEightTip"
       },
       {
         "id": 9,
         "type": "reorder",
-        "question": "oderValleyQuestEight.questNine",
+        "question": "pastValleyQuestEight.questNine",
         "words": ["Lehrer", "den", "gefragt", "habe", "Ich", "die"],
         "correctOrder": ["Ich", "habe", "den", "Lehrer", "gefragt"]
       },
       {
         "id": 10,
         "type": "speechToText",
-        "question": "oderValleyQuestEight.questTen",
+        "question": "pastValleyQuestEight.questTen",
         "text": "Wir haben die Übung gemacht",
         "answer": "Wir haben die Übung gemacht"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "oderValleyQuestEight.questEleven",
+        "question": "pastValleyQuestEight.questEleven",
         "words": ["Fehler", "den", "korrigiert", "hast", "Du"],
         "correctOrder": ["Du", "hast", "den", "Fehler", "korrigiert"],
-        "tip": "oderValleyQuestEight.questElevenTip"
+        "tip": "pastValleyQuestEight.questElevenTip"
       },
       {
         "id": 12,
         "type": "select",
-        "question": "oderValleyQuestEight.questTwelve",
+        "question": "pastValleyQuestEight.questTwelve",
         "options": [
           "Ich habe das Wort nachgeschlagen",
           "Ich habe das Wort nachgeschlagt",
           "Ich bin das Wort nachgeschlagen"
         ],
         "answer": "Ich habe das Wort nachgeschlagen",
-        "tip": "oderValleyQuestEight.questTwelveTip"
+        "tip": "pastValleyQuestEight.questTwelveTip"
       },
       {
         "id": 13,
         "type": "speechToText",
-        "question": "oderValleyQuestEight.questThirteen",
+        "question": "pastValleyQuestEight.questThirteen",
         "text": "Er hat eine Antwort gegeben",
         "answer": "Er hat eine Antwort gegeben",
-        "tip": "oderValleyQuestEight.questThirteenTip"
+        "tip": "pastValleyQuestEight.questThirteenTip"
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "oderValleyQuestEight.questFourteen",
+        "question": "pastValleyQuestEight.questFourteen",
         "words": ["Text", "den", "übersetzt", "haben", "Wir"],
         "correctOrder": ["Wir", "haben", "den", "Text", "übersetzt"],
-        "tip": "oderValleyQuestEight.questFourteenTip"
+        "tip": "pastValleyQuestEight.questFourteenTip"
       },
       {
         "id": 15,
         "type": "select",
-        "question": "oderValleyQuestEight.questFifteen",
+        "question": "pastValleyQuestEight.questFifteen",
         "options": [
           "Ich habe den Test bestanden",
           "Ich bin den Test bestanden",
           "Ich habe den Test gebestanden"
         ],
         "answer": "Ich habe den Test bestanden",
-        "tip": "oderValleyQuestEight.questFifteenTip"
+        "tip": "pastValleyQuestEight.questFifteenTip"
       }
     ]
   },
   {
     "questId": "perfekt_party_friends",
     "aliases": ["perfekt-social"],
-    "title": "oderValleyQuestNine.title",
+    "title": "pastValleyQuestNine.title",
     "progress": "0/15",
-    "description": "oderValleyQuestNine.description",
+    "description": "pastValleyQuestNine.description",
     "conditions": {
-      "goal": "oderValleyQuestNine.goal",
+      "goal": "pastValleyQuestNine.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
@@ -1241,15 +1241,15 @@
       {
         "id": 1,
         "type": "reorder",
-        "question": "oderValleyQuestNine.questOne",
+        "question": "pastValleyQuestNine.questOne",
         "words": ["gefeiert", "Geburtstag", "meinen", "habe", "Ich"],
         "correctOrder": ["Ich", "habe", "meinen", "Geburtstag", "gefeiert"],
-        "tip": "oderValleyQuestNine.questOneTip"
+        "tip": "pastValleyQuestNine.questOneTip"
       },
       {
         "id": 2,
         "type": "select",
-        "question": "oderValleyQuestNine.questTwo",
+        "question": "pastValleyQuestNine.questTwo",
         "options": [
           "Hast du deine Freunde eingeladen?",
           "Bist du deine Freunde eingeladen?",
@@ -1260,70 +1260,70 @@
       {
         "id": 3,
         "type": "speechToText",
-        "question": "oderValleyQuestNine.questThree",
+        "question": "pastValleyQuestNine.questThree",
         "text": "Wir haben Bier mitgebracht",
         "answer": "Wir haben Bier mitgebracht",
-        "tip": "oderValleyQuestNine.questThreeTip"
+        "tip": "pastValleyQuestNine.questThreeTip"
       },
       {
         "id": 4,
         "type": "reorder",
-        "question": "oderValleyQuestNine.questFour",
+        "question": "pastValleyQuestNine.questFour",
         "words": ["Nacht", "ganze", "die", "getanzt", "habe", "Ich"],
         "correctOrder": ["Ich", "habe", "die", "ganze", "Nacht", "getanzt"]
       },
       {
         "id": 5,
         "type": "select",
-        "question": "oderValleyQuestNine.questFive",
+        "question": "pastValleyQuestNine.questFive",
         "options": [
           "Hast du neue Leute kennengelernt?",
           "Bist du neue Leute kennengelernt?",
           "Hast du neue Leute gekennenlernt?"
         ],
         "answer": "Hast du neue Leute kennengelernt?",
-        "tip": "oderValleyQuestNine.questFiveTip"
+        "tip": "pastValleyQuestNine.questFiveTip"
       },
       {
         "id": 6,
         "type": "reorder",
-        "question": "oderValleyQuestNine.questSix",
+        "question": "pastValleyQuestNine.questSix",
         "words": ["gelacht", "Wir", "viel", "haben"],
         "correctOrder": ["Wir", "haben", "viel", "gelacht"]
       },
       {
         "id": 7,
         "type": "speechToText",
-        "question": "oderValleyQuestNine.questSeven",
+        "question": "pastValleyQuestNine.questSeven",
         "text": "Wir haben viel Spaß gehabt",
         "answer": "Wir haben viel Spaß gehabt"
       },
       {
         "id": 8,
         "type": "select",
-        "question": "oderValleyQuestNine.questEight",
+        "question": "pastValleyQuestNine.questEight",
         "options": [
           "Ich habe ein Taxi gerufen",
           "Ich bin ein Taxi gerufen",
           "Ich habe ein Taxi geruft"
         ],
         "answer": "Ich habe ein Taxi gerufen",
-        "tip": "oderValleyQuestNine.questEightTip"
+        "tip": "pastValleyQuestNine.questEightTip"
       },
       {
         "id": 9,
         "type": "reorder",
-        "question": "oderValleyQuestNine.questNine",
+        "question": "pastValleyQuestNine.questNine",
         "words": ["Mitternacht", "um", "gekommen", "ist", "Sie"],
         "correctOrder": ["Sie", "ist", "um", "Mitternacht", "gekommen"],
-        "tip": "oderValleyQuestNine.questNineTip"
+        "tip": "pastValleyQuestNine.questNineTip"
       },
       {
         "id": 10,
         "type": "speechToText",
-        "question": "oderValleyQuestNine.questTen",
+        "question": "pastValleyQuestNine.questTen",
         "text": "Wir haben drei Stunden geredet",
-        "answer": "Wir haben  drei Stunden geredet",
+        "answer": "Wir haben drei Stunden geredet",
         "accept": [
           "Wir haben drei Stunden geredet",
           "Wir haben 3 Stunden geredet"
@@ -1332,15 +1332,15 @@
       {
         "id": 11,
         "type": "reorder",
-        "question": "oderValleyQuestNine.questEleven",
+        "question": "pastValleyQuestNine.questEleven",
         "words": ["bis", "geblieben", "ihr", "Seid", "Ende", "zum", "sind"],
         "correctOrder": ["Seid", "ihr", "bis", "zum", "Ende", "geblieben"],
-        "tip": "oderValleyQuestNine.questElevenTip"
+        "tip": "pastValleyQuestNine.questElevenTip"
       },
       {
         "id": 12,
         "type": "select",
-        "question": "oderValleyQuestNine.questTwelve",
+        "question": "pastValleyQuestNine.questTwelve",
         "options": [
           "Ich habe mein Handy verloren",
           "Ich bin mein Handy verloren",
@@ -1351,40 +1351,40 @@
       {
         "id": 13,
         "type": "speechToText",
-        "question": "oderValleyQuestNine.questThirteen",
+        "question": "pastValleyQuestNine.questThirteen",
         "text": "Ich habe einen alten Freund getroffen",
         "answer": "Ich habe einen alten Freund getroffen",
-        "tip": "oderValleyQuestNine.questThirteenTip"
+        "tip": "pastValleyQuestNine.questThirteenTip"
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "oderValleyQuestNine.questFourteen",
-        "words": ["Bus", "dem", "mit", "nach Hause", "gefahren", "bin", "Ich"],
-        "correctOrder": ["Ich", "bin", "mit", "dem", "Bus", "nach Hause", "gefahren"]
+        "question": "pastValleyQuestNine.questFourteen",
+        "words": ["Bus", "dem", "mit", "Hause", "nach", "gefahren", "bin", "Ich"],
+        "correctOrder": ["Ich", "bin", "mit", "dem", "Bus", "nach", "Hause", "gefahren"]
       },
       {
         "id": 15,
         "type": "select",
-        "question": "oderValleyQuestNine.questFifteen",
+        "question": "pastValleyQuestNine.questFifteen",
         "options": [
           "Die Party hat spät aufgehört",
           "Die Party ist spät aufgehört",
           "Die Party hat spät geaufhört"
         ],
         "answer": "Die Party hat spät aufgehört",
-        "tip": "oderValleyQuestNine.questFifteenTip"
+        "tip": "pastValleyQuestNine.questFifteenTip"
       }
     ]
   },
   {
     "questId": "perfekt_city_transport",
     "aliases": ["perfekt-city"],
-    "title": "oderValleyQuestTen.title",
+    "title": "pastValleyQuestTen.title",
     "progress": "0/15",
-    "description": "oderValleyQuestTen.description",
+    "description": "pastValleyQuestTen.description",
     "conditions": {
-      "goal": "oderValleyQuestTen.goal",
+      "goal": "pastValleyQuestTen.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
@@ -1396,69 +1396,69 @@
       {
         "id": 1,
         "type": "reorder",
-        "question": "oderValleyQuestTen.questOne",
+        "question": "pastValleyQuestTen.questOne",
         "words": ["verpasst", "Bus", "den", "habe", "Ich", "verpassen"],
         "correctOrder": ["Ich", "habe", "den", "Bus", "verpasst"],
-        "tip": "oderValleyQuestTen.questOneTip"
+        "tip": "pastValleyQuestTen.questOneTip"
       },
       {
         "id": 2,
         "type": "select",
-        "question": "oderValleyQuestTen.questTwo",
+        "question": "pastValleyQuestTen.questTwo",
         "options": [
           "Wir sind am Bahnhof ausgestiegen",
           "Wir haben am Bahnhof ausgestiegen",
           "Wir sind am Bahnhof aussteigen"
         ],
         "answer": "Wir sind am Bahnhof ausgestiegen",
-        "tip": "oderValleyQuestTen.questTwoTip"
+        "tip": "pastValleyQuestTen.questTwoTip"
       },
       {
         "id": 3,
         "type": "speechToText",
-        "question": "oderValleyQuestTen.questThree",
+        "question": "pastValleyQuestTen.questThree",
         "text": "Ich habe eine Fahrkarte gekauft",
         "answer": "Ich habe eine Fahrkarte gekauft"
       },
       {
         "id": 4,
         "type": "reorder",
-        "question": "oderValleyQuestTen.questFour",
+        "question": "pastValleyQuestTen.questFour",
         "words": ["spät", "ist", "angekommen", "Der Zug"],
         "correctOrder": ["Der Zug", "ist", "spät", "angekommen"],
-        "tip": "oderValleyQuestTen.questFourTip"
+        "tip": "pastValleyQuestTen.questFourTip"
       },
       {
         "id": 5,
         "type": "select",
-        "question": "oderValleyQuestTen.questFive",
+        "question": "pastValleyQuestTen.questFive",
         "options": [
           "Hast du das Museum gefunden?",
           "Bist du das Museum gefunden?",
           "Hast du das Museum gefinden?"
         ],
         "answer": "Hast du das Museum gefunden?",
-        "tip": "oderValleyQuestTen.questFiveTip"
+        "tip": "pastValleyQuestTen.questFiveTip"
       },
       {
         "id": 6,
         "type": "reorder",
-        "question": "oderValleyQuestTen.questSix",
+        "question": "pastValleyQuestTen.questSix",
         "words": ["U-Bahn", "die", "in", "bin", "Ich", "umgestiegen", "habe"],
         "correctOrder": ["Ich", "bin", "in", "die", "U-Bahn", "umgestiegen"],
-        "tip": "oderValleyQuestTen.questSixTip"
+        "tip": "pastValleyQuestTen.questSixTip"
       },
       {
         "id": 7,
         "type": "speechToText",
-        "question": "oderValleyQuestTen.questSeven",
+        "question": "pastValleyQuestTen.questSeven",
         "text": "Wir sind durch den Park gelaufen",
         "answer": "Wir sind durch den Park gelaufen"
       },
       {
         "id": 8,
         "type": "select",
-        "question": "oderValleyQuestTen.questEight",
+        "question": "pastValleyQuestTen.questEight",
         "options": [
           "Er ist ins Zentrum gefahren",
           "Er hat ins Zentrum gefahren",
@@ -1469,29 +1469,29 @@
       {
         "id": 9,
         "type": "reorder",
-        "question": "oderValleyQuestTen.questNine",
+        "question": "pastValleyQuestTen.questNine",
         "words": ["vergessen", "Ticket", "mein", "habe", "Ich"],
         "correctOrder": ["Ich", "habe", "mein", "Ticket", "vergessen"],
-        "tip": "oderValleyQuestTen.questNineTip"
+        "tip": "pastValleyQuestTen.questNineTip"
       },
       {
         "id": 10,
         "type": "speechToText",
-        "question": "oderValleyQuestTen.questTen",
+        "question": "pastValleyQuestTen.questTen",
         "text": "Das Taxi hat 20 Euro gekostet",
         "answer": "Das Taxi hat 20 Euro gekostet"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "oderValleyQuestTen.questEleven",
+        "question": "pastValleyQuestTen.questEleven",
         "words": ["Weg", "den", "haben", "Wir", "lange", "gesucht"],
         "correctOrder": ["Wir", "haben", "lange", "den", "Weg", "gesucht"]
       },
       {
         "id": 12,
         "type": "select",
-        "question": "oderValleyQuestTen.questTwelve",
+        "question": "pastValleyQuestTen.questTwelve",
         "options": [
           "Ich habe das Auto geparkt",
           "Ich bin das Auto geparkt",
@@ -1502,41 +1502,41 @@
       {
         "id": 13,
         "type": "speechToText",
-        "question": "oderValleyQuestTen.questThirteen",
+        "question": "pastValleyQuestTen.questThirteen",
         "text": "Hast du den Dom gesehen?",
         "answer": "Hast du den Dom gesehen?",
-        "tip": "oderValleyQuestTen.questThirteenTip"
+        "tip": "pastValleyQuestTen.questThirteenTip"
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "oderValleyQuestTen.questFourteen",
+        "question": "pastValleyQuestTen.questFourteen",
         "words": ["verirrt", "Stadt", "der", "in", "mich", "habe", "Ich"],
-        "correctOrder": ["Ich", "habе", "mich", "in", "der", "Stadt", "verirrt"],
-        "tip": "oderValleyQuestTen.questFourteenTip"
+        "correctOrder": ["Ich", "habe", "mich", "in", "der", "Stadt", "verirrt"],
+        "tip": "pastValleyQuestTen.questFourteenTip"
       },
       {
         "id": 15,
         "type": "select",
-        "question": "oderValleyQuestTen.questFifteen",
+        "question": "pastValleyQuestTen.questFifteen",
         "options": [
           "Wir haben an der Haltestelle gestanden",
           "Wir sind an der Haltestelle gestanden",
           "Wir haben an der Haltestelle gestanden sein"
         ],
         "answer": "Wir haben an der Haltestelle gestanden",
-        "tip": "oderValleyQuestTen.questFifteenTip"
+        "tip": "pastValleyQuestTen.questFifteenTip"
       }
     ]
   },
   {
     "questId": "perfekt_family_visit",
     "aliases": ["perfekt-family"],
-    "title": "Семья: Родня и гости",
+    "title": "pastValleyQuestEleven.title",
     "progress": "0/15",
-    "description": "Навещаем родителей, дарим подарки и болтаем о жизни. Всё в прошедшем времени!",
+    "description": "pastValleyQuestEleven.description",
     "conditions": {
-      "goal": "Отработать Perfekt на тему семейных отношений и встреч.",
+      "goal": "pastValleyQuestEleven.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
@@ -1548,15 +1548,15 @@
       {
         "id": 1,
         "type": "reorder",
-        "question": "Соберите: Я навестил своих родителей.",
+        "question": "pastValleyQuestEleven.questOne",
         "words": ["besucht", "meine", "Eltern", "habe", "Ich"],
         "correctOrder": ["Ich", "habe", "meine", "Eltern", "besucht"],
-        "tip": "besuchen — слабый глагол с неотделяемой приставкой be-. Приставка ge- не добавляется, а окончание -en меняется на -t. Корень не меняется"
+        "tip": "pastValleyQuestEleven.questOneTip"
       },
       {
         "id": 2,
         "type": "select",
-        "question": "Выберите: Мы посмотрели старые фотографии.",
+        "question": "pastValleyQuestEleven.questTwo",
         "options": [
           "Wir haben alte Fotos gesehen",
           "Wir sind alte Fotos gesehen",
@@ -1567,51 +1567,51 @@
       {
         "id": 3,
         "type": "speechToText",
-        "question": "Напишите услышанное: Я принес цветы",
+        "question": "pastValleyQuestEleven.questThree",
         "text": "Ich habe Blumen mitgebracht",
         "answer": "Ich habe Blumen mitgebracht",
-        "tip": "mitbringen — смешанный глагол с отделяемой приставкой mit-. Приставка ge- ставится между отделяемой приставкой и корнем. Корень меняется (bring > brach), а окончание меняется на -t"
+        "tip": "pastValleyQuestEleven.questThreeTip"
       },
       {
         "id": 4,
         "type": "reorder",
-        "question": "Соберите: Он подарил мне книгу.",
+        "question": "pastValleyQuestEleven.questFour",
         "words": ["Buch", "ein", "mir", "hat", "Er", "geschenkt"],
         "correctOrder": ["Er", "hat", "mir", "ein", "Buch", "geschenkt"],
-        "tip": "schenken — слабый глагол. В форме Прибавляется приставка ge-, а окончание -en меняется на -t. Корень не меняется"
+        "tip": "pastValleyQuestEleven.questFourTip"
       },
       {
         "id": 5,
         "type": "select",
-        "question": "Выберите: Мы долго разговаривали.",
+        "question": "pastValleyQuestEleven.questFive",
         "options": [
           "Wir haben lange gesprochen",
           "Wir sind lange gesprochen",
           "Wir haben lange gesprechen"
         ],
         "answer": "Wir haben lange gesprochen",
-        "tip": "sprechen — сильный глагол. Прибавляется приставка ge-, а окончание -en сохраняется. В корне смена гласной (e меняется на o)"
+        "tip": "pastValleyQuestEleven.questFiveTip"
       },
       {
         "id": 6,
         "type": "reorder",
-        "question": "Соберите: Ты помог брату?",
-        "words": ["den", "Bruder", "dem", "geholfen", "hast", "Du"],
+        "question": "pastValleyQuestEleven.questSix",
+        "words": ["den", "Bruder", "dem", "geholfen", "Hast", "du"],
         "correctOrder": ["Hast", "du", "dem", "Bruder", "geholfen"],
-        "tip": "helfen — сильный глагол. Прибавляется приставка ge-, а окончание -en сохраняется. В корне происходит смена гласной (e меняется на o)."
+        "tip": "pastValleyQuestEleven.questSixTip"
       },
       {
         "id": 7,
         "type": "speechToText",
-        "question": "Прослушайте и напишите предложение",
+        "question": "pastValleyQuestEleven.questSeven",
         "text": "Sie hat eine Geschichte erzählt",
         "answer": "Sie hat eine Geschichte erzählt",
-        "tip": "erzählen — слабый глагол с неотделяемой приставкой er-. Приставка ge- не добавляется, а окончание -en меняется на -t. Корень не меняется."
+        "tip": "pastValleyQuestEleven.questSevenTip"
       },
       {
         "id": 8,
         "type": "select",
-        "question": "Выберите: Мы пошли гулять.",
+        "question": "pastValleyQuestEleven.questEight",
         "options": [
           "Wir sind spazieren gegangen",
           "Wir haben spazieren gegangen",
@@ -1622,76 +1622,76 @@
       {
         "id": 9,
         "type": "reorder",
-        "question": "Соберите: Я получил письмо.",
+        "question": "pastValleyQuestEleven.questNine",
         "words": ["Brief", "einen", "bekommen", "habe", "Ich"],
         "correctOrder": ["Ich", "habe", "einen", "Brief", "bekommen"],
-        "tip": "bekommen — сильный глагол с неотделяемой приставкой be-. Приставка ge- не добавляется, а окончание -en сохраняется"
+        "tip": "pastValleyQuestEleven.questNineTip"
       },
       {
         "id": 10,
         "type": "speechToText",
-        "question": "Прослушайте и напишите предложение",
+        "question": "pastValleyQuestEleven.questTen",
         "text": "Mein Freund ist vorbeigekommen",
         "answer": "Mein Freund ist vorbeigekommen",
-        "tip": "vorbeikommen — сильный глагол с отделяемой приставкой vorbei-. Приставка ge- ставится между отделяемой приставкой и корнем. Окончание -en сохраняется."
+        "tip": "pastValleyQuestEleven.questTenTip"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Соберите: Я позвонил дедушке.",
+        "question": "pastValleyQuestEleven.questEleven",
         "words": ["Opa", "meinen", "angerufen", "habe", "Ich"],
         "correctOrder": ["Ich", "habe", "meinen", "Opa", "angerufen"]
       },
       {
         "id": 12,
         "type": "select",
-        "question": "Выберите: Нам всё понравилось.",
+        "question": "pastValleyQuestEleven.questTwelve",
         "options": [
           "Es hat uns alles gefallen",
           "Es ist uns alles gefallen",
           "Es hat uns alles gefallt"
         ],
         "answer": "Es hat uns alles gefallen",
-        "tip": "gefallen — сильный глагол с неотделяемой приставкой ge-. Поскольку корень уже начинается на ge-, вторая приставка не добавляется. Окончание -en сохраняется."
+        "tip": "pastValleyQuestEleven.questTwelveTip"
       },
       {
         "id": 13,
         "type": "speechToText",
-        "question": "Прослушайте и напишите предложение",
+        "question": "pastValleyQuestEleven.questThirteen",
         "text": "Ich habe mich bedankt",
         "answer": "Ich habe mich bedankt",
-        "tip": "bedanken — слабый возвратный глагол с неотделяемой приставкой be-. Приставка ge- не добавляется, а окончание -en меняется на -t. Корень не меняется"
+        "tip": "pastValleyQuestEleven.questThirteenTip"
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "Соберите: Мы встретили тетю.",
+        "question": "pastValleyQuestEleven.questFourteen",
         "words": ["Tante", "die", "getroffen", "haben", "Wir"],
         "correctOrder": ["Wir", "haben", "die", "Tante", "getroffen"],
-        "tip": "treffen — сильный глагол. В форме Partizip II прибавляется приставка ge-, а окончание -en сохраняется. В корне происходит смена гласной (e меняется на o)"
+        "tip": "pastValleyQuestEleven.questFourteenTip"
       },
       {
         "id": 15,
         "type": "select",
-        "question": "Выберите: Он остался дома.",
+        "question": "pastValleyQuestEleven.questFifteen",
         "options": [
           "Er ist zu Hause geblieben",
           "Er hat zu Hause geblieben",
           "Er ist zu Hause bleiben"
         ],
         "answer": "Er ist zu Hause geblieben",
-        "tip": "bleiben — сильный глагол. Прибавляется приставка ge-, корень меняется (ei > ie), а окончание -en сохраняется."
+        "tip": "pastValleyQuestEleven.questFifteenTip"
       }
     ]
   },
   {
     "questId": "perfekt_weekend_joy",
     "aliases": ["perfekt-relax"],
-    "title": "oderValleyQuestTwelve.title",
+    "title": "pastValleyQuestTwelve.title",
     "progress": "0/15",
-    "description": "oderValleyQuestTwelve.description",
+    "description": "pastValleyQuestTwelve.description",
     "conditions": {
-      "goal": "oderValleyQuestTwelve.goal",
+      "goal": "pastValleyQuestTwelve.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
@@ -1703,40 +1703,40 @@
       {
         "id": 1,
         "type": "reorder",
-        "question": "oderValleyQuestTwelve.questOne",
+        "question": "pastValleyQuestTwelve.questOne",
         "words": ["einen", "tollen", "Film", "habe", "Ich", "gesehen"],
         "correctOrder": ["Ich", "habe", "einen", "tollen", "Film", "gesehen"]
       },
       {
         "id": 2,
         "type": "select",
-        "question": "oderValleyQuestTwelve.questTwo",
+        "question": "pastValleyQuestTwelve.questTwo",
         "options": [
           "Wir sind in den Park gegangen",
           "Wir haben in den Park gegangen",
           "Wir sind in den Park gehen"
         ],
         "answer": "Wir sind in den Park gegangen",
-        "tip": "oderValleyQuestTwelve.questTwoTip"
+        "tip": "pastValleyQuestTwelve.questTwoTip"
       },
       {
         "id": 3,
         "type": "speechToText",
-        "question": "oderValleyQuestTwelve.questThree",
+        "question": "pastValleyQuestTwelve.questThree",
         "text": "Ich habe ein interessantes Buch gelesen",
         "answer": "Ich habe ein interessantes Buch gelesen"
       },
       {
         "id": 4,
         "type": "reorder",
-        "question": "oderValleyQuestTwelve.questFour",
+        "question": "pastValleyQuestTwelve.questFour",
         "words": ["Gitarre", "gespielt", "hat", "Er"],
         "correctOrder": ["Er", "hat", "Gitarre", "gespielt"]
       },
       {
         "id": 5,
         "type": "select",
-        "question": "oderValleyQuestTwelve.questFive",
+        "question": "pastValleyQuestTwelve.questFive",
         "options": [
           "Hast du Musik gehört?",
           "Bist du Musik gehört?",
@@ -1747,22 +1747,22 @@
       {
         "id": 6,
         "type": "reorder",
-        "question": "oderValleyQuestTwelve.questSix",
+        "question": "pastValleyQuestTwelve.questSix",
         "words": ["leckeres", "haben", "Wir", "gekocht", "Abendessen", "ein", "hat"],
         "correctOrder": ["Wir", "haben", "ein", "leckeres", "Abendessen", "gekocht"]
       },
       {
         "id": 7,
         "type": "speechToText",
-        "question": "oderValleyQuestTwelve.questSeven",
+        "question": "pastValleyQuestTwelve.questSeven",
         "text": "Wir haben Freunde getroffen",
         "answer": "Wir haben Freunde getroffen",
-        "tip": "oderValleyQuestTwelve.questSevenTip"
+        "tip": "pastValleyQuestTwelve.questSevenTip"
       },
       {
         "id": 8,
         "type": "select",
-        "question": "oderValleyQuestTwelve.questEight",
+        "question": "pastValleyQuestTwelve.questEight",
         "options": [
           "Ich habe viele Fotos gemacht",
           "Ich bin viele Fotos gemacht",
@@ -1773,29 +1773,29 @@
       {
         "id": 9,
         "type": "reorder",
-        "question": "oderValleyQuestTwelve.questNine",
+        "question": "pastValleyQuestTwelve.questNine",
         "words": ["Fahrrad", "sind", "gefahren", "Wir", "haben"],
         "correctOrder": ["Wir", "sind", "Fahrrad", "gefahren"]
       },
       {
         "id": 10,
         "type": "speechToText",
-        "question": "oderValleyQuestTwelve.questTen",
+        "question": "pastValleyQuestTwelve.questTen",
         "text": "Ich habe gut geschlafen",
         "answer": "Ich habe gut geschlafen"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "oderValleyQuestTwelve.questEleven",
+        "question": "pastValleyQuestTwelve.questEleven",
         "words": ["Museum", "ein", "besucht", "haben", "Wir"],
         "correctOrder": ["Wir", "haben", "ein", "Museum", "besucht"],
-        "tip": "oderValleyQuestTwelve.questElevenTip"
+        "tip": "pastValleyQuestTwelve.questElevenTip"
       },
       {
         "id": 12,
         "type": "select",
-        "question": "oderValleyQuestTwelve.questTwelve",
+        "question": "pastValleyQuestTwelve.questTwelve",
         "options": [
           "Hast du ein Bild gemalt?",
           "Bist du ein Bild gemalt?",
@@ -1806,22 +1806,22 @@
       {
         "id": 13,
         "type": "speechToText",
-        "question": "oderValleyQuestTwelve.questThirteen",
+        "question": "pastValleyQuestTwelve.questThirteen",
         "text": "Ich bin im Wald spazieren gegangen",
         "answer": "Ich bin im Wald spazieren gegangen"
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "oderValleyQuestTwelve.questFourteen",
+        "question": "pastValleyQuestTwelve.questFourteen",
         "words": ["Lied", "ein", "gesungen", "hat", "Er", "ist"],
         "correctOrder": ["Er", "hat", "ein", "Lied", "gesungen"],
-        "tip": "oderValleyQuestTwelve.questFourteenTip"
+        "tip": "pastValleyQuestTwelve.questFourteenTip"
       },
       {
         "id": 15,
         "type": "select",
-        "question": "oderValleyQuestTwelve.questFifteen",
+        "question": "pastValleyQuestTwelve.questFifteen",
         "options": [
           "Ich habe Sport gemacht",
           "Ich bin Sport gemacht",

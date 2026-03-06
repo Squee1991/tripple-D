@@ -6020,5 +6020,15 @@
       "culture": "Cultura y sociedad",
       "environment": "Medio ambiente"
     }
+  },
+  "verbFormPage": {
+    "title": "Verbos alemanes",
+    "found": "Encontrado:",
+    "typeTitle": "Todos los tipos",
+    "weak": "Débiles",
+    "strong": "Fuertes",
+    "mixed": "Mixtos",
+    "modal": "Modales",
+    "placeHolder": "Buscar verbo..."
   }
 }
