@@ -237,7 +237,6 @@ const onboardingSteps = [
 ]
 
 const {start , finish} = useVOnboarding(wrapperRef)
-
 const menuItems = computed(() => {
   const items = [
     ...(userAuth.uid
@@ -292,7 +291,6 @@ const menuItems = computed(() => {
                   {id: 'comparison', url: '/adjective-comparison', valueKey: 'underSub.comparison'}
                 ],
               },
-
               {id: 'description', url: '/description-images' , valueKey: 'Описание картинок'},
               {id: 'themen', url: '/thematic-learning', valueKey: 'sub.themen'},
               {id: 'cards', url: '/create-cards', valueKey: 'sub.card'},
