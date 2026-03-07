@@ -32,8 +32,8 @@
         "id": 2,
         "type": "speechToText",
         "question": "pluralLandQuestOne.questTwo",
-        "text": "ich werde das machen",
-        "answer": "ich werde das machen"
+        "text": "Ich werde das machen",
+        "answer": "Ich werde das machen"
       },
       {
         "id": 3,
@@ -49,7 +49,7 @@
         ],
         "correctOrder": [
           "Ich",
-          "werdе",
+          "werde",
           "einen",
           "Koffer",
           "packen"
@@ -113,39 +113,25 @@
         "id": 8,
         "type": "speechToText",
         "question": "pluralLandQuestOne.questEight",
-        "text": "ich werde heute zu Hause arbeiten",
-        "answer": "ich werde heute zu Hause arbeiten"
+        "text": "Ich werde heute zu Hause arbeiten",
+        "answer": "Ich werde heute zu Hause arbeiten"
       },
       {
         "id": 9,
         "type": "reorder",
         "question": "pluralLandQuestOne.questNine",
-        "words": [
-          "Wann",
-          "wirst",
-          "du",
-          "nach",
-          "Hause",
-          "fliegen"
-        ],
-        "correctOrder": [
-          "Wann",
-          "wirst",
-          "du",
-          "nach",
-          "Hause",
-          "fahren"
-        ]
+        "words": ["Wann", "wirst", "du", "nach", "werdet", "Hause", "fahren"],
+        "correctOrder": ["Wann", "wirst", "du", "nach", "Hause", "fahren"]
       },
       {
         "id": 10,
         "type": "speechToText",
         "question": "pluralLandQuestOne.questTen",
-        "text": "ich werde am Montag um 12 Uhr nach Hause fahren",
-        "answer": "ich werde am Montag um 12 Uhr nach Hause fahren",
+        "text": "Ich werde am Montag um 12 Uhr nach Hause fahren",
+        "answer": "Ich werde am Montag um 12 Uhr nach Hause fahren",
         "accept": [
-          "ich werde am Montag um 12 Uhr nach Hause fahren",
-          "ich werde am Montag um zwölf Uhr nach Hause fahren"
+          "Ich werde am Montag um 12 Uhr nach Hause fahren",
+          "Ich werde am Montag um zwölf Uhr nach Hause fahren"
         ]
       },
       {
@@ -312,7 +298,7 @@
         "id": 5,
         "type": "select",
         "question": "pluralLandQuestTwo.questFive",
-        "questions": [
+        "options": [
           "Was wirst du heute Abend kochen?",
           "Was wird du heute Abend kochen?",
           "Was werdet du heute Abend kochen?"
@@ -343,8 +329,8 @@
         "id": 7,
         "type": "speechToText",
         "question": "pluralLandQuestTwo.questSeven",
-        "text": "Wir werden bald eine Lösung finden.",
-        "answer": "Wir werden bald eine Lösung finden."
+        "text": "Wir werden bald eine Lösung finden",
+        "answer": "Wir werden bald eine Lösung finden"
       },
       {
         "id": 8,
@@ -388,11 +374,11 @@
         "type": "select",
         "question": "pluralLandQuestTwo.questEleven",
         "options": [
-          "ich werde auf dich warten",
-          "ich warte auf dich",
-          "ich werden auf dich warten"
+          "Ich werde auf dich warten",
+          "Ich warte auf dich",
+          "Ich werden auf dich warten"
         ],
-        "answer": "ich werde auf dich warten"
+        "answer": "Ich werde auf dich warten"
       },
       {
         "id": 12,
@@ -405,25 +391,22 @@
         "id": 13,
         "type": "reorder",
         "question": "pluralLandQuestTwo.questThirteen",
-        "words": ["Jahr", "kaufen", "nächstes", "ein", "werde", "Ich", "Haus", "einen"
-        ],
+        "words": ["Jahr", "kaufen", "nächstes", "ein", "werde", "Ich", "Haus", "einen"],
         "correctOrder": ["Ich", "werde", "nächstes", "Jahr", "ein", "Haus", "kaufen"]
       },
       {
         "id": 14,
-        "type": "select",
-        "question": ".",
-        "options": ["werdet", "werden", "wird"
-        ],
-        "answer": "werdet"
+        "type": "reorder",
+        "question": "pluralLandQuestTwo.questFourteen",
+        "words": ["werde", "ans", "Ich", "Jahr", "fahren", "nächstes", "Meer", "werden"],
+        "correctOrder": ["Ich", "werde", "nächstes", "Jahr", "ans", "Meer", "fahren"]
       },
       {
         "id": 15,
         "type": "reorder",
         "question": "pluralLandQuestTwo.questFifteen",
         "words": ["alles", "Roboter", "Die", "machen", "werden"],
-        "correctOrder": ["Die", "Roboter", "werden", "alles", "machen"
-        ]
+        "correctOrder": ["Die", "Roboter", "werden", "alles", "machen"]
       }
     ]
   },
@@ -493,11 +476,11 @@
         "type": "select",
         "question": "pluralLandQuestThree.questSix",
         "options": [
-          "ich werde diese Prüfung sicher bestehen",
-          "ich diese Prüfung sicher bestehen werdet",
-          "ich werde bestehen diese Prüfung sicher"
+          "Ich diese Prüfung sicher bestehen werdet",
+          "Ich werde diese Prüfung sicher bestehen",
+          "Ich werde bestehen diese Prüfung sicher"
         ],
-        "answer": "ich werde bestehen diese Prüfung sicher"
+        "answer": "Ich werde diese Prüfung sicher bestehen"
       },
       {
         "id": 7,
@@ -615,7 +598,7 @@
         "id": 4,
         "type": "reorder",
         "question": "pluralLandQuestFour.questFour",
-        "words": ["wird", "backen", "ein", "Kuchen", "Wir", "leackeren", "einen", "werden"],
+        "words": ["wird", "backen", "ein", "Kuchen", "Wir", "leckeren", "einen", "werden"],
         "correctOrder": ["Wir", "werden", "einen", "leckeren", "Kuchen", "backen"]
       },
       {
@@ -650,7 +633,7 @@
         "id": 9,
         "type": "reorder",
         "question": "pluralLandQuestFour.questNine",
-        "words": ["oder", "Saft", "trinken","Cola", "Ihr", "werdet"],
+        "words": ["oder", "Saft", "trinken", "Cola", "Ihr", "werdet"],
         "correctOrder": ["Ihr", "werdet", "Saft", "oder", "Cola", "trinken"]
       },
       {
@@ -849,7 +832,7 @@
       {
         "id": 2,
         "type": "speechToText",
-        "question": "pluralLandQuestFive.questTwo",
+        "question": "pluralLandQuestSix.questTwo",
         "text": "Wir werden zusammen frühstücken",
         "answer": "Wir werden zusammen frühstücken"
       },
@@ -878,7 +861,7 @@
         "id": 6,
         "type": "reorder",
         "question": "pluralLandQuestSix.questSix",
-        "words": ["machen", "Sonntag", "sie", "am", "Was", "Sie", "werdet"],
+        "words": ["machen", "Sonntag", "werden", "am", "Was", "Sie", "werdet"],
         "correctOrder": ["Was", "werden", "Sie", "am", "Sonntag", "machen"]
       },
       {
@@ -993,8 +976,9 @@
         "id": 4,
         "type": "reorder",
         "question": "pluralLandQuestSeven.questFour",
-        "words": ["helfen", "Freunde", "tragen", "uns", "beim", "Die", "werden"],
-        "correctOrder": ["Die", "Freunde", "werden", "uns", "beim", "tragen", "helfen"]
+        "words": ["helfen", "Freunde", "Tragen", "uns", "beim", "Die", "werden"],
+        "correctOrder": ["Die", "Freunde", "werden", "uns", "beim", "Tragen", "helfen"],
+        "tip": "pluralLandQuestSeven.questFourTip"
       },
       {
         "id": 5,
@@ -1126,13 +1110,13 @@
         "id": 4,
         "type": "reorder",
         "question": "pluralLandQuestEight.questFour",
-        "words": ["werdet ", "schneien", "in", "Winter", "es", "wird", "Im"],
+        "words": ["werdet", "schneien", "in", "Winter", "es", "wird", "Im"],
         "correctOrder": ["Im", "Winter", "wird", "es", "schneien"]
       },
       {
         "id": 5,
         "type": "select",
-        "question": "pluralLandQuestEight.questFive ",
+        "question": "pluralLandQuestEight.questFive",
         "options": [
           "Die Temperaturen werden steigen",
           "Die Temperaturen wird steigen",
@@ -1353,7 +1337,7 @@
         "id": 14,
         "type": "reorder",
         "question": "pluralLandQuestNine.questFourteen",
-        "words": ["aufhören", "Die", "Schmerz", "Die", "wird"],
+        "words": ["aufhören", "Der", "Schmerz", "Die", "wird"],
         "correctOrder": ["Der", "Schmerz", "wird", "aufhören"]
       },
       {
@@ -1544,9 +1528,9 @@
         "type": "select",
         "question": "pluralLandQuestEleven.questTwo",
         "options": [
-          "Der Kellner wird die Karte bringen",
-          "Der Kellner werden die Karte bringen",
-          "Der Kellner werdet die Karte bringen"
+          "Der Kellner wird die Speisekarte bringen",
+          "Der Kellner werden die Speisekarte bringen",
+          "Der Kellner wird der Speisekarte bringen"
         ],
         "answer": "Der Kellner wird die Speisekarte bringen"
       },
@@ -1681,8 +1665,8 @@
         "id": 1,
         "type": "reorder",
         "question": "pluralLandQuestTwelve.questOne",
-        "words": ["gehen", "Kino", "ins", "Wir", "werden"],
-        "correctOrder": ["Wir", "werden", "ins", "Kino", "gehen", "zu"]
+        "words": ["gehen", "Kino", "ins", "Wir", "werden", "zu"],
+        "correctOrder": ["Wir", "werden", "ins", "Kino", "gehen"]
       },
       {
         "id": 2,
@@ -1878,7 +1862,7 @@
       {
         "id": 8,
         "type": "select",
-        "question": "Выберите: Ты будешь играть с собакой",
+        "question": "pluralLandQuestThirteen.questEight",
         "options": [
           "Du wirst mit dem Hund spielen",
           "Du wird mit dem Hund spielen",
@@ -1891,8 +1875,7 @@
         "type": "reorder",
         "question": "pluralLandQuestThirteen.questNine",
         "words": ["gehen", "spazieren", "Hund", "dem", "mit", "Wer", "wird"],
-        "correctOrder": ["Wer", "wird", "mit", "dem", "Hund", "spazieren", "gehen"
-        ]
+        "correctOrder": ["Wer", "wird", "mit", "dem", "Hund", "spazieren", "gehen"]
       },
       {
         "id": 10,

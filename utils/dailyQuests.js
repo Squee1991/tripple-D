@@ -111,7 +111,7 @@ export const dailyQuests = [
 		id: 'streakHard',
 		name: 'daily.tenth',
 		currentValue: 0,
-		targetValue: 10
+		targetValue: 5
 	},
 	{
 		id: 'perfectQuest',

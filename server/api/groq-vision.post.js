@@ -39,39 +39,41 @@ INPUTS:
 1. **The Image:** Look at the visual image carefully.
 2. **Target Level:** ${userLevel} (A1, A2, or B1).
 3. **User Answer:** "${userMessage}"
-4. **Reference Template:** "${referenceDescription || 'None'}" (Use this as a benchmark for the EXPECTED DEPTH and DETAILS. The user should aim for a similar level of detail).
+4. **Reference Template:** "${referenceDescription || 'None'}" 
 
-CRITICAL EVALUATION RULES:
+GRAMMAR BOUNDARIES BY LEVEL:
+- **A1 Grammar:** Präsens, Perfekt (basics), modal verbs. Basic Nominativ/Akkusativ/Dativ. Note: When the question is "Where?" (Wo?), use Dativ and put the noun's article in Dativ; apply the same rule for Akkusativ. NO subordinate clauses.
+- **A2 Grammar:** Präteritum, Wechselpräpositionen, Nebensätze, Adjektivdeklination.
+- **B1 Grammar:** Plusquamperfekt, Passiv, complexe Nebensätze, Relativsätze.
 
-0. **MINIMUM DETAIL RULE (NEW):** - Even at A1, a single short sentence like "Ich sehe einen Baum" is INSUFFICIENT for an "image description" task. 
-   - If the user provides only one simple sentence without mentioning colors, weather, or positions (when they are visible in the image and present in the Reference Template), the score MUST NOT exceed 5-6.
-   - Encourage the user to describe at least 2-3 visual aspects (e.g., "The sky is blue", "The grass is green").
+CRITICAL EVALUATION RULES - ASYMMETRIC SCORING & NO NITPICKING:
 
-1. **Visual Fact Checking & Flexibility:**
-   - The User Answer must match the image. Accept synonyms.
+0. **FATAL ERROR - WRONG LANGUAGE (CRITICAL RULE):**
+   - The "User Answer" MUST be written in German.
+   - If the user writes the description in Russian, English, Spanish, or ANY language other than German, YOU MUST GIVE A SCORE OF 1/10.
+   - In this case, the feedback MUST explicitly say in ${feedbackLang}: "Пожалуйста, опишите картинку на немецком языке." (or the equivalent in the selected feedback language). Do not evaluate the grammar or visual details if the language is wrong.
 
-2. **LEVEL UP (Over-performing):**
-   - If the user uses grammar/vocabulary ABOVE ${userLevel} (e.g., B1 structures for an A1 task) AND covers the details, give 9-10 and explicit praise.
+1. **OVER-PERFORMING (REWARD & NO NITPICKING):**
+   - If the user is at a lower level (e.g., A1) but writes a complex, accurate answer (e.g., A2 or B1), YOU MUST GIVE THEM 10/10.
+   - **CRITICAL FEEDBACK RULE:** Explicitly state: "Отличная работа! Вы использовали грамматику и словарный запас, которые значительно превышают уровень ${userLevel}."
+   - **NO NITPICKING BAN:** If they wrote an advanced/complex sentence, DO NOT deduct points for "missing visual details" (like ski poles, trees, or lifts). NEVER tell them to "add more details for level ${userLevel}" because they already exceeded it!
 
-3. **LEVEL DOWN (Under-performing / Too Simple):**
-   - If the answer is grammatically perfect but "lazy" (too short, lacks the descriptive depth shown in the Reference Template), penalize the score (5-7).
-   - FEEDBACK: Tell them: "Your grammar is correct, but you need to describe more details (colors, environment, etc.) to master level ${userLevel}."
+2. **UNDER-PERFORMING (PENALIZE):**
+   - If the user is at a higher level (e.g., B1) but writes a very basic, short answer (like A1), you MUST deduct points (Score 5-7). Tell them to add more complex structures.
 
-4. **Detail Expectations:**
-   - **A1:** 2-3 simple sentences. Must mention basic colors or obvious objects (Subj + Verb + Adj/Obj).
-   - **A2:** 3-4 sentences, using connectors (und, aber) and basic spatial prepositions (auf dem Bild, links, rechts).
-   - **B1:** Complex structures (Nebensätze) and nuanced descriptions of atmosphere or actions.
+3. **THE GOLDEN STANDARD (Matching the Level):**
+   - If the answer matches the length and detail of the "Reference Template", give 10/10. 
+   - NEVER ask to describe background objects (poles, trees) if they are not explicitly mentioned in the Reference Template for that level.
+
+4. **DYNAMIC SUGGESTED ANSWER RULE:**
+   - **IF SCORE IS 9 OR 10 (Perfect/Excellent):** DO NOT use the basic Reference Template. Set the 'suggestedAnswer' to the User's exact answer (you may fix minor typos). Validate their success by showing their own text!
+   - **IF SCORE IS 8 OR BELOW (Mistakes or too short):** Set the 'suggestedAnswer' to the official Reference Template for the ${userLevel} level.
 
 YOUR TASK: GENERATE JSON RESPONSE.
-1. **Score (1-10):** - 8-10: Detailed, accurate, and matches level.
-   - 5-7: Correct grammar but TOO BRIEF/SIMPLE (minimalist).
-   - 1-4: Wrong facts or major grammar issues.
-
-2. **Feedback (Language: ${feedbackLang}):** Be a supportive coach. Write EXCLUSIVELY in ${feedbackLang}. If the answer is too short, specifically suggest what else they could have described (e.g., "Try to mention the color of the sky").
-
-3. **Suggested Answer:** - If the user was too brief, provide a "Model Answer" that matches the richness of the Reference Template.
-
-4. **Key Corrections:** List fixes in ${feedbackLang} or say "No corrections needed".
+1. **Score (1-10):** Rate strictly based on the Asymmetric Scoring rules above. (Score 1 if wrong language).
+2. **Feedback (Language: ${feedbackLang}):** Write EXCLUSIVELY in ${feedbackLang}. 
+3. **Suggested Answer:** Follow the Dynamic Suggested Answer Rule.
+4. **Key Corrections:** List specific fixes in ${feedbackLang} or say "No corrections needed".
 
 OUTPUT JSON FORMAT:
 {
@@ -101,7 +103,7 @@ OUTPUT JSON FORMAT:
                     ]
                 }
             ],
-            temperature: 0.2,
+            temperature: 0.2, // Отличная температура для строгой оценки
             max_tokens: 600,
             response_format: { type: "json_object" }
         }

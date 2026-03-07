@@ -154,7 +154,7 @@ export const topics = [
 				image: KindImSnow,
 				descriptions: {
 					A1: "Ein Junge liegt im Schnee und macht einen Schneeengel.",
-					A2: "Ein Junge liegt auf dem Rücken im Schnee. Er trägt einen roten Schneeanzug und Handschuhe.",
+					A2: "Ein Junge liegt auf dem Rücken im Schnee. Er trägt einen roten Schneeanzug und macht einen Schneeengel.",
 					B1: "Auf dem Bild liegt ein lachender Junge im Schnee und formt einen Schneeengel. Er trägt einen roten Schneeanzug sowie eine gestreifte Mütze mit Bommel."
 				}
 			},

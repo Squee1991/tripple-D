@@ -1456,13 +1456,14 @@
         "question": "questLakeRuinsEighthQuests.questSeven",
         "words": [
           "Die",
-          "Temperatur",
-          "steigt"
+          "steigt",
+          "Das",
+          "Temperatur"
         ],
         "correctOrder": [
           "Die",
-          "steigt",
-          "Temperatur"
+          "Temperatur",
+          "steigt"
         ]
       },
       {
@@ -1470,7 +1471,11 @@
         "type": "speechToText",
         "question": "questLakeRuinsEighthQuests.questEight",
         "text": "Heute sind es zwanzig Grad",
-        "answer": "Heute sind es zwanzig Grad"
+        "answer": "Heute sind es zwanzig Grad",
+        "accept": [
+          "Heute sind es zwanzig Grad",
+          "Heute sind es 20 Grad"
+        ]
       },
       {
         "id": 9,
@@ -1523,7 +1528,11 @@
         "type": "speechToText",
         "question": "questLakeRuinsEighthQuests.questTwelve",
         "text": "Tagsüber sind es bis zu fünfzehn Grad",
-        "answer": "Tagsüber sind es bis zu fünfzehn Grad"
+        "answer": "Tagsüber sind es bis zu fünfzehn Grad",
+        "accept": [
+          "Tagsüber sind es bis zu fünfzehn Grad",
+          "Tagsüber sind es bis zu 15 Grad"
+        ]
       },
       {
         "id": 13,
@@ -1629,7 +1638,11 @@
         "type": "speechToText",
         "question": "questLakeRuinsNinthQuests.questFour",
         "text": "Zwischen fünf und zehn Grad",
-        "answer": "Zwischen fünf und zehn Grad"
+        "answer": "Zwischen fünf und zehn Grad",
+        "accept": [
+          "Zwischen fünf und zehn Grad",
+          "Zwischen fünf und zehn Grad"
+        ]
       },
       {
         "id": 5,
