@@ -6020,5 +6020,15 @@
       "culture": "Kültür ve Toplum",
       "environment": "Çevre"
     }
+  },
+  "verbFormPage": {
+    "title": "Almanca Fiiller",
+    "found": "Bulundu:",
+    "typeTitle": "Tüm türler",
+    "weak": "Zayıf",
+    "strong": "Güçlü",
+    "mixed": "Karışık",
+    "modal": "Modal",
+    "placeHolder": "Fiil bul..."
   }
 }

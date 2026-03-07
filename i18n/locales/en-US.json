@@ -6020,5 +6020,15 @@
       "culture": "Culture & Society",
       "environment": "Environment"
     }
+  },
+  "verbFormPage": {
+    "title": "German Verbs",
+    "found": "Found:",
+    "typeTitle": "All types",
+    "weak": "Weak",
+    "strong": "Strong",
+    "mixed": "Mixed",
+    "modal": "Modal",
+    "placeHolder": "Search verb..."
   }
 }

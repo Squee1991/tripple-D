@@ -6020,5 +6020,15 @@
       "culture": "Kultura i społeczeństwo",
       "environment": "Środowisko"
     }
+  },
+  "verbFormPage": {
+    "title": "Niemieckie czasowniki",
+    "found": "Znaleziono:",
+    "typeTitle": "Wszystkie typy",
+    "weak": "Słabe",
+    "strong": "Silne",
+    "mixed": "Mieszane",
+    "modal": "Modalne",
+    "placeHolder": "Znajdź czasownik..."
   }
 }
