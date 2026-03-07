@@ -147,6 +147,7 @@ const infoData = ref([
     ]
   }
 ])
+
 const sections = ref([
   {id: "stats", icon: Graph, alt: 'Graph', title: t('accountPanel.stats'), route: "/statistics"},
   {id: "achievement", icon: AchPanelIcon, alt: 'AchPanel', title: t('accountPanel.achievement'), route: "/achievements"},
@@ -229,6 +230,7 @@ onMounted(() => {
 .ranked__wrapper:last-child .ranked__inner {
   margin-bottom: 0;
 }
+
 
 @media (min-width: 1024px) {
   .ranked__inner:hover {
