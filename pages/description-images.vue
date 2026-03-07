@@ -1,6 +1,6 @@
 <script setup>
 import {ref, computed, nextTick} from 'vue'
-import {useSeoMeta} from "#imports";
+import {useSeoMeta} from "#imports"
 import {useRouter} from 'vue-router'
 import SoundBtn from '../src/components/soundBtn.vue'
 import Modal from '../src/components/modal.vue'
@@ -103,7 +103,6 @@ const toggleRecording = () => {
   if (isRecording.value) stopRecording()
   else startRecording()
 }
-
 
 const overlayData = ref({title: "describePicture.rulesTitle", text: "describePicture.rulesText"})
 const tipsData = ref({
@@ -262,17 +261,19 @@ async function sendMessage(voiceText = null) {
     <div class="content-shell">
       <header class="app-header">
         <button @click="goBack" class="btn-icon-back">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-               stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
+               stroke="#2b2b2b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
             <line x1="19" y1="12" x2="5" y2="12"></line>
             <polyline points="12 19 5 12 12 5"></polyline>
           </svg>
         </button>
-        <h1 class="header-title"><span v-if="viewState === 'topics'">{{ t('describePicture.title') }}</span><span
-            v-else>{{ selectedTopic?.label }}</span></h1>
+        <h1 class="header-title">
+          <span v-if="viewState === 'topics'">{{ t('describePicture.title') }}</span>
+          <span v-else>{{ selectedTopic?.label }}</span>
+        </h1>
         <button class="btn-icon-info" @click="openModal">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-               stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
+               stroke="#2b2b2b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"></circle>
             <line x1="12" y1="16" x2="12" y2="12"></line>
             <line x1="12" y1="8" x2="12.01" y2="8"></line>
@@ -283,55 +284,60 @@ async function sendMessage(voiceText = null) {
       <transition name="fade" mode="out-in">
         <div v-if="viewState === 'topics'" class="view-topics" key="topics">
           <div class="intro-block">
-            <h2>Выберите тему 📚</h2>
+<!--            <h2>ВЫБЕРИТЕ ТЕМУ</h2>-->
             <p>Выберите категорию для тренировки навыков описания.</p>
           </div>
           <div class="topics-flex-container">
-            <div v-for="topic in topics" :key="topic.id" class="topic-card-item" :style="{ background: topic.gradient }"
-                 @click="selectTopic(topic)">
-              <div class="topic-icon">{{ topic.icon }}</div>
-              <div class="topic-info"><h3 :style="{ color: topic.textColor }">{{ topic.label }}</h3><span
-                  class="task-count" :style="{ color: topic.textColor, opacity: 0.8 }">{{
-                  topic.tasks.length
-                }} картинок</span></div>
+            <div v-for="topic in topics" :key="topic.id" class="topic-card-item" @click="selectTopic(topic)">
+              <div class="card-top-banner" :style="{ background: topic.gradient || '#e26a4b' }">
+                <h3 :style="{ color: topic.textColor || '#fff' }">{{ topic.label }}</h3>
+              </div>
+              <div class="card-body-content">
+                <div class="topic-icon">{{ topic.icon }}</div>
+                <div class="card-footer-strip">
+                  <span class="task-count">{{ topic.tasks.length }} КАРТИНОК</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
         <div v-else-if="viewState === 'level'" class="view-level" key="level">
-          <div class="level-header"><h2>Выберите сложность</h2></div>
+          <div class="level-header"><h2>ВЫБЕРИТЕ СЛОЖНОСТЬ</h2></div>
           <div class="level-options">
             <button v-for="level in levels" :key="level" @click="selectLevel(level)" class="level-card"
                     :class="{ 'active': selectedLevel === level }">
               <div class="level-mark"></div>
-              <span class="level-name">{{ level }}</span></button>
+              <span class="level-name">{{ level }}</span>
+            </button>
           </div>
-          <button @click="startGame" class="btn-primary-action">Начать
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <button @click="startGame" class="btn-primary-action">НАЧАТЬ
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
               <path d="M5 12h13M12 5l7 7-7 7"/>
             </svg>
           </button>
         </div>
+
         <div v-else class="game-view" key="game">
           <div v-if="isFinished" class="finish-state">
-            <div class="finish-content">
+            <div class="finish-content card-style-box">
               <div class="medal-icon">🎉</div>
-              <h2>Тема выполнена</h2>
-              <button @click="changeTopic" class="btn-primary-action full-width">Выбрать новую тему</button>
+              <h2>ТЕМА ВЫПОЛНЕНА</h2>
+              <button @click="changeTopic" class="btn-primary-action full-width">ВЫБРАТЬ НОВУЮ ТЕМУ</button>
             </div>
           </div>
           <div v-else class="active-game-layout">
             <div class="game-sidebar">
               <div class="progress-container">
-                <div class="progress-bar"><span class="progress-text">{{ currentTaskIndex + 1 }} / {{
-                    activeTasks.length
-                  }}</span>
+                <div class="progress-bar">
+                  <span class="progress-text">{{ currentTaskIndex + 1 }} / {{ activeTasks.length }}</span>
                   <div class="progress-fill" :style="{ width: progressPercentage + '%' }"></div>
                 </div>
               </div>
-              <div class="image-card"><img :src="currentImage" alt="Task"/></div>
+              <div class="image-card card-style-box"><img :src="currentImage" alt="Task"/></div>
             </div>
-            <div class="game-main">
+            <div class="game-main card-style-box chat-panel">
               <div class="chat-container">
                 <div v-if="messages.length === 0" class="empty-state"><p>{{ t('describePicture.placeholder') }}</p>
                 </div>
@@ -343,14 +349,16 @@ async function sendMessage(voiceText = null) {
                         <div class="feedback-body">
                           <p class="main-feedback">{{ m.feedback }}</p>
                           <div class="suggestion-box">
-                            <div class="suggestion-header"><span class="icon">✨</span><span>Ответ ({{
+                            <div class="suggestion-header"><span class="icon">✨</span><span>ОТВЕТ ({{
                                 selectedLevel
                               }}):</span></div>
                             <div class="suggestion-content">
                               <SoundBtn :text="m.suggestedAnswer" class="mini-sound"/>
-                              <p class="suggestion-text">{{ m.suggestedAnswer }}</p></div>
+                              <p class="suggestion-text">{{ m.suggestedAnswer }}</p>
+                            </div>
                           </div>
-                          <div v-if="m.keyCorrections?.length" class="corrections-box"><span class="correction-title">💡 Как улучшить:</span>
+                          <div v-if="m.keyCorrections?.length" class="corrections-box">
+                            <span class="correction-title">💡 КАК УЛУЧШИТЬ:</span>
                             <ul class="correction-list">
                               <li v-for="(c, idx) in m.keyCorrections" :key="idx" class="correction-item">{{ c }}</li>
                             </ul>
@@ -373,34 +381,37 @@ async function sendMessage(voiceText = null) {
               <div v-if="err" class="error-toast">{{ err }}</div>
               <div class="input-dock">
                 <template v-if="!isAnswered">
-                  <input v-model="input" @keyup.enter="() => sendMessage()"
-                         :placeholder="isRecording ? 'Идет запись...' : t('describePicture.inputPlaceholder')"
-                         :disabled="isLoading || isRecording || isProcessing" class="modern-input"/>
-                  <button @click="() => sendMessage()" :disabled="isLoading || !input.trim()" class="btn-send-round">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <line x1="22" y1="2" x2="11" y2="13"></line>
-                      <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                    </svg>
-                  </button>
-                  <button @click="toggleRecording" class="btn-mic"
-                          :class="{ 'recording': isRecording, 'processing': isProcessing }"
-                          :disabled="isLoading || isProcessing">
-                    <svg v-if="!isRecording && !isProcessing" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                         stroke-linejoin="round">
-                      <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
-                      <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
-                      <line x1="12" y1="19" x2="12" y2="23"></line>
-                      <line x1="8" y1="23" x2="16" y2="23"></line>
-                    </svg>
-                    <svg v-else-if="isRecording" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                         stroke-linejoin="round">
-                      <rect x="6" y="6" width="12" height="12"></rect>
-                    </svg>
-                    <span v-else>⏳</span>
-                  </button>
+                  <textarea v-model="input" @keydown.enter.prevent="() => sendMessage()"
+                            :placeholder="isRecording ? 'ИДЕТ ЗАПИСЬ...' : t('describePicture.inputPlaceholder')"
+                            :disabled="isLoading || isRecording || isProcessing" class="modern-input card-style-box" rows="2"
+                  ></textarea>
+                  <div class="btn__wrapper">
+                    <button @click="() => sendMessage()" :disabled="isLoading || !input.trim()" class="btn-send-round">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                           stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                      </svg>
+                    </button>
+                    <button @click="toggleRecording" class="btn-mic"
+                            :class="{ 'recording': isRecording, 'processing': isProcessing }"
+                            :disabled="isLoading || isProcessing">
+                      <svg v-if="!isRecording && !isProcessing" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                           viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                           stroke-linejoin="round">
+                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                        <line x1="12" y1="19" x2="12" y2="23"></line>
+                        <line x1="8" y1="23" x2="16" y2="23"></line>
+                      </svg>
+                      <svg v-else-if="isRecording" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                           viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                           stroke-linejoin="round">
+                        <rect x="6" y="6" width="12" height="12"></rect>
+                      </svg>
+                      <span v-else>⏳</span>
+                    </button>
+                  </div>
                 </template>
                 <template v-else>
                   <button class="btn-primary-action full-width" @click="nextTask">{{
@@ -418,24 +429,54 @@ async function sendMessage(voiceText = null) {
 </template>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&family=Nunito:wght@400;700;900&display=swap');
 
 .page-container {
   font-family: "Nunito", sans-serif;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 20px;
-  color: #1f2937;
+  padding: 12px;
+  background-color: var(--bg);
+  color: #2b2b2b;
+  min-height: 100vh;
+}
+
+h1, h2, h3, .header-title, .level-name, .btn-primary-action, .correction-title {
+  font-family: 'Pangolin', cursive;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--titleColor);
+}
+
+.btn__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
 }
 
 .btn-icon-back, .btn-icon-info {
   border: none;
-  background: none;
-  color: var(--titleColor);
+  background: #fff;
+  border: 3px solid #2b2b2b;
+  border-radius: 12px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 3px 3px 0px #2b2b2b;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.btn-icon-back:active, .btn-icon-info:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0px 0px 0px #2b2b2b;
 }
 
 .content-shell {
   width: 100%;
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
 }
@@ -444,381 +485,295 @@ async function sendMessage(voiceText = null) {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.header-title {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--titleColor);
-}
-
-.level-header {
-  color: var(--titleColor);
-}
-
-.view-topics {
-  padding: 20px 10px;
-  overflow-y: auto;
-  flex: 1;
-}
-
-.topics-flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-.topic-card-item {
-  flex: 1 1 calc(20% - 15px);
-  min-width: 180px;
-  border-radius: 16px;
-  padding: 20px;
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.topic-card-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-}
-
-.topic-icon {
-  font-size: 40px;
   margin-bottom: 10px;
 }
 
-.topic-info h3 {
-  margin: 0 0 5px;
-  font-size: 1rem;
+.header-title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--titleColor);
+  text-shadow: 1px 1px 0px #fff;
+}
+
+.intro-block {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.intro-block h2 {
+  font-size: 2.2rem;
+}
+
+.intro-block p {
+  font-size: 1.2rem;
   font-weight: 700;
+  color: var(--titleColor);
 }
 
-.task-count {
-  font-size: 0.85rem;
-  font-weight: 600;
+.topics-flex-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 12px;
 }
 
-.view-level {
-  flex: 1;
+.topic-card-item {
+  background-color: #fdfaf6;
+  border: 4px solid #2b2b2b;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 6px 6px 0px #2b2b2b;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  .topic-card-item:hover {
+    transform: translateY(-2px) rotate(-.3deg);
+  }
+}
+
+.card-top-banner {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 4px solid #2b2b2b;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-top-banner h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+
+.card-body-content {
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  flex-grow: 1;
+  background-image: radial-gradient(#d5cebe 15%, transparent 16%);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+}
+
+.topic-icon {
+  font-size: 60px;
+  margin-bottom: 13px;
+  filter: drop-shadow(3px 3px 0px rgba(43, 43, 43, 0.3));
+}
+
+.card-footer-strip {
+  background: #fff;
+  border: 3px solid #2b2b2b;
+  padding: 5px 15px;
+  border-radius: 20px;
+}
+
+.task-count {
+  font-size: 0.9rem;
+  font-weight: 900;
+  font-family: 'Pangolin', cursive;
+}
+
+.view-level {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 20px;
+}
+
+.level-header h2 {
+  font-size: 1.3rem;
 }
 
 .level-options {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 15px;
   width: 100%;
   max-width: 400px;
-  margin: 30px 0;
+  margin: 15px 0;
 }
 
 .level-card {
-  padding: 18px 25px;
-  border: 2px solid #e5e7eb;
-  background: white;
+  padding: 20px 25px;
+  border: 4px solid #2b2b2b;
+  background: #fff;
   border-radius: 16px;
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
   cursor: pointer;
-  transition: all 0.2s;
+  box-shadow: 4px 4px 0px #2b2b2b;
+  transition: transform 0.1s;
+}
+
+.level-card:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #2b2b2b;
 }
 
 .level-card.active {
-  border-color: #6366f1;
-  background: #eff6ff;
+  background: #dfaa40;
 }
 
 .level-mark {
-  width: 22px;
-  height: 22px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
-  border: 2px solid #d1d5db;
+  border: 4px solid #2b2b2b;
+  background: #fff;
   position: relative;
-  flex-shrink: 0;
 }
 
 .level-card.active .level-mark {
-  border-color: #6366f1;
-  background: #6366f1;
-}
-
-.level-card.active .level-mark::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 8px;
-  height: 8px;
-  background: white;
-  border-radius: 50%;
+  background: #2b2b2b;
 }
 
 .level-name {
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: black;
+}
+
+.btn-primary-action {
+  background: #e26a4b;
+  color: #fff;
+  padding: 8px 40px;
+  border-radius: 16px;
+  font-size: 1.5rem;
+  border: 2px solid #2b2b2b;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  box-shadow: 3px 3px 0px #2b2b2b;
+  transition: transform 0.1s;
+}
+
+.btn-primary-action:active {
+  transform: translate(5px, 5px);
+  box-shadow: 0px 0px 0px #2b2b2b;
 }
 
 .active-game-layout {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  width: 100%;
+  max-width: 630px;
+  margin: 0 auto;
   gap: 10px;
-  padding: 20px 10px;
 }
 
 .game-sidebar {
-  margin: 0 auto;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  gap: 3px;
+}
+
+.card-style-box {
+  border-radius: 16px;
+}
+
+.image-card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .progress-container {
-  margin-bottom: 5px;
   display: flex;
   align-items: center;
-  gap: 10px;
 }
 
 .progress-bar {
   flex: 1;
-  height: 18px;
-  background: #d6d9de;
-  border-radius: 5px;
+  height: 30px;
+  background: #fff;
+  border: 4px solid #2b2b2b;
+  border-radius: 15px;
   overflow: hidden;
   position: relative;
 }
 
 .progress-fill {
   height: 100%;
-  background: #10b981;
+  background: #98b460;
+  border-right: 4px solid #2b2b2b;
   transition: width 0.3s ease;
 }
 
 .progress-text {
   position: absolute;
   left: 50%;
-  font-size: 0.75rem;
-  color: #6b7280;
-  font-weight: 600;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+  color: #2b2b2b;
+  font-weight: 900;
+  z-index: 2;
+  font-family: 'Pangolin', cursive;
 }
 
-.image-card {
-  max-width: 512px;
-  margin: 0 auto;
+.chat-panel {
+  width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.image-card img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
+  flex-direction: column;
+  padding: 20px;
+  background: #fff;
 }
 
 .chat-container {
   flex: 1;
   overflow-y: auto;
-  padding: 0 10px 10px 10px;
+  margin-bottom: 3px;
+  max-height: 270px;
 }
 
-.feedback-card {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 20px;
-  padding: 20px;
-  width: 100%;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-  position: relative;
-  overflow: hidden;
-}
-
-.feedback-score-badge {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 6px 16px;
-  border-bottom-left-radius: 16px;
-  font-weight: 800;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-}
-
-.score-high {
-  background: #dcfce7;
-  color: #166534;
-}
-
-.score-medium {
-  background: #fef9c3;
-  color: #854d0e;
-}
-
-.score-low {
-  background: #fee2e2;
-  color: #991b1b;
-}
-
-.main-feedback {
-  font-size: 1.05rem;
-  line-height: 1.5;
-  margin-bottom: 18px;
-  color: #374151;
-  font-weight: 500;
-  margin-top: 10px;
-}
-
-.suggestion-box {
-  background: #f8fafc;
-  border-radius: 12px;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-left: 4px solid #6366f1;
-}
-
-.intro-block {
-  margin-bottom: 10px;
+.empty-state {
+  font-weight: 600;
   text-align: center;
-  color: var(--titleColor);
 }
 
-.suggestion-header {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.bubble {
+  padding: 5px 9px;
+  border-radius: 16px;
+  border: 3px solid #2b2b2b;
+  font-size: 1rem;
   font-weight: 700;
-  font-size: 0.85rem;
-  color: #475569;
-  margin-bottom: 10px;
-  text-transform: uppercase;
+  max-width: 100%;
+  position: relative;
+}
+
+.user .bubble {
+  background: #9cb9c9;
+  border-bottom-right-radius: 0;
 }
 
 .suggestion-content {
   display: flex;
-  align-items: flex-start;
-  gap: 12px;
-}
-
-.suggestion-text {
-  font-style: italic;
-  color: #1e293b;
-  margin: 0;
-}
-
-.corrections-box {
-  margin-top: 15px;
-}
-
-.correction-title {
-  display: block;
-  font-weight: 700;
-  font-size: 0.9rem;
-  color: #e11d48;
-  margin-bottom: 8px;
-}
-
-.correction-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.correction-item {
-  position: relative;
-  padding-left: 20px;
-  margin-bottom: 6px;
-  font-size: 0.95rem;
-  color: #4b5563;
-}
-
-.correction-item::before {
-  content: "•";
-  position: absolute;
-  left: 5px;
-  color: #e11d48;
-  font-weight: bold;
-}
-
-.input-dock {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 10px;
-}
-
-.modern-input {
-  flex: 1;
-  padding: 14px 20px;
-  border-radius: 15px;
-  border: 1px solid #e2e8f0;
-  outline: none;
-}
-
-.btn-send-round {
-  width: 48px;
-  height: 48px;
-  background: #6366f1;
-  color: #fff;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.empty-state {
-  text-align: center;
-  font-weight: 600;
-  color: var(--titleColor);
-}
-
-.btn-primary-action {
-  background: #3365d0;
-  color: #fff;
-  padding: 16px 30px;
-  border-radius: 16px;
-  font-weight: 700;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.bubble {
-  padding: 12px 16px;
-  border-radius: 15px;
-}
-
-.user .bubble {
-  background: #6366f1;
-  color: white;
-  border-bottom-right-radius: 4px;
 }
 
 .assistant .bubble {
-  background: #f1f5f9;
-  border-bottom-left-radius: 4px;
+  background: #fdfaf6;
+  border-bottom-left-radius: 0;
 }
 
 .msg-row {
   display: flex;
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 .user {
@@ -829,62 +784,175 @@ async function sendMessage(voiceText = null) {
   justify-content: flex-start;
 }
 
-@media (max-width: 1000px) {
-  .topic-card-item {
-    flex: 1 1 calc(33.33% - 15px);
-  }
+.feedback-card {
+  background: #fdfaf6;
+  border: 4px solid #2b2b2b;
+  border-radius: 16px;
+  padding: 25px 8px 8px 8px;
+  width: 100%;
+  position: relative;
+  box-shadow: 4px 4px 0px rgba(43, 43, 43, 0.1);
 }
 
-@media (max-width: 1023px) {
-  .active-game-layout {
-    flex-direction: column;
-  }
-
-  .active-game-layout {
-    padding: 20px 0;
-    max-width: 768px;
-    margin: 0 auto;
-  }
+.feedback-score-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  padding: 2px 11px;
+  border: 4px solid #2b2b2b;
+  border-bottom-left-radius: 16px;
+  border-top-right-radius: 12px;
+  font-weight: 900;
+  font-size: 1.1rem;
+  font-family: 'Pangolin', cursive;
 }
 
-.btn-mic {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  border: none;
-  background: #9fdc72;
-  color: #4b5563;
+.score-high {
+  background: #98b460;
+  color: #fff;
+}
+
+.score-medium {
+  background: #dfaa40;
+  color: #2b2b2b;
+}
+
+.score-low {
+  background: #e26a4b;
+  color: #fff;
+}
+
+.suggestion-header {
+  font-family: 'Pangolin', cursive;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.correction-title {
+  color: #e26a4b;
+  font-size: 1.2rem;
+}
+
+.correction-item {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.input-dock {
+  display: flex;
+  gap: 10px;
+}
+
+.modern-input {
+  flex: 1;
+  padding: 4px 5px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: 3px solid #2b2b2b;
+  font-family: 'Nunito', sans-serif;
+  outline: none;
+  box-shadow: 3px 3px 0px #2b2b2b !important;
+  resize: none;
+  min-height: 110px;
+  scrollbar-width: thin;
+  scrollbar-color: #2b2b2b transparent;
+}
+
+.modern-input::-webkit-scrollbar {
+  width: 3px;
+}
+
+.modern-input::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 8px;
+}
+
+.modern-input::-webkit-scrollbar-thumb {
+  background-color: #2b2b2b;
+  border-radius: 8px;
+}
+
+.btn-send-round, .btn-mic {
+  width: 55px;
+  height: 55px;
+  border: 2px solid #2b2b2b;
+  border-radius: 16px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.2s ease;
+  box-shadow: 2px 2px 0px #2b2b2b;
+  transition: transform 0.1s;
 }
 
-.btn-mic:hover {
-  background: #e5e7eb;
+.btn-send-round {
+  background: #dfaa40;
+  color: #2b2b2b;
+}
+
+.btn-mic {
+  background: #98b460;
+  color: #2b2b2b;
+}
+
+.btn-send-round:active, .btn-mic:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0px #2b2b2b;
 }
 
 .btn-mic.recording {
-  background: #fee2e2;
-  color: #ef4444;
-  animation: pulse-red 1.5s infinite;
+  background: #e26a4b;
+  color: #fff;
+  animation: none;
 }
 
-.btn-mic.processing {
-  opacity: 0.7;
-  cursor: not-allowed;
+.finish-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
 }
 
-@keyframes pulse-red {
-  0% {
-    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
+.finish-content {
+  padding: 50px;
+  text-align: center;
+}
+
+.medal-icon {
+  font-size: 5rem;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+  .header-title {
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
   }
-  70% {
-    box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+
+  .btn-send-round, .btn-mic {
+    width: 100%;
+    height: 42px;
   }
-  100% {
-    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+
+  .input-dock {
+    flex-direction: column;
+  }
+
+  .chat-panel {
+    padding: 5px;
+  }
+
+  .btn__wrapper {
+    flex-direction: row;
+  }
+
+  .intro-block h2 {
+    font-size: 1.3rem;
+  }
+
+  .level-header h2{
+    font-size: 1.2rem;
   }
 }
 </style>
