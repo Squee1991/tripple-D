@@ -429,7 +429,6 @@ async function sendMessage(voiceText = null) {
 </template>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Pangolin&family=Nunito:wght@400;700;900&display=swap');
 
 .page-container {
   font-family: "Nunito", sans-serif;
@@ -479,6 +478,7 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action, .correction-title {
   max-width: 1200px;
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 .app-header {
@@ -486,6 +486,7 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action, .correction-title {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 10px;
+  padding: 10px;
 }
 
 .header-title {
@@ -522,7 +523,7 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action, .correction-title {
   border-radius: 16px;
   overflow: hidden;
   cursor: pointer;
-  box-shadow: 6px 6px 0px #2b2b2b;
+  box-shadow: 3px 3px 0px #2b2b2b;
   transition: transform 0.2s;
   display: flex;
   flex-direction: column;
@@ -546,7 +547,7 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action, .correction-title {
 
 .card-top-banner h3 {
   margin: 0;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 900;
 }
 
@@ -587,6 +588,9 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action, .correction-title {
   align-items: center;
   justify-content: center;
   padding: 5px 20px;
+  max-width: 450px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .level-header h2 {
@@ -644,9 +648,9 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action, .correction-title {
 }
 
 .btn-primary-action {
-  background: #e26a4b;
+  background: var(--regionBtnBg);
   color: #fff;
-  padding: 8px 40px;
+  padding: 10px 40px;
   border-radius: 16px;
   font-size: 1.5rem;
   border: 2px solid #2b2b2b;
@@ -657,6 +661,7 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action, .correction-title {
   gap: 15px;
   box-shadow: 3px 3px 0px #2b2b2b;
   transition: transform 0.1s;
+  width: 100%;
 }
 
 .btn-primary-action:active {
@@ -670,6 +675,8 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action, .correction-title {
   max-width: 630px;
   margin: 0 auto;
   gap: 10px;
+  flex: 1;
+  width: 100%;
 }
 
 .game-sidebar {
@@ -689,6 +696,7 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action, .correction-title {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  border: 3px solid black ;
 }
 
 .progress-container {
@@ -729,8 +737,6 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action, .correction-title {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  background: #fff;
 }
 
 .chat-container {
@@ -853,7 +859,7 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action, .correction-title {
   outline: none;
   box-shadow: 3px 3px 0px #2b2b2b !important;
   resize: none;
-  min-height: 110px;
+  min-height: 120px;
   scrollbar-width: thin;
   scrollbar-color: #2b2b2b transparent;
 }
