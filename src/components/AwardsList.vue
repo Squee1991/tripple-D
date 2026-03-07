@@ -56,7 +56,6 @@ const props = defineProps({
 const awardsTotal = computed(() => props.awards.length)
 const awardsTotalLocked = computed(() => props.awards.filter(award => !award.locked).length)
 const sortedAwards = computed(() => {
-  // сначала полученные (locked=false), потом закрытые (locked=true)
   return [...props.awards].sort((a, b) => Number(a.locked) - Number(b.locked))
 })
 
@@ -96,11 +95,10 @@ function closeAward() {
 }
 
 .shop-item {
-  padding: 1rem;
+  padding: 13px;
   text-align: center;
-
   display: flex;
-  width: 180px;
+  width: 165px;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
@@ -217,7 +215,7 @@ button:disabled {
 .awards__list-scroll {
   max-height: calc(100vh - 300px);
   overflow-y: auto;
-  padding-right: 6px;
+  padding-right: 1px;
 }
 
 .awards__list-scroll::-webkit-scrollbar {
@@ -240,11 +238,9 @@ button:disabled {
   align-items: center;
   justify-content: center;
   gap: 6px;
-
   height: 36px;
   padding: 0 12px;
   min-width: 82px;
-
   border-radius: 14px;
   border: 2px solid #000;
   background: #ffffff;
@@ -255,30 +251,6 @@ button:disabled {
   line-height: 1;
   user-select: none;
   overflow: hidden;
-}
-
-.awards__counter.cartoon-board::before {
-  content: "";
-  position: absolute;
-  top: 4px;
-  left: 8px;
-  right: 8px;
-  height: 10px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.85);
-  filter: blur(0.2px);
-  pointer-events: none;
-  opacity: 0.8;
-}
-
-.awards__counter.cartoon-board::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(rgba(26, 29, 43, 0.12) 1.4px, transparent 1.6px);
-  background-size: 10px 10px;
-  opacity: 0.6;
-  pointer-events: none;
 }
 
 .cartoon-board__value {

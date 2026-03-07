@@ -26,9 +26,22 @@
     --regionBtnBg: #3c99d3;
     --menuHoverEl: #fde68a;
     --timerbg: #42ab1a;
+    --cardShopBg: #4169b1;
+    --cardShopHeadBg: #eceae3;
+    --cardShopBtnDisabledBg: #ffffffc4;
+    --cardShopDescColor:#f2f6ff;
+    --cardShopRankTextColor:#ffd04b;
+    --cardShopRankValueColor:#FFFFFFFF;
+
 }
 
 .dark {
+    --cardShopBg: #1c222d;
+    --cardShopHeadBg: #2a313e;
+    --cardShopBtnDisabledBg: #363d4a;
+    --cardShopDescColor:#a0a6b1;
+    --cardShopRankTextColor:#ffffff;
+    --cardShopRankValueColor:#ffffff;
     --panelTextColor: #ffffff;
     --menuHoverEl: #fde68a;
     --regionBtnColor: #ffffff;

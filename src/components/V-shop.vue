@@ -146,7 +146,7 @@ const PRICES = {
   SALE_10: 50,
   SALE_15: 70
 }
-const DISCOUNT_REQ_HATS = {5: 40, 10: 130, 15: 270}
+const DISCOUNT_REQ_HATS = {5: 90, 10: 210, 15: 400}
 
 const showModal = ref(false)
 const modalType = ref('freeze')
@@ -169,41 +169,41 @@ const shopCards = computed(() => {
       price: PRICES.HEART,
       type: 'consumable'
     },
-    // {
-    //   id: "time_freeze",
-    //   title: t('cardTime.title'),
-    //   description: t('cardTime.description'),
-    //   icon: ShieldFreeze,
-    //   price: PRICES.FREEZE_DAY,
-    //   type: 'consumable'
-    // },
-    // {
-    //   id: "sale_5",
-    //   title: t('cardSales.title5'),
-    //   description: "",
-    //   icon: Sale,
-    //   price: PRICES.SALE_5,
-    //   requiredHats: DISCOUNT_REQ_HATS[5],
-    //   type: 'permanent'
-    // },
-    // {
-    //   id: "sale_10",
-    //   title: t('cardSales.title10'),
-    //   description: "",
-    //   icon: Sale10,
-    //   price: PRICES.SALE_10,
-    //   requiredHats: DISCOUNT_REQ_HATS[10],
-    //   type: 'permanent'
-    // },
-    // {
-    //   id: "sale_15",
-    //   title:  t('cardSales.title15'),
-    //   description: "",
-    //   icon: Sale15,
-    //   price: PRICES.SALE_15,
-    //   requiredHats: DISCOUNT_REQ_HATS[15],
-    //   type: 'permanent'
-    // },
+    {
+      id: "time_freeze",
+      title: t('cardTime.title'),
+      description: t('cardTime.description'),
+      icon: ShieldFreeze,
+      price: PRICES.FREEZE_DAY,
+      type: 'consumable'
+    },
+    {
+      id: "sale_5",
+      title: t('cardSales.title5'),
+      description: "",
+      icon: Sale,
+      price: PRICES.SALE_5,
+      requiredHats: DISCOUNT_REQ_HATS[5],
+      type: 'permanent'
+    },
+    {
+      id: "sale_10",
+      title: t('cardSales.title10'),
+      description: "",
+      icon: Sale10,
+      price: PRICES.SALE_10,
+      requiredHats: DISCOUNT_REQ_HATS[10],
+      type: 'permanent'
+    },
+    {
+      id: "sale_15",
+      title:  t('cardSales.title15'),
+      description: "",
+      icon: Sale15,
+      price: PRICES.SALE_15,
+      requiredHats: DISCOUNT_REQ_HATS[15],
+      type: 'permanent'
+    },
   ]
   return cardsData.map(card => {
     let isOwned = false
@@ -338,7 +338,7 @@ const confirmPurchase = async () => {
 
 .shop__content {
   overflow-y: auto;
-  max-height: calc(100vh - 215px);
+  max-height: calc(100vh - 235px);
 }
 
 .shop__content::-webkit-scrollbar {
@@ -384,12 +384,12 @@ const confirmPurchase = async () => {
 
 .shop__cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+  gap: 10px;
 }
 
 .shop-card {
-  background: #1c222d;
+  background: var(--cardShopBg);
   border: 2px solid #363d4a;
   border-radius: 16px;
   overflow: hidden;
@@ -415,7 +415,7 @@ const confirmPurchase = async () => {
 
 .shop-card__preview {
   padding: 15px;
-  background: #2a313e;
+  background: var(--cardShopHeadBg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -456,11 +456,11 @@ const confirmPurchase = async () => {
 .shop-card__name {
   color: white;
   margin: 0 0 8px 0;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .shop-card__desc {
-  color: #a0a6b1;
+  color: var(--cardShopDescColor);
   font-size: 13px;
   line-height: 1.4;
   margin: 0;
@@ -478,7 +478,7 @@ const confirmPurchase = async () => {
 }
 .shop-req-label {
   display: block;
-  color: #a0a6b1;
+  color: var(--cardShopDescColor);
   font-size: 12px;
   margin-bottom: 6px;
 }
@@ -512,12 +512,12 @@ const confirmPurchase = async () => {
 }
 
 .req-icon {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
 }
 
 .shop-card__footer {
-  padding: 15px;
+  padding: 0 15px 15px 15px;
 }
 
 .modal-body {
@@ -545,7 +545,7 @@ const confirmPurchase = async () => {
 }
 
 .shop-card__action-btn:disabled {
-  background: #363d4a;
+  background: var(--cardShopBtnDisabledBg);
   color: #7f8fa4;
   box-shadow: 0 4px 0 #252a33;
   cursor: not-allowed;
@@ -585,7 +585,7 @@ const confirmPurchase = async () => {
 }
 
 .modal-content {
-  background: #1c222d;
+  background: var(--cardShopBg);
   border: 2px solid #50a2d8;
   border-radius: 20px;
   padding: 24px;
