@@ -868,7 +868,7 @@ export const topics = [
 		tasks: [
 			{
 				id: 1,
-				images: Drawing,
+				image: Drawing,
 				descriptions: {
 					A1: "Die Kinder sind in der Schule. Sie sitzen am Tisch. Alle Kinder zeichnen.",
 					A2: "Vier Kinder sind im Klassenzimmer. Sie sitzen an einem Tisch und zeichnen gemeinsam mit bunten Stiften.",
@@ -877,7 +877,7 @@ export const topics = [
 			},
 			{
 				id: 2,
-				images: Music,
+				image: Music,
 				descriptions: {
 					A1: "Die Lehrerin spielt Gitarre. Die Kinder hören Musik. Sie sind in der Schule.",
 					A2: "Eine Lehrerin spielt Gitarre und singt im Klassenzimmer. Drei Kinder sitzen am Tisch und hören zu.",
@@ -886,7 +886,7 @@ export const topics = [
 			},
 			{
 				id: 3,
-				images: SchoolBreak,
+				image: SchoolBreak,
 				descriptions: {
 					A1: "Das sind Schüler im Flur. Sie stehen an den blauen Schränken. Ein Junge hat ein Buch.",
 					A2: "Im Schulflur stehen zwei Kinder vor ihren Schließfächern. Sie tragen Rucksäcke und bereiten sich auf die nächste Stunde vor.",
@@ -895,7 +895,7 @@ export const topics = [
 			},
 			{
 				id: 4,
-				images: StartSchool,
+				image: StartSchool,
 				descriptions: {
 					A1: "Die Lehrerin steht an der Tür. Die Kinder gehen in die Schule. Sie haben Rucksäcke.",
 					A2: "Die Lehrerin begrüßt die Kinder am Schuleingang. Die Schüler gehen mit ihren Rucksäcken in das Gebäude.",
@@ -904,7 +904,7 @@ export const topics = [
 			},
 			{
 				id: 5,
-				images: Library,
+				image: Library,
 				descriptions: {
 					A1: "Das ist eine Bibliothek. Eine Frau gibt ein Buch. Die Kinder sitzen und lesen.",
 					A2: "In der Bibliothek gibt die Lehrerin einem Jungen ein Buch. Drei Kinder sitzen an den Tischen und lesen.",
@@ -913,7 +913,7 @@ export const topics = [
 			},
 			{
 				id: 6,
-				images: Gym,
+				image: Gym,
 				descriptions: {
 					A1: "Das ist die Turnhalle. Der Lehrer macht Sport. Die Kinder haben Bälle und Seile.",
 					A2: "Im Sportunterricht machen die Kinder Übungen mit dem Lehrer. Einige haben Basketbälle und andere haben Springseile.",
@@ -922,7 +922,7 @@ export const topics = [
 			},
 			{
 				id: 7,
-				images: DivingRoom,
+				image: DivingRoom,
 				descriptions: {
 					A1: "Das ist die Schulkantine. Die Frau gibt Essen. Die Kinder bekommen das Essen.",
 					A2: "In der Schulkantine stehen die Kinder an. Eine Frau gibt einem Jungen einen Teller mit Essen",
@@ -931,7 +931,7 @@ export const topics = [
 			},
 			{
 				id: 8,
-				images: RobotClub,
+				image: RobotClub,
 				descriptions: {
 					A1: "Das ist ein Robotik-Club. Die Kinder bauen einen Roboter.",
 					A2: "Vier Kinder sitzen am Tisch und schauen einen kleinen Roboter an. Auf dem Tisch liegen viele Werkzeuge.",
