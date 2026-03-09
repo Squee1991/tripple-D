@@ -218,9 +218,21 @@ export const dailyStore = defineStore('dailyStore', () => {
         const completedYesterday = previousCycleData.completedCount || 0
         if (completedYesterday === 0) {
             const authStore = userAuthStore()
-            if (authStore.isFreezeActive) {
+            const previousCycleExpiresAt = Number(previousCycleData.expiresAtMs || 0)
+            const freezeEndMs = authStore.freezeEndsAt
+            let hadShieldYesterday = false
+            if (freezeEndMs) {
+                const previousCycleStartsAt = previousCycleExpiresAt - CYCLE_MS
+                if (freezeEndMs > previousCycleStartsAt) {
+                    hadShieldYesterday = true
+                }
+            }
+            if (hadShieldYesterday) {
+                console.log('Штраф прощен: у юзера был щит на момент прошлого цикла.')
+                await authStore.cancelFreeze()
                 return
             }
+            console.log('Штраф применен: квесты не выполнены, щита не было.')
             await authStore.modifyHats(-3)
         }
     }
