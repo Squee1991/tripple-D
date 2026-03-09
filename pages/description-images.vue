@@ -36,14 +36,12 @@ const startRecording = async () => {
     err.value = ''
     const stream = await navigator.mediaDevices.getUserMedia({audio: true})
     audioChunks = []
-
     let mimeType = 'audio/webm'
     if (MediaRecorder.isTypeSupported('audio/webm;codecs=opus')) {
       mimeType = 'audio/webm;codecs=opus'
     }
 
     mediaRecorder = new MediaRecorder(stream, {mimeType})
-
     mediaRecorder.ondataavailable = (event) => {
       if (event.data.size > 0) audioChunks.push(event.data)
     }
@@ -52,12 +50,10 @@ const startRecording = async () => {
       isProcessing.value = true
       isRecording.value = false
       stream.getTracks().forEach(track => track.stop())
-
       try {
         const audioBlob = new Blob(audioChunks, {type: mimeType})
         const reader = new FileReader()
         reader.readAsDataURL(audioBlob)
-
         reader.onloadend = async () => {
           const base64String = reader.result
           try {
@@ -83,10 +79,8 @@ const startRecording = async () => {
         isProcessing.value = false
       }
     }
-
     mediaRecorder.start()
     isRecording.value = true
-
   } catch (e) {
     console.error(e)
     err.value = "Нет доступа к микрофону"
@@ -105,11 +99,13 @@ const toggleRecording = () => {
 }
 
 const overlayData = ref({title: "describePicture.rulesTitle", text: "describePicture.rulesText"})
+
 const tipsData = ref({
   tips: [
     {id: '1', text: t('describePictureTips.tipOne')},
     {id: '2', text: t('describePictureTips.tipTwo')},
-    {id: '3', text: t('describePictureTips.tipThree')}]
+    {id: '3', text: t('describePictureTips.tipThree')}
+  ]
 })
 
 const activeTasks = computed(() => selectedTopic.value ? selectedTopic.value.tasks : [])
@@ -301,7 +297,6 @@ async function sendMessage(voiceText = null) {
             </div>
           </div>
         </div>
-
         <div v-else-if="viewState === 'level'" class="view-level" key="level">
           <div class="level-header"><h2>ВЫБЕРИТЕ СЛОЖНОСТЬ</h2></div>
           <div class="level-options">
@@ -318,7 +313,6 @@ async function sendMessage(voiceText = null) {
             </svg>
           </button>
         </div>
-
         <div v-else class="game-view" key="game">
           <div v-if="isFinished" class="finish-state">
             <div class="finish-content card-style-box">
@@ -441,7 +435,7 @@ async function sendMessage(voiceText = null) {
 }
 
 h1, h2, h3, .header-title, .level-name, .btn-primary-action, .correction-title {
-  font-family: 'Pangolin', cursive;
+  font-family: "Nunito", sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--titleColor);
@@ -579,7 +573,7 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action, .correction-title {
 .task-count {
   font-size: 0.9rem;
   font-weight: 900;
-  font-family: 'Pangolin', cursive;
+  font-family: "Nunito", sans-serif;
 }
 
 .view-level {
@@ -730,7 +724,7 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action, .correction-title {
   color: #2b2b2b;
   font-weight: 900;
   z-index: 2;
-  font-family: 'Pangolin', cursive;
+  font-family: "Nunito", sans-serif;
 }
 
 .chat-panel {
@@ -749,6 +743,7 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action, .correction-title {
 .empty-state {
   font-weight: 600;
   text-align: center;
+  color: var(--titleColor);
 }
 
 .bubble {
@@ -810,7 +805,7 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action, .correction-title {
   border-top-right-radius: 12px;
   font-weight: 900;
   font-size: 1.1rem;
-  font-family: 'Pangolin', cursive;
+  font-family: "Nunito", sans-serif;
 }
 
 .score-high {
@@ -829,7 +824,7 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action, .correction-title {
 }
 
 .suggestion-header {
-  font-family: 'Pangolin', cursive;
+  font-family: "Nunito", sans-serif;
   font-size: 1rem;
   margin-bottom: 10px;
 }
