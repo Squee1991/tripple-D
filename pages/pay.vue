@@ -98,7 +98,7 @@ const myAvailableCoupons = computed(() => {
       authStore.premiumDiscount.sale_10 ||
       authStore.premiumDiscount.sale_15
   if (hasAnyDiscount) {
-    list.push({ id: null, percent: 0, label: 'Стандарт' })
+    list.push({ id: null, percent: 0, label: 'Без скидки' })
   }
   if (authStore.premiumDiscount.sale_5) list.push({ id: 'sale_5', percent: 5, label: 'Скидка 5%' })
   if (authStore.premiumDiscount.sale_10) list.push({ id: 'sale_10', percent: 10, label: 'Скидка 10%' })

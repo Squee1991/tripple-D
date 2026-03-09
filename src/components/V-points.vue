@@ -16,7 +16,7 @@
           <div class="points-card__label">{{ t('accountPanel.rank') }}</div>
           <div class="points__hats-wrapper">
             <button
-                v-if="userAuth.freezeEndsAt"
+                v-if="userAuth.isFreezeActive"
                 class="hats__shield-btn"
                 @click="showFreezeModal = true"
             >
