@@ -102,17 +102,25 @@ export default defineEventHandler(async (event) => {
     if (getApps().length === 0) {
         try {
             const serviceAccountJson = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON
-            if (serviceAccountJson) {
-                const serviceAccount = JSON.parse(serviceAccountJson)
-                initializeApp({
-                    credential: cert(serviceAccount)
-                })
-                console.log('✅ [Checkout] Firebase Admin успешно подключен из ENV!')
-            } else {
-                console.error('❌ ОШИБКА: Переменная GOOGLE_APPLICATION_CREDENTIALS_JSON не найдена!')
+            if (!serviceAccountJson) {
+                throw new Error('Ключ GOOGLE_APPLICATION_CREDENTIALS_JSON не найден в Vercel!')
             }
+
+            const serviceAccount = JSON.parse(serviceAccountJson)
+
+            // Магическая строчка: чинит приватный ключ, если Vercel сломал переносы строк
+            if (serviceAccount.private_key) {
+                serviceAccount.private_key = serviceAccount.private_key.replace(/\\n/g, '\n')
+            }
+
+            initializeApp({
+                credential: cert(serviceAccount)
+            })
+            console.log('✅ [Checkout] Firebase Admin успешно подключен!')
         } catch (e) {
-            console.error('Ошибка инициализации Firebase Admin:', e)
+            console.error('❌ ОШИБКА FIREBASE:', e.message)
+            setResponseStatus(event, 500)
+            return { error: 'Server Config Error: ' + e.message } // Сразу отдаем ошибку на фронт
         }
     }
 
