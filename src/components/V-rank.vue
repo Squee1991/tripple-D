@@ -1,68 +1,68 @@
 <template>
-<!--  <div class="empty-content">-->
-<!--    <div class="empty-icon">🔰</div>-->
-<!--    <h3 class="empty-title">{{ t('regionsModal.title')}}</h3>-->
-<!--  </div>-->
-  <div class="ranks-wrapper">
-    <div class="hats-info">
-      <div class="hats-left">
-        <div class="hats-badge" aria-hidden="true">
-          <img :src="currentRankIcon" :alt="currentRankTitle"/>
-        </div>
-        <div class="hats-meta">
-          <div class="hats-rank">{{ currentRankTitle }}</div>
-          <div class="hats-hatsline">
-            <img class="hat-img" :src="EducationHut" alt="Конфератки"/>
-            <span class="hat-value">{{ authStore.totalHats }}</span>
-          </div>
-        </div>
-      </div>
-      <div class="hats-right">
-        <div class="hats-text">
-          Конфератки — это ваш путь к вершине! Накапливайте их, выполняйте все три задания дня. Повышайте свой ранг и покупайте разблокированные бонусы!
-        </div>
-      </div>
-    </div>
-    <div v-for="rank in store.ranksData" :key="rank.title" class="rank-league">
-      <div class="league-line">
-        <span class="league-title">{{ rank.title }}</span>
-      </div>
-      <div class="grid">
-        <div
-            v-for="(lvl, idx) in rank.levels"
-            :key="idx"
-            class="card"
-            :class="{
-            'is-locked': authStore.totalHats < lvl.hats,
-            'is-reached': authStore.totalHats >= lvl.hats
-          }"
-        >
-          <div class="card-stars">
-            <span
-                v-for="n in (idx + 1)"
-                :key="n"
-                :class="{ 'star-active': authStore.totalHats >= lvl.hats }"
-            >★</span>
-          </div>
-          <div class="card-inner">
-            <div class="card-icon">
-              <img
-                  :src="rank.icons ? rank.icons[idx].icon : rank.icon"
-                  :alt="rank.title"
-                  :class="{ 'icon-grayscale': authStore.totalHats < lvl.hats }"
-              />
-            </div>
-            <div class="card-label">Ранг {{ idx + 1 }}</div>
-            <div class="card-cost">🎓 {{ lvl.hats }}</div>
-            <div v-if="lvl.bonus" class="card-bonus">
-              <div>{{ lvl.bonus }}</div>
-              <img src="" alt="articlus">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="empty-content">
+    <div class="empty-icon">🔰</div>
+    <h3 class="empty-title">{{ t('regionsModal.title')}}</h3>
   </div>
+<!--  <div class="ranks-wrapper">-->
+<!--    <div class="hats-info">-->
+<!--      <div class="hats-left">-->
+<!--        <div class="hats-badge" aria-hidden="true">-->
+<!--          <img :src="currentRankIcon" :alt="currentRankTitle"/>-->
+<!--        </div>-->
+<!--        <div class="hats-meta">-->
+<!--          <div class="hats-rank">{{ currentRankTitle }}</div>-->
+<!--          <div class="hats-hatsline">-->
+<!--            <img class="hat-img" :src="EducationHut" alt="Конфератки"/>-->
+<!--            <span class="hat-value">{{ authStore.totalHats }}</span>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="hats-right">-->
+<!--        <div class="hats-text">-->
+<!--          Конфератки — это ваш путь к вершине! Накапливайте их, выполняйте все три задания дня. Повышайте свой ранг и покупайте разблокированные бонусы!-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div v-for="rank in store.ranksData" :key="rank.title" class="rank-league">-->
+<!--      <div class="league-line">-->
+<!--        <span class="league-title">{{ rank.title }}</span>-->
+<!--      </div>-->
+<!--      <div class="grid">-->
+<!--        <div-->
+<!--            v-for="(lvl, idx) in rank.levels"-->
+<!--            :key="idx"-->
+<!--            class="card"-->
+<!--            :class="{-->
+<!--            'is-locked': authStore.totalHats < lvl.hats,-->
+<!--            'is-reached': authStore.totalHats >= lvl.hats-->
+<!--          }"-->
+<!--        >-->
+<!--          <div class="card-stars">-->
+<!--            <span-->
+<!--                v-for="n in (idx + 1)"-->
+<!--                :key="n"-->
+<!--                :class="{ 'star-active': authStore.totalHats >= lvl.hats }"-->
+<!--            >★</span>-->
+<!--          </div>-->
+<!--          <div class="card-inner">-->
+<!--            <div class="card-icon">-->
+<!--              <img-->
+<!--                  :src="rank.icons ? rank.icons[idx].icon : rank.icon"-->
+<!--                  :alt="rank.title"-->
+<!--                  :class="{ 'icon-grayscale': authStore.totalHats < lvl.hats }"-->
+<!--              />-->
+<!--            </div>-->
+<!--            <div class="card-label">Ранг {{ idx + 1 }}</div>-->
+<!--            <div class="card-cost">🎓 {{ lvl.hats }}</div>-->
+<!--            <div v-if="lvl.bonus" class="card-bonus">-->
+<!--              <div>{{ lvl.bonus }}</div>-->
+<!--              <img src="" alt="articlus">-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
 </template>
 
 <script setup>
