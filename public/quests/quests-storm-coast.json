@@ -869,16 +869,8 @@
         "id": 2,
         "type": "reorder",
         "question": "questsStormCoastsFifthQuests.questTwo",
-        "words": [
-          "Ich",
-          "gern",
-          "komme"
-        ],
-        "correctOrder": [
-          "Ich",
-          "komme",
-          "gern"
-        ]
+        "words": ["Ich", "gern", "komme"],
+        "correctOrder": ["Ich", "komme", "gern"]
       },
       {
         "id": 3,
@@ -921,7 +913,7 @@
         "id": 6,
         "type": "input",
         "question": "questsStormCoastsFifthQuests.questSix",
-        "correctAnswer": "Herzlichen Glückwunsch!"
+        "correctAnswer": "Alles Gute zum Geburtstag"
       },
       {
         "id": 7,
