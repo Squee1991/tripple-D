@@ -89,6 +89,7 @@ onMounted(async () => {
     cardStore.loadCreatedCount()
     statsStore.loadLocalStats()
   }
+  achStore.initializeProgressTracking()
   setTimeout(() => {
     if (!achStore.showPopup && !showStepHint.value) {
       onToastFinished()
