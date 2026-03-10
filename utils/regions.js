@@ -9,6 +9,7 @@ import WildLand from 'assets/images/locations-images/wild-land.png'
 import Future from 'assets/images/locations-images/Future.png'
 import Past from 'assets/images/locations-images/Past.png'
 import Action from 'assets/images/locations-images/Action.jpg'
+import OrderValley from 'assets/images/locations-images/OrderValley.jpg'
 
 export const regions = {
 		beginner: [
@@ -26,7 +27,7 @@ export const regions = {
 				pathTo: "stone-reach",
 				theme: "stone",
 				name: "locationNames.stone-reach",
-				level: 3,
+				level: 0,
 				desc: "regions.descriptionStoneReach",
 				icon: StoneReach
 			},
@@ -35,7 +36,7 @@ export const regions = {
 				pathTo: "wind-valley",
 				theme: "winds",
 				name: "locationNames.wind-valley",
-				level: 5,
+				level: 0,
 				desc: "regions.descriptionWindValley",
 				icon: WindValley
 			},
@@ -44,7 +45,7 @@ export const regions = {
 				pathTo: "lake-ruins",
 				theme: "ruins",
 				name: "locationNames.lake-ruins",
-				level: 7,
+				level: 0,
 				desc: "regions.descriptionLakeRuins",
 				icon: LakeRuins
 			},
@@ -53,7 +54,7 @@ export const regions = {
 				pathTo: "north-cliffs",
 				theme: "north",
 				name: "locationNames.north-cliffs",
-				level: 9,
+				level: 0,
 				desc: "regions.descriptionNorthCliffs",
 				icon: NorthCliffs
 			},
@@ -62,7 +63,7 @@ export const regions = {
 				pathTo: "storm-coast",
 				theme: "storm",
 				name: "locationNames.storm-coast",
-				level: 11,
+				level: 0,
 				desc: "regions.descriptionStormCoast",
 				icon: StormCoast
 			},
@@ -71,7 +72,7 @@ export const regions = {
 				pathTo: "master-lands",
 				theme: "master",
 				name: "locationNames.master-lands",
-				level: 13,
+				level: 0,
 				desc: "regions.descriptionMasterLands",
 				icon: MasterLands
 			},
@@ -80,7 +81,7 @@ export const regions = {
 				pathTo: "wild-lands",
 				theme: "wild",
 				name: "locationNames.wild-lands",
-				level: 15,
+				level: 0,
 				desc: "regions.descriptionWildLands",
 				icon: WildLand
 			}
@@ -120,7 +121,7 @@ export const regions = {
 			// 	name: "Земли порядка",
 			// 	level: 0,
 			// 	desc: "Здесь путник учится строить правильные предложения. В этой долине осваивают порядок слов в простых и сложных фразах, учатся сообщать о наличии вещей и использовать возвратные местоимения.",
-			// 	icon: Action
+			// 	icon: OrderValley
 			// }
 		]
 	};

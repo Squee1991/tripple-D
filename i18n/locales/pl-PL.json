@@ -3815,25 +3815,25 @@
     "questOneSecondOption": "O 16:00",
     "questOneThirdOption": "O 20:00",
     "questTwo": "Ułóż odpowiedź–potwierdzenie",
-    "questThird": "Uzupełnij lukę (grzeczna odmowa): Ich kann ___ nicht",
+    "questThird": "Wypełnij lukę (niestety): Ich kann ___ nicht",
     "questFour": "Gdzie odbywa się impreza?",
     "questFourFirstOption": "W domu",
     "questFourSecondOption": "W parku",
     "questFourThirdOption": "W kawiarni",
     "questFive": "Ułóż prośbę o pomoc z muzyką",
-    "questSix": "Wpisz życzenia:",
+    "questSix": "Wpisz życzenia: Wszystkiego najlepszego z okazji urodzin",
     "questSeven": "Co ma mówiący?",
     "questSevenFirstOption": "Prezent i kartkę",
     "questSevenSecondOption": "Kwiaty i świeczki",
     "questSevenThirdOption": "Bilet i mapę",
     "questEight": "Ułóż: Pieczemy tort",
-    "questNine": "Uzupełnij: Ich kaufe ___",
+    "questNine": "Wypełnij lukę (napoje): Ich kaufe ___",
     "questTen": "Kiedy jest dzień wolny?",
     "questTenFirstOption": "1 stycznia",
     "questTenSecondOption": "31 grudnia",
     "questTenThirdOption": "24 grudnia",
     "questEleven": "Ułóż życzenia bożonarodzeniowe",
-    "questTwelve": "Uzupełnij: Wir feiern mit der ___",
+    "questTwelve": "Wypełnij lukę (rodziną): Wir feiern mit der ___",
     "questThirteen": "Kiedy przychodzą goście?",
     "questThirteenFirstOption": "O 19:00",
     "questThirteenSecondOption": "O 17:00",
@@ -5652,6 +5652,7 @@
   "underSub": {
     "prev": "Wprowadzenie",
     "rules": "Zasady",
+    "forms": "Formy czasowników",
     "artRules": "Ćwiczenie rodzajników",
     "prepositions": "Ćwiczenia z przyimków",
     "adjectiveTheory": "Teoria i zasady",
@@ -6020,5 +6021,15 @@
       "culture": "Kultura i społeczeństwo",
       "environment": "Środowisko"
     }
+  },
+  "verbFormPage": {
+    "title": "Niemieckie czasowniki",
+    "found": "Znaleziono:",
+    "typeTitle": "Wszystkie typy",
+    "weak": "Słabe",
+    "strong": "Silne",
+    "mixed": "Mieszane",
+    "modal": "Modalne",
+    "placeHolder": "Znajdź czasownik..."
   }
 }

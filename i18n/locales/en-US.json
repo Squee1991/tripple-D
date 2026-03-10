@@ -3815,25 +3815,25 @@
     "questOneSecondOption": "At 16:00",
     "questOneThirdOption": "At 20:00",
     "questTwo": "Build a confirmation response",
-    "questThird": "Fill the gap (polite refusal): Ich kann ___ nicht",
+    "questThird": "Fill in the blank (unfortunately): Ich kann ___ nicht",
     "questFour": "Where is the party taking place?",
     "questFourFirstOption": "At home",
     "questFourSecondOption": "In the park",
     "questFourThirdOption": "In a café",
     "questFive": "Build a request for help with the music",
-    "questSix": "Write a congratulation:",
+    "questSix": "Enter the greeting: Happy birthday",
     "questSeven": "What does the speaker have?",
     "questSevenFirstOption": "A gift and a card",
     "questSevenSecondOption": "Flowers and candles",
     "questSevenThirdOption": "A ticket and a map",
     "questEight": "Build: We are making a cake",
-    "questNine": "Fill the gap: Ich kaufe ___",
+    "questNine": "Fill in the blank (drinks): Ich kaufe ___",
     "questTen": "When is the day off?",
     "questTenFirstOption": "January 1",
     "questTenSecondOption": "December 31",
     "questTenThirdOption": "December 24",
     "questEleven": "Build a Christmas wish",
-    "questTwelve": "Fill the gap: Wir feiern mit der ___",
+    "questTwelve": "Впиши пропуск (семьей): Wir feiern mit der ___",
     "questThirteen": "When do the guests arrive?",
     "questThirteenFirstOption": "At 19:00",
     "questThirteenSecondOption": "At 17:00",
@@ -5653,6 +5653,7 @@
   "underSub": {
     "prev": "Introduction",
     "rules": "Rules",
+    "forms": "Verb Forms",
     "artRules": "Article Practice",
     "prepositions": "Prepositions practice",
     "adjectiveTheory": "Theory and Rules",
@@ -6020,5 +6021,15 @@
       "culture": "Culture & Society",
       "environment": "Environment"
     }
+  },
+  "verbFormPage": {
+    "title": "German Verbs",
+    "found": "Found:",
+    "typeTitle": "All types",
+    "weak": "Weak",
+    "strong": "Strong",
+    "mixed": "Mixed",
+    "modal": "Modal",
+    "placeHolder": "Search verb..."
   }
 }

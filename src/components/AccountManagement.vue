@@ -60,15 +60,15 @@ const formattedSubscriptionEndDate = computed(() => {
   return date.toLocaleDateString(locale.value, {year: 'numeric', month: 'long', day: 'numeric'})
 })
 
-function routeToPay() {
+const routeToPay = () => {
   router.push('/pay')
 }
 
-function openCancelModal() {
+const openCancelModal =() => {
   emit('open', 'cancelPremium')
 }
 
-function openDeleteModal() {
+const openDeleteModal = () => {
   emit('open', 'deleteAccount')
 }
 </script>

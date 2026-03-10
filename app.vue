@@ -3,7 +3,7 @@
     <NuxtPage/>
     <AchievementToast @toast-finished="onToastFinished" />
 <!--    <VStepHint v-if="showStepHint" @close="showStepHint = false"/>-->
-<!--      <FeedBack/>-->
+      <FeedBack/>
     <VLost/>
 <!--    <VRankOverlay/>-->
     <VInstallPwa/>
@@ -89,6 +89,7 @@ onMounted(async () => {
     cardStore.loadCreatedCount()
     statsStore.loadLocalStats()
   }
+  achStore.initializeProgressTracking()
   setTimeout(() => {
     if (!achStore.showPopup && !showStepHint.value) {
       onToastFinished()

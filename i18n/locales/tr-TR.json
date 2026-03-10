@@ -3815,25 +3815,25 @@
     "questOneSecondOption": "16:00’da",
     "questOneThirdOption": "20:00’de",
     "questTwo": "Bir onay cevabı kur",
-    "questThird": "Boşluğu doldur (kibarca ret): Ich kann ___ nicht",
+    "questThird": "Boşluğu doldurun (ne yazık ki): Ich kann ___ nicht",
     "questFour": "Parti nerede yapılıyor?",
     "questFourFirstOption": "Evde",
     "questFourSecondOption": "Parkta",
     "questFourThirdOption": "Kafede",
     "questFive": "Müzik için yardım isteme cümlesi kur",
-    "questSix": "Bir tebrik yaz:",
+    "questSix": "Tebrik girin: Doğum günün kutlu olsun",
     "questSeven": "Konuşanda ne var?",
     "questSevenFirstOption": "Hediye ve kart",
     "questSevenSecondOption": "Çiçekler ve mumlar",
     "questSevenThirdOption": "Bilet ve harita",
     "questEight": "Kur: Pasta yapıyoruz",
-    "questNine": "Boşluğu doldur: Ich kaufe ___",
+    "questNine": "Boşluğu doldurun (içecekler): Ich kaufe ___",
     "questTen": "Ne zaman tatil?",
     "questTenFirstOption": "1 Ocak",
     "questTenSecondOption": "31 Aralık",
     "questTenThirdOption": "24 Aralık",
     "questEleven": "Noel için bir dilek kur",
-    "questTwelve": "Boşluğu doldur: Wir feiern mit der ___",
+    "questTwelve": "Boşluğu doldurun (aile): Wir feiern mit der ___",
     "questThirteen": "Misafirler ne zaman geliyor?",
     "questThirteenFirstOption": "19:00’da",
     "questThirteenSecondOption": "17:00’de",
@@ -5653,6 +5653,7 @@
   "underSub": {
     "prev": "Giriş",
     "rules": "Kurallar",
+    "forms": "Fiil Çekimleri",
     "artRules": "Alıştırma",
     "prepositions": "Edat alıştırmaları",
     "adjectiveTheory": "Teori ve Kurallar",
@@ -6020,5 +6021,15 @@
       "culture": "Kültür ve Toplum",
       "environment": "Çevre"
     }
+  },
+  "verbFormPage": {
+    "title": "Almanca Fiiller",
+    "found": "Bulundu:",
+    "typeTitle": "Tüm türler",
+    "weak": "Zayıf",
+    "strong": "Güçlü",
+    "mixed": "Karışık",
+    "modal": "Modal",
+    "placeHolder": "Fiil bul..."
   }
 }

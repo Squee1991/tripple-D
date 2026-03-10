@@ -54,7 +54,10 @@
 <!--            </div>-->
 <!--            <div class="card-label">Ранг {{ idx + 1 }}</div>-->
 <!--            <div class="card-cost">🎓 {{ lvl.hats }}</div>-->
-<!--            <div v-if="lvl.bonus" class="card-bonus">{{ lvl.bonus }}</div>-->
+<!--            <div v-if="lvl.bonus" class="card-bonus">-->
+<!--              <div>{{ lvl.bonus }}</div>-->
+<!--              <img src="" alt="articlus">-->
+<!--            </div>-->
 <!--          </div>-->
 <!--        </div>-->
 <!--      </div>-->

@@ -67,7 +67,7 @@ function start() {
 
   phraseTimer = setInterval(() => {
     phraseIndex.value = (phraseIndex.value + 1) % phraseSet.length
-  }, 1200)
+  }, 1000)
 }
 
 function finish() {

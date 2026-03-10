@@ -3815,25 +3815,25 @@
     "questOneSecondOption": "Soat 16:00 da",
     "questOneThirdOption": "Soat 20:00 da",
     "questTwo": "Tasdiqlovchi javobni yig‘ing",
-    "questThird": "Bo‘shliqni to‘ldiring (muloyim rad): Ich kann ___ nicht",
+    "questThird": "Bo'shliqni to'ldiring (afsuski): Ich kann ___ nicht",
     "questFour": "Kecha qayerda bo‘lib o‘tadi?",
     "questFourFirstOption": "Uyda",
     "questFourSecondOption": "Bog‘da",
     "questFourThirdOption": "Kafeda",
     "questFive": "Musiqada yordam so‘rash iltimosini yig‘ing",
-    "questSix": "Tabrik yozing:",
+    "questSix": "Tabrikni kiriting: Tug'ilgan kuning bilan",
     "questSeven": "Gapiruvchida nima bor?",
     "questSevenFirstOption": "Sovg‘a va otkritka",
     "questSevenSecondOption": "Gullar va shamlar",
     "questSevenThirdOption": "Chipta va xarita",
     "questEight": "Yig‘ing: Biz tort tayyorlayapmiz",
-    "questNine": "Bo‘shliqni to‘ldiring: Ich kaufe ___",
+    "questNine": "Bo'shliqni to'ldiring (ichimliklar): Ich kaufe ___",
     "questTen": "Qachon dam olish kuni?",
     "questTenFirstOption": "1-yanvar",
     "questTenSecondOption": "31-dekabr",
     "questTenThirdOption": "24-dekabr",
     "questEleven": "Rojdestvo uchun tilakni yig‘ing",
-    "questTwelve": "Bo‘shliqni to‘ldiring: Wir feiern mit der ___",
+    "questTwelve": "Bo'shliqni to'ldiring (oila bilan): Wir feiern mit der ___",
     "questThirteen": "Mehmonlar qachon keladi?",
     "questThirteenFirstOption": "Soat 19:00 da",
     "questThirteenSecondOption": "Soat 17:00 da",
@@ -5653,6 +5653,7 @@
   "underSub": {
     "prev": "Kirish",
     "rules": "Qoidalar",
+    "forms": "Fe'l shakllari",
     "artRules": "Artikl mashqlari",
     "prepositions": "Predlog mashqlari",
     "adjectiveTheory": "Nazariya va qoidalar",
@@ -6020,5 +6021,15 @@
       "culture": "Madaniyat va jamiyat",
       "environment": "Atrof-muhit"
     }
+  },
+  "verbFormPage": {
+    "title": "Nemis fe'llari",
+    "found": "Topildi:",
+    "typeTitle": "Barcha turlar",
+    "weak": "Zaif",
+    "strong": "Kuchli",
+    "mixed": "Aralash",
+    "modal": "Modal",
+    "placeHolder": "Fe'lni topish..."
   }
 }

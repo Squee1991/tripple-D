@@ -3815,25 +3815,25 @@
     "questOneSecondOption": "À 16h00",
     "questOneThirdOption": "À 20h00",
     "questTwo": "Assemblez la réponse de confirmation",
-    "questThree": "Complétez le blanc (refus poli) : Ich kann ___ nicht",
+    "questThird": "Remplissez le vide (malheureusement) : Ich kann ___ nicht",
     "questFour": "Où se déroule la fête ?",
     "questFourFirstOption": "À la maison",
     "questFourSecondOption": "Dans le parc",
     "questFourThirdOption": "Au café",
     "questFive": "Assemblez la demande d'aide pour la musique",
-    "questSix": "Inscrivez les vœux :",
+    "questSix": "Entrez les vœux : Joyeux anniversaire",
     "questSeven": "Qu'est-ce que l'interlocuteur possède ?",
     "questSevenFirstOption": "Un cadeau et une carte",
     "questSevenSecondOption": "Des fleurs et des bougies",
     "questSevenThirdOption": "Un billet et un plan",
     "questEight": "Assemblez : Nous préparons un gâteau",
-    "questNine": "Complétez le blanc : Ich kaufe ___",
+    "questNine": "Remplissez le vide (boissons) : Ich kaufe ___",
     "questTen": "Quand est le jour férié ?",
     "questTenFirstOption": "1er janvier",
     "questTenSecondOption": "31 décembre",
     "questTenThirdOption": "24 décembre",
     "questEleven": "Assemblez un vœu de Noël",
-    "questTwelve": "Complétez le blanc : Wir feiern mit der ___",
+    "questTwelve": "Remplissez le vide (famille) : Wir feiern mit der ___",
     "questThirteen": "À quelle heure arrivent les invités ?",
     "questThirteenFirstOption": "À 19h00",
     "questThirteenSecondOption": "À 17h00",
@@ -5653,6 +5653,7 @@
   "underSub": {
     "prev": "Introduction",
     "rules": "Règles",
+    "forms": "Formes des verbes",
     "artRules": "Pratique des articles",
     "prepositions": "Pratique des prépositions",
     "adjectiveTheory": "Théorie et règles",
@@ -6020,5 +6021,15 @@
       "culture": "Culture et société",
       "environment": "Environnement"
     }
+  },
+  "verbFormPage": {
+    "title": "Verbes allemands",
+    "found": "Trouvé :",
+    "typeTitle": "Tous les types",
+    "weak": "Faibles",
+    "strong": "Forts",
+    "mixed": "Mixtes",
+    "modal": "Modaux",
+    "placeHolder": "Chercher un verbe..."
   }
 }

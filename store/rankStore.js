@@ -1,34 +1,6 @@
 import {defineStore} from 'pinia'
 import {ref} from 'vue'
 
-// import LevelOneSilver from 'assets/images/rank-icons/level-1/silber.png'
-// import LevelOneGold from 'assets/images/rank-icons/level-1/gold.png'
-// import LevelOneBronze from 'assets/images/rank-icons/level-1/bronze.png'
-//
-// import levelTwoSilver from 'assets/images/rank-icons/level-2/Level2Silver.png'
-// import levelTwoBronze from 'assets/images/rank-icons/level-2/Level2Bronze.png'
-// import levelTwoGold from 'assets/images/rank-icons/level-2/Level2Gold.png'
-//
-// import LevelThreeSilver from 'assets/images/rank-icons/level-3/SilverPank.png'
-// import LevelThreeBronze from 'assets/images/rank-icons/level-3/SilverPank.png'
-// import LevelThreeGold from 'assets/images/rank-icons/level-3/SilverPank.png'
-//
-// import LevelFourSilver from 'assets/images/rank-icons/level-4/Level4Silver.png'
-// import LevelFourBronze from 'assets/images/rank-icons/level-4/Level4Bronze.png'
-// import LevelFourGold from 'assets/images/rank-icons/level-4/Level4Gold.png'
-//
-// import LevelFiveSilver from 'assets/images/rank-icons/level-5/Level5Silver.png'
-// import LevelFiveBronze from 'assets/images/rank-icons/level-5/Level5Bronze.png'
-// import LevelFiveGold from 'assets/images/rank-icons/level-5/Level5Gold.png'
-//
-// import LevelSixSilver from 'assets/images/rank-icons/level-6/Level6Silver.png'
-// import LevelSixBronze from 'assets/images/rank-icons/level-6/Level6Bronze.png'
-// import LevelSixGold from 'assets/images/rank-icons/level-6/Level6Gold.png'
-//
-// import LevelSevenSilver from 'assets/images/rank-icons/level-7/Level7Silver.png'
-// import LevelSevenBronze from 'assets/images/rank-icons/level-7/Level7Bronze.png'
-// import LevelSevenGold from 'assets/images/rank-icons/level-7/Level7Gold.png'
-
 import { userAuthStore} from "/store/authStore.js";
 export const useRankUserStore = defineStore('rankUserStore', () => {
    const authStore = userAuthStore()
@@ -41,9 +13,9 @@ export const useRankUserStore = defineStore('rankUserStore', () => {
 				{ icon: '/images/rank-icons/level-1/gold.png' }
 			],
 			levels: [
-				{ hats: 6, bonus: '5 Артиклюсов' },
-				{ hats: 21, bonus: '5 Артиклюсов' },
-				{ hats: 42, bonus: '5 Артиклюсов' }
+				{ hats: 6, bonus: 5 },
+				{ hats: 21, bonus: 5 },
+				{ hats: 42, bonus: 5 }
 			]
 		},
 		{
@@ -54,8 +26,8 @@ export const useRankUserStore = defineStore('rankUserStore', () => {
 				{ icon: '/images/rank-icons/level-2/Level2Gold.png' }
 			],
 			levels: [
-				{ hats: 60, bonus: '5 Артиклюсов' },
-				{ hats: 70, bonus: '10 Артиклюсов' },
+				{ hats: 60, bonus: 5 },
+				{ hats: 70, bonus: 10 },
 				{ hats: 90, bonus: 'Скидка 5%' }
 			]
 		},
@@ -67,9 +39,9 @@ export const useRankUserStore = defineStore('rankUserStore', () => {
 				{ icon: '/images/rank-icons/level-3/SilverPank.png' }
 			],
 			levels: [
-				{ hats: 110, bonus: '10 Артиклюсов' },
-				{ hats: 130, bonus: '10 Артиклюсов' },
-				{ hats: 150, bonus: '10 Артиклюсов' }
+				{ hats: 110, bonus: 10 },
+				{ hats: 130, bonus: 10 },
+				{ hats: 150, bonus: 10 }
 			]
 		},
 		{
@@ -80,8 +52,8 @@ export const useRankUserStore = defineStore('rankUserStore', () => {
 				{ icon: '/images/rank-icons/level-4/Level4Gold.png' }
 			],
 			levels: [
-				{ hats: 170, bonus: '10 Артиклюсов' },
-				{ hats: 190, bonus: '15 Артиклюсов' },
+				{ hats: 170, bonus: 10 },
+				{ hats: 190, bonus: 15 },
 				{ hats: 210, bonus: 'Скидка 10%' }
 			]
 		},
@@ -93,9 +65,9 @@ export const useRankUserStore = defineStore('rankUserStore', () => {
 				{ icon: '/images/rank-icons/level-5/Level5Gold.png' }
 			],
 			levels: [
-				{ hats: 230, bonus: '10 Артиклюсов' },
-				{ hats: 270, bonus: '15 Артиклюсов' },
-				{ hats: 300, bonus: '15 Артиклюсов' }
+				{ hats: 230, bonus: 15 },
+				{ hats: 270, bonus: 15 },
+				{ hats: 300, bonus: 15 }
 			]
 		},
 		{
@@ -106,8 +78,8 @@ export const useRankUserStore = defineStore('rankUserStore', () => {
 				{ icon: '/images/rank-icons/level-6/Level6Gold.png' }
 			],
 			levels: [
-				{ hats: 330, bonus: '15 Артиклюсов' },
-				{ hats: 360, bonus: '20 Артиклюсов' },
+				{ hats: 330, bonus: 20 },
+				{ hats: 360, bonus: 20 },
 				{ hats: 400, bonus: 'Скидка 15%' }
 			]
 		},
@@ -119,8 +91,8 @@ export const useRankUserStore = defineStore('rankUserStore', () => {
 				{ icon: '/images/rank-icons/level-7/Level7Gold.png' }
 			],
 			levels: [
-				{ hats: 420, bonus: '20 Артиклюсов' },
-				{ hats: 450, bonus: '20 Артиклюсов' },
+				{ hats: 420, bonus: 20 },
+				{ hats: 450, bonus: 20 },
 				{ hats: 500, bonus: '' }
 			]
 		}

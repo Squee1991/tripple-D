@@ -2,9 +2,14 @@
   <div class="verbs-container">
     <div class="fixed-top">
       <header class="header">
-        <h1 class="cartoon-title">Немецкие глаголы</h1>
-        <div v-if="filteredVerbs.length" class="counter">
-          Найдено: <strong>{{ filteredVerbs.length }}</strong>
+        <div class="header__inner">
+          <div class="back__btn">
+            <VBackBtn/>
+          </div>
+<!--          <h1 class="cartoon-title">{{ t('verbFormPage.title') }}</h1>-->
+<!--          <div v-if="filteredVerbs.length" class="counter">-->
+<!--            {{ t('verbFormPage.found') }} <strong>{{ filteredVerbs.length }}</strong>-->
+<!--          </div>-->
         </div>
       </header>
       <div class="filters">
@@ -12,17 +17,16 @@
           <input
               v-model="searchQuery"
               type="text"
-              placeholder="Найти глагол..."
+              :placeholder="t('verbFormPage.placeHolder')"
               class="cartoon-input"
           />
         </div>
         <div class="select-wrapper">
           <select v-model="selectedType" class="cartoon-select">
-            <option value="">Все типы</option>
-            <option value="weak">Слабые (Weak)</option>
-            <option value="strong">Сильные (Strong)</option>
-            <option value="mixed">Смешанные (Mixed)</option>
-            <option value="modal">Модальные (Modal)</option>
+            <option value="">{{ t('verbFormPage.typeTitle') }}</option>
+            <option v-for="typeKey in verbTypes" :key="typeKey" :value="typeKey">
+              {{ t('verbFormPage.' + typeKey) }}
+            </option>
           </select>
         </div>
       </div>
@@ -30,15 +34,15 @@
     <div class="scroll-area" v-if="paginatedVerbs.length > 0">
       <div v-for="verb in paginatedVerbs" :key="verb.id" class="verb-card">
         <div class="card-hero">
-          <div class="inf-left-side">
-            <SoundBtn :text="verb.infinitive" class="large-sound" />
-            <h2 class="inf-main">{{ verb.infinitive }}</h2>
+          <div class="card__hero-inner">
+            <div class="inf-left-side">
+              <SoundBtn :text="verb.infinitive" class="large-sound" />
+              <h2 class="inf-main">
+               <span class="verb__infinitive"> {{ verb.infinitive }}</span> - {{ verb.translations?.[locale] || verb.translations?.['en'] || '...' }}
+              </h2>
+            </div>
           </div>
-
-          <span :class="['type-tag', verb.type]">{{ verb.type }}</span>
-        </div>
-        <div class="translation-section">
-          <span class="ru-main">{{ verb.translation }}</span>
+          <span :class="['type-tag', verb.type]">{{ getLocalizedType(verb.type) }}</span>
         </div>
         <div class="tenses-layout">
           <div class="tense-box is-pres">
@@ -76,7 +80,7 @@
     </div>
     <div class="pagination-bar">
       <button class="nav-btn" :disabled="currentPage === 1" @click="currentPage--">←</button>
-      <span class="page-counter"><strong>{{ currentPage }}</strong> / {{ totalPages }}</span>
+      <span class="page-counter">{{ currentPage }} / {{ totalPages }}</span>
       <button class="nav-btn" :disabled="currentPage === totalPages" @click="currentPage++">→</button>
     </div>
   </div>
@@ -84,59 +88,81 @@
 
 <script setup>
 import SoundBtn from "../src/components/soundBtn.vue";
-import {ref, computed, watch, onMounted, onUnmounted} from 'vue'
-import {useSeoMeta} from "#imports";
+import VBackBtn from "../src/components/V-back-btn.vue";
+import { ref, computed, watch } from 'vue'
+import { useSeoMeta } from "#imports";
+const { locale , t } = useI18n();
+const searchQuery = ref('')
+const selectedType = ref('')
+const currentPage = ref(1)
+const itemsPerPage = ref(1)
+const { data: rawData } = await useFetch('/verbs.json')
+const verbTypes = ['weak', 'strong', 'mixed', 'modal']
 
 useSeoMeta({
   robots: 'noindex, nofollow'
 })
 
-const {data: rawData} = await useFetch('/verbs.json')
-const searchQuery = ref('')
-const selectedType = ref('')
-const currentPage = ref(1)
-const itemsPerPage = ref(10)
-
-const formatPronoun = (p) => {
-  const map = {ich: 'ich', du: 'du', er_sie_es: 'er/sie/es', wir: 'wir', ihr: 'ihr', sie_Sie: 'sie/Sie'}
-  return map[p] || p
+const typeTranslations = {
+  ru: { weak: 'Слабый', strong: 'Сильный', mixed: 'Смешанный', modal: 'Модальный' },
+  en: { weak: 'Weak', strong: 'Strong', mixed: 'Mixed', modal: 'Modal' },
+  uk: { weak: 'Слабкий', strong: 'Сильний', mixed: 'Змішаний', modal: 'Модальний' },
+  pl: { weak: 'Słaby', strong: 'Mocny', mixed: 'Mieszany', modal: 'Modalny' },
+  tr: { weak: 'Zayıf', strong: 'Güçlü', mixed: 'Karışık', modal: 'Modal' },
+  es: { weak: 'Débil', strong: 'Fuerte', mixed: 'Mixto', modal: 'Modal' },
+  fr: { weak: 'Faible', strong: 'Fort', mixed: 'Mixte', modal: 'Modal' },
+  uz: { weak: 'Kuchsiz', strong: 'Kuchli', mixed: 'Aralash', modal: 'Modal' },
+  ro: { weak: 'Slab', strong: 'Tare', mixed: 'Mixt', modal: 'Modal' },
+  hi: { weak: 'कमज़ोर', strong: 'मज़बूत', mixed: 'मिश्रित', modal: 'модальный' },
+  ar: { weak: 'ضعيف', strong: 'قوي', mixed: 'مختلط', modal: 'ناقص' }
 }
 
-const updateItems = () => {
-  if (process.client) itemsPerPage.value = window.innerWidth <= 767 ? 1 : 10
+const getLocalizedType = (typekey) => {
+   return typeTranslations[locale.value]?.[typekey] || typeTranslations['en']?.[typeKey] || typeKey
 }
-onMounted(() => {
-  updateItems();
-  window.addEventListener('resize', updateItems)
-})
-onUnmounted(() => window.removeEventListener('resize', updateItems))
+
+const formatPronoun = (pronoun) => {
+  const map = { ich: 'ich', du: 'du', er_sie_es: 'er/sie/es', wir: 'wir', ihr: 'ihr', sie_Sie: 'sie/Sie' }
+  return map[pronoun] || pronoun
+}
 
 const allVerbs = computed(() => {
   if (!rawData.value) return []
-  return Object.entries(rawData.value).flatMap(([type, list]) => list.map(v => ({...v, type})))
+  return Object.entries(rawData.value).flatMap(([type, list]) =>
+      list.map(value => ({ ...value, type }))
+  )
 })
 
 const filteredVerbs = computed(() => {
   if (!allVerbs.value) return []
   const query = searchQuery.value.toLowerCase().trim()
-  const filtered = allVerbs.value.filter(v => {
-    const matchType = !selectedType.value || v.type === selectedType.value
-    const matchText = v.infinitive.toLowerCase().includes(query) || v.translation.toLowerCase().includes(query)
+  return allVerbs.value.filter(valueVerb => {
+    const matchType = !selectedType.value || valueVerb.type === selectedType.value
+    const translation = valueVerb.translations?.[locale.value] || valueVerb.translations?.['en'] || ''
+    const matchText = valueVerb.infinitive.toLowerCase().includes(query) ||
+        translation.toLowerCase().includes(query)
     return matchType && matchText
-  })
-  return filtered.sort((a, b) => a.infinitive.toLowerCase() === query ? -1 : 1)
+  }).sort((a, b) => a.infinitive.toLowerCase() === query ? -1 : 1)
 })
 
 const totalPages = computed(() => Math.ceil(filteredVerbs.value.length / itemsPerPage.value) || 1)
+
 const paginatedVerbs = computed(() => {
   const start = (currentPage.value - 1) * itemsPerPage.value
   return filteredVerbs.value.slice(start, start + itemsPerPage.value)
 })
 
 watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
+
 </script>
 
 <style scoped>
+
+*{
+  color: var(--titleColor);
+}
+
+
 
 .verbs-container {
   height: 100vh;
@@ -144,14 +170,12 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  background: #f0f4f8;
   padding: 10px;
   overflow: hidden;
 }
 
 .fixed-top {
   flex-shrink: 0;
-  background: #fff;
   border-radius: 20px;
   padding: 15px;
   margin-bottom: 10px;
@@ -159,38 +183,44 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
 }
 
 .cartoon-title {
-  font-family: 'Inter', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 900;
-  font-size: 1.6rem;
-  color: #1a202c;
+  font-size: 1.8rem;
   text-align: center;
 }
 
 .counter {
   text-align: center;
   font-size: 0.8rem;
-  background: #edf2f7;
-  display: block;
-  margin: 5px auto;
-  width: fit-content;
   padding: 2px 10px;
   border-radius: 10px;
 }
 
+.page-counter{
+  width: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-family: "Nunito", sans-serif;
+}
+
 .filters {
   display: flex;
+  justify-content: center;
   gap: 10px;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .cartoon-input, .cartoon-select {
-  flex: 1;
   padding: 12px;
   border: 2px solid #cbd5e0;
-  border-radius: 15px;
+  border-radius: 10px;
   font-weight: 600;
   outline: none;
   transition: 0.2s;
+  color: #2c2b2b;
+  height: 46px;
 }
 
 .cartoon-input:focus {
@@ -200,15 +230,35 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
 .scroll-area {
   flex: 1;
   overflow-y: auto;
-  padding: 5px;
+  padding: 2px;
+}
+
+.scroll-area::-webkit-scrollbar {
+  width: 5px;
+}
+
+.scroll-area::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scroll-area::-webkit-scrollbar-thumb {
+  background-color: rgba(160, 174, 192, 0.4);
+  border-radius: 20px;
+}
+
+.scroll-area::-webkit-scrollbar-thumb:hover {
+  background-color: #4299e1;
+}
+
+.verb__infinitive {
+  color: #4299e1;
 }
 
 .verb-card {
-  background: #fff;
   border-radius: 25px;
   border: 4px solid #e2e8f0;
-  padding: 20px;
-  margin-bottom: 20px;
+  padding: 15px;
+  margin-bottom: 10px;
   box-shadow: 0 8px 0 #e2e8f0;
 }
 
@@ -222,6 +272,12 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
   margin-bottom: 20px;
 }
 
+.card__hero-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .inf-section {
   display: flex;
   align-items: center;
@@ -229,9 +285,8 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
 }
 
 .inf-main {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 900;
-  color: #2d3748;
   margin: 0;
 }
 
@@ -264,7 +319,14 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
   background: #f56565;
 }
 
-/* СЕТКА ВРЕМЕН */
+.type-tag.mixed {
+  background: #805ad5;
+}
+
+.type-tag.modal {
+  background: #ed8936;
+}
+
 .tenses-layout {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -272,14 +334,13 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
 }
 
 .tense-box {
-  background: #f7fafc;
   border-radius: 18px;
   padding: 15px;
   border: 2px solid #edf2f7;
 }
 
 .tense-header {
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: 900;
   color: #a0aec0;
   margin-bottom: 10px;
@@ -291,15 +352,12 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
   align-items: center;
   gap: 8px;
   margin-bottom: 8px;
-  padding: 5px 10px;
-  background: #fff;
+  padding: 2px 10px;
   border-radius: 12px;
   border: 1px solid #edf2f7;
 }
 
 .p-label {
-  width: 55px;
-  font-size: 0.8rem;
   font-weight: 800;
   color: #a0aec0;
   text-align: right;
@@ -308,15 +366,6 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
 .v-form {
   font-size: 0.95rem;
   font-weight: 700;
-  color: #2d3748;
-}
-
-.is-highlight {
-  color: #e53e3e;
-}
-
-.is-perf-text {
-  color: #3182ce;
 }
 
 .mini-sound {
@@ -335,8 +384,7 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
 
 .inf-left-side {
   display: flex;
-  align-items: center;
-  gap: 15px;
+  gap: 8px;
 }
 
 .type-tag {
@@ -360,7 +408,7 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
   color: #718096;
 }
 
-/* ПАГИНАЦИЯ */
+
 .pagination-bar {
   flex-shrink: 0;
   display: flex;
@@ -368,9 +416,14 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
   align-items: center;
   gap: 30px;
   padding: 15px;
-  background: #fff;
   border-radius: 20px;
   border-top: 3px solid #e2e8f0;
+}
+
+.back__btn {
+  max-width: 240px;
+  margin: 0 auto;
+
 }
 
 .nav-btn {
@@ -408,11 +461,18 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
 
 @media (max-width: 767px) {
   .inf-main {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
+  }
+
+  .large-sound {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .nav-btn {
-    flex: 1;
     text-align: center;
   }
 }
