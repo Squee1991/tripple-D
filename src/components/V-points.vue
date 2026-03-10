@@ -27,7 +27,7 @@
 <!--              <span class="points-card__value"> {{ userAuth.totalHats}}</span>-->
 <!--            </div>-->
 <!--          </div>-->
-        </li>
+<!--        </li>-->
         <li class="points-card__item">
           <div class="points-card__label">{{ t('accountPanel.articles') }}</div>
           <div id="articlus" :title="hoverTitle.title" v-if="userAuth.uid" class="articlus__wrapper">

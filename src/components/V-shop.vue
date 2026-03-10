@@ -169,14 +169,14 @@ const shopCards = computed(() => {
       price: PRICES.HEART,
       type: 'consumable'
     },
-    {
-      id: "time_freeze",
-      title: t('cardTime.title'),
-      description: t('cardTime.description'),
-      icon: ShieldFreeze,
-      price: PRICES.FREEZE_DAY,
-      type: 'consumable'
-    },
+    // {
+    //   id: "time_freeze",
+    //   title: t('cardTime.title'),
+    //   description: t('cardTime.description'),
+    //   icon: ShieldFreeze,
+    //   price: PRICES.FREEZE_DAY,
+    //   type: 'consumable'
+    // },
     // {
     //   id: "sale_5",
     //   title: t('cardSales.title5'),
