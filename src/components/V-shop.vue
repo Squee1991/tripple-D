@@ -177,33 +177,33 @@ const shopCards = computed(() => {
       price: PRICES.FREEZE_DAY,
       type: 'consumable'
     },
-    {
-      id: "sale_5",
-      title: t('cardSales.title5'),
-      description: "",
-      icon: Sale,
-      price: PRICES.SALE_5,
-      requiredHats: DISCOUNT_REQ_HATS[5],
-      type: 'permanent'
-    },
-    {
-      id: "sale_10",
-      title: t('cardSales.title10'),
-      description: "",
-      icon: Sale10,
-      price: PRICES.SALE_10,
-      requiredHats: DISCOUNT_REQ_HATS[10],
-      type: 'permanent'
-    },
-    {
-      id: "sale_15",
-      title:  t('cardSales.title15'),
-      description: "",
-      icon: Sale15,
-      price: PRICES.SALE_15,
-      requiredHats: DISCOUNT_REQ_HATS[15],
-      type: 'permanent'
-    },
+    // {
+    //   id: "sale_5",
+    //   title: t('cardSales.title5'),
+    //   description: "",
+    //   icon: Sale,
+    //   price: PRICES.SALE_5,
+    //   requiredHats: DISCOUNT_REQ_HATS[5],
+    //   type: 'permanent'
+    // },
+    // {
+    //   id: "sale_10",
+    //   title: t('cardSales.title10'),
+    //   description: "",
+    //   icon: Sale10,
+    //   price: PRICES.SALE_10,
+    //   requiredHats: DISCOUNT_REQ_HATS[10],
+    //   type: 'permanent'
+    // },
+    // {
+    //   id: "sale_15",
+    //   title:  t('cardSales.title15'),
+    //   description: "",
+    //   icon: Sale15,
+    //   price: PRICES.SALE_15,
+    //   requiredHats: DISCOUNT_REQ_HATS[15],
+    //   type: 'permanent'
+    // },
   ]
   return cardsData.map(card => {
     let isOwned = false
