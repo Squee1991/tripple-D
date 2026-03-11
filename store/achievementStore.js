@@ -1556,8 +1556,8 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				const shopItems = eventData.shopItems || {}
 
 				winterRank1BoughtCount.value = ['santaHat', 'christmasBall', 'christmasWreath'].reduce((acc, id) => acc + (shopItems[id] ? 1 : 0), 0)
-				updateProgress('Collection', shownSet.size + winterRank1BoughtCount.value + valentineRank1BoughtCount.value)
-
+				// updateProgress('Collection', shownSet.size + winterRank1BoughtCount.value + valentineRank1BoughtCount.value)
+				updateProgress('Collection', shownSet.size)
 				const completedQuestsCount = Object.values(questsProgress).filter(q => q.finished).length
 				updateProgress('firstQuest', completedQuestsCount > 0 ? 1 : 0)
 				updateProgress('santaLexicon', questsProgress['quest-21']?.score || 0)
