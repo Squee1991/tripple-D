@@ -1209,14 +1209,14 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 	}
 
 	function updateCollectionCount() {
-		let unlockedBaseAwards = 0;
-		Object.keys(achievementToAwardMap).forEach(id => {
-			const ach = findById(id);
-			if (ach && ach.currentProgress >= ach.targetProgress) {
-				unlockedBaseAwards++;
+		const validBaseValues = Object.values(achievementToAwardMap);
+		let pureBaseCount = 0;
+		shownSet.forEach(val => {
+			if (validBaseValues.includes(val)) {
+				pureBaseCount++;
 			}
 		});
-		const realTotal = unlockedBaseAwards + winterRank1BoughtCount.value + valentineRank1BoughtCount.value;
+		const realTotal = pureBaseCount + winterRank1BoughtCount.value + valentineRank1BoughtCount.value;
 		updateProgress('Collection', realTotal);
 	}
 
