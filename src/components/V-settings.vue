@@ -2,7 +2,7 @@
   <div v-if="activeTabKey === 'info'" class="tab-content">
     <div v-if="isThemeModalOpen" class="modal-overlay" @click.self="isThemeModalOpen = false">
       <div class="modal-card">
-        <div class="modal-title">{{ t('themeModal.title')}}</div>
+        <div class="modal-title">{{ t('themeModal.title') }}</div>
         <div class="theme-grid">
           <label
               v-for="(label, key) in THEMES"
@@ -27,7 +27,7 @@
           </label>
         </div>
         <div class="modal-actions">
-          <button class="btn btn-success" @click="isThemeModalOpen = false">{{ t('themeModal.close')}}</button>
+          <button class="btn btn-success" @click="isThemeModalOpen = false">{{ t('themeModal.close') }}</button>
         </div>
       </div>
     </div>
@@ -48,11 +48,11 @@
               v-for="item in group.items"
               :key="item.key"
               class="row__el--wrapper"
-              :class="{ 'locked-setting': item.key === 'snowFall' && !eventStore.isSnowPurchased }"
+              :class="{ 'locked-setting': item.key === 'snowFall' && !isSnowUnlocked }"
           >
             <div class="toggle__wrapper">
               {{ item.label }}
-              <span v-if="item.key === 'snowFall' && !eventStore.isSnowPurchased">🔒</span>
+              <span v-if="item.key === 'snowFall' && !isSnowUnlocked">🔒</span>
             </div>
             <template v-if="item.type === 'button'">
               <button class="theme-select-btn" @click="isThemeModalOpen = true">
@@ -93,51 +93,61 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
-import { useI18n } from 'vue-i18n'
+import {ref, computed, onMounted} from 'vue'
+import {useI18n} from 'vue-i18n'
 import VToggle from '~/src/components/V-toggle.vue'
-import { useUiSettingsStore } from '../../store/uiSettingsStore.js'
-import { useEventSessionStore } from '../../store/eventsStore.js'
-import { isSoundEnabled, setSoundEnabled, unlockAudioByUserGesture } from '../../utils/soundManager.js'
+import {useUiSettingsStore} from '../../store/uiSettingsStore.js'
+import {useEventSessionStore} from '../../store/eventsStore.js'
+import {isSoundEnabled, setSoundEnabled, unlockAudioByUserGesture} from '../../utils/soundManager.js'
+import {useAchievementStore} from '../../store/achievementStore.js'
+
 const props = defineProps({
   settingsIcon: String,
-  activeTabKey: { type: String, default: 'info' }
+  activeTabKey: {type: String, default: 'info'}
 })
 
 const emit = defineEmits(['open'])
-const { t } = useI18n()
+const {t} = useI18n()
 const uiSettings = useUiSettingsStore()
 const eventStore = useEventSessionStore()
+const achievementStore = useAchievementStore()
 const colorMode = useColorMode()
 
 const isThemeModalOpen = ref(false)
 const isLockedModalOpen = ref(false)
-const lockedModalContent = ref({ title: '', text: '' })
+const lockedModalContent = ref({title: '', text: ''})
 const toggleForceUpdateKey = ref(0)
 const soundEnabled = ref(false)
+const THEMES = {light: t('themeModal.light'), dark: t('themeModal.dark'), pink: t('themeModal.pink')}
+const isValentineThemeUnlocked = computed(() => {
+  const ach = achievementStore.findById('valentineTheme')
+  return ach ? ach.currentProgress >= 1 : false
+})
 
-const THEMES = { light: t('themeModal.light'), dark: t('themeModal.dark'), pink: t('themeModal.pink') }
+const isSnowUnlocked = computed(() => {
+  const ach = achievementStore.findById('snowFall')
+  return ach ? ach.currentProgress >= 1 : false
+})
 
 const SETTINGS_GROUPS = computed(() => [
   {
     id: 'notifications',
     title: t('settingsGroup.notifications'),
     items: [
-      { key: 'sound', label: t('cabinetToggle.sound'), type: 'toggle' },
-      { key: 'ach', label: t('cabinetToggle.ach'), type: 'toggle' }
+      {key: 'sound', label: t('cabinetToggle.sound'), type: 'toggle'},
+      {key: 'ach', label: t('cabinetToggle.ach'), type: 'toggle'}
     ]
   },
   {
     id: 'appearance',
     title: t('settingsGroup.appearance'),
     items: [
-      { key: 'theme', label: t('cabinetToggle.themeBtn'), type: 'button' },
-      { key: 'snowFall', label: t('cabinetToggle.snowFall'), type: 'toggle' }
+      {key: 'theme', label: t('cabinetToggle.themeBtn'), type: 'button'},
+      {key: 'snowFall', label: t('cabinetToggle.snowFall'), type: 'toggle'}
     ]
   }
 ])
 
-const isValentineThemeUnlocked = computed(() => !!eventStore.shopItems?.['theme'])
 const currentThemeName = computed(() => THEMES[colorMode.preference] || THEMES.light)
 
 const showRestriction = (type) => {
@@ -145,9 +155,9 @@ const showRestriction = (type) => {
     isThemeModalOpen.value = false
     lockedModalContent.value = {
       title: `💖 ${t('cabinet.notAllow')}`,
-      text: `${t('pinkThemeModal.partOne')}} <b>${t('pinkThemeModal.partTwo')}}</b>. <br/>${t('pinkThemeModal.partThree')}}`
+      text: `${t('pinkThemeModal.partOne')} <b>${t('pinkThemeModal.partTwo')}</b>. <br/>${t('pinkThemeModal.partThree')}`
     }
-    } else if (type === 'snow') {
+  } else if (type === 'snow') {
     lockedModalContent.value = {
       title: `❄️ ${t('cabinet.notAllow')}`,
       text: `${t('cabinet.modalNotAllowEffectFirst')} <b>${t('cabinet.modalNotAllowEffectSecond')}</b>. <br/> ${t('cabinet.modalNotAllowEffectThird')}`
@@ -165,9 +175,9 @@ const handleThemeSelection = (key) => {
 }
 
 const servicePaths = [
-  { id: 'Privacy', label: 'Police privacy', path: '/privacy' },
-  { id: 'FAQ', label: 'FAQ', path: '/faq' },
-  { id: 'terms', label: 'Terms', path: '/terms' }
+  {id: 'Privacy', label: 'Police privacy', path: '/privacy'},
+  {id: 'FAQ', label: 'FAQ', path: '/faq'},
+  {id: 'terms', label: 'Terms', path: '/terms'}
 ]
 
 const getSettingValue = (key) => {
@@ -186,7 +196,7 @@ const onSettingChange = (key, value) => {
   }
   if (key === 'ach') return uiSettings.setAchievementsNotifyEnabled(value)
   if (key === 'snowFall') {
-    if (!eventStore.isSnowPurchased) {
+    if (!isSnowUnlocked.value) {
       showRestriction('snow')
       toggleForceUpdateKey.value++
       return
@@ -197,12 +207,13 @@ const onSettingChange = (key, value) => {
 
 onMounted(async () => {
   soundEnabled.value = isSoundEnabled()
-  await eventStore.loadEventProgress('valentine')
   await eventStore.loadEventProgress('winter')
+  await eventStore.loadEventProgress('valentine')
 })
 </script>
 
 <style scoped>
+/* Твои стили остались без изменений */
 .accordion {
   padding: 12px 16px;
   margin-top: 14px;
@@ -364,9 +375,20 @@ onMounted(async () => {
   border: 2px solid #000;
 }
 
-.theme-preview.light { background: #fff; }
-.theme-preview.dark { background: #222; }
-.theme-preview.pink { background: #ff85a1; display: flex; align-items: center; justify-content: center; }
+.theme-preview.light {
+  background: #fff;
+}
+
+.theme-preview.dark {
+  background: #222;
+}
+
+.theme-preview.pink {
+  background: #ff85a1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .service__items {
   padding: 12px 16px;
