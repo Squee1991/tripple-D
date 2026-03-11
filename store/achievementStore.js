@@ -1179,7 +1179,8 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 						shownSet.add(mapVal)
 						saveShown(shownSet)
 						lastUnlockedAward.value = { titleKey: mapVal, achId: id, ts: Date.now() }
-						updateProgress('Collection', shownSet.size)
+						// updateProgress('Collection', shownSet.size)
+						updateCollectionCount()
 					}
 				} else {
 					bootUnlocked.push(ach.id)
@@ -1198,12 +1199,25 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 						saveShown(shownSet)
 						lastUnlockedAward.value = { titleKey: mapVal, achId: id, ts: Date.now() }
 						setTimeout(() => { if (lastUnlockedAward.value?.achId === id) lastUnlockedAward.value = null }, 0)
-						updateProgress('Collection', shownSet.size)
+						// updateProgress('Collection', shownSet.size)
+						updateCollectionCount()
 					}
 				}
 			}
 		}
 		prevMap.set(id, ach.currentProgress)
+	}
+
+	function updateCollectionCount() {
+		const eventKeys = ['santaHat', 'christmasBall', 'christmasWreath', 'valentineBear', 'cupidArrow']
+		let pureBaseCount = 0
+		shownSet.forEach(key => {
+			if (!eventKeys.includes(key)) {
+				pureBaseCount++
+			}
+		})
+		const realTotal = pureBaseCount + winterRank1BoughtCount.value + valentineRank1BoughtCount.value
+		updateProgress('Collection', realTotal)
 	}
 
 	function getPrefixIds(prefix) {
@@ -1541,7 +1555,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			updateProgress('guessedPerfectWords', guessStore.guessedPerfectWords.length)
 		})
 
-		updateProgress('Collection', shownSet.size)
+		updateCollectionCount()
 		setTimeout(() => finishBootAndReplay(), 0)
 
 		watch(() => authStore.uid, (uid) => {
@@ -1556,8 +1570,8 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				const shopItems = eventData.shopItems || {}
 
 				winterRank1BoughtCount.value = ['santaHat', 'christmasBall', 'christmasWreath'].reduce((acc, id) => acc + (shopItems[id] ? 1 : 0), 0)
-				updateProgress('Collection', shownSet.size + winterRank1BoughtCount.value + valentineRank1BoughtCount.value)
-
+				// updateProgress('Collection', shownSet.size + winterRank1BoughtCount.value + valentineRank1BoughtCount.value)
+				updateCollectionCount()
 				const completedQuestsCount = Object.values(questsProgress).filter(q => q.finished).length
 				updateProgress('firstQuest', completedQuestsCount > 0 ? 1 : 0)
 				updateProgress('santaLexicon', questsProgress['quest-21']?.score || 0)
@@ -1581,8 +1595,8 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				const shopItems = eventData.shopItems || {}
 
 				valentineRank1BoughtCount.value = ['teddy', 'cupidArrow'].reduce((acc, id) => acc + (shopItems[id] ? 1 : 0), 0)
-				updateProgress('Collection', shownSet.size + winterRank1BoughtCount.value + valentineRank1BoughtCount.value)
-				// updateProgress('Collection', shownSet.size)
+				// updateProgress('Collection', shownSet.size + winterRank1BoughtCount.value + valentineRank1BoughtCount.value)
+				updateCollectionCount()
 				const completedQuestsCount = Object.values(questsProgress).filter(q => q.finished).length
 				updateProgress('valentineWords', questsProgress['quest-1']?.score || 0)
 				updateProgress('firstValentineQuest', completedQuestsCount > 0 ? 1 : 0)
@@ -1600,8 +1614,8 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 	}
 
 	watch(lastUnlockedAward, (award) => {
-		// if (award) updateProgress('Collection', shownSet.size)
-		if (award) updateProgress('Collection', shownSet.size + winterRank1BoughtCount.value + valentineRank1BoughtCount.value)
+		// if (award) updateProgress('Collection', shownSet.size + winterRank1BoughtCount.value + valentineRank1BoughtCount.value)
+		updateCollectionCount()
 	})
 
 	return {
@@ -1612,6 +1626,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		lastUnlockedAchievement,
 		closePopup,
 		initializeProgressTracking,
+		updateCollectionCount,
 		updateProgress,
 		findById
 	}
