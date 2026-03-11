@@ -1313,7 +1313,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 					a.currentProgress = completedSet.has(a.id) ? a.targetProgress : 0
 				})
 			})
-			updateProgress('Collection', shownSet.size)
+			updateCollectionCount()
 			eggStore.loadEggs()
 			detachDailyAggListener()
 
@@ -1615,7 +1615,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 
 	watch(lastUnlockedAward, (award) => {
 		// if (award) updateProgress('Collection', shownSet.size + winterRank1BoughtCount.value + valentineRank1BoughtCount.value)
-		updateCollectionCount()
+		if (award) updateCollectionCount()
 	})
 
 	return {
