@@ -1556,8 +1556,8 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				const shopItems = eventData.shopItems || {}
 
 				winterRank1BoughtCount.value = ['santaHat', 'christmasBall', 'christmasWreath'].reduce((acc, id) => acc + (shopItems[id] ? 1 : 0), 0)
-				// updateProgress('Collection', shownSet.size + winterRank1BoughtCount.value + valentineRank1BoughtCount.value)
-				updateProgress('Collection', shownSet.size)
+				updateProgress('Collection', shownSet.size + winterRank1BoughtCount.value + valentineRank1BoughtCount.value)
+
 				const completedQuestsCount = Object.values(questsProgress).filter(q => q.finished).length
 				updateProgress('firstQuest', completedQuestsCount > 0 ? 1 : 0)
 				updateProgress('santaLexicon', questsProgress['quest-21']?.score || 0)
@@ -1569,8 +1569,8 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				updateProgress('christmasWreath', shopItems['christmasWreath'] ? 1 : 0)
 
 				const metaChildrenIds = ['firstQuest', 'santaLexicon', 'everyQuest', 'snowFall', 'santaHat', 'winterHonor', 'christmasBall', 'christmasWreath'];
-				// updateProgress('metaChristmas', metaChildrenIds.filter(id => completedSet.has(id)).length);
-				updateProgress('Collection', shownSet.size)
+				updateProgress('metaChristmas', metaChildrenIds.filter(id => completedSet.has(id)).length);
+				// updateProgress('Collection', shownSet.size)
 			})
 			eventUnsubs.push(unsubWinter)
 
@@ -1581,8 +1581,8 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				const shopItems = eventData.shopItems || {}
 
 				valentineRank1BoughtCount.value = ['teddy', 'cupidArrow'].reduce((acc, id) => acc + (shopItems[id] ? 1 : 0), 0)
-				// updateProgress('Collection', shownSet.size + winterRank1BoughtCount.value + valentineRank1BoughtCount.value)
-				updateProgress('Collection', shownSet.size)
+				updateProgress('Collection', shownSet.size + winterRank1BoughtCount.value + valentineRank1BoughtCount.value)
+				// updateProgress('Collection', shownSet.size)
 				const completedQuestsCount = Object.values(questsProgress).filter(q => q.finished).length
 				updateProgress('valentineWords', questsProgress['quest-1']?.score || 0)
 				updateProgress('firstValentineQuest', completedQuestsCount > 0 ? 1 : 0)
@@ -1600,8 +1600,8 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 	}
 
 	watch(lastUnlockedAward, (award) => {
-		if (award) updateProgress('Collection', shownSet.size)
-		// if (award) updateProgress('Collection', shownSet.size + winterRank1BoughtCount.value + valentineRank1BoughtCount.value)
+		// if (award) updateProgress('Collection', shownSet.size)
+		if (award) updateProgress('Collection', shownSet.size + winterRank1BoughtCount.value + valentineRank1BoughtCount.value)
 	})
 
 	return {
