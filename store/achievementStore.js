@@ -1209,15 +1209,21 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 	}
 
 	function updateCollectionCount() {
-		const validBaseValues = Object.values(achievementToAwardMap);
-		let pureBaseCount = 0;
-		shownSet.forEach(val => {
-			if (validBaseValues.includes(val)) {
-				pureBaseCount++;
+		const awardAchievementIds = [
+			'explorer', 'Articlus', 'registerAchievement', 'level10', 'languageLands50',
+			'OneYearVeteran', 'wrong100Answers', 'LastChance', 'guessedFastWords', 'guessSixHundred',
+			'daily', 'guessedSafeWords', 'all_cases', 'all_adjectives', 'all_verbs',
+			'FiveHearts', 'daily42', 'iAmGroot',
+			'santaHat', 'christmasBall', 'christmasWreath',
+			'valentineBear', 'cupidArrow'
+		];
+		let unlockedCount = 0;
+		awardAchievementIds.forEach(id => {
+			if (completedSet.has(id)) {
+				unlockedCount++;
 			}
 		});
-		const realTotal = pureBaseCount + winterRank1BoughtCount.value + valentineRank1BoughtCount.value;
-		updateProgress('Collection', realTotal);
+		updateProgress('Collection', unlockedCount);
 	}
 
 	function getPrefixIds(prefix) {
