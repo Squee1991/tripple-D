@@ -1209,15 +1209,15 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 	}
 
 	function updateCollectionCount() {
-		const eventKeys = ['santaHat', 'christmasBall', 'christmasWreath', 'valentineBear', 'cupidArrow']
-		let pureBaseCount = 0
-		shownSet.forEach(key => {
-			if (!eventKeys.includes(key)) {
-				pureBaseCount++
+		let unlockedBaseAwards = 0;
+		Object.keys(achievementToAwardMap).forEach(id => {
+			const ach = findById(id);
+			if (ach && ach.currentProgress >= ach.targetProgress) {
+				unlockedBaseAwards++;
 			}
-		})
-		const realTotal = pureBaseCount + winterRank1BoughtCount.value + valentineRank1BoughtCount.value
-		updateProgress('Collection', realTotal)
+		});
+		const realTotal = unlockedBaseAwards + winterRank1BoughtCount.value + valentineRank1BoughtCount.value;
+		updateProgress('Collection', realTotal);
 	}
 
 	function getPrefixIds(prefix) {
