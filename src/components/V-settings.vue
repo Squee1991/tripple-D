@@ -147,7 +147,7 @@ const showRestriction = (type) => {
       title: `💖 ${t('cabinet.notAllow')}`,
       text: `${t('pinkThemeModal.partOne')}} <b>${t('pinkThemeModal.partTwo')}}</b>. <br/>${t('pinkThemeModal.partThree')}}`
     }
-  } else if (type === 'snow') {
+    } else if (type === 'snow') {
     lockedModalContent.value = {
       title: `❄️ ${t('cabinet.notAllow')}`,
       text: `${t('cabinet.modalNotAllowEffectFirst')} <b>${t('cabinet.modalNotAllowEffectSecond')}</b>. <br/> ${t('cabinet.modalNotAllowEffectThird')}`
@@ -198,6 +198,7 @@ const onSettingChange = (key, value) => {
 onMounted(async () => {
   soundEnabled.value = isSoundEnabled()
   await eventStore.loadEventProgress('valentine')
+  await eventStore.loadEventProgress('winter')
 })
 </script>
 
