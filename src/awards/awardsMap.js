@@ -4,7 +4,7 @@ export const achievementToAwardMap = {
     registerAchievement: 'awards.registerAchievement',
     level10: 'awards.level10',
     languageLands50: 'awards.languageLands50',
-    SiteRegular: 'awards.siteRegular',
+    OneYearVeteran: 'awards.oneYearVeteran',
     wrong100Answers: 'awards.wrong100Answers',
     LastChance: 'awards.lastChance',
     guessedFastWords: 'awards.guessedFastWords',
