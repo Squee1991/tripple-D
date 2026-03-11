@@ -54,9 +54,9 @@
 <!--            </div>-->
 <!--            <div class="card-label">Ранг {{ idx + 1 }}</div>-->
 <!--            <div class="card-cost">🎓 {{ lvl.hats }}</div>-->
-<!--            <div v-if="lvl.bonus" class="card-bonus">-->
+<!--            <div v-if="lvl.bonus" class="card-bonus" :class="{ 'is-discount': typeof lvl.bonus === 'string' }">-->
 <!--              <div>{{ lvl.bonus }}</div>-->
-<!--              <img src="" alt="articlus">-->
+<!--              <img v-if=" typeof lvl.bonus === 'number'" class="card__articlus" src="../../assets/images/articlus.png" alt="articlus">-->
 <!--            </div>-->
 <!--          </div>-->
 <!--        </div>-->
@@ -125,6 +125,11 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
   margin: 0 auto;
   overflow-y: auto;
   max-height: calc(100vh - 250px);
+}
+
+.card__articlus {
+  width: 30px;
+  height: 20px;
 }
 
 .ranks-wrapper::-webkit-scrollbar {
@@ -235,7 +240,7 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
   padding: 5px;
   border-radius: 10px;
   font-weight: 800;
-  margin-top: 5px;
+  margin-top: 2px;
 }
 
 .card-bonus {
@@ -243,6 +248,9 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
   font-size: 0.8em;
   color: #2f9e44;
   font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hats-info {

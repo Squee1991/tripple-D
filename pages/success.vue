@@ -9,7 +9,8 @@ const router = useRouter()
 const auth = userAuthStore()
 const sessionId = route.query.session_id
 
-const statusText = ref('Проверяем оплату...')
+const statusText = ref('Проверяем статус оплаты...')
+const isLoading = ref(true)
 
 definePageMeta({
   robots: {
@@ -24,93 +25,127 @@ onMounted(() => {
     onAuthStateChanged(authInstance, async (user) => {
       if (!user) {
         console.error('Пользователь не авторизован')
-        statusText.value = 'Ошибка: войдите в аккаунт'
+        statusText.value = 'Ошибка: пожалуйста, войдите в аккаунт'
+        isLoading.value = false
         return
       }
 
       try {
-        console.log('Пользователь тут, стучимся на сервер...')
         const response = await $fetch('/api/stripe/confirm', {
           method: 'POST',
           body: { sessionId }
         })
-        console.log('Ответ сервера:', response)
+
         if (response.success && response.data) {
-          statusText.value = 'Оплата подтверждена! Активируем...'
           await auth.activatePremium(response.data)
-          statusText.value = 'Подписка активирована! 🎉'
+          statusText.value = 'Premium успешно активирован!'
+          isLoading.value = false
         } else {
-          console.error('Ошибка в ответе:', response)
           statusText.value = 'Ошибка: ' + (response.error || 'Неизвестная ошибка')
+          isLoading.value = false
         }
       } catch (e) {
         console.error('Ошибка запроса:', e)
-        statusText.value = 'Ошибка соединения'
+        statusText.value = 'Ошибка соединения с сервером'
+        isLoading.value = false
       }
+
+      // Перенаправление на главную
       setTimeout(() => {
         router.push('/')
       }, 3000)
     })
   } else {
-    statusText.value = 'Ошибка: нет номера сессии'
+    statusText.value = 'Ошибка: отсутствует номер сессии'
+    isLoading.value = false
     setTimeout(() => router.push('/'), 3000)
   }
 })
 </script>
 
 <template>
-  <div class="success-page">
-    <div class="loader"></div>
-    <h1>{{ statusText }}</h1>
-    <p v-if="auth.isPremium">Теперь вы Premium!</p>
-    <p class="redirect-msg">Сейчас вы будете перенаправлены на главную страницу...</p>
+  <div class="activation-page">
+    <div class="modal-card">
+      <div v-if="isLoading" class="loader"></div>
+
+      <div v-else class="icon-placeholder">
+        <span v-if="statusText.includes('успешно')">👑</span>
+        <span v-else>⚠️</span>
+      </div>
+
+      <h1 class="status-title">{{ statusText }}</h1>
+      <p class="redirect-msg">Автоматический переход на главную...</p>
+    </div>
   </div>
 </template>
 
 <style scoped>
+.activation-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  /* Фоновый цвет, как у основного интерфейса */
+  background-color: #fcf6e3;
+  font-family: 'Nunito', 'Segoe UI', sans-serif;
+  padding: 20px;
+}
 
-.success-page {
+.modal-card {
+  background: #ffffff;
+  /* Имитация геймифицированных элементов: толстая граница и сплошная тень */
+  border: 3px solid #2d3748;
+  border-radius: 20px;
+  box-shadow: 0 8px 0 #2d3748;
+  padding: 40px 30px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background: #f5f5ff;
-  text-align: center;
-  font-family: 'Segoe UI', sans-serif;
-  color: #333;
-  padding: 2rem;
 }
 
-h1 {
-  font-size: 2rem;
-  margin: 1rem 0 0.5rem;
-  color: #4CAF50;
+.icon-placeholder {
+  font-size: 64px;
+  margin-bottom: 15px;
+  line-height: 1;
+  animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-p {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+.status-title {
+  font-size: 1.8rem;
+  color: #2d3748;
+  margin: 0 0 15px 0;
+  font-weight: 700;
+  line-height: 1.3;
 }
 
 .redirect-msg {
-  margin-top: 1rem;
-  font-style: italic;
-  color: #777;
+  font-size: 1.1rem;
+  color: #718096;
+  margin: 0;
+  font-weight: 600;
 }
 
 .loader {
-  border: 6px solid #e0e0e0;
-  border-top: 6px solid #4CAF50;
+  border: 6px solid #edf2f7;
+  /* Синий цвет, как у кнопки "Выбрать" на вашем сайте */
+  border-top: 6px solid #5b8edc;
   border-radius: 50%;
   width: 60px;
   height: 60px;
   animation: spin 1s linear infinite;
-  margin-bottom: 1.5rem;
+  margin-bottom: 25px;
 }
 
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
 }
 </style>

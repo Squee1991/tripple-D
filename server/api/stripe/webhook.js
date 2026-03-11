@@ -1,0 +1,97 @@
+import Stripe from 'stripe'
+import { defineEventHandler, readRawBody, getHeader, setResponseStatus } from 'h3'
+import { getFirestore } from 'firebase-admin/firestore'
+import { initializeApp, getApps, cert } from 'firebase-admin/app'
+
+export default defineEventHandler(async (event) => {
+	// 1. НАША ЖЕЛЕЗОБЕТОННАЯ ИНИЦИАЛИЗАЦИЯ FIREBASE (ты её уже знаешь)
+	if (getApps().length === 0) {
+		try {
+			const serviceAccountJson = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON
+			if (serviceAccountJson) {
+				const serviceAccount = JSON.parse(serviceAccountJson)
+				if (serviceAccount.private_key) {
+					serviceAccount.private_key = serviceAccount.private_key.replace(/\\n/g, '\n')
+				}
+				initializeApp({ credential: cert(serviceAccount) })
+			}
+		} catch (e) {
+			console.error('❌ ОШИБКА FIREBASE [Webhook]:', e.message)
+			setResponseStatus(event, 500)
+			return { error: 'Server Config Error' }
+		}
+	}
+
+	const config = useRuntimeConfig()
+	const stripeKey = config.stripeSecret || process.env.STRIPE_SECRET_KEY
+	// НАМ ПОНАДОБИТСЯ НОВЫЙ КЛЮЧ - СЕКРЕТ ВЕБХУКА!
+	const webhookSecret = config.stripeWebhookSecret || process.env.STRIPE_WEBHOOK_SECRET
+
+	if (!stripeKey || !webhookSecret) {
+		console.error('❌ ОШИБКА: Нет ключей Stripe или Webhook Secret')
+		setResponseStatus(event, 500)
+		return { error: 'Keys missing' }
+	}
+
+	const stripe = new Stripe(stripeKey, { apiVersion: '2024-06-20' })
+
+	// 2. ЧИТАЕМ "СЫРЫЕ" ДАННЫЕ И ПОДПИСЬ
+	// ВАЖНО: Мы используем readRawBody вместо readBody!
+	// Stripe требует проверять подпись именно на "сыром" тексте, до его превращения в JSON.
+	const body = await readRawBody(event)
+	const signature = getHeader(event, 'stripe-signature')
+
+	let stripeEvent
+
+	// 3. ПРОВЕРЯЕМ ПОДПИСЬ (Точно ли это Stripe прислал?)
+	try {
+		stripeEvent = stripe.webhooks.constructEvent(body, signature, webhookSecret)
+	} catch (err) {
+		console.error(`⚠️ Ошибка подписи вебхука: ${err.message}`)
+		setResponseStatus(event, 400)
+		return { error: `Webhook Error: ${err.message}` }
+	}
+
+	// 4. ОБРАБАТЫВАЕМ СОБЫТИЕ УСПЕШНОЙ ОПЛАТЫ
+	if (stripeEvent.type === 'checkout.session.completed') {
+		const session = stripeEvent.data.object
+
+		// Достаем данные юзера, которые мы передавали при создании чекаута в metadata
+		const userId = session.metadata?.firebaseUID
+		const discountUsed = session.metadata?.discountId || null
+
+		if (userId) {
+			try {
+				const db = getFirestore()
+				let subscriptionEndsAt = null
+
+				// Если нужно, получаем детали подписки, чтобы узнать дату окончания
+				if (session.subscription) {
+					const subDetails = await stripe.subscriptions.retrieve(session.subscription)
+					subscriptionEndsAt = new Date(subDetails.current_period_end * 1000).toISOString()
+				}
+
+				const updateData = {
+					isPremium: true,
+					subscriptionCancelled: false,
+					subscriptionEndsAt: subscriptionEndsAt,
+					subscriptionId: session.subscription || null,
+					updatedAt: new Date().toISOString()
+				}
+
+				// Сбрасываем скидку, если она была использована
+				if (discountUsed && ['sale_5', 'sale_10', 'sale_15'].includes(discountUsed)) {
+					updateData[discountUsed] = false
+					console.log(`🔥 [Webhook] Скидка ${discountUsed} сброшена для юзера ${userId}`)
+				}
+
+				await db.collection('users').doc(userId).set(updateData, { merge: true })
+				console.log(`✅ [Webhook] Юзер ${userId} получил премиум!`)
+
+			} catch (dbError) {
+				console.error('❌ [Webhook] Ошибка записи в базу:', dbError)
+			}
+		}
+	}
+	return { received: true }
+})

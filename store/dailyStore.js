@@ -237,29 +237,42 @@ export const dailyStore = defineStore('dailyStore', () => {
         }
     }
 
+    let ensurePromise = null
+
     async function ensureLocalCycle() {
-        const key = cycleKey.value
-        const exist = loadLocal()
-        const now = Date.now()
-        const currentUid = uid() || 'anon'
-
-        const isNewDay = !exist || exist.cycleKey !== key || now >= Number(exist.expiresAtMs || 0)
-        const isNewUser = exist && exist.owner && exist.owner !== currentUid
-
-        if (isNewDay || isNewUser) {
-            if (exist && exist.owner === currentUid && isNewDay) {
-                await checkPreviousDayPenalty(exist)
-            }
-
-            const fresh = buildNewCyclePayload(key)
-            currentCycle.value = fresh
-            saveLocal(fresh)
-            pushCurrentCycleToCloud(fresh, false).catch(() => {})
+        if (ensurePromise) {
+            await ensurePromise
             return
         }
+        ensurePromise = (async () => {
+            const key = cycleKey.value
+            const exist = loadLocal()
+            const now = Date.now()
+            const currentUid = uid() || 'anon'
 
-        currentCycle.value = exist
-        counters.value = { ...(exist.counters || counters.value) }
+            const isNewDay = !exist || exist.cycleKey !== key || now >= Number(exist.expiresAtMs || 0)
+            const isNewUser = exist && exist.owner && exist.owner !== currentUid
+
+            if (isNewDay || isNewUser) {
+                if (exist && exist.owner === currentUid && isNewDay) {
+                    await checkPreviousDayPenalty(exist)
+                }
+
+                const fresh = buildNewCyclePayload(key)
+                currentCycle.value = fresh
+                saveLocal(fresh)
+                pushCurrentCycleToCloud(fresh, false).catch(() => {})
+                return
+            }
+            currentCycle.value = exist
+            counters.value = { ...(exist.counters || counters.value) }
+        })()
+
+        try {
+            await ensurePromise
+        } finally {
+            ensurePromise = null
+        }
     }
 
     function valueForQuestByCounters(qid) {
@@ -365,7 +378,7 @@ export const dailyStore = defineStore('dailyStore', () => {
         if (syncing.value) return
         syncing.value = true
         try {
-            ensureLocalCycle()
+            await ensureLocalCycle()
             const local = currentCycle.value
             if (!local) return
             if (Date.now() >= Number(local.expiresAtMs || 0) || local.cycleKey !== cycleKey.value) {
@@ -486,19 +499,19 @@ export const dailyStore = defineStore('dailyStore', () => {
     }
 
     async function init() {
-        ensureLocalCycle()
+        await ensureLocalCycle()
         if (uid()) attachCloudListener()
         await updateProgressFromCounters()
         startClock()
         startAutoSync()
 
-        onAuthStateChanged(auth, () => {
+        onAuthStateChanged(auth, async () => {
             detachCloudListener()
             if (uid()) {
                 attachCloudListener()
-                ensureLocalCycle()
+                await ensureLocalCycle()
             } else {
-                ensureLocalCycle()
+                await ensureLocalCycle()
             }
         })
     }

@@ -32,6 +32,37 @@
       }
     },
     {
+      "id": 370,
+      "infinitive": "machen",
+      "type": "weak",
+      "hilfsverb": "haben",
+      "translations": {
+        "en": "to do / make",
+        "pl": "robić",
+        "hi": "करना (karna)",
+        "tr": "yapmak",
+        "ro": "a face",
+        "es": "hacer",
+        "fr": "faire",
+        "ru": "делать",
+        "uk": "робити",
+        "uz": "qilmoq",
+        "ar": "يفعل / يصنع"
+      },
+      "conjugation_pres": {
+        "ich": "mache", "du": "machst", "er_sie_es": "macht",
+        "wir": "machen", "ihr": "macht", "sie_Sie": "machen"
+      },
+      "conjugation_past": {
+        "ich": "machte", "du": "machtest", "er_sie_es": "machte",
+        "wir": "machten", "ihr": "machtet", "sie_Sie": "machten"
+      },
+      "conjugation_perf": {
+        "ich": "habe gemacht", "du": "hast gemacht", "er_sie_es": "hat gemacht",
+        "wir": "haben gemacht", "ihr": "habt gemacht", "sie_Sie": "haben gemacht"
+      }
+    },
+    {
       "id": 279,
       "infinitive": "einschlafen",
       "type": "strong",

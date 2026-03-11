@@ -2,8 +2,10 @@ import {defineStore} from 'pinia'
 import {ref} from 'vue'
 
 import { userAuthStore} from "/store/authStore.js";
+import { userlangStore } from "/store/learningStore.js";
 export const useRankUserStore = defineStore('rankUserStore', () => {
    const authStore = userAuthStore()
+	const langStore = userlangStore()
 	const ranksData = [
 		{
 			title: 'Новичок',
@@ -113,11 +115,18 @@ export const useRankUserStore = defineStore('rankUserStore', () => {
 		return 'РАНГ'
 	}
 
-	const checkRewardUI = () => {
+	const checkRewardUI = async () => {
 		const currentHats = authStore.totalHats
 		ranksData.forEach((rankGroup) => {
 			rankGroup.levels.forEach((level, levelIndex) => {
 				if (currentHats === level.hats) {
+					if (typeof level.bonus === 'number') {
+
+						langStore.points += level.bonus
+						if (typeof langStore.saveToFirebase === 'function') {
+							langStore.saveToFirebase()
+						}
+					}
 					const rewardIcon = rankGroup.icons ? rankGroup.icons[levelIndex].icon : rankGroup.icon
 					currentReward.value = {
 						icon: rewardIcon,

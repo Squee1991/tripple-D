@@ -21,13 +21,14 @@ import ChristmasBall from '../assets/images/event-rewards/winter-event/winter-re
 import ChristmasWreath from '../assets/images/event-rewards/winter-event/winter-rewards/christmas-wreath.svg'
 import TeddyGift from '../assets/images/event-rewards/valentine-event/valentine-rewards/teddy-bear.svg'
 import CupidArrow from '../assets/images/event-rewards/valentine-event/valentine-rewards/cupidonArrow.svg'
+
 export const AWARDS = [
 	{key: 'explorer', title: 'awards.explorer', icon: Globus},
 	{key: 'Articlus', title: 'awards.articlus', icon: WasteMoney},
 	{key: 'registerAchievement', title: 'awards.registerAchievement', icon: IdCard},
 	{key: 'level10', title: 'awards.level10', icon: Wings},
 	{key: 'languageLands50', title: 'awards.languageLands50', icon: Compass},
-	{key: 'SiteRegular', title: 'awards.siteRegular', icon: veteranMedal},
+	{key: 'OneYearVeteran', title: 'awards.oneYearVeteran', icon: veteranMedal},
 	{key: 'wrong100Answers', title: 'awards.wrong100Answers', icon: talismanOfPatience},
 	{key: 'LastChance', title: 'awards.lastChance', icon: LastChance},
 	{key: 'guessedFastWords', title: 'awards.guessedFastWords', icon: Rocket},

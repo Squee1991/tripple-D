@@ -959,7 +959,6 @@ import { defineStore } from 'pinia'
 import { ref, watch, watchEffect } from 'vue'
 import { getFirestore, doc, onSnapshot } from 'firebase/firestore'
 import { getAuth } from 'firebase/auth'
-
 // --- 1) Импорты групп достижений ---
 import { overAchievment } from '../src/achieveGroup/overAllAchieve/overallAchievements.js'
 import { wordAchievementsGroup } from '../src/achieveGroup/wordGroup/wordAchievements.js'
@@ -985,7 +984,6 @@ import { typeVerbs } from '../src/achieveGroup/verbs/typeVerbs.js'
 import { sentenceAchievement } from '../src/achieveGroup/sentenceDuel/sentenceAchievementsА1.js'
 import { eventWinterAchievements } from '../src/achieveGroup/eventAchievement/winterAchievements.js'
 import { valentineAchievements } from '../src/achieveGroup/eventAchievement/valentineAchievements.js'
-
 // --- 2) Сторы-источники ---
 import { userChainStore } from '../store/chainStore.js'
 import { userAuthStore } from '../store/authStore.js'
@@ -1166,16 +1164,12 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 		const prev   = Number(ach.currentProgress ?? 0)
 		const incoming = Number(val ?? 0)
 		const next     = isBooting.value ? incoming : Math.max(prev, incoming)
-
 		ach.currentProgress = Math.min(next, target)
 		const justCompleted = ach.currentProgress >= target && !completedSet.has(id)
-
 		if (justCompleted) {
 			completedSet.add(id)
 			saveCompleted(completedSet)
-
 			const mapVal = achievementToAwardMap[id]
-
 			if (isBooting.value) {
 				if (id === 'registerAchievement') {
 					popupQueue.value.push(ach)
@@ -1199,7 +1193,6 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 					showNextPopup()
 					lastUnlockedAchievement.value = { id: ach.id, title: ach.title, groupTitle: ach.groupTitle || null, ts: Date.now() }
 					setTimeout(() => { if (lastUnlockedAchievement.value?.id === ach.id) lastUnlockedAchievement.value = null }, 0)
-
 					if (mapVal && !shownSet.has(mapVal)) {
 						shownSet.add(mapVal)
 						saveShown(shownSet)
@@ -1576,7 +1569,8 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				updateProgress('christmasWreath', shopItems['christmasWreath'] ? 1 : 0)
 
 				const metaChildrenIds = ['firstQuest', 'santaLexicon', 'everyQuest', 'snowFall', 'santaHat', 'winterHonor', 'christmasBall', 'christmasWreath'];
-				updateProgress('metaChristmas', metaChildrenIds.filter(id => completedSet.has(id)).length);
+				// updateProgress('metaChristmas', metaChildrenIds.filter(id => completedSet.has(id)).length);
+				updateProgress('Collection', shownSet.size)
 			})
 			eventUnsubs.push(unsubWinter)
 
@@ -1587,8 +1581,8 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 				const shopItems = eventData.shopItems || {}
 
 				valentineRank1BoughtCount.value = ['teddy', 'cupidArrow'].reduce((acc, id) => acc + (shopItems[id] ? 1 : 0), 0)
-				updateProgress('Collection', shownSet.size + winterRank1BoughtCount.value + valentineRank1BoughtCount.value)
-
+				// updateProgress('Collection', shownSet.size + winterRank1BoughtCount.value + valentineRank1BoughtCount.value)
+				updateProgress('Collection', shownSet.size)
 				const completedQuestsCount = Object.values(questsProgress).filter(q => q.finished).length
 				updateProgress('valentineWords', questsProgress['quest-1']?.score || 0)
 				updateProgress('firstValentineQuest', completedQuestsCount > 0 ? 1 : 0)
@@ -1606,7 +1600,8 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 	}
 
 	watch(lastUnlockedAward, (award) => {
-		if (award) updateProgress('Collection', shownSet.size + winterRank1BoughtCount.value + valentineRank1BoughtCount.value)
+		if (award) updateProgress('Collection', shownSet.size)
+		// if (award) updateProgress('Collection', shownSet.size + winterRank1BoughtCount.value + valentineRank1BoughtCount.value)
 	})
 
 	return {
