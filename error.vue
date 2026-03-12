@@ -44,28 +44,6 @@ const errorData = computed(() => {
         <span class="hero-number">{{ errorData.code }}</span>
       </div>
       <div class="main-folder">
-        <header class="folder-header">
-          <div class="top-row">
-            <span class="agency-name">SKILLUP DETECTIVE AGENCY</span>
-          </div>
-          <h1 class="case-title">{{ errorData.caseName }}</h1>
-        </header>
-        <div class="folder-body">
-          <div class="detective-profile">
-            <div class="avatar-circle">🦔</div>
-            <div class="speech-bubble">
-              <strong>{{ errorData.question }}</strong>
-              <p>{{ errorData.description }}</p>
-            </div>
-          </div>
-          <div class="evidence-box">
-            <h3 class="evidence-title">УЛИКА: Грамматика</h3>
-            <p class="evidence-text">{{ errorData.rule }}</p>
-            <div class="evidence-example">
-              <span class="de-flag">DE</span> {{ errorData.example }}
-            </div>
-          </div>
-        </div>
         <footer class="folder-footer">
           <button class="prime-btn" @click="handleError">
             {{ errorData.btnText }}

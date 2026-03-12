@@ -7,7 +7,6 @@
         :text="modalData.text"
         @close="closeAward"
     />
-
     <div class="awards__header">
       <h1 class="awards__title">{{ t('Награды') }}</h1>
       <button @click="questionModal" class="awards__info-btn">
@@ -17,7 +16,6 @@
           <span class="cartoon-board__sep">/</span>
           <span class="cartoon-board__total">{{ awardsTotal }}</span>
         </div>
-
       </button>
     </div>
     <div class="awards__list-scroll">
