@@ -11,14 +11,14 @@ export const overAchievment = [
 				currentProgress: 0,
 				targetProgress: 1
 			},
-			{
-				id: "firstAcademicCap",
-				name: "generalCategory.firstAcademicCapLabel",
-				description: "generalCategory.firstAcademicCapDescription",
-				icon: "🎓",
-				currentProgress: 0,
-				targetProgress: 1
-			},
+			// {
+			// 	id: "firstAcademicCap",
+			// 	name: "generalCategory.firstAcademicCapLabel",
+			// 	description: "generalCategory.firstAcademicCapDescription",
+			// 	icon: "🎓",
+			// 	currentProgress: 0,
+			// 	targetProgress: 1
+			// },
 			{
 				id: "daily42",
 				name: "generalCategory.dailyQuestText",
