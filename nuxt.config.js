@@ -120,6 +120,7 @@ export default defineNuxtConfig({
 		ADMIN_UID1: process.env.ADMIN_UID1 || env.ADMIN_UID1,
 		ADMIN_UID2: process.env.ADMIN_UID2 || env.ADMIN_UID2,
 		public: {
+			stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY || env.STRIPE_PUBLISHABLE_KEY,
 			firebaseApiKey: firebaseConfig.apiKey,
 			firebaseAuthDomain: firebaseConfig.authDomain,
 			firebaseProjectId: firebaseConfig.projectId,
@@ -264,7 +265,6 @@ export default defineNuxtConfig({
 		'/contact': { redirect: { to: '/', statusCode: 301 } },
 		'/admin/**': { status: 404 },
 		'/wp-login.php': { status: 404 },
-		'/sw.js': { headers: { 'Cache-Control': 'public, max-age=7200, must-revalidate' } },
 		'/_nuxt/**': { headers: { 'Cache-Control': 'public, max-age=31536000, immutable' } },
 		'/sounds/**': { headers: { 'Cache-Control': 'public, max-age=2592000' } },
 		'/sw.js': { headers: { 'Cache-Control': 'public, max-age=7200, must-revalidate' } },
