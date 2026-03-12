@@ -13,8 +13,8 @@ export const overAchievment = [
 			},
 			// {
 			// 	id: "firstAcademicCap",
-			// 	name: "Первая конфедератка",
-			// 	description: "Награда за верность: выполните свои первые ежедневные задания.",
+			// 	name: "generalCategory.firstAcademicCapLabel",
+			// 	description: "generalCategory.firstAcademicCapDescription",
 			// 	icon: "🎓",
 			// 	currentProgress: 0,
 			// 	targetProgress: 1

@@ -47,6 +47,7 @@ export const userAuthStore = defineStore('auth', () => {
     const initialized = ref(false)
     const shouldShowFeedbackSurvey = ref(false)
     const totalHats = ref(0)
+    const claimedBonuses = ref([])
     const freezeEndsAt = ref(null)
     const IMMUNITY_RANK_HATS = 500
 
@@ -55,6 +56,22 @@ export const userAuthStore = defineStore('auth', () => {
         sale_10: false,
         sale_15: false
     })
+
+    const addClaimedBonus = async (hatAmount) => {
+        const user = getAuth().currentUser
+        if (!user) return
+        if (!claimedBonuses.value.includes(hatAmount)) {
+            claimedBonuses.value.push(hatAmount)
+            const userDocRef = doc(db, 'users', user.uid)
+            try {
+                await updateDoc(userDocRef, {
+                    claimedBonuses: claimedBonuses.value
+                })
+            } catch (e) {
+                console.error('Ошибка при сохранении бонуса:', e)
+            }
+        }
+    }
 
     const toMillis = (val) => {
         if (!val) return null
@@ -221,6 +238,7 @@ export const userAuthStore = defineStore('auth', () => {
         hasSeenOnboarding.value = data.hasSeenOnboarding === true
         totalHats.value = data.totalHats || 0
         freezeEndsAt.value = toMillis(data.freezeEndsAt)
+        claimedBonuses.value = data.claimedBonuses || []
         if (data.points !== undefined) langStore.points = data.points;
         if (data.exp !== undefined) langStore.exp = data.exp;
         if (data.totalEarnedPoints !== undefined) langStore.totalEarnedPoints = data.totalEarnedPoints;
@@ -279,7 +297,6 @@ export const userAuthStore = defineStore('auth', () => {
         if (!authUser) return
         const msToAdd = days * 24 * 60 * 60 * 1000
         let newDate
-        // Если freezeEndsAt уже число (благодаря toMillis), математика сработает
         if (isFreezeActive.value && typeof freezeEndsAt.value === 'number') {
             newDate = freezeEndsAt.value + msToAdd
         } else {
@@ -314,6 +331,7 @@ export const userAuthStore = defineStore('auth', () => {
                 isPremium: false,
                 totalHats: 0,
                 points: 0,
+                claimedBonuses: [],
                 sale_5: false,
                 sale_10: false,
                 sale_15: false,
@@ -363,6 +381,7 @@ export const userAuthStore = defineStore('auth', () => {
             hasSeenOnboarding: false,
             totalHats: 0,
             points: 0,
+            claimedBonuses: [],
             sale_5: false,
             sale_10: false,
             sale_15: false,
@@ -649,5 +668,7 @@ export const userAuthStore = defineStore('auth', () => {
         isFreezeActive,
         activateFreeze,
         cancelFreeze,
+        claimedBonuses,
+        addClaimedBonus
     }
 })

@@ -642,10 +642,10 @@ const handleCategoryClick = (category) => {
 
 .sidebar-title {
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.4rem;
   color: #1e1e1e;
   font-family: "Nunito", sans-serif;
-  font-size: 2rem;
+  font-size: 1.7rem;
   flex-shrink: 0;
 }
 
@@ -877,6 +877,10 @@ const handleCategoryClick = (category) => {
     transition: transform .3s ease;
     z-index: 2;
     border: none;
+  }
+
+  .content-header h1 {
+    font-size: 2rem;
   }
 
   .content-area.open {
