@@ -11,7 +11,7 @@
         </template>
         <template v-else>
           <div class="status-inline">
-            <span class="status-pill is-free">🔓 {{ t('cabinet.withoutPremium') }}</span>
+            <span class="status-pill is-free">❌</span>
             <button @click="routeToPay" class="premium__btn">
               {{ t('cabinet.buyPremium') }}
             </button>
@@ -193,6 +193,7 @@ const openDeleteModal = () => {
 .btn-outline-danger {
   background: transparent;
   border: 1px solid rgba(239, 68, 68, 0.6);
+  margin-left: auto;
 }
 
 .btn-danger {
@@ -211,21 +212,20 @@ const openDeleteModal = () => {
   padding: 8px 14px;
   color: var(--titleColor);
 }
-.status-pill.is-free{
 
-}
+
+
 @media (max-width: 1023px) {
   .subscription-status-row {
-    flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: space-between;
     gap: 10px;
   }
 
   .subscription-status {
     width: 100%;
-    justify-content: flex-start;
-    min-width: auto;
   }
+
 
   .status-inline {
     width: 100%;
@@ -235,6 +235,7 @@ const openDeleteModal = () => {
   .premium__status-wrapper {
     flex-direction: column;
     align-items: flex-start;
+    padding: 0;
   }
 }
 </style>

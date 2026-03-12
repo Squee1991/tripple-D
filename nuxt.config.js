@@ -120,7 +120,7 @@ export default defineNuxtConfig({
 		ADMIN_UID1: process.env.ADMIN_UID1 || env.ADMIN_UID1,
 		ADMIN_UID2: process.env.ADMIN_UID2 || env.ADMIN_UID2,
 		public: {
-			stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY || env.STRIPE_PUBLISHABLE_KEY,
+			stripePublishableKey: process.env.VITE_STRIPE_PUBLIC_KEY || env.VITE_STRIPE_PUBLIC_KEY,
 			firebaseApiKey: firebaseConfig.apiKey,
 			firebaseAuthDomain: firebaseConfig.authDomain,
 			firebaseProjectId: firebaseConfig.projectId,

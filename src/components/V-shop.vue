@@ -14,6 +14,7 @@
             class="shop-card"
             :class="card.classes"
         >
+          <img v-if="card.hotIcon" class="card__deal-icon" :src="card.hotIcon" alt="HotDeal">
           <div class="shop-card__preview">
             <img :src="card.icon" :alt="card.id" class="shop-card__img"/>
             <div v-if="card.isOwned" class="shop-card__status-badge">{{ t('shop.bought')}}</div>
@@ -132,7 +133,7 @@ import Sale from '../../assets/images/save5.svg'
 import Sale10 from '../../assets/images/rocket_10.svg'
 import Sale15 from '../../assets/images/hot-air-ballon15.svg'
 import GraduateHat from '../../assets/images/graduate-hat.svg'
-
+import HotDeal from '../../assets/images/hot-deal.svg'
 const {t} = useI18n()
 const questStore = userChainStore()
 const langStore = userlangStore()
@@ -181,6 +182,7 @@ const shopCards = computed(() => {
       id: "sale_5",
       title: t('cardSales.title5'),
       description: "",
+      hotIcon: HotDeal,
       icon: Sale,
       price: PRICES.SALE_5,
       requiredHats: DISCOUNT_REQ_HATS[5],
@@ -190,6 +192,7 @@ const shopCards = computed(() => {
       id: "sale_10",
       title: t('cardSales.title10'),
       description: "",
+      hotIcon: HotDeal,
       icon: Sale10,
       price: PRICES.SALE_10,
       requiredHats: DISCOUNT_REQ_HATS[10],
@@ -199,12 +202,14 @@ const shopCards = computed(() => {
       id: "sale_15",
       title:  t('cardSales.title15'),
       description: "",
+      hotIcon: HotDeal,
       icon: Sale15,
       price: PRICES.SALE_15,
       requiredHats: DISCOUNT_REQ_HATS[15],
       type: 'permanent'
     },
   ]
+
   return cardsData.map(card => {
     let isOwned = false
     let isActive = false
@@ -219,25 +224,36 @@ const shopCards = computed(() => {
       isMaxLimit = isMaxHearts.value
       isDisabled = isMaxLimit
       btnLabel = isMaxLimit ? t('cardsShop.maximum') : t('cardsShop.buy')
-    } else if (card.id === 'time_freeze') {
+    }
+    else if (card.id === 'time_freeze') {
       isActive = isFreezeActive.value
-      btnLabel = isActive ?  t('cardsShop.extend') : t('cardsShop.buy')
-    } else if (card.type === 'permanent') {
+      btnLabel = isActive ? t('cardsShop.extend') : t('cardsShop.buy')
+    }
+    else if (card.type === 'permanent') {
       isOwned = authStore.premiumDiscount?.[card.id] === true
-      const notEnoughHats = authStore.totalHats < (card.requiredHats || 0)
-      const notEnoughPoints = langStore.points < card.price
+      const hasEnoughHats = authStore.totalHats >= (card.requiredHats || 0)
+      const canAfford = langStore.points >= card.price
       if (isOwned) {
         btnLabel = t('shop.bought')
         isDisabled = true
+        isActive = hasEnoughHats
       } else {
-        isDisabled = notEnoughHats || notEnoughPoints
+        isDisabled = !hasEnoughHats || !canAfford
+        btnLabel = t('cardsShop.buy')
       }
+    }
+    const isLevelClaimed = authStore.claimedBonuses?.includes(card.requiredHats)
+    if (isLevelClaimed && card.type !== 'consumable') {
+      isOwned = true
+      btnLabel = "Бонус получен"
+      isDisabled = true
     }
     const classes = {
       'shop-card--owned': isOwned,
       'shop-card--active': isActive,
-      'shop-card--locked': isDisabled && !isOwned && !isMaxLimit
+      'shop-card--locked': (card.requiredHats && authStore.totalHats < card.requiredHats) && !isOwned
     }
+
     return {
       ...card,
       isOwned,
@@ -336,6 +352,7 @@ const confirmPurchase = async () => {
   font-family: "Nunito", sans-serif;
 }
 
+
 .shop__content {
   overflow-y: auto;
   max-height: calc(100vh - 235px);
@@ -397,7 +414,15 @@ const confirmPurchase = async () => {
   flex-direction: column;
   transition: transform 0.2s, border-color 0.2s;
   position: relative;
-  min-height: 280px;
+  min-height: 270px;
+}
+
+.card__deal-icon {
+  width: 67px;
+ position: absolute;
+  z-index: 11;
+  right: -15px;
+  top: -5px;
 }
 
 .shop-card:hover {
@@ -431,14 +456,14 @@ const confirmPurchase = async () => {
 
 .shop-card__status-badge {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 5px;
+  left: 5px;
   background: #4caf50;
   color: white;
   padding: 4px 8px;
   border-radius: 8px;
   font-size: 10px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .shop-card__status-badge--freeze {
@@ -487,10 +512,8 @@ const confirmPurchase = async () => {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 6px;
-
   background: rgba(255, 255, 255, 0.05);
-  padding: 8px 10px;
+  padding: 5px 10px;
   border-radius: 10px;
   border: 1px solid rgba(255, 208, 75, 0.2);
 }
@@ -561,7 +584,6 @@ const confirmPurchase = async () => {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
 }
 
 .btn-price-icon {
