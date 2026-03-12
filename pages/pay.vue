@@ -160,11 +160,9 @@ async function pay() {
     alert('Пожалуйста, войдите в аккаунт')
     return
   }
+
   const priceId = 'price_1SvdnE24sKuPwF6cZoD2ZJn3'
-  console.log('🚀 Начинаем оплату...', {
-    priceId,
-    coupon: selectedDiscountId.value
-  })
+
   try {
     const response = await $fetch('/api/stripe/checkout', {
       method: 'POST',
@@ -175,18 +173,17 @@ async function pay() {
         couponId: selectedDiscountId.value
       },
     })
-    if (response.error) {
+
+    if (response.url) {
+      // Это самый надежный способ. Мы просто идем по ссылке, которую дал сервер.
+      window.location.href = response.url
+    } else if (response.error) {
       console.error('Ошибка сервера:', response.error)
-      alert('Ошибка при создании оплаты: ' + response.error)
-      return
-    }
-    if (response.sessionId) {
-      const stripe = await getStripe()
-      await stripe.redirectToCheckout({sessionId: response.sessionId})
+      alert('Ошибка: ' + response.error)
     }
   } catch (err) {
-    console.error('Ошибка сети или кода:', err)
-    alert('Произошла ошибка соединения. Проверьте консоль.')
+    console.error('Ошибка сети:', err)
+    alert('Произошла ошибка соединения. Проверьте логи сервера.')
   }
 }
 </script>
