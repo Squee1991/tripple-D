@@ -160,7 +160,7 @@ async function pay() {
     alert('Пожалуйста, войдите в аккаунт')
     return
   }
-  const priceId = 'price_1SvfFw0mqXJB1TZDYZ8qmtKf'
+  const priceId = 'price_1SvdnE24sKuPwF6cZoD2ZJn3'
   console.log('🚀 Начинаем оплату...', {
     priceId,
     coupon: selectedDiscountId.value
