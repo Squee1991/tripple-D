@@ -4,7 +4,7 @@ import {ref} from 'vue'
 import { userAuthStore} from "/store/authStore.js";
 import { userlangStore } from "/store/learningStore.js";
 export const useRankUserStore = defineStore('rankUserStore', () => {
-   const authStore = userAuthStore()
+	const authStore = userAuthStore()
 	const langStore = userlangStore()
 	const ranksData = [
 		{
@@ -116,16 +116,19 @@ export const useRankUserStore = defineStore('rankUserStore', () => {
 	}
 
 	const checkRewardUI = async () => {
-		const currentHats = authStore.totalHats
+		const currentHats = Number(authStore.totalHats)
+		const claimedBonuses = authStore.claimedBonuses || []
 		ranksData.forEach((rankGroup) => {
 			rankGroup.levels.forEach((level, levelIndex) => {
 				if (currentHats === level.hats) {
-					if (typeof level.bonus === 'number') {
-
+					const isNumberBonus = typeof level.bonus === 'number'
+					const alreadyClaimed = claimedBonuses.includes(level.hats)
+					if (isNumberBonus && !alreadyClaimed) {
 						langStore.points += level.bonus
 						if (typeof langStore.saveToFirebase === 'function') {
 							langStore.saveToFirebase()
 						}
+						authStore.addClaimedBonus(level.hats)
 					}
 					const rewardIcon = rankGroup.icons ? rankGroup.icons[levelIndex].icon : rankGroup.icon
 					currentReward.value = {

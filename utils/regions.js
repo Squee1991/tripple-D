@@ -27,7 +27,7 @@ export const regions = {
 				pathTo: "stone-reach",
 				theme: "stone",
 				name: "locationNames.stone-reach",
-				level: 0,
+				level: 2,
 				desc: "regions.descriptionStoneReach",
 				icon: StoneReach
 			},
@@ -36,7 +36,7 @@ export const regions = {
 				pathTo: "wind-valley",
 				theme: "winds",
 				name: "locationNames.wind-valley",
-				level: 0,
+				level: 4,
 				desc: "regions.descriptionWindValley",
 				icon: WindValley
 			},
@@ -45,7 +45,7 @@ export const regions = {
 				pathTo: "lake-ruins",
 				theme: "ruins",
 				name: "locationNames.lake-ruins",
-				level: 0,
+				level: 6,
 				desc: "regions.descriptionLakeRuins",
 				icon: LakeRuins
 			},
@@ -54,7 +54,7 @@ export const regions = {
 				pathTo: "north-cliffs",
 				theme: "north",
 				name: "locationNames.north-cliffs",
-				level: 0,
+				level: 8,
 				desc: "regions.descriptionNorthCliffs",
 				icon: NorthCliffs
 			},
@@ -63,7 +63,7 @@ export const regions = {
 				pathTo: "storm-coast",
 				theme: "storm",
 				name: "locationNames.storm-coast",
-				level: 0,
+				level: 10,
 				desc: "regions.descriptionStormCoast",
 				icon: StormCoast
 			},
@@ -72,7 +72,7 @@ export const regions = {
 				pathTo: "master-lands",
 				theme: "master",
 				name: "locationNames.master-lands",
-				level: 0,
+				level: 12,
 				desc: "regions.descriptionMasterLands",
 				icon: MasterLands
 			},
@@ -81,7 +81,7 @@ export const regions = {
 				pathTo: "wild-lands",
 				theme: "wild",
 				name: "locationNames.wild-lands",
-				level: 0,
+				level: 14,
 				desc: "regions.descriptionWildLands",
 				icon: WildLand
 			}

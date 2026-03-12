@@ -7,7 +7,6 @@
         :text="modalData.text"
         @close="closeAward"
     />
-
     <div class="awards__header">
       <h1 class="awards__title">{{ t('Награды') }}</h1>
       <button @click="questionModal" class="awards__info-btn">
@@ -17,7 +16,6 @@
           <span class="cartoon-board__sep">/</span>
           <span class="cartoon-board__total">{{ awardsTotal }}</span>
         </div>
-
       </button>
     </div>
     <div class="awards__list-scroll">
@@ -26,6 +24,7 @@
             v-for="award in sortedAwards"
             class="shop-item"
             :class="{ locked: award.locked }"
+            @click="openAward(award)"
         >
           <div class="image-wrapper">
             <img :class="{ locked: award.locked }" :src="award.icon" alt="award" class="item-img"/>
@@ -66,6 +65,11 @@ const modalData = ref({
 })
 
 const questionModal = () => {
+  modalData.value = {
+    title: t('awardModal.title'),
+    icon: AwardIconModal,
+    text: t('awardModal.description')
+  }
   showModal.value = true
 }
 
@@ -73,8 +77,13 @@ const showModal = ref(false)
 const selectedAward = ref({})
 
 function openAward(award) {
-  if (award.locked) return
   selectedAward.value = award
+  modalData.value = {
+    title: t(award.title),
+    icon: award.icon,
+    text: award.description ? t(award.description) : t('awardModal.description')
+  }
+
   showModal.value = true
 }
 
@@ -101,7 +110,7 @@ function closeAward() {
   width: 165px;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -329,9 +338,4 @@ button:disabled {
   box-shadow: none;
 }
 
-@media (min-width: 1024px ) {
-  .shop-item:hover {
-    transform: translateY(-1px);
-  }
-}
 </style>

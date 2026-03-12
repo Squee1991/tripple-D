@@ -4,7 +4,6 @@ import { getFirestore } from 'firebase-admin/firestore'
 import { initializeApp, getApps, cert } from 'firebase-admin/app'
 
 export default defineEventHandler(async (event) => {
-	// 1. НАША ЖЕЛЕЗОБЕТОННАЯ ИНИЦИАЛИЗАЦИЯ FIREBASE (ты её уже знаешь)
 	if (getApps().length === 0) {
 		try {
 			const serviceAccountJson = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON
@@ -21,10 +20,8 @@ export default defineEventHandler(async (event) => {
 			return { error: 'Server Config Error' }
 		}
 	}
-
 	const config = useRuntimeConfig()
 	const stripeKey = config.stripeSecret || process.env.STRIPE_SECRET_KEY
-	// НАМ ПОНАДОБИТСЯ НОВЫЙ КЛЮЧ - СЕКРЕТ ВЕБХУКА!
 	const webhookSecret = config.stripeWebhookSecret || process.env.STRIPE_WEBHOOK_SECRET
 
 	if (!stripeKey || !webhookSecret) {
@@ -34,16 +31,9 @@ export default defineEventHandler(async (event) => {
 	}
 
 	const stripe = new Stripe(stripeKey, { apiVersion: '2024-06-20' })
-
-	// 2. ЧИТАЕМ "СЫРЫЕ" ДАННЫЕ И ПОДПИСЬ
-	// ВАЖНО: Мы используем readRawBody вместо readBody!
-	// Stripe требует проверять подпись именно на "сыром" тексте, до его превращения в JSON.
 	const body = await readRawBody(event)
 	const signature = getHeader(event, 'stripe-signature')
-
 	let stripeEvent
-
-	// 3. ПРОВЕРЯЕМ ПОДПИСЬ (Точно ли это Stripe прислал?)
 	try {
 		stripeEvent = stripe.webhooks.constructEvent(body, signature, webhookSecret)
 	} catch (err) {
@@ -51,12 +41,8 @@ export default defineEventHandler(async (event) => {
 		setResponseStatus(event, 400)
 		return { error: `Webhook Error: ${err.message}` }
 	}
-
-	// 4. ОБРАБАТЫВАЕМ СОБЫТИЕ УСПЕШНОЙ ОПЛАТЫ
 	if (stripeEvent.type === 'checkout.session.completed') {
 		const session = stripeEvent.data.object
-
-		// Достаем данные юзера, которые мы передавали при создании чекаута в metadata
 		const userId = session.metadata?.firebaseUID
 		const discountUsed = session.metadata?.discountId || null
 
@@ -64,8 +50,6 @@ export default defineEventHandler(async (event) => {
 			try {
 				const db = getFirestore()
 				let subscriptionEndsAt = null
-
-				// Если нужно, получаем детали подписки, чтобы узнать дату окончания
 				if (session.subscription) {
 					const subDetails = await stripe.subscriptions.retrieve(session.subscription)
 					subscriptionEndsAt = new Date(subDetails.current_period_end * 1000).toISOString()
@@ -78,16 +62,12 @@ export default defineEventHandler(async (event) => {
 					subscriptionId: session.subscription || null,
 					updatedAt: new Date().toISOString()
 				}
-
-				// Сбрасываем скидку, если она была использована
 				if (discountUsed && ['sale_5', 'sale_10', 'sale_15'].includes(discountUsed)) {
 					updateData[discountUsed] = false
 					console.log(`🔥 [Webhook] Скидка ${discountUsed} сброшена для юзера ${userId}`)
 				}
-
 				await db.collection('users').doc(userId).set(updateData, { merge: true })
 				console.log(`✅ [Webhook] Юзер ${userId} получил премиум!`)
-
 			} catch (dbError) {
 				console.error('❌ [Webhook] Ошибка записи в базу:', dbError)
 			}
