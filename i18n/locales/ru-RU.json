@@ -6610,7 +6610,7 @@
   },
   "categoryAchievments": {
     "categoryLabel": "Категории Достижений",
-    "achievmentAreaLabel": "Прогресс Достижений",
+    "achievmentAreaLabel": "Прогресс",
     "general": "Общий",
     "duel": "Дуэль фраз",
     "guess": "Угадай слово",
@@ -6648,7 +6648,7 @@
   "specialCategory": {
     "specialCollectionText": "Коллекционер",
     "specialCollectionLabel": "Соберите целую коллекцию наград",
-    "specialLabel": "Лидерство в рейтинге",
+    "specialLabel": "Лидерство",
     "specialFirstLabel": "Легкий чемпион",
     "specialFirstText": "Займите первое место в рейтинге в легком режиме.",
     "specialSecondLabel": "Средний чемпион",
