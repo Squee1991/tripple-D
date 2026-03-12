@@ -82,24 +82,18 @@ import Stripe from 'stripe'
 import { readBody, defineEventHandler } from 'h3'
 import { getFirestore } from 'firebase-admin/firestore'
 import { initializeApp, getApps, cert } from 'firebase-admin/app'
-// Удалили импорты fs и path, на Vercel они нам не нужны!
 
 export default defineEventHandler(async (event) => {
-	// 1. Безопасная инициализация Firebase из ENV (как в checkout)
 	if (getApps().length === 0) {
 		try {
 			const serviceAccountJson = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON
 			if (!serviceAccountJson) {
 				throw new Error('Ключ GOOGLE_APPLICATION_CREDENTIALS_JSON не найден в Vercel!')
 			}
-
 			const serviceAccount = JSON.parse(serviceAccountJson)
-
-			// Магическая строчка: чинит приватный ключ
 			if (serviceAccount.private_key) {
 				serviceAccount.private_key = serviceAccount.private_key.replace(/\\n/g, '\n')
 			}
-
 			initializeApp({ credential: cert(serviceAccount) })
 			console.log('✅ [Confirm] Firebase Admin успешно подключен из ENV!')
 		} catch (e) {
@@ -115,14 +109,11 @@ export default defineEventHandler(async (event) => {
 	const stripe = new Stripe(stripeKey, { apiVersion: '2024-06-20' })
 	const body = await readBody(event)
 	const { sessionId } = body
-
 	if (!sessionId) return { success: false, error: 'No session_id' }
-
 	try {
 		const session = await stripe.checkout.sessions.retrieve(sessionId, {
 			expand: ['subscription']
 		})
-
 		if (session.payment_status === 'paid') {
 			let subscriptionEndsAt = null
 			if (session.subscription && typeof session.subscription === 'object') {

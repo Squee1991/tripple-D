@@ -5,14 +5,14 @@
     </button>
     <div class="comic__wrapper">
       <div class="comic__header">
-        <h1 class="comic-description">{{ t('payPage.title')}}</h1>
-        <p class="sub__description">{{ t('payPage.description')}}</p>
+        <h1 class="comic-description">{{ t('payPage.title') }}</h1>
+        <p class="sub__description">{{ t('payPage.description') }}</p>
       </div>
       <div class="subscription-box">
         <div class="compare-header">
-          <span class="label">{{ t('payPage.compareLabelOne')}}</span>
-          <span class="label">{{ t('payPage.compareLabelTwo')}}</span>
-          <span class="label super-label">{{ t('payPage.compareLabelThree')}}</span>
+          <span class="label">{{ t('payPage.compareLabelOne') }}</span>
+          <span class="label">{{ t('payPage.compareLabelTwo') }}</span>
+          <span class="label super-label">{{ t('payPage.compareLabelThree') }}</span>
         </div>
         <div class="compare-row" v-for="(feature, index) in features" :key="index">
           <div class="compare__label">
@@ -42,25 +42,33 @@
             ref="payButton"
             @click="pay"
         >
-          {{ t('payPage.getPremiumBtn') }} —
-          <span v-if="selectedDiscountId" class="old-price-inline">{{ BASE_PRICE }} €</span>
-          {{ finalPrice }} €
+          <span class="btn-title">{{ t('payPage.getPremiumBtn') }}</span>
+          <span class="btn-price-wrapper">
+             <span v-if="selectedDiscountId" class="old-price-inline">{{ BASE_PRICE }} €</span>
+             <span class="new-price">{{ finalPrice }} € {{ t('payPage.month') }}</span>
+           </span>
         </button>
       </div>
     </div>
     <transition name="slide-up">
       <div v-if="showStickyFooter && !authStore.isPremium" class="sticky-footer">
-        <button class="footer-btn" @click="pay">{{ t('payPage.getPremiumBtn')}}</button>
+        <button class="footer-btn" @click="pay">
+          <span class="btn-title">{{ t('payPage.getPremiumBtn') }}</span>
+          <span class="btn-price-wrapper">
+             <span v-if="selectedDiscountId" class="old-price-inline">{{ BASE_PRICE }} €</span>
+             <span class="new-price">{{ finalPrice }} € {{ t('payPage.month') }}</span>
+           </span>
+        </button>
       </div>
     </transition>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
-import { useRouter } from 'vue-router'
-import { userAuthStore } from '../store/authStore'
-import { getStripe } from '@/utils/stripe'
+import {ref, onMounted, onUnmounted} from 'vue'
+import {useRouter} from 'vue-router'
+import {userAuthStore} from '../store/authStore'
+import {getStripe} from '@/utils/stripe'
 import Books from '../assets/images/pay-images/books.svg'
 import Save from '../assets/images/pay-images/save.svg'
 import Ach from '../assets/images/pay-images/ach.svg'
@@ -72,15 +80,16 @@ import Exams from '../assets/images/pay-images/test.svg'
 import Competitions from '../assets/images/pay-images/competition.svg'
 import Future from '../assets/images/pay-images/future.svg'
 import {useSeoMeta} from "#imports";
+
 const authStore = userAuthStore()
 const payButton = ref(null)
 const showStickyFooter = ref(false)
 const router = useRouter()
-const { t } = useI18n()
+const {t} = useI18n()
 const backToMain = () => {
   router.push('/')
 }
-const BASE_PRICE = 6.99
+const BASE_PRICE = 1
 
 const finalPrice = computed(() => {
   if (!selectedDiscountId.value) return BASE_PRICE.toFixed(2)
@@ -98,11 +107,11 @@ const myAvailableCoupons = computed(() => {
       authStore.premiumDiscount.sale_10 ||
       authStore.premiumDiscount.sale_15
   if (hasAnyDiscount) {
-    list.push({ id: null, percent: 0, label: 'Без скидки' })
+    list.push({id: null, percent: 0, label: 'Без скидки'})
   }
-  if (authStore.premiumDiscount.sale_5) list.push({ id: 'sale_5', percent: 5, label: 'Скидка 5%' })
-  if (authStore.premiumDiscount.sale_10) list.push({ id: 'sale_10', percent: 10, label: 'Скидка 10%' })
-  if (authStore.premiumDiscount.sale_15) list.push({ id: 'sale_15', percent: 15, label: 'Скидка 15%' })
+  if (authStore.premiumDiscount.sale_5) list.push({id: 'sale_5', percent: 5, label: 'Скидка 5%'})
+  if (authStore.premiumDiscount.sale_10) list.push({id: 'sale_10', percent: 10, label: 'Скидка 10%'})
+  if (authStore.premiumDiscount.sale_15) list.push({id: 'sale_15', percent: 15, label: 'Скидка 15%'})
 
   return list
 })
@@ -117,23 +126,23 @@ useSeoMeta({
 
 let observer
 const features = [
-  { title: t('payPage.featureOne'), free: true, premium: true , icon: Books},
-  { title: t('payPage.featureTwo'), free: true, premium: true, icon: Save },
-  { title: t('payPage.featureThree'), free: true, premium: true, icon: Ach },
-  { title: t('payPage.featureFour'), free: true, premium: true, icon: Quests },
-  { title: t('payPage.featureFive'), free: false, premium: true, icon: Translate },
-  { title: t('payPage.featureSix'), free: false, premium: true, icon: Award },
-  { title: t('payPage.featureSeven'), free: false, premium: true, icon: Exams },
-  { title: t('payPage.featureEight'), free: false, premium: true, icon: Speaker },
-  { title: t('payPage.featureNine'), free: false, premium: true, icon: Competitions },
-  { title: t('payPage.featureTen'), free: false, premium: true, icon: Future },
+  {title: t('payPage.featureOne'), free: true, premium: true, icon: Books},
+  {title: t('payPage.featureTwo'), free: true, premium: true, icon: Save},
+  {title: t('payPage.featureThree'), free: true, premium: true, icon: Ach},
+  {title: t('payPage.featureFour'), free: true, premium: true, icon: Quests},
+  {title: t('payPage.featureFive'), free: false, premium: true, icon: Translate},
+  {title: t('payPage.featureSix'), free: false, premium: true, icon: Award},
+  {title: t('payPage.featureSeven'), free: false, premium: true, icon: Exams},
+  {title: t('payPage.featureEight'), free: false, premium: true, icon: Speaker},
+  {title: t('payPage.featureNine'), free: false, premium: true, icon: Competitions},
+  {title: t('payPage.featureTen'), free: false, premium: true, icon: Future},
 ]
 onMounted(() => {
   observer = new IntersectionObserver(
       ([entry]) => {
         showStickyFooter.value = !entry.isIntersecting
       },
-      { threshold: 1.0 }
+      {threshold: 1.0}
   )
   if (payButton.value) {
     observer.observe(payButton.value)
@@ -173,7 +182,7 @@ async function pay() {
     }
     if (response.sessionId) {
       const stripe = await getStripe()
-      await stripe.redirectToCheckout({ sessionId: response.sessionId })
+      await stripe.redirectToCheckout({sessionId: response.sessionId})
     }
   } catch (err) {
     console.error('Ошибка сети или кода:', err)
@@ -199,8 +208,8 @@ async function pay() {
   position: relative;
   display: inline-block;
   opacity: 0.7;
-  margin-right: 10px;
-  font-size: 1.2rem;
+  margin-right: 5px;
+  font-size: 1.1rem;
   font-weight: bold;
 }
 
@@ -235,6 +244,7 @@ async function pay() {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
 }
+
 .coupon-selector-btn {
   background: #333;
   color: #fff;
@@ -244,6 +254,7 @@ async function pay() {
   border-radius: 8px;
   cursor: pointer;
 }
+
 .coupon-selector-btn.is-active {
   border-color: #00e676;
   background: rgba(0, 230, 118, 0.2);
@@ -256,11 +267,13 @@ async function pay() {
   margin-left: 20px;
   gap: 20px;
 }
+
 .compare__label-text {
   width: 200px;
   display: flex;
   justify-content: start;
 }
+
 .comic-description {
   font-size: 1.5rem;
   margin-bottom: 10px;
@@ -279,7 +292,7 @@ async function pay() {
   border: 2px solid #fff;
   border-radius: 20px;
   padding: 30px 20px;
-  max-width:1000px;
+  max-width: 1000px;
   margin: 0 auto;
   backdrop-filter: blur(10px);
 }
@@ -313,11 +326,10 @@ async function pay() {
 }
 
 .pay-btn {
-  min-width: 390px;
   margin-top: 30px;
   background: #3889a6;
   color: white;
-  font-size: 1.2rem;
+  font-size: 17px;
   font-weight: bold;
   padding: 14px 28px;
   border: none;
@@ -325,6 +337,18 @@ async function pay() {
   cursor: pointer;
   box-shadow: 4px 4px 0 #000;
   transition: background 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 5px;
+}
+
+.btn-price-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .pay-btn:hover {
@@ -349,14 +373,19 @@ async function pay() {
 .footer-btn {
   background: #ffffff;
   color: #111;
-  font-size: 1.2rem;
+  font-size: 17px;
   font-weight: 700;
   padding: 18px 36px;
   border-radius: 14px;
   box-shadow: 0 4px #000;
   border: none;
   transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
+
 .footer-btn:hover {
   background: linear-gradient(to right, #b04727, #ff9900);
   transform: translateY(-2px);
@@ -367,6 +396,7 @@ async function pay() {
 .slide-up-leave-active {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
 .slide-up-enter-from,
 .slide-up-leave-to {
   transform: translateY(100%);
@@ -379,12 +409,15 @@ async function pay() {
     text-align: start;
     font-size: 0.9rem;
   }
+
   .compare__label {
     margin-left: 1px;
   }
+
   .subscription-box {
     padding: 15px;
   }
+
   .compare-header {
     font-size: 0.9rem;
   }

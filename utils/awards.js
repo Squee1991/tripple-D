@@ -23,32 +23,148 @@ import TeddyGift from '../assets/images/event-rewards/valentine-event/valentine-
 import CupidArrow from '../assets/images/event-rewards/valentine-event/valentine-rewards/cupidonArrow.svg'
 
 export const AWARDS = [
-	{key: 'explorer', title: 'awards.explorer', icon: Globus},
-	{key: 'Articlus', title: 'awards.articlus', icon: WasteMoney},
-	{key: 'registerAchievement', title: 'awards.registerAchievement', icon: IdCard},
-	{key: 'level10', title: 'awards.level10', icon: Wings},
-	{key: 'languageLands50', title: 'awards.languageLands50', icon: Compass},
-	{key: 'OneYearVeteran', title: 'awards.oneYearVeteran', icon: veteranMedal},
-	{key: 'wrong100Answers', title: 'awards.wrong100Answers', icon: talismanOfPatience},
-	{key: 'LastChance', title: 'awards.lastChance', icon: LastChance},
-	{key: 'guessedFastWords', title: 'awards.guessedFastWords', icon: Rocket},
-	{key: 'guessSixHundred', title: 'awards.guessSixHundred', icon: BookOfWisdom},
-	{key: 'daily', title: 'awards.daily', icon: SandGlass},
-	{key: 'guessedSafeWords', title: 'awards.guessedSafeWords', icon: Shield},
-	{key: 'all_cases', title: 'awards.allCases', icon: PuzzleAward},
-	{key: 'all_adjectives', title: 'awards.allAdjectives', icon: ColorPalette},
-	{key: 'all_verbs', title: 'awards.allVerbs', icon: SwordAward},
-	{key: 'FiveHearts', title: 'awards.fiveHearts', icon: HeartAward},
-	{key: 'daily42', title: 'awards.daily42', icon: Telescope},
-	{key: 'iAmGroot', title: 'awards.iAmGroot', icon: Groot},
-	{key: 'santaHat' , title: 'awards.santaHat', icon: SantaHat},
-	{key: 'christmasBall' , title: 'awards.christmasBall', icon: ChristmasBall},
-	{key: 'christmasWreath' , title: 'awards.christmasWreath', icon: ChristmasWreath},
-	{key: 'valentineBear' , title: 'awards.valentineBear', icon: TeddyGift},
-	{key: 'cupidArrow' , title: 'awards.cupidArrow', icon: CupidArrow},
+	{
+		key: 'explorer',
+		title: 'awards.explorer',
+		description: 'awards.explorerDescription',
+		icon: Globus
+	},
+	{
+		key: 'Articlus',
+		title: 'awards.articlus',
+		description: 'awards.articlusDescription',
+		icon: WasteMoney
+	},
+	{
+		key: 'registerAchievement',
+		description: 'awards.registerAchievementDescription',
+		title: 'awards.registerAchievement',
+		icon: IdCard
+	},
+	{
+		key: 'level10',
+		title: 'awards.level10',
+		description: 'awards.level10Description',
+		icon: Wings
+	},
+	{
+		key: 'languageLands50',
+		title: 'awards.languageLands50',
+		description: 'awards.languageLands50Description',
+		icon: Compass
+	},
+	{
+		key: 'OneYearVeteran',
+		title: 'awards.oneYearVeteran',
+		description: 'awards.oneYearVeteranDescription',
+		icon: veteranMedal
+	},
+	{
+		key: 'wrong100Answers',
+		title: 'awards.wrong100Answers',
+		description: 'awards.wrong100AnswersDescription',
+		icon: talismanOfPatience
+	},
+	{
+		key: 'LastChance',
+		title: 'awards.lastChance',
+		description: 'awards.lastChanceDescription',
+		icon: LastChance
+	},
+	{
+		key: 'guessedFastWords',
+		title: 'awards.guessedFastWords',
+		description: 'awards.guessedFastWordsDescription',
+		icon: Rocket
+	},
+	{
+		key: 'guessSixHundred',
+		title: 'awards.guessSixHundred',
+		description: 'awards.guessSixHundredDescription',
+		icon: BookOfWisdom
+	},
+	{
+		key: 'daily',
+		title: 'awards.daily',
+		description: 'awards.dailyDescription',
+		icon: SandGlass
+	},
+	{
+		key: 'guessedSafeWords',
+		title: 'awards.guessedSafeWords',
+		description: 'awards.guessedSafeWordsDescription',
+		icon: Shield
+	},
+	{
+		key: 'all_cases',
+		title: 'awards.allCases',
+		description: 'awards.allCasesDescription',
+		icon: PuzzleAward
+	},
+	{
+		key: 'all_adjectives',
+		title: 'awards.allAdjectives',
+		description: 'awards.allAdjectivesDescription',
+		icon: ColorPalette
+	},
+	{
+		key: 'all_verbs',
+		title: 'awards.allVerbs',
+		description: 'awards.allVerbsDescription',
+		icon: SwordAward
+	},
+	{
+		key: 'FiveHearts',
+		title: 'awards.fiveHearts',
+		description: 'awards.fiveHeartsDescription',
+		icon: HeartAward
+	},
+	{
+		key: 'daily42',
+		title: 'awards.daily42',
+		description: 'awards.daily42Description',
+		icon: Telescope
+	},
+	{
+		key: 'iAmGroot',
+		title: 'awards.iAmGroot',
+		description: 'awards.iAmGrootDescription',
+		icon: Groot
+	},
+	{
+		key: 'santaHat',
+		title: 'awards.santaHat',
+		description: 'awards.santaHatDescription',
+		icon: SantaHat
+	},
+	{
+		key: 'christmasBall',
+		title: 'awards.christmasBall',
+		description: 'awards.christmasBallDescription',
+		icon: ChristmasBall
+	},
+	{
+		key: 'christmasWreath',
+		title: 'awards.christmasWreath',
+		description: 'awards.christmasWreathDescription',
+		icon: ChristmasWreath
+	},
+	{
+		key: 'valentineBear',
+		title: 'awards.valentineBear',
+		description: 'awards.valentineBearDescription',
+		icon: TeddyGift
+	},
+	{
+		key: 'cupidArrow',
+		title: 'awards.cupidArrow',
+		description: 'awards.cupidArrowDescription',
+		icon: CupidArrow
+	},
 ]
 
 export const awardsByKey = Object.fromEntries(AWARDS.map(a => [a.key, a]))
+
 export function getAwardByKey(key) {
 	return awardsByKey[key] || null
 }
