@@ -1,285 +1,230 @@
 <script setup>
-import { computed } from 'vue'
+import {computed} from 'vue'
 
 const props = defineProps({
   error: Object
 })
 
 const handleError = () => {
-  clearError({ redirect: '/' })
+  clearError({redirect: '/'})
 }
 
-const errorData = computed(() => {
-  const code = props.error?.statusCode || 404
+const is500 = computed(() => props.error?.statusCode >= 500)
 
-  if (code >= 400 && code < 500) {
-    return {
-      code: '404',
-      caseName: 'ИСЧЕЗНОВЕНИЕ ОБЪЕКТА',
-      question: 'Wo bist du? (Где ты?)',
-      description: 'Агент Ёжик прибыл на место, но страница бесследно исчезла. Похоже, она застряла в текстурах Датива.',
-      rule: 'Для вопроса «Wo?» (Где?) мы используем Dativ. Артикль меняется!',
-      example: 'auf der Seite (die -> der)',
-      btnText: 'Вернуться на карту'
-    }
-  } else {
+const config = computed(() => {
+  if (is500.value) {
     return {
       code: '500',
-      caseName: 'ДИВЕРСИЯ В СЕРВЕРНОЙ',
-      question: 'Was ist passiert? (Что случилось?)',
-      description: 'Критический сбой! Мы ищем виновного (Akkusativ) и чиним оборудование.',
-      rule: 'Для вопроса «Was?» (Что?) мы используем Akkusativ. Мужской род меняется!',
-      example: 'den Server (der -> den)',
-      btnText: 'Попробовать снова'
+      title: 'УПС...',
+      subtitle: 'Сервер решил немного отдохнуть. Мы уже его будим.',
+      bg: '#4b6584',
+      charColor: '#d1d8e0',
+      btnColor: '#778ca3',
+      animationClass: 'float-mode'
     }
+  }
+  return {
+    code: '404',
+    title: 'ОЙ-ЙОЙ!',
+    subtitle: 'Похоже, эта страница потерялась в мультивселенной...',
+    bg: '#6c5ce7',
+    charColor: '#ffeaa7',
+    btnColor: '#0984e3',
+    animationClass: 'bounce-mode'
   }
 })
 </script>
 
 <template>
-  <div class="case-file-page">
-    <div class="texture-overlay"></div>
-    <div class="content-wrapper">
-      <div class="error-hero">
-        <span class="hero-number">{{ errorData.code }}</span>
+  <div class="cartoon-space" :style="{ background: config.bg }">
+    <div class="deco-blob one"></div>
+    <div class="deco-blob two"></div>
+    <div class="deco-star an-1">★</div>
+    <div class="deco-star an-2">★</div>
+    <div class="content-box">
+      <div class="code-wrapper" :class="config.animationClass">
+        <span class="char char-1" :style="{ color: config.charColor }">{{ config.code[0] }}</span>
+        <span class="char char-2" :style="{ color: config.charColor }">{{ config.code[1] }}</span>
+        <span class="char char-3" :style="{ color: config.charColor }">{{ config.code[2] }}</span>
       </div>
-      <div class="main-folder">
-        <footer class="folder-footer">
-          <button class="prime-btn" @click="handleError">
-            {{ errorData.btnText }}
-          </button>
-        </footer>
+      <div class="text-group">
+        <h1 class="title" :style="{ color: is500 ? '#d1d8e0' : '#fab1a0' }">{{ config.title }}</h1>
+        <p class="subtitle">{{ config.subtitle }}</p>
       </div>
+      <button class="bounce-btn" :style="{ background: config.btnColor }" @click="handleError">
+        <span class="btn-face">Домой!</span>
+      </button>
     </div>
   </div>
 </template>
 
 <style scoped>
 
-.case-file-page {
-  min-height: 100vh;
-  background-color: #2d3748;
+.cartoon-space {
+  height: 100vh;
   display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: flex-start;
-  padding: 60px 20px;
+  color: white;
+  font-family: "Nunito", sans-serif;
+  overflow: hidden;
   position: relative;
-  overflow-x: hidden;
-  font-family: 'Nunito', sans-serif;
+  transition: background 0.8s ease;
 }
 
-.texture-overlay {
+.deco-blob {
   position: absolute;
-  inset: 0;
-  opacity: 0.05;
-  pointer-events: none;
+  border-radius: 50%;
+  filter: blur(5px);
+  opacity: 0.3;
 }
 
-.content-wrapper {
-  width: 100%;
-  max-width: 650px;
+.one {
+  width: 400px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  top: -100px;
+  right: -100px;
+}
+
+.two {
+  width: 300px;
+  height: 300px;
+  background: rgba(0, 0, 0, 0.05);
+  bottom: -50px;
+  left: -50px;
+}
+
+.deco-star {
+  position: absolute;
+  font-size: 3rem;
+  color: #ffeaa7;
+  opacity: 0.5;
+}
+
+.an-1 {
+  top: 20%;
+  left: 15%;
+  animation: starPulse 3s infinite ease-in-out;
+}
+
+.an-2 {
+  bottom: 25%;
+  right: 18%;
+  animation: starPulse 3.5s infinite ease-in-out;
+}
+
+.content-box {
+  text-align: center;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 1;
+  gap: 2rem;
 }
 
-/* Огромные цифры сверху */
-.error-hero {
-  position: relative;
-  margin-bottom: -40px; /* Наплыв на папку */
-  z-index: 2;
-  text-align: center;
+.code-wrapper {
+  display: flex;
+  gap: 10px;
 }
 
-.hero-number {
-  font-size: 10rem;
+.char {
+  font-size: clamp(8rem, 25vw, 18rem);
   font-weight: 900;
-  color: rgba(255, 255, 255, 0.1);
   line-height: 0.8;
-  letter-spacing: -5px;
-  display: block;
-}
-
-.case-badge {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-5deg);
-  background: #e53e3e;
-  color: white;
-  padding: 10px 30px;
-  font-family: "Nunito", sans-serif;
-  font-size: 1.5rem;
-  border: 4px solid #fff;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-}
-
-/* Основная папка */
-.main-folder {
-  background: #fcf6e3;
-  width: 100%;
-  border: 4px solid #1a202c;
-  border-radius: 4px; /* Более строгие углы для эффекта бумаги */
-  box-shadow: 20px 20px 0 rgba(0,0,0,0.2);
-  padding: 60px 40px 40px;
-  position: relative;
-}
-
-.folder-header {
-  border-bottom: 2px solid #1a202c;
-  margin-bottom: 30px;
-  padding-bottom: 20px;
-}
-
-.top-row {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.75rem;
-  font-weight: 900;
-  color: #718096;
-  letter-spacing: 2px;
-  margin-bottom: 10px;
-}
-
-.case-title {
-  font-size: 2rem;
-  color: #1a202c;
-  font-weight: 900;
-  text-transform: uppercase;
-}
-
-/* Тело папки */
-.detective-profile {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-  margin-bottom: 40px;
-}
-
-.avatar-circle {
-  font-size: 3rem;
-  background: #fff;
-  border: 3px solid #1a202c;
-  width: 80px;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  flex-shrink: 0;
-  box-shadow: 4px 4px 0 #1a202c;
-}
-
-.speech-bubble {
-  background: #fff;
-  border: 3px solid #1a202c;
-  padding: 15px 20px;
-  border-radius: 0 20px 20px 20px;
-  position: relative;
-  font-size: 1.1rem;
-}
-
-.speech-bubble strong {
-  display: block;
-  color: #5b8edc;
-  margin-bottom: 5px;
-  font-size: 1.2rem;
-}
-
-/* Карточка улики */
-.evidence-box {
-  background: #fff;
-  border: 2px dashed #1a202c;
-  padding: 25px;
-  position: relative;
-  margin-top: 20px;
-}
-
-.tape {
-  position: absolute;
-  top: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 120px;
-  height: 30px;
-  background: rgba(246, 173, 85, 0.4);
-  backdrop-filter: blur(2px);
-}
-
-.evidence-title {
-  font-family: "Nunito", sans-serif;
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-  color: #2d3748;
-}
-
-.evidence-text {
-  font-weight: 700;
-  line-height: 1.4;
-  margin-bottom: 15px;
-}
-
-.evidence-example {
-  background: #1a202c;
-  color: #fff;
-  padding: 10px 15px;
-  border-radius: 8px;
-  font-weight: 900;
+  -webkit-text-stroke: 6px #2d3436;
+  text-shadow: 8px 10px 0px #2d3436;
   display: inline-block;
 }
 
-.de-flag {
-  color: #f6ad55;
-  margin-right: 8px;
+/* --- ПЛАВНАЯ АНИМАЦИЯ ДЛЯ 500 (Floating) --- */
+.float-mode .char {
+  animation: floatSlow 3s infinite ease-in-out alternate;
 }
 
-/* Кнопка */
-.prime-btn {
-  width: 100%;
-  background: #5b8edc;
-  color: #fff;
-  border: 3px solid #1a202c;
-  padding: 20px;
-  border-radius: 12px;
-  font-size: 1.3rem;
-  font-weight: 900;
+.float-mode .char-2 {
+  animation-delay: 0.3s;
+}
+
+.float-mode .char-3 {
+  animation-delay: 0.6s;
+}
+
+/* --- АНИМАЦИЯ ДЛЯ 404 (Bouncing) --- */
+.bounce-mode .char-1 {
+  animation: bounceUp 0.6s infinite alternate;
+}
+
+.bounce-mode .char-2 {
+  animation: bounceUp 0.6s infinite alternate 0.15s;
+}
+
+.bounce-mode .char-3 {
+  animation: bounceUp 0.6s infinite alternate 0.3s;
+}
+
+.title {
+  font-size: 3.5rem;
+  margin: 0;
+  -webkit-text-stroke: 3px #2d3436;
+  text-shadow: 4px 5px 0px #2d3436;
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  font-family: system-ui, sans-serif;
+  font-weight: 600;
+  color: #dfe6e9;
+  margin-top: 10px;
+}
+
+.bounce-btn {
+  border: 4px solid #2d3436;
+  border-radius: 20px;
   cursor: pointer;
-  box-shadow: 0 8px 0 #1a202c;
-  transition: all 0.1s;
-  margin-top: 20px;
+  box-shadow: 0 8px 0 #2d3436;
+  transition: all 0.1s ease;
 }
 
-.prime-btn:active {
-  box-shadow: 0 0 0 #1a202c;
+.btn-face {
+  display: block;
+  padding: 15px 40px;
+  font-weight: 900;
+  font-size: 1.8rem;
+  color: white;
+}
+
+.bounce-btn:active {
+  box-shadow: 0 0px 0 #2d3436;
   transform: translateY(8px);
 }
 
-/* АДАПТИВНОСТЬ */
-@media (max-width: 600px) {
-  .case-file-page { padding: 40px 15px; }
-
-  .hero-number { font-size: 6rem; }
-
-  .case-badge {
-    padding: 8px 20px;
-    font-size: 1.1rem;
+@keyframes bounceUp {
+  0% {
+    transform: translateY(0) rotate(-3deg);
   }
-
-  .main-folder {
-    padding: 40px 20px 30px;
+  100% {
+    transform: translateY(-25px) rotate(3deg);
   }
+}
 
-  .case-title { font-size: 1.4rem; }
-
-  .detective-profile {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+@keyframes floatSlow {
+  from {
+    transform: translateY(0) rotate(-1deg);
   }
+  to {
+    transform: translateY(15px) rotate(1deg);
+  }
+}
 
-  .speech-bubble {
-    border-radius: 20px;
+@keyframes starPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.6;
   }
 }
 </style>
