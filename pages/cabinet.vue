@@ -811,6 +811,7 @@ onMounted(async () => {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
+  max-width: 768px;
 }
 
 .account-tab {
