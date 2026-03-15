@@ -123,6 +123,15 @@ import Gym from 'assets/images/speak-themen/school/gym.jpg'
 import DivingRoom from 'assets/images/speak-themen/school/dining room.jpg'
 import RobotClub from 'assets/images/speak-themen/school/robotics club.jpg'
 
+import MoveFamily from 'assets/images/speak-themen/move/MoveFamily.jpg'
+import MoveRoomBoxes from 'assets/images/speak-themen/move/moveRoomBoxes.jpg'
+import Sofa from 'assets/images/speak-themen/move/sofa.jpg'
+import BoxesInAuto from 'assets/images/speak-themen/move/BoxesInTrack.jpg'
+import ChildWihBox from 'assets/images/speak-themen/move/ChildWithBox.jpg'
+import Carpet from 'assets/images/speak-themen/move/Carpet.jpg'
+import RoomWithBoxes from 'assets/images/speak-themen/move/RoomWithBoxes.jpg'
+import Bet from 'assets/images/speak-themen/move/Bet.jpg'
+
 export const topics = [
 	{
 		id: 'winter',
@@ -1246,6 +1255,95 @@ export const topics = [
 					B1: 'In dieser Berglandschaft hängt dichter Nebel zwischen den bewaldeten Hügeln, während im Tal ein kleiner Fluss unter einem grauen Himmel fließt.',
 				}
 			}
+		]
+	},
+	{
+		id: 'move',
+		label: 'Переезд',
+		icon: '🌦️',
+		gradient: 'linear-gradient(135deg, #F1F8E9 0%, #AED581 100%)',
+		textColor: '#93615B',
+		tasks: [
+			{
+				id: 1,
+				image: MoveFamily,
+				descriptions: {
+					A1: 'Das ist eine Landschaft. Die Sonne scheint und der Himmel ist blau. Hier sind viele Wolken. In der Mitte steht ein Baum. Das Gras ist grün. Das sind viele bunte Blumen: gelb, blau und rosa.',
+					A2: 'Auf dem Bild sieht man eine Natur an einem sonnigen Tag. Rechts befindet sich ein kleiner Teich mit blauem Wasser. Ein Baum steht direkt hinter dem Teich. Im Hintergrund kann man  Hügel und  Felder unter einem hellen Himmel sehen.',
+					B1: 'Das Bild zeigt eine grüne Wiese mit einem Teich und einem Baum in der Mitte, während im Hintergrund Hügel unter einem leicht bewölkten Himmel zu sehen sind.',
+
+				}
+			},
+			{
+				id: 2,
+				image: MoveRoomBoxes,
+				descriptions: {
+					A1: 'Das ist eine Landschaft. Die Sonne scheint und der Himmel ist blau. Hier sind viele Wolken. In der Mitte steht ein Baum. Das Gras ist grün. Das sind viele bunte Blumen: gelb, blau und rosa.',
+					A2: 'Auf dem Bild sieht man eine Natur an einem sonnigen Tag. Rechts befindet sich ein kleiner Teich mit blauem Wasser. Ein Baum steht direkt hinter dem Teich. Im Hintergrund kann man  Hügel und  Felder unter einem hellen Himmel sehen.',
+					B1: 'Das Bild zeigt eine grüne Wiese mit einem Teich und einem Baum in der Mitte, während im Hintergrund Hügel unter einem leicht bewölkten Himmel zu sehen sind.',
+
+				}
+			},
+			{
+				id: 3,
+				image: Sofa,
+				descriptions: {
+					A1: 'Das ist eine Landschaft. Die Sonne scheint und der Himmel ist blau. Hier sind viele Wolken. In der Mitte steht ein Baum. Das Gras ist grün. Das sind viele bunte Blumen: gelb, blau und rosa.',
+					A2: 'Auf dem Bild sieht man eine Natur an einem sonnigen Tag. Rechts befindet sich ein kleiner Teich mit blauem Wasser. Ein Baum steht direkt hinter dem Teich. Im Hintergrund kann man  Hügel und  Felder unter einem hellen Himmel sehen.',
+					B1: 'Das Bild zeigt eine grüne Wiese mit einem Teich und einem Baum in der Mitte, während im Hintergrund Hügel unter einem leicht bewölkten Himmel zu sehen sind.',
+
+				}
+			},
+			{
+				id: 4,
+				image: BoxesInAuto,
+				descriptions: {
+					A1: 'Das ist eine Landschaft. Die Sonne scheint und der Himmel ist blau. Hier sind viele Wolken. In der Mitte steht ein Baum. Das Gras ist grün. Das sind viele bunte Blumen: gelb, blau und rosa.',
+					A2: 'Auf dem Bild sieht man eine Natur an einem sonnigen Tag. Rechts befindet sich ein kleiner Teich mit blauem Wasser. Ein Baum steht direkt hinter dem Teich. Im Hintergrund kann man  Hügel und  Felder unter einem hellen Himmel sehen.',
+					B1: 'Das Bild zeigt eine grüne Wiese mit einem Teich und einem Baum in der Mitte, während im Hintergrund Hügel unter einem leicht bewölkten Himmel zu sehen sind.',
+
+				}
+			},
+			{
+				id: 5,
+				image: ChildWihBox,
+				descriptions: {
+					A1: 'Das ist eine Landschaft. Die Sonne scheint und der Himmel ist blau. Hier sind viele Wolken. In der Mitte steht ein Baum. Das Gras ist grün. Das sind viele bunte Blumen: gelb, blau und rosa.',
+					A2: 'Auf dem Bild sieht man eine Natur an einem sonnigen Tag. Rechts befindet sich ein kleiner Teich mit blauem Wasser. Ein Baum steht direkt hinter dem Teich. Im Hintergrund kann man  Hügel und  Felder unter einem hellen Himmel sehen.',
+					B1: 'Das Bild zeigt eine grüne Wiese mit einem Teich und einem Baum in der Mitte, während im Hintergrund Hügel unter einem leicht bewölkten Himmel zu sehen sind.',
+
+				}
+			},
+			{
+				id: 6,
+				image: Carpet,
+				descriptions: {
+					A1: 'Das ist eine Landschaft. Die Sonne scheint und der Himmel ist blau. Hier sind viele Wolken. In der Mitte steht ein Baum. Das Gras ist grün. Das sind viele bunte Blumen: gelb, blau und rosa.',
+					A2: 'Auf dem Bild sieht man eine Natur an einem sonnigen Tag. Rechts befindet sich ein kleiner Teich mit blauem Wasser. Ein Baum steht direkt hinter dem Teich. Im Hintergrund kann man  Hügel und  Felder unter einem hellen Himmel sehen.',
+					B1: 'Das Bild zeigt eine grüne Wiese mit einem Teich und einem Baum in der Mitte, während im Hintergrund Hügel unter einem leicht bewölkten Himmel zu sehen sind.',
+
+				}
+			},
+			{
+				id: 7,
+				image: RoomWithBoxes,
+				descriptions: {
+					A1: 'Das ist eine Landschaft. Die Sonne scheint und der Himmel ist blau. Hier sind viele Wolken. In der Mitte steht ein Baum. Das Gras ist grün. Das sind viele bunte Blumen: gelb, blau und rosa.',
+					A2: 'Auf dem Bild sieht man eine Natur an einem sonnigen Tag. Rechts befindet sich ein kleiner Teich mit blauem Wasser. Ein Baum steht direkt hinter dem Teich. Im Hintergrund kann man  Hügel und  Felder unter einem hellen Himmel sehen.',
+					B1: 'Das Bild zeigt eine grüne Wiese mit einem Teich und einem Baum in der Mitte, während im Hintergrund Hügel unter einem leicht bewölkten Himmel zu sehen sind.',
+
+				}
+			},
+			{
+				id: 8,
+				image: RoomWithBoxes,
+				descriptions: {
+					A1: 'Das ist eine Landschaft. Die Sonne scheint und der Himmel ist blau. Hier sind viele Wolken. In der Mitte steht ein Baum. Das Gras ist grün. Das sind viele bunte Blumen: gelb, blau und rosa.',
+					A2: 'Auf dem Bild sieht man eine Natur an einem sonnigen Tag. Rechts befindet sich ein kleiner Teich mit blauem Wasser. Ein Baum steht direkt hinter dem Teich. Im Hintergrund kann man  Hügel und  Felder unter einem hellen Himmel sehen.',
+					B1: 'Das Bild zeigt eine grüne Wiese mit einem Teich und einem Baum in der Mitte, während im Hintergrund Hügel unter einem leicht bewölkten Himmel zu sehen sind.',
+
+				}
+			},
 		]
 	}
 ]

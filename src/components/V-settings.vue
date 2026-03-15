@@ -305,14 +305,14 @@ onMounted(async () => {
 }
 
 .modal-title {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: 900;
   font-style: italic;
   margin-bottom: 1rem;
 }
 
 .modal-text {
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: 1.5rem;
   line-height: 1.4;
 }
