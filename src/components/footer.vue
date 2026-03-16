@@ -1,5 +1,6 @@
 <template>
   <footer class="footer" role="contentinfo">
+<!--    <img class="web" src="../../assets/images/halloween/spiderweb.svg" alt="">-->
     <div class="footer__container">
       <div class="footer__social">
         <div class="social__item" @click="toDiscord" role="button" aria-label="Discord" tabindex="0">
@@ -103,6 +104,15 @@ const toDiscord = () => {
   border-top-right-radius: 25px;
   padding: 17px 0 17px 0;
   border-top: 3px solid #d5d1d1;
+  overflow: hidden;
+}
+
+.web{
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  right: -8px;
+  top: -10px;
 }
 
 .footer__container {

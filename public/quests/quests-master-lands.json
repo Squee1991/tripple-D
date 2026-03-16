@@ -426,7 +426,7 @@
         "answer": "Ich beginne um acht Uhr",
         "accept": [
           "Ich beginne um 8 Uhr",
-          "Ich beginne um 8 Uhr"
+          "Ich beginne um acht Uhr"
         ]
       },
       {
@@ -715,14 +715,14 @@
       {
         "id": 14,
         "type": "speechToText",
-        "question": "\"masterLandsSixthQuests.questFourteen",
+        "question": "masterLandsSixthQuests.questFourteen",
         "text": "Vorsicht, der Gabelstapler kommt",
         "answer": "Vorsicht, der Gabelstapler kommt"
       },
       {
         "id": 15,
         "type": "speechToText",
-        "question": "\"masterLandsSixthQuests.questFifteen",
+        "question": "masterLandsSixthQuests.questFifteen",
         "text": "Der Hubwagen ist kaputt",
         "answer": "Der Hubwagen ist kaputt"
       }
