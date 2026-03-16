@@ -1,8 +1,4 @@
 <template>
-<!--  <div class="empty-content">-->
-<!--    <div class="empty-icon">🔰</div>-->
-<!--    <h3 class="empty-title">{{ t('regionsModal.title')}}</h3>-->
-<!--  </div>-->
   <div class="ranks-wrapper">
     <div class="hats-info">
       <div class="hats-left">
@@ -12,7 +8,7 @@
         <div class="hats-meta">
           <div class="hats-rank">{{ currentRankTitle }}</div>
           <div class="hats-hatsline">
-            <img class="hat-img" :src="EducationHut" alt="Конфератки"/>
+            <img class="hat-img" :src="EducationHut" alt="EducationHut"/>
             <span class="hat-value">{{ authStore.totalHats }}</span>
           </div>
         </div>
@@ -53,11 +49,31 @@
               />
             </div>
             <div class="card-label">Ранг {{ idx + 1 }}</div>
-            <div class="card-cost">🎓 {{ lvl.hats }}</div>
-            <div v-if="lvl.bonus" class="card-bonus" :class="{ 'is-discount': typeof lvl.bonus === 'string' }">
-              <div>{{ lvl.bonus }}</div>
-              <img v-if=" typeof lvl.bonus === 'number'" class="card__articlus" src="../../assets/images/articlus.png" alt="articlus">
+
+            <div class="card-bottom-info">
+              <div class="card-cost">
+                🎓 {{ lvl.hats }}
+              </div>
+
+              <div v-if="lvl.bonus"
+                   class="card-bonus"
+                   :class="{
+                     'is-discount': typeof lvl.bonus === 'string',
+                     'is-claimed': typeof lvl.bonus === 'number' && authStore.claimedBonuses?.includes(lvl.hats)
+                   }">
+
+                <span>
+                  <template v-if="typeof lvl.bonus === 'number'">+</template>{{ lvl.bonus }}
+                </span>
+
+                <img v-if="typeof lvl.bonus === 'number'" class="card__articlus" src="../../assets/images/articlus.png" alt="articlus">
+
+                <div v-if="typeof lvl.bonus === 'number' && authStore.claimedBonuses?.includes(lvl.hats)" class="claimed-check-circle">
+                  ✔
+                </div>
+              </div>
             </div>
+
           </div>
         </div>
       </div>
@@ -71,6 +87,7 @@ import {useRankUserStore} from '~/store/rankStore.js'
 import {userAuthStore} from '~/store/authStore.js'
 import {useSeoMeta} from "#imports"
 import EducationHut from '../../assets/images/graduate-hat.svg'
+
 const { t } = useI18n()
 const store = useRankUserStore()
 const authStore = userAuthStore()
@@ -84,7 +101,6 @@ const toRoman = (n) => {
 
 const currentRankInfo = computed(() => {
   const hats = authStore.totalHats ?? 0
-
   let best = {
     rankTitle: 'Новичок',
     lvlIndex: 0,
@@ -114,7 +130,6 @@ const currentRankTitle = computed(() => {
 const currentRankIcon = computed(() => currentRankInfo.value.icon)
 </script>
 
-
 <style scoped>
 .hats-left {
   display: flex;
@@ -125,11 +140,6 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
   margin: 0 auto;
   overflow-y: auto;
   max-height: calc(100vh - 250px);
-}
-
-.card__articlus {
-  width: 30px;
-  height: 20px;
 }
 
 .ranks-wrapper::-webkit-scrollbar {
@@ -234,24 +244,82 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
   color: var(--titleColor);
 }
 
-.card-cost {
-  display: inline-block;
-  background: #f1f3f5;
-  padding: 5px;
-  border-radius: 10px;
-  font-weight: 800;
+
+.card-bottom-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
   margin-top: 2px;
 }
 
+.card-cost {
+  background: #f1f3f5;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 800;
+  font-size: 14px;
+  color: #495057;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+
 .card-bonus {
-  margin-top: 8px;
-  font-size: 0.8em;
-  color: #2f9e44;
-  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-weight: 800;
+  font-size: 14px;
+  background: rgba(46, 204, 113, 0.15);
+  color: #27ae60;
+  border: 1px solid rgba(46, 204, 113, 0.4);
+  transition: all 0.3s ease;
+}
+
+.card-bonus .card__articlus {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.card-bonus.is-discount {
+  background: rgba(52, 152, 219, 0.1);
+  color: #2980b9;
+  border-color: rgba(52, 152, 219, 0.3);
+}
+
+.card-bonus.is-claimed {
+  background: #f8f9fa;
+  color: #adb5bd;
+  border-color: #dee2e6;
+}
+
+.card-bonus.is-claimed .card__articlus {
+  filter: grayscale(1);
+  opacity: 0.6;
+}
+
+.claimed-check-circle {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #2ecc71;
+  color: white;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  font-size: 10px;
+  margin-left: 2px;
+  box-shadow: 0 2px 4px rgba(46, 204, 113, 0.3);
 }
+
+/* --- КОНЕЦ СТИЛЕЙ ДЛЯ БЕЙДЖИКОВ --- */
+
 
 .hats-info {
   display: flex;
@@ -267,7 +335,6 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
   align-items: center;
   justify-content: center;
 }
-
 
 .hats-badge img {
   width: 80px;
@@ -287,7 +354,6 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
   font-size: 20px;
   color: var(--titleColor);
   line-height: 1.05;
-
   white-space: nowrap;
 }
 
@@ -427,7 +493,6 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
   max-width: 400px;
   text-align: center;
   margin: 30px auto;
-
 }
 
 .empty-icon {
@@ -449,5 +514,4 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
   color: #444;
   line-height: 1.4;
 }
-
 </style>

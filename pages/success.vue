@@ -1,151 +1,189 @@
 <script setup>
-import { useRoute, useRouter } from 'vue-router'
-import { userAuthStore } from '../store/authStore.js'
-import { onMounted, ref } from 'vue'
-import { getAuth, onAuthStateChanged } from 'firebase/auth'
+import {useRoute, useRouter} from 'vue-router'
+import {userAuthStore} from '../store/authStore.js'
+import {onMounted, ref} from 'vue'
+import {getAuth, onAuthStateChanged} from 'firebase/auth'
 
 const route = useRoute()
 const router = useRouter()
 const auth = userAuthStore()
 const sessionId = route.query.session_id
 
-const statusText = ref('Проверяем статус оплаты...')
-const isLoading = ref(true)
+const status = ref('processing') // 'processing' | 'success' | 'error'
+const statusMessage = ref('Подтверждаем транзакцию...')
 
-definePageMeta({
-  robots: {
-    index: false,
-    follow: false
-  }
-})
+definePageMeta({layout: 'blank'}) // Если есть пустой лейаут
 
 onMounted(() => {
-  if (sessionId) {
-    const authInstance = getAuth()
-    onAuthStateChanged(authInstance, async (user) => {
-      if (!user) {
-        console.error('Пользователь не авторизован')
-        statusText.value = 'Ошибка: пожалуйста, войдите в аккаунт'
-        isLoading.value = false
-        return
-      }
-
-      try {
-        const response = await $fetch('/api/stripe/confirm', {
-          method: 'POST',
-          body: { sessionId }
-        })
-
-        if (response.success && response.data) {
-          await auth.activatePremium(response.data)
-          statusText.value = 'Premium успешно активирован!'
-          isLoading.value = false
-        } else {
-          statusText.value = 'Ошибка: ' + (response.error || 'Неизвестная ошибка')
-          isLoading.value = false
-        }
-      } catch (e) {
-        console.error('Ошибка запроса:', e)
-        statusText.value = 'Ошибка соединения с сервером'
-        isLoading.value = false
-      }
-
-      // Перенаправление на главную
-      setTimeout(() => {
-        router.push('/')
-      }, 3000)
-    })
-  } else {
-    statusText.value = 'Ошибка: отсутствует номер сессии'
-    isLoading.value = false
-    setTimeout(() => router.push('/'), 3000)
+  if (!sessionId) {
+    status.value = 'error'
+    statusMessage.value = 'Сессия оплаты не найдена'
+    return
   }
+
+  const authInstance = getAuth()
+  onAuthStateChanged(authInstance, async (user) => {
+    if (!user) {
+      status.value = 'error'
+      statusMessage.value = 'Пожалуйста, авторизуйтесь для завершения'
+      return
+    }
+
+    try {
+      const response = await $fetch('/api/stripe/confirm', {
+        method: 'POST',
+        body: {sessionId}
+      })
+
+      if (response.success) {
+        await auth.activatePremium(response.data)
+        status.value = 'success'
+        statusMessage.value = 'Премиум доступ активирован'
+        // Быстрый редирект для успеха
+        setTimeout(() => router.push('/'), 4000)
+      } else {
+        status.value = 'error'
+        statusMessage.value = response.error || 'Ошибка активации'
+      }
+    } catch (e) {
+      status.value = 'error'
+      statusMessage.value = 'Ошибка связи с сервером'
+    }
+  })
 })
 </script>
 
 <template>
-  <div class="activation-page">
-    <div class="modal-card">
-      <div v-if="isLoading" class="loader"></div>
+  <div class="payment-status-container">
+    <div class="status-card" :class="status">
+      <div v-if="status === 'processing'" class="spinner"></div>
 
-      <div v-else class="icon-placeholder">
-        <span v-if="statusText.includes('успешно')">👑</span>
-        <span v-else>⚠️</span>
+      <div v-if="status === 'success'" class="icon-wrapper success-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
       </div>
 
-      <h1 class="status-title">{{ statusText }}</h1>
-      <p class="redirect-msg">Автоматический переход на главную...</p>
+      <div v-if="status === 'error'" class="icon-wrapper error-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </div>
+
+      <h1 class="title">{{ statusMessage }}</h1>
+      <p class="subtitle">
+        {{
+          status === 'success' ? 'Теперь вам доступны все функции сервиса.' : 'Произошла техническая заминка при обработке.'
+        }}
+      </p>
+
+      <div class="actions">
+        <button @click="router.push('/')" class="btn-primary">
+          На главную
+        </button>
+      </div>
+
+      <p v-if="status === 'success'" class="auto-redirect">
+        Перенаправление через несколько секунд...
+      </p>
     </div>
   </div>
 </template>
 
 <style scoped>
-.activation-page {
+.payment-status-container {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  /* Фоновый цвет, как у основного интерфейса */
-  background-color: #fcf6e3;
-  font-family: 'Nunito', 'Segoe UI', sans-serif;
-  padding: 20px;
+  background-color: #f8fafc; /* Светлый проф. фон */
+  padding: 1.5rem;
 }
 
-.modal-card {
-  background: #ffffff;
-  /* Имитация геймифицированных элементов: толстая граница и сплошная тень */
-  border: 3px solid #2d3748;
-  border-radius: 20px;
-  box-shadow: 0 8px 0 #2d3748;
-  padding: 40px 30px;
-  max-width: 500px;
+.status-card {
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  max-width: 420px;
   width: 100%;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  border: 1px solid #e2e8f0;
 }
 
-.icon-placeholder {
-  font-size: 64px;
-  margin-bottom: 15px;
-  line-height: 1;
-  animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.status-title {
-  font-size: 1.8rem;
-  color: #2d3748;
-  margin: 0 0 15px 0;
-  font-weight: 700;
-  line-height: 1.3;
-}
-
-.redirect-msg {
-  font-size: 1.1rem;
-  color: #718096;
-  margin: 0;
-  font-weight: 600;
-}
-
-.loader {
-  border: 6px solid #edf2f7;
-  /* Синий цвет, как у кнопки "Выбрать" на вашем сайте */
-  border-top: 6px solid #5b8edc;
+.icon-wrapper {
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.success-icon {
+  background-color: #f0fdf4;
+  color: #22c55e;
+}
+
+.error-icon {
+  background-color: #fef2f2;
+  color: #ef4444;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3b82f6;
+  border-radius: 50%;
   animation: spin 1s linear infinite;
-  margin-bottom: 25px;
+  margin: 0 auto 1.5rem;
+}
+
+.title {
+  color: #1e293b;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.subtitle {
+  color: #64748b;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.btn-primary {
+  background-color: #1e293b;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #334155;
+}
+
+.auto-redirect {
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  color: #94a3b8;
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-@keyframes popIn {
-  0% { transform: scale(0.5); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
+svg {
+  width: 32px;
+  height: 32px;
 }
 </style>
