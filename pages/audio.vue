@@ -2,47 +2,39 @@
   <div class="quiz-app">
     <div class="quiz-app-container">
       <transition name="quiz-pop" mode="out-in">
+
         <div v-if="screen === 'levels'" class="quiz-screen">
           <header class="quiz-header">
             <h1 class="quiz-header-title">Deutsch Quiz</h1>
             <p class="quiz-header-subtitle">Выбери свой уровень сложности</p>
           </header>
           <div class="quiz-grid quiz-grid-levels">
-            <button
-                v-for="level in ['A1', 'A2', 'B1']"
-                :key="level"
-                @click="selectLevel(level)"
-                class="level-card"
-            >
+            <button v-for="level in ['A1', 'A2', 'B1']" :key="level" @click="selectLevel(level)" class="level-card">
               <div class="level-card-content">
                 <span class="level-card-badge">{{ level }}</span>
-                <span class="level-card-name">{{ getLevelDescription(level) }}</span>
+                <span class="level-card-name">Уровень {{ level }}</span>
               </div>
               <div class="level-card-arrow">→</div>
             </button>
           </div>
         </div>
+
         <div v-else-if="screen === 'topics'" class="quiz-screen">
           <header class="quiz-header">
             <button @click="screen = 'levels'" class="quiz-back-btn">⬅ Уровни</button>
             <h2 class="quiz-header-title">Темы {{ currentLevel }}</h2>
           </header>
           <div class="quiz-grid quiz-grid-topics">
-            <button
-                v-for="topic in availableTopics"
-                :key="topic.id"
-                @click="selectTopic(topic)"
-                class="topic-card"
-            >
+            <button v-for="topic in availableTopics" :key="topic.id" @click="selectTopic(topic)" class="topic-card">
               <div class="topic-card-icon">{{ topic.icon }}</div>
               <div class="topic-card-info">
                 <h3 class="topic-card-title">{{ topic.title }}</h3>
-<!--                <span class="topic-card-stats">{{ topic.tasks.length }} задач</span>-->
               </div>
               <div class="topic-card-arrow">→</div>
             </button>
           </div>
         </div>
+
         <div v-else class="quiz-screen">
           <header class="study-nav">
             <button @click="screen = 'topics'" class="study-nav-back"> ⬅ </button>
@@ -53,39 +45,34 @@
               <span class="study-nav-counter">{{ currentTaskNumber }}/{{ totalTasksInTopic }}</span>
             </div>
           </header>
+
           <main v-if="!loading && currentTask" class="study-main">
             <article class="quest-card">
-<!--              <div class="quest-card-badge">{{ currentTask.topic }}</div>-->
               <section class="quest-card-audio">
                 <p class="quest-card-instruction">Прослушайте диалог!</p>
-                <SoundBtn
-                    :content="currentTask.dialogue || currentTask.text"
+
+                <AudioButton
+                    :level="currentLevel"
+                    :topicId="currentTopic.id"
+                    :fileName="currentTask.id + '_main'"
                     class="quest-card-mega-play"
                 />
+
                 <transition name="quiz-expand">
                   <div v-if="isTaskChecked" class="chat-flow">
-                    <div
-                        v-for="(line, index) in currentTask.dialogue"
-                        :key="index"
-                        :class="['chat-bubble', 'chat-bubble-' + line.gender.toLowerCase()]"
-                    >
+                    <div v-for="(line, idx) in currentTask.dialogue" :key="idx" :class="['chat-bubble', 'chat-bubble-' + line.gender.toLowerCase()]">
                       <p class="chat-bubble-text">{{ line.text }}</p>
                     </div>
                   </div>
                 </transition>
               </section>
+
               <div class="quest-card-options">
-                <div
-                    v-for="(optionText, index) in currentTask.options"
-                    :key="index"
-                    class="quest-option"
-                >
+                <div v-for="(optionText, index) in currentTask.options" :key="index" class="quest-option">
+
                   <SoundBtn :content="optionText" class="quest-option-audio"/>
-                  <button
-                      @click="handleOptionSelection(index)"
-                      :disabled="isTaskChecked"
-                      :class="getOptionClasses(index)"
-                  >
+
+                  <button @click="handleOptionSelection(index)" :disabled="isTaskChecked" :class="getOptionClasses(index)">
                     <div class="quest-option-check">
                       <span v-if="isOptionSelected(index)">✓</span>
                     </div>
@@ -93,26 +80,12 @@
                   </button>
                 </div>
               </div>
+
               <footer class="quest-card-footer">
-                <button
-                    v-if="!isTaskChecked"
-                    @click="checkResult"
-                    :disabled="!hasUserSelectedAnything"
-                    class="quiz-btn-primary"
-                >
-                  ПРОВЕРИТЬ
-                </button>
+                <button v-if="!isTaskChecked" @click="checkResult" :disabled="!hasUserSelectedAnything" class="quiz-btn-primary">ПРОВЕРИТЬ</button>
                 <div v-else class="quest-card-actions">
-                  <button
-                      v-if="!isLastTask"
-                      @click="goToNextTask"
-                      class="quiz-btn-next"
-                  >
-                    ДАЛЬШЕ
-                  </button>
-                  <button v-else @click="screen = 'topics'" class="quiz-btn-finish">
-                    ФИНИШ 🏆
-                  </button>
+                  <button v-if="!isLastTask" @click="goToNextTask" class="quiz-btn-next">ДАЛЬШЕ</button>
+                  <button v-else @click="screen = 'topics'" class="quiz-btn-finish">ФИНИШ 🏆</button>
                 </div>
               </footer>
             </article>
@@ -124,13 +97,14 @@
 </template>
 
 <script setup>
-import {ref, computed, onMounted} from 'vue'
-import {storeToRefs} from 'pinia'
-import {useAudioTaskStore} from '../store/audioTaskStore.js'
+import { ref, computed, onMounted } from 'vue'
+import { storeToRefs } from 'pinia'
+import { useAudioTaskStore } from '../store/audioTaskStore.js'
+import AudioButton from '../src/components/AudioBtn.vue'
 import SoundBtn from '../src/components/soundBtn.vue'
 
 const store = useAudioTaskStore()
-const {allTasks, currentLevel, loading} = storeToRefs(store)
+const { allTasks, currentLevel, loading } = storeToRefs(store)
 
 const screen = ref('levels')
 const currentTopic = ref(null)
@@ -138,45 +112,26 @@ const currentIndex = ref(0)
 const userSelections = ref({})
 const taskResults = ref({})
 
-onMounted(() => {
-  store.fetchTasks()
-})
+onMounted(() => store.fetchTasks())
 
 const availableTopics = computed(() => allTasks.value[currentLevel.value] || [])
 const currentTask = computed(() => currentTopic.value?.tasks[currentIndex.value])
 const currentTaskId = computed(() => currentTask.value?.id)
-
 const isTaskChecked = computed(() => taskResults.value[currentTaskId.value]?.checked)
 const hasUserSelectedAnything = computed(() => (userSelections.value[currentTaskId.value]?.length || 0) > 0)
-
 const currentTaskNumber = computed(() => currentIndex.value + 1)
 const totalTasksInTopic = computed(() => currentTopic.value?.tasks.length || 0)
 const progressPercentage = computed(() => totalTasksInTopic.value > 0 ? (currentTaskNumber.value / totalTasksInTopic.value) * 100 : 0)
 const isLastTask = computed(() => currentIndex.value >= totalTasksInTopic.value - 1)
 
-const getLevelDescription = (level) => {
-  const descriptions = {'A1': '', 'A2': '', 'B1': ''}
-  return descriptions[level] || ''
-}
-
-const selectLevel = (level) => {
-  store.setLevel(level)
-  screen.value = 'topics'
-}
-
-const selectTopic = (topic) => {
-  currentTopic.value = topic
-  currentIndex.value = 0
-  userSelections.value = {}
-  taskResults.value = {}
-  screen.value = 'quiz'
-}
+const getLevelDescription = (level) => ''
+const selectLevel = (level) => { store.setLevel(level); screen.value = 'topics' }
+const selectTopic = (topic) => { currentTopic.value = topic; currentIndex.value = 0; userSelections.value = {}; taskResults.value = {}; screen.value = 'quiz' }
 
 const handleOptionSelection = (optionIndex) => {
   if (isTaskChecked.value) return
   const taskId = currentTaskId.value
   if (!userSelections.value[taskId]) userSelections.value[taskId] = []
-
   const currentSelections = userSelections.value[taskId]
   if (currentSelections.includes(optionIndex)) {
     userSelections.value[taskId] = currentSelections.filter(idx => idx !== optionIndex)
@@ -191,7 +146,6 @@ const getOptionClasses = (optionIndex) => {
   const result = taskResults.value[currentTaskId.value]
   const isSelected = isOptionSelected(optionIndex)
   const isCorrect = currentTask.value.correctIndices.includes(optionIndex)
-
   let classes = 'quest-option-button'
   if (isSelected) classes += ' is-selected'
   if (result?.checked) {
@@ -204,16 +158,14 @@ const getOptionClasses = (optionIndex) => {
 const checkResult = () => {
   const task = currentTask.value
   const selections = userSelections.value[task.id] || []
-  const isCorrect = selections.length === task.correctIndices.length &&
-      selections.every(idx => task.correctIndices.includes(idx))
-
-  taskResults.value[task.id] = {checked: true, isSuccess: isCorrect}
+  const isCorrect = selections.length === task.correctIndices.length && selections.every(idx => task.correctIndices.includes(idx))
+  taskResults.value[task.id] = { checked: true, isSuccess: isCorrect }
 }
 
-const goToNextTask = () => {
-  if (!isLastTask.value) currentIndex.value++
-}
+const goToNextTask = () => { if (!isLastTask.value) currentIndex.value++ }
 </script>
+
+
 
 <style scoped>
 
