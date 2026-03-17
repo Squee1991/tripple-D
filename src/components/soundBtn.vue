@@ -12,7 +12,7 @@
 <script setup>
 import { ref, defineProps, onBeforeUnmount } from 'vue'
 import { getSpeechAudio, stopSpeech } from '../utils/googleTTS.js'
-import DefaultSoundIcon from '../assets/images/SoundIcon.svg'
+import DefaultSoundIcon from '../../assets/images/SoundIcon.svg'
 
 const isSpeaking = ref(false)
 
