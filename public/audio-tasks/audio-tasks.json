@@ -1616,15 +1616,15 @@
           "id": "A1_shop_13",
           "topic": "Fleisch kaufen",
           "dialogue": [
-            { "role": "Kundิน", "gender": "FEMALE", "text": "Guten Tag, ich möchte Fleisch für das Mittagessen." },
+            { "role": "Kunde", "gender": "FEMALE", "text": "Guten Tag, ich möchte Fleisch für das Mittagessen." },
             { "role": "Verkäufer", "gender": "MALE", "text": "Möchten Sie Rindfleisch oder Schweinefleisch?" },
             { "role": "Kundิน", "gender": "FEMALE", "text": "Rindfleisch, bitte. 500 Gramm." }
           ],
           "options": [
-            "Die Kundิน möchte Fisch kaufen",
-            "Die Kundิน möchte Fleisch kaufen",
-            "Die Kundิน möchte Schweinefleisch",
-            "Die Kundิน möchte 500 Gramm Rindfleisch",
+            "Die Kunde möchte Fisch kaufen",
+            "Die Kunde möchte Fleisch kaufen",
+            "Die Kunde möchte Schweinefleisch",
+            "Die Kunde möchte 500 Gramm Rindfleisch",
             "Der Verkäufer möchte kochen"
           ],
           "correctIndices": [1, 3]
@@ -1634,13 +1634,13 @@
           "topic": "An der Kasse",
           "dialogue": [
             { "role": "Kassierer", "gender": "MALE", "text": "Hallo! Haben Sie eine Kundenkarte?" },
-            { "role": "Kundин", "gender": "FEMALE", "text": "Nein, ich habe keine Kundenkarte." },
+            { "role": "Kundin", "gender": "FEMALE", "text": "Nein, ich habe keine Kundenkarte." },
             { "role": "Kassierer", "gender": "MALE", "text": "Okay. Das macht 22 Euro, bitte." },
-            { "role": "Kundин", "gender": "FEMALE", "text": "Hier sind 30 Euro." }
+            { "role": "Kundin", "gender": "FEMALE", "text": "Hier sind 30 Euro." }
           ],
           "options": [
-            "Die Kundин hat eine Kundenkarte",
-            "Die Kundин hat keine Kundenkarte",
+            "Die Kundin hat eine Kundenkarte",
+            "Die Kundin hat keine Kundenkarte",
             "Der Einkauf kostet 30 Euro",
             "Der Einkauf kostet 22 Euro",
             "Der Kassierer hat eine Kundenkarte"
@@ -2538,7 +2538,7 @@
             "Die Patientin geht heute zur Arbeit",
             "Die Patientin ist drei Tage krankgeschrieben",
             "Die Patientin braucht eine Krankschreibung",
-            "Der Arzt ist три Tage krank",
+            "Der Arzt ist drei Tage krank",
             "Die Patientin macht Urlaub"
           ],
           "correctIndices": [1, 2]
@@ -4064,7 +4064,7 @@
           "id": "A1_health_13",
           "topic": "Das Bein",
           "dialogue": [
-            { "role": "Mann", "gender": "MALE", "text": "Mein Bein tut weh. Ich kann не (nicht) laufen." },
+            { "role": "Mann", "gender": "MALE", "text": "Mein Bein tut weh. Ich kann nicht laufen." },
             { "role": "Frau", "gender": "FEMALE", "text": "Komm, wir nehmen ein Taxi zum Krankenhaus." },
             { "role": "Mann", "gender": "MALE", "text": "Gute Idee." }
           ],
