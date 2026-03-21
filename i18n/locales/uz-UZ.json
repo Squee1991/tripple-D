@@ -326,7 +326,11 @@
     "descriptionNorthCliffs": "Dengiz ustida ulkan qoyaliklar ko‘tarilgan, sovuq shamollar har bir sayohatchining chidamliligini sinaydi. Senga diqqat talab qiladigan topshiriqlar tayyor.",
     "descriptionStormCoast": "Momaqaldiroq va chaqmoqlar g‘aroyibligida qo‘zg‘algan yovvoyi sohil yerlar. Faqat jasur qahramonlar bu yerga odim qo‘yishga jur’at etadi. Bu yerda bilim kuchingning haqiqiy sinovi seni kutmoqda.",
     "descriptionMasterLands": "Har bir mehnat qadrli bo'lgan ustalar va hunarmandlar yurti. Bu yerda siz kasblar, ish va kundalik vazifalar haqida gapirishni o'rganasiz.",
-    "descriptionWildLands": "Tabiat hayoti ajoyib kashfiyotlarga boy. Bu yerda siz o'rmon aholisi va tabiat hodisalarini nomlashni, ularning harakatlarini tasvirlashni va tabiat haqida gaplar tuzishni o'rganasiz."
+    "descriptionWildLands": "Tabiat hayoti ajoyib kashfiyotlarga boy. Bu yerda siz o'rmon aholisi va tabiat hodisalarini nomlashni, ularning harakatlarini tasvirlashni va tabiat haqida gaplar tuzishni o'rganasiz.",
+    "descriptionPluralLands": "Ushbu tik yonbag'irda o'tmish tumani nihoyat tarqalib, olis ufq ko'rinadi. Bu yerda yo'lovchi nafaqat oyoqlari ostiga qarashni, balki ertangi va o'tgan kunga nazar solishni o'rganadi.",
+    "descriptionPastLands": "Qadimiy toshlar va vaqt qumlari orasida allaqachon sodir bo'lgan voqealar tarixi saqlanadi. Bu yerda yo'lovchi o'tmishga nazar tashlashni va o'tgan kunlar voqealarini tasvirlashni o'rganib, O'tgan zamonni o'zlashtiradi.",
+    "descriptionActionLands": "Bu yerda vaqt endi bir joyda turmaydi va o'tmish tumani tarqaladi. Ushbu vodiyda yo'lovchi modal fe'llarni va kelishiklar orqali muloqot san'atini o'zlashtirib, maqsadlar qo'yishni o'rganadi.",
+    "descriptionOrderValley": "Bu yerda yo'lovchi to'g'ri gaplar tuzishni o'rganadi. Ushbu vodiyda oddiy va murakkab iboralarda so'z tartibini o'zlashtiradi, narsalarning mavjudligi haqida xabar berishni va o'zlik olmoshlaridan foydalanishni o'rganadi."
   },
   "calendarInfo": {
     "eventsTitle": "Voqealar taqvimi",
@@ -1360,7 +1364,11 @@
     "north-cliffs": "Shimoliy qoyalar",
     "storm-coast": "Bo‘ronli sohil",
     "master-lands": "Ustalar yurti",
-    "wild-lands": "Yovvoyi erlar"
+    "wild-lands": "Yovvoyi erlar",
+    "plural-land": "Kelajak dovoni",
+    "past-land": "O'tmish harobalari",
+    "action-valley": "Harakatlar vodiysi",
+    "order-valley": "Tartib yerlari"
   },
   "examPage": {
     "examHint": "Biz avtomatik nutqni aniqlash tizimidan foydalanamiz. Mikrofon yonida aniq gapiring."

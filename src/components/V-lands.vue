@@ -1,6 +1,6 @@
 <template>
   <div class="map__wrapper" :dir="locale === 'ar' ? 'rtl' : 'ltr'">
-    <div class="map__title-wrapper">
+    <div id="regions" class="map__title-wrapper">
       <h1 class="map__title">{{ t('locationsMenu.title') }}</h1>
     </div>
     <div class="map-layout">

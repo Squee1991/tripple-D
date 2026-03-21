@@ -1,5 +1,10 @@
 <template>
   <header class="header" :class="{ 'mobile-menu-active': isMobileMenuOpen , 'is-rtl': isAr }">
+    <VGuide
+        :active="guideActive"
+        :steps="customSteps"
+        @close="guideActive = false"
+    />
     <div v-if="isMobileMenuOpen" class="mobile-nav-overlay" @click="isMobileMenuOpen = false"></div>
     <UiOverlay :visible="showAuth" @close="closeAuth"/>
     <transition name="slide">
@@ -123,8 +128,7 @@
 </template>
 
 <script setup>
-import {VOnboardingWrapper, VOnboardingStep, useVOnboarding} from 'v-onboarding'
-import 'v-onboarding/dist/style.css'
+import VGuide from "../components/V-guide.vue";
 import {ref, computed, watch, onMounted, onBeforeUnmount} from 'vue'
 import {useRouter} from 'vue-router'
 import {userAuthStore} from '../../store/authStore.js'
@@ -153,6 +157,77 @@ const userAuth = userAuthStore()
 const click = () => {
   easterEggsStore.triggerTaps()
 }
+
+const guideActive = ref(false)
+
+import DescBook from '../../assets/images/DescBook.svg'
+import Controller from '../../assets/images/video-game.svg'
+import Exam from '../../assets/images/exam.svg'
+import Location  from '../../assets/images/location.svg'
+import GratulateHat  from '../../assets/images/graduate-hat.svg'
+
+const customSteps = [
+  {
+    target: '#learn',
+    title: "Обучение",
+    icon: DescBook,
+    description: [
+      {text: 'Практика Артиклей'},
+      {text: 'Грамматика и практика'},
+      {text: 'Аудио задания'},
+      {text: 'Описание картинок'},
+      {text: 'Карточки на различные темы'},
+    ]
+  },
+  {
+    target: '#duel',
+    title: "Игры",
+    icon: Controller,
+    description: [
+      {text: 'Отгадывай немецкие слова' },
+      {text: 'Стань лучшим в галактике немецкого' },
+      {text: 'Соревнуйся с другими участниками' },
+      {text: 'Учавствуй в марафоне Артиклей' },
+    ]
+  },
+  {
+    target: '#test',
+    title: "Проверка сил",
+    icon: Exam,
+    description: [
+      {text: 'Тесты от А1 до Б2'},
+      {text: 'Мгновенная обратная связь'}
+    ]
+  },
+  {
+    target: '#conferats',
+    title: "Конфедератки",
+    icon: GratulateHat,
+    description: [
+      {text: 'Валюта которая дается за прохождение ежедневных заданий.'},
+      {text: 'Можно получать бонусы и даже купить скидку в магазине'},
+      {text: 'Магазин находится в личном кабинете'},
+    ]
+  },
+  {
+    target: '#articlus',
+    title: "Артиклюсы",
+    description: [
+      {text: 'Валюта за прохождение заданий.'},
+      {text: 'Тратится в магазне и на повторные попытки'},
+    ]
+  },
+  {
+    target: '#regions',
+    title: "Языковые земли",
+    icon: Location,
+    description: [
+      { text: "Ты научишься составлять предложения понимать на слух"},
+      { text: "Выполнять задания на различные грамматические темы "},
+      { text: "Грамматика прямо во время выполения заданий"}
+    ]
+  }
+]
 const wrapperRef = ref(null)
 const showAuth = ref(false)
 const menuOpen = ref(false)
@@ -189,54 +264,6 @@ const modalConfig = computed(() => {
   }
 })
 
-const onboardingOptions = {
-  skippable: true,
-  labels: {
-    previousButton: 'Назад',
-    nextButton: 'Далее',
-    finishButton: 'Завершить',
-    skipButton: 'Пропустить'
-  }
-}
-const onboardingSteps = [
-  {
-    attachTo: {
-      element: '#learn',
-      padding: 31
-    },
-    content: {
-      title: "Обучение",
-      description: "Грамматика, фразы, артикли, времена и практика — всё, чтобы уверенно прокачать   немецкий.",
-      image: HD
-    }
-  },
-  {
-    attachTo: {element: '#duel'},
-    content: {
-      title: "Игры",
-      description: "Грамматика, фразы, артикли, времена и практика — всё, чтобы уверенно прокачать немецкий.",
-      image: HD
-    }
-  },
-  {
-    attachTo: {element: '#test'},
-    content: {
-      title: "Тесты",
-      description: "Проверь уровень от А1 до В2: говорение,  грамматика, письмо и понимание речи.",
-      image: HD
-    }
-  },
-  {
-    attachTo: {element: '#events'},
-    content: {
-      title: "Ивенты",
-      description: "Сезонные задания, коллекции слов, награды и ограниченные по времени челленджи.",
-      image: HD
-    }
-  }
-]
-
-const {start , finish} = useVOnboarding(wrapperRef)
 const menuItems = computed(() => {
   const items = [
     ...(userAuth.uid
@@ -374,19 +401,6 @@ const updateWidth = () => {
   }
 }
 
-const showOnboarding = computed(() => {
-  return windowWidth.value >= 1023 && !!userAuth.uid
-})
-
-watch(showOnboarding, async (canShow) => {
-  if (canShow) {
-    await nextTick()
-    start()
-  } else {
-    finish()
-  }
-}, { immediate: true })
-
 onMounted(() => {
   updateWidth()
   window.addEventListener('resize', updateWidth)
@@ -512,12 +526,20 @@ watch(isMobileMenuOpen, (newVal) => {
 
 onMounted(() => {
   document.addEventListener('mousedown', handleClickOutside)
-  start()
 })
 
 onBeforeUnmount(() => {
   document.removeEventListener('mousedown', handleClickOutside)
   document.body.style.overflow = ''
+})
+
+onMounted(() => {
+  if (userAuth.uid) {
+    setTimeout(() => {
+      console.log('Попытка запуска гайда...');
+      guideActive.value = true
+    }, 2000)
+  }
 })
 </script>
 <style scoped>

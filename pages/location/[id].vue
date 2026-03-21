@@ -113,21 +113,17 @@ const processedQuests = computed(() => {
       }
     }
     const safeProgress = userProgress || {};
-    // Ошибки есть всегда, если в базе записаны wrongIndices (даже если квест провален)
     const hasMistakes = !!(safeProgress.wrongIndices && safeProgress.wrongIndices.length > 0);
     const isSuccess = !!safeProgress.success;
-    // Квест считается идеальным ТОЛЬКО если он пройден и в нём нет ошибок
     const isPerfect = isSuccess && !hasMistakes;
 
     let btnStyle = {};
     if (hasMistakes) {
-      // Если есть ошибки - всегда розовая кнопка исправления
       btnStyle = {
         background: 'linear-gradient(180deg, #ff82a9 0%, #e6517d 100%)',
         color: '#fff'
       };
     } else if (isPerfect) {
-      // Если 100% идеально - синяя кнопка повтора
       btnStyle = {
         background: 'linear-gradient(180deg, #6a74a5 0%, #5d7fc1 100%)',
         color: '#fff'
@@ -139,7 +135,7 @@ const processedQuests = computed(() => {
       isSuccess,
       isCompleted: !!safeProgress.completed,
       hasMistakes,
-      isPerfect, // Передаем это в шаблон!
+      isPerfect,
       btnStyle
     };
   });
