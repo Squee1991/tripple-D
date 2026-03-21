@@ -49,7 +49,7 @@
           </div>
         </div>
         <div class="quest__section">
-          <div v-if="hasTip" class="quest__tip-container">
+          <div v-if="hasTip && questStore.showResult" class="quest__tip-container">
             <button class="quest__tip-btn" @click="showTipModal = true">💡</button>
           </div>
           <div class="quest__question">

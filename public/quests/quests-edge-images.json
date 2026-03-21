@@ -1,0 +1,2002 @@
+[
+  {
+    "questId": "adjective-one",
+    "title": "Старт",
+    "progress": "0/15",
+    "description": "Тренируемся правильно склонять прилагательные после der, die, das.",
+    "conditions": {
+      "goal": "Разберись с падежами на skillupgerman!",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "Я вижу старую собаку.",
+        "words": ["sehe", "den", "alten", "Hund", "Ich", "alte", "dem", "der", "das"],
+        "correctOrder": ["Ich", "sehe", "den", "alten", "Hund"],
+        "tip": "Akkusativ (муж. род): после 'den' у прилагательного окончание -en."
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "Впишите форму (rot): 'Die ___ Blume ist schön.'",
+        "answer": "rote",
+        "tip": "Nominativ (жен. род): после артикля 'die' окончание прилагательного -e."
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Das neue Haus ist groß",
+        "answer": "Das neue Haus ist groß",
+        "tip": "Nominativ (ср. род): после артикля 'das' ставим окончание -e."
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "Я иду с добрым другом.",
+        "words": ["gehe", "mit", "dem", "netten", "Freund", "Ich", "nette", "den", "der"],
+        "correctOrder": ["Ich", "gehe", "mit", "dem", "netten", "Freund"],
+        "tip": "Dativ в (муж. род) после артикля 'dem' всегда окончание приагательного -en."
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "Впишите верную форму (bequem): 'Wir kaufen das ___ Sofa.'",
+        "answer": "bequeme",
+        "tip": "Akkusativ (ср. род): артикль 'das' не меняется, окончание прилагательного -e."
+      },
+      {
+        "id": 6,
+        "type": "readAndAnswer",
+        "text": "In der Stadt steht das moderne Museum. Viele Touristen besuchen das graue Gebäude.",
+        "question": "Какое здание посещают туристы?",
+        "options": [
+          "das graue Gebäude",
+          "das alte Haus",
+          "den großen Park"
+        ],
+        "answer": "das graue Gebäude",
+        "tip": "Akkusativ (ср. род): после 'das' у прилагательного окончание -e."
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Она читает интересную книгу.",
+        "words": ["liest", "das", "interessante", "Buch", "Sie", "interessanten", "die"],
+        "correctOrder": ["Sie", "liest", "das", "interessante", "Buch"],
+        "tip": "Akkusativ (ср. род): после 'das' окончание прилагательного -e."
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "Впишите форму (klein): 'Wo sind die ___ Kinder?'",
+        "answer": "kleinen",
+        "tip": "Plural (мн. число): после артикля 'die' всегда пишем окончание -en."
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Ich helfe der alten Frau",
+        "answer": "Ich helfe der alten Frau",
+        "tip": "Dativ (жен. род): после измененного артикля 'der' окончание прилагательного -en."
+      },
+      {
+        "id": 10,
+        "type": "readAndAnswer",
+        "text": "Der junge Mann arbeitet viel. Er trinkt oft den starken Kaffee.",
+        "question": "Что часто пьет мужчина?",
+        "options": [
+          "den starken Kaffee",
+          "den süßen Tee",
+          "das kalte Wasser"
+        ],
+        "answer": "den starken Kaffee",
+        "tip": "Akkusativ (муж. род): артикль изменился на 'den', ставим окончание -en."
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Где находится длинная улица?",
+        "words": ["ist", "die", "lange", "Straße", "Wo", "langen", "der", "den"],
+        "correctOrder": ["Wo", "ist", "die", "lange", "Straße"],
+        "tip": "Nominativ (жен. род): после базового артикля 'die' окончание -e."
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "Впишите форму (groß): 'Wir wohnen in dem ___ Haus.'",
+        "answer": "großen",
+        "tip": "Dativ (ср. род): после 'dem' прилагательное получает окончание -en."
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Das ist der neue Schlüssel",
+        "answer": "Das ist der neue Schlüssel",
+        "tip": "Nominativ (муж. род): после базового артикля 'der' окончание прилагательного -e."
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "Я иду в старую школу.",
+        "words": ["gehe", "in", "die", "alte", "Schule", "Ich", "alten", "der", "den"],
+        "correctOrder": ["Ich", "gehe", "in", "die", "alte", "Schule"],
+        "tip": "Akkusativ (жен. род): артикль 'die' не меняется, ставим окончание -e."
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "Впишите форму (nett): 'Wo sind die ___ Leute?'",
+        "answer": "netten",
+        "tip": "Plural (мн. число): с определенным артиклем всегда пишем окончание -en."
+      }
+    ]
+  },
+  {
+    "questId": "adjective-two",
+    "title": "Микс",
+    "progress": "0/15",
+    "description": "Тренируем окончания прилагательных без лишних текстов. Только практика!",
+    "conditions": {
+      "goal": "Закрепи правила на skillupgerman!",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "Я покупаю новый компьютер.",
+        "words": ["Ich", "kaufe", "den", "neuen", "Computer", "neue"],
+        "correctOrder": ["Ich", "kaufe", "den", "neuen", "Computer"],
+        "tip": "Akkusativ (муж. род): после измененного артикля 'den' у прилагательного окончание -en."
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "Впишите форму (alt): 'Der ___ Mann ist sehr nett.'",
+        "answer": "alte",
+        "tip": "Nominativ (муж. род) после артикля 'der' ставим окончание -e."
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Die kleine Katze schläft",
+        "answer": "Die kleine Katze schläft",
+        "tip": "Nominativ (жен. род): после артикля 'die' окончание прилагательного -e."
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "Впишите форму (nett): 'Ich antworte dem ___ Lehrer.'",
+        "answer": "netten",
+        "tip": "Dativ (муж. род): после измененного артикля 'dem' окончание всегда -en."
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "Впишите форму (klein): 'Das ___ Kind spielt im Garten.'",
+        "answer": "kleine",
+        "tip": "Nominativ (ср. род): после базового артикля 'das' окончание прилагательного -e."
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "Выберите форму: 'Ich sehe das ___ Haus.'",
+        "options": [
+          "schöne",
+          "schönen",
+          "schöner"
+        ],
+        "answer": "schöne",
+        "tip": "Akkusativ (ср. род): артикль 'das' не меняется, поэтому у прилагательного окончание -e."
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Он любит теплый суп.",
+        "words": ["Er", "liebt", "die", "warme", "Suppe", "warmen"],
+        "correctOrder": ["Er", "liebt", "die", "warme", "Suppe"],
+        "tip": "Akkusativ (жен. род) артикль 'die Suppe' , у прилагательного окончание -e."
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "Впишите форму (jung): 'Die ___ Leute tanzen gern.'",
+        "answer": "jungen",
+        "tip": "Plural (мн. число): с определенным артиклем прилагательное всегда получает окончание -en."
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Ich mag das rote Auto",
+        "answer": "Ich mag das rote Auto",
+        "tip": "Akkusativ (ср. род): после артикля 'das' у прилагательного окончание -e."
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "Впишите форму (hell): 'Ich wohne in dem ___ Zimmer.'",
+        "answer": "hellen",
+        "tip": "Dativ (ср. род): после измененного артикля 'dem' ставим окончание -en."
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Я помогаю старой женщине.",
+        "words": ["Ich", "helfe", "der", "alten", "Frau", "alte"],
+        "correctOrder": ["Ich", "helfe", "der", "alten", "Frau"],
+        "tip": "Dativ (жен. род): артикль 'die' изменился на 'der', поэтому окончание прилагательного -en."
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "Впишите форму (kalt): 'Ich trinke den ___ Saft.'",
+        "answer": "kalten",
+        "tip": "Akkusativ (муж. род): артикль изменился на 'den', пишем окончание -en."
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Wir sehen die blauen Berge",
+        "answer": "Wir sehen die blauen Berge",
+        "tip": "Plural (Akkusativ): с артиклем 'die' у прилагательного окончание -en."
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "Впишите форму (neu): 'Der ___ Film ist sehr gut.'",
+        "answer": "neue",
+        "tip": "Nominativ (муж. род): после базового артикля 'der' окончание прилагательного -e."
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "Впишите форму (best): 'Ich schreibe den ___ Freunden.'",
+        "answer": "besten",
+        "tip": "Dativ Plural: после артикля 'den' (для мн.ч.) у прилагательного всегда окончание -en."
+      }
+    ]
+  },
+  {
+    "questId": "adjective-three",
+    "title": "База",
+    "progress": "0/15",
+    "description": "Ещё 15 упражнений, чтобы закрепить окончания после der, die, das до автоматизма.",
+    "conditions": {
+      "goal": "Разберись с падежами на skillupgerman!",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "Я люблю зеленый чай.",
+        "words": ["Ich", "liebe", "den", "grünen", "Tee", "grüne"],
+        "correctOrder": ["Ich", "liebe", "den", "grünen", "Tee"],
+        "tip": "Akkusativ (муж. род): артикль изменился на 'den', поэтому у прилагательного окончание -en."
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "Впишите форму (interessant): 'Das ___ Buch liegt hier.'",
+        "answer": "interessante",
+        "tip": "Nominativ (ср. род): после базового артикля 'das' у прилагательного окончание -e."
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Der kleine Vogel singt",
+        "answer": "Der kleine Vogel singt",
+        "tip": "Nominativ (муж. род): после базового артикля 'der' ставим окончание -e."
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "Впишите форму (nett): 'Ich helfe der ___ Frau.'",
+        "answer": "netten",
+        "tip": "Dativ (жен. род): артикль изменился на 'der', поэтому окончание прилагательного -en."
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "Впишите форму (teuer): 'Wir kaufen den ___ Schrank.'",
+        "answer": "teuren",
+        "tip": "Akkusativ (муж. род): артикль стал 'den', значит у прилагательного окончание -en."
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "Выберите форму: 'Die ___ Kinder spielen.'",
+        "options": [
+          "kleinen",
+          "kleine",
+          "kleines"
+        ],
+        "answer": "kleinen",
+        "tip": "Plural (Nominativ): после определенного артикля 'die' всегда пишем -en."
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Она видит красивую картину.",
+        "words": ["Sie", "sieht", "das", "schöne", "Bild", "schönen"],
+        "correctOrder": ["Sie", "sieht", "das", "schöne", "Bild"],
+        "tip": "Akkusativ (ср. род): артикль 'das' не изменился, у прилагательного окончание -e."
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "Впишите форму (alt): 'Er geht in die ___ Schule.'",
+        "answer": "alte",
+        "tip": "Akkusativ (жен. род): артикль 'die' базовый, ставим окончание прилагательного -e."
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Ich mag den starken Kaffee",
+        "answer": "Ich mag den starken Kaffee",
+        "tip": "Akkusativ (муж. род): после 'den' у прилагательного всегда окончание -en."
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "Впишите форму (richtig): 'Das ist der ___ Schlüssel.'",
+        "answer": "richtige",
+        "tip": "Nominativ (муж. род): после базового артикля 'der' у прилагательного окончание -e."
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Мы живем в большом доме.",
+        "words": ["Wir", "wohnen", "in", "dem", "großen", "Haus", "große"],
+        "correctOrder": ["Wir", "wohnen", "in", "dem", "großen", "Haus"],
+        "tip": "Dativ (ср. род): после измененного артикля 'dem' окончание прилагательного всегда -en."
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "Впишите форму (gut): 'Ich schreibe den ___ Lehrern.'",
+        "answer": "guten",
+        "tip": "Dativ Plural: после артикля 'den' (для мн. числа) прилагательное получает -en."
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Die kluge Katze wartet",
+        "answer": "Die kluge Katze wartet",
+        "tip": "Nominativ (жен. род): после артикля 'die' окончание прилагательного -e."
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "Впишите форму (schön): 'Er sieht die ___ Frau.'",
+        "answer": "schöne",
+        "tip": "Akkusativ (жен. род): артикль 'die' не меняется, ставим окончание -e."
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "Впишите форму (neu): 'Der ___ Film ist super.'",
+        "answer": "neue",
+        "tip": "Nominativ (муж. род): после базового артикля 'der' у прилагательного окончание -e."
+      }
+    ]
+  },
+  {
+    "questId": "adjective-four",
+    "title": "Микс 2",
+    "progress": "0/15",
+    "description": "Усложняем! Отрабатываем окончания в предложениях с Perfekt и Futur 1.",
+    "conditions": {
+      "goal": "Закрепи грамматику A2 на skillupgerman!",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "Соберите: Я продал старую машину.",
+        "words": ["Ich", "habe", "das", "alte", "Auto", "verkauft", "alten"],
+        "correctOrder": ["Ich", "habe", "das", "alte", "Auto", "verkauft"],
+        "tip": "Akkusativ (ср. род): после артикля 'das' у прилагательного окончание -e."
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "Впишите форму (neu): Wir werden das ___ Haus bauen",
+        "answer": "neue",
+        "tip": "Akkusativ (ср. род): артикль 'das' базовый, ставим окончание -e."
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Der gute Mann hat uns geholfen",
+        "answer": "Der gute Mann hat uns geholfen",
+        "tip": "Nominativ (муж. род): после базового артикля 'der' ставим окончание -e."
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "Впишите форму (schnell): Sie ist mit dem ___ Zug gefahren.",
+        "answer": "schnellen",
+        "tip": "Dativ (муж. род): после измененного артикля 'dem' у прилагательного всегда -en."
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "Впишите форму (schwierig): Er wird den ___ Test machen.",
+        "answer": "schwierigen",
+        "tip": "Akkusativ (муж. род): артикль изменился на 'den', ставим окончание -en."
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "Выберите форму: Die ___ Leute werden morgen kommen.",
+        "options": [
+          "netten",
+          "nette",
+          "netter"
+        ],
+        "answer": "netten",
+        "tip": "Plural (Nominativ): после определенного артикля во мн. числе всегда пишем -en."
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Ты носил красную куртку (Perfekt).",
+        "words": ["Du", "hast", "die", "rote", "Jacke", "getragen", "roten"],
+        "correctOrder": ["Du", "hast", "die", "rote", "Jacke", "getragen"],
+        "tip": "Akkusativ (жен. род): артикль 'die' не меняется, окончание прилагательного -e."
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "Впишите форму (klein): Wir haben den ___ Kindern gedankt.",
+        "answer": "kleinen",
+        "tip": "Dativ Plural: после артикля 'den' для мн. числа всегда пишем окончание -en."
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Sie wird die lange Reise beginnen",
+        "answer": "Sie wird die lange Reise beginnen",
+        "tip": "Akkusativ (жен. род): после артикля 'die' окончание прилагательного -e."
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "Впишите форму (groß): Ich bin in der ___ Stadt geblieben.",
+        "answer": "großen",
+        "tip": "Dativ (жен. род): артикль 'die' изменился на 'der', ставим окончание -en."
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Новый фильм скоро начнется (Futur 1).",
+        "words": ["Der", "neue", "Film", "wird", "bald", "starten", "neuen"],
+        "correctOrder": ["Der", "neue", "Film", "wird", "bald", "starten"],
+        "tip": "Nominativ (муж. род): после базового 'der' окончание прилагательного -e."
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "Впишите форму (lecker): Er hat das ___ Brot gegessen.",
+        "answer": "leckere",
+        "tip": "Akkusativ (ср. род): артикль 'das' базовый, окончание прилагательного -e."
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Die kluge Frau hat alles gewusst",
+        "answer": "Die kluge Frau hat alles gewusst",
+        "tip": "Nominativ (жен. род): после артикля 'die' ставим окончание -e."
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "Впишите форму (freundlich): Ich werde mit dem ___ Chef sprechen.",
+        "answer": "freundlichen",
+        "tip": "Dativ (муж. род): после 'dem' прилагательное получает окончание -en."
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "Впишите форму (alt): Das ___ Auto wird bald repariert.",
+        "answer": "alte",
+        "tip": "Nominativ (ср. род): после артикля 'das' ставим окончание прилагательного -e."
+      }
+    ]
+  },
+  {
+    "questId": "adjective-five",
+    "title": "Определенный артикль",
+    "progress": "0/15",
+    "description": "Усложненная практика: работаем с временами и вписываем окончания правильно.",
+    "conditions": {
+      "goal": "Закрепи грамматику на skillupgerman!",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "Соберите: Итальянский сыр был вкусным",
+        "words": ["Der", "italienischen", "hat", "geschmeckt", "Käse", "italienische"],
+        "correctOrder": ["Der", "italienische", "Käse", "hat", "geschmeckt"],
+        "tip": "Nominativ (муж. род): после базового артикля 'der' у прилагательного окончание -e."
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "Впишите форму (neu): Ich werde das ___ Buch lesen.",
+        "answer": "neue",
+        "tip": "Akkusativ (ср. род): артикль 'das' не изменился, окончание прилагательного -e."
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Die junge Frau hat gelacht",
+        "answer": "Die junge Frau hat gelacht",
+        "tip": "Nominativ (жен. род): после артикля 'die' окончание прилагательного -e."
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "Впишите форму (blau): Wir sind mit dem ___ Auto gefahren.",
+        "answer": "blauen",
+        "tip": "Dativ (ср. род): после 'dem' прилагательное всегда получает окончание -en."
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "Впишите форму (nett): Er wird den ___ Freund treffen.",
+        "answer": "netten",
+        "tip": "Akkusativ (муж. род): артикль изменился на 'den', ставим окончание -en."
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "Выберите форму: Die ___ Kinder haben gespielt.",
+        "options": ["kleinen", "kleine", "kleines"],
+        "answer": "kleinen",
+        "tip": "Plural (Nominativ): после определенного артикля во мн. числе всегда пишем -en."
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Соберите: Она купит красную сумку",
+        "words": ["Sie", "wird", "die", "rote", "Tasche", "kaufen", "roten"],
+        "correctOrder": ["Sie", "wird", "die", "rote", "Tasche", "kaufen"],
+        "tip": "Akkusativ (жен. род): артикль 'die' базовый, окончание прилагательного -e."
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "Впишите форму (alt): Ich habe den ___ Schlüssel gefunden.",
+        "answer": "alten",
+        "tip": "Akkusativ (муж. род): артикль изменился на 'den', у прилагательного ставим окончание -en."
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Das neue Projekt wird starten",
+        "answer": "Das neue Projekt wird starten",
+        "tip": "Nominativ (ср. род): после артикля 'das' у прилагательного окончание -e."
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "Впишите форму (groß): Sie hat in der ___ Stadt gelebt.",
+        "answer": "großen",
+        "tip": "Dativ (жен. род): артикль 'die' стал 'der', значит ставим окончание -en."
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите: Быстрый поезд приехал.",
+        "words": ["Der", "schnelle", "Zug", "ist", "angekommen", "schnellen"],
+        "correctOrder": ["Der", "schnelle", "Zug", "ist", "angekommen"],
+        "tip": "Nominativ (муж. род): артикль 'der' базовый, у прилагательного окончание -e."
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "Впишите форму (lecker): 'Wir werden den ___ Kuchen essen.'",
+        "answer": "leckeren",
+        "tip": "Akkusativ (муж. род): после 'den' у прилагательного всегда окончание -en."
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Der kluge Junge hat gefragt",
+        "answer": "Der kluge Junge hat gefragt",
+        "tip": "Nominativ (муж. род): после базового артикля 'der' ставим окончание -e."
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "Впишите форму (kalt): Er hat das ___ Wasser getrunken.",
+        "answer": "kalte",
+        "tip": "Akkusativ (ср. род): артикль 'das' не изменился, окончание прилагательного -e."
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "Впишите форму (beste): Ich werde die ___ Freunde anrufen.",
+        "answer": "besten",
+        "tip": "Plural (Akkusativ): с определенным артиклем всегда пишем окончание -en."
+      }
+    ]
+  },
+  {
+    "questId": "adjective-six",
+    "title": "Определенный артикль",
+    "progress": "0/15",
+    "description": "Юбилейный блок! Минимум лишних слов, максимум фокуса на окончаниях.",
+    "conditions": {
+      "goal": "Закрепи мастерство на skillupgerman!",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "Соберите: Я встречу хорошего друга",
+        "words": ["Ich", "werde", "den", "guten", "Freund", "treffen", "gute"],
+        "correctOrder": ["Ich", "werde", "den", "guten", "Freund", "treffen"],
+        "tip": "Akkusativ (муж. род): артикль изменился на 'den', поэтому у прилагательного окончание -en."
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "Впишите форму (schnell): Das ___ Auto ist weggefahren.",
+        "answer": "schnelle",
+        "tip": "Nominativ (ср. род): после артикля 'das' у прилагательного окончание -e."
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Die nette Frau hat gelacht",
+        "answer": "Die nette Frau hat gelacht",
+        "tip": "Nominativ (жен. род): после артикля 'die' ставим окончание -e."
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "Впишите форму (alt): Ich habe dem ___ Mann geholfen.",
+        "answer": "alten",
+        "tip": "Dativ (муж. род): после измененного артикля 'dem' всегда пишем -en."
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "Впишите форму (neu): Wir werden das ___ Handy kaufen.",
+        "answer": "neue",
+        "tip": "Akkusativ (ср. род): артикль 'das' не изменился, окончание прилагательного -e."
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "Выберите форму: Die ___ Kinder haben gesungen.",
+        "options": [
+          "kleinen",
+          "kleine",
+          "kleines"
+        ],
+        "answer": "kleinen",
+        "tip": "Plural (Nominativ): после определенного артикля во мн. числе всегда пишем -en."
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Соберите: Он купил вкусное яблоко",
+        "words": ["Er", "hat", "den", "leckeren", "Apfel", "gekauft", "leckere"],
+        "correctOrder": ["Er", "hat", "den", "leckeren", "Apfel", "gekauft"],
+        "tip": "Akkusativ (муж. род): артикль изменился на 'den', ставим окончание -en."
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "Впишите форму (schön): Ich werde die ___ Aussicht genießen.",
+        "answer": "schöne",
+        "tip": "Akkusativ (жен. род): артикль 'die' базовый, окончание прилагательного -e."
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Der starke Wind wird wehen",
+        "answer": "Der starke Wind wird wehen",
+        "tip": "Nominativ (муж. род): после артикля 'der' у прилагательного окончание -e."
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "Впишите форму (groß): Sie hat in der ___ Stadt gewohnt.",
+        "answer": "großen",
+        "tip": "Dativ (жен. род): артикль 'die' стал 'der', значит ставим окончание -en."
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите: Маленькая кошка прыгнула",
+        "words": ["Die", "kleine", "Katze", "ist", "gesprungen", "kleinen"],
+        "correctOrder": ["Die", "kleine", "Katze", "ist", "gesprungen"],
+        "tip": "Nominativ (жен. род): после артикля 'die' ставим окончание -e."
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "Впишите форму (kalt): Wir werden den ___ Saft trinken.",
+        "answer": "kalten",
+        "tip": "Akkusativ (муж. род): после 'den' у прилагательного всегда окончание -en."
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Das neue Jahr hat begonnen",
+        "answer": "Das neue Jahr hat begonnen",
+        "tip": "Nominativ (ср. род): после артикля 'das' у прилагательного окончание -e."
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "Впишите форму (best): Er hat dem ___ Freund geschrieben.",
+        "answer": "besten",
+        "tip": "Dativ (муж. род): после измененного артикля 'dem' ставим окончание -en."
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "Впишите форму (jung): Die ___ Leute werden tanzen.",
+        "answer": "jungen",
+        "tip": "Plural (мн. число): с артиклем 'die' прилагательное всегда получает -en."
+      }
+    ]
+  },
+  {
+    "questId": "adjective-seven",
+    "title": "База",
+    "progress": "0/15",
+    "description": "Закрепляем навыки: смешанные темы и более сложные структуры предложений.",
+    "conditions": {
+      "goal": "Продолжайте обучение на skillupgerman!",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "Соберите: Твой новый план сработает",
+        "words": ["Der", "neue", "Plan", "wird", "funktionieren", "neuen"],
+        "correctOrder": ["Der", "neue", "Plan", "wird", "funktionieren"],
+        "tip": "Nominativ (муж. род): после базового артикля 'der' окончание прилагательного -e."
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "Впишите форму (kalt): Sie hat das ___ Wasser getrunken.",
+        "answer": "kalte",
+        "tip": "Akkusativ (ср. род): артикль 'das' не изменился, у прилагательного окончание -e."
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Ich habe den schwarzen Hund gesehen",
+        "answer": "Ich habe den schwarzen Hund gesehen",
+        "tip": "Akkusativ (муж. род): артикль изменился на 'den', окончание -en."
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "Впишите форму (nett): Er wird mit der ___ Frau sprechen.",
+        "answer": "netten",
+        "tip": "Dativ (жен. род): артикль изменился на 'der', поэтому окончание -en."
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "Впишите форму (neu): Wir haben die ___ Wohnung gemietet.",
+        "answer": "neue",
+        "tip": "Akkusativ (жен. род): артикль 'die' базовый, окончание прилагательного -e."
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "Выберите форму: Das ___ Handy wird morgen kommen.",
+        "options": [
+          "teure",
+          "teuren",
+          "teurer"
+        ],
+        "answer": "teure",
+        "tip": "Nominativ (ср. род): после артикля 'das' ставим окончание -e."
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Соберите: Мы увидим старого друга",
+        "words": ["Wir", "werden", "den", "alten", "Freund", "sehen", "alte"],
+        "correctOrder": ["Wir", "werden", "den", "alten", "Freund", "sehen"],
+        "tip": "Akkusativ (муж. род): артикль стал 'den', окончание прилагательного -en."
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "Впишите форму (lecker): Ich habe von dem ___ Essen gehört.",
+        "answer": "leckeren",
+        "tip": "Dativ (ср. род): после 'dem' всегда пишем окончание -en."
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Die klugen Schüler haben gefragt",
+        "answer": "Die klugen Schüler haben gefragt",
+        "tip": "Plural (Nominativ): с определенным артиклем всегда ставим -en."
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "Впишите форму (blau): Er wird den ___ Anzug tragen.",
+        "answer": "blauen",
+        "tip": "Akkusativ (муж. род): после 'den' окончание прилагательного -en."
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите: Красивая картина висела там",
+        "words": ["Das", "schöne", "Bild", "hat", "dort", "gehangen", "schönen"],
+        "correctOrder": ["Das", "schöne", "Bild", "hat", "dort", "gehangen"],
+        "tip": "Nominativ (ср. род): после базового артикля 'das' ставим окончание -e."
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "Впишите форму (groß): Sie wird in dem ___ Haus wohnen.",
+        "answer": "großen",
+        "tip": "Dativ (ср. род): после измененного артикля 'dem' ставим окончание -en."
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Der neue Schlüssel hat gepasst",
+        "answer": "Der neue Schlüssel hat gepasst",
+        "tip": "Nominativ (муж. род): после артикля 'der' у прилагательного окончание -e."
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "Впишите форму (lang): Wir gehen durch die ___ Straße.",
+        "answer": "lange",
+        "tip": "Akkusativ (жен. род): берет у артикля 'die' окончание -e."
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "Впишите форму (jung): Ich werde den ___ Leuten helfen.",
+        "answer": "jungen",
+        "tip": "Dativ Plural: после артикля 'den' (для мн. числа) всегда пишем -en."
+      }
+    ]
+  },
+  {
+    "questId": "adjective-eight",
+    "title": "Темп",
+    "progress": "0/15",
+    "description": "Восьмой этап: интенсивная тренировка окончаний в разных жизненных ситуациях.",
+    "conditions": {
+      "goal": "Закрепите мастерство на skillupgerman!",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "Соберите: Я продал старую машину",
+        "words": ["Ich", "habe", "das", "alte", "Auto", "verkauft", "alten"],
+        "correctOrder": ["Ich", "habe", "das", "alte", "Auto", "verkauft"],
+        "tip": "Akkusativ (ср. род): артикль 'das' не изменился, окончание прилагательного -e."
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "Впишите форму (neu): Der ___ Computer hat viel Geld gekostet.",
+        "answer": "neue",
+        "tip": "Nominativ (муж. род): после базового артикля 'der' ставим окончание -e."
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Die netten Kollegen haben uns geholfen",
+        "answer": "Die netten Kollegen haben uns geholfen",
+        "tip": "Plural (Nominativ): после определенного артикля во мн. числе всегда пишем -en."
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "Впишите форму (groß): Ich werde in der ___ Stadt bleiben.",
+        "answer": "großen",
+        "tip": "Dativ (жен. род): артикль 'die' изменился на 'der', поэтому окончание прилагательного -en."
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "Впишите форму (lecker): Er hat den ___ Kuchen gegessen.",
+        "answer": "leckeren",
+        "tip": "Akkusativ (муж. род): артикль изменился на 'den', ставим окончание -en."
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "Выберите форму: Das ___ Wetter wird morgen besser sein.",
+        "options": [
+          "schöne",
+          "schönen",
+          "schöner"
+        ],
+        "answer": "schöne",
+        "tip": "Nominativ (ср. род): после артикля 'das' у прилагательного окончание -e."
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Соберите: Мы увидим известного актера",
+        "words": ["Wir", "werden", "den", "bekannten", "Schauspieler", "sehen", "bekannte"],
+        "correctOrder": ["Wir", "werden", "den", "bekannten", "Schauspieler", "sehen"],
+        "tip": "Akkusativ (муж. род): артикль изменился на 'den', окончание прилагательного -en."
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "Впишите форму (alt): Wir haben in dem ___ Haus gewohnt.",
+        "answer": "alten",
+        "tip": "Dativ (ср. род): после измененного артикля 'dem' ставим окончание -en."
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Die junge Frau hat gestern angerufen",
+        "answer": "Die junge Frau hat gestern angerufen",
+        "tip": "Nominativ (жен. род): после артикля 'die' ставим окончание -e."
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "Впишите форму (kalt): Ich werde das ___ Wasser trinken.",
+        "answer": "kalte",
+        "tip": "Akkusativ (ср. род): артикль 'das' базовый, ставим окончание -e."
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите: Хороший друг придет позже",
+        "words": ["Der", "gute", "Freund", "wird", "später", "kommen", "guten"],
+        "correctOrder": ["Der", "gute", "Freund", "wird", "später", "kommen"],
+        "tip": "Nominativ (муж. род): после артикля 'der' у прилагательного окончание -e."
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "Впишите форму (modern): Sie hat in der ___ Küche gearbeitet.",
+        "answer": "modernen",
+        "tip": "Dativ (жен. род): артикль 'die' стал 'der', значит окончание прилагательного -en."
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Den neuen Termin haben wir vergessen",
+        "answer": "Den neuen Termin haben wir vergessen",
+        "tip": "Akkusativ (муж. род): после артикля 'den' всегда пишем окончание -en."
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "Впишите форму (blau): Er hat die ___ Jacke getragen.",
+        "answer": "blaue",
+        "tip": "Akkusativ (жен. род): артикль 'die' базовый, поэтому окончание прилагательного -e."
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "Впишите форму (klein): Wir haben den ___ Kindern geholfen.",
+        "answer": "kleinen",
+        "tip": "Dativ Plural: после артикля 'den' (для мн. числа) всегда пишем -en."
+      }
+    ]
+  },
+  {
+    "questId": "adjective-nine",
+    "title": "Охват",
+    "progress": "0/15",
+    "description": "Девятый этап: расширяем словарный запас и доводим окончания до автоматизма.",
+    "conditions": {
+      "goal": "Закрепите знания на skillupgerman!",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "Соберите: Мы увидим это старое здание",
+        "words": ["Wir", "werden", "das", "alte", "Gebäude", "sehen", "alten"],
+        "correctOrder": ["Wir", "werden", "das", "alte", "Gebäude", "sehen"],
+        "tip": "Akkusativ (ср. род): артикль 'das' не изменился, поэтому окончание прилагательного -e."
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "Впишите форму (lecker): Ich werde den ___ Apfel essen.",
+        "answer": "leckeren",
+        "tip": "Akkusativ (муж. род): артикль изменился на 'den', ставим окончание -en."
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Die junge Künstlerin hat gemalt",
+        "answer": "Die junge Künstlerin hat gemalt",
+        "tip": "Nominativ (жен. род): после артикля 'die' окончание прилагательного -e."
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "Впишите форму (groß): Er wird in dem ___ Haus bleiben.",
+        "answer": "großen",
+        "tip": "Dativ (ср. род): после измененного артикля 'dem' всегда пишем -en."
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "Впишите форму (hell): Wir haben die ___ Lampe gekauft.",
+        "answer": "helle",
+        "tip": "Akkusativ (жен. род): артикль 'die' базовый, ставим окончание -e."
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "Выберите форму: Der ___ Film hat mir gefallen.",
+        "options": [
+          "gute",
+          "guten",
+          "guter"
+        ],
+        "answer": "gute",
+        "tip": "Nominativ (муж. род): после базового артикля 'der' окончание прилагательного -e."
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Соберите: Твой лучший друг позвонит",
+        "words": ["Der", "bester", "anrufen", "Freund", "wird", "besten"],
+        "correctOrder": ["Der", "bester", "Freund", "wird", "anrufen"],
+        "tip": "Nominativ (муж. род): притяжательное местоимение 'dein' работает как неопределенный артикль, но здесь окончание -er указывает на род."
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "Впишите форму (kalt): Sie hat das ___ Eis gegessen.",
+        "answer": "kalte",
+        "tip": "Akkusativ (ср. род): артикль 'das' не изменился, окончание прилагательного -e."
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Den neuen Wagen hat er gewaschen",
+        "answer": "Den neuen Wagen hat er gewaschen",
+        "tip": "Akkusativ (муж. род): артикль 'den' требует окончания -en."
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "Впишите форму (modern): Ich habe in der ___ Praxis gearbeitet.",
+        "answer": "modernen",
+        "tip": "Dativ (жен. род): артикль 'die' стал 'der', значит ставим окончание -en."
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите: Сильный ветер сорвал крышу",
+        "words": ["Der", "starke", "Wind", "hat", "das", "Dach", "abgerissen", "starken"],
+        "correctOrder": ["Der", "starke", "Wind", "hat", "das", "Dach", "abgerissen"],
+        "tip": "Nominativ (муж. род): после базового 'der' окончание прилагательного -e."
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "Впишите форму (sauber): Wir werden das ___ Geschirr spülen.",
+        "answer": "saubere",
+        "tip": "Akkusativ (ср. род): артикль 'das' базовый, ставим окончание -e."
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Die kleinen Vögel haben gesungen",
+        "answer": "Die kleinen Vögel haben gesungen",
+        "tip": "Plural (Nominativ): после определенного артикля во мн. числе всегда пишем -en."
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "Впишите форму (alt): Du wirst mit dem ___ Bus fahren.",
+        "answer": "alten",
+        "tip": "Dativ (муж. род): после измененного артикля 'dem' ставим окончание -en."
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "Впишите форму (bekannt): Er hat den ___ Musikern zugehört.",
+        "answer": "bekannten",
+        "tip": "Dativ Plural: после артикля 'den' (для мн. числа) всегда пишем -en."
+      }
+    ]
+  },
+  {
+    "questId": "adjective-ten",
+    "title": "Опыт",
+    "progress": "0/15",
+    "description": "Отработка окончаний (артикль) в Perfekt и Futur 1. Темы: медицина, город, транспорт, еда, техника.",
+    "conditions": {
+      "goal": "Закрепите грамматику на skillupgerman!",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "Соберите: Мы посетим старый музей",
+        "words": ["Wir", "werden", "das", "alte", "Museum", "besuchen", "alten"],
+        "correctOrder": ["Wir", "werden", "das", "alte", "Museum", "besuchen"],
+        "tip": "Akkusativ (ср. род): артикль 'das' базовый, у прилагательного окончание -e."
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "Впишите форму (krank): Der ___ Patient hat lange gewartet.",
+        "answer": "kranke",
+        "tip": "Nominativ (муж. род): после базового артикля 'der' ставим окончание -e."
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Die neue Brücke wird fertig sein",
+        "answer": "Die neue Brücke wird fertig sein",
+        "tip": "Nominativ (жен. род): после артикля 'die' окончание прилагательного -e."
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "Впишите форму (teuer): Ich habe mit dem ___ Handy telefoniert.",
+        "answer": "teuren",
+        "tip": "Dativ (ср. род): после измененного артикля 'dem' всегда пишем -en."
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "Впишите форму (bitter): Er wird die ___ Medizin trinken.",
+        "answer": "bittere",
+        "tip": "Akkusativ (жен. род): артикль 'die' базовый, ставим окончание -e."
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "Выберите форму: Die ___ Autos sind schnell gefahren.",
+        "options": [
+          "schnellen",
+          "schnelle",
+          "schnelles"
+        ],
+        "answer": "schnellen",
+        "tip": "Plural (Nominativ): с определенным артиклем во мн. числе всегда пишем -en."
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Соберите: Я куплю этот свежий хлеб",
+        "words": ["Ich", "werde", "das", "frische", "Brot", "kaufen", "frischen"],
+        "correctOrder": ["Ich", "werde", "das", "frische", "Brot", "kaufen"],
+        "tip": "Akkusativ (ср. род): артикль 'das' не изменился, окончание прилагательного -e."
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "Впишите форму (stark): Du hast den ___ Schmerz gespürt.",
+        "answer": "starken",
+        "tip": "Akkusativ (муж. род): артикль изменился на 'den', ставим окончание -en."
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Das kalte Wetter hat uns überrascht",
+        "answer": "Das kalte Wetter hat uns überrascht",
+        "tip": "Nominativ (ср. род): после артикля 'das' у прилагательного окончание -e."
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "Впишите форму (alt): Wir werden in der ___ Fabrik arbeiten.",
+        "answer": "alten",
+        "tip": "Dativ (жен. род): артикль 'die' стал 'der', поэтому окончание -en."
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите: Официант принес вкусный суп",
+        "words": ["Der", "Kellner", "hat", "die", "leckere", "Suppe", "gebracht", "leckeren"],
+        "correctOrder": ["Der", "Kellner", "hat", "die", "leckere", "Suppe", "gebracht"],
+        "tip": "Akkusativ (жен. род): после базового артикля 'die' окончание прилагательного -e."
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "Впишите форму (modern): Er wird den ___ Laptop benutzen.",
+        "answer": "modernen",
+        "tip": "Akkusativ (муж. род): артикль 'den' изменен, ставим окончание -en."
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Der kluge Mechaniker hat das Auto repariert",
+        "answer": "Der kluge Mechaniker hat das Auto repariert",
+        "tip": "Nominativ (муж. род): после артикля 'der' ставим окончание -e."
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "Впишите форму (süß): Ich habe den ___ Nachtisch bestellt.",
+        "answer": "süßen",
+        "tip": "Akkusativ (муж. род): после 'den' окончание прилагательного всегда -en."
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "Впишите форму (beste): Wir haben mit den ___ Kollegen gesprochen.",
+        "answer": "besten",
+        "tip": "Dativ Plural: после артикля 'den' (для мн. числа) всегда пишем -en."
+      }
+    ]
+  },
+  {
+    "questId": "adjective-eleven",
+    "title": "Итог",
+    "progress": "0/15",
+    "description": "Отработка окончаний (артикль) в Perfekt и Futur 1. Темы: путешествия, работа, природа, техника, дом.",
+    "conditions": {
+      "goal": "Закрепите грамматику на skillupgerman!",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "Соберите: Мы увидим синее небо",
+        "words": ["Wir", "werden", "den", "blauen", "Himmel", "sehen", "blaue"],
+        "correctOrder": ["Wir", "werden", "den", "blauen", "Himmel", "sehen"],
+        "tip": "Akkusativ (муж. род): артикль изменился на 'den', поэтому ставим окончание -en."
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "Впишите форму (alt): Ich habe das ___ Fahrrad verkauft.",
+        "answer": "alte",
+        "tip": "Akkusativ (ср. род): артикль 'das' не изменился, окончание прилагательного -e."
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Die kluge Frau hat geholfen",
+        "answer": "Die kluge Frau hat geholfen",
+        "tip": "Nominativ (жен. род): после артикля 'die' ставим окончание -e."
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "Впишите форму (schnell): Er wird mit dem ___ Auto fahren.",
+        "answer": "schnellen",
+        "tip": "Dativ (ср. род): после измененного артикля 'dem' всегда пишем -en."
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "Впишите форму (interessant): Sie hat den ___ Job bekommen.",
+        "answer": "interessanten",
+        "tip": "Akkusativ (муж. род): артикль изменился на 'den', ставим окончание -en."
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "Выберите форму: Das ___ Haus wird bald fertig sein.",
+        "options": [
+          "neue",
+          "neuen",
+          "neues"
+        ],
+        "answer": "neue",
+        "tip": "Nominativ (ср. род): после артикля 'das' у прилагательного окончание -e."
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Соберите: Повар приготовил вкусную рыбу",
+        "words": ["Der", "Koch", "hat", "den", "leckeren", "Fisch", "gekocht", "leckere"],
+        "correctOrder": ["Der", "Koch", "hat", "den", "leckeren", "Fisch", "gekocht"],
+        "tip": "Akkusativ (муж. род): артикль 'der' стал 'den', окончание прилагательного -en."
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "Впишите форму (groß): Wir haben in der ___ Küche gegessen.",
+        "answer": "großen",
+        "tip": "Dativ (жен. род): артикль 'die' изменился на 'der', поэтому окончание -en."
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Der neue Monitor wird funktionieren",
+        "answer": "Der neue Monitor wird funktionieren",
+        "tip": "Nominativ (муж. род): после артикля 'der' ставим окончание -e."
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "Впишите форму (kalt): Ich werde das ___ Bier trinken.",
+        "answer": "kalte",
+        "tip": "Akkusativ (ср. род): артикль 'das' базовый, окончание прилагательного -e."
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите: Маленькая кошка поймала мышь",
+        "words": ["Die", "kleine", "Katze", "hat", "die", "Maus", "gefangen", "kleinen"],
+        "correctOrder": ["Die", "kleine", "Katze", "hat", "die", "Maus", "gefangen"],
+        "tip": "Nominativ (жен. род): после артикля 'die' окончание прилагательного -e."
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "Впишите форму (modern): Er hat in dem ___ Büro gearbeitet.",
+        "answer": "modernen",
+        "tip": "Dativ (ср. род): после измененного артикля 'dem' всегда пишем -en."
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Die netten Gäste werden kommen",
+        "answer": "Die netten Gäste werden kommen",
+        "tip": "Plural (Nominativ): с определенным артиклем во мн. числе ставим -en."
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "Впишите форму (gut): Ich habe den ___ Wein probiert.",
+        "answer": "guten",
+        "tip": "Akkusativ (муж. род): артикль изменился на 'den', ставим окончание -en."
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "Впишите форму (best): Wir werden die ___ Freunde treffen.",
+        "answer": "besten",
+        "tip": "Akkusativ Plural: после определенного артикля во мн. числе всегда пишем -en."
+      }
+    ]
+  },
+  {
+    "questId": "adjective-twelve",
+    "title": "Зачёт",
+    "progress": "0/15",
+    "description": "Отработка окончаний (артикль) в Perfekt и Futur 1. Темы: образование, город, работа, отдых, техника.",
+    "conditions": {
+      "goal": "Закрепите грамматику на skillupgerman!",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 30,
+      "xp": 30
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "Соберите: Студент сдаст трудный экзамен",
+        "words": ["Der", "Student", "wird", "die", "schwere", "Prüfung", "bestehen", "schweren"],
+        "correctOrder": ["Der", "Student", "wird", "die", "schwere", "Prüfung", "bestehen"],
+        "tip": "Futur 1 / Akkusativ (жен. род): артикль 'die' базовый, поэтому окончание прилагательного -e."
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "Впишите форму (neu): Ich habe das ___ Passwort benutzt.",
+        "answer": "neue",
+        "tip": "Akkusativ (ср. род): артикль 'das' не изменился, окончание прилагательного -e."
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Die klugen Leute haben gewonnen",
+        "answer": "Die klugen Leute haben gewonnen",
+        "tip": "Plural (Nominativ): после определенного артикля во мн. числе всегда пишем -en."
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "Впишите форму (modern): Wir werden in dem ___ Hotel schlafen.",
+        "answer": "modernen",
+        "tip": "Dativ (ср. род): после измененного артикля 'dem' всегда пишем -en."
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "Впишите форму (alt): Er hat den ___ Baum im Garten gesehen.",
+        "answer": "alten",
+        "tip": "Akkusativ (муж. род): артикль изменился на 'den', поэтому ставим окончание -en."
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "Выберите форму: Der ___ Film wird morgen starten.",
+        "options": [
+          "gute",
+          "guten",
+          "guter"
+        ],
+        "answer": "gute",
+        "tip": "Nominativ (муж. род): после базового артикля 'der' окончание прилагательного -e."
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Соберите: Мы купили этот белый стол",
+        "words": ["Wir", "haben", "den", "weißen", "Tisch", "gekauft", "weiße"],
+        "correctOrder": ["Wir", "haben", "den", "weißen", "Tisch", "gekauft"],
+        "tip": "Perfekt / Akkusativ (муж. род): артикль 'der' стал 'den', окончание прилагательного -en."
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "Впишите форму (stark): Sie wird den ___ Kaffee trinken.",
+        "answer": "starken",
+        "tip": "Futur 1 / Akkusativ (муж. род): артикль 'den' изменен, ставим окончание -en."
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Das neue Projekt hat begonnen",
+        "answer": "Das neue Projekt hat begonnen",
+        "tip": "Nominativ (ср. род): после артикля 'das' у прилагательного окончание -e."
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "Впишите форму (groß): Ich habe in der ___ Firma gearbeitet.",
+        "answer": "großen",
+        "tip": "Dativ (жен. род): артикль изменился на 'der', поэтому окончание прилагательного -en."
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите: Известный врач поможет нам",
+        "words": ["Der", "bekannte", "Arzt", "wird", "uns", "helfen", "bekannten"],
+        "correctOrder": ["Der", "bekannte", "Arzt", "wird", "uns", "helfen"],
+        "tip": "Nominativ (муж. род): после артикля 'der' у прилагательного окончание -e."
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "Впишите форму (kalt): Wir werden das ___ Bier im Kühlschrank finden.",
+        "answer": "kalte",
+        "tip": "Akkusativ (ср. род): артикль 'das' не изменился, окончание прилагательного -e."
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Die kleinen Kinder haben gelacht",
+        "answer": "Die kleinen Kinder haben gelacht",
+        "tip": "Plural (Nominativ): с определенным артиклем во мн. числе ставим -en."
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "Впишите форму (best): Er hat mit dem ___ Chef gesprochen.",
+        "answer": "besten",
+        "tip": "Dativ (муж. род): после измененного артикля 'dem' ставим окончание -en."
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "Впишите форму (lecker): Ich werde die ___ Suppe essen.",
+        "answer": "leckere",
+        "tip": "Akkusativ (жен. род): артикль 'die' базовый, окончание прилагательного -e."
+      }
+    ]
+  },
+  {
+    "questId": "adj_decl_mixed_13",
+    "title": "Срез",
+    "progress": "0/15",
+    "description": "Отработка окончаний (артикль) в Perfekt и Futur 1. Темы: природа, покупки, здоровье, техника.",
+    "conditions": {
+      "goal": "Закрепите грамматику на skillupgerman!",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "Соберите: Я куплю эту синюю куртку",
+        "words": ["Ich", "werde", "die", "blaue", "Jacke", "kaufen", "blauen"],
+        "correctOrder": ["Ich", "werde", "die", "blaue", "Jacke", "kaufen"],
+        "tip": "Akkusativ (жен. род): артикль 'die' базовый, окончание прилагательного -e."
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "Впишите форму (hoch): Der ___ Berg war sehr gefährlich.",
+        "answer": "hohe",
+        "tip": "Nominativ (муж. род): после артикля 'der' ставим окончание -e."
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Die neue Kamera hat gut funktioniert",
+        "answer": "Die neue Kamera hat gut funktioniert",
+        "tip": "Nominativ (жен. род): после артикля 'die' окончание прилагательного -e."
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "Впишите форму (krank): Wir helfen dem ___ Kind.",
+        "answer": "kranken",
+        "tip": "Dativ (ср. род): берет у артикля 'dem' окончание -en."
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "Впишите форму (teuer): Er hat den ___ Fernseher repariert.",
+        "answer": "teuren",
+        "tip": "Akkusativ (муж. род): артикль изменился на 'den', ставим окончание -en."
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "Выберите форму: Das ___ Wetter hat uns gefreut.",
+        "options": [
+          "warme",
+          "warmen",
+          "warmes"
+        ],
+        "answer": "warme",
+        "tip": "Nominativ (ср. род): после артикля 'das' ставим окончание -e."
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Соберите: Мы увидим красивый сад",
+        "words": ["Wir", "werden", "den", "schönen", "Garten", "sehen", "schöne"],
+        "correctOrder": ["Wir", "werden", "den", "schönen", "Garten", "sehen"],
+        "tip": "Akkusativ (муж. род): артикль стал 'den', окончание прилагательного -en."
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "Впишите форму (alt): Ich habe in der ___ Zeitung gelesen.",
+        "answer": "alten",
+        "tip": "Dativ (жен. род): артикль 'die' изменился на 'der', ставим окончание -en."
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Der starke Hund hat laut gebellt",
+        "answer": "Der starke Hund hat laut gebellt",
+        "tip": "Nominativ (муж. род): после базового артикля 'der' окончание -e."
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "Впишите форму (süß): Sie wird den ___ Saft trinken.",
+        "answer": "süßen",
+        "tip": "Akkusativ (муж. род): после измененного артикля 'den' всегда пишем -en."
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите: Маленький мальчик нашел ключ",
+        "words": ["Der", "kleine", "Junge", "hat", "den", "Schlüssel", "gefunden", "kleinen"],
+        "correctOrder": ["Der", "kleine", "Junge", "hat", "den", "Schlüssel", "gefunden"],
+        "tip": "Nominativ (муж. род): после артикля 'der' ставим окончание -e."
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "Впишите форму (modern): Er wird in dem ___ Zimmer wohnen.",
+        "answer": "modernen",
+        "tip": "Dativ (ср. род): артикль 'das' стал 'dem', у прилагательного окончание -en."
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Die besten Rezepte haben wir gefunden",
+        "answer": "Die besten Rezepte haben wir gefunden",
+        "tip": "Akkusativ Plural: с определенным артиклем всегда ставим -en."
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "Впишите форму (lecker): Ich habe das ___ Obst gegessen.",
+        "answer": "leckere",
+        "tip": "Akkusativ (ср. род): артикль 'das' не изменился, окончание -e."
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "Впишите форму (best): Wir werden mit den ___ Nachbarn sprechen.",
+        "answer": "besten",
+        "tip": "Dativ Plural: после артикля 'den' (для мн. числа) всегда пишем -en."
+      }
+    ]
+  },
+  {
+    "questId": "adj_decl_mixed_14",
+    "title": "Грань",
+    "progress": "0/15",
+    "description": "Отработка окончаний (артикль) в Perfekt и Futur 1. Темы: медицина, офис, город, еда, путешествия.",
+    "conditions": {
+      "goal": "Закрепите грамматику на skillupgerman!",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "Соберите: Мы забронируем этот дорогой отель",
+        "words": ["Wir", "werden", "das", "teure", "Hotel", "buchen", "teuren"],
+        "correctOrder": ["Wir", "werden", "das", "teure", "Hotel", "buchen"],
+        "tip": "Akkusativ (ср. род): артикль 'das' базовый, окончание прилагательного -e."
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "Впишите форму (krank): Der ___ Patient hat lange gewartet.",
+        "answer": "kranke",
+        "tip": "Nominativ (муж. род): после базового артикля 'der' ставим окончание -e."
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Die neue Kollegin hat sich vorgestellt",
+        "answer": "Die neue Kollegin hat sich vorgestellt",
+        "tip": "Nominativ (жен. род): после артикля 'die' окончание прилагательного -e."
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "Впишите форму (alt): Ich habe in der ___ Zeitung gelesen.",
+        "answer": "alten",
+        "tip": "Dativ (жен. род): артикль изменился на 'der', поэтому окончание прилагательного -en."
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "Впишите форму (groß): Er wird in dem ___ Büro arbeiten.",
+        "answer": "großen",
+        "tip": "Dativ (ср. род): после измененного артикля 'dem' всегда пишем -en."
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "Выберите форму: Das ___ Wetter hat uns gefreut.",
+        "options": [
+          "schöne",
+          "schönen",
+          "schöner"
+        ],
+        "answer": "schöne",
+        "tip": "Nominativ (ср. род): после артикля 'das' ставим окончание -e."
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Соберите: Она выпьет этот горячий чай",
+        "words": ["Sie", "wird", "den", "heißen", "Tee", "trinken", "heiße"],
+        "correctOrder": ["Sie", "wird", "den", "heißen", "Tee", "trinken"],
+        "tip": "Akkusativ (муж. род): артикль изменился на 'den', ставим окончание -en."
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "Впишите форму (modern): Wir haben die ___ Küche geputzt.",
+        "answer": "moderne",
+        "tip": "Akkusativ (жен. род): артикль 'die' базовый, окончание прилагательного -e."
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Der starke Wind hat uns gestört",
+        "answer": "Der starke Wind hat uns gestört",
+        "tip": "Nominativ (муж. род): после артикля 'der' у прилагательного окончание -e."
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "Впишите форму (lecker): Ich werde den ___ Fisch essen.",
+        "answer": "leckeren",
+        "tip": "Akkusativ (муж. род): после 'den' окончание прилагательного всегда -en."
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите: Трудный экзамен будет закончен",
+        "words": ["Die", "schwere", "Prüfung", "wird", "beendet", "sein", "schweren"],
+        "correctOrder": ["Die", "schwere", "Prüfung", "wird", "beendet", "sein"],
+        "tip": "Nominativ (жен. род): после базового артикля 'die' окончание -e."
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "Впишите форму (kalt): Sie hat das ___ Eis geholt.",
+        "answer": "kalte",
+        "tip": "Akkusativ (ср. род): артикль 'das' не изменился, окончание -e."
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Die kleinen Fenster haben wir geputzt",
+        "answer": "Die kleinen Fenster haben wir geputzt",
+        "tip": "Akkusativ Plural: с определенным артиклем во мн. числе всегда пишем -en."
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "Впишите форму (best): Er hat mit den ___ Kollegen gesprochen.",
+        "answer": "besten",
+        "tip": "Dativ Plural: после артикля 'den' (для мн. числа) всегда пишем -en."
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "Впишите форму (neu): Wir werden das ___ Programm starten.",
+        "answer": "neue",
+        "tip": "Akkusativ (ср. род): артикль 'das' базовый, окончание -e."
+      }
+    ]
+  },
+  {
+    "questId": "adj_decl_mixed_15",
+    "title": "Слой",
+    "progress": "0/15",
+    "description": "Отработка окончаний (артикль) в Perfekt и Futur 1. Темы: искусство, город, транспорт, образование.",
+    "conditions": {
+      "goal": "Закрепите грамматику на skillupgerman!",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 30,
+      "xp": 30
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "Соберите: Мы посетим новый театр",
+        "words": ["Wir", "werden", "das", "neue", "Theater", "besuchen", "neuen"],
+        "correctOrder": ["Wir", "werden", "das", "neue", "Theater", "besuchen"],
+        "tip": "Akkusativ (ср. род): артикль 'das' не изменился, окончание прилагательного -e."
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "Впишите форму (alt): Der ___ Professor hat viel erzählt.",
+        "answer": "alte",
+        "tip": "Nominativ (муж. род): после базового артикля 'der' ставим окончание -e."
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Das kleine Bild hat dort gehangen",
+        "answer": "Das kleine Bild hat dort gehangen",
+        "tip": "Nominativ (ср. род): после артикля 'das' окончание -e."
+      },
+      {
+        "id": 4,
+        "type": "input",
+        "question": "Впишите форму (modern): Ich werde in der ___ Galerie arbeiten.",
+        "answer": "modernen",
+        "tip": "Dativ (жен. род): артикль 'die' стал 'der', поэтому окончание -en."
+      },
+      {
+        "id": 5,
+        "type": "input",
+        "question": "Впишите форму (schnell): Er hat den ___ Bus verpasst.",
+        "answer": "schnellen",
+        "tip": "Akkusativ (муж. род): артикль изменился на 'den', ставим окончание -en."
+      },
+      {
+        "id": 6,
+        "type": "select",
+        "question": "Выберите форму: Die ___ Studenten haben gelernt.",
+        "options": [
+          "fleißigen",
+          "fleißige",
+          "fleißiger"
+        ],
+        "answer": "fleißigen",
+        "tip": "Plural (Nominativ): с определенным артиклем во мн. числе всегда пишем -en."
+      },
+      {
+        "id": 7,
+        "type": "reorder",
+        "question": "Соберите: Я найду этот правильный путь",
+        "words": ["Ich", "werde", "den", "richtigen", "Weg", "finden", "richtige"],
+        "correctOrder": ["Ich", "werde", "den", "richtigen", "Weg", "finden"],
+        "tip": "Akkusativ (муж. род): артикль стал 'den', окончание -en."
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "Впишите форму (groß): Wir haben in dem ___ Saal getanzt.",
+        "answer": "großen",
+        "tip": "Dativ (муж. род): после измененного артикля 'dem' всегда пишем -en."
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Die neue Brücke hat uns geholfen",
+        "answer": "Die neue Brücke hat uns geholfen",
+        "tip": "Nominativ (жен. род): после артикля 'die' ставим окончание -e."
+      },
+      {
+        "id": 10,
+        "type": "input",
+        "question": "Впишите форму (kalt): Sie wird das ___ Wasser holen.",
+        "answer": "kalte",
+        "tip": "Akkusativ (ср. род): артикль 'das' базовый, окончание -e."
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "Соберите: Известный актер придет завтра",
+        "words": ["Der", "bekannte", "Schauspieler", "wird", "morgen", "kommen", "bekannten"],
+        "correctOrder": ["Der", "bekannte", "Schauspieler", "wird", "morgen", "kommen"],
+        "tip": "Nominativ (муж. род): после артикля 'der' у прилагательного окончание -e."
+      },
+      {
+        "id": 12,
+        "type": "input",
+        "question": "Впишите форму (interessant): Wir haben das ___ Buch.",
+        "answer": "interessante",
+        "tip": "Akkusativ (ср. род): артикль 'das' не изменился, окончание -e."
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "Прослушайте и напишите услышанное",
+        "text": "Den schwarzen Mantel habe ich gekauft",
+        "answer": "Den schwarzen Mantel habe ich gekauft",
+        "tip": "Akkusativ (муж. род): после 'den' окончание прилагательного всегда -en."
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "Впишите форму (beste): Er hat mit den ___ Schülern gesprochen.",
+        "answer": "besten",
+        "tip": "Dativ Plural: после артикля 'den' (мн. число) ставим окончание -en."
+      },
+      {
+        "id": 15,
+        "type": "input",
+        "question": "Впишите форму (lecker): Ich werde die ___ Pizza essen.",
+        "answer": "leckere",
+        "tip": "Akkusativ (жен. род): артикль 'die' базовый, окончание -e."
+      }
+    ]
+  }
+]

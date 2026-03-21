@@ -326,7 +326,11 @@
     "descriptionNorthCliffs": "Altos acantilados se elevan sobre el mar, y los vientos fríos ponen a prueba la resistencia de cada viajero. Te esperan misiones que requieren atención.",
     "descriptionStormCoast": "Tierras costeras salvajes donde rugen los truenos y relámpagos. Sólo los héroes valientes se atreven a pisar aquí. Aquí te espera una verdadera prueba del poder de tu conocimiento.",
     "descriptionMasterLands": "Tierras de maestros y artesanos, donde cada trabajo importa. Aquí aprenderás a hablar sobre profesiones, trabajo y deberes diarios.",
-    "descriptionWildLands": "La vida en la naturaleza está llena de descubrimientos sorprendentes. Aquí aprenderás a nombrar a los habitantes del bosque y los elementos, describir sus acciones y formar frases sobre el mundo natural."
+    "descriptionWildLands": "La vida en la naturaleza está llena de descubrimientos sorprendentes. Aquí aprenderás a nombrar a los habitantes del bosque y los elementos, describir sus acciones y formar frases sobre el mundo natural.",
+    "descriptionPluralLands": "En esta ladera empinada, la niebla del pasado finalmente se disipa, revelando una vista del horizonte lejano. Aquí, el viajero aprende no solo a mirar sus pies, sino a vislumbrar tanto el mañana como el ayer.",
+    "descriptionPastLands": "Entre las piedras antiguas y las arenas del tiempo, se guardan las historias de lo que ya ha sucedido. Aquí, el viajero aprende a mirar atrás y a describir los sucesos de antaño, dominando el tiempo pasado.",
+    "descriptionActionLands": "Aquí el tiempo ya no se detiene y la niebla del pasado se desvanece. En este valle, el viajero aprende a fijar metas, dominando los verbos modales y el arte de la interacción a través de los casos.",
+    "descriptionOrderValley": "Aquí el viajero aprende a construir oraciones correctas. En este valle, domina el orden de las palabras en frases simples y complejas, aprende a informar sobre la existencia de cosas y a usar pronombres reflexivos."
   },
   "calendarInfo": {
     "eventsTitle": "Calendario de eventos",
@@ -658,17 +662,17 @@
     "answerThree": "Por el momento, no se ofrece reembolso por los días restantes."
   },
   "daily": {
-    "first": "Aprende 10 palabras en todos los modos: Práctica de artículos",
-    "second": "Gana 10 Articluses en la práctica de artículos",
-    "third": "Logra una racha de 10 palabras (modo fácil) en el Maratón de artículos",
-    "fourth": "Gana 15 puntos de experiencia en la Práctica de artículos",
-    "fifth": "Adivina 10 palabras en el modo 'Adivina la palabra'",
-    "sixth": "Logra una racha de 10 palabras (modo medio) en el Maratón de artículos",
-    "seventh": "Aprende 10 palabras en plural en el modo: Práctica de artículos",
-    "eighth": "Aprende 10 palabras en todos los modos: Práctica de artículos",
-    "ninth": "Aprende 10 palabras en modo audio: Práctica de artículos",
-    "tenth": "Logra una racha de 10 palabras (modo difícil) en el Maratón de artículos",
-    "eleventh": "Gana 10 puntos de experiencia en la Práctica de artículos",
+    "first": "Aprende 5 palabras en todos los modos: Práctica de artículos",
+    "second": "Gana 5 Articluses en la práctica de artículos",
+    "third": "Logra una racha de 5 palabras (modo fácil) en el Maratón de artículos",
+    "fourth": "Gana 5 puntos de experiencia en la Práctica de artículos",
+    "fifth": "Adivina 5 palabras en el modo 'Adivina la palabra'",
+    "sixth": "Logra una racha de 5 palabras (modo medio) en el Maratón de artículos",
+    "seventh": "Aprende 5 palabras en plural en el modo: Práctica de artículos",
+    "eighth": "Aprende 5 palabras en todos los modos: Práctica de artículos",
+    "ninth": "Aprende 5 palabras en modo audio: Práctica de artículos",
+    "tenth": "Logra una racha de 5 palabras (modo difícil) en el Maratón de artículos",
+    "eleventh": "Gana 5 puntos de experiencia en la Práctica de artículos",
     "twelve": "Completa un módulo en los niveles temáticos",
     "thirteenth": "Completa una misión en las Tierras de Idiomas",
     "fourteenth": "Adivina 5 palabras en el modo 'Adivina la palabra'"
@@ -1360,7 +1364,11 @@
     "north-cliffs": "Acantilados del Norte",
     "storm-coast": "Costa de la Tormenta",
     "master-lands": "Tierra de Maestros",
-    "wild-lands": "Tierras salvajes"
+    "wild-lands": "Tierras salvajes",
+    "plural-land": "Paso del Futuro",
+    "past-land": "Ruinas del Pasado",
+    "action-valley": "Valle de las Acciones",
+    "order-valley": "Tierras del Orden"
   },
   "examPage": {
     "examHint": "Usamos un sistema automático de reconocimiento de voz. Habla claramente cerca del micrófono."
