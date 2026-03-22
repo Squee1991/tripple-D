@@ -292,7 +292,7 @@ const menuItems = computed(() => {
                 ],
               },
               {id: 'description', url: '/description-images' , valueKey: 'Описание картинок'},
-              {id: 'audio', url: '/audio' , valueKey: 'Аудио задания'},
+              {id: 'audio', url: '/audio-tasks' , valueKey: 'Аудио задания'},
               {id: 'themen', url: '/thematic-learning', valueKey: 'sub.themen'},
               {id: 'cards', url: '/create-cards', valueKey: 'sub.card'},
               {id: 'idioms', url: '/idioms', valueKey: 'sub.idioms'}
@@ -599,6 +599,8 @@ onBeforeUnmount(() => {
   position: sticky;
   top: 0;
   z-index: 3;
+  max-width: 1420px;
+  margin: 0 auto;
   background-color: var(--navBg);
   border-bottom: 4px solid var(--borderBottom);
   border-bottom-left-radius: 15px;
