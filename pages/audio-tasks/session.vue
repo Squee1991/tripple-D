@@ -2,12 +2,16 @@
   <div class="quiz-app">
     <div class="quiz-app-container">
       <div v-if="loading" class="quiz-screen">
-        <p style="text-align: center; font-weight: bold;">Загрузка...</p>
+        <p class="loading-text">Загрузка...</p>
       </div>
-
       <div v-else-if="currentTask" class="quiz-screen">
         <header class="study-nav">
-          <button @click="attemptExit" class="study-nav-back"> ⬅ </button>
+          <button @click="handleExitTrigger" class="study-nav-back">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+          </button>
           <div class="study-nav-progress">
             <div class="progress-bar">
               <div class="progress-bar-fill" :style="{ width: progressPercentage + '%' }"></div>
@@ -20,7 +24,7 @@
             <section class="quest-card-audio">
               <p class="quest-card-instruction">Прослушайте диалог!</p>
               <AudioButton
-                  :key="'main-audio-' + currentTask.id"
+                  :key="'main-' + currentTask.id"
                   :level="currentLevel"
                   :topicId="currentTopic.id"
                   :fileName="currentTask.id + '_main'"
@@ -28,7 +32,9 @@
               />
               <transition name="quiz-expand">
                 <div v-if="isTaskChecked" class="chat-flow">
-                  <div v-for="(line, idx) in currentTask.dialogue" :key="'chat-' + currentTask.id + '-' + idx" :class="['chat-bubble', 'chat-bubble-' + line.gender.toLowerCase()]">
+                  <div v-for="(line, idx) in currentTask.dialogue"
+                       :key="idx"
+                       :class="['chat-bubble', 'chat-bubble-' + line.gender.toLowerCase()]">
                     <p class="chat-bubble-text">{{ line.text }}</p>
                   </div>
                 </div>
@@ -36,9 +42,11 @@
             </section>
 
             <div class="quest-card-options">
-              <div v-for="(optionText, index) in currentTask.options" :key="'option-' + currentTask.id + '-' + index" class="quest-option">
-                <SoundBtn :key="'sound-' + currentTask.id + '-' + index" :content="optionText" class="quest-option-audio"/>
-                <button @click="handleOptionSelection(index)" :disabled="isTaskChecked" :class="getOptionClasses(index)">
+              <div v-for="(optionText, index) in currentTask.options" :key="index" class="quest-option">
+                <SoundBtn :content="optionText" class="quest-option-audio"/>
+                <button @click="handleOptionSelection(index)"
+                        :disabled="isTaskChecked"
+                        :class="getOptionClasses(index)">
                   <div class="quest-option-check">
                     <template v-if="isOptionSelected(index)">
                       <span v-if="isTaskChecked && !currentTask.correctIndices.includes(index)">✖</span>
@@ -53,312 +61,227 @@
               </div>
             </div>
 
-            <div v-if="getFeedbackData" :class="['quest-feedback', getFeedbackData.class]">
-              <p class="quest-feedback-text">{{ getFeedbackData.text }}</p>
+            <div v-if="feedback" :class="['quest-feedback', feedback.class]">
+              <p class="quest-feedback-text">{{ feedback.text }}</p>
             </div>
 
             <footer class="quest-card-footer">
-              <button v-if="!isTaskChecked" @click="checkResult" :disabled="!hasUserSelectedAnything" class="quiz-btn-primary">ПРОВЕРИТЬ</button>
-
-              <div v-if="!isTaskChecked && canSkipCurrentTask" class="quest-card-actions" style="margin-top: 10px;">
-                <button @click="skipTask" class="quiz-btn-skip">ПРОПУСТИТЬ</button>
+              <button v-if="!isTaskChecked" @click="checkResult" :disabled="!hasUserSelected"
+                      class="quiz-btn quiz-btn-primary">ПРОВЕРИТЬ
+              </button>
+              <div v-else class="quest-card-actions">
+                <button v-if="!isLastTask" @click="goToNextTask" class="quiz-btn quiz-btn-next">ДАЛЬШЕ</button>
+                <button v-else @click="finishAndSave" class="quiz-btn quiz-btn-finish">ФИНИШ 🏆</button>
               </div>
-
-              <div v-if="isTaskChecked" class="quest-card-actions">
-                <button v-if="!isLastTask" @click="goToNextTask" class="quiz-btn-next">ДАЛЬШЕ</button>
-                <button v-else @click="finishAndSave" class="quiz-btn-finish">ФИНИШ 🏆</button>
-              </div>
+              <button v-if="!isTaskChecked && canSkip" @click="skipTask" class="quiz-btn quiz-btn-skip">ПРОПУСТИТЬ
+              </button>
             </footer>
           </article>
         </main>
       </div>
 
-      <div v-if="showExitModal" class="modal-overlay">
+      <div v-if="activeModal" class="modal-overlay">
         <div class="modal-card">
-          <h3 class="modal-title">Внимание!</h3>
-          <p class="modal-text">Задание не пройдено полностью, прогресс не будет сохранен.</p>
+          <h3 class="modal-title">{{ modalData.title }}</h3>
+          <p :class="['modal-text', modalData.textClass]">{{ modalData.text }}</p>
+          <div v-if="activeModal === 'finish'" class="stats-grid">
+            <div v-for="(val, key) in statsMap" :key="key" :class="['stat-item', 'stat-' + key]">
+              <span>{{ key === 'correct' ? 'Верно' : key === 'partial' ? 'Частично' : 'Неверно' }}:</span>
+              <b>{{ val }}</b>
+            </div>
+          </div>
           <div class="modal-actions">
-            <button @click="cancelExit" class="modal-btn modal-btn-continue">Продолжить</button>
-            <button @click="confirmExit" class="modal-btn modal-btn-exit">Выйти</button>
+            <button @click="modalData.onConfirm" class="modal-btn modal-btn-confirm">{{
+                modalData.confirmLabel
+              }}
+            </button>
+            <button @click="modalData.onCancel" class="modal-btn modal-btn-cancel">{{ modalData.cancelLabel }}</button>
           </div>
         </div>
       </div>
-
-      <div v-if="showFinishModal" class="modal-overlay">
-        <div class="modal-card">
-          <h3 class="modal-title">{{ sessionStats.passed ? 'Отличная работа! 🏆' : 'Нужно потренироваться! 🏋️' }}</h3>
-          <p v-if="sessionStats.passed" class="modal-text success-text">Задание выполнено успешно!</p>
-          <p v-else class="modal-text fail-text">Для выполнения задания нужно больше правильных ответов.</p>
-
-          <div class="stats-grid">
-            <div class="stat-item stat-correct"><span>Верно:</span> <b>{{ sessionStats.correct }}</b></div>
-            <div class="stat-item stat-partial"><span>Частично:</span> <b>{{ sessionStats.partial }}</b></div>
-            <div class="stat-item stat-wrong"><span>Неверно:</span> <b>{{ sessionStats.wrong }}</b></div>
-          </div>
-
-          <div class="modal-actions">
-            <button @click="handleFinishRetry" class="modal-btn modal-btn-continue">Повторить</button>
-            <button @click="handleFinishBack" class="modal-btn modal-btn-exit">Назад</button>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
-import { useRouter } from 'vue-router'
-import { storeToRefs } from 'pinia'
-import { useAudioTaskStore } from '../../store/audioTaskStore.js'
+import {ref, computed, onMounted, onUnmounted, watch} from 'vue'
+import {useRouter} from 'vue-router'
+import {storeToRefs} from 'pinia'
+import {useAudioTaskStore} from '../../store/audioTaskStore.js'
 import AudioButton from '../../src/components/AudioBtn.vue'
 import SoundBtn from '../../src/components/soundBtn.vue'
 
 const router = useRouter()
 const store = useAudioTaskStore()
-const { allTasks, currentLevel, currentTopicId, loading, userProgress } = storeToRefs(store)
+const {allTasks, currentLevel, currentTopicId, loading, userProgress} = storeToRefs(store)
 
 const currentTopic = ref(null)
 const sessionTasks = ref([])
 const currentIndex = ref(0)
 const userSelections = ref({})
 const taskResults = ref({})
+const activeModal = ref(null)
+const sessionStats = ref({correct: 0, partial: 0, wrong: 0, passed: false})
 
-const showExitModal = ref(false)
-const showFinishModal = ref(false)
-const sessionStats = ref({ correct: 0, partial: 0, wrong: 0, passed: false })
+const progressPercentage = computed(() => {
+  if (!sessionTasks.value.length) return 0
+  if (isLastTask.value && isTaskChecked.value) return 100
+  return (currentIndex.value / sessionTasks.value.length) * 100
+})
+
+const currentTask = computed(() => sessionTasks.value[currentIndex.value])
+const isTaskChecked = computed(() => taskResults.value[currentTask.value?.id]?.checked)
+const isLastTask = computed(() => currentIndex.value >= sessionTasks.value.length - 1)
+const totalTasksInTopic = computed(() => sessionTasks.value.length)
+const currentTaskNumber = computed(() => currentIndex.value + 1)
+const hasUserSelected = computed(() => (userSelections.value[currentTask.value?.id]?.length || 0) > 0)
+const canSkip = computed(() => userProgress.value[currentTopic.value?.id]?.[currentTask.value?.id] === 'success')
+
+const feedback = computed(() => {
+  const res = taskResults.value[currentTask.value?.id]
+  if (!res?.checked) return null
+  if (res.status === 'success') return {class: 'is-success', text: '✅ Задание выполнено верно!'}
+  if (res.wrongCount > 0 || res.correctCount === 0) return {class: 'is-wrong', text: '❌ Есть неверные ответы!'}
+  return {class: 'is-warning', text: '⚠️ Выбраны не все верные варианты!'}
+})
+
+const statsMap = computed(() => ({
+  correct: sessionStats.value.correct,
+  partial: sessionStats.value.partial,
+  wrong: sessionStats.value.wrong
+}))
+
+const modalData = computed(() => {
+  if (activeModal.value === 'exit') return {
+    title: 'Внимание!',
+    text: 'Тема не пройдена полностью, прогресс не будет сохранен.',
+    confirmLabel: 'Выйти',
+    cancelLabel: 'Продолжить',
+    onConfirm: () => {
+      stopAllAudio();
+      router.push('/audio-tasks')
+    },
+    onCancel: () => activeModal.value = null
+  }
+  return {
+    title: sessionStats.value.passed ? 'Отличная работа! 🏆' : 'Нужно потренироваться! 🏋️',
+    text: sessionStats.value.passed ? 'Тема пройдена успешно!' : 'Тема не пройдена.',
+    textClass: sessionStats.value.passed ? 'success-text' : 'fail-text',
+    confirmLabel: 'Повторить',
+    cancelLabel: 'Назад',
+    onConfirm: () => {
+      activeModal.value = null;
+      initializeSession()
+    },
+    onCancel: () => {
+      activeModal.value = null;
+      router.push('/audio-tasks')
+    }
+  }
+})
 
 const stopAllAudio = () => {
-  document.querySelectorAll('audio').forEach(audio => {
-    audio.pause()
-    audio.currentTime = 0
+  document.querySelectorAll('audio').forEach(a => {
+    a.pause();
+    a.currentTime = 0;
   })
   window.dispatchEvent(new Event('stop-all-audio'))
 }
 
-watch(currentIndex, () => {
-  stopAllAudio()
-})
-
-const handleBeforeUnload = (e) => {
-  if (!showFinishModal.value && !showExitModal.value) {
-    e.preventDefault()
-    e.returnValue = ''
+const handleExitTrigger = () => {
+  if (currentIndex.value > 0 || isTaskChecked.value) activeModal.value = 'exit'
+  else {
+    stopAllAudio();
+    router.push('/audio-tasks')
   }
+}
+
+const handleOptionSelection = (idx) => {
+  const id = currentTask.value.id
+  if (!userSelections.value[id]) userSelections.value[id] = []
+  const current = userSelections.value[id]
+  userSelections.value[id] = current.includes(idx) ? current.filter(i => i !== idx) : [...current, idx]
+}
+
+const isOptionSelected = (idx) => userSelections.value[currentTask.value?.id]?.includes(idx)
+
+const getOptionClasses = (idx) => {
+  const isCorrect = currentTask.value.correctIndices.includes(idx)
+  const isSelected = isOptionSelected(idx)
+  let cls = 'quest-option-button'
+  if (isSelected) cls += ' is-selected'
+  if (isTaskChecked.value) {
+    if (isSelected && isCorrect) cls += ' is-correct'
+    else if (!isSelected && isCorrect) cls += ' is-missed'
+    else if (isSelected && !isCorrect) cls += ' is-wrong'
+  }
+  return cls
+}
+
+const checkResult = () => {
+  const task = currentTask.value
+  const sel = userSelections.value[task.id] || []
+  const corr = task.correctIndices
+  const cCount = sel.filter(i => corr.includes(i)).length
+  const wCount = sel.filter(i => !corr.includes(i)).length
+  taskResults.value[task.id] = {
+    checked: true,
+    status: (cCount === corr.length && wCount === 0) ? 'success' : 'wrong',
+    wrongCount: wCount,
+    correctCount: cCount,
+    missedCount: corr.length - cCount
+  }
+}
+
+const goToNextTask = () => {
+  stopAllAudio();
+  currentIndex.value++
+}
+const skipTask = () => isLastTask.value ? finishAndSave() : goToNextTask()
+
+const finishAndSave = async () => {
+  stopAllAudio()
+  let c = 0, p = 0, w = 0
+  const results = {}
+  sessionTasks.value.forEach(t => {
+    const r = taskResults.value[t.id]
+    if (r?.status === 'success') {
+      c++;
+      results[t.id] = 'success'
+    } else if (r?.wrongCount > 0 || r?.correctCount === 0) {
+      w++;
+      results[t.id] = 'wrong'
+    } else if (r?.missedCount > 0) {
+      p++;
+      results[t.id] = 'partial'
+    }
+  })
+  sessionStats.value = {correct: c, partial: p, wrong: w, passed: c >= Math.ceil(sessionTasks.value.length * 0.8)}
+  await store.saveTopicProgress(currentTopic.value.id, results)
+  activeModal.value = 'finish'
 }
 
 const initializeSession = () => {
   const topics = allTasks.value[currentLevel.value] || []
   currentTopic.value = topics.find(t => t.id === currentTopicId.value)
-
-  if (!currentTopic.value) {
-    router.push('/audio-tasks')
-    return
-  }
-
+  if (!currentTopic.value) return router.push('/audio-tasks')
   currentIndex.value = 0
   userSelections.value = {}
   taskResults.value = {}
-
-  const progress = userProgress.value[currentTopic.value.id] || {}
-  const hasErrorsOrIncomplete = currentTopic.value.tasks.some(t => progress[t.id] !== 'success')
-
-  let tasksToPlay = []
-
-  if (hasErrorsOrIncomplete) {
-    tasksToPlay = currentTopic.value.tasks.filter(t => progress[t.id] !== 'success')
-  } else {
-    tasksToPlay = [...currentTopic.value.tasks]
-  }
-
-  tasksToPlay.sort(() => Math.random() - 0.5)
-  sessionTasks.value = tasksToPlay
+  const prog = userProgress.value[currentTopic.value.id] || {}
+  const tasks = currentTopic.value.tasks
+  const toPlay = tasks.some(t => prog[t.id] !== 'success') ? tasks.filter(t => prog[t.id] !== 'success') : [...tasks]
+  sessionTasks.value = toPlay.sort(() => Math.random() - 0.5)
 }
 
 onMounted(async () => {
-  if (!currentTopicId.value) {
-    router.push('/audio-tasks')
-    return
-  }
-  await store.fetchTasks()
-  await store.loadUserProgress()
+  if (!currentTopicId.value) return router.push('/audio-tasks')
+  await store.fetchTasks();
+  await store.loadUserProgress();
   initializeSession()
-  window.addEventListener('beforeunload', handleBeforeUnload)
 })
-
-onUnmounted(() => {
-  stopAllAudio()
-  window.removeEventListener('beforeunload', handleBeforeUnload)
-})
-
-const currentTask = computed(() => sessionTasks.value[currentIndex.value])
-const currentTaskId = computed(() => currentTask.value?.id)
-const isTaskChecked = computed(() => taskResults.value[currentTaskId.value]?.checked)
-const hasUserSelectedAnything = computed(() => (userSelections.value[currentTaskId.value]?.length || 0) > 0)
-const currentTaskNumber = computed(() => currentIndex.value + 1)
-const totalTasksInTopic = computed(() => sessionTasks.value.length || 0)
-const progressPercentage = computed(() => totalTasksInTopic.value > 0 ? (currentIndex.value / totalTasksInTopic.value) * 100 : 0)
-const isLastTask = computed(() => currentIndex.value >= totalTasksInTopic.value - 1)
-
-const canSkipCurrentTask = computed(() => {
-  if (!currentTopic.value || !currentTask.value) return false
-  return userProgress.value[currentTopic.value.id]?.[currentTaskId.value] === 'success'
-})
-
-const getFeedbackData = computed(() => {
-  const result = taskResults.value[currentTaskId.value]
-  if (!result || !result.checked) return null
-
-  if (result.status === 'success') {
-    return { class: 'is-success', text: '✅ Задание выполнено верно!' }
-  }
-  if (result.correctCount === 0) {
-    return { class: 'is-wrong', text: '❌ Не выбран ни один правильный вариант ответа!' }
-  }
-  if (result.wrongCount > 0) {
-    return { class: 'is-wrong', text: '❌ Есть неверные ответы!' }
-  }
-  if (result.missedCount > 0) {
-    return { class: 'is-warning', text: '⚠️ Выбраны не все верные варианты!' }
-  }
-  return null
-})
-
-const attemptExit = () => {
-  if (currentIndex.value > 0 && !showFinishModal.value && !isLastTask.value && !isTaskChecked.value) {
-    showExitModal.value = true
-  } else if (currentIndex.value > 0 && !showFinishModal.value) {
-    showExitModal.value = true
-  } else {
-    stopAllAudio()
-    router.push('/audio-tasks')
-  }
-}
-
-const confirmExit = () => {
-  stopAllAudio()
-  showExitModal.value = false
-  router.push('/audio-tasks')
-}
-
-const cancelExit = () => {
-  showExitModal.value = false
-}
-
-const handleOptionSelection = (optionIndex) => {
-  if (isTaskChecked.value) return
-  const taskId = currentTaskId.value
-  if (!userSelections.value[taskId]) userSelections.value[taskId] = []
-  const currentSelections = userSelections.value[taskId]
-  if (currentSelections.includes(optionIndex)) {
-    userSelections.value[taskId] = currentSelections.filter(idx => idx !== optionIndex)
-  } else {
-    userSelections.value[taskId].push(optionIndex)
-  }
-}
-
-const isOptionSelected = (index) => userSelections.value[currentTaskId.value]?.includes(index)
-
-const getOptionClasses = (optionIndex) => {
-  const result = taskResults.value[currentTaskId.value]
-  const isSelected = isOptionSelected(optionIndex)
-  const isCorrect = currentTask.value.correctIndices.includes(optionIndex)
-
-  let classes = 'quest-option-button'
-  if (isSelected) classes += ' is-selected'
-
-  if (result?.checked) {
-    if (isSelected && isCorrect) {
-      classes += ' is-correct'
-    } else if (!isSelected && isCorrect) {
-      classes += ' is-missed'
-    } else if (isSelected && !isCorrect) {
-      classes += ' is-wrong'
-    }
-  }
-  return classes
-}
-
-const checkResult = () => {
-  const task = currentTask.value
-  const selections = userSelections.value[task.id] || []
-  const correct = task.correctIndices
-
-  const correctSelected = selections.filter(idx => correct.includes(idx)).length
-  const wrongSelected = selections.filter(idx => !correct.includes(idx)).length
-  const missedCount = correct.length - correctSelected
-
-  const isSuccess = correctSelected === correct.length && wrongSelected === 0
-
-  let status = isSuccess ? 'success' : 'wrong'
-
-  taskResults.value[task.id] = {
-    checked: true,
-    status,
-    missedCount,
-    wrongCount: wrongSelected,
-    correctCount: correctSelected
-  }
-}
-
-const finishAndSave = async () => {
-  stopAllAudio()
-
-  let correct = 0
-  let partial = 0
-  let wrong = 0
-  const resultsToSave = {}
-
-  sessionTasks.value.forEach(task => {
-    const res = taskResults.value[task.id]
-    if (res) {
-      if (res.status === 'success') {
-        correct++
-        resultsToSave[task.id] = 'success'
-      } else if (res.wrongCount > 0 || res.correctCount === 0) {
-        wrong++
-        resultsToSave[task.id] = 'wrong'
-      } else if (res.missedCount > 0) {
-        partial++
-        resultsToSave[task.id] = 'partial'
-      }
-    }
-  })
-
-  const threshold = Math.ceil(sessionTasks.value.length * 0.8)
-
-  sessionStats.value = {
-    correct,
-    partial,
-    wrong,
-    passed: correct >= threshold
-  }
-
-  await store.saveTopicProgress(currentTopic.value.id, resultsToSave)
-  showFinishModal.value = true
-}
-
-const handleFinishRetry = () => {
-  showFinishModal.value = false
-  initializeSession()
-}
-
-const handleFinishBack = () => {
-  showFinishModal.value = false
-  router.push('/audio-tasks')
-}
-
-const skipTask = () => {
-  stopAllAudio()
-  if (!isLastTask.value) currentIndex.value++
-  else finishAndSave()
-}
-
-const goToNextTask = () => {
-  stopAllAudio()
-  if (!isLastTask.value) currentIndex.value++
-}
+onUnmounted(stopAllAudio)
+watch(currentIndex, stopAllAudio)
 </script>
 
 <style scoped>
@@ -367,12 +290,11 @@ const goToNextTask = () => {
   padding: 15px 8px;
   font-family: 'Nunito', sans-serif;
   color: #2f3542;
-  position: relative;
 }
 
 .quiz-app-container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -380,37 +302,25 @@ const goToNextTask = () => {
   display: flex;
   align-items: center;
   gap: 12px;
-  max-width: 700px;
-  margin: 0 auto 9px;
+  margin-bottom: 10px;
 }
 
 .study-nav-back {
   background: #ffeaa7;
   width: 45px;
-  height: 32px;
   border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border: 2px solid #2f3542;
   box-shadow: 2px 2px 0px #2f3542;
   font-weight: 900;
-  color: #2f3542;
   cursor: pointer;
-  font-size: 18px;
-  transition: all 0.1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .study-nav-back:active {
   transform: translate(2px, 2px);
-  box-shadow: 0px 0px 0px #2f3542;
-}
-
-.study-nav-progress {
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-  gap: 15px;
+  box-shadow: 0px 0px 0px;
 }
 
 .progress-bar {
@@ -421,25 +331,18 @@ const goToNextTask = () => {
   border: 2px solid #2f3542;
   box-shadow: 2px 2px 0px #2f3542;
   overflow: hidden;
-  box-sizing: border-box;
 }
 
 .progress-bar-fill {
   height: 100%;
   background: #7bed9f;
   transition: width 0.4s ease;
-  border-right: 2px solid #2f3542;
+  border-right: 1px solid #2f3542;
 }
 
 .study-nav-counter {
   font-weight: 900;
-  color: #2f3542;
   font-size: 1.1rem;
-}
-
-.study-main {
-  max-width: 700px;
-  margin: 0 auto;
 }
 
 .quest-card {
@@ -448,7 +351,6 @@ const goToNextTask = () => {
   border-radius: 20px;
   box-shadow: 4px 4px 0px #2f3542;
   padding: 12px;
-  box-sizing: border-box;
 }
 
 .quest-card-audio {
@@ -464,7 +366,6 @@ const goToNextTask = () => {
   font-weight: 900;
   color: #70a1ff;
   margin-bottom: 15px;
-  font-size: 1.1rem;
 }
 
 .quest-card-mega-play {
@@ -504,19 +405,18 @@ const goToNextTask = () => {
   flex-grow: 1;
   display: flex;
   align-items: center;
-  padding: 8px 5px;
+  padding: 8px 10px;
   background: #ffffff;
   border: 2px solid #2f3542;
   border-radius: 14px;
   cursor: pointer;
-  text-align: left;
   box-shadow: 2px 2px 0px #2f3542;
-  transition: all 0.1s ease;
+  transition: 0.1s;
 }
 
 .quest-option-button:active:not(:disabled) {
   transform: translate(2px, 2px);
-  box-shadow: 0px 0px 0px #2f3542;
+  box-shadow: 0px 0px 0px;
 }
 
 .quest-option-button.is-selected {
@@ -541,34 +441,21 @@ const goToNextTask = () => {
   min-width: 22px;
   border: 2px solid #2f3542;
   border-radius: 6px;
-  margin-right: 5px;
+  margin-right: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 900;
-  color: #2f3542;
   background: #ffffff;
-  box-sizing: border-box;
 }
 
-.is-selected .quest-option-check {
-  background: #2f3542;
-  color: #ffffff;
-}
-
-.is-wrong .quest-option-check {
-  background: #2f3542;
-  color: #ffffff;
-}
-
-.is-missed .quest-option-check {
+.is-selected .quest-option-check, .is-wrong .quest-option-check, .is-missed .quest-option-check {
   background: #2f3542;
   color: #ffffff;
 }
 
 .quest-option-text {
   font-weight: 800;
-  color: #2f3542;
   font-size: 0.9rem;
 }
 
@@ -577,25 +464,23 @@ const goToNextTask = () => {
   margin-bottom: 15px;
   padding: 10px;
   border-radius: 12px;
-  border: 2px dashed #2f3542;
+  border: 4px dashed #2f3542;
 }
 
 .quest-feedback.is-success {
-  border: 4px dashed #7bed9f;
+  border-color: #7bed9f;
 }
 
 .quest-feedback.is-warning {
-  border: 4px dashed #ffeaa7;
+  border-color: #ffa707;
 }
 
 .quest-feedback.is-wrong {
-  border: 4px dashed #ff6b81;
+  border-color: #ff6b81;
 }
 
 .quest-feedback-text {
   font-weight: 900;
-  margin: 0;
-  color: #2f3542;
 }
 
 .chat-flow {
@@ -603,8 +488,6 @@ const goToNextTask = () => {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  font-size: 13px;
-  font-weight: 700;
 }
 
 .chat-bubble {
@@ -612,11 +495,13 @@ const goToNextTask = () => {
   border-radius: 16px;
   max-width: 85%;
   border: 2px solid #2f3542;
-  background: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
 }
 
 .chat-bubble-male {
   align-self: flex-start;
+  background: #ffffff;
   box-shadow: 2px 2px 0px #2f3542;
 }
 
@@ -626,26 +511,21 @@ const goToNextTask = () => {
   box-shadow: -2px 2px 0px #2f3542;
 }
 
-.quiz-btn-primary, .quiz-btn-next, .quiz-btn-finish, .quiz-btn-skip {
+.quiz-btn {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   border-radius: 14px;
   border: 2px solid #2f3542;
   font-weight: 900;
-  font-size: 1.1rem;
-  cursor: pointer;
   text-transform: uppercase;
   box-shadow: 3px 3px 0px #2f3542;
-  transition: all 0.1s ease;
-  color: #2f3542;
+  cursor: pointer;
+  transition: 0.1s;
 }
 
-.quiz-btn-primary:active:not(:disabled),
-.quiz-btn-next:active,
-.quiz-btn-finish:active,
-.quiz-btn-skip:active {
+.quiz-btn:active:not(:disabled) {
   transform: translate(3px, 3px);
-  box-shadow: 0px 0px 0px #2f3542;
+  box-shadow: 0px 0px 0px;
 }
 
 .quiz-btn-primary {
@@ -670,14 +550,15 @@ const goToNextTask = () => {
 
 .quiz-btn-skip {
   background: #ffffff;
+  margin-top: 10px;
+  height: 40px;
+  padding: 5px;
+  font-size: 0.8rem;
 }
 
 .modal-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: rgba(47, 53, 66, 0.7);
   display: flex;
   align-items: center;
@@ -697,11 +578,9 @@ const goToNextTask = () => {
 }
 
 .modal-title {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 900;
-  margin-top: 0;
   margin-bottom: 10px;
-  color: #2f3542;
 }
 
 .modal-text {
@@ -732,9 +611,7 @@ const goToNextTask = () => {
 .stat-item {
   display: flex;
   justify-content: space-between;
-  font-size: 1rem;
   font-weight: 900;
-  color: #2f3542;
 }
 
 .modal-actions {
@@ -748,24 +625,20 @@ const goToNextTask = () => {
   border-radius: 12px;
   border: 2px solid #2f3542;
   font-weight: 900;
-  font-size: 1rem;
   cursor: pointer;
-  text-transform: uppercase;
   box-shadow: 3px 3px 0px #2f3542;
-  transition: all 0.1s ease;
-  color: #2f3542;
 }
 
 .modal-btn:active {
-  transform: translate(3px, 3px);
-  box-shadow: 0px 0px 0px #2f3542;
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px;
 }
 
-.modal-btn-continue {
+.modal-btn-confirm {
   background: #7bed9f;
 }
 
-.modal-btn-exit {
+.modal-btn-cancel {
   background: #ffeaa7;
 }
 
@@ -775,8 +648,20 @@ const goToNextTask = () => {
   overflow: hidden;
 }
 
+.study-nav-progress {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 5px;
+}
+
 .quiz-expand-enter-from {
   opacity: 0;
   max-height: 0;
+}
+
+.loading-text {
+  text-align: center;
+  font-weight: bold;
 }
 </style>

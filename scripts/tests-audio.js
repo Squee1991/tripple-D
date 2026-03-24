@@ -2,8 +2,8 @@ import fs from 'fs';
 import path from 'path';
 
 const TARGET_LEVEL = 'A1';
-const TARGET_TOPIC_ID = 'a1_sport'
-const ELEVEN_API_KEY = 'sk_be283f068d5e3deab57a027ab5802f6af05a5bda3baeba90'.trim();
+const TARGET_TOPIC_ID = 'a1_meeting'
+const ELEVEN_API_KEY = 'sk_009b7e3406d7a57da34141447072ae3b252d3cab876bfc97'.trim();
 const VOICE_ID_MALE = 'SfAtBxtKeIJ5PJmhPaty';
 const VOICE_ID_FEMALE = 'DEZHhPbmb8LVZmWufkCh';
 
@@ -19,7 +19,7 @@ async function generateElevenSpeech(text, voiceId) {
 			text: text,
 			model_id: 'eleven_turbo_v2_5',
 			voice_settings: {
-				stability: 0.65,
+				stability: 0.67,
 				similarity_boost: 0.8,
 				speaking_rate: 0.75,
 				style: 0.0,
@@ -40,12 +40,10 @@ async function run() {
 	const jsonPath = path.join(process.cwd(), 'public', 'audio-tasks', 'audio-tasks.json');
 	const baseAudioDir = path.join(process.cwd(), 'public', 'audio');
 	const data = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
-	// 1. Ищем конкретную тему в конкретном уровне
 	const levelData = data[TARGET_LEVEL];
 	if (!levelData) return console.error(`❌ Уровень ${TARGET_LEVEL} не найден!`);
 	const topic = levelData.find(t => t.id === TARGET_TOPIC_ID);
 	if (!topic) return console.error(`❌ Тема ${TARGET_TOPIC_ID} не найдена в уровне ${TARGET_LEVEL}!`);
-	// 2. Создаем путь именно для этой темы
 	const topicDir = path.join(baseAudioDir, TARGET_LEVEL, topic.id);
 	if (!fs.existsSync(topicDir)) {
 		fs.mkdirSync(topicDir, { recursive: true });

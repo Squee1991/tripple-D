@@ -30,7 +30,6 @@
           </button>
         </header>
       </div>
-
       <div class="quiz__content">
         <transition name="quiz-pop" mode="out-in">
           <div :key="screen" :class="['quiz__grid', `quiz__grid--${screen}`]">
@@ -150,6 +149,7 @@ onMounted(async () => {
   await store.fetchTasks()
   await store.loadUserProgress()
 })
+
 </script>
 
 <style scoped>
@@ -261,7 +261,7 @@ onMounted(async () => {
   box-shadow: 4px 4px 0px #2f3542;
   display: flex;
   align-items: center;
-  padding: 7px 15px;
+  padding: 8px;
   gap: 10px;
   color: #2f3542;
 }
@@ -283,7 +283,6 @@ onMounted(async () => {
   font-weight: 900;
 }
 
-/* Модификаторы и элементы для карточек уровней */
 .card--level {
   justify-content: space-between;
 }
@@ -310,7 +309,6 @@ onMounted(async () => {
   box-shadow: 3px 3px 0px #2f3542;
 }
 
-/* Элементы для карточек тем */
 .card__icon {
   font-size: 3rem;
   filter: drop-shadow(2px 2px 0px rgba(47, 53, 66, 0.3));
@@ -334,19 +332,18 @@ onMounted(async () => {
 }
 
 .circular-progress {
-  width: 52px;
-  height: 52px;
+  width: 62px;
+  height: 62px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 3px solid #2f3542;
-  box-shadow: 3px 3px 0px #2f3542;
 }
 
 .circular-progress__inner {
-  width: 40px;
-  height: 40px;
+  width: 46px;
+  height: 46px;
   background: #fff;
   border-radius: 50%;
   display: flex;
@@ -360,7 +357,6 @@ onMounted(async () => {
   font-weight: 900;
 }
 
-/* Анимация */
 .quiz-pop-enter-active {
   animation: quiz-pop-in 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
