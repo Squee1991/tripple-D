@@ -3161,6 +3161,701 @@
       ]
     },
     {
+      "id": "a1_natur",
+      "title": "Природа",
+      "icon": "🌿",
+      "tasks": [
+        {
+          "id": "A1_nature_01",
+          "topic": "Der Wald",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Sind das alles Tannen?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Ja, der Wald hier ist sehr alt." },
+            { "role": "Mann", "gender": "MALE", "text": "Die Bäume sind sehr groß." }
+          ],
+          "options": [
+            "Der Wald ist ganz neu.",
+            "Dort stehen viele Bäume.",
+            "Er sieht keine Bäume.",
+            "Die Bäume sind klein.",
+            "Sie sind im Wald."
+          ],
+          "correctIndices": [1, 4]
+        },
+        {
+          "id": "A1_nature_02",
+          "topic": "Der See",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Wie tief ist der See?" },
+            { "role": "Mann", "gender": "MALE", "text": "Ich weiß es nicht, aber das Wasser ist klar." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Man kann die Steine unten sehen." }
+          ],
+          "options": [
+            "Das Wasser ist sauber.",
+            "Der See ist sehr schmutzig.",
+            "Sie sehen Steine im Wasser.",
+            "Das Wasser ist im Haus.",
+            "Der See ist rot."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "A1_nature_03",
+          "topic": "Die Blumen",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Darf man hier Blumen pflücken?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Nein, das ist ein Naturschutzgebiet." },
+            { "role": "Mann", "gender": "MALE", "text": "Okay, dann machen wir nur Fotos." }
+          ],
+          "options": [
+            "Er nimmt die Blumen mit.",
+            "Blumen bleiben in der Natur.",
+            "Sie machen Bilder von Blumen.",
+            "Er hat keine Kamera.",
+            "Die Natur ist dort kaputt."
+          ],
+          "correctIndices": [1, 2]
+        },
+        {
+          "id": "A1_nature_04",
+          "topic": "Tiere im Park",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Gibt es hier Tiere?" },
+            { "role": "Mann", "gender": "MALE", "text": "Ja, viele Vögel und Eichhörnchen." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Guck mal, da läuft ein Hase!" }
+          ],
+          "options": [
+            "Es gibt dort keine Tiere.",
+            "Ein Hase läuft dort.",
+            "Sie sehen einen Fisch.",
+            "Dort leben Tiere.",
+            "Er zeigt ihr ein Auto."
+          ],
+          "correctIndices": [1, 3]
+        },
+        {
+          "id": "A1_nature_05",
+          "topic": "Der Fluss",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Wohin fließt dieser Fluss?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Er fließt in das Meer." },
+            { "role": "Mann", "gender": "MALE", "text": "Das Wasser ist sehr schnell." }
+          ],
+          "options": [
+            "Das Wasser bewegт sich schnell.",
+            "Der Fluss geht zum Meer.",
+            "Das ist ein kleiner Pool.",
+            "Sie stehen an einem Berg.",
+            "Das Wasser ist ganz still."
+          ],
+          "correctIndices": [0, 1]
+        },
+        {
+          "id": "A1_nature_06",
+          "topic": "Die Berge",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Die Berge sind wunderschön." },
+            { "role": "Mann", "gender": "MALE", "text": "Ja, aber der Weg ist steinig." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Wir brauchen gute Schuhe." }
+          ],
+          "options": [
+            "Die Natur ist dort schön.",
+            "Der Weg ist sehr einfach.",
+            "Sie brauchen keine Schuhe.",
+            "Die Berge sind flach.",
+            "Auf dem Weg liegen Steine."
+          ],
+          "correctIndices": [0, 4]
+        },
+        {
+          "id": "A1_nature_07",
+          "topic": "Der Garten",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Was wächst in deinem Garten?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Hier wachsen viele Apfelbäume." },
+            { "role": "Mann", "gender": "MALE", "text": "Das riecht sehr gut." }
+          ],
+          "options": [
+            "Dort gibt es Obstbäume.",
+            "Der Garten riecht schlecht.",
+            "Dort wächst nur Gras.",
+            "Sie hat keine Bäume.",
+            "Er findet den Geruch gut."
+          ],
+          "correctIndices": [0, 4]
+        },
+        {
+          "id": "A1_nature_08",
+          "topic": "Im Feld",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Das Feld ist sehr groß." },
+            { "role": "Mann", "gender": "MALE", "text": "Dort wächst das Korn für das Brot." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Die Natur ist wichtig für uns." }
+          ],
+          "options": [
+            "Das Feld ist klein.",
+            "Dort wächst Essen.",
+            "Die Natur hilft den Menschen.",
+            "Sie sind in einer Fabrik.",
+            "Das Feld ist leer."
+          ],
+          "correctIndices": [1, 2]
+        },
+        {
+          "id": "A1_nature_09",
+          "topic": "Die Luft",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Hier im Wald ist die Luft so frisch." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Ja, es gibt keine Autos hier." },
+            { "role": "Mann", "gender": "MALE", "text": "Das ist gut für die Gesundheit." }
+          ],
+          "options": [
+            "Die Luft ist schmutzig.",
+            "Dort fahren viele Autos.",
+            "Die Natur ist gesund.",
+            "Die Luft im Wald ist gut.",
+            "Sie sind in der Stadt."
+          ],
+          "correctIndices": [2, 3]
+        },
+        {
+          "id": "A1_nature_10",
+          "topic": "Die Wiese",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Die Wiese ist sehr grün." },
+            { "role": "Mann", "gender": "MALE", "text": "Und da sind viele bunte Insekten." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Ja, schau mal, ein Schmetterling!" }
+          ],
+          "options": [
+            "Die Wiese hat eine Farbe.",
+            "Ein Insekt ist dort.",
+            "Sie sieht einen Vogel.",
+            "Dort gibt es Tiere.",
+            "Alles ist grau."
+          ],
+          "correctIndices": [0, 1, 3]
+        },
+        {
+          "id": "A1_nature_11",
+          "topic": "Das Meer",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Ist das Meer heute blau?" },
+            { "role": "Mann", "gender": "MALE", "text": "Ja, und der Strand ist weiß." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Es gibt hier viele Steine." }
+          ],
+          "options": [
+            "Der Strand hat eine Farbe.",
+            "Sie finden Steine am Wasser.",
+            "Das Meer ist grün.",
+            "Dort gibt es nur Sand.",
+            "Sie sind in den Bergen."
+          ],
+          "correctIndices": [0, 1]
+        },
+        {
+          "id": "A1_nature_12",
+          "topic": "Die Insel",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Ist das eine Insel?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Ja, überall ist nur Wasser." },
+            { "role": "Mann", "gender": "MALE", "text": "Die Natur dort ist sehr ruhig." }
+          ],
+          "options": [
+            "Die Insel ist im Wasser.",
+            "Dort fahren viele Busse.",
+            "Es ist ein stiller Ort.",
+            "Dort gibt es kein Wasser.",
+            "Die Insel ist ein Haus."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "A1_nature_13",
+          "topic": "Der Apfelbaum",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Ist das ein Apfelbaum?" },
+            { "role": "Mann", "gender": "MALE", "text": "Ja, die Früchte sind reif." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Frisches Obst ist toll." }
+          ],
+          "options": [
+            "Das ist ein Baum mit Essen.",
+            "Er verkauft jetzt Autos.",
+            "Sie mag frisches Obst.",
+            "Der Baum hat keine Blätter.",
+            "Die Früchte sind blau."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "A1_nature_14",
+          "topic": "Der Park",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Der Park ist mitten in der Stadt." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Ja, hier sind viele Bäume." },
+            { "role": "Mann", "gender": "MALE", "text": "Hier kann man gut atmen." }
+          ],
+          "options": [
+            "Der Park ist weit weg.",
+            "Dort gibt es Pflanzen.",
+            "Die Luft im Park ist gut.",
+            "Der Park ist im Zentrum.",
+            "Es gibt dort nur Steine."
+          ],
+          "correctIndices": [1, 2, 3]
+        },
+        {
+          "id": "A1_nature_15",
+          "topic": "Der Mond",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Siehst du den Mond?" },
+            { "role": "Mann", "gender": "MALE", "text": "Ja, er ist heute hell." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Und da sind so viele Sterne!" }
+          ],
+          "options": [
+            "Es ist jetzt Nacht.",
+            "Die Sonne scheint hell.",
+            "Sie sehen Lichter am Himmel.",
+            "Der Himmel ist grün.",
+            "Er sieht keine Sterne."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "A1_nature_16",
+          "topic": "Das Feuer",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Machen wir ein Feuer?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Nein, im Wald ist das verboten." },
+            { "role": "Mann", "gender": "MALE", "text": "Das ist gefährlich für Tiere." }
+          ],
+          "options": [
+            "Feuer ist im Wald okay.",
+            "Sie machen kein Feuer.",
+            "Das ist eine Gefahr.",
+            "Sie sind im Kino.",
+            "Er möchte ein Eis."
+          ],
+          "correctIndices": [1, 2]
+        },
+        {
+          "id": "A1_nature_17",
+          "topic": "Die Erde",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Die Erde hier ist schwarz." },
+            { "role": "Mann", "gender": "MALE", "text": "Das ist gut für die Blumen." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Pflanzen wir eine Rose?" }
+          ],
+          "options": [
+            "Die Erde ist schlecht.",
+            "Sie möchten etwas pflanzen.",
+            "Blumen brauchen Erde.",
+            "Die Erde ist weiß.",
+            "Er kauft ein Handy."
+          ],
+          "correctIndices": [1, 2]
+        },
+        {
+          "id": "A1_nature_18",
+          "topic": "Der Hund",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Wo ist dein Hund?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Er läuft dort auf der Wiese." },
+            { "role": "Mann", "gender": "MALE", "text": "Er mag die Natur." }
+          ],
+          "options": [
+            "Ein Tier ist draußen.",
+            "Der Hund ist im Auto.",
+            "Das Tier mag die Wiese.",
+            "Sie suchen einen Fisch.",
+            "Der Hund ist im Bett."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "A1_nature_19",
+          "topic": "Das Tal",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Wir sind jetzt unten im Tal." },
+            { "role": "Mann", "gender": "MALE", "text": "Dort oben sind die hohen Berge." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Hier ist es warm." }
+          ],
+          "options": [
+            "Sie sind oben auf dem Berg.",
+            "Das Tal ist nicht hoch.",
+            "Dort ist es kalt.",
+            "Sie sehen Berge.",
+            "Sie sind im Hotel."
+          ],
+          "correctIndices": [1, 3]
+        },
+        {
+          "id": "A1_nature_20",
+          "topic": "Müll",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Hier liegt viel Plastik." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Das ist schlecht für die Natur." },
+            { "role": "Mann", "gender": "MALE", "text": "Sammeln wir es auf?" }
+          ],
+          "options": [
+            "Die Natur ist sauber.",
+            "Dort liegt Müll.",
+            "Sie machen die Natur sauber.",
+            "Sie essen Plastik.",
+            "Er möchte schlafen."
+          ],
+          "correctIndices": [1, 2]
+        }
+      ]
+    },
+    {
+      "id": "a1_work",
+      "title": "Работа",
+      "icon": "💼",
+      "tasks": [
+        {
+          "id": "A1_work_01",
+          "topic": "Der neue Kollege",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Guten Tag. Ich bin der neue Kollege." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Hallo ! Ich heiße Anna. Willkommen!" },
+            { "role": "Mann", "gender": "MALE", "text": "Danke. Wo ist mein Schreibtisch ?" }
+          ],
+          "options": [
+            "Er arbeitet hier neu.",
+            "Sie sucht einen Job.",
+            "Er fragt wo ist sein Platz.",
+            "Anna ist die Chefin.",
+            "Er möchte nach Hause gehen."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "A1_work_02",
+          "topic": "Die E-Mail",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Schreibst du eine E-Mail ?" },
+            { "role": "Mann", "gender": "MALE", "text": "Ja , an den Chef. Das Projekt ist gemacht." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Super , du arbeitest sehr schnell." }
+          ],
+          "options": [
+            "Der Chef schreibt eine Mail.",
+            "Die Arbeit ist beendet.",
+            "Er schreibt eine Nachricht.",
+            "Das Projekt dauert noch lange.",
+            "Sie findet ihn langsam."
+          ],
+          "correctIndices": [1, 2]
+        },
+        {
+          "id": "A1_work_03",
+          "topic": "Mittagspause",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Gehen wir zusammen essen?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Ja , es ist schon zwölf Uhr. Pause !" },
+            { "role": "Mann", "gender": "MALE", "text": "Ich habe großen Hunger." }
+          ],
+          "options": [
+            "Sie machen jetzt eine Pause.",
+            "Es ist Abend.",
+            "Sie essen gemeinsam.",
+            "Er möchte nichts essen.",
+            "Die Arbeit beginnt jetzt."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "A1_work_04",
+          "topic": "Der Computer",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Mein Computer ist kaputt." },
+            { "role": "Mann", "gender": "MALE", "text": "Oh nein ! Brauchst du Hilfe ?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Ja , ich kann nicht arbeiten." }
+          ],
+          "options": [
+            "Die Technik funktioniert nicht.",
+            "Sie hilft dem Mann.",
+            "Sie hat ein Problem.",
+            "Der Computer ist ganz neu.",
+            "Er repariert alles sofort."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "A1_work_05",
+          "topic": "Das Telefonat",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Hier ist Markus Weber. Spreche ich mit Frau Schmidt ?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Ja , am Apparat. Wie kann ich helfen ?" },
+            { "role": "Mann", "gender": "MALE", "text": "Ich brauche einen Termin." }
+          ],
+          "options": [
+            "Zwei Personen sprechen am Telefon.",
+            "Er möchte sie treffen.",
+            "Frau Schmidt ist nicht da.",
+            "Es ist ein Gespräch über die Arbeit.",
+            "Er sucht ein Restaurant."
+          ],
+          "correctIndices": [0, 1, 3]
+        },
+        {
+          "id": "A1_work_06",
+          "topic": "Überstunden",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Gehst du schon nach Hause ?" },
+            { "role": "Mann", "gender": "MALE", "text": "Nein, ich muss noch zwei Stunden bleiben." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Das ist viel Arbeit." }
+          ],
+          "options": [
+            "Er geht jetzt sofort.",
+            "Er arbeitet länger.",
+            "Sie geht nach Hause.",
+            "Die Zeit ist kurz.",
+            "Er hat viel zu tun."
+          ],
+          "correctIndices": [1, 4]
+        },
+        {
+          "id": "A1_work_07",
+          "topic": "Kaffee in der Küche",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Möchtest du einen Kaffee ?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Ja, bitte. Mit Milch, aber ohne Zucker." },
+            { "role": "Mann", "gender": "MALE", "text": "Hier, bitte schön." }
+          ],
+          "options": [
+            "Sie trinkt den Kaffee schwarz.",
+            "Er gibt ihr ein Getränk.",
+            "Sie sind in der Werkstatt.",
+            "Sie möchte Zucker haben.",
+            "Es ist eine kleine Pause."
+          ],
+          "correctIndices": [1, 4]
+        },
+        {
+          "id": "A1_work_08",
+          "topic": "Das Meeting",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Wann beginnt die Besprechung ?" },
+            { "role": "Mann", "gender": "MALE", "text": "Um neun Uhr im Zimmer zehn." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Danke, ich komme pünktlich." }
+          ],
+          "options": [
+            "Das Meeting ist um zehn Uhr.",
+            "Sie möchte nicht kommen.",
+            "Der Ort ist Zimmer zehn.",
+            "Sie kommt nicht zu spät.",
+            "Er weiß die Zeit nicht."
+          ],
+          "correctIndices": [2, 3]
+        },
+        {
+          "id": "A1_work_09",
+          "topic": "Drucker",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Wo ist das Papier für den Drucker?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Dort im Schrank, ganz unten." },
+            { "role": "Mann", "gender": "MALE", "text": "Ah, ich sehe es. Danke!" }
+          ],
+          "options": [
+            "Er sucht Material.",
+            "Das Papier ist weg.",
+            "Der Schrank ist leer.",
+            "Er findet das Papier.",
+            "Der Drucker ist im Schrank."
+          ],
+          "correctIndices": [0, 3]
+        },
+        {
+          "id": "A1_work_10",
+          "topic": "Der Beruf",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Was bist du von Beruf ?" },
+            { "role": "Mann", "gender": "MALE", "text": "Ich bin Informatiker. Und du ?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Ich arbeite als Lehrerin." }
+          ],
+          "options": [
+            "Sie sprechen über ihre Jobs.",
+            "Er arbeitet in einer Schule.",
+            "Sie ist eine Lehrerin.",
+            "Er hat keine Arbeit.",
+            "Sie sind beide Ärzte."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "A1_work_11",
+          "topic": "Der Termin",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Haben wir heute einen Termin?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Ja , um vierzehn Uhr kommt der Kunde." },
+            { "role": "Mann", "gender": "MALE", "text": "Gut , ich bereite alles vor." }
+          ],
+          "options": [
+            "Ein Kunde kommt heute.",
+            "Der Termin ist am Morgen.",
+            "Er bereitet das Treffen vor.",
+            "Sie haben keinen Termin.",
+            "Der Kunde ist schon da."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "A1_work_12",
+          "topic": "Feierabend",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Es ist siebzehn Uhr. Ich gehe jetzt." },
+            { "role": "Mann", "gender": "MALE", "text": "Schönen Feierabend, Anna !" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Danke, bis morgen!" }
+          ],
+          "options": [
+            "Die Arbeit ist für heute fertig.",
+            "Sie bleibt noch lange.",
+            "Sie sieht ihn morgen wieder.",
+            "Es ist erst Mittag.",
+            "Er möchte nicht Tschüss sagen."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "A1_work_13",
+          "topic": "Das Büro",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Ist das dein Büro?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Nein , ich teile das Büro mit zwei Kollegen." },
+            { "role": "Mann", "gender": "MALE", "text": "Es ist aber sehr groß и hell." }
+          ],
+          "options": [
+            "Sie arbeitet allein.",
+            "Drei Personen sind im Büro.",
+            "Das Büro hat viel Licht.",
+            "Das Büro ist sehr klein.",
+            "Er findet das Büro schlecht."
+          ],
+          "correctIndices": [1, 2]
+        },
+        {
+          "id": "A1_work_14",
+          "topic": "Die Visitenkarte",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Haben Sie eine Visitenkarte?" },
+            { "role": "Mann", "gender": "MALE", "text": "Ja , hier bitte schön. Da ist meine Nummer." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Vielen Dank, Herr Müller." }
+          ],
+          "options": [
+            "Er gibt ihr seine Kontaktdaten.",
+            "Er hat keine Karte.",
+            "Sie möchte ihn anrufen.",
+            "Die Karte ist kaputt.",
+            "Sie kennt seinen Namen nicht."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "A1_work_15",
+          "topic": "Stellenanzeige",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Suchst du eine Stelle?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Ja , ich brauche einen Job als Verkäuferin." },
+            { "role": "Mann", "gender": "MALE", "text": "Hier in der Zeitung ist eine Anzeige." }
+          ],
+          "options": [
+            "Sie möchte arbeiten.",
+            "Er hilft ihr beim Suchen.",
+            "Sie hat schon einen Job.",
+            "Es gibt eine Information in der Zeitung.",
+            "Sie möchte Ärztin werden."
+          ],
+          "correctIndices": [0, 1, 3]
+        },
+        {
+          "id": "A1_work_16",
+          "topic": "Das Gehalt",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Bist du zufrieden mit der Arbeit?" },
+            { "role": "Mann", "gender": "MALE", "text": "Ja , die Kollegen sind nett и das Geld ist gut." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Das ist wichtig." }
+          ],
+          "options": [
+            "Er findet die Arbeit schlecht.",
+            "Das Gehalt ist okay.",
+            "Die Kollegen sind freundlich.",
+            "Er möchte kündigen.",
+            "Das Geld reicht nicht."
+          ],
+          "correctIndices": [1, 2]
+        },
+        {
+          "id": "A1_work_17",
+          "topic": "Krankmeldung",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Guten Morgen. Ich kann heute nicht kommen." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Was ist los ? Bist du krank?" },
+            { "role": "Mann", "gender": "MALE", "text": "Ja, ich habe Fieber." }
+          ],
+          "options": [
+            "Er kommt heute zur Arbeit.",
+            "Er bleibt im Bett.",
+            "Er ist gesund.",
+            "Er informiert die Kollegin.",
+            "Er hat keine Lust."
+          ],
+          "correctIndices": [1, 3]
+        },
+        {
+          "id": "A1_work_18",
+          "topic": "Der Schlüssel",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Hast du den Schlüssel für das Archiv ?" },
+            { "role": "Mann", "gender": "MALE", "text": "Nein, den hat die Sekretärin." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Dann frage ich sie." }
+          ],
+          "options": [
+            "Er hat den Schlüssel.",
+            "Sie braucht den Schlüssel.",
+            "Die Sekretärin hat das Objekt.",
+            "Das Archiv ist offen.",
+            "Sie möchte nach Hause."
+          ],
+          "correctIndices": [1, 2]
+        },
+        {
+          "id": "A1_work_19",
+          "topic": "Arbeitszeit",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Wann arbeitest du ?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Ich arbeite von Montag bis Freitag." },
+            { "role": "Mann", "gender": "MALE", "text": "Und am Wochenende ?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Da habe ich frei." }
+          ],
+          "options": [
+            "Sie arbeitet am Samstag.",
+            "Sie hat fünf Arbeitstage.",
+            "Am Sonntag arbeitet sie nicht.",
+            "Sie arbeitet nachts.",
+            "Er arbeitet gar nicht."
+          ],
+          "correctIndices": [1, 2]
+        },
+        {
+          "id": "A1_work_20",
+          "topic": "Kopieren",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Kannst du das Dokument bitte kopieren?" },
+            { "role": "Mann", "gender": "MALE", "text": "Wie viel mal? " },
+            { "role": "Frau", "gender": "FEMALE", "text": "Dreimal, bitte." }
+          ],
+          "options": [
+            "Er braucht Hilfe.",
+            "Er soll Kopien machen.",
+            "Die Zahl ist zehn.",
+            "Sie macht es selbst.",
+            "Er hat keine Zeit."
+          ],
+          "correctIndices": [1, 2]
+        }
+      ]
+    },
+    {
       "id": "a1_order",
       "title": "Заказ еды",
       "icon": "☕",
@@ -12021,6 +12716,700 @@
       ]
     },
     {
+      "id": "a2_natur",
+      "title": "Природа",
+      "icon": "🏔️",
+      "tasks": [
+        {
+          "id": "A2_nature_01",
+          "topic": "Wandern gehen",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Hast du die Wettervorhersage für das Wochenende gesehen?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Ja, es soll sonnig bleiben, also können wir die Bergtour machen." },
+            { "role": "Mann", "gender": "MALE", "text": "Super, ich habe schon die Wanderkarte eingepackt." }
+          ],
+          "options": [
+            "Sie planen einen Ausflug.",
+            "Das Wetter wird wahrscheinlich schlecht.",
+            "Er hat sich vorbereitet.",
+            "Die Bergtour findet nicht statt.",
+            "Sie gehen ins Kino."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "A2_nature_02",
+          "topic": "Umweltschutz",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Warum trennst du den Müll so genau?" },
+            { "role": "Mann", "gender": "MALE", "text": "Weil Recycling wichtig für die Umwelt ist." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Stimmt, wir sollten Plastik so gut wie möglich vermeiden." }
+          ],
+          "options": [
+            "Der Mann findet Mülltrennung unnötig.",
+            "Plastik ist ein Problem für die Natur.",
+            "Recycling hilft der Umwelt.",
+            "Sie werfen alles in eine Tonne.",
+            "Die Frau mag kein Plastik."
+          ],
+          "correctIndices": [1, 2]
+        },
+        {
+          "id": "A2_nature_03",
+          "topic": "Der Nationalpark",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Darf man hier eigentlich zelten?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Nein, im Nationalpark ist das streng verboten." },
+            { "role": "Mann", "gender": "MALE", "text": "Schade, ich wollte unter den Sternen schlafen." }
+          ],
+          "options": [
+            "Zelten ist dort erlaubt.",
+            "Es gibt feste Regeln im Park.",
+            "Er möchte draußen übernachten.",
+            "Die Frau hat ein Zelt dabei.",
+            "Sterne sind verboten."
+          ],
+          "correctIndices": [1, 2]
+        },
+        {
+          "id": "A2_nature_04",
+          "topic": "Klimawandel",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Früher gab es hier im Winter viel mehr Schnee." },
+            { "role": "Mann", "gender": "MALE", "text": "Ja, das liegt leider an der Erderwärmung." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Wir müssen wirklich mehr für das Klima tun." }
+          ],
+          "options": [
+            "Das Wetter hat sich verändert.",
+            "Es schneit heute mehr als früher.",
+            "Die Natur wird wärmer.",
+            "Klima ist ihnen egal.",
+            "Früher war alles schlechter."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "A2_nature_05",
+          "topic": "Vogelbeobachtung",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Guck mal durch das Fernglas! Da hinten ist ein Adler." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Tatsächlich, er baut gerade ein Nest auf dem Felsen." },
+            { "role": "Mann", "gender": "MALE", "text": "Solche seltenen Tiere sieht man hier nicht oft." }
+          ],
+          "options": [
+            "Der Adler ist ein häufiges Tier.",
+            "Sie benutzen ein technisches Gerät.",
+            "Ein Vogel ist aktiv.",
+            "Der Adler sitzt im Baum.",
+            "Sie sind im Zoo."
+          ],
+          "correctIndices": [1, 2]
+        },
+        {
+          "id": "A2_nature_06",
+          "topic": "Bio-Produkte",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Kaufst du dein Gemüse immer auf dem Bauernmarkt?" },
+            { "role": "Mann", "gender": "MALE", "text": "Meistens, weil die Produkte dort regional und ohne Gift sind." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Das ist zwar teurer, aber gesünder für uns." }
+          ],
+          "options": [
+            "Das Gemüse kommt aus der Region.",
+            "Bio-Essen ist immer billiger.",
+            "Gesundheit ist dem Mann wichtig.",
+            "Er kauft nur im Supermarkt.",
+            "Der Bauernmarkt ist geschlossen."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "A2_nature_07",
+          "topic": "Der wilde Fluss",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Kann man in diesem Fluss baden?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Vorsicht, die Strömung ist hier viel zu gefährlich." },
+            { "role": "Mann", "gender": "MALE", "text": "Dann bleiben wir lieber am Ufer sitzen." }
+          ],
+          "options": [
+            "Schwimmen ist dort kein Problem.",
+            "Das Wasser bewegt sich stark.",
+            "Sie gehen nicht ins Wasser.",
+            "Der Fluss ist sehr warm.",
+            "Sie suchen ein Boot."
+          ],
+          "correctIndices": [1, 2]
+        },
+        {
+          "id": "A2_nature_08",
+          "topic": "Gartenarbeit",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Deine Blumen im Garten blühen wunderbar!" },
+            { "role": "Mann", "gender": "MALE", "text": "Danke, ich habe sie jeden Abend gegossen, weil es so trocken war." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Die Mühe hat sich gelohnt." }
+          ],
+          "options": [
+            "Es hat viel geregnet.",
+            "Die Pflanzen sehen gut aus.",
+            "Der Mann hat viel gearbeitet.",
+            "Die Blumen sind alle kaputt.",
+            "Er hasst seinen Garten."
+          ],
+          "correctIndices": [1, 2]
+        },
+        {
+          "id": "A2_nature_09",
+          "topic": "Luftverschmutzung",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "In der Stadt ist die Luft oft so schlecht." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Deshalb fahre ich am Wochenende immer aufs Land." },
+            { "role": "Mann", "gender": "MALE", "text": "Dort kann man endlich wieder tief durchatmen." }
+          ],
+          "options": [
+            "Die Stadt hat saubere Luft.",
+            "Die Frau sucht Ruhe in der Natur.",
+            "Landluft ist besser für die Lungen.",
+            "Er möchte in der Stadt bleiben.",
+            "Am Wochenende ist es laut."
+          ],
+          "correctIndices": [1, 2]
+        },
+        {
+          "id": "A2_nature_10",
+          "topic": "Erneuerbare Energie",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Siehst du die vielen Windräder dort oben?" },
+            { "role": "Mann", "gender": "MALE", "text": "Ja, sie produzieren sauberen Strom aus Windkraft." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Das ist viel besser als Kohle oder Atomkraft." }
+          ],
+          "options": [
+            "Wind wird zur Energie genutzt.",
+            "Die Energie ist gut für die Umwelt.",
+            "Sie sprechen über moderne Technik.",
+            "Kohle ist besser als Wind.",
+            "Windräder sind verboten."
+          ],
+          "correctIndices": [0, 1, 2]
+        },
+        {
+          "id": "A2_nature_11",
+          "topic": "Der Waldspaziergang",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Ich liebe den Duft von Kiefern und feuchtem Moos." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Ja, der Wald ist nach dem Regen besonders frisch." },
+            { "role": "Mann", "gender": "MALE", "text": "Wollen wir Pilze suchen?" }
+          ],
+          "options": [
+            "Es hat vor kurzem geregnet.",
+            "Sie suchen nach Pflanzen.",
+            "Der Wald stinkt.",
+            "Sie möchten keine Pilze.",
+            "Sie sind in der Wüste."
+          ],
+          "correctIndices": [0, 1]
+        },
+        {
+          "id": "A2_nature_12",
+          "topic": "Müll im Meer",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Schau mal, wie viel Müll am Strand liegt!" },
+            { "role": "Mann", "gender": "MALE", "text": "Das ist furchtbar, das Plastik landet im Meer и tötet Fische." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Wir sollten eine Aufräumaktion organisieren." }
+          ],
+          "options": [
+            "Der Strand ist sauber.",
+            "Müll ist gefährlich für Meerestiere.",
+            "Sie wollen etwas gegen den Müll tun.",
+            "Fische essen gerne Plastik.",
+            "Plastik ist gesund."
+          ],
+          "correctIndices": [1, 2]
+        },
+        {
+          "id": "A2_nature_13",
+          "topic": "Die Alpen",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Warst du schon mal auf der Zugspitze?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Nein, aber ich würde gerne mal mit der Seilbahn nach oben fahren." },
+            { "role": "Mann", "gender": "MALE", "text": "Die Aussicht auf die Gipfel ist spektakulär." }
+          ],
+          "options": [
+            "Sie möchte auf einen Berg.",
+            "Sie war schon oft dort.",
+            "Man hat dort eine tolle Sicht.",
+            "Die Seilbahn ist kaputt.",
+            "Es geht um ein flaches Land."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "A2_nature_14",
+          "topic": "Bienen sterben",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Es gibt immer weniger Bienen in unserem Garten." },
+            { "role": "Mann", "gender": "MALE", "text": "Das liegt oft an den Giften in der Landwirtschaft." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Ohne Bienen gibt es aber keine Äpfel oder Birnen." }
+          ],
+          "options": [
+            "Insekten sind wichtig für Obst.",
+            "Gifte sind gut für Bienen.",
+            "Es gibt ein Problem mit Insekten.",
+            "Bienen fressen Äpfel.",
+            "Der Garten ist voll mit Bienen."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "A2_nature_15",
+          "topic": "Der Wasserfall",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Hörst du das laute Rauschen?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Ja, der Wasserfall muss gleich hinter den Bäumen sein." },
+            { "role": "Mann", "gender": "MALE", "text": "Beeindruckend, wie viel Wasser dort herunterfällt!" }
+          ],
+          "options": [
+            "Das Wasser macht Krach.",
+            "Sie sehen den Wasserfall noch nicht.",
+            "Der Wasserfall ist ausgetrocknet.",
+            "Dort ist viel Bewegung im Wasser.",
+            "Sie sind in einer Bibliothek."
+          ],
+          "correctIndices": [0, 3]
+        },
+        {
+          "id": "A2_nature_16",
+          "topic": "Dürre",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Der Rasen ist schon ganz gelb и trocken." },
+            { "role": "Mann", "gender": "MALE", "text": "Es hat seit Wochen nicht mehr richtig geregnet." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Die Landwirte haben große Angst um ihre Ernte." }
+          ],
+          "options": [
+            "Es gibt zu viel Regen.",
+            "Die Natur braucht Wasser.",
+            "Die Bauern machen sich Sorgen.",
+            "Der Rasen ist schön grün.",
+            "Es ist ein kalter Winter."
+          ],
+          "correctIndices": [1, 2]
+        },
+        {
+          "id": "A2_nature_17",
+          "topic": "Gefährliche Tiere",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Gibt es hier im Wald Wölfe?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Ja, aber sie sind sehr scheu und meiden Menschen." },
+            { "role": "Mann", "gender": "MALE", "text": "Trotzdem sollte man auf den Wegen bleiben." }
+          ],
+          "options": [
+            "Wölfe suchen Kontakt zu Menschen.",
+            "Man sollte vorsichtig sein.",
+            "Es leben Raubtiere im Wald.",
+            "Wölfe sind sehr laut.",
+            "Es gibt keine Tiere dort."
+          ],
+          "correctIndices": [1, 2]
+        },
+        {
+          "id": "A2_nature_18",
+          "topic": "Der Sonnenuntergang",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Die Farben am Himmel sind heute unglaublich." },
+            { "role": "Mann", "gender": "MALE", "text": "Ja, das Rot und Orange sieht über dem See toll aus." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Lass uns noch einen Moment hierbleiben und genießen." }
+          ],
+          "options": [
+            "Es wird bald dunkel.",
+            "Sie finden die Optik schön.",
+            "Es ist früher Morgen.",
+            "Der Himmel ist grau.",
+            "Sie wollen sofort gehen."
+          ],
+          "correctIndices": [0, 1]
+        },
+        {
+          "id": "A2_nature_19",
+          "topic": "Heilpflanzen",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Wusstest du, dass man aus diesen Blättern Tee machen kann?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Ist das eine Heilpflanze gegen Erkältung?" },
+            { "role": "Mann", "gender": "MALE", "text": "Genau, die Natur bietet für fast alles eine Medizin." }
+          ],
+          "options": [
+            "Pflanzen können gesund machen.",
+            "Man kann alles im Wald essen.",
+            "Er kennt sich mit Kräutern aus.",
+            "Der Tee ist nur für Kinder.",
+            "Die Blätter sind giftig."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "A2_nature_20",
+          "topic": "Naturschutzgebiet",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Hier darf man die Wege nicht verlassen." },
+            { "role": "Mann", "gender": "MALE", "text": "Warum ist das so streng geregelt?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Um seltene Pflanzen и brütende Vögel zu schützen." }
+          ],
+          "options": [
+            "Schutz ist wichtig für die Vielfalt.",
+            "Menschen dürfen überall laufen.",
+            "Regeln helfen der Natur.",
+            "Es gibt dort keine Vögel.",
+            "Man muss auf den Pfaden bleiben."
+          ],
+          "correctIndices": [0, 2, 4]
+        }
+      ]
+    },
+    {
+      "id": "a2_work",
+      "title": "Работа",
+      "icon": "💼",
+      "tasks": [
+        {
+          "id": "A2_work_01",
+          "topic": "Das Vorstellungsgespräch",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Haben Sie sich schon auf die Stelle beworben?" },
+            { "role": "Mann", "gender": "MALE", "text": "Ja, ich habe gestern meine Unterlagen geschickt." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Hoffentlich laden sie Sie zu einem Gespräch ein." }
+          ],
+          "options": [
+            "Er hat die Dokumente schon gesendet.",
+            "Er wartet auf eine Einladung.",
+            "Er möchte den Job nicht.",
+            "Das Gespräch war gestern.",
+            "Sie hat die Unterlagen geschickt."
+          ],
+          "correctIndices": [0, 1]
+        },
+        {
+          "id": "A2_work_02",
+          "topic": "Die Verspätung",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Tut mir leid, dass ich zu spät komme." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Was ist passiert? War der Bus unpünktlich?" },
+            { "role": "Mann", "gender": "MALE", "text": "Nein, es gab einen langen Stau auf der Autobahn." }
+          ],
+          "options": [
+            "Er ist pünktlich.",
+            "Es gab ein Problem im Verkehr.",
+            "Der Bus hatte Verspätung.",
+            "Er ist mit dem Auto gefahren.",
+            "Die Frau ist wütend."
+          ],
+          "correctIndices": [1, 3]
+        },
+        {
+          "id": "A2_work_03",
+          "topic": "Aufgaben verteilen",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Wer kümmert sich um die neuen Rechnungen?" },
+            { "role": "Mann", "gender": "MALE", "text": "Das hat Herr Meyer schon erledigt." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Gut, dann können wir sie jetzt überweisen." }
+          ],
+          "options": [
+            "Herr Meyer muss noch arbeiten.",
+            "Die Rechnungen sind fertig.",
+            "Die Firma bezahlt die Rechnungen jetzt.",
+            "Frau Meyer hat die Arbeit gemacht.",
+            "Sie suchen Herrn Meyer."
+          ],
+          "correctIndices": [1, 2]
+        },
+        {
+          "id": "A2_work_04",
+          "topic": "Die Weiterbildung",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Ich möchte einen Englischkurs besuchen." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Das ist eine gute Idee für Ihre Karriere." },
+            { "role": "Mann", "gender": "MALE", "text": "Bezahlt die Firma eigentlich die Kosten?" }
+          ],
+          "options": [
+            "Er will etwas Neues lernen.",
+            "Die Frau findet den Kurs schlecht.",
+            "Er fragt nach dem Geld für den Kurs.",
+            "Die Firma hat schon bezahlt.",
+            "Er spricht schon perfekt Englisch."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "A2_work_05",
+          "topic": "Der defekte Kopierer",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Der Kopierer funktioniert schon wieder nicht." },
+            { "role": "Mann", "gender": "MALE", "text": "Hast du den Techniker schon angerufen?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Ja, er kommt aber erst am Nachmittag." }
+          ],
+          "options": [
+            "Das Gerät ist kaputt.",
+            "Der Techniker ist schon da.",
+            "Jemand kommt später zur Reparatur.",
+            "Der Kopierer ist ganz neu.",
+            "Sie hat niemanden angerufen."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "A2_work_06",
+          "topic": "Ein neues Projekt",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Wir müssen das Projekt bis Freitag abschließen." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Das schaffen wir nie ohne Hilfe!" },
+            { "role": "Mann", "gender": "MALE", "text": "Ich frage die Kollegen aus der anderen Abteilung." }
+          ],
+          "options": [
+            "Sie brauchen mehr Personen.",
+            "Das Projekt ist schon fertig.",
+            "Der Termin ist Ende der Woche.",
+            "Sie arbeiten allein weiter.",
+            "Freitag ist kein Arbeitstag."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "A2_work_07",
+          "topic": "Urlaubsantrag",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Haben Sie Ihren Urlaub für den Sommer schon geplant?" },
+            { "role": "Mann", "gender": "MALE", "text": "Ja, ich möchte im August zwei Wochen wegfahren." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Vergessen Sie nicht, das Formular auszufüllen." }
+          ],
+          "options": [
+            "Er bleibt im Sommer zu Hause.",
+            "Er braucht ein Dokument für den Urlaub.",
+            "Der Urlaub ist im Winter.",
+            "Er will 14 Tage frei haben.",
+            "Die Frau plant seinen Urlaub."
+          ],
+          "correctIndices": [1, 3]
+        },
+        {
+          "id": "A2_work_08",
+          "topic": "In der Kantine",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Das Essen in der Kantine schmeckt heute wirklich gut." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Stimmt, das Gemüse ist frisch und das Fleisch ist zart." },
+            { "role": "Mann", "gender": "MALE", "text": "Und der Preis ist für Mitarbeiter auch sehr günstig." }
+          ],
+          "options": [
+            "Das Essen ist von hoher Qualität.",
+            "Die Mitarbeiter zahlen weniger Geld.",
+            "Das Essen schmeckt ihnen.",
+            "Es gibt nur Fleisch zu essen.",
+            "Sie sind in einem teuren Restaurant."
+          ],
+          "correctIndices": [0, 1, 2]
+        },
+        {
+          "id": "A2_work_09",
+          "topic": "Die Gehaltserhöhung",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Ich arbeite hier seit drei Jahren und möchte mehr verdienen." },
+            { "role": "Mann", "gender": "MALE", "text": "Haben Sie schon mit dem Chef darüber gesprochen?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Noch nicht, ich habe morgen einen Termin bei ihm." }
+          ],
+          "options": [
+            "Sie möchte mehr Geld bekommen.",
+            "Sie hat schon mit dem Chef geredet.",
+            "Das Gespräch ist morgen.",
+            "Sie ist erst seit gestern in der Firma.",
+            "Der Mann ist der Chef."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "A2_work_10",
+          "topic": "Überstunden abfeiern",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Ich habe diesen Monat zwanzig Überstunden gemacht." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Möchtest du sie dir ausbezahlen lassen?" },
+            { "role": "Mann", "gender": "MALE", "text": "Nein, ich nehme lieber ein paar Tage frei." }
+          ],
+          "options": [
+            "Er will das Geld haben.",
+            "Er hat zu viel gearbeitet.",
+            "Er möchte Urlaub statt Geld.",
+            "Er hat keine Überstunden.",
+            "Er möchte kündigen."
+          ],
+          "correctIndices": [1, 2]
+        },
+        {
+          "id": "A2_work_11",
+          "topic": "Die Kündigung",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Hast du gehört? Markus hat gekündigt." },
+            { "role": "Mann", "gender": "MALE", "text": "Echt? Warum denn? Er war doch sehr zufrieden." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Er hat ein besseres Angebot von einer anderen Firma bekommen." }
+          ],
+          "options": [
+            "Markus verlässt die Firma.",
+            "Markus wurde gefeuert.",
+            "Er hat eine neue Stelle gefunden.",
+            "Markus ist traurig.",
+            "Er möchte weniger Geld verdienen."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "A2_work_12",
+          "topic": "Kundenbesuch",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Der Kunde aus Berlin kommt gleich an." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Holst du ihn vom Bahnhof ab?" },
+            { "role": "Mann", "gender": "MALE", "text": "Ja, ich nehme den Firmenwagen." }
+          ],
+          "options": [
+            "Der Kunde fährt mit dem Zug.",
+            "Der Kunde kommt aus München.",
+            "Er benutzt ein Auto der Firma.",
+            "Die Frau holt den Kunden ab.",
+            "Der Kunde ist schon im Büro."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "A2_work_13",
+          "topic": "Probleme mit der Software",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Kommst du mit dem neuen Programm klar?" },
+            { "role": "Mann", "gender": "MALE", "text": "Ehrlich gesagt finde ich es ziemlich kompliziert." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Ich kann es dir nach der Pause kurz erklären." }
+          ],
+          "options": [
+            "Das Programm ist sehr einfach.",
+            "Er versteht die Software nicht gut.",
+            "Sie bietet ihm Hilfe an.",
+            "Er erklärt ihr das Programm.",
+            "Die Pause ist schon vorbei."
+          ],
+          "correctIndices": [1, 2]
+        },
+        {
+          "id": "A2_work_14",
+          "topic": "Arbeitskleidung",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Müssen wir hier eigentlich Uniformen tragen?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Nur in der Produktion, im Büro ist es egal." },
+            { "role": "Mann", "gender": "MALE", "text": "Gut, dann ziehe ich morgen eine Jeans an." }
+          ],
+          "options": [
+            "Es gibt feste Regeln für Kleidung.",
+            "Im Büro muss man eine Uniform tragen.",
+            "Er arbeitet wahrscheinlich im Büro.",
+            "Alle müssen Jeans tragen.",
+            "In der Produktion darf man tragen, was man will."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "A2_work_15",
+          "topic": "Die Teambesprechung",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "In der Besprechung haben wir über die neuen Ziele gesprochen." },
+            { "role": "Mann", "gender": "MALE", "text": "Waren alle Kollegen mit den Plänen einverstanden?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Die meisten ja, aber es gab auch Kritik am Zeitplan." }
+          ],
+          "options": [
+            "Es gab eine Diskussion über die Zukunft.",
+            "Nicht alle finden den Zeitplan gut.",
+            "Das Team hat sich getroffen.",
+            "Alle waren absolut glücklich.",
+            "Es gab keine Kritik."
+          ],
+          "correctIndices": [0, 1, 2]
+        },
+        {
+          "id": "A2_work_16",
+          "topic": "Die Betriebsratswahl",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Gehst du heute auch wählen?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Ja, der Betriebsrat ist wichtig für unsere Rechte." },
+            { "role": "Mann", "gender": "MALE", "text": "Ich habe mich noch nicht entschieden, wen ich wähle." }
+          ],
+          "options": [
+            "In der Firma gibt es eine Wahl.",
+            "Der Mann weiß schon, wen er wählt.",
+            "Wählen ist heute verboten.",
+            "Die Frau findet die Wahl wichtig.",
+            "Es geht um eine neue Kaffeemaschine."
+          ],
+          "correctIndices": [0, 3]
+        },
+        {
+          "id": "A2_work_17",
+          "topic": "Homeoffice",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Darfst du von zu Hause aus arbeiten?" },
+            { "role": "Mann", "gender": "MALE", "text": "Ja, zwei Tage pro Woche darf ich im Homeoffice bleiben." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Das spart dir viel Zeit für den Weg." }
+          ],
+          "options": [
+            "Er arbeitet immer im Büro.",
+            "Er muss nicht jeden Tag zur Firma fahren.",
+            "Homeoffice ist verboten.",
+            "Er spart Zeit.",
+            "Die Frau arbeitet von zu Hause."
+          ],
+          "correctIndices": [1, 3]
+        },
+        {
+          "id": "A2_work_18",
+          "topic": "Büromaterial bestellen",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Wir haben keine Kugelschreiber mehr." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Ich schreibe es auf die Liste für die Bestellung." },
+            { "role": "Mann", "gender": "MALE", "text": "Bestell bitte auch gleich neue Ordner mit." }
+          ],
+          "options": [
+            "Sie brauchen neue Stifte.",
+            "Die Liste ist schon weg.",
+            "Sie kaufen Material für das Büro.",
+            "Sie haben zu viele Ordner.",
+            "Der Mann bestellt selbst."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "A2_work_19",
+          "topic": "Sicherheit am Arbeitsplatz",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Trag bitte den Helm, wenn du in die Halle gehst." },
+            { "role": "Mann", "gender": "MALE", "text": "Ist das wirklich nötig? Es passiert doch nichts." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Vorschrift ist Vorschrift. Sicherheit geht vor." }
+          ],
+          "options": [
+            "Es gibt Sicherheitsregeln.",
+            "Er möchte den Helm nicht tragen.",
+            "In der Halle ist es ganz sicher.",
+            "Die Frau findet Regeln egal.",
+            "Er trägt schon einen Helm."
+          ],
+          "correctIndices": [0, 1]
+        },
+        {
+          "id": "A2_work_20",
+          "topic": "Einarbeitung",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Wie war dein erster Arbeitstag?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Sehr anstrengend, ich habe so viele neue Infos bekommen." },
+            { "role": "Mann", "gender": "MALE", "text": "Keine Sorge, nach einer Woche kennst du alles." }
+          ],
+          "options": [
+            "Die Frau hat gerade erst angefangen.",
+            "Der Tag war sehr locker.",
+            "Sie hat viel gelernt.",
+            "Der Mann ist unfreundlich.",
+            "Sie arbeitet dort schon seit Jahren."
+          ],
+          "correctIndices": [0, 2]
+        }
+      ]
+    },
+    {
       "id": "a2_order",
       "title": "Заказ еды",
       "icon": "🍽️",
@@ -19590,6 +20979,720 @@
             "Julia verspürt momentan absolut gar keinen Hunger"
           ],
           "correctIndices": [1, 3]
+        }
+      ]
+    },
+    {
+      "id": "b1_natur",
+      "title": "Природа и экология",
+      "icon": "🌍",
+      "tasks": [
+        {
+          "id": "B1_nature_01",
+          "topic": "Nachhaltiger Lebensstil",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Ich versuche, meinen ökologischen Fußabdruck zu reduzieren, indem ich auf Flugreisen verzichte." },
+            { "role": "Mann", "gender": "MALE", "text": "Das ist lobenswert, obwohl es manchmal schwierig ist, im Urlaub nicht weit weg zu fliegen." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Stimmt, aber Deutschland bietet auch wunderschöne Landschaften, die man mit dem Zug erreichen kann." }
+          ],
+          "options": [
+            "Sie möchte die Umwelt durch ihr Reiseverhalten schützen.",
+            "Der Mann findet ihren Verzicht völlig unmöglich.",
+            "Fliegen ist für die Frau die einzige Option.",
+            "Es gibt ökologische Alternativen zu Fernreisen.",
+            "Sie reist nur noch mit dem Auto."
+          ],
+          "correctIndices": [0, 3]
+        },
+        {
+          "id": "B1_nature_02",
+          "topic": "Massentierhaltung",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Hast du den Bericht über die Massentierhaltung im Fernsehen gesehen?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Ja , die Zustände sind schrecklich. Deshalb konsumiere ich kaum noch Fleisch." },
+            { "role": "Mann", "gender": "MALE", "text": "Ich achte jetzt auch mehr auf Bio-Qualität, um die artgerechte Haltung zu unterstützen." }
+          ],
+          "options": [
+            "Beide kritisieren die industrielle Tierhaltung.",
+            "Die Frau ist seit dem Bericht Veganerin.",
+            "Der Mann kauft Fleisch nur noch nach Preis.",
+            "Die Qualität der Tierhaltung beeinflusst ihre Kaufentscheidung.",
+            "Berichte im Fernsehen sind ihnen egal."
+          ],
+          "correctIndices": [0, 3]
+        },
+        {
+          "id": "B1_nature_03",
+          "topic": "Erneuerbare Energien",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Glaubst du , dass wir unseren Energiebedarf komplett durch Wind und Sonne decken können?" },
+            { "role": "Mann", "gender": "MALE", "text": "Theoretisch ja , aber die Speicherung des Stroms ist technisch noch eine große Herausforderung." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Trotzdem müssen wir investieren, um von fossilen Brennstoffen unabhängig zu werden." }
+          ],
+          "options": [
+            "Es gibt noch technische Probleme bei der Energiewende.",
+            "Die Frau möchte weiterhin Kohle nutzen.",
+            "Windkraft ist die einzige Lösung.",
+            "Sie diskutieren über die Zukunft der Energieversorgung.",
+            "Stromspeicherung ist bereits perfekt gelöst."
+          ],
+          "correctIndices": [0, 3]
+        },
+        {
+          "id": "B1_nature_04",
+          "topic": "Plastik im Alltag",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "In diesem Supermarkt wird fast jedes Gemüse in Plastik eingepackt. Das ist reine Verschwendung." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Anstatt Plastik zu verwenden , könnten sie biologisch abbaubare Netze anbieten." },
+            { "role": "Mann", "gender": "MALE", "text": "Genau, oder man bringt einfach seine eigenen Stoffbeutel von zu Hause mit." }
+          ],
+          "options": [
+            "Verpackungsmüll wird als unnötig empfunden.",
+            "Der Supermarkt verbietet Stoffbeutel.",
+            "Sie schlagen Alternativen zur Plastikverpackung vor.",
+            "Gemüse braucht unbedingt Plastikschutz.",
+            "Sie kaufen kein Gemüse mehr."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "B1_nature_05",
+          "topic": "Bienensterben und Pestizide",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Wenn die Bienen aussterben, bricht unser ganzes Ökosystem zusammen." },
+            { "role": "Mann", "gender": "MALE", "text": "Das stimmt , da sie für die Bestäubung der meisten Nutzpflanzen verantwortlich sind." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Wir müssten den Einsatz von Pestiziden in der Landwirtschaft sofort stoppen." }
+          ],
+          "options": [
+            "Bienen sind für die Nahrungsmittelproduktion unwichtig.",
+            "Chemische Mittel gefährden die Insekten.",
+            "Das Verschwinden der Bienen hat globale Folgen.",
+            "Pestizide sollten mehr genutzt werden.",
+            "Bauern brauchen keine Bienen."
+          ],
+          "correctIndices": [1, 2]
+        },
+        {
+          "id": "B1_nature_06",
+          "topic": "Urban Gardening",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Ich habe gelesen, dass immer mehr Menschen ihr eigenes Gemüse auf dem Balkon anbauen." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Ja , das nennt man Urban Gardening. Es verbessert auch das Mikroklima in der Stadt." },
+            { "role": "Mann", "gender": "MALE", "text": "Außerdem weiß man dann genau, dass keine Chemie verwendet wurde." }
+          ],
+          "options": [
+            "Gärtnern in der Stadt wird populärer.",
+            "Pflanzen auf dem Balkon schaden dem Klima.",
+            "Man hat mehr Kontrolle über die Lebensmittelqualität.",
+            "Balkongemüse ist immer giftig.",
+            "In der Stadt gibt es keinen Platz für Natur."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "B1_nature_07",
+          "topic": "Waldsterben",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Der Wald leidet extrem unter der anhaltenden Trockenheit der letzten Jahre." },
+            { "role": "Mann", "gender": "MALE", "text": "Man sieht überall abgestorbene Bäume, besonders die Fichten haben kaum eine Chance." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Wir brauchen dringend Mischwälder, die widerstandsfähiger gegen Hitze sind." }
+          ],
+          "options": [
+            "Wassermangel schadet den Wäldern.",
+            "Bestimmte Baumarten sind besonders gefährdet.",
+            "Ein Umbau der Wälder wird empfohlen.",
+            "Der Wald erholt sich gerade von selbst.",
+            "Hitze ist gut für Fichten."
+          ],
+          "correctIndices": [0, 1, 2]
+        },
+        {
+          "id": "B1_nature_08",
+          "topic": "Elektromobilität",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Wäre ein Elektroauto nicht eine gute Lösung gegen die Luftverschmutzung?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Nur wenn der Strom aus erneuerbaren Quellen stammt , sonst verlagert man das Problem nur." },
+            { "role": "Mann", "gender": "MALE", "text": "Da hast du recht, die gesamte Energiebilanz muss stimmen." }
+          ],
+          "options": [
+            "Elektroautos sind immer absolut umweltfreundlich.",
+            "Die Herkunft des Stroms spielt eine wichtige Rolle.",
+            "Sie sind skeptisch gegenüber der aktuellen Bilanz.",
+            "Benzinautos sind besser für die Luft.",
+            "Die Frau ist gegen Technik."
+          ],
+          "correctIndices": [1, 2]
+        },
+        {
+          "id": "B1_nature_09",
+          "topic": "Hochwasser und Extremwetter",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Hast du die Bilder von der Überschwemmung gesehen? Das war katastrophal." },
+            { "role": "Mann", "gender": "MALE", "text": "Solche Extremwetterereignisse nehmen aufgrund des Klimawandels leider zu." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Wir müssen die Flüsse renaturieren, damit das Wasser mehr Platz hat." }
+          ],
+          "options": [
+            "Naturkatastrophen treten seltener auf.",
+            "Bauliche Veränderungen an Flüssen könnten helfen.",
+            "Der Klimawandel wird als Ursache genannt.",
+            "Das Wasser braucht weniger Platz.",
+            "Überschwemmungen sind harmlos."
+          ],
+          "correctIndices": [1, 2]
+        },
+        {
+          "id": "B1_nature_10",
+          "topic": "Ressourcenverschwendung",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Wir leben in einer Wegwerfgesellschaft. Alles wird sofort ersetzt, statt es zu reparieren." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Oft ist eine Reparatur aber teurer als ein Neukauf, was das eigentliche Problem ist." },
+            { "role": "Mann", "gender": "MALE", "text": "Man sollte Firmen verpflichten, Produkte langlebiger zu gestalten." }
+          ],
+          "options": [
+            "Kosten hindern Menschen oft am Reparieren.",
+            "Sie fordern eine längere Haltbarkeit von Waren.",
+            "Neukauf ist immer besser für die Umwelt.",
+            "Firmen machen alles perfekt.",
+            "Alles sollte weggeworfen werden."
+          ],
+          "correctIndices": [0, 1]
+        },
+        {
+          "id": "B1_nature_11",
+          "topic": "Meeresspiegel",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Wenn das Eis an den Polen weiter schmilzt , steigt der Meeresspiegel dramatisch an." },
+            { "role": "Mann", "gender": "MALE", "text": "Das bedroht vor allem die Küstenstädte und viele kleine Inseln im Pazifik." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Hunderttausende Menschen könnten dadurch ihr Zuhause verlieren." }
+          ],
+          "options": [
+            "Die globale Erwärmung gefährdet Lebensräume.",
+            "Inseln sind absolut sicher.",
+            "Der steigende Wasserstand ist eine Gefahr.",
+            "Das Eis an den Polen wächst.",
+            "Küstenschutz ist unnötig."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "B1_nature_12",
+          "topic": "Fast Fashion",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Ich kaufe nur noch Kleidung aus Secondhand-Läden." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Warum das ? Neue Kleidung ist doch viel schöner." },
+            { "role": "Mann", "gender": "MALE", "text": "Vielleicht, aber die Textilindustrie verbraucht Unmengen an Wasser und Chemikalien." }
+          ],
+          "options": [
+            "Er möchte die Umweltbelastung reduzieren.",
+            "Die Frau versteht seinen Standpunkt sofort.",
+            "Die Produktion von Kleidung ist ressourcenintensiv.",
+            "Secondhand-Kleidung ist verboten.",
+            "Wasser spielt in der Industrie keine Rolle."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "B1_nature_13",
+          "topic": "Artenvielfalt",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Jeden Tag sterben Tierarten aus, die wir noch gar nicht entdeckt haben." },
+            { "role": "Mann", "gender": "MALE", "text": "Das liegt meistens an der Zerstörung ihres natürlichen Lebensraums, wie dem Regenwald." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Wir zerstören damit die biologische Vielfalt unseres Planeten." }
+          ],
+          "options": [
+            "Das Aussterben von Arten ist ein natürlicher Prozess.",
+            "Menschliches Handeln vernichtet Naturräume.",
+            "Biodiversität ist für den Planeten wichtig.",
+            "Alle Tierarten sind bereits entdeckt.",
+            "Der Regenwald wächst schnell nach."
+          ],
+          "correctIndices": [1, 2]
+        },
+        {
+          "id": "B1_nature_14",
+          "topic": "Trinkwasserknappheit",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Sauberes Trinkwasser wird in Zukunft wertvoller sein als Gold." },
+            { "role": "Frau", "gender": "FEMALE", "text": "In vielen Regionen der Welt herrscht jetzt schon akuter Wassermangel." },
+            { "role": "Mann", "gender": "MALE", "text": "Wir müssen lernen, verantwortungsbewusster mit unseren Wasservorräten umzugehen." }
+          ],
+          "options": [
+            "Wasser ist eine begrenzte Ressource.",
+            "In Zukunft wird es überall genug Wasser geben.",
+            "Ein sparsamer Umgang mit Wasser ist notwendig.",
+            "Gold ist wichtiger als Wasser.",
+            "Wasserverschmutzung ist kein Thema."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "B1_nature_15",
+          "topic": "Nationalparks vs. Tourismus",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Tourismus in Nationalparks ist ein zweischneidiges Schwert." },
+            { "role": "Mann", "gender": "MALE", "text": "Einerseits bringt es Geld für den Schutz, andererseits stören die Massen die Tiere." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Man sollte die Besucherzahlen begrenzen, um das Gleichgewicht zu bewahren." }
+          ],
+          "options": [
+            "Besucher sind ausschließlich gut für den Park.",
+            "Es gibt einen Konflikt zwischen Wirtschaft und Naturschutz.",
+            "Regulierungen für Touristen werden befürwortet.",
+            "Tiere mögen laute Touristenmassen.",
+            "Nationalparks brauchen keinen Schutz."
+          ],
+          "correctIndices": [1, 2]
+        },
+        {
+          "id": "B1_nature_16",
+          "topic": "Lärmbelastung",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Lärm ist auch eine Form der Umweltverschmutzung, die oft unterschätzt wird." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Absolut , der ständige Verkehrslärm macht auf Dauer krank." },
+            { "role": "Mann", "gender": "MALE", "text": "In der Natur findet man zum Glück noch echte Stille." }
+          ],
+          "options": [
+            "Lärm hat Auswirkungen auf die Gesundheit.",
+            "Verkehrslärm ist gesund.",
+            "Natur wird als Ort der Erholung gesehen.",
+            "Stille gibt es nur in der Stadt.",
+            "Lärm wird völlig überbewertet."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "B1_nature_17",
+          "topic": "Kernkraft",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Kernkraft ist zwar CO2-neutral, aber das Risiko eines Unfalls ist zu groß." },
+            { "role": "Mann", "gender": "MALE", "text": "Außerdem ist die Endlagerung des Atommülls seit Jahrzehnten ungeklärt." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Deshalb ist der Ausstieg aus der Atomenergie der richtige Weg." }
+          ],
+          "options": [
+            "Kernkraft wird als absolut sicher dargestellt.",
+            "Die Entsorgung von Abfällen ist ein Problem.",
+            "Die Gesprächspartner lehnen Atomkraft ab.",
+            "Atommüll ist harmlos.",
+            "Unfälle sind unmöglich."
+          ],
+          "correctIndices": [1, 2]
+        },
+        {
+          "id": "B1_nature_18",
+          "topic": "Ökologischer Landbau",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Bio-Bauer zu sein, erfordert viel mehr Arbeit als konventionelle Landwirtschaft." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Dafür wird der Boden nicht ausgelaugt и die Artenvielfalt bleibt erhalten." },
+            { "role": "Mann", "gender": "MALE", "text": "Und die Konsumenten erhalten gesündere Lebensmittel ohne Rückstände." }
+          ],
+          "options": [
+            "Bio-Landwirtschaft schont die natürlichen Ressourcen.",
+            "Der Arbeitsaufwand für Bio-Bauern ist höher.",
+            "Die Qualität der Produkte ist ein Vorteil.",
+            "Konventioneller Anbau ist besser für den Boden.",
+            "Artenvielfalt spielt keine Rolle."
+          ],
+          "correctIndices": [0, 1, 2]
+        },
+        {
+          "id": "B1_nature_19",
+          "topic": "Luftqualität и Fahrverbote",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Wegen der schlechten Stickoxidwerte gibt es jetzt Fahrverbote in der Innenstadt." },
+            { "role": "Mann", "gender": "MALE", "text": "Das ist ärgerlich für Pendler, aber notwendig für die Anwohner." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Wir brauchen stattdessen einen besseren öffentlichen Nahverkehr." }
+          ],
+          "options": [
+            "Die Luftwerte in der Stadt sind zu schlecht.",
+            "Fahrverbote helfen niemandem.",
+            "Ein Ausbau von Bus und Bahn wird vorgeschlagen.",
+            "Pendler freuen sich über Fahrverbote.",
+            "Die Innenstadt ist völlig sauber."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "B1_nature_20",
+          "topic": "Zukunft der Erde",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Wenn wir so weitermachen , hinterlassen wir der nächsten Generation einen zerstörten Planeten." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Es ist noch nicht zu spät , aber wir müssen unser Verhalten radikal ändern." },
+            { "role": "Mann", "gender": "MALE", "text": "Jeder Einzelne trägt eine Verantwortung für die Zukunft." }
+          ],
+          "options": [
+            "Veränderung ist für die Zukunft notwendig.",
+            "Die Situation ist bereits hoffnungslos.",
+            "Persönliches Handeln ist bedeutungsvoll.",
+            "Die nächste Generation hat keine Probleme.",
+            "Alles kann so bleiben, wie es ist."
+          ],
+          "correctIndices": [0, 2]
+        }
+      ]
+    },
+    {
+      "id": "b1_work",
+      "title": "Работа",
+      "icon": "💼",
+      "tasks": [
+        {
+          "id": "B1_work_01",
+          "topic": "Effizienz im Team",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Ich habe das Gefühl , dass wir zu viel Zeit in unnötigen Meetings verschwenden." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Da hast du recht. Oft sitzen wir eine Stunde zusammen, ohne ein Ergebnis zu erzielen." },
+            { "role": "Mann", "gender": "MALE", "text": "Wir sollten Protokolle führen und die Redezeit pro Person begrenzen." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Gute Idee, so könnten wir uns viel stärker auf die eigentlichen Aufgaben konzentrieren." }
+          ],
+          "options": [
+            "Meetings sind immer sehr produktiv.",
+            "Sie wollen die Struktur der Treffen ändern.",
+            "Die Frau ist gegen Protokolle.",
+            "Zeitmanagement ist ein Problem im Team.",
+            "Er möchte mehr Meetings haben."
+          ],
+          "correctIndices": [1, 3]
+        },
+        {
+          "id": "B1_work_02",
+          "topic": "Fehlerkultur",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Mir ist gestern ein Fehler bei der Buchung unterlaufen, das tut mir sehr leid." },
+            { "role": "Mann", "gender": "MALE", "text": "Kein Problem, Fehler passieren. Wichtig ist nur, dass wir sie sofort korrigieren." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Ich habe das System bereits aktualisiert und den Kunden informiert." },
+            { "role": "Mann", "gender": "MALE", "text": "Sehr gut , durch diese Transparenz vermeiden wir größere Schwierigkeiten." }
+          ],
+          "options": [
+            "Sie hat den Fehler verheimlicht.",
+            "Der Mann reagiert verständnisvoll.",
+            "Der Kunde weiß noch von nichts.",
+            "Das Problem wurde bereits gelöst.",
+            "Er möchte sie sofort entlassen."
+          ],
+          "correctIndices": [1, 3]
+        },
+        {
+          "id": "B1_work_03",
+          "topic": "Sabbatical",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Ich überlege, nächstes Jahr ein Sabbatical zu nehmen, um die Welt zu bereisen." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Das klingt spannend, aber hast du das schon mit der Personalabteilung geklärt?" },
+            { "role": "Mann", "gender": "MALE", "text": "Ich muss erst prüfen , wie das mit der Rentenversicherung und dem Gehalt funktioniert." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Es gibt oft spezielle Zeitwertkonten, mit denen man so eine Auszeit finanzieren kann." }
+          ],
+          "options": [
+            "Er möchte eine längere berufliche Pause machen.",
+            "Die Frau rät ihm davon ab.",
+            "Es gibt finanzielle Fragen zu klären.",
+            "Er hat schon alles unterschrieben.",
+            "Sabbaticals sind in der Firma verboten."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "B1_work_04",
+          "topic": "Betriebsratswahl",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Gehst du heute auch zur Wahl des Betriebsrats im großen Konferenzraum?" },
+            { "role": "Mann", "gender": "MALE", "text": "Natürlich , eine starke Arbeitnehmervertretung ist für unsere Rechte essenziell." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Ich finde es gut , dass sich dieses Jahr so viele junge Kollegen aufstellen lassen." },
+            { "role": "Mann", "gender": "MALE", "text": "Stimmt, frischer Wind kann der Kommunikation mit der Führungsebene nur gut tun." }
+          ],
+          "options": [
+            "Die Wahl findet im kleinen Büro statt.",
+            "Es gibt neue Kandidaten für den Betriebsrat.",
+            "Er findet die Wahl unwichtig.",
+            "Sie befürworten die Mitbestimmung im Betrieb.",
+            "Niemand darf heute wählen."
+          ],
+          "correctIndices": [1, 3]
+        },
+        {
+          "id": "B1_work_05",
+          "topic": "Projektleitung",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Frau Keller, ich würde Ihnen gerne die Leitung für das neue Umweltprojekt übertragen." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Vielen Dank für das Vertrauen! Das ist eine große Herausforderung für mich." },
+            { "role": "Mann", "gender": "MALE", "text": "Sie haben die nötige Expertise und das Team schätzt Ihre ruhige Art." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Ich werde mein Bestes geben und morgen direkt mit der Planung beginnen." }
+          ],
+          "options": [
+            "Sie übernimmt eine neue Führungsposition.",
+            "Der Chef traut ihr die Aufgabe nicht zu.",
+            "Sie fängt erst in einem Monat an.",
+            "Ihre fachlichen Fähigkeiten sind der Grund für das Angebot.",
+            "Das Projekt hat nichts mit Umwelt zu tun."
+          ],
+          "correctIndices": [0, 3]
+        },
+        {
+          "id": "B1_work_06",
+          "topic": "Burn-out Prävention",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Ich merke, dass die Belastung in letzter Zeit für viele Kollegen zu hoch ist." },
+            { "role": "Mann", "gender": "MALE", "text": "Das stimmt, die Krankheitsquote ist diesen Monat dramatisch gestiegen." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Die Geschäftsführung sollte Programme zur Stressbewältigung anbieten." },
+            { "role": "Mann", "gender": "MALE", "text": "Ein gesünderes Arbeitsumfeld wäre langfristig auch für die Firma profitabler." }
+          ],
+          "options": [
+            "Die Mitarbeiter sind topfit.",
+            "Hoher Stress führt zu gesundheitlichen Problemen.",
+            "Sie fordern Maßnahmen von der Firma.",
+            "Die Firma verliert Geld durch gesunde Mitarbeiter.",
+            "Der Mann möchte mehr Arbeit."
+          ],
+          "correctIndices": [1, 2]
+        },
+        {
+          "id": "B1_work_07",
+          "topic": "Digitalisierung im Lager",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Wir stellen unser Lagersystem komplett auf digitale Scanner um." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Endlich! Das mühsame Schreiben auf Papier hat viel zu lange gedauert." },
+            { "role": "Mann", "gender": "MALE", "text": "Dadurch können wir die Bestände in Echtzeit am Computer verfolgen." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Das reduziert auch die Fehlerquote bei der Inventur am Jahresende." }
+          ],
+          "options": [
+            "Papier wird durch Technik ersetzt.",
+            "Die Inventur wird durch das System schwieriger.",
+            "Die Kontrolle der Waren wird verbessert.",
+            "Das System ist langsamer als vorher.",
+            "Die Frau ist gegen Computer."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "B1_work_08",
+          "topic": "Gehaltsabrechnung",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Auf meiner Gehaltsabrechnung stimmt etwas mit den Fahrtkosten nicht." },
+            { "role": "Mann", "gender": "MALE", "text": "Wurden die Kilometer nicht richtig berechnet ?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Nein, es sieht so aus, als ob die Pauschale vom letzten Monat fehlt." },
+            { "role": "Mann", "gender": "MALE", "text": "Geh am besten direkt zur Buchhaltung, die können das meistens sofort korrigieren." }
+          ],
+          "options": [
+            "Sie hat zu viel Geld bekommen.",
+            "Es gibt ein Problem mit der Bezahlung.",
+            "Sie soll mit einer bestimmten Abteilung sprechen.",
+            "Der Mann korrigiert das Gehalt selbst.",
+            "Fahrtkosten werden nicht bezahlt."
+          ],
+          "correctIndices": [1, 2]
+        },
+        {
+          "id": "B1_work_09",
+          "topic": "Dienstreise-Vorbereitung",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Hast du die Flugtickets für die Konferenz in London schon ausgedruckt ?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Ich habe sie digital auf meinem Handy, das reicht heutzutage völlig aus." },
+            { "role": "Mann", "gender": "MALE", "text": "Ich nehme sie lieber in Papierform mit, falls mein Akku leer ist." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Du bist aber vorsichtig! Ich lade mein Handy einfach am Flughafen auf." }
+          ],
+          "options": [
+            "Sie fliegen geschäftlich weg.",
+            "Sie haben keine Tickets.",
+            "Er vertraut der Technik nicht zu 100 Prozent.",
+            "London ist kein Ziel.",
+            "Die Frau hat Angst um ihren Akku."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "B1_work_10",
+          "topic": "Überstundenabbau",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Darf ich nächste Woche Freitag freinehmen, um meine Überstunden abzubauen ?" },
+            { "role": "Mann", "gender": "MALE", "text": "Eigentlich ja, aber wir haben an dem Tag eine wichtige Kundenpräsentation." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Stimmt, die hatte ich ganz vergessen. Kann ich dann stattdessen am Montag kommen ?" },
+            { "role": "Mann", "gender": "MALE", "text": "Montag passt perfekt. Ich trage das direkt in den Urlaubskalender ein." }
+          ],
+          "options": [
+            "Sie möchte für ihre Mehrarbeit frei haben.",
+            "Der Freitag ist ein ungünstiger Termin.",
+            "Am Montag hat sie nun frei.",
+            "Es gibt keinen Kundenkontakt.",
+            "Sie darf gar keine Überstunden abbauen."
+          ],
+          "correctIndices": [0, 1]
+        },
+        {
+          "id": "B1_work_11",
+          "topic": "Kundenzufriedenheit",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Ein Kunde hat sich über den schlechten Service in unserer Hotline beschwert." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Das wundert mich nicht, wir haben momentan viel zu wenig Personal dort." },
+            { "role": "Mann", "gender": "MALE", "text": "Wir müssen dringend neue Mitarbeiter einstellen, um die Qualität zu halten." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Ich werde das Thema morgen in der Teamsitzung ansprechen." }
+          ],
+          "options": [
+            "Kunden sind sehr zufrieden.",
+            "Es gibt Personalmangel in einem Bereich.",
+            "Sie wollen die Qualität verschlechtern.",
+            "Morgen wird über das Problem diskutiert.",
+            "Die Hotline ist geschlossen."
+          ],
+          "correctIndices": [1, 3]
+        },
+        {
+          "id": "B1_work_12",
+          "topic": "Arbeitszeugnis",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Könnten Sie mir bitte ein Zwischenzeugnis ausstellen? Ich brauche es für meine Unterlagen." },
+            { "role": "Mann", "gender": "MALE", "text": "Wollen Sie uns etwa verlassen? Wir sind doch sehr zufrieden mit Ihnen." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Nein, keine Sorge. Ich möchte es nur für meine persönliche Dokumentation haben." },
+            { "role": "Mann", "gender": "MALE", "text": "Alles klar, ich werde die Personalabteilung bitten, das Zeugnis vorzubereiten." }
+          ],
+          "options": [
+            "Sie kündigt sofort.",
+            "Sie möchte ein Dokument über ihre Leistung.",
+            "Der Chef ist unzufrieden mit ihr.",
+            "Das Zeugnis wird bald erstellt.",
+            "Sie braucht das Zeugnis für die Bank."
+          ],
+          "correctIndices": [1, 3]
+        },
+        {
+          "id": "B1_work_13",
+          "topic": "Teambuilding",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Unser Team-Event im Klettergarten war ein voller Erfolg, findest du nicht auch ?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Absolut, ich hätte nicht gedacht, dass wir uns so gegenseitig unterstützen würden." },
+            { "role": "Mann", "gender": "MALE", "text": "Besonders die Zusammenarbeit bei der letzten Übung war beeindruckend." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Das hat uns als Team definitiv näher zusammengebracht." }
+          ],
+          "options": [
+            "Der Ausflug war positiv für die Gruppe.",
+            "Niemand hat sich gegenseitig geholfen.",
+            "Das Event fand draußen statt.",
+            "Sie sind jetzt ein besseres Team.",
+            "Klettern war langweilig."
+          ],
+          "correctIndices": [0, 2, 3]
+        },
+        {
+          "id": "B1_work_14",
+          "topic": "Interne Weiterbildung",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Morgen findet der Workshop zur neuen Datenschutzverordnung statt." },
+            { "role": "Mann", "gender": "MALE", "text": "Müssen wir alle daran teilnehmen oder ist das freiwillig ?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Da es gesetzliche Änderungen gibt, ist die Teilnahme für alle verpflichtend." },
+            { "role": "Mann", "gender": "MALE", "text": "Alles klar, dann trage ich mir den Termin sofort in den Kalender ein." }
+          ],
+          "options": [
+            "Es gibt neue Regeln beim Datenschutz.",
+            "Er darf sich aussuchen, ob er kommt.",
+            "Jeder Mitarbeiter muss zum Workshop.",
+            "Der Workshop wurde abgesagt.",
+            "Datenschutz ist nicht wichtig."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "B1_work_15",
+          "topic": "Umzug ins Großraumbüro",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Ab nächstem Monat sitzen wir alle zusammen in einem Großraumbüro." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Oje, ich befürchte, dass es dort viel zu laut für konzentriertes Arbeiten sein wird." },
+            { "role": "Mann", "gender": "MALE", "text": "Die Firma hat spezielle Trennwände bestellt, die den Schall schlucken sollen." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Hoffentlich funktionieren sie, sonst müssen wir alle mit Kopfhörern arbeiten." }
+          ],
+          "options": [
+            "Die Arbeitsplatzsituation ändert sich.",
+            "Die Frau freut sich auf das neue Büro.",
+            "Es gibt Maßnahmen gegen den Lärm.",
+            "Im Büro wird es sehr leise sein.",
+            "Kopfhörer sind verboten."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "B1_work_16",
+          "topic": "Jobsharing",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Hast du schon mal über Jobsharing nachgedacht, um mehr Zeit für die Familie zu haben?" },
+            { "role": "Mann", "gender": "MALE", "text": "Das bedeutet , dass ich mir meine Stelle mit einer anderen Person teile, oder ?" },
+            { "role": "Frau", "gender": "FEMALE", "text": "Genau, ihr teilt euch die Aufgaben und natürlich auch das Gehalt." },
+            { "role": "Mann", "gender": "MALE", "text": "Für meine aktuelle Lebenssituation wäre das eigentlich eine perfekte Lösung." }
+          ],
+          "options": [
+            "Er möchte weniger arbeiten.",
+            "Zwei Personen erledigen eine Arbeit.",
+            "Gehalt wird bei Jobsharing verdoppelt.",
+            "Er findet das Modell schlecht.",
+            "Die Frau möchte seinen Job übernehmen."
+          ],
+          "correctIndices": [0, 1]
+        },
+        {
+          "id": "B1_work_17",
+          "topic": "Firmenwagen",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Ab heute steht mir ein Firmenwagen zur Verfügung, auch für Privatfahrten." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Das ist ein toller Bonus ! Musst du den Wagen als geldwerten Vorteil versteuern ?" },
+            { "role": "Mann", "gender": "MALE", "text": "Ja, das wird direkt mit meinem Bruttogehalt verrechnet." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Trotzdem lohnt es sich meistens, da man keine Kosten für Versicherung und Reparaturen hat." }
+          ],
+          "options": [
+            "Er hat ein Auto von der Firma bekommen.",
+            "Privatnutzung ist verboten.",
+            "Das Auto kostet ihn gar kein Geld.",
+            "Finanzielle Steuern spielen eine Rolle.",
+            "Er muss Reparaturen selbst zahlen."
+          ],
+          "correctIndices": [0, 3]
+        },
+        {
+          "id": "B1_work_18",
+          "topic": "Feedbackgespräch",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Wie war dein Feedbackgespräch gestern bei deinem Vorgesetzten ?" },
+            { "role": "Mann", "gender": "MALE", "text": "Eigentlich sehr positiv , er hat besonders meine Teamfähigkeit gelobt." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Gab es auch Kritikpunkte , an denen du arbeiten solltest?" },
+            { "role": "Mann", "gender": "MALE", "text": "Nur eine Kleinigkeit . Ich sollte meine E-Mails etwas schneller beantworten." }
+          ],
+          "options": [
+            "Das Gespräch war eine Katastrophe.",
+            "Er ist ein guter Teamplayer.",
+            "Er soll seine Kommunikation beschleunigen.",
+            "Die Frau war beim Gespräch dabei.",
+            "Er hat keine Kritik bekommen."
+          ],
+          "correctIndices": [1, 2]
+        },
+        {
+          "id": "B1_work_19",
+          "topic": "Kantine",
+          "dialogue": [
+            { "role": "Mann", "gender": "MALE", "text": "Das Essen in der Kantine ist in letzter Zeit wirklich schlechter geworden." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Findest du ? Ich finde das neue vegetarische Angebot eigentlich ganz lecker." },
+            { "role": "Mann", "gender": "MALE", "text": "Vielleicht , aber die Portionen sind viel zu klein für den Preis." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Da hast du recht , satt werde ich davon meistens auch nicht." }
+          ],
+          "options": [
+            "Beide sind mit den Portionen unzufrieden.",
+            "Das Essen ist kostenlos.",
+            "Die Frau mag das fleischlose Essen.",
+            "Der Mann findet alles super.",
+            "Die Kantine schließt bald."
+          ],
+          "correctIndices": [0, 2]
+        },
+        {
+          "id": "B1_work_20",
+          "topic": "Überweisung der Gehälter",
+          "dialogue": [
+            { "role": "Frau", "gender": "FEMALE", "text": "Hast du dein Gehalt diesen Monat schon auf dem Konto?" },
+            { "role": "Mann", "gender": "MALE", "text": "Nein , es scheint eine Verzögerung bei der Bank zu geben." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Das ist ärgerlich , ich muss heute noch meine Miete bezahlen." },
+            { "role": "Mann", "gender": "MALE", "text": "Hoffentlich kommt es im Laufe des Tages, sonst wird es knapp." }
+          ],
+          "options": [
+            "Das Geld ist pünktlich angekommen.",
+            "Die Bank hat ein Problem.",
+            "Sie brauchen das Geld für Fixkosten.",
+            "Er hat sein Gehalt schon ausgegeben.",
+            "Die Miete ist schon bezahlt."
+          ],
+          "correctIndices": [1, 2]
         }
       ]
     },

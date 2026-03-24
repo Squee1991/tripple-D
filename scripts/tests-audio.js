@@ -1,8 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 
-const TARGET_LEVEL = 'A1';
-const TARGET_TOPIC_ID = 'a1_meeting'
+const TARGET_LEVEL = 'B1';
+const TARGET_TOPIC_ID = 'b1_work'
 const ELEVEN_API_KEY = 'sk_009b7e3406d7a57da34141447072ae3b252d3cab876bfc97'.trim();
 const VOICE_ID_MALE = 'SfAtBxtKeIJ5PJmhPaty';
 const VOICE_ID_FEMALE = 'DEZHhPbmb8LVZmWufkCh';
