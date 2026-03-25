@@ -136,7 +136,9 @@ const saveSettings = () => {
   background: #000;
   border-radius: 10px;
   outline: none;
+
 }
+
 .toon-range::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 32px;
