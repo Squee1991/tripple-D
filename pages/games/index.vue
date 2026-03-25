@@ -19,14 +19,12 @@
         <button class="menu-btn-toon play" @click="toggleScreen('galaxies')">
           <span class="icon">🚀</span> В БОЙ!
         </button>
-
         <div class="secondary-btns">
           <button class="menu-btn-toon hangar" @click="toggleScreen('shop')">АНГАР</button>
-          <button class="menu-btn-toon settings" @click="toggleScreen('settings')">HUD</button>
+          <button class="menu-btn-toon settings" @click="toggleScreen('settings')">КАБИНА</button>
           <button class="menu-btn-toon exit" @click="handleExit">ВЫХОД</button>
         </div>
       </div>
-
     </div>
     <div class="sub-screen-container">
       <VGalaxySelector
@@ -37,7 +35,6 @@
       <VGameSettings v-if="showSettings" @close="toggleScreen('menu')"/>
       <VGameHangar v-if="showShop" @close="toggleScreen('menu')"/>
     </div>
-
     <Transition name="warp-flash">
       <div class="warp-overlay" v-if="isTransitioning"></div>
     </Transition>
