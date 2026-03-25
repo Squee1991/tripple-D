@@ -976,7 +976,7 @@
             {
               "role": "Felix",
               "gender": "MALE",
-              "text": "Sind это Zwillinge?"
+              "text": "Sind das Zwillinge?"
             },
             {
               "role": "Emma",
@@ -1519,7 +1519,7 @@
             "Der Tee ist im Angebot",
             "Der Kaffee ist heute billiger",
             "Der Kaffee kostet vier Euro",
-            "Die Kundิน nimmt eine Packung",
+            "Die Kundin nimmt eine Packung",
             "Der Verkäufer kauft Kaffee"
           ],
           "correctIndices": [1, 2]
@@ -1571,7 +1571,7 @@
           "options": [
             "Der Supermarkt schließt um 20:00 Uhr",
             "Der Supermarkt schließt um 22:00 Uhr",
-            "Der Kunde fragт nach den Öffnungszeiten",
+            "Der Kunde fragt nach den Öffnungszeiten",
             "Die Verkäuferin fragt nach der Uhrzeit",
             "Der Supermarkt hat heute zu"
           ],
@@ -1586,8 +1586,8 @@
             { "role": "Kundin", "gender": "FEMALE", "text": "Gut, ich nehme ein Kilo." }
           ],
           "options": [
-            "Die Kundิน fragт nach Kartoffeln",
-            "Die Kundิน fragт nach Tomaten",
+            "Die Kundin fragt nach Kartoffeln",
+            "Die Kundin fragt nach Tomaten",
             "Die Tomaten kosten drei Euro",
             "Die Tomaten kosten zwei Euro",
             "Der Verkäufer kauft Tomaten"
@@ -1618,7 +1618,7 @@
           "dialogue": [
             { "role": "Kunde", "gender": "FEMALE", "text": "Guten Tag, ich möchte Fleisch für das Mittagessen." },
             { "role": "Verkäufer", "gender": "MALE", "text": "Möchten Sie Rindfleisch oder Schweinefleisch?" },
-            { "role": "Kundิน", "gender": "FEMALE", "text": "Rindfleisch, bitte. 500 Gramm." }
+            { "role": "Kunde", "gender": "FEMALE", "text": "Rindfleisch, bitte. 500 Gramm." }
           ],
           "options": [
             "Die Kunde möchte Fisch kaufen",
@@ -1897,7 +1897,7 @@
           "id": "A1_home_09",
           "topic": "Das Bett",
           "dialogue": [
-            { "role": "Mann", "gender": "MALE", "text": "Ich bin müде. Wo ist mein Bett ?" },
+            { "role": "Mann", "gender": "MALE", "text": "Ich bin müde. Wo ist mein Bett ?" },
             { "role": "Frau", "gender": "FEMALE", "text": "Dein Bett steht im Kinderzimmer." },
             { "role": "Mann", "gender": "MALE", "text": "Warum nicht im Schlafzimmer ?" },
             { "role": "Frau", "gender": "FEMALE", "text": "Dort schlafen die Gäste." }
@@ -2151,7 +2151,7 @@
             "Milch kaufen die Personen",
             "Eier braucht der Mann",
             "Supermarkt ist das Ziel",
-            "Käсе sucht die Frau",
+            "Käse sucht die Frau",
             "Obst brauchen sie heute"
           ],
           "correctIndices": [0, 1, 2]
@@ -2266,7 +2266,7 @@
           "topic": "Fleisch oder Fisch",
           "dialogue": [
             { "role": "Frau", "gender": "FEMALE", "text": "Isst du Fleisch ?" },
-            { "role": "Mann", "gender": "MALE", "text": "Neиn, ich esse kein Fleisch. Ich esse lieber Fisch." },
+            { "role": "Mann", "gender": "MALE", "text": "Nein, ich esse kein Fleisch. Ich esse lieber Fisch." },
             { "role": "Frau", "gender": "FEMALE", "text": "Gut, der Fisch ist im Kühlschrank." }
           ],
           "options": [
@@ -2545,7 +2545,7 @@
         },
         {
           "id": "A1_doc_06",
-          "topic": "In der Apotheке",
+          "topic": "In der Apotheke",
           "dialogue": [
             { "role": "Kundin", "gender": "FEMALE", "text": "Guten Tag, ich habe hier ein Rezept vom Arzt." },
             { "role": "Apotheker", "gender": "MALE", "text": "Einen Moment bitte. Ich hole die Medikamente." },
@@ -3242,7 +3242,7 @@
             { "role": "Mann", "gender": "MALE", "text": "Das Wasser ist sehr schnell." }
           ],
           "options": [
-            "Das Wasser bewegт sich schnell.",
+            "Das Wasser bewegt sich schnell.",
             "Der Fluss geht zum Meer.",
             "Das ist ein kleiner Pool.",
             "Sie stehen an einem Berg.",
@@ -3722,7 +3722,7 @@
           "dialogue": [
             { "role": "Mann", "gender": "MALE", "text": "Ist das dein Büro?" },
             { "role": "Frau", "gender": "FEMALE", "text": "Nein , ich teile das Büro mit zwei Kollegen." },
-            { "role": "Mann", "gender": "MALE", "text": "Es ist aber sehr groß и hell." }
+            { "role": "Mann", "gender": "MALE", "text": "Es ist aber sehr groß und hell." }
           ],
           "options": [
             "Sie arbeitet allein.",
@@ -3772,7 +3772,7 @@
           "topic": "Das Gehalt",
           "dialogue": [
             { "role": "Frau", "gender": "FEMALE", "text": "Bist du zufrieden mit der Arbeit?" },
-            { "role": "Mann", "gender": "MALE", "text": "Ja , die Kollegen sind nett и das Geld ist gut." },
+            { "role": "Mann", "gender": "MALE", "text": "Ja , die Kollegen sind nett und das Geld ist gut." },
             { "role": "Frau", "gender": "FEMALE", "text": "Das ist wichtig." }
           ],
           "options": [
@@ -3880,8 +3880,8 @@
           "id": "A1_order_02",
           "topic": "В пекарне: Булочки",
           "dialogue": [
-            { "role": "Verkäuferin", "gender": "FEMALE", "text": "Drei Brötchen, bitte." },
-            { "role": "Kunde", "gender": "MALE", "text": "Das macht ein Euro fünfzig." }
+            { "role": "Kunde", "gender": "FEMALE", "text": "Drei Brötchen, bitte." },
+            { "role": "Verkäuferin", "gender": "MALE", "text": "Das macht ein Euro fünfzig." }
           ],
           "options": [
             "Ein Brötchen kostet 50 Cent",
@@ -8844,12 +8844,12 @@
             {
               "role": "Frau Bauer",
               "gender": "FEMALE",
-              "text": "Das ist wichtig. Ich bin Ärztin und ich arbeite часто allein. Das finde ich nicht so gut."
+              "text": "Das ist wichtig. Ich bin Ärztin und ich arbeite oft allein. Das finde ich nicht so gut."
             }
           ],
           "options": [
             "Herr Weber arbeitet gern im Team",
-            "Frau Bauer ist mit ihrer Arbeit не совсем довольна",
+            "Frau Bauer ist mit ihrer Arbeit nicht ganz zufrieden",
             "In der Schule von Herrn Weber arbeitet man nur allein",
             "Frau Bauer möchte Lehrerin werden",
             "Herr Weber sucht einen Job als Arzt"
@@ -8863,22 +8863,22 @@
             {
               "role": "Leon",
               "gender": "MALE",
-              "text": "Sophie, du bist 23 Jahre alt. Möchtest du noch einmal studieren?"
+              "text": "Sophie, du wolltest immer Architektur studieren. Warum machst du das nicht einfach?"
             },
             {
               "role": "Sophie",
               "gender": "FEMALE",
-              "text": "Vielleicht, Leon. Aber я сейчас очень довольна. Мне нравится мой возраст."
+              "text": "Ich weiß nicht, Leon. Ich bin jetzt fast 40. Ein Studium dauert lange, vielleicht bin ich schon zu alt dafür."
             },
             {
               "role": "Leon",
               "gender": "MALE",
-              "text": "Ich bin 25. Ich finde: Man ist nie zu alt. Man kann immer etwas Neues lernen."
+              "text": "Quatsch! Ich bin 35 und mache gerade eine neue Ausbildung. Man ist nie zu alt. Man kann immer etwas Neues lernen."
             }
           ],
           "options": [
             "Leon denkt: Man kann in jedem Alter lernen",
-            "Sophie findet ihr Leben сейчас плохо",
+            "Sophie findet ihr Leben nicht gut",
             "Sophie und Leon sprechen über das Alter und Lernen",
             "Sophie ist viel älter als Leon",
             "Leon möchte nicht mehr lernen"
@@ -11516,7 +11516,7 @@
             "Thomas macht ab morgen gar keine Diät mehr",
             "Lisa hat die Pizza für Thomas selbst gebacken",
             "An seine Regeln beim Essen hält sich Thomas gerade nicht",
-            "Maria findet es schlecht , dass Thomas Pizza isst",
+            "Lisa findet es schlecht , dass Thomas Pizza isst",
             "Für das Essen gibt es einen speziellen Grund zum Feiern"
           ],
           "correctIndices": [2, 4]
@@ -12372,12 +12372,12 @@
             {
               "role": "Opa",
               "gender": "MALE",
-              "text": "Lara , warum schauen wir nicht auf das Handy , um den Weg zu finden ?"
+              "text": "Lara, warum schauen wir nicht auf das Handy, um den Weg zu finden?"
             },
             {
               "role": "Lara",
               "gender": "FEMALE",
-              "text": "Weil mein Akku leer ist , Opa , und ich die Karte nicht sehen kann."
+              "text": "Weil mein Akku leer ist, Opa, und ich die Karte nicht sehen kann."
             },
             {
               "role": "Opa",
@@ -12386,11 +12386,11 @@
             }
           ],
           "options": [
-            "Die beiden brauchen Hilfe beim Weg",
+            "Die beiden brauchen Hilfe, um den Weg zu finden",
             "Der Opa hat eine Karte aus Papier dabei",
-            "Lara может пользоваться телефоном",
-            "Lara может видеть карту на экране",
-            "Lara может пользоваться своим телефоном прямо сейчас"
+            "Lara kann ihr Handy problemlos benutzen",
+            "Lara sieht den Weg auf dem Bildschirm",
+            "Laras Handy funktioniert gerade nicht, weil der Akku leer ist"
           ],
           "correctIndices": [0, 4]
         },
@@ -12445,7 +12445,7 @@
           ],
           "options": [
             "Bernd möchte den Treffpunkt absichtlich ändern",
-            "Julia и Bernd находятся в неправильном месте",
+            "ulia und Bernd sind am falschen Ort",
             "Der Brunnen vor ihnen ist schon sehr alt",
             "Es gibt in der Nähe zwei verschiedene Brunnen",
             "Julia möchte sofort nach Hause gehen"
@@ -12912,7 +12912,7 @@
           "topic": "Müll im Meer",
           "dialogue": [
             { "role": "Frau", "gender": "FEMALE", "text": "Schau mal, wie viel Müll am Strand liegt!" },
-            { "role": "Mann", "gender": "MALE", "text": "Das ist furchtbar, das Plastik landet im Meer и tötet Fische." },
+            { "role": "Mann", "gender": "MALE", "text": "Das ist furchtbar, das Plastik landet im Meer und tötet Fische." },
             { "role": "Frau", "gender": "FEMALE", "text": "Wir sollten eine Aufräumaktion organisieren." }
           ],
           "options": [
@@ -13049,7 +13049,7 @@
           "dialogue": [
             { "role": "Frau", "gender": "FEMALE", "text": "Hier darf man die Wege nicht verlassen." },
             { "role": "Mann", "gender": "MALE", "text": "Warum ist das so streng geregelt?" },
-            { "role": "Frau", "gender": "FEMALE", "text": "Um seltene Pflanzen и brütende Vögel zu schützen." }
+            { "role": "Frau", "gender": "FEMALE", "text": "Um seltene Pflanzen und brütende Vögel zu schützen." }
           ],
           "options": [
             "Schutz ist wichtig für die Vielfalt.",
@@ -21281,7 +21281,7 @@
           "topic": "Ökologischer Landbau",
           "dialogue": [
             { "role": "Mann", "gender": "MALE", "text": "Bio-Bauer zu sein, erfordert viel mehr Arbeit als konventionelle Landwirtschaft." },
-            { "role": "Frau", "gender": "FEMALE", "text": "Dafür wird der Boden nicht ausgelaugt и die Artenvielfalt bleibt erhalten." },
+            { "role": "Frau", "gender": "FEMALE", "text": "Dafür wird der Boden nicht ausgelaugt und die Artenvielfalt bleibt erhalten." },
             { "role": "Mann", "gender": "MALE", "text": "Und die Konsumenten erhalten gesündere Lebensmittel ohne Rückstände." }
           ],
           "options": [
@@ -21295,7 +21295,7 @@
         },
         {
           "id": "B1_nature_19",
-          "topic": "Luftqualität и Fahrverbote",
+          "topic": "Luftqualität und Fahrverbote",
           "dialogue": [
             { "role": "Frau", "gender": "FEMALE", "text": "Wegen der schlechten Stickoxidwerte gibt es jetzt Fahrverbote in der Innenstadt." },
             { "role": "Mann", "gender": "MALE", "text": "Das ist ärgerlich für Pendler, aber notwendig für die Anwohner." },

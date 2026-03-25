@@ -15,21 +15,23 @@
           <div class="study-nav-progress">
             <div class="progress-bar">
               <div class="progress-bar-fill" :style="{ width: progressPercentage + '%' }"></div>
+              <span class="study-nav-counter">{{ currentTaskNumber }}/{{ totalTasksInTopic }}</span>
             </div>
-            <span class="study-nav-counter">{{ currentTaskNumber }}/{{ totalTasksInTopic }}</span>
           </div>
         </header>
         <main class="study-main">
           <article class="quest-card">
             <section class="quest-card-audio">
-              <p class="quest-card-instruction">Прослушайте диалог!</p>
-              <AudioButton
-                  :key="'main-' + currentTask.id"
-                  :level="currentLevel"
-                  :topicId="currentTopic.id"
-                  :fileName="currentTask.id + '_main'"
-                  class="quest-card-mega-play"
-              />
+              <div class="quest-card-instruction-wrapper">
+                <AudioButton
+                    :key="'main-' + currentTask.id"
+                    :level="currentLevel"
+                    :topicId="currentTopic.id"
+                    :fileName="currentTask.id + '_main'"
+                    class="quest-card-mega-play"
+                />
+                <p class="quest-card-instruction">Прослушайте диалог!</p>
+              </div>
               <transition name="quiz-expand">
                 <div v-if="isTaskChecked" class="chat-flow">
                   <div v-for="(line, idx) in currentTask.dialogue"
@@ -56,15 +58,13 @@
                       <span>!</span>
                     </template>
                   </div>
-                  <span class="quest-option-text">{{ optionText }}</span>
+                  <div class="quest-option-text">{{ optionText }}</div>
                 </button>
               </div>
             </div>
-
             <div v-if="feedback" :class="['quest-feedback', feedback.class]">
               <p class="quest-feedback-text">{{ feedback.text }}</p>
             </div>
-
             <footer class="quest-card-footer">
               <button v-if="!isTaskChecked" @click="checkResult" :disabled="!hasUserSelected"
                       class="quiz-btn quiz-btn-primary">ПРОВЕРИТЬ
@@ -79,7 +79,6 @@
           </article>
         </main>
       </div>
-
       <div v-if="activeModal" class="modal-overlay">
         <div class="modal-card">
           <h3 class="modal-title">{{ modalData.title }}</h3>
@@ -282,6 +281,7 @@ onMounted(async () => {
 })
 onUnmounted(stopAllAudio)
 watch(currentIndex, stopAllAudio)
+
 </script>
 
 <style scoped>
@@ -305,15 +305,21 @@ watch(currentIndex, stopAllAudio)
   margin-bottom: 10px;
 }
 
+.quest-card-instruction-wrapper {
+  display: flex;
+  align-items: center;
+}
+
 .study-nav-back {
   background: #ffeaa7;
-  width: 45px;
+  width: 60px;
   border-radius: 12px;
   border: 2px solid #2f3542;
   box-shadow: 2px 2px 0px #2f3542;
   font-weight: 900;
   cursor: pointer;
   display: flex;
+  padding: 4px;
   align-items: center;
   justify-content: center;
 }
@@ -325,15 +331,22 @@ watch(currentIndex, stopAllAudio)
 
 .progress-bar {
   flex-grow: 1;
-  height: 24px;
+  position: relative;
+  height: 30px;
   background: #ffffff;
   border-radius: 12px;
   border: 2px solid #2f3542;
   box-shadow: 2px 2px 0px #2f3542;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .progress-bar-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
   height: 100%;
   background: #7bed9f;
   transition: width 0.4s ease;
@@ -341,48 +354,54 @@ watch(currentIndex, stopAllAudio)
 }
 
 .study-nav-counter {
+  position: relative;
+  z-index: 1;
   font-weight: 900;
   font-size: 1.1rem;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5);
 }
 
 .quest-card {
+  display: flex;
+  flex-direction: column;
   background: #ffffff;
   border: 2px solid #2f3542;
   border-radius: 20px;
   box-shadow: 4px 4px 0px #2f3542;
   padding: 12px;
+  height: calc(100vh - 80px);
 }
 
 .quest-card-audio {
+  flex: 1;
   background: #fdfdfd;
   border: 2px dashed #2f3542;
   border-radius: 16px;
   padding: 12px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   text-align: center;
 }
 
 .quest-card-instruction {
   font-weight: 900;
   color: #70a1ff;
-  margin-bottom: 15px;
 }
 
 .quest-card-mega-play {
   background: #70a1ff !important;
-  width: 70px !important;
-  height: 70px !important;
+  width: 55px !important;
+  height: 55px !important;
   border-radius: 50% !important;
   border: 2px solid #2f3542 !important;
   box-shadow: 3px 3px 0px #2f3542 !important;
-  margin: 0 auto;
+  margin-right: 10px;
 }
 
 .quest-card-options {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-bottom: 15px;
+  gap: 8px;
+  margin-bottom: 10px;
 }
 
 .quest-option {
@@ -393,8 +412,8 @@ watch(currentIndex, stopAllAudio)
 
 .quest-option-audio {
   flex-shrink: 0;
-  width: 44px !important;
-  height: 44px !important;
+  width: 39px !important;
+  height: 39px !important;
   background: #ffffff !important;
   border: 2px solid #2f3542 !important;
   box-shadow: 2px 2px 0px #2f3542 !important;
@@ -405,7 +424,9 @@ watch(currentIndex, stopAllAudio)
   flex-grow: 1;
   display: flex;
   align-items: center;
-  padding: 8px 10px;
+  justify-content: flex-start;
+  text-align: left;
+  padding: 7px 9px;
   background: #ffffff;
   border: 2px solid #2f3542;
   border-radius: 14px;
@@ -461,8 +482,8 @@ watch(currentIndex, stopAllAudio)
 
 .quest-feedback {
   text-align: center;
-  margin-bottom: 15px;
-  padding: 10px;
+  margin-bottom: 10px;
+  padding: 4px;
   border-radius: 12px;
   border: 4px dashed #2f3542;
 }
@@ -484,10 +505,10 @@ watch(currentIndex, stopAllAudio)
 }
 
 .chat-flow {
-  margin-top: 15px;
+  margin-top: 8px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 7px;
 }
 
 .chat-bubble {
