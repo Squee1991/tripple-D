@@ -1,80 +1,3 @@
-<template>
-  <div class="game-universe">
-    <div v-if="errorMessage" class="error-screen">
-      <h1>⚠️ СИСТЕМНЫЙ СБОЙ</h1>
-      <p>{{ errorMessage }}</p>
-      <button class="btn-go" @click="goHome">ВЕРНУТЬСЯ В ШТАБ</button>
-    </div>
-    <div v-else class="sky" ref="skyRef">
-      <div class="star-layer"></div>
-      <div class="sector-info" v-if="currentGalaxy">
-        <span class="sector-name">{{ currentGalaxy.name || 'НЕИЗВЕСТНО' }}</span>
-        <span class="sector-type">{{ currentGalaxy.type || '???' }}</span>
-      </div>
-      <div class="score-board">
-        <span class="score-label">ОЧКИ</span>
-        <span class="score-value">{{ score }}</span>
-      </div>
-      <div v-if="!isGameOver" class="game-area">
-        <div
-            v-if="currentQuestion && !showGroundExplosion && !showSuccessExplosion"
-            ref="mobRef"
-            :key="gameKey"
-            class="mob"
-            :style="mobStyles"
-            @animationend="triggerBomb"
-            @transitionend="handleTransitionEnd"
-        >
-          <div class="mob-inner">
-            <img :src="isWrongState ? MeteorInFire : Meteor" class="parachute" alt="Target">
-            <div class="mob-bubble" v-if="!isWrongState">
-              {{ currentQuestion.word }}
-            </div>
-          </div>
-        </div>
-        <div v-if="isMissileFlying" class="laser-beam" :style="missileStyles"></div>
-        <div v-if="showSuccessExplosion" class="vfx" :style="vfxPos">💥</div>
-      </div>
-      <div v-if="showGroundExplosion" class="ground-impact-explosion">
-        <div class="big-boom-emoji">💥</div>
-      </div>
-      <div v-if="isGameOver" class="game-over-overlay">
-        <div class="game-over-card toon-main-card">
-          <h2 class="death-title">СЕКТОР НЕ ЗАЧИЩЕН!</h2>
-          <div class="score-display">
-            <span class="score-text">ВАШ СЧЕТ:</span>
-            <span class="fs-val">{{ score }}</span>
-          </div>
-          <div class="modal-actions">
-            <button class="action-btn restart-btn toon-btn-blue" @click="startGame">
-              ЕЩЕ РАЗ
-            </button>
-            <button class="action-btn home-btn toon-btn-red" @click="goHome">
-              ВЕРНУТЬСЯ В ШТАБ
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="cannon-station" v-if="currentQuestion">
-        <div class="main-cannon" :class="{ 'recoiling': isMissileFlying }">
-          <img v-if="!showGroundExplosion" class="tank" :src="store.activeShip.img" alt="Ship">
-        </div>
-        <div class="ammo-selector">
-          <button
-              v-for="opt in currentQuestion.options"
-              :key="opt"
-              class="ammo-btn toon-btn"
-              @click="shoot(opt)"
-              :disabled="isMissileFlying || showGroundExplosion || isWrongState"
-          >
-            {{ opt.toUpperCase() }}
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</template>
-
 <script setup>
 import {ref, onMounted, computed, watch} from 'vue'
 import {useRoute, useRouter} from 'vue-router'
@@ -82,10 +5,16 @@ import {useGalaxyStore} from '../../store/galaxyStore.js'
 import Meteor from '../../assets/images/meteor.svg'
 import MeteorInFire from '../../assets/images/meteorinFire.svg'
 
+// Предполагаем, что useCombatEngine — это твой внешний хук с логикой боя
+// (я добавил обработку окончания игры прямо сюда через watcher)
+import { useCombatEngine } from '../../composables/useCombatEngine.js'
+
 const route = useRoute()
 const router = useRouter()
 const store = useGalaxyStore()
 const errorMessage = ref('')
+const isNewRecord = ref(false)
+const earnedArtiks = ref(0)
 
 const currentGalaxy = computed(() => store.currentGalaxy || null)
 const currentQuestions = computed(() => {
@@ -106,6 +35,22 @@ const mobStyles = computed(() => {
   }
 })
 
+// --- ЛОГИКА FIREBASE ПРИ ПРОИГРЫШЕ ---
+watch(isGameOver, async (ended) => {
+  if (ended) {
+    // 1. Проверяем и записываем рекорд в Firebase для этой галактики
+    isNewRecord.value = await store.updateHighScore(store.activeGalaxyId, score.value)
+
+    // 2. Считаем заработанную валюту (например, 5 Артиксов за 1 очко)
+    earnedArtiks.value = score.value * 5
+
+    // 3. Отправляем бабки в облако
+    if (earnedArtiks.value > 0) {
+      await store.addArtiks(earnedArtiks.value)
+    }
+  }
+})
+
 watch(score, (newVal) => {
   store.score = newVal
 })
@@ -117,8 +62,11 @@ const initGame = () => {
       errorMessage.value = 'ID сектора не передан';
       return;
     }
+    // Устанавливаем миссию (сбрасывает score в 0)
     store.setMission(sectorId);
-    store.score = 0;
+    isNewRecord.value = false;
+    earnedArtiks.value = 0;
+
     setTimeout(() => {
       startGame()
     }, 50);
@@ -146,6 +94,95 @@ onMounted(() => {
 })
 </script>
 
+<template>
+  <div class="game-universe">
+    <div v-if="errorMessage" class="error-screen">
+      <h1>⚠️ СИСТЕМНЫЙ СБОЙ</h1>
+      <p>{{ errorMessage }}</p>
+      <button class="btn-go" @click="goHome">ВЕРНУТЬСЯ В ШТАБ</button>
+    </div>
+
+    <div v-else class="sky" ref="skyRef">
+      <div class="star-layer"></div>
+
+      <div class="sector-info" v-if="currentGalaxy">
+        <span class="sector-name">{{ currentGalaxy.name || 'НЕИЗВЕСТНО' }}</span>
+      </div>
+      <div class="score-board">
+        <span class="score-label">ОЧКИ</span>
+        <span class="score-value">{{ score }}</span>
+      </div>
+
+      <div v-if="!isGameOver" class="game-area">
+        <div
+            v-if="currentQuestion && !showGroundExplosion && !showSuccessExplosion"
+            ref="mobRef"
+            :key="gameKey"
+            class="mob"
+            :style="mobStyles"
+            @animationend="triggerBomb"
+            @transitionend="handleTransitionEnd"
+        >
+          <div class="mob-inner">
+            <img :src="isWrongState ? MeteorInFire : Meteor" class="parachute" alt="Target">
+            <div class="mob-bubble" v-if="!isWrongState">
+              {{ currentQuestion.word }}
+            </div>
+          </div>
+        </div>
+        <div v-if="isMissileFlying" class="laser-beam" :style="missileStyles"></div>
+        <div v-if="showSuccessExplosion" class="vfx" :style="vfxPos">💥</div>
+      </div>
+
+      <div v-if="showGroundExplosion" class="ground-impact-explosion">
+        <div class="big-boom-emoji">💥</div>
+      </div>
+
+      <div v-if="isGameOver" class="game-over-overlay">
+        <div class="game-over-card toon-main-card">
+          <h2 class="death-title" v-if="isNewRecord">НОВЫЙ РЕКОРД!</h2>
+          <h2 class="death-title" v-else>СЕКТОР НЕ ЗАЧИЩЕН!</h2>
+
+          <div class="score-display">
+            <span class="score-text">ВАШ СЧЕТ:</span>
+            <span class="fs-val">{{ score }}</span>
+          </div>
+
+          <div class="earned-info" v-if="earnedArtiks > 0">
+            <span class="plus-anim">+{{ earnedArtiks }} Ⓐ взято у артикля</span>
+          </div>
+
+          <div class="modal-actions">
+            <button class="action-btn restart-btn toon-btn-blue" @click="initGame">
+              ЕЩЕ РАЗ
+            </button>
+            <button class="action-btn home-btn toon-btn-red" @click="goHome">
+              В ШТАБ
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="cannon-station" v-if="currentQuestion">
+        <div class="main-cannon" :class="{ 'recoiling': isMissileFlying }">
+          <img v-if="!showGroundExplosion" class="tank" :src="store.activeShip.img" alt="Ship">
+        </div>
+        <div class="ammo-selector">
+          <button
+              v-for="opt in currentQuestion.options"
+              :key="opt"
+              class="ammo-btn toon-btn"
+              @click="shoot(opt)"
+              :disabled="isMissileFlying || showGroundExplosion || isWrongState"
+          >
+            {{ opt.toUpperCase() }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
 <style scoped>
 .game-universe {
   height: 100vh;
@@ -153,6 +190,20 @@ onMounted(() => {
   overflow: hidden;
   font-family: 'Arial Rounded MT Bold', sans-serif;
   user-select: none;
+}
+
+.earned-info {
+  margin-bottom: 20px;
+  background: #ccff00;
+  border: 2px solid #000;
+  padding: 5px;
+  transform: rotate(-2deg);
+}
+
+.plus-anim {
+  color: #000;
+  font-weight: 900;
+  font-size: 1.1rem;
 }
 
 .sky {
@@ -189,7 +240,7 @@ onMounted(() => {
   display: block;
   color: #ffeb3b;
   font-size: 1.5rem;
-  -webkit-text-stroke: 1px #000;
+  -webkit-text-stroke: 1px white;
   font-weight: 900;
 }
 
