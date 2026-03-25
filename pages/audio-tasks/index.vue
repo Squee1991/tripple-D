@@ -8,21 +8,22 @@
           :img="HeadPhones"
           :text="overlayData.text"
       />
-
       <div class="quiz__header-wrapper">
         <header class="quiz__header">
           <button @click="handleBackClick" class="quiz__btn quiz__btn--back">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
               <line x1="19" y1="12" x2="5" y2="12"></line>
               <polyline points="12 19 5 12 12 5"></polyline>
             </svg>
           </button>
           <div class="quiz__titles">
             <h1 class="quiz__title">{{ headerTitle }}</h1>
-            <p class="quiz__subtitle"> {{ headerText}}</p>
+            <p class="quiz__subtitle"> {{ headerText }}</p>
           </div>
           <button class="quiz__btn quiz__btn--info" @click="showDevModal = true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"></circle>
               <line x1="12" y1="16" x2="12" y2="12"></line>
               <line x1="12" y1="8" x2="12.01" y2="8"></line>
@@ -63,15 +64,16 @@
                   <h3 class="card__title">{{ topic.title }}</h3>
                 </div>
                 <div v-if="topic.tasks?.length" class="card__progress">
-                  <div class="circular-progress" :style="`background: conic-gradient(#2f3542 ${getTopicProgressPercent(topic)}%, #fff 0)`">
+                  <div class="circular-progress" :style="getCircularProgressStyle(topic)">
                     <div class="circular-progress__inner">
-                      <span class="circular-progress__text">{{ getTopicCompleted(topic) }}/{{ topic.tasks.length }}</span>
+                      <span class="circular-progress__text">
+                        {{ getTopicCompleted(topic) }}/{{ topic.tasks.length }}
+                      </span>
                     </div>
                   </div>
                 </div>
               </button>
             </template>
-
           </div>
         </transition>
       </div>
@@ -80,16 +82,16 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
-import { useRouter } from 'vue-router'
-import { storeToRefs } from 'pinia'
-import { useAudioTaskStore } from '../../store/audioTaskStore.js'
+import {ref, computed, onMounted} from 'vue'
+import {useRouter} from 'vue-router'
+import {storeToRefs} from 'pinia'
+import {useAudioTaskStore} from '../../store/audioTaskStore.js'
 import Modal from "../../src/components/modal.vue"
 import HeadPhones from '../../assets/images/headphones.svg'
 
 const router = useRouter()
 const store = useAudioTaskStore()
-const { allTasks, currentLevel, userProgress } = storeToRefs(store)
+const {allTasks, currentLevel, userProgress} = storeToRefs(store)
 
 const screen = ref('levels')
 const showDevModal = ref(false)
@@ -121,6 +123,13 @@ const availableTopics = computed(() => allTasks.value[currentLevel.value] || [])
 
 const handleBackClick = () => {
   screen.value === 'levels' ? router.push('/') : screen.value = 'levels'
+}
+
+const getCircularProgressStyle = (topic) => {
+  const percent = getTopicProgressPercent(topic)
+  return {
+    background: `conic-gradient(rgb(91 132 255) ${percent}%, rgb(255, 255, 255) 0deg)`
+  }
 }
 
 const getTopicColor = (index) => topicColors[index % topicColors.length]

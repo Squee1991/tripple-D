@@ -32,8 +32,6 @@ const props = defineProps({
 const isPlaying = ref(false)
 let currentAudio = null
 
-const computedIcon = computed(() => isPlaying.value ? DefaultStopIcon : DefaultSoundIcon )
-
 const playAudio = () => {
   if (isPlaying.value) return
   const audioUrl = `/audio/${props.level}/${props.topicId}/${props.fileName}.mp3`
@@ -73,7 +71,7 @@ onUnmounted(() => {
 }
 
 .audio__btn {
-  width: 44px;
-  height: 44px;
+  width: 35px;
+  height: 35px;
 }
 </style>
