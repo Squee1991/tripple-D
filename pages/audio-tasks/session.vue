@@ -287,7 +287,7 @@ watch(currentIndex, stopAllAudio)
 <style scoped>
 .quiz-app {
   min-height: 100vh;
-  padding: 15px 8px;
+  padding: 8px;
   font-family: 'Nunito', sans-serif;
   color: #2f3542;
 }
@@ -302,7 +302,7 @@ watch(currentIndex, stopAllAudio)
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
 }
 
 .quest-card-instruction-wrapper {
@@ -319,7 +319,7 @@ watch(currentIndex, stopAllAudio)
   font-weight: 900;
   cursor: pointer;
   display: flex;
-  padding: 4px;
+  padding: 1px;
   align-items: center;
   justify-content: center;
 }
@@ -332,7 +332,7 @@ watch(currentIndex, stopAllAudio)
 .progress-bar {
   flex-grow: 1;
   position: relative;
-  height: 30px;
+  height: 26px;
   background: #ffffff;
   border-radius: 12px;
   border: 2px solid #2f3542;
@@ -368,8 +368,8 @@ watch(currentIndex, stopAllAudio)
   border: 2px solid #2f3542;
   border-radius: 20px;
   box-shadow: 4px 4px 0px #2f3542;
-  padding: 12px;
-  height: calc(100vh - 80px);
+  padding: 7px;
+  height: calc(100vh - 53px);
 }
 
 .quest-card-audio {
@@ -377,8 +377,8 @@ watch(currentIndex, stopAllAudio)
   background: #fdfdfd;
   border: 2px dashed #2f3542;
   border-radius: 16px;
-  padding: 12px;
-  margin-bottom: 10px;
+  padding: 5px;
+  margin-bottom: 5px;
   text-align: center;
 }
 
@@ -389,8 +389,8 @@ watch(currentIndex, stopAllAudio)
 
 .quest-card-mega-play {
   background: #70a1ff !important;
-  width: 55px !important;
-  height: 55px !important;
+  width: 50px !important;
+  height: 42px !important;
   border-radius: 50% !important;
   border: 2px solid #2f3542 !important;
   box-shadow: 3px 3px 0px #2f3542 !important;
@@ -400,7 +400,7 @@ watch(currentIndex, stopAllAudio)
 .quest-card-options {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 5px;
   margin-bottom: 10px;
 }
 
@@ -426,7 +426,7 @@ watch(currentIndex, stopAllAudio)
   align-items: center;
   justify-content: flex-start;
   text-align: left;
-  padding: 7px 9px;
+  padding: 6px 9px;
   background: #ffffff;
   border: 2px solid #2f3542;
   border-radius: 14px;
@@ -482,8 +482,8 @@ watch(currentIndex, stopAllAudio)
 
 .quest-feedback {
   text-align: center;
-  margin-bottom: 10px;
-  padding: 4px;
+  margin-bottom: 7px;
+  padding: 3px;
   border-radius: 12px;
   border: 4px dashed #2f3542;
 }
@@ -505,16 +505,16 @@ watch(currentIndex, stopAllAudio)
 }
 
 .chat-flow {
-  margin-top: 8px;
+  margin-top: 4px;
   display: flex;
   flex-direction: column;
   gap: 7px;
 }
 
 .chat-bubble {
-  padding: 8px 12px;
-  border-radius: 16px;
-  max-width: 85%;
+  padding: 4px 6px;
+  border-radius: 10px;
+  max-width: 95%;
   border: 2px solid #2f3542;
   font-size: 13px;
   font-weight: 700;
@@ -523,18 +523,20 @@ watch(currentIndex, stopAllAudio)
 .chat-bubble-male {
   align-self: flex-start;
   background: #ffffff;
+  text-align: start;
   box-shadow: 2px 2px 0px #2f3542;
 }
 
 .chat-bubble-female {
   align-self: flex-end;
+  text-align: start;
   background: #dff9fb;
   box-shadow: -2px 2px 0px #2f3542;
 }
 
 .quiz-btn {
   width: 100%;
-  padding: 12px;
+  padding: 8px;
   border-radius: 14px;
   border: 2px solid #2f3542;
   font-weight: 900;
@@ -571,10 +573,18 @@ watch(currentIndex, stopAllAudio)
 
 .quiz-btn-skip {
   background: #ffffff;
-  margin-top: 10px;
   height: 40px;
   padding: 5px;
   font-size: 0.8rem;
+}
+
+.quest-card-footer {
+  display: flex;
+  gap: 10px;
+}
+
+.quest-card-actions {
+  width: 100%;
 }
 
 .modal-overlay {
