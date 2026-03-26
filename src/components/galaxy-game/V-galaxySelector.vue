@@ -57,16 +57,16 @@
 
 <script setup>
 import {ref, onMounted, computed} from 'vue'
-import {useGalaxyStore} from '../../store/galaxyStore.js'
+import {useGalaxyStore} from '../../../store/galaxyStore.js'
 
-import ConstellationOne from '../../assets/images/constellation/constellation-1.svg'
-import ConstellationTwo from '../../assets/images/constellation/constellation-2.svg'
-import ConstellationThree from '../../assets/images/constellation/constellation-3.svg'
-import ConstellationFour from '../../assets/images/constellation/constellation-4.svg'
-import ConstellationFive from '../../assets/images/constellation/constellation-5.svg'
-import ConstellationSix from '../../assets/images/constellation/constellation-6.svg'
-import ConstellationSeven from '../../assets/images/constellation/constellation-7.svg'
-import ConstellationEight from '../../assets/images/constellation/constellation-8.svg'
+import ConstellationOne from 'assets/images/constellation/constellation-1.svg'
+import ConstellationTwo from 'assets/images/constellation/constellation-2.svg'
+import ConstellationThree from 'assets/images/constellation/constellation-3.svg'
+import ConstellationFour from 'assets/images/constellation/constellation-4.svg'
+import ConstellationFive from 'assets/images/constellation/constellation-5.svg'
+import ConstellationSix from 'assets/images/constellation/constellation-6.svg'
+import ConstellationSeven from 'assets/images/constellation/constellation-7.svg'
+import ConstellationEight from 'assets/images/constellation/constellation-8.svg'
 
 const emit = defineEmits(['back', 'select'])
 const store = useGalaxyStore()
@@ -211,11 +211,13 @@ const startLevel = () => {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 200px;
+  transform: translate(-50%, -50%);
   transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .galaxy-anchor:hover {
-  transform: scale(1.15) rotate(3deg);
+  transform: translate(-50%, -50%) scale(1.15) rotate(3deg);
   z-index: 100;
 }
 
@@ -295,7 +297,6 @@ const startLevel = () => {
   overflow: hidden;
 }
 
-/* ТОНКАЯ КНОПКА ЗАКРЫТИЯ */
 .close-window {
   position: absolute;
   top: 12px;
@@ -315,9 +316,10 @@ const startLevel = () => {
   z-index: 10;
 }
 
-.close-window:hover { background: #e2e2e2; }
+.close-window:hover {
+  background: #e2e2e2;
+}
 
-/* ШАПКА */
 .window-header {
   background: #ffffff;
   display: flex;
@@ -355,7 +357,6 @@ const startLevel = () => {
   margin-bottom: 4px;
 }
 
-/* КОНТЕНТ */
 .mission-briefing {
   padding: 0 32px 32px;
   text-align: center;
@@ -368,7 +369,6 @@ const startLevel = () => {
   line-height: 1.5;
 }
 
-/* ЛАКОНИЧНАЯ КНОПКА */
 .big-btn {
   width: 100%;
   padding: 14px;
@@ -382,57 +382,63 @@ const startLevel = () => {
   transition: background 0.2s, transform 0.1s;
 }
 
-.big-btn:hover { background: #1976d2; }
-.big-btn:active { transform: scale(0.98); }
+.big-btn:hover {
+  background: #1976d2;
+}
 
-/* ПЛАВНОЕ ПОЯВЛЕНИЕ */
+.big-btn:active {
+  transform: scale(0.98);
+}
+
 .pop-window-enter-active {
   transition: all 0.3s ease-out;
 }
+
 .pop-window-enter-from {
   opacity: 0;
   transform: translateY(10px) scale(0.95);
 }
 
 .pos-1 {
-  top: 15%;
-  left: 15%;
+  top: 18%;
+  left: 16%;
 }
 
 .pos-2 {
-  top: 10%;
-  left: 45%;
+  top: 18%;
+  left: 50%;
 }
 
 .pos-3 {
   top: 18%;
-  left: 75%;
+  left: 84%;
 }
 
 .pos-4 {
   top: 48%;
-  left: 10%;
+  left: 33%;
 }
 
 .pos-5 {
-  top: 42%;
-  left: 42%;
+  top: 48%;
+  left: 67%;
 }
 
 .pos-6 {
-  top: 48%;
-  left: 78%;
+  top: 78%;
+  left: 16%;
 }
 
 .pos-7 {
-  top: 75%;
-  left: 25%;
+  top: 78%;
+  left: 50%;
 }
 
 .pos-8 {
-  top: 72%;
-  left: 60%;
+  top: 78%;
+  left: 84%;
 }
+
 
 .exit-portal {
   display: flex;
@@ -462,7 +468,6 @@ const startLevel = () => {
   box-shadow: 0 0 15px rgba(156, 39, 176, 0.4);
 }
 
-/* ЭФФЕКТ ЗАКРУЧИВАНИЯ */
 .swirl {
   position: absolute;
   inset: -50%;
@@ -477,7 +482,6 @@ const startLevel = () => {
   filter: blur(5px);
 }
 
-/* ГОРИЗОНТ СОБЫТИЙ */
 .event-horizon {
   position: absolute;
   inset: 15%;
@@ -497,16 +501,12 @@ const startLevel = () => {
 }
 
 @keyframes rotatePortal {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.top-bar {
-  display: flex;
-  justify-content: space-between;
-  padding: 30px 50px;
-  position: relative;
-  z-index: 10;
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @media (max-width: 768px) {
@@ -534,7 +534,10 @@ const startLevel = () => {
     align-items: center;
   }
 
-  /* 3. Оптимизируем размеры для тача */
+  .galaxy-anchor:hover {
+    transform: scale(1.05) rotate(3deg) !important;
+  }
+
   .galaxy-svg-toon {
     width: 90px !important;
     height: 90px !important;
@@ -544,15 +547,14 @@ const startLevel = () => {
     font-size: 0.9rem !important;
     text-align: center;
     margin-top: 10px;
-    white-space: nowrap; /* Чтобы названия не ломались */
+    white-space: nowrap;
   }
 
-  /* 4. Корректируем шапку, чтобы не мешала */
   .top-bar {
-    position: fixed; /* Закрепляем шапку сверху */
+    position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(10, 10, 46, 0.8); /* Полупрозрачный фон при скролле */
+    background: rgba(10, 10, 46, 0.8);
     backdrop-filter: blur(5px);
     padding: 10px 20px;
     z-index: 1000;
@@ -567,5 +569,4 @@ const startLevel = () => {
     height: 40px !important;
   }
 }
-
 </style>
