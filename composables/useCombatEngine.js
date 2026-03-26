@@ -85,7 +85,7 @@ export function useCombatEngine(currentQuestions) {
 		vfxPos.value = { top: y + 'px', left: x + 'px' }
 
 		if (currentQuestion.value && answer === currentQuestion.value.correct) {
-			score.value += 10
+			score.value += 5
 			showSuccessExplosion.value = true
 			if (currentSpeed.value > 3) currentSpeed.value -= 0.2
 			setTimeout(() => { spawnWord() }, 400)

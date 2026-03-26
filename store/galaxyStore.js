@@ -1,14 +1,12 @@
 import { defineStore } from 'pinia'
 import { ref, computed } from 'vue'
 import { doc, getDoc, setDoc, getFirestore } from 'firebase/firestore'
-import { getAuth } from 'firebase/auth' // БЕРЕМ АВТОРИЗАЦИЮ НАПРЯМУЮ
+import { getAuth } from 'firebase/auth'
 import { userAuthStore } from './authStore'
 
 export const useGalaxyStore = defineStore('galaxy', () => {
 	const db = getFirestore()
 	const authStore = userAuthStore()
-
-	// --- STATE ---
 	const captainName = ref('ПИЛОТ-01')
 	const balance = ref(0)
 	const highScores = ref({})
@@ -19,14 +17,13 @@ export const useGalaxyStore = defineStore('galaxy', () => {
 	const activeGalaxyId = ref(null)
 	const galaxies = ref([])
 
-	// --- ФИЗИКА ---
 	const speedMultiplier = computed(() => {
 		let extra = 0
 		if (score.value >= 10) extra += 0.1
-		if (score.value >= 20) extra += 0.2
-		if (score.value >= 30) extra += 0.3
-		if (score.value >= 40) extra += 0.5
-		if (score.value >= 60) extra += 0.8
+		if (score.value >= 50) extra += 0.2
+		if (score.value >= 100) extra += 0.4
+		if (score.value >= 150) extra += 0.6
+		if (score.value >= 200) extra += 1
 		return extra
 	})
 
@@ -35,7 +32,6 @@ export const useGalaxyStore = defineStore('galaxy', () => {
 		return baseDuration / (1 + speedMultiplier.value)
 	})
 
-	// --- ЖЕЛЕЗОБЕТОННОЕ ПОЛУЧЕНИЕ UID ---
 	const getSafeUid = () => {
 		const user = getAuth().currentUser
 		if (user) return user.uid
@@ -43,7 +39,6 @@ export const useGalaxyStore = defineStore('galaxy', () => {
 		return null
 	}
 
-	// --- ИНИЦИАЛИЗАЦИЯ (Загружает если есть, НЕ создает) ---
 	const initUser = async () => {
 		const uid = getSafeUid()
 		if (!uid) {
@@ -71,7 +66,6 @@ export const useGalaxyStore = defineStore('galaxy', () => {
 		}
 	}
 
-	// --- УНИВЕРСАЛЬНАЯ ФУНКЦИЯ ЗАПИСИ ---
 	const sync = async (payload) => {
 		const uid = getSafeUid()
 		if (!uid) {
@@ -80,7 +74,6 @@ export const useGalaxyStore = defineStore('galaxy', () => {
 		}
 		try {
 			const userDoc = doc(db, 'users', uid, 'game_data', 'galaxy_stats')
-			// merge: true САМ СОЗДАСТ ДОКУМЕНТ, если его нет
 			await setDoc(userDoc, payload, { merge: true })
 			console.log("☁️ [Galaxy] Успешно сохранено в базу:", payload)
 		} catch (e) {
@@ -88,13 +81,11 @@ export const useGalaxyStore = defineStore('galaxy', () => {
 		}
 	}
 
-	// --- ГЕЙМПЛЕЙ ---
 	const setMission = (galaxyId) => {
 		activeGalaxyId.value = galaxyId
 		score.value = 0
 	}
 
-	// --- СОЗДАНИЕ И ОБНОВЛЕНИЕ РЕКОРДА ---
 	const updateHighScore = async (galaxyId, finalScore) => {
 		const uid = getSafeUid()
 
@@ -111,8 +102,6 @@ export const useGalaxyStore = defineStore('galaxy', () => {
 
 		if (finalScore > currentBest) {
 			highScores.value[galaxyId] = finalScore
-
-			// Отправляем весь объект разом. Если документа нет — Firebase его создаст.
 			await sync({
 				captainName: authStore.name || 'ПИЛОТ-01',
 				balance: balance.value,
