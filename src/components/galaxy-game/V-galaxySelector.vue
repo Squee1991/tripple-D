@@ -6,13 +6,9 @@
     </div>
     <div class="top-bar">
       <div class="exit-portal" @click="$emit('back')">
-        <div class="black-hole">
-          <div class="swirl"></div>
-          <div class="event-horizon"></div>
-        </div>
         <span class="exit-text">НАЗАД</span>
       </div>
-      <h1 class="main-title-toon">ЗВЕЗДНЫЙ ПУТЬ</h1>
+<!--      <h1 class="main-title-toon">ЗВЕЗДНЫЙ ПУТЬ</h1>-->
       <div class="pilot-info-toon"></div>
     </div>
     <div class="constellations-map">
@@ -32,22 +28,16 @@
       <div v-if="activeGalaxy" class="modal-overlay" @click.self="activeGalaxy = null">
         <div class="toon-window">
           <button class="close-window" @click="activeGalaxy = null">✖</button>
-
           <div class="window-header">
             <div class="icon-frame">
               <img :src="activeGalaxy.svg" alt="" class="window-icon"/>
             </div>
             <div class="header-text">
-              <p class="type-badge">{{ activeGalaxy.type.toUpperCase() }}</p>
               <h2>{{ activeGalaxy.name }}</h2>
             </div>
           </div>
-
           <div class="mission-briefing">
-            <p class="mission-desc">{{ activeGalaxy.desc }}</p>
-            <button class="btn-go big-btn" @click="startLevel">
-              Начать 🚀
-            </button>
+            <button class="btn-go big-btn" @click="startLevel">Начать</button>
           </div>
         </div>
       </div>
@@ -104,11 +94,10 @@ const startLevel = () => {
 </script>
 
 <style scoped>
-
 .toon-navigation {
   position: fixed;
   inset: 0;
-  background: #0a0a2e;
+  background: linear-gradient(180deg, #1b0c3b 0%, #0d47a1 100%);
   overflow: hidden;
   font-family: 'Arial Rounded MT Bold', 'Helvetica', sans-serif;
   z-index: 5000;
@@ -119,76 +108,62 @@ const startLevel = () => {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background-image: radial-gradient(2px 2px at 20px 30px, #eee, rgba(0, 0, 0, 0)),
-  radial-gradient(2px 2px at 40px 70px, #fff, rgba(0, 0, 0, 0)),
-  radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0, 0, 0, 0));
-  background-size: 200px 200px;
-  animation: starsTwinkle 4s infinite linear;
+  background-image: radial-gradient(4px 4px at 20px 30px, #fff, rgba(0, 0, 0, 0)),
+  radial-gradient(5px 5px at 80px 70px, #ffeb3b, rgba(0, 0, 0, 0)),
+  radial-gradient(3px 3px at 50px 160px, #fff, rgba(0, 0, 0, 0)),
+  radial-gradient(6px 6px at 120px 220px, #00d2ff, rgba(0, 0, 0, 0));
+  background-size: 250px 250px;
+  animation: starsTwinkle 3s infinite alternate;
 }
 
 @keyframes starsTwinkle {
-  0%, 100% {
-    opacity: 0.8;
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
   }
-  50% {
+  100% {
+    transform: scale(1.02);
     opacity: 1;
   }
 }
 
 .nebula-purple {
   position: absolute;
-  top: -10%;
+  top: -15%;
   left: -10%;
-  width: 60%;
-  height: 60%;
-  background: radial-gradient(circle, rgba(156, 39, 176, 0.4), transparent 70%);
-  filter: blur(80px);
+  width: 70%;
+  height: 70%;
+  background: radial-gradient(circle, rgba(255, 64, 129, 0.5), transparent 60%);
+  filter: blur(60px);
 }
 
 .nebula-blue {
   position: absolute;
-  bottom: -10%;
+  bottom: -15%;
   right: -10%;
-  width: 60%;
-  height: 60%;
-  background: radial-gradient(circle, rgba(3, 169, 244, 0.4), transparent 70%);
-  filter: blur(80px);
+  width: 70%;
+  height: 70%;
+  background: radial-gradient(circle, rgba(0, 229, 255, 0.5), transparent 60%);
+  filter: blur(60px);
 }
 
 .top-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 50px;
+  padding: 20px 20px;
   position: relative;
   z-index: 10;
 }
 
 .main-title-toon {
   color: #ffeb3b;
-  font-size: 2.5rem;
+  font-size: 3rem;
   text-transform: uppercase;
-  -webkit-text-stroke: 3px #adb1a8;
-  filter: drop-shadow(3px 3px 0px #e65100);
-  transform: rotate(-2deg);
-  letter-spacing: 4px;
-}
-
-.btn-exit-toon {
-  background: #ff5252;
-  border: 4px solid #000;
-  border-radius: 18px;
-  color: #fff;
-  font-weight: 900;
-  padding: 12px 25px;
-  cursor: pointer;
-  box-shadow: 0 6px 0 #000;
-  transition: 0.1s;
-}
-
-.btn-exit-toon:active {
-  transform: translateY(4px);
-  box-shadow: 0 2px 0 #000;
+  -webkit-text-stroke: 2px #000;
+  text-shadow: 1px 1px 0 #ffffff;
+  transform: rotate(-3deg);
+  letter-spacing: 2px;
 }
 
 .pilot-info-toon {
@@ -196,7 +171,6 @@ const startLevel = () => {
   border-radius: 50px;
   color: #fff;
   font-weight: 900;
-  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
 }
 
 .constellations-map {
@@ -217,22 +191,25 @@ const startLevel = () => {
 }
 
 .galaxy-anchor:hover {
-  transform: translate(-50%, -50%) scale(1.15) rotate(3deg);
+  transform: translate(-50%, -50%) scale(1.15);
   z-index: 100;
 }
 
-.galaxy-icon-wrapper {
-  position: relative;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
-  padding: 20px;
-  border-radius: 50%;
-}
 
 .galaxy-svg-toon {
   width: 130px;
   height: 130px;
-  filter: drop-shadow(0 0 15px rgba(0, 210, 255, 0.8));
-  animation: floatGalaxy 6s infinite ease-in-out;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+  animation: floatGalaxy 4s infinite ease-in-out;
+}
+
+.galaxy-icon-wrapper {
+  transition: .4s;
+}
+
+.galaxy-anchor:hover .galaxy-icon-wrapper {
+  transform: scale(1.1);
+  transition: .4s;
 }
 
 @keyframes floatGalaxy {
@@ -240,58 +217,29 @@ const startLevel = () => {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
   }
-}
-
-.click-me {
-  position: absolute;
-  top: -10px;
-  background: #ffeb3b;
-  border: 3px solid #000;
-  padding: 4px 12px;
-  border-radius: 12px;
-  font-size: 0.9rem;
-  color: #000;
-  font-weight: 900;
-  box-shadow: 4px 4px 0 #000;
-  animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0) translateX(-50%);
-  }
-  40% {
-    transform: translateY(-10px) translateX(-50%);
-  }
-}
-
-.galaxy-label-toon {
-  color: #fff;
-  font-size: 1.5rem;
-  -webkit-text-stroke: 1.5px #cebebe;
-  text-shadow: 4px 4px 0 #2196f3;
 }
 
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(10, 10, 46, 0.85);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 6000;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(8px);
 }
 
 .toon-window {
-  background: #ffffff;
-  border-radius: 16px;
+  background: #fff;
+  border: 6px solid #000;
+  border-radius: 24px;
   width: 90%;
-  max-width: 400px;
+  max-width: 360px;
   position: relative;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 1);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -299,40 +247,48 @@ const startLevel = () => {
 
 .close-window {
   position: absolute;
-  top: 12px;
-  right: 12px;
-  width: 32px;
-  height: 32px;
-  background: #f1f1f1;
-  border: none;
+  top: 5px;
+  right: 5px;
+  width: 45px;
+  height: 45px;
+  background: #ff5252;
+  border: 4px solid #000;
   border-radius: 50%;
-  color: #333;
-  font-size: 1.1rem;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 900;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: background 0.2s;
-  z-index: 10;
+  box-shadow: 0 4px 0 #000;
+  z-index: 20;
 }
 
-.close-window:hover {
-  background: #e2e2e2;
+.close-window:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 #000;
 }
 
 .window-header {
-  background: #ffffff;
+  background: #593bff;
+  border-bottom: 6px solid #000;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 32px 24px 16px;
+  padding: 30px 24px 20px;
   text-align: center;
 }
 
 .icon-frame {
-  width: 64px;
-  height: 64px;
-  margin-bottom: 16px;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+  background: #fff;
+  border: 4px solid #000;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 4px 4px 0 #000;
 }
 
 .window-icon {
@@ -341,62 +297,94 @@ const startLevel = () => {
 }
 
 .header-text h2 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin: 0;
-  color: #111;
-  font-weight: 600;
-  letter-spacing: -0.5px;
-}
-
-.type-badge {
-  color: #666;
-  font-size: 0.75rem;
-  font-weight: 500;
+  color: #000;
+  font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 4px;
+  -webkit-text-stroke: 1px #fff;
 }
 
 .mission-briefing {
-  padding: 0 32px 32px;
+  padding: 20px;
   text-align: center;
+  background: #f8f9fa;
 }
 
 .mission-desc {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 24px;
-  line-height: 1.5;
+  font-size: 1.2rem;
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 25px;
+  line-height: 1.4;
 }
 
 .big-btn {
   width: 100%;
-  padding: 14px;
-  font-size: 1rem;
-  background: #2196f3;
+  padding: 16px;
+  font-size: 1.5rem;
+  background: #4caf50;
   color: #fff;
-  border: none;
-  border-radius: 8px;
+  border: 4px solid #000;
+  border-radius: 16px;
   cursor: pointer;
-  font-weight: 600;
-  transition: background 0.2s, transform 0.1s;
-}
-
-.big-btn:hover {
-  background: #1976d2;
+  font-weight: 900;
+  text-transform: uppercase;
+  box-shadow: 0 6px 0 #1b5e20;
+  transition: transform 0.1s;
 }
 
 .big-btn:active {
-  transform: scale(0.98);
+  transform: translateY(6px);
+  box-shadow: 0 0 0 #1b5e20;
 }
 
 .pop-window-enter-active {
-  transition: all 0.3s ease-out;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .pop-window-enter-from {
   opacity: 0;
-  transform: translateY(10px) scale(0.95);
+  transform: scale(0.5) translateY(50px);
+}
+
+.exit-portal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 100;
+}
+
+.exit-portal:hover {
+  transform: scale(1.1);
+}
+
+.event-horizon {
+  position: absolute;
+  inset: 25%;
+  background: #000;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.exit-text {
+  color: #fff;
+  font-size: 1rem;
+  background: #534bff;
+  font-weight: 900;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+@keyframes rotatePortal {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .pos-1 {
@@ -439,76 +427,6 @@ const startLevel = () => {
   left: 84%;
 }
 
-
-.exit-portal {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  z-index: 100;
-}
-
-.exit-portal:hover {
-  transform: scale(1.1);
-}
-
-.exit-portal:hover .black-hole {
-  box-shadow: 0 0 30px rgba(156, 39, 176, 0.8);
-}
-
-.black-hole {
-  position: relative;
-  width: 60px;
-  height: 60px;
-  background: #000;
-  border-radius: 50%;
-  margin-bottom: 8px;
-  overflow: hidden;
-  box-shadow: 0 0 15px rgba(156, 39, 176, 0.4);
-}
-
-.swirl {
-  position: absolute;
-  inset: -50%;
-  background: conic-gradient(
-      from 0deg,
-      transparent,
-      #6200ea,
-      #aa00ff,
-      transparent 60%
-  );
-  animation: rotatePortal 3s linear infinite;
-  filter: blur(5px);
-}
-
-.event-horizon {
-  position: absolute;
-  inset: 15%;
-  background: #000;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  z-index: 2;
-}
-
-.exit-text {
-  color: #fff;
-  font-size: 0.8rem;
-  font-weight: 900;
-  letter-spacing: 2px;
-  text-shadow: 0 0 10px #6200ea;
-  opacity: 0.7;
-}
-
-@keyframes rotatePortal {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 @media (max-width: 768px) {
   .constellations-map {
     position: relative;
@@ -519,7 +437,7 @@ const startLevel = () => {
     justify-content: center;
     align-items: center;
     gap: 40px 20px;
-    padding: 100px 20px 50px;
+    padding: 120px 20px 50px;
     overflow-y: auto;
   }
 
@@ -535,7 +453,7 @@ const startLevel = () => {
   }
 
   .galaxy-anchor:hover {
-    transform: scale(1.05) rotate(3deg) !important;
+    transform: scale(1.01) !important;
   }
 
   .galaxy-svg-toon {
@@ -554,9 +472,6 @@ const startLevel = () => {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(10, 10, 46, 0.8);
-    backdrop-filter: blur(5px);
-    padding: 10px 20px;
     z-index: 1000;
   }
 
@@ -565,8 +480,8 @@ const startLevel = () => {
   }
 
   .black-hole {
-    width: 40px !important;
-    height: 40px !important;
+    width: 50px !important;
+    height: 50px !important;
   }
 }
 </style>
