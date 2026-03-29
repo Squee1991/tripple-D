@@ -3,38 +3,55 @@
     <div class="space-environment">
       <div class="nebula-cloud blue"></div>
       <div class="nebula-cloud purple"></div>
-      <div v-for="n in 15" :key="n" class="floating-toon-star" :style="getRandomPos(n)">
+      <div v-for="n in 12" :key="n" class="floating-toon-star" :style="getRandomPos(n)">
         {{ n % 2 === 0 ? '⭐' : '✨' }}
       </div>
+      <img v-for="astro in astronauts"
+          :key="'astro' + astro.id"
+          :src="Astronaut"
+          class="floating-astronaut"
+          :style="{
+                top: astro.top + '%',
+                left: astro.left + '%',
+                width: astro.size + 'px',
+                animationDuration: astro.duration + 's',
+                animationDelay: astro.delay + 's'
+                 }"
+          alt="astronaut"
+      />
     </div>
-    <div class="open-menu-layout" v-if="!showShop && !showSettings && !showGalaxySelector && !isTransitioning">
+    <div class="open-menu-layout" v-if="currentScreen === 'menu' && !isTransitioning">
       <div class="title-section">
         <h1 class="main-title-toon">
-          <span class="word-1">ГАЛАКТИКА</span>
-          <span class="word-2">АРТИКЛЕЙ</span>
+          <span class="word-1">ВСЕЛЕННАЯ</span>
+          <span class="word-2">НЕМЕЦКОГО</span>
         </h1>
       </div>
       <div class="controls-section">
         <button class="menu-btn-toon play" @click="toggleScreen('galaxies')">
-          <span class="icon">🚀</span> В БОЙ!
+          <span class="icon">🚀</span> НАЧАТЬ
         </button>
         <div class="secondary-btns">
-          <button class="menu-btn-toon settings" @click="toggleScreen('settings')">Профиль</button>
-          <button class="menu-btn-toon hangar" @click="toggleScreen('shop')">АНГАР</button>
-          <button class="menu-btn-toon rank-btn" @click="toggleScreen('rank')">Рейтинг</button>
-          <button class="menu-btn-toon exit" @click="handleExit">ВЫХОД</button>
+          <button
+              v-for="btn in menuButtons"
+              :key="btn.id"
+              class="menu-btn-toon"
+              :class="btn.class"
+              @click="btn.action ? btn.action() : toggleScreen(btn.target)"
+          >
+            {{ btn.label }}
+          </button>
         </div>
       </div>
     </div>
     <div class="sub-screen-container">
-      <VGalaxySelector
-          v-if="showGalaxySelector"
+      <component
+          v-if="currentScreen !== 'menu'"
+          :is="componentViews[currentScreen]"
+          @close="toggleScreen('menu')"
           @back="toggleScreen('menu')"
           @select="startMission"
       />
-      <VRankGalaxy v-if="showRank" @close="toggleScreen('menu')"/>
-      <VGameCabinet v-if="showSettings" @close="toggleScreen('menu')"/>
-      <VGameHangar v-if="showShop" @close="toggleScreen('menu')"/>
     </div>
     <Transition name="warp-flash">
       <div class="warp-overlay" v-if="isTransitioning"></div>
@@ -43,10 +60,11 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import { useRouter } from "vue-router"
 import { useGalaxyStore } from '../../store/galaxyStore.js'
 
+import Astronaut from '../../assets/images/astronaut.svg'
 import VGameCabinet from '../../src/components/galaxy-game/V-gameCabinet.vue'
 import VGameHangar from '../../src/components/galaxy-game/V-gameHangar.vue'
 import VGalaxySelector from '../../src/components/galaxy-game/V-galaxySelector.vue'
@@ -55,12 +73,22 @@ import VRankGalaxy from "../../src/components/galaxy-game/V-rank-galaxy.vue";
 const router = useRouter()
 const store = useGalaxyStore()
 const { locale } = useI18n()
-
-const showSettings = ref(false)
-const showShop = ref(false)
-const showRank = ref(false)
-const showGalaxySelector = ref(false)
+const currentScreen = ref('menu')
 const isTransitioning = ref(false)
+const astronauts = ref([])
+const componentViews = {
+  settings: VGameCabinet,
+  shop: VGameHangar,
+  galaxies: VGalaxySelector,
+  rank: VRankGalaxy,
+}
+
+const menuButtons = [
+  { id: 'profile', class: 'settings', label: 'Профиль', target: 'settings' },
+  { id: 'shop', class: 'hangar', label: 'АНГАР', target: 'shop' },
+  { id: 'rank', class: 'rank-btn', label: 'Рейтинг', target: 'rank' },
+  { id: 'exit', class: 'exit', label: 'ВЫХОД', action: () => handleExit() }
+]
 
 const getRandomPos = (n) => ({
   top: Math.random() * 100 + '%',
@@ -69,32 +97,50 @@ const getRandomPos = (n) => ({
   fontSize: (Math.random() * 1 + 1) + 'rem'
 })
 
+const generateAstronauts = (count = 3) => {
+  const newAstronauts = []
+  const minDistance = 15
+
+  for (let i = 0; i < count; i++) {
+    let attempts = 0
+    let positionFound = false
+    let top, left
+    while (!positionFound && attempts < 50) {
+      top = Math.random() * 80 + 10
+      left = Math.random() * 80 + 10
+      let hasCollision = newAstronauts.some(astro => {
+        const distance = Math.hypot(astro.left - left, astro.top - top)
+        return distance < minDistance
+      })
+      if (!hasCollision) {
+        positionFound = true
+      }
+      attempts++
+    }
+    const size = Math.floor(Math.random() * 80) + 40
+    const duration = Math.random() * 10 + 15
+    const delay = -(i * 2)
+    newAstronauts.push({ id: i, top, left, size, duration, delay })
+  }
+
+  astronauts.value = newAstronauts
+}
+
 const handleExit = () => router.push(`/${locale.value}`)
+
 const toggleScreen = (target) => {
-  // Добавляем 'rank' в список тех, кому нужна вспышка (Warp)
   const needsWarp = ['shop', 'galaxies', 'rank'].includes(target) ||
-      (target === 'menu' && (showShop.value || showGalaxySelector.value || showRank.value))
+      (target === 'menu' && ['shop', 'galaxies', 'rank'].includes(currentScreen.value))
 
   if (needsWarp) {
     isTransitioning.value = true
     setTimeout(() => {
-      resetScreens()
-      if (target === 'shop') showShop.value = true
-      if (target === 'galaxies') showGalaxySelector.value = true
-      if (target === 'rank') showRank.value = true // Включаем рейтинг
+      currentScreen.value = target
       setTimeout(() => isTransitioning.value = false, 300)
     }, 400)
   } else {
-    resetScreens()
-    if (target === 'settings') showSettings.value = true
+    currentScreen.value = target
   }
-}
-
-const resetScreens = () => {
-  showSettings.value = false
-  showShop.value = false
-  showGalaxySelector.value = false
-  showRank.value = false
 }
 
 const startMission = (sectorId) => {
@@ -104,6 +150,9 @@ const startMission = (sectorId) => {
   })
 }
 
+onMounted(() => {
+  generateAstronauts()
+})
 </script>
 
 <style scoped>
@@ -191,15 +240,15 @@ const startMission = (sectorId) => {
 
 .word-1 {
   color: #fff;
-  font-size: 2.2rem;
-  -webkit-text-stroke: 2px #000;
+  font-size: 2.1rem;
+  -webkit-text-stroke: 2px #f3f0f0;
   text-shadow: 4px 4px 0 #3a7bd5;
 }
 
 .word-2 {
   color: #ffeb3b;
-  font-size: 3.4rem;
-  -webkit-text-stroke: 3px #000;
+  font-size: 3.2rem;
+  -webkit-text-stroke: 3px #eae5e5;
   text-shadow: 5px 5px 0 #e67e22;
 }
 
@@ -280,6 +329,26 @@ const startMission = (sectorId) => {
   inset: 0;
   background: #fff;
   z-index: 5000;
+}
+
+.floating-astronaut {
+  position: absolute;
+  animation: floatAstro infinite ease-in-out;
+  pointer-events: none; /* чтобы они не перекрывали клики по кнопкам */
+  opacity: 0.8;
+  z-index: 1; /* держим их на фоне, но над туманностями */
+}
+
+@keyframes floatAstro {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(-10deg);
+  }
+  33% {
+    transform: translateY(-30px) translateX(20px) rotate(15deg);
+  }
+  66% {
+    transform: translateY(20px) translateX(-15px) rotate(5deg);
+  }
 }
 
 .warp-flash-enter-active, .warp-flash-leave-active {

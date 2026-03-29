@@ -188,54 +188,6 @@ const modalConfig = computed(() => {
   }
 })
 
-const onboardingOptions = {
-  skippable: true,
-  labels: {
-    previousButton: 'Назад',
-    nextButton: 'Далее',
-    finishButton: 'Завершить',
-    skipButton: 'Пропустить'
-  }
-}
-
-const onboardingSteps = [
-  {
-    attachTo: {
-      element: '#learn',
-      padding: 31
-    },
-    content: {
-      title: "Обучение",
-      description: "Грамматика, фразы, артикли, времена и практика — всё, чтобы уверенно прокачать   немецкий.",
-      image: HD
-    }
-  },
-  {
-    attachTo: {element: '#duel'},
-    content: {
-      title: "Игры",
-      description: "Грамматика, фразы, артикли, времена и практика — всё, чтобы уверенно прокачать немецкий.",
-      image: HD
-    }
-  },
-  {
-    attachTo: {element: '#test'},
-    content: {
-      title: "Тесты",
-      description: "Проверь уровень от А1 до В2: говорение,  грамматика, письмо и понимание речи.",
-      image: HD
-    }
-  },
-  {
-    attachTo: {element: '#events'},
-    content: {
-      title: "Ивенты",
-      description: "Сезонные задания, коллекции слов, награды и ограниченные по времени челленджи.",
-      image: HD
-    }
-  }
-]
-
 const {start , finish} = useVOnboarding(wrapperRef)
 
 const menuItems = computed(() => {
@@ -301,7 +253,7 @@ const menuItems = computed(() => {
             id: 'duel',
             valueKey: 'nav.gameMode',
             children: [
-              {id: 'fight', url: '/games', valueKey: 'Галактика немецкого'},
+              {id: 'fight', url: '/games', valueKey: 'Вселенная немецкого'},
               {id: 'duel-pvp', valueKey: 'sub.pvp', action: openDevModal},
               {id: 'wordDuel', url: '/sentence-duel', valueKey: 'sub.wordDuel'},
               {id: 'quests', url: '/recipes', valueKey: 'sub.quests'},

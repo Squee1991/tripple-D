@@ -210,6 +210,13 @@ onMounted(() => {
   to { transform: translateY(50%); }
 }
 
+.ammo-selector {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+}
+
 .sector-info {
   position: absolute;
   top: 20px;
@@ -324,7 +331,8 @@ onMounted(() => {
   transition: 0.1s;
   min-width: 100px;
   height: 60px;
-  font-size: 1.1rem;
+  font-size: .9rem;
+  padding: 2px 4px;
 }
 
 .ammo-btn.toon-btn:active:not(:disabled) {
