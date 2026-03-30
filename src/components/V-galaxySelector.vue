@@ -4,7 +4,6 @@
       <div class="nebula-purple"></div>
       <div class="nebula-blue"></div>
     </div>
-
     <div class="top-bar">
       <div class="exit-portal" @click="$emit('back')">
         <div class="black-hole">
@@ -13,7 +12,6 @@
         </div>
         <span class="exit-text">НАЗАД</span>
       </div>
-
       <h1 class="main-title-toon">ЗВЕЗДНЫЙ ПУТЬ</h1>
       <div class="pilot-info-toon"></div>
     </div>
@@ -81,8 +79,7 @@ const iconMap = {
   delta: ConstellationFour,
   epsilon: ConstellationFive,
   zeta: ConstellationSix,
-  eta: ConstellationSeven,
-  theta: ConstellationEight
+  eta: ConstellationSeven
 }
 
 onMounted(async () => {

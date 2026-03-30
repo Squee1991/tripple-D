@@ -9,7 +9,6 @@
       </div>
     </div>
     <div class="open-menu-layout" v-if="!showShop && !showSettings && !showGalaxySelector && !isTransitioning">
-
       <div class="title-section">
         <h1 class="main-title-toon">
           <span class="word-1">ГАЛАКТИКА</span>
@@ -20,14 +19,12 @@
         <button class="menu-btn-toon play" @click="toggleScreen('galaxies')">
           <span class="icon">🚀</span> В БОЙ!
         </button>
-
         <div class="secondary-btns">
           <button class="menu-btn-toon hangar" @click="toggleScreen('shop')">АНГАР</button>
-          <button class="menu-btn-toon settings" @click="toggleScreen('settings')">HUD</button>
+          <button class="menu-btn-toon settings" @click="toggleScreen('settings')">КАБИНА</button>
           <button class="menu-btn-toon exit" @click="handleExit">ВЫХОД</button>
         </div>
       </div>
-
     </div>
     <div class="sub-screen-container">
       <VGalaxySelector
@@ -38,7 +35,6 @@
       <VGameSettings v-if="showSettings" @close="toggleScreen('menu')"/>
       <VGameHangar v-if="showShop" @close="toggleScreen('menu')"/>
     </div>
-
     <Transition name="warp-flash">
       <div class="warp-overlay" v-if="isTransitioning"></div>
     </Transition>
@@ -160,6 +156,7 @@ const startMission = (sectorId) => {
     opacity: 0.8;
   }
 }
+
 /* ВЕРСТКА БЕЗ РАМКИ */
 .open-menu-layout {
   position: relative;
@@ -181,17 +178,18 @@ const startMission = (sectorId) => {
 
 .word-1 {
   color: #fff;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   -webkit-text-stroke: 2px #000;
   text-shadow: 4px 4px 0 #3a7bd5;
 }
 
 .word-2 {
   color: #ffeb3b;
-  font-size: 3.5rem;
+  font-size: 3.7rem;
   -webkit-text-stroke: 3px #000;
   text-shadow: 6px 6px 0 #e67e22;
 }
+
 /* КНОПКИ */
 .controls-section {
   display: flex;
