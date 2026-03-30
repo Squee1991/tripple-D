@@ -56,6 +56,7 @@ const router = useRouter()
 const store = useGalaxyStore()
 const { locale } = useI18n()
 
+
 const showSettings = ref(false)
 const showShop = ref(false)
 const showRank = ref(false)
