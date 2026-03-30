@@ -191,7 +191,7 @@ onMounted(() => {
   background: #4facfe;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 20px 10px;
   box-sizing: border-box;
   font-family: 'Arial Rounded MT Bold', 'Arial Black', sans-serif;
   overflow: hidden;
@@ -276,7 +276,7 @@ onMounted(() => {
 }
 
 .filter-bubble {
-  background: #ffeb3b;
+  background: #FFFFFF;
   border: 4px solid #000;
   border-radius: 20px;
   padding: 5px 15px;
@@ -351,8 +351,8 @@ onMounted(() => {
 }
 
 .ship-container {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   margin-right: 10px;
 }
 
@@ -370,7 +370,7 @@ onMounted(() => {
 }
 
 .name-tag {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 900;
   color: #1a1a1a;
   text-transform: uppercase;
@@ -383,7 +383,6 @@ onMounted(() => {
   color: #fff;
   padding: 4px 15px;
   border-radius: 50px;
-  margin-top: 5px;
 }
 
 .score-val {
@@ -454,7 +453,7 @@ onMounted(() => {
   }
 
   .name-tag {
-    font-size: 1rem;
+    font-size: 15px;
   }
 
   .rank-badge {

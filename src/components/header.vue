@@ -6,13 +6,12 @@
       <SignIn v-if="showAuth" @close-auth-form="closeAuth"/>
     </transition>
     <ModalDev
-        v-if="modalConfig"
         :visible="showDevModal"
-        :title="modalConfig.title || ''"
-        :img="modalConfig.img"
-        :text="modalConfig.text || ''"
-        :button="modalConfig.isEvent ? modalConfig.button : null"
         @close="closeDevModal"
+        :title="modalConfig.title"
+        :img="modalConfig.img"
+        :text="modalConfig.text"
+        :button="modalConfig.isEvent ? modalConfig.button : null"
         @button="onDevModalButton"
     />
     <div class="header-container">
@@ -189,54 +188,8 @@ const modalConfig = computed(() => {
   }
 })
 
-const onboardingOptions = {
-  skippable: true,
-  labels: {
-    previousButton: 'Назад',
-    nextButton: 'Далее',
-    finishButton: 'Завершить',
-    skipButton: 'Пропустить'
-  }
-}
-const onboardingSteps = [
-  {
-    attachTo: {
-      element: '#learn',
-      padding: 31
-    },
-    content: {
-      title: "Обучение",
-      description: "Грамматика, фразы, артикли, времена и практика — всё, чтобы уверенно прокачать   немецкий.",
-      image: HD
-    }
-  },
-  {
-    attachTo: {element: '#duel'},
-    content: {
-      title: "Игры",
-      description: "Грамматика, фразы, артикли, времена и практика — всё, чтобы уверенно прокачать немецкий.",
-      image: HD
-    }
-  },
-  {
-    attachTo: {element: '#test'},
-    content: {
-      title: "Тесты",
-      description: "Проверь уровень от А1 до В2: говорение,  грамматика, письмо и понимание речи.",
-      image: HD
-    }
-  },
-  {
-    attachTo: {element: '#events'},
-    content: {
-      title: "Ивенты",
-      description: "Сезонные задания, коллекции слов, награды и ограниченные по времени челленджи.",
-      image: HD
-    }
-  }
-]
-
 const {start , finish} = useVOnboarding(wrapperRef)
+
 const menuItems = computed(() => {
   const items = [
     ...(userAuth.uid
@@ -259,7 +212,6 @@ const menuItems = computed(() => {
                 valueKey: 'sub.verbs',
                 subChildren: [
                   {id: 'verb-theory', url: '/verbs-theory', valueKey: 'underSub.verbsTheory'},
-                  {id: 'verbs', url: '/verb-forms', valueKey: 'underSub.forms'},
                   {id: 'tenses', url: '/tenses', valueKey: 'underSub.verbFirst'},
                   {id: 'modalVerbs', url: '/modal-verbs', valueKey: 'underSub.verbSecond'},
                   {id: 'verb-types', url: '/verb-types', valueKey: 'underSub.verbTypes'}
@@ -292,7 +244,6 @@ const menuItems = computed(() => {
                 ],
               },
               {id: 'description', url: '/description-images' , valueKey: 'Описание картинок'},
-              {id: 'audio', url: '/audio-tasks' , valueKey: 'Аудио задания'},
               {id: 'themen', url: '/thematic-learning', valueKey: 'sub.themen'},
               {id: 'cards', url: '/create-cards', valueKey: 'sub.card'},
               {id: 'idioms', url: '/idioms', valueKey: 'sub.idioms'}
@@ -302,7 +253,7 @@ const menuItems = computed(() => {
             id: 'duel',
             valueKey: 'nav.gameMode',
             children: [
-              {id: 'fight', url: '/games', valueKey: 'Галактика артиклей'},
+              {id: 'fight', url: '/games', valueKey: 'Вселенная немецкого'},
               {id: 'duel-pvp', valueKey: 'sub.pvp', action: openDevModal},
               {id: 'wordDuel', url: '/sentence-duel', valueKey: 'sub.wordDuel'},
               {id: 'quests', url: '/recipes', valueKey: 'sub.quests'},
@@ -599,8 +550,6 @@ onBeforeUnmount(() => {
   position: sticky;
   top: 0;
   z-index: 3;
-  max-width: 1420px;
-  margin: 0 auto;
   background-color: var(--navBg);
   border-bottom: 4px solid var(--borderBottom);
   border-bottom-left-radius: 15px;
