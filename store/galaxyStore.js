@@ -7,7 +7,7 @@ import { userAuthStore } from './authStore'
 export const useGalaxyStore = defineStore('galaxy', () => {
 	const db = getFirestore()
 	const authStore = userAuthStore()
-	const captainName = ref('ПИЛОТ-01')
+	const captainName = ref('Anonymous')
 	const balance = ref(0)
 	const highScores = ref({})
 	const selectedTankId = ref(1)

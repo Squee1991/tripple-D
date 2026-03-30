@@ -6,9 +6,8 @@
     </div>
     <div class="top-bar">
       <div class="exit-portal" @click="$emit('back')">
-        <span class="exit-text">НАЗАД</span>
+        <span class="exit-text">{{ t('galaxyRankTable.back')}}</span>
       </div>
-<!--      <h1 class="main-title-toon">ЗВЕЗДНЫЙ ПУТЬ</h1>-->
       <div class="pilot-info-toon"></div>
     </div>
     <div class="constellations-map">
@@ -21,7 +20,7 @@
         <div class="galaxy-icon-wrapper">
           <img :src="galaxy.svg" class="galaxy-svg-toon" alt="galaxy"/>
         </div>
-        <h2 class="galaxy-label-toon">{{ galaxy.label }}</h2>
+        <h2 class="galaxy-label-toon">{{ t(galaxy.label) }}</h2>
       </div>
     </div>
     <Transition name="pop-window">
@@ -33,7 +32,7 @@
               <img :src="activeGalaxy.svg" alt="" class="window-icon"/>
             </div>
             <div class="header-text">
-              <h2>{{ activeGalaxy.name }}</h2>
+              <h2>{{ t(activeGalaxy.name) }}</h2>
             </div>
           </div>
           <div class="mission-briefing">

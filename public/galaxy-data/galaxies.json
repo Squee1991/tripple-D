@@ -2,10 +2,9 @@
   "galaxies": [
     {
       "id": "alpha",
-      "name": "Галактика артиклей - альфа",
-      "label": "Артикли",
+      "name": "galaxyList.alpha",
+      "label": "galaxyTheme.article",
       "type": "articles",
-      "desc": "Базовые слова и темы: дом, кухня, одежда и др.",
       "colorClass": "blue",
       "questions": [
         { "word": "Stuhl", "correct": "der", "options": ["der", "die", "das"] },
@@ -212,10 +211,9 @@
     },
     {
       "id": "beta",
-      "name": "Галактика мн.ч. - Бетта",
+      "name": "galaxyList.beta",
       "type": "plural",
-      "label": "Мн.ч.",
-      "desc": "Множественное число: город и транспорт",
+      "label": "galaxyTheme.plural",
       "colorClass": "green",
       "questions": [
         { "word": "Haus", "correct": "Häuser", "options": ["Häuser", "Hauser", "Hausen"] },
@@ -427,10 +425,9 @@
     },
     {
       "id": "gamma",
-      "name": "Галактика синонимов - гамма",
+      "name": "galaxyList.gamma",
       "type": "logic",
-      "label": "Синонимы",
-      "desc": "Синонимы: чувства и действия",
+      "label": "galaxyTheme.synonyms",
       "colorClass": "pink",
       "questions": [
         { "word": "Froh", "correct": "Glücklich", "options": ["Traurig", "Böse", "Glücklich"] },
@@ -637,10 +634,9 @@
     },
     {
       "id": "delta",
-      "name": "Галактика антонимов - дельта",
+      "name": "galaxyList.delta",
       "type": "logic",
-      "label": "Антонимы",
-      "desc": "Слова-наоборот(размеры, свойства)",
+      "label": "galaxyTheme.antonyms",
       "colorClass": "grey",
       "questions": [
         { "word": "Groß", "correct": "Klein", "options": ["Schön", "Klein", "Stark"] },
@@ -855,10 +851,9 @@
     },
     {
       "id": "epsilon",
-      "name": "Галактика Partizip II - epsilon",
+      "name": "galaxyList.epsilon",
       "type": "verbs",
-      "label": "Partizip II",
-      "desc": "Формы Partizip II",
+      "label": "galaxyTheme.verbs",
       "colorClass": "pink",
       "questions": [
         { "word": "Gehen", "correct": "Gegangen", "options": ["Ging", "Gegangen", "Gegeht"] },
@@ -1069,10 +1064,9 @@
     },
     {
       "id": "zeta",
-      "name": "Галактика предлогов - zeta",
+      "name": "galaxyList.zeta",
       "type": "logic",
-      "label": "Предлоги",
-      "desc": "Предлоги Dativ/Akkusativ",
+      "label": "galaxyTheme.prepositions",
       "colorClass": "yellow",
         "questions": [
         { "word": "Ich bin (in)", "correct": "Dativ", "options": ["Dativ", "Akkusativ", "Genitiv"] },

@@ -733,6 +733,7 @@ const confirmPurchase = async () => {
   color: #ef5350;
   text-align: center;
   font-size: 13px;
+  font-weight: 900;
   margin-bottom: 12px;
 }
 

@@ -14,14 +14,12 @@
         </div>
       </div>
       <div class="hats-right">
-        <div class="hats-text">
-          Конфератки — это ваш путь к вершине! Накапливайте их, выполняйте все три задания дня. Повышайте свой ранг и покупайте разблокированные бонусы!
-        </div>
+        <div class="hats-text"> {{t('v-rank.desc')}} </div>
       </div>
     </div>
     <div v-for="rank in store.ranksData" :key="rank.title" class="rank-league">
       <div class="league-line">
-        <span class="league-title">{{ rank.title }}</span>
+        <span class="league-title">{{ t(rank.title) }}</span>
       </div>
       <div class="grid">
         <div
@@ -48,32 +46,24 @@
                   :class="{ 'icon-grayscale': authStore.totalHats < lvl.hats }"
               />
             </div>
-            <div class="card-label">Ранг {{ idx + 1 }}</div>
-
+            <div class="card-label">{{ t('v-rank.rank') }} {{ idx + 1 }}</div>
             <div class="card-bottom-info">
               <div class="card-cost">
                 🎓 {{ lvl.hats }}
               </div>
-
               <div v-if="lvl.bonus"
                    class="card-bonus"
                    :class="{
                      'is-discount': typeof lvl.bonus === 'string',
                      'is-claimed': typeof lvl.bonus === 'number' && authStore.claimedBonuses?.includes(lvl.hats)
                    }">
-
                 <span>
-                  <template v-if="typeof lvl.bonus === 'number'">+</template>{{ lvl.bonus }}
+                  <template v-if="typeof lvl.bonus === 'number'">+</template>{{ t(lvl.bonus) }}
                 </span>
-
                 <img v-if="typeof lvl.bonus === 'number'" class="card__articlus" src="../../assets/images/articlus.png" alt="articlus">
-
-                <div v-if="typeof lvl.bonus === 'number' && authStore.claimedBonuses?.includes(lvl.hats)" class="claimed-check-circle">
-                  ✔
-                </div>
+                <div v-if="typeof lvl.bonus === 'number' && authStore.claimedBonuses?.includes(lvl.hats)" class="claimed-check-circle">✔</div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
@@ -102,7 +92,7 @@ const toRoman = (n) => {
 const currentRankInfo = computed(() => {
   const hats = authStore.totalHats ?? 0
   let best = {
-    rankTitle: 'Новичок',
+    rankTitle: 'v-rank.rank_0',
     lvlIndex: 0,
     hatsNeed: 0,
     icon: EducationHut
@@ -119,12 +109,16 @@ const currentRankInfo = computed(() => {
       }
     }
   }
-
   return best
 })
 
 const currentRankTitle = computed(() => {
-  return `${currentRankInfo.value.rankTitle} ${toRoman(currentRankInfo.value.lvlIndex + 1)}`
+  const titleKey = currentRankInfo.value.rankTitle
+  const translatedName = t(titleKey)
+  if (titleKey === 'v-rank.rank_0') {
+    return translatedName
+  }
+  return `${translatedName} ${toRoman(currentRankInfo.value.lvlIndex + 1)}`
 })
 
 const currentRankIcon = computed(() => currentRankInfo.value.icon)

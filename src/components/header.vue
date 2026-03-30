@@ -243,6 +243,7 @@ const menuItems = computed(() => {
                   {id: 'comparison', url: '/adjective-comparison', valueKey: 'underSub.comparison'}
                 ],
               },
+              {id: 'audio', url: '/audio-tasks' , valueKey: 'sub.audio'},
               {id: 'description', url: '/description-images' , valueKey: 'sub.describePicture'},
               {id: 'themen', url: '/thematic-learning', valueKey: 'sub.themen'},
               {id: 'cards', url: '/create-cards', valueKey: 'sub.card'},
