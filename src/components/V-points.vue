@@ -4,7 +4,7 @@
         :tips="flattenedTips"
         v-model="isArticleOpen"
     />
-    <section class="points-card" aria-label="Поинты и уровень">
+    <section id="points" class="points-card" aria-label="Поинты и уровень">
       <header class="points-card__header">
         <h2 class="points__title">{{ t('accountPanel.title') }}</h2>
         <button class="points__info" @click="isArticleOpen = true">
@@ -12,7 +12,7 @@
         </button>
       </header>
       <ul v-if="langStore" class="points-card__list">
-        <li class="points-card__item">
+        <li id="conferats" class="points-card__item">
           <div class="points-card__label">{{ t('accountPanel.rank') }}</div>
           <div class="points__hats-wrapper">
             <button
@@ -22,13 +22,13 @@
             >
               <img class="hats__icon" src="../../assets/images/FreezeShield.svg" alt="Articlus_icon">
             </button>
-            <div id="articlus" :title="hoverTitle.title" v-if="userAuth.uid" class="articlus__wrapper">
+            <div :title="hoverTitle.title" v-if="userAuth.uid" class="articlus__wrapper">
               <img class="articlus__icon" src="../../assets/images/graduate-hat.svg" alt="Articlus_icon">
               <span class="points-card__value"> {{ userAuth.totalHats}}</span>
             </div>
           </div>
         </li>
-        <li class="points-card__item">
+        <li id="articlus" class="points-card__item">
           <div class="points-card__label">{{ t('accountPanel.articles') }}</div>
           <div id="articlus" :title="hoverTitle.title" v-if="userAuth.uid" class="articlus__wrapper">
             <img class="articlus__icon" src="../../assets/images/articlus.png" alt="Articlus_icon">

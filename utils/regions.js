@@ -10,6 +10,10 @@ import Future from 'assets/images/locations-images/Future.png'
 import Past from 'assets/images/locations-images/Past.png'
 import Action from 'assets/images/locations-images/Action.jpg'
 import OrderValley from 'assets/images/locations-images/OrderValley.jpg'
+import TimeGate from 'assets/images/locations-images/time_gate.jpg'
+import EdgeImages from 'assets/images/locations-images/edgeImages.jpg'
+import SecretLands from 'assets/images/locations-images/secret-lands.jpg'
+import MixedLands from 'assets/images/locations-images/mixedArticle.jpg'
 
 export const regions = {
 		beginner: [
@@ -86,42 +90,81 @@ export const regions = {
 				icon: WildLand
 			}
 		],
-		intermediate: [
+		elementary: [
 			{
 				id: "plural-land",
 				pathTo: "plural-land",
 				theme: "plural",
-				name: "Перевал грядущего",
+				name: "locationNames.plural-land",
 				level: 0,
-				desc: "На этом крутом склоне туман прошлого окончательно рассеивается, открывая вид на далекий горизонт. Здесь путник учится не просто смотреть под ноги, а заглядывать в завтрашний и прошедший день",
+				desc: "regions.descriptionPluralLands",
 				icon: Future
 			},
 			{
 				id: "past-land",
 				pathTo: "past-land",
 				theme: "past",
-				name: "Руины былого",
+				name: "locationNames.past-land",
 				level: 0,
-				desc: "Среди древних камней и песков времени хранятся истории о том, что уже свершилось. Здесь путник учится оглядываться назад и описывать события минувших дней, осваивая Прошедшее время.",
+				desc: "regions.descriptionPastLands",
 				icon: Past
 			},
 			{
 				id: "action-valley",
 				pathTo: "action-valley",
 				theme: "action",
-				name: "Долина действий",
+				name: "locationNames.action-valley",
 				level: 0,
-				desc: "Здесь время больше не стоит на месте, а туман прошлого рассеивается. В этой долине путник учится ставить цели, осваивая модальные глаголы и искусство взаимодействия через падежи.",
+				desc: "regions.descriptionActionLands",
 				icon: Action
 			},
 			{
 				id: "order-valley",
 				pathTo: "order-valley",
 				theme: "order",
-				name: "Земли порядка",
+				name: "locationNames.order-valley",
 				level: 0,
-				desc: "Здесь путник учится строить правильные предложения. В этой долине осваивают порядок слов в простых и сложных фразах, учатся сообщать о наличии вещей и использовать возвратные местоимения.",
+				desc: "regions.descriptionOrderValley",
 				icon: OrderValley
-			}
+			},
+			{
+				id: "time-gate",
+				pathTo: "time-gate",
+				theme: "time",
+				name: "Врата времен",
+				level: 0,
+				desc: "Здесь, у врат времен, путник обретает уверенность, оглядываясь назад и заглядывая вперед. В этом разделе мы будем проходить повторение: путник заново проходит и закрепляет времена прошлого и будущего",
+				icon: TimeGate
+			},
+			{
+				id: "edge-images",
+				pathTo: "edge-images",
+				theme: "edge",
+				name: "Край образов",
+				level: 0,
+				desc: "Работа с определенными артиклями в прошедшем и будущем времени. Путник учится правильно определять и берет нужную форму у артикля в каждом предложении.",
+				icon: EdgeImages
+			},
+			{
+				id: "secret-lands",
+				pathTo: "secret-lands",
+				theme: "secret",
+				name: "Земли загадок",
+				level: 0,
+				desc: "Работа с неопределенными артиклями в прошедшем и будущем времени. Путник учится правильно определять и берет нужную форму у артикля в каждом предложении.",
+				icon: SecretLands
+			},
+			{
+				id: "definite-indefinite",
+				pathTo: "definite-indefinite",
+				theme: "def-indef",
+				name: "Земли выбора",
+				level: 0,
+				desc: "Работа с определенными и неопределенными и определенными артиклями в прошедшем и будущем времени. Учитмся различать их и правильно ставить нужную форму у артикля в каждом предложении.",
+				icon: MixedLands
+			},
+		],
+	    intermediate: [
+
 		]
 	};

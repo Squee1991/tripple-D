@@ -1,0 +1,2006 @@
+[
+  {
+    "questId": "social",
+    "title": "timeGageQuestOne.title",
+    "progress": "0/15",
+    "description": "timeGageQuestOne.description",
+    "conditions": {
+      "goal": "timeGageQuestOne.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": { "points": 20, "xp": 20 },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "timeGageQuestOne.questOne",
+        "words": ["+ЫЯФЫФЯЫЧЫЧЯЧwerde", "dich", "bald", "besuchen", "Ich", "wirst", "dir"],
+        "correctOrder": ["Ich", "werde", "dich", "bald", "besuchen"],
+        "tip": "timeGageQuestOne.questOneTip"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "timeGageQuestOne.questTwo",
+        "options": ["Wir haben uns im Urlaub kennengelernt", "Wir sind uns im Urlaub kennengelernt", "Wir haben uns in den Urlaub kennengelernt"],
+        "answer": "Wir haben uns im Urlaub kennengelernt",
+        "tip": "timeGageQuestOne.questTwoTip"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "timeGageQuestOne.questThree",
+        "text": "Ich helfe dir sehr gern",
+        "answer": "Ich helfe dir очень охотно",
+        "tip": "timeGageQuestOne.questThreeTip"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "timeGageQuestOne.questFour",
+        "words": ["lade", "dich", "ins", "Café", "ein", "Ich", "im", "dem"],
+        "correctOrder": ["Ich", "lade", "dich", "ins", "Café", "ein"],
+        "tip": "timeGageQuestOne.questFourTip"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "timeGageQuestOne.questFive",
+        "options": ["Ich freue mich, weil du hier bist", "Ich freue mich, weil du bist здесь", "Ich freue mich, weil bist du hier"],
+        "answer": "Ich freue mich, weil du hier bist",
+        "tip": "timeGageQuestOne.questFiveTip"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "timeGageQuestOne.questSix",
+        "words": ["werden", "viel", "sprechen", "Wir", "werdet"],
+        "correctOrder": ["Wir", "werden", "viel", "sprechen"],
+        "tip": "timeGageQuestOne.questSixTip"
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "timeGageQuestOne.questSeven",
+        "text": "Er hat mir alles erzählt",
+        "answer": "Er hat mir alles erzählt",
+        "tip": "timeGageQuestOne.questSevenTip"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "timeGageQuestOne.questEight",
+        "options": ["Wir treffen uns im Kino", "Wir treffen uns ins Kino", "Wir treffen uns in das Kino"],
+        "answer": "Wir treffen uns im Kino",
+        "tip": "timeGageQuestOne.questEightTip"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "timeGageQuestOne.questNine",
+        "words": ["dass", "sie", "später", "kommt", "sagt", "Sie", "ist"],
+        "correctOrder": ["Sie", "sagt", "dass", "sie", "später", "kommt"],
+        "tip": "timeGageQuestOne.questNineTip"
+      },
+      {
+        "id": 10,
+        "type": "readAndAnswer",
+        "text": "Ich habe gestern einen alten Freund getroffen. Wir werden uns bald wiedersehen.",
+        "question": "timeGageQuestOne.questTen",
+        "options": ["In naher Zukunft", "Vor kurzem", "Letzten Sommer"],
+        "answer": "In naher Zukunft"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "timeGageQuestOne.questEleven",
+        "options": ["Wirst du mich anrufen?", "Wirst du mir anrufen?", "Werdest du mich anrufen?"],
+        "answer": "Wirst du mich anrufen?",
+        "tip": "timeGageQuestOne.questElevenTip"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "timeGageQuestOne.questTwelve",
+        "words": ["frage", "ob", "du", "frei", "bist", "Ich", "dass", "hast"],
+        "correctOrder": ["Ich", "frage", "ob", "du", "frei", "bist"],
+        "tip": "timeGageQuestOne.questTwelveTip"
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "timeGageQuestOne.questThirteen",
+        "text": "Ich rufe dich morgen an",
+        "answer": "Ich rufe dich morgen an",
+        "tip": "timeGageQuestOne.questThirteenTip"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "timeGageQuestOne.questFourteen",
+        "options": ["Sie sind auf die Party gegangen", "Sie haben auf die Party gegangen", "Sie sind auf der Party gegangen"],
+        "answer": "Sie sind auf die Party gegangen",
+        "tip": "timeGageQuestOne.questFourteenTip"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "timeGageQuestOne.questFifteen",
+        "words": ["bin", "glücklich", "wenn", "du", "kommst", "Ich", "ist", "hat", "wird", "dass"],
+        "correctOrder": ["Ich", "bin", "glücklich", "wenn", "du", "kommst"],
+        "tip": "timeGageQuestOne.questFifteenTip"
+      }
+    ]
+  },
+  {
+    "questId": "grammar",
+    "title": "timeGageQuestTwo.title",
+    "progress": "0/15",
+    "description": "timeGageQuestTwo.description",
+    "conditions": {
+      "goal": "timeGageQuestTwo.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": { "points": 20, "xp": 20 },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "timeGageQuestTwo.questOne",
+        "words": ["werde", "Auto", "kaufen", "dieses", "Ich", "den"],
+        "correctOrder": ["Ich", "werde", "dieses", "Auto", "kaufen"],
+        "tip": "timeGageQuestTwo.questOneTip"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "timeGageQuestTwo.questTwo",
+        "options": ["Wir sind nach Berlin gefahren", "Wir haben nach Berlin gefahren", "Wir sind nach Berlin fahren"],
+        "answer": "Wir sind nach Berlin gefahren",
+        "tip": "timeGageQuestTwo.questTwoTip"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "timeGageQuestTwo.questThree",
+        "text": "Ich glaube, dass er heute kommt",
+        "answer": "Ich glaube, dass er heute kommt",
+        "tip": "timeGageQuestTwo.questThreeTip"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "timeGageQuestTwo.questFour",
+        "words": ["auf", "dem", "liegt", "Buch", "Das", "Tisch", "den"],
+        "correctOrder": ["Das", "Buch", "liegt", "auf", "dem", "Tisch"],
+        "tip": "timeGageQuestTwo.questFourTip"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "timeGageQuestTwo.questFive",
+        "options": ["Ich stelle das Glas auf den Tisch", "Ich stelle das Glas auf dem Tisch", "Ich stelle das Glas in der Tisch"],
+        "answer": "Ich stelle das Glas auf den Tisch",
+        "tip": "timeGageQuestTwo.questFiveTip"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "timeGageQuestTwo.questSix",
+        "words": ["hat", "Apfel", "den", "gegessen", "Sie", "einen"],
+        "correctOrder": ["Sie", "hat", "den", "Apfel", "gegessen"],
+        "tip": "timeGageQuestTwo.questSixTip"
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "timeGageQuestTwo.questSeven",
+        "text": "Wir werden morgen viel arbeiten",
+        "answer": "Wir werden morgen viel arbeiten",
+        "tip": "timeGageQuestTwo.questSevenTip"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "timeGageQuestTwo.questEight",
+        "options": ["Ich lerne, weil es wichtig ist", "Ich lerne, weil es ist wichtig", "Ich lerne, weil wichtig es ist"],
+        "answer": "Ich lerne, weil es важно ist",
+        "tip": "timeGageQuestTwo.questEightTip"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "timeGageQuestTwo.questNine",
+        "words": ["hängt", "Schrank", "den", "Jacke", "die", "in", "Er", "dem", "der"],
+        "correctOrder": ["Er", "hängt", "die", "Jacke", "in", "den", "Schrank"],
+        "tip": "timeGageQuestTwo.questNineTip"
+      },
+      {
+        "id": 10,
+        "type": "readAndAnswer",
+        "text": "Morgen werde ich nach Hamburg fahren. Ich habe schon ein Ticket gekauft.",
+        "question": "timeGageQuestTwo.questTen",
+        "options": ["nach Hamburg", "nach Berlin", "nach München"],
+        "answer": "nach Hamburg"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "timeGageQuestTwo.questEleven",
+        "options": ["Wirst du schlafen?", "Wirst du schläfst?", "Werdest du schlafen?"],
+        "answer": "Wirst du schlafen?",
+        "tip": "timeGageQuestTwo.questElevenTip"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "timeGageQuestTwo.questTwelve",
+        "words": ["kommt", "sie", "ob", "nicht", "weiß", "Ich", "wenn"],
+        "correctOrder": ["Ich", "weiß", "nicht", "ob", "sie", "kommt"],
+        "tip": "timeGageQuestTwo.questTwelveTip"
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "timeGageQuestTwo.questThirteen",
+        "text": "Das Buch liegt auf dem Tisch",
+        "answer": "Das Buch liegt auf dem Tisch",
+        "tip": "timeGageQuestTwo.questThirteenTip"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "timeGageQuestTwo.questFourteen",
+        "options": ["Sie ist spät gekommen", "Sie hat spät gekommen", "Sie ist spät kommen"],
+        "answer": "Sie ist spät gekommen",
+        "tip": "timeGageQuestTwo.questFourteenTip"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "timeGageQuestTwo.questFifteen",
+        "words": ["dass", "hat", "gekauft", "Haus", "das", "er", "glaube", "ist", "den"],
+        "correctOrder": ["Ich", "glaube", "dass", "er", "das", "Haus", "gekauft", "hat"],
+        "tip": "timeGageQuestTwo.questFifteenTip"
+      }
+    ]
+  },
+  {
+    "questId": "city",
+    "title": "timeGageQuestThree.title",
+    "progress": "0/15",
+    "description": "timeGageQuestThree.description",
+    "conditions": {
+      "goal": "timeGageQuestThree.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": { "points": 20, "xp": 20 },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "timeGageQuestThree.questOne",
+        "words": ["werde", "ins", "fahren", "Zentrum", "Ich", "in", "dem"],
+        "correctOrder": ["Ich", "werde", "ins", "Zentrum", "fahren"],
+        "tip": "timeGageQuestThree.questOneTip"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "timeGageQuestThree.questTwo",
+        "options": ["Ich habe einen Freund im Park getroffen", "Ich bin einen Freund im Park getroffen", "Ich habe einen Freund in den Park getroffen"],
+        "answer": "Ich habe einen Freund im Park getroffen"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "timeGageQuestThree.questThree",
+        "text": "Ich stehe an der Bushaltestelle",
+        "answer": "Ich stehe an der Bushaltestelle",
+        "tip": "timeGageQuestThree.questThreeTip"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "timeGageQuestThree.questFour",
+        "words": ["gehe", "Museum", "ins", "Ich", "in"],
+        "correctOrder": ["Ich", "gehe", "ins", "Museum"],
+        "tip": "timeGageQuestThree.questFourTip"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "timeGageQuestThree.questFive",
+        "options": ["Ich weiß, dass du hier bist", "Ich weiß, dass du bist hier", "Ich weiß, dass hier du bist"],
+        "answer": "Ich weiß, dass du hier bist",
+        "tip": "timeGageQuestThree.questFiveTip"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "timeGageQuestThree.questSix",
+        "words": ["werden", "Restaurant", "im", "essen", "Wir", "in"],
+        "correctOrder": ["Wir", "werden", "im", "Restaurant", "essen"],
+        "tip": "timeGageQuestThree.questSixTip"
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "timeGageQuestThree.questSeven",
+        "text": "Er hat ein Ticket gekauft",
+        "answer": "Er hat ein Ticket gekauft"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "timeGageQuestThree.questEight",
+        "options": ["Das Auto steht vor dem Haus", "Das Auto steht vor den Haus", "Das Auto steht vor das Haus"],
+        "answer": "Das Auto steht vor dem Haus",
+        "tip": "timeGageQuestThree.questEightTip"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "timeGageQuestThree.questNine",
+        "words": ["gehe", "weil", "bin", "müde", "ich", "Hause", "nach", "Ich", "ist"],
+        "correctOrder": ["Ich", "gehe", "nach", "Hause", "weil", "ich", "müde", "bin"],
+        "tip": "timeGageQuestThree.questNineTip"
+      },
+      {
+        "id": 10,
+        "type": "readAndAnswer",
+        "text": "Wir sind gestern im Kino gewesen. Der Film hat uns sehr gefallen.",
+        "question": "timeGageQuestThree.questTen",
+        "options": ["im Kino", "im Theater", "im Park"],
+        "answer": "im Kino"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "timeGageQuestThree.questEleven",
+        "options": ["Ich hänge das Plakat an die Wand", "Ich hänge das Plakat an der Wand", "Ich hänge das Plakat an den Wand"],
+        "answer": "Ich hänge das Plakat an die Wand",
+        "tip": "timeGageQuestThree.questElevenTip"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "timeGageQuestThree.questTwelve",
+        "words": ["sind", "Bahnhof", "am", "angekommen", "Sie", "haben", "auf"],
+        "correctOrder": ["Sie", "sind", "am", "Bahnhof", "angekommen"],
+        "tip": "timeGageQuestThree.questTwelveTip"
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "timeGageQuestThree.questThirteen",
+        "text": "Was wirst du am Abend machen?",
+        "answer": "Was wirst du am Abend machen?",
+        "tip": "timeGageQuestThree.questThirteenTip"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "timeGageQuestThree.questFourteen",
+        "options": ["Ich frage, ob es hier eine Apotheke gibt", "Ich frage, ob es hier eine Apotheke", "Ich frage, ob es здесь ein Apotheke gibt"],
+        "answer": "Ich frage, ob es hier eine Apotheke gibt",
+        "tip": "timeGageQuestThree.questFourteenTip"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "timeGageQuestThree.questFifteen",
+        "words": ["dass", "wird", "Sonne", "die", "geben", "es", "morgen", "glaube", "Ich", "ist"],
+        "correctOrder": ["Ich", "glaube", "dass", "es", "morgen", "die", "Sonne", "geben", "wird"],
+        "tip": "timeGageQuestThree.questFifteenTip"
+      }
+    ]
+  },
+  {
+    "questId": "office",
+    "title": "timeGageQuestFour.title",
+    "progress": "0/15",
+    "description": "timeGageQuestFour.description",
+    "conditions": {
+      "goal": "timeGageQuestFour.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": { "points": 20, "xp": 20 },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "timeGageQuestFour.questOne",
+        "words": ["werde", "E-Mail", "eine", "schreiben", "Ich", "einen"],
+        "correctOrder": ["Ich", "werde", "eine", "E-Mail", "schreiben"],
+        "tip": "timeGageQuestFour.questOneTip"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "timeGageQuestFour.questTwo",
+        "options": ["Er ist zum Chef gegangen", "Er hat zum Chef gegangen", "Er ist zum Chef gehen"],
+        "answer": "Er ist zum Chef gegangen",
+        "tip": "timeGageQuestFour.questTwoTip"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "timeGageQuestFour.questThree",
+        "text": "Der Laptop liegt auf dem Schreibtisch",
+        "answer": "Der Laptop liegt auf dem Schreibtisch",
+        "tip": "timeGageQuestFour.questThreeTip"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "timeGageQuestFour.questFour",
+        "words": ["lege", "Mappe", "die", "in", "Schrank", "den", "Ich", "der", "liege"],
+        "correctOrder": ["Ich", "lege", "die", "Mappe", "in", "den", "Schrank"],
+        "tip": "timeGageQuestFour.questFourTip"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "timeGageQuestFour.questFive",
+        "options": ["Ich arbeite, weil ich Geld brauche", "Ich arbeite, weil ich brauche Geld", "Ich arbeite, weil Geld ich brauche"],
+        "answer": "Ich arbeite, weil ich Geld brauche",
+        "tip": "timeGageQuestFour.questFiveTip"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "timeGageQuestFour.questSix",
+        "words": ["werden", "ein", "Meeting", "haben", "Wir", "wirst", "einen"],
+        "correctOrder": ["Wir", "werden", "ein", "Meeting", "haben"],
+        "tip": "timeGageQuestFour.questSixTip"
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "timeGageQuestFour.questSeven",
+        "text": "Ich habe den Vertrag unterschrieben",
+        "answer": "Ich habe den Vertrag unterschrieben",
+        "tip": "timeGageQuestFour.questSevenTip"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "timeGageQuestFour.questEight",
+        "options": ["Sie sitzt im Büro", "Sie sitzt in das Büro", "Sie sitzt ins Büro"],
+        "answer": "Sie sitzt im Büro",
+        "tip": "timeGageQuestFour.questEightTip"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "timeGageQuestFour.questNine",
+        "words": ["dass", "Projekt", "das", "fertig", "ist", "Er", "hat", "gesagt", "den"],
+        "correctOrder": ["Er", "hat", "gesagt", "dass", "das", "Projekt", "fertig", "ist"],
+        "tip": "timeGageQuestFour.questNineTip"
+      },
+      {
+        "id": 10,
+        "type": "readAndAnswer",
+        "text": "Herr Schmidt wird heute um 15 Uhr den Kunden anrufen. Er hat alle Dokumente vorbereitet.",
+        "question": "timeGageQuestFour.questTen",
+        "options": ["telefonieren", "ein Meeting haben", "Dokumente vorbereiten"],
+        "answer": "telefonieren",
+        "tip": "timeGageQuestFour.questTenTip"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "timeGageQuestFour.questEleven",
+        "options": ["Ich hänge den Kalender an die Wand", "Ich hänge den Kalender an der Wand", "Ich hänge dem Kalender an die Wand"],
+        "answer": "Ich hänge den Kalender an die Wand",
+        "tip": "timeGageQuestFour.questElevenTip"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "timeGageQuestFour.questTwelve",
+        "words": ["haben", "Arbeit", "die", "beendet", "Wir", "sind", "der"],
+        "correctOrder": ["Wir", "haben", "die", "Arbeit", "beendet"],
+        "tip": "timeGageQuestFour.questTwelveTip"
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "timeGageQuestFour.questThirteen",
+        "text": "Ich weiß nicht, ob er kommt",
+        "answer": "Ich weiß nicht, ob er kommt",
+        "tip": "timeGageQuestFour.questThirteenTip"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "timeGageQuestFour.questFourteen",
+        "options": ["Du wirst morgen viel arbeiten", "Du werdest morgen viel arbeiten", "Du wirst morgen viel gearbeitet"],
+        "answer": "Du wirst morgen viel arbeiten",
+        "tip": "timeGageQuestFour.questFourteenTip"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "timeGageQuestFour.questFifteen",
+        "words": ["dass", "er", "einen", "Computer", "gekauft", "hat", "Ich", "habe", "gesehen", "einem"],
+        "correctOrder": ["Ich", "habе", "gesehen", "dass", "er", "einen", "Computer", "gekauft", "hat"],
+        "tip": "timeGageQuestFour.questFifteenTip"
+      }
+    ]
+  },
+  {
+    "questId": "travel",
+    "title": "timeGageQuestFive.title",
+    "progress": "0/15",
+    "description": "timeGageQuestFive.description",
+    "conditions": {
+      "goal": "timeGageQuestFive.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": { "points": 20, "xp": 20 },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "timeGageQuestFive.questOne",
+        "words": ["werden", "Spanien", "nach", "fliegen", "Wir", "zu"],
+        "correctOrder": ["Wir", "werden", "nach", "Spanien", "fliegen"],
+        "tip": "timeGageQuestFive.questOneTip"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "timeGageQuestFive.questTwo",
+        "options": ["Wir sind im Hotel angekommen", "Wir haben im Hotel angekommen", "Wir sind in das Hotel angekommen"],
+        "answer": "Wir sind im Hotel angekommen",
+        "tip": "timeGageQuestFive.questTwoTip"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "timeGageQuestFive.questThree",
+        "text": "Ich habe meinen Koffer vergessen",
+        "answer": "Ich habe meinen Koffer vergessen"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "timeGageQuestFive.questFour",
+        "words": ["Handtuch", "das", "Strand", "am", "liegt", "dem", "in"],
+        "correctOrder": ["Das", "Handtuch", "liegt", "am", "Strand"],
+        "tip": "timeGageQuestFive.questFourTip"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "timeGageQuestFive.questFive",
+        "options": ["Ich lege das Handtuch auf den Sand", "Ich lege das Handtuch auf dem Sand", "Ich lege das Handtuch in den Sand"],
+        "answer": "Ich lege das Handtuch auf den Sand",
+        "tip": "timeGageQuestFive.questFiveTip"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "timeGageQuestFive.questSix",
+        "words": ["Wirst", "Souvenir", "ein", "kaufen", "du", "werdet", "einen"],
+        "correctOrder": ["Wirst", "du", "ein", "Souvenir", "kaufen"],
+        "tip": "timeGageQuestFive.questSixTip"
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "timeGageQuestFive.questSeven",
+        "text": "Es ist schön, dass wir hier sind",
+        "answer": "Es ist schön, dass wir hier sind",
+        "tip": "timeGageQuestFive.questSevenTip"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "timeGageQuestFive.questEight",
+        "options": ["Er hat das Meer gesehen", "Er ist das Meer gesehen", "Er hat das Meer sehen"],
+        "answer": "Er hat das Meer gesehen",
+        "tip": "timeGageQuestFive.questEightTip"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "timeGageQuestFive.questNine",
+        "words": ["Wald", "den", "in", "gehen", "Wir", "dem", "im"],
+        "correctOrder": ["Wir", "gehen", "in", "den", "Wald"],
+        "tip": "timeGageQuestFive.questNineTip"
+      },
+      {
+        "id": 10,
+        "type": "readAndAnswer",
+        "text": "Unser Flug hat zwei Stunden Verspätung. Wir werden erst spät in Paris ankommen.",
+        "question": "timeGageQuestFive.questTen",
+        "options": ["zwei Stunden", "eine Stunde", "drei Stunden"],
+        "answer": "zwei Stunden",
+        "tip": "timeGageQuestFive.questTenTip"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "timeGageQuestFive.questEleven",
+        "options": ["Ich gehe schwimmen, weil es heiß ist", "Ich gehe schwimmen, weil es ist heiß", "Ich gehe schwimmen, weil heiß es ist"],
+        "answer": "Ich gehe schwimmen, weil es heiß ist",
+        "tip": "timeGageQuestFive.questElevenTip"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "timeGageQuestFive.questTwelve",
+        "words": ["Berge", "die", "in", "fahre", "Ich", "wenn", "Geld", "habe", "ich", "den"],
+        "correctOrder": ["Ich", "fahre", "in", "die", "Berge", "wenn", "ich", "Geld", "habe"],
+        "tip": "timeGageQuestFive.questTwelveTip"
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "timeGageQuestFive.questThirteen",
+        "text": "Die Sonne scheint am Himmel",
+        "answer": "Die Sonne scheint am Himmel",
+        "tip": "timeGageQuestFive.questThirteenTip"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "timeGageQuestFive.questFourteen",
+        "options": ["Ich bin in die Türkei geflogen", "Ich habe in die Türkei geflogen", "Ich bin in die Türkei fliegen"],
+        "answer": "Ich bin in die Türkei geflogen",
+        "tip": "timeGageQuestFive.questFourteenTip"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "timeGageQuestFive.questFifteen",
+        "words": ["dass", "du", "Meer", "am", "warst", "bist", "Ich", "habe", "gehört", "dem"],
+        "correctOrder": ["Ich", "habe", "gehört", "dass", "du", "am", "Meer", "warst"],
+        "tip": "timeGageQuestFive.questFifteenTip"
+      }
+    ]
+  },
+  {
+    "questId": "restaurant",
+    "title": "timeGageQuestSix.title",
+    "progress": "0/15",
+    "description": "timeGageQuestSix.description",
+    "conditions": {
+      "goal": "timeGageQuestSix.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": { "points": 20, "xp": 20 },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "timeGageQuestSix.questOne",
+        "words": ["werde", "Pizza", "eine", "bestellen", "Ich", "einen"],
+        "correctOrder": ["Ich", "werde", "eine", "Pizza", "bestellen"],
+        "tip": "timeGageQuestSix.questOneTip"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "timeGageQuestSix.questTwo",
+        "options": ["Ich habe im Restaurant gegessen", "Ich bin im Restaurant gegessen", "Ich habe ins Restaurant gegessen"],
+        "answer": "Ich habe im Restaurant gegessen"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "timeGageQuestSix.questThree",
+        "text": "Ich trinke einen Saft",
+        "answer": "Ich trinke einen Saft",
+        "tip": "timeGageQuestSix.questThreeTip"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "timeGageQuestSix.questFour",
+        "words": ["Teller", "der", "liegt", "auf", "dem", "Tisch", "den"],
+        "correctOrder": ["Der", "Teller", "liegt", "auf", "dem", "Tisch"],
+        "tip": "timeGageQuestSix.questFourTip"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "timeGageQuestSix.questFive",
+        "options": ["Ich lege die Gabel auf dem Tisch", "Ich lege die Gabel auf den Tisch", "Ich lege die Gabel auf der Tisch"],
+        "answer": "Ich lege die Gabel auf den Tisch",
+        "tip": "timeGageQuestSix.questFiveTip"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "timeGageQuestSix.questSix",
+        "words": ["hoffe", "dass", "Essen", "das", "gut", "schmeckt", "Ich", "ist"],
+        "correctOrder": ["Ich", "hoffe", "dass", "das", "Essen", "gut", "schmeckt"],
+        "tip": "timeGageQuestSix.questSixTip"
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "timeGageQuestSix.questSeven",
+        "text": "Wir haben die Rechnung bezahlt",
+        "answer": "Wir haben die Rechnung bezahlt",
+        "tip": "timeGageQuestSix.questSevenTip"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "timeGageQuestSix.questEight",
+        "options": ["Wo ist der Kellner?", "Wo ist den Kellner?", "Wo ist dem Kellner?"],
+        "answer": "Wo ist der Kellner?",
+        "tip": "timeGageQuestSix.questEightTip"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "timeGageQuestSix.questNine",
+        "words": ["gehe", "in", "die", "Küche", "weil", "ich", "Hunger", "habe", "Ich", "ist", "bin"],
+        "correctOrder": ["Ich", "gehe", "in", "die", "Küche", "weil", "ich", "Hunger", "habe"],
+        "tip": "timeGageQuestSix.questNineTip"
+      },
+      {
+        "id": 10,
+        "type": "readAndAnswer",
+        "text": "In diesem Restaurant gibt es keinen Fisch. Wir haben heute nur Gemüse.",
+        "question": "timeGageQuestSix.questTen",
+        "options": ["vegane Gerichte", "nur Fleisch", "Obst"],
+        "answer": "Fleisch und Gemüse"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "timeGageQuestSix.questEleven",
+        "options": ["Du wirst einen Kaffee trinken", "Du werdest einen Kaffee trinken", "Du wirst einen Kaffee getrunken"],
+        "answer": "Du wirst einen Kaffee trinken",
+        "tip": "timeGageQuestSix.questElevenTip"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "timeGageQuestSix.questTwelve",
+        "words": ["weiß", "nicht", "ob", "das", "Cafe", "offen", "ist", "Ich", "hat", "wenn"],
+        "correctOrder": ["Ich", "weiß", "nicht", "ob", "das", "Cafe", "offen", "ist"],
+        "tip": "timeGageQuestSix.questTwelveTip"
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "timeGageQuestSix.questThirteen",
+        "text": "Ich stelle das Glas auf den Tisch",
+        "answer": "Ich stelle das Glas auf den Tisch",
+        "tip": "timeGageQuestSix.questThirteenTip"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "timeGageQuestSix.questFourteen",
+        "options": ["Wir haben ein Wasser getrunken", "Wir sind ein Wasser getrunken", "Wir haben ein Wasser trinken"],
+        "answer": "Wir haben ein Wasser getrunken",
+        "tip": "timeGageQuestSix.questFourteenTip"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "timeGageQuestSix.questFifteen",
+        "words": ["habe", "gesehen", "dass", "er", "ein", "Bier", "gekauft", "hat", "einen", "Ich"],
+        "correctOrder": ["Ich", "habe", "gesehen", "dass", "er", "ein", "Bier", "gekauft", "hat"],
+        "tip": "timeGageQuestSix.questFifteenTip"
+      }
+    ]
+  },
+  {
+    "questId": "hobbies",
+    "title": "timeGageQuestSeven.title",
+    "progress": "0/15",
+    "description": "timeGageQuestSeven.description",
+    "conditions": {
+      "goal": "timeGageQuestSeven.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": { "points": 20, "xp": 20 },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "timeGageQuestSeven.questOne",
+        "words": ["werde", "Fußball", "spielen", "Ich", "wirst"],
+        "correctOrder": ["Ich", "werde", "Fußball", "spielen"],
+        "tip": "timeGageQuestSeven.questOneTip"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "timeGageQuestSeven.questTwo",
+        "options": ["Ich bin gestern ins Fitnessstudio gegangen", "Ich habe gestern ins Fitnessstudio gegangen", "Ich bin gestern in dem Fitnessstudio gegangen"],
+        "answer": "Ich bin gestern ins Fitnessstudio gegangen",
+        "tip": "timeGageQuestSeven.questTwoTip"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "timeGageQuestSeven.questThree",
+        "text": "Ich höre gern Musik",
+        "answer": "Ich höre gern Musik"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "timeGageQuestSeven.questFour",
+        "words": ["gehe", "Kino", "ins", "Ich", "den", "im"],
+        "correctOrder": ["Ich", "gehe", "ins", "Kino"],
+        "tip": "timeGageQuestSeven.questFourTip"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "timeGageQuestSeven.questFive",
+        "options": ["Ich jogge, weil es gesund ist", "Ich jogge, weil es ist gesund", "Ich jogge, weil gesund es ist"],
+        "answer": "Ich jogge, weil es gesund ist",
+        "tip": "timeGageQuestSeven.questFiveTip"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "timeGageQuestSeven.questSix",
+        "words": ["werden", "Film", "einen", "schauen", "Wir", "den", "geschaut"],
+        "correctOrder": ["Wir", "werden", "einen", "Film", "schauen"],
+        "tip": "timeGageQuestSeven.questSixTip"
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "timeGageQuestSeven.questSeven",
+        "text": "Ich bin am Wochenende gewandert",
+        "answer": "Ich bin am Wochenende gewandert",
+        "tip": "timeGageQuestSeven.questSevenTip"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "timeGageQuestSeven.questEight",
+        "options": ["Ich lese ein Buch im Garten", "Ich lese ein Buch in den Garten", "Ich lese ein Buch in der Garten"],
+        "answer": "Ich lese ein Buch im Garten",
+        "tip": "timeGageQuestSeven.questEightTip"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "timeGageQuestSeven.questNine",
+        "words": ["dass", "er", "kommt", "gesagt", "hat", "Er", "ist"],
+        "correctOrder": ["Er", "hat", "gesagt", "dass", "er", "kommt"],
+        "tip": "timeGageQuestSeven.questNineTip"
+      },
+      {
+        "id": 10,
+        "type": "readAndAnswer",
+        "text": "Mein Hobby ist Fotografieren. Letzten Sommer habe ich viele Fotos im Wald gemacht.",
+        "question": "timeGageQuestSeven.questTen",
+        "options": ["in der Natur", "zu Hause", "in der Stadt"],
+        "answer": "in der Natur"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "timeGageQuestSeven.questEleven",
+        "options": ["Ich lege die Gitarre в das Auto", "Ich lege die Gitarre ins Auto", "Ich lege die Gitarre in dem Auto"],
+        "answer": "Ich lege die Gitarre ins Auto",
+        "tip": "timeGageQuestSeven.questElevenTip"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "timeGageQuestSeven.questTwelve",
+        "words": ["wenn", "wir", "gewinnen", "bin", "Ich", "glücklich", "ist"],
+        "correctOrder": ["Ich", "bin", "glücklich", "wenn", "wir", "gewinnen"],
+        "tip": "timeGageQuestSeven.questTwelveTip"
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "timeGageQuestSeven.questThirteen",
+        "text": "Hast du das Foto gemacht?",
+        "answer": "Hast du das Foto gemacht?",
+        "tip": "timeGageQuestSeven.questThirteenTip"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "timeGageQuestSeven.questFourteen",
+        "options": ["Wir haben die ganze Nacht getanzt", "Wir sind die ganze Nacht getanzt", "Wir haben die ganze Nacht tanzen"],
+        "answer": "Wir haben die ganze Nacht getanzt",
+        "tip": "timeGageQuestSeven.questFourteenTip"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "timeGageQuestSeven.questFifteen",
+        "words": ["dass", "wir", "morgen", "spielen", "werden", "glaube", "Ich", "haben"],
+        "correctOrder": ["Ich", "glaube", "dass", "wir", "morgen", "spielen", "werden"],
+        "tip": "timeGageQuestSeven.questFifteenTip"
+      }
+    ]
+  },
+  {
+    "questId": "shopping",
+    "title": "timeGageQuestEight.title",
+    "progress": "0/15",
+    "description": "timeGageQuestEight.description",
+    "conditions": {
+      "goal": "timeGageQuestEight.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": { "points": 20, "xp": 20 },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "timeGageQuestEight.questOne",
+        "words": ["werde", "Jacke", "diese", "kaufen", "Ich", "dieser"],
+        "correctOrder": ["Ich", "werde", "diese", "Jacke", "kaufen"],
+        "tip": "timeGageQuestEight.questOneTip"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "timeGageQuestEight.questTwo",
+        "options": ["Sie ist in den Laden gegangen", "Sie hat in den Laden gegangen", "Sie ist in dem Laden gegangen"],
+        "answer": "Sie ist in den Laden gegangen",
+        "tip": "timeGageQuestEight.questTwoTip"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "timeGageQuestEight.questThree",
+        "text": "Ich trage einen blauen Pullover",
+        "answer": "Ich trage einen blauen Pullover",
+        "tip": "timeGageQuestEight.questThreeTip"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "timeGageQuestEight.questFour",
+        "words": ["Der", "Geld", "das", "liegt", "im", "Portemonnaie", "in"],
+        "correctOrder": ["Das", "Geld", "liegt", "im", "Portemonnaie"],
+        "tip": "timeGageQuestEight.questFourTip"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "timeGageQuestEight.questFive",
+        "options": ["Ich lege das Portemonnaie in die Tasche", "Ich lege das Portemonnaie in der Tasche", "Ich lege das Portemonnaie an die Tasche"],
+        "answer": "Ich lege das Portemonnaie in die Tasche",
+        "tip": "timeGageQuestEight.questFiveTip"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "timeGageQuestEight.questSix",
+        "words": ["Schuhe", "die", "kaufe", "Ich", "weil", "sie", "billig", "sind", "ist"],
+        "correctOrder": ["Ich", "kaufe", "die", "Schuhe", "weil", "sie", "billig", "sind"],
+        "tip": "timeGageQuestEight.questSixTip"
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "timeGageQuestEight.questSeven",
+        "text": "Wir werden morgen einkaufen gehen",
+        "answer": "Wir werden morgen einkaufen gehen",
+        "tip": "timeGageQuestEight.questSevenTip"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "timeGageQuestEight.questEight",
+        "options": ["Hast du dieses Kleid anprobiert?", "Bist du dieses Kleid anprobiert?", "Hast du dieses Kleid anprobieren?"],
+        "answer": "Hast du dieses Kleid anprobiert?",
+        "tip": "timeGageQuestEight.questEightTip"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "timeGageQuestEight.questNine",
+        "words": ["hängt", "Hemd", "das", "in", "Schrank", "den", "Er", "dem"],
+        "correctOrder": ["Er", "hängт", "das", "Hemd", "in", "den", "Schrank"],
+        "tip": "timeGageQuestEight.questNineTip"
+      },
+      {
+        "id": 10,
+        "type": "readAndAnswer",
+        "text": "Morgen gibt es im Einkaufszentrum 50% Rabatt. Ich werde zwei Hosen kaufen.",
+        "question": "timeGageQuestEight.questTen",
+        "options": ["ein Hemd", "zwei Hosen", "neue Schuhe"],
+        "answer": "zwei Hosen"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "timeGageQuestEight.questEleven",
+        "options": ["Wir werden mit Karte bezahlen", "Wir wirst mit Karte bezahlen", "Wir werden mit Karte bezahlt"],
+        "answer": "Wir werden mit Karte bezahlen",
+        "tip": "timeGageQuestEight.questElevenTip"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "timeGageQuestEight.questTwelve",
+        "words": ["Größe", "diese", "mir", "passt", "ob", "nicht", "weiß", "Ich", "ist"],
+        "correctOrder": ["Ich", "weiß", "nicht", "ob", "mir", "diese", "Größe", "passt"],
+        "tip": "timeGageQuestEight.questTwelveTip"
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "timeGageQuestEight.questThirteen",
+        "text": "Das Kleid hängt im Schrank",
+        "answer": "Das Kleid hängt im Schrank",
+        "tip": "timeGageQuestEight.questThirteenTip"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "timeGageQuestEight.questFourteen",
+        "options": ["Wir sind ins Einkaufszentrum gefahren", "Wir haben ins Einkaufszentrum gefahren", "Wir sind im Einkaufszentrum gefahren"],
+        "answer": "Wir sind ins Einkaufszentrum gefahren",
+        "tip": "timeGageQuestEight.questFourteenTip"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "timeGageQuestEight.questFifteen",
+        "words": ["dass", "sie", "Tasche", "die", "gekauft", "hat", "sagt", "Sie", "ein"],
+        "correctOrder": ["Sie", "sagt", "dass", "sie", "die", "Tasche", "gekauft", "hat"],
+        "tip": "timeGageQuestEight.questFifteenTip"
+      }
+    ]
+  },
+  {
+    "questId": "health",
+    "title": "timeGageQuestNine.title",
+    "progress": "0/15",
+    "description": "timeGageQuestNine.description",
+    "conditions": {
+      "goal": "timeGageQuestNine.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": { "points": 20, "xp": 20 },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "timeGageQuestNine.questOne",
+        "words": ["werde", "Arzt", "zum", "gehen", "Ich", "gegangen", "zur"],
+        "correctOrder": ["Ich", "werde", "zum", "Arzt", "gehen"],
+        "tip": "timeGageQuestNine.questOneTip"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "timeGageQuestNine.questTwo",
+        "options": ["Sie ist in die Apotheke gegangen", "Sie hat in die Apotheke gegangen", "Sie ist in der Apotheке gegangen"],
+        "answer": "Sie ist in die Apotheке gegangen",
+        "tip": "timeGageQuestNine.questTwoTip"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "timeGageQuestNine.questThree",
+        "text": "Die Medizin liegt auf dem Tisch",
+        "answer": "Die Medizin liegt auf dem Tisch",
+        "tip": "timeGageQuestNine.questThreeTip"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "timeGageQuestNine.questFour",
+        "words": ["den", "lege", "Tabletten", "die", "in", "Tasche", "die", "Ich"],
+        "correctOrder": ["Ich", "lege", "die", "Tabletten", "in", "die", "Tasche"],
+        "tip": "timeGageQuestNine.questFourTip"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "timeGageQuestNine.questFive",
+        "options": ["Ich bleibe im Bett, weil ich krank bin", "Ich bleibe im Bett, weil ich bin krank", "Ich bleibe im Bett, weil krank ich bin"],
+        "answer": "Ich bleibe im Bett, weil ich krank bin",
+        "tip": "timeGageQuestNine.questFiveTip"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "timeGageQuestNine.questSix",
+        "words": ["werden", "Tennis", "spielen", "Wir", "wirst", "einen"],
+        "correctOrder": ["Wir", "werden", "Tennis", "spielen"],
+        "tip": "timeGageQuestNine.questSixTip"
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "timeGageQuestNine.questSeven",
+        "text": "Er hat gestern Fußball gespielt",
+        "answer": "Er hat gestern Fußball gespielt"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "timeGageQuestNine.questEight",
+        "options": ["Ich war im Krankenhaus", "Ich war in die Schule", "Ich war in Arzt"],
+        "answer": "Ich war im Krankenhaus",
+        "tip": "timeGageQuestNine.questEightTip"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "timeGageQuestNine.questNine",
+        "words": ["gehen", "Fitnessstudio", "ins", "Wir", "im", "den"],
+        "correctOrder": ["Wir", "gehen", "ins", "Fitnessstudio"],
+        "tip": "timeGageQuestNine.questNineTip"
+      },
+      {
+        "id": 10,
+        "type": "readAndAnswer",
+        "text": "Ich habe Kopfschmerzen. Ich werde eine Tablette nehmen и Wasser trinken.",
+        "question": "timeGageQuestNine.questTen",
+        "options": ["medizin nehmen", "Sport machen", "einkaufen gehen"],
+        "answer": "eine Tablette nehmen"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "timeGageQuestNine.questEleven",
+        "options": ["Du wirst mehr Sport machen", "Du werdest mehr Sport machen", "Du wirst mehr Sport gemacht"],
+        "answer": "Du wirst mehr Sport machen",
+        "tip": "timeGageQuestNine.questElevenTip"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "timeGageQuestNine.questTwelve",
+        "words": ["Arzt", "der", "heute", "kommt", "ob", "nicht", "weiß", "Ich", "hat"],
+        "correctOrder": ["Ich", "weiß", "nicht", "ob", "der", "Arzt", "heute", "kommt"],
+        "tip": "timeGageQuestNine.questTwelveTip"
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "timeGageQuestNine.questThirteen",
+        "text": "Der Arzt ist im Zimmer",
+        "answer": "Der Arzt ist im Zimmer",
+        "tip": "timeGageQuestNine.questThirteenTip"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "timeGageQuestNine.questFourteen",
+        "options": ["Sie sind fünf Kilometer gelaufen", "Sie haben fünf Kilometer gelaufen", "Sie sind пять Kilometer laufen"],
+        "answer": "Sie sind fünf Kilometer gelaufen",
+        "tip": "timeGageQuestNine.questFourteenTip"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "timeGageQuestNine.questFifteen",
+        "words": ["dass", "er", "Medikament", "das", "gekauft", "hat", "gesehen", "Ich", "den", "habe"],
+        "correctOrder": ["Ich", "habe", "gesehen", "dass", "er", "das", "Medikament", "gekauft", "hat"],
+        "tip": "timeGageQuestNine.questFifteenTip"
+      }
+    ]
+  },
+  {
+    "questId": "home",
+    "title": "timeGageQuestTen.title",
+    "progress": "0/15",
+    "description": "timeGageQuestTen.description",
+    "conditions": {
+      "goal": "timeGageQuestTen.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": { "points": 20, "xp": 20 },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "timeGageQuestTen.questOne",
+        "words": ["werde", "Zimmer", "das", "aufräumen", "Ich", "wirst", "geputzt", "einen", "dem"],
+        "correctOrder": ["Ich", "werде", "das", "Zimmer", "aufräumen"],
+        "tip": "timeGageQuestTen.questOneTip"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "timeGageQuestTen.questTwo",
+        "options": ["Wir haben neue Möbel gekauft", "Wir sind neue Möbel gekauft", "Wir haben neue Möbel kaufen"],
+        "answer": "Wir haben neue Möbel gekauft",
+        "tip": "timeGageQuestTen.questTwoTip"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "timeGageQuestTen.questThree",
+        "text": "Das Haus ist sehr groß",
+        "answer": "Das Haus ist sehr groß",
+        "tip": "timeGageQuestTen.questThreeTip"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "timeGageQuestTen.questFour",
+        "words": ["Katze", "die", "schläft", "auf", "dem", "Bett", "den"],
+        "correctOrder": ["Die", "Katze", "schläft", "auf", "dem", "Bett"],
+        "tip": "timeGageQuestTen.questFourTip"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "timeGageQuestTen.questFive",
+        "options": ["Ich lege die Schlüssel auf das Regal", "Ich lege die Schlüssel auf dem Regal", "Ich lege die Schlüssel in der Regal"],
+        "answer": "Ich lege die Schlüssel auf das Regal",
+        "tip": "timeGageQuestTen.questFiveTip"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "timeGageQuestTen.questSix",
+        "words": ["wird", "Abendessen", "das", "kochen", "Sie", "einen"],
+        "correctOrder": ["Sie", "wird", "das", "Abendessen", "kochen"],
+        "tip": "timeGageQuestTen.questSixTip"
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "timeGageQuestTen.questSeven",
+        "text": "Er ist nach Hause gekommen",
+        "answer": "Er ist nach Hause gekommen",
+        "tip": "timeGageQuestTen.questSevenTip"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "timeGageQuestTen.questEight",
+        "options": ["Ich weiß nicht, wo mein Handy ist", "Ich weiß nicht, wo ist mein Handy", "Ich weiß nicht, wo Handy ist"],
+        "answer": "Ich weiß nicht, wo mein Handy ist",
+        "tip": "timeGageQuestTen.questEightTip"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "timeGageQuestTen.questNine",
+        "words": ["hängen", "Spiegel", "den", "in", "Flur", "den", "Wir", "dem"],
+        "correctOrder": ["Wir", "hängen", "den", "Spiegel", "in", "den", "Flur"],
+        "tip": "timeGageQuestTen.questNineTip"
+      },
+      {
+        "id": 10,
+        "type": "readAndAnswer",
+        "text": "Wir sind letzte Woche umgezogen. Die neue Wohnung ist hell и hat einen Balkon.",
+        "question": "timeGageQuestTen.questTen",
+        "options": ["einen Balkon", "einen Garten", "eine Garage"],
+        "answer": "einen Balkon"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "timeGageQuestTen.questEleven",
+        "options": ["Wirst du mir beim Putzen helfen?", "Werdest du mir beim Putzen helfen?", "Wirst du mir beim Putzen geholfen?"],
+        "answer": "Wirst du mir beim Putzen helfen?",
+        "tip": "timeGageQuestTen.questElevenTip"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "timeGageQuestTen.questTwelve",
+        "words": ["dass", "Wohnung", "die", "teuer", "ist", "glaube", "Ich", "hat", "den"],
+        "correctOrder": ["Ich", "glaube", "dass", "die", "Wohnung", "teuer", "ist"],
+        "tip": "timeGageQuestTen.questTwelveTip"
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "timeGageQuestTen.questThirteen",
+        "text": "Wir wohnen in einer Wohnung",
+        "answer": "Wir wohnen in einer Wohnung",
+        "tip": "timeGageQuestTen.questThirteenTip"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "timeGageQuestTen.questFourteen",
+        "options": ["Sie sind in eine andere Stadt umgezogen", "Sie haben in eine andere Stadt umgezogen", "Sie sind in eine andere Stadt umziehen"],
+        "answer": "Sie sind in eine andere Stadt umgezogen",
+        "tip": "timeGageQuestTen.questFourteenTip"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "timeGageQuestTen.questFifteen",
+        "words": ["dass", "er", "Renovierung", "die", "gemacht", "hat", "sagt", "Er", "den"],
+        "correctOrder": ["Er", "sagt", "dass", "er", "die", "Renovierung", "gemacht", "hat"],
+        "tip": "timeGageQuestTen.questFifteenTip"
+      }
+    ]
+  },
+  {
+    "questId": "education",
+    "title": "timeGageQuestEleven.title",
+    "progress": "0/15",
+    "description": "timeGageQuestEleven.description",
+    "conditions": {
+      "goal": "timeGageQuestEleven.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": { "points": 20, "xp": 20 },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "timeGageQuestEleven.questOne",
+        "words": ["werde", "Deutsch", "lernen", "Ich", "auf", "skillupgerman", "wirst", "im"],
+        "correctOrder": ["Ich", "werde", "Deutsch", "auf", "skillupgerman", "lernen"],
+        "tip": "timeGageQuestEleven.questOneTip"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "timeGageQuestEleven.questTwo",
+        "options": ["Sie ist in die Schule gegangen", "Sie hat in die Schule gegangen", "Sie ist in der Schule gegangen"],
+        "answer": "Sie ist in die Schule gegangen",
+        "tip": "timeGageQuestEleven.questTwoTip"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "timeGageQuestEleven.questThree",
+        "text": "Ich verstehe die Grammatik",
+        "answer": "Ich verstehe die Grammatik"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "timeGageQuestEleven.questFour",
+        "words": ["Heft", "das", "liegt", "auf", "dem", "Tisch", "den"],
+        "correctOrder": ["Das", "Heft", "liegt", "auf", "dem", "Tisch"],
+        "tip": "timeGageQuestEleven.questFourTip"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "timeGageQuestEleven.questFive",
+        "options": ["Ich lege den Stift ins Mäppchen", "Ich lege den Stift in dem Mäppchen", "Ich lege den Stift in der Mäppchen"],
+        "answer": "Ich lege den Stift ins Mäppchen",
+        "tip": "timeGageQuestEleven.questFiveTip"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "timeGageQuestEleven.questSix",
+        "words": ["Ich", "lerne", "weil", "ich", "das", "will", "ist"],
+        "correctOrder": ["Ich", "lerne", "weil", "ich", "das", "will"],
+        "tip": "timeGageQuestEleven.questSixTip"
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "timeGageQuestEleven.questSeven",
+        "text": "Wir werden eine Prüfung schreiben",
+        "answer": "Wir werden eine Prüfung schreiben",
+        "tip": "timeGageQuestEleven.questSevenTip"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "timeGageQuestEleven.questEight",
+        "options": ["Hast du die Hausaufgabe gemacht?", "Bist du die Hausaufgabe gemacht?", "Hast du die Hausaufgabe machen?"],
+        "answer": "Hast du die Hausaufgabe gemacht?",
+        "tip": "timeGageQuestEleven.questEightTip"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "timeGageQuestEleven.questNine",
+        "words": ["hängт", "Karte", "die", "an", "die", "Wand", "Er", "auf"],
+        "correctOrder": ["Er", "hängт", "die", "Karte", "an", "die", "Wand"],
+        "tip": "timeGageQuestEleven.questNineTip"
+      },
+      {
+        "id": 10,
+        "type": "readAndAnswer",
+        "text": "Lukas lernt seit zwei Jahren Deutsch. Er hat gestern ein Zertifikat bekommen.",
+        "question": "timeGageQuestEleven.questTen",
+        "options": ["ein Zertifikat", "ein Buch", "eine Note"],
+        "answer": "ein Zertifikat"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "timeGageQuestEleven.questEleven",
+        "options": ["Du wirst viel lesen", "Du werdest viel lesen", "Du wirst viel gelesen"],
+        "answer": "Du wirst viel lesen",
+        "tip": "timeGageQuestEleven.questElevenTip"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "timeGageQuestEleven.questTwelve",
+        "words": ["weiß", "nicht", "ob", "er", "versteht", "Ich", "dass"],
+        "correctOrder": ["Ich", "weiß", "nicht", "ob", "er", "versteht"],
+        "tip": "timeGageQuestEleven.questTwelveTip"
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "timeGageQuestEleven.questThirteen",
+        "text": "Wir sitzen in der Klasse",
+        "answer": "Wir sitzen in der Klasse",
+        "tip": "timeGageQuestEleven.questThirteenTip"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "timeGageQuestEleven.questFourteen",
+        "options": ["Wir sind zur Uni gefahren", "Wir haben zur Uni gefahren", "Wir sind zur Uni fahren"],
+        "answer": "Wir sind zur Uni gefahren",
+        "tip": "timeGageQuestEleven.questFourteenTip"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "timeGageQuestEleven.questFifteen",
+        "words": ["dass", "sie", "Wörter", "die", "gelernt", "hat", "sagt", "Sie", "ist", "den"],
+        "correctOrder": ["Sie", "sagt", "dass", "sie", "die", "Wörter", "gelernt", "hat"],
+        "tip": "timeGageQuestEleven.questFifteenTip"
+      }
+    ]
+  },
+  {
+    "questId": "nature",
+    "title": "timeGageQuestTwelve.title",
+    "progress": "0/15",
+    "description": "timeGageQuestTwelve.description",
+    "conditions": {
+      "goal": "timeGageQuestTwelve.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": { "points": 20, "xp": 20 },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "timeGageQuestTwelve.questOne",
+        "words": ["wird", "regnen", "es", "morgen", "werdet", "ist"],
+        "correctOrder": ["Morgen", "wird", "es", "regnen"],
+        "tip": "timeGageQuestTwelve.questOneTip"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "timeGageQuestTwelve.questTwo",
+        "options": ["Wir sind im Wald spazieren gegangen", "Wir haben im Wald spazieren gegangen", "Wir sind in den Wald spazieren gegangen"],
+        "answer": "Wir sind im Wald spazieren gegangen",
+        "tip": "timeGageQuestTwelve.questTwoTip"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "timeGageQuestTwelve.questThree",
+        "text": "Ich sehe die Sonne",
+        "answer": "Ich sehe die Sonne",
+        "tip": "timeGageQuestTwelve.questThreeTip"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "timeGageQuestTwelve.questFour",
+        "words": ["Vogel", "der", "sitzt", "auf", "dem", "Baum", "den"],
+        "correctOrder": ["Der", "Vogel", "sitzt", "auf", "dem", "Baum"],
+        "tip": "timeGageQuestTwelve.questFourTip"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "timeGageQuestTwelve.questFive",
+        "options": ["Ich gehe in den Garten", "Ich gehe im Garten", "Ich gehe in der Garten"],
+        "answer": "Ich gehe in den Garten",
+        "tip": "timeGageQuestTwelve.questFiveTip"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "timeGageQuestTwelve.questSix",
+        "words": ["bleibe", "Hause", "zu", "weil", "es", "stürmt", "Ich", "ist", "wird"],
+        "correctOrder": ["Ich", "bleibe", "zu", "Hause", "weil", "es", "stürmt"],
+        "tip": "timeGageQuestTwelve.questSixTip"
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "timeGageQuestTwelve.questSeven",
+        "text": "Wird es morgen warm sein?",
+        "answer": "Wird es morgen warm sein?",
+        "tip": "timeGageQuestTwelve.questSevenTip"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "timeGageQuestTwelve.questEight",
+        "options": ["Der Schnee ist geschmolzen", "Der Schnee hat geschmolzen", "Der Schnee ist schmelzen"],
+        "answer": "Der Schnee ist geschmolzen",
+        "tip": "timeGageQuestTwelve.questEightTip"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "timeGageQuestTwelve.questNine",
+        "words": ["stelle", "Pflanze", "die", "auf", "Balkon", "den", "Ich", "das"],
+        "correctOrder": ["Ich", "stelle", "die", "Pflanze", "auf", "den", "Balkon"],
+        "tip": "timeGageQuestTwelve.questNineTip"
+      },
+      {
+        "id": 10,
+        "type": "readAndAnswer",
+        "text": "Heute ist es wolkig. Aber der Wetterbericht sagt, dass morgen die Sonne scheinen wird.",
+        "question": "timeGageQuestTwelve.questTen",
+        "options": ["klares Wetter", "ein wenig wolkig", "regnerisch"],
+        "answer": "sonnig"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "timeGageQuestTwelve.questEleven",
+        "options": ["Wir werden в die Berge gehen", "Wir werden in die Berge gehen", "Wir werden in den Berge gehen"],
+        "answer": "Wir werden in die Berge gehen",
+        "tip": "timeGageQuestTwelve.questElevenTip"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "timeGageQuestTwelve.questTwelve",
+        "words": ["weiß", "nicht", "ob", "es", "schneit", "Ich", "ist"],
+        "correctOrder": ["Ich", "weiß", "nicht", "ob", "es", "schneit"],
+        "tip": "timeGageQuestTwelve.questTwelveTip"
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "timeGageQuestTwelve.questThirteen",
+        "text": "Die Blumen blühen im Frühling",
+        "answer": "Die Blumen blühen im Frühling",
+        "tip": "timeGageQuestTwelve.questThirteenTip"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "timeGageQuestTwelve.questFourteen",
+        "options": ["Wir haben den Berg bestiegen", "Wir sind den Berg bestiegen", "Wir haben den Berg besteigen"],
+        "answer": "Wir haben den Berg bestiegen",
+        "tip": "timeGageQuestTwelve.questFourteenTip"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "timeGageQuestTwelve.questFifteen",
+        "words": ["hoffe", "dass", "morgen", "Sonne", "die", "scheint", "Ich", "wird"],
+        "correctOrder": ["Ich", "hoffe", "dass", "morgen", "die", "Sonne", "scheint"],
+        "tip": "timeGageQuestTwelve.questFifteenTip"
+      }
+    ]
+  },
+  {
+    "questId": "transport",
+    "title": "timeGageQuestThirteen.title",
+    "progress": "0/15",
+    "description": "timeGageQuestThirteen.description",
+    "conditions": {
+      "goal": "timeGageQuestThirteen.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": { "points": 20, "xp": 20 },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "timeGageQuestThirteen.questOne",
+        "words": ["werde", "mit", "dem", "Zug", "fahren", "Ich", "gefahren", "den"],
+        "correctOrder": ["Ich", "werde", "mit", "dem", "Zug", "fahren"],
+        "tip": "timeGageQuestThirteen.questOneTip"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "timeGageQuestThirteen.questTwo",
+        "options": ["Er ist mit dem Bus gekommen", "Er hat mit dem Bus gekommen", "Er ist mit den Bus gekommen"],
+        "answer": "Er ist mit dem Bus gekommen",
+        "tip": "timeGageQuestThirteen.questTwoTip"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "timeGageQuestThirteen.questThree",
+        "text": "Das Auto steht auf dem Parkplatz",
+        "answer": "Das Auto steht auf dem Parkplatz",
+        "tip": "timeGageQuestThirteen.questThreeTip"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "timeGageQuestThirteen.questFour",
+        "words": ["steige", "ins", "Auto", "Ich", "im"],
+        "correctOrder": ["Ich", "steige", "ins", "Auto"],
+        "tip": "timeGageQuestThirteen.questFourTip"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "timeGageQuestThirteen.questFive",
+        "options": ["Ich bin zu spät, weil der Zug Verspätung hatte", "Ich bin zu spät, weil der Zug hatte Verspätung", "Ich habe zu spät, weil der Zug Verspätung hatte"],
+        "answer": "Ich bin zu spät, weil der Zug Verspätung hatte",
+        "tip": "timeGageQuestThirteen.questFiveTip"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "timeGageQuestThirteen.questSix",
+        "words": ["werden", "Fahrkarten", "die", "kaufen", "Wir", "gekauft", "der"],
+        "correctOrder": ["Wir", "werden", "die", "Fahrkarten", "kaufen"],
+        "tip": "timeGageQuestThirteen.questSixTip"
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "timeGageQuestThirteen.questSeven",
+        "text": "Ich habe mein Ticket entwertet",
+        "answer": "Ich habe mein Ticket entwertet",
+        "tip": "timeGageQuestThirteen.questSevenTip"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "timeGageQuestThirteen.questEight",
+        "options": ["Wir warten an der Haltestelle", "Wir warten an die Haltestelle", "Wir warten an den Haltestelle"],
+        "answer": "Wir warten an der Haltestelle",
+        "tip": "timeGageQuestThirteen.questEightTip"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "timeGageQuestThirteen.questNine",
+        "words": ["legt", "Koffer", "den", "in", "Kofferraum", "den", "Er", "dem"],
+        "correctOrder": ["Er", "legt", "den", "Koffer", "in", "den", "Kofferraum"],
+        "tip": "timeGageQuestThirteen.questNineTip"
+      },
+      {
+        "id": 10,
+        "type": "readAndAnswer",
+        "text": "Der Flug nach Berlin dauert eine Stunde. Wir werden pünktlich landen.",
+        "question": "timeGageQuestThirteen.questTen",
+        "options": ["60 minuten", "zwei Stunden", "drei Stunden"],
+        "answer": "60 minuten"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "timeGageQuestThirteen.questEleven",
+        "options": ["Du wirst das Hotel reservieren", "Du werdest das Hotel reservieren", "Du wirst das Hotel reserviert"],
+        "answer": "Du wirst das Hotel reservieren",
+        "tip": "timeGageQuestThirteen.questElevenTip"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "timeGageQuestThirteen.questTwelve",
+        "words": ["weiß", "nicht", "ob", "die", "Straßenbahn", "kommt", "Ich", "wenn"],
+        "correctOrder": ["Ich", "weiß", "nicht", "ob", "die", "Straßenbahn", "kommt"],
+        "tip": "timeGageQuestThirteen.questTwelveTip"
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "timeGageQuestThirteen.questThirteen",
+        "text": "Der Zug fährt vom Gleis 4 ab",
+        "answer": "Der Zug fährt vom Gleis 4 ab"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "timeGageQuestThirteen.questFourteen",
+        "options": ["Wir sind aus der U-Bahn ausgestiegen", "Wir haben aus der U-Bahn ausgestiegen", "Wir sind из der U-Bahn aussteigen"],
+        "answer": "Wir sind aus der U-Bahn ausgestiegen",
+        "tip": "timeGageQuestThirteen.questFourteenTip"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "timeGageQuestThirteen.questFifteen",
+        "words": ["dass", "Flugzeug", "das", "abgehoben", "ist", "sagt", "Er", "hat"],
+        "correctOrder": ["Er", "sagt", "dass", "das", "Flugzeug", "abgehoben", "ist"],
+        "tip": "timeGageQuestThirteen.questFifteenTip"
+      }
+    ]
+  },
+  {
+    "questId": "media",
+    "title": "timeGageQuestFourteen.title",
+    "progress": "0/15",
+    "description": "timeGageQuestFourteen.description",
+    "conditions": {
+      "goal": "timeGageQuestFourteen.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": { "points": 20, "xp": 20 },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "timeGageQuestFourteen.questOne",
+        "words": ["werde", "Laptop", "einen", "neuen", "kaufen", "Ich", "ein"],
+        "correctOrder": ["Ich", "werde", "einen", "neuen", "Laptop", "kaufen"],
+        "tip": "timeGageQuestFourteen.questOneTip"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "timeGageQuestFourteen.questTwo",
+        "options": ["Er hat eine Nachricht geschickt", "Er ist eine Nachricht geschickt", "Er hat eine Nachricht schicken"],
+        "answer": "Er hat eine Nachricht geschickt",
+        "tip": "timeGageQuestFourteen.questTwoTip"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "timeGageQuestFourteen.questThree",
+        "text": "Ich surfe oft im Internet",
+        "answer": "Ich surfe oft im Internet",
+        "tip": "timeGageQuestFourteen.questThreeTip"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "timeGageQuestFourteen.questFour",
+        "words": ["Smartphone", "das", "liegt", "auf", "dem", "Sofa", "den"],
+        "correctOrder": ["Das", "Smartphone", "liegt", "auf", "dem", "Sofa"],
+        "tip": "timeGageQuestFourteen.questFourTip"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "timeGageQuestFourteen.questFive",
+        "options": ["Ich lege das Tablet auf den Tisch", "Ich lege das Tablet auf dem Tisch", "Ich lege das Tablet in den Tisch"],
+        "answer": "Ich lege das Tablet auf den Tisch",
+        "tip": "timeGageQuestFourteen.questFiveTip"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "timeGageQuestFourteen.questSix",
+        "words": ["arbeite", "Ich", "ein", "weil", "ich", "einen", "Computer", "brauche"],
+        "correctOrder": ["Ich", "arbeite", "weil", "ich", "einen", "Computer", "brauche"],
+        "tip": "timeGageQuestFourteen.questSixTip"
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "timeGageQuestFourteen.questSeven",
+        "text": "Wir werden ein Video sehen",
+        "answer": "Wir werden ein Video sehen",
+        "tip": "timeGageQuestFourteen.questSevenTip"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "timeGageQuestFourteen.questEight",
+        "options": ["Hast du gestern den Film heruntergeladen?", "Bist du gestern den Film heruntergeladen?", "Hast du gestern den Film herunterladen?"],
+        "answer": "Hast du gestern den Film heruntergeladen?",
+        "tip": "timeGageQuestFourteen.questEightTip"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "timeGageQuestFourteen.questNine",
+        "words": ["hängt", "Fernseher", "den", "an", "die", "Wand", "Er", "dem"],
+        "correctOrder": ["Er", "hängt", "den", "Fernseher", "an", "die", "Wand"],
+        "tip": "timeGageQuestFourteen.questNineTip"
+      },
+      {
+        "id": 10,
+        "type": "readAndAnswer",
+        "text": "Ich benutze soziale Medien, um mit Freunden zu schreiben. Gestern habe ich ein Foto gepostet.",
+        "question": "timeGageQuestFourteen.questTen",
+        "options": ["ein Foto gepostet", "ein Video gelöscht", "einen Computer gekauft"],
+        "answer": "ein Foto gepostet"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "timeGageQuestFourteen.questEleven",
+        "options": ["Wir werden morgen anrufen", "Wir wirst morgen anrufen", "Wir werden morgen angerufen"],
+        "answer": "Wir werden morgen anrufen",
+        "tip": "timeGageQuestFourteen.questElevenTip"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "timeGageQuestFourteen.questTwelve",
+        "words": ["weiß", "nicht", "ob", "das", "WLAN", "funktioniert", "Ich", "dass"],
+        "correctOrder": ["Ich", "weiß", "nicht", "ob", "das", "WLAN", "funktioniert"],
+        "tip": "timeGageQuestFourteen.questTwelveTip"
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "timeGageQuestFourteen.questThirteen",
+        "text": "Die Tastatur liegt vor dem Monitor",
+        "answer": "Die Tastatur liegt vor dem Monitor",
+        "tip": "timeGageQuestFourteen.questThirteenTip"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "timeGageQuestFourteen.questFourteen",
+        "options": ["Sie ist in den Elektronikladen gegangen", "Sie hat in den Elektronikladen gegangen", "Sie ist in dem Elektronikladen gegangen"],
+        "answer": "Sie ist in den Elektronikladen gegangen",
+        "tip": "timeGageQuestFourteen.questFourteenTip"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "timeGageQuestFourteen.questFifteen",
+        "words": ["hoffe", "dass", "Internet", "das", "schnell", "ist", "Ich", "der"],
+        "correctOrder": ["Ich", "hoffe", "dass", "das", "Internet", "schnell", "ist"],
+        "tip": "timeGageQuestFourteen.questFifteenTip"
+      }
+    ]
+  },
+  {
+    "questId": "culture",
+    "title": "timeGageQuestFifteen.title",
+    "progress": "0/15",
+    "description": "timeGageQuestFifteen.description",
+    "conditions": {
+      "goal": "timeGageQuestFifteen.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": { "points": 20, "xp": 20 },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "timeGageQuestFifteen.questOne",
+        "words": ["werde", "Museum", "ins", "gehen", "Ich", "wirst", "dem"],
+        "correctOrder": ["Ich", "werde", "ins", "Museum", "gehen"],
+        "tip": "timeGageQuestFifteen.questOneTip"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "timeGageQuestFifteen.questTwo",
+        "options": ["Wir sind auf das Konzert gegangen", "Wir haben на das Konzert gegangen", "Wir sind auf dem Konzert gegangen"],
+        "answer": "Wir sind auf das Konzert gegangen",
+        "tip": "timeGageQuestFifteen.questTwoTip"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "timeGageQuestFifteen.questThree",
+        "text": "Das Bild hängt in der Galerie",
+        "answer": "Das Bild hängt in der Galerie",
+        "tip": "timeGageQuestFifteen.questThreeTip"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "timeGageQuestFifteen.questFour",
+        "words": ["hänge", "Bild", "das", "an", "Wand", "die", "Ich", "der"],
+        "correctOrder": ["Ich", "hänge", "das", "Bild", "an", "die", "Wand"],
+        "tip": "timeGageQuestFifteen.questFourTip"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "timeGageQuestFifteen.questFive",
+        "options": ["Ich mag die Musik, weil sie schön ist", "Ich mag die Musik, weil она schön ist", "Ich mag die Musik, weil sie ist schön"],
+        "answer": "Ich mag die Musik, weil sie schön ist",
+        "tip": "timeGageQuestFifteen.questFiveTip"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "timeGageQuestFifteen.questSix",
+        "words": ["werden", "Ballett", "das", "sehen", "Wir", "wirst", "dem"],
+        "correctOrder": ["Wir", "werden", "das", "Ballett", "sehen"],
+        "tip": "timeGageQuestFifteen.questSixTip"
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "timeGageQuestFifteen.questSeven",
+        "text": "Er hat ein neues Buch geschrieben",
+        "answer": "Er hat ein neues Buch geschrieben",
+        "tip": "timeGageQuestFifteen.questSevenTip"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "timeGageQuestFifteen.questEight",
+        "options": ["Wir sitzen im Theater", "Wir sitzen ins Theater", "Wir sitzen in das Theater"],
+        "answer": "Wir sitzen im Theater",
+        "tip": "timeGageQuestFifteen.questEightTip"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "timeGageQuestFifteen.questNine",
+        "words": ["dass", "er", "Schauspieler", "ist", "sagt", "Er", "ein", "den"],
+        "correctOrder": ["Er", "sagt", "dass", "er", "Schauspieler", "ist"],
+        "tip": "timeGageQuestFifteen.questNineTip"
+      },
+      {
+        "id": 10,
+        "type": "readAndAnswer",
+        "text": "Das Museum öffnet morgen erst um 10 Uhr. Wir werden dort viele Statuen sehen.",
+        "question": "timeGageQuestFifteen.questTen",
+        "options": ["um Zehn Uhr", "um Acht Uhr", "um Zwei Uhr"],
+        "answer": "um 10 Uhr"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "timeGageQuestFifteen.questEleven",
+        "options": ["Du wirst Klavier spielen", "Du werdest Klavier spielen", "Du wirst Klavier gespielt"],
+        "answer": "Du wirst Klavier spielen",
+        "tip": "timeGageQuestFifteen.questElevenTip"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "timeGageQuestFifteen.questTwelve",
+        "words": ["weiß", "nicht", "ob", "die", "Ausstellung", "offen", "ist", "Ich", "hat"],
+        "correctOrder": ["Ich", "weiß", "nicht", "ob", "die", "Ausstellung", "offen", "ist"],
+        "tip": "timeGageQuestFifteen.questTwelveTip"
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "timeGageQuestFifteen.questThirteen",
+        "text": "Wir gehen heute in die Oper",
+        "answer": "Wir gehen heute in die Oper",
+        "tip": "timeGageQuestFifteen.questThirteenTip"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "timeGageQuestFifteen.questFourteen",
+        "options": ["Sie ist zum Festival gekommen", "Sie hat zum Festival gekommen", "Sie ist zum Festival kommen"],
+        "answer": "Sie ist zum Festival gekommen",
+        "tip": "timeGageQuestFifteen.questFourteenTip"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "timeGageQuestFifteen.questFifteen",
+        "words": ["kaufe", "Ticket", "ein", "wenn", "ich", "Zeit", "habe", "Ich", "einen"],
+        "correctOrder": ["Ich", "kaufe", "ein", "Ticket", "wenn", "ich", "Zeit", "habe"],
+        "tip": "timeGageQuestFifteen.questFifteenTip"
+      }
+    ]
+  }
+]

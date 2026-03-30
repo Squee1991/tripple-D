@@ -1755,7 +1755,11 @@
     "descriptionNorthCliffs": "Wysokie klify wznoszą się nad morzem, a zimne wiatry wystawiają na próbę wytrwałość każdego podróżnika. Czekają na ciebie zadania wymagające uwagi.",
     "descriptionStormCoast": "Dzikie przybrzeżne ziemie, gdzie szaleją grzmoty i błyskawice. Tylko odważni bohaterowie decydują się tu wejść. Czeka cię tu prawdziwy test siły wiedzy.",
     "descriptionMasterLands": "Krainy mistrzów i rzemieślników, gdzie każda praca ma znaczenie. Tutaj dowiesz się, jak rozmawiać o zawodach, pracy i codziennych obowiązkach.",
-    "descriptionWildLands": "Życie natury jest pełne niesamowitych odkryć. Tutaj dowiesz się, jak nazywać leśnych mieszkańców i żywioły, opisywać ich działania oraz układać zdania o przyrodzie."
+    "descriptionWildLands": "Życie natury jest pełne niesamowitych odkryć. Tutaj dowiesz się, jak nazywać leśnych mieszkańców i żywioły, opisywać ich działania oraz układać zdania o przyrodzie.",
+    "descriptionPluralLands": "Na tym stromym zboczu mgła przeszłości ostatecznie się rozprasza, odsłaniając widok na daleki horyzont. Tutaj wędrowiec uczy się nie tylko patrzeć pod nogi, ale spoglądać w jutrzejszy i miniony dzień.",
+    "descriptionPastLands": "Wśród starożytnych kamieni i piasków czasu przechowywane są historie o tym, co już się dokonało. Tutaj wędrowiec uczy się patrzeć wstecz i opisywać wydarzenia minionych dni, opanowując czas przeszły.",
+    "descriptionActionLands": "Tutaj czas już nie stoi w miejscu, a mgła przeszłości znika. W tej dolinie wędrowiec uczy się wyznaczać cele, opanowując czasowniki modalne i sztukę interakcji poprzez przypadki.",
+    "descriptionOrderValley": "Tutaj wędrowiec uczy się budować poprawne zdania. W tej dolinie opanowuje szyk wyrazów w prostych i złożonych frazach, uczy się informować o obecności rzeczy i używać zaimków zwrotnych."
   },
   "calendarInfo": {
     "eventsTitle": "Kalendarz wydarzeń",
@@ -2088,17 +2092,17 @@
     "answerThree": "Obecnie zwrot za niewykorzystane dni nie jest dostępny."
   },
   "daily": {
-    "first": "Naucz się 10 słów we wszystkich trybach: Praktyka rodzajników",
-    "second": "Zdobądź 10 Artykluzów w praktyce rodzajników",
-    "third": "Zrób serię (streak) 10 słów (tryb łatwy) w maratonie rodzajników",
-    "fourth": "Zdobądź 15 punktów doświadczenia w Praktyce rodzajników",
-    "fifth": "Odgadnij 10 słów w trybie „Zgadnij słowo”",
-    "sixth": "Zrób serię (streak) 10 słów (tryb średni) w maratonie rodzajników",
-    "seventh": "Naucz się 10 słów w liczbie mnogiej w trybie: Praktyka rodzajników",
-    "eighth": "Naucz się 10 słów we wszystkich trybach: Praktyka rodzajników",
-    "ninth": "Naucz się 10 słów w trybie audio: Praktyka rodzajników",
-    "tenth": "Zrób serię (streak) 10 słów (tryb trudny) w maratonie rodzajników",
-    "eleventh": "Zdobądź 10 punktów doświadczenia w Praktyce rodzajników",
+    "first": "Naucz się 5 słów we wszystkich trybach: Praktyka rodzajników",
+    "second": "Zdobądź 5 Artykluzów w praktyce rodzajników",
+    "third": "Zrób serię (streak) 5 słów (tryb łatwy) w maratonie rodzajników",
+    "fourth": "Zdobądź 5 punktów doświadczenia w Praktyce rodzajników",
+    "fifth": "Odgadnij 5 słów w trybie „Zgadnij słowo”",
+    "sixth": "Zrób serię (streak) 5 słów (tryb średni) w maratonie rodzajników",
+    "seventh": "Naucz się 5 słów w liczbie mnogiej w trybie: Praktyka rodzajników",
+    "eighth": "Naucz się 5 słów we wszystkich trybach: Praktyka rodzajników",
+    "ninth": "Naucz się 5 słów w trybie audio: Praktyka rodzajników",
+    "tenth": "Zrób serię (streak) 5 słów (tryb trudny) w maratonie rodzajników",
+    "eleventh": "Zdobądź 5 punktów doświadczenia w Praktyce rodzajników",
     "twelve": "Ukończ jeden moduł na poziomach tematycznych",
     "thirteenth": "Ukończ zadanie w Krainach Językowych",
     "fourteenth": "Odgadnij 5 słów w trybie „Zgadnij słowo”"
@@ -2790,7 +2794,11 @@
     "north-cliffs": "Północne klify",
     "storm-coast": "Burzowe wybrzeże",
     "master-lands": "Kraina Mistrzów",
-    "wild-lands": "Dzikie krainy"
+    "wild-lands": "Dzikie krainy",
+    "plural-land": "Przełęcz Przyszłości",
+    "past-land": "Ruiny Przeszłości",
+    "action-valley": "Dolina Działań",
+    "order-valley": "Ziemie Porządku"
   },
   "examPage": {
     "examHint": "Używamy automatycznego systemu rozpoznawania mowy. Mów wyraźnie blisko mikrofonu."

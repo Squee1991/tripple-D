@@ -1738,7 +1738,11 @@
     "descriptionNorthCliffs": "Stânci înalte se ridică deasupra mării, iar vânturile reci testează rezistența fiecărui călător. Te așteaptă sarcini care necesită atenție sporită.",
     "descriptionStormCoast": "Ținuturi de coastă sălbatice, unde domină tunetele și fulgerele. Doar eroii curajoși îndrăznesc să calce aici. Te așteaptă un adevărat test al puterii cunoștințelor tale.",
     "descriptionMasterLands": "Pământurile meșterilor și artizanilor, unde fiecare muncă contează. Aici vei învăța cum să vorbești despre profesii, muncă și responsabilitățile de zi cu zi.",
-    "descriptionWildLands": "Viața naturii este plină de descoperiri uimitoare. Aici vei învăța cum să numești locuitorii pădurii și elementele naturii, să le descrii acțiunile și să formezi propoziții despre lumea naturală."
+    "descriptionWildLands": "Viața naturii este plină de descoperiri uimitoare. Aici vei învăța cum să numești locuitorii pădurii și elementele naturii, să le descrii acțiunile și să formezi propoziții despre lumea naturală.",
+    "descriptionPluralLands": "Pe această pantă abruptă, ceața trecutului se risipește în cele din urmă, dezvăluind o priveliște spre orizontul îndepărtat. Aici, călătorul învață nu doar să privească sub picioare, ci să privească spre ziua de mâine și spre cea de ieri.",
+    "descriptionPastLands": "Printre pietrele antice și nisipurile timpului, sunt păstrate poveștile despre ceea ce s-a împlinit deja. Aici, călătorul învață să privească înapoi și să descrie evenimentele zilelor trecute, stăpânind Timpul Trecut.",
+    "descriptionActionLands": "Aici timpul nu mai stă în loc, iar ceața trecutului se risipește. În această vale, călătorul învață să-și stabilească obiective, stăpânind verbele modale și arta interacțiunii prin cazuri.",
+    "descriptionOrderValley": "Aici călătorul învață să construiască propoziții corecte. În această vale se stăpânește ordinea cuvintelor în fraze simple și complexe, se învață raportarea prezenței lucrurilor și utilizarea pronumelor reflexive."
   },
   "calendarInfo": {
     "eventsTitle": "Calendarul evenimentelor",
@@ -2071,17 +2075,17 @@
     "answerThree": "În prezent, nu este prevăzută rambursarea pentru zilele rămase."
   },
   "daily": {
-    "first": "Învață 10 cuvinte în toate modurile: Practica articolelor",
-    "second": "Obține 10 articluși în practica articolelor",
-    "third": "Fă un streak de 10 cuvinte (mod ușor) în maratonul articolelor",
-    "fourth": "Obține 15 puncte de experiență în Practica articolelor",
-    "fifth": "Ghicește 10 cuvinte în modul „Ghicește cuvântul”",
-    "sixth": "Fă un streak de 10 cuvinte (mod mediu) în maratonul articolelor",
-    "seventh": "Învață 10 cuvinte la plural în modul: Practica articolelor",
-    "eighth": "Învață 10 cuvinte în toate modurile: Practica articolelor",
-    "ninth": "Învață 10 cuvinte în modul audio: Practica articolelor",
-    "tenth": "Fă un streak de 10 cuvinte (mod dificil) în maratonul articolelor",
-    "eleventh": "Obține 10 puncte de experiență în Practica articolelor",
+    "first": "Învață 5 cuvinte în toate modurile: Practica articolelor",
+    "second": "Obține 5 articluși în practica articolelor",
+    "third": "Fă un streak de 5 cuvinte (mod ușor) în maratonul articolelor",
+    "fourth": "Obține 5 puncte de experiență în Practica articolelor",
+    "fifth": "Ghicește 5 cuvinte în modul „Ghicește cuvântul”",
+    "sixth": "Fă un streak de 5 cuvinte (mod mediu) în maratonul articolelor",
+    "seventh": "Învață 5 cuvinte la plural în modul: Practica articolelor",
+    "eighth": "Învață 5 cuvinte în toate modurile: Practica articolelor",
+    "ninth": "Învață 5 cuvinte în modul audio: Practica articolelor",
+    "tenth": "Fă un streak de 5 cuvinte (mod dificil) în maratonul articolelor",
+    "eleventh": "Obține 5 puncte de experiență în Practica articolelor",
     "twelve": "Finalizează un modul în nivelurile tematice",
     "thirteenth": "Finalizează o sarcină în Tărâmurile Limbilor",
     "fourteenth": "Ghicește 5 cuvinte în modul „Ghicește cuvântul”"
@@ -2773,7 +2777,11 @@
     "north-cliffs": "Stâncile de Nord",
     "storm-coast": "Coasta Furtunii",
     "master-lands": "Tărâmul Meșterilor",
-    "wild-lands": "Ținuturi sălbatice"
+    "wild-lands": "Ținuturi sălbatice",
+    "plural-land": "Trecătoarea Viitorului",
+    "past-land": "Ruinele Trecutului",
+    "action-valley": "Valea Acțiunilor",
+    "order-valley": "Ținuturile Ordinii"
   },
   "examPage": {
     "examHint": "Folosim un sistem automat de recunoaștere a vorbirii. Vorbiți clar lângă microfon."

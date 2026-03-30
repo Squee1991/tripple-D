@@ -1729,7 +1729,11 @@
     "descriptionNorthCliffs": "Denizin üzerinde yükselen yüksek kayalıklar, soğuk rüzgârlar her yolcunun dayanıklılığını sınar. Seni dikkat gerektiren görevler bekliyor.",
     "descriptionStormCoast": "Gürültü ve şimşeklerin hüküm sürdüğü vahşi sahil toprakları. Yalnızca cesur kahramanlar buraya adım atmaya cüret eder. Burada bilgilerin gücünün gerçek sınavı seni bekliyor.",
     "descriptionMasterLands": "Her emeğin değerli olduğu ustalar ve zanaatkarlar diyarı. Burada meslekler, iş ve günlük sorumluluklar hakkında nasıl konuşulacağını öğreneceksiniz.",
-    "descriptionWildLands": "Doğa hayatı şaşırtıcı keşiflerle doludur. Burada orman sakinlerini ve elementleri nasıl adlandıracağınızı, eylemlerini nasıl tanımlayacağınızı ve doğa hakkında nasıl cümleler kuracağınızı öğreneceksiniz."
+    "descriptionWildLands": "Doğa hayatı şaşırtıcı keşiflerle doludur. Burada orman sakinlerini ve elementleri nasıl adlandıracağınızı, eylemlerini nasıl tanımlayacağınızı ve doğa hakkında nasıl cümleler kuracağınızı öğreneceksiniz.",
+    "descriptionPluralLands": "Bu sarp yamaçta, geçmişin sisi nihayet dağılır ve uzak ufkun manzarası açılır. Burada yolcu, sadece ayaklarının altına bakmayı değil, hem yarına hem de geçen güne bakmayı öğrenir.",
+    "descriptionPastLands": "Kadim taşların ve zamanın kumlarının arasında, çoktan gerçekleşmiş olanın hikayeleri saklıdır. Burada yolcu, geçmişe bakmayı ve geçmiş günlerin olaylarını anlatmayı öğrenerek Geçmiş Zamanı kavrar.",
+    "descriptionActionLands": "Burada zaman artık durmuyor ve geçmişin sisi dağılıyor. Bu vadide yolcu, modal fiillerde ustalaşarak ve haller aracılığıyla etkileşim sanatını öğrenerek hedefler koymayı öğrenir.",
+    "descriptionOrderValley": "Burada yolcu doğru cümleler kurmayı öğrenir. Bu vadide, basit ve karmaşık ifadelerde kelime sırasını kavrar, nesnelerin varlığını bildirmeyi ve dönüşlü zamirleri kullanmayı öğrenir."
   },
   "calendarInfo": {
     "eventsTitle": "Etkinlik Takvimi",
@@ -2764,7 +2768,11 @@
     "north-cliffs": "Kuzey Kayalıkları",
     "storm-coast": "Fırtına Kıyısı",
     "master-lands": "Ustalar Diyarı",
-    "wild-lands": "Vahşi topraklar"
+    "wild-lands": "Vahşi topraklar",
+    "plural-land": "Gelecek Geçidi",
+    "past-land": "Geçmişin Harabeleri",
+    "action-valley": "Eylem Vadisi",
+    "order-valley": "Düzen Toprakları"
   },
   "examPage": {
     "examHint": "Otomatik konuşma tanıma sistemi kullanıyoruz. Mikrofonun yanında net konuşun."
