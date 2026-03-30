@@ -9,13 +9,13 @@ export const dailyQuests = [
 		id: 'learnWordsArticle',
 		name: 'daily.first',
 		currentValue: 0,
-		targetValue: 10
+		targetValue: 5
 	},
 	{
 		id: 'articles',
 		name: 'daily.second',
 		currentValue: 0,
-		targetValue: 10
+		targetValue: 5
 	},
 	{
 		id: 'perfectQuest',
@@ -33,7 +33,7 @@ export const dailyQuests = [
 		id: 'exp',
 		name: 'daily.fourth',
 		currentValue: 0,
-		targetValue: 10
+		targetValue: 5
 	},
 	{
 		id: 'thematicLearning',
@@ -81,7 +81,7 @@ export const dailyQuests = [
 		id: 'learnWordsArticle',
 		name: 'daily.eighth',
 		currentValue: 0,
-		targetValue: 10
+		targetValue: 5
 	},
 	{
 		id: 'thematicLearning',
@@ -123,7 +123,7 @@ export const dailyQuests = [
 		id: 'exp',
 		name: 'daily.eleventh',
 		currentValue: 0,
-		targetValue: 10
+		targetValue: 5
 	},
 	{
 		id: 'guessWord',

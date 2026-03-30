@@ -1754,7 +1754,11 @@
     "descriptionNorthCliffs": "Tall cliffs rise above the sea, and cold winds test the endurance of every traveler. Tasks requiring attentiveness await you.",
     "descriptionStormCoast": "Wild coastal lands where thunder and lightning rage. Only brave heroes dare to set foot here. Here you face a true test of the power of your knowledge.",
     "descriptionMasterLands": "Lands of masters and craftsmen, where every labor matters. Here you will learn how to talk about professions, work, and daily duties.",
-    "descriptionWildLands": "Nature is full of amazing discoveries. Here you will learn how to name forest inhabitants and elements, describe their actions, and form sentences about the natural world."
+    "descriptionWildLands": "Nature is full of amazing discoveries. Here you will learn how to name forest inhabitants and elements, describe their actions, and form sentences about the natural world.",
+    "descriptionPluralLands": "On this steep slope, the mist of the past finally clears, revealing a view of the distant horizon. Here, the traveler learns not just to look at their feet, but to peer into both tomorrow and the days gone by.",
+    "descriptionPastLands": "Among the ancient stones and sands of time, stories of what has already come to pass are kept. Here, the traveler learns to look back and describe the events of yesteryear, mastering the Past Tense.",
+    "descriptionActionLands": "Here, time no longer stands still, and the mist of the past dissipates. In this valley, the traveler learns to set goals, mastering modal verbs and the art of interaction through grammatical cases.",
+    "descriptionOrderValley": "Here, the traveler learns to build proper sentences. In this valley, they master word order in simple and complex phrases, learn to report the presence of things, and use reflexive pronouns."
   },
   "calendarInfo": {
     "eventsTitle": "Event Calendar",
@@ -2087,17 +2091,17 @@
     "answerThree": "Currently refunds for unused days are not available."
   },
   "daily": {
-    "first": "Learn 10 words in all modes: Article Practice",
-    "second": "Earn 10 Articluses in Article Practice",
-    "third": "Get a streak of 10 words (easy mode) in Article Marathon",
-    "fourth": "Earn 15 XP in Article Practice",
-    "fifth": "Guess 10 words in 'Guess the Word' mode",
-    "sixth": "Get a streak of 10 words (medium mode) in Article Marathon",
-    "seventh": "Learn 10 plural words in mode: Article Practice",
-    "eighth": "Learn 10 words in all modes: Article Practice",
-    "ninth": "Learn 10 words in audio mode: Article Practice",
-    "tenth": "Get a streak of 10 words (hard mode) in Article Marathon",
-    "eleventh": "Earn 10 XP in Article Practice",
+    "first": "Learn 5 words in all modes: Article Practice",
+    "second": "Earn 5 Articluses in Article Practice",
+    "third": "Get a streak of 5 words (easy mode) in Article Marathon",
+    "fourth": "Earn 5 XP in Article Practice",
+    "fifth": "Guess 5 words in 'Guess the Word' mode",
+    "sixth": "Get a streak of 5 words (medium mode) in Article Marathon",
+    "seventh": "Learn 5 plural words in mode: Article Practice",
+    "eighth": "Learn 5 words in all modes: Article Practice",
+    "ninth": "Learn 5 words in audio mode: Article Practice",
+    "tenth": "Get a streak of 5 words (hard mode) in Article Marathon",
+    "eleventh": "Earn 5 XP in Article Practice",
     "twelve": "Complete one module in thematic levels",
     "thirteenth": "Complete a quest in Language Lands",
     "fourteenth": "Guess 5 words in 'Guess the Word' mode"
@@ -2789,7 +2793,11 @@
     "north-cliffs": "Northern Cliffs",
     "storm-coast": "Storm Coast",
     "master-lands": "Master Lands",
-    "wild-lands": "Wild Lands"
+    "wild-lands": "Wild Lands",
+    "plural-land": "Pass of the Future",
+    "past-land": "Ruins of the Past",
+    "action-valley": "Valley of Action",
+    "order-valley": "Lands of Order"
   },
   "examPage": {
     "examHint": "We use an automatic speech recognition system. Speak clearly near the microphone."
