@@ -166,7 +166,6 @@ onMounted(() => {
   font-family: 'Arial Rounded MT Bold', sans-serif;
 }
 
-
 .space-environment {
   position: absolute;
   inset: 0;
@@ -333,9 +332,9 @@ onMounted(() => {
 .floating-astronaut {
   position: absolute;
   animation: floatAstro infinite ease-in-out;
-  pointer-events: none; /* чтобы они не перекрывали клики по кнопкам */
+  pointer-events: none;
   opacity: 0.8;
-  z-index: 1; /* держим их на фоне, но над туманностями */
+  z-index: 1;
 }
 
 @keyframes floatAstro {
@@ -357,4 +356,5 @@ onMounted(() => {
 .warp-flash-enter-from, .warp-flash-leave-to {
   opacity: 0;
 }
+
 </style>
