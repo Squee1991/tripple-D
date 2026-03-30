@@ -100,7 +100,6 @@ const getRandomPos = (n) => ({
 const generateAstronauts = (count = 3) => {
   const newAstronauts = []
   const minDistance = 15
-
   for (let i = 0; i < count; i++) {
     let attempts = 0
     let positionFound = false
