@@ -44,7 +44,7 @@
             </section>
             <div class="quest-card-options">
               <div v-for="(optionText, index) in currentTask.options" :key="index" class="quest-option">
-                <SoundBtn :content="optionText" class="quest-option-audio"/>
+                <SoundBtn :text="optionText" class="quest-option-audio"/>
                 <button @click="handleOptionSelection(index)"
                         :disabled="isTaskChecked"
                         :class="getOptionClasses(index)">
