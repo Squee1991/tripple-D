@@ -5671,9 +5671,10 @@
     "themen": "Niveles temáticos",
     "idioms": "Fraseologismos",
     "wordDuel": "Duelo de frases",
-    "describePicture": "Describe Picture",
     "quests": "Diario de misiones",
-    "languagesLands": "Tierras lingüísticas"
+    "languagesLands": "Tierras lingüísticas",
+    "describePicture": "Descripción de Imágenes",
+    "fight": "Universo Alemán"
   },
   "underSub": {
     "prev": "Introducción",
@@ -6056,5 +6057,54 @@
     "mixed": "Mixtos",
     "modal": "Modales",
     "placeHolder": "Buscar verbo..."
+  },
+  "galaxyMenu": {
+    "titleWordOne": "UNIVERSO",
+    "titleWordTwo": "ALEMÁN",
+    "begin": "INICIAR",
+    "profile": "Perfil",
+    "shop": "HANGAR",
+    "rank": "Ranking",
+    "exit": "SALIR"
+  },
+  "galaxyCabinet": {
+    "back": "ATRÁS",
+    "id": "IDENTIFICACIÓN",
+    "journey": "DIARIO DE VUELO",
+    "money": "ARTICS",
+    "commonPoints": "PUNTOS TOTALES",
+    "rank": "Rango:",
+    "streak": "RÉCORD:"
+  },
+  "galaxyRank": {
+    "none": "TERRÍCOLA",
+    "rank-rookie": "CADETE",
+    "rank-hunter": "EXPLORADOR",
+    "rank-ace": "COSMOPILOTO",
+    "rank-master": "MAESTRO ORBITAL",
+    "rank-legend": "ALMIRANTE DE FLOTA"
+  },
+  "galaxyList": {
+    "alpha": "ESFERA DE ARTÍCULOS",
+    "beta": "REGIÓN PLURAL",
+    "gamma": "CONSTELACIÓN DE SINÓNIMOS",
+    "delta": "CÚMULO DE ANTÓNIMOS",
+    "epsilon": "NEBULOSA DE VERBOS",
+    "zeta": "VECTOR DE PREPOSICIONES",
+    "all": "TODO EL UNIVERSO"
+  },
+  "galaxyRankTable": {
+    "back": "ATRÁS",
+    "title": "TOP PILOTOS",
+    "scan": "ESCANEO...",
+    "empty": "ESTE SECTOR ESTÁ VACÍO",
+    "emptySub": "¡Sé el primero en conquistar este sistema!"
+  },
+  "galaxyHangar": {
+    "leave": "SALIR",
+    "money": "ARTICS",
+    "buy": "Comprar",
+    "inFlight": "EN VUELO",
+    "change": "SELECCIONAR"
   }
 }

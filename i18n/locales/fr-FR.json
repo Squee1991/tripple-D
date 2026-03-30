@@ -5671,9 +5671,10 @@
     "themen": "Niveaux thématiques",
     "idioms": "Expressions",
     "wordDuel": "Duel de phrases",
-    "describePicture": "Describe Picture",
     "quests": "Journal de Quêtes",
-    "languagesLands": "Terres de Langues"
+    "languagesLands": "Terres de Langues",
+    "describePicture": "Description d'Images",
+    "fight": "L'Univers d'Allemand"
   },
   "underSub": {
     "prev": "Introduction",
@@ -6056,5 +6057,54 @@
     "mixed": "Mixtes",
     "modal": "Modaux",
     "placeHolder": "Chercher un verbe..."
+  },
+  "galaxyMenu": {
+    "titleWordOne": "L'UNIVERS",
+    "titleWordTwo": "D'ALLEMAND",
+    "begin": "LANCER",
+    "profile": "Profil",
+    "shop": "HANGAR",
+    "rank": "Classement",
+    "exit": "QUITTER"
+  },
+  "galaxyCabinet": {
+    "back": "RETOUR",
+    "id": "IDENTIFICATION",
+    "journey": "CARNET DE VOL",
+    "money": "ARTICS",
+    "commonPoints": "TOTAL POINTS",
+    "rank": "Rang:",
+    "streak": "RECORD:"
+  },
+  "galaxyRank": {
+    "none": "TERRIEN",
+    "rank-rookie": "CADET",
+    "rank-hunter": "EXPLORATEUR",
+    "rank-ace": "COSMO-PILOTE",
+    "rank-master": "MAÎTRE D'ORBITE",
+    "rank-legend": "AMIRAL DE FLOTTE"
+  },
+  "galaxyList": {
+    "alpha": "SPHÈRE DES ARTICLES",
+    "beta": "RÉGION PLURIEL",
+    "gamma": "CONSTELLATION DES SYNONYMES",
+    "delta": "AMAS D'ANTONYMES",
+    "epsilon": "NÉBULEUSE DES VERBES",
+    "zeta": "VECTEUR DES PRÉPOSITIONS",
+    "all": "TOUT L'UNIVERS"
+  },
+  "galaxyRankTable": {
+    "back": "RETOUR",
+    "title": "TOP PILOTES",
+    "scan": "SCAN EN COURS...",
+    "empty": "CE SECTEUR EST VIDE",
+    "emptySub": "Soyez le premier à conquérir ce système !"
+  },
+  "galaxyHangar": {
+    "leave": "QUITTER",
+    "money": "ARTICS",
+    "buy": "Acheter",
+    "inFlight": "EN VOL",
+    "change": "CHOISIR"
   }
 }

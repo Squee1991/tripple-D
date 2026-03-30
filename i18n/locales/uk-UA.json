@@ -5671,9 +5671,10 @@
     "themen": "Тематичні рівні",
     "idioms": "Фразеологізми",
     "wordDuel": "Дуель фраз",
-    "describePicture": "Опиши картинку",
     "quests": "Журнал Завдань",
-    "languagesLands": "Мовні землі"
+    "languagesLands": "Мовні землі",
+    "describePicture": "Опис картинок",
+    "fight": "Всесвіт німецької"
   },
   "underSub": {
     "prev": "Вступ",
@@ -6056,5 +6057,54 @@
     "mixed": "Змішані",
     "modal": "Модальні",
     "placeHolder": "Знайти дієслово..."
+  },
+  "galaxyMenu": {
+    "titleWordOne": "ВСЕСВІТ",
+    "titleWordTwo": "НІМЕЦЬКОЇ",
+    "begin": "ПОЧАТИ",
+    "profile": "Профіль",
+    "shop": "АНГАР",
+    "rank": "Рейтинг",
+    "exit": "ВИХІД"
+  },
+  "galaxyCabinet": {
+    "back": "НАЗАД",
+    "id": "ІДЕНТИФІКАЦІЯ",
+    "journey": "ЖУРНАЛ ВИЛЬОТІВ",
+    "money": "АРТІКСИ",
+    "commonPoints": "ЗАГАЛЬНІ ОЧКИ",
+    "rank": "Звання:",
+    "streak": "РЕКОРД:"
+  },
+  "galaxyRank": {
+    "none": "ЗЕМЛЯНИН",
+    "rank-rookie": "КАДЕТ",
+    "rank-hunter": "ДОСЛІДНИК",
+    "rank-ace": "КОСМО-ПІЛОТ",
+    "rank-master": "МАГІСТР ОРБІТИ",
+    "rank-legend": "АДМІРАЛ ФЛОТУ"
+  },
+  "galaxyList": {
+    "alpha": "СФЕРА АРТИКЛІВ",
+    "beta": "ОБЛАСТЬ МНОЖИНИ",
+    "gamma": "СУЗІР'Я СИНОНІМІВ",
+    "delta": "КЛАСТЕР АНТОНІМІВ",
+    "epsilon": "ТУМАННІСТЬ ДІЄСЛІВ",
+    "zeta": "ВЕКТОР ПРИЙМЕННИКІВ",
+    "all": "ВЕСЬ ВСЕСВІТ"
+  },
+  "galaxyRankTable": {
+    "back": "НАЗАД",
+    "title": "ТОП ПІЛОТІВ",
+    "scan": "СКАНУЮ...",
+    "empty": "У ЦЬОМУ СЕКТОРІ ПУСТО",
+    "emptySub": "Стань першим, хто підкорить цю систему!"
+  },
+  "galaxyHangar": {
+    "leave": "ВИЙТИ",
+    "money": "АРТІКСИ",
+    "buy": "Купити",
+    "inFlight": "У ПОЛЬОТІ",
+    "change": "ВИБРАТИ"
   }
 }

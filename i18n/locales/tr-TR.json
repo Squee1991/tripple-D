@@ -5671,9 +5671,10 @@
     "themen": "Tematik Seviyeler",
     "idioms": "Deyimler",
     "wordDuel": "İfade Düellosu",
-    "describePicture": "Describe Picture",
     "quests": "Görev Günlüğü",
-    "languagesLands": "Dil Diyarları"
+    "languagesLands": "Dil Diyarları",
+    "describePicture": "Resim Açıklama",
+    "fight": "Almanca Evreni"
   },
   "underSub": {
     "prev": "Giriş",
@@ -6056,5 +6057,54 @@
     "mixed": "Karışık",
     "modal": "Modal",
     "placeHolder": "Fiil bul..."
+  },
+  "galaxyMenu": {
+    "titleWordOne": "ALMANCA",
+    "titleWordTwo": "EVRENİ",
+    "begin": "BAŞLAT",
+    "profile": "Profil",
+    "shop": "HANGAR",
+    "rank": "Sıralama",
+    "exit": "ÇIKIŞ"
+  },
+  "galaxyCabinet": {
+    "back": "GERİ",
+    "id": "KİMLİK",
+    "journey": "UÇUŞ GÜNLÜĞÜ",
+    "money": "ARTİKS",
+    "commonPoints": "TOPLAM PUAN",
+    "rank": "Rütbe:",
+    "streak": "REKOR:"
+  },
+  "galaxyRank": {
+    "none": "DÜNYALI",
+    "rank-rookie": "KADET",
+    "rank-hunter": "KAŞİF",
+    "rank-ace": "UZAY PİLOTU",
+    "rank-master": "YÖRÜNGE USTASI",
+    "rank-legend": "FILO AMİRALİ"
+  },
+  "galaxyList": {
+    "alpha": "ARTİKEL KÜRESİ",
+    "beta": "ÇOĞUL BÖLGESİ",
+    "gamma": "EŞ ANLAMLI TAKIMYILDIZI",
+    "delta": "ZIT ANLAMLI KÜMESİ",
+    "epsilon": "FİİL BULUTSUSU",
+    "zeta": "EDAT VEKTÖRÜ",
+    "all": "TÜM EVREN"
+  },
+  "galaxyRankTable": {
+    "back": "GERİ",
+    "title": "EN İYİ PİLOTLAR",
+    "scan": "TARIYOR...",
+    "empty": "BU SEKTOR BOŞ",
+    "emptySub": "Bu sistemi fetheden ilk kişi ol!"
+  },
+  "galaxyHangar": {
+    "leave": "AYRIL",
+    "money": "ARTİKS",
+    "buy": "Satın Al",
+    "inFlight": "UÇUŞTA",
+    "change": "SEÇ"
   }
 }

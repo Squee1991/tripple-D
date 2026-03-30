@@ -5673,7 +5673,9 @@
     "wordDuel": "So'zlar dueli",
     "describePicture": "Describe Picture",
     "quests": "Kvest jurnali",
-    "languagesLands": "Til diyorlari"
+    "languagesLands": "Til diyorlari",
+    "describePicture": "Rasmlar tavsifi",
+    "fight": "Nemis tili koinoti"
   },
   "underSub": {
     "prev": "Kirish",
@@ -6056,5 +6058,54 @@
     "mixed": "Aralash",
     "modal": "Modal",
     "placeHolder": "Fe'lni topish..."
+  },
+  "galaxyMenu": {
+    "titleWordOne": "NEMIS TILI",
+    "titleWordTwo": "KOINOTI",
+    "begin": "BOSHLASH",
+    "profile": "Profil",
+    "shop": "ANGAR",
+    "rank": "Reyting",
+    "exit": "CHIQISH"
+  },
+  "galaxyCabinet": {
+    "back": "ORQAGA",
+    "id": "IDENTIFIKATSIYA",
+    "journey": "PARVOZLAR JURNALI",
+    "money": "ARTIKSLAR",
+    "commonPoints": "UMUMIY BALLAR",
+    "rank": "Unvon:",
+    "streak": "REKORD:"
+  },
+  "galaxyRank": {
+    "none": "YERLIK",
+    "rank-rookie": "KADET",
+    "rank-hunter": "TADQIQOTCHI",
+    "rank-ace": "KOSMO-PILOT",
+    "rank-master": "ORBITA MAGISTRI",
+    "rank-legend": "FLOT ADMIRALI"
+  },
+  "galaxyList": {
+    "alpha": "ARTIKLLAR SFERASI",
+    "beta": "KO'PLIK HUDUDI",
+    "gamma": "SINONIMLAR YULDUZ TURKUMI",
+    "delta": "ANTONIMLAR KLASTERI",
+    "epsilon": "FE'LLAR TUMANLIGI",
+    "zeta": "PRELOGLAR VEKTORI",
+    "all": "BUTUN KOINOT"
+  },
+  "galaxyRankTable": {
+    "back": "ORQAGA",
+    "title": "TOP PILOTLAR",
+    "scan": "SKANERLANMOQDA...",
+    "empty": "BU SEKTOR BO'SH",
+    "emptySub": "Ushbu tizimni zabt etgan birinchi inson bo'ling!"
+  },
+  "galaxyHangar": {
+    "leave": "CHIQISH",
+    "money": "ARTIKSLAR",
+    "buy": "Sotib olish",
+    "inFlight": "PARVOZDA",
+    "change": "TANLASH"
   }
 }

@@ -5671,9 +5671,10 @@
     "themen": "المستويات الموضوعية",
     "idioms": "التعابير الاصطلاحية",
     "wordDuel": "مبارزة العبارات",
-    "describePicture": "Describe Picture",
     "quests": "سجل المهام",
-    "languagesLands": "أراضي اللغات"
+    "languagesLands": "أراضي اللغات",
+    "describePicture": "وصف الصور",
+    "fight": "كون الألمانية"
   },
   "underSub": {
     "prev": "مقدمة",
@@ -6056,5 +6057,56 @@
     "mixed": "مختلطة",
     "modal": "ناقصة",
     "placeHolder": "ابحث عن فعل..."
+  },
+{
+  "galaxyMenu": {
+    "titleWordOne": "كون",
+    "titleWordTwo": "الألمانية",
+    "begin": "ابدأ",
+    "profile": "الملف الشخصي",
+    "shop": "الحظيرة",
+    "rank": "التصنيف",
+    "exit": "خروج"
+  },
+  "galaxyCabinet": {
+    "back": "رجوع",
+    "id": "الهوية",
+    "journey": "سجل الرحلات",
+    "money": "أرتيكس",
+    "commonPoints": "إجمالي النقاط",
+    "rank": "الرتبة:",
+    "streak": "الرقم القياسي:"
+  },
+  "galaxyRank": {
+    "none": "أرضي",
+    "rank-rookie": "مبتدئ",
+    "rank-hunter": "مستكشف",
+    "rank-ace": "طيار فضاء",
+    "rank-master": "سيد المدار",
+    "rank-legend": "أدميرال الأسطول"
+  },
+  "galaxyList": {
+    "alpha": "مجال الأدوات",
+    "beta": "منطقة الجمع",
+    "gamma": "كوكبة المرادفات",
+    "delta": "عنقود الأضداد",
+    "epsilon": "سديم الأفعال",
+    "zeta": "متجه حروف الجر",
+    "all": "الكون كله"
+  },
+  "galaxyRankTable": {
+    "back": "رجوع",
+    "title": "أفضل الطيارين",
+    "scan": "جاري المسح...",
+    "empty": "هذا القطاع فارغ",
+    "emptySub": "كن أول من يغزو هذا النظام!"
+  },
+  "galaxyHangar": {
+    "leave": "مغادرة",
+    "money": "أرتيكس",
+    "buy": "شراء",
+    "inFlight": "في تحليق",
+    "change": "اختيار"
   }
+}
 }

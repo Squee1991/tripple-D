@@ -5,7 +5,7 @@ import {useGalaxyStore} from '../../../store/galaxyStore.js'
 const emit = defineEmits(['close'])
 const store = useGalaxyStore()
 const currentIdx = ref(0)
-
+const { t } = useI18n()
 const currentTank = computed(() => store.tankList[currentIdx.value])
 const isSelected = computed(() => store.selectedTankId === currentTank.value.id)
 const isOwned = computed(() => store.ownedTanks.includes(currentTank.value.id))
@@ -35,10 +35,10 @@ onMounted(async () => {
     </div>
     <div class="funky-hud">
       <button class="funky-exit-btn" @click="$emit('close')">
-        <span>ВЫЙТИ</span>
+        <span>{{ t('galaxyHangar.leave')}}</span>
       </button>
       <div class="funky-balance-plate">
-        <span class="currency-label">АРТИКСЫ:</span>
+        <span class="currency-label">{{ t('galaxyHangar.money')}}</span>
         <span class="balance-num">{{ store.balance }}</span>
       </div>
     </div>
@@ -59,10 +59,10 @@ onMounted(async () => {
         <h2 class="ship-title">{{ currentTank.name }}</h2>
         <div class="controls-group">
           <button v-if="!isOwned" class="btn-action buy" @click="handleBuy">
-            Купить {{ currentTank.price }}
+            {{ t('galaxyHangar.buy')}} {{ currentTank.price }}
           </button>
           <button v-else class="btn-action select" :class="{ is_active: isSelected }" @click="handleSelect">
-            {{ isSelected ? 'В ПОЛЁТЕ' : 'ВЫБРАТЬ' }}
+            {{ isSelected ? t('galaxyHangar.inFlight') : t('galaxyHangar.change') }}
           </button>
         </div>
       </div>

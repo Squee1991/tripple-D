@@ -5671,9 +5671,10 @@
     "themen": "Thematic Levels",
     "idioms": "Idioms",
     "wordDuel": "Phrase Duel",
-    "describePicture": "Describe Picture",
     "quests": "Quest Journal",
-    "languagesLands": "Language Lands"
+    "languagesLands": "Language Lands",
+    "describePicture": "Picture Description",
+    "fight": "German Universe"
   },
   "underSub": {
     "prev": "Introduction",
@@ -6056,5 +6057,54 @@
     "mixed": "Mixed",
     "modal": "Modal",
     "placeHolder": "Search verb..."
+  },
+  "galaxyMenu": {
+    "titleWordOne": "UNIVERSE",
+    "titleWordTwo": "OF GERMAN",
+    "begin": "LAUNCH",
+    "profile": "Profile",
+    "shop": "HANGAR",
+    "rank": "Ranking",
+    "exit": "EXIT"
+  },
+  "galaxyCabinet": {
+    "back": "BACK",
+    "id": "IDENTIFICATION",
+    "journey": "FLIGHT LOG",
+    "money": "ARTICS",
+    "commonPoints": "TOTAL POINTS",
+    "rank": "Rank:",
+    "streak": "RECORD:"
+  },
+  "galaxyRank": {
+    "none": "EARTHLING",
+    "rank-rookie": "CADET",
+    "rank-hunter": "EXPLORER",
+    "rank-ace": "SPACE PILOT",
+    "rank-master": "ORBIT MASTER",
+    "rank-legend": "FLEET ADMIRAL"
+  },
+  "galaxyList": {
+    "alpha": "ARTICLE SPHERE",
+    "beta": "PLURAL REGION",
+    "gamma": "SYNONYM CONSTELLATION",
+    "delta": "ANTONYM CLUSTER",
+    "epsilon": "VERB NEBULA",
+    "zeta": "PREPOSITION VECTOR",
+    "all": "ENTIRE UNIVERSE"
+  },
+  "galaxyRankTable": {
+    "back": "BACK",
+    "title": "TOP PILOTS",
+    "scan": "SCANNING...",
+    "empty": "THIS SECTOR IS EMPTY",
+    "emptySub": "Be the first to conquer this system!"
+  },
+  "galaxyHangar": {
+    "leave": "LEAVE",
+    "money": "ARTICS",
+    "buy": "Buy",
+    "inFlight": "IN FLIGHT",
+    "change": "SELECT"
   }
 }

@@ -4,7 +4,7 @@ import {useGalaxyStore} from '../../../store/galaxyStore.js'
 
 const emit = defineEmits(['close'])
 const store = useGalaxyStore()
-
+const { t } = useI18n()
 const isEditingName = ref(false)
 const tempName = ref(store.captainName)
 
@@ -20,23 +20,22 @@ const handleSaveName = async () => {
   isEditingName.value = false
 }
 
-// Ранги на основе рекорда
 const getRank = (score) => {
-  if (score >= 150) return {label: 'ЛЕГЕНДА', class: 'rank-legend'}
-  if (score >= 80) return {label: 'МАСТЕР', class: 'rank-master'}
-  if (score >= 40) return {label: 'АС', class: 'rank-ace'}
-  if (score >= 15) return {label: 'ОХОТНИК', class: 'rank-hunter'}
-  if (score > 0) return {label: 'НОВИЧОК', class: 'rank-rookie'}
-  return {label: 'НЕИЗВЕСТНО', class: 'rank-none'}
+  if (score >= 200) return {label: t('galaxyRank.rank-legend'), class: 'rank-legend'}
+  if (score >= 150) return {label: t('galaxyRank.rank-master'), class: 'rank-master'}
+  if (score >= 100) return {label: t('galaxyRank.rank-ace'), class: 'rank-ace'}
+  if (score >= 50) return {label: t('galaxyRank.rank-hunter'), class: 'rank-hunter'}
+  if (score > 0) return {label: t('galaxyRank.rank-rookie'), class: 'rank-rookie'}
+  return {label: t('galaxyRank.none'), class: 'rank-none'}
 }
 
 const galaxyList = [
-  {id: 'alpha', label: 'АЛЬФА', color: '#ff99c2'},
-  {id: 'beta', label: 'БЕТА', color: '#66d9ff'},
-  {id: 'gamma', label: 'ГАММА', color: '#aaff66'},
-  {id: 'delta', label: 'ДЕЛЬТА', color: '#ffcc00'},
-  {id: 'epsilon', label: 'ЭПСИЛОН', color: '#b366ff'},
-  {id: 'zeta', label: 'ЗЕТА', color: '#ff6666'}
+  {id: 'alpha', label: t('galaxyList.alpha'), color: '#ff99c2'},
+  {id: 'beta', label: t('galaxyList.beta'), color: '#66d9ff'},
+  {id: 'gamma', label: t('galaxyList.gamma'), color: '#aaff66'},
+  {id: 'delta', label: t('galaxyList.delta'), color: '#ffcc00'},
+  {id: 'epsilon', label: t('galaxyList.epsilon'), color: '#b366ff'},
+  {id: 'zeta', label: t('galaxyList.zeta'), color: '#ff6666'}
 ]
 
 const totalPoints = computed(() => {
@@ -55,15 +54,14 @@ onMounted(async () => {
     <div class="cabinet-bg">
       <div class="dot-pattern"></div>
     </div>
-
     <div class="cabinet-header">
-      <button class="toon-btn back-btn" @click="$emit('close')">◀ НАЗАД</button>
+      <button class="toon-btn back-btn" @click="$emit('close')">◀ {{t('galaxyCabinet.back')}}</button>
       <div class="sync-pill"></div>
     </div>
 
     <div class="main-layout">
       <div class="side-panel">
-        <h3 class="side-label">ИДЕНТИФИКАЦИЯ</h3>
+        <h3 class="side-label">{{t('galaxyCabinet.id')}}</h3>
         <div class="toon-card profile-card">
           <div class="name-container">
             <div class="ship-icon-wrapper mobile-only-icon">
@@ -94,14 +92,14 @@ onMounted(async () => {
       </div>
 
       <div class="side-panel">
-        <h3 class="side-label">ЖУРНАЛ ВЫЛЕТОВ</h3>
+        <h3 class="side-label">{{t('galaxyCabinet.journey')}}</h3>
         <div class="main-stats">
           <div class="toon-card stat-card yellow">
-            <span class="stat-label">АРТИКСЫ</span>
+            <span class="stat-label">{{t('galaxyCabinet.money')}}</span>
             <span class="stat-val">{{ store.balance }} Ⓐ</span>
           </div>
           <div class="toon-card stat-card blue">
-            <span class="stat-label">ОБЩИЕ ОЧКИ</span>
+            <span class="stat-label">{{t('galaxyCabinet.commonPoints')}}</span>
             <span class="stat-val">{{ totalPoints.toLocaleString() }}</span>
           </div>
         </div>
@@ -115,10 +113,11 @@ onMounted(async () => {
           >
             <div class="g-header">
               <span class="g-title">{{ g.label }}</span>
-              <div class="g-rank-badge">{{ getRank(store.highScores[g.id] || 0).label }}</div>
+              <div class="g-rank-badge">{{t('galaxyCabinet.rank')}} {{ getRank(store.highScores[g.id] || 0).label }}</div>
             </div>
             <div class="g-body">
-              <div class="g-score-line">РЕКОРД: <span class="score-highlight">{{ store.highScores[g.id] || 0 }}</span>
+              <div class="g-score-line">
+                <span class="score-highlight">{{t('galaxyCabinet.streak')}} {{ store.highScores[g.id] || 0 }}</span>
               </div>
             </div>
           </div>
@@ -470,13 +469,13 @@ onMounted(async () => {
 }
 
 .g-title {
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-weight: 900;
   text-shadow: 1px 1px 0 #fff;
 }
 
 .g-rank-badge {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-weight: 900;
   background: #1a1a1a;
   color: #fff;
