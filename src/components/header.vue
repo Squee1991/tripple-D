@@ -292,6 +292,7 @@ const menuItems = computed(() => {
                 ],
               },
               {id: 'description', url: '/description-images' , valueKey: 'Описание картинок'},
+              {id: 'audio', url: '/audio-tasks' , valueKey: 'Аудио задания'},
               {id: 'themen', url: '/thematic-learning', valueKey: 'sub.themen'},
               {id: 'cards', url: '/create-cards', valueKey: 'sub.card'},
               {id: 'idioms', url: '/idioms', valueKey: 'sub.idioms'}
@@ -301,7 +302,7 @@ const menuItems = computed(() => {
             id: 'duel',
             valueKey: 'nav.gameMode',
             children: [
-              // {id: 'fight', url: '/games', valueKey: 'Галактика артиклей'},
+              {id: 'fight', url: '/games', valueKey: 'Галактика артиклей'},
               {id: 'duel-pvp', valueKey: 'sub.pvp', action: openDevModal},
               {id: 'wordDuel', url: '/sentence-duel', valueKey: 'sub.wordDuel'},
               {id: 'quests', url: '/recipes', valueKey: 'sub.quests'},
@@ -598,6 +599,8 @@ onBeforeUnmount(() => {
   position: sticky;
   top: 0;
   z-index: 3;
+  max-width: 1420px;
+  margin: 0 auto;
   background-color: var(--navBg);
   border-bottom: 4px solid var(--borderBottom);
   border-bottom-left-radius: 15px;
