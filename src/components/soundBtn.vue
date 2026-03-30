@@ -17,7 +17,7 @@ import DefaultSoundIcon from '../../assets/images/SoundIcon.svg'
 const isSpeaking = ref(false)
 
 const props = defineProps({
-  content: { type: [String, Array], required: true },
+  text: { type: [String, Array], required: true },
   lang: { type: String, default: 'de-DE' },
   icon: { type: String, default: DefaultSoundIcon }
 })
@@ -37,7 +37,7 @@ async function handleSpeak() {
   try {
     if (Array.isArray(props.content)) {
       for (const line of props.content) {
-        await getSpeechAudio(cleanText(line.text), props.lang, line.gender || 'FEMALE')
+        await getSpeechAudio(cleanText(line.text), props.lang)
       }
     } else {
       await getSpeechAudio(cleanText(props.content), props.lang)

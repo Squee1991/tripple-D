@@ -104,7 +104,7 @@
             </template>
             <template v-else-if="questStore.task.type === 'speechToText'">
               <div class="quest__speech">
-                <SoundBtn :text="questStore.task.text"/>
+                <SoundBtn :content="questStore.task.text"/>
                 <input
                     ref="speechInputRef"
                     type="text"

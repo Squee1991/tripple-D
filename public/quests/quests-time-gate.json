@@ -15,7 +15,7 @@
         "id": 1,
         "type": "reorder",
         "question": "timeGageQuestOne.questOne",
-        "words": ["+ЫЯФЫФЯЫЧЫЧЯЧwerde", "dich", "bald", "besuchen", "Ich", "wirst", "dir"],
+        "words": ["werde", "dich", "bald", "besuchen", "Ich", "wirst", "dir"],
         "correctOrder": ["Ich", "werde", "dich", "bald", "besuchen"],
         "tip": "timeGageQuestOne.questOneTip"
       },
@@ -32,7 +32,7 @@
         "type": "speechToText",
         "question": "timeGageQuestOne.questThree",
         "text": "Ich helfe dir sehr gern",
-        "answer": "Ich helfe dir очень охотно",
+        "answer": "Ich helfe dir sehr gern",
         "tip": "timeGageQuestOne.questThreeTip"
       },
       {
