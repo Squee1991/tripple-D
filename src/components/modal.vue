@@ -6,7 +6,7 @@
           <button class="modal-close" @click="closeModal">×</button>
           <div class="modal-content">
             <h3 class="modal-title">{{ title }}</h3>
-            <img class="modal__icon" :src="img" alt="">
+            <img class="modal__icon" :src="img" :alt="alt">
             <p class="modal-text"> {{ text }}</p>
             <p class="modal-text"> {{ description }}</p>
             <button class="modal__btn" v-if="button" @click="$emit('button')">
@@ -35,7 +35,8 @@ const props = defineProps({
     required: true
   },
   img: {
-    type: String
+    type: String,
+    alt: ''
   },
   title: {
     type: String,
