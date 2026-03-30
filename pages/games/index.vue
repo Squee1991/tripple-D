@@ -6,6 +6,7 @@
       <div v-for="n in 12" :key="n" class="floating-toon-star" :style="getRandomPos(n)">
         {{ n % 2 === 0 ? '⭐' : '✨' }}
       </div>
+
       <img v-for="astro in astronauts" :key="'astro' + astro.id" :src="Astronaut"
           class="floating-astronaut"
           :style="{
