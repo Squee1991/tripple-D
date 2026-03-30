@@ -1,59 +1,65 @@
-<template>
-  <div class="hangar-fullscreen-toon">
-    <div class="toon-space-bg">
-      <div class="toon-stars"></div>
-    </div>
+<script setup>
+import {ref, computed} from 'vue'
+import {useGalaxyStore} from '../../store/galaxyStore.js'
 
-    <div class="top-hud">
-      <button class="back-cyber-btn toon-style" @click="$emit('close')">
+const emit = defineEmits(['close'])
+const store = useGalaxyStore()
+const currentIdx = ref(0)
+
+// Логика из Firebase-стора
+const currentTank = computed(() => store.tankList[currentIdx.value])
+const isSelected = computed(() => store.selectedTankId === currentTank.value.id)
+const isOwned = computed(() => store.ownedTanks.includes(currentTank.value.id))
+
+const nextTank = () => currentIdx.value = (currentIdx.value + 1) % store.tankList.length
+const prevTank = () => currentIdx.value = (currentIdx.value - 1 + store.tankList.length) % store.tankList.length
+
+// Только привязка к Firebase
+const handleBuy = async () => {
+  await store.buyShip(currentTank.value)
+}
+
+const handleSelect = async () => {
+  await store.selectShip(currentTank.value.id)
+}
+</script>
+
+<template>
+  <div class="funky-hangar-root">
+    <div class="funky-bg">
+      <div class="stars-layer"></div>
+      <div class="neon-glow"></div>
+    </div>
+    <div class="funky-hud">
+      <button class="funky-exit-btn" @click="$emit('close')">
         <span>ВЫЙТИ</span>
       </button>
-      <div class="cyber-plank toon-style balance-display">
-        <span class="credits-val">{{ balance }} 💎</span>
+      <div class="funky-balance-plate">
+        <span class="currency-label">АРТИКСЫ:</span>
+        <span class="balance-num">{{ store.balance }} Ⓐ</span>
       </div>
     </div>
-
-    <div class="ship-showroom">
-      <button class="nav-btn toon-arrow left" @click="prevTank">◀</button>
-
-      <div class="ship-stage-container">
-        <div class="ship__inner">
-          <Transition name="ship-pop" mode="out-in">
-            <div :key="currentIdx" class="ship-active-zone">
-              <img :src="tankList[currentIdx].img" class="ship-main-img toon-ship" alt="Spaceship"/>
-              <div class="holo-platform toon-platform"></div>
-            </div>
-          </Transition>
-
-          <div class="stats-cyber-panel toon-panel">
-            <div class="stat-row">
-              <span class="label toon-label">POWER</span>
-              <div class="bar-bg toon-bar-bg">
-                <div class="bar-fill toon-orange" :style="{width: tankList[currentIdx].power + '%'}"></div>
-              </div>
-            </div>
-            <div class="stat-row">
-              <span class="label toon-label">WARP</span>
-              <div class="bar-bg toon-bar-bg">
-                <div class="bar-fill toon-cyan" :style="{width: tankList[currentIdx].speed + '%'}"></div>
-              </div>
-            </div>
+    <div class="funky-showroom">
+      <button class="nav-arrow left" @click="prevTank">◀</button>
+      <div class="ship-display-area">
+        <Transition name="funky-pop" mode="out-in">
+          <div :key="currentIdx" class="ship-presentation">
+            <img :src="currentTank.img" class="ship-main-render" :alt="currentTank.name"/>
+            <div class="disco-platform"></div>
           </div>
-        </div>
+        </Transition>
       </div>
-
-      <button class="nav-btn toon-arrow right" @click="nextTank">▶</button>
+      <button class="nav-arrow right" @click="nextTank">▶</button>
     </div>
-
-    <div class="bottom-card-wrapper">
-      <div class="info-terminal toon-terminal">
-        <h2 class="ship-name-display toon-title">{{ tankList[currentIdx].name }}</h2>
-        <div class="action-btn-container">
-          <button v-if="!tankList[currentIdx].owned" class="cyber-action buy toon-buy" @click="buyTank">
-            КУПИТЬ: {{ tankList[currentIdx].price }}
+    <div class="funky-footer">
+      <div class="info-module">
+        <h2 class="ship-title">{{ currentTank.name }}</h2>
+        <div class="controls-group">
+          <button v-if="!isOwned" class="btn-action buy" @click="handleBuy">
+            ЗАБРАТЬ ЗА {{ currentTank.price }}
           </button>
-          <button v-else class="cyber-action select toon-select" :class="{ active: isSelected }" @click="selectTank">
-            {{ isSelected ? 'ГОТОВ!' : 'ВЫБРАТЬ' }}
+          <button v-else class="btn-action select" :class="{ is_active: isSelected }" @click="handleSelect">
+            {{ isSelected ? 'В ПОЛЁТЕ' : 'ВЫБРАТЬ' }}
           </button>
         </div>
       </div>
@@ -61,298 +67,219 @@
   </div>
 </template>
 
-<script setup>
-import {ref, computed, onMounted} from 'vue'
-import Spaceship from '@/assets/images/spaceship.svg'
-import Spaceship2 from '@/assets/images/spaceship-2.svg'
-import Spaceship3 from '@/assets/images/spaceship-3.svg'
-import Spaceship4 from '@/assets/images/spaceship-4.svg'
-import Spaceship5 from '@/assets/images/spaceship-5.svg'
-
-const emit = defineEmits(['close'])
-
-const balance = ref(3500)
-const currentIdx = ref(0)
-const selectedTankId = ref(1)
-
-const tankList = ref([
-  {id: 1, name: 'FALKE-01', img: Spaceship, price: 0, owned: true, power: 30, speed: 95},
-  {id: 2, name: 'NOVA-02', img: Spaceship2, price: 600, owned: false, power: 55, speed: 75},
-  {id: 3, name: 'STERN-03', img: Spaceship3, price: 1500, owned: false, power: 80, speed: 50},
-  {id: 4, name: 'KOMET-04', img: Spaceship4, price: 3000, owned: false, power: 90, speed: 35},
-  {id: 5, name: 'VOID-X', img: Spaceship5, price: 6000, owned: false, power: 100, speed: 15},
-])
-
-const isSelected = computed(() => selectedTankId.value === tankList.value[currentIdx.value].id)
-
-const nextTank = () => currentIdx.value = (currentIdx.value + 1) % tankList.value.length
-const prevTank = () => currentIdx.value = (currentIdx.value - 1 + tankList.value.length) % tankList.value.length
-
-const buyTank = () => {
-  const ship = tankList.value[currentIdx.value]
-  if (balance.value >= ship.price) {
-    balance.value -= ship.price
-    ship.owned = true
-    saveData()
-  }
-}
-
-const selectTank = () => {
-  selectedTankId.value = tankList.value[currentIdx.value].id
-  localStorage.setItem('selectedTank', selectedTankId.value)
-}
-
-const saveData = () => {
-  const owned = tankList.value.filter(t => t.owned).map(t => t.id)
-  localStorage.setItem('ownedTanks', JSON.stringify(owned))
-}
-
-onMounted(() => {
-  const savedOwned = JSON.parse(localStorage.getItem('ownedTanks') || '[1]')
-  tankList.value.forEach(t => t.owned = savedOwned.includes(t.id))
-  selectedTankId.value = Number(localStorage.getItem('selectedTank')) || 1
-})
-</script>
-
 <style scoped>
-/* --- ОСНОВНОЙ КОНТЕЙНЕР --- */
-.hangar-fullscreen-toon {
+.funky-hangar-root {
   position: fixed;
   inset: 0;
   width: 100vw;
   height: 100vh;
   z-index: 2000;
-  background: #2c3e50; /* Более яркий темный фон */
+  background: #0f0c29;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 30px;
   box-sizing: border-box;
-  /* Используем более округлый, мультяшный шрифт, если есть, иначе стандартный жирный */
-  font-family: 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif;
-  font-weight: bold;
+  font-family: 'Arial Black', 'Gadget', sans-serif;
   overflow: hidden;
+  user-select: none;
 }
 
-/* --- МУЛЬТЯШНЫЙ ФОН --- */
-.toon-space-bg {
+.funky-bg {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at center, #34495e 0%, #2c3e50 100%);
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
   z-index: -1;
 }
 
-.toon-stars {
-  position: absolute; inset: 0;
-  background-image: radial-gradient(white 2px, transparent 2px), radial-gradient(white 1px, transparent 1px);
-  background-size: 50px 50px;
-  background-position: 0 0, 25px 25px;
-  opacity: 0.3;
+.stars-layer {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(2px 2px at 20px 30px, #eee, rgba(0, 0, 0, 0)),
+  radial-gradient(2px 2px at 40px 70px, #fff, rgba(0, 0, 0, 0)),
+  radial-gradient(2px 2px at 50px 160px, #ff00ff, rgba(0, 0, 0, 0)),
+  radial-gradient(2px 2px at 90px 40px, #00f2ff, rgba(0, 0, 0, 0));
+  background-size: 200px 200px;
+  opacity: 0.5;
+  animation: bgScroll 60s linear infinite;
 }
 
-/* --- HUD ВЕРХ (Те же формы, новый стиль) --- */
-.top-hud {
+.neon-glow {
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(circle, rgba(255, 0, 255, 0.1) 0%, transparent 50%);
+  top: -25%;
+  left: -25%;
+  filter: blur(80px);
+}
+
+@keyframes bgScroll {
+  from { background-position: 0 0; }
+  to { background-position: 1000px 1000px; }
+}
+
+.funky-hud {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  z-index: 10;
 }
 
-/* Общий стиль для мультяшных элементов с clip-path */
-.toon-style {
-  background: #fff;
-  border: 4px solid #000 !important; /* Жирная обводка */
-  color: #000;
-  box-shadow: 4px 4px 0px #000; /* Жесткая тень */
-  text-shadow: none;
-  font-weight: 900;
-}
-
-.back-cyber-btn.toon-style {
-  padding: 8px 20px;
-  cursor: pointer;
-  /* Оставляем твой clip-path */
-  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 100%, 10px 100%);
-  transition: 0.1s;
-  font-size: 20px;
-  background: #ff5252; /* Красная кнопка выхода */
+.funky-exit-btn {
+  background: #ff0055;
+  border: 4px solid #000;
+  padding: 12px 25px;
   color: #fff;
-}
-
-.back-cyber-btn.toon-style:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0px #000;
-}
-
-.cyber-plank.toon-style {
-  padding: 8px 30px;
-  background: #f1c40f; /* Желтая плашка баланса */
-  /* Оставляем твой clip-path */
-  clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
-}
-
-.credits-val {
-  color: #000;
-  font-size: 1.4rem;
   font-weight: 900;
+  box-shadow: 6px 6px 0px #000;
+  cursor: pointer;
+  transform: skewX(-10deg);
+  transition: 0.2s;
 }
 
-/* --- ШОУРУМ --- */
-.ship-showroom {
+.funky-exit-btn:hover {
+  transform: skewX(-10deg) scale(1.1);
+  background: #ff2e7e;
+  box-shadow: 4px 4px 0px #000;
+}
+
+.funky-balance-plate {
+  background: #ccff00;
+  border: 4px solid #000;
+  padding: 10px 30px;
+  box-shadow: 6px 6px 0px #000;
+  transform: skewX(10deg);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.currency-label { color: #000; font-size: 0.9rem; }
+.balance-num { color: #000; font-size: 1.6rem; font-weight: 900; }
+
+.funky-showroom {
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex: 1;
-  max-width: 900px;
-  margin: 0 auto;
-  width: 100%;
-  gap: 35px;
+  gap: 20px;
+  padding: 20px 0;
 }
 
-.ship-active-zone {
+.nav-arrow {
+  width: 70px;
+  height: 70px;
+  background: #fff;
+  border: 5px solid #000;
+  border-radius: 15px;
+  font-size: 2rem;
+  cursor: pointer;
+  box-shadow: 8px 8px 0px #000;
+  transition: 0.1s;
+}
+
+.nav-arrow:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 4px 4px 0px #000;
+  background: #ccff00;
+}
+
+.ship-presentation {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 20px;
 }
 
-/* Мультяшный корабль */
-.ship-main-img.toon-ship {
-  width: 220px;
-  /* Жесткая черная тень вместо свечения */
-  filter: drop-shadow(5px 5px 0px rgba(0,0,0,0.5));
-  animation: hover 4s ease-in-out infinite;
+.ship-main-render {
+  width: 280px;
+  filter: drop-shadow(0 0 20px rgba(0, 242, 255, 0.6));
+  animation: funkyFloat 4s ease-in-out infinite;
 }
 
-@keyframes hover {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-15px) rotate(2deg); }
+@keyframes funkyFloat {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-25px) rotate(2deg); }
 }
 
-/* Мультяшная платформа */
-.holo-platform.toon-platform {
-  width: 180px;
-  height: 20px;
-  background: #3498db;
-  border: 3px solid #000;
+.disco-platform {
+  width: 250px;
+  height: 40px;
+  background: #000;
+  border: 4px solid #00f2ff;
   border-radius: 50%;
-  opacity: 1; /* Не прозрачная */
-  margin-top: 15px;
-  box-shadow: 0 5px 0px #000; /* Жесткая тень */
+  margin-top: 30px;
+  position: relative;
+  box-shadow: 0 0 30px rgba(255, 0, 255, 0.5);
 }
 
-/* Мультяшные стрелки */
-.nav-btn.toon-arrow {
-  width: 50px; height: 50px;
+.funky-footer {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.info-module {
   background: #fff;
-  border: 4px solid #000;
-  color: #000;
-  font-size: 1.5rem;
-  cursor: pointer;
-  transition: 0.1s;
-  box-shadow: 4px 4px 0 #000;
-  border-radius: 10px; /* Чуть скруглил, но можно оставить квадратными */
-}
-
-.nav-btn.toon-arrow:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0 #000;
-  background: #f1c40f;
-}
-
-/* --- ПАНЕЛЬ СТАТОВ (Мультяшная) --- */
-.stats-cyber-panel.toon-panel {
-  background: #fff;
-  padding: 15px;
-  border: 4px solid #000;
-  width: 180px;
-  margin-top: 20px;
-  border-radius: 15px;
-  box-shadow: 6px 6px 0 #000;
-}
-
-.label.toon-label {
-  color: #000;
-  font-size: 0.8rem;
-  font-weight: 900;
-  margin-bottom: 5px;
-  display: block;
-}
-
-.bar-bg.toon-bar-bg {
-  width: 100%; height: 12px;
-  background: #bdc3c7;
-  border: 3px solid #000;
-  border-radius: 6px;
-  margin-bottom: 10px;
-  overflow: hidden;
-}
-
-.bar-fill.toon-orange { background: #e67e22; }
-.bar-fill.toon-cyan { background: #3498db; }
-
-/* --- НИЖНИЙ ТЕРМИНАЛ (Те же формы, новый стиль) --- */
-.bottom-card-wrapper { display: flex; justify-content: center; margin-top: 20px; }
-
-.info-terminal.toon-terminal {
-  background: #fff;
-  border: 5px solid #000; /* Жирная рамка */
-  padding: 25px;
-  text-align: center;
+  border: 6px solid #000;
+  padding: 30px;
   width: 100%;
-  max-width: 400px;
-  /* Оставляем твой сложный clip-path */
-  clip-path: polygon(0 10px, 10px 0, calc(100% - 10px) 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 0 calc(100% - 10px));
-  box-shadow: 8px 8px 0px rgba(0,0,0,0.3); /* Тень для объема */
-  color: #000;
+  max-width: 450px;
+  box-shadow: 15px 15px 0px #ff00ff;
+  transform: rotate(-1deg);
 }
 
-.ship-name-display.toon-title {
+.ship-title {
   color: #000;
-  font-size: 1.6rem;
-  font-weight: 900;
-  margin-bottom: 15px;
-  text-shadow: none;
+  font-size: 2.2rem;
+  margin: 0 0 20px 0;
+  text-align: center;
   text-transform: uppercase;
+  letter-spacing: -1px;
 }
 
-/* КНОПКИ ДЕЙСТВИЙ */
-.cyber-action {
-  width: 100%; padding: 15px;
-  font-size: 1.1rem; font-weight: 900;
-  background: #fff;
+.btn-action {
+  width: 100%;
+  padding: 20px;
+  font-size: 1.5rem;
+  font-weight: 900;
+  border: 5px solid #000;
   cursor: pointer;
+  box-shadow: 8px 8px 0px #000;
   transition: 0.1s;
-  border: 4px solid #000 !important; /* Принудительно жирная рамка */
-  box-shadow: 4px 4px 0 #000;
-  color: #000;
-  margin-top: 10px;
 }
 
-.cyber-action:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0 #000;
-}
+.btn-action.buy { background: #ccff00; color: #000; }
+.btn-action.select { background: #00f2ff; color: #000; }
 
-.buy.toon-buy { background: #f1c40f; } /* Желтая кнопка купить */
-.select.toon-select { background: #3498db; color: #fff;} /* Синяя кнопка выбрать */
-
-.select.active {
-  background: #2ecc71; /* Зеленая активная */
-  color: #fff;
-  box-shadow: none;
+.btn-action:active {
   transform: translate(4px, 4px);
+  box-shadow: 2px 2px 0px #000;
+}
+
+.btn-action.is_active {
+  background: #2ecc71;
+  color: #fff;
   pointer-events: none;
+  box-shadow: none;
+  transform: translate(6px, 6px);
 }
 
-/* АДАПТИВ */
+.funky-pop-enter-active { animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+.funky-pop-leave-active { animation: popOut 0.2s ease-in; }
+
+@keyframes popIn {
+  0% { opacity: 0; transform: scale(0.6) translateY(50px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes popOut {
+  to { opacity: 0; transform: scale(1.1) translateY(-30px); }
+}
+
 @media (max-width: 600px) {
-  .ship-main-img.toon-ship { width: 160px; }
-  .nav-btn.toon-arrow { width: 45px; height: 45px; }
-  .ship-name-display.toon-title { font-size: 1.3rem; }
-  .credits-val { font-size: 1.1rem; }
+  .ship-main-render { width: 200px; }
+  .info-module { width: 90%; transform: none; }
+  .nav-arrow { width: 50px; height: 50px; }
 }
-
-/* Твоя анимация (оставил без изменений) */
-.ship-pop-enter-active, .ship-pop-leave-active { transition: all 0.3s ease; }
-.ship-pop-enter-from { opacity: 0; transform: scale(0.9) translateX(30px); }
-.ship-pop-leave-to { opacity: 0; transform: scale(0.9) translateX(-30px); }
 </style>
