@@ -3,7 +3,6 @@
     <div class="space-environment">
       <div class="nebula-cloud blue"></div>
       <div class="nebula-cloud purple"></div>
-
       <div v-for="n in 15" :key="n" class="floating-toon-star" :style="getRandomPos(n)">
         {{ n % 2 === 0 ? '⭐' : '✨' }}
       </div>
@@ -20,8 +19,9 @@
           <span class="icon">🚀</span> В БОЙ!
         </button>
         <div class="secondary-btns">
+          <button class="menu-btn-toon settings" @click="toggleScreen('settings')">Профиль</button>
           <button class="menu-btn-toon hangar" @click="toggleScreen('shop')">АНГАР</button>
-          <button class="menu-btn-toon settings" @click="toggleScreen('settings')">КАБИНА</button>
+          <button class="menu-btn-toon rank-btn" @click="toggleScreen('rank')">Рейтинг</button>
           <button class="menu-btn-toon exit" @click="handleExit">ВЫХОД</button>
         </div>
       </div>
@@ -32,7 +32,8 @@
           @back="toggleScreen('menu')"
           @select="startMission"
       />
-      <VGameSettings v-if="showSettings" @close="toggleScreen('menu')"/>
+      <VRankGalaxy v-if="showRank" @close="toggleScreen('menu')"/>
+      <VGameCabinet v-if="showSettings" @close="toggleScreen('menu')"/>
       <VGameHangar v-if="showShop" @close="toggleScreen('menu')"/>
     </div>
     <Transition name="warp-flash">
@@ -46,9 +47,10 @@ import { ref } from 'vue'
 import { useRouter } from "vue-router"
 import { useGalaxyStore } from '../../store/galaxyStore.js'
 
-import VGameSettings from '../../src/components/V-gameSettings.vue'
-import VGameHangar from '../../src/components/V-gameHangar.vue'
-import VGalaxySelector from '../../src/components/V-galaxySelector.vue'
+import VGameCabinet from '../../src/components/galaxy-game/V-gameCabinet.vue'
+import VGameHangar from '../../src/components/galaxy-game/V-gameHangar.vue'
+import VGalaxySelector from '../../src/components/galaxy-game/V-galaxySelector.vue'
+import VRankGalaxy from "../../src/components/galaxy-game/V-rank-galaxy.vue";
 
 const router = useRouter()
 const store = useGalaxyStore()
@@ -56,6 +58,7 @@ const { locale } = useI18n()
 
 const showSettings = ref(false)
 const showShop = ref(false)
+const showRank = ref(false)
 const showGalaxySelector = ref(false)
 const isTransitioning = ref(false)
 
@@ -68,8 +71,9 @@ const getRandomPos = (n) => ({
 
 const handleExit = () => router.push(`/${locale.value}`)
 const toggleScreen = (target) => {
-  const needsWarp = ['shop', 'galaxies'].includes(target) ||
-      (target === 'menu' && (showShop.value || showGalaxySelector.value))
+  // Добавляем 'rank' в список тех, кому нужна вспышка (Warp)
+  const needsWarp = ['shop', 'galaxies', 'rank'].includes(target) ||
+      (target === 'menu' && (showShop.value || showGalaxySelector.value || showRank.value))
 
   if (needsWarp) {
     isTransitioning.value = true
@@ -77,6 +81,7 @@ const toggleScreen = (target) => {
       resetScreens()
       if (target === 'shop') showShop.value = true
       if (target === 'galaxies') showGalaxySelector.value = true
+      if (target === 'rank') showRank.value = true // Включаем рейтинг
       setTimeout(() => isTransitioning.value = false, 300)
     }, 400)
   } else {
@@ -89,6 +94,7 @@ const resetScreens = () => {
   showSettings.value = false
   showShop.value = false
   showGalaxySelector.value = false
+  showRank.value = false
 }
 
 const startMission = (sectorId) => {
@@ -140,6 +146,15 @@ const startMission = (sectorId) => {
   right: -10%;
 }
 
+.rank-btn {
+  background: #9c27b0;
+  box-shadow: 0 6px 0 #9826c7;
+}
+
+.rank-btn:active {
+  box-shadow: 0 2px 0 #000;
+}
+
 .floating-toon-star {
   position: absolute;
   animation: floatStars 5s infinite ease-in-out;
@@ -157,7 +172,6 @@ const startMission = (sectorId) => {
   }
 }
 
-/* ВЕРСТКА БЕЗ РАМКИ */
 .open-menu-layout {
   position: relative;
   z-index: 10;
@@ -167,7 +181,6 @@ const startMission = (sectorId) => {
   gap: 60px;
 }
 
-/* ЗАГОЛОВОК */
 .main-title-toon {
   text-align: center;
   display: flex;
@@ -185,17 +198,17 @@ const startMission = (sectorId) => {
 
 .word-2 {
   color: #ffeb3b;
-  font-size: 3.7rem;
+  font-size: 3.4rem;
   -webkit-text-stroke: 3px #000;
-  text-shadow: 6px 6px 0 #e67e22;
+  text-shadow: 5px 5px 0 #e67e22;
 }
 
-/* КНОПКИ */
 .controls-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 25px;
+  width: 100%;
 }
 
 .menu-btn-toon {
@@ -205,12 +218,12 @@ const startMission = (sectorId) => {
   color: #fff;
   cursor: pointer;
   transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  box-shadow: 0 6px 0 #000;
   text-transform: uppercase;
 }
 
 .menu-btn-toon.play {
-  padding: 20px 60px;
+  width: 100%;
+  padding: 10px 20px;
   font-size: 2rem;
   background: #4caf50;
   box-shadow: 0 10px 0 #1b5e20, 0 15px 30px rgba(0, 0, 0, 0.4);
@@ -219,11 +232,13 @@ const startMission = (sectorId) => {
 
 .secondary-btns {
   display: flex;
+  flex-direction: column;
+  width: 100%;
   gap: 15px;
 }
 
 .secondary-btns .menu-btn-toon {
-  padding: 12px 25px;
+  padding: 15px 25px;
   font-size: 1rem;
 }
 
@@ -242,9 +257,8 @@ const startMission = (sectorId) => {
   box-shadow: 0 6px 0 #8e0000;
 }
 
-/* ЭФФЕКТЫ */
 .menu-btn-toon:hover {
-  transform: scale(1.1) rotate(2deg);
+  transform: scale(1.01);
 }
 
 .menu-btn-toon:active {
@@ -257,11 +271,10 @@ const startMission = (sectorId) => {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.05);
+    transform: scale(1.01);
   }
 }
 
-/* ВАРП-ВСПЫШКА */
 .warp-overlay {
   position: fixed;
   inset: 0;
