@@ -5,8 +5,6 @@ import {useGalaxyStore} from '../../store/galaxyStore.js'
 import Meteor from '../../assets/images/meteor.svg'
 import MeteorInFire from '../../assets/images/meteorinFire.svg'
 
-// Предполагаем, что useCombatEngine — это твой внешний хук с логикой боя
-// (я добавил обработку окончания игры прямо сюда через watcher)
 import { useCombatEngine } from '../../composables/useCombatEngine.js'
 
 const route = useRoute()
@@ -35,16 +33,10 @@ const mobStyles = computed(() => {
   }
 })
 
-// --- ЛОГИКА FIREBASE ПРИ ПРОИГРЫШЕ ---
 watch(isGameOver, async (ended) => {
   if (ended) {
-    // 1. Проверяем и записываем рекорд в Firebase для этой галактики
     isNewRecord.value = await store.updateHighScore(store.activeGalaxyId, score.value)
-
-    // 2. Считаем заработанную валюту (например, 5 Артиксов за 1 очко)
-    earnedArtiks.value = score.value * 5
-
-    // 3. Отправляем бабки в облако
+    earnedArtiks.value = score.value * 1
     if (earnedArtiks.value > 0) {
       await store.addArtiks(earnedArtiks.value)
     }
@@ -62,7 +54,6 @@ const initGame = () => {
       errorMessage.value = 'ID сектора не передан';
       return;
     }
-    // Устанавливаем миссию (сбрасывает score в 0)
     store.setMission(sectorId);
     isNewRecord.value = false;
     earnedArtiks.value = 0;
@@ -101,10 +92,8 @@ onMounted(() => {
       <p>{{ errorMessage }}</p>
       <button class="btn-go" @click="goHome">ВЕРНУТЬСЯ В ШТАБ</button>
     </div>
-
     <div v-else class="sky" ref="skyRef">
       <div class="star-layer"></div>
-
       <div class="sector-info" v-if="currentGalaxy">
         <span class="sector-name">{{ currentGalaxy.name || 'НЕИЗВЕСТНО' }}</span>
       </div>
@@ -112,7 +101,6 @@ onMounted(() => {
         <span class="score-label">ОЧКИ</span>
         <span class="score-value">{{ score }}</span>
       </div>
-
       <div v-if="!isGameOver" class="game-area">
         <div
             v-if="currentQuestion && !showGroundExplosion && !showSuccessExplosion"
@@ -133,36 +121,30 @@ onMounted(() => {
         <div v-if="isMissileFlying" class="laser-beam" :style="missileStyles"></div>
         <div v-if="showSuccessExplosion" class="vfx" :style="vfxPos">💥</div>
       </div>
-
       <div v-if="showGroundExplosion" class="ground-impact-explosion">
         <div class="big-boom-emoji">💥</div>
       </div>
-
       <div v-if="isGameOver" class="game-over-overlay">
         <div class="game-over-card toon-main-card">
           <h2 class="death-title" v-if="isNewRecord">НОВЫЙ РЕКОРД!</h2>
           <h2 class="death-title" v-else>СЕКТОР НЕ ЗАЧИЩЕН!</h2>
-
           <div class="score-display">
             <span class="score-text">ВАШ СЧЕТ:</span>
             <span class="fs-val">{{ score }}</span>
           </div>
-
           <div class="earned-info" v-if="earnedArtiks > 0">
-            <span class="plus-anim">+{{ earnedArtiks }} Ⓐ взято у артикля</span>
+            <span class="plus-anim">+{{ earnedArtiks }}</span>
           </div>
-
           <div class="modal-actions">
             <button class="action-btn restart-btn toon-btn-blue" @click="initGame">
               ЕЩЕ РАЗ
             </button>
             <button class="action-btn home-btn toon-btn-red" @click="goHome">
-              В ШТАБ
+              ВЕРНУТЬСЯ
             </button>
           </div>
         </div>
       </div>
-
       <div class="cannon-station" v-if="currentQuestion">
         <div class="main-cannon" :class="{ 'recoiling': isMissileFlying }">
           <img v-if="!showGroundExplosion" class="tank" :src="store.activeShip.img" alt="Ship">
