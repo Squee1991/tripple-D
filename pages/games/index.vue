@@ -6,7 +6,6 @@
       <div v-for="n in 12" :key="n" class="floating-toon-star" :style="getRandomPos(n)">
         {{ n % 2 === 0 ? '⭐' : '✨' }}
       </div>
-
       <img v-for="astro in astronauts" :key="'astro' + astro.id" :src="Astronaut"
           class="floating-astronaut"
           :style="{
@@ -22,13 +21,13 @@
     <div class="open-menu-layout" v-if="currentScreen === 'menu' && !isTransitioning">
       <div class="title-section">
         <h1 class="main-title-toon">
-          <span class="word-1">ВСЕЛЕННАЯ</span>
-          <span class="word-2">НЕМЕЦКОГО</span>
+          <span class="word-1">{{ t('galaxyMenu.titleWordOne')}}</span>
+          <span class="word-2">{{ t('galaxyMenu.titleWordTwo')}}</span>
         </h1>
       </div>
       <div class="controls-section">
         <button class="menu-btn-toon play" @click="toggleScreen('galaxies')">
-          <span class="icon">🚀</span> НАЧАТЬ
+          <span class="icon">🚀 {{ t('galaxyMenu.begin')}}</span>
         </button>
         <div class="secondary-btns">
           <button
@@ -38,7 +37,7 @@
               :class="btn.class"
               @click="btn.action ? btn.action() : toggleScreen(btn.target)"
           >
-            {{ btn.label }}
+            {{ t(btn.label) }}
           </button>
         </div>
       </div>
@@ -71,7 +70,7 @@ import VRankGalaxy from "../../src/components/galaxy-game/V-rank-galaxy.vue";
 
 const router = useRouter()
 const store = useGalaxyStore()
-const { locale } = useI18n()
+const { t, locale } = useI18n()
 const currentScreen = ref('menu')
 const isTransitioning = ref(false)
 const astronauts = ref([])
@@ -83,10 +82,10 @@ const componentViews = {
 }
 
 const menuButtons = [
-  { id: 'profile', class: 'settings', label: 'Профиль', target: 'settings' },
-  { id: 'shop', class: 'hangar', label: 'АНГАР', target: 'shop' },
-  { id: 'rank', class: 'rank-btn', label: 'Рейтинг', target: 'rank' },
-  { id: 'exit', class: 'exit', label: 'ВЫХОД', action: () => handleExit() }
+  { id: 'profile', class: 'settings', label: 'galaxyMenu.profile', target: 'settings' },
+  { id: 'shop', class: 'hangar', label: 'galaxyMenu.shop', target: 'shop' },
+  { id: 'rank', class: 'rank-btn', label: 'galaxyMenu.rank', target: 'rank' },
+  { id: 'exit', class: 'exit', label: 'galaxyMenu.exit', action: () => handleExit() }
 ]
 
 const getRandomPos = (n) => ({

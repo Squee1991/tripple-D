@@ -6056,5 +6056,54 @@
     "mixed": "मिश्रित",
     "modal": "मोडल",
     "placeHolder": "क्रिया खोजें..."
+  },
+  "galaxyMenu": {
+    "titleWordOne": "जर्मन",
+    "titleWordTwo": "ब्रह्मांड",
+    "begin": "शुरू करें",
+    "profile": "प्रोफ़ाइल",
+    "shop": "हैंगर",
+    "rank": "रैंकिंग",
+    "exit": "निकास"
+  },
+  "galaxyCabinet": {
+    "back": "पीछे",
+    "id": "पहचान",
+    "journey": "उड़ान लॉग",
+    "money": "आर्टिक्स",
+    "commonPoints": "कुल अंक",
+    "rank": "रैंक:",
+    "streak": "रिकॉर्ड:"
+  },
+  "galaxyRank": {
+    "none": "पृथ्वीवासी",
+    "rank-rookie": "कैडेट",
+    "rank-hunter": "अन्वेषक",
+    "rank-ace": "अंतरिक्ष पायलट",
+    "rank-master": "कक्षा मास्टर",
+    "rank-legend": "बेड़े का एडमिरल"
+  },
+  "galaxyList": {
+    "alpha": "आर्टिकल क्षेत्र",
+    "beta": "बहुवचन क्षेत्र",
+    "gamma": "समानार्थी नक्षत्र",
+    "delta": "विलोम क्लस्टर",
+    "epsilon": "क्रिया निहारिका",
+    "zeta": "पूर्वसर्ग वेक्टर",
+    "all": "संपूर्ण ब्रह्मांड"
+  },
+  "galaxyRankTable": {
+    "back": "पीछे",
+    "title": "शीर्ष पायलट",
+    "scan": "स्कैनिंग...",
+    "empty": "यह सेक्टर खाली है",
+    "emptySub": "इस प्रणाली को जीतने वाले पहले व्यक्ति बनें!"
+  },
+  "galaxyHangar": {
+    "leave": "बाहर निकलें",
+    "money": "आर्टिक्स",
+    "buy": "खरीदें",
+    "inFlight": "उड़ान में",
+    "change": "चुनें"
   }
 }

@@ -10,19 +10,18 @@ const db = getFirestore()
 const playersData = ref([])
 const selectedFilter = ref('total')
 const isLoading = ref(true)
-
-// --- ПАГИНАЦИЯ ---
+const { t } = useI18n()
 const currentPage = ref(1)
 const itemsPerPage = 10
 
 const galaxyOptions = [
-  { id: 'total', label: 'ВСЯ ВСЕЛЕННАЯ' },
-  { id: 'alpha', label: 'АЛЬФА СЕКТОР' },
-  { id: 'beta', label: 'БЕТА СЕКТОР' },
-  { id: 'gamma', label: 'ГАММА СЕКТОР' },
-  { id: 'delta', label: 'ДЕЛЬТА СЕКТОР' },
-  { id: 'epsilon', label: 'ЭПСИЛОН СЕКТОР' },
-  { id: 'zeta', label: 'ЗЕТА СЕКТОР' }
+  { id: 'total', label: t('galaxyList.all') },
+  { id: 'alpha', label: t('galaxyList.alpha') },
+  { id: 'beta', label: t('galaxyList.beta') },
+  { id: 'gamma', label: t('galaxyList.gamma') },
+  { id: 'delta', label: t('galaxyList.delta') },
+  { id: 'epsilon', label: t('galaxyList.epsilon') },
+  { id: 'zeta', label: t('galaxyList.zeta') }
 ]
 
 const fetchLeaderboard = async () => {
@@ -30,17 +29,15 @@ const fetchLeaderboard = async () => {
   try {
     const querySnapshot = await getDocs(collectionGroup(db, 'game_data'))
     const tempPlayers = []
-
     querySnapshot.forEach((docSnapshot) => {
       const data = docSnapshot.data()
       if (data.highScores) {
         const scores = data.highScores
         const totalScore = Object.values(scores).reduce((accumulator, current) => accumulator + current, 0)
         const shipInfo = store.tankList.find(tank => tank.id === data.selectedTankId) || store.tankList[0]
-
         tempPlayers.push({
           uid: docSnapshot.ref.parent.parent.id,
-          captainName: data.captainName || 'АНОНИМ',
+          captainName: data.captainName || 'Anonymous',
           shipImg: shipInfo.img,
           highScores: scores,
           totalScore: totalScore
@@ -70,8 +67,6 @@ const sortedLeaderboard = computed(() => {
   })
 })
 
-// --- ЛОГИКА ПАГИНАЦИИ ---
-// Сбрасываем страницу на 1 при смене фильтра
 watch(selectedFilter, () => {
   currentPage.value = 1
 })
@@ -94,7 +89,6 @@ const prevPage = () => {
   if (currentPage.value > 1) currentPage.value--
 }
 
-// Хелпер для сохранения реального места игрока
 const getGlobalIndex = (localIndex) => {
   return (currentPage.value - 1) * itemsPerPage + localIndex
 }
@@ -117,10 +111,10 @@ onMounted(() => {
       </div>
       <div class="leaderboard-header">
         <button class="toon-btn-back" @click="$emit('close')">
-          <span class="btn-face">◀ НАЗАД</span>
+          <span class="btn-face">◀ {{ t('galaxyRankTable.back')}}</span>
         </button>
         <div class="header-main">
-          <h2 class="toon-title">ТОП ПИЛОТОВ</h2>
+          <h2 class="toon-title">{{ t('galaxyRankTable.title')}}</h2>
           <div class="filter-bubble">
             <select v-model="selectedFilter" class="toon-select">
               <option v-for="option in galaxyOptions" :key="option.id" :value="option.id">
@@ -133,12 +127,12 @@ onMounted(() => {
       <div class="leaderboard-scroll-area">
         <div v-if="isLoading" class="toon-loader">
           <div class="bouncing-ship">🚀</div>
-          <span>СКАНИРУЮ...</span>
+          <span>{{ t('galaxyRankTable.scan')}}</span>
         </div>
         <div v-else-if="sortedLeaderboard.length === 0" class="empty-state">
           <div class="sad-moon">🌑</div>
-          <p class="empty-text">В ЭТОМ СЕКТОРЕ ПУСТО</p>
-          <span class="empty-subtext">Стань первым, кто покорит эту систему!</span>
+          <p class="empty-text">{{ t('galaxyRankTable.empty')}}</p>
+          <span class="empty-subtext">{{ t('galaxyRankTable.empty')}}</span>
         </div>
         <div v-else>
           <div class="players-grid">
@@ -170,7 +164,7 @@ onMounted(() => {
           <div class="pagination-controls" v-if="totalPages > 1">
             <button class="page-btn" @click="prevPage" :disabled="currentPage === 1">◀</button>
             <div class="page-info">
-              СТРАНИЦА {{ currentPage }} ИЗ {{ totalPages }}
+              {{ currentPage }} / {{ totalPages }}
             </div>
             <button class="page-btn" @click="nextPage" :disabled="currentPage === totalPages">▶</button>
           </div>
@@ -193,7 +187,7 @@ onMounted(() => {
   flex-direction: column;
   padding: 20px 10px;
   box-sizing: border-box;
-  font-family: 'Arial Rounded MT Bold', 'Arial Black', sans-serif;
+  font-family: "Nunito", sans-serif;
   overflow: hidden;
 }
 

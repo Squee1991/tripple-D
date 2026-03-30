@@ -37,7 +37,7 @@
             </div>
           </div>
           <div class="mission-briefing">
-            <button class="btn-go big-btn" @click="startLevel">Начать</button>
+            <button class="btn-go big-btn" @click="startLevel">{{ t('galaxyMenu.begin')}}</button>
           </div>
         </div>
       </div>
@@ -61,7 +61,7 @@ import ConstellationEight from 'assets/images/constellation/constellation-8.svg'
 const emit = defineEmits(['back', 'select'])
 const store = useGalaxyStore()
 const activeGalaxy = ref(null)
-
+const { t } = useI18n()
 const iconMap = {
   alpha: ConstellationOne,
   beta: ConstellationTwo,

@@ -5670,9 +5670,10 @@
     "themen": "Poziomy tematyczne",
     "idioms": "Frazeologizmy",
     "wordDuel": "Pojedynek fraz",
-    "describePicture": "Describe Picture",
     "quests": "Dziennik Zadań",
-    "languagesLands": "Krainy Językowe"
+    "languagesLands": "Krainy Językowe",
+    "describePicture": "Opis Obrazków",
+    "fight": "Wszechświat Niemieckiego"
   },
   "underSub": {
     "prev": "Wprowadzenie",
@@ -6056,5 +6057,54 @@
     "mixed": "Mieszane",
     "modal": "Modalne",
     "placeHolder": "Znajdź czasownik..."
+  },
+  "galaxyMenu": {
+    "titleWordOne": "WSZECHŚWIAT",
+    "titleWordTwo": "NIEMIECKIEGO",
+    "begin": "START",
+    "profile": "Profil",
+    "shop": "HANGAR",
+    "rank": "Ranking",
+    "exit": "WYJŚCIE"
+  },
+  "galaxyCabinet": {
+    "back": "POWRÓT",
+    "id": "IDENTYFIKACJA",
+    "journey": "DZIENNIK LOTÓW",
+    "money": "ARTIKSI",
+    "commonPoints": "PUNKTY OGÓLNE",
+    "rank": "Ranga:",
+    "streak": "REKORD:"
+  },
+  "galaxyRank": {
+    "none": "ZIEMIANIN",
+    "rank-rookie": "KADET",
+    "rank-hunter": "BADACZ",
+    "rank-ace": "KOSMOPILOT",
+    "rank-master": "MISTRZ ORBITY",
+    "rank-legend": "ADMIRAŁ FLOTY"
+  },
+  "galaxyList": {
+    "alpha": "SFERA RODZAJNIKÓW",
+    "beta": "OBSZAR MNOGOŚCI",
+    "gamma": "KONSTELACJA SYNONIMÓW",
+    "delta": "KLASTER ANTONIMÓW",
+    "epsilon": "MGŁAWICA CZASOWNIKÓW",
+    "zeta": "WEKTOR PRZYIMKÓW",
+    "all": "CAŁY WSZECHŚWIAT"
+  },
+  "galaxyRankTable": {
+    "back": "POWRÓT",
+    "title": "TOP PILOTÓW",
+    "scan": "SKANOWANIE...",
+    "empty": "TEN SEKTOR JEST PUSTY",
+    "emptySub": "Bądź pierwszym, który podbije ten system!"
+  },
+  "galaxyHangar": {
+    "leave": "OPUŚĆ",
+    "money": "ARTIKSI",
+    "buy": "Kup",
+    "inFlight": "W LOCIE",
+    "change": "WYBIERZ"
   }
 }

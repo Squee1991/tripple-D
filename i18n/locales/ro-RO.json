@@ -5671,9 +5671,10 @@
     "themen": "Niveluri tematice",
     "idioms": "Expresii fixe",
     "wordDuel": "Duelul frazelor",
-    "describePicture": "Describe Picture",
     "quests": "Jurnalul de Sarcini",
-    "languagesLands": "Ținuturi lingvistice"
+    "languagesLands": "Ținuturi lingvistice",
+    "describePicture": "Descrierea Imaginilor",
+    "fight": "Universul Germanei"
   },
   "underSub": {
     "prev": "Introducere",
@@ -6056,5 +6057,54 @@
     "mixed": "Mixte",
     "modal": "Modale",
     "placeHolder": "Caută verb..."
+  },
+  "galaxyMenu": {
+    "titleWordOne": "UNIVERSUL",
+    "titleWordTwo": "GERMANEI",
+    "begin": "START",
+    "profile": "Profil",
+    "shop": "HANGAR",
+    "rank": "Clasament",
+    "exit": "IEȘIRE"
+  },
+  "galaxyCabinet": {
+    "back": "ÎNAPOI",
+    "id": "IDENTIFICARE",
+    "journey": "JURNAL DE ZBOR",
+    "money": "ARTICȘI",
+    "commonPoints": "PUNCTE TOTALE",
+    "rank": "Rang:",
+    "streak": "RECORD:"
+  },
+  "galaxyRank": {
+    "none": "PĂMÂNTEAN",
+    "rank-rookie": "CADET",
+    "rank-hunter": "EXPLORATOR",
+    "rank-ace": "COSMOPILOT",
+    "rank-master": "MAESTRU DE ORBITĂ",
+    "rank-legend": "AMIRAL DE FLOTĂ"
+  },
+  "galaxyList": {
+    "alpha": "SFERA ARTICOLELOR",
+    "beta": "REGIUNEA PLURALULUI",
+    "gamma": "CONSTELAȚIA SINONIMELOR",
+    "delta": "CLUSTERUL ANTONIMELOR",
+    "epsilon": "NEBULOASA VERBELOR",
+    "zeta": "VECTORUL PREPOZIȚIILOR",
+    "all": "TOT UNIVERSUL"
+  },
+  "galaxyRankTable": {
+    "back": "ÎNAPOI",
+    "title": "TOP PILOȚI",
+    "scan": "SCANARE...",
+    "empty": "ACEST SECTOR ESTE GOL",
+    "emptySub": "Fii primul care cucerește acest sistem!"
+  },
+  "galaxyHangar": {
+    "leave": "IEȘIRE",
+    "money": "ARTICȘI",
+    "buy": "Cumpără",
+    "inFlight": "ÎN ZBOR",
+    "change": "SELECTEAZĂ"
   }
 }
