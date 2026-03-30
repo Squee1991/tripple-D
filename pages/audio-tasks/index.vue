@@ -34,7 +34,6 @@
       <div class="quiz__content">
         <transition name="quiz-pop" mode="out-in">
           <div :key="screen" :class="['quiz__grid', `quiz__grid--${screen}`]">
-
             <template v-if="screen === 'levels'">
               <button
                   v-for="(level, index) in levels"
@@ -44,13 +43,12 @@
                   :style="{ backgroundColor: levelColors[index] }"
               >
                 <div class="card__inner">
-                  <span class="card__label">Уровень</span>
+                  <span class="card__label">{{t('audioTasks.level')}}</span>
                   <span class="card__badge">{{ level }}</span>
                 </div>
                 <div class="card__arrow">→</div>
               </button>
             </template>
-
             <template v-else>
               <button
                   v-for="(topic, index) in availableTopics"
@@ -92,7 +90,7 @@ import HeadPhones from '../../assets/images/headphones.svg'
 const router = useRouter()
 const store = useAudioTaskStore()
 const {allTasks, currentLevel, userProgress} = storeToRefs(store)
-
+const { t } = useI18n()
 const screen = ref('levels')
 const showDevModal = ref(false)
 
@@ -107,16 +105,16 @@ const topicColors = [
 ]
 
 const overlayData = {
-  title: 'Аудио задания',
-  text: 'Для выполнения заданий нужно прослушать аудио, и выбрать подходящие варианты ответа',
+  title: t('audioTasks.overlayDataTitle'),
+  text: t('audioTasks.overlayDataText'),
 }
 
 const headerTitle = computed(() => {
-  return screen.value === 'levels' ? 'Аудио темы' : `${currentLevel.value}`
+  return screen.value === 'levels' ? t('audioTasks.audioTheme') : `${currentLevel.value}`
 })
 
 const headerText = computed(() => {
-  return screen.value === 'levels' ? 'Выбери сложность' : 'Выберите тему'
+  return screen.value === 'levels' ? t('audioTasks.takeComplexity') : t('audioTasks.takeTheme')
 })
 
 const availableTopics = computed(() => allTasks.value[currentLevel.value] || [])
@@ -162,6 +160,7 @@ onMounted(async () => {
 </script>
 
 <style scoped>
+
 .quiz {
   min-height: 100vh;
   font-family: 'Nunito', sans-serif;
