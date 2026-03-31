@@ -1,10 +1,29 @@
 import Stripe from 'stripe'
 import { readBody, defineEventHandler } from 'h3'
+import { getFirestore } from 'firebase-admin/firestore'
+import { initializeApp, getApps, cert } from 'firebase-admin/app'
 
 export default defineEventHandler(async (event) => {
+	if (getApps().length === 0) {
+		try {
+			const serviceAccountJson = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON
+			if (!serviceAccountJson) {
+				throw new Error('Ключ GOOGLE_APPLICATION_CREDENTIALS_JSON не найден в Vercel!')
+			}
+			const serviceAccount = JSON.parse(serviceAccountJson)
+			if (serviceAccount.private_key) {
+				serviceAccount.private_key = serviceAccount.private_key.replace(/\\n/g, '\n')
+			}
+			initializeApp({ credential: cert(serviceAccount) })
+			console.log('✅ [Confirm] Firebase Admin успешно подключен из ENV!')
+		} catch (e) {
+			console.error('❌ ОШИБКА FIREBASE [Confirm]:', e.message)
+			return { success: false, error: 'Server Config Error: ' + e.message }
+		}
+	}
+
 	const config = useRuntimeConfig()
 	const stripeKey = config.stripeSecret || process.env.STRIPE_SECRET_KEY
-
 	if (!stripeKey) return { success: false, error: 'No Stripe Key' }
 
 	const stripe = new Stripe(stripeKey, { apiVersion: '2024-06-20' })
@@ -17,18 +36,37 @@ export default defineEventHandler(async (event) => {
 		})
 		if (session.payment_status === 'paid') {
 			let subscriptionEndsAt = null
-			let subscriptionId = null
 			if (session.subscription && typeof session.subscription === 'object') {
 				subscriptionEndsAt = new Date(session.subscription.current_period_end * 1000).toISOString()
-				subscriptionId = session.subscription.id
 			}
+
+			const userId = session.metadata?.firebaseUID
+			const discountUsed = session.metadata?.discountId || null
+
+			if (userId) {
+				const db = getFirestore()
+				const updateData = {
+					isPremium: true,
+					subscriptionCancelled: false,
+					subscriptionEndsAt: subscriptionEndsAt,
+					subscriptionId: session.subscription?.id || session.subscription || null,
+					updatedAt: new Date().toISOString()
+				}
+
+				if (discountUsed && ['sale_5', 'sale_10', 'sale_15'].includes(discountUsed)) {
+					updateData[discountUsed] = false
+					console.log(`🔥 Сервер: Скидка ${discountUsed} сброшена для юзера ${userId}`)
+				}
+
+				await db.collection('users').doc(userId).set(updateData, { merge: true })
+			}
+
 			return {
 				success: true,
 				data: {
 					isPremium: true,
-					subscriptionId: subscriptionId,
 					subscriptionEndsAt: subscriptionEndsAt,
-					updatedAt: new Date().toISOString()
+					discountUsed: discountUsed
 				}
 			}
 		} else {

@@ -49,7 +49,7 @@
           </div>
         </div>
         <div class="quest__section">
-          <div v-if="hasTip" class="quest__tip-container">
+          <div v-if="hasTip && questStore.showResult" class="quest__tip-container">
             <button class="quest__tip-btn" @click="showTipModal = true">💡</button>
           </div>
           <div class="quest__question">
@@ -252,7 +252,7 @@
       <div class="modal__window">
         <div class="modal__title">💡</div>
         <div class="modal__text quest__tip-text">
-          {{ currentTip }}
+          {{ t(currentTip) }}
         </div>
         <div class="modal__actions">
           <button class="btn btn--primary" @click="showTipModal = false">Понятно</button>
@@ -267,7 +267,6 @@ import {computed, onMounted, ref, watch, watchEffect, nextTick, onBeforeUnmount}
 import {useRoute, useRouter, onBeforeRouteLeave} from 'vue-router'
 import {userChainStore} from '~/store/chainStore.js'
 import {userlangStore} from '~/store/learningStore.js'
-import {useI18n} from 'vue-i18n'
 import SoundBtn from '~/src/components/soundBtn.vue'
 import {playCorrect, playWrong, unlockAudioByUserGesture} from '~/utils/soundManager.js'
 import RightIcon from '~/assets/images/location-icons/accept.svg'
@@ -1138,7 +1137,7 @@ watchEffect(() => {
     height: 28px;
   }
   .quest__question {
-    font-size: 1rem;
+    font-size: 1.1rem;
     border-bottom: 2px solid #9dceff;
     border-radius: 15px;
   }
@@ -1216,7 +1215,6 @@ watchEffect(() => {
   }
 }
 
-/* --- СТИЛИ ДЛЯ ПОДСКАЗОК --- */
 .quest__tip-container {
   display: flex;
   justify-content: center;

@@ -9,13 +9,13 @@ export const dailyQuests = [
 		id: 'learnWordsArticle',
 		name: 'daily.first',
 		currentValue: 0,
-		targetValue: 10
+		targetValue: 5
 	},
 	{
 		id: 'articles',
 		name: 'daily.second',
 		currentValue: 0,
-		targetValue: 10
+		targetValue: 5
 	},
 	{
 		id: 'perfectQuest',
@@ -27,13 +27,13 @@ export const dailyQuests = [
 		id: 'streakEasy',
 		name: 'daily.third',
 		currentValue: 0,
-		targetValue: 10
+		targetValue: 5
 	},
 	{
 		id: 'exp',
 		name: 'daily.fourth',
 		currentValue: 0,
-		targetValue: 15
+		targetValue: 5
 	},
 	{
 		id: 'thematicLearning',
@@ -45,7 +45,7 @@ export const dailyQuests = [
 		id: 'guess',
 		name: 'daily.fifth',
 		currentValue: 0,
-		targetValue: 10
+		targetValue: 5
 	},
 	{
 		id: 'perfectQuest',
@@ -57,7 +57,7 @@ export const dailyQuests = [
 		id: 'streakMedium',
 		name: 'daily.sixth',
 		currentValue: 0,
-		targetValue: 10
+		targetValue: 5
 	},
 	{
 		id: 'guessWord',
@@ -75,13 +75,13 @@ export const dailyQuests = [
 		id: 'trainPlural',
 		name: 'daily.seventh',
 		currentValue: 0,
-		targetValue: 10
+		targetValue: 5
 	},
 	{
 		id: 'learnWordsArticle',
 		name: 'daily.eighth',
 		currentValue: 0,
-		targetValue: 10
+		targetValue: 5
 	},
 	{
 		id: 'thematicLearning',
@@ -93,7 +93,13 @@ export const dailyQuests = [
 		id: 'audioArticle',
 		name: 'daily.ninth',
 		currentValue: 0,
-		targetValue: 10
+		targetValue: 5
+	},
+	{
+		id: 'perfectQuest',
+		name: 'daily.thirteenth',
+		currentValue: 0,
+		targetValue: 1
 	},
 	{
 		id: 'guessWord',
@@ -105,7 +111,7 @@ export const dailyQuests = [
 		id: 'streakHard',
 		name: 'daily.tenth',
 		currentValue: 0,
-		targetValue: 10
+		targetValue: 5
 	},
 	{
 		id: 'perfectQuest',
@@ -117,7 +123,7 @@ export const dailyQuests = [
 		id: 'exp',
 		name: 'daily.eleventh',
 		currentValue: 0,
-		targetValue: 10
+		targetValue: 5
 	},
 	{
 		id: 'guessWord',

@@ -5,12 +5,12 @@
         <div v-if="visible" class="modal-container">
           <button class="modal-close" @click="closeModal">×</button>
           <div class="modal-content">
-            <h3 class="modal-title">{{ props.title }}</h3>
-            <img class="modal__icon" :src="props.img" alt="">
-            <p class="modal-text"> {{ props.text }}</p>
-            <p class="modal-text"> {{ props.description }}</p>
-            <button class="modal__btn" v-if="props.button" @click="$emit('button')">
-              {{ props.button.label }}
+            <h3 class="modal-title">{{ title }}</h3>
+            <img class="modal__icon" :src="img" :alt="alt">
+            <p class="modal-text"> {{ text }}</p>
+            <p class="modal-text"> {{ description }}</p>
+            <button class="modal__btn" v-if="button" @click="$emit('button')">
+              {{ button.label }}
             </button>
           </div>
 
@@ -35,7 +35,8 @@ const props = defineProps({
     required: true
   },
   img: {
-    type: String
+    type: String,
+    alt: ''
   },
   title: {
     type: String,

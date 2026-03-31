@@ -15,7 +15,6 @@
         @button="onDevModalButton"
     />
     <div class="header-container">
-
       <NuxtLink @click="click" to="/" class="logo" aria-label="German Corner — Home">
         <span class="logo__name">skillup</span>
         <NuxtImg
@@ -189,53 +188,6 @@ const modalConfig = computed(() => {
   }
 })
 
-const onboardingOptions = {
-  skippable: true,
-  labels: {
-    previousButton: 'Назад',
-    nextButton: 'Далее',
-    finishButton: 'Завершить',
-    skipButton: 'Пропустить'
-  }
-}
-const onboardingSteps = [
-  {
-    attachTo: {
-      element: '#learn',
-      padding: 31
-    },
-    content: {
-      title: "Обучение",
-      description: "Грамматика, фразы, артикли, времена и практика — всё, чтобы уверенно прокачать   немецкий.",
-      image: HD
-    }
-  },
-  {
-    attachTo: {element: '#duel'},
-    content: {
-      title: "Игры",
-      description: "Грамматика, фразы, артикли, времена и практика — всё, чтобы уверенно прокачать немецкий.",
-      image: HD
-    }
-  },
-  {
-    attachTo: {element: '#test'},
-    content: {
-      title: "Тесты",
-      description: "Проверь уровень от А1 до В2: говорение,  грамматика, письмо и понимание речи.",
-      image: HD
-    }
-  },
-  {
-    attachTo: {element: '#events'},
-    content: {
-      title: "Ивенты",
-      description: "Сезонные задания, коллекции слов, награды и ограниченные по времени челленджи.",
-      image: HD
-    }
-  }
-]
-
 const {start , finish} = useVOnboarding(wrapperRef)
 
 const menuItems = computed(() => {
@@ -291,7 +243,8 @@ const menuItems = computed(() => {
                   {id: 'comparison', url: '/adjective-comparison', valueKey: 'underSub.comparison'}
                 ],
               },
-              // {id: 'description', url: '/description-images' , valueKey: 'Описание картинок'},
+              {id: 'audio', url: '/audio-tasks' , valueKey: 'sub.audio'},
+              {id: 'description', url: '/description-images' , valueKey: 'sub.describePicture'},
               {id: 'themen', url: '/thematic-learning', valueKey: 'sub.themen'},
               {id: 'cards', url: '/create-cards', valueKey: 'sub.card'},
               {id: 'idioms', url: '/idioms', valueKey: 'sub.idioms'}
@@ -301,9 +254,9 @@ const menuItems = computed(() => {
             id: 'duel',
             valueKey: 'nav.gameMode',
             children: [
+              {id: 'fight', url: '/games', valueKey: 'sub.fight'},
               {id: 'duel-pvp', valueKey: 'sub.pvp', action: openDevModal},
               {id: 'wordDuel', url: '/sentence-duel', valueKey: 'sub.wordDuel'},
-              // {id: 'describePicture', url: '/chat', valueKey: 'sub.describePicture'},
               {id: 'quests', url: '/recipes', valueKey: 'sub.quests'},
               {id: 'duel-guess', url: '/guess-word', valueKey: 'sub.guess'},
               {id: 'articlemarathon', url: '/article-marathon', valueKey: 'sub.marathon'}

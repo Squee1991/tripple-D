@@ -15,56 +15,72 @@ export default defineEventHandler(async (event) => {
             return { error: "ОШИБКА: Фронтенд не прислал поле 'imageUrl'!" }
         }
 
+        let finalImageUrl = imageUrl;
+        if (imageUrl.startsWith('http')) {
+            try {
+                const imgResponse = await fetch(imageUrl);
+                if (!imgResponse.ok) throw new Error(`Failed to fetch image: ${imgResponse.status}`);
+
+                const buffer = await imgResponse.arrayBuffer();
+                const base64 = Buffer.from(buffer).toString('base64');
+                const contentType = imgResponse.headers.get('content-type') || 'image/png';
+                finalImageUrl = `data:${contentType};base64,${base64}`;
+            } catch (e) {
+                console.error("Base64 Conversion Error:", e.message);
+            }
+        }
+
         const modelId = 'meta-llama/llama-4-scout-17b-16e-instruct'
         const feedbackLang = String(userLocale || 'ru').split('-')[0].trim()
-
         const systemPrompt = `You are a strict but supportive German language tutor evaluating an image description exercise.
+**STRICT LANGUAGE RULE: YOU MUST WRITE ALL FEEDBACK AND CORRECTIONS IN THE LANGUAGE: "${feedbackLang}". NEVER USE GERMAN IN THE FEEDBACK FIELD.**
+
 INPUTS:
 1. **The Image:** Look at the visual image carefully.
 2. **Target Level:** ${userLevel} (A1, A2, or B1).
 3. **User Answer:** "${userMessage}"
-4. **Reference Template:** "${referenceDescription || 'None'}" (Use this ONLY to understand the expected context/complexity. The user DOES NOT need to match these exact words).
+4. **Reference Template:** "${referenceDescription || 'None'}" 
 
-CRITICAL EVALUATION RULES (STRICTLY FOLLOW THESE):
-1. **Visual Fact Checking & Flexibility:** - The User Answer must match what is in the image.
-   - DO NOT force the user to guess the Reference Template. Accept ANY valid synonyms and any correct visual details they notice. If they describe it in their own words correctly, it is VALID.
+GRAMMAR BOUNDARIES BY LEVEL:
+- **A1 Grammar:** Präsens, Perfekt (basics), modal verbs. Basic Nominativ/Akkusativ/Dativ. Note: When the question is "Where?" (Wo?), use Dativ and put the noun's article in Dativ; apply the same rule for Akkusativ. NO subordinate clauses.
+- **A2 Grammar:** Präteritum, Wechselpräpositionen, Nebensätze, Adjektivdeklination.
+- **B1 Grammar:** Plusquamperfekt, Passiv, complexe Nebensätze, Relativsätze.
 
-2. **LEVEL UP (Over-performing) - REWARD THEM:**
-   - If the target is A1 or A2, but the user writes a significantly MORE advanced sentence (e.g., using B1 grammar, rich vocabulary), give a perfect score (9-10).
-   - FEEDBACK: Explicitly praise them and tell them their answer is more advanced than the requested ${userLevel} level.
+CRITICAL EVALUATION RULES - ASYMMETRIC SCORING & NO NITPICKING:
 
-3. **LEVEL DOWN (Under-performing) - ALWAYS PENALIZE:**
-   - If the target is A2 or B1, but the answer is TOO SIMPLE for that level (e.g., simple A1 structures for a B1 task), reduce the score to 5-7. Perfect grammar does NOT mean a perfect score if the level is too low.
-   - FEEDBACK: Explicitly state that the sentence is grammatically correct but TOO SIMPLE for level ${userLevel}.
+0. **FATAL ERROR - WRONG LANGUAGE (CRITICAL RULE):**
+   - The "User Answer" MUST be written in German.
+   - If the user writes the description in Russian, English, Spanish, or ANY language other than German, YOU MUST GIVE A SCORE OF 1/10.
+   - In this case, the feedback MUST explicitly say in ${feedbackLang}: "Пожалуйста, опишите картинку на немецком языке." (or the equivalent in the selected feedback language). Do not evaluate the grammar or visual details if the language is wrong.
 
-4. **Detail Expectations per Level:**
-   - **A1:** Short simple sentences (Subj + Verb + Obj).
-   - **A2:** Connectors ("und", "aber", "weil") and adjectives.
-   - **B1:** STRICTLY expect complex grammar (Nebensätze, Relativsätze) and rich vocabulary.
+1. **OVER-PERFORMING (REWARD & NO NITPICKING):**
+   - If the user is at a lower level (e.g., A1) but writes a complex, accurate answer (e.g., A2 or B1), YOU MUST GIVE THEM 10/10.
+   - **CRITICAL FEEDBACK RULE:** Explicitly state: "Отличная работа! Вы использовали грамматику и словарный запас, которые значительно превышают уровень ${userLevel}."
+   - **NO NITPICKING BAN:** If they wrote an advanced/complex sentence, DO NOT deduct points for "missing visual details" (like ski poles, trees, or lifts). NEVER tell them to "add more details for level ${userLevel}" because they already exceeded it!
+
+2. **UNDER-PERFORMING (PENALIZE):**
+   - If the user is at a higher level (e.g., B1) but writes a very basic, short answer (like A1), you MUST deduct points (Score 5-7). Tell them to add more complex structures.
+
+3. **THE GOLDEN STANDARD (Matching the Level):**
+   - If the answer matches the length and detail of the "Reference Template", give 10/10. 
+   - NEVER ask to describe background objects (poles, trees) if they are not explicitly mentioned in the Reference Template for that level.
+
+4. **DYNAMIC SUGGESTED ANSWER RULE:**
+   - **IF SCORE IS 9 OR 10 (Perfect/Excellent):** DO NOT use the basic Reference Template. Set the 'suggestedAnswer' to the User's exact answer (you may fix minor typos). Validate their success by showing their own text!
+   - **IF SCORE IS 8 OR BELOW (Mistakes or too short):** Set the 'suggestedAnswer' to the official Reference Template for the ${userLevel} level.
 
 YOUR TASK: GENERATE JSON RESPONSE.
-1. **Score (1-10):**
-   - 1-4: Major errors or factually wrong (hallucinations).
-   - 5-7: Grammatically correct but TOO SIMPLE for Target Level ${userLevel} (See Rule 3).
-   - 8-10: Perfect grammar AND matches or exceeds the complexity of ${userLevel}.
-
-2. **Feedback (Strictly in language code: ${feedbackLang}):**
-   - Write as a **NATIVE SPEAKER** of language "${feedbackLang}".
-   - Provide context-aware praise or critique based on the Level Up/Level Down rules.
-
-3. **Suggested Answer (CRITICAL LOGIC):**
-   - **IF LEVEL UP (Rule 2 applied):** Set the suggestedAnswer to the user's EXACT advanced sentence (fix any minor grammar/spelling typos if they exist, but KEEP their high-level vocabulary and complex structure). DO NOT downgrade their sentence to a simple ${userLevel} template.
-   - **IF NORMAL or LEVEL DOWN:** Provide a natural German sentence matching the exact expected complexity of ${userLevel}.
-
-4. **Key Corrections:**
-   - List grammar or vocabulary fixes ONLY. If perfect, say "No corrections needed".
+1. **Score (1-10):** Rate strictly based on the Asymmetric Scoring rules above. (Score 1 if wrong language).
+2. **Feedback (Language: ${feedbackLang}):** Write EXCLUSIVELY in ${feedbackLang}. 
+3. **Suggested Answer:** Follow the Dynamic Suggested Answer Rule.
+4. **Key Corrections:** List specific fixes in ${feedbackLang} or say "No corrections needed".
 
 OUTPUT JSON FORMAT:
 {
   "score": 0,
-  "feedback": "Write here in ${feedbackLang} (Native style)...",
-  "suggestedAnswer": "German sentence...",
-  "keyCorrections": ["correction 1"]
+  "feedback": "WRITE EXCLUSIVELY IN ${feedbackLang}...",
+  "suggestedAnswer": "...",
+  "keyCorrections": []
 }`
 
         const payload = {
@@ -81,13 +97,13 @@ OUTPUT JSON FORMAT:
                         {
                             type: "image_url",
                             image_url: {
-                                url: imageUrl
+                                url: finalImageUrl
                             }
                         }
                     ]
                 }
             ],
-            temperature: 0.2,
+            temperature: 0.2, // Отличная температура для строгой оценки
             max_tokens: 600,
             response_format: { type: "json_object" }
         }
@@ -100,6 +116,14 @@ OUTPUT JSON FORMAT:
             },
             body: JSON.stringify(payload)
         })
+
+        if (response.status === 429) {
+            return { error: "Запрос перегружен (лимит запросов). Попробуйте через минуту." }
+        }
+
+        if (response.status === 500) {
+            return { error: "Языковая модель столкнулась внутренней ошибкой. Возможно, модель временно недоступна." }
+        }
 
         const rawText = await response.text()
 

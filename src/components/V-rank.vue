@@ -1,69 +1,74 @@
 <template>
-  <div class="empty-content">
-    <div class="empty-icon">🔰</div>
-    <h3 class="empty-title">{{ t('regionsModal.title')}}</h3>
+  <div class="ranks-wrapper">
+    <div class="hats-info">
+      <div class="hats-left">
+        <div class="hats-badge" aria-hidden="true">
+          <img :src="currentRankIcon" :alt="currentRankTitle"/>
+        </div>
+        <div class="hats-meta">
+          <div class="hats-rank">{{ currentRankTitle }}</div>
+          <div class="hats-hatsline">
+            <img class="hat-img" :src="EducationHut" alt="EducationHut"/>
+            <span class="hat-value">{{ authStore.totalHats }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="hats-right">
+        <div class="hats-text"> {{t('v-rank.desc')}} </div>
+      </div>
+    </div>
+    <div v-for="rank in store.ranksData" :key="rank.title" class="rank-league">
+      <div class="league-line">
+        <span class="league-title">{{ t(rank.title) }}</span>
+      </div>
+      <div class="grid">
+        <div
+            v-for="(lvl, idx) in rank.levels"
+            :key="idx"
+            class="card"
+            :class="{
+            'is-locked': authStore.totalHats < lvl.hats,
+            'is-reached': authStore.totalHats >= lvl.hats
+          }"
+        >
+          <div class="card-stars">
+            <span
+                v-for="n in (idx + 1)"
+                :key="n"
+                :class="{ 'star-active': authStore.totalHats >= lvl.hats }"
+            >★</span>
+          </div>
+          <div class="card-inner">
+            <div class="card-icon">
+              <img
+                  :src="rank.icons ? rank.icons[idx].icon : rank.icon"
+                  :alt="rank.title"
+                  :class="{ 'icon-grayscale': authStore.totalHats < lvl.hats }"
+              />
+            </div>
+            <div class="card-label">{{ t('v-rank.rank') }} {{ idx + 1 }}</div>
+            <div class="card-bottom-info">
+              <div class="card-cost">
+                🎓 {{ lvl.hats }}
+              </div>
+              <div v-if="lvl.bonus"
+                   class="card-bonus"
+                   :class="{
+                     'is-discount': typeof lvl.bonus === 'string',
+                     'is-claimed': typeof lvl.bonus === 'number' && authStore.claimedBonuses?.includes(lvl.hats)
+                   }">
+                <span>
+                  <template v-if="typeof lvl.bonus === 'number'">+</template>{{ t(lvl.bonus) }}
+                </span>
+                <img v-if="typeof lvl.bonus === 'number'" class="card__articlus" src="../../assets/images/articlus.png" alt="articlus">
+                <div v-if="typeof lvl.bonus === 'number' && authStore.claimedBonuses?.includes(lvl.hats)" class="claimed-check-circle">✔</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-<!--  <div class="ranks-wrapper">-->
-<!--    <div class="hats-info">-->
-<!--      <div class="hats-left">-->
-<!--        <div class="hats-badge" aria-hidden="true">-->
-<!--          <img :src="currentRankIcon" :alt="currentRankTitle"/>-->
-<!--        </div>-->
-
-<!--        <div class="hats-meta">-->
-<!--          <div class="hats-rank">{{ currentRankTitle }}</div>-->
-
-<!--          <div class="hats-hatsline">-->
-<!--            <img class="hat-img" :src="EducationHut" alt="Конфератки"/>-->
-<!--            <span class="hat-value">{{ authStore.totalHats }}</span>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-
-<!--      <div class="hats-right">-->
-<!--        <div class="hats-text">-->
-<!--          Конфератки — это ваш путь к вершине! Накапливайте их, выполняйте все три задания дня. Повышайте свой ранг и покупайте разблокированные бонусы!-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-
-<!--    <div v-for="rank in store.ranksData" :key="rank.title" class="rank-league">-->
-<!--      <div class="league-line">-->
-<!--        <span class="league-title">{{ rank.title }}</span>-->
-<!--      </div>-->
-<!--      <div class="grid">-->
-<!--        <div-->
-<!--            v-for="(lvl, idx) in rank.levels"-->
-<!--            :key="idx"-->
-<!--            class="card"-->
-<!--            :class="{-->
-<!--            'is-locked': authStore.totalHats < lvl.hats,-->
-<!--            'is-reached': authStore.totalHats >= lvl.hats-->
-<!--          }"-->
-<!--        >-->
-<!--          <div class="card-stars">-->
-<!--            <span-->
-<!--                v-for="n in (idx + 1)"-->
-<!--                :key="n"-->
-<!--                :class="{ 'star-active': authStore.totalHats >= lvl.hats }"-->
-<!--            >★</span>-->
-<!--          </div>-->
-<!--          <div class="card-inner">-->
-<!--            <div class="card-icon">-->
-<!--              <img-->
-<!--                  :src="rank.icons ? rank.icons[idx].icon : rank.icon"-->
-<!--                  :alt="rank.title"-->
-<!--                  :class="{ 'icon-grayscale': authStore.totalHats < lvl.hats }"-->
-<!--              />-->
-<!--            </div>-->
-<!--            <div class="card-label">Ранг {{ idx + 1 }}</div>-->
-<!--            <div class="card-cost">🎓 {{ lvl.hats }}</div>-->
-<!--            <div v-if="lvl.bonus" class="card-bonus">{{ lvl.bonus }}</div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
 </template>
 
 <script setup>
@@ -72,6 +77,7 @@ import {useRankUserStore} from '~/store/rankStore.js'
 import {userAuthStore} from '~/store/authStore.js'
 import {useSeoMeta} from "#imports"
 import EducationHut from '../../assets/images/graduate-hat.svg'
+
 const { t } = useI18n()
 const store = useRankUserStore()
 const authStore = userAuthStore()
@@ -85,9 +91,8 @@ const toRoman = (n) => {
 
 const currentRankInfo = computed(() => {
   const hats = authStore.totalHats ?? 0
-
   let best = {
-    rankTitle: 'Новичок',
+    rankTitle: 'v-rank.rank_0',
     lvlIndex: 0,
     hatsNeed: 0,
     icon: EducationHut
@@ -104,17 +109,20 @@ const currentRankInfo = computed(() => {
       }
     }
   }
-
   return best
 })
 
 const currentRankTitle = computed(() => {
-  return `${currentRankInfo.value.rankTitle} ${toRoman(currentRankInfo.value.lvlIndex + 1)}`
+  const titleKey = currentRankInfo.value.rankTitle
+  const translatedName = t(titleKey)
+  if (titleKey === 'v-rank.rank_0') {
+    return translatedName
+  }
+  return `${translatedName} ${toRoman(currentRankInfo.value.lvlIndex + 1)}`
 })
 
 const currentRankIcon = computed(() => currentRankInfo.value.icon)
 </script>
-
 
 <style scoped>
 .hats-left {
@@ -143,13 +151,13 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 }
 
 .rank-league {
-  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .league-line {
-  border-bottom: 1px solid #eee;
-  margin-bottom: 5px;
-  padding-bottom: 10px;
+  border-top: 1px solid #eee;
+  margin-top: 5px;
+  padding-top: 10px;
   text-align: center;
 }
 
@@ -158,17 +166,33 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
   color: #666;
   text-transform: uppercase;
   letter-spacing: 2px;
+  -webkit-text-stroke: 1px #666;
+  padding-bottom: 5px;
+  position: relative;
+}
+
+.league-title:after {
+  content: "";
+  width: 50px;
+  height: 1px;
+  background: #000;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
+  padding-top: 13px;
 }
 
 .card {
-  padding: 10px;
+  padding: 3px;
   text-align: center;
+  position: relative;
 }
 
 .card.is-locked {
@@ -183,7 +207,11 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 
 .card-stars {
   color: #e0e0e0;
-  font-size: 20px;
+  font-size: 21px;
+  position: absolute;
+  left: 50%;
+  top: -3px;
+  transform: translateX(-50%);
 }
 
 .star-active {
@@ -191,10 +219,14 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 }
 
 .card-icon img {
-  width: 76px;
-  height: 76px;
   object-fit: contain;
   transition: filter 0.3s ease;
+}
+
+.card-icon {
+  padding-top: 10px;
+  width: 85px;
+  height: 85px;
 }
 
 .icon-grayscale {
@@ -206,21 +238,82 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
   color: var(--titleColor);
 }
 
+
+.card-bottom-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 2px;
+}
+
 .card-cost {
-  display: inline-block;
   background: #f1f3f5;
-  padding: 5px;
-  border-radius: 10px;
+  padding: 4px 12px;
+  border-radius: 20px;
   font-weight: 800;
-  margin-top: 5px;
+  font-size: 14px;
+  color: #495057;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
 }
 
 .card-bonus {
-  margin-top: 8px;
-  font-size: 0.8em;
-  color: #2f9e44;
-  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-weight: 800;
+  font-size: 14px;
+  background: rgba(46, 204, 113, 0.15);
+  color: #27ae60;
+  border: 1px solid rgba(46, 204, 113, 0.4);
+  transition: all 0.3s ease;
 }
+
+.card-bonus .card__articlus {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.card-bonus.is-discount {
+  background: rgba(52, 152, 219, 0.1);
+  color: #2980b9;
+  border-color: rgba(52, 152, 219, 0.3);
+}
+
+.card-bonus.is-claimed {
+  background: #f8f9fa;
+  color: #adb5bd;
+  border-color: #dee2e6;
+}
+
+.card-bonus.is-claimed .card__articlus {
+  filter: grayscale(1);
+  opacity: 0.6;
+}
+
+.claimed-check-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2ecc71;
+  color: white;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  font-size: 10px;
+  margin-left: 2px;
+  box-shadow: 0 2px 4px rgba(46, 204, 113, 0.3);
+}
+
+/* --- КОНЕЦ СТИЛЕЙ ДЛЯ БЕЙДЖИКОВ --- */
+
 
 .hats-info {
   display: flex;
@@ -236,7 +329,6 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
   align-items: center;
   justify-content: center;
 }
-
 
 .hats-badge img {
   width: 80px;
@@ -256,7 +348,6 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
   font-size: 20px;
   color: var(--titleColor);
   line-height: 1.05;
-
   white-space: nowrap;
 }
 
@@ -324,7 +415,6 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
     gap: 16px;
     overflow-x: auto;
     overflow-y: hidden;
-    padding: 0 10px 10px;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
   }
@@ -340,6 +430,8 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 
   .grid {
     scrollbar-width: none;
+    display: flex;
+    justify-content: center;
   }
 
   .hats-badge,
@@ -395,7 +487,6 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
   max-width: 400px;
   text-align: center;
   margin: 30px auto;
-
 }
 
 .empty-icon {
@@ -417,5 +508,4 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
   color: #444;
   line-height: 1.4;
 }
-
 </style>

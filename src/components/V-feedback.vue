@@ -9,7 +9,7 @@
           </div>
           <div class="modal__content">
             <div class="intro-block">
-              <p class="intro-text">Hallo!Мы собираем фидбек, чтобы сделать обучение удобнее и лучше.</p>
+              <p class="intro-text">Мы собираем фидбек, чтобы сделать обучение удобнее и лучше.</p>
               <p class="intro-subtext">Опрос займёт 30 секунд. Нам важно твоё мнение 💛</p>
             </div>
             <footer class="footer footer--center">
@@ -126,17 +126,17 @@ const questions = [
   },
   {
     type: 'choices',
-    title: 'Какая часть приложения тебе нравится больше всего?',
+    title: 'Какая раздел тебе нравится больше всего?',
     dataKey: 'favoriteFeature',
     selectMode: 'single',
-    options: ['Игры', 'Прогресс и достижения', 'Языковые земли', 'Тесты'],
+    options: ['Игры', 'Обучение', 'Языковые земли'],
     commentKey: 'featureComment',
     placeholder: 'Напиши, почему именно эта часть нравится',
     errorMessage: 'Выберите одну опцию'
   },
   {
     type: 'choices',
-    title: 'Понравился ли тебе рождественское событие(Шепот зимы)',
+    title: 'Нравятся ли вам события из календаря?',
     dataKey: 'christmasEventFeedback',
     selectMode: 'single',
     options: ['Да', 'Нет', 'Не участвовал'],
@@ -150,11 +150,11 @@ const questions = [
     title: 'С какими трудностями ты чаще всего сталкиваешься?',
     dataKey: 'mainFrustration',
     selectMode: 'multi',
-    options: ['Понимание материалов', 'Сложные задания', 'Навигация в приложении', 'Недостаток времени'],
+    options: ['Понимание материалов', 'Сложные задания', 'Навигация в приложении', 'Свой вариант', 'Нет'],
     commentKey: 'frustrationComment',
-    placeholder: 'Можно пояснить подробнее',
+    placeholder: 'Можно пояснить подробнее (особенно для своего варианта)',
     errorMessage: 'Выберите хотя бы одну',
-    showCommentCondition: (answer) => Array.isArray(answer) && answer.length > 0
+    showCommentCondition: (answer) => Array.isArray(answer) && answer.length > 0 && !answer.includes('Нет')
   },
   {
     type: 'rating',
@@ -186,7 +186,7 @@ const questions = [
     placeholder: 'Если да, то какие...',
     rows: 3,
     errorMessage: 'Ответьте, были ли ошибки',
-    showCommentCondition: (answer) => Array.isArray(answer) && answer.includes('да'),
+    showCommentCondition: (answer) => answer === 'да',
     commentErrorMessage: 'Опишите ошибку, пожалуйста'
   },
   {
@@ -195,7 +195,7 @@ const questions = [
     dataKey: 'acquisitionChannel',
     selectMode: 'single',
     options: [
-      'Рекомендация друга',
+      'Рекомендация',
       'Реклама в соцсетях',
       'Поиск в Google',
       'Другое'

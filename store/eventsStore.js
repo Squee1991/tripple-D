@@ -88,8 +88,9 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 		const ref = getWinterDocRef()
 		if (!ref) return
 		try {
-			await setDoc(ref, {isSnowEnabled: value}, {merge: true})
+			await setDoc(ref, { isSnowEnabled: value }, { merge: true })
 		} catch (error) {
+			console.error("Ошибка сохранения снега:", error)
 		}
 	}
 
@@ -101,13 +102,11 @@ export const useEventSessionStore = defineStore('eventSession', () => {
 			const docSnap = await getDoc(eventDocRef)
 			if (docSnap.exists()) {
 				const data = docSnap.data()
-				shopItems.value = data.shopItems || {}
+				shopItems.value = { ...shopItems.value, ...(data.shopItems || {}) }
 				if (id === 'winter') {
 					const hasBought = shopItems.value['snowFall'] || shopItems.value['snowfall']
 					if (hasBought) {
 						isSnowEnabled.value = (data.isSnowEnabled === true)
-					} else {
-						isSnowEnabled.value = false
 					}
 				}
 				return data

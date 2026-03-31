@@ -89,6 +89,7 @@ export const dailyStore = defineStore('dailyStore', () => {
             targetValue: Math.max(1, toNum(q?.targetValue ?? 1, 1)),
             currentValue: 0,
             isCompleted: false,
+            rewardClaimed: !!q?.rewardClaimed
         }
     }
     function wrapSlice(arr, start, count) {
@@ -194,9 +195,16 @@ export const dailyStore = defineStore('dailyStore', () => {
 
             const cloudProgressScore = (data.quests || []).reduce((a, q) => a + (q.isCompleted ? 2 : 0) + Number(q.currentValue || 0), 0)
             const localProgressScore = (local?.quests || []).reduce((a, q) => a + (q.isCompleted ? 2 : 0) + Number(q.currentValue || 0), 0)
-
-            const preferCloud = !local || data.cycleKey !== local.cycleKey || cloudServerTs >= localTs || cloudProgressScore > localProgressScore
-
+            let preferCloud = false
+            if (!local) {
+                preferCloud = true
+            } else if (data.cycleKey > local.cycleKey) {
+                preferCloud = true
+            } else if (data.cycleKey === local.cycleKey) {
+                if (cloudServerTs >= localTs || cloudProgressScore > localProgressScore) {
+                    preferCloud = true
+                }
+            }
             if (preferCloud) {
                 currentCycle.value = data
                 counters.value = { ...(data.counters || counters.value) }
@@ -212,30 +220,90 @@ export const dailyStore = defineStore('dailyStore', () => {
         cloudReady.value = false
     }
 
-    function ensureLocalCycle() {
+    async function checkPreviousDayPenalty(previousCycleData) {
+        if (!previousCycleData) return
+        const completedYesterday = previousCycleData.completedCount || 0
+        if (completedYesterday === 0) {
+            const authStore = userAuthStore()
+            const previousCycleExpiresAt = Number(previousCycleData.expiresAtMs || 0)
+            const freezeEndMs = authStore.freezeEndsAt
+            let hadShieldYesterday = false
+            if (freezeEndMs) {
+                const previousCycleStartsAt = previousCycleExpiresAt - CYCLE_MS
+                if (freezeEndMs > previousCycleStartsAt) {
+                    hadShieldYesterday = true
+                }
+            }
+            if (hadShieldYesterday) {
+                console.log('Штраф прощен: у юзера был щит на момент прошлого цикла.')
+                await authStore.cancelFreeze()
+                return
+            }
+            console.log('Штраф применен: квесты не выполнены, щита не было.')
+            await authStore.modifyHats(-3)
+        }
+    }
+
+    let ensurePromise = null
+
+    async function ensureLocalCycle() {
         const key = cycleKey.value
         const exist = loadLocal()
         const now = Date.now()
-
-        if (exist && exist.owner && exist.owner !== (uid() || 'anon')) {
+        const currentUid = uid() || 'anon'
+        const isNewDay = !exist || exist.cycleKey !== key || now >= Number(exist.expiresAtMs || 0)
+        const isNewUser = exist && exist.owner && exist.owner !== currentUid
+        if (isNewDay || isNewUser) {
+            // 1. СРАЗУ генерируем и сохраняем новый день локально (синхронно!)
+            // Это моментально закроет дверь для других параллельных вызовов
             const fresh = buildNewCyclePayload(key)
             currentCycle.value = fresh
             saveLocal(fresh)
+            if (exist && exist.owner === currentUid && isNewDay) {
+                await checkPreviousDayPenalty(exist)
+            }
             pushCurrentCycleToCloud(fresh, false).catch(() => {})
             return
         }
-
-        if (!exist || exist.cycleKey !== key || now >= Number(exist.expiresAtMs || 0)) {
-            const fresh = buildNewCyclePayload(key)
-            currentCycle.value = fresh
-            saveLocal(fresh)
-            pushCurrentCycleToCloud(fresh, false).catch(() => {})
-            return
-        }
-
         currentCycle.value = exist
         counters.value = { ...(exist.counters || counters.value) }
     }
+
+    // async function ensureLocalCycle() {
+    //     if (ensurePromise) {
+    //         await ensurePromise
+    //         return
+    //     }
+    //     ensurePromise = (async () => {
+    //         const key = cycleKey.value
+    //         const exist = loadLocal()
+    //         const now = Date.now()
+    //         const currentUid = uid() || 'anon'
+    //
+    //         const isNewDay = !exist || exist.cycleKey !== key || now >= Number(exist.expiresAtMs || 0)
+    //         const isNewUser = exist && exist.owner && exist.owner !== currentUid
+    //
+    //         if (isNewDay || isNewUser) {
+    //             if (exist && exist.owner === currentUid && isNewDay) {
+    //                 await checkPreviousDayPenalty(exist)
+    //             }
+    //
+    //             const fresh = buildNewCyclePayload(key)
+    //             currentCycle.value = fresh
+    //             saveLocal(fresh)
+    //             pushCurrentCycleToCloud(fresh, false).catch(() => {})
+    //             return
+    //         }
+    //         currentCycle.value = exist
+    //         counters.value = { ...(exist.counters || counters.value) }
+    //     })()
+    //
+    //     try {
+    //         await ensurePromise
+    //     } finally {
+    //         ensurePromise = null
+    //     }
+    // }
 
     function valueForQuestByCounters(qid) {
         const c = counters.value
@@ -282,38 +350,50 @@ export const dailyStore = defineStore('dailyStore', () => {
                 console.error("Cloud fetch error:", e)
             }
         }
-        if (!currentCycle.value) ensureLocalCycle()
+        if (!currentCycle.value) await ensureLocalCycle()
 
         const local = currentCycle.value
         if (!local) return
+
         let newlyCompleted = 0
         let changed = false
+        const authStore = userAuthStore()
+        const rankStore = useRankUserStore()
+
         const nextQuests = (local.quests || []).map(q => {
             const target = Math.max(1, toNum(q.targetValue, 1))
             const rawVal = valueForQuestByCounters(q.id)
             const val = Math.min(Math.max(0, toNum(rawVal, 0)), target)
             const now = val >= target
             const was = !!q.isCompleted
+
+            let rewardClaimed = q.rewardClaimed || false
+            if (now && !rewardClaimed) {
+                authStore.modifyHats(1)
+                rankStore.checkRewardUI()
+                rewardClaimed = true
+                changed = true
+            }
+
             if (val !== q.currentValue || now !== was) changed = true
             if (now && !was) newlyCompleted++
-            return { ...q, currentValue: val, isCompleted: now }
+
+            return { ...q, currentValue: val, isCompleted: now, rewardClaimed: rewardClaimed }
         })
-        const totalDone = nextQuests.filter(q => q.isCompleted).length
-        let hatAwardedNow = false
-        if (totalDone >= QUESTS_PER_CYCLE && !local.hatClaimed) {
-            const aStore = userAuthStore()
-            const rStore = useRankUserStore()
-            await aStore.incrementHats()
-            rStore.checkRewardUI()
-            hatAwardedNow = true
+
+        if (newlyCompleted > 0 && authStore.isFreezeActive) {
+            await authStore.cancelFreeze()
         }
-        if (!changed && newlyCompleted === 0 && !hatAwardedNow) return
+
+        const totalDone = nextQuests.filter(q => q.isCompleted).length
+
+        if (!changed && newlyCompleted === 0) return
+
         const updated = {
             ...local,
             quests: nextQuests,
             counters: { ...counters.value },
             completedCount: totalDone,
-            hatClaimed: hatAwardedNow ? true : (local.hatClaimed || false),
             lastUpdatedAtMs: Date.now(),
             updatedBy: uid() || 'local',
         }
@@ -328,7 +408,7 @@ export const dailyStore = defineStore('dailyStore', () => {
         if (syncing.value) return
         syncing.value = true
         try {
-            ensureLocalCycle()
+            await ensureLocalCycle()
             const local = currentCycle.value
             if (!local) return
             if (Date.now() >= Number(local.expiresAtMs || 0) || local.cycleKey !== cycleKey.value) {
@@ -376,14 +456,32 @@ export const dailyStore = defineStore('dailyStore', () => {
     }
 
     async function markQuestCompleted(questId) {
-        ensureLocalCycle()
+        await ensureLocalCycle()
         const local = { ...(currentCycle.value) }
         if (!local) return
         const idx = (local.quests || []).findIndex(q => String(q.id) === String(questId))
         if (idx < 0 || local.quests[idx].isCompleted) return
 
         const target = Math.max(1, toNum(local.quests[idx].targetValue, 1))
-        local.quests[idx] = { ...local.quests[idx], currentValue: target, isCompleted: true }
+
+        if (!local.quests[idx].rewardClaimed) {
+            const authStore = userAuthStore()
+            const rankStore = useRankUserStore()
+            await authStore.modifyHats(1)
+
+            if (authStore.isFreezeActive) {
+                await authStore.cancelFreeze()
+            }
+            rankStore.checkRewardUI()
+        }
+
+        local.quests[idx] = {
+            ...local.quests[idx],
+            currentValue: target,
+            isCompleted: true,
+            rewardClaimed: true
+        }
+
         local.completedCount = (local.quests || []).reduce((a, x) => a + (x.isCompleted ? 1 : 0), 0)
         local.lastUpdatedAtMs = Date.now()
         local.updatedBy = uid() || 'local'
@@ -431,19 +529,19 @@ export const dailyStore = defineStore('dailyStore', () => {
     }
 
     async function init() {
-        ensureLocalCycle()
+        await ensureLocalCycle()
         if (uid()) attachCloudListener()
         await updateProgressFromCounters()
         startClock()
         startAutoSync()
 
-        onAuthStateChanged(auth, () => {
+        onAuthStateChanged(auth, async () => {
             detachCloudListener()
             if (uid()) {
                 attachCloudListener()
-                ensureLocalCycle()
+                await ensureLocalCycle()
             } else {
-                ensureLocalCycle()
+                await ensureLocalCycle()
             }
         })
     }

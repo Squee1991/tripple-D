@@ -156,7 +156,7 @@
 						{ "question": "Он носит ___ komplettes Outfit.", "word": "Outfit", "answer": "ein" },
 						{ "question": "Мне нравится ___ Wolle.", "word": "Wolle", "answer": "die" },
 						{ "question": "Она предпочитает ___ Baumwolle.", "word": "Baumwolle", "answer": "die" },
-						{ "question": "Я покупаю ___ Kleid aus Seide.", "word": "Seide", "answer": "der" },
+						{ "question": "Я покупаю Kleid aus ___ Seide.", "word": "Seide", "answer": "der" },
 						{ "question": "Он выбирает ___ neuen Schnitt.", "word": "Schnitt", "answer": "einen" }
 					]
 				}

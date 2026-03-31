@@ -15,8 +15,8 @@
               class="quest-card"
               :class="{ completed: quest.isSuccess }"
           >
-            <div v-if="quest.isSuccess && !quest.hasMistakes" class="stamp">{{ t('locationQuests.done') }}</div>
-            <div v-else-if="quest.isSuccess && quest.hasMistakes" class="stamp stamp--mistakes">{{ t('locationQuests.mistakes') }}</div>
+            <div v-if="quest.isPerfect" class="stamp">{{ t('locationQuests.done') }}</div>
+            <div v-else-if="quest.hasMistakes" class="stamp stamp--mistakes">{{ t('locationQuests.mistakes') }}</div>
             <h3 class="quest__title">{{ t(quest.title) }}</h3>
             <p class="quest__description">{{ t(quest.description) }}</p>
             <div class="quest-meta">
@@ -35,13 +35,12 @@
                 :style="quest.btnStyle"
                 @click="handleStartQuest(quest)"
             >
-              <template v-if="quest.isSuccess">
-                <template v-if="quest.hasMistakes">
-                  {{ t('locationQuests.repeatMistakes') }}
-                </template>
-                <template v-else>
-                  {{ t('locationQuests.repeat') }}
-                </template>
+              <template v-if="quest.hasMistakes">
+                {{ t('locationQuests.repeatMistakes') }}
+              </template>
+
+              <template v-else-if="quest.isPerfect">
+                {{ t('locationQuests.repeat') }}
               </template>
               <template v-else>
                 {{ t('locationQuests.start') }}
@@ -114,29 +113,29 @@ const processedQuests = computed(() => {
       }
     }
     const safeProgress = userProgress || {};
-    const hasMistakes = !!(
-        safeProgress.success && ((safeProgress.wrongIndices && safeProgress.wrongIndices.length > 0) || (safeProgress.correctCount < safeProgress.requiredTasks))
-    );
+    const hasMistakes = !!(safeProgress.wrongIndices && safeProgress.wrongIndices.length > 0);
     const isSuccess = !!safeProgress.success;
+    const isPerfect = isSuccess && !hasMistakes;
+
     let btnStyle = {};
-    if (isSuccess) {
-      if (hasMistakes) {
-        btnStyle = {
-          background: 'linear-gradient(180deg, #ff82a9 0%, #e6517d 100%)',
-          color: '#fff'
-        };
-      } else {
-        btnStyle = {
-          background: 'linear-gradient(180deg, #6a74a5 0%, #5d7fc1 100%)',
-          color: '#fff'
-        };
-      }
+    if (hasMistakes) {
+      btnStyle = {
+        background: 'linear-gradient(180deg, #ff82a9 0%, #e6517d 100%)',
+        color: '#fff'
+      };
+    } else if (isPerfect) {
+      btnStyle = {
+        background: 'linear-gradient(180deg, #6a74a5 0%, #5d7fc1 100%)',
+        color: '#fff'
+      };
     }
+
     return {
       ...quest,
       isSuccess,
       isCompleted: !!safeProgress.completed,
       hasMistakes,
+      isPerfect,
       btnStyle
     };
   });

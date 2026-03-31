@@ -1,0 +1,1901 @@
+[
+  {
+    "questId": "valley_nebensatz_word_order",
+    "aliases": ["sub-clauses-order"],
+    "title": "orderValleyQuestOne.title",
+    "progress": "0/15",
+    "description": "orderValleyQuestOne.description",
+    "conditions": {
+      "goal": "orderValleyQuestOne.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "orderValleyQuestOne.questOne",
+        "words": ["ist", "wichtig", "es", "weil", "lerne", "Ich"],
+        "correctOrder": ["Ich", "lerne", "weil", "es", "wichtig", "ist"],
+        "tip": "orderValleyQuestOne.questOneTip"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "orderValleyQuestOne.questTwo",
+        "options": [
+          "Er sagt, dass er kommt",
+          "Er sagt, dass kommt er",
+          "Er sagt, dass er ist kommt"
+        ],
+        "answer": "Er sagt, dass er kommt",
+        "tip": "orderValleyQuestOne.questTwoTip"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "orderValleyQuestOne.questThree",
+        "text": "Ich komme, wenn ich Zeit habe",
+        "answer": "Ich komme, wenn ich Zeit habe",
+        "tip": "orderValleyQuestOne.questThreeTip"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "orderValleyQuestOne.questFour",
+        "words": ["endet", "Film", "der", "wenn", "Hause", "nach", "gehen", "Wir"],
+        "correctOrder": ["Wir", "gehen", "nach", "Hause", "wenn", "der", "Film", "endet"],
+        "tip": "orderValleyQuestOne.questFourTip"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "orderValleyQuestOne.questFive",
+        "options": [
+          "Ich weiß nicht, ob er heute kommt",
+          "Ich weiß nicht, ob kommt er heute",
+          "Ich weiß nicht, ob er heute kommen"
+        ],
+        "answer": "Ich weiß nicht, ob er heute kommt",
+        "tip": "orderValleyQuestOne.questFiveTip"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "orderValleyQuestOne.questSix",
+        "words": ["ist", "krank", "sie", "obwohl", "arbeitet", "Sie"],
+        "correctOrder": ["Sie", "arbeitet", "obwohl", "sie", "krank", "ist"],
+        "tip": "orderValleyQuestOne.questSixTip"
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "orderValleyQuestOne.questSeven",
+        "text": "Ich weiß, dass du Recht hast",
+        "answer": "Ich weiß, dass du Recht hast"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "orderValleyQuestOne.questEight",
+        "options": [
+          "Ich bin müde, weil ich früh aufstehe",
+          "Ich bin müde, weil ich stehe früh auf",
+          "Ich bin müde, weil aufstehe ich früh"
+        ],
+        "answer": "Ich bin müde, weil ich früh aufstehe",
+        "tip": "orderValleyQuestOne.questEightTip"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "orderValleyQuestOne.questNine",
+        "words": ["hast", "Recht", "du", "dass", "glaube", "Ich"],
+        "correctOrder": ["Ich", "glaube", "dass", "du", "Recht", "hast"],
+        "tip": "orderValleyQuestOne.questNineTip"
+      },
+      {
+        "id": 10,
+        "type": "speechToText",
+        "question": "orderValleyQuestOne.questTen",
+        "text": "Er fragt, wo du wohnst",
+        "answer": "Er fragt, wo du wohnst",
+        "tip": "orderValleyQuestOne.questTenTip"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "orderValleyQuestOne.questEleven",
+        "options": [
+          "Wir wissen, dass wir helfen müssen",
+          "Wir wissen, dass wir müssen helfen",
+          "Wir wissen, dass, helfen wir müssen"
+        ],
+        "answer": "Wir wissen, dass wir helfen müssen",
+        "tip": "orderValleyQuestOne.questElevenTip"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "orderValleyQuestOne.questTwelve",
+        "words": ["ankomme", "ich", "sobald", "dich", "rufe", "Ich", "an"],
+        "correctOrder": ["Ich", "rufe", "dich", "an", "sobald", "ich", "ankomme"],
+        "tip": "orderValleyQuestOne.questTwelveTip"
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "orderValleyQuestOne.questThirteen",
+        "text": "Er lernt viel, damit er die Prüfung besteht",
+        "answer": "Er lernt viel, damit er die Prüfung besteht",
+        "tip": "orderValleyQuestOne.questThirteenTip"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "orderValleyQuestOne.questFourteen",
+        "options": [
+          "Da es schon spät ist, gehe ich schlafen",
+          "Da es ist schon spät, gehe ich schlafen",
+          "Da es schon spät ist, ich gehe schlafen"
+        ],
+        "answer": "Da es schon spät ist, gehe ich schlafen",
+        "tip": "orderValleyQuestOne.questFourteenTip"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "orderValleyQuestOne.questFifteen",
+        "words": ["hast", "gekauft", "Buch", "dieses", "du", "wo", "gefragt", "hat", "Er"],
+        "correctOrder": ["Er", "hat", "gefragt", "wo", "du", "dieses", "Buch", "gekauft", "hast"],
+        "tip": "orderValleyQuestOne.questFifteenTip"
+      }
+    ]
+  },
+  {
+    "questId": "valley_nebensatz_minimal",
+    "aliases": ["sub-clauses-short"],
+    "title": "orderValleyQuestTwo.title",
+    "progress": "0/15",
+    "description": "orderValleyQuestTwo.description",
+    "conditions": {
+      "goal": "orderValleyQuestTwo.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "orderValleyQuestTwo.questOne",
+        "words": ["bist", "hier", "du", "dass", "weiß", "Ich"],
+        "correctOrder": ["Ich", "weiß", "dass", "du", "hier", "bist"],
+        "tip": "orderValleyQuestTwo.questOneTip"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "orderValleyQuestTwo.questTwo",
+        "options": [
+          "Er isst, weil er Hunger hat",
+          "Er isst, weil er hat Hunger",
+          "Er isst, weil Hunger er hat"
+        ],
+        "answer": "Er isst, weil er Hunger hat",
+        "tip": "orderValleyQuestTwo.questTwoTip"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "orderValleyQuestTwo.questThree",
+        "text": "Er weiß, dass ich komme",
+        "answer": "Er weiß, dass ich komme",
+        "tip": "orderValleyQuestTwo.questThreeTip"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "orderValleyQuestTwo.questFour",
+        "words": ["kommt", "er", "ob", "frage", "Ich"],
+        "correctOrder": ["Ich", "frage", "ob", "er", "kommt"],
+        "tip": "orderValleyQuestTwo.questFourTip"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "orderValleyQuestTwo.questFive",
+        "options": [
+          "Ich weiß nicht, wo mein Handy ist",
+          "Ich weiß nicht, wo ist mein Handy",
+          "Ich weiß nicht, mein Handy ist wo"
+        ],
+        "answer": "Ich weiß nicht, wo mein Handy ist",
+        "tip": "orderValleyQuestTwo.questFiveTip"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "orderValleyQuestTwo.questSix",
+        "words": ["regnet", "es", "wenn", "Hause", "zu", "bleiben", "Wir"],
+        "correctOrder": ["Wir", "bleiben", "zu", "Hause", "wenn", "es", "regnet"],
+        "tip": "orderValleyQuestTwo.questSixTip"
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "orderValleyQuestTwo.questSeven",
+        "text": "Ich arbeite, obwohl es spät ist",
+        "answer": "Ich arbeite, obwohl es spät ist",
+        "tip": "orderValleyQuestTwo.questSevenTip"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "orderValleyQuestTwo.questEight",
+        "options": [
+          "Ich sehe, dass du liest",
+          "Ich sehe, dass liest du",
+          "Ich sehe, du liest dass"
+        ],
+        "answer": "Ich sehe, dass du liest",
+        "tip": "orderValleyQuestTwo.questEightTip"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "orderValleyQuestTwo.questNine",
+        "words": ["anruft", "er", "bis", "warten", "Wir"],
+        "correctOrder": ["Wir", "warten", "bis", "er", "anruft"],
+        "tip": "orderValleyQuestTwo.questNineTip"
+      },
+      {
+        "id": 10,
+        "type": "speechToText",
+        "question": "orderValleyQuestTwo.questTen",
+        "text": "Ich bin glücklich, weil ich dich liebe",
+        "answer": "Ich bin glücklich, weil ich dich liebe",
+        "tip": "orderValleyQuestTwo.questTenTip"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "orderValleyQuestTwo.questEleven",
+        "options": [
+          "Ich weiß, wo du wohnst",
+          "Ich weiß, wo wohnst du",
+          "Ich weiß, du wohnst wo"
+        ],
+        "answer": "Ich weiß, wo du wohnst",
+        "tip": "orderValleyQuestTwo.questElevenTip"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "orderValleyQuestTwo.questTwelve",
+        "words": ["kannst", "kommen", "du", "dass", "froh", "bin", "Ich"],
+        "correctOrder": ["Ich", "bin", "froh", "dass", "du", "kommen", "kannst"],
+        "tip": "orderValleyQuestTwo.questTwelveTip"
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "orderValleyQuestTwo.questThirteen",
+        "text": "Es ist wichtig, dass du das machst",
+        "answer": "Es ist wichtig, dass du das machst",
+        "tip": "orderValleyQuestTwo.questThirteenTip"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "orderValleyQuestTwo.questFourteen",
+        "options": [
+          "Er schweigt, da er müde ist",
+          "Er schweigt, da ist er müde",
+          "Er schweigt, da er ist müde"
+        ],
+        "answer": "Er schweigt, da er müde ist",
+        "tip": "orderValleyQuestTwo.questFourteenTip"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "orderValleyQuestTwo.questFifteen",
+        "words": ["kommt", "er", "wann", "nicht", "weiß", "Ich"],
+        "correctOrder": ["Ich", "weiß", "nicht", "wann", "er", "kommt"],
+        "tip": "orderValleyQuestTwo.questFifteenTip"
+      }
+    ]
+  },
+  {
+    "questId": "valley_nebensatz_extended",
+    "aliases": ["sub-clauses-extended"],
+    "title": "orderValleyQuestThree.title",
+    "progress": "0/15",
+    "description": "orderValleyQuestThree.description",
+    "conditions": {
+      "goal": "orderValleyQuestThree.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "orderValleyQuestThree.questOne",
+        "words": ["muss", "arbeiten", "ich", "weil", "kommen", "nicht", "kann", "Ich"],
+        "correctOrder": ["Ich", "kann", "nicht", "kommen", "weil", "ich", "arbeiten", "muss"],
+        "tip": "orderValleyQuestThree.questOneTip"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "orderValleyQuestThree.questTwo",
+        "options": [
+          "Ich bin nicht sicher, ob er heute zur Party kommt",
+          "Ich bin nicht sicher, ob kommt er heute zur Party",
+          "Ich bin nicht sicher, ob er kommt heute zur Party"
+        ],
+        "answer": "Ich bin nicht sicher, ob er heute zur Party kommt",
+        "tip": "orderValleyQuestThree.questTwoTip"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "orderValleyQuestThree.questThree",
+        "text": "Es ist schade, dass wir morgen nicht kommen können",
+        "answer": "Es ist schade, dass wir morgen nicht kommen können",
+        "tip": "orderValleyQuestThree.questThreeTip"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "orderValleyQuestThree.questFour",
+        "words": ["hat", "verkauft", "Auto", "neues", "sein", "er", "warum", "mich", "frage", "Ich"],
+        "correctOrder": ["Ich", "frage", "mich", "warum", "er", "sein", "neues", "Auto", "verkauft", "hat"],
+        "tip": "orderValleyQuestThree.questFourTip"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "orderValleyQuestThree.questFive",
+        "options": [
+          "Sag mir bitte, wo du diesen Mantel gekauft hast",
+          "Sag mir bitte, wo hast du diesen Mantel gekauft",
+          "Sag mir bitte, wo du hast diesen Mantel gekauft"
+        ],
+        "answer": "Sag mir bitte, wo du diesen Mantel gekauft hast",
+        "tip": "orderValleyQuestThree.questFiveTip"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "orderValleyQuestThree.questSix",
+        "words": ["hat", "geschlafen", "lange", "er", "obwohl", "müde", "ist", "Er"],
+        "correctOrder": ["Er", "ist", "müde", "obwohl", "er", "lange", "geschlafen", "hat"],
+        "tip": "orderValleyQuestThree.questSixTip"
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "orderValleyQuestThree.questSeven",
+        "text": "Ich bin sicher, dass wir die Prüfung bestehen",
+        "answer": "Ich bin sicher, dass wir die Prüfung bestehen",
+        "tip": "orderValleyQuestThree.questSevenTip"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "orderValleyQuestThree.questEight",
+        "options": [
+          "Weißt du, wie viel diese Schuhe kosten?",
+          "Weißt du, wie viel kosten diese Schuhe?",
+          "Weißt du, wie viel diese Schuhe sind kosten?"
+        ],
+        "answer": "Weißt du, wie viel diese Schuhe kosten?",
+        "tip": "orderValleyQuestThree.questEightTip"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "orderValleyQuestThree.questNine",
+        "words": ["bin", "fertig", "Essen", "dem", "mit", "ich", "sobald", "an", "dich", "rufe", "Ich"],
+        "correctOrder": ["Ich", "rufe", "dich", "an", "sobald", "ich", "mit", "dem", "Essen", "fertig", "bin"],
+        "tip": "orderValleyQuestThree.questNineTip"
+      },
+      {
+        "id": 10,
+        "type": "speechToText",
+        "question": "orderValleyQuestThree.questTen",
+        "text": "Er lernt viel, damit er in Berlin studieren kann",
+        "answer": "Er lernt viel, damit er in Berlin studieren kann",
+        "tip": "orderValleyQuestThree.questTenTip"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "orderValleyQuestThree.questEleven",
+        "options": [
+          "Weißt du, wann der Film beginnt?",
+          "Weißt du, wann beginnt der Film?",
+          "Weißt du, der Film wann beginnt?"
+        ],
+        "answer": "Weißt du, wann der Film beginnt?",
+        "tip": "orderValleyQuestThree.questElevenTip"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "orderValleyQuestThree.questTwelve",
+        "words": ["ist", "gekommen", "hast", "Schule", "zur", "nicht", "heute", "sie", "warum", "du", "Weißt"],
+        "correctOrder": ["Weißt", "du", "warum", "sie", "heute", "nicht", "zur", "Schule", "gekommen", "ist"],
+        "tip": "orderValleyQuestThree.questTwelveTip"
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "orderValleyQuestThree.questThirteen",
+        "text": "Ich hoffe, dass wir uns morgen sehen",
+        "answer": "Ich hoffe, dass wir uns morgen sehen",
+        "tip": "orderValleyQuestThree.questThirteenTip"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "orderValleyQuestThree.questFourteen",
+        "options": [
+          "Sag mir, wann du nach Hause kommst",
+          "Sag mir, wann kommst du nach Hause",
+          "Sag mir, wann du kommst nach Hause"
+        ],
+        "answer": "Sag mir, wann du nach Hause kommst",
+        "tip": "orderValleyQuestThree.questFourteenTip"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "orderValleyQuestThree.questFifteen",
+        "words": ["lernst", "skillupgerman", "auf", "Deutsch", "du", "dass", "froh", "sind", "Wir"],
+        "correctOrder": ["Wir", "sind", "froh", "dass", "du", "Deutsch", "auf", "skillupgerman", "lernst"],
+        "tip": "orderValleyQuestThree.questFifteenTip"
+      }
+    ]
+  },
+  {
+    "questId": "valley_es_gibt_basics",
+    "aliases": ["es-gibt-intro"],
+    "title": "orderValleyQuestFour.title",
+    "progress": "0/15",
+    "description": "orderValleyQuestFour.description",
+    "conditions": {
+      "goal": "orderValleyQuestFour.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "orderValleyQuestFour.questOne",
+        "words": ["einen", "Park", "hier", "gibt", "Es"],
+        "correctOrder": ["Es", "gibt", "hier", "einen", "Park"],
+        "tip": "orderValleyQuestFour.questOneTip"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "orderValleyQuestFour.questTwo",
+        "options": [
+          "Es gibt ein Museum in der Stadt",
+          "Es gibt einen Museum in der Stadt",
+          "Es geben ein Museum in der Stadt"
+        ],
+        "answer": "Es gibt ein Museum in der Stadt",
+        "tip": "orderValleyQuestFour.questTwoTip"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "orderValleyQuestFour.questThree",
+        "text": "Gibt es hier Internet?",
+        "answer": "Gibt es hier Internet?",
+        "tip": "orderValleyQuestFour.questThreeTip"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "orderValleyQuestFour.questFour",
+        "words": ["Probleme", "keine", "gibt", "Es"],
+        "correctOrder": ["Es", "gibt", "keine", "Probleme"],
+        "tip": "orderValleyQuestFour.questFourTip"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "orderValleyQuestFour.questFive",
+        "options": [
+          "Heute gibt es Pizza",
+          "Heute es gibt Pizza",
+          "Heute geben es Pizza"
+        ],
+        "answer": "Heute gibt es Pizza",
+        "tip": "orderValleyQuestFour.questFiveTip"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "orderValleyQuestFour.questSix",
+        "words": ["Restaurant", "ein", "hier", "es", "Gibt"],
+        "correctOrder": ["Gibt", "es", "hier", "ein", "Restaurant"],
+        "tip": "orderValleyQuestFour.questSixTip"
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "orderValleyQuestFour.questSeven",
+        "text": "Es gibt einen Fehler",
+        "answer": "Es gibt einen Fehler",
+        "tip": "orderValleyQuestFour.questSevenTip"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "orderValleyQuestFour.questEight",
+        "options": [
+          "Es gibt Milch im Kühlschrank",
+          "Es gibt einen Milch im Kühlschrank",
+          "Es geben Milch im Kühlschrank"
+        ],
+        "answer": "Es gibt Milch im Kühlschrank",
+        "tip": "orderValleyQuestFour.questEightTip"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "orderValleyQuestFour.questNine",
+        "words": ["Kaffee", "Frühstück", "zum", "es", "gibt", "Es"],
+        "correctOrder": ["Es", "gibt", "zum", "Frühstück", "Kaffee"],
+        "tip": "orderValleyQuestFour.questNineTip"
+      },
+      {
+        "id": 10,
+        "type": "speechToText",
+        "question": "orderValleyQuestFour.questTen",
+        "text": "Was gibt es heute?",
+        "answer": "Was gibt es heute?",
+        "tip": "orderValleyQuestFour.questTenTip"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "orderValleyQuestFour.questEleven",
+        "options": [
+          "Es gibt viele Bäume im Wald",
+          "Es geben viele Bäume im Wald",
+          "Es gibt vielen Bäume im Wald"
+        ],
+        "answer": "Es gibt viele Bäume im Wald",
+        "tip": "orderValleyQuestFour.questElevenTip"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "orderValleyQuestFour.questTwelve",
+        "words": ["Zeit", "noch", "es", "gibt", "Es"],
+        "correctOrder": ["Es", "gibt", "noch", "Zeit"],
+        "tip": "orderValleyQuestFour.questTwelveTip"
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "orderValleyQuestFour.questThirteen",
+        "text": "Es gibt nichts",
+        "answer": "Es gibt nichts",
+        "tip": "orderValleyQuestFour.questThirteenTip"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "orderValleyQuestFour.questFourteen",
+        "options": [
+          "Gibt es hier einen Supermarkt?",
+          "Gibt es hier ein Supermarkt?",
+          "Es gibt hier einen Supermarkt?"
+        ],
+        "answer": "Gibt es hier einen Supermarkt?",
+        "tip": "orderValleyQuestFour.questFourteenTip"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "orderValleyQuestFour.questFifteen",
+        "words": ["Schüler", "viele", "Schule", "unserer", "in", "es", "gibt", "Es"],
+        "correctOrder": ["Es", "gibt", "in", "unserer", "Schule", "viele", "Schüler"],
+        "tip": "orderValleyQuestFour.questFifteenTip"
+      }
+    ]
+  },
+  {
+    "questId": "valley_es_gibt_advanced",
+    "aliases": ["es-gibt-pro"],
+    "title": "orderValleyQuestFive.title",
+    "progress": "0/15",
+    "description": "orderValleyQuestFive.description",
+    "conditions": {
+      "goal": "orderValleyQuestFive.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "orderValleyQuestFive.questOne",
+        "words": ["Gibt", "es", "hier", "einen", "Ausgang"],
+        "correctOrder": ["Gibt", "es", "hier", "einen", "Ausgang"],
+        "tip": "orderValleyQuestFive.questOneTip"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "orderValleyQuestFive.questTwo",
+        "options": [
+          "Es gibt hier keinen Eingang",
+          "Es gibt hier kein Eingang",
+          "Es gibt hier keine Eingang"
+        ],
+        "answer": "Es gibt hier keinen Eingang",
+        "tip": "orderValleyQuestFive.questTwoTip"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "orderValleyQuestFive.questThree",
+        "text": "Was gibt es Neues?",
+        "answer": "Was gibt es Neues?",
+        "tip": "orderValleyQuestFive.questThreeTip"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "orderValleyQuestFive.questFour",
+        "words": ["Es", "gibt", "hier", "einen", "Fehler"],
+        "correctOrder": ["Es", "gibt", "hier", "einen", "Fehler"],
+        "tip": "orderValleyQuestFive.questFourTip"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "orderValleyQuestFive.questFive",
+        "options": [
+          "Wo es gibt hier eine Toilette?",
+          "Wo gibt es hier ein Toilette?",
+          "Wo gibt es hier eine Toilette?"
+        ],
+        "answer": "Wo gibt es hier eine Toilette?",
+        "tip": "orderValleyQuestFive.questFiveTip"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "orderValleyQuestFive.questSix",
+        "words": ["Es", "gibt", "einen", "Grund"],
+        "correctOrder": ["Es", "gibt", "einen", "Grund"],
+        "tip": "orderValleyQuestFive.questSixTip"
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "orderValleyQuestFive.questSeven",
+        "text": "Gibt es noch Fragen?",
+        "answer": "Gibt es noch Fragen?",
+        "tip": "orderValleyQuestFive.questSevenTip"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "orderValleyQuestFive.questEight",
+        "options": [
+          "Heute gibt es kein Unterricht",
+          "Heute gibt es keinen Unterricht",
+          "Heute gibt es keine Unterricht"
+        ],
+        "answer": "Heute gibt es keinen Unterricht",
+        "tip": "orderValleyQuestFive.questEightTip"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "orderValleyQuestFive.questNine",
+        "words": ["heute", "nichts", "Es", "mehr", "gibt"],
+        "correctOrder": ["Es", "gibt", "heute", "nichts", "mehr"],
+        "tip": "orderValleyQuestFive.questNineTip"
+      },
+      {
+        "id": 10,
+        "type": "speechToText",
+        "question": "orderValleyQuestFive.questTen",
+        "text": "Es gibt eine Lösung",
+        "answer": "Es gibt eine Lösung",
+        "tip": "orderValleyQuestFive.questTenTip"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "orderValleyQuestFive.questEleven",
+        "options": [
+          "Gibt es eine Apotheke in der Nähe?",
+          "Gibt es ein Apotheke in der Nähe?",
+          "Es gibt eine Apotheke in der Nähe?"
+        ],
+        "answer": "Gibt es eine Apotheke in der Nähe?",
+        "tip": "orderValleyQuestFive.questElevenTip"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "orderValleyQuestFive.questTwelve",
+        "words": ["Es", "gibt", "dafür", "keine", "Hoffnung"],
+        "correctOrder": ["Es", "gibt", "dafür", "keine", "Hoffnung"],
+        "tip": "orderValleyQuestFive.questTwelveTip"
+      },
+      {
+        "id": 13,
+        "type": "speechToText",
+        "question": "orderValleyQuestFive.questThirteen",
+        "text": "Es gibt viel zu tun",
+        "answer": "Es gibt viel zu tun",
+        "tip": "orderValleyQuestFive.questThirteenTip"
+      },
+      {
+        "id": 14,
+        "type": "select",
+        "question": "orderValleyQuestFive.questFourteen",
+        "options": [
+          "In dieser Tasche gibt es einen Brief",
+          "In dieser Tasche es gibt einen Brief",
+          "In dieser Tasche gibt es ein Brief"
+        ],
+        "answer": "In dieser Tasche gibt es einen Brief",
+        "tip": "orderValleyQuestFive.questFourteenTip"
+      },
+      {
+        "id": 15,
+        "type": "reorder",
+        "question": "orderValleyQuestFive.questFifteen",
+        "words": ["Es", "gibt", "noch", "eine", "Chance"],
+        "correctOrder": ["Es", "gibt", "noch", "eine", "Chance"],
+        "tip": "orderValleyQuestFive.questFifteenTip"
+      }
+    ]
+  },
+  {
+    "questId": "reflexivpronomen_clean",
+    "aliases": ["reflexiv-base"],
+    "title": "orderValleyQuestSix.title",
+    "progress": "0/15",
+    "description": "orderValleyQuestSix.description",
+    "conditions": {
+      "goal": "orderValleyQuestSix.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "orderValleyQuestSix.questOne",
+        "words": ["Ich", "mir", "wasche", "mich"],
+        "correctOrder": ["Ich", "wasche", "mich"],
+        "tip": "orderValleyQuestSix.questOneTip"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "orderValleyQuestSix.questTwo",
+        "options": [
+          "Du kämmst dir die Haare",
+          "Du kämmst dich die Haare",
+          "Du kämmst sich die Haare"
+        ],
+        "answer": "Du kämmst dir die Haare",
+        "tip": "orderValleyQuestSix.questTwoTip"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "orderValleyQuestSix.questThree",
+        "text": "Er rasiert sich",
+        "answer": "Er rasiert sich",
+        "tip": "orderValleyQuestSix.questThreeTip"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "orderValleyQuestSix.questFour",
+        "words": ["Wir", "putzen", "uns", "die", "Zähne"],
+        "correctOrder": ["Wir", "putzen", "uns", "die", "Zähne"],
+        "tip": "orderValleyQuestSix.questFourTip"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "orderValleyQuestSix.questFive",
+        "options": [
+          "Ihr beeilt euch",
+          "Ihr beeilt uns",
+          "Ihr beeilt sich"
+        ],
+        "answer": "Ihr beeilt euch",
+        "tip": "orderValleyQuestSix.questFiveTip"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "orderValleyQuestSix.questSix",
+        "words": ["Ich", "wasche", "mir", "die", "Hände", "mich"],
+        "correctOrder": ["Ich", "wasche", "mir", "die", "Hände"],
+        "tip": "orderValleyQuestSix.questSixTip"
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "orderValleyQuestSix.questSeven",
+        "text": "Setzen Sie sich",
+        "answer": "Setzen Sie sich",
+        "tip": "orderValleyQuestSix.questSevenTip"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "orderValleyQuestSix.questEight",
+        "options": [
+          "Ich bestelle mir eine Pizza",
+          "Ich bestelle mich eine Pizza",
+          "Ich bestelle sich eine Pizza"
+        ],
+        "answer": "Ich bestelle mir eine Pizza",
+        "tip": "orderValleyQuestSix.questEightTip"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "orderValleyQuestSix.questNine",
+        "words": ["Du", "ziehst", "dich", "an", "dir"],
+        "correctOrder": ["Du", "ziehst", "dich", "an"],
+        "tip": "orderValleyQuestSix.questNineTip"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "orderValleyQuestSix.questTen",
+        "options": [
+          "Du ziehst dir die Jacke an",
+          "Du ziehst dich die Jacke an",
+          "Du ziehst dir die Jacke"
+        ],
+        "answer": "Du ziehst dir die Jacke an",
+        "tip": "orderValleyQuestSix.questTenTip"
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "orderValleyQuestSix.questEleven",
+        "text": "Wir treffen uns heute",
+        "answer": "Wir treffen uns heute",
+        "tip": "orderValleyQuestSix.questElevenTip"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "orderValleyQuestSix.questTwelve",
+        "words": ["Ich", "merke", "mir", "das"],
+        "correctOrder": ["Ich", "merke", "mir", "das"],
+        "tip": "orderValleyQuestSix.questTwelveTip"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "orderValleyQuestSix.questThirteen",
+        "options": [
+          "Sie schminkt sich",
+          "Sie schminkt mich",
+          "Sie schminkt dich"
+        ],
+        "answer": "Sie schminkt sich",
+        "tip": "orderValleyQuestSix.questThirteenTip"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "orderValleyQuestSix.questFourteen",
+        "words": ["Ihr", "schaut", "euch", "ein", "Video", "an"],
+        "correctOrder": ["Ihr", "schaut", "euch", "ein", "Video", "an"],
+        "tip": "orderValleyQuestSix.questFourteenTip"
+      },
+      {
+        "id": 15,
+        "type": "select",
+        "question": "orderValleyQuestSix.questFifteen",
+        "options": [
+          "Das Kind hat sich verletzt",
+          "Das Kind hat mich verletzt",
+          "Das Kind hat dich verletzt"
+        ],
+        "answer": "Das Kind hat sich verletzt",
+        "tip": "orderValleyQuestSix.questFifteenTip"
+      }
+    ]
+  },
+  {
+    "questId": "german_hardcore_mix_v2",
+    "aliases": ["summary-hardcore"],
+    "title": "orderValleyQuestSeven.title",
+    "progress": "0/15",
+    "description": "orderValleyQuestSeven.description",
+    "conditions": {
+      "goal": "orderValleyQuestSeven.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "orderValleyQuestSeven.questOne",
+        "words": ["hier", "weiß", "Fehler", "Ich", "dass", "es", "gibt", "einen", "ein", "mich"],
+        "correctOrder": ["Ich", "weiß", "dass", "es", "hier", "einen", "Fehler", "gibt"],
+        "tip": "orderValleyQuestSeven.questOneTip"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "orderValleyQuestSeven.questTwo",
+        "options": [
+          "Er sagt, dass er sich jetzt wäscht",
+          "Er sagt, dass er wäscht sich jetzt",
+          "Er sagt, dass er mich jetzt wäscht"
+        ],
+        "answer": "Er sagt, dass er sich jetzt wäscht",
+        "tip": "orderValleyQuestSeven.questTwoTip"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "orderValleyQuestSeven.questThree",
+        "text": "Schade, dass es hier keinen Ausgang gibt",
+        "answer": "Schade, dass es hier keinen Ausgang gibt",
+        "tip": "orderValleyQuestSeven.questThreeTip"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "orderValleyQuestSeven.questFour",
+        "words": ["dir", "du", "kämmst", "sehe", "dass", "die", "Ich", "Haare", "es", "dich"],
+        "correctOrder": ["Ich", "sehe", "dass", "du", "dir", "die", "Haare", "kämmst"],
+        "tip": "orderValleyQuestSeven.questFourTip"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "orderValleyQuestSeven.questFive",
+        "options": [
+          "Ich beeile mich, weil es gibt wenig Zeit",
+          "Ich beeile mich, weil es wenig Zeit gibt",
+          "Ich beeile mir, weil es wenig Zeit gibt"
+        ],
+        "answer": "Ich beeile mich, weil es wenig Zeit gibt",
+        "tip": "orderValleyQuestSeven.questFiveTip"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "orderValleyQuestSeven.questSix",
+        "words": ["dass", "Fehler", "Ich", "mir", "gibt", "merke", "es", "einen", "hier", "ein", "mich"],
+        "correctOrder": ["Ich", "merke", "mir", "dass", "es", "hier", "einen", "Fehler", "gibt"],
+        "tip": "orderValleyQuestSeven.questSixTip"
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "orderValleyQuestSeven.questSeven",
+        "text": "Er fragt, ob es hier einen Supermarkt gibt",
+        "answer": "Er fragt, ob es hier einen Supermarkt gibt",
+        "tip": "orderValleyQuestSeven.questSevenTip"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "orderValleyQuestSeven.questEight",
+        "options": [
+          "Wir freuen uns, dass es eine Lösung gibt",
+          "Wir freuen sich, dass es eine Lösung gibt",
+          "Wir freuen uns, dass es gibt eine Lösung"
+        ],
+        "answer": "Wir freuen uns, dass es eine Lösung gibt",
+        "tip": "orderValleyQuestSeven.questEightTip"
+      },
+      {
+        "id": 9,
+        "type": "speechToText",
+        "question": "orderValleyQuestSeven.questNine",
+        "text": "Sie sagt, dass sie sich jetzt schminkt",
+        "answer": "Sie sagt, dass sie sich jetzt schminkt",
+        "tip": "orderValleyQuestSeven.questNineTip"
+      },
+      {
+        "id": 10,
+        "type": "reorder",
+        "question": "orderValleyQuestSeven.questTen",
+        "words": ["bestelle", "eine", "wenn", "Rabatt", "mir", "Pizza", "Ich", "es", "gibt", "einen", "einem", "mich"],
+        "correctOrder": ["Ich", "bestelle", "mir", "eine", "Pizza", "wenn", "es", "einen", "Rabatt", "gibt"],
+        "tip": "orderValleyQuestSeven.questTenTip"
+      },
+      {
+        "id": 11,
+        "type": "select",
+        "question": "orderValleyQuestSeven.questEleven",
+        "options": [
+          "Du siehst, dass es hier ein Problem gibt",
+          "Du siehst, dass es gibt hier ein Problem",
+          "Du siehst, dass es hier einen Problem gibt"
+        ],
+        "answer": "Du siehst, dass es hier ein Problem gibt",
+        "tip": "orderValleyQuestSeven.questElevenTip"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "orderValleyQuestSeven.questTwelve",
+        "words": ["Eingang", "dass", "Es", "ist", "wichtig", "hier", "einen", "es", "gibt", "sich", "ein"],
+        "correctOrder": ["Es", "ist", "wichtig", "dass", "es", "hier", "einen", "Eingang", "gibt"],
+        "tip": "orderValleyQuestSeven.questTwelveTip"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "orderValleyQuestSeven.questThirteen",
+        "options": [
+          "Ich freue mich, weil es einen Rabatt gibt",
+          "Ich freue mich, weil es gibt einen Rabatt",
+          "Ich freue mich, weil es ein Rabatt gibt"
+        ],
+        "answer": "Ich freue mich, weil es einen Rabatt gibt",
+        "tip": "orderValleyQuestSeven.questThirteenTip"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "orderValleyQuestSeven.questFourteen",
+        "words": ["Wohnung", "miete", "mir", "Balkon", "wenn", "es", "Ich", "einen", "gibt", "eine", "mich", "ein"],
+        "correctOrder": ["Ich", "miete", "mir", "eine", "Wohnung", "wenn", "es", "einen", "Balkon", "gibt"],
+        "tip": "orderValleyQuestSeven.questFourteenTip"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "orderValleyQuestSeven.questFifteen",
+        "text": "Er glaubt, dass es hier keine Hoffnung gibt",
+        "answer": "Er glaubt, dass es hier keine Hoffnung gibt",
+        "tip": "orderValleyQuestSeven.questFifteenTip"
+      }
+    ]
+  },
+  {
+    "questId": "travel_grammar_hardcore",
+    "aliases": ["travel-mix-pro"],
+    "title": "orderValleyQuestEight.title",
+    "progress": "0/15",
+    "description": "orderValleyQuestEight.description",
+    "conditions": {
+      "goal": "orderValleyQuestEight.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "orderValleyQuestEight.questOne",
+        "words": ["Strand", "weiß", "dass", "einen", "es", "Ich", "hier", "gibt", "ein"],
+        "correctOrder": ["Ich", "weiß", "dass", "es", "hier", "einen", "Strand", "gibt"],
+        "tip": "orderValleyQuestEight.questOneTip"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "orderValleyQuestEight.questTwo",
+        "options": [
+          "Er sagt, dass er sich jetzt ausruht",
+          "Er sagt, dass er ausruht sich jetzt",
+          "Er sagt, dass er mich jetzt ausruht"
+        ],
+        "answer": "Er sagt, dass er sich jetzt ausruht",
+        "tip": "orderValleyQuestEight.questTwoTip"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "orderValleyQuestEight.questThree",
+        "text": "Schade, dass es hier kein Hotel gibt",
+        "answer": "Schade, dass es hier kein Hotel gibt",
+        "tip": "orderValleyQuestEight.questThreeTip"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "orderValleyQuestEight.questFour",
+        "words": ["Taxi", "bestellt", "da", "U-Bahn", "keine", "gibt", "er", "sich", "es", "hier", "mich", "ein"],
+        "correctOrder": ["Er", "bestellt", "sich", "ein", "Taxi", "da", "es", "hier", "keine", "U-Bahn", "gibt"],
+        "tip": "orderValleyQuestEight.questFourTip"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "orderValleyQuestEight.questFive",
+        "options": [
+          "Wir freuen uns, weil es einen Rabatt gibt",
+          "Wir freuen uns, weil es gibt einen Rabatt",
+          "Wir freuen sich, weil es einen Rabatt gibt"
+        ],
+        "answer": "Wir freuen uns, weil es einen Rabatt gibt",
+        "tip": "orderValleyQuestEight.questFiveTip"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "orderValleyQuestEight.questSix",
+        "words": ["merke", "mir", "dass", "Bahnhof", "gibt", "hier", "Ich", "es", "einen", "ein", "mich"],
+        "correctOrder": ["Ich", "merke", "mir", "dass", "es", "hier", "einen", "Bahnhof", "gibt"],
+        "tip": "orderValleyQuestEight.questSixTip"
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "orderValleyQuestEight.questSeven",
+        "text": "Er fragt, ob es hier einen Flughafen gibt",
+        "answer": "Er fragt, ob es hier einen Flughafen gibt",
+        "tip": "orderValleyQuestEight.questSevenTip"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "orderValleyQuestEight.questEight",
+        "options": [
+          "Ich ärgere mich, dass es keinen Platz gibt",
+          "Ich ärgere mich, dass es gibt keinen Platz",
+          "Ich ärgere mich, dass es kein Platz gibt"
+        ],
+        "answer": "Ich ärgere mich, dass es keinen Platz gibt",
+        "tip": "orderValleyQuestEight.questEightTip"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "orderValleyQuestEight.questNine",
+        "words": ["reserviere", "mir", "Zimmer", "wenn", "Platz", "Ich", "ein", "es", "einen", "gibt", "mich", "frei"],
+        "correctOrder": ["Ich", "reserviere", "mir", "ein", "Zimmer", "wenn", "es", "einen", "Platz", "gibt"],
+        "tip": "orderValleyQuestEight.questNineTip"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "orderValleyQuestEight.questTen",
+        "options": [
+          "Du siehst, dass es hier ein Café gibt",
+          "Du siehst, dass es hier einen Café gibt",
+          "Du siehst, dass es hier ein Café"
+        ],
+        "answer": "Du siehst, dass es hier ein Café gibt",
+        "tip": "orderValleyQuestEight.questTenTip"
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "orderValleyQuestEight.questEleven",
+        "text": "Sie sagt, dass sie sich auf den Urlaub freut",
+        "answer": "Sie sagt, dass sie sich auf den Urlaub freut",
+        "tip": "orderValleyQuestEight.questElevenTip"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "orderValleyQuestEight.questTwelve",
+        "words": ["ist", "wichtig", "dass", "Pool", "gibt", "es", "hier", "einen", "Es", "ein", "sich"],
+        "correctOrder": ["Es", "ist", "wichtig", "dass", "es", "hier", "einen", "Pool", "gibt"],
+        "tip": "orderValleyQuestEight.questTwelveTip"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "orderValleyQuestEight.questThirteen",
+        "options": [
+          "Ich freue mich, dass es ein Ausflug gibt",
+          "Ich freue mich, dass es gibt einen Ausflug",
+          "Ich freue mich, dass es einen Ausflug gibt"
+        ],
+        "answer": "Ich freue mich, dass es einen Ausflug gibt",
+        "tip": "orderValleyQuestEight.questThirteenTip"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "orderValleyQuestEight.questFourteen",
+        "words": ["nimmst", "dir", "Auto", "wenn", "Verleih", "Du", "ein", "es", "einen", "gibt", "dich", "mit"],
+        "correctOrder": ["Du", "nimmst", "dir", "ein", "Auto", "wenn", "es", "einen", "Verleih", "gibt"],
+        "tip": "orderValleyQuestEight.questFourteenTip"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "orderValleyQuestEight.questFifteen",
+        "text": "Er glaubt, dass es hier keine Probleme gibt",
+        "answer": "Er glaubt, dass es hier keine Probleme gibt",
+        "tip": "orderValleyQuestEight.questFifteenTip"
+      }
+    ]
+  },
+  {
+    "questId": "valley_career_hardcore",
+    "aliases": ["work-mix-pro"],
+    "title": "orderValleyQuestNine.title",
+    "progress": "0/15",
+    "description": "orderValleyQuestNine.description",
+    "conditions": {
+      "goal": "orderValleyQuestNine.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "orderValleyQuestNine.questOne",
+        "words": ["bewerbe", "mich", "wenn", "Job", "gibt", "Ich", "es", "einen", "ein", "mir"],
+        "correctOrder": ["Ich", "bewerbe", "mich", "wenn", "es", "einen", "Job", "gibt"],
+        "tip": "orderValleyQuestNine.questOneTip"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "orderValleyQuestNine.questTwo",
+        "options": [
+          "Er sagt, dass er sich jetzt vorstellt",
+          "Er sagt, dass er vorstellt sich jetzt",
+          "Er sagt, dass er mich jetzt vorstellt"
+        ],
+        "answer": "Er sagt, dass er sich jetzt vorstellt",
+        "tip": "orderValleyQuestNine.questTwoTip"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "orderValleyQuestNine.questThree",
+        "text": "Schade, dass es hier keinen Kaffee gibt",
+        "answer": "Schade, dass es hier keinen Kaffee gibt",
+        "tip": "orderValleyQuestNine.questThreeTip"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "orderValleyQuestNine.questFour",
+        "words": ["merke", "mir", "dass", "Termin", "gibt", "Ich", "es", "einen", "ein", "mich"],
+        "correctOrder": ["Ich", "merke", "mir", "dass", "es", "einen", "Termin", "gibt"],
+        "tip": "orderValleyQuestNine.questFourTip"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "orderValleyQuestNine.questFive",
+        "options": [
+          "Ich freue mich, weil es einen Bonus gibt",
+          "Ich freue mich, weil es gibt einen Bonus",
+          "Ich freue mich, weil es ein Bonus gibt"
+        ],
+        "answer": "Ich freue mich, weil es einen Bonus gibt",
+        "tip": "orderValleyQuestNine.questFiveTip"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "orderValleyQuestNine.questSix",
+        "words": ["suche", "mir", "Job", "einen", "wenn", "Stelle", "es", "gibt", "eine", "Ich", "mich"],
+        "correctOrder": ["Ich", "suche", "mir", "einen", "Job", "wenn", "es", "eine", "Stelle", "gibt"],
+        "tip": "orderValleyQuestNine.questSixTip"
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "orderValleyQuestNine.questSeven",
+        "text": "Er fragt, ob es hier einen Chef gibt",
+        "answer": "Er fragt, ob es hier einen Chef gibt",
+        "tip": "orderValleyQuestNine.questSevenTip"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "orderValleyQuestNine.questEight",
+        "options": [
+          "Wir freuen uns, dass es keine Arbeit gibt",
+          "Wir freuen uns, dass es gibt keine Arbeit",
+          "Wir freuen sich, dass es keine Arbeit gibt"
+        ],
+        "answer": "Wir freuen uns, dass es keine Arbeit gibt",
+        "tip": "orderValleyQuestNine.questEightTip"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "orderValleyQuestNine.questNine",
+        "words": ["kaufe", "Laptop", "Rabatt", "mir", "Ich", "einen", "es", "gibt", "wenn", "mich"],
+        "correctOrder": ["Ich", "kaufe", "mir", "einen", "Laptop", "wenn", "es", "einen", "Rabatt", "gibt"],
+        "tip": "orderValleyQuestNine.questNineTip"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "orderValleyQuestNine.questTen",
+        "options": [
+          "Du siehst, dass es ein Problem gibt",
+          "Du siehst, dass es hier ein Problem gibt",
+          "Du siehst, dass es einen Problem gibt"
+        ],
+        "answer": "Du siehst, dass es ein Problem gibt",
+        "tip": "orderValleyQuestNine.questTenTip"
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "orderValleyQuestNine.questEleven",
+        "text": "Sie sagt, dass sie sich jetzt vorbereitet",
+        "answer": "Sie sagt, dass sie sich jetzt vorbereitet",
+        "tip": "orderValleyQuestNine.questElevenTip"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "orderValleyQuestNine.questTwelve",
+        "words": ["ist", "wichtig", "dass", "Plan", "gibt", "es", "einen", "Es", "ein", "sich"],
+        "correctOrder": ["Es", "ist", "wichtig", "dass", "es", "einen", "Plan", "gibt"],
+        "tip": "orderValleyQuestNine.questTwelveTip"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "orderValleyQuestNine.questThirteen",
+        "options": [
+          "Ich beeile mich, weil es ein Termin gibt",
+          "Ich beeile mich, weil es einen Termin gibt",
+          "Ich beeile mir, weil es gibt einen Termin"
+        ],
+        "answer": "Ich beeile mich, weil es einen Termin gibt",
+        "tip": "orderValleyQuestNine.questThirteenTip"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "orderValleyQuestNine.questFourteen",
+        "words": ["nehme", "Job", "den", "Vertrag", "mir", "es", "Ich", "einen", "gibt", "wenn", "mich"],
+        "correctOrder": ["Ich", "nehme", "mir", "den", "Job", "wenn", "es", "einen", "Vertrag", "gibt"],
+        "tip": "orderValleyQuestNine.questFourteenTip"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "orderValleyQuestNine.questFifteen",
+        "text": "Er glaubt, dass es kein Geld gibt",
+        "answer": "Er glaubt, dass es kein Geld gibt",
+        "tip": "orderValleyQuestNine.questFifteenTip"
+      }
+    ]
+  },
+  {
+    "questId": "work_simple_life",
+    "aliases": ["work-basic-vibe"],
+    "title": "orderValleyQuestTen.title",
+    "progress": "0/15",
+    "description": "orderValleyQuestTen.description",
+    "conditions": {
+      "goal": "orderValleyQuestTen.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "orderValleyQuestTen.questOne",
+        "words": ["bin", "Ich", "heute", "nicht", "weil", "ich", "krank", "arbeite"],
+        "correctOrder": ["Ich", "arbeite", "heute", "nicht", "weil", "ich", "krank", "bin"],
+        "tip": "orderValleyQuestTen.questOneTip"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "orderValleyQuestTen.questTwo",
+        "options": [
+          "Er sagt, dass er sich verspätet",
+          "Er sagt, dass er verspätet sich",
+          "Er sagt, dass er mich verspätet"
+        ],
+        "answer": "Er sagt, dass er sich verspätet",
+        "tip": "orderValleyQuestTen.questTwoTip"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "orderValleyQuestTen.questThree",
+        "text": "Schade, dass es keine Arbeit gibt",
+        "answer": "Schade, dass es keine Arbeit gibt",
+        "tip": "orderValleyQuestTen.questThreeTip"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "orderValleyQuestTen.questFour",
+        "words": ["freue", "mich", "dass", "frei", "habe", "Ich", "heute"],
+        "correctOrder": ["Ich", "freue", "mich", "dass", "ich", "heute", "frei", "habe"],
+        "tip": "orderValleyQuestTen.questFourTip"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "orderValleyQuestTen.questFive",
+        "options": [
+          "Ich beeile mich, weil es Aufgaben gibt",
+          "Ich beeile mich, weil es gibt Aufgaben",
+          "Ich beeile mir, weil es Aufgaben gibt"
+        ],
+        "answer": "Ich beeile mich, weil es Aufgaben gibt",
+        "tip": "orderValleyQuestTen.questFiveTip"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "orderValleyQuestTen.questSix",
+        "words": ["merke", "mir", "dass", "morgen", "Termin", "es", "gibt", "Ich", "einen"],
+        "correctOrder": ["Ich", "merke", "mir", "dass", "es", "morgen", "einen", "Termin", "gibt"],
+        "tip": "orderValleyQuestTen.questSixTip"
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "orderValleyQuestTen.questSeven",
+        "text": "Er fragt, ob es einen Chef gibt",
+        "answer": "Er fragt, ob es einen Chef gibt",
+        "tip": "orderValleyQuestTen.questSevenTip"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "orderValleyQuestTen.questEight",
+        "options": [
+          "Wir ärgern uns, weil es keine Pause gibt",
+          "Wir ärgern uns, weil es gibt keine Pause",
+          "Wir ärgern sich, weil es keine Pause gibt"
+        ],
+        "answer": "Wir ärgern uns, weil es keine Pause gibt",
+        "tip": "orderValleyQuestTen.questEightTip"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "orderValleyQuestTen.questNine",
+        "words": ["kaufe", "mir", "das", "wenn", "Geld", "gibt", "Ich", "es"],
+        "correctOrder": ["Ich", "kaufe", "mir", "das", "wenn", "es", "Geld", "gibt"],
+        "tip": "orderValleyQuestTen.questNineTip"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "orderValleyQuestTen.questTen",
+        "options": [
+          "Du siehst, dass es ein Problem gibt",
+          "Du siehst, dass es gibt ein Problem",
+          "Du siehst, dass es einen Problem gibt"
+        ],
+        "answer": "Du siehst, dass es ein Problem gibt",
+        "tip": "orderValleyQuestTen.questTenTip"
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "orderValleyQuestTen.questEleven",
+        "text": "Sie sagt, dass sie sich jetzt wäscht",
+        "answer": "Sie sagt, dass sie sich jetzt wäscht",
+        "tip": "orderValleyQuestTen.questElevenTip"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "orderValleyQuestTen.questTwelve",
+        "words": ["ist", "wichtig", "dass", "Arbeit", "gibt", "es", "Es"],
+        "correctOrder": ["Es", "ist", "wichtig", "dass", "es", "Arbeit", "gibt"],
+        "tip": "orderValleyQuestTen.questTwelveTip"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "orderValleyQuestTen.questThirteen",
+        "options": [
+          "Ich beeile mich, weil es wenig Zeit gibt",
+          "Ich beeile mich, weil es gibt wenig Zeit",
+          "Ich beeile mir, weil es wenig Zeit gibt"
+        ],
+        "answer": "Ich beeile mich, weil es wenig Zeit gibt",
+        "tip": "orderValleyQuestTen.questThirteenTip"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "orderValleyQuestTen.questFourteen",
+        "words": ["nehme", "mir", "das", "Quittung", "eine", "es", "gibt", "Ich", "wenn"],
+        "correctOrder": ["Ich", "nehme", "mir", "das", "wenn", "es", "eine", "Quittung", "gibt"],
+        "tip": "orderValleyQuestTen.questFourteenTip"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "orderValleyQuestTen.questFifteen",
+        "text": "Er glaubt, dass es keinen Stress gibt",
+        "answer": "Er glaubt, dass es keinen Stress gibt",
+        "tip": "orderValleyQuestTen.questFifteenTip"
+      }
+    ]
+  },
+  {
+    "questId": "grammar_fresh_mix",
+    "aliases": ["new-real-life-drill"],
+    "title": "orderValleyQuestEleven.title",
+    "progress": "0/15",
+    "description": "orderValleyQuestEleven.description",
+    "conditions": {
+      "goal": "orderValleyQuestEleven.goal",
+      "minCorrect": 13,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "orderValleyQuestEleven.questOne",
+        "words": ["bestelle", "mir", "Pizza", "eine", "weil", "Pasta", "keine", "gibt", "es", "Ich"],
+        "correctOrder": ["Ich", "bestelle", "mir", "eine", "Pizza", "weil", "es", "keine", "Pasta", "gibt"],
+        "tip": "orderValleyQuestEleven.questOneTip"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "orderValleyQuestEleven.questTwo",
+        "options": [
+          "Er fragt, ob es hier einen Eingang gibt",
+          "Er fragt, ob es gibt hier einen Eingang",
+          "Er fragt, ob es hier ein Eingang gibt"
+        ],
+        "answer": "Er fragt, ob es hier einen Eingang gibt",
+        "tip": "orderValleyQuestEleven.questTwoTip"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "orderValleyQuestEleven.questThree",
+        "text": "Ich ruhe mich aus, wenn es Zeit gibt",
+        "answer": "Ich ruhe mich aus, wenn es Zeit gibt",
+        "tip": "orderValleyQuestEleven.questThreeTip"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "orderValleyQuestEleven.questFour",
+        "words": ["sagt", "dass", "sie", "sich", "jetzt", "schminkt", "Sie"],
+        "correctOrder": ["Sie", "sagt", "dass", "sie", "sich", "jetzt", "schminkt"],
+        "tip": "orderValleyQuestEleven.questFourTip"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "orderValleyQuestEleven.questFive",
+        "options": [
+          "Ich kaufe mir eine Jacke, wenn es einen Rabatt gibt",
+          "Ich kaufe mich eine Jacke, wenn es einen Rabatt gibt",
+          "Ich kaufe mir eine Jacke, wenn es ein Rabatt gibt"
+        ],
+        "answer": "Ich kaufe mir eine Jacke, wenn es einen Rabatt gibt",
+        "tip": "orderValleyQuestEleven.questFiveTip"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "orderValleyQuestEleven.questSix",
+        "words": ["Schade", "dass", "es", "Handtuch", "kein", "gibt"],
+        "correctOrder": ["Schade", "dass", "es", "kein", "Handtuch", "gibt"],
+        "tip": "orderValleyQuestEleven.questSixTip"
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "orderValleyQuestEleven.questSeven",
+        "text": "Ich beeile mich, weil es Aufgaben gibt",
+        "answer": "Ich beeile mich, weil es Aufgaben gibt",
+        "tip": "orderValleyQuestEleven.questSevenTip"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "orderValleyQuestEleven.questEight",
+        "options": [
+          "Wir ärgern uns, dass es keine Sonne gibt",
+          "Wir ärgern sich, dass es keine Sonne gibt",
+          "Wir ärgern uns, dass es gibt keine Sonne"
+        ],
+        "answer": "Wir ärgern uns, dass es keine Sonne gibt",
+        "tip": "orderValleyQuestEleven.questEightTip"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "orderValleyQuestEleven.questNine",
+        "words": ["schaue", "mir", "Auto", "das", "an", "wenn", "Schlüssel", "es", "einen", "gibt", "Ich"],
+        "correctOrder": ["Ich", "schaue", "mir", "das", "Auto", "an", "wenn", "es", "einen", "Schlüssel", "gibt"],
+        "tip": "orderValleyQuestEleven.questNineTip"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "orderValleyQuestEleven.questTen",
+        "options": [
+          "Du siehst, dass es Bier gibt",
+          "Du siehst, dass es gibt Bier",
+          "Du siehst, dass es einen Bier gibt"
+        ],
+        "answer": "Du siehst, dass es Bier gibt",
+        "tip": "orderValleyQuestEleven.questTenTip"
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "orderValleyQuestEleven.questEleven",
+        "text": "Er sagt, dass er sich jetzt rasiert",
+        "answer": "Er sagt, dass er sich jetzt rasiert",
+        "tip": "orderValleyQuestEleven.questElevenTip"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "orderValleyQuestEleven.questTwelve",
+        "words": ["ist", "wichtig", "dass", "Trainer", "einen", "es", "gibt", "Es"],
+        "correctOrder": ["Es", "ist", "wichtig", "dass", "es", "einen", "Trainer", "gibt"],
+        "tip": "orderValleyQuestEleven.questTwelveTip"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "orderValleyQuestEleven.questThirteen",
+        "options": [
+          "Ich beeile mich, weil es eine Termin gibt",
+          "Ich beeile mich, weil es gibt einen Termin",
+          "Ich beeile mich, weil es einen Termin gibt"
+        ],
+        "answer": "Ich beeile mich, weil es einen Termin gibt",
+        "tip": "orderValleyQuestEleven.questThirteenTip"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "orderValleyQuestEleven.questFourteen",
+        "words": ["nehme", "mir", "Kaffee", "einen", "wenn", "Milch", "es", "gibt", "Ich"],
+        "correctOrder": ["Ich", "nehme", "mir", "einen", "Kaffee", "wenn", "es", "Milch", "gibt"],
+        "tip": "orderValleyQuestEleven.questFourteenTip"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "orderValleyQuestEleven.questFifteen",
+        "text": "Er glaubt, dass es keinen Test gibt",
+        "answer": "Er glaubt, dass es keinen Test gibt",
+        "tip": "orderValleyQuestEleven.questFifteenTip"
+      }
+    ]
+  },
+  {
+    "questId": "home_life_mix",
+    "aliases": ["daily-grammar-v1"],
+    "title": "orderValleyQuestTwelve.title",
+    "progress": "0/15",
+    "description": "orderValleyQuestTwelve.description",
+    "conditions": {
+      "goal": "orderValleyQuestTwelve.goal",
+      "minCorrect": 13,
+      "requiredTasks": 15
+    },
+    "rewards": {
+      "points": 20,
+      "xp": 20
+    },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "reorder",
+        "question": "orderValleyQuestTwelve.questOne",
+        "words": ["treffe", "mich", "mit", "Leuten", "weil", "Party", "eine", "gibt", "es", "Ich"],
+        "correctOrder": ["Ich", "treffe", "mich", "mit", "Leuten", "weil", "es", "eine", "Party", "gibt"],
+        "tip": "orderValleyQuestTwelve.questOneTip"
+      },
+      {
+        "id": 2,
+        "type": "select",
+        "question": "orderValleyQuestTwelve.questTwo",
+        "options": [
+          "Er sagt, dass er sich einen Film ansieht",
+          "Er sagt, dass er ansieht sich einen Film",
+          "Er sagt, dass er mich einen Film ansieht"
+        ],
+        "answer": "Er sagt, dass er sich einen Film ansieht",
+        "tip": "orderValleyQuestTwelve.questTwoTip"
+      },
+      {
+        "id": 3,
+        "type": "speechToText",
+        "question": "orderValleyQuestTwelve.questThree",
+        "text": "Schade, dass es keinen Wein gibt",
+        "answer": "Schade, dass es keinen Wein gibt",
+        "tip": "orderValleyQuestTwelve.questThreeTip"
+      },
+      {
+        "id": 4,
+        "type": "reorder",
+        "question": "orderValleyQuestTwelve.questFour",
+        "words": ["überlege", "mir", "das", "wenn", "Chance", "es", "eine", "gibt", "Ich"],
+        "correctOrder": ["Ich", "überlege", "mir", "das", "wenn", "es", "eine", "Chance", "gibt"],
+        "tip": "orderValleyQuestTwelve.questFourTip"
+      },
+      {
+        "id": 5,
+        "type": "select",
+        "question": "orderValleyQuestTwelve.questFive",
+        "options": [
+          "Ich ziehe mir ein weißes Hemd an, weil ich ein Date habe",
+          "Ich ziehe mich ein weißes Hemd an, weil ich ein Date habe",
+          "Ich ziehe mir ein weiße Hemd an, weil ich ein Date habe"
+        ],
+        "answer": "Ich ziehe mir ein weißes Hemd an, weil ich ein Date habe",
+        "tip": "orderValleyQuestTwelve.questFiveTip"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "orderValleyQuestTwelve.questSix",
+        "words": ["Schade", "dass", "es", "hier", "Hund", "keinen", "gibt"],
+        "correctOrder": ["Schade", "dass", "es", "hier", "keinen", "Hund", "gibt"],
+        "tip": "orderValleyQuestTwelve.questSixTip"
+      },
+      {
+        "id": 7,
+        "type": "speechToText",
+        "question": "orderValleyQuestTwelve.questSeven",
+        "text": "Sie fragt, ob es einen Balkon gibt",
+        "answer": "Sie fragt, ob es einen Balkon gibt",
+        "tip": "orderValleyQuestTwelve.questSevenTip"
+      },
+      {
+        "id": 8,
+        "type": "select",
+        "question": "orderValleyQuestTwelve.questEight",
+        "options": [
+          "Wir ruhen uns aus, weil es keinen Stress gibt",
+          "Wir ruhen sich aus, weil es keinen Stress gibt",
+          "Wir ruhen uns aus, weil es Stress nicht gibt"
+        ],
+        "answer": "Wir ruhen uns aus, weil es keinen Stress gibt",
+        "tip": "orderValleyQuestTwelve.questEightTip"
+      },
+      {
+        "id": 9,
+        "type": "reorder",
+        "question": "orderValleyQuestTwelve.questNine",
+        "words": ["schaue", "mir", "Wohnung", "die", "an", "wenn", "Schlüssel", "es", "einen", "gibt", "Ich"],
+        "correctOrder": ["Ich", "schaue", "mir", "die", "Wohnung", "an", "wenn", "es", "einen", "Schlüssel", "gibt"],
+        "tip": "orderValleyQuestTwelve.questNineTip"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "orderValleyQuestTwelve.questTen",
+        "options": [
+          "Du siehst, dass es dort einen Fehler gibt",
+          "Du siehst, dass es dort ein Fehler gibt",
+          "Du siehst, dass dort es gibt einen Fehler"
+        ],
+        "answer": "Du siehst, dass es dort einen Fehler gibt",
+        "tip": "orderValleyQuestTwelve.questTenTip"
+      },
+      {
+        "id": 11,
+        "type": "speechToText",
+        "question": "orderValleyQuestTwelve.questEleven",
+        "text": "Er sagt, dass er sich jetzt wäscht",
+        "answer": "Er sagt, dass er sich jetzt wäscht",
+        "tip": "orderValleyQuestTwelve.questElevenTip"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "orderValleyQuestTwelve.questTwelve",
+        "words": ["ist", "wichtig", "dass", "Garten", "einen", "es", "gibt", "Es"],
+        "correctOrder": ["Es", "ist", "wichtig", "dass", "es", "einen", "Garten", "gibt"],
+        "tip": "orderValleyQuestTwelve.questTwelveTip"
+      },
+      {
+        "id": 13,
+        "type": "select",
+        "question": "orderValleyQuestTwelve.questThirteen",
+        "options": [
+          "Ich wasche mir die Hände, weil es Seife gibt",
+          "Ich wasche mich die Hände, weil es Seife gibt",
+          "Ich wasche mir die Hände, weil es Seife ist"
+        ],
+        "answer": "Ich wasche mir die Hände, weil es Seife gibt",
+        "tip": "orderValleyQuestTwelve.questThirteenTip"
+      },
+      {
+        "id": 14,
+        "type": "reorder",
+        "question": "orderValleyQuestTwelve.questFourteen",
+        "words": ["nehme", "mir", "Zimmer", "das", "wenn", "Bett", "ein", "es", "gibt", "Ich"],
+        "correctOrder": ["Ich", "nehme", "mir", "das", "Zimmer", "wenn", "es", "ein", "Bett", "gibt"],
+        "tip": "orderValleyQuestTwelve.questFourteenTip"
+      },
+      {
+        "id": 15,
+        "type": "speechToText",
+        "question": "orderValleyQuestTwelve.questFifteen",
+        "text": "Er glaubt, dass es kein Problem gibt",
+        "answer": "Er glaubt, dass es kein Problem gibt",
+        "tip": "orderValleyQuestTwelve.questFifteenTip"
+      }
+    ]
+  }
+]

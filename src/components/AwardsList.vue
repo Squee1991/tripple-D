@@ -8,7 +8,7 @@
         @close="closeAward"
     />
     <div class="awards__header">
-      <h1 class="awards__title">{{ t('awardModal.title') }}</h1>
+      <h1 class="awards__title">{{ t('Награды') }}</h1>
       <button @click="questionModal" class="awards__info-btn">
         <!--            <img class="awards__question-icon" :src="Question" alt="quest_icon">-->
         <div class="awards__counter cartoon-board">
@@ -24,6 +24,7 @@
             v-for="award in sortedAwards"
             class="shop-item"
             :class="{ locked: award.locked }"
+            @click="openAward(award)"
         >
           <div class="image-wrapper">
             <img :class="{ locked: award.locked }" :src="award.icon" alt="award" class="item-img"/>
@@ -64,6 +65,11 @@ const modalData = ref({
 })
 
 const questionModal = () => {
+  modalData.value = {
+    title: t('awardModal.title'),
+    icon: AwardIconModal,
+    text: t('awardModal.description')
+  }
   showModal.value = true
 }
 
@@ -71,8 +77,13 @@ const showModal = ref(false)
 const selectedAward = ref({})
 
 function openAward(award) {
-  if (award.locked) return
   selectedAward.value = award
+  modalData.value = {
+    title: t(award.title),
+    icon: award.icon,
+    text: award.description ? t(award.description) : t('awardModal.description')
+  }
+
   showModal.value = true
 }
 
@@ -93,21 +104,21 @@ function closeAward() {
 }
 
 .shop-item {
-  padding: 1rem;
+  padding: 13px;
   text-align: center;
   display: flex;
-  width: 180px;
+  width: 165px;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .awards__title {
-  color: var(--titleColor);
   font-size: 1.5rem;
   font-weight: 600;
   font-family: "Nunito", sans-serif;
+  color: var(--titleColor);
 }
 
 .awards__header {
@@ -117,6 +128,7 @@ function closeAward() {
   margin-bottom: 15px;
   padding: 0 20px;
   border-radius: 16px;
+
 }
 
 .item-img.locked {
@@ -147,13 +159,13 @@ function closeAward() {
 
 .item-img {
   object-fit: contain;
-  margin-bottom: 0.1rem;
+  margin-bottom: 0.5rem;
 }
 
 .item-name {
   color: var(--titleColor);
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin-bottom: 0.25rem;
 }
 
@@ -210,9 +222,9 @@ button:disabled {
 }
 
 .awards__list-scroll {
-  max-height: calc(100vh - 310px);
+  max-height: calc(100vh - 300px);
   overflow-y: auto;
-  padding-right: 6px;
+  padding-right: 1px;
 }
 
 .awards__list-scroll::-webkit-scrollbar {
@@ -286,6 +298,7 @@ button:disabled {
     min-width: 76px;
     font-size: 1rem;
   }
+
   .cartoon-board__value {
     height: 23px;
     padding: 0 7px;
@@ -307,14 +320,9 @@ button:disabled {
   .items-grid {
     width: 100%;
   }
+
   .awards__title {
-    font-size: 1.5rem;
-  }
-  .shop-item {
-    width: 160px;
-  }
-  .item-name {
-    font-size: .9rem;
+    font-size: 1.7rem;
   }
 }
 
@@ -330,9 +338,4 @@ button:disabled {
   box-shadow: none;
 }
 
-@media (min-width: 1024px ) {
-  .shop-item:hover {
-    transform: translateY(-1px);
-  }
-}
 </style>
