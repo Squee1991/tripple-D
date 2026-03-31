@@ -1,0 +1,609 @@
+{
+  "Body": {
+    "brain": {
+      "ru": "мозг",
+      "de": "das Gehirn",
+      "level": 1
+    }
+  },
+  "City": {
+    "backpack": {
+      "ru": "рюкзак",
+      "de": "der Rucksack",
+      "level": 1
+    },
+    "bag": {
+      "ru": "сумка",
+      "de": "die Tasche",
+      "level": 1
+    },
+    "book": {
+      "ru": "книга",
+      "de": "das Buch",
+      "level": 1
+    },
+    "books": {
+      "ru": "книги",
+      "de": "die Bücher",
+      "level": 1
+    },
+    "clipboard": {
+      "ru": "планшет",
+      "de": "das Klemmbrett",
+      "level": 1
+    },
+    "computer": {
+      "ru": "компьютер",
+      "de": "der Computer",
+      "level": 1
+    },
+    "pencil": {
+      "ru": "карандаш",
+      "de": "der Bleistift",
+      "level": 1
+    },
+    "sticker-pen": {
+      "ru": "ручка",
+      "de": "der Stift",
+      "level": 1
+    },
+    "sticker-scissor": {
+      "ru": "ножницы",
+      "de": "die Schere",
+      "level": 1
+    }
+  },
+  "Clothes": {
+    "beanie": {
+      "ru": "шапка",
+      "de": "die Mütze",
+      "level": 1
+    },
+    "earmuff": {
+      "ru": "наушники от холода",
+      "de": "die Ohrenschützer",
+      "level": 1
+    },
+    "hat": {
+      "ru": "шляпа",
+      "de": "der Hut",
+      "level": 1
+    },
+    "hat (2)": {
+      "ru": "кепка",
+      "de": "die Kappe",
+      "level": 1
+    },
+    "jacket": {
+      "ru": "куртка",
+      "de": "die Jacke",
+      "level": 1
+    },
+    "kitchen-glove": {
+      "ru": "кухонная рукавица",
+      "de": "der Ofenhandschuh",
+      "level": 1
+    },
+    "shawl": {
+      "ru": "шарф",
+      "de": "der Schal",
+      "level": 1
+    },
+    "shoes": {
+      "ru": "обувь",
+      "de": "die Schuhe",
+      "level": 1
+    },
+    "sock": {
+      "ru": "носок",
+      "de": "die Socke",
+      "level": 1
+    },
+    "sweater": {
+      "ru": "свитер",
+      "de": "der Pullover",
+      "level": 1
+    }
+  },
+  "Food": {
+    "apple": {
+      "ru": "яблоко",
+      "de": "der Apfel",
+      "level": 1
+    },
+    "apple-pie": {
+      "ru": "яблочный пирог",
+      "de": "der Apfelkuchen",
+      "level": 1
+    },
+    "bell-pepper": {
+      "ru": "болгарский перец",
+      "de": "die Paprika",
+      "level": 1
+    },
+    "blueberry": {
+      "ru": "черника",
+      "de": "die Heidelbeere",
+      "level": 1
+    },
+    "bread": {
+      "ru": "хлеб",
+      "de": "das Brot",
+      "level": 1
+    },
+    "broccoli": {
+      "ru": "брокколи",
+      "de": "der Brokkoli",
+      "level": 1
+    },
+    "burger": {
+      "ru": "бургер",
+      "de": "der Burger",
+      "level": 1
+    },
+    "buy": {
+      "ru": "покупка",
+      "de": "der Einkauf",
+      "level": 1
+    },
+    "cabbage": {
+      "ru": "капуста",
+      "de": "der Kohl",
+      "level": 1
+    },
+    "cake": {
+      "ru": "торт",
+      "de": "die Torte",
+      "level": 1
+    },
+    "cake (2)": {
+      "ru": "пирог",
+      "de": "der Kuchen",
+      "level": 1
+    },
+    "candy": {
+      "ru": "конфета",
+      "de": "das Bonbon",
+      "level": 1
+    },
+    "carrots": {
+      "ru": "морковь",
+      "de": "die Karotten",
+      "level": 1
+    },
+    "cherry": {
+      "ru": "вишня",
+      "de": "die Kirsche",
+      "level": 1
+    },
+    "chili": {
+      "ru": "перец чили",
+      "de": "die Chilischote",
+      "level": 1
+    },
+    "choco-chip": {
+      "ru": "шоколадная крошка",
+      "de": "die Schokostückchen",
+      "level": 1
+    },
+    "coffee": {
+      "ru": "кофе",
+      "de": "der Kaffee",
+      "level": 1
+    },
+    "coffee-glass": {
+      "ru": "стакан кофе",
+      "de": "das Kaffeeglas",
+      "level": 1
+    },
+    "cucumber-slice": {
+      "ru": "ломтик огурца",
+      "de": "die Gurkenscheibe",
+      "level": 1
+    },
+    "cupcake": {
+      "ru": "капкейк",
+      "de": "der Cupcake",
+      "level": 1
+    },
+    "donut": {
+      "ru": "пончик",
+      "de": "der Donut",
+      "level": 1
+    },
+    "fried-chicken": {
+      "ru": "жареная курица",
+      "de": "das Brathähnchen",
+      "level": 1
+    },
+    "fried-egg": {
+      "ru": "яичница",
+      "de": "das Spiegelei",
+      "level": 1
+    },
+    "frying-pan": {
+      "ru": "сковорода",
+      "de": "die Pfanne",
+      "level": 1
+    },
+    "garlics": {
+      "ru": "чеснок",
+      "de": "der Knoblauch",
+      "level": 1
+    },
+    "grapefruit": {
+      "ru": "грейпфрут",
+      "de": "die Grapefruit",
+      "level": 1
+    },
+    "ice-cream-cone": {
+      "ru": "рожок мороженого",
+      "de": "die Eiswaffel",
+      "level": 1
+    },
+    "leek": {
+      "ru": "лук-порей",
+      "de": "der Lauch",
+      "level": 1
+    },
+    "lettuce": {
+      "ru": "салат",
+      "de": "der Salat",
+      "level": 1
+    },
+    "mushrooms": {
+      "ru": "грибы",
+      "de": "die Pilze",
+      "level": 1
+    },
+    "onion": {
+      "ru": "лук",
+      "de": "die Zwiebel",
+      "level": 1
+    },
+    "paprika": {
+      "ru": "паприка",
+      "de": "die Paprika",
+      "level": 1
+    },
+    "pineapple": {
+      "ru": "ананас",
+      "de": "die Ananas",
+      "level": 1
+    },
+    "popcorn": {
+      "ru": "попкорн",
+      "de": "das Popcorn",
+      "level": 1
+    },
+    "watermelon": {
+      "ru": "арбуз",
+      "de": "die Wassermelone",
+      "level": 1
+    },
+    "wine": {
+      "ru": "вино",
+      "de": "der Wein",
+      "level": 1
+    }
+  },
+  "Home": {
+    "calendar": {
+      "ru": "календарь",
+      "de": "der Kalender",
+      "level": 1
+    },
+    "candle": {
+      "ru": "свеча",
+      "de": "die Kerze",
+      "level": 1
+    },
+    "chair": {
+      "ru": "стул",
+      "de": "der Stuhl",
+      "level": 1
+    },
+    "cheese-grater": {
+      "ru": "тёрка",
+      "de": "die Reibe",
+      "level": 1
+    },
+    "cinema": {
+      "ru": "кинотеатр",
+      "de": "das Kino",
+      "level": 1
+    },
+    "cooking": {
+      "ru": "готовка",
+      "de": "das Kochen",
+      "level": 1
+    },
+    "ladle": {
+      "ru": "половник",
+      "de": "die Kelle",
+      "level": 1
+    },
+    "oven": {
+      "ru": "духовка",
+      "de": "der Ofen",
+      "level": 1
+    },
+    "property": {
+      "ru": "дом",
+      "de": "das Haus",
+      "level": 1
+    },
+    "rubbish-bin": {
+      "ru": "мусорное ведро",
+      "de": "der Mülleimer",
+      "level": 1
+    }
+  },
+  "Nature": {
+    "cactus": {
+      "ru": "кактус",
+      "de": "der Kaktus",
+      "level": 1
+    },
+    "clouds-and-sun": {
+      "ru": "облака и солнце",
+      "de": "die Wolken und die Sonne",
+      "level": 1
+    },
+    "coconut-tree": {
+      "ru": "пальма",
+      "de": "die Palme",
+      "level": 1
+    },
+    "globe": {
+      "ru": "глобус",
+      "de": "der Globus",
+      "level": 1
+    },
+    "sun": {
+      "ru": "солнце",
+      "de": "die Sonne",
+      "level": 1
+    }
+  },
+  "Other": {
+    "box": {
+      "ru": "коробка",
+      "de": "die Box",
+      "level": 1
+    },
+    "camera": {
+      "ru": "камера",
+      "de": "die Kamera",
+      "level": 1
+    },
+    "desktop": {
+      "ru": "монитор",
+      "de": "der Monitor",
+      "level": 1
+    },
+    "diamond": {
+      "ru": "алмаз",
+      "de": "der Diamant",
+      "level": 1
+    },
+    "dice": {
+      "ru": "игральная кость",
+      "de": "der Würfel",
+      "level": 1
+    },
+    "eggplant": {
+      "ru": "баклажан",
+      "de": "die Aubergine",
+      "level": 1
+    },
+    "envelop": {
+      "ru": "конверт",
+      "de": "der Umschlag",
+      "level": 1
+    },
+    "headphones": {
+      "ru": "наушники",
+      "de": "die Kopfhörer",
+      "level": 1
+    },
+    "laptop": {
+      "ru": "ноутбук",
+      "de": "der Laptop",
+      "level": 1
+    },
+    "light-bulb": {
+      "ru": "лампочка",
+      "de": "die Glühbirne",
+      "level": 1
+    },
+    "lighthouse": {
+      "ru": "маяк",
+      "de": "der Leuchtturm",
+      "level": 1
+    },
+    "magnifying-glass": {
+      "ru": "лупа",
+      "de": "die Lupe",
+      "level": 1
+    },
+    "memory-card": {
+      "ru": "карта памяти",
+      "de": "die Speicherkarte",
+      "level": 1
+    },
+    "microphone": {
+      "ru": "микрофон",
+      "de": "das Mikrofon",
+      "level": 1
+    },
+    "moon-and-stars": {
+      "ru": "луна и звёзды",
+      "de": "der Mond und die Sterne",
+      "level": 1
+    },
+    "mug": {
+      "ru": "кружка",
+      "de": "der Becher",
+      "level": 1
+    },
+    "passport": {
+      "ru": "паспорт",
+      "de": "der Reisepass",
+      "level": 1
+    },
+    "pin": {
+      "ru": "кнопка",
+      "de": "die Stecknadel",
+      "level": 1
+    },
+    "puzzle": {
+      "ru": "пазл",
+      "de": "das Puzzle",
+      "level": 1
+    },
+    "robot": {
+      "ru": "робот",
+      "de": "der Roboter",
+      "level": 1
+    },
+    "rocket": {
+      "ru": "ракета",
+      "de": "die Rakete",
+      "level": 1
+    },
+    "scale": {
+      "ru": "весы",
+      "de": "die Waage",
+      "level": 1
+    },
+    "sticker-plane": {
+      "ru": "самолётик",
+      "de": "das Flugzeug",
+      "level": 1
+    },
+    "suitcase": {
+      "ru": "чемодан",
+      "de": "der Koffer",
+      "level": 1
+    },
+    "teddy-bear": {
+      "ru": "плюшевый мишка",
+      "de": "der Teddybär",
+      "level": 1
+    },
+    "video-camera": {
+      "ru": "видеокамера",
+      "de": "die Videokamera",
+      "level": 1
+    }
+  },
+  "Professions": {
+    "astronaut": {
+      "ru": "астронавт",
+      "de": "der Astronaut",
+      "level": 1
+    },
+    "bricks": {
+      "ru": "кирпичи",
+      "de": "die Ziegel",
+      "level": 1
+    },
+    "courier": {
+      "ru": "курьер",
+      "de": "der Kurier",
+      "level": 1
+    },
+    "doctor": {
+      "ru": "врач",
+      "de": "der Arzt",
+      "level": 1
+    },
+    "firefighter": {
+      "ru": "пожарный",
+      "de": "der Feuerwehrmann",
+      "level": 1
+    },
+    "surgeon": {
+      "ru": "хирург",
+      "de": "der Chirurg",
+      "level": 1
+    }
+  },
+  "Sport": {
+    "basketball-ball": {
+      "ru": "баскетбольный мяч",
+      "de": "der Basketball",
+      "level": 1
+    },
+    "beach-ball": {
+      "ru": "пляжный мяч",
+      "de": "der Wasserball",
+      "level": 1
+    },
+    "ice-skate": {
+      "ru": "конёк",
+      "de": "der Schlittschuh",
+      "level": 1
+    }
+  },
+  "Tools": {
+    "axe": {
+      "ru": "топор",
+      "de": "die Axt",
+      "level": 1
+    },
+    "hammer": {
+      "ru": "молоток",
+      "de": "der Hammer",
+      "level": 1
+    },
+    "ladder": {
+      "ru": "лестница",
+      "de": "die Leiter",
+      "level": 1
+    },
+    "saw": {
+      "ru": "пила",
+      "de": "die Säge",
+      "level": 1
+    }
+  },
+  "Transport": {
+    "airplane": {
+      "ru": "самолёт",
+      "de": "das Flugzeug",
+      "level": 1
+    },
+    "ambulance": {
+      "ru": "скорая помощь",
+      "de": "der Krankenwagen",
+      "level": 1
+    },
+    "bus": {
+      "ru": "автобус",
+      "de": "der Bus",
+      "level": 1
+    },
+    "classic-car": {
+      "ru": "машина",
+      "de": "das Auto",
+      "level": 1
+    },
+    "cruise-ship": {
+      "ru": "круизный лайнер",
+      "de": "das Kreuzfahrtschiff",
+      "level": 1
+    },
+    "hot-air-balloon": {
+      "ru": "воздушный шар",
+      "de": "der Heißluftballon",
+      "level": 1
+    },
+    "sport-car": {
+      "ru": "спортивная машина",
+      "de": "der Sportwagen",
+      "level": 1
+    }
+  }
+}
