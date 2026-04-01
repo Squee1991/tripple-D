@@ -452,7 +452,7 @@ onMounted(async () => {
   flex-direction: column;
   justify-content: space-between;
   transition: transform 0.2s;
-  padding: 15px;
+  padding: 10px;
 }
 
 .galaxy-card.is_locked {
@@ -482,6 +482,7 @@ onMounted(async () => {
   padding: 5px 10px;
   border-radius: 10px;
   border: 2px solid #fff;
+  width: 145px;
 }
 
 .g-score-line {
