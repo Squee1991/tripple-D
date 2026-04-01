@@ -2,7 +2,7 @@
   "A1": [
     {
       "id": "a1_meeting",
-      "title": "Знакомство",
+      "title": "audioTasksTitles.meeting",
       "icon": "👋",
       "tasks": [
         {
@@ -670,7 +670,7 @@
     },
     {
       "id": "a1_family",
-      "title": "Семья",
+      "title": "audioTasksTitles.family",
       "icon": "👨‍👩‍👧‍👦",
       "tasks": [
         {
@@ -1397,7 +1397,7 @@
     },
     {
       "id": "a1_shopping",
-      "title": "В супермаркете",
+      "title": "audioTasksTitles.shopping",
       "icon": "🛒",
       "tasks": [
         {
@@ -1753,8 +1753,8 @@
       ]
     },
     {
-      "id": "a1_wohnen",
-      "title": "Жилье и мебель",
+      "id": "a1_home",
+      "title": "audioTasksTitles.home",
       "icon": "🏠",
       "tasks": [
         {
@@ -2101,8 +2101,8 @@
       ]
     },
     {
-      "id": "a1_essen",
-      "title": "Еда и напитки",
+      "id": "a1_eat",
+      "title": "audioTasksTitles.eat",
       "icon": "🍎",
       "tasks": [
         {
@@ -2454,7 +2454,7 @@
     },
     {
       "id": "a1_doctor",
-      "title": "У врача",
+      "title": "audioTasksTitles.doctor",
       "icon": "🩺",
       "tasks": [
         {
@@ -2803,8 +2803,8 @@
       ]
     },
     {
-      "id": "a1_stadt",
-      "title": "В городе",
+      "id": "a1_city",
+      "title": "audioTasksTitles.city",
       "icon": "🏙️",
       "tasks": [
         {
@@ -3161,8 +3161,8 @@
       ]
     },
     {
-      "id": "a1_natur",
-      "title": "Природа",
+      "id": "a1_nature",
+      "title": "audioTasksTitles.nature",
       "icon": "🌿",
       "tasks": [
         {
@@ -3509,7 +3509,7 @@
     },
     {
       "id": "a1_work",
-      "title": "Работа",
+      "title": "audioTasksTitles.work",
       "icon": "💼",
       "tasks": [
         {
@@ -3857,7 +3857,7 @@
     },
     {
       "id": "a1_order",
-      "title": "Заказ еды",
+      "title": "audioTasksTitles.order",
       "icon": "☕",
       "tasks": [
         {
@@ -4201,7 +4201,7 @@
     },
     {
       "id": "a1_clothes",
-      "title": "Одежда",
+      "title": "audioTasksTitles.clothes",
       "icon": "👕",
       "tasks": [
         {
@@ -4548,7 +4548,7 @@
     },
     {
       "id": "a1_health",
-      "title": "Здоровье и тело",
+      "title": "audioTasksTitles.health",
       "icon": "🧘",
       "tasks": [
         {
@@ -4896,7 +4896,7 @@
     },
     {
       "id": "a1_weather",
-      "title": "Погода и сезоны",
+      "title": "audioTasksTitles.weather",
       "icon": "🌤️",
       "tasks": [
         {
@@ -5553,7 +5553,7 @@
     },
     {
       "id": "a1_directions",
-      "title": "Как пройти",
+      "title": "audioTasksTitles.directions",
       "icon": "🗺️",
       "tasks": [
         {
@@ -6152,7 +6152,7 @@
     },
     {
       "id": "a1_party",
-      "title": "Вечеринка",
+      "title": "audioTasksTitles.party",
       "icon": "🎉",
       "tasks": [
         {
@@ -6829,7 +6829,7 @@
     },
     {
       "id": "a1_transport",
-      "title": "Транспорт",
+      "title": "audioTasksTitles.transport",
       "icon": "🚆",
       "tasks": [
         {
@@ -7492,7 +7492,7 @@
     },
     {
       "id": "a1_sport",
-      "title": "Спорт",
+      "title": "audioTasksTitles.sport",
       "icon": "⚽",
       "tasks": [
         {
@@ -8145,8 +8145,8 @@
       ]
     },
     {
-      "id": "a1_reisen",
-      "title": "Путешествия",
+      "id": "a1_travel",
+      "title": "audioTasksTitles.travel",
       "icon": "🧳",
       "tasks": [
         {
@@ -8807,7 +8807,7 @@
   "A2": [
     {
       "id": "a2_meeting",
-      "title": "Знакомство и общение",
+      "title": "audioTasksTitles.meeting",
       "icon": "👋",
       "tasks": [
         {
@@ -9382,7 +9382,7 @@
     },
     {
       "id": "a2_family",
-      "title": "Семья",
+      "title": "audioTasksTitles.family",
       "icon": "👨‍👩‍👧‍👦",
       "tasks": [
         {
@@ -9892,7 +9892,7 @@
     },
     {
       "id": "a2_shopping",
-      "title": "В супермаркете",
+      "title": "audioTasksTitles.shopping",
       "icon": "🛒",
       "tasks": [
         {
@@ -10457,7 +10457,7 @@
     },
     {
       "id": "a2_home",
-      "title": "Жилье",
+      "title": "audioTasksTitles.home",
       "icon": "🏠",
       "tasks": [
         {
@@ -11000,7 +11000,7 @@
     },
     {
       "id": "a2_eat",
-      "title": "Ресторан и кулинария",
+      "title": "audioTasksTitles.eat",
       "icon": "🍽️",
       "tasks": [
         {
@@ -11543,7 +11543,7 @@
     },
     {
       "id": "a2_doctor",
-      "title": "Здоровье и медицина",
+      "title": "audioTasksTitles.doctor",
       "icon": "🏥",
       "tasks": [
         {
@@ -12129,8 +12129,8 @@
       ]
     },
     {
-      "id": "a2_stadt",
-      "title": "В городе",
+      "id": "a2_city",
+      "title": "audioTasksTitles.city",
       "icon": "🏙️",
       "tasks": [
         {
@@ -12716,8 +12716,8 @@
       ]
     },
     {
-      "id": "a2_natur",
-      "title": "Природа",
+      "id": "a2_nature",
+      "title": "audioTasksTitles.nature",
       "icon": "🏔️",
       "tasks": [
         {
@@ -13064,7 +13064,7 @@
     },
     {
       "id": "a2_work",
-      "title": "Работа",
+      "title": "audioTasksTitles.work",
       "icon": "💼",
       "tasks": [
         {
@@ -13411,7 +13411,7 @@
     },
     {
       "id": "a2_order",
-      "title": "Заказ еды",
+      "title": "audioTasksTitles.order",
       "icon": "🍽️",
       "tasks": [
         {
@@ -13998,7 +13998,7 @@
     },
     {
       "id": "a2_clothes",
-      "title": "Одежда",
+      "title": "audioTasksTitles.clothes",
       "icon": "👕",
       "tasks": [
         {
@@ -14563,7 +14563,7 @@
     },
     {
       "id": "a2_health",
-      "title": "Здоровье и тело",
+      "title": "audioTasksTitles.health",
       "icon": "🧘",
       "tasks": [
         {
@@ -15128,7 +15128,7 @@
     },
     {
       "id": "a2_weather",
-      "title": "Погода и сезоны",
+      "title": "audioTasksTitles.weather",
       "icon": "🌤️",
       "tasks": [
         {
@@ -15693,7 +15693,7 @@
     },
     {
       "id": "a2_directions",
-      "title": "Как пройти",
+      "title": "audioTasksTitles.directions",
       "icon": "🗺️",
       "tasks": [
         {
@@ -16236,7 +16236,7 @@
     },
     {
       "id": "a2_party",
-      "title": "Вечеринка",
+      "title": "audioTasksTitles.party",
       "icon": "🎉",
       "tasks": [
         {
@@ -16801,7 +16801,7 @@
     },
     {
       "id": "a2_transport",
-      "title": "Транспорт",
+      "title": "audioTasksTitles.transport",
       "icon": "🚆",
       "tasks": [
         {
@@ -17366,7 +17366,7 @@
     },
     {
       "id": "a2_sport",
-      "title": "Спорт",
+      "title": "audioTasksTitles.sport",
       "icon": "⚽",
       "tasks": [
         {
@@ -17920,7 +17920,7 @@
     },
     {
       "id": "a2_travel",
-      "title": "Путешествия",
+      "title": "audioTasksTitles.travel",
       "icon": "🧳",
       "tasks": [
         {
@@ -18509,7 +18509,7 @@
   "B1": [
     {
       "id": "b1_life",
-      "title": "Общение",
+      "title": "audioTasksTitles.talk",
       "icon": "🧠",
       "tasks": [
         {
@@ -18859,7 +18859,7 @@
     },
     {
       "id": "b1_familie",
-      "title": "Семья",
+      "title": "audioTasksTitles.family",
       "icon": "👨‍👩‍👧‍👦",
       "tasks": [
         {
@@ -19208,7 +19208,7 @@
     },
     {
       "id": "b1_shopping",
-      "title": "Покупки",
+      "title": "audioTasksTitles.shopping",
       "icon": "🛒",
       "tasks": [
         {
@@ -19561,7 +19561,7 @@
     },
     {
       "id": "b1_home",
-      "title": "Дом и быт",
+      "title": "audioTasksTitles.home",
       "icon": "🏠",
       "tasks": [
         {
@@ -19917,7 +19917,7 @@
     },
     {
       "id": "b1_restaurant",
-      "title": "Ресторан",
+      "title": "audioTasksTitles.restaurant",
       "icon": "🍽️",
       "tasks": [
         {
@@ -20276,7 +20276,7 @@
     },
     {
       "id": "b1_health",
-      "title": "Здоровье и медицина",
+      "title": "audioTasksTitles.doctor",
       "icon": "🏥",
       "tasks": [
         {
@@ -20635,7 +20635,7 @@
     },
     {
       "id": "b1_city",
-      "title": "В городе",
+      "title": "audioTasksTitles.city",
       "icon": "🏙️",
       "tasks": [
         {
@@ -20983,8 +20983,8 @@
       ]
     },
     {
-      "id": "b1_natur",
-      "title": "Природа и экология",
+      "id": "b1_nature",
+      "title": "audioTasksTitles.nature",
       "icon": "🌍",
       "tasks": [
         {
@@ -21331,7 +21331,7 @@
     },
     {
       "id": "b1_work",
-      "title": "Работа",
+      "title": "audioTasksTitles.work",
       "icon": "💼",
       "tasks": [
         {
@@ -21698,7 +21698,7 @@
     },
     {
       "id": "b1_order",
-      "title": "Заказ еды и ресторан",
+      "title": "audioTasksTitles.order",
       "icon": "🍽️",
       "tasks": [
         {
@@ -22055,7 +22055,7 @@
     },
     {
       "id": "b1_clothes",
-      "title": "Одежда",
+      "title": "audioTasksTitles.clothes",
       "icon": "👕",
       "tasks": [
         {
@@ -22412,7 +22412,7 @@
     },
     {
       "id": "b1_body",
-      "title": "Здоровье и тело",
+      "title": "audioTasksTitles.health",
       "icon": "🧘",
       "tasks": [
         {
@@ -22773,7 +22773,7 @@
     },
     {
       "id": "b1_wetter",
-      "title": "Погода и сезоны",
+      "title": "audioTasksTitles.weather",
       "icon": "🌤️",
       "tasks": [
         {
@@ -23133,7 +23133,7 @@
     },
     {
       "id": "b1_city_nav",
-      "title": "Город",
+      "title": "audioTasksTitles.directionss",
       "icon": "🗺️",
       "tasks": [
         {
@@ -23498,7 +23498,7 @@
     },
     {
       "id": "b1_party",
-      "title": "Вечеринка",
+      "title": "audioTasksTitles.party",
       "icon": "🎉",
       "tasks": [
         {
@@ -23857,7 +23857,7 @@
     },
     {
       "id": "b1_transport",
-      "title": "Транспорт",
+      "title": "audioTasksTitles.transport",
       "icon": "🚆",
       "tasks": [
         {
@@ -24233,7 +24233,7 @@
     },
     {
       "id": "b1_sport",
-      "title": "Спорт",
+      "title": "audioTasksTitles.sport",
       "icon": "⚽",
       "tasks": [
         {
@@ -24596,7 +24596,7 @@
     },
     {
       "id": "b1_travel",
-      "title": "Путешествия",
+      "title": "audioTasksTitles.travel",
       "icon": "🧳",
       "tasks": [
         {

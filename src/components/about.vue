@@ -47,6 +47,20 @@ const whyFooterRef = ref(null);
 const overflowIndex = ref(null);
 const liftedIndex = ref(null);
 
+
+const data = {
+  title: "about.title",
+  lead: "about.lead",
+  items: [
+    {valueKey: "about.whyFirst", explainkey: "aboutList.one", id: 1},
+    {valueKey: "about.whySecond", explainkey: "aboutList.two", id: 2},
+    {valueKey: "about.whyThird", explainkey: "aboutList.three", id: 3},
+    {valueKey: "about.whyFourth", explainkey: "aboutList.four", id: 4},
+    {valueKey: "about.whyFifth", explainkey: "aboutList.five", id: 5},
+    {valueKey: "about.whySixth", explainkey: "aboutList.six", id: 6},
+  ],
+}
+
 function toggle(index) {
   const isCurrentlyOpen = isOpen.value.includes(index);
   if (isCurrentlyOpen) {
@@ -96,18 +110,6 @@ onMounted(() => {
   //     });
   // }
 });
-const data = {
-  title: "about.title",
-  lead: "about.lead",
-  items: [
-    {valueKey: "about.whyFirst", explainkey: "aboutList.one", id: 1},
-    {valueKey: "about.whySecond", explainkey: "aboutList.two", id: 2},
-    {valueKey: "about.whyThird", explainkey: "aboutList.three", id: 3},
-    {valueKey: "about.whyFourth", explainkey: "aboutList.four", id: 4},
-    {valueKey: "about.whyFifth", explainkey: "aboutList.five", id: 5},
-    {valueKey: "about.whySixth", explainkey: "aboutList.six", id: 6},
-  ],
-}
 </script>
 
 <style scoped>
