@@ -59,7 +59,7 @@
               >
                 <div class="card__icon">{{ topic.icon }}</div>
                 <div class="card__info">
-                  <h3 class="card__title">{{ topic.title }}</h3>
+                  <h3 class="card__title">{{ t(topic.title) }}</h3>
                 </div>
                 <div v-if="topic.tasks?.length" class="card__progress">
                   <div class="circular-progress" :style="getCircularProgressStyle(topic)">
@@ -361,7 +361,7 @@ onMounted(async () => {
 }
 
 .circular-progress__text {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 900;
 }
 
@@ -377,6 +377,15 @@ onMounted(async () => {
   100% {
     opacity: 1;
     transform: scale(1) translateY(0);
+  }
+}
+
+@media (max-width: 767px) {
+  .card__title {
+    font-size: 1.1rem;
+  }
+  .card__icon {
+    font-size: 2.6rem;
   }
 }
 </style>

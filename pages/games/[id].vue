@@ -94,9 +94,6 @@ onMounted(() => {
     </div>
     <div v-else class="sky" ref="skyRef">
       <div class="star-layer"></div>
-      <div class="sector-info" v-if="currentGalaxy">
-        <span class="sector-name">{{ currentGalaxy.name || 'НЕИЗВЕСТНО' }}</span>
-      </div>
       <div class="score-board">
         <span class="score-label">ОЧКИ</span>
         <span class="score-value">{{ score }}</span>
@@ -241,8 +238,8 @@ onMounted(() => {
 
 .score-board {
   position: absolute;
-  top: 30px;
-  left: 1%;
+  top: 20px;
+  left: 20px;
   color: #00d2ff;
   z-index: 100;
 }
@@ -270,7 +267,7 @@ onMounted(() => {
 }
 
 .parachute {
-  width: 90px;
+  width: 80px;
   transform: rotate(-45deg);
   filter: drop-shadow(0 0 15px #00d2ff);
 }
@@ -281,6 +278,7 @@ onMounted(() => {
   padding: 5px 15px;
   border: 2px solid #00d2ff;
   text-align: center;
+  border-radius: 5px;
 }
 
 .laser-beam {

@@ -44,12 +44,6 @@ import WeatherRain from 'assets/images/speak-themen/weather/WeatherRain.jpg'
 import WeatherHail from 'assets/images/speak-themen/weather/WeatherHail.jpg'
 import WeatherFogInMountains from 'assets/images/speak-themen/weather/WeatherFogInMountains.jpg'
 
-
-import Stretching from "assets/images/speak-themen/sport-action/stretching.png";
-import Tennis from "assets/images/speak-themen/sport-action/tennis.png";
-import Soccer from "assets/images/speak-themen/sport-action/soccer-game.png";
-import Dance from "assets/images/speak-themen/home/dance.png";
-
 import TaxiDriverPassenger from "assets/images/speak-themen/transport/TaxiDriverPassenger.jpg";
 import BuyTicket from "assets/images/speak-themen/transport/BuyTicket.jpg";
 import WaitingForMetro from "assets/images/speak-themen/transport/WaitingForMEtro.png";
@@ -131,6 +125,14 @@ import ChildWihBox from 'assets/images/speak-themen/move/ChildWithBox.jpg'
 import Carpet from 'assets/images/speak-themen/move/Carpet.jpg'
 import RoomWithBoxes from 'assets/images/speak-themen/move/RoomWithBoxes.jpg'
 import Bet from 'assets/images/speak-themen/move/Bet.jpg'
+
+import Fitness from 'assets/images/speak-themen/sport/Fitness.jpg'
+import Basketball from 'assets/images/speak-themen/sport/Basketball.jpg'
+import Becycle from 'assets/images/speak-themen/sport/Becycle.jpg'
+import Climber from 'assets/images/speak-themen/sport/Climber.jpg'
+import Barbell from 'assets/images/speak-themen/sport/barbell.jpg'
+import Football from 'assets/images/speak-themen/sport/Football.jpg'
+import HockeyWomen from 'assets/images/speak-themen/sport/HockeyWomen.jpg'
 
 export const topics = [
 	{
@@ -950,51 +952,6 @@ export const topics = [
 		]
 	},
 	{
-		id: 'sport',
-		label: 'Спорт и активность',
-		icon: '🏋️‍♂️',
-		gradient: 'linear-gradient(135deg, #FFF3E0 0%, #FFB74D 100%)',
-		textColor: '#E65100',
-		tasks: [
-			{
-				id: 1,
-				image: Stretching,
-				descriptions: {
-					A1: "Eine Frau macht Yoga auf einer gelben Matte. Sie trägt ein rotes T-Shirt und eine schwarze Hose",
-					A2: "Auf dem Bild macht eine Frau Yoga auf einer gelben Matte; sie trägt ein rotes Oberteil und eine schwarze Leggings.",
-					B1: "Die Abbildung zeigt eine Frau in einer Yoga-Pose auf einer gelben Matte, wobei sie ein rotes Top und eine schwarze Sporthose trägt und die Augen geschlossen hat."
-				}
-			},
-			{
-				id: 2,
-				image: Tennis,
-				descriptions: {
-					A1: "Ich sehe ein Junge und er spielt Tennis.",
-					A2: "Ein Junge spielt Tennis. Er trägt ein rotes T-Shirt und ein rotes Stirnband. Er schaut auf den Ball.",
-					B1: "Ein Junge spielt Tennis. Er hält einen türkisen Schläger in der Hand und wartet auf den Ball. Er trägt sportliche rote Kleidung."
-				}
-			},
-			{
-				id: 3,
-				image: Soccer,
-				descriptions: {
-					A1: "Der Junge spielt Fußball",
-					A2: "Ein Junge kickt einen Fußball. Er trägt ein rotes Trikot und rote Schuhe.",
-					B1: "Ein Fußballspieler in roter Sportkleidung schießt den Ball mit voller Kraft. Er sieht sehr dynamisch aus."
-				}
-			},
-			{
-				id: 4,
-				image: Dance,
-				descriptions: {
-					A1: "Das Mädchen tanzt.",
-					A2: "Ein Mädchen tanzt. Sie trägt ein gelbes Kleid und lacht.",
-					B1: "Ein fröhliches Mädchen tanzt zur Musik. Sie trägt ein gelbes Kleidung."
-				}
-			}
-		]
-	},
-	{
 		id: 'animals',
 		label: 'Животные',
 		icon: '🦊',
@@ -1268,9 +1225,9 @@ export const topics = [
 				id: 1,
 				image: MoveFamily,
 				descriptions: {
-					A1: 'Das ist eine Landschaft. Die Sonne scheint und der Himmel ist blau. Hier sind viele Wolken. In der Mitte steht ein Baum. Das Gras ist grün. Das sind viele bunte Blumen: gelb, blau und rosa.',
-					A2: 'Auf dem Bild sieht man eine Natur an einem sonnigen Tag. Rechts befindet sich ein kleiner Teich mit blauem Wasser. Ein Baum steht direkt hinter dem Teich. Im Hintergrund kann man  Hügel und  Felder unter einem hellen Himmel sehen.',
-					B1: 'Das Bild zeigt eine grüne Wiese mit einem Teich und einem Baum in der Mitte, während im Hintergrund Hügel unter einem leicht bewölkten Himmel zu sehen sind.',
+					A1: 'Das ist eine Familie. Sie ziehen um. Der Vater trägt einen Karton. Die Mutter hat eine Blume. Das Kind hat einen Teddybär. Ein Hund spielt im Garten.',
+					A2: 'Die Familie zieht in ein neues Haus um. Ein blauer LKW steht auf der Straße. Der Junge и das Mädchen helfen auch. Sie tragen kleine Kisten. Der Hund rennt mit einem Stock auf dem Gras	',
+					B1: 'Auf dem Bild sieht man einen Umzug bei schönem Wetter. Die Eltern und ihre Kinder tragen verschiedene Sachen zum Haus. Während der Vater ein schweres Paket schleppt, hält die Tochter einen Teddybär im Arm. Alle wirken sehr glücklich über das neue Heim',
 
 				}
 			},
@@ -1278,9 +1235,9 @@ export const topics = [
 				id: 2,
 				image: MoveRoomBoxes,
 				descriptions: {
-					A1: 'Das ist eine Landschaft. Die Sonne scheint und der Himmel ist blau. Hier sind viele Wolken. In der Mitte steht ein Baum. Das Gras ist grün. Das sind viele bunte Blumen: gelb, blau und rosa.',
-					A2: 'Auf dem Bild sieht man eine Natur an einem sonnigen Tag. Rechts befindet sich ein kleiner Teich mit blauem Wasser. Ein Baum steht direkt hinter dem Teich. Im Hintergrund kann man  Hügel und  Felder unter einem hellen Himmel sehen.',
-					B1: 'Das Bild zeigt eine grüne Wiese mit einem Teich und einem Baum in der Mitte, während im Hintergrund Hügel unter einem leicht bewölkten Himmel zu sehen sind.',
+					A1: 'Hier ist eine Familie. Sie sind im Wohnzimmer. Die Mutter packt Kleidung in einen Karton. Der Vater steht am Fenster mit einer Lampe. Der Sohn sitzt auf einer Kiste und liest ein Buch. Das Mädchen spielt mit dem Bär. Die Katze sitzt da',
+					A2: 'Die Familie ist jetzt in ihrem neuen Wohnzimmer. Die Mutter sitzt auf dem Teppich und packt Kleidung in einen Karton. Der Vater hilft und hält eine gelbe Stehlampe fest. Ein сын sits auf einer Box und liest, aber das Mädchen spielt mit dem Teddybär. Die Katze ist auch da.',
+					B1: 'Die Familie zieht gerade in eine neue Wohnung ein. Überall im Zimmer stehen Umzugskartons und auf dem Boden liegt ein gerollter Teppich. Die Mutter sortiert Kleidung, während der Vater die Stehlampe hält. Die Kinder sind auch beschäftigt: Der Sohn liest ein Buch auf einer Kiste und die Tochter spielt mit dem Teddybär. Die Katze beobachtet alles von ihrem Platz aus',
 
 				}
 			},
@@ -1288,9 +1245,9 @@ export const topics = [
 				id: 3,
 				image: Sofa,
 				descriptions: {
-					A1: 'Das ist eine Landschaft. Die Sonne scheint und der Himmel ist blau. Hier sind viele Wolken. In der Mitte steht ein Baum. Das Gras ist grün. Das sind viele bunte Blumen: gelb, blau und rosa.',
-					A2: 'Auf dem Bild sieht man eine Natur an einem sonnigen Tag. Rechts befindet sich ein kleiner Teich mit blauem Wasser. Ein Baum steht direkt hinter dem Teich. Im Hintergrund kann man  Hügel und  Felder unter einem hellen Himmel sehen.',
-					B1: 'Das Bild zeigt eine grüne Wiese mit einem Teich und einem Baum in der Mitte, während im Hintergrund Hügel unter einem leicht bewölkten Himmel zu sehen sind.',
+					A1: 'Hier sind drei Männer. Sie haben einen LKW. Zwei Männer tragen ein Sofa. Ein Mann ist im LKW. Dort sind viele Kartons. Die Männer arbeiten',
+					A2: 'Drei Männer entladen den blauen LKW. Zwei Männer tragen ein blaues Sofa zum Haus. Ein Mann steht im Wagen и помогает. In den Kartons sind Spiegel',
+					B1: 'Auf dem Bild sieht man drei Männer, die Möbel aus einem LKW laden. Zwei Personen tragen gemeinsam ein Sofa, während der dritte Mann die Kartons im Wagen sortiert.',
 
 				}
 			},
@@ -1298,9 +1255,9 @@ export const topics = [
 				id: 4,
 				image: BoxesInAuto,
 				descriptions: {
-					A1: 'Das ist eine Landschaft. Die Sonne scheint und der Himmel ist blau. Hier sind viele Wolken. In der Mitte steht ein Baum. Das Gras ist grün. Das sind viele bunte Blumen: gelb, blau und rosa.',
-					A2: 'Auf dem Bild sieht man eine Natur an einem sonnigen Tag. Rechts befindet sich ein kleiner Teich mit blauem Wasser. Ein Baum steht direkt hinter dem Teich. Im Hintergrund kann man  Hügel und  Felder unter einem hellen Himmel sehen.',
-					B1: 'Das Bild zeigt eine grüne Wiese mit einem Teich und einem Baum in der Mitte, während im Hintergrund Hügel unter einem leicht bewölkten Himmel zu sehen sind.',
+					A1: 'Hier ist ein Mann. Er ist im LKW. Er trägt einen Karton. Auf dem Karton steht „Bücher“. Im LKW sind viele Kartons. Der Mann arbeitet',
+					A2: 'Ein Mann arbeitet in einem blauen LKW. Er hebt einen Karton. Auf dem Karton steht das Wort „Bücher“. Im Wagen sieht man viele andere Kartons und einen Teppich.',
+					B1: 'Auf dem Bild sieht man einen Mann, der im LKW arbeitet. Er hebt einen Karton, auf dem „Bücher“ steht. Im LKW stehen viele Kartons und ein Teppich. Er stellt alles ordentlich hin, weil er viel Platz braucht.',
 
 				}
 			},
@@ -1308,9 +1265,9 @@ export const topics = [
 				id: 5,
 				image: ChildWihBox,
 				descriptions: {
-					A1: 'Das ist eine Landschaft. Die Sonne scheint und der Himmel ist blau. Hier sind viele Wolken. In der Mitte steht ein Baum. Das Gras ist grün. Das sind viele bunte Blumen: gelb, blau und rosa.',
-					A2: 'Auf dem Bild sieht man eine Natur an einem sonnigen Tag. Rechts befindet sich ein kleiner Teich mit blauem Wasser. Ein Baum steht direkt hinter dem Teich. Im Hintergrund kann man  Hügel und  Felder unter einem hellen Himmel sehen.',
-					B1: 'Das Bild zeigt eine grüne Wiese mit einem Teich und einem Baum in der Mitte, während im Hintergrund Hügel unter einem leicht bewölkten Himmel zu sehen sind.',
+					A1: 'Hier sind ein Mann und ein Kind. Der Mann ist im Auto. Das Kind gibt einen Karton. Das Kind hat einen Teddybär. Ein großer Karton liegt auf der Straße',
+					A2: 'Ein Mann steht in einem weißen Transporter. Ein kleiner Junge hilft ihm. Er gibt dem Mann einen Karton. Der Junge hat auch einen Teddybär.',
+					B1: 'Auf dem Bild hilft ein Junge dem Mann beim Umzug. Er reicht dem Arbeiter ein kleines Paket, während er seinen Teddybär hält. Ein großer Karton steht noch auf dem Boden',
 
 				}
 			},
@@ -1318,9 +1275,9 @@ export const topics = [
 				id: 6,
 				image: Carpet,
 				descriptions: {
-					A1: 'Das ist eine Landschaft. Die Sonne scheint und der Himmel ist blau. Hier sind viele Wolken. In der Mitte steht ein Baum. Das Gras ist grün. Das sind viele bunte Blumen: gelb, blau und rosa.',
-					A2: 'Auf dem Bild sieht man eine Natur an einem sonnigen Tag. Rechts befindet sich ein kleiner Teich mit blauem Wasser. Ein Baum steht direkt hinter dem Teich. Im Hintergrund kann man  Hügel und  Felder unter einem hellen Himmel sehen.',
-					B1: 'Das Bild zeigt eine grüne Wiese mit einem Teich und einem Baum in der Mitte, während im Hintergrund Hügel unter einem leicht bewölkten Himmel zu sehen sind.',
+					A1: 'Zwei Männer tragen einen Teppich. Sie gehen in das Haus. Die Tür ist offen. Draußen steht ein Auto',
+					A2: 'Zwei Männer tragen einen Teppich in das Haus. Ein Mann trägt ein graues T-Shirt. Der andere Mann trägt ein grünes Hemd. Draußen parkt ein weißer Lieferwagen.',
+					B1: 'Zwei Männer tragen einen gerollten Teppich durch die offene Tür. Während sie das Haus betreten, sieht man draußen einen Lieferwagen. Im Flur steht ein Schrank mit einem Spiegel',
 
 				}
 			},
@@ -1328,19 +1285,108 @@ export const topics = [
 				id: 7,
 				image: RoomWithBoxes,
 				descriptions: {
-					A1: 'Das ist eine Landschaft. Die Sonne scheint und der Himmel ist blau. Hier sind viele Wolken. In der Mitte steht ein Baum. Das Gras ist grün. Das sind viele bunte Blumen: gelb, blau und rosa.',
-					A2: 'Auf dem Bild sieht man eine Natur an einem sonnigen Tag. Rechts befindet sich ein kleiner Teich mit blauem Wasser. Ein Baum steht direkt hinter dem Teich. Im Hintergrund kann man  Hügel und  Felder unter einem hellen Himmel sehen.',
-					B1: 'Das Bild zeigt eine grüne Wiese mit einem Teich und einem Baum in der Mitte, während im Hintergrund Hügel unter einem leicht bewölkten Himmel zu sehen sind.',
+					A1: 'Das ist ein Flur. Hier sind drei Türen. Viele Kartons stehen auf dem Boden. Die Türen sind braun',
+					A2: 'Das ist ein Flur. In dem Flur stehen viele Kartons auf dem Boden. Ich sehe drei braune Türen. Die Kartons stehen links и rechts an der Wand',
+					B1: 'Das Bild zeigt einen Flur, in dem viele Umzugskartons stehen. Man sieht drei braune Türen. Die Kartons sind auf dem Boden gestapelt, weil die Leute umziehen',
 
 				}
 			},
 			{
 				id: 8,
-				image: RoomWithBoxes,
+				image: Bet,
 				descriptions: {
-					A1: 'Das ist eine Landschaft. Die Sonne scheint und der Himmel ist blau. Hier sind viele Wolken. In der Mitte steht ein Baum. Das Gras ist grün. Das sind viele bunte Blumen: gelb, blau und rosa.',
-					A2: 'Auf dem Bild sieht man eine Natur an einem sonnigen Tag. Rechts befindet sich ein kleiner Teich mit blauem Wasser. Ein Baum steht direkt hinter dem Teich. Im Hintergrund kann man  Hügel und  Felder unter einem hellen Himmel sehen.',
-					B1: 'Das Bild zeigt eine grüne Wiese mit einem Teich und einem Baum in der Mitte, während im Hintergrund Hügel unter einem leicht bewölkten Himmel zu sehen sind.',
+					A1: 'Das ist ein Haus. Zwei Männer tragen eine Matratze. Sie gehen die Treppe hoch. Da sind viele Kartons.',
+					A2: 'Zwei Männer tragen eine Matratze. Sie gehen die Treppe hoch. Viele Kartons stehen im Flur. Die Türen sind geschlossen.',
+					B1: 'Auf dem Bild sieht man zwei Männer, die eine Matratze tragen. Sie gehen die Treppe hoch. Viele Kartons sind im Flur gestapelt.',
+
+				}
+			},
+		]
+	},
+	{
+		id: 'sport',
+		label: 'Спорт',
+		icon: '🌦️',
+		gradient: 'linear-gradient(135deg, #F1F8E9 0%, #AED581 100%)',
+		textColor: '#93615B',
+		tasks: [
+			{
+				id: 1,
+				image: Fitness,
+				descriptions: {
+					A1: 'Hier sind fünf Personen im Park. Sie machen Sport. Die Sonne scheint. Ein Schild steht auf dem Gras.',
+					A2: 'Eine Gruppe macht Fitness im Park auf dem Gras. Die Trainerin steht vorne und zeigt eine Übung. Die Leute bewegen die Arme. Im Hintergrund sieht man einen See. Das Wetter ist sonnig.',
+					B1: 'Das Bild zeigt eine Sportgruppe, die im Park trainiert. Während die Trainerin die Übung zeigt, machen die anderen Teilnehmer die Bewegung nach. Alle wirken motiviert, weil sie zusammen Sport machen',
+
+				}
+			},
+			{
+				id: 2,
+				image: Basketball,
+				descriptions: {
+					A1: 'Hier sind Kinder. Sie spielen Basketball. Ein Junge springt. Er hat einen Ball. Ein Trainer steht da',
+					A2: 'Die Kinder spielen Basketball in der Sporthalle. Ein Junge trägt ein gelbes Trikot mit der Nummer 12. Er wirft den Ball in den Korb. Der Trainer beobachtet das Spiel.',
+					B1: 'Das Bild zeigt Basketballspiel in einer Halle. Ein Spieler, springt hoch zum Korb. Während der Trainer auf der rechten Seite pfeift, warten die anderen Kinder auf den nächsten Punkt. Auf der Anzeigetafel steht es 10 zu 8.',
+
+				}
+			},
+			{
+				id: 3,
+				image: Becycle,
+				descriptions: {
+					A1: 'Hier sind vier Menschen. Sie fahren Fahrrad. Sie sind draußen. Sie tragen Helme',
+					A2: 'Eine Gruppe von vier Personen fährt Rad. Sie sind auf einem Weg in der Natur. Im Hintergrund sieht man eine Burg auf einem Berg',
+					B1: 'Auf dem Bild sieht man vier Menschen, die auf einem Radweg fahren. Der Mann vorne trägt ein Trikot, auf dem „Team Berlin“ steht. Im Hintergrund sieht man eine alte Burg auf einem Hügel. Alle Personen tragen einen Helm',
+
+				}
+			},
+			{
+				id: 4,
+				image: Climber,
+				descriptions: {
+					A1: 'Das ist ein Mann. Er klettert auf einen Berg. Er trägt einen Helm und einen Rucksack. Es gibt viel Schnee.',
+					A2: 'Ein Bergsteiger klettert an einer Eiswand. Er trägt eine orange Jacke und einen blauen Helm. Er benutzt zwei Eispickel und ein Seil. Im Hintergrund sieht man andere Berge',
+					B1: 'Auf dem Bild sieht man einen Bergsteiger, der eine steile Eiswand hochklettert. Er trägt eine komplette Ausrüstung mit einem Rucksack und einem Seil. Während er klettert, benutzt er zwei Eispickel für den Halt. Er hat auch Steigeisen an den Schuhen',
+
+				}
+			},
+			{
+				id: 5,
+				image: Climber,
+				descriptions: {
+					A1: 'Das ist ein Mann. Er klettert auf einen Berg. Er trägt einen Helm und einen Rucksack. Es gibt viel Schnee.',
+					A2: 'Ein Bergsteiger klettert an einer Eiswand. Er trägt eine orange Jacke und einen blauen Helm. Er benutzt zwei Eispickel und ein Seil. Im Hintergrund sieht man andere Berge',
+					B1: 'Auf dem Bild sieht man einen Bergsteiger, der eine steile Eiswand hochklettert. Er trägt eine komplette Ausrüstung mit einem Rucksack und einem Seil. Während er klettert, benutzt er zwei Eispickel für den Halt. Er hat auch Steigeisen an den Schuhen',
+
+				}
+			},
+			{
+				id: 5,
+				image: Barbell,
+				descriptions: {
+					A1: 'Hier ist ein Mann. Er hebt ein Gewicht. Das Gewicht ist schwer 140 kg. Ein Schild zeigt seinen Namen. Leute sind da.',
+					A2: 'Ein Sportler hebt 140 kg bei einem Wettkampf. Das Gewicht ist schwer. Er trägt einen blauen Anzug. Rechts steht ein Schiedsrichter. Viele Zuschauer sitzen da.',
+					B1: 'Das Bild zeigt einen Mann, der 140 kg über den Kopf hält. Während er das schwere Gewicht hebt, schauen die Zuschauer zu. Er steht auf einer Plattform aus Holz. Ein Schild informiert über den Sportler',
+
+				}
+			},
+			{
+				id: 6,
+				image: Football,
+				descriptions: {
+					A1: 'Hier sind Kinder. Sie spielen Fußball. Ein Junge hat den Ball. Er trägt ein rotes Trikot.',
+					A2: 'Die Kinder spielen Fußball auf dem Platz. Ein Junge trägt ein rotes Trikot mit der Nummer 10. Ein anderer Junge trägt ein blaues Trikot. Im Hintergrund sieht man ein Tor und Zuschauer.',
+					B1: 'Auf dem Bild sieht man Kinder, die Fußball spielen. Ein Junge trägt ein rotes Trikot und läuft mit dem Ball. Er spielt gegen einen Jungen, der ein blaues Trikot trägt. Im Hintergrund sieht man ein Tor und Zuschauer.',
+
+				}
+			},
+			{
+				id: 7,
+				image: HockeyWomen,
+				descriptions: {
+					A1: 'Hier sind Frauen. Sie spielen Hockey auf dem Gras. Das ist kein Eis. Eine Gruppe trägt rote Sachen. Die andere Gruppe trägt blaue Sachen.',
+					A2: 'Die Kinder spielen Fußball auf dem Platz. Ein Junge trägt ein rotes Trikot mit der Nummer 10. Ein anderer Junge trägt ein blaues Trikot. Im Hintergrund sieht man ein Tor und Zuschauer.',
+					B1: 'Auf dem Bild sieht man Kinder, die Fußball spielen. Ein Junge trägt ein rotes Trikot und läuft mit dem Ball. Er spielt gegen einen Jungen, der ein blaues Trikot trägt. Im Hintergrund sieht man ein Tor und Zuschauer.',
 
 				}
 			},
