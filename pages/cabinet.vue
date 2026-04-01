@@ -18,7 +18,7 @@
     <div class="layout">
       <aside class="sidebar-panel">
         <button class="back-btn" @click="backToMain" aria-label="На главную" type="button">
-          <img class="back__btn-icon" :src="Home" alt=""/>
+          <img class="back__btn-icon" :src="Home" alt="Home"/>
           <span class="back-label">{{ t('cabinet.main') }}</span>
         </button>
         <div class="sidebar-title">{{ t('cabinet.category') }}</div>
@@ -36,7 +36,6 @@
           </button>
         </nav>
       </aside>
-
       <section class="content-panel">
         <ClientOnly>
           <div class="content-body">
@@ -53,7 +52,6 @@
                     @open="handleSettingsAction"
                 />
               </div>
-
               <div v-else>
                 <div class="user-block">
                   <div class="avatar-container">
@@ -64,7 +62,6 @@
                         class="avatar-current"
                     />
                     <div v-else class="avatar-placeholder"></div>
-
                     <button
                         @click="isAvatarModalOpen = true"
                         class="change-avatar-btn"
@@ -74,15 +71,12 @@
                       <img src="../assets/images/add.svg" alt="Сменить"/>
                     </button>
                   </div>
-
                   <div class="user-info">
                     <div class="user-name">{{ userNameSafe }}</div>
-
                     <div class="exp-bar">
                       <div class="exp-fill" :style="{ width: `${expFillWidth}%` }"></div>
                       <span class="exp-text">{{ learningStore.exp }} / 100 XP</span>
                     </div>
-
                     <div class="level-info">{{ t('cabinet.level') }} {{ learningStore.isLeveling }}</div>
                   </div>
                 </div>
@@ -811,6 +805,7 @@ onMounted(async () => {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
+  max-width: 768px;
 }
 
 .account-tab {

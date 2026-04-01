@@ -31,7 +31,7 @@
             <div v-if="card.requiredHats && !card.isOwned" class="shop-card__requirements">
               <span class="shop-req-label">{{t('cardsShop.required')}}</span>
               <div class="shop-req-details">
-                <span class="req-title">{{ card.rankTitle }} 3</span>
+                <span class="req-title">{{ t(card.rankTitle) }} 3</span>
                 <div class="req-count">
                   <img :src="GraduateHat" alt="Hat" class="req-icon"/>
                   <span>{{ card.requiredHats }}</span>
@@ -207,6 +207,7 @@ const shopCards = computed(() => {
     //   price: PRICES.SALE_15,
     //   requiredHats: DISCOUNT_REQ_HATS[15],
     //   type: 'permanent'
+    //
     // },
   ]
 
@@ -733,6 +734,7 @@ const confirmPurchase = async () => {
   color: #ef5350;
   text-align: center;
   font-size: 13px;
+  font-weight: 900;
   margin-bottom: 12px;
 }
 

@@ -5,6 +5,7 @@ import {useRouter} from 'vue-router'
 import SoundBtn from '../src/components/soundBtn.vue'
 import Modal from '../src/components/modal.vue'
 import TipsModal from '../src/components/V-tips.vue'
+import Description from '../assets/images/reporting.svg'
 import {topics} from '../utils/descriptionImages.js'
 
 useSeoMeta({
@@ -252,7 +253,13 @@ async function sendMessage(voiceText = null) {
 
 <template>
   <div class="page-container">
-    <Modal :visible="showDevModal" @close="closeModal" :title="t(overlayData.title)" :text="t(overlayData.text)"/>
+    <Modal
+        :visible="showDevModal"
+        @close="closeModal"
+        :title="t(overlayData.title)"
+        :img="Description"
+        :text="t(overlayData.text)"
+    />
     <TipsModal v-model="showTips" :title="t('adjectiveComparisonPage.tipTitle')" :tips="tipsData.tips"/>
     <div class="content-shell">
       <header class="app-header">
@@ -276,7 +283,6 @@ async function sendMessage(voiceText = null) {
           </svg>
         </button>
       </header>
-
       <transition name="fade" mode="out-in">
         <div v-if="viewState === 'topics'" class="view-topics" key="topics">
           <div class="intro-block">

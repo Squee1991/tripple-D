@@ -8,7 +8,7 @@ export const useRankUserStore = defineStore('rankUserStore', () => {
 	const langStore = userlangStore()
 	const ranksData = [
 		{
-			title: 'Новичок',
+			title: 'v-rank.rank_1',
 			icons: [
 				{ icon: '/images/rank-icons/level-1/silber.png' },
 				{ icon: '/images/rank-icons/level-1/bronze.png' },
@@ -21,7 +21,7 @@ export const useRankUserStore = defineStore('rankUserStore', () => {
 			]
 		},
 		{
-			title: 'Шустрик',
+			title: 'v-rank.rank_2',
 			icons: [
 				{ icon: '/images/rank-icons/level-2/Level2Silver.png' },
 				{ icon: '/images/rank-icons/level-2/Level2Bronze.png' },
@@ -30,11 +30,11 @@ export const useRankUserStore = defineStore('rankUserStore', () => {
 			levels: [
 				{ hats: 60, bonus: 5 },
 				{ hats: 70, bonus: 10 },
-				{ hats: 90, bonus: 'Скидка 5%' }
+				{ hats: 90, bonus: 'v-rank.sale5' }
 			]
 		},
 		{
-			title: 'Скаут',
+			title: 'v-rank.rank_3',
 			icons: [
 				{ icon: '/images/rank-icons/level-3/SilverPank.png' },
 				{ icon: '/images/rank-icons/level-3/SilverPank.png' },
@@ -47,7 +47,7 @@ export const useRankUserStore = defineStore('rankUserStore', () => {
 			]
 		},
 		{
-			title: 'Панк-ёж',
+			title: 'v-rank.rank_4',
 			icons: [
 				{ icon: '/images/rank-icons/level-4/Level4Silver.png' },
 				{ icon: '/images/rank-icons/level-4/Level4Bronze.png' },
@@ -56,11 +56,11 @@ export const useRankUserStore = defineStore('rankUserStore', () => {
 			levels: [
 				{ hats: 170, bonus: 10 },
 				{ hats: 190, bonus: 15 },
-				{ hats: 210, bonus: 'Скидка 10%' }
+				{ hats: 210, bonus: 'v-rank.sale10' }
 			]
 		},
 		{
-			title: 'Капитан',
+			title: 'v-rank.rank_5',
 			icons: [
 				{ icon: '/images/rank-icons/level-5/Level5Silver.png' },
 				{ icon: '/images/rank-icons/level-5/Level5Bronze.png' },
@@ -73,7 +73,7 @@ export const useRankUserStore = defineStore('rankUserStore', () => {
 			]
 		},
 		{
-			title: 'Страж',
+			title: 'v-rank.rank_6',
 			icons: [
 				{ icon: '/images/rank-icons/level-6/Level6Silver.png' },
 				{ icon: '/images/rank-icons/level-6/Level6Bronze.png' },
@@ -82,11 +82,11 @@ export const useRankUserStore = defineStore('rankUserStore', () => {
 			levels: [
 				{ hats: 330, bonus: 20 },
 				{ hats: 360, bonus: 20 },
-				{ hats: 400, bonus: 'Скидка 15%' }
+				{ hats: 400, bonus: 'v-rank.sale15' }
 			]
 		},
 		{
-			title: 'Легенда',
+			title: 'v-rank.rank_7',
 			icons: [
 				{ icon: '/images/rank-icons/level-7/Level7Silver.png' },
 				{ icon: '/images/rank-icons/level-7/Level7Bronze.png' },
@@ -112,7 +112,7 @@ export const useRankUserStore = defineStore('rankUserStore', () => {
 				}
 			}
 		}
-		return 'РАНГ'
+		return 'Rank'
 	}
 
 	const checkRewardUI = async () => {
