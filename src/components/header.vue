@@ -243,8 +243,8 @@ const menuItems = computed(() => {
                   {id: 'comparison', url: '/adjective-comparison', valueKey: 'underSub.comparison'}
                 ],
               },
-              // {id: 'audio', url: '/audio-tasks' , valueKey: 'sub.audio'},
-              // {id: 'description', url: '/description-images' , valueKey: 'sub.describePicture'},
+              {id: 'audio', url: '/audio-tasks' , valueKey: 'sub.audio'},
+              {id: 'description', url: '/description-images' , valueKey: 'sub.describePicture'},
               {id: 'themen', url: '/thematic-learning', valueKey: 'sub.themen'},
               {id: 'cards', url: '/create-cards', valueKey: 'sub.card'},
               {id: 'idioms', url: '/idioms', valueKey: 'sub.idioms'}
@@ -254,7 +254,7 @@ const menuItems = computed(() => {
             id: 'duel',
             valueKey: 'nav.gameMode',
             children: [
-              // {id: 'fight', url: '/games', valueKey: 'sub.fight'},
+              {id: 'fight', url: '/games', valueKey: 'sub.fight'},
               {id: 'duel-pvp', valueKey: 'sub.pvp', action: openDevModal},
               {id: 'wordDuel', url: '/sentence-duel', valueKey: 'sub.wordDuel'},
               {id: 'quests', url: '/recipes', valueKey: 'sub.quests'},
@@ -290,15 +290,15 @@ const menuItems = computed(() => {
         startDate: '12.02 00:00',
         endDate: '16.02 23:59'
       },
-      // {
-      //   id: 'april',
-      //   valueKey: 'eventsNavNames.firstApril',
-      //   url: '/event-joke',
-      //   isEvent: true,
-      //   eventKey: 'fools',
-      //   startDate: '01.04 00:00',
-      //   endDate: '01.04 23:59'
-      // },
+      {
+        id: 'april',
+        valueKey: 'eventsNavNames.firstApril',
+        url: '/event-joke',
+        isEvent: true,
+        eventKey: 'fools',
+        startDate: '01.04 00:00',
+        endDate: '01.04 23:59'
+      },
       {
         id: 'halloween',
         valueKey: 'eventsNavNames.halloween',
