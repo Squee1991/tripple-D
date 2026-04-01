@@ -91,16 +91,16 @@ const defaultSchedule = computed(() => [
     route: "/event-valentine",
     effectImage: HeartFall,
   },
-  {
-    id: "joke",
-    start: '04-01 00:00',
-    end: '04-01 23:59',
-    title: t('eventsModal.jokeLabel'),
-    text: t('eventsModal.jokeText'),
-    icon: FoolIcon,
-    route: "/event-joke",
-    effectImage: FoolIFall,
-  }
+  // {
+  //   id: "joke",
+  //   start: '04-01 00:00',
+  //   end: '04-01 23:59',
+  //   title: t('eventsModal.jokeLabel'),
+  //   text: t('eventsModal.jokeText'),
+  //   icon: FoolIcon,
+  //   route: "/event-joke",
+  //   effectImage: FoolIFall,
+  // }
 ]);
 
 const effectiveSchedule = computed(() => props.schedule || defaultSchedule.value);

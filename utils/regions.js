@@ -91,78 +91,78 @@ export const regions = {
 			}
 		],
 		elementary: [
-			{
-				id: "plural-land",
-				pathTo: "plural-land",
-				theme: "plural",
-				name: "locationNames.plural-land",
-				level: 0,
-				desc: "regions.descriptionPluralLands",
-				icon: Future
-			},
-			{
-				id: "past-land",
-				pathTo: "past-land",
-				theme: "past",
-				name: "locationNames.past-land",
-				level: 0,
-				desc: "regions.descriptionPastLands",
-				icon: Past
-			},
-			{
-				id: "action-valley",
-				pathTo: "action-valley",
-				theme: "action",
-				name: "locationNames.action-valley",
-				level: 0,
-				desc: "regions.descriptionActionLands",
-				icon: Action
-			},
-			{
-				id: "order-valley",
-				pathTo: "order-valley",
-				theme: "order",
-				name: "locationNames.order-valley",
-				level: 0,
-				desc: "regions.descriptionOrderValley",
-				icon: OrderValley
-			},
-			{
-				id: "time-gate",
-				pathTo: "time-gate",
-				theme: "time",
-				name: "Врата времен",
-				level: 0,
-				desc: "Здесь, у врат времен, путник обретает уверенность, оглядываясь назад и заглядывая вперед. В этом разделе мы будем проходить повторение: путник заново проходит и закрепляет времена прошлого и будущего",
-				icon: TimeGate
-			},
-			{
-				id: "edge-images",
-				pathTo: "edge-images",
-				theme: "edge",
-				name: "Край образов",
-				level: 0,
-				desc: "Работа с определенными артиклями в прошедшем и будущем времени. Путник учится правильно определять и берет нужную форму у артикля в каждом предложении.",
-				icon: EdgeImages
-			},
-			{
-				id: "secret-lands",
-				pathTo: "secret-lands",
-				theme: "secret",
-				name: "Земли загадок",
-				level: 0,
-				desc: "Работа с неопределенными артиклями в прошедшем и будущем времени. Путник учится правильно определять и берет нужную форму у артикля в каждом предложении.",
-				icon: SecretLands
-			},
-			{
-				id: "definite-indefinite",
-				pathTo: "definite-indefinite",
-				theme: "def-indef",
-				name: "Земли выбора",
-				level: 0,
-				desc: "Работа с определенными и неопределенными и определенными артиклями в прошедшем и будущем времени. Учитмся различать их и правильно ставить нужную форму у артикля в каждом предложении.",
-				icon: MixedLands
-			},
+			// {
+			// 	id: "plural-land",
+			// 	pathTo: "plural-land",
+			// 	theme: "plural",
+			// 	name: "locationNames.plural-land",
+			// 	level: 0,
+			// 	desc: "regions.descriptionPluralLands",
+			// 	icon: Future
+			// },
+			// {
+			// 	id: "past-land",
+			// 	pathTo: "past-land",
+			// 	theme: "past",
+			// 	name: "locationNames.past-land",
+			// 	level: 0,
+			// 	desc: "regions.descriptionPastLands",
+			// 	icon: Past
+			// },
+			// {
+			// 	id: "action-valley",
+			// 	pathTo: "action-valley",
+			// 	theme: "action",
+			// 	name: "locationNames.action-valley",
+			// 	level: 0,
+			// 	desc: "regions.descriptionActionLands",
+			// 	icon: Action
+			// },
+			// {
+			// 	id: "order-valley",
+			// 	pathTo: "order-valley",
+			// 	theme: "order",
+			// 	name: "locationNames.order-valley",
+			// 	level: 0,
+			// 	desc: "regions.descriptionOrderValley",
+			// 	icon: OrderValley
+			// },
+			// {
+			// 	id: "time-gate",
+			// 	pathTo: "time-gate",
+			// 	theme: "time",
+			// 	name: "Врата времен",
+			// 	level: 0,
+			// 	desc: "Здесь, у врат времен, путник обретает уверенность, оглядываясь назад и заглядывая вперед. В этом разделе мы будем проходить повторение: путник заново проходит и закрепляет времена прошлого и будущего",
+			// 	icon: TimeGate
+			// },
+			// {
+			// 	id: "edge-images",
+			// 	pathTo: "edge-images",
+			// 	theme: "edge",
+			// 	name: "Край образов",
+			// 	level: 0,
+			// 	desc: "Работа с определенными артиклями в прошедшем и будущем времени. Путник учится правильно определять и берет нужную форму у артикля в каждом предложении.",
+			// 	icon: EdgeImages
+			// },
+			// {
+			// 	id: "secret-lands",
+			// 	pathTo: "secret-lands",
+			// 	theme: "secret",
+			// 	name: "Земли загадок",
+			// 	level: 0,
+			// 	desc: "Работа с неопределенными артиклями в прошедшем и будущем времени. Путник учится правильно определять и берет нужную форму у артикля в каждом предложении.",
+			// 	icon: SecretLands
+			// },
+			// {
+			// 	id: "definite-indefinite",
+			// 	pathTo: "definite-indefinite",
+			// 	theme: "def-indef",
+			// 	name: "Земли выбора",
+			// 	level: 0,
+			// 	desc: "Работа с определенными и неопределенными и определенными артиклями в прошедшем и будущем времени. Учитмся различать их и правильно ставить нужную форму у артикля в каждом предложении.",
+			// 	icon: MixedLands
+			// },
 		],
 	    intermediate: [
 
