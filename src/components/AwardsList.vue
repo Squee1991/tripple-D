@@ -8,7 +8,7 @@
         @close="closeAward"
     />
     <div class="awards__header">
-      <h1 class="awards__title">{{ t('Награды') }}</h1>
+      <h1 class="awards__title">{{ t('awardModal.title') }}</h1>
       <button @click="questionModal" class="awards__info-btn">
         <!--            <img class="awards__question-icon" :src="Question" alt="quest_icon">-->
         <div class="awards__counter cartoon-board">

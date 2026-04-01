@@ -632,7 +632,7 @@ onBeforeUnmount(() => {
   border-radius: 16px;
   box-shadow: 2px 2px 0px var(--border);
   padding: 0.5rem;
-  min-width: 240px;
+  min-width: 245px;
 }
 
 .header-nav__submenu-item {
@@ -654,7 +654,7 @@ onBeforeUnmount(() => {
   width: 100%;
   border: none;
   background: none;
-  font-size: 16px;
+  font-size: 15.5px;
   font-family: "Nunito", sans-serif;
 }
 
