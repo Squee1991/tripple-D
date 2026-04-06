@@ -6,7 +6,7 @@ import { getAuth, onAuthStateChanged } from 'firebase/auth'
 import {dailyStore } from './dailyStore.js'
 import { userlangStore } from './learningStore.js'
 
-const REGEN_INTERVAL_MS = 5 * 60 * 1000
+const REGEN_INTERVAL_MS = 60 * 60 * 1000
 const MAX_LIVES = 5
 
 export const userChainStore = defineStore('chain', () => {

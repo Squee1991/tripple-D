@@ -8093,5 +8093,33 @@
     "transport": "Transporte",
     "sport": "Deporte",
     "travel": "Viajes"
+  },
+  "descriptionPage": {
+    "intro": "Elige un tema para practicar tus habilidades de descripción.",
+    "images": "IMÁGENES",
+    "level": "Elige la dificultad"
+  },
+  "descriptionThemes": {
+    "winter": "Invierno y actividades",
+    "transport": "Transporte público",
+    "cafe": "Cafetería",
+    "supermarket": "Supermercado",
+    "home": "Hogar y vida cotidiana",
+    "school": "Escuela",
+    "animals": "Animales",
+    "weather": "Clima",
+    "move": "Mudanza",
+    "sport": "Deporte"
+  },
+  "descriptionSession": {
+    "record": "GRABANDO...",
+    "better": "CÓMO MEJORAR:",
+    "answer": "RESPUESTA",
+    "done": "TEMA COMPLETADO",
+    "newTheme": "ELEGIR NUEVO TEMA"
+  },
+  "lives": {
+    "next": "Siguiente:",
+    "full": "Vidas llenas"
   }
 }

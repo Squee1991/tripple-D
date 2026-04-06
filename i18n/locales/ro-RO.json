@@ -8091,5 +8091,33 @@
     "transport": "Transport",
     "sport": "Sport",
     "travel": "Călătorii"
+  },
+  "descriptionPage": {
+    "intro": "Alege o temă pentru a exersa abilitățile de descriere.",
+    "images": "IMAGINI",
+    "level": "Alege dificultatea"
+  },
+  "descriptionThemes": {
+    "winter": "Iarna și activități",
+    "transport": "Transport public",
+    "cafe": "Cafenea",
+    "supermarket": "Supermarket",
+    "home": "Casă și viața de zi cu zi",
+    "school": "Școală",
+    "animals": "Animale",
+    "weather": "Vremea",
+    "move": "Mutare",
+    "sport": "Sport"
+  },
+  "descriptionSession": {
+    "record": "ÎNREGISTRARE ÎN CURS...",
+    "better": "CUM SĂ ÎMBUNĂTĂȚEȘTI:",
+    "answer": "RĂSPUNS",
+    "done": "TEMĂ FINALIZATĂ",
+    "newTheme": "ALEGE O TEMĂ NOUĂ"
+  },
+  "lives": {
+    "next": "Următoarea:",
+    "full": "Vieți pline"
   }
 }

@@ -8084,5 +8084,33 @@
     "transport": "Transport",
     "sport": "Sport",
     "travel": "Sayohat"
+  },
+  "descriptionPage": {
+    "intro": "Tavsiflash mahoratini mashq qilish uchun mavzu tanlang.",
+    "images": "RASMLAR",
+    "level": "Qiyinchilik darajasini tanlang"
+  },
+  "descriptionThemes": {
+    "winter": "Qish va tadbirlar",
+    "transport": "Jamoat transporti",
+    "cafe": "Qahvaxona",
+    "supermarket": "Supermarket",
+    "home": "Uy va ro'zg'or",
+    "school": "Maktab",
+    "animals": "Hayvonlar",
+    "weather": "Ob-havo",
+    "move": "Ko'chib o'tish",
+    "sport": "Sport"
+  },
+  "descriptionSession": {
+    "record": "YOZIB OLINMOQDA...",
+    "better": "QANDAY YAXSHILASH KERAK:",
+    "answer": "JAVOB",
+    "done": "MAVZU YAKUNLANDI",
+    "newTheme": "YANGI MAVZU TANLASH"
+  },
+  "lives": {
+    "next": "Keyingisi:",
+    "full": "Hayotlar to'la"
   }
 }

@@ -256,7 +256,7 @@ onMounted(async () => {
 }
 
 .quiz__grid--topics {
-  grid-template-columns: repeat(auto-fit, minmax(320px, 450px));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 345px));
 }
 
 .card {
@@ -270,7 +270,7 @@ onMounted(async () => {
   display: flex;
   align-items: center;
   padding: 8px;
-  gap: 10px;
+  gap: 8px;
   color: #2f3542;
 }
 
@@ -328,15 +328,10 @@ onMounted(async () => {
 }
 
 .card__title {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 900;
   text-transform: uppercase;
   margin: 0;
-}
-
-.card__progress {
-  margin-right: 10px;
-  flex-shrink: 0;
 }
 
 .circular-progress {

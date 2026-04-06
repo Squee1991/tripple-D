@@ -13,7 +13,8 @@ const startEdit = () => {
   isEditingName.value = true
 }
 
-const handleSaveName = async () => {
+const handleSaveName = async (event) => {
+  console.log('handleSaveName вызван с аргументом:', event);
   if (tempName.value.trim()) {
     await store.setCaptainName(tempName.value)
   }

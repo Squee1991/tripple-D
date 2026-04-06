@@ -244,7 +244,7 @@ const menuItems = computed(() => {
                 ],
               },
               {id: 'audio', url: '/audio-tasks' , valueKey: 'sub.audio'},
-              {id: 'description', url: '/description-images' , valueKey: 'sub.describePicture'},
+              {id: 'description', url: '/image-description' , valueKey: 'sub.describePicture'},
               {id: 'themen', url: '/thematic-learning', valueKey: 'sub.themen'},
               {id: 'cards', url: '/create-cards', valueKey: 'sub.card'},
               {id: 'idioms', url: '/idioms', valueKey: 'sub.idioms'}

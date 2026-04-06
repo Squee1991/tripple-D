@@ -1,4 +1,6 @@
 {
+
+
   "timeGageQuestOne": {
     "title": "Poznawanie się i komunikacja",
     "description": "Ćwiczymy gramatykę w sytuacjach komunikacyjnych: od planów na spotkanie po opowieści o przeszłości.",
@@ -8108,5 +8110,33 @@
     "transport": "Transport",
     "sport": "Sport",
     "travel": "Podróże"
+  },
+  "descriptionPage": {
+    "intro": "Wybierz temat, aby trenować umiejętności opisu.",
+    "images": "OBRAZÓW",
+    "level": "Wybierz poziom trudności"
+  },
+  "descriptionThemes": {
+    "winter": "Zima i aktywności",
+    "transport": "Transport publiczny",
+    "cafe": "Kawiarnia",
+    "supermarket": "Supermarket",
+    "home": "Dom i życie codzienne",
+    "school": "Szkoła",
+    "animals": "Zwierzęta",
+    "weather": "Pogoda",
+    "move": "Przeprowadzka",
+    "sport": "Sport"
+  },
+  "descriptionSession": {
+    "record": "TRWA NAGRYWANIE...",
+    "better": "JAK POPRAWIĆ:",
+    "answer": "ODPOWIEDŹ",
+    "done": "TEMAT UKOŃCZONY",
+    "newTheme": "WYBIERZ NOWY TEMAT"
+  },
+  "lives": {
+    "next": "Następne:",
+    "full": "Życia są pełne"
   }
 }
