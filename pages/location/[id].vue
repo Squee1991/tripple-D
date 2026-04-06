@@ -728,12 +728,6 @@ onMounted(async () => {
   align-items: center;
   font-size: 18px;
   gap: 6px;
-  border: 2px solid black;
-  padding: 3px 10px;
-  border-radius: 10px;
-  background: #0a8f08;
-  color: white;
-  box-shadow: 3px 3px 0 #2b2b2b;
 }
 
 .heart-unit.is-empty {
@@ -749,12 +743,7 @@ onMounted(async () => {
 }
 
 .max-status-wrapper {
-  border: 2px solid black;
-  padding: 3px 10px;
-  border-radius: 10px;
-  background: #0a8f08;
   color: white;
-  box-shadow: 3px 3px 0 #2b2b2b;
 }
 
 .lives-bar__content {
