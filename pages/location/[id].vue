@@ -5,6 +5,37 @@
         <button class="close-btn" @click="goToHomePage" aria-label="to main">×</button>
         <h1 class="region__title-name">{{ t(currentRegion?.name) }}</h1>
       </header>
+      <div class="lives-bar">
+        <div class="lives-bar__content">
+          <div class="lives-hearts">
+            <div class="hearts-desktop">
+              <span
+                  v-for="n in chainStore.maxLives"
+                  :key="n"
+                  class="heart-unit"
+                  :class="{ 'is-empty': n > chainStore.lives }"
+              >❤️
+              </span>
+            </div>
+            <div class="hearts-mobile">
+              <span class="heart-unit">❤️</span>
+              <span class="lives-count">{{ chainStore.lives }}</span>
+            </div>
+          </div>
+          <div class="lives-info">
+            <template v-if="chainStore.lives < chainStore.maxLives">
+              <img class="timer" src="../../assets/images/dailyIcons/timer.svg" alt="">
+              <span class="timer-label">{{ t('lives.next')}}</span>
+              <span class="timer-countdown">{{ recoveryTimerText }}</span>
+            </template>
+            <template v-else>
+              <div class="max-status-wrapper">
+                <span class="max-status">{{ t('lives.full')}}</span>
+              </div>
+            </template>
+          </div>
+        </div>
+      </div>
       <div v-if="isLoading" class="loading">{{ t('locationQuests.loading') }}</div>
       <div v-else class="quests">
         <div v-if="errorMessage" class="error">{{ t('locationQuests.error') }}</div>
@@ -17,7 +48,10 @@
           >
             <div v-if="quest.isPerfect" class="stamp">{{ t('locationQuests.done') }}</div>
             <div v-else-if="quest.hasMistakes" class="stamp stamp--mistakes">{{ t('locationQuests.mistakes') }}</div>
-            <h3 class="quest__title">{{ t(quest.title) }}</h3>
+<!--            <h3 class="quest__title">{{ t(quest.title) }}</h3>-->
+            <div class="stamp__icon-wrapper">
+              <img class="stamp__icon" src="../../assets/images/questList.svg" alt="questList">
+            </div>
             <p class="quest__description">{{ t(quest.description) }}</p>
             <div class="quest-meta">
               <span v-if="!quest.isSuccess" class="rewards-container">
@@ -28,7 +62,7 @@
                 </span>
                 <span class="reward-item">{{ quest.rewards.xp }} XP</span>
               </span>
-              <span v-else>{{ t('locationQuests.gotAward') }}</span>
+              <span  class="rewards-container" v-else>{{ t('locationQuests.gotAward') }}</span>
             </div>
             <button
                 class="btn"
@@ -38,7 +72,6 @@
               <template v-if="quest.hasMistakes">
                 {{ t('locationQuests.repeatMistakes') }}
               </template>
-
               <template v-else-if="quest.isPerfect">
                 {{ t('locationQuests.repeat') }}
               </template>
@@ -70,6 +103,30 @@ const chainStore = userChainStore();
 const questList = ref([]);
 const isLoading = ref(false);
 const errorMessage = ref("");
+const now = ref(Date.now());
+let timerInterval = null;
+
+const recoveryTimerText = computed(() => {
+  if (chainStore.lives >= chainStore.maxLives) return "";
+  const lastLife = chainStore.lastLifeAtMs || now.value;
+  const elapsed = now.value - lastLife;
+  const nextTickIn = chainStore.REGEN_INTERVAL_MS - (elapsed % chainStore.REGEN_INTERVAL_MS);
+  const totalSeconds = Math.floor(nextTickIn / 1000);
+  const mins = Math.floor(totalSeconds / 60);
+  const secs = totalSeconds % 60;
+  return `${mins}:${secs.toString().padStart(2, '0')}`;
+});
+
+onMounted(async () => {
+  await chainStore.loadProgressFromFirebase();
+  timerInterval = setInterval(() => {
+    now.value = Date.now();
+  }, 1000);
+});
+
+onUnmounted(() => {
+  if (timerInterval) clearInterval(timerInterval);
+});
 
 useSeoMeta({
   robots: 'noindex, nofollow'
@@ -170,6 +227,26 @@ onMounted(async () => {
   margin: 0 auto;
 }
 
+.timer{
+  width: 32px;
+}
+
+.stamp__icon{
+  width: 60px;
+}
+
+.stamp__icon-wrapper {
+  border: 2px solid #747aff;
+  border-radius: 50%;
+  margin: 0 auto;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #00c2ff;
+}
+
 .close-btn {
   width: 46px;
   height: 46px;
@@ -204,7 +281,7 @@ onMounted(async () => {
   align-items: center;
   gap: 30px;
   position: relative;
-  padding: 22px 24px 20px;
+  padding: 15px 20px;
   background: linear-gradient(180deg, #FFF4C8 0%, #FFEBA4 100%);
   border: 3px solid #111;
   border-radius: 22px;
@@ -245,7 +322,7 @@ onMounted(async () => {
 .quest-list {
   display: grid;
   grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));
-  gap: 30px;
+  gap: 22px;
   align-items: stretch;
   margin-top: 12px;
 }
@@ -336,8 +413,8 @@ onMounted(async () => {
 .stamp {
   position: absolute;
   top: -6px;
-  right: -20px;
-  transform: rotate(9deg);
+  right: -10px;
+  transform: rotate(6deg);
   font-size: 14px;
   background: linear-gradient(180deg, #6a74a5 0%, #5d7fc1 100%);
   color: white;
@@ -400,11 +477,13 @@ onMounted(async () => {
   align-items: center;
   flex-wrap: wrap;
   gap: 12px;
+  height: 44px;
+  font-weight: 600;
   padding: 6px 12px;
   font-size: 14px;
   background: #FFF3D7;
   border: 3px solid #111;
-  border-radius: 999px;
+  border-radius: 15px;
   box-shadow: 4px 4px 0 #2b2b2b;
 }
 
@@ -587,7 +666,7 @@ onMounted(async () => {
     box-shadow: 3px 3px 0 #2b2b2b;
   }
   .stamp {
-    top: -4px;
+    top: -8px;
     right: -10px;
     transform: rotate(5deg);
     font-size: 12px;
@@ -618,10 +697,100 @@ onMounted(async () => {
     animation: bob 2.2s ease-in-out infinite;
     z-index: 2;
   }
+
   .location-header.rtl-locale::after {
     right: auto;
     left: 0;
     transform: rotate(-8deg);
+  }
+}
+
+.hearts-mobile {
+  display: none;
+}
+
+.hearts-desktop {
+  display: flex;
+  gap: 6px;
+}
+
+.lives-bar {
+  margin-bottom: 14px;
+}
+
+.heart-unit {
+  font-size: 20px;
+}
+
+.lives-info{
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  gap: 6px;
+  border: 2px solid black;
+  padding: 3px 10px;
+  border-radius: 10px;
+  background: #0a8f08;
+  color: white;
+  box-shadow: 3px 3px 0 #2b2b2b;
+}
+
+.heart-unit.is-empty {
+  filter: grayscale(1);
+  opacity: 0.3;
+  transform: scale(0.9);
+  display: inline-block;
+}
+
+.heart-unit {
+  font-size: 28px;
+  transition: all 0.3s ease;
+}
+
+.max-status-wrapper {
+  border: 2px solid black;
+  padding: 3px 10px;
+  border-radius: 10px;
+  background: #0a8f08;
+  color: white;
+  box-shadow: 3px 3px 0 #2b2b2b;
+}
+
+.lives-bar__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 4px 4px 0 #2b2b2b;
+  background: white;
+}
+
+@media (max-width: 564px) {
+  .hearts-desktop {
+    display: none;
+  }
+
+  .hearts-mobile {
+    display: flex;
+    align-items: center;
+  }
+
+  .lives-count {
+    font-size: 20px;
+    font-weight: 900;
+    color: #111;
+    margin-top: 4px;
+  }
+
+  .lives-info{
+    font-size: 16px;
+  }
+
+  .lives-bar__content {
+    padding: 3px 12px;
   }
 }
 </style>

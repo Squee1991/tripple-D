@@ -1,2001 +1,1896 @@
 [
   {
     "questId": "adjective-one",
-    "title": "Старт",
+    "title": "edgeImagesQuestOne.title",
     "progress": "0/15",
-    "description": "Тренируемся правильно склонять прилагательные после der, die, das.",
+    "description": "edgeImagesQuestOne.description",
     "conditions": {
-      "goal": "Разберись с падежами на skillupgerman!",
+      "goal": "edgeImagesQuestOne.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
-    "rewards": {
-      "points": 20,
-      "xp": 20
-    },
+    "rewards": { "points": 20, "xp": 20 },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
-        "question": "Я вижу старую собаку.",
+        "question": "edgeImagesQuestOne.questOne",
         "words": ["sehe", "den", "alten", "Hund", "Ich", "alte", "dem", "der", "das"],
         "correctOrder": ["Ich", "sehe", "den", "alten", "Hund"],
-        "tip": "Akkusativ (муж. род): после 'den' у прилагательного окончание -en."
+        "tip": "edgeImagesQuestOne.questOneTip"
       },
       {
         "id": 2,
         "type": "input",
-        "question": "Впишите форму (rot): 'Die ___ Blume ist schön.'",
+        "question": "edgeImagesQuestOne.questTwo",
         "answer": "rote",
-        "tip": "Nominativ (жен. род): после артикля 'die' окончание прилагательного -e."
+        "tip": "edgeImagesQuestOne.questTwoTip"
       },
       {
         "id": 3,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestOne.questThree",
         "text": "Das neue Haus ist groß",
         "answer": "Das neue Haus ist groß",
-        "tip": "Nominativ (ср. род): после артикля 'das' ставим окончание -e."
+        "tip": "edgeImagesQuestOne.questThreeTip"
       },
       {
         "id": 4,
         "type": "reorder",
-        "question": "Я иду с добрым другом.",
+        "question": "edgeImagesQuestOne.questFour",
         "words": ["gehe", "mit", "dem", "netten", "Freund", "Ich", "nette", "den", "der"],
         "correctOrder": ["Ich", "gehe", "mit", "dem", "netten", "Freund"],
-        "tip": "Dativ в (муж. род) после артикля 'dem' всегда окончание приагательного -en."
+        "tip": "edgeImagesQuestOne.questFourTip"
       },
       {
         "id": 5,
         "type": "input",
-        "question": "Впишите верную форму (bequem): 'Wir kaufen das ___ Sofa.'",
+        "question": "edgeImagesQuestOne.questFive",
         "answer": "bequeme",
-        "tip": "Akkusativ (ср. род): артикль 'das' не меняется, окончание прилагательного -e."
+        "tip": "edgeImagesQuestOne.questFiveTip"
       },
       {
         "id": 6,
         "type": "readAndAnswer",
         "text": "In der Stadt steht das moderne Museum. Viele Touristen besuchen das graue Gebäude.",
-        "question": "Какое здание посещают туристы?",
-        "options": [
-          "das graue Gebäude",
-          "das alte Haus",
-          "den großen Park"
-        ],
+        "question": "edgeImagesQuestOne.questSix",
+        "options": ["das graue Gebäude", "das alte Haus", "den großen Park"],
         "answer": "das graue Gebäude",
-        "tip": "Akkusativ (ср. род): после 'das' у прилагательного окончание -e."
+        "tip": "edgeImagesQuestOne.questSixTip"
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Она читает интересную книгу.",
+        "question": "edgeImagesQuestOne.questSeven",
         "words": ["liest", "das", "interessante", "Buch", "Sie", "interessanten", "die"],
         "correctOrder": ["Sie", "liest", "das", "interessante", "Buch"],
-        "tip": "Akkusativ (ср. род): после 'das' окончание прилагательного -e."
+        "tip": "edgeImagesQuestOne.questSevenTip"
       },
       {
         "id": 8,
         "type": "input",
-        "question": "Впишите форму (klein): 'Wo sind die ___ Kinder?'",
+        "question": "edgeImagesQuestOne.questEight",
         "answer": "kleinen",
-        "tip": "Plural (мн. число): после артикля 'die' всегда пишем окончание -en."
+        "tip": "edgeImagesQuestOne.questEightTip"
       },
       {
         "id": 9,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestOne.questNine",
         "text": "Ich helfe der alten Frau",
         "answer": "Ich helfe der alten Frau",
-        "tip": "Dativ (жен. род): после измененного артикля 'der' окончание прилагательного -en."
+        "tip": "edgeImagesQuestOne.questNineTip"
       },
       {
         "id": 10,
         "type": "readAndAnswer",
         "text": "Der junge Mann arbeitet viel. Er trinkt oft den starken Kaffee.",
-        "question": "Что часто пьет мужчина?",
-        "options": [
-          "den starken Kaffee",
-          "den süßen Tee",
-          "das kalte Wasser"
-        ],
+        "question": "edgeImagesQuestOne.questTen",
+        "options": ["den starken Kaffee", "den süßen Tee", "das kalte Wasser"],
         "answer": "den starken Kaffee",
-        "tip": "Akkusativ (муж. род): артикль изменился на 'den', ставим окончание -en."
+        "tip": "edgeImagesQuestOne.questTenTip"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Где находится длинная улица?",
+        "question": "edgeImagesQuestOne.questEleven",
         "words": ["ist", "die", "lange", "Straße", "Wo", "langen", "der", "den"],
         "correctOrder": ["Wo", "ist", "die", "lange", "Straße"],
-        "tip": "Nominativ (жен. род): после базового артикля 'die' окончание -e."
+        "tip": "edgeImagesQuestOne.questElevenTip"
       },
       {
         "id": 12,
         "type": "input",
-        "question": "Впишите форму (groß): 'Wir wohnen in dem ___ Haus.'",
+        "question": "edgeImagesQuestOne.questTwelve",
         "answer": "großen",
-        "tip": "Dativ (ср. род): после 'dem' прилагательное получает окончание -en."
+        "tip": "edgeImagesQuestOne.questTwelveTip"
       },
       {
         "id": 13,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestOne.questThirteen",
         "text": "Das ist der neue Schlüssel",
         "answer": "Das ist der neue Schlüssel",
-        "tip": "Nominativ (муж. род): после базового артикля 'der' окончание прилагательного -e."
+        "tip": "edgeImagesQuestOne.questThirteenTip"
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "Я иду в старую школу.",
+        "question": "edgeImagesQuestOne.questFourteen",
         "words": ["gehe", "in", "die", "alte", "Schule", "Ich", "alten", "der", "den"],
         "correctOrder": ["Ich", "gehe", "in", "die", "alte", "Schule"],
-        "tip": "Akkusativ (жен. род): артикль 'die' не меняется, ставим окончание -e."
+        "tip": "edgeImagesQuestOne.questFourteenTip"
       },
       {
         "id": 15,
         "type": "input",
-        "question": "Впишите форму (nett): 'Wo sind die ___ Leute?'",
+        "question": "edgeImagesQuestOne.questFifteen",
         "answer": "netten",
-        "tip": "Plural (мн. число): с определенным артиклем всегда пишем окончание -en."
+        "tip": "edgeImagesQuestOne.questFifteenTip"
       }
     ]
   },
   {
     "questId": "adjective-two",
-    "title": "Микс",
+    "title": "edgeImagesQuestTwo.title",
     "progress": "0/15",
-    "description": "Тренируем окончания прилагательных без лишних текстов. Только практика!",
+    "description": "edgeImagesQuestTwo.description",
     "conditions": {
-      "goal": "Закрепи правила на skillupgerman!",
+      "goal": "edgeImagesQuestTwo.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
-    "rewards": {
-      "points": 20,
-      "xp": 20
-    },
+    "rewards": { "points": 20, "xp": 20 },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
-        "question": "Я покупаю новый компьютер.",
+        "question": "edgeImagesQuestTwo.questOne",
         "words": ["Ich", "kaufe", "den", "neuen", "Computer", "neue"],
         "correctOrder": ["Ich", "kaufe", "den", "neuen", "Computer"],
-        "tip": "Akkusativ (муж. род): после измененного артикля 'den' у прилагательного окончание -en."
+        "tip": "edgeImagesQuestTwo.questOneTip"
       },
       {
         "id": 2,
         "type": "input",
-        "question": "Впишите форму (alt): 'Der ___ Mann ist sehr nett.'",
+        "question": "edgeImagesQuestTwo.questTwo",
         "answer": "alte",
-        "tip": "Nominativ (муж. род) после артикля 'der' ставим окончание -e."
+        "tip": "edgeImagesQuestTwo.questTwoTip"
       },
       {
         "id": 3,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestTwo.questThree",
         "text": "Die kleine Katze schläft",
         "answer": "Die kleine Katze schläft",
-        "tip": "Nominativ (жен. род): после артикля 'die' окончание прилагательного -e."
+        "tip": "edgeImagesQuestTwo.questThreeTip"
       },
       {
         "id": 4,
         "type": "input",
-        "question": "Впишите форму (nett): 'Ich antworte dem ___ Lehrer.'",
+        "question": "edgeImagesQuestTwo.questFour",
         "answer": "netten",
-        "tip": "Dativ (муж. род): после измененного артикля 'dem' окончание всегда -en."
+        "tip": "edgeImagesQuestTwo.questFourTip"
       },
       {
         "id": 5,
         "type": "input",
-        "question": "Впишите форму (klein): 'Das ___ Kind spielt im Garten.'",
+        "question": "edgeImagesQuestTwo.questFive",
         "answer": "kleine",
-        "tip": "Nominativ (ср. род): после базового артикля 'das' окончание прилагательного -e."
+        "tip": "edgeImagesQuestTwo.questFiveTip"
       },
       {
         "id": 6,
         "type": "select",
-        "question": "Выберите форму: 'Ich sehe das ___ Haus.'",
-        "options": [
-          "schöne",
-          "schönen",
-          "schöner"
-        ],
+        "question": "edgeImagesQuestTwo.questSix",
+        "options": ["schöne", "schönen", "schöner"],
         "answer": "schöne",
-        "tip": "Akkusativ (ср. род): артикль 'das' не меняется, поэтому у прилагательного окончание -e."
+        "tip": "edgeImagesQuestTwo.questSixTip"
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Он любит теплый суп.",
+        "question": "edgeImagesQuestTwo.questSeven",
         "words": ["Er", "liebt", "die", "warme", "Suppe", "warmen"],
         "correctOrder": ["Er", "liebt", "die", "warme", "Suppe"],
-        "tip": "Akkusativ (жен. род) артикль 'die Suppe' , у прилагательного окончание -e."
+        "tip": "edgeImagesQuestTwo.questSevenTip"
       },
       {
         "id": 8,
         "type": "input",
-        "question": "Впишите форму (jung): 'Die ___ Leute tanzen gern.'",
+        "question": "edgeImagesQuestTwo.questEight",
         "answer": "jungen",
-        "tip": "Plural (мн. число): с определенным артиклем прилагательное всегда получает окончание -en."
+        "tip": "edgeImagesQuestTwo.questEightTip"
       },
       {
         "id": 9,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestTwo.questNine",
         "text": "Ich mag das rote Auto",
         "answer": "Ich mag das rote Auto",
-        "tip": "Akkusativ (ср. род): после артикля 'das' у прилагательного окончание -e."
+        "tip": "edgeImagesQuestTwo.questNineTip"
       },
       {
         "id": 10,
         "type": "input",
-        "question": "Впишите форму (hell): 'Ich wohne in dem ___ Zimmer.'",
+        "question": "edgeImagesQuestTwo.questTen",
         "answer": "hellen",
-        "tip": "Dativ (ср. род): после измененного артикля 'dem' ставим окончание -en."
+        "tip": "edgeImagesQuestTwo.questTenTip"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Я помогаю старой женщине.",
+        "question": "edgeImagesQuestTwo.questEleven",
         "words": ["Ich", "helfe", "der", "alten", "Frau", "alte"],
         "correctOrder": ["Ich", "helfe", "der", "alten", "Frau"],
-        "tip": "Dativ (жен. род): артикль 'die' изменился на 'der', поэтому окончание прилагательного -en."
+        "tip": "edgeImagesQuestTwo.questElevenTip"
       },
       {
         "id": 12,
         "type": "input",
-        "question": "Впишите форму (kalt): 'Ich trinke den ___ Saft.'",
+        "question": "edgeImagesQuestTwo.questTwelve",
         "answer": "kalten",
-        "tip": "Akkusativ (муж. род): артикль изменился на 'den', пишем окончание -en."
+        "tip": "edgeImagesQuestTwo.questTwelveTip"
       },
       {
         "id": 13,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestTwo.questThirteen",
         "text": "Wir sehen die blauen Berge",
         "answer": "Wir sehen die blauen Berge",
-        "tip": "Plural (Akkusativ): с артиклем 'die' у прилагательного окончание -en."
+        "tip": "edgeImagesQuestTwo.questThirteenTip"
       },
       {
         "id": 14,
         "type": "input",
-        "question": "Впишите форму (neu): 'Der ___ Film ist sehr gut.'",
+        "question": "edgeImagesQuestTwo.questFourteen",
         "answer": "neue",
-        "tip": "Nominativ (муж. род): после базового артикля 'der' окончание прилагательного -e."
+        "tip": "edgeImagesQuestTwo.questFourteenTip"
       },
       {
         "id": 15,
         "type": "input",
-        "question": "Впишите форму (best): 'Ich schreibe den ___ Freunden.'",
+        "question": "edgeImagesQuestTwo.questFifteen",
         "answer": "besten",
-        "tip": "Dativ Plural: после артикля 'den' (для мн.ч.) у прилагательного всегда окончание -en."
+        "tip": "edgeImagesQuestTwo.questFifteenTip"
       }
     ]
   },
   {
     "questId": "adjective-three",
-    "title": "База",
+    "title": "edgeImagesQuestThree.title",
     "progress": "0/15",
-    "description": "Ещё 15 упражнений, чтобы закрепить окончания после der, die, das до автоматизма.",
+    "description": "edgeImagesQuestThree.description",
     "conditions": {
-      "goal": "Разберись с падежами на skillupgerman!",
+      "goal": "edgeImagesQuestThree.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
-    "rewards": {
-      "points": 20,
-      "xp": 20
-    },
+    "rewards": { "points": 20, "xp": 20 },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
-        "question": "Я люблю зеленый чай.",
+        "question": "edgeImagesQuestThree.questOne",
         "words": ["Ich", "liebe", "den", "grünen", "Tee", "grüne"],
         "correctOrder": ["Ich", "liebe", "den", "grünen", "Tee"],
-        "tip": "Akkusativ (муж. род): артикль изменился на 'den', поэтому у прилагательного окончание -en."
+        "tip": "edgeImagesQuestThree.questOneTip"
       },
       {
         "id": 2,
         "type": "input",
-        "question": "Впишите форму (interessant): 'Das ___ Buch liegt hier.'",
+        "question": "edgeImagesQuestThree.questTwo",
         "answer": "interessante",
-        "tip": "Nominativ (ср. род): после базового артикля 'das' у прилагательного окончание -e."
+        "tip": "edgeImagesQuestThree.questTwoTip"
       },
       {
         "id": 3,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestThree.questThree",
         "text": "Der kleine Vogel singt",
         "answer": "Der kleine Vogel singt",
-        "tip": "Nominativ (муж. род): после базового артикля 'der' ставим окончание -e."
+        "tip": "edgeImagesQuestThree.questThreeTip"
       },
       {
         "id": 4,
         "type": "input",
-        "question": "Впишите форму (nett): 'Ich helfe der ___ Frau.'",
+        "question": "edgeImagesQuestThree.questFour",
         "answer": "netten",
-        "tip": "Dativ (жен. род): артикль изменился на 'der', поэтому окончание прилагательного -en."
+        "tip": "edgeImagesQuestThree.questFourTip"
       },
       {
         "id": 5,
         "type": "input",
-        "question": "Впишите форму (teuer): 'Wir kaufen den ___ Schrank.'",
+        "question": "edgeImagesQuestThree.questFive",
         "answer": "teuren",
-        "tip": "Akkusativ (муж. род): артикль стал 'den', значит у прилагательного окончание -en."
+        "tip": "edgeImagesQuestThree.questFiveTip"
       },
       {
         "id": 6,
         "type": "select",
-        "question": "Выберите форму: 'Die ___ Kinder spielen.'",
-        "options": [
-          "kleinen",
-          "kleine",
-          "kleines"
-        ],
+        "question": "edgeImagesQuestThree.questSix",
+        "options": ["kleinen", "kleine", "kleines"],
         "answer": "kleinen",
-        "tip": "Plural (Nominativ): после определенного артикля 'die' всегда пишем -en."
+        "tip": "edgeImagesQuestThree.questSixTip"
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Она видит красивую картину.",
+        "question": "edgeImagesQuestThree.questSeven",
         "words": ["Sie", "sieht", "das", "schöne", "Bild", "schönen"],
         "correctOrder": ["Sie", "sieht", "das", "schöne", "Bild"],
-        "tip": "Akkusativ (ср. род): артикль 'das' не изменился, у прилагательного окончание -e."
+        "tip": "edgeImagesQuestThree.questSevenTip"
       },
       {
         "id": 8,
         "type": "input",
-        "question": "Впишите форму (alt): 'Er geht in die ___ Schule.'",
+        "question": "edgeImagesQuestThree.questEight",
         "answer": "alte",
-        "tip": "Akkusativ (жен. род): артикль 'die' базовый, ставим окончание прилагательного -e."
+        "tip": "edgeImagesQuestThree.questEightTip"
       },
       {
         "id": 9,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestThree.questNine",
         "text": "Ich mag den starken Kaffee",
         "answer": "Ich mag den starken Kaffee",
-        "tip": "Akkusativ (муж. род): после 'den' у прилагательного всегда окончание -en."
+        "tip": "edgeImagesQuestThree.questNineTip"
       },
       {
         "id": 10,
         "type": "input",
-        "question": "Впишите форму (richtig): 'Das ist der ___ Schlüssel.'",
+        "question": "edgeImagesQuestThree.questTen",
         "answer": "richtige",
-        "tip": "Nominativ (муж. род): после базового артикля 'der' у прилагательного окончание -e."
+        "tip": "edgeImagesQuestThree.questTenTip"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Мы живем в большом доме.",
+        "question": "edgeImagesQuestThree.questEleven",
         "words": ["Wir", "wohnen", "in", "dem", "großen", "Haus", "große"],
         "correctOrder": ["Wir", "wohnen", "in", "dem", "großen", "Haus"],
-        "tip": "Dativ (ср. род): после измененного артикля 'dem' окончание прилагательного всегда -en."
+        "tip": "edgeImagesQuestThree.questElevenTip"
       },
       {
         "id": 12,
         "type": "input",
-        "question": "Впишите форму (gut): 'Ich schreibe den ___ Lehrern.'",
+        "question": "edgeImagesQuestThree.questTwelve",
         "answer": "guten",
-        "tip": "Dativ Plural: после артикля 'den' (для мн. числа) прилагательное получает -en."
+        "tip": "edgeImagesQuestThree.questTwelveTip"
       },
       {
         "id": 13,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestThree.questThirteen",
         "text": "Die kluge Katze wartet",
         "answer": "Die kluge Katze wartet",
-        "tip": "Nominativ (жен. род): после артикля 'die' окончание прилагательного -e."
+        "tip": "edgeImagesQuestThree.questThirteenTip"
       },
       {
         "id": 14,
         "type": "input",
-        "question": "Впишите форму (schön): 'Er sieht die ___ Frau.'",
+        "question": "edgeImagesQuestThree.questFourteen",
         "answer": "schöne",
-        "tip": "Akkusativ (жен. род): артикль 'die' не меняется, ставим окончание -e."
+        "tip": "edgeImagesQuestThree.questFourteenTip"
       },
       {
         "id": 15,
         "type": "input",
-        "question": "Впишите форму (neu): 'Der ___ Film ist super.'",
+        "question": "edgeImagesQuestThree.questFifteen",
         "answer": "neue",
-        "tip": "Nominativ (муж. род): после базового артикля 'der' у прилагательного окончание -e."
+        "tip": "edgeImagesQuestThree.questFifteenTip"
       }
     ]
   },
   {
     "questId": "adjective-four",
-    "title": "Микс 2",
+    "title": "edgeImagesQuestFour.title",
     "progress": "0/15",
-    "description": "Усложняем! Отрабатываем окончания в предложениях с Perfekt и Futur 1.",
+    "description": "edgeImagesQuestFour.description",
     "conditions": {
-      "goal": "Закрепи грамматику A2 на skillupgerman!",
+      "goal": "edgeImagesQuestFour.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
-    "rewards": {
-      "points": 20,
-      "xp": 20
-    },
+    "rewards": { "points": 20, "xp": 20 },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
-        "question": "Соберите: Я продал старую машину.",
+        "question": "edgeImagesQuestFour.questOne",
         "words": ["Ich", "habe", "das", "alte", "Auto", "verkauft", "alten"],
         "correctOrder": ["Ich", "habe", "das", "alte", "Auto", "verkauft"],
-        "tip": "Akkusativ (ср. род): после артикля 'das' у прилагательного окончание -e."
+        "tip": "edgeImagesQuestFour.questOneTip"
       },
       {
         "id": 2,
         "type": "input",
-        "question": "Впишите форму (neu): Wir werden das ___ Haus bauen",
+        "question": "edgeImagesQuestFour.questTwo",
         "answer": "neue",
-        "tip": "Akkusativ (ср. род): артикль 'das' базовый, ставим окончание -e."
+        "tip": "edgeImagesQuestFour.questTwoTip"
       },
       {
         "id": 3,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestFour.questThree",
         "text": "Der gute Mann hat uns geholfen",
         "answer": "Der gute Mann hat uns geholfen",
-        "tip": "Nominativ (муж. род): после базового артикля 'der' ставим окончание -e."
+        "tip": "edgeImagesQuestFour.questThreeTip"
       },
       {
         "id": 4,
         "type": "input",
-        "question": "Впишите форму (schnell): Sie ist mit dem ___ Zug gefahren.",
+        "question": "edgeImagesQuestFour.questFour",
         "answer": "schnellen",
-        "tip": "Dativ (муж. род): после измененного артикля 'dem' у прилагательного всегда -en."
+        "tip": "edgeImagesQuestFour.questFourTip"
       },
       {
         "id": 5,
         "type": "input",
-        "question": "Впишите форму (schwierig): Er wird den ___ Test machen.",
+        "question": "edgeImagesQuestFour.questFive",
         "answer": "schwierigen",
-        "tip": "Akkusativ (муж. род): артикль изменился на 'den', ставим окончание -en."
+        "tip": "edgeImagesQuestFour.questFiveTip"
       },
       {
         "id": 6,
         "type": "select",
-        "question": "Выберите форму: Die ___ Leute werden morgen kommen.",
-        "options": [
-          "netten",
-          "nette",
-          "netter"
-        ],
+        "question": "edgeImagesQuestFour.questSix",
+        "options": ["netten", "nette", "netter"],
         "answer": "netten",
-        "tip": "Plural (Nominativ): после определенного артикля во мн. числе всегда пишем -en."
+        "tip": "edgeImagesQuestFour.questSixTip"
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Ты носил красную куртку (Perfekt).",
+        "question": "edgeImagesQuestFour.questSeven",
         "words": ["Du", "hast", "die", "rote", "Jacke", "getragen", "roten"],
         "correctOrder": ["Du", "hast", "die", "rote", "Jacke", "getragen"],
-        "tip": "Akkusativ (жен. род): артикль 'die' не меняется, окончание прилагательного -e."
+        "tip": "edgeImagesQuestFour.questSevenTip"
       },
       {
         "id": 8,
         "type": "input",
-        "question": "Впишите форму (klein): Wir haben den ___ Kindern gedankt.",
+        "question": "edgeImagesQuestFour.questEight",
         "answer": "kleinen",
-        "tip": "Dativ Plural: после артикля 'den' для мн. числа всегда пишем окончание -en."
+        "tip": "edgeImagesQuestFour.questEightTip"
       },
       {
         "id": 9,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestFour.questNine",
         "text": "Sie wird die lange Reise beginnen",
         "answer": "Sie wird die lange Reise beginnen",
-        "tip": "Akkusativ (жен. род): после артикля 'die' окончание прилагательного -e."
+        "tip": "edgeImagesQuestFour.questNineTip"
       },
       {
         "id": 10,
         "type": "input",
-        "question": "Впишите форму (groß): Ich bin in der ___ Stadt geblieben.",
+        "question": "edgeImagesQuestFour.questTen",
         "answer": "großen",
-        "tip": "Dativ (жен. род): артикль 'die' изменился на 'der', ставим окончание -en."
+        "tip": "edgeImagesQuestFour.questTenTip"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Новый фильм скоро начнется (Futur 1).",
+        "question": "edgeImagesQuestFour.questEleven",
         "words": ["Der", "neue", "Film", "wird", "bald", "starten", "neuen"],
         "correctOrder": ["Der", "neue", "Film", "wird", "bald", "starten"],
-        "tip": "Nominativ (муж. род): после базового 'der' окончание прилагательного -e."
+        "tip": "edgeImagesQuestFour.questElevenTip"
       },
       {
         "id": 12,
         "type": "input",
-        "question": "Впишите форму (lecker): Er hat das ___ Brot gegessen.",
+        "question": "edgeImagesQuestFour.questTwelve",
         "answer": "leckere",
-        "tip": "Akkusativ (ср. род): артикль 'das' базовый, окончание прилагательного -e."
+        "tip": "edgeImagesQuestFour.questTwelveTip"
       },
       {
         "id": 13,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestFour.questThirteen",
         "text": "Die kluge Frau hat alles gewusst",
         "answer": "Die kluge Frau hat alles gewusst",
-        "tip": "Nominativ (жен. род): после артикля 'die' ставим окончание -e."
+        "tip": "edgeImagesQuestFour.questThirteenTip"
       },
       {
         "id": 14,
         "type": "input",
-        "question": "Впишите форму (freundlich): Ich werde mit dem ___ Chef sprechen.",
+        "question": "edgeImagesQuestFour.questFourteen",
         "answer": "freundlichen",
-        "tip": "Dativ (муж. род): после 'dem' прилагательное получает окончание -en."
+        "tip": "edgeImagesQuestFour.questFourteenTip"
       },
       {
         "id": 15,
         "type": "input",
-        "question": "Впишите форму (alt): Das ___ Auto wird bald repariert.",
+        "question": "edgeImagesQuestFour.questFifteen",
         "answer": "alte",
-        "tip": "Nominativ (ср. род): после артикля 'das' ставим окончание прилагательного -e."
+        "tip": "edgeImagesQuestFour.questFifteenTip"
       }
     ]
   },
   {
     "questId": "adjective-five",
-    "title": "Определенный артикль",
+    "title": "edgeImagesQuestFive.title",
     "progress": "0/15",
-    "description": "Усложненная практика: работаем с временами и вписываем окончания правильно.",
+    "description": "edgeImagesQuestFive.description",
     "conditions": {
-      "goal": "Закрепи грамматику на skillupgerman!",
+      "goal": "edgeImagesQuestFive.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
-    "rewards": {
-      "points": 20,
-      "xp": 20
-    },
+    "rewards": { "points": 20, "xp": 20 },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
-        "question": "Соберите: Итальянский сыр был вкусным",
+        "question": "edgeImagesQuestFive.questOne",
         "words": ["Der", "italienischen", "hat", "geschmeckt", "Käse", "italienische"],
         "correctOrder": ["Der", "italienische", "Käse", "hat", "geschmeckt"],
-        "tip": "Nominativ (муж. род): после базового артикля 'der' у прилагательного окончание -e."
+        "tip": "edgeImagesQuestFive.questOneTip"
       },
       {
         "id": 2,
         "type": "input",
-        "question": "Впишите форму (neu): Ich werde das ___ Buch lesen.",
+        "question": "edgeImagesQuestFive.questTwo",
         "answer": "neue",
-        "tip": "Akkusativ (ср. род): артикль 'das' не изменился, окончание прилагательного -e."
+        "tip": "edgeImagesQuestFive.questTwoTip"
       },
       {
         "id": 3,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestFive.questThree",
         "text": "Die junge Frau hat gelacht",
         "answer": "Die junge Frau hat gelacht",
-        "tip": "Nominativ (жен. род): после артикля 'die' окончание прилагательного -e."
+        "tip": "edgeImagesQuestFive.questThreeTip"
       },
       {
         "id": 4,
         "type": "input",
-        "question": "Впишите форму (blau): Wir sind mit dem ___ Auto gefahren.",
+        "question": "edgeImagesQuestFive.questFour",
         "answer": "blauen",
-        "tip": "Dativ (ср. род): после 'dem' прилагательное всегда получает окончание -en."
+        "tip": "edgeImagesQuestFive.questFourTip"
       },
       {
         "id": 5,
         "type": "input",
-        "question": "Впишите форму (nett): Er wird den ___ Freund treffen.",
+        "question": "edgeImagesQuestFive.questFive",
         "answer": "netten",
-        "tip": "Akkusativ (муж. род): артикль изменился на 'den', ставим окончание -en."
+        "tip": "edgeImagesQuestFive.questFiveTip"
       },
       {
         "id": 6,
         "type": "select",
-        "question": "Выберите форму: Die ___ Kinder haben gespielt.",
+        "question": "edgeImagesQuestFive.questSix",
         "options": ["kleinen", "kleine", "kleines"],
         "answer": "kleinen",
-        "tip": "Plural (Nominativ): после определенного артикля во мн. числе всегда пишем -en."
+        "tip": "edgeImagesQuestFive.questSixTip"
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Соберите: Она купит красную сумку",
+        "question": "edgeImagesQuestFive.questSeven",
         "words": ["Sie", "wird", "die", "rote", "Tasche", "kaufen", "roten"],
         "correctOrder": ["Sie", "wird", "die", "rote", "Tasche", "kaufen"],
-        "tip": "Akkusativ (жен. род): артикль 'die' базовый, окончание прилагательного -e."
+        "tip": "edgeImagesQuestFive.questSevenTip"
       },
       {
         "id": 8,
         "type": "input",
-        "question": "Впишите форму (alt): Ich habe den ___ Schlüssel gefunden.",
+        "question": "edgeImagesQuestFive.questEight",
         "answer": "alten",
-        "tip": "Akkusativ (муж. род): артикль изменился на 'den', у прилагательного ставим окончание -en."
+        "tip": "edgeImagesQuestFive.questEightTip"
       },
       {
         "id": 9,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestFive.questNine",
         "text": "Das neue Projekt wird starten",
         "answer": "Das neue Projekt wird starten",
-        "tip": "Nominativ (ср. род): после артикля 'das' у прилагательного окончание -e."
+        "tip": "edgeImagesQuestFive.questNineTip"
       },
       {
         "id": 10,
         "type": "input",
-        "question": "Впишите форму (groß): Sie hat in der ___ Stadt gelebt.",
+        "question": "edgeImagesQuestFive.questTen",
         "answer": "großen",
-        "tip": "Dativ (жен. род): артикль 'die' стал 'der', значит ставим окончание -en."
+        "tip": "edgeImagesQuestFive.questTenTip"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Соберите: Быстрый поезд приехал.",
+        "question": "edgeImagesQuestFive.questEleven",
         "words": ["Der", "schnelle", "Zug", "ist", "angekommen", "schnellen"],
         "correctOrder": ["Der", "schnelle", "Zug", "ist", "angekommen"],
-        "tip": "Nominativ (муж. род): артикль 'der' базовый, у прилагательного окончание -e."
+        "tip": "edgeImagesQuestFive.questElevenTip"
       },
       {
         "id": 12,
         "type": "input",
-        "question": "Впишите форму (lecker): 'Wir werden den ___ Kuchen essen.'",
+        "question": "edgeImagesQuestFive.questTwelve",
         "answer": "leckeren",
-        "tip": "Akkusativ (муж. род): после 'den' у прилагательного всегда окончание -en."
+        "tip": "edgeImagesQuestFive.questTwelveTip"
       },
       {
         "id": 13,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestFive.questThirteen",
         "text": "Der kluge Junge hat gefragt",
         "answer": "Der kluge Junge hat gefragt",
-        "tip": "Nominativ (муж. род): после базового артикля 'der' ставим окончание -e."
+        "tip": "edgeImagesQuestFive.questThirteenTip"
       },
       {
         "id": 14,
         "type": "input",
-        "question": "Впишите форму (kalt): Er hat das ___ Wasser getrunken.",
+        "question": "edgeImagesQuestFive.questFourteen",
         "answer": "kalte",
-        "tip": "Akkusativ (ср. род): артикль 'das' не изменился, окончание прилагательного -e."
+        "tip": "edgeImagesQuestFive.questFourteenTip"
       },
       {
         "id": 15,
         "type": "input",
-        "question": "Впишите форму (beste): Ich werde die ___ Freunde anrufen.",
+        "question": "edgeImagesQuestFive.questFifteen",
         "answer": "besten",
-        "tip": "Plural (Akkusativ): с определенным артиклем всегда пишем окончание -en."
+        "tip": "edgeImagesQuestFive.questFifteenTip"
       }
     ]
   },
   {
     "questId": "adjective-six",
-    "title": "Определенный артикль",
+    "title": "edgeImagesQuestSix.title",
     "progress": "0/15",
-    "description": "Юбилейный блок! Минимум лишних слов, максимум фокуса на окончаниях.",
+    "description": "edgeImagesQuestSix.description",
     "conditions": {
-      "goal": "Закрепи мастерство на skillupgerman!",
+      "goal": "edgeImagesQuestSix.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
-    "rewards": {
-      "points": 20,
-      "xp": 20
-    },
+    "rewards": { "points": 20, "xp": 20 },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
-        "question": "Соберите: Я встречу хорошего друга",
+        "question": "edgeImagesQuestSix.questOne",
         "words": ["Ich", "werde", "den", "guten", "Freund", "treffen", "gute"],
         "correctOrder": ["Ich", "werde", "den", "guten", "Freund", "treffen"],
-        "tip": "Akkusativ (муж. род): артикль изменился на 'den', поэтому у прилагательного окончание -en."
+        "tip": "edgeImagesQuestSix.questOneTip"
       },
       {
         "id": 2,
         "type": "input",
-        "question": "Впишите форму (schnell): Das ___ Auto ist weggefahren.",
+        "question": "edgeImagesQuestSix.questTwo",
         "answer": "schnelle",
-        "tip": "Nominativ (ср. род): после артикля 'das' у прилагательного окончание -e."
+        "tip": "edgeImagesQuestSix.questTwoTip"
       },
       {
         "id": 3,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestSix.questThree",
         "text": "Die nette Frau hat gelacht",
         "answer": "Die nette Frau hat gelacht",
-        "tip": "Nominativ (жен. род): после артикля 'die' ставим окончание -e."
+        "tip": "edgeImagesQuestSix.questThreeTip"
       },
       {
         "id": 4,
         "type": "input",
-        "question": "Впишите форму (alt): Ich habe dem ___ Mann geholfen.",
+        "question": "edgeImagesQuestSix.questFour",
         "answer": "alten",
-        "tip": "Dativ (муж. род): после измененного артикля 'dem' всегда пишем -en."
+        "tip": "edgeImagesQuestSix.questFourTip"
       },
       {
         "id": 5,
         "type": "input",
-        "question": "Впишите форму (neu): Wir werden das ___ Handy kaufen.",
+        "question": "edgeImagesQuestSix.questFive",
         "answer": "neue",
-        "tip": "Akkusativ (ср. род): артикль 'das' не изменился, окончание прилагательного -e."
+        "tip": "edgeImagesQuestSix.questFiveTip"
       },
       {
         "id": 6,
         "type": "select",
-        "question": "Выберите форму: Die ___ Kinder haben gesungen.",
-        "options": [
-          "kleinen",
-          "kleine",
-          "kleines"
-        ],
+        "question": "edgeImagesQuestSix.questSix",
+        "options": ["kleinen", "kleine", "kleines"],
         "answer": "kleinen",
-        "tip": "Plural (Nominativ): после определенного артикля во мн. числе всегда пишем -en."
+        "tip": "edgeImagesQuestSix.questSixTip"
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Соберите: Он купил вкусное яблоко",
+        "question": "edgeImagesQuestSix.questSeven",
         "words": ["Er", "hat", "den", "leckeren", "Apfel", "gekauft", "leckere"],
         "correctOrder": ["Er", "hat", "den", "leckeren", "Apfel", "gekauft"],
-        "tip": "Akkusativ (муж. род): артикль изменился на 'den', ставим окончание -en."
+        "tip": "edgeImagesQuestSix.questSevenTip"
       },
       {
         "id": 8,
         "type": "input",
-        "question": "Впишите форму (schön): Ich werde die ___ Aussicht genießen.",
+        "question": "edgeImagesQuestSix.questEight",
         "answer": "schöne",
-        "tip": "Akkusativ (жен. род): артикль 'die' базовый, окончание прилагательного -e."
+        "tip": "edgeImagesQuestSix.questEightTip"
       },
       {
         "id": 9,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestSix.questNine",
         "text": "Der starke Wind wird wehen",
         "answer": "Der starke Wind wird wehen",
-        "tip": "Nominativ (муж. род): после артикля 'der' у прилагательного окончание -e."
+        "tip": "edgeImagesQuestSix.questNineTip"
       },
       {
         "id": 10,
         "type": "input",
-        "question": "Впишите форму (groß): Sie hat in der ___ Stadt gewohnt.",
+        "question": "edgeImagesQuestSix.questTen",
         "answer": "großen",
-        "tip": "Dativ (жен. род): артикль 'die' стал 'der', значит ставим окончание -en."
+        "tip": "edgeImagesQuestSix.questTenTip"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Соберите: Маленькая кошка прыгнула",
+        "question": "edgeImagesQuestSix.questEleven",
         "words": ["Die", "kleine", "Katze", "ist", "gesprungen", "kleinen"],
         "correctOrder": ["Die", "kleine", "Katze", "ist", "gesprungen"],
-        "tip": "Nominativ (жен. род): после артикля 'die' ставим окончание -e."
+        "tip": "edgeImagesQuestSix.questElevenTip"
       },
       {
         "id": 12,
         "type": "input",
-        "question": "Впишите форму (kalt): Wir werden den ___ Saft trinken.",
+        "question": "edgeImagesQuestSix.questTwelve",
         "answer": "kalten",
-        "tip": "Akkusativ (муж. род): после 'den' у прилагательного всегда окончание -en."
+        "tip": "edgeImagesQuestSix.questTwelveTip"
       },
       {
         "id": 13,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestSix.questThirteen",
         "text": "Das neue Jahr hat begonnen",
         "answer": "Das neue Jahr hat begonnen",
-        "tip": "Nominativ (ср. род): после артикля 'das' у прилагательного окончание -e."
+        "tip": "edgeImagesQuestSix.questThirteenTip"
       },
       {
         "id": 14,
         "type": "input",
-        "question": "Впишите форму (best): Er hat dem ___ Freund geschrieben.",
+        "question": "edgeImagesQuestSix.questFourteen",
         "answer": "besten",
-        "tip": "Dativ (муж. род): после измененного артикля 'dem' ставим окончание -en."
+        "tip": "edgeImagesQuestSix.questFourteenTip"
       },
       {
         "id": 15,
         "type": "input",
-        "question": "Впишите форму (jung): Die ___ Leute werden tanzen.",
+        "question": "edgeImagesQuestSix.questFifteen",
         "answer": "jungen",
-        "tip": "Plural (мн. число): с артиклем 'die' прилагательное всегда получает -en."
+        "tip": "edgeImagesQuestSix.questFifteenTip"
       }
     ]
   },
   {
     "questId": "adjective-seven",
-    "title": "База",
+    "title": "edgeImagesQuestSeven.title",
     "progress": "0/15",
-    "description": "Закрепляем навыки: смешанные темы и более сложные структуры предложений.",
+    "description": "edgeImagesQuestSeven.description",
     "conditions": {
-      "goal": "Продолжайте обучение на skillupgerman!",
+      "goal": "edgeImagesQuestSeven.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
-    "rewards": {
-      "points": 20,
-      "xp": 20
-    },
+    "rewards": { "points": 20, "xp": 20 },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
-        "question": "Соберите: Твой новый план сработает",
+        "question": "edgeImagesQuestSeven.questOne",
         "words": ["Der", "neue", "Plan", "wird", "funktionieren", "neuen"],
         "correctOrder": ["Der", "neue", "Plan", "wird", "funktionieren"],
-        "tip": "Nominativ (муж. род): после базового артикля 'der' окончание прилагательного -e."
+        "tip": "edgeImagesQuestSeven.questOneTip"
       },
       {
         "id": 2,
         "type": "input",
-        "question": "Впишите форму (kalt): Sie hat das ___ Wasser getrunken.",
+        "question": "edgeImagesQuestSeven.questTwo",
         "answer": "kalte",
-        "tip": "Akkusativ (ср. род): артикль 'das' не изменился, у прилагательного окончание -e."
+        "tip": "edgeImagesQuestSeven.questTwoTip"
       },
       {
         "id": 3,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestSeven.questThree",
         "text": "Ich habe den schwarzen Hund gesehen",
         "answer": "Ich habe den schwarzen Hund gesehen",
-        "tip": "Akkusativ (муж. род): артикль изменился на 'den', окончание -en."
+        "tip": "edgeImagesQuestSeven.questThreeTip"
       },
       {
         "id": 4,
         "type": "input",
-        "question": "Впишите форму (nett): Er wird mit der ___ Frau sprechen.",
+        "question": "edgeImagesQuestSeven.questFour",
         "answer": "netten",
-        "tip": "Dativ (жен. род): артикль изменился на 'der', поэтому окончание -en."
+        "tip": "edgeImagesQuestSeven.questFourTip"
       },
       {
         "id": 5,
         "type": "input",
-        "question": "Впишите форму (neu): Wir haben die ___ Wohnung gemietet.",
+        "question": "edgeImagesQuestSeven.questFive",
         "answer": "neue",
-        "tip": "Akkusativ (жен. род): артикль 'die' базовый, окончание прилагательного -e."
+        "tip": "edgeImagesQuestSeven.questFiveTip"
       },
       {
         "id": 6,
         "type": "select",
-        "question": "Выберите форму: Das ___ Handy wird morgen kommen.",
-        "options": [
-          "teure",
-          "teuren",
-          "teurer"
-        ],
+        "question": "edgeImagesQuestSeven.questSix",
+        "options": ["teure", "teuren", "teurer"],
         "answer": "teure",
-        "tip": "Nominativ (ср. род): после артикля 'das' ставим окончание -e."
+        "tip": "edgeImagesQuestSeven.questSixTip"
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Соберите: Мы увидим старого друга",
+        "question": "edgeImagesQuestSeven.questSeven",
         "words": ["Wir", "werden", "den", "alten", "Freund", "sehen", "alte"],
         "correctOrder": ["Wir", "werden", "den", "alten", "Freund", "sehen"],
-        "tip": "Akkusativ (муж. род): артикль стал 'den', окончание прилагательного -en."
+        "tip": "edgeImagesQuestSeven.questSevenTip"
       },
       {
         "id": 8,
         "type": "input",
-        "question": "Впишите форму (lecker): Ich habe von dem ___ Essen gehört.",
+        "question": "edgeImagesQuestSeven.questEight",
         "answer": "leckeren",
-        "tip": "Dativ (ср. род): после 'dem' всегда пишем окончание -en."
+        "tip": "edgeImagesQuestSeven.questEightTip"
       },
       {
         "id": 9,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestSeven.questNine",
         "text": "Die klugen Schüler haben gefragt",
         "answer": "Die klugen Schüler haben gefragt",
-        "tip": "Plural (Nominativ): с определенным артиклем всегда ставим -en."
+        "tip": "edgeImagesQuestSeven.questNineTip"
       },
       {
         "id": 10,
         "type": "input",
-        "question": "Впишите форму (blau): Er wird den ___ Anzug tragen.",
+        "question": "edgeImagesQuestSeven.questTen",
         "answer": "blauen",
-        "tip": "Akkusativ (муж. род): после 'den' окончание прилагательного -en."
+        "tip": "edgeImagesQuestSeven.questTenTip"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Соберите: Красивая картина висела там",
+        "question": "edgeImagesQuestSeven.questEleven",
         "words": ["Das", "schöne", "Bild", "hat", "dort", "gehangen", "schönen"],
         "correctOrder": ["Das", "schöne", "Bild", "hat", "dort", "gehangen"],
-        "tip": "Nominativ (ср. род): после базового артикля 'das' ставим окончание -e."
+        "tip": "edgeImagesQuestSeven.questElevenTip"
       },
       {
         "id": 12,
         "type": "input",
-        "question": "Впишите форму (groß): Sie wird in dem ___ Haus wohnen.",
+        "question": "edgeImagesQuestSeven.questTwelve",
         "answer": "großen",
-        "tip": "Dativ (ср. род): после измененного артикля 'dem' ставим окончание -en."
+        "tip": "edgeImagesQuestSeven.questTwelveTip"
       },
       {
         "id": 13,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestSeven.questThirteen",
         "text": "Der neue Schlüssel hat gepasst",
         "answer": "Der neue Schlüssel hat gepasst",
-        "tip": "Nominativ (муж. род): после артикля 'der' у прилагательного окончание -e."
+        "tip": "edgeImagesQuestSeven.questThirteenTip"
       },
       {
         "id": 14,
         "type": "input",
-        "question": "Впишите форму (lang): Wir gehen durch die ___ Straße.",
+        "question": "edgeImagesQuestSeven.questFourteen",
         "answer": "lange",
-        "tip": "Akkusativ (жен. род): берет у артикля 'die' окончание -e."
+        "tip": "edgeImagesQuestSeven.questFourteenTip"
       },
       {
         "id": 15,
         "type": "input",
-        "question": "Впишите форму (jung): Ich werde den ___ Leuten helfen.",
+        "question": "edgeImagesQuestSeven.questFifteen",
         "answer": "jungen",
-        "tip": "Dativ Plural: после артикля 'den' (для мн. числа) всегда пишем -en."
+        "tip": "edgeImagesQuestSeven.questFifteenTip"
       }
     ]
   },
   {
     "questId": "adjective-eight",
-    "title": "Темп",
+    "title": "edgeImagesQuestEight.title",
     "progress": "0/15",
-    "description": "Восьмой этап: интенсивная тренировка окончаний в разных жизненных ситуациях.",
+    "description": "edgeImagesQuestEight.description",
     "conditions": {
-      "goal": "Закрепите мастерство на skillupgerman!",
+      "goal": "edgeImagesQuestEight.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
-    "rewards": {
-      "points": 20,
-      "xp": 20
-    },
+    "rewards": { "points": 20, "xp": 20 },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
-        "question": "Соберите: Я продал старую машину",
+        "question": "edgeImagesQuestEight.questOne",
         "words": ["Ich", "habe", "das", "alte", "Auto", "verkauft", "alten"],
         "correctOrder": ["Ich", "habe", "das", "alte", "Auto", "verkauft"],
-        "tip": "Akkusativ (ср. род): артикль 'das' не изменился, окончание прилагательного -e."
+        "tip": "edgeImagesQuestEight.questOneTip"
       },
       {
         "id": 2,
         "type": "input",
-        "question": "Впишите форму (neu): Der ___ Computer hat viel Geld gekostet.",
+        "question": "edgeImagesQuestEight.questTwo",
         "answer": "neue",
-        "tip": "Nominativ (муж. род): после базового артикля 'der' ставим окончание -e."
+        "tip": "edgeImagesQuestEight.questTwoTip"
       },
       {
         "id": 3,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestEight.questThree",
         "text": "Die netten Kollegen haben uns geholfen",
         "answer": "Die netten Kollegen haben uns geholfen",
-        "tip": "Plural (Nominativ): после определенного артикля во мн. числе всегда пишем -en."
+        "tip": "edgeImagesQuestEight.questThreeTip"
       },
       {
         "id": 4,
         "type": "input",
-        "question": "Впишите форму (groß): Ich werde in der ___ Stadt bleiben.",
+        "question": "edgeImagesQuestEight.questFour",
         "answer": "großen",
-        "tip": "Dativ (жен. род): артикль 'die' изменился на 'der', поэтому окончание прилагательного -en."
+        "tip": "edgeImagesQuestEight.questFourTip"
       },
       {
         "id": 5,
         "type": "input",
-        "question": "Впишите форму (lecker): Er hat den ___ Kuchen gegessen.",
+        "question": "edgeImagesQuestEight.questFive",
         "answer": "leckeren",
-        "tip": "Akkusativ (муж. род): артикль изменился на 'den', ставим окончание -en."
+        "tip": "edgeImagesQuestEight.questFiveTip"
       },
       {
         "id": 6,
         "type": "select",
-        "question": "Выберите форму: Das ___ Wetter wird morgen besser sein.",
-        "options": [
-          "schöne",
-          "schönen",
-          "schöner"
-        ],
+        "question": "edgeImagesQuestEight.questSix",
+        "options": ["schöne", "schönen", "schöner"],
         "answer": "schöne",
-        "tip": "Nominativ (ср. род): после артикля 'das' у прилагательного окончание -e."
+        "tip": "edgeImagesQuestEight.questSixTip"
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Соберите: Мы увидим известного актера",
+        "question": "edgeImagesQuestEight.questSeven",
         "words": ["Wir", "werden", "den", "bekannten", "Schauspieler", "sehen", "bekannte"],
         "correctOrder": ["Wir", "werden", "den", "bekannten", "Schauspieler", "sehen"],
-        "tip": "Akkusativ (муж. род): артикль изменился на 'den', окончание прилагательного -en."
+        "tip": "edgeImagesQuestEight.questSevenTip"
       },
       {
         "id": 8,
         "type": "input",
-        "question": "Впишите форму (alt): Wir haben in dem ___ Haus gewohnt.",
+        "question": "edgeImagesQuestEight.questEight",
         "answer": "alten",
-        "tip": "Dativ (ср. род): после измененного артикля 'dem' ставим окончание -en."
+        "tip": "edgeImagesQuestEight.questEightTip"
       },
       {
         "id": 9,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestEight.questNine",
         "text": "Die junge Frau hat gestern angerufen",
         "answer": "Die junge Frau hat gestern angerufen",
-        "tip": "Nominativ (жен. род): после артикля 'die' ставим окончание -e."
+        "tip": "edgeImagesQuestEight.questNineTip"
       },
       {
         "id": 10,
         "type": "input",
-        "question": "Впишите форму (kalt): Ich werde das ___ Wasser trinken.",
+        "question": "edgeImagesQuestEight.questTen",
         "answer": "kalte",
-        "tip": "Akkusativ (ср. род): артикль 'das' базовый, ставим окончание -e."
+        "tip": "edgeImagesQuestEight.questTenTip"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Соберите: Хороший друг придет позже",
+        "question": "edgeImagesQuestEight.questEleven",
         "words": ["Der", "gute", "Freund", "wird", "später", "kommen", "guten"],
         "correctOrder": ["Der", "gute", "Freund", "wird", "später", "kommen"],
-        "tip": "Nominativ (муж. род): после артикля 'der' у прилагательного окончание -e."
+        "tip": "edgeImagesQuestEight.questElevenTip"
       },
       {
         "id": 12,
         "type": "input",
-        "question": "Впишите форму (modern): Sie hat in der ___ Küche gearbeitet.",
+        "question": "edgeImagesQuestEight.questTwelve",
         "answer": "modernen",
-        "tip": "Dativ (жен. род): артикль 'die' стал 'der', значит окончание прилагательного -en."
+        "tip": "edgeImagesQuestEight.questTwelveTip"
       },
       {
         "id": 13,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestEight.questThirteen",
         "text": "Den neuen Termin haben wir vergessen",
         "answer": "Den neuen Termin haben wir vergessen",
-        "tip": "Akkusativ (муж. род): после артикля 'den' всегда пишем окончание -en."
+        "tip": "edgeImagesQuestEight.questThirteenTip"
       },
       {
         "id": 14,
         "type": "input",
-        "question": "Впишите форму (blau): Er hat die ___ Jacke getragen.",
+        "question": "edgeImagesQuestEight.questFourteen",
         "answer": "blaue",
-        "tip": "Akkusativ (жен. род): артикль 'die' базовый, поэтому окончание прилагательного -e."
+        "tip": "edgeImagesQuestEight.questFourteenTip"
       },
       {
         "id": 15,
         "type": "input",
-        "question": "Впишите форму (klein): Wir haben den ___ Kindern geholfen.",
+        "question": "edgeImagesQuestEight.questFifteen",
         "answer": "kleinen",
-        "tip": "Dativ Plural: после артикля 'den' (для мн. числа) всегда пишем -en."
+        "tip": "edgeImagesQuestEight.questFifteenTip"
       }
     ]
   },
   {
     "questId": "adjective-nine",
-    "title": "Охват",
+    "title": "edgeImagesQuestNine.title",
     "progress": "0/15",
-    "description": "Девятый этап: расширяем словарный запас и доводим окончания до автоматизма.",
+    "description": "edgeImagesQuestNine.description",
     "conditions": {
-      "goal": "Закрепите знания на skillupgerman!",
+      "goal": "edgeImagesQuestNine.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
-    "rewards": {
-      "points": 20,
-      "xp": 20
-    },
+    "rewards": { "points": 20, "xp": 20 },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
-        "question": "Соберите: Мы увидим это старое здание",
+        "question": "edgeImagesQuestNine.questOne",
         "words": ["Wir", "werden", "das", "alte", "Gebäude", "sehen", "alten"],
         "correctOrder": ["Wir", "werden", "das", "alte", "Gebäude", "sehen"],
-        "tip": "Akkusativ (ср. род): артикль 'das' не изменился, поэтому окончание прилагательного -e."
+        "tip": "edgeImagesQuestNine.questOneTip"
       },
       {
         "id": 2,
         "type": "input",
-        "question": "Впишите форму (lecker): Ich werde den ___ Apfel essen.",
+        "question": "edgeImagesQuestNine.questTwo",
         "answer": "leckeren",
-        "tip": "Akkusativ (муж. род): артикль изменился на 'den', ставим окончание -en."
+        "tip": "edgeImagesQuestNine.questTwoTip"
       },
       {
         "id": 3,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestNine.questThree",
         "text": "Die junge Künstlerin hat gemalt",
         "answer": "Die junge Künstlerin hat gemalt",
-        "tip": "Nominativ (жен. род): после артикля 'die' окончание прилагательного -e."
+        "tip": "edgeImagesQuestNine.questThreeTip"
       },
       {
         "id": 4,
         "type": "input",
-        "question": "Впишите форму (groß): Er wird in dem ___ Haus bleiben.",
+        "question": "edgeImagesQuestNine.questFour",
         "answer": "großen",
-        "tip": "Dativ (ср. род): после измененного артикля 'dem' всегда пишем -en."
+        "tip": "edgeImagesQuestNine.questFourTip"
       },
       {
         "id": 5,
         "type": "input",
-        "question": "Впишите форму (hell): Wir haben die ___ Lampe gekauft.",
+        "question": "edgeImagesQuestNine.questFive",
         "answer": "helle",
-        "tip": "Akkusativ (жен. род): артикль 'die' базовый, ставим окончание -e."
+        "tip": "edgeImagesQuestNine.questFiveTip"
       },
       {
         "id": 6,
         "type": "select",
-        "question": "Выберите форму: Der ___ Film hat mir gefallen.",
-        "options": [
-          "gute",
-          "guten",
-          "guter"
-        ],
+        "question": "edgeImagesQuestNine.questSix",
+        "options": ["gute", "guten", "guter"],
         "answer": "gute",
-        "tip": "Nominativ (муж. род): после базового артикля 'der' окончание прилагательного -e."
+        "tip": "edgeImagesQuestNine.questSixTip"
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Соберите: Твой лучший друг позвонит",
+        "question": "edgeImagesQuestNine.questSeven",
         "words": ["Der", "bester", "anrufen", "Freund", "wird", "besten"],
         "correctOrder": ["Der", "bester", "Freund", "wird", "anrufen"],
-        "tip": "Nominativ (муж. род): притяжательное местоимение 'dein' работает как неопределенный артикль, но здесь окончание -er указывает на род."
+        "tip": "edgeImagesQuestNine.questSevenTip"
       },
       {
         "id": 8,
         "type": "input",
-        "question": "Впишите форму (kalt): Sie hat das ___ Eis gegessen.",
+        "question": "edgeImagesQuestNine.questEight",
         "answer": "kalte",
-        "tip": "Akkusativ (ср. род): артикль 'das' не изменился, окончание прилагательного -e."
+        "tip": "edgeImagesQuestNine.questEightTip"
       },
       {
         "id": 9,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestNine.questNine",
         "text": "Den neuen Wagen hat er gewaschen",
         "answer": "Den neuen Wagen hat er gewaschen",
-        "tip": "Akkusativ (муж. род): артикль 'den' требует окончания -en."
+        "tip": "edgeImagesQuestNine.questNineTip"
       },
       {
         "id": 10,
         "type": "input",
-        "question": "Впишите форму (modern): Ich habe in der ___ Praxis gearbeitet.",
+        "question": "edgeImagesQuestNine.questTen",
         "answer": "modernen",
-        "tip": "Dativ (жен. род): артикль 'die' стал 'der', значит ставим окончание -en."
+        "tip": "edgeImagesQuestNine.questTenTip"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Соберите: Сильный ветер сорвал крышу",
+        "question": "edgeImagesQuestNine.questEleven",
         "words": ["Der", "starke", "Wind", "hat", "das", "Dach", "abgerissen", "starken"],
         "correctOrder": ["Der", "starke", "Wind", "hat", "das", "Dach", "abgerissen"],
-        "tip": "Nominativ (муж. род): после базового 'der' окончание прилагательного -e."
+        "tip": "edgeImagesQuestNine.questElevenTip"
       },
       {
         "id": 12,
         "type": "input",
-        "question": "Впишите форму (sauber): Wir werden das ___ Geschirr spülen.",
+        "question": "edgeImagesQuestNine.questTwelve",
         "answer": "saubere",
-        "tip": "Akkusativ (ср. род): артикль 'das' базовый, ставим окончание -e."
+        "tip": "edgeImagesQuestNine.questTwelveTip"
       },
       {
         "id": 13,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestNine.questThirteen",
         "text": "Die kleinen Vögel haben gesungen",
         "answer": "Die kleinen Vögel haben gesungen",
-        "tip": "Plural (Nominativ): после определенного артикля во мн. числе всегда пишем -en."
+        "tip": "edgeImagesQuestNine.questThirteenTip"
       },
       {
         "id": 14,
         "type": "input",
-        "question": "Впишите форму (alt): Du wirst mit dem ___ Bus fahren.",
+        "question": "edgeImagesQuestNine.questFourteen",
         "answer": "alten",
-        "tip": "Dativ (муж. род): после измененного артикля 'dem' ставим окончание -en."
+        "tip": "edgeImagesQuestNine.questFourteenTip"
       },
       {
         "id": 15,
         "type": "input",
-        "question": "Впишите форму (bekannt): Er hat den ___ Musikern zugehört.",
+        "question": "edgeImagesQuestNine.questFifteen",
         "answer": "bekannten",
-        "tip": "Dativ Plural: после артикля 'den' (для мн. числа) всегда пишем -en."
+        "tip": "edgeImagesQuestNine.questFifteenTip"
       }
     ]
   },
   {
     "questId": "adjective-ten",
-    "title": "Опыт",
+    "title": "edgeImagesQuestTen.title",
     "progress": "0/15",
-    "description": "Отработка окончаний (артикль) в Perfekt и Futur 1. Темы: медицина, город, транспорт, еда, техника.",
+    "description": "edgeImagesQuestTen.description",
     "conditions": {
-      "goal": "Закрепите грамматику на skillupgerman!",
+      "goal": "edgeImagesQuestTen.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
-    "rewards": {
-      "points": 20,
-      "xp": 20
-    },
+    "rewards": { "points": 20, "xp": 20 },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
-        "question": "Соберите: Мы посетим старый музей",
+        "question": "edgeImagesQuestTen.questOne",
         "words": ["Wir", "werden", "das", "alte", "Museum", "besuchen", "alten"],
         "correctOrder": ["Wir", "werden", "das", "alte", "Museum", "besuchen"],
-        "tip": "Akkusativ (ср. род): артикль 'das' базовый, у прилагательного окончание -e."
+        "tip": "edgeImagesQuestTen.questOneTip"
       },
       {
         "id": 2,
         "type": "input",
-        "question": "Впишите форму (krank): Der ___ Patient hat lange gewartet.",
+        "question": "edgeImagesQuestTen.questTwo",
         "answer": "kranke",
-        "tip": "Nominativ (муж. род): после базового артикля 'der' ставим окончание -e."
+        "tip": "edgeImagesQuestTen.questTwoTip"
       },
       {
         "id": 3,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestTen.questThree",
         "text": "Die neue Brücke wird fertig sein",
         "answer": "Die neue Brücke wird fertig sein",
-        "tip": "Nominativ (жен. род): после артикля 'die' окончание прилагательного -e."
+        "tip": "edgeImagesQuestTen.questThreeTip"
       },
       {
         "id": 4,
         "type": "input",
-        "question": "Впишите форму (teuer): Ich habe mit dem ___ Handy telefoniert.",
+        "question": "edgeImagesQuestTen.questFour",
         "answer": "teuren",
-        "tip": "Dativ (ср. род): после измененного артикля 'dem' всегда пишем -en."
+        "tip": "edgeImagesQuestTen.questFourTip"
       },
       {
         "id": 5,
         "type": "input",
-        "question": "Впишите форму (bitter): Er wird die ___ Medizin trinken.",
+        "question": "edgeImagesQuestTen.questFive",
         "answer": "bittere",
-        "tip": "Akkusativ (жен. род): артикль 'die' базовый, ставим окончание -e."
+        "tip": "edgeImagesQuestTen.questFiveTip"
       },
       {
         "id": 6,
         "type": "select",
-        "question": "Выберите форму: Die ___ Autos sind schnell gefahren.",
-        "options": [
-          "schnellen",
-          "schnelle",
-          "schnelles"
-        ],
+        "question": "edgeImagesQuestTen.questSix",
+        "options": ["schnellen", "schnelle", "schnelles"],
         "answer": "schnellen",
-        "tip": "Plural (Nominativ): с определенным артиклем во мн. числе всегда пишем -en."
+        "tip": "edgeImagesQuestTen.questSixTip"
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Соберите: Я куплю этот свежий хлеб",
+        "question": "edgeImagesQuestTen.questSeven",
         "words": ["Ich", "werde", "das", "frische", "Brot", "kaufen", "frischen"],
         "correctOrder": ["Ich", "werde", "das", "frische", "Brot", "kaufen"],
-        "tip": "Akkusativ (ср. род): артикль 'das' не изменился, окончание прилагательного -e."
+        "tip": "edgeImagesQuestTen.questSevenTip"
       },
       {
         "id": 8,
         "type": "input",
-        "question": "Впишите форму (stark): Du hast den ___ Schmerz gespürt.",
+        "question": "edgeImagesQuestTen.questEight",
         "answer": "starken",
-        "tip": "Akkusativ (муж. род): артикль изменился на 'den', ставим окончание -en."
+        "tip": "edgeImagesQuestTen.questEightTip"
       },
       {
         "id": 9,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestTen.questNine",
         "text": "Das kalte Wetter hat uns überrascht",
         "answer": "Das kalte Wetter hat uns überrascht",
-        "tip": "Nominativ (ср. род): после артикля 'das' у прилагательного окончание -e."
+        "tip": "edgeImagesQuestTen.questNineTip"
       },
       {
         "id": 10,
         "type": "input",
-        "question": "Впишите форму (alt): Wir werden in der ___ Fabrik arbeiten.",
+        "question": "edgeImagesQuestTen.questTen",
         "answer": "alten",
-        "tip": "Dativ (жен. род): артикль 'die' стал 'der', поэтому окончание -en."
+        "tip": "edgeImagesQuestTen.questTenTip"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Соберите: Официант принес вкусный суп",
+        "question": "edgeImagesQuestTen.questEleven",
         "words": ["Der", "Kellner", "hat", "die", "leckere", "Suppe", "gebracht", "leckeren"],
         "correctOrder": ["Der", "Kellner", "hat", "die", "leckere", "Suppe", "gebracht"],
-        "tip": "Akkusativ (жен. род): после базового артикля 'die' окончание прилагательного -e."
+        "tip": "edgeImagesQuestTen.questElevenTip"
       },
       {
         "id": 12,
         "type": "input",
-        "question": "Впишите форму (modern): Er wird den ___ Laptop benutzen.",
+        "question": "edgeImagesQuestTen.questTwelve",
         "answer": "modernen",
-        "tip": "Akkusativ (муж. род): артикль 'den' изменен, ставим окончание -en."
+        "tip": "edgeImagesQuestTen.questTwelveTip"
       },
       {
         "id": 13,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestTen.questThirteen",
         "text": "Der kluge Mechaniker hat das Auto repariert",
         "answer": "Der kluge Mechaniker hat das Auto repariert",
-        "tip": "Nominativ (муж. род): после артикля 'der' ставим окончание -e."
+        "tip": "edgeImagesQuestTen.questThirteenTip"
       },
       {
         "id": 14,
         "type": "input",
-        "question": "Впишите форму (süß): Ich habe den ___ Nachtisch bestellt.",
+        "question": "edgeImagesQuestTen.questFourteen",
         "answer": "süßen",
-        "tip": "Akkusativ (муж. род): после 'den' окончание прилагательного всегда -en."
+        "tip": "edgeImagesQuestTen.questFourteenTip"
       },
       {
         "id": 15,
         "type": "input",
-        "question": "Впишите форму (beste): Wir haben mit den ___ Kollegen gesprochen.",
+        "question": "edgeImagesQuestTen.questFifteen",
         "answer": "besten",
-        "tip": "Dativ Plural: после артикля 'den' (для мн. числа) всегда пишем -en."
+        "tip": "edgeImagesQuestTen.questFifteenTip"
       }
     ]
   },
   {
     "questId": "adjective-eleven",
-    "title": "Итог",
+    "title": "edgeImagesQuestEleven.title",
     "progress": "0/15",
-    "description": "Отработка окончаний (артикль) в Perfekt и Futur 1. Темы: путешествия, работа, природа, техника, дом.",
+    "description": "edgeImagesQuestEleven.description",
     "conditions": {
-      "goal": "Закрепите грамматику на skillupgerman!",
+      "goal": "edgeImagesQuestEleven.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
-    "rewards": {
-      "points": 20,
-      "xp": 20
-    },
+    "rewards": { "points": 20, "xp": 20 },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
-        "question": "Соберите: Мы увидим синее небо",
+        "question": "edgeImagesQuestEleven.questOne",
         "words": ["Wir", "werden", "den", "blauen", "Himmel", "sehen", "blaue"],
         "correctOrder": ["Wir", "werden", "den", "blauen", "Himmel", "sehen"],
-        "tip": "Akkusativ (муж. род): артикль изменился на 'den', поэтому ставим окончание -en."
+        "tip": "edgeImagesQuestEleven.questOneTip"
       },
       {
         "id": 2,
         "type": "input",
-        "question": "Впишите форму (alt): Ich habe das ___ Fahrrad verkauft.",
+        "question": "edgeImagesQuestEleven.questTwo",
         "answer": "alte",
-        "tip": "Akkusativ (ср. род): артикль 'das' не изменился, окончание прилагательного -e."
+        "tip": "edgeImagesQuestEleven.questTwoTip"
       },
       {
         "id": 3,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestEleven.questThree",
         "text": "Die kluge Frau hat geholfen",
         "answer": "Die kluge Frau hat geholfen",
-        "tip": "Nominativ (жен. род): после артикля 'die' ставим окончание -e."
+        "tip": "edgeImagesQuestEleven.questThreeTip"
       },
       {
         "id": 4,
         "type": "input",
-        "question": "Впишите форму (schnell): Er wird mit dem ___ Auto fahren.",
+        "question": "edgeImagesQuestEleven.questFour",
         "answer": "schnellen",
-        "tip": "Dativ (ср. род): после измененного артикля 'dem' всегда пишем -en."
+        "tip": "edgeImagesQuestEleven.questFourTip"
       },
       {
         "id": 5,
         "type": "input",
-        "question": "Впишите форму (interessant): Sie hat den ___ Job bekommen.",
+        "question": "edgeImagesQuestEleven.questFive",
         "answer": "interessanten",
-        "tip": "Akkusativ (муж. род): артикль изменился на 'den', ставим окончание -en."
+        "tip": "edgeImagesQuestEleven.questFiveTip"
       },
       {
         "id": 6,
         "type": "select",
-        "question": "Выберите форму: Das ___ Haus wird bald fertig sein.",
-        "options": [
-          "neue",
-          "neuen",
-          "neues"
-        ],
+        "question": "edgeImagesQuestEleven.questSix",
+        "options": ["neue", "neuen", "neues"],
         "answer": "neue",
-        "tip": "Nominativ (ср. род): после артикля 'das' у прилагательного окончание -e."
+        "tip": "edgeImagesQuestEleven.questSixTip"
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Соберите: Повар приготовил вкусную рыбу",
+        "question": "edgeImagesQuestEleven.questSeven",
         "words": ["Der", "Koch", "hat", "den", "leckeren", "Fisch", "gekocht", "leckere"],
         "correctOrder": ["Der", "Koch", "hat", "den", "leckeren", "Fisch", "gekocht"],
-        "tip": "Akkusativ (муж. род): артикль 'der' стал 'den', окончание прилагательного -en."
+        "tip": "edgeImagesQuestEleven.questSevenTip"
       },
       {
         "id": 8,
         "type": "input",
-        "question": "Впишите форму (groß): Wir haben in der ___ Küche gegessen.",
+        "question": "edgeImagesQuestEleven.questEight",
         "answer": "großen",
-        "tip": "Dativ (жен. род): артикль 'die' изменился на 'der', поэтому окончание -en."
+        "tip": "edgeImagesQuestEleven.questEightTip"
       },
       {
         "id": 9,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestEleven.questNine",
         "text": "Der neue Monitor wird funktionieren",
         "answer": "Der neue Monitor wird funktionieren",
-        "tip": "Nominativ (муж. род): после артикля 'der' ставим окончание -e."
+        "tip": "edgeImagesQuestEleven.questNineTip"
       },
       {
         "id": 10,
         "type": "input",
-        "question": "Впишите форму (kalt): Ich werde das ___ Bier trinken.",
+        "question": "edgeImagesQuestEleven.questTen",
         "answer": "kalte",
-        "tip": "Akkusativ (ср. род): артикль 'das' базовый, окончание прилагательного -e."
+        "tip": "edgeImagesQuestEleven.questTenTip"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Соберите: Маленькая кошка поймала мышь",
+        "question": "edgeImagesQuestEleven.questEleven",
         "words": ["Die", "kleine", "Katze", "hat", "die", "Maus", "gefangen", "kleinen"],
         "correctOrder": ["Die", "kleine", "Katze", "hat", "die", "Maus", "gefangen"],
-        "tip": "Nominativ (жен. род): после артикля 'die' окончание прилагательного -e."
+        "tip": "edgeImagesQuestEleven.questElevenTip"
       },
       {
         "id": 12,
         "type": "input",
-        "question": "Впишите форму (modern): Er hat in dem ___ Büro gearbeitet.",
+        "question": "edgeImagesQuestEleven.questTwelve",
         "answer": "modernen",
-        "tip": "Dativ (ср. род): после измененного артикля 'dem' всегда пишем -en."
+        "tip": "edgeImagesQuestEleven.questTwelveTip"
       },
       {
         "id": 13,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestEleven.questThirteen",
         "text": "Die netten Gäste werden kommen",
         "answer": "Die netten Gäste werden kommen",
-        "tip": "Plural (Nominativ): с определенным артиклем во мн. числе ставим -en."
+        "tip": "edgeImagesQuestEleven.questThirteenTip"
       },
       {
         "id": 14,
         "type": "input",
-        "question": "Впишите форму (gut): Ich habe den ___ Wein probiert.",
+        "question": "edgeImagesQuestEleven.questFourteen",
         "answer": "guten",
-        "tip": "Akkusativ (муж. род): артикль изменился на 'den', ставим окончание -en."
+        "tip": "edgeImagesQuestEleven.questFourteenTip"
       },
       {
         "id": 15,
         "type": "input",
-        "question": "Впишите форму (best): Wir werden die ___ Freunde treffen.",
+        "question": "edgeImagesQuestEleven.questFifteen",
         "answer": "besten",
-        "tip": "Akkusativ Plural: после определенного артикля во мн. числе всегда пишем -en."
+        "tip": "edgeImagesQuestEleven.questFifteenTip"
       }
     ]
   },
   {
     "questId": "adjective-twelve",
-    "title": "Зачёт",
+    "title": "edgeImagesQuestTwelve.title",
     "progress": "0/15",
-    "description": "Отработка окончаний (артикль) в Perfekt и Futur 1. Темы: образование, город, работа, отдых, техника.",
+    "description": "edgeImagesQuestTwelve.description",
     "conditions": {
-      "goal": "Закрепите грамматику на skillupgerman!",
+      "goal": "edgeImagesQuestTwelve.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
-    "rewards": {
-      "points": 30,
-      "xp": 30
-    },
+    "rewards": { "points": 30, "xp": 30 },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
-        "question": "Соберите: Студент сдаст трудный экзамен",
+        "question": "edgeImagesQuestTwelve.questOne",
         "words": ["Der", "Student", "wird", "die", "schwere", "Prüfung", "bestehen", "schweren"],
         "correctOrder": ["Der", "Student", "wird", "die", "schwere", "Prüfung", "bestehen"],
-        "tip": "Futur 1 / Akkusativ (жен. род): артикль 'die' базовый, поэтому окончание прилагательного -e."
+        "tip": "edgeImagesQuestTwelve.questOneTip"
       },
       {
         "id": 2,
         "type": "input",
-        "question": "Впишите форму (neu): Ich habe das ___ Passwort benutzt.",
+        "question": "edgeImagesQuestTwelve.questTwo",
         "answer": "neue",
-        "tip": "Akkusativ (ср. род): артикль 'das' не изменился, окончание прилагательного -e."
+        "tip": "edgeImagesQuestTwelve.questTwoTip"
       },
       {
         "id": 3,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestTwelve.questThree",
         "text": "Die klugen Leute haben gewonnen",
         "answer": "Die klugen Leute haben gewonnen",
-        "tip": "Plural (Nominativ): после определенного артикля во мн. числе всегда пишем -en."
+        "tip": "edgeImagesQuestTwelve.questThreeTip"
       },
       {
         "id": 4,
         "type": "input",
-        "question": "Впишите форму (modern): Wir werden in dem ___ Hotel schlafen.",
+        "question": "edgeImagesQuestTwelve.questFour",
         "answer": "modernen",
-        "tip": "Dativ (ср. род): после измененного артикля 'dem' всегда пишем -en."
+        "tip": "edgeImagesQuestTwelve.questFourTip"
       },
       {
         "id": 5,
         "type": "input",
-        "question": "Впишите форму (alt): Er hat den ___ Baum im Garten gesehen.",
+        "question": "edgeImagesQuestTwelve.questFive",
         "answer": "alten",
-        "tip": "Akkusativ (муж. род): артикль изменился на 'den', поэтому ставим окончание -en."
+        "tip": "edgeImagesQuestTwelve.questFiveTip"
       },
       {
         "id": 6,
         "type": "select",
-        "question": "Выберите форму: Der ___ Film wird morgen starten.",
-        "options": [
-          "gute",
-          "guten",
-          "guter"
-        ],
+        "question": "edgeImagesQuestTwelve.questSix",
+        "options": ["gute", "guten", "guter"],
         "answer": "gute",
-        "tip": "Nominativ (муж. род): после базового артикля 'der' окончание прилагательного -e."
+        "tip": "edgeImagesQuestTwelve.questSixTip"
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Соберите: Мы купили этот белый стол",
+        "question": "edgeImagesQuestTwelve.questSeven",
         "words": ["Wir", "haben", "den", "weißen", "Tisch", "gekauft", "weiße"],
         "correctOrder": ["Wir", "haben", "den", "weißen", "Tisch", "gekauft"],
-        "tip": "Perfekt / Akkusativ (муж. род): артикль 'der' стал 'den', окончание прилагательного -en."
+        "tip": "edgeImagesQuestTwelve.questSevenTip"
       },
       {
         "id": 8,
         "type": "input",
-        "question": "Впишите форму (stark): Sie wird den ___ Kaffee trinken.",
+        "question": "edgeImagesQuestTwelve.questEight",
         "answer": "starken",
-        "tip": "Futur 1 / Akkusativ (муж. род): артикль 'den' изменен, ставим окончание -en."
+        "tip": "edgeImagesQuestTwelve.questEightTip"
       },
       {
         "id": 9,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestTwelve.questNine",
         "text": "Das neue Projekt hat begonnen",
         "answer": "Das neue Projekt hat begonnen",
-        "tip": "Nominativ (ср. род): после артикля 'das' у прилагательного окончание -e."
+        "tip": "edgeImagesQuestTwelve.questNineTip"
       },
       {
         "id": 10,
         "type": "input",
-        "question": "Впишите форму (groß): Ich habe in der ___ Firma gearbeitet.",
+        "question": "edgeImagesQuestTwelve.questTen",
         "answer": "großen",
-        "tip": "Dativ (жен. род): артикль изменился на 'der', поэтому окончание прилагательного -en."
+        "tip": "edgeImagesQuestTwelve.questTenTip"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Соберите: Известный врач поможет нам",
+        "question": "edgeImagesQuestTwelve.questEleven",
         "words": ["Der", "bekannte", "Arzt", "wird", "uns", "helfen", "bekannten"],
         "correctOrder": ["Der", "bekannte", "Arzt", "wird", "uns", "helfen"],
-        "tip": "Nominativ (муж. род): после артикля 'der' у прилагательного окончание -e."
+        "tip": "edgeImagesQuestTwelve.questElevenTip"
       },
       {
         "id": 12,
         "type": "input",
-        "question": "Впишите форму (kalt): Wir werden das ___ Bier im Kühlschrank finden.",
+        "question": "edgeImagesQuestTwelve.questTwelve",
         "answer": "kalte",
-        "tip": "Akkusativ (ср. род): артикль 'das' не изменился, окончание прилагательного -e."
+        "tip": "edgeImagesQuestTwelve.questTwelveTip"
       },
       {
         "id": 13,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestTwelve.questThirteen",
         "text": "Die kleinen Kinder haben gelacht",
         "answer": "Die kleinen Kinder haben gelacht",
-        "tip": "Plural (Nominativ): с определенным артиклем во мн. числе ставим -en."
+        "tip": "edgeImagesQuestTwelve.questThirteenTip"
       },
       {
         "id": 14,
         "type": "input",
-        "question": "Впишите форму (best): Er hat mit dem ___ Chef gesprochen.",
+        "question": "edgeImagesQuestTwelve.questFourteen",
         "answer": "besten",
-        "tip": "Dativ (муж. род): после измененного артикля 'dem' ставим окончание -en."
+        "tip": "edgeImagesQuestTwelve.questFourteenTip"
       },
       {
         "id": 15,
         "type": "input",
-        "question": "Впишите форму (lecker): Ich werde die ___ Suppe essen.",
+        "question": "edgeImagesQuestTwelve.questFifteen",
         "answer": "leckere",
-        "tip": "Akkusativ (жен. род): артикль 'die' базовый, окончание прилагательного -e."
+        "tip": "edgeImagesQuestTwelve.questFifteenTip"
       }
     ]
   },
   {
     "questId": "adj_decl_mixed_13",
-    "title": "Срез",
+    "title": "edgeImagesQuestThirteen.title",
     "progress": "0/15",
-    "description": "Отработка окончаний (артикль) в Perfekt и Futur 1. Темы: природа, покупки, здоровье, техника.",
+    "description": "edgeImagesQuestThirteen.description",
     "conditions": {
-      "goal": "Закрепите грамматику на skillupgerman!",
+      "goal": "edgeImagesQuestThirteen.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
-    "rewards": {
-      "points": 20,
-      "xp": 20
-    },
+    "rewards": { "points": 20, "xp": 20 },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
-        "question": "Соберите: Я куплю эту синюю куртку",
+        "question": "edgeImagesQuestThirteen.questOne",
         "words": ["Ich", "werde", "die", "blaue", "Jacke", "kaufen", "blauen"],
         "correctOrder": ["Ich", "werde", "die", "blaue", "Jacke", "kaufen"],
-        "tip": "Akkusativ (жен. род): артикль 'die' базовый, окончание прилагательного -e."
+        "tip": "edgeImagesQuestThirteen.questOneTip"
       },
       {
         "id": 2,
         "type": "input",
-        "question": "Впишите форму (hoch): Der ___ Berg war sehr gefährlich.",
+        "question": "edgeImagesQuestThirteen.questTwo",
         "answer": "hohe",
-        "tip": "Nominativ (муж. род): после артикля 'der' ставим окончание -e."
+        "tip": "edgeImagesQuestThirteen.questTwoTip"
       },
       {
         "id": 3,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestThirteen.questThree",
         "text": "Die neue Kamera hat gut funktioniert",
         "answer": "Die neue Kamera hat gut funktioniert",
-        "tip": "Nominativ (жен. род): после артикля 'die' окончание прилагательного -e."
+        "tip": "edgeImagesQuestThirteen.questThreeTip"
       },
       {
         "id": 4,
         "type": "input",
-        "question": "Впишите форму (krank): Wir helfen dem ___ Kind.",
+        "question": "edgeImagesQuestThirteen.questFour",
         "answer": "kranken",
-        "tip": "Dativ (ср. род): берет у артикля 'dem' окончание -en."
+        "tip": "edgeImagesQuestThirteen.questFourTip"
       },
       {
         "id": 5,
         "type": "input",
-        "question": "Впишите форму (teuer): Er hat den ___ Fernseher repariert.",
+        "question": "edgeImagesQuestThirteen.questFive",
         "answer": "teuren",
-        "tip": "Akkusativ (муж. род): артикль изменился на 'den', ставим окончание -en."
+        "tip": "edgeImagesQuestThirteen.questFiveTip"
       },
       {
         "id": 6,
         "type": "select",
-        "question": "Выберите форму: Das ___ Wetter hat uns gefreut.",
-        "options": [
-          "warme",
-          "warmen",
-          "warmes"
-        ],
+        "question": "edgeImagesQuestThirteen.questSix",
+        "options": ["warme", "warmen", "warmes"],
         "answer": "warme",
-        "tip": "Nominativ (ср. род): после артикля 'das' ставим окончание -e."
+        "tip": "edgeImagesQuestThirteen.questSixTip"
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Соберите: Мы увидим красивый сад",
+        "question": "edgeImagesQuestThirteen.questSeven",
         "words": ["Wir", "werden", "den", "schönen", "Garten", "sehen", "schöne"],
         "correctOrder": ["Wir", "werden", "den", "schönen", "Garten", "sehen"],
-        "tip": "Akkusativ (муж. род): артикль стал 'den', окончание прилагательного -en."
+        "tip": "edgeImagesQuestThirteen.questSevenTip"
       },
       {
         "id": 8,
         "type": "input",
-        "question": "Впишите форму (alt): Ich habe in der ___ Zeitung gelesen.",
+        "question": "edgeImagesQuestThirteen.questEight",
         "answer": "alten",
-        "tip": "Dativ (жен. род): артикль 'die' изменился на 'der', ставим окончание -en."
+        "tip": "edgeImagesQuestThirteen.questEightTip"
       },
       {
         "id": 9,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestThirteen.questNine",
         "text": "Der starke Hund hat laut gebellt",
         "answer": "Der starke Hund hat laut gebellt",
-        "tip": "Nominativ (муж. род): после базового артикля 'der' окончание -e."
+        "tip": "edgeImagesQuestThirteen.questNineTip"
       },
       {
         "id": 10,
         "type": "input",
-        "question": "Впишите форму (süß): Sie wird den ___ Saft trinken.",
+        "question": "edgeImagesQuestThirteen.questTen",
         "answer": "süßen",
-        "tip": "Akkusativ (муж. род): после измененного артикля 'den' всегда пишем -en."
+        "tip": "edgeImagesQuestThirteen.questTenTip"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Соберите: Маленький мальчик нашел ключ",
+        "question": "edgeImagesQuestThirteen.questEleven",
         "words": ["Der", "kleine", "Junge", "hat", "den", "Schlüssel", "gefunden", "kleinen"],
         "correctOrder": ["Der", "kleine", "Junge", "hat", "den", "Schlüssel", "gefunden"],
-        "tip": "Nominativ (муж. род): после артикля 'der' ставим окончание -e."
+        "tip": "edgeImagesQuestThirteen.questElevenTip"
       },
       {
         "id": 12,
         "type": "input",
-        "question": "Впишите форму (modern): Er wird in dem ___ Zimmer wohnen.",
+        "question": "edgeImagesQuestThirteen.questTwelve",
         "answer": "modernen",
-        "tip": "Dativ (ср. род): артикль 'das' стал 'dem', у прилагательного окончание -en."
+        "tip": "edgeImagesQuestThirteen.questTwelveTip"
       },
       {
         "id": 13,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestThirteen.questThirteen",
         "text": "Die besten Rezepte haben wir gefunden",
         "answer": "Die besten Rezepte haben wir gefunden",
-        "tip": "Akkusativ Plural: с определенным артиклем всегда ставим -en."
+        "tip": "edgeImagesQuestThirteen.questThirteenTip"
       },
       {
         "id": 14,
         "type": "input",
-        "question": "Впишите форму (lecker): Ich habe das ___ Obst gegessen.",
+        "question": "edgeImagesQuestThirteen.questFourteen",
         "answer": "leckere",
-        "tip": "Akkusativ (ср. род): артикль 'das' не изменился, окончание -e."
+        "tip": "edgeImagesQuestThirteen.questFourteenTip"
       },
       {
         "id": 15,
         "type": "input",
-        "question": "Впишите форму (best): Wir werden mit den ___ Nachbarn sprechen.",
+        "question": "edgeImagesQuestThirteen.questFifteen",
         "answer": "besten",
-        "tip": "Dativ Plural: после артикля 'den' (для мн. числа) всегда пишем -en."
+        "tip": "edgeImagesQuestThirteen.questFifteenTip"
       }
     ]
   },
   {
     "questId": "adj_decl_mixed_14",
-    "title": "Грань",
+    "title": "edgeImagesQuestFourteen.title",
     "progress": "0/15",
-    "description": "Отработка окончаний (артикль) в Perfekt и Futur 1. Темы: медицина, офис, город, еда, путешествия.",
+    "description": "edgeImagesQuestFourteen.description",
     "conditions": {
-      "goal": "Закрепите грамматику на skillupgerman!",
+      "goal": "edgeImagesQuestFourteen.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
-    "rewards": {
-      "points": 20,
-      "xp": 20
-    },
+    "rewards": { "points": 20, "xp": 20 },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
-        "question": "Соберите: Мы забронируем этот дорогой отель",
+        "question": "edgeImagesQuestFourteen.questOne",
         "words": ["Wir", "werden", "das", "teure", "Hotel", "buchen", "teuren"],
         "correctOrder": ["Wir", "werden", "das", "teure", "Hotel", "buchen"],
-        "tip": "Akkusativ (ср. род): артикль 'das' базовый, окончание прилагательного -e."
+        "tip": "edgeImagesQuestFourteen.questOneTip"
       },
       {
         "id": 2,
         "type": "input",
-        "question": "Впишите форму (krank): Der ___ Patient hat lange gewartet.",
+        "question": "edgeImagesQuestFourteen.questTwo",
         "answer": "kranke",
-        "tip": "Nominativ (муж. род): после базового артикля 'der' ставим окончание -e."
+        "tip": "edgeImagesQuestFourteen.questTwoTip"
       },
       {
         "id": 3,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestFourteen.questThree",
         "text": "Die neue Kollegin hat sich vorgestellt",
         "answer": "Die neue Kollegin hat sich vorgestellt",
-        "tip": "Nominativ (жен. род): после артикля 'die' окончание прилагательного -e."
+        "tip": "edgeImagesQuestFourteen.questThreeTip"
       },
       {
         "id": 4,
         "type": "input",
-        "question": "Впишите форму (alt): Ich habe in der ___ Zeitung gelesen.",
+        "question": "edgeImagesQuestFourteen.questFour",
         "answer": "alten",
-        "tip": "Dativ (жен. род): артикль изменился на 'der', поэтому окончание прилагательного -en."
+        "tip": "edgeImagesQuestFourteen.questFourTip"
       },
       {
         "id": 5,
         "type": "input",
-        "question": "Впишите форму (groß): Er wird in dem ___ Büro arbeiten.",
+        "question": "edgeImagesQuestFourteen.questFive",
         "answer": "großen",
-        "tip": "Dativ (ср. род): после измененного артикля 'dem' всегда пишем -en."
+        "tip": "edgeImagesQuestFourteen.questFiveTip"
       },
       {
         "id": 6,
         "type": "select",
-        "question": "Выберите форму: Das ___ Wetter hat uns gefreut.",
-        "options": [
-          "schöne",
-          "schönen",
-          "schöner"
-        ],
+        "question": "edgeImagesQuestFourteen.questSix",
+        "options": ["schöne", "schönen", "schöner"],
         "answer": "schöne",
-        "tip": "Nominativ (ср. род): после артикля 'das' ставим окончание -e."
+        "tip": "edgeImagesQuestFourteen.questSixTip"
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Соберите: Она выпьет этот горячий чай",
+        "question": "edgeImagesQuestFourteen.questSeven",
         "words": ["Sie", "wird", "den", "heißen", "Tee", "trinken", "heiße"],
         "correctOrder": ["Sie", "wird", "den", "heißen", "Tee", "trinken"],
-        "tip": "Akkusativ (муж. род): артикль изменился на 'den', ставим окончание -en."
+        "tip": "edgeImagesQuestFourteen.questSevenTip"
       },
       {
         "id": 8,
         "type": "input",
-        "question": "Впишите форму (modern): Wir haben die ___ Küche geputzt.",
+        "question": "edgeImagesQuestFourteen.questEight",
         "answer": "moderne",
-        "tip": "Akkusativ (жен. род): артикль 'die' базовый, окончание прилагательного -e."
+        "tip": "edgeImagesQuestFourteen.questEightTip"
       },
       {
         "id": 9,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestFourteen.questNine",
         "text": "Der starke Wind hat uns gestört",
         "answer": "Der starke Wind hat uns gestört",
-        "tip": "Nominativ (муж. род): после артикля 'der' у прилагательного окончание -e."
+        "tip": "edgeImagesQuestFourteen.questNineTip"
       },
       {
         "id": 10,
         "type": "input",
-        "question": "Впишите форму (lecker): Ich werde den ___ Fisch essen.",
+        "question": "edgeImagesQuestFourteen.questTen",
         "answer": "leckeren",
-        "tip": "Akkusativ (муж. род): после 'den' окончание прилагательного всегда -en."
+        "tip": "edgeImagesQuestFourteen.questTenTip"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Соберите: Трудный экзамен будет закончен",
+        "question": "edgeImagesQuestFourteen.questEleven",
         "words": ["Die", "schwere", "Prüfung", "wird", "beendet", "sein", "schweren"],
         "correctOrder": ["Die", "schwere", "Prüfung", "wird", "beendet", "sein"],
-        "tip": "Nominativ (жен. род): после базового артикля 'die' окончание -e."
+        "tip": "edgeImagesQuestFourteen.questElevenTip"
       },
       {
         "id": 12,
         "type": "input",
-        "question": "Впишите форму (kalt): Sie hat das ___ Eis geholt.",
+        "question": "edgeImagesQuestFourteen.questTwelve",
         "answer": "kalte",
-        "tip": "Akkusativ (ср. род): артикль 'das' не изменился, окончание -e."
+        "tip": "edgeImagesQuestFourteen.questTwelveTip"
       },
       {
         "id": 13,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestFourteen.questThirteen",
         "text": "Die kleinen Fenster haben wir geputzt",
         "answer": "Die kleinen Fenster haben wir geputzt",
-        "tip": "Akkusativ Plural: с определенным артиклем во мн. числе всегда пишем -en."
+        "tip": "edgeImagesQuestFourteen.questThirteenTip"
       },
       {
         "id": 14,
         "type": "input",
-        "question": "Впишите форму (best): Er hat mit den ___ Kollegen gesprochen.",
+        "question": "edgeImagesQuestFourteen.questFourteen",
         "answer": "besten",
-        "tip": "Dativ Plural: после артикля 'den' (для мн. числа) всегда пишем -en."
+        "tip": "edgeImagesQuestFourteen.questFourteenTip"
       },
       {
         "id": 15,
         "type": "input",
-        "question": "Впишите форму (neu): Wir werden das ___ Programm starten.",
+        "question": "edgeImagesQuestFourteen.questFifteen",
         "answer": "neue",
-        "tip": "Akkusativ (ср. род): артикль 'das' базовый, окончание -e."
+        "tip": "edgeImagesQuestFourteen.questFifteenTip"
       }
     ]
   },
   {
     "questId": "adj_decl_mixed_15",
-    "title": "Слой",
+    "title": "edgeImagesQuestFifteen.title",
     "progress": "0/15",
-    "description": "Отработка окончаний (артикль) в Perfekt и Futur 1. Темы: искусство, город, транспорт, образование.",
+    "description": "edgeImagesQuestFifteen.description",
     "conditions": {
-      "goal": "Закрепите грамматику на skillupgerman!",
+      "goal": "edgeImagesQuestFifteen.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
-    "rewards": {
-      "points": 30,
-      "xp": 30
-    },
+    "rewards": { "points": 30, "xp": 30 },
     "tasks": [
       {
         "id": 1,
         "type": "reorder",
-        "question": "Соберите: Мы посетим новый театр",
+        "question": "edgeImagesQuestFifteen.questOne",
         "words": ["Wir", "werden", "das", "neue", "Theater", "besuchen", "neuen"],
         "correctOrder": ["Wir", "werden", "das", "neue", "Theater", "besuchen"],
-        "tip": "Akkusativ (ср. род): артикль 'das' не изменился, окончание прилагательного -e."
+        "tip": "edgeImagesQuestFifteen.questOneTip"
       },
       {
         "id": 2,
         "type": "input",
-        "question": "Впишите форму (alt): Der ___ Professor hat viel erzählt.",
+        "question": "edgeImagesQuestFifteen.questTwo",
         "answer": "alte",
-        "tip": "Nominativ (муж. род): после базового артикля 'der' ставим окончание -e."
+        "tip": "edgeImagesQuestFifteen.questTwoTip"
       },
       {
         "id": 3,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestFifteen.questThree",
         "text": "Das kleine Bild hat dort gehangen",
         "answer": "Das kleine Bild hat dort gehangen",
-        "tip": "Nominativ (ср. род): после артикля 'das' окончание -e."
+        "tip": "edgeImagesQuestFifteen.questThreeTip"
       },
       {
         "id": 4,
         "type": "input",
-        "question": "Впишите форму (modern): Ich werde in der ___ Galerie arbeiten.",
+        "question": "edgeImagesQuestFifteen.questFour",
         "answer": "modernen",
-        "tip": "Dativ (жен. род): артикль 'die' стал 'der', поэтому окончание -en."
+        "tip": "edgeImagesQuestFifteen.questFourTip"
       },
       {
         "id": 5,
         "type": "input",
-        "question": "Впишите форму (schnell): Er hat den ___ Bus verpasst.",
+        "question": "edgeImagesQuestFifteen.questFive",
         "answer": "schnellen",
-        "tip": "Akkusativ (муж. род): артикль изменился на 'den', ставим окончание -en."
+        "tip": "edgeImagesQuestFifteen.questFiveTip"
       },
       {
         "id": 6,
         "type": "select",
-        "question": "Выберите форму: Die ___ Studenten haben gelernt.",
-        "options": [
-          "fleißigen",
-          "fleißige",
-          "fleißiger"
-        ],
+        "question": "edgeImagesQuestFifteen.questSix",
+        "options": ["fleißigen", "fleißige", "fleißiger"],
         "answer": "fleißigen",
-        "tip": "Plural (Nominativ): с определенным артиклем во мн. числе всегда пишем -en."
+        "tip": "edgeImagesQuestFifteen.questSixTip"
       },
       {
         "id": 7,
         "type": "reorder",
-        "question": "Соберите: Я найду этот правильный путь",
+        "question": "edgeImagesQuestFifteen.questSeven",
         "words": ["Ich", "werde", "den", "richtigen", "Weg", "finden", "richtige"],
         "correctOrder": ["Ich", "werde", "den", "richtigen", "Weg", "finden"],
-        "tip": "Akkusativ (муж. род): артикль стал 'den', окончание -en."
+        "tip": "edgeImagesQuestFifteen.questSevenTip"
       },
       {
         "id": 8,
         "type": "input",
-        "question": "Впишите форму (groß): Wir haben in dem ___ Saal getanzt.",
+        "question": "edgeImagesQuestFifteen.questEight",
         "answer": "großen",
-        "tip": "Dativ (муж. род): после измененного артикля 'dem' всегда пишем -en."
+        "tip": "edgeImagesQuestFifteen.questEightTip"
       },
       {
         "id": 9,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestFifteen.questNine",
         "text": "Die neue Brücke hat uns geholfen",
         "answer": "Die neue Brücke hat uns geholfen",
-        "tip": "Nominativ (жен. род): после артикля 'die' ставим окончание -e."
+        "tip": "edgeImagesQuestFifteen.questNineTip"
       },
       {
         "id": 10,
         "type": "input",
-        "question": "Впишите форму (kalt): Sie wird das ___ Wasser holen.",
+        "question": "edgeImagesQuestFifteen.questTen",
         "answer": "kalte",
-        "tip": "Akkusativ (ср. род): артикль 'das' базовый, окончание -e."
+        "tip": "edgeImagesQuestFifteen.questTenTip"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Соберите: Известный актер придет завтра",
+        "question": "edgeImagesQuestFifteen.questEleven",
         "words": ["Der", "bekannte", "Schauspieler", "wird", "morgen", "kommen", "bekannten"],
         "correctOrder": ["Der", "bekannte", "Schauspieler", "wird", "morgen", "kommen"],
-        "tip": "Nominativ (муж. род): после артикля 'der' у прилагательного окончание -e."
+        "tip": "edgeImagesQuestFifteen.questElevenTip"
       },
       {
         "id": 12,
         "type": "input",
-        "question": "Впишите форму (interessant): Wir haben das ___ Buch.",
+        "question": "edgeImagesQuestFifteen.questTwelve",
         "answer": "interessante",
-        "tip": "Akkusativ (ср. род): артикль 'das' не изменился, окончание -e."
+        "tip": "edgeImagesQuestFifteen.questTwelveTip"
       },
       {
         "id": 13,
         "type": "speechToText",
-        "question": "Прослушайте и напишите услышанное",
+        "question": "edgeImagesQuestFifteen.questThirteen",
         "text": "Den schwarzen Mantel habe ich gekauft",
         "answer": "Den schwarzen Mantel habe ich gekauft",
-        "tip": "Akkusativ (муж. род): после 'den' окончание прилагательного всегда -en."
+        "tip": "edgeImagesQuestFifteen.questThirteenTip"
       },
       {
         "id": 14,
         "type": "input",
-        "question": "Впишите форму (beste): Er hat mit den ___ Schülern gesprochen.",
+        "question": "edgeImagesQuestFifteen.questFourteen",
         "answer": "besten",
-        "tip": "Dativ Plural: после артикля 'den' (мн. число) ставим окончание -en."
+        "tip": "edgeImagesQuestFifteen.questFourteenTip"
       },
       {
         "id": 15,
         "type": "input",
-        "question": "Впишите форму (lecker): Ich werde die ___ Pizza essen.",
+        "question": "edgeImagesQuestFifteen.questFifteen",
         "answer": "leckere",
-        "tip": "Akkusativ (жен. род): артикль 'die' базовый, окончание -e."
+        "tip": "edgeImagesQuestFifteen.questFifteenTip"
       }
     ]
   }

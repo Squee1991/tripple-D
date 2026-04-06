@@ -8087,5 +8087,33 @@
     "transport": "Transport",
     "sport": "Sport",
     "travel": "Voyages"
+  },
+  "descriptionPage": {
+    "intro": "Choisissez un thème pour pratiquer vos compétences de description.",
+    "images": "IMAGES",
+    "level": "Choisissez la difficulté"
+  },
+  "descriptionThemes": {
+    "winter": "Hiver et activités",
+    "transport": "Transports en commun",
+    "cafe": "Cafétéria",
+    "supermarket": "Supermarché",
+    "home": "Maison et vie quotidienne",
+    "school": "École",
+    "animals": "Animaux",
+    "weather": "Météo",
+    "move": "Déménagement",
+    "sport": "Sport"
+  },
+  "descriptionSession": {
+    "record": "ENREGISTREMENT...",
+    "better": "COMMENT AMÉLIORER :",
+    "answer": "RÉPONSE",
+    "done": "THÈME TERMINÉ",
+    "newTheme": "CHOISIR UN NOUVEAU THÈME"
+  },
+  "lives": {
+    "next": "Suivante :",
+    "full": "Vies au maximum"
   }
 }

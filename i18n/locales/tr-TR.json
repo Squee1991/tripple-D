@@ -8082,5 +8082,33 @@
     "transport": "Ulaşım",
     "sport": "Spor",
     "travel": "Seyahat"
+  },
+  "descriptionPage": {
+    "intro": "Betimleme becerilerini geliştirmek için bir konu seçin.",
+    "images": "GÖRSELLER",
+    "level": "Zorluk seçin"
+  },
+  "descriptionThemes": {
+    "winter": "Kış ve Aktiviteler",
+    "transport": "Toplu Taşıma",
+    "cafe": "Kafeterya",
+    "supermarket": "Süpermarket",
+    "home": "Ev ve Günlük Yaşam",
+    "school": "Okul",
+    "animals": "Hayvanlar",
+    "weather": "Hava Durumu",
+    "move": "Taşınma",
+    "sport": "Spor"
+  },
+  "descriptionSession": {
+    "record": "KAYIT YAPILIYOR...",
+    "better": "NASIL GELİŞTİRİLİR:",
+    "answer": "CEVAP",
+    "done": "KONU TAMAMLANDI",
+    "newTheme": "YENİ KONU SEÇ"
+  },
+  "lives": {
+    "next": "Sonraki:",
+    "full": "Canlar dolu"
   }
 }

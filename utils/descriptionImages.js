@@ -32,7 +32,6 @@ import DucksFamily from 'assets/images/speak-themen/animals/ducks.png'
 import Dog from 'assets/images/speak-themen/animals/ducks.png'
 import Cow from 'assets/images/speak-themen/animals/cow.png'
 
-
 import ClearDay from 'assets/images/speak-themen/weather/WeatherClearDay.jpg'
 import WeatherRainbowAfterRain from 'assets/images/speak-themen/weather/WeatherRainbowAfterRain.jpg'
 import WeatherWind from 'assets/images/speak-themen/weather/WeatherWind.jpg'
@@ -133,11 +132,18 @@ import Climber from 'assets/images/speak-themen/sport/Climber.jpg'
 import Barbell from 'assets/images/speak-themen/sport/barbell.jpg'
 import Football from 'assets/images/speak-themen/sport/Football.jpg'
 import HockeyWomen from 'assets/images/speak-themen/sport/HockeyWomen.jpg'
+import IceHockey from 'assets/images/speak-themen/sport/IceHockey.jpg'
+import Kanoe from 'assets/images/speak-themen/sport/Kanoe.jpg'
+import Pool from 'assets/images/speak-themen/sport/Pool.jpg'
+import PoolJump from 'assets/images/speak-themen/sport/PoolJump.jpg'
+import Running from 'assets/images/speak-themen/sport/Running.jpg'
+import Tennis from 'assets/images/speak-themen/sport/Tennis.jpg'
+import Walk from 'assets/images/speak-themen/sport/Walk.jpg'
 
 export const topics = [
 	{
 		id: 'winter',
-		label: 'Зима и активности',
+		label: 'descriptionThemes.winter',
 		icon: '❄️',
 		gradient: 'linear-gradient(135deg, #E0F7FA 0%, #81D4FA 100%)',
 		textColor: '#0277BD',
@@ -281,7 +287,7 @@ export const topics = [
 	},
 	{
 		id: 'transport',
-		label: 'Общественный транспорт',
+		label: 'descriptionThemes.transport',
 		icon: '🚉',
 		gradient: 'linear-gradient(135deg, #FFF3E0 0%, #FFB74D 100%)',
 		textColor: '#E55559',
@@ -439,7 +445,7 @@ export const topics = [
 	},
 	{
 		id: 'caffe',
-		label: "Кофетерий",
+		label: "descriptionThemes.cafe",
 		icon: "☕",
 		gradient: 'linear-gradient(135deg, #FAFAE0 0%, #FFB74D 100%)',
 		textColor: '#E55559',
@@ -583,7 +589,7 @@ export const topics = [
 	},
 	{
 		id: 'supermarket',
-		label: "Супермаркет",
+		label: "descriptionThemes.supermarket",
 		icon: "🛒",
 		gradient: 'linear-gradient(135deg, #FFF3E0 0%, #FFB74D 100%)',
 		textColor: '#E55559',
@@ -727,7 +733,7 @@ export const topics = [
 	},
 	{
 		id: 'homeAndLife',
-		label: "Дом и быт",
+		label: "descriptionThemes.home",
 		icon: "🏡",
 		gradient: 'linear-gradient(135deg, #FFF3E0 0%, #FFB74D 100%)',
 		textColor: '#E55559',
@@ -872,7 +878,7 @@ export const topics = [
 	},
 	{
 		id: 'school',
-		label: "Школа",
+		label: "descriptionThemes.school",
 		icon: "🎓",
 		gradient: 'linear-gradient(135deg, #FFF3E0 0%, #FFB74D 100%)',
 		textColor: '#E55559',
@@ -953,7 +959,7 @@ export const topics = [
 	},
 	{
 		id: 'animals',
-		label: 'Животные',
+		label: 'descriptionThemes.animals',
 		icon: '🦊',
 		gradient: 'linear-gradient(135deg, #F1F8E9 0%, #AED581 100%)',
 		textColor: '#33691E',
@@ -1115,7 +1121,7 @@ export const topics = [
 	},
 	{
 		id: 'weather',
-		label: 'Погода',
+		label: 'descriptionThemes.weather',
 		icon: '🌦️',
 		gradient: 'linear-gradient(135deg, #F1F8E9 0%, #AED581 100%)',
 		textColor: '#33691E',
@@ -1216,8 +1222,8 @@ export const topics = [
 	},
 	{
 		id: 'move',
-		label: 'Переезд',
-		icon: '🌦️',
+		label: 'descriptionThemes.move',
+		icon: '📦',
 		gradient: 'linear-gradient(135deg, #F1F8E9 0%, #AED581 100%)',
 		textColor: '#93615B',
 		tasks: [
@@ -1305,8 +1311,8 @@ export const topics = [
 	},
 	{
 		id: 'sport',
-		label: 'Спорт',
-		icon: '🌦️',
+		label: 'descriptionThemes.sport',
+		icon: '⚽',
 		gradient: 'linear-gradient(135deg, #F1F8E9 0%, #AED581 100%)',
 		textColor: '#93615B',
 		tasks: [
@@ -1388,6 +1394,74 @@ export const topics = [
 					A2: 'Die Kinder spielen Fußball auf dem Platz. Ein Junge trägt ein rotes Trikot mit der Nummer 10. Ein anderer Junge trägt ein blaues Trikot. Im Hintergrund sieht man ein Tor und Zuschauer.',
 					B1: 'Auf dem Bild sieht man Kinder, die Fußball spielen. Ein Junge trägt ein rotes Trikot und läuft mit dem Ball. Er spielt gegen einen Jungen, der ein blaues Trikot trägt. Im Hintergrund sieht man ein Tor und Zuschauer.',
 
+				}
+			},
+			{
+				id: 8,
+				image: IceHockey,
+				descriptions: {
+					A1: 'Hier sind viele Spieler. Sie spielen Eishockey. Ein Mann trägt rote Kleidung. Ein Mann trägt blaue Kleidung. Der Puck ist auf dem Eis. Viele Leute schauen zu.',
+					A2: 'Viele Spieler sind auf dem Eis. In der Mitte kämpfen Männer um den Puck. Ein Mann trägt Rot mit der Nummer 17. Ein anderer Mann trägt Blau mit der Nummer 12. Die Leute sitzen in dem Stadion',
+					B1: 'Das Bild zeigt ein Eishockey-Finale, bei dem viele Spieler auf dem Eis stehen. Während die Männer in der Mitte spielen, wartet der Torwart im Tor. Im Hintergrund sieht man Zuschauer, die auf den Tribünen sitzen. Ein Banner zeigt den Namen von der Arena',
+
+				}
+			},
+			{
+				id: 9,
+				image: Kanoe,
+				descriptions: {
+					A1: 'Hier sind Menschen. Sie fahren Boot. Sie sind auf dem Wasser. Die Sonne scheint. Das Boot ist braun',
+					A2: 'Mehrere Personen machen Sport auf dem See. Vorne sitzen ein Mann und eine Frau in einem Boot. Sie tragen rot-weiße Kleidung und Schwimmwesten. Im Hintergrund sieht man viele Bäume und einen Turm',
+					B1: 'Das Bild zeigt ein Rennen, bei dem viele Menschen in Booten paddeln. Ein Mann und eine Frau sind vorne, die gemeinsam in einem Boot sitzen. Während sie Sport machen, tragen sie Schwimmwesten. Am Ufer steht ein Turm, weil dort ein Schiedsrichter ist',
+
+				}
+			},
+			{
+				id: 10,
+				image: Pool,
+				descriptions: {
+					A1: 'Hier ist ein Schwimmbad. Das sind Kinder. Sie sind in dem Wasser. Mia springt. Ein Hund springt auch. Er hat eine Weste. Die Sonne scheint',
+					A2: 'Viele Leute sind in dem Freibad. Mia trägt eine rosa Kappe und springt in das Wasser. Ein kleiner Hund hat eine orange Weste und macht mit. Zwei Personen sitzen unter einem Schirm',
+					B1: 'Das Bild zeigt ein Schwimmbad, in dem viele Kinder spielen. Mia springt fröhlich, während ein Hund mit ihr springt. Er trägt eine Weste, weil das sicher ist. Man sieht auch Leute, die unter einem Schirm sitzen',
+
+				}
+			},
+			{
+				id: 11,
+				image: PoolJump,
+				descriptions: {
+					A1: 'Das ist ein Schwimmbad. Ein Junge springt in das Wasser. Er trägt eine Brille. Ein Mann steht rechts. Er hat ein Papier. Andere Kinder warten',
+					A2: 'Viele Personen sind in der Halle. Ein Junge springt in das Becken. Er trägt eine Schwimmbrille. Ein Lehrer steht rechts und schaut zu. Andere Schüler warten auf dem Sprungturm.',
+					B1: 'Das Bild zeigt einen Jungen, der gerade von einem Sprungturm springt. Er trägt eine Schwimmbrille, während sein Lehrer am Rand steht. Die anderen Kinder schauen zu, weil sie im Schwimmbad sind',
+
+				}
+			},
+			{
+				id: 12,
+				image: Running,
+				descriptions: {
+					A1: 'Hier sind Menschen. Sie laufen. Sie sind in einem Stadion. Ein Mann trägt Blau. Eine Frau trägt Orange. Noch eine Person trägt ein gelbes T-Shirt. Viele Leute sehen das',
+					A2: 'Personen rennen auf der Laufbahn. Sie tragen Sportkleidung. Ein Mann trägt ein blaues Shirt. Eine Frau trägt ein oranges Top. Im Hintergrund sitzen viele Zuschauer. Das Wetter ist gut.',
+					B1: 'Das Bild zeigt Sportler, die auf der Bahn rennen. Ein Mann trägt Blau, während eine Frau Orange trägt. Sie laufen schnell, weil sie einen Wettkampf machen. Im Hintergrund sieht man Zuschauer, die auf den Tribünen sitzen',
+
+				}
+			},
+			{
+				id: 13,
+				image: Tennis,
+				descriptions: {
+					A1: 'Hier sind vier Personen. Sie spielen Tennis. Ein Mann und eine Frau sind vorne. Sie tragen weiße Kleidung. Ein Mann hinten trägt ein gelbes Shirt. Sie haben Schläger. Viele Leute sehen zu.',
+					A2: 'Vier Personen spielen Tennis auf dem Platz. Ein Mann und eine Frau tragen weiße Kleidung. Die Frau springt und schlägt den Ball. Ein Mann auf der anderen Seite trägt ein gelbes Shirt. Im Hintergrund sitzen viele Zuschauer in dem Stadion.',
+					B1: 'Das Bild zeigt ein Tennisspiel, das in einem Stadion stattfindet. Während die Frau vorne springt, um den Ball zu treffen, wartet ihr Partner. Sie spielen gegen zwei Männer, die auf der anderen Seite stehen. Die Zuschauer klatschen, weil das Spiel spannend ist.',
+				}
+			},
+			{
+				id: 14,
+				image: Walk,
+				descriptions: {
+					A1: 'Hier sind ein Mann und eine Frau. Sie gehen in den Bergen. Sie haben Rucksäcke. Das Wetter ist schön. Die Sonne scheint',
+					A2: 'Zwei Personen machen einen Ausflug in der Natur. Der Mann trägt eine grüne Jacke. Die Frau trägt eine rote Jacke. Sie haben Stöcke in den Händen. Im Hintergrund sieht man Berge und einen See',
+					B1: 'Das Bild zeigt zwei Personen, die in den Bergen sind. Sie tragen Rucksäcke, weil sie Sport machen. Während sie auf dem Weg gehen, zeigt der Mann nach oben. Man sieht auch einen See, der im Tal liegt',
 				}
 			},
 		]

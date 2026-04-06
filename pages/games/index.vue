@@ -48,7 +48,7 @@
           :is="componentViews[currentScreen]"
           @close="toggleScreen('menu')"
           @back="toggleScreen('menu')"
-          @select="startMission"
+          @select-galaxy="startMission"
       />
     </div>
     <Transition name="warp-flash">

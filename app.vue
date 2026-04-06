@@ -61,6 +61,7 @@ const sentencesStore = useSentencesStore();
 const langStore = userlangStore()
 const daily = dailyStore()
 
+
 const onToastFinished = () => {
   if (authStore.uid) {
     const key = `step_hint_seen_${authStore.uid}`
