@@ -5,26 +5,14 @@
         <button class="close-btn" @click="goToHomePage" aria-label="to main">×</button>
         <h1 class="region__title-name">{{ t(currentRegion?.name) }}</h1>
       </header>
-      <div class="lives-bar">
-        <div class="lives-bar__content">
-          <div class="lives-hearts">
-            <div class="hearts-desktop">
-              <span v-for="life in chainStore.maxLives" :key="life" class="heart-unit" :class="heartClass(life)">❤️</span>
-            </div>
-          </div>
-          <div class="lives-info">
-            <template v-if="chainStore.lives < chainStore.maxLives">
-              <img class="timer" src="../../assets/images/dailyIcons/timer.svg" alt="">
-              <span class="timer-label">{{ t('lives.next')}}</span>
-              <span class="timer-countdown">{{ recoveryTimerText }}</span>
-            </template>
-            <template v-else>
-              <div class="max-status-wrapper">
-                <span class="max-status">{{ t('lives.full')}}</span>
-              </div>
-            </template>
-          </div>
-        </div>
+      <div class="lives-bar__content">
+        <VHearts
+            :lives="chainStore.lives"
+            :max-lives="chainStore.maxLives"
+            :last-life-at-ms="chainStore.lastLifeAtMs"
+            :regen-interval-ms="chainStore.REGEN_INTERVAL_MS"
+            show-timer
+        />
       </div>
       <div v-if="isLoading" class="loading">{{ t('locationQuests.loading') }}</div>
       <div v-else class="quests">
@@ -38,7 +26,6 @@
           >
             <div v-if="quest.isPerfect" class="stamp">{{ t('locationQuests.done') }}</div>
             <div v-else-if="quest.hasMistakes" class="stamp stamp--mistakes">{{ t('locationQuests.mistakes') }}</div>
-<!--            <h3 class="quest__title">{{ t(quest.title) }}</h3>-->
             <div class="stamp__icon-wrapper">
               <img class="stamp__icon" src="../../assets/images/questList.svg" alt="questList">
             </div>
@@ -83,55 +70,21 @@ import { useRoute, useRouter } from "vue-router";
 import { regions } from "~/utils/regions.js";
 import { userChainStore } from "~/store/chainStore.js";
 import { useSeoMeta } from '#imports';
-
-
-const heartClass = (life) => {
-  return {
-    'is-empty': life > chainStore.lives
-  }
-}
+import VHearts from '../../src/components/V-hearts.vue';
 
 const route = useRoute();
 const router = useRouter();
-const canonical = useCanonical();
 const { t, locale } = useI18n();
 const chainStore = userChainStore();
 const questList = ref([]);
 const isLoading = ref(false);
 const errorMessage = ref("");
-const now = ref(Date.now());
-let timerInterval = null;
-
-const recoveryTimerText = computed(() => {
-  if (chainStore.lives >= chainStore.maxLives) return "";
-  const lastLife = chainStore.lastLifeAtMs || now.value;
-  const elapsed = now.value - lastLife;
-  const nextTickIn = chainStore.REGEN_INTERVAL_MS - (elapsed % chainStore.REGEN_INTERVAL_MS);
-  const totalSeconds = Math.floor(nextTickIn / 1000);
-  const mins = Math.floor(totalSeconds / 60);
-  const secs = totalSeconds % 60;
-  return `${mins}:${secs.toString().padStart(2, '0')}`;
-});
-
-onMounted(async () => {
-  await chainStore.loadProgressFromFirebase();
-  timerInterval = setInterval(() => {
-    now.value = Date.now();
-  }, 1000);
-});
-
-onUnmounted(() => {
-  if (timerInterval) clearInterval(timerInterval);
-});
 
 useSeoMeta({
   robots: 'noindex, nofollow'
 });
 
-const currentRegionKey = computed(() => {
-  return String(route.query.region || route.params.id || "");
-});
-
+const currentRegionKey = computed(() => String(route.query.region || route.params.id || ""));
 const currentRegion = computed(() => {
   const allRegionsList = Object.values(regions).flat();
   return allRegionsList.find((r) => r.pathTo === currentRegionKey.value);
@@ -211,6 +164,7 @@ watch(currentRegionKey, fetchQuests, { immediate: true });
 onMounted(async () => {
   await chainStore.loadProgressFromFirebase();
 });
+
 </script>
 
 <style scoped>
@@ -701,43 +655,6 @@ onMounted(async () => {
   }
 }
 
-.hearts-desktop {
-  display: flex;
-  gap: 6px;
-}
-
-.lives-bar {
-  margin-bottom: 14px;
-}
-
-.heart-unit {
-  font-size: 20px;
-}
-
-.lives-info{
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  font-size: 18px;
-  gap: 6px;
-}
-
-.heart-unit.is-empty {
-  filter: grayscale(1);
-  opacity: 0.3;
-  transform: scale(0.9);
-  display: inline-block;
-}
-
-.heart-unit {
-  font-size: 28px;
-  transition: all 0.3s ease;
-}
-
-.max-status {
-  color: #3d3c3c;
-}
-
 .lives-bar__content {
   display: flex;
   justify-content: space-between;
@@ -747,23 +664,7 @@ onMounted(async () => {
   border-radius: 15px;
   box-shadow: 4px 4px 0 #2b2b2b;
   background: white;
+  margin-bottom: 17px;
 }
 
-@media (max-width: 564px) {
-  .timer-label {
-    display: none;
-  }
-  .hearts-desktop {
-    gap: 0;
-  }
-  .heart-unit{
-    font-size: 26px;
-  }
-  .lives-info{
-    font-size: 16px;
-  }
-  .lives-bar__content {
-    padding: 3px 12px;
-  }
-}
 </style>

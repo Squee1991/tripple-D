@@ -142,7 +142,7 @@ const toggleScreen = (target) => {
 
 const startMission = (sectorId) => {
   router.push({
-    name: `games-id___${locale.value}`,
+    name: `german-universe-id___${locale.value}`,
     params: { id: sectorId }
   })
 }
