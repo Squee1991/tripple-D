@@ -9,17 +9,7 @@
         <div class="lives-bar__content">
           <div class="lives-hearts">
             <div class="hearts-desktop">
-              <span
-                  v-for="n in chainStore.maxLives"
-                  :key="n"
-                  class="heart-unit"
-                  :class="{ 'is-empty': n > chainStore.lives }"
-              >❤️
-              </span>
-            </div>
-            <div class="hearts-mobile">
-              <span class="heart-unit">❤️</span>
-              <span class="lives-count">{{ chainStore.lives }}</span>
+              <span v-for="life in chainStore.maxLives" :key="life" class="heart-unit" :class="heartClass(life)">❤️</span>
             </div>
           </div>
           <div class="lives-info">
@@ -93,7 +83,13 @@ import { useRoute, useRouter } from "vue-router";
 import { regions } from "~/utils/regions.js";
 import { userChainStore } from "~/store/chainStore.js";
 import { useSeoMeta } from '#imports';
-import { useCanonical } from "../../composables/useCanonical.js";
+
+
+const heartClass = (life) => {
+  return {
+    'is-empty': life > chainStore.lives
+  }
+}
 
 const route = useRoute();
 const router = useRouter();
@@ -705,10 +701,6 @@ onMounted(async () => {
   }
 }
 
-.hearts-mobile {
-  display: none;
-}
-
 .hearts-desktop {
   display: flex;
   gap: 6px;
@@ -742,8 +734,8 @@ onMounted(async () => {
   transition: all 0.3s ease;
 }
 
-.max-status-wrapper {
-  color: white;
+.max-status {
+  color: #3d3c3c;
 }
 
 .lives-bar__content {
@@ -758,26 +750,18 @@ onMounted(async () => {
 }
 
 @media (max-width: 564px) {
-  .hearts-desktop {
+  .timer-label {
     display: none;
   }
-
-  .hearts-mobile {
-    display: flex;
-    align-items: center;
+  .hearts-desktop {
+    gap: 0;
   }
-
-  .lives-count {
-    font-size: 20px;
-    font-weight: 900;
-    color: #111;
-    margin-top: 4px;
+  .heart-unit{
+    font-size: 26px;
   }
-
   .lives-info{
     font-size: 16px;
   }
-
   .lives-bar__content {
     padding: 3px 12px;
   }

@@ -137,7 +137,7 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 }
 
 .ranks-wrapper::-webkit-scrollbar {
-  width: 10px;
+  width: 4px;
 }
 
 .ranks-wrapper::-webkit-scrollbar-thumb {
@@ -311,9 +311,6 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
   margin-left: 2px;
   box-shadow: 0 2px 4px rgba(46, 204, 113, 0.3);
 }
-
-/* --- КОНЕЦ СТИЛЕЙ ДЛЯ БЕЙДЖИКОВ --- */
-
 
 .hats-info {
   display: flex;
