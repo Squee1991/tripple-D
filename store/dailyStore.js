@@ -52,11 +52,13 @@ export const dailyStore = defineStore('dailyStore', () => {
         d.setHours(24, 0, 0, 0)
         return d.getTime()
     }
+
     function startOfTodayLocalMs(fromMs = Date.now()) {
         const d = new Date(fromMs)
         d.setHours(0, 0, 0, 0)
         return d.getTime()
     }
+
     const msLeft = computed(() => {
         const now = nowMs.value || Date.now()
         const left = nextLocalMidnightMs(now) - now
@@ -92,6 +94,7 @@ export const dailyStore = defineStore('dailyStore', () => {
             rewardClaimed: !!q?.rewardClaimed
         }
     }
+
     function wrapSlice(arr, start, count) {
         const len = arr.length
         if (!len) return []
@@ -125,6 +128,7 @@ export const dailyStore = defineStore('dailyStore', () => {
         return {
             cycleKey: key,
             quests: slice,
+            penaltyProcessed: false, // Метка для Артикля всегда создается новой
             counters: { ...counters.value },
             completedCount: 0,
             hatClaimed: false,
@@ -220,32 +224,6 @@ export const dailyStore = defineStore('dailyStore', () => {
         cloudReady.value = false
     }
 
-    async function checkPreviousDayPenalty(previousCycleData) {
-        if (!previousCycleData) return
-        const completedYesterday = previousCycleData.completedCount || 0
-        if (completedYesterday === 0) {
-            const authStore = userAuthStore()
-            const previousCycleExpiresAt = Number(previousCycleData.expiresAtMs || 0)
-            const freezeEndMs = authStore.freezeEndsAt
-            let hadShieldYesterday = false
-            if (freezeEndMs) {
-                const previousCycleStartsAt = previousCycleExpiresAt - CYCLE_MS
-                if (freezeEndMs > previousCycleStartsAt) {
-                    hadShieldYesterday = true
-                }
-            }
-            if (hadShieldYesterday) {
-                console.log('Штраф прощен: у юзера был щит на момент прошлого цикла.')
-                await authStore.cancelFreeze()
-                return
-            }
-            console.log('Штраф применен: квесты не выполнены, щита не было.')
-            await authStore.modifyHats(-3)
-        }
-    }
-
-    let ensurePromise = null
-
     async function ensureLocalCycle() {
         const key = cycleKey.value
         const exist = loadLocal()
@@ -253,57 +231,17 @@ export const dailyStore = defineStore('dailyStore', () => {
         const currentUid = uid() || 'anon'
         const isNewDay = !exist || exist.cycleKey !== key || now >= Number(exist.expiresAtMs || 0)
         const isNewUser = exist && exist.owner && exist.owner !== currentUid
+
         if (isNewDay || isNewUser) {
-            // 1. СРАЗУ генерируем и сохраняем новый день локально (синхронно!)
-            // Это моментально закроет дверь для других параллельных вызовов
             const fresh = buildNewCyclePayload(key)
             currentCycle.value = fresh
             saveLocal(fresh)
-            if (exist && exist.owner === currentUid && isNewDay) {
-                await checkPreviousDayPenalty(exist)
-            }
             pushCurrentCycleToCloud(fresh, false).catch(() => {})
             return
         }
         currentCycle.value = exist
         counters.value = { ...(exist.counters || counters.value) }
     }
-
-    // async function ensureLocalCycle() {
-    //     if (ensurePromise) {
-    //         await ensurePromise
-    //         return
-    //     }
-    //     ensurePromise = (async () => {
-    //         const key = cycleKey.value
-    //         const exist = loadLocal()
-    //         const now = Date.now()
-    //         const currentUid = uid() || 'anon'
-    //
-    //         const isNewDay = !exist || exist.cycleKey !== key || now >= Number(exist.expiresAtMs || 0)
-    //         const isNewUser = exist && exist.owner && exist.owner !== currentUid
-    //
-    //         if (isNewDay || isNewUser) {
-    //             if (exist && exist.owner === currentUid && isNewDay) {
-    //                 await checkPreviousDayPenalty(exist)
-    //             }
-    //
-    //             const fresh = buildNewCyclePayload(key)
-    //             currentCycle.value = fresh
-    //             saveLocal(fresh)
-    //             pushCurrentCycleToCloud(fresh, false).catch(() => {})
-    //             return
-    //         }
-    //         currentCycle.value = exist
-    //         counters.value = { ...(exist.counters || counters.value) }
-    //     })()
-    //
-    //     try {
-    //         await ensurePromise
-    //     } finally {
-    //         ensurePromise = null
-    //     }
-    // }
 
     function valueForQuestByCounters(qid) {
         const c = counters.value
@@ -400,7 +338,7 @@ export const dailyStore = defineStore('dailyStore', () => {
 
         currentCycle.value = updated
         saveLocal(updated)
-        await pushCurrentCycleToCloud(updated, true)
+        await pushCurrentCycleToCloud(updated, true) // Здесь используем merge: true
         if (newlyCompleted > 0) { try { await incrementAgg(newlyCompleted) } catch {} }
     }
 
@@ -436,6 +374,7 @@ export const dailyStore = defineStore('dailyStore', () => {
     function addPerfectQuest(n = 1) { counters.value.perfectQuestCnt += n; scheduleDailySync() }
     function addGuessWord(n = 1) { counters.value.guessWordCnt += n; scheduleDailySync()}
     function addThematicLearning(n = 1) {counters.value.thematicLearningCnt += n;scheduleDailySync();}
+
     function noteEasyStreak(streak) {
         if (streak > counters.value.easyStreakBest) {
             counters.value.easyStreakBest = streak

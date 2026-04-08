@@ -38,7 +38,7 @@
           "Ich sehe einen neue Fernseher."
         ],
         "answer": "Ich sehe einen neuen Fernseher.",
-        "tip": "Неопределенный артикль, мужской род, Akkusativ. Артикль 'einen' уже имеет окончание**, поэтому прилагательное всегда получает -en."
+        "tip": "Неопределенный артикль, мужской род, Akkusativ. Артикль 'einen' уже имеет окончание, поэтому прилагательное всегда получает -en."
       },
       {
         "id": 4,
@@ -152,2116 +152,1794 @@
   },
   {
     "questId": "two",
-    "title": "Логика артиклей: Финал",
+    "title": "definiteIndefiniteQuestTwo.title",
     "progress": "0/15",
-    "description": "Смешанный тренинг. Учимся различать ситуацию, когда мы знаем предмет и когда видим его впервые.",
+    "description": "definiteIndefiniteQuestTwo.description",
     "conditions": {
-      "goal": "Закрепи разницу в окончаниях раз и навсегда!",
+      "goal": "definiteIndefiniteQuestTwo.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
-    "rewards": {
-      "points": 20,
-      "xp": 20
-    },
+    "rewards": { "points": 20, "xp": 20 },
     "tasks": [
       {
         "id": 1,
         "type": "input",
-        "question": "Впишите форму (alt): Dort steht ein ___ Haus.",
+        "question": "definiteIndefiniteQuestTwo.questOne",
         "answer": "altes",
-        "tip": "Предмет упоминается **впервые** (неизвестен). Артикль 'ein' пустой, поэтому прилагательное **берет окончание** у определенного артикля среднего рода (daS) -> altES."
+        "tip": "definiteIndefiniteQuestTwo.questOneTip"
       },
       {
         "id": 2,
         "type": "input",
-        "question": "Впишите форму (alt): Das ___ Haus ist sehr teuer.",
+        "question": "definiteIndefiniteQuestTwo.questTwo",
         "answer": "alte",
-        "tip": "Предмет нам **уже знаком** (точно знаем). Определенный артикль 'das' **уже всё показал**, поэтому прилагательное просто получает окончание -e."
+        "tip": "definiteIndefiniteQuestTwo.questTwoTip"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Выберите верный вариант: В комнате стоит новый шкаф",
-        "options": [
-          "Ein neue Schrank steht im Zimmer.",
-          "Ein neuer Schrank steht im Zimmer.",
-          "Ein neues Schrank steht im Zimmer."
-        ],
+        "question": "definiteIndefiniteQuestTwo.questThree",
+        "options": ["Ein neue Schrank steht im Zimmer.", "Ein neuer Schrank steht im Zimmer.", "Ein neues Schrank steht im Zimmer."],
         "answer": "Ein neuer Schrank steht im Zimmer.",
-        "tip": "Предмет упоминается **впервые** (неизвестен). Шкаф — мужской род (der). Артикль 'ein' пустой, поэтому прилагательное **берет окончание** у deR -> neuER."
+        "tip": "definiteIndefiniteQuestTwo.questThreeTip"
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Выберите верный вариант: Этот новый шкаф очень большой",
-        "options": [
-          "Der neue Schrank ist sehr groß.",
-          "Der neuer Schrank ist sehr groß.",
-          "Der neuen Schrank ist sehr groß."
-        ],
+        "question": "definiteIndefiniteQuestTwo.questFour",
+        "options": ["Der neue Schrank ist sehr groß.", "Der neuer Schrank ist sehr groß.", "Der neuen Schrank ist sehr groß."],
         "answer": "Der neue Schrank ist sehr groß.",
-        "tip": "Предмет нам **уже знаком** (точно знаем). Артикль 'der' **уже сам показал** род, поэтому прилагательное просто получает окончание -e."
+        "tip": "definiteIndefiniteQuestTwo.questFourTip"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Соберите: Мама купила вкусную пиццу",
+        "question": "definiteIndefiniteQuestTwo.questFive",
         "words": ["Mutter", "eine", "gekauft", "leckere", "Pizza", "leckeren", "hat"],
         "correctOrder": ["Mutter", "hat", "eine", "leckere", "Pizza", "gekauft"],
-        "tip": "Предмет упоминается **впервые**. Женский род: прилагательное **берет окончание -e** у артикля 'eine'."
+        "tip": "definiteIndefiniteQuestTwo.questFiveTip"
       },
       {
         "id": 6,
         "type": "reorder",
-        "question": "Соберите: Эта вкусная пицца ещё горячая",
+        "question": "definiteIndefiniteQuestTwo.questSix",
         "words": ["Die", "leckere", "Pizza", "ist", "noch", "heiß", "leckerer"],
         "correctOrder": ["Die", "leckere", "Pizza", "ist", "noch", "heiß"],
-        "tip": "Предмет нам **уже знаком**. Артикль 'die' **уже всё показал**, поэтому прилагательное просто получает окончание -e."
+        "tip": "definiteIndefiniteQuestTwo.questSixTip"
       },
       {
         "id": 7,
         "type": "input",
-        "question": "Впишите форму (groß): Dort ist ein ___ Garten.",
+        "question": "definiteIndefiniteQuestTwo.questSeven",
         "answer": "großer",
-        "tip": "Предмет упоминается **впервые**. Сад — мужской род (der). Артикль 'ein' пустой, поэтому прилагательное **берет окончание** у deR -> großER."
+        "tip": "definiteIndefiniteQuestTwo.questSevenTip"
       },
       {
         "id": 8,
         "type": "input",
-        "question": "Впишите форму (groß): Der ___ Garten ist sehr schön.",
+        "question": "definiteIndefiniteQuestTwo.questEight",
         "answer": "große",
-        "tip": "Предмет нам **уже знаком**. Артикль 'der' **уже всё показал**, поэтому прилагательное просто получает окончание -e."
+        "tip": "definiteIndefiniteQuestTwo.questEightTip"
       },
       {
         "id": 9,
         "type": "select",
-        "question": "Выберите верный вариант: Я куплю новый ноутбук",
-        "options": [
-          "Ich werde einen neuen Laptop kaufen.",
-          "Ich werde einen neuer Laptop kaufen.",
-          "Ich werde einen neue Laptop kaufen."
-        ],
+        "question": "definiteIndefiniteQuestTwo.questNine",
+        "options": ["Ich werde einen neuen Laptop kaufen.", "Ich werde einen neuer Laptop kaufen.", "Ich werde einen neue Laptop kaufen."],
         "answer": "Ich werde einen neuen Laptop kaufen.",
-        "tip": "Предмет упоминается **впервые**. Мужской род, Akkusativ. Артикль 'einen' **имеет окончание падежа**, поэтому прилагательное всегда получает -en."
+        "tip": "definiteIndefiniteQuestTwo.questNineTip"
       },
       {
         "id": 10,
         "type": "select",
-        "question": "Выберите верный вариант: Я починю этот новый ноутбук",
-        "options": [
-          "Ich werde den neuen Laptop reparieren.",
-          "Ich werde den neue Laptop reparieren.",
-          "Ich werde den neuer Laptop reparieren."
-        ],
+        "question": "definiteIndefiniteQuestTwo.questTen",
+        "options": ["Ich werde den neuen Laptop reparieren.", "Ich werde den neue Laptop reparieren.", "Ich werde den neuer Laptop reparieren."],
         "answer": "Ich werde den neuen Laptop reparieren.",
-        "tip": "Предмет нам **уже знаком**. В Akkusativ мужского рода после любого измененного артикля (den) прилагательное всегда получает -en."
+        "tip": "definiteIndefiniteQuestTwo.questTenTip"
       },
       {
         "id": 11,
         "type": "input",
-        "question": "Впишите форму (alt): Ich habe in einem ___ Hotel geschlafen.",
+        "question": "definiteIndefiniteQuestTwo.questEleven",
         "answer": "alten",
-        "tip": "Предмет упоминается **впервые**, но стоит в Dativ. Артикль 'einem' **уже имеет окончание**, поэтому прилагательное получает -en."
+        "tip": "definiteIndefiniteQuestTwo.questElevenTip"
       },
       {
         "id": 12,
         "type": "input",
-        "question": "Впишите форму (alt): In dem ___ Hotel war es laut.",
+        "question": "definiteIndefiniteQuestTwo.questTwelve",
         "answer": "alten",
-        "tip": "Предмет нам **уже знаком** (Dativ). После определенного артикля 'dem', который уже показал падеж, прилагательное всегда получает -en."
+        "tip": "definiteIndefiniteQuestTwo.questTwelveTip"
       },
       {
         "id": 13,
         "type": "reorder",
-        "question": "Соберите: Маленький ребенок смеется",
+        "question": "definiteIndefiniteQuestTwo.questThirteen",
         "words": ["Ein", "kleines", "Kind", "lacht", "kleine", "kleinen"],
         "correctOrder": ["Ein", "kleines", "Kind", "lacht"],
-        "tip": "Предмет упоминается **впервые**. Ребенок — средний род (das). Артикль 'ein' пустой, прилагательное **берет окончание** у daS -> kleinES."
+        "tip": "definiteIndefiniteQuestTwo.questThirteenTip"
       },
       {
         "id": 14,
         "type": "reorder",
-        "question": "Соберите: Этот маленький ребенок смеется",
+        "question": "definiteIndefiniteQuestTwo.questFourteen",
         "words": ["Das", "kleine", "Kind", "lacht", "kleines"],
         "correctOrder": ["Das", "kleine", "Kind", "lacht"],
-        "tip": "Предмет нам **уже знаком**. Артикль 'das' **уже показал** род, поэтому прилагательное получает окончание -e."
+        "tip": "definiteIndefiniteQuestTwo.questFourteenTip"
       },
       {
         "id": 15,
         "type": "select",
-        "question": "Выберите верный вариант: У него есть быстрая машина",
-        "options": [
-          "Er hat ein schnelles Auto.",
-          "Er hat ein schnelle Auto.",
-          "Er hat ein schnellen Auto."
-        ],
+        "question": "definiteIndefiniteQuestTwo.questFifteen",
+        "options": ["Er hat ein schnelles Auto.", "Er hat ein schnelle Auto.", "Er hat ein schnellen Auto."],
         "answer": "Er hat ein schnelles Auto.",
-        "tip": "Предмет упоминается **впервые**. Машина — средний род (das). Артикль 'ein' пустой, прилагательное **берет окончание** у daS -> schnellES."
+        "tip": "definiteIndefiniteQuestTwo.questFifteenTip"
       }
     ]
   },
   {
-      "questId": "three",
-      "title": "Мастер окончаний",
-      "progress": "0/15",
-      "description": "Смешанная практика: закрепляем разницу между известным и неизвестным предметом.",
-      "conditions": {
-        "goal": "Доведи навык до автоматизма на skillupgerman!",
-        "minCorrect": 12,
-        "requiredTasks": 15
-      },
-      "rewards": {
-        "points": 20,
-        "xp": 20
-      },
-      "tasks": [
-        {
-          "id": 1,
-          "type": "input",
-          "question": "Впишите форму (lecker): Ich habe ein ___ Brot gekauft.",
-          "answer": "leckeres",
-          "tip": "Предмет упоминается впервые (неизвестен). Хлеб — средний род (das). Артикль 'ein' пустой, поэтому прилагательное **берет окончание** у артикля daS -> leckerES."
-        },
-        {
-          "id": 2,
-          "type": "input",
-          "question": "Впишите форму (lecker): Das ___ Brot schmeckt sehr gut.",
-          "answer": "leckere",
-          "tip": "Предмет уже известен. Определенный артикль 'das' **уже показал** средний род, поэтому прилагательное просто получает окончание -e."
-        },
-        {
-          "id": 3,
-          "type": "select",
-          "question": "Выберите верный вариант: В саду растёт большое дерево",
-          "options": [
-            "Ein großer Baum wächst im Garten.",
-            "Ein große Baum wächst im Garten.",
-            "Ein großen Baum wächst im Garten."
-          ],
-          "answer": "Ein großer Baum wächst im Garten.",
-          "tip": "Предмет упоминается впервые. Дерево — мужской род (der). Артикль 'ein' пустой, поэтому прилагательное **берет окончание** у deR -> großER."
-        },
-        {
-          "id": 4,
-          "type": "select",
-          "question": "Выберите верный вариант: Это большое дерево очень старое",
-          "options": [
-            "Der große Baum ist sehr alt.",
-            "Der großer Baum ist sehr alt.",
-            "Der großen Baum ist sehr alt."
-          ],
-          "answer": "Der große Baum ist sehr alt.",
-          "tip": "Предмет точно известен. Артикль 'der' **уже всё показал**, поэтому прилагательное просто получает окончание -e."
-        },
-        {
-          "id": 5,
-          "type": "reorder",
-          "question": "Соберите: У неё есть новая сумка",
-          "words": ["Sie", "hat", "eine", "neue", "Tasche", "neuen"],
-          "correctOrder": ["Sie", "hat", "eine", "neue", "Tasche"],
-          "tip": "Предмет упоминается впервые. Женский род: прилагательное **берет окончание -e** у артикля 'eine'."
-        },
-        {
-          "id": 6,
-          "type": "reorder",
-          "question": "Соберите: Эта новая сумка очень дорогая",
-          "words": ["Die", "neue", "Tasche", "ist", "sehr", "teuer", "neuer"],
-          "correctOrder": ["Die", "neue", "Tasche", "ist", "sehr", "teuer"],
-          "tip": "Предмет точно известен. Артикль 'die' **уже всё показал**, поэтому прилагательное просто получает окончание -e."
-        },
-        {
-          "id": 7,
-          "type": "input",
-          "question": "Впишите форму (kalt): Er hat ein ___ Bier bestellt.",
-          "answer": "kaltes",
-          "tip": "Предмет упоминается впервые. Пиво — средний род (das). Артикль 'ein' пустой, прилагательное **берет окончание** у daS -> kaltES."
-        },
-        {
-          "id": 8,
-          "type": "input",
-          "question": "Впишите форму (kalt): Das ___ Bier steht auf dem Tisch.",
-          "answer": "kalte",
-          "tip": "Предмет точно известен. Артикль 'das' **уже показал** средний род, прилагательное ставит окончание -e."
-        },
-        {
-          "id": 9,
-          "type": "select",
-          "question": "Выберите верный вариант: Я куплю новый телевизор",
-          "options": [
-            "Ich werde einen neuen Fernseher kaufen.",
-            "Ich werde einen neuer Fernseher kaufen.",
-            "Ich werde einen neue Fernseher kaufen."
-          ],
-          "answer": "Ich werde einen neuen Fernseher kaufen.",
-          "tip": "Предмет упоминается впервые. Akkusativ мужского рода: артикль 'einen' **имеет окончание**, поэтому прилагательное всегда получает -en."
-        },
-        {
-          "id": 10,
-          "type": "select",
-          "question": "Выберите верный вариант: Я включу этот новый телевизор",
-          "options": [
-            "Ich mache den neuen Fernseher an.",
-            "Ich mache den neue Fernseher an.",
-            "Ich mache den neuer Fernseher an."
-          ],
-          "answer": "Ich mache den neuen Fernseher an.",
-          "tip": "Предмет точно известен. В Akkusativ мужского рода после любого артикля с окончанием (den) прилагательное берет -en."
-        },
-        {
-          "id": 11,
-          "type": "reorder",
-          "question": "Соберите: Мы ждём старого друга",
-          "words": ["Wir", "warten", "auf", "einen", "alten", "Freund", "alter"],
-          "correctOrder": ["Wir", "warten", "auf", "einen", "alten", "Freund"],
-          "tip": "Мужской род, Akkusativ. Артикль 'einen' **уже показал падеж**, поэтому прилагательное получает окончание -en."
-        },
-        {
-          "id": 12,
-          "type": "reorder",
-          "question": "Соберите: Мы ждём этого старого друга",
-          "words": ["Wir", "warten", "auf", "den", "alten", "Freund", "alte"],
-          "correctOrder": ["Wir", "warten", "auf", "den", "alten", "Freund"],
-          "tip": "Предмет известен. После артикля 'den' в мужском роде прилагательное всегда получает -en."
-        },
-        {
-          "id": 13,
-          "type": "input",
-          "question": "Впишите форму (gut): Das war ein ___ Tag.",
-          "answer": "guter",
-          "tip": "Предмет упоминается впервые. День — мужской род (der). Артикль 'ein' пустой, прилагательное **берет окончание** у deR -> gutER."
-        },
-        {
-          "id": 14,
-          "type": "input",
-          "question": "Впишите форму (gut): Der ___ Tag war gestern.",
-          "answer": "gute",
-          "tip": "Предмет точно известен. Артикль 'der' **уже показал** род, поэтому прилагательное просто получает окончание -e."
-        },
-        {
-          "id": 15,
-          "type": "select",
-          "question": "Выберите верный вариант: Он нашел удобный стул",
-          "options": [
-            "Er hat einen bequemen Stuhl gefunden.",
-            "Er hat einen bequemer Stuhl gefunden.",
-            "Er hat einen bequeme Stuhl gefunden."
-          ],
-          "answer": "Er hat einen bequemen Stuhl gefunden.",
-          "tip": "Мужской род, Akkusativ. Артикль 'einen' имеет окончание, поэтому прилагательное получает -en."
-        }
-      ]
-    },
-  {
-      "questId": "four",
-      "title": "Грамматический марафон",
-      "progress": "0/15",
-      "description": "Закрепляем разницу между известным и неизвестным предметом. Темы: природа, город, техника.",
-      "conditions": {
-        "goal": "Разберись в окончаниях на 100%!",
-        "minCorrect": 12,
-        "requiredTasks": 15
-      },
-      "rewards": {
-        "points": 20,
-        "xp": 20
-      },
-      "tasks": [
-        {
-          "id": 1,
-          "type": "input",
-          "question": "Впишите форму (schön): Dort ist ein ___ Garten.",
-          "answer": "schöner",
-          "tip": "Предмет упоминается впервые. Сад — мужской род (der). Артикль 'ein' пустой, поэтому прилагательное **берет окончание** у deR -> schönER."
-        },
-        {
-          "id": 2,
-          "type": "input",
-          "question": "Впишите форму (schön): Der ___ Garten ist hinter dem Haus.",
-          "answer": "schöne",
-          "tip": "Предмет уже известен. Определенный артикль 'der' **уже сам показал** мужской род, поэтому прилагательное просто получает окончание -e."
-        },
-        {
-          "id": 3,
-          "type": "select",
-          "question": "Выберите верный вариант: Мы купили новый компьютер",
-          "options": [
-            "Wir haben einen neuen Computer gekauft.",
-            "Wir haben einen neuer Computer gekauft.",
-            "Wir haben einen neue Computer gekauft."
-          ],
-          "answer": "Wir haben einen neuen Computer gekauft.",
-          "tip": "Предмет упоминается впервые. Мужской род, Akkusativ. Артикль 'einen' **уже имеет окончание**, поэтому прилагательное всегда получает -en."
-        },
-        {
-          "id": 4,
-          "type": "select",
-          "question": "Выберите верный вариант: Этот новый компьютер стоит на столе",
-          "options": [
-            "Der neue Computer steht auf dem Tisch.",
-            "Der neuer Computer steht auf dem Tisch.",
-            "Der neuen Computer steht auf dem Tisch."
-          ],
-          "answer": "Der neue Computer steht auf dem Tisch.",
-          "tip": "Предмет точно известен. Артикль 'der' **уже показал** мужской род, поэтому прилагательное просто получает окончание -e."
-        },
-        {
-          "id": 5,
-          "type": "reorder",
-          "question": "Соберите: Маленькое окно открыто",
-          "words": ["Ein", "kleines", "Fenster", "ist", "offen", "kleine"],
-          "correctOrder": ["Ein", "kleines", "Fenster", "ist", "offen"],
-          "tip": "Предмет упоминается впервые. Окно — средний род (das). Артикль 'ein' пустой, поэтому прилагательное **берет окончание** у daS -> kleinES."
-        },
-        {
-          "id": 6,
-          "type": "reorder",
-          "question": "Соберите: Это маленькое окно открыто",
-          "words": ["Das", "kleine", "Fenster", "ist", "offen", "kleines"],
-          "correctOrder": ["Das", "kleine", "Fenster", "ist", "offen"],
-          "tip": "Предмет точно известен. Артикль 'das' **уже всё показал**, поэтому прилагательное просто получает окончание -e."
-        },
-        {
-          "id": 7,
-          "type": "input",
-          "question": "Впишите форму (nett): Ich habe eine ___ Frau getroffen.",
-          "answer": "nette",
-          "tip": "Предмет упоминается впервые. Женский род: прилагательное **берет окончание -e** у артикля 'eine'."
-        },
-        {
-          "id": 8,
-          "type": "input",
-          "question": "Впишите форму (nett): Die ___ Frau hat mir geholfen.",
-          "answer": "nette",
-          "tip": "Предмет уже известен. Артикль 'die' **уже показал** женский род, поэтому прилагательное просто получает окончание -e."
-        },
-        {
-          "id": 9,
-          "type": "select",
-          "question": "Выберите верный вариант: Он нашел хороший вариант",
-          "options": [
-            "Er hat einen guten Job gefunden.",
-            "Er hat einen guter Job gefunden.",
-            "Er hat einen gute Job gefunden."
-          ],
-          "answer": "Er hat einen guten Job gefunden.",
-          "tip": "Мужской род, Akkusativ. Артикль 'einen' **имеет окончание**, поэтому прилагательное получает окончание -en."
-        },
-        {
-          "id": 10,
-          "type": "select",
-          "question": "Выберите верный вариант: Он получил этот хороший вариант",
-          "options": [
-            "Er hat den guten Job bekommen.",
-            "Er hat den gute Job bekommen.",
-            "Er hat den guter Job bekommen."
-          ],
-          "answer": "Er hat den guten Job bekommen.",
-          "tip": "В Akkusativ мужского рода после любого артикля с окончанием (den) прилагательное всегда получает -en."
-        },
-        {
-          "id": 11,
-          "type": "reorder",
-          "question": "Соберите: У него есть современный планшет",
-          "words": ["Er", "hat", "ein", "modernes", "Tablet", "modernen"],
-          "correctOrder": ["Er", "hat", "ein", "modernes", "Tablet"],
-          "tip": "Предмет упоминается впервые. Планшет — средний род (das). Артикль 'ein' пустой, поэтому прилагательное **берет окончание** у daS -> modernES."
-        },
-        {
-          "id": 12,
-          "type": "reorder",
-          "question": "Соберите: Этот современный планшет очень быстрый",
-          "words": ["Das", "moderne", "Tablet", "ist", "sehr", "schnell", "modernes"],
-          "correctOrder": ["Das", "moderne", "Tablet", "ist", "sehr", "schnell"],
-          "tip": "Предмет точно известен. Артикль 'das' **уже показал** род, поэтому прилагательное просто получает окончание -e."
-        },
-        {
-          "id": 13,
-          "type": "input",
-          "question": "Впишите форму (groß): Wir wohnen in einer ___ Stadt.",
-          "answer": "großen",
-          "tip": "Предмет упоминается впервые, но это Dativ. Артикль 'einer' **уже имеет окончание**, поэтому прилагательное получает -en."
-        },
-        {
-          "id": 14,
-          "type": "input",
-          "question": "Впишите форму (groß): In der ___ Stadt ist es laut.",
-          "answer": "großen",
-          "tip": "Предмет известен, это Dativ. После определенного артикля 'der' (который изменился) прилагательное всегда получает -en."
-        },
-        {
-          "id": 15,
-          "type": "select",
-          "question": "Выберите верный вариант: Я пью горячий чай",
-          "options": [
-            "Ich trinke einen heißen Tee.",
-            "Ich trinke einen heißer Tee.",
-            "Ich trinke einen heiße Tee."
-          ],
-          "answer": "Ich trinke einen heißen Tee.",
-          "tip": "Мужской род, Akkusativ. Артикль 'einen' **уже показал падеж**, поэтому прилагательное забирает окончание -en."
-        }
-      ]
-    },
-  {
-    "questId": "five",
-    "title": "Грамматический фисаж",
+    "questId": "three",
+    "title": "definiteIndefiniteQuestThree.title",
     "progress": "0/15",
-    "description": "Закрепляем разницу между известным и неизвестным предметом в реальных предложениях.",
+    "description": "definiteIndefiniteQuestThree.description",
     "conditions": {
-      "goal": "Разберись в окончаниях на 100%!",
+      "goal": "definiteIndefiniteQuestThree.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
-    "rewards": {
-      "points": 20,
-      "xp": 20
-    },
+    "rewards": { "points": 20, "xp": 20 },
     "tasks": [
       {
         "id": 1,
         "type": "input",
-        "question": "Впишите форму (alt): Dort steht ein ___ Schrank.",
-        "answer": "alter",
-        "tip": "Предмет упоминается впервые. Шкаф — мужской род (der). Артикль 'ein' пустой, поэтому прилагательное **берет окончание** у deR -> altER."
+        "question": "definiteIndefiniteQuestThree.questOne",
+        "answer": "leckeres",
+        "tip": "definiteIndefiniteQuestThree.questOneTip"
       },
       {
         "id": 2,
         "type": "input",
-        "question": "Впишите форму (alt): Der ___ Schrank ist sehr schwer.",
-        "answer": "alte",
-        "tip": "Предмет уже известен. Определенный артикль 'der' **уже сам показал** род, поэтому прилагательное просто получает окончание -e."
+        "question": "definiteIndefiniteQuestThree.questTwo",
+        "answer": "leckere",
+        "tip": "definiteIndefiniteQuestThree.questTwoTip"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Выберите верный вариант: Я вижу новое платье",
-        "options": [
-          "Ich sehe ein neues Kleid.",
-          "Ich sehe ein neue Kleid.",
-          "Ich sehe ein neuen Kleid."
-        ],
-        "answer": "Ich sehe ein neues Kleid.",
-        "tip": "Предмет упоминается впервые. Платье — средний род (das). Артикль 'ein' пустой, поэтому прилагательное **берет окончание** у daS -> neuES."
+        "question": "definiteIndefiniteQuestThree.questThree",
+        "options": ["Ein großer Baum wächst im Garten.", "Ein große Baum wächst im Garten.", "Ein großen Baum wächst im Garten."],
+        "answer": "Ein großer Baum wächst im Garten.",
+        "tip": "definiteIndefiniteQuestThree.questThreeTip"
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Выберите верный вариант: Это новое платье очень красивое",
-        "options": [
-          "Das neue Kleid ist sehr schön.",
-          "Das neues Kleid ist sehr schön.",
-          "Das neuen Kleid ist sehr schön."
-        ],
-        "answer": "Das neue Kleid ist sehr schön.",
-        "tip": "Предмет точно известен. Артикль 'das' **уже показал** средний род, поэтому прилагательное просто получает окончание -e."
+        "question": "definiteIndefiniteQuestThree.questFour",
+        "options": ["Der große Baum ist sehr alt.", "Der großer Baum ist sehr alt.", "Der großen Baum ist sehr alt."],
+        "answer": "Der große Baum ist sehr alt.",
+        "tip": "definiteIndefiniteQuestThree.questFourTip"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Соберите: Маленькая сумка лежит здесь",
-        "words": ["Eine", "kleine", "Tasche", "liegt", "hier", "kleiner"],
-        "correctOrder": ["Eine", "kleine", "Tasche", "liegt", "hier"],
-        "tip": "Предмет упоминается впервые. Женский род: прилагательное **берет окончание -e** у артикля 'eine'."
+        "question": "definiteIndefiniteQuestThree.questFive",
+        "words": ["Sie", "hat", "eine", "neue", "Tasche", "neuen"],
+        "correctOrder": ["Sie", "hat", "eine", "neue", "Tasche"],
+        "tip": "definiteIndefiniteQuestThree.questFiveTip"
       },
       {
         "id": 6,
         "type": "reorder",
-        "question": "Соберите: Эта маленькая сумка принадлежит мне",
-        "words": ["Die", "kleine", "Tasche", "gehört", "mir", "kleines"],
-        "correctOrder": ["Die", "kleine", "Tasche", "gehört", "mir"],
-        "tip": "Предмет точно известен. Артикль 'die' **уже показал** женский род, поэтому прилагательное просто получает окончание -e."
+        "question": "definiteIndefiniteQuestThree.questSix",
+        "words": ["Die", "neue", "Tasche", "ist", "sehr", "teuer", "neuer"],
+        "correctOrder": ["Die", "neue", "Tasche", "ist", "sehr", "teuer"],
+        "tip": "definiteIndefiniteQuestThree.questSixTip"
       },
       {
         "id": 7,
         "type": "input",
-        "question": "Впишите форму (gut): Er hat einen ___ Freund.",
-        "answer": "guten",
-        "tip": "Предмет упоминается впервые. Мужской род, Akkusativ. Артикль 'einen' **уже имеет окончание**, поэтому прилагательное всегда получает -en."
+        "question": "definiteIndefiniteQuestThree.questSeven",
+        "answer": "kaltes",
+        "tip": "definiteIndefiniteQuestThree.questSevenTip"
       },
       {
         "id": 8,
         "type": "input",
-        "question": "Впишите форму (gut): Er besucht den ___ Freund.",
-        "answer": "guten",
-        "tip": "Предмет точно известен. В Akkusativ мужского рода после артикля 'den' прилагательное всегда получает окончание -en."
+        "question": "definiteIndefiniteQuestThree.questEight",
+        "answer": "kalte",
+        "tip": "definiteIndefiniteQuestThree.questEightTip"
       },
       {
         "id": 9,
         "type": "select",
-        "question": "Выберите верный вариант: Мы живем в маленьком доме",
-        "options": [
-          "Wir wohnen in einem kleinen Haus.",
-          "Wir wohnen in einem kleines Haus.",
-          "Wir wohnen in einem kleiner Haus."
-        ],
-        "answer": "Wir wohnen in einem kleinen Haus.",
-        "tip": "Предмет упоминается впервые, но это Dativ. Артикль 'einem' **уже имеет окончание**, поэтому прилагательное получает -en."
+        "question": "definiteIndefiniteQuestThree.questNine",
+        "options": ["Ich werde einen neuen Fernseher kaufen.", "Ich werde einen neuer Fernseher kaufen.", "Ich werde einen neue Fernseher kaufen."],
+        "answer": "Ich werde einen neuen Fernseher kaufen.",
+        "tip": "definiteIndefiniteQuestThree.questNineTip"
       },
       {
         "id": 10,
         "type": "select",
-        "question": "Выберите верный вариант: В этом маленьком доме тепло",
-        "options": [
-          "In dem kleinen Haus ist es warm.",
-          "In dem kleine Haus ist es warm.",
-          "In dem kleines Haus ist es warm."
-        ],
-        "answer": "In dem kleinen Haus ist es warm.",
-        "tip": "Предмет известен, это Dativ. После артикля 'dem' прилагательное всегда получает окончание -en."
+        "question": "definiteIndefiniteQuestThree.questTen",
+        "options": ["Ich mache den neuen Fernseher an.", "Ich mache den neue Fernseher an.", "Ich mache den neuer Fernseher an."],
+        "answer": "Ich mache den neuen Fernseher an.",
+        "tip": "definiteIndefiniteQuestThree.questTenTip"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Соберите: Там есть красивый парк",
-        "words": ["Dort", "ist", "ein", "schöner", "Park", "schöne"],
-        "correctOrder": ["Dort", "ist", "ein", "schöner", "Park"],
-        "tip": "Предмет упоминается впервые. Парк — мужской род (der). Артикль 'ein' пустой, поэтому прилагательное **берет окончание** у deR -> schönER."
+        "question": "definiteIndefiniteQuestThree.questEleven",
+        "words": ["Wir", "warten", "auf", "einen", "alten", "Freund", "alter"],
+        "correctOrder": ["Wir", "warten", "auf", "einen", "alten", "Freund"],
+        "tip": "definiteIndefiniteQuestThree.questElevenTip"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "Соберите: Этот красивый парк очень большой",
-        "words": ["Der", "schöne", "Park", "ist", "sehr", "groß", "schöner"],
-        "correctOrder": ["Der", "schöne", "Park", "ist", "sehr", "groß"],
-        "tip": "Предмет точно известен. Артикль 'der' **уже сам показал** род, поэтому прилагательное просто получает окончание -e."
+        "question": "definiteIndefiniteQuestThree.questTwelve",
+        "words": ["Wir", "warten", "auf", "den", "alten", "Freund", "alte"],
+        "correctOrder": ["Wir", "warten", "auf", "den", "alten", "Freund"],
+        "tip": "definiteIndefiniteQuestThree.questTwelveTip"
       },
       {
         "id": 13,
         "type": "input",
-        "question": "Впишите форму (kalt): Ich trinke ein ___ Wasser.",
-        "answer": "kaltes",
-        "tip": "Предмет упоминается впервые. Вода — средний род (das). Артикль 'ein' пустой, поэтому прилагательное **берет окончание** у артикля daS -> kaltES."
+        "question": "definiteIndefiniteQuestThree.questThirteen",
+        "answer": "guter",
+        "tip": "definiteIndefiniteQuestThree.questThirteenTip"
       },
       {
         "id": 14,
         "type": "input",
-        "question": "Впишите форму (schwarz): Er kauft einen ___ Rock.",
-        "answer": "schwarzen",
-        "tip": "Мужской род, Akkusativ. Артикль 'einen' имеет окончание падежа, поэтому прилагательное получает окончание -en."
+        "question": "definiteIndefiniteQuestThree.questFourteen",
+        "answer": "gute",
+        "tip": "definiteIndefiniteQuestThree.questFourteenTip"
       },
       {
         "id": 15,
         "type": "select",
-        "question": "Выберите верный вариант: Дует сильный ветер",
-        "options": [
-          "Ein starker Wind weht.",
-          "Ein starke Wind weht.",
-          "Ein starken Wind weht."
-        ],
+        "question": "definiteIndefiniteQuestThree.questFifteen",
+        "options": ["Er hat einen bequemen Stuhl gefunden.", "Er hat einen bequemer Stuhl gefunden.", "Er hat einen bequeme Stuhl gefunden."],
+        "answer": "Er hat einen bequemen Stuhl gefunden.",
+        "tip": "definiteIndefiniteQuestThree.questFifteenTip"
+      }
+    ]
+  },
+  {
+    "questId": "four",
+    "title": "definiteIndefiniteQuestFour.title",
+    "progress": "0/15",
+    "description": "definiteIndefiniteQuestFour.description",
+    "conditions": {
+      "goal": "definiteIndefiniteQuestFour.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": { "points": 20, "xp": 20 },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "input",
+        "question": "definiteIndefiniteQuestFour.questOne",
+        "answer": "schöner",
+        "tip": "definiteIndefiniteQuestFour.questOneTip"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "definiteIndefiniteQuestFour.questTwo",
+        "answer": "schöne",
+        "tip": "definiteIndefiniteQuestFour.questTwoTip"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "definiteIndefiniteQuestFour.questThree",
+        "options": ["Wir haben einen neuen Computer gekauft.", "Wir haben einen neuer Computer gekauft.", "Wir haben einen neue Computer gekauft."],
+        "answer": "Wir haben einen neuen Computer gekauft.",
+        "tip": "definiteIndefiniteQuestFour.questThreeTip"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "definiteIndefiniteQuestFour.questFour",
+        "options": ["Der neue Computer steht auf dem Tisch.", "Der neuer Computer steht auf dem Tisch.", "Der neuen Computer steht auf dem Tisch."],
+        "answer": "Der neue Computer steht auf dem Tisch.",
+        "tip": "definiteIndefiniteQuestFour.questFourTip"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "definiteIndefiniteQuestFour.questFive",
+        "words": ["Ein", "kleines", "Fenster", "ist", "offen", "kleine"],
+        "correctOrder": ["Ein", "kleines", "Fenster", "ist", "offen"],
+        "tip": "definiteIndefiniteQuestFour.questFiveTip"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "definiteIndefiniteQuestFour.questSix",
+        "words": ["Das", "kleine", "Fenster", "ist", "offen", "kleines"],
+        "correctOrder": ["Das", "kleine", "Fenster", "ist", "offen"],
+        "tip": "definiteIndefiniteQuestFour.questSixTip"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "definiteIndefiniteQuestFour.questSeven",
+        "answer": "nette",
+        "tip": "definiteIndefiniteQuestFour.questSevenTip"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "definiteIndefiniteQuestFour.questEight",
+        "answer": "nette",
+        "tip": "definiteIndefiniteQuestFour.questEightTip"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "definiteIndefiniteQuestFour.questNine",
+        "options": ["Er hat einen guten Job gefunden.", "Er hat einen guter Job gefunden.", "Er hat einen gute Job gefunden."],
+        "answer": "Er hat einen guten Job gefunden.",
+        "tip": "definiteIndefiniteQuestFour.questNineTip"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "definiteIndefiniteQuestFour.questTen",
+        "options": ["Er hat den guten Job bekommen.", "Er hat den gute Job bekommen.", "Er hat den guter Job bekommen."],
+        "answer": "Er hat den guten Job bekommen.",
+        "tip": "definiteIndefiniteQuestFour.questTenTip"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "definiteIndefiniteQuestFour.questEleven",
+        "words": ["Er", "hat", "ein", "modernes", "Tablet", "modernen"],
+        "correctOrder": ["Er", "hat", "ein", "modernes", "Tablet"],
+        "tip": "definiteIndefiniteQuestFour.questElevenTip"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "definiteIndefiniteQuestFour.questTwelve",
+        "words": ["Das", "moderne", "Tablet", "ist", "sehr", "schnell", "modernes"],
+        "correctOrder": ["Das", "moderne", "Tablet", "ist", "sehr", "schnell"],
+        "tip": "definiteIndefiniteQuestFour.questTwelveTip"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "definiteIndefiniteQuestFour.questThirteen",
+        "answer": "großen",
+        "tip": "definiteIndefiniteQuestFour.questThirteenTip"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "definiteIndefiniteQuestFour.questFourteen",
+        "answer": "großen",
+        "tip": "definiteIndefiniteQuestFour.questFourteenTip"
+      },
+      {
+        "id": 15,
+        "type": "select",
+        "question": "definiteIndefiniteQuestFour.questFifteen",
+        "options": ["Ich trinke einen heißen Tee.", "Ich trinke einen heißer Tee.", "Ich trinke einen heiße Tee."],
+        "answer": "Ich trinke einen heißen Tee.",
+        "tip": "definiteIndefiniteQuestFour.questFifteenTip"
+      }
+    ]
+  },
+  {
+    "questId": "five",
+    "title": "definiteIndefiniteQuestFive.title",
+    "progress": "0/15",
+    "description": "definiteIndefiniteQuestFive.description",
+    "conditions": {
+      "goal": "definiteIndefiniteQuestFive.goal",
+      "minCorrect": 12,
+      "requiredTasks": 15
+    },
+    "rewards": { "points": 20, "xp": 20 },
+    "tasks": [
+      {
+        "id": 1,
+        "type": "input",
+        "question": "definiteIndefiniteQuestFive.questOne",
+        "answer": "alter",
+        "tip": "definiteIndefiniteQuestFive.questOneTip"
+      },
+      {
+        "id": 2,
+        "type": "input",
+        "question": "definiteIndefiniteQuestFive.questTwo",
+        "answer": "alte",
+        "tip": "definiteIndefiniteQuestFive.questTwoTip"
+      },
+      {
+        "id": 3,
+        "type": "select",
+        "question": "definiteIndefiniteQuestFive.questThree",
+        "options": ["Ich sehe ein neues Kleid.", "Ich sehe ein neue Kleid.", "Ich sehe ein neuen Kleid."],
+        "answer": "Ich sehe ein neues Kleid.",
+        "tip": "definiteIndefiniteQuestFive.questThreeTip"
+      },
+      {
+        "id": 4,
+        "type": "select",
+        "question": "definiteIndefiniteQuestFive.questFour",
+        "options": ["Das neue Kleid ist sehr schön.", "Das neues Kleid ist sehr schön.", "Das neuen Kleid ist sehr schön."],
+        "answer": "Das neue Kleid ist sehr schön.",
+        "tip": "definiteIndefiniteQuestFive.questFourTip"
+      },
+      {
+        "id": 5,
+        "type": "reorder",
+        "question": "definiteIndefiniteQuestFive.questFive",
+        "words": ["Eine", "kleine", "Tasche", "liegt", "hier", "kleiner"],
+        "correctOrder": ["Eine", "kleine", "Tasche", "liegt", "hier"],
+        "tip": "definiteIndefiniteQuestFive.questFiveTip"
+      },
+      {
+        "id": 6,
+        "type": "reorder",
+        "question": "definiteIndefiniteQuestFive.questSix",
+        "words": ["Die", "kleine", "Tasche", "gehört", "mir", "kleines"],
+        "correctOrder": ["Die", "kleine", "Tasche", "gehört", "mir"],
+        "tip": "definiteIndefiniteQuestFive.questSixTip"
+      },
+      {
+        "id": 7,
+        "type": "input",
+        "question": "definiteIndefiniteQuestFive.questSeven",
+        "answer": "guten",
+        "tip": "definiteIndefiniteQuestFive.questSevenTip"
+      },
+      {
+        "id": 8,
+        "type": "input",
+        "question": "definiteIndefiniteQuestFive.questEight",
+        "answer": "guten",
+        "tip": "definiteIndefiniteQuestFive.questEightTip"
+      },
+      {
+        "id": 9,
+        "type": "select",
+        "question": "definiteIndefiniteQuestFive.questNine",
+        "options": ["Wir wohnen in einem kleinen Haus.", "Wir wohnen in einem kleines Haus.", "Wir wohnen in einem kleiner Haus."],
+        "answer": "Wir wohnen in einem kleinen Haus.",
+        "tip": "definiteIndefiniteQuestFive.questNineTip"
+      },
+      {
+        "id": 10,
+        "type": "select",
+        "question": "definiteIndefiniteQuestFive.questTen",
+        "options": ["In dem kleinen Haus ist es warm.", "In dem kleine Haus ist es warm.", "In dem kleines Haus ist es warm."],
+        "answer": "In dem kleinen Haus ist es warm.",
+        "tip": "definiteIndefiniteQuestFive.questTenTip"
+      },
+      {
+        "id": 11,
+        "type": "reorder",
+        "question": "definiteIndefiniteQuestFive.questEleven",
+        "words": ["Dort", "ist", "ein", "schöner", "Park", "schöne"],
+        "correctOrder": ["Dort", "ist", "ein", "schöner", "Park"],
+        "tip": "definiteIndefiniteQuestFive.questElevenTip"
+      },
+      {
+        "id": 12,
+        "type": "reorder",
+        "question": "definiteIndefiniteQuestFive.questTwelve",
+        "words": ["Der", "schöne", "Park", "ist", "sehr", "groß", "schöner"],
+        "correctOrder": ["Der", "schöne", "Park", "ist", "sehr", "groß"],
+        "tip": "definiteIndefiniteQuestFive.questTwelveTip"
+      },
+      {
+        "id": 13,
+        "type": "input",
+        "question": "definiteIndefiniteQuestFive.questThirteen",
+        "answer": "kaltes",
+        "tip": "definiteIndefiniteQuestFive.questThirteenTip"
+      },
+      {
+        "id": 14,
+        "type": "input",
+        "question": "definiteIndefiniteQuestFive.questFourteen",
+        "answer": "schwarzen",
+        "tip": "definiteIndefiniteQuestFive.questFourteenTip"
+      },
+      {
+        "id": 15,
+        "type": "select",
+        "question": "definiteIndefiniteQuestFive.questFifteen",
+        "options": ["Ein starker Wind weht.", "Ein starke Wind weht.", "Ein starken Wind weht."],
         "answer": "Ein starker Wind weht.",
-        "tip": "Предмет упоминается впервые. Ветер — мужской род (der). Артикль 'ein' пустой, поэтому прилагательное **берет окончание** у deR -> starkER."
+        "tip": "definiteIndefiniteQuestFive.questFifteenTip"
       }
     ]
   },
   {
     "questId": "six",
-    "title": "Логика артиклей: Перезагрузка",
+    "title": "definiteIndefiniteQuestSix.title",
     "progress": "0/15",
-    "description": "Интервальное повторение: тренируем разницу между известным и неизвестным предметом. Нумерация сброшена, слова перемешаны.",
+    "description": "definiteIndefiniteQuestSix.description",
     "conditions": {
-      "goal": "Доведи склонение до автоматизма без подсказок в порядке слов!",
+      "goal": "definiteIndefiniteQuestSix.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
-    "rewards": {
-      "points": 20,
-      "xp": 20
-    },
+    "rewards": { "points": 20, "xp": 20 },
     "tasks": [
       {
         "id": 1,
         "type": "input",
-        "question": "Впишите форму (alt): Dort steht ein ___ Schrank.",
+        "question": "definiteIndefiniteQuestSix.questOne",
         "answer": "alter",
-        "tip": "Неопределенный артикль (предмет не известен). Артикль 'ein' пустой, поэтому прилагательное **берет окончание** у определенного артикля deR -> altER."
+        "tip": "definiteIndefiniteQuestSix.questOneTip"
       },
       {
         "id": 2,
         "type": "input",
-        "question": "Впишите форму (alt): Der ___ Schrank ist sehr schwer.",
+        "question": "definiteIndefiniteQuestSix.questTwo",
         "answer": "alte",
-        "tip": "Определенный артикль (предмет точно известен). Артикль 'der' уже всё показал сам, поэтому прилагательное просто получает окончание -e."
+        "tip": "definiteIndefiniteQuestSix.questTwoTip"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Выберите верный вариант: Я вижу новое окно",
-        "options": [
-          "Ich sehe ein neuen Fenster.",
-          "Ich sehe ein neue Fenster.",
-          "Ich sehe ein neues Fenster."
-        ],
+        "question": "definiteIndefiniteQuestSix.questThree",
+        "options": ["Ich sehe ein neuen Fenster.", "Ich sehe ein neue Fenster.", "Ich sehe ein neues Fenster."],
         "answer": "Ich sehe ein neues Fenster.",
-        "tip": "Неопределенный артикль (предмет не известен). Окно — средний род (das). Артикль 'ein' пустой, прилагательное **берет окончание** у артикля daS -> neuES."
+        "tip": "definiteIndefiniteQuestSix.questThreeTip"
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Выберите верный вариант: Это новое окно чистое",
-        "options": [
-          "Das neue Fenster ist sauber.",
-          "Das neues Fenster ist sauber.",
-          "Das neuen Fenster ist sauber."
-        ],
+        "question": "definiteIndefiniteQuestSix.questFour",
+        "options": ["Das neue Fenster ist sauber.", "Das neues Fenster ist sauber.", "Das neuen Fenster ist sauber."],
         "answer": "Das neue Fenster ist sauber.",
-        "tip": "Определенный артикль (предмет точно известен). Артикль 'das' уже показал средний род, поэтому прилагательное просто получает окончание -e."
+        "tip": "definiteIndefiniteQuestSix.questFourTip"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Соберите: Маленькая собака бегает в парке",
+        "question": "definiteIndefiniteQuestSix.questFive",
         "words": ["Garten", "im", "Hund", "kleiner", "läuft", "Ein", "kleiner", "kleine"],
         "correctOrder": ["Ein", "kleiner", "Hund", "läuft", "im", "Garten"],
-        "tip": "Неопределенный артикль (предмет не известен). Собака — мужской род (der). Артикль 'ein' пустой, поэтому прилагательное **берет окончание** у deR -> kleinER."
+        "tip": "definiteIndefiniteQuestSix.questFiveTip"
       },
       {
         "id": 6,
         "type": "reorder",
-        "question": "Соберите: Эта маленькая собака очень быстрая",
+        "question": "definiteIndefiniteQuestSix.questSix",
         "words": ["ist", "Der", "Hund", "kleine", "sehr", "schnell", "kleiner"],
         "correctOrder": ["Der", "kleine", "Hund", "ist", "sehr", "schnell"],
-        "tip": "Определенный артикль (предмет точно известен). Артикль 'der' уже сам показал род, поэтому прилагательное просто получает окончание -e."
+        "tip": "definiteIndefiniteQuestSix.questSixTip"
       },
       {
         "id": 7,
         "type": "input",
-        "question": "Впишите форму (gut): Ich habe einen ___ Job.",
+        "question": "definiteIndefiniteQuestSix.questSeven",
         "answer": "guten",
-        "tip": "Неопределенный артикль в Akkusativ (мужской род). Артикль 'einen' имеет окончание падежа, поэтому прилагательное обязано принять окончание -en."
+        "tip": "definiteIndefiniteQuestSix.questSevenTip"
       },
       {
         "id": 8,
         "type": "input",
-        "question": "Впишите форму (gut): Er hat den ___ Job bekommen.",
+        "question": "definiteIndefiniteQuestSix.questEight",
         "answer": "guten",
-        "tip": "Определенный артикль в Akkusativ (мужской род). После артикля 'den', который изменил форму, прилагательное всегда получает окончание -en."
+        "tip": "definiteIndefiniteQuestSix.questEightTip"
       },
       {
         "id": 9,
         "type": "select",
-        "question": "Выберите верный вариант: Мы живем в старом доме",
-        "options": [
-          "Wir wohnen in einem alten Haus.",
-          "Wir wohnen in einem alte Haus.",
-          "Wir wohnen in einem alter Haus."
-        ],
+        "question": "definiteIndefiniteQuestSix.questNine",
+        "options": ["Wir wohnen in einem alten Haus.", "Wir wohnen in einem alte Haus.", "Wir wohnen in einem alter Haus."],
         "answer": "Wir wohnen in einem alten Haus.",
-        "tip": "Неопределенный артикль в Dativ. Артикль 'einem' уже показал падеж, поэтому прилагательное получает окончание -en."
+        "tip": "definiteIndefiniteQuestSix.questNineTip"
       },
       {
         "id": 10,
         "type": "select",
-        "question": "Выберите верный вариант: В этом старом доме тепло",
-        "options": [
-          "In dem alten Haus ist es warm.",
-          "In dem alte Haus ist es warm.",
-          "In dem alter Haus ist es warm."
-        ],
+        "question": "definiteIndefiniteQuestSix.questTen",
+        "options": ["In dem alten Haus ist es warm.", "In dem alte Haus ist es warm.", "In dem alter Haus ist es warm."],
         "answer": "In dem alten Haus ist es warm.",
-        "tip": "Определенный артикль в Dativ. После артикля 'dem', который показал падеж и род, прилагательное всегда получает окончание -en."
+        "tip": "definiteIndefiniteQuestSix.questTenTip"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Соберите: Он купит новый телевизор",
+        "question": "definiteIndefiniteQuestSix.questEleven",
         "words": ["Fernseher", "einen", "wird", "neuen", "kaufen", "Er", "neuer"],
         "correctOrder": ["Er", "wird", "einen", "neuen", "Fernseher", "kaufen"],
-        "tip": "Неопределенный артикль в Akkusativ (мужской род). Артикль 'einen' имеет окончание, поэтому прилагательное получает -en."
+        "tip": "definiteIndefiniteQuestSix.questElevenTip"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "Соберите: Он выключит этот новый телевизор",
+        "question": "definiteIndefiniteQuestSix.questTwelve",
         "words": ["den", "macht", "neuen", "aus", "Fernseher", "Er", "neue"],
         "correctOrder": ["Er", "macht", "den", "neuen", "Fernseher", "aus"],
-        "tip": "Определенный артикль в Akkusativ (предмет известен). После артикля 'den' прилагательное получает окончание -en."
+        "tip": "definiteIndefiniteQuestSix.questTwelveTip"
       },
       {
         "id": 13,
         "type": "input",
-        "question": "Впишите форму (kalt): Ich trinke ein ___ Bier.",
+        "question": "definiteIndefiniteQuestSix.questThirteen",
         "answer": "kaltes",
-        "tip": "Неопределенный артикль (предмет не известен). Пиво — средний род (das). Артикль 'ein' пустой, поэтому прилагательное **берет окончание** у артикля daS -> kaltES."
+        "tip": "definiteIndefiniteQuestSix.questThirteenTip"
       },
       {
         "id": 14,
         "type": "select",
-        "question": "Выберите верный вариант: Дует сильный ветер",
-        "options": [
-          "Ein starker Wind weht.",
-          "Ein starke Wind weht.",
-          "Ein starken Wind weht."
-        ],
+        "question": "definiteIndefiniteQuestSix.questFourteen",
+        "options": ["Ein starker Wind weht.", "Ein starke Wind weht.", "Ein starken Wind weht."],
         "answer": "Ein starker Wind weht.",
-        "tip": "Неопределенный артикль (предмет не известен). Ветер — мужской род (der). Артикль 'ein' пустой, поэтому прилагательное **берет окончание** у deR -> starkER."
+        "tip": "definiteIndefiniteQuestSix.questFourteenTip"
       },
       {
         "id": 15,
         "type": "reorder",
-        "question": "Соберите: Я встретил милую девушку",
+        "question": "definiteIndefiniteQuestSix.questFifteen",
         "words": ["Mädchen", "ein", "habe", "getroffen", "nettes", "Ich", "netten"],
         "correctOrder": ["Ich", "habe", "ein", "nettes", "Mädchen", "getroffen"],
-        "tip": "Неопределенный артикль (предмет не известен). Девушка — средний род (das). Артикль 'ein' пустой, прилагательное **берет окончание** у daS -> nettES."
+        "tip": "definiteIndefiniteQuestSix.questFifteenTip"
       }
     ]
   },
   {
     "questId": "seven",
-    "title": "Интервальное повторение: Блок 7",
+    "title": "definiteIndefiniteQuestSeven.title",
     "progress": "0/15",
-    "description": "Продолжаем оттачивать склонение. Помни: кто-то один обязан показать род и падеж!",
+    "description": "definiteIndefiniteQuestSeven.description",
     "conditions": {
-      "goal": "Закрепи автоматизм в окончаниях на skillupgerman!",
+      "goal": "definiteIndefiniteQuestSeven.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
-    "rewards": {
-      "points": 20,
-      "xp": 20
-    },
+    "rewards": { "points": 20, "xp": 20 },
     "tasks": [
       {
         "id": 1,
         "type": "input",
-        "question": "Впишите форму (gut): Ich lese ein ___ Buch.",
+        "question": "definiteIndefiniteQuestSeven.questOne",
         "answer": "gutes",
-        "tip": "Предмет упоминается впервые (неизвестен). Книга — средний род (das). Артикль 'ein' пустой, поэтому прилагательное **берет окончание** у артикля daS -> gutES."
+        "tip": "definiteIndefiniteQuestSeven.questOneTip"
       },
       {
         "id": 2,
         "type": "input",
-        "question": "Впишите форму (gut): Das ___ Buch ist sehr interessant.",
+        "question": "definiteIndefiniteQuestSeven.questTwo",
         "answer": "gute",
-        "tip": "Предмет уже известен. Определенный артикль 'das' **уже всё показал**, поэтому прилагательное просто получает окончание -e."
+        "tip": "definiteIndefiniteQuestSeven.questTwoTip"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Выберите верный вариант: Он пьёт холодный сок",
-        "options": [
-          "Er trinkt einen kalten Saft.",
-          "Er trinkt einen kalter Saft.",
-          "Er trinkt einen kalte Saft."
-        ],
+        "question": "definiteIndefiniteQuestSeven.questThree",
+        "options": ["Er trinkt einen kalten Saft.", "Er trinkt einen kalter Saft.", "Er trinkt einen kalte Saft."],
         "answer": "Er trinkt einen kalten Saft.",
-        "tip": "Неопределенный артикль в Akkusativ (мужской род). У артикля 'einen' уже есть окончание падежа, поэтому прилагательное берет -en."
+        "tip": "definiteIndefiniteQuestSeven.questThreeTip"
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Выберите верный вариант: Он допил этот холодный сок",
-        "options": [
-          "Er hat den kalten Saft ausgetrunken.",
-          "Er hat den kalte Saft ausgetrunken.",
-          "Er hat den kalter Saft ausgetrunken."
-        ],
+        "question": "definiteIndefiniteQuestSeven.questFour",
+        "options": ["Er hat den kalten Saft ausgetrunken.", "Er hat den kalte Saft ausgetrunken.", "Er hat den kalter Saft ausgetrunken."],
         "answer": "Er hat den kalten Saft ausgetrunken.",
-        "tip": "Предмет точно известен (Akkusativ). После артикля 'den', который изменил форму, прилагательное всегда получает окончание -en."
+        "tip": "definiteIndefiniteQuestSeven.questFourTip"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Соберите: Молодая женщина ждёт здесь",
+        "question": "definiteIndefiniteQuestSeven.questFive",
         "words": ["wartet", "junge", "Eine", "hier", "Frau", "jungen", "junger"],
         "correctOrder": ["Eine", "junge", "Frau", "wartet", "hier"],
-        "tip": "Неопределенный артикль (впервые). Женский род: прилагательное **берет окончание -e** у артикля 'eine'."
+        "tip": "definiteIndefiniteQuestSeven.questFiveTip"
       },
       {
         "id": 6,
         "type": "reorder",
-        "question": "Соберите: Эта молодая женщина — врач",
+        "question": "definiteIndefiniteQuestSeven.questSix",
         "words": ["Die", "junge", "Frau", "ist", "Ärztin", "jungen", "junges"],
         "correctOrder": ["Die", "junge", "Frau", "ist", "Ärztin"],
-        "tip": "Предмет точно известен. Артикль 'die' уже всё показал сам, поэтому прилагательное получает окончание -e."
+        "tip": "definiteIndefiniteQuestSeven.questSixTip"
       },
       {
         "id": 7,
         "type": "input",
-        "question": "Впишите форму (schön): Dort ist ein ___ Garten.",
+        "question": "definiteIndefiniteQuestSeven.questSeven",
         "answer": "schöner",
-        "tip": "Предмет упоминается впервые. Сад — мужской род (der). Артикль 'ein' пустой, поэтому прилагательное **берет окончание** у deR -> schönER."
+        "tip": "definiteIndefiniteQuestSeven.questSevenTip"
       },
       {
         "id": 8,
         "type": "input",
-        "question": "Впишите форму (schön): Der ___ Garten gehört uns.",
+        "question": "definiteIndefiniteQuestSeven.questEight",
         "answer": "schöne",
-        "tip": "Предмет уже известен. Артикль 'der' — босс, он уже показал род, поэтому прилагательное просто получает окончание -e."
+        "tip": "definiteIndefiniteQuestSeven.questEightTip"
       },
       {
         "id": 9,
         "type": "select",
-        "question": "Выберите верный вариант: Мама видит маленького ребенка",
-        "options": [
-          "Mutter sieht ein kleines Kind.",
-          "Mutter sieht ein kleine Kind.",
-          "Mutter sieht ein kleinen Kind."
-        ],
+        "question": "definiteIndefiniteQuestSeven.questNine",
+        "options": ["Mutter sieht ein kleines Kind.", "Mutter sieht ein kleine Kind.", "Mutter sieht ein kleinen Kind."],
         "answer": "Mutter sieht ein kleines Kind.",
-        "tip": "Неопределенный артикль (впервые). Ребенок — средний род (das). Артикль 'ein' пустой, прилагательное **берет окончание** у daS -> kleinES."
+        "tip": "definiteIndefiniteQuestSeven.questNineTip"
       },
       {
         "id": 10,
         "type": "select",
-        "question": "Выберите верный вариант: Мама зовёт этого маленького ребенка",
-        "options": [
-          "Mutter ruft das kleine Kind.",
-          "Mutter ruft das kleines Kind.",
-          "Mutter ruft das kleinen Kind."
-        ],
+        "question": "definiteIndefiniteQuestSeven.questTen",
+        "options": ["Mutter ruft das kleine Kind.", "Mutter ruft das kleines Kind.", "Mutter ruft das kleinen Kind."],
         "answer": "Mutter ruft das kleine Kind.",
-        "tip": "Предмет известен. Артикль 'das' уже показал средний род, поэтому прилагательное получает окончание -e."
+        "tip": "definiteIndefiniteQuestSeven.questTenTip"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Соберите: Мы говорим со старым врачом",
+        "question": "definiteIndefiniteQuestSeven.questEleven",
         "words": ["mit", "Arzt", "Wir", "einem", "alten", "sprechen", "alter"],
         "correctOrder": ["Wir", "sprechen", "mit", "einem", "alten", "Arzt"],
-        "tip": "Dativ (неизвестно). Артикль 'einem' уже имеет окончание падежа, поэтому прилагательное обязано взять -en."
+        "tip": "definiteIndefiniteQuestSeven.questElevenTip"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "Соберите: Мы говорим с тем самым старым врачом",
+        "question": "definiteIndefiniteQuestSeven.questTwelve",
         "words": ["mit", "Wir", "dem", "alten", "Arzt", "sprechen", "alte"],
         "correctOrder": ["Wir", "sprechen", "mit", "dem", "alten", "Arzt"],
-        "tip": "Dativ (известно). После артикля 'dem', который изменил форму, прилагательное всегда получает окончание -en."
+        "tip": "definiteIndefiniteQuestSeven.questTwelveTip"
       },
       {
         "id": 13,
         "type": "input",
-        "question": "Впишите форму (lecker): Sie sucht eine ___ Pizza.",
+        "question": "definiteIndefiniteQuestSeven.questThirteen",
         "answer": "leckere",
-        "tip": "Предмет упоминается впервые. Женский род: артикль 'eine' заканчивается на -e, прилагательное тоже берет -e."
+        "tip": "definiteIndefiniteQuestSeven.questThirteenTip"
       },
       {
         "id": 14,
         "type": "input",
-        "question": "Впишите форму (lecker): Die ___ Pizza ist schon da.",
+        "question": "definiteIndefiniteQuestSeven.questFourteen",
         "answer": "leckere",
-        "tip": "Предмет точно известен. Артикль 'die' уже всё показал, поэтому прилагательное просто получает окончание -e."
+        "tip": "definiteIndefiniteQuestSeven.questFourteenTip"
       },
       {
         "id": 15,
         "type": "select",
-        "question": "Выберите верный вариант: Он покупает черный плащ",
-        "options": [
-          "Er kauft einen schwarzen Mantel.",
-          "Er kauft einen schwarzer Mantel.",
-          "Er kauft einen schwarze Mantel."
-        ],
+        "question": "definiteIndefiniteQuestSeven.questFifteen",
+        "options": ["Er kauft einen schwarzen Mantel.", "Er kauft einen schwarzer Mantel.", "Er kauft einen schwarze Mantel."],
         "answer": "Er kauft einen schwarzen Mantel.",
-        "tip": "Мужской род, Akkusativ. Артикль 'einen' имеет окончание падежа, поэтому прилагательное берет -en."
+        "tip": "definiteIndefiniteQuestSeven.questFifteenTip"
       }
     ]
   },
   {
     "questId": "eight",
-    "title": "Интервальное повторение: Блок 8",
+    "title": "definiteIndefiniteQuestEight.title",
     "progress": "0/15",
-    "description": "Продолжаем марафон. Смешиваем всё: пустые артикли и артикли-боссы. Слова в сборке перемешаны.",
+    "description": "definiteIndefiniteQuestEight.description",
     "conditions": {
-      "goal": "Закрепи автоматизм в окончаниях на skillupgerman!",
+      "goal": "definiteIndefiniteQuestEight.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
-    "rewards": {
-      "points": 20,
-      "xp": 20
-    },
+    "rewards": { "points": 20, "xp": 20 },
     "tasks": [
       {
         "id": 1,
         "type": "input",
-        "question": "Впишите форму (alt): Dort steht ein ___ Mann.",
+        "question": "definiteIndefiniteQuestEight.questOne",
         "answer": "alter",
-        "tip": "Предмет упоминается впервые. Мужской род (der). Артикль 'ein' пустой, поэтому прилагательное **берет окончание** у deR -> altER."
+        "tip": "definiteIndefiniteQuestEight.questOneTip"
       },
       {
         "id": 2,
         "type": "input",
-        "question": "Впишите форму (alt): Der ___ Mann wartet auf dich.",
+        "question": "definiteIndefiniteQuestEight.questTwo",
         "answer": "alte",
-        "tip": "Предмет точно известен. Артикль 'der' — босс, он всё показал сам, прилагательное получает просто -e."
+        "tip": "definiteIndefiniteQuestEight.questTwoTip"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Выберите верный вариант: Я куплю новый стол",
-        "options": [
-          "Ich werde einen neuen Tisch kaufen.",
-          "Ich werde einen neuer Tisch kaufen.",
-          "Ich werde einen neue Tisch kaufen."
-        ],
+        "question": "definiteIndefiniteQuestEight.questThree",
+        "options": ["Ich werde einen neuen Tisch kaufen.", "Ich werde einen neuer Tisch kaufen.", "Ich werde einen neue Tisch kaufen."],
         "answer": "Ich werde einen neuen Tisch kaufen.",
-        "tip": "Мужской род, Akkusativ (неизвестно). У артикля 'einen' есть окончание падежа, поэтому прилагательное тоже получает -en."
+        "tip": "definiteIndefiniteQuestEight.questThreeTip"
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Выберите верный вариант: Я возьму этот новый стол",
-        "options": [
-          "Ich nehme den neuen Tisch.",
-          "Ich nehme den neue Tisch.",
-          "Ich nehme den neuer Tisch."
-        ],
+        "question": "definiteIndefiniteQuestEight.questFour",
+        "options": ["Ich nehme den neuen Tisch.", "Ich nehme den neue Tisch.", "Ich nehme den neuer Tisch."],
         "answer": "Ich nehme den neuen Tisch.",
-        "tip": "Предмет известен (Akkusativ). После артикля 'den', который изменил форму, прилагательное всегда получает окончание -en."
+        "tip": "definiteIndefiniteQuestEight.questFourTip"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Соберите: Маленькое здание стоит там",
+        "question": "definiteIndefiniteQuestEight.questFive",
         "words": ["dort", "kleines", "Haus", "Ein", "steht", "kleine"],
         "correctOrder": ["Ein", "kleines", "Haus", "steht", "dort"],
-        "tip": "Предмет упоминается впервые. Средний род (das). Артикль 'ein' пустой, прилагательное **берет окончание** у daS -> kleinES."
+        "tip": "definiteIndefiniteQuestEight.questFiveTip"
       },
       {
         "id": 6,
         "type": "reorder",
-        "question": "Соберите: Это маленькое здание старое",
+        "question": "definiteIndefiniteQuestEight.questSix",
         "words": ["ist", "Haus", "kleine", "Das", "alt", "kleines"],
         "correctOrder": ["Das", "kleine", "Haus", "ist", "alt"],
-        "tip": "Предмет известен. Артикль 'das' уже показал средний род, поэтому прилагательное получает окончание -e."
+        "tip": "definiteIndefiniteQuestEight.questSixTip"
       },
       {
         "id": 7,
         "type": "input",
-        "question": "Впишите форму (lecker): Sie sucht eine ___ Suppe.",
+        "question": "definiteIndefiniteQuestEight.questSeven",
         "answer": "leckere",
-        "tip": "Предмет упоминается впервые. Женский род: прилагательное **берет окончание -e** у артикля 'eine'."
+        "tip": "definiteIndefiniteQuestEight.questSevenTip"
       },
       {
         "id": 8,
         "type": "input",
-        "question": "Впишите форму (lecker): Die ___ Suppe schmeckt gut.",
+        "question": "definiteIndefiniteQuestEight.questEight",
         "answer": "leckere",
-        "tip": "Предмет известен. Артикль 'die' уже всё показал, прилагательное просто получает -e."
+        "tip": "definiteIndefiniteQuestEight.questEightTip"
       },
       {
         "id": 9,
         "type": "select",
-        "question": "Выберите верный вариант: Мы читаем хорошее письмо",
-        "options": [
-          "Wir lesen einen guten Brief.",
-          "Wir lesen einen guter Brief.",
-          "Wir lesen einen gute Brief."
-        ],
+        "question": "definiteIndefiniteQuestEight.questNine",
+        "options": ["Wir lesen einen guten Brief.", "Wir lesen einen guter Brief.", "Wir lesen einen gute Brief."],
         "answer": "Wir lesen einen guten Brief.",
-        "tip": "Мужской род, Akkusativ (неизвестно). Артикль 'einen' имеет окончание, поэтому прилагательное берет -en."
+        "tip": "definiteIndefiniteQuestEight.questNineTip"
       },
       {
         "id": 10,
         "type": "select",
-        "question": "Выберите верный вариант: Мы читаем это хорошее письмо",
-        "options": [
-          "Wir lesen den guten Brief.",
-          "Wir lesen den gute Brief.",
-          "Wir lesen den guter Brief."
-        ],
+        "question": "definiteIndefiniteQuestEight.questTen",
+        "options": ["Wir lesen den guten Brief.", "Wir lesen den gute Brief.", "Wir lesen den guter Brief."],
         "answer": "Wir lesen den guten Brief.",
-        "tip": "Предмет известен (Akkusativ). После артикля 'den' прилагательное обязано принять окончание -en."
+        "tip": "definiteIndefiniteQuestEight.questTenTip"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Соберите: Я пью крепкий кофе",
+        "question": "definiteIndefiniteQuestEight.questEleven",
         "words": ["starken", "Kaffee", "einen", "trinke", "Ich", "starker"],
         "correctOrder": ["Ich", "trinke", "einen", "starken", "Kaffee"],
-        "tip": "Предмет неизвестен (Akkusativ, мужской род). У артикля 'einen' есть окончание, прилагательное берет -en."
+        "tip": "definiteIndefiniteQuestEight.questElevenTip"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "Соберите: Я пью этот крепкий кофе",
+        "question": "definiteIndefiniteQuestEight.questTwelve",
         "words": ["Ich", "trinke", "den", "starken", "Kaffee", "starke"],
         "correctOrder": ["Ich", "trinke", "den", "starken", "Kaffee"],
-        "tip": "Предмет известен. После артикля 'den' в мужском роде прилагательное всегда получает -en."
+        "tip": "definiteIndefiniteQuestEight.questTwelveTip"
       },
       {
         "id": 13,
         "type": "input",
-        "question": "Впишите форму (schön): Heute ist ein ___ Tag.",
+        "question": "definiteIndefiniteQuestEight.questThirteen",
         "answer": "schöner",
-        "tip": "Предмет упоминается впервые. День — мужской род (der). Артикль 'ein' пустой, поэтому прилагательное **берет окончание** у deR -> schönER."
+        "tip": "definiteIndefiniteQuestEight.questThirteenTip"
       },
       {
         "id": 14,
         "type": "input",
-        "question": "Впишите форму (schön): Der ___ Tag ist vorbei.",
+        "question": "definiteIndefiniteQuestEight.questFourteen",
         "answer": "schöne",
-        "tip": "Предмет точно известен. Артикль 'der' — босс, он уже показал род, прилагательное получает -e."
+        "tip": "definiteIndefiniteQuestEight.questFourteenTip"
       },
       {
         "id": 15,
         "type": "select",
-        "question": "Выберите верный вариант: Он покупает современный телефон",
-        "options": [
-          "Er kauft ein modernes Handy.",
-          "Er kauft ein moderne Handy.",
-          "Er kauft ein modernen Handy."
-        ],
+        "question": "definiteIndefiniteQuestEight.questFifteen",
+        "options": ["Er kauft ein modernes Handy.", "Er kauft ein moderne Handy.", "Er kauft ein modernen Handy."],
         "answer": "Er kauft ein modernes Handy.",
-        "tip": "Предмет упоминается впервые. Средний род (das). Артикль 'ein' пустой, прилагательное **берет окончание** у daS -> modernES."
+        "tip": "definiteIndefiniteQuestEight.questFifteenTip"
       }
     ]
   },
   {
     "questId": "nine",
-    "title": "Интервальное повторение: Блок 9",
+    "title": "definiteIndefiniteQuestNine.title",
     "progress": "0/15",
-    "description": "Продолжаем марафон. Смешиваем всё: пустые артикли и артикли-боссы. Слова в сборке перемешаны.",
+    "description": "definiteIndefiniteQuestNine.description",
     "conditions": {
-      "goal": "Закрепи автоматизм в окончаниях на skillupgerman!",
+      "goal": "definiteIndefiniteQuestNine.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
-    "rewards": {
-      "points": 20,
-      "xp": 20
-    },
+    "rewards": { "points": 20, "xp": 20 },
     "tasks": [
       {
         "id": 1,
         "type": "input",
-        "question": "Впишите форму (neu): Dort steht ein ___ Schrank.",
+        "question": "definiteIndefiniteQuestNine.questOne",
         "answer": "neuer",
-        "tip": "Неопределенный артикль (предмет не известен). Мужской род (der). Артикль 'ein' пустой, поэтому прилагательное **берет окончание** у deR -> neuER."
+        "tip": "definiteIndefiniteQuestNine.questOneTip"
       },
       {
         "id": 2,
         "type": "input",
-        "question": "Впишите форму (neu): Der ___ Schrank ist aus Holz.",
+        "question": "definiteIndefiniteQuestNine.questTwo",
         "answer": "neue",
-        "tip": "Определенный артикль (предмет точно известен). Артикль 'der' уже сам показал род, поэтому прилагательное просто получает окончание -e."
+        "tip": "definiteIndefiniteQuestNine.questTwoTip"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Выберите верный вариант: Я выпью холодное пиво",
-        "options": [
-          "Ich werde ein kalten Bier trinken.",
-          "Ich werde ein kalte Bier trinken.",
-          "Ich werde ein kaltes Bier trinken."
-        ],
+        "question": "definiteIndefiniteQuestNine.questThree",
+        "options": ["Ich werde ein kalten Bier trinken.", "Ich werde ein kalte Bier trinken.", "Ich werde ein kaltes Bier trinken."],
         "answer": "Ich werde ein kaltes Bier trinken.",
-        "tip": "Неопределенный артикль (впервые). Пиво — средний род (das). Артикль 'ein' пустой, прилагательное **берет окончание** у артикля daS -> kaltES."
+        "tip": "definiteIndefiniteQuestNine.questThreeTip"
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Выберите верный вариант: Он допьет это холодное пиво",
-        "options": [
-          "Er wird das kalte Bier austrinken.",
-          "Er wird das kaltes Bier austrinken.",
-          "Er wird das kalten Bier austrinken."
-        ],
+        "question": "definiteIndefiniteQuestNine.questFour",
+        "options": ["Er wird das kalte Bier austrinken.", "Er wird das kaltes Bier austrinken.", "Er wird das kalten Bier austrinken."],
         "answer": "Er wird das kalte Bier austrinken.",
-        "tip": "Определенный артикль (точно известный предмет). Артикль 'das' уже всё показал, поэтому прилагательное просто получает -e."
+        "tip": "definiteIndefiniteQuestNine.questFourTip"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Соберите: Молодая женщина ждет здесь",
+        "question": "definiteIndefiniteQuestNine.questFive",
         "words": ["wartet", "hier", "Frau", "Eine", "junge", "jungen", "junger"],
         "correctOrder": ["Eine", "junge", "Frau", "wartet", "hier"],
-        "tip": "Неопределенный артикль (впервые). Женский род: прилагательное **берет окончание -e** у артикля 'eine'."
+        "tip": "definiteIndefiniteQuestNine.questFiveTip"
       },
       {
         "id": 6,
         "type": "reorder",
-        "question": "Соберите: Эта молодая женщина — врач",
+        "question": "definiteIndefiniteQuestNine.questSix",
         "words": ["ist", "junge", "Die", "Frau", "Ärztin", "junges", "jungen"],
         "correctOrder": ["Die", "junge", "Frau", "ist", "Ärztin"],
-        "tip": "Определенный артикль (точно известный предмет). Артикль 'die' уже всё показал, прилагательное отдыхает с окончанием -e."
+        "tip": "definiteIndefiniteQuestNine.questSixTip"
       },
       {
         "id": 7,
         "type": "input",
-        "question": "Впишите форму (alt): Ich repariere einen ___ Computer.",
+        "question": "definiteIndefiniteQuestNine.questSeven",
         "answer": "alten",
-        "tip": "Мужской род, Akkusativ. Артикль 'einen' имеет окончание падежа, поэтому прилагательное всегда получает -en."
+        "tip": "definiteIndefiniteQuestNine.questSevenTip"
       },
       {
         "id": 8,
         "type": "input",
-        "question": "Впишите форму (alt): Er nutzt den ___ Computer.",
+        "question": "definiteIndefiniteQuestNine.questEight",
         "answer": "alten",
-        "tip": "Akkusativ мужского рода (предмет известен). После артикля 'den' прилагательное обязано принять окончание -en."
+        "tip": "definiteIndefiniteQuestNine.questEightTip"
       },
       {
         "id": 9,
         "type": "select",
-        "question": "Выберите верный вариант: Маленький ребенок смеется",
-        "options": [
-          "Ein kleines Kind lacht.",
-          "Ein kleine Kind lacht.",
-          "Ein kleinen Kind lacht."
-        ],
+        "question": "definiteIndefiniteQuestNine.questNine",
+        "options": ["Ein kleines Kind lacht.", "Ein kleine Kind lacht.", "Ein kleinen Kind lacht."],
         "answer": "Ein kleines Kind lacht.",
-        "tip": "Неопределенный артикль (впервые). Ребенок — средний род (das). Артикль 'ein' пустой, прилагательное **берет окончание** у daS -> kleinES."
+        "tip": "definiteIndefiniteQuestNine.questNineTip"
       },
       {
         "id": 10,
         "type": "select",
-        "question": "Выберите верный вариант: Этот маленький ребенок плачет",
-        "options": [
-          "Das kleine Kind weint.",
-          "Das kleines Kind weint.",
-          "Das kleinen Kind weint."
-        ],
+        "question": "definiteIndefiniteQuestNine.questTen",
+        "options": ["Das kleine Kind weint.", "Das kleines Kind weint.", "Das kleinen Kind weint."],
         "answer": "Das kleine Kind weint.",
-        "tip": "Определенный артикль (известен). Артикль 'das' уже показал средний род, поэтому прилагательное просто получает окончание -e."
+        "tip": "definiteIndefiniteQuestNine.questTenTip"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Соберите: Я иду с добрым человеком",
+        "question": "definiteIndefiniteQuestNine.questEleven",
         "words": ["mit", "netten", "einem", "Mann", "gehe", "Ich", "netter"],
         "correctOrder": ["Ich", "gehe", "mit", "einem", "netten", "Mann"],
-        "tip": "Dativ. Артикль 'einem' уже имеет окончание падежа, поэтому прилагательное обязано взять -en."
+        "tip": "definiteIndefiniteQuestNine.questElevenTip"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "Соберите: Я иду с тем самым добрым человеком",
+        "question": "definiteIndefiniteQuestNine.questTwelve",
         "words": ["Ich", "Mann", "dem", "gehe", "mit", "netten", "nette"],
         "correctOrder": ["Ich", "gehe", "mit", "dem", "netten", "Mann"],
-        "tip": "Dativ. После артикля-босса 'dem', который изменил форму, прилагательное всегда получает окончание -en."
+        "tip": "definiteIndefiniteQuestNine.questTwelveTip"
       },
       {
         "id": 13,
         "type": "input",
-        "question": "Впишите форму (neu): Sie hat eine ___ Tasche.",
+        "question": "definiteIndefiniteQuestNine.questThirteen",
         "answer": "neue",
-        "tip": "Женский род. После артикля 'eine' прилагательное **берет окончание -e**."
+        "tip": "definiteIndefiniteQuestNine.questThirteenTip"
       },
       {
         "id": 14,
         "type": "input",
-        "question": "Впишите форму (neu): Die ___ Tasche ist teuer.",
+        "question": "definiteIndefiniteQuestNine.questFourteen",
         "answer": "neue",
-        "tip": "Определенный артикль 'die' уже всё показал, поэтому прилагательное просто получает окончание -e."
+        "tip": "definiteIndefiniteQuestNine.questFourteenTip"
       },
       {
         "id": 15,
         "type": "select",
-        "question": "Выберите верный вариант: Он пьет крепкий кофе",
-        "options": [
-          "Er trinkt einen starken Kaffee.",
-          "Er trinkt einen starker Kaffee.",
-          "Er trinkt einen starke Kaffee."
-        ],
+        "question": "definiteIndefiniteQuestNine.questFifteen",
+        "options": ["Er trinkt einen starken Kaffee.", "Er trinkt einen starker Kaffee.", "Er trinkt einen starke Kaffee."],
         "answer": "Er trinkt einen starken Kaffee.",
-        "tip": "Мужской род, Akkusativ. Артикль 'einen' имеет окончание падежа, поэтому прилагательное берет -en."
+        "tip": "definiteIndefiniteQuestNine.questFifteenTip"
       }
     ]
   },
   {
     "questId": "ten",
-    "title": "Интервальное повторение: Блок 10",
+    "title": "definiteIndefiniteQuestTen.title",
     "progress": "0/15",
-    "description": "Финальная отработка: когда предмет всплывает впервые и когда он нам уже знаком. Слова перемешаны.",
+    "description": "definiteIndefiniteQuestTen.description",
     "conditions": {
-      "goal": "Закрепи автоматизм в окончаниях на skillupgerman!",
+      "goal": "definiteIndefiniteQuestTen.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
-    "rewards": {
-      "points": 20,
-      "xp": 20
-    },
+    "rewards": { "points": 20, "xp": 20 },
     "tasks": [
       {
         "id": 1,
         "type": "input",
-        "question": "Впишите форму (alt): Dort steht ein ___ Schloss.",
+        "question": "definiteIndefiniteQuestTen.questOne",
         "answer": "altes",
-        "tip": "Предмет упоминается впервые. Замок — средний род (das). Артикль 'ein' пустой, поэтому прилагательное **берет окончание** у артикля daS -> altES."
+        "tip": "definiteIndefiniteQuestTen.questOneTip"
       },
       {
         "id": 2,
         "type": "input",
-        "question": "Впишите форму (alt): Das ___ Schloss ist sehr berühmt.",
+        "question": "definiteIndefiniteQuestTen.questTwo",
         "answer": "alte",
-        "tip": "Предмет уже известен. Определенный артикль 'das' уже всё показал, поэтому прилагательное просто получает окончание -e."
+        "tip": "definiteIndefiniteQuestTen.questTwoTip"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Выберите верный вариант: Я куплю новый ноутбук",
-        "options": [
-          "Ich kaufe einen neuen Laptop.",
-          "Ich kaufe einen neuer Laptop.",
-          "Ich kaufe einen neue Laptop."
-        ],
+        "question": "definiteIndefiniteQuestTen.questThree",
+        "options": ["Ich kaufe einen neuen Laptop.", "Ich kaufe einen neuer Laptop.", "Ich kaufe einen neue Laptop."],
         "answer": "Ich kaufe einen neuen Laptop.",
-        "tip": "Мужской род, Akkusativ (впервые). Артикль 'einen' имеет окончание падежа, поэтому прилагательное обязано взять -en."
+        "tip": "definiteIndefiniteQuestTen.questThreeTip"
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Выберите верный вариант: У меня есть этот новый ноутбук",
-        "options": [
-          "Ich habe den neuen Laptop.",
-          "Ich habe den neue Laptop.",
-          "Ich habe den neuer Laptop."
-        ],
+        "question": "definiteIndefiniteQuestTen.questFour",
+        "options": ["Ich habe den neuen Laptop.", "Ich habe den neue Laptop.", "Ich habe den neuer Laptop."],
         "answer": "Ich habe den neuen Laptop.",
-        "tip": "Предмет известен (Akkusativ). После артикля 'den', который изменил форму, прилагательное всегда получает окончание -en."
+        "tip": "definiteIndefiniteQuestTen.questFourTip"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Соберите: Мама купила красивую вазу",
+        "question": "definiteIndefiniteQuestTen.questFive",
         "words": ["gekauft", "Mutter", "schöne", "eine", "Vase", "hat", "schönen"],
         "correctOrder": ["Mutter", "hat", "eine", "schöne", "Vase", "gekauft"],
-        "tip": "Предмет упоминается впервые. Женский род: прилагательное **берет окончание -e** у артикля 'eine'."
+        "tip": "definiteIndefiniteQuestTen.questFiveTip"
       },
       {
         "id": 6,
         "type": "reorder",
-        "question": "Соберите: Эта красивая ваза стоит здесь",
+        "question": "definiteIndefiniteQuestTen.questSix",
         "words": ["Die", "Vase", "schöne", "hier", "steht", "schönes"],
         "correctOrder": ["Die", "schöne", "Vase", "steht", "hier"],
-        "tip": "Предмет точно известен. Артикль 'die' уже всё показал, поэтому прилагательное просто получает -e."
+        "tip": "definiteIndefiniteQuestTen.questSixTip"
       },
       {
         "id": 7,
         "type": "input",
-        "question": "Впишите форму (gut): Er ist ein ___ Freund.",
+        "question": "definiteIndefiniteQuestTen.questSeven",
         "answer": "guter",
-        "tip": "Предмет упоминается впервые. Друг — мужской род (der). Артикль 'ein' пустой, поэтому прилагательное **берет окончание** у deR -> gutER."
+        "tip": "definiteIndefiniteQuestTen.questSevenTip"
       },
       {
         "id": 8,
         "type": "input",
-        "question": "Впишите форму (gut): Der ___ Freund hat angerufen.",
+        "question": "definiteIndefiniteQuestTen.questEight",
         "answer": "gute",
-        "tip": "Предмет точно известен. Артикль 'der' уже сам показал род, поэтому прилагательное получает окончание -e."
+        "tip": "definiteIndefiniteQuestTen.questEightTip"
       },
       {
         "id": 9,
         "type": "select",
-        "question": "Выберите верный вариант: Маленький ребенок играет",
-        "options": [
-          "Ein kleines Kind spielt.",
-          "Ein kleine Kind spielt.",
-          "Ein kleinen Kind spielt."
-        ],
+        "question": "definiteIndefiniteQuestTen.questNine",
+        "options": ["Ein kleines Kind spielt.", "Ein kleine Kind spielt.", "Ein kleinen Kind spielt."],
         "answer": "Ein kleines Kind spielt.",
-        "tip": "Средний род (das). Артикль 'ein' пустой, поэтому прилагательное **берет окончание** у daS -> kleinES."
+        "tip": "definiteIndefiniteQuestTen.questNineTip"
       },
       {
         "id": 10,
         "type": "select",
-        "question": "Выберите верный вариант: Этот маленький ребенок играет",
-        "options": [
-          "Das kleine Kind spielt.",
-          "Das kleines Kind spielt.",
-          "Das kleinen Kind spielt."
-        ],
+        "question": "definiteIndefiniteQuestTen.questTen",
+        "options": ["Das kleine Kind spielt.", "Das kleines Kind spielt.", "Das kleinen Kind spielt."],
         "answer": "Das kleine Kind spielt.",
-        "tip": "Предмет известен. Артикль 'das' уже показал средний род, прилагательное ставит окончание -e."
+        "tip": "definiteIndefiniteQuestTen.questTenTip"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Соберите: Я работал с новым соседом",
+        "question": "definiteIndefiniteQuestTen.questEleven",
         "words": ["Nachbarn", "mit", "neuen", "einem", "gearbeitet", "habe", "Ich", "neuer"],
         "correctOrder": ["Ich", "habe", "mit", "einem", "neuen", "Nachbarn", "gearbeitet"],
-        "tip": "Dativ. Артикль 'einem' уже имеет окончание падежа, поэтому прилагательное обязано взять -en."
+        "tip": "definiteIndefiniteQuestTen.questElevenTip"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "Соберите: Я работал с тем самым новым соседом",
+        "question": "definiteIndefiniteQuestTen.questTwelve",
         "words": ["mit", "Ich", "Nachbarn", "dem", "gearbeitet", "habe", "neuen", "neue"],
         "correctOrder": ["Ich", "habe", "mit", "dem", "neuen", "Nachbarn", "gearbeitet"],
-        "tip": "Dativ. После артикля 'dem', который изменил форму, прилагательное всегда получает окончание -en."
+        "tip": "definiteIndefiniteQuestTen.questTwelveTip"
       },
       {
         "id": 13,
         "type": "input",
-        "question": "Впишите форму (lecker): Er hat eine ___ Pizza gegessen.",
+        "question": "definiteIndefiniteQuestTen.questThirteen",
         "answer": "leckere",
-        "tip": "Предмет упоминается впервые. Женский род: артикль 'eine' имеет окончание -e, прилагательное тоже берет -e."
+        "tip": "definiteIndefiniteQuestTen.questThirteenTip"
       },
       {
         "id": 14,
         "type": "input",
-        "question": "Впишите форму (lecker): Die ___ Pizza war gut.",
+        "question": "definiteIndefiniteQuestTen.questFourteen",
         "answer": "leckere",
-        "tip": "Предмет точно известен. Артикль 'die' уже всё показал, поэтому прилагательное просто получает окончание -e."
+        "tip": "definiteIndefiniteQuestTen.questFourteenTip"
       },
       {
         "id": 15,
         "type": "select",
-        "question": "Выберите верный вариант: Я пью крепкий кофе",
-        "options": [
-          "Ich trinke einen starken Kaffee.",
-          "Ich trinke einen starker Kaffee.",
-          "Ich trinke einen starke Kaffee."
-        ],
+        "question": "definiteIndefiniteQuestTen.questFifteen",
+        "options": ["Ich trinke einen starken Kaffee.", "Ich trinke einen starker Kaffee.", "Ich trinke einen starke Kaffee."],
         "answer": "Ich trinke einen starken Kaffee.",
-        "tip": "Мужской род, Akkusativ. Артикль 'einen' имеет окончание падежа, поэтому прилагательное берет -en."
+        "tip": "definiteIndefiniteQuestTen.questFifteenTip"
       }
     ]
   },
   {
     "questId": "eleven",
-    "title": "Интервальное повторение: Блок 11",
+    "title": "definiteIndefiniteQuestEleven.title",
     "progress": "0/15",
-    "description": "Отработка склонения: когда предмет упоминается впервые и когда он уже знаком.",
+    "description": "definiteIndefiniteQuestEleven.description",
     "conditions": {
-      "goal": "Закрепи автоматизм в окончаниях на skillupgerman!",
+      "goal": "definiteIndefiniteQuestEleven.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
-    "rewards": {
-      "points": 20,
-      "xp": 20
-    },
+    "rewards": { "points": 20, "xp": 20 },
     "tasks": [
       {
         "id": 1,
         "type": "input",
-        "question": "Впишите пропущенное слово: Dort steht ein ___ Tisch.",
+        "question": "definiteIndefiniteQuestEleven.questOne",
         "answer": "alter",
-        "tip": "Неопределенный артикль (предмет не известен). Мужской род (der). Артикль 'ein' пустой, поэтому прилагательное **берет окончание** у deR -> altER."
+        "tip": "definiteIndefiniteQuestEleven.questOneTip"
       },
       {
         "id": 2,
         "type": "input",
-        "question": "Впишите пропущенное слово: Der ___ Tisch ist aus Holz.",
+        "question": "definiteIndefiniteQuestEleven.questTwo",
         "answer": "alte",
-        "tip": "Определенный артикль (предмет точно известен). Артикль 'der' уже сам показал род, поэтому прилагательное просто получает окончание -e."
+        "tip": "definiteIndefiniteQuestEleven.questTwoTip"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Выберите верный вариант: Я куплю новую машину",
-        "options": [
-          "Ich werde ein neues Auto kaufen.",
-          "Ich werde ein neue Auto kaufen.",
-          "Ich werde ein neuen Auto kaufen."
-        ],
+        "question": "definiteIndefiniteQuestEleven.questThree",
+        "options": ["Ich werde ein neues Auto kaufen.", "Ich werde ein neue Auto kaufen.", "Ich werde ein neuen Auto kaufen."],
         "answer": "Ich werde ein neues Auto kaufen.",
-        "tip": "Неопределенный артикль (предмет не известен). Средний род (das). Артикль 'ein' пустой, прилагательное **берет окончание** у артикля daS -> neuES."
+        "tip": "definiteIndefiniteQuestEleven.questThreeTip"
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Выберите верный вариант: Эта новая машина очень быстрая",
-        "options": [
-          "Das neue Auto ist sehr schnell.",
-          "Das neues Auto ist sehr schnell.",
-          "Das neuen Auto ist sehr schnell."
-        ],
+        "question": "definiteIndefiniteQuestEleven.questFour",
+        "options": ["Das neue Auto ist sehr schnell.", "Das neues Auto ist sehr schnell.", "Das neuen Auto ist sehr schnell."],
         "answer": "Das neue Auto ist sehr schnell.",
-        "tip": "Определенный артикль (предмет точно известен). Артикль 'das' уже показал средний род, поэтому прилагательное просто получает окончание -e."
+        "tip": "definiteIndefiniteQuestEleven.questFourTip"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Соберите: Мама приготовила вкусный пирог",
+        "question": "definiteIndefiniteQuestEleven.questFive",
         "words": ["hat", "Kuchen", "einen", "Mutter", "gebacken", "leckeren", "leckerer"],
         "correctOrder": ["Mutter", "hat", "einen", "leckeren", "Kuchen", "gebacken"],
-        "tip": "Неопределенный артикль (впервые). Мужской род, Akkusativ: прилагательное **берет окончание -en** у артикля 'einen'."
+        "tip": "definiteIndefiniteQuestEleven.questFiveTip"
       },
       {
         "id": 6,
         "type": "reorder",
-        "question": "Соберите: Этот вкусный пирог еще теплый",
+        "question": "definiteIndefiniteQuestEleven.questSix",
         "words": ["Der", "ist", "Kuchen", "leckere", "noch", "warm", "leckeren"],
         "correctOrder": ["Der", "leckere", "Kuchen", "ist", "noch", "warm"],
-        "tip": "Определенный артикль (предмет известен). Артикль 'der' — босс, он уже всё показал, прилагательное отдыхает с окончанием -e."
+        "tip": "definiteIndefiniteQuestEleven.questSixTip"
       },
       {
         "id": 7,
         "type": "input",
-        "question": "Впишите пропущенное слово: Ich trinke einen ___ Tee.",
+        "question": "definiteIndefiniteQuestEleven.questSeven",
         "answer": "kalten",
-        "tip": "Неопределенный артикль в Akkusativ. Артикль 'einen' имеет окончание падежа, поэтому прилагательное обязано принять окончание -en."
+        "tip": "definiteIndefiniteQuestEleven.questSevenTip"
       },
       {
         "id": 8,
         "type": "input",
-        "question": "Впишите пропущенное слово: Er hat den ___ Tee getrunken.",
+        "question": "definiteIndefiniteQuestEleven.questEight",
         "answer": "kalten",
-        "tip": "Определенный артикль в Akkusativ. После артикля 'den', который изменил форму, прилагательное всегда получает окончание -en."
+        "tip": "definiteIndefiniteQuestEleven.questEightTip"
       },
       {
         "id": 9,
         "type": "select",
-        "question": "Выберите верный вариант: Там стоит маленькое здание",
-        "options": [
-          "Ein kleines Haus steht dort.",
-          "Ein kleine Haus steht dort.",
-          "Ein kleinen Haus steht dort."
-        ],
-        "answer": "Ein kleines Haus steht dort.",
-        "tip": "Неопределенный артикль (впервые). Средний род (das). Артикль 'ein' пустой, прилагательное **берет окончание** у daS -> kleinES."
+        "question": "definiteIndefiniteQuestEleven.questNine",
+        "options": ["Ein kleines Haus стоит dort.", "Ein kleine Haus стоит dort.", "Ein kleinen Haus стоит dort."],
+        "answer": "Ein kleines Haus стоит dort.",
+        "tip": "definiteIndefiniteQuestEleven.questNineTip"
       },
       {
         "id": 10,
         "type": "select",
-        "question": "Выберите верный вариант: Это маленькое здание старое",
-        "options": [
-          "Das kleine Haus ist alt.",
-          "Das kleines Haus ist alt.",
-          "Das kleinen Haus ist alt."
-        ],
+        "question": "definiteIndefiniteQuestEleven.questTen",
+        "options": ["Das kleine Haus ist alt.", "Das kleines Haus ist alt.", "Das kleinen Haus ist alt."],
         "answer": "Das kleine Haus ist alt.",
-        "tip": "Предмет известен. Артикль 'das' уже показал средний род, поэтому прилагательное просто получает окончание -e."
+        "tip": "definiteIndefiniteQuestEleven.questTenTip"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Соберите: Мы пойдем с добрым человеком",
+        "question": "definiteIndefiniteQuestEleven.questEleven",
         "words": ["mit", "netten", "Wir", "einem", "Mann", "gehen", "netter"],
         "correctOrder": ["Wir", "gehen", "mit", "einem", "netten", "Mann"],
-        "tip": "Dativ (неизвестно). Артикль 'einem' уже имеет окончание падежа, поэтому прилагательное обязано взять -en."
+        "tip": "definiteIndefiniteQuestEleven.questElevenTip"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "Соберите: Мы пойдем с тем самым добрым человеком",
+        "question": "definiteIndefiniteQuestEleven.questTwelve",
         "words": ["mit", "dem", "Wir", "gehen", "netten", "Mann", "nette"],
         "correctOrder": ["Wir", "gehen", "mit", "dem", "netten", "Mann"],
-        "tip": "Dativ (известно). После артикля-босса 'dem', который изменил форму, прилагательное всегда получает окончание -en."
+        "tip": "definiteIndefiniteQuestEleven.questTwelveTip"
       },
       {
         "id": 13,
         "type": "input",
-        "question": "Впишите пропущенное слово: Sie hat eine ___ Küche.",
+        "question": "definiteIndefiniteQuestEleven.questThirteen",
         "answer": "moderne",
-        "tip": "Неопределенный артикль. Женский род: артикль 'eine' имеет окончание -e, прилагательное тоже берет -e."
+        "tip": "definiteIndefiniteQuestEleven.questThirteenTip"
       },
       {
         "id": 14,
         "type": "input",
-        "question": "Впишите пропущенное слово: Die ___ Küche ist sehr schön.",
+        "question": "definiteIndefiniteQuestEleven.questFourteen",
         "answer": "moderne",
-        "tip": "Определенный артикль 'die' уже всё показал, поэтому прилагательное просто получает окончание -e."
+        "tip": "definiteIndefiniteQuestEleven.questFourteenTip"
       },
       {
         "id": 15,
         "type": "select",
-        "question": "Выберите верный вариант: Дует сильный ветер",
-        "options": [
-          "Ein starker Wind weht.",
-          "Ein starke Wind weht.",
-          "Ein starken Wind weht."
-        ],
+        "question": "definiteIndefiniteQuestEleven.questFifteen",
+        "options": ["Ein starker Wind weht.", "Ein starke Wind weht.", "Ein starken Wind weht."],
         "answer": "Ein starker Wind weht.",
-        "tip": "Неопределенный артикль (впервые). Мужской род (der). Артикль 'ein' пустой, прилагательное **берет окончание** у deR -> starkER."
+        "tip": "definiteIndefiniteQuestEleven.questFifteenTip"
       }
     ]
   },
   {
     "questId": "twelve",
-    "title": "Интервальное повторение: Блок 12",
+    "title": "definiteIndefiniteQuestTwelve.title",
     "progress": "0/15",
-    "description": "Продолжаем повторять: упражения для отработки между известным и неизвестным предметом.",
+    "description": "definiteIndefiniteQuestTwelve.description",
     "conditions": {
-      "goal": "Закрепи автоматизм в окончаниях на skillupgerman!",
+      "goal": "definiteIndefiniteQuestTwelve.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
-    "rewards": {
-      "points": 20,
-      "xp": 20
-    },
+    "rewards": { "points": 20, "xp": 20 },
     "tasks": [
       {
         "id": 1,
         "type": "input",
-        "question": "Впишите форму (neu): Dort steht ein ___ Schrank.",
+        "question": "definiteIndefiniteQuestTwelve.questOne",
         "answer": "neuer",
-        "tip": "Неопределенный артикль (предмет упоминается впервые). Мужской род (der). Артикль 'ein' пустой, поэтому прилагательное **берет окончание** у deR -> neuER."
+        "tip": "definiteIndefiniteQuestTwelve.questOneTip"
       },
       {
         "id": 2,
         "type": "input",
-        "question": "Впишите форму (neu): Der ___ Schrank ist sehr teuer.",
+        "question": "definiteIndefiniteQuestTwelve.questTwo",
         "answer": "neue",
-        "tip": "Определенный артикль (предмет точно известен). Артикль 'der' уже сам показал род, поэтому прилагательное просто получает окончание -e."
+        "tip": "definiteIndefiniteQuestTwelve.questTwoTip"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Выберите верный вариант: Я куплю новое платье",
-        "options": [
-          "Ich werde ein neues Kleid kaufen.",
-          "Ich werde ein neue Kleid kaufen.",
-          "Ich werde ein neuen Kleid kaufen."
-        ],
+        "question": "definiteIndefiniteQuestTwelve.questThree",
+        "options": ["Ich werde ein neues Kleid kaufen.", "Ich werde ein neue Kleid kaufen.", "Ich werde ein neuen Auto kaufen."],
         "answer": "Ich werde ein neues Kleid kaufen.",
-        "tip": "Неопределенный артикль (предмет не известен). Средний род (das). Артикль 'ein' пустой, прилагательное **берет окончание** у артикля daS -> neuES."
+        "tip": "definiteIndefiniteQuestTwelve.questThreeTip"
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Выберите верный вариант: Это новое платье мне нравится",
-        "options": [
-          "Das neue Kleid gefällt mir.",
-          "Das neues Kleid gefällt mir.",
-          "Das neuen Kleid gefällt mir."
-        ],
+        "question": "definiteIndefiniteQuestTwelve.questFour",
+        "options": ["Das neue Kleid gefällt mir.", "Das neues Kleid gefällt mir.", "Das neuen Kleid gefällt mir."],
         "answer": "Das neue Kleid gefällt mir.",
-        "tip": "Определенный артикль (предмет точно известен). Артикль 'das' уже показал средний род, поэтому прилагательное просто получает окончание -e."
+        "tip": "definiteIndefiniteQuestTwelve.questFourTip"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Соберите: Маленькая кошка сидит здесь",
+        "question": "definiteIndefiniteQuestTwelve.questFive",
         "words": ["Katze", "Eine", "kleine", "hier", "sitzt", "kleiner", "kleinen"],
         "correctOrder": ["Eine", "kleine", "Katze", "sitzt", "hier"],
-        "tip": "Неопределенный артикль (впервые). Женский род: прилагательное **берет окончание -e** у артикля 'eine'."
+        "tip": "definiteIndefiniteQuestTwelve.questFiveTip"
       },
       {
         "id": 6,
         "type": "reorder",
-        "question": "Соберите: Эта маленькая кошка спит",
+        "question": "definiteIndefiniteQuestTwelve.questSix",
         "words": ["Die", "kleine", "schläft", "Katze", "kleines", "kleiner"],
         "correctOrder": ["Die", "kleine", "Katze", "schläft"],
-        "tip": "Определенный артикль (предмет известен). Артикль 'die' — босс, он уже всё показал, прилагательное отдыхает с окончанием -e."
+        "tip": "definiteIndefiniteQuestTwelve.questSixTip"
       },
       {
         "id": 7,
         "type": "input",
-        "question": "Впишите форму (alt): Ich habe einen ___ Computer.",
+        "question": "definiteIndefiniteQuestTwelve.questSeven",
         "answer": "alten",
-        "tip": "Неопределенный артикль в Akkusativ. Артикль 'einen' имеет окончание падежа, поэтому прилагательное обязано принять окончание -en."
+        "tip": "definiteIndefiniteQuestTwelve.questSevenTip"
       },
       {
         "id": 8,
         "type": "input",
-        "question": "Впишите форму (alt): Er repariert den ___ Computer.",
+        "question": "definiteIndefiniteQuestTwelve.questEight",
         "answer": "alten",
-        "tip": "Определенный артикль в Akkusativ. После артикля 'den', который изменил форму, прилагательное всегда получает окончание -en."
+        "tip": "definiteIndefiniteQuestTwelve.questEightTip"
       },
       {
         "id": 9,
         "type": "select",
-        "question": "Выберите верный вариант: Там стоит маленькое окно",
-        "options": [
-          "Ein kleines Fenster ist dort.",
-          "Ein kleine Fenster ist dort.",
-          "Ein kleinen Fenster ist dort."
-        ],
+        "question": "definiteIndefiniteQuestTwelve.questNine",
+        "options": ["Ein kleines Fenster ist dort.", "Ein kleine Fenster ist dort.", "Ein kleinen Fenster ist dort."],
         "answer": "Ein kleines Fenster ist dort.",
-        "tip": "Неопределенный артикль (впервые). Средний род (das). Артикль 'ein' пустой, прилагательное **берет окончание** у daS -> kleinES."
+        "tip": "definiteIndefiniteQuestTwelve.questNineTip"
       },
       {
         "id": 10,
         "type": "select",
-        "question": "Выберите верный вариант: Это маленькое окно открыто",
-        "options": [
-          "Das kleine Fenster ist offen.",
-          "Das kleines Fenster ist offen.",
-          "Das kleinen Fenster ist offen."
-        ],
+        "question": "definiteIndefiniteQuestTwelve.questTen",
+        "options": ["Das kleine Fenster ist offen.", "Das kleines Fenster ist offen.", "Das kleinen Fenster ist offen."],
         "answer": "Das kleine Fenster ist offen.",
-        "tip": "Предмет известен. Артикль 'das' уже показал средний род, поэтому прилагательное просто получает окончание -e."
+        "tip": "definiteIndefiniteQuestTwelve.questTenTip"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Соберите: Мы пойдем с новым коллегой",
+        "question": "definiteIndefiniteQuestTwelve.questEleven",
         "words": ["mit", "neuen", "Wir", "einem", "Kollegen", "gehen", "neuer"],
         "correctOrder": ["Wir", "gehen", "mit", "einem", "neuen", "Kollegen"],
-        "tip": "Dativ (неизвестно). Артикль 'einem' уже имеет окончание падежа, поэтому прилагательное обязано взять -en."
+        "tip": "definiteIndefiniteQuestTwelve.questElevenTip"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "Соберите: Мы пойдем с тем самым новым коллегой",
+        "question": "definiteIndefiniteQuestTwelve.questTwelve",
         "words": ["mit", "dem", "Wir", "gehen", "neuen", "Kollegen", "neue"],
         "correctOrder": ["Wir", "gehen", "mit", "dem", "neuen", "Kollegen"],
-        "tip": "Dativ (известно). После артикля-босса 'dem', который изменил форму, прилагательное всегда получает окончание -en."
+        "tip": "definiteIndefiniteQuestTwelve.questTwelveTip"
       },
       {
         "id": 13,
         "type": "input",
-        "question": "Впишите форму (lecker): Er hat eine ___ Pizza gegessen.",
+        "question": "definiteIndefiniteQuestTwelve.questThirteen",
         "answer": "leckere",
-        "tip": "Неопределенный артикль. Женский род: артикль 'eine' имеет окончание -e, прилагательное тоже берет -e."
+        "tip": "definiteIndefiniteQuestTwelve.questThirteenTip"
       },
       {
         "id": 14,
         "type": "input",
-        "question": "Впишите форму (lecker): Die ___ Pizza ist schon fertig.",
+        "question": "definiteIndefiniteQuestTwelve.questFourteen",
         "answer": "leckere",
-        "tip": "Определенный артикль 'die' уже всё показал, поэтому прилагательное просто **берет окончание** -e."
+        "tip": "definiteIndefiniteQuestTwelve.questFourteenTip"
       },
       {
         "id": 15,
         "type": "select",
-        "question": "Выберите верный вариант: Хороший друг всегда поможет",
-        "options": [
-          "Ein guter Freund hilft immer.",
-          "Ein gute Freund hilft immer.",
-          "Ein guten Freund hilft immer."
-        ],
+        "question": "definiteIndefiniteQuestTwelve.questFifteen",
+        "options": ["Ein guter Freund hilft immer.", "Ein gute Freund hilft immer.", "Ein guten Freund hilft immer."],
         "answer": "Ein guter Freund hilft immer.",
-        "tip": "Неопределенный артикль (впервые). Мужской род (der). Артикль 'ein' пустой, прилагательное **берет окончание** у deR -> gutER."
+        "tip": "definiteIndefiniteQuestTwelve.questFifteenTip"
       }
     ]
   },
   {
     "questId": "thirteen",
-    "title": "Интервальное повторение: Блок 13",
+    "title": "definiteIndefiniteQuestThirteen.title",
     "progress": "0/15",
-    "description": "Тринадцатый этап: закрепляем автоматизм. Кто-то один в паре обязан показать род и падеж!",
+    "description": "definiteIndefiniteQuestThirteen.description",
     "conditions": {
-      "goal": "Закрепи автоматизм в окончаниях на skillupgerman!",
+      "goal": "definiteIndefiniteQuestThirteen.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
-    "rewards": {
-      "points": 20,
-      "xp": 20
-    },
+    "rewards": { "points": 20, "xp": 20 },
     "tasks": [
       {
         "id": 1,
         "type": "input",
-        "question": "Впишите форму (alt): Dort steht ein ___ Bett.",
+        "question": "definiteIndefiniteQuestThirteen.questOne",
         "answer": "altes",
-        "tip": "Предмет упоминается впервые. Кровать — средний род (das). Артикль 'ein' пустой, поэтому прилагательное **берет окончание** у артикля daS -> altES."
+        "tip": "definiteIndefiniteQuestThirteen.questOneTip"
       },
       {
         "id": 2,
         "type": "input",
-        "question": "Впишите форму (alt): Das ___ Bett ist unbequem.",
+        "question": "definiteIndefiniteQuestThirteen.questTwo",
         "answer": "alte",
-        "tip": "Предмет уже известен. Определенный артикль 'das' **уже всё показал**, поэтому прилагательное просто получает окончание -e."
+        "tip": "definiteIndefiniteQuestThirteen.questTwoTip"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Выберите верный вариант: Я вижу новый стол",
-        "options": [
-          "Ich sehe einen neuen Tisch.",
-          "Ich sehe einen neuer Tisch.",
-          "Ich sehe einen neue Tisch."
-        ],
+        "question": "definiteIndefiniteQuestThirteen.questThree",
+        "options": ["Ich sehe einen neuen Tisch.", "Ich sehe einen neuer Tisch.", "Ich sehe einen neue Tisch."],
         "answer": "Ich sehe einen neuen Tisch.",
-        "tip": "Неопределенный артикль в Akkusativ (мужской род). Артикль 'einen' имеет окончание падежа, поэтому прилагательное обязано принять окончание -en."
+        "tip": "definiteIndefiniteQuestThirteen.questThreeTip"
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Выберите верный вариант: Я протру этот новый стол",
-        "options": [
-          "Ich putze den neuen Tisch.",
-          "Ich putze den neue Tisch.",
-          "Ich putze den neuer Tisch."
-        ],
+        "question": "definiteIndefiniteQuestThirteen.questFour",
+        "options": ["Ich putze den neuen Tisch.", "Ich putze den neue Tisch.", "Ich putze den neuer Tisch."],
         "answer": "Ich putze den neuen Tisch.",
-        "tip": "Предмет точно известен (Akkusativ). После артикля 'den', который изменил форму, прилагательное всегда получает окончание -en."
+        "tip": "definiteIndefiniteQuestThirteen.questFourTip"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Соберите: Красивая сумка лежит на столе",
+        "question": "definiteIndefiniteQuestThirteen.questFive",
         "words": ["Tasche", "Tisch", "auf", "Eine", "dem", "schöne", "liegt", "schönen"],
         "correctOrder": ["Eine", "schöne", "Tasche", "liegt", "auf", "dem", "Tisch"],
-        "tip": "Неопределенный артикль (впервые). Женский род: прилагательное **берет окончание -e** у артикля 'eine'."
+        "tip": "definiteIndefiniteQuestThirteen.questFiveTip"
       },
       {
         "id": 6,
         "type": "reorder",
-        "question": "Соберите: Эта красивая сумка принадлежит мне",
+        "question": "definiteIndefiniteQuestThirteen.questSix",
         "words": ["gehört", "schöne", "Die", "Tasche", "mir", "schönes"],
         "correctOrder": ["Die", "schöne", "Tasche", "gehört", "mir"],
-        "tip": "Предмет известен. Артикль 'die' — босс, он уже всё показал, прилагательное отдыхает с окончанием -e."
+        "tip": "definiteIndefiniteQuestThirteen.questSixTip"
       },
       {
         "id": 7,
         "type": "input",
-        "question": "Впишите форму (stark): Ein ___ Mann hat gerufen.",
+        "question": "definiteIndefiniteQuestThirteen.questSeven",
         "answer": "starker",
-        "tip": "Предмет упоминается впервые. Мужской род (der). Артикль 'ein' пустой, поэтому прилагательное **берет окончание** у deR -> starkER."
+        "tip": "definiteIndefiniteQuestThirteen.questSevenTip"
       },
       {
         "id": 8,
         "type": "input",
-        "question": "Впишите форму (stark): Der ___ Mann ist stark.",
+        "question": "definiteIndefiniteQuestThirteen.questEight",
         "answer": "starke",
-        "tip": "Предмет точно известен. Артикль 'der' — босс, он уже показал род, поэтому прилагательное просто получает окончание -e."
+        "tip": "definiteIndefiniteQuestThirteen.questEightTip"
       },
       {
         "id": 9,
         "type": "select",
-        "question": "Выберите верный вариант: Я выпью холодную воду",
-        "options": [
-          "Ich trinke ein kalte Wasser.",
-          "Ich trinke ein kaltes Wasser.",
-          "Ich trinke ein kalten Wasser."
-        ],
+        "question": "definiteIndefiniteQuestThirteen.questNine",
+        "options": ["Ich trinke ein kalte Wasser.", "Ich trinke ein kaltes Wasser.", "Ich trinke ein kalten Wasser."],
         "answer": "Ich trinke ein kaltes Wasser.",
-        "tip": "Неопределенный артикль (впервые). Средний род (das). Артикль 'ein' пустой, прилагательное **берет окончание** у daS -> kaltES."
+        "tip": "definiteIndefiniteQuestThirteen.questNineTip"
       },
       {
         "id": 10,
         "type": "select",
-        "question": "Выберите верный вариант: Это холодная вода очень чистая",
-        "options": [
-          "Das kalte Wasser ist sauber.",
-          "Das kaltes Wasser ist sauber.",
-          "Das kalten Wasser ist sauber."
-        ],
+        "question": "definiteIndefiniteQuestThirteen.questTen",
+        "options": ["Das kalте Wasser ist sauber.", "Das kaltes Wasser ist sauber.", "Das kalten Wasser ist sauber."],
         "answer": "Das kalte Wasser ist sauber.",
-        "tip": "Предмет известен. Артикль 'das' уже показал средний род, поэтому прилагательное просто получает окончание -e."
+        "tip": "definiteIndefiniteQuestThirteen.questTenTip"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Соберите: Мы поздоровались с добрым соседом",
-        "words": ["haben", "netter", "Nachbarn", "Wir", "mit", "netten", "begrüßt", "einem"],
+        "question": "definiteIndefiniteQuestThirteen.questEleven",
+        "words": ["haben", "netter", "Nachbarn", "Wir", "mit", "netten", "begrüßt", "einen"],
         "correctOrder": ["Wir", "haben", "einen", "netten", "Nachbarn", "begrüßt"],
-        "tip": "Dativ (неизвестно). Артикль 'einem' уже имеет окончание падежа, поэтому прилагательное обязано взять -en."
+        "tip": "definiteIndefiniteQuestThirteen.questElevenTip"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "Соберите: Я работаю с этим новым ноутбуком",
+        "question": "definiteIndefiniteQuestThirteen.questTwelve",
         "words": ["Laptop", "dem", "arbeite", "Ich", "neuen", "mit", "neue"],
         "correctOrder": ["Ich", "arbeite", "mit", "dem", "neuen", "Laptop"],
-        "tip": "Dativ. Артикль-босс 'dem' уже всё показал сам, поэтому прилагательное просто **берет окончание** -en."
+        "tip": "definiteIndefiniteQuestThirteen.questTwelveTip"
       },
       {
         "id": 13,
         "type": "input",
-        "question": "Впишите форму (lecker): Sie sucht eine ___ Suppe.",
+        "question": "definiteIndefiniteQuestThirteen.questThirteen",
         "answer": "leckere",
-        "tip": "Предмет упоминается впервые. Женский род: артикль 'eine' заканчивается на -e, прилагательное тоже берет -e."
+        "tip": "definiteIndefiniteQuestThirteen.questThirteenTip"
       },
       {
         "id": 14,
         "type": "input",
-        "question": "Впишите форму (lecker): Die ___ Suppe ist fertig.",
+        "question": "definiteIndefiniteQuestThirteen.questFourteen",
         "answer": "leckere",
-        "tip": "Предмет точно известен. Артикль 'die' уже всё показал, поэтому прилагательное просто получает окончание -e."
+        "tip": "definiteIndefiniteQuestThirteen.questFourteenTip"
       },
       {
         "id": 15,
         "type": "select",
-        "question": "Выберите верный вариант: Это хороший путь",
-        "options": [
-          "Das ist ein guter Weg.",
-          "Das ist ein gute Weg.",
-          "Das ist ein guten Weg."
-        ],
+        "question": "definiteIndefiniteQuestThirteen.questFifteen",
+        "options": ["Das ist ein guter Weg.", "Das ist ein gute Weg.", "Das ist ein guten Weg."],
         "answer": "Das ist ein guter Weg.",
-        "tip": "Неопределенный артикль (впервые). Мужской род (der). Артикль 'ein' пустой, прилагательное **берет окончание** у deR -> gutER."
+        "tip": "definiteIndefiniteQuestThirteen.questFifteenTip"
       }
     ]
   },
   {
     "questId": "fourteen",
-    "title": "Интервальное повторение: Блок 14",
+    "title": "definiteIndefiniteQuestFourteen.title",
     "progress": "0/15",
-    "description": "Четырнадцатый этап: закрепляем переход от неизвестного предмета к уже знакомому.",
+    "description": "definiteIndefiniteQuestFourteen.description",
     "conditions": {
-      "goal": "Закрепи автоматизм в окончаниях на skillupgerman!",
+      "goal": "definiteIndefiniteQuestFourteen.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
-    "rewards": {
-      "points": 20,
-      "xp": 20
-    },
+    "rewards": { "points": 20, "xp": 20 },
     "tasks": [
       {
         "id": 1,
         "type": "input",
-        "question": "Впишите форму (neu): Dort steht ein ___ Schrank.",
+        "question": "definiteIndefiniteQuestFourteen.questOne",
         "answer": "neuer",
-        "tip": "Неопределенный артикль (предмет упоминается впервые). Мужской род (der). Артикль 'ein' пустой, поэтому прилагательное **берет окончание** у deR -> neuER."
+        "tip": "definiteIndefiniteQuestFourteen.questOneTip"
       },
       {
         "id": 2,
         "type": "input",
-        "question": "Впишите форму (neu): Der ___ Schrank ist sehr schwer.",
+        "question": "definiteIndefiniteQuestFourteen.questTwo",
         "answer": "neue",
-        "tip": "Определенный артикль (предмет точно известен). Артикль 'der' — босс, он уже всё показал, поэтому прилагательное просто получает окончание -e."
+        "tip": "definiteIndefiniteQuestFourteen.questTwoTip"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Выберите верный вариант: Я куплю старую машину",
-        "options": [
-          "Ich werde ein altes Auto kaufen.",
-          "Ich werde ein alte Auto kaufen.",
-          "Ich werde ein alten Auto kaufen."
-        ],
+        "question": "definiteIndefiniteQuestFourteen.questThree",
+        "options": ["Ich werde ein altes Auto kaufen.", "Ich werde ein alte Auto kaufen.", "Ich werde ein alten Auto kaufen."],
         "answer": "Ich werde ein altes Auto kaufen.",
-        "tip": "Неопределенный артикль (впервые). Средний род (das). Артикль 'ein' пустой, прилагательное **берет окончание** у артикля daS -> altES."
+        "tip": "definiteIndefiniteQuestFourteen.questThreeTip"
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Выберите верный вариант: Я продам эту старую машину",
-        "options": [
-          "Ich verkaufe das alte Auto.",
-          "Ich verkaufe das altes Auto.",
-          "Ich verkaufe das alten Auto."
-        ],
+        "question": "definiteIndefiniteQuestFourteen.questFour",
+        "options": ["Ich verkaufe das alte Auto.", "Ich verkaufe das altes Auto.", "Ich verkaufe das alten Auto."],
         "answer": "Ich verkaufe das alte Auto.",
-        "tip": "Определенный артикль (известен). Артикль 'das' уже показал средний род, поэтому прилагательное отдыхает с окончанием -e."
+        "tip": "definiteIndefiniteQuestFourteen.questFourTip"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Соберите: Маленькая кошка играет в саду",
+        "question": "definiteIndefiniteQuestFourteen.questFive",
         "words": ["spielt", "Garten", "im", "kleine", "Eine", "Katze", "kleinen"],
         "correctOrder": ["Eine", "kleine", "Katze", "spielt", "im", "Garten"],
-        "tip": "Неопределенный артикль (впервые). Женский род: прилагательное **берет окончание -e** у артикля 'eine'."
+        "tip": "definiteIndefiniteQuestFourteen.questFiveTip"
       },
       {
         "id": 6,
         "type": "reorder",
-        "question": "Соберите: Эта маленькая кошка очень милая",
+        "question": "definiteIndefiniteQuestFourteen.questSix",
         "words": ["ist", "Die", "Katze", "süß", "kleine", "sehr", "kleines"],
         "correctOrder": ["Die", "kleine", "Katze", "ist", "sehr", "süß"],
-        "tip": "Определенный артикль (известен). Артикль 'die' — босс, он уже всё показал, прилагательное просто получает -e."
+        "tip": "definiteIndefiniteQuestFourteen.questSixTip"
       },
       {
         "id": 7,
         "type": "input",
-        "question": "Впишите форму (gut): Ich suche einen ___ Freund.",
+        "question": "definiteIndefiniteQuestFourteen.questSeven",
         "answer": "guten",
-        "tip": "Неопределенный артикль, мужской род, Akkusativ. У артикля 'einen' есть окончание падежа, поэтому прилагательное тоже берет -en."
+        "tip": "definiteIndefiniteQuestFourteen.questSevenTip"
       },
       {
         "id": 8,
         "type": "input",
-        "question": "Впишите форму (gut): Ich sehe den ___ Freund.",
+        "question": "definiteIndefiniteQuestFourteen.questEight",
         "answer": "guten",
-        "tip": "Определенный артикль в Akkusativ. Артикль 'den' изменился и показал падеж, поэтому прилагательное принимает окончание -en."
+        "tip": "definiteIndefiniteQuestFourteen.questEightTip"
       },
       {
         "id": 9,
         "type": "select",
-        "question": "Выберите верный вариант: Там висит красивое фото",
-        "options": [
-          "Ein schönes Foto hängt dort.",
-          "Ein schöne Foto hängt dort.",
-          "Ein schönen Foto hängt dort."
-        ],
+        "question": "definiteIndefiniteQuestFourteen.questNine",
+        "options": ["Ein schönes Foto hängt dort.", "Ein schöne Foto hängt dort.", "Ein schönen Foto hängt dort."],
         "answer": "Ein schönes Foto hängt dort.",
-        "tip": "Неопределенный артикль (впервые). Средний род (das). Артикль 'ein' пустой, прилагательное **берет окончание** у daS -> schönES."
+        "tip": "definiteIndefiniteQuestFourteen.questNineTip"
       },
       {
         "id": 10,
         "type": "select",
-        "question": "Выберите верный вариант: Это красивое фото мне нравится",
-        "options": [
-          "Das schöne Foto gefällt mir.",
-          "Das schönes Foto gefällt mir.",
-          "Das schönen Foto gefällt mir."
-        ],
+        "question": "definiteIndefiniteQuestFourteen.questTen",
+        "options": ["Das schöne Foto gefällt mir.", "Das schönes Foto gefällt mir.", "Das schönen Foto gefällt mir."],
         "answer": "Das schöne Foto gefällt mir.",
-        "tip": "Определенный артикль (известен). Артикль 'das' уже показал средний род, поэтому прилагательное просто получает окончание -e."
+        "tip": "definiteIndefiniteQuestFourteen.questTenTip"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Соберите: Мы идем со старым учителем",
+        "question": "definiteIndefiniteQuestFourteen.questEleven",
         "words": ["mit", "Lehrer", "Wir", "einem", "alten", "gehen", "alter"],
         "correctOrder": ["Wir", "gehen", "mit", "einem", "alten", "Lehrer"],
-        "tip": "Dativ (неизвестно). Артикль 'einem' уже имеет окончание падежа, поэтому прилагательное обязано взять -en."
+        "tip": "definiteIndefiniteQuestFourteen.questElevenTip"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "Соберите: Мы идем с тем самым старым учителем",
+        "question": "definiteIndefiniteQuestFourteen.questTwelve",
         "words": ["mit", "dem", "Wir", "gehen", "alten", "Lehrer", "alte"],
         "correctOrder": ["Wir", "gehen", "mit", "dem", "alten", "Lehrer"],
-        "tip": "Dativ (известно). После артикля-босса 'dem', который изменил форму, прилагательное всегда получает окончание -en."
+        "tip": "definiteIndefiniteQuestFourteen.questTwelveTip"
       },
       {
         "id": 13,
         "type": "input",
-        "question": "Впишите форму (lecker): Sie isst eine ___ Birne.",
+        "question": "definiteIndefiniteQuestFourteen.questThirteen",
         "answer": "leckere",
-        "tip": "Неопределенный артикль. Женский род: артикль 'eine' заканчивается на -e, прилагательное тоже берет -e."
+        "tip": "definiteIndefiniteQuestFourteen.questThirteenTip"
       },
       {
         "id": 14,
         "type": "input",
-        "question": "Впишите форму (lecker): Sie hat die ___ Birne gegessen.",
+        "question": "definiteIndefiniteQuestFourteen.questFourteen",
         "answer": "leckere",
-        "tip": "Определенный артикль 'die' уже всё показал, поэтому прилагательное просто получает окончание -e."
+        "tip": "definiteIndefiniteQuestFourteen.questFourteenTip"
       },
       {
         "id": 15,
         "type": "select",
-        "question": "Выберите верный вариант: Сильный холод мешает",
-        "options": [
-          "Ein starker Frost stört.",
-          "Ein starke Frost stört.",
-          "Ein starken Frost stört."
-        ],
+        "question": "definiteIndefiniteQuestFourteen.questFifteen",
+        "options": ["Ein starker Frost stört.", "Ein starke Frost stört.", "Ein starken Frost stört."],
         "answer": "Ein starker Frost stört.",
-        "tip": "Неопределенный артикль (впервые). Мужской род (der). Артикль 'ein' пустой, прилагательное **берет окончание** у deR -> starkER."
+        "tip": "definiteIndefiniteQuestFourteen.questFifteenTip"
       }
     ]
   },
   {
     "questId": "fifteen",
-    "title": "Интервальное повторение: Финал",
+    "title": "definiteIndefiniteQuestFifteen.title",
     "progress": "0/15",
-    "description": "Заключительный этап марафона: полная проверка навыка склонения в парах 'известно/неизвестно'.",
+    "description": "definiteIndefiniteQuestFifteen.description",
     "conditions": {
-      "goal": "Закрепи автоматизм в окончаниях на skillupgerman!",
+      "goal": "definiteIndefiniteQuestFifteen.goal",
       "minCorrect": 12,
       "requiredTasks": 15
     },
-    "rewards": {
-      "points": 20,
-      "xp": 20
-    },
+    "rewards": { "points": 20, "xp": 20 },
     "tasks": [
       {
         "id": 1,
         "type": "input",
-        "question": "Впишите форму (alt): Dort steht ein ___ Baum.",
+        "question": "definiteIndefiniteQuestFifteen.questOne",
         "answer": "alter",
-        "tip": "Неопределенный артикль (предмет упоминается впервые). Мужской род (der). Артикль 'ein' пустой, поэтому прилагательное **берет окончание** у deR -> altER."
+        "tip": "definiteIndefiniteQuestFifteen.questOneTip"
       },
       {
         "id": 2,
         "type": "input",
-        "question": "Впишите форму (alt): Der ___ Baum ist sehr groß.",
+        "question": "definiteIndefiniteQuestFifteen.questTwo",
         "answer": "alte",
-        "tip": "Определенный артикль (предмет точно известен). Артикль 'der' — босс, он уже всё показал, поэтому прилагательное просто получает окончание -e."
+        "tip": "definiteIndefiniteQuestFifteen.questTwoTip"
       },
       {
         "id": 3,
         "type": "select",
-        "question": "Выберите верный вариант: Я куплю новый телефон",
-        "options": [
-          "Ich werde ein neue Handy kaufen.",
-          "Ich werde ein neues Handy kaufen.",
-          "Ich werde ein neuen Handy kaufen."
-        ],
+        "question": "definiteIndefiniteQuestFifteen.questThree",
+        "options": ["Ich werde ein neue Handy kaufen.", "Ich werde ein neues Handy kaufen.", "Ich werde ein neuen Handy kaufen."],
         "answer": "Ich werde ein neues Handy kaufen.",
-        "tip": "Неопределенный артикль (впервые). Средний род (das). Артикль 'ein' пустой, прилагательное **берет окончание** у артикля daS -> neuES."
+        "tip": "definiteIndefiniteQuestFifteen.questThreeTip"
       },
       {
         "id": 4,
         "type": "select",
-        "question": "Выберите верный вариант: Новый телефон мне нравится",
-        "options": [
-          "Das neue Handy gefällt mir.",
-          "Das neues Handy gefällt mir.",
-          "Das neuen Handy gefällt mir."
-        ],
+        "question": "definiteIndefiniteQuestFifteen.questFour",
+        "options": ["Das neue Handy gefällt mir.", "Das neues Handy gefällt mir.", "Das neuen Handy gefällt mir."],
         "answer": "Das neue Handy gefällt mir.",
-        "tip": "Определенный артикль (известен). Артикль 'das' уже показал средний род, поэтому прилагательное отдыхает с окончанием -e."
+        "tip": "definiteIndefiniteQuestFifteen.questFourTip"
       },
       {
         "id": 5,
         "type": "reorder",
-        "question": "Соберите: Молодая женщина смеется",
+        "question": "definiteIndefiniteQuestFifteen.questFive",
         "words": ["Frau", "Eine", "junge", "lacht", "jungen", "junger"],
         "correctOrder": ["Eine", "junge", "Frau", "lacht"],
-        "tip": "Неопределенный артикль (впервые). Женский род: прилагательное **берет окончание -e** у артикля 'eine'."
+        "tip": "definiteIndefiniteQuestFifteen.questFiveTip"
       },
       {
         "id": 6,
         "type": "reorder",
-        "question": "Соберите: Эта молодая женщина — врач",
+        "question": "definiteIndefiniteQuestFifteen.questSix",
         "words": ["ist", "junge", "Die", "Ärztin", "Frau", "junges"],
         "correctOrder": ["Die", "junge", "Frau", "ist", "Ärztin"],
-        "tip": "Определенный артикль (известен). Артикль 'die' — босс, он уже всё показал, прилагательное просто получает -e."
+        "tip": "definiteIndefiniteQuestFifteen.questSixTip"
       },
       {
         "id": 7,
         "type": "input",
-        "question": "Впишите форму (stark): Ich trinke einen ___ Kaffee.",
+        "question": "definiteIndefiniteQuestFifteen.questSeven",
         "answer": "starken",
-        "tip": "Неопределенный артикль, мужской род, Akkusativ. У артикля 'einen' есть окончание падежа, поэтому прилагательное тоже берет -en."
+        "tip": "definiteIndefiniteQuestFifteen.questSevenTip"
       },
       {
         "id": 8,
         "type": "input",
-        "question": "Впишите форму (stark): Er hat den ___ Kaffee getrunken.",
+        "question": "definiteIndefiniteQuestFifteen.questEight",
         "answer": "starken",
-        "tip": "Определенный артикль в Akkusativ. Артикль 'den' изменился и показал падеж, поэтому прилагательное принимает окончание -en."
+        "tip": "definiteIndefiniteQuestFifteen.questEightTip"
       },
       {
         "id": 9,
         "type": "select",
-        "question": "Выберите верный вариант: Маленький ребенок спит",
-        "options": [
-          "Ein kleines Kind schläft.",
-          "Ein kleine Kind schläft.",
-          "Ein kleinen Kind schläft."
-        ],
+        "question": "definiteIndefiniteQuestFifteen.questNine",
+        "options": ["Ein kleines Kind schläft.", "Ein kleine Kind schläft.", "Ein kleinen Kind schläft."],
         "answer": "Ein kleines Kind schläft.",
-        "tip": "Неопределенный артикль (впервые). Средний род (das). Артикль 'ein' пустой, прилагательное **берет окончание** у daS -> kleinES."
+        "tip": "definiteIndefiniteQuestFifteen.questNineTip"
       },
       {
         "id": 10,
         "type": "select",
-        "question": "Выберите верный вариант: Этот маленький ребенок проснулся",
-        "options": [
-          "Das kleine Kind ist wach.",
-          "Das kleines Kind ist wach.",
-          "Das kleinen Kind ist wach."
-        ],
+        "question": "definiteIndefiniteQuestFifteen.questTen",
+        "options": ["Das kleine Kind ist wach.", "Das kleines Kind ist wach.", "Das kleinen Kind ist wach."],
         "answer": "Das kleine Kind ist wach.",
-        "tip": "Определенный артикль (известен). Артикль 'das' уже показал средний род, поэтому прилагательное просто получает окончание -e."
+        "tip": "definiteIndefiniteQuestFifteen.questTenTip"
       },
       {
         "id": 11,
         "type": "reorder",
-        "question": "Соберите: Мы говорили со старым другом",
+        "question": "definiteIndefiniteQuestFifteen.questEleven",
         "words": ["mit", "Freund", "Wir", "einem", "alten", "haben", "gesprochen", "alter"],
         "correctOrder": ["Wir", "haben", "mit", "einem", "alten", "Freund", "gesprochen"],
-        "tip": "Dativ (неизвестно). Артикль 'einem' уже имеет окончание падежа, поэтому прилагательное обязано взять -en."
+        "tip": "definiteIndefiniteQuestFifteen.questElevenTip"
       },
       {
         "id": 12,
         "type": "reorder",
-        "question": "Соберите: Мы говорили с тем самым старым другом",
+        "question": "definiteIndefiniteQuestFifteen.questTwelve",
         "words": ["mit", "dem", "Wir", "haben", "alten", "Freund", "gesprochen", "alte"],
         "correctOrder": ["Wir", "haben", "mit", "dem", "alten", "Freund", "gesprochen"],
-        "tip": "Dativ (известно). После артикля-босса 'dem', который изменил форму, прилагательное всегда получает окончание -en."
+        "tip": "definiteIndefiniteQuestFifteen.questTwelveTip"
       },
       {
         "id": 13,
         "type": "input",
-        "question": "Впишите форму (lecker): Sie kocht eine ___ Suppe.",
+        "question": "definiteIndefiniteQuestFifteen.questThirteen",
         "answer": "leckere",
-        "tip": "Неопределенный артикль. Женский род: артикль 'eine' заканчивается на -e, прилагательное тоже берет -e."
+        "tip": "definiteIndefiniteQuestFifteen.questThirteenTip"
       },
       {
         "id": 14,
         "type": "input",
-        "question": "Впишите форму (lecker): Die ___ Suppe ist auf dem Tisch.",
+        "question": "definiteIndefiniteQuestFifteen.questFourteen",
         "answer": "leckere",
-        "tip": "Определенный артикль 'die' уже всё показал, поэтому прилагательное просто получает окончание -e."
+        "tip": "definiteIndefiniteQuestFifteen.questFourteenTip"
       },
       {
         "id": 15,
         "type": "select",
-        "question": "Выберите верный вариант: Это был прекрасный день",
-        "options": [
-          "Das war ein schöner Tag.",
-          "Das war ein schöne Tag.",
-          "Das war ein schönen Tag."
-        ],
+        "question": "definiteIndefiniteQuestFifteen.questFifteen",
+        "options": ["Das war ein schöner Tag.", "Das war ein schöne Tag.", "Das war ein schönen Tag."],
         "answer": "Das war ein schöner Tag.",
-        "tip": "Неопределенный артикль (впервые). Мужской род (der). Артикль 'ein' пустой, поэтому прилагательное **берет окончание** у deR -> schönER."
+        "tip": "definiteIndefiniteQuestFifteen.questFifteenTip"
       }
     ]
   }

@@ -307,9 +307,8 @@
       },
       {
         "id": 6,
-        "type": "select",
+        "type": "input",
         "question": "edgeImagesQuestThree.questSix",
-        "options": ["kleinen", "kleine", "kleines"],
         "answer": "kleinen",
         "tip": "edgeImagesQuestThree.questSixTip"
       },
