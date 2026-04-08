@@ -17,8 +17,7 @@
             </div>
             <div class="quest__progress-line">
               <template v-for="(step, i) in progressSteps" :key="i">
-                <div class="quest__dot"
-                     :class="{
+                <div class="quest__dot" :class="{
             'quest__dot--done': step === 'done',
             'quest__dot--wrong': step === 'wrong',
             'quest__dot--current': step === 'current',
@@ -28,24 +27,12 @@
             </div>
           </div>
           <div class="quest__lives" v-if="!previouslyCleared">
-            <div class="quest__hearts">
-              <div
-                  v-for="(n, i) in questStore.maxLives"
-                  :key="i"
-                  class="quest__heart-wrapper"
-              >
-                <svg class="quest__heart-svg" viewBox="0 0 32 29.6">
-                  <path class="heart-bg" d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
-                    c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
-                  <path
-                      class="heart-fill"
-                      :style="getHeartFillStyle(i)"
-                      d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
-                    c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"
-                  />
-                </svg>
-              </div>
-            </div>
+            <VHearts
+                :lives="questStore.lives"
+                :max-lives="questStore.maxLives"
+                :last-life-at-ms="questStore.lastLifeAtMs"
+                :regen-interval-ms="questStore.REGEN_INTERVAL_MS"
+            />
           </div>
         </div>
         <div class="quest__section">
@@ -255,7 +242,7 @@
           {{ t(currentTip) }}
         </div>
         <div class="modal__actions">
-          <button class="btn btn--primary" @click="showTipModal = false">Понятно</button>
+          <button class="btn btn--primary" @click="showTipModal = false">{{ t('modalLocations.btnAccept')}}</button>
         </div>
       </div>
     </div>
@@ -273,7 +260,7 @@ import RightIcon from '~/assets/images/location-icons/accept.svg'
 import WrongIcon from '~/assets/images/location-icons/cancel.svg'
 import {useSeoMeta} from '#imports'
 import VHelpModal from "~/src/components/V-help-modal.vue";
-
+import VHearts from '../../src/components/V-hearts.vue'
 useSeoMeta({robots: 'noindex, nofollow'})
 
 const PRICE = 10
@@ -331,21 +318,21 @@ onBeforeUnmount(() => {
   if (rafId) cancelAnimationFrame(rafId)
 })
 
-function getHeartFillStyle(i) {
+function getWaterGroupStyle(i) {
   if (i < questStore.lives) {
-    return { clipPath: 'inset(0% 0 0 0)', transition: 'clip-path 0.3s ease-in-out' }
+    return { transform: 'translateY(-6px)', transition: 'transform 0.3s ease-in-out' }
   }
   if (i === questStore.lives && questStore.lives < questStore.maxLives && questStore.lastLifeAtMs > 0) {
     const regenMs = questStore.REGEN_INTERVAL_MS
     const elapsed = Math.max(0, now.value - questStore.lastLifeAtMs)
     const progress = Math.min(100, (elapsed / regenMs) * 100)
-    const insetVal = 100 - progress
+    const yPos = 30 - (progress / 100) * 36;
     return {
-      clipPath: `inset(${insetVal}% 0 0 0)`,
+      transform: `translateY(${yPos}px)`,
       transition: 'none'
     }
   }
-  return { clipPath: 'inset(100% 0 0 0)', transition: 'clip-path 0.3s ease-in-out' }
+  return { transform: 'translateY(30px)', transition: 'transform 0.3s ease-in-out' }
 }
 
 const inputPlaceholders = {
@@ -730,9 +717,22 @@ watchEffect(() => {
   stroke: #ccc;
   stroke-width: 1px;
 }
+.water-group {
+  will-change: transform;
+}
 
-.heart-fill {
+.water-wave {
   fill: #ff4d4d;
+  animation: wave-action 1.5s linear infinite;
+}
+
+@keyframes wave-action {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-32px);
+  }
 }
 
 .quest__section {
