@@ -5153,7 +5153,7 @@
     "nextQuest": "Next question"
   },
   "locationAchievementsCategory": {
-    "title": "Language Lands",
+    "title": "Starting Lands",
     "firstName": "Eastern Plain",
     "firstDescription": "Complete all quests without mistakes in the Eastern Plain",
     "secondName": "Stone Frontier",
@@ -5176,6 +5176,28 @@
     "allLocationsName": "Master of Language Lands",
     "allLocationsDescription": "Complete all quests in all locations",
     "allLocationsAwards": "Reward: Explorer's Globe"
+  },
+  "locationAchievementsCategory2": {
+    "title": "Adventure Trails",
+    "pluralLandName": "Pass of the Future",
+    "pluralLandDescription": "Complete all tasks without mistakes in the Pass of the Future",
+    "pastLandName": "Ruins of the Past",
+    "pastLandDescription": "Complete all tasks without mistakes in the Ruins of the Past",
+    "actionValleyName": "Valley of Actions",
+    "actionValleyDescription": "Complete all tasks without mistakes in the Valley of Actions",
+    "orderValleyName": "Lands of Order",
+    "orderValleyDescription": "Complete all tasks without mistakes in the Lands of Order",
+    "timeGateName": "Gates of Time",
+    "timeGateDescription": "Complete all tasks without mistakes in the Gates of Time",
+    "edgeImagesName": "Edge of Images",
+    "edgeImagesDescription": "Complete all tasks without mistakes in the Edge of Images",
+    "secretLandsName": "Lands of Mysteries",
+    "secretLandsDescription": "Complete all tasks without mistakes in the Lands of Mysteries",
+    "definiteIndefiniteName": "Lands of Choice",
+    "definiteIndefiniteDescription": "Complete all tasks without mistakes in the Lands of Choice",
+    "adventuresMasterName": "Master of the Adventure Trails",
+    "adventuresMasterDescription": "Complete all tasks in all lands within the Adventure Trails",
+    "adventuresMasterAward": "Reward: Scroll of Wanderings"
   },
   "awards": {
     "title": "Award List",
@@ -5224,7 +5246,9 @@
     "valentineBear": "Teddy Bear",
     "valentineBearDescription": "Awarded for completing the achievement in the Events - Festival of Hearts: 'Fluffy Friend'",
     "cupidArrow": "Cupid's Bow",
-    "cupidArrowDescription": "Awarded for completing the achievement in the Events - Festival of Hearts: 'Bullseye'"
+    "cupidArrowDescription": "Awarded for completing the achievement in the Events - Festival of Hearts: 'Bullseye'",
+    "adventures": "Scroll of Wanderings",
+    "adventuresDescription": "The reward is obtained for completing the achievement in the Language Lands category: «Master of the Adventure Trails»"
   },
   "wildLandsFirstQuest": {
     "title": "Surroundings",

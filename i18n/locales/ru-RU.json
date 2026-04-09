@@ -2802,7 +2802,7 @@
     "questFour": "Соберите предложение: Я буду посещать моих друзей.",
     "questFive": "Прослушайте и напишите предложение",
     "questSix": "Соберите предложение: Он купит новую машину",
-    "questSeven": "Впишите правильную форму(будет): Er ... mit dem Auto fahren",
+    "questSeven": "Впишите правильную форму(будет): Er ___ mit dem Auto fahren",
     "questEight": "Прослушайте и напишите предложение",
     "questNine": "Соберите вопрос: Когда ты поедешь домой?",
     "questTen": "Прослушайте и напишите предложение",
@@ -5147,7 +5147,7 @@
     "nextQuest": "Следующий вопрос"
   },
   "locationAchievementsCategory": {
-    "title": "Языковые земли",
+    "title": "Стартовые земли",
     "firstName": "Восточная равнина",
     "firstDescription": "Выполните все квесты без ошибок в Восточной равнине",
     "secondName": "Каменный предел",
@@ -5170,6 +5170,28 @@
     "allLocationsName": "Мастер Языковых Земель",
     "allLocationsDescription": "Выполните все квесты во всех локациях",
     "allLocationsAwards": "Награда: Глобус исследователя"
+  },
+  "locationAchievementsCategory2": {
+    "title": "Тропы приключений",
+    "pluralLandName": "Перевал будущего",
+    "pluralLandDescription": "Выполните все задания без ошибок в Перевале будущего",
+    "pastLandName": "Руины прошлого",
+    "pastLandDescription": "Выполните все задания без ошибок в Руинах прошлого",
+    "actionValleyName": "Долина действий",
+    "actionValleyDescription": "Выполните все задания без ошибок в Долине действий",
+    "orderValleyName": "Земли порядка",
+    "orderValleyDescription": "Выполните все задания без ошибок в Землях порядка",
+    "timeGateName": "Врата времен",
+    "timeGateDescription": "Выполните все задания без ошибок во Вратах времен",
+    "edgeImagesName": "Край образов",
+    "edgeImagesDescription": "Выполните все задания без ошибок в Краю образов",
+    "secretLandsName": "Земли загадок",
+    "secretLandsDescription": "Выполните все задания без ошибок в Землях загадок",
+    "definiteIndefiniteName": "Земли выбора",
+    "definiteIndefiniteDescription": "Выполните все задания без ошибок в Землях выбора",
+    "adventuresMasterName": "Мастер троп приключений",
+    "adventuresMasterDescription": "Выполните все задания во всех землях в Тропах приключений",
+    "adventuresMasterAward": "Награда: Свиток Странствий"
   },
   "awards": {
     "title": "Список наград",
@@ -5218,7 +5240,9 @@
     "valentineBear": "Плюшевый мишка",
     "valentineBearDescription": "Награда получается за выполнение достижения в категории События - фестиваль сердец: «Мягкий друг»",
     "cupidArrow": "Лук купидона",
-    "cupidArrowDescription": "Награда получается за выполнение достижения в категории События - фестиваль сердец: «Меткий выстрел»"
+    "cupidArrowDescription": "Награда получается за выполнение достижения в категории События - фестиваль сердец: «Меткий выстрел»",
+    "adventures": "Свиток Странствий",
+    "adventuresDescription": "Награда получается за выполнение достижения в категории Языковые земли: «Мастер троп преключений»"
   },
   "wildLandsFirstQuest": {
     "title": "Окружение",

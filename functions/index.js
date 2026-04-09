@@ -8,7 +8,7 @@ const db = getFirestore();
 const CYCLE_MS = 24 * 60 * 60 * 1000;
 
 exports.takeFromArticlePenalty = onSchedule({
-	schedule: "every 15 minutes",
+	schedule: "every 20 minutes",
 	timeZone: "UTC",
 	memory: "256Mi",
 	timeoutSeconds: 540

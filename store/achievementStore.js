@@ -1210,7 +1210,7 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 
 	function updateCollectionCount() {
 		const awardAchievementIds = [
-			'explorer', 'Articlus', 'registerAchievement', 'level10', 'languageLands50',
+			'explorer', 'adventures', 'Articlus', 'registerAchievement', 'level10', 'languageLands50',
 			'OneYearVeteran', 'wrong100Answers', 'LastChance', 'guessedFastWords', 'guessSixHundred',
 			'daily', 'guessedSafeWords', 'all_cases', 'all_adjectives', 'all_verbs',
 			'FiveHearts', 'daily42', 'iAmGroot',
@@ -1505,13 +1505,18 @@ export const useAchievementStore = defineStore('achievementStore', () => {
 			const isPerfect = p => Boolean(p?.success) && Number(p?.correctCount ?? 0) === Number(p?.requiredTasks ?? 0)
 			const countForId = id => entries.filter(p => isPerfect(p) && p.region === (id === 'eastPlain' ? 'east-plain' : id)).length
 
-			const locationIds = groups.value.filter(g => g.category === 'locations').flatMap(g => g.achievements.map(a => a.id)).filter(id => id !== 'explorer' && id !== 'FiveHearts')
+			const locationGroup1Ids = groups.value.find(g => g.title === 'locationAchievementsCategory.title')?.achievements.map(a => a.id).filter(id => id !== 'explorer' && id !== 'FiveHearts') || []
+			const locationGroup2Ids = groups.value.find(g => g.title === 'locationAchievementsCategory2.title')?.achievements.map(a => a.id).filter(id => id !== 'adventures') || []
 
-			locationIds.forEach(id => updateProgress(id, countForId(id)))
+			locationGroup1Ids.forEach(id => updateProgress(id, countForId(id)))
+			locationGroup2Ids.forEach(id => updateProgress(id, countForId(id)))
 
-			const completedLocations = locationIds.reduce((acc, id) => acc + (countForId(id) >= (findById(id)?.targetProgress ?? 0) ? 1 : 0), 0)
-			updateProgress('explorer', completedLocations)
-			updateProgress('languageLands50', locationIds.reduce((acc, id) => acc + countForId(id), 0))
+			const completedLocations1 = locationGroup1Ids.reduce((acc, id) => acc + (countForId(id) >= (findById(id)?.targetProgress ?? 0) ? 1 : 0), 0)
+			updateProgress('explorer', completedLocations1)
+
+			const completedLocations2 = locationGroup2Ids.reduce((acc, id) => acc + (countForId(id) >= (findById(id)?.targetProgress ?? 0) ? 1 : 0), 0)
+			updateProgress('adventures', completedLocations2)
+			updateProgress('languageLands50', [...locationGroup1Ids, ...locationGroup2Ids].reduce((acc, id) => acc + countForId(id), 0))
 
 			const fiveHeartsCount = entries.filter(p => Boolean(p?.success) && Number(p?.requiredTasks ?? 0) >= 10 && Number(p?.correctCount ?? 0) === Number(p?.requiredTasks ?? 0) && Number(p?.livesAtFinish ?? 0) >= 5).length
 			updateProgress('FiveHearts', fiveHeartsCount)

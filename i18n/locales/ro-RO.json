@@ -5142,7 +5142,7 @@
     "nextQuest": "Următoarea întrebare"
   },
   "locationAchievementsCategory": {
-    "title": "Ținuturile Limbii",
+    "title": "Tărâmurile de Început",
     "firstName": "Câmpia de Est",
     "firstDescription": "Finalizează toate misiunile fără greșeli în Câmpia de Est",
     "secondName": "Hotarul de Piatră",
@@ -5165,6 +5165,28 @@
     "allLocationsName": "Maestrul Ținuturilor Lingvistice",
     "allLocationsDescription": "Finalizează toate misiunile în toate locațiile",
     "allLocationsAwards": "Recompensă: Globul Exploratorului"
+  },
+  "locationAchievementsCategory2": {
+    "title": "Cărările Aventurii",
+    "pluralLandName": "Trecătoarea Viitorului",
+    "pluralLandDescription": "Finalizați toate sarcinile fără greșeli în Trecătoarea Viitorului",
+    "pastLandName": "Ruinele Trecutului",
+    "pastLandDescription": "Finalizați toate sarcinile fără greșeli în Ruinele Trecutului",
+    "actionValleyName": "Valea Acțiunilor",
+    "actionValleyDescription": "Finalizați toate sarcinile fără greșeli în Valea Acțiunilor",
+    "orderValleyName": "Tărâmurile Ordinii",
+    "orderValleyDescription": "Finalizați toate sarcinile fără greșeli în Tărâmurile Ordinii",
+    "timeGateName": "Porțile Timpului",
+    "timeGateDescription": "Finalizați toate sarcinile fără greșeli în Porțile Timpului",
+    "edgeImagesName": "Tărâmul Imaginilor",
+    "edgeImagesDescription": "Finalizați toate sarcinile fără greșeli în Tărâmul Imaginilor",
+    "secretLandsName": "Tărâmurile Misterelor",
+    "secretLandsDescription": "Finalizați toate sarcinile fără greșeli în Tărâmurile Misterelor",
+    "definiteIndefiniteName": "Tărâmurile Alegerii",
+    "definiteIndefiniteDescription": "Finalizați toate sarcinile fără greșeli în Tărâmurile Alegerii",
+    "adventuresMasterName": "Maestrul Cărărilor Aventurii",
+    "adventuresMasterDescription": "Finalizați toate sarcinile în toate tărâmurile din Cărările Aventurii",
+    "adventuresMasterAward": "Recompensă: Pergamentul Călătoriilor"
   },
   "awards": {
     "title": "Lista premiilor",
@@ -5213,7 +5235,9 @@
     "valentineBear": "Ursuleț de pluș",
     "valentineBearDescription": "Premiu obținut pentru realizarea din categoria Evenimente - Festivalul inimilor: „Prieten moale”",
     "cupidArrow": "Arcul lui Cupidon",
-    "cupidArrowDescription": "Premiu obținut pentru realizarea din categoria Evenimente - Festivalul inimilor: „Trăgător iscusit”"
+    "cupidArrowDescription": "Premiu obținut pentru realizarea din categoria Evenimente - Festivalul inimilor: „Trăgător iscusit”",
+    "adventures": "Pergamentul Călătoriilor",
+    "adventuresDescription": "Recompensa se obține pentru completarea realizării din categoria Tărâmurile Limbilor: «Maestrul Cărărilor Aventurii»"
   },
   "wildLandsFirstQuest": {
     "title": "Împrejurimi",

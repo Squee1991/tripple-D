@@ -92,9 +92,9 @@ export const regions = {
 		],
 		elementary: [
 			{
-				id: "plural-land",
-				pathTo: "plural-land",
-				theme: "plural",
+				id: "future-land",
+				pathTo: "future-land",
+				theme: "future",
 				name: "locationNames.plural-land",
 				level: 0,
 				desc: "regions.descriptionPluralLands",
