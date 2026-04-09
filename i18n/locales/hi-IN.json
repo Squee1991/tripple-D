@@ -5117,7 +5117,7 @@
     "nextQuest": "अगला प्रश्न"
   },
   "locationAchievementsCategory": {
-    "title": "भाषा की भूमि",
+    "title": "शुरुआती भूमि",
     "firstName": "पूर्वी मैदान (East Plain)",
     "firstDescription": "पूर्वी मैदान में बिना किसी गलती के सभी क्वेस्ट पूरे करें",
     "secondName": "पथरीली सीमा (Stone Reach)",
@@ -5140,6 +5140,28 @@
     "allLocationsName": "भाषाई भूमि के मास्टर",
     "allLocationsDescription": "सभी स्थानों के सभी क्वेस्ट पूरे करें",
     "allLocationsAwards": "पुरस्कार: खोजकर्ता का ग्लोब (Explorer's Globe)"
+  },
+  "locationAchievementsCategory2": {
+    "title": "रोमांच के रास्ते",
+    "pluralLandName": "भविष्य का दर्रा",
+    "pluralLandDescription": "भविष्य के दर्रे में सभी कार्यों को बिना किसी गलती के पूरा करें",
+    "pastLandName": "अतीत के खंडहर",
+    "pastLandDescription": "अतीत के खंडहरों में सभी कार्यों को बिना किसी गलती के पूरा करें",
+    "actionValleyName": "कर्मों की घाटी",
+    "actionValleyDescription": "कर्मों की घाटी में सभी कार्यों को बिना किसी गलती के पूरा करें",
+    "orderValleyName": "व्यवस्था की भूमि",
+    "orderValleyDescription": "व्यवस्था की भूमि में सभी कार्यों को बिना किसी गलती के पूरा करें",
+    "timeGateName": "समय के द्वार",
+    "timeGateDescription": "समय के द्वार में सभी कार्यों को बिना किसी गलती के पूरा करें",
+    "edgeImagesName": "छवियों की दुनिया",
+    "edgeImagesDescription": "छवियों की दुनिया में सभी कार्यों को बिना किसी गलती के पूरा करें",
+    "secretLandsName": "रहस्यों की भूमि",
+    "secretLandsDescription": "रहस्यों की भूमि में सभी कार्यों को बिना किसी गलती के पूरा करें",
+    "definiteIndefiniteName": "चुनाव की भूमि",
+    "definiteIndefiniteDescription": "चुनाव की भूमि में सभी कार्यों को बिना किसी गलती के पूरा करें",
+    "adventuresMasterName": "रोमांच के रास्तों का मास्टर",
+    "adventuresMasterDescription": "रोमांच के रास्तों में सभी भूमियों के सभी कार्यों को पूरा करें",
+    "adventuresMasterAward": "इनाम: यात्राओं का स्क्रॉल"
   },
   "awards": {
     "title": "पुरस्कार सूची",
@@ -5188,7 +5210,9 @@
     "valentineBear": "टेडी बियर",
     "valentineBearDescription": "इवेंट - दिलों का त्योहार: 'कोमल मित्र' के लिए पुरस्कृत",
     "cupidArrow": "कामदेव का धनुष",
-    "cupidArrowDescription": "इवेंट - दिलों का त्योहार: 'सटीक निशाना' के लिए पुरस्कृत"
+    "cupidArrowDescription": "इवेंट - दिलों का त्योहार: 'सटीक निशाना' के लिए पुरस्कृत",
+    "adventures": "यात्राओं का स्क्रॉल",
+    "adventuresDescription": "यह इनाम भाषा भूमि श्रेणी में उपलब्धि को पूरा करने पर मिलता है: «रोмаंच के रास्तों का मास्टर»"
   },
   "wildLandsFirstQuest": {
     "title": "परिवेश",

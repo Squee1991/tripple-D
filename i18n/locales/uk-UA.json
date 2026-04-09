@@ -5137,7 +5137,7 @@
     "nextQuest": "Наступне питання"
   },
   "locationAchievementsCategory": {
-    "title": "Мовні землі",
+    "title": "Початкові землі",
     "firstName": "Східна рівнина",
     "firstDescription": "Виконайте всі квести без помилок у Східній рівнині",
     "secondName": "Кам'яний кордон",
@@ -5160,6 +5160,28 @@
     "allLocationsName": "Майстер Мовних Земель",
     "allLocationsDescription": "Виконайте всі квести в усіх локаціях",
     "allLocationsAwards": "Нагорода: Глобус дослідника"
+  },
+  "locationAchievementsCategory2": {
+    "title": "Стежки пригод",
+    "pluralLandName": "Перевал майбутнього",
+    "pluralLandDescription": "Виконайте всі завдання без помилок на Перевалі майбутнього",
+    "pastLandName": "Руїни минулого",
+    "pastLandDescription": "Виконайте всі завдання без помилок у Руїнах минулого",
+    "actionValleyName": "Долина дій",
+    "actionValleyDescription": "Виконайте всі завдання без помилок у Долині дій",
+    "orderValleyName": "Землі порядку",
+    "orderValleyDescription": "Виконайте всі завдання без помилок у Землях порядку",
+    "timeGateName": "Брама часів",
+    "timeGateDescription": "Виконайте всі завдання без помилок у Брамі часів",
+    "edgeImagesName": "Край образів",
+    "edgeImagesDescription": "Виконайте всі завдання без помилок у Краю образів",
+    "secretLandsName": "Землі загадок",
+    "secretLandsDescription": "Виконайте всі завдання без помилок у Землях загадок",
+    "definiteIndefiniteName": "Землі вибору",
+    "definiteIndefiniteDescription": "Виконайте всі завдання без помилок у Землях вибору",
+    "adventuresMasterName": "Майстер стежок пригод",
+    "adventuresMasterDescription": "Виконайте всі завдання у всіх землях на Стежках пригод",
+    "adventuresMasterAward": "Нагорода: Сувій Мандрів"
   },
   "awards": {
     "title": "Список нагород",
@@ -5208,7 +5230,9 @@
     "valentineBear": "Плюшевий ведмедик",
     "valentineBearDescription": "Нагорода за досягнення в категорії Події - фестиваль сердець: «М'який друг»",
     "cupidArrow": "Лук Купідона",
-    "cupidArrowDescription": "Нагорода за досягнення в категорії Події - фестиваль сердець: «Влучний постріл»"
+    "cupidArrowDescription": "Нагорода за досягнення в категорії Події - фестиваль сердець: «Влучний постріл»",
+    "adventures": "Сувій Мандрів",
+    "adventuresDescription": "Нагорода отримується за виконання досягнення в категорії Мовні землі: «Майстер стежок пригод»"
   },
   "wildLandsFirstQuest": {
     "title": "Оточення",

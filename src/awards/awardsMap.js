@@ -17,4 +17,5 @@ export const achievementToAwardMap = {
     FiveHearts: 'awards.fiveHearts',
     daily42:"awards.daily42",
     iAmGroot:"awards.iAmGroot",
+    adventures: 'awards.adventures',
 }

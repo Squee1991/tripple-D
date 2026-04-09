@@ -192,7 +192,7 @@ export default defineNuxtConfig({
 		storage: 'localStorage',
 		storageKey: 'nuxt-color-mode',
 	},
-	sourcemap: false,
+	sourcemap: mode !== 'production',
 	i18n: {
 		strategy: 'prefix',
 		lazy: true,

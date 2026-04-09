@@ -5129,7 +5129,7 @@
     "nextQuest": "Keyingi savol"
   },
   "locationAchievementsCategory": {
-    "title": "Til o'lkalari",
+    "title": "Boshlang'ich o'lkalar",
     "firstName": "Sharqiy tekislik",
     "firstDescription": "Sharqiy tekislikdagi barcha topshiriqlarni xatosiz bajaring",
     "secondName": "Tosh chegarasi",
@@ -5152,6 +5152,28 @@
     "allLocationsName": "Til Yurtlari Ustasi",
     "allLocationsDescription": "Barcha lokatsiyalardagi topshiriqlarni bajaring",
     "allLocationsAwards": "Mukofot: Tadqiqotchi globusi"
+  },
+  "locationAchievementsCategory2": {
+    "title": "Sarguzashtlar so'qmoqlari",
+    "pluralLandName": "Kelajak dovoni",
+    "pluralLandDescription": "Kelajak dovonida barcha topshiriqlarni xatosiz bajaring",
+    "pastLandName": "O'tmish xarobalari",
+    "pastLandDescription": "O'tmish xarobalarida barcha topshiriqlarni xatosiz bajaring",
+    "actionValleyName": "Harakatlar vodiysi",
+    "actionValleyDescription": "Harakatlar vodiysida barcha topshiriqlarni xatosiz bajaring",
+    "orderValleyName": "Tartib yerlari",
+    "orderValleyDescription": "Tartib yerlarida barcha topshiriqlarni xatosiz bajaring",
+    "timeGateName": "Vaqt darvozalari",
+    "timeGateDescription": "Vaqt darvozalarida barcha topshiriqlarni xatosiz bajaring",
+    "edgeImagesName": "Timsollar o'lkasi",
+    "edgeImagesDescription": "Timsollar o'lkasida barcha topshiriqlarni xatosiz bajaring",
+    "secretLandsName": "Tilsimlar o'lkasi",
+    "secretLandsDescription": "Tilsimlar o'lkasida barcha topshiriqlarni xatosiz bajaring",
+    "definiteIndefiniteName": "Tanlov yerlari",
+    "definiteIndefiniteDescription": "Tanlov yerlarida barcha topshiriqlarni xatosiz bajaring",
+    "adventuresMasterName": "Sarguzashtlar so'qmoqlari ustasi",
+    "adventuresMasterDescription": "Sarguzashtlar so'qmoqlaridagi barcha o'lkalarda barcha topshiriqlarni bajaring",
+    "adventuresMasterAward": "Mukofot: Sayohatlar bitigi"
   },
   "awards": {
     "title": "Mukofotlar ro'yxati",
@@ -5200,7 +5222,9 @@
     "valentineBear": "Yumshoq ayiqcha",
     "valentineBearDescription": "Tadbirlar - Qalblar festivali: 'Yumshoq do'st' yutug'i uchun beriladi",
     "cupidArrow": "Kupidon kamoni",
-    "cupidArrowDescription": "Tadbirlar - Qalblar festivali: 'Aniq zarba' yutug'i uchun beriladi"
+    "cupidArrowDescription": "Tadbirlar - Qalblar festivali: 'Aniq zarba' yutug'i uchun beriladi",
+    "adventures": "Sayohatlar bitigi",
+    "adventuresDescription": "Mukofot Tillar o'lkalari toifasidagi yutuqni bajarganlik uchun beriladi: «Sarguzashtlar so'qmoqlari ustasi»"
   },
   "wildLandsFirstQuest": {
     "title": "Atrof-muhit",

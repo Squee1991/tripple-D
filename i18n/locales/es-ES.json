@@ -5147,7 +5147,7 @@
     "nextQuest": "Siguiente pregunta"
   },
   "locationAchievementsCategory": {
-    "title": "Tierras de Lenguas",
+    "title": "Tierras Iniciales",
     "firstName": "Llanura del Este",
     "firstDescription": "Completa todas las misiones sin errores en la Llanura del Este",
     "secondName": "Límite de Piedra",
@@ -5170,6 +5170,28 @@
     "allLocationsName": "Maestro de las Tierras Lingüísticas",
     "allLocationsDescription": "Completa todas las misiones en todas las ubicaciones",
     "allLocationsAwards": "Recompensa: Globo del Explorador"
+  },
+  "locationAchievementsCategory2": {
+    "title": "Senderos de Aventura",
+    "pluralLandName": "Paso del Futuro",
+    "pluralLandDescription": "Completa todas las tareas sin errores en el Paso del Futuro",
+    "pastLandName": "Ruinas del Pasado",
+    "pastLandDescription": "Completa todas las tareas sin errores en las Ruinas del Pasado",
+    "actionValleyName": "Valle de las Acciones",
+    "actionValleyDescription": "Completa todas las tareas sin errores en el Valle de las Acciones",
+    "orderValleyName": "Tierras del Orden",
+    "orderValleyDescription": "Completa todas las tareas sin errores en las Tierras del Orden",
+    "timeGateName": "Puertas del Tiempo",
+    "timeGateDescription": "Completa todas las tareas sin errores en las Puertas del Tiempo",
+    "edgeImagesName": "Borde de las Imágenes",
+    "edgeImagesDescription": "Completa todas las tareas sin errores en el Borde de las Imágenes",
+    "secretLandsName": "Tierras de los Misterios",
+    "secretLandsDescription": "Completa todas las tareas sin errores en las Tierras de los Misterios",
+    "definiteIndefiniteName": "Tierras de la Elección",
+    "definiteIndefiniteDescription": "Completa todas las tareas sin errores en las Tierras de la Elección",
+    "adventuresMasterName": "Maestro de los Senderos de Aventura",
+    "adventuresMasterDescription": "Completa todas las tareas en todas las tierras de los Senderos de Aventura",
+    "adventuresMasterAward": "Recompensa: Pergamino de los Viajes"
   },
   "awards": {
     "title": "Lista de premios",
@@ -5218,7 +5240,9 @@
     "valentineBear": "Oso de peluche",
     "valentineBearDescription": "Premio por completar el logro en la categoría Eventos - Festival de corazones: «Amigo suave»",
     "cupidArrow": "Arco de Cupido",
-    "cupidArrowDescription": "Premio por completar el logro en la categoría Eventos - Festival de corazones: «Tiro certero»"
+    "cupidArrowDescription": "Premio por completar el logro en la categoría Eventos - Festival de corazones: «Tiro certero»",
+    "adventures": "Pergamino de los Viajes",
+    "adventuresDescription": "La recompensa se obtiene al completar el logro en la categoría Tierras de los Idiomas: «Maestro de los Senderos de Aventura»"
   },
   "wildLandsFirstQuest": {
     "title": "Entorno",

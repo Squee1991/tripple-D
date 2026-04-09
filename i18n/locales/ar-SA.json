@@ -5137,7 +5137,7 @@
     "nextQuest": "السؤال التالي"
   },
   "locationAchievementsCategory": {
-    "title": "أراضي اللغات",
+    "title": "أراضي البداية",
     "firstName": "السهل الشرقي",
     "firstDescription": "أكمل جميع المهام بدون أخطاء في السهل الشرقي",
     "secondName": "الحدود الحجرية",
@@ -5160,6 +5160,28 @@
     "allLocationsName": "سيد الأراضي اللغوية",
     "allLocationsDescription": "أكمل جميع المهام في كل المواقع",
     "allLocationsAwards": "المكافأة: كرة المستكشف"
+  },
+  "locationAchievementsCategory2": {
+    "title": "مسارات المغامرة",
+    "pluralLandName": "ممر المستقبل",
+    "pluralLandDescription": "أكمل جميع المهام بدون أخطاء في ممر المستقبل",
+    "pastLandName": "أطلال الماضي",
+    "pastLandDescription": "أكمل جميع المهام بدون أخطاء في أطلال الماضي",
+    "actionValleyName": "وادي الأفعال",
+    "actionValleyDescription": "أكمل جميع المهام بدون أخطاء في وادي الأفعال",
+    "orderValleyName": "أراضي النظام",
+    "orderValleyDescription": "أكمل جميع المهام بدون أخطاء في أراضي النظام",
+    "timeGateName": "بوابات الزمن",
+    "timeGateDescription": "أكمل جميع المهام بدون أخطاء في بوابات الزمن",
+    "edgeImagesName": "أرض الصور",
+    "edgeImagesDescription": "أكمل جميع المهام بدون أخطاء في أرض الصور",
+    "secretLandsName": "أراضي الألغاز",
+    "secretLandsDescription": "أكمل جميع المهام بدون أخطاء في أراضي الألغاز",
+    "definiteIndefiniteName": "أراضي الاختيار",
+    "definiteIndefiniteDescription": "أكمل جميع المهام بدون أخطاء في أراضي الاختيار",
+    "adventuresMasterName": "سيد مسارات المغامرة",
+    "adventuresMasterDescription": "أكمل جميع المهام في جميع الأراضي داخل مسارات المغامرة",
+    "adventuresMasterAward": "المكافأة: لفيفة التجوال"
   },
   "awards": {
     "title": "قائمة الجوائز",
@@ -5208,7 +5230,9 @@
     "valentineBear": "دب محشو",
     "valentineBearDescription": "تُمنح لإكمال الإنجاز في فئة الفعاليات - مهرجان القلوب: \"صديق ناعم\"",
     "cupidArrow": "قوس كيوبيد",
-    "cupidArrowDescription": "تُمنح لإكمال الإنجاز في فئة الفعاليات - مهرجان القلوب: \"رمية صائبة\""
+    "cupidArrowDescription": "تُمنح لإكمال الإنجاز في فئة الفعاليات - مهرجان القلوب: \"رمية صائبة\"",
+    "adventures": "لفيفة التجوال",
+    "adventuresDescription": "يتم الحصول على المكافأة عند إكمال الإنجاز في فئة أراضي اللغات: «سيد مسارات المغامرة»"
   },
   "wildLandsFirstQuest": {
     "title": "المحيط",

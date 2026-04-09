@@ -5156,7 +5156,7 @@
     "nextQuest": "Następne pytanie"
   },
   "locationAchievementsCategory": {
-    "title": "Krainy Językowe",
+    "title": "Krainy początkowe",
     "firstName": "Wschodnia równina",
     "firstDescription": "Ukończ wszystkie zadania bez błędów na Wschodniej Równinie",
     "secondName": "Kamienna Granica",
@@ -5179,6 +5179,28 @@
     "allLocationsName": "Mistrz Krain Językowych",
     "allLocationsDescription": "Ukończ wszystkie zadania we wszystkich lokacjach",
     "allLocationsAwards": "Nagroda: Globus odkrywcy"
+  },
+  "locationAchievementsCategory2": {
+    "title": "Szlaki przygód",
+    "pluralLandName": "Przełęcz przyszłości",
+    "pluralLandDescription": "Wykonaj wszystkie zadania bez błędów na Przełęczy przyszłości",
+    "pastLandName": "Ruiny przeszłości",
+    "pastLandDescription": "Wykonaj wszystkie zadania bez błędów w Ruinach przeszłości",
+    "actionValleyName": "Dolina działań",
+    "actionValleyDescription": "Wykonaj wszystkie zadania bez błędów w Dolinie działań",
+    "orderValleyName": "Krainy porządku",
+    "orderValleyDescription": "Wykonaj wszystkie zadania bez błędów w Krainach porządku",
+    "timeGateName": "Wrota czasu",
+    "timeGateDescription": "Wykonaj wszystkie zadania bez błędów we Wrotach czasu",
+    "edgeImagesName": "Kraina obrazów",
+    "edgeImagesDescription": "Wykonaj wszystkie zadania bez błędów w Krainie obrazów",
+    "secretLandsName": "Krainy zagadek",
+    "secretLandsDescription": "Wykonaj wszystkie zadania bez błędów w Krainach zagadek",
+    "definiteIndefiniteName": "Krainy wyboru",
+    "definiteIndefiniteDescription": "Wykonaj wszystkie zadania bez błędów w Krainach wyboru",
+    "adventuresMasterName": "Mistrz szlaków przygód",
+    "adventuresMasterDescription": "Wykonaj wszystkie zadania we wszystkich krainach na Szlakach przygód",
+    "adventuresMasterAward": "Nagroda: Zwój Wędrówek"
   },
   "awards": {
     "title": "Lista nagród",
@@ -5227,7 +5249,9 @@
     "valentineBear": "Pluszowy miś",
     "valentineBearDescription": "Nagroda za osiągnięcie w kategorii Wydarzenia - Festiwal Serc: „Puszysty przyjaciel”",
     "cupidArrow": "Łuk Kupidyna",
-    "cupidArrowDescription": "Nagroda za osiągnięcie w kategorii Wydarzenia - Festiwal Serc: „Celny strzał”"
+    "cupidArrowDescription": "Nagroda za osiągnięcie w kategorii Wydarzenia - Festiwal Serc: „Celny strzał”",
+    "adventures": "Zwój Wędrówek",
+    "adventuresDescription": "Nagroda jest przyznawana za ukończenie osiągnięcia w kategorii Krainy Językowe: «Mistrz szlaków przygód»"
   },
   "wildLandsFirstQuest": {
     "title": "Otoczenie",

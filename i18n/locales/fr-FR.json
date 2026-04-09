@@ -5135,7 +5135,7 @@
     "nextQuest": "Question suivante"
   },
   "locationAchievementsCategory": {
-    "title": "Terres de Langues",
+    "title": "Terres de Départ",
     "firstName": "Plaine de l'Est",
     "firstDescription": "Termine toutes les quêtes sans erreur dans la Plaine de l'Est",
     "secondName": "Confins de Pierre",
@@ -5158,6 +5158,28 @@
     "allLocationsName": "Maître des Terres Linguistiques",
     "allLocationsDescription": "Termine toutes les quêtes dans toutes les zones",
     "allLocationsAwards": "Récompense : Globe de l'explorateur"
+  },
+  "locationAchievementsCategory2": {
+    "title": "Sentiers de l'Aventure",
+    "pluralLandName": "Col de l'Avenir",
+    "pluralLandDescription": "Terminez toutes les tâches sans erreur dans le Col de l'Avenir",
+    "pastLandName": "Ruines du Passé",
+    "pastLandDescription": "Terminez toutes les tâches sans erreur dans les Ruines du Passé",
+    "actionValleyName": "Vallée des Actions",
+    "actionValleyDescription": "Terminez toutes les tâches sans erreur dans la Vallée des Actions",
+    "orderValleyName": "Terres de l'Ordre",
+    "orderValleyDescription": "Terminez toutes les tâches sans erreur dans les Terres de l'Ordre",
+    "timeGateName": "Portes du Temps",
+    "timeGateDescription": "Terminez toutes les tâches sans erreur dans les Portes du Temps",
+    "edgeImagesName": "Confins des Images",
+    "edgeImagesDescription": "Terminez toutes les tâches sans erreur dans les Confins des Images",
+    "secretLandsName": "Terres des Mystères",
+    "secretLandsDescription": "Terminez toutes les tâches sans erreur dans les Terres des Mystères",
+    "definiteIndefiniteName": "Terres du Choix",
+    "definiteIndefiniteDescription": "Terminez toutes les tâches sans erreur dans les Terres du Choix",
+    "adventuresMasterName": "Maître des Sentiers de l'Aventure",
+    "adventuresMasterDescription": "Terminez toutes les tâches dans toutes les terres des Sentiers de l'Aventure",
+    "adventuresMasterAward": "Récompense : Parchemin des Voyages"
   },
   "awards": {
     "title": "Liste des récompenses",
@@ -5206,7 +5228,9 @@
     "valentineBear": "Ours en peluche",
     "valentineBearDescription": "Récompense pour le succès dans la catégorie Événements - Festival des cœurs : « Ami doux »",
     "cupidArrow": "Arc de Cupidon",
-    "cupidArrowDescription": "Récompense pour le succès dans la catégorie Événements - Festival des cœurs : « Tir précis »"
+    "cupidArrowDescription": "Récompense pour le succès dans la catégorie Événements - Festival des cœurs : « Tir précis »",
+    "adventures": "Parchemin des Voyages",
+    "adventuresDescription": "La récompense est obtenue en accomplissant la réussite dans la catégorie Terres des Langues: «Maître des Sentiers de l'Aventure»"
   },
   "wildLandsFirstQuest": {
     "title": "Environnement",

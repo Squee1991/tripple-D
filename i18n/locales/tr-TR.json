@@ -5127,7 +5127,7 @@
     "nextQuest": "Sonraki soru"
   },
   "locationAchievementsCategory": {
-    "title": "Dil Diyarları",
+    "title": "Başlangıç Toprakları",
     "firstName": "Doğu ovası",
     "firstDescription": "Doğu Ovası'ndaki tüm görevleri hatasız tamamla",
     "secondName": "Taş Sınır",
@@ -5150,6 +5150,28 @@
     "allLocationsName": "Dil Diyarlarının Ustası",
     "allLocationsDescription": "Tüm bölgelerdeki tüm görevleri tamamla",
     "allLocationsAwards": "Ödül: Kaşifin Küresi"
+  },
+  "locationAchievementsCategory2": {
+    "title": "Macera Yolları",
+    "pluralLandName": "Gelecek Geçidi",
+    "pluralLandDescription": "Gelecek Geçidi'ndeki tüm görevleri hatasız tamamla",
+    "pastLandName": "Geçmişin Harabeleri",
+    "pastLandDescription": "Geçmişin Harabeleri'ndeki tüm görevleri hatasız tamamla",
+    "actionValleyName": "Eylem Vadisi",
+    "actionValleyDescription": "Eylem Vadisi'ndeki tüm görevleri hatasız tamamla",
+    "orderValleyName": "Düzen Toprakları",
+    "orderValleyDescription": "Düzen Toprakları'ndaki tüm görevleri hatasız tamamla",
+    "timeGateName": "Zaman Kapıları",
+    "timeGateDescription": "Zaman Kapıları'ndaki tüm görevleri hatasız tamamla",
+    "edgeImagesName": "İmgeler Diyarı",
+    "edgeImagesDescription": "İmgeler Diyarı'ndaki tüm görevleri hatasız tamamla",
+    "secretLandsName": "Gizemler Toprakları",
+    "secretLandsDescription": "Gizemler Toprakları'ndaki tüm görevleri hatasız tamamla",
+    "definiteIndefiniteName": "Seçim Toprakları",
+    "definiteIndefiniteDescription": "Seçim Toprakları'ndaki tüm görevleri hatasız tamamla",
+    "adventuresMasterName": "Macera Yolları Ustası",
+    "adventuresMasterDescription": "Macera Yolları'ndaki tüm topraklarda yer alan görevleri tamamla",
+    "adventuresMasterAward": "Ödül: Seyahat Parşömeni"
   },
   "awards": {
     "title": "Ödül Listesi",
@@ -5198,7 +5220,9 @@
     "valentineBear": "Oyuncak Ayı",
     "valentineBearDescription": "Etkinlikler - Kalpler Festivali: 'Yumuşak Dost' başarımı için verilir",
     "cupidArrow": "Eros'un Yayı",
-    "cupidArrowDescription": "Etkinlikler - Kalpler Festivali: 'Tam İsabet' başarımı için verilir"
+    "cupidArrowDescription": "Etkinlikler - Kalpler Festivali: 'Tam İsabet' başarımı için verilir",
+    "adventures": "Seyahat Parşömeni",
+    "adventuresDescription": "Ödül, Dil Toprakları kategorisindeki şu başarımı tamamlayarak elde edilir: «Macera Yolları Ustası»"
   },
   "wildLandsFirstQuest": {
     "title": "Çevre",
