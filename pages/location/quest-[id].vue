@@ -36,7 +36,7 @@
           </div>
         </div>
         <div class="quest__section">
-          <div v-if="hasTip && questStore.showResult" class="quest__tip-container">
+          <div v-if="hasTip" class="quest__tip-container">
             <button class="quest__tip-btn" @click="showTipModal = true">💡</button>
           </div>
           <div class="quest__question">
@@ -234,18 +234,25 @@
         </div>
       </div>
     </div>
-    <div v-if="showTipModal" class="modal">
-      <div class="modal__overlay" @click="showTipModal = false"></div>
-      <div class="modal__window">
-        <div class="modal__title">💡</div>
-        <div class="modal__text quest__tip-text">
-          {{ t(currentTip) }}
-        </div>
-        <div class="modal__actions">
-          <button class="btn btn--primary" @click="showTipModal = false">{{ t('modalLocations.btnAccept')}}</button>
+    <transition name="modal-slide">
+      <div v-if="showTipModal" class="modal modal--tip">
+        <div class="modal__overlay" @click="showTipModal = false"></div>
+        <div class="modal__window modal__window--bottom">
+          <div class="modal__title">💡</div>
+          <div class="modal__text quest__tip-text">
+            <template v-if="questStore.showResult">
+              {{ t(currentTip) }}
+            </template>
+            <template v-else>
+              Подсказка по грамматика доступна после ответа!
+            </template>
+          </div>
+          <div class="modal__actions">
+            <button class="btn btn--primary" @click="showTipModal = false">{{ t('modalLocations.btnAccept') }}</button>
+          </div>
         </div>
       </div>
-    </div>
+    </transition>
   </div>
 </template>
 
@@ -1255,4 +1262,98 @@ watchEffect(() => {
   padding: 15px 5px;
   color: #333;
 }
+
+/* Анимации для плавного появления */
+.modal-slide-enter-active,
+.modal-slide-leave-active {
+  transition: opacity 0.3s ease;
+}
+.modal-slide-enter-from,
+.modal-slide-leave-to {
+  opacity: 0;
+}
+
+.modal-slide-enter-active .modal__window--bottom {
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.modal-slide-leave-active .modal__window--bottom {
+  animation: slideDown 0.3s ease-in forwards;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(0); }
+  to { transform: translateY(100%); }
+}
+
+/* Мобильная адаптация: всегда внизу на 767px и меньше */
+@media (max-width: 767px) {
+  .modal--tip {
+    /* Прижимаем все к самому низу без отступов */
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .modal__window--bottom {
+    width: 100%;
+    /* Скругляем только верхние углы, низ прямой */
+    border-radius: 30px 30px 0 0;
+    /* Тонкая, аккуратная обводка */
+    border: 1px solid #e0e0e0;
+    /* Мягкая, современная тень для объема, а не грубая черная */
+    box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.05);
+    /* Учитываем системную полоску на iOS/Android, добавляя padding снизу */
+    margin: 0;
+    padding: 30px 24px calc(20px + env(safe-area-inset-bottom, 0px));
+    background: #ffffff; /* Чистый белый фон для свежести */
+  }
+
+  /* --- Стилизация контента внутри --- */
+
+  .modal--tip .modal__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 22px;
+    font-weight: 800;
+    color: #1e1e1e;
+    margin-bottom: 20px;
+  }
+
+  /* Можно добавить иконку 💡 прямо перед текстом заголовка, если хочешь */
+  /* .modal--tip .modal__title::before { content: '💡'; font-size: 26px; } */
+
+  .modal--tip .quest__tip-text {
+    font-size: 17px;
+    line-height: 1.6; /* Увеличенное межстрочное расстояние для легкого чтения */
+    padding: 0 0 30px;
+    color: #4f4f4f; /* Чуть мягче, чем чистый черный */
+    text-align: center;
+  }
+
+  /* Кнопка "Понятно" тоже должна быть современной */
+  .modal--tip .modal__actions .btn--primary {
+    width: 100%; /* Растягиваем кнопку на всю ширину */
+    height: 54px;
+    border-radius: 16px;
+    background: #a7ecb8; /* Твой базовый зеленый */
+    border: none; /* Убираем обводку для modern look */
+    box-shadow: 0 4px 15px rgba(167, 236, 184, 0.3); /* Мягкая цветная тень */
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a532a; /* Темно-зеленый текст для контраста */
+    transition: transform 0.1s ease, box-shadow 0.2s ease;
+  }
+
+  .modal--tip .modal__actions .btn--primary:active {
+    transform: scale(0.98); /* Эффект нажатия */
+    box-shadow: 0 2px 8px rgba(167, 236, 184, 0.2);
+  }
+}
+
 </style>
