@@ -244,7 +244,7 @@
               {{ t(currentTip) }}
             </template>
             <template v-else>
-              Подсказка по грамматика доступна после ответа!
+              Подсказка по грамматика доступна после ответа.
             </template>
           </div>
           <div class="modal__actions">
