@@ -14,6 +14,9 @@
     "admin:remove": "node admin/setAdmin.js remove"
   },
   "dependencies": {
+    "@capacitor/android": "^8.3.0",
+    "@capacitor/cli": "^8.3.0",
+    "@capacitor/core": "^8.3.0",
     "@daily-co/daily-js": "^0.87.0",
     "@firebase/app-types": "0.9.3",
     "@inworld/nodejs-sdk": "^1.17.0",
