@@ -13,44 +13,7 @@ import VShowFall from "../src/components/V-showFall.vue";
 import Snow from "../assets/images/mery-christmas/Snow.svg";
 import HeartFall from "assets/images/mery-christmas/heartFall.svg";
 import {useEventSessionStore} from '../store/eventsStore.js'
-import {useHead, useSeoMeta} from '#imports'
 
-const {public: {siteUrl}} = useRuntimeConfig()
-const base = (siteUrl || '').replace(/\/$/, '')
-const {t} = useI18n()
-const canonical = useCanonical()
-const pageTitle = t('metaMainPage.title')
-const pageDesc = t('metaMainPage.description')
-
-useHead({
-  title: pageTitle,
-  link: [{rel: 'canonical', href: canonical}],
-  script: [{
-    type: 'application/ld+json',
-    children: JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'WebSite',
-      name: 'skillupgerman',
-      url: base + '/',
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: `${base}/search?q={search_term_string}`,
-        'query-input': 'required name=search_term_string'
-      }
-    })
-  }]
-})
-
-useSeoMeta({
-  title: pageTitle,
-  description: pageDesc,
-  ogTitle: pageTitle,
-  ogDescription: pageDesc,
-  ogType: 'website',
-  ogUrl: canonical,
-  ogImage: '/images/seo-main.png',
-  robots: 'index, follow'
-})
 const eventStore = useEventSessionStore()
 const authStore = userAuthStore()
 const hydrated = ref(false)
