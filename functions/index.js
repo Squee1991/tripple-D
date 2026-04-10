@@ -1,11 +1,12 @@
 const { onSchedule } = require("firebase-functions/v2/scheduler");
-const { getFirestore, FieldValue } = require("firebase-admin/firestore");
+const { getFirestore } = require("firebase-admin/firestore");
 const admin = require("firebase-admin");
 
 if (admin.apps.length === 0) admin.initializeApp();
 const db = getFirestore();
 
 const CYCLE_MS = 24 * 60 * 60 * 1000;
+const IMMUNITY_RANK_HATS = 500;
 
 exports.takeFromArticlePenalty = onSchedule({
 	schedule: "every 20 minutes",
@@ -20,12 +21,7 @@ exports.takeFromArticlePenalty = onSchedule({
 		.where('penaltyProcessed', '==', false)
 		.get();
 
-	console.log(`Артикль проснулся. Найдено записей в базе: ${snapshot.size}`);
-
-	if (snapshot.empty) {
-		console.log("Нет должников на сегодня. Артикль уходит.");
-		return null;
-	}
+	if (snapshot.empty) return null;
 
 	let batch = db.batch();
 	let count = 0;
@@ -36,34 +32,24 @@ exports.takeFromArticlePenalty = onSchedule({
 
 		const data = doc.data();
 		const userId = data.owner;
-		const completedCount = data.completedCount || 0;
 
-		if (completedCount === 0) {
-
+		if ((data.completedCount || 0) === 0) {
 			const userRef = db.collection('users').doc(userId);
 			const userSnap = await userRef.get();
 
 			if (userSnap.exists) {
 				const userData = userSnap.data();
+				const currentHats = userData.totalHats || 0;
 				const freezeEndMs = userData.freezeEndsAt || 0;
-
-				const previousCycleExpiresAt = data.expiresAtMs || 0;
-				const previousCycleStartsAt = previousCycleExpiresAt - CYCLE_MS;
-				let hadShield = false;
-				if (freezeEndMs && freezeEndMs > previousCycleStartsAt) {
-					hadShield = true;
-				}
-
-				if (hadShield) {
-					console.log(`Юзер ${userId} спасен заморозкой! Штраф отменен.`);
-				} else {
-					batch.update(userRef, { totalHats: FieldValue.increment(-3) });
-					console.log(`Юзер ${userId} не выполнил ни одного квеста. Артикль берет у артикля 3 шляпы.`);
+				const prevCycleStartsAt = (data.expiresAtMs || 0) - CYCLE_MS;
+				const hadShield = freezeEndMs && freezeEndMs > prevCycleStartsAt;
+				const hasImmunity = currentHats >= IMMUNITY_RANK_HATS;
+				if (!hadShield && !hasImmunity) {
+					batch.update(userRef, { totalHats: Math.max(0, currentHats - 3) });
 				}
 			}
-		} else {
-			console.log(`Юзер ${userId} выполнил хотя бы 1 квест (${completedCount}). Штрафа нет.`);
 		}
+
 		batch.update(doc.ref, { penaltyProcessed: true });
 		count++;
 
@@ -74,11 +60,8 @@ exports.takeFromArticlePenalty = onSchedule({
 		}
 	}
 
-	if (count > 0) {
-		promises.push(batch.commit());
-	}
-
+	if (count > 0) promises.push(batch.commit());
 	await Promise.all(promises);
-	console.log(`Артикль закончил работу. Обработано квестов: ${count}`);
+
 	return null;
 });

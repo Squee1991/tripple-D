@@ -23,7 +23,6 @@
         </svg>
       </div>
     </div>
-
     <div v-if="showTimer" class="lives-info">
       <template v-if="lives < maxLives">
         <img class="timer" src="~/assets/images/dailyIcons/timer.svg" alt="timer">
@@ -40,7 +39,9 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
+import { ref, computed, onMounted, onBeforeUnmount, onActivated, onDeactivated, useId } from 'vue'
+import { useI18n } from 'vue-i18n'
+
 const { t } = useI18n()
 
 const props = defineProps({
@@ -51,7 +52,8 @@ const props = defineProps({
   showTimer: { type: Boolean, default: false }
 })
 
-const uniqueId = Math.random().toString(36).substring(2, 9)
+const uniqueId = useId().replace(/:/g, '-')
+
 const now = ref(Date.now())
 let rafId = null
 
@@ -60,13 +62,21 @@ function updateTimer() {
   rafId = requestAnimationFrame(updateTimer)
 }
 
-onMounted(() => {
-  updateTimer()
-})
+function startTimer() {
+  if (!rafId) updateTimer()
+}
 
-onBeforeUnmount(() => {
-  if (rafId) cancelAnimationFrame(rafId)
-})
+function stopTimer() {
+  if (rafId) {
+    cancelAnimationFrame(rafId)
+    rafId = null
+  }
+}
+
+onMounted(() => startTimer())
+onBeforeUnmount(() => stopTimer())
+onActivated(() => startTimer())
+onDeactivated(() => stopTimer())
 
 const recoveryTimerText = computed(() => {
   if (props.lives >= props.maxLives) return ""
@@ -78,6 +88,7 @@ const recoveryTimerText = computed(() => {
   const secs = totalSeconds % 60
   return `${mins}:${secs.toString().padStart(2, '0')}`
 })
+
 
 function getWaterGroupStyle(i) {
   if (i < props.lives) {
@@ -142,7 +153,6 @@ function getWaterGroupStyle(i) {
   100% { transform: translateX(-32px); }
 }
 
-/* Стили для текстового таймера */
 .lives-info {
   font-weight: 600;
   display: flex;

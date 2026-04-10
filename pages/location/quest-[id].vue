@@ -16,13 +16,8 @@
               {{ questStore.currentIndex + 1 }} / {{ questStore.requiredTasks }}
             </div>
             <div class="quest__progress-line">
-              <template v-for="(step, i) in progressSteps" :key="i">
-                <div class="quest__dot" :class="{
-            'quest__dot--done': step === 'done',
-            'quest__dot--wrong': step === 'wrong',
-            'quest__dot--current': step === 'current',
-          }"
-                ></div>
+              <template v-for="(step, index) in progressSteps" :key="index">
+                <div class="quest__dot" :class="getDotClass(step)"></div>
               </template>
             </div>
           </div>
@@ -56,10 +51,11 @@
                 }}
               </div>
               <ul class="quest__options" :class="{ 'quest__options--locked': questStore.showResult }">
-                <li v-for="opt in questStore.task.options" :key="opt">
-                  <button class="quest__option-btn" :class="optionClass(opt)"
-                          @click="handleOptionClick(opt)">
-                    {{ t(opt) }}
+                <li v-for="option in questStore.task.options" :key="option">
+                  <button class="quest__option-btn" :class="optionClass(option, questStore)"
+                          @click="handleOptionClick(option)"
+                  >
+                    {{ t(option) }}
                   </button>
                 </li>
               </ul>
@@ -99,7 +95,7 @@
                     v-model="questStore.userInput"
                     :disabled="questStore.showResult"
                     @keyup.enter="handleClick"
-                    :placeholder="inputPlaceholders.inputType"
+                    :placeholder="inputPlaceholders.inputTypeSTT"
                 />
                 <div v-if="shouldShowGermanLetters" class="german__letters">
                   <button
@@ -141,7 +137,7 @@
             </template>
           </div>
           <div v-if="questStore.showResult" :class="statusClassComputed" class="quest__feedback">
-            <img class="quest__feedback-icon" :src="questStore.isCorrect ? RightIcon : WrongIcon" alt="">
+            <img class="quest__feedback-icon" :src="questStore.isCorrect ? RightIcon : WrongIcon" alt="answer_icons">
             <div class="quest__feedback-text">
               <div v-if="questStore.isCorrect">{{ t('questCompletedModals.correct')}}</div>
               <div class="quest__correct-answer-block" v-else>
@@ -181,78 +177,37 @@
             </template>
           </div>
           <div class="modal__actions">
-            <template v-if="questStore.success && !questStore.hasMistakes">
-              <button class="btn" @click="restart">{{ t('questCompletedModals.again') }}</button>
-              <button class="btn btn--primary" @click="goThemes">{{ t('questCompletedModals.back') }}</button>
-            </template>
-            <template v-else-if="questStore.success && questStore.hasMistakes">
-              <button class="btn" @click="questStore.startRetryMistakes()">{{ t('locationQuests.repeatMistakes') }}</button>
-              <button class="btn btn--primary" @click="goThemes">{{ t('questCompletedModals.back') }}</button>
-            </template>
-            <template v-else>
-              <button class="btn" @click="restart">{{ t('questCompletedModals.again') }}</button>
-              <button class="btn btn--primary" @click="goThemes">{{ t('questCompletedModals.back') }}</button>
-            </template>
+            <button v-for="(btn, index) in footerButtons"
+                    :key="index" class="btn"
+                    :class="btn.style"
+                    @click="btn.action"
+            >
+              {{ btn.text }}
+            </button>
           </div>
         </div>
       </div>
     </div>
-    <div v-if="forceRevive || showRevive" class="modal">
-      <div class="modal__overlay"></div>
-      <div class="modal__window">
-        <div class="modal__title">{{ t('questCompletedModals.lives')}}</div>
-        <div class="modal__text">
-          {{ t('questCompletedModals.count')}} {{ questStore.correctCount }} / {{ questStore.requiredTasks }}.<br/>
-          {{ t('questCompletedModals.buyLive')}}
-        </div>
-        <div class="wallet">
-          <div class="wallet__row">
-            <div class="wallet__label">{{ t('questCompletedModals.prise')}}</div>
-            <div class="wallet__value">{{ t('questCompletedModals.priseValue')}}</div>
-          </div>
-          <div class="wallet__row">
-            <div class="wallet__label">{{ t('questCompletedModals.balance')}}</div>
-            <div class="wallet__value">{{ wallet }} {{ t('questCompletedModals.points')}}</div>
-          </div>
-        </div>
-        <div class="modal__actions">
-          <button class="btn" :disabled="!canBuyLife" @click="purchaseLife">
-            {{ canBuyLife ? t('questCompletedModals.buy') : t('questCompletedModals.notEnough') }}
-          </button>
-          <button class="btn btn--primary" @click="goThemes">{{ t('questCompletedModals.back')}}</button>
-        </div>
-      </div>
-    </div>
-    <div v-if="showLeaveModal" class="modal">
-      <div class="modal__overlay"></div>
-      <div class="modal__window">
-        <div class="modal__title">{{ t('questCompletedModals.questNotCompleted')}}</div>
-        <div class="modal__text">{{ t('questCompletedModals.warning')}}</div>
-        <div class="modal__actions">
-          <button class="btn btn--danger" @click="confirmLeave">{{ t('questCompletedModals.leave')}}</button>
-          <button class="btn btn--primary" @click="stayHere">{{ t('questCompletedModals.continue')}}</button>
-        </div>
-      </div>
-    </div>
-    <transition name="modal-slide">
-      <div v-if="showTipModal" class="modal modal--tip">
-        <div class="modal__overlay" @click="showTipModal = false"></div>
-        <div class="modal__window modal__window--bottom">
-          <div class="modal__title">💡</div>
-          <div class="modal__text quest__tip-text">
-            <template v-if="questStore.showResult">
-              {{ t(currentTip) }}
-            </template>
-            <template v-else>
-              Подсказка по грамматика доступна после ответа!
-            </template>
-          </div>
-          <div class="modal__actions">
-            <button class="btn btn--primary" @click="showTipModal = false">{{ t('modalLocations.btnAccept') }}</button>
-          </div>
-        </div>
-      </div>
-    </transition>
+    <VReviveModal
+        :show="forceRevive || showRevive"
+        :correct-count="questStore.correctCount"
+        :required-tasks="questStore.requiredTasks"
+        :wallet="wallet"
+        :can-buy-life="canBuyLife"
+        @purchase="purchaseLife"
+        @back="goThemes"
+    />
+    <VLeaveModal
+        :show="showLeaveModal"
+        @leave="confirmLeave"
+        @continue="stayHere"
+    />
+    <VRulesModal
+        :show="showTipModal"
+        :show-result="questStore.showResult"
+        :current-tip="currentTip"
+        @close="showTipModal = false"
+    />
   </div>
 </template>
 
@@ -263,14 +218,18 @@ import {userChainStore} from '~/store/chainStore.js'
 import {userlangStore} from '~/store/learningStore.js'
 import SoundBtn from '~/src/components/soundBtn.vue'
 import {playCorrect, playWrong, unlockAudioByUserGesture} from '~/utils/soundManager.js'
+
 import RightIcon from '~/assets/images/location-icons/accept.svg'
 import WrongIcon from '~/assets/images/location-icons/cancel.svg'
 import {useSeoMeta} from '#imports'
 import VHelpModal from "~/src/components/V-help-modal.vue";
 import VHearts from '../../src/components/V-hearts.vue'
+import VLeaveModal from "~/src/components/V-leaveModal.vue";
+import VRulesModal from "~/src/components/V-rulesModal.vue";
+import VReviveModal from "~/src/components/V-reviveModal.vue";
 useSeoMeta({robots: 'noindex, nofollow'})
 
-const PRICE = 10
+const { getDotClass,  optionClass } = useClasses()
 const {t, locale} = useI18n()
 const route = useRoute()
 const router = useRouter()
@@ -278,6 +237,7 @@ const questStore = userChainStore()
 const langStore = userlangStore()
 const forceRevive = ref(false)
 const showTipModal = ref(false)
+const PRICE = 10
 const questId = computed(() => {
   const rawId = String(route.params.id || route.params.questId || '')
   return rawId.replace('quest-', '')
@@ -325,25 +285,25 @@ onBeforeUnmount(() => {
   if (rafId) cancelAnimationFrame(rafId)
 })
 
-function getWaterGroupStyle(i) {
-  if (i < questStore.lives) {
-    return { transform: 'translateY(-6px)', transition: 'transform 0.3s ease-in-out' }
+const footerButtons = computed(() => [
+  {text: questStore.success && questStore.hasMistakes
+        ? t('locationQuests.repeatMistakes')
+        : t('questCompletedModals.again'),
+    action: questStore.success && questStore.hasMistakes
+        ? () => questStore.startRetryMistakes()
+        : restart,
+    style: ''
+  },
+  {
+    text: t('questCompletedModals.back'),
+    action: goThemes,
+    style: 'btn--primary'
   }
-  if (i === questStore.lives && questStore.lives < questStore.maxLives && questStore.lastLifeAtMs > 0) {
-    const regenMs = questStore.REGEN_INTERVAL_MS
-    const elapsed = Math.max(0, now.value - questStore.lastLifeAtMs)
-    const progress = Math.min(100, (elapsed / regenMs) * 100)
-    const yPos = 30 - (progress / 100) * 36;
-    return {
-      transform: `translateY(${yPos}px)`,
-      transition: 'none'
-    }
-  }
-  return { transform: 'translateY(30px)', transition: 'transform 0.3s ease-in-out' }
-}
+])
 
 const inputPlaceholders = {
-  inputType: t('locationsPlaceholder.inputType'),
+  inputTypeSTT: t('locationsPlaceholder.inputType'),
+  inputType: 'впишите правильный вариант'
 }
 
 const shouldShowGermanLetters = computed(() => {
@@ -446,14 +406,6 @@ function restart() {
   questStore.loadQuest(questId.value, regionKey.value)
 }
 
-function optionClass(opt) {
-  if (questStore.showResult) {
-    if (opt === questStore.task?.answer) return 'quest__option-btn--correct'
-    if (opt === questStore.selected) return 'quest__option-btn--wrong'
-    return 'quest__option-btn--dim'
-  }
-  return questStore.selected === opt ? 'quest__option-btn--chosen' : ''
-}
 
 function handleClick() {
   unlockAudioByUserGesture()
@@ -608,12 +560,6 @@ watchEffect(() => {
   text-align: center;
 }
 
-.quest__tiny {
-  font-size: 12px;
-  opacity: .85;
-  margin-top: 6px;
-}
-
 .quest__correct-answer-block {
   display: flex;
   flex-direction: column;
@@ -699,47 +645,6 @@ watchEffect(() => {
 .quest__lives {
   padding: .5rem 1rem;
   text-align: center;
-}
-
-.quest__hearts {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-}
-
-.quest__heart-wrapper {
-  position: relative;
-  width: 30px;
-  height: 30px;
-}
-
-.quest__heart-svg {
-  width: 100%;
-  height: 100%;
-  filter: drop-shadow(0 2px 1px rgba(0,0,0,0.1));
-}
-
-.heart-bg {
-  fill: #e2e2e2;
-  stroke: #ccc;
-  stroke-width: 1px;
-}
-.water-group {
-  will-change: transform;
-}
-
-.water-wave {
-  fill: #ff4d4d;
-  animation: wave-action 1.5s linear infinite;
-}
-
-@keyframes wave-action {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-32px);
-  }
 }
 
 .quest__section {
@@ -992,10 +897,6 @@ watchEffect(() => {
 
 .btn--primary {
   background: #a7ecb8;
-}
-
-.btn--danger {
-  background: #ffd0cc;
 }
 
 .modal {
@@ -1255,31 +1156,6 @@ watchEffect(() => {
   box-shadow: 0 0 0 #1e1e1e;
 }
 
-.quest__tip-text {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 1.4;
-  padding: 15px 5px;
-  color: #333;
-}
-
-/* Анимации для плавного появления */
-.modal-slide-enter-active,
-.modal-slide-leave-active {
-  transition: opacity 0.3s ease;
-}
-.modal-slide-enter-from,
-.modal-slide-leave-to {
-  opacity: 0;
-}
-
-.modal-slide-enter-active .modal__window--bottom {
-  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-.modal-slide-leave-active .modal__window--bottom {
-  animation: slideDown 0.3s ease-in forwards;
-}
-
 @keyframes slideUp {
   from { transform: translateY(100%); }
   to { transform: translateY(0); }
@@ -1288,72 +1164,6 @@ watchEffect(() => {
 @keyframes slideDown {
   from { transform: translateY(0); }
   to { transform: translateY(100%); }
-}
-
-/* Мобильная адаптация: всегда внизу на 767px и меньше */
-@media (max-width: 767px) {
-  .modal--tip {
-    /* Прижимаем все к самому низу без отступов */
-    align-items: flex-end;
-    padding: 0;
-  }
-
-  .modal__window--bottom {
-    width: 100%;
-    /* Скругляем только верхние углы, низ прямой */
-    border-radius: 30px 30px 0 0;
-    /* Тонкая, аккуратная обводка */
-    border: 1px solid #e0e0e0;
-    /* Мягкая, современная тень для объема, а не грубая черная */
-    box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.05);
-    /* Учитываем системную полоску на iOS/Android, добавляя padding снизу */
-    margin: 0;
-    padding: 30px 24px calc(20px + env(safe-area-inset-bottom, 0px));
-    background: #ffffff; /* Чистый белый фон для свежести */
-  }
-
-  /* --- Стилизация контента внутри --- */
-
-  .modal--tip .modal__title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    font-size: 22px;
-    font-weight: 800;
-    color: #1e1e1e;
-    margin-bottom: 20px;
-  }
-
-  /* Можно добавить иконку 💡 прямо перед текстом заголовка, если хочешь */
-  /* .modal--tip .modal__title::before { content: '💡'; font-size: 26px; } */
-
-  .modal--tip .quest__tip-text {
-    font-size: 17px;
-    line-height: 1.6; /* Увеличенное межстрочное расстояние для легкого чтения */
-    padding: 0 0 30px;
-    color: #4f4f4f; /* Чуть мягче, чем чистый черный */
-    text-align: center;
-  }
-
-  /* Кнопка "Понятно" тоже должна быть современной */
-  .modal--tip .modal__actions .btn--primary {
-    width: 100%; /* Растягиваем кнопку на всю ширину */
-    height: 54px;
-    border-radius: 16px;
-    background: #a7ecb8; /* Твой базовый зеленый */
-    border: none; /* Убираем обводку для modern look */
-    box-shadow: 0 4px 15px rgba(167, 236, 184, 0.3); /* Мягкая цветная тень */
-    font-size: 18px;
-    font-weight: 700;
-    color: #1a532a; /* Темно-зеленый текст для контраста */
-    transition: transform 0.1s ease, box-shadow 0.2s ease;
-  }
-
-  .modal--tip .modal__actions .btn--primary:active {
-    transform: scale(0.98); /* Эффект нажатия */
-    box-shadow: 0 2px 8px rgba(167, 236, 184, 0.2);
-  }
 }
 
 </style>
