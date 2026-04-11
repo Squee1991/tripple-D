@@ -15,15 +15,14 @@
         <VBackBtn/>
         <div class="exam__title">Тесты</div>
       </div>
-
+      <p class="exam__subtitle">
+        {{t('examIndexPage.choice')}}
+        <span class="exam__highlight">Lesen</span>,
+        <span class="exam__highlight">Hören</span>,
+        <span class="exam__highlight">Schreiben</span>,
+        <span class="exam__highlight">Sprechen</span>
+      </p>
       <div class="exam__levels">
-        <p class="exam__subtitle">
-          {{t('examIndexPage.choice')}}
-          <span class="exam__highlight">Lesen</span>,
-          <span class="exam__highlight">Hören</span>,
-          <span class="exam__highlight">Schreiben</span>,
-          <span class="exam__highlight">Sprechen</span>
-        </p>
         <div
             v-for="level in examLevels"
             :key="level.id"

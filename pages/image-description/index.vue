@@ -141,7 +141,6 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action {
 }
 
 .btn-icon-info {
-  border: none;
   background: #fff;
   border: 3px solid #2b2b2b;
   border-radius: 12px;

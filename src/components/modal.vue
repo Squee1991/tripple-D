@@ -97,7 +97,7 @@ const props = defineProps({
   font-family: "Nunito", sans-serif;
   position: relative;
   background: white;
-  padding: 2.5rem;
+  padding: 1.8rem;
   border-radius: 24px;
   border: 4px solid #1e1e1e;
   box-shadow: 4px 4px 0 #1e1e1e;

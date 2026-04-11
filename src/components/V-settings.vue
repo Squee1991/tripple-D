@@ -79,7 +79,7 @@
       </ul>
     </div>
     <div class="account-actions">
-      <div class="accordion__title">Управления аккаунтом</div>
+      <div class="accordion__title">Управление аккаунтом</div>
       <div class="account-tab-body">
         <div class="logout-section">
           <button class="btn btn-logout btn-m" @click="authStore.logOut()">
@@ -87,13 +87,12 @@
           </button>
         </div>
       </div>
-      <div class="maccount__menegment">
+      <div class="account__management">
         <button @click.stop="openDeleteModal" class="btn btn-danger w-full btn-m">
           {{ t('cabinet.deleteAcc') }}
         </button>
       </div>
     </div>
-
     <div v-if="isLockedModalOpen" class="modal-overlay locked-priority" @click.self="isLockedModalOpen = false">
       <div class="modal-card">
         <div class="modal-title">{{ lockedModalContent.title }}</div>
@@ -116,7 +115,8 @@ import {useUiSettingsStore} from '../../store/uiSettingsStore.js'
 import {useEventSessionStore} from '../../store/eventsStore.js'
 import {isSoundEnabled, setSoundEnabled, unlockAudioByUserGesture} from '../../utils/soundManager.js'
 import {useAchievementStore} from '../../store/achievementStore.js'
-
+import { userAuthStore} from "../../store/authStore.js";
+const authStore = userAuthStore()
 const props = defineProps({
   settingsIcon: String,
   activeTabKey: {type: String, default: 'info'}
@@ -432,7 +432,7 @@ onMounted(async () => {
   padding: 5px 0;
 }
 
-.maccount__menegment {
+.account__management {
   display: flex;
   justify-content: end;
   margin-top: 16px;
