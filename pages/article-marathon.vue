@@ -4,6 +4,7 @@ import {useRouter} from 'vue-router'
 import {useGameStore} from '../store/marafonStore.js'
 import {userAuthStore} from '../store/authStore.js'
 import {useSeoMeta} from "#imports";
+import VBackBtn from "~/src/components/V-back-btn.vue";
 
 useSeoMeta({
   robots: 'noindex, nofollow'
@@ -72,52 +73,53 @@ const difficultyClasses = computed(() =>
 
 <template>
   <div class="page-wrapper">
-    <button class="back-button" @click="goBack" aria-label="Назад">←</button>
     <div class="prepare-container">
       <div class="header">
-        <h1>{{ t('marathonPrepare.title') }}</h1>
+        <div class="header__title-wrapper">
+          <VBackBtn/>
+          <h1 class="header__title">{{ t('marathonPrepare.title') }}</h1>
+        </div>
         <p class="subtitle">{{ t('marathonPrepare.subtitle') }}</p>
       </div>
-
-      <div v-if="authStore.uid" class="user-greeting">
-        <p>{{ t('marathonPrepare.greetings') }}, <strong>{{ authStore.name }}</strong></p>
-        <p class="record">
-          {{ t('marathonPrepare.streak') }}
-          <span class="record__value">{{ currentRecord }}</span>
-        </p>
-      </div>
-      <div v-else class="guest-greeting">
-        <p>{{ t('marathonPrepare.notAuth') }}</p>
-      </div>
-
-      <div v-if="gameStore.isLoaded" class="settings-block">
-        <h2>{{ t('marathonPrepare.chooseDifficulty') }}</h2>
-        <div class="difficulty-options">
-          <button
-              v-for="opt in difficultyBase"
-              :key="opt.value"
-              @click="selectedDifficulty = opt.value"
-              :class="difficultyClasses[opt.value]"
-          >
-            <div class="button-content">
-              <span>{{ t(opt.titleKey) }}</span>
-              <span>{{ t(opt.descKey) }}</span>
-            </div>
-            <span class="icon">{{ opt.icon }}</span>
-          </button>
+      <div class="panel__wrapper">
+        <div v-if="authStore.uid" class="user-greeting">
+          <!--        <p>{{ t('marathonPrepare.greetings') }}, <strong>{{ authStore.name }}</strong></p>-->
+          <p class="record">
+            {{ t('marathonPrepare.streak') }}
+            <span class="record__value">{{ currentRecord }}</span>
+          </p>
         </div>
+        <div v-else class="guest-greeting">
+          <p>{{ t('marathonPrepare.notAuth') }}</p>
+        </div>
+        <div v-if="gameStore.isLoaded" class="settings-block">
+          <h2>{{ t('marathonPrepare.chooseDifficulty') }}</h2>
+          <div class="difficulty-options">
+            <button
+                v-for="opt in difficultyBase"
+                :key="opt.value"
+                @click="selectedDifficulty = opt.value"
+                :class="difficultyClasses[opt.value]"
+            >
+              <div class="button-content">
+                <span>{{ t(opt.titleKey) }}</span>
+                <span>{{ t(opt.descKey) }}</span>
+              </div>
+              <span class="icon">{{ opt.icon }}</span>
+            </button>
+          </div>
+        </div>
+        <div v-else class="loading">
+          <p>{{ t('marathonPrepare.loading') }}</p>
+        </div>
+        <button
+            class="start-button"
+            @click="startGame"
+            :disabled="!authStore.uid || !gameStore.isLoaded"
+        >
+          {{ authStore.uid ? t('marathonPrepare.start') : t('marathonPrepare.login') }}
+        </button>
       </div>
-      <div v-else class="loading">
-        <p>{{ t('marathonPrepare.loading') }}</p>
-      </div>
-
-      <button
-          class="start-button"
-          @click="startGame"
-          :disabled="!authStore.uid || !gameStore.isLoaded"
-      >
-        {{ authStore.uid ? t('marathonPrepare.start') : t('marathonPrepare.login') }}
-      </button>
     </div>
   </div>
 </template>
@@ -126,50 +128,41 @@ const difficultyClasses = computed(() =>
 .page-wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
   min-height: 100vh;
-  padding: 2rem;
+  width: 100%;
   font-family: "Nunito", sans-serif;
   position: relative;
 }
 
-.back-button {
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
-  z-index: 10;
-  width: 60px;
-  height: 60px;
-  background-color: #fff;
-  border: 2px solid #1e1e1e;
-  border-radius: 50%;
-  box-shadow: 2px 2px 0 #1e1e1e;
-  font-family: "Nunito", sans-serif;
-  font-size: 2.5rem;
-  color: #1e1e1e;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.1s ease-in-out;
+.panel__wrapper {
+  padding: 10px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.back-button:active {
-  transform: translate(4px, 4px);
-  box-shadow: 0 0 0 #1e1e1e;
+.header__title-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background: #6358ac;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-bottom: 5px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+.header__title {
+  flex: 1;
+  font-size: 20px;
+  color: #fff;
 }
 
 .prepare-container {
   width: 100%;
-  max-width: 600px;
-  border: 3px solid #1e1e1e;
-  box-shadow: 4px 4px 0 #1e1e1e;
-  border-radius: 24px;
-  padding: 0 15px 18px 15px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
   animation: fadeIn 0.5s ease-out;
 }
 
@@ -177,18 +170,12 @@ const difficultyClasses = computed(() =>
   text-align: center;
 }
 
-.header h1 {
-  font-family: "Nunito", sans-serif;
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: var(--titleColor);
-  margin: 0 0 0.5rem 0;
-}
-
 .subtitle {
   font-size: 1.1rem;
-  color: #868383;
-  margin: 0;
+  color: var(--titleColor);
+  padding: 10px 15px;
+
+  font-weight: 600;
 }
 
 .user-greeting, .guest-greeting {
@@ -199,10 +186,6 @@ const difficultyClasses = computed(() =>
   border-radius: 16px;
   border: 2px solid #e5e7eb;
   text-align: center;
-}
-
-.user-greeting p, .guest-greeting p {
-  margin: 0;
 }
 
 .guest-greeting p {
@@ -252,7 +235,7 @@ const difficultyClasses = computed(() =>
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 10px;
   border-radius: 16px;
   border: 3px solid #1e1e1e;
   box-shadow: 4px 4px 0 #1e1e1e;
@@ -327,6 +310,7 @@ const difficultyClasses = computed(() =>
   color: #1e1e1e;
   box-shadow: 3px 3px 0px #1e1e1e;
   margin-top: 5px;
+  width: 100%;
 }
 
 .start-button:hover:not(:disabled) {
@@ -363,38 +347,5 @@ const difficultyClasses = computed(() =>
   }
 }
 
-@media (max-width: 767px) {
-  .difficulty-btn {
-    padding: 6px 14px;
-  }
 
-  .subtitle {
-    font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 640px) {
-  .back-button {
-    top: 10px;
-    left: 10px;
-    width: 40px;
-    height: 40px;
-    font-size: 2rem;
-    border-radius: 10px;
-  }
-
-  .prepare-container {
-    height: 100vh;
-    border-radius: 0;
-    border: 0;
-  }
-
-  .header h1 {
-    font-size: 1.5rem;
-  }
-
-  .page-wrapper {
-    padding: 0;
-  }
-}
 </style>
