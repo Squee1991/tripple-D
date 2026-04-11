@@ -1,6 +1,5 @@
 <template>
   <footer class="footer" role="contentinfo">
-<!--    <img class="web" src="../../assets/images/halloween/spiderweb.svg" alt="">-->
     <div class="footer__container">
       <div class="footer__social">
         <div class="social__item" @click="toDiscord" role="button" aria-label="Discord" tabindex="0">

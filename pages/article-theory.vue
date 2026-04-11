@@ -2,14 +2,19 @@
   <main class="rules">
     <div class="rules__wrapper">
       <header class="rules__hero">
-        <h1 class="rules__title">
-          {{ t('rulesFirstBlock.title') }}
-        </h1>
+        <!--        <h1 class="rules__title">-->
+        <!--          {{ t('rulesFirstBlock.title') }}-->
+        <!--        </h1>-->
+        <div class="rules__header-wrapper">
+          <VBackBtn/>
+          <div class="rules__header-title">Квиз и советы</div>
+        </div>
+
+      </header>
+      <section class="rules__list" aria-label="Список правил использования артиклей">
         <p class="rules__subtitle">
           {{ t('rulesFirstBlock.subTitle') }}
         </p>
-      </header>
-      <section class="rules__list" aria-label="Список правил использования артиклей">
         <article class="rules__card" id="gender" ref="ruleCards">
           <h2 class="rules__card-title">1. {{ t('rulesFirstBlock.firstCardTitle') }}</h2>
           <ul class="rules__list-ul">
@@ -119,9 +124,9 @@
         </article>
         <article class="rules__card" id="quiz" ref="ruleCards">
           <h2 class="rules__card-title">6. {{ t('rulesSixthBlock.firstTitle') }}</h2>
-          <p class="rules__desc">
-            {{ t('rulesSixthBlock.firstExercises') }} (der, die , das), {{ t('rulesSixthBlock.firstAnswer') }}
-          </p>
+<!--          <p class="rules__desc">-->
+<!--            {{ t('rulesSixthBlock.firstExercises') }} (der, die , das), {{ t('rulesSixthBlock.firstAnswer') }}-->
+<!--          </p>-->
           <div class="quiz-form">
             <div class="quiz-item" v-for="(word, index) in quizWords" :key="index">
               <label :for="'word-' + index">{{ word.word }} <span class="rules__tip">{{ word.hint }}</span></label>
@@ -142,8 +147,9 @@
             </div>
             <div class="quiz__button-el">
               <button @click="checkAnswers" class="quiz-button">{{ t('rulesSixthBlock.checkBtn') }}</button>
-              <img v-if="showResults" @click="resetResult" class="quiz__undo-icon" src="../assets/images/undo.svg"
-                   alt="Сбросить">
+              <button class="reset" @click="resetResult">
+                <img class="quiz__undo-icon" src="../assets/images/undo.svg" alt="reset">
+              </button>
             </div>
           </div>
         </article>
@@ -155,6 +161,8 @@
 <script setup>
 import {ref} from 'vue';
 import {useSeoMeta} from "#imports";
+import VBackBtn from "~/src/components/V-back-btn.vue";
+
 const {t} = useI18n()
 
 const quizWords = [
@@ -187,31 +195,47 @@ const resetResult = () => {
   userAnswers.value = Array(quizWords.length).fill('');
 }
 
-definePageMeta({
-  layout: 'footerlayout',
-})
 </script>
 
 <style scoped>
 .rules {
   min-height: 100vh;
-  padding-bottom: 5rem;
+  padding-bottom: 1rem;
+  height: 100vh;
   font-family: "Nunito", sans-serif;
+  overflow: hidden;
+}
+
+.rules__header-title {
+  flex: 1;
+  font-size: 24px;
+  font-weight: 900;
+  font-family: "Nunito", sans-serif;
+  color: white;
+}
+
+.reset {
+  border: none;
+  background: none;
 }
 
 .rules__wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  width: 100%;
 }
 
 .rules__hero {
-  padding: 4rem 0 3rem 0;
+  flex-shrink: 0;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+
 }
 
 .rules__title {
@@ -234,34 +258,36 @@ definePageMeta({
   max-width: 600px;
   line-height: 1.6;
   background: #00c2ff;
-  margin-top: 20px;
   border-radius: 15px;
   padding: 10px;
   font-family: "Nunito", sans-serif;
   border: 4px solid black;
+  margin-bottom: 10px;
 }
 
 .rules__list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 3px;
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 1rem;
 }
 
 .rules__card {
   background: #fff;
   border-radius: 24px;
-  border: 3px solid #1e1e1e;
-  box-shadow: 8px 8px 0 #1e1e1e;
-  padding: 2rem;
+  border: 2px solid #1e1e1e;
+  box-shadow: 3px 3px 0 #1e1e1e;
+  padding: 1rem;
   transition: all 0.2s ease-in-out;
 }
 
-
 .rules__card-title {
   font-family: "Nunito", sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   color: #1e1e1e;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .rules__list-ul {
@@ -310,10 +336,10 @@ definePageMeta({
 }
 
 .table-wrapper {
-  border: 3px solid #1e1e1e;
+  border: 2px solid #1e1e1e;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 4px 4px 0 #1e1e1e;
+  box-shadow: 3px 3px 0 #1e1e1e;
   margin-top: 1.5rem;
 }
 
@@ -348,14 +374,27 @@ definePageMeta({
 .quiz-form {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 5px;
   margin-top: 1.5rem;
 }
 
 .quiz-item {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+}
+
+.rules__header-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #6358ac;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-bottom: 5px;
 }
 
 .quiz-item label {
@@ -373,18 +412,16 @@ definePageMeta({
   font-weight: 700;
   padding: 0.75rem;
   border-radius: 12px;
-  border: 3px solid #1e1e1e;
-  box-shadow: 4px 4px 0 #1e1e1e;
+  border: 2px solid #1e1e1e;
+  box-shadow: 3px 3px 0 #1e1e1e;
   flex-grow: 1;
-  max-width: 300px;
   transition: all 0.2s ease-in-out;
 }
 
 .quiz-input:focus {
   outline: none;
   border-color: #fca13a;
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0 #1e1e1e;
+  box-shadow: 2px 2px 0 #fca13a;
 }
 
 .quiz-result {
@@ -409,22 +446,22 @@ definePageMeta({
 
 .quiz-button {
   font-family: "Nunito", sans-serif;
-  padding: 0.75rem 1.5rem;
+  padding: 0.45rem 1.2rem;
   font-size: 1.2rem;
-  border-radius: 16px;
+  border-radius: 12px;
   cursor: pointer;
-  border: 3px solid #1e1e1e;
+  border: 2px solid #1e1e1e;
   transition: all 0.1s ease-in-out;
   background-color: #f97028;
   color: #ffffff;
-  box-shadow: 4px 4px 0 #1e1e1e;
+  box-shadow: 3px 3px 0 #1e1e1e;
+  flex: 1;
 }
 
 .quiz-button:hover {
   transform: translate(2px, 2px);
   box-shadow: 2px 2px 0 #1e1e1e;
 }
-
 
 .quiz__undo-icon {
   width: 40px;
@@ -434,28 +471,27 @@ definePageMeta({
 }
 
 
-@media (max-width: 768px) {
-  .rules__title {
-    font-size: 2rem;
-    transform: rotate(0);
-  }
-
-  .rules__card {
-    padding: 1.5rem;
-  }
-
-  .rules__table thead th {
-    max-width: 40px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .rules__table tbody th {
-    width: 85px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+.rules__title {
+  font-size: 2rem;
+  transform: rotate(0);
 }
+
+.rules__card {
+  padding: 12px;
+}
+
+.rules__table thead th {
+  max-width: 40px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rules__table tbody th {
+  width: 85px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 </style>

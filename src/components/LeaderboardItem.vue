@@ -60,12 +60,12 @@ const rankClass = computed(() => {
   justify-content: space-between;
   align-items: center;
   gap: 16px;
-  padding: 14px 18px;
-  margin-bottom: 14px;
+  padding: 5px;
+  margin-bottom: 10px;
   background: #fff7b8;
   border: 3px solid #1e1e1e;
   border-radius: 18px;
-  box-shadow: 4px 4px 0 #1e1e1e;
+  box-shadow: 2px 2px 0 #1e1e1e;
   font-family: "Nunito", sans-serif;
 }
 
@@ -77,12 +77,12 @@ const rankClass = computed(() => {
 .leaderboard-player-info {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 5px;
 }
 
 .leaderboard-player-avatar {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   object-fit: cover;
   background: #fff;
@@ -91,14 +91,14 @@ const rankClass = computed(() => {
 }
 
 .leaderboard-player-name {
-  font-size: 1.25rem;
+  font-size: .9rem;
   font-weight: 800;
   color: #1e1e1e;
   letter-spacing: 0.3px;
 }
 
 .leaderboard-player-rank {
-  min-width: 48px;
+  min-width: 38px;
   text-align: center;
   font-weight: 900;
   font-size: 1.6rem;
@@ -110,8 +110,8 @@ const rankClass = computed(() => {
 }
 
 .leaderboard-score-wrapper {
-  min-width: 62px;
-  padding: 8px 14px;
+  min-width: 52px;
+  padding: 1px 10px;
   background: #ffd6a5;
   border: 2px solid #1e1e1e;
   border-radius: 22px;
@@ -123,19 +123,13 @@ const rankClass = computed(() => {
 
 .leaderboard-player-score {
   font-weight: 900;
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: #1e1e1e;
+  width: 40px;
 }
 
-@media (max-width: 480px) {
-  .leaderboard-item {
-    padding: 12px 14px;
-  }
+@media (max-width: 767px) {
 
-  .leaderboard-player-avatar {
-    width: 56px;
-    height: 56px;
-  }
 
   .leaderboard-player-name {
     font-size: 1.1rem;
@@ -159,12 +153,12 @@ const rankClass = computed(() => {
   }
 
   .leaderboard-score-wrapper {
-    min-width: 80px;
-    padding: 6px 12px;
+    padding: 3px 0;
   }
 
   .leaderboard-player-score {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    text-align: center;
   }
 }
 
@@ -175,7 +169,7 @@ const rankClass = computed(() => {
   display: inline-block;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   .rank-medal {
     width: 28px;
     height: 28px;

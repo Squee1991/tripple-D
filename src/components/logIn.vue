@@ -69,7 +69,7 @@
             </div>
           </div>
         </form>
-        <div v-if="mode === 'login' && !authStore.isWebView"
+        <div v-if="mode === 'login'"
              class="google__auth-wrapper"
              @click="handleGoogleLogin"
         >
@@ -77,12 +77,12 @@
           <div class="google__auth">{{ t('auth.google') }}</div>
         </div>
       </div>
-      <div class="close__btn-modal-wrapper">
-        <button class="close__modal" @click="emits('close-auth-form')">
-          <div class="close__mob-auth-text">{{ t('hideAuthMobileBtn.text') }}</div>
-          <img class="close__auth-icon" src="../../assets/images/arrowNav.svg" alt="hide_auth_icon">
-        </button>
-      </div>
+<!--      <div class="close__btn-modal-wrapper">-->
+<!--        <button class="close__modal" @click="emits('close-auth-form')">-->
+<!--          <div class="close__mob-auth-text">{{ t('hideAuthMobileBtn.text') }}</div>-->
+<!--          <img class="close__auth-icon" src="../../assets/images/arrowNav.svg" alt="hide_auth_icon">-->
+<!--        </button>-->
+<!--      </div>-->
     </div>
   </div>
 </template>
@@ -258,9 +258,9 @@ onUnmounted(() => {
   document.body.style.overflow = ''
 })
 
-onMounted(() => {
-  authStore.detectWebView()
-})
+// onMounted(() => {
+//   authStore.detectWebView()
+// })
 </script>
 
 <style>

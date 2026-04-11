@@ -13,10 +13,13 @@ import VShowFall from "../src/components/V-showFall.vue";
 import Snow from "../assets/images/mery-christmas/Snow.svg";
 import HeartFall from "assets/images/mery-christmas/heartFall.svg";
 import {useEventSessionStore} from '../store/eventsStore.js'
-
+import VStartPage from "~/src/components/V-startPage.vue";
+import LogIn from "~/src/components/logIn.vue";
+const showLogin = ref(false)
 const eventStore = useEventSessionStore()
 const authStore = userAuthStore()
 const hydrated = ref(false)
+
 onMounted(() => {
   hydrated.value = true
 })
@@ -28,17 +31,15 @@ onMounted(() => {
 <!--  <VShowFall :image="HeartFall"/>-->
   <div v-if="!hydrated || !authStore.initialized" class="loading"></div>
   <div v-else class="container">
-    <Header/>
     <div v-if="authStore.uid" class="stat">
+      <Header/>
       <VUid/>
+      <Footer/>
     </div>
     <div v-else>
-      <Banner/>
-      <Description/>
-      <About/>
-      <FeedBack/>
+      <LogIn v-if="showLogin" @close="showLogin = false"/>
+      <VStartPage v-else @openLogin="showLogin = true"/>
     </div>
-    <Footer/>
   </div>
 
 </template>

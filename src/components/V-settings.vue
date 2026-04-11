@@ -78,6 +78,22 @@
         </li>
       </ul>
     </div>
+    <div class="account-actions">
+      <div class="accordion__title">Управления аккаунтом</div>
+      <div class="account-tab-body">
+        <div class="logout-section">
+          <button class="btn btn-logout btn-m" @click="authStore.logOut()">
+            {{ t('auth.logOut') }}
+          </button>
+        </div>
+      </div>
+      <div class="maccount__menegment">
+        <button @click.stop="openDeleteModal" class="btn btn-danger w-full btn-m">
+          {{ t('cabinet.deleteAcc') }}
+        </button>
+      </div>
+    </div>
+
     <div v-if="isLockedModalOpen" class="modal-overlay locked-priority" @click.self="isLockedModalOpen = false">
       <div class="modal-card">
         <div class="modal-title">{{ lockedModalContent.title }}</div>
@@ -123,6 +139,10 @@ const isValentineThemeUnlocked = computed(() => {
   const ach = achievementStore.findById('valentineTheme')
   return ach ? ach.currentProgress >= 1 : false
 })
+
+const openDeleteModal = () => {
+  emit('open', 'deleteAccount')
+}
 
 const isSnowUnlocked = computed(() => {
   const ach = achievementStore.findById('snowFall')
@@ -213,7 +233,8 @@ onMounted(async () => {
 </script>
 
 <style scoped>
-/* Твои стили остались без изменений */
+
+
 .accordion {
   padding: 12px 16px;
   margin-top: 14px;
@@ -225,6 +246,10 @@ onMounted(async () => {
 
 .accordion.open {
   max-height: 500px;
+}
+
+.account-actions {
+  padding: 12px;
 }
 
 .accordion__title {
@@ -406,4 +431,22 @@ onMounted(async () => {
   border-bottom: 1px solid var(--titleColor);
   padding: 5px 0;
 }
+
+.maccount__menegment {
+  display: flex;
+  justify-content: end;
+  margin-top: 16px;
+  padding: 0 0px;
+}
+
+.logout-section {
+  display: flex;
+  justify-content: end;
+  padding: 12px 0;
+}
+
+.btn-m {
+  width: 240px;
+}
+
 </style>

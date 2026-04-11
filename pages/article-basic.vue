@@ -2,18 +2,21 @@
   <main class="theory-main">
     <section class="theory-hero">
       <div class="theory-hero-content">
-        <h1 class="theory-title">
-          {{ t('examples.label') }}
-          <span class="theory-title-accent der">Der</span>
-          <span class="theory-title-accent die">Die</span>
-          <span class="theory-title-accent das">Das</span>
-        </h1>
-        <p class="theory-subtitle">
-          {{ t('examples.title') }}
-        </p>
+        <div class="theory__header-wrapper">
+          <VBackBtn/>
+          <h1 class="theory-title">
+<!--            {{ t('examples.label') }}-->
+            <span class="theory-title-accent der">Der</span>
+            <span class="theory-title-accent die">Die</span>
+            <span class="theory-title-accent das">Das</span>
+          </h1>
+        </div>
       </div>
     </section>
     <section id="start-theory" class="theory-sections">
+      <p class="theory-subtitle">
+        {{ t('examples.title') }}
+      </p>
       <article class="theory-card" id="intro" ref="theoryCards">
         <h2 class="theory-card-title"> {{ t('examplesFirstBlock.title') }}</h2>
         <p class="theory-card-text">
@@ -72,13 +75,10 @@
   </main>
 </template>
 <script setup>
-import { useHead, useSeoMeta} from '#imports'
-const {t} = useI18n();
-const canonical = useCanonical()
 
-useSeoMeta({
-  robots: 'noindex, nofollow'
-})
+import VBackBtn from "~/src/components/V-back-btn.vue";
+
+const {t} = useI18n();
 
 const data = {
   items: [
@@ -136,21 +136,26 @@ const data = {
   ]
 };
 
-definePageMeta({
-  layout: 'footerlayout',
-});
 </script>
 <style scoped>
 
 .theory-main {
   min-height: 100vh;
-  padding-bottom: 64px;
+  padding-bottom: 10px;
   font-family: 'Inter', sans-serif;
 }
 
 .theory-hero {
-  padding: 70px 1.5rem 40px 1.5rem;
+  padding: 15px;
   text-align: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  background: #6358ac;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .theory-hero-content {
@@ -162,49 +167,52 @@ definePageMeta({
 
 .theory-title {
   font-family: "Nunito", sans-serif;
-  font-size: 2.8rem;
+  font-size: 3.8rem;
   font-weight: 600;
   color: white;
-  background: #f97028;
-  padding: 1rem 2rem;
-  border: 3px solid #1e1e1e;
-  border-radius: 16px;
-  transform: rotate(1deg);
-  box-shadow: 8px 8px 0px #1e1e1e;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+  margin-top: 1px;
 }
 
 .theory-title-accent {
+  font-size: 30px;
   font-weight: 900;
-  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
 .theory-title-accent.der {
   color: #60a5fa;
+  -webkit-text-stroke: 2px #60a5fa;
+
 }
 
 .theory-title-accent.die {
   color: #f87171;
+  -webkit-text-stroke: 2px #f87171;
 }
 
 .theory-title-accent.das {
   color: #facc15;
+  -webkit-text-stroke: 2px #facc15;
 }
 
 .theory-subtitle {
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: var(--titleColor);
   max-width: 600px;
-  line-height: 1.6;
-  margin: 20px;
+  font-weight: 600;
+  text-align: center;
 }
 
 .theory-sections {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 1rem;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 2rem 1.5rem 0 1.5rem;
+  padding: 10px;
 }
 
 .theory-card {
@@ -315,25 +323,16 @@ definePageMeta({
   font-size: 1.2rem;
 }
 
-@media (max-width: 767px) {
-  .theory-title {
-    transform: rotate(0deg);
-    box-shadow: 3px 3px 0 #1e1e1e;
-    padding: 10px;
-    font-size: 1.5rem;
-    width: 100%;
-  }
+.theory__header-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
 
-  .theory-subtitle {
-    font-size: 1.1rem;
-  }
+@media (max-width: 767px) {
 
   .theory-card {
     box-shadow: 3px 3px 0 #1e1e1e;
-    padding: 15px;
-  }
-
-  .theory-hero {
     padding: 15px;
   }
 

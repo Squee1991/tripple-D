@@ -34,11 +34,6 @@
         📅 {{ t('cabinet.access') }} {{ formattedSubscriptionEndDate }}
       </p>
     </template>
-    <div class="account-actions">
-      <button @click.stop="openDeleteModal" class="btn btn-danger w-full">
-        {{ t('cabinet.deleteAcc') }}
-      </button>
-    </div>
   </div>
 </template>
 
@@ -68,9 +63,6 @@ const openCancelModal =() => {
   emit('open', 'cancelPremium')
 }
 
-const openDeleteModal = () => {
-  emit('open', 'deleteAccount')
-}
 </script>
 
 <style scoped>
@@ -200,19 +192,10 @@ const openDeleteModal = () => {
   color: #fff;
 }
 
-.account-actions {
-  display: flex;
-  justify-content: end;
-  margin-top: 16px;
-  padding: 0 2px;
-}
-
 .w-full {
   padding: 8px 14px;
   color: var(--titleColor);
 }
-
-
 
 @media (max-width: 1023px) {
   .subscription-status-row {
@@ -235,6 +218,30 @@ const openDeleteModal = () => {
     flex-direction: column;
     align-items: flex-start;
     padding: 0;
+  }
+}
+
+.logout-section {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+}
+
+.btn-logout {
+  width: 100%;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #ef4444;
+  transition: all 0.2s ease;
+}
+
+@media (min-width: 1024px) {
+  .btn-logout:hover {
+    background: #ef4444;
+    color: white;
+    transform: translateY(-2px);
   }
 }
 </style>

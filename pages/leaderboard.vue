@@ -8,6 +8,7 @@ import {useI18n} from 'vue-i18n'
 import LeaderboardItem from '../src/components/LeaderboardItem.vue'
 import ModalOverlay from '../src/components/modalOverlay.vue'
 import CloseIcon from '../assets/images/close.svg'
+import VBackBtn from "~/src/components/V-back-btn.vue";
 
 const {t} = useI18n()
 const router = useRouter()
@@ -148,10 +149,12 @@ onMounted(async () => {
       />
     </div>
     <div class="ranked-sidebar-corkboard">
-      <div class="ranked__side-btnBack-wrapper">
-        <button @click="backToMainPage" class="ranked__side-btnBack">{{ t('chooseTheme.btnBack') }}</button>
+      <div class="ranked__header">
+        <div class="ranked__side-btnBack-wrapper">
+          <VBackBtn/>
+        </div>
+        <h1 class="ranked-title">{{ t('ranked.label') }}</h1>
       </div>
-      <h1 class="corkboard-title">{{ t('ranked.label') }}</h1>
       <div class="control-card">
         <div class="pin"></div>
         <div class="discipline-selector">
@@ -270,6 +273,11 @@ onMounted(async () => {
   font-family: "Nunito", sans-serif;
 }
 
+.ranked__header {
+  display: flex;
+  align-items: center;
+}
+
 .ranked-sidebar-corkboard {
   flex: 1;
   max-width: 400px;
@@ -280,11 +288,12 @@ onMounted(async () => {
   padding: 0;
 }
 
-.corkboard-title {
+.ranked-title {
   font-family: "Nunito", sans-serif;
-  font-size: 34px;
+  font-size: 28px;
   text-align: center;
   font-weight: 800;
+  flex: 1;
   color: var(--titleColor);
 }
 
@@ -483,9 +492,9 @@ onMounted(async () => {
   font-weight: 800;
   color: #ffffff;
   font-family: "Nunito", sans-serif;
-  font-size: 2rem;
+  font-size: 1.1rem;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-shadow: 3px 3px 0 #8e7cc3;
 }
 
@@ -501,9 +510,7 @@ onMounted(async () => {
 }
 
 .leaderboard__items-container {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  padding: 0 2px;
   flex: 1;
   overflow-y: auto;
 }
@@ -513,7 +520,7 @@ onMounted(async () => {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  padding: 20px 0 10px 0;
+  padding: 10px 0 0 0;
   margin-top: auto;
   border-top: 2px dashed rgba(255, 255, 255, 0.3);
   z-index: 10;
@@ -597,7 +604,7 @@ onMounted(async () => {
 
 @media (max-width: 767px) {
   .ranked-leaderboard-blackboard {
-    padding: 10px;
+    padding: 6px;
   }
   .pagination {
     gap: 10px;

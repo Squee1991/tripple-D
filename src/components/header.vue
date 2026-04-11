@@ -15,18 +15,18 @@
         @button="onDevModalButton"
     />
     <div class="header-container">
-      <NuxtLink @click="click" to="/" class="logo" aria-label="German Corner — Home">
-        <span class="logo__name">skillup</span>
-        <NuxtImg
-            src="/images/logo/logo2.png"
-            alt="German Corner"
-            class="logo__img"
-            format="webp"
-            loading="eager"
-            fetchpriority="high"
-        />
-        <span class="logo__name">german</span>
-      </NuxtLink>
+<!--      <NuxtLink @click="click" to="/" class="logo" aria-label="German Corner — Home">-->
+<!--        <span class="logo__name">skillup</span>-->
+<!--        <NuxtImg-->
+<!--            src="/images/logo/logo2.png"-->
+<!--            alt="German Corner"-->
+<!--            class="logo__img"-->
+<!--            format="webp"-->
+<!--            loading="eager"-->
+<!--            fetchpriority="high"-->
+<!--        />-->
+<!--        <span class="logo__name">german</span>-->
+<!--      </NuxtLink>-->
       <nav ref="dropdownRefNav" class="header-nav" :class="{ 'is-open': isMobileMenuOpen, 'is-rtl': isAr }"
            aria-label="Main">
         <ul class="header-nav__list">
@@ -76,41 +76,33 @@
         </ul>
       </nav>
       <div class="header-right">
-        <div class="header-nav__tea">
-          <ForTea/>
-        </div>
-        <div class="header-nav__lang">
-          <LanguageSelector/>
-        </div>
         <div v-if="userAuth.name" class="header-user-wrapper">
           <button
               ref="userBtnRef"
               class="header-user"
-              @click="toggleMenu"
+              @click="router.push('cabinet')"
               aria-haspopup="true"
               :aria-expanded="menuOpen.toString()"
               aria-controls="user-menu-dropdown"
           >
             <img class="header-user__avatar" :src="userAuth.avatarUrl" alt="User avatar"/>
-            <span class="header-user__name">{{ userAuth.email }}</span>
-            <img :class="['header-nav__arrow', { 'rotated': menuOpen }]" :src="Arrow" alt="Arrow"/>
           </button>
-          <div
-              ref="dropdownRef"
-              v-if="menuOpen"
-              class="header-user__dropdown"
-              id="user-menu-dropdown"
-          >
-            <button
-                v-for="item in menuActions"
-                :key="item.id"
-                class="header-user__dropdown-btn"
-                @click.stop="item.action"
-            >
-              <img class="header-user__dropdown-icon" :src="item.icon" alt="Arrow_dropdown"/>
-              <span class="header__drop-text">{{ t(item.label) }}</span>
-            </button>
-          </div>
+<!--          <div-->
+<!--              ref="dropdownRef"-->
+<!--              v-if="menuOpen"-->
+<!--              class="header-user__dropdown"-->
+<!--              id="user-menu-dropdown"-->
+<!--          >-->
+<!--            <button-->
+<!--                v-for="item in menuActions"-->
+<!--                :key="item.id"-->
+<!--                class="header-user__dropdown-btn"-->
+<!--                @click.stop="item.action"-->
+<!--            >-->
+<!--              <img class="header-user__dropdown-icon" :src="item.icon" alt="Arrow_dropdown"/>-->
+<!--              <span class="header__drop-text">{{ t(item.label) }}</span>-->
+<!--            </button>-->
+<!--          </div>-->
         </div>
         <button v-else class="btn-login" @click="openAuth">
           {{ t('auth.logIn') }}
@@ -149,9 +141,11 @@ const router = useRouter()
 const {t, locale} = useI18n()
 const bp = useBreakPointsStore()
 const userAuth = userAuthStore()
-const click = () => {
-  easterEggsStore.triggerTaps()
-}
+
+// const click = () => {
+//   easterEggsStore.triggerTaps()
+// }
+
 const wrapperRef = ref(null)
 const showAuth = ref(false)
 const menuOpen = ref(false)
@@ -349,10 +343,6 @@ onMounted(() => {
 onBeforeUnmount(() => {
   window.removeEventListener('resize', updateWidth)
 })
-const menuActions = ref([
-  {id: 'cabinet', label: 'auth.cabinet', icon: User, action: () => goTo('cabinet')},
-  {id: 'logout', label: 'auth.logOut', icon: Logout, action: () => userAuth.logOut()},
-])
 
 const closeAllMenus = () => {
   isMobileMenuOpen.value = false
@@ -462,6 +452,7 @@ watch(isMobile, (isNowMobile) => {
 
 watch(isMobileMenuOpen, (newVal) => {
   document.body.style.overflow = newVal ? 'hidden' : ''
+
 })
 
 onMounted(() => {
@@ -972,6 +963,8 @@ onBeforeUnmount(() => {
 
     .header-right {
       gap: 7px;
+      justify-content: end;
+      width: 100%;
     }
 
     .header-user__avatar {

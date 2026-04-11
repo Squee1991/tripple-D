@@ -402,7 +402,7 @@ const confirmPurchase = async () => {
 
 .shop__cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(160px, 2fr));
   gap: 10px;
 }
 
