@@ -31,7 +31,7 @@ export const regions = {
 				pathTo: "stone-reach",
 				theme: "stone",
 				name: "locationNames.stone-reach",
-				level: 2,
+				level: 1,
 				desc: "regions.descriptionStoneReach",
 				icon: StoneReach
 			},
@@ -40,7 +40,7 @@ export const regions = {
 				pathTo: "wind-valley",
 				theme: "winds",
 				name: "locationNames.wind-valley",
-				level: 4,
+				level: 2,
 				desc: "regions.descriptionWindValley",
 				icon: WindValley
 			},
@@ -49,7 +49,7 @@ export const regions = {
 				pathTo: "lake-ruins",
 				theme: "ruins",
 				name: "locationNames.lake-ruins",
-				level: 6,
+				level: 3,
 				desc: "regions.descriptionLakeRuins",
 				icon: LakeRuins
 			},
@@ -58,7 +58,7 @@ export const regions = {
 				pathTo: "north-cliffs",
 				theme: "north",
 				name: "locationNames.north-cliffs",
-				level: 8,
+				level: 4,
 				desc: "regions.descriptionNorthCliffs",
 				icon: NorthCliffs
 			},
@@ -67,7 +67,7 @@ export const regions = {
 				pathTo: "storm-coast",
 				theme: "storm",
 				name: "locationNames.storm-coast",
-				level: 10,
+				level: 5,
 				desc: "regions.descriptionStormCoast",
 				icon: StormCoast
 			},
@@ -76,7 +76,7 @@ export const regions = {
 				pathTo: "master-lands",
 				theme: "master",
 				name: "locationNames.master-lands",
-				level: 12,
+				level: 6,
 				desc: "regions.descriptionMasterLands",
 				icon: MasterLands
 			},
@@ -85,7 +85,7 @@ export const regions = {
 				pathTo: "wild-lands",
 				theme: "wild",
 				name: "locationNames.wild-lands",
-				level: 14,
+				level: 7,
 				desc: "regions.descriptionWildLands",
 				icon: WildLand
 			}
@@ -96,7 +96,7 @@ export const regions = {
 				pathTo: "future-land",
 				theme: "future",
 				name: "locationNames.plural-land",
-				level: 0,
+				level: 8,
 				desc: "regions.descriptionPluralLands",
 				icon: Future
 			},
@@ -105,7 +105,7 @@ export const regions = {
 				pathTo: "past-land",
 				theme: "past",
 				name: "locationNames.past-land",
-				level: 0,
+				level: 9,
 				desc: "regions.descriptionPastLands",
 				icon: Past
 			},
@@ -114,7 +114,7 @@ export const regions = {
 				pathTo: "action-valley",
 				theme: "action",
 				name: "locationNames.action-valley",
-				level: 0,
+				level: 10,
 				desc: "regions.descriptionActionLands",
 				icon: Action
 			},
@@ -123,7 +123,7 @@ export const regions = {
 				pathTo: "order-valley",
 				theme: "order",
 				name: "locationNames.order-valley",
-				level: 0,
+				level: 11,
 				desc: "regions.descriptionOrderValley",
 				icon: OrderValley
 			},
@@ -132,7 +132,7 @@ export const regions = {
 				pathTo: "time-gate",
 				theme: "time",
 				name: "locationNames.time-gate",
-				level: 0,
+				level: 12,
 				desc: "regions.descriptionTimeGate",
 				icon: TimeGate
 			},
@@ -141,7 +141,7 @@ export const regions = {
 				pathTo: "edge-images",
 				theme: "edge",
 				name: "locationNames.edge-images",
-				level: 0,
+				level: 13,
 				desc: "regions.descriptionEdgeImages",
 				icon: EdgeImages
 			},
@@ -150,7 +150,7 @@ export const regions = {
 				pathTo: "secret-lands",
 				theme: "secret",
 				name: "locationNames.secret-lands",
-				level: 0,
+				level: 14,
 				desc: "regions.descriptionSecretLands",
 				icon: SecretLands
 			},
@@ -159,7 +159,7 @@ export const regions = {
 				pathTo: "definite-indefinite",
 				theme: "def-indef",
 				name: "locationNames.definite-indefinite",
-				level: 0,
+				level: 15,
 				desc: "regions.descriptionDefinite",
 				icon: MixedLands
 			},

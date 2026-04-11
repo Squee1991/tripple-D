@@ -74,6 +74,7 @@ const openDeleteModal = () => {
 </script>
 
 <style scoped>
+
 .account-tab-body {
   padding: 6px 0;
 }
@@ -136,7 +137,6 @@ const openDeleteModal = () => {
   border-color: rgba(148, 163, 184, 0.35);
   background: rgba(148, 163, 184, 0.10);
   color: var(--titleColor);
-
 }
 
 .premium__btn {
@@ -212,8 +212,6 @@ const openDeleteModal = () => {
   color: var(--titleColor);
 }
 
-
-
 @media (max-width: 1023px) {
   .subscription-status-row {
     align-items: center;
@@ -224,7 +222,6 @@ const openDeleteModal = () => {
   .subscription-status {
     width: 100%;
   }
-
 
   .status-inline {
     width: 100%;

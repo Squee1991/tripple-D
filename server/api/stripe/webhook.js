@@ -20,6 +20,7 @@ export default defineEventHandler(async (event) => {
 			return { error: 'Server Config Error' }
 		}
 	}
+
 	const config = useRuntimeConfig()
 	const stripeKey = config.stripeSecret || process.env.STRIPE_SECRET_KEY
 	const webhookSecret = config.stripeWebhookSecret || process.env.STRIPE_WEBHOOK_SECRET
@@ -34,6 +35,7 @@ export default defineEventHandler(async (event) => {
 	const body = await readRawBody(event)
 	const signature = getHeader(event, 'stripe-signature')
 	let stripeEvent
+
 	try {
 		stripeEvent = stripe.webhooks.constructEvent(body, signature, webhookSecret)
 	} catch (err) {
@@ -41,6 +43,7 @@ export default defineEventHandler(async (event) => {
 		setResponseStatus(event, 400)
 		return { error: `Webhook Error: ${err.message}` }
 	}
+
 	if (stripeEvent.type === 'checkout.session.completed') {
 		const session = stripeEvent.data.object
 		const userId = session.metadata?.firebaseUID
@@ -62,10 +65,11 @@ export default defineEventHandler(async (event) => {
 					subscriptionId: session.subscription || null,
 					updatedAt: new Date().toISOString()
 				}
+
 				if (discountUsed && ['sale_5', 'sale_10', 'sale_15'].includes(discountUsed)) {
 					updateData[discountUsed] = false
-					console.log(`🔥 [Webhook] Скидка ${discountUsed} сброшена для юзера ${userId}`)
 				}
+
 				await db.collection('users').doc(userId).set(updateData, { merge: true })
 				console.log(`✅ [Webhook] Юзер ${userId} получил премиум!`)
 			} catch (dbError) {
@@ -73,5 +77,28 @@ export default defineEventHandler(async (event) => {
 			}
 		}
 	}
+
+	if (stripeEvent.type === 'customer.subscription.deleted') {
+		const subscription = stripeEvent.data.object
+		const subscriptionId = subscription.id
+		try {
+			const db = getFirestore()
+			const usersRef = db.collection('users')
+			const snapshot = await usersRef.where('subscriptionId', '==', subscriptionId).get()
+			if (!snapshot.empty) {
+				for (const doc of snapshot.docs) {
+					await doc.ref.update({
+						isPremium: false,
+						subscriptionCancelled: true,
+						updatedAt: new Date().toISOString()
+					})
+					console.log(`❌ [Webhook] Время вышло! Премиум отключен для юзера ${doc.id}`)
+				}
+			}
+		} catch (dbError) {
+			console.error('❌ [Webhook] Ошибка снятия премиума:', dbError)
+		}
+	}
+
 	return { received: true }
 })

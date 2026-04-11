@@ -89,7 +89,6 @@ const difficultyClasses = computed(() =>
       <div v-else class="guest-greeting">
         <p>{{ t('marathonPrepare.notAuth') }}</p>
       </div>
-
       <div v-if="gameStore.isLoaded" class="settings-block">
         <h2>{{ t('marathonPrepare.chooseDifficulty') }}</h2>
         <div class="difficulty-options">
@@ -110,7 +109,6 @@ const difficultyClasses = computed(() =>
       <div v-else class="loading">
         <p>{{ t('marathonPrepare.loading') }}</p>
       </div>
-
       <button
           class="start-button"
           @click="startGame"
