@@ -68,7 +68,7 @@ const initGame = () => {
 
 const goHome = () => {
   const currentLocale = route.params.locale || 'ru'
-  router.push(`/${currentLocale}/games`)
+  router.push(`/german-universe`)
 }
 
 onMounted(() => {

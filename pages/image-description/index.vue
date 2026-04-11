@@ -6,6 +6,7 @@ import { useI18n } from 'vue-i18n'
 import Modal from '../../src/components/modal.vue'
 import Description from '@/assets/images/reporting.svg'
 import { topics } from '@/utils/descriptionImages.js'
+import VBackBtn from "~/src/components/V-back-btn.vue";
 
 useSeoMeta({
   robots: 'noindex, nofollow'
@@ -68,13 +69,7 @@ function goBack() {
     />
     <div class="content-shell">
       <header class="app-header">
-        <button @click="goBack" class="btn-icon-back">
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
-               stroke="#2b2b2b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="19" y1="12" x2="5" y2="12"></line>
-            <polyline points="12 19 5 12 12 5"></polyline>
-          </svg>
-        </button>
+        <VBackBtn/>
         <h1 class="header-title">
           <span>{{ t('describePicture.title') }}</span>
         </h1>
@@ -145,7 +140,7 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action {
   color: var(--titleColor);
 }
 
-.btn-icon-back, .btn-icon-info {
+.btn-icon-info {
   border: none;
   background: #fff;
   border: 3px solid #2b2b2b;
@@ -160,7 +155,7 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action {
   transition: transform 0.1s, box-shadow 0.1s;
 }
 
-.btn-icon-back:active, .btn-icon-info:active {
+.btn-icon-info:active {
   transform: translate(3px, 3px);
   box-shadow: 0px 0px 0px #2b2b2b;
 }
@@ -205,7 +200,7 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action {
 
 .topics-flex-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(160px, 2fr));
   gap: 12px;
 }
 
@@ -231,7 +226,7 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action {
   padding: 15px;
   text-align: center;
   border-bottom: 4px solid #2b2b2b;
-  height: 90px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -239,7 +234,7 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action {
 
 .card-top-banner h3 {
   margin: 0;
-  font-size: 1.1rem;
+  font-size: .9rem;
   font-weight: 900;
 }
 

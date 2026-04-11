@@ -11,15 +11,19 @@
           @consent-given="handleConsentGiven"
           @close="showConsentModal = false"
       />
-      <button type="button" class="back__btn" @click="routeToMain">{{t('examIndexPage.toMain')}}</button>
-      <p class="exam__subtitle">
-        {{t('examIndexPage.choice')}}
-        <span class="exam__highlight">Lesen</span>,
-        <span class="exam__highlight">Hören</span>,
-        <span class="exam__highlight">Schreiben</span>,
-        <span class="exam__highlight">Sprechen</span>
-      </p>
+      <div class="exam__header">
+        <VBackBtn/>
+        <div class="exam__title">Тесты</div>
+      </div>
+
       <div class="exam__levels">
+        <p class="exam__subtitle">
+          {{t('examIndexPage.choice')}}
+          <span class="exam__highlight">Lesen</span>,
+          <span class="exam__highlight">Hören</span>,
+          <span class="exam__highlight">Schreiben</span>,
+          <span class="exam__highlight">Sprechen</span>
+        </p>
         <div
             v-for="level in examLevels"
             :key="level.id"
@@ -69,6 +73,7 @@ import {useRouter} from 'vue-router'
 import VConsentModal from "../../src/components/V-consentModal.vue";
 import {userAuthStore} from "../../store/authStore.js";
 import { useHead, useSeoMeta } from '#imports'
+import VBackBtn from "~/src/components/V-back-btn.vue";
 // const canonical = useCanonical()
 const { t } = useI18n()
 
@@ -139,9 +144,7 @@ const examLevels = [
     ]
   }
 ]
-const routeToMain = () => {
-  router.push('/')
-}
+
 const attemptToStartExam = (levelId) => {
   if (authStore.voiceConsentGiven) {
     router.push(`/exams/level/${levelId}`)
@@ -166,11 +169,12 @@ onMounted(async () => {
 
 <style scoped>
 .exam {
-  padding: 1rem;
   background-color: var(--bg);
   font-family: "Nunito", sans-serif;
-  min-height: 100vh;
+  height: 100vh;
   text-align: center;
+  overflow: hidden;
+  padding-bottom: 80px;
 }
 
 .button__not-allowed {
@@ -213,15 +217,18 @@ onMounted(async () => {
 }
 
 .exam__title {
-  font-size: 2.4rem;
-  margin-bottom: 0.5rem;
+  flex: 1;
+  font-weight: 900;
+  font-family: "Nunito", sans-serif;
+  font-size: 24px;
+  color: white;
 }
 
 .exam__subtitle {
-  margin-top: 15px;
+  margin-top: 10px;
   font-size: 1.3rem;
   color: var(--titleColor);
-  margin-bottom: 2rem;
+  padding: 0 10px;
 }
 
 .exam__highlight {
@@ -233,7 +240,9 @@ onMounted(async () => {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
+  height: 100%;
+  overflow-y: auto;
 }
 
 .exam-card {
@@ -242,7 +251,6 @@ onMounted(async () => {
   border-radius: 15px;
   width: 280px;
   padding: 1.5rem;
-  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.25);
   transition: transform 0.2s;
   display: flex;
   flex-direction: column;
@@ -335,15 +343,23 @@ onMounted(async () => {
   border-color: #ef4444;
 }
 
+.exam__header {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  background: #6358ac;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 14px;
+}
+
 @media (max-width: 767px) {
   .exam-card {
     width: 90%
-  }
-}
-
-@media (max-width: 600px) {
-  .back__btn {
-    width: 100%;
   }
 }
 

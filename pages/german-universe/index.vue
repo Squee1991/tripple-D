@@ -123,7 +123,7 @@ const generateAstronauts = (count = 3) => {
   astronauts.value = newAstronauts
 }
 
-const handleExit = () => router.push(`/${locale.value}`)
+const handleExit = () => router.push('/')
 
 const toggleScreen = (target) => {
   const needsWarp = ['shop', 'galaxies', 'rank'].includes(target) ||
@@ -142,7 +142,7 @@ const toggleScreen = (target) => {
 
 const startMission = (sectorId) => {
   router.push({
-    name: `german-universe-id___${locale.value}`,
+    name: 'german-universe-id',
     params: { id: sectorId }
   })
 }

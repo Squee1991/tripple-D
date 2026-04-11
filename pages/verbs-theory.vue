@@ -2,75 +2,80 @@
   <div class="verbs">
     <div class="verbs__inner">
       <header class="verbs__header">
-        <h1 class="verbs__title">{{ t('verbsTheory.title')}}</h1>
-        <p class="verbs__subtitle">{{ t('verbsTheory.subTitle')}}</p>
+        <div class="header__title-wrapper">
+          <VBackBtn/>
+          <h1 class="verbs__title">{{ t('verbsTheory.title')}}</h1>
+        </div>
       </header>
-      <section v-for="section in contentSections" :key="section.id" class="verbs__card" :class="section.customClass">
-        <h2 class="verbs__card-title">{{ section.title }}</h2>
-        <template v-for="(item, index) in section.content" :key="index">
-          <p v-if="item.type === 'paragraph'" class="verbs__paragraph" v-html="item.text"></p>
-          <ul v-if="item.type === 'list'" class="verbs__list">
-            <li v-for="(li, i) in item.items" :key="i" class="verbs__item" v-html="li"></li>
-          </ul>
-          <div v-if="item.type === 'note'" class="verbs__note" v-html="item.text"></div>
-          <div v-if="item.type === 'example'" class="verbs__example">
-            <img
-                class="verbs__icon"
-                :src="item.icon === 'Chat' ? Chat : Pin" alt="icon"
-                :alt="item.icon === 'Chat' ? 'Dialogue example' : 'Note example'"
-            >
-            <div class="verbs__example--wrapper">
-              <p v-for="(line, i) in item.lines" :key="i" v-html="line"></p>
+      <div class="verb__theory-section">
+        <section v-for="section in contentSections" :key="section.id" class="verbs__card" :class="section.customClass">
+          <!--        <p class="verbs__subtitle">{{ t('verbsTheory.subTitle')}}</p>-->
+          <h2 class="verbs__card-title">{{ section.title }}</h2>
+          <template v-for="(item, index) in section.content" :key="index">
+            <p v-if="item.type === 'paragraph'" class="verbs__paragraph" v-html="item.text"></p>
+            <ul v-if="item.type === 'list'" class="verbs__list">
+              <li v-for="(li, i) in item.items" :key="i" class="verbs__item" v-html="li"></li>
+            </ul>
+            <div v-if="item.type === 'note'" class="verbs__note" v-html="item.text"></div>
+            <div v-if="item.type === 'example'" class="verbs__example">
+              <img
+                  class="verbs__icon"
+                  :src="item.icon === 'Chat' ? Chat : Pin" alt="icon"
+                  :alt="item.icon === 'Chat' ? 'Dialogue example' : 'Note example'"
+              >
+              <div class="verbs__example--wrapper">
+                <p v-for="(line, i) in item.lines" :key="i" v-html="line"></p>
+              </div>
             </div>
-          </div>
-          <div v-if="item.type === 'table'" class="verbs__table-wrap">
-            <table class="verbs__table">
-              <thead>
-              <tr>
-                <th v-for="header in item.headers" :key="header">{{ header }}</th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr v-for="(row, i) in item.rows" :key="i">
-                <td v-for="(cell, j) in row" :key="j" v-html="cell"></td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-        </template>
-      </section>
-      <section class="verbs__card verbs__quiz">
-        <h2 class="verbs__card-title">{{ t('verbsTheory.quiz')}}</h2>
-        <div v-if="!quizFinished" class="verbs__quiz-body">
-          <p class="verbs__quiz-progress">{{ t('verbsTheory.quest')}} {{ quizIndex + 1 }} / {{ quizQuestions.length }}</p>
-          <h3 class="verbs__quiz-question" v-html="quizQuestions[quizIndex].question"></h3>
-          <div class="verbs__quiz-options">
-            <button
-                v-for="opt in quizQuestions[quizIndex].options"
-                :key="opt"
-                @click="checkAnswer(opt)"
-                :disabled="selectedAnswer !== null"
-                :class="['verbs__quiz-option', getOptionClass(opt)]"
-            >
-              {{ opt }}
+            <div v-if="item.type === 'table'" class="verbs__table-wrap">
+              <table class="verbs__table">
+                <thead>
+                <tr>
+                  <th v-for="header in item.headers" :key="header">{{ header }}</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr v-for="(row, i) in item.rows" :key="i">
+                  <td v-for="(cell, j) in row" :key="j" v-html="cell"></td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </template>
+        </section>
+        <section class="verbs__card verbs__quiz">
+          <h2 class="verbs__card-title">{{ t('verbsTheory.quiz')}}</h2>
+          <div v-if="!quizFinished" class="verbs__quiz-body">
+            <p class="verbs__quiz-progress">{{ t('verbsTheory.quest')}} {{ quizIndex + 1 }} / {{ quizQuestions.length }}</p>
+            <h3 class="verbs__quiz-question" v-html="quizQuestions[quizIndex].question"></h3>
+            <div class="verbs__quiz-options">
+              <button
+                  v-for="opt in quizQuestions[quizIndex].options"
+                  :key="opt"
+                  @click="checkAnswer(opt)"
+                  :disabled="selectedAnswer !== null"
+                  :class="['verbs__quiz-option', getOptionClass(opt)]"
+              >
+                {{ opt }}
+              </button>
+            </div>
+            <div class="verbs__quiz-feedback">
+              <p v-if="quizFeedback==='correct'">✅ {{ t('verbsTheory.correct')}}</p>
+              <p v-if="quizFeedback==='incorrect'">❌ {{ t('verbsTheory.wrong')}} <b>{{
+                  quizQuestions[quizIndex].answer
+                }}</b></p>
+            </div>
+            <button v-if="selectedAnswer" @click="nextQuestion" class="verbs__quiz-next">
+              {{ quizIndex === quizQuestions.length - 1 ? t('verbTheorySeventhBlock.result') : t('verbTheorySeventhBlock.nextQuest') }}
             </button>
           </div>
-          <div class="verbs__quiz-feedback">
-            <p v-if="quizFeedback==='correct'">✅ {{ t('verbsTheory.correct')}}</p>
-            <p v-if="quizFeedback==='incorrect'">❌ {{ t('verbsTheory.wrong')}} <b>{{
-                quizQuestions[quizIndex].answer
-              }}</b></p>
+          <div v-else class="verbs__quiz-results">
+            <h3 class="verbs__results-title">{{ t('verbsTheory.result')}}</h3>
+            <p class="verbs__results-score">{{ t('verbsTheory.resultCount')}} {{ quizScore }} / {{ quizQuestions.length }}</p>
+            <button @click="resetQuiz" class="verbs__quiz-next">{{ t('verbsTheory.again')}}</button>
           </div>
-          <button v-if="selectedAnswer" @click="nextQuestion" class="verbs__quiz-next">
-            {{ quizIndex === quizQuestions.length - 1 ? t('verbTheorySeventhBlock.result') : t('verbTheorySeventhBlock.nextQuest') }}
-          </button>
-        </div>
-        <div v-else class="verbs__quiz-results">
-          <h3 class="verbs__results-title">{{ t('verbsTheory.result')}}</h3>
-          <p class="verbs__results-score">{{ t('verbsTheory.resultCount')}} {{ quizScore }} / {{ quizQuestions.length }}</p>
-          <button @click="resetQuiz" class="verbs__quiz-next">{{ t('verbsTheory.again')}}</button>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   </div>
 </template>
@@ -81,34 +86,12 @@ import { useRoute } from 'vue-router'
 import {ref, computed} from 'vue'
 import Pin from '../assets/images/pin.svg'
 import Chat from '../assets/images/chat.svg'
-const canonical = useCanonical();
+import VBackBtn from "~/src/components/V-back-btn.vue";
 const { t } = useI18n()
 
 useSeoMeta({
   robots: 'noindex, nofollow'
 })
-
-const route = useRoute()
-// const pageTitle = t('metaVerbsTheory.title')
-// const pageDesc  = t('metaVerbsTheory.description')
-//
-// useSeoMeta({
-//   title: pageTitle,
-//   description: pageDesc,
-//   ogTitle: pageTitle,
-//   ogDescription: pageDesc,
-//   ogType: 'article',
-//   ogUrl:  canonical,
-//   ogImage: '/images/seo-verbs.png',
-//   robots: 'index, follow'
-// })
-//
-// useHead({
-//   title: pageTitle,
-//   link: [
-//     { rel: 'canonical', href:canonical }
-//   ]
-// })
 
 const contentSections = ref([
   {
@@ -237,7 +220,6 @@ const contentSections = ref([
     ]
   }
 ]);
-
 const quizQuestions = ref([
   {
     question: t('verbTheorySeventhBlock.questOne'),
@@ -275,7 +257,6 @@ const quizQuestions = ref([
     answer: 'gesehen'
   }
 ]);
-
 const quizIndex = ref(0);
 const selectedAnswer = ref(null);
 const quizScore = ref(0);
@@ -317,40 +298,54 @@ const getOptionClass = (opt) => {
   return '';
 };
 
-definePageMeta({layout: 'footerlayout'})
 </script>
 
 <style scoped>
+
 .verbs__inner {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 2rem;
+  height: 100vh;
   font-family: 'Nunito', sans-serif;
-  color: #1f2937
+  color: #1f2937;
+  overflow: hidden;
+}
+
+.header__title-wrapper {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  background: #6358ac;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-bottom: 5px;
 }
 
 .verbs__header {
   text-align: center;
-  margin-bottom: 3rem
+  margin-bottom: 1rem;
 }
 
 .verbs__title {
-  font-size: 2.6rem;
+  font-size: 1.4rem;
   font-weight: 800;
   color: #fff;
-  background: #818cf8;
-  padding: 1rem 2rem;
-  border: 3px solid #1f2937;
-  border-radius: 16px;
-  transform: rotate(-0.6deg);
-  box-shadow: 8px 8px 0 #1f2937;
-  display: inline-block;
-  margin-bottom: 1rem
+  flex: 1;
 }
 
 .verbs__subtitle {
   font-size: 1.1rem;
   color: var(--titleColor)
+}
+
+.verb__theory-section {
+  height: 100%;
+  padding: 10px;
+  overflow-y: auto;
 }
 
 .verbs__card {
@@ -528,16 +523,6 @@ definePageMeta({layout: 'footerlayout'})
 }
 
 @media (max-width: 767px) {
-  .verbs__inner {
-    padding: 1rem
-  }
-
-  .verbs__title {
-    font-size: 2.1rem;
-    padding: 14px;
-    box-shadow: 2px 2px 5px #1f2937
-  }
-
   .verbs__card {
     box-shadow: 2px 2px 5px #1f2937
   }

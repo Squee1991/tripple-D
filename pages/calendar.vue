@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <header class="topbar">
-      <button class="back-btn" @click="goBack" aria-label="back">←</button>
+      <VBackBtn/>
       <h1 class="page-title">{{ t('calendarInfo.eventsTitle')}}</h1>
       <div class="spacer"></div>
     </header>
@@ -76,6 +76,7 @@ import HalloweenIcon from '../../assets/images/calendar-icons/halloweenIcon.svg'
 import ChristmasIcon from '../../assets/images/calendar-icons/christmas-wreath.svg'
 import FoolDay from '../../assets/images/calendar-icons/FoolDay.svg'
 import Bees from '../../assets/images/calendar-icons/bees.svg'
+import VBackBtn from "~/src/components/V-back-btn.vue";
 
 definePageMeta({
   robots: {

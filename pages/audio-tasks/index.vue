@@ -10,16 +10,15 @@
       />
       <div class="quiz__header-wrapper">
         <header class="quiz__header">
-          <button @click="handleBackClick" class="quiz__btn quiz__btn--back">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                 stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <button @click="handleBackClick" class="btn-icon-back">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                 stroke="#2b2b2b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
               <line x1="19" y1="12" x2="5" y2="12"></line>
               <polyline points="12 19 5 12 12 5"></polyline>
             </svg>
           </button>
           <div class="quiz__titles">
             <h1 class="quiz__title">{{ headerTitle }}</h1>
-            <p class="quiz__subtitle"> {{ headerText }}</p>
           </div>
           <button class="quiz__btn quiz__btn--info" @click="showDevModal = true">
             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
@@ -30,6 +29,9 @@
             </svg>
           </button>
         </header>
+      </div>
+      <div>
+        <p class="quiz__subtitle"> {{ headerText }}</p>
       </div>
       <div class="quiz__content">
         <transition name="quiz-pop" mode="out-in">
@@ -86,6 +88,7 @@ import {storeToRefs} from 'pinia'
 import {useAudioTaskStore} from '../../store/audioTaskStore.js'
 import Modal from "../../src/components/modal.vue"
 import HeadPhones from '../../assets/images/headphones.svg'
+import VBackBtn from "~/src/components/V-back-btn.vue";
 
 const router = useRouter()
 const store = useAudioTaskStore()
@@ -190,13 +193,32 @@ onMounted(async () => {
   width: 100%;
 }
 
+.btn-icon-back {
+  background: #fff;
+  border: 3px solid #2b2b2b;
+  border-radius: 12px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px #2b2b2b;
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.btn-icon-back:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #2b2b2b;
+}
+
 .quiz__titles {
   text-align: center;
   flex-grow: 1;
 }
 
 .quiz__title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 900;
   text-transform: uppercase;
   margin: 0;
@@ -206,16 +228,18 @@ onMounted(async () => {
 }
 
 .quiz__subtitle {
+  text-align: center;
   color: #57606f;
   font-weight: 800;
   font-size: 1rem;
   margin-top: 5px;
   text-transform: uppercase;
+  font-family: "Nunito", sans-serif;
 }
 
 .quiz__btn {
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;

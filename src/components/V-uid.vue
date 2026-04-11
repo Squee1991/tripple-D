@@ -195,10 +195,6 @@ onBeforeUnmount(() => {
     transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.12s ease;
   }
 
-  .mobile-nav__btn:active {
-    transform: translateY(1px);
-  }
-
   .mobile-nav__btn--active {
     background: #eeeaea;
     border: 3px solid var(--border);

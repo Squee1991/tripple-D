@@ -1,17 +1,16 @@
 <template>
   <div class="verbs-container">
-    <div class="fixed-top">
-      <header class="header">
-        <div class="header__inner">
-          <div class="back__btn">
-            <VBackBtn/>
+    <div class="verbs__header">
+      <div class="fixed-top">
+        <header class="header">
+          <div class="header__inner">
+            <div class="back__btn">
+              <VBackBtn/>
+            </div>
+            <h1 class="cartoon-title">{{ t('verbFormPage.title') }}</h1>
           </div>
-<!--          <h1 class="cartoon-title">{{ t('verbFormPage.title') }}</h1>-->
-<!--          <div v-if="filteredVerbs.length" class="counter">-->
-<!--            {{ t('verbFormPage.found') }} <strong>{{ filteredVerbs.length }}</strong>-->
-<!--          </div>-->
-        </div>
-      </header>
+        </header>
+      </div>
       <div class="filters">
         <div class="search-box">
           <input
@@ -162,31 +161,28 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
   color: var(--titleColor);
 }
 
-
-
 .verbs-container {
   height: 100vh;
   max-width: 1300px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  padding: 10px;
   overflow: hidden;
 }
 
 .fixed-top {
   flex-shrink: 0;
-  border-radius: 20px;
-  padding: 15px;
+  border-radius: 15px;
   margin-bottom: 10px;
-  border: 3px solid #e2e8f0;
 }
 
 .cartoon-title {
   font-family: "Nunito", sans-serif;
   font-weight: 900;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   text-align: center;
+  flex: 1;
+  color: white;
 }
 
 .counter {
@@ -209,11 +205,13 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-top: 5px;
+  margin-bottom: 10px;
+  padding: 0 10px;
 }
 
 .cartoon-input, .cartoon-select {
   padding: 12px;
+  width: 100%;
   border: 2px solid #cbd5e0;
   border-radius: 10px;
   font-weight: 600;
@@ -252,6 +250,10 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
 
 .verb__infinitive {
   color: #4299e1;
+}
+
+.verbs__header {
+
 }
 
 .verb-card {
@@ -309,6 +311,20 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
   text-transform: uppercase;
   color: #fff;
   margin-top: 5px;
+}
+
+.header__inner {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #6358ac;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-bottom: 5px;
 }
 
 .type-tag.weak {
@@ -420,11 +436,6 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
   border-top: 3px solid #e2e8f0;
 }
 
-.back__btn {
-  max-width: 240px;
-  margin: 0 auto;
-
-}
 
 .nav-btn {
   background: #4299e1;

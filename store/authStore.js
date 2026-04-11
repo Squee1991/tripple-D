@@ -1,5 +1,6 @@
 import {defineStore} from "pinia";
 import {ref, computed} from 'vue'
+import { Capacitor } from '@capacitor/core';
 import {
     getAuth,
     createUserWithEmailAndPassword,
@@ -10,10 +11,12 @@ import {
     deleteUser,
     onAuthStateChanged,
     sendPasswordResetEmail,
+    signInWithCredential,
     sendEmailVerification,
     signInWithPopup,
     reauthenticateWithPopup, GoogleAuthProvider, fetchSignInMethodsForEmail
 } from 'firebase/auth';
+import { GoogleSignIn } from '@capawesome/capacitor-google-sign-in';
 import {doc, setDoc, getDoc, getFirestore, updateDoc, deleteDoc, serverTimestamp, writeBatch} from 'firebase/firestore';
 import {userlangStore} from "./learningStore.js";
 
@@ -309,47 +312,86 @@ export const userAuthStore = defineStore('auth', () => {
         })
     }
 
+
+
+
     const loginWithGoogle = async () => {
-        const provider = new GoogleAuthProvider()
-        const result = await signInWithPopup(auth, provider)
-        const user = result.user
-        const userDocRef = doc(db, 'users', user.uid)
-        const userDoc = await getDoc(userDocRef)
-        if (!userDoc.exists()) {
-            await setDoc(userDocRef, {
-                ownedAvatars: ['1.png', '2.png'],
+        try {
+            const isNative = Capacitor.isNativePlatform();
+            let idToken = null;
+            if (isNative) {
+                // --- ЛОГИКА ДЛЯ APK (Нативный вход) ---
+                await GoogleSignIn.initialize({
+                    clientId: '516504654997-15ujeh34o8jc7hkbempel0t60qp0e43g.apps.googleusercontent.com',
+                });
+                const result = await GoogleSignIn.signIn({
+                    clientId: '516504654997-15ujeh34o8jc7hkbempel0t60qp0e43g.apps.googleusercontent.com',
+                });
+                idToken = result.idToken;
+            } else {
+                // --- ЛОГИКА ДЛЯ LOCALHOST (Обычный Веб) ---
+                // Используем стандартный Firebase Popup, который у тебя работал год
+                const provider = new GoogleAuthProvider();
+                const result = await signInWithPopup(auth, provider);
+                const credential = GoogleAuthProvider.credentialFromResult(result);
+                idToken = credential.idToken;
+            }
+            if (!idToken) {
+                console.error('Артикль не вернул токен');
+                return;
+            }
+            // --- ДАЛЬШЕ ОБЩАЯ ЛОГИКА ДЛЯ ВСЕХ (Firebase & Firestore) ---
+            const credential = GoogleAuthProvider.credential(idToken);
+            const authResult = await signInWithCredential(auth, credential);
+            const user = authResult.user;
+            const userDocRef = doc(db, 'users', user.uid);
+            const userDoc = await getDoc(userDocRef);
+            if (!userDoc.exists()) {
+                await setDoc(userDocRef, {
+                    ownedAvatars: ['1.png', '2.png'],
+                    name: user.displayName,
+                    email: user.email,
+                    registeredAt: serverTimestamp(),
+                    feedbackSurveyShownAt: null,
+                    avatar: '1.png',
+                    subscriptionEndsAt: null,
+                    subscriptionCancelled: false,
+                    gotPremiumBonus: false,
+                    voiceConsentGiven: false,
+                    hasSeenOnboarding: false,
+                    isPremium: false,
+                    totalHats: 0,
+                    points: 0,
+                    claimedBonuses: [],
+                    sale_5: false,
+                    sale_10: false,
+                    sale_15: false,
+                    ...createInitialAchievementsObject()
+                });
+            }
+
+            const finalDoc = await getDoc(userDocRef);
+            const userDataFromDb = finalDoc.data() || {};
+
+            setUserData({
                 name: user.displayName,
                 email: user.email,
-                registeredAt: serverTimestamp(),
-                feedbackSurveyShownAt: null,
-                avatar: '1.png',
-                subscriptionEndsAt: null,
-                subscriptionCancelled: false,
-                gotPremiumBonus: false,
-                voiceConsentGiven: false,
-                hasSeenOnboarding: false,
-                isPremium: false,
-                totalHats: 0,
-                points: 0,
-                claimedBonuses: [],
-                sale_5: false,
-                sale_10: false,
-                sale_15: false,
-                ...createInitialAchievementsObject()
-            })
+                registeredAt: user.metadata.creationTime,
+                uid: user.uid,
+                providerId: user.providerData[0]?.providerId || '',
+                ...userDataFromDb
+            });
+
+            await checkFeedbackSurveyEligibility();
+
+        } catch (error) {
+            // Игнорируем ошибку отмены, чтобы не бесить юзера
+            if (error.code === 'SIGN_IN_CANCELED' || error.code === 'auth/popup-closed-by-user') {
+                return;
+            }
+            const errorDetail = JSON.stringify(error, Object.getOwnPropertyNames(error), 2);
+            alert(`❌ ОШИБКА ВХОДА:\n\n${errorDetail}`);
         }
-        const finalDoc = await getDoc(userDocRef)
-        const userDataFromDb = finalDoc.data() || {}
-        setUserData({
-            name: user.displayName,
-            email: user.email,
-            registeredAt: user.metadata.creationTime,
-            uid: user.uid,
-            providerId: user.providerData[0]?.providerId || '',
-            ...userDataFromDb
-        })
-        await checkFeedbackSurveyEligibility()
-        console.log('✅ Logged into Firebase project:', auth.app.options.projectId)
     }
 
     const registerUser = async (userData) => {

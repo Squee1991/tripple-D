@@ -6,7 +6,7 @@
 <!--      <FeedBack/>-->
     <VLost/>
     <VRankOverlay/>
-    <VInstallPwa/>
+
   </NuxtLayout>
 </template>
 
@@ -14,7 +14,6 @@
 import VRankOverlay from "./src/components/V-rank-overlay.vue";
 import FeedBack from './src/components/V-feedback.vue'
 import VStepHint from "./src/components/V-stephint.vue";
-import VInstallPwa from "./src/components/V-install-pwa.vue";
 import AchievementToast from './src/components/AchievementToast.vue'
 import VLost from './src/components/V-lost.vue'
 import {useRouter, useRoute} from 'vue-router'
