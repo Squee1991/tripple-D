@@ -268,11 +268,6 @@ import ArrowBackIcon from '../assets/images/arrow.svg'
 import RankAward from '../assets/images/rankaward.svg'
 import AccountIcon from '../assets/images/account.png'
 
-
-definePageMeta({
-  robots: {index: false, follow: false}
-})
-
 const {t} = useI18n()
 const router = useRouter()
 
