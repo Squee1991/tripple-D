@@ -128,7 +128,6 @@ const openCancelModal =() => {
   border-color: rgba(148, 163, 184, 0.35);
   background: rgba(148, 163, 184, 0.10);
   color: var(--titleColor);
-
 }
 
 .premium__btn {

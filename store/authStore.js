@@ -1,6 +1,7 @@
 import {defineStore} from "pinia";
 import {ref, computed} from 'vue'
 import { Capacitor } from '@capacitor/core';
+import { useBillingStore } from '../store/billingStore.js'
 import {
     getAuth,
     createUserWithEmailAndPassword,
@@ -312,15 +313,11 @@ export const userAuthStore = defineStore('auth', () => {
         })
     }
 
-
-
-
     const loginWithGoogle = async () => {
         try {
             const isNative = Capacitor.isNativePlatform();
             let idToken = null;
             if (isNative) {
-                // --- ЛОГИКА ДЛЯ APK (Нативный вход) ---
                 await GoogleSignIn.initialize({
                     clientId: '516504654997-15ujeh34o8jc7hkbempel0t60qp0e43g.apps.googleusercontent.com',
                 });
@@ -329,8 +326,6 @@ export const userAuthStore = defineStore('auth', () => {
                 });
                 idToken = result.idToken;
             } else {
-                // --- ЛОГИКА ДЛЯ LOCALHOST (Обычный Веб) ---
-                // Используем стандартный Firebase Popup, который у тебя работал год
                 const provider = new GoogleAuthProvider();
                 const result = await signInWithPopup(auth, provider);
                 const credential = GoogleAuthProvider.credentialFromResult(result);
@@ -340,7 +335,6 @@ export const userAuthStore = defineStore('auth', () => {
                 console.error('Артикль не вернул токен');
                 return;
             }
-            // --- ДАЛЬШЕ ОБЩАЯ ЛОГИКА ДЛЯ ВСЕХ (Firebase & Firestore) ---
             const credential = GoogleAuthProvider.credential(idToken);
             const authResult = await signInWithCredential(auth, credential);
             const user = authResult.user;
@@ -369,10 +363,8 @@ export const userAuthStore = defineStore('auth', () => {
                     ...createInitialAchievementsObject()
                 });
             }
-
             const finalDoc = await getDoc(userDocRef);
             const userDataFromDb = finalDoc.data() || {};
-
             setUserData({
                 name: user.displayName,
                 email: user.email,
@@ -383,9 +375,7 @@ export const userAuthStore = defineStore('auth', () => {
             });
 
             await checkFeedbackSurveyEligibility();
-
         } catch (error) {
-            // Игнорируем ошибку отмены, чтобы не бесить юзера
             if (error.code === 'SIGN_IN_CANCELED' || error.code === 'auth/popup-closed-by-user') {
                 return;
             }
@@ -582,6 +572,10 @@ export const userAuthStore = defineStore('auth', () => {
                         providerId: user.providerData[0]?.providerId || '',
                         ...userDataFromDb
                     })
+                    if (Capacitor.isNativePlatform()) {
+                        const billing = useBillingStore()
+                        await billing.syncSubscription()
+                    }
                 }
                 await checkFeedbackSurveyEligibility()
             } else {
