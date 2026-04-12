@@ -9,12 +9,12 @@
     "description": "pluralLandQuestOne.description",
     "conditions": {
       "goal": "pluralLandQuestOne.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -226,12 +226,12 @@
     "description": "pluralLandQuestTwo.description",
     "conditions": {
       "goal": "pluralLandQuestTwo.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
