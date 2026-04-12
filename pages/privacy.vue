@@ -124,8 +124,6 @@ const sections = ref([
 ])
 
 
-
-
 </script>
 
 <style scoped>

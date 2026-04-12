@@ -6,7 +6,6 @@
 <!--      <FeedBack/>-->
     <VLost/>
     <VRankOverlay/>
-
   </NuxtLayout>
 </template>
 
