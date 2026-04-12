@@ -91,78 +91,78 @@ export const regions = {
 			}
 		],
 		elementary: [
-			{
-				id: "future-land",
-				pathTo: "future-land",
-				theme: "future",
-				name: "locationNames.plural-land",
-				level: 0,
-				desc: "regions.descriptionPluralLands",
-				icon: Future
-			},
-			{
-				id: "past-land",
-				pathTo: "past-land",
-				theme: "past",
-				name: "locationNames.past-land",
-				level: 0,
-				desc: "regions.descriptionPastLands",
-				icon: Past
-			},
-			{
-				id: "action-valley",
-				pathTo: "action-valley",
-				theme: "action",
-				name: "locationNames.action-valley",
-				level: 0,
-				desc: "regions.descriptionActionLands",
-				icon: Action
-			},
-			{
-				id: "order-valley",
-				pathTo: "order-valley",
-				theme: "order",
-				name: "locationNames.order-valley",
-				level: 0,
-				desc: "regions.descriptionOrderValley",
-				icon: OrderValley
-			},
-			{
-				id: "time-gate",
-				pathTo: "time-gate",
-				theme: "time",
-				name: "locationNames.time-gate",
-				level: 0,
-				desc: "regions.descriptionTimeGate",
-				icon: TimeGate
-			},
-			{
-				id: "edge-images",
-				pathTo: "edge-images",
-				theme: "edge",
-				name: "locationNames.edge-images",
-				level: 0,
-				desc: "regions.descriptionEdgeImages",
-				icon: EdgeImages
-			},
-			{
-				id: "secret-lands",
-				pathTo: "secret-lands",
-				theme: "secret",
-				name: "locationNames.secret-lands",
-				level: 0,
-				desc: "regions.descriptionSecretLands",
-				icon: SecretLands
-			},
-			{
-				id: "definite-indefinite",
-				pathTo: "definite-indefinite",
-				theme: "def-indef",
-				name: "locationNames.definite-indefinite",
-				level: 0,
-				desc: "regions.descriptionDefinite",
-				icon: MixedLands
-			},
+			// {
+			// 	id: "future-land",
+			// 	pathTo: "future-land",
+			// 	theme: "future",
+			// 	name: "locationNames.plural-land",
+			// 	level: 0,
+			// 	desc: "regions.descriptionPluralLands",
+			// 	icon: Future
+			// },
+			// {
+			// 	id: "past-land",
+			// 	pathTo: "past-land",
+			// 	theme: "past",
+			// 	name: "locationNames.past-land",
+			// 	level: 0,
+			// 	desc: "regions.descriptionPastLands",
+			// 	icon: Past
+			// },
+			// {
+			// 	id: "action-valley",
+			// 	pathTo: "action-valley",
+			// 	theme: "action",
+			// 	name: "locationNames.action-valley",
+			// 	level: 0,
+			// 	desc: "regions.descriptionActionLands",
+			// 	icon: Action
+			// },
+			// {
+			// 	id: "order-valley",
+			// 	pathTo: "order-valley",
+			// 	theme: "order",
+			// 	name: "locationNames.order-valley",
+			// 	level: 0,
+			// 	desc: "regions.descriptionOrderValley",
+			// 	icon: OrderValley
+			// },
+			// {
+			// 	id: "time-gate",
+			// 	pathTo: "time-gate",
+			// 	theme: "time",
+			// 	name: "locationNames.time-gate",
+			// 	level: 0,
+			// 	desc: "regions.descriptionTimeGate",
+			// 	icon: TimeGate
+			// },
+			// {
+			// 	id: "edge-images",
+			// 	pathTo: "edge-images",
+			// 	theme: "edge",
+			// 	name: "locationNames.edge-images",
+			// 	level: 0,
+			// 	desc: "regions.descriptionEdgeImages",
+			// 	icon: EdgeImages
+			// },
+			// {
+			// 	id: "secret-lands",
+			// 	pathTo: "secret-lands",
+			// 	theme: "secret",
+			// 	name: "locationNames.secret-lands",
+			// 	level: 0,
+			// 	desc: "regions.descriptionSecretLands",
+			// 	icon: SecretLands
+			// },
+			// {
+			// 	id: "definite-indefinite",
+			// 	pathTo: "definite-indefinite",
+			// 	theme: "def-indef",
+			// 	name: "locationNames.definite-indefinite",
+			// 	level: 0,
+			// 	desc: "regions.descriptionDefinite",
+			// 	icon: MixedLands
+			// },
 		],
 	    intermediate: [
 

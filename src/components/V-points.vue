@@ -116,14 +116,14 @@ const itemLabels = computed(() => ({
 }))
 
 const infoData = ref([
-  {id: "rank",
-    title: t('pavelOverlay.rankTitle'),
-    tips:[
-      {label: t('pavelOverlay.rankLabelOne')},
-      {label: t('pavelOverlay.rankLabelTwo')},
-      {label: t('pavelOverlay.rankLabelThree')}
-    ]
-  },
+  // {id: "rank",
+  //   title: t('pavelOverlay.rankTitle'),
+  //   tips:[
+  //     {label: t('pavelOverlay.rankLabelOne')},
+  //     {label: t('pavelOverlay.rankLabelTwo')},
+  //     {label: t('pavelOverlay.rankLabelThree')}
+  //   ]
+  // },
   {id: "article",
     title: t('pavelOverlay.articleTitle'),
     tips:[

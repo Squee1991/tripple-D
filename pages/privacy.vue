@@ -34,7 +34,9 @@ const sections = ref([
   {
     heading: "1. Introduction",
     paragraphs: [
-      `This Privacy Policy describes how skillupgerman ("we", "Service") collects, uses, and protects users' personal data. The data controller is the administrator of skillupgerman, located in ${COUNTRY}.`,
+      `This Privacy Policy describes how SkillUpGerman ("we", "Service") collects, uses, and protects users' personal data.`,
+      `This Policy applies to the SkillUpGerman website and mobile applications (Android and future iOS versions).`,
+      `The data controller is the administrator of SkillUpGerman, located in ${COUNTRY}.`,
       `By using the Service, you agree to the terms of this Policy.`
     ]
   },
@@ -43,8 +45,11 @@ const sections = ref([
     paragraphs: [
       "— Account data: name (nickname), email address, encrypted password (stored in Firebase). The name may be a pseudonym.",
       "— Usage data: learning progress (learned words, completed tasks), test results, in-game activity.",
-      "— Technical data: certain information (e.g., IP address or device identifiers) is automatically processed by our providers (Firebase) for security and service operation. We do not use this information to identify you personally.",
-      "— Payment data: transaction information when subscribing (processed by payment systems such as Stripe; we do not store credit card details)."
+      "— Technical data: certain information (e.g., IP address or device identifiers) is automatically processed by our providers (Firebase) for security and service operation.",
+      "— Payment data: transaction information is processed by third-party payment providers depending on the platform used.",
+      "For mobile applications (Android), payments are processed by Google Play (Google LLC) and managed via services such as RevenueCat.",
+      "For web payments, transactions are processed by providers such as Stripe.",
+      "We do not store credit card or payment details."
     ]
   },
   {
@@ -61,7 +66,7 @@ const sections = ref([
     heading: "4. Data sharing with third parties",
     paragraphs: [
       "We do not sell your personal data. Data sharing is only possible in the following cases:",
-      "— When necessary for the operation of the Service (e.g., to data processing providers such as Firebase/Google).",
+      "— When necessary for the operation of the Service (e.g., Firebase, Google Play services, RevenueCat, Stripe).",
       "— When required by law (e.g., by court order or governmental request)."
     ]
   },
@@ -78,8 +83,8 @@ const sections = ref([
     heading: "6. Cookies and analytics",
     paragraphs: [
       "We use cookies only for authentication and the correct operation of the Service.",
-      "To improve the Service, we collect anonymized usage statistics (e.g., number of section visits, button clicks, time spent on pages). This data does not allow identification of a specific user and is not used for advertising.",
-      "If we connect third-party analytics services in the future (e.g., Google Analytics or Firebase Analytics), this Policy will be updated, and users will be notified."
+      "We may use analytics tools such as Firebase Analytics or similar services to understand user behavior and improve the Service.",
+      "Collected analytics data is anonymized and does not allow identification of a specific user."
     ]
   },
   {
@@ -96,7 +101,7 @@ const sections = ref([
   {
     heading: "8. International data transfer",
     paragraphs: [
-      "Since we use international services (e.g., Firebase, Stripe), your data may be transferred outside your country of residence.",
+      "Since we use international services (e.g., Firebase, Google Play, RevenueCat, Stripe), your data may be transferred outside your country of residence.",
       "We take measures to protect your data in accordance with applicable laws, including GDPR/RODO within the EU."
     ]
   },
@@ -104,14 +109,14 @@ const sections = ref([
     heading: "9. Data retention period",
     paragraphs: [
       "We retain data for as long as necessary to achieve the purposes described in this Policy.",
-      "When an account is deleted, all associated data is removed immediately and not stored on our servers."
+      "When an account is deleted, all associated data is removed from our systems."
     ]
   },
   {
     heading: "10. Changes to the Policy",
     paragraphs: [
       "We may periodically update this Privacy Policy.",
-      "The current version is always available on the website; the date of the last update is shown at the bottom of the document.",
+      "The current version is always available on the website.",
       "By continuing to use the Service after updates, you agree to the revised Policy."
     ]
   },
