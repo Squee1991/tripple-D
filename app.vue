@@ -5,7 +5,7 @@
 <!--    <VStepHint v-if="showStepHint" @close="showStepHint = false"/>-->
 <!--      <FeedBack/>-->
     <VLost/>
-    <VRankOverlay/>
+<!--    <VRankOverlay/>-->
     <VInstallPwa/>
   </NuxtLayout>
 </template>
@@ -60,6 +60,7 @@ const user = useCurrentUser()
 const sentencesStore = useSentencesStore();
 const langStore = userlangStore()
 const daily = dailyStore()
+
 
 const onToastFinished = () => {
   if (authStore.uid) {

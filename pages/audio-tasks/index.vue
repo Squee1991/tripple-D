@@ -59,7 +59,7 @@
               >
                 <div class="card__icon">{{ topic.icon }}</div>
                 <div class="card__info">
-                  <h3 class="card__title">{{ topic.title }}</h3>
+                  <h3 class="card__title">{{ t(topic.title) }}</h3>
                 </div>
                 <div v-if="topic.tasks?.length" class="card__progress">
                   <div class="circular-progress" :style="getCircularProgressStyle(topic)">
@@ -256,7 +256,7 @@ onMounted(async () => {
 }
 
 .quiz__grid--topics {
-  grid-template-columns: repeat(auto-fit, minmax(320px, 450px));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 345px));
 }
 
 .card {
@@ -270,7 +270,7 @@ onMounted(async () => {
   display: flex;
   align-items: center;
   padding: 8px;
-  gap: 10px;
+  gap: 8px;
   color: #2f3542;
 }
 
@@ -328,15 +328,10 @@ onMounted(async () => {
 }
 
 .card__title {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 900;
   text-transform: uppercase;
   margin: 0;
-}
-
-.card__progress {
-  margin-right: 10px;
-  flex-shrink: 0;
 }
 
 .circular-progress {
@@ -361,7 +356,7 @@ onMounted(async () => {
 }
 
 .circular-progress__text {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 900;
 }
 
@@ -377,6 +372,15 @@ onMounted(async () => {
   100% {
     opacity: 1;
     transform: scale(1) translateY(0);
+  }
+}
+
+@media (max-width: 767px) {
+  .card__title {
+    font-size: 1.1rem;
+  }
+  .card__icon {
+    font-size: 2.6rem;
   }
 }
 </style>

@@ -212,6 +212,7 @@ const menuItems = computed(() => {
                 valueKey: 'sub.verbs',
                 subChildren: [
                   {id: 'verb-theory', url: '/verbs-theory', valueKey: 'underSub.verbsTheory'},
+                  {id: 'verb-form', url: '/verb-forms', valueKey: 'underSub.forms'},
                   {id: 'tenses', url: '/tenses', valueKey: 'underSub.verbFirst'},
                   {id: 'modalVerbs', url: '/modal-verbs', valueKey: 'underSub.verbSecond'},
                   {id: 'verb-types', url: '/verb-types', valueKey: 'underSub.verbTypes'}
@@ -244,7 +245,7 @@ const menuItems = computed(() => {
                 ],
               },
               // {id: 'audio', url: '/audio-tasks' , valueKey: 'sub.audio'},
-              // {id: 'description', url: '/description-images' , valueKey: 'sub.describePicture'},
+              // {id: 'description', url: '/image-description' , valueKey: 'sub.describePicture'},
               {id: 'themen', url: '/thematic-learning', valueKey: 'sub.themen'},
               {id: 'cards', url: '/create-cards', valueKey: 'sub.card'},
               {id: 'idioms', url: '/idioms', valueKey: 'sub.idioms'}
@@ -254,7 +255,7 @@ const menuItems = computed(() => {
             id: 'duel',
             valueKey: 'nav.gameMode',
             children: [
-              // {id: 'fight', url: '/games', valueKey: 'sub.fight'},
+              // {id: 'fight', url: '/german-universe', valueKey: 'sub.fight'},
               {id: 'duel-pvp', valueKey: 'sub.pvp', action: openDevModal},
               {id: 'wordDuel', url: '/sentence-duel', valueKey: 'sub.wordDuel'},
               {id: 'quests', url: '/recipes', valueKey: 'sub.quests'},
@@ -290,15 +291,15 @@ const menuItems = computed(() => {
         startDate: '12.02 00:00',
         endDate: '16.02 23:59'
       },
-      // {
-      //   id: 'april',
-      //   valueKey: 'eventsNavNames.firstApril',
-      //   url: '/event-joke',
-      //   isEvent: true,
-      //   eventKey: 'fools',
-      //   startDate: '01.04 00:00',
-      //   endDate: '01.04 23:59'
-      // },
+      {
+        id: 'april',
+        valueKey: 'eventsNavNames.firstApril',
+        url: '/event-joke',
+        isEvent: true,
+        eventKey: 'fools',
+        startDate: '01.04 00:00',
+        endDate: '01.04 23:59'
+      },
       {
         id: 'halloween',
         valueKey: 'eventsNavNames.halloween',
@@ -632,7 +633,7 @@ onBeforeUnmount(() => {
   border-radius: 16px;
   box-shadow: 2px 2px 0px var(--border);
   padding: 0.5rem;
-  min-width: 240px;
+  min-width: 245px;
 }
 
 .header-nav__submenu-item {
@@ -654,7 +655,7 @@ onBeforeUnmount(() => {
   width: 100%;
   border: none;
   background: none;
-  font-size: 16px;
+  font-size: 15.5px;
   font-family: "Nunito", sans-serif;
 }
 

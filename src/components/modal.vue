@@ -13,7 +13,6 @@
               {{ button.label }}
             </button>
           </div>
-
         </div>
       </transition>
     </div>
@@ -36,7 +35,9 @@ const props = defineProps({
   },
   img: {
     type: String,
-    alt: ''
+  },
+  alt: {
+    type: String,
   },
   title: {
     type: String,

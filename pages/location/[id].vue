@@ -5,6 +5,15 @@
         <button class="close-btn" @click="goToHomePage" aria-label="to main">×</button>
         <h1 class="region__title-name">{{ t(currentRegion?.name) }}</h1>
       </header>
+      <div class="lives-bar__content">
+        <VHearts
+            :lives="chainStore.lives"
+            :max-lives="chainStore.maxLives"
+            :last-life-at-ms="chainStore.lastLifeAtMs"
+            :regen-interval-ms="chainStore.REGEN_INTERVAL_MS"
+            show-timer
+        />
+      </div>
       <div v-if="isLoading" class="loading">{{ t('locationQuests.loading') }}</div>
       <div v-else class="quests">
         <div v-if="errorMessage" class="error">{{ t('locationQuests.error') }}</div>
@@ -17,7 +26,9 @@
           >
             <div v-if="quest.isPerfect" class="stamp">{{ t('locationQuests.done') }}</div>
             <div v-else-if="quest.hasMistakes" class="stamp stamp--mistakes">{{ t('locationQuests.mistakes') }}</div>
-            <h3 class="quest__title">{{ t(quest.title) }}</h3>
+            <div class="stamp__icon-wrapper">
+              <img class="stamp__icon" src="../../assets/images/questList.svg" alt="questList">
+            </div>
             <p class="quest__description">{{ t(quest.description) }}</p>
             <div class="quest-meta">
               <span v-if="!quest.isSuccess" class="rewards-container">
@@ -28,7 +39,7 @@
                 </span>
                 <span class="reward-item">{{ quest.rewards.xp }} XP</span>
               </span>
-              <span v-else>{{ t('locationQuests.gotAward') }}</span>
+              <span  class="rewards-container" v-else>{{ t('locationQuests.gotAward') }}</span>
             </div>
             <button
                 class="btn"
@@ -38,7 +49,6 @@
               <template v-if="quest.hasMistakes">
                 {{ t('locationQuests.repeatMistakes') }}
               </template>
-
               <template v-else-if="quest.isPerfect">
                 {{ t('locationQuests.repeat') }}
               </template>
@@ -60,11 +70,10 @@ import { useRoute, useRouter } from "vue-router";
 import { regions } from "~/utils/regions.js";
 import { userChainStore } from "~/store/chainStore.js";
 import { useSeoMeta } from '#imports';
-import { useCanonical } from "../../composables/useCanonical.js";
+import VHearts from '../../src/components/V-hearts.vue';
 
 const route = useRoute();
 const router = useRouter();
-const canonical = useCanonical();
 const { t, locale } = useI18n();
 const chainStore = userChainStore();
 const questList = ref([]);
@@ -75,10 +84,7 @@ useSeoMeta({
   robots: 'noindex, nofollow'
 });
 
-const currentRegionKey = computed(() => {
-  return String(route.query.region || route.params.id || "");
-});
-
+const currentRegionKey = computed(() => String(route.query.region || route.params.id || ""));
 const currentRegion = computed(() => {
   const allRegionsList = Object.values(regions).flat();
   return allRegionsList.find((r) => r.pathTo === currentRegionKey.value);
@@ -158,6 +164,7 @@ watch(currentRegionKey, fetchQuests, { immediate: true });
 onMounted(async () => {
   await chainStore.loadProgressFromFirebase();
 });
+
 </script>
 
 <style scoped>
@@ -168,6 +175,26 @@ onMounted(async () => {
   font-family: "Nunito", sans-serif;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.timer{
+  width: 32px;
+}
+
+.stamp__icon{
+  width: 60px;
+}
+
+.stamp__icon-wrapper {
+  border: 2px solid #747aff;
+  border-radius: 50%;
+  margin: 0 auto;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #00c2ff;
 }
 
 .close-btn {
@@ -204,7 +231,7 @@ onMounted(async () => {
   align-items: center;
   gap: 30px;
   position: relative;
-  padding: 22px 24px 20px;
+  padding: 15px 20px;
   background: linear-gradient(180deg, #FFF4C8 0%, #FFEBA4 100%);
   border: 3px solid #111;
   border-radius: 22px;
@@ -245,7 +272,7 @@ onMounted(async () => {
 .quest-list {
   display: grid;
   grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));
-  gap: 30px;
+  gap: 22px;
   align-items: stretch;
   margin-top: 12px;
 }
@@ -336,8 +363,8 @@ onMounted(async () => {
 .stamp {
   position: absolute;
   top: -6px;
-  right: -20px;
-  transform: rotate(9deg);
+  right: -10px;
+  transform: rotate(6deg);
   font-size: 14px;
   background: linear-gradient(180deg, #6a74a5 0%, #5d7fc1 100%);
   color: white;
@@ -400,11 +427,13 @@ onMounted(async () => {
   align-items: center;
   flex-wrap: wrap;
   gap: 12px;
+  height: 44px;
+  font-weight: 600;
   padding: 6px 12px;
   font-size: 14px;
   background: #FFF3D7;
   border: 3px solid #111;
-  border-radius: 999px;
+  border-radius: 15px;
   box-shadow: 4px 4px 0 #2b2b2b;
 }
 
@@ -587,7 +616,7 @@ onMounted(async () => {
     box-shadow: 3px 3px 0 #2b2b2b;
   }
   .stamp {
-    top: -4px;
+    top: -8px;
     right: -10px;
     transform: rotate(5deg);
     font-size: 12px;
@@ -618,10 +647,24 @@ onMounted(async () => {
     animation: bob 2.2s ease-in-out infinite;
     z-index: 2;
   }
+
   .location-header.rtl-locale::after {
     right: auto;
     left: 0;
     transform: rotate(-8deg);
   }
 }
+
+.lives-bar__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 4px 4px 0 #2b2b2b;
+  background: white;
+  margin-bottom: 17px;
+}
+
 </style>

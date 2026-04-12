@@ -1,43 +1,46 @@
 <template>
   <div class="points">
-    <VTips
-        :tips="flattenedTips"
-        v-model="isArticleOpen"
-    />
     <section id="points" class="points-card" aria-label="Поинты и уровень">
       <header class="points-card__header">
         <h2 class="points__title">{{ t('accountPanel.title') }}</h2>
-        <button class="points__info" @click="isArticleOpen = true">
-          <img class="points__info-icon" src="../../assets/images/question.svg" alt="">
-        </button>
       </header>
       <ul v-if="langStore" class="points-card__list">
-<!--        <li id="conferats" class="points-card__item">-->
-<!--          <div class="points-card__label">{{ t('accountPanel.rank') }}</div>-->
-<!--          <div class="points__hats-wrapper">-->
-<!--            <button-->
-<!--                v-if="userAuth.isFreezeActive"-->
-<!--                class="hats__shield-btn"-->
-<!--                @click="showFreezeModal = true"-->
-<!--            >-->
-<!--              <img class="hats__icon" src="../../assets/images/FreezeShield.svg" alt="Articlus_icon">-->
-<!--            </button>-->
-<!--            <div :title="hoverTitle.title" v-if="userAuth.uid" class="articlus__wrapper">-->
-<!--              <img class="articlus__icon" src="../../assets/images/graduate-hat.svg" alt="Articlus_icon">-->
-<!--              <span class="points-card__value"> {{ userAuth.totalHats}}</span>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </li>-->
-        <li id="articlus" class="points-card__item">
-          <div class="points-card__label">{{ t('accountPanel.articles') }}</div>
-          <div id="articlus" :title="hoverTitle.title" v-if="userAuth.uid" class="articlus__wrapper">
-            <img class="articlus__icon" src="../../assets/images/articlus.png" alt="Articlus_icon">
-            <span class="points-card__value">{{ langStore.points }}</span>
+        <li v-for="item in infoData" :key="item.id" :id="item.id === 'rank' ? 'conferats' : item.id === 'article' ? 'articlus' : 'level'" class="points-card__item">
+          <div class="points-card__label">
+            {{ itemLabels[item.id] }}
           </div>
-        </li>
-        <li class="points-card__item">
-          <span class="points-card__label">{{ t('accountPanel.level') }}</span>
-          <span id="level" :title="hoverTitle.level" class="points-card__badge">{{ langStore.isLeveling }}</span>
+          <div class="tooltip-container">
+            <div class="tooltip-box">
+              <div class="tooltip-title">{{ item.title }}</div>
+              <ul class="tooltip-list">
+                <li v-for="tip in item.tips" :key="tip.label">{{ tip.label }}</li>
+              </ul>
+            </div>
+            <template v-if="item.id === 'rank'">
+              <div class="points__hats-wrapper">
+                <button
+                    v-if="userAuth.isFreezeActive"
+                    class="hats__shield-btn"
+                    @click="showFreezeModal = true"
+                >
+                  <img class="hats__icon" src="../../assets/images/FreezeShield.svg" alt="Freeze Shield Icon">
+                </button>
+                <div v-if="userAuth.uid" class="articlus__wrapper">
+                  <img class="articlus__icon" src="../../assets/images/graduate-hat.svg" alt="Rank Hat Icon">
+                  <span class="points-card__value"> {{ userAuth.totalHats}}</span>
+                </div>
+              </div>
+            </template>
+            <template v-else-if="item.id === 'article'">
+              <div v-if="userAuth.uid" class="articlus__wrapper">
+                <img class="articlus__icon" src="../../assets/images/articlus.png" alt="Articles Icon">
+                <span class="points-card__value">{{ langStore.points }}</span>
+              </div>
+            </template>
+            <template v-else-if="item.id === 'level'">
+              <span class="points-card__badge">{{ langStore.isLeveling }}</span>
+            </template>
+          </div>
         </li>
         <li class="points-card__item points-card__progress">
           <div class="progress_exp-bar">
@@ -50,10 +53,10 @@
         <li v-for="section in sections" :key="section.id" :id="section.id" class="ranked__wrapper">
           <NuxtLink :to="section.route" class="ranked__inner">
             <div class="ranked__title-icon">
-              <img class="points-card__title-icon" :src="section.icon" :alt="`${section.key}_icon`"/>
+              <img class="points-card__title-icon" :src="section.icon" :alt="`${section.title} Icon`"/>
               <div class="ranked__title">{{ section.title }}</div>
             </div>
-            <img class="stat__icon" src="../../assets/images/dailyIcons/arrow-to.svg" alt="Arrow_icon"/>
+            <img class="stat__icon" src="../../assets/images/dailyIcons/arrow-to.svg" alt="Arrow Icon"/>
           </NuxtLink>
         </li>
       </ul>
@@ -81,7 +84,6 @@
 </template>
 
 <script setup>
-import VTips from "~/src/components/V-tips.vue";
 import {userlangStore} from "~/store/learningStore.js";
 import {userAuthStore} from '../../store/authStore.js'
 import {useRouter} from "vue-router";
@@ -99,7 +101,6 @@ const langStore = userlangStore()
 const userAuth = userAuthStore()
 const router = useRouter()
 const friendsStore = useFriendsStore()
-const isArticleOpen = ref(false)
 const showFreezeModal = ref(false)
 
 const formattedFreezeDate = computed(() => {
@@ -108,21 +109,12 @@ const formattedFreezeDate = computed(() => {
   return date.toLocaleDateString() + ' ' + date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})
 })
 
-const flattenedTips = computed(() => {
-  const result = [];
-  infoData.value.forEach(section => {
-    result.push({ label: section.title, isTitle: true });
-    section.tips.forEach(tip => {
-      result.push({ label: tip.label, isTitle: false });
-    });
-  });
-  return result;
-});
+const itemLabels = computed(() => ({
+  rank: t('accountPanel.rank'),
+  article: t('accountPanel.articles'),
+  level: t('accountPanel.level')
+}))
 
-const hoverTitle = {
-  title: t('hoverTitle.articles'),
-  level: t('hoverTitle.level')
-}
 const infoData = ref([
   // {id: "rank",
   //   title: t('pavelOverlay.rankTitle'),
@@ -162,10 +154,80 @@ const toPayment = () => {
 onMounted(() => {
   friendsStore.loadFriends()
 })
-
 </script>
 
 <style scoped>
+.tooltip-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.tooltip-container:hover {
+  z-index: 100;
+}
+
+.tooltip-box {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: calc(100% + 5px);
+  right: 0;
+  left: auto;
+  transform: translateY(-10px);
+  background-color: white;
+  color: #a0a6b1;
+  border: 3px solid #363d4a;
+  border-radius: 12px;
+  padding: 12px 16px;
+  width: max-content;
+  max-width: 260px;
+  z-index: 9999;
+  transition: all 0.2s ease;
+  box-shadow: 3px 3px 0 black;
+  pointer-events: none;
+}
+
+.tooltip-container:hover .tooltip-box {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tooltip-title {
+  color: #5482d9;
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.tooltip-list {
+  color: black;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.tooltip-list li {
+  font-size: 13px;
+  margin-bottom: 6px;
+  position: relative;
+  padding-left: 14px;
+  line-height: 1.3;
+}
+
+.tooltip-list li:last-child {
+  margin-bottom: 0;
+}
+
+.tooltip-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #6589e0;
+  font-size: 16px;
+  line-height: 1;
+}
 
 .warning__text {
   color: #e53737;
@@ -174,7 +236,7 @@ onMounted(() => {
 }
 
 .warning__message {
-  color: #a0a6b1;;
+  color: #a0a6b1;
   font-size: 13px;
 }
 
@@ -194,15 +256,6 @@ onMounted(() => {
 .points__hats-wrapper {
   display: flex;
   align-items: center;
-}
-
-.points__info {
-  border: none;
-  background: none;
-}
-
-.points__info-icon {
-  width: 50px;
 }
 
 .ranked__title-icon {
@@ -230,7 +283,6 @@ onMounted(() => {
 .ranked__wrapper:last-child .ranked__inner {
   margin-bottom: 0;
 }
-
 
 @media (min-width: 1024px) {
   .ranked__inner:hover {
@@ -415,13 +467,16 @@ onMounted(() => {
   z-index: 1;
 }
 
+.points-card__list:hover {
+  z-index: 10;
+}
+
 .points-card__item {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 4px;
   margin-top: 8px;
-
 }
 
 .points-card__item + .points-card__item {

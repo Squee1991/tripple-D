@@ -17,8 +17,7 @@
             </div>
             <div class="quest__progress-line">
               <template v-for="(step, i) in progressSteps" :key="i">
-                <div class="quest__dot"
-                     :class="{
+                <div class="quest__dot" :class="{
             'quest__dot--done': step === 'done',
             'quest__dot--wrong': step === 'wrong',
             'quest__dot--current': step === 'current',
@@ -28,28 +27,16 @@
             </div>
           </div>
           <div class="quest__lives" v-if="!previouslyCleared">
-            <div class="quest__hearts">
-              <div
-                  v-for="(n, i) in questStore.maxLives"
-                  :key="i"
-                  class="quest__heart-wrapper"
-              >
-                <svg class="quest__heart-svg" viewBox="0 0 32 29.6">
-                  <path class="heart-bg" d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
-                    c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
-                  <path
-                      class="heart-fill"
-                      :style="getHeartFillStyle(i)"
-                      d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
-                    c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"
-                  />
-                </svg>
-              </div>
-            </div>
+            <VHearts
+                :lives="questStore.lives"
+                :max-lives="questStore.maxLives"
+                :last-life-at-ms="questStore.lastLifeAtMs"
+                :regen-interval-ms="questStore.REGEN_INTERVAL_MS"
+            />
           </div>
         </div>
         <div class="quest__section">
-          <div v-if="hasTip && questStore.showResult" class="quest__tip-container">
+          <div v-if="hasTip" class="quest__tip-container">
             <button class="quest__tip-btn" @click="showTipModal = true">💡</button>
           </div>
           <div class="quest__question">
@@ -247,18 +234,25 @@
         </div>
       </div>
     </div>
-    <div v-if="showTipModal" class="modal">
-      <div class="modal__overlay" @click="showTipModal = false"></div>
-      <div class="modal__window">
-        <div class="modal__title">💡</div>
-        <div class="modal__text quest__tip-text">
-          {{ t(currentTip) }}
-        </div>
-        <div class="modal__actions">
-          <button class="btn btn--primary" @click="showTipModal = false">Понятно</button>
+    <transition name="modal-slide">
+      <div v-if="showTipModal" class="modal modal--tip">
+        <div class="modal__overlay" @click="showTipModal = false"></div>
+        <div class="modal__window modal__window--bottom">
+          <div class="modal__title">💡</div>
+          <div class="modal__text quest__tip-text">
+            <template v-if="questStore.showResult">
+              {{ t(currentTip) }}
+            </template>
+            <template v-else>
+              Подсказка по грамматика доступна после ответа.
+            </template>
+          </div>
+          <div class="modal__actions">
+            <button class="btn btn--primary" @click="showTipModal = false">{{ t('modalLocations.btnAccept') }}</button>
+          </div>
         </div>
       </div>
-    </div>
+    </transition>
   </div>
 </template>
 
@@ -273,7 +267,7 @@ import RightIcon from '~/assets/images/location-icons/accept.svg'
 import WrongIcon from '~/assets/images/location-icons/cancel.svg'
 import {useSeoMeta} from '#imports'
 import VHelpModal from "~/src/components/V-help-modal.vue";
-
+import VHearts from '../../src/components/V-hearts.vue'
 useSeoMeta({robots: 'noindex, nofollow'})
 
 const PRICE = 10
@@ -331,21 +325,21 @@ onBeforeUnmount(() => {
   if (rafId) cancelAnimationFrame(rafId)
 })
 
-function getHeartFillStyle(i) {
+function getWaterGroupStyle(i) {
   if (i < questStore.lives) {
-    return { clipPath: 'inset(0% 0 0 0)', transition: 'clip-path 0.3s ease-in-out' }
+    return { transform: 'translateY(-6px)', transition: 'transform 0.3s ease-in-out' }
   }
   if (i === questStore.lives && questStore.lives < questStore.maxLives && questStore.lastLifeAtMs > 0) {
     const regenMs = questStore.REGEN_INTERVAL_MS
     const elapsed = Math.max(0, now.value - questStore.lastLifeAtMs)
     const progress = Math.min(100, (elapsed / regenMs) * 100)
-    const insetVal = 100 - progress
+    const yPos = 30 - (progress / 100) * 36;
     return {
-      clipPath: `inset(${insetVal}% 0 0 0)`,
+      transform: `translateY(${yPos}px)`,
       transition: 'none'
     }
   }
-  return { clipPath: 'inset(100% 0 0 0)', transition: 'clip-path 0.3s ease-in-out' }
+  return { transform: 'translateY(30px)', transition: 'transform 0.3s ease-in-out' }
 }
 
 const inputPlaceholders = {
@@ -730,9 +724,22 @@ watchEffect(() => {
   stroke: #ccc;
   stroke-width: 1px;
 }
+.water-group {
+  will-change: transform;
+}
 
-.heart-fill {
+.water-wave {
   fill: #ff4d4d;
+  animation: wave-action 1.5s linear infinite;
+}
+
+@keyframes wave-action {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-32px);
+  }
 }
 
 .quest__section {
@@ -1255,4 +1262,98 @@ watchEffect(() => {
   padding: 15px 5px;
   color: #333;
 }
+
+/* Анимации для плавного появления */
+.modal-slide-enter-active,
+.modal-slide-leave-active {
+  transition: opacity 0.3s ease;
+}
+.modal-slide-enter-from,
+.modal-slide-leave-to {
+  opacity: 0;
+}
+
+.modal-slide-enter-active .modal__window--bottom {
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.modal-slide-leave-active .modal__window--bottom {
+  animation: slideDown 0.3s ease-in forwards;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(0); }
+  to { transform: translateY(100%); }
+}
+
+/* Мобильная адаптация: всегда внизу на 767px и меньше */
+@media (max-width: 767px) {
+  .modal--tip {
+    /* Прижимаем все к самому низу без отступов */
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .modal__window--bottom {
+    width: 100%;
+    /* Скругляем только верхние углы, низ прямой */
+    border-radius: 30px 30px 0 0;
+    /* Тонкая, аккуратная обводка */
+    border: 1px solid #e0e0e0;
+    /* Мягкая, современная тень для объема, а не грубая черная */
+    box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.05);
+    /* Учитываем системную полоску на iOS/Android, добавляя padding снизу */
+    margin: 0;
+    padding: 30px 24px calc(20px + env(safe-area-inset-bottom, 0px));
+    background: #ffffff; /* Чистый белый фон для свежести */
+  }
+
+  /* --- Стилизация контента внутри --- */
+
+  .modal--tip .modal__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 22px;
+    font-weight: 800;
+    color: #1e1e1e;
+    margin-bottom: 20px;
+  }
+
+  /* Можно добавить иконку 💡 прямо перед текстом заголовка, если хочешь */
+  /* .modal--tip .modal__title::before { content: '💡'; font-size: 26px; } */
+
+  .modal--tip .quest__tip-text {
+    font-size: 17px;
+    line-height: 1.6; /* Увеличенное межстрочное расстояние для легкого чтения */
+    padding: 0 0 30px;
+    color: #4f4f4f; /* Чуть мягче, чем чистый черный */
+    text-align: center;
+  }
+
+  /* Кнопка "Понятно" тоже должна быть современной */
+  .modal--tip .modal__actions .btn--primary {
+    width: 100%; /* Растягиваем кнопку на всю ширину */
+    height: 54px;
+    border-radius: 16px;
+    background: #a7ecb8; /* Твой базовый зеленый */
+    border: none; /* Убираем обводку для modern look */
+    box-shadow: 0 4px 15px rgba(167, 236, 184, 0.3); /* Мягкая цветная тень */
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a532a; /* Темно-зеленый текст для контраста */
+    transition: transform 0.1s ease, box-shadow 0.2s ease;
+  }
+
+  .modal--tip .modal__actions .btn--primary:active {
+    transform: scale(0.98); /* Эффект нажатия */
+    box-shadow: 0 2px 8px rgba(167, 236, 184, 0.2);
+  }
+}
+
 </style>

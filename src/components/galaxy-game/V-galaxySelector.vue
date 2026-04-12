@@ -57,7 +57,7 @@ import ConstellationSix from 'assets/images/constellation/constellation-6.svg'
 import ConstellationSeven from 'assets/images/constellation/constellation-7.svg'
 import ConstellationEight from 'assets/images/constellation/constellation-8.svg'
 
-const emit = defineEmits(['back', 'select'])
+const emit = defineEmits(['back', 'select-galaxy'])
 const store = useGalaxyStore()
 const activeGalaxy = ref(null)
 const { t } = useI18n()
@@ -88,8 +88,9 @@ const openGalaxy = (galaxy) => {
 
 const startLevel = () => {
   store.setMission(activeGalaxy.value.id)
-  emit('select', activeGalaxy.value.id)
+  emit('select-galaxy', activeGalaxy.value.id)
 }
+
 </script>
 
 <style scoped>

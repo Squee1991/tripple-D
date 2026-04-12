@@ -118,7 +118,7 @@ const openDeleteModal = () => {
   line-height: 1;
   border: 1px solid rgba(255, 255, 255, 0.16);
   background: rgba(255, 255, 255, 0.06);
-  color: rgba(42, 41, 41, 0.92);
+  color: rgba(231, 223, 223, 0.92);
   backdrop-filter: blur(6px);
 }
 
@@ -158,7 +158,6 @@ const openDeleteModal = () => {
   }
 }
 
-/* блок управления premium */
 .premium__status-wrapper {
   display: flex;
   justify-content: space-between;
