@@ -7,12 +7,12 @@
     "description": "actionValleyQuestOne.description",
     "conditions": {
       "goal": "actionValleyQuestOne.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -158,12 +158,12 @@
     "description": "actionValleyQuestTwo.description",
     "conditions": {
       "goal": "actionValleyQuestTwo.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -310,7 +310,7 @@
     "description": "actionValleyQuestThree.description",
     "conditions": {
       "goal": "actionValleyQuestThree.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
@@ -470,8 +470,8 @@
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -632,12 +632,12 @@
     "description": "actionValleyQuestFive.description",
     "conditions": {
       "goal": "actionValleyQuestFive.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -794,12 +794,12 @@
     "description": "actionValleyQuestSix.description",
     "conditions": {
       "goal": "actionValleyQuestSix.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
     "rewards": {
-      "points": 20,
-      "xp": 20
+      "points": 10,
+      "xp": 10
     },
     "tasks": [
       {
@@ -931,10 +931,14 @@
     "description": "actionValleyQuestSeven.description",
     "conditions": {
       "goal": "actionValleyQuestSeven.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards":
+    {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
@@ -1065,10 +1069,13 @@
     "description": "actionValleyQuestEight.description",
     "conditions": {
       "goal": "actionValleyQuestEight.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": {
+      "points": 10,
+      "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
@@ -1200,10 +1207,12 @@
     "description": "actionValleyQuestNine.description",
     "conditions": {
       "goal": "actionValleyQuestNine.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": {
+      "points": 10, "xp": 10
+    },
     "tasks": [
       {
         "id": 1,
@@ -1345,10 +1354,10 @@
     "description": "actionValleyQuestTen.description",
     "conditions": {
       "goal": "actionValleyQuestTen.goal",
-      "minCorrect": 13,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -1480,10 +1489,10 @@
     "description": "actionValleyQuestEleven.description",
     "conditions": {
       "goal": "actionValleyQuestEleven.goal",
-      "minCorrect": 13,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
