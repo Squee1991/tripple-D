@@ -80,8 +80,9 @@ import Exams from '../assets/images/pay-images/test.svg'
 import Competitions from '../assets/images/pay-images/competition.svg'
 import Future from '../assets/images/pay-images/future.svg'
 import {useSeoMeta} from "#imports";
-
+import { useBillingStore } from '../store/billingStore'
 const authStore = userAuthStore()
+const billingStore = useBillingStore()
 const payButton = ref(null)
 const showStickyFooter = ref(false)
 const router = useRouter()
@@ -92,12 +93,17 @@ const backToMain = () => {
 const BASE_PRICE = 1
 
 const finalPrice = computed(() => {
+  if (billingStore.isMobile && billingStore.offerings.length > 0) {
+    return billingStore.offerings[0].product.priceString
+  }
   if (!selectedDiscountId.value) return BASE_PRICE.toFixed(2)
   const activeCoupon = myAvailableCoupons.value.find(c => c.id === selectedDiscountId.value)
   const percent = activeCoupon ? activeCoupon.percent : 0
   const discounted = BASE_PRICE - (BASE_PRICE * (percent / 100))
   return discounted.toFixed(2)
 })
+
+
 
 const selectedDiscountId = ref(null)
 
@@ -137,7 +143,10 @@ const features = [
   {title: t('payPage.featureNine'), free: false, premium: true, icon: Competitions},
   {title: t('payPage.featureTen'), free: false, premium: true, icon: Future},
 ]
-onMounted(() => {
+onMounted(async() => {
+  if (billingStore.isMobile) {
+    await billingStore.loadOfferings()
+  }
   observer = new IntersectionObserver(
       ([entry]) => {
         showStickyFooter.value = !entry.isIntersecting
@@ -160,6 +169,15 @@ async function pay() {
     alert('Пожалуйста, войдите в аккаунт')
     return
   }
+  if (billingStore.isMobile) {
+    if (billingStore.offerings.length > 0) {
+      const pkg = billingStore.offerings[0]
+      await billingStore.buy(pkg)
+    } else {
+      alert('Ошибка: Товары для приложения не загружены')
+    }
+    return
+  }
   const priceId = 'price_1SvdnE24sKuPwF6cZoD2ZJn3'
   try {
     const response = await $fetch('/api/stripe/checkout', {
@@ -174,12 +192,10 @@ async function pay() {
     if (response.url) {
       window.location.href = response.url
     } else if (response.error) {
-      console.error('Ошибка сервера:', response.error)
       alert('Ошибка: ' + response.error)
     }
   } catch (err) {
-    console.error('Ошибка сети:', err)
-    alert('Произошла ошибка соединения. Проверьте логи сервера.')
+    alert('Произошла ошибка соединения.')
   }
 }
 </script>

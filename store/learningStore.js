@@ -53,12 +53,17 @@ export const userlangStore = defineStore('learning', () => {
         }
 
         if (value === true) {
-            points.value++
-            totalEarnedPoints.value++
-            exp.value++
-            handleLeveling()
+            if (modeKey !== 'wordTranslate') {
+                points.value++
+                totalEarnedPoints.value++
+                exp.value++
+                handleLeveling()
+                try {
+                    daily.addPoints(1)
+                    daily.addExp(1)
+                } catch {}
+            }
             try {
-                daily.addPoints(1); daily.addExp(1)
                 if (modeKey === 'wordArticle') daily.addWordArticle(1)
                 if (modeKey === 'plural')      daily.addPlural(1)
                 if (modeKey === 'audio')       daily.addAudioArticle(1)

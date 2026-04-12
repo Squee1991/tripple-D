@@ -38,7 +38,7 @@ const emit = defineEmits(['openLogin'])
 </script>
 
 <style scoped>
-/* НИКАКИХ БЭКГРАУНДОВ И АНИМАЦИЙ ПОЯВЛЕНИЯ */
+
 .welcome-container {
   min-height: 100vh;
   display: flex;
@@ -54,7 +54,6 @@ const emit = defineEmits(['openLogin'])
   text-align: center;
 }
 
-/* ГЕРОЙ (ЛОГО) */
 .hero-wrap {
   margin-bottom: 3rem;
   position: relative;
@@ -70,9 +69,8 @@ const emit = defineEmits(['openLogin'])
   align-items: center;
   justify-content: center;
   /* Мягкий объем пластика */
-  box-shadow:
-      0 20px 40px rgba(0, 0, 0, 0.05),
-      inset 0 -8px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05),
+  inset 0 -8px 0 rgba(0, 0, 0, 0.05);
   position: relative;
 }
 
@@ -82,7 +80,6 @@ const emit = defineEmits(['openLogin'])
   object-fit: contain;
 }
 
-/* ТЭГИ (Баблы навыков) */
 .skill-tag {
   position: absolute;
   padding: 6px 14px;
@@ -91,18 +88,34 @@ const emit = defineEmits(['openLogin'])
   font-weight: 900;
   color: white;
   text-transform: uppercase;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.tag-purple { background: #8B5CF6; top: -10px; left: -40px; transform: rotate(-10deg); }
-.tag-cyan { background: #06B6D4; top: 10px; right: -50px; transform: rotate(10deg); }
-.tag-pink { background: #EC4899; bottom: -5px; right: -30px; transform: rotate(-5deg); }
+.tag-purple {
+  background: #8B5CF6;
+  top: -10px;
+  left: -40px;
+  transform: rotate(-10deg);
+}
 
-/* ЗАГОЛОВОК */
+.tag-cyan {
+  background: #06B6D4;
+  top: 10px;
+  right: -50px;
+  transform: rotate(10deg);
+}
+
+.tag-pink {
+  background: #EC4899;
+  bottom: -5px;
+  right: -30px;
+  transform: rotate(-5deg);
+}
+
 .game-title {
   font-size: 2.6rem;
   font-weight: 900;
-  color: #1F2937;
+  color: var(--titleColor);
   line-height: 1.1;
   margin-bottom: 1.5rem;
 }
@@ -114,7 +127,6 @@ const emit = defineEmits(['openLogin'])
   filter: drop-shadow(0 4px 6px rgba(139, 92, 246, 0.2));
 }
 
-/* ТЕКСТ */
 .game-info {
   font-size: 1.2rem;
   color: #4B5563;
@@ -123,12 +135,11 @@ const emit = defineEmits(['openLogin'])
   margin-bottom: 3.5rem;
 }
 
-/* КНОПКА (Emerald 3D) */
 .btn-emerald-3d {
   width: 100%;
   max-width: 320px;
   padding: 1.3rem;
-  background: #10B981; /* Изумрудный */
+  background: #10B981;
   color: white;
   font-size: 1.4rem;
   font-weight: 900;
@@ -136,9 +147,8 @@ const emit = defineEmits(['openLogin'])
   border-radius: 24px;
   text-transform: uppercase;
   cursor: pointer;
-  box-shadow:
-      0 10px 0 #059669,
-      0 20px 30px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 10px 0 #059669,
+  0 20px 30px rgba(16, 185, 129, 0.3);
   transition: all 0.1s ease;
   outline: none;
 }
@@ -146,22 +156,31 @@ const emit = defineEmits(['openLogin'])
 .btn-emerald-3d:hover {
   background: #34D399;
   transform: translateY(-2px);
-  box-shadow:
-      0 12px 0 #059669,
-      0 25px 35px rgba(16, 185, 129, 0.4);
+  box-shadow: 0 12px 0 #059669,
+  0 25px 35px rgba(16, 185, 129, 0.4);
 }
 
 .btn-emerald-3d:active {
   transform: translateY(8px);
-  box-shadow:
-      0 2px 0 #059669,
-      0 10px 15px rgba(16, 185, 129, 0.2);
+  box-shadow: 0 2px 0 #059669,
+  0 10px 15px rgba(16, 185, 129, 0.2);
 }
 
 @media (max-width: 480px) {
-  .game-title { font-size: 2rem; }
-  .brand-neon { font-size: 2.3rem; }
-  .game-info { font-size: 1rem; }
-  .btn-emerald-3d { font-size: 1.2rem; }
+  .game-title {
+    font-size: 2rem;
+  }
+
+  .brand-neon {
+    font-size: 2.3rem;
+  }
+
+  .game-info {
+    font-size: 1rem;
+  }
+
+  .btn-emerald-3d {
+    font-size: 1.2rem;
+  }
 }
 </style>

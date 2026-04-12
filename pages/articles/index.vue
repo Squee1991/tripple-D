@@ -5,12 +5,10 @@
     </Transition>
     <div class="theme-page-container">
       <div class="theme__title-wrapper">
-        <button class="back-btn" @click="goBack">
-          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-            <path fill="currentColor" d="M20 11H7.83l5.59-5.59L12 4l-8 8l8 8l1.41-1.41L7.83 13H20z"></path>
-          </svg>
-          {{ t('selectedpage.backBtn') }}
-        </button>
+        <div class="theme__header">
+          <VBackBtn/>
+          <div class="theme__title">Арткли</div>
+        </div>
         <h1 class="theme-title">{{ t('selectedpage.title') }}</h1>
         <div class="title-spacer"></div>
       </div>
@@ -19,7 +17,7 @@
           <div class="theme__grid-container">
             <div class="theme-grid">
               <div
-                  v-for="key in paginatedTopics"
+                  v-for="key in topicKeys"
                   :key="key"
                   class="theme-card"
                   :class="{ active: selectedTopic === key }"
@@ -30,10 +28,6 @@
                 </div>
                 <div class="theme-card-title">{{ t(nameMap[key]) }}</div>
               </div>
-            </div>
-            <div class="theme-pagination">
-              <button @click="prevPage" :disabled="page === 0">←</button>
-              <button @click="nextPage" :disabled="page === maxPage">→</button>
             </div>
           </div>
         </div>
@@ -103,6 +97,7 @@ import { nameMap } from '../../utils/nameMap.js'
 import { useHead, useSeoMeta } from '#imports'
 import NotFound from '../../assets/animation/notFound.json'
 import { useCanonical } from '../../composables/useCanonical.js'
+import VBackBtn from "~/src/components/V-back-btn.vue";
 
 const { t } = useI18n()
 const showModesBlock = ref(false)
@@ -116,8 +111,6 @@ const animationContainer = ref(null)
 const localePath = useLocalePath()
 const canonical = useCanonical()
 const isLoading = ref(false)
-const page = ref(0)
-const itemsPerPage = 9
 
 useSeoMeta({
   robots: 'noindex, nofollow'
@@ -132,27 +125,7 @@ const clearSelectedTopic = () => {
   }, 450)
 }
 
-const goBack = () => {
-  router.push('/')
-}
-
 const topicKeys = computed(() => Object.keys(nameMap))
-
-const maxPage = computed(() =>
-    Math.ceil(topicKeys.value.length / itemsPerPage) - 1
-)
-
-const paginatedTopics = computed(() => {
-  const start = page.value * itemsPerPage
-  return topicKeys.value.slice(start, start + itemsPerPage)
-})
-
-const nextPage = () => {
-  if (page.value < maxPage.value) page.value++
-}
-const prevPage = () => {
-  if (page.value > 0) page.value--
-}
 
 const baseModes = [
   { key: 'wordTranslate',     label: 'modes.wordTranslate' },
@@ -175,7 +148,6 @@ function hasAnyPlural(wordsArray) {
 }
 
 const hasPluralForCurrentTopic = computed(() => hasAnyPlural(topicWords.value))
-
 
 const availableModes = computed(() => {
   return hasPluralForCurrentTopic.value
@@ -248,30 +220,48 @@ onMounted(() => {
 </script>
 
 <style scoped>
-
 .theme-page {
   font-family: "Nunito", sans-serif;
-  min-height: 100vh;
-  padding: 2rem;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .theme-page-container {
   width: 100%;
   max-width: 1200px;
-  height: calc(100vh - 4rem);
   display: flex;
+  height: 100vh;
   flex-direction: column;
+}
+
+.theme__header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 15px;
+  background: #6358ac;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.theme__title {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  font-family: "Nunito", sans-serif;
 }
 
 .theme__title-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1rem 1rem 1rem;
-  border-bottom: 4px solid #1e1e1e;
   flex-shrink: 0;
 }
 
@@ -286,34 +276,6 @@ onMounted(() => {
   text-align: center;
 }
 
-.back-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  font-family: "Nunito", sans-serif;
-  font-weight: 600;
-  font-size: 1.2rem;
-  background: #4ade80;
-  border: 3px solid #1e1e1e;
-  color: #1e1e1e;
-  padding: 0.6rem 1rem;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.1s ease-in-out;
-  box-shadow: 4px 4px 0px #1e1e1e;
-  width: 150px;
-}
-
-.back-btn:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0px #1e1e1e;
-}
-
-.back-btn svg {
-  font-size: 1.5em;
-}
-
 .theme-content-area {
   display: flex;
   flex-grow: 1;
@@ -325,26 +287,20 @@ onMounted(() => {
 
 .grid-area-wrapper {
   flex-grow: 1;
-  background: #60a5fa;
-  border: 3px solid #1e1e1e;
-  border-radius: 24px;
-  box-shadow: 8px 8px 0px #1e1e1e;
-  padding: 1rem;
   display: flex;
   overflow: hidden;
 }
 
 .theme__grid-container {
   flex-grow: 1;
-  padding: 20px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   overflow-y: auto;
 }
 
 .theme__grid-container::-webkit-scrollbar {
-  width: 12px;
+  width: 6px;
 }
 
 .theme__grid-container::-webkit-scrollbar-track {
@@ -352,9 +308,8 @@ onMounted(() => {
 }
 
 .theme__grid-container::-webkit-scrollbar-thumb {
-  background: #1e1e1e;
+  background: #f1c40f;
   border-radius: 6px;
-  border: 3px solid #60a5fa;
 }
 
 .theme-grid {
@@ -363,6 +318,7 @@ onMounted(() => {
   gap: 1.5rem;
   justify-content: start;
   align-content: start;
+  padding-bottom: 2rem;
 }
 
 .theme-card {
@@ -411,42 +367,6 @@ onMounted(() => {
   color: #1e1e1e;
 }
 
-.theme-pagination {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1.5rem;
-  flex-shrink: 0;
-  padding-bottom: 0.5rem;
-}
-
-.theme-pagination button {
-  font-family: "Nunito", sans-serif;
-  background: #fff;
-  color: #1e1e1e;
-  border: 3px solid #1e1e1e;
-  border-radius: 12px;
-  width: 45px;
-  height: 45px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  transition: all 0.2s;
-  box-shadow: 4px 4px 0px #1e1e1e;
-}
-
-.theme-pagination button:hover:not(:disabled) {
-  background: #f1c40f;
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0px #1e1e1e;
-}
-
-.theme-pagination button:disabled {
-  background: #d1d1d1;
-  color: #888;
-  box-shadow: 2px 2px 0px #888;
-  cursor: not-allowed;
-}
-
 .learning-modes-container {
   position: relative;
   width: 350px;
@@ -462,7 +382,6 @@ onMounted(() => {
   background: #fff;
   border: 3px solid #1e1e1e;
   border-radius: 24px;
-  /*box-shadow: 8px 8px 0px #1e1e1e;*/
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -612,7 +531,7 @@ onMounted(() => {
 }
 
 .slide-right-enter-active, .slide-right-leave-active {
-  transition: transform 0.45s ease;
+  transition: transform 0.25s ease;
 }
 
 .slide-right-enter-from, .slide-right-leave-to {
@@ -624,13 +543,8 @@ onMounted(() => {
     gap: 0;
   }
 
-  .theme-page {
-    padding: 10px;
-  }
-
   .grid-area-wrapper {
     width: 100%;
-    box-shadow: none;
   }
 
   .learning-modes-block {
@@ -656,16 +570,6 @@ onMounted(() => {
     font-size: 1.1rem;
     margin: 0 0.5rem;
     line-height: 1.2;
-  }
-
-  .theme__title-wrapper {
-    padding: 0 0.5rem 1rem 0.5rem;
-  }
-
-  .back-btn {
-    padding: 0.5rem 0.8rem;
-    width: auto;
-    flex-shrink: 0;
   }
 
   .title-spacer {
@@ -694,12 +598,6 @@ onMounted(() => {
     flex-direction: column;
   }
 
-  .back-btn {
-    box-shadow: 2px 2px 0 black;
-    width: 100%;
-    margin-bottom: 15px;
-  }
-
   .theme-title {
     font-size: 1.2rem;
   }
@@ -710,17 +608,6 @@ onMounted(() => {
   border-radius: 12px;
 }
 
-.preloader-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(2px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 3000;
-}
-
 .fade-enter-active, .fade-leave-active {
   transition: opacity .2s ease;
 }
@@ -728,5 +615,4 @@ onMounted(() => {
 .fade-enter-from, .fade-leave-to {
   opacity: 0;
 }
-
 </style>
