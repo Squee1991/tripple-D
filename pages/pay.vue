@@ -44,20 +44,28 @@
         >
           <span class="btn-title">{{ t('payPage.getPremiumBtn') }}</span>
           <span class="btn-price-wrapper">
-             <span v-if="selectedDiscountId" class="old-price-inline">{{ BASE_PRICE }} €</span>
-             <span class="new-price">{{ finalPrice }} € {{ t('payPage.month') }}</span>
-           </span>
+   <span v-if="selectedDiscountId" class="old-price-inline">
+     {{ BASE_PRICE }}<span v-if="!billingStore.isMobile"> €</span>
+   </span>
+   <span class="new-price">
+     {{ finalPrice }}<span v-if="!billingStore.isMobile"> €</span> {{ t('payPage.month') }}
+   </span>
+</span>
         </button>
       </div>
     </div>
     <transition name="slide-up">
       <div v-if="showStickyFooter && !authStore.isPremium" class="sticky-footer">
-        <button class="footer-btn" @click="pay">
+        <button v-if="billingStore.offerings.length > 0" class="footer-btn" @click="pay">
           <span class="btn-title">{{ t('payPage.getPremiumBtn') }}</span>
           <span class="btn-price-wrapper">
-             <span v-if="selectedDiscountId" class="old-price-inline">{{ BASE_PRICE }} €</span>
-             <span class="new-price">{{ finalPrice }} € {{ t('payPage.month') }}</span>
-           </span>
+   <span v-if="selectedDiscountId" class="old-price-inline">
+     {{ BASE_PRICE }}<span v-if="!billingStore.isMobile"> €</span>
+   </span>
+   <span class="new-price">
+     {{ finalPrice }}<span v-if="!billingStore.isMobile"> €</span> {{ t('payPage.month') }}
+   </span>
+</span>
         </button>
       </div>
     </transition>
@@ -122,8 +130,11 @@ const myAvailableCoupons = computed(() => {
   return list
 })
 
-const selectDiscount = (id) => {
+const selectDiscount = async (id) => {
   selectedDiscountId.value = (selectedDiscountId.value === id) ? null : id
+  if (billingStore.isMobile) {
+    await billingStore.loadOfferings(selectedDiscountId.value)
+  }
 }
 
 useSeoMeta({
@@ -145,7 +156,7 @@ const features = [
 ]
 onMounted(async() => {
   if (billingStore.isMobile) {
-    await billingStore.loadOfferings()
+    await billingStore.initialize()
   }
   observer = new IntersectionObserver(
       ([entry]) => {

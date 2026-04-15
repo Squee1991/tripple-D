@@ -6,10 +6,10 @@
     "description": "edgeImagesQuestOne.description",
     "conditions": {
       "goal": "edgeImagesQuestOne.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -137,10 +137,10 @@
     "description": "edgeImagesQuestTwo.description",
     "conditions": {
       "goal": "edgeImagesQuestTwo.goal",
-      "minCorrect": 12,
+      "minCorrect": 15,
       "requiredTasks": 15
     },
-    "rewards": { "points": 20, "xp": 20 },
+    "rewards": { "points": 10, "xp": 10 },
     "tasks": [
       {
         "id": 1,
@@ -1516,7 +1516,7 @@
     ]
   },
   {
-    "questId": "adj_decl_mixed_13",
+    "questId": "adjective-thirteen",
     "title": "edgeImagesQuestThirteen.title",
     "progress": "0/15",
     "description": "edgeImagesQuestThirteen.description",
@@ -1642,7 +1642,7 @@
     ]
   },
   {
-    "questId": "adj_decl_mixed_14",
+    "questId": "adjective-fourteen",
     "title": "edgeImagesQuestFourteen.title",
     "progress": "0/15",
     "description": "edgeImagesQuestFourteen.description",
@@ -1768,7 +1768,7 @@
     ]
   },
   {
-    "questId": "adj_decl_mixed_15",
+    "questId": "adjective-fifteen",
     "title": "edgeImagesQuestFifteen.title",
     "progress": "0/15",
     "description": "edgeImagesQuestFifteen.description",

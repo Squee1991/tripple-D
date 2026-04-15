@@ -301,7 +301,6 @@ function endOfDay(dateObj) {
   min-height: 100dvh;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 15px;
 }
 
 .topbar {
@@ -342,7 +341,7 @@ function endOfDay(dateObj) {
 
 .page-title {
   text-align: center;
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 1000;
   color: var(--ink);
 }
@@ -424,6 +423,7 @@ function endOfDay(dateObj) {
 
 .calendar-card {
   border-radius: 22px;
+  margin-bottom: 15px;
   flex: 1;
 }
 
@@ -599,9 +599,6 @@ function endOfDay(dateObj) {
     display: flex;
     flex-wrap: wrap;
   }
-  .calendar-card {
-    margin-bottom: 15px;
-  }
 
   .legend__item {
     width: 50%;
@@ -611,7 +608,6 @@ function endOfDay(dateObj) {
     padding: 10px;
   }
 
-
   .legend__icon-wrap {
     width: 48px;
     height: 48px;
@@ -619,9 +615,6 @@ function endOfDay(dateObj) {
   }
   .legend__name {
     font-size: 15px;
-  }
-  .page {
-    padding: 5px;
   }
   .calendar__cell {
     padding: 4px;
@@ -636,19 +629,11 @@ function endOfDay(dateObj) {
   .calendar__icon-wrap {
     padding-top: 15px;
   }
-  .page-title {
-    font-size: 25px;
-  }
 }
 
 @media (max-width: 520px) {
   .topbar {
     grid-template-columns: 48px 1fr 48px;
-  }
-
-  .back-btn {
-    width: 40px;
-    height: 40px;
   }
 
   .calendar__header {

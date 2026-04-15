@@ -111,10 +111,7 @@
               </div>
             </div>
             <div v-else>
-              <component
-                  :is="components"
-                  @open="handleSettingsAction"
-              />
+              <component :is="components" @open="handleSettingsAction"/>
             </div>
           </div>
         </ClientOnly>
@@ -185,29 +182,6 @@
         </template>
       </div>
     </div>
-    <div v-if="isDeleteModalOpen" class="modal-overlay" @click.self="isDeleteModalOpen = false">
-      <div class="modal-card">
-        <div class="modal-title">{{ t('cabinet.deleteAccTitle') }}</div>
-        <p v-if="authStore.isPremium" class="modal-text">
-          <span class="warn">{{ t('cabinet.important') }}</span>
-          <span> {{ t('cabinet.importantText') }}</span>
-        </p>
-        <p v-if="!isGoogleUser" class="modal-text">{{ t('cabinet.checkPassword') }}</p>
-        <div v-if="!isGoogleUser" class="label">
-          <input class="input" v-model="deletePasswordField.value" type="password"/>
-          <p v-if="deletePasswordField.error" class="delete-error">{{ t(deletePasswordField.error) }}</p>
-        </div>
-        <p v-else class="modal-text">{{ t('cabinet.checkGoogle') }}</p>
-        <div class="modal-actions">
-          <button class="btn btn-danger" @click="confirmDeleteAccount" type="button">
-            {{ t('cabinet.deleteAccBtnAccept') }}
-          </button>
-          <button class="btn" @click="isDeleteModalOpen = false" type="button">
-            {{ t('cabinet.deleteAccBtnReject') }}
-          </button>
-        </div>
-      </div>
-    </div>
     <!-- Snow warning modal -->
     <div v-if="isSnowWarningModalOpen" class="modal-overlay" @click.self="isSnowWarningModalOpen = false">
       <div class="modal-card">
@@ -275,19 +249,13 @@ definePageMeta({
 
 const {t} = useI18n()
 const router = useRouter()
-
 const authStore = userAuthStore()
 const learningStore = userlangStore()
 const achievementStore = useAchievementStore()
-const gameStore = useGameStore()
 const friendsStore = useFriendsStore()
 const eventStore = useEventSessionStore()
-const unlockedAwardList = computed(() => awardList.value.filter(a => !a.locked))
-
 const activeTabKey = ref('info')
 const isSettingsOpen = ref(false)
-
-
 const accountTab = ref('common')
 const ACCOUNT_TABS = computed(() => [
   {key: 'common', label: t('cabinetNav.common'), icon: IdCard, alt: 'IdCard'},
@@ -298,21 +266,13 @@ const ACCOUNT_TABS = computed(() => [
 
 const isSnowWarningModalOpen = ref(false)
 const isCancelModalOpen = ref(false)
-
 const purchaseState = ref('default')
 const isAvatarModalOpen = ref(false)
 const selectedAvatarName = ref(null)
 const isPurchaseModalOpen = ref(false)
 const purchaseAvatarName = ref(null)
 const iconDisplay = ref(true)
-
-const isDeleteModalOpen = ref(false)
-const deletePasswordField = ref({value: '', error: ''})
-
-const userNameSafe = computed(() =>
-    authStore.initialized && authStore.name ? authStore.name : '—'
-)
-
+const userNameSafe = computed(() => authStore.initialized && authStore.name ? authStore.name : '—' )
 const expFillWidth = computed(() => {
   const v = Number(learningStore.exp || 0)
   if (!Number.isFinite(v)) return 0
@@ -342,10 +302,6 @@ const components = computed(() => {
   return tabs[activeTabKey.value] || null
 })
 
-function toggleSettings() {
-  isSettingsOpen.value = !isSettingsOpen.value
-}
-
 function setActiveTab(key) {
   activeTabKey.value = key
 }
@@ -360,7 +316,7 @@ function handleSettingsAction(action) {
     return
   }
   if (action === 'deleteAccount') {
-    openDeleteModal()
+    router.push('/delete')
     return
   }
   if (action === 'snowWarning') {
@@ -381,8 +337,7 @@ const shownAwardsSet = ref(loadShownAwards())
 const awardsStorageKey = computed(() => `awards_shown_v1_${authStore.uid || 'anon'}`)
 
 const awardList = ref(
-    AWARDS.map(a => ({
-      ...a,
+    AWARDS.map(a => ({...a,
       locked: a.key === 'registerAchievement' ? false : !shownAwardsSet.value.has(a.key)
     }))
 )
@@ -390,10 +345,6 @@ const awardList = ref(
 watch(() => authStore.uid, () => {
   shownAwardsSet.value = loadShownAwards()
   awardList.value = AWARDS.map(a => ({...a, locked: !shownAwardsSet.value.has(a.key)}))
-})
-
-const arrowIcon = computed(() => {
-  return isSettingsOpen.value ? ArrowBackIcon : SettingsIcon
 })
 
 function loadShownAwards() {
@@ -411,7 +362,6 @@ function saveShownAwards(set) {
     if (typeof window === 'undefined') return
     localStorage.setItem(awardsStorageKey.value, JSON.stringify([...set]))
   } catch {
-    // ignore
   }
 }
 
@@ -468,12 +418,10 @@ async function cancelSubscription() {
   }
 }
 
-/** ===== FAQ ===== */
 function goToFaq() {
   router.push('/faq')
 }
 
-/** ===== Avatars ===== */
 function openPurchaseModal(name) {
   purchaseAvatarName.value = name
   purchaseState.value = 'default'
@@ -501,7 +449,6 @@ async function confirmAvatarChange() {
     await authStore.updateUserAvatar(selectedAvatarName.value)
     isAvatarModalOpen.value = false
   } catch {
-    // ignore
   }
 }
 
@@ -516,30 +463,12 @@ watch(isAvatarModalOpen, opened => {
   if (opened) selectedAvatarName.value = authStore.avatar
 })
 
-/** ===== Delete account ===== */
-const isGoogleUser = computed(() => authStore.isGoogleUser)
-
-function openDeleteModal() {
-  isDeleteModalOpen.value = true
-  deletePasswordField.value = {name: 'deletePassword', value: '', error: ''}
-}
-
-async function confirmDeleteAccount() {
-  deletePasswordField.value.error = ''
-  try {
-    await authStore.deleteAccount(deletePasswordField.value.value)
-    router.push('/')
-  } catch (err) {
-    if (!deletePasswordField.value.name) deletePasswordField.value.name = 'deletePassword'
-    mapErrors([deletePasswordField.value], err?.code || 'auth/unknown')
-  }
-}
-
 onMounted(async () => {
   await learningStore.loadFromFirebase()
   await eventStore.loadGlobalWinterSettings()
   friendsStore.loadFriends()
 })
+
 </script>
 
 <style scoped>
@@ -549,7 +478,6 @@ onMounted(async () => {
   padding: 20px;
   overflow: hidden;
 }
-
 
 .layout {
   display: flex;
@@ -1114,22 +1042,18 @@ onMounted(async () => {
     flex: 0 0 auto;
     background: #ffd54f;
   }
-
   .back-label {
     display: none;
   }
-
   .content-panel {
     padding: 10px 5px 95px 5px;
     border: none;
     box-shadow: none;
     border-radius: 0;
   }
-
   .exp-bar {
     width: 190px;
   }
-
 }
 
 @media ( max-width: 767px) {
@@ -1137,7 +1061,6 @@ onMounted(async () => {
     display: none;
   }
 }
-
 
 @media (max-width: 420px) {
   .tab-icon {

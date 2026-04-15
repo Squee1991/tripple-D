@@ -24,7 +24,7 @@
         <p class="subtext">
           📅 {{ t('cabinet.nextPayment') }} {{ formattedSubscriptionEndDate }}
         </p>
-        <button class="btn btn-outline-danger" @click.stop="openCancelModal">
+        <button v-if="authStore.paymentSource === 'stripe'" class="btn btn-outline-danger" @click.stop="openCancelModal">
           {{ t('cabinet.cancelBtn') }}
         </button>
       </div>
