@@ -1,6 +1,5 @@
 <template>
 	<div class="layout">
-		<Header></Header>
 		<slot></slot>
 		<Footer/>
 		<vScroll/>

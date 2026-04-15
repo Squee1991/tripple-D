@@ -7,10 +7,9 @@
       <div class="theme__title-wrapper">
         <div class="theme__header">
           <VBackBtn/>
-          <div class="theme__title">Арткли</div>
+          <div class="theme__title">Артикли</div>
         </div>
         <h1 class="theme-title">{{ t('selectedpage.title') }}</h1>
-        <div class="title-spacer"></div>
       </div>
       <div class="theme-content-area">
         <div class="grid-area-wrapper">
@@ -26,62 +25,64 @@
                 <div class="card-counter">
                   {{ themeProgress[key]?.total || 0 }}
                 </div>
+
+                <div class="theme-card-icon">
+                  <img class="theme__cards-icon-item" :src="`/images/article-themes-images/${iconMap[key] || 'default.svg'}`" :alt="key" />
+                </div>
                 <div class="theme-card-title">{{ t(nameMap[key]) }}</div>
               </div>
             </div>
           </div>
         </div>
-        <div class="learning-modes-container">
-          <Transition name="slide-right" appear>
-            <div v-if="showModesBlock" class="learning-modes-block">
-              <button @click="clearSelectedTopic" class="close-modes-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                  <path
-                      fill="currentColor"
-                      d="m12 13.4l-4.9 4.9q-.275.275-.7.275t-.7-.275q-.275-.275-.275-.7t.275-.7l4.9-4.9l-4.9-4.9q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275L12 10.6l4.9-4.9q.275-.275.7-.275t.7.275q.275.275.275-.7t-.275.7L13.4 12l4.9 4.9q.275.275.275.7t-.275.7q-.275.275-.7.275t-.7-.275z"
-                  ></path>
-                </svg>
-              </button>
-              <div class="learning__modes-wrapper">
-                <div>
-                  <div class="modes-title">
-                    {{ t('selectedpage.choiceTitle') }}
-                  </div>
-                  <div class="topic-hint">
-                    {{ t('selectedpage.topic') }}: {{ t(nameMap[selectedTopic]) }}
-                  </div>
+        <Transition name="slide-right" appear>
+          <div v-if="showModesBlock" class="learning-modes-block">
+            <button @click="clearSelectedTopic" class="close-modes-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                <path
+                    fill="currentColor"
+                    d="m12 13.4l-4.9 4.9q-.275.275-.7.275t-.7-.275q-.275-.275-.275-.7t.275-.7l4.9-4.9l-4.9-4.9q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275L12 10.6l4.9-4.9q.275-.275.7-.275t.7.275q.275.275.275-.7t-.275.7L13.4 12l4.9 4.9q.275.275.275.7t-.275.7q-.275.275-.7.275t-.7-.275z"
+                ></path>
+              </svg>
+            </button>
+            <div class="learning__modes-wrapper">
+              <div>
+                <div class="modes-title">
+                  {{ t('selectedpage.choiceTitle') }}
                 </div>
-                <div class="modes-list">
-                  <label
-                      v-for="mode in availableModes"
-                      :key="mode.key"
-                      class="checkbox-container"
-                      :class="{ 'active-mode': selectedModes.includes(mode.key) }"
-                  >
-                    <input
-                        type="checkbox"
-                        v-model="selectedModes"
-                        :value="mode.key"
-                    />
-                    <span class="checkmark">
-                      <svg viewBox="0 0 24 24">
-                        <polyline points="3 12 10 20 21 4"/>
-                      </svg>
-                    </span>
-                    <span class="label-text">{{ t(mode.label) }}</span>
-                  </label>
+                <div class="topic-hint">
+                  {{ t('selectedpage.topic') }}: {{ t(nameMap[selectedTopic]) }}
                 </div>
-                <button
-                    class="start-btn"
-                    :disabled="!selectedModes.length || isLoading"
-                    @click="startLearning"
-                >
-                  {{ t('selectedpage.startBtn') }}
-                </button>
               </div>
+              <div class="modes-list">
+                <label
+                    v-for="mode in availableModes"
+                    :key="mode.key"
+                    class="checkbox-container"
+                    :class="{ 'active-mode': selectedModes.includes(mode.key) }"
+                >
+                  <input
+                      type="checkbox"
+                      v-model="selectedModes"
+                      :value="mode.key"
+                  />
+                  <span class="checkmark">
+                    <svg viewBox="0 0 24 24">
+                      <polyline points="3 12 10 20 21 4"/>
+                    </svg>
+                  </span>
+                  <span class="label-text">{{ t(mode.label) }}</span>
+                </label>
+              </div>
+              <button
+                  class="start-btn"
+                  :disabled="!selectedModes.length || isLoading"
+                  @click="startLearning"
+              >
+                {{ t('selectedpage.startBtn') }}
+              </button>
             </div>
-          </Transition>
-        </div>
+          </div>
+        </Transition>
       </div>
     </div>
   </div>
@@ -99,6 +100,38 @@ import NotFound from '../../assets/animation/notFound.json'
 import { useCanonical } from '../../composables/useCanonical.js'
 import VBackBtn from "~/src/components/V-back-btn.vue";
 
+const iconMap = {
+  Furniture: 'chair.svg',
+  Animals: 'animals.svg',
+  Clothes: 'hemd.svg',
+  Food: 'meal.svg',
+  Body: 'body.svg',
+  Professions: 'profession.svg',
+  Transport: 'transport.svg',
+  Colors: 'colors.svg',
+  Nature: 'nature.svg',
+  Home: 'home.svg',
+  Zeit: 'time.svg',
+  City: 'city.svg',
+  School: 'school.svg',
+  DaysAndMonths: 'calendar.svg',
+  Toys: 'toys.svg',
+  CommonItems: 'Informatik.svg',
+  BathroomItems: 'bath-room.svg',
+  Kosmetik: 'makeup.svg',
+  Familie: 'family.svg',
+  Emotions: 'emotions.svg',
+  Werkzeuge: 'instruments.svg',
+  Kitchen: 'kitchen.svg',
+  Health: 'health.svg',
+  Sport: 'sport.svg',
+  SportEquipment: 'fitness.svg',
+  Travel: 'travel.svg',
+  Musik: 'Music.svg',
+  Amount: 'Amount.svg',
+  Informatik: 'Informatik.svg'
+}
+
 const { t } = useI18n()
 const showModesBlock = ref(false)
 const showNoTopicMessage = ref(true)
@@ -109,7 +142,6 @@ const selectedTopic = ref(null)
 const selectedModes = ref([])
 const animationContainer = ref(null)
 const localePath = useLocalePath()
-const canonical = useCanonical()
 const isLoading = ref(false)
 
 useSeoMeta({
@@ -122,7 +154,7 @@ const clearSelectedTopic = () => {
     selectedTopic.value = null
     selectedModes.value = []
     showNoTopicMessage.value = false
-  }, 450)
+  }, 250)
 }
 
 const topicKeys = computed(() => Object.keys(nameMap))
@@ -223,6 +255,7 @@ onMounted(() => {
 .theme-page {
   font-family: "Nunito", sans-serif;
   height: 100vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -231,9 +264,8 @@ onMounted(() => {
 
 .theme-page-container {
   width: 100%;
-  max-width: 1200px;
-  display: flex;
   height: 100vh;
+  display: flex;
   flex-direction: column;
 }
 
@@ -260,20 +292,17 @@ onMounted(() => {
 
 .theme__title-wrapper {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   flex-shrink: 0;
 }
 
-.title-spacer {
-  width: 120px;
-}
-
 .theme-title {
   font-family: "Nunito", sans-serif;
-  font-size: 2.5rem;
-  color: var(--titleColor);
+  font-size: 15px;
+  color: var(--titleColor, #1e1e1e);
   text-align: center;
+  padding: 10px;
 }
 
 .theme-content-area {
@@ -281,41 +310,33 @@ onMounted(() => {
   flex-grow: 1;
   overflow: hidden;
   position: relative;
-  gap: 1.5rem;
-  margin-top: 1rem;
+  gap: 0;
 }
 
 .grid-area-wrapper {
   flex-grow: 1;
   display: flex;
   overflow: hidden;
+  width: 100%;
 }
 
 .theme__grid-container {
   flex-grow: 1;
-  padding: 10px;
+  padding: 10px 5px;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
 }
 
 .theme__grid-container::-webkit-scrollbar {
-  width: 6px;
-}
-
-.theme__grid-container::-webkit-scrollbar-track {
+  width: 0px;
   background: transparent;
-}
-
-.theme__grid-container::-webkit-scrollbar-thumb {
-  background: #f1c40f;
-  border-radius: 6px;
 }
 
 .theme-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px 10px;
   justify-content: start;
   align-content: start;
   padding-bottom: 2rem;
@@ -326,95 +347,108 @@ onMounted(() => {
   border-radius: 16px;
   border: 3px solid #1e1e1e;
   box-shadow: 4px 4px 0px #1e1e1e;
-  padding: 25px 10px;
   text-align: center;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
   position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
-.theme-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 6px 6px 0px #1e1e1e;
-}
-
-.theme-card.active {
-  background-color: #f1c40f;
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0px #1e1e1e;
-}
 
 .card-counter {
   position: absolute;
-  top: -12px;
-  right: -12px;
-  width: 32px;
-  height: 32px;
+  top: -5px;
+  right: -8px;
+  width: 45px;
+  height: 35px;
   background-color: #e74c3c;
   color: white;
-  border-radius: 50%;
+  border-radius: 25%;
   border: 3px solid #1e1e1e;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.9rem;
+  font-size: 15px;
   font-weight: 400;
+  z-index: 2;
+}
+
+.theme-card-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 10px;
+  flex-grow: 1;
+}
+
+.theme__cards-icon-item {
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
 }
 
 .theme-card-title {
   font-family: "Nunito", sans-serif;
-  font-size: 1.5rem;
-  color: #1e1e1e;
-}
-
-.learning-modes-container {
-  position: relative;
-  width: 350px;
-  flex-shrink: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  background: rebeccapurple;
+  padding: 10px;
+  width: 100%;
 }
 
 .learning-modes-block {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
   background: #fff;
-  border: 3px solid #1e1e1e;
-  border-radius: 24px;
+  z-index: 2000;
   padding: 20px;
   display: flex;
   flex-direction: column;
 }
 
+.learning__modes-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-top: 40px;
+}
+
 .close-modes-btn {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 20px;
+  left: 15px;
   background: #e0e0e0;
   border: 3px solid #1e1e1e;
   border-radius: 50%;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   color: #1e1e1e;
   font-size: 1.5rem;
-  transition: all 0.2s ease;
+  transition: background-color 0.1s ease;
 }
 
-.close-modes-btn:hover {
+.close-modes-btn:active {
   background: #e74c3c;
   color: white;
 }
 
 .modes-title {
-  font-size: 2rem;
+  font-size: 24px;
+  font-weight: 700;
   text-align: center;
   color: #1e1e1e;
-  margin-top: 25px;
 }
 
 .topic-hint {
@@ -424,6 +458,7 @@ onMounted(() => {
   font-family: 'Inter', sans-serif;
   font-style: italic;
   font-weight: 500;
+  margin-top: 5px;
 }
 
 .modes-list {
@@ -431,6 +466,8 @@ onMounted(() => {
   flex-direction: column;
   gap: 1rem;
   flex-grow: 1;
+  overflow-y: auto;
+  padding-bottom: 20px;
 }
 
 .checkbox-container {
@@ -440,13 +477,20 @@ onMounted(() => {
   cursor: pointer;
   user-select: none;
   position: relative;
-  padding: 10px;
+  padding: 12px;
   border-radius: 12px;
-  transition: background-color 0.2s;
+  background: #f9f9f9;
+  border: 2px solid transparent;
+  transition: all 0.2s;
 }
 
-.checkbox-container:hover {
+.checkbox-container:active {
   background-color: #fef8e4;
+}
+
+.checkbox-container.active-mode {
+  background-color: #f1c40f;
+  border: 2px solid #1e1e1e;
 }
 
 .checkbox-container input {
@@ -482,11 +526,11 @@ onMounted(() => {
   fill: none;
   stroke-dasharray: 28;
   stroke-dashoffset: 28;
-  transition: stroke-dashoffset 0.4s ease;
+  transition: stroke-dashoffset 0.3s ease;
 }
 
 .checkbox-container input:checked + .checkmark {
-  background-color: #f1c40f;
+  background-color: #fff;
 }
 
 .checkbox-container input:checked + .checkmark polyline {
@@ -499,113 +543,41 @@ onMounted(() => {
 
 .label-text {
   color: #1e1e1e;
-  font-weight: 400;
-  font-size: 1.2rem;
+  font-weight: 600;
+  font-size: 1.1rem;
 }
 
 .start-btn {
   width: 100%;
   padding: 1rem;
   font-family: "Nunito", sans-serif;
-  font-size: 1.5rem;
+  font-size: 19px;
+  font-weight: 700;
   background-color: #4ade80;
   border: 3px solid #1e1e1e;
   color: #1e1e1e;
   border-radius: 16px;
   cursor: pointer;
-  transition: all 0.1s ease-in-out;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
   box-shadow: 4px 4px 0px #1e1e1e;
-  margin-top: 1rem;
-}
-
-.start-btn:hover:not(:disabled) {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0px #1e1e1e;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .start-btn:disabled {
   background: #e0e0e0;
   color: #a1a1a1;
+  border-color: #a1a1a1;
   box-shadow: 2px 2px 0px #a1a1a1;
   cursor: not-allowed;
 }
 
 .slide-right-enter-active, .slide-right-leave-active {
-  transition: transform 0.25s ease;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .slide-right-enter-from, .slide-right-leave-to {
-  transform: translateX(110%);
-}
-
-@media (max-width: 767px) {
-  .theme-content-area {
-    gap: 0;
-  }
-
-  .grid-area-wrapper {
-    width: 100%;
-  }
-
-  .learning-modes-block {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    max-width: 380px;
-    z-index: 2000;
-    border-radius: 0;
-    box-shadow: -5px 0px 15px rgba(0, 0, 0, 0.1);
-    border: none;
-    border-left: 3px solid #1e1e1e;
-  }
-
-  .slide-right-enter-from,
-  .slide-right-leave-to {
-    transform: translateX(100%);
-  }
-
-  .theme-title {
-    font-size: 1.1rem;
-    margin: 0 0.5rem;
-    line-height: 1.2;
-  }
-
-  .title-spacer {
-    display: none;
-  }
-
-  .learning-modes-container {
-    width: 0;
-  }
-
-  .learning-modes-block {
-    max-width: 100%;
-  }
-
-  .theme-card {
-    padding: 15px 10px;
-  }
-
-  .theme-card-title {
-    font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 540px ) {
-  .theme__title-wrapper {
-    flex-direction: column;
-  }
-
-  .theme-title {
-    font-size: 1.2rem;
-  }
-}
-
-.checkbox-container.active-mode {
-  background-color: #f1c40f;
-  border-radius: 12px;
+  transform: translateX(100%);
 }
 
 .fade-enter-active, .fade-leave-active {

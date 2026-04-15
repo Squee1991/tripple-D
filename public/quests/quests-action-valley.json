@@ -1,6 +1,6 @@
 [
   {
-    "questId": "valley_dativ_pronouns",
+    "questId": "one",
     "aliases": ["dativ-pronouns"],
     "title": "actionValleyQuestOne.title",
     "progress": "0/15",
@@ -151,7 +151,7 @@
     ]
   },
   {
-    "questId": "valley_dativ_prepositions",
+    "questId": "two",
     "aliases": ["dativ-prep"],
     "title": "actionValleyQuestTwo.title",
     "progress": "0/15",
@@ -303,7 +303,7 @@
     ]
   },
   {
-    "questId": "valley_akk_prepositions",
+    "questId": "three",
     "aliases": ["akk-prep"],
     "title": "actionValleyQuestThree.title",
     "progress": "0/15",
@@ -459,7 +459,7 @@
     ]
   },
   {
-    "questId": "valley_wechsel_prep",
+    "questId": "four",
     "aliases": ["wechsel-prep"],
     "title": "actionValleyQuestFour.title",
     "progress": "0/15",
@@ -625,7 +625,7 @@
     ]
   },
   {
-    "questId": "valley_double_objects_final",
+    "questId": "five",
     "aliases": ["dat-akk-order"],
     "title": "actionValleyQuestFive.title",
     "progress": "0/15",
@@ -787,7 +787,7 @@
     ]
   },
   {
-    "questId": "valley_verbs_advanced_final",
+    "questId": "six",
     "aliases": ["verbs-gov-complex"],
     "title": "actionValleyQuestSix.title",
     "progress": "0/15",
@@ -924,7 +924,7 @@
     ]
   },
   {
-    "questId": "valley_verb_traps_fixed",
+    "questId": "seven",
     "aliases": ["akk-dat-traps"],
     "title": "actionValleyQuestSeven.title",
     "progress": "0/15",
@@ -1062,7 +1062,7 @@
     ]
   },
   {
-    "questId": "valley_fixed_prepositions",
+    "questId": "eight",
     "aliases": ["verb-prep-combos"],
     "title": "actionValleyQuestEight.title",
     "progress": "0/15",
@@ -1200,7 +1200,7 @@
     ]
   },
   {
-    "questId": "valley_pronominal_adverbs_pro",
+    "questId": "nine",
     "aliases": ["da-wo-compounds-2"],
     "title": "actionValleyQuestNine.title",
     "progress": "0/15",
@@ -1347,7 +1347,7 @@
     ]
   },
   {
-    "questId": "valley_pronominal_adverbs_expert_v2",
+    "questId": "ten",
     "aliases": ["da-wo-compounds-3"],
     "title": "actionValleyQuestTen.title",
     "progress": "0/15",
@@ -1482,7 +1482,7 @@
     ]
   },
   {
-    "questId": "valley_action_lands_final_exam",
+    "questId": "eleven",
     "aliases": ["summary-mega-mix"],
     "title": "actionValleyQuestEleven.title",
     "progress": "0/15",

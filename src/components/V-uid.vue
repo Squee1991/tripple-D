@@ -164,7 +164,7 @@ onBeforeUnmount(() => {
     display: flex;
     flex-direction: column;
     margin-bottom: 0;
-    height: calc(100dvh - 190px);
+    height: calc(100dvh - 170px);
     overflow-y: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;

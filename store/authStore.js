@@ -1,6 +1,7 @@
 import {defineStore} from "pinia";
 import {ref, computed} from 'vue'
 import { Capacitor } from '@capacitor/core';
+import { Purchases } from '@revenuecat/purchases-capacitor'
 import { useBillingStore } from '../store/billingStore.js'
 import {
     getAuth,
@@ -54,7 +55,7 @@ export const userAuthStore = defineStore('auth', () => {
     const claimedBonuses = ref([])
     const freezeEndsAt = ref(null)
     const IMMUNITY_RANK_HATS = 500
-
+    const paymentSource = ref(null)
     const premiumDiscount = ref({
         sale_5: false,
         sale_10: false,
@@ -232,6 +233,7 @@ export const userAuthStore = defineStore('auth', () => {
         registeredAt.value = normalizeDate(data.registeredAt)
         uid.value = data.uid || null
         avatar.value = data.avatar || null
+        paymentSource.value = data.paymentSource || null
         isPremium.value = data.isPremium === true
         subscriptionEndsAt.value = data.subscriptionEndsAt || null
         subscriptionCancelled.value = isPremium.value && data.subscriptionCancelled === true
@@ -572,14 +574,13 @@ export const userAuthStore = defineStore('auth', () => {
                         providerId: user.providerData[0]?.providerId || '',
                         ...userDataFromDb
                     })
-                    if (Capacitor.isNativePlatform()) {
-                        const billing = useBillingStore()
-                        await billing.syncSubscription()
-                    }
                 }
                 await checkFeedbackSurveyEligibility()
             } else {
                 setUserData({});
+                if (Capacitor.isNativePlatform()) {
+                    await Purchases.logOut()
+                }
             }
             initialized.value = true
         })

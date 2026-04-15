@@ -2,9 +2,9 @@
   <header class="header" :class="{ 'mobile-menu-active': isMobileMenuOpen , 'is-rtl': isAr }">
     <div v-if="isMobileMenuOpen" class="mobile-nav-overlay" @click="isMobileMenuOpen = false"></div>
     <UiOverlay :visible="showAuth" @close="closeAuth"/>
-    <transition name="slide">
-      <SignIn v-if="showAuth" @close-auth-form="closeAuth"/>
-    </transition>
+<!--    <transition name="slide">-->
+<!--      <SignIn v-if="showAuth" @close-auth-form="closeAuth"/>-->
+<!--    </transition>-->
     <ModalDev
         :visible="showDevModal"
         @close="closeDevModal"
@@ -27,54 +27,57 @@
 <!--        />-->
 <!--        <span class="logo__name">german</span>-->
 <!--      </NuxtLink>-->
-      <nav ref="dropdownRefNav" class="header-nav" :class="{ 'is-open': isMobileMenuOpen, 'is-rtl': isAr }"
-           aria-label="Main">
-        <ul class="header-nav__list">
-          <li v-for="item in menuItems" :key="item.id" :id="item.id" class="header-nav__item">
-            <NuxtLink v-if="item.url" :to="item.url" class="header-nav__link" @click="closeAllMenus">
-              {{ t(item.valueKey) }}
-            </NuxtLink>
-            <button v-else @click="handleMenuItemClick(item)" class="header-nav__link"
-                    :class="{'is-active-parent': clickedMenu === item.id}">
-              <span>{{ t(item.valueKey) }}</span>
-              <img
-                  v-if="item.children"
-                  :class="['header-nav__arrow', { 'rotated': clickedMenu === item.id }]"
-                  :src="Arrow"
-                  alt="Arrow__icon"
-              />
-            </button>
-            <ul v-if="item.children && clickedMenu === item.id" class="header-nav__submenu">
-              <li v-for="child in item.children" :key="child.id" class="header-nav__submenu-item">
-                <NuxtLink v-if="child.url" :to="child.url" class="header-nav__submenu-link"
-                          @click="closeAllMenus">
-                  {{ t(child.valueKey) }}
-                </NuxtLink>
-                <button v-else class="header-nav__submenu-link"
-                        @click.stop="handleSubmenuItemClick(child)">
-                  <span>{{ t(child.valueKey) }}</span>
-                  <img
-                      v-if="child.subChildren"
-                      :class="['header-nav__arrow', { 'rotated': clickedSubChild === child.id }]"
-                      :src="Arrow"
-                      alt="Arrow_icon"
-                  />
-                </button>
-                <ul v-if="child.subChildren && clickedSubChild === child.id"
-                    class="header-nav__submenu-sub">
-                  <li v-for="sub in child.subChildren" :key="sub.id"
-                      class="header-nav__submenu-sub-item">
-                    <NuxtLink :to="sub.url" class="header-nav__submenu-link"
-                              @click="closeAllMenus">
-                      {{ t(sub.valueKey) }}
-                    </NuxtLink>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
+<!--      <nav ref="dropdownRefNav" class="header-nav" :class="{ 'is-open': isMobileMenuOpen, 'is-rtl': isAr }"-->
+<!--           aria-label="Main">-->
+<!--        <ul class="header-nav__list">-->
+<!--          <li v-for="item in menuItems" :key="item.id" :id="item.id" class="header-nav__item">-->
+<!--            <NuxtLink v-if="item.url" :to="item.url" class="header-nav__link" @click="closeAllMenus">-->
+<!--              {{ t(item.valueKey) }}-->
+<!--            </NuxtLink>-->
+<!--            <button v-else @click="handleMenuItemClick(item)" class="header-nav__link"-->
+<!--                    :class="{'is-active-parent': clickedMenu === item.id}">-->
+<!--              <span>{{ t(item.valueKey) }}</span>-->
+<!--              <img-->
+<!--                  v-if="item.children"-->
+<!--                  :class="['header-nav__arrow', { 'rotated': clickedMenu === item.id }]"-->
+<!--                  :src="Arrow"-->
+<!--                  alt="Arrow__icon"-->
+<!--              />-->
+<!--            </button>-->
+<!--            <ul v-if="item.children && clickedMenu === item.id" class="header-nav__submenu">-->
+<!--              <li v-for="child in item.children" :key="child.id" class="header-nav__submenu-item">-->
+<!--                <NuxtLink v-if="child.url" :to="child.url" class="header-nav__submenu-link"-->
+<!--                          @click="closeAllMenus">-->
+<!--                  {{ t(child.valueKey) }}-->
+<!--                </NuxtLink>-->
+<!--                <button v-else class="header-nav__submenu-link"-->
+<!--                        @click.stop="handleSubmenuItemClick(child)">-->
+<!--                  <span>{{ t(child.valueKey) }}</span>-->
+<!--                  <img-->
+<!--                      v-if="child.subChildren"-->
+<!--                      :class="['header-nav__arrow', { 'rotated': clickedSubChild === child.id }]"-->
+<!--                      :src="Arrow"-->
+<!--                      alt="Arrow_icon"-->
+<!--                  />-->
+<!--                </button>-->
+<!--                <ul v-if="child.subChildren && clickedSubChild === child.id"-->
+<!--                    class="header-nav__submenu-sub">-->
+<!--                  <li v-for="sub in child.subChildren" :key="sub.id"-->
+<!--                      class="header-nav__submenu-sub-item">-->
+<!--                    <NuxtLink :to="sub.url" class="header-nav__submenu-link"-->
+<!--                              @click="closeAllMenus">-->
+<!--                      {{ t(sub.valueKey) }}-->
+<!--                    </NuxtLink>-->
+<!--                  </li>-->
+<!--                </ul>-->
+<!--              </li>-->
+<!--            </ul>-->
+<!--          </li>-->
+<!--        </ul>-->
+<!--      </nav>-->
+      <div class="header-stats-wrapper">
+        <VHeaderUserStats v-if="userAuth.uid" />
+      </div>
       <div class="header-right">
         <div v-if="userAuth.name" class="header-user-wrapper">
           <button
@@ -107,7 +110,7 @@
         <button v-else class="btn-login" @click="openAuth">
           {{ t('auth.logIn') }}
         </button>
-        <BurgerMenu class="burger-button" v-model="isMobileMenuOpen"/>
+<!--        <BurgerMenu class="burger-button" v-model="isMobileMenuOpen"/>-->
       </div>
     </div>
   </header>
@@ -130,12 +133,14 @@ import BurgerMenu from '../components/burgerMenu.vue'
 import UiOverlay from '../components/Uioverlay.vue'
 import ModalDev from '../components/modal.vue'
 
+
 import Arrow from '../../assets/images/arrowNav.svg'
 import Dev from '../../assets/images/dev.svg'
 import User from '../../assets/images/account.svg'
 import Logout from '../../assets/images/logout.svg'
 import PadLock from '../../assets/images/padlock.svg'
 import HD from '../../assets/images/HD.svg'
+import VHeaderUserStats from "~/src/components/V-headerUserStats.vue";
 const easterEggsStore = useEasterEggsStore()
 const router = useRouter()
 const {t, locale} = useI18n()
@@ -145,6 +150,7 @@ const userAuth = userAuthStore()
 // const click = () => {
 //   easterEggsStore.triggerTaps()
 // }
+
 
 const wrapperRef = ref(null)
 const showAuth = ref(false)
@@ -534,6 +540,10 @@ onBeforeUnmount(() => {
   font-size: 14px;
 }
 
+.header-stats-wrapper {
+  flex: 1;
+}
+
 .header-user-wrapper {
   position: relative;
 }
@@ -543,6 +553,7 @@ onBeforeUnmount(() => {
   position: sticky;
   top: 0;
   z-index: 3;
+  margin-bottom: 10px;
   background-color: var(--navBg);
   border-bottom: 4px solid var(--borderBottom);
   border-bottom-left-radius: 15px;
@@ -767,11 +778,12 @@ onBeforeUnmount(() => {
 
 .mobile-nav-overlay {
   display: none;
+  color: #1e1d1d;
 }
 
 @media (max-width: 1023px) {
   .header-container {
-    padding: 0.8rem 10px;
+    padding: 12px 10px;
   }
 
   .mobile-nav-overlay {
@@ -959,12 +971,6 @@ onBeforeUnmount(() => {
       justify-content: center;
       align-items: center;
       box-shadow: 2px 2px 0 #1e1e1e;
-    }
-
-    .header-right {
-      gap: 7px;
-      justify-content: end;
-      width: 100%;
     }
 
     .header-user__avatar {

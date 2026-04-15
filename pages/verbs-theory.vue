@@ -345,6 +345,7 @@ const getOptionClass = (opt) => {
 .verb__theory-section {
   height: 100%;
   padding: 10px;
+  padding-bottom: 90px;
   overflow-y: auto;
 }
 
@@ -353,8 +354,8 @@ const getOptionClass = (opt) => {
   border: 3px solid #1f2937;
   border-radius: 16px;
   box-shadow: 6px 6px 0 #0f172a;
-  padding: 2rem;
-  margin-bottom: 2rem
+  padding: 20px;
+  margin-bottom: 10px;
 }
 
 .verbs__card-title {
@@ -436,7 +437,6 @@ const getOptionClass = (opt) => {
   background: #ddd6fe
 }
 
-/* Квиз */
 .verbs__quiz-body, .verbs__quiz-results {
   text-align: center
 }
@@ -448,9 +448,9 @@ const getOptionClass = (opt) => {
 }
 
 .verbs__quiz-question {
-  font-size: 1.4rem;
+  font-size: 20px;
   font-weight: 800;
-  margin-bottom: 1.4rem
+  margin-bottom: 20px;
 }
 
 .verbs__quiz-options {
@@ -462,15 +462,15 @@ const getOptionClass = (opt) => {
 
 .verbs__quiz-option {
   width: 100%;
-  padding: .9rem 1rem;
-  font-size: 1.1rem;
+  padding: 8px;
+  font-size: 17px;
   font-weight: 800;
-  border: 3px solid #0f172a;
+  border: 2px solid #0f172a;
   border-radius: 12px;
   background: #fff;
   cursor: pointer;
   transition: .2s;
-  box-shadow: 4px 4px 0 #0f172a
+  box-shadow: 3px 3px 0 #0f172a
 }
 
 .verbs__quiz-option:disabled {

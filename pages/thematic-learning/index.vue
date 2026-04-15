@@ -1,3 +1,79 @@
+<template>
+  <div class="theme-page">
+    <div class="page-header">
+      <VBackBtnNav />
+<!--      <h1 class="page-title">{{ t('chooseTheme.choose') }}</h1>-->
+      <h1 class="page-title">Тематические уровни</h1>
+    </div>
+    <transition name="toast-fade">
+      <div v-if="showChalkMessage" class="toast-message">
+        {{ chalkMessage }}
+      </div>
+    </transition>
+
+    <div class="themes-scroll">
+      <div class="themes-container">
+        <button
+            v-for="theme in themes"
+            :key="theme.key"
+            class="theme-card"
+            :class="{ 'active': theme.key === selectedTopic }"
+            @click="selectedTopic = theme.key"
+        >
+          <div class="theme-icon-wrapper">
+            <img :src="theme.img" :alt="t(theme.name)" class="theme-icon" />
+          </div>
+          <span class="theme-name">{{ t(theme.name) }}</span>
+        </button>
+      </div>
+    </div>
+
+    <div v-if="jsonData" class="content-area">
+      <div class="level-tabs">
+        <button
+            v-for="level in jsonData.levels"
+            :key="level.level"
+            class="level-tab"
+            :class="{ 'active': selectedLevel === level.level }"
+            @click="selectLevel(level.level)"
+        >
+          {{ t('chooseTheme.level') }} {{ level.level }}
+        </button>
+      </div>
+
+      <div class="modules-grid" v-if="selectedLevelObj">
+        <button
+            v-for="mod in selectedLevelObj.modules"
+            :key="mod.id"
+            class="module-card"
+            :class="{
+              'locked': !isModuleUnlocked(selectedLevelObj.level, mod.id),
+              'selected': moduleToStart && mod.id === moduleToStart.id
+            }"
+            @click="handleModuleClick(mod)"
+        >
+          <div class="module-title">{{ t('chooseTheme.module') }}</div>
+          <div class="module-number">{{ mod.id }}</div>
+          <div class="module-status-icon" v-if="!isModuleUnlocked(selectedLevelObj.level, mod.id)">
+            🔒
+          </div>
+          <div class="module-status-icon" v-else-if="moduleToStart && mod.id === moduleToStart.id">
+            ✨
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <transition name="slide-up">
+      <div class="bottom-action" v-if="moduleToStart">
+        <button class="btn-start" @click="startSelectedModule">
+          {{ t('chooseTheme.btnStart') }}
+        </button>
+      </div>
+    </transition>
+  </div>
+</template>
+
 <script setup>
 import {useTrainerStore} from '../../store/themenProgressStore.js'
 import {useRouter} from 'vue-router'
@@ -14,7 +90,8 @@ import School from '../../assets/images/school.svg'
 import Travel from '../../assets/images/travel.svg'
 import Clock from '../../assets/images/clock.svg'
 import { useHead, useSeoMeta } from '#imports'
-const canonical = useCanonical()
+import VBackBtnNav from "~/src/components/V-backBtnNav.vue";
+
 const {t} = useI18n()
 
 useSeoMeta({
@@ -24,17 +101,17 @@ useSeoMeta({
 const router = useRouter()
 const trainer = useTrainerStore()
 const themes = [
-  {key: 'house', name: 'chooseThemeList.home', img: HomeImg, position: {top: '5%', left: '10%', rotate: '-5deg'}},
-  {key: 'zeit', name: 'chooseThemeList.time', img: Clock, position: {top: '25%', left: '55%', rotate: '4deg'}},
-  {key: 'family', name: 'chooseThemeList.family', img: Family, position: {top: '2%', left: '60%', rotate: '8deg'}},
-  {key: 'food', name: 'chooseThemeList.food', img: Food, position: {top: '45%', left: '13%', rotate: '-3deg'}},
-  {key: 'purchases', name: 'chooseThemeList.purchases', img: Purchase, position: {top: '30%', left: '35%', rotate: '-6deg'}},
-  {key: 'health', name: 'chooseThemeList.health', img: Health, position: {top: '20%', left: '2%', rotate: '7deg'}},
-  {key: 'weather', name: 'chooseThemeList.weather', img: Weather, position: {top: '70%', left: '55%', rotate: '-5deg'}},
-  {key: 'clothes', name: 'chooseThemeList.clothes', img: Clothes, position: {top: '48%', left: '65%', rotate: '-3deg'}},
-  {key: 'transport', name: 'chooseThemeList.transport', img: Transport, position: {top: '55%', left: '30%', rotate: '4deg'}},
-  {key: 'school', name: 'chooseThemeList.school', img: School, position: {top: '68%', left: '5%', rotate: '-8deg'}},
-  {key: 'travel', name: 'chooseThemeList.travel', img: Travel, position: {top: '2%', left: '30%', rotate: '3deg'}}
+  {key: 'house', name: 'chooseThemeList.home', img: HomeImg},
+  {key: 'zeit', name: 'chooseThemeList.time', img: Clock},
+  {key: 'family', name: 'chooseThemeList.family', img: Family},
+  {key: 'food', name: 'chooseThemeList.food', img: Food},
+  {key: 'purchases', name: 'chooseThemeList.purchases', img: Purchase},
+  {key: 'health', name: 'chooseThemeList.health', img: Health},
+  {key: 'weather', name: 'chooseThemeList.weather', img: Weather},
+  {key: 'clothes', name: 'chooseThemeList.clothes', img: Clothes},
+  {key: 'transport', name: 'chooseThemeList.transport', img: Transport},
+  {key: 'school', name: 'chooseThemeList.school', img: School},
+  {key: 'travel', name: 'chooseThemeList.travel', img: Travel}
 ]
 const selectedTopic = ref(themes[0].key)
 const jsonData = ref(null)
@@ -45,6 +122,7 @@ const chalkMessage = ref('')
 const showChalkMessage = ref(false)
 let messageTimeout = null
 const moduleToStart = ref(null)
+
 const triggerChalkMessage = (text) => {
   clearTimeout(messageTimeout)
   chalkMessage.value = text
@@ -93,10 +171,6 @@ const handleModuleClick = (module) => {
   }
 }
 
-const goBack = () => {
-  router.back()
-}
-
 const goToExercise = async (level, module) => {
   await trainer.setThemeAndModule(topic.value, level, module.id)
   router.push('/thematic-learning/thematic-session')
@@ -121,461 +195,278 @@ const loadThemeData = async () => {
 
 onMounted(loadThemeData)
 watch(topic, loadThemeData)
-
 </script>
-<template>
-  <div class="classroom-layout">
-    <div class="blackboard-wrapper">
-      <button class="back-card-button" @click="goBack">
-        <div class="pin"></div>
-        <span>{{ t('chooseTheme.btnBack') }}</span>
-      </button>
-      <div class="blackboard">
-        <transition name="chalk-fade">
-          <div v-if="showChalkMessage" class="chalk-message">
-            {{ chalkMessage }}
-          </div>
-        </transition>
-        <div v-if="jsonData" class="blackboard-content">
-          <div class="level-selector">
-            <button
-                v-for="level in jsonData.levels"
-                :key="level.level"
-                class="level-btn"
-                :class="{ 'active': selectedLevel === level.level }"
-                @click="selectLevel(level.level)"
-            >
-              {{ t('chooseTheme.level') }} {{ level.level }}
-            </button>
-          </div>
-          <div class="modules-grid" v-if="selectedLevelObj">
-            <button
-                v-for="mod in selectedLevelObj.modules"
-                :key="mod.id"
-                class="module-btn"
-                :class="{
-                        'locked': !isModuleUnlocked(selectedLevelObj.level, mod.id),
-                        'selected': moduleToStart && mod.id === moduleToStart.id
-                     }"
-                @click="handleModuleClick(mod)"
-            >
-              {{ t('chooseTheme.module') }} {{ mod.id }}
-            </button>
-          </div>
-          <div class="start-button-container" v-if="moduleToStart">
-            <button class="start-button" @click="startSelectedModule">
-              {{ t('chooseTheme.btnStart') }}
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="corkboard">
-      <h2 class="corkboard-title">{{ t('chooseTheme.choose') }}</h2>
-      <div class="corkboard-themes">
-        <button
-            v-for="theme in themes"
-            :key="theme.key"
-            class="theme__card-choice"
-            :class="{ active: theme.key === selectedTopic }"
-            :style="{ top: theme.position.top, left: theme.position.left, transform: `rotate(${theme.position.rotate})` }"
-            @click="selectedTopic = theme.key"
-        >
-          <div class="pin"></div>
-          <img :src="theme.img" :alt="theme.name"/>
-          <span>{{ t(theme.name) }}</span>
-        </button>
-      </div>
-    </div>
-  </div>
 
-</template>
-
-<style>
-
-:root {
-  --classroom-bg: #f0ebe5;
-  --blackboard-bg: #2c3e50;
-  --corkboard-bg: #d2b48c;
-  --chalk-color: #ecf0f1;
-  --chalk-yellow: #f1c40f;
-}
-
-.classroom-layout {
-  display: flex;
-  height: 100svh;
-  padding: 2rem;
-  gap: 2rem;
+<style scoped>
+.theme-page {
   font-family: "Nunito", sans-serif;
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
-  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.blackboard-wrapper {
-  flex: 2;
-  background: #60a5fa;
-  padding: 20px;
-  border-radius: 24px;
-  border: 3px solid #1e1e1e;
-  box-shadow: 8px 8px 0px #1e1e1e;
+.page-header {
   display: flex;
-  position: relative;
+  align-items: center;
+  padding: calc(env(safe-area-inset-top) + 20px) 20px 10px;
+  flex-shrink: 0;
+  z-index: 10;
 }
 
-.blackboard {
-  flex: 1;
-  background: #1e1e1e;
-  border-radius: 12px;
-  border: none;
-  box-shadow: none;
-  padding: 2.5rem 2rem;
-  position: relative;
-  display: flex;
-  flex-direction: column;
+.page-title {
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--titleColor);
+  letter-spacing: 0.5px;
+  margin: 0 0 0 12px;
 }
 
-.blackboard-content {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+.themes-scroll {
+  width: 100%;
+  overflow-x: auto;
+  padding: 10px 0 20px 0;
+  scrollbar-width: none;
 }
 
-.back-card-button {
-  position: absolute;
-  top: 15px;
-  left: -15px;
-  z-index: 20;
-  background: #fff;
-  border: 3px solid #1e1e1e;
-  box-shadow: 4px 4px 0px #1e1e1e;
-  cursor: pointer;
-  padding: 10px 20px;
-  border-radius: 16px;
-  transform: rotate(-5deg);
-  transition: all 0.2s ease-in-out;
-}
-
-.back-card-button .pin {
+.themes-scroll::-webkit-scrollbar {
   display: none;
 }
 
-.back-card-button span {
-  font-size: 1.2rem;
-  color: #1e1e1e;
-  font-weight: 400;
-  font-family: "Nunito", sans-serif;
+.themes-container {
+  display: flex;
+  gap: 12px;
+  padding: 0 20px;
+  width: max-content;
 }
 
-.level-selector {
+.theme-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 95px;
+  height: 95px;
+  background: #ffffff;
+  border: 3px solid #1e1e1e;
+  border-radius: 18px;
+  box-shadow: 0 4px 0 #1e1e1e;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.theme-card.active {
+  background: #fef08a;
+  border-color: #1e1e1e;
+}
+
+.theme-icon-wrapper {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.theme-name {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #1e1e1e;
+  text-align: center;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.content-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 14px;
+  overflow-y: auto;
+  padding-bottom: calc(env(safe-area-inset-bottom) + 120px);
+  scrollbar-width: none;
+}
+
+.content-area::-webkit-scrollbar {
+  display: none;
+}
+
+.level-tabs {
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  padding: 0.5rem;
-  border-radius: 16px;
+  gap: 8px;
+  width: 100%;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  padding-bottom: 5px;
+  scrollbar-width: none;
 }
 
-.level-btn {
-  color: #fff;
-  background: transparent;
-  border: none;
-  padding: 0.5rem 1rem;
-  font-size: 1.2rem;
+.level-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.level-tab {
+  flex-shrink: 0;
+  padding: 10px;
+  background: #f3f4f6;
+  color: #4b5563;
   font-family: "Nunito", sans-serif;
-  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  border-radius: 14px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.1s;
+  width: 32%;
+  white-space: nowrap;
 }
 
-.level-btn.active {
-  background-color: #f1c40f;
-  color: #1e1e1e;
+.level-tab.active {
+  background: #6063c2;
+  color: #ffffff;
 }
 
 .modules-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
 }
 
-.module-btn {
-  color: #fff;
-  background: transparent;
-  border: 3px dashed #888;
-  padding: 1rem 0.5rem;
-  font-size: 1.1rem;
-  font-family: "Nunito", sans-serif;
-  border-radius: 16px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.module-btn:hover:not(.locked) {
-  border-style: solid;
-  border-color: #fff;
-}
-
-.module-btn.locked {
-  color: #888;
-  cursor: not-allowed;
-  opacity: 0.6;
-}
-
-.module-btn.selected {
-  border-style: solid;
-  border-color: #f1c40f;
-  background-color: rgba(241, 196, 15, 0.1);
-}
-
-.start-button-container {
-  margin-top: auto;
-  padding-top: 2rem;
-  text-align: center;
-}
-
-.start-button {
-  background: #4ade80;
-  border: 3px solid #1e1e1e;
-  color: #1e1e1e;
-  padding: 0.8rem 2.5rem;
-  font-size: 1.5rem;
-  font-family: "Nunito", sans-serif;
-  border-radius: 16px;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  box-shadow: 4px 4px 0px #1e1e1e;
-}
-
-.start-button:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0px #1e1e1e;
-}
-
-.chalk-message {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-4deg);
-  color: #ee4c4c;
-  font-family: "Nunito", sans-serif;
-  font-size: 2rem;
-  font-weight: bold;
-  width: 100%;
-  z-index: 100;
-  text-align: center;
-}
-
-.chalk-fade-enter-active, .chalk-fade-leave-active {
-  transition: opacity 0.4s ease;
-}
-
-.chalk-fade-enter-from, .chalk-fade-leave-to {
-  opacity: 0;
-}
-
-.corkboard {
-  flex: 1;
+.module-card {
+  position: relative;
   background: #ffffff;
-  border-radius: 24px;
   border: 3px solid #1e1e1e;
-  box-shadow: 8px 8px 0px #1e1e1e;
-  padding: 1.5rem;
-  position: relative;
-}
-
-.corkboard-title {
-  font-family: "Nunito", sans-serif;
-  font-size: 2.5rem;
-  text-align: center;
-  color: #1e1e1e;
-  margin-bottom: 1rem;
-}
-
-.corkboard-themes {
-  position: relative;
-  height: calc(100% - 60px);
-}
-
-.theme__card-choice {
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  background: #fff;
-  border: 3px solid #1e1e1e;
-  box-shadow: 4px 4px 0px #1e1e1e;
-  cursor: pointer;
+  border-radius: 18px;
+  padding: 20px 15px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem;
-  transition: all 0.2s ease-in-out;
-  border-radius: 20px;
+  justify-content: center;
+  box-shadow: 0 4px 0 #1e1e1e;
+  transition: all 0.1s;
+  cursor: pointer;
 }
 
-.theme__card-choice:hover {
-  z-index: 10;
+.module-card.selected {
+  background: #bfdbfe;
+  border-color: #1e1e1e;
 }
 
-.theme__card-choice.active {
-  box-shadow: 0 0 0 4px #1e1e1e, 0 0 0 8px #f1c40f;
-  z-index: 5;
+.module-card.locked {
+  background: #f9fafb;
+  border-color: #d1d5db;
+  box-shadow: 0 4px 0 #d1d5db;
+  cursor: not-allowed;
 }
 
-.theme__card-choice .pin {
-  display: none;
+.module-title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #4b5563;
+  text-transform: uppercase;
+  margin-bottom: 4px;
 }
 
-.theme__card-choice img {
-  width: 50px;
-  height: 50px;
+.locked .module-title,
+.locked .module-number {
+  color: #9ca3af;
 }
 
-.theme__card-choice span {
-  font-size: 1.1rem;
+.selected .module-title {
+  color: #1e3a8a;
+}
+
+.module-number {
+  font-size: 2rem;
+  font-weight: 900;
   color: #1e1e1e;
-  font-weight: 400;
 }
 
-@media (max-width: 1023px) {
-  .classroom-layout {
-    padding: 0;
-    position: relative;
-  }
-
-  .blackboard-wrapper {
-    width: 100%;
-    height: 100%;
-    border-radius: 0;
-    border: none;
-    box-shadow: none;
-    padding: 1rem;
-    padding-bottom: 180px;
-  }
-
-  .blackboard {
-    padding: 1rem;
-  }
-
-  .back-card-button {
-    top: 10px;
-    left: 10px;
-    transform: rotate(0deg);
-  }
-
-  .corkboard {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 180px;
-    width: auto;
-    max-width: none;
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    padding: 0;
-    z-index: 100;
-  }
-
-  .corkboard-title {
-    display: none;
-  }
-
-  .corkboard-themes {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    overflow-x: auto;
-    padding: 0 1.5rem;
-  }
-
-  .corkboard-themes::-webkit-scrollbar {
-    height: 8px;
-  }
-
-  .corkboard-themes::-webkit-scrollbar-thumb {
-    background: #1e1e1e;
-    border-radius: 4px;
-  }
-
-  .corkboard-themes::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.1);
-  }
-
-  .theme__card-choice {
-    position: static !important;
-    transform: none !important;
-    top: auto !important;
-    left: auto !important;
-    flex-shrink: 0;
-    width: 130px;
-    height: 130px;
-  }
+.selected .module-number {
+  color: #1e3a8a;
 }
 
-@media (max-width: 767px) {
-  .blackboard-wrapper {
-    padding: 25px 25px 150px 25px;
-  }
-
-  .start-button-container {
-    padding: 0;
-  }
-
-  .level-selector {
-    flex-wrap: wrap;
-  }
-
-  .blackboard-content {
-    padding: 40px 10px;
-  }
-
-  .modules-grid {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .module-btn {
-    padding: .7rem;
-  }
-
-  .corkboard {
-    height: 160px;
-  }
-
-  .theme__card-choice {
-    width: 110px;
-    height: 110px;
-  }
-
-  .theme__card-choice img {
-    width: 40px;
-    height: 40px;
-  }
-
-  .theme__card-choice span {
-    font-size: 1rem;
-  }
-
-  .back-card-button {
-    padding: 8px 16px;
-    top: 13px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .back-card-button span {
-    font-size: 1rem;
-  }
+.module-status-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.2rem;
 }
 
-@media (max-width: 1280px) {
-  .scene-decoration--picture {
-    display: none;
-  }
+.bottom-action {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 20px calc(env(safe-area-inset-bottom) + 20px);
+  background: linear-gradient(to top, var(--bg, #fcfcfc) 80%, transparent);
+  z-index: 20;
 }
 
+.btn-start {
+  width: 100%;
+  padding: 16px;
+  background: #4ade80;
+  border: 3px solid #1e1e1e;
+  border-radius: 18px;
+  color: #1e1e1e;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  box-shadow: 0 5px 0 #1e1e1e;
+  cursor: pointer;
+  transition: all 0.1s;
+}
 
+.toast-message {
+  position: fixed;
+  top: calc(env(safe-area-inset-top) + 80px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ef4444;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 14px;
+  border: 3px solid #1e1e1e;
+  font-weight: 800;
+  font-size: 1.1rem;
+  z-index: 100;
+  box-shadow: 0 4px 0 #1e1e1e;
+  text-align: center;
+  width: max-content;
+  max-width: 90%;
+}
+
+.toast-fade-enter-active,
+.toast-fade-leave-active {
+  transition: all 0.3s ease;
+}
+
+.toast-fade-enter-from,
+.toast-fade-leave-to {
+  opacity: 0;
+  transform: translate(-50%, -20px);
+}
+
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slide-up-enter-from,
+.slide-up-leave-to {
+  transform: translateY(100%);
+}
 </style>
