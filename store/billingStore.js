@@ -23,7 +23,7 @@ export const useBillingStore = defineStore('billing', () => {
 			}
 
 			await Purchases.configure({
-				apiKey: 'goog_zJiiRlMjdJmJNBtZXxiePlRaHmv',
+				apiKey: process.env.REVENUECAT_GOOGLE_API_KEY,
 			})
 			await Purchases.logIn({ appUserID: authStore.uid })
 
