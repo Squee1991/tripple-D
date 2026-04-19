@@ -104,11 +104,11 @@ onUnmounted(() => {
 .daily {
   width: 100%;
   flex-grow: 1;
-  border: 3px solid var(--border);
+  border: 4px solid var(--tabBg);
   border-radius: 16px;
   padding: 16px;
   color: var(--titleColor);
-  box-shadow: 2px 2px 0 var(--border);
+  box-shadow: var(--boxShadowMobile);
   margin-bottom: 10px;
 }
 

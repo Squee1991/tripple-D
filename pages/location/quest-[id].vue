@@ -22,6 +22,7 @@
             </div>
           </div>
           <div class="quest__lives" v-if="!previouslyCleared">
+            <button class="quest__back-btn" @click="openLeave('back')">×</button>
             <VHearts
                 :lives="questStore.lives"
                 :max-lives="questStore.maxLives"
@@ -545,12 +546,12 @@ watchEffect(() => {
 
 <style scoped>
 .quest {
-  min-height: 100svh;
+  min-height: 100%;
   font-family: "Nunito", sans-serif;
   color: #1e1e1e;
   display: flex;
   flex-direction: column;
-  padding: 10px 1.5rem;
+  padding: 10px 16px;
 }
 
 .quest__panel--error {
@@ -569,7 +570,7 @@ watchEffect(() => {
 .quest__back-btn {
   position: absolute;
   left: 1.5rem;
-  top: 1.5rem;
+  top: 2.5rem;
   width: 46px;
   height: 46px;
   display: grid;
@@ -645,6 +646,7 @@ watchEffect(() => {
 .quest__lives {
   padding: .5rem 1rem;
   text-align: center;
+  position: relative;
 }
 
 .quest__section {

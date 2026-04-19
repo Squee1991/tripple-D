@@ -4,7 +4,7 @@
       <div class="shop__title-container">
         <h2 class="shop__title">{{ t('shop.title') }}</h2>
       </div>
-      <p class="shop__subtitle">{{ t('shop.subText') }}</p>
+<!--      <p class="shop__subtitle">{{ t('shop.subText') }}</p>-->
     </header>
     <div class="shop__content">
       <div class="shop__cards">
@@ -348,35 +348,44 @@ const confirmPurchase = async () => {
 
 <style scoped>
 .shop {
-  min-height: 100vh;
   padding: 10px;
   font-family: "Nunito", sans-serif;
 }
 
-
 .shop__content {
   overflow-y: auto;
-  max-height: calc(100vh - 235px);
+  max-height: calc(100vh - 100px);
+  padding-bottom: 70px;
 }
 
 .shop__content::-webkit-scrollbar {
-  width: 10px;
+  width: 2px;
+  background: transparent;
 }
 
 .shop__content::-webkit-scrollbar-thumb {
-  background: #1e1e1e;
-  border-radius: 10px;
-  border: 2px solid #fff;
+
 }
 
 .shop__content::-webkit-scrollbar-track {
   background: transparent;
 }
 
+.shop__content::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 90px;
+  background: linear-gradient(to bottom, rgba(57, 65, 201, 0) 0%, rgba(23, 24, 34, 1) 100%);
+}
+
 .shop__title-container {
   background: #50a2d8;
   border-radius: 12px;
-  padding: 15px 20px;
+  padding: 10px 10px;
   margin-bottom: 10px;
   text-align: center;
   box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.2);
@@ -388,7 +397,7 @@ const confirmPurchase = async () => {
 .shop__title {
   color: white;
   margin: 0;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
 }
 

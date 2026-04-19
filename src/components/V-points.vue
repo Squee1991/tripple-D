@@ -44,7 +44,9 @@
         </li>
         <li class="points-card__item points-card__progress">
           <div class="progress_exp-bar">
-            <div class="progress__bar" :style="{ width: `${(langStore.exp / 100) * 100}%` }"></div>
+            <div class="progress__bar" :style="{ width: `${(langStore.exp / 100) * 100}%` }">
+              <div class="glare"></div>
+            </div>
             <div class="progress__meta">{{ langStore.exp }}/100 XP</div>
           </div>
         </li>
@@ -269,7 +271,7 @@ onMounted(() => {
 .ranked__inner {
   width: 100%;
   border: 2px solid var(--border);
-  border-radius: 12px;
+  border-radius: 18px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -352,6 +354,7 @@ onMounted(() => {
   min-width: 340px;
   display: flex;
   width: 100%;
+  height: 100%;
 }
 
 .hats__shield-btn {
@@ -368,9 +371,9 @@ onMounted(() => {
 
 .points-card {
   color: #111;
-  border: 3px solid var(--border);
+  border: 4px solid var(--tabBg);
+  box-shadow: var(--boxShadowMobile);
   border-radius: 20px;
-  box-shadow: 2px 2px 0 var(--border);
   padding: 10px 15px;
   width: 100%;
   margin-bottom: 15px;
@@ -380,7 +383,7 @@ onMounted(() => {
 
 .progress_exp-bar {
   width: 100%;
-  height: 23px;
+  height: 25px;
   background: #e8eae5;
   border-radius: 10px;
   position: relative;
@@ -389,8 +392,21 @@ onMounted(() => {
 
 .progress__bar {
   height: 100%;
-  background: #6589e0;
+  background: #4ade80;
   transition: width .4s;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.glare{
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 3px;
+  left: 8px;
+  right: 8px;
+  height: 4px;
+  border-radius: 4px
 }
 
 .points-card__header {

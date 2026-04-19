@@ -204,22 +204,21 @@ onBeforeUnmount(() => {
 }
 
 .map__title-wrapper {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  border: 2px solid var(--border);
-  box-shadow: 2px 2px 0 var(--border);
-  border-radius: 15px;
-  padding: 10px 10px;
-  background: var(--labelBg);
+  border-radius: 25px;
+  padding: 8px 10px;
+  background: var(--bgTitle);
+  box-shadow: 0 5px 0 var(--boxShadowBottom);
   position: relative;
   overflow: hidden;
 }
 
 .map__title {
-  font-size: 2.3rem;
+  font-size: 20px;
   color: var(--regionBtnColor);
   font-weight: 600;
   letter-spacing: .2px;
@@ -335,14 +334,11 @@ onBeforeUnmount(() => {
 
 .region-card {
   position: relative;
-  height: auto;
-  border: 3px solid var(--border);
-  border-radius: 15px;
-  box-shadow: 0 0 0 var(--border);
+  border: 3px solid var(--borderRegion);
+  border-radius: 20px;
   cursor: pointer;
   overflow: hidden;
-  min-height: 160px;
-  max-height: 175px;
+  height: 140px;
   transition: transform .12s ease, box-shadow .12s ease, filter .12s ease;
   background: var(--bg);
 }
@@ -354,9 +350,6 @@ onBeforeUnmount(() => {
   height: 100%;
 }
 
-.region-card.active {
-  outline: 3px solid #fff;
-}
 
 @media (min-width: 1024px) {
   .region-card:hover {
@@ -373,25 +366,23 @@ onBeforeUnmount(() => {
 
 .region-card__footer {
   position: absolute;
-  left: 8px;
-  right: 8px;
-  bottom: 8px;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 8px;
-  padding: 6px 10px;
-  border: 2px solid var(--border);
-  border-radius: 10px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, .75), rgba(255, 255, 255, .55));
+  gap: 5px;
+  padding: 8px 10px;
+  background: linear-gradient(180deg, rgb(41 38 38 / 75%), rgb(31 29 29 / 60%));
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), inset 0 2px 4px rgba(255, 255, 255, 0.1);;
   backdrop-filter: blur(2px);
-  box-shadow: 2px 2px 0 var(--border);
 }
 
 .region-card__title {
   font-size: 1.05rem;
   font-weight: 900;
-  color: #1d1d1d;
+  color: white;
 }
 
 .region-card__badge {
@@ -462,10 +453,6 @@ onBeforeUnmount(() => {
 }
 
 @media (max-width: 1090px) {
-  .region-card {
-    height: 175px;
-  }
-
   .map-right {
     grid-template-columns: repeat(1, 2fr);
   }
@@ -530,10 +517,6 @@ onBeforeUnmount(() => {
     padding: 55px 15px 20px 15px;
   }
 
-  .map__title {
-    font-size: 1.4rem;
-  }
-
   .map-left__close {
     position: absolute;
     top: 8px;
@@ -561,7 +544,7 @@ onBeforeUnmount(() => {
 
 @media (max-width: 800px) {
   .region-card {
-    height: 170px;
+    height: 140px;
   }
 }
 
@@ -628,7 +611,7 @@ onBeforeUnmount(() => {
 
 .arrow-btn {
   width: 45px;
-  height: 40px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -659,12 +642,12 @@ onBeforeUnmount(() => {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 3px 3px 0 var(--border);
+  box-shadow: 2px 2px 0 var(--border);
   border: var(--border);
   border-radius: 8px;
   flex: 1;
   background: white;
-  height: 40px;
+  height: 36px;
 }
 
 .map-empty-placeholder {

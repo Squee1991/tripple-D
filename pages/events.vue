@@ -147,8 +147,7 @@ const processedEvents = computed(() => {
 <style scoped>
 .events-page {
   font-family: "Nunito", sans-serif;
-  height: 100vh;
-  height: 100dvh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -164,7 +163,7 @@ const processedEvents = computed(() => {
 .page-header {
   display: flex;
   align-items: center;
-  padding: 25px 15px 10px 15px;
+  padding: 5px 10px 10px 10px;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   flex-shrink: 0;

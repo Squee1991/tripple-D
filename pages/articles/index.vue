@@ -7,9 +7,9 @@
       <div class="theme__title-wrapper">
         <div class="theme__header">
           <VBackBtn/>
-          <div class="theme__title">Артикли</div>
+          <div class="theme__title">Темы изучения артиклей</div>
         </div>
-        <h1 class="theme-title">{{ t('selectedpage.title') }}</h1>
+<!--        <h1 class="theme-title">{{ t('selectedpage.title') }}</h1>-->
       </div>
       <div class="theme-content-area">
         <div class="grid-area-wrapper">
@@ -45,6 +45,14 @@
               </svg>
             </button>
             <div class="learning__modes-wrapper">
+              <button @click="clearSelectedTopic" class="close-modes-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                  <path
+                      fill="currentColor"
+                      d="m12 13.4l-4.9 4.9q-.275.275-.7.275t-.7-.275q-.275-.275-.275-.7t.275-.7l4.9-4.9l-4.9-4.9q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275L12 10.6l4.9-4.9q.275-.275.7-.275t.7.275q.275.275.275-.7t-.275.7L13.4 12l4.9 4.9q.275.275.275.7t-.275.7q-.275.275-.7.275t-.7-.275z"
+                  ></path>
+                </svg>
+              </button>
               <div>
                 <div class="modes-title">
                   {{ t('selectedpage.choiceTitle') }}
@@ -254,7 +262,7 @@ onMounted(() => {
 <style scoped>
 .theme-page {
   font-family: "Nunito", sans-serif;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -264,7 +272,7 @@ onMounted(() => {
 
 .theme-page-container {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -273,20 +281,19 @@ onMounted(() => {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 15px;
-  background: #6358ac;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  padding: 5px 10px 10px 10px;
   margin-bottom: 5px;
+  border-bottom: 2px solid #ffffff;
+  border-radius: 10px;
 }
 
 .theme__title {
   flex: 1;
   display: flex;
-  justify-content: center;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 600;
   color: #ffffff;
+  margin-left: 15px;
   font-family: "Nunito", sans-serif;
 }
 
@@ -339,7 +346,7 @@ onMounted(() => {
   gap: 15px 10px;
   justify-content: start;
   align-content: start;
-  padding-bottom: 2rem;
+  padding-bottom: 1.4rem;
 }
 
 .theme-card {
@@ -423,7 +430,7 @@ onMounted(() => {
 
 .close-modes-btn {
   position: absolute;
-  top: 20px;
+  top: 0;
   left: 15px;
   background: #e0e0e0;
   border: 3px solid #1e1e1e;

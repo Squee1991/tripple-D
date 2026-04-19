@@ -19,7 +19,9 @@ const showLogin = ref(false)
 const eventStore = useEventSessionStore()
 const authStore = userAuthStore()
 const hydrated = ref(false)
-
+definePageMeta({
+  layout: 'footerlayout'
+})
 onMounted(() => {
   hydrated.value = true
 })
@@ -34,7 +36,6 @@ onMounted(() => {
     <div v-if="authStore.uid" class="stat">
       <Header/>
       <VUid/>
-      <Footer/>
     </div>
     <div v-else>
       <LogIn v-if="showLogin" @close="showLogin = false"/>
@@ -47,6 +48,7 @@ onMounted(() => {
 <style scoped>
 .container {
   max-width: 1440px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 10px;
 }

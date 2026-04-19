@@ -165,7 +165,7 @@ onMounted(async () => {
 <style scoped>
 
 .quiz {
-  min-height: 100vh;
+  min-height: 100%;
   font-family: 'Nunito', sans-serif;
   color: #2f3542;
 }
@@ -181,7 +181,7 @@ onMounted(async () => {
   top: 0;
   background: var(--bg);
   z-index: 100;
-  padding: 15px 20px;
+  padding: 5px 10px 10px 10px;
 }
 
 .quiz__header {
@@ -266,7 +266,7 @@ onMounted(async () => {
 }
 
 .quiz__content {
-  padding: 10px 20px 30px;
+  padding: 10px;
 }
 
 .quiz__grid {
@@ -296,13 +296,6 @@ onMounted(async () => {
   padding: 8px;
   gap: 8px;
   color: #2f3542;
-}
-
-@media (min-width: 1024px) {
-  .card:hover {
-    transform: translateY(-1px);
-    box-shadow: 5px 5px 0px #2f3542;
-  }
 }
 
 .card:active {
@@ -404,7 +397,7 @@ onMounted(async () => {
     font-size: 1.1rem;
   }
   .card__icon {
-    font-size: 2.6rem;
+    font-size: 2.3rem;
   }
 }
 </style>

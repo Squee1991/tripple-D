@@ -45,6 +45,8 @@ export default defineNuxtConfig({
 		}
 	},
 
+
+
 	compatibilityDate: '2024-11-01',
 	devtools: {enabled: false},
 	modules: [
@@ -74,6 +76,7 @@ export default defineNuxtConfig({
 		public: {
 			stripePublishableKey: process.env.VITE_STRIPE_PUBLIC_KEY || env.VITE_STRIPE_PUBLIC_KEY,
 			firebaseApiKey: firebaseConfig.apiKey,
+			revenuecatGoogleApiKey: process.env.NUXT_PUBLIC_REVENUECAT_GOOGLE_API_KEY,
 			firebaseAuthDomain: firebaseConfig.authDomain,
 			firebaseProjectId: firebaseConfig.projectId,
 			firebaseStorageBucket: firebaseConfig.storageBucket,
@@ -85,7 +88,15 @@ export default defineNuxtConfig({
 
 	app: {
 		baseURL: './',
-		buildAssetsDir: 'assets'
+		buildAssetsDir: 'assets',
+		head: {
+			meta: [
+				{
+					name: 'viewport',
+					content: 'width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover'
+				}
+			]
+		}
 	},
 
 	css: [

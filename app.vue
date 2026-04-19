@@ -37,7 +37,7 @@ useHead(() => ({
   htmlAttrs: { lang: locale.value, dir: locale.value === 'ar' ? 'rtl' : "ltr" },
   title: () => t('useHeadApp.title'),
   meta: [
-    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+    { name: 'viewport', content: 'width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover' },
     { name: 'description', content: t('useHeadApp.content') },
     { property: 'og:title', content: t('useHeadApp.contentThree') },
     { property: 'og:description', content: t('useHeadApp.contentFour') },
@@ -129,8 +129,38 @@ watch(() => authStore.uid, (newUid) => {
   font-family: "Nunito", sans-serif;
 }
 
-html {
-  font-size: 16px;
+:root {
+  --sat: env(safe-area-inset-top, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+}
+
+
+html, body, #__nuxt {
+  height: 100dvh !important;
+  width: 100vw !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  position: fixed;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  width: 100vw;
+  padding-top: var(--sat);
+  padding-bottom: var(--sab);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+
+#main-content {
+  flex: 1;
+  width: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 </style>

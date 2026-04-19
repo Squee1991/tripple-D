@@ -99,7 +99,7 @@ function closeAward() {
   justify-content: center;
   flex-wrap: wrap;
   border-top: 3px solid #1a1d2b;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
   border-radius: 15px;
 }
 
@@ -115,7 +115,7 @@ function closeAward() {
 }
 
 .awards__title {
-  font-size: 1.5rem;
+  font-size: 20px;
   font-weight: 600;
   font-family: "Nunito", sans-serif;
   color: var(--titleColor);
@@ -221,20 +221,15 @@ button:disabled {
   box-shadow: none;
 }
 
-.awards__list-scroll {
-  max-height: calc(100vh - 300px);
-  overflow-y: auto;
-  padding-right: 1px;
-}
 
 .awards__list-scroll::-webkit-scrollbar {
-  width: 10px;
+  width: 3px;
+  display: none;
 }
 
 .awards__list-scroll::-webkit-scrollbar-thumb {
   background: #1e1e1e;
   border-radius: 10px;
-  border: 2px solid #fff;
 }
 
 .awards__list-scroll::-webkit-scrollbar-track {
@@ -281,6 +276,17 @@ button:disabled {
   transform: translateY(-1px);
 }
 
+.awards__section:after{
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background: var(--bgOpacity);
+}
+
 .cartoon-board__total {
   position: relative;
   z-index: 1;
@@ -319,10 +325,6 @@ button:disabled {
 @media (max-width: 767px) {
   .items-grid {
     width: 100%;
-  }
-
-  .awards__title {
-    font-size: 1.7rem;
   }
 }
 

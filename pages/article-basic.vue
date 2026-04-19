@@ -153,9 +153,7 @@ const data = {
   left: 0;
   width: 100%;
   z-index: 1;
-  background: #6358ac;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  background: var(--bg);
   margin-bottom: 5px;
 }
 
@@ -220,11 +218,10 @@ const data = {
   background: #fff;
   border-radius: 24px;
   border: 3px solid #1e1e1e;
-  box-shadow: 8px 8px 0px #1e1e1e;
+  box-shadow: 4px 4px 0px #1e1e1e;
   padding: 2rem;
   transition: all 0.2s ease-in-out;
 }
-
 
 .theory-card-title {
   font-family: "Nunito", sans-serif;
@@ -293,10 +290,10 @@ const data = {
 }
 
 .table-wrapper {
-  border: 3px solid #1e1e1e;
+  border: 2px solid #1e1e1e;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 4px 4px 0px #1e1e1e;
+  box-shadow: 3px 3px 0px #1e1e1e;
 }
 
 .theory-table {

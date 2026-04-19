@@ -4,6 +4,10 @@ const config: CapacitorConfig = {
   appId: 'com.skillupgerman.app',
   appName: 'skillupgerman',
   webDir: '.output/public',
+  // server: {
+  //   url: 'http://192.168.178.21:3000',
+  //   cleartext: true
+  // },
   plugins: {
     GoogleSignIn: {
       clientId: '516504654997-15ujeh34o8jc7hkbempel0t60qp0e43g.apps.googleusercontent.com',

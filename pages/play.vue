@@ -64,9 +64,8 @@ onMounted(() => {
 <style scoped>
 .game-page {
   font-family: "Nunito", sans-serif;
-  background-color: var(--bg, #fcfcfc);
-  height: 100vh;
-  height: 100dvh;
+  background: var(--bg);
+  height: 100%;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -89,7 +88,7 @@ onMounted(() => {
 .page-header {
   display: flex;
   align-items: center;
-  padding: 25px 15px 10px 15px;
+  padding: 5px 10px 10px 10px;
   background: var(--bg);
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
