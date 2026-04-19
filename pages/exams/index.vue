@@ -232,8 +232,8 @@ onMounted(async () => {
 .exam__levels {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  padding: 10px 15px;
+  gap: 8px;
+  padding: 10px;
   flex: 1;
   overflow-y: auto;
   padding-bottom: 100px;
@@ -256,12 +256,11 @@ onMounted(async () => {
 }
 
 .exam-card__title {
-  font-size: 1.1rem;
+  font-size: 17px;
   font-weight: 900;
   margin: 0 0 10px 0;
   color: #1e1e1e;
-  display: flex;
-  align-items: center;
+  text-align: center;
   gap: 6px;
   background: #bfdbfe;
   padding: 10px;
@@ -271,11 +270,10 @@ onMounted(async () => {
   margin: 0 0 12px 0;
   flex-grow: 1;
   text-align: left;
-  padding: 0 10px;
 }
 
 .exam-card__item {
-  font-size: 0.85rem;
+  font-size: 14px;
   font-weight: 700;
   color: #4b5563;
   margin-bottom: 4px;

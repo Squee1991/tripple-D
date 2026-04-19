@@ -3,7 +3,9 @@
     <transition name="bounce-fade">
       <div v-if="showExitModal" class="modal-overlay">
         <div class="modal-content">
-          <div class="modal-icon">🥺</div>
+          <div class="modal-icon">
+            <img class="modal-icon-item" :src="Hedgehog" alt="">
+          </div>
           <h3 class="modal-title">{{ t('trainerPage.sure') }}</h3>
           <p class="modal-text">{{ t('trainerPage.warning') }}</p>
           <div class="modal-actions">
@@ -13,6 +15,7 @@
         </div>
       </div>
     </transition>
+
     <div class="session-container">
       <section v-if="loading" class="view-state view-state--loading">
         <div class="bouncy-loader">
@@ -36,6 +39,7 @@
           </div>
         </div>
         <div v-if="!finished" class="quiz-content">
+
           <div class="question-card">
             <div class="question-inner">
               <SoundBtn :text="cleanText(visibleSentence)"/>
@@ -113,6 +117,7 @@ import SoundBtn from "../../src/components/soundBtn.vue";
 import { useSeoMeta } from '#imports'
 import VBackBtn from "~/src/components/V-back-btn.vue";
 import VStopSessionBtn from "~/src/components/V-stopSessionBtn.vue";
+import Hedgehog from '../../assets/images/hedgehog-sadly.svg'
 
 useSeoMeta({
   robots: 'noindex, nofollow'
@@ -121,6 +126,7 @@ useSeoMeta({
 const router = useRouter()
 const {t} = useI18n()
 const thematic = useTrainerStore()
+
 const correctAnswers = ref(0)
 const loading = ref(true)
 const current = ref(0)
@@ -129,8 +135,22 @@ const feedback = ref(null)
 const finished = ref(false)
 const isChecked = ref(false)
 const showExitModal = ref(false)
+const sessionMistakes = ref([])
 
-const tasks = computed(() => thematic.selectedModule?.tasks || [])
+
+const tasks = computed(() => {
+  const allTasks = thematic.selectedModule?.tasks || []
+  const progress = thematic.getModuleProgress(thematic.selectedLevel?.level, thematic.selectedModule?.id)
+
+  if (progress && !progress.completed && progress.mistakes?.length > 0) {
+    return allTasks
+        .map((task, index) => ({ ...task, originalIndex: index }))
+        .filter(task => progress.mistakes.includes(task.originalIndex))
+  }
+
+  return allTasks.map((task, index) => ({ ...task, originalIndex: index }))
+})
+
 const progressPercent = computed(() => {
   if (!tasks.value.length) return 0;
   return ((current.value + (finished.value ? 1 : 0)) / tasks.value.length) * 100
@@ -168,8 +188,10 @@ const generateAnswerOptions = (correctAnswer) => {
 const setupCurrentQuestion = () => {
   feedback.value = null;
   isChecked.value = false;
-  const task = tasks.value[current.value];
-  generateAnswerOptions(task.answer);
+  if (tasks.value.length > 0) {
+    const task = tasks.value[current.value];
+    generateAnswerOptions(task.answer);
+  }
 }
 
 const check = (selectedAnswer) => {
@@ -179,7 +201,13 @@ const check = (selectedAnswer) => {
   const isCorrect = selectedAnswer === task.answer
   feedback.value = {isCorrect, selected: selectedAnswer};
   isChecked.value = true
-  if (isCorrect) correctAnswers.value += 1
+
+  if (isCorrect) {
+    correctAnswers.value += 1
+  } else {
+    // Сохраняем оригинальный индекс, чтобы потом отфильтровать из всего массива
+    sessionMistakes.value.push(task.originalIndex)
+  }
 }
 
 const next = async () => {
@@ -188,9 +216,8 @@ const next = async () => {
     setupCurrentQuestion();
   } else {
     finished.value = true
-    if (correctAnswers.value === tasks.value.length) {
-      await thematic.addCompletedModule(thematic.selectedLevel.level, thematic.selectedModule.id)
-    }
+    // Сохраняем прогресс только в конце!
+    await thematic.saveModuleAttempt(thematic.selectedLevel.level, thematic.selectedModule.id, sessionMistakes.value)
   }
 }
 
@@ -216,6 +243,7 @@ const restartModule = () => {
   correctAnswers.value = 0
   current.value = 0
   finished.value = false
+  sessionMistakes.value = []
   setupCurrentQuestion()
 }
 
@@ -242,8 +270,7 @@ onUnmounted(() => {
 <style scoped>
 .session-page {
   font-family: "Nunito", sans-serif;
-  height: 100vh;
-  height: 100dvh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   background: transparent;
@@ -290,17 +317,17 @@ onUnmounted(() => {
   border-radius: 20px;
   border: none;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-  width: 100%;
-  max-width: 320px;
+  width: 90%;
+  max-width: 380px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.modal-icon {
-  font-size: 40px;
-  margin-bottom: 8px;
+
+.modal-icon-item {
+   width: 170px;
 }
 
 .modal-title {
@@ -329,8 +356,7 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 16px;
-  padding-top: calc(env(safe-area-inset-top) + 16px);
+  padding: 5px 10px;
   background: transparent;
 }
 
@@ -378,7 +404,7 @@ onUnmounted(() => {
 .progress-text {
   font-weight: 900;
   color: var(--titleColor);
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .quiz-content {
@@ -407,10 +433,11 @@ onUnmounted(() => {
 }
 
 .question-card {
+  background: #ffffff;
   border-radius: 20px;
   border: none;
   padding: 24px 16px;
-
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   margin-bottom: 24px;
   display: flex;
   flex-direction: column;
@@ -430,7 +457,7 @@ onUnmounted(() => {
 .question-text {
   font-size: 24px;
   font-weight: 900;
-  color: var(--titleColor);
+  color: #4c1d95;
   text-align: center;
   margin: 0;
   line-height: 1.3;
@@ -450,7 +477,7 @@ onUnmounted(() => {
 .option-pill {
   width: 100%;
   padding: 16px 8px;
-  background: #c7d2e0;
+  background: #bfdbfe;
   border: none;
   border-radius: 16px;
   box-shadow: 0 4px 0 #3b82f6;

@@ -1,7 +1,7 @@
 <template>
   <div class="uid__container">
     <template v-if="!isMobile">
-      <div>
+      <div class="lands__container">
         <VLands/>
       </div>
       <div class="stats__wrapper">
@@ -11,8 +11,9 @@
     </template>
     <template v-else>
       <nav class="mobile-nav" role="tablist" aria-label="Статистика и прогресс">
+        <div class="sliding-bg" :style="{ transform: `translateX(${activeIndex * 100}%)` }"></div>
         <button
-            v-for="tab in tabs"
+            v-for="(tab, index) in tabs"
             :key="tab.id"
             class="mobile-nav__btn"
             :class="{ 'mobile-nav__btn--active': activeTabId === tab.id }"
@@ -20,7 +21,6 @@
             @click="setTab(tab.id)"
         >
           <img class="tab__icon" :src="tab.icon" :alt="tab.alt">
-          <div class="tab__label">{{ tab.label }}</div>
         </button>
       </nav>
       <div class="mobile-panel" role="tabpanel">
@@ -51,8 +51,10 @@ const tabs = [
 ]
 
 const activeTabId = ref(tabs[0].id)
-const currentTab = computed(() => tabs.find(t => t.id === activeTabId.value) || tabs[0])
+const currentTab = computed(() => tabs.find(tab => tab.id === activeTabId.value) || tabs[0])
 const currentComponent = computed(() => currentTab.value.component)
+
+const activeIndex = computed(() => tabs.findIndex(tab => tab.id === activeTabId.value))
 
 function setTab(id) {
   activeTabId.value = id
@@ -77,18 +79,19 @@ onBeforeUnmount(() => {
   if (mql.removeEventListener) mql.removeEventListener('change', updateIsMobile)
   else mql.removeListener(updateIsMobile)
 })
-
-
 </script>
 
 <style scoped>
-.tab__icon {
-  width: 47px;
-  margin-right: 5px;
+
+* {
+  box-sizing: border-box;
 }
 
-.tab__label {
-  color: var(--titleColor);
+.tab__icon {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .uid__container {
@@ -98,7 +101,7 @@ onBeforeUnmount(() => {
   height: 100dvh;
   min-height: 0;
   align-items: stretch;
-  gap: 10px;
+  gap: 6px;
 }
 
 .lands-container {
@@ -123,34 +126,10 @@ onBeforeUnmount(() => {
   max-height: 100vh;
   overflow: auto;
   scrollbar-width: none;
-  -ms-overflow-style: none;
 }
 
-.stats__wrapper::-webkit-scrollbar {
-  display: none;
-}
-
-.stats__wrapper > * {
-  flex: 0 0 auto;
-}
-
-.stats__wrapper::-webkit-scrollbar {
-  width: 6px;
-}
-
-.stats__wrapper::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.stats__wrapper::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-}
-
-@media (max-width: 660px) {
-  .tab__label {
-    display: none;
-  }
+.lands__container {
+  height: 100vh;
 }
 
 @media (max-width: 1023px) {
@@ -164,59 +143,85 @@ onBeforeUnmount(() => {
     display: flex;
     flex-direction: column;
     margin-bottom: 0;
-    height: calc(100dvh - 170px);
-    overflow-y: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  .uid__container::-webkit-scrollbar {
-    display: none;
+    height: 100%;
+    flex: 1;
+    max-height: calc(100dvh - 100px);
+    overflow: hidden;
   }
 
   .mobile-nav {
     display: flex;
+    position: relative;
     justify-content: space-between;
-    gap: 10px;
-    padding: 4px;
+    background: var(--tabBg);
+    border-radius: 40px;
+    padding: 6px;
+    border: 3px solid #2a2a2a;
+    box-shadow: var(--boxShadowMobile);
+    margin: 0 4px;
+    z-index: 1;
+    flex-shrink: 0;
+  }
+
+  .sliding-bg {
+    position: absolute;
+    top: 6px;
+    bottom: 6px;
+    left: 6px;
+    width: calc(33.33% - 4px);
+    background: var(--tabsSlideBg);
+    box-shadow: var(--tabSlideBoxShadow);
+    border-radius: 30px;
+    transition: transform 0.4s cubic-bezier(0.34, 1.35, 0.64, 1);
     z-index: 1;
   }
 
   .mobile-nav__btn {
     border: none;
     background: none;
-    font-weight: 600;
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30%;
-    font-size: 16px;
+    padding: 8px 0;
     cursor: pointer;
-    transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.12s ease;
+    position: relative;
+    z-index: 2;
+    -webkit-tap-highlight-color: transparent;
   }
 
-  .mobile-nav__btn--active {
-    background: #eeeaea;
-    border: 3px solid var(--border);
-    box-shadow: 3px 3px 0 var(--footerBg);
-    border-radius: 10px;
+  .mobile-nav__btn--active .tab__icon {
+    transform: scale(1.07);
   }
 
   .mobile-panel {
     flex: 1;
     min-height: 0;
     display: flex;
+    position: relative;
     overflow: hidden;
+  }
+
+  .mobile-panel::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: var(--bgOpacity);
+    pointer-events: none;
+    z-index: 5;
   }
 
   .mobile-content {
     flex: 1;
     min-height: 0;
-    display: flex;
+    display: block;
     width: 100%;
-    overflow: auto;
-    padding: 4px;
-    margin-top: 5px;
+    overflow-y: auto;
+    padding: 8px;
+    padding-bottom: 70px;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
@@ -226,9 +231,7 @@ onBeforeUnmount(() => {
   }
 
   .mobile-content > * {
-    flex: 1;
     width: 100%;
-    display: block;
   }
 }
 

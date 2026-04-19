@@ -354,7 +354,7 @@ const getOptionClass = (opt) => {
   border: 3px solid #1f2937;
   border-radius: 16px;
   box-shadow: 6px 6px 0 #0f172a;
-  padding: 20px;
+  padding: 15px;
   margin-bottom: 10px;
 }
 
@@ -383,7 +383,6 @@ const getOptionClass = (opt) => {
   font-size: 1.05rem;
   margin-bottom: 1rem;
   line-height: 1.6;
-  padding-left: 10px;
 }
 
 .verbs__example {
@@ -429,7 +428,7 @@ const getOptionClass = (opt) => {
 
 .verbs__table th, .verbs__table td {
   border: 2px solid #1f2937;
-  padding: .5rem .6rem;
+  padding: .5rem .2rem;
   text-align: left
 }
 

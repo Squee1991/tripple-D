@@ -6,6 +6,8 @@ import { useI18n } from 'vue-i18n'
 import SoundBtn from '../../src/components/soundBtn.vue'
 import TipsModal from '../../src/components/V-tips.vue'
 import { topics } from '@/utils/descriptionImages.js'
+import { VoiceRecorder } from 'capacitor-voice-recorder'
+import { getFunctions, httpsCallable } from 'firebase/functions'
 
 useSeoMeta({
   robots: 'noindex, nofollow'
@@ -15,10 +17,7 @@ const router = useRouter()
 const { t, locale } = useI18n()
 
 const sessionConfig = useState('sessionConfig')
-
-const selectedTopic = computed(() => {
-  return topics.find(t => t.id === sessionConfig.value?.topicId)
-})
+const selectedTopic = computed(() => topics.find(t => t.id === sessionConfig.value?.topicId))
 const selectedLevel = computed(() => sessionConfig.value?.level || 'A1')
 const activeTasks = computed(() => selectedTopic.value ? selectedTopic.value.tasks : [])
 
@@ -32,10 +31,8 @@ const showTips = ref(false)
 
 const isRecording = ref(false)
 const isProcessing = ref(false)
-let mediaRecorder = null
-let audioChunks = []
 
-
+const functions = getFunctions(undefined, 'us-central1')
 
 onMounted(() => {
   if (!sessionConfig.value?.topicId || !selectedTopic.value) {
@@ -61,68 +58,120 @@ const progressPercentage = computed(() => (!activeTasks.value.length) ? 0 : ((cu
 const startRecording = async () => {
   try {
     err.value = ''
-    const stream = await navigator.mediaDevices.getUserMedia({audio: true})
-    audioChunks = []
-    let mimeType = 'audio/webm'
-    if (MediaRecorder.isTypeSupported('audio/webm;codecs=opus')) {
-      mimeType = 'audio/webm;codecs=opus'
-    }
-
-    mediaRecorder = new MediaRecorder(stream, {mimeType})
-    mediaRecorder.ondataavailable = (event) => {
-      if (event.data.size > 0) audioChunks.push(event.data)
-    }
-
-    mediaRecorder.onstop = async () => {
-      isProcessing.value = true
-      isRecording.value = false
-      stream.getTracks().forEach(track => track.stop())
-      try {
-        const audioBlob = new Blob(audioChunks, {type: mimeType})
-        const reader = new FileReader()
-        reader.readAsDataURL(audioBlob)
-        reader.onloadend = async () => {
-          const base64String = reader.result
-          try {
-            const res = await $fetch('/api/whisper', {
-              method: 'POST',
-              body: {audioContent: base64String, lang: 'de'}
-            })
-            if (res && res.text && res.text.trim()) {
-              await sendMessage(res.text)
-            } else {
-              err.value = "Не удалось распознать речь (пустой ответ)"
-            }
-          } catch (serverErr) {
-            console.error(serverErr)
-            err.value = "Ошибка сервера: " + (serverErr.data?.error || serverErr.message)
-          } finally {
-            isProcessing.value = false
-          }
-        }
-      } catch (e) {
-        console.error(e)
-        err.value = "Ошибка обработки аудио"
-        isProcessing.value = false
+    const hasPermission = await VoiceRecorder.hasAudioRecordingPermission()
+    if (!hasPermission.value) {
+      const request = await VoiceRecorder.requestAudioRecordingPermission()
+      if (!request.value) {
+        err.value = "Микрофон запрещен. Включите его в настройках."
+        return
       }
     }
-    mediaRecorder.start()
+    await VoiceRecorder.startRecording()
     isRecording.value = true
   } catch (e) {
-    console.error(e)
-    err.value = "Нет доступа к микрофону"
+    err.value = "Ошибка микрофона: " + e.message
   }
 }
 
-const stopRecording = () => {
-  if (mediaRecorder && mediaRecorder.state !== 'inactive') {
-    mediaRecorder.stop()
+const stopRecording = async () => {
+  if (!isRecording.value) return
+  try {
+    isProcessing.value = true
+    isRecording.value = false
+    err.value = ''
+
+    const result = await VoiceRecorder.stopRecording()
+    if (result.value && result.value.recordDataBase64) {
+      const mime = result.value.mimeType || 'audio/aac'
+      const base64String = `data:${mime};base64,${result.value.recordDataBase64}`
+
+      const whisperTranscribe = httpsCallable(functions, 'whisperTranscribe')
+      const res = await whisperTranscribe({ audioContent: base64String, lang: 'de' })
+
+      if (res.data && res.data.text && res.data.text.trim()) {
+        await sendMessage(res.data.text)
+      } else {
+        err.value = "Whisper вернул пустоту."
+      }
+    }
+  } catch (e) {
+    err.value = `ОШИБКА RECORD: [${e.code || 'no-code'}] ${e.message}`
+  } finally {
+    isProcessing.value = false
   }
 }
 
 const toggleRecording = () => {
   if (isRecording.value) stopRecording()
   else startRecording()
+}
+
+async function urlToBase64(url) {
+  try {
+    const response = await fetch(url)
+    const blob = await response.blob()
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader()
+      reader.onloadend = () => resolve(reader.result)
+      reader.onerror = reject
+      reader.readAsDataURL(blob)
+    })
+  } catch (e) {
+    return null
+  }
+}
+
+async function sendMessage(voiceText = null) {
+  const textToSend = (typeof voiceText === 'string') ? voiceText : input.value
+  if (!textToSend || !textToSend.trim()) return
+
+  isLoading.value = true
+  err.value = ''
+  messages.value.push({ role: 'user', content: textToSend })
+  input.value = ''
+
+  await nextTick()
+  const container = document.querySelector('.messages-scroll')
+  if (container) container.lastElementChild?.scrollIntoView({ behavior: "smooth" })
+
+  try {
+    const task = activeTasks.value[currentTaskIndex.value]
+    const reference = task?.descriptions?.[selectedLevel.value] || ''
+    let finalImageUrl = task.image
+
+    // Превращаем картинку в Base64 для передачи в облако
+    if (finalImageUrl && (!finalImageUrl.startsWith('http') || finalImageUrl.includes('localhost'))) {
+      const base64 = await urlToBase64(finalImageUrl)
+      if (base64) finalImageUrl = base64
+    }
+
+    const visionAnalyze = httpsCallable(functions, 'visionAnalyze')
+    const result = await visionAnalyze({
+      referenceDescription: reference,
+      userLevel: selectedLevel.value,
+      userMessage: textToSend,
+      userLocale: locale.value,
+      imageUrl: finalImageUrl
+    })
+
+    const res = result.data
+    if (res && res.data) {
+      messages.value.push({
+        role: 'assistant', isStructured: true,
+        score: res.data.score || 0,
+        feedback: res.data.feedback || '',
+        suggestedAnswer: res.data.suggestedAnswer || '',
+        keyCorrections: res.data.keyCorrections || []
+      })
+      isAnswered.value = true
+    } else {
+      err.value = "Ошибка анализа. Попробуйте еще раз."
+    }
+  } catch (e) {
+    err.value = `ОШИБКА VISION: [${e.code || 'no-code'}] ${e.message}`
+  } finally {
+    isLoading.value = false
+  }
 }
 
 function nextTask() {
@@ -137,77 +186,6 @@ function getScoreClass(score) {
   if (score >= 8) return 'score-high';
   if (score >= 5) return 'score-medium';
   return 'score-low'
-}
-
-async function urlToBase64(url) {
-  try {
-    const response = await fetch(url)
-    const blob = await response.blob()
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader()
-      reader.onloadend = () => resolve(reader.result)
-      reader.onerror = reject
-      reader.readAsDataURL(blob)
-    })
-  } catch (e) {
-    console.error("Ошибка картинки:", e)
-    return null
-  }
-}
-
-async function sendMessage(voiceText = null) {
-  const textToSend = (typeof voiceText === 'string') ? voiceText : input.value
-
-  if (!textToSend || !textToSend.trim()) return
-
-  isLoading.value = true
-  err.value = ''
-  messages.value.push({role: 'user', content: textToSend})
-  input.value = ''
-  await nextTick()
-  const container = document.querySelector('.messages-scroll')
-  if (container) container.lastElementChild?.scrollIntoView({behavior: "smooth"})
-
-  try {
-    const task = activeTasks.value[currentTaskIndex.value]
-    const reference = task?.descriptions?.[selectedLevel.value] || ''
-    let finalImageUrl = task.image
-    if (finalImageUrl && !finalImageUrl.startsWith('http')) {
-      const base64 = await urlToBase64(finalImageUrl)
-      if (base64) finalImageUrl = base64
-    }
-
-    const res = await $fetch('/api/groq-vision', {
-      method: 'POST',
-      body: {
-        referenceDescription: reference,
-        userLevel: selectedLevel.value,
-        userMessage: textToSend,
-        userLocale: locale.value,
-        imageUrl: finalImageUrl
-      }
-    })
-
-    if (res.data) {
-      messages.value.push({
-        role: 'assistant', isStructured: true,
-        score: res.data.score || 0,
-        feedback: res.data.feedback || '',
-        suggestedAnswer: res.data.suggestedAnswer || '',
-        keyCorrections: res.data.keyCorrections || []
-      })
-      isAnswered.value = true
-    } else if (res.text) {
-      messages.value.push({role: 'assistant', content: res.text, isStructured: false})
-      isAnswered.value = true
-    } else if (res.error) {
-      err.value = "Error: " + res.error
-    }
-  } catch (e) {
-    err.value = "Network Error: " + e.message
-  } finally {
-    isLoading.value = false
-  }
 }
 
 function goBack() {
@@ -330,7 +308,6 @@ function goBack() {
 </template>
 
 <style scoped>
-
 .page-container {
   font-family: "Nunito", sans-serif;
   display: flex;

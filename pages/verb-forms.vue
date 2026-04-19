@@ -228,11 +228,12 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
 .scroll-area {
   flex: 1;
   overflow-y: auto;
-  padding: 2px;
+  padding: 8px;
 }
 
 .scroll-area::-webkit-scrollbar {
   width: 5px;
+  display: none;
 }
 
 .scroll-area::-webkit-scrollbar-track {
@@ -252,16 +253,11 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
   color: #4299e1;
 }
 
-.verbs__header {
-
-}
-
 .verb-card {
   border-radius: 25px;
   border: 4px solid #e2e8f0;
   padding: 15px;
   margin-bottom: 10px;
-  box-shadow: 0 8px 0 #e2e8f0;
 }
 
 .card-hero {
@@ -269,7 +265,6 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border-bottom: 2px dashed #e2e8f0;
   padding-bottom: 15px;
   margin-bottom: 20px;
 }
@@ -314,17 +309,12 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
 }
 
 .header__inner {
-  padding: 15px;
+  padding: 5px 10px 10px 10px;
   display: flex;
   align-items: center;
-  position: sticky;
   width: 100%;
-  top: 0;
-  left: 0;
-  background: #6358ac;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
   margin-bottom: 5px;
+
 }
 
 .type-tag.weak {
@@ -368,9 +358,7 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
   align-items: center;
   gap: 8px;
   margin-bottom: 8px;
-  padding: 2px 10px;
   border-radius: 12px;
-  border: 1px solid #edf2f7;
 }
 
 .p-label {
@@ -393,7 +381,6 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  border-bottom: 2px dashed #e2e8f0;
   padding-bottom: 15px;
   margin-bottom: 10px;
 }
@@ -462,11 +449,6 @@ watch([searchQuery, selectedType, itemsPerPage], () => currentPage.value = 1)
 @media (max-width: 1023px) {
   .tenses-layout {
     grid-template-columns: 1fr;
-  }
-
-  .verb-card {
-    border-width: 3px;
-    box-shadow: 0 6px 0 #e2e8f0;
   }
 }
 

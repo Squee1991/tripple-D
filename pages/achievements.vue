@@ -8,9 +8,12 @@
         :text="infoAch.text"
     />
     <div class="sidebar">
-      <button class="btn__back" @click="backToMainPage">{{ t('chooseTheme.btnBack') }}</button>
+      <div class="header__title">
+        <VBackBtn/>
+        <!--          <h3 class="sidebar-title">{{ t('categoryAchievments.categoryLabel') }}</h3>-->
+        <h3 class="sidebar-title">{{ t('Достижения') }}</h3>
+      </div>
       <nav class="nav__sidebar" ref="scrollRef">
-        <h3 class="sidebar-title">{{ t('categoryAchievments.categoryLabel') }}</h3>
         <ul class="achievement-categories">
           <template v-for="category in achievementCategories" :key="category.id">
             <li
@@ -53,13 +56,12 @@
     <div class="mobile-backdrop" @click="closeContent"/>
     <main class="content-area" :class="{'open': isContentOpen}">
       <header class="content-header">
+        <button class="content-close" @click="closeContent" aria-label="Close achievements panel">✖</button>
+<!--        <h1>{{ t('categoryAchievments.achievmentAreaLabel') }}</h1>-->
         <h1>{{ t('categoryAchievments.achievmentAreaLabel') }}</h1>
         <div class="content-header-actions">
           <button :title="t('hoverTitle.ach')" @click="showInfo" class="header__icon-info">
             <img :src="Quest" alt="ques_icon">
-          </button>
-          <button class="content-close" @click="closeContent" aria-label="Close achievements panel">
-            ✖
           </button>
         </div>
       </header>
@@ -133,6 +135,7 @@ import Quest from '../assets/images/question.svg'
 import {useRouter} from 'vue-router'
 import {useAchievementStore} from '../store/achievementStore.js'
 import {useSeoMeta} from "#imports";
+import VBackBtn from "~/src/components/V-back-btn.vue";
 
 const scrollRef = ref(null)
 const {$SimpleBar} = useNuxtApp()
@@ -147,9 +150,6 @@ const isContentOpen = ref(false)
 useSeoMeta({
   robots: 'noindex, nofollow'
 })
-const backToMainPage = () => {
-  router.push('/')
-}
 
 const showInfo = () => {
   achInfo.value = true
@@ -576,7 +576,7 @@ const handleCategoryClick = (category) => {
 <style scoped>
 .achievements-page-container {
   display: flex;
-  height: 100vh;
+  height: 100%;
   padding: 1rem;
   gap: 10px;
   font-family: "Nunito", sans-serif;
@@ -601,16 +601,16 @@ const handleCategoryClick = (category) => {
   cursor: pointer;
   background: none;
   border: none;
+  padding: 6px;
 }
 
 .sidebar {
   min-width: 400px;
   max-width: 400px;
-  background-color: #ffffff;
-  color: #1e1e1e;
-  padding: 1.5rem;
+
+  color: var(--titleColor);
+  padding: 0 10px;
   border-radius: 24px;
-  border: 3px solid #1e1e1e;
   box-shadow: 8px 8px 0px #1e1e1e;
   display: flex;
   flex-direction: column;
@@ -635,17 +635,22 @@ const handleCategoryClick = (category) => {
   font-weight: 600;
 }
 
-.btn__back:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0px #1e1e1e;
+.header__title {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px 15px 10px;
+  width: 100%;
+  border-bottom: 1px solid #1e1e1e;
+  margin-bottom: 15px;
+  border-radius: 5px;
 }
 
 .sidebar-title {
+  margin-left: 15px;
   text-align: center;
-  margin-bottom: 1.4rem;
-  color: #1e1e1e;
+  color: var(--titleColor);
   font-family: "Nunito", sans-serif;
-  font-size: 1.7rem;
+  font-size: 22px;
   flex-shrink: 0;
 }
 
@@ -661,31 +666,25 @@ const handleCategoryClick = (category) => {
 }
 
 .category-item, .submenu-item {
-  padding: 12px 1.25rem;
+  padding: 10px;
   margin-bottom: 10px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 15px;
-  font-size: 1.1rem;
-  border-radius: 16px;
+  font-size: 1rem;
+  border-radius: 5px;
   transition: background-color 0.2s ease, transform 0.2s ease;
-  border: 2px solid transparent;
+  border-bottom: 2px solid #716969;
   font-weight: 600;
 }
 
 .category-item:hover, .submenu-item:hover {
-  background-color: #fef8e4;
   border-color: #1e1e1e;
 }
 
-.category-item.active {
-  background-color: #4ade80;
-  color: #1e1e1e;
-  border-color: #1e1e1e;
-  box-shadow: 4px 4px 0px #1e1e1e;
-}
+
 
 .submenu-item.active {
   background-color: #60a5fa;
@@ -767,7 +766,7 @@ const handleCategoryClick = (category) => {
 .content-area {
   flex-grow: 1;
   padding: 2rem;
-  background-color: #60a5fa;
+  background-color: var(--bg);
   border-radius: 24px;
   border: 3px solid #1e1e1e;
   box-shadow: 8px 8px 0px #1e1e1e;
@@ -791,7 +790,7 @@ const handleCategoryClick = (category) => {
 
 .content-header h1 {
   font-size: 2.5em;
-  color: #1e1e1e;
+  color: var(--titleColor);
   margin: 0;
   font-family: "Nunito", sans-serif;
 }
@@ -803,7 +802,7 @@ const handleCategoryClick = (category) => {
 }
 
 .content-close {
-  border: 3px solid #1e1e1e;
+  border: 2px solid #1e1e1e;
   background: #fff;
   border-radius: 12px;
   padding: 8px 12px;
@@ -865,7 +864,7 @@ const handleCategoryClick = (category) => {
 
   .content-area {
     position: fixed;
-    padding: 10px;
+    padding: 0 10px;
     top: 0;
     right: 0;
     bottom: 0;

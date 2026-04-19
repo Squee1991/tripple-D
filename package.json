@@ -33,6 +33,7 @@
     "@revenuecat/purchases-capacitor-ui": "^12.3.2",
     "@stripe/stripe-js": "7.7.0",
     "@vueuse/firebase": "13.1.0",
+    "capacitor-voice-recorder": "^7.0.6",
     "dotenv": "17.2.3",
     "firebase": "11.6.0",
     "firebase-admin": "13.4.0",

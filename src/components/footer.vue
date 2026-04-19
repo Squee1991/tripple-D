@@ -1,236 +1,120 @@
 <template>
-  <footer class="footer" role="contentinfo">
+  <footer v-if="authStore.uid" class="footer" role="contentinfo">
     <div class="footer__container">
-      <div class="footer__social">
-            <ul class="nav">
-              <li v-for="item in footerNav" :key="item.id" class="footer__social-item">
-                <NuxtLink class="footer__link" :to="item.path">
-                  <img class="footer__nav-icon"
-                       :class="{'home' : item.id === 'home'}"
-                       :src="item.icon" :alt="item.alt">
-                </NuxtLink>
-              </li>
-            </ul>
-<!--        <div class="social__item" @click="toDiscord" role="button" aria-label="Discord" tabindex="0">-->
-<!--          <div class="icon">-->
-<!--            <svg enable-background="new 0 0 24 24" height="32" viewBox="0 0 24 24" width="32"-->
-<!--                 xmlns="http://www.w3.org/2000/svg" fill="black">-->
-<!--              <g>-->
-<!--                <path-->
-<!--                    d="m3.58 21.196h14.259l-.681-2.205c.101.088 5.842 5.009 5.842 5.009v-21.525c-.068-1.338-1.22-2.475-2.648-2.475l-16.767.003c-1.427 0-2.585 1.139-2.585 2.477v16.24c0 1.411 1.156 2.476 2.58 2.476zm10.548-15.513-.033.012.012-.012zm-7.631 1.269c1.833-1.334 3.532-1.27 3.532-1.27l.137.135c-2.243.535-3.26 1.537-3.26 1.537.104-.022 4.633-2.635 10.121.066 0 0-1.019-.937-3.124-1.537l.186-.183c.291.001 1.831.055 3.479 1.26 0 0 1.844 3.15 1.844 7.02-.061-.074-1.144 1.666-3.931 1.726 0 0-.472-.534-.808-1 1.63-.468 2.24-1.404 2.24-1.404-3.173 1.998-5.954 1.686-9.281.336-.031 0-.045-.014-.061-.03v-.006c-.016-.015-.03-.03-.061-.03h-.06c-.204-.134-.34-.2-.34-.2s.609.936 2.174 1.404c-.411.469-.818 1.002-.818 1.002-2.786-.066-3.802-1.806-3.802-1.806 0-3.876 1.833-7.02 1.833-7.02z"/>-->
-<!--                <path-->
-<!--                    d="m14.308 12.771c.711 0 1.29-.6 1.29-1.34 0-.735-.576-1.335-1.29-1.335v.003c-.708 0-1.288.598-1.29 1.338 0 .734.579 1.334 1.29 1.334z"/>-->
-<!--                <path-->
-<!--                    d="m9.69 12.771c.711 0 1.29-.6 1.29-1.34 0-.735-.575-1.335-1.286-1.335l-.004.003c-.711 0-1.29.598-1.29 1.338 0 .734.579 1.334 1.29 1.334z"-->
-<!--                    fill=""/>-->
-<!--              </g>-->
-<!--            </svg>-->
-<!--          </div>-->
-<!--          <span>Discord</span>-->
-<!--        </div>-->
-<!--        <a href="https://t.me/skillupgerman1" target="_blank" rel="noopener" class="social__item" aria-label="Telegram">-->
-<!--          <div class="icon">-->
-<!--            <svg height="32" viewBox="0 0 176 176" width="32" xmlns="http://www.w3.org/2000/svg" fill="currentColor">-->
-<!--              <g data-name="Layer 2">-->
-<!--                <g id="telegram">-->
-<!--                  <path fill="white"-->
-<!--                        d="m123.33 62.35-44.63 36.48-2.1 1.72a2.27 2.27 0 0 0 -.84 1.48l-.47 3.88-1.29 10.9a.5.5 0 0 1 -1 .09l-3.63-10.9-3.75-11.15a2.24 2.24 0 0 1 1.08-2.66l46.44-26.62 8.74-5c1.27-.74 2.57.86 1.45 1.78z"/>-->
-<!--                  <path-->
-<!--                      d="m152 0h-128a24 24 0 0 0 -24 24v128a24 24 0 0 0 24 24h128a24 24 0 0 0 24-24v-128a24 24 0 0 0 -24-24zm-9.11 50.94-17.18 75.91c-.81 3.56-5.33 5.17-8.5 3l-25.94-17.6-13.21 12.49a4.54 4.54 0 0 1 -7.32-1.62l-4.77-14-4.77-14-25.57-7a3.32 3.32 0 0 1 -.29-6.41l98.78-35.59 1.82-.65c3.83-1.34 7.79 1.76 6.95 5.47z"/>-->
-<!--                </g>-->
-<!--              </g>-->
-<!--            </svg>-->
-<!--          </div>-->
-<!--          <span>Telegram</span>-->
-<!--        </a>-->
-<!--        <a href="https://www.tiktok.com/@skillupgerman.com?_r=1&_t=ZN-92sFFUciU8k" target="_blank" rel="noopener"-->
-<!--           class="social__item" aria-label="TikTok">-->
-<!--          <div class="icon">-->
-<!--            <svg height="32" viewBox="0 0 256 256" width="32" xmlns="http://www.w3.org/2000/svg">-->
-<!--              <path fill="currentColor"-->
-<!--                    d="M180.3 72.4c-9.7-5.8-16.7-15.1-19.5-26.1v-3.6h-23.4v110.4c0 12.9-10.5 23.4-23.4 23.4S90.6 166 90.6 153.1s10.5-23.4 23.4-23.4c2.1 0 4.3.3 6.3.8V104c-2.1-.2-4.2-.3-6.3-.3-25.6 0-46.3 20.8-46.3 46.3S88.4 196.3 114 196.3s46.3-20.8 46.3-46.3v-54.9c8.9 6.5 19.5 10.7 30.9 11.8v-23.4c-4.1-.5-8.1-1.7-11.9-3.5z"/>-->
-<!--            </svg>-->
-<!--          </div>-->
-<!--          <span>TikTok</span>-->
-<!--        </a>-->
-<!--        <a href="https://www.instagram.com/skillupgerman?igsh=OWQxbmtvaHk3bTR1&utm_source=qr" target="_blank"-->
-<!--           rel="noopener" class="social__item" aria-label="TikTok">-->
-<!--          <div class="icon">-->
-<!--            <svg height="32" viewBox="0 0 512 512" width="32" xmlns="http://www.w3.org/2000/svg" fill="currentColor">-->
-<!--              <path-->
-<!--                  d="m301 256c0 24.851562-20.148438 45-45 45s-45-20.148438-45-45 20.148438-45 45-45 45 20.148438 45 45zm0 0"/>-->
-<!--              <path-->
-<!--                  d="m332 120h-152c-33.085938 0-60 26.914062-60 60v152c0 33.085938 26.914062 60 60 60h152c33.085938 0 60-26.914062 60-60v-152c0-33.085938-26.914062-60-60-60zm-76 211c-41.355469 0-75-33.644531-75-75s33.644531-75 75-75 75 33.644531 75 75-33.644531 75-75 75zm86-146c-8.285156 0-15-6.714844-15-15s6.714844-15 15-15 15 6.714844 15 15-6.714844 15-15 15zm0 0"/>-->
-<!--              <path-->
-<!--                  d="m377 0h-242c-74.4375 0-135 60.5625-135 135v242c0 74.4375 60.5625 135 135 135h242c74.4375 0 135-60.5625 135-135v-242c0-74.4375-60.5625-135-135-135zm45 332c0 49.625-40.375 90-90 90h-152c-49.625 0-90-40.375-90-90v-152c0-49.625 40.375-90 90-90h152c49.625 0 90 40.375 90 90zm0 0"/>-->
-<!--            </svg>-->
-<!--          </div>-->
-<!--          <span>Instagram</span>-->
-<!--        </a>-->
-      </div>
-<!--      <nav class="footer__nav" aria-label="Footer navigation">-->
-<!--        <ul class="nav__list">-->
-<!--          <li v-for="item in navItems" :key="item.id" class="nav__item">-->
-<!--            <NuxtLink :to="item.url" class="nav__link" :class="{ 'is-active': isActive(item.url) }">-->
-<!--              {{ item.label }}-->
-<!--            </NuxtLink>-->
-<!--          </li>-->
-<!--        </ul>-->
-<!--      </nav>-->
+      <nav class="nav">
+        <div
+            class="sliding-bg"
+            :style="{
+              transform: `translateX(${activeIndex * 100}%)`,
+              opacity: activeIndex === -1 ? 0 : 1
+            }"
+        ></div>
+
+        <NuxtLink
+            v-for="(item, index) in footerNav"
+            :key="item.id"
+            :to="item.path"
+            class="nav__item"
+            :class="{ 'is-active': activeIndex === index }"
+        >
+          <img class="nav__icon" :src="item.icon" :alt="item.alt">
+        </NuxtLink>
+      </nav>
     </div>
   </footer>
 </template>
 
 <script setup>
+import { computed } from 'vue'
+import { useRoute } from 'vue-router'
+import { userAuthStore } from "../../store/authStore.js";
+
 import Home from '../../assets/images/app-nav-icons/home.svg'
 import Events from '../../assets/images/app-nav-icons/events.svg'
 import Game from '../../assets/images/app-nav-icons/game.svg'
-import Exams from '../../assets/images/app-nav-icons/exams.svg'
+import Cabinet from '../../assets/images/app-nav-icons/cabinet.svg'
 import Study from '../../assets/images/app-nav-icons/study.svg'
 
+const authStore = userAuthStore()
+const route = useRoute()
+
 const footerNav = [
-  {id: 'study', path: '/study', icon: Study, alt: 'Study'},
-  {id: 'game', path: 'play', icon: Game, alt: 'Game'},
-  {id: 'home', path: '/', icon: Home, alt: 'Home'},
-  {id: 'exams', path: 'exams', icon: Exams, alt: 'Exams'},
-  {id: 'events', path: '/events', icon: Events, alt: 'Events'},
+  { id: 'study', path: '/study', icon: Study, alt: 'Study' },
+  { id: 'game', path: '/play', icon: Game, alt: 'Game' },
+  { id: 'home', path: '/', icon: Home, alt: 'Home' },
+  { id: 'events', path: '/events', icon: Events, alt: 'Events' },
+  { id: 'exams', path: '/cabinet', icon: Cabinet, alt: 'Exams' },
 ]
 
-// const navItems = computed(() => [
-//   ...(!authStore.uid
-//       ? [
-//         {id: 'about', label: t('footer.about'), url: '/info-about'},
-//         {id: 'contact', label: t('footer.contact'), url: '/support-request'},
-//         {id: 'privacy', label: t('footer.privacy'), url: '/privacy'},
-//         {id: 'terms', label: t('footer.terms'), url: '/terms'},
-//       ]
-//       : []),
-// ])
-
-// const isActive = (url) => route.path === url
-//
-// const toDiscord = () => {
-//   window.open('https://discord.gg/vguCtVprzY', '_blank', 'noopener')
-// }
-
-
+const activeIndex = computed(() => {
+  return footerNav.findIndex(item => {
+    if (item.path === '/') return route.path === '/'
+    return route.path.startsWith(item.path)
+  })
+})
 </script>
 
 <style scoped>
 
-.footer__nav-icon {
-  width: 42px;
+.footer {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 20px);
+  z-index: 100;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.footer__nav-icon.home {
-  width: 52px;
+.footer__container {
+  background: #1e1e1e;
+  border-radius: 40px;
+  padding: 8px;
+  box-shadow: var(--boxShadowMobile);
+  border: 3px solid #2a2a2a;
 }
 
 .nav {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: relative;
   width: 100%;
-  padding: 10px 25px;
+  align-items: center;
 }
 
-.footer__container {
-  position: fixed;
-  bottom: 0;
+.sliding-bg {
+  position: absolute;
+  top: 0;
   left: 0;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #2a2a2a;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  border-top: 3px solid #ffffff;
+  height: 100%;
+  width: 20%;
+  background: var(--tabsSlideBg);
+  border-radius: 30px;
+  transition: transform 0.4s cubic-bezier(0.34, 1.35, 0.64, 1), opacity 0.3s ease;
+  z-index: 1;
+  box-shadow: var(--tabSlideBoxShadow);
 }
 
-.footer__social {
-  width: 100%;
+.nav__item {
+  flex: 1;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
-}
-
-.social__item {
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 9px 0;
+  position: relative;
+  z-index: 2;
   text-decoration: none;
-  gap: 6px;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: .3px;
-  transition: .25s ease;
   cursor: pointer;
 }
 
-.social__item:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
+.nav__icon {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.social__item:focus-visible {
-  outline: 2px dashed #2e1b08;
-  outline-offset: 4px;
-}
-
-.icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #0f7aaf;
-}
-
-svg {
-  fill: white;
-}
-
-.social__item:nth-child(3) .icon svg {
-  background: #FFFFFF;
-  border-radius: 6px;
-  padding: 3px;
-  fill: #d7b77e;
-}
-
-.footer__nav {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.nav__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-}
-
-.nav__link {
-  display: inline-block;
-  padding: 8px 12px;
-  border-radius: 10px;
-  color: whitesmoke;
-  font-weight: 600;
-  font-family: "Nunito", sans-serif;
-}
-
-.nav__link:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 10px rgba(46, 27, 8, 0.15);
-}
-
-.nav__link.is-active {
-  background: #2e1b08;
-  color: #fff;
-  box-shadow: 0 6px 14px rgba(46, 27, 8, 0.25) inset, 0 4px 10px rgba(46, 27, 8, 0.2);
+.nav__item.is-active .nav__icon {
+  transform: translateY(-2px) scale(1.1);
 }
 
 </style>

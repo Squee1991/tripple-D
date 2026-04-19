@@ -78,40 +78,40 @@
       <div class="header-stats-wrapper">
         <VHeaderUserStats v-if="userAuth.uid" />
       </div>
-      <div class="header-right">
-        <div v-if="userAuth.name" class="header-user-wrapper">
-          <button
-              ref="userBtnRef"
-              class="header-user"
-              @click="router.push('cabinet')"
-              aria-haspopup="true"
-              :aria-expanded="menuOpen.toString()"
-              aria-controls="user-menu-dropdown"
-          >
-            <img class="header-user__avatar" :src="userAuth.avatarUrl" alt="User avatar"/>
-          </button>
-<!--          <div-->
-<!--              ref="dropdownRef"-->
-<!--              v-if="menuOpen"-->
-<!--              class="header-user__dropdown"-->
-<!--              id="user-menu-dropdown"-->
+<!--      <div class="header-right">-->
+<!--        <div v-if="userAuth.name" class="header-user-wrapper">-->
+<!--          <button-->
+<!--              ref="userBtnRef"-->
+<!--              class="header-user"-->
+<!--              @click="router.push('cabinet')"-->
+<!--              aria-haspopup="true"-->
+<!--              :aria-expanded="menuOpen.toString()"-->
+<!--              aria-controls="user-menu-dropdown"-->
 <!--          >-->
-<!--            <button-->
-<!--                v-for="item in menuActions"-->
-<!--                :key="item.id"-->
-<!--                class="header-user__dropdown-btn"-->
-<!--                @click.stop="item.action"-->
-<!--            >-->
-<!--              <img class="header-user__dropdown-icon" :src="item.icon" alt="Arrow_dropdown"/>-->
-<!--              <span class="header__drop-text">{{ t(item.label) }}</span>-->
-<!--            </button>-->
-<!--          </div>-->
-        </div>
-        <button v-else class="btn-login" @click="openAuth">
-          {{ t('auth.logIn') }}
-        </button>
-<!--        <BurgerMenu class="burger-button" v-model="isMobileMenuOpen"/>-->
-      </div>
+<!--            <img class="header-user__avatar" :src="userAuth.avatarUrl" alt="User avatar"/>-->
+<!--          </button>-->
+<!--&lt;!&ndash;          <div&ndash;&gt;-->
+<!--&lt;!&ndash;              ref="dropdownRef"&ndash;&gt;-->
+<!--&lt;!&ndash;              v-if="menuOpen"&ndash;&gt;-->
+<!--&lt;!&ndash;              class="header-user__dropdown"&ndash;&gt;-->
+<!--&lt;!&ndash;              id="user-menu-dropdown"&ndash;&gt;-->
+<!--&lt;!&ndash;          >&ndash;&gt;-->
+<!--&lt;!&ndash;            <button&ndash;&gt;-->
+<!--&lt;!&ndash;                v-for="item in menuActions"&ndash;&gt;-->
+<!--&lt;!&ndash;                :key="item.id"&ndash;&gt;-->
+<!--&lt;!&ndash;                class="header-user__dropdown-btn"&ndash;&gt;-->
+<!--&lt;!&ndash;                @click.stop="item.action"&ndash;&gt;-->
+<!--&lt;!&ndash;            >&ndash;&gt;-->
+<!--&lt;!&ndash;              <img class="header-user__dropdown-icon" :src="item.icon" alt="Arrow_dropdown"/>&ndash;&gt;-->
+<!--&lt;!&ndash;              <span class="header__drop-text">{{ t(item.label) }}</span>&ndash;&gt;-->
+<!--&lt;!&ndash;            </button>&ndash;&gt;-->
+<!--&lt;!&ndash;          </div>&ndash;&gt;-->
+<!--        </div>-->
+<!--        <button v-else class="btn-login" @click="openAuth">-->
+<!--          {{ t('auth.logIn') }}-->
+<!--        </button>-->
+<!--&lt;!&ndash;        <BurgerMenu class="burger-button" v-model="isMobileMenuOpen"/>&ndash;&gt;-->
+<!--      </div>-->
     </div>
   </header>
 </template>
@@ -555,7 +555,7 @@ onBeforeUnmount(() => {
   z-index: 3;
   margin-bottom: 10px;
   background-color: var(--navBg);
-  border-bottom: 4px solid var(--borderBottom);
+  border-bottom: 4px solid var(--borderMobile);
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   box-shadow: 6px 0 0 var(--bg);
@@ -578,7 +578,7 @@ onBeforeUnmount(() => {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  padding: 13px;
+  padding: 5px 15px 5px 15px;
 }
 
 .header-left, .header-right {
@@ -782,10 +782,6 @@ onBeforeUnmount(() => {
 }
 
 @media (max-width: 1023px) {
-  .header-container {
-    padding: 12px 10px;
-  }
-
   .mobile-nav-overlay {
     position: fixed;
     inset: 0;

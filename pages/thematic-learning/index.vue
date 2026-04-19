@@ -200,8 +200,7 @@ watch(topic, loadThemeData)
 <style scoped>
 .theme-page {
   font-family: "Nunito", sans-serif;
-  height: 100vh;
-  height: 100dvh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -211,7 +210,7 @@ watch(topic, loadThemeData)
 .page-header {
   display: flex;
   align-items: center;
-  padding: calc(env(safe-area-inset-top) + 20px) 20px 10px;
+  padding: 5px 10px 10px 10px;
   flex-shrink: 0;
   z-index: 10;
 }

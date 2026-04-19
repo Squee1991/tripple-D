@@ -127,10 +127,10 @@ function goBack() {
   font-family: "Nunito", sans-serif;
   display: flex;
   justify-content: center;
-  padding: 12px;
-  background-color: var(--bg);
+  padding: 0 10px;
+
   color: #2b2b2b;
-  min-height: 100vh;
+  height: 100%;
 }
 
 h1, h2, h3, .header-title, .level-name, .btn-primary-action {
@@ -172,7 +172,7 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 10px;
-  padding: 10px;
+  padding: 5px 15px;
 }
 
 .header-title {

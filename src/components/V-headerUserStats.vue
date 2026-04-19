@@ -1,5 +1,5 @@
 <template>
-  <div class="header-stats" v-click-outside="closeTooltips">
+  <div class="header-stats">
     <div
         v-for="item in infoData"
         :key="item.id"
@@ -22,7 +22,7 @@
       </button>
 
       <transition name="fade">
-        <div v-if="activeTooltip === item.id" class="tooltip-box" @click.stop>
+        <div v-if="activeTooltip === item.id" class="tooltip-box" @click="activeTooltip === false">
           <div class="tooltip-header">
             <img :src="item.icon" class="tooltip-title-icon" :alt="item.alt">
             <div class="tooltip-title">{{ item.title }}</div>
@@ -172,8 +172,8 @@ onBeforeUnmount(() => {
 }
 
 .stat-icon {
-  width: 33px;
-  height: 33px;
+  width: 30px;
+  height: 30px;
   object-fit: contain;
 }
 

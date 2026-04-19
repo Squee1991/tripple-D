@@ -122,8 +122,7 @@ definePageMeta({
 <style scoped>
 .learn-page {
   font-family: "Nunito", sans-serif;
-  height: 100vh;
-  height: 100dvh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -145,7 +144,7 @@ definePageMeta({
 .page-header {
   display: flex;
   align-items: center;
-  padding: 25px 15px 10px 15px;
+  padding: 5px 10px 10px 10px;
   flex-shrink: 0;
   z-index: 10;
 }
@@ -165,7 +164,8 @@ definePageMeta({
   padding: 15px;
   flex: 1;
   overflow-y: auto;
-  padding-bottom: 110px;
+  padding-bottom: calc(110px + var(--sab));
+  -webkit-overflow-scrolling: touch;
 }
 
 .learn-card {

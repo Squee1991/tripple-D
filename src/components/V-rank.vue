@@ -133,17 +133,27 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 .ranks-wrapper {
   margin: 0 auto;
   overflow-y: auto;
-  max-height: calc(100vh - 250px);
+  padding-bottom: 30px;
+}
+
+.ranks-wrapper:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background: var(--bgOpacity);
 }
 
 .ranks-wrapper::-webkit-scrollbar {
-  width: 4px;
+  width: 1px;
+  background: none;
 }
 
 .ranks-wrapper::-webkit-scrollbar-thumb {
-  background: var(--titleColor);
-  border-radius: 10px;
-  border: 2px solid #fff;
+  background: none;
 }
 
 .ranks-wrapper::-webkit-scrollbar-track {
@@ -225,8 +235,8 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
 
 .card-icon {
   padding-top: 10px;
-  width: 85px;
-  height: 85px;
+  width: 76px;
+  height: 76px;
 }
 
 .icon-grayscale {

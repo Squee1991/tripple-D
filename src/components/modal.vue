@@ -86,9 +86,9 @@ const props = defineProps({
   font-weight: 800;
   border-radius: 14px;
   font-size: 19px;
-  border: 3px solid #1e1e1e;
+  border: 2px solid #1e1e1e;
   background: #f1c40f;
-  box-shadow: 4px 4px 0 #1e1e1e;
+  box-shadow: 2px 2px 0 #1e1e1e;
   cursor: pointer;
   width: 90%;
 }
@@ -108,8 +108,8 @@ const props = defineProps({
 
 .modal-close {
   position: absolute;
-  top: 10px;
-  right: 15px;
+  top: 1px;
+  right: 10px;
   background: none;
   border: none;
   font-size: 2.5rem;
@@ -125,7 +125,7 @@ const props = defineProps({
   font-size: 1.6rem;
   color: #1e1e1e;
   font-weight: bold;
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
 }
 
 .modal__icon {
