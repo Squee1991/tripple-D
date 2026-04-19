@@ -23,7 +23,7 @@ export const useBillingStore = defineStore('billing', () => {
 			}
 
 			await Purchases.configure({
-				apiKey: process.env.REVENUECAT_GOOGLE_API_KEY,
+				apiKey: 'goog_zJiiRlMjdJmJNBtZXxiePlRaHmv',
 			})
 			await Purchases.logIn({ appUserID: authStore.uid })
 
@@ -46,7 +46,6 @@ export const useBillingStore = defineStore('billing', () => {
 		if (isPurchasing.value) return
 
 		try {
-			// 🔥 ИСПОЛЬЗУЕМ МЯГКИЙ ЗАПРОС, чтобы не сбросить кэш Гугла
 			const info = await Purchases.getCustomerInfo()
 			const premiumEntitlement = info?.entitlements?.active?.['premium']
 
