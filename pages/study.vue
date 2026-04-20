@@ -20,12 +20,12 @@
                 <img class="card__icon" :src="category.icon" alt="">
               </div>
             </NuxtLink>
-            <div v-else @click="selectedCategory = category" class="card-content">
+            <button v-else @click="selectedCategory = category" class="card-content">
               <h2 class="card-title">{{ category.title }}</h2>
-              <div class="card__icon-wrapper">
+              <span class="card__icon-wrapper">
                 <img class="card__icon" :src="Folder" alt="">
-              </div>
-            </div>
+              </span>
+            </button>
           </div>
         </div>
         <div v-else-if="isMounted && selectedCategory" key="sub" class="learn-grid">
@@ -169,14 +169,14 @@ definePageMeta({
 }
 
 .learn-card {
-  background: #ffffff;
-  border-radius: 12px;
+  background: #2c323d;
+  border-radius: 18px;
   cursor: pointer;
   text-decoration: none;
   color: inherit;
   display: block;
   flex-shrink: 0;
-  border: 2px solid #f3f4f6;
+  border: 2px solid #363d4a;
 }
 
 .card-content {
@@ -185,13 +185,16 @@ definePageMeta({
   align-items: center;
   padding: 5px 15px;
   height: 100%;
+  width: 100%;
+  background: none;
+  border: none;
 }
 
 .card-title {
   font-size: 18px;
   font-weight: 700;
   margin: 0;
-  color: #000000;
+  color: #FFFFFF;
 }
 
 .sub-card .card-title {

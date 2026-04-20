@@ -135,7 +135,6 @@ const processedQuests = computed(() => {
         color: '#fff'
       };
     }
-
     return {
       ...quest,
       isSuccess,
@@ -169,12 +168,22 @@ onMounted(async () => {
 
 <style scoped>
 .location-page {
-  padding: 20px;
-  min-height: 100vh;
+  padding: 5px 10px 15px 10px;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   color: #1b1b1b;
   font-family: "Nunito", sans-serif;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.location-page::-webkit-scrollbar {
+  display: none;
+  width: 0 !important;
 }
 
 .timer{
@@ -200,14 +209,14 @@ onMounted(async () => {
 .close-btn {
   width: 46px;
   height: 46px;
-  border: 3px solid #111;
+  border: 2px solid #111;
   border-radius: 14px;
   background: linear-gradient(180deg, #FFE690 0%, #FFD54D 100%);
   color: #111;
   font-weight: 900;
   font-size: 28px;
   line-height: 1;
-  box-shadow: 4px 4px 0 #2b2b2b;
+  box-shadow: 3px 3px 0 #2b2b2b;
   cursor: pointer;
   transition: all .1s ease-in-out;
 }
@@ -549,9 +558,6 @@ onMounted(async () => {
 }
 
 @media (max-width: 766px) {
-  .location-page {
-    padding: 12px;
-  }
   .location-header {
     padding: 10px 14px;
     gap: 15px;

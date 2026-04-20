@@ -37,7 +37,6 @@
         </template>
         <template v-else>
           <div class="fail-card">
-            <p class="fail-emoji">🌱✨</p>
             <p class="fail-text">{{ t('sessionNotSuccessModal.failText')}} {{ store.score }} / {{ store.currentQuestions.length }}.</p>
             <p class="fail-sub">
               {{ t('sessionNotSuccessModal.failSub')}}

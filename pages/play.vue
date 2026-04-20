@@ -121,9 +121,10 @@ onMounted(() => {
 }
 
 .game-card {
-  background: #ffffff;
+  background: #2c323d;
   border-radius: 12px;
   padding: 5px 15px;
+  border: 2px solid #363d4a;
 }
 
 .card-content {
@@ -142,7 +143,7 @@ onMounted(() => {
   font-size: 18px;
   font-weight: 700;
   margin: 0;
-  color: #1e1e1e;
+  color: #FFFFFF;
 }
 
 .menu-appear-enter-active {

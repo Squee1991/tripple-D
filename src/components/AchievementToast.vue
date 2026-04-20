@@ -226,7 +226,7 @@ onBeforeUnmount(() => {
 <style scoped>
 .ach-toast-container {
   position: fixed;
-  top: 16px;
+  top: 48px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2147483647 !important;
@@ -241,9 +241,9 @@ onBeforeUnmount(() => {
   display: flex;
   align-items: center;
   gap: 12px;
-  min-width: 350px;
+  min-width: 360px;
   max-width: 100%;
-  background: linear-gradient(135deg, #1a1d2b, #232737eb);
+  background: linear-gradient(135deg, #1a1d2b, rgba(35, 39, 55, 0.95));
   color: #fff;
   border-radius: 14px;
   padding: 14px 16px 18px;

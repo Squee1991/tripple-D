@@ -4,61 +4,75 @@
       <header class="points-card__header">
         <h2 class="points__title">{{ t('accountPanel.title') }}</h2>
       </header>
-      <ul v-if="langStore" class="points-card__list">
-        <li v-for="item in infoData" :key="item.id" :id="item.id === 'rank' ? 'conferats' : item.id === 'article' ? 'articlus' : 'level'" class="points-card__item">
-          <div class="points-card__label">
-            {{ itemLabels[item.id] }}
-          </div>
-          <div class="tooltip-container">
-            <div class="tooltip-box">
-              <div class="tooltip-title">{{ item.title }}</div>
-              <ul class="tooltip-list">
-                <li v-for="tip in item.tips" :key="tip.label">{{ tip.label }}</li>
-              </ul>
-            </div>
-            <template v-if="item.id === 'rank'">
-              <div class="points__hats-wrapper">
-                <button
-                    v-if="userAuth.isFreezeActive"
-                    class="hats__shield-btn"
-                    @click="showFreezeModal = true"
-                >
-                  <img class="hats__icon" src="../../assets/images/FreezeShield.svg" alt="Freeze Shield Icon">
-                </button>
-                <div v-if="userAuth.uid" class="articlus__wrapper">
-                  <img class="articlus__icon" src="../../assets/images/graduate-hat.svg" alt="Rank Hat Icon">
-                  <span class="points-card__value"> {{ userAuth.totalHats}}</span>
-                </div>
-              </div>
-            </template>
-            <template v-else-if="item.id === 'article'">
-              <div v-if="userAuth.uid" class="articlus__wrapper">
-                <img class="articlus__icon" src="../../assets/images/articlus.png" alt="Articles Icon">
-                <span class="points-card__value">{{ langStore.points }}</span>
-              </div>
-            </template>
-            <template v-else-if="item.id === 'level'">
-              <span class="points-card__badge">{{ langStore.isLeveling }}</span>
-            </template>
-          </div>
-        </li>
-        <li class="points-card__item points-card__progress">
+
+      <div v-if="langStore" class="top-panel-layout">
+        <div class="custom-progress">
           <div class="progress_exp-bar">
             <div class="progress__bar" :style="{ width: `${(langStore.exp / 100) * 100}%` }">
               <div class="glare"></div>
             </div>
-            <div class="progress__meta">{{ langStore.exp }}/100 XP</div>
           </div>
-        </li>
-      </ul>
-      <ul v-if="langStore" class="points-card__list">
-        <li v-for="section in sections" :key="section.id" :id="section.id" class="ranked__wrapper">
-          <NuxtLink :to="section.route" class="ranked__inner">
-            <div class="ranked__title-icon">
-              <img class="points-card__title-icon" :src="section.icon" :alt="`${section.title} Icon`"/>
-              <div class="ranked__title">{{ section.title }}</div>
+          <div class="progress-circle">
+            {{ langStore.exp }}/100 XP
+          </div>
+        </div>
+        <div class="level-display">
+          <span class="level-label">Уровень:</span>
+          <span class="level-value">{{ langStore.isLeveling || '0' }}</span>
+        </div>
+        <button class="premium-button" @click="toPayment">Premium 🚀</button>
+        <div class="premium-link-wrapper">
+          <span class="premium-link">Не активен</span>
+        </div>
+      </div>
+      <!--      <ul v-if="langStore" class="points-card__list">-->
+      <!--        <li v-for="item in infoData.filter(i => i.id !== 'level')" :key="item.id" :id="item.id === 'rank' ? 'conferats' : 'articlus'" class="points-card__item">-->
+      <!--          <div class="points-card__label">-->
+      <!--            {{ itemLabels[item.id] }}-->
+      <!--          </div>-->
+      <!--          <div class="tooltip-container">-->
+      <!--            <div class="tooltip-box">-->
+      <!--              <div class="tooltip-title">{{ item.title }}</div>-->
+      <!--              <ul class="tooltip-list">-->
+      <!--                <li v-for="tip in item.tips" :key="tip.label">{{ tip.label }}</li>-->
+      <!--              </ul>-->
+      <!--            </div>-->
+      <!--            <template v-if="item.id === 'rank'">-->
+      <!--              <div class="points__hats-wrapper">-->
+      <!--                <button-->
+      <!--                    v-if="userAuth.isFreezeActive"-->
+      <!--                    class="hats__shield-btn"-->
+      <!--                    @click="showFreezeModal = true"-->
+      <!--                >-->
+      <!--                  <img class="hats__icon" src="../../assets/images/FreezeShield.svg" alt="Freeze Shield Icon">-->
+      <!--                </button>-->
+      <!--                <div v-if="userAuth.uid" class="articlus__wrapper">-->
+      <!--                  <img class="articlus__icon" src="../../assets/images/graduate-hat.svg" alt="Rank Hat Icon">-->
+      <!--                  <span class="points-card__value"> {{ userAuth.totalHats}}</span>-->
+      <!--                </div>-->
+      <!--              </div>-->
+      <!--            </template>-->
+      <!--            <template v-else-if="item.id === 'article'">-->
+      <!--              <div v-if="userAuth.uid" class="articlus__wrapper">-->
+      <!--                <img class="articlus__icon" src="../../assets/images/articlus.png" alt="Articles Icon">-->
+      <!--                <span class="points-card__value">{{ langStore.points }}</span>-->
+      <!--              </div>-->
+      <!--            </template>-->
+      <!--          </div>-->
+      <!--        </li>-->
+      <!--      </ul>-->
+      <ul v-if="langStore" class="action-menu__list">
+        <li v-for="section in sections" :key="section.id" :id="section.id" class="action-menu__item">
+          <NuxtLink :to="section.route" class="action-menu__link">
+            <div class="action-menu__left">
+              <div class="action-menu__icon-bg">
+                <img class="action-menu__icon" :src="section.icon" :alt="`${section.title} Icon`"/>
+              </div>
+              <div class="action-menu__title">{{ section.title }}</div>
             </div>
-            <img class="stat__icon" src="../../assets/images/dailyIcons/arrow-to.svg" alt="Arrow Icon"/>
+            <div class="action-menu__arrow">
+              <img class="action-menu__arrow-icon" src="../../assets/images/dailyIcons/arrow-to.svg" alt="Arrow Icon"/>
+            </div>
           </NuxtLink>
         </li>
       </ul>
@@ -111,39 +125,8 @@ const formattedFreezeDate = computed(() => {
   return date.toLocaleDateString() + ' ' + date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})
 })
 
-const itemLabels = computed(() => ({
-  rank: t('accountPanel.rank'),
-  article: t('accountPanel.articles'),
-  level: t('accountPanel.level')
-}))
-
-const infoData = ref([
-  {id: "rank",
-    title: t('pavelOverlay.rankTitle'),
-    tips:[
-      {label: t('pavelOverlay.rankLabelOne')},
-      {label: t('pavelOverlay.rankLabelTwo')},
-      {label: t('pavelOverlay.rankLabelThree')}
-    ]
-  },
-  {id: "article",
-    title: t('pavelOverlay.articleTitle'),
-    tips:[
-      {label: t('pavelOverlay.articleLabelOne')},
-      {label: t('pavelOverlay.articleLabelTwo')}
-    ]
-  },
-  {id: "level",
-    title: t('pavelOverlay.levelTitle'),
-    tips:[
-      {label: t('pavelOverlay.levelLabelOne')},
-      {label: t('pavelOverlay.levelLabelTwo')}
-    ]
-  }
-])
-
 const sections = ref([
-  {id: "stats", icon: Graph, alt: 'Graph', title: t('accountPanel.stats'), route: "/statistics"},
+  // {id: "stats", icon: Graph, alt: 'Graph', title: t('accountPanel.stats'), route: "/statistics"},
   {id: "achievement", icon: AchPanelIcon, alt: 'AchPanel', title: t('accountPanel.achievement'), route: "/achievements"},
   {id: "ranked", icon: RankedIcon, alt: 'Ranked', title: t('accountPanel.ranked'), route: "/leaderboard"},
   {id: "calendar", icon: Calendar, alt: 'Ranked', title: t('accountPanel.eventCalendar'), route: "/calendar"},
@@ -159,6 +142,168 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.top-panel-layout {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.custom-progress {
+  position: relative;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+
+.action-menu__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.action-menu__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2c323d;
+  border: 2px solid #363d4a;
+  border-radius: 16px;
+  padding: 6px 14px;
+  text-decoration: none;
+  box-shadow: 0 4px 0 #11151c;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.2s;
+}
+
+.action-menu__link:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 #11151c;
+}
+
+.action-menu__left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.action-menu__icon-bg {
+  background: #2a313e;
+  border-radius: 12px;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-menu__icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.action-menu__title {
+  color: #e2e8f0;
+  font-size: 17px;
+  font-weight: 700;
+  font-family: "Nunito", sans-serif;
+}
+
+.action-menu__arrow-icon {
+  width: 22px;
+  height: 22px;
+  transform: rotate(90deg);
+  transition: opacity 0.2s;
+}
+
+.action-menu__link:hover .action-menu__arrow-icon {
+  filter: brightness(0) invert(1) opacity(0.8);
+}
+
+.custom-progress .progress_exp-bar {
+  height: 23px;
+}
+
+.progress-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 800;
+  color: #111;
+
+  white-space: nowrap;
+  z-index: 2;
+}
+
+.level-display {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.level-label {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.level-value {
+  background: transparent;
+  border: 1px solid #4a5568;
+  border-radius: 6px;
+  padding: 2px 8px;
+  color: white;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.premium-button {
+  width: 100%;
+  background: #1e222a;
+  border: 1px solid #363d4a;
+  border-radius: 14px;
+  padding: 14px;
+  color: #5a6270;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  transition: all 0.2s;
+}
+
+.premium-button:hover {
+  background: #252a34;
+  color: #fff;
+}
+
+.premium-link-wrapper {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.premium-link {
+  color: #e2e8f0;
+  font-size: 13px;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.premium-link:hover {
+  color: #fff;
+}
+
 .tooltip-container {
   position: relative;
   display: flex;
@@ -194,20 +339,6 @@ onMounted(() => {
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
-}
-
-.tooltip-title {
-  color: #5482d9;
-  font-size: 20px;
-  font-weight: 900;
-  margin-bottom: 8px;
-  text-align: center;
-}
-
-.tooltip-list {
-  color: black;
-  font-size: 15px;
-  font-weight: 600;
 }
 
 .tooltip-list li {
@@ -247,126 +378,21 @@ onMounted(() => {
   flex-direction: column;
 }
 
-.points-card__title-icon {
-  width: 45px;
-}
-
-.hats__icon {
-  width: 40px;
-}
-
-.points__hats-wrapper {
-  display: flex;
-  align-items: center;
-}
-
-.ranked__title-icon {
-  display: flex;
-  align-items: center;
-}
-
-.star{
-  font-size: 30px;
-}
-.ranked__inner {
-  width: 100%;
-  border: 2px solid var(--border);
-  border-radius: 18px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-  padding: 1px 5px;
-  box-shadow: 2px 2px 0  var(--border);
-  transition: .2s;
-  background: white;
-}
-
-.ranked__wrapper:last-child .ranked__inner {
+.ranked__wrapper:last-child {
   margin-bottom: 0;
-}
-
-@media (min-width: 1024px) {
-  .ranked__inner:hover {
-    box-shadow: 0 0 0;
-    transform: translate(1px , 1px);
-    transition: .2s;
-  }
-}
-
-.ranked__title {
-  color: var(--labelTextColor);
-  font-size: 18px;
-  margin-left: 8px;
-  font-weight: 600;
 }
 
 .points__title {
   color: var(--panelTextColor);
+  text-align: center;
 }
 
-.stat__icon {
-  width: 40px;
-  transform: rotate(90deg);
-  margin-left: 5px;
-}
-
-@media (min-width: 1023px) {
-  .stats__btn:hover {
-    transform: scale(1.05);
-    transition: .3s;
-  }
-}
-
-.stats__btn {
+.points-card__header {
   display: flex;
-  align-items: center;
-  border: 2px solid var(--border);
-  box-shadow: 0 3px 0 var(--border);
-  border-radius: 10px;
-  font-weight: 600;
-  font-size: 1.2rem;
-  padding: 0 5px;
-  color: #6ea4f1;
-  transition: .3s;
-  background: none;
-}
-
-.articlus__wrapper {
-  display: flex;
-  width: 90px;
-  border:2px solid var(--border);
-  box-shadow: 2px 2px 0 var(--border);
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
-  padding: 1px 0.7rem;
-  height: 40px;
-  background: white;
-}
-
-.articlus__icon {
-  width: 35px;
-  height: 31px;
-}
-
-.points {
-  min-width: 340px;
-  display: flex;
-  width: 100%;
-  height: 100%;
-}
-
-.hats__shield-btn {
-  background: none;
-  border: none;
-  margin-right: 5px;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.hats__shield-btn:hover {
-  transform: scale(1.05);
+  position: relative;
+  z-index: 1;
 }
 
 .points-card {
@@ -409,160 +435,16 @@ onMounted(() => {
   border-radius: 4px
 }
 
-.points-card__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  z-index: 1;
-}
 
-.rank-display {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.rank-display__stars {
-  display: flex;
-  justify-content: center;
-  gap: 2px;
-  height: 16px;
-}
-
-.rank-star {
-  color: #ffcc00;
-  font-size: 20px;
-  text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
-}
-
-.rank-display__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.rank-display__icon {
-  width: 51px;
-  height: 51px;
-  object-fit: contain;
-}
-
-.rank-display__placeholder {
-  font-size: 24px;
-}
-
-.rank-display__info {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
-}
-
-.rank-display__title {
-  font-size: 12px;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: #666;
-}
-
-.rank-display__hats {
-  font-size: 14px;
-  font-weight: 700;
-  color: #111;
-}
-
-.points-card__item:nth-child(2) {
-  border-top: 3px dashed var(--border);
-}
-
-.points-card__list {
-  margin-bottom: 2px;
-  padding: 1px 0;
-  position: relative;
-  z-index: 1;
-}
-
-.points-card__list:hover {
-  z-index: 10;
-}
-
-.points-card__item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 4px;
-  margin-top: 8px;
-}
 
 .points-card__item + .points-card__item {
   border-top: 2px dashed rgba(0, 0, 0, .15);
 }
 
-.points-card__label {
-  font-size: 19px;
-  font-weight: 600;
-  color: var(--panelTextColor);
-  font-family: "Nunito", sans-serif;
-}
-
-.points-card__value {
-  font-size: 18px;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-family: "Nunito", sans-serif;
-  color: #111;
-}
-
-.points-card__badge {
-  font-size: 18px;
-  font-weight: 600;
-  background: #fff;
-  border: 2px solid var(--border);
-  box-shadow: 2px 2px 0 var(--border);
-  border-radius: 10px;
-  font-family: "Nunito", sans-serif;
-  padding: 4px 10px;
-}
-
-.sub-actions {
-  margin-top: 10px;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.points-card__progress {
-  margin: 10px 0;
-  padding-bottom: 10px;
-}
-
-.progress__meta {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 13px;
-  color: #111;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  font-weight: 600;
-  font-family: "Nunito", sans-serif;
-}
 
 @media (max-width: 420px) {
   .points-card {
     padding: 14px;
-  }
-
-  .points-card__value {
-    font-size: 16px;
-  }
-
-  .ranked__title {
-    font-size: 18px;
   }
 }
 
@@ -657,4 +539,6 @@ onMounted(() => {
   box-shadow: none;
   transform: translateY(4px);
 }
+
+
 </style>

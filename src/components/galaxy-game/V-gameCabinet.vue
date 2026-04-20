@@ -59,7 +59,6 @@ onMounted(async () => {
       <button class="toon-btn back-btn" @click="$emit('close')">◀ {{t('galaxyCabinet.back')}}</button>
       <div class="sync-pill"></div>
     </div>
-
     <div class="main-layout">
       <div class="side-panel">
         <h3 class="side-label">{{t('galaxyCabinet.id')}}</h3>
@@ -91,7 +90,6 @@ onMounted(async () => {
           </div>
         </div>
       </div>
-
       <div class="side-panel">
         <h3 class="side-label">{{t('galaxyCabinet.journey')}}</h3>
         <div class="main-stats">
@@ -135,13 +133,13 @@ onMounted(async () => {
   inset: 0;
   max-width: 1300px;
   margin: 0 auto;
-  height: 100vh;
+  height: 100%;
   z-index: 5000;
   background: #3b28cc;
   color: #1a1a1a;
   display: flex;
   flex-direction: column;
-  padding: 30px;
+  padding: 10px;
   box-sizing: border-box;
   font-family: 'Comic Sans MS', 'Arial Black', sans-serif;
   overflow: hidden;
@@ -189,19 +187,13 @@ onMounted(async () => {
 }
 
 .main-layout::-webkit-scrollbar {
-  width: 14px;
+  width: 2px;
+  display: none;
 }
 
 .main-layout::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  border: 3px solid #1a1a1a;
-}
 
-.main-layout::-webkit-scrollbar-thumb {
-  background: #ccff00;
-  border-radius: 10px;
-  border: 3px solid #1a1a1a;
 }
 
 .main-layout::-webkit-scrollbar-thumb:active {
@@ -224,15 +216,15 @@ onMounted(async () => {
   margin-bottom: -15px;
   z-index: 5;
   transform: rotate(-1deg);
-  border: 3px solid #fff;
+  border: 2px solid #fff;
 }
 
 .toon-card {
   background: #fff;
-  border: 4px solid #1a1a1a;
+  border: 2px solid #1a1a1a;
   border-radius: 25px;
   padding: 20px;
-  box-shadow: 5px 5px 0 #1a1a1a;
+  box-shadow: 3px 3px 0 #1a1a1a;
   position: relative;
 }
 
@@ -566,11 +558,6 @@ onMounted(async () => {
 }
 
 @media (max-width: 900px) {
-  .pilot-cabinet-fullscreen {
-    padding: 15px;
-    overflow: hidden;
-  }
-
   .cabinet-header {
     margin-bottom: 15px;
   }

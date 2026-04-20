@@ -155,11 +155,9 @@ onMounted(() => {
 <style scoped>
 .menu-starfield {
   position: absolute;
-  top: calc(-1 * var(--sat));
   left: 0;
   width: 100vw;
-  height: 100dvh;
-
+  height: 100%;
   background: #0a0a20;
   display: flex;
   justify-content: center;
@@ -168,14 +166,12 @@ onMounted(() => {
   font-family: 'Arial Rounded MT Bold', sans-serif;
 }
 
-/* 3. Окружение космоса теперь автоматически заполнит всё */
 .space-environment {
   position: absolute;
   inset: 0;
   z-index: 0;
 }
 
-/* 4. А вот тут важно! Кнопки и заголовок НЕ должны лезть под часы */
 .open-menu-layout {
   position: relative;
   z-index: 10;
@@ -183,9 +179,6 @@ onMounted(() => {
   flex-direction: column;
   align-items: center;
   gap: 60px;
-
-  /* Контент внутри "берет у артикля" отступ, чтобы не врезаться в статус-бар */
-  padding-top: var(--sat);
 }
 
 .nebula-cloud {
@@ -275,7 +268,7 @@ onMounted(() => {
 }
 
 .menu-btn-toon {
-  border: 4px solid #000;
+  border: 1px solid #000;
   border-radius: 20px;
   font-weight: 900;
   color: #fff;

@@ -9,7 +9,6 @@
           <VBackBtn/>
           <div class="theme__title">Темы изучения артиклей</div>
         </div>
-<!--        <h1 class="theme-title">{{ t('selectedpage.title') }}</h1>-->
       </div>
       <div class="theme-content-area">
         <div class="grid-area-wrapper">
@@ -329,7 +328,7 @@ onMounted(() => {
 
 .theme__grid-container {
   flex-grow: 1;
-  padding: 10px 5px;
+  padding: 10px 10px;
   display: flex;
   flex-direction: column;
   overflow-y: auto;

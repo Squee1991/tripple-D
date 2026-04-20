@@ -1,5 +1,6 @@
 <template>
   <div v-if="activeTabKey === 'info'" class="tab-content">
+
     <div v-if="isThemeModalOpen" class="modal-overlay" @click.self="isThemeModalOpen = false">
       <div class="modal-card">
         <div class="modal-title">{{ t('themeModal.title') }}</div>
@@ -8,18 +9,10 @@
               v-for="(label, key) in THEMES"
               :key="key"
               class="theme-option"
-              :class="{
-                active: colorMode.preference === key,
-                locked: key === 'pink' && !isValentineThemeUnlocked
-              }"
+              :class="{ active: colorMode.preference === key, locked: key === 'pink' && !isValentineThemeUnlocked }"
               @click.prevent="handleThemeSelection(key)"
           >
-            <input
-                type="radio"
-                name="theme"
-                :value="key"
-                :checked="colorMode.preference === key"
-            >
+            <input type="radio" name="theme" :value="key" :checked="colorMode.preference === key">
             <div class="theme-preview" :class="key">
               <span v-if="key === 'pink' && !isValentineThemeUnlocked">🔒</span>
             </div>
@@ -31,68 +24,73 @@
         </div>
       </div>
     </div>
+    <LangSwitcher v-if="isLangModalOpen" @close="isLangModalOpen = false"/>
+
     <div
         v-for="group in SETTINGS_GROUPS"
         :key="group.id"
-        class="accordion open settings-static settings-block"
-        @click.stop
+        class="settings-section"
     >
-      <div class="accordion__head">
-        <div class="accordion__content-left">
-          <div class="accordion__title">{{ group.title }}</div>
-        </div>
-      </div>
-      <div class="accordion__body" @click.stop>
-        <div class="settings__elements">
-          <div
-              v-for="item in group.items"
-              :key="item.key"
-              class="row__el--wrapper"
-              :class="{ 'locked-setting': item.key === 'snowFall' && !isSnowUnlocked }"
-          >
-            <div class="toggle__wrapper">
-              {{ item.label }}
-              <span v-if="item.key === 'snowFall' && !isSnowUnlocked">🔒</span>
-            </div>
-            <template v-if="item.type === 'button'">
-              <button class="theme-select-btn" @click="isThemeModalOpen = true">
-                {{ currentThemeName }}
-              </button>
-            </template>
-            <template v-else>
-              <VToggle
-                  :key="item.key + toggleForceUpdateKey"
-                  :model-value="getSettingValue(item.key)"
-                  @change="value => onSettingChange(item.key, value)"
-              />
-            </template>
+      <div class="section-title">{{ group.title }}</div>
+      <div class="section-card">
+        <div
+            v-for="item in group.items"
+            :key="item.key"
+            class="section-row"
+            :class="{ 'locked-setting': item.key === 'snowFall' && !isSnowUnlocked }"
+        >
+          <div class="toggle__wrapper">
+            {{ item.label }}
+            <span v-if="item.key === 'snowFall' && !isSnowUnlocked">🔒</span>
           </div>
+
+          <template v-if="item.type === 'button'">
+            <button
+                class="theme-select-btn"
+                @click="item.key === 'theme' ? isThemeModalOpen = true : isLangModalOpen = true"
+            >
+              {{ item.key === 'theme' ? currentThemeName : currentLangName }}
+            </button>
+          </template>
+
+          <template v-else>
+            <VToggle
+                :key="item.key + toggleForceUpdateKey"
+                :model-value="getSettingValue(item.key)"
+                @change="value => onSettingChange(item.key, value)"
+            />
+          </template>
         </div>
       </div>
     </div>
-    <div class="service__items">
-      <div class="accordion__title">{{ t('cabinetAccordion.faq') }}</div>
-      <ul class="service__items-elements">
-        <li v-for="item in servicePaths" :key="item.id" class="service__items-list">
-          <NuxtLink class="service__items-link" :to="item.path">{{ item.label }}</NuxtLink>
-        </li>
-      </ul>
-    </div>
-    <div class="account-actions">
-      <div class="accordion__title">Управление аккаунтом</div>
-      <div class="account-tab-body">
-        <div class="logout-section">
-          <button class="btn btn-logout btn-m" @click="authStore.logOut()">
-            {{ t('auth.logOut') }}
-          </button>
-        </div>
+
+    <div class="settings-section">
+      <div class="section-title">{{ t('cabinetAccordion.faq') }}</div>
+      <div class="section-card">
+        <NuxtLink
+            v-for="item in servicePaths"
+            :key="item.id"
+            class="section-row link-row"
+            :to="item.path"
+        >
+          {{ item.label }}
+          <span class="link-arrow">›</span>
+        </NuxtLink>
       </div>
-      <div class="account__management">
-        <button @click.stop="openDeleteModal" class="btn btn-danger w-full btn-m">
+    </div>
+
+    <div class="settings-section account-actions">
+      <div class="section-title">Управление аккаунтом</div>
+      <div class="account-buttons">
+        <button class="btn btn-logout w-full btn-m" @click="authStore.logOut()">
+          {{ t('auth.logOut') }}
+        </button>
+        <button class="btn btn-danger w-full btn-m" @click.stop="openDeleteModal">
           {{ t('cabinet.deleteAcc') }}
         </button>
       </div>
     </div>
+
     <div v-if="isLockedModalOpen" class="modal-overlay locked-priority" @click.self="isLockedModalOpen = false">
       <div class="modal-card">
         <div class="modal-title">{{ lockedModalContent.title }}</div>
@@ -115,7 +113,10 @@ import {useUiSettingsStore} from '../../store/uiSettingsStore.js'
 import {useEventSessionStore} from '../../store/eventsStore.js'
 import {isSoundEnabled, setSoundEnabled, unlockAudioByUserGesture} from '../../utils/soundManager.js'
 import {useAchievementStore} from '../../store/achievementStore.js'
-import { userAuthStore} from "../../store/authStore.js";
+import {userAuthStore} from "../../store/authStore.js";
+import LangSwitcher from "~/src/components/langSwitcher.vue";
+
+const router = useRouter();
 const authStore = userAuthStore()
 const props = defineProps({
   settingsIcon: String,
@@ -123,25 +124,33 @@ const props = defineProps({
 })
 
 const emit = defineEmits(['open'])
-const {t} = useI18n()
+const {t, locales, locale} = useI18n()
 const uiSettings = useUiSettingsStore()
 const eventStore = useEventSessionStore()
 const achievementStore = useAchievementStore()
 const colorMode = useColorMode()
 
 const isThemeModalOpen = ref(false)
+const isLangModalOpen = ref(false)
 const isLockedModalOpen = ref(false)
+
+const currentLangName = computed(() => {
+  const current = (locales.value || []).find(l => l.code === locale.value)
+  return current ? current.name : locale.value
+})
+
 const lockedModalContent = ref({title: '', text: ''})
 const toggleForceUpdateKey = ref(0)
 const soundEnabled = ref(false)
 const THEMES = {light: t('themeModal.light'), dark: t('themeModal.dark'), pink: t('themeModal.pink')}
+
 const isValentineThemeUnlocked = computed(() => {
   const ach = achievementStore.findById('valentineTheme')
   return ach ? ach.currentProgress >= 1 : false
 })
 
-const openDeleteModal = () => {
-  emit('open', 'deleteAccount')
+const  openDeleteModal = () => {
+  router.push('/delete')
 }
 
 const isSnowUnlocked = computed(() => {
@@ -160,15 +169,23 @@ const SETTINGS_GROUPS = computed(() => [
   },
   {
     id: 'appearance',
-    title: t('settingsGroup.appearance'),
+    title: 'Оформление',
     items: [
       {key: 'theme', label: t('cabinetToggle.themeBtn'), type: 'button'},
       {key: 'snowFall', label: t('cabinetToggle.snowFall'), type: 'toggle'}
     ]
+  },
+  {
+    id: 'language',
+
+    title: 'Язык',
+    items: [
+      {key: 'lang', label: 'Язык интерфейса', type: 'button'}
+    ]
   }
 ])
 
-const currentThemeName = computed(() => THEMES[colorMode.preference] || THEMES.light)
+const currentThemeName = computed(() => THEMES[colorMode.value] || THEMES.dark)
 
 const showRestriction = (type) => {
   if (type === 'theme') {
@@ -195,9 +212,9 @@ const handleThemeSelection = (key) => {
 }
 
 const servicePaths = [
-  {id: 'Privacy', label: 'Police privacy', path: '/privacy'},
+  {id: 'Privacy', label: 'Privacy Policy', path: '/privacy'},
   {id: 'FAQ', label: 'FAQ', path: '/faq'},
-  {id: 'terms', label: 'Terms', path: '/terms'}
+  {id: 'terms', label: 'Terms of Service', path: '/terms'}
 ]
 
 const getSettingValue = (key) => {
@@ -233,45 +250,63 @@ onMounted(async () => {
 </script>
 
 <style scoped>
-
-
-.accordion {
-  padding: 12px 16px;
-  margin-top: 14px;
-  cursor: pointer;
-  max-height: 60px;
-  overflow: hidden;
-  transition: max-height .3s ease;
+.tab-content {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 100px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  box-sizing: border-box;
 }
 
-.accordion.open {
-  max-height: 500px;
+.tab-content::-webkit-scrollbar {
+  display: none;
 }
 
-.account-actions {
-  padding: 12px;
+.settings-section {
+  margin-bottom: 24px;
+  padding: 0 16px;
 }
 
-.accordion__title {
-  font-weight: 900;
-  font-size: 1.2rem;
+.section-title {
+  font-size: 1.1rem;
+  font-weight: 800;
   color: var(--titleColor);
+  margin-bottom: 10px;
+  padding-left: 4px;
 }
 
-.accordion__body {
-  padding-top: 10px;
+.section-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  overflow: hidden;
 }
 
-.row__el--wrapper {
+.section-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 8px;
+  padding: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.service__items-elements {
-  margin-left: 10px;
-  padding: 10px 0;
+.section-row:last-child {
+  border-bottom: none;
+}
+
+.link-row {
+  text-decoration: none;
+  color: var(--titleColor);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.link-arrow {
+  color: #64748b;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .toggle__wrapper {
@@ -280,10 +315,6 @@ onMounted(async () => {
   display: flex;
   align-items: center;
   gap: 8px;
-}
-
-.locked-setting, .theme-option.locked {
-  opacity: 0.5;
 }
 
 .theme-select-btn {
@@ -296,11 +327,36 @@ onMounted(async () => {
   cursor: pointer;
   box-shadow: 2px 2px 0 #000;
   transition: 0.1s;
+  color: #000;
 }
 
 .theme-select-btn:active {
   transform: translate(1px, 1px);
   box-shadow: 0 0 0 #000;
+}
+
+.account-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.btn-m {
+  width: 100%;
+  max-width: 320px;
+}
+
+.btn-logout {
+  background: #f3f4f6;
+  color: #000;
+}
+
+.btn-danger {
+  background: #ef4444;
+  color: #fff;
+  border: 2px solid #b91c1c;
+  box-shadow: 2px 2px 0 #b91c1c;
 }
 
 .modal-overlay {
@@ -334,12 +390,14 @@ onMounted(async () => {
   font-weight: 900;
   font-style: italic;
   margin-bottom: 1rem;
+  color: #000;
 }
 
 .modal-text {
   font-size: 1rem;
   margin-bottom: 1.5rem;
   line-height: 1.4;
+  color: #000;
 }
 
 .modal-actions {
@@ -351,22 +409,17 @@ onMounted(async () => {
 .btn {
   border: 2px solid #000;
   border-radius: 10px;
-  padding: 10px 24px;
+  padding: 14px 24px;
   font-weight: 800;
-  background: #f3f4f6;
-  box-shadow: 2px 2px 0 #000;
   cursor: pointer;
   transition: 0.1s;
-}
-
-.btn:active {
-  transform: translate(2px, 2px);
-  box-shadow: 0 0 0 #000;
+  font-family: "Nunito", sans-serif;
 }
 
 .btn-success {
   background: #4ade80;
   width: 100%;
+  color: #000;
 }
 
 .theme-grid {
@@ -386,6 +439,7 @@ onMounted(async () => {
   cursor: pointer;
   font-weight: 800;
   background: #fff;
+  color: #000;
 }
 
 .theme-option.active {
@@ -415,38 +469,7 @@ onMounted(async () => {
   justify-content: center;
 }
 
-.service__items {
-  padding: 12px 16px;
-  margin-top: 10px;
+.locked-setting, .theme-option.locked {
+  opacity: 0.5;
 }
-
-.service__items-link {
-  color: var(--titleColor);
-  font-weight: 900;
-  padding: 10px 0;
-  display: block;
-}
-
-.service__items-list {
-  border-bottom: 1px solid var(--titleColor);
-  padding: 5px 0;
-}
-
-.account__management {
-  display: flex;
-  justify-content: end;
-  margin-top: 16px;
-  padding: 0 0px;
-}
-
-.logout-section {
-  display: flex;
-  justify-content: end;
-  padding: 12px 0;
-}
-
-.btn-m {
-  width: 240px;
-}
-
 </style>

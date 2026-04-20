@@ -199,9 +199,8 @@ const resetResult = () => {
 
 <style scoped>
 .rules {
-  min-height: 100vh;
   padding-bottom: 1rem;
-  height: 100vh;
+  height: 100%;
   font-family: "Nunito", sans-serif;
   overflow: hidden;
 }
@@ -235,43 +234,33 @@ const resetResult = () => {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-
-}
-
-.rules__title {
-  width: 100%;
-  font-family: "Nunito", sans-serif;
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: white;
-  background: #4ade80;
-  padding: 1rem 2rem;
-  border: 3px solid #1e1e1e;
-  border-radius: 16px;
-  transform: rotate(-2deg);
-  box-shadow: 8px 8px 0 #1e1e1e;
 }
 
 .rules__subtitle {
-  font-size: 1.25rem;
+  font-size: 18px;
+  text-align: center;
   color: white;
   max-width: 600px;
-  line-height: 1.6;
+  line-height: 1.3;
   background: #00c2ff;
   border-radius: 15px;
   padding: 10px;
   font-family: "Nunito", sans-serif;
   border: 4px solid black;
-  margin-bottom: 10px;
 }
 
 .rules__list {
   flex: 1;
   overflow-y: auto;
-  padding: 3px;
+  padding: 5px 10px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+.rules__list::-webkit-scrollbar {
+  width: 1px;
+  display: none;
 }
 
 .rules__card {
@@ -300,7 +289,7 @@ const resetResult = () => {
 }
 
 .rules__list-item {
-  font-size: 1.1rem;
+  font-size: 16px;
 }
 
 .rules__list-item::before {
@@ -312,7 +301,7 @@ const resetResult = () => {
 .rules__desc {
   color: #555;
   margin: 1.5rem 0 0.5rem 0;
-  font-size: 1.1rem;
+  font-size: 16px;
   line-height: 1.7;
 }
 
@@ -387,11 +376,7 @@ const resetResult = () => {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 15px;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  background: #6358ac;
+  padding: 5px 10px 15px 10px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   margin-bottom: 5px;

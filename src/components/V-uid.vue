@@ -202,18 +202,6 @@ onBeforeUnmount(() => {
     overflow: hidden;
   }
 
-  .mobile-panel::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 40px;
-    background: var(--bgOpacity);
-    pointer-events: none;
-    z-index: 5;
-  }
-
   .mobile-content {
     flex: 1;
     min-height: 0;
@@ -221,7 +209,7 @@ onBeforeUnmount(() => {
     width: 100%;
     overflow-y: auto;
     padding: 8px;
-    padding-bottom: 70px;
+    padding-bottom: 100px;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }

@@ -598,7 +598,7 @@ watch(currentTopicData, () => {
     width: 100%;
     height: 100%;
     z-index: 50;
-    transition: transform 0.4s ease-in-out;
+    transition: transform 0.2s ease-in-out;
     border-radius: 0;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
     border: none;

@@ -84,7 +84,7 @@
                       <div class="exp-fill" :style="{ width: `${expFillWidth}%` }">
                         <div class="glare"></div>
                       </div>
-                      <span class="exp-text">{{ learningStore.exp }} / 100 XP</span>
+                      <span class="exp-text">{{ learningStore.exp }}%</span>
                     </div>
                     <div class="level-info">{{ t('cabinet.level') }} {{ learningStore.isLeveling }}</div>
                   </div>
@@ -127,7 +127,7 @@
                 </div>
               </div>
             </div>
-            <div v-else>
+            <div class="tab__component-wrapper" v-else>
               <component :is="components" @open="handleSettingsAction"/>
             </div>
           </div>
@@ -494,7 +494,7 @@ onMounted(async () => {
 .cabinet-wrapper {
   height: 100%;
   font-family: "Nunito", sans-serif;
-  padding:  0 10px;
+  padding: 10px;
   overflow: hidden;
 }
 
@@ -504,6 +504,10 @@ onMounted(async () => {
   width: 100%;
   position: relative;
   gap: 20px;
+}
+
+.tab__component-wrapper {
+  height: 100%;
 }
 
 .sidebar-panel {
@@ -612,6 +616,10 @@ onMounted(async () => {
   transform: scale(0.9);
 }
 
+.settings-wrapper {
+  height: 100%;
+}
+
 .content-panel {
   border-radius: 28px;
   border: 3px solid #000;
@@ -626,12 +634,12 @@ onMounted(async () => {
 
 .content-body {
   flex: 1;
+  height: 100%;
 }
 
 .header-surface {
   position: relative;
   border-radius: 20px;
-  padding: 10px 0;
   background: transparent;
 }
 
@@ -724,7 +732,8 @@ onMounted(async () => {
   align-items: center;
   justify-content: center;
   font-weight: 800;
-  color: #000;
+  color: #2c2b2b;
+  font-size: 13px;
 }
 
 .level-info {

@@ -194,7 +194,7 @@ onBeforeUnmount(() => {
   top: calc(100% + 15px);
   left: 10px;
   right: 10px;
-  background-color: white;
+  background-color: #2c323d;
   color: #a0a6b1;
   border: 3px solid #363d4a;
   border-radius: 12px;
@@ -252,7 +252,8 @@ onBeforeUnmount(() => {
 }
 
 .tooltip-list {
-  color: black;
+  color: white;
+  font-weight: 400;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -260,7 +261,6 @@ onBeforeUnmount(() => {
 
 .tooltip-list li {
   font-size: 13px;
-  font-weight: 600;
   margin-bottom: 8px;
   position: relative;
   padding-left: 14px;

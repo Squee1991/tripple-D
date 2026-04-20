@@ -38,8 +38,7 @@ onMounted(() => {
       <VUid/>
     </div>
     <div v-else>
-      <LogIn v-if="showLogin" @close="showLogin = false"/>
-      <VStartPage v-else @openLogin="showLogin = true"/>
+      <VStartPage/>
     </div>
   </div>
 

@@ -1,7 +1,6 @@
 <template>
   <div class="welcome-container">
     <div class="ui-layout">
-
       <div class="hero-wrap">
         <div class="hero-clay">
           <img src="../../public/images/logo/logo2.png" alt="Logo" class="hero-img">
@@ -24,7 +23,10 @@
       </p>
 
       <div class="cta-block">
-        <button @click="emit('openLogin')" class="btn-emerald-3d">
+<!--        <button @click="emit('openLogin')" class="btn-emerald-3d">-->
+<!--          Начать обучение-->
+<!--        </button>-->
+        <button @click="router.push('/language')" class="btn-emerald-3d">
           Начать обучение
         </button>
       </div>
@@ -34,7 +36,9 @@
 </template>
 
 <script setup>
-const emit = defineEmits(['openLogin'])
+
+const router = useRouter()
+// const emit = defineEmits(['openLogin'])
 </script>
 
 <style scoped>

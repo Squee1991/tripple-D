@@ -356,7 +356,7 @@ watch(() => store.lose, (isLose) => {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 20px 10px;
+  padding: 40px 10px 10px 10px;
 }
 
 .mascot-emoji {
@@ -469,7 +469,6 @@ watch(() => store.lose, (isLose) => {
   display: flex;
   gap: 10px;
   margin-top: auto;
-  padding-bottom: 20px;
 }
 
 .ios-input {

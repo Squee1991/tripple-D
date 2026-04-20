@@ -194,7 +194,8 @@ const processedEvents = computed(() => {
 }
 
 .event-card {
-  background: #ffffff;
+  background: #2c323d;
+  border: 2px solid #363d4a;
   border-radius: 12px;
   box-shadow: 0 4px 0 #1e1e1e;
 }
@@ -219,7 +220,7 @@ const processedEvents = computed(() => {
   font-size: 18px;
   font-weight: 700;
   margin: 0;
-  color: #1e1e1e;
+  color: #ffffff;
 }
 
 .event-dates {
