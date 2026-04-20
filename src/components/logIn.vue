@@ -69,23 +69,25 @@
             </div>
           </div>
         </form>
-        <div v-if="mode === 'login'"
-             class="google__auth-wrapper"
-             @click="handleGoogleLogin"
-        >
-          <img class="google__icon" src="../../assets/images/search.svg" alt="google_icon">
-          <div class="google__auth">{{ t('auth.google') }}</div>
+        <div v-if="mode === 'login'" class="social-auth-container">
+          <button class="google__auth-wrapper" @click="handleGoogleLogin">
+            <img class="google__icon" src="../../assets/images/google.svg" alt="google_icon">
+            <span class="google__auth">{{ t('auth.google') }}</span>
+          </button>
+          <button class="apple__auth-wrapper" @click="handleAppleLogin">
+            <img class="apple__icon" src="../../assets/images/apple.svg" alt="apple_icon">
+            <span class="apple__auth">{{ t('войти с помощью apple') }}</span>
+          </button>
+          <button class="facebook__auth-wrapper" @click="handleFacebookLogin">
+            <img class="facebook__icon" src="../../assets/images/facebook.svg" alt="facebook_icon">
+            <span class="facebook__auth">{{ t('войти с помощью facebook') }}</span>
+          </button>
         </div>
       </div>
-<!--      <div class="close__btn-modal-wrapper">-->
-<!--        <button class="close__modal" @click="emits('close-auth-form')">-->
-<!--          <div class="close__mob-auth-text">{{ t('hideAuthMobileBtn.text') }}</div>-->
-<!--          <img class="close__auth-icon" src="../../assets/images/arrowNav.svg" alt="hide_auth_icon">-->
-<!--        </button>-->
-<!--      </div>-->
     </div>
   </div>
 </template>
+
 <script setup>
 import {ref, computed, watch, onMounted, onUnmounted} from 'vue'
 import {userAuthStore} from '../../store/authStore.js'
@@ -94,6 +96,7 @@ import {useI18n} from 'vue-i18n'
 import {mapErrors} from '../../utils/errorsHandler.js'
 import View from '../../assets/images/loginEyes/view.svg'
 import Hide from '../../assets/images/loginEyes/hide.svg'
+
 const {t, locale} = useI18n()
 const router = useRouter()
 const emits = defineEmits(['close-auth-form'])
@@ -110,6 +113,7 @@ const toggleTransform = computed(() => {
     return mode.value === 'login' ? 'translateX(0%)' : 'translateX(100%)'
   }
 })
+
 const fields = ref([
   {
     id: 1,
@@ -166,6 +170,7 @@ const tabs = [
   {value: 'login', label: 'auth.logIn'},
   {value: 'register', label: 'auth.regs'}
 ]
+
 const visibleFields = computed(() => {
   if (mode.value === 'login') {
     return fields.value.filter(f => f.name === 'email' || f.name === 'password')
@@ -177,18 +182,39 @@ const visibleFields = computed(() => {
     return fields.value.filter(f => f.name === 'email')
   }
 })
+
 const handleGoogleLogin = async () => {
   try {
     await authStore.loginWithGoogle()
     emits('close-auth-form')
     router.push('/')
   } catch (e) {
+    console.error(e)
+  }
+}
+
+const handleAppleLogin = async () => {
+  try {
+    await authStore.loginWithApple()
+    emits('close-auth-form')
+    router.push('/')
+  } catch (e) {
+    console.error(e)
+  }
+}
+
+const handleFacebookLogin = async () => {
+  try {
+    await authStore.loginWithFacebook()
+    emits('close-auth-form')
+    router.push('/')
+  } catch (e) {
+    console.error(e)
   }
 }
 
 function validateFields(values) {
   fields.value.forEach(field => field.error = '')
-
   if (mode.value === 'login' || mode.value === 'register') {
     if (!values.email) fields.value.find(f => f.name === 'email').error = 'errors.errorEmail'
     if (!values.password) fields.value.find(f => f.name === 'password').error = 'errors.errorPassword'
@@ -199,11 +225,9 @@ function validateFields(values) {
       }
     }
   }
-
   if (mode.value === 'reset') {
     if (!values.email) fields.value.find(f => f.name === 'email').error = 'errors.errorEmail'
   }
-
   return fields.value.every(f => !f.error)
 }
 
@@ -257,14 +281,9 @@ watch(isAuthed, (v) => {
 onUnmounted(() => {
   document.body.style.overflow = ''
 })
-
-// onMounted(() => {
-//   authStore.detectWebView()
-// })
 </script>
 
 <style>
-
 .close__auth-icon {
   width: 22px;
   height: 22px;
@@ -303,8 +322,16 @@ onUnmounted(() => {
   font-family: "Nunito", sans-serif;
 }
 
-.google__auth-wrapper {
+.social-auth-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
   margin-top: 1.5rem;
+}
+
+.google__auth-wrapper {
+  width: 100%;
   background: #60a5fa;
   display: flex;
   align-items: center;
@@ -312,14 +339,9 @@ onUnmounted(() => {
   border-radius: 16px;
   cursor: pointer;
   padding: 12px;
-  border: 3px solid #1e1e1e;
-  box-shadow: 4px 4px 0 #1e1e1e;
-  transition: all 0.1s ease-in-out;
-}
-
-.google__auth-wrapper:hover {
-  transform: translate(2px, 2px);
+  border: 1px solid #1e1e1e;
   box-shadow: 2px 2px 0 #1e1e1e;
+  transition: all 0.1s ease-in-out;
 }
 
 .google__auth-wrapper:active {
@@ -328,19 +350,86 @@ onUnmounted(() => {
 }
 
 .google__icon {
-  width: 32px;
-  height: 32px;
-  padding: 4px;
-  background: white;
-  border-radius: 50%;
+  width: 38px;
+  height: 38px;
 }
 
 .google__auth {
   font-family: "Nunito", sans-serif;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 18px;
   margin-left: 10px;
+  width: 240px;
+  text-align: left;
   color: #1e1e1e;
+}
+
+.apple__auth-wrapper {
+  width: 100%;
+  background: #3e3737;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  cursor: pointer;
+  padding: 12px;
+  border: 1px solid #1e1e1e;
+  box-shadow: 2px 2px 0 #1e1e1e;
+  transition: all 0.1s ease-in-out;
+}
+
+.apple__auth-wrapper:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 #1e1e1e;
+}
+
+.apple__icon {
+  width: 38px;
+  height: 38px;
+}
+
+.apple__auth {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 10px;
+  color: #ffffff;
+  width: 240px;
+  text-align: left;
+}
+
+.facebook__auth-wrapper {
+  width: 100%;
+  background: #1877f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  cursor: pointer;
+  padding: 12px;
+  border: 1px solid #1e1e1e;
+  box-shadow: 2px 2px 0 #1e1e1e;
+  transition: all 0.1s ease-in-out;
+}
+
+.facebook__auth-wrapper:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 #1e1e1e;
+}
+
+.facebook__icon {
+  width: 38px;
+  height: 38px;
+}
+
+.facebook__auth {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 10px;
+  color: #ffffff;
+  width: 240px;
+  text-align: left;
 }
 
 .auth {
@@ -564,7 +653,6 @@ onUnmounted(() => {
   color: #2563eb;
   text-decoration: underline;
 }
-
 
 @media (max-width: 767px) {
   .close__btn-modal-wrapper {

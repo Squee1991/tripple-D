@@ -21,7 +21,6 @@ export const useBillingStore = defineStore('billing', () => {
 			if (!authStore.uid) {
 				return
 			}
-
 			await Purchases.configure({
 				apiKey: 'goog_zJiiRlMjdJmJNBtZXxiePlRaHmv',
 			})
@@ -32,7 +31,6 @@ export const useBillingStore = defineStore('billing', () => {
 					syncSubscription()
 				}
 			})
-
 			await loadOfferings()
 			await syncSubscription()
 

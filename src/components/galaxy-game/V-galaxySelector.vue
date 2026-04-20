@@ -431,13 +431,13 @@ const startLevel = () => {
   .constellations-map {
     position: relative;
     height: auto;
-    min-height: 100vh;
+    min-height: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 40px 20px;
-    padding: 120px 20px 50px;
+    padding: 30px;
     overflow-y: auto;
   }
 

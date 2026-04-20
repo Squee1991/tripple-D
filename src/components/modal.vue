@@ -98,9 +98,9 @@ const props = defineProps({
   position: relative;
   background: white;
   padding: 1.8rem;
-  border-radius: 24px;
-  border: 4px solid #1e1e1e;
-  box-shadow: 4px 4px 0 #1e1e1e;
+  border-radius: 25px;
+  border: 2px solid #1e1e1e;
+  box-shadow: 3px 3px 0 #1e1e1e;
   max-width: 420px;
   width: 90%;
   text-align: center;
@@ -122,7 +122,7 @@ const props = defineProps({
 }
 
 .modal-title {
-  font-size: 1.6rem;
+  font-size: 22px;
   color: #1e1e1e;
   font-weight: bold;
   margin-bottom: 10px;
@@ -135,7 +135,7 @@ const props = defineProps({
 
 .modal-text {
   font-family: "Nunito", sans-serif;
-  font-size: 1.1rem;
+  font-size: 16px;
   color: #555;
   line-height: 1.3;
   margin-bottom: 10px;

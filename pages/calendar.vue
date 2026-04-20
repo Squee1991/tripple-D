@@ -5,7 +5,7 @@
       <h1 class="page-title">{{ t('calendarInfo.eventsTitle')}}</h1>
       <div class="spacer"></div>
     </header>
-    <div class="layout">
+    <div class="calendar__layout">
       <div class="area__info">
         <div class="legend" aria-label="info">
           <div class="legend__wrapper">
@@ -298,9 +298,12 @@ function endOfDay(dateObj) {
 }
 
 .page {
-  min-height: 100dvh;
+  height: 100%;
   max-width: 1400px;
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .topbar {
@@ -310,11 +313,10 @@ function endOfDay(dateObj) {
   display: grid;
   grid-template-columns: 56px 1fr 56px;
   align-items: center;
-  padding: 10px 12px;
-  background: #fff;
-  border-bottom: 3px solid var(--ink);
+  padding: 5px 10px 15px 10px;
   box-shadow: 0 6px 0 rgba(0, 0, 0, .06);
-  margin-bottom: 15px;
+  margin-bottom: 5px;
+  background: var(--bg);
 }
 
 .back-btn {
@@ -340,19 +342,27 @@ function endOfDay(dateObj) {
 }
 
 .page-title {
-  text-align: center;
-  font-size: 20px;
+  margin-left: 15px;
+  font-size: 22px;
   font-weight: 1000;
-  color: var(--ink);
+  color: var(--titleColor)
 }
 
 .spacer {
   width: 56px;
 }
 
-.layout {
+.calendar__layout {
+  flex: 1;
   display: flex;
+  flex-direction: column-reverse;
   gap: 10px;
+  padding: 10px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 60px;
 }
 
 .area__info {

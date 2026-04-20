@@ -164,10 +164,10 @@ onMounted(() => {
 
 <style scoped>
 .game-universe {
-  height: 100vh;
+  height: 100%;
   background: #010409;
   overflow: hidden;
-  font-family: 'Arial Rounded MT Bold', sans-serif;
+  font-family: Nunito, sans-serif;
   user-select: none;
 }
 

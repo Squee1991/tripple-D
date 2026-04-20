@@ -9,24 +9,28 @@
           :class="[ { 'is-open': isPanelOpen || windowWidth > 1024 },  'theme--' + themeOf(active), { rtl: locale === 'ar' } ]"
           v-if="active"
       >
-        <button
-            v-if="windowWidth <= 1024"
-            class="map-left__close"
-            @click="isPanelOpen = false"
-        >×
-        </button>
-        <div class="map-left__art">
-          <img :src="active?.icon" alt="Choose avatar location">
+        <div class="mal__left-content">
+          <div>
+            <button
+                v-if="windowWidth <= 1024"
+                class="map-left__close"
+                @click="isPanelOpen = false"
+            >×
+            </button>
+            <div class="map-left__art">
+              <img :src="active?.icon" alt="Choose avatar location">
+            </div>
+            <h2 class="map-left__title">{{ t(active.name) }}</h2>
+            <p class="map-left__desc">{{ t(active.desc) }}</p>
+            <p class="map-left__level" :class="isUnlocked ? 'ok' : 'locked'">
+              <span v-if="isUnlocked">{{ t('locationsMenu.access') }}</span>
+              <span v-else>{{ t('locationsMenu.accessWithLevel') }} {{ active.level }}</span>
+            </p>
+          </div>
+          <button class="map-btn" :disabled="!isUnlocked" @click="go(active)">
+            {{ t('locationsMenu.choose') }}
+          </button>
         </div>
-        <h2 class="map-left__title">{{ t(active.name) }}</h2>
-        <p class="map-left__desc">{{ t(active.desc) }}</p>
-        <p class="map-left__level" :class="isUnlocked ? 'ok' : 'locked'">
-          <span v-if="isUnlocked">{{ t('locationsMenu.access') }}</span>
-          <span v-else>{{ t('locationsMenu.accessWithLevel') }} {{ active.level }}</span>
-        </p>
-        <button class="map-btn" :disabled="!isUnlocked" @click="go(active)">
-          {{ t('locationsMenu.choose') }}
-        </button>
       </div>
       <div class="map-right-container">
         <div class="map-pagination-arrows">
@@ -240,6 +244,9 @@ onBeforeUnmount(() => {
   border: 3px solid var(--border);
   border-radius: 15px;
   padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   color: #222;
   overflow-y: auto;
   box-shadow: var(--border);
@@ -268,6 +275,7 @@ onBeforeUnmount(() => {
   margin: 0 0 8px;
   font-weight: 900;
   color: var(--titleColor);
+
 }
 
 .map-left__desc {
@@ -298,7 +306,32 @@ onBeforeUnmount(() => {
   color: #b21f24;
 }
 
+.mal__left-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 10px 5px;
+}
+
 .map-btn {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  background: #3b82f6;
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 24px;
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center;
+  border: 2px solid #2563eb;
+  border-bottom: 6px solid #1d4ed8;
+  transition: transform 0.1s;
+}
+
+
+.map-b {
   padding: 12px 18px;
   background: var(--regionBtnBg);
   color: var(--regionBtnColor);
@@ -513,14 +546,14 @@ onBeforeUnmount(() => {
     transform: translateX(0);
     opacity: 1;
     pointer-events: auto;
+    height: 100%;
     background: var(--bg);
-    padding: 55px 15px 20px 15px;
   }
 
   .map-left__close {
     position: absolute;
-    top: 8px;
-    right: 8px;
+    top: 12px;
+    right: 12px;
     width: 36px;
     height: 36px;
     border: 3px solid var(--border);
@@ -564,6 +597,7 @@ onBeforeUnmount(() => {
 @media (max-width: 636px) {
   .map-left {
     width: 100%;
+    height: 100%;
     border-radius: 0;
     border: none;
   }
@@ -615,13 +649,14 @@ onBeforeUnmount(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fff;
-  border: 2px solid var(--border);
+  background: #2c323d;
+  border: 2px solid #363d4a;
   border-radius: 10px;
   font-size: 24px;
   font-weight: 900;
   cursor: pointer;
-  box-shadow: 2px 2px 0 var(--border);
+  color: white;
+  box-shadow: 2px 2px 0 #363d4a;
   transition: all 0.1s;
 }
 
@@ -638,15 +673,15 @@ onBeforeUnmount(() => {
 .current-category-name {
   font-size: 1.1rem;
   font-weight: 900;
-  color: var(--labelTextColor);
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 2px 2px 0 var(--border);
-  border: var(--border);
-  border-radius: 8px;
+  box-shadow: 2px 2px 0 #363d4a;
+  border: 2px solid #363d4a;
+  border-radius: 15px;
   flex: 1;
-  background: white;
+  background: #2c323d;
   height: 36px;
 }
 

@@ -69,7 +69,7 @@ const activeIndex = computed(() => {
 .footer__container {
   background: #1e1e1e;
   border-radius: 40px;
-  padding: 8px;
+  padding: 6px;
   box-shadow: var(--boxShadowMobile);
   border: 3px solid #2a2a2a;
 }

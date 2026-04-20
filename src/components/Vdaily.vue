@@ -158,11 +158,11 @@ onUnmounted(() => {
   justify-content: space-between;
   gap: 12px;
   align-items: center;
-  background: #fff;
-  border: 2px solid var(--border);
+  background: #1e222a;
+  border: 1px solid #363d4a;
   border-radius: 14px;
   padding: 0 10px;
-  box-shadow: 2px 2px 0 var(--border);
+  box-shadow: 2px 2px 0 var(--boxShadowMobile);
   position: relative;
   z-index: 1;
 }
@@ -177,7 +177,7 @@ onUnmounted(() => {
   font-size: 13px;
   font-weight: 700;
   line-height: 1.25;
-  color: var(--labelTextColor);
+  color: var(--titleColor);
   margin-bottom: 10px;
 }
 
@@ -201,14 +201,13 @@ onUnmounted(() => {
   height: 18px;
   border: 1px solid #2a3444;
   border-radius: 10px;
-  background: #222b38;
   overflow: hidden;
   -webkit-appearance: none;
   appearance: none;
 }
 
 .qd__progress::-webkit-progress-bar {
-  background: #222b38;
+  background: #48556b;
 }
 
 .qd__progress::-webkit-progress-value {

@@ -75,13 +75,13 @@ onMounted(async () => {
 
   position: fixed;
   inset: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   z-index: 2000;
   background: #0f0c29;
   display: flex;
   flex-direction: column;
-  padding: 30px;
+  padding: 10px 20px;
   box-sizing: border-box;
   font-family: 'Arial Black', 'Gadget', sans-serif;
   overflow: hidden;
@@ -135,30 +135,26 @@ onMounted(async () => {
 
 .funky-exit-btn {
   background: #ff0055;
-  border: 4px solid #000;
+  border: 2px solid #000;
   padding: 12px 25px;
   color: #fff;
   font-weight: 900;
-  box-shadow: 6px 6px 0px #000;
+  box-shadow: 3px 3px 0px #000;
   cursor: pointer;
   transform: skewX(-10deg);
   transition: 0.2s;
-}
-
-.funky-exit-btn:hover {
-  transform: skewX(0deg) scale(1.06);
-  background: #ff2e7e;
-  box-shadow: 4px 4px 0px #000;
+  border-radius: 15px;
 }
 
 .funky-balance-plate {
   background: #ccff00;
-  border: 4px solid #000;
+  border: 2px solid #000;
   padding: 10px;
-  box-shadow: 6px 6px 0px #000;
+  box-shadow: 3px 3px 0px #000;
   transform: skewX(10deg);
   display: flex;
   align-items: center;
+  border-radius: 15px;
 }
 
 .currency-label {
@@ -185,21 +181,15 @@ onMounted(async () => {
   width: 60px;
   height: 70px;
   background: #fff;
-  border: 5px solid #000;
+  border: 3px solid #000;
   border-radius: 15px;
   font-size: 1rem;
   cursor: pointer;
-  box-shadow: 4px 4px 0px #000;
+  box-shadow: 3px 3px 0px #000;
   transition: 0.1s;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.nav-arrow:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0px #000;
-  background: #ccff00;
 }
 
 .ship-presentation {
@@ -266,9 +256,9 @@ onMounted(async () => {
   padding: 10px;
   font-size: 1.3rem;
   font-weight: 900;
-  border: 5px solid #000;
+  border: 2px solid #000;
   cursor: pointer;
-  box-shadow: 8px 8px 0px #000;
+  box-shadow: 3px 3px 0px #000;
   transition: 0.1s;
 }
 
