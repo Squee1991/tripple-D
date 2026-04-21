@@ -1,21 +1,21 @@
 const { onSchedule } = require("firebase-functions/v2/scheduler");
 const { onCall, HttpsError } = require("firebase-functions/v2/https");
 const { defineSecret } = require("firebase-functions/params");
-const { getFirestore } = require("firebase-admin/firestore");
 const admin = require("firebase-admin");
 
 if (admin.apps.length === 0) admin.initializeApp();
-const db = getFirestore();
 
 const CYCLE_MS = 24 * 60 * 60 * 1000;
 const IMMUNITY_RANK_HATS = 500;
 const GROQ_API_KEY = defineSecret("GROQ_API_KEY");
+
 exports.takeFromArticlePenalty = onSchedule({
 	schedule: "every 20 minutes",
 	timeZone: "UTC",
 	memory: "256Mi",
 	timeoutSeconds: 540
 }, async (event) => {
+	const db = admin.firestore();
 	const now = Date.now();
 
 	const snapshot = await db.collectionGroup('daily')
@@ -47,6 +47,7 @@ exports.takeFromArticlePenalty = onSchedule({
 				const hadShield = freezeEndMs && freezeEndMs > prevCycleStartsAt;
 				const hasImmunity = currentHats >= IMMUNITY_RANK_HATS;
 				if (!hadShield && !hasImmunity) {
+
 					batch.update(userRef, { totalHats: Math.max(0, currentHats - 3) });
 				}
 			}
@@ -64,10 +65,8 @@ exports.takeFromArticlePenalty = onSchedule({
 
 	if (count > 0) promises.push(batch.commit());
 	await Promise.all(promises);
-
 	return null;
 });
-
 
 exports.whisperTranscribe = onCall({
 	secrets: [GROQ_API_KEY],
@@ -121,6 +120,7 @@ exports.visionAnalyze = onCall({
 
 		const modelId = 'meta-llama/llama-4-scout-17b-16e-instruct';
 		const feedbackLang = String(userLocale || 'ru').split('-')[0].trim();
+
 		const systemPrompt = `You are a strict but supportive German language tutor evaluating an image description exercise.
 **STRICT LANGUAGE RULE: YOU MUST WRITE ALL FEEDBACK AND CORRECTIONS IN THE LANGUAGE: "${feedbackLang}". NEVER USE GERMAN IN THE FEEDBACK FIELD.**
 
@@ -171,6 +171,7 @@ OUTPUT JSON FORMAT:
   "suggestedAnswer": "...",
   "keyCorrections": []
 }`
+
 		const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
 			method: 'POST',
 			headers: {

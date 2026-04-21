@@ -354,17 +354,13 @@ const confirmPurchase = async () => {
 
 .shop__content {
   overflow-y: auto;
-  max-height: calc(100vh - 100px);
-  padding-bottom: 70px;
+  max-height: calc(100vh - 70px);
+  padding-bottom: 180px;
 }
 
 .shop__content::-webkit-scrollbar {
   width: 2px;
   background: transparent;
-}
-
-.shop__content::-webkit-scrollbar-thumb {
-
 }
 
 .shop__content::-webkit-scrollbar-track {

@@ -35,14 +35,6 @@
         </div>
         <Transition name="slide-right" appear>
           <div v-if="showModesBlock" class="learning-modes-block">
-            <button @click="clearSelectedTopic" class="close-modes-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                <path
-                    fill="currentColor"
-                    d="m12 13.4l-4.9 4.9q-.275.275-.7.275t-.7-.275q-.275-.275-.275-.7t.275-.7l4.9-4.9l-4.9-4.9q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275L12 10.6l4.9-4.9q.275-.275.7-.275t.7.275q.275.275.275-.7t-.275.7L13.4 12l4.9 4.9q.275.275.275.7t-.275.7q-.275.275-.7.275t-.7-.275z"
-                ></path>
-              </svg>
-            </button>
             <div class="learning__modes-wrapper">
               <button @click="clearSelectedTopic" class="close-modes-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
@@ -413,7 +405,7 @@ onMounted(() => {
   bottom: 0;
   width: 100%;
   height: 100%;
-  background: #fff;
+  background: var(--bg);
   z-index: 2000;
   padding: 20px;
   display: flex;
@@ -424,7 +416,7 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   height: 100%;
-  margin-top: 40px;
+  position: relative;
 }
 
 .close-modes-btn {
@@ -454,14 +446,14 @@ onMounted(() => {
   font-size: 24px;
   font-weight: 700;
   text-align: center;
-  color: #1e1e1e;
+  color: var(--titleColor);
 }
 
 .topic-hint {
   text-align: center;
-  color: #555;
+  color: #726b6b;
   margin-bottom: 1.5rem;
-  font-family: 'Inter', sans-serif;
+  font-family: Nunito, sans-serif;
   font-style: italic;
   font-weight: 500;
   margin-top: 5px;

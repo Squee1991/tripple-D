@@ -1,7 +1,6 @@
 <template>
   <div>
     <div class="quest">
-      <button class="quest__back-btn" @click="openLeave('back')">×</button>
       <div v-if="questStore.finished && questStore.success && !questStore.hasMistakes" class="quest__stamp quest__stamp--ok">{{ t('locationQuests.done')}}</div>
       <div v-if="questStore.loading" class="quest__panel quest__panel--loading"></div>
       <div v-else-if="questStore.error" class="quest__panel quest__panel--error">
@@ -11,6 +10,7 @@
       <div v-else-if="questStore.task" class="quest__card">
         <VHelpModal :open="showHint" @close="showHint=false" />
         <div class="quest__top">
+          <button class="quest__back-btn" @click="openLeave('back')">×</button>
           <div class="quest__stat">
             <div class="quest__stat-value">
               {{ questStore.currentIndex + 1 }} / {{ questStore.requiredTasks }}
@@ -22,7 +22,6 @@
             </div>
           </div>
           <div class="quest__lives" v-if="!previouslyCleared">
-            <button class="quest__back-btn" @click="openLeave('back')">×</button>
             <VHearts
                 :lives="questStore.lives"
                 :max-lives="questStore.maxLives"
@@ -569,10 +568,10 @@ watchEffect(() => {
 
 .quest__back-btn {
   position: absolute;
-  left: 1.5rem;
-  top: 2.5rem;
-  width: 46px;
-  height: 46px;
+  left: 0;
+  top: 0;
+  width: 32px;
+  height: 32px;
   display: grid;
   place-items: center;
   background: #fff;
@@ -580,22 +579,11 @@ watchEffect(() => {
   font-weight: 900;
   font-size: 22px;
   line-height: 1;
-  border: 3px solid #1e1e1e;
-  border-radius: 12px;
-  box-shadow: 4px 4px 0 #1e1e1e;
+  border: 2px solid #1e1e1e;
+  border-radius: 40px;
   cursor: pointer;
   transition: all .1s ease-in-out;
   z-index: 99;
-}
-
-.quest__back-btn:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0 #1e1e1e;
-}
-
-.quest__back-btn:active {
-  transform: translate(4px, 4px);
-  box-shadow: 0 0 0 #1e1e1e;
 }
 
 .quest__card {
@@ -990,10 +978,6 @@ watchEffect(() => {
 }
 
 @media (max-width: 1023px) {
-  .quest__back-btn {
-    left: 1rem;
-    top: 1rem;
-  }
   .quest__top {
     flex-direction: column;
     align-items: center;
@@ -1042,23 +1026,11 @@ watchEffect(() => {
     left: 50%;
     transform: translateX(-50%);
   }
-  .quest__heart-wrapper {
-    width: 28px;
-    height: 28px;
-  }
+
   .quest__question {
     font-size: 1.1rem;
     border-bottom: 2px solid #9dceff;
     border-radius: 15px;
-  }
-  .quest__back-btn {
-    font-size: 30px;
-    top: 10px;
-    left: 0;
-    border: none;
-    background: none;
-    box-shadow: none;
-    color: var(--titleColor);
   }
   .quest__option-btn {
     height: 40px;

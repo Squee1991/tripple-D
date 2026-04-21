@@ -1,6 +1,89 @@
+<template>
+  <div class="pilot-cabinet-fullscreen">
+    <div class="cabinet-bg">
+      <div class="dot-pattern"></div>
+    </div>
+
+    <div class="cabinet-header">
+      <button class="toon-btn back-btn" @click="handleBack">◀ {{t('galaxyCabinet.back')}}</button>
+      <div class="sync-pill"></div>
+    </div>
+
+    <div class="main-layout">
+      <div class="side-panel">
+        <h3 class="side-label">{{t('galaxyCabinet.id')}}</h3>
+        <div class="toon-card profile-card">
+          <div class="name-container">
+            <div class="ship-icon-wrapper mobile-only-icon">
+              <img :src="store.activeShip.img" class="ship-icon-mini" alt="icon"/>
+            </div>
+
+            <div class="edit-flow" v-if="isEditingName">
+              <input
+                  v-model="tempName"
+                  @keyup.enter="handleSaveName"
+                  class="toon-input"
+                  autofocus
+              />
+              <button class="toon-btn save-name-btn" @click="handleSaveName">OK</button>
+            </div>
+
+            <h1 v-else @click="startEdit" class="display-name">
+              {{ store.captainName }} <span class="edit-pen">✎</span>
+            </h1>
+          </div>
+        </div>
+
+        <div class="toon-card ship-card desktop-only">
+          <div class="ship-name-tag">{{ store.activeShip.name }}</div>
+          <div class="ship-frame">
+            <div class="star burst-1">✦</div>
+            <div class="star burst-2">✦</div>
+            <img :src="store.activeShip.img" class="ship-render toon-bounce" :alt="store.activeShip.name"/>
+          </div>
+        </div>
+      </div>
+
+      <div class="side-panel">
+        <h3 class="side-label">{{t('galaxyCabinet.journey')}}</h3>
+        <div class="main-stats">
+          <div class="toon-card stat-card yellow">
+            <span class="stat-label">{{t('galaxyCabinet.money')}}</span>
+            <span class="stat-val">{{ store.balance }} Ⓐ</span>
+          </div>
+          <div class="toon-card stat-card blue">
+            <span class="stat-label">{{t('galaxyCabinet.commonPoints')}}</span>
+            <span class="stat-val">{{ totalPoints.toLocaleString() }}</span>
+          </div>
+        </div>
+
+        <div class="galaxy-grid">
+          <div
+              v-for="g in galaxyList"
+              :key="g.id"
+              class="toon-card galaxy-card"
+              :style="{ backgroundColor: g.color }"
+              :class="{ is_locked: !(store.highScores[g.id] > 0) }"
+          >
+            <div class="g-header">
+              <span class="g-title">{{ g.label }}</span>
+              <div class="g-rank-badge">{{t('galaxyCabinet.rank')}} {{ getRank(store.highScores[g.id] || 0).label }}</div>
+            </div>
+            <div class="g-body">
+              <div class="g-score-line">
+                <span class="score-highlight">{{t('galaxyCabinet.streak')}} {{ store.highScores[g.id] || 0 }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
 <script setup>
-import {ref, computed, onMounted} from 'vue'
-import {useGalaxyStore} from '../../../store/galaxyStore.js'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { useGalaxyStore } from '../../../store/galaxyStore.js'
 
 const emit = defineEmits(['close'])
 const store = useGalaxyStore()
@@ -9,16 +92,32 @@ const isEditingName = ref(false)
 const tempName = ref(store.captainName)
 
 const startEdit = () => {
+  window.history.pushState({ isEditingProfile: true }, '')
   tempName.value = store.captainName
   isEditingName.value = true
 }
 
 const handleSaveName = async (event) => {
-  console.log('handleSaveName вызван с аргументом:', event);
   if (tempName.value.trim()) {
     await store.setCaptainName(tempName.value)
   }
-  isEditingName.value = false
+  if (isEditingName.value) {
+    window.history.back()
+  }
+}
+
+const handleBack = () => {
+  if (isEditingName.value) {
+    window.history.back()
+  } else {
+    emit('close')
+  }
+}
+
+const handlePopState = () => {
+  if (isEditingName.value) {
+    isEditingName.value = false
+  }
 }
 
 const getRank = (score) => {
@@ -47,115 +146,36 @@ const totalPoints = computed(() => {
 onMounted(async () => {
   await store.initUser()
   tempName.value = store.captainName
+  window.addEventListener('popstate', handlePopState)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('popstate', handlePopState)
 })
 </script>
-
-<template>
-  <div class="pilot-cabinet-fullscreen">
-    <div class="cabinet-bg">
-      <div class="dot-pattern"></div>
-    </div>
-    <div class="cabinet-header">
-      <button class="toon-btn back-btn" @click="$emit('close')">◀ {{t('galaxyCabinet.back')}}</button>
-      <div class="sync-pill"></div>
-    </div>
-    <div class="main-layout">
-      <div class="side-panel">
-        <h3 class="side-label">{{t('galaxyCabinet.id')}}</h3>
-        <div class="toon-card profile-card">
-          <div class="name-container">
-            <div class="ship-icon-wrapper mobile-only-icon">
-              <img :src="store.activeShip.img" class="ship-icon-mini" alt="icon"/>
-            </div>
-            <div class="edit-flow" v-if="isEditingName">
-              <input
-                  v-model="tempName"
-                  @keyup.enter="handleSaveName"
-                  class="toon-input"
-                  autofocus
-              />
-              <button class="toon-btn save-name-btn" @click="handleSaveName">OK</button>
-            </div>
-            <h1 v-else @click="startEdit" class="display-name">
-              {{ store.captainName }} <span class="edit-pen">✎</span>
-            </h1>
-          </div>
-        </div>
-        <div class="toon-card ship-card desktop-only">
-          <div class="ship-name-tag">{{ store.activeShip.name }}</div>
-          <div class="ship-frame">
-            <div class="star burst-1">✦</div>
-            <div class="star burst-2">✦</div>
-            <img :src="store.activeShip.img" class="ship-render toon-bounce" :alt="store.activeShip.name"/>
-          </div>
-        </div>
-      </div>
-      <div class="side-panel">
-        <h3 class="side-label">{{t('galaxyCabinet.journey')}}</h3>
-        <div class="main-stats">
-          <div class="toon-card stat-card yellow">
-            <span class="stat-label">{{t('galaxyCabinet.money')}}</span>
-            <span class="stat-val">{{ store.balance }} Ⓐ</span>
-          </div>
-          <div class="toon-card stat-card blue">
-            <span class="stat-label">{{t('galaxyCabinet.commonPoints')}}</span>
-            <span class="stat-val">{{ totalPoints.toLocaleString() }}</span>
-          </div>
-        </div>
-        <div class="galaxy-grid">
-          <div
-              v-for="g in galaxyList"
-              :key="g.id"
-              class="toon-card galaxy-card"
-              :style="{ backgroundColor: g.color }"
-              :class="{ is_locked: !(store.highScores[g.id] > 0) }"
-          >
-            <div class="g-header">
-              <span class="g-title">{{ g.label }}</span>
-              <div class="g-rank-badge">{{t('galaxyCabinet.rank')}} {{ getRank(store.highScores[g.id] || 0).label }}</div>
-            </div>
-            <div class="g-body">
-              <div class="g-score-line">
-                <span class="score-highlight">{{t('galaxyCabinet.streak')}} {{ store.highScores[g.id] || 0 }}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</template>
 
 <style scoped>
 
 .pilot-cabinet-fullscreen {
-  position: fixed;
-  inset: 0;
-  max-width: 1300px;
-  margin: 0 auto;
+  position: relative;
   height: 100%;
-  z-index: 5000;
-  background: #3b28cc;
-  color: #1a1a1a;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  background: var(--bg);
+  color: #1a1a1a;
+  padding: 0 10px;
   box-sizing: border-box;
-  font-family: 'Comic Sans MS', 'Arial Black', sans-serif;
+  font-family: Nunito, sans-serif;
   overflow: hidden;
+  user-select: none;
 }
 
 .cabinet-bg {
-  position: fixed;
+  position: absolute;
   inset: 0;
   z-index: -1;
-  background: repeating-linear-gradient(
-      45deg,
-      #4d3ae0,
-      #4d3ae0 20px,
-      #3b28cc 20px,
-      #3b28cc 40px
-  );
+  background: var(--bg);
 }
 
 .dot-pattern {
@@ -170,7 +190,7 @@ onMounted(async () => {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 18px;
+  margin-bottom: 15px;
   flex-shrink: 0;
 }
 
@@ -182,20 +202,21 @@ onMounted(async () => {
   min-height: 0;
   overflow-y: auto;
   overflow-x: hidden;
-  padding-right: 15px;
-  padding-bottom: 30px;
+  padding-right: 5px;
+  padding-bottom: 20px;
+  -webkit-overflow-scrolling: touch;
 }
 
 .main-layout::-webkit-scrollbar {
-  width: 2px;
+  width: 4px;
   display: none;
 }
-
 .main-layout::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
-
+  border-radius: 4px;
 }
-
+.main-layout::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+}
 .main-layout::-webkit-scrollbar-thumb:active {
   background: #ff4757;
 }
@@ -226,6 +247,7 @@ onMounted(async () => {
   padding: 20px;
   box-shadow: 3px 3px 0 #1a1a1a;
   position: relative;
+  flex-shrink: 0;
 }
 
 .profile-card {
@@ -376,17 +398,8 @@ onMounted(async () => {
   font-size: 2rem;
 }
 
-.burst-1 {
-  top: 10%;
-  left: 10%;
-  animation: twinkle 1s infinite alternate;
-}
-
-.burst-2 {
-  bottom: 15%;
-  right: 15%;
-  animation: twinkle 1.5s infinite alternate;
-}
+.burst-1 { top: 10%; left: 10%; animation: twinkle 1s infinite alternate; }
+.burst-2 { bottom: 15%; right: 15%; animation: twinkle 1.5s infinite alternate; }
 
 .toon-bounce {
   width: 180px;
@@ -407,14 +420,8 @@ onMounted(async () => {
   justify-content: center;
 }
 
-.stat-card.yellow {
-  background: #ffa502;
-}
-
-.stat-card.blue {
-  background: #1e90ff;
-  color: white;
-}
+.stat-card.yellow { background: #ffa502; }
+.stat-card.blue { background: #1e90ff; color: white; }
 
 .stat-label {
   font-size: 0.9rem;
@@ -423,9 +430,7 @@ onMounted(async () => {
   color: #1a1a1a;
 }
 
-.stat-card.blue .stat-label {
-  color: #fff;
-}
+.stat-card.blue .stat-label { color: #fff; }
 
 .stat-val {
   font-size: 2.2rem;
@@ -437,7 +442,6 @@ onMounted(async () => {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  flex: 1;
 }
 
 .galaxy-card {
@@ -491,70 +495,14 @@ onMounted(async () => {
   border: 2px solid #1a1a1a;
 }
 
-.xp-track-wrapper {
-  background: #fff;
-  border: 4px solid #1a1a1a;
-  border-radius: 15px;
-  padding: 3px;
-  box-shadow: inset 3px 3px 0 rgba(0, 0, 0, 0.1);
-}
-
-.xp-track {
-  height: 18px;
-  border-radius: 10px;
-  overflow: hidden;
-  background: #f1f2f6;
-}
-
-.xp-bar {
-  height: 100%;
-  border-radius: 10px;
-  transition: width 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.toon-stripes {
-  background-color: #ff4757;
-  background-image: repeating-linear-gradient(
-      45deg,
-      rgba(255, 255, 255, 0.2) 25%,
-      transparent 25%,
-      transparent 50%,
-      rgba(255, 255, 255, 0.2) 50%,
-      rgba(255, 255, 255, 0.2) 75%,
-      transparent 75%,
-      transparent
-  );
-  background-size: 20px 20px;
-  animation: moveStripes 1s linear infinite;
-}
-
 @keyframes toonFloat {
-  0%, 100% {
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    transform: translateY(-1px) scale(1.01);
-  }
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-1px) scale(1.01); }
 }
 
 @keyframes twinkle {
-  from {
-    opacity: 0.3;
-    transform: scale(0.8);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1.2);
-  }
-}
-
-@keyframes moveStripes {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 20px 0;
-  }
+  from { opacity: 0.3; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1.2); }
 }
 
 @media (max-width: 900px) {
@@ -565,7 +513,6 @@ onMounted(async () => {
   .main-layout {
     grid-template-columns: 1fr;
     gap: 20px;
-    padding-right: 5px;
   }
 
   .desktop-only {

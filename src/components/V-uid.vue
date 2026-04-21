@@ -145,7 +145,7 @@ onBeforeUnmount(() => {
     margin-bottom: 0;
     height: 100%;
     flex: 1;
-    max-height: calc(100dvh - 100px);
+    max-height: calc(100dvh - 105px);
     overflow: hidden;
   }
 
@@ -209,7 +209,7 @@ onBeforeUnmount(() => {
     width: 100%;
     overflow-y: auto;
     padding: 8px;
-    padding-bottom: 100px;
+    padding-bottom: 105px;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }

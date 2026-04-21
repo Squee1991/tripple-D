@@ -27,6 +27,7 @@ import {useCardsStore} from './store/cardsStore.js'
 import {useLocalStatGameStore} from './store/localSentenceStore.js'
 import { useBillingStore } from './store/billingStore.js'
 import { userChainStore } from './store/chainStore.js'
+import { App } from '@capacitor/app'
 import {onMounted} from "vue";
 import {dailyStore} from './store/dailyStore'
 import {computed} from 'vue'
@@ -61,6 +62,23 @@ const sentencesStore = useSentencesStore();
 const langStore = userlangStore()
 const daily = dailyStore()
 
+onMounted(() => {
+  App.addListener('backButton', ({ canGoBack }) => {
+    const state = window.history.state || {}
+    const isModalOpen = !!(state.isMapPanelOpen || state.isSubCategory || state.isSubScreen)
+    const purePath = route.path.replace(/^\/(ru|ar|en)/, '')
+    const isHomePage = purePath === '/' || purePath === ''
+    if (isModalOpen) {
+      window.history.back()
+    }
+    else if (isHomePage) {
+      App.minimizeApp()
+    }
+    else {
+      window.history.back()
+    }
+  })
+})
 
 const onToastFinished = () => {
   if (authStore.uid) {

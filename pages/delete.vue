@@ -338,9 +338,9 @@ async function processAccountCleanup() {
   width: 100%;
   background: #FFF;
   color: #FF5C5C;
-  border: 4px solid #FF5C5C;
+  border: 2px solid #FF5C5C;
   border-radius: 24px;
-  padding: 20px;
+  padding: 10px;
   font-size: 18px;
   font-weight: 900;
   cursor: pointer;

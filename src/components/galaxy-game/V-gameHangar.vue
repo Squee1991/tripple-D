@@ -72,7 +72,6 @@ onMounted(async () => {
 
 <style scoped>
 .funky-hangar-root {
-
   position: fixed;
   inset: 0;
   width: 100%;
@@ -81,7 +80,11 @@ onMounted(async () => {
   background: #0f0c29;
   display: flex;
   flex-direction: column;
-  padding: 10px 20px;
+  padding-top: calc(10px + env(safe-area-inset-top, 25px));
+  padding-bottom: calc(10px + env(safe-area-inset-bottom, 20px));
+  padding-left: 20px;
+  padding-right: 20px;
+
   box-sizing: border-box;
   font-family: 'Arial Black', 'Gadget', sans-serif;
   overflow: hidden;

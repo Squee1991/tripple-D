@@ -2,7 +2,7 @@
   <div class="location-page">
     <div class="location__wrapper">
       <header class="location-header" :class="{ 'rtl-locale': locale === 'ar' }">
-        <button class="close-btn" @click="goToHomePage" aria-label="to main">×</button>
+        <VBackBtn/>
         <h1 class="region__title-name">{{ t(currentRegion?.name) }}</h1>
       </header>
       <div class="lives-bar__content">
@@ -71,6 +71,7 @@ import { regions } from "~/utils/regions.js";
 import { userChainStore } from "~/store/chainStore.js";
 import { useSeoMeta } from '#imports';
 import VHearts from '../../src/components/V-hearts.vue';
+import VBackBtn from "~/src/components/V-back-btn.vue";
 
 const route = useRoute();
 const router = useRouter();
