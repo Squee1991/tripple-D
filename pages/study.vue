@@ -2,7 +2,7 @@
   <div class="learn-page">
     <div class="learn-container">
       <div class="page-header">
-        <VBackBtnNav @click="selectedCategory ? selectedCategory = null : null"/>
+        <VBackBtnNav @click="handleBack"/>
         <h1 class="page-title">
           {{ selectedCategory ? selectedCategory.title : t('nav.training') }}
         </h1>
@@ -20,7 +20,7 @@
                 <img class="card__icon" :src="category.icon" alt="">
               </div>
             </NuxtLink>
-            <button v-else @click="selectedCategory = category" class="card-content">
+            <button v-else @click="openCategory(category)" class="card-content">
               <h2 class="card-title">{{ category.title }}</h2>
               <span class="card__icon-wrapper">
                 <img class="card__icon" :src="Folder" alt="">
@@ -51,7 +51,8 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { useRouter } from 'vue-router'
 import VBackBtnNav from "~/src/components/V-backBtnNav.vue";
 import Folder from "../assets/images/fileFolder.svg";
 import Photo from "../assets/images/photo-frame.svg";
@@ -61,12 +62,9 @@ import Cards from "../assets/images/cards.svg";
 import Puzzle from "../assets/images/puzzle-piece.svg";
 
 const { t } = useI18n()
+const router = useRouter()
 const selectedCategory = ref(null)
 const isMounted = ref(false)
-
-onMounted(() => {
-  isMounted.value = true
-})
 
 const learnCategories = computed(() => [
   {
@@ -113,6 +111,33 @@ const learnCategories = computed(() => [
   { id: 'cards', icon: Cards, url: '/create-cards', title: t('sub.card') },
   { id: 'idioms', icon: Puzzle, url: '/idioms', title: t('sub.idioms') }
 ])
+
+const openCategory = (category) => {
+  window.history.pushState({ isSubCategory: true }, '')
+  selectedCategory.value = category
+}
+
+const handleBack = () => {
+  window.history.back()
+}
+
+const handlePopState = () => {
+  if (selectedCategory.value) {
+    selectedCategory.value = null
+  } else {
+    router.push('/')
+  }
+}
+
+onMounted(() => {
+  isMounted.value = true
+  window.history.pushState({ isLearnRoot: true }, '')
+  window.addEventListener('popstate', handlePopState)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('popstate', handlePopState)
+})
 
 definePageMeta({
   layout: 'footerlayout'

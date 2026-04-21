@@ -25,7 +25,6 @@
       </div>
     </div>
     <LangSwitcher v-if="isLangModalOpen" @close="isLangModalOpen = false"/>
-
     <div
         v-for="group in SETTINGS_GROUPS"
         :key="group.id"
@@ -63,7 +62,6 @@
         </div>
       </div>
     </div>
-
     <div class="settings-section">
       <div class="section-title">{{ t('cabinetAccordion.faq') }}</div>
       <div class="section-card">
@@ -78,7 +76,6 @@
         </NuxtLink>
       </div>
     </div>
-
     <div class="settings-section account-actions">
       <div class="section-title">Управление аккаунтом</div>
       <div class="account-buttons">
@@ -90,7 +87,6 @@
         </button>
       </div>
     </div>
-
     <div v-if="isLockedModalOpen" class="modal-overlay locked-priority" @click.self="isLockedModalOpen = false">
       <div class="modal-card">
         <div class="modal-title">{{ lockedModalContent.title }}</div>
@@ -142,7 +138,14 @@ const currentLangName = computed(() => {
 const lockedModalContent = ref({title: '', text: ''})
 const toggleForceUpdateKey = ref(0)
 const soundEnabled = ref(false)
-const THEMES = {light: t('themeModal.light'), dark: t('themeModal.dark'), pink: t('themeModal.pink')}
+
+const THEMES = computed(() => {
+  return {
+    light: t('themeModal.light'),
+    dark: t('themeModal.dark'),
+    pink: t('themeModal.pink')
+  }
+})
 
 const isValentineThemeUnlocked = computed(() => {
   const ach = achievementStore.findById('valentineTheme')

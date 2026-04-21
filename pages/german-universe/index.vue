@@ -1,55 +1,60 @@
 <template>
-  <div class="menu-starfield">
-    <div class="space-environment">
+  <div class="menu__wrapper">
+    <div class="menu-bg-layer">
       <div class="nebula-cloud blue"></div>
       <div class="nebula-cloud purple"></div>
       <div v-for="n in 12" :key="n" class="floating-toon-star" :style="getRandomPos(n)">
         {{ n % 2 === 0 ? '⭐' : '✨' }}
       </div>
-      <img v-for="astro in astronauts" :key="'astro' + astro.id" :src="Astronaut"
+      <img
+          v-for="astro in astronauts"
+          :key="'astro' + astro.id"
+          :src="Astronaut"
           class="floating-astronaut"
           :style="{
-                top: astro.top + '%',
-                left: astro.left + '%',
-                width: astro.size + 'px',
-                animationDuration: astro.duration + 's',
-                animationDelay: astro.delay + 's'
-                 }"
+        top: astro.top + '%',
+        left: astro.left + '%',
+        width: astro.size + 'px',
+        animationDuration: astro.duration + 's',
+        animationDelay: astro.delay + 's'
+      }"
           alt="astronaut"
       />
     </div>
-    <div class="open-menu-layout" v-if="currentScreen === 'menu' && !isTransitioning">
-      <div class="title-section">
-        <h1 class="main-title-toon">
-          <span class="word-1">{{ t('galaxyMenu.titleWordOne')}}</span>
-          <span class="word-2">{{ t('galaxyMenu.titleWordTwo')}}</span>
-        </h1>
-      </div>
-      <div class="controls-section">
-        <button class="menu-btn-toon play" @click="toggleScreen('galaxies')">
-          <span class="icon">🚀 {{ t('galaxyMenu.begin')}}</span>
-        </button>
-        <div class="secondary-btns">
-          <button
-              v-for="btn in menuButtons"
-              :key="btn.id"
-              class="menu-btn-toon"
-              :class="btn.class"
-              @click="btn.action ? btn.action() : toggleScreen(btn.target)"
-          >
-            {{ t(btn.label) }}
+    <div class="menu-content-layer">
+      <div class="open-menu-layout" v-if="currentScreen === 'menu' && !isTransitioning">
+        <div class="title-section">
+          <h1 class="main-title-toon">
+            <span class="word-1">{{ t('galaxyMenu.titleWordOne')}}</span>
+            <span class="word-2">{{ t('galaxyMenu.titleWordTwo')}}</span>
+          </h1>
+        </div>
+        <div class="controls-section">
+          <button class="menu-btn-toon play" @click="toggleScreen('galaxies')">
+            <span class="icon">🚀 {{ t('galaxyMenu.begin')}}</span>
           </button>
+          <div class="secondary-btns">
+            <button
+                v-for="btn in menuButtons"
+                :key="btn.id"
+                class="menu-btn-toon"
+                :class="btn.class"
+                @click="btn.action ? btn.action() : toggleScreen(btn.target)"
+            >
+              {{ t(btn.label) }}
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="sub-screen-container">
-      <component
-          v-if="currentScreen !== 'menu'"
-          :is="componentViews[currentScreen]"
-          @close="toggleScreen('menu')"
-          @back="toggleScreen('menu')"
-          @select-galaxy="startMission"
-      />
+
+      <div class="sub-screen-container" v-if="currentScreen !== 'menu'">
+        <component
+            :is="componentViews[currentScreen]"
+            @close="toggleScreen('menu')"
+            @back="toggleScreen('menu')"
+            @select-galaxy="startMission"
+        />
+      </div>
     </div>
     <Transition name="warp-flash">
       <div class="warp-overlay" v-if="isTransitioning"></div>
@@ -58,7 +63,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import { useRouter } from "vue-router"
 import { useGalaxyStore } from '../../store/galaxyStore.js'
 
@@ -70,10 +75,12 @@ import VRankGalaxy from "../../src/components/galaxy-game/V-rank-galaxy.vue";
 
 const router = useRouter()
 const store = useGalaxyStore()
-const { t, locale } = useI18n()
+const { t } = useI18n()
+
 const currentScreen = ref('menu')
 const isTransitioning = ref(false)
 const astronauts = ref([])
+
 const componentViews = {
   settings: VGameCabinet,
   shop: VGameHangar,
@@ -109,9 +116,7 @@ const generateAstronauts = (count = 3) => {
         const distance = Math.hypot(astro.left - left, astro.top - top)
         return distance < minDistance
       })
-      if (!hasCollision) {
-        positionFound = true
-      }
+      if (!hasCollision) { positionFound = true }
       attempts++
     }
     const size = Math.floor(Math.random() * 80) + 40
@@ -119,13 +124,19 @@ const generateAstronauts = (count = 3) => {
     const delay = -(i * 2)
     newAstronauts.push({ id: i, top, left, size, duration, delay })
   }
-
   astronauts.value = newAstronauts
 }
 
 const handleExit = () => router.push('/')
 
-const toggleScreen = (target) => {
+const startMission = (sectorId) => {
+  router.push({
+    name: 'german-universe-id',
+    params: { id: sectorId }
+  })
+}
+
+const triggerWarpTransition = (target) => {
   const needsWarp = ['shop', 'galaxies', 'rank'].includes(target) ||
       (target === 'menu' && ['shop', 'galaxies', 'rank'].includes(currentScreen.value))
 
@@ -140,45 +151,100 @@ const toggleScreen = (target) => {
   }
 }
 
-const startMission = (sectorId) => {
-  router.push({
-    name: 'german-universe-id',
-    params: { id: sectorId }
-  })
+const toggleScreen = (target) => {
+  if (target !== 'menu' && currentScreen.value === 'menu') {
+    window.history.pushState({ isSubScreen: true }, '')
+    triggerWarpTransition(target)
+  }
+  else if (target === 'menu' && currentScreen.value !== 'menu') {
+    window.history.back()
+  }
+  else {
+    triggerWarpTransition(target)
+  }
+}
+
+const handlePopState = () => {
+  if (currentScreen.value !== 'menu') {
+    triggerWarpTransition('menu')
+  } else {
+    router.push('/')
+  }
 }
 
 onMounted(() => {
   generateAstronauts()
+  window.history.pushState({ isGalaxyRoot: true }, '')
+  window.addEventListener('popstate', handlePopState)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('popstate', handlePopState)
+})
+
+onMounted(() => {
+  generateAstronauts()
+  window.addEventListener('popstate', handlePopState)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('popstate', handlePopState)
 })
 </script>
 
 <style scoped>
-.menu-starfield {
-  position: absolute;
-  left: 0;
-  width: 100vw;
-  height: 100%;
-  background: #0a0a20;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  font-family: 'Arial Rounded MT Bold', sans-serif;
-}
 
-.space-environment {
+.menu-bg-layer {
   position: absolute;
   inset: 0;
-  z-index: 0;
+  z-index: 1;
+  pointer-events: none;
 }
 
-.open-menu-layout {
+.menu__wrapper {
   position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.menu-content-layer {
+  position: absolute;
+  inset: 0;
   z-index: 10;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
+  font-family: 'Arial Rounded MT Bold', sans-serif;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.open-menu-layout {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 60px;
+  justify-content: center;
+  gap: 50px;
+  width: 100%;
+  height: 100%;
+  max-width: 360px;
+  margin: auto;
+}
+
+.sub-screen-container {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.warp-overlay {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  z-index: 5000;
 }
 
 .nebula-cloud {
@@ -190,51 +256,26 @@ onMounted(() => {
   opacity: 0.3;
 }
 
-.nebula-cloud.blue {
-  background: #00d2ff;
-  top: -30%;
-  left: -10%;
-}
-
-.nebula-cloud.purple {
-  background: #ff00ff;
-  bottom: -10%;
-  right: -10%;
-}
-
-.rank-btn {
-  background: #9c27b0;
-  box-shadow: 0 6px 0 #9826c7;
-}
-
-.rank-btn:active {
-  box-shadow: 0 2px 0 #000;
-}
-
 .floating-toon-star {
   position: absolute;
   animation: floatStars 5s infinite ease-in-out;
-  pointer-events: none;
 }
 
 @keyframes floatStars {
-  0%, 100% {
-    transform: translateY(0) scale(1);
-    opacity: 0.4;
-  }
-  50% {
-    transform: translateY(-20px) scale(1.2);
-    opacity: 0.8;
-  }
+  0%, 100% { transform: translateY(0) scale(1); opacity: 0.4; }
+  50% { transform: translateY(-20px) scale(1.2); opacity: 0.8; }
 }
 
-.open-menu-layout {
-  position: relative;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 60px;
+.floating-astronaut {
+  position: absolute;
+  animation: floatAstro infinite ease-in-out;
+  opacity: 0.8;
+}
+
+@keyframes floatAstro {
+  0%, 100% { transform: translateY(0) translateX(0) rotate(-10deg); }
+  33% { transform: translateY(-30px) translateX(20px) rotate(15deg); }
+  66% { transform: translateY(20px) translateX(-15px) rotate(5deg); }
 }
 
 .main-title-toon {
@@ -243,6 +284,7 @@ onMounted(() => {
   flex-direction: column;
   line-height: 0.9;
   transform: rotate(-3deg);
+  margin: 0;
 }
 
 .word-1 {
@@ -263,7 +305,7 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 25px;
+  gap: 20px;
   width: 100%;
 }
 
@@ -275,14 +317,15 @@ onMounted(() => {
   cursor: pointer;
   transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   text-transform: uppercase;
+  font-family: inherit;
 }
 
 .menu-btn-toon.play {
   width: 100%;
-  padding: 10px 20px;
-  font-size: 2rem;
+  padding: 15px 20px;
+  font-size: 1.8rem;
   background: #4caf50;
-  box-shadow: 0 10px 0 #1b5e20, 0 15px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 6px 0 #1b5e20, 0 15px 30px rgba(0, 0, 0, 0.4);
   animation: pulsePlay 2s infinite;
 }
 
@@ -290,31 +333,21 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 15px;
+  gap: 16px;
 }
 
 .secondary-btns .menu-btn-toon {
-  padding: 15px 25px;
-  font-size: 1rem;
+  padding: 14px 25px;
+  font-size: 1.1rem;
 }
 
-.hangar {
-  background: #ff9800;
-  box-shadow: 0 6px 0 #e65100;
-}
-
-.settings {
-  background: #2196f3;
-  box-shadow: 0 6px 0 #0d47a1;
-}
-
-.exit {
-  background: #f44336;
-  box-shadow: 0 6px 0 #8e0000;
-}
+.hangar { background: #ff9800; box-shadow: 0 6px 0 #e65100; }
+.settings { background: #2196f3; box-shadow: 0 6px 0 #0d47a1; }
+.rank-btn { background: #9c27b0; box-shadow: 0 6px 0 #9826c7; }
+.exit { background: #f44336; box-shadow: 0 6px 0 #8e0000; }
 
 .menu-btn-toon:hover {
-  transform: scale(1.01);
+  transform: scale(1.02);
 }
 
 .menu-btn-toon:active {
@@ -322,41 +355,16 @@ onMounted(() => {
   box-shadow: 0 2px 0 #000;
 }
 
+.menu-btn-toon.play:active {
+  transform: translateY(6px);
+  box-shadow: 0 4px 0 #1b5e20;
+}
+
 @keyframes pulsePlay {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.01);
-  }
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
 }
 
-.warp-overlay {
-  position: fixed;
-  inset: 0;
-  background: #fff;
-  z-index: 5000;
-}
-
-.floating-astronaut {
-  position: absolute;
-  animation: floatAstro infinite ease-in-out;
-  pointer-events: none;
-  opacity: 0.8;
-  z-index: 1;
-}
-
-@keyframes floatAstro {
-  0%, 100% {
-    transform: translateY(0) translateX(0) rotate(-10deg);
-  }
-  33% {
-    transform: translateY(-30px) translateX(20px) rotate(15deg);
-  }
-  66% {
-    transform: translateY(20px) translateX(-15px) rotate(5deg);
-  }
-}
 
 .warp-flash-enter-active, .warp-flash-leave-active {
   transition: opacity 0.3s;
@@ -365,5 +373,4 @@ onMounted(() => {
 .warp-flash-enter-from, .warp-flash-leave-to {
   opacity: 0;
 }
-
 </style>

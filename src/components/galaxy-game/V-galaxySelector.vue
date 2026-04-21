@@ -1,20 +1,17 @@
 <template>
-  <div class="toon-navigation">
-    <div class="toon-space-bg">
-      <div class="nebula-purple"></div>
-      <div class="nebula-blue"></div>
-    </div>
+  <div class="toon-wrapper">
+
     <div class="top-bar">
       <div class="exit-portal" @click="$emit('back')">
-        <span class="exit-text">{{ t('galaxyRankTable.back')}}</span>
+        <span class="exit-text">{{ t('galaxyRankTable.back') }}</span>
       </div>
-      <div class="pilot-info-toon"></div>
     </div>
+
     <div class="constellations-map">
       <div
-          v-for="(galaxy, index) in galaxiesWithIcons"
+          v-for="galaxy in galaxiesWithIcons"
           :key="galaxy.id"
-          :class="['galaxy-anchor', 'pos-' + (index + 1)]"
+          class="galaxy-anchor"
           @click="openGalaxy(galaxy)"
       >
         <div class="galaxy-icon-wrapper">
@@ -23,6 +20,7 @@
         <h2 class="galaxy-label-toon">{{ t(galaxy.label) }}</h2>
       </div>
     </div>
+
     <Transition name="pop-window">
       <div v-if="activeGalaxy" class="modal-overlay" @click.self="activeGalaxy = null">
         <div class="toon-window">
@@ -36,11 +34,12 @@
             </div>
           </div>
           <div class="mission-briefing">
-            <button class="btn-go big-btn" @click="startLevel">{{ t('galaxyMenu.begin')}}</button>
+            <button class="btn-go big-btn" @click="startLevel">{{ t('galaxyMenu.begin') }}</button>
           </div>
         </div>
       </div>
     </Transition>
+
   </div>
 </template>
 
@@ -60,7 +59,8 @@ import ConstellationEight from 'assets/images/constellation/constellation-8.svg'
 const emit = defineEmits(['back', 'select-galaxy'])
 const store = useGalaxyStore()
 const activeGalaxy = ref(null)
-const { t } = useI18n()
+const {t} = useI18n()
+
 const iconMap = {
   alpha: ConstellationOne,
   beta: ConstellationTwo,
@@ -90,140 +90,91 @@ const startLevel = () => {
   store.setMission(activeGalaxy.value.id)
   emit('select-galaxy', activeGalaxy.value.id)
 }
-
 </script>
 
 <style scoped>
-.toon-navigation {
-  position: fixed;
-  inset: 0;
-  background: linear-gradient(180deg, #1b0c3b 0%, #0d47a1 100%);
+
+.toon-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
   overflow: hidden;
-  font-family: 'Arial Rounded MT Bold', 'Helvetica', sans-serif;
-  z-index: 5000;
+  font-family: Nunito, sans-serif;
   user-select: none;
-}
-
-.toon-space-bg {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background-image: radial-gradient(4px 4px at 20px 30px, #fff, rgba(0, 0, 0, 0)),
-  radial-gradient(5px 5px at 80px 70px, #ffeb3b, rgba(0, 0, 0, 0)),
-  radial-gradient(3px 3px at 50px 160px, #fff, rgba(0, 0, 0, 0)),
-  radial-gradient(6px 6px at 120px 220px, #00d2ff, rgba(0, 0, 0, 0));
-  background-size: 250px 250px;
-  animation: starsTwinkle 3s infinite alternate;
-}
-
-@keyframes starsTwinkle {
-  0% {
-    transform: scale(1);
-    opacity: 0.7;
-  }
-  100% {
-    transform: scale(1.02);
-    opacity: 1;
-  }
-}
-
-.nebula-purple {
-  position: absolute;
-  top: -15%;
-  left: -10%;
-  width: 70%;
-  height: 70%;
-  background: radial-gradient(circle, rgba(255, 64, 129, 0.5), transparent 60%);
-  filter: blur(60px);
-}
-
-.nebula-blue {
-  position: absolute;
-  bottom: -15%;
-  right: -10%;
-  width: 70%;
-  height: 70%;
-  background: radial-gradient(circle, rgba(0, 229, 255, 0.5), transparent 60%);
-  filter: blur(60px);
 }
 
 .top-bar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 20px 20px;
-  position: relative;
-  z-index: 10;
+  padding: 10px 10px 2px 10px;
+  flex-shrink: 0;
+  margin-bottom: 45px;
 }
 
-.main-title-toon {
-  color: #ffeb3b;
-  font-size: 3rem;
-  text-transform: uppercase;
-  -webkit-text-stroke: 2px #000;
-  text-shadow: 1px 1px 0 #ffffff;
-  transform: rotate(-3deg);
-  letter-spacing: 2px;
+.exit-portal {
+  cursor: pointer;
+  transition: transform 0.1s;
 }
 
-.pilot-info-toon {
-  padding: 10px 20px;
-  border-radius: 50px;
+.exit-portal:active {
+  transform: scale(0.95);
+}
+
+.exit-text {
   color: #fff;
+  font-size: 1rem;
+  background: #534bff;
   font-weight: 900;
+  padding: 8px 14px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
 }
 
 .constellations-map {
-  position: relative;
-  height: 75vh;
-  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  gap: 25px;
+  padding: 10px 20px 40px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .galaxy-anchor {
-  position: absolute;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 200px;
-  transform: translate(-50%, -50%);
-  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  width: 140px;
+  cursor: pointer;
+  transition: transform 0.1s;
 }
 
-.galaxy-anchor:hover {
-  transform: translate(-50%, -50%) scale(1.15);
-  z-index: 100;
+.galaxy-anchor:active {
+  transform: scale(0.95);
 }
-
 
 .galaxy-svg-toon {
-  width: 130px;
-  height: 130px;
-  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
-  animation: floatGalaxy 4s infinite ease-in-out;
+  width: 100px;
+  height: 100px;
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.2));
 }
 
-.galaxy-icon-wrapper {
-  transition: .4s;
+.galaxy-label-toon {
+  color: var(--titleColor, #fff);
+  font-size: 1.1rem;
+  font-weight: 900;
+  margin-top: 8px;
+  text-align: center;
 }
 
-.galaxy-anchor:hover .galaxy-icon-wrapper {
-  transform: scale(1.1);
-  transition: .4s;
-}
-
-@keyframes floatGalaxy {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-4px);
-  }
-}
-
+/* --- МОДАЛЬНОЕ ОКНО --- */
 .modal-overlay {
   position: fixed;
-  inset: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
   background: rgba(10, 10, 46, 0.85);
   display: flex;
   justify-content: center;
@@ -293,7 +244,8 @@ const startLevel = () => {
 
 .window-icon {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: contain;
 }
 
 .header-text h2 {
@@ -309,14 +261,6 @@ const startLevel = () => {
   padding: 20px;
   text-align: center;
   background: #f8f9fa;
-}
-
-.mission-desc {
-  font-size: 1.2rem;
-  color: #000;
-  font-weight: bold;
-  margin-bottom: 25px;
-  line-height: 1.4;
 }
 
 .big-btn {
@@ -340,148 +284,11 @@ const startLevel = () => {
 }
 
 .pop-window-enter-active {
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.2s ease-out;
 }
 
 .pop-window-enter-from {
   opacity: 0;
-  transform: scale(0.5) translateY(50px);
-}
-
-.exit-portal {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
-  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  z-index: 100;
-}
-
-.exit-portal:hover {
-  transform: scale(1.1);
-}
-
-.event-horizon {
-  position: absolute;
-  inset: 25%;
-  background: #000;
-  border-radius: 50%;
-  z-index: 2;
-}
-
-.exit-text {
-  color: #fff;
-  font-size: 1rem;
-  background: #534bff;
-  font-weight: 900;
-  padding: 5px 10px;
-  border-radius: 10px;
-}
-
-@keyframes rotatePortal {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.pos-1 {
-  top: 18%;
-  left: 16%;
-}
-
-.pos-2 {
-  top: 18%;
-  left: 50%;
-}
-
-.pos-3 {
-  top: 18%;
-  left: 84%;
-}
-
-.pos-4 {
-  top: 48%;
-  left: 33%;
-}
-
-.pos-5 {
-  top: 48%;
-  left: 67%;
-}
-
-.pos-6 {
-  top: 78%;
-  left: 16%;
-}
-
-.pos-7 {
-  top: 78%;
-  left: 50%;
-}
-
-.pos-8 {
-  top: 78%;
-  left: 84%;
-}
-
-@media (max-width: 768px) {
-  .constellations-map {
-    position: relative;
-    height: auto;
-    min-height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 40px 20px;
-    padding: 30px;
-    overflow-y: auto;
-  }
-
-  .galaxy-anchor {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    transform: none !important;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .galaxy-anchor:hover {
-    transform: scale(1.01) !important;
-  }
-
-  .galaxy-svg-toon {
-    width: 90px !important;
-    height: 90px !important;
-  }
-
-  .galaxy-label-toon {
-    font-size: 0.9rem !important;
-    text-align: center;
-    margin-top: 10px;
-    white-space: nowrap;
-  }
-
-  .top-bar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-  }
-
-  .main-title-toon {
-    font-size: 1.5rem !important;
-  }
-
-  .black-hole {
-    width: 50px !important;
-    height: 50px !important;
-  }
+  transform: scale(0.8) translateY(20px);
 }
 </style>

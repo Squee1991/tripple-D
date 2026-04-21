@@ -11,21 +11,26 @@
       >
         <div class="mal__left-content">
           <div>
-            <button
-                v-if="windowWidth <= 1024"
-                class="map-left__close"
-                @click="isPanelOpen = false"
-            >×
-            </button>
-            <div class="map-left__art">
-              <img :src="active?.icon" alt="Choose avatar location">
+            <div class="mal__left-content-wrapper">
+              <button v-if="windowWidth <= 1024" @click="closePanel" class="btn-icon-back">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                     stroke="#2b2b2b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="19" y1="12" x2="5" y2="12"></line>
+                  <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+              </button>
+              <h2 class="map-left__title">{{ t(active.name) }}</h2>
             </div>
-            <h2 class="map-left__title">{{ t(active.name) }}</h2>
-            <p class="map-left__desc">{{ t(active.desc) }}</p>
-            <p class="map-left__level" :class="isUnlocked ? 'ok' : 'locked'">
-              <span v-if="isUnlocked">{{ t('locationsMenu.access') }}</span>
-              <span v-else>{{ t('locationsMenu.accessWithLevel') }} {{ active.level }}</span>
-            </p>
+            <div class="map__left-content-bottom">
+              <div class="map-left__art">
+                <img :src="active?.icon" alt="Choose avatar location">
+              </div>
+              <p class="map-left__desc">{{ t(active.desc) }}</p>
+              <p class="map-left__level" :class="isUnlocked ? 'ok' : 'locked'">
+                <span v-if="isUnlocked">{{ t('locationsMenu.access') }}</span>
+                <span v-else>{{ t('locationsMenu.accessWithLevel') }} {{ active.level }}</span>
+              </p>
+            </div>
           </div>
           <button class="map-btn" :disabled="!isUnlocked" @click="go(active)">
             {{ t('locationsMenu.choose') }}
@@ -140,7 +145,21 @@ function themeOf(obj) {
 function select(region) {
   active.value = region
   if (windowWidth.value <= 1024) {
+    window.history.pushState({ isMapPanelOpen: true }, '')
     isPanelOpen.value = true
+  }
+}
+
+function closePanel() {
+  if (isPanelOpen.value) {
+    window.history.back()
+  }
+}
+
+
+const handlePopState = () => {
+  if (isPanelOpen.value) {
+    isPanelOpen.value = false
   }
 }
 
@@ -163,12 +182,14 @@ onMounted(() => {
   handleResize()
   if (typeof window !== 'undefined') {
     window.addEventListener('resize', handleResize)
+    window.addEventListener('popstate', handlePopState)
   }
 })
 
 onBeforeUnmount(() => {
   if (typeof window !== 'undefined') {
     window.removeEventListener('resize', handleResize)
+    window.removeEventListener('popstate', handlePopState)
   }
   if (typeof document !== 'undefined') {
     document.body.style.overflow = ''
@@ -180,22 +201,6 @@ onBeforeUnmount(() => {
 
 * {
   font-family: "Nunito", sans-serif;
-}
-
-.back__to-main {
-  border: none;
-  background: none;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 20px;
-  cursor: pointer;
-}
-
-.back__icon {
-  width: 100%;
 }
 
 .map__wrapper {
@@ -243,7 +248,6 @@ onBeforeUnmount(() => {
   flex: 1;
   border: 3px solid var(--border);
   border-radius: 15px;
-  padding: 12px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -263,6 +267,12 @@ onBeforeUnmount(() => {
   background: var(--bg);
 }
 
+.mal__left-content-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 5px 0 15px 0;
+}
+
 .map-left__art img {
   width: 100%;
   height: 100%;
@@ -271,10 +281,10 @@ onBeforeUnmount(() => {
 }
 
 .map-left__title {
-  font-size: 1.6rem;
-  margin: 0 0 8px;
+  font-size: 24px;
   font-weight: 900;
   color: var(--titleColor);
+  margin-left: 15px;
 
 }
 
@@ -311,7 +321,7 @@ onBeforeUnmount(() => {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  padding: 10px 5px;
+  padding: 0 0 10px 0;
 }
 
 .map-btn {
@@ -320,8 +330,9 @@ onBeforeUnmount(() => {
   text-decoration: none;
   background: #3b82f6;
   color: #ffffff;
-  padding: 15px;
+  padding: 12px;
   border-radius: 24px;
+  margin-bottom: 10px;
   font-size: 20px;
   font-weight: 800;
   text-align: center;
@@ -410,6 +421,20 @@ onBeforeUnmount(() => {
   background: linear-gradient(180deg, rgb(41 38 38 / 75%), rgb(31 29 29 / 60%));
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), inset 0 2px 4px rgba(255, 255, 255, 0.1);;
   backdrop-filter: blur(2px);
+}
+
+.btn-icon-back {
+  background: #fff;
+  border: 3px solid #2b2b2b;
+  border-radius: 12px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px #2b2b2b;
+  transition: transform 0.1s, box-shadow 0.1s;
 }
 
 .region-card__title {
@@ -514,10 +539,11 @@ onBeforeUnmount(() => {
   .map-left {
     position: fixed;
     top: 0;
+    bottom: 0;
     left: 0;
-    height: 100%;
-    border: none;
+    box-sizing: border-box;
     width: 60%;
+    border: none;
     border-right: 3px solid;
     border-top-right-radius: 12px;
     transform: translateX(-100%);
@@ -525,6 +551,18 @@ onBeforeUnmount(() => {
     pointer-events: none;
     transition: transform .25s ease, opacity .25s ease;
     z-index: 111000;
+    background: var(--bg);
+  }
+
+  .map-left__close {
+    width: 36px;
+    height: 36px;
+    border: 3px solid var(--border);
+    border-radius: 10px;
+    background: linear-gradient(180deg, #ffe98d, #ffd255);
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 10;
   }
 
   .map-left.rtl {
@@ -548,20 +586,7 @@ onBeforeUnmount(() => {
     pointer-events: auto;
     height: 100%;
     background: var(--bg);
-  }
-
-  .map-left__close {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    width: 36px;
-    height: 36px;
-    border: 3px solid var(--border);
-    border-radius: 10px;
-    background: linear-gradient(180deg, #ffe98d, #ffd255);
-    font-size: 22px;
-    cursor: pointer;
-    z-index: 10;
+    padding: calc(env(safe-area-inset-top, 30px) + 5px) 14px 10px 14px;
   }
 
   .region-card__title {
@@ -671,7 +696,7 @@ onBeforeUnmount(() => {
 }
 
 .current-category-name {
-  font-size: 1.1rem;
+  font-size: 16px;
   font-weight: 900;
   color: white;
   display: flex;

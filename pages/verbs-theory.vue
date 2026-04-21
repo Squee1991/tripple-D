@@ -65,7 +65,11 @@
                   quizQuestions[quizIndex].answer
                 }}</b></p>
             </div>
-            <button v-if="selectedAnswer" @click="nextQuestion" class="verbs__quiz-next">
+            <button
+                :disabled="selectedAnswer === null"
+                @click="nextQuestion"
+                class="verbs__quiz-next"
+            >
               {{ quizIndex === quizQuestions.length - 1 ? t('verbTheorySeventhBlock.result') : t('verbTheorySeventhBlock.nextQuest') }}
             </button>
           </div>
@@ -301,52 +305,57 @@ const getOptionClass = (opt) => {
 </script>
 
 <style scoped>
+.verbs {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 
 .verbs__inner {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  height: 100vh;
   font-family: 'Nunito', sans-serif;
   color: #1f2937;
   overflow: hidden;
 }
 
+.verbs__header {
+  flex-shrink: 0;
+  text-align: center;
+}
+
 .header__title-wrapper {
   display: flex;
   align-items: center;
-  position: sticky;
-  top: 0;
-  left: 0;
   width: 100%;
-  padding: 15px;
-  background: #6358ac;
+  padding: 5px 10px 15px 10px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   margin-bottom: 5px;
-}
-
-.verbs__header {
-  text-align: center;
-  margin-bottom: 1rem;
 }
 
 .verbs__title {
   font-size: 1.4rem;
   font-weight: 800;
   color: #fff;
-  flex: 1;
+  margin-left: 15px;
 }
 
 .verbs__subtitle {
   font-size: 1.1rem;
-  color: var(--titleColor)
+  color: var(--titleColor);
 }
 
 .verb__theory-section {
-  height: 100%;
-  padding: 10px;
-  padding-bottom: 90px;
+  flex: 1;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 10px;
+  padding-bottom: 30px;
 }
 
 .verbs__card {
@@ -364,13 +373,13 @@ const getOptionClass = (opt) => {
   font-weight: 900;
   border-bottom: 3px solid #f59e0b;
   padding-bottom: .5rem;
-  margin-bottom: 1.25rem
+  margin-bottom: 1.25rem;
 }
 
 .verbs__paragraph {
   font-size: 1.05rem;
   line-height: 1.65;
-  margin-bottom: .9rem
+  margin-bottom: .9rem;
 }
 
 .verbs__list {
@@ -398,7 +407,7 @@ const getOptionClass = (opt) => {
 
 .verbs__example--wrapper {
   display: flex;
-  flex-direction: column
+  flex-direction: column;
 }
 
 .verbs__icon {
@@ -412,38 +421,38 @@ const getOptionClass = (opt) => {
   border: 2px dashed #818cf8;
   padding: .75rem 1rem;
   border-radius: 12px;
-  margin: 1.25rem 0
+  margin: 1.25rem 0;
 }
 
 .verbs__table-wrap {
   overflow-x: auto;
-  margin: .5rem 0 1rem
+  margin: .5rem 0 1rem;
 }
 
 .verbs__table {
   width: 100%;
   border-collapse: collapse;
-  font-size: .98rem
+  font-size: .98rem;
 }
 
 .verbs__table th, .verbs__table td {
   border: 2px solid #1f2937;
   padding: .5rem .2rem;
-  text-align: left
+  text-align: left;
 }
 
 .verbs__table thead th {
-  background: #ddd6fe
+  background: #ddd6fe;
 }
 
 .verbs__quiz-body, .verbs__quiz-results {
-  text-align: center
+  text-align: center;
 }
 
 .verbs__quiz-progress {
   font-size: .9rem;
   color: #6b7280;
-  margin-bottom: 1rem
+  margin-bottom: 1rem;
 }
 
 .verbs__quiz-question {
@@ -456,7 +465,7 @@ const getOptionClass = (opt) => {
   display: flex;
   flex-direction: column;
   gap: .8rem;
-  margin-bottom: 1.2rem
+  margin-bottom: 1.2rem;
 }
 
 .verbs__quiz-option {
@@ -464,75 +473,81 @@ const getOptionClass = (opt) => {
   padding: 8px;
   font-size: 17px;
   font-weight: 800;
-  border: 2px solid #0f172a;
+  border: 1px solid #0f172a;
   border-radius: 12px;
   background: #fff;
   cursor: pointer;
   transition: .2s;
-  box-shadow: 3px 3px 0 #0f172a
+  box-shadow: 2px 2px 0 #0f172a;
 }
 
 .verbs__quiz-option:disabled {
   cursor: not-allowed;
-  opacity: .75
+  opacity: .75;
 }
 
 .verbs__quiz-option.correct {
   background: #22c55e;
   color: #fff;
   transform: translate(4px, 4px);
-  box-shadow: none
+  box-shadow: none;
 }
 
 .verbs__quiz-option.incorrect {
   background: #ef4444;
   color: #fff;
   transform: translate(4px, 4px);
-  box-shadow: none
+  box-shadow: none;
 }
 
 .verbs__quiz-feedback {
   min-height: 2.2rem;
-  font-size: 1.1rem;
-  font-weight: 800
+  font-size: 14px;
+  font-weight: 800;
 }
 
 .verbs__quiz-next {
   margin-top: .2rem;
-  padding: .9rem 1.6rem;
+  padding: 10px;
   font-size: 1.1rem;
   font-weight: 800;
   background: #f59e0b;
-  border: 3px solid #1f2937;
-  border-radius: 12px;
+  border: 1px solid #1f2937;
+  border-radius: 15px;
   cursor: pointer;
-  box-shadow: 4px 4px 0 #1f2937;
-  transition: .2s;
-  color: #1f2937
+  box-shadow: 2px 2px 0 #1f2937;
+  color: #1f2937;
+  width: 100%;
+}
+
+.verbs__quiz-next:disabled {
+  opacity: 0.6;
+  background: #d1d5db;
+  cursor: not-allowed;
 }
 
 .verbs__results-title {
   font-size: 1.6rem;
-  margin-bottom: .6rem
+  margin-bottom: .6rem;
 }
 
 .verbs__results-score {
   font-size: 1.3rem;
-  margin-bottom: 1.2rem
+  margin-bottom: 1.2rem;
 }
 
 @media (max-width: 767px) {
   .verbs__card {
-    box-shadow: 2px 2px 5px #1f2937
+    box-shadow: 2px 2px 5px #1f2937;
   }
 
   .verbs__card-title {
-    font-size: 1.45rem
+    font-size: 1.45rem;
   }
 
   .verbs__icon {
     width: 34px;
-    margin-right: 8px
+    margin-right: 8px;
   }
 }
 </style>

@@ -1,5 +1,5 @@
 <script setup>
-import {ref, computed, onMounted} from 'vue'
+import {ref, computed, onMounted, onUnmounted} from 'vue'
 import {useRouter} from 'vue-router'
 import {storeToRefs} from 'pinia'
 import {useAudioTaskStore} from '../../store/audioTaskStore.js'
@@ -27,7 +27,17 @@ const headerText = computed(() => screen.value === 'levels' ? t('audioTasks.take
 const availableTopics = computed(() => allTasks.value[currentLevel.value] || [])
 
 const handleBackClick = () => {
-  screen.value === 'levels' ? router.push('/') : screen.value = 'levels'
+  if (screen.value === 'topics') {
+    window.history.back()
+  } else {
+    router.push('/')
+  }
+}
+
+const handlePopState = () => {
+  if (screen.value === 'topics') {
+    screen.value = 'levels'
+  }
 }
 
 const getCircularProgressStyle = (topic) => {
@@ -46,9 +56,11 @@ const getTopicProgressPercent = (topic) => {
 }
 
 const selectLevel = (level) => {
+  window.history.pushState({ isAudioTopics: true }, '')
   store.setLevel(level)
   screen.value = 'topics'
 }
+
 const selectTopic = (topic) => {
   store.setCurrentTopicId(topic.id)
   router.push('/audio-tasks/session')
@@ -57,7 +69,13 @@ const selectTopic = (topic) => {
 onMounted(async () => {
   await store.fetchTasks()
   await store.loadUserProgress()
+  window.addEventListener('popstate', handlePopState)
 })
+
+onUnmounted(() => {
+  window.removeEventListener('popstate', handlePopState)
+})
+
 </script>
 
 <template>
@@ -94,7 +112,6 @@ onMounted(async () => {
         </header>
         <p class="quiz__subtitle">{{ headerText }}</p>
       </div>
-
       <div class="quiz__content">
         <transition name="quiz-pop" mode="out-in">
           <div :key="screen" :class="['quiz__grid', `quiz__grid--${screen}`]">
@@ -119,7 +136,6 @@ onMounted(async () => {
                 </div>
               </button>
             </template>
-
             <template v-else>
               <button
                   v-for="(topic, index) in availableTopics"

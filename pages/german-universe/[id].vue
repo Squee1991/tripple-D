@@ -165,7 +165,7 @@ onMounted(() => {
 <style scoped>
 .game-universe {
   height: 100%;
-  background: #010409;
+  background: var(--bg);
   overflow: hidden;
   font-family: Nunito, sans-serif;
   user-select: none;

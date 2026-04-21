@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "516504654997-c59asmllm900blald6ht4ognmgkv2a4p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.skillupgerman.app",
+            "certificate_hash": "1c220ce4bbf3a134847789f531713425ec7bb10d"
+          }
+        },
+        {
           "client_id": "516504654997-k044g68ctuusfgr73led2flsbqd3t77c.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
@@ -37,6 +45,13 @@
             {
               "client_id": "516504654997-15ujeh34o8jc7hkbempel0t60qp0e43g.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "516504654997-mlenh17g6le0nofbhssfrnmcfald597d.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.skillupgerman.app"
+              }
             }
           ]
         }

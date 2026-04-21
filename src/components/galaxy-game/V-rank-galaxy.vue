@@ -184,7 +184,7 @@ onMounted(() => {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #4facfe;
+  background:var(--bg);
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -192,25 +192,6 @@ onMounted(() => {
   font-family: "Nunito", sans-serif;
   overflow: hidden;
   z-index: 6000;
-}
-
-.animated-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 0;
-  background: linear-gradient(180deg, #4facfe 0%, #00f2fe 100%);
-}
-
-.cartoon-clouds {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: radial-gradient(white 1.5px, transparent 1.5px);
-  background-size: 30px 30px;
-  opacity: 0.2;
 }
 
 .leaderboard__inner {
@@ -270,19 +251,19 @@ onMounted(() => {
 
 .toon-title {
   font-size: 22px;
-  color: #fff;
-  -webkit-text-stroke: 2px #000;
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+  color: var(--titleColor);
+  margin-left: 10px;
 }
 
 .filter-bubble {
   background: #FFFFFF;
   border: 3px solid #000;
   border-radius: 16px;
-  padding: 5px 10px;
+  padding: 5px 12px;
   box-shadow: 3px 3px 0 #000;
   margin-bottom: 10px;
-  max-width: 240px;
+  width: max-content;
+  max-width: 100%;
 }
 
 .toon-select {
