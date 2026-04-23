@@ -15,7 +15,7 @@
         </h1>
         <button class="btn-icon-info" @click="openModal">
           <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-               stroke="#1e272e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+               stroke="orange" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"></circle>
             <line x1="12" y1="16" x2="12" y2="12"></line>
             <line x1="12" y1="8" x2="12.01" y2="8"></line>
@@ -122,7 +122,7 @@ function goBack() {
 </script>
 
 <style scoped>
-/* Глобальный контейнер без vh, строго на % */
+
 .page-container {
   font-family: "Nunito", sans-serif;
   display: flex;
@@ -167,8 +167,9 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action {
 }
 
 .btn-icon-info {
-  background: #48dbfb;
-  border: 3px solid #1e272e;
+  background: #f5f5f6;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   border-radius: 14px;
   width: 44px;
   height: 44px;
@@ -176,7 +177,6 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 2px 3px 0px #1e272e;
   transition: transform 0.1s, box-shadow 0.1s;
   flex-shrink: 0;
 }
@@ -220,11 +220,11 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action {
 
 .topic-card-item {
   background-color: #ffffff;
-  border: 2px solid #1e272e;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   border-radius: 20px;
   overflow: hidden;
   cursor: pointer;
-  box-shadow: 3px 3px 0px #1e272e;
   transition: transform 0.1s, box-shadow 0.1s;
   display: flex;
   flex-direction: column;
@@ -238,8 +238,8 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action {
 .card-top-banner {
   padding: 12px 8px;
   text-align: center;
-  border-bottom: 3px solid #1e272e;
-  height: 70px;
+  border-bottom: 3px solid var(--tabsSlideBorderColor);
+  height: 72px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -281,7 +281,6 @@ h1, h2, h3, .header-title, .level-name, .btn-primary-action {
   padding: 10px 16px;
   max-width: 450px;
   width: 100%;
-  margin: auto;
 }
 
 .level-header h2 {

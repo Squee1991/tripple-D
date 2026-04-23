@@ -250,7 +250,7 @@ const getOptionClass = (option) => {
 .prepositions-page {
   font-family: 'Nunito', sans-serif;
   color: #1e1e1e;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
   padding-bottom: 40px;
 }
@@ -259,12 +259,8 @@ const getOptionClass = (option) => {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 15px;
-  position: sticky;
-  top: 0;
-  left: 0;
+  padding: 5px 10px 15px 10px;
   z-index: 1;
-  background: #6358ac;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   margin-bottom: 5px;
@@ -277,10 +273,10 @@ const getOptionClass = (option) => {
 
 .page-title {
   font-family: "Nunito", sans-serif;
-  font-size: 1rem;
+  font-size: 22px;
   font-weight: 600;
-  color: white;
-  flex: 1;
+  color: var(--titleColor);
+  margin-left: 15px;
 }
 
 .page-subtitle {
@@ -296,14 +292,14 @@ const getOptionClass = (option) => {
   margin: 0 auto;
   height: 100%;
   overflow-y: auto;
-  padding: 0 6px;
+  padding: 0 10px;
 }
 
 .topic-card {
   background-color: #ffffff;
-  border: 3px solid #1e1e1e;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   border-radius: 16px;
-  box-shadow: 8px 8px 0px rgba(30, 30, 30, 0.8);
   padding: 2rem;
   margin-bottom: 1rem;
 }
@@ -372,11 +368,11 @@ const getOptionClass = (option) => {
   width: 100%;
   border-collapse: collapse;
   margin-top: 1.5rem;
-  font-size: 1.1rem;
+  font-size: 16px;
 }
 
 .contractions-table th, .contractions-table td {
-  border: 3px solid #1e1e1e;
+  border: 3px solid var(--tabsSlideBorderColor);
   padding: 0.8rem;
   text-align: center;
 }
@@ -386,7 +382,7 @@ const getOptionClass = (option) => {
 }
 
 .case-block {
-  border: 2px solid #1e1e1e;
+  border: 2px solid var(--tabsSlideBorderColor);
   border-radius: 12px;
   padding: 1.5rem;
   margin-top: 1.5rem;
@@ -432,7 +428,6 @@ const getOptionClass = (option) => {
 
 .practice-card {
   text-align: center;
-  background-color: #4ade80;
 }
 
 .practice-button {
@@ -444,8 +439,8 @@ const getOptionClass = (option) => {
   font-weight: bold;
   padding: .6rem 2.5rem;
   border-radius: 16px;
-  border: 3px solid #1e1e1e;
-  box-shadow: 4px 4px 0 #1e1e1e;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   transition: all 0.2s;
   margin-top: 1rem;
   cursor: pointer;
@@ -474,23 +469,23 @@ const getOptionClass = (option) => {
   margin-bottom: 2rem;
 }
 
+.quiz-option:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
 .quiz-option {
   width: 100%;
   padding: 1rem;
   font-size: 1.2rem;
   font-weight: bold;
   font-family: 'Nunito', sans-serif;
-  border: 3px solid #1e1e1e;
   border-radius: 12px;
   background-color: #fff;
   cursor: pointer;
   transition: all 0.2s;
-  box-shadow: 4px 4px 0 #1e1e1e;
-}
-
-.quiz-option:disabled {
-  cursor: not-allowed;
-  opacity: 0.7;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
 }
 
 .quiz-option.correct {
@@ -529,11 +524,4 @@ const getOptionClass = (option) => {
   margin-bottom: 2rem;
 }
 
-@media (max-width: 767px) {
-  .topic-card {
-    padding: 1.5rem;
-    box-shadow: 2px 2px 0px rgba(30, 30, 30, 0.8);
-  }
-
-}
 </style>

@@ -93,7 +93,7 @@ onUnmounted(() => {
         <header class="quiz__header">
           <button @click="handleBackClick" class="btn-icon-back">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-                 stroke="#2b2b2b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                 stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
               <line x1="19" y1="12" x2="5" y2="12"></line>
               <polyline points="12 19 5 12 12 5"></polyline>
             </svg>
@@ -103,7 +103,7 @@ onUnmounted(() => {
           </div>
           <button class="quiz__btn quiz__btn--info" @click="showDevModal = true">
             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
-                 stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                 stroke="orange" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"></circle>
               <line x1="12" y1="16" x2="12" y2="12"></line>
               <line x1="12" y1="8" x2="12.01" y2="8"></line>
@@ -248,13 +248,13 @@ onUnmounted(() => {
 .game-card {
   --card-color: #eee;
   background: var(--card-color);
-  border: 2px solid #2b2b2b;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   border-radius: 30px;
   padding: 0;
   cursor: pointer;
   width: 100%;
   box-sizing: border-box;
-  box-shadow: 0 4px 0 #2b2b2b;
   transition: transform 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.1s;
   overflow: hidden;
   display: block;
@@ -290,8 +290,8 @@ onUnmounted(() => {
 }
 
 .game-card__badge {
-  background: #FFFFFF;
-  border: 3px solid #2b2b2b;
+  background: rgba(255, 255, 255, 0.51);
+
   border-radius: 16px;
   padding: 4px 14px;
   font-size: 1.8rem;
@@ -352,7 +352,6 @@ onUnmounted(() => {
 
 .btn-icon-back, .quiz__btn {
   background: #fff;
-  border: 3px solid #2b2b2b;
   border-radius: 12px;
   width: 44px;
   height: 44px;
@@ -360,7 +359,8 @@ onUnmounted(() => {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 2px 2px 0px #2b2b2b;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   transition: all 0.1s;
 }
 

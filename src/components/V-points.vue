@@ -165,17 +165,21 @@ onMounted(() => {
   gap: 12px;
 }
 
+.action-menu__item {
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.2s;
+  background:var(--menuItemsBg);
+  border: 2px solid var(--tabsSlideBorderColor);
+  border-radius: 16px;
+  padding: 6px 14px;
+}
+
 .action-menu__link {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #2c323d;
-  border: 2px solid #363d4a;
-  border-radius: 16px;
-  padding: 6px 14px;
   text-decoration: none;
-  box-shadow: 0 4px 0 #11151c;
-  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.2s;
+
 }
 
 .action-menu__link:active {
@@ -190,7 +194,7 @@ onMounted(() => {
 }
 
 .action-menu__icon-bg {
-  background: #2a313e;
+  background: var(--tabBg);
   border-radius: 12px;
   width: 42px;
   height: 42px;
@@ -206,7 +210,7 @@ onMounted(() => {
 }
 
 .action-menu__title {
-  color: #e2e8f0;
+  color: var(--titleColor);
   font-size: 17px;
   font-weight: 700;
   font-family: "Nunito", sans-serif;
@@ -249,13 +253,13 @@ onMounted(() => {
 }
 
 .level-label {
-  color: white;
+  color: var(--titleColor);
   font-size: 20px;
   font-weight: 700;
 }
 
 .level-value {
-  background: transparent;
+  background: #8868db;
   border: 1px solid #4a5568;
   border-radius: 6px;
   padding: 2px 8px;
@@ -400,7 +404,7 @@ onMounted(() => {
   border: 4px solid var(--tabBg);
   box-shadow: var(--boxShadowMobile);
   border-radius: 20px;
-  padding: 10px 15px;
+  padding: 25px 15px;
   width: 100%;
   margin-bottom: 15px;
   position: relative;

@@ -128,7 +128,7 @@ const difficultyBase = ref([
   height: 100%;
   width: 100%;
   font-family: "Nunito", sans-serif;
-  background-color: var(--bg, #fcfcfc);
+  background-color: var(--bg);
   overflow: hidden;
   -webkit-tap-highlight-color: transparent;
 }
@@ -148,8 +148,7 @@ const difficultyBase = ref([
   flex: 1;
   font-size: 22px;
   font-weight: 900;
-  color: #ffffff;
-  text-transform: uppercase;
+  color: var(--titleColor);
   letter-spacing: 0.5px;
   margin-left: 15px;
 }
@@ -174,7 +173,7 @@ const difficultyBase = ref([
 
 .subtitle {
   font-size: 18px;
-  color: #4b5563;
+  color: #6a7585;
   padding: 16px 20px 0;
   margin: 0;
   font-weight: 800;
@@ -191,11 +190,11 @@ const difficultyBase = ref([
 }
 
 .user-greeting, .guest-greeting {
-  background-color: #ffffff;
+  border: 3px solid var(--menuBorder);
+  box-shadow: 2px 2px 0 var(--menuBorder);
+  background: var(--tabsSlideBg);
   padding: 16px;
   border-radius: 20px;
-  border: 3px solid #1e1e1e;
-  box-shadow: 0 4px 0 #1e1e1e;
   text-align: center;
 }
 
@@ -209,7 +208,7 @@ const difficultyBase = ref([
 .user-greeting .record {
   margin: 0;
   font-weight: 800;
-  color: #1e1e1e;
+  color: var(--titleColor);
   font-size: 18px;
   display: flex;
   align-items: center;
@@ -247,8 +246,8 @@ const difficultyBase = ref([
   align-items: center;
   padding: 16px 20px;
   border-radius: 20px;
-  border: 3px solid #1e1e1e;
-  box-shadow: 0 4px 0 #1e1e1e;
+  border: 3px solid var(--menuBorder);
+  box-shadow: 2px 2px 0 var(--menuBorder);
   cursor: pointer;
   transition: all 0.1s cubic-bezier(0.34, 1.56, 0.64, 1);
   text-align: left;

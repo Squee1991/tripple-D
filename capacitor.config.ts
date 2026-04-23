@@ -9,8 +9,16 @@ const config: CapacitorConfig = {
   //   cleartext: true
   // },
   plugins: {
+    StatusBar: {
+      overlaysWebView: true,
+      style: 'DARK',
+    },
     GoogleSignIn: {
       clientId: '516504654997-15ujeh34o8jc7hkbempel0t60qp0e43g.apps.googleusercontent.com',
+    },
+    SplashScreen: {
+      launchAutoHide: false,
+      launchShowDuration: 3000
     },
   },
 };

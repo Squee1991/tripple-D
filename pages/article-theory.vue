@@ -246,7 +246,8 @@ const resetResult = () => {
   border-radius: 15px;
   padding: 10px;
   font-family: "Nunito", sans-serif;
-  border: 4px solid black;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
 }
 
 .rules__list {
@@ -266,8 +267,8 @@ const resetResult = () => {
 .rules__card {
   background: #fff;
   border-radius: 24px;
-  border: 2px solid #1e1e1e;
-  box-shadow: 3px 3px 0 #1e1e1e;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   padding: 1rem;
   transition: all 0.2s ease-in-out;
 }
@@ -325,10 +326,10 @@ const resetResult = () => {
 }
 
 .table-wrapper {
-  border: 2px solid #1e1e1e;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 3px 3px 0 #1e1e1e;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   margin-top: 1.5rem;
 }
 
@@ -339,8 +340,9 @@ const resetResult = () => {
 }
 
 .rules__table th, .rules__table td {
-  border: 2px solid #1e1e1e;
+  border: 3px solid var(--tabsSlideBorderColor);
   padding: 0.75rem;
+  border-radius: 8px;
 }
 
 .rules__table thead th {
@@ -397,8 +399,8 @@ const resetResult = () => {
   font-weight: 700;
   padding: 0.75rem;
   border-radius: 12px;
-  border: 2px solid #1e1e1e;
-  box-shadow: 3px 3px 0 #1e1e1e;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   flex-grow: 1;
   transition: all 0.2s ease-in-out;
 }

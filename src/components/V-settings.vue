@@ -1,6 +1,5 @@
 <template>
   <div v-if="activeTabKey === 'info'" class="tab-content">
-
     <div v-if="isThemeModalOpen" class="modal-overlay" @click.self="isThemeModalOpen = false">
       <div class="modal-card">
         <div class="modal-title">{{ t('themeModal.title') }}</div>
@@ -188,7 +187,7 @@ const SETTINGS_GROUPS = computed(() => [
   }
 ])
 
-const currentThemeName = computed(() => THEMES[colorMode.value] || THEMES.dark)
+const currentThemeName = computed(() => THEMES.value[colorMode.value] || THEMES.value.dark)
 
 const showRestriction = (type) => {
   if (type === 'theme') {
@@ -282,7 +281,7 @@ onMounted(async () => {
 }
 
 .section-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--settingsSectionBg);
   border-radius: 16px;
   overflow: hidden;
 }
@@ -292,7 +291,7 @@ onMounted(async () => {
   justify-content: space-between;
   align-items: center;
   padding: 16px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(122, 121, 121, 0.08);
 }
 
 .section-row:last-child {
@@ -328,7 +327,7 @@ onMounted(async () => {
   font-family: "Nunito", sans-serif;
   font-weight: 800;
   cursor: pointer;
-  box-shadow: 2px 2px 0 #000;
+  box-shadow: 0 2px 0 #000;
   transition: 0.1s;
   color: #000;
 }
@@ -356,10 +355,10 @@ onMounted(async () => {
 }
 
 .btn-danger {
-  background: #ef4444;
+  background: none;
   color: #fff;
-  border: 2px solid #b91c1c;
-  box-shadow: 2px 2px 0 #b91c1c;
+  border: none;
+  box-shadow: none;
 }
 
 .modal-overlay {
@@ -410,7 +409,7 @@ onMounted(async () => {
 }
 
 .btn {
-  border: 2px solid #000;
+  border: 2px solid rgba(238, 234, 234, 0.08);
   border-radius: 10px;
   padding: 14px 24px;
   font-weight: 800;

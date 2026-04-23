@@ -2,8 +2,6 @@
   <NuxtLayout>
     <NuxtPage/>
     <AchievementToast @toast-finished="onToastFinished" />
-<!--    <VStepHint v-if="showStepHint" @close="showStepHint = false"/>-->
-<!--      <FeedBack/>-->
     <VLost/>
     <VRankOverlay/>
   </NuxtLayout>
@@ -11,6 +9,7 @@
 
 <script setup>
 import VRankOverlay from "./src/components/V-rank-overlay.vue";
+import { StatusBar, Style } from '@capacitor/status-bar';
 import FeedBack from './src/components/V-feedback.vue'
 import VStepHint from "./src/components/V-stephint.vue";
 import AchievementToast from './src/components/AchievementToast.vue'
@@ -27,13 +26,16 @@ import {useCardsStore} from './store/cardsStore.js'
 import {useLocalStatGameStore} from './store/localSentenceStore.js'
 import { useBillingStore } from './store/billingStore.js'
 import { userChainStore } from './store/chainStore.js'
+import { SplashScreen } from '@capacitor/splash-screen'
+import { Keyboard } from '@capacitor/keyboard';
 import { App } from '@capacitor/app'
-import {onMounted} from "vue";
+import {onMounted, onUnmounted, ref, watch} from "vue";
 import {dailyStore} from './store/dailyStore'
-import {computed} from 'vue'
 import {useHead} from '#imports'
+import { Capacitor } from '@capacitor/core'
 const { locale, t } = useI18n()
 const billingStore = useBillingStore()
+
 useHead(() => ({
   htmlAttrs: { lang: locale.value, dir: locale.value === 'ar' ? 'rtl' : "ltr" },
   title: () => t('useHeadApp.title'),
@@ -48,6 +50,7 @@ useHead(() => ({
   ],
   link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }]
 }))
+
 const achStore = useAchievementStore()
 const showStepHint = ref(false)
 const cardStore = useCardsStore()
@@ -59,25 +62,53 @@ const router = useRouter()
 const route = useRoute()
 const user = useCurrentUser()
 const sentencesStore = useSentencesStore();
-const langStore = userlangStore()
 const daily = dailyStore()
+const colorMode = useColorMode();
 
-onMounted(() => {
-  App.addListener('backButton', ({ canGoBack }) => {
-    const state = window.history.state || {}
-    const isModalOpen = !!(state.isMapPanelOpen || state.isSubCategory || state.isSubScreen)
-    const purePath = route.path.replace(/^\/(ru|ar|en)/, '')
-    const isHomePage = purePath === '/' || purePath === ''
-    if (isModalOpen) {
-      window.history.back()
-    }
-    else if (isHomePage) {
-      App.minimizeApp()
-    }
-    else {
-      window.history.back()
+
+onMounted(async () => {
+  learningStore.loadFromFirebase()
+  if (authStore.uid) {
+    questStore.loadDailyProgress()
+    cardStore.loadCreatedCount()
+    statsStore.loadLocalStats()
+  }
+  achStore.initializeProgressTracking()
+
+  watch(user, (currentUser, prevUser) => {
+    if (prevUser && !currentUser) {
+      router.push('/')
+    } else if (currentUser && typeof route.query.redirect === 'string') {
+      router.push(route.query.redirect)
     }
   })
+  if (Capacitor.isNativePlatform()) {
+    App.addListener('backButton', ({ canGoBack }) => {
+      const state = window.history.state || {}
+      const isModalOpen = !!(state.isMapPanelOpen || state.isSubCategory || state.isSubScreen)
+      const purePath = route.path.replace(/^\/(ru|ar|en)/, '')
+      const isHomePage = purePath === '/' || purePath === ''
+
+      if (isModalOpen || !isHomePage) {
+        window.history.back()
+      } else {
+        App.minimizeApp()
+      }
+    })
+    Keyboard.addListener('keyboardWillShow', () => {
+      setTimeout(() => {
+        const activeElement = document.activeElement;
+        if (activeElement && (activeElement.tagName === 'INPUT' || activeElement.tagName === 'TEXTAREA')) {
+          activeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 150);
+    });
+  }
+  setTimeout(() => {
+    if (!achStore.showPopup && !showStepHint.value) {
+      onToastFinished()
+    }
+  }, 2600)
 })
 
 const onToastFinished = () => {
@@ -90,31 +121,14 @@ const onToastFinished = () => {
   }
 }
 
-onMounted(() => {
-  watch(user, (user, prevUser) => {
-    if (prevUser && !user) {
-      router.push('/')
-    } else if (user && typeof route.query.redirect === 'string') {
-      router.push(route.query.redirect)
-    }
-  })
-})
+watch(() => authStore.initialized, async (isReady) => {
+  if (isReady && Capacitor.isNativePlatform()) {
+    setTimeout(async () => {
+      await SplashScreen.hide({ fadeOutDuration: 250 })
+    }, 100)
 
-onMounted(async () => {
-  await learningStore.loadFromFirebase()
-  // sentencesStore.loadSentences()
-  if (authStore.uid) {
-    questStore.loadDailyProgress()
-    cardStore.loadCreatedCount()
-    statsStore.loadLocalStats()
   }
-  achStore.initializeProgressTracking()
-  setTimeout(() => {
-    if (!achStore.showPopup && !showStepHint.value) {
-      onToastFinished()
-    }
-  }, 2600)
-})
+}, { immediate: true })
 
 onUnmounted(() => {
   daily.stop()
@@ -126,6 +140,18 @@ watch(() => authStore.uid, (newUid) => {
     { immediate: true }
 )
 
+watch(() => colorMode.value, async (newTheme) => {
+  if (!Capacitor.isNativePlatform()) return;
+  try {
+    await StatusBar.setStyle({
+      style: newTheme === 'dark' ? Style.Dark : Style.Light
+    });
+
+    await StatusBar.setOverlaysWebView({ overlay: true });
+  } catch (err) {
+    console.error('StatusBar error:', err);
+  }
+}, { immediate: true });
 
 </script>
 
@@ -154,19 +180,18 @@ watch(() => authStore.uid, (newUid) => {
 
 
 html, body, #__nuxt {
-  height: 100dvh !important;
-  width: 100vw !important;
+  height: 100% !important;
+  width: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
   overflow: hidden !important;
-  position: fixed;
 }
 
 .layout {
   display: flex;
   flex-direction: column;
-  height: 100dvh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   padding-top: var(--sat);
   padding-bottom: var(--sab);
   box-sizing: border-box;
@@ -180,5 +205,4 @@ html, body, #__nuxt {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
-
 </style>

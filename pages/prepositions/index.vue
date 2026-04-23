@@ -80,7 +80,7 @@
           </section>
         </div>
         <div class="practice-area">
-          <p class="practice-area__description">{{ currentTopicData.practice.description }}</p>
+<!--          <p class="practice-area__description">{{ currentTopicData.practice.description }}</p>-->
           <NuxtLink :to="`/${categoryId}/${currentTopicData.id}`" class="practice-area__button">
             {{ currentTopicData.practice.buttonText }}
           </NuxtLink>
@@ -370,25 +370,23 @@ watch(currentTopicData, () => {
   display: flex;
   flex-direction: column;
   position: relative;
-  gap: 15px;
+
 }
 
 .content__header {
   background: var(--bg);
-  border: 3px solid #1e1e1e;
   border-radius: 12px;
   padding: 5px 10px 15px 10px;
-  box-shadow: 5px 5px 0px #1e1e1e;
+  box-shadow: var(--boxShadowMobile);
   display: flex;
   align-items: center;
-  gap: 15px;
 }
 
 .content__title {
-  color: white;
-  font-size: 2.1rem;
+  color: var(--titleColor);
+  font-size: 23px;
   font-weight: bold;
-  margin: 0;
+  margin-left: 15px;
 }
 
 .btn-icon-back {
@@ -482,13 +480,13 @@ watch(currentTopicData, () => {
 
 .example {
   background-color: white;
-  border: 2px solid #1e1e1e;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   border-left: 6px solid #ffab00;
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 12px;
   font-size: 1.2rem;
-  box-shadow: 3px 3px 0px #1e1e1e;
 }
 
 .example__line {
@@ -562,14 +560,10 @@ watch(currentTopicData, () => {
     padding: 1rem;
   }
   .content__main-column {
-    border-bottom: 3px dashed #1e1e1e;
     padding-bottom: 2rem;
   }
   .practice-area {
     padding-top: 10px;
-  }
-  .content__title {
-    font-size: 1.8rem;
   }
 }
 
@@ -609,14 +603,12 @@ watch(currentTopicData, () => {
   .comparison-page.content-is-active .content {
     transform: translateX(-100%);
   }
-
   .content__header {
     border-radius: 0;
     border-left: none;
     border-right: none;
     border-top: none;
     margin-bottom: 0;
-    box-shadow: 0 4px 0 #1e1e1e;
   }
 
   .content__body {

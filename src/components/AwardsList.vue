@@ -98,16 +98,16 @@ function closeAward() {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  border-top: 3px solid #1a1d2b;
+  border-top: 3px solid var(--tabsSlideBorderColor);
   padding-bottom: 30px;
   border-radius: 15px;
 }
 
 .shop-item {
-  padding: 13px;
+  padding: 12px;
   text-align: center;
   display: flex;
-  width: 165px;
+  width: 120px;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
@@ -143,7 +143,7 @@ function closeAward() {
 
 .image-wrapper {
   position: relative;
-  width: 70px;
+  width: 55px;
   margin-bottom: 10px;
 }
 
@@ -165,7 +165,7 @@ function closeAward() {
 .item-name {
   color: var(--titleColor);
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 15px;
   margin-bottom: 0.25rem;
 }
 
@@ -246,9 +246,9 @@ button:disabled {
   padding: 0 12px;
   min-width: 82px;
   border-radius: 14px;
-  border: 2px solid #000;
   background: #ffffff;
-  box-shadow: 4px 4px 0 #000;
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   font-family: "Nunito", sans-serif;
   font-weight: 900;
   font-size: 1.05rem;
@@ -281,10 +281,10 @@ button:disabled {
   content: "";
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: -2px;
   width: 100%;
-  height: 40px;
-  background: var(--bgOpacity);
+  height: 41px;
+  background: var(--overlayAfter);
 }
 
 .cartoon-board__total {
@@ -307,7 +307,7 @@ button:disabled {
 
   .cartoon-board__value {
     height: 23px;
-    padding: 0 7px;
+    padding: 0 2px;
   }
 }
 

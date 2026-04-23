@@ -144,7 +144,7 @@ const currentRankIcon = computed(() => currentRankInfo.value.icon)
   bottom: 0;
   width: 100%;
   height: 40px;
-  background: var(--bgOpacity);
+  background: var(--overlayAfter);
 }
 
 .ranks-wrapper::-webkit-scrollbar {

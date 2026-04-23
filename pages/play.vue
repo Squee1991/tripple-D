@@ -121,10 +121,11 @@ onMounted(() => {
 }
 
 .game-card {
-  background: #2c323d;
-  border-radius: 12px;
+  background: var(--menuItemsBg);
+  border-radius: 20px;
   padding: 5px 15px;
-  border: 2px solid #363d4a;
+  border: 2px solid var(--tabsSlideBorderColor);
+  box-shadow: 0 4px 0 var(--tabsSlideBorderColor);
 }
 
 .card-content {
@@ -143,7 +144,7 @@ onMounted(() => {
   font-size: 18px;
   font-weight: 700;
   margin: 0;
-  color: #FFFFFF;
+  color: var(--titleColor);
 }
 
 .menu-appear-enter-active {

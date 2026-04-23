@@ -2,6 +2,9 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	-webkit-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
 
 }
 
@@ -26,8 +29,15 @@ input,
 textarea {
 	-webkit-tap-highlight-color: transparent;
 	-webkit-focus-ring-color: transparent;
+	-webkit-user-select: text;
+	user-select: text;
 	outline: none;
 }
 
+
+input {
+	autocorrect: off;
+	autocapitalize: none;
+}
 
 

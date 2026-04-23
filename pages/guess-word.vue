@@ -18,7 +18,6 @@
           </button>
         </div>
       </header>
-
       <div v-if="!isStarted" class="screen-start">
         <div class="mascot-emoji">
           <img class="gues__icon" src="../assets/images/guessWord.svg" alt="">
@@ -469,6 +468,7 @@ watch(() => store.lose, (isLose) => {
   display: flex;
   gap: 10px;
   margin-top: auto;
+  padding: 15px 0;
 }
 
 .ios-input {

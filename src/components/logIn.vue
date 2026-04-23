@@ -1,11 +1,15 @@
 <template>
   <div class="auth" :class="{ 'auth--rtl': locale === 'ar' }">
+    <VLoginPreloader v-if="submitLoading"/>
     <div class="auth__inner">
       <div class="auth__form">
+        <div v-if="submitLoading" class="loading-overlay">
+          <div class="loader-box"></div>
+        </div>
         <div class="auth__title">
           <img
               @click="mode = 'login'"
-              v-if="mode === 'reset'" class="auth__arrow" src="../../assets/images/arrowNav.svg"
+              v-if="mode === 'reset'" class="auth__arrow" src="../assets/images/arrowNav.svg"
               alt="arrow_nav">
           <h1 class="login__title">
             {{
@@ -47,14 +51,15 @@
                       class="auth__eye"
                       @click="toggleVisibility(field)"
                   >
-                    <img v-if="field.type === 'password'" :src="View" alt="View">
-                    <img  v-else :src="Hide" alt="Hide">
+                    <img v-if="field.type === 'password'" :src="field.type === 'password' ? View : Hide" alt="View">
+<!--                    <img  v-else :src="Hide" alt="Hide">-->
                   </div>
                 </div>
               </label>
               <div v-if="field.error" class="auth__error">{{ t(field.error) }}</div>
               <div v-if="resetSent" class="auth__success">{{ t('errors.resetSent') }}</div>
             </div>
+
             <div class="auth__actions">
               <button @click.prevent="handleSubmit" class="auth__submit" :disabled="submitLoading">
                 {{
@@ -63,6 +68,7 @@
                 }}
               </button>
             </div>
+
             <div v-if="mode === 'login'" class="auth__forgot" @click="mode = 'reset'">{{
                 t('auth.forgot')
               }}
@@ -70,17 +76,14 @@
           </div>
         </form>
         <div v-if="mode === 'login'" class="social-auth-container">
-          <button class="google__auth-wrapper" @click="handleGoogleLogin">
-            <img class="google__icon" src="../../assets/images/google.svg" alt="google_icon">
-            <span class="google__auth">{{ t('auth.google') }}</span>
+          <button class="google__auth-wrapper" @click="handleSocialLogin('google')" :disabled="submitLoading">
+            <img class="google__icon" src="../assets/images/google.svg" alt="google_icon">
           </button>
-          <button class="apple__auth-wrapper" @click="handleAppleLogin">
-            <img class="apple__icon" src="../../assets/images/apple.svg" alt="apple_icon">
-            <span class="apple__auth">{{ t('войти с помощью apple') }}</span>
+          <button class="apple__auth-wrapper" @click="handleSocialLogin('apple')" :disabled="submitLoading">
+            <img class="apple__icon" src="../assets/images/apple.svg" alt="apple_icon">
           </button>
-          <button class="facebook__auth-wrapper" @click="handleFacebookLogin">
-            <img class="facebook__icon" src="../../assets/images/facebook.svg" alt="facebook_icon">
-            <span class="facebook__auth">{{ t('войти с помощью facebook') }}</span>
+          <button class="facebook__auth-wrapper" @click="handleSocialLogin('facebook')" :disabled="submitLoading">
+            <img class="facebook__icon" src="../assets/images/facebook.svg" alt="facebook_icon">
           </button>
         </div>
       </div>
@@ -93,9 +96,10 @@ import {ref, computed, watch, onMounted, onUnmounted} from 'vue'
 import {userAuthStore} from '../../store/authStore.js'
 import {useRouter} from 'vue-router'
 import {useI18n} from 'vue-i18n'
-import {mapErrors} from '../../utils/errorsHandler.js'
+import {mapErrors} from '../utils/errorsHandler.js'
 import View from '../../assets/images/loginEyes/view.svg'
 import Hide from '../../assets/images/loginEyes/hide.svg'
+import VLoginPreloader from "~/src/components/V-loginPreloader.vue";
 
 const {t, locale} = useI18n()
 const router = useRouter()
@@ -115,51 +119,10 @@ const toggleTransform = computed(() => {
 })
 
 const fields = ref([
-  {
-    id: 1,
-    name: "name",
-    type: "text",
-    placeholder: "placeholder.name",
-    label: "formLabel.name",
-    error: false,
-    value: '',
-    required: true,
-    maxlength: 18,
-    autocomplete: "username",
-  },
-  {
-    id: 2,
-    name: "email",
-    type: "email",
-    placeholder: "placeholder.email",
-    label: "formLabel.email",
-    error: false,
-    value: '',
-    required: true,
-    autocomplete: "email",
-  },
-  {
-    id: 3,
-    name: "password",
-    type: "password",
-    placeholder: "placeholder.password",
-    label: "formLabel.password",
-    error: false,
-    value: '',
-    required: true,
-    autocomplete: "current-password",
-  },
-  {
-    id: 4,
-    name: "confirm",
-    type: "password",
-    placeholder: "placeholder.confirm",
-    label: "formLabel.confirm",
-    error: false,
-    value: '',
-    required: true,
-    autocomplete: "new-password",
-  },
+  { id: 1, name: "name", type: "text", placeholder: "placeholder.name", label: "formLabel.name", error: false, value: '', required: true, maxlength: 18, autocomplete: "username" },
+  { id: 2, name: "email", type: "email", placeholder: "placeholder.email", label: "formLabel.email", error: false, value: '', required: true, autocomplete: "email" },
+  { id: 3, name: "password", type: "password", placeholder: "placeholder.password", label: "formLabel.password", error: false, value: '', required: true, autocomplete: "current-password" },
+  { id: 4, name: "confirm", type: "password", placeholder: "placeholder.confirm", label: "formLabel.confirm", error: false, value: '', required: true, autocomplete: "new-password" }
 ])
 
 const toggleVisibility = (field) => {
@@ -172,45 +135,35 @@ const tabs = [
 ]
 
 const visibleFields = computed(() => {
-  if (mode.value === 'login') {
-    return fields.value.filter(f => f.name === 'email' || f.name === 'password')
-  }
-  if (mode.value === 'register') {
-    return fields.value
-  }
-  if (mode.value === 'reset') {
-    return fields.value.filter(f => f.name === 'email')
-  }
+  if (mode.value === 'login') return fields.value.filter(f => f.name === 'email' || f.name === 'password')
+  if (mode.value === 'register') return fields.value
+  if (mode.value === 'reset') return fields.value.filter(f => f.name === 'email')
 })
 
-const handleGoogleLogin = async () => {
+const withMinLoading = async (actionFn) => {
+  if (submitLoading.value) return;
+  submitLoading.value = true;
+  const minDelay = new Promise(resolve => setTimeout(resolve, 2000));
   try {
-    await authStore.loginWithGoogle()
-    emits('close-auth-form')
-    router.push('/')
-  } catch (e) {
-    console.error(e)
+    await Promise.all([actionFn(), minDelay]);
+  } finally {
+    submitLoading.value = false;
   }
 }
 
-const handleAppleLogin = async () => {
-  try {
-    await authStore.loginWithApple()
-    emits('close-auth-form')
-    router.push('/')
-  } catch (e) {
-    console.error(e)
-  }
-}
+const handleSocialLogin = (provider) => {
+  withMinLoading(async () => {
+    try {
+      if (provider === 'google') await authStore.loginWithGoogle()
+      if (provider === 'apple') await authStore.loginWithApple()
+      if (provider === 'facebook') await authStore.loginWithFacebook()
 
-const handleFacebookLogin = async () => {
-  try {
-    await authStore.loginWithFacebook()
-    emits('close-auth-form')
-    router.push('/')
-  } catch (e) {
-    console.error(e)
-  }
+      emits('close-auth-form')
+      router.push('/')
+    } catch (e) {
+      console.error(e)
+    }
+  })
 }
 
 function validateFields(values) {
@@ -233,10 +186,12 @@ function validateFields(values) {
 
 const handleSubmit = async () => {
   if (submitLoading.value) return
-  submitLoading.value = true
+
   try {
     const values = Object.fromEntries(fields.value.map(field => [field.name, field.value]))
     if (!validateFields(values)) return
+
+    submitLoading.value = true
 
     if (mode.value === 'reset') {
       await authStore.resetPassword(values.email)
@@ -284,6 +239,8 @@ onUnmounted(() => {
 </script>
 
 <style>
+
+
 .close__auth-icon {
   width: 22px;
   height: 22px;
@@ -316,143 +273,56 @@ onUnmounted(() => {
 
 .login__title {
   text-align: start;
-  width: 100%;
   font-size: 32px;
   font-weight: 600;
   font-family: "Nunito", sans-serif;
+  color: var(--titleColor);
 }
 
 .social-auth-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 12px;
   width: 100%;
   margin-top: 1.5rem;
+  padding: 0 25px;
 }
 
-.google__auth-wrapper {
-  width: 100%;
-  background: #60a5fa;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 16px;
-  cursor: pointer;
-  padding: 12px;
-  border: 1px solid #1e1e1e;
-  box-shadow: 2px 2px 0 #1e1e1e;
-  transition: all 0.1s ease-in-out;
-}
-
-.google__auth-wrapper:active {
-  transform: translate(4px, 4px);
-  box-shadow: 0 0 0 #1e1e1e;
-}
-
-.google__icon {
-  width: 38px;
-  height: 38px;
-}
-
-.google__auth {
-  font-family: "Nunito", sans-serif;
-  font-weight: 600;
-  font-size: 18px;
-  margin-left: 10px;
-  width: 240px;
-  text-align: left;
-  color: #1e1e1e;
-}
-
-.apple__auth-wrapper {
-  width: 100%;
-  background: #3e3737;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 16px;
-  cursor: pointer;
-  padding: 12px;
-  border: 1px solid #1e1e1e;
-  box-shadow: 2px 2px 0 #1e1e1e;
-  transition: all 0.1s ease-in-out;
-}
-
-.apple__auth-wrapper:active {
-  transform: translate(4px, 4px);
-  box-shadow: 0 0 0 #1e1e1e;
-}
-
-.apple__icon {
-  width: 38px;
-  height: 38px;
-}
-
-.apple__auth {
-  font-family: "Nunito", sans-serif;
-  font-weight: 600;
-  font-size: 18px;
-  margin-left: 10px;
-  color: #ffffff;
-  width: 240px;
-  text-align: left;
-}
-
+.google__auth-wrapper,
+.apple__auth-wrapper,
 .facebook__auth-wrapper {
-  width: 100%;
-  background: #1877f2;
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 16px;
   cursor: pointer;
-  padding: 12px;
-  border: 1px solid #1e1e1e;
-  box-shadow: 2px 2px 0 #1e1e1e;
+  padding: 10px;
+  border: none;
+
   transition: all 0.1s ease-in-out;
 }
 
-.facebook__auth-wrapper:active {
-  transform: translate(4px, 4px);
-  box-shadow: 0 0 0 #1e1e1e;
+.google__auth-wrapper,
+.apple__auth-wrapper,
+.facebook__auth-wrapper {
+  background: none;
 }
 
+.google__icon,
+.apple__icon,
 .facebook__icon {
-  width: 38px;
-  height: 38px;
-}
-
-.facebook__auth {
-  font-family: "Nunito", sans-serif;
-  font-weight: 600;
-  font-size: 18px;
-  margin-left: 10px;
-  color: #ffffff;
-  width: 240px;
-  text-align: left;
-}
-
-.auth {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 440px;
-  max-width: 100vw;
-  height: 100vh;
-  background: #fef8e4;
-  border-left: 4px solid #1e1e1e;
-  box-shadow: -12px 0 44px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  z-index: 1000;
+  width: 60px;
+  height: 60px;
 }
 
 .auth__label-text {
-  font-size: 1rem;
+  font-size: 14px;
   font-family: "Nunito", sans-serif;
-  color: #1e1e1e;
+  color: var(--titleColor);
   display: block;
+  font-weight: 600;
+
 }
 
 .auth__arrow {
@@ -467,7 +337,7 @@ onUnmounted(() => {
   text-align: center;
   cursor: pointer;
   padding-top: 1rem;
-  color: #1e1e1e;
+  color: var(--titleColor);
   font-family: "Nunito", sans-serif;
   font-weight: 700;
   text-decoration: underline;
@@ -486,7 +356,7 @@ onUnmounted(() => {
   border-radius: 0;
   padding: 15px 34px 30px 34px;
   position: relative;
-  overflow: visible;
+  overflow: hidden;
   background: transparent;
 }
 
@@ -510,7 +380,7 @@ onUnmounted(() => {
   width: 100%;
   display: flex;
   background: #fff;
-  border-radius: 16px;
+  border-radius: 45px;
   position: relative;
   margin-bottom: 1.5rem;
   box-shadow: 4px 4px 0 #1e1e1e;
@@ -545,7 +415,7 @@ onUnmounted(() => {
   width: calc(50% - 4px);
   height: calc(100% - 8px);
   background: #1e1e1e;
-  border-radius: 12px;
+  border-radius: 45px;
   transition: transform 0.4s cubic-bezier(.38, 1.32, .39, 1);
   z-index: 0;
   box-shadow: none;
@@ -608,7 +478,7 @@ onUnmounted(() => {
   background: #f1c40f;
   border: 3px solid #1e1e1e;
   color: #1e1e1e;
-  font-weight: 600;
+  font-weight: 800;
   font-size: 1.5rem;
   padding: 12px 0;
   border-radius: 18px;
@@ -620,9 +490,14 @@ onUnmounted(() => {
   transition: all 0.1s ease-in-out;
 }
 
-.auth__submit:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0 #1e1e1e;
+.auth__submit:active:not(:disabled) {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 #1e1e1e;
+}
+
+.auth__submit:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
 }
 
 .auth__error,
@@ -639,21 +514,6 @@ onUnmounted(() => {
   color: #4ade80
 }
 
-.auth__warning {
-  margin-top: 1.5rem;
-  text-align: center;
-  color: #d32f2f;
-  font-family: "Nunito", sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: 1.4;
-}
-
-.auth__warning a {
-  color: #2563eb;
-  text-decoration: underline;
-}
-
 @media (max-width: 767px) {
   .close__btn-modal-wrapper {
     opacity: 1;
@@ -667,7 +527,7 @@ onUnmounted(() => {
   }
 
   .auth__form {
-    padding: 20px;
+    padding: 25px;
   }
 
   .auth__title {

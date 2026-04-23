@@ -1,7 +1,7 @@
 <template>
   <button @click="path" class="btn-icon-back">
     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
-         stroke="#2b2b2b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+         stroke="grey" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
       <line x1="19" y1="12" x2="5" y2="12"></line>
       <polyline points="12 19 5 12 12 5"></polyline>
     </svg>
@@ -22,7 +22,8 @@ const path = () => { router.back()
 
 .btn-icon-back {
   background: #fff;
-  border: 3px solid #2b2b2b;
+  border: 3px solid var(--tabsSlideBorderColor);
+  box-shadow: var(--boxShadowMobile);
   border-radius: 12px;
   width: 40px;
   height: 40px;
@@ -30,7 +31,6 @@ const path = () => { router.back()
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 2px 2px 0px #2b2b2b;
   transition: transform 0.1s, box-shadow 0.1s;
 }
 

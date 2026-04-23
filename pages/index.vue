@@ -30,18 +30,21 @@ onMounted(() => {
 <template>
   <VEventAvailableModal @close="false" v-if="authStore.initialized"/>
   <VShowFall v-if="eventStore.isSnowEnabled" :image="Snow"/>
-<!--  <VShowFall :image="HeartFall"/>-->
-  <div v-if="!hydrated || !authStore.initialized" class="loading"></div>
-  <div v-else class="container">
-    <div v-if="authStore.uid" class="stat">
-      <Header/>
-      <VUid/>
-    </div>
-    <div v-else>
-      <VStartPage/>
-    </div>
+  <div class="container">
+    <template v-if="!authStore.initialized">
+      <div class="loading">
+      </div>
+    </template>
+    <template v-else>
+      <div v-if="authStore.uid" class="stat">
+        <Header/>
+        <VUid/>
+      </div>
+      <div v-else>
+        <VStartPage/>
+      </div>
+    </template>
   </div>
-
 </template>
 
 <style scoped>

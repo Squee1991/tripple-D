@@ -14,11 +14,12 @@
             @click.stop="openFreezeModal"
         >
         <img
+            :class="{'heart': item.id === 'lives'}"
             class="stat-icon"
             :src="item.icon"
             :alt="item.alt"
         >
-        <span class="stat-value">{{ item.value }}</span>
+        <span v-if="!userAuth.isPremium || item.id !== 'lives'" class="stat-value">{{ item.value }}</span>
       </button>
 
       <transition name="fade">
@@ -67,6 +68,7 @@ import FreezeShield from '../../assets/images/FreezeShield.svg'
 import Hats from '../../assets/images/hatsNAv.svg'
 import Articlus from '../../assets/images/article.svg'
 import Heart from '../../assets/images/heartInfo.svg'
+import Forever from '../../assets/images/forever.svg'
 
 const {t} = useI18n()
 const langStore = userlangStore()
@@ -115,7 +117,7 @@ const infoData = computed(() => [
       {label: t('Необходимы для прохождения языковых земель')},
       {label: t('Приобреюатся во внутреннем магазине или во время обучения за Артиклюсы')}
     ],
-    icon: Heart,
+    icon: userAuth.isPremium ? Forever : Heart,
     alt: "Level/Heart",
     value: chainStore.lives || 0,
     isFreeze: false
@@ -177,6 +179,11 @@ onBeforeUnmount(() => {
   object-fit: contain;
 }
 
+.stat-icon.heart {
+  height: 33px;
+  width: 33px;
+}
+
 .freeze-icon {
   width: 28px;
   height: 28px;
@@ -191,31 +198,31 @@ onBeforeUnmount(() => {
 
 .tooltip-box {
   position: absolute;
-  top: calc(100% + 15px);
+  top: calc(100% + 5px);
   left: 10px;
   right: 10px;
-  background-color: #2c323d;
+  background-color: var(--bg);
   color: #a0a6b1;
-  border: 3px solid #363d4a;
+  border: 2px solid var(--tabsSlideBorderColor);
   border-radius: 12px;
   padding: 16px;
   width: auto;
   max-width: none;
   z-index: 9999;
-  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.8);
+  box-shadow: 3px 3px 0 var(--tabsSlideBorderColor);
 }
 
 .tooltip-box::before {
   content: '';
   position: absolute;
-  top: -8px;
-  border-width: 0 8px 8px 8px;
+  top: -10px;
+  border-width: 0 10px 10px 10px;
   border-style: solid;
-  border-color: transparent transparent #363d4a transparent;
+  border-color: transparent transparent  var(--tabsSlideBorderColor) transparent;
 }
 
 .stat-item-wrapper:first-child .tooltip-box::before {
-  left: 25px;
+  left: 20px;
 }
 
 .stat-item-wrapper:nth-child(2) .tooltip-box::before {
@@ -224,7 +231,7 @@ onBeforeUnmount(() => {
 }
 
 .stat-item-wrapper:last-child .tooltip-box::before {
-  right: 25px;
+  right: 20px;
   left: auto;
 }
 
@@ -252,7 +259,7 @@ onBeforeUnmount(() => {
 }
 
 .tooltip-list {
-  color: white;
+  color: var(--titleColor);
   font-weight: 400;
   list-style: none;
   padding: 0;
